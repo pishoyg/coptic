@@ -39,7 +39,7 @@ class Book:
 
   def __init__(self, name, unbound_biola_code, chapters):
     assert isinstance(name, str)
-    assert isinstance(unbound_biola_code, str)
+    assert unbound_biola_code is None or isinstance(unbound_biola_code, str)
     assert isinstance(chapters, list)
     assert all(isinstance(c, Chapter) for c in chapters)
     assert all(c.num() == i + 1 for i, c in enumerate(chapters))

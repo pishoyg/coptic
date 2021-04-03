@@ -1,12 +1,18 @@
 # $1: Parent directory under /data/.
-# $2: Book name.
-# $3: Number of chapters.
+# $2: English book name.
+# $3: Coptic book name.
+# $4: Greek book name.
+# $5: Number of chapters.
 
-DATA_DIR="/Users/bishoyboshra/Desktop/GitHub/coptic/bible/data"
+DATA_DIR="data"
+
+set -o xtrace
 
 python3 main.py \
-  --book_name="${2}" \
-  --num_chapter=${3} \
-  --coptic_book_path="${DATA_DIR}/${1}/${2}/${2} (Bohairic).txt" \
-  --greek_book_path="${DATA_DIR}/${1}/${2}/${2} (Greek).txt" \
-  --english_book_path="${DATA_DIR}/${1}/${2}/${2} (English).txt"
+  --books \
+  "coptic_book:Bohairic:${3}:${DATA_DIR}/${1}/${2}/${2} (Bohairic).txt" \
+  "greek_book:Greek:${4}:${DATA_DIR}/${1}/${2}/${2} (Greek).txt" \
+  "english_book:English:${2}:${DATA_DIR}/${1}/${2}/${2} (English).txt" \
+  --num_chapter=${5}
+
+set +o xtrace
