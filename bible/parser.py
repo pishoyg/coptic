@@ -38,7 +38,7 @@ def parse_unbound_biola_coptic_nt(unbound_biola_coptic_nt_tsv_path,
     data[book_code][chapter_idx].append(
         bible.Verse(verse_idx, numerals.to_coptic_num(verse_idx), text))
   for book_code, chapters in data.items():
-    data[book_code] = bible.Book(code_to_coptic[book_code], book_code,
+    data[book_code] = bible.Book(code_to_english[book_code], code_to_coptic[book_code], book_code,
                                  [bible.Chapter(chapter_idx,
                                                 numerals.to_coptic_num(
                                                     chapter_idx), 'Ⲕⲉⲫⲁⲗⲟⲛ',
@@ -54,6 +54,7 @@ def parse_nkjv_json(nkjv_json_path):
       'nkjv',
       [bible.Book(
           b.name,
+          b.name,
           None,
           [bible.Chapter(
               c.num,
@@ -68,12 +69,12 @@ def parse_nkjv_json(nkjv_json_path):
       ) for b in j.books])
 
 
-def parse_indexed_verses_book(book_name, path, want_num_chapters):
+def parse_indexed_verses_book(name, print_name, path, want_num_chapters):
   def parse_line(l):
     assert re.match('\d+:\d+ ',
                     l), 'Error parsing htakla Coptic book {}: line "{}" does ' \
                         'not match the expected regex "{}"'.format(
-        book_name, l, '\d+:\d+ ')
+        name, l, '\d+:\d+ ')
     numbers = l[:l.find(' ')]
     assert re.match('\d+:\d+$', numbers)
     numbers = numbers.split(':')
@@ -93,7 +94,7 @@ def parse_indexed_verses_book(book_name, path, want_num_chapters):
     chapter_idx, verse_idx, _ = parse_line(lines[i])
     assert verse_idx == 1, "Chapter {} in the Coptic book {} starts with " \
                            "invalid verse number {}, want 1".format(
-        chapter_idx, book_name, verse_idx)
+        chapter_idx, name, verse_idx)
     verses = []
     while i < len(lines):
       cur_chapter_idx, cur_verse_idx, v_txt = parse_line(lines[i])
@@ -110,17 +111,16 @@ def parse_indexed_verses_book(book_name, path, want_num_chapters):
 
   assert len(chapters) == want_num_chapters
 
-  return bible.Book(book_name, None, chapters)
+  return bible.Book(name, print_name, None, chapters)
 
 
 def parse_delimited_chapters_book(
-    book_name, path, want_num_chapters, chapter_delimiter, chapter_starter,
+    name, print_name, path, want_num_chapters, chapter_delimiter, chapter_starter,
     chapter_idx_suffix):
   def parse_chapter(text):
     m = re.match(chapter_starter, text)
     assert m, 'Error parsing htakla book {}: line "{}" does not match the ' \
-              'expected regex "{}"'.format(
-        book_name, text, chapter_starter)
+              'expected regex "{}"'.format(name, text, chapter_starter)
     idx = m.group(0)[:-chapter_idx_suffix]
     idx = int(idx)
     lines = re.compile('\d+').split(text)
@@ -141,4 +141,4 @@ def parse_delimited_chapters_book(
   assert len(
       text) == want_num_chapters, 'len(text) = {}, want_num_chapters = {}'.format(
       len(text), want_num_chapters)
-  return bible.Book(book_name, None, [parse_chapter(c) for c in text])
+  return bible.Book(name, print_name, None, [parse_chapter(c) for c in text])

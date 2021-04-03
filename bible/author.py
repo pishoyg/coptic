@@ -23,35 +23,25 @@ def generate_book_json(
     force_consistent_verse_count=True):
   validate_chapter_count(book_tuple, force_consistent_chapter_count)
   chapters = []
-  for chapter_tuple in zip(*[book.chapters() for book in book_tuple]):
+  for chapter_tuple in zip(*[b.chapters() for b in book_tuple]):
     validate_verse_count(name_tuple, book_tuple, chapter_tuple,
                          force_consistent_verse_count)
-    cur_chapter = {
-                      "num-" + name: chapter.print_num()
-                      for name, chapter in zip(name_tuple, chapter_tuple)
-                  } | {
-                      "verses": [{
-                                     "text-" + name: verse.text()
-                                     for name, verse in
-                                     zip(name_tuple, verse_tuple)
-                                 } | {
-                                     "num-" + name: verse.print_num() for
-                                     name, verse in
-                                     zip(name_tuple, verse_tuple)
-                                 }
-                                 for verse_tuple in zip(
-                              *[chapter.verses() for chapter in chapter_tuple])]
-                  }
-    chapters.append(cur_chapter)
-  cur_book = {
-      "chapters": chapters,
+    chapters.append(
+        {
+            "num-" + name: c.print_num()
+            for name, c in zip(name_tuple, chapter_tuple)
+        } | {
+            "verses": [merge_dicts(
+                {
+                    "num-" + name : v.print_num(),
+                    "text-" + name: v.text()
+                } for name, v in zip(name_tuple, verse_tuple))
+                for verse_tuple in zip(*[c.verses() for c in chapter_tuple])]
+        })
+  return {"chapters": chapters} | {
+      "name-" + name: book.print_name() for name, book in
+      zip(name_tuple, book_tuple)
   }
-  for name, book in zip(name_tuple, book_tuple):
-    cur_book.update({
-        "name-" + name: book.name(),
-    })
-
-  return cur_book
 
 
 def generate_mmakar_json(
@@ -80,43 +70,26 @@ def generate_mmakar_book_json(
       zip(*[book.chapters() for book in book_tuple]), 1):
     validate_verse_count(name_tuple, book_tuple, chapter_tuple,
                          force_consistent_verse_count)
-    cur_chapter = {
-                      "sectionName" + name: chapter.title() + ' ' +
-                                            chapter.print_num()
-                      for name, chapter in zip(name_tuple, chapter_tuple)
-                  } | {
-                      "sectionId": "sec_id_{}".format(str(i).zfill(4)),
-                      "data"     : [
-                          {
-                              "verseNumber": '{}:{}'.format(
-                                  chapter_tuple[0].num(),
-                                  verse_tuple[0].num())
-                          } | {
-                              name: "({}) {}".format(
-                                  verse.print_num(),
-                                  verse.text()) for
-                              name, verse in
-                              zip(name_tuple, verse_tuple)
-                          } | merge_dicts(
-                              {
-                                  name                : "({}) {}".format(
-                                      verse.print_num(), verse.text()),
-                                  "verseNumber" + name: '{} {}:{}'.format(
-                                      book.name(),
-                                      chapter.print_num(),
-                                      verse.print_num())
-                              }
-                              for name, book, chapter, verse in
-                              zip(name_tuple, book_tuple, chapter_tuple,
-                                  verse_tuple)
-                          )
-                          for verse_tuple in
-                          zip(
-                              *[chapter.verses() for chapter in
-                                chapter_tuple])
-                      ],
-                  }
-    chapters.append(cur_chapter)
+    chapters.append(
+        {
+            "sectionName" + name: '{} {}'.format(c.title(), c.print_num())
+            for name, c in zip(name_tuple, chapter_tuple)
+        } | {
+            "sectionId": "sec_id_{}".format(str(i).zfill(4)),
+            "data"     : [
+                {
+                    name: "({}) {}".format(v.print_num(), v.text()) for name, v
+                    in zip(name_tuple, verse_tuple)
+                } | {
+                    "verseNumber": '{} {}:{}'.format(
+                        book_tuple[0].name(),
+                        chapter_tuple[0].num(),
+                        verse_tuple[0].num()),
+                    "Sahidic"    : "",
+                }
+                for verse_tuple in zip(*[c.verses() for c in chapter_tuple])
+            ],
+        })
   return chapters
 
 
@@ -124,7 +97,7 @@ def validate_chapter_count(book_tuple, force_consistent_chapter_count):
   if not all(b.num_chapters() == book_tuple[0].num_chapters()
              for b in book_tuple):
     e = "Inconsistent chapter count for {}: {}".format(
-        [b.name() for b in book_tuple],
+        [b.print_name() for b in book_tuple],
         [b.num_chapters() for b in book_tuple])
     if force_consistent_chapter_count:
       raise Exception(e)
@@ -138,7 +111,7 @@ def validate_verse_count(name_tuple, book_tuple, chapter_tuple,
              for c in chapter_tuple):
     e = "Inconsistent verse count for {}: {}: {}: {}".format(
         name_tuple,
-        [b.name() for b in book_tuple],
+        [b.print_name() for b in book_tuple],
         [c.print_num() for c in chapter_tuple],
         [c.num_verses() for c in chapter_tuple])
     if force_consistent_verse_count:

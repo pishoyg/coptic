@@ -37,18 +37,23 @@ class Book:
   _unbound_biola_code = None
   _chapters = None
 
-  def __init__(self, name, unbound_biola_code, chapters):
+  def __init__(self, name, print_name, unbound_biola_code, chapters):
     assert isinstance(name, str)
     assert unbound_biola_code is None or isinstance(unbound_biola_code, str)
+    assert isinstance(print_name, str)
     assert isinstance(chapters, list)
     assert all(isinstance(c, Chapter) for c in chapters)
     assert all(c.num() == i + 1 for i, c in enumerate(chapters))
     self._name = name
+    self._print_name = print_name
     self._unbound_biola_code = unbound_biola_code
     self._chapters = chapters
 
   def name(self):
     return self._name
+
+  def print_name(self):
+    return self._print_name
 
   def unbound_biola_code(self):
     return self._unbound_biola_code

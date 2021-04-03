@@ -36,6 +36,11 @@ PARSERS = {
         *args, '\n\n', r'\d+\s[A-Z]', 2),
 }
 
+AUTHORS = {
+    'mmakar_book_json': lambda *args: json_dumps(author.generate_mmakar_book_json(*args)),
+    'book_json': lambda *args: json_dumps(author.generate_book_json(*args)),
+}
+
 argparser = argparse.ArgumentParser(
     description=
     'Parse and process unbound.biola.edu\'s Coptic NT, and align it with NKJV.')
@@ -78,6 +83,16 @@ argparser.add_argument(
          'items: '
          '<parser_code>:<language>:<book_name>:<book_file_path>'
 )
+argparser.add_argument(
+    '--name',
+    type=str,
+    help='Book name.'
+)
+argparser.add_argument(
+    '--author',
+    type=str,
+    help='Author name. Must be defined in `AUTHORS` above'
+)
 
 args = argparser.parse_args()
 
@@ -93,25 +108,23 @@ def process_nt():
   assert coptic_nt.num_books() == 27
   j = json.dumps(
       author.generate_json(['Coptic', 'English'], [coptic_nt, nkjv]),
-      ensure_ascii=False,
-      indent=1,
-      sort_keys=False).encode('utf8').decode()
+      ensure_ascii=False, indent=1, sort_keys=False).encode('utf8').decode()
   print(j)
 
 
 def process_books():
   language_tuple, book_tuple = [], []
   for s in args.books:
-    parse, language, name, path = s.split(':')
+    parse, language, print_name, path = s.split(':')
     parse = PARSERS[parse]
     language_tuple.append(language)
-    book_tuple.append(parse(name, path, args.num_chapters))
-  j = json.dumps(
-      author.generate_mmakar_book_json(language_tuple, book_tuple),
-      ensure_ascii=False,
-      indent=1,
-      sort_keys=False).encode('utf8').decode()
-  print(j)
+    book_tuple.append(parse(args.name, print_name, path, args.num_chapters))
+
+  print(AUTHORS[args.author](language_tuple, book_tuple))
+
+
+def json_dumps(j):
+  return json.dumps(j, ensure_ascii=False, indent=1, sort_keys=False).encode('utf8').decode()
 
 
 def main():

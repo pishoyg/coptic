@@ -13,6 +13,8 @@ python3 main.py \
   "coptic_book:Bohairic:${3}:${DATA_DIR}/${1}/${2}/${2} (Bohairic).txt" \
   "greek_book:Greek:${4}:${DATA_DIR}/${1}/${2}/${2} (Greek).txt" \
   "english_book:English:${2}:${DATA_DIR}/${1}/${2}/${2} (English).txt" \
+  --name="${2}" \
+  --author="mmakar_book_json" \
   --num_chapter=${5}
 
 set +o xtrace
