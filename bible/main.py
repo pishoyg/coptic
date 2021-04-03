@@ -24,6 +24,7 @@ import json
 
 import author
 import bible
+import mmakar
 import parser
 
 PARSERS = {
@@ -37,7 +38,7 @@ PARSERS = {
 }
 
 AUTHORS = {
-    'mmakar_book_json': lambda *args: json_dumps(author.generate_mmakar_book_json(*args)),
+    'mmakar_book_json': lambda *args: json_dumps(mmakar.generate_book_json(*args)),
     'book_json': lambda *args: json_dumps(author.generate_book_json(*args)),
 }
 
