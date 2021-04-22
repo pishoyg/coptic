@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="coptic-naqlun-pronunciations.sqlite" uuid="955e0673-42ac-40a3-9f95-b36792c67c8c">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:coptic-naqlun-pronunciations.sqlite</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="@localhost" uuid="fec75c78-59cb-4000-8084-6268ad262794">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="coptic-naqlun-pronunciations" uuid="d57059dd-732e-4445-a8a4-71f542bf3a26">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/coptic-naqlun-pronunciations.db</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="@marcion" uuid="c4add003-8138-479d-a77e-fb29b4558932">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
+    </data-source>
+  </component>
+</project>
