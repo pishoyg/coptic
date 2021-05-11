@@ -6,7 +6,7 @@
 ' Please see https://support.microsoft.com/en-us/office/quick-start-create-a-macro-741130ca-080d-49f5-9471-1e5fb3d581a8
 ' for instructions on how to use the macro in your file.
 '
-' Developer contact: coptic.pishoy@gmail.com
+' Developer contact: b.g.coptic@gmail.com
 '
 
 Sub ToCoptic()
