@@ -21,6 +21,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 
 import argparse
 import json
+import stats
 
 import author
 import bible
@@ -66,6 +67,12 @@ argparser.add_argument(
     help='Path of the input tsv file containing book names and codes from '
          'unbound biola.'
 )
+argparser.add_argument(
+    '--stats',
+    type=bool,
+    default=False,
+    help='Whether the purpose is to only print statistics for the Coptic NT.'
+)
 
 ############################################################
 # Arguments for parsing books.
@@ -98,10 +105,16 @@ argparser.add_argument(
 args = argparser.parse_args()
 
 
-def process_nt():
-  coptic_nt = parser.parse_unbound_biola_coptic_nt(
+def _parse_coptic_nt():
+  return parser.parse_unbound_biola_coptic_nt(
       args.unbound_biola_coptic_nt_tsv,
       *parser.parse_unbound_biola_book_names(args.unbound_biola_book_names))
+
+def print_stats():
+  stats.count_pairs(_parse_coptic_nt())
+
+def process_nt():
+  coptic_nt = _parse_coptic_nt()
   nkjv = parser.parse_nkjv_json(args.nkjv_json)
   assert nkjv.num_books() == 66
   nkjv = bible.Bible('nkjn', nkjv.books()[39:])
@@ -130,9 +143,14 @@ def json_dumps(j):
 
 def main():
   if args.books:
-    process_books()
+      process_books()
   elif args.unbound_biola_coptic_nt_tsv:
-    process_nt()
+    if args.stats:
+      print_stats()
+    else:
+      process_nt()
+  else:
+    raise ValueError('Unknown purpose; please make sure flags are properly set.')
 
 
 if __name__ == '__main__':
