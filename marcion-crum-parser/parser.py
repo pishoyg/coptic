@@ -62,7 +62,7 @@ Remarks about the parsing:
     The differentiation between the two use cases can be done by checking whether
     the parentheses cover the entire word, or a subpart of it.
 
-Developer contact: b.g.coptic@gmail.com.
+Developer contact: pishoybg@gmail.com.
 Inquiries are welcome :)
 
 Copyright (C) 2020

@@ -1,6 +1,6 @@
 """
 
-Developer contact: b.g.coptic@gmail.com.
+Developer contact: pishoybg@gmail.com.
 Inquiries are welcome :)
 
 Copyright (C) 2020

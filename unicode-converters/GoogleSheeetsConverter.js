@@ -7,7 +7,7 @@
  * Please see https://developers.google.com/apps-script/guides/sheets/macros
  * for instructions on how to use the macro in your sheet.
  *
- * Developer contact: b.g.coptic@gmail.com
+ * Developer contact: pishoybg@gmail.com
  * 
  * @OnlyCurrentDoc
  */
