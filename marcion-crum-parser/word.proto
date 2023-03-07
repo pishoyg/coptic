@@ -1,0 +1,147 @@
+/*
+Dictionary Types
+  Root (a.k.a. token)
+    Canonical root
+  Word
+  Word group
+    A group of semantically-related words.
+  Expression
+    Examples of expressions are verbs with their accompanying prepositions or object markers.
+  Sentence
+Rules
+  Tokens are also called roots.
+  One or more tokens make up a word.
+  One or more words make up an expression.
+    Composite words should be nested under their respective root tokens.
+  Words make up expressions.
+  Expressions make up sentences.
+*/
+syntax = "proto3";
+
+// TODO: A word has meanings. A meaning has derivations. A derivation has occurrences.
+//  An occurrence consists of both of a verse address along with a pair of indexes.
+message Word {
+  int64 ID;
+  int64 root_id;
+  []int64 constituent_ids; // Only for composite words.
+  string canonical_spelling;
+  repeated string alternative_spellings;
+  Dialect dialect;
+  Type type;
+  Properties properties;
+  CompositionType composition_type;
+  Origin origin;
+  string meaning_in_english;
+  string pronunciation_in_ipa;
+  repeated string comments;
+  string contributor;
+  repeated string verifiers;
+}
+
+// Type represents the grammatical role of a word.
+enum Type {
+  UNKNOWN = 0;
+  VERB;
+  NOUN;
+  PREPOSITION;
+  ARTICLE;
+  NUMBER;
+  ADVERB;
+  // TODO: complete this list.
+}
+
+enum CompositionType {
+  UNKNOWN = 0;
+  // A root represents the canonical forms of a word.
+  // Root types are typically singular masculine nouns,
+  // verbs in the infinitive form, stripped prepositions,
+  // or singular masculine articles.
+  ROOT;
+  // A sub-root is a word that os neither the canonical form
+  // of a word, nor one that is made up by composition. Sub-root
+  // types are, for example, irregular plural and feminine forms
+  // of nouns, abbreviated, pronominal, and qualitative forms of
+  // verbs, and feminine and plural forms of articles.
+  SUB_ROOT;
+  // Compositions.
+  // TODO: complete this list.
+  NOUN_TO_VERB;
+  VERB_TO_NOUN;
+}
+
+enum Origin {
+  UNKNOWN = 0;
+  // Coptic types.
+  NATIVE_ROOT = 1;
+  NATIVE_DERIVATIVE = 2;
+  KOINE_GREEK_ROOT = 3;
+  KOINE_GREEK_DERIVATIVE = 4;
+  // Hybrid type.
+  NEO_DERIVATIVE_ON_NATIVE_ROOTS = 5;
+  // Neo-Coptic types.
+  NEO_MODERN_GREEK;
+  NEO_CLAUDIAN;
+  NEO_DERIVATIVE_ON_NEO_ROOTS;
+}
+
+enum Dialect {
+  UNKNOWN = 0;
+  BOHAIRIC = 1;
+  SAHIDIC = 2;
+  AKHMIMIC = 3;
+  LYCOPOLITAN = 4;
+  FAYYUMIC = 5;
+  OXYRHYNCHITE = 6;
+}
+
+message Properties {
+  Transitivity transitivity; // Specific to verbs.
+  Gender gender; // Specific to nouns (along with articles and a few other types).
+  Person person;
+  GrammaticalNumber grammatical_number;
+  Mood mood; // Specific to verbs.
+  Imperativity imperativity; // Specific to verbs.
+  // TODO: complete this list.
+}
+
+enum Mood {
+  UNKNOWN = 0;
+  INFINITIVE;
+  ABBREVIATIVE;
+  PRENOMINAL;
+  QUALITATIVE;
+  IMPERATIVE;
+  // TODO: complete this list.
+}
+
+enum Imperativity {
+  INFINITIVE_OR_IMPERATIVE;
+  INFINITIVE_ONLY;
+  IMPERATIVE_ONLY;
+}
+
+enum Person {
+  UNKNOWN = 0;
+  FIRST;
+  SECOND;
+  THIRD;
+}
+
+enum Transitivity {
+  UNKNOWN = 0;
+  TRANSITIVE = 1;
+  INTRANSITIVE = 2;
+  TRANSITIVE_OR_INTRANSITIVE = 3;
+}
+
+enum GrammaticalNumber {
+  UNKNOWN = 0;
+  SINGULAR;
+  PLURAL;
+}
+
+enum Gender {
+  UNKNOWN = 0;
+  MASCULINE = 1;
+  FEMININE = 2;
+}
