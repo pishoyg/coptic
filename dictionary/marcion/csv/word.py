@@ -20,26 +20,6 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 """
 
-class word():
-  _forms = None
-
-
-class form():
-  _spellings = None
-  _types = None
-  _dialects = None
-  _references = None
-
-
-class spelling():
-  _confirmed = None
-
-
-class type():
-  _coptic_symbol = None
-  _full_name = None
-  _abbreviation = None
-
 
 class type():
   _coptic_symbol = None
@@ -57,6 +37,7 @@ class type():
 
   def description(self):
     return self._description
+
 
 class structured_word():
   _dialects = None
@@ -90,4 +71,3 @@ class structured_word():
   
   def dialects(self):
     return self._dialects
-

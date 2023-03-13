@@ -22,6 +22,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 
 import re
 
+import word as lexical
 
 DIALECTS = ['S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH']
 
@@ -76,7 +77,7 @@ LETTER_MAPPING = {
 }
 
 
-_SPELLING_ANNOTATIONS = [
+SPELLING_ANNOTATIONS = [
   # These are always spelling-specific, and are (for the time being) left as part of the spellings!
   ('-', '-',),    # Prenominal form.
   ('–', '-'),     # Prenominal form.
@@ -86,7 +87,7 @@ _SPELLING_ANNOTATIONS = [
 ]
 
 
-_SPELLING_ANNOTATION_CHARS = set(p[1] for p in _SPELLING_ANNOTATIONS)
+SPELLING_ANNOTATION_CHARS = set(p[1] for p in SPELLING_ANNOTATIONS)
 
 
 class_to_suffix = {
@@ -116,11 +117,11 @@ class_to_suffix = {
 
 
 _DETACHED_TYPES = [
-  ('****',  type('(ⲧ)',     'feminine')),
-  ('**',    type('(imp.)',  'imperative')),
-  ('*',     type('(ⲛ)',     'plural')),
-  ('^',     type('(p.c.)',  'conjunctive participle')),
-  ('$',     type('(&c)',    'constructed with')), # of verbs.
+  ('****',  lexical.type('(ⲧ)',     'feminine')),
+  ('**',    lexical.type('(imp.)',  'imperative')),
+  ('*',     lexical.type('(ⲛ)',     'plural')),
+  ('^',     lexical.type('(p.c.)',  'conjunctive participle')),
+  ('$',     lexical.type('(&c)',    'constructed with')), # of verbs.
 ]
 
 _EARLY_PRE_PROCESSING = [

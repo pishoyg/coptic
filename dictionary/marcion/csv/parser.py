@@ -19,7 +19,7 @@
 """
 # Nomenclature:
 A line in Marcion's dictionary database consists of words.
-A word, represented by the class `structured_word` defined below, consists of:
+A word, represented by the class `lexical.structured_word` defined below, consists of:
   - Dialects that this word belongs to.
   - Spellings that this word can take (usually 1).
   - Types that this word is (usually none).
@@ -86,6 +86,7 @@ import re
 
 import constants
 
+import word as lexical
 
 #TODO: REMOVE.
 unknown_ascii_letters = set()
@@ -120,18 +121,18 @@ def parse_line(line):
   line = line.replace('"', '')
   line = line.strip()
 
-  if not _DIALECTS.search(line):
+  if not constants.DIALECTS_RE.search(line):
     # This has a single undialected (spellings, types, references) tuple.
     s, t, r, line = _munch_and_parse_spellings_types_and_references(line)
     assert not line
-    return [structured_word([], s, t, r)]
+    return [lexical.structured_word([], s, t, r)]
 
   words = []
   while line:
     # Parse the dialects.
     d, line = _munch_and_parse_dialects(line)
     s, t, r, line = _munch_and_parse_spellings_types_and_references(line)
-    words.append(structured_word(d, s, t, r))
+    words.append(lexical.structured_word(d, s, t, r))
 
   return words
   
@@ -206,7 +207,7 @@ def _ascii_to_unicode(ascii):
       uni = uni + _LETTER_MAPPING[c]
     else:
       uni = uni + c
-      if c not in _SPELLING_ANNOTATION_CHARS:
+      if c not in constants.SPELLING_ANNOTATION_CHARS:
         unknown_ascii_letters.add(c)
   return uni
 
@@ -244,7 +245,7 @@ def _parse_reference(line):
 
 def _munch_and_parse_dialects(line):
   # TODO: Force a munch and a match, unless you are parsing derivates.
-  match, remainder = _munch(line, _DIALECTS, False)
+  match, remainder = _munch(line, constants.DIALECTS_RE, False)
   if match:
     assert match[0] == '(' and match[-1] == ')'
     return match[1:-1].split(','), remainder
@@ -265,7 +266,7 @@ def parse_txt_line(line):
       keep_going = True
       while keep_going:
         keep_going = False
-        for mp in meaning_prefixes:
+        for mp in constants.MEANING_PREFIXES:
           if l[i].startswith(mp[0]):
             l[i] = mp[1] + l[i][len(mp[0]):]
             keep_going = True
@@ -273,39 +274,39 @@ def parse_txt_line(line):
 
   def build_word(w, class_suffix):
     d = []
-    if _DIALECTS.match(w):
+    if constants.DIALECTS_RE.match(w):
       d, w = _munch_and_parse_dialects(w)
     keep_going = True
     t = []
     while keep_going:
       w = w.strip()
       keep_going = False
-      for tt in txt_types:
+      for tt in constants.TXT_TYPES:
         if w.startswith(tt[0]):
-          t.append(type(tt[1], tt[0]))
+          t.append(lexical.type(tt[1], tt[0]))
           keep_going = True
           w = w[len(tt[0]):].strip()
           break
     type_deteced = False
-    for p in _SPELLING_ANNOTATIONS:
+    for p in constants.SPELLING_ANNOTATIONS:
       if p[0] in w:
         w = w.replace(p[0], p[1])
         type_deteced = True
     s = w.split(',')
     if not (type_deteced and class_suffix == ' (v.)'):
-      t = t or [type(class_suffix, '')]
+      t = t or [lexical.type(class_suffix, '')]
     for i in s:
-      prefixes.update(filter(None, _COPTIC_LETTER.split(i)))
-    return structured_word(d, s, t, [])
+      prefixes.update(filter(None, constants.COPTIC_LETTER_RE.split(i)))
+    return lexical.structured_word(d, s, t, [])
 
   line = line.strip()
-  line = _TWO_TABS.split(line)
+  line = constants.TWO_TABS_RE.split(line)
   line = line[0].split('\t') + line[1:]
   line = [part.strip() for part in line]
   line = list(filter(None, line))
   assert len(line) == 4, line
-  assert _PAGE_NUMER.match(line[0]), line
-  assert _CLASS.match(line[1]), line
+  assert constants.PAGE_NUMER_RE.match(line[0]), line
+  assert constants.CLASS_RE.match(line[1]), line
 
   line[2] = make_multiline(line[2], '', False)
   class_has_suffix_form = line[1] in constants.class_to_suffix

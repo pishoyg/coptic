@@ -54,14 +54,14 @@ argparser.add_argument(
 argparser.add_argument(
   '--coptwrd_txt',
   type=str,
-  default='coptwrd.txt',
+  default='data/coptwrd.txt',
   help='Path to the input TXT file containing the words.'
 )
 
 argparser.add_argument(
   '--coptdrv_csv',
   type=str,
-  default='coptdrv.csv',
+  default='data/coptdrv.csv',
   help='Path to the input CSV file containing the derivations.'
 )
 
@@ -78,7 +78,7 @@ argparser.add_argument(
 argparser.add_argument(
   '--output_csv',
   type=str,
-  default='marcion-crum-parser.csv',
+  default='data/marcion-crum-parser.csv',
   help='Path to the output CSV file.'
 )
 
@@ -148,14 +148,14 @@ def main():
   lines = read_txt()
   df = pd.DataFrame()
   for l in lines:
-    df = df.append(parser.parse_txt_line(l), ignore_index=True)
+    new = pd.DataFrame([parser.parse_txt_line(l)])
+    df = pd.concat([df, new], ignore_index=True)
 #  df = df.reindex(sorted(df.columns), axis=1)
 #  df = df.reindex(columns=['dialect:B', 'meaning', 'class', 'page'])
   df = df.fillna('')
   print(df)
   df.to_csv(args.coptwrd_txt + '.anki.txt', sep='\t', header=False, index=False, columns=['dialect:B', 'meaning', 'page'])
   print(parser.prefixes)
-  write_to_gspread(df)
   exit()
   df = read_csv()
   process_data(df)
