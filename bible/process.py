@@ -9,7 +9,7 @@ import re
 LANGUAGES = [
   'Bohairic', 'Akhmimic', 'Fayyumic', 'OldBohairic', 'Mesokemic', 'DialectP',
   'Lycopolitan', 'Greek', 'English', 'Sahidic']
-PREFIX = re.compile('^\([^)]+\) ')
+PREFIX = re.compile('^\([^)]+\)')
 FIRST_VERSE = re.compile('\(ⲁ︦|1\).+')
 
 
@@ -52,7 +52,8 @@ class lang_processor:
     if self._title_check(verse):
       return
     verse = PREFIX.sub('', verse)
-    self.lines.append('{}:{} '.format(c, v) + verse)
+    verse = ' '.join(['{}:{}'.format(c, v)] + verse.split())
+    self.lines.append(verse)
 
   def _process_chapter(self, chapter):
     c = chapter['sectionNameEnglish']
