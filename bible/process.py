@@ -37,6 +37,8 @@ class lang_processor:
     self.lines = []
     self.done = False
     self.title_check_done = False
+    self.verse_num = None
+    self.chapter_num = None
 
   def _title_check(self, verse):
     # Return true if this is the title.
@@ -47,20 +49,28 @@ class lang_processor:
       return False
     return True
 
-  def _process_verse(self, verse, c, v):
+  def _process_verse(self, verse):
     verse = verse[self.lang]
     if self._title_check(verse):
       return
     verse = PREFIX.sub('', verse)
-    verse = ' '.join(['{}:{}'.format(c, v)] + verse.split())
+    verse = ' '.join(['{}:{}'.format(self.chapter_num, self.verse_num)] + verse.split())
+    self.verse_num += 1
     self.lines.append(verse)
 
   def _process_chapter(self, chapter):
-    c = chapter['sectionNameEnglish']
-    for v, verse in enumerate(chapter['data']):
-      self._process_verse(verse, c, v+1)
+    if chapter['sectionNameEnglish']:
+      self.chapter_num = chapter['sectionNameEnglish']
+    self.verse_num = 1
+    for verse in chapter['data']:
+      self._process_verse(verse)
+    try:
+      self.chapter_num = int(self.chapter_num) + 1
+    except:
+      pass
 
   def process_book(self, book):
+    self.chapter_num = 1
     for chapter in book:
       self._process_chapter(chapter)
     self.done = True
