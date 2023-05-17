@@ -2,7 +2,6 @@ import argparse
 import json
 import json5
 import os
-import pathlib
 import re
 
 
@@ -23,8 +22,8 @@ argparser.add_argument(
 argparser.add_argument(
   '--output_dir',
   type=str,
-  help='Path to the input directory.',
-  default='data'
+  help='Path to the output directory.',
+  default='data/txt'
 )
 args = argparser.parse_args()
 
@@ -135,7 +134,7 @@ def main():
       data = json5.loads(t)
     for lang in LANGUAGES:
       out_dir = os.path.join(args.output_dir, lang)
-      pathlib.Path(out_dir).mkdir(exist_ok=True)
+      os.makedirs(out_dir, exist_ok=True)
       p = lang_processor(book_name, lang)
       p.process_book(data)
       out = open(os.path.join(out_dir, book_name + '.txt'), 'w')
@@ -145,7 +144,7 @@ def main():
     if not err:
       continue
     out_dir = os.path.join(args.output_dir, lang, 'errors')
-    pathlib.Path(out_dir).mkdir(exist_ok=True)
+    os.makedirs(out_dir, exist_ok=True)
     out = open(os.path.join(out_dir, 'errors.txt'), 'w')
     out.write(err)
 

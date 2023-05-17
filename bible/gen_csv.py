@@ -24,7 +24,7 @@ argparser.add_argument(
   '--books',
   type=str,
   help='Path to a file containing the books in order.',
-  default='raw/books.txt'
+  default='raw/books/books.txt'
 )
 argparser.add_argument(
   '--input_dir',
@@ -35,8 +35,8 @@ argparser.add_argument(
 argparser.add_argument(
   '--output_dir',
   type=str,
-  help='Path to the input directory.',
-  default='data'
+  help='Path to the ouptut directory.',
+  default='data/csv'
 )
 args = argparser.parse_args()
 
@@ -53,6 +53,8 @@ def main():
   with open(args.books) as b:
     books = b.read().split('\n')
     books = filter(None, books)
+
+  os.makedirs(args.output_dir, exist_ok=True)
 
   bible = pd.DataFrame()
 
@@ -85,7 +87,9 @@ def main():
     df.to_csv(os.path.join(args.output_dir, book_name + '.csv'), sep='\t',
               index=False)
     bible = pd.concat([bible, df], ignore_index=True)
-  bible.to_csv(os.path.join(args.output_dir, 'bible.csv'), sep='\t', index=False)
+  bible_path = os.path.join(args.output_dir, 'bible/bible.csv')
+  os.makedirs(os.path.dirname(bible_path), exist_ok=True)
+  bible.to_csv(bible_path, sep='\t', index=False)
 
 
 if __name__ == '__main__':
