@@ -3,6 +3,8 @@ import json
 import json5
 import os
 
+# TODO: Export the data to gdoc.
+
 LANGUAGES = [
   'Bohairic', 'Sahidic', 'English', 'Greek', 'Fayyumic', 'Akhmimic',
   'OldBohairic', 'Mesokemic', 'DialectP', 'Lycopolitan']

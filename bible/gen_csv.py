@@ -5,6 +5,8 @@ import os
 import pandas as pd
 import re
 
+# TODO: Export the data to gsheet.
+
 GSPREAD_ENABLED = True
 try:
   import gspread
