@@ -17,7 +17,7 @@ argparser.add_argument(
   '--input_dir',
   type=str,
   help='Path to the input directory.',
-  default='raw'
+  default='data/raw'
 )
 argparser.add_argument(
   '--output_dir',

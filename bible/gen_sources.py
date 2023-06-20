@@ -16,13 +16,13 @@ argparser.add_argument(
   '--books',
   type=str,
   help='Path to a file containing the books in order.',
-  default='raw/books/books.txt'
+  default='data/raw/books/books.txt'
 )
 argparser.add_argument(
   '--input_dir',
   type=str,
   help='Path to the input directory.',
-  default='raw/Sources'
+  default='data/raw/Sources'
 )
 argparser.add_argument(
   '--output_file',
