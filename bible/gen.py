@@ -6,6 +6,7 @@ import pandas as pd
 import re
 
 # TODO: Export the data to gsheet.
+# TODO: Change the color of the verse numbers to #B00E23.
 
 GSPREAD_ENABLED = True
 try:
