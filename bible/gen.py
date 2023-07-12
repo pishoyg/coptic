@@ -8,7 +8,7 @@ import re
 from ebooklib import epub
 
 # TODO: Export the data to gsheet.
-# TODO: Change the color of the verse numbers to #B00E23.
+# TODO: Modularize the code.
 
 GSPREAD_ENABLED = True
 try:
