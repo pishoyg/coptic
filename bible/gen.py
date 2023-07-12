@@ -105,6 +105,9 @@ def html_id(book_name, chapter_num=None):
     id += str(chapter_num)
   return id
 
+def epub_book_href(lang, book_name):
+  return lang + '_' + html_id(book_name) + '.xhtml'
+
 PARALLEL_FORMATS = {
   1: ['', '{} <br> {} <br> <br>', ''],
   2: ['<table>', '<tr> <td>{}</td> <td>{}</td> </tr>', '</table>'],
@@ -224,14 +227,14 @@ def main():
 
     toc = epub.EpubHtml(title='Table of Contents', file_name=lang + '_toc.xhtml')
     toc.set_content('\n'.join(['<h1>Ⲡⲓϫⲱⲙ Ⲉⲑⲟⲩⲁⲃ</h1>'] + [
-      '<p><a href="#{}">{}</a></p>'.format(html_id(book_name), book_name) for book_name in books
+      '<p><a href="{}">{}</a></p>'.format(epub_book_href(lang, book_name), book_name) for book_name in books
     ]))
     kindle.add_item(toc)
 
     spine = [cover, toc]
 
     for book_name in books:
-      c = epub.EpubHtml(title=book_name, file_name=lang + '_' + html_id(book_name) + '.xhtml')
+      c = epub.EpubHtml(title=book_name, file_name=epub_book_href(lang, book_name))
       c.set_content('<html> <head></head> <body>' + '\n'.join(html[lang][book_name]) + '</body> </html>')
       spine.append(c)
       kindle.add_item(c)
