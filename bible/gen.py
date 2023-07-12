@@ -35,7 +35,7 @@ argparser.add_argument(
   '--cover',
   type=str,
   help='Path to a file containing the cover image.',
-  default='data/img/stauros.png'
+  default='data/img/stauros.jpeg'
 )
 argparser.add_argument(
   '--input_dir',
@@ -69,6 +69,13 @@ argparser.add_argument(
   default=['Bohairic_English'],
   nargs='*',
 )
+argparser.add_argument(
+  '--parallel_format',
+  type=int,
+  help='Format for parallel version. Either 1 for parallel verses, or 2 for successive verses.',
+  default=1,
+)
+
 args = argparser.parse_args()
 
 def normalize(txt):
@@ -98,25 +105,26 @@ def html_id(book_name, chapter_num=None):
     id += str(chapter_num)
   return id
 
-class parallel_builder_1:
+PARALLEL_FORMATS = {
+  1: ['', '{} <br> {} <br> <br>', ''],
+  2: ['<table>', '<tr> <td>{}</td> <td>{}</td> </tr>', '</table>'],
+}
+
+class parallel_builder:
+  def __init__(self, chapter_beginner, verse_format, chapter_end):
+    self.chapter_beginner = chapter_beginner
+    self.chapter_end = chapter_end
+    self.verse_format = verse_format
+
   def begin_chapter(self):
-    return '<table>'
+    return self.chapter_beginner
   def end_chapter(self):
-    return '</table>'
+    return self.chapter_end
   def verse(self, verse, pair):
-    return '<tr> <td>{}</td> <td>{}</td> </tr>'.format(
+    return self.verse_format.format(
       recolor_number(verse[pair[0]], verse),
       recolor_number(verse[pair[1]], verse))
 
-class parallel_builder_2:
-  def begin_chapter(self):
-    return ''
-  def end_chapter(self):
-    return ''
-  def verse(self, verse, pair):
-    return '{} <br> {} <br> <br>'.format(
-      recolor_number(verse[pair[0]], verse),
-      recolor_number(verse[pair[1]], verse))
 
 def main():
   with open(args.books) as b:
@@ -152,7 +160,7 @@ def main():
         html[lang][book_name].append('<a href="#{}">{}</a>'.format(html_id(book_name, chapter_num), chapter_num))
 
     parallel_pairs = [p.split('_') for p in args.parallels]
-    pb = parallel_builder_2()
+    pb = parallel_builder(*PARALLEL_FORMATS[args.parallel_format])
     for chapter in data:
       chapter_num = chapter_number(chapter)
       for lang in LANGUAGES + args.parallels:
@@ -205,17 +213,30 @@ def main():
     kindle.set_identifier('lang')
     kindle.set_language('cop')
     kindle.set_title('Ⲡⲓϫⲱⲙ Ⲉⲑⲟⲩⲁⲃ')
-    kindle.add_author('Saint Shenouda The Archimandrite – Coptic Society')
+    kindle.add_author('Saint Shenouda The Archimandrite Coptic Society')
+    cover_file_name = os.path.basename(args.cover)
+    cover = epub.EpubCover(file_name=cover_file_name)
     with open(args.cover, 'rb') as f:
-      kindle.set_cover(os.path.basename(args.cover), f.read())
-    spine = []
+      cover.content = f.read()
+    kindle.add_item(cover)
+    kindle.add_item(epub.EpubCoverHtml(image_name=cover_file_name))
+    kindle.add_metadata(None, 'meta', '', epub.OrderedDict([('name', 'cover'), ('content', 'cover-img')]))
+
+    toc = epub.EpubHtml(title='Table of Contents', file_name=lang + '_toc.xhtml')
+    toc.set_content('\n'.join(['<h1>Ⲡⲓϫⲱⲙ Ⲉⲑⲟⲩⲁⲃ</h1>'] + [
+      '<p><a href="#{}">{}</a></p>'.format(html_id(book_name), book_name) for book_name in books
+    ]))
+    kindle.add_item(toc)
+
+    spine = [cover, toc]
+
     for book_name in books:
       c = epub.EpubHtml(title=book_name, file_name=lang + '_' + html_id(book_name) + '.xhtml')
       c.set_content('<html> <head></head> <body>' + '\n'.join(html[lang][book_name]) + '</body> </html>')
       spine.append(c)
       kindle.add_item(c)
     kindle.spine = spine
-    kindle.toc = spine
+    kindle.toc = spine[2:]
     kindle.add_item(epub.EpubNcx())
     kindle.add_item(epub.EpubNav())
 
