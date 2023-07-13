@@ -25,6 +25,25 @@ LANGUAGES = [
 VERSE_PREFIX = re.compile('^\(([^)]+)\)')
 
 
+HTML_HEAD = """
+<head>
+    <title>Ⲡⲓϫⲱⲙ Ⲉⲑⲟⲩⲁⲃ</title>
+    <style>
+    .a { color: blue;}
+    .column {
+        float: left;
+        width: 50%;
+    }
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    </style>
+</head>
+<h1>Ⲡⲓϫⲱⲙ Ⲉⲑⲟⲩⲁⲃ</h1>
+"""
+
 argparser = argparse.ArgumentParser(
   description='Process the Coptic Bible data.')
 argparser.add_argument(
@@ -120,6 +139,7 @@ def epub_book_href(lang, book_name):
 PARALLEL_FORMATS = {
   1: ['', '{} <br> {} <br> <br>', ''],
   2: ['<table>', '<tr> <td>{}</td> <td>{}</td> </tr>', '</table>'],
+  3: ['', '<div class="row"> <div class="column">{}</div> <div class="column">{}</div> </div>', '']
 }
 
 
@@ -171,13 +191,7 @@ def write_html(html, books):
 
   os.makedirs(args.output_html, exist_ok=True)
   for lang in LANGUAGES + args.parallels:
-    out = [
-      '<head>',
-      '<title>Ⲡⲓϫⲱⲙ Ⲉⲑⲟⲩⲁⲃ</title>',
-      '<style> a { color: blue;} </style>'
-      '</head>',
-      '<h1>Ⲡⲓϫⲱⲙ Ⲉⲑⲟⲩⲁⲃ</h1>'
-    ]
+    out = [HTML_HEAD]
     out.extend([
       '<p><a href="#{}">{}</a></p>'.format(html_id(book_name), book_name) for book_name in books
     ])
@@ -195,7 +209,7 @@ def write_epub(html, books):
 
   for lang in LANGUAGES + args.parallels:
     kindle = epub.EpubBook()
-    kindle.set_identifier('lang')
+    kindle.set_identifier(lang)
     kindle.set_language('cop')
     kindle.set_title('Ⲡⲓϫⲱⲙ Ⲉⲑⲟⲩⲁⲃ')
     kindle.add_author('Saint Shenouda The Archimandrite Coptic Society')
@@ -209,7 +223,7 @@ def write_epub(html, books):
 
     toc = epub.EpubHtml(title='Table of Contents', file_name=lang + '_toc.xhtml')
     toc.set_content('\n'.join(
-      ['<h1>Ⲡⲓϫⲱⲙ Ⲉⲑⲟⲩⲁⲃ</h1>'] + [
+      [HTML_HEAD] + [
       '<p><a href="{}">{}</a></p>'.format(epub_book_href(lang, book_name), book_name) for book_name in books
     ]))
     kindle.add_item(toc)
