@@ -22,27 +22,11 @@ LANGUAGES = [
   'OldBohairic', 'Mesokemic', 'DialectP', 'Lycopolitan']
 
 
+TITLE='Ⲡⲓϫⲱⲙ Ⲉⲑⲟⲩⲁⲃ'
+
+
 VERSE_PREFIX = re.compile('^\(([^)]+)\)')
 
-
-HTML_HEAD = """
-<head>
-    <title>Ⲡⲓϫⲱⲙ Ⲉⲑⲟⲩⲁⲃ</title>
-    <style>
-    .a { color: blue;}
-    .column {
-        float: left;
-        width: 50%;
-    }
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-    </style>
-</head>
-<h1>Ⲡⲓϫⲱⲙ Ⲉⲑⲟⲩⲁⲃ</h1>
-"""
 
 argparser = argparse.ArgumentParser(
   description='Process the Coptic Bible data.')
@@ -107,7 +91,7 @@ def normalize(txt):
 
 def recolor(v, verse):
   if 'coloredWords' not in verse:
-    return
+    return v
   for d in verse['coloredWords']:
     txt = d['word']
     color = d['light']
@@ -132,8 +116,8 @@ def html_id(book_name, chapter_num=None):
   return id
 
 
-def epub_book_href(lang, book_name):
-  return lang + '_' + html_id(book_name) + '.xhtml'
+def epub_book_href(book_name):
+  return html_id(book_name) + '.xhtml'
 
 
 PARALLEL_FORMATS = {
@@ -153,10 +137,8 @@ class parallel_builder:
     return self.chapter_beginner
   def end_chapter(self):
     return self.chapter_end
-  def verse(self, verse, pair):
-    return self.verse_format.format(
-      recolor(verse[pair[0]], verse),
-      recolor(verse[pair[1]], verse))
+  def verse(self, v1, v2):
+    return self.verse_format.format(v1, v2)
 
 
 def load_book(book_name):
@@ -185,16 +167,42 @@ def write_csv(df):
   df.to_csv(path, sep='\t', index=False)
 
 
+def html_head(title=''):
+  return """<head>
+  <title>{title}</title>
+  <style>
+    .a {{
+      color: blue;
+    }}
+    .column {{
+        float: left;
+        width: 50%;
+    }}
+    .row:after {{
+        content: "";
+        display: table;
+        clear: both;
+    }}
+  </style>
+</head>""".format(title=title)
+
+
+def html_h1(title):
+  return '<h1>{title}</h1>'.format(title=title)
+
+
+def html_toc(books=[], href=None):
+  return '\n'.join(
+    ['<p><a href="{}">{}</a></p>'.format(href(book_name), book_name) for book_name in books])
+
+
 def write_html(html, books):
   if not args.output_html:
     return
 
   os.makedirs(args.output_html, exist_ok=True)
   for lang in LANGUAGES + args.parallels:
-    out = [HTML_HEAD]
-    out.extend([
-      '<p><a href="#{}">{}</a></p>'.format(html_id(book_name), book_name) for book_name in books
-    ])
+    out = [html_head(TITLE) + html_h1(TITLE) + html_toc(books, lambda book_name: '#' + html_id(book_name))]
     for book_name in books:
       out.extend(html[lang][book_name])
     with open(os.path.join(args.output_html, lang.lower() + '.html'), 'w') as f:
@@ -221,18 +229,15 @@ def write_epub(html, books):
     kindle.add_item(epub.EpubCoverHtml(image_name=cover_file_name))
     kindle.add_metadata(None, 'meta', '', epub.OrderedDict([('name', 'cover'), ('content', 'cover-img')]))
 
-    toc = epub.EpubHtml(title='Table of Contents', file_name=lang + '_toc.xhtml')
-    toc.set_content('\n'.join(
-      [HTML_HEAD] + [
-      '<p><a href="{}">{}</a></p>'.format(epub_book_href(lang, book_name), book_name) for book_name in books
-    ]))
+    toc = epub.EpubHtml(title='Table of Contents', file_name='toc.xhtml')
+    toc.set_content(html_head(TITLE) + '<body>' + html_h1(TITLE) + html_toc(books, epub_book_href) + '</body>')
     kindle.add_item(toc)
 
     spine = [cover, toc]
 
     for book_name in books:
-      c = epub.EpubHtml(title=book_name, file_name=epub_book_href(lang, book_name))
-      c.set_content('<html> <head></head> <body>' + '\n'.join(html[lang][book_name]) + '</body> </html>')
+      c = epub.EpubHtml(title=book_name, file_name=epub_book_href(book_name))
+      c.set_content(html_head(book_name) + '<body>' + '\n'.join(html[lang][book_name]) + '</body>')
       spine.append(c)
       kindle.add_item(c)
     kindle.spine = spine
@@ -279,9 +284,11 @@ def main():
         }
         for lang in LANGUAGES:
           d[lang] = VERSE_PREFIX.sub('', verse[lang])
-          html[lang][book_name].append(verse[lang])
+          html[lang][book_name].append(recolor(verse[lang], verse))
         for lang, pair in zip(args.parallels, parallel_pairs):
-          html[lang][book_name].append(pb.verse(verse, pair))
+          html[lang][book_name].append(pb.verse(
+            recolor(verse[pair[0]], verse),
+            recolor(verse[pair[1]], verse)))
         book_df = pd.concat([book_df, pd.DataFrame([d])], ignore_index=True)
       for lang in args.parallels:
         html[lang][book_name].append(pb.end_chapter())
