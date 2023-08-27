@@ -28,7 +28,7 @@ import argparse
 
 import pandas as pd
 
-import parser
+import csvparser
 
 GSPREAD_ENABLED = True
 try:
@@ -148,14 +148,14 @@ def main():
   lines = read_txt()
   df = pd.DataFrame()
   for l in lines:
-    new = pd.DataFrame([parser.parse_txt_line(l)])
+    new = pd.DataFrame([csvparser.parse_txt_line(l)])
     df = pd.concat([df, new], ignore_index=True)
 #  df = df.reindex(sorted(df.columns), axis=1)
 #  df = df.reindex(columns=['dialect:B', 'meaning', 'class', 'page'])
   df = df.fillna('')
   print(df)
   df.to_csv(args.coptwrd_txt + '.anki.txt', sep='\t', header=False, index=False, columns=['dialect:B', 'meaning', 'page'])
-  print(parser.prefixes)
+  print(csvparser.prefixes)
   exit()
   df = read_csv()
   process_data(df)
@@ -177,7 +177,7 @@ def process_data(df):
   unicode_coptic = []
   filtered_words = {d: [] for d in args.filter_dialects}
   for line in df[args.word_col]:
-    line = parser.parse_line(line)
+    line = csvparser.parse_line(line)
     unicode_coptic.append(' | '.join(str(word) for word in line))
     for d in args.filter_dialects:
       filtered_words[d].append(' | '.join([word.undialected_str() for word in line if word.is_dialect(d)]))
