@@ -6,6 +6,10 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**
 
+  - [Directory Structure](#directory-structure)
+  - [Contact](#contact)
+  - [Contributing](#contributing)
+  - [Copyrights](#copyrights)
 - [`apps.ankiweb.net/`](#appsankiwebnet)
   - [TODO (data collection)](#todo-data-collection)
     - [Crum](#crum)
@@ -15,10 +19,11 @@
   - [TODO (documentation)](#todo-documentation)
   - [TODO (programming)](#todo-programming)
     - [Script Features](#script-features)
-    - [Data Included](#data-included)
-    - [Drive and Sharability](#drive-and-sharability)
-    - [Appearance](#appearance)
-    - [Package Sharability](#package-sharability)
+    - [Data](#data)
+    - [Collaborator Convenience](#collaborator-convenience)
+    - [Learner Convenience](#learner-convenience)
+    - [Developer Convenience](#developer-convenience)
+  - [Synchronization](#synchronization)
   - [Keys and Synchronization](#keys-and-synchronization)
 - [`marcion.sourceforge.net/`](#marcionsourceforgenet)
 - [`kellia.uni-goettingen.de/`](#kelliauni-goettingende)
@@ -151,27 +156,52 @@ and open it / import it in Anki.
 
 1. Document the root directories that the scripts typically run from.
 
+1. **Wrap your head around the list of projects. Rate each project based on
+(1) feasibility and (2) impact. Highlight the low-hanging fruits. Revisit the
+bookmarks.**
+
+1. Document the snapshot dates and versions of the apps and data imported
+into the repo.
+
+1. **Rename "bible/" to "literature/" since all literature is welcome.**
+
+1. **Move the Anki generator to a new directory right under the root.**
+
+1. **The following README.md files may be nested too deeply within the repo.
+Consider bringing them closer to the root in order to make the information
+easier to retrieve.**
+
+- `./bible/stshenouda.org/README.md`
+- `./dictionary/copticocc.org/README.md`
+- `./dictionary/marcion.sourceforge.net/README.md`
+- `./dictionary/marcion.sourceforge.net/data/README.md`
+- `./dictionary/marcion.sourceforge.net/data/img/README.md`
+- `./dictionary/stshenouda.org/data/README.md`
+- `./dictionary/apps.ankiweb.net/README.md`
+
+1. **Document the repo properly and invite collaborators.**
+
 ## TODO (programming)
 
 ### Script Features
 
-1. **Allow either-or fields.**
+1. **Implement either-or fields.**
 
 1. **Use the either-or feature to put something in the front when the existing
    front (usually Bohairic) is missing.**
 
-1. **Implement a `SEQ` field type.**
-
-1. **Use the either-or feature and the `SEQ` field type to generate keys for
-   Bible verses without references.**
-
 1. **Order the Bible books and chapters.**
+
+1. Implement a `SEQ` field type.
+
+1. Use the either-or feature and the `SEQ` field type to generate keys for
+   Bible verses without references.
 
 1. Contemplate sorting the dictionary words by popularity. For now, you can
    rely on simple string matching against the Bible data, and perhaps manually
    modify it later.
 
-### Datasets
+### Data
 
 1. **Add word derivations to a TSV, and then to the flashcards.**
 
@@ -184,13 +214,13 @@ and open it / import it in Anki.
 1. Contemplate crawling [Wiktionary - Category:Coptic lemmas
 ](https://en.wiktionary.org/wiki/Category:Coptic_lemmas).
 
-### Sharability for Collaborators
+### Collaborator Convenience
 
 1. **Support more seamless integration between Drive and your scripts.**
 
-1. It might be easier for contributors if the "Notes" field in the Anki package
+1. **It might be easier for contributors if the "Notes" field in the Anki package
    should be retrieved from a Drive folder or gsheet, rather than a Git
-   directory.
+   directory.**
 
 1. Consider retrieving the images from a Drive folder or even from a
    spreadsheet if possible.
@@ -200,47 +230,28 @@ But what we can do is have users share their contributions via Drive, and then
 we will implement a pipeline to integrate the contributions made through Drive
 into Git.
 
-### Sharability for Learners
+### Learner Convenience
 
 1. Revisit the possibility of image compression to minimize the package size.
 
 1. Revisit the possibility of publishing the decks through Anki.
-
-### Appearance
 
 1. Label the images, in order to make it clear that they represent different
    senses.
 
 1. Consider padding the images.
 
-## TODO(sort)
+### Developer Convenience
 
-**TODO: Wrap your head around the list of projects. Rate each project based on
-(1) feasibility and (2) impact. Highlight the low-hanging fruits. Revisit the
-bookmarks.**
+1. Add unit tests.
 
-*TODO: Document the snapshot dates and versions of the apps and data imported
-into the repo.*
+1. Add hooks (pre-commits?) to exercise more control on the code.
 
-*TODO: Rename "bible/" to "literature/" since all literature is welcome.*
+1. Learn more Vim!
 
-**TODO: The following README.md files may be nested too deeply within the repo.
-Consider bringing them closer to the root in order to make the information
-easier to retrieve.**
+1. Add doc comments, type hints, assertions, and stripping.
 
-- `./bible/stshenouda.org/README.md`
-- `./dictionary/copticocc.org/README.md`
-- `./dictionary/marcion.sourceforge.net/README.md`
-- `./dictionary/marcion.sourceforge.net/data/README.md`
-- `./dictionary/marcion.sourceforge.net/data/img/README.md`
-- `./dictionary/stshenouda.org/data/README.md`
-- `./dictionary/apps.ankiweb.net/README.md`
-
-**TODO: Document the repo properly and invite collaborators.**
-
-*TODO: Add unit tests.*
-
-*TODO: Add hooks (pre-commits?) to exercise more control on the code.*
+1. Collect and print stats.
 
 ## Synchronization
 

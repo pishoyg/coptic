@@ -24,7 +24,7 @@ def hash(text: str) -> int:
     return int(hashlib.sha1(text.encode("utf-8")).hexdigest(), 17) % MAX_ID
 
 
-def sort_key(path):
+def path_sort_key(path):
     path = os.path.basename(path)
     return [x.zfill(MAX_INTEGER_LENGTH) for x in INTEGER_RE.findall(path)] + [path]
 
@@ -35,8 +35,8 @@ argparser = argparse.ArgumentParser(
     formatter_class=argparse.RawTextHelpFormatter,
     description="""
 Generate an Anki package collection.
-The flags --front and --back define the content of the fronts and backs. Each
-entry in the flag could be one of the following:
+
+Please read carefully as this defines the format for the flag values.
 
 - TSV::${FILE_PATH}::${COLUMN_NAME}
 
@@ -120,13 +120,13 @@ argparser.add_argument(
         # 1. The Dictionary.
         "1::TSV::../marcion.sourceforge.net/data/output/roots.tsv::key",
         # 2. The Bible.
-        "2::TXT::(",
-        "2::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::book",
-        "2::TXT:: ",
-        "2::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::chapter",
-        "2::TXT:::",
-        "2::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::verse",
-        "2::TXT::)",
+        "2::01::TXT::(",
+        "2::01::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::book",
+        "2::01::TXT:: ",
+        "2::01::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::chapter",
+        "2::01::TXT:::",
+        "2::01::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::verse",
+        "2::01::TXT::)",
     ],
     help="This is a critical field. The note keys will be used as database"
     " keys to enable synchronization. It is important for the keys to be (1)"
@@ -212,55 +212,54 @@ argparser.add_argument(
         "2::03::TXT::<b>English:</b>",
         "2::03::TXT::<br>",
         "2::03::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::English",
-        # Break
-        "2::04::TXT::<br>",
-        "2::04::TXT::<br>",
+        "2::03::TXT::<br>",
+        "2::03::TXT::<br>",
         # Sahidic.
-        "2::05::TXT::<b>Sahidic:</b>",
-        "2::05::TXT::<br>",
-        "2::05::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::Sahidic",
-        "2::05::TXT::<br>",
-        "2::05::TXT::<br>",
+        "2::04::TXT::<b>Sahidic:</b>",
+        "2::04::TXT::<br>",
+        "2::04::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::Sahidic",
+        "2::04::TXT::<br>",
+        "2::04::TXT::<br>",
         # Fayyumic.
-        "2::06::TXT::<b>Fayyumic:</b>",
-        "2::06::TXT::<br>",
-        "2::06::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::Fayyumic",
-        "2::06::TXT::<br>",
-        "2::06::TXT::<br>",
+        "2::05::TXT::<b>Fayyumic:</b>",
+        "2::05::TXT::<br>",
+        "2::05::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::Fayyumic",
+        "2::05::TXT::<br>",
+        "2::05::TXT::<br>",
         # Akhmimic.
-        "2::07::TXT::<b>Akhmimic:</b>",
-        "2::07::TXT::<br>",
-        "2::07::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::Akhmimic",
-        "2::07::TXT::<br>",
-        "2::07::TXT::<br>",
+        "2::06::TXT::<b>Akhmimic:</b>",
+        "2::06::TXT::<br>",
+        "2::06::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::Akhmimic",
+        "2::06::TXT::<br>",
+        "2::06::TXT::<br>",
         # OldBohairic.
-        "2::08::TXT::<b>OldBohairic:</b>",
-        "2::08::TXT::<br>",
-        "2::08::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::OldBohairic",
-        "2::08::TXT::<br>",
-        "2::08::TXT::<br>",
+        "2::07::TXT::<b>OldBohairic:</b>",
+        "2::07::TXT::<br>",
+        "2::07::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::OldBohairic",
+        "2::07::TXT::<br>",
+        "2::07::TXT::<br>",
         # Mesokemic.
-        "2::09::TXT::<b>Mesokemic:</b>",
-        "2::09::TXT::<br>",
-        "2::09::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::Mesokemic",
-        "2::09::TXT::<br>",
-        "2::09::TXT::<br>",
+        "2::08::TXT::<b>Mesokemic:</b>",
+        "2::08::TXT::<br>",
+        "2::08::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::Mesokemic",
+        "2::08::TXT::<br>",
+        "2::08::TXT::<br>",
         # DialectP.
-        "2::10::TXT::<b>DialectP:</b>",
-        "2::10::TXT::<br>",
-        "2::10::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::DialectP",
-        "2::10::TXT::<br>",
-        "2::10::TXT::<br>",
+        "2::09::TXT::<b>DialectP:</b>",
+        "2::09::TXT::<br>",
+        "2::09::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::DialectP",
+        "2::09::TXT::<br>",
+        "2::09::TXT::<br>",
         # Lycopolitan.
-        "2::11::TXT::<b>Lycopolitan:</b>",
-        "2::11::TXT::<br>",
-        "2::11::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::Lycopolitan",
-        "2::11::TXT::<br>",
-        "2::11::TXT::<br>",
+        "2::10::TXT::<b>Lycopolitan:</b>",
+        "2::10::TXT::<br>",
+        "2::10::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::Lycopolitan",
+        "2::10::TXT::<br>",
+        "2::10::TXT::<br>",
         # Greek.
-        "2::12::TXT::<b>Greek:</b>",
-        "2::12::TXT::<br>",
-        "2::12::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::Greek",
+        "2::11::TXT::<b>Greek:</b>",
+        "2::11::TXT::<br>",
+        "2::11::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::Greek",
     ],
     help="Format of the card backs. See description for syntax.",
 )
@@ -271,14 +270,15 @@ argparser.add_argument(
     nargs="*",
     default=[
         # 1. The Dictionary.
-        "1::.card { font-size: 18px; }",
-        "1::#front { text-align: center; }",
+        "1::TXT::.card { font-size: 18px; }",
+        "1::TXT::#front { text-align: center; }",
         # 2. The Bible.
-        "2::.card { font-size: 18px; }",
+        "2::TXT::.card { font-size: 18px; }",
     ],
     help="Global CSS. Please notice that the front will be given the id"
     ' "front" and the back will have the id "back". You can use these IDs if'
-    " you want to make your CSS format side-specific.",
+    " you want to make your CSS format side-specific."
+    " Only TXT fields are allowed for this flag.",
 )
 
 argparser.add_argument(
@@ -287,16 +287,17 @@ argparser.add_argument(
     nargs="*",
     default=[
         # 1. The Dictionary.
-        "1::Dictionary",
+        "1::TXT::Dictionary",
         # 2. The Bible.
-        "2::Bible",
+        "2::TXT::Bible",
     ],
     help="Model name in the generated Anki package. N.B. A hash of this field"
     " will be used to key the models. Thus, it is important to ensure that the"
     " model names are (1) unique, and (2) persistent. Use a different model"
     " name for each model that you want to support. And do not change the"
     " names liberally between different version of the code and the generated"
-    " package.",
+    " package."
+    " Only TXT fields are allowed for this flag.",
 )
 
 argparser.add_argument(
@@ -329,20 +330,20 @@ argparser.add_argument(
     nargs="*",
     default=[
         # 1. The Dictionary.
-        """1::URL: https://github.com/pishoyg/coptic/.
+        """1::TXT::URL: https://github.com/pishoyg/coptic/.
     Contact: pishoybg@gmail.com.""",
         # 2. The Bible.
-        """2::URL: https://github.com/pishoyg/coptic/.
+        """2::TXT::URL: https://github.com/pishoyg/coptic/.
     Contact: pishoybg@gmail.com.""",
     ],
-    help="Deck description in the generated Anki package.",
+    help="Deck description in the generated Anki package. Only TXT fields are"
+    " allowed here.",
 )
 
 argparser.add_argument(
     "--output",
     type=str,
-    default="",
-    required=True,
+    default="data/coptic.apkg",
     help="Path to the output collection.",
 )
 
@@ -401,7 +402,7 @@ class field:
             pattern = self._substitute_key_and_numexpr(file_name_fmt, key)
             pattern = os.path.join(dir_path, pattern)
             paths.update(glob.glob(pattern))
-        return list(sorted(paths, key=sort_key))
+        return list(sorted(paths, key=path_sort_key))
 
     def _read_tsv_column(self, file_path, column_name):
         df = pd.read_csv(file_path, sep="\t", encoding="utf-8").fillna("")
@@ -419,6 +420,9 @@ class txt(field):
 
     def length(self):
         return -1
+
+    def str(self):
+        return self._content
 
 
 class tsv(field):
@@ -519,7 +523,9 @@ def chop_first_parameter(text):
     return text[:idx], text[idx + 2 :]
 
 
-def group_by_first_parameter(side, allow_no_id=False, use_pairs=False):
+def group_by_index(
+    side: list[str], allow_no_index: bool = False, use_pairs: bool = False
+) -> dict | list:
     """
     N.B. The first parameter should consist of digits, but it will be returned
     as a string without conversion to an int.
@@ -539,11 +545,14 @@ def group_by_first_parameter(side, allow_no_id=False, use_pairs=False):
              }
 
     Args:
+
         side: List of strings that are made of delimiter-separated parameters,
         the delimiter being a pair of colons.
-        allow_no_id: If the first parameter doesn't consist of digits (i.e. is
-        not an id), should you throw an exception, or just use the empty string
-        as an id for this entry?
+
+        allow_no_index: If the first parameter doesn't consist of digits (i.e.
+        is not an id), should you throw an exception, or just use the empty
+        string as an id for this entry?
+
         use_pairs: Whether the output should be a dictionary or a list of
         pairs.
     """
@@ -552,8 +561,8 @@ def group_by_first_parameter(side, allow_no_id=False, use_pairs=False):
     for spec in side:
         first, rem = chop_first_parameter(spec)
         if not first.isdigit():
-            # No ID found!
-            assert allow_no_id
+            # No index found!
+            assert allow_no_index
             first, rem = "", spec
         pairs.append((first, rem))
     if use_pairs:
@@ -564,11 +573,14 @@ def group_by_first_parameter(side, allow_no_id=False, use_pairs=False):
     return d
 
 
-def pull_yarn(fields, work_dir):
-    fields = group_by_first_parameter(fields, allow_no_id=True, use_pairs=True)
+def weave_yarn(fields, work_dir, restrict_filed_types=None):
+    fields = group_by_index(fields, allow_no_index=True, use_pairs=True)
     assert all(len(pair) == 2 for pair in fields)
     # Each entry in `fields` consists of a field group key and a field object.
     fields = [(pair[0], new_field(pair[1], work_dir)) for pair in fields]
+    if restrict_filed_types:
+        for pair in fields:
+            assert type(pair[1]) in restrict_filed_types
 
     num_notes = num_entries([pair[1] for pair in fields])
 
@@ -598,12 +610,6 @@ def pull_yarn(fields, work_dir):
     return field(content, list(media_files))
 
 
-def list_element(parameter):
-    assert isinstance(parameter, list)
-    assert len(parameter) == 1
-    return parameter[0]
-
-
 class Note(genanki.Note):
     @property
     def guid(self):
@@ -622,8 +628,9 @@ def build_decks(
     deck_description,
 ):
 
-    model_name = str(list_element(model_name))
-    deck_description = str(list_element(deck_description))
+    model_name = weave_yarn(model_name, work_dir, [txt]).str()
+    css = weave_yarn(css, work_dir, [txt]).str()
+    deck_description = weave_yarn(deck_description, work_dir, [txt]).str()
 
     model = genanki.Model(
         model_id=hash(model_name),
@@ -640,25 +647,33 @@ def build_decks(
                 "afmt": '<div id="back"> {{Back}} </div>',
             },
         ],
-        css="\n".join(css),
+        css=css,
     )
 
-    decks = {}
+    key = weave_yarn(key, work_dir)
+    front = weave_yarn(front, work_dir)
+    back = weave_yarn(back, work_dir)
+    deck_name = weave_yarn(deck_name, work_dir)
 
-    key = pull_yarn(key, work_dir)
-    front = pull_yarn(front, work_dir)
-    back = pull_yarn(back, work_dir)
-    deck_name = pull_yarn(deck_name, work_dir)
+    decks = {}
 
     for _ in range(num_entries([deck_name, key, front, back])):
         d = deck_name.next()
         k = key.next()
         f = front.next()
         b = back.next()
-        assert d and k and b
-        if not f:
-            print(f"Warning: Card {k} in deck {d} doesn't have a front!")
+        assert d
+        # TODO: Consider parameterizing leniency. Some decks have better data
+        # sources, so your code is allowed to be more strict.
+        if not k:
+            print(f"Warning: A card is missing a key in deck {d}. Skipping!")
             continue
+        if not f:
+            print(f"Warning: Card {k} in deck {d} doesn't have a front! Skipping!")
+            continue
+        if not b:
+            # Notice that we don't drop the card for simply missing a back.
+            print(f"Warning: Card {k} in deck {d} with front {f} doesn't have a back!")
         if d not in decks:
             decks[d] = genanki.Deck(
                 deck_id=hash(d),
@@ -670,7 +685,7 @@ def build_decks(
 
     # Eliminate duplicate media file paths.
     media_files = set()
-    for f in [front, back, deck_name]:
+    for f in [key, front, back, deck_name]:
         media_files.update(f.media_files())
     return decks.values(), media_files
 
@@ -679,28 +694,27 @@ def main():
 
     work_dir = tempfile.TemporaryDirectory()
 
-    arguments = {
-        "key": group_by_first_parameter(args.key),
-        "front": group_by_first_parameter(args.front),
-        "back": group_by_first_parameter(args.back),
-        "model_name": group_by_first_parameter(args.model_name),
-        "css": group_by_first_parameter(args.css),
-        "deck_name": group_by_first_parameter(args.deck_name),
-        "deck_description": group_by_first_parameter(args.deck_description),
+    arguments_by_deck_index = {
+        "key": group_by_index(args.key),
+        "front": group_by_index(args.front),
+        "back": group_by_index(args.back),
+        "model_name": group_by_index(args.model_name),
+        "css": group_by_index(args.css),
+        "deck_name": group_by_index(args.deck_name),
+        "deck_description": group_by_index(args.deck_description),
     }
 
     media_files = set()
     decks = []
 
-    front_grouped = arguments["front"]
+    deck_indices = arguments_by_deck_index["key"].keys()
     # Verify that all deck indexes are represented in all arguments.
     assert all(
-        field_grouped.keys() == front_grouped.keys()
-        for field_grouped in arguments.values()
+        argument.keys() == deck_indices for argument in arguments_by_deck_index.values()
     )
 
-    for deck_index in front_grouped.keys():
-        deck_arguments = {k: v[deck_index] for k, v in arguments.items()}
+    for deck_index in deck_indices:
+        deck_arguments = {k: v[deck_index] for k, v in arguments_by_deck_index.items()}
         cur_decks, cur_media_files = build_decks(work_dir.name, **deck_arguments)
 
         decks.extend(cur_decks)
