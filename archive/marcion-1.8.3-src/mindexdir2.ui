@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MIndexDir2</class>
+ <widget class="QWidget" name="MIndexDir2">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>593</width>
+    <height>312</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Marcion | index directory</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resfile.qrc">
+    <normaloff>:/new/icons/icons/folderwork.png</normaloff>:/new/icons/icons/folderwork.png</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>swish-e</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btVersion">
+       <property name="text">
+        <string>&amp;version</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btHelp">
+       <property name="text">
+        <string>&amp;help</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btStart">
+       <property name="text">
+        <string>start</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resfile.qrc">
+         <normaloff>:/new/icons/icons/work.png</normaloff>:/new/icons/icons/work.png</iconset>
+       </property>
+       <property name="shortcut">
+        <string>Ctrl+E</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btStop">
+       <property name="text">
+        <string>&amp;stop</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resfile.qrc">
+         <normaloff>:/new/icons/icons/stop.png</normaloff>:/new/icons/icons/stop.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btState">
+       <property name="text">
+        <string>s&amp;tate</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resfile.qrc">
+         <normaloff>:/new/icons/icons/qmark.png</normaloff>:/new/icons/icons/qmark.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="MFileChooser" name="wdgDir" native="true"/>
+   </item>
+   <item>
+    <widget class="CMsgBrowser" name="txtOutput">
+     <property name="undoRedoEnabled">
+      <bool>false</bool>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="acceptRichText">
+      <bool>false</bool>
+     </property>
+     <property name="openLinks">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="rightMargin">
+      <number>20</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="btClear">
+       <property name="text">
+        <string>&amp;clear</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btClose">
+       <property name="text">
+        <string>c&amp;lose</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resfile.qrc">
+         <normaloff>:/new/icons/icons/stop.png</normaloff>:/new/icons/icons/stop.png</iconset>
+       </property>
+       <property name="shortcut">
+        <string>Esc</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="0" margin="0"/>
+ <customwidgets>
+  <customwidget>
+   <class>CMsgBrowser</class>
+   <extends>QTextBrowser</extends>
+   <header>cmsgbrowser.h</header>
+  </customwidget>
+  <customwidget>
+   <class>MFileChooser</class>
+   <extends>QWidget</extends>
+   <header>filechooser.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resfile.qrc"/>
+ </resources>
+ <connections/>
+</ui>

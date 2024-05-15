@@ -1,0 +1,123 @@
+[
+    {
+        "name":"1st Hour",
+        "categoryId":"cat_id_0001",
+        "title":"The First Hour (Prime)",
+        "copticTitle":"Ⲡⲓϣ̀ⲗⲏⲗ ⲛ̀ⲧⲉ Ϩⲁⲛⲁ̀ⲧⲟⲟⲩⲓ",
+        "germanTitle":"Erse Stunde Sonnenaufgang",
+        "frenchTitle":"Prière de L’aube",
+        "arabicTitle":"صلاة باكر",
+        "dutchTitle": "Gebeden van het Eerste Uur",
+        "dataFileName":"first_hour"
+    },
+    {
+        "name":"3rd Hour",
+        "categoryId":"cat_id_0002",
+        "title":"The Third Hour (Terce)",
+        "copticTitle":"Ⲡⲓϣ̀ⲗⲏⲗ ⲛ̀ⲧⲉ Ϯⲁϫⲡ Ϣⲟⲙϯ",
+        "germanTitle":"Gebet der Dritten Stunde",
+        "frenchTitle":"Prière de la Troisième Heure",
+        "arabicTitle":"صلاةٌ الساعهِ الثالثهِ",
+        "dutchTitle": "Gebeden van het Derde Uur",
+        "dataFileName":"third_hour"
+    },
+    {
+        "name":"6th Hour",
+        "categoryId":"cat_id_0003",
+        "title":"The Sixth Hour (Sext)",
+        "copticTitle":"Ⲡⲓϣ̀ⲗⲏⲗ ⲛ̀ⲧⲉ Ϯⲁϫⲡ Ⲥⲟⲟⲩ",
+        "germanTitle":"Gebet der Sechsten Stunde",
+        "frenchTitle":"Prière de la Sixième Heure",
+        "arabicTitle":"صلاةٌ الساعهِ السادسةِ",
+        "dutchTitle": "Gebeden van het Zesde Uur",
+        "dataFileName":"sixth_hour"
+    },
+    {
+        "name":"9th Hour",
+        "categoryId":"cat_id_0004",
+        "title":"The Ninth Hour (None)",
+        "copticTitle":"Ⲡⲓϣ̀ⲗⲏⲗ ⲛ̀ⲧⲉ Ϯⲁϫⲡ Ⲯⲓϯ",
+        "germanTitle":"Gebet der Neunten Stunde",
+        "frenchTitle":"Prière de la Neuvième Heure",
+        "arabicTitle":"صلاةٌ الساعهِ التاسِعةٍ",
+        "dutchTitle": "Gebeden van het Negende Uur",
+        "dataFileName":"ninth_hour"
+    },
+    {
+        "name":"11th Hour",
+        "categoryId":"cat_id_0005",
+        "title":"The Eleventh Hour (Vespers)",
+        "copticTitle":"Ⲡⲓϣ̀ⲗⲏⲗ ⲛ̀ⲧⲉ Ϩⲁⲛⲁ̀ⲣⲟⲩϩⲓ",
+        "germanTitle":"Gebet der Elften Stunde",
+        "frenchTitle":"Prière de la Onzième Heure",
+        "arabicTitle":"صلاةُ الغُروبِ",
+        "dutchTitle": "Gebeden van het Elfde Uur",
+        "dataFileName":"eleventh_hour"
+    },
+    {
+        "name":"12th Hour",
+        "categoryId":"cat_id_0006",
+        "title":"The Twelfth Hour (Compline)",
+        "copticTitle":"Ⲡⲓϣ̀ⲗⲏⲗ ⲛ̀ⲧⲉ Ⲡⲓϩⲩⲛⲓⲙ",
+        "germanTitle":"Gebet der Zwölften Stunde",
+        "frenchTitle":"Prière de la Douzième Heure",
+        "arabicTitle":"صلاةُ النَومِ",
+        "dutchTitle": "Gebeden van het Twaalfde Uur",
+        "dataFileName":"twelfth_hour"
+    },
+    {
+        "name":"Veil",
+        "categoryId":"cat_id_0007",
+        "title":"The Prayer of the Veil",
+        "copticTitle":"Ⲡⲓϣ̀ⲗⲏⲗ ⲙ̀Ⲡⲓⲣⲉϥⲉⲣⲥⲕⲉⲡⲁⲍⲓⲛ",
+        "germanTitle":"Gebet Insbesondere Für Mönche",
+        "frenchTitle":"Prière de la fermeture du voile",
+        "arabicTitle":"صلاةُ السِتَارِ",
+        "dutchTitle": "",
+        "dataFileName":"veil"
+    },
+    {
+        "name":"Midnight",
+        "categoryId":"cat_id_0008",
+        "title":"The Midnight Prayer",
+        "copticTitle":"Ⲡⲓϣ̀ⲗⲏⲗ ⲛ̀ⲧⲉ Ⲧ̀ⲫⲁϣⲓ ⲙ̀Ⲡⲓⲉ̀ϫⲱⲣϩ",
+        "germanTitle":"Mitternachtsgebet",
+        "frenchTitle":"Prière de minuit",
+        "arabicTitle":"صلاة نصف الليل",
+        "dutchTitle": "Gebed voor het Voorhangsel",
+        "dataFileName":"midnight_hour"
+    },
+    {
+        "name":"Prayers",
+        "categoryId":"cat_id_0009",
+        "title":"Prayers",
+        "copticTitle":"Ⲛⲓϣ̀ⲗⲏⲗ",
+        "germanTitle":"Gebete",
+        "frenchTitle":"Prières",
+        "arabicTitle":"صلوات",
+        "dutchTitle": "Gebeden",
+        "dataFileName":"prayers"
+    },
+    {
+        "name":"Deacons",
+        "categoryId":"cat_id_0010",
+        "title":"Prayers for the Deacon",
+        "copticTitle":"Ⲛⲓϣ̀ⲗⲏⲗ ⲙ̀ⲠⲓⲆⲓⲁⲕⲟⲛ",
+        "germanTitle":"Gebete für den Diakon",
+        "frenchTitle":"Prières du Diacre",
+        "arabicTitle":"صلوات الشمامسة",
+        "dutchTitle": "Gebeden voor de Diaken",
+        "dataFileName":"deacons"
+    },
+    {
+        "name":"Priests",
+        "categoryId":"cat_id_0011",
+        "title":"Prayers for the Priest",
+        "copticTitle":"Ⲛⲓϣ̀ⲗⲏⲗ ⲙ̀Ⲡⲓⲟⲩⲏⲃ",
+        "germanTitle":"Gebete für den Priester",
+        "frenchTitle":"Prières du Prêtre",
+        "arabicTitle":"صلوات الكهنة",
+        "dutchTitle": "Gebeden voor de Priester",
+        "dataFileName":"priests"
+    }
+]

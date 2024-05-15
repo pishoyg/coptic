@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MDjvuReader2</class>
+ <widget class="QMainWindow" name="MDjvuReader2">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>182</width>
+    <height>152</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true"/>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resfile.qrc">
+    <normaloff>:/new/icons/icons/djvu_icon.png</normaloff>:/new/icons/icons/djvu_icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="MDocHeader" name="wdgHeader" native="true"/>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="stwDjvu">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QWidget" name="wdgPanel" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QComboBox" name="cmbContent">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="currentIndex">
+              <number>-1</number>
+             </property>
+             <property name="sizeAdjustPolicy">
+              <enum>QComboBox::AdjustToContents</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="wdgDjw" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <layout class="QHBoxLayout" name="wdgLay"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_2">
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <layout class="QHBoxLayout" name="layGk"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_3">
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <layout class="QHBoxLayout" name="layCopt"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>182</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuAction">
+    <property name="title">
+     <string>&amp;action</string>
+    </property>
+    <addaction name="actionClose"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>&amp;tools</string>
+    </property>
+    <addaction name="actionGk_Lat_dictionary"/>
+    <addaction name="actionCoptic_dictionary"/>
+    <addaction name="action_Hebrew_dictionary"/>
+    <addaction name="actionNumeric_converter"/>
+   </widget>
+   <addaction name="menuAction"/>
+   <addaction name="menuTools"/>
+  </widget>
+  <action name="actionClose">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/delete.png</normaloff>:/new/icons/icons/delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;close</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionGk_Lat_dictionary">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/alfa2.png</normaloff>:/new/icons/icons/alfa2.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Gk/Lat dictionary</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+G</string>
+   </property>
+  </action>
+  <action name="actionCoptic_dictionary">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/gima.png</normaloff>:/new/icons/icons/gima.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Coptic dictionary</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+C</string>
+   </property>
+  </action>
+  <action name="actionNumeric_converter">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/numcnv.png</normaloff>:/new/icons/icons/numcnv.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;numeric converter</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+N</string>
+   </property>
+  </action>
+  <action name="action_Hebrew_dictionary">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/abgd.png</normaloff>:/new/icons/icons/abgd.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Hebrew dictionary</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+H</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="0" margin="0"/>
+ <customwidgets>
+  <customwidget>
+   <class>MDocHeader</class>
+   <extends>QWidget</extends>
+   <header>mdocheader.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resfile.qrc"/>
+ </resources>
+ <connections/>
+</ui>

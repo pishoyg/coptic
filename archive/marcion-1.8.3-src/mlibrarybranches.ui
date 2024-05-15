@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MLibraryBranches</class>
+ <widget class="QWidget" name="MLibraryBranches">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>859</width>
+    <height>353</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>manage archive</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resfile.qrc">
+    <normaloff>:/new/icons/icons/settings.png</normaloff>:/new/icons/icons/settings.png</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <widget class="QTabWidget" name="twData">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>&amp;categories</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QPushButton" name="btRefresh">
+             <property name="text">
+              <string>refresh</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resfile.qrc">
+               <normaloff>:/new/icons/icons/refresh.png</normaloff>:/new/icons/icons/refresh.png</iconset>
+             </property>
+             <property name="shortcut">
+              <string>Ctrl+R</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>18</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="txtName"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btUpdate">
+             <property name="text">
+              <string>&amp;update</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QTreeWidget" name="treeCat">
+           <property name="contextMenuPolicy">
+            <enum>Qt::CustomContextMenu</enum>
+           </property>
+           <property name="toolTip">
+            <string>items can be reorganized by drag and drop</string>
+           </property>
+           <property name="dragDropMode">
+            <enum>QAbstractItemView::InternalMove</enum>
+           </property>
+           <property name="selectionMode">
+            <enum>QAbstractItemView::ContiguousSelection</enum>
+           </property>
+           <attribute name="headerCascadingSectionResizes">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="headerHighlightSections">
+            <bool>true</bool>
+           </attribute>
+           <column>
+            <property name="text">
+             <string>category</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>status</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QPushButton" name="btDel">
+           <property name="text">
+            <string>&amp;delete current</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resfile.qrc">
+             <normaloff>:/new/icons/icons/stop.png</normaloff>:/new/icons/icons/stop.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btAdd">
+           <property name="text">
+            <string>a&amp;ppend to current</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resfile.qrc">
+             <normaloff>:/new/icons/icons/add_item.png</normaloff>:/new/icons/icons/add_item.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btAdd_2">
+           <property name="text">
+            <string>add &amp;new root</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resfile.qrc">
+             <normaloff>:/new/icons/icons/add_item2.png</normaloff>:/new/icons/icons/add_item2.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Expanding</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>30</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btExec">
+           <property name="text">
+            <string>execute</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resfile.qrc">
+             <normaloff>:/new/icons/icons/work.png</normaloff>:/new/icons/icons/work.png</iconset>
+           </property>
+           <property name="shortcut">
+            <string>Ctrl+E</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>&amp;authors</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QPushButton" name="btRefresh_2">
+             <property name="text">
+              <string>refresh</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resfile.qrc">
+               <normaloff>:/new/icons/icons/refresh.png</normaloff>:/new/icons/icons/refresh.png</iconset>
+             </property>
+             <property name="shortcut">
+              <string>Ctrl+R</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="txtAuthor"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btUpdate_2">
+             <property name="text">
+              <string>&amp;update</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resfile.qrc">
+               <normaloff>:/new/icons/icons/save.png</normaloff>:/new/icons/icons/save.png</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QTreeWidget" name="treeAuthors">
+           <property name="contextMenuPolicy">
+            <enum>Qt::NoContextMenu</enum>
+           </property>
+           <property name="rootIsDecorated">
+            <bool>false</bool>
+           </property>
+           <property name="itemsExpandable">
+            <bool>false</bool>
+           </property>
+           <property name="sortingEnabled">
+            <bool>true</bool>
+           </property>
+           <property name="expandsOnDoubleClick">
+            <bool>false</bool>
+           </property>
+           <column>
+            <property name="text">
+             <string>author</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QPushButton" name="btDel_2">
+           <property name="text">
+            <string>&amp;remove</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resfile.qrc">
+             <normaloff>:/new/icons/icons/stop.png</normaloff>:/new/icons/icons/stop.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btAdd_3">
+           <property name="text">
+            <string>a&amp;dd</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resfile.qrc">
+             <normaloff>:/new/icons/icons/add_item.png</normaloff>:/new/icons/icons/add_item.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string>&amp;TGZs</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
+            <widget class="QPushButton" name="btRefreshTgz">
+             <property name="text">
+              <string>refresh</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resfile.qrc">
+               <normaloff>:/new/icons/icons/refresh.png</normaloff>:/new/icons/icons/refresh.png</iconset>
+             </property>
+             <property name="shortcut">
+              <string>Ctrl+R</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btCrTgz">
+             <property name="text">
+              <string>c&amp;reate tarball</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resfile.qrc">
+               <normaloff>:/new/icons/icons/tgz.png</normaloff>:/new/icons/icons/tgz.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="txtTgzTitle"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btUpdTitle">
+             <property name="text">
+              <string>&amp;update</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resfile.qrc">
+               <normaloff>:/new/icons/icons/save.png</normaloff>:/new/icons/icons/save.png</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="MFileChooser" name="wdgTgzDir" native="true"/>
+         </item>
+         <item>
+          <widget class="QTreeWidget" name="treeTGZ">
+           <property name="contextMenuPolicy">
+            <enum>Qt::CustomContextMenu</enum>
+           </property>
+           <property name="rootIsDecorated">
+            <bool>false</bool>
+           </property>
+           <property name="sortingEnabled">
+            <bool>true</bool>
+           </property>
+           <column>
+            <property name="text">
+             <string>title</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>tarball size</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>path</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <widget class="QPushButton" name="btAddTGZ">
+           <property name="text">
+            <string>&amp;new item</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resfile.qrc">
+             <normaloff>:/new/icons/icons/add_item.png</normaloff>:/new/icons/icons/add_item.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btDelTGZ">
+           <property name="text">
+            <string>&amp;drop selected</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resfile.qrc">
+             <normaloff>:/new/icons/icons/stop.png</normaloff>:/new/icons/icons/stop.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <property name="rightMargin">
+      <number>20</number>
+     </property>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btClose">
+       <property name="text">
+        <string>close</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resfile.qrc">
+         <normaloff>:/new/icons/icons/stop.png</normaloff>:/new/icons/icons/stop.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="0" margin="0"/>
+ <customwidgets>
+  <customwidget>
+   <class>MFileChooser</class>
+   <extends>QWidget</extends>
+   <header>filechooser.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>twData</tabstop>
+  <tabstop>btClose</tabstop>
+  <tabstop>btRefresh</tabstop>
+  <tabstop>txtName</tabstop>
+  <tabstop>btUpdate</tabstop>
+  <tabstop>treeCat</tabstop>
+  <tabstop>btDel</tabstop>
+  <tabstop>btAdd</tabstop>
+  <tabstop>btAdd_2</tabstop>
+  <tabstop>btExec</tabstop>
+  <tabstop>btRefresh_2</tabstop>
+  <tabstop>txtAuthor</tabstop>
+  <tabstop>btUpdate_2</tabstop>
+  <tabstop>treeAuthors</tabstop>
+  <tabstop>btDel_2</tabstop>
+  <tabstop>btAdd_3</tabstop>
+  <tabstop>btRefreshTgz</tabstop>
+  <tabstop>btCrTgz</tabstop>
+  <tabstop>txtTgzTitle</tabstop>
+  <tabstop>btUpdTitle</tabstop>
+  <tabstop>treeTGZ</tabstop>
+  <tabstop>btAddTGZ</tabstop>
+  <tabstop>btDelTGZ</tabstop>
+ </tabstops>
+ <resources>
+  <include location="resfile.qrc"/>
+ </resources>
+ <connections/>
+</ui>

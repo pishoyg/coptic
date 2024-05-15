@@ -1,0 +1,1232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MPdfReader2</class>
+ <widget class="QMainWindow" name="MPdfReader2">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>907</width>
+    <height>634</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true"/>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resfile.qrc">
+    <normaloff>:/new/icons/icons/pdf_icon.png</normaloff>:/new/icons/icons/pdf_icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="MDocHeader" name="wdgHeader" native="true"/>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="stwPdf">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QWidget" name="wdgPdf" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <item>
+            <widget class="QFrame" name="wdgMainPanel">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Box</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <property name="spacing">
+               <number>5</number>
+              </property>
+              <property name="leftMargin">
+               <number>5</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>5</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="MSpinIter" name="wdgSpinIter" native="true"/>
+              </item>
+              <item>
+               <widget class="QLabel" name="lblPgNum">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Box</enum>
+                </property>
+                <property name="text">
+                 <string notr="true">/0</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="margin">
+                 <number>3</number>
+                </property>
+                <property name="textInteractionFlags">
+                 <set>Qt::NoTextInteraction</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="btRefreshZoom">
+                <property name="toolTip">
+                 <string>refresh page</string>
+                </property>
+                <property name="text">
+                 <string>refresh</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="resfile.qrc">
+                  <normaloff>:/new/icons/icons/refresh.png</normaloff>:/new/icons/icons/refresh.png</iconset>
+                </property>
+                <property name="shortcut">
+                 <string>Ctrl+R</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>10</width>
+                  <height>10</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QToolButton" name="tbBookmarks">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="toolTip">
+                 <string>active bookmarks</string>
+                </property>
+                <property name="text">
+                 <string>b&amp;ookmarks</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="resfile.qrc">
+                  <normaloff>:/new/icons/icons/go.png</normaloff>:/new/icons/icons/go.png</iconset>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="toolButtonStyle">
+                 <enum>Qt::ToolButtonTextBesideIcon</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="lblBm">
+                <property name="frameShape">
+                 <enum>QFrame::Panel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Sunken</enum>
+                </property>
+                <property name="lineWidth">
+                 <number>4</number>
+                </property>
+                <property name="text">
+                 <string notr="true">0</string>
+                </property>
+                <property name="textFormat">
+                 <enum>Qt::PlainText</enum>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="margin">
+                 <number>1</number>
+                </property>
+                <property name="textInteractionFlags">
+                 <set>Qt::NoTextInteraction</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="wdgFind">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Box</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <property name="spacing">
+               <number>5</number>
+              </property>
+              <property name="leftMargin">
+               <number>5</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>5</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QPushButton" name="btInpMode">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>switch
+input mode</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QStackedWidget" name="stwInp">
+                <property name="currentIndex">
+                 <number>0</number>
+                </property>
+                <widget class="QWidget" name="page_2">
+                 <layout class="QVBoxLayout" name="verticalLayout">
+                  <item>
+                   <widget class="QCheckBox" name="cbCaseInsensitive">
+                    <property name="text">
+                     <string>case insenstitive</string>
+                    </property>
+                    <property name="checked">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="cmbSearch">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="editable">
+                     <bool>true</bool>
+                    </property>
+                    <property name="insertPolicy">
+                     <enum>QComboBox::InsertAtTop</enum>
+                    </property>
+                    <property name="sizeAdjustPolicy">
+                     <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="page_3">
+                 <layout class="QHBoxLayout" name="horizontalLayout_8">
+                  <item>
+                   <widget class="CLatCopt" name="wdgScrInp" native="true"/>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_4">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="btHighlight">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="toolTip">
+                   <string>highlight all matches</string>
+                  </property>
+                  <property name="text">
+                   <string notr="true">?</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="resfile.qrc">
+                    <normaloff>:/new/icons/icons/bulboff.png</normaloff>
+                    <normalon>:/new/icons/icons/bulbon.png</normalon>:/new/icons/icons/bulboff.png</iconset>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QWidget" name="wdgButtons" native="true">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QPushButton" name="btSearchPrev">
+                     <property name="toolTip">
+                      <string>previous match</string>
+                     </property>
+                     <property name="text">
+                      <string notr="true"/>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="resfile.qrc">
+                       <normaloff>:/new/icons/icons/uparrow.png</normaloff>:/new/icons/icons/uparrow.png</iconset>
+                     </property>
+                     <property name="shortcut">
+                      <string>Meta+PgUp</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="btSearchNext">
+                     <property name="toolTip">
+                      <string>next match</string>
+                     </property>
+                     <property name="text">
+                      <string notr="true"/>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="resfile.qrc">
+                       <normaloff>:/new/icons/icons/downarrow.png</normaloff>:/new/icons/icons/downarrow.png</iconset>
+                     </property>
+                     <property name="shortcut">
+                      <string>Meta+PgDown</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="btSearchTop">
+                     <property name="toolTip">
+                      <string>first match</string>
+                     </property>
+                     <property name="text">
+                      <string notr="true"/>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="resfile.qrc">
+                       <normaloff>:/new/icons/icons/uparrowto.png</normaloff>:/new/icons/icons/uparrowto.png</iconset>
+                     </property>
+                     <property name="shortcut">
+                      <string>Meta+Home</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="btSearchBottom">
+                     <property name="toolTip">
+                      <string>last match</string>
+                     </property>
+                     <property name="text">
+                      <string notr="true"/>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="resfile.qrc">
+                       <normaloff>:/new/icons/icons/downarrowto.png</normaloff>:/new/icons/icons/downarrowto.png</iconset>
+                     </property>
+                     <property name="shortcut">
+                      <string>Meta+End</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btAll">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="toolTip">
+                 <string>entire pdf</string>
+                </property>
+                <property name="text">
+                 <string>entire pdf</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="resfile.qrc">
+                  <normaloff>:/new/icons/icons/work.png</normaloff>:/new/icons/icons/work.png</iconset>
+                </property>
+                <property name="shortcut">
+                 <string>Ctrl+E</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="btHideFind">
+                <property name="toolTip">
+                 <string>hide</string>
+                </property>
+                <property name="text">
+                 <string>hide</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="resfile.qrc">
+                  <normaloff>:/new/icons/icons/stop.png</normaloff>:/new/icons/icons/stop.png</iconset>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="wdgPdfSett" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_11">
+              <property name="spacing">
+               <number>5</number>
+              </property>
+              <property name="leftMargin">
+               <number>5</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>5</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QGroupBox" name="groupBox">
+                <property name="title">
+                 <string>matched texts</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_5">
+                 <item>
+                  <widget class="CTextColorChooser" name="cchSelColor" native="true"/>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_2">
+                   <property name="text">
+                    <string>opacity</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_9">
+                   <item>
+                    <widget class="QSpinBox" name="spnSelOpacity">
+                     <property name="suffix">
+                      <string notr="true">%</string>
+                     </property>
+                     <property name="maximum">
+                      <number>100</number>
+                     </property>
+                     <property name="singleStep">
+                      <number>10</number>
+                     </property>
+                     <property name="value">
+                      <number>30</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="groupBox_2">
+                <property name="title">
+                 <string>single match</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_6">
+                 <item>
+                  <widget class="CTextColorChooser" name="cchBorderColor" native="true"/>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_4">
+                   <property name="text">
+                    <string>width</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_10">
+                   <item>
+                    <widget class="QSpinBox" name="spnBorderWidth">
+                     <property name="suffix">
+                      <string notr="true">px</string>
+                     </property>
+                     <property name="minimum">
+                      <number>1</number>
+                     </property>
+                     <property name="maximum">
+                      <number>50</number>
+                     </property>
+                     <property name="value">
+                      <number>2</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_3">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>183</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QToolButton" name="tbAppearanceHide">
+                <property name="toolTip">
+                 <string>hide</string>
+                </property>
+                <property name="text">
+                 <string>hide</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="resfile.qrc">
+                  <normaloff>:/new/icons/icons/stop.png</normaloff>:/new/icons/icons/stop.png</iconset>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSplitter" name="splitter">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <widget class="MImageWidget" name="iwPdfImg" native="true">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+             <widget class="QWidget" name="wdgLinks" native="true">
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <item>
+                <widget class="QTreeWidget" name="treeLinks">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="contextMenuPolicy">
+                  <enum>Qt::DefaultContextMenu</enum>
+                 </property>
+                 <property name="showDropIndicator" stdset="0">
+                  <bool>false</bool>
+                 </property>
+                 <property name="rootIsDecorated">
+                  <bool>false</bool>
+                 </property>
+                 <property name="itemsExpandable">
+                  <bool>false</bool>
+                 </property>
+                 <property name="expandsOnDoubleClick">
+                  <bool>false</bool>
+                 </property>
+                 <column>
+                  <property name="text">
+                   <string>type</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>page</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>target</string>
+                  </property>
+                 </column>
+                </widget>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_7">
+                 <item>
+                  <widget class="QToolButton" name="btLinkGoTo">
+                   <property name="toolTip">
+                    <string>go to</string>
+                   </property>
+                   <property name="text">
+                    <string>go to</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="resfile.qrc">
+                     <normaloff>:/new/icons/icons/go.png</normaloff>:/new/icons/icons/go.png</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="verticalSpacer">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QToolButton" name="btLinksHide">
+                   <property name="toolTip">
+                    <string>hide</string>
+                   </property>
+                   <property name="text">
+                    <string>hide</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="resfile.qrc">
+                     <normaloff>:/new/icons/icons/stop.png</normaloff>:/new/icons/icons/stop.png</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="wdgProgress" native="true">
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QProgressBar" name="pbSearch">
+               <property name="value">
+                <number>0</number>
+               </property>
+               <property name="format">
+                <string>( %v / %m ) - %p%</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btStopSearch">
+               <property name="text">
+                <string>stop</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resfile.qrc">
+                 <normaloff>:/new/icons/icons/stop.png</normaloff>:/new/icons/icons/stop.png</iconset>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>907</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuAction">
+    <property name="title">
+     <string>&amp;action</string>
+    </property>
+    <addaction name="actionSave_as_text"/>
+    <addaction name="separator"/>
+    <addaction name="actionClose"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>&amp;tools</string>
+    </property>
+    <addaction name="actionGk_Lat_dictionary"/>
+    <addaction name="actionCoptic_dictionary"/>
+    <addaction name="action_Hebrew_dictionary"/>
+    <addaction name="action_numeric_converter"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>&amp;view</string>
+    </property>
+    <widget class="QMenu" name="menu_rotate">
+     <property name="title">
+      <string>&amp;rotate</string>
+     </property>
+     <addaction name="action0"/>
+     <addaction name="action90"/>
+     <addaction name="action180"/>
+     <addaction name="action270"/>
+     <addaction name="separator"/>
+     <addaction name="actionRotate_right"/>
+     <addaction name="actionRotate_left"/>
+    </widget>
+    <widget class="QMenu" name="menu_zoom">
+     <property name="title">
+      <string>&amp;zoom</string>
+     </property>
+     <addaction name="actionFit_width"/>
+     <addaction name="actionFit_height"/>
+     <addaction name="separator"/>
+     <addaction name="action25"/>
+     <addaction name="action50"/>
+     <addaction name="action100"/>
+     <addaction name="action200"/>
+     <addaction name="action400"/>
+     <addaction name="action800"/>
+     <addaction name="separator"/>
+     <addaction name="action_10"/>
+     <addaction name="action_11"/>
+     <addaction name="separator"/>
+     <addaction name="actionCustom"/>
+    </widget>
+    <addaction name="actionFind"/>
+    <addaction name="actionAppearance"/>
+    <addaction name="actionToolbar"/>
+    <addaction name="separator"/>
+    <addaction name="menu_zoom"/>
+    <addaction name="menu_rotate"/>
+    <addaction name="separator"/>
+    <addaction name="actionTable_of_contents"/>
+    <addaction name="actionSearch_results"/>
+   </widget>
+   <widget class="QMenu" name="menuBookmarks">
+    <property name="title">
+     <string>&amp;bookmarks</string>
+    </property>
+    <addaction name="actionAdd_bookmark"/>
+    <addaction name="actionDrop_all"/>
+   </widget>
+   <addaction name="menuAction"/>
+   <addaction name="menuView"/>
+   <addaction name="menuBookmarks"/>
+   <addaction name="menuTools"/>
+  </widget>
+  <widget class="QToolBar" name="tbarTools">
+   <property name="windowTitle">
+    <string>tools</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="dwTOC">
+   <property name="windowTitle">
+    <string>content</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QVBoxLayout" name="verticalLayout_10">
+     <item>
+      <widget class="QTreeWidget" name="treeTOC">
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::SingleSelection</enum>
+       </property>
+       <property name="expandsOnDoubleClick">
+        <bool>false</bool>
+       </property>
+       <attribute name="headerVisible">
+        <bool>false</bool>
+       </attribute>
+       <column>
+        <property name="text">
+         <string/>
+        </property>
+       </column>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dwSR">
+   <property name="windowTitle">
+    <string>search results</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_3">
+    <layout class="QVBoxLayout" name="verticalLayout_9">
+     <item>
+      <widget class="QLabel" name="lblSText">
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTreeWidget" name="treeSearchRes">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="expandsOnDoubleClick">
+        <bool>false</bool>
+       </property>
+       <column>
+        <property name="text">
+         <string>page</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionClose">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/delete.png</normaloff>:/new/icons/icons/delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;close</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionGk_Lat_dictionary">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/alfa2.png</normaloff>:/new/icons/icons/alfa2.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Gk/Lat dictionary</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+G</string>
+   </property>
+  </action>
+  <action name="actionCoptic_dictionary">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/gima.png</normaloff>:/new/icons/icons/gima.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Coptic dictionary</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+C</string>
+   </property>
+  </action>
+  <action name="actionFind">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/loupe.png</normaloff>:/new/icons/icons/loupe.png</iconset>
+   </property>
+   <property name="text">
+    <string>f&amp;ind</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+F</string>
+   </property>
+  </action>
+  <action name="action0">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string notr="true">+ &amp;0 deg</string>
+   </property>
+  </action>
+  <action name="action90">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string notr="true">+ &amp;90 deg</string>
+   </property>
+  </action>
+  <action name="action180">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string notr="true">+ &amp;180 deg</string>
+   </property>
+  </action>
+  <action name="action270">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string notr="true">+ &amp;270 deg</string>
+   </property>
+  </action>
+  <action name="actionFit_width">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>fit &amp;width</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+U</string>
+   </property>
+  </action>
+  <action name="actionFit_height">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>fit &amp;height</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+I</string>
+   </property>
+  </action>
+  <action name="actionToolbar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;toolbar</string>
+   </property>
+  </action>
+  <action name="action25">
+   <property name="text">
+    <string notr="true">25%</string>
+   </property>
+  </action>
+  <action name="action50">
+   <property name="text">
+    <string notr="true">&amp;50%</string>
+   </property>
+  </action>
+  <action name="action100">
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string notr="true">&amp;100%</string>
+   </property>
+  </action>
+  <action name="action200">
+   <property name="text">
+    <string notr="true">&amp;200%</string>
+   </property>
+  </action>
+  <action name="action400">
+   <property name="text">
+    <string notr="true">&amp;400%</string>
+   </property>
+  </action>
+  <action name="action800">
+   <property name="text">
+    <string notr="true">&amp;800%</string>
+   </property>
+  </action>
+  <action name="action_10">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/loupe_plus.png</normaloff>:/new/icons/icons/loupe_plus.png</iconset>
+   </property>
+   <property name="text">
+    <string notr="true">+ 10%</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+O</string>
+   </property>
+  </action>
+  <action name="action_11">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/loupe_minus.png</normaloff>:/new/icons/icons/loupe_minus.png</iconset>
+   </property>
+   <property name="text">
+    <string notr="true">- 10%</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+P</string>
+   </property>
+  </action>
+  <action name="actionCustom">
+   <property name="text">
+    <string>&amp;custom</string>
+   </property>
+  </action>
+  <action name="actionRotate_left">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/rotleft.png</normaloff>:/new/icons/icons/rotleft.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;rotate left</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+J</string>
+   </property>
+  </action>
+  <action name="actionRotate_right">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/rotright.png</normaloff>:/new/icons/icons/rotright.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;rotate right</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+K</string>
+   </property>
+  </action>
+  <action name="actionAppearance">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;appearance</string>
+   </property>
+  </action>
+  <action name="actionSave_as_text">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/save.png</normaloff>:/new/icons/icons/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;save as text</string>
+   </property>
+  </action>
+  <action name="actionAdd_bookmark">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/add_item.png</normaloff>:/new/icons/icons/add_item.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;add bookmark</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+B</string>
+   </property>
+  </action>
+  <action name="actionDrop_all">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/delete.png</normaloff>:/new/icons/icons/delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;drop all bookmarks</string>
+   </property>
+  </action>
+  <action name="actionTable_of_contents">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>t&amp;able of contents</string>
+   </property>
+  </action>
+  <action name="actionSearch_results">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;search results</string>
+   </property>
+  </action>
+  <action name="action_numeric_converter">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/numcnv.png</normaloff>:/new/icons/icons/numcnv.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;numeric converter</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+N</string>
+   </property>
+  </action>
+  <action name="action_Hebrew_dictionary">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/abgd.png</normaloff>:/new/icons/icons/abgd.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Hebrew dictionary</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+H</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="0" margin="0"/>
+ <customwidgets>
+  <customwidget>
+   <class>CLatCopt</class>
+   <extends>QWidget</extends>
+   <header>latcopt.h</header>
+   <container>1</container>
+   <slots>
+    <signal>query()</signal>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>MSpinIter</class>
+   <extends>QWidget</extends>
+   <header>mspiniter.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CTextColorChooser</class>
+   <extends>QWidget</extends>
+   <header>textcolorchooser.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MDocHeader</class>
+   <extends>QWidget</extends>
+   <header>mdocheader.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MImageWidget</class>
+   <extends>QWidget</extends>
+   <header>mimagewidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resfile.qrc"/>
+ </resources>
+ <connections/>
+</ui>

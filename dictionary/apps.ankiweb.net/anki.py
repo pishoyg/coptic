@@ -1,0 +1,717 @@
+import argparse
+import glob
+import hashlib
+import os
+import re
+import shutil
+import tempfile
+
+import genanki
+import numexpr
+import pandas as pd
+from PIL import Image
+
+# Pillow might be tricky for our requirements generators. You might have to add
+# it to requirements.txt manually.
+
+INTEGER_RE = re.compile("[0-9]+")
+NUMEXPR_RE = re.compile(r"numexpr\((.*)\)")
+MAX_INTEGER_LENGTH = 10
+MAX_ID = 1 << 31
+
+
+def hash(text: str) -> int:
+    return int(hashlib.sha1(text.encode("utf-8")).hexdigest(), 17) % MAX_ID
+
+
+def sort_key(path):
+    path = os.path.basename(path)
+    return [x.zfill(MAX_INTEGER_LENGTH) for x in INTEGER_RE.findall(path)] + [path]
+
+
+MAX_THUMBNAIL_HEIGHT = 100000
+
+argparser = argparse.ArgumentParser(
+    formatter_class=argparse.RawTextHelpFormatter,
+    description="""
+Generate an Anki package collection.
+The flags --front and --back define the content of the fronts and backs. Each
+entry in the flag could be one of the following:
+
+- TSV::${FILE_PATH}::${COLUMN_NAME}
+
+  Use data from the column named ${COLUMN_NAME} in the TSV found at path
+  ${PATH}.
+
+- TXT::${PLAIN_TEXT}
+
+  A plain text entry.
+
+- IMG::${TSV_FILE_PATH}::${KEY_COLUMN_NAME}::${DIR_PATH}::${FILE_NAME_FMT}::${WIDTH}
+
+  Images. Retrieve keys from the column named ${KEY_COLUMN_NAME} in the TSV
+  found at ${TSV_FILE_PATH}. The images are to be found at:
+    ${DIR_PATH}/format(${FILE_NAME_FMT}, key=key)
+  The FILE_NAME_FMT can use the "{key}" string for key substitutions. If the
+  string numexpr(.*) were to be found inside ${FILE_NAME_FMT}, we perform a
+  number expression as well. If this were the case, it's allowed to exist only
+  once, with a single pair of parentheses, to allow simple parsing behavior
+  that should suffice for most use cases.
+  The final format string is allowed to have a glob pattern to fetch multiple
+  files.
+
+  For example, consider the following entry:
+
+  - IMG::marcion.tsv::crum-page-number::crum/::numexpr({key}+17).jpg
+
+    This results in the retrieval of a list of keys from the file at
+    "marcion.tsv", and for each entry in the "crum-page-number" column, we
+    retrieve the image at "crum/numexpr({key}+17).png". For example, for key 1,
+    we will retrieve "crum/18.png".
+
+  - IMG::marcion.tsv::key::img/{key}-*.*
+
+    This results in the retrieval of a list of keys from the file at
+    "marcion.tsv", and for each key in the "key" column, we retrieve all the
+    images that match the pattern "{key}-*.*". For example, for `key=1`, all
+    the following will be included if found: 1-1.png, 1-2.png, 1-1-1.jpg, ...
+
+  ${WIDTH} (optionally) gives the image width.
+
+- FIL::${TSV_FILE_PATH}::${KEY_COLUMN_NAME}::${DIR_PATH}::${FILE_NAME_FMT}
+
+  Files that will be imported and embedded. Use this for plain text or HTML
+  content.
+
+N.B. The length of the TSV columns must match.
+
+Exporting several decks:
+    - Prefix the fields with a deck index.
+
+Fields groups (all-or-nothing group of fields):
+    - Prefix the fields with the field group index. This is optional.
+
+Image / file sorting:
+  TL;DR: Use integer sections in your file names to control the order.
+  For example, "{key}-1-1.txt", "{key}-1-2.txt", "{key}-3-4.txt".
+
+  The files will be sorted in the output based first on the integers contained
+  within the name, then lexicographically. For example, the following are
+  possible orders produced by our sorting algorithm:
+      - ["1.png", "2.png", ..., "11.png"],
+      - ["1-1.png", "1-2.png", "2-1.png", "2-2.png"]
+      - ["b1.txt", "a2.txt"]
+      - ["a.txt", "b.txt"]
+  The string "11" is lexicographically smaller than the string "2", but the
+  integer 11 is lexicographically larger, which is why it appears later.
+  Similarly, even though "b" is lexicographically larger than "a", we
+  prioritize the integers, so we bring "b1" before "a2".
+  If the string doesn't contain any integers, pure lexicographical ordering
+  will be used.
+""",
+)
+
+
+argparser.add_argument(
+    "--key",
+    type=str,
+    nargs="*",
+    default=[
+        # 1. The Dictionary.
+        "1::TSV::../marcion.sourceforge.net/data/output/roots.tsv::key",
+        # 2. The Bible.
+        "2::TXT::(",
+        "2::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::book",
+        "2::TXT:: ",
+        "2::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::chapter",
+        "2::TXT:::",
+        "2::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::verse",
+        "2::TXT::)",
+    ],
+    help="This is a critical field. The note keys will be used as database"
+    " keys to enable synchronization. It is important for the keys to be (1)"
+    " unique, and (2) persistent. Use a different key for each note. And do"
+    " not change the names liberally between different version of the code"
+    " and the generated package.",
+)
+
+argparser.add_argument(
+    "--front",
+    type=str,
+    nargs="*",
+    default=[
+        # 1. The Dictionary.
+        "1::1::TSV::../marcion.sourceforge.net/data/output/roots.tsv::dialect-B",
+        # 2. The Bible.
+        "2::1::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::Bohairic",
+    ],
+    help="Format of the card fronts. See description for syntax.",
+)
+
+argparser.add_argument(
+    "--back",
+    type=str,
+    nargs="*",
+    default=[
+        # 1. The Dictionary.
+        # Front side.
+        '1::01::TXT::<div id="front">',
+        "1::01::TSV::../marcion.sourceforge.net/data/output/roots.tsv::dialect-B",
+        "1::01::TXT::</div>",
+        "1::01::TXT::<hr>",
+        # Type.
+        "1::02::TXT::(",
+        "1::02::TXT::<b>",
+        "1::02::TSV::../marcion.sourceforge.net/data/output/roots.tsv::type-parsed",
+        "1::02::TXT::</b>",
+        "1::02::TXT::)",
+        "1::02::TXT::<br>",
+        # Meaning.
+        "1::03::TSV::../marcion.sourceforge.net/data/output/roots.tsv::en-parsed-no-greek",
+        "1::03::TXT::<br>",
+        # Image.
+        "1::04::IMG::../marcion.sourceforge.net/data/output/roots.tsv::key::../marcion.sourceforge.net/data/img::{key}-*.*::300",
+        # Horizonal line.
+        "1::05::TXT::<hr>",
+        # Full entry.
+        "1::06::TXT::<b>Word:</b>",
+        "1::06::TXT::<br>",
+        "1::06::TSV::../marcion.sourceforge.net/data/output/roots.tsv::word-parsed-no-ref",
+        "1::06::TXT::<hr>",
+        # Full meaning.
+        "1::07::TXT::<b>Meaning:</b>",
+        "1::07::TXT::<br>",
+        "1::07::TSV::../marcion.sourceforge.net/data/output/roots.tsv::en-parsed",
+        "1::07::TXT::<hr>",
+        # Crum's entry.
+        "1::08::TXT::<b>Crum: </b>",
+        "1::08::TSV::../marcion.sourceforge.net/data/output/roots.tsv::crum",
+        "1::08::TXT::<br>",
+        "1::08::IMG::../marcion.sourceforge.net/data/output/roots.tsv::crum-pages::../marcion.sourceforge.net/data/crum::numexpr({key}+20).png",
+        "1::08::TXT::<hr>",
+        # Marcion's key.
+        "1::09::TXT::<b>Key: </b>",
+        "1::09::TSV::../marcion.sourceforge.net/data/output/roots.tsv::key",
+        # 2. The Bible.
+        # Bohairic.
+        '2::01::TXT::<div id="front">',
+        "2::01::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::Bohairic",
+        "2::01::TXT::</div>",
+        "2::01::TXT::<hr>",
+        # Reference.
+        "2::02::TXT::(",
+        "2::02::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::book",
+        "2::02::TXT:: ",
+        "2::02::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::chapter",
+        "2::02::TXT:::",
+        "2::02::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::verse",
+        "2::02::TXT::)",
+        "2::02::TXT::<br>",
+        "2::02::TXT::<br>",
+        # English.
+        "2::03::TXT::<b>English:</b>",
+        "2::03::TXT::<br>",
+        "2::03::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::English",
+        # Break
+        "2::04::TXT::<br>",
+        "2::04::TXT::<br>",
+        # Sahidic.
+        "2::05::TXT::<b>Sahidic:</b>",
+        "2::05::TXT::<br>",
+        "2::05::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::Sahidic",
+        "2::05::TXT::<br>",
+        "2::05::TXT::<br>",
+        # Fayyumic.
+        "2::06::TXT::<b>Fayyumic:</b>",
+        "2::06::TXT::<br>",
+        "2::06::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::Fayyumic",
+        "2::06::TXT::<br>",
+        "2::06::TXT::<br>",
+        # Akhmimic.
+        "2::07::TXT::<b>Akhmimic:</b>",
+        "2::07::TXT::<br>",
+        "2::07::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::Akhmimic",
+        "2::07::TXT::<br>",
+        "2::07::TXT::<br>",
+        # OldBohairic.
+        "2::08::TXT::<b>OldBohairic:</b>",
+        "2::08::TXT::<br>",
+        "2::08::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::OldBohairic",
+        "2::08::TXT::<br>",
+        "2::08::TXT::<br>",
+        # Mesokemic.
+        "2::09::TXT::<b>Mesokemic:</b>",
+        "2::09::TXT::<br>",
+        "2::09::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::Mesokemic",
+        "2::09::TXT::<br>",
+        "2::09::TXT::<br>",
+        # DialectP.
+        "2::10::TXT::<b>DialectP:</b>",
+        "2::10::TXT::<br>",
+        "2::10::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::DialectP",
+        "2::10::TXT::<br>",
+        "2::10::TXT::<br>",
+        # Lycopolitan.
+        "2::11::TXT::<b>Lycopolitan:</b>",
+        "2::11::TXT::<br>",
+        "2::11::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::Lycopolitan",
+        "2::11::TXT::<br>",
+        "2::11::TXT::<br>",
+        # Greek.
+        "2::12::TXT::<b>Greek:</b>",
+        "2::12::TXT::<br>",
+        "2::12::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::Greek",
+    ],
+    help="Format of the card backs. See description for syntax.",
+)
+
+argparser.add_argument(
+    "--css",
+    type=str,
+    nargs="*",
+    default=[
+        # 1. The Dictionary.
+        "1::.card { font-size: 18px; }",
+        "1::#front { text-align: center; }",
+        # 2. The Bible.
+        "2::.card { font-size: 18px; }",
+    ],
+    help="Global CSS. Please notice that the front will be given the id"
+    ' "front" and the back will have the id "back". You can use these IDs if'
+    " you want to make your CSS format side-specific.",
+)
+
+argparser.add_argument(
+    "--model_name",
+    type=str,
+    nargs="*",
+    default=[
+        # 1. The Dictionary.
+        "1::Dictionary",
+        # 2. The Bible.
+        "2::Bible",
+    ],
+    help="Model name in the generated Anki package. N.B. A hash of this field"
+    " will be used to key the models. Thus, it is important to ensure that the"
+    " model names are (1) unique, and (2) persistent. Use a different model"
+    " name for each model that you want to support. And do not change the"
+    " names liberally between different version of the code and the generated"
+    " package.",
+)
+
+argparser.add_argument(
+    "--deck_name",
+    type=str,
+    nargs="*",
+    default=[
+        # 1. The Dictionary.
+        "1::1::TXT::Dictionary",
+        # 2. The Bible.
+        "2::1::TXT::Bible",
+        "2::1::TXT:::",
+        "2::1::TXT:::",
+        "2::1::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::book",
+        "2::1::TXT:::",
+        "2::1::TXT:::",
+        "2::1::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::chapter",
+    ],
+    help="Deck name in the generated Anki package. N.B. A hash of this field"
+    " will be used to key the decks. Thus, it is important to ensure that the"
+    " deck names are (1) unique, and (2) persistent. Use a different deck"
+    " name for each deck that you want to support. And do not change the"
+    " names liberally between different version of the code and the generated"
+    " package.",
+)
+
+argparser.add_argument(
+    "--deck_description",
+    type=str,
+    nargs="*",
+    default=[
+        # 1. The Dictionary.
+        """1::URL: https://github.com/pishoyg/coptic/.
+    Contact: pishoybg@gmail.com.""",
+        # 2. The Bible.
+        """2::URL: https://github.com/pishoyg/coptic/.
+    Contact: pishoybg@gmail.com.""",
+    ],
+    help="Deck description in the generated Anki package.",
+)
+
+argparser.add_argument(
+    "--output",
+    type=str,
+    default="",
+    required=True,
+    help="Path to the output collection.",
+)
+
+args = argparser.parse_args()
+
+
+def new_field(spec, work_dir):
+    field_type = spec[:3]
+    assert spec[3:5] == "::", spec
+    spec = spec[5:].split("::")
+    if field_type == "TXT":
+        return txt(spec, work_dir)
+    if field_type == "TSV":
+        return tsv(spec, work_dir)
+    if field_type == "IMG":
+        return img(spec, work_dir)
+    if field_type == "FIL":
+        return fil(spec, work_dir)
+    raise ValueError("Unknown filed type: {}".format(field_type))
+
+
+class field:
+
+    def __init__(self, content, media_files):
+        self._content = content
+        self._counter = 0
+        self._media_files = media_files
+
+    def media_files(self):
+        return self._media_files
+
+    def next(self):
+        ans = self._content[self._counter]
+        self._counter += 1
+        return ans
+
+    def length(self):
+        return len(self._content)
+
+    def _use_html_line_breaks(self, text):
+        text = str(text)
+        return text.replace("\n", "<br>")
+
+    def _substitute_key_and_numexpr(self, file_name_fmt, key):
+        file_name_fmt = file_name_fmt.format(key=key)
+        match = NUMEXPR_RE.match(file_name_fmt)
+        if not match:
+            return file_name_fmt
+        expr = numexpr.evaluate(match.group(1)).item()
+        return NUMEXPR_RE.sub(str(expr), file_name_fmt)
+
+    def _glob(self, dir_path, file_name_fmt, cs_keys):
+        cs_keys = str(cs_keys)
+        paths = set()
+        for key in cs_keys.split(","):
+            pattern = self._substitute_key_and_numexpr(file_name_fmt, key)
+            pattern = os.path.join(dir_path, pattern)
+            paths.update(glob.glob(pattern))
+        return list(sorted(paths, key=sort_key))
+
+    def _read_tsv_column(self, file_path, column_name):
+        df = pd.read_csv(file_path, sep="\t", encoding="utf-8").fillna("")
+        return df[column_name]
+
+
+class txt(field):
+    def __init__(self, spec, _):
+        assert len(spec) == 1, spec
+        self._content = self._use_html_line_breaks(spec[0])
+        self._media_files = []
+
+    def next(self):
+        return self._content
+
+    def length(self):
+        return -1
+
+
+class tsv(field):
+    def __init__(self, spec, _):
+        file_path, column_name = spec
+        content = self._read_tsv_column(file_path, column_name)
+        content = map(str, content)
+        content = list(map(self._use_html_line_breaks, content))
+        super().__init__(content, [])
+
+
+class img(field):
+
+    def __init__(self, spec, work_dir):
+        """
+        The "src" field of the <img> HTML tag must bear basenames. Directories
+        are not allowed. This implies that all basenames must be unique.
+        See github.com/kerrickstaley/genanki?tab=readme-ov-file#media-files.
+
+        We have images from multiple source directories, and their basenames
+        could be conflicting.
+        We solve this problem by doing the following:
+        We copy all files to a temporary working, assigning them unique
+        basenames. We use the new basenames in our HTML. We pass the files in
+        the temporary directory to the package generator in order for the
+        basenames to match, and we forget about the original paths and names.
+        """
+        assert len(spec) == 4 or len(spec) == 5
+        file_path, column_name, dir_path, file_name_fmt = spec[:4]
+        html_fmt = '<img src="{basename}"><br>'
+        width = None
+        if len(spec) == 5:
+            width = int(spec[4])
+            html_fmt = '<img src="{{basename}}" width="{width}"><br>'
+            html_fmt = html_fmt.format(width=width)
+
+        # Each entry in the keys column is not a single key, but a
+        # comma-separated list of key patterns.
+        keys = self._read_tsv_column(file_path, column_name)
+
+        content = []
+        media_files = set()
+        for cs_keys in keys:
+            paths = self._glob(dir_path, file_name_fmt, cs_keys)
+            cur = ""
+            for path in paths:
+                basename = path.replace("/", "_")
+                cur += html_fmt.format(basename=basename)
+                new_location = os.path.join(work_dir, basename)
+                media_files.add(new_location)
+                if width:
+                    image = Image.open(path)
+                    cur_width, _ = image.size
+                    if cur_width > width:
+                        image.thumbnail((width, MAX_THUMBNAIL_HEIGHT))
+                    image.save(new_location)
+                else:
+                    shutil.copyfile(path, new_location)
+            content.append(cur)
+
+        # Eliminate duplicate media file paths.
+        media_files = list(media_files)
+        super().__init__(content, media_files)
+
+
+class fil(field):
+    def __init__(self, spec, _):
+        file_path, column_name, dir_path, file_name_fmt = spec
+        keys = self._read_tsv_column(file_path, column_name)
+
+        content = []
+        for cs_keys in keys:
+            paths = self._glob(dir_path, file_name_fmt, cs_keys)
+            cur = ""
+            for path in paths:
+                with open(path) as f:
+                    cur += f.read()
+            cur = self._use_html_line_breaks(cur)
+            content.append(cur)
+
+        super().__init__(content, [])
+
+
+def num_entries(fields) -> int:
+    cur = -1
+    for f in fields:
+        l = f.length()
+        if l == -1:
+            continue
+        if cur == -1:
+            cur = l
+        assert cur == l
+    return cur
+
+
+def chop_first_parameter(text):
+    idx = text.find("::")
+    return text[:idx], text[idx + 2 :]
+
+
+def group_by_first_parameter(side, allow_no_id=False, use_pairs=False):
+    """
+    N.B. The first parameter should consist of digits, but it will be returned
+    as a string without conversion to an int.
+    Given a list of strings that represent parameters, return a dictionary
+    mapping the index to the list of parameters.
+    For example:
+        Input:
+            [
+                    "1:hello world",
+                    "2:good morning",
+                    "1:goodbye!",
+            ]
+        Output:
+            {
+                    1: ["hello world", "goodbye!"],
+                    2: ["good morning"]
+             }
+
+    Args:
+        side: List of strings that are made of delimiter-separated parameters,
+        the delimiter being a pair of colons.
+        allow_no_id: If the first parameter doesn't consist of digits (i.e. is
+        not an id), should you throw an exception, or just use the empty string
+        as an id for this entry?
+        use_pairs: Whether the output should be a dictionary or a list of
+        pairs.
+    """
+
+    pairs = []
+    for spec in side:
+        first, rem = chop_first_parameter(spec)
+        if not first.isdigit():
+            # No ID found!
+            assert allow_no_id
+            first, rem = "", spec
+        pairs.append((first, rem))
+    if use_pairs:
+        return pairs
+    d = {pair[0]: [] for pair in pairs}
+    for pair in pairs:
+        d[pair[0]].append(pair[1])
+    return d
+
+
+def pull_yarn(fields, work_dir):
+    fields = group_by_first_parameter(fields, allow_no_id=True, use_pairs=True)
+    assert all(len(pair) == 2 for pair in fields)
+    # Each entry in `fields` consists of a field group key and a field object.
+    fields = [(pair[0], new_field(pair[1], work_dir)) for pair in fields]
+
+    num_notes = num_entries([pair[1] for pair in fields])
+
+    content = []
+    media_files = set()
+    not_purged_at_least_once = set()
+    for _ in range(num_notes if num_notes != -1 else 1):
+        next = [(pair[0], pair[1].next()) for pair in fields]
+        purged = set()
+        for pair in next:
+            # The empty string is special. It's never purged.
+            if (not pair[0]) or pair[1]:
+                not_purged_at_least_once.add(pair[0])
+            else:
+                purged.add(pair[0])
+        next = [pair[1] for pair in next if pair[0] not in purged]
+        next = "".join(next)
+        content.append(next)
+
+    for pair in fields:
+        if pair[0] in not_purged_at_least_once:
+            media_files.update(pair[1].media_files())
+
+    if num_notes == -1:
+        assert not media_files
+        return txt(content, work_dir)
+    return field(content, list(media_files))
+
+
+def list_element(parameter):
+    assert isinstance(parameter, list)
+    assert len(parameter) == 1
+    return parameter[0]
+
+
+class Note(genanki.Note):
+    @property
+    def guid(self):
+        # Only use the key field to generate a GUID.
+        return genanki.guid_for(self.fields[0])
+
+
+def build_decks(
+    work_dir,
+    key,
+    front,
+    back,
+    model_name,
+    css,
+    deck_name,
+    deck_description,
+):
+
+    model_name = str(list_element(model_name))
+    deck_description = str(list_element(deck_description))
+
+    model = genanki.Model(
+        model_id=hash(model_name),
+        name=model_name,
+        fields=[
+            {"name": "Key"},
+            {"name": "Front"},
+            {"name": "Back"},
+        ],
+        templates=[
+            {
+                "name": "template 1",
+                "qfmt": '<div id="front"> {{Front}} </div>',
+                "afmt": '<div id="back"> {{Back}} </div>',
+            },
+        ],
+        css="\n".join(css),
+    )
+
+    decks = {}
+
+    key = pull_yarn(key, work_dir)
+    front = pull_yarn(front, work_dir)
+    back = pull_yarn(back, work_dir)
+    deck_name = pull_yarn(deck_name, work_dir)
+
+    for _ in range(num_entries([deck_name, key, front, back])):
+        d = deck_name.next()
+        k = key.next()
+        f = front.next()
+        b = back.next()
+        assert d and k and b
+        if not f:
+            print(f"Warning: Card {k} in deck {d} doesn't have a front!")
+            continue
+        if d not in decks:
+            decks[d] = genanki.Deck(
+                deck_id=hash(d),
+                name=d,
+                description=deck_description,
+            )
+        note = Note(model=model, fields=[k, f, b])
+        decks[d].add_note(note)
+
+    # Eliminate duplicate media file paths.
+    media_files = set()
+    for f in [front, back, deck_name]:
+        media_files.update(f.media_files())
+    return decks.values(), media_files
+
+
+def main():
+
+    work_dir = tempfile.TemporaryDirectory()
+
+    arguments = {
+        "key": group_by_first_parameter(args.key),
+        "front": group_by_first_parameter(args.front),
+        "back": group_by_first_parameter(args.back),
+        "model_name": group_by_first_parameter(args.model_name),
+        "css": group_by_first_parameter(args.css),
+        "deck_name": group_by_first_parameter(args.deck_name),
+        "deck_description": group_by_first_parameter(args.deck_description),
+    }
+
+    media_files = set()
+    decks = []
+
+    front_grouped = arguments["front"]
+    # Verify that all deck indexes are represented in all arguments.
+    assert all(
+        field_grouped.keys() == front_grouped.keys()
+        for field_grouped in arguments.values()
+    )
+
+    for deck_index in front_grouped.keys():
+        deck_arguments = {k: v[deck_index] for k, v in arguments.items()}
+        cur_decks, cur_media_files = build_decks(work_dir.name, **deck_arguments)
+
+        decks.extend(cur_decks)
+        media_files.update(cur_media_files)
+
+    media_files = list(media_files)
+    package = genanki.Package(decks, media_files=media_files)
+    package.write_to_file(args.output)
+
+    work_dir.cleanup()
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MDownloadWeb</class>
+ <widget class="QWidget" name="MDownloadWeb">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>735</width>
+    <height>693</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Marcion | download web</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resfile.qrc">
+    <normaloff>:/new/icons/icons/downweb.png</normaloff>:/new/icons/icons/downweb.png</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_6">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>download &amp;url</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <property name="indent">
+            <number>5</number>
+           </property>
+           <property name="textInteractionFlags">
+            <set>Qt::NoTextInteraction</set>
+           </property>
+           <property name="buddy">
+            <cstring>txtUrl</cstring>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btRec">
+           <property name="text">
+            <string>&amp;recommended urls</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QLineEdit" name="txtUrl">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string notr="true">http://</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btBrowse">
+           <property name="text">
+            <string>&amp;browse</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>9</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QRadioButton" name="rbWeb">
+          <property name="text">
+           <string>&amp;entire web</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="rbFile">
+          <property name="text">
+           <string>&amp;one file</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QPushButton" name="btStart">
+         <property name="text">
+          <string>&amp;download</string>
+         </property>
+         <property name="icon">
+          <iconset resource="resfile.qrc">
+           <normaloff>:/new/icons/icons/downweb.png</normaloff>:/new/icons/icons/downweb.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btStop">
+         <property name="text">
+          <string>&amp;stop</string>
+         </property>
+         <property name="icon">
+          <iconset resource="resfile.qrc">
+           <normaloff>:/new/icons/icons/stop.png</normaloff>:/new/icons/icons/stop.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btState">
+       <property name="text">
+        <string>s&amp;tate</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resfile.qrc">
+         <normaloff>:/new/icons/icons/qmark.png</normaloff>:/new/icons/icons/qmark.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="MFileChooser" name="wdgDir" native="true"/>
+   </item>
+   <item>
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <widget class="QTreeWidget" name="treeSites">
+      <property name="selectionMode">
+       <enum>QAbstractItemView::NoSelection</enum>
+      </property>
+      <attribute name="headerVisible">
+       <bool>false</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>site</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>web/file</string>
+       </property>
+      </column>
+      <item>
+       <property name="text">
+        <string>gnosis</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resfile.qrc">
+         <normaloff>:/new/icons/icons/folder.png</normaloff>:/new/icons/icons/folder.png</iconset>
+       </property>
+       <item>
+        <property name="text">
+         <string>www.gnosis.org/library.html</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resfile.qrc">
+          <normaloff>:/new/icons/icons/web.png</normaloff>:/new/icons/icons/web.png</iconset>
+        </property>
+        <property name="text">
+         <string>web</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>coptic language</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resfile.qrc">
+         <normaloff>:/new/icons/icons/folder.png</normaloff>:/new/icons/icons/folder.png</iconset>
+       </property>
+       <item>
+        <property name="text">
+         <string>www.metalog.org/</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resfile.qrc">
+          <normaloff>:/new/icons/icons/web.png</normaloff>:/new/icons/icons/web.png</iconset>
+        </property>
+        <property name="text">
+         <string>web</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>patrology</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resfile.qrc">
+         <normaloff>:/new/icons/icons/folder.png</normaloff>:/new/icons/icons/folder.png</iconset>
+       </property>
+       <item>
+        <property name="text">
+         <string>www.newadvent.org/fathers/</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resfile.qrc">
+          <normaloff>:/new/icons/icons/web.png</normaloff>:/new/icons/icons/web.png</iconset>
+        </property>
+        <property name="text">
+         <string>web</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>philosophy</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resfile.qrc">
+         <normaloff>:/new/icons/icons/folder.png</normaloff>:/new/icons/icons/folder.png</iconset>
+       </property>
+       <item>
+        <property name="text">
+         <string>classics.mit.edu/Plotinus/enneads.html</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resfile.qrc">
+          <normaloff>:/new/icons/icons/web.png</normaloff>:/new/icons/icons/web.png</iconset>
+        </property>
+        <property name="text">
+         <string>web</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>sacred-texts.com/</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resfile.qrc">
+          <normaloff>:/new/icons/icons/web.png</normaloff>:/new/icons/icons/web.png</iconset>
+        </property>
+        <property name="text">
+         <string>web</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>www.levity.com/alchemy/corpherm.html</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resfile.qrc">
+          <normaloff>:/new/icons/icons/web.png</normaloff>:/new/icons/icons/web.png</iconset>
+        </property>
+        <property name="text">
+         <string>web</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>misc</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resfile.qrc">
+         <normaloff>:/new/icons/icons/folder.png</normaloff>:/new/icons/icons/folder.png</iconset>
+       </property>
+       <item>
+        <property name="text">
+         <string>www.avesta.org/avesta.html#zscript</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resfile.qrc">
+          <normaloff>:/new/icons/icons/web.png</normaloff>:/new/icons/icons/web.png</iconset>
+        </property>
+        <property name="text">
+         <string>web</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>www.accesstoinsight.org/tipitaka/</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resfile.qrc">
+          <normaloff>:/new/icons/icons/web.png</normaloff>:/new/icons/icons/web.png</iconset>
+        </property>
+        <property name="text">
+         <string>web</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>cornerstonepublications.org/Philo/</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resfile.qrc">
+          <normaloff>:/new/icons/icons/web.png</normaloff>:/new/icons/icons/web.png</iconset>
+        </property>
+        <property name="text">
+         <string>web</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>www.fas.harvard.edu/~iranian/Manicheism/</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resfile.qrc">
+          <normaloff>:/new/icons/icons/web.png</normaloff>:/new/icons/icons/web.png</iconset>
+        </property>
+        <property name="text">
+         <string>web</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>czech</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resfile.qrc">
+         <normaloff>:/new/icons/icons/folder.png</normaloff>:/new/icons/icons/folder.png</iconset>
+       </property>
+       <item>
+        <property name="text">
+         <string>fysis.cz/presokratici/vstup/3DK.htm</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resfile.qrc">
+          <normaloff>:/new/icons/icons/web.png</normaloff>:/new/icons/icons/web.png</iconset>
+        </property>
+        <property name="text">
+         <string>web</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>www.fatym.com/taf/knihy/patrol/index.htm</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resfile.qrc">
+          <normaloff>:/new/icons/icons/web.png</normaloff>:/new/icons/icons/web.png</iconset>
+        </property>
+        <property name="text">
+         <string>web</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>dhammadesana.110mb.com/</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resfile.qrc">
+          <normaloff>:/new/icons/icons/web.png</normaloff>:/new/icons/icons/web.png</iconset>
+        </property>
+        <property name="text">
+         <string>web</string>
+        </property>
+       </item>
+      </item>
+     </widget>
+     <widget class="CMsgBrowser" name="textBrowser">
+      <property name="acceptRichText">
+       <bool>false</bool>
+      </property>
+      <property name="openLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="frmDetails">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>comma&amp;nd</string>
+            </property>
+            <property name="buddy">
+             <cstring>txtCmd</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="txtCmd"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>&amp;params</string>
+            </property>
+            <property name="buddy">
+             <cstring>txtParams</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="txtParams"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>he&amp;lp</string>
+            </property>
+            <property name="buddy">
+             <cstring>txtHelp</cstring>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="txtHelp"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>vers&amp;ion</string>
+            </property>
+            <property name="buddy">
+             <cstring>txtVersion</cstring>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="txtVersion"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QPushButton" name="btDefault">
+          <property name="text">
+           <string>restore de&amp;faults</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btTest">
+          <property name="text">
+           <string>show &amp;help</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btVersion">
+          <property name="text">
+           <string>sho&amp;w version</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <property name="rightMargin">
+      <number>20</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="btClear">
+       <property name="text">
+        <string>&amp;clear</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btDetails">
+       <property name="text">
+        <string>&amp;more options</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btClose">
+       <property name="text">
+        <string>close</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resfile.qrc">
+         <normaloff>:/new/icons/icons/stop.png</normaloff>:/new/icons/icons/stop.png</iconset>
+       </property>
+       <property name="shortcut">
+        <string>Esc</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="0" margin="0"/>
+ <customwidgets>
+  <customwidget>
+   <class>CMsgBrowser</class>
+   <extends>QTextBrowser</extends>
+   <header>cmsgbrowser.h</header>
+  </customwidget>
+  <customwidget>
+   <class>MFileChooser</class>
+   <extends>QWidget</extends>
+   <header>filechooser.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resfile.qrc"/>
+ </resources>
+ <connections/>
+</ui>

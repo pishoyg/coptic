@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWnd</class>
+ <widget class="QMainWindow" name="MainWnd">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>560</width>
+    <height>408</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true"/>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resfile.qrc">
+    <normaloff>:/new/icons/icons/main.png</normaloff>:/new/icons/icons/main.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabMainApp">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="icon">
+        <iconset resource="resfile.qrc">
+         <normaloff>:/new/icons/icons/books.png</normaloff>:/new/icons/icons/books.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>a&amp;rchive</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <layout class="QVBoxLayout" name="layArchive"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="icon">
+        <iconset resource="resfile.qrc">
+         <normaloff>:/new/icons/icons/loupe.png</normaloff>:/new/icons/icons/loupe.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>&amp;search results</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="MSRWidget" name="tabSearchResults">
+          <property name="tabsClosable">
+           <bool>true</bool>
+          </property>
+          <property name="movable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>560</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuDictionary">
+    <property name="title">
+     <string>&amp;application</string>
+    </property>
+    <widget class="QMenu" name="menuShow_server_state">
+     <property name="title">
+      <string>show s&amp;erver state</string>
+     </property>
+     <addaction name="actionGlobal_variables"/>
+     <addaction name="actionSession_variables"/>
+    </widget>
+    <widget class="QMenu" name="menuTCP_server">
+     <property name="title">
+      <string>&amp;TCP server</string>
+     </property>
+    </widget>
+    <addaction name="actionSettings"/>
+    <addaction name="actionShow_tip"/>
+    <addaction name="separator"/>
+    <addaction name="actionShow_messages"/>
+    <addaction name="actionClear_messages"/>
+    <addaction name="actionSupported_image_formats"/>
+    <addaction name="menuShow_server_state"/>
+    <addaction name="menuTCP_server"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuAction">
+    <property name="title">
+     <string>&amp;dictionary</string>
+    </property>
+    <addaction name="actionCrum"/>
+    <addaction name="actionQuery"/>
+    <addaction name="actionNew_word"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuery_LSJ"/>
+    <addaction name="action_Hebrew"/>
+   </widget>
+   <widget class="QMenu" name="menuLibrary">
+    <property name="title">
+     <string>&amp;library</string>
+    </property>
+    <addaction name="actionOpen_book"/>
+    <addaction name="actionOpen_TLG_PHI"/>
+    <addaction name="separator"/>
+    <addaction name="actionPlumley"/>
+    <addaction name="actionTattam"/>
+    <addaction name="actionBennett_Latin_grammar"/>
+    <addaction name="separator"/>
+    <addaction name="actionView_library"/>
+    <addaction name="actionSearch_library"/>
+    <addaction name="actionOpened_books_2"/>
+    <addaction name="separator"/>
+    <addaction name="actionImport_collection_2"/>
+    <addaction name="actionDownload_web"/>
+    <addaction name="actionIndex_directory"/>
+   </widget>
+   <widget class="QMenu" name="menuRemote_database">
+    <property name="title">
+     <string>data&amp;base</string>
+    </property>
+    <widget class="QMenu" name="menuExport_coptic_data">
+     <property name="title">
+      <string>&amp;export coptic dictionary data</string>
+     </property>
+     <addaction name="actionCsv"/>
+     <addaction name="actionSql"/>
+     <addaction name="actionTabfile"/>
+     <addaction name="separator"/>
+     <addaction name="actionCreate_html_data"/>
+    </widget>
+    <addaction name="actionCreate_index_of_coptic_tables"/>
+    <addaction name="actionImport_coptic_dictionary"/>
+    <addaction name="menuExport_coptic_data"/>
+    <addaction name="separator"/>
+    <addaction name="actionDrop_mysql_library"/>
+    <addaction name="separator"/>
+    <addaction name="actionExport_archive"/>
+    <addaction name="actionImport_data"/>
+    <addaction name="actionDrop_entire_archive"/>
+    <addaction name="separator"/>
+    <addaction name="action_re_create_index_of_TLG_PHI"/>
+    <addaction name="action_re_create_index_of_Gk_Lat_dictionary"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>&amp;tools</string>
+    </property>
+    <widget class="QMenu" name="menuInterlinear_editor">
+     <property name="title">
+      <string>&amp;interlinear editor</string>
+     </property>
+     <addaction name="actionOpen"/>
+     <addaction name="actionNew"/>
+     <addaction name="separator"/>
+     <addaction name="actionExamine_data"/>
+     <addaction name="actionBackup_data"/>
+     <addaction name="actionRestore_data"/>
+     <addaction name="separator"/>
+     <addaction name="action_re_create_tables"/>
+     <addaction name="action_re_create_tables_2"/>
+    </widget>
+    <addaction name="actionMaps"/>
+    <addaction name="actionCoptic_numerals"/>
+    <addaction name="menuInterlinear_editor"/>
+    <addaction name="actionExecute_SQL"/>
+    <addaction name="actionManage_archive"/>
+    <addaction name="actionEdit_text_file"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>&amp;help</string>
+    </property>
+    <addaction name="actionDocumentation_online"/>
+    <addaction name="actionEnglish_online"/>
+    <addaction name="actionCzech_online"/>
+    <addaction name="actionEnglish_guide_local"/>
+    <addaction name="actionCzech_guide_local"/>
+    <addaction name="separator"/>
+    <addaction name="actionOpen_Discussion_forum"/>
+    <addaction name="actionMarcion_Project_Page"/>
+    <addaction name="actionMarcion_on_Facebook"/>
+    <addaction name="separator"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>&amp;view</string>
+    </property>
+    <widget class="QMenu" name="menuTools_2">
+     <property name="title">
+      <string>&amp;tools</string>
+     </property>
+     <addaction name="actionDictionaries"/>
+     <addaction name="actionLibrary_2"/>
+     <addaction name="actionILT"/>
+    </widget>
+    <widget class="QMenu" name="menuStacks">
+     <property name="title">
+      <string>&amp;stacks</string>
+     </property>
+     <addaction name="actionLibrary"/>
+     <addaction name="actionSearch"/>
+     <addaction name="actionMessages"/>
+     <addaction name="actionSettings_2"/>
+     <addaction name="actionOpened_books"/>
+    </widget>
+    <addaction name="actionMinimize"/>
+    <addaction name="actionMaximize"/>
+    <addaction name="actionFullscreen"/>
+    <addaction name="separator"/>
+    <addaction name="menuStacks"/>
+    <addaction name="menuTools_2"/>
+   </widget>
+   <addaction name="menuDictionary"/>
+   <addaction name="menuView"/>
+   <addaction name="menuAction"/>
+   <addaction name="menuLibrary"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuRemote_database"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QDockWidget" name="dockLibrary">
+   <property name="windowIcon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/books.png</normaloff>:/new/icons/icons/books.png</iconset>
+   </property>
+   <property name="floating">
+    <bool>false</bool>
+   </property>
+   <property name="features">
+    <set>QDockWidget::AllDockWidgetFeatures</set>
+   </property>
+   <property name="windowTitle">
+    <string>library</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2"/>
+  </widget>
+  <widget class="QDockWidget" name="dockSearchLibrary">
+   <property name="windowIcon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/loupe.png</normaloff>:/new/icons/icons/loupe.png</iconset>
+   </property>
+   <property name="floating">
+    <bool>false</bool>
+   </property>
+   <property name="features">
+    <set>QDockWidget::AllDockWidgetFeatures</set>
+   </property>
+   <property name="windowTitle">
+    <string>search</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>4</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_3"/>
+  </widget>
+  <widget class="QDockWidget" name="dwiSettings">
+   <property name="windowIcon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/settings.png</normaloff>:/new/icons/icons/settings.png</iconset>
+   </property>
+   <property name="floating">
+    <bool>false</bool>
+   </property>
+   <property name="features">
+    <set>QDockWidget::AllDockWidgetFeatures</set>
+   </property>
+   <property name="windowTitle">
+    <string>settings</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_5"/>
+  </widget>
+  <widget class="QDockWidget" name="dwiMsg">
+   <property name="windowIcon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/info.png</normaloff>:/new/icons/icons/info.png</iconset>
+   </property>
+   <property name="windowTitle">
+    <string>messages</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_4"/>
+  </widget>
+  <widget class="QToolBar" name="tbarILT">
+   <property name="windowTitle">
+    <string>ILT</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QDockWidget" name="dwiBooks">
+   <property name="windowTitle">
+    <string>opened books</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents"/>
+  </widget>
+  <action name="actionQuit">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/exit.png</normaloff>:/new/icons/icons/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;quit</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Q</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WindowShortcut</enum>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionNew_word">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/addw.png</normaloff>:/new/icons/icons/addw.png</iconset>
+   </property>
+   <property name="text">
+    <string>Coptic - insert word</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/settings.png</normaloff>:/new/icons/icons/settings.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;settings</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">F4</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionClear_messages">
+   <property name="text">
+    <string>&amp;clear messages</string>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionQuery">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/gima.png</normaloff>:/new/icons/icons/gima.png</iconset>
+   </property>
+   <property name="text">
+    <string>C&amp;optic (search)</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Shift+C</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WindowShortcut</enum>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionOpen_book">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/book.png</normaloff>:/new/icons/icons/book.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;open book</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+O</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WindowShortcut</enum>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionPlumley">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/plumley.png</normaloff>:/new/icons/icons/plumley.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Plumley (Coptic grammar)</string>
+   </property>
+  </action>
+  <action name="actionTattam">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/tattam.png</normaloff>:/new/icons/icons/tattam.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Tattam (Coptic grammar)</string>
+   </property>
+   <property name="iconText">
+    <string>Tattam (Coptic grammar)</string>
+   </property>
+   <property name="toolTip">
+    <string>Tattam (Coptic grammar)</string>
+   </property>
+  </action>
+  <action name="actionView_library">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/books.png</normaloff>:/new/icons/icons/books.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;view library</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">F1</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionOpen_TLG_PHI">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>op&amp;en TLG/PHI</string>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionSearch_library">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/loupe.png</normaloff>:/new/icons/icons/loupe.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;search in library</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">F2</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionQuery_LSJ">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/alfa2.png</normaloff>:/new/icons/icons/alfa2.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Greek/Latin</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Shift+G</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WindowShortcut</enum>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionCrum">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/alfa1.png</normaloff>:/new/icons/icons/alfa1.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Coptic (printed)</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Shift+W</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WindowShortcut</enum>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionShow_messages">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/info.png</normaloff>:/new/icons/icons/info.png</iconset>
+   </property>
+   <property name="text">
+    <string>s&amp;how messages</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">F3</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+  </action>
+  <action name="actionCsv">
+   <property name="text">
+    <string>&amp;csv</string>
+   </property>
+  </action>
+  <action name="actionSql">
+   <property name="text">
+    <string>&amp;msql</string>
+   </property>
+  </action>
+  <action name="actionMaps">
+   <property name="text">
+    <string>&amp;maps</string>
+   </property>
+  </action>
+  <action name="actionImport_collection_2">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/impcoll.png</normaloff>:/new/icons/icons/impcoll.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;import collection</string>
+   </property>
+  </action>
+  <action name="actionCreate_index_of_coptic_tables">
+   <property name="text">
+    <string>(re)&amp;create index of coptic dictionary</string>
+   </property>
+  </action>
+  <action name="actionTabfile">
+   <property name="text">
+    <string>tabfile</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/info.png</normaloff>:/new/icons/icons/info.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;about Marcion</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionDocumentation_online">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/web.png</normaloff>:/new/icons/icons/web.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Home Page (online)</string>
+   </property>
+  </action>
+  <action name="actionOpen_Discussion_forum">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/web.png</normaloff>:/new/icons/icons/web.png</iconset>
+   </property>
+   <property name="text">
+    <string>f&amp;orums</string>
+   </property>
+  </action>
+  <action name="actionMarcion_Project_Page">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/web.png</normaloff>:/new/icons/icons/web.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Project Page</string>
+   </property>
+  </action>
+  <action name="actionEnglish_online">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/web.png</normaloff>:/new/icons/icons/web.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;english guide (online)</string>
+   </property>
+  </action>
+  <action name="actionCzech_online">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/web.png</normaloff>:/new/icons/icons/web.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;czech guide (online)</string>
+   </property>
+  </action>
+  <action name="actionFullscreen">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>f&amp;ullscreen</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">F12</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WindowShortcut</enum>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionGlobal_variables">
+   <property name="text">
+    <string>global variables</string>
+   </property>
+  </action>
+  <action name="actionSession_variables">
+   <property name="text">
+    <string>session variables</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/ilt.png</normaloff>:/new/icons/icons/ilt.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;open</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/new_ilt.png</normaloff>:/new/icons/icons/new_ilt.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;new</string>
+   </property>
+  </action>
+  <action name="action_re_create_tables">
+   <property name="text">
+    <string>truncate tables</string>
+   </property>
+  </action>
+  <action name="actionBackup_data">
+   <property name="text">
+    <string>&amp;backup data</string>
+   </property>
+  </action>
+  <action name="actionRestore_data">
+   <property name="text">
+    <string>&amp;restore data</string>
+   </property>
+  </action>
+  <action name="actionExamine_data">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/dbtr.png</normaloff>:/new/icons/icons/dbtr.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;maintain data</string>
+   </property>
+  </action>
+  <action name="action_re_create_tables_2">
+   <property name="text">
+    <string>(re)create tables</string>
+   </property>
+  </action>
+  <action name="actionCreate_html_data">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>create html data</string>
+   </property>
+  </action>
+  <action name="actionEnglish_guide_local">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/html_file.png</normaloff>:/new/icons/icons/html_file.png</iconset>
+   </property>
+   <property name="text">
+    <string>e&amp;nglish guide (local)</string>
+   </property>
+  </action>
+  <action name="actionCzech_guide_local">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/html_file.png</normaloff>:/new/icons/icons/html_file.png</iconset>
+   </property>
+   <property name="text">
+    <string>c&amp;zech guide (local)</string>
+   </property>
+  </action>
+  <action name="actionMarcion_on_Facebook">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/web.png</normaloff>:/new/icons/icons/web.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Marcion on Facebook</string>
+   </property>
+  </action>
+  <action name="actionDictionaries">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;dictionaries</string>
+   </property>
+  </action>
+  <action name="actionILT">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;ILT</string>
+   </property>
+  </action>
+  <action name="actionLibrary">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;library</string>
+   </property>
+  </action>
+  <action name="actionSearch">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;search</string>
+   </property>
+  </action>
+  <action name="actionMessages">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;messages</string>
+   </property>
+  </action>
+  <action name="actionSettings_2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>s&amp;ettings</string>
+   </property>
+  </action>
+  <action name="actionLibrary_2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;library</string>
+   </property>
+  </action>
+  <action name="actionDownload_web">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/downweb.png</normaloff>:/new/icons/icons/downweb.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;download web</string>
+   </property>
+  </action>
+  <action name="actionMinimize">
+   <property name="text">
+    <string>&amp;minimize</string>
+   </property>
+  </action>
+  <action name="actionMaximize">
+   <property name="text">
+    <string>m&amp;aximize</string>
+   </property>
+  </action>
+  <action name="actionExecute_SQL">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/sql.png</normaloff>:/new/icons/icons/sql.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;execute SQL</string>
+   </property>
+  </action>
+  <action name="actionIndex_directory">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/folderwork.png</normaloff>:/new/icons/icons/folderwork.png</iconset>
+   </property>
+   <property name="text">
+    <string>i&amp;ndex directory</string>
+   </property>
+  </action>
+  <action name="action_re_create_index_of_TLG_PHI">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>(re)c&amp;reate index of TLG/PHI</string>
+   </property>
+  </action>
+  <action name="actionSupported_image_formats">
+   <property name="text">
+    <string>show image formats</string>
+   </property>
+  </action>
+  <action name="actionDrop_entire_archive">
+   <property name="text">
+    <string>&amp;drop entire archive</string>
+   </property>
+  </action>
+  <action name="actionManage_archive">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/settings.png</normaloff>:/new/icons/icons/settings.png</iconset>
+   </property>
+   <property name="text">
+    <string>m&amp;anage archive</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+A</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WindowShortcut</enum>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionDrop_mysql_library">
+   <property name="text">
+    <string>dr&amp;op main (mysql) library</string>
+   </property>
+  </action>
+  <action name="actionCoptic_numerals">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/numcnv.png</normaloff>:/new/icons/icons/numcnv.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;numeric converter</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Shift+N</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionImport_coptic_dictionary">
+   <property name="text">
+    <string>i&amp;mport coptic dictionary data</string>
+   </property>
+  </action>
+  <action name="actionBennett_Latin_grammar">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/lg.png</normaloff>:/new/icons/icons/lg.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Bennett (Latin grammar)</string>
+   </property>
+  </action>
+  <action name="actionOpened_books">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;opened books</string>
+   </property>
+  </action>
+  <action name="actionOpened_books_2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;opened books</string>
+   </property>
+   <property name="shortcut">
+    <string>F8</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+  </action>
+  <action name="actionEdit_text_file">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/file_icon.png</normaloff>:/new/icons/icons/file_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>ne&amp;w text file</string>
+   </property>
+  </action>
+  <action name="actionExport_archive">
+   <property name="text">
+    <string>e&amp;xport archive data</string>
+   </property>
+  </action>
+  <action name="actionImport_data">
+   <property name="text">
+    <string>im&amp;port archive data</string>
+   </property>
+  </action>
+  <action name="actionShow_tip">
+   <property name="text">
+    <string>advice &amp;of Marcion</string>
+   </property>
+  </action>
+  <action name="action_re_create_index_of_Gk_Lat_dictionary">
+   <property name="text">
+    <string>(re)create index of Gk/Lat dictionary</string>
+   </property>
+  </action>
+  <action name="action_Hebrew">
+   <property name="icon">
+    <iconset resource="resfile.qrc">
+     <normaloff>:/new/icons/icons/abgd.png</normaloff>:/new/icons/icons/abgd.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Hebrew</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+H</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="0" margin="0"/>
+ <customwidgets>
+  <customwidget>
+   <class>MSRWidget</class>
+   <extends>QTabWidget</extends>
+   <header>msrwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resfile.qrc"/>
+ </resources>
+ <connections/>
+</ui>

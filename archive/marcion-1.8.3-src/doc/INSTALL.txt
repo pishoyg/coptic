@@ -1,0 +1,118 @@
+
+Build from sources
+
+Marcion 1.8.3, build instructions - homepage: http://marcion.sourceforge.net/
+latest update of this file: 7. June 2016
+
+Prerequisities:
+
+libraries with their headers:
+
+    Qt4 == 4.8 | http://qt-project.org/
+    MySql (community server) == 5.5 | http://www.mysql.com/
+    poppler >= 0.18.4 | http://poppler.freedesktop.org/
+    djvulibre >= 3.5.24 | http://djvu.sourceforge.net/
+    archive >= 2.8.5 | http://www.libarchive.org/
+    bzip2 >= 1.0.6 | http://www.bzip.org/
+
+tools:
+
+    cmake >= 2.8 | http://www.cmake.org/
+    subversion >= 1.6 | http://subversion.apache.org/
+
+Tarball:
+
+Download file with sources from http://sourceforge.net/projects/marcion/files/1.8/, unpack file marcion-VERSION-src+data.tar.bz2 and change directory:
+
+$ tar -xjf marcion-1.8.3-2-src+data.tar.bz2
+$ cd marcion-1.8.3-src
+
+Subversion:
+
+Obtain sources through Subversion:
+
+$ svn checkout svn://svn.code.sf.net/p/marcion/code/ marcion-code
+$ cd marcion-code
+
+Create build directory and generate makefiles through cmake:
+
+$ mkdir build
+$ cd build
+$ cmake .. -DCMAKE_INSTALL_PREFIX=/install/path/
+
+build sources and install:
+
+$ make
+$ make install
+
+run marcion:
+
+$ /install/path/marcion
+
+or
+
+$ cd /install/path
+$ ./marcion
+
+useful variables, usage: cmake .. -DVAR_NAME_1[=value1] -DVAR_NAME_2[=value2] -DVAR_NAME_N[=valueN]
+
+    QT_QMAKE_EXECUTABLE - filepath of qmake command
+    M_EXTRA_DJVULIBRE_INC - djvulibre headers path / type: PATH
+    M_EXTRA_DJVULIBRE_LIB - djvulibre library / type: PATH
+    M_EXTRA_MYSQL_INC - mysql include path / type: PATH
+    M_EXTRA_MYSQLD_LIB - mysqld library / type: PATH
+    M_MYSQL_CONFIG_COMMAND - mysql_config command / type: FILEPATH
+    M_EXTRA_POPPLER_INC - poppler include path / type: PATH
+    M_EXTRA_POPPLER_QT4_LIB - poppler-qt4 library / type: PATH
+    M_EXTRA_ARCHIVE_INC - libarchive include path / type: PATH
+    M_EXTRA_ARCHIVE_LIB - libarchive library / type: PATH
+    M_APP_DATA - marcion data path / type: PATH, default value: 'marcion-data'
+    M_PDF - determines whether the Pdf viewer based on the Poppler library will be built or not / type: BOOL, ON by default
+    M_INSTALL_DATA - determines, whether the application data will be checked and installed (including MySql 'share' folder) / type: BOOL, ON by default
+    M_MYSQLDLIB_CHECK - determines, whether presence of mysqld library will be tested / type: BOOL, ON by default
+    M_MYSQLD_LINKER_FLAGS - additional linker flags for mysqld (example: -llib1 -llib2 -lanotherlib) / type: STRING
+
+    Notes:
+	M_MYSQLD_LINKER_FLAGS: For Linux systems, only flags started with '-l' separated by spaces are accepted, others will be ignored.
+	M_MYSQLD_LINKER_FLAGS use only if mysql_config cannot retrieve flags properly. If M_MYSQLD_LINKER_FLAGS is empty, then output of M_MYSQL_CONFIG_COMMAND will be used by linker.
+	CMAKE_INSTALL_PREFIX must be set, do not use default install directory.
+
+platforms:
+
+    Linux (UNIX) - native, tested
+    Windows (Win32/64) Cygwin - tested
+    Windows (Win32/64) MinGW -  tested
+    Mac OS (UNIX) - tested
+
+    Windows: Cygwin, Cygwin/X | http://www.cygwin.com/
+    Windows: MinGW | http://www.mingw.org/
+    Mac OS: MacPorts | http://www.macports.org/
+
+some tips: display variables with their values
+
+$ cmake -LH
+
+try interactive mode and gui
+
+$ cmake .. -i
+$ cmake-gui
+
+get help
+
+$ cmake --help
+$ cmake --help-full
+
+cmake - wiki: http://www.cmake.org/Wiki/CMake
+
+MinGW tips:
+
+    - reimplementation of ".lib" to ".a":
+
+    > reimp -d libmysqld.lib
+    > dlltool -d libmysqld.def -D libmysqld.dll -k -l libmysqld.a
+
+    - building with Qt 4.8:
+
+        Qt in a precompiled package must be built through mingw-4.4. Search through the internet for the file "MinGW-gcc440_1.zip".
+
+reimp can be found in mingw-utils (use 0.3, 0.4-1 seems to be buggy): http://sourceforge.net/projects/mingw/files/MinGW/Extension/mingw-utils/

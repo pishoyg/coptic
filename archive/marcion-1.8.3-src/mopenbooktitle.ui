@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MOpenBookTitle</class>
+ <widget class="QWidget" name="MOpenBookTitle">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>133</width>
+    <height>42</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true"/>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QToolButton" name="tbGoTo">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="toolTip">
+      <string>activate book</string>
+     </property>
+     <property name="text">
+      <string>activate</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resfile.qrc">
+       <normaloff>:/new/icons/icons/go.png</normaloff>:/new/icons/icons/go.png</iconset>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>15</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QToolButton" name="tbDelete">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="toolTip">
+      <string>remove/close book</string>
+     </property>
+     <property name="text">
+      <string>remove</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resfile.qrc">
+       <normaloff>:/new/icons/icons/redcat.png</normaloff>:/new/icons/icons/redcat.png</iconset>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="MLabel" name="label" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="cursor">
+      <cursorShape>OpenHandCursor</cursorShape>
+     </property>
+     <property name="mouseTracking">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="btHide">
+     <property name="toolTip">
+      <string>hide</string>
+     </property>
+     <property name="text">
+      <string>hide</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resfile.qrc">
+       <normaloff>:/new/icons/icons/stop.png</normaloff>:/new/icons/icons/stop.png</iconset>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="0" margin="0"/>
+ <customwidgets>
+  <customwidget>
+   <class>MLabel</class>
+   <extends>QWidget</extends>
+   <header>mlabel.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resfile.qrc"/>
+ </resources>
+ <connections/>
+</ui>

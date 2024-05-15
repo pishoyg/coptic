@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MMsgTitle</class>
+ <widget class="QWidget" name="MMsgTitle">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>375</width>
+    <height>43</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true"/>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QToolButton" name="btHelp">
+     <property name="text">
+      <string>help</string>
+     </property>
+     <property name="toolButtonStyle">
+      <enum>Qt::ToolButtonTextBesideIcon</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="btVersion">
+     <property name="text">
+      <string>version</string>
+     </property>
+     <property name="toolButtonStyle">
+      <enum>Qt::ToolButtonTextBesideIcon</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="MLabel" name="label" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="cursor">
+      <cursorShape>OpenHandCursor</cursorShape>
+     </property>
+     <property name="mouseTracking">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="btTop">
+     <property name="text">
+      <string>top</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resfile.qrc">
+       <normaloff>:/new/icons/icons/uparrowto.png</normaloff>:/new/icons/icons/uparrowto.png</iconset>
+     </property>
+     <property name="shortcut">
+      <string>Ctrl+Home</string>
+     </property>
+     <property name="toolButtonStyle">
+      <enum>Qt::ToolButtonTextBesideIcon</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="btBottom">
+     <property name="text">
+      <string>bottom</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resfile.qrc">
+       <normaloff>:/new/icons/icons/downarrowto.png</normaloff>:/new/icons/icons/downarrowto.png</iconset>
+     </property>
+     <property name="shortcut">
+      <string>Ctrl+End</string>
+     </property>
+     <property name="toolButtonStyle">
+      <enum>Qt::ToolButtonTextBesideIcon</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="btClear">
+     <property name="text">
+      <string>clear</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="btHide">
+     <property name="toolTip">
+      <string>hide</string>
+     </property>
+     <property name="text">
+      <string>hide</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resfile.qrc">
+       <normaloff>:/new/icons/icons/stop.png</normaloff>:/new/icons/icons/stop.png</iconset>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="0"/>
+ <customwidgets>
+  <customwidget>
+   <class>MLabel</class>
+   <extends>QWidget</extends>
+   <header>mlabel.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resfile.qrc"/>
+ </resources>
+ <connections/>
+</ui>

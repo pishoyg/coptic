@@ -1,0 +1,8 @@
+.OPEN ${DB_ADDRESS}
+.HEADER ON
+.MODE COLUMN
+.WIDTH 20 200
+SELECT word, pronunciation
+FROM pronunciations
+ORDER BY word
+LIMIT 100;

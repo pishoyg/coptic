@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CLibraryWidget</class>
+ <widget class="QWidget" name="CLibraryWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>314</width>
+    <height>549</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true"/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="QTabWidget" name="tabLibrary">
+     <property name="tabPosition">
+      <enum>QTabWidget::North</enum>
+     </property>
+     <property name="tabShape">
+      <enum>QTabWidget::Triangular</enum>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="elideMode">
+      <enum>Qt::ElideNone</enum>
+     </property>
+     <property name="usesScrollButtons">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="icon">
+       <iconset resource="resfile.qrc">
+        <normaloff>:/new/icons/icons/sql.png</normaloff>:/new/icons/icons/sql.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>library</string>
+      </attribute>
+      <attribute name="toolTip">
+       <string>library | F5</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QTreeWidget" name="treeLibrary">
+         <property name="contextMenuPolicy">
+          <enum>Qt::CustomContextMenu</enum>
+         </property>
+         <property name="showDropIndicator" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="dragDropMode">
+          <enum>QAbstractItemView::NoDragDrop</enum>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::ExtendedSelection</enum>
+         </property>
+         <column>
+          <property name="text">
+           <string>book</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>type</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>index</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>searchable</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="icon">
+       <iconset resource="resfile.qrc">
+        <normaloff>:/new/icons/icons/folder.png</normaloff>:/new/icons/icons/folder.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>files</string>
+      </attribute>
+      <attribute name="toolTip">
+       <string>filesystem | F6</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QWidget" name="wdgFindFileButton" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QToolButton" name="btFindFileCh">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>find file(s)</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resfile.qrc">
+              <normaloff>:/new/icons/icons/loupe.png</normaloff>:/new/icons/icons/loupe.png</iconset>
+            </property>
+            <property name="shortcut">
+             <string>Shift+F</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+            <property name="toolButtonStyle">
+             <enum>Qt::ToolButtonTextBesideIcon</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSplitter" name="splitter">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <widget class="QWidget" name="wdgFind" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_9">
+             <item>
+              <widget class="QToolButton" name="btRegExp">
+               <property name="toolTip">
+                <string>regexp builder</string>
+               </property>
+               <property name="text">
+                <string>regexp</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resfile.qrc">
+                 <normaloff>:/new/icons/icons/regexp.png</normaloff>:/new/icons/icons/regexp.png</iconset>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="cbFindCase">
+               <property name="toolTip">
+                <string>case sensitivity</string>
+               </property>
+               <property name="text">
+                <string notr="true"/>
+               </property>
+               <property name="shortcut">
+                <string/>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="cmbFindFile">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="editable">
+                <bool>true</bool>
+               </property>
+               <property name="insertPolicy">
+                <enum>QComboBox::InsertAtTop</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btSearch">
+               <property name="text">
+                <string>find</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resfile.qrc">
+                 <normaloff>:/new/icons/icons/loupe.png</normaloff>:/new/icons/icons/loupe.png</iconset>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="btHide">
+               <property name="toolTip">
+                <string>hide</string>
+               </property>
+               <property name="text">
+                <string>hide</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resfile.qrc">
+                 <normaloff>:/new/icons/icons/stop.png</normaloff>:/new/icons/icons/stop.png</iconset>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTreeWidget" name="treeFiles">
+             <property name="contextMenuPolicy">
+              <enum>Qt::CustomContextMenu</enum>
+             </property>
+             <property name="rootIsDecorated">
+              <bool>false</bool>
+             </property>
+             <property name="itemsExpandable">
+              <bool>false</bool>
+             </property>
+             <property name="sortingEnabled">
+              <bool>true</bool>
+             </property>
+             <property name="expandsOnDoubleClick">
+              <bool>false</bool>
+             </property>
+             <attribute name="headerCascadingSectionResizes">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="headerDefaultSectionSize">
+              <number>200</number>
+             </attribute>
+             <attribute name="headerHighlightSections">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="headerMinimumSectionSize">
+              <number>50</number>
+             </attribute>
+             <attribute name="headerShowSortIndicator" stdset="0">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="headerStretchLastSection">
+              <bool>true</bool>
+             </attribute>
+             <column>
+              <property name="text">
+               <string>directory/file</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>path</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="MLibTreeWidget" name="treeHtmlLib">
+          <property name="contextMenuPolicy">
+           <enum>Qt::CustomContextMenu</enum>
+          </property>
+          <property name="showDropIndicator" stdset="0">
+           <bool>false</bool>
+          </property>
+          <property name="dragEnabled">
+           <bool>false</bool>
+          </property>
+          <property name="dragDropMode">
+           <enum>QAbstractItemView::DragDrop</enum>
+          </property>
+          <property name="defaultDropAction">
+           <enum>Qt::CopyAction</enum>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::ExtendedSelection</enum>
+          </property>
+          <column>
+           <property name="text">
+            <string>directory/file</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>size</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>index</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>fullpath</string>
+           </property>
+          </column>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string>TLG/PHI</string>
+      </attribute>
+      <attribute name="toolTip">
+       <string>TLG/PHI database</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QTreeWidget" name="treeTLG">
+         <property name="contextMenuPolicy">
+          <enum>Qt::CustomContextMenu</enum>
+         </property>
+         <attribute name="headerVisible">
+          <bool>false</bool>
+         </attribute>
+         <column>
+          <property name="text">
+           <string/>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>data</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>add</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="0" margin="0"/>
+ <customwidgets>
+  <customwidget>
+   <class>MLibTreeWidget</class>
+   <extends>QTreeWidget</extends>
+   <header>mlibtreewidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resfile.qrc"/>
+ </resources>
+ <connections/>
+</ui>

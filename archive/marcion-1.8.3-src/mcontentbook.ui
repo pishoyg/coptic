@@ -1,0 +1,1493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MContentBook</class>
+ <widget class="QWidget" name="MContentBook">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>274</width>
+    <height>210</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true"/>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resfile.qrc">
+    <normaloff>:/new/icons/icons/lg.png</normaloff>:/new/icons/icons/lg.png</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="opaqueResize">
+      <bool>false</bool>
+     </property>
+     <widget class="QTreeWidget" name="treeContent">
+      <property name="contextMenuPolicy">
+       <enum>Qt::CustomContextMenu</enum>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="showDropIndicator" stdset="0">
+       <bool>false</bool>
+      </property>
+      <property name="rootIsDecorated">
+       <bool>true</bool>
+      </property>
+      <property name="itemsExpandable">
+       <bool>true</bool>
+      </property>
+      <property name="expandsOnDoubleClick">
+       <bool>false</bool>
+      </property>
+      <column>
+       <property name="text">
+        <string>content</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string notr="true">ref</string>
+       </property>
+      </column>
+      <item>
+       <property name="text">
+        <string notr="true">Introduction—The Latin language</string>
+       </property>
+       <property name="text">
+        <string notr="true">#intro</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string notr="true">PART I. (sounds, accent, quantity, etc.)</string>
+       </property>
+       <property name="text">
+        <string notr="true"/>
+       </property>
+       <item>
+        <property name="text">
+         <string notr="true">The Alphabet</string>
+        </property>
+        <property name="text">
+         <string notr="true">#sect1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Classification of Sounds</string>
+        </property>
+        <property name="text">
+         <string notr="true">#sect2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Sounds of the Letters</string>
+        </property>
+        <property name="text">
+         <string notr="true">#sect3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Syllables</string>
+        </property>
+        <property name="text">
+         <string notr="true">#sect4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Quantity</string>
+        </property>
+        <property name="text">
+         <string notr="true">#sect5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Accent</string>
+        </property>
+        <property name="text">
+         <string notr="true">#sect6</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Vowel Changes</string>
+        </property>
+        <property name="text">
+         <string notr="true">#sect7</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Consonant Changes</string>
+        </property>
+        <property name="text">
+         <string notr="true">#sect8</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Peculiarities of Orthography</string>
+        </property>
+        <property name="text">
+         <string notr="true">#sect9</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string notr="true">PART II. (inflections)</string>
+       </property>
+       <property name="text">
+        <string notr="true"/>
+       </property>
+       <item>
+        <property name="text">
+         <string notr="true">CHAPTER I.—Declension</string>
+        </property>
+        <property name="text">
+         <string notr="true"/>
+        </property>
+        <item>
+         <property name="text">
+          <string notr="true">A. NOUNS</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect10</string>
+         </property>
+         <item>
+          <property name="text">
+           <string notr="true">Gender of Nouns</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect13</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">Number</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect16</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">Cases</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect17</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">The Five Declensions</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect18</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">First Declension</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect20</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">Second Declension</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect23</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">Third Declension</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect28</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">Fourth Declension</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect48</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">Fifth Declension</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect51</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">Defective Nouns</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect54</string>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">B. ADJECTIVES</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect62</string>
+         </property>
+         <item>
+          <property name="text">
+           <string notr="true">Adjectives of the First and Second Declensions</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect63</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">Adjectives of the Third Declension</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect67</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">Comparison of Adjectives</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect71</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">Formation and Comparison of Adverbs</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect76</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">Numerals</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect78</string>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">C. PRONOUNS</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect82</string>
+         </property>
+         <item>
+          <property name="text">
+           <string notr="true">Personal Pronouns</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect84</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">Reflexive Pronouns</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect85</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">Possessive Pronouns</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect86</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">Demonstrative Pronouns</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect87</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">The Intensive Pronoun</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect88</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">The Relative Pronoun</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect89</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">Interrogative Pronouns</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect90</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">Indefinite Pronouns</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect91</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">Pronominal Adjectives</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect92</string>
+          </property>
+         </item>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">CHAPTER II.—Conjugation</string>
+        </property>
+        <property name="text">
+         <string notr="true">#sect93</string>
+        </property>
+        <item>
+         <property name="text">
+          <string notr="true">Verb Stems</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect97</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">The Four Conjugations</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect98</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Conjugation of 'Sum'</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect100</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">First Conjugation</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect101</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Second Conjugation</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect103</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Third Conjugation</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect105</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Fourth Conjugation</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect107</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Verbs in -iō of the Third Conjugation</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect109</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Deponent Verbs</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect112</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Semi-Deponents</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect114</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Periphrastic Conjugation</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect115</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Peculiarities of Conjugation</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect116</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Formation of the Verb Stems</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect117</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">List of the Most Important Verbs with Principal Parts</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect120</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Irregular Verbs</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect124</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Defective Verbs</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect133</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Impersonal Verbs</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect138</string>
+         </property>
+        </item>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string notr="true">PART III. (particles)</string>
+       </property>
+       <property name="text">
+        <string notr="true"/>
+       </property>
+       <item>
+        <property name="text">
+         <string notr="true">Adverbs</string>
+        </property>
+        <property name="text">
+         <string notr="true">#sect140</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Prepositions</string>
+        </property>
+        <property name="text">
+         <string notr="true">#sect141</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Interjections</string>
+        </property>
+        <property name="text">
+         <string notr="true">#sect145</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string notr="true">PART IV. (word formation)</string>
+       </property>
+       <property name="text">
+        <string notr="true"/>
+       </property>
+       <item>
+        <property name="text">
+         <string notr="true">I. DERIVATIVES</string>
+        </property>
+        <property name="text">
+         <string notr="true">#sect146</string>
+        </property>
+        <item>
+         <property name="text">
+          <string notr="true">Nouns</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect147</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Adjectives</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect150</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Verbs</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect155</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Adverbs</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect157</string>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">II. COMPOUNDS</string>
+        </property>
+        <property name="text">
+         <string notr="true">#sect158</string>
+        </property>
+        <item>
+         <property name="text">
+          <string notr="true">Examples of Compounds</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect159</string>
+         </property>
+        </item>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string notr="true">PART V. (syntax)</string>
+       </property>
+       <property name="text">
+        <string notr="true"/>
+       </property>
+       <item>
+        <property name="text">
+         <string notr="true">CHAPTER I.—Sentences</string>
+        </property>
+        <property name="text">
+         <string notr="true"/>
+        </property>
+        <item>
+         <property name="text">
+          <string notr="true">Classification of Sentences</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect161</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Form of Interrogative Sentences</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect162</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Subject and Predicate</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect163</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Simple and Compound Sentences</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect164</string>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">CHAPTER II.—Syntax of Nouns</string>
+        </property>
+        <property name="text">
+         <string notr="true"/>
+        </property>
+        <item>
+         <property name="text">
+          <string notr="true">Subject</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect166</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Predicate Nouns</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect167</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Appositives</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect169</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">The Nominative</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect170</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">The Accusative</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect172</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">The Dative</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect186</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">The Genitive</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect194</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">The Ablative</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect213</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">The Locative</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect232</string>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">CHAPTER III.—Syntax of Adjectives</string>
+        </property>
+        <property name="text">
+         <string notr="true"/>
+        </property>
+        <item>
+         <property name="text">
+          <string notr="true">Agreement of Adjectives</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect234</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Adjectives used Substantively</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect236</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Adjectives with the Force of Adverbs</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect239</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Comparatives and Superlatives</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect240</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Other Peculiarities</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect241</string>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">CHAPTER IV.—Syntax of Pronouns</string>
+        </property>
+        <property name="text">
+         <string notr="true"/>
+        </property>
+        <item>
+         <property name="text">
+          <string notr="true">Personal Pronouns</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect242</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Possessive Pronouns</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect243</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Reflexive Pronouns</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect244</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Reciprocal Pronouns</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect245</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Demonstrative Pronouns</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect246</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Relative Pronouns</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect250</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Indefinite Pronouns</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect252</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Pronominal Adjectives</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect253</string>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">CHAPTER V.—Syntax of Verbs</string>
+        </property>
+        <property name="text">
+         <string notr="true"/>
+        </property>
+        <item>
+         <property name="text">
+          <string notr="true">Agreement of Verbs</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect254</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Voices</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect256</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Tenses</string>
+         </property>
+         <property name="text">
+          <string notr="true"/>
+         </property>
+         <item>
+          <property name="text">
+           <string notr="true">Of the Indicative</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect257</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">Of the Subjunctive</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect266</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">Of the Infinitive</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect270</string>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Moods</string>
+         </property>
+         <property name="text">
+          <string notr="true"/>
+         </property>
+         <item>
+          <property name="text">
+           <string notr="true">In Independent Sentences</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect271</string>
+          </property>
+          <item>
+           <property name="text">
+            <string notr="true">Volitive Subjunctive</string>
+           </property>
+           <property name="text">
+            <string notr="true">#sect273</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">Optative Subjunctive</string>
+           </property>
+           <property name="text">
+            <string notr="true">#sect279</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">Potential Subjunctive</string>
+           </property>
+           <property name="text">
+            <string notr="true">#sect280</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">Imperative</string>
+           </property>
+           <property name="text">
+            <string notr="true">#sect281</string>
+           </property>
+          </item>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">In Dependent Clauses</string>
+          </property>
+          <property name="text">
+           <string notr="true"/>
+          </property>
+          <item>
+           <property name="text">
+            <string notr="true">Clauses of Purpose</string>
+           </property>
+           <property name="text">
+            <string notr="true">#sect282</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">Clauses of Characteristic</string>
+           </property>
+           <property name="text">
+            <string notr="true">#sect283</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">Clauses of Result</string>
+           </property>
+           <property name="text">
+            <string notr="true">#sect284</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">Causal Clauses</string>
+           </property>
+           <property name="text">
+            <string notr="true">#sect285</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">Temporal Clauses</string>
+           </property>
+           <property name="text">
+            <string notr="true"/>
+           </property>
+           <item>
+            <property name="text">
+             <string notr="true">Introduced by 'Postquam', 'Ut', 'Ubi', etc.</string>
+            </property>
+            <property name="text">
+             <string notr="true">#sect287</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">'Cum'-Clauses</string>
+            </property>
+            <property name="text">
+             <string notr="true">#sect288</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">Introduced by 'Antequam' and 'Priusquam'</string>
+            </property>
+            <property name="text">
+             <string notr="true">#sect291</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">Introduced by 'Dum', 'Dōnec', 'Quoad'</string>
+            </property>
+            <property name="text">
+             <string notr="true">#sect293</string>
+            </property>
+           </item>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">Substantive Clauses</string>
+           </property>
+           <property name="text">
+            <string notr="true">#sect294</string>
+           </property>
+           <item>
+            <property name="text">
+             <string notr="true">Developed from the Volitive</string>
+            </property>
+            <property name="text">
+             <string notr="true">#sect295</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">Developed from the Optative</string>
+            </property>
+            <property name="text">
+             <string notr="true">#sect296</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">Of Result</string>
+            </property>
+            <property name="text">
+             <string notr="true">#sect297</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">After 'nōn dubito', etc.</string>
+            </property>
+            <property name="text">
+             <string notr="true">#sect298</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">Introduced by 'Quod'</string>
+            </property>
+            <property name="text">
+             <string notr="true">#sect299</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">Indirect Questions</string>
+            </property>
+            <property name="text">
+             <string notr="true">#sect300</string>
+            </property>
+           </item>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">Conditional Sentences</string>
+           </property>
+           <property name="text">
+            <string notr="true">#sect301</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">Use of 'Sī', 'Nisi', 'Sīn'</string>
+           </property>
+           <property name="text">
+            <string notr="true">#sect306</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">Conditional Clauses of Comparison</string>
+           </property>
+           <property name="text">
+            <string notr="true">#sect307</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">Concessive Clauses</string>
+           </property>
+           <property name="text">
+            <string notr="true">#sect308</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">Adversative Clauses with 'Quamvīs', 'Quamquam', etc.</string>
+           </property>
+           <property name="text">
+            <string notr="true">#sect309</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">Clauses of Wish and Proviso</string>
+           </property>
+           <property name="text">
+            <string notr="true">#sect310</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">Relative Clauses</string>
+           </property>
+           <property name="text">
+            <string notr="true">#sect311</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">Indirect Discourse</string>
+           </property>
+           <property name="text">
+            <string notr="true">#sect313</string>
+           </property>
+           <item>
+            <property name="text">
+             <string notr="true">Moods in Indirect Discourse</string>
+            </property>
+            <property name="text">
+             <string notr="true">#sect314</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">Tenses in Indirect Discourse</string>
+            </property>
+            <property name="text">
+             <string notr="true">#sect317</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">Conditional Sentences in Indirect Discourse</string>
+            </property>
+            <property name="text">
+             <string notr="true">#sect319</string>
+            </property>
+           </item>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">Implied Indirect Discourse</string>
+           </property>
+           <property name="text">
+            <string notr="true">#sect323</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">Subjunctive by Attraction</string>
+           </property>
+           <property name="text">
+            <string notr="true">#sect324</string>
+           </property>
+          </item>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Noun and Adjective Forms of the Verb</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect325</string>
+         </property>
+         <item>
+          <property name="text">
+           <string notr="true">Infinitive</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect326</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">Participles</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect336</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">Gerund</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect338</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">Supine</string>
+          </property>
+          <property name="text">
+           <string notr="true">#sect340</string>
+          </property>
+         </item>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">CHAPTER VI.—Particles</string>
+        </property>
+        <property name="text">
+         <string notr="true"/>
+        </property>
+        <item>
+         <property name="text">
+          <string notr="true">Coördinate Conjunctions</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect341</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Adverbs</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect347</string>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">CHAPTER VII.—Word-Order and Sentence-Structure</string>
+        </property>
+        <property name="text">
+         <string notr="true"/>
+        </property>
+        <item>
+         <property name="text">
+          <string notr="true">Word-Order</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect348</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Sentence-Structure</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect351</string>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">CHAPTER VIII.—Hints on Latin Style</string>
+        </property>
+        <property name="text">
+         <string notr="true">#sect352</string>
+        </property>
+        <item>
+         <property name="text">
+          <string notr="true">Nouns</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect353</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Adjectives</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect354</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Pronouns</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect355</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Verbs</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect356</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">The Cases</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect357</string>
+         </property>
+        </item>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string notr="true">PART VI.</string>
+       </property>
+       <property name="text">
+        <string notr="true"/>
+       </property>
+       <item>
+        <property name="text">
+         <string notr="true">PROSODY</string>
+        </property>
+        <property name="text">
+         <string notr="true">#sect360</string>
+        </property>
+        <item>
+         <property name="text">
+          <string notr="true">Quantity of Vowels and Syllables</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect362</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Verse-Structure</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect366</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">The Dactylic Hexameter</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect368</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">The Dactylic Pentameter</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect369</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">Iambic Measures</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect370</string>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">SUPPLEMENTS TO THE GRAMMAR</string>
+        </property>
+        <property name="text">
+         <string notr="true"/>
+        </property>
+        <item>
+         <property name="text">
+          <string notr="true">I. Roman Calendar</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect371</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">II. Roman Names</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect373</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">III. Figures of Syntax and Rhetoric</string>
+         </property>
+         <property name="text">
+          <string notr="true">#sect374</string>
+         </property>
+        </item>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string notr="true">-------------------</string>
+       </property>
+       <property name="text">
+        <string notr="true"/>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string notr="true">Index to the Illustrative Examples Cited in the Syntax</string>
+       </property>
+       <property name="text">
+        <string notr="true">#ind1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string notr="true">Index to the Principal Parts of Latin Verbs</string>
+       </property>
+       <property name="text">
+        <string notr="true">#ind3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string notr="true">General Index</string>
+       </property>
+       <property name="text">
+        <string notr="true">#ind4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string notr="true">Footnotes</string>
+       </property>
+       <property name="text">
+        <string notr="true">#footnotes</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="CHtmlReader" name="book" native="true"/>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="0" margin="0"/>
+ <customwidgets>
+  <customwidget>
+   <class>CHtmlReader</class>
+   <extends>QWidget</extends>
+   <header>htmlreader.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resfile.qrc"/>
+ </resources>
+ <connections/>
+</ui>

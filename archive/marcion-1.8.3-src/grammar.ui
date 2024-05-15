@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frmGrammar</class>
+ <widget class="QWidget" name="frmGrammar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>818</width>
+    <height>660</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true"/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QComboBox" name="cmbContent">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="sizeAdjustPolicy">
+        <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+       </property>
+       <item>
+        <property name="text">
+         <string notr="true">Note</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Introduction</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Chapter I. The Alphabet</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Chapter II. Syllables and Words</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Chapter III. Morphology</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Chapter IV. The Article</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Chapter V. The Numerals</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Chapter VI. The Verb</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Chapter VII. Verb Classes 1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Chapter VIII. Verb Classes 2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Chapter IX. Conjugation; Durative Tenses</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Chapter X. Limitative Tenses</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Chapter XI. Other Verb Forms</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Chapter XII. Particles</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Chapter XIII. The Adverb</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Chapter XIV. Syntax</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Chapter XV. Forms of Speech</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Chapter XVI. Adverbial Clauses</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Index of Coptic Terms:     Alfa - Lauda</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Index of Coptic Terms:     me - ne</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Index of Coptic Terms:      xi - gima</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">Common Irregular Verb Parts</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">General English Index</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="btGo">
+       <property name="toolTip">
+        <string>go to</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resfile.qrc">
+         <normaloff>:/new/icons/icons/go.png</normaloff>:/new/icons/icons/go.png</iconset>
+       </property>
+       <property name="shortcut">
+        <string>Ctrl+G</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="btBack">
+       <property name="toolTip">
+        <string>go backward</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resfile.qrc">
+         <normaloff>:/new/icons/icons/leftarrow.png</normaloff>:/new/icons/icons/leftarrow.png</iconset>
+       </property>
+       <property name="shortcut">
+        <string>Ctrl+P</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="btNext">
+       <property name="toolTip">
+        <string>go forward</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resfile.qrc">
+         <normaloff>:/new/icons/icons/rightarrow.png</normaloff>:/new/icons/icons/rightarrow.png</iconset>
+       </property>
+       <property name="shortcut">
+        <string>Ctrl+N</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDoubleSpinBox" name="spnZoom">
+       <property name="decimals">
+        <number>1</number>
+       </property>
+       <property name="singleStep">
+        <double>0.100000000000000</double>
+       </property>
+       <property name="value">
+        <double>1.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QWebView" name="wwGrammar">
+     <property name="url">
+      <url>
+       <string>about:blank</string>
+      </url>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="0" margin="0"/>
+ <customwidgets>
+  <customwidget>
+   <class>QWebView</class>
+   <extends>QWidget</extends>
+   <header>QtWebKit/QWebView</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resfile.qrc"/>
+ </resources>
+ <connections/>
+</ui>

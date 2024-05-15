@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MHistory</class>
+ <widget class="QWidget" name="MHistory">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>260</width>
+    <height>48</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">history</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QToolButton" name="btFirst">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="toolTip">
+      <string>first</string>
+     </property>
+     <property name="text">
+      <string>first</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resfile.qrc">
+       <normaloff>:/new/icons/icons/leftarrowto.png</normaloff>:/new/icons/icons/leftarrowto.png</iconset>
+     </property>
+     <property name="shortcut">
+      <string>Ctrl+Home</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="btPrev">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="toolTip">
+      <string>previous</string>
+     </property>
+     <property name="text">
+      <string>previous</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resfile.qrc">
+       <normaloff>:/new/icons/icons/leftarrow.png</normaloff>:/new/icons/icons/leftarrow.png</iconset>
+     </property>
+     <property name="shortcut">
+      <string>Ctrl+PgUp</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="btNext">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="toolTip">
+      <string>next</string>
+     </property>
+     <property name="text">
+      <string>next</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resfile.qrc">
+       <normaloff>:/new/icons/icons/rightarrow.png</normaloff>:/new/icons/icons/rightarrow.png</iconset>
+     </property>
+     <property name="shortcut">
+      <string>Ctrl+PgDown</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="btLast">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="toolTip">
+      <string>last</string>
+     </property>
+     <property name="text">
+      <string>last</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resfile.qrc">
+       <normaloff>:/new/icons/icons/rightarrowto.png</normaloff>:/new/icons/icons/rightarrowto.png</iconset>
+     </property>
+     <property name="shortcut">
+      <string>Ctrl+End</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="btRefresh">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="toolTip">
+      <string>refresh</string>
+     </property>
+     <property name="text">
+      <string>refresh</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resfile.qrc">
+       <normaloff>:/new/icons/icons/refresh.png</normaloff>:/new/icons/icons/refresh.png</iconset>
+     </property>
+     <property name="shortcut">
+      <string>Ctrl+R</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="lblPos">
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string notr="true">0 / 0</string>
+     </property>
+     <property name="textInteractionFlags">
+      <set>Qt::NoTextInteraction</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="0" margin="0"/>
+ <resources>
+  <include location="resfile.qrc"/>
+ </resources>
+ <connections/>
+</ui>

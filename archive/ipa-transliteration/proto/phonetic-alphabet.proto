@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+message PhoneticAlphabet {
+  string alpha=1;
+  string bita=2;
+  string gamma=3;
+  string delta=4;
+  string shortEi=5;
+  string longEi=6;
+  string zita=7;
+  string eita=8;
+  string thita=9;
+  string iota=10;
+  string kabba=11;
+  string laula=12;
+  string mi=13;
+  string ni=14;
+  string omicron=15;
+  string omicronUa=16;
+  string pi=17;
+  string ro=18;
+  string sima=19;
+  string tau=20;
+  string ua=21;
+  string phi=22;
+  string khi=23;
+  string omega=24;
+  string shai=25;
+  string fai=26;
+  string khai=27;
+  string hori=28;
+  string janja=29;
+  string chima=30;
+}
