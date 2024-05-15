@@ -185,11 +185,6 @@ easier to retrieve.**
 
 ### Script Features
 
-1. **Implement either-or fields.**
-
-1. **Use the either-or feature to put something in the front when the existing
-   front (usually Bohairic) is missing.**
-
 1. **Order the Bible books and chapters.**
 
 1. Implement a `SEQ` field type.
@@ -202,6 +197,9 @@ easier to retrieve.**
    modify it later.
 
 ### Data
+
+1. **Rename Dictionary to Bohairic, and add a Sahidic version and a complete
+   version.**
 
 1. **Add word derivations to a TSV, and then to the flashcards.**
 

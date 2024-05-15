@@ -362,6 +362,8 @@ def new_field(spec, work_dir):
         return img(spec, work_dir)
     if field_type == "FIL":
         return fil(spec, work_dir)
+    if field_type == "XOR":
+        return xor(spec, work_dir)
     raise ValueError("Unknown filed type: {}".format(field_type))
 
 
@@ -407,6 +409,29 @@ class field:
     def _read_tsv_column(self, file_path, column_name):
         df = pd.read_csv(file_path, sep="\t", encoding="utf-8").fillna("")
         return df[column_name]
+
+
+class xor(field):
+    def __init__(self, spec, work_dir):
+        components = "::".join(spec).split("::::")
+        components = [new_field(c, work_dir) for c in components]
+
+        length = components[0].length()
+        assert all(c.length() == length for c in components)
+        assert length != -1
+
+        content = []
+        for _ in range(length):
+            next = [c.next() for c in components]
+            next = list(filter(None, next))
+            content.append(next[0])
+
+        media_files = set()
+        for c in components:
+            media_files.update(c.media_files())
+        media_files = list(media_files)
+
+        super().__init__(content, media_files)
 
 
 class txt(field):
