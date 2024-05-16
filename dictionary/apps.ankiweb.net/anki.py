@@ -438,7 +438,7 @@ class txt(field):
     def __init__(self, spec, _):
         assert len(spec) == 1, spec
         self._content = self._use_html_line_breaks(spec[0])
-        self._media_files = []
+        super().__init__(None, [])
 
     def next(self):
         return self._content
@@ -448,6 +448,23 @@ class txt(field):
 
     def str(self):
         return self._content
+
+
+class seq(field):
+    def __init__(self, spec, _):
+        self._cur = 0
+        if spec:
+            assert len(spec) == 1, spec
+            self._cur = int(spec)
+        super().__init__(None, [])
+
+    def next(self):
+        ans = self._cur
+        self._cur += 1
+        return ans
+
+    def length(self):
+        return -1
 
 
 class tsv(field):

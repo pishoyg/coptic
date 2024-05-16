@@ -187,8 +187,6 @@ easier to retrieve.**
 
 1. **Order the Bible books and chapters.**
 
-1. Implement a `SEQ` field type.
-
 1. Use the either-or feature and the `SEQ` field type to generate keys for
    Bible verses without references.
 
@@ -203,7 +201,7 @@ easier to retrieve.**
 
 1. **Add word derivations to a TSV, and then to the flashcards.**
 
-1. **Incorporate copticsite.com's dictionary into a package.** The data is
+1. **Incorporate copticsite.com's dictionary into a deck.** The data is
    poor-quality and unkeyed, but easier to incorporate.
 
 1. **Incorporate Scriptorium's data. Gain familiarity with their platform.
@@ -245,11 +243,11 @@ into Git.
 
 1. Add hooks (pre-commits?) to exercise more control on the code.
 
-1. Learn more Vim!
-
 1. Add doc comments, type hints, assertions, and stripping.
 
 1. Collect and print stats.
+
+1. Learn more Vim!
 
 ## Synchronization
 
@@ -287,21 +285,21 @@ into Git.
    This is somewhat straightforward for Marcion's words. Use of Marcion's IDs
    for synchronization should suffice.
 
-   For other, data creators without programming expertise, a sequence number
-   works as long as nobody inserts a new row in the middle of the CSV, which
-   would mess up the keys. Discuss keying with those creators.
-
    For the Bible, we could use the verse reference as a note ID, and ensure
    that the book names, chapter numbers, and verse numbers don't change in a
    following version.
 
+   For other data creators without programming expertise, a sequence number
+   works as long as nobody inserts a new row in the middle of the CSV, which
+   would mess up the keys. **Discuss keying with those creators.**
+
    1. Deck ID
 
-   We use a hash of the deck name. The deck name becomes a protected field.
+   We use a hash of the deck name. **The deck name becomes a protected field.**
 
    1. Model ID
 
-   We use a hash of the model id. The model name becomes a protected field.
+   We use a hash of the model id. **The model name becomes a protected field.**
 
 # `marcion.sourceforge.net/`
 
