@@ -26,7 +26,7 @@
   - [Synchronization](#synchronization)
   - [Keys and Synchronization](#keys-and-synchronization)
 - [`marcion.sourceforge.net/`](#marcionsourceforgenet)
-- [`kellia.uni-goettingen.de/`](#kelliauni-goettingende)
+- [`coptic-dictionary.org/`](#coptic-dictionaryorg)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -306,7 +306,7 @@ into Git.
 This project processes an electronic version of Crum's Dictionary,
 manually copied by Milan Konvicka.
 
-# `kellia.uni-goettingen.de/`
+# `coptic-dictionary.org/`
 
 Scriptorium doesn't need an intro. This ambitious project has created
 many successful tools, while maintaining strong academic rigor and
