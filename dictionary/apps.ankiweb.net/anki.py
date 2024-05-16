@@ -541,7 +541,11 @@ class img(field):
                     cur_width, _ = image.size
                     if cur_width > width:
                         image.thumbnail((width, MAX_THUMBNAIL_HEIGHT))
-                    image.save(new_location)
+                    try:
+                        image.save(new_location)
+                    except:
+                        print(path)
+                        exit()
                 else:
                     shutil.copyfile(path, new_location)
             content.append(cur)

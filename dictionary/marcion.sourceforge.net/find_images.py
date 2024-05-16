@@ -6,7 +6,6 @@ import re
 import subprocess
 
 import pandas as pd
-import urllib3
 
 DIGITS_RE = re.compile(r"\d+")
 
@@ -197,7 +196,7 @@ def invalid_extention(files):
 
 def main():
     df = pd.read_csv(args.input_tsv, sep="\t", encoding="utf-8").fillna("")
-    df.sort_values(by=[args.input_key_col])
+    df.sort_values(by=args.input_key_col, inplace=True)
 
     for _, row in df.iterrows():
         key = row[args.input_key_col]
