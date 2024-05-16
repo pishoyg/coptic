@@ -245,6 +245,9 @@ into Git.
 
 1. Add doc comments, type hints, assertions, and stripping.
 
+1. Force type hints. Use
+   [type_enforced](https://github.com/connor-makowski/type_enforced).
+
 1. Collect and print stats.
 
 1. Learn more Vim!

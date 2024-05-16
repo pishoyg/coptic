@@ -9,6 +9,7 @@ import tempfile
 import genanki
 import numexpr
 import pandas as pd
+import type_enforced
 from PIL import Image
 
 # Pillow might be tricky for our requirements generators. You might have to add
@@ -20,11 +21,13 @@ MAX_INTEGER_LENGTH = 10
 MAX_ID = 1 << 31
 
 
+@type_enforced.Enforcer
 def hash(text: str) -> int:
     return int(hashlib.sha1(text.encode("utf-8")).hexdigest(), 17) % MAX_ID
 
 
-def path_sort_key(path):
+@type_enforced.Enforcer
+def path_sort_key(path: str) -> list[str]:
     path = os.path.basename(path)
     return [x.zfill(MAX_INTEGER_LENGTH) for x in INTEGER_RE.findall(path)] + [path]
 
@@ -350,7 +353,59 @@ argparser.add_argument(
 args = argparser.parse_args()
 
 
-def new_field(spec, work_dir):
+class field:
+
+    @type_enforced.Enforcer
+    def __init__(self, content: None | list[str], media_files: list[str]):
+        self._content = content
+        self._counter = 0
+        self._media_files = media_files
+
+    @type_enforced.Enforcer
+    def media_files(self) -> list[str]:
+        return self._media_files
+
+    @type_enforced.Enforcer
+    def next(self) -> str:
+        ans = self._content[self._counter]
+        self._counter += 1
+        return ans
+
+    @type_enforced.Enforcer
+    def length(self) -> int:
+        return len(self._content)
+
+    @type_enforced.Enforcer
+    def _use_html_line_breaks(self, text: str) -> str:
+        text = str(text)
+        return text.replace("\n", "<br>")
+
+    @type_enforced.Enforcer
+    def _substitute_key_and_numexpr(self, file_name_fmt: str, key: str) -> str:
+        file_name_fmt = file_name_fmt.format(key=key)
+        match = NUMEXPR_RE.match(file_name_fmt)
+        if not match:
+            return file_name_fmt
+        expr = numexpr.evaluate(match.group(1)).item()
+        return NUMEXPR_RE.sub(str(expr), file_name_fmt)
+
+    @type_enforced.Enforcer
+    def _glob(self, dir_path: str, file_name_fmt: str, cs_keys: str) -> list[str]:
+        paths = set()
+        for key in cs_keys.split(","):
+            pattern = self._substitute_key_and_numexpr(file_name_fmt, key)
+            pattern = os.path.join(dir_path, pattern)
+            paths.update(glob.glob(pattern))
+        return list(sorted(paths, key=path_sort_key))
+
+    @type_enforced.Enforcer
+    def _read_tsv_column(self, file_path: str, column_name: str) -> list[str]:
+        df = pd.read_csv(file_path, sep="\t", encoding="utf-8").fillna("")
+        return list(map(str, df[column_name]))
+
+
+@type_enforced.Enforcer
+def new_field(spec: str, work_dir: str):
     field_type = spec[:3]
     assert spec[3:5] == "::", spec
     spec = spec[5:].split("::")
@@ -367,52 +422,9 @@ def new_field(spec, work_dir):
     raise ValueError("Unknown filed type: {}".format(field_type))
 
 
-class field:
-
-    def __init__(self, content, media_files):
-        self._content = content
-        self._counter = 0
-        self._media_files = media_files
-
-    def media_files(self):
-        return self._media_files
-
-    def next(self):
-        ans = self._content[self._counter]
-        self._counter += 1
-        return ans
-
-    def length(self):
-        return len(self._content)
-
-    def _use_html_line_breaks(self, text):
-        text = str(text)
-        return text.replace("\n", "<br>")
-
-    def _substitute_key_and_numexpr(self, file_name_fmt, key):
-        file_name_fmt = file_name_fmt.format(key=key)
-        match = NUMEXPR_RE.match(file_name_fmt)
-        if not match:
-            return file_name_fmt
-        expr = numexpr.evaluate(match.group(1)).item()
-        return NUMEXPR_RE.sub(str(expr), file_name_fmt)
-
-    def _glob(self, dir_path, file_name_fmt, cs_keys):
-        cs_keys = str(cs_keys)
-        paths = set()
-        for key in cs_keys.split(","):
-            pattern = self._substitute_key_and_numexpr(file_name_fmt, key)
-            pattern = os.path.join(dir_path, pattern)
-            paths.update(glob.glob(pattern))
-        return list(sorted(paths, key=path_sort_key))
-
-    def _read_tsv_column(self, file_path, column_name):
-        df = pd.read_csv(file_path, sep="\t", encoding="utf-8").fillna("")
-        return df[column_name]
-
-
 class xor(field):
-    def __init__(self, spec, work_dir):
+    @type_enforced.Enforcer
+    def __init__(self, spec: list[str], work_dir: str):
         components = "::".join(spec).split("::::")
         components = [new_field(c, work_dir) for c in components]
 
@@ -435,40 +447,48 @@ class xor(field):
 
 
 class txt(field):
-    def __init__(self, spec, _):
+    @type_enforced.Enforcer
+    def __init__(self, spec: list[str], _):
         assert len(spec) == 1, spec
-        self._content = self._use_html_line_breaks(spec[0])
+        self._text = self._use_html_line_breaks(spec[0])
         super().__init__(None, [])
 
-    def next(self):
-        return self._content
+    @type_enforced.Enforcer
+    def next(self) -> str:
+        return self._text
 
-    def length(self):
+    @type_enforced.Enforcer
+    def length(self) -> int:
         return -1
 
-    def str(self):
-        return self._content
+    @type_enforced.Enforcer
+    def str(self) -> str:
+        return self._text
 
 
 class seq(field):
-    def __init__(self, spec, _):
+    @type_enforced.Enforcer
+    def __init__(self, spec: list[str], _):
         self._cur = 0
         if spec:
             assert len(spec) == 1, spec
             self._cur = int(spec)
         super().__init__(None, [])
 
-    def next(self):
+    @type_enforced.Enforcer
+    def next(self) -> str:
         ans = self._cur
         self._cur += 1
-        return ans
+        return str(ans)
 
-    def length(self):
+    @type_enforced.Enforcer
+    def length(self) -> int:
         return -1
 
 
 class tsv(field):
-    def __init__(self, spec, _):
+    @type_enforced.Enforcer
+    def __init__(self, spec: list[str], _):
         file_path, column_name = spec
         content = self._read_tsv_column(file_path, column_name)
         content = map(str, content)
@@ -478,7 +498,8 @@ class tsv(field):
 
 class img(field):
 
-    def __init__(self, spec, work_dir):
+    @type_enforced.Enforcer
+    def __init__(self, spec: list[str], work_dir: str):
         """
         The "src" field of the <img> HTML tag must bear basenames. Directories
         are not allowed. This implies that all basenames must be unique.
@@ -531,7 +552,8 @@ class img(field):
 
 
 class fil(field):
-    def __init__(self, spec, _):
+    @type_enforced.Enforcer
+    def __init__(self, spec: list[str], _):
         file_path, column_name, dir_path, file_name_fmt = spec
         keys = self._read_tsv_column(file_path, column_name)
 
@@ -548,7 +570,8 @@ class fil(field):
         super().__init__(content, [])
 
 
-def num_entries(fields) -> int:
+@type_enforced.Enforcer
+def num_entries(fields: list) -> int:
     cur = -1
     for f in fields:
         l = f.length()
@@ -560,11 +583,13 @@ def num_entries(fields) -> int:
     return cur
 
 
-def chop_first_parameter(text):
+@type_enforced.Enforcer
+def chop_first_parameter(text: str):
     idx = text.find("::")
     return text[:idx], text[idx + 2 :]
 
 
+@type_enforced.Enforcer
 def group_by_index(
     side: list[str], allow_no_index: bool = False, use_pairs: bool = False
 ) -> dict | list:
@@ -615,7 +640,10 @@ def group_by_index(
     return d
 
 
-def weave_yarn(fields, work_dir, restrict_filed_types=None):
+@type_enforced.Enforcer
+def weave_yarn(
+    fields: list[str], work_dir: str, restrict_filed_types: list | None = None
+):
     fields = group_by_index(fields, allow_no_index=True, use_pairs=True)
     assert all(len(pair) == 2 for pair in fields)
     # Each entry in `fields` consists of a field group key and a field object.
@@ -654,20 +682,22 @@ def weave_yarn(fields, work_dir, restrict_filed_types=None):
 
 class Note(genanki.Note):
     @property
+    @type_enforced.Enforcer
     def guid(self):
         # Only use the key field to generate a GUID.
         return genanki.guid_for(self.fields[0])
 
 
+@type_enforced.Enforcer
 def build_decks(
-    work_dir,
-    key,
-    front,
-    back,
-    model_name,
-    css,
-    deck_name,
-    deck_description,
+    work_dir: str,
+    key: list[str],
+    front: list[str],
+    back: list[str],
+    model_name: list[str],
+    css: list[str],
+    deck_name: list[str],
+    deck_description: list[str],
 ):
 
     model_name = weave_yarn(model_name, work_dir, [txt]).str()
@@ -732,6 +762,7 @@ def build_decks(
     return decks.values(), media_files
 
 
+@type_enforced.Enforcer
 def main():
 
     work_dir = tempfile.TemporaryDirectory()
