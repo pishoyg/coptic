@@ -1,15 +1,15 @@
 # coptic
 
-**Ⲉ̀ϣⲱⲡ ⲁⲓϣⲁⲛⲉⲣⲡⲉⲱⲃϣ Ⲓⲗ̅ⲏ̅ⲙ̅, ⲉⲓⲉ̀ⲉⲣⲡⲱⲃϣ ⲛ̀ⲧⲁⲟⲩⲓⲛⲁⲙ: Ⲡⲁⲗⲁⲥ ⲉϥⲉ̀ϫⲱⲗϫ ⲉ̀ⲧⲁϣ̀ⲃⲱⲃⲓ ⲉ̀ϣⲱⲡ ⲁⲓϣ̀ⲧⲉⲙⲉⲣⲡⲉⲙⲉⲩⲓ.**
+**Ⲉ̀ϣⲱⲡ ⲁⲓϣⲁⲛⲉⲣⲡⲉⲱⲃϣ Ⲓⲗ̅ⲏ̅ⲙ̅, ⲉⲓⲉ̀ⲉⲣⲡⲱⲃϣ ⲛ̀ⲧⲁⲟⲩⲓⲛⲁⲙ: Ⲡⲁⲗⲁⲥ ⲉϥⲉ̀ϫⲱⲗϫ ⲉ̀ⲧⲁϣ̀ⲃⲱⲃⲓ ⲉ̀ϣⲱⲡ
+ⲁⲓϣ̀ⲧⲉⲙⲉⲣⲡⲉⲙⲉⲩⲓ.**
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**
 
-  - [Directory Structure](#directory-structure)
-  - [Contact](#contact)
-  - [Contributing](#contributing)
-  - [Copyrights](#copyrights)
+- [Directory Structure](#directory-structure)
+- [Contact](#contact)
+- [Contributing](#contributing)
+- [Copyrights](#copyrights)
 - [`apps.ankiweb.net/`](#appsankiwebnet)
   - [TODO (data collection)](#todo-data-collection)
     - [Crum](#crum)
@@ -23,13 +23,11 @@
     - [Collaborator Convenience](#collaborator-convenience)
     - [Learner Convenience](#learner-convenience)
     - [Developer Convenience](#developer-convenience)
-  - [Synchronization](#synchronization)
   - [Keys and Synchronization](#keys-and-synchronization)
 - [`marcion.sourceforge.net/`](#marcionsourceforgenet)
 - [`coptic-dictionary.org/`](#coptic-dictionaryorg)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 
 This repo hosts several projects for the following purpose:
 
@@ -67,7 +65,7 @@ a directory, and subdirectories contain separate, usually unrelated projects.
 
 ## Contact
 
-pishoybg@gmail.com
+<pishoybg@gmail.com>
 
 ## Contributing
 
@@ -81,21 +79,21 @@ Please feel free to:
 
 I don't care! Do whatever you want with the data / code you published here.
 
-# `apps.ankiweb.net/`
+## `apps.ankiweb.net/`
 
 Download [Anki](https://ankiweb.net/).
 
 Download [the Coptic package](https://drive.google.com/file/d/1KV0fH23Zucmlvdc0dwTJiDdqKIvbuYY_/view?usp=sharing),
 and open it / import it in Anki.
 
-## TODO (data collection)
+### TODO (data collection)
 
-### Crum
+#### Crum
 
 1. Record the correct list of Crum page containing a given word. We've
    populated the data with a default value of two pages for each word.
 
-### Moawad Dawoud's Dictionary
+#### Moawad Dawoud's Dictionary
 
 1. **Copy the Greek loanwords from Moawad into a new flashcard deck.**
 
@@ -106,7 +104,7 @@ and open it / import it in Anki.
 
 1. Add a column containing Moawad Dawoud's Arabic translations.
 
-### Research
+#### Research
 
 1. **Collect more explanatory pictures.**
 
@@ -124,7 +122,7 @@ and open it / import it in Anki.
 
 1. Contemplate adding neologisms (somehow)!
 
-## TODO (diplomacy)
+### TODO (diplomacy)
 
 1. Add data from St. Shenouda The Archimandrite Coptic Society's Dictionary.
    (Discuss keying the words with them, to support synchronization with future
@@ -134,7 +132,7 @@ and open it / import it in Anki.
 
 1. Incorporate the ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ Group's neologisms.
 
-## TODO (documentation)
+### TODO (documentation)
 
 1. **Improve the repo documentation.**
 
@@ -148,7 +146,7 @@ and open it / import it in Anki.
 
    At the moment, all the relevant code TODO's are here:
 
-   ```
+   ```bash
    grep TODO dictionary/marcion.sourceforge.net/*.py bible/stshenouda.org/*.py
    ```
 
@@ -181,9 +179,9 @@ easier to retrieve.**
 
 1. **Document the repo properly and invite collaborators.**
 
-## TODO (programming)
+### TODO (programming)
 
-### Script Features
+#### Script Features
 
 1. **Order the Bible books and chapters.**
 
@@ -194,7 +192,7 @@ easier to retrieve.**
    rely on simple string matching against the Bible data, and perhaps manually
    modify it later.
 
-### Data
+#### Data
 
 1. **Rename Dictionary to Bohairic, and add a Sahidic version and a complete
    version.**
@@ -210,7 +208,7 @@ easier to retrieve.**
 1. Contemplate crawling [Wiktionary - Category:Coptic lemmas
 ](https://en.wiktionary.org/wiki/Category:Coptic_lemmas).
 
-### Collaborator Convenience
+#### Collaborator Convenience
 
 1. **Support more seamless integration between Drive and your scripts.**
 
@@ -226,7 +224,7 @@ But what we can do is have users share their contributions via Drive, and then
 we will implement a pipeline to integrate the contributions made through Drive
 into Git.
 
-### Learner Convenience
+#### Learner Convenience
 
 1. Revisit the possibility of image compression to minimize the package size.
 
@@ -237,11 +235,18 @@ into Git.
 
 1. Consider padding the images.
 
-### Developer Convenience
+1. Synchronization seems to be working fine. However, running the generation
+   script twice produces a different file, and reimporting (supposedly
+   identical data) produces the message "notes were used to update existing
+   ones. Investigate.
+
+#### Developer Convenience
 
 1. Add unit tests.
 
-1. Add hooks (pre-commits?) to exercise more control on the code.
+1. Add hooks (pre-commits?), Makefile, or something similar, to exercise more
+   control on the code. You could run unit tests, `doctoc README.md`, and also
+   force the data to follow a certain structure.
 
 1. Add doc comments, type hints, assertions, and stripping.
 
@@ -252,14 +257,7 @@ into Git.
 
 1. Learn more Vim!
 
-## Synchronization
-
-1. Synchronization seems to be working fine. However, running the generation
-   script twice produces a different file, and reimporting (supposedly
-   identical data) produces the message "notes were used to update existing
-   ones. Investigate.
-
-## Keys and Synchronization
+### Keys and Synchronization
 
    When you import a package into your (personal) Anki database, Anki uses the
    IDs to eliminate duplicates.
@@ -304,12 +302,12 @@ into Git.
 
    We use a hash of the model id. **The model name becomes a protected field.**
 
-# `marcion.sourceforge.net/`
+## `marcion.sourceforge.net/`
 
 This project processes an electronic version of Crum's Dictionary,
 manually copied by Milan Konvicka.
 
-# `coptic-dictionary.org/`
+## `coptic-dictionary.org/`
 
 Scriptorium doesn't need an intro. This ambitious project has created
 many successful tools, while maintaining strong academic rigor and
