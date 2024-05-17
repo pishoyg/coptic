@@ -186,9 +186,6 @@ into the repo.
 
 1. **Separate the dictionary pages.**
 
-1. **Restore the hardcoded keys, as much as possible, to make it possible to
-   change the deck names.**
-
 #### New Dictionaries Parsing or Crawling
 
 1. **Incorporate copticsite.com's dictionary into a deck. The data is

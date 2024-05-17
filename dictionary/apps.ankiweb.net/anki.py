@@ -136,7 +136,8 @@ argparser.add_argument(
     " keys to enable synchronization. It is important for the keys to be (1)"
     " unique, and (2) persistent. Use a different key for each note. And do"
     " not change the names liberally between different version of the code"
-    " and the generated package.",
+    " and the generated package."
+    " The note keys must also be unique across decks.",
 )
 
 argparser.add_argument(
@@ -269,6 +270,32 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
+    "--model_name",
+    type=str,
+    nargs="*",
+    default=[
+        # 1. The Dictionary.
+        "1::TXT::Dictionary",
+        # 2. The Bible.
+        "2::TXT::Bible",
+    ],
+    help="Model name in the generated Anki package.",
+)
+
+argparser.add_argument(
+    "--model_id",
+    type=str,
+    nargs="*",
+    default=[
+        # 1. The Dictionary.
+        "1::TXT::1284010383",
+        # 2. The Bible.
+        "2::TXT::1284010384",
+    ],
+    help="Deck ID in the generated Anki package.",
+)
+
+argparser.add_argument(
     "--css",
     type=str,
     nargs="*",
@@ -282,25 +309,6 @@ argparser.add_argument(
     help="Global CSS. Please notice that the front will be given the id"
     ' "front" and the back will have the id "back". You can use these IDs if'
     " you want to make your CSS format side-specific."
-    " Only TXT fields are allowed for this flag.",
-)
-
-argparser.add_argument(
-    "--model_name",
-    type=str,
-    nargs="*",
-    default=[
-        # 1. The Dictionary.
-        "1::TXT::Dictionary",
-        # 2. The Bible.
-        "2::TXT::Bible",
-    ],
-    help="Model name in the generated Anki package. N.B. A hash of this field"
-    " will be used to key the models. Thus, it is important to ensure that the"
-    " model names are (1) unique, and (2) persistent. Use a different model"
-    " name for each model that you want to support. And do not change the"
-    " names liberally between different version of the code and the generated"
-    " package."
     " Only TXT fields are allowed for this flag.",
 )
 
@@ -320,12 +328,26 @@ argparser.add_argument(
         "2::1::TXT:::",
         "2::1::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::chapter",
     ],
-    help="Deck name in the generated Anki package. N.B. A hash of this field"
-    " will be used to key the decks. Thus, it is important to ensure that the"
-    " deck names are (1) unique, and (2) persistent. Use a different deck"
-    " name for each deck that you want to support. And do not change the"
-    " names liberally between different version of the code and the generated"
-    " package.",
+    help="Deck name in the generated Anki package."
+    " N.B. If a deck ID is not"
+    " given, a hash of this field will be used to key the decks. Thus, it is"
+    " important to ensure that the deck names are (1) unique, and"
+    " (2) persistent. Use a different deck name for each deck that you want to"
+    " support. And do not change the names liberally between different version"
+    " of the code and the generated package.",
+)
+
+argparser.add_argument(
+    "--deck_id",
+    type=str,
+    nargs="*",
+    default=[
+        # 1. The Dictionary.
+        "1::TXT::1284010383",
+        # 2. The Bible.
+        "2::TXT::",
+    ],
+    help="Deck ID in the generated Anki package.",
 )
 
 argparser.add_argument(
@@ -645,6 +667,7 @@ def group_by_index(
 def weave_yarn(
     fields: list[str], work_dir: str, restrict_filed_types: list | None = None
 ):
+    assert fields
     fields = group_by_index(fields, allow_no_index=True, use_pairs=True)
     assert all(len(pair) == 2 for pair in fields)
     # Each entry in `fields` consists of a field group key and a field object.
@@ -696,17 +719,20 @@ def build_decks(
     front: list[str],
     back: list[str],
     model_name: list[str],
+    model_id: list[str],
     css: list[str],
     deck_name: list[str],
+    deck_id: list[str],
     deck_description: list[str],
 ):
 
     model_name = weave_yarn(model_name, work_dir, [txt]).str()
+    model_id = weave_yarn(model_id, work_dir, [txt]).str()
+    model_id = int(model_id)
     css = weave_yarn(css, work_dir, [txt]).str()
-    deck_description = weave_yarn(deck_description, work_dir, [txt]).str()
 
     model = genanki.Model(
-        model_id=hash(model_name),
+        model_id=model_id,
         name=model_name,
         fields=[
             {"name": "Key"},
@@ -728,6 +754,14 @@ def build_decks(
     back = weave_yarn(back, work_dir)
     deck_name = weave_yarn(deck_name, work_dir)
 
+    deck_description = weave_yarn(deck_description, work_dir, [txt]).str()
+    deck_id = weave_yarn(deck_id, work_dir, [txt]).str()
+    if deck_id:
+        deck_id = int(deck_id)
+    else:
+        # A flexible deck ID can only be used with a flexible deck name.
+        assert not isinstance(deck_name, txt)
+
     decks = {}
 
     for _ in range(num_entries([deck_name, key, front, back])):
@@ -747,7 +781,7 @@ def build_decks(
             pass
         if d not in decks:
             decks[d] = genanki.Deck(
-                deck_id=hash(d),
+                deck_id=deck_id or hash(d),
                 name=d,
                 description=deck_description,
             )
@@ -771,8 +805,10 @@ def main():
         "front": group_by_index(args.front),
         "back": group_by_index(args.back),
         "model_name": group_by_index(args.model_name),
+        "model_id": group_by_index(args.model_id),
         "css": group_by_index(args.css),
         "deck_name": group_by_index(args.deck_name),
+        "deck_id": group_by_index(args.deck_id),
         "deck_description": group_by_index(args.deck_description),
     }
 
