@@ -77,12 +77,11 @@ Also feel free to reach out with questions.
 
 #### Moawad Dawoud's Diciontary
 
-1. **Add a column in `roots.tsv` containing Moawad Dawoud's page numbers, and add
-   scans to the flashcards.**
+1. **Add Moawad Dawoud's page numbers, and add scans to the flashcards.**
 
-1. **Add a column containing Moawad Dawoud's Arabic translations.**
+1. **Add Moawad Dawoud's Arabic translations.**
 
-1. **Add a column containing Moawad Dawoud's standardized spellings.**
+1. **Add Moawad Dawoud's standardized spellings.**
 
 1. Copy the Greek loanwords from Moawad into a new flashcard deck. (This may be
    less urgent if you incorporate Scriptorium's data, which you must do
@@ -119,7 +118,7 @@ Also feel free to reach out with questions.
 
 ### Documentation
 
-1. **Improve the repo documentation.**
+(1-2 days)
 
 1. **Move the TODO's to the correct directories.**
 
@@ -170,35 +169,41 @@ into the repo.
 
 #### The Bible
 
-1. **Order the Bible books and chapters.**
+1. **Order the Bible books and chapters.** (1-2 hours)
 
 #### Crum (Marcion)
 
-1. **Add a Sahidic version and a complete version of the dictionary.**
+1. **Add a Sahidic version and a complete version of the dictionary.** (1-2
+   hours)
 
-1. **Add word derivations to a TSV, and then to the flashcards.**
+1. **Add word derivations to a TSV, and then to the flashcards.** (3-4 hours)
+
+1. **Add the extra columns to `roots.tsv`.** (1 hour)
+
+1. Remove the old fields that still show in the sharing page.
 
 #### New Dictionaries Parsing or Crawling
 
 1. **Incorporate copticsite.com's dictionary into a deck. The data is
    poor-quality and unkeyed, but easier to incorporate, and could perhaps
-   attract Arabic-speaking learners.**
+   attract Arabic-speaking learners.** (1-2 hours)
 
 1. **Incorporate Scriptorium's data. Gain familiarity with their platform.
-   Parse their dictionary.**
+   Parse their dictionary.** (7-8 hours)
 
 1. Crawl [Wiktionary - Category:Coptic lemmas](https://en.wiktionary.org/wiki/Category:Coptic_lemmas).
 
 #### Collaborator Convenience
 
-1. **Support more seamless integration between Drive and your scripts.**
+1. **Support more seamless integration between Drive and your scripts.** (1-2
+   hours)
 
 1. **It might be easier for contributors if the "Notes" field in the Anki package
    should be retrieved from a Drive folder or gsheet, rather than a Git
-   directory.**
+   directory.** (1-2 hours)
 
 1. **Consider retrieving the images from a Drive folder or even from a
-   spreadsheet if possible.**
+   spreadsheet if possible.** (1-2 hours)
 
    Thought: Another possibility is for Git to continue to be the source of truth.
    But what we can do is have users share their contributions via Drive, and then
