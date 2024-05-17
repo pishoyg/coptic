@@ -310,7 +310,7 @@ argparser.add_argument(
     nargs="*",
     default=[
         # 1. The Dictionary.
-        "1::1::TXT::Dictionary",
+        "1::1::TXT::Crum: Bohairic Dictionary",
         # 2. The Bible.
         "2::1::TXT::Bible",
         "2::1::TXT:::",
@@ -542,11 +542,7 @@ class img(field):
                     cur_width, _ = image.size
                     if cur_width > width:
                         image.thumbnail((width, MAX_THUMBNAIL_HEIGHT))
-                    try:
-                        image.save(new_location)
-                    except:
-                        print(path)
-                        exit()
+                    image.save(new_location)
                 else:
                     shutil.copyfile(path, new_location)
             content.append(cur)
@@ -743,14 +739,12 @@ def build_decks(
         # TODO: Consider parameterizing leniency. Some decks have better data
         # sources, so your code is allowed to be more strict.
         if not k:
-            print(f"Warning: A card is missing a key in deck {d}. Skipping!")
             continue
         if not f:
-            print(f"Warning: Card {k} in deck {d} doesn't have a front! Skipping!")
             continue
         if not b:
             # Notice that we don't drop the card for simply missing a back.
-            print(f"Warning: Card {k} in deck {d} with front {f} doesn't have a back!")
+            pass
         if d not in decks:
             decks[d] = genanki.Deck(
                 deck_id=hash(d),
