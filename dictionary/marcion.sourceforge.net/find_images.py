@@ -6,6 +6,8 @@ import re
 import subprocess
 
 import pandas as pd
+import pillow_avif
+from PIL import Image
 
 DIGITS_RE = re.compile(r"\d+")
 
@@ -95,14 +97,6 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
-    "--reject_extensions",
-    type=str,
-    nargs="*",
-    default=["avif", "svg"],
-    help="A list of image extensions to reject.",
-)
-
-argparser.add_argument(
     "--search_url",
     type=str,
     default="https://www.google.com/search?q={query}&tbm=isch",
@@ -139,6 +133,14 @@ argparser.add_argument(
     help="If true, skip word with existing images.",
 )
 
+argparser.add_argument(
+    "--min_width",
+    type=int,
+    default=300,
+    help="The minimum acceptable width of an image. Set to -1 to indicate the"
+    " absence of a limit.",
+)
+
 args = argparser.parse_args()
 
 
@@ -159,6 +161,8 @@ def get_max_idx(g, key, sense):
 
 
 def open_images(images):
+    if not images:
+        return
     subprocess.run(
         ["open"]
         + (["-a", args.browser] if args.open_images_in_browser else [])
@@ -173,6 +177,7 @@ def get_downloads():
 
 
 def query(meaning):
+    meaning = meaning.replace("&", " and ").replace("\n", " | ")
     meaning = " ".join(meaning.split())
     return args.search_url.format(query=meaning)
 
@@ -183,13 +188,15 @@ def file_name(key, sense, idx, ext):
     return f"{key}-{sense}-{idx}{ext}"
 
 
-def invalid_extention(files):
+def invalid_size(files: list[str]) -> list[str]:
+    if args.min_width == -1:
+        return []
+    assert args.min_width > 0
     invalid = []
     for f in files:
-        _, ext = os.path.splitext(f)
-        assert ext.startswith(".")
-        ext = ext[1:]
-        if ext in args.reject_extensions:
+        image = Image.open(f)
+        width, _ = image.size
+        if width < args.min_width:
             invalid.append(f)
     return invalid
 
@@ -208,6 +215,7 @@ def main():
         g = glob.glob(os.path.join(args.destination, f"{key}-*"))
         if args.skip_existing and g:
             continue
+
         open_images(g)
         q = query(row[args.input_meaning_col])
         subprocess.run(["open", "-a", args.browser, q])
@@ -229,12 +237,10 @@ def main():
                     print("The sense must be a non-negative integer.")
 
             files = get_downloads()
-            invalid = invalid_extention(files)
+
+            invalid = invalid_size(files)
             if invalid:
-                print(
-                    "{} have invalid extensions, please replace"
-                    " them.".format(invalid)
-                )
+                print(f"{invalid} are too small, please replace them.")
                 continue
 
             # If there are no files, we assume that the user doesn't want to
@@ -249,14 +255,14 @@ def main():
                     continue
                 break
 
-            # TODO: Make it possible to retype the sense.
-
             # Verify the images.
             if args.verify_before_copying:
                 i = "n"
-                while i.lower() != "y":
+                while i.lower() not in ["y", "yes"]:
                     open_images(files)
-                    i = input("Looks good? (y/n)")
+                    i = input(f"Sense = {sense}. Looks good? (yes/no/sense)")
+                    if i.isdigit():
+                        sense = i
                     files = get_downloads()
 
             # Move the files.
