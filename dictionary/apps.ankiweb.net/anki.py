@@ -51,7 +51,7 @@ Please read carefully as this defines the format for the flag values.
 
   A plain text entry.
 
-- IMG::${TSV_FILE_PATH}::${KEY_COLUMN_NAME}::${DIR_PATH}::${FILE_NAME_FMT}::${WIDTH}
+- IMG::${TSV_FILE_PATH}::${KEY_COLUMN_NAME}::${DIR_PATH}::${FILE_NAME_FMT}::${CAPTION_SOURCE}::${WIDTH}
 
   Images. Retrieve keys from the column named ${KEY_COLUMN_NAME} in the TSV
   found at ${TSV_FILE_PATH}. The images are to be found at:
@@ -175,7 +175,7 @@ argparser.add_argument(
         "1::03::TSV::../marcion.sourceforge.net/data/output/roots.tsv::en-parsed-no-greek",
         "1::03::TXT::<br>",
         # Image.
-        "1::04::IMG::../marcion.sourceforge.net/data/output/roots.tsv::key::../marcion.sourceforge.net/data/img::{key}-*.*::300",
+        "1::04::IMG::../marcion.sourceforge.net/data/output/roots.tsv::key::../marcion.sourceforge.net/data/img::{key}-*.*::STEM::300",
         # Horizonal line.
         "1::05::TXT::<hr>",
         # Full entry.
@@ -192,7 +192,7 @@ argparser.add_argument(
         "1::08::TXT::<b>Crum: </b>",
         "1::08::TSV::../marcion.sourceforge.net/data/output/roots.tsv::crum",
         "1::08::TXT::<br>",
-        "1::08::IMG::../marcion.sourceforge.net/data/output/roots.tsv::crum-pages::../marcion.sourceforge.net/data/crum::numexpr({key}+20).png",
+        "1::08::IMG::../marcion.sourceforge.net/data/output/roots.tsv::crum-pages::../marcion.sourceforge.net/data/crum::numexpr({key}+20).png::KEY",
         "1::08::TXT::<hr>",
         # Marcion's key.
         "1::09::TXT::<b>Key: </b>",
@@ -294,7 +294,6 @@ argparser.add_argument(
     ],
     help="Deck ID in the generated Anki package.",
 )
-
 argparser.add_argument(
     "--css",
     type=str,
@@ -303,6 +302,9 @@ argparser.add_argument(
         # 1. The Dictionary.
         "1::TXT::.card { font-size: 18px; }",
         "1::TXT::#front { text-align: center; }",
+        "1::TXT::figure { display: inline-block; border: 1px transparent; margin: 10px; }",
+        "1::TXT::figure figcaption { text-align: center; }",
+        "1::TXT::figure img { vertical-align: top; }",
         # 2. The Bible.
         "2::TXT::.card { font-size: 18px; }",
     ],
@@ -536,14 +538,20 @@ class img(field):
         the temporary directory to the package generator in order for the
         basenames to match, and we forget about the original paths and names.
         """
-        assert len(spec) == 4 or len(spec) == 5
-        file_path, column_name, dir_path, file_name_fmt = spec[:4]
+
+        assert len(spec) == 5 or len(spec) == 6
+        file_path, column_name, dir_path, file_name_fmt, caption_source = spec[:5]
         html_fmt = '<img src="{basename}"><br>'
         width = None
-        if len(spec) == 5:
-            width = int(spec[4])
+        if len(spec) == 6:
+            width = int(spec[5])
             html_fmt = '<img src="{{basename}}" width="{width}"><br>'
             html_fmt = html_fmt.format(width=width)
+        html_fmt = (
+            "<figure>"
+            + html_fmt
+            + "<figcaption> {caption} </figcaption> </figure> <br>"
+        )
 
         # Each entry in the keys column is not a single key, but a
         # comma-separated list of key patterns.
@@ -552,26 +560,37 @@ class img(field):
         content = []
         media_files = set()
         for cs_keys in keys:
-            paths = self._glob(dir_path, file_name_fmt, cs_keys)
             cur = ""
-            for path in paths:
-                basename = path.replace("/", "_")
-                cur += html_fmt.format(basename=basename)
-                new_location = os.path.join(work_dir, basename)
-                media_files.add(new_location)
-                if width:
-                    image = Image.open(path)
-                    cur_width, _ = image.size
-                    if cur_width > width:
-                        image.thumbnail((width, MAX_THUMBNAIL_HEIGHT))
-                    image.save(new_location)
-                else:
-                    shutil.copyfile(path, new_location)
+            for key in cs_keys.split(","):
+                paths = self._glob(dir_path, file_name_fmt, key)
+                for path in paths:
+                    caption = self._get_caption(caption_source, key, path)
+                    basename = path.replace("/", "_")
+                    cur += html_fmt.format(basename=basename, caption=caption)
+                    new_location = os.path.join(work_dir, basename)
+                    media_files.add(new_location)
+                    if width:
+                        image = Image.open(path)
+                        cur_width, _ = image.size
+                        if cur_width > width:
+                            image.thumbnail((width, MAX_THUMBNAIL_HEIGHT))
+                        image.save(new_location)
+                    else:
+                        shutil.copyfile(path, new_location)
             content.append(cur)
 
         # Eliminate duplicate media file paths.
         media_files = list(media_files)
         super().__init__(content, media_files)
+
+    @type_enforced.Enforcer
+    def _get_caption(self, caption_source: str, key: str, path: str) -> str:
+        if caption_source == "KEY":
+            return key
+        if caption_source == "STEM":
+            stem, _ = os.path.splitext(os.path.basename(path))
+            return stem
+        raise ValueError(f"Unknown caption source: {caption_source}")
 
 
 class fil(field):

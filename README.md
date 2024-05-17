@@ -174,17 +174,9 @@ into the repo.
 
 #### Crum (Marcion)
 
-1. **Rename Dictionary to Bohairic, and add a Sahidic version and a complete
-   version.**
+1. **Add a Sahidic version and a complete version of the dictionary.**
 
 1. **Add word derivations to a TSV, and then to the flashcards.**
-
-1. **Label the images, in order to make it clear that they represent different
-   senses.**
-
-1. **Pad the images.**
-
-1. **Separate the dictionary pages.**
 
 #### New Dictionaries Parsing or Crawling
 
