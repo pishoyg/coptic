@@ -9,6 +9,7 @@ import tempfile
 import genanki
 import numexpr
 import pandas as pd
+import pillow_avif
 import type_enforced
 from PIL import Image
 
