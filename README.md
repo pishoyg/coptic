@@ -1,14 +1,13 @@
 # coptic
 
-**Ⲉ̀ϣⲱⲡ ⲁⲓϣⲁⲛⲉⲣⲡⲉⲱⲃϣ Ⲓⲗ̅ⲏ̅ⲙ̅, ⲉⲓⲉ̀ⲉⲣⲡⲱⲃϣ ⲛ̀ⲧⲁⲟⲩⲓⲛⲁⲙ: Ⲡⲁⲗⲁⲥ ⲉϥⲉ̀ϫⲱⲗϫ ⲉ̀ⲧⲁϣ̀ⲃⲱⲃⲓ ⲉ̀ϣⲱⲡ
-ⲁⲓϣ̀ⲧⲉⲙⲉⲣⲡⲉⲙⲉⲩⲓ.**
+Ⲉ̀ϣⲱⲡ ⲁⲓϣⲁⲛⲉⲣⲡⲉⲱⲃϣ Ⲓⲗ̅ⲏ̅ⲙ̅, ⲉⲓⲉ̀ⲉⲣⲡⲱⲃϣ ⲛ̀ⲧⲁⲟⲩⲓⲛⲁⲙ: Ⲡⲁⲗⲁⲥ ⲉϥⲉ̀ϫⲱⲗϫ ⲉ̀ⲧⲁϣ̀ⲃⲱⲃⲓ ⲉ̀ϣⲱⲡ
+ⲁⲓϣ̀ⲧⲉⲙⲉⲣⲡⲉⲙⲉⲩⲓ.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [How to Get the Flashcards](#how-to-get-the-flashcards)
 - [Contact and Contributions](#contact-and-contributions)
-- [Copyrights](#copyrights)
 - [Plans / Improvements](#plans--improvements)
   - [Manual Data Collection](#manual-data-collection)
     - [Crum: New Fields](#crum-new-fields)
@@ -25,9 +24,9 @@
     - [Platform](#platform)
     - [Developer Convenience](#developer-convenience)
     - [Archive](#archive)
-  - [Notes For Developers](#notes-for-developers)
-    - [Directory Structure](#directory-structure)
-    - [Anki Keys and Synchronization](#anki-keys-and-synchronization)
+- [Notes For Developers](#notes-for-developers)
+  - [Directory Structure](#directory-structure)
+  - [Anki Keys and Synchronization](#anki-keys-and-synchronization)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -58,17 +57,13 @@ There are two ways you can contribute:
 This page documents the tasks. More documentation will be added in the future.
 Also feel free to reach out with questions.
 
-## Copyrights
-
-I don't care! Do whatever you want with the data / code you published here.
-
 ## Plans / Improvements
 
 ### Manual Data Collection
 
 #### Crum: New Fields
 
-1. *Collect more explanatory pictures.*
+1. **Collect more explanatory pictures.**
 
 1. Collect more explanatory notes.
 
@@ -82,12 +77,12 @@ I don't care! Do whatever you want with the data / code you published here.
 
 #### Moawad Dawoud's Diciontary
 
-1. *Add a column in `roots.tsv` containing Moawad Dawoud's page numbers, and add
-   scans to the flashcards.*
+1. **Add a column in `roots.tsv` containing Moawad Dawoud's page numbers, and add
+   scans to the flashcards.**
 
-1. *Add a column containing Moawad Dawoud's Arabic translations.*
+1. **Add a column containing Moawad Dawoud's Arabic translations.**
 
-1. *Add a column containing Moawad Dawoud's standardized spellings.*
+1. **Add a column containing Moawad Dawoud's standardized spellings.**
 
 1. Copy the Greek loanwords from Moawad into a new flashcard deck. (This may be
    less urgent if you incorporate Scriptorium's data, which you must do
@@ -98,7 +93,7 @@ I don't care! Do whatever you want with the data / code you published here.
 1. Record the correct list of Crum pages containing a given word. We've
    populated the data with a default value of two pages for each word.
 
-1. ? Fix the typos in the data retrieved from Crum. The current dataset is
+1. Fix the typos in the data retrieved from Crum. The current dataset is
    high-quality, and has a very small number of typos. However, they do exist.
    (This is more of an ongoing effort than a task.)
 
@@ -223,7 +218,7 @@ into the repo.
 
 #### Platform
 
-1. *Deploy the flashcards on a standalone app.*
+1. **Deploy the flashcards on a standalone app.**
 
 1. Revisit the possibility of publishing the decks through Anki.
 
@@ -256,9 +251,9 @@ into the repo.
 
 1. Revisit the possibility of image compression to minimize the package size.
 
-### Notes For Developers
+## Notes For Developers
 
-#### Directory Structure
+### Directory Structure
 
 - `bible/`
 
@@ -281,7 +276,7 @@ into the repo.
     Data retrieved from another app or repo will live here, and could be used /
     reprocessed by projects in the repo.
 
-#### Anki Keys and Synchronization
+### Anki Keys and Synchronization
 
    When you import a package into your (personal) Anki database, Anki uses the
    IDs to eliminate duplicates.
