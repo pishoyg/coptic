@@ -184,10 +184,6 @@ into the repo.
 
 #### New Dictionaries Parsing or Crawling
 
-1. **Incorporate copticsite.com's dictionary into a deck. The data is
-   poor-quality and unkeyed, but easier to incorporate, and could perhaps
-   attract Arabic-speaking learners.** (1-2 hours)
-
 1. **Incorporate Scriptorium's data. Gain familiarity with their platform.
    Parse their dictionary.** (7-8 hours)
 
@@ -233,6 +229,13 @@ into the repo.
 
 1. Learn more Vim!
 
+#### Code Health
+
+1. Do NOT weave yarn. Create a type that can combine several fields. This will
+   make it possible to combine the `SEQ` type with other types.
+
+1. Define the output in a constants file rather than commandline flags.
+
 #### Archive
 
 1. Synchronization seems to be working fine. However, running the generation
@@ -240,8 +243,8 @@ into the repo.
    identical data) produces the message "notes were used to update existing
    ones. Investigate.
 
-1. ? Use the either-or feature and the `SEQ` field type to generate keys for
-   Bible verses without references.
+1. Use the either-or feature and the `SEQ` field type to generate keys for
+   Bible verses that are missing references.
 
 1. Revisit the possibility of image compression to minimize the package size.
 

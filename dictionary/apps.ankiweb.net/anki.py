@@ -122,7 +122,9 @@ argparser.add_argument(
     nargs="*",
     default=[
         # 1. The Dictionary.
-        "1::TSV::../marcion.sourceforge.net/data/output/roots.tsv::key",
+        "1::01::TXT::Crum: Bohairic Dictionary",
+        "1::01::TXT:: - ",
+        "1::01::TSV::../marcion.sourceforge.net/data/output/roots.tsv::key",
         # 2. The Bible.
         "2::01::TXT::(",
         "2::01::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::book",
@@ -131,6 +133,8 @@ argparser.add_argument(
         "2::01::TXT:::",
         "2::01::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::verse",
         "2::01::TXT::)",
+        # 3. copticsite.com
+        "3::01::SEQ::copticsite.com{}::0",
     ],
     help="This is a critical field. The note keys will be used as database"
     " keys to enable synchronization. It is important for the keys to be (1)"
@@ -149,6 +153,8 @@ argparser.add_argument(
         "1::1::TSV::../marcion.sourceforge.net/data/output/roots.tsv::dialect-B",
         # 2. The Bible.
         "2::1::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::Bohairic",
+        # 3. copticsite.com
+        "3::1::TSV::../copticsite.com/data/output/output.tsv::Coptic Unicode Alphabet",
     ],
     help="Format of the card fronts. See description for syntax.",
 )
@@ -265,6 +271,30 @@ argparser.add_argument(
         "2::11::TXT::<b>Greek:</b>",
         "2::11::TXT::<br>",
         "2::11::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::Greek",
+        # 3. copticsite.com
+        '3::01::TXT::<div id="front">',
+        "3::01::TSV::../copticsite.com/data/output/output.tsv::Coptic Unicode Alphabet",
+        "3::01::TXT::</div>",
+        "1::01::TXT::<hr>",
+        "3::02::TXT::(",
+        "3::02::TXT::<b>",
+        "3::02::TSV::../copticsite.com/data/output/output.tsv::Word Kind",
+        "3::02::TXT::</b>",
+        "3::02::TXT::)",
+        "3::02::TXT::<br>",
+        "3::03::TXT::(",
+        "3::03::TXT::<b>",
+        "3::03::TSV::../copticsite.com/data/output/output.tsv::Word Gender",
+        "3::03::TXT::</b>",
+        "3::03::TXT::)",
+        "3::03::TXT::<br>",
+        "3::04::TXT::(",
+        "3::04::TXT::<b>",
+        "3::04::TSV::../copticsite.com/data/output/output.tsv::Origin",
+        "3::04::TXT::</b>",
+        "3::04::TXT::)",
+        "3::04::TXT::<br>",
+        "3::05::TSV::../copticsite.com/data/output/output.tsv::Meaning",
     ],
     help="Format of the card backs. See description for syntax.",
 )
@@ -278,6 +308,8 @@ argparser.add_argument(
         "1::TXT::Dictionary",
         # 2. The Bible.
         "2::TXT::Bible",
+        # 3. copticsite.com
+        "3::TXT::copticsite.com",
     ],
     help="Model name in the generated Anki package.",
 )
@@ -291,6 +323,8 @@ argparser.add_argument(
         "1::TXT::1284010383",
         # 2. The Bible.
         "2::TXT::1284010384",
+        # 3. copticsite.com
+        "3::TXT::1284010385",
     ],
     help="Deck ID in the generated Anki package.",
 )
@@ -307,6 +341,8 @@ argparser.add_argument(
         "1::TXT::figure img { vertical-align: top; }",
         # 2. The Bible.
         "2::TXT::.card { font-size: 18px; }",
+        # 3. copticsite.com
+        "3::TXT::.card { text-align: center; }",
     ],
     help="Global CSS. Please notice that the front will be given the id"
     ' "front" and the back will have the id "back". You can use these IDs if'
@@ -329,6 +365,8 @@ argparser.add_argument(
         "2::1::TXT:::",
         "2::1::TXT:::",
         "2::1::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::chapter",
+        # 3. copticsite.com
+        "3::1::TXT::copticsite.com",
     ],
     help="Deck name in the generated Anki package."
     " N.B. If a deck ID is not"
@@ -348,6 +386,8 @@ argparser.add_argument(
         "1::TXT::1284010383",
         # 2. The Bible.
         "2::TXT::",
+        # 3. copticsite.com
+        "3::TXT::1284010385",
     ],
     help="Deck ID in the generated Anki package.",
 )
@@ -362,6 +402,9 @@ argparser.add_argument(
     Contact: pishoybg@gmail.com.""",
         # 2. The Bible.
         """2::TXT::URL: https://github.com/pishoyg/coptic/.
+    Contact: pishoybg@gmail.com.""",
+        # 3. copticsite.com
+        """3::TXT::URL: https://github.com/pishoyg/coptic/.
     Contact: pishoybg@gmail.com.""",
     ],
     help="Deck description in the generated Anki package. Only TXT fields are"
@@ -444,6 +487,8 @@ def new_field(spec: str, work_dir: str):
         return fil(spec, work_dir)
     if field_type == "XOR":
         return xor(spec, work_dir)
+    if field_type == "SEQ":
+        return seq(spec, work_dir)
     raise ValueError("Unknown filed type: {}".format(field_type))
 
 
@@ -494,15 +539,14 @@ class txt(field):
 class seq(field):
     @type_enforced.Enforcer
     def __init__(self, spec: list[str], _):
-        self._cur = 0
-        if spec:
-            assert len(spec) == 1, spec
-            self._cur = int(spec)
+        assert len(spec) == 2, spec
+        self._fmt = spec[0]
+        self._cur = int(spec[1])
         super().__init__(None, [])
 
     @type_enforced.Enforcer
     def next(self) -> str:
-        ans = self._cur
+        ans = self._fmt.format(self._cur)
         self._cur += 1
         return str(ans)
 
@@ -695,6 +739,11 @@ def weave_yarn(
         for pair in fields:
             assert type(pair[1]) in restrict_filed_types
 
+    # SEQ gets a special handling.
+    if len(fields) == 1 and isinstance(fields[0][1], seq):
+        return fields[0][1]
+    assert not any(isinstance(pair[1], seq) for pair in fields)
+
     num_notes = num_entries([pair[1] for pair in fields])
 
     content = []
@@ -717,9 +766,12 @@ def weave_yarn(
         if pair[0] in not_purged_at_least_once:
             media_files.update(pair[1].media_files())
 
+    # TXT also gets a special handling.
     if num_notes == -1:
         assert not media_files
+        assert all(isinstance(pair[1], txt) for pair in fields)
         return txt(content, work_dir)
+
     return field(content, list(media_files))
 
 
@@ -783,16 +835,21 @@ def build_decks(
 
     decks = {}
 
+    seen_keys = set()
     for _ in range(num_entries([deck_name, key, front, back])):
         d = deck_name.next()
         k = key.next()
         f = front.next()
         b = back.next()
-        assert d
+
         # TODO: Consider parameterizing leniency. Some decks have better data
         # sources, so your code is allowed to be more strict.
+        assert d
         if not k:
             continue
+        if k in seen_keys:
+            pass
+        seen_keys.add(k)
         if not f:
             continue
         if not b:
