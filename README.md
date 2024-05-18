@@ -17,10 +17,10 @@
     - [Neologisms](#neologisms)
   - [Documentation](#documentation)
   - [Coding](#coding)
-    - [The Bible](#the-bible)
+    - [Code Health](#code-health)
     - [Crum (Marcion)](#crum-marcion)
-    - [New Dictionaries Parsing or Crawling](#new-dictionaries-parsing-or-crawling)
     - [Collaborator Convenience](#collaborator-convenience)
+    - [New Dictionaries Parsing or Crawling](#new-dictionaries-parsing-or-crawling)
     - [Platform](#platform)
     - [Developer Convenience](#developer-convenience)
     - [Archive](#archive)
@@ -167,29 +167,30 @@ into the repo.
 
 ### Coding
 
-#### The Bible
+#### Code Health
 
-1. **Order the Bible books and chapters.** (1-2 hours)
+1. **The front field should be part of the back card.**
+
+1. **Add a word-parsed-prettify column to the derivations sheet.**
+
+1. **Define the output in a constants file rather than commandline flags.**
+
+1. **To minimize the chances of collision, use the deck name as a prefix of the
+   note ID.**
+
+1. **Do NOT weave yarn. Create a type that can combine several fields. This will
+   make it possible to combine the `SEQ` type with other types.**
 
 #### Crum (Marcion)
-
-1. **Add a Sahidic version and a complete version of the dictionary.** (1-2
-   hours)
 
 1. **Add word derivations to a TSV, and then to the flashcards.** (3-4 hours)
 
 1. **Add the extra columns to `roots.tsv`.** (1 hour)
 
+1. **Add a Sahidic version and a complete version of the dictionary.** (1-2
+   hours)
+
 1. Remove the old fields that still show in the sharing page.
-
-#### New Dictionaries Parsing or Crawling
-
-1. **Incorporate Scriptorium's data. Gain familiarity with their platform.
-   Parse their dictionary.** (7-8 hours)
-
-1. Incorporate copticsite.com's newly-coined words.
-
-1. Crawl [Wiktionary - Category:Coptic lemmas](https://en.wiktionary.org/wiki/Category:Coptic_lemmas).
 
 #### Collaborator Convenience
 
@@ -207,6 +208,15 @@ into the repo.
    But what we can do is have users share their contributions via Drive, and then
    we will implement a pipeline to integrate the contributions made through Drive
    into Git.
+
+#### New Dictionaries Parsing or Crawling
+
+1. **Incorporate Scriptorium's data. Gain familiarity with their platform.
+   Parse their dictionary.** (7-8 hours)
+
+1. Get the new version of copticsite.com's dictionary.
+
+1. Crawl [Wiktionary - Category:Coptic lemmas](https://en.wiktionary.org/wiki/Category:Coptic_lemmas).
 
 #### Platform
 
@@ -231,22 +241,12 @@ into the repo.
 
 1. Learn more Vim!
 
-#### Code Health
-
-1. Do NOT weave yarn. Create a type that can combine several fields. This will
-   make it possible to combine the `SEQ` type with other types.
-
-1. Define the output in a constants file rather than commandline flags.
-
 #### Archive
 
 1. Synchronization seems to be working fine. However, running the generation
    script twice produces a different file, and reimporting (supposedly
    identical data) produces the message "notes were used to update existing
    ones. Investigate.
-
-1. Use the either-or feature and the `SEQ` field type to generate keys for
-   Bible verses that are missing references.
 
 1. Revisit the possibility of image compression to minimize the package size.
 
