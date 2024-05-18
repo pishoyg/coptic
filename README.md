@@ -187,6 +187,8 @@ into the repo.
 1. **Incorporate Scriptorium's data. Gain familiarity with their platform.
    Parse their dictionary.** (7-8 hours)
 
+1. Incorporate copticsite.com's newly-coined words.
+
 1. Crawl [Wiktionary - Category:Coptic lemmas](https://en.wiktionary.org/wiki/Category:Coptic_lemmas).
 
 #### Collaborator Convenience
