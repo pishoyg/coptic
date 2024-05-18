@@ -42,10 +42,10 @@ argparser = argparse.ArgumentParser(description="Process the Coptic Bible data."
 # TODO: Use the data from the extracted APK directly, instead of copying the
 # APK assets to the `data` subdirectory of this project.
 argparser.add_argument(
-    "--books",
+    "--json",
     type=str,
     help="Path to a JSON file containing the book information.",
-    default="data/input/books.json",
+    default="data/input/bible.json",
 )
 argparser.add_argument(
     "--input_dir",
@@ -225,38 +225,6 @@ def write_csv(df):
     df.to_csv(path, sep="\t", index=False)
 
 
-def write_anki_tsv(df):
-    for parallel in args.parallels:
-        first, second = parallel.split("_")
-        out = pd.DataFrame(
-            {
-                "question": df[first],
-                "answer": df[second],
-                "citation": " ("
-                + df["book"]
-                + " "
-                + df["chapter"]
-                + ":"
-                + df["verse"]
-                + ")",
-            }
-        )
-
-        out.fillna("")
-        out = out.loc[out["question"].str.strip() != ""]
-        out["question"] = out["question"] + out["citation"]
-        out["answer"] = out["answer"] + out["citation"]
-
-        path = writing_path("anki_tsv", "{lang}.tsv".format(lang=parallel))
-        out.to_csv(
-            path,
-            sep="\t",
-            header=False,
-            index=False,
-            columns=["question", "answer"],
-        )
-
-
 def html_head(title=""):
     return """<head>
   <title>{title}</title>
@@ -386,14 +354,36 @@ def process_sources(books):
 
 
 def main():
-    with open(args.books) as b:
-        books = json.loads(b.read())
-        for testament in books:
-            for section in testament:
-                for book in section:
-                    pass
-        books = b.read().split("\n")
-        books = list(filter(None, books))
+    books = []
+    book_to_testament = {}
+    book_to_testament_indexed = {}
+    book_to_section = {}
+    book_to_section_indexed = {}
+    book_to_book_indexed = {}
+
+    with open(args.json) as j:
+        bible = json.loads(j.read())
+        testament_idx = 0
+        for testament_name, testament in bible.items():
+            testament_idx += 1
+            section_idx = 0
+            for section_name, section in testament.items():
+                section_idx += 1
+                book_idx = 0
+                for book_name in section:
+                    book_idx += 1
+                    books.append(book_name)
+                    book_to_testament[book_name] = testament_name
+                    book_to_testament_indexed[book_name] = "{}. {}".format(
+                        testament_idx, testament_name
+                    )
+                    book_to_section[book_name] = section_name
+                    book_to_section_indexed[book_name] = "{}. {}".format(
+                        section_idx, section_name
+                    )
+                    book_to_book_indexed[book_name] = "{}. {}".format(
+                        str(book_idx).zfill(2), book_name
+                    )
 
     process_sources(books)
 
@@ -426,6 +416,7 @@ def main():
         pb1 = PARALLEL_BUILDERS[1]
         pb2 = PARALLEL_BUILDERS[2]
         pb3 = PARALLEL_BUILDERS[3]
+        zfill_len = len(str(len(data)))
         for chapter in data:
             chapter_num = chapter_number(chapter)
             for lang in LANGUAGES + args.parallels:
@@ -445,7 +436,13 @@ def main():
                 d = {
                     "book": book_name,
                     "chapter": chapter_num,
+                    "chapter-zfilled": str(chapter_num).zfill(zfill_len),
                     "verse": verse_num,
+                    "testament": book_to_testament[book_name],
+                    "testament-indexed": book_to_testament_indexed[book_name],
+                    "section": book_to_section[book_name],
+                    "section-indexed": book_to_section_indexed[book_name],
+                    "book-indexed": book_to_book_indexed[book_name],
                 }
                 for lang in LANGUAGES:
                     d[lang] = VERSE_PREFIX.sub("", verse[lang])
@@ -469,7 +466,6 @@ def main():
         df = pd.concat([df, book_df], ignore_index=True)
 
     write_csv(df)
-    write_anki_tsv(df)
 
     write_html(html1, books, "html")
     write_html(html2, books, "html2")
