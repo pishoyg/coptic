@@ -44,8 +44,8 @@ argparser = argparse.ArgumentParser(description="Process the Coptic Bible data."
 argparser.add_argument(
     "--books",
     type=str,
-    help="Path to a file containing the book names in order.",
-    default="data/raw/books/books.txt",
+    help="Path to a JSON file containing the book information.",
+    default="data/input/books.json",
 )
 argparser.add_argument(
     "--input_dir",
@@ -387,6 +387,11 @@ def process_sources(books):
 
 def main():
     with open(args.books) as b:
+        books = json.loads(b.read())
+        for testament in books:
+            for section in testament:
+                for book in section:
+                    pass
         books = b.read().split("\n")
         books = list(filter(None, books))
 
