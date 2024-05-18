@@ -169,6 +169,8 @@ into the repo.
 
 #### Code Health
 
+1. **Use `0003 - New Coptic English Arabic dictionary 30 may 2023.xlsx`.**
+
 1. **The front field should be part of the back card.**
 
 1. **Add a word-parsed-prettify column to the derivations sheet.**
