@@ -27,6 +27,7 @@
 - [Notes For Developers](#notes-for-developers)
   - [Directory Structure](#directory-structure)
   - [Anki Keys and Synchronization](#anki-keys-and-synchronization)
+- [Credits](#credits)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -231,10 +232,6 @@ into the repo.
 
 1. Revisit the possibility of publishing the decks through Anki.
 
-#### Dataset: copticsite.com
-
-1. Use the newer version of the dictionary once published.
-
 #### Developer Convenience
 
 1. Add unit tests.
@@ -253,6 +250,8 @@ into the repo.
 1. Learn more Vim!
 
 #### Archive
+
+1. Use the newer version of [copticsite.com](https://copticsite.com/) once published.
 
 1. Synchronization seems to be working fine. However, running the generation
    script twice produces a different file, and reimporting (supposedly
@@ -338,3 +337,14 @@ into the repo.
    1. Model ID
 
    Model IDs are hardcoded.
+
+## Credits
+
+The data used here was digitalized and published through the efforts of:
+
+1. Milan Konvicka, creator of [Marcion](https://marcion.sourceforge.net/)
+
+1. Hany Takla, founder of [Saint Shenouda The Archimandrite – Coptic
+   Society](http://stshenouda.org/)
+
+1. Osama Thabet, creator of [copticsite.com](<https://copticsite.com/>]
