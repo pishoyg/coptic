@@ -475,7 +475,7 @@ class field:
     @type_enforced.Enforcer
     def _read_tsv_column(self, file_path: str, column_name: str) -> list[str]:
         df = pd.read_csv(file_path, sep="\t", encoding="utf-8").fillna("")
-        return list(map(str, df[column_name]))
+        return [str(cell).strip() for cell in df[column_name]]
 
 
 @type_enforced.Enforcer
@@ -657,6 +657,7 @@ class fil(field):
                 with open(path) as f:
                     cur += f.read()
             cur = self._use_html_line_breaks(cur)
+            cur = cur.strip()
             content.append(cur)
 
         super().__init__(content, [])
