@@ -7,6 +7,7 @@ import subprocess
 
 import pandas as pd
 import pillow_avif
+import type_enforced
 from PIL import Image
 
 DIGITS_RE = re.compile(r"\d+")
@@ -145,7 +146,8 @@ argparser.add_argument(
 args = argparser.parse_args()
 
 
-def get_max_idx(g, key, sense):
+@type_enforced.Enforcer
+def get_max_idx(g: list[str], key: int, sense: int) -> int:
     key = str(key)
     sense = str(sense)
     highest = 0
@@ -158,7 +160,8 @@ def get_max_idx(g, key, sense):
     return highest
 
 
-def open_images(images):
+@type_enforced.Enforcer
+def open_images(images: list[str]):
     if not images:
         return
     subprocess.run(
@@ -168,19 +171,22 @@ def open_images(images):
     )
 
 
-def get_downloads():
+@type_enforced.Enforcer
+def get_downloads() -> list[str]:
     files = glob.glob(os.path.join(args.downloads, "*"))
     files = [f for f in files if os.path.basename(f) not in args.ignore]
     return files
 
 
-def query(meaning):
+@type_enforced.Enforcer
+def query(meaning: str) -> str:
     meaning = meaning.replace("&", " and ").replace("\n", " | ")
     meaning = " ".join(meaning.split())
     return args.search_url.format(query=meaning)
 
 
-def file_name(key, sense, idx, ext):
+@type_enforced.Enforcer
+def file_name(key: int, sense: int, idx: int, ext: str):
     assert key
     assert sense
     assert idx
@@ -188,6 +194,7 @@ def file_name(key, sense, idx, ext):
     return f"{key}-{sense}-{idx}{ext}"
 
 
+@type_enforced.Enforcer
 def invalid_size(files: list[str]) -> list[str]:
     if args.min_width == -1:
         return []
@@ -201,12 +208,14 @@ def invalid_size(files: list[str]) -> list[str]:
     return invalid
 
 
+@type_enforced.Enforcer
 def main():
     df = pd.read_csv(args.input_tsv, sep="\t", encoding="utf-8").fillna("")
     df.sort_values(by=args.input_key_col, inplace=True)
 
     for _, row in df.iterrows():
         key = row[args.input_key_col]
+        key = int(key)
         if key < args.start_at_key:
             continue
         if row[args.input_type_col] in args.exclude_types:
