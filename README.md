@@ -173,8 +173,6 @@ into the repo.
 
 1. **The front field should be part of the back card.**
 
-1. **Add a word-parsed-prettify column to the derivations sheet.**
-
 1. **Define the output in a constants file rather than commandline flags.**
 
 1. **To minimize the chances of collision, use the deck name as a prefix of the
@@ -182,6 +180,8 @@ into the repo.
 
 1. **Do NOT weave yarn. Create a type that can combine several fields. This will
    make it possible to combine the `SEQ` type with other types.**
+
+1. **Make image senses mandatory to avoid confusion, and to simplify sorting.**
 
 #### Crum (Marcion)
 
@@ -191,8 +191,6 @@ into the repo.
 
 1. **Add a Sahidic version and a complete version of the dictionary.** (1-2
    hours)
-
-1. Remove the old fields that still show in the sharing page.
 
 #### Collaborator Convenience
 
