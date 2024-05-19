@@ -165,11 +165,6 @@ argparser.add_argument(
     nargs="*",
     default=[
         # 1. The Dictionary.
-        # Front side.
-        '1::01::TXT::<div id="front">',
-        "1::01::TSV::../marcion.sourceforge.net/data/output/roots.tsv::dialect-B",
-        "1::01::TXT::</div>",
-        "1::01::TXT::<hr>",
         # Type.
         "1::02::TXT::(",
         "1::02::TXT::<b>",
@@ -204,11 +199,6 @@ argparser.add_argument(
         "1::09::TXT::<b>Key: </b>",
         "1::09::TSV::../marcion.sourceforge.net/data/output/roots.tsv::key",
         # 2. The Bible.
-        # Bohairic.
-        '2::01::TXT::<div id="front">',
-        "2::01::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::Bohairic",
-        "2::01::TXT::</div>",
-        "2::01::TXT::<hr>",
         # Reference.
         "2::02::TXT::(",
         "2::02::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::book",
@@ -272,10 +262,6 @@ argparser.add_argument(
         "2::11::TXT::<br>",
         "2::11::TSV::../../bible/stshenouda.org/data/output/csv/bible.csv::Greek",
         # 3. copticsite.com
-        '3::01::TXT::<div id="front">',
-        "3::01::TSV::../copticsite.com/data/output/output.tsv::Coptic Unicode Alphabet",
-        "3::01::TXT::</div>",
-        "1::01::TXT::<hr>",
         "3::02::TXT::(",
         "3::02::TXT::<b>",
         "3::02::TSV::../copticsite.com/data/output/output.tsv::Word Kind",
@@ -821,7 +807,7 @@ def build_decks(
             {
                 "name": "template 1",
                 "qfmt": '<div id="front"> {{Front}} </div>',
-                "afmt": '<div id="back"> {{Back}} </div>',
+                "afmt": '<div id="front"> {{Front}} </div> <hr> <div id="back"> {{Back}} </div>',
             },
         ],
         css=css,

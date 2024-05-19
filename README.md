@@ -171,8 +171,6 @@ into the repo.
 
 1. **Use `0003 - New Coptic English Arabic dictionary 30 may 2023.xlsx`.**
 
-1. **The front field should be part of the back card.**
-
 1. **Define the output in a constants file rather than commandline flags.**
 
 1. **To minimize the chances of collision, use the deck name as a prefix of the
