@@ -8,26 +8,26 @@
 
 - [How to Get the Flashcards](#how-to-get-the-flashcards)
 - [Contact and Contributions](#contact-and-contributions)
-- [Plans / Improvements](#plans--improvements)
-  - [Manual Data Collection](#manual-data-collection)
-    - [Crum: New Fields](#crum-new-fields)
-    - [Moawad Dawoud's Diciontary](#moawad-dawouds-diciontary)
-    - [Crum's Dictionary](#crums-dictionary)
-    - [Other Dictionaries](#other-dictionaries)
-    - [Neologisms](#neologisms)
-  - [Documentation](#documentation)
-  - [Coding](#coding)
-    - [Code Health](#code-health)
-    - [Crum (Marcion)](#crum-marcion)
+- [Manual Data Collection](#manual-data-collection)
+  - [Crum: New Fields](#crum-new-fields)
+  - [Moawad Dawoud's Diciontary](#moawad-dawouds-diciontary)
+  - [Crum's Dictionary](#crums-dictionary)
+  - [Other Dictionaries](#other-dictionaries)
+  - [Neologisms](#neologisms)
+- [Credits](#credits)
+- [For Developers](#for-developers)
+  - [Documentation Tasks](#documentation-tasks)
+    - [Git](#git)
+    - [Drive](#drive)
+  - [Coding Tasks](#coding-tasks)
     - [Collaborator Convenience](#collaborator-convenience)
+    - [Flashcards](#flashcards)
+    - [Dictionary / copticsite.com](#dictionary--copticsitecom)
+    - [Dictionary / Crum (Marcion)](#dictionary--crum-marcion)
     - [New Dictionaries Parsing or Crawling](#new-dictionaries-parsing-or-crawling)
-    - [Platform](#platform)
     - [Developer Convenience](#developer-convenience)
-    - [Archive](#archive)
-- [Notes For Developers](#notes-for-developers)
   - [Directory Structure](#directory-structure)
   - [Anki Keys and Synchronization](#anki-keys-and-synchronization)
-- [Credits](#credits)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -58,11 +58,9 @@ There are two ways you can contribute:
 This page documents the tasks. More documentation will be added in the future.
 Also feel free to reach out with questions.
 
-## Plans / Improvements
+## Manual Data Collection
 
-### Manual Data Collection
-
-#### Crum: New Fields
+### Crum: New Fields
 
 1. **Collect more explanatory pictures.** (100+ hours, delegate)
 
@@ -82,7 +80,7 @@ Also feel free to reach out with questions.
 
 1. ? Add pronunciations.
 
-#### Moawad Dawoud's Diciontary
+### Moawad Dawoud's Diciontary
 
 1. **Add Moawad Dawoud's page numbers, and add scans to the flashcards.** (50+
    hours, delegate)
@@ -97,7 +95,7 @@ Also feel free to reach out with questions.
 
 1. Digitalize the entirety of Dawoud's dictionary.
 
-#### Crum's Dictionary
+### Crum's Dictionary
 
 1. Record the correct list of Crum pages containing a given word. We've
    populated the data with a default value of two pages for each word.
@@ -111,7 +109,7 @@ Also feel free to reach out with questions.
 1. Contemplate dividing the decks to subsets sorted by popularity, so the
    learners can learn the more important words first.
 
-#### Other Dictionaries
+### Other Dictionaries
 
 1. Add data from St. Shenouda The Archimandrite Coptic Society's Dictionary.
 
@@ -121,63 +119,90 @@ Also feel free to reach out with questions.
 1. Incorporate the ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ Group's neologisms. They did substantial
    work that might be worth incorporating.
 
-#### Neologisms
+### Neologisms
 
 1. ? Add neologisms. (We need to think first of how to create neologisms before
    we add them to our dataset.)
 
-### Documentation
+## Credits
+
+The data used here was digitalized and published through the efforts of:
+
+1. Milan Konvicka, creator of [Marcion](https://marcion.sourceforge.net/)
+
+1. Hany Takla, founder of [Saint Shenouda The Archimandrite – Coptic
+   Society](http://stshenouda.org/)
+
+1. Osama Thabet, creator of [copticsite.com](https://copticsite.com/)
+
+## For Developers
+
+### Documentation Tasks
 
 (7-8 hours)
 
-1. **Move the TODO's to the correct directories.**
+#### Git
 
-1. **Link Drive items in this repo.**
-
-1. **Move / reproduce TODO's from the code in the README files. Only
-   low-priority, niche items should stay in the code. Run `grep TODO -R ${DIR}`
-   to find the TODO's.**
-
-   At the moment, all the relevant code TODO's are here:
-
-   ```bash
-   grep TODO dictionary/marcion.sourceforge.net/*.py bible/stshenouda.org/*.py
-   ```
-
-1. **Move / reproduce TODO's from Drive in the README files.**
-
-1. **Wrap your head around the list of projects. Rate each project based on
-(1) feasibility and (2) impact. Highlight the low-hanging fruits. Revisit the
-bookmarks.**
-
-1. **Rename "bible/" to "literature/" since all literature is welcome.**
-
-1. **Move the Anki generator to a new directory right under the root.**
-
-1. **The following README.md files may be nested too deeply within the repo.
-Consider bringing them closer to the root in order to make the information
-easier to retrieve.**
-
-- `./bible/stshenouda.org/README.md`
-- `./dictionary/copticocc.org/README.md`
-- `./dictionary/marcion.sourceforge.net/README.md`
-- `./dictionary/marcion.sourceforge.net/data/README.md`
-- `./dictionary/marcion.sourceforge.net/data/img/README.md`
-- `./dictionary/stshenouda.org/data/README.md`
-- `./dictionary/apps.ankiweb.net/README.md`
-
-1. **Document the repo properly and invite collaborators.**
+1. **Add screenshots of the flashcards in this repo.**
 
 1. **Use "Crum" in place of "Marcion".**
 
-1. Document the root directories that the scripts typically run from.
+1. **Move / reproduce TODO's from the code in the README files. Only
+   low-priority, niche items should stay in the code.**
+
+   ```bash
+   grep TODO -R bible dictionary keyboard flashcards
+   ```
+
+1. **Some README.md files may be nested too deeply within the repo.
+Consider bringing them closer to the root in order to make the information
+easier to retrieve.**
+
+```bash
+find -type f -name README.md
+```
+
+1. **Document the repo in a way that makes it possible to invite collaborators.**
 
 1. Document the snapshot dates and versions of the apps and data imported
 into the repo.
 
-### Coding
+#### Drive
 
-#### Code Health
+1. **Link Drive items in this repo.**
+
+1. **Move / reproduce TODO's from Drive in the README files.**
+
+### Coding Tasks
+
+#### Collaborator Convenience
+
+1. **Support more seamless integration between Drive and your scripts.** (1-2
+   hours)
+
+   Likely, this means letting them contribute through Drive instead of Git.
+   List the data sources, and redirect the flow to Drive (think about this!)
+   A few sources that immediately come to my mind are:
+
+   - Crum
+   - Crum's Notes
+   - Crum's Images
+   - The Bible
+   - copticsite.com's Dictionary
+   - Dawoud's screenshots
+
+   Thinking about Drive, it might be even easier for users to contribute
+   through a sheet instead of a Drive folder (e.g. for notes). Use sheets
+   whenever possible.
+
+   Thought: Another possibility is for Git to continue to be the source of truth.
+   But what we can do is have users share their contributions via Drive, and then
+   we will implement a pipeline to integrate the contributions made through Drive
+   into Git.
+
+#### Flashcards
+
+1. **Deploy the flashcards on a standalone app.** (100+ hours, delegate)
 
 1. **Define the output in a constants file rather than commandline flags.**
    (3-4 hours)
@@ -191,34 +216,31 @@ into the repo.
 1. **Make it optional for the back of a card to substitute for a front if the
    front is absent.** (1-2 hours, has prerequisite)
 
+1. **Add a Sahidic version and a complete version of Crum.** (1-2
+   hours)
+
+1. **Publish the decks through Anki.**
+
+1. Flashcard synchronization seems to be working fine. However, running the
+   generation script twice produces a different file, and reimporting
+   (supposedly identical data) produces the message "notes were used to update
+   existing ones. Investigate.
+
+1. Revisit the possibility of image compression to minimize the package size.
+
+#### Dictionary / copticsite.com
+
 1. **Create a `prettify` version of the copticsite.com dictionary.** (1-2
    hours)
 
-#### Crum (Marcion)
+1. Use the newer version of [copticsite.com](https://copticsite.com/) once
+   published.
+
+#### Dictionary / Crum (Marcion)
 
 1. **Add word derivations to a TSV, and then to the flashcards.** (3-4 hours)
 
 1. **Add the extra columns to `roots.tsv`.** (1 hour)
-
-1. **Add a Sahidic version and a complete version of the dictionary.** (1-2
-   hours)
-
-#### Collaborator Convenience
-
-1. **Support more seamless integration between Drive and your scripts.** (1-2
-   hours)
-
-1. **It might be easier for contributors if the "Notes" field in the Anki package
-   should be retrieved from a Drive folder or gsheet, rather than a Git
-   directory.** (1-2 hours)
-
-1. **Consider retrieving the images from a Drive folder or even from a
-   spreadsheet if possible.** (1-2 hours)
-
-   Thought: Another possibility is for Git to continue to be the source of truth.
-   But what we can do is have users share their contributions via Drive, and then
-   we will implement a pipeline to integrate the contributions made through Drive
-   into Git.
 
 #### New Dictionaries Parsing or Crawling
 
@@ -230,13 +252,10 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas). (20+ hours)
 
 1. Get the new version of copticsite.com's dictionary.
 
-#### Platform
-
-1. **Deploy the flashcards on a standalone app.** (100+ hours, delegate)
-
-1. Publish the decks through Anki.
-
 #### Developer Convenience
+
+This is not a list of tasks, but more of a list of ideas that you can choose to
+abide by if you want to.
 
 1. Add unit tests.
 
@@ -244,9 +263,16 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas). (20+ hours)
    control on the code. You could run unit tests, `doctoc README.md`, and also
    force the data to follow a certain structure.
 
+1. The default arguments should be set such that everything can run from the
+   repo's root directory.
+
+1. Do not let Python tempt you to use its built-in types instead of classes and
+   objects. Don't forget about OOP!
+
 1. Add doc comments.
 
-1. Add assertions.
+1. Add assertions and throw exceptions for any assumptions that you make. They
+   catch a lot of bugs! A lot!
 
 1. Strip inputs more liberally.
 
@@ -256,19 +282,6 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas). (20+ hours)
 1. Collect and print stats.
 
 1. Learn more Vim!
-
-#### Archive
-
-1. Use the newer version of [copticsite.com](https://copticsite.com/) once published.
-
-1. Synchronization seems to be working fine. However, running the generation
-   script twice produces a different file, and reimporting (supposedly
-   identical data) produces the message "notes were used to update existing
-   ones. Investigate.
-
-1. Revisit the possibility of image compression to minimize the package size.
-
-## Notes For Developers
 
 ### Directory Structure
 
@@ -345,14 +358,3 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas). (20+ hours)
    1. Model ID
 
    Model IDs are hardcoded.
-
-## Credits
-
-The data used here was digitalized and published through the efforts of:
-
-1. Milan Konvicka, creator of [Marcion](https://marcion.sourceforge.net/)
-
-1. Hany Takla, founder of [Saint Shenouda The Archimandrite – Coptic
-   Society](http://stshenouda.org/)
-
-1. Osama Thabet, creator of [copticsite.com](<https://copticsite.com/>]

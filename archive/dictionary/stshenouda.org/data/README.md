@@ -13,7 +13,8 @@ file using our script.
 
 - `class_frequency.txt` offers insights into the HTML structure. It's obtained
 by running the following:
-```
+
+```bash
 cat coptdict-converted-tail.html \
   | grep -o 'class="[^"]*"' \
   | grep -oE '"[^"]+"' \

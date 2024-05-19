@@ -1,3 +1,5 @@
+# flashcards
+
 `anki.py` is used to generate Anki packages.
 
 It is currently not possible to upload the packages to GitHub, so we are
