@@ -191,6 +191,11 @@ into the repo.
 1. **To minimize the chances of collision, use the deck name as a prefix of the
    note ID.** (1 hour)
 
+1. **Make it optional for the back of a card to substitute for a front if the
+   front is absent.**
+
+1. **Create a `prettify` version of the copticsite.com dictionary.**
+
 #### Crum (Marcion)
 
 1. **Add word derivations to a TSV, and then to the flashcards.** (3-4 hours)
