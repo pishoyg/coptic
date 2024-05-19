@@ -63,12 +63,18 @@ Also feel free to reach out with questions.
 
 #### Crum: New Fields
 
-1. **Collect more explanatory pictures.**
+1. **Collect more explanatory pictures.** (100+ hours, delegate)
+
+   This will significantly aid the
+   learning process, and it will save learners the time that they have to spend
+   on looking up the obscure vocabulary or unfamiliar terms.
 
 1. Collect more explanatory notes.
 
 1. ? Add a meanings that would be displayed on top before Crum's translation.
-   Some of Crum's translations are obscure.
+   Some of Crum's translations are obscure or outdated (meaning either that the
+   translation is archaic, or that we understand the meaning of the word better
+   than he did back then).
 
 1. ? Add literature citations. Perhaps from Scriptorium? Perhaps from the
    Bible?
@@ -77,15 +83,18 @@ Also feel free to reach out with questions.
 
 #### Moawad Dawoud's Diciontary
 
-1. **Add Moawad Dawoud's page numbers, and add scans to the flashcards.**
+1. **Add Moawad Dawoud's page numbers, and add scans to the flashcards.** (50+
+   hours, delegate)
 
-1. **Add Moawad Dawoud's Arabic translations.**
+1. Add Moawad Dawoud's Arabic translations.
 
-1. **Add Moawad Dawoud's standardized spellings.**
+1. Add Moawad Dawoud's standardized spellings.
 
 1. Copy the Greek loanwords from Moawad into a new flashcard deck. (This may be
    less urgent if you incorporate Scriptorium's data, which you must do
    anyway.)
+
+1. Digitalize the entirety of Dawoud's dictionary.
 
 #### Crum's Dictionary
 
@@ -118,7 +127,7 @@ Also feel free to reach out with questions.
 
 ### Documentation
 
-(1-2 days)
+(7-8 hours)
 
 1. **Move the TODO's to the correct directories.**
 
@@ -169,17 +178,17 @@ into the repo.
 
 #### Code Health
 
-1. **Use `0003 - New Coptic English Arabic dictionary 30 may 2023.xlsx`.**
+1. **Make image senses mandatory to avoid confusion, and to simplify sorting.**
+   (1 hour)
 
 1. **Define the output in a constants file rather than commandline flags.**
-
-1. **To minimize the chances of collision, use the deck name as a prefix of the
-   note ID.**
+   (3-4 hours)
 
 1. **Do NOT weave yarn. Create a type that can combine several fields. This will
-   make it possible to combine the `SEQ` type with other types.**
+   make it possible to combine the `SEQ` type with other types.** (3-4 hours)
 
-1. **Make image senses mandatory to avoid confusion, and to simplify sorting.**
+1. **To minimize the chances of collision, use the deck name as a prefix of the
+   note ID.** (1 hour)
 
 #### Crum (Marcion)
 
@@ -210,7 +219,7 @@ into the repo.
 #### New Dictionaries Parsing or Crawling
 
 1. **Incorporate Scriptorium's data. Gain familiarity with their platform.
-   Parse their dictionary.** (7-8 hours)
+   Parse their dictionary.** (7-8 hours, delegated)
 
 1. Get the new version of copticsite.com's dictionary.
 
@@ -218,9 +227,13 @@ into the repo.
 
 #### Platform
 
-1. **Deploy the flashcards on a standalone app.**
+1. **Deploy the flashcards on a standalone app.** (100+ hours, delegate)
 
 1. Revisit the possibility of publishing the decks through Anki.
+
+#### Dataset: copticsite.com
+
+1. Use the newer version of the dictionary once published.
 
 #### Developer Convenience
 
