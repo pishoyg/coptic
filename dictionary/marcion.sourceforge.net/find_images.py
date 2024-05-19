@@ -10,6 +10,7 @@ import pillow_avif
 from PIL import Image
 
 DIGITS_RE = re.compile(r"\d+")
+FILE_NAME_RE = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
 
 argparser = argparse.ArgumentParser(
     description="""Find images for the dictionary words.
@@ -145,18 +146,15 @@ args = argparser.parse_args()
 
 
 def get_max_idx(g, key, sense):
+    key = str(key)
+    sense = str(sense)
     highest = 0
-    for name in g:
-        name = os.path.basename(name)
-        assert name.startswith(str(key) + "-")
-        cur = DIGITS_RE.match(name).group()
-        assert cur
-        if sense and cur != sense:
+    for path in g:
+        match = FILE_NAME_RE.match(os.path.basename(path))
+        assert match.group(1) == key
+        if match.group(2) != sense:
             continue
-        if sense:
-            cur = DIGITS_RE.match(name[name.find("-") + 1 :]).group()
-            assert cur
-        highest = max(highest, int(cur))
+        highest = max(highest, int(match.group(3)))
     return highest
 
 
@@ -183,8 +181,10 @@ def query(meaning):
 
 
 def file_name(key, sense, idx, ext):
-    if not sense:
-        return f"{key}-{idx}{ext}"
+    assert key
+    assert sense
+    assert idx
+    assert ext
     return f"{key}-{sense}-{idx}{ext}"
 
 
@@ -225,16 +225,16 @@ def main():
 
         while True:
             # Force read a valid sense, or no sense at all.
-            while True:
-                sense = input()
-                if not sense:
-                    break
-                try:
-                    sense = int(sense)
-                    assert sense >= 0
-                    break
-                except:
-                    print("The sense must be a non-negative integer.")
+            sense = input("Input sense number. Type 's' to skip.").lower()
+            if sense == "s":
+                break
+            if not sense.isdigit():
+                print(f"Unable to parse {sense}")
+                continue
+            sense = int(sense)
+            if sense <= 0:
+                print("Sense must be a positive integer.")
+                continue
 
             files = get_downloads()
 
@@ -247,38 +247,35 @@ def main():
             # add pictures for this word. (Unless they typed a sense, in which
             # case it would be weird!)
             if not files:
-                if sense:
-                    print(
-                        "You typed a sense, but there are no pictures! This"
-                        " doesn't make sense!"
-                    )
-                    continue
-                break
+                print(
+                    "You typed a sense, but there are no pictures! This"
+                    " doesn't make sense!"
+                )
+                continue
 
             # Verify the images.
             if args.verify_before_copying:
                 i = "n"
-                while i.lower() not in ["y", "yes"]:
+                while True:
                     open_images(files)
-                    i = input(f"Sense = {sense}. Looks good? (yes/no/sense)")
+                    i = input(f"Sense = {sense}. Looks good? (yes/no/sense)").lower()
                     if i.isdigit():
-                        sense = i
+                        sense = int(i)
+                    if i in {"y", "yes"}:
+                        break
                     files = get_downloads()
 
             # Move the files.
+            idx = get_max_idx(g, key, sense)
             for file in files:
-                _, ext = os.path.splitext(file)
-                idx = get_max_idx(g, key, sense)
                 idx += 1
+                _, ext = os.path.splitext(file)
                 pathlib.Path(file).rename(
                     os.path.join(
                         args.destination,
                         file_name(key=key, sense=sense, idx=idx, ext=ext),
                     )
                 )
-
-            if not sense:
-                break
 
 
 if __name__ == "__main__":
