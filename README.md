@@ -179,9 +179,6 @@ into the repo.
 
 #### Code Health
 
-1. **Make image senses mandatory to avoid confusion, and to simplify sorting.**
-   (1 hour)
-
 1. **Define the output in a constants file rather than commandline flags.**
    (3-4 hours)
 
@@ -192,9 +189,10 @@ into the repo.
    note ID.** (1 hour)
 
 1. **Make it optional for the back of a card to substitute for a front if the
-   front is absent.**
+   front is absent.** (1-2 hours, has prerequisite)
 
-1. **Create a `prettify` version of the copticsite.com dictionary.**
+1. **Create a `prettify` version of the copticsite.com dictionary.** (1-2
+   hours)
 
 #### Crum (Marcion)
 
@@ -227,15 +225,16 @@ into the repo.
 1. **Incorporate Scriptorium's data. Gain familiarity with their platform.
    Parse their dictionary.** (7-8 hours, delegated)
 
-1. Get the new version of copticsite.com's dictionary.
+1. Crawl [Wiktionary - Category:Coptic lemmas](
+https://en.wiktionary.org/wiki/Category:Coptic_lemmas). (20+ hours)
 
-1. Crawl [Wiktionary - Category:Coptic lemmas](https://en.wiktionary.org/wiki/Category:Coptic_lemmas).
+1. Get the new version of copticsite.com's dictionary.
 
 #### Platform
 
 1. **Deploy the flashcards on a standalone app.** (100+ hours, delegate)
 
-1. Revisit the possibility of publishing the decks through Anki.
+1. Publish the decks through Anki.
 
 #### Developer Convenience
 
