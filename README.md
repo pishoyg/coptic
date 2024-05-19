@@ -244,7 +244,11 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas). (20+ hours)
    control on the code. You could run unit tests, `doctoc README.md`, and also
    force the data to follow a certain structure.
 
-1. Add doc comments, type hints, assertions, and stripping.
+1. Add doc comments.
+
+1. Add assertions.
+
+1. Strip inputs more liberally.
 
 1. Force type hints. Use
    [type_enforced](https://github.com/connor-makowski/type_enforced).
