@@ -177,7 +177,7 @@ into the repo.
 
 #### Collaborator Convenience
 
-1. **Support more seamless integration between Drive and your scripts.** (1-2
+1. **Support more seamless integration between Drive and your scripts.** (3-4
    hours)
 
    Likely, this means letting them contribute through Drive instead of Git.
@@ -208,11 +208,11 @@ into the repo.
    note ID.** (1 hour)
 
 1. **Make it optional for the back of a card to substitute for a front if the
-   front is absent.** (1-2 hours, has prerequisite)
+   front is absent.** (1 hours)
 
-1. **Add a Sahidic version and a complete version of Crum.** (1-2 hours)
+1. **Add a Sahidic version and a complete version of Crum.** (1 hours)
 
-1. **Publish the decks through Anki.** (1-2 hours)
+1. **Publish the decks through Anki.** (1 hours)
 
 1. Flashcard synchronization seems to be working fine. However, running the
    generation script twice produces a different file, and reimporting
@@ -223,8 +223,7 @@ into the repo.
 
 #### Dictionary / copticsite.com
 
-1. **Create a `prettify` version of the copticsite.com dictionary.** (1-2
-   hours)
+1. **Create a `prettify` version of the copticsite.com dictionary.** (1 hour)
 
 1. Use the newer version of [copticsite.com](https://copticsite.com/) once
    published.
