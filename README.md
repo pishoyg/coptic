@@ -204,22 +204,15 @@ into the repo.
 
 1. **Deploy the flashcards on a standalone app.** (100+ hours, delegate)
 
-1. **Define the output in a constants file rather than commandline flags.**
-   (3-4 hours)
-
-1. **Do NOT weave yarn. Create a type that can combine several fields. This will
-   make it possible to combine the `SEQ` type with other types.** (3-4 hours)
-
 1. **To minimize the chances of collision, use the deck name as a prefix of the
    note ID.** (1 hour)
 
 1. **Make it optional for the back of a card to substitute for a front if the
    front is absent.** (1-2 hours, has prerequisite)
 
-1. **Add a Sahidic version and a complete version of Crum.** (1-2
-   hours)
+1. **Add a Sahidic version and a complete version of Crum.** (1-2 hours)
 
-1. **Publish the decks through Anki.**
+1. **Publish the decks through Anki.** (1-2 hours)
 
 1. Flashcard synchronization seems to be working fine. However, running the
    generation script twice produces a different file, and reimporting
@@ -253,6 +246,8 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas). (20+ hours)
 1. Get the new version of copticsite.com's dictionary.
 
 #### Developer Convenience
+
+(20+ hours)
 
 This is not a list of tasks, but more of a list of ideas that you can choose to
 abide by if you want to.
