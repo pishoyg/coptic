@@ -22,9 +22,6 @@
   - [Coding Tasks](#coding-tasks)
     - [Collaborator Convenience](#collaborator-convenience)
     - [Flashcards](#flashcards)
-    - [Dictionary / copticsite.com](#dictionary--copticsitecom)
-    - [Dictionary / Crum (Marcion)](#dictionary--crum-marcion)
-    - [New Dictionaries Parsing or Crawling](#new-dictionaries-parsing-or-crawling)
     - [Developer Convenience](#developer-convenience)
   - [Directory Structure](#directory-structure)
   - [Anki Keys and Synchronization](#anki-keys-and-synchronization)
@@ -204,7 +201,12 @@ into the repo.
 
 1. **Deploy the flashcards on a standalone app.** (100+ hours, delegate)
 
+1. **Incorporate Scriptorium's data. Gain familiarity with their platform.
+   Parse their dictionary.** (7-8 hours, delegated)
+
 1. **Publish the decks through Anki.** (1 hours)
+
+1. **Add word derivations to a TSV, and then to the flashcards.** (3-4 hours)
 
 1. Flashcard synchronization seems to be working fine. However, running the
    generation script twice produces a different file, and reimporting
@@ -213,28 +215,11 @@ into the repo.
 
 1. Revisit the possibility of image compression to minimize the package size.
 
-#### Dictionary / copticsite.com
-
-1. **Create a `prettify` version of the copticsite.com dictionary.** (1 hour)
-
-1. Use the newer version of [copticsite.com](https://copticsite.com/) once
-   published.
-
-#### Dictionary / Crum (Marcion)
-
-1. **Add word derivations to a TSV, and then to the flashcards.** (3-4 hours)
-
-1. **Add the extra columns to `roots.tsv`.** (1 hour)
-
-#### New Dictionaries Parsing or Crawling
-
-1. **Incorporate Scriptorium's data. Gain familiarity with their platform.
-   Parse their dictionary.** (7-8 hours, delegated)
-
 1. Crawl [Wiktionary - Category:Coptic lemmas](
 https://en.wiktionary.org/wiki/Category:Coptic_lemmas). (20+ hours)
 
-1. Get the new version of copticsite.com's dictionary.
+1. Use the newer version of [copticsite.com](https://copticsite.com/) once
+   published.
 
 #### Developer Convenience
 

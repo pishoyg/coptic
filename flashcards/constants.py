@@ -253,7 +253,7 @@ COPTICSITE_COM = deck.deck(
     key=field.seq(),
     front=field.tsv(
         "dictionary/copticsite.com/data/output/output.tsv",
-        "Coptic Unicode Alphabet",
+        "prettify",
     ),
     back=field.cat(
         field.aon(
