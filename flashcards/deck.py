@@ -7,6 +7,29 @@ import type_enforced
 MAX_ID = 1 << 31
 
 
+class stats:
+
+    def __init__(self):
+        self._exported_notes = 0
+        self._no_key = 0
+        self._no_front = 0
+        self._no_back = 0
+        self._duplicate_key = 0
+
+    def print(self):
+        print(
+            "\n".join(
+                [
+                    f"Exported {self._exported_notes} notes.",
+                    f"{self._no_key} notes are missing a key.",
+                    f"{self._no_front} notes are missing a front.",
+                    f"{self._no_back} notes are missing a back.",
+                    f"{self._duplicate_key} notes are have duplicate keys.",
+                ]
+            )
+        )
+
+
 class Note(genanki.Note):
     @property
     @type_enforced.Enforcer
@@ -20,39 +43,35 @@ def _hash(text: str) -> int:
     return int(hashlib.sha1(text.encode("utf-8")).hexdigest(), 17) % MAX_ID
 
 
+# TODO: Add more type hints.
 @type_enforced.Enforcer
-def deck(key, front, back, model_name, model_id, css, name, id, description):
-    # The key can not be constant.
-    assert type(key) is not field.txt
-    # The front and back must have defined lengths, and those must be
-    # equal.
-    assert front.length() == back.length() and front.length() > 0
-    # The model information must be constant.
-    assert type(model_name) is field.txt
-    assert type(model_id) is field.txt
-    assert type(css) is field.txt, type(css)
-    # The name and id are elusive. They are either both constants, or we
-    # get an array of names and no id.
-    assert type(id) is field.txt
-    if id.str():
-        # An ID is given. This generates a single deck.
-        assert type(name) is field.txt
-    else:
-        # The ID is absent. It will be generated as a hash of the name.
-        # The name must be non-constant.
-        assert name.length() > 0
-    # The description must be a constant.
-    assert type(description) is field.txt
-
-    model_name = model_name.str()
-    model_id = int(model_id.str())
-    css = css.str()
-    id = int(id.str()) if id.str() else 0
-    description = description.str()
+def deck(
+    deck_name: str,
+    deck_id: int,
+    deck_description: str,
+    css: str,
+    name: [None] + type_enforced.utils.WithSubclasses(field.field),
+    key: type_enforced.utils.WithSubclasses(field.field),
+    front: type_enforced.utils.WithSubclasses(field.field),
+    back: type_enforced.utils.WithSubclasses(field.field),
+    back_for_front: bool = False,
+):
+    """
+    back_for_front:
+        If true, and the front is absent, use the back instead.
+    """
+    single_deck = False
+    if name is None:
+        name = field.txt(deck_name)
+        single_deck = True
+    elif isinstance(name, field.txt):
+        # The name is a field, but it's a constant-type field.
+        assert deck_name == name.str()
+        single_deck = True
 
     model = genanki.Model(
-        model_id=model_id,
-        name=model_name,
+        model_id=deck_id,
+        name=deck_name,
         fields=[
             {"name": "Key"},
             {"name": "Front"},
@@ -68,10 +87,11 @@ def deck(key, front, back, model_name, model_id, css, name, id, description):
         css=css,
     )
 
-    length = field.num_entries(key, front, back, name)
+    length = field.num_entries(name, key, front, back)
     assert length != field.NO_LENGTH
     decks = {}
     seen_keys = set()
+    ss = stats()
     for _ in range(length):
         n = name.next()
         k = key.next()
@@ -83,25 +103,35 @@ def deck(key, front, back, model_name, model_id, css, name, id, description):
         assert n
         if not k:
             # No key! Skip!
+            ss._no_key += 1
             continue
         if k in seen_keys:
-            # Key already seen! Do nothing!
-            pass
+            # Key already seen! Skip!
+            ss._duplicate_key += 1
+            continue
         seen_keys.add(k)
         if not f:
-            # No front! Skip!
-            continue
+            # No front!
+            ss._no_front += 1
+            if back_for_front:
+                f = b
+            else:
+                continue
         if not b:
             # No back! Do nothing!
+            ss._no_back += 1
             pass
 
         if n not in decks:
             decks[n] = genanki.Deck(
-                deck_id=id or _hash(n),
+                deck_id=deck_id if single_deck else _hash(n),
                 name=n,
-                description=description,
+                description=deck_description,
             )
-        note = Note(model=model, fields=[k, f, b])
+        note = Note(model=model, fields=[f"{deck_name} - {k}", f, b])
         decks[n].add_note(note)
+        ss._exported_notes += 1
 
+    print(f"Deck name = {deck_name}")
+    ss.print()
     return decks.values(), field.merge_media_files(key, front, back, name)

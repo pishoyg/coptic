@@ -16,6 +16,7 @@ from PIL import Image
 # N.B. Pillow might be tricky for our requirements generators. You might have
 # to add it to requirements.txt manually.
 
+# TODO: Create the work directory in main.
 WORK_DIR = tempfile.TemporaryDirectory()
 
 NO_LENGTH = -1
@@ -26,17 +27,31 @@ MAX_THUMBNAIL_HEIGHT = 100000
 
 
 @type_enforced.Enforcer
-def _path_sort_key(path: str) -> list[str]:
-    path = os.path.basename(path)
-    return [x.zfill(MAX_INTEGER_LENGTH) for x in INTEGER_RE.findall(path)] + [path]
+def num_entries(*fields) -> int:
+    cur = -1
+    for f in fields:
+        length = f.length()
+        if length == -1:
+            continue
+        if cur == -1:
+            cur = length
+            continue
+        assert cur == length
+    return cur
 
 
 @type_enforced.Enforcer
 def merge_media_files(*fields):
-    s = set()
-    for f in fields:
-        s.update(f.media_files())
-    return list(s)
+    m = sum([f.media_files() for f in fields], [])
+    # Eliminate duplicates. This significantly reduces the package size.
+    # While this is handled by Anki, it's not supported in genanki.
+    return list(set(m))
+
+
+@type_enforced.Enforcer
+def _path_sort_key(path: str) -> list[str]:
+    path = os.path.basename(path)
+    return [x.zfill(MAX_INTEGER_LENGTH) for x in INTEGER_RE.findall(path)] + [path]
 
 
 @type_enforced.Enforcer
@@ -71,8 +86,12 @@ def _read_tsv_column(file_path: str, column_name: str) -> list[str]:
     return [str(cell).strip() for cell in df[column_name]]
 
 
+class field:
+    pass
+
+
 # aon = all or none.
-class aon:
+class aon(field):
     @type_enforced.Enforcer
     def __init__(self, *fields):
         self._len = num_entries(*fields)
@@ -96,7 +115,7 @@ class aon:
         return self._media_files
 
 
-class cat:
+class cat(field):
     """
     Produce a field by concatenating several fields.
     """
@@ -121,7 +140,7 @@ class cat:
         return self._media_files
 
 
-class xor:
+class xor(field):
     """
     Produce a field by returning the first non-empty entry from a set of
     fields.
@@ -148,14 +167,13 @@ class xor:
         return merge_media_files(*self._fields)
 
 
-class txt:
+class txt(field):
     """
     A constant text field.
     """
 
     @type_enforced.Enforcer
-    def __init__(self, *text: str):
-        text = "".join(text)
+    def __init__(self, text: str):
         self._text = _use_html_line_breaks(text)
 
     @type_enforced.Enforcer
@@ -175,21 +193,20 @@ class txt:
         return self._text
 
 
-class seq:
+class seq(field):
     """
     A numerical sequence field.
     """
 
     @type_enforced.Enforcer
-    def __init__(self, fmt: str, start: int):
-        self._fmt = fmt
+    def __init__(self, start: int = 1):
         self._cur = start
 
     @type_enforced.Enforcer
     def next(self) -> str:
-        ans = self._fmt.format(self._cur)
+        ans = str(self._cur)
         self._cur += 1
-        return str(ans)
+        return ans
 
     @type_enforced.Enforcer
     def length(self) -> int:
@@ -199,7 +216,7 @@ class seq:
         return []
 
 
-class tsv:
+class tsv(field):
     """
     A TSV column field.
     """
@@ -226,7 +243,7 @@ class tsv:
         return len(self._content)
 
 
-class img:
+class img(field):
     """
     Images. Retrieve keys from the column named ${KEY_COLUMN_NAME} in the TSV
     found at ${TSV_FILE_PATH}. The images are to be found at:
@@ -346,7 +363,7 @@ class img:
         return len(self._content)
 
 
-class fil:
+class fil(field):
     """
     - FIL::${TSV_FILE_PATH}::${KEY_COLUMN_NAME}::${DIR_PATH}::${FILE_NAME_FMT}
 
@@ -386,17 +403,3 @@ class fil:
     @type_enforced.Enforcer
     def length(self) -> int:
         return len(self._content)
-
-
-@type_enforced.Enforcer
-def num_entries(*fields) -> int:
-    cur = -1
-    for f in fields:
-        length = f.length()
-        if length == -1:
-            continue
-        if cur == -1:
-            cur = length
-            continue
-        assert cur == length
-    return cur

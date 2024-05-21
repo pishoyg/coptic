@@ -204,14 +204,6 @@ into the repo.
 
 1. **Deploy the flashcards on a standalone app.** (100+ hours, delegate)
 
-1. **To minimize the chances of collision, use the deck name as a prefix of the
-   note ID.** (1 hour)
-
-1. **Make it optional for the back of a card to substitute for a front if the
-   front is absent.** (1 hours)
-
-1. **Add a Sahidic version and a complete version of Crum.** (1 hours)
-
 1. **Publish the decks through Anki.** (1 hours)
 
 1. Flashcard synchronization seems to be working fine. However, running the

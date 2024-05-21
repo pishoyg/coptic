@@ -20,6 +20,27 @@ argparser.add_argument(
 args = argparser.parse_args()
 
 
+def assert_unique(s, key):
+    assert key not in s, f"{s} already contains {key}"
+    s.add(key)
+
+
+def validate(decks):
+    ids = set()
+    names = set()
+    model_ids = set()
+    model_names = set()
+    note_keys = set()
+    for d in decks:
+        assert_unique(ids, d.deck_id)
+        assert_unique(names, d.name)
+        for model in d.models:
+            assert_unique(model_names, model.name)
+            assert_unique(model_ids, model.id)
+        for note in d.notes:
+            assert_unique(note_keys, note.guid)
+
+
 @type_enforced.Enforcer
 def main():
     media_files = set()
@@ -32,7 +53,9 @@ def main():
         media_files.update(cur_media_files)
 
     media_files = list(media_files)
-    package = genanki.Package(decks, media_files=media_files)
+
+    validate(decks)
+    package = genanki.Package(decks, media_files=list(set(media_files)))
     package.write_to_file(args.output)
 
     field.WORK_DIR.cleanup()
