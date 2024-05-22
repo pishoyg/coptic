@@ -8,7 +8,11 @@ import type_enforced
 BOHAIRIC_CRUM_ID = 1284010383
 SAHIDIC_CRUM_ID = 1284010386
 CRUM_ID = 1284010387
-BIBLE_ID = 1284010384
+
+BOHAIRIC_BIBLE_ID = 1284010384
+SAHIDIC_BIBLE_ID = 1284010388
+BIBLE_ID = 1284010389
+
 COPTICSITE_COM_ID = 1284010385
 
 # Deck Names.
@@ -17,7 +21,11 @@ COPTICSITE_COM_ID = 1284010385
 BOHAIRIC_CRUM_NAME = "Crum::Coptic Dictionary - Bohairic"
 SAHIDIC_CRUM_NAME = "Crum::Coptic Dictionary - Sahidic"
 CRUM_NAME = "Crum::Coptic Dictionary"
+
+BOHAIRIC_BIBLE_NAME = "Bible - Bohairic"
+SAHIDIC_BIBLE_NAME = "Bible - Sahidic"
 BIBLE_NAME = "Bible"
+
 COPTICSITE_COM_NAME = "copticsite.com"
 
 # N.B. Besides the constants defined above, the "name" and "key" fields in the
@@ -25,6 +33,19 @@ COPTICSITE_COM_NAME = "copticsite.com"
 # The "name" argument is used to generate deck names for datasets that generate
 # multiple decks.
 # The "key" field is used to key the notes.
+
+BIBLE_LANGUAGES = [
+    "Bohairic",
+    "English",
+    "Sahidic",
+    "Fayyumic",
+    "Akhmimic",
+    "OldBohairic",
+    "Mesokemic",
+    "DialectP",
+    "Lycopolitan",
+    "Greek",
+]
 
 
 @type_enforced.Enforcer
@@ -136,132 +157,77 @@ def crum(deck_name: str, deck_id: int, front_column: str):
     )
 
 
-BIBLE = deck.deck(
-    deck_name=BIBLE_NAME,
-    deck_id=BIBLE_ID,
-    deck_description="URL: https://github.com/pishoyg/coptic/.\n"
-    "Contact: pishoybg@gmail.com.",
-    css=".card { font-size: 18px; }",
-    # N.B. The name is a protected field.
-    name=field.aon(
-        field.txt(BIBLE_NAME),
-        field.txt("::"),
-        field.tsv(
-            "bible/stshenouda.org/data/output/csv/bible.csv", "testament-indexed"
-        ),
-        field.txt("::"),
-        field.tsv("bible/stshenouda.org/data/output/csv/bible.csv", "section-indexed"),
-        field.txt("::"),
-        field.tsv("bible/stshenouda.org/data/output/csv/bible.csv", "book-indexed"),
-        field.txt("::"),
-        field.tsv("bible/stshenouda.org/data/output/csv/bible.csv", "chapter-zfilled"),
-    ),
-    # N.B. The key is a protected field. Do not change unless you know what
-    # you're doing.
-    key=field.aon(
-        field.txt(BIBLE_NAME),
-        field.txt("::"),
-        field.txt("Bohairic"),
-        field.txt(" - "),
-        field.txt("("),
-        field.tsv("bible/stshenouda.org/data/output/csv/bible.csv", "book"),
-        field.txt(" "),
-        field.tsv("bible/stshenouda.org/data/output/csv/bible.csv", "chapter"),
-        field.txt(":"),
-        field.tsv("bible/stshenouda.org/data/output/csv/bible.csv", "verse"),
-        field.txt(")"),
-    ),
-    front=field.aon(
-        field.tsv(
-            "bible/stshenouda.org/data/output/csv/bible.csv",
-            "Bohairic",
-        )
-    ),
-    back=field.cat(
-        # Reference.
-        field.aon(
-            field.txt("("),
-            field.tsv("bible/stshenouda.org/data/output/csv/bible.csv", "book"),
-            field.txt(" "),
-            field.tsv("bible/stshenouda.org/data/output/csv/bible.csv", "chapter"),
+@type_enforced.Enforcer
+def bible(deck_name: str, deck_id: int, front_dialects: list[str], nest: str):
+
+    def tsv_column(col_name):
+        return field.tsv("bible/stshenouda.org/data/output/csv/bible.csv", col_name)
+
+    def verse(language):
+        return field.aon(
+            field.txt(f"<b>{language}</b>"),
             field.txt(":"),
-            field.tsv("bible/stshenouda.org/data/output/csv/bible.csv", "verse"),
+            field.txt("<br>"),
+            tsv_column(language),
+            field.txt("<br>"),
+            field.txt("<br>"),
+        )
+
+    assert all(dialect in BIBLE_LANGUAGES for dialect in front_dialects)
+
+    return deck.deck(
+        deck_name=deck_name,
+        deck_id=deck_id,
+        deck_description="URL: https://github.com/pishoyg/coptic/.\n"
+        "Contact: pishoybg@gmail.com.",
+        css=".card { font-size: 18px; }",
+        # N.B. The name is a protected field.
+        name=field.aon(
+            field.txt(BIBLE_NAME),
+            field.txt("::"),
+            field.txt(nest),
+            field.txt("::"),
+            tsv_column("section-indexed-no-testament"),
+            field.txt("::"),
+            tsv_column("book-indexed"),
+            field.txt("::"),
+            tsv_column("chapter-zfilled"),
+        ),
+        # N.B. The key is a protected field. Do not change unless you know what
+        # you're doing.
+        key=field.aon(
+            field.txt(deck_name),
+            field.txt(" - "),
+            field.txt("("),
+            tsv_column("book"),
+            field.txt(" "),
+            tsv_column("chapter"),
+            field.txt(":"),
+            tsv_column("verse"),
             field.txt(")"),
-            field.txt("<br>"),
-            field.txt("<br>"),
         ),
-        # English.
-        field.aon(
-            field.txt("<b>English:</b>"),
-            field.txt("<br>"),
-            field.tsv("bible/stshenouda.org/data/output/csv/bible.csv", "English"),
-            field.txt("<br>"),
-            field.txt("<br>"),
+        front=(
+            field.cat(*[verse(lang) for lang in front_dialects])
+            if len(front_dialects) > 1
+            else tsv_column(front_dialects[0])
         ),
-        # Sahidic.
-        field.aon(
-            field.txt("<b>Sahidic:</b>"),
-            field.txt("<br>"),
-            field.tsv("bible/stshenouda.org/data/output/csv/bible.csv", "Sahidic"),
-            field.txt("<br>"),
-            field.txt("<br>"),
+        back=field.cat(
+            # Reference.
+            field.aon(
+                field.txt("("),
+                tsv_column("book"),
+                field.txt(" "),
+                tsv_column("chapter"),
+                field.txt(":"),
+                tsv_column("verse"),
+                field.txt(")"),
+                field.txt("<br>"),
+                field.txt("<br>"),
+            ),
+            *[verse(lang) for lang in BIBLE_LANGUAGES if lang not in front_dialects],
         ),
-        # Fayyumic.
-        field.aon(
-            field.txt("<b>Fayyumic:</b>"),
-            field.txt("<br>"),
-            field.tsv("bible/stshenouda.org/data/output/csv/bible.csv", "Fayyumic"),
-            field.txt("<br>"),
-            field.txt("<br>"),
-        ),
-        # Akhmimic.
-        field.aon(
-            field.txt("<b>Akhmimic:</b>"),
-            field.txt("<br>"),
-            field.tsv("bible/stshenouda.org/data/output/csv/bible.csv", "Akhmimic"),
-            field.txt("<br>"),
-            field.txt("<br>"),
-        ),
-        # OldBohairic.
-        field.aon(
-            field.txt("<b>OldBohairic:</b>"),
-            field.txt("<br>"),
-            field.tsv("bible/stshenouda.org/data/output/csv/bible.csv", "OldBohairic"),
-            field.txt("<br>"),
-            field.txt("<br>"),
-        ),
-        # Mesokemic.
-        field.aon(
-            field.txt("<b>Mesokemic:</b>"),
-            field.txt("<br>"),
-            field.tsv("bible/stshenouda.org/data/output/csv/bible.csv", "Mesokemic"),
-            field.txt("<br>"),
-            field.txt("<br>"),
-        ),
-        # DialectP.
-        field.aon(
-            field.txt("<b>DialectP:</b>"),
-            field.txt("<br>"),
-            field.tsv("bible/stshenouda.org/data/output/csv/bible.csv", "DialectP"),
-            field.txt("<br>"),
-            field.txt("<br>"),
-        ),
-        # Lycopolitan.
-        field.aon(
-            field.txt("<b>Lycopolitan:</b>"),
-            field.txt("<br>"),
-            field.tsv("bible/stshenouda.org/data/output/csv/bible.csv", "Lycopolitan"),
-            field.txt("<br>"),
-            field.txt("<br>"),
-        ),
-        # Greek.
-        field.aon(
-            field.txt("<b>Greek:</b>"),
-            field.txt("<br>"),
-            field.tsv("bible/stshenouda.org/data/output/csv/bible.csv", "Greek"),
-        ),
-    ),
-)
+    )
+
 
 COPTICSITE_COM = deck.deck(
     deck_name=COPTICSITE_COM_NAME,
@@ -318,4 +284,21 @@ BOHAIRIC_CRUM = crum(BOHAIRIC_CRUM_NAME, BOHAIRIC_CRUM_ID, "dialect-B")
 SAHIDIC_CRUM = crum(SAHIDIC_CRUM_NAME, SAHIDIC_CRUM_ID, "dialect-S")
 CRUM = crum(CRUM_NAME, CRUM_ID, "word-parsed-prettify")
 
-DECKS = [BOHAIRIC_CRUM, SAHIDIC_CRUM, CRUM, BIBLE, COPTICSITE_COM]
+BOHAIRIC_BIBLE = bible(BOHAIRIC_BIBLE_NAME, BOHAIRIC_BIBLE_ID, ["Bohairic"], "Bohairic")
+SAHIDIC_BIBLE = bible(SAHIDIC_BIBLE_NAME, SAHIDIC_BIBLE_ID, ["Sahidic"], "Sahidic")
+BIBLE = bible(
+    BIBLE_NAME,
+    BIBLE_ID,
+    [lang for lang in BIBLE_LANGUAGES if lang != "English" and lang != "Greek"],
+    "Coptic",
+)
+
+DECKS = [
+    BOHAIRIC_CRUM,
+    SAHIDIC_CRUM,
+    CRUM,
+    BOHAIRIC_BIBLE,
+    SAHIDIC_BIBLE,
+    BIBLE,
+    COPTICSITE_COM,
+]

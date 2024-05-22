@@ -141,6 +141,8 @@ The data used here was digitalized and published through the efforts of:
 
 (7-8 hours)
 
+1. **Reduce the confusion surrounding names and IDs.**
+
 1. **Add screenshots of the flashcards in this repo.**
 
 1. **Use "Crum" in place of "Marcion".**
@@ -202,8 +204,6 @@ into the repo.
 
 1. **Incorporate Scriptorium's data. Gain familiarity with their platform.
    Parse their dictionary.** (7-8 hours, delegated)
-
-1. **Publish several versions of the Bible.** (1-2 hours)
 
 1. **Publish the decks through Anki.** (1 hours)
 

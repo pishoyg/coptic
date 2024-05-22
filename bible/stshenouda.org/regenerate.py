@@ -359,15 +359,18 @@ def main():
     book_to_testament_indexed = {}
     book_to_section = {}
     book_to_section_indexed = {}
+    book_to_section_indexed_no_testament = {}
     book_to_book_indexed = {}
 
     with open(args.json) as j:
         bible = json.loads(j.read())
         testament_idx = 0
+        section_idx_no_testament = 0
         for testament_name, testament in bible.items():
             testament_idx += 1
             section_idx = 0
             for section_name, section in testament.items():
+                section_idx_no_testament += 1
                 section_idx += 1
                 book_idx = 0
                 for book_name in section:
@@ -380,6 +383,9 @@ def main():
                     book_to_section[book_name] = section_name
                     book_to_section_indexed[book_name] = "{}. {}".format(
                         section_idx, section_name
+                    )
+                    book_to_section_indexed_no_testament[book_name] = "{}. {}".format(
+                        str(section_idx_no_testament).zfill(2), section_name
                     )
                     book_to_book_indexed[book_name] = "{}. {}".format(
                         str(book_idx).zfill(2), book_name
@@ -442,6 +448,9 @@ def main():
                     "testament-indexed": book_to_testament_indexed[book_name],
                     "section": book_to_section[book_name],
                     "section-indexed": book_to_section_indexed[book_name],
+                    "section-indexed-no-testament": book_to_section_indexed_no_testament[
+                        book_name
+                    ],
                     "book-indexed": book_to_book_indexed[book_name],
                 }
                 for lang in LANGUAGES:
