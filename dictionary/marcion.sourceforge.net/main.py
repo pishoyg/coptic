@@ -4,6 +4,7 @@ import parser
 import constants
 import gspread
 import pandas as pd
+import tree
 import type_enforced
 from oauth2client.service_account import ServiceAccountCredentials
 
@@ -105,24 +106,27 @@ args = argparser.parse_args()
 @type_enforced.Enforcer
 def main() -> None:
     # Process roots.
-    df = pd.read_csv(args.coptwrd_tsv, sep="\t", encoding="utf-8").fillna("")
-    process_data(df, strict=True)
-    df.to_csv(args.roots_tsv, sep="\t", index=False)
+    roots = pd.read_csv(args.coptwrd_tsv, sep="\t", encoding="utf-8").fillna("")
+    process_data(roots, strict=True)
+    roots.to_csv(args.roots_tsv, sep="\t", index=False)
 
     if args.gspread_owner:
-        write_to_gspread(df)
+        write_to_gspread(roots)
     parser.verify(constants.ROOTS_REFERENCE_COUNT * 2)
     parser.reset()
 
     # Process derivations.
-    df = pd.read_csv(args.coptdrv_tsv, sep="\t", encoding="utf-8").fillna("")
-    process_data(df, strict=False)
-    df.to_csv(args.derivations_tsv, sep="\t", index=False)
+    derivations = pd.read_csv(args.coptdrv_tsv, sep="\t", encoding="utf-8").fillna("")
+    process_data(derivations, strict=False)
+    derivations.to_csv(args.derivations_tsv, sep="\t", index=False)
 
     if args.gspread_owner:
-        write_to_gspread(df)
+        write_to_gspread(derivations)
     parser.verify(constants.DERIVATIONS_REFERENCE_COUNT * 2)
     parser.reset()
+
+    # Build a tree combining both.
+    build_tree(roots, derivations)
 
 
 @type_enforced.Enforcer
@@ -199,6 +203,18 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
 
     for col, values in extra_cols.items():
         df[col] = values
+
+
+def build_tree(roots, derivations):
+    roots = {row["key"]: tree.node(row) for _, row in roots.iterrows()}
+    derivations = {row["key"]: tree.node(row) for _, row in derivations.iterrows()}
+    for _, n in derivations.items():
+        key_word = n.row()["key_word"]
+        roots[key_word].add_child(n)
+    for _, n in roots.items():
+        n.sort()
+    for _, n in roots.items():
+        n.tree()
 
 
 @type_enforced.Enforcer
