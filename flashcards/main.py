@@ -25,15 +25,15 @@ def assert_unique(s, key):
     s.add(key)
 
 
-def validate(decks):
-    ids = set()
-    names = set()
+def validate_unique_object_keys(decks):
+    deck_ids = set()
+    deck_names = set()
     model_ids = set()
     model_names = set()
     note_keys = set()
     for d in decks:
-        assert_unique(ids, d.deck_id)
-        assert_unique(names, d.name)
+        assert_unique(deck_ids, d.deck_id)
+        assert_unique(deck_names, d.name)
         for model in d.models:
             assert_unique(model_names, model.name)
             assert_unique(model_ids, model.id)
@@ -54,7 +54,7 @@ def main():
 
     media_files = list(media_files)
 
-    validate(decks)
+    validate_unique_object_keys(decks)
     package = genanki.Package(decks, media_files=list(set(media_files)))
     package.write_to_file(args.output)
 

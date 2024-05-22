@@ -5,7 +5,9 @@
 It is currently not possible to upload the packages to GitHub, so we are
 keeping them in a drive. You can download the package [here](https://drive.google.com/file/d/1KV0fH23Zucmlvdc0dwTJiDdqKIvbuYY_/view?usp=sharing).
 
-**TODO: rewrite the following in Markdown.**
+## Fields
+
+**TODO: Rewrite the following docs in Markdown.**
 
 """Generate an Anki package.
 
@@ -71,3 +73,16 @@ Image / file sorting:
   If the string doesn't contain any integers, pure lexicographical ordering
   will be used.
 """
+
+## Keys and Synchronization
+
+In `constants.py`, several fields are protected. These include:
+
+When generating keys, we generally prefix the key with the deck name to ensure
+uniqueness.
+
+- The deck ID constants.
+
+- The deck name constants.
+
+- The `key` and `name` arguments.

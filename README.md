@@ -14,11 +14,10 @@
   - [Crum's Dictionary](#crums-dictionary)
   - [Other Dictionaries](#other-dictionaries)
   - [Neologisms](#neologisms)
+  - [Learning Curriculum](#learning-curriculum)
 - [Credits](#credits)
 - [For Developers](#for-developers)
   - [Documentation Tasks](#documentation-tasks)
-    - [Git](#git)
-    - [Drive](#drive)
   - [Coding Tasks](#coding-tasks)
     - [Collaborator Convenience](#collaborator-convenience)
     - [Flashcards](#flashcards)
@@ -67,15 +66,15 @@ Also feel free to reach out with questions.
 
 1. Collect more explanatory notes.
 
-1. ? Add a meanings that would be displayed on top before Crum's translation.
+1. Add a meanings that would be displayed on top before Crum's translation.
    Some of Crum's translations are obscure or outdated (meaning either that the
    translation is archaic, or that we understand the meaning of the word better
    than he did back then).
 
-1. ? Add literature citations. Perhaps from Scriptorium? Perhaps from the
+1. Add literature citations. Perhaps from Scriptorium? Perhaps from the
    Bible?
 
-1. ? Add pronunciations.
+1. Add pronunciations.
 
 ### Moawad Dawoud's Diciontary
 
@@ -101,7 +100,7 @@ Also feel free to reach out with questions.
    high-quality, and has a very small number of typos. However, they do exist.
    (This is more of an ongoing effort than a task.)
 
-1. Contemplate sorting the dictionary words by popularity.
+1. Contemplate sorting the dictionary words by popularity, somehow.
 
 1. Contemplate dividing the decks to subsets sorted by popularity, so the
    learners can learn the more important words first.
@@ -118,8 +117,12 @@ Also feel free to reach out with questions.
 
 ### Neologisms
 
-1. ? Add neologisms. (We need to think first of how to create neologisms before
+1. Add neologisms. (We need to think first of how to create neologisms before
    we add them to our dataset.)
+
+### Learning Curriculum
+
+1. Create Duolingo-like learning curricula for learners at multiple levels.
 
 ## Credits
 
@@ -137,8 +140,6 @@ The data used here was digitalized and published through the efforts of:
 ### Documentation Tasks
 
 (7-8 hours)
-
-#### Git
 
 1. **Add screenshots of the flashcards in this repo.**
 
@@ -163,8 +164,6 @@ find -type f -name README.md
 
 1. Document the snapshot dates and versions of the apps and data imported
 into the repo.
-
-#### Drive
 
 1. **Link Drive items in this repo.**
 
@@ -204,6 +203,8 @@ into the repo.
 1. **Incorporate Scriptorium's data. Gain familiarity with their platform.
    Parse their dictionary.** (7-8 hours, delegated)
 
+1. **Publish several versions of the Bible.** (1-2 hours)
+
 1. **Publish the decks through Anki.** (1 hours)
 
 1. **Add word derivations to a TSV, and then to the flashcards.** (3-4 hours)
@@ -212,6 +213,16 @@ into the repo.
    generation script twice produces a different file, and reimporting
    (supposedly identical data) produces the message "notes were used to update
    existing ones. Investigate.
+
+   Followup: This is likely due to the timestamps that the notes are recorded
+   with. The newer timestamps make Anki think that the cards are newer. It is
+   best, when exporting a new version of the package, to only include the notes
+   that have changed content. `genanki` doesn't have a friendly way to support
+   this (not even by reading the existing package and comparing the new data
+   against it), so we will likely have to do lots of manual work to avoid the
+   problem.
+
+1. Understand note sorting. (`genanki` has a `sort_key` argument.)
 
 1. Revisit the possibility of image compression to minimize the package size.
 

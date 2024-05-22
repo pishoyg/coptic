@@ -20,11 +20,11 @@ class stats:
         print(
             "\n".join(
                 [
-                    f"Exported {self._exported_notes} notes.",
-                    f"{self._no_key} notes are missing a key.",
-                    f"{self._no_front} notes are missing a front.",
-                    f"{self._no_back} notes are missing a back.",
-                    f"{self._duplicate_key} notes are have duplicate keys.",
+                    f"- Exported {self._exported_notes} notes.",
+                    f"- {self._no_key} notes are missing a key.",
+                    f"- {self._no_front} notes are missing a front.",
+                    f"- {self._no_back} notes are missing a back.",
+                    f"- {self._duplicate_key} notes are have duplicate keys.",
                 ]
             )
         )
@@ -128,10 +128,11 @@ def deck(
                 name=n,
                 description=deck_description,
             )
-        note = Note(model=model, fields=[f"{deck_name} - {k}", f, b])
+        note = Note(model=model, fields=[k, f, b])
         decks[n].add_note(note)
         ss._exported_notes += 1
 
-    print(f"Deck name = {deck_name}")
+    print(deck_name + ":")
     ss.print()
+    print("____________________")
     return decks.values(), field.merge_media_files(key, front, back, name)

@@ -3,7 +3,8 @@ import field
 import type_enforced
 
 # Deck IDs.
-# N.B. THESE ARE PROTECTED FIELDS. DO NOT CHANGE THEM.
+# N.B. These are protected fields. They are used as database keys for the
+# decks. Do NOT change them!
 BOHAIRIC_CRUM_ID = 1284010383
 SAHIDIC_CRUM_ID = 1284010386
 CRUM_ID = 1284010387
@@ -11,15 +12,19 @@ BIBLE_ID = 1284010384
 COPTICSITE_COM_ID = 1284010385
 
 # Deck Names.
-# N.B. THESE ARE PROTECTED FIELDS. DO NOT CHANGE THEM.
-BOHAIRIC_CRUM_NAME = "Crum: Bohairic Dictionary"
-SAHIDIC_CRUM_NAME = "Crum: Sahidic Dictionary"
-CRUM_NAME = "Crum: A Coptic Dictionary"
+# N.B. These are protected fields. They are used to generate DB keys for the
+# notes, and also as deck names. Do NOT change them!
+BOHAIRIC_CRUM_NAME = "Crum::Coptic Dictionary - Bohairic"
+SAHIDIC_CRUM_NAME = "Crum::Coptic Dictionary - Sahidic"
+CRUM_NAME = "Crum::Coptic Dictionary"
 BIBLE_NAME = "Bible"
 COPTICSITE_COM_NAME = "copticsite.com"
 
 # N.B. Besides the constants defined above, the "name" and "key" fields in the
 # deck generation logic are also protected.
+# The "name" argument is used to generate deck names for datasets that generate
+# multiple decks.
+# The "key" field is used to key the notes.
 
 
 @type_enforced.Enforcer
@@ -27,15 +32,26 @@ def crum(deck_name: str, deck_id: int, front_column: str):
     return deck.deck(
         deck_name=deck_name,
         deck_id=deck_id,
-        deck_description="URL: https://github.com/pishoyg/coptic/.\nContact: pishoybg@gmail.com.",
+        deck_description="URL: https://github.com/pishoyg/coptic/.\n"
+        "Contact: pishoybg@gmail.com.",
         css=".card { font-size: 18px; }"
         "#front { text-align: center; }"
         "figure {display: inline-block; border: 1px transparent; margin: 10px; }"
         "figure figcaption { text-align: center; }"
         "figure img { vertical-align: top; }",
+        # N.B. The name is a protected field, although it is unused in this
+        # case because we generate a single deck, thus the deck name is a
+        # constant for all notes.
         name=None,
-        key=field.tsv(
-            "dictionary/marcion.sourceforge.net/data/output/roots.tsv", "key"
+        # N.B. The key is a protected field. Do not change unless you know what
+        # you're doing.
+        key=field.cat(
+            field.txt(deck_name),
+            field.txt(" - "),
+            field.tsv(
+                "dictionary/marcion.sourceforge.net/data/output/roots.tsv",
+                "key",
+            ),
         ),
         front=field.tsv(
             "dictionary/marcion.sourceforge.net/data/output/roots.tsv",
@@ -120,18 +136,15 @@ def crum(deck_name: str, deck_id: int, front_column: str):
     )
 
 
-BOHAIRIC_CRUM = crum(BOHAIRIC_CRUM_NAME, BOHAIRIC_CRUM_ID, "dialect-B")
-SAHIDIC_CRUM = crum(SAHIDIC_CRUM_NAME, SAHIDIC_CRUM_ID, "dialect-S")
-CRUM = crum(CRUM_NAME, CRUM_ID, "word-parsed-prettify")
-
-
 BIBLE = deck.deck(
     deck_name=BIBLE_NAME,
     deck_id=BIBLE_ID,
-    deck_description="URL: https://github.com/pishoyg/coptic/.\nContact: pishoybg@gmail.com.",
+    deck_description="URL: https://github.com/pishoyg/coptic/.\n"
+    "Contact: pishoybg@gmail.com.",
     css=".card { font-size: 18px; }",
+    # N.B. The name is a protected field.
     name=field.aon(
-        field.txt("Bible"),
+        field.txt(BIBLE_NAME),
         field.txt("::"),
         field.tsv(
             "bible/stshenouda.org/data/output/csv/bible.csv", "testament-indexed"
@@ -143,7 +156,13 @@ BIBLE = deck.deck(
         field.txt("::"),
         field.tsv("bible/stshenouda.org/data/output/csv/bible.csv", "chapter-zfilled"),
     ),
+    # N.B. The key is a protected field. Do not change unless you know what
+    # you're doing.
     key=field.aon(
+        field.txt(BIBLE_NAME),
+        field.txt("::"),
+        field.txt("Bohairic"),
+        field.txt(" - "),
         field.txt("("),
         field.tsv("bible/stshenouda.org/data/output/csv/bible.csv", "book"),
         field.txt(" "),
@@ -247,10 +266,20 @@ BIBLE = deck.deck(
 COPTICSITE_COM = deck.deck(
     deck_name=COPTICSITE_COM_NAME,
     deck_id=COPTICSITE_COM_ID,
-    deck_description="URL: https://github.com/pishoyg/coptic/.\nContact: pishoybg@gmail.com.",
+    deck_description="URL: https://github.com/pishoyg/coptic/.\n"
+    "Contact: pishoybg@gmail.com.",
     css=".card { text-align: center; }",
+    # N.B. The name is a protected field, although it is unused in this case
+    # because we generate a single deck, thus the deck name is a constant for
+    # all notes.
     name=None,
-    key=field.seq(),
+    # N.B. The key is a protected field. Do not change unless you know what
+    # you're doing.
+    key=field.cat(
+        field.txt(COPTICSITE_COM_NAME),
+        field.txt(" - "),
+        field.seq(),
+    ),
     front=field.tsv(
         "dictionary/copticsite.com/data/output/output.tsv",
         "prettify",
@@ -284,5 +313,9 @@ COPTICSITE_COM = deck.deck(
         field.tsv("dictionary/copticsite.com/data/output/output.tsv", "Meaning"),
     ),
 )
+
+BOHAIRIC_CRUM = crum(BOHAIRIC_CRUM_NAME, BOHAIRIC_CRUM_ID, "dialect-B")
+SAHIDIC_CRUM = crum(SAHIDIC_CRUM_NAME, SAHIDIC_CRUM_ID, "dialect-S")
+CRUM = crum(CRUM_NAME, CRUM_ID, "word-parsed-prettify")
 
 DECKS = [BOHAIRIC_CRUM, SAHIDIC_CRUM, CRUM, BIBLE, COPTICSITE_COM]
