@@ -146,6 +146,8 @@ The data used here was digitalized and published through the efforts of:
 
 (7-8 hours)
 
+1. **Add deck descriptions.**
+
 1. **Add screenshots of the flashcards in this repo.**
 
 1. **Revisit the `bible` and `dictionary` documentation in their respective
