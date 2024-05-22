@@ -205,9 +205,12 @@ into the repo.
 1. **Incorporate Scriptorium's data. Gain familiarity with their platform.
    Parse their dictionary.** (7-8 hours, delegated)
 
-1. **Publish the decks through Anki.** (1 hours)
-
 1. **Add word derivations to a TSV, and then to the flashcards.** (3-4 hours)
+   See [this
+file](https://github.com/pishoyg/coptic/blob/master/archive%2Fmarcion-1.8.3-src%2Fcrumresulttree.cpp)
+for how Marcion constructs the derivations tree.
+
+1. **Publish the decks through Anki.** (1 hours)
 
 1. Flashcard synchronization seems to be working fine. However, running the
    generation script twice produces a different file, and reimporting
@@ -226,8 +229,8 @@ into the repo.
 
 1. Revisit the possibility of image compression to minimize the package size.
 
-1. Crawl [Wiktionary - Category:Coptic lemmas](
-https://en.wiktionary.org/wiki/Category:Coptic_lemmas). (20+ hours)
+1. **Crawl [Wiktionary - Category:Coptic lemmas](
+https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
 1. Use the newer version of [copticsite.com](https://copticsite.com/) once
    published.
@@ -240,6 +243,8 @@ This is not a list of tasks, but more of a list of ideas that you can choose to
 abide by if you want to.
 
 1. Add unit tests.
+
+1. Define a `uniqueness_tracker` type.
 
 1. Add hooks (pre-commits?), Makefile, or something similar, to exercise more
    control on the code. You could run unit tests, `doctoc README.md`, and also

@@ -3,6 +3,7 @@ import field
 import type_enforced
 
 # Deck IDs.
+#
 # N.B. These are protected fields. They are used as database keys for the
 # decks. Do NOT change them!
 BOHAIRIC_CRUM_ID = 1284010383
@@ -16,15 +17,27 @@ BIBLE_ID = 1284010389
 COPTICSITE_COM_ID = 1284010385
 
 # Deck Names.
-# N.B. These are protected fields. They are used to generate DB keys for the
-# notes, and also as deck names. Do NOT change them!
-BOHAIRIC_CRUM_NAME = "Crum::Coptic Dictionary - Bohairic"
-SAHIDIC_CRUM_NAME = "Crum::Coptic Dictionary - Sahidic"
-CRUM_NAME = "Crum::Coptic Dictionary"
+#
+# N.B. These are protected fields. The deck names are used for:
+# 1. Display in the Anki UI, including nesting.
+# 2. Prefixes for the note keys, to prevent collisions between notes in
+#    different decks.
+# 3. Model names (largely irrelevant).
+#
+# N.B. If the `name` argument is provided, it overrides the first use case
+# (display), but the deck names continue to be used for prefixing and model
+# names.
+# It's for the second reason, and to a lesser extend the first as well, that
+# the names should NOT change. If the DB keys diverge, synchronization will
+# mess up the data! Importing a new deck will result in the notes being
+# duplicated rather than replaced or updated.
+BOHAIRIC_CRUM_NAME = "A Coptic Dictionary::Bohairic"
+SAHIDIC_CRUM_NAME = "A Coptic Dictionary::Sahidic"
+CRUM_NAME = "A Coptic Dictionary::All Dialects"
 
-BOHAIRIC_BIBLE_NAME = "Bible - Bohairic"
-SAHIDIC_BIBLE_NAME = "Bible - Sahidic"
-BIBLE_NAME = "Bible"
+BOHAIRIC_BIBLE_NAME = "Bible::Bohairic"
+SAHIDIC_BIBLE_NAME = "Bible::Sahidic"
+BIBLE_NAME = "Bible::All Dialects"
 
 COPTICSITE_COM_NAME = "copticsite.com"
 
@@ -66,13 +79,9 @@ def crum(deck_name: str, deck_id: int, front_column: str):
         name=None,
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
-        key=field.cat(
-            field.txt(deck_name),
-            field.txt(" - "),
-            field.tsv(
-                "dictionary/marcion.sourceforge.net/data/output/roots.tsv",
-                "key",
-            ),
+        key=field.tsv(
+            "dictionary/marcion.sourceforge.net/data/output/roots.tsv",
+            "key",
         ),
         front=field.tsv(
             "dictionary/marcion.sourceforge.net/data/output/roots.tsv",
@@ -158,7 +167,7 @@ def crum(deck_name: str, deck_id: int, front_column: str):
 
 
 @type_enforced.Enforcer
-def bible(deck_name: str, deck_id: int, front_dialects: list[str], nest: str):
+def bible(deck_name: str, deck_id: int, front_dialects: list[str]):
 
     def tsv_column(col_name):
         return field.tsv("bible/stshenouda.org/data/output/csv/bible.csv", col_name)
@@ -183,9 +192,7 @@ def bible(deck_name: str, deck_id: int, front_dialects: list[str], nest: str):
         css=".card { font-size: 18px; }",
         # N.B. The name is a protected field.
         name=field.aon(
-            field.txt(BIBLE_NAME),
-            field.txt("::"),
-            field.txt(nest),
+            field.txt(deck_name),
             field.txt("::"),
             tsv_column("section-indexed-no-testament"),
             field.txt("::"),
@@ -196,8 +203,6 @@ def bible(deck_name: str, deck_id: int, front_dialects: list[str], nest: str):
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
         key=field.aon(
-            field.txt(deck_name),
-            field.txt(" - "),
             field.txt("("),
             tsv_column("book"),
             field.txt(" "),
@@ -241,11 +246,7 @@ COPTICSITE_COM = deck.deck(
     name=None,
     # N.B. The key is a protected field. Do not change unless you know what
     # you're doing.
-    key=field.cat(
-        field.txt(COPTICSITE_COM_NAME),
-        field.txt(" - "),
-        field.seq(),
-    ),
+    key=field.seq(),
     front=field.tsv(
         "dictionary/copticsite.com/data/output/output.tsv",
         "prettify",
@@ -284,13 +285,12 @@ BOHAIRIC_CRUM = crum(BOHAIRIC_CRUM_NAME, BOHAIRIC_CRUM_ID, "dialect-B")
 SAHIDIC_CRUM = crum(SAHIDIC_CRUM_NAME, SAHIDIC_CRUM_ID, "dialect-S")
 CRUM = crum(CRUM_NAME, CRUM_ID, "word-parsed-prettify")
 
-BOHAIRIC_BIBLE = bible(BOHAIRIC_BIBLE_NAME, BOHAIRIC_BIBLE_ID, ["Bohairic"], "Bohairic")
-SAHIDIC_BIBLE = bible(SAHIDIC_BIBLE_NAME, SAHIDIC_BIBLE_ID, ["Sahidic"], "Sahidic")
+BOHAIRIC_BIBLE = bible(BOHAIRIC_BIBLE_NAME, BOHAIRIC_BIBLE_ID, ["Bohairic"])
+SAHIDIC_BIBLE = bible(SAHIDIC_BIBLE_NAME, SAHIDIC_BIBLE_ID, ["Sahidic"])
 BIBLE = bible(
     BIBLE_NAME,
     BIBLE_ID,
     [lang for lang in BIBLE_LANGUAGES if lang != "English" and lang != "Greek"],
-    "Coptic",
 )
 
 DECKS = [

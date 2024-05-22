@@ -7,6 +7,9 @@ keeping them in a drive. You can download the package [here](https://drive.googl
 
 ## Fields
 
+**TODO: In `constants.py`, all decks should be defined through a function. And
+remove the name variables.**
+
 **TODO: Rewrite the following docs in Markdown.**
 
 """Generate an Anki package.

@@ -35,7 +35,7 @@ class Note(genanki.Note):
     @type_enforced.Enforcer
     def guid(self):
         # Only use the key field to generate a GUID.
-        return genanki.guid_for(self.fields[0])
+        return genanki.guid_for(self.fields[2])
 
 
 @type_enforced.Enforcer
@@ -73,9 +73,9 @@ def deck(
         model_id=deck_id,
         name=deck_name,
         fields=[
-            {"name": "Key"},
             {"name": "Front"},
             {"name": "Back"},
+            {"name": "Key"},
         ],
         templates=[
             {
@@ -128,7 +128,7 @@ def deck(
                 name=n,
                 description=deck_description,
             )
-        note = Note(model=model, fields=[k, f, b])
+        note = Note(model=model, fields=[f, b, f"{deck_name} - {k}"])
         decks[n].add_note(note)
         ss._exported_notes += 1
 
