@@ -3,6 +3,7 @@ import os
 import re
 import shutil
 import tempfile
+import typing
 
 import numexpr
 import pandas as pd
@@ -274,6 +275,24 @@ class img(field):
 
     ${WIDTH} (optionally) gives the image width.
 
+    Image / file sorting:
+      TL;DR: Use integer sections in your file names to control the order.
+      For example, "{key}-1-1.txt", "{key}-1-2.txt", "{key}-3-4.txt".
+
+      The files will be sorted in the output based first on the integers contained
+      within the name, then lexicographically. For example, the following are
+      possible orders produced by our sorting algorithm:
+          - ["1.png", "2.png", ..., "11.png"],
+          - ["1-1.png", "1-2.png", "2-1.png", "2-2.png"]
+          - ["b1.txt", "a2.txt"]
+          - ["a.txt", "b.txt"]
+      The string "11" is lexicographically smaller than the string "2", but the
+      integer 11 is lexicographically larger, which is why it appears later.
+      Similarly, even though "b" is lexicographically larger than "a", we
+      prioritize the integers, so we bring "b1" before "a2".
+      If the string doesn't contain any integers, pure lexicographical ordering
+      will be used.
+
     """
 
     @type_enforced.Enforcer
@@ -284,7 +303,7 @@ class img(field):
         dir_path: str,
         file_name_fmt: str,
         caption_source: str,
-        width: int = 0,
+        width: typing.Optional[int] = None,
     ):
         """
         The "src" field of the <img> HTML tag must bear basenames. Directories
@@ -301,7 +320,7 @@ class img(field):
         """
 
         html_fmt = '<img src="{basename}"><br>'
-        if width:
+        if width is not None:
             html_fmt = '<img src="{{basename}}" width="{width}"><br>'
             html_fmt = html_fmt.format(width=width)
         html_fmt = (

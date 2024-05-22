@@ -4,6 +4,7 @@ import parser
 import constants
 import gspread
 import pandas as pd
+import type_enforced
 from oauth2client.service_account import ServiceAccountCredentials
 
 argparser = argparse.ArgumentParser(
@@ -15,14 +16,14 @@ argparser = argparse.ArgumentParser(
 argparser.add_argument(
     "--coptwrd_tsv",
     type=str,
-    default="data/marcion-input/coptwrd.tsv",
+    default="dictionary/marcion.sourceforge.net/data/marcion-input/coptwrd.tsv",
     help="Path to the input TSV file containing the words.",
 )
 
 argparser.add_argument(
     "--coptdrv_tsv",
     type=str,
-    default="data/marcion-input/coptdrv.tsv",
+    default="dictionary/marcion.sourceforge.net/data/marcion-input/coptdrv.tsv",
     help="Path to the input TSV file containing the derivations.",
 )
 
@@ -38,22 +39,21 @@ CRUM_COL = "crum"
 argparser.add_argument(
     "--roots_tsv",
     type=str,
-    default="data/output/roots.tsv",
+    default="dictionary/marcion.sourceforge.net/data/output/roots.tsv",
     help="Path to the output TSV file containing the roots.",
 )
 
 argparser.add_argument(
     "--derivations_tsv",
     type=str,
-    default="data/output/derivations.tsv",
+    default="dictionary/marcion.sourceforge.net/data/output/derivations.tsv",
     help="Path to the output TSV file containing the derivations.",
 )
 
-# TODO: Generate a combined TSV.
 argparser.add_argument(
     "--combined_tsv",
     type=str,
-    default="data/output/combined.tsv",
+    default="dictionary/marcion.sourceforge.net/data/output/combined.tsv",
     help="Path to the output TSV file containing the combined roots and"
     " derivations.",
 )
@@ -102,7 +102,8 @@ args = argparser.parse_args()
 # Main.########################################################################
 
 
-def main():
+@type_enforced.Enforcer
+def main() -> None:
     # Process roots.
     df = pd.read_csv(args.coptwrd_tsv, sep="\t", encoding="utf-8").fillna("")
     process_data(df, strict=True)
@@ -124,10 +125,12 @@ def main():
     parser.reset()
 
 
-def process_data(df: pd.DataFrame, strict: bool):
+@type_enforced.Enforcer
+def process_data(df: pd.DataFrame, strict: bool) -> None:
     extra_cols = {}
 
-    def insert(prefix, col, cell):
+    @type_enforced.Enforcer
+    def insert(prefix: str, col: str, cell: str) -> None:
         col = prefix + col
         del prefix
         if col not in extra_cols:
@@ -143,22 +146,22 @@ def process_data(df: pd.DataFrame, strict: bool):
             detach_types=False,
             use_coptic_symbol=False,
         )
-        insert(WORD_COL, "-parsed", "\n".join(w.str() for w in word))
+        insert(WORD_COL, "-parsed", "\n".join(w.string() for w in word))
         insert(
             WORD_COL,
             "-parsed-no-ref",
-            "\n".join(w.str(include_references=False) for w in word),
+            "\n".join(w.string(include_references=False) for w in word),
         )
         insert(
             WORD_COL,
             "-parsed-no-html",
-            parser.remove_html("\n".join(w.str() for w in word)),
+            parser.remove_html("\n".join(w.string() for w in word)),
         )
         insert(
             WORD_COL,
             "-parsed-no-ref-no-html",
             parser.remove_html(
-                "\n".join(w.str(include_references=False) for w in word)
+                "\n".join(w.string(include_references=False) for w in word)
             ),
         )
         word = parser.parse_word_cell(
@@ -169,7 +172,7 @@ def process_data(df: pd.DataFrame, strict: bool):
             WORD_COL,
             "-parsed-prettify",
             "\n".join(
-                w.str(include_references=False, append_root_type=True) for w in word
+                w.string(include_references=False, append_root_type=True) for w in word
             ),
         )
 
@@ -188,7 +191,7 @@ def process_data(df: pd.DataFrame, strict: bool):
         insert(CRUM_COL, "-column", crum_column)
         for d in args.filter_dialects:
             entry = "\n".join(
-                w.undialected_str(include_references=False, append_root_type=True)
+                w.undialected_string(include_references=False, append_root_type=True)
                 for w in word
                 if w.is_dialect(d)
             )
@@ -198,7 +201,8 @@ def process_data(df: pd.DataFrame, strict: bool):
         df[col] = values
 
 
-def write_to_gspread(df):
+@type_enforced.Enforcer
+def write_to_gspread(df: pd.DataFrame) -> None:
     # TODO: Parameterize to make it possible to write to multiple sheets at the
     # same time, particularly for roots and derivations.
     credentials = ServiceAccountCredentials.from_json_keyfile_name(
@@ -217,7 +221,8 @@ def write_to_gspread(df):
     )
 
 
-def two_pages(first_page):
+@type_enforced.Enforcer
+def two_pages(first_page: str) -> str:
     first_page = int(first_page)
     assert first_page <= constants.CRUM_LAST_PAGE_NUM
     if first_page == constants.CRUM_LAST_PAGE_NUM:

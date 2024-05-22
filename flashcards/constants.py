@@ -2,51 +2,6 @@ import deck
 import field
 import type_enforced
 
-# Deck IDs.
-#
-# N.B. These are protected fields. They are used as database keys for the
-# decks. Do NOT change them!
-BOHAIRIC_CRUM_ID = 1284010383
-SAHIDIC_CRUM_ID = 1284010386
-CRUM_ID = 1284010387
-
-BOHAIRIC_BIBLE_ID = 1284010384
-SAHIDIC_BIBLE_ID = 1284010388
-BIBLE_ID = 1284010389
-
-COPTICSITE_COM_ID = 1284010385
-
-# Deck Names.
-#
-# N.B. These are protected fields. The deck names are used for:
-# 1. Display in the Anki UI, including nesting.
-# 2. Prefixes for the note keys, to prevent collisions between notes in
-#    different decks.
-# 3. Model names (largely irrelevant).
-#
-# N.B. If the `name` argument is provided, it overrides the first use case
-# (display), but the deck names continue to be used for prefixing and model
-# names.
-# It's for the second reason, and to a lesser extend the first as well, that
-# the names should NOT change. If the DB keys diverge, synchronization will
-# mess up the data! Importing a new deck will result in the notes being
-# duplicated rather than replaced or updated.
-BOHAIRIC_CRUM_NAME = "A Coptic Dictionary::Bohairic"
-SAHIDIC_CRUM_NAME = "A Coptic Dictionary::Sahidic"
-CRUM_NAME = "A Coptic Dictionary::All Dialects"
-
-BOHAIRIC_BIBLE_NAME = "Bible::Bohairic"
-SAHIDIC_BIBLE_NAME = "Bible::Sahidic"
-BIBLE_NAME = "Bible::All Dialects"
-
-COPTICSITE_COM_NAME = "copticsite.com"
-
-# N.B. Besides the constants defined above, the "name" and "key" fields in the
-# deck generation logic are also protected.
-# The "name" argument is used to generate deck names for datasets that generate
-# multiple decks.
-# The "key" field is used to key the notes.
-
 BIBLE_LANGUAGES = [
     "Bohairic",
     "English",
@@ -234,71 +189,99 @@ def bible(deck_name: str, deck_id: int, front_dialects: list[str]):
     )
 
 
-COPTICSITE_COM = deck.deck(
-    deck_name=COPTICSITE_COM_NAME,
-    deck_id=COPTICSITE_COM_ID,
-    deck_description="URL: https://github.com/pishoyg/coptic/.\n"
-    "Contact: pishoybg@gmail.com.",
-    css=".card { text-align: center; }",
-    # N.B. The name is a protected field, although it is unused in this case
-    # because we generate a single deck, thus the deck name is a constant for
-    # all notes.
-    name=None,
-    # N.B. The key is a protected field. Do not change unless you know what
-    # you're doing.
-    key=field.seq(),
-    front=field.tsv(
-        "dictionary/copticsite.com/data/output/output.tsv",
-        "prettify",
-    ),
-    back=field.cat(
-        field.aon(
-            field.txt("("),
-            field.txt("<b>"),
-            field.cat(
-                field.tsv(
-                    "dictionary/copticsite.com/data/output/output.tsv", "Word Kind"
-                ),
-                field.aon(
-                    field.txt(" - "),
-                    field.tsv(
-                        "dictionary/copticsite.com/data/output/output.tsv",
-                        "Word Gender",
-                    ),
-                ),
-                field.aon(
-                    field.txt(" - "),
-                    field.tsv(
-                        "dictionary/copticsite.com/data/output/output.tsv", "Origin"
-                    ),
-                ),
-            ),
-            field.txt("</b>"),
-            field.txt(")"),
-            field.txt("<br>"),
+@type_enforced.Enforcer
+def copticsite_com(deck_name: str, deck_id: int):
+    return deck.deck(
+        deck_name=deck_name,
+        deck_id=deck_id,
+        deck_description="URL: https://github.com/pishoyg/coptic/.\n"
+        "Contact: pishoybg@gmail.com.",
+        css=".card { text-align: center; }",
+        # N.B. The name is a protected field, although it is unused in this case
+        # because we generate a single deck, thus the deck name is a constant for
+        # all notes.
+        name=None,
+        # N.B. The key is a protected field. Do not change unless you know what
+        # you're doing.
+        key=field.seq(),
+        front=field.tsv(
+            "dictionary/copticsite.com/data/output/output.tsv",
+            "prettify",
         ),
-        field.tsv("dictionary/copticsite.com/data/output/output.tsv", "Meaning"),
-    ),
-)
+        back=field.cat(
+            field.aon(
+                field.txt("("),
+                field.txt("<b>"),
+                field.cat(
+                    field.tsv(
+                        "dictionary/copticsite.com/data/output/output.tsv", "Word Kind"
+                    ),
+                    field.aon(
+                        field.txt(" - "),
+                        field.tsv(
+                            "dictionary/copticsite.com/data/output/output.tsv",
+                            "Word Gender",
+                        ),
+                    ),
+                    field.aon(
+                        field.txt(" - "),
+                        field.tsv(
+                            "dictionary/copticsite.com/data/output/output.tsv", "Origin"
+                        ),
+                    ),
+                ),
+                field.txt("</b>"),
+                field.txt(")"),
+                field.txt("<br>"),
+            ),
+            field.tsv("dictionary/copticsite.com/data/output/output.tsv", "Meaning"),
+        ),
+    )
 
-BOHAIRIC_CRUM = crum(BOHAIRIC_CRUM_NAME, BOHAIRIC_CRUM_ID, "dialect-B")
-SAHIDIC_CRUM = crum(SAHIDIC_CRUM_NAME, SAHIDIC_CRUM_ID, "dialect-S")
-CRUM = crum(CRUM_NAME, CRUM_ID, "word-parsed-prettify")
 
-BOHAIRIC_BIBLE = bible(BOHAIRIC_BIBLE_NAME, BOHAIRIC_BIBLE_ID, ["Bohairic"])
-SAHIDIC_BIBLE = bible(SAHIDIC_BIBLE_NAME, SAHIDIC_BIBLE_ID, ["Sahidic"])
-BIBLE = bible(
-    BIBLE_NAME,
-    BIBLE_ID,
+# N.B. The deck IDs are protected fields. They are used as database keys for the
+# decks. Do NOT change them!
+#
+# The deck names are protected fields. Do NOT change them. They are used for:
+# 1. Display in the Anki UI, including nesting.
+# 2. Prefixes for the note keys, to prevent collisions between notes in
+#    different decks.
+# 3. Model names (largely irrelevant).
+#
+# N.B. If the `name` argument is provided, it overrides the first use case
+# (display), but the deck names continue to be used for prefixing and model
+# names.
+# It's for the second reason, and to a lesser extend the first as well, that
+# the names should NOT change. If the DB keys diverge, synchronization will
+# mess up the data! Importing a new deck will result in the notes being
+# duplicated rather than replaced or updated.
+
+# N.B. Besides the constants hardcoded below, the "name" and "key" fields in
+# the deck generation logic are also protected.
+# The "name" argument is used to generate deck names for datasets that generate
+# multiple decks.
+# The "key" field is used to key the notes.
+
+BOHAIRIC_CRUM = crum("A Coptic Dictionary::Bohairic", 1284010383, "dialect-B")
+SAHIDIC_CRUM = crum("A Coptic Dictionary::Sahidic", 1284010386, "dialect-S")
+CRUM_ALL = crum("A Coptic Dictionary::All Dialects", 1284010387, "word-parsed-prettify")
+
+BOHAIRIC_BIBLE = bible("Bible::Bohairic", 1284010384, ["Bohairic"])
+SAHIDIC_BIBLE = bible("Bible::Sahidic", 1284010388, ["Sahidic"])
+BIBLE_ALL = bible(
+    "Bible::All Dialects",
+    1284010389,
     [lang for lang in BIBLE_LANGUAGES if lang != "English" and lang != "Greek"],
 )
+
+COPTICSITE_COM = copticsite_com("copticsite.com", 1284010385)
 
 DECKS = [
     BOHAIRIC_CRUM,
     SAHIDIC_CRUM,
-    CRUM,
+    CRUM_ALL,
     BOHAIRIC_BIBLE,
     SAHIDIC_BIBLE,
-    BIBLE,
+    BIBLE_ALL,
     COPTICSITE_COM,
 ]

@@ -1,3 +1,7 @@
+# TODO: Parameterize leniency. Some decks have better data sources, so your
+# code should be more strict with those. This is the case, for example, with
+# missing keys, fronts, backs, ... etc.
+
 import hashlib
 
 import field
@@ -43,7 +47,6 @@ def _hash(text: str) -> int:
     return int(hashlib.sha1(text.encode("utf-8")).hexdigest(), 17) % MAX_ID
 
 
-# TODO: Add more type hints.
 @type_enforced.Enforcer
 def deck(
     deck_name: str,
@@ -56,7 +59,51 @@ def deck(
     back: type_enforced.utils.WithSubclasses(field.field),
     back_for_front: bool = False,
 ):
-    """
+    """Generate an Anki package.
+
+    Args:
+        key:
+        This is a critical field. The note keys will be used as database
+        keys to enable synchronization. It is important for the keys to be (1)
+        unique, and (2) persistent. Use a different key for each note. And do
+        not change the names liberally between different version of the code
+        and the generated package.
+        The note keys must also be unique across decks.,
+
+        front:
+        Format of the card fronts. See description for syntax.
+
+        back:
+        Format of the card backs. See description for syntax.,
+
+        model_name:
+        Model name in the generated Anki package.,
+
+        model_id:
+        Deck ID in the generated Anki package.,
+
+        css:
+        Global CSS. Please notice that the front will be given the id
+        "front" and the back will have the id "back". You can use these IDs if'
+        you want to make your CSS format side-specific."
+        Only TXT fields are allowed for this flag.,
+
+        name:
+        Deck name in the generated Anki package.
+        N.B. If a deck ID is not
+        given, a hash of this field will be used to key the decks. Thus, it is
+        important to ensure that the deck names are (1) unique, and
+        (2) persistent. Use a different deck name for each deck that you want to
+        support. And do not change the names liberally between different version
+        of the code and the generated package.,
+
+        id:
+        Deck ID in the generated Anki package.,
+
+        description:
+        Deck description in the generated Anki package. Only TXT fields are
+        allowed here.,
+
     back_for_front:
         If true, and the front is absent, use the back instead.
     """
@@ -98,8 +145,6 @@ def deck(
         f = front.next()
         b = back.next()
 
-        # TODO: Consider parameterizing leniency. Some decks have better data
-        # sources, so your code is allowed to be more strict.
         assert n
         if not k:
             # No key! Skip!
@@ -135,4 +180,4 @@ def deck(
     print(deck_name + ":")
     ss.print()
     print("____________________")
-    return decks.values(), field.merge_media_files(key, front, back, name)
+    return list(decks.values()), field.merge_media_files(key, front, back, name)

@@ -242,21 +242,16 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 This is not a list of tasks, but more of a list of ideas that you can choose to
 abide by if you want to.
 
-1. Add unit tests.
+1. Expand the unit tests.
 
 1. Define a `uniqueness_tracker` type.
 
-1. Add hooks (pre-commits?), Makefile, or something similar, to exercise more
-   control on the code. You could run unit tests, `doctoc README.md`, and also
-   force the data to follow a certain structure.
-
-1. The default arguments should be set such that everything can run from the
-   repo's root directory.
+1. Expand the use of hooks and Makefile.
 
 1. Do not let Python tempt you to use its built-in types instead of classes and
    objects. Don't forget about OOP!
 
-1. Add doc comments.
+1. Document the code.
 
 1. Add assertions and throw exceptions for any assumptions that you make. They
    catch a lot of bugs! A lot!

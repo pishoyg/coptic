@@ -275,7 +275,7 @@ def _parse_english(line: str) -> str:
             s, t = _parse_spellings_and_types(
                 copt, detach_types=True, use_coptic_symbol=True
             )
-            out.append(lexical.structured_word([], s, t, [], None).str(False))
+            out.append(lexical.structured_word([], s, t, [], None).string(False))
 
     out = " ".join(out)
     return clean(out)

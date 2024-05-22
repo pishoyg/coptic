@@ -45,14 +45,14 @@ argparser.add_argument(
     "--json",
     type=str,
     help="Path to a JSON file containing the book information.",
-    default="data/input/bible.json",
+    default="bible/stshenouda.org/data/input/bible.json",
 )
 argparser.add_argument(
     "--input_dir",
     type=str,
     help="Path to the input directory. For each book in the book list, we will"
     " try to find a corresponding ${BOOK_NAME}.json in this directory.",
-    default="data/raw/",
+    default="bible/stshenouda.org/data/raw/",
 )
 argparser.add_argument(
     "--sources_input_dir",
@@ -60,7 +60,7 @@ argparser.add_argument(
     help="Path to the input directory. For each book in the book list, we will"
     " try to find a corresponding ${BOOK_NAME}_Sources.json file in this"
     " directory.",
-    default="data/raw/Sources/",
+    default="bible/stshenouda.org/data/raw/Sources/",
 )
 
 # Ouptut arguments:
@@ -70,7 +70,7 @@ argparser.add_argument(
     help="Path to the ouptut directory. For each output format, we will write"
     " the output in a new subdirectory of this directory that is named after"
     " the format",
-    default="data/output",
+    default="bible/stshenouda.org/data/output",
 )
 argparser.add_argument(
     "--parallels",
@@ -90,7 +90,7 @@ argparser.add_argument(
     "--cover",
     type=str,
     help="Path to a file containing the cover image for EPUB.",
-    default="data/img/stauros.jpeg",
+    default="bible/stshenouda.org/data/img/stauros.jpeg",
 )
 
 args = argparser.parse_args()

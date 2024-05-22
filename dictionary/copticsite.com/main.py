@@ -284,14 +284,14 @@ argparser = argparse.ArgumentParser(
 argparser.add_argument(
     "--input_tsv",
     type=str,
-    default="data/raw/coptic dictionary northern dialect unicode complete.xlsx.tsv",
+    default="dictionary/copticsite.com/data/raw/coptic dictionary northern dialect unicode complete.xlsx.tsv",
     help="Path to the input TSV.",
 )
 
 argparser.add_argument(
     "--output_tsv",
     type=str,
-    default="data/output/output.tsv",
+    default="dictionary/copticsite.com/data/output/output.tsv",
     help="Path to the output TSV.",
 )
 

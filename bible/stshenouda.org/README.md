@@ -11,8 +11,9 @@ the Archimandrite Coptic Society](http://www.stshenouda.org/). (Download for
 
 We produce the following output formats:
 
-- `data/output/anki_tsv/`: A TSV (tab-separated values) file that is directly importable into
-[Anki](https://apps.ankiweb.net/) (a powerful flashcard platform).
+- `data/output/anki_tsv/`: A TSV (tab-separated values) file that is directly
+importable into [Anki](https://apps.ankiweb.net/) (a popular flashcard
+platform).
 
 - `data/output/csv/`: A CSV (comma-separated values) file.
 
@@ -32,16 +33,3 @@ three categories:
 - The files named `${LANGUAGE}_${LANGUAGE}.${FORMAT}` contain parallel data for
   a pair of languages. (Usually Bohairic-English is the pair of interest,
 though you can control which pair(s) get generated using the CLI arguments.)
-
-# Running the Script
-
-Running `regnerate.py` reruns the pipeline that processes the raw data in
-`data/raw/` and generates all the output formats listed in `data/output/`.
-
-If you run it from this directory, `python3 regenerate.py` should suffice. The
-arguments should be prepopulated with default values that point to the correct
-file locations. Run `python3 regenerate.py --help` for more instructions about
-the arguments.
-
-Run `pip3 install -r requirements.txt` to install the Python packages used by
-the script.

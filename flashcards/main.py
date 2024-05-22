@@ -20,12 +20,13 @@ argparser.add_argument(
 args = argparser.parse_args()
 
 
-def assert_unique(s, key):
+@type_enforced.Enforcer
+def assert_unique(s: set, key: str | int):
     assert key not in s, f"{s} already contains {key}"
     s.add(key)
 
 
-def validate_unique_object_keys(decks):
+def validate_unique_object_keys(decks: list[genanki.Deck]):
     deck_ids = set()
     deck_names = set()
     model_ids = set()
