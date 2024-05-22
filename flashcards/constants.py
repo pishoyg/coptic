@@ -17,7 +17,7 @@ BIBLE_LANGUAGES = [
 
 
 @type_enforced.Enforcer
-def crum(deck_name: str, deck_id: int, front_column: str):
+def crum(deck_name: str, deck_id: int, front_column: str, force_front: bool):
     return deck.deck(
         deck_name=deck_name,
         deck_id=deck_id,
@@ -118,6 +118,11 @@ def crum(deck_name: str, deck_id: int, front_column: str):
                 ),
             ),
         ),
+        force_single_deck=True,
+        force_key=True,
+        force_no_duplicate_keys=True,
+        force_front=force_front,
+        force_back=True,
     )
 
 
@@ -236,6 +241,9 @@ def copticsite_com(deck_name: str, deck_id: int):
             ),
             field.tsv("dictionary/copticsite.com/data/output/output.tsv", "Meaning"),
         ),
+        force_single_deck=True,
+        force_key=True,
+        force_no_duplicate_keys=True,
     )
 
 
@@ -262,9 +270,18 @@ def copticsite_com(deck_name: str, deck_id: int):
 # multiple decks.
 # The "key" field is used to key the notes.
 
-BOHAIRIC_CRUM = crum("A Coptic Dictionary::Bohairic", 1284010383, "dialect-B")
-SAHIDIC_CRUM = crum("A Coptic Dictionary::Sahidic", 1284010386, "dialect-S")
-CRUM_ALL = crum("A Coptic Dictionary::All Dialects", 1284010387, "word-parsed-prettify")
+BOHAIRIC_CRUM = crum(
+    "A Coptic Dictionary::Bohairic", 1284010383, "dialect-B", force_front=False
+)
+SAHIDIC_CRUM = crum(
+    "A Coptic Dictionary::Sahidic", 1284010386, "dialect-S", force_front=False
+)
+CRUM_ALL = crum(
+    "A Coptic Dictionary::All Dialects",
+    1284010387,
+    "word-parsed-prettify",
+    force_front=True,
+)
 
 BOHAIRIC_BIBLE = bible("Bible::Bohairic", 1284010384, ["Bohairic"])
 SAHIDIC_BIBLE = bible("Bible::Sahidic", 1284010388, ["Sahidic"])

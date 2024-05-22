@@ -1,7 +1,3 @@
-# TODO: Parameterize leniency. Some decks have better data sources, so your
-# code should be more strict with those. This is the case, for example, with
-# missing keys, fronts, backs, ... etc.
-
 import hashlib
 
 import field
@@ -57,6 +53,11 @@ def deck(
     key: type_enforced.utils.WithSubclasses(field.field),
     front: type_enforced.utils.WithSubclasses(field.field),
     back: type_enforced.utils.WithSubclasses(field.field),
+    force_single_deck: bool = False,
+    force_key: bool = False,
+    force_no_duplicate_keys: bool = False,
+    force_front: bool = False,
+    force_back: bool = False,
     back_for_front: bool = False,
 ):
     """Generate an Anki package.
@@ -116,6 +117,9 @@ def deck(
         assert deck_name == name.str()
         single_deck = True
 
+    if force_single_deck:
+        assert single_deck
+
     model = genanki.Model(
         model_id=deck_id,
         name=deck_name,
@@ -144,6 +148,15 @@ def deck(
         k = key.next()
         f = front.next()
         b = back.next()
+
+        if force_key:
+            assert k
+        if force_no_duplicate_keys:
+            assert k not in seen_keys
+        if force_front:
+            assert f
+        if force_back:
+            assert b
 
         assert n
         if not k:
