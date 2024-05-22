@@ -1,15 +1,18 @@
 # TODO: Read the input in XLSX format, rather than TSV.
 import argparse
-import pprint
 
 import pandas as pd
 import type_enforced
 
-# TODO: Define all column names as constants.
 UNNAMED_PREFIX = "Unnamed: "
-
+MEANING_COL = "Meaning"
+ORIGIN_COL = "Origin"
+COPTIC_COL = "Coptic Unicode Alphabet"
+KIND_COL = "Word Kind"
+GENDER_COL = "Word Gender"
+SUFFIX_COL = "suffix"
+PRETTIFY_COL = "prettify"
 # SUFFIX maps the word kinds to a map of word genders to suffixes.
-# TODO: Complete the dictionary of prefixes.
 SUFFIX = {
     "": {
         "": "",
@@ -263,6 +266,7 @@ SUFFIX = {
 }
 
 
+@type_enforced.Enforcer
 def get_suffix(kind: str, gender: str) -> str:
     if kind not in SUFFIX:
         return ""
@@ -298,11 +302,12 @@ argparser.add_argument(
 args = argparser.parse_args()
 
 
-def main():
+@type_enforced.Enforcer
+def main() -> None:
     df = pd.read_csv(args.input_tsv, sep="\t", encoding="utf-8").fillna("")
     df.dropna(inplace=True)
     df = df.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
-    df["Origin"] = df["Meaning"]
+    df[ORIGIN_COL] = df[MEANING_COL]
     meaning = []
     prettify = []
     suffix = []
@@ -315,17 +320,17 @@ def main():
                 cur[key] = value
         cur = "\n".join(v for _, v in sorted(cur.items()) if v)
         meaning.append(cur)
-        p = row["Coptic Unicode Alphabet"]
-        kind = str(row["Word Kind"]).strip()
-        gender = str(row["Word Gender"]).strip()
+        p = row[COPTIC_COL]
+        kind = str(row[KIND_COL]).strip()
+        gender = str(row[GENDER_COL]).strip()
         sfx = SUFFIX[kind][gender]
         suffix.append(sfx)
         if sfx:
             p = p + " " + sfx
         prettify.append(p)
-    df["Meaning"] = meaning
-    df["prettify"] = prettify
-    df["suffix"] = suffix
+    df[MEANING_COL] = meaning
+    df[PRETTIFY_COL] = prettify
+    df[SUFFIX_COL] = suffix
     for key in df.keys():
         if key.startswith(UNNAMED_PREFIX):
             df.drop(key, axis=1, inplace=True)

@@ -10,7 +10,6 @@ from ebooklib import epub
 
 # TODO: Export the Bible text to a gsheet.
 # TODO: Export the sources to a gdoc.
-# TODO: Add txt as an output format.
 # import gspread
 # from oauth2client.service_account import ServiceAccountCredentials
 

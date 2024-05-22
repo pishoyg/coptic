@@ -12,9 +12,9 @@
   - [Crum: New Fields](#crum-new-fields)
   - [Moawad Dawoud's Diciontary](#moawad-dawouds-diciontary)
   - [Crum's Dictionary](#crums-dictionary)
-  - [Other Dictionaries](#other-dictionaries)
   - [Neologisms](#neologisms)
   - [Learning Curriculum](#learning-curriculum)
+  - [New Datasets](#new-datasets)
 - [Credits](#credits)
 - [For Developers](#for-developers)
   - [Documentation Tasks](#documentation-tasks)
@@ -23,7 +23,6 @@
     - [Flashcards](#flashcards)
     - [Developer Convenience](#developer-convenience)
   - [Directory Structure](#directory-structure)
-  - [Anki Keys and Synchronization](#anki-keys-and-synchronization)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -91,6 +90,8 @@ Also feel free to reach out with questions.
 
 1. Digitalize the entirety of Dawoud's dictionary.
 
+1. Get a cleaner scan of Dawoud's dictionary. Obtain the source PDF if posible.
+
 ### Crum's Dictionary
 
 1. Record the correct list of Crum pages containing a given word. We've
@@ -105,7 +106,20 @@ Also feel free to reach out with questions.
 1. Contemplate dividing the decks to subsets sorted by popularity, so the
    learners can learn the more important words first.
 
-### Other Dictionaries
+### Neologisms
+
+(ambitious goal)
+
+1. Add neologisms. We need to think first of how to create neologisms before
+   we add them to our dataset.
+
+### Learning Curriculum
+
+(ambitious goal)
+
+1. Create Duolingo-like learning curricula for learners at multiple levels.
+
+### New Datasets
 
 1. Add data from St. Shenouda The Archimandrite Coptic Society's Dictionary.
 
@@ -114,15 +128,6 @@ Also feel free to reach out with questions.
 
 1. Incorporate the ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ Group's neologisms. They did substantial
    work that might be worth incorporating.
-
-### Neologisms
-
-1. Add neologisms. (We need to think first of how to create neologisms before
-   we add them to our dataset.)
-
-### Learning Curriculum
-
-1. Create Duolingo-like learning curricula for learners at multiple levels.
 
 ## Credits
 
@@ -141,35 +146,21 @@ The data used here was digitalized and published through the efforts of:
 
 (7-8 hours)
 
-1. **Reduce the confusion surrounding names and IDs.**
-
 1. **Add screenshots of the flashcards in this repo.**
 
-1. **Use "Crum" in place of "Marcion".**
-
-1. **Move / reproduce TODO's from the code in the README files. Only
-   low-priority, niche items should stay in the code.**
-
-   ```bash
-   grep TODO -R bible dictionary keyboard flashcards
-   ```
-
-1. **Some README.md files may be nested too deeply within the repo.
-Consider bringing them closer to the root in order to make the information
-easier to retrieve.**
-
-```bash
-find -type f -name README.md
-```
+1. **Revisit the `bible` and `dictionary` documentation in their respective
+   README.md files.**
 
 1. **Document the repo in a way that makes it possible to invite collaborators.**
-
-1. Document the snapshot dates and versions of the apps and data imported
-into the repo.
 
 1. **Link Drive items in this repo.**
 
 1. **Move / reproduce TODO's from Drive in the README files.**
+
+1. Use "Crum" in place of "Marcion".
+
+1. Document the snapshot dates and versions of the apps and data imported
+into the repo.
 
 ### Coding Tasks
 
@@ -235,6 +226,8 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 1. Use the newer version of [copticsite.com](https://copticsite.com/) once
    published.
 
+1. Complete the list of prefixes for the `prettify` format for copticsite.com.
+
 #### Developer Convenience
 
 (20+ hours)
@@ -265,6 +258,15 @@ abide by if you want to.
 
 1. Learn more Vim!
 
+1. Pick up some of the Easter egg tasks left around the code:
+
+   ```bash
+   grep TODO -R bible dictionary keyboard flashcards --include=\*.py
+   ```
+
+   Move them to README files when more visibility is warranted. Delete them
+   when they are deemed irrelevant.
+
 ### Directory Structure
 
 - `bible/`
@@ -287,56 +289,3 @@ abide by if you want to.
     even some abandoned projects.
     Data retrieved from another app or repo will live here, and could be used /
     reprocessed by projects in the repo.
-
-### Anki Keys and Synchronization
-
-   When you import a package into your (personal) Anki database, Anki uses the
-   IDs to eliminate duplicates.
-
-   Uniqueness is therefore important. But what is trickier, and perhaps more
-   important, is persistence. If we export new versions of a certain deck
-   regularly, we should maintain persistent IDs to ensure correct
-   synchronization. Otherwise, identical pieces of data that have distinct IDs
-   will result in duplicates.
-
-   There are three types of IDs in the generated package:
-
-   1. Note ID
-
-   `genanki`
-   [suggests](https://github.com/kerrickstaley/genanki?tab=readme-ov-file#note-guids)
-   defining the GUID as a hash of a subset of fields that uniquely identify a
-   note.
-
-   **The GUID must be unique across decks.** Therefore, this subset of field
-   values must be unique, including across decks. You can solve this by
-   prefixing the keys with the name of the deck.
-
-   In our script, we ask the user to provide a list of keys as part of their
-   input, along the list of fronts, backs, deck names, ... etc.
-   The users of the package must assign the keys properly, ensuring uniqueness,
-   and refraining from changing / reassigning them afterwards.
-
-   This is somewhat straightforward for Marcion's words. Use of Marcion's IDs
-   for synchronization should suffice.
-
-   For the Bible, we could use the verse reference as a note ID, and ensure
-   that the book names, chapter numbers, and verse numbers don't change in a
-   following version.
-
-   For other data creators without programming expertise, a sequence number
-   works as long as nobody inserts a new row in the middle of the CSV, which
-   would mess up the keys. **Discuss keying with those creators.** *As of today,
-   only copticsite.com's data has this problem.*
-
-   1. Deck ID
-
-   Whenever possible, we use a hardcoded deck ID. This is not possible for
-   decks that are autogenerated, such as the Bible decks which are separated
-   for nesting (as opposed to being grouped in a single deck). In such cases,
-   we use a hash of the deck name, and **the deck name becomes a protected
-   field.**
-
-   1. Model ID
-
-   Model IDs are hardcoded.
