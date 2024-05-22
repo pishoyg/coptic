@@ -18,11 +18,19 @@ BIBLE_LANGUAGES = [
 
 @type_enforced.Enforcer
 def crum(deck_name: str, deck_id: int, front_column: str, force_front: bool):
+
+    @type_enforced.Enforcer
+    def roots_col(col_name: str, force: bool = False) -> field.tsv:
+        return field.tsv(
+            "dictionary/marcion.sourceforge.net/data/output/roots.tsv",
+            col_name,
+            force=force,
+        )
+
     return deck.deck(
         deck_name=deck_name,
         deck_id=deck_id,
-        deck_description="URL: https://github.com/pishoyg/coptic/.\n"
-        "Contact: pishoybg@gmail.com.",
+        deck_description="https://github.com/pishoyg/coptic/.\n" "pishoybg@gmail.com.",
         css=".card { font-size: 18px; }"
         "#front { text-align: center; }"
         "figure {display: inline-block; border: 1px transparent; margin: 10px; }"
@@ -34,34 +42,22 @@ def crum(deck_name: str, deck_id: int, front_column: str, force_front: bool):
         name=None,
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
-        key=field.tsv(
-            "dictionary/marcion.sourceforge.net/data/output/roots.tsv",
-            "key",
-        ),
-        front=field.tsv(
-            "dictionary/marcion.sourceforge.net/data/output/roots.tsv",
-            front_column,
-        ),
+        key=roots_col("key"),
+        front=roots_col(front_column),
         back=field.cat(
             # Type.
             field.aon(
-                field.txt("("),
-                field.txt("<b>"),
-                field.tsv(
-                    "dictionary/marcion.sourceforge.net/data/output/roots.tsv",
-                    "type-parsed",
-                ),
-                field.txt("</b>"),
-                field.txt(")"),
-                field.txt("<br>"),
+                "(",
+                "<b>",
+                roots_col("type-parsed"),
+                "</b>",
+                ")",
+                "<br>",
             ),
             # Meaning.
             field.aon(
-                field.tsv(
-                    "dictionary/marcion.sourceforge.net/data/output/roots.tsv",
-                    "en-parsed-no-greek",
-                ),
-                field.txt("<br>"),
+                roots_col("en-parsed-no-greek"),
+                "<br>",
             ),
             # Image.
             field.img(
@@ -73,49 +69,41 @@ def crum(deck_name: str, deck_id: int, front_column: str, force_front: bool):
                 300,
             ),
             # Horizonal line.
-            field.txt("<hr>"),
+            "<hr>",
             # Full entry.
             field.aon(
-                field.txt("<b>Word:</b>"),
-                field.txt("<br>"),
-                field.tsv(
-                    "dictionary/marcion.sourceforge.net/data/output/roots.tsv",
-                    "word-parsed-no-ref",
-                ),
-                field.txt("<hr>"),
+                "<b>Word:</b>",
+                "<br>",
+                roots_col("word-parsed-no-ref"),
+                "<hr>",
             ),
             # Full meaning.
             field.aon(
-                field.txt("<b>Meaning:</b>"),
-                field.txt("<br>"),
-                field.tsv(
-                    "dictionary/marcion.sourceforge.net/data/output/roots.tsv",
-                    "en-parsed",
-                ),
-                field.txt("<hr>"),
+                "<b>Meaning:</b>",
+                "<br>",
+                roots_col("en-parsed"),
+                "<hr>",
             ),
             # Crum's entry.
             field.aon(
-                field.txt("<b>Crum: </b>"),
-                field.tsv(
-                    "dictionary/marcion.sourceforge.net/data/output/roots.tsv", "crum"
-                ),
-                field.txt("<br>"),
+                "<b>Crum: </b>",
+                roots_col("crum"),
+                "<br>",
                 field.img(
                     "dictionary/marcion.sourceforge.net/data/output/roots.tsv",
                     "crum-pages",
                     "dictionary/marcion.sourceforge.net/data/crum",
                     "numexpr({key}+20).png",
                     "KEY",
+                    None,
+                    force=True,
                 ),
-                field.txt("<hr>"),
+                "<hr>",
             ),
             # Marcion's key.
             field.aon(
-                field.txt("<b>Key: </b>"),
-                field.tsv(
-                    "dictionary/marcion.sourceforge.net/data/output/roots.tsv", "key"
-                ),
+                "<b>Key: </b>",
+                roots_col("key"),
             ),
         ),
         force_single_deck=True,
@@ -129,17 +117,20 @@ def crum(deck_name: str, deck_id: int, front_column: str, force_front: bool):
 @type_enforced.Enforcer
 def bible(deck_name: str, deck_id: int, front_dialects: list[str]):
 
-    def tsv_column(col_name):
-        return field.tsv("bible/stshenouda.org/data/output/csv/bible.csv", col_name)
+    @type_enforced.Enforcer
+    def tsv_column(col_name: str, force: bool = False) -> field.tsv:
+        return field.tsv(
+            "bible/stshenouda.org/data/output/csv/bible.csv", col_name, force
+        )
 
     def verse(language):
         return field.aon(
-            field.txt(f"<b>{language}</b>"),
-            field.txt(":"),
-            field.txt("<br>"),
+            f"<b>{language}</b>",
+            ":",
+            "<br>",
             tsv_column(language),
-            field.txt("<br>"),
-            field.txt("<br>"),
+            "<br>",
+            "<br>",
         )
 
     assert all(dialect in BIBLE_LANGUAGES for dialect in front_dialects)
@@ -147,29 +138,28 @@ def bible(deck_name: str, deck_id: int, front_dialects: list[str]):
     return deck.deck(
         deck_name=deck_name,
         deck_id=deck_id,
-        deck_description="URL: https://github.com/pishoyg/coptic/.\n"
-        "Contact: pishoybg@gmail.com.",
+        deck_description="https://github.com/pishoyg/coptic/.\n" "pishoybg@gmail.com.",
         css=".card { font-size: 18px; }",
         # N.B. The name is a protected field.
         name=field.aon(
-            field.txt(deck_name),
-            field.txt("::"),
-            tsv_column("section-indexed-no-testament"),
-            field.txt("::"),
-            tsv_column("book-indexed"),
-            field.txt("::"),
-            tsv_column("chapter-zfilled"),
+            deck_name,
+            "::",
+            tsv_column("section-indexed-no-testament", True),
+            "::",
+            tsv_column("book-indexed", True),
+            "::",
+            tsv_column("chapter-zfilled", True),
         ),
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
         key=field.aon(
-            field.txt("("),
-            tsv_column("book"),
-            field.txt(" "),
-            tsv_column("chapter"),
-            field.txt(":"),
+            "(",
+            tsv_column("book", True),
+            " ",
+            tsv_column("chapter", True),
+            ":",
             tsv_column("verse"),
-            field.txt(")"),
+            ")",
         ),
         front=(
             field.cat(*[verse(lang) for lang in front_dialects])
@@ -179,15 +169,15 @@ def bible(deck_name: str, deck_id: int, front_dialects: list[str]):
         back=field.cat(
             # Reference.
             field.aon(
-                field.txt("("),
-                tsv_column("book"),
-                field.txt(" "),
-                tsv_column("chapter"),
-                field.txt(":"),
+                "(",
+                tsv_column("book", True),
+                " ",
+                tsv_column("chapter", True),
+                ":",
                 tsv_column("verse"),
-                field.txt(")"),
-                field.txt("<br>"),
-                field.txt("<br>"),
+                ")",
+                "<br>",
+                "<br>",
             ),
             *[verse(lang) for lang in BIBLE_LANGUAGES if lang not in front_dialects],
         ),
@@ -196,11 +186,14 @@ def bible(deck_name: str, deck_id: int, front_dialects: list[str]):
 
 @type_enforced.Enforcer
 def copticsite_com(deck_name: str, deck_id: int):
+    @type_enforced.Enforcer
+    def tsv_col(col_name: str) -> field.tsv:
+        return field.tsv("dictionary/copticsite.com/data/output/output.tsv", col_name)
+
     return deck.deck(
         deck_name=deck_name,
         deck_id=deck_id,
-        deck_description="URL: https://github.com/pishoyg/coptic/.\n"
-        "Contact: pishoybg@gmail.com.",
+        deck_description="https://github.com/pishoyg/coptic/.\n" "pishoybg@gmail.com.",
         css=".card { text-align: center; }",
         # N.B. The name is a protected field, although it is unused in this case
         # because we generate a single deck, thus the deck name is a constant for
@@ -209,37 +202,27 @@ def copticsite_com(deck_name: str, deck_id: int):
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
         key=field.seq(),
-        front=field.tsv(
-            "dictionary/copticsite.com/data/output/output.tsv",
-            "prettify",
-        ),
+        front=tsv_col("prettify"),
         back=field.cat(
             field.aon(
-                field.txt("("),
-                field.txt("<b>"),
+                "(",
+                "<b>",
                 field.cat(
-                    field.tsv(
-                        "dictionary/copticsite.com/data/output/output.tsv", "Word Kind"
+                    tsv_col("Word Kind"),
+                    field.aon(
+                        " - ",
+                        tsv_col("Word Gender"),
                     ),
                     field.aon(
-                        field.txt(" - "),
-                        field.tsv(
-                            "dictionary/copticsite.com/data/output/output.tsv",
-                            "Word Gender",
-                        ),
-                    ),
-                    field.aon(
-                        field.txt(" - "),
-                        field.tsv(
-                            "dictionary/copticsite.com/data/output/output.tsv", "Origin"
-                        ),
+                        " - ",
+                        tsv_col("Origin"),
                     ),
                 ),
-                field.txt("</b>"),
-                field.txt(")"),
-                field.txt("<br>"),
+                "</b>",
+                ")",
+                "<br>",
             ),
-            field.tsv("dictionary/copticsite.com/data/output/output.tsv", "Meaning"),
+            tsv_col("Meaning"),
         ),
         force_single_deck=True,
         force_key=True,

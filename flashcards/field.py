@@ -27,66 +27,6 @@ MAX_INTEGER_LENGTH = 10
 MAX_THUMBNAIL_HEIGHT = 100000
 
 
-@type_enforced.Enforcer
-def num_entries(*fields) -> int:
-    cur = -1
-    for f in fields:
-        length = f.length()
-        if length == -1:
-            continue
-        if cur == -1:
-            cur = length
-            continue
-        assert cur == length
-    return cur
-
-
-@type_enforced.Enforcer
-def merge_media_files(*fields):
-    m = sum([f.media_files() for f in fields], [])
-    # Eliminate duplicates. This significantly reduces the package size.
-    # While this is handled by Anki, it's not supported in genanki.
-    return list(set(m))
-
-
-@type_enforced.Enforcer
-def _path_sort_key(path: str) -> list[str]:
-    path = os.path.basename(path)
-    return [x.zfill(MAX_INTEGER_LENGTH) for x in INTEGER_RE.findall(path)] + [path]
-
-
-@type_enforced.Enforcer
-def _use_html_line_breaks(text: str) -> str:
-    text = str(text)
-    return text.replace("\n", "<br>")
-
-
-@type_enforced.Enforcer
-def _substitute_key_and_numexpr(file_name_fmt: str, key: str) -> str:
-    file_name_fmt = file_name_fmt.format(key=key)
-    match = NUMEXPR_RE.match(file_name_fmt)
-    if not match:
-        return file_name_fmt
-    expr = numexpr.evaluate(match.group(1)).item()
-    return NUMEXPR_RE.sub(str(expr), file_name_fmt)
-
-
-@type_enforced.Enforcer
-def _glob(dir_path: str, file_name_fmt: str, cs_keys: str) -> list[str]:
-    paths = set()
-    for key in cs_keys.split(","):
-        pattern = _substitute_key_and_numexpr(file_name_fmt, key)
-        pattern = os.path.join(dir_path, pattern)
-        paths.update(glob.glob(pattern))
-    return list(sorted(paths, key=_path_sort_key))
-
-
-@type_enforced.Enforcer
-def _read_tsv_column(file_path: str, column_name: str) -> list[str]:
-    df = pd.read_csv(file_path, sep="\t", encoding="utf-8").fillna("")
-    return [str(cell).strip() for cell in df[column_name]]
-
-
 class field:
     pass
 
@@ -94,25 +34,26 @@ class field:
 # aon = all or none.
 class aon(field):
     @type_enforced.Enforcer
-    def __init__(self, *fields):
+    def __init__(self, *fields) -> None:
+        fields = _convert_strings(*fields)
         self._len = num_entries(*fields)
         self._fields = fields
         self._media_files = sum([f.media_files() for f in fields], [])
         self._media_files = list(set(self._media_files))
 
     @type_enforced.Enforcer
-    def next(self):
+    def next(self) -> str:
         n = [f.next() for f in self._fields]
         if all(n):
             return "".join(n)
         return ""
 
     @type_enforced.Enforcer
-    def length(self):
+    def length(self) -> int:
         return self._len
 
     @type_enforced.Enforcer
-    def media_files(self):
+    def media_files(self) -> list[str]:
         return self._media_files
 
 
@@ -122,22 +63,23 @@ class cat(field):
     """
 
     @type_enforced.Enforcer
-    def __init__(self, *fields):
+    def __init__(self, *fields) -> None:
+        fields = _convert_strings(*fields)
         self._len = num_entries(*fields)
         self._fields = fields
         self._media_files = sum([f.media_files() for f in fields], [])
         self._media_files = list(set(self._media_files))
 
     @type_enforced.Enforcer
-    def next(self):
+    def next(self) -> str:
         return "".join(f.next() for f in self._fields)
 
     @type_enforced.Enforcer
-    def length(self):
+    def length(self) -> int:
         return self._len
 
     @type_enforced.Enforcer
-    def media_files(self):
+    def media_files(self) -> list[str]:
         return self._media_files
 
 
@@ -148,11 +90,12 @@ class xor(field):
     """
 
     @type_enforced.Enforcer
-    def __init__(self, *fields):
+    def __init__(self, *fields) -> None:
+        fields = _convert_strings(*fields)
         self._fields = fields
 
     @type_enforced.Enforcer
-    def next(self):
+    def next(self) -> str:
         n = [f.next() for f in self._fields]
         n = list(filter(None, n))
         if not n:
@@ -160,11 +103,11 @@ class xor(field):
         return n[0]
 
     @type_enforced.Enforcer
-    def length(self):
+    def length(self) -> int:
         num_entries(self._fields)
 
     @type_enforced.Enforcer
-    def media_files(self):
+    def media_files(self) -> list[str]:
         return merge_media_files(*self._fields)
 
 
@@ -174,7 +117,9 @@ class txt(field):
     """
 
     @type_enforced.Enforcer
-    def __init__(self, text: str):
+    def __init__(self, text: str, force: bool = True) -> None:
+        if force:
+            assert text
         self._text = _use_html_line_breaks(text)
 
     @type_enforced.Enforcer
@@ -186,7 +131,7 @@ class txt(field):
         return -1
 
     @type_enforced.Enforcer
-    def media_files(self):
+    def media_files(self) -> list[str]:
         return []
 
     @type_enforced.Enforcer
@@ -200,7 +145,7 @@ class seq(field):
     """
 
     @type_enforced.Enforcer
-    def __init__(self, start: int = 1):
+    def __init__(self, start: int = 1) -> None:
         self._cur = start
 
     @type_enforced.Enforcer
@@ -213,7 +158,8 @@ class seq(field):
     def length(self) -> int:
         return -1
 
-    def media_files(self):
+    @type_enforced.Enforcer
+    def media_files(self) -> list[str]:
         return []
 
 
@@ -223,10 +169,12 @@ class tsv(field):
     """
 
     @type_enforced.Enforcer
-    def __init__(self, file_path: str, column_name: str):
+    def __init__(self, file_path: str, column_name: str, force: bool = False) -> None:
         self._content = _read_tsv_column(file_path, column_name)
         self._content = map(str, self._content)
         self._content = list(map(_use_html_line_breaks, self._content))
+        if force:
+            assert all(self._content)
         self._counter = 0
 
     @type_enforced.Enforcer
@@ -298,13 +246,14 @@ class img(field):
     @type_enforced.Enforcer
     def __init__(
         self,
-        file_path: str,
+        tsv_path: str,
         column_name: str,
         dir_path: str,
         file_name_fmt: str,
         caption_source: str,
         width: typing.Optional[int] = None,
-    ):
+        force: bool = False,
+    ) -> None:
         """
         The "src" field of the <img> HTML tag must bear basenames. Directories
         are not allowed. This implies that all basenames must be unique.
@@ -331,14 +280,19 @@ class img(field):
 
         # Each entry in the keys column is not a single key, but a
         # comma-separated list of key patterns.
-        keys = _read_tsv_column(file_path, column_name)
+        keys = _read_tsv_column(tsv_path, column_name)
 
         self._content = []
         self._media_files = set()
         for cs_keys in keys:
+            if force:
+                assert cs_keys
             cur = ""
             for key in cs_keys.split(","):
+                assert key
                 paths = _glob(dir_path, file_name_fmt, key)
+                if force:
+                    assert paths
                 for path in paths:
                     caption = self._get_caption(caption_source, key, path)
                     basename = path.replace("/", "_")
@@ -393,9 +347,16 @@ class fil(field):
 
     @type_enforced.Enforcer
     def __init__(
-        self, file_path: str, column_name: str, dir_path: str, file_name_fmt: str
-    ):
+        self,
+        file_path: str,
+        column_name: str,
+        dir_path: str,
+        file_name_fmt: str,
+        force: bool = False,
+    ) -> None:
         keys = _read_tsv_column(file_path, column_name)
+        if force:
+            assert keys and all(keys)
 
         self._content = []
         for cs_keys in keys:
@@ -422,3 +383,70 @@ class fil(field):
     @type_enforced.Enforcer
     def length(self) -> int:
         return len(self._content)
+
+
+@type_enforced.Enforcer
+def _convert_strings(
+    *fields: [str] + type_enforced.utils.WithSubclasses(field),
+) -> list[*type_enforced.utils.WithSubclasses(field)]:
+    return [txt(f) if isinstance(f, str) else f for f in fields]
+
+
+@type_enforced.Enforcer
+def num_entries(*fields: [str] + type_enforced.utils.WithSubclasses(field)) -> int:
+    cur = -1
+    for f in fields:
+        length = f.length()
+        if length == -1:
+            continue
+        if cur == -1:
+            cur = length
+            continue
+        assert cur == length
+    return cur
+
+
+@type_enforced.Enforcer
+def merge_media_files(*fields) -> list[str]:
+    m = sum([f.media_files() for f in fields], [])
+    # Eliminate duplicates. This significantly reduces the package size.
+    # While this is handled by Anki, it's not supported in genanki.
+    return list(set(m))
+
+
+@type_enforced.Enforcer
+def _path_sort_key(path: str) -> list[str]:
+    path = os.path.basename(path)
+    return [x.zfill(MAX_INTEGER_LENGTH) for x in INTEGER_RE.findall(path)] + [path]
+
+
+@type_enforced.Enforcer
+def _use_html_line_breaks(text: str) -> str:
+    text = str(text)
+    return text.replace("\n", "<br>")
+
+
+@type_enforced.Enforcer
+def _substitute_key_and_numexpr(file_name_fmt: str, key: str) -> str:
+    file_name_fmt = file_name_fmt.format(key=key)
+    match = NUMEXPR_RE.match(file_name_fmt)
+    if not match:
+        return file_name_fmt
+    expr = numexpr.evaluate(match.group(1)).item()
+    return NUMEXPR_RE.sub(str(expr), file_name_fmt)
+
+
+@type_enforced.Enforcer
+def _glob(dir_path: str, file_name_fmt: str, cs_keys: str) -> list[str]:
+    paths = set()
+    for key in cs_keys.split(","):
+        pattern = _substitute_key_and_numexpr(file_name_fmt, key)
+        pattern = os.path.join(dir_path, pattern)
+        paths.update(glob.glob(pattern))
+    return list(sorted(paths, key=_path_sort_key))
+
+
+@type_enforced.Enforcer
+def _read_tsv_column(file_path: str, column_name: str) -> list[str]:
+    df = pd.read_csv(file_path, sep="\t", encoding="utf-8").fillna("")
+    return [str(cell).strip() for cell in df[column_name]]

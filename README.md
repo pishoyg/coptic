@@ -205,6 +205,15 @@ for how Marcion constructs the derivations tree.
 
 1. **Publish the decks through Anki.** (1 hours)
 
+1. Implement a sound type.
+
+1. The image, file, and (future) sound fields should support a comma-separated
+   list of key ranges, not just a comma-separated list of keys.
+
+1. Use a dummy timestamp for testing. You can then verify that your changes
+   don't impact the output by comparing two packages generated with the dummy
+   timestamp against one another, one with and one without the changes.
+
 1. Flashcard synchronization seems to be working fine. However, running the
    generation script twice produces a different file, and reimporting
    (supposedly identical data) produces the message "notes were used to update

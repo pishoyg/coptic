@@ -1,5 +1,4 @@
-flashcards: test bible_stshenouda dictionary_copticsite dictionary_crum readme
-	python flashcards/main.py
+all: test bible_stshenouda dictionary_copticsite dictionary_crum readme flashcards
 
 test: FORCE
 	python -m unittest discover flashcards
@@ -15,5 +14,8 @@ dictionary_crum: FORCE
 
 readme: FORCE
 	doctoc README.md bible/README.md dictionary/README.md flashcards/README.md 
+
+flashcards: FORCE
+	python flashcards/main.py
 
 FORCE:
