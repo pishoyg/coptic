@@ -137,6 +137,7 @@ def main() -> None:
     derivations = pd.read_csv(args.coptdrv_tsv, sep="\t", encoding="utf-8").fillna("")
     process_data(derivations, strict=False)
     derivations.sort_values(by=args.sort_derivations, inplace=True)
+    derivations["depth"] = depths(derivations)
     derivations.to_csv(args.derivations_tsv, sep="\t", index=False)
 
     if args.gspread_owner:
@@ -224,6 +225,7 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         df[col] = values
 
 
+@type_enforced.Enforcer
 def build_tree(roots, derivations):
     roots = {row["key"]: tree.node(row) for _, row in roots.iterrows()}
     derivations = {row["key"]: tree.node(row) for _, row in derivations.iterrows()}
@@ -234,6 +236,22 @@ def build_tree(roots, derivations):
         n.sort()
     for _, n in roots.items():
         n.tree()
+
+
+@type_enforced.Enforcer
+def depths(derivations: pd.DataFrame) -> list[int]:
+    keys = [int(row["key"]) for _, row in derivations.iterrows()]
+    parents = [int(row["key_deriv"]) for _, row in derivations.iterrows()]
+    key_to_parent = {k: p for k, p in zip(keys, parents)}
+
+    @type_enforced.Enforcer
+    def depth(key: int) -> int:
+        parent = key_to_parent[key]
+        if not parent:
+            return 0
+        return 1 + depth(parent)
+
+    return [depth(k) for k in keys]
 
 
 @type_enforced.Enforcer
