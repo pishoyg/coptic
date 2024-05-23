@@ -69,6 +69,23 @@ argparser.add_argument(
     " dialect.",
 )
 
+argparser.add_argument(
+    "--sort_roots",
+    type=str,
+    nargs="+",
+    default=["key"],
+    help="Fields to use for sorting the roots",
+)
+
+argparser.add_argument(
+    "--sort_derivations",
+    type=str,
+    nargs="+",
+    default=["key"],
+    help="A common alternative is ['key_word', 'pos'], which would list the"
+    " derivations the way they would show underneath their root word.",
+)
+
 # Gspread arguments.###########################################################
 GSPREAD_SCOPE = [
     "https://spreadsheets.google.com/feeds",
@@ -108,6 +125,7 @@ def main() -> None:
     # Process roots.
     roots = pd.read_csv(args.coptwrd_tsv, sep="\t", encoding="utf-8").fillna("")
     process_data(roots, strict=True)
+    roots.sort_values(by=args.sort_roots, inplace=True)
     roots.to_csv(args.roots_tsv, sep="\t", index=False)
 
     if args.gspread_owner:
@@ -118,6 +136,7 @@ def main() -> None:
     # Process derivations.
     derivations = pd.read_csv(args.coptdrv_tsv, sep="\t", encoding="utf-8").fillna("")
     process_data(derivations, strict=False)
+    derivations.sort_values(by=args.sort_derivations, inplace=True)
     derivations.to_csv(args.derivations_tsv, sep="\t", index=False)
 
     if args.gspread_owner:
