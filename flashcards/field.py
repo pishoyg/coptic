@@ -121,7 +121,7 @@ class txt(field):
     def __init__(self, text: str, force: bool = True) -> None:
         if force:
             assert text
-        self._text = _use_html_line_breaks(text)
+        self._text = use_html_line_breaks(text)
 
     @type_enforced.Enforcer
     def next(self) -> str:
@@ -173,7 +173,7 @@ class tsv(field):
     def __init__(self, file_path: str, column_name: str, force: bool = False) -> None:
         self._content = _read_tsv_column(file_path, column_name)
         self._content = map(str, self._content)
-        self._content = list(map(_use_html_line_breaks, self._content))
+        self._content = list(map(use_html_line_breaks, self._content))
         if force:
             assert all(self._content)
         self._counter = 0
@@ -195,7 +195,7 @@ class tsv(field):
 
 class grp(field):
     """
-    Group TSV columns using a given column.
+    Group entries in a TSV column using another column.
     """
 
     @type_enforced.Enforcer
@@ -205,15 +205,16 @@ class grp(field):
         key_col_name: str,
         group_file_path: str,
         group_by_col_name: str,
-        select_cols: list[str],
+        select_col: str,
+        force: bool = True,
     ) -> None:
         keys = tsv(key_file_path, key_col_name, force=True)
         keys = [keys.next() for _ in range(keys.length())]
         group_by = tsv(group_file_path, group_by_col_name, force=True)
-        selected = [tsv(group_file_path, col, force=True) for col in select_cols]
+        selected = tsv(group_file_path, select_col, force=force)
         key_to_selected = {k: [] for k in keys}
-        for _ in range(num_entries(group_by, *selected)):
-            key_to_selected[group_by.next()].append([s.next() for s in selected])
+        for _ in range(num_entries(group_by, selected)):
+            key_to_selected[group_by.next()].append(selected.next())
         self._content = [key_to_selected[k] for k in keys]
         self._counter = 0
 
@@ -238,21 +239,21 @@ class apl(field):
     """
 
     @type_enforced.Enforcer
-    def __init__(self, l: typing.Callable, f) -> None:
+    def __init__(self, l, *fields) -> None:
         self._lambda = l
-        self._field = f
+        self._fields = fields
 
     @type_enforced.Enforcer
     def media_files(self) -> list[str]:
-        return self._field.media_files()
+        return merge_media_files(*self._fields)
 
     @type_enforced.Enforcer
     def next(self):
-        return self._lambda(self._field.next())
+        return self._lambda(*[f.next() for f in self._fields])
 
     @type_enforced.Enforcer
     def length(self) -> int:
-        return self._field.length()
+        return num_entries(*self._fields)
 
 
 class img(field):
@@ -428,7 +429,7 @@ class fil(field):
             for path in paths:
                 with open(path) as f:
                     cur += f.read()
-            cur = _use_html_line_breaks(cur)
+            cur = use_html_line_breaks(cur)
             cur = cur.strip()
             self._content.append(cur)
         self._counter = 0
@@ -484,8 +485,7 @@ def _path_sort_key(path: str) -> list[str]:
 
 
 @type_enforced.Enforcer
-def _use_html_line_breaks(text: str) -> str:
-    text = str(text)
+def use_html_line_breaks(text: str) -> str:
     return text.replace("\n", "<br>")
 
 

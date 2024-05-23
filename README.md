@@ -231,7 +231,9 @@ into the repo.
 1. **Incorporate Scriptorium's data. Gain familiarity with their platform.
    Parse their dictionary.** (7-8 hours, delegated)
 
-1. **Add word derivations to a TSV, and then to the flashcards.** (3-4 hours)
+1. **Add word derivations to flashcards.** (3-4 hours)
+
+1. **Add word derivations to a TSV.** (3-4 hours)
    See [this
 file](https://github.com/pishoyg/coptic/blob/master/archive%2Fmarcion-1.8.3-src%2Fcrumresulttree.cpp)
 for how Marcion constructs the derivations tree.

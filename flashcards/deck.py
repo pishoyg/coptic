@@ -24,7 +24,7 @@ class stats:
                     f"- {self._no_key} notes are missing a key.",
                     f"- {self._no_front} notes are missing a front.",
                     f"- {self._no_back} notes are missing a back.",
-                    f"- {self._duplicate_key} notes are have duplicate keys.",
+                    f"- {self._duplicate_key} notes have duplicate keys.",
                 ]
             )
         )

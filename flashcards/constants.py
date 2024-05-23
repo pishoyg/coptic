@@ -2,6 +2,9 @@ import deck
 import field
 import type_enforced
 
+NUM_COLS = 10
+MAX_DERIVATION_DEPTH = 4
+
 BIBLE_LANGUAGES = [
     "Bohairic",
     "English",
@@ -27,6 +30,16 @@ def crum(deck_name: str, deck_id: int, front_column: str, allow_no_front: bool =
             force=force,
         )
 
+    def derivations_col(col_name: str, force: bool = True) -> field.grp:
+        return field.grp(
+            key_file_path="dictionary/marcion.sourceforge.net/data/output/roots.tsv",
+            key_col_name="key",
+            group_file_path="dictionary/marcion.sourceforge.net/data/output/derivations.tsv",
+            group_by_col_name="key_word",
+            select_col=col_name,
+            force=force,
+        )
+
     return deck.deck(
         deck_name=deck_name,
         deck_id=deck_id,
@@ -35,7 +48,8 @@ def crum(deck_name: str, deck_id: int, front_column: str, allow_no_front: bool =
         "#front { text-align: center; }"
         "figure {display: inline-block; border: 1px transparent; margin: 10px; }"
         "figure figcaption { text-align: center; }"
-        "figure img { vertical-align: top; }",
+        "figure img { vertical-align: top; }"
+        "#bordered { border:1px solid black; }",
         # N.B. The name is a protected field, although it is unused in this
         # case because we generate a single deck, thus the deck name is a
         # constant for all notes.
@@ -76,6 +90,14 @@ def crum(deck_name: str, deck_id: int, front_column: str, allow_no_front: bool =
                 "<br>",
                 roots_col("word-parsed-no-ref"),
                 "<hr>",
+            ),
+            field.apl(
+                build_tree,
+                derivations_col("depth", True),
+                derivations_col("word-parsed-prettify", False),
+                derivations_col("type-parsed", True),
+                derivations_col("en-parsed", False),
+                derivations_col("crum", True),
             ),
             # Full meaning.
             field.aon(
@@ -230,6 +252,61 @@ def copticsite_com(deck_name: str, deck_id: int):
     )
 
 
+@type_enforced.Enforcer
+def build_tree(*derivations: list[str]) -> str:
+    """
+    Each derivation should be a tuple containing the following fields:
+        - depth
+        - word-parsed-prettify
+        - type-parsed
+        - en-parsed
+        - crum
+    """
+    # TODO: Prettify the HTML, and include the derivations.
+    out = []
+    out.extend(
+        [
+            "<table>",
+            "<colgroup>",
+        ]
+    )
+    out.extend([f'<col width="{100/NUM_COLS}%">'] * NUM_COLS)
+    out.extend(["</colgroup>"])
+
+    for depth, word, type, meaning, crum in zip(*derivations):
+        depth = int(depth)
+        assert depth <= MAX_DERIVATION_DEPTH
+        word_width = int((NUM_COLS - depth) / 2) if word else 0
+        meaning_width = NUM_COLS - word_width - depth
+        out.extend(
+            [
+                # New row.
+                "<tr>",
+                # Margin.
+                f'<td colspan="{depth}"></td>' if depth else "",
+                # Word.
+                (
+                    f'<td colspan="{word_width}" id="bordered">{word}</td>'
+                    if word_width
+                    else ""
+                ),
+                # Meaning.
+                f'<td colspan="{meaning_width}" id="bordered">',
+                # TODO: Retrieve these types from Marcion rather than hardcode
+                # them here.
+                f"<b>({type})</b><br>" if type not in ["-", "HEADER"] else "",
+                meaning,
+                "<br>" f"<small><b>Crum: </b> {crum}</small>",
+                "</td>",
+                # End row.
+                "</tr>",
+            ]
+        )
+    out.append("</table>")
+    out = " ".join(out)
+    return out
+
+
 # N.B. The deck IDs are protected fields. They are used as database keys for the
 # decks. Do NOT change them!
 #
@@ -253,6 +330,7 @@ def copticsite_com(deck_name: str, deck_id: int):
 # multiple decks.
 # The "key" field is used to key the notes.
 
+
 BOHAIRIC_CRUM = crum(
     "A Coptic Dictionary::Bohairic", 1284010383, "dialect-B", allow_no_front=True
 )
@@ -274,6 +352,7 @@ BIBLE_ALL = bible(
 )
 
 COPTICSITE_COM = copticsite_com("copticsite.com", 1284010385)
+
 
 DECKS = [
     BOHAIRIC_CRUM,
