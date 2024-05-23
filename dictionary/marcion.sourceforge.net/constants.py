@@ -131,7 +131,7 @@ QUALITY_ENCODING = {
 
 # TYPE_ENCODING is used to parse the "type" column.
 TYPE_ENCODING = {
-    0: lexical.type("-", "(-)", "-"),
+    0: lexical.type("-", "(-)", "-", append=False),
     3: lexical.type("noun", "(ⲟⲩ)", "noun"),
     1: lexical.type("noun male", "(ⲡ)", "noun male"),
     4: lexical.type("noun female", "(ⲧ)", "noun female"),
@@ -158,7 +158,7 @@ TYPE_ENCODING = {
     17: lexical.type("particle", "(part.)", "particle"),
     18: lexical.type("interjection", "(interjection)", "interjection"),
     20: lexical.type("personal pronoun", "(pers. pron.)", "personal pronoun"),
-    99: lexical.type("HEADER", "(HEADER)", "HEADER"),
+    99: lexical.type("HEADER", "(HEADER)", "HEADER", append=False),
 }
 
 # PREPROCESSING, SPELLING_ANNOTATIONS, and DETACHED_TYPES, and POSTPROCESSING
