@@ -22,6 +22,7 @@
     - [Collaborator Convenience](#collaborator-convenience)
     - [Flashcards](#flashcards)
     - [Developer Convenience](#developer-convenience)
+  - [Diplomacy Tasks](#diplomacy-tasks)
   - [Directory Structure](#directory-structure)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -199,6 +200,10 @@ into the repo.
    But what we can do is have users share their contributions via Drive, and then
    we will implement a pipeline to integrate the contributions made through Drive
    into Git.
+
+   **Add a file with some private variables that your scripts can use to publish
+   the data to Drive. Include your Drive credentials and local paths and the
+   like.**
 
 #### Flashcards
 
