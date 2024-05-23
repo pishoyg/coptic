@@ -224,6 +224,8 @@ into the repo.
    the data to Drive. Include your Drive credentials and local paths and the
    like.**
 
+1. **Produce a version of the dictionary that is sorted alphabetically.**
+
 #### Flashcards
 
 1. **Deploy the flashcards on a standalone app.** (100+ hours, delegate)
@@ -231,14 +233,16 @@ into the repo.
 1. **Incorporate Scriptorium's data. Gain familiarity with their platform.
    Parse their dictionary.** (7-8 hours, delegated)
 
-1. **Add word derivations to flashcards.** (3-4 hours)
+1. **Change the coloring scheme for dark mode.** (2 hours)
+
+1. **Instead of two, include the Crum pages containing derivations.** (2 hours)
 
 1. **Add word derivations to a TSV.** (3-4 hours)
    See [this
 file](https://github.com/pishoyg/coptic/blob/master/archive%2Fmarcion-1.8.3-src%2Fcrumresulttree.cpp)
 for how Marcion constructs the derivations tree.
 
-   **1. The image, file, and (future) sound fields should support a
+1. **The image, file, and (future) sound fields should support a
    comma-separated list of keys, or key ranges.** (1 hour)
 
 1. **Publish the decks through Anki.** (1 hours)
@@ -249,6 +253,11 @@ for how Marcion constructs the derivations tree.
    don't impact the output by comparing two packages generated with the dummy
    timestamp against one another, one with and one without the changes.** (1
 hour)
+
+1. Group the derivations by dialect.
+
+1. Feedback: It’s better to use the standardized notation: ⲟⲛϧ= (equal sign),
+   ⲟⲛϧ† (upper dager) instead of the fancy tilted equal sign and the (ⲉϥ).
 
 1. Flashcard synchronization seems to be working fine. However, running the
    generation script twice produces a different file, and reimporting
