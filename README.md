@@ -63,17 +63,19 @@ Also feel free to reach out with questions.
    learning process, and it will save learners the time that they have to spend
    on looking up the obscure vocabulary or unfamiliar terms.
 
-1. Collect more explanatory notes.
-
-1. Add a meanings that would be displayed on top before Crum's translation.
-   Some of Crum's translations are obscure or outdated (meaning either that the
-   translation is archaic, or that we understand the meaning of the word better
-   than he did back then).
-
-1. Add literature citations. Perhaps from Scriptorium? Perhaps from the
-   Bible?
+1. **Link Scriptorium Lemmas to and Marcion Keys.**
 
 1. Add pronunciations.
+
+1. Add a meanings that would be displayed on top before Crum's translation.
+   Some of Crum's translations are obscure or archaic, and some are outdated
+   because we understand the meaning of the word better than he did back then.
+   (low-priority)
+
+1. Collect more explanatory notes. (low-priority)
+
+1. Add literature citations. Perhaps from Scriptorium? Perhaps from the
+   Bible? (low-priority)
 
 ### Moawad Dawoud's Diciontary
 
@@ -82,15 +84,16 @@ Also feel free to reach out with questions.
 
 1. Add Moawad Dawoud's Arabic translations.
 
-1. Add Moawad Dawoud's standardized spellings.
+1. Add Moawad Dawoud's standardized spellings. (low-priority)
 
-1. Copy the Greek loanwords from Moawad into a new flashcard deck. (This may be
-   less urgent if you incorporate Scriptorium's data, which you must do
-   anyway.)
+1. Copy the Greek loanwords from Moawad into a new flashcard deck.
+   (low-priority, especially if you incorporate Scriptorium's data, which you
+   must do anyway.)
 
-1. Digitalize the entirety of Dawoud's dictionary.
+1. Digitalize the entirety of Dawoud's dictionary. (low-priority)
 
 1. Get a cleaner scan of Dawoud's dictionary. Obtain the source PDF if posible.
+   (low-priority)
 
 ### Crum's Dictionary
 
@@ -99,12 +102,13 @@ Also feel free to reach out with questions.
 
 1. Fix the typos in the data retrieved from Crum. The current dataset is
    high-quality, and has a very small number of typos. However, they do exist.
-   (This is more of an ongoing effort than a task.)
+   (low-priority, and it's more of an ongoing byproduct than a task.)
 
 1. Contemplate sorting the dictionary words by popularity, somehow.
+   (low-priority)
 
 1. Contemplate dividing the decks to subsets sorted by popularity, so the
-   learners can learn the more important words first.
+   learners can learn the more important words first. (low-priority)
 
 ### Neologisms
 
@@ -124,7 +128,7 @@ Also feel free to reach out with questions.
 1. Add data from St. Shenouda The Archimandrite Coptic Society's Dictionary.
 
 1. Incorporate the Naqlun dictionary's data. It is poor-quality, but it might
-   be attractive for some learners.
+   be attractive for some learners. (low-priority)
 
 1. Incorporate the ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ Group's neologisms. They did substantial
    work that might be worth incorporating.
@@ -141,6 +145,11 @@ The data used here was digitalized and published through the efforts of:
 1. Osama Thabet, creator of [copticsite.com](https://copticsite.com/)
 
 ## For Developers
+
+For visibility, planned features and improvements must be documented in this
+README file (not in any of the README files in the subdirectories).
+Non-learner-facing coding tasks are sometimes documented in the code as TODO's,
+and sometimes brought here.
 
 ### Documentation Tasks
 
@@ -203,33 +212,41 @@ into the repo.
 file](https://github.com/pishoyg/coptic/blob/master/archive%2Fmarcion-1.8.3-src%2Fcrumresulttree.cpp)
 for how Marcion constructs the derivations tree.
 
+   1. **Sort the derivations TSV.** (1 hour)
+
+   1. **Implement a TSV group-by field.** (1 hour)
+
+   1. **Implement an apply-lambda field.** (1 hour)
+
+   **1. The image, file, and (future) sound fields should support a
+   comma-separated list of keys, or key ranges.** (1 hour)
+
 1. **Publish the decks through Anki.** (1 hours)
 
-1. Implement a sound type.
+1. **Implement a sound type.** (1 hour)
 
-1. The image, file, and (future) sound fields should support a comma-separated
-   list of key ranges, not just a comma-separated list of keys.
-
-1. Use a dummy timestamp for testing. You can then verify that your changes
+1. **Use a dummy timestamp for testing. You can then verify that your changes
    don't impact the output by comparing two packages generated with the dummy
-   timestamp against one another, one with and one without the changes.
+   timestamp against one another, one with and one without the changes.** (1
+hour)
 
 1. Flashcard synchronization seems to be working fine. However, running the
    generation script twice produces a different file, and reimporting
    (supposedly identical data) produces the message "notes were used to update
-   existing ones. Investigate.
+   existing ones.
 
-   Followup: This is likely due to the timestamps that the notes are recorded
-   with. The newer timestamps make Anki think that the cards are newer. It is
-   best, when exporting a new version of the package, to only include the notes
-   that have changed content. `genanki` doesn't have a friendly way to support
-   this (not even by reading the existing package and comparing the new data
+   This is likely due to the timestamps that the notes are recorded
+   with. The newer timestamps make Anki think that the cards are newer, hence
+   it updates everything. It is best, when exporting a new version of the
+   package, to only include accurate timestamps. If some notes are identical to
+   ones that have already been exported, they should retain their old
+   timestamps. `genanki` doesn't have native support for per-note this, neither
+   does it support reading an existing package and comparing the new data
    against it), so we will likely have to do lots of manual work to avoid the
-   problem.
+   problem, or find another package.
 
-1. Understand note sorting. (`genanki` has a `sort_key` argument.)
-
-1. Revisit the possibility of image compression to minimize the package size.
+1. Understand note sorting. To start with, understand `genanki`'s `sort_key`
+   parameter.
 
 1. **Crawl [Wiktionary - Category:Coptic lemmas](
 https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
@@ -238,6 +255,10 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
    published.
 
 1. Complete the list of prefixes for the `prettify` format for copticsite.com.
+   (low-priority)
+
+1. Revisit the possibility of image compression to minimize the package size.
+   (low-priority)
 
 #### Developer Convenience
 
@@ -277,6 +298,10 @@ abide by if you want to.
 
    Move them to README files when more visibility is warranted. Delete them
    when they are deemed irrelevant.
+
+### Diplomacy Tasks
+
+1. **Find contributors, and an audience of learners.**
 
 ### Directory Structure
 
