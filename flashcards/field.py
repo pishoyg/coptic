@@ -1,3 +1,4 @@
+# TODO: Change the default strict to strict. Leniency should be the exception.
 import glob
 import os
 import re
@@ -190,6 +191,68 @@ class tsv(field):
     @type_enforced.Enforcer
     def length(self) -> int:
         return len(self._content)
+
+
+class grp(field):
+    """
+    Group TSV columns using a given column.
+    """
+
+    @type_enforced.Enforcer
+    def __init__(
+        self,
+        key_file_path: str,
+        key_col_name: str,
+        group_file_path: str,
+        group_by_col_name: str,
+        select_cols: list[str],
+    ) -> None:
+        keys = tsv(key_file_path, key_col_name, force=True)
+        keys = [keys.next() for _ in range(keys.length())]
+        group_by = tsv(group_file_path, group_by_col_name, force=True)
+        selected = [tsv(group_file_path, col, force=True) for col in select_cols]
+        key_to_selected = {k: [] for k in keys}
+        for _ in range(num_entries(group_by, *selected)):
+            key_to_selected[group_by.next()].append([s.next() for s in selected])
+        self._content = [key_to_selected[k] for k in keys]
+        self._counter = 0
+
+    @type_enforced.Enforcer
+    def media_files(self) -> list[str]:
+        return []
+
+    @type_enforced.Enforcer
+    def next(self) -> list[str]:
+        ans = self._content[self._counter]
+        self._counter += 1
+        return ans
+
+    @type_enforced.Enforcer
+    def length(self) -> int:
+        return len(self._content)
+
+
+class apl(field):
+    """
+    Apply a lambda to a field.
+    """
+
+    @type_enforced.Enforcer
+    def __init__(self, l: typing.Callable, f) -> None:
+        self._lambda = l
+        self._field = f
+
+    @type_enforced.Enforcer
+    def media_files(self) -> list[str]:
+        return self._field.media_files()
+
+    @type_enforced.Enforcer
+    def next(self):
+        return self._lambda(self._field.next())
+
+    @type_enforced.Enforcer
+    def length(self) -> int:
+        return self._field.length()
 
 
 class img(field):

@@ -236,12 +236,6 @@ into the repo.
 file](https://github.com/pishoyg/coptic/blob/master/archive%2Fmarcion-1.8.3-src%2Fcrumresulttree.cpp)
 for how Marcion constructs the derivations tree.
 
-   1. **Sort the derivations TSV.** (1 hour)
-
-   1. **Implement a TSV group-by field.** (1 hour)
-
-   1. **Implement an apply-lambda field.** (1 hour)
-
    **1. The image, file, and (future) sound fields should support a
    comma-separated list of keys, or key ranges.** (1 hour)
 
