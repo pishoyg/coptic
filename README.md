@@ -54,6 +54,25 @@ There are two ways you can contribute:
 This page documents the tasks. More documentation will be added in the future.
 Also feel free to reach out with questions.
 
+## Current Status
+
+The flashcards contain the following:
+
+- A complete list of words from Crum, including both roots and derivations,
+  per-dialect spellings, meaning in English and Greek, scans of the Crum pages
+  containing the word definition.
+
+  - (For a subset of the words) Explanatory images, added to aid the learning
+  process, and to convey the meanings better.
+
+- A version of the Coptic Bible, containing most Biblical fragments that
+  survived in Coptic.
+
+- A complete version of the dictionary published on copticsite.com.
+
+Work is ongoing to augment the data, through integration of existing database,
+as well as manual digitization of other data sources.
+
 ## Manual Data Collection
 
 ### Crum: New Fields
