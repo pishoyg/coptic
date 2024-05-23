@@ -17,7 +17,7 @@ BIBLE_LANGUAGES = [
 
 
 @type_enforced.Enforcer
-def crum(deck_name: str, deck_id: int, front_column: str, force_front: bool):
+def crum(deck_name: str, deck_id: int, front_column: str, allow_no_front: bool = False):
 
     @type_enforced.Enforcer
     def roots_col(col_name: str, force: bool = False) -> field.tsv:
@@ -106,11 +106,7 @@ def crum(deck_name: str, deck_id: int, front_column: str, force_front: bool):
                 roots_col("key"),
             ),
         ),
-        force_single_deck=True,
-        force_key=True,
-        force_no_duplicate_keys=True,
-        force_front=force_front,
-        force_back=True,
+        allow_no_front=allow_no_front,
     )
 
 
@@ -181,6 +177,11 @@ def bible(deck_name: str, deck_id: int, front_dialects: list[str]):
             ),
             *[verse(lang) for lang in BIBLE_LANGUAGES if lang not in front_dialects],
         ),
+        allow_multiple_decks=True,
+        allow_no_key=True,
+        allow_duplicate_keys=True,
+        allow_no_front=True,
+        allow_no_back=True,
     )
 
 
@@ -224,9 +225,8 @@ def copticsite_com(deck_name: str, deck_id: int):
             ),
             tsv_col("Meaning"),
         ),
-        force_single_deck=True,
-        force_key=True,
-        force_no_duplicate_keys=True,
+        allow_no_front=True,
+        allow_no_back=True,
     )
 
 
@@ -254,16 +254,15 @@ def copticsite_com(deck_name: str, deck_id: int):
 # The "key" field is used to key the notes.
 
 BOHAIRIC_CRUM = crum(
-    "A Coptic Dictionary::Bohairic", 1284010383, "dialect-B", force_front=False
+    "A Coptic Dictionary::Bohairic", 1284010383, "dialect-B", allow_no_front=True
 )
 SAHIDIC_CRUM = crum(
-    "A Coptic Dictionary::Sahidic", 1284010386, "dialect-S", force_front=False
+    "A Coptic Dictionary::Sahidic", 1284010386, "dialect-S", allow_no_front=True
 )
 CRUM_ALL = crum(
     "A Coptic Dictionary::All Dialects",
     1284010387,
     "word-parsed-prettify",
-    force_front=True,
 )
 
 BOHAIRIC_BIBLE = bible("Bible::Bohairic", 1284010384, ["Bohairic"])
