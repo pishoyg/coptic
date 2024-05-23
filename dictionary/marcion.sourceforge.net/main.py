@@ -81,9 +81,10 @@ argparser.add_argument(
     "--sort_derivations",
     type=str,
     nargs="+",
-    default=["key"],
-    help="A common alternative is ['key_word', 'pos'], which would list the"
-    " derivations the way they would show underneath their root word.",
+    default=["key_word", "pos"],
+    help="Fields to sort the derivations by. The current default results in"
+    " the derivations showing the way they would show underneath their root"
+    " word.",
 )
 
 # Gspread arguments.###########################################################
