@@ -233,8 +233,6 @@ into the repo.
 1. **Incorporate Scriptorium's data. Gain familiarity with their platform.
    Parse their dictionary.** (7-8 hours, delegated)
 
-1. **Change the coloring scheme for dark mode.** (2 hours)
-
 1. **Instead of two, include the Crum pages containing derivations.** (2 hours)
 
 1. **Add word derivations to a TSV.** (3-4 hours)

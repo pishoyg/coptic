@@ -11,6 +11,14 @@ argparser = argparse.ArgumentParser(
 )
 
 argparser.add_argument(
+    "--decks",
+    type=str,
+    nargs="*",
+    default=None,
+    help="The list of deck names to export. If None, export all.",
+)
+
+argparser.add_argument(
     "--output",
     type=str,
     default="flashcards/data/coptic.apkg",
@@ -47,7 +55,7 @@ def main():
     media_files = set()
     decks = []
 
-    for pair in constants.DECKS:
+    for pair in constants.DECKS(args.decks):
         cur_decks, cur_media_files = pair
 
         decks.extend(cur_decks)

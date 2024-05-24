@@ -1,5 +1,8 @@
+import typing
+
 import deck
 import field
+import genanki
 import type_enforced
 
 NUM_COLS = 10
@@ -46,10 +49,11 @@ def crum(deck_name: str, deck_id: int, front_column: str, allow_no_front: bool =
         deck_description="https://github.com/pishoyg/coptic/.\n" "pishoybg@gmail.com.",
         css=".card { font-size: 18px; }"
         "#front { text-align: center; }"
-        "figure {display: inline-block; border: 1px transparent; margin: 10px; }"
+        "figure { display: inline-block; border: 1px transparent; margin: 10px; }"
         "figure figcaption { text-align: center; }"
         "figure img { vertical-align: top; }"
-        "#bordered { border:1px solid black; }",
+        "#bordered { border:1px solid black; }"
+        ".nightMode #bordered { border:1px solid white; }",
         # N.B. The name is a protected field, although it is unused in this
         # case because we generate a single deck, thus the deck name is a
         # constant for all notes.
@@ -217,7 +221,7 @@ def copticsite_com(deck_name: str, deck_id: int):
         deck_name=deck_name,
         deck_id=deck_id,
         deck_description="https://github.com/pishoyg/coptic/.\n" "pishoybg@gmail.com.",
-        css=".card { text-align: center; }",
+        css=".card { text-align: center; font-size: 18px; }",
         # N.B. The name is a protected field, although it is unused in this case
         # because we generate a single deck, thus the deck name is a constant for
         # all notes.
@@ -331,35 +335,40 @@ def build_tree(*derivations: list[str]) -> str:
 # The "key" field is used to key the notes.
 
 
-BOHAIRIC_CRUM = crum(
-    "A Coptic Dictionary::Bohairic", 1284010383, "dialect-B", allow_no_front=True
-)
-SAHIDIC_CRUM = crum(
-    "A Coptic Dictionary::Sahidic", 1284010386, "dialect-S", allow_no_front=True
-)
-CRUM_ALL = crum(
-    "A Coptic Dictionary::All Dialects",
-    1284010387,
-    "word-parsed-prettify",
-)
+CRUM_BOHAIRIC = "A Coptic Dictionary::Bohairic"
+CRUM_SAHIDIC = "A Coptic Dictionary::Sahidic"
+CRUM_ALL = "A Coptic Dictionary::All Dialects"
+BIBLE_BOHAIRIC = "Bible::Bohairic"
+BIBLE_SAHIDIC = "Bible::Sahidic"
+BIBLE_ALL = "Bible::All Dialects"
+COPTICSITE_NAME = "copticsite.com"
 
-BOHAIRIC_BIBLE = bible("Bible::Bohairic", 1284010384, ["Bohairic"])
-SAHIDIC_BIBLE = bible("Bible::Sahidic", 1284010388, ["Sahidic"])
-BIBLE_ALL = bible(
-    "Bible::All Dialects",
-    1284010389,
-    [lang for lang in BIBLE_LANGUAGES if lang != "English" and lang != "Greek"],
-)
+LAMBDAS = {
+    CRUM_BOHAIRIC: lambda deck_name: crum(
+        deck_name, 1284010383, "dialect-B", allow_no_front=True
+    ),
+    CRUM_SAHIDIC: lambda deck_name: crum(
+        deck_name, 1284010386, "dialect-S", allow_no_front=True
+    ),
+    CRUM_ALL: lambda deck_name: crum(
+        deck_name,
+        1284010387,
+        "word-parsed-prettify",
+    ),
+    BIBLE_BOHAIRIC: lambda deck_name: bible(deck_name, 1284010384, ["Bohairic"]),
+    BIBLE_SAHIDIC: lambda deck_name: bible(deck_name, 1284010388, ["Sahidic"]),
+    BIBLE_ALL: lambda deck_name: bible(
+        deck_name,
+        1284010389,
+        [lang for lang in BIBLE_LANGUAGES if lang != "English" and lang != "Greek"],
+    ),
+    COPTICSITE_NAME: lambda deck_name: copticsite_com(deck_name, 1284010385),
+}
 
-COPTICSITE_COM = copticsite_com("copticsite.com", 1284010385)
 
-
-DECKS = [
-    BOHAIRIC_CRUM,
-    SAHIDIC_CRUM,
-    CRUM_ALL,
-    BOHAIRIC_BIBLE,
-    SAHIDIC_BIBLE,
-    BIBLE_ALL,
-    COPTICSITE_COM,
-]
+@type_enforced.Enforcer
+def DECKS(deck_names: typing.Optional[list[str]]):
+    if deck_names is None:
+        return [lam(name) for name, lam in LAMBDAS.items()]
+    assert deck_names
+    return [LAMBDAS[name](name) for name in deck_names]
