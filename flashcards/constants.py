@@ -60,14 +60,14 @@ def crum(deck_name: str, deck_id: int, front_column: str, allow_no_front: bool =
         name=None,
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
-        key=roots_col("key"),
+        key=roots_col("key", force=True),
         front=roots_col(front_column),
         back=field.cat(
             # Type.
             field.aon(
                 "(",
                 "<b>",
-                roots_col("type-parsed"),
+                roots_col("type-parsed", force=True),
                 "</b>",
                 ")",
                 "<br>",
@@ -92,16 +92,8 @@ def crum(deck_name: str, deck_id: int, front_column: str, allow_no_front: bool =
             field.aon(
                 "<b>Word:</b>",
                 "<br>",
-                roots_col("word-parsed-no-ref"),
+                roots_col("word-parsed-no-ref", force=True),
                 "<hr>",
-            ),
-            field.apl(
-                build_tree,
-                derivations_col("depth", True),
-                derivations_col("word-parsed-prettify", False),
-                derivations_col("type-parsed", True),
-                derivations_col("en-parsed", False),
-                derivations_col("crum", True),
             ),
             # Full meaning.
             field.aon(
@@ -110,26 +102,33 @@ def crum(deck_name: str, deck_id: int, front_column: str, allow_no_front: bool =
                 roots_col("en-parsed"),
                 "<hr>",
             ),
-            # Crum's entry.
-            field.aon(
+            field.cat(
                 "<b>Crum: </b>",
-                roots_col("crum"),
-                "<br>",
-                field.img(
-                    "dictionary/marcion.sourceforge.net/data/output/roots.tsv",
-                    "crum-pages",
-                    "dictionary/marcion.sourceforge.net/data/crum",
-                    "numexpr({key}+20).png",
-                    "KEY",
-                    None,
-                    force=True,
-                ),
-                "<hr>",
+                roots_col("crum", force=True),
             ),
+            field.apl(
+                build_tree,
+                derivations_col("depth", force=True),
+                derivations_col("word-parsed-prettify", force=False),
+                derivations_col("type-parsed", force=True),
+                derivations_col("en-parsed", force=False),
+                derivations_col("crum", force=True),
+            ),
+            # Crum's entry.
+            field.img(
+                "dictionary/marcion.sourceforge.net/data/output/roots.tsv",
+                "crum-pages",
+                "dictionary/marcion.sourceforge.net/data/crum",
+                "numexpr({key}+20).png",
+                "KEY",
+                None,
+                force=False,
+            ),
+            field.txt("<hr>"),
             # Marcion's key.
             field.aon(
                 "<b>Key: </b>",
-                roots_col("key"),
+                roots_col("key", force=True),
             ),
         ),
         allow_no_front=allow_no_front,
@@ -214,8 +213,10 @@ def bible(deck_name: str, deck_id: int, front_dialects: list[str]):
 @type_enforced.Enforcer
 def copticsite_com(deck_name: str, deck_id: int):
     @type_enforced.Enforcer
-    def tsv_col(col_name: str) -> field.tsv:
-        return field.tsv("dictionary/copticsite.com/data/output/output.tsv", col_name)
+    def tsv_col(col_name: str, force: bool = False) -> field.tsv:
+        return field.tsv(
+            "dictionary/copticsite.com/data/output/output.tsv", col_name, force=force
+        )
 
     return deck.deck(
         deck_name=deck_name,

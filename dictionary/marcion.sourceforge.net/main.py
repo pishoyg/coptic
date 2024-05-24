@@ -241,7 +241,11 @@ def build_trees(roots: pd.DataFrame, derivations: pd.DataFrame) -> None:
     for _, row in roots.iterrows():
         t = trees[row["key"]]
         cur = {d.row()[CRUM_COL + "-page"] for d in t.descendants(include_root=True)}
-        crum_pages.append(",".join(sorted(cur)))
+        cur = map(int, cur)
+        cur = filter(None, cur)  # Delete the zero page.
+        cur = sorted(cur)  # Sort numerically, not lexicographically.
+        cur = map(str, cur)  # Convert back to string.
+        crum_pages.append(",".join(cur))
     roots[CRUM_COL + "-pages"] = crum_pages
 
 

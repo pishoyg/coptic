@@ -352,6 +352,9 @@ class img(field):
             if force:
                 assert cs_keys
             cur = ""
+            if not cs_keys:
+                self._content.append(cur)
+                continue
             for key in cs_keys.split(","):
                 assert key
                 paths = _glob(dir_path, file_name_fmt, key)
