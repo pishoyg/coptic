@@ -1,3 +1,9 @@
+# Garbage.
 .DS_Store
 __pycache__
+
+# Flashcard decks are too big to host on GitHub.
 flashcards/data/*.apkg
+
+# This contains secrets (authorization tokens for Drive, and local file paths).
+secrets.sh

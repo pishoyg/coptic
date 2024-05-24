@@ -208,6 +208,12 @@ into the repo.
 
 1. **Produce a version of the dictionary that is sorted alphabetically.**
 
+   This will make it significantly easier for someone to copy Dawoud's page
+   numbers.
+
+1. Document the content of `secrets.sh`. Make it possible for someone to take
+   over.
+
 #### Content
 
 data

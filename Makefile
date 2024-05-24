@@ -5,6 +5,8 @@ all_all: all flashcards_redundant
 
 all_all_all: all flashcards_redundant bible_stshenouda_epub
 
+all_all_all_all: all flashcards_redundant bible_stshenouda_epub secrets
+
 .PHONY: test
 test: FORCE
 	python -m unittest discover \
@@ -88,6 +90,20 @@ flashcards_bible: FORCE
 pishoy:
 	# Note: This isn't all.
 	find . -name "*.py" -o -name "*.java" -o -name "*.proto" -o -name "*.sh" -o -name "*.js" -o -name "*.vba" | xargs cat | wc -l
+
+# If you know the secrets, then you can run the privileged tasks. They require
+# a set of variables to be exported, typically from a `secrets.sh` file that
+# you source.
+# ```
+# source secrets.sh && make privileged
+# ```
+.PHONY: privileged
+privileged: drive
+
+drive: FORCE
+	cp \
+		"flashcards/data/coptic.apkg" \
+		"$${DEST}"
 
 .PHONY: clean
 clean:
