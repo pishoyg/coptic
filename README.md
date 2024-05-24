@@ -14,7 +14,6 @@
   - [Moawad Dawoud's Diciontary](#moawad-dawouds-diciontary)
   - [Neologisms](#neologisms)
   - [Learning Curriculum](#learning-curriculum)
-  - [New Datasets](#new-datasets)
 - [Credits](#credits)
 - [For Developers](#for-developers)
   - [Documentation Tasks](#documentation-tasks)
@@ -83,13 +82,15 @@ as well as manual digitization of other data sources.
    learning process, and it will save learners the time that they have to spend
    on looking up the obscure vocabulary or unfamiliar terms.
 
-1. **Link Scriptorium Lemmas to and Marcion Keys.**
+1. Link Scriptorium Lemmas to Marcion Keys.
 
 1. Add pronunciations.
 
 1. Add a meanings that would be displayed on top before Crum's translation.
    Some of Crum's translations are obscure or archaic, and some are outdated
    because we understand the meaning of the word better than he did back then.
+   We could use St. Shenouda's Simple Bohairic English dictionary for that, or
+   perhaps Scriptorium.
    (low-priority)
 
 1. Collect more explanatory notes. (low-priority)
@@ -120,11 +121,6 @@ as well as manual digitization of other data sources.
    (low-priority, especially if you incorporate Scriptorium's data, which you
    must do anyway.)
 
-1. Digitalize the entirety of Dawoud's dictionary. (low-priority)
-
-1. Get a cleaner scan of Dawoud's dictionary. Obtain the source PDF if posible.
-   (low-priority)
-
 ### Neologisms
 
 (ambitious goal)
@@ -137,16 +133,6 @@ as well as manual digitization of other data sources.
 (ambitious goal)
 
 1. Create Duolingo-like learning curricula for learners at multiple levels.
-
-### New Datasets
-
-1. Add data from St. Shenouda The Archimandrite Coptic Society's Dictionary.
-
-1. Incorporate the Naqlun dictionary's data. It is poor-quality, but it might
-   be attractive for some learners. (low-priority)
-
-1. Incorporate the ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ Group's neologisms. They did substantial
-   work that might be worth incorporating.
 
 ## Credits
 
@@ -273,6 +259,9 @@ hour)
 1. **Crawl [Wiktionary - Category:Coptic lemmas](
 https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
+1. Incorporate the ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ Group's neologisms. They did substantial
+   work that might be worth incorporating.
+
 1. Use the newer version of [copticsite.com](https://copticsite.com/) once
    published. (pending publishing)
 
@@ -323,7 +312,20 @@ abide by if you want to.
 
 ### Diplomacy Tasks
 
-1. **Find contributors, and an audience of learners.**
+1. **Find one or two co-owners of the project.**
+
+1. **Publicize the project, and find an audience of learners.**
+
+1. **Find contributors, in coding and data collection.**
+
+1. Obtain the source file for St. Shenouda The Archimandrite Coptic Society's
+   Simple Bohairic English Dictionary.
+
+1. Obtain the Naqlun dictionary's data. It is poor-quality, but it might
+   be attractive for some learners. (low-priority)
+
+1. Get a cleaner scan of Dawoud's dictionary. Obtain the source PDF if posible.
+   (low-priority)
 
 ### Directory Structure
 
