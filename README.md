@@ -8,6 +8,7 @@
 
 - [How to Get the Flashcards](#how-to-get-the-flashcards)
 - [Contact and Contributions](#contact-and-contributions)
+- [Current Status](#current-status)
 - [Manual Data Collection](#manual-data-collection)
   - [Crum: New Fields](#crum-new-fields)
   - [Moawad Dawoud's Diciontary](#moawad-dawouds-diciontary)

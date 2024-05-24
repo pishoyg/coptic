@@ -1,8 +1,8 @@
+import itertools
 import typing
 
 import deck
 import field
-import genanki
 import type_enforced
 
 NUM_COLS = 10
@@ -256,17 +256,53 @@ def copticsite_com(deck_name: str, deck_id: int):
     )
 
 
+class derivation:
+    def __init__(self, depth, word, type, meaning, crum):
+        depth = int(depth)
+        assert depth >= 0 and depth <= MAX_DERIVATION_DEPTH
+        assert type
+        assert crum
+
+        self.depth = depth
+        self.word = word
+        self.type = type
+        self.meaning = meaning
+        self.crum = crum
+
+
 @type_enforced.Enforcer
-def build_tree(*derivations: list[str]) -> str:
+def build_crum_row_spans(derivations: list[derivation]) -> list[tuple[str, int]]:
+    crum_column = [d.crum for d in derivations]
+    out = []
+    for group in itertools.groupby(crum_column):
+        # Validate that all elements are equal.
+        crum = group[0]
+        repetitions = len(list(group[1]))
+        out.append((crum, repetitions))
+        for _ in range(repetitions - 1):
+            out.append(("", 0))
+    return out
+
+
+@type_enforced.Enforcer
+def build_tree(*columns: list[str]) -> str:
     """
-    Each derivation should be a tuple containing the following fields:
+    derivations is a set of exactly five columns, each representing one field,
+    namely:
         - depth
         - word-parsed-prettify
         - type-parsed
         - en-parsed
         - crum
+    They are expected to be pre-sorted, and to belong to a single word.
     """
-    # TODO: Prettify the HTML, and include the derivations.
+    # TODO: Prettify the HTML.
+    assert len(columns) == 5
+    num_rows = len(columns[0])
+    assert all(len(column) == num_rows for column in columns)
+    derivations = [derivation(*row) for row in zip(*columns)]
+    crum_row_spans = build_crum_row_spans(derivations)
+
     out = []
     out.extend(
         [
@@ -277,20 +313,21 @@ def build_tree(*derivations: list[str]) -> str:
     out.extend([f'<col width="{100/NUM_COLS}%">'] * NUM_COLS)
     out.extend(["</colgroup>"])
 
-    for depth, word, type, meaning, crum in zip(*derivations):
-        depth = int(depth)
-        assert depth <= MAX_DERIVATION_DEPTH
-        word_width = int((NUM_COLS - depth) / 2) if word else 0
-        meaning_width = NUM_COLS - word_width - depth
+    for d, crum_row_span in zip(derivations, crum_row_spans):
+        crum, crum_span = crum_row_span
+        assert bool(crum) == bool(crum_span)
+        word_width = int((NUM_COLS - d.depth) / 2) if d.word else 0
+        # TODO: Handle the case when the meaning is absent.
+        meaning_width = NUM_COLS - word_width - d.depth - 1
         out.extend(
             [
                 # New row.
                 "<tr>",
                 # Margin.
-                f'<td colspan="{depth}"></td>' if depth else "",
+                f'<td colspan="{d.depth}"></td>' if d.depth else "",
                 # Word.
                 (
-                    f'<td colspan="{word_width}" id="bordered">{word}</td>'
+                    f'<td colspan="{word_width}" id="bordered">{d.word}</td>'
                     if word_width
                     else ""
                 ),
@@ -298,10 +335,14 @@ def build_tree(*derivations: list[str]) -> str:
                 f'<td colspan="{meaning_width}" id="bordered">',
                 # TODO: Retrieve these types from Marcion rather than hardcode
                 # them here.
-                f"<b>({type})</b><br>" if type not in ["-", "HEADER"] else "",
-                meaning,
-                "<br>" f"<small><b>Crum: </b> {crum}</small>",
+                f"<b>({d.type})</b><br>" if d.type not in ["-", "HEADER"] else "",
+                d.meaning,
                 "</td>",
+                (
+                    f'<td rowspan="{crum_span}" id="bordered"><b>Crum: </b>{crum}</td>'
+                    if crum_span
+                    else ""
+                ),
                 # End row.
                 "</tr>",
             ]
