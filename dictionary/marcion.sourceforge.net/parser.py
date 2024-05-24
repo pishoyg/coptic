@@ -51,15 +51,16 @@ Remarks about the parsing:
 """
 
 import re
-import typing
 
 import constants
+import type_enforced
 import word as lexical
 
 _unknown_ascii_letters = set()
 _reference_count = 0
 
 
+@type_enforced.Enforcer
 def reset():
     global _unknown_ascii_letters
     global _reference_count
@@ -67,11 +68,13 @@ def reset():
     _reference_count = 0
 
 
+@type_enforced.Enforcer
 def verify(want_reference_count):
     assert not _unknown_ascii_letters, _unknown_ascii_letters
     assert _reference_count == want_reference_count
 
 
+@type_enforced.Enforcer
 def _apply_substitutions(line: str, subs: list, use_coptic_symbol: bool) -> str:
     for pair in subs:
         p0 = pair[0]
@@ -83,6 +86,7 @@ def _apply_substitutions(line: str, subs: list, use_coptic_symbol: bool) -> str:
     return line
 
 
+@type_enforced.Enforcer
 def _munch(text: str, regex: re.Pattern, strict: bool) -> tuple[str, str]:
     # Munch the prefix of `text` which matches `regex`, and return both parts.
     m = regex.match(text)
@@ -96,6 +100,7 @@ def _munch(text: str, regex: re.Pattern, strict: bool) -> tuple[str, str]:
     return text[:j], text[j:].strip()
 
 
+@type_enforced.Enforcer
 def _chop(text: str, regex: re.Pattern, strict: bool) -> tuple[str, str, str]:
     # Extract a substring matching the given regex from the given text. Return
     # all three parts.
@@ -110,14 +115,17 @@ def _chop(text: str, regex: re.Pattern, strict: bool) -> tuple[str, str, str]:
     return text[:i].strip(), text[i:j], text[j:].strip()
 
 
+@type_enforced.Enforcer
 def parse_quality_cell(q: int) -> str:
     return constants.QUALITY_ENCODING[q]
 
 
+@type_enforced.Enforcer
 def parse_type_cell(t: int) -> lexical.type:
     return constants.TYPE_ENCODING[t]
 
 
+@type_enforced.Enforcer
 def parse_word_cell(
     line: str,
     root_type: lexical.type,
@@ -170,12 +178,13 @@ def parse_word_cell(
     return words
 
 
+@type_enforced.Enforcer
 def _munch_and_parse_spellings_types_and_references(
     line: str,
     strict: bool,
     detach_types: bool,
     use_coptic_symbol: bool,
-) -> tuple[list[str], list[lexical.type], list[str], str]:
+):  # -> tuple[list[str], list[lexical.type], list[str], str]:
 
     match, line = _munch(line, constants.SPELLINGS_TYPES_REFERENCES_RE, strict)
 
@@ -199,9 +208,10 @@ def _munch_and_parse_spellings_types_and_references(
     return ss, tt, rr, line
 
 
+@type_enforced.Enforcer
 def _parse_spellings_and_types(
     line: str, detach_types: bool, use_coptic_symbol: bool
-) -> tuple[list[str], list[lexical.type]]:
+):  # ) -> tuple[list[str], list[lexical.type]]:
     # This makes the assumption that references have been removed.
     types = []
 
@@ -234,6 +244,7 @@ def _parse_spellings_and_types(
     return spellings, types
 
 
+@type_enforced.Enforcer
 def _pick_up_detached_types(
     line: str, detached_types: list[tuple[str, lexical.type]]
 ) -> tuple[list[lexical.type], str]:
@@ -245,6 +256,7 @@ def _pick_up_detached_types(
     return t, line.strip()
 
 
+@type_enforced.Enforcer
 def _parse_coptic(line: str) -> str:
     """
     _parse_coptic parses one line of ASCII-encoded Coptic. It is possible for
@@ -262,6 +274,7 @@ def _parse_coptic(line: str) -> str:
     return clean(out)
 
 
+@type_enforced.Enforcer
 def _parse_english(line: str) -> str:
     out = []
     while line:
@@ -281,6 +294,7 @@ def _parse_english(line: str) -> str:
     return clean(out)
 
 
+@type_enforced.Enforcer
 def parse_english_cell(line: str) -> str:
     out = []
     while line:
@@ -298,18 +312,23 @@ def parse_english_cell(line: str) -> str:
     return clean(out)
 
 
+@type_enforced.Enforcer
 def parse_crum_cell(line: str):
     match = constants.CRUM_RE.match(line)
     assert match
     assert len(match.groups()) == 2
-    return match.groups()
+    page, column = match.groups()
+    assert int(page) >= 0 and int(page) <= constants.CRUM_LAST_PAGE_NUM, page
+    return page, column
 
 
+@type_enforced.Enforcer
 def parse_greek_cell(line: str) -> str:
     line = _ascii_to_unicode_greek(line)
     return clean(line)
 
 
+@type_enforced.Enforcer
 def _ascii_to_unicode(ascii: str) -> str:
     uni = ""
     unknown = False
@@ -326,12 +345,14 @@ def _ascii_to_unicode(ascii: str) -> str:
     return clean(uni)
 
 
+@type_enforced.Enforcer
 def _ascii_to_unicode_greek(ascii: str) -> str:
     uni = "".join(constants.GREEK_LETTER_ENCODING.get(c, c) for c in ascii)
     return clean(uni)
 
 
-def _parse_reference(line: str) -> typing.Iterable[str]:
+@type_enforced.Enforcer
+def _parse_reference(line: str):  # -> typing.Generator[str, None, None]:
     """
     This method makes the assumption that the input is a single
     (not nested nor concatenated) reference, whose boundaries have been
@@ -358,6 +379,7 @@ def _parse_reference(line: str) -> typing.Iterable[str]:
         yield "; ".join(filter(None, line[i : i + 5] + [body, note]))
 
 
+@type_enforced.Enforcer
 def _munch_and_parse_dialects(line: str, strict: bool) -> tuple[list[str], str]:
     match, line = _munch(line, constants.DIALECTS_RE, strict)
     if not strict and not match:
@@ -367,23 +389,27 @@ def _munch_and_parse_dialects(line: str, strict: bool) -> tuple[list[str], str]:
     return match[1:-1].split(","), line
 
 
+@type_enforced.Enforcer
 def clean(line: str) -> str:
     for _ in range(2):
         line = _apply_substitutions(line, constants.CLEAN, False)
     return line.strip()
 
 
+@type_enforced.Enforcer
 def remove_html(line: str) -> str:
     for t in constants.HTML_TAGS:
         line = line.replace(t, "")
     return clean(line)
 
 
+@type_enforced.Enforcer
 def remove_greek(line: str) -> str:
     line = constants.PARSED_GREEK_WITHIN_ENGLISH_RE.sub("", line)
     return clean(line)
 
 
+@type_enforced.Enforcer
 def remove_greek_and_html(line: str) -> str:
     line = remove_html(line)
     line = remove_greek(line)

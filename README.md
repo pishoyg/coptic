@@ -10,9 +10,8 @@
 - [Contact and Contributions](#contact-and-contributions)
 - [Current Status](#current-status)
 - [Manual Data Collection](#manual-data-collection)
-  - [Crum: New Fields](#crum-new-fields)
+  - [A Coptic Dictionary](#a-coptic-dictionary)
   - [Moawad Dawoud's Diciontary](#moawad-dawouds-diciontary)
-  - [Crum's Dictionary](#crums-dictionary)
   - [Neologisms](#neologisms)
   - [Learning Curriculum](#learning-curriculum)
   - [New Datasets](#new-datasets)
@@ -76,7 +75,7 @@ as well as manual digitization of other data sources.
 
 ## Manual Data Collection
 
-### Crum: New Fields
+### A Coptic Dictionary
 
 1. **Collect more explanatory pictures.** (100+ hours, delegate)
 
@@ -98,6 +97,16 @@ as well as manual digitization of other data sources.
 1. Add literature citations. Perhaps from Scriptorium? Perhaps from the
    Bible? (low-priority)
 
+1. Fix the typos in the data retrieved from Crum. The current dataset is
+   high-quality, and has a very small number of typos. However, they do exist.
+   (low-priority, and it's more of an ongoing byproduct than a task.)
+
+1. Contemplate sorting the dictionary words by popularity, somehow.
+   (low-priority)
+
+1. Contemplate dividing the decks to subsets sorted by popularity, so the
+   learners can learn the more important words first. (low-priority)
+
 ### Moawad Dawoud's Diciontary
 
 1. **Add Moawad Dawoud's page numbers, and add scans to the flashcards.** (50+
@@ -115,21 +124,6 @@ as well as manual digitization of other data sources.
 
 1. Get a cleaner scan of Dawoud's dictionary. Obtain the source PDF if posible.
    (low-priority)
-
-### Crum's Dictionary
-
-1. Record the correct list of Crum pages containing a given word. We've
-   populated the data with a default value of two pages for each word.
-
-1. Fix the typos in the data retrieved from Crum. The current dataset is
-   high-quality, and has a very small number of typos. However, they do exist.
-   (low-priority, and it's more of an ongoing byproduct than a task.)
-
-1. Contemplate sorting the dictionary words by popularity, somehow.
-   (low-priority)
-
-1. Contemplate dividing the decks to subsets sorted by popularity, so the
-   learners can learn the more important words first. (low-priority)
 
 ### Neologisms
 
@@ -234,12 +228,14 @@ into the repo.
 1. **Incorporate Scriptorium's data. Gain familiarity with their platform.
    Parse their dictionary.** (7-8 hours, delegated)
 
-1. **Instead of two, include the Crum pages containing derivations.** (2 hours)
+1. **Ignore Crum page 0 in the output.**
 
 1. **Add word derivations to a TSV.** (3-4 hours)
    See [this
 file](https://github.com/pishoyg/coptic/blob/master/archive%2Fmarcion-1.8.3-src%2Fcrumresulttree.cpp)
 for how Marcion constructs the derivations tree.
+
+1. **Group the derivations by dialect.**
 
 1. **The image, file, and (future) sound fields should support a
    comma-separated list of keys, or key ranges.** (1 hour)
@@ -252,8 +248,6 @@ for how Marcion constructs the derivations tree.
    don't impact the output by comparing two packages generated with the dummy
    timestamp against one another, one with and one without the changes.** (1
 hour)
-
-1. Group the derivations by dialect.
 
 1. Feedback: It’s better to use the standardized notation: ⲟⲛϧ= (equal sign),
    ⲟⲛϧ† (upper dager) instead of the fancy tilted equal sign and the (ⲉϥ).
@@ -274,13 +268,13 @@ hour)
    problem, or find another package.
 
 1. Understand note sorting. To start with, understand `genanki`'s `sort_key`
-   parameter.
+   parameter. (low-priority)
 
 1. **Crawl [Wiktionary - Category:Coptic lemmas](
 https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
 1. Use the newer version of [copticsite.com](https://copticsite.com/) once
-   published.
+   published. (pending publishing)
 
 1. Complete the list of prefixes for the `prettify` format for copticsite.com.
    (low-priority)

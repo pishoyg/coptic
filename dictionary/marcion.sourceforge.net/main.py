@@ -126,28 +126,30 @@ def main() -> None:
     # Process roots.
     roots = pd.read_csv(args.coptwrd_tsv, sep="\t", encoding="utf-8").fillna("")
     process_data(roots, strict=True)
-    roots.sort_values(by=args.sort_roots, inplace=True)
-    roots.to_csv(args.roots_tsv, sep="\t", index=False)
-
-    if args.gspread_owner:
-        write_to_gspread(roots)
     parser.verify(constants.ROOTS_REFERENCE_COUNT * 2)
     parser.reset()
 
     # Process derivations.
     derivations = pd.read_csv(args.coptdrv_tsv, sep="\t", encoding="utf-8").fillna("")
     process_data(derivations, strict=False)
-    derivations.sort_values(by=args.sort_derivations, inplace=True)
-    derivations["depth"] = depths(derivations)
-    derivations.to_csv(args.derivations_tsv, sep="\t", index=False)
-
-    if args.gspread_owner:
-        write_to_gspread(derivations)
     parser.verify(constants.DERIVATIONS_REFERENCE_COUNT * 2)
     parser.reset()
 
-    # Build a tree combining both.
-    build_tree(roots, derivations)
+    # Gain tree insights.
+    derivations["depth"] = depths(derivations)
+    build_trees(roots, derivations)
+
+    # Write the roots.
+    roots.sort_values(by=args.sort_roots, inplace=True)
+    roots.to_csv(args.roots_tsv, sep="\t", index=False)
+    if args.gspread_owner:
+        write_to_gspread(roots)
+
+    # Write the derivations.
+    derivations.sort_values(by=args.sort_derivations, inplace=True)
+    derivations.to_csv(args.derivations_tsv, sep="\t", index=False)
+    if args.gspread_owner:
+        write_to_gspread(derivations)
 
 
 @type_enforced.Enforcer
@@ -212,7 +214,6 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         insert(EN_COL, "-parsed-no-greek-no-html", parser.remove_greek_and_html(ep))
         crum_page, crum_column = parser.parse_crum_cell(row[CRUM_COL])
         insert(CRUM_COL, "-page", crum_page)
-        insert(CRUM_COL, "-pages", two_pages(crum_page))
         insert(CRUM_COL, "-column", crum_column)
         for d in args.filter_dialects:
             entry = "\n".join(
@@ -227,16 +228,21 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
 
 
 @type_enforced.Enforcer
-def build_tree(roots, derivations):
-    roots = {row["key"]: tree.node(row) for _, row in roots.iterrows()}
-    derivations = {row["key"]: tree.node(row) for _, row in derivations.iterrows()}
-    for _, n in derivations.items():
-        key_word = n.row()["key_word"]
-        roots[key_word].add_child(n)
-    for _, n in roots.items():
-        n.sort()
-    for _, n in roots.items():
-        n.tree()
+def build_trees(roots: pd.DataFrame, derivations: pd.DataFrame) -> None:
+    # Build trees.
+    trees = {row["key"]: tree.node(row) for _, row in roots.iterrows()}
+    for _, row in derivations.iterrows():
+        trees[row["key_word"]].add_descendant(tree.node(row))
+    for _, n in trees.items():
+        n.sort_descendants()
+
+    # Add extra columns to the parents, using the derivations.
+    crum_pages = []
+    for _, row in roots.iterrows():
+        t = trees[row["key"]]
+        cur = {d.row()[CRUM_COL + "-page"] for d in t.descendants(include_root=True)}
+        crum_pages.append(",".join(sorted(cur)))
+    roots[CRUM_COL + "-pages"] = crum_pages
 
 
 @type_enforced.Enforcer
@@ -273,15 +279,6 @@ def write_to_gspread(df: pd.DataFrame) -> None:
     spreadsheet.get_worksheet(0).update(
         [df.columns.values.tolist()] + df.values.tolist()
     )
-
-
-@type_enforced.Enforcer
-def two_pages(first_page: str) -> str:
-    first_page = int(first_page)
-    assert first_page <= constants.CRUM_LAST_PAGE_NUM
-    if first_page == constants.CRUM_LAST_PAGE_NUM:
-        return str(first_page)
-    return "{},{}".format(first_page, first_page + 1)
 
 
 if __name__ == "__main__":

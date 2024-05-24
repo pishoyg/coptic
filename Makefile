@@ -1,12 +1,18 @@
 all: test bible_stshenouda dictionary_copticsite dictionary_crum readme flashcards
 
+all_all: all flashcards_redundant
+
+all_all_all: all flashcards_redundant bible_stshenouda_epub
+
 test: FORCE
-	python -m unittest discover flashcards
+	python -m unittest discover \
+		"flashcards"
 
 bible_stshenouda: FORCE
-	python bible/stshenouda.org/main.py --no_epub=true
+	python bible/stshenouda.org/main.py \
+		--no_epub "true"
 
-# N.B. This doesn't run by default.
+# N.B. This is not included in `all`.
 bible_stshenouda_epub: FORCE
 	python bible/stshenouda.org/main.py
 
@@ -17,32 +23,65 @@ dictionary_crum: FORCE
 	python dictionary/marcion.sourceforge.net/main.py
 
 readme: FORCE
-	doctoc README.md bible/README.md dictionary/README.md flashcards/README.md 
+	doctoc \
+		"README.md" \
+		"bible/README.md" \
+		"dictionary/README.md" \
+		"flashcards/README.md" 
 
 flashcards: FORCE
-	# This defaults to generating all flashcards.
-	python flashcards/main.py
+	python flashcards/main.py  # Default to generating all flashcards in one big package.
 
+# Redundant flashcard decks.
+# N.B. These are not included in `all`.
+flashcards_redundant: flashcards_crum_bohairic flashcards_crum_sahidic flashcards_crum_all flashcards_bible_bohairic flashcards_bible_sahidic flashcards_bible_all flashcards_copticsite flashcards_crum flashcards_bible
+
+# Flashcards, one deck at a time.
 flashcards_crum_bohairic: FORCE
-	python flashcards/main.py --decks="A Coptic Dictionary::Bohairic" --output="flashcards/data/crum_bohairic.apkg"
+	python flashcards/main.py \
+		--decks "A Coptic Dictionary::Bohairic" \
+		--output "flashcards/data/crum_bohairic.apkg"
 
 flashcards_crum_sahidic: FORCE
-	python flashcards/main.py --decks="A Coptic Dictionary::Sahidic" --output="flashcards/data/crum_sahidic.apkg"
+	python flashcards/main.py \
+		--decks "A Coptic Dictionary::Sahidic" \
+		--output "flashcards/data/crum_sahidic.apkg"
 
 flashcards_crum_all: FORCE
-	python flashcards/main.py --decks="A Coptic Dictionary::All Dialects" --output="flashcards/data/crum_all.apkg"
+	python flashcards/main.py \
+		--decks "A Coptic Dictionary::All Dialects" \
+		--output "flashcards/data/crum_all.apkg"
 
 flashcards_bible_bohairic: FORCE
-	python flashcards/main.py --decks="Bible::Bohairic" --output="flashcards/data/bible_bohairic.apkg"
+	python flashcards/main.py \
+		--decks "Bible::Bohairic" \
+		--output "flashcards/data/bible_bohairic.apkg"
 
 flashcards_bible_sahidic: FORCE
-	python flashcards/main.py --decks="Bible::Sahidic" --output="flashcards/data/bible_sahidic.apkg"
+	python flashcards/main.py \
+		--decks "Bible::Sahidic" \
+		--output "flashcards/data/bible_sahidic.apkg"
 
 flashcards_bible_all: FORCE
-	python flashcards/main.py --decks="Bible::All Dialects" --output="flashcards/data/bible_all.apkg"
+	python flashcards/main.py \
+		--decks "Bible::All Dialects" \
+		--output "flashcards/data/bible_all.apkg"
 
 flashcards_copticsite: FORCE
-	python flashcards/main.py --decks="copticsite.com" --output="flashcards/data/copticsite.apkg"
+	python flashcards/main.py \
+		--decks "copticsite.com" \
+		--output "flashcards/data/copticsite.apkg"
+
+# Flashcards, a category at a time.
+flashcards_crum: FORCE
+	python flashcards/main.py \
+		--decks "A Coptic Dictionary::Bohairic" "A Coptic Dictionary::Sahidic" "A Coptic Dictionary::All Dialects" \
+		--output "flashcards/data/crum.apkg"
+
+flashcards_bible: FORCE
+	python flashcards/main.py \
+		--decks "Bible::Bohairic" "Bible::Sahidic" "Bible::All Dialects" \
+		--output "flashcards/data/bible.apkg"
 
 
 FORCE:
