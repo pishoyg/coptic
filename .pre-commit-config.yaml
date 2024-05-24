@@ -23,3 +23,8 @@ repos:
     rev: v0.40.0
     hooks:
       - id: markdownlint-fix
+
+  - repo: https://github.com/mrtazz/checkmake.git
+    rev: 0.2.2
+    hooks:
+      - id: checkmake

@@ -1,9 +1,11 @@
+.PHONY: all
 all: test bible_stshenouda dictionary_copticsite dictionary_crum readme flashcards
 
 all_all: all flashcards_redundant
 
 all_all_all: all flashcards_redundant bible_stshenouda_epub
 
+.PHONY: test
 test: FORCE
 	python -m unittest discover \
 		"flashcards"
@@ -83,5 +85,12 @@ flashcards_bible: FORCE
 		--decks "Bible::Bohairic" "Bible::Sahidic" "Bible::All Dialects" \
 		--output "flashcards/data/bible.apkg"
 
+pishoy:
+	# Note: This isn't all.
+	find . -name "*.py" -o -name "*.java" -o -name "*.proto" -o -name "*.sh" -o -name "*.js" -o -name "*.vba" | xargs cat | wc -l
 
+.PHONY: clean
+clean:
+
+.PHONY: FORCE
 FORCE:
