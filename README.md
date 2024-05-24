@@ -12,15 +12,16 @@
 - [Manual Data Collection](#manual-data-collection)
   - [A Coptic Dictionary](#a-coptic-dictionary)
   - [Moawad Dawoud's Diciontary](#moawad-dawouds-diciontary)
-  - [Neologisms](#neologisms)
   - [Learning Curriculum](#learning-curriculum)
+  - [Neologisms](#neologisms)
 - [Credits](#credits)
 - [For Developers](#for-developers)
   - [Documentation Tasks](#documentation-tasks)
   - [Coding Tasks](#coding-tasks)
     - [Collaborator Convenience](#collaborator-convenience)
-    - [Flashcards](#flashcards)
+    - [Content](#content)
     - [Developer Convenience](#developer-convenience)
+    - [Learner Convenience](#learner-convenience)
   - [Diplomacy Tasks](#diplomacy-tasks)
   - [Directory Structure](#directory-structure)
 
@@ -41,8 +42,8 @@ and open it / import it in Anki.
 
 ## Contact and Contributions
 
-You can reach out at <pishoybg@gmail.com> for any questions, or if you want to
-contribute.
+You can reach out at <pishoybg@gmail.com> for any questions, feedback, or if
+you want to contribute. I always read my email, and I read it promptly. Always!
 
 There are two ways you can contribute:
 
@@ -121,18 +122,18 @@ as well as manual digitization of other data sources.
    (low-priority, especially if you incorporate Scriptorium's data, which you
    must do anyway.)
 
+### Learning Curriculum
+
+(ambitious goal)
+
+1. Create Duolingo-like learning curricula for learners at multiple levels.
+
 ### Neologisms
 
 (ambitious goal)
 
 1. Add neologisms. We need to think first of how to create neologisms before
    we add them to our dataset.
-
-### Learning Curriculum
-
-(ambitious goal)
-
-1. Create Duolingo-like learning curricula for learners at multiple levels.
 
 ## Credits
 
@@ -207,68 +208,70 @@ into the repo.
 
 1. **Produce a version of the dictionary that is sorted alphabetically.**
 
-#### Flashcards
+#### Content
 
-1. **Deploy the flashcards on a standalone app.** (100+ hours, delegate)
+data
 
 1. **Incorporate Scriptorium's data. Gain familiarity with their platform.
    Parse their dictionary.** (7-8 hours, delegated)
 
-1. **Ignore Crum page 0 in the output.**
+1. **Crawl [Wiktionary - Category:Coptic lemmas](
+https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
-1. **Add word derivations to a TSV.** (3-4 hours)
-   See [this
-file](https://github.com/pishoyg/coptic/blob/master/archive%2Fmarcion-1.8.3-src%2Fcrumresulttree.cpp)
-for how Marcion constructs the derivations tree.
+1. **Incorporate the ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ Group's neologisms.** (3-4 hours)
 
-1. **Group the derivations by dialect.**
+derivations
+
+1. **Defined the derivation tree format in the TSV, not in the Anki builder.**
+   (3-4 hours)
+
+1. **Group the derivations by dialect.** (1 hour)
+
+img, fil, snd
 
 1. **The image, file, and (future) sound fields should support a
    comma-separated list of keys, or key ranges.** (1 hour)
 
-1. **Publish the decks through Anki.** (1 hours)
+   The ranges are necessary for Dawoud.
 
 1. **Implement a sound type.** (1 hour)
+
+   This is necessary for adding pronunciations.
+
+synchronization
 
 1. **Use a dummy timestamp for testing. You can then verify that your changes
    don't impact the output by comparing two packages generated with the dummy
    timestamp against one another, one with and one without the changes.** (1
 hour)
 
-1. Feedback: It’s better to use the standardized notation: ⲟⲛϧ= (equal sign),
-   ⲟⲛϧ† (upper dager) instead of the fancy tilted equal sign and the (ⲉϥ).
+1. **Export accurate timestamps.**
 
-1. Flashcard synchronization seems to be working fine. However, running the
-   generation script twice produces a different file, and reimporting
+   Running the generation script twice produces a `diff`, and reimporting
    (supposedly identical data) produces the message "notes were used to update
-   existing ones.
-
-   This is likely due to the timestamps that the notes are recorded
+   existing ones. This is likely due to the timestamps that the notes are recorded
    with. The newer timestamps make Anki think that the cards are newer, hence
-   it updates everything. It is best, when exporting a new version of the
-   package, to only include accurate timestamps. If some notes are identical to
-   ones that have already been exported, they should retain their old
-   timestamps. `genanki` doesn't have native support for per-note this, neither
-   does it support reading an existing package and comparing the new data
-   against it), so we will likely have to do lots of manual work to avoid the
-   problem, or find another package.
+   it updates everything. This results in these problems:
 
-1. Understand note sorting. To start with, understand `genanki`'s `sort_key`
-   parameter. (low-priority)
+   - Local changes would be overridden.
+   - The sync message is misleading or lacking useful information.
 
-1. **Crawl [Wiktionary - Category:Coptic lemmas](
-https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
+   If some notes are identical to ones that have already been exported, they
+   should retain their old timestamps. `genanki` doesn't have native support
+   for per-note timestamps, neither does it support reading an existing package
+   and comparing the new data against it. So we will likely have to do lots of
+   manual work to solve the problem.
 
-1. Incorporate the ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ Group's neologisms. They did substantial
-   work that might be worth incorporating.
-
-1. Use the newer version of [copticsite.com](https://copticsite.com/) once
-   published. (pending publishing)
+nitpicking
 
 1. Complete the list of prefixes for the `prettify` format for copticsite.com.
    (low-priority)
 
 1. Revisit the possibility of image compression to minimize the package size.
+   (low-priority)
+
+1. Feedback: It’s better to use the standardized notation: ⲟⲛϧ= (equal sign),
+   ⲟⲛϧ† (upper dager) instead of the fancy tilted equal sign and the (ⲉϥ).
    (low-priority)
 
 #### Developer Convenience
@@ -299,8 +302,6 @@ abide by if you want to.
 
 1. Collect and print stats.
 
-1. Learn more Vim!
-
 1. Pick up some of the Easter egg tasks left around the code:
 
    ```bash
@@ -309,6 +310,10 @@ abide by if you want to.
 
    Move them to README files when more visibility is warranted. Delete them
    when they are deemed irrelevant.
+
+#### Learner Convenience
+
+1. **Deploy the flashcards on a standalone app.** (100+ hours, delegate)
 
 ### Diplomacy Tasks
 
@@ -323,6 +328,10 @@ abide by if you want to.
 
 1. Obtain the Naqlun dictionary's data. It is poor-quality, but it might
    be attractive for some learners. (low-priority)
+
+1. Obtain an updated version of ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ's neologisms.
+
+1. Obtain an updated version of [copticsite.com](https://copticsite.com/)'s dictionary.
 
 1. Get a cleaner scan of Dawoud's dictionary. Obtain the source PDF if posible.
    (low-priority)
