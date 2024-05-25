@@ -103,6 +103,9 @@ as well as manual digitization of other data sources.
    high-quality, and has a very small number of typos. However, they do exist.
    (low-priority, and it's more of an ongoing byproduct than a task.)
 
+1. Contemplate publishing a version with one derivation per note, rather than
+   the entire table. See whether this will aid learning. (low-priority)
+
 1. Contemplate sorting the dictionary words by popularity, somehow.
    (low-priority)
 
@@ -226,23 +229,26 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
 1. **Incorporate the ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ Group's neologisms.** (3-4 hours)
 
+appearance
+
+1. **Feedback: It’s better to use the standardized notation: ⲟⲛϧ= (equal sign),
+   ⲟⲛϧ† (upper dager) instead of the fancy tilted equal sign and the (ⲉϥ).**
+   (<1 hour)
+
+1. **Use one rather than two meaning blocks. Perhaps lighten the Greek.**
+
+1. **Right-align the Crum page number. It's not worth its own block.**
+
+1. **Insert an `<hr>` before the Crum pages.**
+
 derivations
+
+1. **Insert derivation keys as comments.** (<1 hour)
 
 1. **Defined the derivation tree format in the TSV, not in the Anki builder.**
    (3-4 hours)
 
 1. **Group the derivations by dialect.** (1 hour)
-
-img, fil, snd
-
-1. **The image, file, and (future) sound fields should support a
-   comma-separated list of keys, or key ranges.** (1 hour)
-
-   The ranges are necessary for Dawoud.
-
-1. **Implement a sound type.** (1 hour)
-
-   This is necessary for adding pronunciations.
 
 synchronization
 
@@ -268,16 +274,23 @@ hour)
    and comparing the new data against it. So we will likely have to do lots of
    manual work to solve the problem.
 
-nitpicking
+img, fil, snd
+
+1. **The image, file, and (future) sound fields should support a
+   comma-separated list of keys, or key ranges.** (1 hour)
+
+   The ranges are necessary for Dawoud.
+
+1. **Implement a sound type.** (1 hour)
+
+   This is necessary for adding pronunciations.
+
+archive
 
 1. Complete the list of prefixes for the `prettify` format for copticsite.com.
    (low-priority)
 
 1. Revisit the possibility of image compression to minimize the package size.
-   (low-priority)
-
-1. Feedback: It’s better to use the standardized notation: ⲟⲛϧ= (equal sign),
-   ⲟⲛϧ† (upper dager) instead of the fancy tilted equal sign and the (ⲉϥ).
    (low-priority)
 
 #### Developer Convenience
