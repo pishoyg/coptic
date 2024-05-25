@@ -193,7 +193,6 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         word = parser.parse_word_cell(
             row[WORD_COL], root_type, strict, detach_types=True, use_coptic_symbol=True
         )
-        # TODO: Reconsider the "prettify" format.
         insert(
             WORD_COL,
             "-parsed-prettify",

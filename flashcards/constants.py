@@ -20,10 +20,10 @@ BIBLE_LANGUAGES = [
 
 
 @type_enforced.Enforcer
-def crum(deck_name: str, deck_id: int, dialect_col: str, allow_no_front: bool = False):
+def crum(deck_name: str, deck_id: int, dialect_col: str, force_front: bool = True):
 
     @type_enforced.Enforcer
-    def roots_col(col_name: str, force: bool = False) -> field.tsv:
+    def roots_col(col_name: str, force: bool = True) -> field.tsv:
         return field.tsv(
             "dictionary/marcion.sourceforge.net/data/output/roots.tsv",
             col_name,
@@ -49,7 +49,7 @@ def crum(deck_name: str, deck_id: int, dialect_col: str, allow_no_front: bool = 
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
         key=roots_col("key", force=True),
-        front=roots_col(dialect_col),
+        front=roots_col(dialect_col, force=False),
         back=field.cat(
             # Type and Crum page.
             field.cat(
@@ -68,7 +68,7 @@ def crum(deck_name: str, deck_id: int, dialect_col: str, allow_no_front: bool = 
             ),
             # Meaning.
             field.aon(
-                roots_col("en-parsed-light-greek"),
+                roots_col("en-parsed-light-greek", force=True),
                 "<br>",
             ),
             # Image.
@@ -81,6 +81,7 @@ def crum(deck_name: str, deck_id: int, dialect_col: str, allow_no_front: bool = 
                 sort_paths=field.sort_semver,
                 get_caption=field.stem,
                 width=300,
+                force=True,
             ),
             # Horizonal line.
             "<hr>",
@@ -110,7 +111,7 @@ def crum(deck_name: str, deck_id: int, dialect_col: str, allow_no_front: bool = 
                 roots_col("key", force=True),
             ),
         ),
-        allow_no_front=allow_no_front,
+        force_front=force_front,
     )
 
 
@@ -118,7 +119,7 @@ def crum(deck_name: str, deck_id: int, dialect_col: str, allow_no_front: bool = 
 def bible(deck_name: str, deck_id: int, front_dialects: list[str]):
 
     @type_enforced.Enforcer
-    def tsv_column(col_name: str, force: bool = False) -> field.tsv:
+    def tsv_column(col_name: str, force: bool = True) -> field.tsv:
         return field.tsv(
             "bible/stshenouda.org/data/output/csv/bible.csv", col_name, force
         )
@@ -128,7 +129,7 @@ def bible(deck_name: str, deck_id: int, front_dialects: list[str]):
             f"<b>{language}</b>",
             ":",
             "<br>",
-            tsv_column(language),
+            tsv_column(language, force=False),
             "<br>",
             "<br>",
         )
@@ -144,55 +145,55 @@ def bible(deck_name: str, deck_id: int, front_dialects: list[str]):
         name=field.aon(
             deck_name,
             "::",
-            tsv_column("section-indexed-no-testament", True),
+            tsv_column("section-indexed-no-testament", force=True),
             "::",
-            tsv_column("book-indexed", True),
+            tsv_column("book-indexed", force=True),
             "::",
-            tsv_column("chapter-zfilled", True),
+            tsv_column("chapter-zfilled", force=True),
         ),
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
         key=field.aon(
             "(",
-            tsv_column("book", True),
+            tsv_column("book", force=True),
             " ",
-            tsv_column("chapter", True),
+            tsv_column("chapter", force=True),
             ":",
-            tsv_column("verse"),
+            tsv_column("verse", force=False),
             ")",
         ),
         front=(
             field.cat(*[verse(lang) for lang in front_dialects])
             if len(front_dialects) > 1
-            else tsv_column(front_dialects[0])
+            else tsv_column(front_dialects[0], force=False)
         ),
         back=field.cat(
             # Reference.
             field.aon(
                 "(",
-                tsv_column("book", True),
+                tsv_column("book", force=True),
                 " ",
-                tsv_column("chapter", True),
+                tsv_column("chapter", force=True),
                 ":",
-                tsv_column("verse"),
+                tsv_column("verse", force=False),
                 ")",
                 "<br>",
                 "<br>",
             ),
             *[verse(lang) for lang in BIBLE_LANGUAGES if lang not in front_dialects],
         ),
-        allow_multiple_decks=True,
-        allow_no_key=True,
-        allow_duplicate_keys=True,
-        allow_no_front=True,
-        allow_no_back=True,
+        force_single_deck=False,
+        force_key=False,
+        force_no_duplicate_keys=False,
+        force_front=False,
+        force_back=False,
     )
 
 
 @type_enforced.Enforcer
 def copticsite_com(deck_name: str, deck_id: int):
     @type_enforced.Enforcer
-    def tsv_col(col_name: str, force: bool = False) -> field.tsv:
+    def tsv_col(col_name: str, force: bool = True) -> field.tsv:
         return field.tsv(
             "dictionary/copticsite.com/data/output/output.tsv", col_name, force=force
         )
@@ -209,30 +210,30 @@ def copticsite_com(deck_name: str, deck_id: int):
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
         key=field.seq(),
-        front=tsv_col("prettify"),
+        front=tsv_col("prettify", force=False),
         back=field.cat(
             field.aon(
                 "(",
                 "<b>",
                 field.cat(
-                    tsv_col("Word Kind"),
+                    tsv_col("Word Kind", force=False),
                     field.aon(
                         " - ",
-                        tsv_col("Word Gender"),
+                        tsv_col("Word Gender", force=False),
                     ),
                     field.aon(
                         " - ",
-                        tsv_col("Origin"),
+                        tsv_col("Origin", force=False),
                     ),
                 ),
                 "</b>",
                 ")",
                 "<br>",
             ),
-            tsv_col("Meaning"),
+            tsv_col("Meaning", force=False),
         ),
-        allow_no_front=True,
-        allow_no_back=True,
+        force_front=False,
+        force_back=False,
     )
 
 
@@ -269,10 +270,10 @@ COPTICSITE_NAME = "copticsite.com"
 
 LAMBDAS = {
     CRUM_BOHAIRIC: lambda deck_name: crum(
-        deck_name, 1284010383, "dialect-B", allow_no_front=True
+        deck_name, 1284010383, "dialect-B", force_front=False
     ),
     CRUM_SAHIDIC: lambda deck_name: crum(
-        deck_name, 1284010386, "dialect-S", allow_no_front=True
+        deck_name, 1284010386, "dialect-S", force_front=False
     ),
     CRUM_ALL: lambda deck_name: crum(
         deck_name,

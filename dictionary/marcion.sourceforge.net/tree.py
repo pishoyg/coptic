@@ -1,7 +1,3 @@
-# TODO: Although it suffices for our current purposes to use a flat list of
-# descendants that is sorted and has indentation information, it may be
-# beneficial to actually build a tree.
-
 import itertools
 import typing
 
@@ -164,8 +160,6 @@ class node:
             if not explain and type != "HEADER":
                 # Skip the English.
                 meaning_width = 0
-            # TODO: Fix this problem. The following line makes perfect sense,
-            # but the assertion often fails!
             assert word_width or meaning_width
             out.extend(
                 [

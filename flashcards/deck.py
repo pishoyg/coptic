@@ -53,12 +53,12 @@ def deck(
     key: type_enforced.utils.WithSubclasses(field.field),
     front: type_enforced.utils.WithSubclasses(field.field),
     back: type_enforced.utils.WithSubclasses(field.field),
-    allow_multiple_decks: bool = False,
-    allow_no_key: bool = False,
-    allow_duplicate_keys: bool = False,
-    allow_no_front: bool = False,
-    allow_no_back: bool = False,
-    back_for_front: bool = False,
+    force_single_deck: bool = True,
+    force_key: bool = True,
+    force_no_duplicate_keys: bool = True,
+    force_front: bool = True,
+    force_back: bool = True,
+    back_for_front: bool = True,
 ):
     """Generate an Anki package.
 
@@ -117,7 +117,7 @@ def deck(
         assert deck_name == name.str()
         single_deck = True
 
-    assert single_deck or allow_multiple_decks
+    assert single_deck or not force_single_deck
 
     model = genanki.Model(
         model_id=deck_id,
@@ -148,10 +148,10 @@ def deck(
         f = front.next()
         b = back.next()
 
-        assert k or allow_no_key
-        assert k not in seen_keys or allow_duplicate_keys
-        assert f or allow_no_front
-        assert b or allow_no_back
+        assert k or not force_key
+        assert k not in seen_keys or not force_no_duplicate_keys
+        assert f or not force_front
+        assert b or not force_back
 
         assert n
         if not k:

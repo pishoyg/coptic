@@ -1,4 +1,3 @@
-# TODO: Change the default strict to strict. Leniency should be the exception.
 import os
 import re
 import shutil
@@ -89,7 +88,7 @@ class _content_field(field):
         self,
         content: list[list[str]] | list[str],
         media_files: list[str],
-        force: bool = False,
+        force: bool = True,
     ) -> None:
         if force:
             assert all(content)
@@ -118,7 +117,7 @@ class tsv(_content_field):
     """
 
     @type_enforced.Enforcer
-    def __init__(self, file_path: str, column_name: str, force: bool = False) -> None:
+    def __init__(self, file_path: str, column_name: str, force: bool = True) -> None:
         content = _read_tsv_column(file_path, column_name)
         content = list(map(use_html_line_breaks, content))
         super().__init__(content, [], force=force)
@@ -228,7 +227,7 @@ class img(_content_field):
         sort_paths=None,  # Sort list of paths.
         get_caption=None,  # Map path to caption.
         width: typing.Optional[int] = None,
-        force: bool = False,
+        force: bool = True,
     ) -> None:
         """
         The "src" field of the <img> HTML tag must bear basenames. Directories

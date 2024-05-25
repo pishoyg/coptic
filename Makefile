@@ -105,7 +105,7 @@ privileged: drive
 
 drive: FORCE
 	cp \
-		flashcards/data/* \
+		flashcards/data/*.apkg \
 		"$${DEST}"
 
 # Maintenance tasks.
