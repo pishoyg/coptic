@@ -1,11 +1,4 @@
 # TODO: Change the default strict to strict. Leniency should be the exception.
-# TODO: Simplify this file using lambdas. It was initially designed to parse a
-# DSL (domain-specific language), because we initially intended to define the
-# flashcard structure as a string parameter that follows the DSL that we worked
-# on designing. This proved to be cumbersome and completely unnecessary. But we
-# inherited some of the traits of the old structure.
-# The new model can be simplified using lambdas. It is no longer necessary to
-# design obscure rules or pass many parameters.
 import glob
 import os
 import re
@@ -33,39 +26,30 @@ MAX_THUMBNAIL_HEIGHT = 100000
 
 
 class field:
-    pass
-
-
-# aon = all or none.
-# TODO: This can be implemented as a one-liner using `apl`.
-def aon(*fields):
     @type_enforced.Enforcer
-    def all_or_nothing(*nexts: str) -> str:
-        return "".join(nexts) if all(nexts) else ""
+    def next(self) -> str | list[str]:
+        raise ValueError("Unimplemented!")
 
-    return apl(all_or_nothing, *fields)
-
-
-def cat(*fields):
     @type_enforced.Enforcer
-    def concatenate(*nexts: str) -> str:
-        return "".join(nexts)
+    def length(self) -> int:
+        raise ValueError("Unimplemented!")
 
-    return apl(concatenate, *fields)
+    def media_files(self) -> list[str]:
+        raise ValueError("Unimplemented!")
 
 
-def xor(*fields):
+class _primitive_field(field):
+
     @type_enforced.Enforcer
-    def first_match(*nexts: str) -> str:
-        for n in nexts:
-            if n:
-                return n
-        return ""
+    def length(self) -> int:
+        return -1
 
-    return apl(first_match, *fields)
+    @type_enforced.Enforcer
+    def media_files(self) -> list[str]:
+        return []
 
 
-class txt(field):
+class txt(_primitive_field):
     """
     A constant text field.
     """
@@ -81,19 +65,11 @@ class txt(field):
         return self._text
 
     @type_enforced.Enforcer
-    def length(self) -> int:
-        return -1
-
-    @type_enforced.Enforcer
-    def media_files(self) -> list[str]:
-        return []
-
-    @type_enforced.Enforcer
     def str(self) -> str:
         return self._text
 
 
-class seq(field):
+class seq(_primitive_field):
     """
     A numerical sequence field.
     """
@@ -108,35 +84,28 @@ class seq(field):
         self._cur += 1
         return ans
 
-    @type_enforced.Enforcer
-    def length(self) -> int:
-        return -1
+
+class _content_field(field):
 
     @type_enforced.Enforcer
-    def media_files(self) -> list[str]:
-        return []
-
-
-class tsv(field):
-    """
-    A TSV column field.
-    """
-
-    @type_enforced.Enforcer
-    def __init__(self, file_path: str, column_name: str, force: bool = False) -> None:
-        self._content = _read_tsv_column(file_path, column_name)
-        self._content = map(str, self._content)
-        self._content = list(map(use_html_line_breaks, self._content))
+    def __init__(
+        self,
+        content: list[list[str]] | list[str],
+        media_files: list[str],
+        force: bool = False,
+    ) -> None:
         if force:
-            assert all(self._content)
+            assert all(content)
+        self._content = content
+        self._media_files = media_files
         self._counter = 0
 
     @type_enforced.Enforcer
     def media_files(self) -> list[str]:
-        return []
+        return self._media_files
 
     @type_enforced.Enforcer
-    def next(self) -> str:
+    def next(self) -> str | list[str]:
         ans = self._content[self._counter]
         self._counter += 1
         return ans
@@ -146,9 +115,39 @@ class tsv(field):
         return len(self._content)
 
 
-class grp(field):
+class tsv(_content_field):
+    """
+    A TSV column field.
+    """
+
+    @type_enforced.Enforcer
+    def __init__(self, file_path: str, column_name: str, force: bool = False) -> None:
+        content = _read_tsv_column(file_path, column_name)
+        content = list(map(use_html_line_breaks, content))
+        super().__init__(content, [], force=force)
+
+
+class grp(_content_field):
     """
     Group entries in a TSV column using another column.
+    See this example:
+        keys: [1, 2, 3]
+        groupby: [1, 2, 1, 2, 3, 3]
+        selected: ["a", "b", "c", "d", "e", "f"]
+
+        The first step is to zip `groupby` and `selected` to obtain the
+        following:
+            [(1, "a"),
+             (2, "b"),
+             (1, "c"),
+             (2, "d"),
+             (3, "e"),
+             (e, f")]
+        And then, for each call to next(), we return the selected entries with
+        a corresponding gropuby that matches the key.
+
+        This type is complicated and currently unused. Maybe we should just
+        delete it!
     """
 
     @type_enforced.Enforcer
@@ -168,48 +167,11 @@ class grp(field):
         key_to_selected = {k: [] for k in keys}
         for _ in range(num_entries(group_by, selected)):
             key_to_selected[group_by.next()].append(selected.next())
-        self._content = [key_to_selected[k] for k in keys]
-        self._counter = 0
-
-    @type_enforced.Enforcer
-    def media_files(self) -> list[str]:
-        return []
-
-    @type_enforced.Enforcer
-    def next(self) -> list[str]:
-        ans = self._content[self._counter]
-        self._counter += 1
-        return ans
-
-    @type_enforced.Enforcer
-    def length(self) -> int:
-        return len(self._content)
+        content = [key_to_selected[k] for k in keys]
+        super().__init__(content, [], force)
 
 
-class apl(field):
-    """
-    Apply a lambda to a field.
-    """
-
-    @type_enforced.Enforcer
-    def __init__(self, l, *fields) -> None:
-        self._lambda = l
-        self._fields = _convert_strings(*fields)
-
-    @type_enforced.Enforcer
-    def media_files(self) -> list[str]:
-        return merge_media_files(*self._fields)
-
-    @type_enforced.Enforcer
-    def next(self):
-        return self._lambda(*[f.next() for f in self._fields])
-
-    @type_enforced.Enforcer
-    def length(self) -> int:
-        return num_entries(*self._fields)
-
-
-class img(field):
+class img(_content_field):
     """
     Images. Retrieve keys from the column named ${KEY_COLUMN_NAME} in the TSV
     found at ${TSV_FILE_PATH}. The images are to be found at:
@@ -265,6 +227,7 @@ class img(field):
         self,
         tsv_path: str,
         column_name: str,
+        # TODO: Supply the path and caption using lambdas.
         dir_path: str,
         file_name_fmt: str,
         caption_source: str,
@@ -299,14 +262,14 @@ class img(field):
         # comma-separated list of key patterns.
         keys = _read_tsv_column(tsv_path, column_name)
 
-        self._content = []
-        self._media_files = set()
+        content = []
+        media_files = set()
         for cs_keys in keys:
             if force:
                 assert cs_keys
             cur = ""
             if not cs_keys:
-                self._content.append(cur)
+                content.append(cur)
                 continue
             for key in cs_keys.split(","):
                 assert key
@@ -318,7 +281,7 @@ class img(field):
                     basename = path.replace("/", "_")
                     cur += html_fmt.format(basename=basename, caption=caption)
                     new_location = os.path.join(WORK_DIR.name, basename)
-                    self._media_files.add(new_location)
+                    media_files.add(new_location)
                     if width:
                         image = Image.open(path)
                         cur_width, _ = image.size
@@ -327,10 +290,10 @@ class img(field):
                         image.save(new_location)
                     else:
                         shutil.copyfile(path, new_location)
-            self._content.append(cur)
+            content.append(cur)
 
-        self._media_files = list(self._media_files)
-        self._counter = 0
+        media_files = list(media_files)
+        super().__init__(content, media_files)
 
     @type_enforced.Enforcer
     def _get_caption(self, caption_source: str, key: str, path: str) -> str:
@@ -341,68 +304,56 @@ class img(field):
             return stem
         raise ValueError(f"Unknown caption source: {caption_source}")
 
-    @type_enforced.Enforcer
-    def media_files(self) -> list[str]:
-        return self._media_files
 
-    @type_enforced.Enforcer
-    def next(self) -> str:
-        ans = self._content[self._counter]
-        self._counter += 1
-        return ans
-
-    @type_enforced.Enforcer
-    def length(self) -> int:
-        return len(self._content)
-
-
-class fil(field):
+class apl(field):
     """
-    - FIL::${TSV_FILE_PATH}::${KEY_COLUMN_NAME}::${DIR_PATH}::${FILE_NAME_FMT}
-
-      Files that will be imported and embedded. Use this for plain text or HTML
-      content.
-
+    Apply a lambda to a field.
     """
 
     @type_enforced.Enforcer
-    def __init__(
-        self,
-        file_path: str,
-        column_name: str,
-        dir_path: str,
-        file_name_fmt: str,
-        force: bool = False,
-    ) -> None:
-        keys = _read_tsv_column(file_path, column_name)
-        if force:
-            assert keys and all(keys)
-
-        self._content = []
-        for cs_keys in keys:
-            paths = _glob(dir_path, file_name_fmt, cs_keys)
-            cur = ""
-            for path in paths:
-                with open(path) as f:
-                    cur += f.read()
-            cur = use_html_line_breaks(cur)
-            cur = cur.strip()
-            self._content.append(cur)
-        self._counter = 0
+    def __init__(self, l, *fields) -> None:
+        self._lambda = l
+        self._fields = _convert_strings(*fields)
 
     @type_enforced.Enforcer
     def media_files(self) -> list[str]:
-        return []
+        return merge_media_files(*self._fields)
 
     @type_enforced.Enforcer
-    def next(self) -> str:
-        ans = self._content[self._counter]
-        self._counter += 1
-        return ans
+    def next(self):
+        return self._lambda(*[f.next() for f in self._fields])
 
     @type_enforced.Enforcer
     def length(self) -> int:
-        return len(self._content)
+        return num_entries(*self._fields)
+
+
+# aon = all or none.
+def aon(*fields):
+    @type_enforced.Enforcer
+    def all_or_nothing(*nexts: str) -> str:
+        return "".join(nexts) if all(nexts) else ""
+
+    return apl(all_or_nothing, *fields)
+
+
+def cat(*fields):
+    @type_enforced.Enforcer
+    def concatenate(*nexts: str) -> str:
+        return "".join(nexts)
+
+    return apl(concatenate, *fields)
+
+
+def xor(*fields):
+    @type_enforced.Enforcer
+    def first_match(*nexts: str) -> str:
+        for n in nexts:
+            if n:
+                return n
+        return ""
+
+    return apl(first_match, *fields)
 
 
 @type_enforced.Enforcer
@@ -435,14 +386,14 @@ def merge_media_files(*fields) -> list[str]:
 
 
 @type_enforced.Enforcer
-def _path_sort_key(path: str) -> list[str]:
-    path = os.path.basename(path)
-    return [x.zfill(MAX_INTEGER_LENGTH) for x in INTEGER_RE.findall(path)] + [path]
+def use_html_line_breaks(text: str) -> str:
+    return text.replace("\n", "<br>")
 
 
 @type_enforced.Enforcer
-def use_html_line_breaks(text: str) -> str:
-    return text.replace("\n", "<br>")
+def _path_sort_key(path: str) -> list[str]:
+    path = os.path.basename(path)
+    return [x.zfill(MAX_INTEGER_LENGTH) for x in INTEGER_RE.findall(path)] + [path]
 
 
 @type_enforced.Enforcer
