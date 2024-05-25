@@ -136,7 +136,6 @@ def main() -> None:
     parser.reset()
 
     # Gain tree insights.
-    derivations["depth"] = depths(derivations)
     build_trees(roots, derivations)
 
     # Write the roots.
@@ -230,40 +229,18 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
 
 @type_enforced.Enforcer
 def build_trees(roots: pd.DataFrame, derivations: pd.DataFrame) -> None:
+    derivations["depth"] = tree.depths(derivations)
     # Build trees.
+    keys = [row["key"] for _, row in roots.iterrows()]
     trees = {row["key"]: tree.node(row) for _, row in roots.iterrows()}
     for _, row in derivations.iterrows():
         trees[row["key_word"]].add_descendant(tree.node(row))
-    for _, n in trees.items():
-        n.sort_descendants()
+    for _, t in trees.items():
+        t.preprocess()
 
     # Add extra columns to the parents, using the derivations.
-    crum_pages = []
-    for _, row in roots.iterrows():
-        t = trees[row["key"]]
-        cur = {d.row()[CRUM_COL + "-page"] for d in t.descendants(include_root=True)}
-        cur = map(int, cur)
-        cur = filter(None, cur)  # Delete the zero page.
-        cur = sorted(cur)  # Sort numerically, not lexicographically.
-        cur = map(str, cur)  # Convert back to string.
-        crum_pages.append(",".join(cur))
-    roots[CRUM_COL + "-pages"] = crum_pages
-
-
-@type_enforced.Enforcer
-def depths(derivations: pd.DataFrame) -> list[int]:
-    keys = [int(row["key"]) for _, row in derivations.iterrows()]
-    parents = [int(row["key_deriv"]) for _, row in derivations.iterrows()]
-    key_to_parent = {k: p for k, p in zip(keys, parents)}
-
-    @type_enforced.Enforcer
-    def depth(key: int) -> int:
-        parent = key_to_parent[key]
-        if not parent:
-            return 0
-        return 1 + depth(parent)
-
-    return [depth(k) for k in keys]
+    roots[CRUM_COL + "-pages"] = [",".join(trees[key].crum_pages()) for key in keys]
+    roots["derivations-table"] = [trees[key].html() for key in keys]
 
 
 @type_enforced.Enforcer

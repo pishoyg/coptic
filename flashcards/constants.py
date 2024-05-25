@@ -1,12 +1,8 @@
-import itertools
 import typing
 
 import deck
 import field
 import type_enforced
-
-NUM_COLS = 10
-MAX_DERIVATION_DEPTH = 4
 
 BIBLE_LANGUAGES = [
     "Bohairic",
@@ -30,16 +26,6 @@ def crum(deck_name: str, deck_id: int, front_column: str, allow_no_front: bool =
         return field.tsv(
             "dictionary/marcion.sourceforge.net/data/output/roots.tsv",
             col_name,
-            force=force,
-        )
-
-    def derivations_col(col_name: str, force: bool = True) -> field.grp:
-        return field.grp(
-            key_file_path="dictionary/marcion.sourceforge.net/data/output/roots.tsv",
-            key_col_name="key",
-            group_file_path="dictionary/marcion.sourceforge.net/data/output/derivations.tsv",
-            group_by_col_name="key_word",
-            select_col=col_name,
             force=force,
         )
 
@@ -98,15 +84,7 @@ def crum(deck_name: str, deck_id: int, front_column: str, allow_no_front: bool =
             # Full entry.
             roots_col("word-parsed-no-ref", force=True),
             # Derivations.
-            field.apl(
-                build_tree,
-                derivations_col("depth", force=True),
-                derivations_col("word-parsed-prettify", force=False),
-                derivations_col("type-parsed", force=True),
-                derivations_col("en-parsed-light-greek", force=False),
-                derivations_col("crum", force=True),
-                derivations_col("key", force=True),
-            ),
+            roots_col("derivations-table", force=True),
             "<hr>",
             # Crum's pages.
             field.cat(
@@ -253,106 +231,6 @@ def copticsite_com(deck_name: str, deck_id: int):
     )
 
 
-class derivation:
-    def __init__(self, depth, word, type, meaning, crum, key):
-        depth = int(depth)
-        assert depth >= 0 and depth <= MAX_DERIVATION_DEPTH
-        assert type
-        assert crum
-        assert key and int(key) > 0
-
-        self.depth = depth
-        self.word = word
-        self.type = type
-        self.meaning = meaning
-        self.crum = crum
-        self.key = key
-
-
-@type_enforced.Enforcer
-def build_crum_row_spans(derivations: list[derivation]) -> list[tuple[str, int]]:
-    crum_column = [d.crum for d in derivations]
-    out = []
-    for group in itertools.groupby(crum_column):
-        # Validate that all elements are equal.
-        crum = group[0]
-        repetitions = len(list(group[1]))
-        out.append((crum, repetitions))
-        for _ in range(repetitions - 1):
-            out.append(("", 0))
-    return out
-
-
-@type_enforced.Enforcer
-def build_tree(*columns: list[str]) -> str:
-    """
-    derivations is a set of exactly five columns, each representing one field,
-    namely:
-        - depth
-        - word-parsed-prettify
-        - type-parsed
-        - en-parsed
-        - crum
-        - key
-    They are expected to be pre-sorted, and to belong to a single word.
-    """
-    assert len(columns) == 6
-    num_rows = len(columns[0])
-    assert all(len(column) == num_rows for column in columns)
-    derivations = [derivation(*row) for row in zip(*columns)]
-    crum_row_spans = build_crum_row_spans(derivations)
-
-    out = []
-    out.extend(
-        [
-            "<table>",
-            "<colgroup>",
-        ]
-    )
-    out.extend([f'<col width="{100/NUM_COLS}%">'] * NUM_COLS)
-    out.extend(["</colgroup>"])
-
-    for d, crum_row_span in zip(derivations, crum_row_spans):
-        crum, crum_span = crum_row_span
-        assert bool(crum) == bool(crum_span)
-        word_width = int((NUM_COLS - d.depth) / 2) if d.word else 0
-        # TODO: Handle the case when the meaning is absent.
-        meaning_width = NUM_COLS - word_width - d.depth - 1
-        out.extend(
-            [
-                # New row.
-                "<tr>",
-                # Key (commented).
-                f"<!--Key: {d.key}-->",
-                # Margin.
-                f'<td colspan="{d.depth}"></td>' if d.depth else "",
-                # Word.
-                (
-                    f'<td colspan="{word_width}" id="bordered">{d.word}</td>'
-                    if word_width
-                    else ""
-                ),
-                # Meaning.
-                f'<td colspan="{meaning_width}" id="bordered">',
-                # TODO: Retrieve these types from Marcion rather than hardcode
-                # them here.
-                f"<b>({d.type})</b><br>" if d.type not in ["-", "HEADER"] else "",
-                d.meaning,
-                "</td>",
-                (
-                    f'<td rowspan="{crum_span}" id="bordered"><b>Crum: </b>{crum}</td>'
-                    if crum_span
-                    else ""
-                ),
-                # End row.
-                "</tr>",
-            ]
-        )
-    out.append("</table>")
-    out = " ".join(out)
-    return out
-
-
 # N.B. The deck IDs are protected fields. They are used as database keys for the
 # decks. Do NOT change them!
 #
@@ -375,7 +253,6 @@ def build_tree(*columns: list[str]) -> str:
 # The "name" argument is used to generate deck names for datasets that generate
 # multiple decks.
 # The "key" field is used to key the notes.
-
 
 CRUM_BOHAIRIC = "A Coptic Dictionary::Bohairic"
 CRUM_SAHIDIC = "A Coptic Dictionary::Sahidic"

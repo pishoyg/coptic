@@ -5,6 +5,7 @@ import word as lexical
 # Dialects.
 DIALECTS = ["S", "Sa", "Sf", "A", "sA", "B", "F", "Fb", "O", "NH"]
 
+MAX_DERIVATION_DEPTH = 4
 CRUM_LAST_PAGE_NUM = 953
 
 # Regular expressions used for parsing.
