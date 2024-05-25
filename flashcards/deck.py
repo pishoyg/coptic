@@ -58,7 +58,7 @@ def deck(
     force_no_duplicate_keys: bool = True,
     force_front: bool = True,
     force_back: bool = True,
-    back_for_front: bool = True,
+    back_for_front: bool = False,
 ):
     """Generate an Anki package.
 

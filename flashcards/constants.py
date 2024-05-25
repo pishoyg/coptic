@@ -68,7 +68,7 @@ def crum(deck_name: str, deck_id: int, dialect_col: str, force_front: bool = Tru
             ),
             # Meaning.
             field.aon(
-                roots_col("en-parsed-light-greek", force=True),
+                roots_col("en-parsed-light-greek", force=False),
                 "<br>",
             ),
             # Image.
@@ -81,7 +81,7 @@ def crum(deck_name: str, deck_id: int, dialect_col: str, force_front: bool = Tru
                 sort_paths=field.sort_semver,
                 get_caption=field.stem,
                 width=300,
-                force=True,
+                force=False,
             ),
             # Horizonal line.
             "<hr>",

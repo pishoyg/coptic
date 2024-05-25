@@ -292,7 +292,7 @@ class img(_content_field):
             content.append(cur)
 
         media_files = list(media_files)
-        super().__init__(content, media_files)
+        super().__init__(content, media_files, force=force)
 
 
 class apl(field):
