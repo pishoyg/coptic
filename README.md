@@ -57,14 +57,16 @@ as a dictionary because it's searchable.
 ### A Coptic Dictionary
 
 This is a essentially a **complete** digital version of Crum. The front of the
-card shows the *root* spellings (in this case, only for the Bohairic dialect,
-but there is a version for Sahidic, and one for all dialects).
+card shows the *root* spellings. You can choose to view the front in Bohairic,
+Sahidic, or all dialects.
 
 <div align="center">
    <figure>
-      <img src="archive/img/a-coptic-dictionary/01.png" alt="front" width="200"/>
+      <img src="flashcards/data/img/a-coptic-dictionary/front/bohairic.png" alt="bohairic front" width="200"/>
+      <img src="flashcards/data/img/a-coptic-dictionary/front/sahidic.png" alt="sahidic front" width="200"/>
+      <img src="flashcards/data/img/a-coptic-dictionary/front/all.png" alt="all-dialect front" width="200"/>
       <br>
-      <figcaption> Front </figcaption>
+      <figcaption> Front in Bohairic, Sahidic, or All Dialects </figcaption>
    </figure>
 </div>
 
@@ -76,10 +78,10 @@ Crum's dictionary.
 
 <div align="center">
    <figure>
-      <img src="archive/img/a-coptic-dictionary/02.png" alt="back" width="200"/>
-      <img src="archive/img/a-coptic-dictionary/03.png" alt="back" width="200"/>
-      <img src="archive/img/a-coptic-dictionary/04.png" alt="back" width="200"/>
-      <img src="archive/img/a-coptic-dictionary/05.png" alt="back" width="200"/>
+      <img src="flashcards/data/img/a-coptic-dictionary/back/01.png" alt="back" width="200"/>
+      <img src="flashcards/data/img/a-coptic-dictionary/back/02.png" alt="back" width="200"/>
+      <img src="flashcards/data/img/a-coptic-dictionary/back/03.png" alt="back" width="200"/>
+      <img src="flashcards/data/img/a-coptic-dictionary/back/04.png" alt="back" width="200"/>
       <br>
       <figcaption> Back </figcaption>
    </figure>
@@ -94,9 +96,9 @@ explanatory images is an ongoing effort.
 
 <div align="center">
    <figure>
-      <img src="archive/img/a-coptic-dictionary/with-images/01.png" alt="back" width="200"/>
-      <img src="archive/img/a-coptic-dictionary/with-images/02.png" alt="back" width="200"/>
-      <img src="archive/img/a-coptic-dictionary/with-images/03.png" alt="back" width="200"/>
+      <img src="flashcards/data/img/a-coptic-dictionary/back-with-images/01.png" alt="back" width="200"/>
+      <img src="flashcards/data/img/a-coptic-dictionary/back-with-images/02.png" alt="back" width="200"/>
+      <img src="flashcards/data/img/a-coptic-dictionary/back-with-images/03.png" alt="back" width="200"/>
       <br>
       <figcaption> Example with Images </figcaption>
    </figure>
@@ -111,8 +113,8 @@ loanwords, as we as **neologisms liberally added by the author!**
 <div align="center">
 
    <figure>
-      <img src="archive/img/copticsite.com/01.png" alt="front" width="200"/>
-      <img src="archive/img/copticsite.com/02.png" alt="back" width="200"/>
+      <img src="flashcards/data/img/copticsite.com/front.png" alt="front" width="200"/>
+      <img src="flashcards/data/img/copticsite.com/back.png" alt="back" width="200"/>
       <br>
       <figcaption> copticsite.com Front and Back </figcaption>
    </figure>
@@ -130,7 +132,7 @@ even less so, the historical books.
 
 <div align="center">
    <figure>
-      <img src="archive/img/bible/01.png" alt="table of contents" width="200"/>
+      <img src="flashcards/data/img/bible/toc.png" alt="table of contents" width="200"/>
       <br>
       <figcaption> Bible Table of Contents </figcaption>
    </figure>
@@ -141,18 +143,28 @@ dialects along with the reference and the translation.
 
 <div align="center">
    <figure>
-      <img src="archive/img/bible/02.png" alt="back" width="200"/>
-      <img src="archive/img/bible/03.png" alt="back" width="200"/>
+      <img src="flashcards/data/img/bible/front.png" alt="back" width="200"/>
+      <img src="flashcards/data/img/bible/back.png" alt="back" width="200"/>
       <br>
       <figcaption> Bible Front and Back </figcaption>
    </figure>
 </div>
 
 Hint: When studying the Bible using flashcards, you can edit the note from the
-menu, and highlight the expressions / words that you want to pay attention to
-the next time you see the card. Then you can select *Again* or *Hard* for the
-verses that contain something that you still want to learn or memorize, and you
-can select *Good* or *Easy* for the verses that you've already learned.
+menu, and turn some expressions or words to to **bold**  or *italics*, so you
+will pay attention to it the next time you see the card. Then you can select
+*Again* or *Hard* for the verses that contain something that you still want to
+learn or memorize, and you can select *Good* or *Easy* for the verses that
+you've already learned. **N.B.** Editing the keys will mess things up, but you
+can freely edit the front and back.
+
+<div align="center">
+   <figure>
+      <img src="flashcards/data/img/a-coptic-dictionary/edit/edit.png" alt="edit" width="200"/>
+      <br>
+      <figcaption> Editing a Note </figcaption>
+   </figure>
+</div>
 
 ## Contact and Contributions
 
