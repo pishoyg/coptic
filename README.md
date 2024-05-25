@@ -20,10 +20,10 @@
 - [For Developers / Owners](#for-developers--owners)
   - [Directory Structure](#directory-structure)
   - [Documentation TODO's](#documentation-todos)
+  - [Learner Convenience TODO's](#learner-convenience-todos)
   - [Collaborator Convenience TODO's](#collaborator-convenience-todos)
   - [Content TODO's](#content-todos)
   - [Developer Convenience TODO's](#developer-convenience-todos)
-  - [Learner Convenience TODO's](#learner-convenience-todos)
   - [Diplomacy TODO's](#diplomacy-todos)
 - [Credits](#credits)
 
