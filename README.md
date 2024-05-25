@@ -344,7 +344,7 @@ into the repo.
 
 ### Content TODO's
 
-data
+data sources
 
 1. **Incorporate Scriptorium's data. Gain familiarity with their platform.
    Parse their dictionary.** (7-8 hours, delegated)
@@ -354,11 +354,9 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
 1. **Incorporate the ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ Group's neologisms.** (3-4 hours)
 
-**derivations**
-
-1. **Group the derivations by dialect.** (1 hour)
-
 img, fil, snd
+
+1. **Polish `flashcards/field.py`. Use lambdas, or simplify it otherwise.**
 
 1. **The image, file, and (future) sound fields should support a
    comma-separated list of keys, or key ranges.** (1 hour)
@@ -370,6 +368,30 @@ img, fil, snd
    This is necessary for adding pronunciations.
 
 archive
+
+1. **Group the derivations by dialect.** (3-4 days)
+
+   Now, ... The tricky thing about this task is that, while parsing the
+   derivations, it's hard to tell whether a certain row belongs to a given
+   dialect or not. If we can easily decide on the correct subset of rows that
+   belongs to the dialect at hand, generating the table should be easy.
+
+   There are the following situations:
+
+   1. A row explicitly states its bearing words in the dialect. Easy.
+
+   1. A row is a header. Easy.
+
+   1. A row has a child that belongs to the dialect. We also include it,
+      although the way we implemented this check is hacky and needs a cleanup.
+      We should reimplement it using proper tree construction.
+
+   1. Now, what if a row is not a header, has no children belonging to the
+      dialect, and doesn't specify any dialects itself? Previously, we assumed
+      that such rows should be treated as belonging to all dialects (that's
+      what we do with the roots). But we can't apply that to derivations, which
+      often intentionally omit the dialect list. A good heuristic is to examine
+      the parents and try to infer the dialect list from the parents.
 
 1. Complete the list of prefixes for the `prettify` format for copticsite.com.
    (low-priority)

@@ -1,4 +1,11 @@
 # TODO: Change the default strict to strict. Leniency should be the exception.
+# TODO: Simplify this file using lambdas. It was initially designed to parse a
+# DSL (domain-specific language), because we initially intended to define the
+# flashcard structure as a string parameter that follows the DSL that we worked
+# on designing. This proved to be cumbersome and completely unnecessary. But we
+# inherited some of the traits of the old structure.
+# The new model can be simplified using lambdas. It is no longer necessary to
+# design obscure rules or pass many parameters.
 import glob
 import os
 import re
@@ -8,12 +15,9 @@ import typing
 
 import numexpr
 import pandas as pd
-import pillow_avif
+import pillow_avif  # This import is necessary to support AVID images.
 import type_enforced
 from PIL import Image
-
-# The pillow_avif import is necessary, in order to enable processing of AVIF
-# files.
 
 # N.B. Pillow might be tricky for our requirements generators. You might have
 # to add it to requirements.txt manually.
@@ -33,6 +37,7 @@ class field:
 
 
 # aon = all or none.
+# TODO: This can be implemented as a one-liner using `apl`.
 class aon(field):
     @type_enforced.Enforcer
     def __init__(self, *fields) -> None:

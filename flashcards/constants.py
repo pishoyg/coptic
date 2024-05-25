@@ -19,7 +19,7 @@ BIBLE_LANGUAGES = [
 
 
 @type_enforced.Enforcer
-def crum(deck_name: str, deck_id: int, front_column: str, allow_no_front: bool = False):
+def crum(deck_name: str, deck_id: int, dialect_col: str, allow_no_front: bool = False):
 
     @type_enforced.Enforcer
     def roots_col(col_name: str, force: bool = False) -> field.tsv:
@@ -48,7 +48,7 @@ def crum(deck_name: str, deck_id: int, front_column: str, allow_no_front: bool =
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
         key=roots_col("key", force=True),
-        front=roots_col(front_column),
+        front=roots_col(dialect_col),
         back=field.cat(
             # Type and Crum page.
             field.cat(
@@ -84,7 +84,7 @@ def crum(deck_name: str, deck_id: int, front_column: str, allow_no_front: bool =
             # Full entry.
             roots_col("word-parsed-no-ref", force=True),
             # Derivations.
-            roots_col("derivations-table", force=True),
+            roots_col("derivations-table", force=False),
             "<hr>",
             # Crum's pages.
             field.cat(
