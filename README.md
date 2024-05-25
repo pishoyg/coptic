@@ -356,9 +356,7 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
 **derivations**
 
-1. **Insert derivation keys as comments.** (<1 hour)
-
-1. **Defined the derivation tree format in the TSV, not in the Anki builder.**
+1. **Define the derivation tree format in the TSV, not in the Anki builder.**
    (3-4 hours)
 
 1. **Group the derivations by dialect.** (1 hour)
@@ -390,23 +388,6 @@ archive
    don't impact the output by comparing two packages generated with the dummy
    timestamp against one another, one with and one without the changes.** (1
 hour)
-
-1. **Export accurate timestamps.**
-
-   Running the generation script twice produces a `diff`, and reimporting
-   (supposedly identical data) produces the message "notes were used to update
-   existing ones. This is likely due to the timestamps that the notes are recorded
-   with. The newer timestamps make Anki think that the cards are newer, hence
-   it updates everything. This results in these problems:
-
-   - Local changes would be overridden.
-   - The sync message is misleading or lacking useful information.
-
-   If some notes are identical to ones that have already been exported, they
-   should retain their old timestamps. `genanki` doesn't have native support
-   for per-note timestamps, neither does it support reading an existing package
-   and comparing the new data against it. So we will likely have to do lots of
-   manual work to solve the problem.
 
 1. Expand the unit tests.
 
@@ -440,7 +421,28 @@ hour)
 
 ### Learner Convenience TODO's
 
+1. **Export accurate timestamps.** (7-8 hours)
+
+   Running the generation script twice produces a `diff`, and reimporting
+   (supposedly identical data) produces the message "notes were used to update
+   existing ones. This is likely due to the timestamps that the notes are recorded
+   with. The newer timestamps make Anki think that the cards are newer, hence
+   it updates everything. This results in these problems:
+
+   - Local changes would be overridden.
+   - The sync message is misleading or lacking useful information.
+
+   If some notes are identical to ones that have already been exported, they
+   should retain their old timestamps. `genanki` doesn't have native support
+   for per-note timestamps, neither does it support reading an existing package
+   and comparing the new data against it. So we will likely have to do lots of
+   manual work to solve the problem.
+
 1. **Deploy the flashcards on a standalone app.** (100+ hours, delegate)
+
+1. Until the above is materialized, reassess whether Anki is your best bid.
+   Learn about alternatives. The fact that the iOS version is paid will deter
+   many learners!
 
 ### Diplomacy TODO's
 

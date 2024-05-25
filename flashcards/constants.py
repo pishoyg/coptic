@@ -105,6 +105,7 @@ def crum(deck_name: str, deck_id: int, front_column: str, allow_no_front: bool =
                 derivations_col("type-parsed", force=True),
                 derivations_col("en-parsed-light-greek", force=False),
                 derivations_col("crum", force=True),
+                derivations_col("key", force=True),
             ),
             "<hr>",
             # Crum's pages.
@@ -253,17 +254,19 @@ def copticsite_com(deck_name: str, deck_id: int):
 
 
 class derivation:
-    def __init__(self, depth, word, type, meaning, crum):
+    def __init__(self, depth, word, type, meaning, crum, key):
         depth = int(depth)
         assert depth >= 0 and depth <= MAX_DERIVATION_DEPTH
         assert type
         assert crum
+        assert key and int(key) > 0
 
         self.depth = depth
         self.word = word
         self.type = type
         self.meaning = meaning
         self.crum = crum
+        self.key = key
 
 
 @type_enforced.Enforcer
@@ -290,10 +293,10 @@ def build_tree(*columns: list[str]) -> str:
         - type-parsed
         - en-parsed
         - crum
+        - key
     They are expected to be pre-sorted, and to belong to a single word.
     """
-    # TODO: Prettify the HTML.
-    assert len(columns) == 5
+    assert len(columns) == 6
     num_rows = len(columns[0])
     assert all(len(column) == num_rows for column in columns)
     derivations = [derivation(*row) for row in zip(*columns)]
@@ -319,6 +322,8 @@ def build_tree(*columns: list[str]) -> str:
             [
                 # New row.
                 "<tr>",
+                # Key (commented).
+                f"<!--Key: {d.key}-->",
                 # Margin.
                 f'<td colspan="{d.depth}"></td>' if d.depth else "",
                 # Word.
