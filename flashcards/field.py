@@ -38,83 +38,31 @@ class field:
 
 # aon = all or none.
 # TODO: This can be implemented as a one-liner using `apl`.
-class aon(field):
+def aon(*fields):
     @type_enforced.Enforcer
-    def __init__(self, *fields) -> None:
-        fields = _convert_strings(*fields)
-        self._len = num_entries(*fields)
-        self._fields = fields
-        self._media_files = sum([f.media_files() for f in fields], [])
-        self._media_files = list(set(self._media_files))
+    def all_or_nothing(*nexts: str) -> str:
+        return "".join(nexts) if all(nexts) else ""
 
+    return apl(all_or_nothing, *fields)
+
+
+def cat(*fields):
     @type_enforced.Enforcer
-    def next(self) -> str:
-        n = [f.next() for f in self._fields]
-        if all(n):
-            return "".join(n)
+    def concatenate(*nexts: str) -> str:
+        return "".join(nexts)
+
+    return apl(concatenate, *fields)
+
+
+def xor(*fields):
+    @type_enforced.Enforcer
+    def first_match(*nexts: str) -> str:
+        for n in nexts:
+            if n:
+                return n
         return ""
 
-    @type_enforced.Enforcer
-    def length(self) -> int:
-        return self._len
-
-    @type_enforced.Enforcer
-    def media_files(self) -> list[str]:
-        return self._media_files
-
-
-class cat(field):
-    """
-    Produce a field by concatenating several fields.
-    """
-
-    @type_enforced.Enforcer
-    def __init__(self, *fields) -> None:
-        fields = _convert_strings(*fields)
-        self._len = num_entries(*fields)
-        self._fields = fields
-        self._media_files = sum([f.media_files() for f in fields], [])
-        self._media_files = list(set(self._media_files))
-
-    @type_enforced.Enforcer
-    def next(self) -> str:
-        return "".join(f.next() for f in self._fields)
-
-    @type_enforced.Enforcer
-    def length(self) -> int:
-        return self._len
-
-    @type_enforced.Enforcer
-    def media_files(self) -> list[str]:
-        return self._media_files
-
-
-class xor(field):
-    """
-    Produce a field by returning the first non-empty entry from a set of
-    fields.
-    """
-
-    @type_enforced.Enforcer
-    def __init__(self, *fields) -> None:
-        fields = _convert_strings(*fields)
-        self._fields = fields
-
-    @type_enforced.Enforcer
-    def next(self) -> str:
-        n = [f.next() for f in self._fields]
-        n = list(filter(None, n))
-        if not n:
-            return ""
-        return n[0]
-
-    @type_enforced.Enforcer
-    def length(self) -> int:
-        num_entries(self._fields)
-
-    @type_enforced.Enforcer
-    def media_files(self) -> list[str]:
-        return merge_media_files(*self._fields)
+    return apl(first_match, *fields)
 
 
 class txt(field):
@@ -246,7 +194,7 @@ class apl(field):
     @type_enforced.Enforcer
     def __init__(self, l, *fields) -> None:
         self._lambda = l
-        self._fields = fields
+        self._fields = _convert_strings(*fields)
 
     @type_enforced.Enforcer
     def media_files(self) -> list[str]:
