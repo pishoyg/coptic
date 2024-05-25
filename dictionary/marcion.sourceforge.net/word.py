@@ -58,7 +58,13 @@ class structured_word:
         self._root_type = root_type
 
     @type_enforced.Enforcer
-    def is_dialect(self, d: str) -> bool:
+    def is_dialect(self, d: str, undialected_is_all: bool = False) -> bool:
+        """
+        undialected_is_all: If true, and the word is undialected, then it's
+        considered to be a word in all dialects. So we will always return true.
+        """
+        if undialected_is_all and not self._dialects:
+            return True
         return d in self._dialects
 
     @type_enforced.Enforcer

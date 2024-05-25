@@ -356,9 +356,6 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
 **derivations**
 
-1. **Define the derivation tree format in the TSV, not in the Anki builder.**
-   (3-4 hours)
-
 1. **Group the derivations by dialect.** (1 hour)
 
 img, fil, snd

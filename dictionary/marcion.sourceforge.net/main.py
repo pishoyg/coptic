@@ -219,7 +219,7 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
             entry = "\n".join(
                 w.undialected_string(include_references=False, append_root_type=True)
                 for w in word
-                if w.is_dialect(d)
+                if w.is_dialect(d, undialected_is_all=True)
             )
             insert("dialect-", d, entry)
 

@@ -3,6 +3,7 @@
 # beneficial to actually build a tree.
 
 import itertools
+import typing
 
 import constants
 import pandas as pd
@@ -56,7 +57,9 @@ class node:
         return cur
 
     @type_enforced.Enforcer
-    def html(self, include_root: bool = False) -> str:
+    def html(
+        self, dialect: typing.Optional[str] = None, include_root: bool = False
+    ) -> str:
         """
         derivations is a set of exactly five columns, each representing one field,
         namely:
@@ -87,7 +90,11 @@ class node:
             crum, crum_span = crum_row_span
             assert bool(crum) == bool(crum_span)
             depth = int(d.cell("depth"))
-            word = d.cell("word-parsed-prettify")
+            word = (
+                d.cell("word-parsed-prettify")
+                if dialect is None
+                else d.cell("dialect-" + dialect)
+            )
             type = d.cell("type-parsed")
             meaning = d.cell("en-parsed")
             key = d.cell("key")
