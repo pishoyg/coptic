@@ -7,23 +7,25 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [How to Get the Flashcards](#how-to-get-the-flashcards)
-- [Contact and Contributions](#contact-and-contributions)
-- [Current Status](#current-status)
-- [Manual Data Collection](#manual-data-collection)
+- [Description](#description)
   - [A Coptic Dictionary](#a-coptic-dictionary)
+  - [copticsite.com](#copticsitecom)
+  - [Bible](#bible)
+- [Contact and Contributions](#contact-and-contributions)
+  - [Dictionary](#dictionary)
   - [Moawad Dawoud's Diciontary](#moawad-dawouds-diciontary)
+  - [Audio](#audio)
   - [Learning Curriculum](#learning-curriculum)
   - [Neologisms](#neologisms)
-- [Credits](#credits)
-- [For Developers](#for-developers)
-  - [Documentation Tasks](#documentation-tasks)
-  - [Coding Tasks](#coding-tasks)
-    - [Collaborator Convenience](#collaborator-convenience)
-    - [Content](#content)
-    - [Developer Convenience](#developer-convenience)
-    - [Learner Convenience](#learner-convenience)
-  - [Diplomacy Tasks](#diplomacy-tasks)
+- [For Developers / Owners](#for-developers--owners)
   - [Directory Structure](#directory-structure)
+  - [Documentation TODO's](#documentation-todos)
+  - [Collaborator Convenience TODO's](#collaborator-convenience-todos)
+  - [Content TODO's](#content-todos)
+  - [Developer Convenience TODO's](#developer-convenience-todos)
+  - [Learner Convenience TODO's](#learner-convenience-todos)
+  - [Diplomacy TODO's](#diplomacy-todos)
+- [Credits](#credits)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -32,13 +34,125 @@ language more **learnable**.
 
 ## How to Get the Flashcards
 
-Download Anki
-([Android](https://play.google.com/store/apps/details?id=com.ichi2.anki),
-[iOS](https://apps.apple.com/us/app/ankimobile-flashcards/id373493387),
-[Decktop](https://apps.ankiweb.net/)).
+1. Download Anki ([Android](https://play.google.com/store/apps/details?id=com.ichi2.anki),
+[iOS](https://apps.apple.com/us/app/ankimobile-flashcards/id373493387)\*,
+[Desktop](https://apps.ankiweb.net/)).
 
-Download [the Coptic package](https://drive.google.com/file/d/1KV0fH23Zucmlvdc0dwTJiDdqKIvbuYY_/view?usp=sharing),
-and open it / import it in Anki.
+   (\**The iOS version is
+paid, unfortunately!*)
+
+2. Download [the Coptic package](https://drive.google.com/file/d/1KV0fH23Zucmlvdc0dwTJiDdqKIvbuYY_/view?usp=sharing),
+and open it / import it in Anki. This package includes all the data.
+
+   (*Alternatively, you can download individual decks from [this page](
+https://ankiweb.net/shared/by-author/836362510). Keep in mind that this page
+takes 24 hours to go back live after an update, so it's occasionally down.*)
+
+## Description
+
+The package includes three types of flashcard decks. While the purpose of the
+app is to help you learn vocabulary through spaced repetition, it also doubles
+as a dictionary because it's searchable.
+
+### A Coptic Dictionary
+
+This is a essentially a **complete** digital version of Crum. The front of the
+card shows the *root* spellings (in this case, only for the Bohairic dialect,
+but there is a version for Sahidic, and one for all dialects).
+
+<div align="center">
+   <figure>
+      <img src="archive/img/a-coptic-dictionary/01.png" alt="front" width="200"/>
+      <br>
+      <figcaption> Front </figcaption>
+   </figure>
+</div>
+
+The back of the card shows the full list of spellings per dialect, the meaning,
+and the derivations table (with prepositions, derived words, ... etc.)
+It also includes scans of the Crum pages containing the words, and tells you
+where exactly you can find the definition. This data is fully obtained from
+Crum's dictionary.
+
+<div align="center">
+   <figure>
+      <img src="archive/img/a-coptic-dictionary/02.png" alt="back" width="200"/>
+      <img src="archive/img/a-coptic-dictionary/03.png" alt="back" width="200"/>
+      <img src="archive/img/a-coptic-dictionary/04.png" alt="back" width="200"/>
+      <img src="archive/img/a-coptic-dictionary/05.png" alt="back" width="200"/>
+      <br>
+      <figcaption> Back </figcaption>
+   </figure>
+</div>
+
+In some cases, the back includes explanatory pictures as well. The purpose of
+the explanatory images is to aid learning by engaging your visual memory as
+well, and also to clarify the meaning when the translation is unclear (in many
+cases, you will find yourself looking up images anyway to understand the word,
+such as with exotic plant species, ancient crafts and tools, ...) Collecting
+explanatory images is an ongoing effort.
+
+<div align="center">
+   <figure>
+      <img src="archive/img/a-coptic-dictionary/with-images/01.png" alt="back" width="200"/>
+      <img src="archive/img/a-coptic-dictionary/with-images/02.png" alt="back" width="200"/>
+      <img src="archive/img/a-coptic-dictionary/with-images/03.png" alt="back" width="200"/>
+      <br>
+      <figcaption> Example with Images </figcaption>
+   </figure>
+</div>
+
+### copticsite.com
+
+This is a simple Coptic / Arabic dictionary obtained from [copticsite.com](
+https://copticsite.com/). It has more than 16,000 words, and it includes Greek
+loanwords, as we as **neologisms liberally added by the author!**
+
+<div align="center">
+
+   <figure>
+      <img src="archive/img/copticsite.com/01.png" alt="front" width="200"/>
+      <img src="archive/img/copticsite.com/02.png" alt="back" width="200"/>
+      <br>
+      <figcaption> copticsite.com Front and Back </figcaption>
+   </figure>
+
+</div>
+
+### Bible
+
+This is Biblical data. We don't have the full Bible in any dialect, but this
+contains a lot of the surviving texts, especially in Bohairic, and Sahidic.
+
+The Bohairic version, for example, contains a total of around ~24,000 verses
+(roughly 70% of the Bible). All sections are complete except the poetic and,
+even less so, the historical books.
+
+<div align="center">
+   <figure>
+      <img src="archive/img/bible/01.png" alt="table of contents" width="200"/>
+      <br>
+      <figcaption> Bible Table of Contents </figcaption>
+   </figure>
+</div>
+
+The front shows the verse in your chosen dialect, and the back shows all
+dialects along with the reference and the translation.
+
+<div align="center">
+   <figure>
+      <img src="archive/img/bible/02.png" alt="back" width="200"/>
+      <img src="archive/img/bible/03.png" alt="back" width="200"/>
+      <br>
+      <figcaption> Bible Front and Back </figcaption>
+   </figure>
+</div>
+
+Hint: When studying the Bible using flashcards, you can edit the note from the
+menu, and highlight the expressions / words that you want to pay attention to
+the next time you see the card. Then you can select *Again* or *Hard* for the
+verses that contain something that you still want to learn or memorize, and you
+can select *Good* or *Easy* for the verses that you've already learned.
 
 ## Contact and Contributions
 
@@ -51,31 +165,15 @@ There are two ways you can contribute:
 
 - Coding.
 
-This page documents the tasks. More documentation will be added in the future.
-Also feel free to reach out with questions.
+This section lists ways you can contribute data to enrich the flashcards. [The
+section below](#for-developers--owners) documents programming contributions.
 
-## Current Status
+The contribution pipeline is not yet well-defined. We plan to make it clearer
+as to how exactly you can contribute (which files you can write, in which
+formats, ... etc.) In the meantime, feel free to look below and reach out with
+suggestions or questions, or data! :)
 
-The flashcards contain the following:
-
-- A complete list of words from Crum, including both roots and derivations,
-  per-dialect spellings, meaning in English and Greek, scans of the Crum pages
-  containing the word definition.
-
-  - (For a subset of the words) Explanatory images, added to aid the learning
-  process, and to convey the meanings better.
-
-- A version of the Coptic Bible, containing most Biblical fragments that
-  survived in Coptic.
-
-- A complete version of the dictionary published on copticsite.com.
-
-Work is ongoing to augment the data, through integration of existing database,
-as well as manual digitization of other data sources.
-
-## Manual Data Collection
-
-### A Coptic Dictionary
+### Dictionary
 
 1. **Collect more explanatory pictures.** (100+ hours, delegate)
 
@@ -83,9 +181,10 @@ as well as manual digitization of other data sources.
    learning process, and it will save learners the time that they have to spend
    on looking up the obscure vocabulary or unfamiliar terms.
 
-1. Link Scriptorium Lemmas to Marcion Keys.
+1. Link Scriptorium lemmas to Marcion Keys.
 
-1. Add pronunciations.
+   This may make it possible to include the meaning, literature citations, and
+   perhaps other data.
 
 1. Add a meanings that would be displayed on top before Crum's translation.
    Some of Crum's translations are obscure or archaic, and some are outdated
@@ -125,6 +224,12 @@ as well as manual digitization of other data sources.
    (low-priority, especially if you incorporate Scriptorium's data, which you
    must do anyway.)
 
+### Audio
+
+(ambitious goal)
+
+1. Add pronunciations to the notes.
+
 ### Learning Curriculum
 
 (ambitious goal)
@@ -138,31 +243,41 @@ as well as manual digitization of other data sources.
 1. Add neologisms. We need to think first of how to create neologisms before
    we add them to our dataset.
 
-## Credits
-
-The data used here was digitalized and published through the efforts of:
-
-1. Milan Konvicka, creator of [Marcion](https://marcion.sourceforge.net/)
-
-1. Hany Takla, founder of [Saint Shenouda The Archimandrite – Coptic
-   Society](http://stshenouda.org/)
-
-1. Osama Thabet, creator of [copticsite.com](https://copticsite.com/)
-
-## For Developers
+## For Developers / Owners
 
 For visibility, planned features and improvements must be documented in this
 README file (not in any of the README files in the subdirectories).
 Non-learner-facing coding tasks are sometimes documented in the code as TODO's,
 and sometimes brought here.
 
-### Documentation Tasks
+### Directory Structure
+
+- `bible/`
+
+    This directory contains Biblical data, used to generate HTML and EPUB
+    versions of the Bible and the like.
+
+- `dictionary/`
+
+    This directory contains dictionary data, used to generate flashcards, CSV
+    files and the like.
+
+- `keyboard/`
+
+    This directory contains Keyboard layouts.
+
+- `archive/`
+
+    This directory contains snapshots of published apps or repos, utilities, and
+    even some abandoned projects.
+    Data retrieved from another app or repo will live here, and could be used /
+    reprocessed by projects in the repo.
+
+### Documentation TODO's
 
 (7-8 hours)
 
 1. **Add deck descriptions.**
-
-1. **Add screenshots of the flashcards in this repo.**
 
 1. **Revisit the `bible` and `dictionary` documentation in their respective
    README.md files.**
@@ -178,9 +293,7 @@ and sometimes brought here.
 1. Document the snapshot dates and versions of the apps and data imported
 into the repo.
 
-### Coding Tasks
-
-#### Collaborator Convenience
+### Collaborator Convenience TODO's
 
 1. **Support more seamless integration between Drive and your scripts.** (3-4
    hours)
@@ -193,7 +306,7 @@ into the repo.
    - Crum's Notes
    - Crum's Images
    - The Bible
-   - copticsite.com's Dictionary
+   - [copticsite.com](https://copticsite.com/)'s Dictionary
    - Dawoud's screenshots
 
    Thinking about Drive, it might be even easier for users to contribute
@@ -217,7 +330,7 @@ into the repo.
 1. Document the content of `secrets.sh`. Make it possible for someone to take
    over.
 
-#### Content
+### Content TODO's
 
 data
 
@@ -229,7 +342,7 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
 1. **Incorporate the ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ Group's neologisms.** (3-4 hours)
 
-appearance
+**appearance**
 
 1. **Feedback: It’s better to use the standardized notation: ⲟⲛϧ= (equal sign),
    ⲟⲛϧ† (upper dager) instead of the fancy tilted equal sign and the (ⲉϥ).**
@@ -241,7 +354,7 @@ appearance
 
 1. **Insert an `<hr>` before the Crum pages.**
 
-derivations
+**derivations**
 
 1. **Insert derivation keys as comments.** (<1 hour)
 
@@ -250,7 +363,7 @@ derivations
 
 1. **Group the derivations by dialect.** (1 hour)
 
-synchronization
+**synchronization**
 
 1. **Use a dummy timestamp for testing. You can then verify that your changes
    don't impact the output by comparing two packages generated with the dummy
@@ -293,7 +406,7 @@ archive
 1. Revisit the possibility of image compression to minimize the package size.
    (low-priority)
 
-#### Developer Convenience
+### Developer Convenience TODO's
 
 (20+ hours)
 
@@ -330,11 +443,11 @@ abide by if you want to.
    Move them to README files when more visibility is warranted. Delete them
    when they are deemed irrelevant.
 
-#### Learner Convenience
+### Learner Convenience TODO's
 
 1. **Deploy the flashcards on a standalone app.** (100+ hours, delegate)
 
-### Diplomacy Tasks
+### Diplomacy TODO's
 
 1. **Find one or two co-owners of the project.**
 
@@ -355,25 +468,13 @@ abide by if you want to.
 1. Get a cleaner scan of Dawoud's dictionary. Obtain the source PDF if posible.
    (low-priority)
 
-### Directory Structure
+## Credits
 
-- `bible/`
+The data used here was digitalized and published through the efforts of:
 
-    This directory contains Biblical data, used to generate HTML and EPUB
-    versions of the Bible and the like.
+1. Milan Konvicka, creator of [Marcion](https://marcion.sourceforge.net/)
 
-- `dictionary/`
+1. Hany Takla, founder of [Saint Shenouda The Archimandrite – Coptic
+   Society](http://stshenouda.org/)
 
-    This directory contains dictionary data, used to generate flashcards, CSV
-    files and the like.
-
-- `keyboard/`
-
-    This directory contains Keyboard layouts.
-
-- `archive/`
-
-    This directory contains snapshots of published apps or repos, utilities, and
-    even some abandoned projects.
-    Data retrieved from another app or repo will live here, and could be used /
-    reprocessed by projects in the repo.
+1. Osama Thabet, creator of [copticsite.com](https://copticsite.com/)
