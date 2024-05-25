@@ -348,11 +348,7 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
    ⲟⲛϧ† (upper dager) instead of the fancy tilted equal sign and the (ⲉϥ).**
    (<1 hour)
 
-1. **Use one rather than two meaning blocks. Perhaps lighten the Greek.**
-
-1. **Right-align the Crum page number. It's not worth its own block.**
-
-1. **Insert an `<hr>` before the Crum pages.**
+1. **Lighten the Greek.**
 
 **derivations**
 

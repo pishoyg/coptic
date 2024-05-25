@@ -53,6 +53,7 @@ def crum(deck_name: str, deck_id: int, front_column: str, allow_no_front: bool =
         "figure figcaption { text-align: center; }"
         "figure img { vertical-align: top; }"
         "#bordered { border:1px solid black; }"
+        "#right { float:right; }"
         ".nightMode #bordered { border:1px solid white; }",
         # N.B. The name is a protected field, although it is unused in this
         # case because we generate a single deck, thus the deck name is a
@@ -63,18 +64,24 @@ def crum(deck_name: str, deck_id: int, front_column: str, allow_no_front: bool =
         key=roots_col("key", force=True),
         front=roots_col(front_column),
         back=field.cat(
-            # Type.
-            field.aon(
-                "(",
-                "<b>",
-                roots_col("type-parsed", force=True),
-                "</b>",
-                ")",
-                "<br>",
+            # Type and Crum page.
+            field.cat(
+                field.aon(
+                    "(",
+                    "<b>",
+                    roots_col("type-parsed", force=True),
+                    "</b>",
+                    ")",
+                ),
+                field.aon(
+                    '<span id="right">' "<b>Crum: </b>",
+                    roots_col("crum", force=True),
+                    "</span>" "<br>",
+                ),
             ),
             # Meaning.
             field.aon(
-                roots_col("en-parsed-no-greek"),
+                roots_col("en-parsed"),
                 "<br>",
             ),
             # Image.
@@ -89,23 +96,8 @@ def crum(deck_name: str, deck_id: int, front_column: str, allow_no_front: bool =
             # Horizonal line.
             "<hr>",
             # Full entry.
-            field.aon(
-                "<b>Word:</b>",
-                "<br>",
-                roots_col("word-parsed-no-ref", force=True),
-                "<hr>",
-            ),
-            # Full meaning.
-            field.aon(
-                "<b>Meaning:</b>",
-                "<br>",
-                roots_col("en-parsed"),
-                "<hr>",
-            ),
-            field.cat(
-                "<b>Crum: </b>",
-                roots_col("crum", force=True),
-            ),
+            roots_col("word-parsed-no-ref", force=True),
+            # Derivations.
             field.apl(
                 build_tree,
                 derivations_col("depth", force=True),
@@ -114,17 +106,20 @@ def crum(deck_name: str, deck_id: int, front_column: str, allow_no_front: bool =
                 derivations_col("en-parsed", force=False),
                 derivations_col("crum", force=True),
             ),
-            # Crum's entry.
-            field.img(
-                "dictionary/marcion.sourceforge.net/data/output/roots.tsv",
-                "crum-pages",
-                "dictionary/marcion.sourceforge.net/data/crum",
-                "numexpr({key}+20).png",
-                "KEY",
-                None,
-                force=False,
+            "<hr>",
+            # Crum's pages.
+            field.cat(
+                field.img(
+                    "dictionary/marcion.sourceforge.net/data/output/roots.tsv",
+                    "crum-pages",
+                    "dictionary/marcion.sourceforge.net/data/crum",
+                    "numexpr({key}+20).png",
+                    "KEY",
+                    None,
+                    force=False,
+                ),
+                "<hr>",
             ),
-            field.txt("<hr>"),
             # Marcion's key.
             field.aon(
                 "<b>Key: </b>",
