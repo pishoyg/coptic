@@ -344,10 +344,6 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
 **appearance**
 
-1. **Feedback: It’s better to use the standardized notation: ⲟⲛϧ= (equal sign),
-   ⲟⲛϧ† (upper dager) instead of the fancy tilted equal sign and the (ⲉϥ).**
-   (<1 hour)
-
 1. **Lighten the Greek.**
 
 **derivations**

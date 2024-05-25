@@ -132,7 +132,7 @@ QUALITY_ENCODING = {
 # TYPE_ENCODING is used to parse the "type" column.
 TYPE_ENCODING = {
     0: lexical.type("-", "(-)", "-", append=False),
-    3: lexical.type("noun", "(ⲟⲩ)", "noun"),
+    3: lexical.type("noun", "(noun)", "noun"),  # (ⲟⲩ)
     1: lexical.type("noun male", "(ⲡ)", "noun male"),
     4: lexical.type("noun female", "(ⲧ)", "noun female"),
     22: lexical.type("noun male/female", "(ⲡ/ⲧ)", "noun male/female"),
@@ -188,8 +188,8 @@ SPELLING_ANNOTATIONS_1 = [
     # TODO: The dash is a typo. Fix at the origin.
     # Prenominal form. (This is a dash, not a hyphen.)
     ("–", lexical.type("-", "-", "prenominal form (likely)")),
-    ("=", lexical.type("=", "⸗", "pronominal form")),  # Pronominal form.
-    ("+", lexical.type("+", " (ⲉϥ)", "qualitative form")),
+    ("=", lexical.type("=", "=", "pronominal form")),  # Pronominal form. # ⸗
+    ("+", lexical.type("+", "+", "qualitative form")),  # (ⲉϥ)
     ("$$", lexical.type("<i>(?)</i>", "(?)", "probably")),  # Probably.
 ]
 
@@ -199,7 +199,7 @@ DETACHED_TYPES_1 = [
     ("$*", lexical.type("<i>(nn)</i>", "(ⲟⲩ)", "(nn)")),
     ("**$", lexical.type("<i>noun female: </i>", "(ⲧ)", "noun female")),
     ("*$", lexical.type("<i>noun male: </i>", "(ⲡ)", "noun male")),
-    ("*****", lexical.type("<i>noun: </i>", "(ⲟⲩ)", "noun")),
+    ("*****", lexical.type("<i>noun: </i>", "(noun)", "noun")),  # (ⲟⲩ)
     ("****", lexical.type("<i>female: </i>", "(ⲧ)", "female")),
     ("***", lexical.type("<i>male: </i>", "(ⲡ)", "male")),
     ("**", lexical.type("<i>imperative: </i>", "(imp.)", "imperative")),
