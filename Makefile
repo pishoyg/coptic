@@ -4,9 +4,9 @@ all: test bible copticsite marcion readme flashcards
 
 all_all: all flashcards_redundant
 
-all_all_all: all flashcards_redundant bible_epub
+all_all_all: all flashcards_redundant privileged
 
-all_all_all_all: all flashcards_redundant bible_epub secrets
+all_all_all_all: all flashcards_redundant privileged bible_epub
 
 # Main tasks.
 .PHONY: test
