@@ -1,12 +1,10 @@
 # TODO: Change the default strict to strict. Leniency should be the exception.
-import glob
 import os
 import re
 import shutil
 import tempfile
 import typing
 
-import numexpr
 import pandas as pd
 import pillow_avif  # This import is necessary to support AVID images.
 import type_enforced
@@ -20,7 +18,6 @@ WORK_DIR = tempfile.TemporaryDirectory()
 
 NO_LENGTH = -1
 INTEGER_RE = re.compile("[0-9]+")
-NUMEXPR_RE = re.compile(r"numexpr\((.*)\)")
 MAX_INTEGER_LENGTH = 10
 MAX_THUMBNAIL_HEIGHT = 100000
 
@@ -42,7 +39,7 @@ class _primitive_field(field):
 
     @type_enforced.Enforcer
     def length(self) -> int:
-        return -1
+        return NO_LENGTH
 
     @type_enforced.Enforcer
     def media_files(self) -> list[str]:
@@ -227,10 +224,9 @@ class img(_content_field):
         self,
         tsv_path: str,
         column_name: str,
-        # TODO: Supply the path and caption using lambdas.
-        dir_path: str,
-        file_name_fmt: str,
-        caption_source: str,
+        get_paths,  # Map key to list of paths.
+        sort_paths=None,  # Sort list of paths.
+        get_caption=None,  # Map path to caption.
         width: typing.Optional[int] = None,
         force: bool = False,
     ) -> None:
@@ -250,13 +246,15 @@ class img(_content_field):
 
         html_fmt = '<img src="{basename}"><br>'
         if width is not None:
-            html_fmt = '<img src="{{basename}}" width="{width}"><br>'
-            html_fmt = html_fmt.format(width=width)
-        html_fmt = (
-            "<figure>"
-            + html_fmt
-            + "<figcaption> {caption} </figcaption> </figure> <br>"
-        )
+            html_fmt = '<img src="{{basename}}" width="{width}"><br>'.format(
+                width=width
+            )
+        if get_caption:
+            html_fmt = (
+                "<figure>"
+                + html_fmt
+                + "<figcaption> {caption} </figcaption> </figure> <br>"
+            )
 
         # Each entry in the keys column is not a single key, but a
         # comma-separated list of key patterns.
@@ -264,45 +262,38 @@ class img(_content_field):
 
         content = []
         media_files = set()
-        for cs_keys in keys:
+        for key in keys:
             if force:
-                assert cs_keys
+                assert key
             cur = ""
-            if not cs_keys:
+            if not key:
                 content.append(cur)
                 continue
-            for key in cs_keys.split(","):
-                assert key
-                paths = _glob(dir_path, file_name_fmt, key)
-                if force:
-                    assert paths
-                for path in paths:
-                    caption = self._get_caption(caption_source, key, path)
-                    basename = path.replace("/", "_")
-                    cur += html_fmt.format(basename=basename, caption=caption)
-                    new_location = os.path.join(WORK_DIR.name, basename)
-                    media_files.add(new_location)
-                    if width:
-                        image = Image.open(path)
-                        cur_width, _ = image.size
-                        if cur_width > width:
-                            image.thumbnail((width, MAX_THUMBNAIL_HEIGHT))
-                        image.save(new_location)
-                    else:
-                        shutil.copyfile(path, new_location)
+            paths = get_paths(key)
+            if force:
+                assert paths
+            if sort_paths:
+                paths = sort_paths(paths)
+            for path in paths:
+                basename = path.replace("/", "_")
+                args = {"basename": basename}
+                if get_caption:
+                    args["caption"] = get_caption(path)
+                cur += html_fmt.format(**args)
+                new_location = os.path.join(WORK_DIR.name, basename)
+                if width:
+                    image = Image.open(path)
+                    cur_width, _ = image.size
+                    if cur_width > width:
+                        image.thumbnail((width, MAX_THUMBNAIL_HEIGHT))
+                    image.save(new_location)
+                else:
+                    shutil.copyfile(path, new_location)
+                media_files.add(new_location)
             content.append(cur)
 
         media_files = list(media_files)
         super().__init__(content, media_files)
-
-    @type_enforced.Enforcer
-    def _get_caption(self, caption_source: str, key: str, path: str) -> str:
-        if caption_source == "KEY":
-            return key
-        if caption_source == "STEM":
-            stem, _ = os.path.splitext(os.path.basename(path))
-            return stem
-        raise ValueError(f"Unknown caption source: {caption_source}")
 
 
 class apl(field):
@@ -365,12 +356,12 @@ def _convert_strings(
 
 @type_enforced.Enforcer
 def num_entries(*fields: [str] + type_enforced.utils.WithSubclasses(field)) -> int:
-    cur = -1
+    cur = NO_LENGTH
     for f in fields:
         length = f.length()
-        if length == -1:
+        if length == NO_LENGTH:
             continue
-        if cur == -1:
+        if cur == NO_LENGTH:
             cur = length
             continue
         assert cur == length
@@ -391,32 +382,44 @@ def use_html_line_breaks(text: str) -> str:
 
 
 @type_enforced.Enforcer
-def _path_sort_key(path: str) -> list[str]:
+def _read_tsv_column(file_path: str, column_name: str) -> list[str]:
+    df = pd.read_csv(file_path, sep="\t", encoding="utf-8").fillna("")
+    return [str(cell).strip() for cell in df[column_name]]
+
+
+@type_enforced.Enforcer
+def stem(s: str) -> str:
+    s = os.path.basename(s)
+    s, _ = os.path.splitext(s)
+    return s
+
+
+@type_enforced.Enforcer
+def _semver_sort_key(path: str) -> list[str]:
     path = os.path.basename(path)
     return [x.zfill(MAX_INTEGER_LENGTH) for x in INTEGER_RE.findall(path)] + [path]
 
 
-@type_enforced.Enforcer
-def _substitute_key_and_numexpr(file_name_fmt: str, key: str) -> str:
-    file_name_fmt = file_name_fmt.format(key=key)
-    match = NUMEXPR_RE.match(file_name_fmt)
-    if not match:
-        return file_name_fmt
-    expr = numexpr.evaluate(match.group(1)).item()
-    return NUMEXPR_RE.sub(str(expr), file_name_fmt)
+def sort_semver(paths: list[str]) -> list[str]:
+    return sorted(paths, key=_semver_sort_key)
 
 
 @type_enforced.Enforcer
-def _glob(dir_path: str, file_name_fmt: str, cs_keys: str) -> list[str]:
-    paths = set()
-    for key in cs_keys.split(","):
-        pattern = _substitute_key_and_numexpr(file_name_fmt, key)
-        pattern = os.path.join(dir_path, pattern)
-        paths.update(glob.glob(pattern))
-    return list(sorted(paths, key=_path_sort_key))
-
-
-@type_enforced.Enforcer
-def _read_tsv_column(file_path: str, column_name: str) -> list[str]:
-    df = pd.read_csv(file_path, sep="\t", encoding="utf-8").fillna("")
-    return [str(cell).strip() for cell in df[column_name]]
+def page_numbers(page_ranges: str) -> list[int]:
+    """
+    page_ranges is a comma-separated list of integers or integer ranges, just
+    like what you type when you're using your printer.
+    For example, "1,3-5,8-9" means [1, 3, 4, 5, 8, 9].
+    """
+    out = []
+    for int_range in page_ranges.split(","):
+        if int_range.isdigit():
+            out.append(int(int_range))
+            continue
+        int_range = int_range.split("-")
+        assert len(int_range) == 2
+        start, end = int(int_range[0]), int(int_range[1])
+        assert end > start
+        for x in range(start, end + 1):
+            out.append(x)
+    return out

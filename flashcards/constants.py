@@ -1,3 +1,4 @@
+import glob
 import typing
 
 import deck
@@ -74,10 +75,12 @@ def crum(deck_name: str, deck_id: int, dialect_col: str, allow_no_front: bool = 
             field.img(
                 "dictionary/marcion.sourceforge.net/data/output/roots.tsv",
                 "key",
-                "dictionary/marcion.sourceforge.net/data/img",
-                "{key}-*.*",
-                "STEM",
-                300,
+                get_paths=lambda key: glob.glob(
+                    f"dictionary/marcion.sourceforge.net/data/img/{key}-*-*.*"
+                ),
+                sort_paths=field.sort_semver,
+                get_caption=field.stem,
+                width=300,
             ),
             # Horizonal line.
             "<hr>",
@@ -91,10 +94,12 @@ def crum(deck_name: str, deck_id: int, dialect_col: str, allow_no_front: bool = 
                 field.img(
                     "dictionary/marcion.sourceforge.net/data/output/roots.tsv",
                     "crum-pages",
-                    "dictionary/marcion.sourceforge.net/data/crum",
-                    "numexpr({key}+20).png",
-                    "KEY",
-                    None,
+                    get_paths=lambda page_ranges: [
+                        f"dictionary/marcion.sourceforge.net/data/crum/{k+20}.png"
+                        for k in field.page_numbers(page_ranges=page_ranges)
+                    ],
+                    sort_paths=field.sort_semver,
+                    get_caption=lambda path: int(field.stem(path)) - 20,
                     force=False,
                 ),
                 "<hr>",

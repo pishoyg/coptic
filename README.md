@@ -307,6 +307,11 @@ into the repo.
 
 ### Collaborator Convenience TODO's
 
+1. **Produce a version of the dictionary that is sorted alphabetically.**
+
+   This will make it significantly easier for someone to copy data from a
+   different dictionary.
+
 1. **Support more seamless integration between Drive and your scripts.** (3-4
    hours)
 
@@ -334,11 +339,6 @@ into the repo.
    the data to Drive. Include your Drive credentials and local paths and the
    like.**
 
-1. **Produce a version of the dictionary that is sorted alphabetically.**
-
-   This will make it significantly easier for someone to copy Dawoud's page
-   numbers.
-
 1. Document the content of `secrets.sh`. Make it possible for someone to take
    over.
 
@@ -354,20 +354,11 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
 1. **Incorporate the ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ Group's neologisms.** (3-4 hours)
 
-img, fil, snd
-
-1. **Polish `flashcards/field.py`. Use lambdas, or simplify it otherwise.**
-
-1. **The image, file, and (future) sound fields should support a
-   comma-separated list of keys, or key ranges.** (1 hour)
-
-   The ranges are necessary for Dawoud.
+archive
 
 1. **Implement a sound type.** (1 hour)
 
    This is necessary for adding pronunciations.
-
-archive
 
 1. **Group the derivations by dialect.** (3-4 days)
 
