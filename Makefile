@@ -1,29 +1,31 @@
+# All tasks.
 .PHONY: all
-all: test bible_stshenouda dictionary_copticsite dictionary_crum readme flashcards
+all: test bible copticsite marcion readme flashcards
 
 all_all: all flashcards_redundant
 
-all_all_all: all flashcards_redundant bible_stshenouda_epub
+all_all_all: all flashcards_redundant bible_epub
 
-all_all_all_all: all flashcards_redundant bible_stshenouda_epub secrets
+all_all_all_all: all flashcards_redundant bible_epub secrets
 
+# Main tasks.
 .PHONY: test
 test: FORCE
 	python -m unittest discover \
 		"flashcards"
 
-bible_stshenouda: FORCE
+bible: FORCE
 	python bible/stshenouda.org/main.py \
 		--no_epub "true"
 
-# N.B. This is not included in `all`.
-bible_stshenouda_epub: FORCE
+bible_epub: FORCE
+	# N.B. This is not included in `all`.
 	python bible/stshenouda.org/main.py
 
-dictionary_copticsite: FORCE
+copticsite: FORCE
 	python dictionary/copticsite.com/main.py
 
-dictionary_crum: FORCE
+marcion: FORCE
 	python dictionary/marcion.sourceforge.net/main.py
 
 readme: FORCE
@@ -87,8 +89,9 @@ flashcards_bible: FORCE
 		--decks "Bible::Bohairic" "Bible::Sahidic" "Bible::All Dialects" \
 		--output "flashcards/data/bible.apkg"
 
+# Count the number of lines of code in the repo.
+# Note: This isn't all.
 pishoy:
-	# Note: This isn't all.
 	find . -name "*.py" -o -name "*.java" -o -name "*.proto" -o -name "*.sh" -o -name "*.js" -o -name "*.vba" | xargs cat | wc -l
 
 # If you know the secrets, then you can run the privileged tasks. They require
@@ -105,6 +108,7 @@ drive: FORCE
 		"flashcards/data/coptic.apkg" \
 		"$${DEST}"
 
+# Maintenance tasks.
 .PHONY: clean
 clean:
 
