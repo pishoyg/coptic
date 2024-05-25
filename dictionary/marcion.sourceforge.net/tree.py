@@ -109,7 +109,7 @@ class node:
         - depth
         - word-parsed-prettify || dialect-*
         - type-parsed
-        - en-parsed
+        - en-parsed-light-greek
         - crum
         - key
         They are expected to be pre-sorted, and to belong to a single word.
@@ -154,7 +154,7 @@ class node:
                 else d.cell("dialect-" + dialect)
             )
             type = d.cell("type-parsed")
-            meaning = d.cell("en-parsed")
+            meaning = d.cell("en-parsed-light-greek")
             key = d.cell("key")
             word_width = int((NUM_COLS - depth) / 2) if word else 0
             # We keep the meaning column regardless of whether a meaning is
