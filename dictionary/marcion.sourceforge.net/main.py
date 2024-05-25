@@ -211,6 +211,7 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         insert(EN_COL, "-parsed", ep)
         insert(EN_COL, "-parsed-no-html", parser.remove_html(ep))
         insert(EN_COL, "-parsed-no-greek", parser.remove_greek(ep))
+        insert(EN_COL, "-parsed-light-greek", parser.lighten_greek(ep))
         insert(EN_COL, "-parsed-no-greek-no-html", parser.remove_greek_and_html(ep))
         crum_page, crum_column = parser.parse_crum_cell(row[CRUM_COL])
         insert(CRUM_COL, "-page", crum_page)

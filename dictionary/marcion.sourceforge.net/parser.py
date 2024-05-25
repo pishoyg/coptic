@@ -410,6 +410,14 @@ def remove_greek(line: str) -> str:
 
 
 @type_enforced.Enforcer
+def lighten_greek(line: str) -> str:
+    line = constants.PARSED_GREEK_WITHIN_ENGLISH_RE.sub(
+        r'<span style="opacity:0.5">\1</span>', line
+    )
+    return clean(line)
+
+
+@type_enforced.Enforcer
 def remove_greek_and_html(line: str) -> str:
     line = remove_html(line)
     line = remove_greek(line)

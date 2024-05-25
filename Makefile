@@ -105,7 +105,7 @@ privileged: drive
 
 drive: FORCE
 	cp \
-		"flashcards/data/coptic.apkg" \
+		flashcards/data/* \
 		"$${DEST}"
 
 # Maintenance tasks.

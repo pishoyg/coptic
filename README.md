@@ -342,10 +342,6 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
 1. **Incorporate the ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ Group's neologisms.** (3-4 hours)
 
-**appearance**
-
-1. **Lighten the Greek.**
-
 **derivations**
 
 1. **Insert derivation keys as comments.** (<1 hour)

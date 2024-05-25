@@ -14,7 +14,7 @@ SPELLINGS_TYPES_REFERENCES_RE = re.compile(r"[^()]+")
 ENGLISH_WITHIN_COPTIC_RE = re.compile(r"\{[^\{\}]+\}")
 COPTIC_WITHIN_ENGLISH_RE = re.compile(r"\[[^\[\]]+\]")
 GREEK_WITHIN_ENGLISH_RE = re.compile(r"\[\[[^\]]+\]\]")
-PARSED_GREEK_WITHIN_ENGLISH_RE = re.compile(r"\[[ ,()&c?;Α-Ωα-ω]+\]")
+PARSED_GREEK_WITHIN_ENGLISH_RE = re.compile(r"(\[[ ,()&c?;Α-Ωα-ω]+\])")
 
 CRUM_RE = re.compile(r"^(\d{1,3})(a|b)$")
 REFERENCE_RE = re.compile(r'\*\^<a href="([^"<>]+)">([^<>]+)</a>([^<>]*)\^\*')

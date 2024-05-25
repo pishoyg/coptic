@@ -81,7 +81,7 @@ def crum(deck_name: str, deck_id: int, front_column: str, allow_no_front: bool =
             ),
             # Meaning.
             field.aon(
-                roots_col("en-parsed"),
+                roots_col("en-parsed-light-greek"),
                 "<br>",
             ),
             # Image.
@@ -103,7 +103,7 @@ def crum(deck_name: str, deck_id: int, front_column: str, allow_no_front: bool =
                 derivations_col("depth", force=True),
                 derivations_col("word-parsed-prettify", force=False),
                 derivations_col("type-parsed", force=True),
-                derivations_col("en-parsed", force=False),
+                derivations_col("en-parsed-light-greek", force=False),
                 derivations_col("crum", force=True),
             ),
             "<hr>",
