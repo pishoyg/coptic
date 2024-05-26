@@ -1,4 +1,3 @@
-# TODO: Read the input in XLSX format, rather than TSV.
 import argparse
 
 import pandas as pd
@@ -286,10 +285,10 @@ argparser = argparse.ArgumentParser(
 )
 
 argparser.add_argument(
-    "--input_tsv",
+    "--input_xlsx",
     type=str,
-    default="dictionary/copticsite.com/data/raw/coptic dictionary northern dialect unicode complete.xlsx.tsv",
-    help="Path to the input TSV.",
+    default="dictionary/copticsite.com/data/raw/coptic dictionary northern dialect unicode complete.xlsx",
+    help="Path to the input Excel file.",
 )
 
 argparser.add_argument(
@@ -304,7 +303,7 @@ args = argparser.parse_args()
 
 @type_enforced.Enforcer
 def main() -> None:
-    df = pd.read_csv(args.input_tsv, sep="\t", encoding="utf-8").fillna("")
+    df = pd.read_excel(args.input_xlsx, dtype=str).fillna("")
     df.dropna(inplace=True)
     df = df.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
     df[ORIGIN_COL] = df[MEANING_COL]
