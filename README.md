@@ -422,8 +422,6 @@ hour)
 
 1. Expand the unit tests.
 
-1. Define a `uniqueness_tracker` type.
-
 1. Expand the use of hooks and Makefile.
 
 1. Do not let Python tempt you to use its built-in types instead of classes and
@@ -451,9 +449,6 @@ hour)
 
    Move them to README files when more visibility is warranted. Delete them
    when they are deemed irrelevant.
-
-1. `flashcards/main.py` is slow due to the file and image manipulation it
-   performs (based on `cProfile` output). Consider speeding that up, somehow!
 
 ### Diplomacy TODO's
 

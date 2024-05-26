@@ -6,15 +6,23 @@ import typing
 
 import enforcer
 import pandas as pd
-import pillow_avif  # This import is necessary to support AVID images.
 import type_enforced
-from PIL import Image
-
-# N.B. Pillow might be tricky for our requirements generators. You might have
-# to add it to requirements.txt manually.
 
 # TODO: Create the work directory in main.
 WORK_DIR = tempfile.TemporaryDirectory()
+_IN_WORK_DIR = {}
+
+
+@type_enforced.Enforcer
+def _add_to_work_dir(path: str) -> str:
+    if path in _IN_WORK_DIR:
+        return _IN_WORK_DIR[path]
+    basename = path.replace("/", "_")
+    new_path = os.path.join(WORK_DIR.name, basename)
+    shutil.copyfile(path, new_path)
+    _IN_WORK_DIR[path] = new_path
+    return new_path
+
 
 NO_LENGTH = -1
 INTEGER_RE = re.compile("[0-9]+")
@@ -167,12 +175,9 @@ def img(
     get_paths: enforcer.Callable,
     sort_paths: typing.Optional[enforcer.Callable] = None,
     get_caption: typing.Optional[enforcer.Callable] = None,
-    width: typing.Optional[int] = None,
     force: bool = True,
-):  # -> type_enforced.utils.WithSubclasses(field):
+):  # -> media:
     html_fmt = '<img src="{basename}"><br>'
-    if width is not None:
-        html_fmt = '<img src="{{basename}}" width="{width}"><br>'.format(width=width)
     if get_caption:
         html_fmt = (
             "<figure>"
@@ -185,7 +190,6 @@ def img(
         tsv_path=tsv_path,
         column_name=column_name,
         get_paths=get_paths,
-        copy=build_copy_resized(width),
         sort_paths=sort_paths,
         get_caption=get_caption,
         force=force,
@@ -199,7 +203,7 @@ def snd(
     get_paths: enforcer.Callable,
     sort_paths: typing.Optional[enforcer.Callable] = None,
     force: bool = True,
-):
+):  # -> media:
     return media(
         html_fmt="[sound:{basename}]",
         tsv_path=tsv_path,
@@ -221,8 +225,6 @@ class media(_content_field):
         column_name: str,
         # Map key to list of paths.
         get_paths: enforcer.Callable,
-        # Copy the file to the destination.
-        copy: enforcer.Callable = shutil.copy,
         # Sort list of paths.
         sort_paths: typing.Optional[enforcer.Callable] = None,
         # Map path to caption.
@@ -258,14 +260,12 @@ class media(_content_field):
                 paths = sort_paths(paths)
             cur = ""
             for path in paths:
-                basename = path.replace("/", "_")
-                args = {"basename": basename}
+                new_path = _add_to_work_dir(path)
+                args = {"basename": os.path.basename(new_path)}
                 if get_caption:
                     args["caption"] = get_caption(path)
                 cur += html_fmt.format(**args)
-                new_location = os.path.join(WORK_DIR.name, basename)
-                copy(path, new_location)
-                media_files.add(new_location)
+                media_files.add(new_path)
             content.append(cur)
 
         media_files = list(media_files)
@@ -399,20 +399,3 @@ def page_numbers(page_ranges: str) -> list[int]:
         for x in range(start, end + 1):
             out.append(x)
     return out
-
-
-@type_enforced.Enforcer
-def build_copy_resized(width: typing.Optional[int] = None) -> enforcer.Callable:
-    if not width:
-        return shutil.copyfile
-
-    @type_enforced.Enforcer
-    def copy_resized(path: str, new_location: str) -> None:
-        assert width > 0
-        image = Image.open(path)
-        cur_width, _ = image.size
-        if cur_width > width:
-            image.thumbnail((width, MAX_THUMBNAIL_HEIGHT))
-        image.save(new_location)
-
-    return copy_resized

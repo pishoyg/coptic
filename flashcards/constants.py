@@ -2,7 +2,6 @@ import glob
 import typing
 
 import deck
-import enforcer
 import field
 import type_enforced
 
@@ -77,11 +76,10 @@ def crum(deck_name: str, deck_id: int, dialect_col: str, force_front: bool = Tru
                 tsv_path="dictionary/marcion.sourceforge.net/data/output/roots.tsv",
                 column_name="key",
                 get_paths=lambda key: glob.glob(
-                    f"dictionary/marcion.sourceforge.net/data/img/{key}-*-*.*"
+                    f"dictionary/marcion.sourceforge.net/data/img-300/{key}-*-*.*"
                 ),
                 sort_paths=field.sort_semver,
                 get_caption=field.stem,
-                width=300,
                 force=False,
             ),
             # Horizonal line.
