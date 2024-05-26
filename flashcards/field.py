@@ -1,3 +1,4 @@
+import itertools
 import os
 import re
 import shutil
@@ -80,13 +81,11 @@ class seq(_primitive_field):
     A numerical sequence field.
     """
 
-    def __init__(self, start: int = 1) -> None:
-        self._cur = start
+    def __init__(self, start: int = 1, step: int = 1) -> None:
+        self._counter = itertools.count(start=start, step=step)
 
     def next(self) -> str:
-        ans = str(self._cur)
-        self._cur += 1
-        return ans
+        return str(next(self._counter))
 
 
 @type_enforced.Enforcer
