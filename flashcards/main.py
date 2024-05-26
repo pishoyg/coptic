@@ -1,4 +1,5 @@
 import argparse
+import tempfile
 
 import constants
 import field
@@ -50,6 +51,9 @@ def verify_unique_object_keys(decks: list[genanki.Deck]) -> None:
 
 @type_enforced.Enforcer
 def main() -> None:
+    work_dir = tempfile.TemporaryDirectory()
+    field.init(work_dir.name)
+
     media_files = set()
     decks = []
 
@@ -65,7 +69,7 @@ def main() -> None:
     package = genanki.Package(decks, media_files=list(set(media_files)))
     package.write_to_file(args.output)
 
-    field.WORK_DIR.cleanup()
+    work_dir.cleanup()
 
 
 if __name__ == "__main__":

@@ -1,33 +1,37 @@
 import os
 import re
 import shutil
-import tempfile
-import typing
 
 import enforcer
 import pandas as pd
 import type_enforced
 
-# TODO: Create the work directory in main.
-WORK_DIR = tempfile.TemporaryDirectory()
-_IN_WORK_DIR = {}
+NO_LENGTH = -1
+INTEGER_RE = re.compile("[0-9]+")
+MAX_INTEGER_LENGTH = 10
+
+_work_dir = ""
+_initialized = False
+_in_work_dir = {}
+
+
+@type_enforced.Enforcer
+def init(work_dir: str) -> None:
+    global _work_dir, _initialized
+    _work_dir = work_dir
+    _initialized = True
 
 
 @type_enforced.Enforcer
 def _add_to_work_dir(path: str) -> str:
-    if path in _IN_WORK_DIR:
-        return _IN_WORK_DIR[path]
+    assert _initialized
+    if path in _in_work_dir:
+        return _in_work_dir[path]
     basename = path.replace("/", "_")
-    new_path = os.path.join(WORK_DIR.name, basename)
+    new_path = os.path.join(_work_dir, basename)
     shutil.copyfile(path, new_path)
-    _IN_WORK_DIR[path] = new_path
+    _in_work_dir[path] = new_path
     return new_path
-
-
-NO_LENGTH = -1
-INTEGER_RE = re.compile("[0-9]+")
-MAX_INTEGER_LENGTH = 10
-MAX_THUMBNAIL_HEIGHT = 100000
 
 
 @type_enforced.Enforcer
