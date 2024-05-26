@@ -203,7 +203,7 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         if strict:
             insert(
                 WORD_COL,
-                "dawoud-sort-key",
+                "-dawoud-sort-key",
                 dawoud_sort_key(word),
             )
         word = parser.parse_word_cell(

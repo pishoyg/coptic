@@ -197,7 +197,7 @@ SPELLING_ANNOTATIONS_1 = [
 DETACHED_TYPES_1 = [
     ("***$", lexical.type("<i>noun male/female: </i>", "(ⲡ, ⲧ)", "noun male/female")),
     ("$**", lexical.type("<i>neg </i>", "(neg.)", "neg")),
-    ("$*", lexical.type("<i>(nn)</i>", "(ⲟⲩ)", "(nn)")),
+    ("$*", lexical.type("<i>(nn)</i>", "(nn)", "(nn)")),
     ("**$", lexical.type("<i>noun female: </i>", "(ⲧ)", "noun female")),
     ("*$", lexical.type("<i>noun male: </i>", "(ⲡ)", "noun male")),
     ("*****", lexical.type("<i>noun: </i>", "(noun)", "noun")),  # (ⲟⲩ)
