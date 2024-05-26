@@ -20,6 +20,13 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
+    "--timestamp",
+    type=float,
+    default=None,
+    help="Timestamp to use for the database.",
+)
+
+argparser.add_argument(
     "--output",
     type=str,
     default="flashcards/data/coptic.apkg",
@@ -63,11 +70,13 @@ def main() -> None:
         decks.extend(cur_decks)
         media_files.update(cur_media_files)
 
-    media_files = list(media_files)
+    # Sorting the media files increases the chances that we will get an
+    # identical Anki package in the output.
+    media_files = sorted(list(media_files))
 
     verify_unique_object_keys(decks)
-    package = genanki.Package(decks, media_files=list(set(media_files)))
-    package.write_to_file(args.output)
+    package = genanki.Package(decks, media_files=media_files)
+    package.write_to_file(args.output, timestamp=args.timestamp)
 
     work_dir.cleanup()
 

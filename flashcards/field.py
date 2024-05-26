@@ -361,7 +361,7 @@ def merge_media_files(*fields: Field) -> list[str]:
     m = sum([f.media_files() for f in fields], [])
     # Eliminate duplicates. This significantly reduces the package size.
     # While this is handled by Anki, it's not supported in genanki.
-    return list(set(m))
+    return sorted(list(set(m)))
 
 
 @type_enforced.Enforcer

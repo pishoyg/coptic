@@ -307,28 +307,48 @@ into the repo.
 
 ### Learner Convenience TODO's
 
-1. **Export accurate timestamps.** (7-8 hours)
-
-   Running the generation script twice produces a `diff`, and reimporting
-   (supposedly identical data) produces the message "notes were used to update
-   existing ones. This is likely due to the timestamps that the notes are recorded
-   with. The newer timestamps make Anki think that the cards are newer, hence
-   it updates everything. This results in these problems:
-
-   - Local changes would be overridden.
-   - The sync message is misleading or lacking useful information.
-
-   If some notes are identical to ones that have already been exported, they
-   should retain their old timestamps. `genanki` doesn't have native support
-   for per-note timestamps, neither does it support reading an existing package
-   and comparing the new data against it. So we will likely have to do lots of
-   manual work to solve the problem.
-
 1. **Deploy the flashcards on a standalone app.** (100+ hours, delegate)
 
-1. Until the above is materialized, reassess whether Anki is your best bid.
-   Learn about alternatives. The fact that the iOS version is paid will deter
-   many learners!
+1. Reassess whether Anki is your best bid. Learn about alternatives. The fact
+   that the iOS version is paid will deter many learners!
+
+1. **Export accurate timestamps.** (7-8 hours)
+
+   1. Reimporting (supposedly identical data) produces the message "notes were
+   used to update existing ones." This is evidently due to the timestamps that
+   the notes are recorded with. The newer timestamps make Anki think that the
+   cards are newer, hence it updates everything. This causes the following
+   problems:
+
+   - Any changes that a user makes to a note get overridden, even if the note
+   content is one that the user has intentionally modified.
+   - The sync message is misleading, and lacks information that would otherwise
+     be useful.
+   - The exported package size is unnecessarily large. We need only export the
+     new notes.
+
+   If some notes are identical to ones that have already been exported, they
+   should retain their old timestamps, and the new notes should acquire new
+   timestamps. This should solve all of the problems above.
+   `genanki` doesn't have native support for per-note timestamps, neither does
+   it support reading an existing package and comparing the new data against
+   it. So we will likely have to do lots of manual work to solve the problem.
+
+   One idea that comes to mind is to export **untimestamped** data first to a
+   TSV, rather than a package directly, to make processing either. We can use
+   versioning, and export a new TSV every time we rerun the script. Then we can
+   have another script whose sole purpose is:
+   1. Compare two TSV's containing notes, and
+   1. Use `genanki` to generate a package *containing only the delta* between
+      the two versions.
+
+   This will facilitate testing. A developer can `diff` two TSVs to find out
+   what changes (if any) their code has introduced. (Although there is an
+   existing plan to enable testing by using a dummy timestamp, though this will
+   only make it possible to check for equality, rather than print a
+   human-readable `diff`).
+
+   Learners who synchronize their data will only have the old notes overridden.
 
 ### Collaborator Convenience TODO's
 
@@ -409,6 +429,12 @@ archive
 ### Developer Convenience TODO's
 
 (20+ hours)
+
+1. Use timestamps, `ziff.sh`, and to write some `Makefile` rules for such
+   things as checking whether your changes have made any changes to the
+   produced package.
+
+1. Move utils out of the archive.
 
 1. Expand the unit tests.
 

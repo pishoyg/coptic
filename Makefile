@@ -18,7 +18,7 @@ flashcards_redundant: flashcards_crum_bohairic flashcards_crum_sahidic flashcard
 # The rules that run privileged will fail unless `secrets.sh` has already been
 # sourced.
 .PHONY: privileged
-privileged: drive
+privileged: ziff drive
 
 # Polluting tasks.
 .PHONY: pollute
@@ -118,6 +118,10 @@ flashcards_bible: FORCE
 loc:
 	find . -name "*.py" -o -name "*.java" -o -name "*.proto" -o -name "*.sh" -o -name "*.js" -o -name "*.vba" | xargs cat | wc -l
 
+ziff: FORCE
+	bash utils/ziff.sh \
+		"flashcards/data/coptic.apkg" \
+		"$${DEST}/coptic.apkg"
 
 drive: FORCE
 	cp \
