@@ -94,3 +94,7 @@ class structured_word:
     @type_enforced.Enforcer
     def dialects(self) -> list[str]:
         return self._dialects
+
+    @type_enforced.Enforcer
+    def spellings(self) -> list[str]:
+        return self._spellings

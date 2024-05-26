@@ -6,6 +6,7 @@ import gspread
 import pandas as pd
 import tree
 import type_enforced
+import word as lexical
 from oauth2client.service_account import ServiceAccountCredentials
 
 argparser = argparse.ArgumentParser(
@@ -199,6 +200,12 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
                 "\n".join(w.string(include_references=False) for w in word)
             ),
         )
+        if strict:
+            insert(
+                WORD_COL,
+                "dawoud-sort-key",
+                dawoud_sort_key(word),
+            )
         word = parser.parse_word_cell(
             row[WORD_COL], root_type, strict, detach_types=True, use_coptic_symbol=True
         )
@@ -253,6 +260,19 @@ def build_trees(roots: pd.DataFrame, derivations: pd.DataFrame) -> None:
         roots[f"dialect-{d}-derivations-table"] = [
             trees[key].html(dialect=d) for key in keys
         ]
+
+
+@type_enforced.Enforcer
+def dawoud_sort_key(words: list[lexical.structured_word]) -> str:
+    for w in words:
+        if w.is_dialect("B") and w.spellings():
+            return w.spellings()[0]
+
+    for w in words:
+        if w.is_dialect("S") and w.spellings():
+            return w.spellings()[0]
+
+    return ""
 
 
 @type_enforced.Enforcer

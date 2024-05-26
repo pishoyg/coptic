@@ -332,11 +332,6 @@ into the repo.
 
 ### Collaborator Convenience TODO's
 
-1. **Produce a version of the dictionary that is sorted alphabetically.**
-
-   This will make it significantly easier for someone to copy data from a
-   different dictionary.
-
 1. **Support more seamless integration between Drive and your scripts.** (3-4
    hours)
 
