@@ -339,6 +339,10 @@ into the repo.
    the data to Drive. Include your Drive credentials and local paths and the
    like.**
 
+1. **Find / design a software to help users record their pronunciations.**
+
+1. Find / design a software to help users gather images.
+
 1. Document the content of `secrets.sh`. Make it possible for someone to take
    over.
 
@@ -376,7 +380,7 @@ into the repo.
    Parse their dictionary.** (7-8 hours, delegated)
 
 1. **Crawl [Wiktionary - Category:Coptic lemmas](
-https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate?)
+https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
 1. **Incorporate the ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ Group's neologisms.** (3-4 hours)
 
@@ -404,14 +408,46 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate?)
       often intentionally omit the dialect list. A good heuristic is to examine
       the parents and try to infer the dialect list from the parents.
 
+1. Include links to the Crum scans inside the note.
+
 1. Revisit the possibility of image compression to minimize the package size.
    (low-priority)
 
 ### Developer Convenience TODO's
 
-(20+ hours)
+(40+ hours)
 
-1. **Export accurate timestamps.** (20 hours, delegate?)
+1. Expand the unit tests.
+
+1. Expand the use of hooks and Makefile.
+
+1. Do not let Python tempt you to use its built-in types instead of classes and
+   objects. Don't forget about OOP!
+
+1. Document the code.
+
+1. Add assertions and throw exceptions for any assumptions that you make. They
+   catch a lot of bugs! A lot!
+
+1. Force type hints. Use
+   [type_enforced](https://github.com/connor-makowski/type_enforced).
+   - Set type enforcement per class rather than per method.
+   - Move your helpers, such as your `Callable`, to a shared package.
+
+1. Collect and print stats.
+
+1. Strip inputs more liberally.
+
+1. Pick up some of the Easter egg tasks left around the code:
+
+   ```bash
+   grep TODO -R bible dictionary keyboard flashcards --include=\*.py
+   ```
+
+   Move them to README files when more visibility is warranted. Delete them
+   when they are deemed irrelevant.
+
+1. **Export accurate timestamps.** (20 hours, delegate)
 
    1. Reimporting (supposedly identical data) produces the message "notes were
    used to update existing ones." This is evidently due to the timestamps that
@@ -448,36 +484,6 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate?)
    human-readable `diff`).
 
    Learners who synchronize their data will only have the old notes overridden.
-
-1. Expand the unit tests.
-
-1. Expand the use of hooks and Makefile.
-
-1. Do not let Python tempt you to use its built-in types instead of classes and
-   objects. Don't forget about OOP!
-
-1. Document the code.
-
-1. Add assertions and throw exceptions for any assumptions that you make. They
-   catch a lot of bugs! A lot!
-
-1. Force type hints. Use
-   [type_enforced](https://github.com/connor-makowski/type_enforced).
-   - Set type enforcement per class rather than per method.
-   - Move your helpers, such as your `Callable`, to a shared package.
-
-1. Collect and print stats.
-
-1. Strip inputs more liberally.
-
-1. Pick up some of the Easter egg tasks left around the code:
-
-   ```bash
-   grep TODO -R bible dictionary keyboard flashcards --include=\*.py
-   ```
-
-   Move them to README files when more visibility is warranted. Delete them
-   when they are deemed irrelevant.
 
 ## Credits
 
