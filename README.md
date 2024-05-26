@@ -378,10 +378,6 @@ into the repo.
 1. **Crawl [Wiktionary - Category:Coptic lemmas](
 https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate?)
 
-1. **Add [links to Crum](
-https://coviwptot.manuscriptroom.com/crum-coptic-dictionary?pageID=285a),
-in case the user wants to view a cleaner scans.*** (1 hour)
-
 1. **Incorporate the ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ Group's neologisms.** (3-4 hours)
 
 1. **Group the derivations by dialect.** (3-4 days)

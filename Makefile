@@ -22,6 +22,9 @@ redundant: flashcards_crum_bohairic flashcards_crum flashcards_copticsite flashc
 .PHONY: verify
 verify: verify_identical_flashcards verify_identical_flashcards_crum_bohairic
 
+.PHONY: try
+try: try_flashcards try_flashcards_crum_bohairic
+
 .PHONY: stats
 stats: loc
 
@@ -81,7 +84,8 @@ img_resize: FORCE
 	bash dictionary/marcion.sourceforge.net/resize.sh
 
 # FLASHCARD RULES
-TIMESTAMP = 1716741833
+TIMESTAMP = 1716747936
+
 
 flashcards: FORCE
 	python flashcards/main.py \
@@ -114,25 +118,29 @@ flashcards_bible: FORCE
 drive: FORCE
 	cp \
 		flashcards/data/*.apkg \
-		"$${DEST}"
+		"$${DEST_DIR}"
 
 # DEVELOPER
-verify_identical_flashcards: FORCE
-	python flashcards/main.py \
-		--output "/tmp/coptic.apkg" \
-		--timestamp "${TIMESTAMP}"
+verify_identical_flashcards: try_flashcards
 	bash utils/ziff.sh \
 		"flashcards/data/coptic.apkg"
-		"/tmp/coptic.apkg" \
+		"$${TEST_DIR}/coptic.apkg" \
 
-verify_identical_flashcards_crum_bohairic: FORCE
-	python flashcards/main.py \
-		--decks "A Coptic Dictionary::Bohairic" \
-		--output "/tmp/crum_bohairic.apkg" \
-		--timestamp "${TIMESTAMP}"
+verify_identical_flashcards_crum_bohairic: try_flashcards_crum_bohairic
 	bash utils/ziff.sh \
 		"flashcards/data/crum_bohairic.apkg" \
-		"/tmp/crum_bohairic.apkg"
+		"$${TEST_DIR}/crum_bohairic.apkg"
+
+try_flashcards: FORCE
+	python flashcards/main.py \
+		--output "$${TEST_DIR}/coptic.apkg" \
+		--timestamp "${TIMESTAMP}"
+
+try_flashcards_crum_bohairic: FORCE
+	python flashcards/main.py \
+		--decks "A Coptic Dictionary::Bohairic" \
+		--output "$${TEST_DIR}/crum_bohairic.apkg" \
+		--timestamp "${TIMESTAMP}"
 
 git_clean: FORCE
 	git clean \

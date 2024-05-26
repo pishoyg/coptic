@@ -61,9 +61,14 @@ def crum(deck_name: str, deck_id: int, dialect_col: str, force_front: bool = Tru
                     ")",
                 ),
                 field.aon(
-                    '<span id="right">' "<b>Crum: </b>",
+                    '<span id="right">',
+                    "<b>Crum: </b>",
+                    '<a href="https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=',
                     roots_col("crum", force=True),
-                    "</span>" "<br>",
+                    '">',
+                    roots_col("crum", force=True),
+                    "</a>" "</span>",
+                    "<br>",
                 ),
             ),
             # Meaning.
