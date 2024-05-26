@@ -410,11 +410,6 @@ archive
 
 (20+ hours)
 
-1. **Use a dummy timestamp for testing. You can then verify that your changes
-   don't impact the output by comparing two packages generated with the dummy
-   timestamp against one another, one with and one without the changes.** (1
-hour)
-
 1. Expand the unit tests.
 
 1. Expand the use of hooks and Makefile.
