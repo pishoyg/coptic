@@ -20,11 +20,11 @@
 - [For Developers / Owners](#for-developers--owners)
   - [Directory Structure](#directory-structure)
   - [Documentation TODO's](#documentation-todos)
-  - [Learner Convenience TODO's](#learner-convenience-todos)
   - [Collaborator Convenience TODO's](#collaborator-convenience-todos)
-  - [Content TODO's](#content-todos)
-  - [Developer Convenience TODO's](#developer-convenience-todos)
   - [Diplomacy TODO's](#diplomacy-todos)
+  - [Learner Convenience TODO's](#learner-convenience-todos)
+  - [Content TODO's](#content-todos)
+  - [Developer Convenience](#developer-convenience)
 - [Credits](#credits)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -214,6 +214,8 @@ suggestions or questions, or data! :)
    high-quality, and has a very small number of typos. However, they do exist.
    (low-priority, and it's more of an ongoing byproduct than a task.)
 
+1. Complete the list of suffixes used for copticsite.com's dictionary.
+
 1. Contemplate publishing a version with one derivation per note, rather than
    the entire table. See whether this will aid learning. (low-priority)
 
@@ -305,51 +307,6 @@ and sometimes brought here.
 1. Document the snapshot dates and versions of the apps and data imported
 into the repo.
 
-### Learner Convenience TODO's
-
-1. **Deploy the flashcards on a standalone app.** (100+ hours, delegate)
-
-1. Reassess whether Anki is your best bid. Learn about alternatives. The fact
-   that the iOS version is paid will deter many learners!
-
-1. **Export accurate timestamps.** (7-8 hours)
-
-   1. Reimporting (supposedly identical data) produces the message "notes were
-   used to update existing ones." This is evidently due to the timestamps that
-   the notes are recorded with. The newer timestamps make Anki think that the
-   cards are newer, hence it updates everything. This causes the following
-   problems:
-
-   - Any changes that a user makes to a note get overridden, even if the note
-   content is one that the user has intentionally modified.
-   - The sync message is misleading, and lacks information that would otherwise
-     be useful.
-   - The exported package size is unnecessarily large. We need only export the
-     new notes.
-
-   If some notes are identical to ones that have already been exported, they
-   should retain their old timestamps, and the new notes should acquire new
-   timestamps. This should solve all of the problems above.
-   `genanki` doesn't have native support for per-note timestamps, neither does
-   it support reading an existing package and comparing the new data against
-   it. So we will likely have to do lots of manual work to solve the problem.
-
-   One idea that comes to mind is to export **untimestamped** data first to a
-   TSV, rather than a package directly, to make processing either. We can use
-   versioning, and export a new TSV every time we rerun the script. Then we can
-   have another script whose sole purpose is:
-   1. Compare two TSV's containing notes, and
-   1. Use `genanki` to generate a package *containing only the delta* between
-      the two versions.
-
-   This will facilitate testing. A developer can `diff` two TSVs to find out
-   what changes (if any) their code has introduced. (Although there is an
-   existing plan to enable testing by using a dummy timestamp, though this will
-   only make it possible to check for equality, rather than print a
-   human-readable `diff`).
-
-   Learners who synchronize their data will only have the old notes overridden.
-
 ### Collaborator Convenience TODO's
 
 1. **Support more seamless integration between Drive and your scripts.** (3-4
@@ -359,12 +316,15 @@ into the repo.
    List the data sources, and redirect the flow to Drive (think about this!)
    A few sources that immediately come to my mind are:
 
-   - Crum
+   - Crum (Roots, derivations, types, meanings, and page numbers)
    - Crum's Notes
-   - Crum's Images
+   - Crum's Scans
+   - Crum's Explanatory Images
    - The Bible
-   - [copticsite.com](https://copticsite.com/)'s Dictionary
-   - Dawoud's screenshots
+   - [copticsite.com](https://copticsite.com/)'s Dictionary and Suffixes
+   - Dawoud's Screenshots
+   - Dawoud's Page Numbers
+   - future data...
 
    Thinking about Drive, it might be even easier for users to contribute
    through a sheet instead of a Drive folder (e.g. for notes). Use sheets
@@ -382,19 +342,43 @@ into the repo.
 1. Document the content of `secrets.sh`. Make it possible for someone to take
    over.
 
-### Content TODO's
+### Diplomacy TODO's
 
-data sources
+1. **Find one or two co-owners of the project.**
+
+1. **Publicize the project, and find an audience of learners.**
+
+1. **Find contributors, in coding and data collection.**
+
+1. Obtain the source file for St. Shenouda The Archimandrite Coptic Society's
+   Simple Bohairic English Dictionary.
+
+1. Obtain the Naqlun dictionary's data. It is poor-quality, but it might
+   be attractive for some learners. (low-priority)
+
+1. Obtain an updated version of ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ's neologisms.
+
+1. Obtain an updated version of [copticsite.com](https://copticsite.com/)'s dictionary.
+
+1. Get a cleaner scan of Dawoud's dictionary. Obtain the source PDF if posible.
+   (low-priority)
+
+### Learner Convenience TODO's
+
+1. **Deploy the flashcards on a standalone app.** (100+ hours, delegate)
+
+1. Reassess whether Anki is your best bid. Learn about alternatives. The fact
+   that the iOS version is paid will deter many learners!
+
+### Content TODO's
 
 1. **Incorporate Scriptorium's data. Gain familiarity with their platform.
    Parse their dictionary.** (7-8 hours, delegated)
 
 1. **Crawl [Wiktionary - Category:Coptic lemmas](
-https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
+https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate?)
 
 1. **Incorporate the ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ Group's neologisms.** (3-4 hours)
-
-archive
 
 1. **Group the derivations by dialect.** (3-4 days)
 
@@ -420,9 +404,6 @@ archive
       often intentionally omit the dialect list. A good heuristic is to examine
       the parents and try to infer the dialect list from the parents.
 
-1. Complete the list of prefixes for the `prettify` format for copticsite.com.
-   (low-priority)
-
 1. Revisit the possibility of image compression to minimize the package size.
    (low-priority)
 
@@ -430,11 +411,43 @@ archive
 
 (20+ hours)
 
-1. Use timestamps, `ziff.sh`, and to write some `Makefile` rules for such
-   things as checking whether your changes have made any changes to the
-   produced package.
+1. **Export accurate timestamps.** (20 hours, delegate?)
 
-1. Move utils out of the archive.
+   1. Reimporting (supposedly identical data) produces the message "notes were
+   used to update existing ones." This is evidently due to the timestamps that
+   the notes are recorded with. The newer timestamps make Anki think that the
+   cards are newer, hence it updates everything. This causes the following
+   problems:
+
+   - Any changes that a user makes to a note get overridden, even if the note
+   content is one that the user has intentionally modified.
+   - The sync message is misleading, and lacks information that would otherwise
+     be useful.
+   - The exported package size is unnecessarily large. We need only export the
+     new notes.
+
+   If some notes are identical to ones that have already been exported, they
+   should retain their old timestamps, and the new notes should acquire new
+   timestamps. This should solve all of the problems above.
+   `genanki` doesn't have native support for per-note timestamps, neither does
+   it support reading an existing package and comparing the new data against
+   it. So we will likely have to do lots of manual work to solve the problem.
+
+   One idea that comes to mind is to export **untimestamped** data first to a
+   TSV, rather than a package directly, to make processing either. We can use
+   **versioning**, and export a new TSV every time we rerun the script. Then we
+   can have another script whose sole purpose is:
+   1. Compare two TSV's containing notes, and
+   1. Use `genanki` to generate a package *containing only the delta* between
+      the two versions.
+
+   This will facilitate testing. A developer can `diff` two TSVs to find out
+   what changes (if any) their code has introduced. (Although there is an
+   existing plan to enable testing by using a dummy timestamp, though this will
+   only make it possible to check for equality, rather than print a
+   human-readable `diff`).
+
+   Learners who synchronize their data will only have the old notes overridden.
 
 1. Expand the unit tests.
 
@@ -448,14 +461,14 @@ archive
 1. Add assertions and throw exceptions for any assumptions that you make. They
    catch a lot of bugs! A lot!
 
-1. Strip inputs more liberally.
-
 1. Force type hints. Use
    [type_enforced](https://github.com/connor-makowski/type_enforced).
    - Set type enforcement per class rather than per method.
    - Move your helpers, such as your `Callable`, to a shared package.
 
 1. Collect and print stats.
+
+1. Strip inputs more liberally.
 
 1. Pick up some of the Easter egg tasks left around the code:
 
@@ -465,27 +478,6 @@ archive
 
    Move them to README files when more visibility is warranted. Delete them
    when they are deemed irrelevant.
-
-### Diplomacy TODO's
-
-1. **Find one or two co-owners of the project.**
-
-1. **Publicize the project, and find an audience of learners.**
-
-1. **Find contributors, in coding and data collection.**
-
-1. Obtain the source file for St. Shenouda The Archimandrite Coptic Society's
-   Simple Bohairic English Dictionary.
-
-1. Obtain the Naqlun dictionary's data. It is poor-quality, but it might
-   be attractive for some learners. (low-priority)
-
-1. Obtain an updated version of ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ's neologisms.
-
-1. Obtain an updated version of [copticsite.com](https://copticsite.com/)'s dictionary.
-
-1. Get a cleaner scan of Dawoud's dictionary. Obtain the source PDF if posible.
-   (low-priority)
 
 ## Credits
 
