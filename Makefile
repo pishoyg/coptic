@@ -2,25 +2,33 @@
 .PHONY: all
 all: test bible copticsite marcion readme flashcards
 
-# Polluting tasks.
-.PHONY: pollute
-pollute: bible_epub img_resize
-
 # Redundant flashcard decks.
 .PHONY: flashcards_redundant
 flashcards_redundant: flashcards_crum_bohairic flashcards_crum_sahidic flashcards_crum_all flashcards_bible_bohairic flashcards_bible_sahidic flashcards_bible_all flashcards_copticsite flashcards_crum flashcards_bible
 
 # If you know the secrets, then you can run the privileged tasks. They require
-# a set of variables to be exported, typically from a `secrets.sh` file that
-# you source.
+# a set of variables to be exported. These are contained in a `secrets.sh` file
+# that you source.
+# You can create your own version of `secrets.sh`. There is nothing magical
+# there, just some paths and access tokens that belong to me. You can create
+# your own so you can run the privileged rules on your account.
 # ```
 # source secrets.sh && make privileged
 # ```
+# The rules that run privileged will fail unless `secrets.sh` has already been
+# sourced.
 .PHONY: privileged
 privileged: drive
 
-.PHONY: all_all
-all_all: all pollute flashcards_redundant privileged
+# Polluting tasks.
+.PHONY: pollute
+pollute: bible_epub img_resize
+
+.PHONY: allall
+allall: all flashcards_redundant privileged
+
+.PHONY: allallall
+allallall: all flashcards_redundant privileged pollute
 
 .PHONY: test
 test: FORCE
