@@ -122,15 +122,24 @@ args = argparser.parse_args()
 
 
 @type_enforced.Enforcer
+def series_to_int(series: pd.Series) -> list[int]:
+    return [int(cell) for cell in series]
+
+
+@type_enforced.Enforcer
 def main() -> None:
     # Process roots.
-    roots = pd.read_csv(args.coptwrd_tsv, sep="\t", encoding="utf-8").fillna("")
+    roots = pd.read_csv(args.coptwrd_tsv, sep="\t", dtype=str, encoding="utf-8").fillna(
+        ""
+    )
     process_data(roots, strict=True)
     parser.verify(constants.ROOTS_REFERENCE_COUNT * 2)
     parser.reset()
 
     # Process derivations.
-    derivations = pd.read_csv(args.coptdrv_tsv, sep="\t", encoding="utf-8").fillna("")
+    derivations = pd.read_csv(
+        args.coptdrv_tsv, sep="\t", dtype=str, encoding="utf-8"
+    ).fillna("")
     process_data(derivations, strict=False)
     parser.verify(constants.DERIVATIONS_REFERENCE_COUNT * 2)
     parser.reset()
@@ -139,13 +148,13 @@ def main() -> None:
     build_trees(roots, derivations)
 
     # Write the roots.
-    roots.sort_values(by=args.sort_roots, inplace=True)
+    roots.sort_values(by=args.sort_roots, key=series_to_int, inplace=True)
     roots.to_csv(args.roots_tsv, sep="\t", index=False)
     if args.gspread_owner:
         write_to_gspread(roots)
 
     # Write the derivations.
-    derivations.sort_values(by=args.sort_derivations, inplace=True)
+    derivations.sort_values(by=args.sort_derivations, key=series_to_int, inplace=True)
     derivations.to_csv(args.derivations_tsv, sep="\t", index=False)
     if args.gspread_owner:
         write_to_gspread(derivations)

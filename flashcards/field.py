@@ -372,7 +372,7 @@ def use_html_line_breaks(text: str) -> str:
 
 @type_enforced.Enforcer
 def _read_tsv_column(file_path: str, column_name: str) -> list[str]:
-    df = pd.read_csv(file_path, sep="\t", encoding="utf-8").fillna("")
+    df = pd.read_csv(file_path, sep="\t", dtype=str, encoding="utf-8").fillna("")
     return [str(cell).strip() for cell in df[column_name]]
 
 

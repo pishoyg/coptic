@@ -210,7 +210,7 @@ def invalid_size(files: list[str]) -> list[str]:
 
 @type_enforced.Enforcer
 def main():
-    df = pd.read_csv(args.input_tsv, sep="\t", encoding="utf-8").fillna("")
+    df = pd.read_csv(args.input_tsv, sep="\t", dtype=str, encoding="utf-8").fillna("")
     df.sort_values(by=args.input_key_col, inplace=True)
 
     for _, row in df.iterrows():

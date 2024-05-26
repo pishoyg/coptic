@@ -116,13 +116,13 @@ def _chop(text: str, regex: re.Pattern, strict: bool) -> tuple[str, str, str]:
 
 
 @type_enforced.Enforcer
-def parse_quality_cell(q: int) -> str:
-    return constants.QUALITY_ENCODING[q]
+def parse_quality_cell(q: str) -> str:
+    return constants.QUALITY_ENCODING[int(q)]
 
 
 @type_enforced.Enforcer
-def parse_type_cell(t: int) -> lexical.type:
-    return constants.TYPE_ENCODING[t]
+def parse_type_cell(t: str) -> lexical.type:
+    return constants.TYPE_ENCODING[int(t)]
 
 
 @type_enforced.Enforcer
