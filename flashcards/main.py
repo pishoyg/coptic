@@ -35,26 +35,17 @@ args = argparser.parse_args()
 
 
 @type_enforced.Enforcer
-def assert_unique(s: set, key: str | int) -> None:
-    assert key not in s, f"{s} already contains {key}"
-    s.add(key)
+def verify_unique(lis: list):
+    assert len(set(lis)) == len(lis)
 
 
 @type_enforced.Enforcer
-def validate_unique_object_keys(decks: list[genanki.Deck]) -> None:
-    deck_ids = set()
-    deck_names = set()
-    model_ids = set()
-    model_names = set()
-    note_keys = set()
-    for d in decks:
-        assert_unique(deck_ids, d.deck_id)
-        assert_unique(deck_names, d.name)
-        for model in d.models:
-            assert_unique(model_names, model.name)
-            assert_unique(model_ids, model.id)
-        for note in d.notes:
-            assert_unique(note_keys, note.guid)
+def verify_unique_object_keys(decks: list[genanki.Deck]) -> None:
+    verify_unique([d.deck_id for d in decks])
+    verify_unique([d.name for d in decks])
+    verify_unique([model.name for d in decks for model in d.models])
+    verify_unique([model.id for d in decks for model in d.models])
+    verify_unique([node.guid for d in decks for node in d.notes])
 
 
 @type_enforced.Enforcer
@@ -70,7 +61,7 @@ def main() -> None:
 
     media_files = list(media_files)
 
-    validate_unique_object_keys(decks)
+    verify_unique_object_keys(decks)
     package = genanki.Package(decks, media_files=list(set(media_files)))
     package.write_to_file(args.output)
 
