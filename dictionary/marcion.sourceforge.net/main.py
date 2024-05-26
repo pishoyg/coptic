@@ -200,12 +200,6 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
                 "\n".join(w.string(include_references=False) for w in word)
             ),
         )
-        if strict:
-            insert(
-                WORD_COL,
-                "-dawoud-sort-key",
-                dawoud_sort_key(word),
-            )
         word = parser.parse_word_cell(
             row[WORD_COL], root_type, strict, detach_types=True, use_coptic_symbol=True
         )
@@ -216,6 +210,12 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
                 w.string(include_references=False, append_root_type=True) for w in word
             ),
         )
+        if strict:
+            insert(
+                WORD_COL,
+                "-dawoud-sort-key",
+                dawoud_sort_key(word),
+            )
 
         if strict:
             insert(QUALITY_COL, "-parsed", parser.parse_quality_cell(row[QUALITY_COL]))
@@ -264,13 +264,18 @@ def build_trees(roots: pd.DataFrame, derivations: pd.DataFrame) -> None:
 
 @type_enforced.Enforcer
 def dawoud_sort_key(words: list[lexical.structured_word]) -> str:
-    for w in words:
-        if w.is_dialect("B") and w.spellings():
-            return w.spellings()[0]
-
-    for w in words:
-        if w.is_dialect("S") and w.spellings():
-            return w.spellings()[0]
+    for d in ["B", "S"]:
+        for w in words:
+            if w.is_dialect(d):
+                for s in w.spellings():
+                    # This spelling has at least one Coptic letter.
+                    if constants.COPTIC_LETTER_RE.match(s):
+                        if s.startswith("(") and s.endswith(")"):
+                            return s[1:-1]
+                        if s.startswith("-"):
+                            s = s[1:]
+                        assert s
+                        return f"{s} ({d})"
 
     return ""
 
