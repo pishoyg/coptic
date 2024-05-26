@@ -2,13 +2,26 @@
 .PHONY: all
 all: test bible copticsite marcion readme flashcards
 
-all_all: all flashcards_redundant
+# Polluting tasks.
+.PHONY: pollute
+pollute: bible_epub img_resize
 
-all_all_all: all flashcards_redundant privileged
+# Redundant flashcard decks.
+.PHONY: flashcards_redundant
+flashcards_redundant: flashcards_crum_bohairic flashcards_crum_sahidic flashcards_crum_all flashcards_bible_bohairic flashcards_bible_sahidic flashcards_bible_all flashcards_copticsite flashcards_crum flashcards_bible
 
-all_all_all_all: all flashcards_redundant privileged bible_epub
+# If you know the secrets, then you can run the privileged tasks. They require
+# a set of variables to be exported, typically from a `secrets.sh` file that
+# you source.
+# ```
+# source secrets.sh && make privileged
+# ```
+.PHONY: privileged
+privileged: drive
 
-# Main tasks.
+.PHONY: all_all
+all_all: all pollute flashcards_redundant privileged
+
 .PHONY: test
 test: FORCE
 	python -m unittest discover \
@@ -19,7 +32,8 @@ bible: FORCE
 		--no_epub "true"
 
 bible_epub: FORCE
-	# N.B. This is not included in `all`.
+	# N.B. This is not included in `all`. It unnecessarily pollutes the repo
+	# directory.
 	python bible/stshenouda.org/main.py
 
 copticsite: FORCE
@@ -27,6 +41,11 @@ copticsite: FORCE
 
 marcion: FORCE
 	python dictionary/marcion.sourceforge.net/main.py
+
+img_resize: FORCE
+	# N.B. This is not included in `all`. It unnecessarily pollutes the repo
+	# directory.
+	python dictionary/marcion.sourceforge.net/resize.sh
 
 readme: FORCE
 	doctoc \
@@ -38,9 +57,6 @@ readme: FORCE
 flashcards: FORCE
 	python flashcards/main.py  # Default to generating all flashcards in one big package.
 
-# Redundant flashcard decks.
-# N.B. These are not included in `all`.
-flashcards_redundant: flashcards_crum_bohairic flashcards_crum_sahidic flashcards_crum_all flashcards_bible_bohairic flashcards_bible_sahidic flashcards_bible_all flashcards_copticsite flashcards_crum flashcards_bible
 
 # Flashcards, one deck at a time.
 flashcards_crum_bohairic: FORCE
@@ -91,17 +107,9 @@ flashcards_bible: FORCE
 
 # Count the number of lines of code in the repo.
 # Note: This isn't all.
-pishoy:
+loc:
 	find . -name "*.py" -o -name "*.java" -o -name "*.proto" -o -name "*.sh" -o -name "*.js" -o -name "*.vba" | xargs cat | wc -l
 
-# If you know the secrets, then you can run the privileged tasks. They require
-# a set of variables to be exported, typically from a `secrets.sh` file that
-# you source.
-# ```
-# source secrets.sh && make privileged
-# ```
-.PHONY: privileged
-privileged: drive
 
 drive: FORCE
 	cp \
