@@ -105,6 +105,25 @@ def crum(deck_name: str, deck_id: int, dialect_col: str, force_front: bool = Tru
                 ),
                 "<hr>",
             ),
+            # Audio.
+            field.aon(
+                field.cat(
+                    # Pishoy's pronunciation.
+                    field.aon(
+                        "Pishoy: ",
+                        field.snd(
+                            tsv_path="dictionary/marcion.sourceforge.net/data/output/roots.tsv",
+                            column_name="key",
+                            get_paths=lambda key: glob.glob(
+                                f"dictionary/marcion.sourceforge.net/data/snd-pishoy/{dialect_col}/{key}.*"
+                            ),
+                            sort_paths=sorted,
+                            force=False,
+                        ),
+                    ),
+                ),
+                "<hr>",
+            ),
             # Marcion's key.
             field.aon(
                 "<b>Key: </b>",
