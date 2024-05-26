@@ -9,6 +9,8 @@ import pillow_avif  # This import is necessary to support AVID images.
 import type_enforced
 from PIL import Image
 
+# TODO: Set type enforcement per class rather than per method.
+
 # N.B. Pillow might be tricky for our requirements generators. You might have
 # to add it to requirements.txt manually.
 
@@ -19,6 +21,10 @@ NO_LENGTH = -1
 INTEGER_RE = re.compile("[0-9]+")
 MAX_INTEGER_LENGTH = 10
 MAX_THUMBNAIL_HEIGHT = 100000
+
+# TODO: Move to a shared package.
+# TODO: To speed things up, only run type enforcement in debug mode.
+Callable = typing.Callable | type_enforced.enforcer.FunctionMethodEnforcer
 
 
 class field:
@@ -167,112 +173,103 @@ class grp(_content_field):
         super().__init__(content, [], force)
 
 
-class img(_content_field):
-    """
-    Images. Retrieve keys from the column named ${KEY_COLUMN_NAME} in the TSV
-    found at ${TSV_FILE_PATH}. The images are to be found at:
-      ${DIR_PATH}/format(${FILE_NAME_FMT}, key=key)
-    The FILE_NAME_FMT can use the "{key}" string for key substitutions. If the
-    string numexpr(.*) were to be found inside ${FILE_NAME_FMT}, we perform a
-    number expression as well. If this were the case, it's allowed to exist only
-    once, with a single pair of parentheses, to allow simple parsing behavior
-    that should suffice for most use cases.
-    The final format string is allowed to have a glob pattern to fetch multiple
-    files.
+@type_enforced.Enforcer
+def img(
+    tsv_path: str,
+    column_name: str,
+    get_paths: Callable,
+    sort_paths: typing.Optional[Callable] = None,
+    get_caption: typing.Optional[Callable] = None,
+    width: typing.Optional[int] = None,
+    force: bool = True,
+):  # -> type_enforced.utils.WithSubclasses(field):
+    html_fmt = '<img src="{basename}"><br>'
+    if width is not None:
+        html_fmt = '<img src="{{basename}}" width="{width}"><br>'.format(width=width)
+    if get_caption:
+        html_fmt = (
+            "<figure>"
+            + html_fmt
+            + "<figcaption> {caption} </figcaption> </figure> <br>"
+        )
 
-    For example, consider the following entry:
+    return media(
+        html_fmt=html_fmt,
+        tsv_path=tsv_path,
+        column_name=column_name,
+        get_paths=get_paths,
+        copy=build_copy_resized(width),
+        sort_paths=sort_paths,
+        get_caption=get_caption,
+        force=force,
+    )
 
-    - IMG::marcion.tsv::crum-page-number::crum/::numexpr({key}+17).jpg
 
-      This results in the retrieval of a list of keys from the file at
-      "marcion.tsv", and for each entry in the "crum-page-number" column, we
-      retrieve the image at "crum/numexpr({key}+17).png". For example, for key 1,
-      we will retrieve "crum/18.png".
+@type_enforced.Enforcer
+def snd(
+    tsv_path: str,
+    column_name: str,
+    get_paths: Callable,
+    sort_paths: typing.Optional[Callable] = None,
+    force: bool = True,
+):
+    return media(
+        html_fmt="[sound:{basename}]",
+        tsv_path=tsv_path,
+        column_name=column_name,
+        get_paths=get_paths,
+        sort_paths=sort_paths,
+        force=force,
+    )
 
-    - IMG::marcion.tsv::key::img/{key}-*.*
 
-      This results in the retrieval of a list of keys from the file at
-      "marcion.tsv", and for each key in the "key" column, we retrieve all the
-      images that match the pattern "{key}-*.*". For example, for `key=1`, all
-      the following will be included if found: 1-1.png, 1-2.png, 1-1-1.jpg, ...
-
-    ${WIDTH} (optionally) gives the image width.
-
-    Image / file sorting:
-      TL;DR: Use integer sections in your file names to control the order.
-      For example, "{key}-1-1.txt", "{key}-1-2.txt", "{key}-3-4.txt".
-
-      The files will be sorted in the output based first on the integers contained
-      within the name, then lexicographically. For example, the following are
-      possible orders produced by our sorting algorithm:
-          - ["1.png", "2.png", ..., "11.png"],
-          - ["1-1.png", "1-2.png", "2-1.png", "2-2.png"]
-          - ["b1.txt", "a2.txt"]
-          - ["a.txt", "b.txt"]
-      The string "11" is lexicographically smaller than the string "2", but the
-      integer 11 is lexicographically larger, which is why it appears later.
-      Similarly, even though "b" is lexicographically larger than "a", we
-      prioritize the integers, so we bring "b1" before "a2".
-      If the string doesn't contain any integers, pure lexicographical ordering
-      will be used.
-
-    """
+class media(_content_field):
 
     @type_enforced.Enforcer
     def __init__(
         self,
+        # HTML format string.
+        html_fmt: str,
         tsv_path: str,
         column_name: str,
-        get_paths,  # Map key to list of paths.
-        sort_paths=None,  # Sort list of paths.
-        get_caption=None,  # Map path to caption.
-        width: typing.Optional[int] = None,
+        # Map key to list of paths.
+        get_paths: Callable,
+        # Copy the file to the destination.
+        copy: Callable = shutil.copy,
+        # Sort list of paths.
+        sort_paths: typing.Optional[Callable] = None,
+        # Map path to caption.
+        get_caption: typing.Optional[Callable] = None,
         force: bool = True,
     ) -> None:
         """
-        The "src" field of the <img> HTML tag must bear basenames. Directories
+        The final path to a media file must be a basename. Directories
         are not allowed. This implies that all basenames must be unique.
         See github.com/kerrickstaley/genanki?tab=readme-ov-file#media-files.
 
-        We have images from multiple source directories, and their basenames
-        could be conflicting.
+        We have media files from multiple source directories, and their
+        basenames may be conflicting.
         We solve this problem by doing the following:
-        We copy all files to a temporary working, assigning them unique
+        We copy all files to a temporary work directory, assigning them unique
         basenames. We use the new basenames in our HTML. We pass the files in
         the temporary directory to the package generator in order for the
         basenames to match, and we forget about the original paths and names.
         """
 
-        html_fmt = '<img src="{basename}"><br>'
-        if width is not None:
-            html_fmt = '<img src="{{basename}}" width="{width}"><br>'.format(
-                width=width
-            )
-        if get_caption:
-            html_fmt = (
-                "<figure>"
-                + html_fmt
-                + "<figcaption> {caption} </figcaption> </figure> <br>"
-            )
-
-        # Each entry in the keys column is not a single key, but a
-        # comma-separated list of key patterns.
-        keys = _read_tsv_column(tsv_path, column_name)
-
         content = []
         media_files = set()
-        for key in keys:
+        for key in _read_tsv_column(tsv_path, column_name):
             if force:
                 assert key
-            cur = ""
             if not key:
-                content.append(cur)
+                content.append("")
                 continue
             paths = get_paths(key)
             if force:
                 assert paths
             if sort_paths:
                 paths = sort_paths(paths)
+            cur = ""
             for path in paths:
                 basename = path.replace("/", "_")
                 args = {"basename": basename}
@@ -280,14 +277,7 @@ class img(_content_field):
                     args["caption"] = get_caption(path)
                 cur += html_fmt.format(**args)
                 new_location = os.path.join(WORK_DIR.name, basename)
-                if width:
-                    image = Image.open(path)
-                    cur_width, _ = image.size
-                    if cur_width > width:
-                        image.thumbnail((width, MAX_THUMBNAIL_HEIGHT))
-                    image.save(new_location)
-                else:
-                    shutil.copyfile(path, new_location)
+                copy(path, new_location)
                 media_files.add(new_location)
             content.append(cur)
 
@@ -422,3 +412,20 @@ def page_numbers(page_ranges: str) -> list[int]:
         for x in range(start, end + 1):
             out.append(x)
     return out
+
+
+@type_enforced.Enforcer
+def build_copy_resized(width: typing.Optional[int] = None) -> Callable:
+    if not width:
+        return shutil.copyfile
+
+    @type_enforced.Enforcer
+    def copy_resized(path: str, new_location: str) -> None:
+        assert width > 0
+        image = Image.open(path)
+        cur_width, _ = image.size
+        if cur_width > width:
+            image.thumbnail((width, MAX_THUMBNAIL_HEIGHT))
+        image.save(new_location)
+
+    return copy_resized

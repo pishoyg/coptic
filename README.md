@@ -381,10 +381,6 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
 archive
 
-1. **Implement a sound type.** (1 hour)
-
-   This is necessary for adding pronunciations.
-
 1. **Group the derivations by dialect.** (3-4 days)
 
    Now, ... The tricky thing about this task is that, while parsing the

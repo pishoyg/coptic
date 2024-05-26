@@ -73,8 +73,8 @@ def crum(deck_name: str, deck_id: int, dialect_col: str, force_front: bool = Tru
             ),
             # Image.
             field.img(
-                "dictionary/marcion.sourceforge.net/data/output/roots.tsv",
-                "key",
+                tsv_path="dictionary/marcion.sourceforge.net/data/output/roots.tsv",
+                column_name="key",
                 get_paths=lambda key: glob.glob(
                     f"dictionary/marcion.sourceforge.net/data/img/{key}-*-*.*"
                 ),
@@ -93,8 +93,8 @@ def crum(deck_name: str, deck_id: int, dialect_col: str, force_front: bool = Tru
             # Crum's pages.
             field.cat(
                 field.img(
-                    "dictionary/marcion.sourceforge.net/data/output/roots.tsv",
-                    "crum-pages",
+                    tsv_path="dictionary/marcion.sourceforge.net/data/output/roots.tsv",
+                    column_name="crum-pages",
                     get_paths=lambda page_ranges: [
                         f"dictionary/marcion.sourceforge.net/data/crum/{k+20}.png"
                         for k in field.page_numbers(page_ranges=page_ranges)
