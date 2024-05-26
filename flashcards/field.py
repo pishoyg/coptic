@@ -169,52 +169,6 @@ class grp(_content_field):
 
 
 @type_enforced.Enforcer
-def img(
-    tsv_path: str,
-    column_name: str,
-    get_paths: enforcer.Callable,
-    sort_paths: typing.Optional[enforcer.Callable] = None,
-    get_caption: typing.Optional[enforcer.Callable] = None,
-    force: bool = True,
-):  # -> media:
-    html_fmt = '<img src="{basename}"><br>'
-    if get_caption:
-        html_fmt = (
-            "<figure>"
-            + html_fmt
-            + "<figcaption> {caption} </figcaption> </figure> <br>"
-        )
-
-    return media(
-        html_fmt=html_fmt,
-        tsv_path=tsv_path,
-        column_name=column_name,
-        get_paths=get_paths,
-        sort_paths=sort_paths,
-        get_caption=get_caption,
-        force=force,
-    )
-
-
-@type_enforced.Enforcer
-def snd(
-    tsv_path: str,
-    column_name: str,
-    get_paths: enforcer.Callable,
-    sort_paths: typing.Optional[enforcer.Callable] = None,
-    force: bool = True,
-):  # -> media:
-    return media(
-        html_fmt="[sound:{basename}]",
-        tsv_path=tsv_path,
-        column_name=column_name,
-        get_paths=get_paths,
-        sort_paths=sort_paths,
-        force=force,
-    )
-
-
-@type_enforced.Enforcer
 class media(_content_field):
 
     def __init__(
@@ -226,9 +180,9 @@ class media(_content_field):
         # Map key to list of paths.
         get_paths: enforcer.Callable,
         # Sort list of paths.
-        sort_paths: typing.Optional[enforcer.Callable] = None,
+        sort_paths: enforcer.OptionalCallable = None,
         # Map path to caption.
-        get_caption: typing.Optional[enforcer.Callable] = None,
+        get_caption: enforcer.OptionalCallable = None,
         force: bool = True,
     ) -> None:
         """
@@ -273,13 +227,59 @@ class media(_content_field):
 
 
 @type_enforced.Enforcer
+def img(
+    tsv_path: str,
+    column_name: str,
+    get_paths: enforcer.Callable,
+    sort_paths: enforcer.OptionalCallable = None,
+    get_caption: enforcer.OptionalCallable = None,
+    force: bool = True,
+) -> media:
+    html_fmt = '<img src="{basename}"><br>'
+    if get_caption:
+        html_fmt = (
+            "<figure>"
+            + html_fmt
+            + "<figcaption> {caption} </figcaption> </figure> <br>"
+        )
+
+    return media(
+        html_fmt=html_fmt,
+        tsv_path=tsv_path,
+        column_name=column_name,
+        get_paths=get_paths,
+        sort_paths=sort_paths,
+        get_caption=get_caption,
+        force=force,
+    )
+
+
+@type_enforced.Enforcer
+def snd(
+    tsv_path: str,
+    column_name: str,
+    get_paths: enforcer.Callable,
+    sort_paths: enforcer.OptionalCallable = None,
+    force: bool = True,
+) -> media:
+    return media(
+        html_fmt="[sound:{basename}]",
+        tsv_path=tsv_path,
+        column_name=column_name,
+        get_paths=get_paths,
+        sort_paths=sort_paths,
+        force=force,
+    )
+
+
+@type_enforced.Enforcer
 class apl(field):
     """
     Apply a lambda to a field.
     """
 
-    def __init__(self, l, *fields) -> None:
-        self._lambda = l
+    def __init__(self, lam, *fields) -> None:
+        self._lambda = lam
         self._fields = _convert_strings(*fields)
 
     def media_files(self) -> list[str]:
@@ -292,9 +292,18 @@ class apl(field):
         return num_entries(*self._fields)
 
 
-# aon = all or none.
+# N.B. This must follow the last field subclass definition.
+Field = type_enforced.utils.WithSubclasses(field)
+OptionalField = Field + [None]
+FieldOrStr = Field + [str]
+
+
 @type_enforced.Enforcer
-def aon(*fields):
+def aon(*fields: FieldOrStr) -> apl:
+    """
+    Construct an all-or-nothing field.
+    """
+
     @type_enforced.Enforcer
     def all_or_nothing(*nexts: str) -> str:
         return "".join(nexts) if all(nexts) else ""
@@ -303,7 +312,7 @@ def aon(*fields):
 
 
 @type_enforced.Enforcer
-def cat(*fields):
+def cat(*fields: FieldOrStr) -> apl:
     @type_enforced.Enforcer
     def concatenate(*nexts: str) -> str:
         return "".join(nexts)
@@ -312,7 +321,7 @@ def cat(*fields):
 
 
 @type_enforced.Enforcer
-def xor(*fields):
+def xor(*fields: FieldOrStr) -> apl:
     @type_enforced.Enforcer
     def first_match(*nexts: str) -> str:
         for n in nexts:
@@ -325,13 +334,13 @@ def xor(*fields):
 
 @type_enforced.Enforcer
 def _convert_strings(
-    *fields: [str] + type_enforced.utils.WithSubclasses(field),
-) -> list[*type_enforced.utils.WithSubclasses(field)]:
+    *fields: FieldOrStr,
+) -> list[*Field]:
     return [txt(f) if isinstance(f, str) else f for f in fields]
 
 
 @type_enforced.Enforcer
-def num_entries(*fields: [str] + type_enforced.utils.WithSubclasses(field)) -> int:
+def num_entries(*fields: Field) -> int:
     cur = NO_LENGTH
     for f in fields:
         length = f.length()
@@ -345,7 +354,7 @@ def num_entries(*fields: [str] + type_enforced.utils.WithSubclasses(field)) -> i
 
 
 @type_enforced.Enforcer
-def merge_media_files(*fields) -> list[str]:
+def merge_media_files(*fields: Field) -> list[str]:
     m = sum([f.media_files() for f in fields], [])
     # Eliminate duplicates. This significantly reduces the package size.
     # While this is handled by Anki, it's not supported in genanki.
@@ -376,6 +385,7 @@ def _semver_sort_key(path: str) -> list[str]:
     return [x.zfill(MAX_INTEGER_LENGTH) for x in INTEGER_RE.findall(path)] + [path]
 
 
+@type_enforced.Enforcer
 def sort_semver(paths: list[str]) -> list[str]:
     return sorted(paths, key=_semver_sort_key)
 

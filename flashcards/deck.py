@@ -1,7 +1,5 @@
 import hashlib
-import typing
 
-import enforcer
 import field
 import genanki
 import type_enforced
@@ -52,10 +50,10 @@ def deck(
     deck_id: int,
     deck_description: str,
     css: str,
-    name: enforcer.OptionalField,
-    key: enforcer.Field,
-    front: enforcer.Field,
-    back: enforcer.Field,
+    name: field.OptionalField,
+    key: field.Field,
+    front: field.Field,
+    back: field.Field,
     force_single_deck: bool = True,
     force_key: bool = True,
     force_no_duplicate_keys: bool = True,
