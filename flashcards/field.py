@@ -4,12 +4,11 @@ import shutil
 import tempfile
 import typing
 
+import enforcer
 import pandas as pd
 import pillow_avif  # This import is necessary to support AVID images.
 import type_enforced
 from PIL import Image
-
-# TODO: Set type enforcement per class rather than per method.
 
 # N.B. Pillow might be tricky for our requirements generators. You might have
 # to add it to requirements.txt manually.
@@ -22,17 +21,12 @@ INTEGER_RE = re.compile("[0-9]+")
 MAX_INTEGER_LENGTH = 10
 MAX_THUMBNAIL_HEIGHT = 100000
 
-# TODO: Move to a shared package.
-# TODO: To speed things up, only run type enforcement in debug mode.
-Callable = typing.Callable | type_enforced.enforcer.FunctionMethodEnforcer
 
-
+@type_enforced.Enforcer
 class field:
-    @type_enforced.Enforcer
     def next(self) -> str | list[str]:
         raise ValueError("Unimplemented!")
 
-    @type_enforced.Enforcer
     def length(self) -> int:
         raise ValueError("Unimplemented!")
 
@@ -40,56 +34,52 @@ class field:
         raise ValueError("Unimplemented!")
 
 
+@type_enforced.Enforcer
 class _primitive_field(field):
 
-    @type_enforced.Enforcer
     def length(self) -> int:
         return NO_LENGTH
 
-    @type_enforced.Enforcer
     def media_files(self) -> list[str]:
         return []
 
 
+@type_enforced.Enforcer
 class txt(_primitive_field):
     """
     A constant text field.
     """
 
-    @type_enforced.Enforcer
     def __init__(self, text: str, force: bool = True) -> None:
         if force:
             assert text
         self._text = use_html_line_breaks(text)
 
-    @type_enforced.Enforcer
     def next(self) -> str:
         return self._text
 
-    @type_enforced.Enforcer
     def str(self) -> str:
         return self._text
 
 
+@type_enforced.Enforcer
 class seq(_primitive_field):
     """
     A numerical sequence field.
     """
 
-    @type_enforced.Enforcer
     def __init__(self, start: int = 1) -> None:
         self._cur = start
 
-    @type_enforced.Enforcer
     def next(self) -> str:
         ans = str(self._cur)
         self._cur += 1
         return ans
 
 
+@type_enforced.Enforcer
 class _content_field(field):
 
-    @type_enforced.Enforcer
     def __init__(
         self,
         content: list[list[str]] | list[str],
@@ -102,33 +92,31 @@ class _content_field(field):
         self._media_files = media_files
         self._counter = 0
 
-    @type_enforced.Enforcer
     def media_files(self) -> list[str]:
         return self._media_files
 
-    @type_enforced.Enforcer
     def next(self) -> str | list[str]:
         ans = self._content[self._counter]
         self._counter += 1
         return ans
 
-    @type_enforced.Enforcer
     def length(self) -> int:
         return len(self._content)
 
 
+@type_enforced.Enforcer
 class tsv(_content_field):
     """
     A TSV column field.
     """
 
-    @type_enforced.Enforcer
     def __init__(self, file_path: str, column_name: str, force: bool = True) -> None:
         content = _read_tsv_column(file_path, column_name)
         content = list(map(use_html_line_breaks, content))
         super().__init__(content, [], force=force)
 
 
+@type_enforced.Enforcer
 class grp(_content_field):
     """
     Group entries in a TSV column using another column.
@@ -152,7 +140,6 @@ class grp(_content_field):
         delete it!
     """
 
-    @type_enforced.Enforcer
     def __init__(
         self,
         key_file_path: str,
@@ -177,9 +164,9 @@ class grp(_content_field):
 def img(
     tsv_path: str,
     column_name: str,
-    get_paths: Callable,
-    sort_paths: typing.Optional[Callable] = None,
-    get_caption: typing.Optional[Callable] = None,
+    get_paths: enforcer.Callable,
+    sort_paths: typing.Optional[enforcer.Callable] = None,
+    get_caption: typing.Optional[enforcer.Callable] = None,
     width: typing.Optional[int] = None,
     force: bool = True,
 ):  # -> type_enforced.utils.WithSubclasses(field):
@@ -209,8 +196,8 @@ def img(
 def snd(
     tsv_path: str,
     column_name: str,
-    get_paths: Callable,
-    sort_paths: typing.Optional[Callable] = None,
+    get_paths: enforcer.Callable,
+    sort_paths: typing.Optional[enforcer.Callable] = None,
     force: bool = True,
 ):
     return media(
@@ -223,9 +210,9 @@ def snd(
     )
 
 
+@type_enforced.Enforcer
 class media(_content_field):
 
-    @type_enforced.Enforcer
     def __init__(
         self,
         # HTML format string.
@@ -233,13 +220,13 @@ class media(_content_field):
         tsv_path: str,
         column_name: str,
         # Map key to list of paths.
-        get_paths: Callable,
+        get_paths: enforcer.Callable,
         # Copy the file to the destination.
-        copy: Callable = shutil.copy,
+        copy: enforcer.Callable = shutil.copy,
         # Sort list of paths.
-        sort_paths: typing.Optional[Callable] = None,
+        sort_paths: typing.Optional[enforcer.Callable] = None,
         # Map path to caption.
-        get_caption: typing.Optional[Callable] = None,
+        get_caption: typing.Optional[enforcer.Callable] = None,
         force: bool = True,
     ) -> None:
         """
@@ -285,30 +272,28 @@ class media(_content_field):
         super().__init__(content, media_files, force=force)
 
 
+@type_enforced.Enforcer
 class apl(field):
     """
     Apply a lambda to a field.
     """
 
-    @type_enforced.Enforcer
     def __init__(self, l, *fields) -> None:
         self._lambda = l
         self._fields = _convert_strings(*fields)
 
-    @type_enforced.Enforcer
     def media_files(self) -> list[str]:
         return merge_media_files(*self._fields)
 
-    @type_enforced.Enforcer
     def next(self):
         return self._lambda(*[f.next() for f in self._fields])
 
-    @type_enforced.Enforcer
     def length(self) -> int:
         return num_entries(*self._fields)
 
 
 # aon = all or none.
+@type_enforced.Enforcer
 def aon(*fields):
     @type_enforced.Enforcer
     def all_or_nothing(*nexts: str) -> str:
@@ -317,6 +302,7 @@ def aon(*fields):
     return apl(all_or_nothing, *fields)
 
 
+@type_enforced.Enforcer
 def cat(*fields):
     @type_enforced.Enforcer
     def concatenate(*nexts: str) -> str:
@@ -325,6 +311,7 @@ def cat(*fields):
     return apl(concatenate, *fields)
 
 
+@type_enforced.Enforcer
 def xor(*fields):
     @type_enforced.Enforcer
     def first_match(*nexts: str) -> str:
@@ -415,7 +402,7 @@ def page_numbers(page_ranges: str) -> list[int]:
 
 
 @type_enforced.Enforcer
-def build_copy_resized(width: typing.Optional[int] = None) -> Callable:
+def build_copy_resized(width: typing.Optional[int] = None) -> enforcer.Callable:
     if not width:
         return shutil.copyfile
 

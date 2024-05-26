@@ -438,6 +438,8 @@ hour)
 
 1. Force type hints. Use
    [type_enforced](https://github.com/connor-makowski/type_enforced).
+   - Set type enforcement per class rather than per method.
+   - Move your helpers, such as your `Callable`, to a shared package.
 
 1. Collect and print stats.
 
@@ -449,6 +451,9 @@ hour)
 
    Move them to README files when more visibility is warranted. Delete them
    when they are deemed irrelevant.
+
+1. `flashcards/main.py` is slow due to the file and image manipulation it
+   performs (based on `cProfile` output). Consider speeding that up, somehow!
 
 ### Diplomacy TODO's
 

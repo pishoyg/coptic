@@ -2,6 +2,7 @@ import glob
 import typing
 
 import deck
+import enforcer
 import field
 import type_enforced
 

@@ -25,16 +25,23 @@ argparser.add_argument(
     help="Path to the output collection.",
 )
 
+argparser.add_argument(
+    "--debug",
+    type=bool,
+    default=True,
+    help="If true, run in debug mode.",
+)
 args = argparser.parse_args()
 
 
 @type_enforced.Enforcer
-def assert_unique(s: set, key: str | int):
+def assert_unique(s: set, key: str | int) -> None:
     assert key not in s, f"{s} already contains {key}"
     s.add(key)
 
 
-def validate_unique_object_keys(decks: list[genanki.Deck]):
+@type_enforced.Enforcer
+def validate_unique_object_keys(decks: list[genanki.Deck]) -> None:
     deck_ids = set()
     deck_names = set()
     model_ids = set()
@@ -51,7 +58,7 @@ def validate_unique_object_keys(decks: list[genanki.Deck]):
 
 
 @type_enforced.Enforcer
-def main():
+def main() -> None:
     media_files = set()
     decks = []
 

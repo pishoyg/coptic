@@ -1,5 +1,7 @@
 import hashlib
+import typing
 
+import enforcer
 import field
 import genanki
 import type_enforced
@@ -7,6 +9,7 @@ import type_enforced
 MAX_ID = 1 << 31
 
 
+@type_enforced.Enforcer
 class stats:
 
     def __init__(self):
@@ -30,9 +33,9 @@ class stats:
         )
 
 
+@type_enforced.Enforcer
 class Note(genanki.Note):
     @property
-    @type_enforced.Enforcer
     def guid(self):
         # Only use the key field to generate a GUID.
         return genanki.guid_for(self.fields[2])
@@ -49,10 +52,10 @@ def deck(
     deck_id: int,
     deck_description: str,
     css: str,
-    name: [None] + type_enforced.utils.WithSubclasses(field.field),
-    key: type_enforced.utils.WithSubclasses(field.field),
-    front: type_enforced.utils.WithSubclasses(field.field),
-    back: type_enforced.utils.WithSubclasses(field.field),
+    name: enforcer.OptionalField,
+    key: enforcer.Field,
+    front: enforcer.Field,
+    back: enforcer.Field,
     force_single_deck: bool = True,
     force_key: bool = True,
     force_no_duplicate_keys: bool = True,
@@ -94,9 +97,9 @@ def deck(
         N.B. If a deck ID is not
         given, a hash of this field will be used to key the decks. Thus, it is
         important to ensure that the deck names are (1) unique, and
-        (2) persistent. Use a different deck name for each deck that you want to
-        support. And do not change the names liberally between different version
-        of the code and the generated package.,
+        (2) persistent. Use a different deck name for each deck that you want
+        to support. And do not change the names liberally between different
+        version of the code and the generated package.,
 
         id:
         Deck ID in the generated Anki package.,
