@@ -373,9 +373,14 @@ into the repo.
 ### Learner Convenience TODO's
 
 1. **Deploy the flashcards on a standalone app.** (100+ hours, delegate)
+   
+   This will vastly increase the app's popularity.
 
-1. Reassess whether Anki is your best bid. Learn about alternatives. The fact
-   that the iOS version is paid will deter many learners!
+1. Until then, reassess whether Anki is your best bid. Perhaps try to find an
+   alternative that doesn't suffer from the following:
+   - A paid iOS version.
+   - No possibility to automatically sync when a new version of the package is
+   released.
 
 ### Content TODO's
 
