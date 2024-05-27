@@ -24,7 +24,7 @@
   - [Diplomacy TODO's](#diplomacy-todos)
   - [Learner Convenience TODO's](#learner-convenience-todos)
   - [Content TODO's](#content-todos)
-  - [Developer Convenience](#developer-convenience)
+  - [Developer Convenience TODO's](#developer-convenience-todos)
 - [Credits](#credits)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -215,6 +215,7 @@ suggestions or questions, or data! :)
    (low-priority, and it's more of an ongoing byproduct than a task.)
 
 1. Complete the list of suffixes used for copticsite.com's dictionary.
+   (low-priority)
 
 1. Contemplate publishing a version with one derivation per note, rather than
    the entire table. See whether this will aid learning. (low-priority)
@@ -339,12 +340,19 @@ into the repo.
    the data to Drive. Include your Drive credentials and local paths and the
    like.**
 
-1. **Find / design a software to help users record their pronunciations.**
+1. **Find / design a software to help users record their pronunciations.** (20
+   hours, delegate)
 
-1. Find / design a software to help users gather images.
+   Candidates:
+   - https://github.com/padmalcom/ttsdatasetcreator
+   - https://github.com/hollygrimm/voice-dataset-creation
+   - https://www.phon.ucl.ac.uk/resource/prorec/
 
-1. Document the content of `secrets.sh`. Make it possible for someone to take
-   over.
+1. Find / design a software to help users collect explanatory images.
+
+1. Document the content of `secrets.sh` to make it easier for someone else to
+   create their own version of `secrets.sh` with their own access tokens, and
+   run the project script independently.
 
 ### Diplomacy TODO's
 
@@ -376,23 +384,35 @@ into the repo.
    
    This will vastly increase the app's popularity.
 
-1. Until then, reassess whether Anki is your best bid. Perhaps try to find an
-   alternative that doesn't suffer from the following:
-   - A paid iOS version.
+1. **Until then, reassess whether Anki is your best bet.** (20 hours, delegate)
+
+   Anki has the following limitations. Perhaps try to find a platform that
+   doesn't have some of them. (Though keep in mind that they are not equally
+   problematic.)
+   - A paid iOS version. (This one is particularly problematic, and will deter
+   many potential learners.)
    - No possibility to automatically sync when a new version of the package is
    released.
+   - A primitive UI.
+   - The possibility to sync notes selectively. (See the note about exporting
+   accurate timestamps below.)
 
 ### Content TODO's
 
-1. **Incorporate Scriptorium's data. Gain familiarity with their platform.
-   Parse their dictionary.** (7-8 hours, delegated)
+1. **Incorporate data from [Coptic Dictionary Online](
+https://coptic-dictionary.org/).** (7-8 hours, delegated)
+
+1. **Incorporate [Scriptorium](https://copticscriptorium.org/)'s data. Gain
+familiarity with their platform.** (20 hours, delegate)
 
 1. **Crawl [Wiktionary - Category:Coptic lemmas](
 https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
 1. **Incorporate the ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ Group's neologisms.** (3-4 hours)
 
-1. **Group the derivations by dialect.** (3-4 days)
+1. **Add email and support links to the cards.** (1 hour)
+
+1. **Group the derivations by dialect.** (2 days)
 
    Now, ... The tricky thing about this task is that, while parsing the
    derivations, it's hard to tell whether a certain row belongs to a given
@@ -416,7 +436,10 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
       often intentionally omit the dialect list. A good heuristic is to examine
       the parents and try to infer the dialect list from the parents.
 
-1. Include links to the Crum scans inside the note.
+   The best way to accomplish this is through a proper construction of an
+   annotated tree, meaning that the notes shouldn't only bear the raw data, but
+   the parsing results as well. This will provide the `tree` module with the
+   data needed to implement a better heuristic.
 
 1. Revisit the possibility of image compression to minimize the package size.
    (low-priority)
@@ -490,6 +513,12 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
    existing plan to enable testing by using a dummy timestamp, though this will
    only make it possible to check for equality, rather than print a
    human-readable `diff`).
+
+   Another big advantage of the introduction of an intermediate state is
+   facilitating a fanout to multiple platforms. Our generators should start by
+   generating the TSV package, then our platform-specific generators can take
+   that package snapshot and produce an package for different platforms such as
+   Anki, Cloze, or something else.
 
    Learners who synchronize their data will only have the old notes overridden.
 
