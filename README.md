@@ -354,6 +354,9 @@ into the repo.
 
 1. **Find contributors, in coding and data collection.**
 
+1. **Survey the field one more time. See if there is something else out there
+   that you can integrate.**
+
 1. Obtain the source file for St. Shenouda The Archimandrite Coptic Society's
    Simple Bohairic English Dictionary.
 
