@@ -1,1 +1,0 @@
-comm -12  <(pip freeze | grep -o '^[^=]*' | awk '{print $1}' | sort | uniq) <(find . -name '*.py' | xargs cat | grep -E '^(import |from .* import .*)' | grep -oE '^(import|from) [^ .]+' | awk '{print $2}' | sort | uniq)
