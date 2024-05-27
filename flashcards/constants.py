@@ -1,10 +1,12 @@
 import glob
+import re
 import typing
 
 import deck
 import field
 import type_enforced
 
+CRUM_RE = re.compile(r"<b>Crum: </b>(\d+(a|b))")
 BIBLE_LANGUAGES = [
     "Bohairic",
     "English",
@@ -92,7 +94,10 @@ def crum(deck_name: str, deck_id: int, dialect_col: str, force_front: bool = Tru
             # Full entry.
             roots_col("word-parsed-no-ref", force=True),
             # Derivations.
-            roots_col("derivations-table", force=False),
+            field.apl(
+                add_crum_links,
+                roots_col("derivations-table", force=False),
+            ),
             "<hr>",
             # Crum's pages.
             field.cat(
@@ -320,3 +325,14 @@ def DECKS(deck_names: typing.Optional[list[str]]):
         return [lam(name) for name, lam in LAMBDAS.items()]
     assert deck_names
     return [LAMBDAS[name](name) for name in deck_names]
+
+
+@type_enforced.Enforcer
+def add_crum_links(html: str) -> str:
+    return CRUM_RE.sub(
+        r"<b>Crum: </b>"
+        r'<a href="https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=\1">'
+        r"\1"
+        "</a>",
+        html,
+    )
