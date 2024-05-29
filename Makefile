@@ -84,7 +84,7 @@ img_resize: FORCE
 	bash dictionary/marcion.sourceforge.net/resize.sh
 
 # FLASHCARD RULES
-TIMESTAMP = 1716990272
+TIMESTAMP = 1717009009
 
 
 flashcards: FORCE
