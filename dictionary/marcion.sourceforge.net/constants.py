@@ -16,6 +16,7 @@ ENGLISH_WITHIN_COPTIC_RE = re.compile(r"\{[^\{\}]+\}")
 COPTIC_WITHIN_ENGLISH_RE = re.compile(r"\[[^\[\]]+\]")
 GREEK_WITHIN_ENGLISH_RE = re.compile(r"\[\[[^\]]+\]\]")
 PARSED_GREEK_WITHIN_ENGLISH_RE = re.compile(r"(\[[ ,()&c?;Α-Ωα-ω]+\])")
+GREEK_WORD = re.compile("([Α-Ωα-ω]+)")
 
 CRUM_RE = re.compile(r"^(\d{1,3})(a|b)$")
 REFERENCE_RE = re.compile(r'\*\^<a href="([^"<>]+)">([^<>]+)</a>([^<>]*)\^\*')
@@ -27,7 +28,7 @@ TWO_TABS_RE = re.compile("\t\t")
 ENGLISH_LETTER_RE = re.compile("[a-zA-Z]")
 
 CRUM_PAGE_FMT = "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID={key}"
-KOINE_GREEK_DICTIONARY_RE = (
+KOINE_GREEK_DICTIONARY_FMT = (
     "https://www.billmounce.com/search/node/{key}%20type%3Alexicon"
 )
 

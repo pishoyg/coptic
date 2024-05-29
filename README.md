@@ -408,18 +408,9 @@ familiarity with their platform.** (20 hours, delegate)
 1. **Crawl [Wiktionary - Category:Coptic lemmas](
 https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
-1. **Incorporate the ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ Group's neologisms.** (3-4 hours)
-
-1. **The Greek words should have hyperlinks to an online Koine Greek
-   dictionary.** (1 hour)
-
-   Candidates:
-   - https://www.billmounce.com/greek-dictionary
-
-1. **Update `remove_html` code to include the new tags that you created.** (1
-   hour)
-
 1. **Add email and support links to the cards.** (1 hour)
+
+1. **Incorporate the ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ Group's neologisms.** (3-4 hours)
 
 1. **Group the derivations by dialect.** (2 days)
 
