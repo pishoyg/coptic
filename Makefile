@@ -17,13 +17,13 @@ privileged: drive
 pollute: bible_epub img_resize
 
 .PHONY: redundant
-redundant: flashcards_crum_bohairic flashcards_crum flashcards_copticsite flashcards_bible
+redundant: flashcards_crum_sahidic flashcards_crum flashcards_copticsite flashcards_bible
 
 .PHONY: verify
-verify: verify_identical_flashcards verify_identical_flashcards_crum_bohairic
+verify: verify_identical_flashcards verify_identical_flashcards_crum_sahidic
 
 .PHONY: try
-try: try_flashcards try_flashcards_crum_bohairic
+try: try_flashcards try_flashcards_crum_sahidic
 
 .PHONY: stats
 stats: loc
@@ -91,10 +91,10 @@ flashcards: FORCE
 	python flashcards/main.py \
 		--timestamp "${TIMESTAMP}"
 
-flashcards_crum_bohairic: FORCE
+flashcards_crum_sahidic: FORCE
 	python flashcards/main.py \
-		--decks "A Coptic Dictionary::Bohairic" \
-		--output "flashcards/data/crum_bohairic.apkg" \
+		--decks "A Coptic Dictionary::Sahidic" \
+		--output "flashcards/data/crum_sahidic.apkg" \
 		--timestamp "${TIMESTAMP}"
 
 flashcards_copticsite: FORCE
@@ -126,20 +126,20 @@ verify_identical_flashcards: try_flashcards
 		"flashcards/data/coptic.apkg"
 		"$${TEST_DIR}/coptic.apkg" \
 
-verify_identical_flashcards_crum_bohairic: try_flashcards_crum_bohairic
+verify_identical_flashcards_crum_sahidic: try_flashcards_crum_sahidic
 	bash utils/ziff.sh \
-		"flashcards/data/crum_bohairic.apkg" \
-		"$${TEST_DIR}/crum_bohairic.apkg"
+		"flashcards/data/crum_sahidic.apkg" \
+		"$${TEST_DIR}/crum_sahidic.apkg"
 
 try_flashcards: FORCE
 	python flashcards/main.py \
 		--output "$${TEST_DIR}/coptic.apkg" \
 		--timestamp "${TIMESTAMP}"
 
-try_flashcards_crum_bohairic: FORCE
+try_flashcards_crum_sahidic: FORCE
 	python flashcards/main.py \
-		--decks "A Coptic Dictionary::Bohairic" \
-		--output "$${TEST_DIR}/crum_bohairic.apkg" \
+		--decks "A Coptic Dictionary::Sahidic" \
+		--output "$${TEST_DIR}/crum_sahidic.apkg" \
 		--timestamp "${TIMESTAMP}"
 
 git_clean: FORCE
