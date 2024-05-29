@@ -105,7 +105,7 @@ flashcards_copticsite: FORCE
 
 flashcards_crum: FORCE
 	python flashcards/main.py \
-		--decks "A Coptic Dictionary::Bohairic" "A Coptic Dictionary::Sahidic" "A Coptic Dictionary::All Dialects" \
+		--decks "A Coptic Dictionary::Bohairic" "A Coptic Dictionary::Sahidic" "A Coptic Dictionary::Bohairic / Sahidic" "A Coptic Dictionary::All Dialects" \
 		--output "flashcards/data/crum.apkg" \
 		--timestamp "${TIMESTAMP}"
 

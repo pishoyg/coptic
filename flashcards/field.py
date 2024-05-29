@@ -336,6 +336,15 @@ def xor(*fields: FieldOrStr) -> apl:
 
 
 @type_enforced.Enforcer
+def jne(sep: str, *fields: FieldOrStr) -> apl:
+    @type_enforced.Enforcer
+    def join_non_empty(*nexts: str) -> str:
+        return sep.join(filter(None, nexts))
+
+    return apl(join_non_empty, *fields)
+
+
+@type_enforced.Enforcer
 def _convert_strings(
     *fields: FieldOrStr,
 ) -> list[*Field]:

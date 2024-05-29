@@ -20,7 +20,9 @@ BIBLE_LANGUAGES = [
 
 
 @type_enforced.Enforcer
-def crum(deck_name: str, deck_id: int, dialect_col: str, force_front: bool = True):
+def crum(
+    deck_name: str, deck_id: int, dialect_cols: list[str], force_front: bool = True
+):
 
     @type_enforced.Enforcer
     def roots_col(col_name: str, force: bool = True) -> field.tsv:
@@ -29,6 +31,26 @@ def crum(deck_name: str, deck_id: int, dialect_col: str, force_front: bool = Tru
             col_name,
             force=force,
         )
+
+    @type_enforced.Enforcer
+    def create_front() -> field.Field:
+        if len(dialect_cols) == 1:
+            return roots_col(dialect_cols[0], force=False)
+
+        def dialect(col):
+            return field.aon(
+                '<span id="left">',
+                "(",
+                "<b>",
+                col[col.find("-") + 1 :],
+                "</b>",
+                ")",
+                "</span>",
+                "<br>",
+                roots_col(col, force=False),
+            )
+
+        return field.jne("<br>", *[dialect(col) for col in dialect_cols])
 
     return deck.deck(
         deck_name=deck_name,
@@ -41,6 +63,7 @@ def crum(deck_name: str, deck_id: int, dialect_col: str, force_front: bool = Tru
         "figure img { vertical-align: top; }"
         "#bordered { border:1px solid black; }"
         "#right { float:right; }"
+        "#left { float: left; }"
         ".nightMode #bordered { border:1px solid white; }",
         # N.B. The name is a protected field, although it is unused in this
         # case because we generate a single deck, thus the deck name is a
@@ -49,7 +72,7 @@ def crum(deck_name: str, deck_id: int, dialect_col: str, force_front: bool = Tru
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
         key=roots_col("key", force=True),
-        front=roots_col(dialect_col, force=False),
+        front=create_front(),
         back=field.cat(
             # Type and Crum page.
             field.cat(
@@ -107,20 +130,24 @@ def crum(deck_name: str, deck_id: int, dialect_col: str, force_front: bool = Tru
                 "<hr>",
             ),
             # Audio.
+            # TODO: Label the per-dialect audios, like you did for the front.
             field.aon(
                 field.cat(
                     # Pishoy's pronunciation.
                     field.aon(
                         "Pishoy: ",
-                        field.snd(
-                            tsv_path="dictionary/marcion.sourceforge.net/data/output/roots.tsv",
-                            column_name="key",
-                            get_paths=lambda key: glob.glob(
-                                f"dictionary/marcion.sourceforge.net/data/snd-pishoy/{dialect_col}/{key}.*"
-                            ),
-                            sort_paths=sorted,
-                            force=False,
-                        ),
+                        *[
+                            field.snd(
+                                tsv_path="dictionary/marcion.sourceforge.net/data/output/roots.tsv",
+                                column_name="key",
+                                get_paths=lambda key: glob.glob(
+                                    f"dictionary/marcion.sourceforge.net/data/snd-pishoy/{col}/{key}.*"
+                                ),
+                                sort_paths=sorted,
+                                force=False,
+                            )
+                            for col in dialect_cols
+                        ],
                     ),
                 ),
                 "<hr>",
@@ -282,6 +309,7 @@ def copticsite_com(deck_name: str, deck_id: int):
 
 CRUM_BOHAIRIC = "A Coptic Dictionary::Bohairic"
 CRUM_SAHIDIC = "A Coptic Dictionary::Sahidic"
+CRUM_BOHAIRIC_SAHIDIC = "A Coptic Dictionary::Bohairic / Sahidic"
 CRUM_ALL = "A Coptic Dictionary::All Dialects"
 BIBLE_BOHAIRIC = "Bible::Bohairic"
 BIBLE_SAHIDIC = "Bible::Sahidic"
@@ -290,15 +318,21 @@ COPTICSITE_NAME = "copticsite.com"
 
 LAMBDAS = {
     CRUM_BOHAIRIC: lambda deck_name: crum(
-        deck_name, 1284010383, "dialect-B", force_front=False
+        deck_name, 1284010383, ["dialect-B"], force_front=False
     ),
     CRUM_SAHIDIC: lambda deck_name: crum(
-        deck_name, 1284010386, "dialect-S", force_front=False
+        deck_name, 1284010386, ["dialect-S"], force_front=False
+    ),
+    CRUM_BOHAIRIC_SAHIDIC: lambda deck_name: crum(
+        deck_name,
+        1284010390,
+        ["dialect-B", "dialect-S"],
+        force_front=False,
     ),
     CRUM_ALL: lambda deck_name: crum(
         deck_name,
         1284010387,
-        "word-parsed-prettify",
+        ["word-parsed-prettify"],
     ),
     BIBLE_BOHAIRIC: lambda deck_name: bible(deck_name, 1284010384, ["Bohairic"]),
     BIBLE_SAHIDIC: lambda deck_name: bible(deck_name, 1284010388, ["Sahidic"]),
