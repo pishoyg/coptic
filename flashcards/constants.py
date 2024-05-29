@@ -64,6 +64,7 @@ def crum(
         "#bordered { border:1px solid black; }"
         "#right { float:right; }"
         "#left { float: left; }"
+        "#center { text-align: center; }"
         ".nightMode #bordered { border:1px solid white; }",
         # N.B. The name is a protected field, although it is unused in this
         # case because we generate a single deck, thus the deck name is a
@@ -153,9 +154,18 @@ def crum(
                 "<hr>",
             ),
             # Marcion's key.
-            field.aon(
-                "<b>Key: </b>",
-                roots_col("key", force=True),
+            field.cat(
+                field.aon(
+                    "<b>Key: </b>",
+                    roots_col("key", force=True),
+                ),
+                field.txt(
+                    '<span id="right">'
+                    '<a href="https://github.com/pishoyg/coptic/">Home</a>'
+                    ", "
+                    '<a href="mailto:pishoybg@gmail.com">Inquiries</a>'
+                    "</span>"
+                ),
             ),
         ),
         force_front=force_front,
