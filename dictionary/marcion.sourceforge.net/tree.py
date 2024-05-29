@@ -193,7 +193,7 @@ class node:
                         else ""
                     ),
                     (
-                        f'<td rowspan="{crum_span}" id="bordered"><b>Crum: </b>{crum}</td>'
+                        f'<td rowspan="{crum_span}" id="bordered"><b>Crum: </b>{add_a_href(crum, constants.CRUM_PAGE_FMT)}</td>'
                         if crum_span
                         else ""
                     ),
@@ -253,3 +253,9 @@ def build_has_cell(tree: node, cell_name: str) -> list[bool]:
                 has_cell[tree.index(d)] = True
 
     return has_cell
+
+
+@type_enforced.Enforcer
+def add_a_href(key: str, link_fmt: str) -> str:
+    link = link_fmt.format(key=key)
+    return '<a href="{link}">{key}</a>'.format(link=link, key=key)

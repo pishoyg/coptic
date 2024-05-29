@@ -26,6 +26,11 @@ CLASS_RE = re.compile("[a-z ]+|-")
 TWO_TABS_RE = re.compile("\t\t")
 ENGLISH_LETTER_RE = re.compile("[a-zA-Z]")
 
+CRUM_PAGE_FMT = "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID={key}"
+KOINE_GREEK_DICTIONARY_RE = (
+    "https://www.billmounce.com/search/node/{key}%20type%3Alexicon"
+)
+
 # LETTER_ENCODING is used to convert ASCII-encoded Coptic text to unicode.
 LETTER_ENCODING = {
     "a": "ⲁ",
