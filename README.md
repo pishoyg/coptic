@@ -408,6 +408,8 @@ familiarity with their platform.** (20 hours, delegate)
 1. **Crawl [Wiktionary - Category:Coptic lemmas](
 https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
+1. **Generate a version of Crum with Sahidic and Bohairic in the front.** (1 hour)
+
 1. **Add email and support links to the cards.** (1 hour)
 
 1. **Incorporate the ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ Group's neologisms.** (3-4 hours)
