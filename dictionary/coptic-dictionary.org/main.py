@@ -1,3 +1,5 @@
+# TODO: Read this file for inspiration:
+# https://github.com/KELLIA/dictionary/blob/master/utils/dictionary_reader.py.
 import argparse
 
 import bs4
