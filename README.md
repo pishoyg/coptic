@@ -193,22 +193,21 @@ suggestions or questions, or data! :)
    learning process, and it will save learners the time that they have to spend
    on looking up the obscure vocabulary or unfamiliar terms.
 
-1. Link Scriptorium lemmas to Marcion Keys.
+1. **Link Scriptorium lemmas to Marcion Keys.** (100 hours, delegate)
 
    This may make it possible to include the meaning, literature citations, and
    perhaps other data.
+
+   It might also make it possible to expand Scriptorium's dictionary.
 
 1. Add a meanings that would be displayed on top before Crum's translation.
    Some of Crum's translations are obscure or archaic, and some are outdated
    because we understand the meaning of the word better than he did back then.
    We could use St. Shenouda's Simple Bohairic English dictionary for that, or
-   perhaps Scriptorium.
+   Scriptorium's dictionary.
    (low-priority)
 
 1. Collect more explanatory notes. (low-priority)
-
-1. Add literature citations. Perhaps from Scriptorium? Perhaps from the
-   Bible? (low-priority)
 
 1. Fix the typos in the data retrieved from Crum. The current dataset is
    high-quality, and has a very small number of typos. However, they do exist.
@@ -217,8 +216,9 @@ suggestions or questions, or data! :)
 1. Complete the list of suffixes used for copticsite.com's dictionary.
    (low-priority)
 
-1. Contemplate publishing a version with one derivation per note, rather than
-   the entire table. See whether this will aid learning. (low-priority)
+1. Contemplate publishing a version of the flashcards with one derivation per
+   note, rather than the entire table. See whether this will aid learning.
+   (low-priority)
 
 1. Contemplate sorting the dictionary words by popularity, somehow.
    (low-priority)
@@ -402,8 +402,13 @@ into the repo.
 1. **Incorporate data from [Coptic Dictionary Online](
 https://coptic-dictionary.org/).** (7-8 hours, delegated)
 
-1. **Incorporate [Scriptorium](https://copticscriptorium.org/)'s data. Gain
-familiarity with their platform.** (20 hours, delegate)
+1. **Incorporate [Scriptorium](https://copticscriptorium.org/)'s data and NLP
+tools.** (50 hours, delegate)
+
+   - Start by gaining familiarity with their products, and selecting the ones
+   that will be useful for you. From a quick look, the part-of-speech tagger,
+   and automatic segmentation, entity visualizer, lemmatizer,
+   language-of-origin tagger, are all good candidates.
 
 1. **Crawl [Wiktionary - Category:Coptic lemmas](
 https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
