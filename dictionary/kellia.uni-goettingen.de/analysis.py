@@ -1,15 +1,38 @@
 # TODO: Read this file for inspiration:
 # https://github.com/KELLIA/dictionary/blob/master/utils/dictionary_reader.py.
 import argparse
+import collections
 import json
 import re
 
 import bs4
 import type_enforced
 
-MAX_NUM_ATTR_VALUES = 10
+MAX_LIST_LEN = 10
 LIST_ELEMENT_CLOSING_QUOTE = re.compile(r'",\s+')
-
+ORDER = [
+    "superEntry",
+    "entry",
+    "form",
+    "gramGrp",
+    "sense",
+    "etym",
+    "xr",
+    "note",
+    "cit",
+    "gram",
+    "def",
+    "quote",
+    "ref",
+    "usg",
+    "subc",
+    "gen",
+    "pos",
+    "number",
+    "oRef",
+    "orth",
+    "bibl",
+]
 
 argparser = argparse.ArgumentParser(description="Process the Coptic Lexicon.")
 
@@ -30,24 +53,35 @@ argparser.add_argument(
 args = argparser.parse_args()
 
 
-def format_set(s: set) -> dict:
+@type_enforced.Enforcer
+def sort_children(children: list[str]) -> list[str]:
+    name_to_idx = {name: idx for idx, name in enumerate(ORDER)}
+
+    @type_enforced.Enforcer
+    def key(name: str) -> int:
+        return name_to_idx[name]
+
+    return sorted(children, key=key)
+
+
+@type_enforced.Enforcer
+def format_set(s: set) -> list:
     s = list(s)
-    if len(s) > MAX_NUM_ATTR_VALUES:
-        return [f"{len(s)} DISTINCT VALUES"] + s[:3] + ["..."]
+    if len(s) > MAX_LIST_LEN:
+        return [f"{len(s)} DISTINCT VALUES"] + s[: MAX_LIST_LEN - 2] + ["..."]
     return s
 
 
 @type_enforced.Enforcer
 def prettify(d: dict) -> str:
-    out = json.dumps(d, indent=2, ensure_ascii=False).encode("utf8").decode()
+    od = collections.OrderedDict()
+    for k in ORDER:
+        od[k] = d[k]
+    assert set(d.keys()) == set(od.keys())
+    del d
+    out = json.dumps(od, indent=2, ensure_ascii=False).encode("utf8").decode()
     out = LIST_ELEMENT_CLOSING_QUOTE.sub('", ', out)
     return out
-    # TODO: Try to return the output with the keys in the following order:
-    # [
-    #     "superEntry", "entry", "form", "sense", "note", "etym", "gramGrp", "xr",
-    #     "cit", "gram", "def", "quote", "ref", "usg", "subc", "gen", "pos",
-    #     "number", "oRef", "orth", "bibl",
-    # ]
 
 
 @type_enforced.Enforcer
@@ -79,7 +113,7 @@ def analyze(soup: bs4.BeautifulSoup | bs4.Tag) -> str:
         if strings:
             tree[name]["STRINGS"] = format_set(strings)
         if children:
-            tree[name]["CHILDREN"] = list(children)
+            tree[name]["CHILDREN"] = sort_children(list(children))
     return prettify(tree)
 
 

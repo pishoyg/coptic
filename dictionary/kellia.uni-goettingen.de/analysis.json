@@ -1,10 +1,15 @@
 {
+  "superEntry": {
+    "CHILDREN": [
+      "entry"
+    ]
+  },
   "entry": {
     "type": [
-      "hom", "compound", "foreign"
+      "compound", "hom", "foreign"
     ],
     "xml:id": [
-      "11284 DISTINCT VALUES", "C10088", "C4049", "C1072", "..."
+      "11284 DISTINCT VALUES", "C1497", "C10989", "C6361", "C7888", "C856", "C9115", "C9010", "C4986", "..."
     ],
     "change": [
       "#deprecated #v1.2"
@@ -13,121 +18,48 @@
       "to be deleted?; no longer in DB"
     ],
     "CHILDREN": [
-      "xr", "sense", "note", "gramGrp", "form", "etym"
-    ]
-  },
-  "oRef": {
-    "STRINGS": [
-      "65 DISTINCT VALUES", "ⲛⲁ (ⲉ)ⲓⲁⲧ⸗", "ϫⲓ ⲧⲟⲟⲧ⸗", "ϯ ⲡⲉϥ ⲟⲩⲟⲓ", "..."
-    ]
-  },
-  "cit": {
-    "type": [
-      "example", "translation"
-    ],
-    "CHILDREN": [
-      "quote", "bibl", "def", "note"
-    ]
-  },
-  "superEntry": {
-    "CHILDREN": [
-      "entry"
-    ]
-  },
-  "pos": {
-    "STRINGS": [
-      "34 DISTINCT VALUES", "Satzkonverter", "Verbalpräfix", "Possessivpräfix", "..."
-    ]
-  },
-  "gram": {
-    "type": [
-      "collocConj", "collocParticle", "collocPrep", "collocAdv", "collocPartikel", "collocNoun"
-    ],
-    "STRINGS": [
-      "107 DISTINCT VALUES", "ϫⲉ", "ϩⲓϫⲛ-", "ϫⲓⲛ-", "..."
-    ]
-  },
-  "ref": {
-    "target": [
-      "677 DISTINCT VALUES", "#ϭⲁ(ⲉ)ⲓⲉ", "#ϣⲁⲣ", "#21770", "..."
-    ],
-    "type": [
-      "WCNae", "greek_lemma::grl_lemma", "Greek", "greek_lemma::grl_meaning", "coptic_usage::cu_ID", "greek_lemma::grl_ref", "greek_lemma::grl_ID", "greek_lemma::grl_pos", "WCNde"
-    ],
-    "xml:lang": [
-      "grc"
-    ],
-    "STRINGS": [
-      "17117 DISTINCT VALUES", "bad repute, heretical opinion", "3466", "10307", "..."
-    ]
-  },
-  "note": {
-    "xml:lang": [
-      "de", "en", "fr"
-    ],
-    "STRINGS": [
-      "405 DISTINCT VALUES", "immer ohne Artikel", "immer mit Suffixpronomen", "Objektsanschluß meist mit ⲉ-", "..."
+      "form", "gramGrp", "sense", "etym", "xr", "note"
     ]
   },
   "form": {
     "type": [
-      "lemma", "compound", "inflected"
+      "compound", "lemma", "inflected"
     ],
     "xml:id": [
-      "32230 DISTINCT VALUES", "CF19441", "CF25463", "CF17743", "..."
+      "32230 DISTINCT VALUES", "CF31022", "CF10341", "CF31161", "CF4797", "CF24975", "CF159", "CF10515", "CF20081", "..."
     ],
     "change": [
-      "#deprecated #v1.2", "#added #v1.2"
+      "#added #v1.2", "#deprecated #v1.2"
     ],
     "corresp": [
-      "762 DISTINCT VALUES", "CF10285", "'CF31769', 'CF31770'", "'CF32213', 'CF32214'", "..."
+      "762 DISTINCT VALUES", "'CF31954', 'CF31955'", "'CF31853', 'CF31854'", "'CF32095', 'CF32096'", "CF10806", "CF17304", "CF15725", "CF14940", "CF17553", "..."
     ],
     "STRINGS": [
-      "ⲓ", "ⲙⲉⲧϩⲟⲩⲟ", "ⲣⲧϭⲟⲧ"
+      "ⲙⲉⲧϩⲟⲩⲟ", "ⲓ", "ⲣⲧϭⲟⲧ"
     ],
     "CHILDREN": [
-      "oRef", "orth", "note", "gramGrp", "usg"
-    ]
-  },
-  "subc": {
-    "STRINGS": [
-      "55 DISTINCT VALUES", "Konjunktiv ⲛ(ⲧⲉ)-", "Status pronominalis", "Imperativ", "..."
-    ]
-  },
-  "etym": {
-    "CHILDREN": [
-      "xr", "ref", "note"
-    ]
-  },
-  "quote": {
-    "xml:lang": [
-      "de", "en", "fr"
-    ],
-    "STRINGS": [
-      "28320 DISTINCT VALUES", "Auflösung, Erklärung", "copyist", "ungläubig", "..."
-    ]
-  },
-  "orth": {
-    "STRINGS": [
-      "15259 DISTINCT VALUES", "ⲣⲉϣⲣⲉϣ", "ϭⲱⲗⲩ", "ⲓⲥⲟⲯⲩⲭⲟⲛ", "..."
+      "gramGrp", "note", "usg", "oRef", "orth"
     ]
   },
   "gramGrp": {
     "STRINGS": [
-      "<gram type=\"pos\">Possessivartikel</gram>\n          <gram type=\"number\">pl.</gram>\n          <gram type=\"person[psor]\">1.</gram>\n          <gram type=\"number[psor]\">sg.</gram>", "<gram type=\"pos\">Possessivartikel</gram>\n          <gram type=\"gen\">m.</gram>\n          <gram type=\"number\">sg.</gram>\n          <gram type=\"person[psor]\">2.</gram>\n          <gram type=\"gen[psor]\">f.</gram>\n          <gram type=\"number[psor]\">sg.</gram>", "<gram type=\"pos\">Possessivartikel</gram>\n          <gram type=\"gen\">m.</gram>\n          <gram type=\"number\">sg.</gram>\n          <gram type=\"person[psor]\">1.</gram>\n          <gram type=\"number[psor]\">sg.</gram>", "<gram type=\"pos\">Possessivartikel</gram>\n         <gram type=\"gen\">f.</gram>\n         <gram type=\"number\">sg.</gram>\n         <gram type=\"person[psor]\">1.</gram>\n         <gram type=\"number[psor]\">sg.</gram>", "-\n          <gram type=\"pos\">Possessivartikel</gram>\n          <gram type=\"gen\">f.</gram>\n          <gram type=\"number\">sg.</gram>\n          <gram type=\"person[psor]\">2.</gram>\n          <gram type=\"gen[psor]\">f.</gram>\n          <gram type=\"number[psor]\">sg.</gram>", "<gram type=\"pos\">Possessivartikel</gram>\n          <gram type=\"number\">pl.</gram>\n          <gram type=\"person[psor]\">2.</gram>\n          <gram type=\"gen[psor]\">f.</gram>\n          <gram type=\"number[psor]\">sg.</gram>"
+      "<gram type=\"pos\">Possessivartikel</gram>\n          <gram type=\"gen\">m.</gram>\n          <gram type=\"number\">sg.</gram>\n          <gram type=\"person[psor]\">2.</gram>\n          <gram type=\"gen[psor]\">f.</gram>\n          <gram type=\"number[psor]\">sg.</gram>", "-\n          <gram type=\"pos\">Possessivartikel</gram>\n          <gram type=\"gen\">f.</gram>\n          <gram type=\"number\">sg.</gram>\n          <gram type=\"person[psor]\">2.</gram>\n          <gram type=\"gen[psor]\">f.</gram>\n          <gram type=\"number[psor]\">sg.</gram>", "<gram type=\"pos\">Possessivartikel</gram>\n          <gram type=\"number\">pl.</gram>\n          <gram type=\"person[psor]\">2.</gram>\n          <gram type=\"gen[psor]\">f.</gram>\n          <gram type=\"number[psor]\">sg.</gram>", "<gram type=\"pos\">Possessivartikel</gram>\n          <gram type=\"gen\">m.</gram>\n          <gram type=\"number\">sg.</gram>\n          <gram type=\"person[psor]\">1.</gram>\n          <gram type=\"number[psor]\">sg.</gram>", "<gram type=\"pos\">Possessivartikel</gram>\n         <gram type=\"gen\">f.</gram>\n         <gram type=\"number\">sg.</gram>\n         <gram type=\"person[psor]\">1.</gram>\n         <gram type=\"number[psor]\">sg.</gram>", "<gram type=\"pos\">Possessivartikel</gram>\n          <gram type=\"number\">pl.</gram>\n          <gram type=\"person[psor]\">1.</gram>\n          <gram type=\"number[psor]\">sg.</gram>"
     ],
     "CHILDREN": [
-      "note", "subc", "number", "pos", "gram", "gen"
+      "note", "gram", "subc", "gen", "pos", "number"
     ]
   },
-  "bibl": {
-    "STRINGS": [
-      "6416 DISTINCT VALUES", "CD 447b; KoptHWb 254", "CD 51b; KoptHWb 31", "CD 130b; KoptHWb 72", "..."
+  "sense": {
+    "xml:id": [
+      "15923 DISTINCT VALUES", "CS6053", "CS4640", "CS8765", "CS8823", "CS8076", "CS8956", "CS9947", "CS11727", "..."
+    ],
+    "CHILDREN": [
+      "xr", "note", "cit", "ref"
     ]
   },
-  "number": {
-    "STRINGS": [
-      "pl.", "sg."
+  "etym": {
+    "CHILDREN": [
+      "xr", "note", "ref"
     ]
   },
   "xr": {
@@ -138,20 +70,58 @@
       "ref"
     ]
   },
-  "sense": {
-    "xml:id": [
-      "15923 DISTINCT VALUES", "CS4552", "CS14169", "CS5954", "..."
+  "note": {
+    "xml:lang": [
+      "de", "fr", "en"
+    ],
+    "STRINGS": [
+      "405 DISTINCT VALUES", "nicht von Personen", "particle introducing nominal subject in proleptic verbal clause", "Faw Qibli in Oberägypten, zwischen Nag Hammadi und Qena", "vor Orts- und Richtungsangaben", "Gerät oder Werkzeug", "immer mit Suffixpronomen", "Coptic?", "Genus fraglich", "..."
+    ]
+  },
+  "cit": {
+    "type": [
+      "translation", "example"
     ],
     "CHILDREN": [
-      "xr", "cit", "ref", "note"
+      "note", "def", "quote", "bibl"
+    ]
+  },
+  "gram": {
+    "type": [
+      "collocConj", "collocPartikel", "collocParticle", "collocAdv", "collocNoun", "collocPrep"
+    ],
+    "STRINGS": [
+      "107 DISTINCT VALUES", "ⲉϩⲛ-", "ⲙⲡⲱⲣ", "ⲙⲙⲟⲛ", "ⲉϩⲟⲩⲛ (ⲉ-)", "ⲉϩⲣⲁⲓ", "ϩⲏⲧ⸗", "ⲛⲉⲙ-", "ⲛ-/ⲛⲁ⸗", "..."
     ]
   },
   "def": {
     "xml:lang": [
-      "de", "en", "fr"
+      "de", "fr", "en"
     ],
     "STRINGS": [
-      "146 DISTINCT VALUES", "iterrog. or condit.", "verbal prefix perfect I", "particle, reduced from of perfect participle", "..."
+      "146 DISTINCT VALUES", "indiquant une approximation", "roter Turmalin", "prefix of words with geographical meaning", "Präfix zur Bildung von Metallnamen", "an animal (eel, catfish?)", "prefix in names of goats", "ein Tier (Aal, Wels?)", "Form von ⲓⲣⲓ in den Dauerzeiten (besonders in Relativsätzen)", "..."
+    ]
+  },
+  "quote": {
+    "xml:lang": [
+      "de", "fr", "en"
+    ],
+    "STRINGS": [
+      "28320 DISTINCT VALUES", "market", "ausstrecken, erweitern", "verwundet werden, eine Wunde empfangen", "groß", "[error] to sue for s.th. (ἐνάγω is meant)", "Nile goose", "behaart", "Schulter", "..."
+    ]
+  },
+  "ref": {
+    "target": [
+      "677 DISTINCT VALUES", "#ϩⲁⲃⲟⲩⲉⲓ", "#ⲱⲡ", "#ⲟⲩⲱϩ", "#ⲥⲧⲉⲓⲱϩⲉ", "#ⲁⲧ-", "#ϩⲓⲃⲉ", "#ⲥⲱϫⲡ", "#ⲧⲛ-", "..."
+    ],
+    "type": [
+      "Greek", "greek_lemma::grl_lemma", "greek_lemma::grl_pos", "coptic_usage::cu_ID", "greek_lemma::grl_ID", "WCNde", "WCNae", "greek_lemma::grl_meaning", "greek_lemma::grl_ref"
+    ],
+    "xml:lang": [
+      "grc"
+    ],
+    "STRINGS": [
+      "17117 DISTINCT VALUES", "6689", "ἀγνεία", "3411", "6794", "Monat", "that by which anything is measured, measure, rule", "6394", "8958", "..."
     ]
   },
   "usg": {
@@ -159,12 +129,42 @@
       "geo"
     ],
     "STRINGS": [
-      "11 DISTINCT VALUES", "Ak", "V", "W", "..."
+      "11 DISTINCT VALUES", "A", "B", "S", "L", "F", "W", "V", "P", "..."
+    ]
+  },
+  "subc": {
+    "STRINGS": [
+      "55 DISTINCT VALUES", "Negativpräfix zur Bildung von Substantiven f.", "Qualitativ", "Status nominalis", "Futur I / II ⲛⲁ-", "Imperfekt ⲛⲉ(ⲣⲉ)-", "3. Pers.", "Frageadverb", "Aorist ϣⲁ(ⲣⲉ)-", "..."
     ]
   },
   "gen": {
     "STRINGS": [
-      "m.", "f."
+      "f.", "m."
+    ]
+  },
+  "pos": {
+    "STRINGS": [
+      "34 DISTINCT VALUES", "Partikel, enklitisch", "Selbst. Pers. Pron.", "?", "Satzkonverter", "Vb.", "Zahlzeichen", "Subst.", "Vb.?", "..."
+    ]
+  },
+  "number": {
+    "STRINGS": [
+      "sg.", "pl."
+    ]
+  },
+  "oRef": {
+    "STRINGS": [
+      "65 DISTINCT VALUES", "ⲧⲟⲩⲛⲉ ⲉⲓⲁⲧ⸗ ⲉⲃⲟⲗ", "ϯ ⲡ ⲟⲩⲟⲓ", "ϭⲓ ⲣⲱ⸗", "ⲉⲓⲁ ⲧⲟⲟⲧ⸗ ⲛⲥⲁ-", "ⲕⲧⲉ ⲉⲓⲁⲧ⸗", "ⲕⲁ ⲡ ⲙⲁ", "ⲧⲟⲩⲛ(ⲉ) ⲉⲓⲁⲧ⸗ ⲉⲃⲟⲗ", "ⲥⲙⲛ ⲉⲓⲁⲧ⸗ ⲉϫⲛ-", "..."
+    ]
+  },
+  "orth": {
+    "STRINGS": [
+      "15259 DISTINCT VALUES", "ⲉⲕⲱⲛⲟⲙⲟⲥ", "ⲁⲕⲟⲗⲟⲩⲑⲓⲁ", "ⲁⲩⲓⲛ", "ⲥⲧⲁⲇⲓⲟⲛ", "ⲕⲗⲉ", "ⲑⲉⲣϣ", "ⲥⲱⲙⲁⲧⲓⲟⲛ", "ⲟⲩⲁⲉⲓⲁⲛⲓⲛ", "..."
+    ]
+  },
+  "bibl": {
+    "STRINGS": [
+      "6416 DISTINCT VALUES", "CD 553a; CED 237; KoptHWb 304; ChLCS 75b", "CD 561b; KoptHWb 312", "KoptHWb 467; DELC 347b", "CD 840ab; KoptHWb 472; DELC 350ab", "CD 590b; CED 254; ChLCS 81b", "CD 720a; KoptHWb 395; ChLCS 96b", "CD 257b; CED 123; KoptHWb 528; ChLCS 36a", "CD 30a; ChLCS 7b", "..."
     ]
   }
 }

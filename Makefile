@@ -14,7 +14,7 @@ build: bible copticsite marcion kellia flashcards
 privileged: drive
 
 .PHONY: pollute
-pollute: bible_epub img_resize analyze
+pollute: bible_epub img_resize analysis
 
 .PHONY: redundant
 redundant: flashcards_crum_sahidic flashcards_crum flashcards_copticsite flashcards_bible
@@ -84,8 +84,8 @@ img_resize: FORCE
 	bash dictionary/marcion.sourceforge.net/resize.sh
 
 # KELLIA RULES
-analyze: FORCE
-	python dictionary/kellia.uni-goettingen.de/analyze.py
+analysis: FORCE
+	python dictionary/kellia.uni-goettingen.de/analysis.py
 
 kellia: FORCE
 	python dictionary/kellia.uni-goettingen.de/main.py
