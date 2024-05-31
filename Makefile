@@ -8,13 +8,13 @@ validate: precommit readme
 test: unittest
 
 .PHONY: build
-build: bible copticsite marcion flashcards
+build: bible copticsite marcion kellia flashcards
 
 .PHONY: privileged
 privileged: drive
 
 .PHONY: pollute
-pollute: bible_epub img_resize
+pollute: bible_epub img_resize analyze
 
 .PHONY: redundant
 redundant: flashcards_crum_sahidic flashcards_crum flashcards_copticsite flashcards_bible
@@ -82,6 +82,13 @@ img_resize: FORCE
 	# N.B. This is not included in `all`. It unnecessarily pollutes the repo
 	# directory.
 	bash dictionary/marcion.sourceforge.net/resize.sh
+
+# KELLIA RULES
+analyze: FORCE
+	python dictionary/kellia.uni-goettingen.de/analyze.py
+
+kellia: FORCE
+	python dictionary/kellia.uni-goettingen.de/main.py
 
 # FLASHCARD RULES
 TIMESTAMP = 1717009009
