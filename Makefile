@@ -91,9 +91,7 @@ kellia: FORCE
 	python dictionary/kellia.uni-goettingen.de/main.py
 
 # FLASHCARD RULES
-TIMESTAMP = 1717257600
-
-
+TIMESTAMP = 1717274018
 
 flashcards: FORCE
 	python flashcards/main.py \
