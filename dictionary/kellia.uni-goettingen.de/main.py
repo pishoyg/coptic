@@ -864,8 +864,8 @@ def main():
                 entry_id += len(cur)
 
         df = pd.DataFrame(rows)
-        # df["cdo"] = [cdo(entry) for entry in df["entry_xml_id"]]
-        #
+        df["cdo"] = [cdo(entry) for entry in df["entry_xml_id"]]
+
         # columns = [
         #     "entry_xml_id",
         #     "orthstring-pishoy",
@@ -908,6 +908,7 @@ def main():
             "ents",
             "entry_xml_id",
             "lemma_form_id",
+            "cdo",
         ]
         col_to_idx = {col_name: idx for idx, col_name in enumerate(columns)}
         columns = sorted(
