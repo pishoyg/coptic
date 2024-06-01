@@ -15,6 +15,17 @@ from collections import OrderedDict, defaultdict
 
 import pandas as pd
 
+CLEAN = set("ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ ")
+
+
+def strip(text: str) -> str:
+    return " ".join(text.split())
+
+
+def clean(text: str) -> str:
+    text = "".join(c for c in text if c in CLEAN)
+    return strip(text)
+
 
 class Reformat:
     def __init__(self):
@@ -56,9 +67,7 @@ class OrthString(Reformat):
 
     # For each entry, you add one grammar group, then several orth's per form.
     def add_gram_grp(self, gramGrp) -> None:
-        gram_string = " ".join(
-            re.sub(r"\s+", " ", child.text).strip() for child in gramGrp
-        )
+        gram_string = " ".join(strip(child.text) for child in gramGrp)
         self._last_gram_grp = gram_string
         self._amir += gram_string + "\n"
 
@@ -88,7 +97,7 @@ class EtymString(Reformat):
             greek_dict = OrderedDict()
             for child in etym:
                 if child.tag == "{http://www.tei-c.org/ns/1.0}note":
-                    self._amir += re.sub(r"\s+", " ", child.text).strip()
+                    self._amir += strip(child.text)
                 elif child.tag == "{http://www.tei-c.org/ns/1.0}ref":
                     if "type" in child.attrib and "target" in child.attrib:
                         self._amir += (
@@ -144,9 +153,7 @@ class EtymString(Reformat):
 
         for xr in xrs:
             for ref in xr:
-                ref_target = re.sub(
-                    "[^ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ ]", "", ref.attrib["target"]
-                ).strip()
+                ref_target = clean(ref.attrib["target"])
                 self._amir += (
                     xr.attrib["type"] + ". " + "#" + ref_target + "# " + ref.text + " "
                 )
@@ -159,12 +166,14 @@ class EtymString(Reformat):
 
 class Lang(Reformat):
     def __init__(self, name):
+        super().__init__()
         assert name in ["de", "en", "fr"]
         self._name = name
-        super().__init__()
+        self._pishoy = []
 
     def add_sense(self, sense_n, sense_id):
         self._amir += str(sense_n) + "@" + sense_id + "|"
+        self._last_sense = (sense_n, sense_id)
 
     def add_quote(self, quote) -> None:
         self._amir += quote.amir()
@@ -172,14 +181,7 @@ class Lang(Reformat):
     def add_definition(self, definition) -> None:
         if self._amir.endswith("|"):
             self._amir += "~~~"
-        definition_text = (
-            re.sub(
-                r" +",
-                " ",
-                definition.text.strip().replace("\n", ""),
-            )
-            + ";;;"
-        )
+        definition_text = strip(definition.text) + ";;;"
         self._amir += definition_text
 
     def add_bibl(self, bibl):
@@ -199,16 +201,19 @@ class Lang(Reformat):
             )
 
     def finalize(self):
-        self._amir = re.sub(r"\s+", r" ", self._amir).strip()
+        self._amir = strip(self._amir)
 
 
 class Quote(Reformat):
     def __init__(self):
         super().__init__()
         self.reset()
+        self._pishoy = []
 
     def add_quote(self, quote) -> None:
-        self._amir += re.sub(r" +", " ", quote.text.strip().replace("\n", ""))
+        text = strip(quote.text)
+        self._amir += text
+        self._pishoy.append(text)
 
     def reset(self) -> None:
         self._amir = "~~~"
@@ -218,6 +223,9 @@ class Quote(Reformat):
 
     def yes_definitions(self) -> None:
         self._amir += "; "
+
+    def pishoy(self) -> list[str]:
+        return self._pishoy
 
 
 def order_forms(formlist):
@@ -318,9 +326,8 @@ def process_entry(id, super_id, entry, entry_xml_id):
             if form.attrib["type"] == "lemma":
                 is_lemma = True
         orths = form.findall("{http://www.tei-c.org/ns/1.0}orth")
-        if form.text is not None:
-            if re.search(r"[^\s]", form.text) is not None:
-                orths.append(form)
+        if form.text is not None and form.text.strip():
+            orths.append(form)
         if len(orths) > 0:
             first_orth = orths[0]
             if is_lemma:
@@ -338,9 +345,8 @@ def process_entry(id, super_id, entry, entry_xml_id):
             if "deprecated" in form.attrib["change"]:
                 continue
         orths = form.findall("{http://www.tei-c.org/ns/1.0}orth")
-        if form.text is not None:
-            if re.search(r"[^\s]", form.text) is not None:
-                orths.append(form)
+        if form.text is not None and form.text.strip():
+            orths.append(form)
         if type(lemma).__name__ == "Element":
             if any([orth.text == lemma.text for orth in orths]):
                 first.append(form)
@@ -361,9 +367,8 @@ def process_entry(id, super_id, entry, entry_xml_id):
             if form.attrib["type"] == "lemma":
                 continue
         orths = form.findall("{http://www.tei-c.org/ns/1.0}orth")
-        if form.text is not None:
-            if re.search(r"[^\s]", form.text) is not None:
-                orths.append(form)
+        if form.text is not None and form.text.strip():
+            orths.append(form)
 
         orefs = form.findall("{http://www.tei-c.org/ns/1.0}oRef")
 
@@ -392,22 +397,15 @@ def process_entry(id, super_id, entry, entry_xml_id):
 
         geos_with_id = [g + "^^" + form_id for g in geos]
         for orth in orths:
-            remove_whitespace = re.search(r"[^\s].*[^\s]", orth.text)
-
-            if remove_whitespace is not None:
-                orth_text = remove_whitespace.group(0)
-
-            else:
-                orth_text = orth.text
+            orth_text = orth.text.strip()
 
             if len(orefs) > 0:
                 oref_text = orefs[0].text
-
             else:
                 oref_text = orth_text
 
-            search_text = re.sub("[^ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ ]", "", orth_text)
-            oref_text = re.sub("[^ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ ]", "", oref_text)
+            search_text = clean(orth_text)
+            oref_text = clean(oref_text)
 
             orthstring.add_orth_geo_id(orth_text, geos, form_id)
             for geo in geos_with_id:
