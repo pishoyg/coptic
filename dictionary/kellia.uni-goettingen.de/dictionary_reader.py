@@ -27,19 +27,57 @@ class Reformat:
         raise ValueError("Not implemented!")
 
 
+class Line:
+    def __init__(self, gram_grp, orth, geo, form_id):
+        self._gram_grp = gram_grp
+        self._orth = orth
+        self._geo = geo
+        self._form_id = form_id
+
+    def _to_table_cell(self, content: str) -> str:
+        return "<td>" + content + "</td>"
+
+    def pishoy_tr(self) -> str:
+        gram_grp = f'<span id="gram_grp"> {self._gram_grp} </span>'
+        orth = self._orth
+        geo = f'<span id="dialect">{self._geo}</span>'
+        form_id = f'<a href="https://coptic-dictionary.org/entry.cgi?tla={self._form_id}" id="form_id"> {self._form_id} </a>'
+
+        content = [orth, geo, gram_grp, form_id]
+        content = map(self._to_table_cell, content)
+        content = " ".join(content)
+        return "<tr>" + content + "</tr>"
+
+
 class OrthString(Reformat):
+    def __init__(self):
+        super().__init__()
+        self._pishoy = []
+
+    # For each entry, you add one grammar group, then several orth's per form.
     def add_gram_grp(self, gramGrp) -> None:
         gram_string = " ".join(
             re.sub(r"\s+", " ", child.text).strip() for child in gramGrp
         )
+        self._last_gram_grp = gram_string
         self._amir += gram_string + "\n"
 
     def add_orth_geo_id(self, orth_text, geos, form_id) -> None:
+        if not geos:
+            geos = ["S"]
+        for g in geos:
+            self._pishoy.append(Line(self._last_gram_grp, orth_text, g, form_id))
         geos = [g + "^^" + form_id for g in geos]
         for g in geos:
             self._amir += orth_text + "~" + g + "\n"
-        if not geos:
-            self._amir += orth_text + "~S^^" + form_id + "\n"
+
+    def pishoy(self):
+        out = []
+        out.append("<table>")
+        for line in self._pishoy:
+            out.append(line.pishoy_tr())
+        out.append("</table>")
+        return "".join(out)
 
 
 class EtymString(Reformat):
@@ -555,22 +593,22 @@ def process_entry(id, super_id, entry, entry_xml_id):
         ]:
             ents = ";".join(sorted(list(entity_types[row_lemma])))
 
-    row = (
-        id,
-        super_id,
-        orthstring.amir(),
-        pos_string,
-        de.amir(),
-        en.amir(),
-        fr.amir(),
-        etym_string.amir(),
-        ascii_orth,
-        search_string,
-        oref_string,
-        etym_string.greek_id(),
-        ents,
-    )
-    return row
+    return {
+        "id": id,
+        "super_id": super_id,
+        "orthstring": orthstring.amir(),
+        "pos_string": pos_string,
+        "de": de.amir(),
+        "en": en.amir(),
+        "fr": fr.amir(),
+        "etym_string": etym_string.amir(),
+        "ascii_orth": ascii_orth,
+        "search_string": search_string,
+        "oref_string": oref_string,
+        "greek_id": etym_string.greek_id(),
+        "ents": ents,
+        "orthstring-pishoy": orthstring.pishoy(),
+    }
 
 
 def process_super_entry(entry_id, super_id, super_entry):
@@ -594,15 +632,15 @@ def process_super_entry(entry_id, super_id, super_entry):
         else:
             lemma_form_id = ""
 
-        row = process_entry(entry_id, super_id, entry, entry_xml_id)
-        if row is None:
+        cur = process_entry(entry_id, super_id, entry, entry_xml_id)
+        if cur is None:
             continue
-        row_list.append(tuple(list(row) + [entry_xml_id, lemma_form_id]))
+        cur["lemma_form_id"] = lemma_form_id
+        cur["entry_xml_id"] = entry_xml_id
+        row_list.append(cur)
         entry_id += 1
 
-    entry_rows = tuple(row_list)
-
-    return entry_rows
+    return row_list
 
 
 def pos_map(pos, subc, orthstring):
@@ -769,7 +807,9 @@ def main():
                 cur = process_entry(entry_id, super_id, child, entry_xml_id)
                 if cur is None:
                     continue
-                rows.append(list(cur) + [entry_xml_id, lemma_form_id])
+                cur["lemma_form_id"] = lemma_form_id
+                cur["entry_xml_id"] = entry_xml_id
+                rows.append(cur)
                 super_id += 1
                 entry_id += 1
             elif child.tag == "{http://www.tei-c.org/ns/1.0}superEntry":
@@ -778,27 +818,26 @@ def main():
                 super_id += 1
                 entry_id += len(cur)
 
-        df = pd.DataFrame(
-            rows,
-            columns=[
-                "id",
-                "super_id",
-                "orthstring",
-                "pos_string",
-                "de",
-                "en",
-                "fr",
-                "etym_string",
-                "ascii_orth",
-                "search_string",
-                "oref_string",
-                "greek_id",
-                "ents",
-                "entry_xml_id",
-                "lemma_form_id",
-            ],
-        )
-        df.to_csv(output, sep="\t", index=False)
+        df = pd.DataFrame(rows)
+        columns = [
+            "id",
+            "super_id",
+            "orthstring",
+            "orthstring-pishoy",
+            "pos_string",
+            "de",
+            "en",
+            "fr",
+            "etym_string",
+            "ascii_orth",
+            "search_string",
+            "oref_string",
+            "greek_id",
+            "ents",
+            "entry_xml_id",
+            "lemma_form_id",
+        ]
+        df.to_csv(output, sep="\t", index=False, columns=columns)
         # TODO: Add network graphs.
 
 
