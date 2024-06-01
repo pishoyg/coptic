@@ -866,50 +866,29 @@ def main():
         df = pd.DataFrame(rows)
         df["cdo"] = [cdo(entry) for entry in df["entry_xml_id"]]
 
-        # columns = [
-        #     "entry_xml_id",
-        #     "orthstring-pishoy",
-        #     "de-pishoy",
-        #     "en-pishoy",
-        #     "fr-pishoy",
-        #     "cdo",
-        #     "lemma_form_id",
-        #     "id",
-        #     "super_id",
-        #     "orthstring",
-        #     "pos_string",
-        #     "de",
-        #     "en",
-        #     "fr",
-        #     "etym_string",
-        #     "ascii_orth",
-        #     "search_string",
-        #     "oref_string",
-        #     "greek_id",
-        #     "ents",
-        # ]
         columns = [
+            "entry_xml_id",
+            "orthstring-pishoy",
+            "de-pishoy",
+            "en-pishoy",
+            "fr-pishoy",
+            "cdo",
+            "lemma_form_id",
             "id",
             "super_id",
             "orthstring",
-            "orthstring-pishoy",
             "pos_string",
             "de",
-            "de-pishoy",
             "en",
-            "en-pishoy",
             "fr",
-            "fr-pishoy",
             "etym_string",
             "ascii_orth",
             "search_string",
             "oref_string",
             "greek_id",
             "ents",
-            "entry_xml_id",
-            "lemma_form_id",
-            "cdo",
         ]
+
         col_to_idx = {col_name: idx for idx, col_name in enumerate(columns)}
         columns = sorted(
             df.columns, key=lambda col_name: col_to_idx.get(col_name, 1000)
