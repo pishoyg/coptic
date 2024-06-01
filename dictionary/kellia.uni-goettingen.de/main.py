@@ -16,7 +16,8 @@ from collections import OrderedDict, defaultdict
 import pandas as pd
 
 CLEAN = set("ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ ")
-CRUM_RE = re.compile(r"(CD ([0-9]+[ab]?)-?[0-9]*[ab]?)")
+CRUM_RE = re.compile(r"\b(CD ([0-9]+[ab]?)-?[0-9]*[ab]?)\b")
+SENSE_CHILDREN = ["quote", "definition", "bibl", "ref", "xr"]
 
 
 def add_crum_links(ref_bibl: str) -> str:
@@ -91,7 +92,7 @@ class OrthString(Reformat):
 
     def pishoy(self):
         out = []
-        out.append("<table>")
+        out.append('<table id="orths">')
         for line in self._pishoy:
             out.append(line.pishoy_tr())
         out.append("</table>")
@@ -183,22 +184,29 @@ class Sense:
         for q in quotes:
             self._content.append(("quote", q))
 
+    def add(self, name, value):
+        assert name in SENSE_CHILDREN, name
+        self._content.append((name, value))
+
     def add_definition(self, definition):
-        self._content.append(("definition", definition))
+        self.add("definition", definition)
 
     def add_bibl(self, bibl):
-        self._content.append(("bibl", bibl))
+        self.add("bibl", bibl)
 
     def add_ref(self, ref):
-        self._content.append(("ref", ref))
+        self.add("ref", ref)
 
     def add_xr(self, xr):
-        self._content.append(("xr", xr))
+        self.add("xr", xr)
 
     def format(self, tag_name: str, tag_text: str) -> str:
         if tag_name == "bibl":
             return add_crum_links(tag_text)
         return tag_text
+
+    def identify(self):
+        return (self._sense_n, self._sense_id)
 
     def pishoy(self):
         fmt = '<span id="{id}">{text}</span>'
@@ -213,11 +221,24 @@ class Sense:
         )
         return "\n".join(content)
 
+    def subset(self, *names: str) -> list[str]:
+        assert all(n in SENSE_CHILDREN for n in names), names
+        return [pair for pair in self._content if pair[0] in names]
+
+    def explain(self, prefix: str = ""):
+        explanation = self.subset("quote", "definition")
+        if prefix:
+            return [(pair[0], prefix + pair[1]) for pair in explanation]
+        return explanation
+
+    def give_references(self):
+        return self.subset("bibl", "ref", "xr")
+
 
 class Lang(Reformat):
     def __init__(self, name):
         super().__init__()
-        assert name in ["de", "en", "fr"]
+        assert name in ["de", "en", "fr", "MERGED"]
         self._name = name
         self._pishoy = []
 
@@ -260,8 +281,31 @@ class Lang(Reformat):
     def finalize(self):
         self._amir = strip(self._amir)
 
+    def add(self, name, value):
+        self._last_sense().add(name, value)
+
     def pishoy(self):
         return "\n\n".join(sense.pishoy() for sense in self._pishoy)
+
+    def senses(self) -> list[Sense]:
+        return self._pishoy
+
+
+def merge_langs(de: Lang, en: Lang, fr: Lang):
+    merged = Lang("MERGED")
+    assert len(de.senses()) == len(en.senses()) == len(fr.senses())
+    for de_s, en_s, fr_s in zip(de.senses(), en.senses(), fr.senses()):
+        assert de_s.identify() == en_s.identify() == fr_s.identify()
+        merged.add_sense(*de_s.identify())
+        for row in en_s.explain("(En.) "):
+            merged.add(*row)
+        for row in de_s.explain("(De.) "):
+            merged.add(*row)
+        for row in fr_s.explain("(Fr.) "):
+            merged.add(*row)
+        for row in de_s.give_references():
+            merged.add(*row)
+    return merged
 
 
 class Quote(Reformat):
@@ -662,6 +706,7 @@ def process_entry(id, super_id, entry, entry_xml_id):
         "en-pishoy": en.pishoy(),
         "fr": fr.amir(),
         "fr-pishoy": fr.pishoy(),
+        "merged-pishoy": merge_langs(de, en, fr).pishoy(),
         "etym_string": etym_string.amir(),
         "ascii_orth": ascii_orth,
         "search_string": search_string,
@@ -885,6 +930,7 @@ def main():
         columns = [
             "entry_xml_id",
             "orthstring-pishoy",
+            "merged-pishoy",
             "de-pishoy",
             "en-pishoy",
             "fr-pishoy",
