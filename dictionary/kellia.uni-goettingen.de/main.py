@@ -185,7 +185,7 @@ class Sense:
             self._content.append(("quote", q))
 
     def add(self, name, value):
-        assert name in SENSE_CHILDREN, name
+        assert name in SENSE_CHILDREN or (not name and not value)
         self._content.append((name, value))
 
     def add_definition(self, definition):
@@ -216,7 +216,11 @@ class Sense:
             + fmt.format(id="sense_id", text=self._sense_id),
         ]
         content.extend(
-            fmt.format(id=pair[0], text=self.format(pair[0], pair[1]))
+            (
+                fmt.format(id=pair[0], text=self.format(pair[0], pair[1]))
+                if (pair[0] or pair[1])
+                else ""
+            )
             for pair in self._content
         )
         return "\n".join(content)
@@ -297,12 +301,15 @@ def merge_langs(de: Lang, en: Lang, fr: Lang):
     for de_s, en_s, fr_s in zip(de.senses(), en.senses(), fr.senses()):
         assert de_s.identify() == en_s.identify() == fr_s.identify()
         merged.add_sense(*de_s.identify())
-        for row in en_s.explain("(En.) "):
+        for row in en_s.explain():
             merged.add(*row)
-        for row in de_s.explain("(De.) "):
+        merged.add("", "")
+        for row in de_s.explain():
             merged.add(*row)
-        for row in fr_s.explain("(Fr.) "):
+        merged.add("", "")
+        for row in fr_s.explain():
             merged.add(*row)
+        merged.add("", "")
         for row in de_s.give_references():
             merged.add(*row)
     return merged
