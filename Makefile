@@ -17,7 +17,7 @@ privileged: drive
 pollute: bible_epub img_resize analysis
 
 .PHONY: redundant
-redundant: flashcards_crum_sahidic flashcards_crum flashcards_copticsite flashcards_bible
+redundant: flashcards_crum_sahidic flashcards_crum flashcards_copticsite flashcards_bible flashcards_kellia_comprehensive flashcards_kellia
 
 .PHONY: verify
 verify: verify_identical_flashcards verify_identical_flashcards_crum_sahidic
@@ -107,22 +107,34 @@ flashcards_crum_sahidic: FORCE
 		--output "flashcards/data/crum_sahidic.apkg" \
 		--timestamp "${TIMESTAMP}"
 
-flashcards_copticsite: FORCE
-	python flashcards/main.py \
-		--decks "copticsite.com" \
-		--output "flashcards/data/copticsite.apkg" \
-		--timestamp "${TIMESTAMP}"
-
 flashcards_crum: FORCE
 	python flashcards/main.py \
 		--decks "A Coptic Dictionary::Bohairic" "A Coptic Dictionary::Sahidic" "A Coptic Dictionary::Bohairic / Sahidic" "A Coptic Dictionary::All Dialects" \
 		--output "flashcards/data/crum.apkg" \
 		--timestamp "${TIMESTAMP}"
 
+flashcards_copticsite: FORCE
+	python flashcards/main.py \
+		--decks "copticsite.com" \
+		--output "flashcards/data/copticsite.apkg" \
+		--timestamp "${TIMESTAMP}"
+
 flashcards_bible: FORCE
 	python flashcards/main.py \
 		--decks "Bible::Bohairic" "Bible::Sahidic" "Bible::All Dialects" \
 		--output "flashcards/data/bible.apkg" \
+		--timestamp "${TIMESTAMP}"
+
+flashcards_kellia: FORCE
+	python flashcards/main.py \
+		--decks "KELLIA::Comprehensive" "KELLIA::Coptic" "KELLIA::Greek"\
+		--output "flashcards/data/kellia.apkg" \
+		--timestamp "${TIMESTAMP}"
+
+flashcards_kellia_comprehensive: FORCE
+	python flashcards/main.py \
+		--decks "KELLIA::Comprehensive" \
+		--output "flashcards/data/kellia_comprehensive.apkg" \
 		--timestamp "${TIMESTAMP}"
 
 drive: FORCE

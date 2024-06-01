@@ -294,6 +294,45 @@ def copticsite_com(deck_name: str, deck_id: int):
     )
 
 
+@type_enforced.Enforcer
+def kellia(deck_name: str, deck_id: int):
+    @type_enforced.Enforcer
+    def tsv_col(col_name: str) -> field.tsv:
+        return field.tsv(
+            "dictionary/kellia.uni-goettingen.de/data/output/comprehensive.tsv",
+            col_name,
+        )
+
+    return deck.deck(
+        deck_name=deck_name,
+        deck_id=deck_id,
+        deck_description="https://github.com/pishoyg/coptic/.\n" "pishoybg@gmail.com.",
+        css=".card { font-size: 18px; }",
+        # N.B. The name is a protected field, although it is unused in this case
+        # because we generate a single deck, thus the deck name is a constant for
+        # all notes.
+        name=None,
+        # N.B. The key is a protected field. Do not change unless you know what
+        # you're doing.
+        key=tsv_col("entry_xml_id"),
+        front=tsv_col("orthstring-pishoy"),
+        back=field.cat(
+            field.aon(
+                tsv_col("de-pishoy"),
+                "<hr>",
+            ),
+            field.aon(
+                tsv_col("en-pishoy"),
+                "<hr>",
+            ),
+            field.aon(
+                tsv_col("fr-pishoy"),
+                "<hr>",
+            ),
+        ),
+    )
+
+
 # N.B. The deck IDs are protected fields. They are used as database keys for the
 # decks. Do NOT change them!
 #
@@ -325,6 +364,7 @@ BIBLE_BOHAIRIC = "Bible::Bohairic"
 BIBLE_SAHIDIC = "Bible::Sahidic"
 BIBLE_ALL = "Bible::All Dialects"
 COPTICSITE_NAME = "copticsite.com"
+KELLIA_COMPREHENSIVE = "KELLIA::Comprehensive"
 
 LAMBDAS = {
     CRUM_BOHAIRIC: lambda deck_name: crum(
@@ -352,6 +392,7 @@ LAMBDAS = {
         [lang for lang in BIBLE_LANGUAGES if lang != "English" and lang != "Greek"],
     ),
     COPTICSITE_NAME: lambda deck_name: copticsite_com(deck_name, 1284010385),
+    KELLIA_COMPREHENSIVE: lambda deck_name: kellia(deck_name, 1284010391),
 }
 
 
