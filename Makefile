@@ -127,7 +127,7 @@ flashcards_bible: FORCE
 
 flashcards_kellia: FORCE
 	python flashcards/main.py \
-		--decks "KELLIA::Comprehensive" "KELLIA::Coptic" "KELLIA::Greek"\
+		--decks "KELLIA::Comprehensive" "KELLIA::Egyptian" "KELLIA::Greek"\
 		--output "flashcards/data/kellia.apkg" \
 		--timestamp "${TIMESTAMP}"
 

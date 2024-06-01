@@ -295,11 +295,11 @@ def copticsite_com(deck_name: str, deck_id: int):
 
 
 @type_enforced.Enforcer
-def kellia(deck_name: str, deck_id: int):
+def kellia(deck_name: str, deck_id: int, tsv_basename: str):
     @type_enforced.Enforcer
     def tsv_col(col_name: str) -> field.tsv:
         return field.tsv(
-            "dictionary/kellia.uni-goettingen.de/data/output/comprehensive.tsv",
+            f"dictionary/kellia.uni-goettingen.de/data/output/{tsv_basename}.tsv",
             col_name,
         )
 
@@ -365,6 +365,8 @@ BIBLE_SAHIDIC = "Bible::Sahidic"
 BIBLE_ALL = "Bible::All Dialects"
 COPTICSITE_NAME = "copticsite.com"
 KELLIA_COMPREHENSIVE = "KELLIA::Comprehensive"
+KELLIA_EGYPTIAN = "KELLIA::Egyptian"
+KELLIA_GREEK = "KELLIA::Greek"
 
 LAMBDAS = {
     CRUM_BOHAIRIC: lambda deck_name: crum(
@@ -392,7 +394,11 @@ LAMBDAS = {
         [lang for lang in BIBLE_LANGUAGES if lang != "English" and lang != "Greek"],
     ),
     COPTICSITE_NAME: lambda deck_name: copticsite_com(deck_name, 1284010385),
-    KELLIA_COMPREHENSIVE: lambda deck_name: kellia(deck_name, 1284010391),
+    KELLIA_COMPREHENSIVE: lambda deck_name: kellia(
+        deck_name, 1284010391, "comprehensive"
+    ),
+    KELLIA_EGYPTIAN: lambda deck_name: kellia(deck_name, 1284010392, "egyptian"),
+    KELLIA_GREEK: lambda deck_name: kellia(deck_name, 1284010393, "greek"),
 }
 
 
