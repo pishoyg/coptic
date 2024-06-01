@@ -316,9 +316,12 @@ def kellia(deck_name: str, deck_id: int, tsv_basename: str):
         "#sense_id { display: none; }"
         "#quote { }"
         "#definition { }"
-        "#bibl { color: gray; }"
+        "#bibl { color: gray; float: right; text-align: right; min-width: 100px; }"
         "#ref { color: gray; }"
-        "#xr { color: gray; }",
+        "#meaning { min-width: 220px; }"
+        "#ref_xr { }"
+        "#xr { color: gray; }"
+        "#lang { color: gray }",
         # N.B. The name is a protected field, although it is unused in this case
         # because we generate a single deck, thus the deck name is a constant for
         # all notes.

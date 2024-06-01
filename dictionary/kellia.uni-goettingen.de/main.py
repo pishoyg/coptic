@@ -201,29 +201,50 @@ class Sense:
         self.add("xr", xr)
 
     def format(self, tag_name: str, tag_text: str) -> str:
+        if not tag_name and not tag_text:
+            return ""
+        fmt = '<span id="{id}">{text}</span>'
         if tag_name == "bibl":
-            return add_crum_links(tag_text)
-        return tag_text
+            split = tag_text.split("; ")
+            split = [s.strip() for s in split]
+            split = list(filter(None, split))
+            tag_text = "\n".join(split)
+            tag_text = add_crum_links(tag_text)
+            return tag_text
+        return fmt.format(id=tag_name, text=tag_text)
 
     def identify(self):
         return (self._sense_n, self._sense_id)
 
     def pishoy(self):
-        fmt = '<span id="{id}">{text}</span>'
-        content = [
-            fmt.format(id="sense_n", text=self._sense_n)
-            + " "
-            + fmt.format(id="sense_id", text=self._sense_id),
-        ]
+        content = []
         content.extend(
-            (
-                fmt.format(id=pair[0], text=self.format(pair[0], pair[1]))
-                if (pair[0] or pair[1])
-                else ""
-            )
-            for pair in self._content
+            [
+                f"<!--sense_number:{self._sense_n}, sense_id:{self._sense_id}-->",
+                "<tr>",
+                '<td id="meaning">',
+                "\n".join(
+                    self.format(*pair) for pair in self.subset("quote", "definition")
+                ),
+                "</td>",
+                '<td id="bibl">',
+                "\n".join(self.format(*pair) for pair in self.subset("bibl")),
+                "</td>",
+                "</tr>",
+            ]
         )
-        content = "\n".join(content)
+        ref_xr = self.subset("ref", "xr")
+        if ref_xr:
+            content.extend(
+                [
+                    "<tr>",
+                    '<td id="ref_xr" colspan="2">',
+                    "\n".join(self.format(*pair) for pair in ref_xr),
+                    "</td>",
+                    "</tr>",
+                ]
+            )
+        content = "".join(content)
         while True:
             new_content = content.replace("\n\n\n", "\n\n")
             if new_content == content:
@@ -237,8 +258,10 @@ class Sense:
 
     def explain(self, prefix: str = ""):
         explanation = self.subset("quote", "definition")
+        if not explanation:
+            return explanation
         if prefix:
-            return [(pair[0], prefix + pair[1]) for pair in explanation]
+            explanation[0] = (explanation[0][0], prefix + explanation[0][1])
         return explanation
 
     def give_references(self):
@@ -295,7 +318,19 @@ class Lang(Reformat):
         self._last_sense().add(name, value)
 
     def pishoy(self):
-        return "\n\n".join(sense.pishoy() for sense in self._pishoy)
+        out = []
+        out.extend(
+            [
+                '<table id="senses">',
+                "<colgroup>",
+                "<col>",
+                "<col>",
+                "</colgroup>",
+            ]
+        )
+        out.extend(sense.pishoy() for sense in self._pishoy)
+        out.append("</table>")
+        return "".join(out)
 
     def senses(self) -> list[Sense]:
         return self._pishoy
@@ -307,13 +342,13 @@ def merge_langs(de: Lang, en: Lang, fr: Lang):
     for de_s, en_s, fr_s in zip(de.senses(), en.senses(), fr.senses()):
         assert de_s.identify() == en_s.identify() == fr_s.identify()
         merged.add_sense(*de_s.identify())
-        for row in en_s.explain():
+        for row in en_s.explain('<span id="lang">(En.) </span>'):
             merged.add(*row)
         merged.add("", "")
-        for row in de_s.explain():
+        for row in de_s.explain('<span id="lang">(De.) </span>'):
             merged.add(*row)
         merged.add("", "")
-        for row in fr_s.explain():
+        for row in fr_s.explain('<span id="lang">(Fr.) </span>'):
             merged.add(*row)
         merged.add("", "")
         for row in de_s.give_references():
