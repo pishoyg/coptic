@@ -395,8 +395,24 @@ into the repo.
 
 ### Content TODO's
 
-1. **Prettify the flashcards from [KELLIA](
+1. **Prettify and expand the flashcards from [KELLIA](
 https://coptic-dictionary.org/).** (7-8 hours)
+
+   More or less, your outcome should resemble the search results page on
+   coptic-dictionary.org.
+
+   Some of this data is present in the XML, such as the following:
+
+   - The `etym_string` column has worthwhile information.
+   - The Scriptorium tag could be useful.
+   - The entity types aren't substantially populated yet, but they might be
+   nice to have.
+   - Make sure all IDs are represented in comments.
+
+   Other data may require interactions with Scriptorium tools.
+
+   Look at [https://github.com/KELLIA/dictionary/blob/master/entry.cgi](
+   https://github.com/KELLIA/dictionary/blob/master/entry.cgi) for inspiration.
 
 1. **Incorporate [Scriptorium](https://copticscriptorium.org/)'s data and NLP
 tools.** (50 hours, delegate)
