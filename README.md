@@ -403,8 +403,6 @@ into the repo.
 
 ### Content TODO's
 
-1. **Dope Marcion's data into KELLIA's dictionary.** (50+ hours)
-
 1. **Prettify and expand the flashcards from [KELLIA](
 https://coptic-dictionary.org/).** (7-8 hours)
 
