@@ -193,18 +193,18 @@ suggestions or questions, or data! :)
    learning process, and it will save learners the time that they have to spend
    on looking up the obscure vocabulary or unfamiliar terms.
 
-1. **Link Scriptorium lemmas to Marcion Keys.** (100 hours, delegate)
+1. **Link KELLIA lemmas to Marcion Keys.** (100 hours, delegate)
 
    This may make it possible to include the meaning, literature citations, and
    perhaps other data.
 
-   It might also make it possible to expand Scriptorium's dictionary.
+   It might also make it possible to expand KELLIA's dictionary.
 
 1. Add a meanings that would be displayed on top before Crum's translation.
    Some of Crum's translations are obscure or archaic, and some are outdated
    because we understand the meaning of the word better than he did back then.
    We could use St. Shenouda's Simple Bohairic English dictionary for that, or
-   Scriptorium's dictionary.
+   KELLIA's dictionary.
    (low-priority)
 
 1. Collect more explanatory notes. (low-priority)
@@ -234,10 +234,6 @@ suggestions or questions, or data! :)
 1. Add Moawad Dawoud's Arabic translations.
 
 1. Add Moawad Dawoud's standardized spellings. (low-priority)
-
-1. Copy the Greek loanwords from Moawad into a new flashcard deck.
-   (low-priority, especially if you incorporate Scriptorium's data, which you
-   must do anyway.)
 
 ### Audio
 
@@ -399,8 +395,8 @@ into the repo.
 
 ### Content TODO's
 
-1. **Incorporate data from [Coptic Dictionary Online](
-https://coptic-dictionary.org/).** (7-8 hours, delegated)
+1. **Prettify the flashcards from [KELLIA](
+https://coptic-dictionary.org/).** (7-8 hours)
 
 1. **Incorporate [Scriptorium](https://copticscriptorium.org/)'s data and NLP
 tools.** (50 hours, delegate)
