@@ -223,7 +223,13 @@ class Sense:
             )
             for pair in self._content
         )
-        return "\n".join(content)
+        content = "\n".join(content)
+        while True:
+            new_content = content.replace("\n\n\n", "\n\n")
+            if new_content == content:
+                break
+            content = new_content
+        return content
 
     def subset(self, *names: str) -> list[str]:
         assert all(n in SENSE_CHILDREN for n in names), names
