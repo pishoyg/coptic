@@ -329,15 +329,7 @@ def kellia(deck_name: str, deck_id: int, tsv_basename: str):
         front=tsv_col("orthstring-pishoy"),
         back=field.cat(
             field.aon(
-                tsv_col("en-pishoy"),
-                "<hr>",
-            ),
-            field.aon(
-                tsv_col("de-pishoy"),
-                "<hr>",
-            ),
-            field.aon(
-                tsv_col("fr-pishoy"),
+                tsv_col("merged-pishoy"),
                 "<hr>",
             ),
             field.aon(
