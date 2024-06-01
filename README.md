@@ -393,11 +393,24 @@ into the repo.
    - The possibility to sync notes selectively. (See the note about exporting
    accurate timestamps below.)
 
+1. **Fix the model sync issues.**
+
+   In the current design, updating the CSS of a deck doesn't get reflected when
+   the package is imported. The notes retain the old CSS.
+
+   Changing the model ID results in synchronization difficulties due to the
+   note type having changed.
+
 ### Content TODO's
+
+1. **Dope Marcion's data into KELLIA's dictionary.** (50+ hours)
 
 1. **Prettify and expand the flashcards from [KELLIA](
 https://coptic-dictionary.org/).** (7-8 hours)
 
+   1. Group `geo`s by `orth` and `gram_grp`.
+   1. Eliminate successive lines between senses.
+   
    More or less, your outcome should resemble the search results page on
    [coptic-dictionary.org](https://coptic-dictionary.org/).
 
@@ -413,6 +426,8 @@ https://coptic-dictionary.org/).** (7-8 hours)
 
    Look at [https://github.com/KELLIA/dictionary/blob/master/entry.cgi](
    https://github.com/KELLIA/dictionary/blob/master/entry.cgi) for inspiration.
+
+1. **Create dialect-oriented versions of the KELLIA decks.** (7-8 hours)
 
 1. **Incorporate [Scriptorium](https://copticscriptorium.org/)'s data and NLP
 tools.** (50 hours, delegate)

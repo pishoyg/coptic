@@ -309,8 +309,8 @@ def kellia(deck_name: str, deck_id: int, tsv_basename: str):
         deck_description="https://github.com/pishoyg/coptic/.\n" "pishoybg@gmail.com.",
         css=".card { font-size: 18px; }"
         ".table { display: block; width: 100%; text-align: center; }"
-        "#orth { min-width: 100px; }"
-        "#geo { color: darkred; min-width: 40px; }"
+        "#orth { min-width: 120px; }"
+        "#geo { text-align: center; color: darkred; min-width: 40px; }"
         "#gram_grp { color: gray; font-style: italic; }"
         "#sense_n { display: none; }"
         "#sense_id { display: none; }"
