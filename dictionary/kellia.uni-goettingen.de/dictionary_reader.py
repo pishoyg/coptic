@@ -164,6 +164,39 @@ class EtymString(Reformat):
     pass
 
 
+class Sense:
+    def __init__(self, sense_n, sense_id) -> None:
+        self._sense_n = sense_n
+        self._sense_id = sense_id
+        self._content = []
+
+    def extend_quotes(self, quotes: list[str]) -> None:
+        for q in quotes:
+            self._content.append(("quote", q))
+
+    def add_definition(self, definition):
+        self._content.append(("definition", definition))
+
+    def add_bibl(self, bibl):
+        self._content.append(("bibl", bibl))
+
+    def add_ref(self, ref):
+        self._content.append(("ref", ref))
+
+    def add_xr(self, xr):
+        self._content.append(("xr", xr))
+
+    def pishoy(self):
+        fmt = '<span id="{id}">{text}</span>'
+        content = [
+            fmt.format(id="sense_n", text=self._sense_n)
+            + " "
+            + fmt.format(id="sense_id", text=self._sense_id),
+        ]
+        content.extend(fmt.format(id=pair[0], text=pair[1]) for pair in self._content)
+        return "\n".join(content)
+
+
 class Lang(Reformat):
     def __init__(self, name):
         super().__init__()
@@ -173,12 +206,17 @@ class Lang(Reformat):
 
     def add_sense(self, sense_n, sense_id):
         self._amir += str(sense_n) + "@" + sense_id + "|"
-        self._last_sense = (sense_n, sense_id)
+        self._pishoy.append(Sense(sense_n, sense_id))
+
+    def _last_sense(self) -> Sense:
+        return self._pishoy[-1]
 
     def add_quote(self, quote) -> None:
         self._amir += quote.amir()
+        self._last_sense().extend_quotes(quote.pishoy())
 
     def add_definition(self, definition) -> None:
+        self._last_sense().add_definition(strip(definition.text))
         if self._amir.endswith("|"):
             self._amir += "~~~"
         definition_text = strip(definition.text) + ";;;"
@@ -190,25 +228,29 @@ class Lang(Reformat):
         if not bibl.text:
             return
         self._amir += bibl.text + " "
+        self._last_sense().add_bibl(bibl.text)
 
     def add_ref(self, ref):
+        self._last_sense().add_ref(ref.text)
         self._amir += "ref: " + ref.text + " "
 
     def add_xr(self, xr):
         for ref in xr:
-            self._amir += (
-                xr.tag[29:] + ". " + ref.attrib["target"] + "# " + ref.text + " "
-            )
+            text = xr.tag[29:] + ". " + ref.attrib["target"] + "# " + ref.text
+            self._amir += text + " "
+            self._last_sense().add_xr(text)
 
     def finalize(self):
         self._amir = strip(self._amir)
+
+    def pishoy(self):
+        return "\n\n".join(sense.pishoy() for sense in self._pishoy)
 
 
 class Quote(Reformat):
     def __init__(self):
         super().__init__()
         self.reset()
-        self._pishoy = []
 
     def add_quote(self, quote) -> None:
         text = strip(quote.text)
@@ -217,6 +259,7 @@ class Quote(Reformat):
 
     def reset(self) -> None:
         self._amir = "~~~"
+        self._pishoy = []
 
     def no_definitions(self) -> None:
         self._amir += ";;;"
@@ -597,8 +640,11 @@ def process_entry(id, super_id, entry, entry_xml_id):
         "orthstring": orthstring.amir(),
         "pos_string": pos_string,
         "de": de.amir(),
+        "de-pishoy": de.pishoy(),
         "en": en.amir(),
+        "en-pishoy": en.pishoy(),
         "fr": fr.amir(),
+        "fr-pishoy": fr.pishoy(),
         "etym_string": etym_string.amir(),
         "ascii_orth": ascii_orth,
         "search_string": search_string,
@@ -824,8 +870,11 @@ def main():
             "orthstring-pishoy",
             "pos_string",
             "de",
+            "de-pishoy",
             "en",
+            "en-pishoy",
             "fr",
+            "fr-pishoy",
             "etym_string",
             "ascii_orth",
             "search_string",
