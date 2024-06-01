@@ -16,6 +16,14 @@ from collections import OrderedDict, defaultdict
 import pandas as pd
 
 CLEAN = set("ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ ")
+CRUM_RE = re.compile(r"(CD ([0-9]+[ab]?)-?[0-9]*[ab]?)")
+
+
+def add_crum_links(ref_bibl: str) -> str:
+    return CRUM_RE.sub(
+        r'<a href="https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=\2">\1</a>',
+        ref_bibl,
+    )
 
 
 def strip(text: str) -> str:
@@ -187,6 +195,11 @@ class Sense:
     def add_xr(self, xr):
         self._content.append(("xr", xr))
 
+    def format(self, tag_name: str, tag_text: str) -> str:
+        if tag_name == "bibl":
+            return add_crum_links(tag_text)
+        return tag_text
+
     def pishoy(self):
         fmt = '<span id="{id}">{text}</span>'
         content = [
@@ -194,7 +207,10 @@ class Sense:
             + " "
             + fmt.format(id="sense_id", text=self._sense_id),
         ]
-        content.extend(fmt.format(id=pair[0], text=pair[1]) for pair in self._content)
+        content.extend(
+            fmt.format(id=pair[0], text=self.format(pair[0], pair[1]))
+            for pair in self._content
+        )
         return "\n".join(content)
 
 
