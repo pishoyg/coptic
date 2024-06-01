@@ -399,7 +399,7 @@ into the repo.
 https://coptic-dictionary.org/).** (7-8 hours)
 
    More or less, your outcome should resemble the search results page on
-   coptic-dictionary.org.
+   [coptic-dictionary.org](https://coptic-dictionary.org/).
 
    Some of this data is present in the XML, such as the following:
 
