@@ -58,7 +58,7 @@ class Line:
         self._form_id = form_id
 
     def pishoy_tr(self) -> str:
-        fmt = '<td><span id="{id}">{text}</span></td>'
+        fmt = '<td id="{id}">{text}</td>'
         content = [
             ("orth", self._orth),
             ("geo", self._geo),
