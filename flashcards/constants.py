@@ -307,7 +307,18 @@ def kellia(deck_name: str, deck_id: int, tsv_basename: str):
         deck_name=deck_name,
         deck_id=deck_id,
         deck_description="https://github.com/pishoyg/coptic/.\n" "pishoybg@gmail.com.",
-        css=".card { font-size: 18px; }",
+        css=".card { font-size: 18px; }"
+        ".table { width: 100%; }"
+        "#orth { min-width: 100px; }"
+        "#geo { text-align: center; color: darkred; }"
+        "#gram_grp { text-align: center; color:gray; font-style: italic; }"
+        "#sense_n { display: none; }"
+        "#sense_id { display: none; }"
+        "#quote { }"
+        "#definition { }"
+        "#bibl { color: gray; }"
+        "#ref { color: gray; }"
+        "#xr { color: gray; }",
         # N.B. The name is a protected field, although it is unused in this case
         # because we generate a single deck, thus the deck name is a constant for
         # all notes.
@@ -318,11 +329,11 @@ def kellia(deck_name: str, deck_id: int, tsv_basename: str):
         front=tsv_col("orthstring-pishoy"),
         back=field.cat(
             field.aon(
-                tsv_col("de-pishoy"),
+                tsv_col("en-pishoy"),
                 "<hr>",
             ),
             field.aon(
-                tsv_col("en-pishoy"),
+                tsv_col("de-pishoy"),
                 "<hr>",
             ),
             field.aon(
@@ -330,7 +341,12 @@ def kellia(deck_name: str, deck_id: int, tsv_basename: str):
                 "<hr>",
             ),
             field.aon(
+                "<b>Coptic Dictionary Online: </b>",
+                '<a href="',
                 tsv_col("cdo"),
+                '">',
+                tsv_col("entry_xml_id"),
+                "</a>",
             ),
         ),
     )
