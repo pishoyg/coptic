@@ -329,6 +329,9 @@ def kellia(deck_name: str, deck_id: int, tsv_basename: str):
                 tsv_col("fr-pishoy"),
                 "<hr>",
             ),
+            field.aon(
+                tsv_col("cdo"),
+            ),
         ),
     )
 
