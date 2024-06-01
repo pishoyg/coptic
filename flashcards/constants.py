@@ -310,8 +310,8 @@ def kellia(deck_name: str, deck_id: int, tsv_basename: str):
         css=".card { font-size: 18px; }"
         ".table { display: block; width: 100%; text-align: center; }"
         "#orth { min-width: 100px; }"
-        "#geo { text-align: center; color: darkred; }"
-        "#gram_grp { text-align: center; color: gray; font-style: italic; }"
+        "#geo { color: darkred; min-width: 40px; }"
+        "#gram_grp { color: gray; font-style: italic; }"
         "#sense_n { display: none; }"
         "#sense_id { display: none; }"
         "#quote { }"
@@ -333,7 +333,7 @@ def kellia(deck_name: str, deck_id: int, tsv_basename: str):
                 "<hr>",
             ),
             field.aon(
-                "<b>Coptic Dictionary Online: </b>",
+                "Coptic Dictionary Online: ",
                 '<a href="',
                 tsv_col("cdo"),
                 '">',
