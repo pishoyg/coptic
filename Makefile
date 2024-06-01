@@ -90,9 +90,6 @@ analysis: FORCE
 kellia: FORCE
 	python dictionary/kellia.uni-goettingen.de/main.py
 
-coptic_dictionary_online: FORCE
-	python dictionary/kellia.uni-goettingen.de/dictionary_reader.py
-
 # FLASHCARD RULES
 TIMESTAMP = 1717009009
 
