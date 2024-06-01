@@ -1,11 +1,14 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+# This was forked from:
+# https://github.com/KELLIA/dictionary/blob/master/utils/dictionary_reader.py
+# The original file was snapshotted on 2024.06.01.
+# Edits made to the original file beyond that data should be incorporated.
+# View history at:
+# https://github.com/KELLIA/dictionary/commits/master/utils/dictionary_reader.py
 
 import glob
 import io
 import os
 import re
-import sys
 import xml.etree.ElementTree as ET
 from argparse import ArgumentParser
 from collections import OrderedDict, defaultdict
@@ -13,50 +16,170 @@ from collections import OrderedDict, defaultdict
 import pandas as pd
 
 
-def check_chars(word):
-    """
-    was used to check for inconsistencies/unexpected characters in the xml; not currently called anywhere
-    """
-    mapping = {
-        "ⲁ": "A",
-        "ⲃ": "B",
-        "ⲅ": "C",
-        "ⲇ": "D",
-        "ⲉ": "E",
-        "ⲍ": "F",
-        "ⲏ": "G",
-        "ⲑ": "H",
-        "ⲓ": "I",
-        "Ⲓ": "I",
-        "ⲕ": "J",
-        "ⲹ": "J",
-        "ⲗ": "K",
-        "ⲙ": "L",
-        "ⲛ": "M",
-        "ⲝ": "N",
-        "ⲟ": "O",
-        "ⲡ": "P",
-        "ⲣ": "Q",
-        "ⲥ": "R",
-        "ⲧ": "S",
-        "ⲩ": "T",
-        "ⲫ": "U",
-        "ⲭ": "V",
-        "ⲯ": "W",
-        "ⲱ": "X",
-        "ϣ": "Y",
-        "ϥ": "Z",
-        "ⳉ": "a",
-        "ϧ": "b",
-        "ϩ": "c",
-        "ϫ": "d",
-        "ϭ": "e",
-        "ϯ": "SI",
-    }
-    expected_chars = "()[]?,.*/ -–	 ︤̅ˉ̣︦̄̈ ⸗= o"
-    for char in word:
-        if char not in mapping and char not in expected_chars:
-            print(word + "\t" + char)
+class Reformat:
+    def __init__(self):
+        self._amir = ""
+
+    def amir(self):
+        return self._amir
+
+    def pishoy(self):
+        raise ValueError("Not implemented!")
+
+
+class OrthString(Reformat):
+    def add_gram_grp(self, gramGrp) -> None:
+        gram_string = " ".join(
+            re.sub(r"\s+", " ", child.text).strip() for child in gramGrp
+        )
+        self._amir += gram_string + "\n"
+
+    def add_orth_geo_id(self, orth_text, geos, form_id) -> None:
+        geos = [g + "^^" + form_id for g in geos]
+        for g in geos:
+            self._amir += orth_text + "~" + g + "\n"
+        if not geos:
+            self._amir += orth_text + "~S^^" + form_id + "\n"
+
+
+class EtymString(Reformat):
+    def __init__(self, etym, xrs) -> None:
+        super().__init__()
+        self._greek_id = ""
+        if etym is not None:
+            greek_dict = OrderedDict()
+            for child in etym:
+                if child.tag == "{http://www.tei-c.org/ns/1.0}note":
+                    self._amir += re.sub(r"\s+", " ", child.text).strip()
+                elif child.tag == "{http://www.tei-c.org/ns/1.0}ref":
+                    if "type" in child.attrib and "target" in child.attrib:
+                        self._amir += (
+                            child.attrib["type"] + ": " + child.attrib["target"] + " "
+                        )
+                    elif "targetLang" in child.attrib:
+                        self._amir += (
+                            child.attrib["targetLang"] + ": " + child.text + " "
+                        )
+                    elif "type" in child.attrib:
+                        if "greek" in child.attrib["type"]:
+                            greek_dict[child.attrib["type"]] = child.text
+                elif child.tag == "{http://www.tei-c.org/ns/1.0}xr":
+                    for ref in child:
+                        self._amir += (
+                            child.attrib["type"]
+                            + ". "
+                            + ref.attrib["target"]
+                            + "# "
+                            + ref.text
+                            + " "
+                        )
+            if len(greek_dict) > 0:
+                greek_parts = []
+                self._greek_id = ""
+                for key in sorted(list(greek_dict.keys())):
+                    if greek_dict[key] is None:
+                        # import sys
+                        # sys.stderr.write(str(greek_dict))
+                        # Incomplete Greek entry
+                        greek_parts = []
+                        break
+                    val = greek_dict[key].strip()
+                    if "grl_ID" in key:
+                        self._greek_id = val
+                    if "grl_lemma" in key:
+                        part = '<span style="color:darkred">cf. Gr.'
+                        if self._greek_id != "":
+                            part += " (DDGLC lemma ID " + self._greek_id + ")"
+                        part += "</span> " + val
+                        greek_parts.append(part)
+                    elif "meaning" in key:
+                        greek_parts.append("<i>" + val + "</i>.")
+                    elif "_pos" in key and len(val) > 0:
+                        greek_parts.append(
+                            '<span style="color:grey">' + val + "</span>"
+                        )
+                    elif "grl_ref" in key:
+                        greek_parts.append(
+                            '<span style="color:grey">(' + val + ")</span>"
+                        )
+                self._amir += " ".join(greek_parts)
+
+        for xr in xrs:
+            for ref in xr:
+                ref_target = re.sub(
+                    "[^ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ ]", "", ref.attrib["target"]
+                ).strip()
+                self._amir += (
+                    xr.attrib["type"] + ". " + "#" + ref_target + "# " + ref.text + " "
+                )
+
+    def greek_id(self):
+        return self._greek_id
+
+    pass
+
+
+class Lang(Reformat):
+    def __init__(self, name):
+        assert name in ["de", "en", "fr"]
+        self._name = name
+        super().__init__()
+
+    def add_sense(self, sense_n, sense_id):
+        self._amir += str(sense_n) + "@" + sense_id + "|"
+
+    def add_quote(self, quote) -> None:
+        self._amir += quote.amir()
+
+    def add_definition(self, definition) -> None:
+        if self._amir.endswith("|"):
+            self._amir += "~~~"
+        definition_text = (
+            re.sub(
+                r" +",
+                " ",
+                definition.text.strip().replace("\n", ""),
+            )
+            + ";;;"
+        )
+        self._amir += definition_text
+
+    def add_bibl(self, bibl):
+        if bibl is None:
+            return
+        if not bibl.text:
+            return
+        self._amir += bibl.text + " "
+
+    def add_ref(self, ref):
+        self._amir += "ref: " + ref.text + " "
+
+    def add_xr(self, xr):
+        for ref in xr:
+            self._amir += (
+                xr.tag[29:] + ". " + ref.attrib["target"] + "# " + ref.text + " "
+            )
+
+    def finalize(self):
+        self._amir = re.sub(r"\s+", r" ", self._amir).strip()
+
+
+class Quote(Reformat):
+    def __init__(self):
+        super().__init__()
+        self.reset()
+
+    def add_quote(self, quote) -> None:
+        self._amir += re.sub(r" +", " ", quote.text.strip().replace("\n", ""))
+
+    def reset(self) -> None:
+        self._amir = "~~~"
+
+    def no_definitions(self) -> None:
+        self._amir += ";;;"
+
+    def yes_definitions(self) -> None:
+        self._amir += "; "
 
 
 def order_forms(formlist):
@@ -76,7 +199,7 @@ def order_forms(formlist):
         temp.append((text, dialect, form))
 
     output = []
-    for t, d, f in sorted(temp, key=lambda x: (x[0], x[1])):
+    for _, _, f in sorted(temp, key=lambda x: (x[0], x[1])):
         output.append(f)
 
     return output
@@ -139,7 +262,7 @@ def process_entry(id, super_id, entry, entry_xml_id):
     # SEARCHSTRING -- "search" column in db
     # similar to orthstring but forms are stripped of anything but coptic letters and spaces
     # morphological info not included
-    orthstring = ""
+    orthstring = OrthString()
     oref_string = ""
     oref_text = ""
     search_string = "\n"
@@ -207,23 +330,17 @@ def process_entry(id, super_id, entry, entry_xml_id):
         orefs = form.findall("{http://www.tei-c.org/ns/1.0}oRef")
 
         gramGrp = form.find("{http://www.tei-c.org/ns/1.0}gramGrp")
-        gram_string = ""
         if gramGrp is None:
             gramGrp = entry.find("{http://www.tei-c.org/ns/1.0}gramGrp")
-
         if gramGrp is not None:
-            for child in gramGrp:
-                gram_string += re.sub(r"\s+", " ", child.text).strip() + " "
-            gram_string = gram_string[:-1]
-
-        orthstring += gram_string + "\n"
+            orthstring.add_gram_grp(gramGrp)
 
         all_geos = form.find("{http://www.tei-c.org/ns/1.0}usg")
         if all_geos is not None:
             if all_geos.text is not None:
                 geos = re.sub(r"[\(\)]", r"", all_geos.text)
                 geos = re.sub(r"Ak", r"K", geos).split(" ")
-                geos = filter(lambda g: len(g) == 1, geos)
+                geos = list(filter(lambda g: len(g) == 1, geos))
             else:
                 geos = []
         else:
@@ -234,17 +351,13 @@ def process_entry(id, super_id, entry, entry_xml_id):
             if "{http://www.w3.org/XML/1998/namespace}id" in form.attrib
             else ""
         )
-        geos_with_ids = []
-        for geo in geos:
-            geos_with_ids.append(geo + "^^" + form_id)
-        geos = geos_with_ids
 
+        geos_with_id = [g + "^^" + form_id for g in geos]
         for orth in orths:
             remove_whitespace = re.search(r"[^\s].*[^\s]", orth.text)
 
             if remove_whitespace is not None:
                 orth_text = remove_whitespace.group(0)
-                # check_chars(orth_text)
 
             else:
                 orth_text = orth.text
@@ -258,22 +371,21 @@ def process_entry(id, super_id, entry, entry_xml_id):
             search_text = re.sub("[^ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ ]", "", orth_text)
             oref_text = re.sub("[^ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ ]", "", oref_text)
 
-            for geo in geos:
-                orthstring += orth_text + "~" + geo + "\n"
+            orthstring.add_orth_geo_id(orth_text, geos, form_id)
+            for geo in geos_with_id:
                 search_string += search_text + "~" + geo + "\n"
-            if len(list(geos)) == 0:
-                orthstring += orth_text + "~S^^" + form_id + "\n"
+            if len(list(geos_with_id)) == 0:
                 search_string += search_text + "~S\n"
 
         oref_string += oref_text
         oref_string += "|||"
-        orthstring += "|||"
+        orthstring._amir += "|||"
         # search_string += "|||"
-    orthstring = re.sub(r"\|\|\|$", "", orthstring)
+    orthstring._amir = re.sub(r"\|\|\|$", "", orthstring._amir)
     oref_string = re.sub(r"\|\|\|$", "", oref_string)
     # search_string = re.sub(r'\|\|\|$', '', search_string)
 
-    first_orth_re = re.search(r"\n(.*?)~", orthstring)
+    first_orth_re = re.search(r"\n(.*?)~", orthstring._amir)
     if first_orth_re is not None:
         first_orth = first_orth_re.group(1)
         ascii_orth = ""
@@ -322,9 +434,10 @@ def process_entry(id, super_id, entry, entry_xml_id):
     # each string contains definitions as well as corresponding bibl/ref/xr info
     # definition part, which may come from 'quote' or 'def' in the xml or both, is preceded by ~~~ and followed by ;;;
     # different senses separated by |||
-    de = ""
-    en = ""
-    fr = ""
+    de = Lang("de")
+    en = Lang("en")
+    fr = Lang("fr")
+
     senses = entry.findall("{http://www.tei-c.org/ns/1.0}sense")
     sense_n = 1
     for sense in senses:
@@ -333,103 +446,68 @@ def process_entry(id, super_id, entry, entry_xml_id):
             if "{http://www.w3.org/XML/1998/namespace}id" in sense.attrib
             else ""
         )
-        sense_start_string = str(sense_n) + "@" + sense_id + "|"
-        de += sense_start_string
-        en += sense_start_string
-        fr += sense_start_string
+        de.add_sense(sense_n, sense_id)
+        en.add_sense(sense_n, sense_id)
+        fr.add_sense(sense_n, sense_id)
         for sense_child in sense:
             if sense_child.tag == "{http://www.tei-c.org/ns/1.0}cit":
                 bibl = sense_child.find("{http://www.tei-c.org/ns/1.0}bibl")
-                no_bibl = True
-                if bibl is not None:
-                    if bibl.text is not None:
-                        no_bibl = False
-                        bibl_text = bibl.text + " "
                 quotes = sense_child.findall("{http://www.tei-c.org/ns/1.0}quote")
                 definitions = sense_child.findall("{http://www.tei-c.org/ns/1.0}def")
 
-                quote_text = "~~~"
+                q = Quote()
                 for quote in quotes:
                     if quote is not None and quote.text is not None:
-                        quote_text += re.sub(
-                            r" +", " ", quote.text.strip().replace("\n", "")
-                        )
+                        q.add_quote(quote)
                         if definitions is None or len(definitions) == 0:
-                            quote_text += ";;;"
+                            q.no_definitions()
                         else:
-                            quote_text += "; "
+                            q.yes_definitions()
                         lang = quote.get("{http://www.w3.org/XML/1998/namespace}lang")
                         if lang == "de":
-                            de += quote_text
+                            de.add_quote(q)
                         elif lang == "en":
-                            en += quote_text
+                            en.add_quote(q)
                         elif lang == "fr":
-                            fr += quote_text
-                        quote_text = "~~~"
+                            fr.add_quote(q)
+                        q.reset()
                 for definition in definitions:
                     if definition is not None:
                         if definition.text is not None:
-                            definition_text = (
-                                re.sub(
-                                    r" +",
-                                    " ",
-                                    definition.text.strip().replace("\n", ""),
-                                )
-                                + ";;;"
-                            )
                             lang = definition.get(
                                 "{http://www.w3.org/XML/1998/namespace}lang"
                             )
                             if lang == "de":
-                                if de.endswith("|"):
-                                    de += "~~~"
-                                de += definition_text
+                                de.add_definition(definition)
                             elif lang == "en":
-                                if en.endswith("|"):
-                                    en += "~~~"
-                                en += definition_text
+                                en.add_definition(definition)
                             elif lang == "fr":
-                                if fr.endswith("|"):
-                                    fr += "~~~"
-                                fr += definition_text
-                if not no_bibl:
-                    de += bibl_text
-                    en += bibl_text
-                    fr += bibl_text
+                                fr.add_definition(definition)
+                de.add_bibl(bibl)
+                en.add_bibl(bibl)
+                fr.add_bibl(bibl)
             elif sense_child.tag == "{http://www.tei-c.org/ns/1.0}ref":
-                ref = "ref: " + sense_child.text + " "
-                de += ref
-                en += ref
-                fr += ref
+                de.add_ref(sense_child)
+                en.add_ref(sense_child)
+                fr.add_ref(sense_child)
             elif sense_child.tag == "{http://www.tei-c.org/ns/1.0}xr":
-                for ref in sense_child:
-                    ref = (
-                        sense_child.tag[29:]
-                        + ". "
-                        + ref.attrib["target"]
-                        + "# "
-                        + ref.text
-                        + " "
-                    )
-                    de += ref
-                    en += ref
-                    fr += ref
+                de.add_xr(sense_child)
+                en.add_xr(sense_child)
+                fr.add_xr(sense_child)
 
-        de += "|||"
-        en += "|||"
-        fr += "|||"
+        de._amir += "|||"
+        en._amir += "|||"
+        fr._amir += "|||"
         sense_n += 1
 
-    de = re.sub(r"\|\|\|$", r"", de)
-    en = re.sub(r"\|\|\|$", r"", en)
-    fr = re.sub(r"\|\|\|$", r"", fr)
-    de = re.sub(r"\s+", r" ", de).strip()
-    en = re.sub(r"\s+", r" ", en).strip()
-    fr = re.sub(r"\s+", r" ", fr).strip()
+    de._amir = re.sub(r"\|\|\|$", r"", de._amir)
+    en._amir = re.sub(r"\|\|\|$", r"", en._amir)
+    fr._amir = re.sub(r"\|\|\|$", r"", fr._amir)
+    de.finalize()
+    en.finalize()
+    fr.finalize()
 
     # POS -- a single Scriptorium POS tag for each entry
-    if oref_string == "ⲟⲩⲛ":
-        d = 3
     pos_list = []
     for gramgrp in entry.iter("{http://www.tei-c.org/ns/1.0}gramGrp"):
         pos = gramgrp.find("{http://www.tei-c.org/ns/1.0}pos")
@@ -442,7 +520,7 @@ def process_entry(id, super_id, entry, entry_xml_id):
             subc_text = subc.text
         else:
             subc_text = "None"
-        new_pos = pos_map(pos_text, subc_text, orthstring)
+        new_pos = pos_map(pos_text, subc_text, orthstring._amir)
         if new_pos not in pos_list:
             pos_list.append(new_pos)
     if len(list(pos_list)) > 1:
@@ -455,77 +533,9 @@ def process_entry(id, super_id, entry, entry_xml_id):
     ]  # on the rare occasion pos_list has len > 1 at this point, the first one is the most valid
 
     # ETYM
-    etym_string = ""
     etym = entry.find("{http://www.tei-c.org/ns/1.0}etym")
-    greek_id = ""
-    if etym is not None:
-        greek_dict = OrderedDict()
-        for child in etym:
-            if child.tag == "{http://www.tei-c.org/ns/1.0}note":
-                etym_string += re.sub(r"\s+", " ", child.text).strip()
-            elif child.tag == "{http://www.tei-c.org/ns/1.0}ref":
-                if "type" in child.attrib and "target" in child.attrib:
-                    etym_string += (
-                        child.attrib["type"] + ": " + child.attrib["target"] + " "
-                    )
-                elif "targetLang" in child.attrib:
-                    etym_string += child.attrib["targetLang"] + ": " + child.text + " "
-                elif "type" in child.attrib:
-                    if "greek" in child.attrib["type"]:
-                        greek_dict[child.attrib["type"]] = child.text
-            elif child.tag == "{http://www.tei-c.org/ns/1.0}xr":
-                for ref in child:
-                    etym_string += (
-                        child.attrib["type"]
-                        + ". "
-                        + ref.attrib["target"]
-                        + "# "
-                        + ref.text
-                        + " "
-                    )
-        if len(greek_dict) > 0:
-            greek_parts = []
-            greek_id = ""
-            for key in sorted(list(greek_dict.keys())):
-                if greek_dict[key] is None:
-                    # import sys
-                    # sys.stderr.write(str(greek_dict))
-                    # Incomplete Greek entry
-                    greek_parts = []
-                    break
-                val = greek_dict[key].strip()
-                if "grl_ID" in key:
-                    greek_id = val
-                if "grl_lemma" in key:
-                    part = '<span style="color:darkred">cf. Gr.'
-                    if greek_id != "":
-                        part += " (DDGLC lemma ID " + greek_id + ")"
-                    part += "</span> " + val
-                    greek_parts.append(part)
-                elif "meaning" in key:
-                    greek_parts.append("<i>" + val + "</i>.")
-                elif "_pos" in key and len(val) > 0:
-                    greek_parts.append('<span style="color:grey">' + val + "</span>")
-                elif "grl_ref" in key:
-                    if "LSJ" in val:
-                        m = re.search(r"LSJ ([0-9]+)", val)
-                        if m is not None:
-                            lsj_pg_num = m.group(1)
-                            # url = "http://stephanus.tlg.uci.edu/lsj/#page=**page**&context=lsj".replace("**page**",lsj_pg_num)
-                            # val = '<a href="'+url+'">' + val + "</a>"
-                    greek_parts.append('<span style="color:grey">(' + val + ")</span>")
-            etym_string += " ".join(greek_parts)
-
     xrs = entry.findall("{http://www.tei-c.org/ns/1.0}xr")
-    for xr in xrs:
-        for ref in xr:
-            ref_target = re.sub(
-                "[^ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ ]", "", ref.attrib["target"]
-            ).strip()
-            etym_string += (
-                xr.attrib["type"] + ". " + "#" + ref_target + "# " + ref.text + " "
-            )
-
+    etym_string = EtymString(etym, xrs)
     ents = ""
     global entity_types
     if "~" in search_string:
@@ -548,16 +558,16 @@ def process_entry(id, super_id, entry, entry_xml_id):
     row = (
         id,
         super_id,
-        orthstring,
+        orthstring.amir(),
         pos_string,
-        de,
-        en,
-        fr,
-        etym_string,
+        de.amir(),
+        en.amir(),
+        fr.amir(),
+        etym_string.amir(),
         ascii_orth,
         search_string,
         oref_string,
-        greek_id,
+        etym_string.greek_id(),
         ents,
     )
     return row
