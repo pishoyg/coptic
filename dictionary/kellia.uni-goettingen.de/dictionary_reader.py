@@ -5,11 +5,12 @@ import glob
 import io
 import os
 import re
-import sqlite3 as lite
 import sys
 import xml.etree.ElementTree as ET
 from argparse import ArgumentParser
 from collections import OrderedDict, defaultdict
+
+import pandas as pd
 
 
 def check_chars(word):
@@ -164,7 +165,7 @@ def process_entry(id, super_id, entry, entry_xml_id):
             if is_lemma:
                 lemma = first_orth
     if lemma is None:
-        raise IOError("No lemma type for entry of " + orths[0].text)
+        print("No lemma type for entry of " + orths[0].text)
 
     first = []
     last = []
@@ -683,52 +684,56 @@ def pos_map(pos, subc, orthstring):
 
 
 parser = ArgumentParser()
-parser.add_argument("xml_directory", help="directory with dictionary XML files")
+parser.add_argument(
+    "--xml_path",
+    type=str,
+    nargs="*",
+    default=[
+        "dictionary/kellia.uni-goettingen.de/data/v1.2/BBAW_Lexicon_of_Coptic_Egyptian-v4-2020.xml",
+        "dictionary/kellia.uni-goettingen.de/data/v1.2/DDGLC_Lexicon_of_Greek_Loanwords_in_Coptic-v2-2020.xml",
+        "dictionary/kellia.uni-goettingen.de/data/v1.2/Comprehensive_Coptic_Lexicon-v1.2-2020.xml",
+    ],
+    help="directory with dictionary XML files",
+)
+# TODO: Support entity types.
 parser.add_argument(
     "--pub_corpora",
     default=None,
     help="directory with dictionary Coptic Scriptorium Corpora repo",
 )
-options = parser.parse_args()
-
-xml_path = options.xml_directory
-
-if not xml_path.endswith(os.sep):
-    xml_path += os.sep
+parser.add_argument(
+    "--output",
+    type=str,
+    nargs="*",
+    default=[
+        "dictionary/kellia.uni-goettingen.de/data/output/egyptian.tsv",
+        "dictionary/kellia.uni-goettingen.de/data/output/greek.tsv",
+        "dictionary/kellia.uni-goettingen.de/data/output/comprehensive.tsv",
+    ],
+    help="Path to the output TSV.",
+)
+args = parser.parse_args()
 
 # Gather entity data
 entity_types = defaultdict(set)
-if options.pub_corpora is not None:
-    entity_types = get_entity_types(options.pub_corpora)
+if args.pub_corpora is not None:
+    entity_types = get_entity_types(args.pub_corpora)
 
-con = lite.connect("alpha_kyima_rc1.db")
 
-with con:
-    cur = con.cursor()
-
-    cur.execute("DROP TABLE IF EXISTS entries")
-    cur.execute(
-        "CREATE TABLE entries(Id INT, Super_Ref INT, Name TEXT, POS TEXT, De TEXT, En TEXT, Fr TEXT, "
-        + "Etym TEXT, Ascii TEXT, Search TEXT, oRef TEXT, grkId TEXT, entities TEXT, xml_id TEXT UNIQUE, lemma_form_id TEXT)"
-    )
-
+def main():
     super_id = 1
     entry_id = 1
 
-    for letter_filename in glob.glob(xml_path + "*.xml"):
-        sys.stderr.write("o Reading " + letter_filename + "\n")
-        tree = ET.parse(letter_filename)
-        root = tree.getroot()
-        try:
-            body = root.find("{http://www.tei-c.org/ns/1.0}text").find(
-                "{http://www.tei-c.org/ns/1.0}body"
-            )
-        except:
-            sys.stderr.write(
-                "! ERR: Can't find root>text>body in" + letter_filename + "\n"
-            )
-            sys.exit()
+    assert len(args.xml_path) == len(args.output)
+    for xml_path, output in zip(args.xml_path, args.output):
+        body = (
+            ET.parse(xml_path)
+            .getroot()
+            .find("{http://www.tei-c.org/ns/1.0}text")
+            .find("{http://www.tei-c.org/ns/1.0}body")
+        )
 
+        rows = []
         for child in body:
             if child.tag == "{http://www.tei-c.org/ns/1.0}entry":
                 entry_xml_id = (
@@ -751,30 +756,41 @@ with con:
                 else:
                     lemma_form_id = ""
 
-                row = process_entry(entry_id, super_id, child, entry_xml_id)
-                if row is None:
+                cur = process_entry(entry_id, super_id, child, entry_xml_id)
+                if cur is None:
                     continue
-                row = tuple(list(row) + [entry_xml_id, lemma_form_id])
-                cur.execute(
-                    "INSERT INTO entries VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                    row,
-                )
+                rows.append(list(cur) + [entry_xml_id, lemma_form_id])
                 super_id += 1
                 entry_id += 1
             elif child.tag == "{http://www.tei-c.org/ns/1.0}superEntry":
-                rows = process_super_entry(entry_id, super_id, child)
-                cur.executemany(
-                    "INSERT INTO entries VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                    rows,
-                )
+                cur = process_super_entry(entry_id, super_id, child)
+                rows.extend(cur)
                 super_id += 1
-                entry_id += len(rows)
+                entry_id += len(cur)
 
-    # Handle network graphs
-    cur.execute("DROP TABLE IF EXISTS networks")
-    cur.execute("CREATE TABLE networks(pos TEXT, word TEXT, phrase TEXT, freq INTEGER)")
+        df = pd.DataFrame(
+            rows,
+            columns=[
+                "id",
+                "super_id",
+                "orthstring",
+                "pos_string",
+                "de",
+                "en",
+                "fr",
+                "etym_string",
+                "ascii_orth",
+                "search_string",
+                "oref_string",
+                "greek_id",
+                "ents",
+                "entry_xml_id",
+                "lemma_form_id",
+            ],
+        )
+        df.to_csv(output, sep="\t", index=False)
+        # TODO: Add network graphs.
 
-    data = io.open("phrase_freqs.tab", encoding="utf8").read().strip().split("\n")
-    data = [row.split("\t") for row in data]
-    data = [row[:-1] + [int(row[-1])] for row in data]
-    cur.executemany("INSERT INTO networks VALUES(?, ?, ?, ?)", data)
+
+if __name__ == "__main__":
+    main()
