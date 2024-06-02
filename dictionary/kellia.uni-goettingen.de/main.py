@@ -27,13 +27,13 @@ def add_crum_links(ref_bibl: str) -> str:
     )
 
 
-def strip(text: str) -> str:
+def compress(text: str) -> str:
     return " ".join(text.split())
 
 
 def clean(text: str) -> str:
     text = "".join(c for c in text if c in CLEAN)
-    return strip(text)
+    return compress(text)
 
 
 def cdo(entry_xml_id: str) -> str:
@@ -77,7 +77,7 @@ class OrthString(Reformat):
 
     # For each entry, you add one grammar group, then several orth's per form.
     def add_gram_grp(self, gramGrp) -> None:
-        gram_string = " ".join(strip(child.text) for child in gramGrp)
+        gram_string = " ".join(compress(child.text) for child in gramGrp)
         self._last_gram_grp = gram_string
         self._amir += gram_string + "\n"
 
@@ -107,7 +107,7 @@ class EtymString(Reformat):
             greek_dict = OrderedDict()
             for child in etym:
                 if child.tag == "{http://www.tei-c.org/ns/1.0}note":
-                    self._amir += strip(child.text)
+                    self._amir += compress(child.text)
                 elif child.tag == "{http://www.tei-c.org/ns/1.0}ref":
                     if "type" in child.attrib and "target" in child.attrib:
                         self._amir += (
@@ -132,15 +132,11 @@ class EtymString(Reformat):
                         )
             if len(greek_dict) > 0:
                 greek_parts = []
-                self._greek_id = ""
-                for key in sorted(list(greek_dict.keys())):
-                    if greek_dict[key] is None:
-                        # import sys
-                        # sys.stderr.write(str(greek_dict))
-                        # Incomplete Greek entry
+                for key, val in sorted(greek_dict.items()):
+                    if val is None:
                         greek_parts = []
                         break
-                    val = greek_dict[key].strip()
+                    val = val.strip()
                     if "grl_ID" in key:
                         self._greek_id = val
                     if "grl_lemma" in key:
@@ -170,8 +166,6 @@ class EtymString(Reformat):
 
     def greek_id(self):
         return self._greek_id
-
-    pass
 
 
 class Sense:
@@ -287,10 +281,10 @@ class Lang(Reformat):
         self._last_sense().extend_quotes(quote.pishoy())
 
     def add_definition(self, definition) -> None:
-        self._last_sense().add_definition(strip(definition.text))
+        self._last_sense().add_definition(compress(definition.text))
         if self._amir.endswith("|"):
             self._amir += "~~~"
-        definition_text = strip(definition.text) + ";;;"
+        definition_text = compress(definition.text) + ";;;"
         self._amir += definition_text
 
     def add_bibl(self, bibl):
@@ -312,7 +306,7 @@ class Lang(Reformat):
             self._last_sense().add_xr(text)
 
     def finalize(self):
-        self._amir = strip(self._amir)
+        self._amir = compress(self._amir)
 
     def add(self, name, value):
         self._last_sense().add(name, value)
@@ -362,7 +356,7 @@ class Quote(Reformat):
         self.reset()
 
     def add_quote(self, quote) -> None:
-        text = strip(quote.text)
+        text = compress(quote.text)
         self._amir += text
         self._pishoy.append(text)
 
