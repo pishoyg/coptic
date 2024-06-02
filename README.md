@@ -403,6 +403,10 @@ into the repo.
 
 ### Content TODO's
 
+1. **Add links to CDO from Crum.** (3-4 hou4s)
+
+   The url is `https://coptic-dictionary.org/results.cgi?quick_search={key}`.
+
 1. **Prettify and expand the flashcards from [KELLIA](
 https://coptic-dictionary.org/).** (7-8 hours)
 
