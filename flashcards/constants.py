@@ -272,16 +272,11 @@ def copticsite_com(deck_name: str, deck_id: int):
             field.aon(
                 "(",
                 "<b>",
-                field.cat(
+                field.jne(
+                    " - ",
                     tsv_col("Word Kind", force=False),
-                    field.aon(
-                        " - ",
-                        tsv_col("Word Gender", force=False),
-                    ),
-                    field.aon(
-                        " - ",
-                        tsv_col("Origin", force=False),
-                    ),
+                    tsv_col("Word Gender", force=False),
+                    tsv_col("Origin", force=False),
                 ),
                 "</b>",
                 ")",
