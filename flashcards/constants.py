@@ -292,10 +292,11 @@ def copticsite_com(deck_name: str, deck_id: int):
 @type_enforced.Enforcer
 def kellia(deck_name: str, deck_id: int, tsv_basename: str):
     @type_enforced.Enforcer
-    def tsv_col(col_name: str) -> field.tsv:
+    def tsv_col(col_name: str, force: bool = True) -> field.tsv:
         return field.tsv(
             f"dictionary/kellia.uni-goettingen.de/data/output/{tsv_basename}.tsv",
             col_name,
+            force=force,
         )
 
     return deck.deck(
@@ -326,8 +327,9 @@ def kellia(deck_name: str, deck_id: int, tsv_basename: str):
         key=tsv_col("entry_xml_id"),
         front=tsv_col("orthstring-pishoy"),
         back=field.cat(
-            field.aon(
+            field.cat(
                 tsv_col("merged-pishoy"),
+                tsv_col("etym_string-processed", force=False),
                 "<hr>",
             ),
             field.aon(

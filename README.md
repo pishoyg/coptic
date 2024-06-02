@@ -411,7 +411,6 @@ into the repo.
 https://coptic-dictionary.org/).** (7-8 hours)
 
    1. Group `geo`s by `orth` and `gram_grp`.
-   1. The `etym_string` column has worthwhile information.
    1. Add the entity types. (low-priority)
    1. Include IDs in comments. (low-priority)
 
