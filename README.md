@@ -200,7 +200,7 @@ suggestions or questions, or data! :)
 
    It might also make it possible to expand KELLIA's dictionary.
 
-1. Add a meanings that would be displayed on top before Crum's translation.
+1. Add meanings that would be displayed on top before Crum's translation.
    Some of Crum's translations are obscure or archaic, and some are outdated
    because we understand the meaning of the word better than he did back then.
    We could use St. Shenouda's Simple Bohairic English dictionary for that, or
