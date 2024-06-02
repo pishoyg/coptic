@@ -11,7 +11,9 @@ KIND_COL = "Word Kind"
 GENDER_COL = "Word Gender"
 SUFFIX_COL = "suffix"
 PRETTIFY_COL = "prettify"
+
 # SUFFIX maps the word kinds to a map of word genders to suffixes.
+# TODO: Revisit the suffixes. Make display more friendly.
 SUFFIX = {
     "": {
         "": "",
@@ -109,7 +111,7 @@ SUFFIX = {
         "": "",
     },
     "اسم": {
-        "": "(ⲟⲩ)",
+        "": "",
         "جمع": "(ⲛ)",
         "جمع ، مذكر": "(ⲛ/ⲡ)",
         "صيغة  للفعل يأتي بعدها المفعول مباشرة بدون أداة مفعول": "",
@@ -314,14 +316,16 @@ def main() -> None:
         cur = {}
         for key in row.keys():
             if key.startswith(UNNAMED_PREFIX):
-                value = str(row[key]).strip()
+                value = row[key]
+                if not value:
+                    continue
                 key = int(key[len(UNNAMED_PREFIX) :])
                 cur[key] = value
-        cur = "\n".join(v for _, v in sorted(cur.items()) if v)
+        cur = "\n".join(v for _, v in sorted(cur.items()))
         meaning.append(cur)
         p = row[COPTIC_COL]
-        kind = str(row[KIND_COL]).strip()
-        gender = str(row[GENDER_COL]).strip()
+        kind = row[KIND_COL]
+        gender = row[GENDER_COL]
         sfx = SUFFIX[kind][gender]
         suffix.append(sfx)
         if sfx:
