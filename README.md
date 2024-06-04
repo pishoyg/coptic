@@ -193,7 +193,7 @@ suggestions or questions, or data! :)
    learning process, and it will save learners the time that they have to spend
    on looking up the obscure vocabulary or unfamiliar terms.
 
-1. **Link KELLIA lemmas to Marcion Keys.** (100 hours, delegate)
+1. Link KELLIA lemmas to Marcion Keys.
 
    This may make it possible to include the meaning, literature citations, and
    perhaps other data.
@@ -261,28 +261,35 @@ README file (not in any of the README files in the subdirectories).
 Non-learner-facing coding tasks are sometimes documented in the code as TODO's,
 and sometimes brought here.
 
-### Directory Structure
+### Directories and Conventions
 
-- `bible/`
+`dictionary/` contains subdirectories, each containing one dictionary, its data,
+and the scripts used to process the data into other formats. `bible/` currently
+contains a single subdirectory, containing [stshenouda.org](stshenouda.org)'s
+version of the Coptic Bible, and the scripts used to process it.
 
-    This directory contains Biblical data, used to generate HTML and EPUB
-    versions of the Bible and the like.
+`flashcards/` hosts the logic for creating the flashcard decks. It relies on
+data produced under `dictionary/` and `bible/`.
 
-- `dictionary/`
+`archive/` and `utils/` are not of particular interest.
 
-    This directory contains dictionary data, used to generate flashcards, CSV
-    files and the like.
+There is a total of three README files in this repo. This is intentional, in
+order to prevent the documentation from scattering all over. The other two are
+under `dictionary/` and `bible/`, and they concern those subprojects
+specifically.
 
-- `keyboard/`
+Most scripts have default parameters with the assumption that they are being
+invoked from the repo's root directory, rather than from the directory where
+the script lives.
 
-    This directory contains Keyboard layouts.
+`secrets.sh` (which is skipped by a rule in `.gitignore`) contains variables
+that are used inside `Makefile`. Some `make` rules can only run if preceded by
+`source secrets.sh` in order to export the variables needed for those rules.
+You need your own version of `secrets.sh` in order to be able to run all the
+`make` rules.
 
-- `archive/`
-
-    This directory contains snapshots of published apps or repos, utilities, and
-    even some abandoned projects.
-    Data retrieved from another app or repo will live here, and could be used /
-    reprocessed by projects in the repo.
+The rest of this file lists the current plans or ideas for the project. The
+higher-priority items are written in **boldface**.
 
 ### Documentation TODO's
 
