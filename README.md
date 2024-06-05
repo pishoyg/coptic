@@ -414,6 +414,9 @@ into the repo.
 
    The url is `https://coptic-dictionary.org/results.cgi?quick_search={key}`.
 
+1. **Revisit the Greek dictionary used, and allow spaces between words.**
+   (3-4 hours)
+
 1. **Prettify and expand the flashcards from [KELLIA](
 https://coptic-dictionary.org/).** (7-8 hours)
 
