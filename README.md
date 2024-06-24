@@ -410,6 +410,9 @@ into the repo.
 
 ### Content TODO's
 
+1. **Create Kindle-compatible dictionary**
+   [See](https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV) (7-8 hours)
+
 1. **Add links to CDO from Crum.** (3-4 hou4s)
 
    The url is `https://coptic-dictionary.org/results.cgi?quick_search={key}`.
