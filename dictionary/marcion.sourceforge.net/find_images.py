@@ -221,7 +221,10 @@ def main():
         if row[args.input_type_col] in args.exclude_types:
             continue
 
-        g = glob.glob(os.path.join(args.destination, f"{key}-*"))
+        def existing():
+            return glob.glob(os.path.join(args.destination, f"{key}-*"))
+
+        g = existing()
         if args.skip_existing and g:
             continue
 
@@ -275,7 +278,7 @@ def main():
                     files = get_downloads()
 
             # Move the files.
-            idx = get_max_idx(g, key, sense)
+            idx = get_max_idx(existing(), key, sense)
             for file in files:
                 idx += 1
                 _, ext = os.path.splitext(file)
