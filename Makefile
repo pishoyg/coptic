@@ -177,6 +177,12 @@ img_count: FORCE
 		| uniq \
 		| wc
 
+restore_modified: FORCE
+	git status --short \
+		| grep M \
+		| awk '{ print $2 }' \
+		| xargs git restore
+
 git_clean: FORCE
 	git clean \
 		-x \
