@@ -91,8 +91,11 @@ kellia: FORCE
 	python dictionary/kellia.uni-goettingen.de/main.py
 
 # FLASHCARD RULES
-TIMESTAMP = 1717324568
+TIMESTAMP = 1719406603
 START_AT_KEY = 1156
+
+timestamp: FORCE
+	date +%s | pbcopy
 
 flashcards: FORCE
 	python flashcards/main.py \
