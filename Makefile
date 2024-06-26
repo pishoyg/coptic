@@ -169,6 +169,14 @@ find_images: FORCE
 		--skip_existing=true \
 		--exclude "verb" \
 		--start_at_key="${START_AT_KEY}"
+
+img_count: FORCE
+	ls dictionary/marcion.sourceforge.net/data/img/ \
+		| grep -oE '^[0-9]+' \
+		| sort \
+		| uniq \
+		| wc
+
 git_clean: FORCE
 	git clean \
 		-x \
