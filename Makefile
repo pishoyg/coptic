@@ -92,7 +92,7 @@ kellia: FORCE
 
 # FLASHCARD RULES
 TIMESTAMP = 1719406603
-START_AT_KEY = 1156
+START_AT_KEY = 1184
 
 timestamp: FORCE
 	date +%s | pbcopy
