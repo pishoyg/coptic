@@ -57,7 +57,7 @@ argparser.add_argument(
 argparser.add_argument(
     "--input_tsv",
     type=str,
-    default="data/output/roots.tsv",
+    default="dictionary/marcion.sourceforge.net/data/output/roots.tsv",
     help="Input TSV.",
 )
 
@@ -94,7 +94,7 @@ argparser.add_argument(
     "--exclude_types",
     type=str,
     nargs="*",
-    default=["verb"],
+    default=[],
     help="A list of types to exclude.",
 )
 
@@ -116,7 +116,7 @@ argparser.add_argument(
 argparser.add_argument(
     "--destination",
     type=str,
-    default="data/img/",
+    default="dictionary/marcion.sourceforge.net/data/img/",
     help="Path to the destination directory.",
 )
 

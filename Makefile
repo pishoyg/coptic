@@ -92,6 +92,7 @@ kellia: FORCE
 
 # FLASHCARD RULES
 TIMESTAMP = 1717324568
+START_AT_KEY = 1156
 
 flashcards: FORCE
 	python flashcards/main.py \
@@ -160,6 +161,11 @@ try_flashcards_crum_sahidic: FORCE
 		--output "$${TEST_DIR}/crum_sahidic.apkg" \
 		--timestamp "${TIMESTAMP}"
 
+find_images: FORCE
+	python dictionary/marcion.sourceforge.net/find_images.py \
+		--skip_existing=true \
+		--exclude "verb" \
+		--start_at_key="${START_AT_KEY}"
 git_clean: FORCE
 	git clean \
 		-x \
