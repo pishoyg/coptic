@@ -177,10 +177,10 @@ img_count: FORCE
 		| uniq \
 		| wc
 
-restore_modified: FORCE
+restore_modified_img_300: FORCE
 	git status --short \
-		| grep M \
-		| awk '{ print $2 }' \
+		| grep "M dictionary/marcion.sourceforge.net/data/img-300/" \
+		| awk '{ print $$2 }' \
 		| xargs git restore
 
 git_clean: FORCE
