@@ -33,6 +33,14 @@ def crum(
             force=force,
         )
 
+    def dawoud_col(col_name: str, force: bool = True) -> field.gsheet:
+        return field.gsheet(
+            json_keyfile_name=os.environ["JSON_KEYFILE_NAME"],
+            gspread_url="https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg",
+            column_name=col_name,
+            force=False,
+        )
+
     @type_enforced.Enforcer
     def create_front() -> field.Field:
         if len(dialect_cols) == 1:
@@ -138,27 +146,24 @@ def crum(
                 "<hr>",
             ),
             # Dawoud's pages.
-            field.aon(
-                (
+            (
+                field.aon(
+                    '<span id="right">',
+                    "<b>Dawoud: </b>",
+                    field.grp(
+                        keys=roots_col("key", force=True),
+                        group_by=dawoud_col("key"),
+                        selected=dawoud_col("dawoud-pages"),
+                        force=False,
+                        unique=True,
+                    ),
+                    "</span>",
+                    "<br>",
                     field.img(
-                        keys=field.grp(
-                            keys=field.tsv(
-                                file_path="dictionary/marcion.sourceforge.net/data/output/roots.tsv",
-                                column_name="key",
-                                force=False,
-                            ),
-                            group_by=field.gsheet(
-                                json_keyfile_name=os.environ["JSON_KEYFILE_NAME"],
-                                gspread_url="https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg",
-                                column_name="key",
-                                force=False,
-                            ),
-                            selected=field.gsheet(
-                                json_keyfile_name=os.environ["JSON_KEYFILE_NAME"],
-                                gspread_url="https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg",
-                                column_name="dawoud-pages",
-                                force=False,
-                            ),
+                        field.grp(
+                            keys=roots_col("key", force=True),
+                            group_by=dawoud_col("key"),
+                            selected=dawoud_col("dawoud-pages"),
                             force=False,
                             unique=True,
                         ),
@@ -169,11 +174,11 @@ def crum(
                         sort_paths=sorted,
                         get_caption=lambda path: int(field.stem(path)) - 17,
                         force=False,
-                    )
-                    if "JSON_KEYFILE_NAME" in os.environ
-                    else ""
-                ),
-                "<hr>",
+                    ),
+                    "<hr>",
+                )
+                if "JSON_KEYFILE_NAME" in os.environ
+                else ""
             ),
             # Audio.
             # TODO: Label the per-dialect audios, like you did for the front.

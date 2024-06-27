@@ -378,7 +378,7 @@ def jne(sep: str, *fields: FieldOrStr) -> apl:
 def _convert_strings(
     *fields: FieldOrStr,
 ) -> list[*Field]:
-    return [txt(f) if isinstance(f, str) else f for f in fields]
+    return [txt(f, force=False) if isinstance(f, str) else f for f in fields]
 
 
 @type_enforced.Enforcer
