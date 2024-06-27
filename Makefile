@@ -91,11 +91,11 @@ kellia: FORCE
 	python dictionary/kellia.uni-goettingen.de/main.py
 
 # FLASHCARD RULES
-TIMESTAMP = 1719474202
+TIMESTAMP = 1719475799
 START_AT_KEY = 1249
 
 timestamp: FORCE
-	date +%s
+	date +%s | pbcopy
 
 flashcards: FORCE
 	python flashcards/main.py \
