@@ -1,4 +1,5 @@
 import glob
+import os
 import typing
 
 import deck
@@ -99,8 +100,11 @@ def crum(
             ),
             # Image.
             field.img(
-                tsv_path="dictionary/marcion.sourceforge.net/data/output/roots.tsv",
-                column_name="key",
+                keys=field.tsv(
+                    file_path="dictionary/marcion.sourceforge.net/data/output/roots.tsv",
+                    column_name="key",
+                    force=False,
+                ),
                 get_paths=lambda key: glob.glob(
                     f"dictionary/marcion.sourceforge.net/data/img-300/{key}-*-*.*"
                 ),
@@ -118,15 +122,56 @@ def crum(
             # Crum's pages.
             field.cat(
                 field.img(
-                    tsv_path="dictionary/marcion.sourceforge.net/data/output/roots.tsv",
-                    column_name="crum-pages",
+                    keys=field.tsv(
+                        file_path="dictionary/marcion.sourceforge.net/data/output/roots.tsv",
+                        column_name="crum-pages",
+                        force=False,
+                    ),
                     get_paths=lambda page_ranges: [
                         f"dictionary/marcion.sourceforge.net/data/crum/{k+20}.png"
                         for k in field.page_numbers(page_ranges=page_ranges)
                     ],
-                    sort_paths=field.sort_semver,
+                    sort_paths=sorted,
                     get_caption=lambda path: int(field.stem(path)) - 20,
                     force=False,
+                ),
+                "<hr>",
+            ),
+            # Dawoud's pages.
+            field.aon(
+                (
+                    field.img(
+                        keys=field.grp(
+                            keys=field.tsv(
+                                file_path="dictionary/marcion.sourceforge.net/data/output/roots.tsv",
+                                column_name="key",
+                                force=False,
+                            ),
+                            group_by=field.gsheet(
+                                json_keyfile_name=os.environ["JSON_KEYFILE_NAME"],
+                                gspread_url="https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg",
+                                column_name="key",
+                                force=False,
+                            ),
+                            selected=field.gsheet(
+                                json_keyfile_name=os.environ["JSON_KEYFILE_NAME"],
+                                gspread_url="https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg",
+                                column_name="dawoud-pages",
+                                force=False,
+                            ),
+                            force=False,
+                            unique=True,
+                        ),
+                        get_paths=lambda page_ranges: [
+                            f"dictionary/copticocc.org/dawoud-D100/{k+17}.jpg"
+                            for k in field.page_numbers(page_ranges=page_ranges)
+                        ],
+                        sort_paths=sorted,
+                        get_caption=lambda path: int(field.stem(path)) - 17,
+                        force=False,
+                    )
+                    if "JSON_KEYFILE_NAME" in os.environ
+                    else ""
                 ),
                 "<hr>",
             ),
@@ -139,8 +184,11 @@ def crum(
                         "Pishoy: ",
                         *[
                             field.snd(
-                                tsv_path="dictionary/marcion.sourceforge.net/data/output/roots.tsv",
-                                column_name="key",
+                                keys=field.tsv(
+                                    file_path="dictionary/marcion.sourceforge.net/data/output/roots.tsv",
+                                    column_name="key",
+                                    force=False,
+                                ),
                                 get_paths=lambda key: glob.glob(
                                     f"dictionary/marcion.sourceforge.net/data/snd-pishoy/{col}/{key}.*"
                                 ),

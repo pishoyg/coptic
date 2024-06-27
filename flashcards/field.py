@@ -4,12 +4,21 @@ import re
 import shutil
 
 import enforcer
+import gspread
 import pandas as pd
 import type_enforced
+from oauth2client import service_account
 
 NO_LENGTH = -1
 INTEGER_RE = re.compile("[0-9]+")
 MAX_INTEGER_LENGTH = 10
+
+GSPREAD_SCOPE = [
+    "https://spreadsheets.google.com/feeds",
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive",
+]
 
 _work_dir = ""
 _initialized = False
@@ -122,15 +131,41 @@ class tsv(_content_field):
     """
 
     def __init__(self, file_path: str, column_name: str, force: bool = True) -> None:
-        content = _read_tsv_column(file_path, column_name)
+        df = pd.read_csv(file_path, sep="\t", dtype=str, encoding="utf-8").fillna("")
+        content = [str(cell).strip() for cell in df[column_name]]
         content = list(map(use_html_line_breaks, content))
+        super().__init__(content, [], force=force)
+
+
+@type_enforced.Enforcer
+class gsheet(_content_field):
+    """
+    A column from a Google sheet.
+    """
+
+    def __init__(
+        self,
+        json_keyfile_name: str,
+        gspread_url: str,
+        column_name: str,
+        force: bool = False,
+    ) -> None:
+        assert json_keyfile_name
+        assert gspread_url
+        assert column_name
+        credentials = service_account.ServiceAccountCredentials.from_json_keyfile_name(
+            json_keyfile_name, GSPREAD_SCOPE
+        )
+        sheet = gspread.authorize(credentials).open_by_url(gspread_url)
+        records = sheet.get_worksheet(0).get_all_records()
+        content = [str(row[column_name]) for row in records]
         super().__init__(content, [], force=force)
 
 
 @type_enforced.Enforcer
 class grp(_content_field):
     """
-    Group entries in a TSV column using another column.
+    Group entries in a TSV or gsheet column using another column.
     See this example:
         keys: [1, 2, 3]
         groupby: [1, 2, 1, 2, 3, 3]
@@ -153,20 +188,19 @@ class grp(_content_field):
 
     def __init__(
         self,
-        key_file_path: str,
-        key_col_name: str,
-        group_file_path: str,
-        group_by_col_name: str,
-        select_col: str,
+        keys: tsv | gsheet,
+        group_by: tsv | gsheet,
+        selected: tsv | gsheet,
         force: bool = True,
+        unique: bool = False,
     ) -> None:
-        keys = tsv(key_file_path, key_col_name, force=True)
         keys = [keys.next() for _ in range(keys.length())]
-        group_by = tsv(group_file_path, group_by_col_name, force=True)
-        selected = tsv(group_file_path, select_col, force=force)
         key_to_selected = {k: [] for k in keys}
         for _ in range(num_entries(group_by, selected)):
             key_to_selected[group_by.next()].append(selected.next())
+        if unique:
+            assert all(len(value) == 1 for value in key_to_selected.values())
+            key_to_selected = {key: value[0] for key, value in key_to_selected.items()}
         content = [key_to_selected[k] for k in keys]
         super().__init__(content, [], force)
 
@@ -178,8 +212,7 @@ class media(_content_field):
         self,
         # HTML format string.
         html_fmt: str,
-        tsv_path: str,
-        column_name: str,
+        keys: tsv | gsheet | grp,
         # Map key to list of paths.
         get_paths: enforcer.Callable,
         # Sort list of paths.
@@ -204,7 +237,8 @@ class media(_content_field):
 
         content = []
         media_files = set()
-        for key in _read_tsv_column(tsv_path, column_name):
+        for _ in range(keys.length()):
+            key = keys.next()
             if force:
                 assert key
             if not key:
@@ -231,8 +265,7 @@ class media(_content_field):
 
 @type_enforced.Enforcer
 def img(
-    tsv_path: str,
-    column_name: str,
+    keys: tsv | gsheet | grp,
     get_paths: enforcer.Callable,
     sort_paths: enforcer.OptionalCallable = None,
     get_caption: enforcer.OptionalCallable = None,
@@ -248,8 +281,7 @@ def img(
 
     return media(
         html_fmt=html_fmt,
-        tsv_path=tsv_path,
-        column_name=column_name,
+        keys=keys,
         get_paths=get_paths,
         sort_paths=sort_paths,
         get_caption=get_caption,
@@ -259,16 +291,14 @@ def img(
 
 @type_enforced.Enforcer
 def snd(
-    tsv_path: str,
-    column_name: str,
+    keys: tsv | gsheet | grp,
     get_paths: enforcer.Callable,
     sort_paths: enforcer.OptionalCallable = None,
     force: bool = True,
 ) -> media:
     return media(
         html_fmt="[sound:{basename}]",
-        tsv_path=tsv_path,
-        column_name=column_name,
+        keys=keys,
         get_paths=get_paths,
         sort_paths=sort_paths,
         force=force,
@@ -379,12 +409,6 @@ def use_html_line_breaks(text: str) -> str:
 
 
 @type_enforced.Enforcer
-def _read_tsv_column(file_path: str, column_name: str) -> list[str]:
-    df = pd.read_csv(file_path, sep="\t", dtype=str, encoding="utf-8").fillna("")
-    return [str(cell).strip() for cell in df[column_name]]
-
-
-@type_enforced.Enforcer
 def stem(s: str) -> str:
     s = os.path.basename(s)
     s, _ = os.path.splitext(s)
@@ -409,15 +433,25 @@ def page_numbers(page_ranges: str) -> list[int]:
     like what you type when you're using your printer.
     For example, "1,3-5,8-9" means [1, 3, 4, 5, 8, 9].
     """
+
+    @type_enforced.Enforcer
+    def parse(page_number: str) -> int:
+        page_number = page_number.strip()
+        if page_number[-1] in ["a", "b"]:
+            page_number = page_number[:-1]
+        assert page_number.isdigit()
+        return int(page_number)
+
     out = []
-    for int_range in page_ranges.split(","):
-        if int_range.isdigit():
-            out.append(int(int_range))
+    page_ranges = page_ranges.strip()
+    for page_or_page_range in page_ranges.split(","):
+        if "-" not in page_or_page_range:
+            # This is a single page.
+            out.append(parse(page_or_page_range))
             continue
-        int_range = int_range.split("-")
-        assert len(int_range) == 2
-        start, end = int(int_range[0]), int(int_range[1])
-        assert end > start
+        # This is a page range.
+        start, end = map(parse, page_or_page_range.split("-"))
+        assert end >= start, f"start={start}, end={end}"
         for x in range(start, end + 1):
             out.append(x)
     return out
