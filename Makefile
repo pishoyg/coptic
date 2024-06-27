@@ -1,5 +1,11 @@
 .PHONY: all
-all: validate test build
+all: validate test setup build
+
+.PHONY: allall  # This includes privileged rules.
+allall: validate test download setup build publish stats
+
+.PHONY: allallall  # This includes privileged and pollute rules.
+allallall: validate test download setup build publish stats pollute
 
 .PHONY: validate
 validate: precommit readme
@@ -7,29 +13,40 @@ validate: precommit readme
 .PHONY: test
 test: unittest
 
+.PHONY: download
+download: download_marcion_dawoud
+
+.PHONY: setup
+setup: marcion_img_resize_nonexisting 
+
 .PHONY: build
 build: bible copticsite marcion kellia flashcards
 
-.PHONY: privileged
+.PHONY: publish
 privileged: drive
 
-.PHONY: pollute
-pollute: bible_epub img_resize analysis
-
-.PHONY: redundant
-redundant: flashcards_crum_sahidic flashcards_crum flashcards_copticsite flashcards_bible flashcards_kellia_comprehensive flashcards_kellia
-
-.PHONY: verify
-verify: verify_identical_flashcards verify_identical_flashcards_crum_sahidic
-
-.PHONY: try
-try: try_flashcards try_flashcards_crum_sahidic
-
 .PHONY: stats
-stats: loc
+stats: loc img_count
 
+.PHONY: pollute
+pollute: bible_epub analysis
+
+# The below rules are only run in special cases, and are not included in any of
+# the alls.
 .PHONY: clean
-clean: git_clean
+clean: git_clean clean_modified_img_300 clean_bible_epub clean_analysis
+
+.PHONY: toil
+toil: find_images
+
+.PHONY: flashcards_redundant
+flashcards_redundant: flashcards_crum_sahidic flashcards_crum flashcards_copticsite flashcards_bible flashcards_kellia_comprehensive flashcards_kellia
+
+.PHONY: flashcards_verify
+flashcards_verify: verify_identical_flashcards verify_identical_flashcards_crum_sahidic
+
+.PHONY: flashcards_try
+flashcards_try: try_flashcards try_flashcards_crum_sahidic
 
 .PHONY: FORCE
 FORCE:
@@ -66,8 +83,6 @@ bible: FORCE
 		--no_epub "true"
 
 bible_epub: FORCE
-	# N.B. This is not included in `all`. It unnecessarily pollutes the repo
-	# directory.
 	python bible/stshenouda.org/main.py
 
 # COPTICSITE_COM RULES
@@ -75,13 +90,18 @@ copticsite: FORCE
 	python dictionary/copticsite.com/main.py
 
 # MARCION RULES
+download_marcion_dawoud: FORCE
+	python utils/download_gsheet.py \
+		--json_keyfile_name "$${JSON_KEYFILE_NAME}" \
+		--gspread_url "https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg" \
+		--column_names "key" "dawoud-pages" \
+		--out_tsv "dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv"
+
 marcion: FORCE
 	python dictionary/marcion.sourceforge.net/main.py
 
-img_resize: FORCE
-	# N.B. This is not included in `all`. It unnecessarily pollutes the repo
-	# directory.
-	bash dictionary/marcion.sourceforge.net/resize.sh
+marcion_img_resize_nonexisting: FORCE
+	bash dictionary/marcion.sourceforge.net/resize_nonexisting.sh
 
 # KELLIA RULES
 analysis: FORCE
@@ -142,6 +162,20 @@ drive: FORCE
 		flashcards/data/*.apkg \
 		"$${DEST_DIR}"
 
+# Image collection.
+find_images: FORCE
+	python dictionary/marcion.sourceforge.net/find_images.py \
+		--skip_existing=true \
+		--exclude "verb" \
+		--start_at_key="${START_AT_KEY}"
+
+img_count: FORCE
+	ls dictionary/marcion.sourceforge.net/data/img/ \
+		| grep -oE '^[0-9]+' \
+		| sort \
+		| uniq \
+		| wc
+
 # DEVELOPER
 verify_identical_flashcards: try_flashcards
 	bash utils/ziff.sh \
@@ -164,26 +198,6 @@ try_flashcards_crum_sahidic: FORCE
 		--output "$${TEST_DIR}/crum_sahidic.apkg" \
 		--timestamp "${TIMESTAMP}"
 
-find_images: FORCE
-	python dictionary/marcion.sourceforge.net/find_images.py \
-		--skip_existing=true \
-		--exclude "verb" \
-		--start_at_key="${START_AT_KEY}"
-
-img_count: FORCE
-	ls dictionary/marcion.sourceforge.net/data/img/ \
-		| grep -oE '^[0-9]+' \
-		| sort \
-		| uniq \
-		| wc
-
-restore_modified_img_300: FORCE
-	git status --short \
-		| grep "M" \
-		| grep "dictionary/marcion.sourceforge.net/data/img-300/" \
-		| awk '{ print $$2 }' \
-		| xargs git restore
-
 git_clean: FORCE
 	git clean \
 		-x \
@@ -192,7 +206,20 @@ git_clean: FORCE
 		--exclude "secrets.sh" \
 		--force
 
-loc:
+clean_modified_img_300: FORCE
+	git status --short \
+		| grep "M" \
+		| grep "dictionary/marcion.sourceforge.net/data/img-300/" \
+		| awk '{ print $$2 }' \
+		| xargs git restore
+
+clean_bible_epub: FORCE
+  git restore "bible/stshenouda.org/data/output/epub*/*.epub"
+
+clean_analysis: FORCE
+  git restore "dictionary/kellia.uni-goettingen.de/analysis.json"
+
+loc: FORCE
 	find . \
 		-name "*.py" -o -name "*.java" \
 		-o -name "*.proto" -o -name "*.sh" \

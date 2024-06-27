@@ -33,12 +33,11 @@ def crum(
             force=force,
         )
 
-    def dawoud_col(col_name: str, force: bool = True) -> field.gsheet:
-        return field.gsheet(
-            json_keyfile_name=os.environ["JSON_KEYFILE_NAME"],
-            gspread_url="https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg",
-            column_name=col_name,
-            force=False,
+    def dawoud_col(col_name: str, force: bool = True) -> field.tsv:
+        return field.tsv(
+            "dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv",
+            col_name,
+            force=force,
         )
 
     @type_enforced.Enforcer
@@ -152,8 +151,8 @@ def crum(
                     "<b>Dawoud: </b>",
                     field.grp(
                         keys=roots_col("key", force=True),
-                        group_by=dawoud_col("key"),
-                        selected=dawoud_col("dawoud-pages"),
+                        group_by=dawoud_col("key", force=True),
+                        selected=dawoud_col("dawoud-pages", force=False),
                         force=False,
                         unique=True,
                     ),
@@ -162,8 +161,8 @@ def crum(
                     field.img(
                         field.grp(
                             keys=roots_col("key", force=True),
-                            group_by=dawoud_col("key"),
-                            selected=dawoud_col("dawoud-pages"),
+                            group_by=dawoud_col("key", force=True),
+                            selected=dawoud_col("dawoud-pages", force=False),
                             force=False,
                             unique=True,
                         ),

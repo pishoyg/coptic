@@ -18,7 +18,7 @@
   - [Learning Curriculum](#learning-curriculum)
   - [Neologisms](#neologisms)
 - [For Developers / Owners](#for-developers--owners)
-  - [Directory Structure](#directory-structure)
+  - [Directories and Conventions](#directories-and-conventions)
   - [Documentation TODO's](#documentation-todos)
   - [Collaborator Convenience TODO's](#collaborator-convenience-todos)
   - [Diplomacy TODO's](#diplomacy-todos)
@@ -485,9 +485,6 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 ### Developer Convenience TODO's
 
 (40+ hours)
-
-1. **Import data from Drive to Git instead of using Drive directly.** (3-4
-   hours)
 
 1. **Export accurate timestamps.** (20 hours, delegate)
 
