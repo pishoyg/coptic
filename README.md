@@ -486,6 +486,9 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
 (40+ hours)
 
+1. **Import data from Drive to Git instead of using Drive directly.** (3-4
+   hours)
+
 1. **Export accurate timestamps.** (20 hours, delegate)
 
    1. Reimporting (supposedly identical data) produces the message "notes were
