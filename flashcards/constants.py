@@ -138,7 +138,7 @@ def crum(
                         f"dictionary/marcion.sourceforge.net/data/crum/{k+20}.png"
                         for k in field.page_numbers(page_ranges=page_ranges)
                     ],
-                    sort_paths=sorted,
+                    sort_paths=field.sort_semver,
                     get_caption=lambda path: int(field.stem(path)) - 20,
                     force=False,
                 ),
@@ -170,7 +170,6 @@ def crum(
                             f"dictionary/copticocc.org/dawoud-D100/{k+16}.jpg"
                             for k in field.page_numbers(page_ranges=page_ranges)
                         ],
-                        sort_paths=sorted,
                         get_caption=lambda path: int(field.stem(path)) - 16,
                         force=False,
                     ),
