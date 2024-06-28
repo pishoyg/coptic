@@ -36,7 +36,7 @@ pollute: bible_epub analysis
 # The below rules are only run in special cases, and are not included in any of
 # the alls.
 .PHONY: clean
-clean: git_clean clean_modified_img_300 clean_bible_epub clean_analysis
+clean: git_clean clean_bible_epub clean_analysis
 
 .PHONY: toil
 toil: find_images
@@ -211,13 +211,6 @@ git_clean: FORCE
 		--exclude "flashcards/data/*.apkg" \
 		--exclude "secrets.sh" \
 		--force
-
-clean_modified_img_300: FORCE
-	git status --short \
-		| grep "M" \
-		| grep "dictionary/marcion.sourceforge.net/data/img-300/" \
-		| awk '{ print $$2 }' \
-		| xargs git restore
 
 clean_bible_epub: FORCE
 	git restore "bible/stshenouda.org/data/output/epub*/*.epub"
