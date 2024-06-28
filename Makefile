@@ -23,7 +23,7 @@ setup: marcion_img_resize_nonexisting
 build: bible copticsite marcion kellia flashcards
 
 .PHONY: publish
-privileged: drive
+publish: drive
 
 .PHONY: stats
 stats: loc img_count
