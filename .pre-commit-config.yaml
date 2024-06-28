@@ -18,9 +18,3 @@ repos:
     hooks:
       - id: markdownlint-fix
         args: [--disable, MD033, MD036]
-
-  # Make.
-  - repo: https://github.com/mrtazz/checkmake.git
-    rev: 0.2.2
-    hooks:
-      - id: checkmake

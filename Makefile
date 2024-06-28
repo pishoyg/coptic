@@ -1,3 +1,5 @@
+SHELL:=/bin/bash
+
 .PHONY: all
 all: validate test setup build
 
@@ -8,7 +10,7 @@ allall: validate test download setup build publish stats
 allallall: validate test download setup build publish stats pollute
 
 .PHONY: validate
-validate: precommit readme
+validate: precommit readme image_extensions
 
 .PHONY: test
 test: unittest
@@ -72,6 +74,10 @@ readme: FORCE
 		"bible/README.md" \
 		"dictionary/README.md" \
 		"flashcards/README.md" 
+
+image_extensions: FORCE
+	echo "Checking for unknown image extensions:"
+	comm -23 <( ls dictionary/marcion.sourceforge.net/data/img/ | grep -o '\..*' | tr '[:upper:]' '[:lower:]' | sort | uniq ) <( echo .avif .gif .jpeg .jpg .png .webp | tr ' ' '\n' | sort )
 
 unittest: FORCE
 	python -m unittest discover \
