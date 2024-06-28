@@ -216,6 +216,8 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
                 "-dawoud-sort-key",
                 dawoud_sort_key(word),
             )
+            insert("", "dawoud-pages", "")
+            insert(CRUM_COL, "-last-page", "")
 
         if strict:
             insert(QUALITY_COL, "-parsed", parser.parse_quality_cell(row[QUALITY_COL]))

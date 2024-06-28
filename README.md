@@ -343,6 +343,10 @@ into the repo.
    the data to Drive. Include your Drive credentials and local paths and the
    like.**
 
+   1. **Marcion's pipeline should retrieve the data manually collected /
+      overridden for `dawoud-pages` and `crum-last-page`, rather than simply
+      write an empty placeholder column.** (1-2 hours)
+
 1. **Find / design a software to help users record their pronunciations.** (20
    hours, delegate)
 
