@@ -414,6 +414,9 @@ into the repo.
 
 ### Content TODO's
 
+1. **Crum: Take derivations into consideration when deciding whether a given
+   word belongs to a dialect.** (1-2 hours)
+
 1. **Create Kindle-compatible dictionary**
    [See](https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV) (7-8 hours)
 
