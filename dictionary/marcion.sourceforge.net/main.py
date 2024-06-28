@@ -273,16 +273,18 @@ def build_trees(roots: pd.DataFrame, derivations: pd.DataFrame) -> None:
 def dawoud_sort_key(words: list[lexical.structured_word]) -> str:
     for d in ["B", "S"]:
         for w in words:
-            if w.is_dialect(d):
-                for s in w.spellings():
-                    # This spelling has at least one Coptic letter.
-                    if constants.COPTIC_LETTER_RE.match(s):
-                        if s.startswith("(") and s.endswith(")"):
-                            return s[1:-1]
-                        if s.startswith("-"):
-                            s = s[1:]
-                        assert s
-                        return f"{s} ({d})"
+            if not w.is_dialect(d):
+                continue
+            for s in w.spellings():
+                # This spelling has at least one Coptic letter.
+                if not constants.COPTIC_LETTER_RE.search(s):
+                    continue
+                if s.startswith("(") and s.endswith(")"):
+                    s = s[1:-1]
+                if s.startswith("-"):
+                    s = s[1:]
+                assert s
+                return f"{s} ({d})"
 
     return ""
 
