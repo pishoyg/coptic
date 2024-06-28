@@ -19,7 +19,7 @@ test: unittest
 download: download_marcion_dawoud
 
 .PHONY: setup
-setup: marcion_img_resize_nonexisting 
+setup: marcion_img_convert_resize
 
 .PHONY: build
 build: bible copticsite marcion kellia flashcards
@@ -106,8 +106,8 @@ download_marcion_dawoud: FORCE
 marcion: FORCE
 	python dictionary/marcion.sourceforge.net/main.py
 
-marcion_img_resize_nonexisting: FORCE
-	bash dictionary/marcion.sourceforge.net/resize_nonexisting.sh
+marcion_img_convert_resize: FORCE
+	bash dictionary/marcion.sourceforge.net/convert_resize.sh
 
 # KELLIA RULES
 analysis: FORCE
