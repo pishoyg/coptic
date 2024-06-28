@@ -214,10 +214,10 @@ clean_modified_img_300: FORCE
 		| xargs git restore
 
 clean_bible_epub: FORCE
-  git restore "bible/stshenouda.org/data/output/epub*/*.epub"
+	git restore "bible/stshenouda.org/data/output/epub*/*.epub"
 
 clean_analysis: FORCE
-  git restore "dictionary/kellia.uni-goettingen.de/analysis.json"
+	git restore "dictionary/kellia.uni-goettingen.de/analysis.json"
 
 loc: FORCE
 	find . \
