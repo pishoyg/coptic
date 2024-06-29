@@ -427,6 +427,16 @@ def sort_semver(paths: list[str]) -> list[str]:
 
 
 @type_enforced.Enforcer
+def dedup_consec(arr: list[int]) -> list[int]:
+    out = []
+    for x in arr:
+        if out and out[-1] == x:
+            continue
+        out.append(x)
+    return out
+
+
+@type_enforced.Enforcer
 def page_numbers(page_ranges: str) -> list[int]:
     """
     page_ranges is a comma-separated list of integers or integer ranges, just
@@ -454,4 +464,5 @@ def page_numbers(page_ranges: str) -> list[int]:
         assert end >= start, f"start={start}, end={end}"
         for x in range(start, end + 1):
             out.append(x)
+    out = dedup_consec(out)
     return out
