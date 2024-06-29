@@ -4,16 +4,10 @@ SHELL:=/bin/bash
 all: validate test setup build
 
 .PHONY: allall  # This includes privileged rules.
-allall: validate test download setup build publish stats
+allall: validate test download setup build deploy stats
 
 .PHONY: allallall  # This includes privileged and pollute rules.
-allallall: validate test download setup build publish stats pollute
-
-.PHONY: validate
-validate: precommit readme image_extensions
-
-.PHONY: test
-test: unittest
+allallall: download setup validate test build deploy stats pollute
 
 .PHONY: download
 download: download_marcion_dawoud
@@ -21,11 +15,17 @@ download: download_marcion_dawoud
 .PHONY: setup
 setup: marcion_img_convert_resize
 
+.PHONY: validate
+validate: precommit readme image_extensions
+
+.PHONY: test
+test: unittest
+
 .PHONY: build
 build: bible copticsite marcion kellia flashcards
 
-.PHONY: publish
-publish: drive
+.PHONY: deploy
+deploy: cp_flashcards_to_drive
 
 .PHONY: stats
 stats: loc img_count
@@ -163,7 +163,7 @@ flashcards_kellia_comprehensive: FORCE
 		--output "flashcards/data/kellia_comprehensive.apkg" \
 		--timestamp "${TIMESTAMP}"
 
-drive: FORCE
+cp_flashcards_to_drive: FORCE
 	cp \
 		flashcards/data/*.apkg \
 		"$${DEST_DIR}"
