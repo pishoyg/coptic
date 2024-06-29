@@ -95,6 +95,32 @@ class node:
         return self._key_to_idx[child.cell("key")]
 
     @type_enforced.Enforcer
+    def txt(self) -> str:
+        assert self.is_root()
+        assert self._preprocessed
+
+        descendants = self.descendants()
+        if not descendants:
+            return ""
+
+        out = []
+
+        for d in descendants:
+            depth = int(d.cell("depth"))
+            word = d.cell("word-parsed-prettify")
+            type = d.cell("type-parsed")
+            meaning = d.cell("en-parsed-no-html")
+            line = "{indentation}{word}{type} {meaning}".format(
+                indentation=depth * "__",
+                word=word,
+                type=f" ({type})" if type not in ["-", "HEADER"] else "",
+                meaning=meaning,
+            )
+            out.append(line)
+        out = "\n".join(out)
+        return out
+
+    @type_enforced.Enforcer
     def html(
         self,
         dialect: typing.Optional[str] = None,
