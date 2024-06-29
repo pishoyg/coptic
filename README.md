@@ -24,6 +24,7 @@
   - [Diplomacy TODO's](#diplomacy-todos)
   - [Learner Convenience TODO's](#learner-convenience-todos)
   - [Content TODO's](#content-todos)
+  - [Kindle Content TODO's](#kindle-content-todos)
   - [Developer Convenience TODO's](#developer-convenience-todos)
 - [Credits](#credits)
 
@@ -187,7 +188,7 @@ suggestions or questions, or data! :)
 
 ### Dictionary
 
-1. **Collect more explanatory pictures.** (100+ hours, delegate)
+1. **Collect more explanatory pictures.** (100+ hours, delegated)
 
    This will significantly aid the
    learning process, and it will save learners the time that they have to spend
@@ -229,30 +230,34 @@ suggestions or questions, or data! :)
 ### Moawad Dawoud's Diciontary
 
 1. **Add Moawad Dawoud's page numbers, and add scans to the flashcards.** (50+
-   hours, delegate)
+   hours, delegated, in progress)
 
-1. Add Moawad Dawoud's Arabic translations.
+1. **Add Moawad Dawoud's Arabic translations.** (100+ hours, delegate)
 
-1. Add Moawad Dawoud's standardized spellings. (low-priority)
+1. Add Moawad Dawoud's standard spellings. (low-priority)
+   Crum mentions all spellings, including obscure and rare ones. Dawoud treats
+   some as more standard than others, which is helpful. It's worth highlighting
+   which spellings are more common.
 
 ### Audio
 
 (ambitious goal)
 
-1. Add pronunciations to the notes.
+1. **Add pronunciations to the notes.** (100+ hours, delegate)
 
 ### Learning Curriculum
 
 (ambitious goal)
 
-1. Create Duolingo-like learning curricula for learners at multiple levels.
+1. **Create Duolingo-like learning curricula for learners at multiple levels.**
+   (100+ hours, delegate)
 
 ### Neologisms
 
 (ambitious goal)
 
-1. Add neologisms. We need to think first of how to create neologisms before
-   we add them to our dataset.
+1. **Add neologisms. We need to think first of how to create neologisms before
+   we add them to our dataset.** (1000+ hours, delegate)
 
 ## For Developers / Owners
 
@@ -417,9 +422,6 @@ into the repo.
 1. **Crum: Take derivations into consideration when deciding whether a given
    word belongs to a dialect.** (1-2 hours)
 
-1. **Create Kindle-compatible dictionary**
-   [See](https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV) (7-8 hours)
-
 1. **Add links to CDO from Crum.** (3-4 hou4s)
 
    The url is `https://coptic-dictionary.org/results.cgi?quick_search={key}`.
@@ -488,6 +490,16 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
 1. Revisit the possibility of image compression to minimize the package size.
    (low-priority)
+
+### Kindle Content TODO's
+
+1. **Create Kindle-compatible dictionary**
+   [See](https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV) (7-8 hours)
+   Given Coptic's morphological complexity, it's not exactly clear how we can
+   include all inflected forms for each word. If morphologically complex
+   languages are still expected to produce a full dictionary with all inflected
+   forms, it should still be possible to produce such a dictionary.
+   The data could also be used for auto-correction and auto-completion.
 
 ### Developer Convenience TODO's
 
