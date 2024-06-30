@@ -493,13 +493,16 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
 ### Kindle Content TODO's
 
-1. **Create Kindle-compatible dictionary**
-   [See](https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV) (7-8 hours)
+1. **Create a [Kindle-compatible dictionary](
+https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (7-8 hours)
+
+   From a first glance, it looks like the dictionary needs to manually list all
+   inflected forms of a word in order to be able to look them up.
    Given Coptic's morphological complexity, it's not exactly clear how we can
    include all inflected forms for each word. If morphologically complex
-   languages are still expected to produce a full dictionary with all inflected
-   forms, it should still be possible to produce such a dictionary.
-   The data could also be used for auto-correction and auto-completion.
+   languages don't have any special treatment, it should still be possible, and
+   worthwhile, to produce such a dictionary, albeit with some difficulty.
+   The data could also be used for auto-correction and auto-completion models.
 
 ### Developer Convenience TODO's
 
