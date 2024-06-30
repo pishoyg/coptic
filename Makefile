@@ -100,7 +100,7 @@ download_marcion_dawoud: FORCE
 	python utils/download_gsheet.py \
 		--json_keyfile_name "$${JSON_KEYFILE_NAME}" \
 		--gspread_url "https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg" \
-		--column_names "key" "dawoud-pages" \
+		--column_names "key" "dawoud-pages" "dawoud-pages-redone" \
 		--out_tsv "dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv"
 
 marcion: FORCE

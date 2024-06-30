@@ -188,9 +188,9 @@ class grp(_content_field):
 
     def __init__(
         self,
-        keys: tsv | gsheet,
-        group_by: tsv | gsheet,
-        selected: tsv | gsheet,
+        keys,
+        group_by,
+        selected,
         force: bool = True,
         unique: bool = False,
     ) -> None:
@@ -212,7 +212,7 @@ class media(_content_field):
         self,
         # HTML format string.
         html_fmt: str,
-        keys: tsv | gsheet | grp,
+        keys,
         # Map key to list of paths.
         get_paths: enforcer.Callable,
         # Sort list of paths.
@@ -265,7 +265,7 @@ class media(_content_field):
 
 @type_enforced.Enforcer
 def img(
-    keys: tsv | gsheet | grp,
+    keys,
     get_paths: enforcer.Callable,
     sort_paths: enforcer.OptionalCallable = None,
     get_caption: enforcer.OptionalCallable = None,
@@ -291,7 +291,7 @@ def img(
 
 @type_enforced.Enforcer
 def snd(
-    keys: tsv | gsheet | grp,
+    keys,
     get_paths: enforcer.Callable,
     sort_paths: enforcer.OptionalCallable = None,
     force: bool = True,
