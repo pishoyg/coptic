@@ -504,6 +504,13 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (7-8 hours)
    worthwhile, to produce such a dictionary, albeit with some difficulty.
    The data could also be used for auto-correction and auto-completion models.
 
+1. **Display the Bible data in a table format.** (7-8 hours)
+
+   The reason the Bible was chosen to be displayed is that it showed difficulty
+   with highlighting. There is some information about this
+   [here](https://kdp.amazon.com/en_US/help/topic/GZ8BAXASXKB5JVML), and a
+   workaround may be possible.
+
 ### Developer Convenience TODO's
 
 (40+ hours)
