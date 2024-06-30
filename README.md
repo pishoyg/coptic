@@ -504,6 +504,9 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (7-8 hours)
    worthwhile, to produce such a dictionary, albeit with some difficulty.
    The data could also be used for auto-correction and auto-completion models.
 
+   See [this use case](https://github.com/runehol/kindlearadict) for Arabic,
+   another morphologically complex language.
+
 1. **Display the Bible data in a table format.** (7-8 hours)
 
    The reason the Bible was chosen to be displayed is that it showed difficulty
