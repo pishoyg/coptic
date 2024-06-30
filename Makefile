@@ -4,7 +4,7 @@ SHELL:=/bin/bash
 all: validate test setup build
 
 .PHONY: allall  # This includes privileged rules.
-allall: validate test download setup build deploy stats
+allall: download setup validate test build deploy stats
 
 .PHONY: allallall  # This includes privileged and pollute rules.
 allallall: download setup validate test build deploy stats pollute
