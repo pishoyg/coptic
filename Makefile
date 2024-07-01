@@ -4,10 +4,13 @@ SHELL:=/bin/bash
 all: validate test setup build
 
 .PHONY: allall  # This includes privileged rules.
-allall: download setup validate test build deploy stats
+allall: install download setup validate test build deploy stats
 
 .PHONY: allallall  # This includes privileged and pollute rules.
-allallall: download setup validate test build deploy stats pollute
+allallall: install download setup validate test build deploy stats pollute
+
+.PHONY: install
+install: install_pip 
 
 .PHONY: download
 download: download_marcion_dawoud
@@ -64,6 +67,10 @@ FORCE:
 # ```
 # The rules that run privileged will fail unless `secrets.sh` has already been
 # sourced.
+
+install_pip: FORCE
+	python -m pip install --upgrade pip "$${BREAK_SYSTEM_PACKAGES}"
+	python -m pip install -r requirements.txt "$${BREAK_SYSTEM_PACKAGES}"
 
 precommit: FORCE
 	pre-commit run
