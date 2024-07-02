@@ -603,5 +603,6 @@ The data used here was digitalized and published through the efforts of:
 
 1. Osama Thabet, creator of [copticsite.com](https://copticsite.com/)
 
-1. [Kyrillos Wannes](https://twitter.com/kyrilloswannes) is rigorously
+1. [Kyrillos Wannes](https://twitter.com/kyrilloswannes), author of *Een 
+   Inleiding tot Bohairisch Koptisch*, who is rigorously
    collecting Marcion-Dawoud mapping for the flashcards project.
