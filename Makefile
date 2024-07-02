@@ -1,7 +1,7 @@
 SHELL:=/bin/bash
 
 .PHONY: all
-all: validate test setup build
+all: install setup validate test build stats
 
 .PHONY: allall  # This includes privileged rules.
 allall: install download setup validate test build deploy stats
@@ -85,6 +85,7 @@ readme: FORCE
 image_extensions: FORCE
 	echo "Checking for unknown image extensions:"
 	comm -23 <( ls dictionary/marcion.sourceforge.net/data/img/ | grep -o '\..*' | tr '[:upper:]' '[:lower:]' | sort | uniq ) <( echo .avif .gif .jpeg .jpg .png .webp | tr ' ' '\n' | sort )
+	# TODO: Verify that there are no unknown extensions.
 
 unittest: FORCE
 	python -m unittest discover \
