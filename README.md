@@ -602,3 +602,6 @@ The data used here was digitalized and published through the efforts of:
    Society](http://stshenouda.org/)
 
 1. Osama Thabet, creator of [copticsite.com](https://copticsite.com/)
+
+1. [Kyrillos Wannes](https://twitter.com/kyrilloswannes) is rigorously
+   collecting Marcion-Dawoud mapping for the flashcards project.
