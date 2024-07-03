@@ -362,10 +362,6 @@ into the repo.
 
 1. Find / design a software to help users collect explanatory images.
 
-1. Document the content of `secrets.sh` to make it easier for someone else to
-   create their own version of `secrets.sh` with their own access tokens, and
-   run the project script independently.
-
 ### Diplomacy TODO's
 
 1. **Find one or two co-owners of the project.**

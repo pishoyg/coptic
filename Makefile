@@ -25,7 +25,7 @@ validate: precommit readme image_extensions
 test: unittest
 
 .PHONY: build
-build: bible copticsite marcion kellia flashcards
+build: bible copticsite marcion kellia flashcards flashcards_redundant
 
 .PHONY: deploy
 deploy: cp_flashcards_to_drive
@@ -44,9 +44,6 @@ clean: git_clean clean_bible_epub clean_analysis
 .PHONY: toil
 toil: find_images
 
-.PHONY: flashcards_redundant
-flashcards_redundant: flashcards_crum_sahidic flashcards_crum flashcards_copticsite flashcards_bible flashcards_kellia_comprehensive flashcards_kellia
-
 .PHONY: flashcards_verify
 flashcards_verify: verify_identical_flashcards verify_identical_flashcards_crum_sahidic
 
@@ -58,15 +55,15 @@ FORCE:
 
 # If you know the secrets, then you can run the privileged tasks. They require
 # a set of variables to be exported. These are contained in a `secrets.sh` file
-# that you source.
+# that you need to source before running the privileged make rules.
+# ```
+# source secrets.sh && make ${PRIVILEGED_RULE}
+# ```
 # You can create your own version of `secrets.sh`. There is nothing magical
-# there, just some paths and access tokens that belong to me. You can create
-# your own so you can run the privileged rules on your account.
-# ```
-# source secrets.sh && make privileged
-# ```
-# The rules that run privileged will fail unless `secrets.sh` has already been
-# sourced.
+# in that file - just some paths and access tokens that belong to me.
+# Check secrets_template.sh for more information.
+# Rules that use exported variables are generally privileged, though sometimes
+# they can run even if the variables are unpopulated.
 
 install_pip: FORCE
 	python -m pip install --upgrade pip "$${BREAK_SYSTEM_PACKAGES}"
@@ -170,6 +167,8 @@ flashcards_kellia_comprehensive: FORCE
 		--decks "KELLIA::Comprehensive" \
 		--output "flashcards/data/kellia_comprehensive.apkg" \
 		--timestamp "${TIMESTAMP}"
+
+flashcards_redundant: flashcards_crum_sahidic flashcards_crum flashcards_copticsite flashcards_bible flashcards_kellia_comprehensive flashcards_kellia
 
 cp_flashcards_to_drive: FORCE
 	cp \
