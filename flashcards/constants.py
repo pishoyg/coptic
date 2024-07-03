@@ -165,7 +165,10 @@ def crum(
                         field.grp(
                             keys=roots_col("key", force=True),
                             group_by=dawoud_col("key", force=True),
-                            selected=dawoud_col("dawoud-pages", force=False),
+                            selected=field.xor(
+                                dawoud_col("dawoud-pages-redone", force=False),
+                                dawoud_col("dawoud-pages", force=False),
+                            ),
                             force=False,
                             unique=True,
                         ),
