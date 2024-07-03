@@ -158,7 +158,7 @@ class gsheet(_content_field):
         )
         sheet = gspread.authorize(credentials).open_by_url(gspread_url)
         records = sheet.get_worksheet(0).get_all_records()
-        content = [str(row[column_name]) for row in records]
+        content = [str(row[column_name]).strip() for row in records]
         super().__init__(content, [], force=force)
 
 
