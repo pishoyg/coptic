@@ -29,7 +29,8 @@ ENGLISH_LETTER_RE = re.compile("[a-zA-Z]")
 
 CRUM_PAGE_FMT = "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID={key}"
 KOINE_GREEK_DICTIONARY_FMT = (
-    "https://www.billmounce.com/search/node/{key}%20type%3Alexicon"
+    "https://logeion.uchicago.edu/{key}"
+    # "https://www.billmounce.com/search/node/{key}%20type%3Alexicon"
 )
 
 # LETTER_ENCODING is used to convert ASCII-encoded Coptic text to unicode.
