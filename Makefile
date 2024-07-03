@@ -31,7 +31,7 @@ build: bible copticsite marcion kellia flashcards flashcards_redundant
 deploy: cp_flashcards_to_drive
 
 .PHONY: stats
-stats: loc img_count
+stats: loc img_count dawoud_count
 
 .PHONY: pollute
 pollute: bible_epub analysis
@@ -108,6 +108,13 @@ download_marcion_dawoud: FORCE
 		--column_names "key" "dawoud-pages" "dawoud-pages-redone" \
 		--out_tsv "dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv"
 
+dawoud_count: FORCE
+	echo "Number of words that have at least one page from Dawoud:"
+	cat dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv \
+		| awk '{ print $$2 }'  \
+		| grep --invert '^$$'  \
+		| wc
+
 marcion: FORCE
 	python dictionary/marcion.sourceforge.net/main.py
 
@@ -183,6 +190,7 @@ find_images: FORCE
 		--start_at_key="${START_AT_KEY}"
 
 img_count: FORCE
+	echo "Number of words possessing at least one image:"
 	ls dictionary/marcion.sourceforge.net/data/img/ \
 		| grep -oE '^[0-9]+' \
 		| sort \
@@ -226,6 +234,7 @@ clean_analysis: FORCE
 	git restore "dictionary/kellia.uni-goettingen.de/analysis.json"
 
 loc: FORCE
+	echo "Number of lines of code:"
 	find . \
 		-name "*.py" -o -name "*.java" \
 		-o -name "*.proto" -o -name "*.sh" \
