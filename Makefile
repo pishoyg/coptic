@@ -122,8 +122,8 @@ kellia: FORCE
 	python dictionary/kellia.uni-goettingen.de/main.py
 
 # FLASHCARD RULES
-TIMESTAMP = 1720024858
-START_AT_KEY = 1249
+TIMESTAMP = 1720028942
+START_AT_KEY = 1314
 
 timestamp: FORCE
 	date +%s | pbcopy
