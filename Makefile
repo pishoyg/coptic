@@ -80,7 +80,7 @@ readme: FORCE
 		"flashcards/README.md" 
 
 image_extensions: FORCE
-	echo "Checking for unknown image extensions:"
+	# Checking for unknown image extensions:
 	comm -23 <( ls dictionary/marcion.sourceforge.net/data/img/ | grep -o '\..*' | tr '[:upper:]' '[:lower:]' | sort | uniq ) <( echo .avif .gif .jpeg .jpg .png .webp | tr ' ' '\n' | sort )
 	# TODO: Verify that there are no unknown extensions.
 
@@ -109,7 +109,7 @@ download_marcion_dawoud: FORCE
 		--out_tsv "dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv"
 
 dawoud_count: FORCE
-	echo "Number of words that have at least one page from Dawoud:"
+	# Number of words that have at least one page from Dawoud:
 	cat dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv \
 		| awk '{ print $$2 }'  \
 		| grep --invert '^$$'  \
@@ -190,7 +190,7 @@ find_images: FORCE
 		--start_at_key="${START_AT_KEY}"
 
 img_count: FORCE
-	echo "Number of words possessing at least one image:"
+	# Number of words possessing at least one image:
 	ls dictionary/marcion.sourceforge.net/data/img/ \
 		| grep -oE '^[0-9]+' \
 		| sort \
@@ -234,7 +234,7 @@ clean_analysis: FORCE
 	git restore "dictionary/kellia.uni-goettingen.de/analysis.json"
 
 loc: FORCE
-	echo "Number of lines of code:"
+	# Number of lines of code:
 	find . \
 		-name "*.py" -o -name "*.java" \
 		-o -name "*.proto" -o -name "*.sh" \
