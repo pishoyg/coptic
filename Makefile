@@ -1,5 +1,7 @@
 SHELL:=/bin/bash
 
+TIMESTAMP = $(shell cat timestamp)
+
 .PHONY: all
 all: install setup validate test build stats
 
@@ -38,6 +40,9 @@ pollute: bible_epub analysis
 
 # The below rules are only run in special cases, and are not included in any of
 # the alls.
+.PHONY: increment
+increment: timestamp
+
 .PHONY: clean
 clean: git_clean clean_bible_epub clean_analysis
 
@@ -129,11 +134,8 @@ kellia: FORCE
 	python dictionary/kellia.uni-goettingen.de/main.py
 
 # FLASHCARD RULES
-TIMESTAMP = 1720028942
-START_AT_KEY = 1314
-
 timestamp: FORCE
-	date +%s | pbcopy
+	date +%s > timestamp
 
 flashcards: FORCE
 	python flashcards/main.py \
@@ -187,7 +189,7 @@ find_images: FORCE
 	python dictionary/marcion.sourceforge.net/find_images.py \
 		--skip_existing=true \
 		--exclude "verb" \
-		--start_at_key="${START_AT_KEY}"
+		--start_at_key="$${START_AT_KEY}"
 
 img_count: FORCE
 	# Number of words possessing at least one image:

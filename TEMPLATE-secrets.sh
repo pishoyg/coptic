@@ -30,3 +30,6 @@ export TEST_DIR=""
 # In such a case, we have to inspect the content of the sheet, so we do this
 # through the Google Cloud API.
 export JSON_KEYFILE_NAME=""
+
+# START_AT_KEY is used in Marcion's image-finding assistance script.
+export START_AT_KEY="0"
