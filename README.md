@@ -558,6 +558,9 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (7-8 hours)
 
    Learners who synchronize their data will only have the old notes overridden.
 
+1. **Make the unit tests discoverable.**
+   ([See](https://docs.python.org/3/library/unittest.html#test-discovery).)
+
 1. Expand the unit tests.
 
 1. Expand the use of hooks and Makefile.
