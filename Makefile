@@ -6,10 +6,10 @@ TIMESTAMP = $(shell cat timestamp)
 all: install setup validate test build stats
 
 .PHONY: allall  # This includes privileged rules.
-allall: source install download setup validate test build deploy stats
+allall: install download setup validate test build deploy stats
 
 .PHONY: allallall  # This includes privileged and pollute rules.
-allallall: source install download setup validate test build deploy stats pollute
+allallall: install download setup validate test build deploy stats pollute
 
 .PHONY: install
 install: install_pip 
@@ -37,11 +37,6 @@ stats: loc img_count dawoud_count
 
 .PHONY: pollute
 pollute: bible_epub analysis
-
-# The below rules are only run in special cases, and are not included in any of
-# the alls.
-.PHONY: source
-source: source_secrets
 
 .PHONY: increment
 increment: timestamp
@@ -137,9 +132,6 @@ kellia: FORCE
 	python dictionary/kellia.uni-goettingen.de/main.py
 
 # FLASHCARD RULES
-source_secrets: FORCE
-	. ./secrets.sh
-
 timestamp: FORCE
 	date +%s > timestamp
 
