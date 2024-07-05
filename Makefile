@@ -9,7 +9,7 @@ all: install setup validate test build stats
 allall: source install download setup validate test build deploy stats
 
 .PHONY: allallall  # This includes privileged and pollute rules.
-allallall: install download setup validate test build deploy stats pollute
+allallall: source install download setup validate test build deploy stats pollute
 
 .PHONY: install
 install: install_pip 
