@@ -591,6 +591,11 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (7-8 hours)
    Move them to README files when more visibility is warranted. Delete them
    when they are deemed irrelevant.
 
+## Keyboard
+
+1. Complete your [keyboard
+proposal](https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/edit).
+
 ## Credits
 
 The data used here was digitalized and published through the efforts of:
