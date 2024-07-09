@@ -19,6 +19,7 @@ repos:
       - id: markdownlint-fix
         args: [--disable, MD033, MD036]
 
+  # Local scripts.
   - repo: local
     hooks:
       - id: marcion-validate
