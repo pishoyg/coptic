@@ -215,12 +215,13 @@ def crum(
                 field.aon(
                     "<b>Key: </b>",
                     roots_col("key", force=True),
+                    " ",
                 ),
                 field.txt(
                     '<span id="right">'
                     '<a href="https://github.com/pishoyg/coptic/">Home</a>'
                     ", "
-                    '<a href="mailto:pishoybg@gmail.com">Inquiries</a>'
+                    '<a href="mailto:pishoybg@gmail.com">Contact</a>'
                     "</span>"
                 ),
             ),
