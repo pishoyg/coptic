@@ -26,6 +26,7 @@
   - [Content TODO's](#content-todos)
   - [Kindle Content TODO's](#kindle-content-todos)
   - [Developer Convenience TODO's](#developer-convenience-todos)
+- [Keyboard](#keyboard)
 - [Credits](#credits)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -517,6 +518,11 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (7-8 hours)
 ### Developer Convenience TODO's
 
 (40+ hours)
+
+1. **Move logic out of Makefile.** (1 hour)
+
+   It's much easier to code without the restrictions of `make` syntax. This
+   also makes the code more discoverable.
 
 1. **Export accurate timestamps.** (20 hours, delegate)
 
