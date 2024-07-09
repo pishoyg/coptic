@@ -23,6 +23,8 @@ GSPREAD_SCOPE = [
 _work_dir = ""
 _initialized = False
 _in_work_dir = {}
+_tsv = {}
+_gsheet = {}
 
 
 @type_enforced.Enforcer
@@ -131,7 +133,13 @@ class tsv(_content_field):
     """
 
     def __init__(self, file_path: str, column_name: str, force: bool = True) -> None:
-        df = pd.read_csv(file_path, sep="\t", dtype=str, encoding="utf-8").fillna("")
+        if file_path in _tsv:
+            df = _tsv[file_path]
+        else:
+            df = pd.read_csv(file_path, sep="\t", dtype=str, encoding="utf-8").fillna(
+                ""
+            )
+            _tsv[file_path] = df
         content = [str(cell).strip() for cell in df[column_name]]
         content = list(map(use_html_line_breaks, content))
         super().__init__(content, [], force=force)
@@ -153,10 +161,15 @@ class gsheet(_content_field):
         assert json_keyfile_name
         assert gspread_url
         assert column_name
-        credentials = service_account.ServiceAccountCredentials.from_json_keyfile_name(
-            json_keyfile_name, GSPREAD_SCOPE
-        )
-        sheet = gspread.authorize(credentials).open_by_url(gspread_url)
+        if gspread_url in _gsheet:
+            sheet = _gsheet[gspread_url]
+        else:
+            credentials = (
+                service_account.ServiceAccountCredentials.from_json_keyfile_name(
+                    json_keyfile_name, GSPREAD_SCOPE
+                )
+            )
+            sheet = gspread.authorize(credentials).open_by_url(gspread_url)
         records = sheet.get_worksheet(0).get_all_records()
         content = [str(row[column_name]).strip() for row in records]
         super().__init__(content, [], force=force)
