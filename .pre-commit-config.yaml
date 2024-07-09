@@ -24,7 +24,7 @@ repos:
     hooks:
       - id: marcion-validate
         name: marcion-validate
-        entry: dictionary/marcion.sourceforge.net/validate.sh
+        entry: dictionary/marcion.sourceforge.net/img_validate.sh
         language: script
         pass_filenames: false
         # TODO: Add a filter to this pre-commit.

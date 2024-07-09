@@ -18,7 +18,7 @@ install: install_pip
 download: download_marcion_dawoud
 
 .PHONY: setup
-setup: marcion_convert_resize
+setup: marcion_img_setup
 
 .PHONY: validate
 validate: precommit
@@ -60,9 +60,9 @@ flashcards_try: try_flashcards try_flashcards_crum_sahidic
 doctoc_readme: FORCE
 	bash doctoc_readme.sh
 
-.PHONY: marcion_validate
+.PHONY: marcion_img_validate
 marcion_validate: FORCE
-	bash dictionary/marcion.sourceforge.net/validate.sh
+	bash dictionary/marcion.sourceforge.net/img_validate.sh
 
 .PHONY: python_unittest
 python_unittest: FORCE
@@ -122,8 +122,8 @@ dawoud_count: FORCE
 marcion: FORCE
 	python dictionary/marcion.sourceforge.net/main.py
 
-marcion_convert_resize: FORCE
-	bash dictionary/marcion.sourceforge.net/convert_resize.sh
+marcion_img_setup: FORCE
+	bash dictionary/marcion.sourceforge.net/img_setup.sh
 
 # KELLIA RULES
 analysis: FORCE
