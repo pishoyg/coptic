@@ -4,13 +4,15 @@ SRC="dictionary/marcion.sourceforge.net/data/img"
 WIDTH="300"
 DST="dictionary/marcion.sourceforge.net/data/img-${WIDTH}"
 
-process() {
-  FILE="$1"
-  magick "${SRC}/${FILE}" -resize "${WIDTH}x" "${DST}/${FILE/.png/.jpg}"
-}
+# Delete obsolete images.
+for FILE in $(ls "${DST}"); do
+ if [ ! -f "${SRC}/${FILE}" ] && [ ! -f "${SRC}/${FILE/.jpg/.png}" ]; then
+   rm "${DST}/${FILE}"
+ fi
+done
 
 mkdir -p "${DST}"
 
 for FILE in $(ls "${SRC}"); do
-  process "${FILE}"
+  magick "${SRC}/${FILE}" -resize "${WIDTH}x" "${DST}/${FILE/.png/.jpg}"
 done

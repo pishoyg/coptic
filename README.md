@@ -519,8 +519,6 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (7-8 hours)
 
 (40+ hours)
 
-1. **The Marcion image convertor should delete obsolete images.** (1 hour)
-
 1. **Export accurate timestamps.** (20 hours, delegate)
 
    1. Reimporting (supposedly identical data) produces the message "notes were
