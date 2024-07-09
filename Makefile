@@ -110,6 +110,7 @@ marcion_dawoud_download: FORCE
 
 marcion_dawoud_count: FORCE
 	# Number of words that have at least one page from Dawoud:
+	# TODO: Fix this statistic.
 	cat dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv \
 		| awk '{ print $$2 }'  \
 		| grep --invert '^$$'  \
