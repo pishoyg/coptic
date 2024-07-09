@@ -567,7 +567,9 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (7-8 hours)
 
 1. Expand the unit tests.
 
-1. Expand the use of hooks and Makefile.
+1. **Set up proper dependencies in Makefile.**
+
+1. Expand the use of hooks.
 
 1. Do not let Python tempt you to use its built-in types instead of classes and
    objects. Don't forget about OOP!
