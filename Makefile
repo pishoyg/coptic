@@ -5,11 +5,14 @@ TIMESTAMP = $(shell cat timestamp.txt)
 .PHONY: all
 all: install setup validate generate stats
 
-.PHONY: allp  # This includes privileged rules.
-allp: all publish
+.PHONY: allall  # This includes privileged rules.
+allall: increment all publish
 
-.PHONY: allpp  # This includes privileged and pollute rules.
-allpp: allp pollute
+.PHONY: allallall  # This includes privileged and pollute rules.
+allallall: increment all pollute publish
+
+.PHONY: increment
+increment: flashcards_timestamp
 
 .PHONY: install
 install: pip_install 
@@ -23,23 +26,17 @@ validate: precommit
 .PHONY: generate
 generate: bible copticsite marcion kellia flashcards flashcards_redundant
 
-.PHONY: publish
-publish: flashcards_cp_to_drive
-
 .PHONY: stats
 stats: loc marcion_img_count marcion_dawoud_count
+
+.PHONY: publish
+publish: flashcards_cp_to_drive
 
 .PHONY: pollute
 pollute: bible_epub kellia_analysis
 
 # The rules below are not included in any of the "all" rules above. They are
 # intended to be run as one-offs.
-
-# TODO: Run `increment` whenever you detect that a new version of the
-# flashcards has been published.
-.PHONY: increment
-increment: flashcards_timestamp
-
 .PHONY: clean
 clean: git_clean bible_epub_clean kellia_analysis_clean
 
