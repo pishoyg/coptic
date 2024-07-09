@@ -55,6 +55,8 @@ try: flashcards_try flashcards_crum_sahidic_try
 
 # The rules below are not included in any of the "all" rules above. They run in
 # pre-commit.
+# They all depend on FORCE because we assume that, if you're running them
+# manually, then you want to run them anyway.
 
 .PHONY: doctoc_readme
 doctoc_readme: FORCE
@@ -85,7 +87,7 @@ FORCE:
 # Rules that use exported variables are generally privileged, though sometimes
 # they can run even if the variables are unpopulated.
 
-pip_install: FORCE
+pip_install: requirements.txt
 	python -m pip install --upgrade pip "$${BREAK_SYSTEM_PACKAGES}"
 	python -m pip install -r requirements.txt "$${BREAK_SYSTEM_PACKAGES}"
 
@@ -93,6 +95,8 @@ precommit: FORCE
 	pre-commit run
 
 # BIBLE RULES
+# TODO: Resolve the issue with spaces in file names in order to be able to
+# specify dependencies for the Bible rules.
 bible: FORCE
 	python bible/stshenouda.org/main.py \
 		--no_epub "true"
@@ -101,7 +105,7 @@ bible_epub: FORCE
 	python bible/stshenouda.org/main.py
 
 # COPTICSITE_COM RULES
-copticsite: FORCE
+copticsite: $(shell find dictionary/copticsite.com/ -type f)
 	python dictionary/copticsite.com/main.py
 
 # MARCION RULES
@@ -119,20 +123,22 @@ marcion_dawoud_count: FORCE
 		| grep --invert '^$$'  \
 		| wc
 
-marcion: FORCE
+marcion: $(shell find dictionary/marcion.sourceforge.net/ -type f)
 	python dictionary/marcion.sourceforge.net/main.py
 
-marcion_img_setup: FORCE
+marcion_img_setup: $(shell find dictionary/marcion.sourceforge.net/ -type f)
 	bash dictionary/marcion.sourceforge.net/img_setup.sh
 
 # KELLIA RULES
-kellia_analysis: FORCE
+kellia_analysis: $(shell find dictionary/kellia.uni-goettingen.de/ -type f)
 	python dictionary/kellia.uni-goettingen.de/analysis.py
 
-kellia: FORCE
+kellia: $(shell find dictionary/kellia.uni-goettingen.de/ -type f)
 	python dictionary/kellia.uni-goettingen.de/main.py
 
 # FLASHCARD RULES
+# TODO: Consider assigning dependencies, instead of letting everything depend
+# on FORCE.
 flashcards_timestamp: FORCE
 	date +%s > timestamp.txt
 
@@ -178,7 +184,7 @@ flashcards_kellia_comprehensive: FORCE
 
 flashcards_redundant: flashcards_crum_sahidic flashcards_crum flashcards_copticsite flashcards_bible flashcards_kellia_comprehensive flashcards_kellia
 
-flashcards_cp_to_drive: FORCE
+flashcards_cp_to_drive: $(shell find flashcards/data/ -type f)
 	cp \
 		flashcards/data/*.apkg \
 		"$${DEST_DIR}"
@@ -228,10 +234,10 @@ git_clean: FORCE
 		--exclude "secrets.sh" \
 		--force
 
-bible_epub_clean: FORCE
+bible_epub_clean: $(shell ls bible/stshenouda.org/data/output/epub*/*.epub)
 	git restore "bible/stshenouda.org/data/output/epub*/*.epub"
 
-kellia_analysis_clean: FORCE
+kellia_analysis_clean: dictionary/kellia.uni-goettingen.de/analysis.json
 	git restore "dictionary/kellia.uni-goettingen.de/analysis.json"
 
 loc: FORCE
