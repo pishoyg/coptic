@@ -3,6 +3,7 @@ import os
 import typing
 
 import deck
+import enforcer
 import field
 import type_enforced
 
@@ -20,12 +21,12 @@ BIBLE_LANGUAGES = [
 ]
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def crum(
     deck_name: str, deck_id: int, dialect_cols: list[str], force_front: bool = True
 ):
 
-    @type_enforced.Enforcer
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def roots_col(col_name: str, force: bool = True) -> field.tsv:
         return field.tsv(
             "dictionary/marcion.sourceforge.net/data/output/roots.tsv",
@@ -40,7 +41,7 @@ def crum(
             force=force,
         )
 
-    @type_enforced.Enforcer
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def create_front() -> field.Field:
         if len(dialect_cols) == 1:
             return roots_col(dialect_cols[0], force=False)
@@ -230,10 +231,10 @@ def crum(
     )
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def bible(deck_name: str, deck_id: int, front_dialects: list[str]):
 
-    @type_enforced.Enforcer
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def tsv_column(col_name: str, force: bool = True) -> field.tsv:
         return field.tsv(
             "bible/stshenouda.org/data/output/csv/bible.csv", col_name, force
@@ -305,9 +306,9 @@ def bible(deck_name: str, deck_id: int, front_dialects: list[str]):
     )
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def copticsite_com(deck_name: str, deck_id: int):
-    @type_enforced.Enforcer
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def tsv_col(col_name: str, force: bool = True) -> field.tsv:
         return field.tsv(
             "dictionary/copticsite.com/data/output/output.tsv", col_name, force=force
@@ -347,9 +348,9 @@ def copticsite_com(deck_name: str, deck_id: int):
     )
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def kellia(deck_name: str, deck_id: int, tsv_basename: str):
-    @type_enforced.Enforcer
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def tsv_col(col_name: str, force: bool = True) -> field.tsv:
         return field.tsv(
             f"dictionary/kellia.uni-goettingen.de/data/output/{tsv_basename}.tsv",
@@ -471,7 +472,7 @@ LAMBDAS = {
 }
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def DECKS(deck_names: typing.Optional[list[str]]):
     if deck_names is None:
         return [lam(name) for name, lam in LAMBDAS.items()]

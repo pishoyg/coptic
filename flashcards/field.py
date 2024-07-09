@@ -27,14 +27,14 @@ _tsv = {}
 _gsheet = {}
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def init(work_dir: str) -> None:
     global _work_dir, _initialized
     _work_dir = work_dir
     _initialized = True
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _add_to_work_dir(path: str) -> str:
     assert _initialized
     if path in _in_work_dir:
@@ -46,7 +46,7 @@ def _add_to_work_dir(path: str) -> str:
     return new_path
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class field:
     def next(self) -> str | list[str]:
         raise ValueError("Unimplemented!")
@@ -58,7 +58,7 @@ class field:
         raise ValueError("Unimplemented!")
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class _primitive_field(field):
 
     def length(self) -> int:
@@ -68,7 +68,7 @@ class _primitive_field(field):
         return []
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class txt(_primitive_field):
     """
     A constant text field.
@@ -86,7 +86,7 @@ class txt(_primitive_field):
         return self._text
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class seq(_primitive_field):
     """
     A numerical sequence field.
@@ -99,7 +99,7 @@ class seq(_primitive_field):
         return str(next(self._counter))
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class _content_field(field):
 
     def __init__(
@@ -126,7 +126,7 @@ class _content_field(field):
         return len(self._content)
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class tsv(_content_field):
     """
     A TSV column field.
@@ -145,7 +145,7 @@ class tsv(_content_field):
         super().__init__(content, [], force=force)
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class gsheet(_content_field):
     """
     A column from a Google sheet.
@@ -175,7 +175,7 @@ class gsheet(_content_field):
         super().__init__(content, [], force=force)
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class grp(_content_field):
     """
     Group entries in a TSV or gsheet column using another column.
@@ -218,7 +218,7 @@ class grp(_content_field):
         super().__init__(content, [], force)
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class media(_content_field):
 
     def __init__(
@@ -276,7 +276,7 @@ class media(_content_field):
         super().__init__(content, media_files, force=force)
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def img(
     keys,
     get_paths: enforcer.Callable,
@@ -302,7 +302,7 @@ def img(
     )
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def snd(
     keys,
     get_paths: enforcer.Callable,
@@ -318,7 +318,7 @@ def snd(
     )
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class apl(field):
     """
     Apply a lambda to a field.
@@ -344,31 +344,31 @@ OptionalField = Field + [None]
 FieldOrStr = Field + [str]
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def aon(*fields: FieldOrStr) -> apl:
     """
     Construct an all-or-nothing field.
     """
 
-    @type_enforced.Enforcer
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def all_or_nothing(*nexts: str) -> str:
         return "".join(nexts) if all(nexts) else ""
 
     return apl(all_or_nothing, *fields)
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def cat(*fields: FieldOrStr) -> apl:
-    @type_enforced.Enforcer
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def concatenate(*nexts: str) -> str:
         return "".join(nexts)
 
     return apl(concatenate, *fields)
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def xor(*fields: FieldOrStr) -> apl:
-    @type_enforced.Enforcer
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def first_match(*nexts: str) -> str:
         for n in nexts:
             if n:
@@ -378,23 +378,23 @@ def xor(*fields: FieldOrStr) -> apl:
     return apl(first_match, *fields)
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def jne(sep: str, *fields: FieldOrStr) -> apl:
-    @type_enforced.Enforcer
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def join_non_empty(*nexts: str) -> str:
         return sep.join(filter(None, nexts))
 
     return apl(join_non_empty, *fields)
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _convert_strings(
     *fields: FieldOrStr,
 ) -> list[*Field]:
     return [txt(f, force=False) if isinstance(f, str) else f for f in fields]
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def num_entries(*fields: Field) -> int:
     cur = NO_LENGTH
     for f in fields:
@@ -408,7 +408,7 @@ def num_entries(*fields: Field) -> int:
     return cur
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def merge_media_files(*fields: Field) -> list[str]:
     m = sum([f.media_files() for f in fields], [])
     # Eliminate duplicates. This significantly reduces the package size.
@@ -416,30 +416,30 @@ def merge_media_files(*fields: Field) -> list[str]:
     return sorted(list(set(m)))
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def use_html_line_breaks(text: str) -> str:
     return text.replace("\n", "<br>")
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def stem(s: str) -> str:
     s = os.path.basename(s)
     s, _ = os.path.splitext(s)
     return s
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _semver_sort_key(path: str) -> list[str]:
     path = os.path.basename(path)
     return [x.zfill(MAX_INTEGER_LENGTH) for x in INTEGER_RE.findall(path)] + [path]
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def sort_semver(paths: list[str]) -> list[str]:
     return sorted(paths, key=_semver_sort_key)
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def dedup_consec(arr: list[int]) -> list[int]:
     out = []
     for x in arr:
@@ -449,7 +449,7 @@ def dedup_consec(arr: list[int]) -> list[int]:
     return out
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def page_numbers(page_ranges: str) -> list[int]:
     """
     page_ranges is a comma-separated list of integers or integer ranges, just
@@ -457,7 +457,7 @@ def page_numbers(page_ranges: str) -> list[int]:
     For example, "1,3-5,8-9" means [1, 3, 4, 5, 8, 9].
     """
 
-    @type_enforced.Enforcer
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def parse(page_number: str) -> int:
         page_number = page_number.strip()
         if page_number[-1] in ["a", "b"]:

@@ -1,5 +1,6 @@
 import hashlib
 
+import enforcer
 import field
 import genanki
 import type_enforced
@@ -7,7 +8,7 @@ import type_enforced
 MAX_ID = 1 << 31
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class stats:
 
     def __init__(self):
@@ -31,7 +32,7 @@ class stats:
         )
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class Note(genanki.Note):
     @property
     def guid(self):
@@ -39,12 +40,12 @@ class Note(genanki.Note):
         return genanki.guid_for(self.fields[2])
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _hash(text: str) -> int:
     return int(hashlib.sha1(text.encode("utf-8")).hexdigest(), 17) % MAX_ID
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def deck(
     deck_name: str,
     deck_id: int,

@@ -2,6 +2,7 @@ import argparse
 import tempfile
 
 import constants
+import enforcer
 import field
 import genanki
 import type_enforced
@@ -42,12 +43,12 @@ argparser.add_argument(
 args = argparser.parse_args()
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def verify_unique(lis: list):
     assert len(set(lis)) == len(lis)
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def verify_unique_object_keys(decks: list[genanki.Deck]) -> None:
     verify_unique([d.deck_id for d in decks])
     verify_unique([d.name for d in decks])
@@ -56,7 +57,7 @@ def verify_unique_object_keys(decks: list[genanki.Deck]) -> None:
     verify_unique([node.guid for d in decks for node in d.notes])
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def main() -> None:
     work_dir = tempfile.TemporaryDirectory()
     field.init(work_dir.name)

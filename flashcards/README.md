@@ -5,6 +5,7 @@
 - [flashcards](#flashcards)
 
 - [Anki Keys and Synchronization](#anki-keys-and-synchronization)
+- [Type Enforcement](#type-enforcement)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -60,3 +61,8 @@ field.**
 1. Model ID
 
 Model IDs are hardcoded.
+
+## Type Enforcement
+
+Set `ENABLED = True` in `enforcer.py` during development in order to enable
+type enforcement. It is disabled in production due to the high cost.
