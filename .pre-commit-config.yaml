@@ -32,3 +32,9 @@ repos:
         entry: doctoc_readme.sh
         language: script
         pass_filenames: false
+
+      - id: python-unittest
+        name: python-unittest
+        entry: python_unittest.sh
+        language: script
+        pass_filenames: false

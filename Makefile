@@ -3,13 +3,13 @@ SHELL:=/bin/bash
 TIMESTAMP = $(shell cat timestamp)
 
 .PHONY: all
-all: install setup validate test build stats
+all: install setup validate build stats
 
 .PHONY: allall  # This includes privileged rules.
-allall: install download setup validate test build deploy stats
+allall: install download setup validate build deploy stats
 
 .PHONY: allallall  # This includes privileged and pollute rules.
-allallall: install download setup validate test build deploy stats pollute
+allallall: install download setup validate build deploy stats pollute
 
 .PHONY: install
 install: install_pip 
@@ -22,9 +22,6 @@ setup: marcion_img_convert_resize
 
 .PHONY: validate
 validate: precommit
-
-.PHONY: test
-test: unittest
 
 .PHONY: build
 build: bible copticsite marcion kellia flashcards flashcards_redundant
@@ -60,12 +57,16 @@ flashcards_try: try_flashcards try_flashcards_crum_sahidic
 # pre-commit.
 
 .PHONY: doctoc_readme
-doctoc_readme:
+doctoc_readme: FORCE
 	bash doctoc_readme.sh
 
 .PHONY: marcion_validate
-marcion_validate:
+marcion_validate: FORCE
 	bash dictionary/marcion.sourceforge.net/validate.sh
+
+.PHONY: python_unittest
+python_unittest: FORCE
+	bash python_unittest.sh
 
 # FORCE
 
@@ -90,10 +91,6 @@ install_pip: FORCE
 
 precommit: FORCE
 	pre-commit run
-
-unittest: FORCE
-	python -m unittest discover \
-		"flashcards"
 
 # BIBLE RULES
 bible: FORCE
