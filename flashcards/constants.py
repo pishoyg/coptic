@@ -61,6 +61,17 @@ def crum(
 
         return field.jne("<br>", *[dialect(col) for col in dialect_cols])
 
+    explanatory_images = field.dir_lister(
+        "dictionary/marcion.sourceforge.net/data/img-300",
+        lambda file: file[file.find("-")],
+    )
+    pronunciations = {
+        col: field.dir_lister(
+            f"dictionary/marcion.sourceforge.net/data/snd-pishoy/{col}/",
+            lambda file: file[file.find(".")],
+        )
+        for col in dialect_cols
+    }
     return deck.deck(
         deck_name=deck_name,
         deck_id=deck_id,
@@ -113,9 +124,13 @@ def crum(
                     column_name="key",
                     force=False,
                 ),
-                get_paths=lambda key: glob.glob(
-                    f"dictionary/marcion.sourceforge.net/data/img-300/{key}-*-*.*"
-                ),
+                # Although the same result can be obtained using
+                # glob.glob(f"dictionary/marcion.sourceforge.net/data/img-300/{key}-*")
+                # we use this method in order to avoid using the computationally expensive
+                # glob.glob.
+                # TODO: Move this to a class in `field.py`, and use with the sound media as
+                # well.
+                get_paths=explanatory_images.get,
                 sort_paths=field.sort_semver,
                 get_caption=field.stem,
                 force=False,
@@ -199,9 +214,7 @@ def crum(
                                     column_name="key",
                                     force=False,
                                 ),
-                                get_paths=lambda key: glob.glob(
-                                    f"dictionary/marcion.sourceforge.net/data/snd-pishoy/{col}/{key}.*"
-                                ),
+                                get_paths=pronunciations[col].get,
                                 sort_paths=sorted,
                                 force=False,
                             )

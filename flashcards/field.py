@@ -479,3 +479,20 @@ def page_numbers(page_ranges: str) -> list[int]:
             out.append(x)
     out = dedup_consec(out)
     return out
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
+class dir_lister:
+    def __init__(self, dir: str, get_key: enforcer.Callable) -> None:
+        self.cache = {}
+        if not os.path.exists(dir):
+            return
+        for file in os.listdir(dir):
+            path = os.path.join(dir, file)
+            key = get_key(file)
+            if key not in self.cache:
+                self.cache[key] = []
+            self.cache[key].append(path)
+
+    def get(self, key: str) -> list[str]:
+        return self.cache.get(key, [])
