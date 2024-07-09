@@ -412,7 +412,7 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it.
    - The possibility to sync notes selectively. (See the note about exporting
    accurate timestamps below.)
 
-1. Export accurate timestamps. (20 hours, delegate)
+1. **Export accurate timestamps.** (50 hours, delegate)
 
    1. Reimporting (supposedly identical data) produces the message "notes were
    used to update existing ones." This is evidently due to the timestamps that
@@ -439,8 +439,10 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it.
    **versioning**, and export a new TSV every time we rerun the script. Then we
    can have another script whose sole purpose is:
    1. Compare two TSV's containing notes, and
-   1. Use `genanki` to generate a package *containing only the delta* between
-      the two versions.*
+      1. Use `genanki` to generate a package containing only the delta between
+         the two versions, or
+      1. Use a new version of `genanki` to generate a new package containing
+         accurate timestamps.
 
    This will facilitate testing. A developer can `diff` two TSVs to find out
    what changes (if any) their code has introduced. (Although there is an
@@ -455,9 +457,6 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it.
    Anki, Cloze, or something else.
 
    Learners who synchronize their data will only have the old notes overridden.
-
-   * Alternatively, we can generate a full deck with varying timestamps,
-   although this requires a modification to the `genanki` package.
 
 1. Fix the model sync issues.
 
@@ -549,6 +548,11 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
    - It becomes easier to verify what changes a commit introduces to the
    flashcards.
    - Git will track the history of the flashcard content.
+   - Significantly reduce the running time, as writing the flashcards to a
+   database currently takes more than 70% of the running time of
+   `flashcards/main.py`. Splitting the two steps would make it possible to run
+   the first one (which is being more actively developed) in a fraction of the
+   time.
    - It is a plausible solution for the timestamping problem currently faced.
    - Support a fanout to platforms other than Anki.
 
@@ -603,10 +607,14 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (50+ hours)
    include all inflected forms for each word. If morphologically complex
    languages don't have any special treatment, it should still be possible, and
    worthwhile, to produce such a dictionary, albeit with some difficulty.
+
    The data could also be used for auto-correction and auto-completion models.
 
    See [this use case](https://github.com/runehol/kindlearadict) for Arabic,
    another morphologically complex language.
+
+   This can start humble and grow with time. No need to perfect it from the
+   first time.
 
 1. **Display the Bible data in a table format.** (7-8 hours)
 
@@ -618,7 +626,9 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (50+ hours)
 ## Keyboard TODO's
 
 1. Complete your [keyboard
-proposal](https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/edit).
+proposal](
+https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/edit
+). (100+ hours)
 
 ## Credits
 
