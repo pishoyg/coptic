@@ -440,7 +440,7 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it.
    can have another script whose sole purpose is:
    1. Compare two TSV's containing notes, and
    1. Use `genanki` to generate a package *containing only the delta* between
-      the two versions.
+      the two versions.*
 
    This will facilitate testing. A developer can `diff` two TSVs to find out
    what changes (if any) their code has introduced. (Although there is an
@@ -455,6 +455,9 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it.
    Anki, Cloze, or something else.
 
    Learners who synchronize their data will only have the old notes overridden.
+
+   * Alternatively, we can generate a full deck with varying timestamps,
+   although this requires a modification to the `genanki` package.
 
 1. Fix the model sync issues.
 
@@ -538,6 +541,16 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 ### Developer Convenience TODO's
 
 (40+ hours)
+
+1. **Write the flashcard data to an intermediate format before `.apkg`.** (20
+   hours)
+
+   This has the following advantages:
+   - It becomes easier to verify what changes a commit introduces to the
+   flashcards.
+   - Git will track the history of the flashcard content.
+   - It is a plausible solution for the timestamping problem currently faced.
+   - Support a fanout to platforms other than Anki.
 
 1. **Set up a more robust CI/CD pipelines.**
 
