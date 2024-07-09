@@ -27,15 +27,18 @@ repos:
         entry: dictionary/marcion.sourceforge.net/validate.sh
         language: script
         pass_filenames: false
+        # TODO: Add a filter to this pre-commit.
 
       - id: doctoc-readme
         name: doctoc-readme
         entry: doctoc_readme.sh
         language: script
+        types: [markdown]
         pass_filenames: false
 
       - id: python-unittest
         name: python-unittest
         entry: python_unittest.sh
         language: script
+        types: [python]
         pass_filenames: false
