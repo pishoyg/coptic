@@ -11,10 +11,10 @@ SHELL:=/bin/bash
 # LEVEL 3 RULES ###############################################################
 
 .PHONY: all
-all: increment install generate pollute publish stats
+all: increment install generate_1 validate generate_2 generate_3 pollute publish stats
 
 .PHONY: flash
-flash: increment flashcards flashcards_redundant publish stats
+flash: increment validate generate_2 generate_3 publish stats
 
 # LEVEL 2 RULES ###############################################################
 
@@ -24,23 +24,32 @@ increment: flashcards_timestamp
 .PHONY: install
 install: pip_install 
 
+.PHONY: generate_1
+generate_1: bible copticsite marcion marcion_dawoud marcion_img kellia
+
 .PHONY: validate
 validate: precommit
 
-.PHONY: generate
-generate: bible copticsite marcion marcion_dawoud marcion_img kellia flashcards flashcards_redundant
+.PHONY: generate_2
+generate_2: flashcards flashcards_redundant
 
-.PHONY: stats
-stats: loc marcion_img_count marcion_dawoud_count
-
-.PHONY: publish
-publish: flashcards_cp_to_drive
+.PHONY: generate_3
+	# This is a placeholder for an upcoming `anki` rule that will exist after we
+	# split the flashcard TSV generation from Anki package generation pipelines.
+generate_3:
 
 .PHONY: pollute
 pollute: bible_epub kellia_analysis
 
+.PHONY: publish
+publish: flashcards_cp_to_drive
+
+.PHONY: stats
+stats: loc marcion_img_count marcion_dawoud_count
+
 # The rules below are not included in any of the "all" rules above. They are
 # intended to be run as one-offs.
+
 .PHONY: clean
 clean: git_clean bible_epub_clean kellia_analysis_clean
 
