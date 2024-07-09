@@ -1,15 +1,22 @@
 SHELL:=/bin/bash
 
-TIMESTAMP = $(shell cat timestamp.txt)
+# If you know the secrets, then you can run the privileged tasks. They require
+# a set of variables to be exported. These are contained in a `secrets.sh` file
+# that you need to source before running the privileged make rules.
+# ```
+# source secrets.sh && make ${PRIVILEGED_RULE}
+# ```
+# See TEMPLATE_secrets.sh for more information.
+
+# LEVEL 3 RULES ###############################################################
 
 .PHONY: all
-all: increment install setup validate generate stats
+all: increment install setup validate generate pollute publish stats
 
-.PHONY: allall  # This includes privileged rules.
-allall: all publish
+.PHONY: flash
+flash: increment flashcards flashcards_redundant publish stats
 
-.PHONY: allallall  # This includes privileged and pollute rules.
-allallall: all pollute publish
+# LEVEL 2 RULES ###############################################################
 
 .PHONY: increment
 increment: flashcards_timestamp
@@ -71,17 +78,7 @@ python_unittest: FORCE
 .PHONY: FORCE
 FORCE:
 
-# If you know the secrets, then you can run the privileged tasks. They require
-# a set of variables to be exported. These are contained in a `secrets.sh` file
-# that you need to source before running the privileged make rules.
-# ```
-# source secrets.sh && make ${PRIVILEGED_RULE}
-# ```
-# You can create your own version of `secrets.sh`. There is nothing magical
-# in that file - just some paths and access tokens that belong to me.
-# Check secrets_template.sh for more information.
-# Rules that use exported variables are generally privileged, though sometimes
-# they can run even if the variables are unpopulated.
+# LEVEL 1 RULES ###############################################################
 
 pip_install: requirements.txt
 	python -m pip install --upgrade pip "$${BREAK_SYSTEM_PACKAGES}"
@@ -110,11 +107,10 @@ marcion_dawoud_download: FORCE
 
 marcion_dawoud_count: FORCE
 	# Number of words that have at least one page from Dawoud:
-	# TODO: Fix this statistic.
 	cat dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv \
-		| awk '{ print $$2 }'  \
+		| awk -F"\t" '{ print $$2 $$3 }'  \
 		| grep --invert '^$$'  \
-		| wc
+		| wc --lines
 
 marcion: $(shell find dictionary/marcion.sourceforge.net/ -type f)
 	python dictionary/marcion.sourceforge.net/main.py
@@ -136,43 +132,43 @@ flashcards_timestamp: FORCE
 
 flashcards: FORCE
 	python flashcards/main.py \
-		--timestamp "${TIMESTAMP}"
+		--timestamp $(shell cat timestamp.txt)
 
 flashcards_crum_sahidic: FORCE
 	python flashcards/main.py \
 		--decks "A Coptic Dictionary::Sahidic" \
 		--output "flashcards/data/crum_sahidic.apkg" \
-		--timestamp "${TIMESTAMP}"
+		--timestamp $(shell cat timestamp.txt)
 
 flashcards_crum: FORCE
 	python flashcards/main.py \
 		--decks "A Coptic Dictionary::Bohairic" "A Coptic Dictionary::Sahidic" "A Coptic Dictionary::Bohairic / Sahidic" "A Coptic Dictionary::All Dialects" \
 		--output "flashcards/data/crum.apkg" \
-		--timestamp "${TIMESTAMP}"
+		--timestamp $(shell cat timestamp.txt)
 
 flashcards_copticsite: FORCE
 	python flashcards/main.py \
 		--decks "copticsite.com" \
 		--output "flashcards/data/copticsite.apkg" \
-		--timestamp "${TIMESTAMP}"
+		--timestamp $(shell cat timestamp.txt)
 
 flashcards_bible: FORCE
 	python flashcards/main.py \
 		--decks "Bible::Bohairic" "Bible::Sahidic" "Bible::All Dialects" \
 		--output "flashcards/data/bible.apkg" \
-		--timestamp "${TIMESTAMP}"
+		--timestamp $(shell cat timestamp.txt)
 
 flashcards_kellia: FORCE
 	python flashcards/main.py \
 		--decks "KELLIA::Comprehensive" "KELLIA::Egyptian" "KELLIA::Greek"\
 		--output "flashcards/data/kellia.apkg" \
-		--timestamp "${TIMESTAMP}"
+		--timestamp $(shell cat timestamp.txt)
 
 flashcards_kellia_comprehensive: FORCE
 	python flashcards/main.py \
 		--decks "KELLIA::Comprehensive" \
 		--output "flashcards/data/kellia_comprehensive.apkg" \
-		--timestamp "${TIMESTAMP}"
+		--timestamp $(shell cat timestamp.txt)
 
 flashcards_redundant: flashcards_crum_sahidic flashcards_crum flashcards_copticsite flashcards_bible flashcards_kellia_comprehensive flashcards_kellia
 
@@ -194,7 +190,7 @@ marcion_img_count: FORCE
 		| grep -oE '^[0-9]+' \
 		| sort \
 		| uniq \
-		| wc
+		| wc --lines
 
 # DEVELOPER
 flashcards_verify: flashcards_try
@@ -210,13 +206,13 @@ flashcards_crum_sahidic_verify: flashcards_crum_sahidic_try
 flashcards_try: FORCE
 	python flashcards/main.py \
 		--output "$${TEST_DIR}/coptic.apkg" \
-		--timestamp "${TIMESTAMP}"
+		--timestamp $(shell cat timestamp.txt)
 
 flashcards_crum_sahidic_try: FORCE
 	python flashcards/main.py \
 		--decks "A Coptic Dictionary::Sahidic" \
 		--output "$${TEST_DIR}/crum_sahidic.apkg" \
-		--timestamp "${TIMESTAMP}"
+		--timestamp $(shell cat timestamp.txt)
 
 git_clean: FORCE
 	git clean \
@@ -238,5 +234,5 @@ loc: FORCE
 		-name "*.py" -o -name "*.java" \
 		-o -name "*.proto" -o -name "*.sh" \
 		-o -name "*.js" -o -name "*.vba" \
-		| xargs cat | wc -l
+		| xargs cat | wc --lines
 
