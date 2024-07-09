@@ -95,7 +95,7 @@ precommit: FORCE
 
 # BIBLE RULES
 # TODO: Resolve the issue with spaces in file names in order to be able to
-# specify dependencies for the Bible rules.
+# specify dependencies for the Bible, copticsite, and KELLIA rules.
 bible: FORCE
 	python bible/stshenouda.org/main.py \
 		--no_epub "true"
@@ -104,7 +104,7 @@ bible_epub: FORCE
 	python bible/stshenouda.org/main.py
 
 # COPTICSITE_COM RULES
-copticsite: $(shell find dictionary/copticsite.com/ -type f)
+copticsite: FORCE
 	python dictionary/copticsite.com/main.py
 
 # MARCION RULES
@@ -123,14 +123,14 @@ marcion_dawoud_count: FORCE
 marcion: $(shell find dictionary/marcion.sourceforge.net/ -type f)
 	python dictionary/marcion.sourceforge.net/main.py
 
-marcion_img_setup: $(shell find dictionary/marcion.sourceforge.net/ -type f)
+marcion_img_setup: $(shell find dictionary/marcion.sourceforge.net/data/ -type f)
 	bash dictionary/marcion.sourceforge.net/img_setup.sh
 
 # KELLIA RULES
-kellia_analysis: $(shell find dictionary/kellia.uni-goettingen.de/ -type f)
+kellia_analysis: FORCE
 	python dictionary/kellia.uni-goettingen.de/analysis.py
 
-kellia: $(shell find dictionary/kellia.uni-goettingen.de/ -type f)
+kellia: FORCE
 	python dictionary/kellia.uni-goettingen.de/main.py
 
 # FLASHCARD RULES
