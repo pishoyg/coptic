@@ -63,12 +63,12 @@ def crum(
 
     explanatory_images = field.dir_lister(
         "dictionary/marcion.sourceforge.net/data/img-300",
-        lambda file: file[file.find("-")],
+        lambda file: file[: file.find("-")],
     )
     pronunciations = {
         col: field.dir_lister(
             f"dictionary/marcion.sourceforge.net/data/snd-pishoy/{col}/",
-            lambda file: file[file.find(".")],
+            lambda file: file[: file.find(".")],
         )
         for col in dialect_cols
     }
