@@ -5,20 +5,17 @@ TIMESTAMP = $(shell cat timestamp.txt)
 .PHONY: all
 all: install setup validate generate stats
 
-.PHONY: allall  # This includes privileged rules.
-allall: install download setup validate generate publish stats
+.PHONY: allp  # This includes privileged rules.
+allp: all publish
 
-.PHONY: allallall  # This includes privileged and pollute rules.
-allallall: install download setup validate generate publish stats pollute
+.PHONY: allpp  # This includes privileged and pollute rules.
+allpp: allp pollute
 
 .PHONY: install
 install: pip_install 
 
-.PHONY: download
-download: marcion_dawoud_download
-
 .PHONY: setup
-setup: marcion_img_setup
+setup: marcion_dawoud_download marcion_img_setup
 
 .PHONY: validate
 validate: precommit
@@ -38,6 +35,8 @@ pollute: bible_epub kellia_analysis
 # The rules below are not included in any of the "all" rules above. They are
 # intended to be run as one-offs.
 
+# TODO: Run `increment` whenever you detect that a new version of the
+# flashcards has been published.
 .PHONY: increment
 increment: flashcards_timestamp
 
@@ -110,11 +109,9 @@ copticsite: $(shell find dictionary/copticsite.com/ -type f)
 
 # MARCION RULES
 marcion_dawoud_download: FORCE
-	python utils/download_gsheet.py \
-		--json_keyfile_name "$${JSON_KEYFILE_NAME}" \
-		--gspread_url "https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg" \
-		--column_names "key" "dawoud-pages" "dawoud-pages-redone" \
-		--out_tsv "dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv"
+	curl -L \
+		"https://docs.google.com/spreadsheets/d/e/2PACX-1vTItxV4E4plQrzjWLSea85ZFQWcQ4ba-p2BBIDG9h5yI0i9URn9GD9zZhxEj8kVI7jhCoPWPEapd9D7/pub?output=tsv" \
+		> "dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv"
 
 marcion_dawoud_count: FORCE
 	# Number of words that have at least one page from Dawoud:

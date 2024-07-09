@@ -24,13 +24,15 @@ export TEST_DIR=""
 # JSON_KEYFILE_NAME contains access tokens for a Google Cloud project.
 # See
 # https://oauth2client.readthedocs.io/en/latest/source/oauth2client.service_account.html.
-# This is required for communication with the content published on Drive.
-# You see, we export to / import from Drive using two methods here. The first
-# one (which is somewhat simple) is to set up a local directory that
-# automatically synchronizes with a Drive directory every time it's updated.
-# But this doesn't work when the data is, for example, cells inside a gsheet.
-# In such a case, we have to inspect the content of the sheet, so we do this
-# through the Google Cloud API.
+# This is required for publishing content to Drive.
+# You see, we export to Drive using two methods here. The first one (which is
+# somewhat simple) is to set up a local directory that automatically
+# synchronizes with a Drive directory every time it's updated.
+# But this doesn't work when the data is, for example, a gsheet.
+# In such a case, we use the Google Cloud API.
+# As of today, Jul. 9th, 2024, this isn't used, but it may be used in the
+# future if we support better integration with Drive, or if we stop using the
+# first method as this method is cleaner.
 export JSON_KEYFILE_NAME=""
 
 # START_AT_KEY is used in Marcion's image-finding assistance script.
