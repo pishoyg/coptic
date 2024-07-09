@@ -58,12 +58,12 @@ try: flashcards_try flashcards_crum_sahidic_try
 # They all depend on FORCE because we assume that, if you're running them
 # manually, then you want to run them anyway.
 
-.PHONY: doctoc_readme
-doctoc_readme: FORCE
+.PHONY: readme_doctoc
+readme_doctoc: FORCE
 	bash doctoc_readme.sh
 
 .PHONY: marcion_img_validate
-marcion_validate: FORCE
+marcion_img_validate: FORCE
 	bash dictionary/marcion.sourceforge.net/img_validate.sh
 
 .PHONY: python_unittest
