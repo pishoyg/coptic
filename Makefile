@@ -11,7 +11,7 @@ SHELL:=/bin/bash
 # LEVEL 3 RULES ###############################################################
 
 .PHONY: all
-all: increment install generate_1 validate generate_2 generate_3 pollute publish stats
+all: increment install generate_1 validate generate_2 generate_3 publish stats
 
 .PHONY: flash
 flash: increment validate generate_2 generate_3 publish stats
@@ -25,7 +25,7 @@ increment: flashcards_timestamp
 install: pip_install 
 
 .PHONY: generate_1
-generate_1: bible copticsite marcion marcion_dawoud marcion_img kellia
+generate_1: bible copticsite marcion marcion_dawoud marcion_img kellia kellia_analysis
 
 .PHONY: validate
 validate: precommit
@@ -37,9 +37,6 @@ generate_2: flashcards flashcards_redundant
 	# This is a placeholder for an upcoming `anki` rule that will exist after we
 	# split the flashcard TSV generation from Anki package generation pipelines.
 generate_3:
-
-.PHONY: pollute
-pollute: bible_epub kellia_analysis
 
 .PHONY: publish
 publish: flashcards_cp_to_drive
@@ -95,10 +92,6 @@ precommit: FORCE
 
 # BIBLE RULES
 bible: FORCE
-	python bible/stshenouda.org/main.py \
-		--no_epub "true"
-
-bible_epub: FORCE
 	python bible/stshenouda.org/main.py
 
 # COPTICSITE_COM RULES
