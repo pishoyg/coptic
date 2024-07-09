@@ -91,8 +91,6 @@ precommit: FORCE
 	pre-commit run
 
 # BIBLE RULES
-# TODO: Resolve the issue with spaces in file names in order to be able to
-# specify dependencies for the Bible, copticsite, and KELLIA rules.
 bible: FORCE
 	python bible/stshenouda.org/main.py \
 		--no_epub "true"
@@ -131,8 +129,6 @@ kellia: FORCE
 	python dictionary/kellia.uni-goettingen.de/main.py
 
 # FLASHCARD RULES
-# TODO: Consider assigning dependencies, instead of letting everything depend
-# on FORCE.
 flashcards_timestamp: FORCE
 	date +%s > timestamp.txt
 

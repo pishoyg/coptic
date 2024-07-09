@@ -24,8 +24,9 @@
   - [Diplomacy TODO's](#diplomacy-todos)
   - [Learner Convenience TODO's](#learner-convenience-todos)
   - [Content TODO's](#content-todos)
-  - [Kindle Content TODO's](#kindle-content-todos)
   - [Developer Convenience TODO's](#developer-convenience-todos)
+    - [Guidelines](#guidelines)
+  - [Kindle Content TODO's](#kindle-content-todos)
 - [Keyboard](#keyboard)
 - [Credits](#credits)
 
@@ -492,29 +493,6 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 1. Revisit the possibility of image compression to minimize the package size.
    (low-priority)
 
-### Kindle Content TODO's
-
-1. **Create a [Kindle-compatible dictionary](
-https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (7-8 hours)
-
-   From a first glance, it looks like the dictionary needs to manually list all
-   inflected forms of a word in order to be able to look them up.
-   Given Coptic's morphological complexity, it's not exactly clear how we can
-   include all inflected forms for each word. If morphologically complex
-   languages don't have any special treatment, it should still be possible, and
-   worthwhile, to produce such a dictionary, albeit with some difficulty.
-   The data could also be used for auto-correction and auto-completion models.
-
-   See [this use case](https://github.com/runehol/kindlearadict) for Arabic,
-   another morphologically complex language.
-
-1. **Display the Bible data in a table format.** (7-8 hours)
-
-   The reason the Bible was chosen to be displayed is that it showed difficulty
-   with highlighting. There is some information about this
-   [here](https://kdp.amazon.com/en_US/help/topic/GZ8BAXASXKB5JVML), and a
-   workaround may be possible.
-
 ### Developer Convenience TODO's
 
 (40+ hours)
@@ -563,17 +541,28 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (7-8 hours)
 
    Learners who synchronize their data will only have the old notes overridden.
 
-1. **Make the unit tests discoverable.**
-   ([See](https://docs.python.org/3/library/unittest.html#test-discovery).)
+1. **Set up a more robust CI/CD pipelines.**
 
-1. Expand the unit tests.
+   To start with, set up proper dependencies in Makefile.
 
-1. **Set up proper dependencies in Makefile.**
-
-   N.B. This is proving difficult! We could perhaps consider migrating to
+   Note: This is proving difficult! We could perhaps consider migrating to
    CMake or even Bazel.
 
-1. Expand the use of hooks.
+1. **Expand the unit tests, and make them discoverable.**
+   ([See](https://docs.python.org/3/library/unittest.html#test-discovery).)
+
+1. Pick up some of the Easter egg tasks left around the code:
+
+   ```bash
+   grep TODO -R bible dictionary keyboard flashcards
+   ```
+
+   Move them to README files when more visibility is warranted. Delete them
+   when they are deemed irrelevant.
+
+#### Guidelines
+
+1. Use pre-commit hooks.
 
 1. Do not let Python tempt you to use its built-in types instead of classes and
    objects. Don't forget about OOP!
@@ -592,14 +581,28 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (7-8 hours)
 
 1. Strip inputs more liberally.
 
-1. Pick up some of the Easter egg tasks left around the code:
+### Kindle Content TODO's
 
-   ```bash
-   grep TODO -R bible dictionary keyboard flashcards --include=\*.py
-   ```
+1. **Create a [Kindle-compatible dictionary](
+https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (7-8 hours)
 
-   Move them to README files when more visibility is warranted. Delete them
-   when they are deemed irrelevant.
+   From a first glance, it looks like the dictionary needs to manually list all
+   inflected forms of a word in order to be able to look them up.
+   Given Coptic's morphological complexity, it's not exactly clear how we can
+   include all inflected forms for each word. If morphologically complex
+   languages don't have any special treatment, it should still be possible, and
+   worthwhile, to produce such a dictionary, albeit with some difficulty.
+   The data could also be used for auto-correction and auto-completion models.
+
+   See [this use case](https://github.com/runehol/kindlearadict) for Arabic,
+   another morphologically complex language.
+
+1. **Display the Bible data in a table format.** (7-8 hours)
+
+   The reason the Bible was chosen to be displayed is that it showed difficulty
+   with highlighting. There is some information about this
+   [here](https://kdp.amazon.com/en_US/help/topic/GZ8BAXASXKB5JVML), and a
+   workaround may be possible.
 
 ## Keyboard
 
