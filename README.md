@@ -26,8 +26,8 @@
   - [Content TODO's](#content-todos)
   - [Developer Convenience TODO's](#developer-convenience-todos)
     - [Guidelines](#guidelines)
-  - [Kindle Content TODO's](#kindle-content-todos)
-- [Keyboard](#keyboard)
+  - [Kindle TODO's](#kindle-todos)
+- [Keyboard TODO's](#keyboard-todos)
 - [Credits](#credits)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -237,6 +237,7 @@ suggestions or questions, or data! :)
 1. **Add Moawad Dawoud's Arabic translations.** (100+ hours, delegate)
 
 1. Add Moawad Dawoud's standard spellings. (low-priority)
+
    Crum mentions all spellings, including obscure and rare ones. Dawoud treats
    some as more standard than others, which is helpful. It's worth highlighting
    which spellings are more common.
@@ -411,7 +412,51 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it.
    - The possibility to sync notes selectively. (See the note about exporting
    accurate timestamps below.)
 
-1. **Fix the model sync issues.**
+1. Export accurate timestamps. (20 hours, delegate)
+
+   1. Reimporting (supposedly identical data) produces the message "notes were
+   used to update existing ones." This is evidently due to the timestamps that
+   the notes are recorded with. The newer timestamps make Anki think that the
+   cards are newer, hence it updates everything. This causes the following
+   problems:
+
+   - Any changes that a user makes to a note get overridden, even if the note
+   content is one that the user has intentionally modified.
+   - The sync message is misleading, and lacks information that would otherwise
+     be useful.
+   - The exported package size is unnecessarily large. We need only export the
+     new notes.
+
+   If some notes are identical to ones that have already been exported, they
+   should retain their old timestamps, and the new notes should acquire new
+   timestamps. This should solve all of the problems above.
+   `genanki` doesn't have native support for per-note timestamps, neither does
+   it support reading an existing package and comparing the new data against
+   it. So we will likely have to do lots of manual work to solve the problem.
+
+   One idea that comes to mind is to export **untimestamped** data first to a
+   TSV, rather than a package directly, to make processing either. We can use
+   **versioning**, and export a new TSV every time we rerun the script. Then we
+   can have another script whose sole purpose is:
+   1. Compare two TSV's containing notes, and
+   1. Use `genanki` to generate a package *containing only the delta* between
+      the two versions.
+
+   This will facilitate testing. A developer can `diff` two TSVs to find out
+   what changes (if any) their code has introduced. (Although there is an
+   existing plan to enable testing by using a dummy timestamp, though this will
+   only make it possible to check for equality, rather than print a
+   human-readable `diff`).
+
+   Another big advantage of the introduction of an intermediate state is
+   facilitating a fanout to multiple platforms. Our generators should start by
+   generating the TSV package, then our platform-specific generators can take
+   that package snapshot and produce an package for different platforms such as
+   Anki, Cloze, or something else.
+
+   Learners who synchronize their data will only have the old notes overridden.
+
+1. Fix the model sync issues.
 
    In the current design, updating the CSS of a deck doesn't get reflected when
    the package is imported. The notes retain the old CSS.
@@ -490,56 +535,9 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
    the parsing results as well. This will provide the `tree` module with the
    data needed to implement a better heuristic.
 
-1. Revisit the possibility of image compression to minimize the package size.
-   (low-priority)
-
 ### Developer Convenience TODO's
 
 (40+ hours)
-
-1. **Export accurate timestamps.** (20 hours, delegate)
-
-   1. Reimporting (supposedly identical data) produces the message "notes were
-   used to update existing ones." This is evidently due to the timestamps that
-   the notes are recorded with. The newer timestamps make Anki think that the
-   cards are newer, hence it updates everything. This causes the following
-   problems:
-
-   - Any changes that a user makes to a note get overridden, even if the note
-   content is one that the user has intentionally modified.
-   - The sync message is misleading, and lacks information that would otherwise
-     be useful.
-   - The exported package size is unnecessarily large. We need only export the
-     new notes.
-
-   If some notes are identical to ones that have already been exported, they
-   should retain their old timestamps, and the new notes should acquire new
-   timestamps. This should solve all of the problems above.
-   `genanki` doesn't have native support for per-note timestamps, neither does
-   it support reading an existing package and comparing the new data against
-   it. So we will likely have to do lots of manual work to solve the problem.
-
-   One idea that comes to mind is to export **untimestamped** data first to a
-   TSV, rather than a package directly, to make processing either. We can use
-   **versioning**, and export a new TSV every time we rerun the script. Then we
-   can have another script whose sole purpose is:
-   1. Compare two TSV's containing notes, and
-   1. Use `genanki` to generate a package *containing only the delta* between
-      the two versions.
-
-   This will facilitate testing. A developer can `diff` two TSVs to find out
-   what changes (if any) their code has introduced. (Although there is an
-   existing plan to enable testing by using a dummy timestamp, though this will
-   only make it possible to check for equality, rather than print a
-   human-readable `diff`).
-
-   Another big advantage of the introduction of an intermediate state is
-   facilitating a fanout to multiple platforms. Our generators should start by
-   generating the TSV package, then our platform-specific generators can take
-   that package snapshot and produce an package for different platforms such as
-   Anki, Cloze, or something else.
-
-   Learners who synchronize their data will only have the old notes overridden.
 
 1. **Set up a more robust CI/CD pipelines.**
 
@@ -581,10 +579,10 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
 1. Strip inputs more liberally.
 
-### Kindle Content TODO's
+### Kindle TODO's
 
 1. **Create a [Kindle-compatible dictionary](
-https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (7-8 hours)
+https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (50+ hours)
 
    From a first glance, it looks like the dictionary needs to manually list all
    inflected forms of a word in order to be able to look them up.
@@ -604,7 +602,7 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (7-8 hours)
    [here](https://kdp.amazon.com/en_US/help/topic/GZ8BAXASXKB5JVML), and a
    workaround may be possible.
 
-## Keyboard
+## Keyboard TODO's
 
 1. Complete your [keyboard
 proposal](https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/edit).
