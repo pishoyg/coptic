@@ -161,10 +161,22 @@ def crum(
                 "<hr>",
             ),
             # Dawoud's pages.
-            (
-                field.aon(
-                    '<span id="right">',
-                    "<b>Dawoud: </b>",
+            field.aon(
+                '<span id="right">',
+                "<b>Dawoud: </b>",
+                field.grp(
+                    keys=roots_col("key", force=True),
+                    group_by=dawoud_col("key", force=True),
+                    selected=field.xor(
+                        dawoud_col("dawoud-pages-redone", force=False),
+                        dawoud_col("dawoud-pages", force=False),
+                    ),
+                    force=False,
+                    unique=True,
+                ),
+                "</span>",
+                "<br>",
+                field.img(
                     field.grp(
                         keys=roots_col("key", force=True),
                         group_by=dawoud_col("key", force=True),
@@ -175,30 +187,14 @@ def crum(
                         force=False,
                         unique=True,
                     ),
-                    "</span>",
-                    "<br>",
-                    field.img(
-                        field.grp(
-                            keys=roots_col("key", force=True),
-                            group_by=dawoud_col("key", force=True),
-                            selected=field.xor(
-                                dawoud_col("dawoud-pages-redone", force=False),
-                                dawoud_col("dawoud-pages", force=False),
-                            ),
-                            force=False,
-                            unique=True,
-                        ),
-                        get_paths=lambda page_ranges: [
-                            f"dictionary/copticocc.org/dawoud-D100/{k+16}.jpg"
-                            for k in field.page_numbers(page_ranges=page_ranges)
-                        ],
-                        get_caption=lambda path: int(field.stem(path)) - 16,
-                        force=False,
-                    ),
-                    "<hr>",
-                )
-                if "JSON_KEYFILE_NAME" in os.environ
-                else ""
+                    get_paths=lambda page_ranges: [
+                        f"dictionary/copticocc.org/dawoud-D100/{k+16}.jpg"
+                        for k in field.page_numbers(page_ranges=page_ranges)
+                    ],
+                    get_caption=lambda path: int(field.stem(path)) - 16,
+                    force=False,
+                ),
+                "<hr>",
             ),
             # Audio.
             # TODO: Label the per-dialect audios, like you did for the front.
