@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # TODO: Add a flag to make it possible to skip the images that already exist in
 # the output.
 SRC="dictionary/marcion.sourceforge.net/data/img"
