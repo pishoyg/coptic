@@ -21,7 +21,7 @@ download: download_marcion_dawoud
 setup: marcion_img_convert_resize
 
 .PHONY: validate
-validate: precommit readme validate_marcion
+validate: precommit
 
 .PHONY: test
 test: unittest
@@ -74,16 +74,6 @@ install_pip: FORCE
 
 precommit: FORCE
 	pre-commit run
-
-readme: FORCE
-	doctoc \
-		"README.md" \
-		"bible/README.md" \
-		"dictionary/README.md" \
-		"flashcards/README.md" 
-
-validate_marcion: FORCE
-	bash dictionary/marcion.sourceforge.net/validate.sh
 
 unittest: FORCE
 	python -m unittest discover \

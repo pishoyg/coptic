@@ -1,3 +1,31 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Sources](#sources)
+  - [Coptic New Testament](#coptic-new-testament)
+  - [NKJV](#nkjv)
+- [Alignments](#alignments)
+  - [New Testament](#new-testament)
+    - [Acts](#acts)
+      - [Coptic Bohairic Version](#coptic-bohairic-version)
+    - [John](#john)
+      - [Coptic Bohairic Version](#coptic-bohairic-version-1)
+    - [Revelation](#revelation)
+      - [Coptic Bohairic Version](#coptic-bohairic-version-2)
+    - [2 Corinthians](#2-corinthians)
+      - [Coptic Bohairic Version](#coptic-bohairic-version-3)
+    - [Isaiah](#isaiah)
+      - [NKJV](#nkjv-1)
+  - [Old Testament](#old-testament)
+    - [Genesis](#genesis)
+      - [Greek version](#greek-version)
+      - [Coptic version](#coptic-version)
+      - [English version](#english-version)
+    - [Exodus](#exodus)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Sources
 
 ## Coptic New Testament

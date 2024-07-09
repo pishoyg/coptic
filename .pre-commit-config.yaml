@@ -26,3 +26,9 @@ repos:
         entry: dictionary/marcion.sourceforge.net/validate.sh
         language: script
         pass_filenames: false
+
+      - id: doctoc-readme
+        name: doctoc-readme
+        entry: doctoc_readme.sh
+        language: script
+        pass_filenames: false
