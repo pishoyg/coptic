@@ -21,7 +21,7 @@ download: download_marcion_dawoud
 setup: marcion_img_convert_resize
 
 .PHONY: validate
-validate: precommit readme image_extensions image_conversions
+validate: precommit readme validate_marcion
 
 .PHONY: test
 test: unittest
@@ -82,14 +82,8 @@ readme: FORCE
 		"dictionary/README.md" \
 		"flashcards/README.md" 
 
-image_extensions: FORCE
-	# Checking for unknown image extensions:
-	comm -23 <( ls dictionary/marcion.sourceforge.net/data/img/ | grep -o '\..*' | tr '[:upper:]' '[:lower:]' | sort | uniq ) <( echo .avif .gif .jpeg .jpg .png .webp | tr ' ' '\n' | sort )
-	# TODO: Verify that there are no unknown extensions.
-
-image_conversions: FORCE
-	comm -23 <( ls dictionary/marcion.sourceforge.net/data/img/ ) <( ls dictionary/marcion.sourceforge.net/data/img-300/ )
-	# TODO: Verify that there are no unknown extensions.
+validate_marcion: FORCE
+	bash dictionary/marcion.sourceforge.net/validate.sh
 
 unittest: FORCE
 	python -m unittest discover \
