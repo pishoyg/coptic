@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Checking for unknown image extensions:
 DIFF=$(comm -23 <( ls dictionary/marcion.sourceforge.net/data/img/ | grep -o '\..*' | tr '[:upper:]' '[:lower:]' | sort | uniq ) <( echo .avif .gif .jpeg .jpg .png .webp | tr ' ' '\n' | sort ))
 

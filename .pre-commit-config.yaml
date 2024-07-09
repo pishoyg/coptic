@@ -18,3 +18,11 @@ repos:
     hooks:
       - id: markdownlint-fix
         args: [--disable, MD033, MD036]
+
+  - repo: local
+    hooks:
+      - id: marcion-validate
+        name: marcion-validate
+        entry: dictionary/marcion.sourceforge.net/validate.sh
+        language: script
+        pass_filenames: false
