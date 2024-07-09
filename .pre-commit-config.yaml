@@ -26,8 +26,11 @@ repos:
         name: marcion-validate
         entry: dictionary/marcion.sourceforge.net/img_validate.sh
         language: script
+        # N.B. It's not currently possible to limit this pre-commit to a
+        # specific directory or set of files because it needs to be run on
+        # deletions as well, which is not straightforward to support in
+        # pre-commit.
         pass_filenames: false
-        # TODO: Add a filter to this pre-commit.
 
       - id: doctoc-readme
         name: doctoc-readme
