@@ -38,6 +38,9 @@ stats: loc img_count dawoud_count
 .PHONY: pollute
 pollute: bible_epub analysis
 
+# The rules below are not included in any of the "all" rules above. They are
+# intended to be run as one-offs.
+
 .PHONY: increment
 increment: timestamp
 
@@ -52,6 +55,19 @@ flashcards_verify: verify_identical_flashcards verify_identical_flashcards_crum_
 
 .PHONY: flashcards_try
 flashcards_try: try_flashcards try_flashcards_crum_sahidic
+
+# The rules below are not included in any of the "all" rules above. They run in
+# pre-commit.
+
+.PHONY: doctoc_readme
+doctoc_readme:
+	bash doctoc_readme.sh
+
+.PHONY: marcion_validate
+marcion_validate:
+	bash dictionary/marcion.sourceforge.net/validate.sh
+
+# FORCE
 
 .PHONY: FORCE
 FORCE:
