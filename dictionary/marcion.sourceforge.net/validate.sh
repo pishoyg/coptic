@@ -7,11 +7,11 @@ img_extensions () {
   ls "${IMG}" | grep -o '\..*' | tr '[:upper:]' '[:lower:]' | sort
 }
 
-img_basenames () {
+img_stems () {
   ls "${IMG}" | grep -oE '^[^.]+' | sort
 }
 
-img_300_basenames () {
+img_300_stems () {
   ls "${IMG-300}" | grep -oE '^[^.]+' | sort
 }
 
@@ -25,7 +25,7 @@ if [ ! -z "${DIFF}" ]; then
 fi
 
 # Check that all images are converted.
-DIFF=$(comm -3 <(img_basenames) <(img_300_basenames))
+DIFF=$(comm -3 <(img_stems) <(img_300_stems))
 if [ ! -z "${DIFF}" ]; then
   echo "Images that are not converted:"
   echo "${DIFF}"
@@ -33,7 +33,7 @@ if [ ! -z "${DIFF}" ]; then
 fi
 
 # Check that there are no identical IDs.
-DIFF=$(comm -3 <(img_basenames) <(img_basenames))
+DIFF=$(comm -3 <(img_stems) <(img_stems | uniq))
 if [ ! -z "${DIFF}" ]; then
   echo "The following basenames are duplicate:"
   echo "${DIFF}"
