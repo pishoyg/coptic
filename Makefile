@@ -18,7 +18,7 @@ install: install_pip
 download: download_marcion_dawoud
 
 .PHONY: setup
-setup: marcion_img_convert_resize
+setup: marcion_convert_resize
 
 .PHONY: validate
 validate: precommit
@@ -122,7 +122,7 @@ dawoud_count: FORCE
 marcion: FORCE
 	python dictionary/marcion.sourceforge.net/main.py
 
-marcion_img_convert_resize: FORCE
+marcion_convert_resize: FORCE
 	bash dictionary/marcion.sourceforge.net/convert_resize.sh
 
 # KELLIA RULES
