@@ -9,6 +9,8 @@ process() {
   magick "${SRC}/${FILE}" -resize "${WIDTH}x" "${DST}/${FILE/.png/.jpg}"
 }
 
+mkdir -p "${DST}"
+
 for FILE in $(ls "${SRC}"); do
   process "${FILE}"
 done
