@@ -3,13 +3,13 @@ SHELL:=/bin/bash
 TIMESTAMP = $(shell cat timestamp)
 
 .PHONY: all
-all: install setup validate build stats
+all: install setup validate generate stats
 
 .PHONY: allall  # This includes privileged rules.
-allall: install download setup validate build deploy stats
+allall: install download setup validate generate publish stats
 
 .PHONY: allallall  # This includes privileged and pollute rules.
-allallall: install download setup validate build deploy stats pollute
+allallall: install download setup validate generate publish stats pollute
 
 .PHONY: install
 install: install_pip 
@@ -23,11 +23,11 @@ setup: marcion_img_convert_resize
 .PHONY: validate
 validate: precommit
 
-.PHONY: build
-build: bible copticsite marcion kellia flashcards flashcards_redundant
+.PHONY: generate
+generate: bible copticsite marcion kellia flashcards flashcards_redundant
 
-.PHONY: deploy
-deploy: cp_flashcards_to_drive
+.PHONY: publish
+publish: cp_flashcards_to_drive
 
 .PHONY: stats
 stats: loc img_count dawoud_count
