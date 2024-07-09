@@ -570,6 +570,9 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (7-8 hours)
 
 1. **Set up proper dependencies in Makefile.**
 
+   N.B. This is proving difficult! We could perhaps consider migrating to
+   CMake or even Bazel.
+
 1. Expand the use of hooks.
 
 1. Do not let Python tempt you to use its built-in types instead of classes and
