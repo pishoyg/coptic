@@ -196,12 +196,12 @@ marcion_img_count: FORCE
 
 # DEVELOPER
 flashcards_verify: flashcards_try
-	bash utils/ziff.sh \
+	bash ziff.sh \
 		"flashcards/data/coptic.apkg"
 		"$${TEST_DIR}/coptic.apkg" \
 
 flashcards_crum_sahidic_verify: flashcards_crum_sahidic_try
-	bash utils/ziff.sh \
+	bash ziff.sh \
 		"flashcards/data/crum_sahidic.apkg" \
 		"$${TEST_DIR}/crum_sahidic.apkg"
 
