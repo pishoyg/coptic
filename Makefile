@@ -12,10 +12,10 @@ allall: install download setup validate generate publish stats
 allallall: install download setup validate generate publish stats pollute
 
 .PHONY: install
-install: install_pip 
+install: pip_install 
 
 .PHONY: download
-download: download_marcion_dawoud
+download: marcion_dawoud_download
 
 .PHONY: setup
 setup: marcion_img_setup
@@ -27,13 +27,13 @@ validate: precommit
 generate: bible copticsite marcion kellia flashcards flashcards_redundant
 
 .PHONY: publish
-publish: cp_flashcards_to_drive
+publish: flashcards_cp_to_drive
 
 .PHONY: stats
-stats: loc img_count dawoud_count
+stats: loc marcion_img_count marcion_dawoud_count
 
 .PHONY: pollute
-pollute: bible_epub analysis
+pollute: bible_epub kellia_analysis
 
 # The rules below are not included in any of the "all" rules above. They are
 # intended to be run as one-offs.
@@ -42,16 +42,16 @@ pollute: bible_epub analysis
 increment: timestamp
 
 .PHONY: clean
-clean: git_clean clean_bible_epub clean_analysis
+clean: git_clean bible_epub_clean kellia_analysis_clean
 
 .PHONY: toil
-toil: find_images
+toil: marcion_find_images
 
 .PHONY: flashcards_verify
-flashcards_verify: verify_identical_flashcards verify_identical_flashcards_crum_sahidic
+flashcards_verify: flashcards_verify flashcards_crum_sahidic_verify
 
 .PHONY: flashcards_try
-flashcards_try: try_flashcards try_flashcards_crum_sahidic
+flashcards_try: flashcards_try flashcards_crum_sahidic_try
 
 # The rules below are not included in any of the "all" rules above. They run in
 # pre-commit.
@@ -85,7 +85,7 @@ FORCE:
 # Rules that use exported variables are generally privileged, though sometimes
 # they can run even if the variables are unpopulated.
 
-install_pip: FORCE
+pip_install: FORCE
 	python -m pip install --upgrade pip "$${BREAK_SYSTEM_PACKAGES}"
 	python -m pip install -r requirements.txt "$${BREAK_SYSTEM_PACKAGES}"
 
@@ -105,14 +105,14 @@ copticsite: FORCE
 	python dictionary/copticsite.com/main.py
 
 # MARCION RULES
-download_marcion_dawoud: FORCE
+marcion_dawoud_download: FORCE
 	python utils/download_gsheet.py \
 		--json_keyfile_name "$${JSON_KEYFILE_NAME}" \
 		--gspread_url "https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg" \
 		--column_names "key" "dawoud-pages" "dawoud-pages-redone" \
 		--out_tsv "dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv"
 
-dawoud_count: FORCE
+marcion_dawoud_count: FORCE
 	# Number of words that have at least one page from Dawoud:
 	cat dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv \
 		| awk '{ print $$2 }'  \
@@ -126,7 +126,7 @@ marcion_img_setup: FORCE
 	bash dictionary/marcion.sourceforge.net/img_setup.sh
 
 # KELLIA RULES
-analysis: FORCE
+kellia_analysis: FORCE
 	python dictionary/kellia.uni-goettingen.de/analysis.py
 
 kellia: FORCE
@@ -178,19 +178,19 @@ flashcards_kellia_comprehensive: FORCE
 
 flashcards_redundant: flashcards_crum_sahidic flashcards_crum flashcards_copticsite flashcards_bible flashcards_kellia_comprehensive flashcards_kellia
 
-cp_flashcards_to_drive: FORCE
+flashcards_cp_to_drive: FORCE
 	cp \
 		flashcards/data/*.apkg \
 		"$${DEST_DIR}"
 
 # Image collection.
-find_images: FORCE
+marcion_find_images: FORCE
 	python dictionary/marcion.sourceforge.net/find_images.py \
 		--skip_existing=true \
 		--exclude "verb" \
 		--start_at_key="$${START_AT_KEY}"
 
-img_count: FORCE
+marcion_img_count: FORCE
 	# Number of words possessing at least one image:
 	ls dictionary/marcion.sourceforge.net/data/img/ \
 		| grep -oE '^[0-9]+' \
@@ -199,22 +199,22 @@ img_count: FORCE
 		| wc
 
 # DEVELOPER
-verify_identical_flashcards: try_flashcards
+flashcards_verify: flashcards_try
 	bash utils/ziff.sh \
 		"flashcards/data/coptic.apkg"
 		"$${TEST_DIR}/coptic.apkg" \
 
-verify_identical_flashcards_crum_sahidic: try_flashcards_crum_sahidic
+flashcards_crum_sahidic_verify: flashcards_crum_sahidic_try
 	bash utils/ziff.sh \
 		"flashcards/data/crum_sahidic.apkg" \
 		"$${TEST_DIR}/crum_sahidic.apkg"
 
-try_flashcards: FORCE
+flashcards_try: FORCE
 	python flashcards/main.py \
 		--output "$${TEST_DIR}/coptic.apkg" \
 		--timestamp "${TIMESTAMP}"
 
-try_flashcards_crum_sahidic: FORCE
+flashcards_crum_sahidic_try: FORCE
 	python flashcards/main.py \
 		--decks "A Coptic Dictionary::Sahidic" \
 		--output "$${TEST_DIR}/crum_sahidic.apkg" \
@@ -228,10 +228,10 @@ git_clean: FORCE
 		--exclude "secrets.sh" \
 		--force
 
-clean_bible_epub: FORCE
+bible_epub_clean: FORCE
 	git restore "bible/stshenouda.org/data/output/epub*/*.epub"
 
-clean_analysis: FORCE
+kellia_analysis_clean: FORCE
 	git restore "dictionary/kellia.uni-goettingen.de/analysis.json"
 
 loc: FORCE
