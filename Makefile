@@ -11,7 +11,7 @@ SHELL:=/bin/bash
 # LEVEL 3 RULES ###############################################################
 
 .PHONY: all
-all: increment install setup validate generate pollute publish stats
+all: increment install generate pollute publish stats
 
 .PHONY: flash
 flash: increment flashcards flashcards_redundant publish stats
@@ -24,14 +24,11 @@ increment: flashcards_timestamp
 .PHONY: install
 install: pip_install 
 
-.PHONY: setup
-setup: marcion_dawoud_download marcion_img_setup
-
 .PHONY: validate
 validate: precommit
 
 .PHONY: generate
-generate: bible copticsite marcion kellia flashcards flashcards_redundant
+generate: bible copticsite marcion marcion_dawoud marcion_img kellia flashcards flashcards_redundant
 
 .PHONY: stats
 stats: loc marcion_img_count marcion_dawoud_count
@@ -100,7 +97,7 @@ copticsite: FORCE
 	python dictionary/copticsite.com/main.py
 
 # MARCION RULES
-marcion_dawoud_download: FORCE
+marcion_dawoud: FORCE
 	curl -L \
 		"https://docs.google.com/spreadsheets/d/e/2PACX-1vTItxV4E4plQrzjWLSea85ZFQWcQ4ba-p2BBIDG9h5yI0i9URn9GD9zZhxEj8kVI7jhCoPWPEapd9D7/pub?output=tsv" \
 		> "dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv"
@@ -115,7 +112,7 @@ marcion_dawoud_count: FORCE
 marcion: $(shell find dictionary/marcion.sourceforge.net/ -type f)
 	python dictionary/marcion.sourceforge.net/main.py
 
-marcion_img_setup: $(shell find dictionary/marcion.sourceforge.net/data/ -type f)
+marcion_img: $(shell find dictionary/marcion.sourceforge.net/data/ -type f)
 	bash dictionary/marcion.sourceforge.net/img_setup.sh \
 		$${SKIP_EXISTING}
 
