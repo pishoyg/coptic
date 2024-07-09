@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # TODO: Add a flag to make it possible to skip the images that already exist in
 # the output.

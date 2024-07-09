@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 IMG="dictionary/marcion.sourceforge.net/data/img/"
 IMG_300="dictionary/marcion.sourceforge.net/data/img-300/"

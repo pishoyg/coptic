@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Diff the contents of two zip files.
 # Use as bash ziff.sh "${FIRST_FILE}" "${SECOND_FILE}"
 #

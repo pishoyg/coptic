@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # BREAK_SYSTEM_PACKAGES is passed to `pip` commands. Its value should either be
 # "" (the empty string), or "--break-system-packages". In the latter case,
 # you're instructing pip to install python packages even if system packages
