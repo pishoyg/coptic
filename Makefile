@@ -119,7 +119,8 @@ marcion: $(shell find dictionary/marcion.sourceforge.net/ -type f)
 	python dictionary/marcion.sourceforge.net/main.py
 
 marcion_img_setup: $(shell find dictionary/marcion.sourceforge.net/data/ -type f)
-	bash dictionary/marcion.sourceforge.net/img_setup.sh
+	bash dictionary/marcion.sourceforge.net/img_setup.sh \
+		$${SKIP_EXISTING}
 
 # KELLIA RULES
 kellia_analysis: FORCE

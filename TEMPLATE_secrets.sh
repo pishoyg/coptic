@@ -37,3 +37,10 @@ export JSON_KEYFILE_NAME=""
 
 # START_AT_KEY is used in Marcion's image-finding assistance script.
 export START_AT_KEY="0"
+
+# SKIP_EXISTING defines whether Marcion's image setup script should skip
+# existing targets. In order to turn it on, set:
+#		SKIP_EXISTING="--skip_existing"
+#	TODO: Clean up this mess. Your repo should be smart enough to update the
+#	pictures that have been modified.
+export SKIP_EXISTING=""
