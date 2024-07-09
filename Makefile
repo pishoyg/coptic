@@ -1,6 +1,6 @@
 SHELL:=/bin/bash
 
-TIMESTAMP = $(shell cat timestamp)
+TIMESTAMP = $(shell cat timestamp.txt)
 
 .PHONY: all
 all: install setup validate generate stats
@@ -39,7 +39,7 @@ pollute: bible_epub kellia_analysis
 # intended to be run as one-offs.
 
 .PHONY: increment
-increment: timestamp
+increment: flashcards_timestamp
 
 .PHONY: clean
 clean: git_clean bible_epub_clean kellia_analysis_clean
@@ -133,8 +133,8 @@ kellia: FORCE
 	python dictionary/kellia.uni-goettingen.de/main.py
 
 # FLASHCARD RULES
-timestamp: FORCE
-	date +%s > timestamp
+flashcards_timestamp: FORCE
+	date +%s > timestamp.txt
 
 flashcards: FORCE
 	python flashcards/main.py \
