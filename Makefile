@@ -41,7 +41,7 @@ pollute: bible_epub kellia_analysis
 clean: git_clean bible_epub_clean kellia_analysis_clean
 
 .PHONY: toil
-toil: marcion_find_images
+toil: marcion_img_find
 
 .PHONY: verify
 verify: flashcards_verify flashcards_crum_sahidic_verify
@@ -180,8 +180,8 @@ flashcards_cp_to_drive: $(shell find flashcards/data/ -type f)
 		"$${DEST_DIR}"
 
 # Image collection.
-marcion_find_images: FORCE
-	python dictionary/marcion.sourceforge.net/find_images.py \
+marcion_img_find: FORCE
+	python dictionary/marcion.sourceforge.net/img_find.py \
 		--skip_existing=true \
 		--exclude "verb" \
 		--start_at_key="$${START_AT_KEY}"
