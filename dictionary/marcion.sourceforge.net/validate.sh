@@ -12,7 +12,7 @@ img_stems () {
 }
 
 img_300_stems () {
-  ls "${IMG-300}" | grep -oE '^[^.]+' | sort
+  ls "${IMG_300}" | grep -oE '^[^.]+' | sort
 }
 
 # Checking for unknown image extensions:
@@ -21,14 +21,8 @@ DIFF=$(comm -23 <(img_extensions | uniq) <(echo .avif .gif .jpeg .jpg .png .webp
 if [ ! -z "${DIFF}" ]; then
   echo "Unknown extensions:"
   echo "${DIFF}"
-  exit 1
-fi
-
-# Check that all images are converted.
-DIFF=$(comm -3 <(img_stems) <(img_300_stems))
-if [ ! -z "${DIFF}" ]; then
-  echo "Images that are not converted:"
-  echo "${DIFF}"
+  echo "If you're sure your script can handle those, add them to the list so"
+  echo " this error will disappear." 
   exit 1
 fi
 
@@ -37,5 +31,15 @@ DIFF=$(comm -3 <(img_stems) <(img_stems | uniq))
 if [ ! -z "${DIFF}" ]; then
   echo "The following basenames are duplicate:"
   echo "${DIFF}"
+  exit 1
+fi
+
+# Check that all images are converted.
+DIFF=$(comm -3 <(img_stems) <(img_300_stems))
+if [ ! -z "${DIFF}" ]; then
+  echo "Delta:"
+  echo "${DIFF}"
+  echo "You might want to run convert_resize.sh, or delete some images from"
+  echo " the destination that are no longer in the source directory."
   exit 1
 fi
