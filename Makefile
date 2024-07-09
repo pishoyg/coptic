@@ -3,13 +3,13 @@ SHELL:=/bin/bash
 TIMESTAMP = $(shell cat timestamp.txt)
 
 .PHONY: all
-all: install setup validate generate stats
+all: increment install setup validate generate stats
 
 .PHONY: allall  # This includes privileged rules.
-allall: increment all publish
+allall: all publish
 
 .PHONY: allallall  # This includes privileged and pollute rules.
-allallall: increment all pollute publish
+allallall: all pollute publish
 
 .PHONY: increment
 increment: flashcards_timestamp
