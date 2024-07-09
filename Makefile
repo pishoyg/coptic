@@ -47,11 +47,11 @@ clean: git_clean bible_epub_clean kellia_analysis_clean
 .PHONY: toil
 toil: marcion_find_images
 
-.PHONY: flashcards_verify
-flashcards_verify: flashcards_verify flashcards_crum_sahidic_verify
+.PHONY: verify
+verify: flashcards_verify flashcards_crum_sahidic_verify
 
-.PHONY: flashcards_try
-flashcards_try: flashcards_try flashcards_crum_sahidic_try
+.PHONY: try
+try: flashcards_try flashcards_crum_sahidic_try
 
 # The rules below are not included in any of the "all" rules above. They run in
 # pre-commit.
