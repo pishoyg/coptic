@@ -609,6 +609,10 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (50+ hours)
 
    The data could also be used for auto-correction and auto-completion models.
 
+   There has been [an
+   attempt](https://github.com/louiseyousre2020/coptic-words) to implement
+   something similar. We could resuse some of the code from this project.
+
    See [this use case](https://github.com/runehol/kindlearadict) for Arabic,
    another morphologically complex language.
 
