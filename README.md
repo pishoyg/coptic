@@ -27,7 +27,7 @@
   - [Developer Convenience TODO's](#developer-convenience-todos)
     - [Guidelines](#guidelines)
   - [Kindle TODO's](#kindle-todos)
-- [Keyboard TODO's](#keyboard-todos)
+  - [Keyboard TODO's](#keyboard-todos)
 - [Credits](#credits)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -539,7 +539,10 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
 ### Developer Convenience TODO's
 
-(40+ hours)
+1. **Create placeholders for unit tests.** (1 hour)
+   ([See](https://docs.python.org/3/library/unittest.html#test-discovery).)
+
+1. **Scratch the current timestamping mechanism.** (1 hour)
 
 1. **Write the flashcard data to an intermediate format before `.apkg`.** (20
    hours)
@@ -556,15 +559,12 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
    - It is a plausible solution for the timestamping problem currently faced.
    - Support a fanout to platforms other than Anki.
 
-1. **Set up a more robust CI/CD pipelines.**
+1. **Set up a more robust CI/CD pipelines.** (20 hours)
 
    To start with, set up proper dependencies in Makefile.
 
    Note: This is proving difficult! We could perhaps consider migrating to
    CMake or even Bazel.
-
-1. **Expand the unit tests, and make them discoverable.**
-   ([See](https://docs.python.org/3/library/unittest.html#test-discovery).)
 
 1. Pick up some of the Easter egg tasks left around the code:
 
@@ -576,6 +576,10 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
    when they are deemed irrelevant.
 
 #### Guidelines
+
+1. While unit tests are low-priority right now given the feasibility of other
+   methods of testing, such as the code assertions, and visual inspections of
+   the output, unit tests are still desirable. Consider expanding them.
 
 1. Use pre-commit hooks.
 
@@ -623,7 +627,7 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (50+ hours)
    [here](https://kdp.amazon.com/en_US/help/topic/GZ8BAXASXKB5JVML), and a
    workaround may be possible.
 
-## Keyboard TODO's
+### Keyboard TODO's
 
 1. Complete your [keyboard
 proposal](
