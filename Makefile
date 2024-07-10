@@ -11,15 +11,12 @@ SHELL:=/bin/bash
 # LEVEL 3 RULES ###############################################################
 
 .PHONY: all
-all: increment install generate_1 validate generate_2 generate_3 publish stats
+all: install generate_1 validate generate_2 generate_3 publish stats
 
 .PHONY: flash
-flash: increment validate generate_2 generate_3 publish stats
+flash: validate generate_2 generate_3 publish stats
 
 # LEVEL 2 RULES ###############################################################
-
-.PHONY: increment
-increment: flashcards_timestamp
 
 .PHONY: install
 install: pip_install 
@@ -126,48 +123,38 @@ kellia: FORCE
 	python dictionary/kellia.uni-goettingen.de/main.py
 
 # FLASHCARD RULES
-flashcards_timestamp: FORCE
-	date +%s > timestamp.txt
-
 flashcards: FORCE
-	python flashcards/main.py \
-		--timestamp $(shell cat timestamp.txt)
+	python flashcards/main.py
 
 flashcards_crum_sahidic: FORCE
 	python flashcards/main.py \
 		--decks "A Coptic Dictionary::Sahidic" \
-		--output "flashcards/data/crum_sahidic.apkg" \
-		--timestamp $(shell cat timestamp.txt)
+		--output "flashcards/data/crum_sahidic.apkg"
 
 flashcards_crum: FORCE
 	python flashcards/main.py \
 		--decks "A Coptic Dictionary::Bohairic" "A Coptic Dictionary::Sahidic" "A Coptic Dictionary::Bohairic / Sahidic" "A Coptic Dictionary::All Dialects" \
-		--output "flashcards/data/crum.apkg" \
-		--timestamp $(shell cat timestamp.txt)
+		--output "flashcards/data/crum.apkg"
 
 flashcards_copticsite: FORCE
 	python flashcards/main.py \
 		--decks "copticsite.com" \
-		--output "flashcards/data/copticsite.apkg" \
-		--timestamp $(shell cat timestamp.txt)
+		--output "flashcards/data/copticsite.apkg"
 
 flashcards_bible: FORCE
 	python flashcards/main.py \
 		--decks "Bible::Bohairic" "Bible::Sahidic" "Bible::All Dialects" \
-		--output "flashcards/data/bible.apkg" \
-		--timestamp $(shell cat timestamp.txt)
+		--output "flashcards/data/bible.apkg"
 
 flashcards_kellia: FORCE
 	python flashcards/main.py \
 		--decks "KELLIA::Comprehensive" "KELLIA::Egyptian" "KELLIA::Greek"\
-		--output "flashcards/data/kellia.apkg" \
-		--timestamp $(shell cat timestamp.txt)
+		--output "flashcards/data/kellia.apkg"
 
 flashcards_kellia_comprehensive: FORCE
 	python flashcards/main.py \
 		--decks "KELLIA::Comprehensive" \
-		--output "flashcards/data/kellia_comprehensive.apkg" \
-		--timestamp $(shell cat timestamp.txt)
+		--output "flashcards/data/kellia_comprehensive.apkg"
 
 flashcards_redundant: flashcards_crum_sahidic flashcards_crum flashcards_copticsite flashcards_bible flashcards_kellia_comprehensive flashcards_kellia
 
@@ -204,14 +191,12 @@ flashcards_crum_sahidic_verify: flashcards_crum_sahidic_try
 
 flashcards_try: FORCE
 	python flashcards/main.py \
-		--output "$${TEST_DIR}/coptic.apkg" \
-		--timestamp $(shell cat timestamp.txt)
+		--output "$${TEST_DIR}/coptic.apkg"
 
 flashcards_crum_sahidic_try: FORCE
 	python flashcards/main.py \
 		--decks "A Coptic Dictionary::Sahidic" \
-		--output "$${TEST_DIR}/crum_sahidic.apkg" \
-		--timestamp $(shell cat timestamp.txt)
+		--output "$${TEST_DIR}/crum_sahidic.apkg"
 
 git_clean: FORCE
 	git clean \

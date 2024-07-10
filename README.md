@@ -542,8 +542,6 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 1. **Create placeholders for unit tests.** (1 hour)
    ([See](https://docs.python.org/3/library/unittest.html#test-discovery).)
 
-1. **Scratch the current timestamping mechanism.** (1 hour)
-
 1. **Write the flashcard data to an intermediate format before `.apkg`.** (20
    hours)
 
