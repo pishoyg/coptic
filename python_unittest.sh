@@ -17,3 +17,6 @@ python -m unittest discover \
 
 python -m unittest discover \
 	"dictionary/inflect"
+
+python -m unittest discover \
+	"dictionary/kindle"
