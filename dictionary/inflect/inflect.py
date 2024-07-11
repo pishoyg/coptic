@@ -33,7 +33,7 @@ class Type(enum.Enum):
         return self in [
             self.VERB_INFINITIVE,
             self.VERB_PRENOMINAL,
-            self.VERB_PRENOMINAL,
+            self.VERB_PRONOMINAL,
             self.VERB_QUALITATIVE,
             self.VERB_IMPERATIVE,
         ]
