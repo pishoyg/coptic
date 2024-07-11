@@ -601,9 +601,6 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
 1. **Ensure that the input includes only Coptic characters.**
 
-1. **Split the XHTML.** (1 hour)
-   [See](https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV#kindlegen).
-
 1. **Create a [Kindle-compatible dictionary](
 https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (50+ hours)
 

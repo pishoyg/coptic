@@ -3,6 +3,9 @@ import os
 import type_enforced
 from ebooklib import epub
 
+STEP = 100
+ZFILL = 4
+
 HTML = """
 <html
 xmlns:math="http://exslt.org/math"
@@ -81,6 +84,13 @@ class entry:
         return self._html
 
 
+def html(entries: list[entry]) -> str:
+    html = "\n".join(e.html() for e in entries)
+    html = HTML.format(ENTRIES=html)
+    html = deindent(html)
+    return html
+
+
 @type_enforced.Enforcer(enabled=True)
 class dictionary:
     def __init__(self, title: str, author: str) -> None:
@@ -88,24 +98,13 @@ class dictionary:
         self._author: str = author
         self._entries: list[entry] = []
 
-    def _html(self) -> str:
-        entries = "\n".join(e.html() for e in self._entries)
-        html = HTML.format(ENTRIES=entries)
-        html = deindent(html)
-        return html
-
     def epub(self, identifier: str, cover_path: str, path: str) -> None:
         kindle = epub.EpubBook()
         kindle.set_identifier(identifier)
         kindle.set_language("cop")
         kindle.set_title(self._title)
         kindle.add_author(self._author)
-        cover_basename = os.path.basename(cover_path)
-        cover = epub.EpubCover(file_name=cover_basename)
-        with open(cover_path, "rb") as f:
-            cover.content = f.read()
-        kindle.add_item(cover)
-        kindle.add_item(epub.EpubCoverHtml(image_name=cover_basename))
+
         kindle.add_metadata(
             None,
             "meta",
@@ -116,10 +115,27 @@ class dictionary:
         kindle.add_metadata("x-metadata", "DictionaryOutLanguage", "en")
         kindle.add_metadata("x-metadata", "DefaultLookupIndex", "index")
 
-        content = epub.EpubHtml(title=self._title, file_name="content.xhtml")
-        content.set_content(self._html())
-        kindle.add_item(content)
-        kindle.spine = [cover, content]
+        kindle.spine = []
+
+        cover_basename = os.path.basename(cover_path)
+        cover = epub.EpubCover(file_name=cover_basename)
+        with open(cover_path, "rb") as f:
+            cover.content = f.read()
+        kindle.add_item(cover)
+        kindle.spine.append(cover)
+        kindle.add_item(epub.EpubCoverHtml(image_name=cover_basename))
+
+        for i in range(0, len(self._entries), STEP):
+            entries = self._entries[i : i + STEP]
+            start = str(i + 1).zfill(ZFILL)
+            end = str(i + len(entries)).zfill(ZFILL)
+            file_name = f"{start}_{end}.xhtml"
+            chapter = epub.EpubHtml(
+                title=file_name, file_name=file_name, content=html(entries)
+            )
+            kindle.add_item(chapter)
+            kindle.spine.append(chapter)
+
         kindle.add_item(epub.EpubNcx())
         kindle.add_item(epub.EpubNav())
 
