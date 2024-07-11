@@ -61,4 +61,4 @@ def inflect(morpheme: str, type: Type) -> list[str]:
     """
     prefixes = _TYPE_TO_PREFIX_LIST[type]
     prefixes = sum(prefixes, [])
-    return [p + morpheme for p in prefixes]
+    return [morpheme] + [p + morpheme for p in prefixes]
