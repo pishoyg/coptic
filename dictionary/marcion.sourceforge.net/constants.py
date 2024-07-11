@@ -286,7 +286,12 @@ DETACHED_TYPES_1 = [
     ),  # (ⲟⲩ)
     ("****", lexical.type("<i>female: </i>", "(ⲧ)", "female", lexical.Gender.FEMININE)),
     ("***", lexical.type("<i>male: </i>", "(ⲡ)", "male", lexical.Gender.MASCULINE)),
-    ("**", lexical.type("<i>imperative: </i>", "(imp.)", "imperative", None)),
+    (
+        "**",
+        lexical.type(
+            "<i>imperative: </i>", "(imp.)", "imperative", inflect.Type.VERB_IMPERATIVE
+        ),
+    ),
     ("*", lexical.type("<i>plural: </i>", "(ⲛ)", "plural", lexical.Gender.PLURAL)),
     ("$", lexical.type("<i> &c</i>", "(&c)", "constructed with", None)),
     ("^^^", lexical.type("<i><b>c</b></i>", "(c)", "Not sure what this means!", None)),
