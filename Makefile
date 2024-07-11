@@ -167,7 +167,8 @@ flashcards_cp_to_drive: $(shell find flashcards/data/ -type f)
 marcion_img_find: FORCE
 	python dictionary/marcion.sourceforge.net/img_find.py \
 		--skip_existing=true \
-		--exclude "verb" \
+		--exclude "type:verb" \
+		--exclude "dialect-B:" \
 		--start_at_key="$${START_AT_KEY}"
 
 marcion_img_count: FORCE

@@ -33,21 +33,6 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
-    "--open_images_in_browser",
-    type=bool,
-    default=True,
-    help="Whether to use the browser or the default program to open existing images.",
-)
-
-argparser.add_argument(
-    "--verify_before_copying",
-    type=bool,
-    default=True,
-    help="Whether to verify the images before copying. Verification is done by"
-    " asking the user to input y or n.",
-)
-
-argparser.add_argument(
     "--start_at_key",
     type=int,
     default=0,
@@ -76,13 +61,6 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
-    "--input_type_col",
-    type=str,
-    default="type-parsed",
-    help="Name of the type column in the input TSV.",
-)
-
-argparser.add_argument(
     "--print_cols",
     type=str,
     nargs="*",
@@ -91,7 +69,7 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
-    "--exclude_types",
+    "--exclude",
     type=str,
     nargs="*",
     default=[],
@@ -164,11 +142,7 @@ def get_max_idx(g: list[str], key: int, sense: int) -> int:
 def open_images(images: list[str]):
     if not images:
         return
-    subprocess.run(
-        ["open"]
-        + (["-a", args.browser] if args.open_images_in_browser else [])
-        + images
-    )
+    subprocess.run(["open"] + images)
 
 
 @type_enforced.Enforcer
@@ -213,12 +187,19 @@ def main():
     df = pd.read_csv(args.input_tsv, sep="\t", dtype=str, encoding="utf-8").fillna("")
     df.sort_values(by=args.input_key_col, inplace=True)
 
+    exclude = {}
+    for e in args.exclude:
+        k, v = e.split(":")
+        assert k
+        assert k not in exclude
+        exclude[k] = v
+
     for _, row in df.iterrows():
         key = row[args.input_key_col]
         key = int(key)
         if key < args.start_at_key:
             continue
-        if row[args.input_type_col] in args.exclude_types:
+        if any(row[k] == v for k, v in exclude.items()):
             continue
 
         def existing():
@@ -266,16 +247,15 @@ def main():
                 continue
 
             # Verify the images.
-            if args.verify_before_copying:
-                i = "n"
-                while True:
-                    open_images(files)
-                    i = input(f"Sense = {sense}. Looks good? (yes/no/sense)").lower()
-                    if i.isdigit():
-                        sense = int(i)
-                    if i in {"y", "yes"}:
-                        break
-                    files = get_downloads()
+            i = "n"
+            while True:
+                open_images(files)
+                i = input(f"Sense = {sense}. Looks good? (yes/no/sense)").lower()
+                if i.isdigit():
+                    sense = int(i)
+                if i in {"y", "yes"}:
+                    break
+                files = get_downloads()
 
             # Move the files.
             idx = get_max_idx(existing(), key, sense)
