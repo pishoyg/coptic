@@ -49,9 +49,7 @@ ENTRY = """
 </idx:entry>
 """
 
-INFLECTION = """
-<idx:iform value="{FORM}"></idx:iform>
-"""
+INFLECTION = """<idx:iform value="{FORM}"></idx:iform>"""
 
 
 @type_enforced.Enforcer(enabled=True)
