@@ -266,6 +266,7 @@ def build_trees(roots: pd.DataFrame, derivations: pd.DataFrame) -> None:
     # Add extra columns to the parents, using the derivations.
     roots[CRUM_COL + "-pages"] = [",".join(trees[key].crum_pages()) for key in keys]
     roots["derivations-table"] = [trees[key].html_table() for key in keys]
+    roots["derivations-list"] = [trees[key].html_list() for key in keys]
     roots["derivations-txt"] = [trees[key].txt() for key in keys]
     for d in args.filter_dialects:
         roots[f"dialect-{d}-derivations-table"] = [

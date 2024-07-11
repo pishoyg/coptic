@@ -233,6 +233,47 @@ class node:
         out = " ".join(out)
         return out
 
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
+    def html_list(
+        self,
+        include_root: bool = False,
+    ) -> str:
+        assert not include_root, "An HTML tree with the root is not yet supported."
+        assert self.is_root()
+        assert self._preprocessed
+
+        descendants = self.descendants()
+        if not descendants:
+            return ""
+
+        out = ["<ul>"]
+
+        depth = 0
+        for d in descendants:
+            cur_depth = int(d.cell("depth"))
+            while cur_depth > depth:
+                out.append("<ul>")
+                depth += 1
+            while cur_depth < depth:
+                out.append("</ul>")
+                depth -= 1
+            word = d.cell("word-parsed-prettify")
+            type = d.cell("type-parsed")
+            assert word or type == "HEADER"
+            meaning = d.cell("en-parsed-light-greek")
+            if type and type not in ["-", "HEADER"]:
+                meaning = f"({type}) {meaning}"
+            out.extend(
+                [
+                    f"<dt>{word}</dt>",
+                    f"<dd>{meaning}</dd>",
+                ]
+            )
+
+        out.append("</ul>")
+        out = " ".join(out)
+        return out
+
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def depths(derivations: pd.DataFrame) -> list[int]:
