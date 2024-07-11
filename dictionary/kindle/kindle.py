@@ -67,17 +67,17 @@ class entry:
         definition: str,
         inflections: list[str],
     ) -> None:
-        self.id = id
-        self.orth = orth
-        self.definition = definition
-        self.inflections = inflections
+        self._id: str = id
+        self._orth: str = orth
+        self._definition: str = definition
+        self._inflections: list[str] = inflections
 
     def html(self) -> str:
         html = HTML.format(
-            ID=self.id,
-            ORTH=self.orth,
-            DEFINITION=self.definition,
-            INFLECTIONS=self.inflections,
+            ID=self._id,
+            ORTH=self._orth,
+            DEFINITION=self._definition,
+            INFLECTIONS=self._inflections,
         )
         html = deindent(html)
         return html
@@ -86,16 +86,16 @@ class entry:
 @type_enforced.Enforcer(enabled=True)
 class dictionary:
     def __init__(self, title: str, author: str) -> None:
-        self.title = title
-        self.author = author
-        self.entries = []
+        self._title: str = title
+        self._author: str = author
+        self._entries: list[entry] = []
 
     def epub(self, cover_path: str, path: str) -> None:
         kindle = epub.EpubBook()
-        kindle.set_identifier(self.title)
+        kindle.set_identifier(self._title)
         kindle.set_language("cop")
-        kindle.set_title(self.title)
-        kindle.add_author(self.author)
+        kindle.set_title(self._title)
+        kindle.add_author(self._author)
         cover_basename = os.path.basename(cover_path)
         cover = epub.EpubCover(file_name=cover_basename)
         with open(cover_path, "rb") as f:
@@ -113,9 +113,9 @@ class dictionary:
         kindle.add_metadata("x-metadata", "DefaultLookupIndex", "index")
 
         # TODO: Is the `file_name` attribute needed for epub.EpubHtml()?
-        html = HTML.format(ENTRIES="\n".join(e.html() for e in self.entries))
+        html = HTML.format(ENTRIES="\n".join(e.html() for e in self._entries))
         html = deindent(html)
-        content = epub.EpubHtml(title=self.title)
+        content = epub.EpubHtml(title=self._title)
         content.set_content(html)
         kindle.spine = [cover, content]
         # TODO: Is any of the following needed?
@@ -123,3 +123,6 @@ class dictionary:
         # kindle.add_item(epub.EpubNav())
 
         epub.write_epub(path, kindle)
+
+    def add_entry(self, e: entry) -> None:
+        self._entries.append(e)
