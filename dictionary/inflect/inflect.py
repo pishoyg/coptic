@@ -1,7 +1,8 @@
 import enum
 
-import constants
 import type_enforced
+
+from dictionary.inflect import constants
 
 
 class Type(enum.Enum):
@@ -17,6 +18,25 @@ class Type(enum.Enum):
     VERB_PRONOMINAL = 23
     VERB_QUALITATIVE = 24
     VERB_IMPERATIVE = 25  # Likely not inflectable.
+
+    def is_noun(self):
+        return self in [
+            self.NOUN_MASCULINE,
+            self.NOUN_FEMININE,
+            self.NOUN_PLURAL,
+            self.NOUN_MASCULINE_OR_FEMININE,
+            self.NOUN_UNKNOWN_GENDER,
+            self.NOUN_NO_ARTICLE,
+        ]
+
+    def is_verb(self):
+        return self in [
+            self.VERB_INFINITIVE,
+            self.VERB_PRENOMINAL,
+            self.VERB_PRENOMINAL,
+            self.VERB_QUALITATIVE,
+            self.VERB_IMPERATIVE,
+        ]
 
 
 _TYPE_TO_PREFIX_LIST = {
