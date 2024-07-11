@@ -121,7 +121,7 @@ class node:
         return out
 
     @type_enforced.Enforcer
-    def html(
+    def html_table(
         self,
         dialect: typing.Optional[str] = None,
         explain: bool = True,
