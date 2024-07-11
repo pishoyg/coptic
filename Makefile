@@ -1,5 +1,7 @@
 SHELL:=/bin/bash
 
+# SECRETS
+#
 # If you know the secrets, then you can run the privileged tasks. They require
 # a set of variables to be exported. These are contained in a `secrets.sh` file
 # that you need to source before running the privileged make rules.
@@ -7,6 +9,12 @@ SHELL:=/bin/bash
 # source secrets.sh && make ${PRIVILEGED_RULE}
 # ```
 # See TEMPLATE_secrets.sh for more information.
+
+
+# LEVELS
+#
+# Level-3 rules use level-2 rules.
+# Level-2 rules use level-1 rules.
 
 # LEVEL 3 RULES ###############################################################
 
@@ -41,8 +49,8 @@ publish: flashcards_cp_to_drive
 .PHONY: stats
 stats: loc marcion_img_count marcion_dawoud_count
 
-# The rules below are not included in any of the "all" rules above. They are
-# intended to be run as one-offs.
+# The following level-2 rules are not included in any of the level-3 rules
+# above. They are relevant only during development, but not for deployment.
 
 .PHONY: clean
 clean: git_clean bible_epub_clean kellia_analysis_clean
@@ -56,27 +64,11 @@ verify: flashcards_verify flashcards_crum_sahidic_verify
 .PHONY: try
 try: flashcards_try flashcards_crum_sahidic_try
 
-# The rules below are not included in any of the "all" rules above. They run in
-# pre-commit.
-# They all depend on FORCE because we assume that, if you're running them
-# manually, then you want to run them anyway.
+.PHONY: precommit_scripts
+precommit_scripts: readme_doctoc marcion_img_validate python_unittest
 
-.PHONY: readme_doctoc
-readme_doctoc: FORCE
-	bash doctoc_readme.sh
-
-.PHONY: marcion_img_validate
-marcion_img_validate: FORCE
-	bash dictionary/marcion.sourceforge.net/img_validate.sh
-
-.PHONY: python_unittest
-python_unittest: FORCE
-	bash python_unittest.sh
-
-# FORCE
-
-.PHONY: FORCE
-FORCE:
+.PHONY: organize
+organize: py_dirs
 
 # LEVEL 1 RULES ###############################################################
 
@@ -224,4 +216,21 @@ loc: FORCE
 		-o -name "*.js" -o -name "*.vba" \
 		| grep --invert "^./archive/copticbible.apk/" \
 		| xargs cat | wc --lines
+
+readme_doctoc: FORCE
+	bash doctoc_readme.sh
+
+marcion_img_validate: FORCE
+	bash dictionary/marcion.sourceforge.net/img_validate.sh
+
+python_unittest: FORCE
+	bash python_unittest.sh
+
+py_dirs: FORCE
+	find . -name "*.py" | xargs dirname | grep --invert "^./archive" | sort | uniq
+# FORCE
+
+# LEVEL-0 rules ###############################################################
+.PHONY: FORCE
+FORCE:
 
