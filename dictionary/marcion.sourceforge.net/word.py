@@ -1,23 +1,38 @@
+import enum
 import typing
 
 import enforcer
 import type_enforced
 
+from dictionary.inflect import inflect
+
+
+class Gender(enum.Enum):
+    MASCULINE = 1
+    FEMININE = 2
+    PLURAL = 3
+
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class type:
-    _marcion = None
-    _coptic_symbol = None
-    _description = None
-
     def __init__(
-        self, marcion: str, coptic_symbol: str, description: str, append: bool = True
+        self,
+        marcion: str,
+        coptic_symbol: str,
+        description: str,
+        inflect_type: inflect.Type | Gender | None,
+        append: bool = True,
+        is_root: bool = False,
     ):
 
-        self._marcion = marcion
-        self._coptic_symbol = coptic_symbol
-        self._description = description
-        self._append = append
+        self._marcion: str = marcion
+        self._coptic_symbol: str = coptic_symbol
+        self._description: str = description
+        self._inflect_type: inflect.Type | Gender | None = inflect_type
+        self._append: bool = append
+        if is_root:
+            # Genders are not allowed as root types.
+            assert inflect_type is None or isinstance(inflect_type, inflect.Type)
 
     def marcion(self) -> str:
         return self._marcion
@@ -28,17 +43,15 @@ class type:
     def description(self) -> str:
         return self._description
 
+    def inflect_type(self) -> inflect.Type | Gender | None:
+        return self._inflect_type
+
     def append(self) -> bool:
         return self._append
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class structured_word:
-    _dialects = None
-    _spellings = None
-    _types = None
-    _references = None
-    _root_type = None
 
     def __init__(
         self,
@@ -48,11 +61,11 @@ class structured_word:
         references: list[str],
         root_type: typing.Optional[type],
     ) -> None:
-        self._dialects = dialects
-        self._spellings = spellings
-        self._types = types
-        self._references = references
-        self._root_type = root_type
+        self._dialects: list[str] = dialects
+        self._spellings: list[str] = spellings
+        self._types: list[type] = types
+        self._references: list[str] = references
+        self._root_type: typing.Optional[type] = root_type
 
     def is_dialect(self, d: str, undialected_is_all: bool = False) -> bool:
         """
@@ -89,3 +102,33 @@ class structured_word:
 
     def spellings(self) -> list[str]:
         return self._spellings
+
+    def infer(
+        self, rt: inflect.Type | None, it: Gender
+    ) -> typing.Optional[inflect.Type]:
+        if rt is None:
+            return None
+        if rt.is_verb():
+            return rt
+        if rt.is_noun():
+            return {
+                Gender.MASCULINE: inflect.Type.NOUN_MASCULINE,
+                Gender.FEMININE: inflect.Type.NOUN_FEMININE,
+                Gender.PLURAL: inflect.Type.NOUN_PLURAL,
+            }[it]
+        return None
+
+    def inflect_type(self) -> typing.Optional[inflect.Type]:
+        rt = self._root_type.inflect_type() if self._root_type else None
+        for t in self._types:
+            it = t.inflect_type()
+            if not it:
+                continue
+            if isinstance(it, inflect.Type):
+                return it
+            assert isinstance(it, Gender)
+            inferred = self.infer(rt, it)
+            if inferred:
+                return inferred
+
+        return rt

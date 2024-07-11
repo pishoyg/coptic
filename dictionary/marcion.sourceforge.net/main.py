@@ -1,4 +1,5 @@
 import argparse
+import os
 import parser
 
 import constants
@@ -9,6 +10,9 @@ import tree
 import type_enforced
 import word as lexical
 from oauth2client.service_account import ServiceAccountCredentials
+
+from dictionary.inflect import inflect
+from dictionary.kindle import kindle
 
 argparser = argparse.ArgumentParser(
     description="Parse and process the Marcion digital Coptic database,"
@@ -66,7 +70,7 @@ argparser.add_argument(
     type=str,
     nargs="+",
     default=constants.DIALECTS,
-    help="For each of the provided dialect symboles, an extra column will be"
+    help="For each of the provided dialect symbols, an extra column will be"
     " added to the sheet, containing only the words that belong to this"
     " dialect.",
 )
@@ -117,10 +121,40 @@ argparser.add_argument(
     help="In case a new sheet is created, assign this as the owner of the sheet.",
 )
 
+# EPUB arguments.##############################################################
+argparser.add_argument(
+    "--inflect_dialects",
+    type=str,
+    nargs="+",
+    default=["B"],
+    help="Generate inflections and a Kindle dictionary for each dialect in"
+    " this list.",
+)
+
+argparser.add_argument(
+    "--cover",
+    type=str,
+    help="Path to a file containing the cover image for EPUB.",
+    default="dictionary/marcion.sourceforge.net/data/crum/Crum/Crum.jpg",
+)
+
+argparser.add_argument(
+    "--epub_dir",
+    type=str,
+    help="Output directory Kindle dictionary EPUB.",
+    default="dictionary/marcion.sourceforge.net/data/output/",
+)
+
+# Main.########################################################################
+
+DEFINITION = """(<b>{type}</b>) <b>Crum: </b> {crum} <hr> {meaning} <hr> {word} <hr> {derivations} <hr>"""
+
 args = argparser.parse_args()
 
 
-# Main.########################################################################
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def use_html_line_breaks(text: str) -> str:
+    return text.replace("\n", "<br>")
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -160,6 +194,29 @@ def main() -> None:
     derivations.to_csv(args.derivations_tsv, sep="\t", index=False)
     if args.gspread_owner:
         write_to_gspread(derivations)
+
+    # Write EPUB Kindle dictionaries.
+    for d in args.inflect_dialects:
+        k = kindle.dictionary("A Coptic Dictionary", "W. E. Crum")
+        for _, row in roots.iterrows():
+            key = row["key"]
+            orth = use_html_line_breaks(row[f"dialect-{d}"])
+            if not orth:
+                continue
+            definition = DEFINITION.format(
+                type=row["type-parsed"],
+                crum=row["crum"],
+                meaning=row["en-parsed-light-greek"],
+                word=row["word-parsed-prettify"],
+                derivations=row["derivations-list"],
+            )
+            definition = use_html_line_breaks(definition)
+            inflections = row[f"inflections-{d}"].split(",")
+            entry = kindle.entry(key, orth, definition, inflections)
+            k.add_entry(entry)
+        k.epub(
+            f"dialect-{d}", args.cover, os.path.join(args.epub_dir, f"dialect-{d}.epub")
+        )
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -247,9 +304,37 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
                 if w.is_dialect(d, undialected_is_all=True)
             )
             insert("dialect-", d, entry)
+        # TODO: Add inflections for derivations.
+        for d in args.inflect_dialects:
+            inflections = []
+            for w in word:
+                if not w.is_dialect(d, undialected_is_all=True):
+                    continue
+                t = w.inflect_type()
+                if not t:
+                    continue
+                for s in w.spellings():
+                    inflections.extend(inflect.inflect(s, t))
+
+            inflections = dedupe(inflections)
+            insert("", f"inflections-{d}", ",".join(inflections))
 
     for col, values in extra_cols.items():
         df[col] = values
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def dedupe(i: list[str]) -> list[str]:
+    """
+    Deduplicate elements from a list of strings, while maintaining the order.
+    """
+    seen: set[str] = set()
+    o: list[str] = []
+    for x in i:
+        if x not in seen:
+            seen.add(x)
+            o.append(x)
+    return o
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
