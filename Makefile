@@ -218,5 +218,6 @@ loc: FORCE
 		-name "*.py" -o -name "*.java" \
 		-o -name "*.proto" -o -name "*.sh" \
 		-o -name "*.js" -o -name "*.vba" \
+		| grep --invert "^./archive/copticbible.apk/" \
 		| xargs cat | wc --lines
 
