@@ -124,7 +124,7 @@ argparser.add_argument(
 args = argparser.parse_args()
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def get_max_idx(g: list[str], key: int, sense: int) -> int:
     key = str(key)
     sense = str(sense)
@@ -138,28 +138,28 @@ def get_max_idx(g: list[str], key: int, sense: int) -> int:
     return highest
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def open_images(images: list[str]):
     if not images:
         return
     subprocess.run(["open"] + images)
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def get_downloads() -> list[str]:
     files = glob.glob(os.path.join(args.downloads, "*"))
     files = [f for f in files if os.path.basename(f) not in args.ignore]
     return files
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def query(meaning: str) -> str:
     meaning = meaning.replace("&", " and ").replace("\n", " | ")
     meaning = " ".join(meaning.split())
     return args.search_url.format(query=meaning)
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def file_name(key: int, sense: int, idx: int, ext: str):
     assert key
     assert sense
@@ -168,7 +168,7 @@ def file_name(key: int, sense: int, idx: int, ext: str):
     return f"{key}-{sense}-{idx}{ext}"
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def invalid_size(files: list[str]) -> list[str]:
     if args.min_width == -1:
         return []
@@ -182,7 +182,7 @@ def invalid_size(files: list[str]) -> list[str]:
     return invalid
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def main():
     df = pd.read_csv(args.input_tsv, sep="\t", dtype=str, encoding="utf-8").fillna("")
     df.sort_values(by=args.input_key_col, inplace=True)

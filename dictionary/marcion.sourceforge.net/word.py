@@ -1,14 +1,15 @@
 import typing
 
+import enforcer
 import type_enforced
 
 
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class type:
     _marcion = None
     _coptic_symbol = None
     _description = None
 
-    @type_enforced.Enforcer
     def __init__(
         self, marcion: str, coptic_symbol: str, description: str, append: bool = True
     ):
@@ -18,23 +19,20 @@ class type:
         self._description = description
         self._append = append
 
-    @type_enforced.Enforcer
     def marcion(self) -> str:
         return self._marcion
 
-    @type_enforced.Enforcer
     def coptic_symbol(self) -> str:
         return self._coptic_symbol
 
-    @type_enforced.Enforcer
     def description(self) -> str:
         return self._description
 
-    @type_enforced.Enforcer
     def append(self) -> bool:
         return self._append
 
 
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class structured_word:
     _dialects = None
     _spellings = None
@@ -42,7 +40,6 @@ class structured_word:
     _references = None
     _root_type = None
 
-    @type_enforced.Enforcer
     def __init__(
         self,
         dialects: list[str],
@@ -57,7 +54,6 @@ class structured_word:
         self._references = references
         self._root_type = root_type
 
-    @type_enforced.Enforcer
     def is_dialect(self, d: str, undialected_is_all: bool = False) -> bool:
         """
         undialected_is_all: If true, and the word is undialected, then it's
@@ -67,18 +63,15 @@ class structured_word:
             return True
         return d in self._dialects
 
-    @type_enforced.Enforcer
     def __str__(self) -> str:
         return self.string()
 
-    @type_enforced.Enforcer
     def string(
         self, include_references: bool = True, append_root_type: bool = False
     ) -> str:
         d = "({}) ".format(", ".join(self._dialects)) if self._dialects else ""
         return d + self.undialected_string(include_references, append_root_type)
 
-    @type_enforced.Enforcer
     def undialected_string(
         self, include_references: bool, append_root_type: bool
     ) -> str:
@@ -91,10 +84,8 @@ class structured_word:
             r = ", ".join("{" + r + "}" for r in self._references)
         return " ".join(filter(None, [s, t, r]))
 
-    @type_enforced.Enforcer
     def dialects(self) -> list[str]:
         return self._dialects
 
-    @type_enforced.Enforcer
     def spellings(self) -> list[str]:
         return self._spellings

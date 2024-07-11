@@ -3,6 +3,7 @@ import parser
 import typing
 
 import constants
+import enforcer
 import pandas as pd
 import type_enforced
 
@@ -10,7 +11,7 @@ NUM_COLS = 10
 
 
 class node:
-    @type_enforced.Enforcer
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def __init__(self, row: pd.Series) -> None:
         self._row = row
         self._descendants = []
@@ -19,19 +20,19 @@ class node:
         self._preprocessed = False
         self._key_to_idx = {}
 
-    @type_enforced.Enforcer
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def row(self) -> pd.Series:
         return self._row
 
-    @type_enforced.Enforcer
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def is_root(self) -> bool:
         return "key_word" not in self._row
 
-    @type_enforced.Enforcer
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def cell(self, key: str) -> str:
         return str(self.row()[key])
 
-    @type_enforced.Enforcer
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def add_descendant(self, descendant) -> None:
         assert self.is_root()
         assert isinstance(descendant, node)
@@ -39,7 +40,7 @@ class node:
         assert not self._preprocessed
         self._descendants.append(descendant)
 
-    @type_enforced.Enforcer
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def preprocess(self) -> None:
         assert self.is_root()
         assert not self._preprocessed
@@ -51,19 +52,19 @@ class node:
         }
         self._preprocessed = True
 
-    @type_enforced.Enforcer
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def child(self, key: str):
         assert self.is_root()
         assert self._preprocessed
         return self._descendants[self._key_to_idx[key]]
 
-    @type_enforced.Enforcer
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def descendants(self, include_root: bool = False):
         assert self.is_root()
         assert self._preprocessed
         return [self] + self._descendants if include_root else self._descendants
 
-    @type_enforced.Enforcer
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def crum_pages(self) -> list[str]:
         assert self.is_root()
         assert self._preprocessed
@@ -75,7 +76,7 @@ class node:
         cur = list(cur)
         return cur
 
-    @type_enforced.Enforcer
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def parent(self, child, include_root: bool = False):
         assert not include_root, "Not yet implemented!"
         assert self._preprocessed
@@ -87,14 +88,14 @@ class node:
             return None
         return self._descendants[self._key_to_idx[p]]
 
-    @type_enforced.Enforcer
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def index(self, child) -> int:
         assert isinstance(child, node)
         assert self.is_root()
         assert self._preprocessed
         return self._key_to_idx[child.cell("key")]
 
-    @type_enforced.Enforcer
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def txt(self) -> str:
         assert self.is_root()
         assert self._preprocessed
@@ -120,7 +121,7 @@ class node:
         out = "\n".join(out)
         return out
 
-    @type_enforced.Enforcer
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def html_table(
         self,
         dialect: typing.Optional[str] = None,
@@ -233,13 +234,13 @@ class node:
         return out
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def depths(derivations: pd.DataFrame) -> list[int]:
     keys = [int(row["key"]) for _, row in derivations.iterrows()]
     parents = [int(row["key_deriv"]) for _, row in derivations.iterrows()]
     key_to_parent = {k: p for k, p in zip(keys, parents)}
 
-    @type_enforced.Enforcer
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def depth(key: int) -> int:
         parent = key_to_parent[key]
         if not parent:
@@ -251,7 +252,7 @@ def depths(derivations: pd.DataFrame) -> list[int]:
     return depths
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def build_crum_row_spans(nodes: list[node]) -> list[tuple[str, int]]:
     crum_column = [d._row["crum"] for d in nodes]
     out = []
@@ -265,7 +266,7 @@ def build_crum_row_spans(nodes: list[node]) -> list[tuple[str, int]]:
     return out
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def build_has_cell(tree: node, cell_name: str) -> list[bool]:
     assert tree.is_root()
     has_cell = [False for _ in tree.descendants()]

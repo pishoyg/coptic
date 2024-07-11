@@ -2,6 +2,7 @@ import argparse
 import parser
 
 import constants
+import enforcer
 import gspread
 import pandas as pd
 import tree
@@ -122,12 +123,12 @@ args = argparser.parse_args()
 # Main.########################################################################
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def series_to_int(series: pd.Series) -> list[int]:
     return [int(cell) for cell in series]
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def main() -> None:
     # Process roots.
     roots = pd.read_csv(args.coptwrd_tsv, sep="\t", dtype=str, encoding="utf-8").fillna(
@@ -161,11 +162,11 @@ def main() -> None:
         write_to_gspread(derivations)
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def process_data(df: pd.DataFrame, strict: bool) -> None:
     extra_cols = {}
 
-    @type_enforced.Enforcer
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def insert(prefix: str, col: str, cell: str) -> None:
         col = prefix + col
         del prefix
@@ -251,7 +252,7 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         df[col] = values
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def build_trees(roots: pd.DataFrame, derivations: pd.DataFrame) -> None:
     derivations["depth"] = tree.depths(derivations)
     # Build trees.
@@ -272,7 +273,7 @@ def build_trees(roots: pd.DataFrame, derivations: pd.DataFrame) -> None:
         ]
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def dawoud_sort_key(words: list[lexical.structured_word]) -> str:
     for d in ["B", "S"]:
         for w in words:
@@ -292,7 +293,7 @@ def dawoud_sort_key(words: list[lexical.structured_word]) -> str:
     return ""
 
 
-@type_enforced.Enforcer
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def write_to_gspread(df: pd.DataFrame) -> None:
     # TODO: Parameterize to make it possible to write to multiple sheets at the
     # same time, particularly for roots and derivations.
