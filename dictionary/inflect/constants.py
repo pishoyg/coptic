@@ -1,9 +1,14 @@
-# TODO: See if some tenses are missing negative, relative, or circumstantial
-# forms.
-
 # TODO: Some of the prefixes below convert the verbs to nouns, and they could
 # therefore accept noun prefixes afterwards. Those extra prefixes should be
 # accounted for as well. Design a neat solution to handle that.
+
+# TODO: Populate the noun prefixes.
+# TODO: Split the verb prefixes by tense.
+
+NOUN_DEFINITE = []
+NOUN_INDEFINITE = []
+NOUN_DEMONSTRATIVE = []
+NOUN_POSSESSIVE = []
 
 VERB_PREFIXES = [
     # Articles.
