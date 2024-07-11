@@ -4,6 +4,7 @@
 # Garbage.
 .DS_Store
 __pycache__
+coptic.egg-info
 
 # Flashcard decks are too big to host on GitHub.
 flashcards/data/*.apkg

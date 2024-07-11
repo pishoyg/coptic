@@ -19,7 +19,7 @@ flash: validate generate_2 generate_3 publish stats
 # LEVEL 2 RULES ###############################################################
 
 .PHONY: install
-install: pip_install 
+install: pip_install python_install
 
 .PHONY: generate_1
 generate_1: bible copticsite marcion marcion_dawoud marcion_img kellia kellia_analysis
@@ -83,6 +83,9 @@ FORCE:
 pip_install: requirements.txt
 	python -m pip install --upgrade pip "$${BREAK_SYSTEM_PACKAGES}"
 	python -m pip install -r requirements.txt "$${BREAK_SYSTEM_PACKAGES}"
+
+python_install:
+	python3 -m pip install -e . "$${BREAK_SYSTEM_PACKAGES}"
 
 precommit: FORCE
 	pre-commit run
