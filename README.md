@@ -600,24 +600,17 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 1. **Create a [Kindle-compatible dictionary](
 https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (50+ hours)
 
-   From a first glance, it looks like the dictionary needs to manually list all
-   inflected forms of a word in order to be able to look them up.
-   Given Coptic's morphological complexity, it's not exactly clear how we can
-   include all inflected forms for each word. If morphologically complex
-   languages don't have any special treatment, it should still be possible, and
-   worthwhile, to produce such a dictionary, albeit with some difficulty.
-
-   The data could also be used for auto-correction and auto-completion models.
-
    There has been [an
    attempt](https://github.com/louiseyousre2020/coptic-words) to implement
-   something similar. We could resuse some of the code from this project.
+   a Coptic inflection module. Look at it for inspiration.
 
    See [this use case](https://github.com/runehol/kindlearadict) for Arabic,
    another morphologically complex language.
 
    This can start humble and grow with time. No need to perfect it from the
    first time.
+
+1. **Make a plan to improve the accuracy of the inflections module.** (unknown)
 
 1. **Display the Bible data in a table format.** (7-8 hours)
 
