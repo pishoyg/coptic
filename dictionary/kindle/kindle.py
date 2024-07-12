@@ -1,8 +1,12 @@
+# TODO: Learn more about the spell attribute and wildcard search. See ENTRY.
+# TODO: Use inflection groups rather than a flat list. See ENTRY below.
+# TODO: Add a check for valid XHTML.
 import os
 
 import type_enforced
 from ebooklib import epub
 
+TYPE_ENFORCED = True
 STEP = 100
 ZFILL = 4
 
@@ -30,8 +34,6 @@ xmlns:idx="https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.p
 </html>
 """
 
-# TODO: Learn more about the spell attribute and wildcard search.
-# TODO: Use inflection groups rather than a flat list.
 ENTRY = """
 <idx:entry name="index" scriptable="yes" spell="yes">
     <idx:short>
@@ -52,14 +54,38 @@ ENTRY = """
 INFLECTION = """<idx:iform value="{FORM}"></idx:iform>"""
 
 
-@type_enforced.Enforcer(enabled=True)
-def deindent(html: str) -> str:
+@type_enforced.Enforcer(enabled=TYPE_ENFORCED)
+def _deindent(html: str) -> str:
     lines = html.split("\n")
     lines = [line.strip() for line in lines]
     return "\n".join(lines)
 
 
-@type_enforced.Enforcer(enabled=True)
+@type_enforced.Enforcer(enabled=TYPE_ENFORCED)
+def _nothing_to_escape(text: str) -> bool:
+    return all(x not in text for x in ["<", ">", "&"])
+
+
+@type_enforced.Enforcer(enabled=TYPE_ENFORCED)
+def _not_escaped(text: str) -> bool:
+    return all(x not in text for x in ["&lt;", "&gt;", "&amp;"])
+
+
+@type_enforced.Enforcer(enabled=TYPE_ENFORCED)
+def _no_tags(text: str) -> bool:
+    return all(x not in text for x in ["<", ">"])
+
+
+@type_enforced.Enforcer(enabled=TYPE_ENFORCED)
+def _escape_amp(text: str) -> str:
+    """
+    Escape the special characters inside this string.
+    """
+    assert _not_escaped(text)
+    return text.replace("&", "&amp;")
+
+
+@type_enforced.Enforcer(enabled=TYPE_ENFORCED)
 class entry:
     def __init__(
         self,
@@ -69,6 +95,12 @@ class entry:
         definition: str,
         inflections: list[str],
     ) -> None:
+        assert _nothing_to_escape(id)
+        assert _no_tags(orth)
+        orth = _escape_amp(orth)
+        orth_display = _escape_amp(orth_display)
+        definition = _escape_amp(definition)
+        assert all(_nothing_to_escape(i) for i in inflections)
         inflections: str = "\n".join(INFLECTION.format(FORM=i) for i in inflections)
         html = ENTRY.format(
             ID=id,
@@ -77,7 +109,7 @@ class entry:
             DEFINITION=definition,
             INFLECTIONS=inflections,
         )
-        html = deindent(html)
+        html = _deindent(html)
         self._html: str = html
 
     def html(self) -> str:
@@ -87,11 +119,11 @@ class entry:
 def html(entries: list[entry]) -> str:
     html = "\n".join(e.html() for e in entries)
     html = HTML.format(ENTRIES=html)
-    html = deindent(html)
+    html = _deindent(html)
     return html
 
 
-@type_enforced.Enforcer(enabled=True)
+@type_enforced.Enforcer(enabled=TYPE_ENFORCED)
 class dictionary:
     def __init__(self, title: str, author: str) -> None:
         self._title: str = title
