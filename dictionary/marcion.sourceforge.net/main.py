@@ -317,7 +317,7 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
             )
             insert("dialect-", d, entry)
             insert("lemma-", d, lemma(subset))
-        # TODO: Add inflections for derivations.
+        # TODO: Add inflections from the root to the derivations.
         for d in args.inflect_dialects:
             inflections = []
             for w in word:

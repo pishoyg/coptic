@@ -602,7 +602,12 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 1. **Ensure that the input to the inflect module includes only Coptic
    characters.**
 
-   1. **Marcion: Control constants.ACCEPTED_UNKNOWN_CHARACTERS.**
+   1. **Marcion: Control constants.ACCEPTED_UNKNOWN_CHARACTERS[_2].**
+
+   1. **Marcion: Expand the word class to include an annotations field, to hold
+      things such as the English-within-Coptic, and the annotations (such as
+      the question mark interpretted as "probably"). Handle those just like you
+      handle detached types.**
 
 1. **Create a [Kindle-compatible dictionary](
 https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (50+ hours)

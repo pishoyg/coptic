@@ -214,7 +214,8 @@ def _parse_spellings_and_types(
 
     line = _apply_substitutions(line, constants.PREPROCESSING, use_coptic_symbol)
 
-    line = _parse_coptic(line)
+    line, line_no_english = _parse_coptic(line)
+    _analyze_no_english(line_no_english)
 
     line = _apply_substitutions(
         line, constants.SPELLING_ANNOTATIONS_1, use_coptic_symbol
@@ -238,7 +239,33 @@ def _parse_spellings_and_types(
 
     spellings = constants.COMMA_NOT_BETWEEN_PARENTHESES_RE.split(line)
     spellings = list(map(clean, spellings))
+
     return spellings, types
+
+
+def _analyze_no_english(line_no_english: str) -> None:
+    # N.B. The body of this method is largely similar to
+    # _parse_spellings_and_types.
+    # For the sake of rigor, investigate the content of the no-English subset.
+    line_no_english = _apply_substitutions(
+        line_no_english, constants.SPELLING_ANNOTATIONS_1, use_coptic_symbol=True
+    )
+    _, line_no_english = _pick_up_detached_types(
+        line_no_english, constants.DETACHED_TYPES_1
+    )
+    line_no_english = _apply_substitutions(
+        line_no_english, constants.SPELLING_ANNOTATIONS_2, use_coptic_symbol=True
+    )
+    _, line_no_english = _pick_up_detached_types(
+        line_no_english, constants.DETACHED_TYPES_2
+    )
+    line_no_english = line_no_english.replace("(?)", "")  # TODO: Ugly! :/
+    spellings = constants.COMMA_NOT_BETWEEN_PARENTHESES_RE.split(line_no_english)
+    for s in spellings:
+        for c in s:
+            valid = c in constants.LETTERS or c in constants.ACCEPTED_UNKNOWN_CHARS_2
+            if not valid:
+                print(s)
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -254,21 +281,26 @@ def _pick_up_detached_types(
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def _parse_coptic(line: str) -> str:
+def _parse_coptic(line: str) -> tuple[str, str]:
     """
     _parse_coptic parses one line of ASCII-encoded Coptic. It is possible for
     the text to contain English text within it, and for the English text to
     contain Coptic text within.
     """
     out = []
+    out_no_english = []
     while line:
         copt, eng, line = _chop(line, constants.ENGLISH_WITHIN_COPTIC_RE, strict=False)
         if copt:
-            out.append(_ascii_to_unicode(copt))
+            copt = _ascii_to_unicode(copt)
+            out.append(copt)
+            out_no_english.append(copt)
         if eng:
-            out.append(_parse_english(eng))
+            eng = _parse_english(eng)
+            out.append(eng)
     out = " ".join(out)
-    return clean(out)
+    out_no_english = " ".join(out_no_english)
+    return clean(out), clean(out_no_english)
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -367,7 +399,7 @@ def _parse_reference(line: str):  # -> typing.Generator[str, None, None]:
     line = line.split(";")
     assert not (len(line) % 5), line
     for i in range(0, len(line), 5):
-        line[i + 4] = _parse_coptic(line[i + 4])
+        line[i + 4], _ = _parse_coptic(line[i + 4])
         yield "; ".join(filter(None, line[i : i + 5] + [body, note]))
 
 

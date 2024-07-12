@@ -83,6 +83,7 @@ LETTER_ENCODING = {
     "T": "ϯ",
     "Q": "ⳉ",
 }
+LETTERS = set(LETTER_ENCODING.values())
 
 GREEK_LETTER_ENCODING = {
     "A": "Α",
@@ -300,6 +301,7 @@ DETACHED_TYPES_1 = [
 SPELLING_ANNOTATIONS_2 = [
     ("^^", lexical.type("―", "―", "same spelling as above.", None)),
 ]
+
 DETACHED_TYPES_2 = [
     ("^", lexical.type("<i>p c </i>", "(p.c.)", "conjunctive participle", None)),
 ]
@@ -312,6 +314,19 @@ DETACHED_TYPES_2 = [
 # A space is a space.
 # Parentheses and square brackets are also used sometimes.
 ACCEPTED_UNKNOWN_CHARS = ",. []()-=+$*^"
+
+# The no-English, no-type, spelling-split, no-"probably" version of the above.
+# . signifies an abbreviation.
+# ― means "same as above".
+# () represent optional letters.
+# - represents the prenominal form.
+# = represents the pronominal form.
+# + represents the qualitative form.
+#   can be used inside a word.
+# [] are sometimes used in place of (). Rare, and should be fixable at the
+#    source.
+# , occurred only once, should be fixable at the source.
+ACCEPTED_UNKNOWN_CHARS_2 = ".()-=+― [],"
 
 # The following is used to parse the English meaning column.
 ENGLISH_POSTPROCESSING = [
