@@ -327,7 +327,8 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
                 if not t:
                     continue
                 for s in w.spellings():
-                    inflections.extend(inflect.inflect(s, t))
+                    # TODO: strict=True
+                    inflections.extend(inflect.inflect(s, t, strict=False))
 
             inflections = dedupe(inflections)
             insert("", f"inflections-{d}", ",".join(inflections))
