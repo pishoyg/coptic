@@ -217,6 +217,7 @@ def main() -> None:
         k.epub(
             f"dialect-{d}", args.cover, os.path.join(args.epub_dir, f"dialect-{d}.epub")
         )
+        k.xhtml(os.path.join(args.epub_dir, f"dialect-{d}.xhtml"))
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)

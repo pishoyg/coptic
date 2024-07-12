@@ -96,6 +96,11 @@ class dictionary:
         self._author: str = author
         self._entries: list[entry] = []
 
+    def xhtml(self, path: str) -> None:
+        content = html(self._entries)
+        with open(path, "w") as f:
+            f.write(content)
+
     def epub(self, identifier: str, cover_path: str, path: str) -> None:
         kindle = epub.EpubBook()
         kindle.set_identifier(identifier)
