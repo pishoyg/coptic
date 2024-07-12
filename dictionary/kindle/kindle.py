@@ -138,7 +138,6 @@ class dictionary:
         kindle.add_item(epub.EpubNav())
 
         epub.write_epub(path, kindle)
-        print(path, "written")
 
     def add_entry(self, e: entry) -> None:
         self._entries.append(e)
