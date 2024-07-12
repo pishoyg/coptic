@@ -101,19 +101,24 @@ class entry:
         orth_display = _escape_amp(orth_display)
         definition = _escape_amp(definition)
         assert all(_nothing_to_escape(i) for i in inflections)
-        inflections = [INFLECTION.format(FORM=i) for i in inflections]
-        html = ENTRY.format(
-            ID=id,
-            ORTH=orth,
-            ORTH_DISPLAY=orth_display,
-            DEFINITION=definition,
-            INFLECTIONS="\n".join(inflections),
-        )
-        html = _deindent(html)
-        self._html: str = html
+
+        self._id = id
+        self._orth = orth
+        self._orth_display = orth_display
+        self._definition = definition
+        self._inflections = inflections
 
     def html(self) -> str:
-        return self._html
+        inflections = [INFLECTION.format(FORM=i) for i in self._inflections]
+        inflections = "\n".join(inflections)
+        html = ENTRY.format(
+            ID=self._id,
+            ORTH=self._orth,
+            ORTH_DISPLAY=self._orth_display,
+            DEFINITION=self._definition,
+            INFLECTIONS=inflections,
+        )
+        return _deindent(html)
 
 
 def html(entries: list[entry]) -> str:
