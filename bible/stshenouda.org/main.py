@@ -179,10 +179,10 @@ PARALLEL_BUILDERS = {
         chapter_beginner="",
         verse_format="""
         {}
-        <br>
+        <br/>
         {}
-        <br>
-        <br>
+        <br/>
+        <br/>
         """,
         chapter_end="",
     ),
@@ -343,7 +343,7 @@ def process_sources(books):
         for lang in LANGUAGES:
             out.append("<h2>" + lang + "</h2>")
             out.append(
-                "<br>".join("  - " + line for line in data[lang].split("\n") if line)
+                "<br/>".join("  - " + line for line in data[lang].split("\n") if line)
             )
 
     out = prettify_html("\n".join(out))

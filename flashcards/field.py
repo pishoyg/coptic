@@ -284,12 +284,12 @@ def img(
     get_caption: enforcer.OptionalCallable = None,
     force: bool = True,
 ) -> media:
-    html_fmt = '<img src="{basename}"><br>'
+    html_fmt = '<img src="{basename}"><br/>'
     if get_caption:
         html_fmt = (
             "<figure>"
             + html_fmt
-            + "<figcaption> {caption} </figcaption> </figure> <br>"
+            + "<figcaption> {caption} </figcaption> </figure> <br/>"
         )
 
     return media(
@@ -418,7 +418,7 @@ def merge_media_files(*fields: Field) -> list[str]:
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def use_html_line_breaks(text: str) -> str:
-    return text.replace("\n", "<br>")
+    return text.replace("\n", "<br/>")
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)

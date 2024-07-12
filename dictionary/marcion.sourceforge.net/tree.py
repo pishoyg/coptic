@@ -209,7 +209,7 @@ class node:
                             [
                                 f'<td colspan="{meaning_width}" id="bordered">',
                                 (
-                                    f"<b>({type})</b><br>"
+                                    f"<b>({type})</b><br/>"
                                     if type not in ["-", "HEADER"]
                                     else ""
                                 ),

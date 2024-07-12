@@ -55,11 +55,11 @@ def crum(
                 "</b>",
                 ")",
                 "</span>",
-                "<br>",
+                "<br/>",
                 roots_col(col, force=False),
             )
 
-        return field.jne("<br>", *[dialect(col) for col in dialect_cols])
+        return field.jne("<br/>", *[dialect(col) for col in dialect_cols])
 
     explanatory_images = field.dir_lister(
         "dictionary/marcion.sourceforge.net/data/img-300",
@@ -109,13 +109,13 @@ def crum(
                     "<b>Crum: </b>",
                     roots_col("crum-link", force=True),
                     "</span>",
-                    "<br>",
+                    "<br/>",
                 ),
             ),
             # Meaning.
             field.aon(
                 roots_col("en-parsed-link-light-greek", force=False),
-                "<br>",
+                "<br/>",
             ),
             # Image.
             field.img(
@@ -136,12 +136,12 @@ def crum(
                 force=False,
             ),
             # Horizonal line.
-            "<hr>",
+            "<hr/>",
             # Full entry.
             roots_col("word-parsed-no-ref", force=True),
             # Derivations.
             roots_col("derivations-table", force=False),
-            "<hr>",
+            "<hr/>",
             # Crum's pages.
             field.cat(
                 field.img(
@@ -158,7 +158,7 @@ def crum(
                     get_caption=lambda path: int(field.stem(path)) - 20,
                     force=False,
                 ),
-                "<hr>",
+                "<hr/>",
             ),
             # Dawoud's pages.
             field.aon(
@@ -175,7 +175,7 @@ def crum(
                     unique=True,
                 ),
                 "</span>",
-                "<br>",
+                "<br/>",
                 field.img(
                     field.grp(
                         keys=roots_col("key", force=True),
@@ -194,7 +194,7 @@ def crum(
                     get_caption=lambda path: int(field.stem(path)) - 16,
                     force=False,
                 ),
-                "<hr>",
+                "<hr/>",
             ),
             # Audio.
             # TODO: Label the per-dialect audios, like you did for the front.
@@ -218,7 +218,7 @@ def crum(
                         ],
                     ),
                 ),
-                "<hr>",
+                "<hr/>",
             ),
             # Marcion's key.
             field.cat(
@@ -253,10 +253,10 @@ def bible(deck_name: str, deck_id: int, front_dialects: list[str]):
         return field.aon(
             f"<b>{language}</b>",
             ":",
-            "<br>",
+            "<br/>",
             tsv_column(language, force=False),
-            "<br>",
-            "<br>",
+            "<br/>",
+            "<br/>",
         )
 
     assert all(dialect in BIBLE_LANGUAGES for dialect in front_dialects)
@@ -302,8 +302,8 @@ def bible(deck_name: str, deck_id: int, front_dialects: list[str]):
                 ":",
                 tsv_column("verse", force=False),
                 ")",
-                "<br>",
-                "<br>",
+                "<br/>",
+                "<br/>",
             ),
             *[verse(lang) for lang in BIBLE_LANGUAGES if lang not in front_dialects],
         ),
@@ -348,7 +348,7 @@ def copticsite_com(deck_name: str, deck_id: int):
                 ),
                 "</b>",
                 ")",
-                "<br>",
+                "<br/>",
             ),
             tsv_col("Meaning", force=False),
         ),
@@ -398,7 +398,7 @@ def kellia(deck_name: str, deck_id: int, tsv_basename: str):
             field.cat(
                 tsv_col("merged-pishoy"),
                 tsv_col("etym_string-processed", force=False),
-                "<hr>",
+                "<hr/>",
             ),
             field.aon(
                 "Coptic Dictionary Online: ",

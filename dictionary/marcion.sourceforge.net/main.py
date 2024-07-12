@@ -147,14 +147,14 @@ argparser.add_argument(
 
 # Main.########################################################################
 
-DEFINITION = """(<b>{type}</b>) <b>Crum: </b> {crum} <hr> {meaning} <hr> {word} <hr> {derivations} <hr>"""
+DEFINITION = """(<b>{type}</b>) <b>Crum: </b> {crum} <hr/> {meaning} <hr/> {word} <hr/> {derivations} <hr/>"""
 
 args = argparser.parse_args()
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def use_html_line_breaks(text: str) -> str:
-    return text.replace("\n", "<br>")
+    return text.replace("\n", "<br/>")
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)

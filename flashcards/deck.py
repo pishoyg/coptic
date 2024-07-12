@@ -133,7 +133,7 @@ def deck(
             {
                 "name": "template 1",
                 "qfmt": '<div id="front"> {{Front}} </div>',
-                "afmt": '<div id="front"> {{Front}} </div> <hr> <div id="back"> {{Back}} </div>',
+                "afmt": '<div id="front"> {{Front}} </div> <hr/> <div id="back"> {{Back}} </div>',
             },
         ],
         css=css,
