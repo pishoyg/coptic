@@ -612,6 +612,9 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 1. **Create a [Kindle-compatible dictionary](
 https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (50+ hours)
 
+   N.B. See [this page](https://kdp.amazon.com/en_US/help/topic/G200673300)
+   about supported languages.
+
    There has been [an
    attempt](https://github.com/louiseyousre2020/coptic-words) to implement
    a Coptic inflection module. Look at it for inspiration.
