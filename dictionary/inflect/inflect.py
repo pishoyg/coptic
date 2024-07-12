@@ -1,8 +1,11 @@
 import enum
+import re
 
 import type_enforced
 
 from dictionary.inflect import constants
+
+COPTIC_ONLY_BLOCK = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
 
 
 class Type(enum.Enum):
@@ -61,4 +64,8 @@ def inflect(morpheme: str, type: Type) -> list[str]:
     """
     prefixes = _TYPE_TO_PREFIX_LIST[type]
     prefixes = sum(prefixes, [])
+    # TODO: The input data should be a single Coptic block in the first place.
+    # Fix at the source, and remove this regex search.
+    morpheme = COPTIC_ONLY_BLOCK.search(morpheme).group()
+    assert morpheme
     return [morpheme] + [p + morpheme for p in prefixes]
