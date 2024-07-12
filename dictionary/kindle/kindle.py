@@ -101,13 +101,13 @@ class entry:
         orth_display = _escape_amp(orth_display)
         definition = _escape_amp(definition)
         assert all(_nothing_to_escape(i) for i in inflections)
-        inflections: str = "\n".join(INFLECTION.format(FORM=i) for i in inflections)
+        inflections = [INFLECTION.format(FORM=i) for i in inflections]
         html = ENTRY.format(
             ID=id,
             ORTH=orth,
             ORTH_DISPLAY=orth_display,
             DEFINITION=definition,
-            INFLECTIONS=inflections,
+            INFLECTIONS="\n".join(inflections),
         )
         html = _deindent(html)
         self._html: str = html
