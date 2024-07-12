@@ -5,6 +5,7 @@ import pathlib
 import re
 import subprocess
 
+import enforcer
 import pandas as pd
 import pillow_avif
 import type_enforced
