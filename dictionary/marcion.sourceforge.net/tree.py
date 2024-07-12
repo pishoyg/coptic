@@ -246,9 +246,9 @@ class node:
         if not descendants:
             return ""
 
-        out = ["<ul>"]
+        out = []
 
-        depth = 0
+        depth = -1
         for d in descendants:
             cur_depth = int(d.cell("depth"))
             while cur_depth > depth:
@@ -270,7 +270,10 @@ class node:
                 ]
             )
 
-        out.append("</ul>")
+        while depth > -1:
+            out.append("</ul>")
+            depth -= 1
+
         out = " ".join(out)
         return out
 
