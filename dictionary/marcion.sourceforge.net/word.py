@@ -1,6 +1,7 @@
 import enum
 import typing
 
+import constants
 import enforcer
 import type_enforced
 
@@ -61,6 +62,7 @@ class structured_word:
         references: list[str],
         root_type: typing.Optional[type],
     ) -> None:
+        assert all(d in constants.DIALECTS for d in dialects)
         self._dialects: list[str] = dialects
         self._spellings: list[str] = spellings
         self._types: list[type] = types
@@ -105,9 +107,10 @@ class structured_word:
 
     def lemma(self) -> str:
         # TODO: Use a smart heuristic to select the lemma form.
-        if not self._spellings:
-            return ""
-        return self._spellings[0]
+        for s in self._spellings:
+            if s:
+                return s
+        return ""
 
     def infer(
         self, rt: inflect.Type | None, it: Gender

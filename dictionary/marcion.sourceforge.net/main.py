@@ -241,7 +241,11 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         extra_cols[col].append(cell)
 
     def lemma(word: list[lexical.structured_word]) -> str:
-        return word[0].lemma() if word else ""
+        for w in word:
+            l = w.lemma()
+            if l:
+                return l
+        return ""
 
     for _, row in df.iterrows():
         root_type = parser.parse_type_cell(row[TYPE_COL])
