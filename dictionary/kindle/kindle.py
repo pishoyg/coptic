@@ -37,7 +37,7 @@ ENTRY = """
     <idx:short>
         <a id="{ID}"></a>
         <idx:orth value="{ORTH}">
-            <b>{ORTH}</b>
+            <b>{ORTH_DISPLAY}</b>
             <idx:infl>
                 {INFLECTIONS}
             </idx:infl>
@@ -65,6 +65,7 @@ class entry:
         self,
         id: str,
         orth: str,
+        orth_display: str,
         definition: str,
         inflections: list[str],
     ) -> None:
@@ -72,6 +73,7 @@ class entry:
         html = ENTRY.format(
             ID=id,
             ORTH=orth,
+            ORTH_DISPLAY=orth_display,
             DEFINITION=definition,
             INFLECTIONS=inflections,
         )

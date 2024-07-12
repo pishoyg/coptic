@@ -200,9 +200,11 @@ def main() -> None:
         k = kindle.dictionary("A Coptic Dictionary", "W. E. Crum")
         for _, row in roots.iterrows():
             key = row["key"]
-            orth = use_html_line_breaks(row[f"dialect-{d}"])
-            if not orth:
+            orth_display = use_html_line_breaks(row[f"dialect-{d}"])
+            if not orth_display:
                 continue
+            orth = row[f"lemma-{d}"]
+            assert orth  # If orth_display data exists, then orth must too.
             definition = DEFINITION.format(
                 type=row["type-parsed"],
                 crum=row["crum"],
@@ -212,7 +214,13 @@ def main() -> None:
             )
             definition = use_html_line_breaks(definition)
             inflections = row[f"inflections-{d}"].split(",")
-            entry = kindle.entry(key, orth, definition, inflections)
+            entry = kindle.entry(
+                id=key,
+                orth=orth,
+                orth_display=orth_display,
+                definition=definition,
+                inflections=inflections,
+            )
             k.add_entry(entry)
         k.epub(
             f"dialect-{d}", args.cover, os.path.join(args.epub_dir, f"dialect-{d}.epub")
@@ -231,6 +239,9 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         if col not in extra_cols:
             extra_cols[col] = []
         extra_cols[col].append(cell)
+
+    def lemma(word: list[lexical.structured_word]) -> str:
+        return word[0].lemma() if word else ""
 
     for _, row in df.iterrows():
         root_type = parser.parse_type_cell(row[TYPE_COL])
@@ -299,12 +310,13 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         insert(CRUM_COL, "-page", crum_page)
         insert(CRUM_COL, "-column", crum_column)
         for d in args.filter_dialects:
+            subset = [w for w in word if w.is_dialect(d, undialected_is_all=True)]
             entry = "\n".join(
                 w.undialected_string(include_references=False, append_root_type=True)
-                for w in word
-                if w.is_dialect(d, undialected_is_all=True)
+                for w in subset
             )
             insert("dialect-", d, entry)
+            insert("lemma-", d, lemma(subset))
         # TODO: Add inflections for derivations.
         for d in args.inflect_dialects:
             inflections = []

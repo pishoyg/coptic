@@ -103,6 +103,12 @@ class structured_word:
     def spellings(self) -> list[str]:
         return self._spellings
 
+    def lemma(self) -> str:
+        # TODO: Use a smart heuristic to select the lemma form.
+        if not self._spellings:
+            return ""
+        return self._spellings[0]
+
     def infer(
         self, rt: inflect.Type | None, it: Gender
     ) -> typing.Optional[inflect.Type]:
