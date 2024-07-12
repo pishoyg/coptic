@@ -597,14 +597,10 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
 ### Kindle TODO's
 
-1. **Find out why the current version isn't working.**
-
-1. **Add inflections for derivations.**
+1. **Find out why the current version isn't working.** (? hours)
 
 1. **Ensure that the input to the inflect module includes only Coptic
    characters.**
-
-1. **In Marcion, detached types override / invalidate root types. Investigate.**
 
 1. **Create a [Kindle-compatible dictionary](
 https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (50+ hours)
@@ -620,6 +616,27 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (50+ hours)
    first time.
 
 1. **Make a plan to improve the accuracy of the inflections module.** (unknown)
+
+   1. Add inflections for derivations.
+
+   1. In Marcion, detached types override / invalidate root types. Investigate.
+
+   Thought: The current state of Marcion data is imperfect. We will likely have
+   to introduce new types (e.g. articled vs. non-articled nouns) in order to
+   build an accurate inflection module. We might also have to populate the
+   derivations data differently.
+
+   1. Add relative ⲉⲑ and ⲉⲧ verb constructions.
+
+   1. Add relative ⲫⲏ, ⲑⲏ, and ⲛⲏ constructions.
+
+   1. Add copula relative ⲡⲉⲧ and ⲛⲉⲧ (and ⲧⲉⲧ?) constructions.
+
+   1. Add ⲕⲉ constructions for both verbs and nouns.
+
+   1. Add negative ⲁⲧ / ⲁⲑ constructions.
+
+   1. Handle compound prefixes.
 
 1. **Display the Bible data in a table format.** (7-8 hours)
 
