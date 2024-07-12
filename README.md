@@ -602,6 +602,8 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 1. **Ensure that the input to the inflect module includes only Coptic
    characters.**
 
+   1. **Marcion: Control constants.ACCEPTED_UNKNOWN_CHARACTERS.**
+
 1. **Create a [Kindle-compatible dictionary](
 https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (50+ hours)
 

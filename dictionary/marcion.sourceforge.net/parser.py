@@ -57,21 +57,17 @@ import enforcer
 import type_enforced
 import word as lexical
 
-_unknown_ascii_letters = set()
 _reference_count = 0
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def reset():
-    global _unknown_ascii_letters
     global _reference_count
-    _unknown_ascii_letters = set()
     _reference_count = 0
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def verify(want_reference_count):
-    assert not _unknown_ascii_letters, _unknown_ascii_letters
     assert _reference_count == want_reference_count
 
 
@@ -332,17 +328,12 @@ def parse_greek_cell(line: str) -> str:
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _ascii_to_unicode(ascii: str) -> str:
     uni = ""
-    unknown = False
     for c in ascii:
         if c in constants.LETTER_ENCODING:
             uni = uni + constants.LETTER_ENCODING[c]
         else:
             uni = uni + c
-            if c not in constants.ACCEPTED_UNKNOWN_CHARS:
-                _unknown_ascii_letters.add(c)
-                unknown = True
-    if unknown:
-        print("Found unknown characters: {}".format(ascii))
+            assert c in constants.ACCEPTED_UNKNOWN_CHARS
     return clean(uni)
 
 
