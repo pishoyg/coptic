@@ -597,44 +597,43 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
 ### Kindle TODO's
 
-1. **Find out why the current version isn't working.** (? hours)
-
-1. **Ensure that the input to the inflect module includes only Coptic
-   characters.**
-
-   1. **Marcion: Control constants.ACCEPTED_UNKNOWN_CHARACTERS[_2].**
-
-   1. **Marcion: Expand the word class to include an annotations field, to hold
-      things such as the English-within-Coptic, and the annotations (such as
-      the question mark interpretted as "probably"). Handle those just like you
-      handle detached types.**
-
 1. **Create a [Kindle-compatible dictionary](
 https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (50+ hours)
+
+   See [a successful example](
+   https://github.com/tekinged/tekinged.com/blob/main/scripts/mk_kindle_dict.py).
+
+   See [another example](https://github.com/runehol/kindlearadict/).
+
+   `ebooklib` likely won't work.
+
+   [pyglossary](https://pypi.org/project/pyglossary/) is popular, but it
+   doesn't seem to have native support for inflections.
 
    N.B. See [this page](https://kdp.amazon.com/en_US/help/topic/G200673300)
    about supported languages.
 
-   There has been [an
-   attempt](https://github.com/louiseyousre2020/coptic-words) to implement
-   a Coptic inflection module. Look at it for inspiration.
+1. Create a dictionary from copticsite.com's data.
 
-   See [this use case](https://github.com/runehol/kindlearadict) for Arabic,
-   another morphologically complex language.
+1. Create a dictionary from KELLIA's data.
 
-   This can start humble and grow with time. No need to perfect it from the
-   first time.
+1. Make a plan to improve the accuracy of the inflections module. (unknown)
 
-1. **Make a plan to improve the accuracy of the inflections module.** (unknown)
+   1. Marcion: Add inflections for derivations.
 
-   1. Add inflections for derivations.
-
-   1. In Marcion, detached types override / invalidate root types. Investigate.
+   1. Marcion: detached types override / invalidate root types. Investigate.
 
    Thought: The current state of Marcion data is imperfect. We will likely have
    to introduce new types (e.g. articled vs. non-articled nouns) in order to
    build an accurate inflection module. We might also have to populate the
    derivations data differently.
+
+   1. Marcion: Control constants.ACCEPTED_UNKNOWN_CHARACTERS[_2].
+
+   1. Marcion: Expand the word class to include an annotations field, to hold
+      things such as the English-within-Coptic, and the annotations (such as
+      the question mark interpretted as "probably"). Handle those just like you
+      handle detached types.
 
    1. Add relative ⲉⲑ and ⲉⲧ verb constructions.
 
