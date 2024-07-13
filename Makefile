@@ -176,8 +176,7 @@ kindle: FORCE
 marcion_img_find: FORCE
 	python dictionary/marcion.sourceforge.net/img_find.py \
 		--skip_existing=true \
-		--exclude "type:verb" \
-		--exclude "dialect-B:" \
+		--exclude "type-parsed:verb" "dialect-B:" \
 		--start_at_key="$${START_AT_KEY}"
 
 marcion_img_count: FORCE
