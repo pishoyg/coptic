@@ -69,9 +69,12 @@ class structured_word:
         self._types: list[type] = types
         self._references: list[str] = references
         self._root_type: typing.Optional[type] = root_type
+
         if normalize:
-            for s in self._spellings:
-                self._normalize(s)
+            self._spellings = sum(
+                [self._normalize(s) for s in self._spellings],
+                [],
+            )
 
     def _normalize(self, spelling: str) -> list[str]:
 
