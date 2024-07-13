@@ -152,7 +152,9 @@ def parse_word_cell(
                 line, strict, detach_types, use_coptic_symbol
             )
             assert not line
-            return [lexical.structured_word([], s, t, r, root_type)]
+            return [
+                lexical.structured_word([], s, t, r, root_type, normalize=detach_types)
+            ]
 
         while line:
             # Parse the dialects.
@@ -161,7 +163,9 @@ def parse_word_cell(
             s, t, r, line = _munch_and_parse_spellings_types_and_references(
                 line, strict, detach_types, use_coptic_symbol
             )
-            words.append(lexical.structured_word(d, s, t, r, root_type))
+            words.append(
+                lexical.structured_word(d, s, t, r, root_type, normalize=detach_types)
+            )
     else:
         while line:
             # Parse the dialects.
@@ -170,7 +174,9 @@ def parse_word_cell(
             s, t, r, line = _munch_and_parse_spellings_types_and_references(
                 line, strict, detach_types, use_coptic_symbol
             )
-            words.append(lexical.structured_word(d, s, t, r, root_type))
+            words.append(
+                lexical.structured_word(d, s, t, r, root_type, normalize=detach_types)
+            )
 
     return words
 
@@ -317,7 +323,12 @@ def _parse_english(line: str) -> str:
             s, t = _parse_spellings_and_types(
                 copt, detach_types=True, use_coptic_symbol=True
             )
-            out.append(lexical.structured_word([], s, t, [], None).string(False))
+            assert not t
+            out.append(
+                lexical.structured_word([], s, t, [], None, normalize=True).string(
+                    False
+                )
+            )
 
     out = " ".join(out)
     return clean(out)
@@ -335,6 +346,8 @@ def parse_english_cell(line: str) -> str:
             greek = greek[2:-2]
             out.append(parse_greek_cell(greek))
     out = " ".join(out)
+    # TODO: English post-processing likely shouldn't apply to Coptic within
+    # English.
     out = _apply_substitutions(
         out, constants.ENGLISH_POSTPROCESSING, use_coptic_symbol=False
     )

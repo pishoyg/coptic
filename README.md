@@ -24,7 +24,7 @@
   - [Diplomacy TODO's](#diplomacy-todos)
   - [Learner Convenience TODO's](#learner-convenience-todos)
   - [Content TODO's](#content-todos)
-  - [Correctness TODO's](#correctness-todos)
+  - [Rigor TODO's](#rigor-todos)
   - [Developer Convenience TODO's](#developer-convenience-todos)
     - [Guidelines](#guidelines)
   - [Kindle TODO's](#kindle-todos)
@@ -535,17 +535,23 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
    the parsing results as well. This will provide the `tree` module with the
    data needed to implement a better heuristic.
 
-### Correctness TODO's
+### Rigor TODO's
 
-1. **Crum: Take derivations into consideration when deciding whether a given
+Crum (a.k.a. Marcion):
+
+1. **Take derivations into consideration when deciding whether a given
    root belongs to a dialect.** (1-2 hours)
 
-1. **Remove optional letter markers.** (1-2 hours)
+1. **English post-processing likely shouldn't apply to Coptic within English.**
 
-   Crum uses, for example, `ⲁ(ⲟ)ⲩⲱⲛ` to indicate that the `o` is optional, so
-   the word can be written as `ⲁⲟⲩⲱⲛ` or `ⲁⲩⲱⲛ` (the two are phonetically
-   equivalent in this case). It is desirable to write two independent forms and
-   remove the parentheses.
+1. Pick up some of the Easter egg tasks left around the code:
+
+   ```bash
+   grep TODO -R bible dictionary keyboard flashcards
+   ```
+
+   Move them to README files when more visibility is warranted. Delete them
+   when they are deemed irrelevant.
 
 ### Developer Convenience TODO's
 
@@ -570,15 +576,6 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
    Note: This is proving difficult! We could perhaps consider migrating to
    CMake or even Bazel.
-
-1. Pick up some of the Easter egg tasks left around the code:
-
-   ```bash
-   grep TODO -R bible dictionary keyboard flashcards
-   ```
-
-   Move them to README files when more visibility is warranted. Delete them
-   when they are deemed irrelevant.
 
 #### Guidelines
 
@@ -628,6 +625,22 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (50+ hours)
 1. Create a dictionary from KELLIA's data.
 
 1. Make a plan to improve the accuracy of the inflections module. (unknown)
+
+   1. Marcion: Remove optional letter markers. (1-2 hours)
+
+      Crum uses, for example, `ⲁ(ⲟ)ⲩⲱⲛ` to indicate that the `o` is optional, so
+      the word can be written as `ⲁⲟⲩⲱⲛ` or `ⲁⲩⲱⲛ` (the two are phonetically
+      equivalent in this case). It is desirable to write two independent forms
+      and remove the parentheses.
+
+      Normalization has already been implemented. It still needs to be
+      integrated.
+
+   1. Marcion: Normalize presumed spellings.
+
+      For example, in `(ⲥⲟⲧⲥⲉⲧ), ⲥⲉⲧⲥⲱⲧ+`, `ⲥⲉⲧⲥⲱⲧ+` is attested, `ⲥⲟⲧⲥⲉⲧ` is
+      presumed. Right now, they still get printed with their parentheses. We
+      don't want that!
 
    1. Marcion: Add inflections for derivations.
 

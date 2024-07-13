@@ -61,6 +61,7 @@ class structured_word:
         types: list[type],
         references: list[str],
         root_type: typing.Optional[type],
+        normalize: bool = False,
     ) -> None:
         assert all(d in constants.DIALECTS for d in dialects)
         self._dialects: list[str] = dialects
@@ -68,6 +69,49 @@ class structured_word:
         self._types: list[type] = types
         self._references: list[str] = references
         self._root_type: typing.Optional[type] = root_type
+        if normalize:
+            for s in self._spellings:
+                self._normalize(s)
+
+    def _normalize(self, spelling: str) -> list[str]:
+
+        # TODO: This is ugly! And it's not even a structured word, but a piece
+        # of English-within-Coptic text! The logic shouldn't come here in the
+        # first place.
+        # We handle it be returning it verbatim because we don't care about
+        # this case!
+        if spelling == "ⲧⲣⲉ- (ⲉⲧⲣⲉ-, ⲡⲧⲣⲉ-)":
+            return [spelling]
+
+        # A special case! Crum slipped in "(ⲉⲓⲛⲉ)" in order to make us aware
+        # that is what the "ⲛ" means ("ⲛ" in this case is the prenominal form
+        # of "ⲉⲓⲛⲉ"). Normalization therefore happens by simply removing the
+        # interjection.
+        # TODO: Surface for visibility! This shouldn't be buried so deep in the
+        # code.
+        if spelling == "ⲛ (ⲉⲓⲛⲉ) ⲣ.":
+            return ["ⲛ ⲣ."]
+
+        cnt_l, cnt_r = spelling.count("("), spelling.count(")")
+        assert cnt_l == cnt_r
+        if not cnt_l:
+            return [spelling]
+        assert cnt_l in [1, 2]  # In the vast majority of cases, it's 1.
+        if spelling[0] == "(" and spelling[-1] == ")":
+            assert len(spelling) > 3
+            # TODO: Handle this case as a detached type or an annotation, in
+            # order to enable normalization.
+            return [spelling]
+        i = spelling.find("(")
+        j = spelling.find(")")
+        assert j - i - 1 in [1, 2, 4]  # In the vast majority of cases, it's 1.
+        assert constants.PURE_COPTIC_RE.match(spelling[i + 1])
+        left = spelling[:i]
+        middle = spelling[i + 1 : j]
+        right = spelling[j + 1 :] if j + 1 < len(spelling) else ""
+        # We have two possibilities. We recursively normalize them in case
+        # there are other parentheses.
+        return self._normalize(left + right) + self._normalize(left + middle + right)
 
     def is_dialect(self, d: str, undialected_is_all: bool = False) -> bool:
         """
