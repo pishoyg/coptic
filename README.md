@@ -23,12 +23,12 @@
   - [Collaborator Convenience TODO's](#collaborator-convenience-todos)
   - [Diplomacy TODO's](#diplomacy-todos)
   - [Learner Convenience TODO's](#learner-convenience-todos)
-  - [Content TODO's](#content-todos)
+  - [Kindle TODO's](#kindle-todos)
+  - [Flashcards TODO's](#flashcards-todos)
+  - [Keyboard TODO's](#keyboard-todos)
   - [Rigor TODO's](#rigor-todos)
   - [Developer Convenience TODO's](#developer-convenience-todos)
     - [Guidelines](#guidelines)
-  - [Kindle TODO's](#kindle-todos)
-  - [Keyboard TODO's](#keyboard-todos)
 - [Credits](#credits)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -304,12 +304,14 @@ higher-priority items are written in **boldface**.
 
 (7-8 hours)
 
+1. **ADD DOCS ABOUT OBTAINING THE EBOOK AND KINDLE DICTIONARY.** (1-2 hours)
+
+1. **DOCUMENT THE REPO IN A WAY THAT MAKES IT POSSIBLE TO INVITE COLLABORATORS.**
+
 1. **Add deck descriptions.**
 
 1. **Revisit the `bible` and `dictionary` documentation in their respective
    README.md files.**
-
-1. **Document the repo in a way that makes it possible to invite collaborators.**
 
 1. **Link Drive items in this repo.**
 
@@ -368,11 +370,11 @@ into the repo.
 
 ### Diplomacy TODO's
 
-1. **Find one or two co-owners of the project.**
+1. **FIND ONE OR TWO CO-OWNERS OF THE PROJECT.**
 
-1. **Publicize the project, and find an audience of learners.**
+1. **PUBLICIZE THE PROJECT, AND FIND AN AUDIENCE OF LEARNERS.**
 
-1. **Find contributors, in coding and data collection.**
+1. **FIND CONTRIBUTORS, IN CODING AND DATA COLLECTION.**
 
 1. **Survey the field one more time. See if there is something else out there
    that you can integrate.**
@@ -396,7 +398,7 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it.
 
 ### Learner Convenience TODO's
 
-1. **Deploy the flashcards on a standalone app.** (100+ hours, delegate)
+1. **DEPLOY THE FLASHCARDS ON A STANDALONE APP.** (100+ hours, delegate)
    
    This will vastly increase the app's popularity.
 
@@ -467,7 +469,77 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it.
    Changing the model ID results in synchronization difficulties due to the
    note type having changed.
 
-### Content TODO's
+### Kindle TODO's
+
+1. **CREATE A [KINDLE-COMPATIBLE DICTIONARY](
+https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (50+ hours)
+
+   See [a successful example](
+   https://github.com/tekinged/tekinged.com/blob/main/scripts/mk_kindle_dict.py).
+
+   See [another example](https://github.com/runehol/kindlearadict/).
+
+   `ebooklib` likely won't work.
+
+   [pyglossary](https://pypi.org/project/pyglossary/) is popular, but it
+   doesn't seem to have native support for inflections.
+
+   N.B. See [this page](https://kdp.amazon.com/en_US/help/topic/G200673300)
+   about supported languages.
+
+1. Create a dictionary from copticsite.com's data.
+
+1. Create a dictionary from KELLIA's data.
+
+1. Marcion: Add inflections for derivations.
+
+1. Improve Marcion's inflection-driven rigor:
+
+   1. Implement normalization of the remaining annotations, namely `-` for
+      prenominal forms, `=` for pronominal, `+` for qualitative, and `―` for
+      _same as above_.
+
+      Just carry them on a separate field in `lexical.structured_word`, just
+      like you did with attestations.
+
+   1. Implement normalization for English-within-Coptic.
+
+      Just carry them on a separate field in `lexical.structured_word`, just
+      like you did with attestations.
+
+   1. Control `constants.ACCEPTED_UNKNOWN_CHARACTERS*`. It should be possible
+      to exercise more rigor once the extra normalization steps have been
+      implemented.
+
+   1. Detached types override / invalidate root types. Investigate.
+
+   Thought: The current state of Marcion data is imperfect. We will likely have
+   to introduce new types (e.g. articled vs. non-articled nouns) in order to
+   build an accurate inflection module. We might also have to populate the
+   derivations data differently.
+
+1. Make a plan to improve the accuracy of the inflections module. (unknown)
+
+   1. Add relative ⲉⲑ and ⲉⲧ verb constructions.
+
+   1. Add relative ⲫⲏ, ⲑⲏ, and ⲛⲏ constructions.
+
+   1. Add copula relative ⲡⲉⲧ and ⲛⲉⲧ (and ⲧⲉⲧ?) constructions.
+
+   1. Add ⲕⲉ constructions for both verbs and nouns.
+
+   1. Add negative ⲁⲧ / ⲁⲑ constructions.
+
+   1. Handle compound prefixes.
+
+1. **Display the Bible data in a table format.** (7-8 hours)
+
+   The reason the Bible was chosen to be displayed is that it showed difficulty
+   with highlighting. There is some information about this
+   [here](https://kdp.amazon.com/en_US/help/topic/GZ8BAXASXKB5JVML), and a
+   workaround may be possible.
+
+### Flashcards TODO's
 
 1. **Add links to CDO from Crum.** (3-4 hou4s)
 
@@ -535,18 +607,26 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
    the parsing results as well. This will provide the `tree` module with the
    data needed to implement a better heuristic.
 
+### Keyboard TODO's
+
+1. COMPLETE YOUR [KEYBOARD
+PROPOSAL](
+https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/edit
+). (100+ hours)
+
 ### Rigor TODO's
 
-Crum (a.k.a. Marcion):
+1. Crum: Take derivations into consideration when deciding whether a given
+   root belongs to a dialect. (1-2 hours)
 
-1. **Take derivations into consideration when deciding whether a given
-   root belongs to a dialect.** (1-2 hours)
+1. Crum: English post-processing likely shouldn't apply to
+   Coptic-within-English. Neither should Coptic-within-English be treated as
+   words with spellings.
 
-1. **English post-processing likely shouldn't apply to Coptic-within-English.
-   Neither should Coptic-within-English be treated as words with spellings.**
+1. Crum: Detached types, references, and English-within-Coptic, should
+   perhaps be spelling-specific rather than word-specific.
 
-1. **Detached types, references, and English-within-Coptic, should perhaps be
-   spelling-specific rather than word-specific.**
+1. Crum: Detached types override / invalidate root types. Investigate.
 
 1. Pick up some of the Easter egg tasks left around the code:
 
@@ -559,7 +639,7 @@ Crum (a.k.a. Marcion):
 
 ### Developer Convenience TODO's
 
-1. **Write the flashcard data to an intermediate format before `.apkg`.** (20
+1. **WRITE THE FLASHCARD DATA TO AN INTERMEDIATE FORMAT BEFORE `.apkg`.** (20
    hours)
 
    This has the following advantages:
@@ -605,88 +685,6 @@ Crum (a.k.a. Marcion):
 1. Collect and print stats.
 
 1. Strip inputs more liberally.
-
-### Kindle TODO's
-
-1. **Create a [Kindle-compatible dictionary](
-https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (50+ hours)
-
-   See [a successful example](
-   https://github.com/tekinged/tekinged.com/blob/main/scripts/mk_kindle_dict.py).
-
-   See [another example](https://github.com/runehol/kindlearadict/).
-
-   `ebooklib` likely won't work.
-
-   [pyglossary](https://pypi.org/project/pyglossary/) is popular, but it
-   doesn't seem to have native support for inflections.
-
-   N.B. See [this page](https://kdp.amazon.com/en_US/help/topic/G200673300)
-   about supported languages.
-
-1. Create a dictionary from copticsite.com's data.
-
-1. Create a dictionary from KELLIA's data.
-
-1. Make a plan to improve the accuracy of the inflections module. (unknown)
-
-   1. Marcion: Remove optional letter markers. (1-2 hours)
-
-      Crum uses, for example, `ⲁ(ⲟ)ⲩⲱⲛ` to indicate that the `o` is optional, so
-      the word can be written as `ⲁⲟⲩⲱⲛ` or `ⲁⲩⲱⲛ` (the two are phonetically
-      equivalent in this case). It is desirable to write two independent forms
-      and remove the parentheses.
-
-      Normalization has already been implemented. It still needs to be
-      integrated.
-
-   1. Marcion: Normalize presumed spellings.
-
-      For example, in `(ⲥⲟⲧⲥⲉⲧ), ⲥⲉⲧⲥⲱⲧ+`, `ⲥⲉⲧⲥⲱⲧ+` is attested, `ⲥⲟⲧⲥⲉⲧ` is
-      presumed. Right now, they still get printed with their parentheses. We
-      don't want that!
-
-   1. Marcion: Add inflections for derivations.
-
-   1. Marcion: detached types override / invalidate root types. Investigate.
-
-   Thought: The current state of Marcion data is imperfect. We will likely have
-   to introduce new types (e.g. articled vs. non-articled nouns) in order to
-   build an accurate inflection module. We might also have to populate the
-   derivations data differently.
-
-   1. Marcion: Control constants.ACCEPTED_UNKNOWN_CHARACTERS[_2].
-
-   1. Marcion: Expand the word class to include an annotations field, to hold
-      things such as the English-within-Coptic, and the annotations (such as
-      the question mark interpretted as "probably"). Handle those just like you
-      handle detached types.
-
-   1. Add relative ⲉⲑ and ⲉⲧ verb constructions.
-
-   1. Add relative ⲫⲏ, ⲑⲏ, and ⲛⲏ constructions.
-
-   1. Add copula relative ⲡⲉⲧ and ⲛⲉⲧ (and ⲧⲉⲧ?) constructions.
-
-   1. Add ⲕⲉ constructions for both verbs and nouns.
-
-   1. Add negative ⲁⲧ / ⲁⲑ constructions.
-
-   1. Handle compound prefixes.
-
-1. **Display the Bible data in a table format.** (7-8 hours)
-
-   The reason the Bible was chosen to be displayed is that it showed difficulty
-   with highlighting. There is some information about this
-   [here](https://kdp.amazon.com/en_US/help/topic/GZ8BAXASXKB5JVML), and a
-   workaround may be possible.
-
-### Keyboard TODO's
-
-1. Complete your [keyboard
-proposal](
-https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/edit
-). (100+ hours)
 
 ## Credits
 

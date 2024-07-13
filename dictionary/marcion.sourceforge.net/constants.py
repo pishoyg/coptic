@@ -258,6 +258,8 @@ SPELLING_ANNOTATIONS_1 = [
 ]
 
 DETACHED_TYPES_1 = [
+    # TODO: The question mark is not a detached type, and it might be
+    # spelling-specific. Investigate.
     ("$$", lexical.type("<i>(?)</i>", "(?)", "probably", None)),  # Probably.
     (
         "***$",
