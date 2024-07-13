@@ -330,7 +330,7 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
                 t = w.inflect_type()
                 if not t:
                     continue
-                for s in w.spellings():
+                for s in w.spellings(parenthesize_unattested=False):
                     # TODO: strict=True
                     inflections.extend(inflect.inflect(s, t, strict=False))
 
@@ -383,7 +383,7 @@ def dawoud_sort_key(words: list[lexical.structured_word]) -> str:
         for w in words:
             if not w.is_dialect(d):
                 continue
-            for s in w.spellings():
+            for s in w.spellings(parenthesize_unattested=False):
                 # This spelling has at least one Coptic letter.
                 if not constants.COPTIC_LETTER_RE.search(s):
                     continue

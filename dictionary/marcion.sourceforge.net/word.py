@@ -208,7 +208,7 @@ class structured_word:
 
     def lemma(self) -> str:
         # TODO: Use a smart heuristic to select the lemma form.
-        for s in self.spellings():
+        for s in self.spellings(parenthesize_unattested=False):
             if s:
                 return s
         return ""
