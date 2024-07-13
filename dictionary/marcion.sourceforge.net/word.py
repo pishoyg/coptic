@@ -69,12 +69,36 @@ class structured_word:
         self._types: list[type] = types
         self._references: list[str] = references
         self._root_type: typing.Optional[type] = root_type
+        self._attested: list[bool] = []
 
         if normalize:
             self._spellings = sum(
                 [self._normalize_optional_letters(s) for s in self._spellings],
                 [],
             )
+            self._attested = [self._is_attested(s) for s in self._spellings]
+            self._spellings = [
+                s if a else s[1:-1] for s, a in zip(self._spellings, self._attested)
+            ]
+            for s in self._spellings:
+                # TODO: Remove the special case.
+                if s == "ⲧⲣⲉ- (ⲉⲧⲣⲉ-, ⲡⲧⲣⲉ-)":
+                    continue
+                assert "(" not in s and ")" not in s
+
+    def _is_attested(self, spelling: str) -> bool:
+        """
+        N.B. Spellings passed are expected to have already been normalized from
+        the presence of other types of parentheses.
+        """
+        # TODO: Remove the special case.
+        if spelling == "ⲧⲣⲉ- (ⲉⲧⲣⲉ-, ⲡⲧⲣⲉ-)":
+            return True
+        if "(" not in spelling and ")" not in spelling:
+            return True
+        if spelling[0] == "(" and spelling[-1] == ")":
+            return False
+        raise ValueError(f"Unexpected parentheses in {spelling}")
 
     def _normalize_optional_letters(self, spelling: str) -> list[str]:
 
@@ -131,15 +155,23 @@ class structured_word:
         return self.string()
 
     def string(
-        self, include_references: bool = True, append_root_type: bool = False
+        self,
+        include_references: bool = True,
+        append_root_type: bool = False,
+        parenthesize_unattested: bool = True,
     ) -> str:
         d = "({}) ".format(", ".join(self._dialects)) if self._dialects else ""
-        return d + self.undialected_string(include_references, append_root_type)
+        return d + self.undialected_string(
+            include_references, append_root_type, parenthesize_unattested
+        )
 
     def undialected_string(
-        self, include_references: bool, append_root_type: bool
+        self,
+        include_references: bool,
+        append_root_type: bool,
+        parenthesize_unattested: bool = True,
     ) -> str:
-        s = ", ".join(self._spellings)
+        s = ", ".join(self.spellings(parenthesize_unattested))
         t = " ".join(i.coptic_symbol() for i in self._types if i.append())
         if not t and append_root_type and self._root_type.append():
             t = self._root_type.coptic_symbol()
@@ -151,12 +183,29 @@ class structured_word:
     def dialects(self) -> list[str]:
         return self._dialects
 
-    def spellings(self) -> list[str]:
-        return self._spellings
+    def spellings(self, parenthesize_unattested: bool = True) -> list[str]:
+        if not parenthesize_unattested and not self.is_normalized():
+            raise ValueError(
+                "Can not remove attestation parentheses from unnormalized words!"
+            )
+        if not self.is_normalized():
+            # The attestation parentheses are already there.
+            return self._spellings
+        if not parenthesize_unattested:
+            return self._spellings
+        assert len(self._spellings) == len(self._attested)
+        return [s if a else f"({s})" for s, a in zip(self._spellings, self._attested)]
+
+    def is_normalized(self) -> bool:
+        return bool(self._attested)
+
+    def attested(self) -> list[bool]:
+        assert self.is_normalized()
+        return self._attested
 
     def lemma(self) -> str:
         # TODO: Use a smart heuristic to select the lemma form.
-        for s in self._spellings:
+        for s in self.spellings():
             if s:
                 return s
         return ""
