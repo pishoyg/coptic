@@ -542,7 +542,11 @@ Crum (a.k.a. Marcion):
 1. **Take derivations into consideration when deciding whether a given
    root belongs to a dialect.** (1-2 hours)
 
-1. **English post-processing likely shouldn't apply to Coptic within English.**
+1. **English post-processing likely shouldn't apply to Coptic-within-English.
+   Neither should Coptic-within-English be treated as words with spellings.**
+
+1. **Detached types, references, and English-within-Coptic, should perhaps be
+   spelling-specific rather than word-specific.**
 
 1. Pick up some of the Easter egg tasks left around the code:
 
