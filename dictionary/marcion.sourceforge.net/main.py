@@ -316,7 +316,11 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         for d in args.filter_dialects:
             subset = [w for w in word if w.is_dialect(d, undialected_is_all=True)]
             entry = "\n".join(
-                w.undialected_string(include_references=False, append_root_type=True)
+                w.string(
+                    include_dialects=False,
+                    include_references=False,
+                    append_root_type=True,
+                )
                 for w in subset
             )
             insert("dialect-", d, entry)

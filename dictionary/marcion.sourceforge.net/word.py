@@ -162,21 +162,14 @@ class structured_word:
 
     def string(
         self,
+        include_dialects: bool = True,
         include_references: bool = True,
         append_root_type: bool = False,
         parenthesize_unattested: bool = True,
     ) -> str:
-        d = "({}) ".format(", ".join(self._dialects)) if self._dialects else ""
-        return d + self.undialected_string(
-            include_references, append_root_type, parenthesize_unattested
-        )
-
-    def undialected_string(
-        self,
-        include_references: bool,
-        append_root_type: bool,
-        parenthesize_unattested: bool = True,
-    ) -> str:
+        d = ""
+        if include_dialects and self._dialects:
+            d = "({})".format(", ".join(self._dialects))
         s = ", ".join(self.spellings(parenthesize_unattested))
         t = " ".join(i.coptic_symbol() for i in self._types if i.append())
         if not t and append_root_type and self._root_type.append():
@@ -184,7 +177,7 @@ class structured_word:
         r = ""
         if include_references:
             r = ", ".join("{" + r + "}" for r in self._references)
-        return " ".join(filter(None, [s, t, r]))
+        return " ".join(filter(None, [d, s, t, r]))
 
     def dialects(self) -> list[str]:
         return self._dialects
