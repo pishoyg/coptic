@@ -212,7 +212,7 @@ TYPE_ENCODING = {
 
 # PREPROCESSING, SPELLING_ANNOTATIONS, and DETACHED_TYPES, and POSTPROCESSING
 # are essential for parsing the word column.
-PREPROCESSING = [
+PARENTHESES_AND_BRACKETS = [
     ("*+", "+"),
     ("..", ""),  # TODO: Investigate the meaning of the two dots.
     ("*^", "{"),  # English-within-Coptic left bracket.

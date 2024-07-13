@@ -204,7 +204,9 @@ def _parse_spellings_and_types(
     # This makes the assumption that references have been removed.
     types = []
 
-    line = _apply_substitutions(line, constants.PREPROCESSING, use_coptic_symbol)
+    line = _apply_substitutions(
+        line, constants.PARENTHESES_AND_BRACKETS, use_coptic_symbol
+    )
 
     line, line_no_english = _parse_coptic(line)
     _analyze_no_english(line_no_english)
