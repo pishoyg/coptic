@@ -191,7 +191,7 @@ suggestions or questions, or data! :)
 
 ### Dictionary
 
-1. **Collect more explanatory pictures.** (100+ hours, delegated)
+1. Collect more explanatory pictures. (p2, 100+ hours, delegated)
 
    This will significantly aid the
    learning process, and it will save learners the time that they have to spend
@@ -232,10 +232,10 @@ suggestions or questions, or data! :)
 
 ### Moawad Dawoud's Diciontary
 
-1. **Add Moawad Dawoud's page numbers, and add scans to the flashcards.** (50+
+1. Add Moawad Dawoud's page numbers, and add scans to the flashcards. (p2, 50+
    hours, delegated, in progress)
 
-1. **Add Moawad Dawoud's Arabic translations.** (100+ hours, delegate)
+1. Add Moawad Dawoud's Arabic translations. (p2, 100+ hours, delegate)
 
 1. Add Moawad Dawoud's standard spellings. (low-priority)
 
@@ -247,21 +247,21 @@ suggestions or questions, or data! :)
 
 (ambitious goal)
 
-1. **Add pronunciations to the notes.** (100+ hours, delegate)
+1. Add pronunciations to the notes. (p2, 100+ hours, delegate)
 
 ### Learning Curriculum
 
 (ambitious goal)
 
-1. **Create Duolingo-like learning curricula for learners at multiple levels.**
-   (100+ hours, delegate)
+1. Create Duolingo-like learning curricula for learners at multiple levels.
+   (p2, 100+ hours, delegate)
 
 ### Neologisms
 
 (ambitious goal)
 
-1. **Add neologisms. We need to think first of how to create neologisms before
-   we add them to our dataset.** (1000+ hours, delegate)
+1. Add neologisms. We need to think first of how to create neologisms before
+   we add them to our dataset. (p2, 1000+ hours, delegate)
 
 ## For Developers / Owners
 
@@ -298,24 +298,26 @@ You need your own version of `vault.sh` in order to be able to run all the
 `make` rules.
 
 The rest of this file lists the current plans or ideas for the project. The
-higher-priority items are written in **boldface**.
+higher-priority items have their priority levels spelled out, time estimates,
+and statuses spelled out.
 
 ### Documentation TODO's
 
 (7-8 hours)
 
-1. **ADD DOCS ABOUT OBTAINING THE EBOOK AND KINDLE DICTIONARY.** (1-2 hours)
+1. Add docs about obtaining the ebook and kindle dictionary. (p0, 1-2 hours)
 
-1. **DOCUMENT THE REPO IN A WAY THAT MAKES IT POSSIBLE TO INVITE COLLABORATORS.**
+1. Document the repo in a way that makes it possible to invite collaborators.
+   (p0)
 
-1. **Add deck descriptions.**
+1. Add deck descriptions. (p2)
 
-1. **Revisit the `bible` and `dictionary` documentation in their respective
-   README.md files.**
+1. Revisit the `bible` and `dictionary` documentation in their respective
+   README.md files. (p2)
 
-1. **Link Drive items in this repo.**
+1. Link Drive items in this repo. (p2)
 
-1. **Move / reproduce TODO's from Drive in the README files.**
+1. Move / reproduce TODO's from Drive in the README files. (p2)
 
 1. Use "Crum" in place of "Marcion".
 
@@ -324,7 +326,7 @@ into the repo.
 
 ### Collaborator Convenience TODO's
 
-1. **Support more seamless integration between Drive and your scripts.** (3-4
+1. Support more seamless integration between Drive and your scripts. (p2, 3-4
    hours)
 
    Likely, this means letting them contribute through Drive instead of Git.
@@ -350,15 +352,11 @@ into the repo.
    we will implement a pipeline to integrate the contributions made through Drive
    into Git.
 
-   **Add a file with some private variables that your scripts can use to publish
-   the data to Drive. Include your Drive credentials and local paths and the
-   like.**
-
-   1. **Marcion's pipeline should retrieve the data manually collected /
+   1. Marcion's pipeline should retrieve the data manually collected /
       overridden for `dawoud-pages` and `crum-last-page`, rather than simply
-      write an empty placeholder column.** (1-2 hours)
+      write an empty placeholder column. (p2, 1-2 hours)
 
-1. **Find / design a software to help users record their pronunciations.** (20
+1. Find / design a software to help users record their pronunciations. (p2, 20
    hours, delegate)
 
    Candidates:
@@ -370,14 +368,14 @@ into the repo.
 
 ### Diplomacy TODO's
 
-1. **FIND ONE OR TWO CO-OWNERS OF THE PROJECT.**
+1. Find one or two co-owners of the project. (p0)
 
-1. **PUBLICIZE THE PROJECT, AND FIND AN AUDIENCE OF LEARNERS.**
+1. Publicize the project, and find an audience of learners. (p0)
 
-1. **FIND CONTRIBUTORS, IN CODING AND DATA COLLECTION.**
+1. Find contributors, in coding and data collection. (p0)
 
-1. **Survey the field one more time. See if there is something else out there
-   that you can integrate.**
+1. Survey the field one more time. See if there is something else out there
+   that you can integrate. (p2)
 
 1. Obtain the source file for St. Shenouda The Archimandrite Coptic Society's
    Simple Bohairic English Dictionary.
@@ -398,11 +396,11 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it.
 
 ### Learner Convenience TODO's
 
-1. **DEPLOY THE FLASHCARDS ON A STANDALONE APP.** (100+ hours, delegate)
+1. Deploy the flashcards on a standalone app. (p0, 100+ hours, delegate)
    
    This will vastly increase the app's popularity.
 
-1. **Until then, reassess whether Anki is your best bet.** (20 hours, delegate)
+1. Until then, reassess whether Anki is your best bet. (p2, 20 hours, delegate)
 
    Anki has the following limitations. Perhaps try to find a platform that
    doesn't have some of them. (Though keep in mind that they are not equally
@@ -415,7 +413,7 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it.
    - The possibility to sync notes selectively. (See the note about exporting
    accurate timestamps below.)
 
-1. **Export accurate timestamps.** (50 hours, delegate)
+1. Export accurate timestamps. (p2, 50 hours, delegate)
 
    1. Reimporting (supposedly identical data) produces the message "notes were
    used to update existing ones." This is evidently due to the timestamps that
@@ -471,8 +469,8 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it.
 
 ### Kindle TODO's
 
-1. **CREATE A [KINDLE-COMPATIBLE DICTIONARY](
-https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (50+ hours)
+1. Create a [Kindle-compatible dictionary](
+https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV). (p0, 50+ hours)
 
    See [a successful example](
    https://github.com/tekinged/tekinged.com/blob/main/scripts/mk_kindle_dict.py).
@@ -532,7 +530,7 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (50+ hours)
 
    1. Handle compound prefixes.
 
-1. **Display the Bible data in a table format.** (7-8 hours)
+1. Display the Bible data in a table format. (p2, 7-8 hours)
 
    The reason the Bible was chosen to be displayed is that it showed difficulty
    with highlighting. There is some information about this
@@ -541,15 +539,15 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV).** (50+ hours)
 
 ### Flashcards TODO's
 
-1. **Add links to CDO from Crum.** (3-4 hou4s)
+1. Add links to CDO from Crum. (p2, 3-4 hou4s)
 
    The url is `https://coptic-dictionary.org/results.cgi?quick_search={key}`.
 
-1. **Revisit the Greek dictionary used, and allow spaces between words.**
-   (3-4 hours)
+1. Revisit the Greek dictionary used, and allow spaces between words.
+   (p2, 3-4 hours)
 
-1. **Prettify and expand the flashcards from [KELLIA](
-https://coptic-dictionary.org/).** (7-8 hours)
+1. Prettify and expand the flashcards from [KELLIA](
+https://coptic-dictionary.org/). (p2, 7-8 hours)
 
    1. Group `geo`s by `orth` and `gram_grp`.
    1. Add the entity types. (low-priority)
@@ -563,22 +561,22 @@ https://coptic-dictionary.org/).** (7-8 hours)
 
    Some data may require interactions with Scriptorium tools.
 
-1. **Create dialect-oriented versions of the KELLIA decks.** (7-8 hours)
+1. Create dialect-oriented versions of the KELLIA decks. (p2, 7-8 hours)
 
-1. **Incorporate [Scriptorium](https://copticscriptorium.org/)'s data and NLP
-tools.** (50 hours, delegate)
+1. Incorporate [Scriptorium](https://copticscriptorium.org/)'s data and NLP
+tools. (p2, 50 hours, delegate)
 
    - Start by gaining familiarity with their products, and selecting the ones
    that will be useful for you. From a quick look, the part-of-speech tagger,
    and automatic segmentation, entity visualizer, lemmatizer,
    language-of-origin tagger, are all good candidates.
 
-1. **Crawl [Wiktionary - Category:Coptic lemmas](
-https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
+1. Crawl [Wiktionary - Category:Coptic lemmas](
+https://en.wiktionary.org/wiki/Category:Coptic_lemmas). (p2, 20+ hours, delegate)
 
-1. **Incorporate the ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ Group's neologisms.** (3-4 hours)
+1. Incorporate the ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ Group's neologisms. (p2, 3-4 hours)
 
-1. **Group the derivations by dialect.** (2 days)
+1. Group the derivations by dialect. (p2, 2 days)
 
    Now, ... The tricky thing about this task is that, while parsing the
    derivations, it's hard to tell whether a certain row belongs to a given
@@ -609,10 +607,10 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
 
 ### Keyboard TODO's
 
-1. COMPLETE YOUR [KEYBOARD
-PROPOSAL](
+1. complete your [keyboard
+proposal](
 https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/edit
-). (100+ hours)
+). (p0, 100+ hours)
 
 ### Rigor TODO's
 
@@ -639,7 +637,9 @@ https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/
 
 ### Developer Convenience TODO's
 
-1. **WRITE THE FLASHCARD DATA TO AN INTERMEDIATE FORMAT BEFORE `.apkg`.** (20
+1. Revisit the currently-assigned priorities. (p0)
+
+1. Write the flashcard data to an intermediate format before `.apkg`. (p0, 20
    hours)
 
    This has the following advantages:
@@ -654,7 +654,7 @@ https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/
    - It is a plausible solution for the timestamping problem currently faced.
    - Support a fanout to platforms other than Anki.
 
-1. **Set up a more robust CI/CD pipelines.** (20 hours)
+1. Set up a more robust CI/CD pipelines. (p2, 20 hours)
 
    To start with, set up proper dependencies in Makefile.
 
