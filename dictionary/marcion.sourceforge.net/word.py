@@ -72,11 +72,11 @@ class structured_word:
 
         if normalize:
             self._spellings = sum(
-                [self._normalize(s) for s in self._spellings],
+                [self._normalize_optional_letters(s) for s in self._spellings],
                 [],
             )
 
-    def _normalize(self, spelling: str) -> list[str]:
+    def _normalize_optional_letters(self, spelling: str) -> list[str]:
 
         # TODO: This is ugly! And it's not even a structured word, but a piece
         # of English-within-Coptic text! The logic shouldn't come here in the
@@ -114,7 +114,9 @@ class structured_word:
         right = spelling[j + 1 :] if j + 1 < len(spelling) else ""
         # We have two possibilities. We recursively normalize them in case
         # there are other parentheses.
-        return self._normalize(left + right) + self._normalize(left + middle + right)
+        return self._normalize_optional_letters(
+            left + right
+        ) + self._normalize_optional_letters(left + middle + right)
 
     def is_dialect(self, d: str, undialected_is_all: bool = False) -> bool:
         """
