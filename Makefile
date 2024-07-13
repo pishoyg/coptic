@@ -61,7 +61,7 @@ stats: loc marcion_img_count marcion_dawoud_count
 # above. They are relevant only during development, but not for deployment.
 
 .PHONY: clean
-clean: git_clean bible_epub_clean kellia_analysis_clean
+clean: git_clean bible_epub_clean marcion_epub_clean kellia_analysis_clean
 
 .PHONY: toil
 toil: marcion_img_find
@@ -217,6 +217,9 @@ git_clean: FORCE
 
 bible_epub_clean: $(shell ls bible/stshenouda.org/data/output/epub*/*.epub)
 	git restore "bible/stshenouda.org/data/output/epub*/*.epub"
+
+marcion_epub_clean: $(shell ls dictionary/marcion.sourceforge.net/data/output/*.epub)
+	git restore "dictionary/marcion.sourceforge.net/data/outout/*.epub"
 
 kellia_analysis_clean: dictionary/kellia.uni-goettingen.de/analysis.json
 	git restore "dictionary/kellia.uni-goettingen.de/analysis.json"
