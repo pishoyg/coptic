@@ -152,7 +152,10 @@ class structured_word:
         return d in self._dialects
 
     def __str__(self) -> str:
-        return self.string()
+        raise ValueError(
+            "Please use an explicity string conversion method in"
+            " order to provide the necessary arguments."
+        )
 
     def string(
         self,
