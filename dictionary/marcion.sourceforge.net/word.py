@@ -33,6 +33,7 @@ class type:
         self._append: bool = append
         if is_root:
             # Genders are not allowed as root types.
+            # TODO: Add some root-specific checks for extra rigor.
             assert inflect_type is None or isinstance(inflect_type, inflect.Type)
 
     def marcion(self) -> str:
