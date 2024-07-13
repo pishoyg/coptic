@@ -24,6 +24,7 @@
   - [Diplomacy TODO's](#diplomacy-todos)
   - [Learner Convenience TODO's](#learner-convenience-todos)
   - [Content TODO's](#content-todos)
+  - [Correctness TODO's](#correctness-todos)
   - [Developer Convenience TODO's](#developer-convenience-todos)
     - [Guidelines](#guidelines)
   - [Kindle TODO's](#kindle-todos)
@@ -468,9 +469,6 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it.
 
 ### Content TODO's
 
-1. **Crum: Take derivations into consideration when deciding whether a given
-   word belongs to a dialect.** (1-2 hours)
-
 1. **Add links to CDO from Crum.** (3-4 hou4s)
 
    The url is `https://coptic-dictionary.org/results.cgi?quick_search={key}`.
@@ -536,6 +534,18 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas).** (20+ hours, delegate)
    annotated tree, meaning that the notes shouldn't only bear the raw data, but
    the parsing results as well. This will provide the `tree` module with the
    data needed to implement a better heuristic.
+
+### Correctness TODO's
+
+1. **Crum: Take derivations into consideration when deciding whether a given
+   root belongs to a dialect.** (1-2 hours)
+
+1. **Remove optional letter markers.** (1-2 hours)
+
+   Crum uses, for example, `ⲁ(ⲟ)ⲩⲱⲛ` to indicate that the `o` is optional, so
+   the word can be written as `ⲁⲟⲩⲱⲛ` or `ⲁⲩⲱⲛ` (the two are phonetically
+   equivalent in this case). It is desirable to write two independent forms and
+   remove the parentheses.
 
 ### Developer Convenience TODO's
 
