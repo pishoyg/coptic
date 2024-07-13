@@ -238,7 +238,7 @@ SPELLING_ANNOTATIONS_1 = [
             "-", "-", "prenominal form (likely)", inflect.Type.VERB_PRENOMINAL
         ),
     ),
-    # TODO: The dash is a typo. Fix at the origin.
+    # TODO: The dash is a typo. Fix at the origin. It should be a hyphen.
     # Prenominal form. (This is a dash, not a hyphen.)
     (
         "–",
@@ -296,6 +296,7 @@ DETACHED_TYPES_1 = [
     ("*", lexical.type("<i>plural: </i>", "(ⲛ)", "plural", lexical.Gender.PLURAL)),
     ("$", lexical.type("<i> &c</i>", "(&c)", "constructed with", None)),
     ("^^^", lexical.type("<i><b>c</b></i>", "(c)", "Not sure what this means!", None)),
+    ("{nic}", lexical.type("{nic}", "{nic}", "{nic}", None)),  # No idea!
 ]
 
 SPELLING_ANNOTATIONS_2 = [
