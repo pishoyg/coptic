@@ -36,6 +36,7 @@ CRUM_RE = re.compile(r"^(\d{1,3})(a|b)$")
 REFERENCE_RE = re.compile(r'\*\^<a href="([^"<>]+)">([^<>]+)</a>([^<>]*)\^\*')
 COMMA_NOT_BETWEEN_PARENTHESES_RE = re.compile(r",(?![^()]*\)|[^{}]*\}|[^\[\]]*\])")
 COPTIC_LETTER_RE = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]")
+PURE_COPTIC_RE = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
 PAGE_NUMER_RE = re.compile("[0-9]{1,3}[ab]$")
 CLASS_RE = re.compile("[a-z ]+|-")
 TWO_TABS_RE = re.compile("\t\t")
@@ -254,10 +255,10 @@ SPELLING_ANNOTATIONS_1 = [
         "+",
         lexical.type("+", "+", "qualitative form", inflect.Type.VERB_QUALITATIVE),
     ),  # (ⲉϥ)
-    ("$$", lexical.type("<i>(?)</i>", "(?)", "probably", None)),  # Probably.
 ]
 
 DETACHED_TYPES_1 = [
+    ("$$", lexical.type("<i>(?)</i>", "(?)", "probably", None)),  # Probably.
     (
         "***$",
         lexical.type(
