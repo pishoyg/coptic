@@ -49,7 +49,7 @@ generate_2: flashcards flashcards_redundant
 .PHONY: generate_3
 	# This is a placeholder for an upcoming `anki` rule that will exist after we
 	# split the flashcard TSV generation from Anki package generation pipelines.
-generate_3: kindle
+generate_3:
 
 .PHONY: publish
 publish: flashcards_cp_to_drive
@@ -165,12 +165,6 @@ flashcards_cp_to_drive: $(shell find flashcards/data/ -type f)
 	cp \
 		flashcards/data/*.apkg \
 		"$${DEST_DIR}"
-
-# Kindle
-kindle: FORCE
-	kindlepreviewer \
-		"dictionary/marcion.sourceforge.net/data/output/dialect-B.epub" \
-		-convert
 
 # Image collection.
 marcion_img_find: FORCE
