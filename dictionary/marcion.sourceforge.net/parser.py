@@ -130,6 +130,7 @@ def parse_word_cell(
     detach_types: bool,
     use_coptic_symbol: bool,
 ) -> list[lexical.structured_word]:
+    normalize = detach_types
     line = line.strip()
     # Replace the non-breaking space with a unicode space.
     line = line.replace("\xa0", " ")
@@ -153,7 +154,7 @@ def parse_word_cell(
             )
             assert not line
             return [
-                lexical.structured_word([], s, t, r, root_type, normalize=detach_types)
+                lexical.structured_word([], s, t, r, root_type, normalize=normalize)
             ]
 
         while line:
@@ -164,7 +165,7 @@ def parse_word_cell(
                 line, strict, detach_types, use_coptic_symbol
             )
             words.append(
-                lexical.structured_word(d, s, t, r, root_type, normalize=detach_types)
+                lexical.structured_word(d, s, t, r, root_type, normalize=normalize)
             )
     else:
         while line:
@@ -175,7 +176,7 @@ def parse_word_cell(
                 line, strict, detach_types, use_coptic_symbol
             )
             words.append(
-                lexical.structured_word(d, s, t, r, root_type, normalize=detach_types)
+                lexical.structured_word(d, s, t, r, root_type, normalize=normalize)
             )
 
     return words

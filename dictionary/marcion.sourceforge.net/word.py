@@ -70,12 +70,15 @@ class structured_word:
         self._references: list[str] = references
         self._root_type: typing.Optional[type] = root_type
         self._attested: list[bool] = []
+        normalize_attestations = normalize
 
         if normalize:
             self._spellings = sum(
                 [self._normalize_optional_letters(s) for s in self._spellings],
                 [],
             )
+
+        if normalize_attestations:
             self._attested = [self._is_attested(s) for s in self._spellings]
             self._spellings = [
                 s if a else s[1:-1] for s, a in zip(self._spellings, self._attested)
@@ -187,11 +190,11 @@ class structured_word:
         return self._dialects
 
     def spellings(self, parenthesize_unattested: bool = True) -> list[str]:
-        if not parenthesize_unattested and not self.is_normalized():
+        if not parenthesize_unattested and not self._is_normalized_attestations():
             raise ValueError(
                 "Can not remove attestation parentheses from unnormalized words!"
             )
-        if not self.is_normalized():
+        if not self._is_normalized_attestations():
             # The attestation parentheses are already there.
             return self._spellings
         if not parenthesize_unattested:
@@ -199,7 +202,7 @@ class structured_word:
         assert len(self._spellings) == len(self._attested)
         return [s if a else f"({s})" for s, a in zip(self._spellings, self._attested)]
 
-    def is_normalized(self) -> bool:
+    def _is_normalized_attestations(self) -> bool:
         if not self._spellings:
             # This word has no spellings to be normalized!
             # TODO: Not a clean check! Revisit!
@@ -207,7 +210,7 @@ class structured_word:
         return bool(self._attested)
 
     def attested(self) -> list[bool]:
-        assert self.is_normalized()
+        assert self._is_normalized_attestations()
         return self._attested
 
     def lemma(self) -> str:
