@@ -200,6 +200,10 @@ class structured_word:
         return [s if a else f"({s})" for s, a in zip(self._spellings, self._attested)]
 
     def is_normalized(self) -> bool:
+        if not self._spellings:
+            # This word has no spellings to be normalized!
+            # TODO: Not a clean check! Revisit!
+            return True
         return bool(self._attested)
 
     def attested(self) -> list[bool]:
