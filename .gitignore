@@ -9,5 +9,6 @@ coptic.egg-info
 # Flashcard decks are too big to host on GitHub.
 flashcards/data/*.apkg
 
-# This contains secrets (authorization tokens for Drive, and local file paths).
-secrets.sh
+# This contains secrets (authorization tokens for Drive, local file paths,
+# idiosyncratic flag values, ...).
+vault.sh

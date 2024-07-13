@@ -1,14 +1,22 @@
 SHELL:=/bin/bash
 
-# SECRETS
+# VAULT
 #
 # If you know the secrets, then you can run the privileged tasks. They require
-# a set of variables to be exported. These are contained in a `secrets.sh` file
-# that you need to source before running the privileged make rules.
+# a set of variables to be exported. These are contained in a file,
+# (referred to as `vault.sh` although you can call it whatever you want), that
+# you need to source before running the privileged make rules.
 # ```
-# source secrets.sh && make ${PRIVILEGED_RULE}
+# source vault.sh && make ${PRIVILEGED_RULE}
 # ```
-# See TEMPLATE_secrets.sh for more information.
+# Some variables are used by rules below, but they are not necessary for the
+# rules to run.
+# Most variables are trivial to replace with viable values. Some variables
+# (such as the Google Cloud API access token, required for communication with
+# Drive) require setting up your own account and destination in Drive. Relevant
+# scripts will have more information.
+#
+# See TEMPLATE_vault.sh for more information.
 
 
 # LEVELS
@@ -205,7 +213,7 @@ git_clean: FORCE
 		-x \
 		-d \
 		--exclude "flashcards/data/*.apkg" \
-		--exclude "secrets.sh" \
+		--exclude "vault.sh" \
 		--force
 
 bible_epub_clean: $(shell ls bible/stshenouda.org/data/output/epub*/*.epub)

@@ -291,10 +291,10 @@ Most scripts have default parameters with the assumption that they are being
 invoked from the repo's root directory, rather than from the directory where
 the script lives.
 
-`secrets.sh` (which is skipped by a rule in `.gitignore`) contains variables
+`vault.sh` (which is skipped by a rule in `.gitignore`) contains variables
 that are used inside `Makefile`. Some `make` rules can only run if preceded by
-`source secrets.sh` in order to export the variables needed for those rules.
-You need your own version of `secrets.sh` in order to be able to run all the
+`source vault.sh` in order to export the variables needed for those rules.
+You need your own version of `vault.sh` in order to be able to run all the
 `make` rules.
 
 The rest of this file lists the current plans or ideas for the project. The
