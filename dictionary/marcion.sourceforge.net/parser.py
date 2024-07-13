@@ -324,6 +324,7 @@ def _parse_english(line: str) -> str:
                 copt, detach_types=True, use_coptic_symbol=True
             )
             assert not t
+            # TODO: Stop using words for Coptic within English!
             out.append(
                 lexical.structured_word([], s, t, [], None, normalize=True).string(
                     include_references=True,
