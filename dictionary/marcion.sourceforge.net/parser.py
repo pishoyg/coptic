@@ -326,7 +326,8 @@ def _parse_english(line: str) -> str:
             assert not t
             out.append(
                 lexical.structured_word([], s, t, [], None, normalize=True).string(
-                    False
+                    include_references=True,
+                    parenthesize_unattested=True,
                 )
             )
 
