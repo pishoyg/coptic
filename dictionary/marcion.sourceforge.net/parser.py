@@ -145,39 +145,24 @@ def parse_word_cell(
         line = line.replace(HREF_START + '""', HREF_START + '"')
 
     words = []
-    if strict:
-        # Handle undialected entries.
-        if not constants.DIALECTS_RE.search(line):
-            # This has a single undialected (spellings, types, references) tuple.
-            s, t, r, line = _munch_and_parse_spellings_types_and_references(
-                line, strict, detach_types, use_coptic_symbol
-            )
-            assert not line
-            return [
-                lexical.structured_word([], s, t, r, root_type, normalize=normalize)
-            ]
+    if strict and not constants.DIALECTS_RE.search(line):
+        s, t, r, line = _munch_and_parse_spellings_types_and_references(
+            line, strict, detach_types, use_coptic_symbol
+        )
+        # In strict mode, an undialected entry exists on its own.
+        assert not line
+        return [lexical.structured_word([], s, t, r, root_type, normalize=normalize)]
 
-        while line:
-            # Parse the dialects.
-            d, line = _munch_and_parse_dialects(line, strict)
-            # Parse the spellings, types, and references.
-            s, t, r, line = _munch_and_parse_spellings_types_and_references(
-                line, strict, detach_types, use_coptic_symbol
-            )
-            words.append(
-                lexical.structured_word(d, s, t, r, root_type, normalize=normalize)
-            )
-    else:
-        while line:
-            # Parse the dialects.
-            d, line = _munch_and_parse_dialects(line, strict)
-            # Parse the spellings, types, and references.
-            s, t, r, line = _munch_and_parse_spellings_types_and_references(
-                line, strict, detach_types, use_coptic_symbol
-            )
-            words.append(
-                lexical.structured_word(d, s, t, r, root_type, normalize=normalize)
-            )
+    while line:
+        # Parse the dialects.
+        d, line = _munch_and_parse_dialects(line, strict)
+        # Parse the spellings, types, and references.
+        s, t, r, line = _munch_and_parse_spellings_types_and_references(
+            line, strict, detach_types, use_coptic_symbol
+        )
+        words.append(
+            lexical.structured_word(d, s, t, r, root_type, normalize=normalize)
+        )
 
     return words
 
