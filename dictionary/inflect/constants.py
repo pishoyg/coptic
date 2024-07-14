@@ -361,6 +361,28 @@ _TENSE_NEGATIVE_OPTATIVE = [
     "ⲛ̀ⲛⲟⲩ",
 ]
 
+_TENSE_RELATIVE_OPTATIVE = [
+    "ⲉⲧⲉⲓⲉ̀",
+    "ⲉⲧⲉⲕⲉ̀",
+    "ⲉⲧⲉⲣⲉⲉ̀",
+    "ⲉⲧⲉϥⲉ̀",
+    "ⲉⲧⲉⲥⲉ̀",
+    "ⲉⲧⲉⲛⲉ̀",
+    "ⲉⲧⲉⲣⲉⲧⲉⲛⲉ̀",
+    "ⲉⲧⲉⲩⲉ̀",
+]
+
+_TENSE_NEGATIVE_RELATIVE_OPTATIVE = [
+    "ⲉⲧⲉⲛ̀ⲛⲁ",
+    "ⲉⲧⲉⲛ̀ⲛⲉⲕ",
+    "ⲉⲧⲉⲛ̀ⲛⲉ",
+    "ⲉⲧⲉⲛ̀ⲛⲉϥ",
+    "ⲉⲧⲉⲛ̀ⲛⲉⲥ",
+    "ⲉⲧⲉⲛ̀ⲛⲉⲛ",
+    "ⲉⲧⲉⲛ̀ⲛⲉⲧⲉⲛ",
+    "ⲉⲧⲉⲛ̀ⲛⲟⲩ",
+]
+
 _TENSE_CONDITIONAL = [
     "ⲁⲓϣⲁⲛ",
     "ⲁⲕϣⲁⲛ",
@@ -546,6 +568,8 @@ ALL_VERB = [
     _TENSE_CIRCUMSTANTIAL_HABITUAL,
     _TENSE_OPTATIVE,
     _TENSE_NEGATIVE_OPTATIVE,
+    _TENSE_RELATIVE_OPTATIVE,
+    _TENSE_NEGATIVE_RELATIVE_OPTATIVE,
     _TENSE_CONDITIONAL,
     _TENSE_NEGATIVE_CONDITIONAL,
     _TENSE_UNTIL,
