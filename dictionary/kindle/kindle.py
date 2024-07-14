@@ -2,6 +2,7 @@
 # TODO: Use inflection groups rather than a flat list. See ENTRY below.
 # TODO: Add a check for valid XHTML.
 import os
+import pathlib
 
 import type_enforced
 from ebooklib import epub
@@ -15,6 +16,81 @@ INDEX = "index"
 TYPE_ENFORCED = True
 STEP = 100
 ZFILL = 4
+
+CREATOR = "pishoyg@gmail.com"
+
+HTML_FMT = f"""
+<html>
+  <head>
+    <meta content="text/html" http-equiv="content-type">
+  </head>
+  <body>
+  {{body}}
+  </body>
+</html>
+"""
+
+# TODO: Fix the cover. You do reference an item with the id "my-cover-image" in
+# the OPF below, but it's broken!
+COVER_FILENAME = "cover.html"
+COPYRIGHT_FILENAME = "copyright.html"
+USAGE_FILENAME = "usage.html"
+CONTENT_FILENAME = "content.html"
+OPF_FILENAME = "opf.opf"
+
+COVER_BODY = ""
+COPYRIGHT_BODY = """
+<h4>
+  COPYRIGHT: This data is freely provided and can be freely redistributed for
+  noncommercial purposes.
+</h4>
+<p>
+  The latest version can be found at github.com/pishoyg/coptic.
+</p>
+"""
+
+USAGE_BODY = ("<p>See github.com/pishoyg/coptic.</p>",)
+
+OPF_FMT = f"""
+<?xml version="1.0"?>
+<package version="2.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="BookId">
+<metadata>
+<dc:title>{{title}}</dc:title>
+<dc:creator opf:role="aut">{CREATOR}</dc:creator>
+<dc:language>{IN_LANG}</dc:language>
+<meta name="cover" content="my-cover-image"/>
+<x-metadata>
+  <DictionaryInLanguage>{IN_LANG}</DictionaryInLanguage>
+  <DictionaryOutLanguage>{OUT_LANG}</DictionaryOutLanguage>
+  <DefaultLookupIndex>{INDEX}</DefaultLookupIndex>
+</x-metadata>
+</metadata>
+<manifest>
+<!-- <item href="cover-image.jpg" id="my-cover-image" media-type="image/jpg" /> -->
+<item id="cover"
+      href="{COVER_FILENAME}"
+      media-type="application/xhtml+xml" />
+<item id="usage"
+      href="{USAGE_FILENAME}"
+      media-type="application/xhtml+xml" />
+<item id="copyright"
+      href="{COPYRIGHT_FILENAME}"
+      media-type="application/xhtml+xml" />
+<item id="content"
+      href="{CONTENT_FILENAME}"
+      media-type="application/xhtml+xml" />
+</manifest>
+<spine>
+<itemref idref="cover"/>
+<itemref idref="usage"/>
+<itemref idref="copyright"/>
+<itemref idref="content"/>
+</spine>
+<guide>
+<reference type="index" title="IndexName" href="{CONTENT_FILENAME}"/>
+</guide>
+</package>
+"""
 
 DICT_XHTML_FMT = f"""
 <html
@@ -205,3 +281,23 @@ class dictionary:
 
     def write_epub(self, path: str) -> None:
         epub.write_epub(path, self.epub())
+
+    def opf(self) -> str:
+        return OPF_FMT.format(title=self._title)
+
+    def write_pre_mobi(self, dir: str) -> None:
+        """
+        I don't really know what this format is called, so I am calling it
+        "pre-mobi".
+        """
+        pathlib.Path(dir).mkdir(exist_ok=True)
+        files = {
+            COVER_FILENAME: HTML_FMT.format(body=COVER_BODY),
+            COPYRIGHT_FILENAME: HTML_FMT.format(body=COPYRIGHT_BODY),
+            USAGE_FILENAME: HTML_FMT.format(body=USAGE_BODY),
+            CONTENT_FILENAME: self.xhtml(),
+            OPF_FILENAME: self.opf(),
+        }
+        for filename, content in files.items():
+            with open(os.path.join(dir, filename), "w") as f:
+                f.write(content)
