@@ -474,7 +474,9 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it.
 1. Fix the [Kindle-compatible dictionary](
 https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV). (p0, 50+ hours)
 
-   Currently, the following warnings are produced from running `make kindle`:
+   1. Put inflections under several orths. (p0)
+
+   2. Currently, the following warnings are produced from running `make kindle`:
 
    - `Warning(index build):W15001: inflection rule or rule group too long (max=255). Discarded.`
 
