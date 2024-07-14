@@ -172,7 +172,7 @@ kindle: FORCE
 	-gen_ff_mobi7 \
 	-dont_append_source \
 	-c0 \
-	"dictionary/marcion.sourceforge.net/data/output/dialect-B/opf.opf"
+	"dictionary/marcion.sourceforge.net/data/output/dialect-B/dialect-B.opf"
 		
 # DEVELOPER
 flashcards_verify: flashcards_try
