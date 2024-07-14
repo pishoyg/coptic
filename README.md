@@ -476,7 +476,10 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV). (p0, 50+ hours)
 
    1. Put inflections under several orths. (p0)
 
-   2. Currently, the following warnings are produced from running `make kindle`:
+   2. Currently, the following errors and warnings are produced from running
+   `make kindle`:
+
+   - `Error(core):E1008: Failed conversion to unicode. The resulting string may contain wrong characters.`
 
    - `Warning(index build):W15001: inflection rule or rule group too long (max=255). Discarded.`
 
