@@ -169,6 +169,9 @@ marcion_img_find: FORCE
 # Kindle
 kindle: FORCE
 	./archive/kindlegen/kindlegen \
+	-gen_ff_mobi7 \
+	-dont_append_source \
+	-c0 \
 	"dictionary/marcion.sourceforge.net/data/output/dialect-B/opf.opf"
 		
 # DEVELOPER
