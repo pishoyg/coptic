@@ -224,6 +224,12 @@ def write_csv(df):
     df.to_csv(path, sep="\t", index=False)
 
 
+def write_txt(lang: str, column: pd.Series) -> None:
+    path = writing_path("txt", f"{lang}.txt")
+    with open(path, "w") as f:
+        f.write("\n".join(column))
+
+
 def html_head(title=""):
     return """<head>
   <title>{title}</title>
@@ -474,6 +480,9 @@ def main():
         df = pd.concat([df, book_df], ignore_index=True)
 
     write_csv(df)
+
+    for lang in LANGUAGES:
+        write_txt(lang, df[lang])
 
     write_html(html1, books, "html")
     write_html(html2, books, "html2")
