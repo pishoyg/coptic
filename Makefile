@@ -198,7 +198,7 @@ bible_epub_clean: $(shell ls bible/stshenouda.org/data/output/epub*/*.epub)
 	git restore "bible/stshenouda.org/data/output/epub*/*.epub"
 
 marcion_epub_clean: $(shell ls dictionary/marcion.sourceforge.net/data/output/*.epub)
-	git restore "dictionary/marcion.sourceforge.net/data/outout/*.epub"
+	git restore "dictionary/marcion.sourceforge.net/data/output/*.epub"
 
 kellia_analysis_clean: dictionary/kellia.uni-goettingen.de/analysis.json
 	git restore "dictionary/kellia.uni-goettingen.de/analysis.json"
