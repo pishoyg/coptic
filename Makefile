@@ -52,7 +52,7 @@ generate_2: flashcards flashcards_redundant kindle
 generate_3:
 
 .PHONY: publish
-publish: flashcards_cp_to_drive
+publish: flashcards_cp_to_drive kindle_cp_to_drive
 
 .PHONY: stats
 stats: stats_aux
@@ -157,7 +157,7 @@ flashcards_redundant: flashcards_crum_sahidic flashcards_crum flashcards_coptics
 flashcards_cp_to_drive: $(shell find flashcards/data/ -type f)
 	cp \
 		flashcards/data/*.apkg \
-		"$${DEST_DIR}"
+		"$${FLASHCARD_DIR}"
 
 # Image collection.
 marcion_img_find: FORCE
@@ -173,7 +173,12 @@ kindle: FORCE
 	-dont_append_source \
 	-c0 \
 	"dictionary/marcion.sourceforge.net/data/output/dialect-B/dialect-B.opf"
-		
+
+kindle_cp_to_drive:
+	cp \
+	"dictionary/marcion.sourceforge.net/data/output/dialect-B/dialect-B.opf" \
+	"$${KINDLE_DIR}"
+
 # DEVELOPER
 flashcards_verify: flashcards_try
 	bash ziff.sh \

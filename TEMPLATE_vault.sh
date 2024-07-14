@@ -14,15 +14,18 @@
 # first method as this method is cleaner.
 export JSON_KEYFILE_NAME=""
 
-# DEST_DIR is a destination directory, used to publish the final versions of
-# the flashcard packages.
+# FLASHCARD_DIR is a destination directory, used to publish the final versions
+# of the flashcard packages.
 # You can use any directory. Personally, I am using a directory that
 # automatically synchronizes with Google Drive. And I have been sharing with
 # people a link to that Drive directory and the files within it.
 # So copying the new files to that directory essentially publishes the new
 # version of the package to whoever has the link.
 # See https://www.google.com/drive/download/.
-export DEST_DIR="~/Desktop"
+export FLASHCARD_DIR="~/Desktop"
+
+# KINDLE_DIR is the destination directory for Kindle dictionaries.
+export KINDLE_DIR="~/Desktop/"
 
 # TEST_DIR is used to publish temporary versions of the flashcard packages
 # during testing. Use it in the testing or verification rules, which are
