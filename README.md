@@ -471,21 +471,20 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it.
 
 ### Kindle TODO's
 
-1. Create a [Kindle-compatible dictionary](
+1. Fix the [Kindle-compatible dictionary](
 https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV). (p0, 50+ hours)
 
-   See [a successful example](
-   https://github.com/tekinged/tekinged.com/blob/main/scripts/mk_kindle_dict.py).
+   Currently, the following warnings are produced from running `make kindle`:
 
-   See [another example](https://github.com/runehol/kindlearadict/).
+   - `Warning(index build):W15001: inflection rule or rule group too long (max=255). Discarded.`
 
-   `ebooklib` likely won't work.
+   - `Warning(inputpreprocessor):W29010: Tag rejected due to being used in unauthorized scope: <dd>`
 
-   [pyglossary](https://pypi.org/project/pyglossary/) is popular, but it
-   doesn't seem to have native support for inflections.
+   - `Warning(prcgen):W14005: Missing value attribute on <idx:iform> tag.`
 
-   N.B. See [this page](https://kdp.amazon.com/en_US/help/topic/G200673300)
-   about supported languages.
+   - `Warning(prcgen):W14006: No inflections found in inflections group tag <idx:infl>.`
+
+   - `Warning(prcgen):W14019: Cover is too small`
 
 1. Create a dictionary from copticsite.com's data.
 
