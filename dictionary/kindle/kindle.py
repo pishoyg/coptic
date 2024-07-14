@@ -7,92 +7,70 @@ import pathlib
 import type_enforced
 from ebooklib import epub
 
+CREATOR = "pishoybg@gmail.com"
 # "cop" is not supported.
 # See https://kdp.amazon.com/en_US/help/topic/G200673300.
+# TODO: Choose a default obscure language. Otherwise, a reader who has another
+# dictionary for "en-us" will keep switching between the two in order to
+# translate.
 IN_LANG = "en-us"
 OUT_LANG = "en-us"
 INDEX = "index"
 
 TYPE_ENFORCED = True
 STEP = 100
+# TODO: This will likely have to increase to accommodate larger dictionaries.
 ZFILL = 4
 
-CREATOR = "pishoyg@gmail.com"
-
-HTML_FMT = f"""
+COVER_HTML = f"""\
 <html>
   <head>
-    <meta content="text/html" http-equiv="content-type">
+    <meta content="text/html" http-equiv="content-type"/>
   </head>
   <body>
-  {{body}}
+  {CREATOR}
   </body>
-</html>
+</html>\
 """
 
-# TODO: Fix the cover. You do reference an item with the id "my-cover-image" in
-# the OPF below, but it's broken!
 COVER_FILENAME = "cover.html"
-COPYRIGHT_FILENAME = "copyright.html"
-USAGE_FILENAME = "usage.html"
-CONTENT_FILENAME = "content.html"
-OPF_FILENAME = "opf.opf"
 
-COVER_BODY = ""
-COPYRIGHT_BODY = """
-<h4>
-  COPYRIGHT: This data is freely provided and can be freely redistributed for
-  noncommercial purposes.
-</h4>
-<p>
-  The latest version can be found at github.com/pishoyg/coptic.
-</p>
+OPF_FILENAME_FMT = f"{{identifier}}.opf"
+
+OPF_XHTML_ITEM_FMT = f"""\
+<item id="{{id}}"
+      href="{{href}}"
+      media-type="application/xhtml+xml" />\
 """
 
-USAGE_BODY = ("<p>See github.com/pishoyg/coptic.</p>",)
+OPF_XHTML_ITEMREF_FMT = f"""\
+<itemref idref="{{idref}}"/>\
+"""
 
-OPF_FMT = f"""
+OPF_FMT = f"""\
 <?xml version="1.0"?>
 <package version="2.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="BookId">
-<metadata>
-<dc:title>{{title}}</dc:title>
-<dc:creator opf:role="aut">{CREATOR}</dc:creator>
-<dc:language>{IN_LANG}</dc:language>
-<meta name="cover" content="my-cover-image"/>
-<x-metadata>
-  <DictionaryInLanguage>{IN_LANG}</DictionaryInLanguage>
-  <DictionaryOutLanguage>{OUT_LANG}</DictionaryOutLanguage>
-  <DefaultLookupIndex>{INDEX}</DefaultLookupIndex>
-</x-metadata>
-</metadata>
-<manifest>
-<!-- <item href="cover-image.jpg" id="my-cover-image" media-type="image/jpg" /> -->
-<item id="cover"
-      href="{COVER_FILENAME}"
-      media-type="application/xhtml+xml" />
-<item id="usage"
-      href="{USAGE_FILENAME}"
-      media-type="application/xhtml+xml" />
-<item id="copyright"
-      href="{COPYRIGHT_FILENAME}"
-      media-type="application/xhtml+xml" />
-<item id="content"
-      href="{CONTENT_FILENAME}"
-      media-type="application/xhtml+xml" />
-</manifest>
-<spine>
-<itemref idref="cover"/>
-<itemref idref="usage"/>
-<itemref idref="copyright"/>
-<itemref idref="content"/>
-</spine>
-<guide>
-<reference type="index" title="IndexName" href="{CONTENT_FILENAME}"/>
-</guide>
+    <metadata>
+        <dc:title>{{title}}</dc:title>
+        <dc:creator opf:role="aut">{CREATOR}</dc:creator>
+        <dc:language>{IN_LANG}</dc:language>
+        <meta name="cover" content="{{cover_id}}"/>
+        <x-metadata>
+          <DictionaryInLanguage>{IN_LANG}</DictionaryInLanguage>
+          <DictionaryOutLanguage>{OUT_LANG}</DictionaryOutLanguage>
+          <DefaultLookupIndex>{INDEX}</DefaultLookupIndex>
+        </x-metadata>
+    </metadata>
+    <manifest>
+        {{manifest}}
+    </manifest>
+    <spine>
+        {{spine}}
+    </spine>
 </package>
 """
 
-DICT_XHTML_FMT = f"""
+DICT_XHTML_FMT = f"""\
 <html
 xmlns:math="http://exslt.org/math"
 xmlns:svg="http://www.w3.org/2000/svg"
@@ -113,10 +91,10 @@ xmlns:idx="https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.p
             {{entries}}
         </mbp:frameset>
     </body>
-</html>
+</html>\
 """
 
-ENTRY_XHTML_FMT = f"""
+ENTRY_XHTML_FMT = f"""\
 <idx:entry name="{INDEX}" scriptable="yes" spell="yes">
     <idx:short>
         <a id="{{id}}"></a>
@@ -130,17 +108,12 @@ ENTRY_XHTML_FMT = f"""
             {{definition}}
         </p>
     </idx:short>
-</idx:entry>
+</idx:entry>\
 """
 
-INFL_XHTML_FMT = f"""<idx:iform value="{{form}}"></idx:iform>"""
-
-
-@type_enforced.Enforcer(enabled=TYPE_ENFORCED)
-def _deindent(html: str) -> str:
-    lines = html.split("\n")
-    lines = [line.strip() for line in lines]
-    return "\n".join(lines)
+INFL_XHTML_FMT = f"""\
+<idx:iform value="{{form}}"></idx:iform>\
+"""
 
 
 @type_enforced.Enforcer(enabled=TYPE_ENFORCED)
@@ -200,7 +173,6 @@ class entry:
             definition=self._definition,
             inflections=inflections,
         )
-        xhtml = _deindent(xhtml)
         return xhtml
 
 
@@ -211,7 +183,6 @@ class volume:
     def xhtml(self) -> str:
         xhtml = "\n".join(e.xhtml() for e in self._entries)
         xhtml = DICT_XHTML_FMT.format(entries=xhtml)
-        xhtml = _deindent(xhtml)
         return xhtml
 
 
@@ -235,6 +206,17 @@ class dictionary:
     def write_xhtml(self, path: str) -> None:
         with open(path, "w") as f:
             f.write(self.xhtml())
+
+    def xhtmls(self) -> list[tuple[str, str]]:
+        filenames_contents: list[tuple[str, str]] = []
+        for i in range(0, len(self._entries), STEP):
+            entries = self._entries[i : i + STEP]
+            start = str(i + 1).zfill(ZFILL)
+            end = str(i + len(entries)).zfill(ZFILL)
+            file_name = f"{start}_{end}.xhtml"
+            content = volume(entries).xhtml()
+            filenames_contents.append((file_name, content))
+        return filenames_contents
 
     def epub(self) -> epub.EpubBook:
         kindle = epub.EpubBook()
@@ -263,27 +245,39 @@ class dictionary:
         kindle.spine.append(cover)
         kindle.add_item(epub.EpubCoverHtml(image_name=cover_basename))
 
-        for i in range(0, len(self._entries), STEP):
-            entries = self._entries[i : i + STEP]
-            start = str(i + 1).zfill(ZFILL)
-            end = str(i + len(entries)).zfill(ZFILL)
-            file_name = f"{start}_{end}.xhtml"
-            chapter = epub.EpubHtml(
-                title=file_name, file_name=file_name, content=volume(entries).xhtml()
-            )
-            kindle.add_item(chapter)
-            kindle.spine.append(chapter)
-
-        kindle.add_item(epub.EpubNcx())
-        kindle.add_item(epub.EpubNav())
-
         return kindle
 
     def write_epub(self, path: str) -> None:
         epub.write_epub(path, self.epub())
 
-    def opf(self) -> str:
-        return OPF_FMT.format(title=self._title)
+    def opf(self, content_filenames: list[str]) -> str:
+        # The OPF doesn't get referenced in the OPF. Makes sense?
+        # All the other files should be included.
+        assert not any(name.endswith(".opf") for name in content_filenames)
+        manifest = []
+        spine = []
+        # The cover goes on the manifest.
+        cover_id = self.filename_to_id(COVER_FILENAME)
+        manifest.append(OPF_XHTML_ITEM_FMT.format(id=cover_id, href=COVER_FILENAME))
+        # The content items go on both the manifest and the spine.
+        for name in content_filenames:
+            id = self.filename_to_id(name)
+            manifest.append(OPF_XHTML_ITEM_FMT.format(id=id, href=name))
+            spine.append(OPF_XHTML_ITEMREF_FMT.format(idref=id))
+
+        manifest = "\n".join(manifest)
+        spine = "\n".join(spine)
+        return OPF_FMT.format(
+            title=self._title, manifest=manifest, spine=spine, cover_id=cover_id
+        )
+
+    def filename_to_id(self, filename: str) -> str:
+        head, tail = os.path.split(filename)
+        assert not head
+        assert tail == filename
+        stem, ext = os.path.splitext(filename)
+        assert ext
+        return stem
 
     def write_pre_mobi(self, dir: str) -> None:
         """
@@ -291,13 +285,16 @@ class dictionary:
         "pre-mobi".
         """
         pathlib.Path(dir).mkdir(exist_ok=True)
-        files = {
-            COVER_FILENAME: HTML_FMT.format(body=COVER_BODY),
-            COPYRIGHT_FILENAME: HTML_FMT.format(body=COPYRIGHT_BODY),
-            USAGE_FILENAME: HTML_FMT.format(body=USAGE_BODY),
-            CONTENT_FILENAME: self.xhtml(),
-            OPF_FILENAME: self.opf(),
-        }
-        for filename, content in files.items():
+
+        filename_to_content: dict[str, str] = dict(self.xhtmls())
+
+        opf_filename = OPF_FILENAME_FMT.format(identifier=self._identifier)
+        opf_content = self.opf(sorted(list(filename_to_content.keys())))
+
+        # Add the cover and OPF to the list of files to be written.
+        filename_to_content[opf_filename] = opf_content
+        filename_to_content[COVER_FILENAME] = COVER_HTML
+
+        for filename, content in filename_to_content.items():
             with open(os.path.join(dir, filename), "w") as f:
                 f.write(content)
