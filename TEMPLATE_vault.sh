@@ -27,6 +27,9 @@ export FLASHCARD_DIR="~/Desktop"
 # KINDLE_DIR is the destination directory for Kindle dictionaries.
 export KINDLE_DIR="~/Desktop/"
 
+# BIBLE_DIR is the destination directory for the Bible EPUBs.
+export BIBLE_DIR="~/Desktop/"
+
 # TEST_DIR is used to publish temporary versions of the flashcard packages
 # during testing. Use it in the testing or verification rules, which are
 # written to avoid overriding the published version prematurely.

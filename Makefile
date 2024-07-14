@@ -50,7 +50,7 @@ generate_2: flashcards flashcards_redundant kindle
 generate_3:
 
 .PHONY: publish
-publish: flashcards_cp_to_drive kindle_cp_to_drive
+publish: flashcards_cp_to_drive kindle_cp_to_drive bible_cp_to_drive
 
 .PHONY: stats
 stats: stats_aux
@@ -97,6 +97,11 @@ precommit: FORCE
 # BIBLE RULES
 bible: FORCE
 	python bible/stshenouda.org/main.py
+
+bible_cp_to_drive: FORCE
+	cp \
+	"bible/stshenouda.org/data/output/epub/bohairic_english.epub" \
+	"$${BIBLE_DIR}/2. bohairic_english - single-column - Kindle.epub"
 
 # COPTICSITE_COM RULES
 copticsite: FORCE
