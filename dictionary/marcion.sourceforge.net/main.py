@@ -197,7 +197,12 @@ def main() -> None:
 
     # Write EPUB Kindle dictionaries.
     for d in args.inflect_dialects:
-        k = kindle.dictionary("A Coptic Dictionary", "W. E. Crum")
+        k = kindle.dictionary(
+            title="A Coptic Dictionary",
+            author="W. E. Crum",
+            identifier=f"dialect-{d}",
+            cover_path=args.cover,
+        )
         for _, row in roots.iterrows():
             key = row["key"]
             orth_display = use_html_line_breaks(row[f"dialect-{d}"])
@@ -222,10 +227,8 @@ def main() -> None:
                 inflections=inflections,
             )
             k.add_entry(entry)
-        k.epub(
-            f"dialect-{d}", args.cover, os.path.join(args.epub_dir, f"dialect-{d}.epub")
-        )
-        k.xhtml(os.path.join(args.epub_dir, f"dialect-{d}.xhtml"))
+        k.write_epub(os.path.join(args.epub_dir, f"dialect-{d}.epub"))
+        k.write_xhtml(os.path.join(args.epub_dir, f"dialect-{d}.xhtml"))
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)

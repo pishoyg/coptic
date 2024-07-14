@@ -6,11 +6,17 @@ import os
 import type_enforced
 from ebooklib import epub
 
+# "cop" is not supported.
+# See https://kdp.amazon.com/en_US/help/topic/G200673300.
+IN_LANG = "en-us"
+OUT_LANG = "en-us"
+INDEX = "index"
+
 TYPE_ENFORCED = True
 STEP = 100
 ZFILL = 4
 
-HTML = """
+DICT_XHTML_FMT = f"""
 <html
 xmlns:math="http://exslt.org/math"
 xmlns:svg="http://www.w3.org/2000/svg"
@@ -28,30 +34,30 @@ xmlns:idx="https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.p
     </head>
     <body>
         <mbp:frameset>
-            {ENTRIES}
+            {{entries}}
         </mbp:frameset>
     </body>
 </html>
 """
 
-ENTRY = """
-<idx:entry name="index" scriptable="yes" spell="yes">
+ENTRY_XHTML_FMT = f"""
+<idx:entry name="{INDEX}" scriptable="yes" spell="yes">
     <idx:short>
-        <a id="{ID}"></a>
-        <idx:orth value="{ORTH}">
-            <b>{ORTH_DISPLAY}</b>
+        <a id="{{id}}"></a>
+        <idx:orth value="{{orth}}">
+            <b>{{orth_display}}</b>
             <idx:infl>
-                {INFLECTIONS}
+                {{inflections}}
             </idx:infl>
         </idx:orth>
         <p>
-            {DEFINITION}
+            {{definition}}
         </p>
     </idx:short>
 </idx:entry>
 """
 
-INFLECTION = """<idx:iform value="{FORM}"></idx:iform>"""
+INFL_XHTML_FMT = f"""<idx:iform value="{{form}}"></idx:iform>"""
 
 
 @type_enforced.Enforcer(enabled=TYPE_ENFORCED)
@@ -108,42 +114,56 @@ class entry:
         self._definition = definition
         self._inflections = inflections
 
-    def html(self) -> str:
-        inflections = [INFLECTION.format(FORM=i) for i in self._inflections]
+    def xhtml(self) -> str:
+        inflections = [INFL_XHTML_FMT.format(form=i) for i in self._inflections]
         inflections = "\n".join(inflections)
-        html = ENTRY.format(
-            ID=self._id,
-            ORTH=self._orth,
-            ORTH_DISPLAY=self._orth_display,
-            DEFINITION=self._definition,
-            INFLECTIONS=inflections,
+        xhtml = ENTRY_XHTML_FMT.format(
+            id=self._id,
+            orth=self._orth,
+            orth_display=self._orth_display,
+            definition=self._definition,
+            inflections=inflections,
         )
-        return _deindent(html)
+        xhtml = _deindent(xhtml)
+        return xhtml
 
 
-def html(entries: list[entry]) -> str:
-    html = "\n".join(e.html() for e in entries)
-    html = HTML.format(ENTRIES=html)
-    html = _deindent(html)
-    return html
+class volume:
+    def __init__(self, entries: list[entry]) -> None:
+        self._entries = entries
+
+    def xhtml(self) -> str:
+        xhtml = "\n".join(e.xhtml() for e in self._entries)
+        xhtml = DICT_XHTML_FMT.format(entries=xhtml)
+        xhtml = _deindent(xhtml)
+        return xhtml
 
 
 @type_enforced.Enforcer(enabled=TYPE_ENFORCED)
 class dictionary:
-    def __init__(self, title: str, author: str) -> None:
+    def __init__(
+        self, title: str, author: str, identifier: str, cover_path: str
+    ) -> None:
         self._title: str = title
         self._author: str = author
+        self._identifier: str = identifier
+        self._cover_path: str = cover_path
         self._entries: list[entry] = []
 
-    def xhtml(self, path: str) -> None:
-        content = html(self._entries)
-        with open(path, "w") as f:
-            f.write(content)
+    def add_entry(self, e: entry) -> None:
+        self._entries.append(e)
 
-    def epub(self, identifier: str, cover_path: str, path: str) -> None:
+    def xhtml(self) -> str:
+        return volume(self._entries).xhtml()
+
+    def write_xhtml(self, path: str) -> None:
+        with open(path, "w") as f:
+            f.write(self.xhtml())
+
+    def epub(self) -> epub.EpubBook:
         kindle = epub.EpubBook()
-        kindle.set_identifier(identifier)
-        kindle.set_language("cop")
+        kindle.set_identifier(self._identifier)
+        kindle.set_language(IN_LANG)
         kindle.set_title(self._title)
         kindle.add_author(self._author)
 
@@ -153,15 +173,15 @@ class dictionary:
             "",
             epub.OrderedDict([("name", "cover"), ("content", "cover-img")]),
         )
-        kindle.add_metadata("x-metadata", "DictionaryInLanguage", "cop")
-        kindle.add_metadata("x-metadata", "DictionaryOutLanguage", "en")
-        kindle.add_metadata("x-metadata", "DefaultLookupIndex", "index")
+        kindle.add_metadata("x-metadata", "DictionaryInLanguage", IN_LANG)
+        kindle.add_metadata("x-metadata", "DictionaryOutLanguage", OUT_LANG)
+        kindle.add_metadata("x-metadata", "DefaultLookupIndex", INDEX)
 
         kindle.spine = []
 
-        cover_basename = os.path.basename(cover_path)
+        cover_basename = os.path.basename(self._cover_path)
         cover = epub.EpubCover(file_name=cover_basename)
-        with open(cover_path, "rb") as f:
+        with open(self._cover_path, "rb") as f:
             cover.content = f.read()
         kindle.add_item(cover)
         kindle.spine.append(cover)
@@ -173,7 +193,7 @@ class dictionary:
             end = str(i + len(entries)).zfill(ZFILL)
             file_name = f"{start}_{end}.xhtml"
             chapter = epub.EpubHtml(
-                title=file_name, file_name=file_name, content=html(entries)
+                title=file_name, file_name=file_name, content=volume(entries).xhtml()
             )
             kindle.add_item(chapter)
             kindle.spine.append(chapter)
@@ -181,7 +201,7 @@ class dictionary:
         kindle.add_item(epub.EpubNcx())
         kindle.add_item(epub.EpubNav())
 
-        epub.write_epub(path, kindle)
+        return kindle
 
-    def add_entry(self, e: entry) -> None:
-        self._entries.append(e)
+    def write_epub(self, path: str) -> None:
+        epub.write_epub(path, self.epub())
