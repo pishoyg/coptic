@@ -99,7 +99,7 @@ ENTRY_XHTML_FMT = f"""\
 """
 
 INFL_XHTML_FMT = f"""\
-<idx:iform value="{{form}}"></idx:iform>\
+<idx:iform value="{{form}}"/>\
 """
 
 
