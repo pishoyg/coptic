@@ -38,9 +38,22 @@ repos:
         language: system
         types: [markdown]
 
+      - id: tidy-html
+        name: tidy-html
+        entry: tidy -indent -modify -quiet
+        language: system
+        files: '.*\.html'
+
+      - id: tidy-xml
+        name: tidy-xml
+        entry: tidy -indent -modify -xml -quiet
+        language: system
+        files: '.*\.(xml|xhtml)'
+
       - id: python-unittest
         name: python-unittest
         entry: python_unittest.sh
         language: script
         types: [python]
         pass_filenames: false
+
