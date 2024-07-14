@@ -135,7 +135,7 @@ argparser.add_argument(
     "--cover",
     type=str,
     help="Path to a file containing the cover image for EPUB.",
-    default="dictionary/marcion.sourceforge.net/data/crum/Crum/Crum.jpg",
+    default="dictionary/marcion.sourceforge.net/data/crum/Crum/Crum.png",
 )
 
 argparser.add_argument(

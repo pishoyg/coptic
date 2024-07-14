@@ -484,8 +484,6 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV). (p0, 50+ hours)
 
    - `Warning(prcgen):W14006: No inflections found in inflections group tag <idx:infl>.`
 
-   - `Warning(prcgen):W14019: Cover is too small`
-
 1. Create a dictionary from copticsite.com's data.
 
 1. Create a dictionary from KELLIA's data.
