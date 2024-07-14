@@ -3,6 +3,7 @@
 # TODO: Add a check for valid XHTML.
 import os
 import pathlib
+import shutil
 
 import type_enforced
 from ebooklib import epub
@@ -22,28 +23,15 @@ STEP = 100
 # TODO: This will likely have to increase to accommodate larger dictionaries.
 ZFILL = 4
 
-COVER_HTML = f"""\
-<html>
-  <head>
-    <meta content="text/html" http-equiv="content-type"/>
-  </head>
-  <body>
-  {CREATOR}
-  </body>
-</html>\
-"""
-
-COVER_FILENAME = "cover.html"
-
 OPF_FILENAME_FMT = f"{{identifier}}.opf"
 
-OPF_XHTML_ITEM_FMT = f"""\
+OPF_MANIFEST_ITEM_FMT = f"""\
 <item id="{{id}}"
       href="{{href}}"
       media-type="application/xhtml+xml" />\
 """
 
-OPF_XHTML_ITEMREF_FMT = f"""\
+OPF_SPINE_ITEM_FMT = f"""\
 <itemref idref="{{idref}}"/>\
 """
 
@@ -62,6 +50,7 @@ OPF_FMT = f"""\
         </x-metadata>
     </metadata>
     <manifest>
+        <item href="{{cover_basename}}" id="{{cover_id}}" media-type="image/{{cover_ext}}" />
         {{manifest}}
     </manifest>
     <spine>
@@ -193,6 +182,7 @@ class dictionary:
         self._author: str = author
         self._identifier: str = identifier
         self._cover_path: str = cover_path
+        self._cover_basename: str = os.path.basename(self._cover_path)
         self._entries: list[entry] = []
 
     def add_entry(self, e: entry) -> None:
@@ -235,13 +225,12 @@ class dictionary:
 
         kindle.spine = []
 
-        cover_basename = os.path.basename(self._cover_path)
-        cover = epub.EpubCover(file_name=cover_basename)
+        cover = epub.EpubCover(file_name=self._cover_basename)
         with open(self._cover_path, "rb") as f:
             cover.content = f.read()
         kindle.add_item(cover)
         kindle.spine.append(cover)
-        kindle.add_item(epub.EpubCoverHtml(image_name=cover_basename))
+        kindle.add_item(epub.EpubCoverHtml(image_name=self._cover_basename))
 
         return kindle
 
@@ -252,24 +241,32 @@ class dictionary:
         # The OPF doesn't get referenced in the OPF. Makes sense?
         # All the other files should be included.
         assert not any(name.endswith(".opf") for name in content_filenames)
+        # Get the cover information.
+        cover_id = self.basename_to_id(self._cover_basename)
+        _, cover_ext = os.path.splitext(self._cover_basename)
+        assert cover_ext.startswith(".")
+        cover_ext = cover_ext[1:]
+        assert cover_ext
+        # Build the manifest and the spine.
         manifest = []
         spine = []
-        # The cover goes on the manifest.
-        cover_id = self.filename_to_id(COVER_FILENAME)
-        manifest.append(OPF_XHTML_ITEM_FMT.format(id=cover_id, href=COVER_FILENAME))
-        # The content items go on both the manifest and the spine.
         for name in content_filenames:
-            id = self.filename_to_id(name)
-            manifest.append(OPF_XHTML_ITEM_FMT.format(id=id, href=name))
-            spine.append(OPF_XHTML_ITEMREF_FMT.format(idref=id))
+            id = self.basename_to_id(name)
+            manifest.append(OPF_MANIFEST_ITEM_FMT.format(id=id, href=name))
+            spine.append(OPF_SPINE_ITEM_FMT.format(idref=id))
 
         manifest = "\n".join(manifest)
         spine = "\n".join(spine)
         return OPF_FMT.format(
-            title=self._title, manifest=manifest, spine=spine, cover_id=cover_id
+            title=self._title,
+            manifest=manifest,
+            spine=spine,
+            cover_basename=self._cover_basename,
+            cover_id=cover_id,
+            cover_ext=cover_ext,
         )
 
-    def filename_to_id(self, filename: str) -> str:
+    def basename_to_id(self, filename: str) -> str:
         head, tail = os.path.split(filename)
         assert not head
         assert tail == filename
@@ -284,15 +281,18 @@ class dictionary:
         """
         pathlib.Path(dir).mkdir(exist_ok=True)
 
+        # Copy the cover image.
+        shutil.copyfile(self._cover_path, os.path.join(dir, self._cover_basename))
+
+        # Add the dictionary files.
         filename_to_content: dict[str, str] = dict(self.xhtmls())
 
+        # Add OPF to the list of files to be written.
         opf_filename = OPF_FILENAME_FMT.format(identifier=self._identifier)
         opf_content = self.opf(sorted(list(filename_to_content.keys())))
-
-        # Add the cover and OPF to the list of files to be written.
         filename_to_content[opf_filename] = opf_content
-        filename_to_content[COVER_FILENAME] = COVER_HTML
 
+        # Write the files.
         for filename, content in filename_to_content.items():
             with open(os.path.join(dir, filename), "w") as f:
                 f.write(content)
