@@ -539,6 +539,8 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV). (p0, 50+ hours)
 
    1. Handle compound prefixes.
 
+1. Stop using `kindlegen`. It's obsolete.
+
 1. Display the Bible data in a table format. (p2, 7-8 hours)
 
    The reason the Bible was chosen to be displayed is that it showed difficulty
