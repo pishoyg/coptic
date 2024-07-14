@@ -27,10 +27,8 @@ SHELL:=/bin/bash
 # LEVEL 3 RULES ###############################################################
 
 .PHONY: all
+# You might want to run `make clean` following this.
 all: install generate_1 validate generate_2 generate_3 publish stats
-
-.PHONY: flash
-flash: validate generate_2 generate_3 publish stats
 
 # LEVEL 2 RULES ###############################################################
 
@@ -60,8 +58,14 @@ stats: stats_aux
 # The following level-2 rules are not included in any of the level-3 rules
 # above. They are relevant only during development, but not for deployment.
 
+.PHONY: flash
+flash: precommit flashcards flashcards_redundant flashcards_cp_to_drive
+
+.PHONY: amazon
+amazon: marcion kindle kindle_cp_to_drive
+
 .PHONY: clean
-clean: git_clean bible_epub_clean marcion_epub_clean kellia_analysis_clean
+clean: git_clean bible_epub_clean kellia_analysis_clean
 
 .PHONY: toil
 toil: marcion_img_find
@@ -209,9 +213,6 @@ git_clean: FORCE
 
 bible_epub_clean: $(shell ls bible/stshenouda.org/data/output/epub*/*.epub)
 	git restore "bible/stshenouda.org/data/output/epub*/*.epub"
-
-marcion_epub_clean: $(shell ls dictionary/marcion.sourceforge.net/data/output/*.epub)
-	git restore "dictionary/marcion.sourceforge.net/data/output/*.epub"
 
 kellia_analysis_clean: dictionary/kellia.uni-goettingen.de/analysis.json
 	git restore "dictionary/kellia.uni-goettingen.de/analysis.json"
