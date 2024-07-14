@@ -49,7 +49,7 @@ generate_2: flashcards flashcards_redundant
 .PHONY: generate_3
 	# This is a placeholder for an upcoming `anki` rule that will exist after we
 	# split the flashcard TSV generation from Anki package generation pipelines.
-generate_3:
+generate_3: kindle
 
 .PHONY: publish
 publish: flashcards_cp_to_drive
@@ -166,6 +166,11 @@ marcion_img_find: FORCE
 		--exclude "type-parsed:verb" "dialect-B:" \
 		--start_at_key="$${START_AT_KEY}"
 
+# Kindle
+kindle: FORCE
+	./archive/kindlegen/kindlegen \
+	"dictionary/marcion.sourceforge.net/data/output/dialect-B/opf.opf"
+		
 # DEVELOPER
 flashcards_verify: flashcards_try
 	bash ziff.sh \
