@@ -58,7 +58,7 @@ _TYPE_TO_PREFIX_LIST = {
 
 
 @type_enforced.Enforcer(enabled=True)
-def inflect(morpheme: str, type: Type, strict=True) -> list[str]:
+def inflect(morpheme: str, type: Type) -> list[str]:
     """
     Given a word, return a list of inflected forms.
     """
@@ -66,12 +66,6 @@ def inflect(morpheme: str, type: Type, strict=True) -> list[str]:
     prefixes = sum(prefixes, [])
     # TODO: The input data should be a single Coptic block in the first place.
     # Fix at the source, and remove this regex search.
-    if strict:
-        assert COPTIC_ONLY_BLOCK.fullmatch(morpheme)
-    else:
-        search = COPTIC_ONLY_BLOCK.search(morpheme)
-        if not search:
-            return []
-        morpheme = search.group()
+    assert COPTIC_ONLY_BLOCK.fullmatch(morpheme)
     assert morpheme
-    return [morpheme] + [p + morpheme for p in prefixes]
+    return [p + morpheme for p in prefixes]

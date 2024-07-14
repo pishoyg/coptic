@@ -138,11 +138,15 @@ class entry:
         inflections: list[str],
     ) -> None:
         assert _nothing_to_escape(id)
+        assert orth
         assert _no_tags(orth)
         orth = _escape_amp(orth)
+        assert orth_display
         orth_display = _escape_amp(orth_display)
+        assert definition
         definition = _escape_amp(definition)
-        assert all(_nothing_to_escape(i) for i in inflections)
+        assert all(inflections)
+        assert all(_nothing_to_escape(i) for i in inflections), inflections
 
         self._id = id
         self._orth = orth

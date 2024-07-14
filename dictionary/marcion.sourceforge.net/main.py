@@ -219,6 +219,8 @@ def main() -> None:
             )
             definition = use_html_line_breaks(definition)
             inflections = row[f"inflections-{d}"].split(",")
+            # If orth exists, then inflections must exist too.
+            assert inflections and all(inflections)
             entry = kindle.entry(
                 id=key,
                 orth=orth,
@@ -334,11 +336,17 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
                 if not w.is_dialect(d, undialected_is_all=True):
                     continue
                 t = w.inflect_type()
-                if not t:
-                    continue
                 for s in w.spellings(parenthesize_unattested=False):
-                    # TODO: strict=True
-                    inflections.extend(inflect.inflect(s, t, strict=False))
+                    # TODO: The output of parsing should have pure spellings
+                    # anyway.
+                    s = constants.PURE_COPTIC_RE.search(s)
+                    if not s:
+                        continue
+                    s = s.group()
+                    inflections.append(s)
+                    if not t:
+                        continue
+                    inflections.extend(inflect.inflect(s, t))
 
             inflections = dedupe(inflections)
             insert("", f"inflections-{d}", ",".join(inflections))
