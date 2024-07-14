@@ -48,9 +48,8 @@ paid, unfortunately!*)
 2. Download [the Coptic package](https://drive.google.com/file/d/1KV0fH23Zucmlvdc0dwTJiDdqKIvbuYY_/view?usp=sharing),
 and open it / import it in Anki. This package includes all the data.
 
-   (*Alternatively, you can download individual decks from [this page](
-https://ankiweb.net/shared/by-author/836362510). Keep in mind that this page
-takes 24 hours to go back live after an update, so it's occasionally down.*)
+   **N.B. The package is updated regularly (almost daily), so make sure
+   to save the link and come back occasionally to download the updated version.**
 
 ## Description
 
@@ -373,6 +372,9 @@ into the repo.
 1. Publicize the project, and find an audience of learners. (p0)
 
 1. Find contributors, in coding and data collection. (p0)
+
+1. Look at [tekinged.com](https://tekinged.com/) for inspiration on what you
+   can do for an incubated language.
 
 1. Survey the field one more time. See if there is something else out there
    that you can integrate. (p2)
