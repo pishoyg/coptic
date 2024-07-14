@@ -77,7 +77,7 @@ verify: flashcards_verify flashcards_crum_sahidic_verify
 try: flashcards_try flashcards_crum_sahidic_try
 
 .PHONY: precommit_scripts
-precommit_scripts: readme_doctoc marcion_img_validate python_unittest
+precommit_scripts: marcion_img_validate python_unittest
 
 .PHONY: organize
 organize: py_dirs
@@ -216,9 +216,6 @@ bible_epub_clean: $(shell ls bible/stshenouda.org/data/output/epub*/*.epub)
 
 kellia_analysis_clean: dictionary/kellia.uni-goettingen.de/analysis.json
 	git restore "dictionary/kellia.uni-goettingen.de/analysis.json"
-
-readme_doctoc: FORCE
-	bash doctoc_readme.sh
 
 marcion_img_validate: FORCE
 	bash dictionary/marcion.sourceforge.net/img_validate.sh

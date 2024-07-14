@@ -32,12 +32,11 @@ repos:
         # pre-commit.
         pass_filenames: false
 
-      - id: doctoc-readme
-        name: doctoc-readme
-        entry: doctoc_readme.sh
-        language: script
+      - id: doctoc
+        name: doctoc
+        entry: doctoc
+        language: system
         types: [markdown]
-        pass_filenames: false
 
       - id: python-unittest
         name: python-unittest
