@@ -474,9 +474,18 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it.
 1. Fix the [Kindle-compatible dictionary](
 https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV). (p0, 50+ hours)
 
-   1. Put inflections under several orths. (p0)
+   1. We have experimented with putting words under multiple orths, but this
+      doesn't seem to work. We experimented with filtering the dictionary, but
+      the output is chopped, and lookup unjustifiably failes! Here are some
+      ideas:
 
-   2. Currently, the following errors and warnings are produced from running
+      - We should perhaps follow the docs and generate the
+      dictionary using Kindle Previewer 3. We will have to convert the
+      dictionary to EPUB format first, but that should be doable.
+
+      - Handle the warnings / errors.
+
+   1. Currently, the following errors and warnings are produced from running
    `make kindle`:
 
    - `Error(core):E1008: Failed conversion to unicode. The resulting string may contain wrong characters.`
