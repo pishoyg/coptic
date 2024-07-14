@@ -180,7 +180,7 @@ kindle: FORCE
 
 kindle_cp_to_drive:
 	cp \
-	"dictionary/marcion.sourceforge.net/data/output/dialect-B/dialect-B.opf" \
+	"dictionary/marcion.sourceforge.net/data/output/dialect-B/dialect-B.mobi" \
 	"$${KINDLE_DIR}"
 
 # DEVELOPER
