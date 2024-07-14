@@ -247,15 +247,18 @@ class node:
             return ""
 
         out = []
+        out.append("<ul>")
 
-        depth = -1
+        depth = 0
         for d in descendants:
             cur_depth = int(d.cell("depth"))
             while cur_depth > depth:
+                out.append("<li>")
                 out.append("<ul>")
                 depth += 1
             while cur_depth < depth:
                 out.append("</ul>")
+                out.append("</li>")
                 depth -= 1
             word = d.cell("word-parsed-prettify")
             type = d.cell("type-parsed")
@@ -265,14 +268,24 @@ class node:
                 meaning = f"({type}) {meaning}"
             out.extend(
                 [
-                    f"<dt>{word}</dt>",
-                    f"<dd>{meaning}</dd>",
+                    "<li>",
+                    f"{word}",
                 ]
             )
+            if meaning:
+                out.extend(
+                    [
+                        "<br/>",
+                        f"{meaning}",
+                    ]
+                )
+            out.append("</li>")
 
-        while depth > -1:
+        while depth > 0:
             out.append("</ul>")
+            out.append("</li>")
             depth -= 1
+        out.append("</ul>")
 
         out = " ".join(out)
         return out
