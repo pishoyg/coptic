@@ -104,9 +104,7 @@ ENTRY_XHTML_FMT = f"""\
                 {{inflections}}
             </idx:infl>
         </idx:orth>
-        <p>
-            {{definition}}
-        </p>
+        {{definition}}
     </idx:short>
 </idx:entry>\
 """
