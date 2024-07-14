@@ -4,7 +4,7 @@
         <dc:title>A Coptic Dictionary</dc:title>
         <dc:creator opf:role="aut">pishoybg@gmail.com</dc:creator>
         <dc:language>en-us</dc:language>
-        <meta name="cover" content="cover"/>
+        <meta name="cover" content="Crum"/>
         <x-metadata>
           <DictionaryInLanguage>en-us</DictionaryInLanguage>
           <DictionaryOutLanguage>en-us</DictionaryOutLanguage>
@@ -12,10 +12,8 @@
         </x-metadata>
     </metadata>
     <manifest>
-        <item id="cover"
-      href="cover.html"
-      media-type="application/xhtml+xml" />
-<item id="0001_0100"
+        <item href="Crum.jpg" id="Crum" media-type="image/jpg" />
+        <item id="0001_0100"
       href="0001_0100.xhtml"
       media-type="application/xhtml+xml" />
 <item id="0101_0200"
