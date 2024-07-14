@@ -44,12 +44,12 @@ generate_1: bible copticsite marcion marcion_dawoud marcion_img kellia kellia_an
 validate: precommit
 
 .PHONY: generate_2
-generate_2: flashcards flashcards_redundant
+generate_2: flashcards flashcards_redundant kindle
 
 .PHONY: generate_3
 	# This is a placeholder for an upcoming `anki` rule that will exist after we
 	# split the flashcard TSV generation from Anki package generation pipelines.
-generate_3: kindle
+generate_3:
 
 .PHONY: publish
 publish: flashcards_cp_to_drive
