@@ -157,7 +157,7 @@ QUALITY_ENCODING = {
 TYPE_ENCODING = {
     0: lexical.type("-", "(-)", "-", None, append=False),
     # (ⲟⲩ)
-    3: lexical.type("noun", "(noun)", "noun", inflect.Type.NOUN_NO_ARTICLE),
+    3: lexical.type("noun", "(noun)", "noun", inflect.Type.NOUN_UNKNOWN_GENDER),
     1: lexical.type("noun male", "(ⲡ)", "noun male", inflect.Type.NOUN_MASCULINE),
     4: lexical.type("noun female", "(ⲧ)", "noun female", inflect.Type.NOUN_FEMININE),
     22: lexical.type(
@@ -271,7 +271,10 @@ DETACHED_TYPES_1 = [
         ),
     ),
     ("$**", lexical.type("<i>neg </i>", "(neg.)", "neg", None)),
-    ("$*", lexical.type("<i>(nn)</i>", "(nn)", "(nn)", inflect.Type.NOUN_NO_ARTICLE)),
+    (
+        "$*",
+        lexical.type("<i>(nn)</i>", "(nn)", "(nn)", inflect.Type.NOUN_UNKNOWN_GENDER),
+    ),
     (
         "**$",
         lexical.type(
@@ -286,7 +289,9 @@ DETACHED_TYPES_1 = [
     ),
     (
         "*****",
-        lexical.type("<i>noun: </i>", "(noun)", "noun", inflect.Type.NOUN_NO_ARTICLE),
+        lexical.type(
+            "<i>noun: </i>", "(noun)", "noun", inflect.Type.NOUN_UNKNOWN_GENDER
+        ),
     ),  # (ⲟⲩ)
     ("****", lexical.type("<i>female: </i>", "(ⲧ)", "female", lexical.Gender.FEMININE)),
     ("***", lexical.type("<i>male: </i>", "(ⲡ)", "male", lexical.Gender.MASCULINE)),
