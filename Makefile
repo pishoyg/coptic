@@ -55,7 +55,7 @@ generate_3:
 publish: flashcards_cp_to_drive
 
 .PHONY: stats
-stats: loc marcion_img_count marcion_dawoud_count
+stats: stats_aux
 
 # The following level-2 rules are not included in any of the level-3 rules
 # above. They are relevant only during development, but not for deployment.
@@ -103,13 +103,6 @@ marcion_dawoud: FORCE
 	curl -L \
 		"https://docs.google.com/spreadsheets/d/e/2PACX-1vTItxV4E4plQrzjWLSea85ZFQWcQ4ba-p2BBIDG9h5yI0i9URn9GD9zZhxEj8kVI7jhCoPWPEapd9D7/pub?output=tsv" \
 		> "dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv"
-
-marcion_dawoud_count: FORCE
-	# Number of words that have at least one page from Dawoud:
-	cat dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv \
-		| awk -F"\t" '{ print $$2 $$3 }'  \
-		| grep --invert '^$$'  \
-		| wc --lines
 
 marcion: $(shell find dictionary/marcion.sourceforge.net/ -type f)
 	python dictionary/marcion.sourceforge.net/main.py
@@ -173,14 +166,6 @@ marcion_img_find: FORCE
 		--exclude "type-parsed:verb" "dialect-B:" \
 		--start_at_key="$${START_AT_KEY}"
 
-marcion_img_count: FORCE
-	# Number of words possessing at least one image:
-	ls dictionary/marcion.sourceforge.net/data/img/ \
-		| grep -oE '^[0-9]+' \
-		| sort \
-		| uniq \
-		| wc --lines
-
 # DEVELOPER
 flashcards_verify: flashcards_try
 	bash ziff.sh \
@@ -218,16 +203,6 @@ marcion_epub_clean: $(shell ls dictionary/marcion.sourceforge.net/data/output/*.
 kellia_analysis_clean: dictionary/kellia.uni-goettingen.de/analysis.json
 	git restore "dictionary/kellia.uni-goettingen.de/analysis.json"
 
-loc: FORCE
-	# Number of lines of code:
-	find . \
-		-name "*.py" -o -name "*.java" \
-		-o -name "*.proto" -o -name "*.sh" \
-		-o -name "*.js" -o -name "*.vba" \
-		-o -name "Makefile" \
-		| grep --invert "^./archive/copticbible.apk/" \
-		| xargs cat | wc --lines
-
 readme_doctoc: FORCE
 	bash doctoc_readme.sh
 
@@ -239,9 +214,13 @@ python_unittest: FORCE
 
 py_dirs: FORCE
 	find . -name "*.py" | xargs dirname | grep --invert "^./archive" | sort | uniq
-# FORCE
+
+stats_aux: FORCE
+	bash stats.sh
 
 # LEVEL-0 rules ###############################################################
+
+# FORCE
 .PHONY: FORCE
 FORCE:
 
