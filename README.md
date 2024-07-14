@@ -474,25 +474,25 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it.
 1. Fix the [Kindle-compatible dictionary](
 https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV). (p0, 50+ hours)
 
-   1. We have experimented with putting words under multiple orths, but this
-      doesn't seem to work. We experimented with filtering the dictionary, but
-      the output is chopped, and lookup unjustifiably failes! Here are some
-      ideas:
-
-      - We should perhaps follow the docs and generate the
-      dictionary using Kindle Previewer 3. We will have to convert the
-      dictionary to EPUB format first, but that should be doable.
-
-      - Handle the warnings / errors.
-
    1. Currently, the following errors and warnings are produced from running
    `make kindle`:
 
-   - `Error(core):E1008: Failed conversion to unicode. The resulting string may contain wrong characters.`
-
    - `Warning(index build):W15001: inflection rule or rule group too long (max=255). Discarded.`
 
-   - `Warning(inputpreprocessor):W29010: Tag rejected due to being used in unauthorized scope: <dd>`
+   We have experimented with putting words under multiple orths, but this
+   doesn't seem to work. We experimented with filtering the dictionary, but
+   the output is chopped, and lookup unjustifiably fails! Here are some
+   ideas:
+
+   - We should perhaps follow the docs and generate the
+   dictionary using Kindle Previewer 3. We will have to convert the
+   dictionary to EPUB format first, but that should be doable.
+
+   For reference, here are the successful examples that you've come across:
+
+   - [https://github.com/runehol/kindlearadict/](https://github.com/runehol/kindlearadict/)
+   - [https://hanzihero.com/blog/custom-kindle-dictionary](https://hanzihero.com/blog/custom-kindle-dictionary)
+   - [https://github.com/tekinged/tekinged.com/blob/main/scripts/mk_kindle_dict.py](https://github.com/tekinged/tekinged.com/blob/main/scripts/mk_kindle_dict.py)
 
 1. Create a dictionary from copticsite.com's data.
 
