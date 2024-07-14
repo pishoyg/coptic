@@ -480,10 +480,6 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV). (p0, 50+ hours)
 
    - `Warning(inputpreprocessor):W29010: Tag rejected due to being used in unauthorized scope: <dd>`
 
-   - `Warning(prcgen):W14005: Missing value attribute on <idx:iform> tag.`
-
-   - `Warning(prcgen):W14006: No inflections found in inflections group tag <idx:infl>.`
-
 1. Create a dictionary from copticsite.com's data.
 
 1. Create a dictionary from KELLIA's data.
