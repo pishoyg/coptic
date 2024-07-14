@@ -227,8 +227,6 @@ def main() -> None:
                 inflections=inflections,
             )
             k.add_entry(entry)
-        k.write_epub(os.path.join(args.epub_dir, f"dialect-{d}.epub"))
-        k.write_xhtml(os.path.join(args.epub_dir, f"dialect-{d}.xhtml"))
         k.write_pre_mobi(os.path.join(args.epub_dir, f"dialect-{d}"))
 
 
