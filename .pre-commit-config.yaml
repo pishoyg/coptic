@@ -95,6 +95,11 @@ repos:
       - id: buf-lint
       - id: buf-breaking
       - id: buf-generate
+  # Lua.
+  - repo: https://github.com/JohnnyMorganz/StyLua
+    rev: v0.20.0
+    hooks:
+      - id: stylua
   # Local scripts.
   - repo: local
     hooks:
@@ -138,7 +143,6 @@ repos:
         # tests in each Python directory, otherwise test discovery will fail and
         # the pre-commit will fail.
         # This is OK. Placeholder tests are also a reminder for us to write them.
-
         name: python-unittest
         entry: bash -c 'for x in $(dirname "$@" | grep --invert "/test$" | sort | uniq); do python -m unittest discover "$x"; done' --
         language: system
