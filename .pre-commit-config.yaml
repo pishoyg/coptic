@@ -41,6 +41,14 @@ repos:
     rev: v0.0.1
     hooks:
       - id: sync-pre-commit-deps
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.2.4
+    hooks:
+      - id: codespell
+        # The KELLIA driver contains non-English text.
+        # Other types of files are data files, not code files. We don't take
+        # data updates lightly.
+        exclude: .*\.(xml|html|xhtml|txt|tsv|csv|json|tab|msql|xsd)$|dictionary/kellia.uni-goettingen.de/main.py
   # Shell.
   - repo: https://github.com/shellcheck-py/shellcheck-py
     rev: v0.10.0.1

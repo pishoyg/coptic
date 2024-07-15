@@ -157,7 +157,7 @@ class structured_word:
 
     def __str__(self) -> str:
         raise ValueError(
-            "Please use an explicity string conversion method in"
+            "Please use an explicitly string conversion method in"
             " order to provide the necessary arguments."
         )
 

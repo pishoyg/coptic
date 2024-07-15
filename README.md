@@ -390,7 +390,7 @@ into the repo.
 1. Obtain an updated version of [copticsite.com](https://copticsite.com/)'s dictionary.
 
 1. Get a cleaner, more recent scan of Dawoud's dictionary. Obtain the source
-   file if posible. The current scan is low-quality. At the same time, it's
+   file if possible. The current scan is low-quality. At the same time, it's
    outdated, and the pages sometimes don't align!
 
 1. Get a cleaner scan of Crum's dictionary. [coptot](

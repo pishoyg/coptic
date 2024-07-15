@@ -59,11 +59,11 @@ argparser.add_argument(
     default="bible/stshenouda.org/data/raw/Sources/",
 )
 
-# Ouptut arguments:
+# Output arguments:
 argparser.add_argument(
     "--output_dir",
     type=str,
-    help="Path to the ouptut directory. For each output format, we will write"
+    help="Path to the output directory. For each output format, we will write"
     " the output in a new subdirectory of this directory that is named after"
     " the format",
     default="bible/stshenouda.org/data/output",

@@ -118,9 +118,9 @@ class _content_field(field):
         return self._media_files
 
     def next(self) -> str | list[str]:
-        ans = self._content[self._counter]
+        val = self._content[self._counter]
         self._counter += 1
-        return ans
+        return val
 
     def length(self) -> int:
         return len(self._content)

@@ -133,7 +133,7 @@ def crum(
                 get_caption=field.stem,
                 force=False,
             ),
-            # Horizonal line.
+            # Horizontal line.
             "<hr/>",
             # Full entry.
             roots_col("word-parsed-no-ref", force=True),
