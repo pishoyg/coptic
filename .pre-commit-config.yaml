@@ -1,13 +1,12 @@
 # See https://pre-commit.com for more information
-# TODO: Add pre-commits from https://github.com/pre-commit/pygrep-hooks.
-# TODO: Add pre-commits from
+
+# TODO: Add hooks from https://github.com/pre-commit/pygrep-hooks.
+# TODO: Add hooks from
 # https://github.com/orgs/pre-commit/repositories?language=&q=%22mirrors-%22+archived%3AFalse&sort=.
-# TODO: Add pre-commits from https://pre-commit.com/hooks.html.
-# TODO: Add a pre-commit for bash script.
-# TODO: Add a pre-commit for Makefile.
-# TODO: Enable more of the commented-out hooks below. These were only commented
-# out because they are hard to satisfy at the time they were introduced, but
-# the plan is to enable them in the long run.
+# TODO: Add hooks from https://pre-commit.com/hooks.html.
+# TODO: Add hooks for bash script. (The hooks below are disabled!)
+# TODO: Add hooks for Makefile.
+# TODO: Add hooks for JSON.
 
 exclude: ^archive/
 
@@ -42,23 +41,30 @@ repos:
         exclude: .*\.(tsv|csv|xml|html)$
       - id: check-xml
 
-      - id: check-json
-      - id: pretty-format-json
-      # - id: no-commit-to-branch
-      # - id: detect-aws-credentials
-      # - id: double-quote-string-fixer
-      # - id: file-contents-sorter
-
   - repo: https://github.com/mxr/sync-pre-commit-deps
     rev: v0.0.1
     hooks:
     - id: sync-pre-commit-deps
+
+  # Shell.
+  - repo: https://github.com/shellcheck-py/shellcheck-py
+    rev: v0.10.0.1
+    hooks:
+    - id: shellcheck
+      exclude: .*
+
+  - repo: https://github.com/openstack/bashate
+    rev: 2.1.1
+    hooks:
+    - id: bashate
+      exclude: .*
 
   # Python.
   - repo: https://github.com/psf/black-pre-commit-mirror
     rev: 24.4.2
     hooks:
       - id: black
+
   - repo: https://github.com/pycqa/isort
     rev: 5.13.2
     hooks:
@@ -101,7 +107,7 @@ repos:
         name: tidy-xml
         entry: tidy -indent -modify -quiet --tidy-mark no -wrap 80 -xml
         language: system
-        files: '.*\.(xml|xhtml)'
+        files: .*\.(xml|xhtml|opf)$
 
       - id: stats
         name: stats

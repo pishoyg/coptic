@@ -22,13 +22,13 @@ export JSON_KEYFILE_NAME=""
 # So copying the new files to that directory essentially publishes the new
 # version of the package to whoever has the link.
 # See https://www.google.com/drive/download/.
-export FLASHCARD_DIR="~/Desktop"
+export FLASHCARD_DIR="${HOME}/Desktop"
 
 # KINDLE_DIR is the destination directory for Kindle dictionaries.
-export KINDLE_DIR="~/Desktop/"
+export KINDLE_DIR="${HOME}/Desktop/"
 
 # BIBLE_DIR is the destination directory for the Bible EPUBs.
-export BIBLE_DIR="~/Desktop/"
+export BIBLE_DIR="${HOME}/Desktop/"
 
 # TEST_DIR is used to publish temporary versions of the flashcard packages
 # during testing. Use it in the testing or verification rules, which are
@@ -46,7 +46,7 @@ export START_AT_KEY="0"
 
 # SKIP_EXISTING defines whether Marcion's image setup script should skip
 # existing targets. In order to turn it on, set:
-#		SKIP_EXISTING="--skip_existing"
-#	TODO: Clean up this mess. Your repo should be smart enough to update the
-#	pictures that have been modified.
+#     SKIP_EXISTING="--skip_existing"
+# TODO: Clean up this mess. Your repo should be smart enough to update the
+# pictures that have been modified.
 export SKIP_EXISTING=""

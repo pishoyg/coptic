@@ -33,7 +33,7 @@ all: install generate_1 validate generate_2 generate_3 publish stats
 # LEVEL 2 RULES ###############################################################
 
 .PHONY: install
-install: pip_install python_install
+install: pip_install python_install precommit_install
 
 .PHONY: generate_1
 generate_1: bible copticsite marcion marcion_dawoud marcion_img kellia kellia_analysis
@@ -77,10 +77,10 @@ verify: flashcards_verify flashcards_crum_sahidic_verify
 try: flashcards_try flashcards_crum_sahidic_try
 
 .PHONY: precommit_scripts
-precommit_scripts: marcion_img_validate python_unittest
+precommit_scripts: marcion_img_validate
 
-.PHONY: organize
-organize: py_dirs
+.PHONY: update
+update: update_precommit update_pip
 
 # LEVEL 1 RULES ###############################################################
 
@@ -90,6 +90,9 @@ pip_install: requirements.txt
 
 python_install:
 	python3 -m pip install -e . "$${BREAK_SYSTEM_PACKAGES}"
+
+precommit_install:
+	pre-commit install
 
 precommit: FORCE
 	pre-commit run
@@ -228,15 +231,14 @@ kellia_analysis_clean: dictionary/kellia.uni-goettingen.de/analysis.json
 marcion_img_validate: FORCE
 	bash dictionary/marcion.sourceforge.net/img_validate.sh
 
-python_unittest: FORCE
-	bash python_unittest.sh
-
-py_dirs: FORCE
-	find . -name "*.py" | xargs dirname | grep --invert "^./archive" | sort | uniq
-
 stats_aux: FORCE
 	bash stats.sh
 
+update_precommit: FORCE
+	pre-commit autoupdate
+
+update_pip: FORCE
+	pip-review --local --auto
 # LEVEL-0 rules ###############################################################
 
 # FORCE
