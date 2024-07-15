@@ -18,8 +18,6 @@ INDEX = "index"
 
 TYPE_ENFORCED = True
 STEP = 100
-# TODO: Parameterize based on the size of the dictionary.
-ZFILL = 4
 
 OPF_FILENAME_FMT = f"{{identifier}}.opf"
 
@@ -178,14 +176,25 @@ class volume:
 @type_enforced.Enforcer(enabled=TYPE_ENFORCED)
 class dictionary:
     def __init__(
-        self, title: str, author: str, identifier: str, cover_path: str
+        self, title: str, author: str, identifier: str, cover_path: str, zfill: int = 0
     ) -> None:
+        """
+        Args:
+            zfill: The zfill to use while assigning the output file names. If
+            set to zero, defaults to `len(str(len(self._entries))) + 1`. The
+            extra 1 is added to allow the dictionaries to grow. If a dictionary
+            grows to a new order of magnitude, thus making the default go yet
+            one character longer (unnecessarily), then it would be a good time
+            to set this argument explicitly to the old value, thus retaining
+            the same zfill.
+        """
         self._title: str = title
         self._author: str = author
         self._identifier: str = identifier
         self._cover_path: str = cover_path
         self._cover_basename: str = os.path.basename(self._cover_path)
         self._entries: list[entry] = []
+        self._zfill = zfill
 
     def add_entry(self, e: entry) -> None:
         self._entries.append(e)
@@ -198,11 +207,12 @@ class dictionary:
             f.write(self.xhtml())
 
     def xhtmls(self) -> list[tuple[str, str]]:
+        self._zfill = self._zfill or len(str(len(self._entries))) + 1
         filenames_contents: list[tuple[str, str]] = []
         for i in range(0, len(self._entries), STEP):
             entries = self._entries[i : i + STEP]
-            start = str(i + 1).zfill(ZFILL)
-            end = str(i + len(entries)).zfill(ZFILL)
+            start = str(i + 1).zfill(self._zfill)
+            end = str(i + len(entries)).zfill(self._zfill)
             file_name = f"{start}_{end}.xhtml"
             content = volume(entries).xhtml()
             filenames_contents.append((file_name, content))
