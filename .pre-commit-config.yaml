@@ -91,13 +91,13 @@ repos:
 
       - id: tidy-html
         name: tidy-html
-        entry: tidy -indent -modify -quiet
+        entry: tidy -indent -modify -quiet --tidy-mark no -wrap 80
         language: system
         files: '.*\.html'
 
       - id: tidy-xml
         name: tidy-xml
-        entry: tidy -indent -modify -xml -quiet
+        entry: tidy -indent -modify -quiet --tidy-mark no -wrap 80 -xml
         language: system
         files: '.*\.(xml|xhtml)'
 
