@@ -4,7 +4,6 @@
 # TODO: Add hooks from
 # https://github.com/orgs/pre-commit/repositories?language=&q=%22mirrors-%22+archived%3AFalse&sort=.
 # TODO: Add hooks from https://pre-commit.com/hooks.html.
-# TODO: Add hooks for bash script. (The hooks below are disabled!)
 # TODO: Add hooks for Makefile.
 # TODO: Add hooks for JSON.
 
@@ -51,13 +50,18 @@ repos:
     rev: v0.10.0.1
     hooks:
     - id: shellcheck
-      exclude: .*
 
   - repo: https://github.com/openstack/bashate
     rev: 2.1.1
     hooks:
     - id: bashate
-      exclude: .*
+      args: [-i, E003]
+
+  - repo: https://github.com/scop/pre-commit-shfmt
+    rev: v3.8.0-1
+    hooks:
+    - id: shfmt
+      args: [-indent, '2']
 
   # Python.
   - repo: https://github.com/psf/black-pre-commit-mirror

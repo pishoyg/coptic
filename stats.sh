@@ -9,6 +9,7 @@ LOC=$(find . \
   | grep --invert "^./archive/copticbible.apk/" \
   | xargs cat | wc --lines)
 
+# shellcheck disable=SC2010  # Allow grep after ls.
 MARCION_IMG=$(ls dictionary/marcion.sourceforge.net/data/img/ \
   | grep -oE '^[0-9]+' \
   | sort \

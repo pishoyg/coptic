@@ -19,17 +19,19 @@ WIDTH="300"
 DST="dictionary/marcion.sourceforge.net/data/img-${WIDTH}"
 
 # Delete obsolete images.
-for FILE in $(ls "${DST}"); do
- if [ ! -f "${SRC}/${FILE}" ] && [ ! -f "${SRC}/${FILE/.jpg/.png}" ]; then
-   rm "${DST}/${FILE}"
+for FILE in "${DST}"/*; do
+  BASENAME=$(basename "${FILE}")
+ if [ ! -f "${SRC}/${BASENAME}" ] && [ ! -f "${SRC}/${BASENAME/.jpg/.png}" ]; then
+   rm "${DST}/${BASENAME}"
  fi
 done
 
 mkdir -p "${DST}"
 
-for FILE in $(ls "${SRC}"); do
-  if ${SKIP_EXISTING} && [ -f "${DST}/${FILE/.png/.jpg}" ]; then
+for FILE in "${SRC}"/*; do
+  BASENAME=$(basename "${FILE}")
+  if ${SKIP_EXISTING} && [ -f "${DST}/${BASENAME/.png/.jpg}" ]; then
     continue
   fi
-  magick "${SRC}/${FILE}" -resize "${WIDTH}x" "${DST}/${FILE/.png/.jpg}"
+  magick "${SRC}/${BASENAME}" -resize "${WIDTH}x" "${DST}/${BASENAME/.png/.jpg}"
 done

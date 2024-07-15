@@ -3,18 +3,21 @@
 IMG="dictionary/marcion.sourceforge.net/data/img/"
 IMG_300="dictionary/marcion.sourceforge.net/data/img-300/"
 
+# shellcheck disable=SC2010  # Allow grep after ls.
 img_extensions () {
-  ls "${IMG}" | grep -o '\..*' | tr '[:upper:]' '[:lower:]' | sort
+  ls "${IMG}" | grep -oE '\..*$' | tr '[:upper:]' '[:lower:]' | sort
 }
 
 valid_img_extensions () {
   echo .avif .gif .jpeg .jpg .png .webp | tr ' ' '\n' | sort
 }
 
+# shellcheck disable=SC2010  # Allow grep after ls.
 img_stems () {
   ls "${IMG}" | grep -oE '^[^.]+' | sort
 }
 
+# shellcheck disable=SC2010  # Allow grep after ls.
 img_300_stems () {
   ls "${IMG_300}" | grep -oE '^[^.]+' | sort
 }
