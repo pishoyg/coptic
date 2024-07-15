@@ -304,10 +304,10 @@ and statuses spelled out.
 
 (7-8 hours)
 
-1. Add docs about obtaining the ebook and kindle dictionary. (p0, 1-2 hours)
+1. Add docs about obtaining the ebook and kindle dictionary. (**p0**, 1-2 hours)
 
 1. Document the repo in a way that makes it possible to invite collaborators.
-   (p0)
+   (**p0**)
 
 1. Add deck descriptions. (p2)
 
@@ -367,11 +367,11 @@ into the repo.
 
 ### Diplomacy TODO's
 
-1. Find one or two co-owners of the project. (p0)
+1. Find one or two co-owners of the project. (**p0**)
 
-1. Publicize the project, and find an audience of learners. (p0)
+1. Publicize the project, and find an audience of learners. (**p0**)
 
-1. Find contributors, in coding and data collection. (p0)
+1. Find contributors, in coding and data collection. (**p0**)
 
 1. Look at [tekinged.com](https://tekinged.com/) for inspiration on what you
    can do for an incubated language.
@@ -398,7 +398,7 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it.
 
 ### Learner Convenience TODO's
 
-1. Deploy the flashcards on a standalone app. (p0, 100+ hours, delegate)
+1. Deploy the flashcards on a standalone app. (**p0**, 100+ hours, delegate)
    
    This will vastly increase the app's popularity.
 
@@ -472,7 +472,7 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it.
 ### Kindle TODO's
 
 1. Fix the [Kindle-compatible dictionary](
-https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV). (p0, 50+ hours)
+https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV). (**p0**, 50+ hours)
 
    1. Currently, the following errors and warnings are produced from running
    `make kindle`:
@@ -621,7 +621,7 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas). (p2, 20+ hours, delegate
 1. complete your [keyboard
 proposal](
 https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/edit
-). (p0, 100+ hours)
+). (**p0**, 100+ hours)
 
 ### Rigor TODO's
 
@@ -645,9 +645,9 @@ https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/
 
 ### Developer Convenience TODO's
 
-1. Revisit the currently-assigned priorities. (p0)
+1. Revisit the currently-assigned priorities. (**p0**)
 
-1. Write the flashcard data to an intermediate format before `.apkg`. (p0, 20
+1. Write the flashcard data to an intermediate format before `.apkg`. (**p0**, 20
    hours)
 
    This has the following advantages:
