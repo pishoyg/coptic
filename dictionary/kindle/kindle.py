@@ -1,6 +1,4 @@
 # TODO: Learn more about the spell attribute and wildcard search. See ENTRY.
-# TODO: Use inflection groups rather than a flat list. See ENTRY below.
-# TODO: Add a check for valid XHTML.
 import os
 import pathlib
 import shutil
@@ -20,7 +18,7 @@ INDEX = "index"
 
 TYPE_ENFORCED = True
 STEP = 100
-# TODO: This will likely have to increase to accommodate larger dictionaries.
+# TODO: Parameterize based on the size of the dictionary.
 ZFILL = 4
 
 OPF_FILENAME_FMT = f"{{identifier}}.opf"

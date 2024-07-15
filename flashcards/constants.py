@@ -198,6 +198,8 @@ def crum(
             ),
             # Audio.
             # TODO: Label the per-dialect audios, like you did for the front.
+            # If this deck contains multiple dialects, it won't be clear for
+            # the user which audios belong to which dialect!
             field.aon(
                 field.cat(
                     # Pishoy's pronunciation.

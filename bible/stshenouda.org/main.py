@@ -14,7 +14,6 @@ from ebooklib import epub
 # from oauth2client.service_account import ServiceAccountCredentials
 
 
-# TODO: Take the list of languages as input instead of hardcoding it.
 LANGUAGES = [
     "Bohairic",
     "Sahidic",
@@ -38,8 +37,6 @@ VERSE_PREFIX = re.compile(r"^\(([^)]+)\)")
 argparser = argparse.ArgumentParser(description="Process the Coptic Bible data.")
 
 # Input arguments:
-# TODO: Use the data from the extracted APK directly, instead of copying the
-# APK assets to the `data` subdirectory of this project.
 argparser.add_argument(
     "--json",
     type=str,

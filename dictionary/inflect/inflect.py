@@ -64,8 +64,6 @@ def inflect(morpheme: str, type: Type) -> list[str]:
     """
     prefixes = _TYPE_TO_PREFIX_LIST[type]
     prefixes = sum(prefixes, [])
-    # TODO: The input data should be a single Coptic block in the first place.
-    # Fix at the source, and remove this regex search.
     assert COPTIC_ONLY_BLOCK.fullmatch(morpheme)
     assert morpheme
     return [p + morpheme for p in prefixes]
