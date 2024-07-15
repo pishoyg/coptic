@@ -94,6 +94,15 @@ repos:
         entry: tidy -indent -modify -quiet --tidy-mark no -wrap 80
         language: system
         files: '.*\.html'
+        # TODO: Fix and reinclude the file below. While it's unused in our
+        # pipelines, it's useful for manual word lookups.
+        # We currently encounter the following errors while processing it:
+        #   Warning: <cit> end of file while parsing attributes
+        #   Warning: <ref> end of file while parsing attributes
+        #   Warning: <table> attribute "cellpadding" not allowed for HTML5
+        #   Warning: <table> attribute "cellspacing" not allowed for HTML5
+        #   Warning: <table> lacks "summary" attribute
+        exclude: dictionary/marcion\.sourceforge\.net/data/marcion-raw/search_results\.html
 
       - id: tidy-xml
         name: tidy-xml
