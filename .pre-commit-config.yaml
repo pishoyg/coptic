@@ -1,10 +1,9 @@
 # See https://pre-commit.com for more information
 
-# TODO: Add hooks for JSON.
+# TODO: Add hooks from https://pre-commit.com/hooks.html.
 # TODO: Add hooks from https://github.com/pre-commit/pygrep-hooks.
 # TODO: Add hooks from
 # https://github.com/orgs/pre-commit/repositories?language=&q=%22mirrors-%22+archived%3AFalse&sort=.
-# TODO: Add hooks from https://pre-commit.com/hooks.html.
 
 exclude: ^archive/
 repos:
@@ -148,3 +147,8 @@ repos:
         language: system
         types: [python]
         verbose: true
+      - id: json-tool
+        name: json-tool
+        entry: bash -c 'for x in "$@"; do NEW=$(python -m json5.tool --as-json --indent 2 "$x") && echo "${NEW}" > "$x" && python -m json.tool --no-ensure-ascii --indent 2 "$x" "$x"; done' --
+        language: system
+        types: [json]
