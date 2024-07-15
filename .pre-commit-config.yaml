@@ -85,6 +85,16 @@ repos:
     rev: v0.13.0
     hooks:
       - id: yamlfmt
+  # Protobuf.
+  - repo: https://github.com/bufbuild/buf
+    rev: v1.34.0
+    hooks:
+      - id: buf-dep-prune
+      - id: buf-dep-update
+      - id: buf-format
+      - id: buf-lint
+      - id: buf-breaking
+      - id: buf-generate
   # Local scripts.
   - repo: local
     hooks:
