@@ -399,7 +399,7 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it.
 ### Learner Convenience TODO's
 
 1. Deploy the flashcards on a standalone app. (**p0**, 100+ hours, delegate)
-   
+
    This will vastly increase the app's popularity.
 
 1. Until then, reassess whether Anki is your best bet. (p2, 20 hours, delegate)
@@ -705,6 +705,6 @@ The data used here was digitalized and published through the efforts of:
 
 1. Osama Thabet, creator of [copticsite.com](https://copticsite.com/)
 
-1. [Kyrillos Wannes](https://twitter.com/kyrilloswannes), author of *Een 
+1. [Kyrillos Wannes](https://twitter.com/kyrilloswannes), author of *Een
    Inleiding tot Bohairisch Koptisch*, who is rigorously
    collecting Marcion-Dawoud mapping for the flashcards project.

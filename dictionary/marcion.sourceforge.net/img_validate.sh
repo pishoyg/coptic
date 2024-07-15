@@ -22,7 +22,7 @@ if [ ! -z "${DIFF}" ]; then
   echo "Unknown extensions:"
   echo "${DIFF}"
   echo "If you're sure your script can handle those, add them to the list so"
-  echo " this error will disappear." 
+  echo " this error will disappear."
   exit 1
 fi
 
