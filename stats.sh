@@ -24,5 +24,4 @@ echo ${MARCION_IMG}
 echo "Number of words that have at least one page from Dawoud:"
 echo ${MARCION_DAWOUD}
 
-TIMESTAMP=$(date +%s)
-echo -e "${TIMESTAMP}\t${LOC}\t${MARCION_IMG}\t${MARCION_DAWOUD}" >> stats.tsv
+echo -e "$(date),$(date +%s)\t${LOC}\t${MARCION_IMG}\t${MARCION_DAWOUD}" >> stats.tsv
