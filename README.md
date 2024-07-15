@@ -637,14 +637,11 @@ https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/
 
 1. Crum: Detached types override / invalidate root types. Investigate.
 
-1. Pick up some of the Easter egg tasks left around the code:
+1. Pick up some of the Easter egg tasks left around the code.
 
-   ```bash
-   grep TODO -R bible dictionary keyboard flashcards
-   ```
-
-   Move them to README files when more visibility is warranted. Delete them
-   when they are deemed irrelevant.
+   - Run `make todo` to find them.
+   - Move them to README files when more visibility is warranted.
+   - Delete them when they are deemed irrelevant.
 
 ### Developer Convenience TODO's
 

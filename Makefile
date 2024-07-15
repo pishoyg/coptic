@@ -189,6 +189,9 @@ kindle_cp_to_drive:
 	"$${KINDLE_DIR}"
 
 # DEVELOPER
+todo: FORCE
+	grep TODO -R bible dictionary keyboard flashcards
+
 flashcards_verify: flashcards_try
 	bash ziff.sh \
 		"flashcards/data/coptic.apkg"
