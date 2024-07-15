@@ -52,8 +52,7 @@ repos:
 
       - id: python-unittest
         name: python-unittest
-        entry: python_unittest.sh
-        language: script
+        entry: bash -c 'for x in "$@"; do python -m unittest discover $(dirname "$x"); done' --
+        language: system
         types: [python]
-        pass_filenames: false
-
+        verbose: true
