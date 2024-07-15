@@ -102,7 +102,6 @@ repos:
         #   Warning: <table> attribute "cellpadding" not allowed for HTML5
         #   Warning: <table> attribute "cellspacing" not allowed for HTML5
         #   Warning: <table> lacks "summary" attribute
-        exclude: dictionary/marcion\.sourceforge\.net/data/marcion-raw/search_results\.html
 
       - id: tidy-xml
         name: tidy-xml
