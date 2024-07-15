@@ -662,6 +662,13 @@ https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/
    - It is a plausible solution for the timestamping problem currently faced.
    - Support a fanout to platforms other than Anki.
 
+1. Running `make bible` and then `pre-commit run tidy-html` produces a lot of
+   warnings. Fix them to reduce the linting noise.
+
+   To start with, lots of `<span>` elements are apparently empty and they end
+   up getting trimmed. Prevent your code from generating those in the first
+   place.
+
 1. Run `checkmake`, `doctoc`, and `tidy` using pre-commits that download the
    hooks from a remote repo, so you won't have to assume the existence of the
    binaries on your local machine.
