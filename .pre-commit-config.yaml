@@ -85,6 +85,7 @@ repos:
   # Local scripts.
   - repo: local
     hooks:
+
       - id: marcion-validate
         name: marcion-validate
         entry: dictionary/marcion.sourceforge.net/img_validate.sh
@@ -94,6 +95,12 @@ repos:
         # deletions as well, which is not straightforward to support in
         # pre-commit.
         pass_filenames: false
+
+      - id: checkmake
+        name: checkmake
+        entry: checkmake
+        language: system
+        types: [makefile]
 
       - id: doctoc
         name: doctoc

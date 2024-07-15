@@ -1,4 +1,4 @@
-SHELL:=/bin/bash
+SHELL := /bin/bash
 
 # VAULT
 #
@@ -28,7 +28,7 @@ SHELL:=/bin/bash
 
 .PHONY: all
 # You might want to run `make clean` following this.
-all: install generate_1 validate generate_2 generate_3 publish stats
+all: install generate_1 test generate_2 generate_3 publish stats
 
 # LEVEL 2 RULES ###############################################################
 
@@ -38,8 +38,8 @@ install: pip_install python_install precommit_install
 .PHONY: generate_1
 generate_1: bible copticsite marcion marcion_dawoud marcion_img kellia kellia_analysis
 
-.PHONY: validate
-validate: precommit
+.PHONY: test
+test: precommit
 
 .PHONY: generate_2
 generate_2: flashcards flashcards_redundant kindle
