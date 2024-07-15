@@ -223,8 +223,9 @@ def write_csv(df):
 
 def write_txt(lang: str, column: pd.Series) -> None:
     path = writing_path("txt", f"{lang}.txt")
+    content = "\n".join(filter(None, column))
     with open(path, "w") as f:
-        f.write("\n".join(column))
+        f.write(content)
 
 
 def html_head(title=""):
@@ -247,6 +248,10 @@ def html_head(title=""):
 </head>""".format(
         title=title
     )
+
+
+def html_body(body=""):
+    return f"<body>{body}</body>"
 
 
 def html_h1(title):
@@ -350,6 +355,7 @@ def process_sources(books):
             )
 
     out = prettify_html("\n".join(out))
+    out = html_head(title="Sources") + html_body(out)
     path = writing_path("", "sources.html")
     with open(path, "w") as o:
         o.write(out)
@@ -456,7 +462,7 @@ def main():
                     "book-indexed": book_to_book_indexed[book_name],
                 }
                 for lang in LANGUAGES:
-                    d[lang] = VERSE_PREFIX.sub("", verse[lang])
+                    d[lang] = VERSE_PREFIX.sub("", verse[lang]).strip()
                     html1[lang][book_name].append(recolor(verse[lang], verse))
                     html2[lang][book_name].append(recolor(verse[lang], verse))
                     html3[lang][book_name].append(recolor(verse[lang], verse))
