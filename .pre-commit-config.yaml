@@ -110,6 +110,13 @@ repos:
         language: system
         files: '.*\.(xml|xhtml)'
 
+      - id: stats
+        name: stats
+        entry: bash -c 'if [[ $(find stats.tsv -mtime +1) ]]; then make stats; fi'
+        language: system
+        pass_filenames: false
+        always_run: true
+
       # N.B. This pre-commit rule forces us to host at least placeholder unit
       # tests in each Python directory, otherwise test discovery will fail and
       # the pre-commit will fail.
