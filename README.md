@@ -662,6 +662,10 @@ https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/
    - It is a plausible solution for the timestamping problem currently faced.
    - Support a fanout to platforms other than Anki.
 
+1. Run `checkmake`, `doctoc`, and `tidy` using pre-commits that download the
+   hooks from a remote repo, so you won't have to assume the existence of the
+   binaries on your local machine.
+
 1. Set up a more robust CI/CD pipelines. (p2, 20 hours)
 
    To start with, set up proper dependencies in Makefile.

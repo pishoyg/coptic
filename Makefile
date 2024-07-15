@@ -84,6 +84,13 @@ update: update_precommit update_pip
 
 # LEVEL 1 RULES ###############################################################
 
+brew_isntall:
+	# TODO: The following is not platform-agnostic. Use pre-commits that
+	# reference a foreign repo in order to run the relevant pre-commits.
+	npm install -g doctoc
+	brew install checkmake
+	brew install tidy-html5
+
 pip_install: requirements.txt
 	python -m pip install --upgrade pip "$${BREAK_SYSTEM_PACKAGES}"
 	python -m pip install -r requirements.txt "$${BREAK_SYSTEM_PACKAGES}"
@@ -193,7 +200,7 @@ kindle_cp_to_drive:
 
 # DEVELOPER
 todo: FORCE
-	grep TODO -R bible dictionary keyboard flashcards
+	grep TODO -R bible dictionary keyboard flashcards kindle
 
 flashcards_verify: flashcards_try
 	bash ziff.sh \
