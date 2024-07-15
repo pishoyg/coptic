@@ -93,7 +93,7 @@ def analyze(soup: bs4.BeautifulSoup | bs4.Tag) -> str:
 
     tree = {}
     for name in all_tag_names:
-        attrs = dict()
+        attrs = {}
         children = set()
         strings = set()
         for tag in soup.find_all(name):
