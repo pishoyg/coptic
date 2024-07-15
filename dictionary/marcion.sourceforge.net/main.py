@@ -422,7 +422,7 @@ def write_to_gspread(df: pd.DataFrame) -> None:
 
     try:
         spreadsheet = client.open(args.gspread_name)
-    except:
+    except Exception:
         spreadsheet = client.create(args.gspread_name)
         spreadsheet.share(args.gspread_owner, perm_type="user", role="owner")
 

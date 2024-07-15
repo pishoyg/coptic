@@ -16,36 +16,38 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
     hooks:
-      # - id: check-added-large-files
+      - id: check-added-large-files
       - id: check-ast
       - id: check-builtin-literals
       - id: check-case-conflict
       - id: check-docstring-first
       - id: check-executables-have-shebangs
-      # - id: check-illegal-windows-names
-      # - id: check-json
       - id: check-merge-conflict
-      # - id: check-shebang-scripts-are-executable
+      - id: check-shebang-scripts-are-executable
       - id: check-symlinks
       - id: check-vcs-permalinks
-      # - id: check-xml
       - id: check-yaml
+      - id: check-toml
       - id: debug-statements
       - id: destroyed-symlinks
-      # - id: detect-aws-credentials
       - id: detect-private-key
-      # - id: double-quote-string-fixer
-      # - id: file-contents-sorter
-      # - id: end-of-file-fixer
       - id: fix-byte-order-marker
-      # - id: forbid-submodules
-      # - id: mixed-line-ending
       - id: name-tests-test
-      # - id: no-commit-to-branch
-      # - id: pretty-format-json
       - id: requirements-txt-fixer
       - id: sort-simple-yaml
-      # - id: trailing-whitespace
+      # - id: forbid-submodules
+      # - id: mixed-line-ending
+      # - id: end-of-file-fixer
+      - id: trailing-whitespace
+        exclude: .*\.(tsv|csv|xml|html)$
+      # - id: check-json
+      # - id: pretty-format-json
+      - id: check-xml
+
+      # - id: no-commit-to-branch
+      # - id: detect-aws-credentials
+      # - id: double-quote-string-fixer
+      # - id: file-contents-sorter
 
   - repo: https://github.com/mxr/sync-pre-commit-deps
     rev: v0.0.1
@@ -54,7 +56,7 @@ repos:
 
   # Python.
   - repo: https://github.com/psf/black-pre-commit-mirror
-    rev: 24.2.0
+    rev: 24.4.2
     hooks:
       - id: black
   - repo: https://github.com/pycqa/isort
@@ -65,7 +67,7 @@ repos:
 
   # Markdown.
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.40.0
+    rev: v0.41.0
     hooks:
       - id: markdownlint-fix
         args: [--disable, MD033, MD036]
@@ -94,14 +96,6 @@ repos:
         entry: tidy -indent -modify -quiet --tidy-mark no -wrap 80
         language: system
         files: '.*\.html'
-        # TODO: Fix and reinclude the file below. While it's unused in our
-        # pipelines, it's useful for manual word lookups.
-        # We currently encounter the following errors while processing it:
-        #   Warning: <cit> end of file while parsing attributes
-        #   Warning: <ref> end of file while parsing attributes
-        #   Warning: <table> attribute "cellpadding" not allowed for HTML5
-        #   Warning: <table> attribute "cellspacing" not allowed for HTML5
-        #   Warning: <table> lacks "summary" attribute
 
       - id: tidy-xml
         name: tidy-xml
@@ -122,7 +116,7 @@ repos:
       # This is OK. Placeholder tests are also a reminder for us to write them.
       - id: python-unittest
         name: python-unittest
-        entry: bash -c 'for x in $(dirname "$@" | uniq); do python -m unittest discover "$x"; done' --
+        entry: bash -c 'for x in $(dirname "$@" | grep --invert "/test$" | sort | uniq); do python -m unittest discover "$x"; done' --
         language: system
         types: [python]
         verbose: true
