@@ -36,7 +36,7 @@ repos:
       - id: requirements-txt-fixer
       - id: sort-simple-yaml
       # - id: forbid-submodules
-      # - id: mixed-line-ending
+      - id: mixed-line-ending
       # - id: end-of-file-fixer
       - id: trailing-whitespace
         exclude: .*\.(tsv|csv|xml|html)$
