@@ -1,103 +1,83 @@
 <?xml version="1.0"?>
-<package version="2.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="BookId">
-    <metadata>
-        <dc:title>A Coptic Dictionary</dc:title>
-        <dc:creator opf:role="aut">pishoybg@gmail.com</dc:creator>
-        <dc:language>en-us</dc:language>
-        <meta name="cover" content="Crum"/>
-        <x-metadata>
-          <DictionaryInLanguage>en-us</DictionaryInLanguage>
-          <DictionaryOutLanguage>en-us</DictionaryOutLanguage>
-          <DefaultLookupIndex>index</DefaultLookupIndex>
-        </x-metadata>
-    </metadata>
-    <manifest>
-        <item href="Crum.png" id="Crum" media-type="image/png" />
-        <item id="0001_0100"
-      href="0001_0100.xhtml"
-      media-type="application/xhtml+xml" />
-<item id="0101_0200"
-      href="0101_0200.xhtml"
-      media-type="application/xhtml+xml" />
-<item id="0201_0300"
-      href="0201_0300.xhtml"
-      media-type="application/xhtml+xml" />
-<item id="0301_0400"
-      href="0301_0400.xhtml"
-      media-type="application/xhtml+xml" />
-<item id="0401_0500"
-      href="0401_0500.xhtml"
-      media-type="application/xhtml+xml" />
-<item id="0501_0600"
-      href="0501_0600.xhtml"
-      media-type="application/xhtml+xml" />
-<item id="0601_0700"
-      href="0601_0700.xhtml"
-      media-type="application/xhtml+xml" />
-<item id="0701_0800"
-      href="0701_0800.xhtml"
-      media-type="application/xhtml+xml" />
-<item id="0801_0900"
-      href="0801_0900.xhtml"
-      media-type="application/xhtml+xml" />
-<item id="0901_1000"
-      href="0901_1000.xhtml"
-      media-type="application/xhtml+xml" />
-<item id="1001_1100"
-      href="1001_1100.xhtml"
-      media-type="application/xhtml+xml" />
-<item id="1101_1200"
-      href="1101_1200.xhtml"
-      media-type="application/xhtml+xml" />
-<item id="1201_1300"
-      href="1201_1300.xhtml"
-      media-type="application/xhtml+xml" />
-<item id="1301_1400"
-      href="1301_1400.xhtml"
-      media-type="application/xhtml+xml" />
-<item id="1401_1500"
-      href="1401_1500.xhtml"
-      media-type="application/xhtml+xml" />
-<item id="1501_1600"
-      href="1501_1600.xhtml"
-      media-type="application/xhtml+xml" />
-<item id="1601_1700"
-      href="1601_1700.xhtml"
-      media-type="application/xhtml+xml" />
-<item id="1701_1800"
-      href="1701_1800.xhtml"
-      media-type="application/xhtml+xml" />
-<item id="1801_1900"
-      href="1801_1900.xhtml"
-      media-type="application/xhtml+xml" />
-<item id="1901_2000"
-      href="1901_2000.xhtml"
-      media-type="application/xhtml+xml" />
-<item id="2001_2095"
-      href="2001_2095.xhtml"
-      media-type="application/xhtml+xml" />
-    </manifest>
-    <spine>
-        <itemref idref="0001_0100"/>
-<itemref idref="0101_0200"/>
-<itemref idref="0201_0300"/>
-<itemref idref="0301_0400"/>
-<itemref idref="0401_0500"/>
-<itemref idref="0501_0600"/>
-<itemref idref="0601_0700"/>
-<itemref idref="0701_0800"/>
-<itemref idref="0801_0900"/>
-<itemref idref="0901_1000"/>
-<itemref idref="1001_1100"/>
-<itemref idref="1101_1200"/>
-<itemref idref="1201_1300"/>
-<itemref idref="1301_1400"/>
-<itemref idref="1401_1500"/>
-<itemref idref="1501_1600"/>
-<itemref idref="1601_1700"/>
-<itemref idref="1701_1800"/>
-<itemref idref="1801_1900"/>
-<itemref idref="1901_2000"/>
-<itemref idref="2001_2095"/>
-    </spine>
+<package version="2.0" xmlns="http://www.idpf.org/2007/opf"
+unique-identifier="BookId">
+  <metadata>
+    <dc:title>A Coptic Dictionary</dc:title>
+    <dc:creator opf:role="aut">pishoybg@gmail.com</dc:creator>
+    <dc:language>en-us</dc:language>
+    <meta name="cover" content="Crum" />
+    <x-metadata>
+      <DictionaryInLanguage>en-us</DictionaryInLanguage>
+      <DictionaryOutLanguage>en-us</DictionaryOutLanguage>
+      <DefaultLookupIndex>index</DefaultLookupIndex>
+    </x-metadata>
+  </metadata>
+  <manifest>
+    <item href="Crum.png" id="Crum" media-type="image/png" />
+    <item id="00001_00100" href="00001_00100.xhtml"
+    media-type="application/xhtml+xml" />
+    <item id="00101_00200" href="00101_00200.xhtml"
+    media-type="application/xhtml+xml" />
+    <item id="00201_00300" href="00201_00300.xhtml"
+    media-type="application/xhtml+xml" />
+    <item id="00301_00400" href="00301_00400.xhtml"
+    media-type="application/xhtml+xml" />
+    <item id="00401_00500" href="00401_00500.xhtml"
+    media-type="application/xhtml+xml" />
+    <item id="00501_00600" href="00501_00600.xhtml"
+    media-type="application/xhtml+xml" />
+    <item id="00601_00700" href="00601_00700.xhtml"
+    media-type="application/xhtml+xml" />
+    <item id="00701_00800" href="00701_00800.xhtml"
+    media-type="application/xhtml+xml" />
+    <item id="00801_00900" href="00801_00900.xhtml"
+    media-type="application/xhtml+xml" />
+    <item id="00901_01000" href="00901_01000.xhtml"
+    media-type="application/xhtml+xml" />
+    <item id="01001_01100" href="01001_01100.xhtml"
+    media-type="application/xhtml+xml" />
+    <item id="01101_01200" href="01101_01200.xhtml"
+    media-type="application/xhtml+xml" />
+    <item id="01201_01300" href="01201_01300.xhtml"
+    media-type="application/xhtml+xml" />
+    <item id="01301_01400" href="01301_01400.xhtml"
+    media-type="application/xhtml+xml" />
+    <item id="01401_01500" href="01401_01500.xhtml"
+    media-type="application/xhtml+xml" />
+    <item id="01501_01600" href="01501_01600.xhtml"
+    media-type="application/xhtml+xml" />
+    <item id="01601_01700" href="01601_01700.xhtml"
+    media-type="application/xhtml+xml" />
+    <item id="01701_01800" href="01701_01800.xhtml"
+    media-type="application/xhtml+xml" />
+    <item id="01801_01900" href="01801_01900.xhtml"
+    media-type="application/xhtml+xml" />
+    <item id="01901_02000" href="01901_02000.xhtml"
+    media-type="application/xhtml+xml" />
+    <item id="02001_02095" href="02001_02095.xhtml"
+    media-type="application/xhtml+xml" />
+  </manifest>
+  <spine>
+    <itemref idref="00001_00100" />
+    <itemref idref="00101_00200" />
+    <itemref idref="00201_00300" />
+    <itemref idref="00301_00400" />
+    <itemref idref="00401_00500" />
+    <itemref idref="00501_00600" />
+    <itemref idref="00601_00700" />
+    <itemref idref="00701_00800" />
+    <itemref idref="00801_00900" />
+    <itemref idref="00901_01000" />
+    <itemref idref="01001_01100" />
+    <itemref idref="01101_01200" />
+    <itemref idref="01201_01300" />
+    <itemref idref="01301_01400" />
+    <itemref idref="01401_01500" />
+    <itemref idref="01501_01600" />
+    <itemref idref="01601_01700" />
+    <itemref idref="01701_01800" />
+    <itemref idref="01801_01900" />
+    <itemref idref="01901_02000" />
+    <itemref idref="02001_02095" />
+  </spine>
 </package>
