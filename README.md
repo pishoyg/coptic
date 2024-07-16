@@ -30,7 +30,7 @@
   - [Keyboard TODO's](#keyboard-todos)
   - [Rigor TODO's](#rigor-todos)
   - [Developer Convenience TODO's](#developer-convenience-todos)
-    - [Guidelines](#guidelines)
+  - [Guidelines](#guidelines)
 - [Credits](#credits)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -507,13 +507,6 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it. (p4)
 
 ### Inflect / Kindle Content TODO's
 
-1. Rethink the directory structure. (**p0**)
-
-   One suggestion was to move the `kindle` and `inflect` directories to the
-   root directory, because they both represent new types of sinks, besides the
-   `flashcards` and `keyboard`. On the other hand, `dictionary` and `bible`
-   represent sources rather than sinks. Think the whole thing through!
-
 1. Inflect: Redesign the inflection module. (p2)
 
    To supported compound prefixes, and given the exponentially growing number
@@ -722,6 +715,23 @@ https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/
 
 ### Rigor TODO's
 
+1. Rethink the directory structure. (**p0**)
+
+   One suggestion was to move the `kindle` and `inflect` directories to the
+   root directory, because they both represent new types of sinks, besides the
+   `flashcards` and `keyboard`. On the other hand, `dictionary` and `bible`
+   represent sources rather than sinks. Think the whole thing through!
+
+1. Introduce a new priority for the `p2` items that are prerequisites for other
+   `p2` items.
+
+1. Crum: Write the parsing output to JSON / protobuf files. (p2)
+
+   This will enable:
+   - Storage of the parsing results.
+   - Manual inspection of the parsing results.
+   - Splitting the parsing pipeline from the output generation pipeline.
+
 1. Crum: Take derivations into consideration when deciding whether a given
    root belongs to a dialect. (p2, 1-2 hours)
 
@@ -777,7 +787,7 @@ https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/
    Note: This is proving difficult! We could perhaps consider migrating to
    CMake or even Bazel.
 
-#### Guidelines
+### Guidelines
 
 1. While unit tests are low-priority right now given the feasibility of other
    methods of testing, such as the code assertions, and visual inspections of
