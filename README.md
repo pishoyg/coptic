@@ -25,8 +25,8 @@
   - [Collaborator Convenience TODO's](#collaborator-convenience-todos)
   - [Diplomacy TODO's](#diplomacy-todos)
   - [Learner Convenience TODO's](#learner-convenience-todos)
-  - [Kindle TODO's](#kindle-todos)
-  - [Flashcards TODO's](#flashcards-todos)
+  - [Inflect / Kindle Content TODO's](#inflect--kindle-content-todos)
+  - [Flashcard Content TODO's](#flashcard-content-todos)
   - [Keyboard TODO's](#keyboard-todos)
   - [Rigor TODO's](#rigor-todos)
   - [Developer Convenience TODO's](#developer-convenience-todos)
@@ -313,6 +313,10 @@ The categories are:
 - `p0`: Critical coding / documentation tasks, essential for the integrity of
 the project. These are items that should be picked up the next time you log in.
 
+This could also include items that you were recently working on and are still
+fresh in your mind, or small items that seal off a task that you have been
+working on for a while!
+
 - `p1`: Big, technical or non-technical, milestones, related to the general
 direction of the project. These are more of high-level goals rather than tasks.
 
@@ -327,23 +331,16 @@ promoted to a higher priority. If there is something that you already deemed
 desirable, and having a decent degree of impact, then it shouldn't be assigned
 this priority.
 
+- *Prerequisites* are generally expressed by writing the tasks in a given
+order.
+
+- *Nature* of the task (data collection, documentation, collaborator-oriented,
+  learner-oriented, ...) is expressed by the section that the tasks are written
+  into.
+
 ### Documentation TODO's
 
 (7-8 hours)
-
-1. Revisit the planning scales (**p0**). You are currently trying to specify
-   the following using a single scale:
-
-   - priority
-   - feasibility (blocked / unblocked)
-   - impact (more or less impactful)
-   - nature of task (bug, feature, data collection, learner-oriented,
-   collaborator-oriented, ...)
-   - maturity (an idea that was thrown in, or one that was contemplated and
-   studied)
-
-   You will likely need several scales. It will help you wrap your head around
-   the project direction.
 
 1. Add links to the source and sink Drive items (the Bible ebook, Kindle
    dictionary, gsheets, ...). (**p0**)
@@ -352,7 +349,7 @@ this priority.
 
 1. Document the repo in a way that makes it readily shareable. (**p0**)
 
-1. Use "Crum" in place of "Marcion". (p2)
+1. Use "Crum" in place of "Marcion". (**p0**)
 
 1. Add deck descriptions. (p2)
 
@@ -508,13 +505,81 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it. (p4)
    Changing the model ID results in synchronization difficulties due to the
    note type having changed.
 
-### Kindle TODO's
+### Inflect / Kindle Content TODO's
 
-1. Jot down your plan to expand the inflection module. (**p0**)
+1. Rethink the directory structure. (**p0**)
 
-1. Expand the inflection module. (p2)
+   One suggestion was to move the `kindle` and `inflect` directories to the
+   root directory, because they both represent new types of sinks, besides the
+   `flashcards` and `keyboard`. On the other hand, `dictionary` and `bible`
+   represent sources rather than sinks. Think the whole thing through!
 
-1. Improve Marcion's inflection-driven rigor: (p2)
+1. Inflect: Redesign the inflection module. (p2)
+
+   To supported compound prefixes, and given the exponentially growing number
+   of possible combinations of prefixes, it has to be done recursively. A quick
+   draft looks like this:
+
+```py
+MAX_DEPTH = 7
+class Word:
+   def __init__(spelling, depth):
+      self._spelling = spelling
+      self._depth = depth
+   def inflect(self):
+      raise NotImplementedError("Not Implemented!")
+
+class Verb(Word):
+   def inflect(self):
+      if self._depth == MAX_DEPTH:
+         return [self]
+      children = [
+         Noun(...),
+         Noun(...),
+         Verb(...),
+      ]
+      return sum(c.inflect() for c in children, children)
+
+class Noun(Word):
+   pass
+```
+
+   This means that you have to reimplement some of your existing inflections
+   (such as the circumstantial and relative) using the new method, which is
+   easier.
+
+   Write intermediate output to a TSV for visibility and debuggability.
+
+1. Inflect: Expand the newly-refurbished inflection module. (p2)
+
+   1. Add relative ⲉⲑ and ⲉⲧ verb constructions.
+
+   1. Add relative ⲫⲏ, ⲑⲏ, and ⲛⲏ constructions.
+
+   1. Add copula relative ⲡⲉⲧ and ⲛⲉⲧ (and ⲧⲉⲧ?) constructions.
+
+   1. Add ⲕⲉ constructions for both verbs and nouns.
+
+   1. Add negative ⲁⲧ / ⲁⲑ constructions.
+
+   1. Handle compound prefixes.
+
+1. Marcion: Redesign the Marcion pipeline to support the upcoming inflection
+   work. (p2)
+
+   There is currently no way to communicate the `lexical.structured_word`
+   classes to the inflection module. You're sending a mere `pandas.DataFrame`
+   object upstream. Change the pipeline structure to allow the use of the
+   parsed `lexical.structured_word` objects in more locations.
+
+   You also need to make it possible to add inflections for derivations.
+
+   Use some OOP! Python's convenience has led you to implement everything as a
+   raw object or a `pandas` object!
+
+1. Marcion: Add inflections for derivations. (p2)
+
+1. Marcion: Improve Marcion's inflection-driven rigor: (p2)
 
    1. Implement normalization of the remaining annotations, namely `-` for
       prenominal forms, `=` for pronominal, `+` for qualitative, and `―` for
@@ -539,25 +604,11 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it. (p4)
    build an accurate inflection module. We might also have to populate the
    derivations data differently.*
 
-1. Marcion: Add inflections for derivations. (p2)
+1. copticsite.com: Create a dictionary from copticsite.com's data. (p2)
 
-1. Create a dictionary from copticsite.com's data. (p2)
+1. KELLIA: Create a dictionary from KELLIA's data. (p2)
 
-1. Create a dictionary from KELLIA's data. (p2)
-
-1. Make a plan to improve the accuracy of the inflections module. (unknown)
-
-   1. Add relative ⲉⲑ and ⲉⲧ verb constructions.
-
-   1. Add relative ⲫⲏ, ⲑⲏ, and ⲛⲏ constructions.
-
-   1. Add copula relative ⲡⲉⲧ and ⲛⲉⲧ (and ⲧⲉⲧ?) constructions.
-
-   1. Add ⲕⲉ constructions for both verbs and nouns.
-
-   1. Add negative ⲁⲧ / ⲁⲑ constructions.
-
-   1. Handle compound prefixes.
+   This will include the Greek loanwords. :))
 
 1. Rethink the Kindle dictionary generation pipeline. (p4)
 
@@ -594,7 +645,7 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it. (p4)
    [here](https://kdp.amazon.com/en_US/help/topic/GZ8BAXASXKB5JVML), and a
    workaround may be possible.
 
-### Flashcards TODO's
+### Flashcard Content TODO's
 
 1. Add links to CDO from Crum. (p4, 3-4 hou4s)
 
@@ -691,7 +742,7 @@ https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/
 
 ### Developer Convenience TODO's
 
-1. Revisit the currently-assigned tasks and priorities. (**p1**, occasionally)
+1. Revisit the currently-assigned tasks and priorities. (p3, occasionally)
 
 1. Write the flashcard data to an intermediate format before `.apkg`. (p2,
    20 hours)
