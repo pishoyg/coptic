@@ -543,6 +543,21 @@ class Noun(Word):
 
    Write intermediate output to a TSV for visibility and debuggability.
 
+1. Kindle: Investigate the possibility of cross referencing definitions. (p4)
+
+   [The docs](https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV)
+   explicitly mention that cross referencing is possible. One idea comes to
+   mind:
+
+   - The dictionary should be orthography-oriented, rather than Crum
+   entry-oriented.
+
+   - Perhaps the dictionary should include each orthography only once, and
+   cross reference all its possible morphological analyses. For example, list
+   the orthography (ⲛⲛⲁⲓ) once, with ⲛ̀-ⲛⲁ-ⲓ̀ as a possible analysis referencing
+   the definition of the root ⲓ̀, and ⲛ̀-ⲛⲁⲓ as a second analysis referencing the
+   definition of the root root ⲛⲁⲓ. This will need some planning!
+
 1. Inflect: Expand the newly-refurbished inflection module. (p2)
 
    1. Add relative ⲉⲑ and ⲉⲧ verb constructions.
