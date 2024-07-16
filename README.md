@@ -18,7 +18,9 @@
   - [Learning Curriculum](#learning-curriculum)
   - [Neologisms](#neologisms)
 - [For Developers / Owners](#for-developers--owners)
-  - [Directories and Conventions](#directories-and-conventions)
+  - [Directory Structure](#directory-structure)
+  - [`vault.sh`](#vaultsh)
+  - [Priorities](#priorities)
   - [Documentation TODO's](#documentation-todos)
   - [Collaborator Convenience TODO's](#collaborator-convenience-todos)
   - [Diplomacy TODO's](#diplomacy-todos)
@@ -190,13 +192,13 @@ suggestions or questions, or data! :)
 
 ### Dictionary
 
-1. Collect more explanatory pictures. (p2, 100+ hours, delegated)
+1. Collect more explanatory pictures. (**p1**, 100+ hours)
 
    This will significantly aid the
    learning process, and it will save learners the time that they have to spend
    on looking up the obscure vocabulary or unfamiliar terms.
 
-1. Link KELLIA lemmas to Marcion Keys.
+1. Link KELLIA lemmas to Marcion Keys. (p4)
 
    This may make it possible to include the meaning, literature citations, and
    perhaps other data.
@@ -208,35 +210,35 @@ suggestions or questions, or data! :)
    because we understand the meaning of the word better than he did back then.
    We could use St. Shenouda's Simple Bohairic English dictionary for that, or
    KELLIA's dictionary.
-   (low-priority)
+   (p4)
 
-1. Collect more explanatory notes. (low-priority)
+1. Collect more explanatory notes. (p4)
 
 1. Fix the typos in the data retrieved from Crum. The current dataset is
    high-quality, and has a very small number of typos. However, they do exist.
-   (low-priority, and it's more of an ongoing byproduct than a task.)
+   (p4, and it's more of an ongoing byproduct than a task.)
 
 1. Complete the list of suffixes used for copticsite.com's dictionary.
-   (low-priority)
+   (p4)
 
 1. Contemplate publishing a version of the flashcards with one derivation per
    note, rather than the entire table. See whether this will aid learning.
-   (low-priority)
+   (p4)
 
 1. Contemplate sorting the dictionary words by popularity, somehow.
-   (low-priority)
+   (p4)
 
 1. Contemplate dividing the decks to subsets sorted by popularity, so the
-   learners can learn the more important words first. (low-priority)
+   learners can learn the more important words first. (p4)
 
 ### Moawad Dawoud's Diciontary
 
-1. Add Moawad Dawoud's page numbers, and add scans to the flashcards. (p2, 50+
-   hours, delegated, in progress)
+1. Add Moawad Dawoud's page numbers, and add scans to the flashcards. (**p1**,
+   in progress)
 
-1. Add Moawad Dawoud's Arabic translations. (p2, 100+ hours, delegate)
+1. Add Moawad Dawoud's Arabic translations. (p4, 100+ hours, delegate)
 
-1. Add Moawad Dawoud's standard spellings. (low-priority)
+1. Add Moawad Dawoud's standard spellings. (p4)
 
    Crum mentions all spellings, including obscure and rare ones. Dawoud treats
    some as more standard than others, which is helpful. It's worth highlighting
@@ -246,21 +248,21 @@ suggestions or questions, or data! :)
 
 (ambitious goal)
 
-1. Add pronunciations to the notes. (p2, 100+ hours, delegate)
+1. Add pronunciations to the notes. (p4, 100+ hours, delegate)
 
 ### Learning Curriculum
 
 (ambitious goal)
 
 1. Create Duolingo-like learning curricula for learners at multiple levels.
-   (p2, 100+ hours, delegate)
+   (**p1**, 100+ hours, delegate)
 
 ### Neologisms
 
 (ambitious goal)
 
 1. Add neologisms. We need to think first of how to create neologisms before
-   we add them to our dataset. (p2, 1000+ hours, delegate)
+   we add them to our dataset. (**p1**, 1000+ hours, delegate)
 
 ## For Developers / Owners
 
@@ -269,7 +271,7 @@ README file (not in any of the README files in the subdirectories).
 Non-learner-facing coding tasks are sometimes documented in the code as TODO's,
 and sometimes brought here.
 
-### Directories and Conventions
+### Directory Structure
 
 `dictionary/` contains subdirectories, each containing one dictionary, its data,
 and the scripts used to process the data into other formats. `bible/` currently
@@ -290,43 +292,82 @@ Most scripts have default parameters with the assumption that they are being
 invoked from the repo's root directory, rather than from the directory where
 the script lives.
 
-`vault.sh` (which is skipped by a rule in `.gitignore`) contains variables
+### `vault.sh`
+
+`vault.sh` (which is hidden by a rule in `.gitignore`) contains variables
 that are used inside `Makefile`. Some `make` rules can only run if preceded by
 `source vault.sh` in order to export the variables needed for those rules.
 You need your own version of `vault.sh` in order to be able to run all the
-`make` rules.
+`make` rules. See `TEMPLATE_vault.sh` for more information.
+
+### Priorities
 
 The rest of this file lists the current plans or ideas for the project. The
 higher-priority items have their priority levels spelled out, time estimates,
 and statuses spelled out.
 
+The categories are:
+
+*N.B. When in doubt, it is safer to use a higher priority.*
+
+- `p0`: Critical coding / documentation tasks, essential for the integrity of
+the project. These are items that should be picked up the next time you log in.
+
+- `p1`: Big, technical or non-technical, milestones, related to the general
+direction of the project. These are more of high-level goals rather than tasks.
+
+- `p2`: Thought-through tasks that have been concluded to be both impactful and
+feasible.
+
+- `p3`: Thought-through tasks that are either less impactful or less feasible.
+
+- `p4`: Ideas that have not yet been thought through. These shouldn't be
+implemented, but occasionally contemplated, and then either discarded, or
+promoted to a higher priority. If there is something that you already deemed
+desirable, and having a decent degree of impact, then it shouldn't be assigned
+this priority.
+
 ### Documentation TODO's
 
 (7-8 hours)
 
+1. Revisit the planning scales (**p0**). You are currently trying to specify
+   the following using a single scale:
+
+   - priority
+   - feasibility (blocked / unblocked)
+   - impact (more or less impactful)
+   - nature of task (bug, feature, data collection, learner-oriented,
+   collaborator-oriented, ...)
+   - maturity (an idea that was thrown in, or one that was contemplated and
+   studied)
+
+   You will likely need several scales. It will help you wrap your head around
+   the project direction.
+
+1. Add links to the source and sink Drive items (the Bible ebook, Kindle
+   dictionary, gsheets, ...). (**p0**)
+
 1. Add docs about obtaining the ebook and kindle dictionary. (**p0**, 1-2 hours)
 
-1. Document the repo in a way that makes it possible to invite collaborators.
-   (**p0**)
+1. Document the repo in a way that makes it readily shareable. (**p0**)
+
+1. Use "Crum" in place of "Marcion". (p2)
 
 1. Add deck descriptions. (p2)
 
+1. Move / reproduce TODO's from Drive in the README files. (p4)
+
 1. Revisit the `bible` and `dictionary` documentation in their respective
-   README.md files. (p2)
-
-1. Link Drive items in this repo. (p2)
-
-1. Move / reproduce TODO's from Drive in the README files. (p2)
-
-1. Use "Crum" in place of "Marcion".
+   README.md files. (p3)
 
 1. Document the snapshot dates and versions of the apps and data imported
-into the repo.
+into the repo. (p4)
 
 ### Collaborator Convenience TODO's
 
-1. Support more seamless integration between Drive and your scripts. (p2, 3-4
-   hours)
+1. Support more seamless integration between Drive and your scripts. (**p0**,
+   3-4 hours)
 
    Likely, this means letting them contribute through Drive instead of Git.
    List the data sources, and redirect the flow to Drive (think about this!)
@@ -355,7 +396,7 @@ into the repo.
       overridden for `dawoud-pages` and `crum-last-page`, rather than simply
       write an empty placeholder column. (p2, 1-2 hours)
 
-1. Find / design a software to help users record their pronunciations. (p2, 20
+1. Find / design a software to help users record their pronunciations. (p4, 20
    hours, delegate)
 
    Candidates:
@@ -363,46 +404,44 @@ into the repo.
    - https://github.com/hollygrimm/voice-dataset-creation
    - https://www.phon.ucl.ac.uk/resource/prorec/
 
-1. Find / design a software to help users collect explanatory images.
+1. Find / design a software to help users collect explanatory images. (p4)
 
 ### Diplomacy TODO's
 
-1. Find one or two co-owners of the project. (**p0**)
+1. Find one or two co-owners of the project. (**p1**)
 
-1. Publicize the project, and find an audience of learners. (**p0**)
+1. Publicize the project, and find an audience of learners. (**p1**)
 
-1. Find contributors, in coding and data collection. (**p0**)
-
-1. Look at [tekinged.com](https://tekinged.com/) for inspiration on what you
-   can do for an incubated language.
-
-1. Survey the field one more time. See if there is something else out there
-   that you can integrate. (p2)
-
-1. Obtain the source file for St. Shenouda The Archimandrite Coptic Society's
-   Simple Bohairic English Dictionary.
-
-1. Obtain the Naqlun dictionary's data. It is poor-quality, but it might
-   be attractive for some learners. (low-priority)
-
-1. Obtain an updated version of ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ's neologisms.
-
-1. Obtain an updated version of [copticsite.com](https://copticsite.com/)'s dictionary.
+1. Find contributors, in coding and data collection. (**p1**)
 
 1. Get a cleaner, more recent scan of Dawoud's dictionary. Obtain the source
    file if possible. The current scan is low-quality. At the same time, it's
-   outdated, and the pages sometimes don't align!
+   outdated, and the pages sometimes don't align! (p3)
+
+1. Look at [tekinged.com](https://tekinged.com/) for inspiration on what you
+   can do for an incubated language. (p4)
+
+1. Obtain an updated version of [copticsite.com](https://copticsite.com/)'s dictionary. (p4)
 
 1. Get a cleaner scan of Crum's dictionary. [coptot](
-https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it.
+https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it. (p4)
+
+1. Obtain the source file for St. Shenouda The Archimandrite Coptic Society's
+   Simple Bohairic English Dictionary. (p4)
+
+1. Obtain the Naqlun dictionary's data. It is poor-quality, but it might
+   be attractive for some learners. (p4)
+
+1. Survey the field one more time. See if there is something else out there
+   that you can integrate. (p4)
 
 ### Learner Convenience TODO's
 
-1. Deploy the flashcards on a standalone app. (**p0**, 100+ hours, delegate)
+1. Deploy the flashcards on a standalone app. (**p1**, 100+ hours, delegate)
 
    This will vastly increase the app's popularity.
 
-1. Until then, reassess whether Anki is your best bet. (p2, 20 hours, delegate)
+1. Until then, reassess whether Anki is your best bet. (**p1**, 20 hours, delegate)
 
    Anki has the following limitations. Perhaps try to find a platform that
    doesn't have some of them. (Though keep in mind that they are not equally
@@ -415,7 +454,7 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it.
    - The possibility to sync notes selectively. (See the note about exporting
    accurate timestamps below.)
 
-1. Export accurate timestamps. (p2, 50 hours, delegate)
+1. Export accurate timestamps. (p4, 50 hours)
 
    1. Reimporting (supposedly identical data) produces the message "notes were
    used to update existing ones." This is evidently due to the timestamps that
@@ -461,7 +500,7 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it.
 
    Learners who synchronize their data will only have the old notes overridden.
 
-1. Fix the model sync issues.
+1. Fix the model sync issues. (p4)
 
    In the current design, updating the CSS of a deck doesn't get reflected when
    the package is imported. The notes retain the old CSS.
@@ -471,36 +510,11 @@ https://coptot.manuscriptroom.com/) has a nice version. Try to obtain it.
 
 ### Kindle TODO's
 
-1. Fix the [Kindle-compatible dictionary](
-https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV). (**p0**, 50+ hours)
+1. Jot down your plan to expand the inflection module. (**p0**)
 
-   1. Currently, the following errors and warnings are produced from running
-   `make kindle`:
+1. Expand the inflection module. (p2)
 
-   - `Warning(index build):W15001: inflection rule or rule group too long (max=255). Discarded.`
-
-   We have experimented with putting words under multiple orths, but this
-   doesn't seem to work. We experimented with filtering the dictionary, but
-   the output is chopped, and lookup unjustifiably fails! Here are some
-   ideas:
-
-   - We should perhaps follow the docs and generate the
-   dictionary using Kindle Previewer 3. We will have to convert the
-   dictionary to EPUB format first, but that should be doable.
-
-   For reference, here are the successful examples that you've come across:
-
-   - [https://github.com/runehol/kindlearadict/](https://github.com/runehol/kindlearadict/)
-   - [https://hanzihero.com/blog/custom-kindle-dictionary](https://hanzihero.com/blog/custom-kindle-dictionary)
-   - [https://github.com/tekinged/tekinged.com/blob/main/scripts/mk_kindle_dict.py](https://github.com/tekinged/tekinged.com/blob/main/scripts/mk_kindle_dict.py)
-
-1. Create a dictionary from copticsite.com's data.
-
-1. Create a dictionary from KELLIA's data.
-
-1. Marcion: Add inflections for derivations.
-
-1. Improve Marcion's inflection-driven rigor:
+1. Improve Marcion's inflection-driven rigor: (p2)
 
    1. Implement normalization of the remaining annotations, namely `-` for
       prenominal forms, `=` for pronominal, `+` for qualitative, and `―` for
@@ -520,10 +534,16 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV). (**p0**, 50+ hours)
 
    1. Detached types override / invalidate root types. Investigate.
 
-   Thought: The current state of Marcion data is imperfect. We will likely have
+   *Thought: The current state of Marcion data is imperfect. We will likely have
    to introduce new types (e.g. articled vs. non-articled nouns) in order to
    build an accurate inflection module. We might also have to populate the
-   derivations data differently.
+   derivations data differently.*
+
+1. Marcion: Add inflections for derivations. (p2)
+
+1. Create a dictionary from copticsite.com's data. (p2)
+
+1. Create a dictionary from KELLIA's data. (p2)
 
 1. Make a plan to improve the accuracy of the inflections module. (unknown)
 
@@ -539,9 +559,35 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV). (**p0**, 50+ hours)
 
    1. Handle compound prefixes.
 
-1. Stop using `kindlegen`. It's obsolete.
+1. Rethink the Kindle dictionary generation pipeline. (p4)
 
-1. Display the Bible data in a table format. (p2, 7-8 hours)
+   1. Stop using `kindlegen`. It's obsolete.
+
+   - We should perhaps follow the docs and generate the
+   dictionary using Kindle Previewer 3. We will have to convert the
+   dictionary to EPUB format first, but that should be doable.
+
+   1. Trying to include all inflections produces the following errors:
+
+   - `Warning(index build):W15001: inflection rule or rule group too long (max=255). Discarded.`
+
+   From a first glance, it seems that including a comprehensive list of
+   inflections is infeasible, and should be abandoned. This is what `runehol`
+   concluded as well, and it makes some sense.
+
+   1. For reference, here are the successful examples that you've come across:
+
+   - [https://github.com/runehol/kindlearadict/](https://github.com/runehol/kindlearadict/)
+   - [https://hanzihero.com/blog/custom-kindle-dictionary](https://hanzihero.com/blog/custom-kindle-dictionary)
+   - [https://github.com/tekinged/tekinged.com/blob/main/scripts/mk_kindle_dict.py](https://github.com/tekinged/tekinged.com/blob/main/scripts/mk_kindle_dict.py)
+
+   Note: We have, unsuccessfully, experimented with putting words under
+   multiple orthographies (`<idx:orth>` tags). The experimentation wasn't
+   extensive, and the Kindle docs clearly state that multiple orthographies are
+   supported (though it's not clear whether we can find a workaround to include
+   all inflections by using multiple orthographies). Revisit.
+
+1. Display the Bible data in a table format. (p4, 7-8 hours)
 
    The reason the Bible was chosen to be displayed is that it showed difficulty
    with highlighting. There is some information about this
@@ -550,15 +596,15 @@ https://kdp.amazon.com/en_US/help/topic/G2HXJS944GL88DNV). (**p0**, 50+ hours)
 
 ### Flashcards TODO's
 
-1. Add links to CDO from Crum. (p2, 3-4 hou4s)
+1. Add links to CDO from Crum. (p4, 3-4 hou4s)
 
    The url is `https://coptic-dictionary.org/results.cgi?quick_search={key}`.
 
 1. Revisit the Greek dictionary used, and allow spaces between words.
-   (p2, 3-4 hours)
+   (p4, 3-4 hours)
 
 1. Prettify and expand the flashcards from [KELLIA](
-https://coptic-dictionary.org/). (p2, 7-8 hours)
+https://coptic-dictionary.org/). (p4, 7-8 hours)
 
    1. Group `geo`s by `orth` and `gram_grp`.
    1. Add the entity types. (low-priority)
@@ -572,10 +618,10 @@ https://coptic-dictionary.org/). (p2, 7-8 hours)
 
    Some data may require interactions with Scriptorium tools.
 
-1. Create dialect-oriented versions of the KELLIA decks. (p2, 7-8 hours)
+1. Create dialect-oriented versions of the KELLIA decks. (p4, 7-8 hours)
 
 1. Incorporate [Scriptorium](https://copticscriptorium.org/)'s data and NLP
-tools. (p2, 50 hours, delegate)
+tools. (p4, 50 hours, delegate)
 
    - Start by gaining familiarity with their products, and selecting the ones
    that will be useful for you. From a quick look, the part-of-speech tagger,
@@ -583,11 +629,11 @@ tools. (p2, 50 hours, delegate)
    language-of-origin tagger, are all good candidates.
 
 1. Crawl [Wiktionary - Category:Coptic lemmas](
-https://en.wiktionary.org/wiki/Category:Coptic_lemmas). (p2, 20+ hours, delegate)
+https://en.wiktionary.org/wiki/Category:Coptic_lemmas). (p4, 20+ hours, delegate)
 
-1. Incorporate the ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ Group's neologisms. (p2, 3-4 hours)
+1. Incorporate the ⲛⲓⲣⲉϥⲤⲁϫⲓ ⲛ̀ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ Group's neologisms. (p4, 3-4 hours)
 
-1. Group the derivations by dialect. (p2, 2 days)
+1. Group the derivations by dialect. (p4, 2 days)
 
    Now, ... The tricky thing about this task is that, while parsing the
    derivations, it's hard to tell whether a certain row belongs to a given
@@ -621,23 +667,23 @@ https://en.wiktionary.org/wiki/Category:Coptic_lemmas). (p2, 20+ hours, delegate
 1. complete your [keyboard
 proposal](
 https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/edit
-). (**p0**, 100+ hours)
+). (**p1**, 100+ hours)
 
 ### Rigor TODO's
 
 1. Crum: Take derivations into consideration when deciding whether a given
-   root belongs to a dialect. (1-2 hours)
+   root belongs to a dialect. (p2, 1-2 hours)
 
 1. Crum: English post-processing likely shouldn't apply to
    Coptic-within-English. Neither should Coptic-within-English be treated as
-   words with spellings.
+   words with spellings. (p2)
 
 1. Crum: Detached types, references, and English-within-Coptic, should
-   perhaps be spelling-specific rather than word-specific.
+   perhaps be spelling-specific rather than word-specific. (p2)
 
-1. Crum: Detached types override / invalidate root types. Investigate.
+1. Crum: Detached types override / invalidate root types. Investigate. (p2)
 
-1. Pick up some of the Easter egg tasks left around the code.
+1. Pick up some of the Easter egg tasks left around the code. (**p0**)
 
    - Run `make todo` to find them.
    - Move them to README files when more visibility is warranted.
@@ -645,10 +691,10 @@ https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/
 
 ### Developer Convenience TODO's
 
-1. Revisit the currently-assigned priorities. (**p0**)
+1. Revisit the currently-assigned tasks and priorities. (**p1**, occasionally)
 
-1. Write the flashcard data to an intermediate format before `.apkg`. (**p0**, 20
-   hours)
+1. Write the flashcard data to an intermediate format before `.apkg`. (p2,
+   20 hours)
 
    This has the following advantages:
    - It becomes easier to verify what changes a commit introduces to the
@@ -663,7 +709,7 @@ https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/
    - Support a fanout to platforms other than Anki.
 
 1. Running `make bible` and then `pre-commit run tidy-html` produces a lot of
-   warnings. Fix them to reduce the linting noise.
+   warnings. Fix them to eliminate the linting noise. (p2)
 
    To start with, lots of `<span>` elements are apparently empty and they end
    up getting trimmed. Prevent your code from generating those in the first
@@ -671,9 +717,9 @@ https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/
 
 1. Run `checkmake`, `doctoc`, and `tidy` using pre-commits that download the
    hooks from a remote repo, so you won't have to assume the existence of the
-   binaries on your local machine.
+   binaries on your local machine. (p2)
 
-1. Set up a more robust CI/CD pipelines. (p2, 20 hours)
+1. Set up a more robust CI/CD pipelines. (p3, 20 hours)
 
    To start with, set up proper dependencies in Makefile.
 
