@@ -18,6 +18,8 @@ BIBLE_LANGUAGES = [
     "Greek",
 ]
 
+CRUM_A_FMT = '<a href="https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID={page_id}">{page_id}</a>'
+
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def crum(
@@ -153,7 +155,9 @@ def crum(
                         for k in field.page_numbers(page_ranges=page_ranges)
                     ],
                     sort_paths=field.sort_semver,
-                    get_caption=lambda path: int(field.stem(path)) - 20,
+                    get_caption=lambda path: CRUM_A_FMT.format(
+                        page_id=int(field.stem(path)) - 20
+                    ),
                     force=False,
                 ),
                 "<hr/>",
