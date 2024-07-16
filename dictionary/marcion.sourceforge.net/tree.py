@@ -247,45 +247,59 @@ class node:
             return ""
 
         out = []
-        out.append("<ul>")
+        out.extend(
+            [
+                "<ul>",
+            ]
+        )
 
         depth = 0
         for d in descendants:
             cur_depth = int(d.cell("depth"))
             while cur_depth > depth:
-                out.append("<li>")
-                out.append("<ul>")
+                out.extend(
+                    [
+                        "<li>",
+                        "<ul>",
+                    ]
+                )
                 depth += 1
             while cur_depth < depth:
-                out.append("</ul>")
-                out.append("</li>")
+                out.extend(
+                    [
+                        "</ul>",
+                        "</li>",
+                    ]
+                )
                 depth -= 1
             word = d.cell("word-parsed-prettify")
             type = d.cell("type-parsed")
-            assert word or type == "HEADER"
             meaning = d.cell("en-parsed-light-greek")
+            assert word or (type == "HEADER" and meaning)
             if type and type not in ["-", "HEADER"]:
                 meaning = f"({type}) {meaning}"
+            li = "<br/>".join(filter(None, [word, meaning]))
             out.extend(
                 [
                     "<li>",
-                    f"{word}",
+                    li,
+                    "</li>",
                 ]
             )
-            if meaning:
-                out.extend(
-                    [
-                        "<br/>",
-                        f"{meaning}",
-                    ]
-                )
-            out.append("</li>")
 
         while depth > 0:
-            out.append("</ul>")
-            out.append("</li>")
+            out.extend(
+                [
+                    "</ul>",
+                    "</li>",
+                ]
+            )
             depth -= 1
-        out.append("</ul>")
+        out.extend(
+            [
+                "</ul>",
+            ]
+        )
 
         out = " ".join(out)
         return out
