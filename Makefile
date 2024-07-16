@@ -18,7 +18,6 @@ SHELL := /bin/bash
 #
 # See TEMPLATE_vault.sh for more information.
 
-
 # LEVELS
 #
 # Level-3 rules use level-2 rules.
@@ -33,20 +32,23 @@ all: install generate_1 test generate_2 generate_3 publish stats
 # LEVEL 2 RULES ###############################################################
 
 .PHONY: install
-install: pip_install python_install precommit_install
+install: brew_install pip_install python_install precommit_install
 
+# generate_1 rules are prerequisites for generate_2 rules.
 .PHONY: generate_1
 generate_1: bible copticsite marcion marcion_dawoud marcion_img kellia kellia_analysis
 
 .PHONY: test
 test: precommit
 
+# generate_2 rules are prerequisites for generate_3 rules.
 .PHONY: generate_2
 generate_2: flashcards flashcards_redundant kindle
 
+# This is a placeholder for an upcoming `anki` rule that will exist after we
+# split the flashcard pipeline into two stages. Flashcards will be written by
+# to an intermediate format before being written as Anki packages.
 .PHONY: generate_3
-	# This is a placeholder for an upcoming `anki` rule that will exist after we
-	# split the flashcard TSV generation from Anki package generation pipelines.
 generate_3:
 
 .PHONY: publish
@@ -56,13 +58,14 @@ publish: flashcards_cp_to_drive kindle_cp_to_drive bible_cp_to_drive
 stats: stats_aux
 
 # The following level-2 rules are not included in any of the level-3 rules
-# above. They are relevant only during development, but not for deployment.
+# above. This is because they are mainly relevant during development, but are
+# not part of the main deployment pipeline.
 
 .PHONY: flash
 flash: precommit flashcards flashcards_redundant flashcards_cp_to_drive
 
 .PHONY: amazon
-amazon: marcion kindle kindle_cp_to_drive
+amazon: precommit marcion kindle kindle_cp_to_drive
 
 .PHONY: clean
 clean: git_clean bible_epub_clean kellia_analysis_clean
@@ -76,33 +79,16 @@ verify: flashcards_verify flashcards_crum_sahidic_verify
 .PHONY: try
 try: flashcards_try flashcards_crum_sahidic_try
 
-.PHONY: precommit_scripts
-precommit_scripts: marcion_img_validate
+.PHONY: todo
+todo: todo_aux
+
+.PHONY: marcion_img_validate
+marcion_img_validate: marcion_img_validate_aux
 
 .PHONY: update
-update: update_precommit update_pip
+update: precommit_update pip_update
 
 # LEVEL 1 RULES ###############################################################
-
-brew_isntall:
-	# TODO: The following is not platform-agnostic. Use pre-commits that
-	# reference a foreign repo in order to run the relevant pre-commits.
-	npm install -g doctoc
-	brew install checkmake
-	brew install tidy-html5
-
-pip_install: requirements.txt
-	python -m pip install --upgrade pip "$${BREAK_SYSTEM_PACKAGES}"
-	python -m pip install -r requirements.txt "$${BREAK_SYSTEM_PACKAGES}"
-
-python_install:
-	python3 -m pip install -e . "$${BREAK_SYSTEM_PACKAGES}"
-
-precommit_install:
-	pre-commit install
-
-precommit: FORCE
-	pre-commit run
 
 # BIBLE RULES
 bible: FORCE
@@ -113,29 +99,44 @@ bible_cp_to_drive: FORCE
 	"bible/stshenouda.org/data/output/epub/bohairic_english.epub" \
 	"$${BIBLE_DIR}/2. bohairic_english - single-column - Kindle.epub"
 
+bible_epub_clean: $(shell ls bible/stshenouda.org/data/output/epub*/*.epub)
+	git restore "bible/stshenouda.org/data/output/epub*/*.epub"
+
 # COPTICSITE_COM RULES
 copticsite: FORCE
 	python dictionary/copticsite.com/main.py
 
 # MARCION RULES
+marcion: $(shell find dictionary/marcion.sourceforge.net/ -type f)
+	python dictionary/marcion.sourceforge.net/main.py
+
 marcion_dawoud: FORCE
 	curl -L \
 		"https://docs.google.com/spreadsheets/d/e/2PACX-1vTItxV4E4plQrzjWLSea85ZFQWcQ4ba-p2BBIDG9h5yI0i9URn9GD9zZhxEj8kVI7jhCoPWPEapd9D7/pub?output=tsv" \
 		> "dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv"
 
-marcion: $(shell find dictionary/marcion.sourceforge.net/ -type f)
-	python dictionary/marcion.sourceforge.net/main.py
-
 marcion_img: $(shell find dictionary/marcion.sourceforge.net/data/ -type f)
 	bash dictionary/marcion.sourceforge.net/img_setup.sh \
 		$${SKIP_EXISTING}
 
+marcion_img_find: FORCE
+	python dictionary/marcion.sourceforge.net/img_find.py \
+		--skip_existing=true \
+		--exclude "type-parsed:verb" "dialect-B:" \
+		--start_at_key="$${START_AT_KEY}"
+
+marcion_img_validate_aux: FORCE
+	bash dictionary/marcion.sourceforge.net/img_validate.sh
+
 # KELLIA RULES
+kellia: FORCE
+	python dictionary/kellia.uni-goettingen.de/main.py
+
 kellia_analysis: FORCE
 	python dictionary/kellia.uni-goettingen.de/analysis.py
 
-kellia: FORCE
-	python dictionary/kellia.uni-goettingen.de/main.py
+kellia_analysis_clean: dictionary/kellia.uni-goettingen.de/analysis.json
+	git restore "dictionary/kellia.uni-goettingen.de/analysis.json"
 
 # FLASHCARD RULES
 flashcards: FORCE
@@ -178,30 +179,6 @@ flashcards_cp_to_drive: $(shell find flashcards/data/ -type f)
 		flashcards/data/*.apkg \
 		"$${FLASHCARD_DIR}"
 
-# Image collection.
-marcion_img_find: FORCE
-	python dictionary/marcion.sourceforge.net/img_find.py \
-		--skip_existing=true \
-		--exclude "type-parsed:verb" "dialect-B:" \
-		--start_at_key="$${START_AT_KEY}"
-
-# Kindle
-kindle: FORCE
-	./archive/kindlegen/kindlegen \
-	-gen_ff_mobi7 \
-	-dont_append_source \
-	-c0 \
-	"dictionary/marcion.sourceforge.net/data/output/dialect-B/dialect-B.opf"
-
-kindle_cp_to_drive:
-	cp \
-	"dictionary/marcion.sourceforge.net/data/output/dialect-B/dialect-B.mobi" \
-	"$${KINDLE_DIR}"
-
-# DEVELOPER
-todo: FORCE
-	grep TODO -R bible dictionary keyboard flashcards kindle
-
 flashcards_verify: flashcards_try
 	bash ziff.sh \
 		"flashcards/data/coptic.apkg"
@@ -221,6 +198,49 @@ flashcards_crum_sahidic_try: FORCE
 		--decks "A Coptic Dictionary::Sahidic" \
 		--output "$${TEST_DIR}/crum_sahidic.apkg"
 
+# KINDLE RULES
+kindle: FORCE
+	./archive/kindlegen/kindlegen \
+	-gen_ff_mobi7 \
+	-dont_append_source \
+	-c0 \
+	"dictionary/marcion.sourceforge.net/data/output/dialect-B/dialect-B.opf"
+
+kindle_cp_to_drive:
+	cp \
+	"dictionary/marcion.sourceforge.net/data/output/dialect-B/dialect-B.mobi" \
+	"$${KINDLE_DIR}"
+
+# INFRASTRUCTURE RULES
+brew_install:
+	# TODO: The following is not platform-agnostic. Use pre-commits that
+	# reference a foreign repo in order to run the relevant pre-commits.
+	npm install -g doctoc
+	brew install checkmake
+	brew install tidy-html5
+
+pip_install: requirements.txt
+	python -m pip install --upgrade pip "$${BREAK_SYSTEM_PACKAGES}"
+	python -m pip install -r requirements.txt "$${BREAK_SYSTEM_PACKAGES}"
+
+pip_update: FORCE
+	pip-review --local --auto
+
+python_install:
+	python3 -m pip install -e . "$${BREAK_SYSTEM_PACKAGES}"
+
+precommit_install:
+	pre-commit install
+
+precommit: FORCE
+	pre-commit run
+
+precommit_update: FORCE
+	pre-commit autoupdate
+
+todo_aux: FORCE
+	grep TODO -R bible dictionary keyboard flashcards kindle
+
 git_clean: FORCE
 	git clean \
 		-x \
@@ -229,23 +249,9 @@ git_clean: FORCE
 		--exclude "vault.sh" \
 		--force
 
-bible_epub_clean: $(shell ls bible/stshenouda.org/data/output/epub*/*.epub)
-	git restore "bible/stshenouda.org/data/output/epub*/*.epub"
-
-kellia_analysis_clean: dictionary/kellia.uni-goettingen.de/analysis.json
-	git restore "dictionary/kellia.uni-goettingen.de/analysis.json"
-
-marcion_img_validate: FORCE
-	bash dictionary/marcion.sourceforge.net/img_validate.sh
-
 stats_aux: FORCE
 	bash stats.sh
 
-update_precommit: FORCE
-	pre-commit autoupdate
-
-update_pip: FORCE
-	pip-review --local --auto
 # LEVEL-0 rules ###############################################################
 
 # FORCE
