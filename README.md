@@ -28,7 +28,7 @@
   - [Inflect / Kindle Content TODO's](#inflect--kindle-content-todos)
   - [Flashcard Content TODO's](#flashcard-content-todos)
   - [Keyboard TODO's](#keyboard-todos)
-  - [Rigor TODO's](#rigor-todos)
+  - [Rigor / Planning TODO's](#rigor--planning-todos)
   - [Developer Convenience TODO's](#developer-convenience-todos)
   - [Guidelines](#guidelines)
 - [Credits](#credits)
@@ -302,39 +302,63 @@ You need your own version of `vault.sh` in order to be able to run all the
 
 ### Priorities
 
-The rest of this file lists the current plans or ideas for the project. The
-higher-priority items have their priority levels spelled out, time estimates,
-and statuses spelled out.
+The rest of this file lists the current plans or ideas for the project. We use
+the prioritization scale described below. Besides priorities, items often have
+time estimates and progress statuses, but those are not essential.
 
-The categories are:
+_Priority_ is a function of many variables, including the impact, feasibility,
+criticality, and nature of the tasks.
 
 *N.B. When in doubt, it is safer to use a higher priority.*
 
-- `p0`: Critical coding / documentation tasks, essential for the integrity of
-the project. These are items that should be picked up the next time you log in.
+The categories are:
 
-This could also include items that you were recently working on and are still
-fresh in your mind, or small items that seal off a task that you have been
-working on for a while!
+- `p-1`: Ideas that have been proposed, but have not yet been assessed for
+impact or feasibility. These should be triaged soon, because they could
+potentially change other plans and priorities.
+
+   The action that these items need is not implementation or execution, it's
+   triage or contemplation. Once this is done, they should move to one of the
+   executable categories below before they get executed.
+
+- `p0`: Tasks that should be done as soon as possible. These should be the ones
+that you look up the next time you log in. They generally belong to one of two
+categories:
+
+   - Critical coding / documentation tasks, essential for the integrity of
+     the project.
+   - Items that you were recently working on and are still fresh in your mind,
+   or small leftover items that seal off a big project or task that you have
+   been working on for a while! In other words, it's items that have a
+   disproportionately small cost-to-benefit ratio.
 
 - `p1`: Big, technical or non-technical, milestones, related to the general
-direction of the project. These are more of high-level goals rather than tasks.
+direction of the project. These are more of high-level goals, not tasks or
+proposed ideas.
 
 - `p2`: Thought-through tasks that have been concluded to be both impactful and
-feasible.
+feasible. These are not general goals, but concrete tasks. They do not need
+triage or contemplation, we've already decided that we want to implement them.
+
+- `pp2`: Tasks that fit the criteria for `p2`, but are prerequisites for other
+`p2` tasks. They should be picked up before the other `p2` items.
 
 - `p3`: Thought-through tasks that are either less impactful or less feasible.
 
-- `p4`: Ideas that have not yet been thought through. These shouldn't be
+- `pp3`: Tasks that fit the criteria for `p3`, but are prerequisites for other
+`p3` tasks.
+
+- `p4`: This is the backlog. It includes ideas that have not yet been thought
+through, but from a first glance, they don't show promise. These shouldn't be
 implemented, but occasionally contemplated, and then either discarded, or
 promoted to a higher priority. If there is something that you already deemed
 desirable, and having a decent degree of impact, then it shouldn't be assigned
 this priority.
 
-- *Prerequisites* are generally expressed by writing the tasks in a given
-order.
+- Besides the `p` prefixes, prerequisites, or the planned order of execution,
+is often expressed simply by writing the tasks in a particular order.
 
-- *Nature* of the task (data collection, documentation, collaborator-oriented,
+- Nature of the task (data collection, documentation, collaborator-oriented,
   learner-oriented, ...) is expressed by the section that the tasks are written
   into.
 
@@ -363,8 +387,7 @@ into the repo. (p4)
 
 ### Collaborator Convenience TODO's
 
-1. Support more seamless integration between Drive and your scripts. (**p0**,
-   3-4 hours)
+1. Design the integration between Drive and your scripts. (**p0**, 3-4 hours)
 
    Likely, this means letting them contribute through Drive instead of Git.
    List the data sources, and redirect the flow to Drive (think about this!)
@@ -612,13 +635,15 @@ class Noun(Word):
    build an accurate inflection module. We might also have to populate the
    derivations data differently.*
 
+1. Kindle: Design a Kindle dictionary generation pipeline (pp2)
+
 1. copticsite.com: Create a dictionary from copticsite.com's data. (p2)
 
 1. KELLIA: Create a dictionary from KELLIA's data. (p2)
 
    This will include the Greek loanwords. :))
 
-1. Rethink the Kindle dictionary generation pipeline. (p4)
+1. Rethink the Kindle dictionary generation tooling. (p4)
 
    1. Stop using `kindlegen`. It's obsolete.
 
@@ -728,7 +753,12 @@ proposal](
 https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/edit
 ). (**p1**, 100+ hours)
 
-### Rigor TODO's
+### Rigor / Planning TODO's
+
+1. Assign task priorities one more time. (**p0**)
+
+1. Design the pipeline, sources and sinks, and add a diagram for the new
+proposed pipeline. (**p0**)
 
 1. Rethink the directory structure. (**p0**)
 
@@ -759,7 +789,7 @@ https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/
 
 1. Crum: Detached types override / invalidate root types. Investigate. (p2)
 
-1. Pick up some of the Easter egg tasks left around the code. (**p0**)
+1. Triage the Easter eggs left around the code. (**p0**)
 
    - Run `make todo` to find them.
    - Move them to README files when more visibility is warranted.
