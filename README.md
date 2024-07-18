@@ -755,6 +755,8 @@ https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/
 
 ### Rigor / Planning TODO's
 
+1. The `stats` pre-commit is not working! Fix it! (**p0**)
+
 1. Assign task priorities one more time. (**p0**)
 
 1. Design the pipeline, sources and sinks, and add a diagram for the new
