@@ -18,6 +18,7 @@
   - [Learning Curriculum](#learning-curriculum)
   - [Neologisms](#neologisms)
 - [For Developers / Owners](#for-developers--owners)
+  - [Getting started](#getting-started)
   - [Directory Structure](#directory-structure)
   - [`vault.sh`](#vaultsh)
   - [Priorities](#priorities)
@@ -270,6 +271,14 @@ For visibility, planned features and improvements must be documented in this
 README file (not in any of the README files in the subdirectories).
 Non-learner-facing coding tasks are sometimes documented in the code as TODO's,
 and sometimes brought here.
+
+### Getting started
+
+Running `make install` should take care of most of the python installations.
+
+You also need to install the following manually:
+- [tidy](https://www.html-tidy.org/)
+- [magick](https://imagemagick.org/)
 
 ### Directory Structure
 

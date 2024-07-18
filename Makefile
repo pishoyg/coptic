@@ -32,7 +32,7 @@ all: install generate_1 test generate_2 generate_3 publish stats
 # LEVEL 2 RULES ###############################################################
 
 .PHONY: install
-install: brew_install pip_install python_install precommit_install
+install: bin_install pip_install python_install precommit_install
 
 # generate_1 rules are prerequisites for generate_2 rules.
 .PHONY: generate_1
@@ -212,8 +212,9 @@ kindle_cp_to_drive:
 	"$${KINDLE_DIR}"
 
 # INFRASTRUCTURE RULES
-brew_install:
+bin_install:
 	if ! command -v tidy &> /dev/null; then echo "Please install tidy from https://www.html-tidy.org/." && exit 1; fi
+	if ! command -v magick &> /dev/null; then echo "Please install magick from https://imagemagick.org/." && exit 1; fi
 
 pip_install: requirements.txt
 	python -m pip install --upgrade pip "$${BREAK_SYSTEM_PACKAGES}"
