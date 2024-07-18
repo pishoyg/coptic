@@ -823,10 +823,6 @@ proposed pipeline. (**p0**)
    up getting trimmed. Prevent your code from generating those in the first
    place.
 
-1. Run `checkmake`, `doctoc`, and `tidy` using pre-commits that download the
-   hooks from a remote repo, so you won't have to assume the existence of the
-   binaries on your local machine. (p2)
-
 1. Set up a more robust CI/CD pipelines. (p3, 20 hours)
 
    To start with, set up proper dependencies in Makefile.

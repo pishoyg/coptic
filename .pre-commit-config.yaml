@@ -80,6 +80,10 @@ repos:
     hooks:
       - id: markdownlint-fix
         args: [--disable, MD033, MD036]
+  - repo: https://github.com/thlorenz/doctoc
+    rev: v2.2.0
+    hooks:
+      - id: doctoc
   # YAML.
   - repo: https://github.com/google/yamlfmt
     rev: v0.13.0
@@ -100,6 +104,11 @@ repos:
     rev: v0.20.0
     hooks:
       - id: stylua
+  # Makefile
+  - repo: https://github.com/mrtazz/checkmake.git
+    rev: 0.2.2
+    hooks:
+      - id: checkmake
   # Local scripts.
   - repo: local
     hooks:
@@ -112,26 +121,6 @@ repos:
         # deletions as well, which is not straightforward to support in
         # pre-commit.
         pass_filenames: false
-      - id: checkmake
-        name: checkmake
-        entry: checkmake
-        language: system
-        types: [makefile]
-      - id: doctoc
-        name: doctoc
-        entry: doctoc
-        language: system
-        types: [markdown]
-      - id: tidy-html
-        name: tidy-html
-        entry: tidy -indent -modify -quiet --tidy-mark no -wrap 80
-        language: system
-        files: '.*\.html'
-      - id: tidy-xml
-        name: tidy-xml
-        entry: tidy -indent -modify -quiet --tidy-mark no -wrap 80 -xml
-        language: system
-        files: .*\.(xml|xhtml|opf)$
       - id: stats
         name: stats
         entry: bash -c 'if [[ $(find stats.tsv -mtime +1) ]]; then make stats; fi'
@@ -153,3 +142,15 @@ repos:
         entry: bash -c 'for x in "$@"; do NEW=$(python -m json5.tool --as-json --indent 2 "$x") && echo "${NEW}" > "$x" && python -m json.tool --no-ensure-ascii --indent 2 "$x" "$x"; done' --
         language: system
         types: [json]
+        # TODO: Install the tidy pre-commit from a remote repo, so you don't
+        # have to manually install the binary.
+      - id: tidy-html
+        name: tidy-html
+        entry: tidy -indent -modify -quiet --tidy-mark no -wrap 80
+        language: system
+        files: '.*\.html'
+      - id: tidy-xml
+        name: tidy-xml
+        entry: tidy -indent -modify -quiet --tidy-mark no -wrap 80 -xml
+        language: system
+        files: .*\.(xml|xhtml|opf)$

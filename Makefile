@@ -213,11 +213,7 @@ kindle_cp_to_drive:
 
 # INFRASTRUCTURE RULES
 brew_install:
-	# TODO: The following is not platform-agnostic. Use pre-commits that
-	# reference a foreign repo in order to run the relevant pre-commits.
-	npm install -g doctoc
-	brew install checkmake
-	brew install tidy-html5
+	if ! command -v tidy &> /dev/null; then echo "Please install tidy from https://www.html-tidy.org/." && exit 1; fi
 
 pip_install: requirements.txt
 	python -m pip install --upgrade pip "$${BREAK_SYSTEM_PACKAGES}"
