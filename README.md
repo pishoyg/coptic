@@ -764,6 +764,10 @@ https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/
 
 ### Rigor / Planning TODO's
 
+1. Explore the possibility of using
+   [thenounproject.com](https://thenounproject.com/) or a similar tool to
+   collect images for your flashcards. (**p-1**)
+
 1. The `stats` pre-commit is not working! Fix it! (**p0**)
 
 1. Assign task priorities one more time. (**p0**)
