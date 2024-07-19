@@ -33,5 +33,5 @@ for FILE in "${SRC}"/*; do
   if ${SKIP_EXISTING} && [ -f "${DST}/${BASENAME/.png/.jpg}" ]; then
     continue
   fi
-  magick "${SRC}/${BASENAME}" -resize "${WIDTH}x" "${DST}/${BASENAME/.png/.jpg}"
+  magick "${SRC}/${BASENAME}" -alpha remove -alpha off -background white -resize "${WIDTH}x" "${DST}/${BASENAME/.png/.jpg}"
 done
