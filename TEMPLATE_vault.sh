@@ -25,15 +25,15 @@ export JSON_KEYFILE_NAME=""
 export FLASHCARD_DIR="${HOME}/Desktop"
 
 # KINDLE_DIR is the destination directory for Kindle dictionaries.
-export KINDLE_DIR="${HOME}/Desktop/"
+export KINDLE_DIR="${HOME}/Desktop"
 
 # BIBLE_DIR is the destination directory for the Bible EPUBs.
-export BIBLE_DIR="${HOME}/Desktop/"
+export BIBLE_DIR="${HOME}/Desktop"
 
 # TEST_DIR is used to publish temporary versions of the flashcard packages
 # during testing. Use it in the testing or verification rules, which are
 # written to avoid overriding the published version prematurely.
-export TEST_DIR="/tmp/"
+export TEST_DIR="/tmp"
 
 # BREAK_SYSTEM_PACKAGES is passed to `pip` commands. Its value should either be
 # "" (the empty string), or "--break-system-packages". In the latter case,
