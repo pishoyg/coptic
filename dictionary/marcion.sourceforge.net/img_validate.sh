@@ -1,25 +1,26 @@
 #!/bin/bash
 
-IMG="dictionary/marcion.sourceforge.net/data/img/"
-IMG_300="dictionary/marcion.sourceforge.net/data/img-300/"
+IMG="dictionary/marcion.sourceforge.net/data/img"
+IMG_300="dictionary/marcion.sourceforge.net/data/img-300"
 
-# shellcheck disable=SC2010  # Allow grep after ls.
 img_extensions () {
-  ls "${IMG}" | grep -oE '\..*$' | tr '[:upper:]' '[:lower:]' | sort
+  find "${IMG}" -type f | grep -oE '\.[^.]+$' | tr '[:upper:]' '[:lower:]' | sort
 }
 
 valid_img_extensions () {
   echo .avif .gif .jpeg .jpg .png .webp | tr ' ' '\n' | sort
 }
 
-# shellcheck disable=SC2010  # Allow grep after ls.
 img_stems () {
-  ls "${IMG}" | grep -oE '^[^.]+' | sort
+  find "${IMG}" -type f -exec basename {} \; | grep -oE '^[^.]+' | sort
 }
 
-# shellcheck disable=SC2010  # Allow grep after ls.
+valid_img_stems () {
+  img_stems | grep -oE '^[[:digit:]]+-[[:digit:]]+-[[:digit:]]+$' | grep --invert '^$'
+}
+
 img_300_stems () {
-  ls "${IMG_300}" | grep -oE '^[^.]+' | sort
+  find "${IMG_300}" -type f -exec basename {} \; | grep -oE '^[^.]+' | sort
 }
 
 # Checking for unknown image extensions:
@@ -46,7 +47,31 @@ DIFF=$(comm -3 <(img_stems) <(img_300_stems))
 if [ -n "${DIFF}" ]; then
   echo "Delta:"
   echo "${DIFF}"
-  echo "You might want to run convert_resize.sh, or delete some images from"
+  echo "You might want to run img_setup.sh, or delete some images from"
   echo " the destination that are no longer in the source directory."
   exit 1
 fi
+
+# Check that all images have valid names.
+DIFF=$(comm -3 <(img_stems) <(valid_img_stems))
+if [ -n "${DIFF}" ]; then
+  echo "Invalid image names:"
+  echo "${DIFF}"
+  exit 1
+fi
+
+# Check that all images have up-to-date sources.
+find "${IMG}" -type f | while read -r FILE; do
+  SOURCE_FILE="${FILE%.*}.txt"
+  SOURCE_FILE="${SOURCE_FILE/img/img-sources}"
+  if [ ! -f "${SOURCE_FILE}" ]; then
+    echo "${FILE} doesn't have a source!"
+    echo "${SOURCE_FILE} doesn't exist!"
+    exit 1
+  fi
+  if (($(date +%s -r "${FILE}") > $(date +%s -r "${SOURCE_FILE}"))); then
+    echo "${FILE} has a more recent timestamp than its source!"
+    echo "Update ${SOURCE_FILE}, or merely touch if the content is already up-to-date."
+    exit 1
+  fi
+done
