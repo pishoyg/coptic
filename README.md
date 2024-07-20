@@ -425,6 +425,9 @@ into the repo. (p4)
       overridden for `dawoud-pages` and `crum-last-page`, rather than simply
       write an empty placeholder column. (p2, 1-2 hours)
 
+1. Research alternatives to [thenounproject.com](https://thenounproject.com/).
+   (p4)
+
 1. Find / design a software to help users record their pronunciations. (p4, 20
    hours, delegate)
 
@@ -764,9 +767,18 @@ https://docs.google.com/document/d/1-pvMfGssGK22F9bPyjUv7_siwIf932NYROSKgXM0DDk/
 
 ### Rigor / Planning TODO's
 
-1. Explore the possibility of using
-   [thenounproject.com](https://thenounproject.com/) or a similar tool to
-   collect images for your flashcards. (**p-1**)
+1. Partially automate image collection through
+   [thenounproject.com](https://thenounproject.com/). (**p0**)
+
+   - From a first glance, it seems implausible to delegate the full task of
+   collecting pictures to this API, but it seems quite plausible to partially
+   delegate it with some human supervision as follows:
+
+   - In the Crum's image-finding script, users should be given the option to
+   retrieve images through this API. The script should then retrieve a number
+   of images and let the users decide which ones to keep. It can also open a
+   search page for them in the browser so they can manually select other words
+   if they don't like the API's first choices.
 
 1. The `stats` pre-commit is not working! Fix it! (**p0**)
 
