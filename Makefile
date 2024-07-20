@@ -127,10 +127,14 @@ crum_img: $(shell find dictionary/marcion.sourceforge.net/data/ -type f)
 		$${SKIP_EXISTING} $${MANUAL_SOURCES}
 
 crum_img_find: FORCE
+	# TODO: Remove the filters. Do all the words.
 	python dictionary/marcion.sourceforge.net/img_find.py \
 		--skip_existing=true \
 		--exclude "type-parsed:verb" "dialect-B:" \
-		--start_at_key="$${START_AT_KEY}"
+		--start_at_key="$${START_AT_KEY}" \
+		--thenounproject_key="$${THENOUNPROJECT_KEY}" \
+		--thenounproject_secret="$${THENOUNPROJECT_SECRET}"
+
 
 crum_img_validate_aux: FORCE
 	bash dictionary/marcion.sourceforge.net/img_validate.sh

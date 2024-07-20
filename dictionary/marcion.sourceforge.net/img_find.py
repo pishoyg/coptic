@@ -8,11 +8,30 @@ import subprocess
 import enforcer
 import pandas as pd
 import pillow_avif
+import requests
+import requests_oauthlib
 import type_enforced
 from PIL import Image
 
 DIGITS_RE = re.compile(r"\d+")
 FILE_NAME_RE = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
+
+
+def params_str(params: dict) -> str:
+    return "?" + "&".join(f"{k}={v}" for k, v in params.items())
+
+
+# TODO: Reconsider the use of SVG images.
+# TODO: Download a higher-quality image instead of just the thumbnail.
+EXTENSION = "png"
+URL = "https://api.thenounproject.com/v2"
+SEARCH_PARAMS = {
+    "query": "{query}",
+    "include_svg": 0,
+    "thumbnail_size": 200,
+    "limit": 10,
+}
+ICON_SEARCH_FMT = URL + "/icon" + params_str(SEARCH_PARAMS)
 
 argparser = argparse.ArgumentParser(
     description="""Find images for the dictionary words.
@@ -65,7 +84,7 @@ argparser.add_argument(
     "--print_cols",
     type=str,
     nargs="*",
-    default=["key", "word-parsed-prettify", "en-parsed-no-greek-no-html"],
+    default=["key", "word-parsed-prettify", "en-parsed-no-greek-no-html", "crum-link"],
     help="A list of columns to print when prompting the user to find images.",
 )
 
@@ -122,6 +141,20 @@ argparser.add_argument(
     " absence of a limit.",
 )
 
+argparser.add_argument(
+    "--thenounproject_key",
+    type=str,
+    default="",
+    help="Key to the API of thenounproject.",
+)
+
+argparser.add_argument(
+    "--thenounproject_secret",
+    type=str,
+    default="",
+    help="Secret to the API of thenounproject.",
+)
+
 args = argparser.parse_args()
 
 
@@ -132,6 +165,7 @@ def get_max_idx(g: list[str], key: int, sense: int) -> int:
     highest = 0
     for path in g:
         match = FILE_NAME_RE.match(os.path.basename(path))
+        assert match
         assert match.group(1) == key
         if match.group(2) != sense:
             continue
@@ -148,9 +182,12 @@ def open_images(images: list[str]):
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def get_downloads() -> list[str]:
-    files = glob.glob(os.path.join(args.downloads, "*"))
-    files = [f for f in files if os.path.basename(f) not in args.ignore]
-    return files
+    return [
+        f
+        for f in os.listdir(args.downloads)
+        if os.path.isfile(os.path.join(args.downloads, f))
+        and os.path.basename(f) not in args.ignore
+    ]
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -219,12 +256,38 @@ def main():
 
         while True:
             # Force read a valid sense, or no sense at all.
-            sense = input("Input sense number. Type 's' to skip.").lower()
+            sense = input(
+                "Enter sense number, 's' to skip, or a search query for thenounproject."
+            ).lower()
+
             if sense == "s":
+                # S for skip!
                 break
+
             if not sense.isdigit():
-                print(f"Unable to parse {sense}")
+                # This is likely a search query.
+                auth = requests_oauthlib.OAuth1(
+                    args.thenounproject_key, args.thenounproject_secret
+                )
+                resp = requests.get(ICON_SEARCH_FMT.format(query=sense), auth=auth)
+                resp.raise_for_status()
+                resp = resp.json()
+                resp = resp["icons"]
+                if not resp:
+                    print("Nothing found on thenounproject! :/")
+                    continue
+                for icon in resp:
+                    url = icon["thumbnail_url"]
+                    id = icon["id"]
+                    download = requests.get(url)
+                    download.raise_for_status()
+                    filename = os.path.join(args.downloads, f"{id}.{EXTENSION}")
+                    with open(filename, "wb") as f:
+                        f.write(download.content)
+                open_images(get_downloads())
                 continue
+
+            assert sense.isdigit()  # Sanity check.
             sense = int(sense)
             if sense <= 0:
                 print("Sense must be a positive integer.")
@@ -252,11 +315,11 @@ def main():
             while True:
                 open_images(files)
                 i = input(f"Sense = {sense}. Looks good? (yes/no/sense)").lower()
+                files = get_downloads()
                 if i.isdigit():
                     sense = int(i)
                 if i in {"y", "yes"}:
                     break
-                files = get_downloads()
 
             # Move the files.
             idx = get_max_idx(existing(), key, sense)
