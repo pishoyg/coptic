@@ -116,10 +116,15 @@ repos:
         name: marcion-validate
         entry: dictionary/marcion.sourceforge.net/img_validate.sh
         language: script
-        # N.B. It's not currently possible to limit this pre-commit to a
-        # specific directory or set of files because it needs to be run on
-        # deletions as well, which is not straightforward to support in
-        # pre-commit.
+        # N.B. This hook should also run when files are deleted. But
+        # pre-commits don't work that way! If a file is deleted, even if it
+        # matches the pattern below, the hook won't be triggered.
+        # We still use the pattern to run the hook selectively because it's
+        # too slow. For deletions, we rely on the developer's memory, as well
+        # as sporadic runs of the scripts triggered by other operations such as
+        # image modifications and additions, to ensure that the files that need
+        # to be deleted are deleted.
+        files: ^dictionary/marcion.sourceforge.net/data/img.*
         pass_filenames: false
       - id: stats
         name: stats
