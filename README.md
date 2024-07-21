@@ -824,7 +824,14 @@ proposed pipeline. (**p0**)
 
 ### Developer Convenience TODO's
 
+1. Add a script to create source files for manually-added images. (**p0**)
+
 1. Revisit the currently-assigned tasks and priorities. (p3, occasionally)
+
+1. Image validation should verify the contents of the source files. (p4)
+
+1. See if you can run the image-validation script on new / modified images
+   only. (p4)
 
 1. Write the flashcard data to an intermediate format before `.apkg`. (p2,
    20 hours)
