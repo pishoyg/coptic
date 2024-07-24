@@ -16,9 +16,9 @@ MARCION_IMG=$(ls dictionary/marcion.sourceforge.net/data/img/ \
   | uniq \
   | wc --lines)
 
-MARCION_DAWOUD=$(awk -F"\t" '{ print $2 $3 }' \
+MARCION_DAWOUD=$(cut --fields=2,3 \
   < dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv \
-  | grep --invert '^$' --count)
+  | grep --invert -E '^[[:space:]]*$' --count)
 
 echo "Number of lines of code:"
 echo "${LOC}"
