@@ -113,6 +113,7 @@ marcion: $(shell find dictionary/marcion.sourceforge.net/ -type f)
 marcion_dawoud: FORCE
 	curl -L \
 		"https://docs.google.com/spreadsheets/d/e/2PACX-1vTItxV4E4plQrzjWLSea85ZFQWcQ4ba-p2BBIDG9h5yI0i9URn9GD9zZhxEj8kVI7jhCoPWPEapd9D7/pub?output=tsv" \
+		| cut --fields 1,2,3 \
 		> "dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv"
 
 marcion_img: $(shell find dictionary/marcion.sourceforge.net/data/ -type f)
