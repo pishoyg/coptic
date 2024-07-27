@@ -116,6 +116,12 @@ marcion_dawoud: FORCE
 		| cut --fields 1,2,3 \
 		> "dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv"
 
+marcion_notes: FORCE
+	curl -L \
+		"https://docs.google.com/spreadsheets/d/e/2PACX-1vRi-3twJ_GWXhvbeXU9cxtmHc6j1rY8XJI7pggMyG3EP5KZHrK__S7GQmwMm8tGelPHU2ye6mZMo831/pub?output=tsv" \
+		| cut --fields 1,2 \
+		> "dictionary/marcion.sourceforge.net/data/notes/notes.tsv"
+
 marcion_img: $(shell find dictionary/marcion.sourceforge.net/data/ -type f)
 	bash dictionary/marcion.sourceforge.net/img_setup.sh \
 		$${SKIP_EXISTING}
