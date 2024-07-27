@@ -135,6 +135,16 @@ def crum(
                 get_caption=field.stem,
                 force=False,
             ),
+            # Editor's notes.
+            field.aon(
+                "<i>Editor's Note: </i>",
+                field.tsv(
+                    file_path="dictionary/marcion.sourceforge.net/data/notes/notes.tsv",
+                    column_name="notes",
+                    force=False,
+                ),
+                "<br/>",
+            ),
             # Horizontal line.
             "<hr/>",
             # Full entry.
