@@ -85,6 +85,9 @@ todo: todo_aux
 .PHONY: marcion_img_validate
 marcion_img_validate: marcion_img_validate_aux
 
+.PHONY: marcion_img_manual
+marcion_img_manual: marcion_img_manual_aux
+
 .PHONY: update
 update: precommit_update pip_update
 
@@ -134,6 +137,9 @@ marcion_img_find: FORCE
 
 marcion_img_validate_aux: FORCE
 	bash dictionary/marcion.sourceforge.net/img_validate.sh
+
+marcion_img_manual_aux: FORCE
+	bash dictionary/marcion.sourceforge.net/img_manual.sh
 
 # KELLIA RULES
 kellia: FORCE
