@@ -36,7 +36,7 @@ install: bin_install pip_install python_install precommit_install
 
 # generate_1 rules are prerequisites for generate_2 rules.
 .PHONY: generate_1
-generate_1: bible copticsite marcion marcion_dawoud marcion_img kellia kellia_analysis
+generate_1: bible copticsite crum crum_dawoud crum_img kellia kellia_analysis
 
 .PHONY: test
 test: precommit
@@ -65,13 +65,13 @@ stats: stats_aux
 flash: precommit flashcards flashcards_redundant flashcards_cp_to_drive
 
 .PHONY: amazon
-amazon: precommit marcion kindle kindle_cp_to_drive
+amazon: precommit crum kindle kindle_cp_to_drive
 
 .PHONY: clean
 clean: git_clean bible_epub_clean kellia_analysis_clean
 
 .PHONY: toil
-toil: marcion_img_find
+toil: crum_img_find
 
 .PHONY: verify
 verify: flashcards_verify flashcards_crum_sahidic_verify
@@ -82,8 +82,8 @@ try: flashcards_try flashcards_crum_sahidic_try
 .PHONY: todo
 todo: todo_aux
 
-.PHONY: marcion_img_validate
-marcion_img_validate: marcion_img_validate_aux
+.PHONY: crum_img_validate
+crum_img_validate: crum_img_validate_aux
 
 .PHONY: update
 update: precommit_update pip_update
@@ -106,33 +106,33 @@ bible_epub_clean: $(shell ls bible/stshenouda.org/data/output/epub*/*.epub)
 copticsite: FORCE
 	python dictionary/copticsite.com/main.py
 
-# MARCION RULES
-marcion: $(shell find dictionary/marcion.sourceforge.net/ -type f)
+# CRUM RULES
+crum: $(shell find dictionary/marcion.sourceforge.net/ -type f)
 	python dictionary/marcion.sourceforge.net/main.py
 
-marcion_dawoud: FORCE
+crum_dawoud: FORCE
 	curl -L \
 		"https://docs.google.com/spreadsheets/d/e/2PACX-1vTItxV4E4plQrzjWLSea85ZFQWcQ4ba-p2BBIDG9h5yI0i9URn9GD9zZhxEj8kVI7jhCoPWPEapd9D7/pub?output=tsv" \
 		| cut --fields 1,2,3 \
 		> "dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv"
 
-marcion_notes: FORCE
+crum_notes: FORCE
 	curl -L \
 		"https://docs.google.com/spreadsheets/d/e/2PACX-1vRi-3twJ_GWXhvbeXU9cxtmHc6j1rY8XJI7pggMyG3EP5KZHrK__S7GQmwMm8tGelPHU2ye6mZMo831/pub?output=tsv" \
 		| cut --fields 1,2 \
 		> "dictionary/marcion.sourceforge.net/data/notes/notes.tsv"
 
-marcion_img: $(shell find dictionary/marcion.sourceforge.net/data/ -type f)
+crum_img: $(shell find dictionary/marcion.sourceforge.net/data/ -type f)
 	bash dictionary/marcion.sourceforge.net/img_setup.sh \
 		$${SKIP_EXISTING} $${MANUAL_SOURCES}
 
-marcion_img_find: FORCE
+crum_img_find: FORCE
 	python dictionary/marcion.sourceforge.net/img_find.py \
 		--skip_existing=true \
 		--exclude "type-parsed:verb" "dialect-B:" \
 		--start_at_key="$${START_AT_KEY}"
 
-marcion_img_validate_aux: FORCE
+crum_img_validate_aux: FORCE
 	bash dictionary/marcion.sourceforge.net/img_validate.sh
 
 # KELLIA RULES
