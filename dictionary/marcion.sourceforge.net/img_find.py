@@ -119,6 +119,13 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
+    "--sources_dir",
+    type=str,
+    default="dictionary/marcion.sourceforge.net/data/img-sources/",
+    help="Path to the sources directory.",
+)
+
+argparser.add_argument(
     "--ignore",
     type=str,
     nargs="*",
@@ -136,7 +143,7 @@ argparser.add_argument(
 argparser.add_argument(
     "--min_width",
     type=int,
-    default=300,
+    default=200,
     help="The minimum acceptable width of an image. Set to -1 to indicate the"
     " absence of a limit.",
 )
@@ -182,12 +189,11 @@ def open_images(images: list[str]):
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def get_downloads() -> list[str]:
-    return [
-        f
-        for f in os.listdir(args.downloads)
-        if os.path.isfile(os.path.join(args.downloads, f))
-        and os.path.basename(f) not in args.ignore
-    ]
+    files = os.listdir(args.downloads)
+    files = [f for f in files if f not in args.ignore]
+    files = [os.path.join(args.downloads, f) for f in files]
+    files = [f for f in files if os.path.isfile(f)]
+    return files
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -224,6 +230,16 @@ def invalid_size(files: list[str]) -> list[str]:
 def main():
     df = pd.read_csv(args.input_tsv, sep="\t", dtype=str, encoding="utf-8").fillna("")
     df.sort_values(by=args.input_key_col, inplace=True)
+
+    sources: dict[str, str] = {}
+
+    def retrieve(url: str, filename: str) -> None:
+        download = requests.get(url)
+        download.raise_for_status()
+        filename = os.path.join(args.downloads, filename)
+        with open(filename, "wb") as f:
+            f.write(download.content)
+        sources[filename] = url
 
     exclude = {}
     for e in args.exclude:
@@ -264,6 +280,11 @@ def main():
                 # S for skip!
                 break
 
+            if sense == "clear":
+                sources.clear()
+                print("Sources cleared!")
+                continue
+
             if not sense.isdigit():
                 # This is likely a search query.
                 auth = requests_oauthlib.OAuth1(
@@ -279,11 +300,7 @@ def main():
                 for icon in resp:
                     url = icon["thumbnail_url"]
                     id = icon["id"]
-                    download = requests.get(url)
-                    download.raise_for_status()
-                    filename = os.path.join(args.downloads, f"{id}.{EXTENSION}")
-                    with open(filename, "wb") as f:
-                        f.write(download.content)
+                    retrieve(url, f"{id}.{EXTENSION}")
                 open_images(get_downloads())
                 continue
 
@@ -332,6 +349,14 @@ def main():
                         file_name(key=key, sense=sense, idx=idx, ext=ext),
                     )
                 )
+                with open(
+                    os.path.join(
+                        args.sources_dir,
+                        file_name(key=key, sense=sense, idx=idx, ext=".txt"),
+                    ),
+                    "w",
+                ) as f:
+                    f.write(sources.get(file, "manual"))
 
 
 if __name__ == "__main__":
