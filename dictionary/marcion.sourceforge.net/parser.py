@@ -76,10 +76,14 @@ def _apply_substitutions(line: str, subs: list, use_coptic_symbol: bool) -> str:
     for pair in subs:
         p0 = pair[0]
         p1 = pair[1]
-        if not isinstance(p1, str):
-            assert isinstance(p1, lexical.type)
+        if isinstance(p1, lexical.type):
             p1 = p1.coptic_symbol() if use_coptic_symbol else p1.marcion()
-        line = line.replace(p0, p1)
+        assert isinstance(p1, str)
+        if isinstance(p0, re.Pattern):
+            line = p0.sub(p1, line)
+        else:
+            assert isinstance(p0, str)
+            line = line.replace(p0, p1)
     return line
 
 
@@ -340,6 +344,9 @@ def parse_english_cell(line: str) -> str:
     # English.
     out = _apply_substitutions(
         out, constants.ENGLISH_POSTPROCESSING, use_coptic_symbol=False
+    )
+    out = _apply_substitutions(
+        out, constants.ENGLISH_PRETTIFYING, use_coptic_symbol=False
     )
     return clean(out)
 
