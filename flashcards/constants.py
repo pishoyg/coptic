@@ -128,8 +128,6 @@ def crum(
                 # glob.glob(f"dictionary/marcion.sourceforge.net/data/img-300/{key}-*")
                 # we use this method in order to avoid using the computationally expensive
                 # glob.glob.
-                # TODO: Move this to a class in `field.py`, and use with the sound media as
-                # well.
                 get_paths=explanatory_images.get,
                 sort_paths=field.sort_semver,
                 get_caption=field.stem,
