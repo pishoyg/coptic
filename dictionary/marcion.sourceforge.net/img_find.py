@@ -4,6 +4,7 @@ import os
 import pathlib
 import re
 import subprocess
+import typing
 
 import enforcer
 import pandas as pd
@@ -233,8 +234,12 @@ def main():
 
     sources: dict[str, str] = {}
 
-    def retrieve(url: str, filename: str) -> None:
-        download = requests.get(url)
+    def retrieve(
+        url: str, filename: typing.Optional[str] = None, headers: dict[str, str] = {}
+    ) -> None:
+        if filename is None:
+            filename = os.path.basename(url)
+        download = requests.get(url, headers=headers)
         download.raise_for_status()
         filename = os.path.join(args.downloads, filename)
         with open(filename, "wb") as f:
@@ -274,15 +279,27 @@ def main():
             # Force read a valid sense, or no sense at all.
             sense = input(
                 "Enter sense number, 's' to skip, or a search query for thenounproject."
-            ).lower()
+            )
 
-            if sense == "s":
+            if sense.lower() == "s":
                 # S for skip!
                 break
 
-            if sense == "clear":
+            if sense.lower() == "clear":
                 sources.clear()
                 print("Sources cleared!")
+                continue
+
+            if sense.startswith("http"):
+                url = sense
+                headers: dict[str, str] = {}
+                if url.startswith("https://upload.wikimedia.org/"):
+                    headers = {
+                        "Api-User-Agent": "Coptic/1.0 (https://github.com/pishoyg/coptic/; pishoybg@gmail.com)",
+                        "User-Agent": "Coptic/1.0 (https://github.com/pishoyg/coptic/; pishoybg@gmail.com)",
+                    }
+                print(headers)
+                retrieve(url, headers=headers)
                 continue
 
             if not sense.isdigit():
@@ -298,9 +315,7 @@ def main():
                     print("Nothing found on thenounproject! :/")
                     continue
                 for icon in resp:
-                    url = icon["thumbnail_url"]
-                    id = icon["id"]
-                    retrieve(url, f"{id}.{EXTENSION}")
+                    retrieve(icon["thumbnail_url"])
                 open_images(get_downloads())
                 continue
 
