@@ -288,14 +288,19 @@ def main():
         while True:
             # Force read a valid sense, or no sense at all.
             sense = input(
-                "Enter sense number, 's' to skip, or a search query for thenounproject."
+                "Enter sense number ('s' to skip, 'c' to clear sources, a an"
+                " image URL to retrieve said image, or a search query to use"
+                " thenounproject)."
             )
+            sense = sense.strip()
+            if not sense:
+                continue
 
             if sense.lower() == "s":
                 # S for skip!
                 break
 
-            if sense.lower() == "clear":
+            if sense.lower() == "c":
                 sources.clear()
                 print("Sources cleared!")
                 continue
