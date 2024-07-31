@@ -441,7 +441,7 @@ def main():
                     os.path.join(args.sources_dir, file_name(ext=".txt")),
                     "w",
                 ) as f:
-                    f.write(sources[file])
+                    f.write(sources[file] + "\n")
                 # Write the converted image.
                 subprocess.call(
                     [
