@@ -14,7 +14,7 @@ import requests_oauthlib
 import type_enforced
 from PIL import Image
 
-from utils import colors
+from utils import printer
 
 TARGET_WIDTH = 300
 IMG_300_DIR = "dictionary/marcion.sourceforge.net/data/img-300"
@@ -255,7 +255,7 @@ def main():
             filename = os.path.basename(url)
         download = requests.get(url, headers=headers)
         if not download.ok:
-            colors.red(download.text)
+            printer.red(download.text)
             return
         filename = os.path.join(args.downloads, filename)
         with open(filename, "wb") as f:
@@ -309,7 +309,7 @@ def main():
                 # S for skip!
                 files = get_downloads()
                 if files:
-                    colors.red(
+                    printer.red(
                         f"You can't skip with a dirty downloads directory. Please remove {files}."
                     )
                     continue
@@ -332,13 +332,13 @@ def main():
                 files = get_downloads()
                 files = [f for f in files if f not in sources]
                 if len(files) != 1:
-                    colors.red(
+                    printer.red(
                         f"Can't assign source because the number of new files != 1: {files}"
                     )
                     continue
                 sense = sense[1:]
                 if not sense:
-                    colors.red("No source given!")
+                    printer.red("No source given!")
                     continue
                 sources[files[0]] = sense
                 continue
@@ -364,12 +364,12 @@ def main():
                 )
                 resp = requests.get(ICON_SEARCH_FMT.format(query=sense), auth=auth)
                 if not resp.ok:
-                    colors.red(resp.text)
+                    printer.red(resp.text)
                     continue
                 resp = resp.json()
                 resp = resp["icons"]
                 if not resp:
-                    colors.red("Nothing found on thenounproject! :/")
+                    printer.red("Nothing found on thenounproject! :/")
                     continue
                 for icon in resp:
                     retrieve(icon["thumbnail_url"])
@@ -379,7 +379,7 @@ def main():
             assert sense.isdigit()  # Sanity check.
             sense = int(sense)
             if sense <= 0:
-                colors.red("Sense must be a positive integer.")
+                printer.red("Sense must be a positive integer.")
                 continue
 
             files = get_downloads()
@@ -387,14 +387,14 @@ def main():
             # Force size.
             invalid = invalid_size(files)
             if invalid:
-                colors.red(f"{invalid} are too small, please replace them.")
+                printer.red(f"{invalid} are too small, please replace them.")
                 continue
 
             # Force sources.
             absent_source = False
             for file in files:
                 if file not in sources:
-                    colors.red(f"Please populate the source for {file}")
+                    printer.red(f"Please populate the source for {file}")
                     absent_source = True
             if absent_source:
                 print(f"Known sources: {sources}")
@@ -404,7 +404,7 @@ def main():
             # add pictures for this word. (Unless they typed a sense, in which
             # case it would be weird!)
             if not files:
-                colors.red(
+                printer.red(
                     "You typed a sense, but there are no pictures! This"
                     " doesn't make sense!"
                 )
