@@ -1,5 +1,6 @@
 import hashlib
 
+import colorama
 import enforcer
 import field
 import genanki
@@ -11,25 +12,34 @@ MAX_ID = 1 << 31
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class stats:
 
-    def __init__(self):
+    def __init__(self) -> None:
         self._exported_notes = 0
         self._no_key = 0
         self._no_front = 0
         self._no_back = 0
         self._duplicate_key = 0
 
-    def print(self):
+    def problematic(self, count: int, message: str) -> None:
         print(
-            "\n".join(
-                [
-                    f"- Exported {self._exported_notes} notes.",
-                    f"- {self._no_key} notes are missing a key.",
-                    f"- {self._no_front} notes are missing a front.",
-                    f"- {self._no_back} notes are missing a back.",
-                    f"- {self._duplicate_key} notes have duplicate keys.",
-                ]
-            )
+            "- "
+            + (colorama.Fore.RED if count else colorama.Fore.GREEN)
+            + str(count)
+            + colorama.Fore.RESET
+            + message
         )
+
+    def print(self) -> None:
+        print(
+            "- Exported "
+            + colorama.Fore.GREEN
+            + str(self._exported_notes)
+            + colorama.Fore.RESET
+            + " notes."
+        )
+        self.problematic(self._no_key, " notes are missing a key.")
+        self.problematic(self._no_front, " notes are missing a front.")
+        self.problematic(self._no_back, " notes are missing a back.")
+        self.problematic(self._duplicate_key, " notes have duplicate keys.")
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
