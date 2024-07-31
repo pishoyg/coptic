@@ -16,6 +16,7 @@ from PIL import Image
 
 DIGITS_RE = re.compile(r"\d+")
 FILE_NAME_RE = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
+SOURCE_RE = re.compile(r"^source\(([^=]+)\)=(.+)$")
 
 
 def params_str(params: dict) -> str:
@@ -173,8 +174,8 @@ args = argparser.parse_args()
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def get_max_idx(g: list[str], key: int, sense: int) -> int:
-    key = str(key)
-    sense = str(sense)
+    key: str = str(key)
+    sense: str = str(sense)
     highest = 0
     for path in g:
         match = FILE_NAME_RE.match(os.path.basename(path))
@@ -288,9 +289,12 @@ def main():
         while True:
             # Force read a valid sense, or no sense at all.
             sense = input(
-                "Enter sense number ('s' to skip, 'c' to clear sources, a an"
-                " image URL to retrieve said image, or a search query to use"
-                " thenounproject)."
+                f"Enter sense number, 's' to skip, 'cs' to clear sources, an"
+                f" image URL to retrieve said image, a search query to use"
+                f" `thenounproject`, '=${{SOURCE}}' to populate the source for"
+                f" the only image in {args.downloads} that is missing a"
+                f" source, or source(${{PATH}})=${{SOURCE}} to populate the"
+                f" source for a given image.\n"
             )
             sense = sense.strip()
             if not sense:
@@ -298,11 +302,32 @@ def main():
 
             if sense.lower() == "s":
                 # S for skip!
-                break
-
-            if sense.lower() == "c":
+                files = get_downloads()
+                if files:
+                    print(
+                        f"You can't skip with a dirty downloads directory. Please remove {files}."
+                    )
+                    continue
+                # We clear the sources!
+                # It's guaranteed that the downloads directory is clean.
                 sources.clear()
                 print("Sources cleared!")
+                break
+
+            if sense.lower() == "cs":
+                sources.clear()
+                print("Sources cleared!")
+                continue
+
+            if sense.startswith("="):
+                files = get_downloads()
+                files = [f for f in files if f not in sources]
+                if len(files) != 1:
+                    print(
+                        f"Can't assign source because the number of new files != 1: {files}"
+                    )
+                    continue
+                sources[files[0]] = sense[1:]
                 continue
 
             if sense.startswith("http"):
@@ -312,6 +337,12 @@ def main():
                     headers = WIKI_HEADERS
                 retrieve(url, headers=headers)
                 continue
+
+            source_search = SOURCE_RE.search(sense)
+            if source_search:
+                sources[source_search.group(1)] = source_search.group(2)
+                continue
+            del source_search
 
             if not sense.isdigit():
                 # This is likely a search query.
@@ -338,9 +369,20 @@ def main():
 
             files = get_downloads()
 
+            # Force size.
             invalid = invalid_size(files)
             if invalid:
                 print(f"{invalid} are too small, please replace them.")
+                continue
+
+            # Force sources.
+            absent_source = False
+            for file in files:
+                if file not in sources:
+                    print(f"Please populate the source for {file}")
+                    absent_source = True
+            if absent_source:
+                print(f"Known sources: {sources}")
                 continue
 
             # If there are no files, we assume that the user doesn't want to
@@ -357,7 +399,9 @@ def main():
             i = "n"
             while True:
                 open_images(files)
-                i = input(f"Sense = {sense}. Looks good? (yes/no/sense)").lower()
+                print(f"Sense = {sense}.")
+                print(f"Sources = {sources}")
+                i = input("Looks good? (yes/no/sense)").lower()
                 files = get_downloads()
                 if i.isdigit():
                     sense = int(i)
@@ -382,7 +426,7 @@ def main():
                     ),
                     "w",
                 ) as f:
-                    f.write(sources.get(file, "manual"))
+                    f.write(sources[file])
 
 
 if __name__ == "__main__":
