@@ -238,7 +238,7 @@ pip_update: FORCE
 	pip-review --local --auto
 
 python_install:
-	python3 -m pip install -e . "$${BREAK_SYSTEM_PACKAGES}"
+	python -m pip install -e . "$${BREAK_SYSTEM_PACKAGES}"
 
 precommit_install:
 	pre-commit install
