@@ -34,6 +34,11 @@ SEARCH_PARAMS = {
 }
 ICON_SEARCH_FMT = URL + "/icon" + params_str(SEARCH_PARAMS)
 
+WIKI_HEADERS = {
+    "Api-User-Agent": "Coptic/1.0 (https://github.com/pishoyg/coptic/; pishoybg@gmail.com)",
+    "User-Agent": "Coptic/1.0 (https://github.com/pishoyg/coptic/; pishoybg@gmail.com)",
+}
+
 argparser = argparse.ArgumentParser(
     description="""Find images for the dictionary words.
 The tool works as follows:
@@ -228,6 +233,11 @@ def invalid_size(files: list[str]) -> list[str]:
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def is_wiki(url: str) -> bool:
+    return url.startswith("https://upload.wikimedia.org/")
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def main():
     df = pd.read_csv(args.input_tsv, sep="\t", dtype=str, encoding="utf-8").fillna("")
     df.sort_values(by=args.input_key_col, inplace=True)
@@ -293,12 +303,8 @@ def main():
             if sense.startswith("http"):
                 url = sense
                 headers: dict[str, str] = {}
-                if url.startswith("https://upload.wikimedia.org/"):
-                    headers = {
-                        "Api-User-Agent": "Coptic/1.0 (https://github.com/pishoyg/coptic/; pishoybg@gmail.com)",
-                        "User-Agent": "Coptic/1.0 (https://github.com/pishoyg/coptic/; pishoybg@gmail.com)",
-                    }
-                print(headers)
+                if is_wiki(url):
+                    headers = WIKI_HEADERS
                 retrieve(url, headers=headers)
                 continue
 
