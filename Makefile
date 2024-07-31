@@ -88,6 +88,9 @@ crum_img_validate: crum_img_validate_aux
 .PHONY: update
 update: precommit_update pip_update
 
+.PHONY: camera
+camera: camera_aux
+
 # LEVEL 1 RULES ###############################################################
 
 # BIBLE RULES
@@ -259,6 +262,24 @@ git_clean: FORCE
 
 stats_aux: FORCE
 	bash stats.sh
+
+camera_aux: FORCE
+	grep \
+		--invert \
+		-E "^manual$$|^http.*$$" \
+		-R "dictionary/marcion.sourceforge.net/data/img-sources" \
+		| grep -oE "[^/]+$$" \
+		| sed 's/\.txt:/ /' \
+		| awk '{ printf "\033[32m%-15s\t\033[31m%-15s\033[0;39m\n", $$1, $$2 }'
+
+	grep \
+		--invert \
+		-E "^manual$$|^http.*$$" \
+		-R "dictionary/marcion.sourceforge.net/data/img-sources" \
+		--files-with-matches \
+		| sed 's/img-sources/img/' \
+		| sed "s/\.txt$$/\.*/" \
+		| while read -r GLOB; do ls $${GLOB} | xargs open; done
 
 # LEVEL-0 rules ###############################################################
 
