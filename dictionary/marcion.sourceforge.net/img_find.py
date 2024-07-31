@@ -252,7 +252,9 @@ def main():
         if filename is None:
             filename = os.path.basename(url)
         download = requests.get(url, headers=headers)
-        download.raise_for_status()
+        if not download.ok:
+            print(download.text)
+            return
         filename = os.path.join(args.downloads, filename)
         with open(filename, "wb") as f:
             f.write(download.content)
@@ -315,6 +317,10 @@ def main():
                 print("Sources cleared!")
                 break
 
+            if sense.lower() == "ss":
+                # Force skip!
+                break
+
             if sense.lower() == "cs":
                 sources.clear()
                 print("Sources cleared!")
@@ -355,7 +361,9 @@ def main():
                     args.thenounproject_key, args.thenounproject_secret
                 )
                 resp = requests.get(ICON_SEARCH_FMT.format(query=sense), auth=auth)
-                resp.raise_for_status()
+                if not resp.ok:
+                    print(resp.text)
+                    continue
                 resp = resp.json()
                 resp = resp["icons"]
                 if not resp:
