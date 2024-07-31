@@ -14,7 +14,8 @@ import requests_oauthlib
 import type_enforced
 from PIL import Image
 
-DIGITS_RE = re.compile(r"\d+")
+TARGET_WIDTH = 300
+IMG_300_DIR = "dictionary/marcion.sourceforge.net/data/img-300"
 FILE_NAME_RE = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
 SOURCE_RE = re.compile(r"^source\(([^=]+)\)=(.+)$")
 
@@ -327,7 +328,11 @@ def main():
                         f"Can't assign source because the number of new files != 1: {files}"
                     )
                     continue
-                sources[files[0]] = sense[1:]
+                sense = sense[1:]
+                if not sense:
+                    print("No source given!")
+                    continue
+                sources[files[0]] = sense
                 continue
 
             if sense.startswith("http"):
@@ -412,21 +417,39 @@ def main():
             idx = get_max_idx(existing(), key, sense)
             for file in files:
                 idx += 1
+
                 _, ext = os.path.splitext(file)
-                pathlib.Path(file).rename(
-                    os.path.join(
-                        args.destination,
-                        file_name(key=key, sense=sense, idx=idx, ext=ext),
-                    )
-                )
+
+                def file_name(ext=ext):
+                    return f"{key}-{sense}-{idx}{ext}"
+
+                # Write the image.
+                new_file = os.path.join(args.destination, file_name())
+                pathlib.Path(file).rename(new_file)
+                # Write the source.
                 with open(
-                    os.path.join(
-                        args.sources_dir,
-                        file_name(key=key, sense=sense, idx=idx, ext=".txt"),
-                    ),
+                    os.path.join(args.sources_dir, file_name(ext=".txt")),
                     "w",
                 ) as f:
                     f.write(sources[file])
+                # Write the converted image.
+                subprocess.call(
+                    [
+                        "magick",
+                        new_file,
+                        "-alpha",
+                        "remove",
+                        "-alpha",
+                        "off",
+                        "-background",
+                        "white",
+                        "-resize",
+                        f"{TARGET_WIDTH}x",
+                        os.path.join(
+                            IMG_300_DIR, file_name(ext=".jpg" if ext == ".png" else ext)
+                        ),
+                    ]
+                )
 
 
 if __name__ == "__main__":
