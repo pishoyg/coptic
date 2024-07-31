@@ -6,29 +6,35 @@ IMG_300_DIR="dictionary/marcion.sourceforge.net/data/img-300"
 IMG_SOURCES_DIR="dictionary/marcion.sourceforge.net/data/img-sources"
 
 SKIP_EXISTING=false
-MANUAL_SOURCES=false
 while [ $# -gt 0 ]; do
   case $1 in
   --skip_existing)
     SKIP_EXISTING=true
     ;;
-  --manual_sources)
-    MANUAL_SOURCES=true
-    ;;
   --help)
-    echo "Convert images, populating ${IMG_300_DIR}."
+    echo "Convert images, populating ${IMG_300_DIR}/."
+    echo
+    echo "In normal mode, process all images."
+    echo
     echo "Flags:"
-    echo "  --skip_existing: skip existing images. You should only use this"
-    echo "      flag if there are no modified images in ${IMG_DIR}."
-    echo "  --manual: For all images missing a source file, add a new file"
-    echo "      with the content set to 'manual'."
-    echo "Note: This script doesn't look at file modification timestamps."
-    echo "It does NOT convert images or populate sources for files based on"
-    echo "their timestamps, but rather based on their mere existence or"
-    echo "absence. This is intentional, because we don't consider timestamps"
-    echo "to be trustworthy, so we require manual intervention in such"
-    echo "situations. In other words, you might have to manually delete the"
-    echo "artefacts in order for this script to generate replacements."
+    echo "  --skip_existing: Skip existing images. You should only use this"
+    echo "      flag if there are no obsolete images in ${IMG_300_DIR}/."
+    echo "      Images can be obsolete if, for example, an image was modified"
+    echo "      in ${IMG_DIR}/, and the generated version of the old image is"
+    echo "      still present in ${IMG_300_DIR}/."
+    echo "      If run with --skip_existing, this script (as the flag name suggests)"
+    echo "      will generate only the absent images, but (unlike other scripts in"
+    echo "      this repo) won't look at the file modification timestamps."
+    echo "      It does NOT convert images based on their timestamps, but rather"
+    echo "      based on their mere existence or absence."
+    echo "      In other words, the script would _generate an absent file_, but"
+    echo "      wouldn't _regenerate an outdated file_."
+    echo "      In other words, you might have to manually delete the artefacts in"
+    echo "      order for this script to generate replacements."
+    echo
+    echo "N.B. Although we can delete old sources, we intentionally refrain from"
+    echo "populating absent sources with a default value, since now we have"
+    echo "become stricter with collecting image sources."
     exit
     ;;
   *)
@@ -65,16 +71,3 @@ find "${IMG_DIR}" -type f | while read -r FILE; do
   fi
   magick "${FILE}" -alpha remove -alpha off -background white -resize "${WIDTH}x" "${FILE_300}"
 done
-
-# Write 'manual' for the missing sources.
-if ${MANUAL_SOURCES}; then
-  find "dictionary/marcion.sourceforge.net/data/img" -type f \
-    | while read -r FILE; do
-
-    SOURCE_FILE="${FILE%.*}.txt"
-    SOURCE_FILE="${SOURCE_FILE/img/img-sources}"
-    if [ ! -f "${SOURCE_FILE}" ]; then
-      echo "manual" > "${SOURCE_FILE}"
-    fi
-  done
-fi
