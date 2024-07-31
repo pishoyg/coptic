@@ -6,6 +6,7 @@ import re
 import subprocess
 import typing
 
+import colorama
 import enforcer
 import pandas as pd
 import pillow_avif
@@ -14,12 +15,14 @@ import requests_oauthlib
 import type_enforced
 from PIL import Image
 
-from utils import printer
-
 TARGET_WIDTH = 300
 IMG_300_DIR = "dictionary/marcion.sourceforge.net/data/img-300"
 FILE_NAME_RE = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
 SOURCE_RE = re.compile(r"^source\(([^=]+)\)=(.+)$")
+
+
+def error(message: str) -> None:
+    print(colorama.Fore.RED + message + colorama.Fore.RESET)
 
 
 def params_str(params: dict) -> str:
@@ -255,7 +258,7 @@ def main():
             filename = os.path.basename(url)
         download = requests.get(url, headers=headers)
         if not download.ok:
-            printer.red(download.text)
+            error(download.text)
             return
         filename = os.path.join(args.downloads, filename)
         with open(filename, "wb") as f:
@@ -309,7 +312,7 @@ def main():
                 # S for skip!
                 files = get_downloads()
                 if files:
-                    printer.red(
+                    error(
                         f"You can't skip with a dirty downloads directory. Please remove {files}."
                     )
                     continue
@@ -332,13 +335,13 @@ def main():
                 files = get_downloads()
                 files = [f for f in files if f not in sources]
                 if len(files) != 1:
-                    printer.red(
+                    error(
                         f"Can't assign source because the number of new files != 1: {files}"
                     )
                     continue
                 sense = sense[1:]
                 if not sense:
-                    printer.red("No source given!")
+                    error("No source given!")
                     continue
                 sources[files[0]] = sense
                 continue
@@ -364,12 +367,12 @@ def main():
                 )
                 resp = requests.get(ICON_SEARCH_FMT.format(query=sense), auth=auth)
                 if not resp.ok:
-                    printer.red(resp.text)
+                    error(resp.text)
                     continue
                 resp = resp.json()
                 resp = resp["icons"]
                 if not resp:
-                    printer.red("Nothing found on thenounproject! :/")
+                    error("Nothing found on thenounproject! :/")
                     continue
                 for icon in resp:
                     retrieve(icon["thumbnail_url"])
@@ -379,7 +382,7 @@ def main():
             assert sense.isdigit()  # Sanity check.
             sense = int(sense)
             if sense <= 0:
-                printer.red("Sense must be a positive integer.")
+                error("Sense must be a positive integer.")
                 continue
 
             files = get_downloads()
@@ -387,14 +390,14 @@ def main():
             # Force size.
             invalid = invalid_size(files)
             if invalid:
-                printer.red(f"{invalid} are too small, please replace them.")
+                error(f"{invalid} are too small, please replace them.")
                 continue
 
             # Force sources.
             absent_source = False
             for file in files:
                 if file not in sources:
-                    printer.red(f"Please populate the source for {file}")
+                    error(f"Please populate the source for {file}")
                     absent_source = True
             if absent_source:
                 print(f"Known sources: {sources}")
@@ -404,7 +407,7 @@ def main():
             # add pictures for this word. (Unless they typed a sense, in which
             # case it would be weird!)
             if not files:
-                printer.red(
+                error(
                     "You typed a sense, but there are no pictures! This"
                     " doesn't make sense!"
                 )
