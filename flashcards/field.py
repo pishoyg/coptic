@@ -269,7 +269,12 @@ class media(_content_field):
             cur = ""
             for path in paths:
                 new_path = _add_to_work_dir(path)
-                args = {"basename": os.path.basename(new_path)}
+                args = {
+                    "basename": os.path.basename(new_path),
+                    "stem": stem(new_path),
+                    "original_basename": os.path.basename(path),
+                    "original_stem": stem(path),
+                }
                 if get_caption:
                     args["caption"] = get_caption(path)
                 cur += html_fmt.format(**args)
@@ -288,7 +293,7 @@ def img(
     get_caption: enforcer.OptionalCallable = None,
     force: bool = True,
 ) -> media:
-    html_fmt = '<img src="{basename}"><br/>'
+    html_fmt = '<img src="{basename}" alt={original_stem}><br/>'
     if get_caption:
         html_fmt = (
             "<figure>"
