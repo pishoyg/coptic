@@ -34,7 +34,7 @@ def crum(
         if len(dialect_cols) == 1:
             return roots_col(dialect_cols[0], force=False)
 
-        def dialect(col):
+        def dialect(col: str) -> field.Field:
             return field.aon(
                 '<span id="left">',
                 "(",

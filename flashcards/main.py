@@ -44,7 +44,7 @@ args = argparser.parse_args()
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def verify_unique(lis: list):
+def verify_unique(lis: list) -> None:
     assert len(set(lis)) == len(lis)
 
 

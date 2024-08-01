@@ -324,14 +324,14 @@ class apl(field):
     Apply a lambda to a field.
     """
 
-    def __init__(self, lam, *fields) -> None:
+    def __init__(self, lam: enforcer.Callable, *fields) -> None:
         self._lambda = lam
         self._fields = _convert_strings(*fields)
 
     def media_files(self) -> list[str]:
         return merge_media_files(*self._fields)
 
-    def next(self):
+    def next(self) -> str | list[str]:
         return self._lambda(*[f.next() for f in self._fields])
 
     def length(self) -> int:
