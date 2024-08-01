@@ -1,7 +1,11 @@
+import json
+import os
+
 import colorama
 import enforcer
 import field
 import genanki
+import pandas as pd
 import type_enforced
 
 
@@ -154,6 +158,33 @@ class deck:
         ss.print()
         print("____________________")
         self.media = field.merge_media_files(key, front, back)
+
+    def write_to_dir(self, dir: str) -> None:
+        metadata = json.dumps(
+            {
+                "deck_name": self.deck_name,
+                "deck_id": self.deck_id,
+                "deck_description": self.deck_description,
+                "css": self.css,
+            },
+            ensure_ascii=False,
+            allow_nan=False,
+            indent=2,
+            sort_keys=True,
+        )
+        with open(os.path.join(dir, "metadata.json"), "w") as f:
+            f.write(metadata)
+        records: list[dict[str, str]] = [
+            {"key": k, "front": f, "back": b}
+            for k, f, b in zip(self.keys, self.fronts, self.backs)
+        ]
+        df = pd.DataFrame(records)
+        df.to_csv(
+            os.path.join(dir, "data.tsv"),
+            sep="\t",
+            index=False,
+            columns=["key", "front", "back"],
+        )
 
     def anki(self) -> tuple[genanki.Deck, list[str]]:
         model = genanki.Model(
