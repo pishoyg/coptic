@@ -22,11 +22,11 @@ HTML_FMT = f"""<!DOCTYPE html>
     </style>
   </head>
   <body>
-    <div id="front">
+    <div class="front">
         {{front}}
     </div>
     <hr/>
-    <div id="back">
+    <div class="back">
         {{back}}
     </div>
   </body>
@@ -251,8 +251,8 @@ class deck:
             templates=[
                 {
                     "name": "template 1",
-                    "qfmt": '<div id="front"> {{Front}} </div>',
-                    "afmt": '<div id="front"> {{Front}} </div> <hr/> <div id="back"> {{Back}} </div>',
+                    "qfmt": '<div class="front"> {{Front}} </div>',
+                    "afmt": '<div class="front"> {{Front}} </div> <hr/> <div class="back"> {{Back}} </div>',
                 },
             ],
             css=self.css,

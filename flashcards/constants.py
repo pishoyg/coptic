@@ -35,7 +35,7 @@ def crum(
 
         def dialect(col: str) -> field.Field:
             return field.aon(
-                '<span id="left">',
+                '<span class="left">',
                 "(",
                 "<b>",
                 col[col.find("-") + 1 :],
@@ -65,14 +65,14 @@ def crum(
         deck_id=deck_id,
         deck_description="https://github.com/pishoyg/coptic/.\n" "pishoybg@gmail.com.",
         css=".card { font-size: 18px; }"
-        "#front { text-align: center; }"
+        ".front { text-align: center; }"
         "figure { display: inline-block; border: 1px transparent; margin: 10px; }"
         "figure figcaption { text-align: center; }"
         "figure img { vertical-align: top; }"
-        "#bordered { border:1px solid black; }"
-        "#right { float:right; }"
-        "#left { float: left; }"
-        "#center { text-align: center; }"
+        ".bordered { border:1px solid black; }"
+        ".right { float:right; }"
+        ".left { float: left; }"
+        ".center { text-align: center; }"
         ".nightMode #bordered { border:1px solid white; }",
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
@@ -89,7 +89,7 @@ def crum(
                     ")",
                 ),
                 field.aon(
-                    '<span id="right">',
+                    '<span class="right">',
                     "<b>Crum: </b>",
                     roots_col("crum-link", force=True),
                     "</span>",
@@ -156,7 +156,7 @@ def crum(
             ),
             # Dawoud's pages.
             field.aon(
-                '<span id="right">',
+                '<span class="right">',
                 "<b>Dawoud: </b>",
                 field.grp(
                     keys=roots_col("key", force=True),
@@ -224,7 +224,7 @@ def crum(
                     " ",
                 ),
                 field.txt(
-                    '<span id="right">'
+                    '<span class="right">'
                     '<a href="https://github.com/pishoyg/coptic/">Home</a>'
                     ", "
                     '<a href="mailto:pishoybg@gmail.com">Contact</a>'
@@ -292,19 +292,19 @@ def kellia(deck_name: str, deck_id: int, tsv_basename: str) -> deck.deck:
         deck_description="https://github.com/pishoyg/coptic/.\n" "pishoybg@gmail.com.",
         css=".card { font-size: 18px; }"
         ".table { display: block; width: 100%; text-align: center; }"
-        "#orth { min-width: 120px; }"
-        "#geo { text-align: center; color: darkred; min-width: 40px; }"
-        "#gram_grp { color: gray; font-style: italic; }"
-        "#sense_n { display: none; }"
-        "#sense_id { display: none; }"
-        "#quote { }"
-        "#definition { }"
-        "#bibl { color: gray; float: right; text-align: right; min-width: 100px; }"
-        "#ref { color: gray; }"
-        "#meaning { min-width: 220px; }"
-        "#ref_xr { }"
-        "#xr { color: gray; }"
-        "#lang { color: gray }",
+        ".orth { min-width: 120px; }"
+        ".geo { text-align: center; color: darkred; min-width: 40px; }"
+        ".gram_grp { color: gray; font-style: italic; }"
+        ".sense_n { display: none; }"
+        ".sense_id { display: none; }"
+        ".quote { }"
+        ".definition { }"
+        ".bibl { color: gray; float: right; text-align: right; min-width: 100px; }"
+        ".ref { color: gray; }"
+        ".meaning { min-width: 220px; }"
+        ".ref_xr { }"
+        ".xr { color: gray; }"
+        ".lang { color: gray }",
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
         key=tsv_col("entry_xml_id"),
