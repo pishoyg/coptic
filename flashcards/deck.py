@@ -1,5 +1,6 @@
 import json
 import os
+import pathlib
 
 import colorama
 import enforcer
@@ -160,6 +161,7 @@ class deck:
         self.media = field.merge_media_files(key, front, back)
 
     def write_to_dir(self, dir: str) -> None:
+        pathlib.Path(dir).mkdir(parents=True, exist_ok=True)
         metadata = json.dumps(
             {
                 "deck_name": self.deck_name,
@@ -186,6 +188,7 @@ class deck:
             columns=["key", "front", "back"],
         )
 
+    # TODO: Make the logic for the two export formats (anki, dir) uniform.
     def anki(self) -> tuple[genanki.Deck, list[str]]:
         model = genanki.Model(
             model_id=self.deck_id,

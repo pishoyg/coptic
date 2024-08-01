@@ -1,7 +1,10 @@
 import argparse
+import os
+import pathlib
 import tempfile
 
 import constants
+import deck
 import enforcer
 import field
 import genanki
@@ -35,6 +38,14 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
+    "--dir",
+    type=str,
+    default="",
+    help="Path to the output DIR directory. If given, for each deck, we will"
+    " write a subdirectory containing the data in DIR format.",
+)
+
+argparser.add_argument(
     "--debug",
     type=bool,
     default=True,
@@ -58,26 +69,41 @@ def verify_unique_object_keys(decks: list[genanki.Deck]) -> None:
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def main() -> None:
-    work_dir = tempfile.TemporaryDirectory()
-    field.init(work_dir.name)
-
+def write_anki(decks: list[deck.deck]) -> None:
     media_files = set()
-    decks = []
+    anki_decks = []
 
-    for deck in constants.DECKS(args.decks):
-        anki_deck, anki_media = deck.anki()
+    for d in decks:
+        anki_deck, anki_media = d.anki()
 
-        decks.append(anki_deck)
+        anki_decks.append(anki_deck)
         media_files.update(anki_media)
 
     # Sorting the media files increases the chances that we will get an
     # identical Anki package in the output.
     media_files = sorted(list(media_files))
 
-    verify_unique_object_keys(decks)
-    package = genanki.Package(decks, media_files=media_files)
-    package.write_to_file(args.output, timestamp=args.timestamp)
+    verify_unique_object_keys(anki_decks)
+    package = genanki.Package(anki_decks, media_files=media_files)
+    package.write_to_file(args.anki, timestamp=args.timestamp)
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def write_dir(decks: list[deck.deck]) -> None:
+    for d in decks:
+        d.write_to_dir(os.path.join(args.dir, constants.file_name(d.deck_name)))
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def main() -> None:
+    work_dir = tempfile.TemporaryDirectory()
+    field.init(work_dir.name)
+    decks = constants.DECKS(args.decks)
+    if args.dir:
+        write_dir(decks)
+    if args.anki:
+        pathlib.Path(os.path.dirname(args.anki)).mkdir(parents=True, exist_ok=True)
+        write_anki(decks)
 
     work_dir.cleanup()
 

@@ -3,7 +3,6 @@ import typing
 import deck
 import enforcer
 import field
-import genanki
 import type_enforced
 
 CRUM_A_FMT = '<a href="https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID={page_id}">{page_id}</a>'
@@ -359,6 +358,16 @@ COPTICSITE_NAME = "copticsite.com"
 KELLIA_COMPREHENSIVE = "KELLIA::Comprehensive"
 KELLIA_EGYPTIAN = "KELLIA::Egyptian"
 KELLIA_GREEK = "KELLIA::Greek"
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def file_name(deck_name: str) -> str:
+    """
+    Given a deck name, return a string that is valid as a file name. Remove
+    invalid characters, and make it filename-like.
+    """
+    return deck_name.lower().replace(" ", "_").replace(":", "_").replace("/", "-")
+
 
 LAMBDAS: dict[str, enforcer.Callable] = {
     CRUM_BOHAIRIC: lambda deck_name: crum(
