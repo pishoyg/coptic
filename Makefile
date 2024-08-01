@@ -154,7 +154,8 @@ flashcards: FORCE
 flashcards_crum_bohairic: FORCE
 	python flashcards/main.py \
 		--decks "A Coptic Dictionary::Bohairic" \
-		--anki "flashcards/data/output/anki/crum_bohairic.apkg"
+		--anki "flashcards/data/output/anki/crum_bohairic.apkg" \
+		--html "flashcards/data/output/html"
 
 flashcards_crum: FORCE
 	python flashcards/main.py \
