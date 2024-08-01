@@ -54,3 +54,7 @@ export MANUAL_SOURCES=""
 # See https://api.thenounproject.com/documentation.html.
 export THENOUNPROJECT_KEY=""
 export THENOUNPROJECT_SECRET=""
+
+bohairic () {
+  open "flashcards/data/output/html/a_coptic_dictionary__bohairic/${1}.html"
+}
