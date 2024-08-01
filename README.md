@@ -10,7 +10,6 @@
 - [Description](#description)
   - [A Coptic Dictionary](#a-coptic-dictionary)
   - [copticsite.com](#copticsitecom)
-  - [Bible](#bible)
 - [Contact and Contributions](#contact-and-contributions)
 - [For Developers / Owners](#for-developers--owners)
   - [Getting started](#getting-started)
@@ -44,7 +43,7 @@ and open it / import it in Anki. This package includes all the data.
 
 ## Description
 
-The package includes three types of flashcard decks. While the purpose of the
+The package includes two types of flashcard decks. While the purpose of the
 app is to help you learn vocabulary through spaced repetition, it also doubles
 as a dictionary because it's searchable.
 
@@ -113,51 +112,6 @@ loanwords, as we as **neologisms liberally added by the author!**
       <figcaption> copticsite.com Front and Back </figcaption>
    </figure>
 
-</div>
-
-### Bible
-
-This is Biblical data. We don't have the full Bible in any dialect, but this
-contains a lot of the surviving texts, especially in Bohairic, and Sahidic.
-
-The Bohairic version, for example, contains a total of around ~24,000 verses
-(roughly 70% of the Bible). All sections are complete except the poetic and,
-even less so, the historical books.
-
-<div align="center">
-   <figure>
-      <img src="flashcards/data/img/bible/toc.png" alt="table of contents" width="200"/>
-      <br>
-      <figcaption> Bible Table of Contents </figcaption>
-   </figure>
-</div>
-
-The front shows the verse in your chosen dialect, and the back shows all
-dialects along with the reference and the translation.
-
-<div align="center">
-   <figure>
-      <img src="flashcards/data/img/bible/front.png" alt="back" width="200"/>
-      <img src="flashcards/data/img/bible/back.png" alt="back" width="200"/>
-      <br>
-      <figcaption> Bible Front and Back </figcaption>
-   </figure>
-</div>
-
-Hint: When studying the Bible using flashcards, you can edit the note from the
-menu, and turn some expressions or words to to **bold**  or *italics*, so you
-will pay attention to it the next time you see the card. Then you can select
-*Again* or *Hard* for the verses that contain something that you still want to
-learn or memorize, and you can select *Good* or *Easy* for the verses that
-you've already learned. **N.B.** Editing the keys will mess things up, but you
-can freely edit the front and back.
-
-<div align="center">
-   <figure>
-      <img src="flashcards/data/img/a-coptic-dictionary/edit/edit.png" alt="edit" width="200"/>
-      <br>
-      <figcaption> Editing a Note </figcaption>
-   </figure>
 </div>
 
 ## Contact and Contributions
