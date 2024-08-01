@@ -46,6 +46,14 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
+    "--html",
+    type=str,
+    default="",
+    help="Path to the output HTML directory. If given, for each deck, we will"
+    " write a subdirectory containing the data in DIR format.",
+)
+
+argparser.add_argument(
     "--debug",
     type=bool,
     default=True,
@@ -89,18 +97,18 @@ def write_anki(decks: list[deck.deck]) -> None:
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def write_dir(decks: list[deck.deck]) -> None:
-    for d in decks:
-        d.write_to_dir(os.path.join(args.dir, constants.file_name(d.deck_name)))
-
-
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def main() -> None:
     work_dir = tempfile.TemporaryDirectory()
     field.init(work_dir.name)
     decks = constants.DECKS(args.decks)
-    if args.dir:
-        write_dir(decks)
+
+    for d in decks:
+        filename = constants.file_name(d.deck_name)
+        if args.dir:
+            d.write_to_dir(os.path.join(args.dir, filename))
+        if args.html:
+            d.write_html(os.path.join(args.html, filename))
+
     if args.anki:
         pathlib.Path(os.path.dirname(args.anki)).mkdir(parents=True, exist_ok=True)
         write_anki(decks)

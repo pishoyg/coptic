@@ -1,6 +1,7 @@
 import json
 import os
 import pathlib
+import shutil
 
 import colorama
 import enforcer
@@ -8,6 +9,29 @@ import field
 import genanki
 import pandas as pd
 import type_enforced
+
+HTML_FMT = f"""<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <meta name="deck_id" content="{{deck_id}}"/>
+    <meta name="deck_name" content="{{deck_name}}"/>
+    <meta name="deck_description" content="{{deck_description}}"/>
+    <style>
+      {{css}}
+    </style>
+  </head>
+  <body>
+    <div id="front">
+        {{front}}
+    </div>
+    <hr/>
+    <div id="back">
+        {{back}}
+    </div>
+  </body>
+</html>
+"""
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -161,8 +185,14 @@ class deck:
         print("____________________")
         self.media = field.merge_media_files(key, front, back)
 
+    def clean_dir(self, dir: str) -> None:
+        if os.path.exists(dir):
+            assert os.path.isdir(dir)
+            shutil.rmtree(dir)
+        pathlib.Path(dir).mkdir(parents=True)
+
     def write_to_dir(self, dir: str) -> None:
-        pathlib.Path(dir).mkdir(parents=True, exist_ok=True)
+        self.clean_dir(dir)
         metadata = json.dumps(
             {
                 "deck_name": self.deck_name,
@@ -177,6 +207,7 @@ class deck:
         )
         with open(os.path.join(dir, "metadata.json"), "w") as f:
             f.write(metadata + "\n")
+
         records: list[dict[str, str]] = [
             {"key": k, "front": f, "back": b}
             for k, f, b in zip(self.keys, self.fronts, self.backs)
@@ -188,6 +219,24 @@ class deck:
             index=False,
             columns=["key", "front", "back"],
         )
+
+    def write_html(self, dir: str) -> None:
+        self.clean_dir(dir)
+        for rk, front, back in zip(self.raw_keys, self.fronts, self.backs):
+            with open(os.path.join(dir, rk + ".html"), "w") as f:
+                f.write(
+                    HTML_FMT.format(
+                        deck_id=self.deck_id,
+                        deck_name=self.deck_name,
+                        deck_description=self.deck_description,
+                        css=self.css,
+                        title=rk,
+                        front=front,
+                        back=back,
+                    )
+                )
+        for f in self.media:
+            shutil.copy(f, dir)
 
     # TODO: Make the logic for the two export formats (anki, dir) uniform.
     def anki(self) -> tuple[genanki.Deck, list[str]]:
