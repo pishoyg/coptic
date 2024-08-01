@@ -8,6 +8,7 @@ import pandas as pd
 import type_enforced
 
 NUM_COLS = 10
+assert not 100 % NUM_COLS
 
 
 class node:
@@ -163,7 +164,7 @@ class node:
                 "<colgroup>",
             ]
         )
-        out.extend([f'<col width="{100/NUM_COLS}%">'] * NUM_COLS)
+        out.extend([f'<col style="width: {100/NUM_COLS}%;">'] * NUM_COLS)
         out.extend(["</colgroup>"])
 
         for d, crum_row_span in zip(descendants, crum_row_spans):
