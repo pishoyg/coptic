@@ -73,7 +73,7 @@ def crum(
         ".right { float:right; }"
         ".left { float: left; }"
         ".center { text-align: center; }"
-        ".nightMode #bordered { border:1px solid white; }",
+        ".nightMode .bordered { border:1px solid white; }",
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
         key=roots_col("key", force=True),

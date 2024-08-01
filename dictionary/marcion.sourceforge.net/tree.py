@@ -199,7 +199,7 @@ class node:
                     f'<td colspan="{depth}"></td>' if depth else "",
                     # Word.
                     (
-                        f'<td colspan="{word_width}" id="bordered">{word}</td>'
+                        f'<td colspan="{word_width}" class="bordered">{word}</td>'
                         if word_width
                         else ""
                     ),
@@ -207,7 +207,7 @@ class node:
                     (
                         " ".join(
                             [
-                                f'<td colspan="{meaning_width}" id="bordered">',
+                                f'<td colspan="{meaning_width}" class="bordered">',
                                 (
                                     f"<b>({type})</b><br/>"
                                     if type not in ["-", "HEADER"]
@@ -221,7 +221,7 @@ class node:
                         else ""
                     ),
                     (
-                        f'<td rowspan="{crum_span}" id="bordered"><b>Crum: </b>{parser.add_a_href(constants.CRUM_PAGE_FMT, crum)}</td>'
+                        f'<td rowspan="{crum_span}" class="bordered"><b>Crum: </b>{parser.add_a_href(constants.CRUM_PAGE_FMT, crum)}</td>'
                         if crum_span
                         else ""
                     ),
