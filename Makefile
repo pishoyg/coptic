@@ -151,10 +151,10 @@ flashcards: FORCE
 	python flashcards/main.py \
 		--dir "flashcards/data/output/dir"
 
-flashcards_crum_sahidic: FORCE
+flashcards_crum_bohairic: FORCE
 	python flashcards/main.py \
-		--decks "A Coptic Dictionary::Sahidic" \
-		--anki "flashcards/data/output/anki/crum_sahidic.apkg"
+		--decks "A Coptic Dictionary::Bohairic" \
+		--anki "flashcards/data/output/anki/crum_bohairic.apkg"
 
 flashcards_crum: FORCE
 	python flashcards/main.py \
@@ -176,7 +176,7 @@ flashcards_kellia_comprehensive: FORCE
 		--decks "KELLIA::Comprehensive" \
 		--anki "flashcards/data/output/anki/kellia_comprehensive.apkg"
 
-flashcards_redundant: flashcards_crum_sahidic flashcards_crum flashcards_copticsite flashcards_kellia_comprehensive flashcards_kellia
+flashcards_redundant: flashcards_crum_bohairic flashcards_crum flashcards_copticsite flashcards_kellia_comprehensive flashcards_kellia
 
 flashcards_cp_to_drive: $(shell find flashcards/data/output/anki/ -type f)
 	cp \
