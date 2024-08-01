@@ -175,7 +175,7 @@ class deck:
             sort_keys=True,
         )
         with open(os.path.join(dir, "metadata.json"), "w") as f:
-            f.write(metadata)
+            f.write(metadata + "\n")
         records: list[dict[str, str]] = [
             {"key": k, "front": f, "back": b}
             for k, f, b in zip(self.keys, self.fronts, self.backs)
