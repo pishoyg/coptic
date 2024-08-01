@@ -73,9 +73,6 @@ clean: git_clean bible_epub_clean kellia_analysis_clean
 .PHONY: toil
 toil: crum_img_find
 
-.PHONY: try
-try: flashcards_try flashcards_crum_sahidic_try
-
 .PHONY: todo
 todo: todo_aux
 
@@ -185,15 +182,6 @@ flashcards_cp_to_drive: $(shell find flashcards/data/output/anki/ -type f)
 	cp \
 		flashcards/data/output/anki/*.apkg \
 		"$${FLASHCARD_DIR}"
-
-flashcards_try: FORCE
-	python flashcards/main.py \
-		--output "$${TEST_DIR}/coptic.apkg"
-
-flashcards_crum_sahidic_try: FORCE
-	python flashcards/main.py \
-		--decks "A Coptic Dictionary::Sahidic" \
-		--output "$${TEST_DIR}/crum_sahidic.apkg"
 
 # KINDLE RULES
 kindle: FORCE
