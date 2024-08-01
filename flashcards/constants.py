@@ -5,19 +5,6 @@ import enforcer
 import field
 import type_enforced
 
-BIBLE_LANGUAGES = [
-    "Bohairic",
-    "English",
-    "Sahidic",
-    "Fayyumic",
-    "Akhmimic",
-    "OldBohairic",
-    "Mesokemic",
-    "DialectP",
-    "Lycopolitan",
-    "Greek",
-]
-
 CRUM_A_FMT = '<a href="https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID={page_id}">{page_id}</a>'
 
 
@@ -253,81 +240,6 @@ def crum(
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def bible(deck_name: str, deck_id: int, front_dialects: list[str]):
-
-    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-    def tsv_column(col_name: str, force: bool = True) -> field.tsv:
-        return field.tsv(
-            "bible/stshenouda.org/data/output/csv/bible.csv", col_name, force
-        )
-
-    def verse(language):
-        return field.aon(
-            f"<b>{language}</b>",
-            ":",
-            "<br/>",
-            tsv_column(language, force=False),
-            "<br/>",
-            "<br/>",
-        )
-
-    assert all(dialect in BIBLE_LANGUAGES for dialect in front_dialects)
-
-    return deck.deck(
-        deck_name=deck_name,
-        deck_id=deck_id,
-        deck_description="https://github.com/pishoyg/coptic/.\n" "pishoybg@gmail.com.",
-        css=".card { font-size: 18px; }",
-        # N.B. The name is a protected field.
-        name=field.aon(
-            deck_name,
-            "::",
-            tsv_column("section-indexed-no-testament", force=True),
-            "::",
-            tsv_column("book-indexed", force=True),
-            "::",
-            tsv_column("chapter-zfilled", force=True),
-        ),
-        # N.B. The key is a protected field. Do not change unless you know what
-        # you're doing.
-        key=field.aon(
-            "(",
-            tsv_column("book", force=True),
-            " ",
-            tsv_column("chapter", force=True),
-            ":",
-            tsv_column("verse", force=False),
-            ")",
-        ),
-        front=(
-            field.cat(*[verse(lang) for lang in front_dialects])
-            if len(front_dialects) > 1
-            else tsv_column(front_dialects[0], force=False)
-        ),
-        back=field.cat(
-            # Reference.
-            field.aon(
-                "(",
-                tsv_column("book", force=True),
-                " ",
-                tsv_column("chapter", force=True),
-                ":",
-                tsv_column("verse", force=False),
-                ")",
-                "<br/>",
-                "<br/>",
-            ),
-            *[verse(lang) for lang in BIBLE_LANGUAGES if lang not in front_dialects],
-        ),
-        force_single_deck=False,
-        force_key=False,
-        force_no_duplicate_keys=False,
-        force_front=False,
-        force_back=False,
-    )
-
-
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def copticsite_com(deck_name: str, deck_id: int):
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def tsv_col(col_name: str, force: bool = True) -> field.tsv:
@@ -451,9 +363,6 @@ CRUM_BOHAIRIC = "A Coptic Dictionary::Bohairic"
 CRUM_SAHIDIC = "A Coptic Dictionary::Sahidic"
 CRUM_BOHAIRIC_SAHIDIC = "A Coptic Dictionary::Bohairic / Sahidic"
 CRUM_ALL = "A Coptic Dictionary::All Dialects"
-BIBLE_BOHAIRIC = "Bible::Bohairic"
-BIBLE_SAHIDIC = "Bible::Sahidic"
-BIBLE_ALL = "Bible::All Dialects"
 COPTICSITE_NAME = "copticsite.com"
 KELLIA_COMPREHENSIVE = "KELLIA::Comprehensive"
 KELLIA_EGYPTIAN = "KELLIA::Egyptian"
@@ -476,13 +385,6 @@ LAMBDAS = {
         deck_name,
         1284010387,
         ["word-parsed-prettify"],
-    ),
-    BIBLE_BOHAIRIC: lambda deck_name: bible(deck_name, 1284010384, ["Bohairic"]),
-    BIBLE_SAHIDIC: lambda deck_name: bible(deck_name, 1284010388, ["Sahidic"]),
-    BIBLE_ALL: lambda deck_name: bible(
-        deck_name,
-        1284010389,
-        [lang for lang in BIBLE_LANGUAGES if lang != "English" and lang != "Greek"],
     ),
     COPTICSITE_NAME: lambda deck_name: copticsite_com(deck_name, 1284010385),
     KELLIA_COMPREHENSIVE: lambda deck_name: kellia(

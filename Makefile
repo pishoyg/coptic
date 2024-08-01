@@ -171,11 +171,6 @@ flashcards_copticsite: FORCE
 		--decks "copticsite.com" \
 		--output "flashcards/data/copticsite.apkg"
 
-flashcards_bible: FORCE
-	python flashcards/main.py \
-		--decks "Bible::Bohairic" "Bible::Sahidic" "Bible::All Dialects" \
-		--output "flashcards/data/bible.apkg"
-
 flashcards_kellia: FORCE
 	python flashcards/main.py \
 		--decks "KELLIA::Comprehensive" "KELLIA::Egyptian" "KELLIA::Greek"\
@@ -186,7 +181,7 @@ flashcards_kellia_comprehensive: FORCE
 		--decks "KELLIA::Comprehensive" \
 		--output "flashcards/data/kellia_comprehensive.apkg"
 
-flashcards_redundant: flashcards_crum_sahidic flashcards_crum flashcards_copticsite flashcards_bible flashcards_kellia_comprehensive flashcards_kellia
+flashcards_redundant: flashcards_crum_sahidic flashcards_crum flashcards_copticsite flashcards_kellia_comprehensive flashcards_kellia
 
 flashcards_cp_to_drive: $(shell find flashcards/data/ -type f)
 	cp \
