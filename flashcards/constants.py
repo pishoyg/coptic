@@ -12,7 +12,7 @@ CRUM_A_FMT = '<a href="https://coptot.manuscriptroom.com/crum-coptic-dictionary?
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def crum(
     deck_name: str, deck_id: int, dialect_cols: list[str], force_front: bool = True
-) -> tuple[genanki.Deck, list[str]]:
+) -> deck.deck:
 
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def roots_col(col_name: str, force: bool = True) -> field.tsv:
@@ -238,7 +238,7 @@ def crum(
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def copticsite_com(deck_name: str, deck_id: int) -> tuple[genanki.Deck, list[str]]:
+def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def tsv_col(col_name: str, force: bool = True) -> field.tsv:
         return field.tsv(
@@ -277,9 +277,7 @@ def copticsite_com(deck_name: str, deck_id: int) -> tuple[genanki.Deck, list[str
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def kellia(
-    deck_name: str, deck_id: int, tsv_basename: str
-) -> tuple[genanki.Deck, list[str]]:
+def kellia(deck_name: str, deck_id: int, tsv_basename: str) -> deck.deck:
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def tsv_col(col_name: str, force: bool = True) -> field.tsv:
         return field.tsv(
@@ -362,7 +360,7 @@ KELLIA_COMPREHENSIVE = "KELLIA::Comprehensive"
 KELLIA_EGYPTIAN = "KELLIA::Egyptian"
 KELLIA_GREEK = "KELLIA::Greek"
 
-LAMBDAS = {
+LAMBDAS: dict[str, enforcer.Callable] = {
     CRUM_BOHAIRIC: lambda deck_name: crum(
         deck_name, 1284010383, ["dialect-B"], force_front=False
     ),
@@ -394,6 +392,6 @@ def DECKS(
     deck_names: typing.Optional[list[str]],
 ) -> list[tuple[genanki.Deck, list[str]]]:
     if deck_names is None:
-        return [lam(name) for name, lam in LAMBDAS.items()]
+        deck_names = list(LAMBDAS.keys())
     assert deck_names
-    return [LAMBDAS[name](name) for name in deck_names]
+    return [LAMBDAS[name](name).anki() for name in deck_names]
