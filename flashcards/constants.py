@@ -388,10 +388,8 @@ LAMBDAS: dict[str, enforcer.Callable] = {
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def DECKS(
-    deck_names: typing.Optional[list[str]],
-) -> list[tuple[genanki.Deck, list[str]]]:
+def DECKS(deck_names: typing.Optional[list[str]]) -> list[deck.deck]:
     if deck_names is None:
         deck_names = list(LAMBDAS.keys())
     assert deck_names
-    return [LAMBDAS[name](name).anki() for name in deck_names]
+    return [LAMBDAS[name](name) for name in deck_names]

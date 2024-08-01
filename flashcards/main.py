@@ -65,11 +65,11 @@ def main() -> None:
     media_files = set()
     decks = []
 
-    for pair in constants.DECKS(args.decks):
-        cur_deck, cur_media_files = pair
+    for deck in constants.DECKS(args.decks):
+        anki_deck, anki_media = deck.anki()
 
-        decks.append(cur_deck)
-        media_files.update(cur_media_files)
+        decks.append(anki_deck)
+        media_files.update(anki_media)
 
     # Sorting the media files increases the chances that we will get an
     # identical Anki package in the output.
