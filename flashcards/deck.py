@@ -111,6 +111,7 @@ class deck:
         self.deck_description: str = deck_description
         self.css: str = css
         self.keys: list[str] = []
+        self.raw_keys: list[str] = []
         self.fronts: list[str] = []
         self.backs: list[str] = []
         self.length: int = field.num_entries(key, front, back)
@@ -149,11 +150,11 @@ class deck:
                 ss._no_back += 1
                 pass
 
-            # TODO: Prepending the deck name to the key should be done in constants.py.
             self.keys.append(f"{deck_name} - {k}")
             self.fronts.append(f)
             self.backs.append(b)
             ss._exported_notes += 1
+            self.raw_keys.append(k)
 
         print(deck_name + ":")
         ss.print()
