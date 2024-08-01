@@ -43,6 +43,7 @@ class Note(genanki.Note):
     @property
     def guid(self):
         # Only use the key field to generate a GUID.
+        assert self.fields
         return genanki.guid_for(self.fields[2])
 
 
@@ -100,34 +101,19 @@ class deck:
             If true, and the front is absent, use the back instead.
         """
 
-        model = genanki.Model(
-            model_id=deck_id,
-            name=deck_name,
-            fields=[
-                {"name": "Front"},
-                {"name": "Back"},
-                {"name": "Key"},
-            ],
-            templates=[
-                {
-                    "name": "template 1",
-                    "qfmt": '<div id="front"> {{Front}} </div>',
-                    "afmt": '<div id="front"> {{Front}} </div> <hr/> <div id="back"> {{Back}} </div>',
-                },
-            ],
-            css=css,
-        )
+        self.deck_name: str = deck_name
+        self.deck_id: int = deck_id
+        self.deck_description: str = deck_description
+        self.css: str = css
+        self.keys: list[str] = []
+        self.fronts: list[str] = []
+        self.backs: list[str] = []
+        self.length: int = field.num_entries(key, front, back)
 
-        length = field.num_entries(key, front, back)
-        assert length != field.NO_LENGTH
-        self.deck = genanki.Deck(
-            deck_id=deck_id,
-            name=deck_name,
-            description=deck_description,
-        )
+        assert self.length != field.NO_LENGTH
         seen_keys = set()
         ss = stats()
-        for _ in range(length):
+        for _ in range(self.length):
             k = key.next()
             f = front.next()
             b = back.next()
@@ -159,8 +145,9 @@ class deck:
                 pass
 
             # TODO: Prepending the deck name to the key should be done in constants.py.
-            note = Note(model=model, fields=[f, b, f"{deck_name} - {k}"])
-            self.deck.add_note(note)
+            self.keys.append(f"{deck_name} - {k}")
+            self.fronts.append(f)
+            self.backs.append(b)
             ss._exported_notes += 1
 
         print(deck_name + ":")
@@ -169,4 +156,31 @@ class deck:
         self.media = field.merge_media_files(key, front, back)
 
     def anki(self) -> tuple[genanki.Deck, list[str]]:
-        return self.deck, self.media
+        model = genanki.Model(
+            model_id=self.deck_id,
+            name=self.deck_name,
+            fields=[
+                {"name": "Front"},
+                {"name": "Back"},
+                {"name": "Key"},
+            ],
+            templates=[
+                {
+                    "name": "template 1",
+                    "qfmt": '<div id="front"> {{Front}} </div>',
+                    "afmt": '<div id="front"> {{Front}} </div> <hr/> <div id="back"> {{Back}} </div>',
+                },
+            ],
+            css=self.css,
+        )
+
+        deck = genanki.Deck(
+            deck_id=self.deck_id,
+            name=self.deck_name,
+            description=self.deck_description,
+        )
+        for k, f, b in zip(self.keys, self.fronts, self.backs):
+            # Notice that the field order is not uniform across our code.
+            note = Note(model=model, fields=[f, b, k])
+            deck.add_note(note)
+        return deck, self.media
