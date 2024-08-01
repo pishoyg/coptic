@@ -3,6 +3,7 @@ import typing
 import deck
 import enforcer
 import field
+import genanki
 import type_enforced
 
 CRUM_A_FMT = '<a href="https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID={page_id}">{page_id}</a>'
@@ -11,7 +12,7 @@ CRUM_A_FMT = '<a href="https://coptot.manuscriptroom.com/crum-coptic-dictionary?
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def crum(
     deck_name: str, deck_id: int, dialect_cols: list[str], force_front: bool = True
-):
+) -> tuple[genanki.Deck, list[str]]:
 
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def roots_col(col_name: str, force: bool = True) -> field.tsv:
@@ -60,6 +61,7 @@ def crum(
         for col in dialect_cols
     }
     return deck.deck(
+        # N.B. The deck name is a protected field.
         deck_name=deck_name,
         deck_id=deck_id,
         deck_description="https://github.com/pishoyg/coptic/.\n" "pishoybg@gmail.com.",
@@ -73,10 +75,6 @@ def crum(
         "#left { float: left; }"
         "#center { text-align: center; }"
         ".nightMode #bordered { border:1px solid white; }",
-        # N.B. The name is a protected field, although it is unused in this
-        # case because we generate a single deck, thus the deck name is a
-        # constant for all notes.
-        name=None,
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
         key=roots_col("key", force=True),
@@ -240,7 +238,7 @@ def crum(
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def copticsite_com(deck_name: str, deck_id: int):
+def copticsite_com(deck_name: str, deck_id: int) -> tuple[genanki.Deck, list[str]]:
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def tsv_col(col_name: str, force: bool = True) -> field.tsv:
         return field.tsv(
@@ -248,14 +246,11 @@ def copticsite_com(deck_name: str, deck_id: int):
         )
 
     return deck.deck(
+        # N.B. The deck name is a protected field.
         deck_name=deck_name,
         deck_id=deck_id,
         deck_description="https://github.com/pishoyg/coptic/.\n" "pishoybg@gmail.com.",
         css=".card { text-align: center; font-size: 18px; }",
-        # N.B. The name is a protected field, although it is unused in this case
-        # because we generate a single deck, thus the deck name is a constant for
-        # all notes.
-        name=None,
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
         key=field.seq(),
@@ -282,7 +277,9 @@ def copticsite_com(deck_name: str, deck_id: int):
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def kellia(deck_name: str, deck_id: int, tsv_basename: str):
+def kellia(
+    deck_name: str, deck_id: int, tsv_basename: str
+) -> tuple[genanki.Deck, list[str]]:
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def tsv_col(col_name: str, force: bool = True) -> field.tsv:
         return field.tsv(
@@ -292,6 +289,7 @@ def kellia(deck_name: str, deck_id: int, tsv_basename: str):
         )
 
     return deck.deck(
+        # N.B. The deck name is a protected field.
         deck_name=deck_name,
         deck_id=deck_id,
         deck_description="https://github.com/pishoyg/coptic/.\n" "pishoybg@gmail.com.",
@@ -310,10 +308,6 @@ def kellia(deck_name: str, deck_id: int, tsv_basename: str):
         "#ref_xr { }"
         "#xr { color: gray; }"
         "#lang { color: gray }",
-        # N.B. The name is a protected field, although it is unused in this case
-        # because we generate a single deck, thus the deck name is a constant for
-        # all notes.
-        name=None,
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
         key=tsv_col("entry_xml_id"),
@@ -396,7 +390,9 @@ LAMBDAS = {
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def DECKS(deck_names: typing.Optional[list[str]]):
+def DECKS(
+    deck_names: typing.Optional[list[str]],
+) -> list[tuple[genanki.Deck, list[str]]]:
     if deck_names is None:
         return [lam(name) for name, lam in LAMBDAS.items()]
     assert deck_names

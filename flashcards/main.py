@@ -66,9 +66,9 @@ def main() -> None:
     decks = []
 
     for pair in constants.DECKS(args.decks):
-        cur_decks, cur_media_files = pair
+        cur_deck, cur_media_files = pair
 
-        decks.extend(cur_decks)
+        decks.append(cur_deck)
         media_files.update(cur_media_files)
 
     # Sorting the media files increases the chances that we will get an

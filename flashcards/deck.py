@@ -1,12 +1,8 @@
-import hashlib
-
 import colorama
 import enforcer
 import field
 import genanki
 import type_enforced
-
-MAX_ID = 1 << 31
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -51,27 +47,20 @@ class Note(genanki.Note):
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def _hash(text: str) -> int:
-    return int(hashlib.sha1(text.encode("utf-8")).hexdigest(), 17) % MAX_ID
-
-
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def deck(
     deck_name: str,
     deck_id: int,
     deck_description: str,
     css: str,
-    name: field.OptionalField,
     key: field.Field,
     front: field.Field,
     back: field.Field,
-    force_single_deck: bool = True,
     force_key: bool = True,
     force_no_duplicate_keys: bool = True,
     force_front: bool = True,
     force_back: bool = True,
     back_for_front: bool = False,
-):
+) -> tuple[genanki.Deck, list[str]]:
     """Generate an Anki package.
 
     Args:
@@ -79,7 +68,7 @@ def deck(
         This is a critical field. The note keys will be used as database
         keys to enable synchronization. It is important for the keys to be (1)
         unique, and (2) persistent. Use a different key for each note. And do
-        not change the names liberally between different version of the code
+        not change the keys liberally between different version of the code
         and the generated package.
         The note keys must also be unique across decks.,
 
@@ -89,47 +78,25 @@ def deck(
         back:
         Format of the card backs. See description for syntax.,
 
-        model_name:
-        Model name in the generated Anki package.,
-
-        model_id:
-        Deck ID in the generated Anki package.,
-
         css:
         Global CSS. Please notice that the front will be given the id
         "front" and the back will have the id "back". You can use these IDs if'
         you want to make your CSS format side-specific."
         Only TXT fields are allowed for this flag.,
 
-        name:
+        deck_name:
         Deck name in the generated Anki package.
-        N.B. If a deck ID is not
-        given, a hash of this field will be used to key the decks. Thus, it is
-        important to ensure that the deck names are (1) unique, and
-        (2) persistent. Use a different deck name for each deck that you want
-        to support. And do not change the names liberally between different
-        version of the code and the generated package.,
 
-        id:
+        deck_id:
         Deck ID in the generated Anki package.,
 
-        description:
+        deck_description:
         Deck description in the generated Anki package. Only TXT fields are
         allowed here.,
 
-    back_for_front:
+        back_for_front:
         If true, and the front is absent, use the back instead.
     """
-    single_deck = False
-    if name is None:
-        name = field.txt(deck_name)
-        single_deck = True
-    elif isinstance(name, field.txt):
-        # The name is a field, but it's a constant-type field.
-        assert deck_name == name.str()
-        single_deck = True
-
-    assert single_deck or not force_single_deck
 
     model = genanki.Model(
         model_id=deck_id,
@@ -149,13 +116,16 @@ def deck(
         css=css,
     )
 
-    length = field.num_entries(name, key, front, back)
+    length = field.num_entries(key, front, back)
     assert length != field.NO_LENGTH
-    decks = {}
+    d = genanki.Deck(
+        deck_id=deck_id,
+        name=deck_name,
+        description=deck_description,
+    )
     seen_keys = set()
     ss = stats()
     for _ in range(length):
-        n = name.next()
         k = key.next()
         f = front.next()
         b = back.next()
@@ -165,7 +135,6 @@ def deck(
         assert f or not force_front
         assert b or not force_back
 
-        assert n
         if not k:
             # No key! Skip!
             ss._no_key += 1
@@ -187,17 +156,12 @@ def deck(
             ss._no_back += 1
             pass
 
-        if n not in decks:
-            decks[n] = genanki.Deck(
-                deck_id=deck_id if single_deck else _hash(n),
-                name=n,
-                description=deck_description,
-            )
+        # Prepending the deck name to the key should be done in constants.py.
         note = Note(model=model, fields=[f, b, f"{deck_name} - {k}"])
-        decks[n].add_note(note)
+        d.add_note(note)
         ss._exported_notes += 1
 
     print(deck_name + ":")
     ss.print()
     print("____________________")
-    return list(decks.values()), field.merge_media_files(key, front, back, name)
+    return d, field.merge_media_files(key, front, back)
