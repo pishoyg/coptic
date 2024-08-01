@@ -1,5 +1,5 @@
 {
-  "css": ".card { font-size: 18px; }#front { text-align: center; }figure { display: inline-block; border: 1px transparent; margin: 10px; }figure figcaption { text-align: center; }figure img { vertical-align: top; }#bordered { border:1px solid black; }#right { float:right; }#left { float: left; }#center { text-align: center; }.nightMode #bordered { border:1px solid white; }",
+  "css": ".card { font-size: 18px; }.front { text-align: center; }figure { display: inline-block; border: 1px transparent; margin: 10px; }figure figcaption { text-align: center; }figure img { vertical-align: top; }.bordered { border:1px solid black; }.right { float:right; }.left { float: left; }.center { text-align: center; }.nightMode .bordered { border:1px solid white; }",
   "deck_description": "https://github.com/pishoyg/coptic/.\npishoybg@gmail.com.",
   "deck_id": 1284010386,
   "deck_name": "A Coptic Dictionary::Sahidic"
