@@ -154,7 +154,8 @@ kellia_analysis_clean: dictionary/kellia.uni-goettingen.de/analysis.json
 
 # FLASHCARD RULES
 flashcards: FORCE
-	python flashcards/main.py
+	python flashcards/main.py \
+		--dir "flashcards/data/output/dir"
 
 flashcards_crum_sahidic: FORCE
 	python flashcards/main.py \
