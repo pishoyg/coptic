@@ -28,10 +28,10 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
-    "--output",
+    "--anki",
     type=str,
-    default="flashcards/data/coptic.apkg",
-    help="Path to the output collection.",
+    default="flashcards/data/output/anki/coptic.apkg",
+    help="Path to the output Anki package.",
 )
 
 argparser.add_argument(

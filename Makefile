@@ -159,43 +159,43 @@ flashcards: FORCE
 flashcards_crum_sahidic: FORCE
 	python flashcards/main.py \
 		--decks "A Coptic Dictionary::Sahidic" \
-		--output "flashcards/data/crum_sahidic.apkg"
+		--anki "flashcards/data/output/anki/crum_sahidic.apkg"
 
 flashcards_crum: FORCE
 	python flashcards/main.py \
 		--decks "A Coptic Dictionary::Bohairic" "A Coptic Dictionary::Sahidic" "A Coptic Dictionary::Bohairic / Sahidic" "A Coptic Dictionary::All Dialects" \
-		--output "flashcards/data/crum.apkg"
+		--anki "flashcards/data/output/anki/crum.apkg"
 
 flashcards_copticsite: FORCE
 	python flashcards/main.py \
 		--decks "copticsite.com" \
-		--output "flashcards/data/copticsite.apkg"
+		--anki "flashcards/data/output/anki/copticsite.apkg"
 
 flashcards_kellia: FORCE
 	python flashcards/main.py \
 		--decks "KELLIA::Comprehensive" "KELLIA::Egyptian" "KELLIA::Greek"\
-		--output "flashcards/data/kellia.apkg"
+		--anki "flashcards/data/output/anki/kellia.apkg"
 
 flashcards_kellia_comprehensive: FORCE
 	python flashcards/main.py \
 		--decks "KELLIA::Comprehensive" \
-		--output "flashcards/data/kellia_comprehensive.apkg"
+		--anki "flashcards/data/output/anki/kellia_comprehensive.apkg"
 
 flashcards_redundant: flashcards_crum_sahidic flashcards_crum flashcards_copticsite flashcards_kellia_comprehensive flashcards_kellia
 
-flashcards_cp_to_drive: $(shell find flashcards/data/ -type f)
+flashcards_cp_to_drive: $(shell find flashcards/data/output/anki/ -type f)
 	cp \
-		flashcards/data/*.apkg \
+		flashcards/data/output/anki/*.apkg \
 		"$${FLASHCARD_DIR}"
 
 flashcards_verify: flashcards_try
 	bash ziff.sh \
-		"flashcards/data/coptic.apkg"
+		"flashcards/data/output/anki/coptic.apkg"
 		"$${TEST_DIR}/coptic.apkg" \
 
 flashcards_crum_sahidic_verify: flashcards_crum_sahidic_try
 	bash ziff.sh \
-		"flashcards/data/crum_sahidic.apkg" \
+		"flashcards/data/output/anki/crum_sahidic.apkg" \
 		"$${TEST_DIR}/crum_sahidic.apkg"
 
 flashcards_try: FORCE
@@ -251,7 +251,7 @@ git_clean: FORCE
 	git clean \
 		-x \
 		-d \
-		--exclude "flashcards/data/*.apkg" \
+		--exclude "flashcards/data/output/anki/*.apkg" \
 		--exclude "vault.sh" \
 		--force
 
