@@ -46,10 +46,6 @@ export START_AT_KEY="0"
 # pictures that have been modified.
 export SKIP_EXISTING=""
 
-# MANUAL_SOURCES defines whether we should mark all new images as manually
-# sourced. To turn it on, set MANUAL_SOURCES="--manual_sources".
-export MANUAL_SOURCES=""
-
 # Key and secret to api.thenounproject.com.
 # See https://api.thenounproject.com/documentation.html.
 export THENOUNPROJECT_KEY=""
