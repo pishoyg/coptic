@@ -314,7 +314,7 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         insert(EN_COL, "-parsed-no-greek-no-html", parser.remove_greek_and_html(ep))
         crum = row[CRUM_COL]
         crum_page, crum_column = parser.parse_crum_cell(crum)
-        insert(CRUM_COL, "-link", parser.add_a_href(constants.CRUM_PAGE_FMT, crum))
+        insert(CRUM_COL, "-a", parser.add_a_href(constants.CRUM_PAGE_FMT, crum))
         insert(CRUM_COL, "-page", crum_page)
         insert(CRUM_COL, "-column", crum_column)
         for d in args.filter_dialects:

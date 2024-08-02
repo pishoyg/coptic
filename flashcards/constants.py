@@ -91,7 +91,7 @@ def crum(
                 field.aon(
                     '<span class="right">',
                     "<b>Crum: </b>",
-                    roots_col("crum-link", force=True),
+                    roots_col("crum-a", force=True),
                     "</span>",
                     "<br/>",
                 ),
