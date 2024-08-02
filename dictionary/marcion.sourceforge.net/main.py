@@ -252,6 +252,7 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         return ""
 
     for _, row in df.iterrows():
+        insert("key", "-link", constants.GIRGIS_ORG_FMT.format(key=row["key"]))
         root_type = parser.parse_type_cell(row[TYPE_COL])
         word = parser.parse_word_cell(
             row[WORD_COL],
@@ -315,7 +316,6 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         crum = row[CRUM_COL]
         crum_page, crum_column = parser.parse_crum_cell(crum)
         insert(CRUM_COL, "-link", constants.CRUM_PAGE_FMT.format(key=crum))
-        insert("key", "-link", constants.GIRGIS_ORG_FMT.format(key=crum))
         insert(CRUM_COL, "-page", crum_page)
         insert(CRUM_COL, "-column", crum_column)
         for d in args.filter_dialects:
