@@ -95,11 +95,6 @@ def write_anki(decks: list[deck.deck]) -> None:
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def mkdir(dir: str) -> None:
-    pathlib.Path(dir).mkdir(parents=True, exist_ok=True)
-
-
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def main() -> None:
     if not (args.anki or args.tsv or args.html):
         print(
@@ -118,15 +113,14 @@ def main() -> None:
         filename = constants.file_name(d.deck_name)
         if args.tsv:
             dir = os.path.join(args.tsv, filename)
-            mkdir(dir)
+            pathlib.Path(dir).mkdir(exist_ok=True)
             d.write_tsv(dir)
         if args.html:
             dir = os.path.join(args.html, filename)
-            mkdir(dir)
+            pathlib.Path(dir).mkdir(exist_ok=True)
             d.write_html(dir)
 
     if args.anki:
-        pathlib.Path(os.path.dirname(args.anki)).mkdir(parents=True, exist_ok=True)
         write_anki(decks)
 
     work_dir.cleanup()
