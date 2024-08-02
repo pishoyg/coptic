@@ -52,7 +52,7 @@ generate_2: flashcards flashcards_redundant kindle
 generate_3:
 
 .PHONY: publish
-publish: flashcards_cp_to_drive kindle_cp_to_drive bible_cp_to_drive
+publish: flashcards_cp_to_drive kindle_cp_to_drive bible_cp_to_drive flashcards_aws_publish
 
 .PHONY: stats
 stats: stats_aux
@@ -193,6 +193,9 @@ flashcards_cp_to_drive: $(shell find flashcards/data/output/anki/ -type f)
 	cp \
 		flashcards/data/output/anki/*.apkg \
 		"$${FLASHCARD_DIR}"
+
+flashcards_aws_publish: FORCE
+	bash aws/publish.sh
 
 # KINDLE RULES
 kindle: FORCE
