@@ -356,6 +356,22 @@ FieldOrStr = Field + [str]
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def fmt(fmt: str, key_to_field: dict[str, Field], force: bool = True) -> apl:
+    """
+    A string formatting field.
+    """
+    keys = list(key_to_field.keys())
+
+    def format(*nexts: str) -> str:
+        assert len(nexts) == len(keys)
+        if force:
+            assert all(nexts)
+        return fmt.format(**{key: next for key, next in zip(keys, nexts)})
+
+    return apl(format, *[key_to_field[k] for k in keys])
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def aon(*fields: FieldOrStr) -> apl:
     """
     Construct an all-or-nothing field.
