@@ -85,6 +85,9 @@ update: precommit_update pip_update
 .PHONY: camera
 camera: camera_aux
 
+.PHONY: aws_timestamp
+aws_timestamp: aws_timestamp_aux
+
 # LEVEL 1 RULES ###############################################################
 
 # BIBLE RULES
@@ -253,6 +256,11 @@ camera_aux: FORCE
 		| sed "s/\.txt$$/\.*/" \
 		| while read -r GLOB; do ls $${GLOB} | xargs open; done
 
+aws_timestamp:
+	[[ -z $$(git status --short) ]] || (echo Git repo is dirty. This should be done in a standalone commit. && exit 1)
+	date +%s > aws/TIMESTAMP
+	git add aws/TIMESTAMP
+	git commit -m "[AWS] Record the synchronization timestamp."
 # LEVEL-0 rules ###############################################################
 
 # FORCE

@@ -12,3 +12,6 @@ flashcards/data/output/anki/*.apkg
 # This contains secrets (authorization tokens for Drive, local file paths,
 # idiosyncratic flag values, ...).
 vault.sh
+
+# The AWS mirror.
+aws/mirror/*
