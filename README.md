@@ -167,7 +167,7 @@ the script lives.
 that are used inside `Makefile`. Some `make` rules can only run if preceded by
 `source vault.sh` in order to export the variables needed for those rules.
 You need your own version of `vault.sh` in order to be able to run all the
-`make` rules. See `TEMPLATE_vault.sh` for more information.
+`make` rules. See `env.sh` for more information.
 
 ### Planning
 

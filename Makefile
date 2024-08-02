@@ -16,7 +16,7 @@ SHELL := /bin/bash
 # Drive) require setting up your own account and destination in Drive. Relevant
 # scripts will have more information.
 #
-# See TEMPLATE_vault.sh for more information.
+# See env.sh for more information.
 
 # LEVELS
 #
