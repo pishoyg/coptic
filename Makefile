@@ -160,6 +160,12 @@ flashcards_crum_bohairic: FORCE
 		--anki "flashcards/data/output/anki/crum_bohairic.apkg" \
 		--html "flashcards/data/output/html"
 
+flashcards_crum_all_dialects: FORCE
+	python flashcards/main.py \
+		--decks "A Coptic Dictionary::All Dialects" \
+		--anki "flashcards/data/output/anki/crum_all_dialects.apkg" \
+		--html "flashcards/data/output/html"
+
 flashcards_crum: FORCE
 	python flashcards/main.py \
 		--decks "A Coptic Dictionary::Bohairic" "A Coptic Dictionary::Sahidic" "A Coptic Dictionary::Bohairic / Sahidic" "A Coptic Dictionary::All Dialects" \
@@ -180,7 +186,7 @@ flashcards_kellia_comprehensive: FORCE
 		--decks "KELLIA::Comprehensive" \
 		--anki "flashcards/data/output/anki/kellia_comprehensive.apkg"
 
-flashcards_redundant: flashcards_crum_bohairic flashcards_crum flashcards_copticsite flashcards_kellia_comprehensive flashcards_kellia
+flashcards_redundant: flashcards_crum_bohairic flashcards_crum_all_dialects flashcards_crum flashcards_copticsite flashcards_kellia_comprehensive flashcards_kellia
 
 flashcards_cp_to_drive: $(shell find flashcards/data/output/anki/ -type f)
 	cp \
