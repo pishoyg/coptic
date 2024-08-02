@@ -1,3 +1,4 @@
+import copy
 import json
 import os
 import pathlib
@@ -75,6 +76,20 @@ class Note(genanki.Note):
         # Only use the key field to generate a GUID.
         assert self.fields
         return genanki.guid_for(self.fields[2])
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
+class record:
+    def __init__(self, d: pd.Series) -> None:
+        KEYS = {"key", "front", "back", "timestamp"}
+        assert set(d.keys()) == KEYS
+        self.d: dict = {k: d[k] for k in KEYS}
+
+    def supersede(self, old) -> None:
+        # We can only compare records with the same key.
+        assert self.d["key"] == old.d["key"]
+        if self.d["front"] == old.d["front"] and self.d["back"] == old.d["back"]:
+            self.d["timestamp"] = old.d["timestamp"]
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -192,8 +207,15 @@ class deck:
             shutil.rmtree(dir)
         pathlib.Path(dir).mkdir(parents=True)
 
+    def read_dir(self, dir: str) -> dict[str, record]:
+        path = os.path.join(dir, "data.tsv")
+        if not os.path.exists(path):
+            return {}
+        df = pd.read_csv(path, sep="\t", dtype=str, encoding="utf-8").fillna("")
+        return {row["key"]: record(row) for _, row in df.iterrows()}
+
     def write_to_dir(self, dir: str) -> None:
-        now: int = int(time.time())
+        old_records: dict[str, record] = self.read_dir(dir)
         self.clean_dir(dir)
         metadata = json.dumps(
             {
@@ -210,15 +232,19 @@ class deck:
         with open(os.path.join(dir, "metadata.json"), "w") as f:
             f.write(metadata + "\n")
 
-        # TODO: The timestamp should be based on the modification date. If you
-        # write identical data, keep the original timestamp. N.B. This should,
-        # somehow, or maybe it shouldn't, keep track of changes to the media
-        # files, so that a media file is indeed updated when needed.
-        records: list[dict] = [
-            {"key": k, "front": f, "back": b, "timestamp": now}
+        now: int = int(time.time())
+        new_records: dict[str, record] = {
+            k: record({"key": k, "front": f, "back": b, "timestamp": now})
             for k, f, b in zip(self.keys, self.fronts, self.backs)
-        ]
-        df = pd.DataFrame(records)
+        }
+
+        # TODO: Sometimes, keys will be present in the new records but absent
+        # from the old records. This is impossible today, but things might
+        # change in the future. Consider supporting that.
+        if old_records:
+            for key in new_records:
+                new_records[key].supersede(old_records[key])
+        df = pd.DataFrame([r.d for r in new_records.values()])
         df.to_csv(
             os.path.join(dir, "data.tsv"),
             sep="\t",
