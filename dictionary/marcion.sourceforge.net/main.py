@@ -315,6 +315,7 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         crum = row[CRUM_COL]
         crum_page, crum_column = parser.parse_crum_cell(crum)
         insert(CRUM_COL, "-a", parser.add_a_href(constants.CRUM_PAGE_FMT, crum))
+        insert(CRUM_COL, "-link", constants.CRUM_PAGE_FMT.format(key=crum))
         insert(CRUM_COL, "-page", crum_page)
         insert(CRUM_COL, "-column", crum_column)
         for d in args.filter_dialects:
