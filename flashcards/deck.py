@@ -2,6 +2,7 @@ import json
 import os
 import pathlib
 import shutil
+import time
 
 import colorama
 import enforcer
@@ -192,6 +193,7 @@ class deck:
         pathlib.Path(dir).mkdir(parents=True)
 
     def write_to_dir(self, dir: str) -> None:
+        now: int = int(time.time())
         self.clean_dir(dir)
         metadata = json.dumps(
             {
@@ -208,8 +210,12 @@ class deck:
         with open(os.path.join(dir, "metadata.json"), "w") as f:
             f.write(metadata + "\n")
 
-        records: list[dict[str, str]] = [
-            {"key": k, "front": f, "back": b}
+        # TODO: The timestamp should be based on the modification date. If you
+        # write identical data, keep the original timestamp. N.B. This should,
+        # somehow, or maybe it shouldn't, keep track of changes to the media
+        # files, so that a media file is indeed updated when needed.
+        records: list[dict] = [
+            {"key": k, "front": f, "back": b, "timestamp": now}
             for k, f, b in zip(self.keys, self.fronts, self.backs)
         ]
         df = pd.DataFrame(records)
@@ -217,7 +223,7 @@ class deck:
             os.path.join(dir, "data.tsv"),
             sep="\t",
             index=False,
-            columns=["key", "front", "back"],
+            columns=["key", "front", "back", "timestamp"],
         )
 
     def write_html(self, dir: str) -> None:
