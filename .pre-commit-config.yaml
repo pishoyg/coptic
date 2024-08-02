@@ -5,6 +5,9 @@
 # TODO: Add hooks from
 # https://github.com/orgs/pre-commit/repositories?language=&q=%22mirrors-%22+archived%3AFalse&sort=.
 
+# TODO: Fail fast won't be optimal if your pipelines get better at writing consistent output that doesn't get modified
+# by the pre-commits. See https://github.com/pishoyg/coptic/issues/94. Revisit.
+fail_fast: true
 exclude: ^archive/
 repos:
   # Language-agnostic.
