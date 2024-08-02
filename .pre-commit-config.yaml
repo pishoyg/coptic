@@ -5,11 +5,32 @@
 # TODO: Add hooks from
 # https://github.com/orgs/pre-commit/repositories?language=&q=%22mirrors-%22+archived%3AFalse&sort=.
 
-# TODO: Fail fast won't be optimal if your pipelines get better at writing consistent output that doesn't get modified
-# by the pre-commits. See https://github.com/pishoyg/coptic/issues/94. Revisit.
+# N.B. Given fail_fast, you should the more problematic hooks first.
+# See https://github.com/pishoyg/coptic/issues/94.
+# TODO: Fail fast won't be optimal if your pipelines get better at writing
+# consistent output that doesn't get modified by the pre-commits. Revisit.
 fail_fast: true
 exclude: ^archive/
 repos:
+  - repo: local
+    hooks:
+      - id: tidy-html
+        name: tidy-html
+        entry: tidy -indent -modify -quiet --tidy-mark no -wrap 80
+        language: system
+        files: '.*\.html'
+      - id: tidy-xml
+        name: tidy-xml
+        entry: tidy -indent -modify -quiet --tidy-mark no -wrap 80 -xml
+        language: system
+        files: .*\.(xml|xhtml|opf)$
+      - id: json-tool
+        name: json-tool
+        entry: bash -c 'for x in "$@"; do NEW=$(python -m json5.tool --as-json --indent 2 "$x") && echo "${NEW}" > "$x" && python -m json.tool --no-ensure-ascii --indent 2 "$x" "$x"; done' --
+        language: system
+        types: [json]
+        # TODO: Install the tidy pre-commit from a remote repo, so you don't
+        # have to manually install the binary.
   # Language-agnostic.
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
@@ -145,20 +166,3 @@ repos:
         language: system
         types: [python]
         verbose: true
-      - id: json-tool
-        name: json-tool
-        entry: bash -c 'for x in "$@"; do NEW=$(python -m json5.tool --as-json --indent 2 "$x") && echo "${NEW}" > "$x" && python -m json.tool --no-ensure-ascii --indent 2 "$x" "$x"; done' --
-        language: system
-        types: [json]
-        # TODO: Install the tidy pre-commit from a remote repo, so you don't
-        # have to manually install the binary.
-      - id: tidy-html
-        name: tidy-html
-        entry: tidy -indent -modify -quiet --tidy-mark no -wrap 80
-        language: system
-        files: '.*\.html'
-      - id: tidy-xml
-        name: tidy-xml
-        entry: tidy -indent -modify -quiet --tidy-mark no -wrap 80 -xml
-        language: system
-        files: .*\.(xml|xhtml|opf)$
