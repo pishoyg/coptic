@@ -35,3 +35,6 @@ find "${WORK_DIR}" -type f -not -name ".*" | while read -r SRC; do
   # N.B. Set the `Content-Type` header to `text/html; charset=utf-8`.
   :
 done
+
+date +%s > aws/TIMESTAMP
+git add aws/TIMESTAMP
