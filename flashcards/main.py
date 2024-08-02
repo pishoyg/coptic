@@ -53,12 +53,6 @@ argparser.add_argument(
     " write a subdirectory containing the data in DIR format.",
 )
 
-argparser.add_argument(
-    "--debug",
-    type=bool,
-    default=True,
-    help="If true, run in debug mode.",
-)
 args = argparser.parse_args()
 
 
