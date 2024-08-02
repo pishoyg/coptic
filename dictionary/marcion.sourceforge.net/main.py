@@ -314,7 +314,6 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         insert(EN_COL, "-parsed-no-greek-no-html", parser.remove_greek_and_html(ep))
         crum = row[CRUM_COL]
         crum_page, crum_column = parser.parse_crum_cell(crum)
-        insert(CRUM_COL, "-a", parser.add_a_href(constants.CRUM_PAGE_FMT, crum))
         insert(CRUM_COL, "-link", constants.CRUM_PAGE_FMT.format(key=crum))
         insert("key", "-link", constants.GIRGIS_ORG_FMT.format(key=crum))
         insert(CRUM_COL, "-page", crum_page)
