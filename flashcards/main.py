@@ -42,11 +42,11 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
-    "--dir",
+    "--tsv",
     type=str,
     default="",
-    help="Path to the output DIR directory. If given, for each deck, we will"
-    " write a subdirectory containing the data in DIR format.",
+    help="Path to the output TSV directory. If given, for each deck, we will"
+    " write a subdirectory containing the data in TSV format.",
 )
 
 argparser.add_argument(
@@ -101,12 +101,12 @@ def mkdir(dir: str) -> None:
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def main() -> None:
-    if not (args.anki or args.dir or args.html):
+    if not (args.anki or args.tsv or args.html):
         print(
             colorama.Fore.RED
             + "Warning:"
             + colorama.Fore.YELLOW
-            + " None of the output flags (--anki, --dir, --html) is given."
+            + " None of the output flags (--anki, --tsv, --html) is given."
             " The decks will be constructed, but nothing will be written!"
         )
 
@@ -116,10 +116,10 @@ def main() -> None:
 
     for d in decks:
         filename = constants.file_name(d.deck_name)
-        if args.dir:
-            dir = os.path.join(args.dir, filename)
+        if args.tsv:
+            dir = os.path.join(args.tsv, filename)
             mkdir(dir)
-            d.write_dir(dir)
+            d.write_tsv(dir)
         if args.html:
             dir = os.path.join(args.html, filename)
             mkdir(dir)

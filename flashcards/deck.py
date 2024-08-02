@@ -206,15 +206,16 @@ class deck:
             shutil.rmtree(dir)
         pathlib.Path(dir).mkdir(parents=True)
 
-    def read_dir(self, dir: str) -> dict[str, record]:
+    def read_tsv(self, dir: str) -> dict[str, record]:
         path = os.path.join(dir, "data.tsv")
         if not os.path.exists(path):
             return {}
         df = pd.read_csv(path, sep="\t", dtype=str, encoding="utf-8").fillna("")
+        # TODO: Also read the old JSON, for consistency.
         return {row["key"]: record(row) for _, row in df.iterrows()}
 
-    def write_dir(self, dir: str) -> None:
-        old_records: dict[str, record] = self.read_dir(dir)
+    def write_tsv(self, dir: str) -> None:
+        old_records: dict[str, record] = self.read_tsv(dir)
         self.clean_dir(dir)
         metadata = json.dumps(
             {
