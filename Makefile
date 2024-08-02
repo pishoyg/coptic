@@ -266,7 +266,7 @@ camera_aux: FORCE
 		| sed "s/\.txt$$/\.*/" \
 		| while read -r GLOB; do ls $${GLOB} | xargs open; done
 
-aws_timestamp:
+aws_timestamp_aux:
 	[[ -z $$(git status --short) ]] || (echo Git repo is dirty. This should be done in a standalone commit. && exit 1)
 	date +%s > aws/TIMESTAMP
 	git add aws/TIMESTAMP
