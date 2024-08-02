@@ -3,12 +3,15 @@ import os
 import pathlib
 import tempfile
 
+import colorama
 import constants
 import deck
 import enforcer
 import field
 import genanki
 import type_enforced
+
+colorama.init(autoreset=True)
 
 argparser = argparse.ArgumentParser(
     formatter_class=argparse.RawTextHelpFormatter,
@@ -33,8 +36,9 @@ argparser.add_argument(
 argparser.add_argument(
     "--anki",
     type=str,
-    default="flashcards/data/output/anki/coptic.apkg",
-    help="Path to the output Anki package.",
+    default="",
+    help="Path to the output Anki package. If given, a single Anki package"
+    " will be written for all decks combined.",
 )
 
 argparser.add_argument(
@@ -50,7 +54,7 @@ argparser.add_argument(
     type=str,
     default="",
     help="Path to the output HTML directory. If given, for each deck, we will"
-    " write a subdirectory containing the data in DIR format.",
+    " write a subdirectory containing the data in HTML format.",
 )
 
 args = argparser.parse_args()
@@ -91,7 +95,21 @@ def write_anki(decks: list[deck.deck]) -> None:
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def mkdir(dir: str) -> None:
+    pathlib.Path(dir).mkdir(parents=True, exist_ok=True)
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def main() -> None:
+    if not (args.anki or args.dir or args.html):
+        print(
+            colorama.Fore.RED
+            + "Warning:"
+            + colorama.Fore.YELLOW
+            + " None of the output flags (--anki, --dir, --html) is given."
+            " The decks will be constructed, but nothing will be written!"
+        )
+
     work_dir = tempfile.TemporaryDirectory()
     field.init(work_dir.name)
     decks = constants.DECKS(args.decks)
@@ -99,9 +117,13 @@ def main() -> None:
     for d in decks:
         filename = constants.file_name(d.deck_name)
         if args.dir:
-            d.write_to_dir(os.path.join(args.dir, filename))
+            dir = os.path.join(args.dir, filename)
+            mkdir(dir)
+            d.write_dir(dir)
         if args.html:
-            d.write_html(os.path.join(args.html, filename))
+            dir = os.path.join(args.html, filename)
+            mkdir(dir)
+            d.write_html(dir)
 
     if args.anki:
         pathlib.Path(os.path.dirname(args.anki)).mkdir(parents=True, exist_ok=True)

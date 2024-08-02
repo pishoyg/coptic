@@ -152,7 +152,8 @@ kellia_analysis_clean: dictionary/kellia.uni-goettingen.de/analysis.json
 # FLASHCARD RULES
 flashcards: FORCE
 	python flashcards/main.py \
-		--dir "flashcards/data/output/dir"
+		--dir "flashcards/data/output/dir" \
+		--anki "flashcards/data/output/anki/coptic.apkg"
 
 flashcards_crum_bohairic: FORCE
 	python flashcards/main.py \

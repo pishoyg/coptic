@@ -1,4 +1,3 @@
-import copy
 import json
 import os
 import pathlib
@@ -214,7 +213,7 @@ class deck:
         df = pd.read_csv(path, sep="\t", dtype=str, encoding="utf-8").fillna("")
         return {row["key"]: record(row) for _, row in df.iterrows()}
 
-    def write_to_dir(self, dir: str) -> None:
+    def write_dir(self, dir: str) -> None:
         old_records: dict[str, record] = self.read_dir(dir)
         self.clean_dir(dir)
         metadata = json.dumps(
@@ -270,7 +269,6 @@ class deck:
         for f in self.media:
             shutil.copy(f, dir)
 
-    # TODO: Make the logic for the two export formats (anki, dir) uniform.
     def anki(self) -> tuple[genanki.Deck, list[str]]:
         model = genanki.Model(
             model_id=self.deck_id,
