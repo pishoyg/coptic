@@ -81,20 +81,15 @@ def crum(
         back=field.cat(
             # Type and Crum page.
             field.cat(
-                field.aon(
-                    "(",
-                    "<b>",
-                    roots_col("type-parsed", force=True),
-                    "</b>",
-                    ")",
+                field.fmt(
+                    "(<b>{type_parsed}</b>)",
+                    {"type_parsed": roots_col("type-parsed", force=True)},
                 ),
-                field.aon(
-                    '<span class="right">',
-                    "<b>Crum: </b>",
-                    roots_col("crum-a", force=True),
-                    "</span>",
-                    "<br/>",
+                field.fmt(
+                    '<span class="right"><b>Crum: </b>{crum_a}</span>',
+                    {"crum_a": roots_col("crum-a", force=True)},
                 ),
+                "<br/>",
             ),
             # Meaning.
             field.aon(
