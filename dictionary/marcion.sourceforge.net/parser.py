@@ -51,6 +51,7 @@ Remarks about the parsing:
 """
 
 import re
+import urllib
 
 import constants
 import enforcer
@@ -102,7 +103,9 @@ def _munch(text: str, regex: re.Pattern, strict: bool) -> tuple[str, str]:
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def _chop(text: str, regex: re.Pattern, strict: bool) -> tuple[str, str, str]:
+def _chop(
+    text: str, regex: re.Pattern, strict: bool, strip_ends: bool
+) -> tuple[str, str, str]:
     # Extract a substring matching the given regex from the given text. Return
     # all three parts.
     # The substring does NOT have to be a prefix.
@@ -113,7 +116,10 @@ def _chop(text: str, regex: re.Pattern, strict: bool) -> tuple[str, str, str]:
     elif not s:
         return text, "", ""
     i, j = s.span()
-    return text[:i].strip(), text[i:j], text[j:].strip()
+    l, m, r = text[:i], text[i:j], text[j:]
+    if strip_ends:
+        l, r = l.strip(), r.strip()
+    return l, m, r
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -185,7 +191,7 @@ def _munch_and_parse_spellings_types_and_references(
 
     while match:
         spelling_and_types, reference, match = _chop(
-            match, constants.REFERENCE_RE, strict=False
+            match, constants.REFERENCE_RE, strict=False, strip_ends=True
         )
         if reference:
             rr.extend(_parse_reference(reference))
@@ -288,7 +294,9 @@ def _parse_coptic(line: str) -> tuple[str, str]:
     out = []
     out_no_english = []
     while line:
-        copt, eng, line = _chop(line, constants.ENGLISH_WITHIN_COPTIC_RE, strict=False)
+        copt, eng, line = _chop(
+            line, constants.ENGLISH_WITHIN_COPTIC_RE, strict=False, strip_ends=True
+        )
         if copt:
             copt = _ascii_to_unicode(copt)
             out.append(copt)
@@ -305,7 +313,9 @@ def _parse_coptic(line: str) -> tuple[str, str]:
 def _parse_english(line: str) -> str:
     out = []
     while line:
-        eng, copt, line = _chop(line, constants.COPTIC_WITHIN_ENGLISH_RE, strict=False)
+        eng, copt, line = _chop(
+            line, constants.COPTIC_WITHIN_ENGLISH_RE, strict=False, strip_ends=True
+        )
         if eng:
             out.append(eng)
         if copt:
@@ -332,7 +342,9 @@ def _parse_english(line: str) -> str:
 def parse_english_cell(line: str) -> str:
     out = []
     while line:
-        eng, greek, line = _chop(line, constants.GREEK_WITHIN_ENGLISH_RE, strict=False)
+        eng, greek, line = _chop(
+            line, constants.GREEK_WITHIN_ENGLISH_RE, strict=False, strip_ends=True
+        )
         if eng:
             out.append(_parse_english(eng))
         if greek:
@@ -457,10 +469,17 @@ def lighten(line: str) -> str:
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def add_greek_links(line: str) -> str:
-    line = constants.GREEK_WORD.sub(
-        add_a_href(constants.KOINE_GREEK_DICTIONARY_FMT, r"\1"), line
+    before, greek, line = _chop(
+        line, constants.GREEK_WORD, strict=False, strip_ends=False
     )
-    return clean(line)
+    if not greek:
+        assert not line
+        return before
+    return (
+        before
+        + add_a_href(constants.KOINE_GREEK_DICTIONARY_FMT, greek)
+        + add_greek_links(line)
+    )
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -472,5 +491,5 @@ def remove_greek_and_html(line: str) -> str:
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def add_a_href(link_fmt: str, key: str) -> str:
-    link = link_fmt.format(key=key)
+    link = link_fmt.format(key=urllib.parse.quote(key))
     return '<a href="{link}">{key}</a>'.format(link=link, key=key)
