@@ -62,7 +62,7 @@ stats: stats_aux
 # not part of the main deployment pipeline.
 
 .PHONY: flash
-flash: precommit flashcards flashcards_redundant flashcards_cp_to_drive
+flash: precommit flashcards flashcards_redundant flashcards_cp_to_drive site_publish
 
 .PHONY: amazon
 amazon: precommit crum kindle kindle_cp_to_drive
