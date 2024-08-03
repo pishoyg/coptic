@@ -447,6 +447,8 @@ def clean(line: str) -> str:
 def remove_html(line: str) -> str:
     for t in constants.HTML_TAGS:
         line = line.replace(t, "")
+    for pair in constants.HTML_ESCAPES:
+        line = line.replace(pair[0], pair[1])
     return clean(line)
 
 
