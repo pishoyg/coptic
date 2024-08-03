@@ -303,7 +303,7 @@ DETACHED_TYPES_1 = [
         ),
     ),
     ("*", lexical.type("<i>plural: </i>", "(ⲛ)", "plural", lexical.Gender.PLURAL)),
-    ("$", lexical.type("<i> &amp;c</i>", "(&c)", "constructed with", None)),
+    ("$", lexical.type("<i> &c</i>", "(&c)", "constructed with", None)),
     ("^^^", lexical.type("<i><b>c</b></i>", "(c)", "Not sure what this means!", None)),
     # TODO: {nic} is definitely spelling-specific! Its presence here means it's
     # currently interpreted as applying to all spellings in a word! Fix!
@@ -369,10 +369,6 @@ HTML_TAGS = [
     "</b>",
     "<i>",
     "</i>",
-]
-
-HTML_ESCAPES = [
-    ("&amp;", "&"),
 ]
 
 # CLEAN is used to prettify the output.
