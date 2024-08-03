@@ -252,7 +252,7 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         return ""
 
     for _, row in df.iterrows():
-        insert("key", "-link", constants.GIRGIS_ORG_FMT.format(key=row["key"]))
+        insert("key", "-link", constants.CARD_LINK_FMT.format(key=row["key"]))
         root_type = parser.parse_type_cell(row[TYPE_COL])
         word = parser.parse_word_cell(
             row[WORD_COL],

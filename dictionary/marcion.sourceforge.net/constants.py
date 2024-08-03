@@ -47,7 +47,7 @@ KOINE_GREEK_DICTIONARY_FMT = (
     "https://logeion.uchicago.edu/{key}"
     # "https://www.billmounce.com/search/node/{key}%20type%3Alexicon"
 )
-GIRGIS_ORG_FMT = "https://coptic.girgis.org/crum/{key}.html"
+CARD_LINK_FMT = "https://pishoyg.github.io/crum/{key}.html"
 
 # LETTER_ENCODING is used to convert ASCII-encoded Coptic text to unicode.
 LETTER_ENCODING = {
