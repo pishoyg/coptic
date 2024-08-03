@@ -231,7 +231,8 @@ def write_txt(lang: str, column: pd.Series) -> None:
 
 
 def html_head(title=""):
-    return """<head>
+    return """<!DOCTYPE html>
+<head>
   <title>{title}</title>
   <style>
     .a {{
