@@ -85,6 +85,9 @@ update: precommit_update pip_update
 .PHONY: camera
 camera: camera_aux
 
+.PHONY: git_appease
+git_appease: git_appease_aux
+
 # LEVEL 1 RULES ###############################################################
 
 # BIBLE RULES
@@ -238,6 +241,10 @@ git_clean: FORCE
 		--exclude "flashcards/data/output/anki/*.apkg" \
 		--exclude "vault.sh" \
 		--force
+
+git_appease_aux: FORCE
+	# Add all files to the index, and run pre-commits. Repeat until they're happy.
+	until git add --all && pre-commit run ; do : ; done
 
 stats_aux: FORCE
 	bash stats.sh
