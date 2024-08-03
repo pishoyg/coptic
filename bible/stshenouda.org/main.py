@@ -129,8 +129,10 @@ def recolor(v, verse):
         return v
     for d in verse["coloredWords"]:
         txt = d["word"]
+        if not txt:
+            continue
         color = d["light"]
-        v = v.replace(txt, '<span style="color:{}">{}</span>'.format(color, txt))
+        v = v.replace(txt, f'<span style="color:{color}">{txt}</span>')
     return v
 
 
