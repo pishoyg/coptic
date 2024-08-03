@@ -216,12 +216,15 @@ def crum(
             ),
             # Marcion's key.
             field.cat(
-                field.aon(
-                    "<b>Key: </b>",
-                    roots_col("key", force=True),
-                    " ",
+                field.fmt(
+                    '<b>Key: </b> <a href="{key_link}">{key}</a> ',
+                    {
+                        "key_link": roots_col("key-link", force=True),
+                        "key": roots_col("key", force=True),
+                    },
                 ),
                 field.txt(
+                    # TODO: Update the home page, it will no longer be the repo.
                     '<span class="right">'
                     '<a href="https://github.com/pishoyg/coptic/">Home</a>'
                     ", "
