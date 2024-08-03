@@ -30,6 +30,9 @@ export KINDLE_DIR="${HOME}/Desktop"
 # BIBLE_DIR is the destination directory for the Bible EPUBs.
 export BIBLE_DIR="${HOME}/Desktop"
 
+# SITE_DIR is the destination directory for the website.
+export SITE_DIR="${HOME}/Desktop"
+
 # BREAK_SYSTEM_PACKAGES is passed to `pip` commands. Its value should either be
 # "" (the empty string), or "--break-system-packages". In the latter case,
 # you're instructing pip to install python packages even if system packages
