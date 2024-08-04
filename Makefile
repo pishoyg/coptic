@@ -27,6 +27,7 @@ SHELL := /bin/bash
 
 .PHONY: all
 # You might want to run `make clean` following this.
+# TODO: Makefile is not procedural. A rule placed several times on a line will only get executed once!
 all: install generate_1 test generate_2 test generate_3 test publish stats
 
 # LEVEL 2 RULES ###############################################################
