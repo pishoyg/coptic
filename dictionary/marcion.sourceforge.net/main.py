@@ -42,6 +42,9 @@ GR_COL = "gr"
 EN_COL = "en"
 CRUM_COL = "crum"
 
+MIN_KEY = 1
+MAX_KEY = 3385
+
 # Output arguments.############################################################
 argparser.add_argument(
     "--roots_tsv",
@@ -233,6 +236,35 @@ def main() -> None:
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
+class keyer:
+    def __init__(self, df: pd.DataFrame):
+        self.keys = {str(row["key"]) for _, row in df.iterrows()}
+
+    def assert_valid_key(self, key: int) -> None:
+        assert key >= MIN_KEY and key <= MAX_KEY
+
+    def next(self, key: int) -> str:
+        self.assert_valid_key(key)
+        if key == MAX_KEY:
+            return ""
+        next = int(key) + 1
+        while str(next) not in self.keys:
+            next += 1
+        self.assert_valid_key(next)
+        return str(next)
+
+    def prev(self, key: int) -> str:
+        self.assert_valid_key(key)
+        if key == MIN_KEY:
+            return ""
+        prev = key - 1
+        while str(prev) not in self.keys:
+            prev -= 1
+        self.assert_valid_key(prev)
+        return str(prev)
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def process_data(df: pd.DataFrame, strict: bool) -> None:
     extra_cols = {}
 
@@ -251,6 +283,7 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
                 return l
         return ""
 
+    keysmith = keyer(df)
     for _, row in df.iterrows():
         insert("key", "-link", constants.CARD_LINK_FMT.format(key=row["key"]))
         root_type = parser.parse_type_cell(row[TYPE_COL])
@@ -330,6 +363,9 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
             )
             insert("dialect-", d, entry)
             insert("lemma-", d, lemma(subset))
+        if strict:
+            insert("key", "-next", keysmith.next(int(row["key"])))
+            insert("key", "-prev", keysmith.prev(int(row["key"])))
         # TODO: Add inflections from the root to the derivations.
         for d in args.inflect_dialects:
             inflections = []
