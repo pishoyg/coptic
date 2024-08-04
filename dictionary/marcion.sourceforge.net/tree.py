@@ -143,6 +143,7 @@ class node:
         Args:
             explain: If true, include the meaning, type, and Crum page number.
         """
+        assert dialect is None, "Grouping derivations by dialect is still premature."
         assert not include_root, "An HTML tree with the root is not yet supported."
         assert self.is_root()
         assert self._preprocessed
