@@ -27,19 +27,19 @@ SHELL := /bin/bash
 
 .PHONY: all
 # You might want to run `make clean` following this.
-all: install generate_1 test generate_2 generate_3 publish stats
+all: install generate_1 test generate_2 test generate_3 test publish stats
 
 # LEVEL 2 RULES ###############################################################
 
 .PHONY: install
-install: bin_install pip_install python_install precommit_install
+install: pip_install python_install precommit_install bin_install
 
 # generate_1 rules are prerequisites for generate_2 rules.
 .PHONY: generate_1
 generate_1: bible copticsite crum crum_dawoud crum_img kellia kellia_analysis
 
 .PHONY: test
-test: precommit
+test: test_aux
 
 # generate_2 rules are prerequisites for generate_3 rules.
 .PHONY: generate_2
@@ -62,10 +62,10 @@ stats: stats_aux
 # not part of the main deployment pipeline.
 
 .PHONY: flash
-flash: precommit flashcards flashcards_redundant flashcards_cp_to_drive site_publish
+flash: precommit flashcards flashcards_redundant test flashcards_cp_to_drive site_publish
 
 .PHONY: amazon
-amazon: precommit crum kindle kindle_cp_to_drive
+amazon: precommit crum test kindle kindle_cp_to_drive
 
 .PHONY: clean
 clean: git_clean bible_epub_clean kellia_analysis_clean
@@ -84,9 +84,6 @@ update: precommit_update pip_update
 
 .PHONY: camera
 camera: camera_aux
-
-.PHONY: git_appease
-git_appease: git_appease_aux
 
 # LEVEL 1 RULES ###############################################################
 
@@ -228,6 +225,9 @@ precommit_install:
 precommit: FORCE
 	pre-commit run
 
+test_aux: FORCE
+	until git add --all && pre-commit run; do : ; done
+
 precommit_update: FORCE
 	pre-commit autoupdate
 
@@ -241,10 +241,6 @@ git_clean: FORCE
 		--exclude "flashcards/data/output/anki/*.apkg" \
 		--exclude "vault.sh" \
 		--force
-
-git_appease_aux: FORCE
-	# Add all files to the index, and run pre-commits. Repeat until they're happy.
-	until git add --all && pre-commit run ; do : ; done
 
 stats_aux: FORCE
 	bash stats.sh
