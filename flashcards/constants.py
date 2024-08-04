@@ -19,7 +19,7 @@ def crum(
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def roots_col(col_name: str, force: bool = True) -> field.tsv:
         return field.tsv(
-            "dictionary/marcion.sourceforge.net/data/output/roots.tsv",
+            "dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv",
             col_name,
             force=force,
         )
@@ -105,7 +105,7 @@ def crum(
             # Image.
             field.img(
                 keys=field.tsv(
-                    file_path="dictionary/marcion.sourceforge.net/data/output/roots.tsv",
+                    file_path="dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv",
                     column_name="key",
                     force=False,
                 ),
@@ -139,7 +139,7 @@ def crum(
             field.cat(
                 field.img(
                     keys=field.tsv(
-                        file_path="dictionary/marcion.sourceforge.net/data/output/roots.tsv",
+                        file_path="dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv",
                         column_name="crum-pages",
                         force=False,
                     ),
@@ -203,7 +203,7 @@ def crum(
                         *[
                             field.snd(
                                 keys=field.tsv(
-                                    file_path="dictionary/marcion.sourceforge.net/data/output/roots.tsv",
+                                    file_path="dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv",
                                     column_name="key",
                                     force=False,
                                 ),
@@ -250,7 +250,9 @@ def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def tsv_col(col_name: str, force: bool = True) -> field.tsv:
         return field.tsv(
-            "dictionary/copticsite.com/data/output/output.tsv", col_name, force=force
+            "dictionary/copticsite.com/data/output/tsv/output.tsv",
+            col_name,
+            force=force,
         )
 
     return deck.deck(
