@@ -1,4 +1,5 @@
 import argparse
+import os
 
 import pandas as pd
 import type_enforced
@@ -294,10 +295,10 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
-    "--output_tsv",
+    "--output",
     type=str,
-    default="dictionary/copticsite.com/data/output/output.tsv",
-    help="Path to the output TSV.",
+    default="dictionary/copticsite.com/data/output/",
+    help="Path to the output directory.",
 )
 
 args = argparser.parse_args()
@@ -338,7 +339,7 @@ def main() -> None:
         if key.startswith(UNNAMED_PREFIX):
             df.drop(key, axis=1, inplace=True)
 
-    df.to_csv(args.output_tsv, sep="\t", index=False)
+    df.to_csv(os.path.join(args.output, "tsv", "output.tsv"), sep="\t", index=False)
 
 
 if __name__ == "__main__":
