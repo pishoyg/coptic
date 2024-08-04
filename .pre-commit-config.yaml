@@ -29,6 +29,7 @@ repos:
         entry: bash -c 'for x in "$@"; do NEW=$(python -m json5.tool --as-json --indent 2 "$x") && echo "${NEW}" > "$x" && python -m json.tool --no-ensure-ascii --indent 2 "$x" "$x"; done' --
         language: system
         types: [json]
+        exclude: 'dictionary/marcion.sourceforge.net/data/output/.*\.json'
         # TODO: Install the tidy pre-commit from a remote repo, so you don't
         # have to manually install the binary.
   # Python.
