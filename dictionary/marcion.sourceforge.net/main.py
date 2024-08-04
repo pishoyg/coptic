@@ -48,19 +48,11 @@ MAX_KEY = 3385
 
 # Output arguments.############################################################
 argparser.add_argument(
-    "--roots_path",
+    "--output",
     type=str,
-    default="dictionary/marcion.sourceforge.net/data/output/roots",
-    help="Path to the output for the roots. This should be a stem, extensions will be added by the script.",
+    default="dictionary/marcion.sourceforge.net/data/output",
+    help="Path to the output directory.",
 )
-
-argparser.add_argument(
-    "--derivations_path",
-    type=str,
-    default="dictionary/marcion.sourceforge.net/data/output/derivations",
-    help="Path to the output for the derivations. This should be a stem, extensions will be added by the script.",
-)
-
 
 argparser.add_argument(
     "--filter_dialects",
@@ -135,13 +127,6 @@ argparser.add_argument(
     default="dictionary/marcion.sourceforge.net/data/crum/Crum/Crum.png",
 )
 
-argparser.add_argument(
-    "--epub_dir",
-    type=str,
-    help="Output directory Kindle dictionary EPUB.",
-    default="dictionary/marcion.sourceforge.net/data/output/",
-)
-
 # Main.########################################################################
 
 DEFINITION = """(<b>{type}</b>) <b>Crum: </b> {crum} <hr/> {meaning} <hr/> {word} <hr/> {derivations} <hr/>"""
@@ -160,11 +145,34 @@ def series_to_int(series: pd.Series) -> list[int]:
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def dataframe_to_json(df: pd.DataFrame, path: str) -> None:
+def write(df: pd.DataFrame, name: str) -> None:
+    df.to_csv(os.path.join(args.output, "tsv", name + ".tsv"), sep="\t", index=False)
+    # We write the JSON "manually" instead of using `df.to_json` because the
+    # format is different.
     j = df.to_dict(orient="records")
     j = json.dumps(j, indent=2, ensure_ascii=False)
+    path = os.path.join(args.output, "json", name + ".json")
     with open(path, "w") as f:
-        f.write(j)
+        f.write(j + "\n")  # We append an endline to appease the formatters.
+    if not args.gspread_owner:
+        return
+
+    # TODO: Parameterize to make it possible to write to multiple sheets at the
+    # same time, particularly for roots and derivations.
+    credentials = ServiceAccountCredentials.from_json_keyfile_name(
+        args.gspread_credentials_json, GSPREAD_SCOPE
+    )
+    client = gspread.authorize(credentials)
+
+    try:
+        spreadsheet = client.open(args.gspread_name)
+    except Exception:
+        spreadsheet = client.create(args.gspread_name)
+        spreadsheet.share(args.gspread_owner, perm_type="user", role="owner")
+
+    spreadsheet.get_worksheet(0).update(
+        [df.columns.values.tolist()] + df.values.tolist()
+    )
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -190,17 +198,10 @@ def main() -> None:
 
     # Write the roots.
     roots.sort_values(by=args.sort_roots, key=series_to_int, inplace=True)
-    roots.to_csv(args.roots_path + ".tsv", sep="\t", index=False)
-    dataframe_to_json(roots, args.roots_path + ".json")
-    if args.gspread_owner:
-        write_to_gspread(roots)
-
+    write(roots, "roots")
     # Write the derivations.
     derivations.sort_values(by=args.sort_derivations, key=series_to_int, inplace=True)
-    derivations.to_csv(args.derivations_path + ".tsv", sep="\t", index=False)
-    dataframe_to_json(derivations, args.derivations_path + ".json")
-    if args.gspread_owner:
-        write_to_gspread(derivations)
+    write(derivations, "derivations")
 
     # Write EPUB Kindle dictionaries.
     for d in args.inflect_dialects:
@@ -236,7 +237,7 @@ def main() -> None:
                 inflections=inflections,
             )
             k.add_entry(entry)
-        k.write_pre_mobi(os.path.join(args.epub_dir, f"dialect-{d}"))
+        k.write_pre_mobi(os.path.join(args.output, "mobi", f"dialect-{d}"))
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -450,26 +451,6 @@ def dawoud_sort_key(words: list[lexical.structured_word]) -> str:
                 return f"{s} ({d})"
 
     return ""
-
-
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def write_to_gspread(df: pd.DataFrame) -> None:
-    # TODO: Parameterize to make it possible to write to multiple sheets at the
-    # same time, particularly for roots and derivations.
-    credentials = ServiceAccountCredentials.from_json_keyfile_name(
-        args.gspread_credentials_json, GSPREAD_SCOPE
-    )
-    client = gspread.authorize(credentials)
-
-    try:
-        spreadsheet = client.open(args.gspread_name)
-    except Exception:
-        spreadsheet = client.create(args.gspread_name)
-        spreadsheet.share(args.gspread_owner, perm_type="user", role="owner")
-
-    spreadsheet.get_worksheet(0).update(
-        [df.columns.values.tolist()] + df.values.tolist()
-    )
 
 
 if __name__ == "__main__":
