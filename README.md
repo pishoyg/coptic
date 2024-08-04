@@ -18,6 +18,7 @@
   - [Planning](#planning)
     - [Priorities](#priorities)
     - [Nature of Tasks](#nature-of-tasks)
+    - [Audience](#audience)
   - [Guidelines](#guidelines)
 - [Credits](#credits)
 
@@ -178,6 +179,8 @@ Here are some information about the labels and conventions:
 
 *N.B. When in doubt, it is safer to use a higher priority.*
 
+*N.B. We can have at most one label from each category.*
+
 #### Priorities
 
 - `p-1`: Ideas that have been proposed, but have not yet been assessed for
@@ -222,12 +225,12 @@ In other words, these are items that we _might_ do.
 
 This is somewhat self-explanatory, but we define some labels below:
 
-- `prerequisite`: This label describes items belonging to other categories
-that are considered prerequisites for other items within that same category,
-such as a `p2` task that is a prerequisite for another `p2` task.
-
 - `data collection`: Manual data collection, rather than coding. Coding tasks
 that aim to facilitate data collection tasks do NOT belong in this category.
+
+#### Audience
+
+Either developer-oriented or user-oriented improvements.
 
 ### Guidelines
 
