@@ -85,6 +85,9 @@ update: precommit_update pip_update
 .PHONY: camera
 camera: camera_aux
 
+.PHONY: yo
+yo: yo_aux
+
 # LEVEL 1 RULES ###############################################################
 
 # BIBLE RULES
@@ -262,6 +265,10 @@ camera_aux: FORCE
 		| sed 's/img-sources/img/' \
 		| sed "s/\.txt$$/\.*/" \
 		| while read -r GLOB; do ls $${GLOB} | xargs open; done
+
+# TODO: This works on OS X, but it doesn't exist by default on Ubuntu.
+yo_aux: FORCE
+	say yo
 
 site_publish_aux: FORCE
 	bash site/publish.sh
