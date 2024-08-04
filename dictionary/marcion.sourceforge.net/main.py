@@ -1,4 +1,5 @@
 import argparse
+import json
 import os
 import parser
 
@@ -159,6 +160,14 @@ def series_to_int(series: pd.Series) -> list[int]:
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def dataframe_to_json(df: pd.DataFrame, path: str) -> None:
+    j = df.to_dict(orient="records")
+    j = json.dumps(j, indent=2, ensure_ascii=False)
+    with open(path, "w") as f:
+        f.write(j)
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def main() -> None:
     # Process roots.
     roots = pd.read_csv(args.coptwrd_tsv, sep="\t", dtype=str, encoding="utf-8").fillna(
@@ -182,12 +191,14 @@ def main() -> None:
     # Write the roots.
     roots.sort_values(by=args.sort_roots, key=series_to_int, inplace=True)
     roots.to_csv(args.roots_path + ".tsv", sep="\t", index=False)
+    dataframe_to_json(roots, args.roots_path + ".json")
     if args.gspread_owner:
         write_to_gspread(roots)
 
     # Write the derivations.
     derivations.sort_values(by=args.sort_derivations, key=series_to_int, inplace=True)
     derivations.to_csv(args.derivations_path + ".tsv", sep="\t", index=False)
+    dataframe_to_json(derivations, args.derivations_path + ".json")
     if args.gspread_owner:
         write_to_gspread(derivations)
 
