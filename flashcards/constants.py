@@ -6,6 +6,9 @@ import field
 import type_enforced
 
 CRUM_A_FMT = '<a href="https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID={page_id}">{page_id}</a>'
+PARENT_URL = "https://pishoyg.github.io/crum"
+HOME = "https://github.com/pishoyg/coptic/"
+EMAIL = "pishoybg@gmail.com"
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -63,7 +66,7 @@ def crum(
         # N.B. The deck name is a protected field.
         deck_name=deck_name,
         deck_id=deck_id,
-        deck_description="https://github.com/pishoyg/coptic/.\n" "pishoybg@gmail.com.",
+        deck_description=f"{HOME}.\n{EMAIL}.",
         css=".card { font-size: 18px; }"
         ".front { text-align: center; }"
         "figure { display: inline-block; border: 1px transparent; margin: 10px; }"
@@ -214,23 +217,28 @@ def crum(
                 ),
                 "<hr/>",
             ),
-            # Marcion's key.
+            # Footer.
             field.cat(
+                # TODO: Update the home page, it will no longer be the repo.
+                f"""<table class="bordered" style="width: 100%; table-layout: fixed;"> <tr> <td><a href="{HOME}">Home</a></td> <td>""",
+                field.aon(
+                    f'<a href="{PARENT_URL}/',
+                    roots_col("key-prev", force=False),
+                    '.html">prev</a>',
+                ),
                 field.fmt(
-                    '<b>Key: </b> <a href="{key_link}">{key}</a> ',
+                    """ </td> <td><b>Key: </b><a href="{key_link}">{key}</a></td> <td>""",
                     {
-                        "key_link": roots_col("key-link", force=True),
                         "key": roots_col("key", force=True),
+                        "key_link": roots_col("key-link", force=True),
                     },
                 ),
-                field.txt(
-                    # TODO: Update the home page, it will no longer be the repo.
-                    '<span class="right">'
-                    '<a href="https://github.com/pishoyg/coptic/">Home</a>'
-                    ", "
-                    '<a href="mailto:pishoybg@gmail.com">Contact</a>'
-                    "</span>"
+                field.aon(
+                    f'<a href="{PARENT_URL}/',
+                    roots_col("key-next", force=False),
+                    '.html">next</a>',
                 ),
+                f"""</td> <td><a href="mailto:{EMAIL}">Contact</a></td> </tr> </table>""",
             ),
         ),
         force_front=force_front,
@@ -249,7 +257,7 @@ def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
         # N.B. The deck name is a protected field.
         deck_name=deck_name,
         deck_id=deck_id,
-        deck_description="https://github.com/pishoyg/coptic/.\n" "pishoybg@gmail.com.",
+        deck_description=f"{HOME}\n{EMAIL}",
         css=".card { text-align: center; font-size: 18px; }",
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
@@ -290,7 +298,7 @@ def kellia(deck_name: str, deck_id: int, tsv_basename: str) -> deck.deck:
         # N.B. The deck name is a protected field.
         deck_name=deck_name,
         deck_id=deck_id,
-        deck_description="https://github.com/pishoyg/coptic/.\n" "pishoybg@gmail.com.",
+        deck_description=f"{HOME}\n{EMAIL}",
         css=".card { font-size: 18px; }"
         ".table { display: block; width: 100%; text-align: center; }"
         ".orth { min-width: 120px; }"
