@@ -47,26 +47,19 @@ MAX_KEY = 3385
 
 # Output arguments.############################################################
 argparser.add_argument(
-    "--roots_tsv",
+    "--roots_path",
     type=str,
-    default="dictionary/marcion.sourceforge.net/data/output/roots.tsv",
-    help="Path to the output TSV file containing the roots.",
+    default="dictionary/marcion.sourceforge.net/data/output/roots",
+    help="Path to the output for the roots. This should be a stem, extensions will be added by the script.",
 )
 
 argparser.add_argument(
-    "--derivations_tsv",
+    "--derivations_path",
     type=str,
-    default="dictionary/marcion.sourceforge.net/data/output/derivations.tsv",
-    help="Path to the output TSV file containing the derivations.",
+    default="dictionary/marcion.sourceforge.net/data/output/derivations",
+    help="Path to the output for the derivations. This should be a stem, extensions will be added by the script.",
 )
 
-argparser.add_argument(
-    "--combined_tsv",
-    type=str,
-    default="dictionary/marcion.sourceforge.net/data/output/combined.tsv",
-    help="Path to the output TSV file containing the combined roots and"
-    " derivations.",
-)
 
 argparser.add_argument(
     "--filter_dialects",
@@ -188,13 +181,13 @@ def main() -> None:
 
     # Write the roots.
     roots.sort_values(by=args.sort_roots, key=series_to_int, inplace=True)
-    roots.to_csv(args.roots_tsv, sep="\t", index=False)
+    roots.to_csv(args.roots_path + ".tsv", sep="\t", index=False)
     if args.gspread_owner:
         write_to_gspread(roots)
 
     # Write the derivations.
     derivations.sort_values(by=args.sort_derivations, key=series_to_int, inplace=True)
-    derivations.to_csv(args.derivations_tsv, sep="\t", index=False)
+    derivations.to_csv(args.derivations_path + ".tsv", sep="\t", index=False)
     if args.gspread_owner:
         write_to_gspread(derivations)
 
