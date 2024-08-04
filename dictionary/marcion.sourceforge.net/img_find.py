@@ -94,11 +94,10 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
-    "--print_cols",
+    "--link_col",
     type=str,
-    nargs="*",
-    default=["key", "word-parsed-prettify", "en-parsed-no-greek-no-html", "crum-link"],
-    help="A list of columns to print when prompting the user to find images.",
+    default="key-link",
+    help="The name of the link column to open the page in the browser.",
 )
 
 argparser.add_argument(
@@ -289,9 +288,7 @@ def main():
 
         open_images(g)
         q = query(row[args.input_meaning_col])
-        subprocess.run(["open", "-a", args.browser, q])
-        for col in args.print_cols:
-            print("\n{}:\n{}".format(col, row[col]))
+        subprocess.run(["open", "-a", args.browser, q, row[args.link_col]])
         print("\nExisting:\n{}".format(g))
 
         while True:
