@@ -1,5 +1,4 @@
 import argparse
-import json
 import os
 
 import pandas as pd
@@ -341,11 +340,6 @@ def main() -> None:
             df.drop(key, axis=1, inplace=True)
 
     df.to_csv(os.path.join(args.output, "tsv", "output.tsv"), sep="\t", index=False)
-    j = df.to_dict(orient="records")
-    j = json.dumps(j, indent=2, ensure_ascii=False)
-    path = os.path.join(args.output, "json", "output.json")
-    with open(path, "w") as f:
-        f.write(j + "\n")  # We append an endline to appease the formatters.
 
 
 if __name__ == "__main__":
