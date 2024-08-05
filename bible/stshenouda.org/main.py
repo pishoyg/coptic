@@ -343,11 +343,13 @@ def write_html(html, books, html_format):
     for lang in LANGUAGES + args.parallels:
         out = [
             html_head(BOOK_TITLE)
+            + "<body>"
             + html_h1(BOOK_TITLE)
             + html_toc(books, lambda book_name: "#" + html_id(book_name))
         ]
         for book_name in books:
             out.extend(html[lang][book_name])
+        out.append("</body>")
         path = writing_path(html_format, lang + ".html")
         out = "\n".join(out)
         out = prettify_html(out)
