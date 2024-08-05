@@ -151,6 +151,9 @@ kellia_analysis_clean: dictionary/kellia.uni-goettingen.de/analysis.json
 	git restore "dictionary/kellia.uni-goettingen.de/analysis.json"
 
 # FLASHCARD RULES
+# TODO: Get rid of this mess! Maybe have `python flashcards/main.py` just write everything in all format.
+# I think what's preventing you from doing that is the desire to limit the number of HTML files. I think it should be
+# alright, your OS and Git can handle a lot of files.
 flashcards: FORCE
 	python flashcards/main.py \
 		--tsv "flashcards/data/output/tsv" \
@@ -159,33 +162,39 @@ flashcards: FORCE
 flashcards_crum_bohairic: FORCE
 	python flashcards/main.py \
 		--decks "A Coptic Dictionary::Bohairic" \
+		--tsv "flashcards/data/output/tsv" \
 		--anki "flashcards/data/output/anki/crum_bohairic.apkg" \
 		--html "flashcards/data/output/html"
 
 flashcards_crum_all_dialects: FORCE
 	python flashcards/main.py \
 		--decks "A Coptic Dictionary::All Dialects" \
+		--tsv "flashcards/data/output/tsv" \
 		--anki "flashcards/data/output/anki/crum_all_dialects.apkg" \
 		--html "flashcards/data/output/html"
 
 flashcards_crum: FORCE
 	python flashcards/main.py \
 		--decks "A Coptic Dictionary::Bohairic" "A Coptic Dictionary::Sahidic" "A Coptic Dictionary::Bohairic / Sahidic" "A Coptic Dictionary::All Dialects" \
+		--tsv "flashcards/data/output/tsv" \
 		--anki "flashcards/data/output/anki/crum.apkg"
 
 flashcards_copticsite: FORCE
 	python flashcards/main.py \
 		--decks "copticsite.com" \
+		--tsv "flashcards/data/output/tsv" \
 		--anki "flashcards/data/output/anki/copticsite.apkg"
 
 flashcards_kellia: FORCE
 	python flashcards/main.py \
 		--decks "KELLIA::Comprehensive" "KELLIA::Egyptian" "KELLIA::Greek"\
+		--tsv "flashcards/data/output/tsv" \
 		--anki "flashcards/data/output/anki/kellia.apkg"
 
 flashcards_kellia_comprehensive: FORCE
 	python flashcards/main.py \
 		--decks "KELLIA::Comprehensive" \
+		--tsv "flashcards/data/output/tsv" \
 		--anki "flashcards/data/output/anki/kellia_comprehensive.apkg"
 
 flashcards_redundant: flashcards_crum_bohairic flashcards_crum_all_dialects flashcards_crum flashcards_copticsite flashcards_kellia_comprehensive flashcards_kellia
