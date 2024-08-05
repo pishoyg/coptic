@@ -9,6 +9,8 @@
 # See https://github.com/pishoyg/coptic/issues/94.
 # TODO: Fail fast won't be optimal if your pipelines get better at writing
 # consistent output that doesn't get modified by the pre-commits. Revisit.
+# TODO: Install the tidy pre-commit from a remote repo, so you don't
+# have to manually install the binary.
 fail_fast: true
 exclude: ^archive/
 repos:
@@ -35,8 +37,6 @@ repos:
         entry: bash -c 'for x in "$@"; do NEW=$(python -m json5.tool --as-json --indent 2 "$x") && echo "${NEW}" > "$x" && python -m json.tool --no-ensure-ascii --indent 2 "$x" "$x"; done' --
         language: system
         types: [json]
-        # TODO: Install the tidy pre-commit from a remote repo, so you don't
-        # have to manually install the binary.
   # Python.
   - repo: https://github.com/psf/black-pre-commit-mirror
     rev: 24.4.2
@@ -158,7 +158,7 @@ repos:
         pass_filenames: false
       - id: stats
         name: stats
-        entry: bash -c 'if (( $(date +%s) - $(tail -n 1 stats.tsv | cut --fields 2) >= 86400 )); then echo "Run \`make stats\` or \`touch stats.tsv\`." && exit 1; fi'
+        entry: bash -c 'if (( $(date +%s) - $(tail -n 1 stats.tsv | cut --fields 2) >= 86400 )); then echo -e "\033[0;31m" Run "\033[0;33m" \`make stats\` "\033[0;31m" or "\033[0;33m" \`touch stats.tsv\`"\033[0;31m"\. "\033[0m" && exit 1; fi'
         language: system
         pass_filenames: false
         always_run: true
