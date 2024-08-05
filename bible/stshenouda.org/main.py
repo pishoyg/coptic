@@ -227,7 +227,7 @@ def write_txt(lang: str, column: pd.Series) -> None:
     path = writing_path("txt", f"{lang}.txt")
     content = "\n".join(filter(None, column))
     with open(path, "w") as f:
-        f.write(content)
+        f.write(content + "\n")
 
 
 def html_head(title=""):
