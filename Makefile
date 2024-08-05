@@ -201,11 +201,11 @@ kindle: FORCE
 	-gen_ff_mobi7 \
 	-dont_append_source \
 	-c0 \
-	"dictionary/marcion.sourceforge.net/data/output/dialect-B/dialect-B.opf"
+	"dictionary/marcion.sourceforge.net/data/output/mobi/dialect-B/dialect-B.opf"
 
 kindle_cp_to_drive:
 	cp \
-	"dictionary/marcion.sourceforge.net/data/output/dialect-B/dialect-B.mobi" \
+	"dictionary/marcion.sourceforge.net/data/output/mobi/dialect-B/dialect-B.mobi" \
 	"$${KINDLE_DIR}"
 
 # INFRASTRUCTURE RULES
