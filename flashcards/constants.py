@@ -294,7 +294,7 @@ def kellia(deck_name: str, deck_id: int, tsv_basename: str) -> deck.deck:
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def tsv_col(col_name: str, force: bool = True) -> field.tsv:
         return field.tsv(
-            f"dictionary/kellia.uni-goettingen.de/data/output/{tsv_basename}.tsv",
+            f"dictionary/kellia.uni-goettingen.de/data/output/tsv/{tsv_basename}.tsv",
             col_name,
             force=force,
         )

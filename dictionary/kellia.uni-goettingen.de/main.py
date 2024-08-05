@@ -1073,9 +1073,9 @@ parser.add_argument(
     type=str,
     nargs="*",
     default=[
-        "dictionary/kellia.uni-goettingen.de/data/output/egyptian.tsv",
-        "dictionary/kellia.uni-goettingen.de/data/output/greek.tsv",
-        "dictionary/kellia.uni-goettingen.de/data/output/comprehensive.tsv",
+        "dictionary/kellia.uni-goettingen.de/data/output/tsv/egyptian.tsv",
+        "dictionary/kellia.uni-goettingen.de/data/output/tsv/greek.tsv",
+        "dictionary/kellia.uni-goettingen.de/data/output/tsv/comprehensive.tsv",
     ],
     help="Path to the output TSV.",
 )
