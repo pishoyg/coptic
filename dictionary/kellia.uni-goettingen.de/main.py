@@ -481,7 +481,7 @@ def gloss_bibl(ref_bibl):
             r"H.G. Liddell, R. Scott, H.S. Jones, A Greek-English lexicon, Oxford: Clarendon Press, 1968",
         ),
         (
-            r"LSJ Suppl.",
+            r"LSJ Suppl\.",
             r"H.G. Liddell, R. Scott, H.S. Jones, E.A. Barber, A Greek-English lexicon/Supplement, Oxford: Clarendon Press, 1968",
         ),
         (
