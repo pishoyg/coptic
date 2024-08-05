@@ -107,7 +107,6 @@ def crum(
                 keys=field.tsv(
                     file_path="dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv",
                     column_name="key",
-                    force=False,
                 ),
                 # Although the same result can be obtained using
                 # glob.glob(f"dictionary/marcion.sourceforge.net/data/img-300/{key}-*")
@@ -134,14 +133,14 @@ def crum(
             roots_col("word-parsed-no-ref", force=True),
             # Derivations.
             roots_col("derivations-table", force=False),
-            "<hr/>",
             # Crum's pages.
             field.cat(
+                "<hr/>",
                 field.img(
                     keys=field.tsv(
                         file_path="dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv",
                         column_name="crum-pages",
-                        force=False,
+                        force=False,  # TODO: Why is this not enforced? Is it the Nag Hammadi words?
                     ),
                     get_paths=lambda page_ranges: [
                         f"dictionary/marcion.sourceforge.net/data/crum/{k+20}.png"
@@ -153,10 +152,10 @@ def crum(
                     ),
                     force=False,
                 ),
-                "<hr/>",
             ),
             # Dawoud's pages.
             field.aon(
+                "<hr/>",
                 '<span class="right">',
                 "<b>Dawoud: </b>",
                 field.grp(
@@ -189,33 +188,37 @@ def crum(
                     get_caption=lambda path: int(field.stem(path)) - 16,
                     force=False,
                 ),
-                "<hr/>",
             ),
             # Audio.
             # TODO: Label the per-dialect audios, like you did for the front.
             # If this deck contains multiple dialects, it won't be clear for
             # the user which audios belong to which dialect!
+            # Note: The use of nested all-or-nothing and concatenate fields
+            # here is intentional. It may not be obvious now, but this
+            # structure will be necessary if we want to include more audio
+            # authors.
             field.aon(
+                "<hr/>",
                 field.cat(
                     # Pishoy's pronunciation.
                     field.aon(
                         "Pishoy: ",
-                        *[
-                            field.snd(
-                                keys=field.tsv(
-                                    file_path="dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv",
-                                    column_name="key",
+                        field.cat(
+                            *[
+                                field.snd(
+                                    keys=field.tsv(
+                                        file_path="dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv",
+                                        column_name="key",
+                                    ),
+                                    get_paths=pronunciations[col].get,
+                                    sort_paths=sorted,
                                     force=False,
-                                ),
-                                get_paths=pronunciations[col].get,
-                                sort_paths=sorted,
-                                force=False,
-                            )
-                            for col in dialect_cols
-                        ],
+                                )
+                                for col in dialect_cols
+                            ],
+                        ),
                     ),
                 ),
-                "<hr/>",
             ),
             # Footer.
             field.cat(
