@@ -51,7 +51,7 @@ argparser.add_argument(
     type=str,
     help="Path to the input directory. For each book in the book list, we will"
     " try to find a corresponding ${BOOK_NAME}.json in this directory.",
-    default="bible/stshenouda.org/data/raw/",
+    default="bible/stshenouda.org/data/input/",
 )
 argparser.add_argument(
     "--sources_input_dir",
@@ -59,7 +59,7 @@ argparser.add_argument(
     help="Path to the input directory. For each book in the book list, we will"
     " try to find a corresponding ${BOOK_NAME}_Sources.json file in this"
     " directory.",
-    default="bible/stshenouda.org/data/raw/Sources/",
+    default="bible/stshenouda.org/data/input/Sources/",
 )
 
 # Output arguments:
