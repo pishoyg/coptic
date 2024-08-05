@@ -14,6 +14,7 @@
 - [For Developers / Owners](#for-developers--owners)
   - [Getting started](#getting-started)
   - [Directory Structure](#directory-structure)
+  - [`data/`](#data)
   - [`vault.sh`](#vaultsh)
   - [Planning](#planning)
     - [Priorities](#priorities)
@@ -161,6 +162,21 @@ specifically.
 Most scripts have default parameters with the assumption that they are being
 invoked from the repo's root directory, rather than from the directory where
 the script lives.
+
+### `data/`
+
+We have somewhat strict rules regarding our `data/` directory. It usually (and this means almost always) contains four
+subdirectories:
+
+- `raw/`: Data that is **copied** from elsewhere. This would, for example, include the Marcion SQL tables copied as is,
+  unmodified. We don't use files in this directory as inputs to our program.
+
+- `input/`: Data that we either *modified* or *created*. If we want to fix typos to data that we copied, we don't touch
+  the data under `raw/`, but we take the liberty to modify the copies that live under `input/`. This directory also
+includes the data that we created ourselves.
+
+- `output/`: This contains the data written by our pipelines, **one subdirectory per format**. If your pipeline writes
+both TSV and HTML, they should go respectively to `output/tsv/` and `output/html/`.
 
 ### `vault.sh`
 
