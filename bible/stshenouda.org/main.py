@@ -3,10 +3,13 @@ import json
 import os
 import re
 
+import colorama
 import json5
 import pandas as pd
 from bs4 import BeautifulSoup as bs
 from ebooklib import epub
+
+colorama.init(autoreset=True)
 
 # TODO: Export the Bible text to a gsheet.
 # TODO: Export the sources to a gdoc.
@@ -124,16 +127,84 @@ def json_loads(t):
         return json5.loads(t)
 
 
+def json_dumps(j):
+    return json.dumps(j, indent=2, ensure_ascii=False)
+
+
+class RangeColor:
+    def __init__(self, start: int, end: int, color: str):
+        self.start = start
+        self.end = end
+        self.color = color
+
+    def within(self, other):
+        return self.start >= other.start and self.end <= other.end
+
+    def overlap(self, other) -> bool:
+        return self.start < other.end and self.end > other.start
+
+    def winner(self, other):
+        """
+        Given two ranges, return whichever one contains the other.
+        If neither contains the other, crash!
+        """
+        if self.within(other):
+            return other
+        if other.within(self):
+            return self
+        assert False
+
+
+def compare_range_color(rc: RangeColor) -> tuple[int, int]:
+    return (rc.start, rc.end)
+
+
+def remove_overlap(ranges: list[RangeColor]) -> list[RangeColor]:
+    if not ranges:
+        return []
+    out: list[RangeColor] = [ranges[0]]
+    for cur in ranges[1:]:
+        prev = out[-1]
+        if not cur.overlap(prev):
+            # No overlap.
+            out.append(cur)
+            continue
+        out[-1] = cur.winner(prev)
+    return out
+
+
+def find_all(s, p):
+    i = s.find(p)
+    while i != -1:
+        yield i
+        i = s.find(p, i + 1)
+
+
 def recolor(v, verse):
     if "coloredWords" not in verse:
         return v
+    ranges: list[RangeColor] = []
     for d in verse["coloredWords"]:
-        txt = d["word"]
-        if not txt:
+        word, color = d["word"], d["light"]
+        if not word or not color:
             continue
-        color = d["light"]
-        v = v.replace(txt, f'<span style="color:{color}">{txt}</span>')
-    return v
+        ranges.extend(
+            [RangeColor(idx, idx + len(word), color) for idx in find_all(v, word)]
+        )
+    ranges = sorted(ranges, key=compare_range_color)
+    if not ranges:
+        return v
+    ranges = remove_overlap(ranges)
+    assert ranges
+    out = ""
+    last = 0
+    for rc in ranges:
+        assert rc.start != rc.end
+        out += v[last : rc.start]
+        out += f'<span style="color:{rc.color}">{v[rc.start:rc.end]}</span>'
+        last = rc.end
+    out = out + v[last:]
+    return out
 
 
 def chapter_number(chapter):
