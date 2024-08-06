@@ -250,28 +250,42 @@ Either developer-oriented or user-oriented improvements.
 
 ### Guidelines
 
-1. While unit tests are low-priority right now given the feasibility of other
-   methods of testing, such as the code assertions, and visual inspections of
-   the output, unit tests are still desirable. Consider expanding them.
+1. Add in-code assertions and checks. This is our first line of defense, and
+   has been the champion when it comes to ensuring correctness and catching
+   bugs.
 
-1. Use pre-commit hooks.
+1. We rely heavily on manual inspection of the output to verify correctness.
+   The `git --word-diff` command is helpful when our line-oriented `diff` is
+   not readable. Keep this in mind when structuring your output data.
+
+1. We use pre-commit hooks extensively, and they have helped us discover a lot
+   of bugs and issues with our code, and also keep our repo clean.
+
+1. We force the existence of unit tests, at least one for each Python file.
+   While these have so far been mere placeholders, the mere import of a package
+   sometimes catches syntax errors, and the placeholders will make it
+   convenient to write tests whenever desired. A big benefit of unit tests is
+   that they make us confident that a change is correct, so we can speed up the
+   development process.
 
 1. Do not let Python tempt you to use its built-in types instead of classes and
    objects. Don't forget about OOP!
 
 1. Document the code.
 
-1. Add assertions and throw exceptions for any assumptions that you make. They
-   catch a lot of bugs! A lot!
-
-1. Force type hints. Use
+1. We force type hints throughout the repo, although as a pipeline matures we
+   disable them to reduce the running time. See
    [type_enforced](https://github.com/connor-makowski/type_enforced).
-   - Set type enforcement per class rather than per method.
-   - Move your helpers, such as your `Callable`, to a shared package.
+   - We tend to have an `enforcer` package that hosts the flag that enables or
+     disables type enforcement. We also use it to define classes that we use
+   for enforcement.
 
 1. Collect and print stats.
 
-1. Strip inputs more liberally.
+1. Color the outputs whenever you can. It keeps your programmers entertained!
+
+1. Keep your code `grep`-able, especially when it comes to the constants used
+   across directories.
 
 ## Credits
 
