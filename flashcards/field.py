@@ -74,10 +74,12 @@ class txt(_primitive_field):
     A constant text field.
     """
 
-    def __init__(self, text: str, force: bool = True) -> None:
+    def __init__(self, text: str, line_br: bool = True, force: bool = True) -> None:
         if force:
             assert text
-        self._text = use_html_line_breaks(text)
+        if line_br:
+            text = use_html_line_breaks(text)
+        self._text = text
 
     def next(self) -> str:
         return self._text
@@ -132,7 +134,9 @@ class tsv(_content_field):
     A TSV column field.
     """
 
-    def __init__(self, file_path: str, column_name: str, force: bool = True) -> None:
+    def __init__(
+        self, file_path: str, column_name: str, line_br: bool = True, force: bool = True
+    ) -> None:
         if file_path in _tsv:
             df = _tsv[file_path]
         else:
@@ -141,7 +145,8 @@ class tsv(_content_field):
             )
             _tsv[file_path] = df
         content = [str(cell).strip() for cell in df[column_name]]
-        content = list(map(use_html_line_breaks, content))
+        if line_br:
+            content = list(map(use_html_line_breaks, content))
         super().__init__(content, [], force=force)
 
 
