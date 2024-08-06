@@ -17,24 +17,30 @@ def crum(
 ) -> deck.deck:
 
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-    def roots_col(col_name: str, force: bool = True) -> field.tsv:
+    def roots_col(
+        col_name: str, line_br: bool = False, force: bool = True
+    ) -> field.tsv:
         return field.tsv(
             "dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv",
             col_name,
+            line_br=line_br,
             force=force,
         )
 
-    def dawoud_col(col_name: str, force: bool = True) -> field.tsv:
+    def dawoud_col(
+        col_name: str, line_br: bool = False, force: bool = True
+    ) -> field.tsv:
         return field.tsv(
             "dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv",
             col_name,
+            line_br=line_br,
             force=force,
         )
 
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def create_front() -> field.Field:
         if len(dialect_cols) == 1:
-            return roots_col(dialect_cols[0], force=False)
+            return roots_col(dialect_cols[0], line_br=True, force=False)
 
         def dialect(col: str) -> field.Field:
             return field.aon(
@@ -46,7 +52,7 @@ def crum(
                 ")",
                 "</span>",
                 "<br/>",
-                roots_col(col, force=False),
+                roots_col(col, line_br=True, force=False),
             )
 
         return field.jne("<br/>", *[dialect(col) for col in dialect_cols])
@@ -99,7 +105,7 @@ def crum(
             ),
             # Meaning.
             field.aon(
-                roots_col("en-parsed-link-light-greek", force=False),
+                roots_col("en-parsed-link-light-greek", line_br=True, force=False),
                 "<br/>",
             ),
             # Image.
@@ -107,6 +113,7 @@ def crum(
                 keys=field.tsv(
                     file_path="dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv",
                     column_name="key",
+                    line_br=True,
                 ),
                 # Although the same result can be obtained using
                 # glob.glob(f"dictionary/marcion.sourceforge.net/data/img-300/{key}-*")
@@ -127,6 +134,7 @@ def crum(
                 field.tsv(
                     file_path="dictionary/marcion.sourceforge.net/data/notes/notes.tsv",
                     column_name="notes",
+                    line_br=True,
                     force=False,
                 ),
                 "<br/>",
@@ -134,9 +142,9 @@ def crum(
             # Horizontal line.
             "<hr/>",
             # Full entry.
-            roots_col("word-parsed-no-ref", force=True),
+            roots_col("word-parsed-no-ref", line_br=True, force=True),
             # Derivations.
-            roots_col("derivations-table", force=False),
+            roots_col("derivations-table", line_br=True, force=False),
             # Crum's pages.
             field.cat(
                 "<hr/>",
@@ -144,6 +152,7 @@ def crum(
                     keys=field.tsv(
                         file_path="dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv",
                         column_name="crum-pages",
+                        line_br=True,
                         force=False,  # TODO: Why is this not enforced? Is it the Nag Hammadi words?
                     ),
                     get_paths=lambda page_ranges: [
@@ -221,6 +230,7 @@ def crum(
                                     keys=field.tsv(
                                         file_path="dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv",
                                         column_name="key",
+                                        line_br=True,
                                     ),
                                     get_paths=pronunciations[col].get,
                                     sort_paths=sorted,
@@ -263,10 +273,11 @@ def crum(
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-    def tsv_col(col_name: str, force: bool = True) -> field.tsv:
+    def tsv_col(col_name: str, line_br: bool = False, force: bool = True) -> field.tsv:
         return field.tsv(
             "dictionary/copticsite.com/data/output/tsv/output.tsv",
             col_name,
+            line_br=line_br,
             force=force,
         )
 
@@ -294,7 +305,7 @@ def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
                 ")",
                 "<br/>",
             ),
-            tsv_col("Meaning", force=False),
+            tsv_col("Meaning", line_br=True, force=False),
         ),
         force_front=False,
         force_back=False,
@@ -304,10 +315,11 @@ def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def kellia(deck_name: str, deck_id: int, tsv_basename: str) -> deck.deck:
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-    def tsv_col(col_name: str, force: bool = True) -> field.tsv:
+    def tsv_col(col_name: str, line_br: bool = False, force: bool = True) -> field.tsv:
         return field.tsv(
             f"dictionary/kellia.uni-goettingen.de/data/output/tsv/{tsv_basename}.tsv",
             col_name,
+            line_br=line_br,
             force=force,
         )
 
@@ -334,11 +346,11 @@ def kellia(deck_name: str, deck_id: int, tsv_basename: str) -> deck.deck:
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
         key=tsv_col("entry_xml_id"),
-        front=tsv_col("orthstring-pishoy"),
+        front=tsv_col("orthstring-pishoy", line_br=True),
         back=field.cat(
             field.cat(
-                tsv_col("merged-pishoy"),
-                tsv_col("etym_string-processed", force=False),
+                tsv_col("merged-pishoy", line_br=True),
+                tsv_col("etym_string-processed", line_br=True, force=False),
                 "<hr/>",
             ),
             field.aon(

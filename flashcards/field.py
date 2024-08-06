@@ -74,7 +74,7 @@ class txt(_primitive_field):
     A constant text field.
     """
 
-    def __init__(self, text: str, line_br: bool = True, force: bool = True) -> None:
+    def __init__(self, text: str, line_br: bool = False, force: bool = True) -> None:
         if force:
             assert text
         if line_br:
@@ -135,7 +135,11 @@ class tsv(_content_field):
     """
 
     def __init__(
-        self, file_path: str, column_name: str, line_br: bool = True, force: bool = True
+        self,
+        file_path: str,
+        column_name: str,
+        line_br: bool = False,
+        force: bool = True,
     ) -> None:
         if file_path in _tsv:
             df = _tsv[file_path]
@@ -161,6 +165,7 @@ class gsheet(_content_field):
         json_keyfile_name: str,
         gspread_url: str,
         column_name: str,
+        line_br: bool = False,
         force: bool = False,
     ) -> None:
         assert json_keyfile_name
@@ -177,6 +182,8 @@ class gsheet(_content_field):
             sheet = gspread.authorize(credentials).open_by_url(gspread_url)
         records = sheet.get_worksheet(0).get_all_records()
         content = [str(row[column_name]).strip() for row in records]
+        if line_br:
+            content = list(map(use_html_line_breaks, content))
         super().__init__(content, [], force=force)
 
 
@@ -432,7 +439,9 @@ def jne(sep: str, *fields: FieldOrStr) -> apl:
 def _convert_strings(
     *fields: FieldOrStr,
 ) -> list[*Field]:
-    return [txt(f, force=False) if isinstance(f, str) else f for f in fields]
+    return [
+        txt(f, line_br=False, force=False) if isinstance(f, str) else f for f in fields
+    ]
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
