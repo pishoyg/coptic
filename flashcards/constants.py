@@ -113,7 +113,6 @@ def crum(
                 keys=field.tsv(
                     file_path="dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv",
                     column_name="key",
-                    line_br=True,
                 ),
                 # Although the same result can be obtained using
                 # glob.glob(f"dictionary/marcion.sourceforge.net/data/img-300/{key}-*")
@@ -152,7 +151,6 @@ def crum(
                     keys=field.tsv(
                         file_path="dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv",
                         column_name="crum-pages",
-                        line_br=True,
                         force=False,  # TODO: Why is this not enforced? Is it the Nag Hammadi words?
                     ),
                     get_paths=lambda page_ranges: [
@@ -230,7 +228,6 @@ def crum(
                                     keys=field.tsv(
                                         file_path="dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv",
                                         column_name="key",
-                                        line_br=True,
                                     ),
                                     get_paths=pronunciations[col].get,
                                     sort_paths=sorted,
