@@ -230,8 +230,9 @@ class media(_content_field):
         get_paths: enforcer.Callable,
         # Sort list of paths.
         sort_paths: enforcer.OptionalCallable = None,
-        # Map path to caption.
-        get_caption: enforcer.OptionalCallable = None,
+        # Map path to `format` arguments.
+        # Your final HTML will be `html_fmt.format(fmt_args(path))`.
+        fmt_args: enforcer.OptionalCallable = None,
         force: bool = True,
     ) -> None:
         """
@@ -272,11 +273,12 @@ class media(_content_field):
                 args = {
                     "basename": os.path.basename(new_path),
                     "stem": stem(new_path),
+                    "key": key,
                     "original_basename": os.path.basename(path),
                     "original_stem": stem(path),
                 }
-                if get_caption:
-                    args["caption"] = get_caption(path)
+                if fmt_args:
+                    args.update(fmt_args(path))
                 cur += html_fmt.format(**args)
                 media_files.add(new_path)
             content.append(cur)
@@ -290,11 +292,18 @@ def img(
     keys,
     get_paths: enforcer.Callable,
     sort_paths: enforcer.OptionalCallable = None,
-    get_caption: enforcer.OptionalCallable = None,
+    fmt_args: enforcer.OptionalCallable = None,
+    caption: bool = True,
     force: bool = True,
 ) -> media:
-    html_fmt = '<img src="{basename}" alt={original_stem}><br/>'
-    if get_caption:
+    """
+    Args:
+        fmt_args: A lambda that, given the path, would return the HTML format
+        dictionary. The key "alt" must exist in the returned dictionary.
+        If `caption` is set to True, then "caption" must also exist.
+    """
+    html_fmt = '<img src="{basename}" alt={alt}><br/>'
+    if caption:
         html_fmt = (
             "<figure>"
             + html_fmt
@@ -306,7 +315,7 @@ def img(
         keys=keys,
         get_paths=get_paths,
         sort_paths=sort_paths,
-        get_caption=get_caption,
+        fmt_args=fmt_args,
         force=force,
     )
 

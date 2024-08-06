@@ -114,7 +114,8 @@ def crum(
                 # glob.glob.
                 get_paths=explanatory_images.get,
                 sort_paths=field.sort_semver,
-                get_caption=field.stem,
+                fmt_args=lambda path: {"caption": field.stem(path)},
+                caption=True,
                 force=False,
             ),
             # Editor's notes.
@@ -147,9 +148,10 @@ def crum(
                         for k in field.page_numbers(page_ranges=page_ranges)
                     ],
                     sort_paths=field.sort_semver,
-                    get_caption=lambda path: CRUM_A_FMT.format(
-                        page_id=int(field.stem(path)) - 20
-                    ),
+                    fmt_args=lambda path: {
+                        "caption": CRUM_A_FMT.format(page_id=int(field.stem(path)) - 20)
+                    },
+                    caption=True,
                     force=False,
                 ),
             ),
@@ -185,7 +187,8 @@ def crum(
                         f"dictionary/copticocc.org/dawoud-D100/{k+16}.jpg"
                         for k in field.page_numbers(page_ranges=page_ranges)
                     ],
-                    get_caption=lambda path: int(field.stem(path)) - 16,
+                    fmt_args=lambda path: {"caption": int(field.stem(path)) - 16},
+                    caption=True,
                     force=False,
                 ),
             ),
