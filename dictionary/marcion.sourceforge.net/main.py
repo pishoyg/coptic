@@ -126,11 +126,11 @@ argparser.add_argument(
     default="dictionary/marcion.sourceforge.net/data/crum/Crum/Crum.png",
 )
 
+global args
+
 # Main.########################################################################
 
 DEFINITION = """(<b>{type}</b>) <b>Crum: </b> {crum} <hr/> {meaning} <hr/> {word} <hr/> {derivations} <hr/>"""
-
-args = argparser.parse_args()
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -168,6 +168,8 @@ def write(df: pd.DataFrame, name: str) -> None:
 
 
 def main() -> None:
+    global args
+    args = argparser.parse_args()
     # Process roots.
     roots = pd.read_csv(args.coptwrd_tsv, sep="\t", dtype=str, encoding="utf-8").fillna(
         ""

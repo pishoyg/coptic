@@ -174,7 +174,7 @@ argparser.add_argument(
     help="Secret to the API of thenounproject.",
 )
 
-args = argparser.parse_args()
+global args
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -245,6 +245,8 @@ def is_wiki(url: str) -> bool:
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def main():
+    global args
+    args = argparser.parse_args()
     df = pd.read_csv(args.input_tsv, sep="\t", dtype=str, encoding="utf-8").fillna("")
     df.sort_values(by=args.input_key_col, inplace=True)
 

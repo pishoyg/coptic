@@ -1079,15 +1079,17 @@ parser.add_argument(
     ],
     help="Path to the output TSV.",
 )
-args = parser.parse_args()
 
-# Gather entity data
 entity_types = defaultdict(set)
-if args.pub_corpora is not None:
-    entity_types = get_entity_types(args.pub_corpora)
 
 
 def main():
+    args = parser.parse_args()
+    # Gather entity data
+    if args.pub_corpora is not None:
+        global entity_types
+        entity_types = get_entity_types(args.pub_corpora)
+
     super_id = 1
     entry_id = 1
 

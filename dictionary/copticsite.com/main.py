@@ -301,11 +301,10 @@ argparser.add_argument(
     help="Path to the output directory.",
 )
 
-args = argparser.parse_args()
-
 
 @type_enforced.Enforcer
 def main() -> None:
+    args = argparser.parse_args()
     df = pd.read_excel(args.input_xlsx, dtype=str).fillna("")
     df.dropna(inplace=True)
     df = df.apply(lambda x: x.str.strip() if x.dtype == "object" else x)

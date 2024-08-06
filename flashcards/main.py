@@ -57,7 +57,8 @@ argparser.add_argument(
     " write a subdirectory containing the data in HTML format.",
 )
 
-args = argparser.parse_args()
+
+global args
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -96,6 +97,8 @@ def write_anki(decks: list[deck.deck]) -> None:
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def main() -> None:
+    global args
+    args = argparser.parse_args()
     if not (args.anki or args.tsv or args.html):
         print(
             colorama.Fore.RED

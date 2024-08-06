@@ -11,6 +11,8 @@ from ebooklib import epub
 
 colorama.init(autoreset=True)
 
+global args
+
 # TODO: Export the Bible text to a gsheet.
 # TODO: Export the sources to a gdoc.
 # import gspread
@@ -91,8 +93,6 @@ argparser.add_argument(
     help="Path to a file containing the cover image for EPUB.",
     default="bible/stshenouda.org/data/img/stauros.jpeg",
 )
-
-args = argparser.parse_args()
 
 
 def writing_path(output_format, file_name):
@@ -438,6 +438,8 @@ def process_sources(books):
 
 
 def main():
+    global args
+    args = argparser.parse_args()
     books = []
     book_to_testament = {}
     book_to_testament_indexed = {}
