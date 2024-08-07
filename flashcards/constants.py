@@ -19,9 +19,9 @@ def crum(
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def roots_col(
         col_name: str, line_br: bool = False, force: bool = True
-    ) -> field.tsv:
-        return field.tsv(
-            "dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv",
+    ) -> field.tsvs:
+        return field.tsvs(
+            "dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs",
             col_name,
             line_br=line_br,
             force=force,
@@ -110,8 +110,8 @@ def crum(
             ),
             # Image.
             field.img(
-                keys=field.tsv(
-                    file_path="dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv",
+                keys=field.tsvs(
+                    tsvs="dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs",
                     column_name="key",
                 ),
                 # Although the same result can be obtained using
@@ -148,8 +148,8 @@ def crum(
             field.cat(
                 "<hr/>",
                 field.img(
-                    keys=field.tsv(
-                        file_path="dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv",
+                    keys=field.tsvs(
+                        tsvs="dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs",
                         column_name="crum-pages",
                         force=False,  # TODO: Why is this not enforced? Is it the Nag Hammadi words?
                     ),
@@ -225,8 +225,8 @@ def crum(
                         field.cat(
                             *[
                                 field.snd(
-                                    keys=field.tsv(
-                                        file_path="dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv",
+                                    keys=field.tsvs(
+                                        tsvs="dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs",
                                         column_name="key",
                                     ),
                                     get_paths=pronunciations[col].get,
