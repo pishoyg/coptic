@@ -29,14 +29,17 @@ def clean_dir(dir: str) -> None:
 
 
 def write_tsvs(
-    df: pd.DataFrame, tsvs: str, chunk_size: int = 100, zfill: int = 0
+    df: pd.DataFrame, tsvs: str, chunk_size: int = 100, zfill: int = 0, **kwargs
 ) -> None:
     clean_dir(tsvs)
     boundaries = list(range(chunk_size, len(df.index), chunk_size))
     zfill = zfill or len(str(len(boundaries) + 2))
     for idx, chunk in enumerate(np.array_split(df, boundaries)):
         chunk.to_csv(
-            os.path.join(tsvs, str(idx).zfill(zfill) + ".tsv"), sep="\t", index=False
+            os.path.join(tsvs, str(idx).zfill(zfill) + ".tsv"),
+            sep="\t",
+            index=False,
+            **kwargs
         )
 
 
