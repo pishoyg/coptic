@@ -11,6 +11,8 @@ import genanki
 import pandas as pd
 import type_enforced
 
+import utils
+
 HTML_FMT = f"""<!DOCTYPE html>
 <html>
   <head>
@@ -206,16 +208,16 @@ class deck:
             shutil.rmtree(dir)
         pathlib.Path(dir).mkdir(parents=True)
 
-    def read_tsv(self, dir: str) -> dict[str, record]:
-        path = os.path.join(dir, "data.tsv")
-        if not os.path.exists(path):
+    def read_tsvs(self, dir: str) -> dict[str, record]:
+        tsvs = os.path.join(dir, "data.tsvs")
+        if not os.path.exists(tsvs):
             return {}
-        df = pd.read_csv(path, sep="\t", dtype=str, encoding="utf-8").fillna("")
+        df = utils.read_tsvs(tsvs)
         # TODO: Also read the old JSON, for consistency.
         return {row["key"]: record(row) for _, row in df.iterrows()}
 
-    def write_tsv(self, dir: str) -> None:
-        old_records: dict[str, record] = self.read_tsv(dir)
+    def write_tsvs(self, dir: str) -> None:
+        old_records: dict[str, record] = self.read_tsvs(dir)
         self.clean_dir(dir)
         metadata = json.dumps(
             {
@@ -245,10 +247,9 @@ class deck:
             for key in new_records:
                 new_records[key].supersede(old_records[key])
         df = pd.DataFrame([r.d for r in new_records.values()])
-        df.to_csv(
-            os.path.join(dir, "data.tsv"),
-            sep="\t",
-            index=False,
+        utils.write_tsvs(
+            df,
+            os.path.join(dir, "data.tsvs"),
             columns=["key", "front", "back", "timestamp"],
         )
 
