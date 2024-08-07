@@ -289,8 +289,8 @@ def load_book(book_name):
     return json_loads(t)
 
 
-def write_csv(df):
-    path = writing_path("csv", "bible.csv")
+def write_tsv(df):
+    path = writing_path("tsv", "bible.tsv")
     df.to_csv(path, sep="\t", index=False)
 
 
@@ -560,7 +560,7 @@ def main():
                 html3[lang][book_name].append(pb3.end_chapter())
         df = pd.concat([df, book_df], ignore_index=True)
 
-    write_csv(df)
+    write_tsv(df)
 
     for lang in LANGUAGES:
         write_txt(lang, df[lang])
