@@ -75,7 +75,7 @@ argparser.add_argument(
 argparser.add_argument(
     "--input_tsv",
     type=str,
-    default="dictionary/marcion.sourceforge.net/data/output/roots.tsv",
+    default="dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv",
     help="Input TSV.",
 )
 
