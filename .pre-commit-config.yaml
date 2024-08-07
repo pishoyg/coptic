@@ -39,7 +39,7 @@ repos:
         files: .*\.(xml|xhtml|opf)$
       - id: json-tool
         name: json-tool
-        entry: bash -c 'for x in "$@"; do NEW=$(python -m json5.tool --as-json --indent 2 "$x") && echo "${NEW}" > "$x" && python -m json.tool --no-ensure-ascii --indent 2 "$x" "$x"; done' --
+        entry: bash -c 'for x in "$@"; do python -m json.tool --no-ensure-ascii --indent 2 "$x" "$x"; done' --
         language: system
         types: [json]
   # Python.
