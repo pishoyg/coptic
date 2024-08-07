@@ -22,7 +22,7 @@ def _print(color, severity, recolor, *args, suppress: bool = False):
         + recolor
         + ("".join(map(str, args[1:2])))
         + color,
-        *args[2:]
+        *args[2:],
     )
     print(colorama.Style.RESET_ALL, end="")
 
@@ -71,10 +71,15 @@ def write_tsvs(
 ) -> None:
     clean_dir(tsvs)
     starts = list(range(0, len(df.index), chunk_size))
-    zfill = zfill or len(str(len(starts) + 2))
-    for idx, start in enumerate(starts):
+    zfill = zfill or len(str(len(df.index))) + 1  # We add 1 to allow for growth.
+
+    def iota(i):
+        return str(i).zfill(zfill)
+
+    for start in starts:
         chunk = df.iloc[start : start + chunk_size]
-        to_tsv(chunk, os.path.join(tsvs, str(idx).zfill(zfill) + ".tsv"), **kwargs)
+        basename = f"{iota(start+1)}_{iota(start+chunk_size)}.tsv"
+        to_tsv(chunk, os.path.join(tsvs, basename), **kwargs)
 
 
 @type_enforced.Enforcer(enabled=ENFORCED)
