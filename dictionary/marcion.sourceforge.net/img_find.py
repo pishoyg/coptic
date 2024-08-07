@@ -6,9 +6,7 @@ import re
 import subprocess
 import typing
 
-import colorama
 import enforcer
-import pandas as pd
 import pillow_avif
 import requests
 import requests_oauthlib
@@ -21,10 +19,6 @@ TARGET_WIDTH = 300
 IMG_300_DIR = "dictionary/marcion.sourceforge.net/data/img-300"
 FILE_NAME_RE = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
 SOURCE_RE = re.compile(r"^source\(([^=]+)\)=(.+)$")
-
-
-def error(message: str) -> None:
-    print(colorama.Fore.RED + message + colorama.Fore.RESET)
 
 
 def params_str(params: dict) -> str:
@@ -261,7 +255,7 @@ def main():
             filename = os.path.basename(url)
         download = requests.get(url, headers=headers)
         if not download.ok:
-            error(download.text)
+            utils.error(download.text)
             return
         filename = os.path.join(args.downloads, filename)
         with open(filename, "wb") as f:
@@ -293,7 +287,7 @@ def main():
         open_images(g)
         q = query(row[args.input_meaning_col])
         subprocess.run(["open", "-a", args.browser, q, row[args.link_col]])
-        print("\nExisting:\n{}".format(g))
+        utils.info("Existing:", g)
 
         while True:
             # Force read a valid sense, or no sense at all.
@@ -313,14 +307,14 @@ def main():
                 # S for skip!
                 files = get_downloads()
                 if files:
-                    error(
+                    utils.error(
                         f"You can't skip with a dirty downloads directory. Please remove {files}."
                     )
                     continue
                 # We clear the sources!
                 # It's guaranteed that the downloads directory is clean.
                 sources.clear()
-                print("Sources cleared!")
+                utils.info("Sources cleared!")
                 break
 
             if sense.lower() == "ss":
@@ -329,20 +323,20 @@ def main():
 
             if sense.lower() == "cs":
                 sources.clear()
-                print("Sources cleared!")
+                utils.info("Sources cleared!")
                 continue
 
             if sense.startswith("="):
                 files = get_downloads()
                 files = [f for f in files if f not in sources]
                 if len(files) != 1:
-                    error(
+                    utils.error(
                         f"Can't assign source because the number of new files != 1: {files}"
                     )
                     continue
                 sense = sense[1:]
                 if not sense:
-                    error("No source given!")
+                    utils.error("No source given!")
                     continue
                 sources[files[0]] = sense
                 continue
@@ -368,12 +362,12 @@ def main():
                 )
                 resp = requests.get(ICON_SEARCH_FMT.format(query=sense), auth=auth)
                 if not resp.ok:
-                    error(resp.text)
+                    utils.error(resp.text)
                     continue
                 resp = resp.json()
                 resp = resp["icons"]
                 if not resp:
-                    error("Nothing found on thenounproject! :/")
+                    utils.error("Nothing found on thenounproject! :/")
                     continue
                 for icon in resp:
                     retrieve(icon["thumbnail_url"])
@@ -383,7 +377,7 @@ def main():
             assert sense.isdigit()  # Sanity check.
             sense = int(sense)
             if sense <= 0:
-                error("Sense must be a positive integer.")
+                utils.error("Sense must be a positive integer.")
                 continue
 
             files = get_downloads()
@@ -391,24 +385,24 @@ def main():
             # Force size.
             invalid = invalid_size(files)
             if invalid:
-                error(f"{invalid} are too small, please replace them.")
+                utils.error(f"{invalid} are too small, please replace them.")
                 continue
 
             # Force sources.
             absent_source = False
             for file in files:
                 if file not in sources:
-                    error(f"Please populate the source for {file}")
+                    utils.error(f"Please populate the source for {file}")
                     absent_source = True
             if absent_source:
-                print(f"Known sources: {sources}")
+                utils.info("Known sources:", sources)
                 continue
 
             # If there are no files, we assume that the user doesn't want to
             # add pictures for this word. (Unless they typed a sense, in which
             # case it would be weird!)
             if not files:
-                error(
+                utils.error(
                     "You typed a sense, but there are no pictures! This"
                     " doesn't make sense!"
                 )
@@ -418,8 +412,8 @@ def main():
             i = "n"
             while True:
                 open_images(files)
-                print(f"Sense = {sense}.")
-                print(f"Sources = {sources}")
+                utils.info("Sense:", sense)
+                utils.info("Sources:", sources)
                 i = input("Looks good? (yes/no/sense)").lower()
                 files = get_downloads()
                 if i.isdigit():

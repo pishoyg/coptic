@@ -3,7 +3,6 @@ import os
 import pathlib
 import tempfile
 
-import colorama
 import constants
 import deck
 import enforcer
@@ -11,7 +10,7 @@ import field
 import genanki
 import type_enforced
 
-colorama.init(autoreset=True)
+import utils
 
 argparser = argparse.ArgumentParser(
     formatter_class=argparse.RawTextHelpFormatter,
@@ -100,11 +99,8 @@ def main() -> None:
     global args
     args = argparser.parse_args()
     if not (args.anki or args.tsvs or args.html):
-        print(
-            colorama.Fore.RED
-            + "Warning:"
-            + colorama.Fore.YELLOW
-            + " None of the output flags (--anki, --tsvs, --html) is given."
+        utils.warn(
+            " None of the output flags (--anki, --tsvs, --html) is given."
             " The decks will be constructed, but nothing will be written!"
         )
 

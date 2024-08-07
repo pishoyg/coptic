@@ -146,9 +146,7 @@ class tsv(_content_field):
         if file_path in _tsv:
             df = _tsv[file_path]
         else:
-            df = pd.read_csv(file_path, sep="\t", dtype=str, encoding="utf-8").fillna(
-                ""
-            )
+            df = utils.read_tsv(file_path)
             _tsv[file_path] = df
         content = [str(cell).strip() for cell in df[column_name]]
         if line_br:

@@ -172,17 +172,13 @@ def main() -> None:
     global args
     args = argparser.parse_args()
     # Process roots.
-    roots = pd.read_csv(args.coptwrd_tsv, sep="\t", dtype=str, encoding="utf-8").fillna(
-        ""
-    )
+    roots = utils.read_tsv(args.coptwrd_tsv)
     process_data(roots, strict=True)
     parser.verify(constants.ROOTS_REFERENCE_COUNT * 2)
     parser.reset()
 
     # Process derivations.
-    derivations = pd.read_csv(
-        args.coptdrv_tsv, sep="\t", dtype=str, encoding="utf-8"
-    ).fillna("")
+    derivations = utils.read_tsv(args.coptdrv_tsv)
     process_data(derivations, strict=False)
     parser.verify(constants.DERIVATIONS_REFERENCE_COUNT * 2)
     parser.reset()

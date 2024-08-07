@@ -1,10 +1,8 @@
-import json
 import os
 import pathlib
 import shutil
 import time
 
-import colorama
 import enforcer
 import field
 import genanki
@@ -48,26 +46,17 @@ class stats:
         self._duplicate_key = 0
 
     def problematic(self, count: int, message: str) -> None:
-        print(
-            "- "
-            + (colorama.Fore.RED if count else colorama.Fore.GREEN)
-            + str(count)
-            + colorama.Fore.RESET
-            + message
-        )
+        if count:
+            utils.warn("", count, message)
+            return
+        utils.info("", count, message)
 
     def print(self) -> None:
-        print(
-            "- Exported "
-            + colorama.Fore.GREEN
-            + str(self._exported_notes)
-            + colorama.Fore.RESET
-            + " notes."
-        )
-        self.problematic(self._no_key, " notes are missing a key.")
-        self.problematic(self._no_front, " notes are missing a front.")
-        self.problematic(self._no_back, " notes are missing a back.")
-        self.problematic(self._duplicate_key, " notes have duplicate keys.")
+        utils.info("Exported", self._exported_notes, "notes.")
+        self.problematic(self._no_key, "notes are missing a key.")
+        self.problematic(self._no_front, "notes are missing a front.")
+        self.problematic(self._no_back, "notes are missing a back.")
+        self.problematic(self._duplicate_key, "notes have duplicate keys.")
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -197,9 +186,9 @@ class deck:
             ss._exported_notes += 1
             self.raw_keys.append(k)
 
-        print(deck_name + ":")
+        utils.info("Deck:", deck_name)
         ss.print()
-        print("____________________")
+        utils.info("____________________")
         self.media = field.merge_media_files(key, front, back)
 
     def clean_dir(self, dir: str) -> None:
@@ -219,16 +208,13 @@ class deck:
     def write_tsvs(self, dir: str) -> None:
         old_records: dict[str, record] = self.read_tsvs(dir)
         self.clean_dir(dir)
-        metadata = json.dumps(
+        metadata = utils.json_dumps(
             {
                 "deck_name": self.deck_name,
                 "deck_id": self.deck_id,
                 "deck_description": self.deck_description,
                 "css": self.css,
             },
-            ensure_ascii=False,
-            allow_nan=False,
-            indent=2,
             sort_keys=True,
         )
         with open(os.path.join(dir, "metadata.json"), "w") as f:

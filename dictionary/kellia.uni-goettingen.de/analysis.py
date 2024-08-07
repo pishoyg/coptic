@@ -3,11 +3,12 @@
 # TODO: There are some typos in the data. Fix at the origin.
 import argparse
 import collections
-import json
 import re
 
 import bs4
 import type_enforced
+
+import utils
 
 MAX_LIST_LEN = 10
 LIST_ELEMENT_CLOSING_QUOTE = re.compile(r'",\s+')
@@ -78,7 +79,7 @@ def prettify(d: dict) -> str:
         od[k] = d[k]
     assert set(d.keys()) == set(od.keys())
     del d
-    out = json.dumps(od, indent=2, ensure_ascii=False).encode("utf8").decode()
+    out = utils.json_dumps(od)
     out = LIST_ELEMENT_CLOSING_QUOTE.sub('", ', out)
     return out
 

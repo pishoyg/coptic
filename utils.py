@@ -1,3 +1,4 @@
+import json
 import os
 import pathlib
 import shutil
@@ -10,9 +11,40 @@ ENFORCED = False
 
 
 @type_enforced.Enforcer(enabled=ENFORCED)
-def warning(*args):
-    print(colorama.Fore.RED + "Warning:" + colorama.Fore.YELLOW, *args)
-    print(colorama.Fore.RESET, end="")
+def _print(color, severity, recolor, *args, suppress: bool = False):
+    print(
+        colorama.Style.DIM
+        + color
+        + ("" if suppress else severity.capitalize() + ": ")
+        + colorama.Style.NORMAL
+        + str(args[0])
+        + (" " if args[0] and len(args) > 1 else "")
+        + recolor
+        + ("".join(map(str, args[1:2])))
+        + color,
+        *args[2:]
+    )
+    print(colorama.Style.RESET_ALL, end="")
+
+
+@type_enforced.Enforcer(enabled=ENFORCED)
+def info(*args):
+    _print(colorama.Fore.GREEN, "info", colorama.Fore.BLUE, *args)
+
+
+@type_enforced.Enforcer(enabled=ENFORCED)
+def warn(*args):
+    _print(colorama.Fore.YELLOW, "warn", colorama.Fore.CYAN, *args)
+
+
+@type_enforced.Enforcer(enabled=ENFORCED)
+def error(*args):
+    _print(colorama.Fore.RED, "error", colorama.Fore.MAGENTA, *args)
+
+
+@type_enforced.Enforcer(enabled=ENFORCED)
+def json_dumps(j, **kwargs) -> str:
+    return json.dumps(j, indent=2, ensure_ascii=False, allow_nan=False, **kwargs)
 
 
 @type_enforced.Enforcer(enabled=ENFORCED)

@@ -3,15 +3,12 @@ import json
 import os
 import re
 
-import colorama
 import json5
 import pandas as pd
 from bs4 import BeautifulSoup as bs
 from ebooklib import epub
 
 import utils
-
-colorama.init(autoreset=True)
 
 global args
 
@@ -103,7 +100,7 @@ def writing_path(output_format, file_name):
     parts = list(filter(None, parts))
     path = os.path.join(*parts)
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    print("Writing {}".format(path))
+    utils.info("Writing", path)
     return path
 
 
@@ -127,10 +124,6 @@ def json_loads(t):
         return json.loads(t)
     except json.JSONDecodeError:
         return json5.loads(t)
-
-
-def json_dumps(j):
-    return json.dumps(j, indent=2, ensure_ascii=False)
 
 
 class RangeColor:
@@ -283,10 +276,10 @@ def load_book(book_name):
     try:
         t = open(os.path.join(args.input_dir, book_name + ".json")).read()
     except FileNotFoundError:
-        print("Book not found : {}".format(book_name))
+        utils.warn("Book not found:", book_name)
         return {}
 
-    print("Loaded book : {}".format(book_name))
+    utils.info("Loaded book:", book_name)
     t = normalize(t)
     return json_loads(t)
 
@@ -419,7 +412,7 @@ def process_sources(books):
                 os.path.join(args.sources_input_dir, book_name + "_Sources.json")
             ).read()
         except FileNotFoundError:
-            print("No sources found for {}".format(book_name))
+            utils.warn("No sources found for", book_name)
             continue
 
         out.append("<h1>" + book_name + "</h1>")

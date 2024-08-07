@@ -649,7 +649,7 @@ def process_entry(id, super_id, entry, entry_xml_id):
             if is_lemma:
                 lemma = first_orth
     if lemma is None:
-        print("No lemma type for entry of " + orths[0].text)
+        utils.error("No lemma type for entry of", orths[0].text)
 
     first = []
     last = []

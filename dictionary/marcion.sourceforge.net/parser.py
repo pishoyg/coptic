@@ -58,6 +58,8 @@ import enforcer
 import type_enforced
 import word as lexical
 
+import utils
+
 _reference_count = 0
 
 
@@ -269,7 +271,7 @@ def _analyze_no_english(line_no_english: str) -> None:
         for c in s:
             valid = c in constants.LETTERS or c in constants.ACCEPTED_UNKNOWN_CHARS_2
             if not valid:
-                print(s)
+                utils.error(s)
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
