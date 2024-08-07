@@ -7,6 +7,8 @@ __pycache__
 coptic.egg-info
 
 # Flashcard decks are too big to host on GitHub.
+# TODO: Consider unzipping them, and having your publishing pipeline rezip
+# everything.
 flashcards/data/output/anki/*.apkg
 
 # This contains secrets (authorization tokens for Drive, local file paths,
