@@ -11,6 +11,7 @@ import type_enforced
 import word as lexical
 from oauth2client.service_account import ServiceAccountCredentials
 
+import utils
 from dictionary.inflect import inflect
 from dictionary.kindle import kindle
 
@@ -145,7 +146,7 @@ def series_to_int(series: pd.Series) -> list[int]:
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def write(df: pd.DataFrame, name: str) -> None:
-    df.to_csv(os.path.join(args.output, "tsv", name + ".tsv"), sep="\t", index=False)
+    utils.write_tsvs(df, os.path.join(args.output, "tsvs", name + ".tsvs"))
     if not args.gspread_owner:
         return
 
