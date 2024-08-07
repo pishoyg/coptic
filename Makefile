@@ -28,7 +28,7 @@ SHELL := /bin/bash
 .PHONY: all
 # You might want to run `make clean` following this.
 # TODO: Makefile is not procedural. A rule placed several times on a line will only get executed once!
-all: install generate_1 test generate_2 test generate_3 test publish stats
+all: install generate_1 test_1 generate_2 test publish stats
 
 # LEVEL 2 RULES ###############################################################
 
@@ -42,15 +42,11 @@ generate_1: bible copticsite crum crum_dawoud crum_img kellia kellia_analysis
 .PHONY: test
 test: test_aux
 
-# generate_2 rules are prerequisites for generate_3 rules.
+.PHONY: test_1
+test_1: test_aux
+
 .PHONY: generate_2
 generate_2: flashcards flashcards_redundant kindle
-
-# This is a placeholder for an upcoming `anki` rule that will exist after we
-# split the flashcard pipeline into two stages. Flashcards will be written by
-# to an intermediate format before being written as Anki packages.
-.PHONY: generate_3
-generate_3:
 
 .PHONY: publish
 publish: flashcards_cp_to_drive kindle_cp_to_drive bible_cp_to_drive site_publish
@@ -210,6 +206,11 @@ kindle_cp_to_drive:
 	"dictionary/marcion.sourceforge.net/data/output/mobi/dialect-B/dialect-B.mobi" \
 	"$${KINDLE_DIR}"
 
+# SITE RULES
+
+site_publish: FORCE
+	bash site/publish.sh
+
 # INFRASTRUCTURE RULES
 bin_install:
 	if ! command -v tidy &> /dev/null; then echo "Please install tidy from https://www.html-tidy.org/." && exit 1; fi
@@ -272,13 +273,6 @@ camera_aux: FORCE
 # TODO: This works on OS X, but it doesn't exist by default on Ubuntu.
 yo_aux: FORCE
 	say yo
-
-site_publish_aux: FORCE
-	bash site/publish.sh
-
-# SITE RULES
-
-site_publish: site_publish_aux
 
 # LEVEL-0 rules ###############################################################
 
