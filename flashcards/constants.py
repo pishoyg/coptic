@@ -270,9 +270,9 @@ def crum(
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-    def tsv_col(col_name: str, line_br: bool = False, force: bool = True) -> field.tsv:
-        return field.tsv(
-            "dictionary/copticsite.com/data/output/tsv/output.tsv",
+    def col(col_name: str, line_br: bool = False, force: bool = True) -> field.tsvs:
+        return field.tsvs(
+            "dictionary/copticsite.com/data/output/tsvs/output.tsvs",
             col_name,
             line_br=line_br,
             force=force,
@@ -287,22 +287,22 @@ def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
         key=field.seq(),
-        front=tsv_col("prettify", force=False),
+        front=col("prettify", force=False),
         back=field.cat(
             field.aon(
                 "(",
                 "<b>",
                 field.jne(
                     " - ",
-                    tsv_col("Word Kind", force=False),
-                    tsv_col("Word Gender", force=False),
-                    tsv_col("Origin", force=False),
+                    col("Word Kind", force=False),
+                    col("Word Gender", force=False),
+                    col("Origin", force=False),
                 ),
                 "</b>",
                 ")",
                 "<br/>",
             ),
-            tsv_col("Meaning", line_br=True, force=False),
+            col("Meaning", line_br=True, force=False),
         ),
         force_front=False,
         force_back=False,

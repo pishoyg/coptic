@@ -4,6 +4,8 @@ import os
 import pandas as pd
 import type_enforced
 
+import utils
+
 UNNAMED_PREFIX = "Unnamed: "
 MEANING_COL = "Meaning"
 ORIGIN_COL = "Origin"
@@ -284,7 +286,7 @@ def get_suffix(kind: str, gender: str) -> str:
 
 
 argparser = argparse.ArgumentParser(
-    description="Create a TSV for copticsite.com's dictionary.",
+    description="Process copticsite.com's dictionary.",
 )
 
 argparser.add_argument(
@@ -338,7 +340,7 @@ def main() -> None:
         if key.startswith(UNNAMED_PREFIX):
             df.drop(key, axis=1, inplace=True)
 
-    df.to_csv(os.path.join(args.output, "tsv", "output.tsv"), sep="\t", index=False)
+    utils.write_tsvs(df, os.path.join(args.output, "tsvs", "output.tsvs"))
 
 
 if __name__ == "__main__":
