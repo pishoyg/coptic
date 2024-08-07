@@ -9,6 +9,8 @@ import pandas as pd
 from bs4 import BeautifulSoup as bs
 from ebooklib import epub
 
+import utils
+
 colorama.init(autoreset=True)
 
 global args
@@ -290,8 +292,8 @@ def load_book(book_name):
 
 
 def write_tsv(df):
-    path = writing_path("tsv", "bible.tsv")
-    df.to_csv(path, sep="\t", index=False)
+    path = writing_path("tsvs", "bible.tsvs")
+    utils.write_tsvs(df, path)
 
 
 def write_txt(lang: str, column: pd.Series) -> None:
