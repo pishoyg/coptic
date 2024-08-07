@@ -51,8 +51,6 @@ argparser.add_argument(
     help="Path to the output JSON.",
 )
 
-args = argparser.parse_args()
-
 
 @type_enforced.Enforcer
 def sort_children(children: list[str]) -> list[str]:
@@ -122,6 +120,7 @@ def analyze(soup: bs4.BeautifulSoup | bs4.Tag) -> str:
 
 @type_enforced.Enforcer
 def main():
+    args = argparser.parse_args()
     with open(args.input) as f:
         soup = bs4.BeautifulSoup(f, "lxml-xml")
     # We only care about the body.
