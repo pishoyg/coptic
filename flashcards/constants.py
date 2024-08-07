@@ -310,11 +310,11 @@ def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def kellia(deck_name: str, deck_id: int, tsv_basename: str) -> deck.deck:
+def kellia(deck_name: str, deck_id: int, basename: str) -> deck.deck:
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-    def tsv_col(col_name: str, line_br: bool = False, force: bool = True) -> field.tsv:
-        return field.tsv(
-            f"dictionary/kellia.uni-goettingen.de/data/output/tsv/{tsv_basename}.tsv",
+    def col(col_name: str, line_br: bool = False, force: bool = True) -> field.tsvs:
+        return field.tsvs(
+            f"dictionary/kellia.uni-goettingen.de/data/output/tsvs/{basename}.tsvs",
             col_name,
             line_br=line_br,
             force=force,
@@ -342,20 +342,20 @@ def kellia(deck_name: str, deck_id: int, tsv_basename: str) -> deck.deck:
         ".lang { color: gray }",
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
-        key=tsv_col("entry_xml_id"),
-        front=tsv_col("orthstring-pishoy", line_br=True),
+        key=col("entry_xml_id"),
+        front=col("orthstring-pishoy", line_br=True),
         back=field.cat(
             field.cat(
-                tsv_col("merged-pishoy", line_br=True),
-                tsv_col("etym_string-processed", line_br=True, force=False),
+                col("merged-pishoy", line_br=True),
+                col("etym_string-processed", line_br=True, force=False),
                 "<hr/>",
             ),
             field.aon(
                 "Coptic Dictionary Online: ",
                 '<a href="',
-                tsv_col("cdo"),
+                col("cdo"),
                 '">',
-                tsv_col("entry_xml_id"),
+                col("entry_xml_id"),
                 "</a>",
             ),
         ),

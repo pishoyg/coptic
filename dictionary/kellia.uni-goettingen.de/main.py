@@ -15,6 +15,8 @@ from collections import OrderedDict, defaultdict
 
 import pandas as pd
 
+import utils
+
 CLEAN = set("ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ ")
 CRUM_RE = re.compile(r"\b(CD ([0-9]+[ab]?)-?[0-9]*[ab]?)\b")
 SENSE_CHILDREN = ["quote", "definition", "bibl", "ref", "xr"]
@@ -1073,11 +1075,11 @@ parser.add_argument(
     type=str,
     nargs="*",
     default=[
-        "dictionary/kellia.uni-goettingen.de/data/output/tsv/egyptian.tsv",
-        "dictionary/kellia.uni-goettingen.de/data/output/tsv/greek.tsv",
-        "dictionary/kellia.uni-goettingen.de/data/output/tsv/comprehensive.tsv",
+        "dictionary/kellia.uni-goettingen.de/data/output/tsvs/egyptian.tsvs",
+        "dictionary/kellia.uni-goettingen.de/data/output/tsvs/greek.tsvs",
+        "dictionary/kellia.uni-goettingen.de/data/output/tsvs/comprehensive.tsvs",
     ],
-    help="Path to the output TSV.",
+    help="Path to the output TSVS.",
 )
 
 entity_types = defaultdict(set)
@@ -1170,7 +1172,7 @@ def main():
         columns = sorted(
             df.columns, key=lambda col_name: col_to_idx.get(col_name, 1000)
         )
-        df.to_csv(output, sep="\t", index=False, columns=columns)
+        utils.write_tsvs(df, output)
         # TODO: Add network graphs.
 
 
