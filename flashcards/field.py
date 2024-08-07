@@ -9,6 +9,8 @@ import pandas as pd
 import type_enforced
 from oauth2client import service_account
 
+import utils
+
 NO_LENGTH = -1
 INTEGER_RE = re.compile("[0-9]+")
 MAX_INTEGER_LENGTH = 10
@@ -148,6 +150,30 @@ class tsv(_content_field):
                 ""
             )
             _tsv[file_path] = df
+        content = [str(cell).strip() for cell in df[column_name]]
+        if line_br:
+            content = list(map(use_html_line_breaks, content))
+        super().__init__(content, [], force=force)
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
+class tsvs(_content_field):
+    """
+    A TSVS column field.
+    """
+
+    def __init__(
+        self,
+        tsvs: str,
+        column_name: str,
+        line_br: bool = False,
+        force: bool = True,
+    ) -> None:
+        if tsvs in _tsv:
+            df = _tsv[tsvs]
+        else:
+            df = utils.read_tsvs(tsvs)
+            _tsv[tsvs] = df
         content = [str(cell).strip() for cell in df[column_name]]
         if line_br:
             content = list(map(use_html_line_breaks, content))
