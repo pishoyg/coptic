@@ -15,6 +15,8 @@ import requests_oauthlib
 import type_enforced
 from PIL import Image
 
+import utils
+
 TARGET_WIDTH = 300
 IMG_300_DIR = "dictionary/marcion.sourceforge.net/data/img-300"
 FILE_NAME_RE = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
@@ -73,24 +75,24 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
-    "--input_tsv",
+    "--input_tsvs",
     type=str,
-    default="dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv",
-    help="Input TSV.",
+    default="dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs",
+    help="Input TSVS.",
 )
 
 argparser.add_argument(
     "--input_meaning_col",
     type=str,
     default="en-parsed-no-greek-no-html",
-    help="Name of the meaning column in the input TSV.",
+    help="Name of the meaning column in the input TSVS.",
 )
 
 argparser.add_argument(
     "--input_key_col",
     type=str,
     default="key",
-    help="Name of the key column in the input TSV.",
+    help="Name of the key column in the input TSVS.",
 )
 
 argparser.add_argument(
@@ -247,7 +249,7 @@ def is_wiki(url: str) -> bool:
 def main():
     global args
     args = argparser.parse_args()
-    df = pd.read_csv(args.input_tsv, sep="\t", dtype=str, encoding="utf-8").fillna("")
+    df = utils.read_tsvs(args.input_tsvs)
     df.sort_values(by=args.input_key_col, inplace=True)
 
     sources: dict[str, str] = {}
