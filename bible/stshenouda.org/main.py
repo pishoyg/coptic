@@ -50,9 +50,14 @@ argparser.add_argument(
 
 
 @type_enforced.Enforcer(enabled=ENFORCED)
-def writing_path(output_format: str, file_name: str) -> str:
+def file_name(book_name: str) -> str:
+    return book_name.lower().replace(" ", "_").replace(".", "_")
+
+
+@type_enforced.Enforcer(enabled=ENFORCED)
+def writing_path(output_format: str = "", file_name: str = "", lang: str = "") -> str:
     assert file_name
-    parts = [OUTPUT_DIR, output_format, file_name.lower()]
+    parts = [OUTPUT_DIR, output_format.lower(), lang.lower(), file_name.lower()]
     parts = list(filter(None, parts))
     path = os.path.join(*parts)
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -306,18 +311,12 @@ def html_toc(books: list[str], href: typing.Callable) -> str:
 @type_enforced.Enforcer(enabled=ENFORCED)
 def write_html(html: dict, books: list[str], html_format: str) -> None:
     for lang in LANGUAGES + PARALLELS:
-        out = [
-            html_head(BOOK_TITLE)
-            + "<body>"
-            + html_h1(BOOK_TITLE)
-            + html_toc(books, lambda book_name: "#" + html_id(book_name))
-        ]
         for book_name in books:
-            out.extend(html[lang][book_name])
-        out.append("</body>")
-        path = writing_path(html_format, lang + ".html")
-        out = "\n".join(out)
-        utils.write(out, path)
+            out = html_head(book_name) + html_body("\n".join(html[lang][book_name]))
+            path = writing_path(
+                html_format, file_name(book_name) + ".html", lang=lang.lower()
+            )
+            utils.write(out, path)
 
 
 @type_enforced.Enforcer(enabled=ENFORCED)
