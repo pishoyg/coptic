@@ -39,51 +39,57 @@ install: pip_install python_install precommit_install bin_install
 .PHONY: generate_1
 generate_1: bible copticsite crum crum_dawoud crum_img kellia kellia_analysis
 
-.PHONY: test
-test: test_aux
-
 .PHONY: test_1
-test_1: test_aux
+test_1: until_git_add_all_precommit
 
 .PHONY: generate_2
-generate_2: flashcards flashcards_redundant kindle
+generate_2: flashcards kindle
+
+.PHONY: test
+test: until_git_add_all_precommit
 
 .PHONY: publish
-publish: flashcards_cp_to_drive kindle_cp_to_drive bible_cp_to_drive site_publish
+publish: anki_publish mobi_publish epub_publish site_publish
 
 .PHONY: stats
-stats: stats_aux
+stats: stats_row
 
 # The following level-2 rules are not included in any of the level-3 rules
 # above. This is because they are mainly relevant during development, but are
 # not part of the main deployment pipeline.
 
-.PHONY: flash
-flash: precommit flashcards flashcards_redundant test flashcards_cp_to_drive site_publish
+.PHONY: flashcards_crum_bohairic
+flashcards_crum_bohairic: flashcards_crum_bohairic_html
 
-.PHONY: amazon
-amazon: precommit crum test kindle kindle_cp_to_drive
+.PHONY: flashcards_copticsite
+flashcards_copticsite: flashcards_copticsite_html
+
+.PHONY: flashcards_kellia
+flashcards_kellia: flashcards_kellia_html
 
 .PHONY: clean
 clean: git_clean bible_epub_clean kellia_analysis_clean
+
+.PHONY: status
+status: git_status
 
 .PHONY: toil
 toil: crum_img_find
 
 .PHONY: todo
-todo: todo_aux
+todo: todo_grep
 
-.PHONY: crum_img_validate
-crum_img_validate: crum_img_validate_aux
+.PHONY: precommit
+precommit: precommit_run
 
 .PHONY: update
 update: precommit_update pip_update
 
 .PHONY: camera
-camera: camera_aux
+camera: camera_images
 
 .PHONY: yo
-yo: yo_aux
+yo: say_yo
 
 # LEVEL 1 RULES ###############################################################
 
@@ -91,7 +97,7 @@ yo: yo_aux
 bible: FORCE
 	python bible/stshenouda.org/main.py
 
-bible_cp_to_drive: FORCE
+epub_publish: FORCE
 	cp \
 	"bible/stshenouda.org/data/output/epub/bohairic_english.epub" \
 	"$${BIBLE_DIR}/2. bohairic_english - single-column - Kindle.epub"
@@ -133,9 +139,6 @@ crum_img_find: FORCE
 		--thenounproject_secret="$${THENOUNPROJECT_SECRET}"
 
 
-crum_img_validate_aux: FORCE
-	bash dictionary/marcion.sourceforge.net/img_validate.sh
-
 # KELLIA RULES
 kellia: FORCE
 	python dictionary/kellia.uni-goettingen.de/main.py
@@ -147,51 +150,37 @@ kellia_analysis_clean: dictionary/kellia.uni-goettingen.de/analysis.json
 	git restore "dictionary/kellia.uni-goettingen.de/analysis.json"
 
 # FLASHCARD RULES
-# TODO: Get rid of this mess! Maybe have `python flashcards/main.py` just write everything in all format.
-# I think what's preventing you from doing that is the desire to limit the number of HTML files. I think it should be
-# alright, your OS and Git can handle a lot of files.
 flashcards: FORCE
-	python flashcards/main.py \
-		--anki "flashcards/data/output/anki/coptic.apkg"
+	python flashcards/main.py
 
-flashcards_crum_bohairic: FORCE
+anki_publish: $(shell find flashcards/data/output/anki/ -type f)
+	cp \
+		flashcards/data/output/anki/coptic.apkg \
+		"$${FLASHCARD_DIR}"
+
+flashcards_crum_bohairic_html: FORCE
 	python flashcards/main.py \
 		--decks "A Coptic Dictionary::Bohairic" \
-		--anki "flashcards/data/output/anki/crum_bohairic.apkg" \
-		--html "flashcards/data/output/html"
+		--output_dir "/tmp/" \
+		--anki "" \
+		--html_mask "true" \
+		--tsvs_mask ""
 
-flashcards_crum_all_dialects: FORCE
-	python flashcards/main.py \
-		--decks "A Coptic Dictionary::All Dialects" \
-		--anki "flashcards/data/output/anki/crum_all_dialects.apkg" \
-		--html "flashcards/data/output/html"
-
-flashcards_crum: FORCE
-	python flashcards/main.py \
-		--decks "A Coptic Dictionary::Bohairic" "A Coptic Dictionary::Sahidic" "A Coptic Dictionary::Bohairic / Sahidic" "A Coptic Dictionary::All Dialects" \
-		--anki "flashcards/data/output/anki/crum.apkg"
-
-flashcards_copticsite: FORCE
+flashcards_copticsite_html: FORCE
 	python flashcards/main.py \
 		--decks "copticsite.com" \
-		--anki "flashcards/data/output/anki/copticsite.apkg"
+		--output_dir "/tmp/" \
+		--anki "" \
+		--html_mask "true" \
+		--tsvs_mask ""
 
-flashcards_kellia: FORCE
+flashcards_kellia_html: FORCE
 	python flashcards/main.py \
 		--decks "KELLIA::Comprehensive" "KELLIA::Egyptian" "KELLIA::Greek"\
-		--anki "flashcards/data/output/anki/kellia.apkg"
-
-flashcards_kellia_comprehensive: FORCE
-	python flashcards/main.py \
-		--decks "KELLIA::Comprehensive" \
-		--anki "flashcards/data/output/anki/kellia_comprehensive.apkg"
-
-flashcards_redundant: flashcards_crum_bohairic flashcards_crum_all_dialects flashcards_crum flashcards_copticsite flashcards_kellia_comprehensive flashcards_kellia
-
-flashcards_cp_to_drive: $(shell find flashcards/data/output/anki/ -type f)
-	cp \
-		flashcards/data/output/anki/*.apkg \
-		"$${FLASHCARD_DIR}"
+		--output_dir "/tmp/" \
+		--anki "" \
+		--html_mask "true" "true" "true" \
+		--tsvs_mask "" "" ""
 
 # KINDLE RULES
 kindle: FORCE
@@ -201,7 +190,7 @@ kindle: FORCE
 	-c0 \
 	"dictionary/marcion.sourceforge.net/data/output/mobi/dialect-B/dialect-B.opf"
 
-kindle_cp_to_drive:
+mobi_publish:
 	cp \
 	"dictionary/marcion.sourceforge.net/data/output/mobi/dialect-B/dialect-B.mobi" \
 	"$${KINDLE_DIR}"
@@ -229,30 +218,33 @@ python_install:
 precommit_install:
 	pre-commit install
 
-precommit: FORCE
+precommit_run: FORCE
 	pre-commit run
 
-test_aux: FORCE
+until_git_add_all_precommit: FORCE
 	until git add --all && pre-commit run; do : ; done
 
 precommit_update: FORCE
 	pre-commit autoupdate
 
-todo_aux: FORCE
+todo_grep: FORCE
 	grep TODO -R bible dictionary keyboard flashcards kindle
 
 git_clean: FORCE
 	git clean \
 		-x \
 		-d \
-		--exclude "flashcards/data/output/anki/*.apkg" \
+		--exclude "flashcards/data/output/anki/coptic.apkg" \
 		--exclude "vault.sh" \
 		--force
 
-stats_aux: FORCE
+git_status: FORCE
+	git status --short
+
+stats_row: FORCE
 	bash stats.sh
 
-camera_aux: FORCE
+camera_images: FORCE
 	grep \
 		--invert \
 		-E "^manual$$|^http.*$$" \
@@ -271,7 +263,7 @@ camera_aux: FORCE
 		| while read -r GLOB; do ls $${GLOB} | xargs open; done
 
 # TODO: This works on OS X, but it doesn't exist by default on Ubuntu.
-yo_aux: FORCE
+say_yo: FORCE
 	say yo
 
 # LEVEL-0 rules ###############################################################

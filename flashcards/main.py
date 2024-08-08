@@ -10,54 +10,63 @@ import field
 import genanki
 import type_enforced
 
-import utils
-
 argparser = argparse.ArgumentParser(
     formatter_class=argparse.RawTextHelpFormatter,
     description="Regenerate the Anki package.",
 )
 
+
 argparser.add_argument(
     "--decks",
     type=str,
     nargs="*",
-    default=None,
+    default=[
+        constants.CRUM_ALL,
+        constants.CRUM_BOHAIRIC,
+        constants.CRUM_SAHIDIC,
+        constants.CRUM_BOHAIRIC_SAHIDIC,
+        constants.COPTICSITE_NAME,
+        constants.KELLIA_COMPREHENSIVE,
+        constants.KELLIA_EGYPTIAN,
+        constants.KELLIA_GREEK,
+    ],
     help="The list of deck names to export. If None, export all.",
 )
 
 argparser.add_argument(
-    "--timestamp",
-    type=float,
-    default=None,
-    help="Timestamp to use for the database.",
+    "--output_dir",
+    type=str,
+    default="flashcards/data/output",
+    help="Path to the output directory."
+    "The output path for each file is ${OUTPUT_DIR}/${FORMAT}/${NAME}.${FORMAT}",
 )
 
 argparser.add_argument(
     "--anki",
     type=str,
-    default="",
-    help="Path to the output Anki package. If given, a single Anki package"
-    " will be written for all decks combined.",
+    default="coptic.apkg",
+    help="If given, will write a single Anki package to this path containing"
+    " all decks combined, using this arg as the basename."
+    "The output path will be ${OUTPUT_DIR}/anki/${VALUE_OF_THIS_ARG}",
 )
 
 argparser.add_argument(
-    "--tsvs",
-    type=str,
-    default="",
-    help="Path to the output TSVS directory. If given, for each deck, we will"
-    " write a subdirectory containing the data in TSVS format.",
+    "--tsvs_mask",
+    type=bool,
+    nargs="*",
+    default=[False] * len(constants.LAMBDAS),
+    help="A mask indicating whether to write output for deck_i in TSVS."
+    "The path will be ${OUTPUT_DIR}/tsvs/${DECK_NAME_NORMALIZED}.tsvs.",
 )
 
 argparser.add_argument(
-    "--html",
-    type=str,
-    default="",
-    help="Path to the output HTML directory. If given, for each deck, we will"
-    " write a subdirectory containing the data in HTML format.",
+    "--html_mask",
+    type=bool,
+    nargs="*",
+    default=[True, True, False, False, False, False, False, False],
+    help="A mask indicating whether to write output for deck_i in HTML."
+    "The path will be ${OUTPUT_DIR}/html/${DECK_NAME_NORMALIZED}.html.",
 )
-
-
-global args
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -75,7 +84,7 @@ def verify_unique_object_keys(decks: list[genanki.Deck]) -> None:
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def write_anki(decks: list[deck.deck]) -> None:
+def write_anki(decks: list[deck.deck], path: str) -> None:
     media_files = set()
     anki_decks = []
 
@@ -91,36 +100,32 @@ def write_anki(decks: list[deck.deck]) -> None:
 
     verify_unique_object_keys(anki_decks)
     package = genanki.Package(anki_decks, media_files=media_files)
-    package.write_to_file(args.anki, timestamp=args.timestamp)
+    assert path
+    package.write_to_file(path)
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def main() -> None:
-    global args
     args = argparser.parse_args()
-    if not (args.anki or args.tsvs or args.html):
-        utils.warn(
-            " None of the output flags (--anki, --tsvs, --html) is given."
-            " The decks will be constructed, but nothing will be written!"
-        )
 
     work_dir = tempfile.TemporaryDirectory()
     field.init(work_dir.name)
     decks = constants.DECKS(args.decks)
+    assert len(decks) == len(args.html_mask) == len(args.tsvs_mask)
 
-    for d in decks:
+    for idx, d in enumerate(decks):
         filename = constants.file_name(d.deck_name)
-        if args.tsvs:
-            dir = os.path.join(args.tsvs, filename)
+        if args.tsvs_mask[idx]:
+            dir = os.path.join(args.output_dir, "tsvs", filename)
             pathlib.Path(dir).mkdir(exist_ok=True)
             d.write_tsvs(dir)
-        if args.html:
-            dir = os.path.join(args.html, filename)
+        if args.html_mask[idx]:
+            dir = os.path.join(args.output_dir, "html", filename)
             pathlib.Path(dir).mkdir(exist_ok=True)
             d.write_html(dir)
 
     if args.anki:
-        write_anki(decks)
+        write_anki(decks, os.path.join(args.output_dir, "anki", args.anki))
 
     work_dir.cleanup()
 
