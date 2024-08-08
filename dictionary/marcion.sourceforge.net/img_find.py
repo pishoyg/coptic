@@ -16,9 +16,17 @@ from PIL import Image
 import utils
 
 TARGET_WIDTH = 300
+MIN_WIDTH = 200
 IMG_300_DIR = "dictionary/marcion.sourceforge.net/data/img-300"
 FILE_NAME_RE = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
 SOURCE_RE = re.compile(r"^source\(([^=]+)\)=(.+)$")
+
+
+INPUT_TSVS = "dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs"
+MEANING_COL = "en-parsed-no-greek-no-html"
+KEY_COL = "key"
+LINK_COL = "key-link"
+SOURCES_DIR = "dictionary/marcion.sourceforge.net/data/img-sources/"
 
 
 def params_str(params: dict) -> str:
@@ -41,6 +49,7 @@ WIKI_HEADERS = {
     "Api-User-Agent": "Coptic/1.0 (https://github.com/pishoyg/coptic/; pishoybg@gmail.com)",
     "User-Agent": "Coptic/1.0 (https://github.com/pishoyg/coptic/; pishoybg@gmail.com)",
 }
+
 
 argparser = argparse.ArgumentParser(
     description="""Find images for the dictionary words.
@@ -66,34 +75,6 @@ argparser.add_argument(
     type=int,
     default=0,
     help="Skips keys lower than this value.",
-)
-
-argparser.add_argument(
-    "--input_tsvs",
-    type=str,
-    default="dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs",
-    help="Input TSVS.",
-)
-
-argparser.add_argument(
-    "--input_meaning_col",
-    type=str,
-    default="en-parsed-no-greek-no-html",
-    help="Name of the meaning column in the input TSVS.",
-)
-
-argparser.add_argument(
-    "--input_key_col",
-    type=str,
-    default="key",
-    help="Name of the key column in the input TSVS.",
-)
-
-argparser.add_argument(
-    "--link_col",
-    type=str,
-    default="key-link",
-    help="The name of the link column to open the page in the browser.",
 )
 
 argparser.add_argument(
@@ -127,13 +108,6 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
-    "--sources_dir",
-    type=str,
-    default="dictionary/marcion.sourceforge.net/data/img-sources/",
-    help="Path to the sources directory.",
-)
-
-argparser.add_argument(
     "--ignore",
     type=str,
     nargs="*",
@@ -146,14 +120,6 @@ argparser.add_argument(
     type=bool,
     default=False,
     help="If true, skip word with existing images.",
-)
-
-argparser.add_argument(
-    "--min_width",
-    type=int,
-    default=200,
-    help="The minimum acceptable width of an image. Set to -1 to indicate the"
-    " absence of a limit.",
 )
 
 argparser.add_argument(
@@ -222,14 +188,14 @@ def file_name(key: int, sense: int, idx: int, ext: str):
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def invalid_size(files: list[str]) -> list[str]:
-    if args.min_width == -1:
+    if MIN_WIDTH == -1:
         return []
-    assert args.min_width > 0
+    assert MIN_WIDTH > 0
     invalid = []
     for f in files:
         image = Image.open(f)
         width, _ = image.size
-        if width < args.min_width:
+        if width < MIN_WIDTH:
             invalid.append(f)
     return invalid
 
@@ -243,8 +209,8 @@ def is_wiki(url: str) -> bool:
 def main():
     global args
     args = argparser.parse_args()
-    df = utils.read_tsvs(args.input_tsvs)
-    df.sort_values(by=args.input_key_col, inplace=True)
+    df = utils.read_tsvs(INPUT_TSVS)
+    df.sort_values(by=KEY_COL, inplace=True)
 
     sources: dict[str, str] = {}
 
@@ -270,7 +236,7 @@ def main():
         exclude[k] = v
 
     for _, row in df.iterrows():
-        key = row[args.input_key_col]
+        key = row[KEY_COL]
         key = int(key)
         if key < args.start_at_key:
             continue
@@ -285,8 +251,8 @@ def main():
             continue
 
         open_images(g)
-        q = query(row[args.input_meaning_col])
-        subprocess.run(["open", "-a", args.browser, q, row[args.link_col]])
+        q = query(row[MEANING_COL])
+        subprocess.run(["open", "-a", args.browser, q, row[LINK_COL]])
         utils.info("Existing:", g)
 
         while True:
@@ -436,7 +402,7 @@ def main():
                 pathlib.Path(file).rename(new_file)
                 # Write the source.
                 with open(
-                    os.path.join(args.sources_dir, file_name(ext=".txt")),
+                    os.path.join(SOURCES_DIR, file_name(ext=".txt")),
                     "w",
                 ) as f:
                     f.write(sources[file] + "\n")
