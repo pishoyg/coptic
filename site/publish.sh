@@ -8,6 +8,7 @@ if [ -n "$(git -C "${SITE_DIR}" status --short)" ]; then
 fi
 
 CRUM_DIR="${SITE_DIR}/crum"
+BIBLE_DIR="${SITE_DIR}/bible"
 
 rm -r "${CRUM_DIR:?}"/*
 
@@ -18,6 +19,12 @@ cp -r \
 cp -r \
   flashcards/data/output/html/a_coptic_dictionary__bohairic/* \
   "${CRUM_DIR}"
+
+cp -r \
+  bible/stshenouda.org/data/output/html/bohairic_english \
+  bible/stshenouda.org/data/output/html/bohairic \
+  bible/stshenouda.org/data/output/html/sahidic \
+  "${BIBLE_DIR}"
 
 git -C "${SITE_DIR}" add --all
 git -C "${SITE_DIR}" commit -m "AUTOMATED COMMIT"
