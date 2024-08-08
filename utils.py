@@ -67,7 +67,11 @@ def clean_dir(dir: str) -> None:
 
 @type_enforced.Enforcer(enabled=ENFORCED)
 def write_tsvs(
-    df: pd.DataFrame, tsvs: str, chunk_size: int = 100, zfill: int = 0, **kwargs
+    df: pd.DataFrame,
+    tsvs: str,
+    chunk_size: int = 100,
+    zfill: int = 0,
+    **kwargs,
 ) -> None:
     clean_dir(tsvs)
     starts = list(range(0, len(df.index), chunk_size))
@@ -80,6 +84,7 @@ def write_tsvs(
         chunk = df.iloc[start : start + chunk_size]
         basename = f"{iota(start+1)}_{iota(start+chunk_size)}.tsv"
         to_tsv(chunk, os.path.join(tsvs, basename), **kwargs)
+    info("Wrote", tsvs)
 
 
 @type_enforced.Enforcer(enabled=ENFORCED)
