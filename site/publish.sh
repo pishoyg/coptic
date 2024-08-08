@@ -11,14 +11,14 @@ CRUM_DIR="${SITE_DIR}/crum"
 
 rm -r "${CRUM_DIR:?}"/*
 
-cp \
+cp -r \
   flashcards/data/output/html/a_coptic_dictionary__all_dialects/* \
   "${CRUM_DIR}"
 
-cp \
+cp -r \
   flashcards/data/output/html/a_coptic_dictionary__bohairic/* \
   "${CRUM_DIR}"
 
 git -C "${SITE_DIR}" add --all
-git -C "${SITE_DIR}" commit -m "Automated commit. Publishing a new version."
+git -C "${SITE_DIR}" commit -m "AUTOMATED COMMIT"
 git -C "${SITE_DIR}" push

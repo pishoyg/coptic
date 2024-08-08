@@ -12,11 +12,6 @@ import utils
 
 global args
 
-# TODO: Export the Bible text to a gsheet.
-# TODO: Export the sources to a gdoc.
-# import gspread
-# from oauth2client.service_account import ServiceAccountCredentials
-
 
 LANGUAGES = [
     "Bohairic",

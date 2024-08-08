@@ -284,10 +284,6 @@ class media(_content_field):
         the temporary directory to the package generator in order for the
         basenames to match, and we forget about the original paths and names.
         """
-        # TODO: This behavior is Anki-specific. Though use of basenames should work on most platforms, it's unnecessary.
-        # Consider allowing longer paths in general, and only enforcing basenames for Anki.
-        # Note: It's likely that we will keep the behaviour as is. Use of basenames will likely simplify things.
-        # Supporting generic paths doesn't have evident values, except that it's unnecessary.
 
         content = []
         media_files = set()
