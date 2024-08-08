@@ -43,6 +43,15 @@ def error(*args):
 
 
 @type_enforced.Enforcer(enabled=ENFORCED)
+def write(content: str, path: str, log: bool = True) -> None:
+    with open(path, "w") as f:
+        f.write(content)
+    if not log:
+        return
+    info("Wrote", path)
+
+
+@type_enforced.Enforcer(enabled=ENFORCED)
 def json_dumps(j, **kwargs) -> str:
     return json.dumps(j, indent=2, ensure_ascii=False, allow_nan=False, **kwargs)
 
