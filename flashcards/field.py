@@ -22,6 +22,11 @@ GSPREAD_SCOPE = [
     "https://www.googleapis.com/auth/drive",
 ]
 
+AUDIO_FMT = '<audio controls><source src="{basename}"/></audio>'
+AUDIO_FMT_L = '<audio controls><source src="'
+AUDIO_FMT_R = '"/></audio>'
+assert AUDIO_FMT_L + "{basename}" + AUDIO_FMT_R == AUDIO_FMT
+
 _work_dir = ""
 _initialized = False
 _in_work_dir = {}
@@ -360,9 +365,7 @@ def snd(
     force: bool = True,
 ) -> media:
     return media(
-        # TODO: This is Anki-specific. Use the generic "<audio>" tag, and
-        # convert that to the Anki format upon request.
-        html_fmt="[sound:{basename}]",
+        html_fmt=AUDIO_FMT,
         keys=keys,
         get_paths=get_paths,
         sort_paths=sort_paths,

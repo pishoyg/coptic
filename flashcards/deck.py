@@ -1,5 +1,6 @@
 import os
 import pathlib
+import re
 import shutil
 import time
 
@@ -257,6 +258,13 @@ class deck:
         for f in self.media:
             shutil.copy(f, dir)
 
+    def html_to_anki(self, html: str) -> str:
+        # TODO: This won't work if the HTML gets formatted before making it to
+        # this step. Reimplement.
+        html = html.replace(field.AUDIO_FMT_L, "[sound:")
+        html = html.replace(field.AUDIO_FMT_R, "]")
+        return html
+
     def anki(self) -> tuple[genanki.Deck, list[str]]:
         model = genanki.Model(
             model_id=self.deck_id,
@@ -283,6 +291,7 @@ class deck:
         )
         for k, f, b in zip(self.keys, self.fronts, self.backs):
             # Notice that the field order is not uniform across our code.
+            b = self.html_to_anki(b)
             note = Note(model=model, fields=[f, b, k])
             deck.add_note(note)
         return deck, self.media
