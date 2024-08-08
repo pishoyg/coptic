@@ -310,4 +310,4 @@ class dictionary:
         for filename, content in filename_to_content.items():
             with open(os.path.join(dir, filename), "w") as f:
                 f.write(content)
-        utils.info("Wrote", dir)
+        utils.wrote(dir)

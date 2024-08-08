@@ -48,6 +48,11 @@ def write(content: str, path: str, log: bool = True) -> None:
         f.write(content)
     if not log:
         return
+    wrote(path)
+
+
+@type_enforced.Enforcer(enabled=ENFORCED)
+def wrote(path: str) -> None:
     info("Wrote", path)
 
 
@@ -93,7 +98,7 @@ def write_tsvs(
         chunk = df.iloc[start : start + chunk_size]
         basename = f"{iota(start+1)}_{iota(start+chunk_size)}.tsv"
         to_tsv(chunk, os.path.join(tsvs, basename), **kwargs)
-    info("Wrote", tsvs)
+    wrote(tsvs)
 
 
 @type_enforced.Enforcer(enabled=ENFORCED)

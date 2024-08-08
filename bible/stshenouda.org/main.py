@@ -100,7 +100,7 @@ def writing_path(output_format, file_name):
     parts = list(filter(None, parts))
     path = os.path.join(*parts)
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    utils.info("Wrote", path)
+    utils.wrote(path)
     return path
 
 
@@ -400,7 +400,7 @@ def write_epub(html, books, epub_format):
 
         path = writing_path(epub_format, lang + ".epub")
         epub.write_epub(path, kindle)
-        utils.info("Wrote", path)
+        utils.wrote(path)
 
 
 def process_sources(books):
@@ -427,7 +427,7 @@ def process_sources(books):
     out = prettify_html("\n".join(out))
     out = html_head(title="Sources") + html_body(out)
     path = writing_path("", "sources.html")
-    utils.info("Wrote", path)
+    utils.wrote(path)
 
 
 def main():
