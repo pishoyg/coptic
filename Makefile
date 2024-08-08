@@ -229,7 +229,7 @@ precommit_update: FORCE
 	pre-commit autoupdate
 
 todo_grep: FORCE
-	grep TODO -R bible dictionary keyboard flashcards kindle
+	grep TODO -R . --exclude-dir="archive" --exclude-dir=.git
 
 git_clean: FORCE
 	git clean \
