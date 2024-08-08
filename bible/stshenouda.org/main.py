@@ -38,6 +38,7 @@ PARALLELS = ["Bohairic_English"]
 COVER = "bible/stshenouda.org/data/img/stauros.jpeg"
 
 ENFORCED = True
+Callable = typing.Callable | type_enforced.enforcer.FunctionMethodEnforcer
 
 argparser = argparse.ArgumentParser(description="Process the Coptic Bible data.")
 
@@ -55,11 +56,14 @@ def file_name(book_name: str) -> str:
 
 
 @type_enforced.Enforcer(enabled=ENFORCED)
-def writing_path(output_format: str = "", file_name: str = "", lang: str = "") -> str:
-    assert file_name
-    parts = [OUTPUT_DIR, output_format.lower(), lang.lower(), file_name.lower()]
-    parts = list(filter(None, parts))
-    path = os.path.join(*parts)
+def writing_path(output_format: str, subdir: str, stem: str) -> str:
+    assert output_format
+    assert stem
+    output_format = output_format.lower()
+    subdir = subdir.lower()
+    stem = stem.lower()
+    parts = [OUTPUT_DIR, output_format, subdir, f"{stem}.{output_format}"]
+    path = os.path.join(*filter(None, parts))
     os.makedirs(os.path.dirname(path), exist_ok=True)
     return path
 
@@ -256,12 +260,12 @@ def load_book(book_name: str) -> dict | list:
 
 @type_enforced.Enforcer(enabled=ENFORCED)
 def write_tsv(df: pd.DataFrame) -> None:
-    utils.write_tsvs(df, writing_path("tsvs", "bible.tsvs"))
+    utils.write_tsvs(df, writing_path("tsvs", "", "bible"))
 
 
 @type_enforced.Enforcer(enabled=ENFORCED)
 def write_txt(lang: str, column: pd.Series) -> None:
-    path = writing_path("txt", f"{lang}.txt")
+    path = writing_path("txt", "", f"{lang}")
     content = "\n".join(filter(None, column))
     utils.write(content + "\n", path)
 
@@ -301,7 +305,7 @@ def html_h1(title: str) -> str:
 
 
 @type_enforced.Enforcer(enabled=ENFORCED)
-def html_toc(books: list[str], href: typing.Callable) -> str:
+def html_toc(books: list[str], href: Callable) -> str:
     return "\n".join(
         '<p><a href="{}">{}</a></p>'.format(href(book_name), book_name)
         for book_name in books
@@ -309,18 +313,16 @@ def html_toc(books: list[str], href: typing.Callable) -> str:
 
 
 @type_enforced.Enforcer(enabled=ENFORCED)
-def write_html(html: dict, books: list[str], html_format: str) -> None:
+def write_html(html: dict, books: list[str]) -> None:
     for lang in LANGUAGES + PARALLELS:
         for book_name in books:
             out = html_head(book_name) + html_body("\n".join(html[lang][book_name]))
-            path = writing_path(
-                html_format, file_name(book_name) + ".html", lang=lang.lower()
-            )
+            path = writing_path("html", lang, file_name(book_name))
             utils.write(out, path)
 
 
 @type_enforced.Enforcer(enabled=ENFORCED)
-def write_epub(html: dict, books: list, epub_format: str) -> None:
+def write_epub(html: dict, books: list, subdir: str) -> None:
 
     for lang in LANGUAGES + PARALLELS:
         kindle = epub.EpubBook()
@@ -368,7 +370,7 @@ def write_epub(html: dict, books: list, epub_format: str) -> None:
         kindle.add_item(epub.EpubNcx())
         kindle.add_item(epub.EpubNav())
 
-        path = writing_path(epub_format, lang + ".epub")
+        path = writing_path("epub", subdir, lang)
         epub.write_epub(path, kindle)
         utils.wrote(path)
 
@@ -395,7 +397,7 @@ def process_sources(books: list[str]) -> None:
 
     out = "\n".join(out)
     out = html_head(title="Sources") + html_body(out)
-    path = writing_path("", "sources.html")
+    path = writing_path("html", "", "sources")
     utils.write(out, path)
 
 
@@ -532,13 +534,13 @@ def main() -> None:
     for lang in LANGUAGES:
         write_txt(lang, df[lang])
 
-    write_html(html2, books, "html")
+    write_html(html2, books)
 
     if args.no_epub:
         return
-    write_epub(html1, books, "epub1")
-    write_epub(html2, books, "epub2")
-    write_epub(html3, books, "epub3")
+    write_epub(html1, books, "1")
+    write_epub(html2, books, "2")
+    write_epub(html3, books, "3")
 
 
 if __name__ == "__main__":

@@ -107,11 +107,11 @@ bible_no_epub_aux: FORCE
 
 epub_publish: FORCE
 	cp \
-	"bible/stshenouda.org/data/output/epub/bohairic_english.epub" \
+	"bible/stshenouda.org/data/output/epub/1/bohairic_english.epub" \
 	"$${BIBLE_DIR}/2. bohairic_english - single-column - Kindle.epub"
 
-bible_epub_clean: $(shell ls bible/stshenouda.org/data/output/epub*/*.epub)
-	git restore "bible/stshenouda.org/data/output/epub*/*.epub"
+bible_epub_clean: $(shell ls bible/stshenouda.org/data/output/epub/*/*.epub)
+	git restore "bible/stshenouda.org/data/output/epub/*/*.epub"
 
 # COPTICSITE_COM RULES
 copticsite: FORCE
