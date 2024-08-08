@@ -27,7 +27,6 @@ SHELL := /bin/bash
 
 .PHONY: all
 # You might want to run `make clean` following this.
-# TODO: Makefile is not procedural. A rule placed several times on a line will only get executed once!
 all: install generate_1 test_1 generate_2 test publish stats
 
 # LEVEL 2 RULES ###############################################################
@@ -39,14 +38,16 @@ install: pip_install python_install precommit_install bin_install
 .PHONY: generate_1
 generate_1: bible copticsite crum crum_dawoud crum_img kellia kellia_analysis
 
-.PHONY: test_1
-test_1: until_git_add_all_precommit
-
 .PHONY: generate_2
 generate_2: flashcards kindle
 
+# NOTE: We have to duplicate the rules, otherwise Make would deduplicate a rule
+# called twice in a recipe.
 .PHONY: test
-test: until_git_add_all_precommit
+test: git_add_precommit_run
+
+.PHONY: test_1
+test_1: git_add_precommit_run_1
 
 .PHONY: publish
 publish: anki_publish mobi_publish epub_publish site_publish
@@ -221,7 +222,7 @@ precommit_install:
 precommit_run: FORCE
 	pre-commit run
 
-until_git_add_all_precommit: FORCE
+git_add_precommit_run git_add_precommit_run_1: FORCE
 	until git add --all && pre-commit run; do : ; done
 
 precommit_update: FORCE
