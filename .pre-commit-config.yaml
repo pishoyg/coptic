@@ -16,11 +16,6 @@ exclude: ^archive/
 repos:
   - repo: local
     hooks:
-      - id: check-do-not-submit
-        name: check-do-not-submit
-        entry: bash -c 'check_do_not_submit () { for FILE in "$@"; do DO_NOT_SUBMIT="$(grep "DO NOT SUBMIT" --files-with-matches "${FILE}")" && [ -z "${DO_NOT_SUBMIT}" ] || (echo -e "\033[0;31m" "DO NOT SUBMIT" markers found in "\033[0;33m" "${DO_NOT_SUBMIT}" "\033[0m" && exit 1); done }; check_do_not_submit' --
-        language: system
-        exclude: ^\.pre-commit-config\.yaml$
       - id: python-unittest-exists
         name: python-unittest-exists
         entry: bash -c 'for FILE in "$@"; do DIRNAME="$(dirname "${FILE}")" && if [[ "$(basename "${DIRNAME}")" != "test" ]]; then TEST="${DIRNAME}/test/test_$(basename "${FILE}")" && if [ ! -f "${TEST}" ]; then echo -e "\033[0;31m" Please create a unit test in "\033[0;33m" "${TEST}" "\033[0;31m" and import "\033[0;33m" "${FILE}" "\033[0m" && exit 1; fi; else INIT="${DIRNAME}/__init__.py" && if [ ! -f "${INIT}" ]; then echo -e "\033[0;31m" You forgot "\033[0;33m" "${INIT}" "\033[0m" && exit 1; fi; fi; done' --
@@ -173,3 +168,8 @@ repos:
         language: system
         types: [python]
         verbose: true
+      - id: check-do-not-submit
+        name: check-do-not-submit
+        entry: bash -c 'check_do_not_submit () { for FILE in "$@"; do DO_NOT_SUBMIT="$(grep "DO NOT SUBMIT" --files-with-matches "${FILE}")" && [ -z "${DO_NOT_SUBMIT}" ] || (echo -e "\033[0;31m" "DO NOT SUBMIT" markers found in "\033[0;33m" "${DO_NOT_SUBMIT}" "\033[0m" && exit 1); done }; check_do_not_submit' --
+        language: system
+        exclude: ^\.pre-commit-config\.yaml$
