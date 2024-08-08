@@ -3,7 +3,7 @@ import re
 
 import type_enforced
 
-from dictionary.inflect import constants
+from morphology import constants
 
 COPTIC_ONLY_BLOCK = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
 

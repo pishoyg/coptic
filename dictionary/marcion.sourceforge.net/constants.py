@@ -2,7 +2,7 @@ import re
 
 import word as lexical
 
-from dictionary.inflect import inflect
+from morphology import inflect
 
 # Dialects.
 DIALECTS = ["S", "Sa", "Sf", "A", "sA", "B", "F", "Fb", "O", "NH"]

@@ -12,8 +12,8 @@ import word as lexical
 from oauth2client.service_account import ServiceAccountCredentials
 
 import utils
-from dictionary.inflect import inflect
-from dictionary.kindle import kindle
+from kindle import kindle
+from morphology import inflect
 
 # Input arguments.#############################################################
 COPTWRD_TSV = "dictionary/marcion.sourceforge.net/data/marcion-input/coptwrd.tsv"

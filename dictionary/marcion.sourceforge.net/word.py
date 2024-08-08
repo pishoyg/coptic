@@ -5,7 +5,7 @@ import constants
 import enforcer
 import type_enforced
 
-from dictionary.inflect import inflect
+from morphology import inflect
 
 
 class Gender(enum.Enum):
