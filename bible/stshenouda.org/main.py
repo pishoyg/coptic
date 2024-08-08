@@ -3,9 +3,9 @@ import json
 import os
 import re
 
+import bs4
 import json5
 import pandas as pd
-from bs4 import BeautifulSoup as bs
 from ebooklib import epub
 
 import utils
@@ -32,70 +32,29 @@ BOOK_TITLE = "Ⲡⲓϫⲱⲙ Ⲉⲑⲟⲩⲁⲃ"
 
 VERSE_PREFIX = re.compile(r"^\(([^)]+)\)")
 
+JSON = "bible/stshenouda.org/data/input/bible.json"
+INPUT_DIR = "bible/stshenouda.org/data/input/"
+SOURCES_DIR = "bible/stshenouda.org/data/input/Sources/"
+OUTPUT_DIR = "bible/stshenouda.org/data/output"
+PARALLELS = ["Bohairic_English"]
+COVER = "bible/stshenouda.org/data/img/stauros.jpeg"
 
 argparser = argparse.ArgumentParser(description="Process the Coptic Bible data.")
 
-# Input arguments:
-argparser.add_argument(
-    "--json",
-    type=str,
-    help="Path to a JSON file containing the book information.",
-    default="bible/stshenouda.org/data/input/bible.json",
-)
-argparser.add_argument(
-    "--input_dir",
-    type=str,
-    help="Path to the input directory. For each book in the book list, we will"
-    " try to find a corresponding ${BOOK_NAME}.json in this directory.",
-    default="bible/stshenouda.org/data/input/",
-)
-argparser.add_argument(
-    "--sources_input_dir",
-    type=str,
-    help="Path to the input directory. For each book in the book list, we will"
-    " try to find a corresponding ${BOOK_NAME}_Sources.json file in this"
-    " directory.",
-    default="bible/stshenouda.org/data/input/Sources/",
-)
-
-# Output arguments:
-argparser.add_argument(
-    "--output_dir",
-    type=str,
-    help="Path to the output directory. For each output format, we will write"
-    " the output in a new subdirectory of this directory that is named after"
-    " the format",
-    default="bible/stshenouda.org/data/output",
-)
-argparser.add_argument(
-    "--parallels",
-    type=str,
-    action="append",
-    help="Produce HTML parallel texts for the following pairs of languages.",
-    default=["Bohairic_English"],
-    nargs="*",
-)
 argparser.add_argument(
     "--no_epub",
     type=bool,
     help="If true, do not generate EPUB's.",
     default=False,
 )
-argparser.add_argument(
-    "--cover",
-    type=str,
-    help="Path to a file containing the cover image for EPUB.",
-    default="bible/stshenouda.org/data/img/stauros.jpeg",
-)
 
 
 def writing_path(output_format, file_name):
     assert file_name
-    parts = [args.output_dir, output_format, file_name.lower()]
+    parts = [OUTPUT_DIR, output_format, file_name.lower()]
     parts = list(filter(None, parts))
     path = os.path.join(*parts)
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    utils.wrote(path)
     return path
 
 
@@ -110,7 +69,7 @@ def normalize(txt):
 
 
 def prettify_html(html):
-    soup = bs(html, features="html.parser")
+    soup = bs4.BeautifulSoup(html, features="html.parser")
     return soup.prettify()
 
 
@@ -269,7 +228,7 @@ PARALLEL_BUILDERS = {
 
 def load_book(book_name):
     try:
-        t = open(os.path.join(args.input_dir, book_name + ".json")).read()
+        t = open(os.path.join(INPUT_DIR, book_name + ".json")).read()
     except FileNotFoundError:
         utils.warn("Book not found:", book_name)
         return {}
@@ -280,8 +239,7 @@ def load_book(book_name):
 
 
 def write_tsv(df):
-    path = writing_path("tsvs", "bible.tsvs")
-    utils.write_tsvs(df, path)
+    utils.write_tsvs(df, writing_path("tsvs", "bible.tsvs"))
 
 
 def write_txt(lang: str, column: pd.Series) -> None:
@@ -329,7 +287,7 @@ def html_toc(books=[], href=None):
 
 
 def write_html(html, books, html_format):
-    for lang in LANGUAGES + args.parallels:
+    for lang in LANGUAGES + PARALLELS:
         out = [
             html_head(BOOK_TITLE)
             + "<body>"
@@ -347,15 +305,15 @@ def write_html(html, books, html_format):
 
 def write_epub(html, books, epub_format):
 
-    for lang in LANGUAGES + args.parallels:
+    for lang in LANGUAGES + PARALLELS:
         kindle = epub.EpubBook()
         kindle.set_identifier(lang)
         kindle.set_language("cop")
         kindle.set_title("Ⲡⲓϫⲱⲙ Ⲉⲑⲟⲩⲁⲃ")
         kindle.add_author("Saint Shenouda The Archimandrite Coptic Society")
-        cover_file_name = os.path.basename(args.cover)
+        cover_file_name = os.path.basename(COVER)
         cover = epub.EpubCover(file_name=cover_file_name)
-        with open(args.cover, "rb") as f:
+        with open(COVER, "rb") as f:
             cover.content = f.read()
         kindle.add_item(cover)
         kindle.add_item(epub.EpubCoverHtml(image_name=cover_file_name))
@@ -402,9 +360,7 @@ def process_sources(books):
     out = []
     for book_name in books:
         try:
-            t = open(
-                os.path.join(args.sources_input_dir, book_name + "_Sources.json")
-            ).read()
+            t = open(os.path.join(SOURCES_DIR, book_name + "_Sources.json")).read()
         except FileNotFoundError:
             utils.warn("No sources found for", book_name)
             continue
@@ -419,10 +375,10 @@ def process_sources(books):
                 "<br/>".join("  - " + line for line in data[lang].split("\n") if line)
             )
 
-    out = prettify_html("\n".join(out))
+    out = "\n".join(out)
     out = html_head(title="Sources") + html_body(out)
     path = writing_path("", "sources.html")
-    utils.wrote(path)
+    utils.write(out, path)
 
 
 def main():
@@ -436,7 +392,7 @@ def main():
     book_to_section_indexed_no_testament = {}
     book_to_book_indexed = {}
 
-    with open(args.json) as j:
+    with open(JSON) as j:
         bible = json.loads(j.read())
         testament_idx = 0
         section_idx_no_testament = 0
@@ -469,12 +425,12 @@ def main():
 
     df = pd.DataFrame()
     # Reduce duplication for the different HTML formats.
-    html1 = {lang: {} for lang in LANGUAGES + args.parallels}
-    html2 = {lang: {} for lang in LANGUAGES + args.parallels}
-    html3 = {lang: {} for lang in LANGUAGES + args.parallels}
+    html1 = {lang: {} for lang in LANGUAGES + PARALLELS}
+    html2 = {lang: {} for lang in LANGUAGES + PARALLELS}
+    html3 = {lang: {} for lang in LANGUAGES + PARALLELS}
 
     for book_name in books:
-        for lang in LANGUAGES + args.parallels:
+        for lang in LANGUAGES + PARALLELS:
             h2 = '<h2 id="{}">{}</h2>'.format(html_id(book_name), book_name)
             html1[lang][book_name] = [h2]
             html2[lang][book_name] = [h2]
@@ -482,7 +438,7 @@ def main():
 
         data = load_book(book_name)
         book_df = pd.DataFrame()
-        for lang in LANGUAGES + args.parallels:
+        for lang in LANGUAGES + PARALLELS:
             for chapter in data:
                 chapter_num = chapter_number(chapter)
                 a = '<a href="#{}">{}</a>'.format(
@@ -492,14 +448,14 @@ def main():
                 html2[lang][book_name].append(a)
                 html3[lang][book_name].append(a)
 
-        parallel_pairs = [p.split("_") for p in args.parallels]
+        parallel_pairs = [p.split("_") for p in PARALLELS]
         pb1 = PARALLEL_BUILDERS[1]
         pb2 = PARALLEL_BUILDERS[2]
         pb3 = PARALLEL_BUILDERS[3]
         zfill_len = len(str(len(data)))
         for chapter in data:
             chapter_num = chapter_number(chapter)
-            for lang in LANGUAGES + args.parallels:
+            for lang in LANGUAGES + PARALLELS:
                 h3 = '<h3 id="{}">{}</h3>'.format(
                     html_id(book_name, chapter_num), chapter_num
                 )
@@ -507,7 +463,7 @@ def main():
                 html1[lang][book_name].append(h3)
                 html2[lang][book_name].append(h3)
                 html3[lang][book_name].append(h3)
-            for lang in args.parallels:
+            for lang in PARALLELS:
                 html1[lang][book_name].append(pb1.begin_chapter())
                 html2[lang][book_name].append(pb2.begin_chapter())
                 html3[lang][book_name].append(pb3.begin_chapter())
@@ -532,7 +488,7 @@ def main():
                     html1[lang][book_name].append(recolor(verse[lang], verse))
                     html2[lang][book_name].append(recolor(verse[lang], verse))
                     html3[lang][book_name].append(recolor(verse[lang], verse))
-                for lang, pair in zip(args.parallels, parallel_pairs):
+                for lang, pair in zip(PARALLELS, parallel_pairs):
                     recolored = [
                         recolor(verse[pair[0]], verse),
                         recolor(verse[pair[1]], verse),
@@ -542,7 +498,7 @@ def main():
                     html3[lang][book_name].append(pb3.verse(*recolored))
 
                 book_df = pd.concat([book_df, pd.DataFrame([d])], ignore_index=True)
-            for lang in args.parallels:
+            for lang in PARALLELS:
                 html1[lang][book_name].append(pb1.end_chapter())
                 html2[lang][book_name].append(pb2.end_chapter())
                 html3[lang][book_name].append(pb3.end_chapter())
