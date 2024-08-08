@@ -68,6 +68,9 @@ flashcards_copticsite: flashcards_copticsite_html
 .PHONY: flashcards_kellia
 flashcards_kellia: flashcards_kellia_html
 
+.PHONY: bible_no_epub
+bible_no_epub: bible_no_epub_aux
+
 .PHONY: clean
 clean: git_clean bible_epub_clean kellia_analysis_clean
 
@@ -97,6 +100,10 @@ yo: say_yo
 # BIBLE RULES
 bible: FORCE
 	python bible/stshenouda.org/main.py
+
+bible_no_epub_aux: FORCE
+	python bible/stshenouda.org/main.py \
+		--no_epub=true
 
 epub_publish: FORCE
 	cp \
