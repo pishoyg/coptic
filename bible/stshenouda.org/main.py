@@ -532,9 +532,7 @@ def main() -> None:
     for lang in LANGUAGES:
         write_txt(lang, df[lang])
 
-    write_html(html1, books, "html1")
-    write_html(html2, books, "html2")
-    write_html(html3, books, "html3")
+    write_html(html2, books, "html")
 
     if args.no_epub:
         return
