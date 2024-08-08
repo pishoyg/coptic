@@ -15,27 +15,10 @@ import utils
 from dictionary.inflect import inflect
 from dictionary.kindle import kindle
 
-argparser = argparse.ArgumentParser(
-    description="Parse and process the Marcion digital Coptic database,"
-    "which is in turn based on the Crum Coptic dictionary."
-)
-
 # Input arguments.#############################################################
-argparser.add_argument(
-    "--coptwrd_tsv",
-    type=str,
-    default="dictionary/marcion.sourceforge.net/data/marcion-input/coptwrd.tsv",
-    help="Path to the input TSV file containing the words.",
-)
+COPTWRD_TSV = "dictionary/marcion.sourceforge.net/data/marcion-input/coptwrd.tsv"
+COPTDRV_TSV = "dictionary/marcion.sourceforge.net/data/marcion-input/coptdrv.tsv"
 
-argparser.add_argument(
-    "--coptdrv_tsv",
-    type=str,
-    default="dictionary/marcion.sourceforge.net/data/marcion-input/coptdrv.tsv",
-    help="Path to the input TSV file containing the derivations.",
-)
-
-# The following are names of input columns.
 WORD_COL = "word"
 QUALITY_COL = "quality"
 TYPE_COL = "type"
@@ -47,40 +30,12 @@ MIN_KEY = 1
 MAX_KEY = 3385
 
 # Output arguments.############################################################
-argparser.add_argument(
-    "--output",
-    type=str,
-    default="dictionary/marcion.sourceforge.net/data/output",
-    help="Path to the output directory.",
-)
-
-argparser.add_argument(
-    "--filter_dialects",
-    type=str,
-    nargs="+",
-    default=constants.DIALECTS,
-    help="For each of the provided dialect symbols, an extra column will be"
-    " added to the sheet, containing only the words that belong to this"
-    " dialect.",
-)
-
-argparser.add_argument(
-    "--sort_roots",
-    type=str,
-    nargs="+",
-    default=["key"],
-    help="Fields to use for sorting the roots",
-)
-
-argparser.add_argument(
-    "--sort_derivations",
-    type=str,
-    nargs="+",
-    default=["key_word", "pos"],
-    help="Fields to sort the derivations by. The current default results in"
-    " the derivations showing the way they would show underneath their root"
-    " word.",
-)
+OUTPUT = "dictionary/marcion.sourceforge.net/data/output"
+FILTER_DIALECTS = constants.DIALECTS
+SORT_ROOTS = ["key"]
+SORT_DERIVATIONS = ["key_word", "pos"]
+INFLECT_DIALECTS = ["B"]
+COVER = "dictionary/marcion.sourceforge.net/data/crum/Crum/Crum.png"
 
 # Gspread arguments.###########################################################
 GSPREAD_SCOPE = [
@@ -90,48 +45,27 @@ GSPREAD_SCOPE = [
     "https://www.googleapis.com/auth/drive",
 ]
 
+GSPREAD_NAME = "marcion-crum-parser"
+
+argparser = argparse.ArgumentParser(
+    description="Parse and process the Marcion digital Coptic database,"
+    "which is in turn based on the Crum Coptic dictionary."
+)
+
 argparser.add_argument(
     "--gspread_credentials_json",
     type=str,
     help="Credentials file, used to write output to google sheet.",
 )
-
-argparser.add_argument(
-    "--gspread_name",
-    type=str,
-    default="marcion-crum-parser",
-    help="Name of the Google sheet to open / create."
-    "If opening a sheet with this name fails, will try to create one instead.",
-)
-
 argparser.add_argument(
     "--gspread_owner",
     type=str,
     help="In case a new sheet is created, assign this as the owner of the sheet.",
 )
 
-# EPUB arguments.##############################################################
-argparser.add_argument(
-    "--inflect_dialects",
-    type=str,
-    nargs="+",
-    default=["B"],
-    help="Generate inflections and a Kindle dictionary for each dialect in"
-    " this list.",
-)
-
-argparser.add_argument(
-    "--cover",
-    type=str,
-    help="Path to a file containing the cover image for EPUB.",
-    default="dictionary/marcion.sourceforge.net/data/crum/Crum/Crum.png",
-)
-
-global args
-
 # Main.########################################################################
 
-DEFINITION = """(<b>{type}</b>) <b>Crum: </b> {crum} <hr/> {meaning} <hr/> {word} <hr/> {derivations} <hr/>"""
+DEFINITION = "(<b>{type}</b>) <b>Crum: </b> {crum} <hr/> {meaning} <hr/> {word} <hr/> {derivations} <hr/>"
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -145,23 +79,25 @@ def series_to_int(series: pd.Series) -> list[int]:
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def write(df: pd.DataFrame, name: str) -> None:
-    utils.write_tsvs(df, os.path.join(args.output, "tsvs", name + ".tsvs"))
-    if not args.gspread_owner:
+def write(
+    df: pd.DataFrame, name: str, gspread_credentials_json: str, gspread_owner: str
+) -> None:
+    utils.write_tsvs(df, os.path.join(OUTPUT, "tsvs", name + ".tsvs"))
+    if not gspread_owner:
         return
 
     # TODO: Parameterize to make it possible to write to multiple sheets at the
     # same time, particularly for roots and derivations.
     credentials = ServiceAccountCredentials.from_json_keyfile_name(
-        args.gspread_credentials_json, GSPREAD_SCOPE
+        gspread_credentials_json, GSPREAD_SCOPE
     )
     client = gspread.authorize(credentials)
 
     try:
-        spreadsheet = client.open(args.gspread_name)
+        spreadsheet = client.open(GSPREAD_NAME)
     except Exception:
-        spreadsheet = client.create(args.gspread_name)
-        spreadsheet.share(args.gspread_owner, perm_type="user", role="owner")
+        spreadsheet = client.create(GSPREAD_NAME)
+        spreadsheet.share(gspread_owner, perm_type="user", role="owner")
 
     spreadsheet.get_worksheet(0).update(
         [df.columns.values.tolist()] + df.values.tolist()
@@ -169,16 +105,15 @@ def write(df: pd.DataFrame, name: str) -> None:
 
 
 def main() -> None:
-    global args
     args = argparser.parse_args()
     # Process roots.
-    roots = utils.read_tsv(args.coptwrd_tsv)
+    roots = utils.read_tsv(COPTWRD_TSV)
     process_data(roots, strict=True)
     parser.verify(constants.ROOTS_REFERENCE_COUNT * 2)
     parser.reset()
 
     # Process derivations.
-    derivations = utils.read_tsv(args.coptdrv_tsv)
+    derivations = utils.read_tsv(COPTDRV_TSV)
     process_data(derivations, strict=False)
     parser.verify(constants.DERIVATIONS_REFERENCE_COUNT * 2)
     parser.reset()
@@ -187,20 +122,20 @@ def main() -> None:
     build_trees(roots, derivations)
 
     # Write the roots.
-    roots.sort_values(by=args.sort_roots, key=series_to_int, inplace=True)
-    write(roots, "roots")
+    roots.sort_values(by=SORT_ROOTS, key=series_to_int, inplace=True)
+    write(roots, "roots", args.gspread_credentials_json, args.gspread_owner)
 
     # Write the derivations.
-    derivations.sort_values(by=args.sort_derivations, key=series_to_int, inplace=True)
-    write(derivations, "derivations")
+    derivations.sort_values(by=SORT_DERIVATIONS, key=series_to_int, inplace=True)
+    write(derivations, "derivations", args.gspread_credentials_json, args.gspread_owner)
 
     # Write EPUB Kindle dictionaries.
-    for d in args.inflect_dialects:
+    for d in INFLECT_DIALECTS:
         k = kindle.dictionary(
             title="A Coptic Dictionary",
             author="W. E. Crum",
             identifier=f"dialect-{d}",
-            cover_path=args.cover,
+            cover_path=COVER,
         )
         for _, row in roots.iterrows():
             key = row["key"]
@@ -228,7 +163,7 @@ def main() -> None:
                 inflections=inflections,
             )
             k.add_entry(entry)
-        k.write_pre_mobi(os.path.join(args.output, "mobi", f"dialect-{d}"))
+        k.write_pre_mobi(os.path.join(OUTPUT, "mobi", f"dialect-{d}"))
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -347,7 +282,7 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         insert(CRUM_COL, "-link", constants.CRUM_PAGE_FMT.format(key=crum))
         insert(CRUM_COL, "-page", crum_page)
         insert(CRUM_COL, "-column", crum_column)
-        for d in args.filter_dialects:
+        for d in FILTER_DIALECTS:
             subset = [w for w in word if w.is_dialect(d, undialected_is_all=True)]
             entry = "\n".join(
                 w.string(
@@ -363,7 +298,7 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
             insert("key", "-next", keysmith.next(int(row["key"])))
             insert("key", "-prev", keysmith.prev(int(row["key"])))
         # TODO: Add inflections from the root to the derivations.
-        for d in args.inflect_dialects:
+        for d in INFLECT_DIALECTS:
             inflections = []
             for w in word:
                 if not w.is_dialect(d, undialected_is_all=True):
