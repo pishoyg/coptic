@@ -100,7 +100,7 @@ def writing_path(output_format, file_name):
     parts = list(filter(None, parts))
     path = os.path.join(*parts)
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    utils.info("Writing", path)
+    utils.info("Wrote", path)
     return path
 
 
@@ -292,8 +292,7 @@ def write_tsv(df):
 def write_txt(lang: str, column: pd.Series) -> None:
     path = writing_path("txt", f"{lang}.txt")
     content = "\n".join(filter(None, column))
-    with open(path, "w") as f:
-        f.write(content + "\n")
+    utils.write(content + "\n", path)
 
 
 def html_head(title=""):
@@ -348,8 +347,7 @@ def write_html(html, books, html_format):
         path = writing_path(html_format, lang + ".html")
         out = "\n".join(out)
         out = prettify_html(out)
-        with open(path, "w") as f:
-            f.write(out)
+        utils.write(out, path)
 
 
 def write_epub(html, books, epub_format):
@@ -402,6 +400,7 @@ def write_epub(html, books, epub_format):
 
         path = writing_path(epub_format, lang + ".epub")
         epub.write_epub(path, kindle)
+        utils.info("Wrote", path)
 
 
 def process_sources(books):
@@ -428,8 +427,7 @@ def process_sources(books):
     out = prettify_html("\n".join(out))
     out = html_head(title="Sources") + html_body(out)
     path = writing_path("", "sources.html")
-    with open(path, "w") as o:
-        o.write(out)
+    utils.info("Wrote", path)
 
 
 def main():

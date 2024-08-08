@@ -6,6 +6,8 @@ import shutil
 import type_enforced
 from ebooklib import epub
 
+import utils
+
 CREATOR = "pishoybg@gmail.com"
 # "cop" is not supported.
 # See https://kdp.amazon.com/en_US/help/topic/G200673300.
@@ -308,3 +310,4 @@ class dictionary:
         for filename, content in filename_to_content.items():
             with open(os.path.join(dir, filename), "w") as f:
                 f.write(content)
+        utils.info("Wrote", dir)
