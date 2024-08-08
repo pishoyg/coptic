@@ -70,8 +70,8 @@ class structured_word:
         self._types: list[type] = types
         self._references: list[str] = references
         self._root_type: typing.Optional[type] = root_type
-        self._attested: list[bool] = []
-        normalize_attestations = normalize
+        self._assumed: list[bool] = []
+        normalize_assumed = normalize
 
         if normalize:
             self._spellings = sum(
@@ -79,10 +79,10 @@ class structured_word:
                 [],
             )
 
-        if normalize_attestations:
-            self._attested = [self._is_attested(s) for s in self._spellings]
+        if normalize_assumed:
+            self._assumed = [self._is_assumed(s) for s in self._spellings]
             self._spellings = [
-                s if a else s[1:-1] for s, a in zip(self._spellings, self._attested)
+                s[1:-1] if a else s for s, a in zip(self._spellings, self._assumed)
             ]
             for s in self._spellings:
                 # TODO: Remove the special case.
@@ -90,18 +90,18 @@ class structured_word:
                     continue
                 assert "(" not in s and ")" not in s
 
-    def _is_attested(self, spelling: str) -> bool:
+    def _is_assumed(self, spelling: str) -> bool:
         """
         N.B. Spellings passed are expected to have already been normalized from
         the presence of other types of parentheses.
         """
         # TODO: Remove the special case.
         if spelling == "ⲧⲣⲉ- (ⲉⲧⲣⲉ-, ⲡⲧⲣⲉ-)":
-            return True
-        if "(" not in spelling and ")" not in spelling:
-            return True
-        if spelling[0] == "(" and spelling[-1] == ")":
             return False
+        if "(" not in spelling and ")" not in spelling:
+            return False
+        if spelling[0] == "(" and spelling[-1] == ")":
+            return True
         raise ValueError(f"Unexpected parentheses in {spelling}")
 
     def _normalize_optional_letters(self, spelling: str) -> list[str]:
@@ -166,12 +166,12 @@ class structured_word:
         include_dialects: bool = True,
         include_references: bool = True,
         append_root_type: bool = False,
-        parenthesize_unattested: bool = True,
+        parenthesize_assumed: bool = True,
     ) -> str:
         d = ""
         if include_dialects and self._dialects:
             d = "({})".format(", ".join(self._dialects))
-        s = ", ".join(self.spellings(parenthesize_unattested))
+        s = ", ".join(self.spellings(parenthesize_assumed))
         t = " ".join(i.coptic_symbol() for i in self._types if i.append())
         if not t and append_root_type and self._root_type.append():
             t = self._root_type.coptic_symbol()
@@ -183,33 +183,29 @@ class structured_word:
     def dialects(self) -> list[str]:
         return self._dialects
 
-    def spellings(self, parenthesize_unattested: bool = True) -> list[str]:
-        if not parenthesize_unattested and not self._is_normalized_attestations():
+    def spellings(self, parenthesize_assumed: bool = True) -> list[str]:
+        if not parenthesize_assumed and not self._is_normalized_assumed():
             raise ValueError(
-                "Can not remove attestation parentheses from unnormalized words!"
+                "Can not remove assumed-spelling parentheses from unnormalized words!"
             )
-        if not self._is_normalized_attestations():
-            # The attestation parentheses are already there.
+        if not self._is_normalized_assumed():
+            # The assumed-spelling parentheses are already there.
             return self._spellings
-        if not parenthesize_unattested:
+        if not parenthesize_assumed:
             return self._spellings
-        assert len(self._spellings) == len(self._attested)
-        return [s if a else f"({s})" for s, a in zip(self._spellings, self._attested)]
+        assert len(self._spellings) == len(self._assumed)
+        return [f"({s})" if a else s for s, a in zip(self._spellings, self._assumed)]
 
-    def _is_normalized_attestations(self) -> bool:
+    def _is_normalized_assumed(self) -> bool:
         if not self._spellings:
             # This word has no spellings to be normalized!
             # TODO: Not a clean check! Revisit!
             return True
-        return bool(self._attested)
-
-    def attested(self) -> list[bool]:
-        assert self._is_normalized_attestations()
-        return self._attested
+        return bool(self._assumed)
 
     def lemma(self) -> str:
         # TODO: Use a smart heuristic to select the lemma form.
-        for s in self.spellings(parenthesize_unattested=False):
+        for s in self.spellings(parenthesize_assumed=False):
             if s:
                 return s
         return ""

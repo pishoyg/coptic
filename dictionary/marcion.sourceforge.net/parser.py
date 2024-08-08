@@ -332,7 +332,7 @@ def _parse_english(line: str) -> str:
             out.append(
                 lexical.structured_word([], s, t, [], None, normalize=True).string(
                     include_references=True,
-                    parenthesize_unattested=True,
+                    parenthesize_assumed=True,
                 )
             )
 

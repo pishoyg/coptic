@@ -304,7 +304,7 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
                 if not w.is_dialect(d, undialected_is_all=True):
                     continue
                 t = w.inflect_type()
-                for s in w.spellings(parenthesize_unattested=False):
+                for s in w.spellings(parenthesize_assumed=False):
                     # TODO: The output of parsing should have pure spellings
                     # anyway.
                     s = constants.PURE_COPTIC_RE.search(s)
@@ -361,7 +361,7 @@ def dawoud_sort_key(words: list[lexical.structured_word]) -> str:
         for w in words:
             if not w.is_dialect(d):
                 continue
-            for s in w.spellings(parenthesize_unattested=False):
+            for s in w.spellings(parenthesize_assumed=False):
                 # This spelling has at least one Coptic letter.
                 if not constants.COPTIC_LETTER_RE.search(s):
                     continue
