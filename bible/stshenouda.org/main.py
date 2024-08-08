@@ -3,7 +3,6 @@ import json
 import os
 import re
 
-import bs4
 import json5
 import pandas as pd
 from ebooklib import epub
@@ -66,11 +65,6 @@ def normalize(txt):
     # for Bohairic is the Combining Overline, this may not be the case for
     # Sahidic for example.
     return txt.replace(chr(0xFE26), chr(0x0305))
-
-
-def prettify_html(html):
-    soup = bs4.BeautifulSoup(html, features="html.parser")
-    return soup.prettify()
 
 
 def json_loads(t):
@@ -299,7 +293,6 @@ def write_html(html, books, html_format):
         out.append("</body>")
         path = writing_path(html_format, lang + ".html")
         out = "\n".join(out)
-        out = prettify_html(out)
         utils.write(out, path)
 
 
