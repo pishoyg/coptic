@@ -1,4 +1,5 @@
 import argparse
+import html
 import json
 import os
 import re
@@ -142,6 +143,7 @@ def find_all(s: str, p: str):
 
 @type_enforced.Enforcer(enabled=ENFORCED)
 def recolor(v: str, verse: dict) -> str:
+    v = html.escape(v)
     if "coloredWords" not in verse:
         return v
     ranges: list[RangeColor] = []
