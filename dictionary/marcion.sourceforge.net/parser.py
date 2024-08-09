@@ -158,12 +158,16 @@ def parse_word_cell(
 
     words = []
     if strict and not constants.DIALECTS_RE.search(line):
+        d = []
         s, t, r, line = _munch_and_parse_spellings_types_and_references(
             line, strict, detach_types, use_coptic_symbol
         )
         # In strict mode, an undialected entry exists on its own.
         assert not line
-        return [lexical.structured_word([], s, t, r, root_type, normalize=normalize)]
+        # Undialected and Ⳉ, it's Akhmimic!
+        if any("ⳉ" in spelling for spelling in s):
+            d = ["A"]
+        return [lexical.structured_word(d, s, t, r, root_type, normalize=normalize)]
 
     while line:
         # Parse the dialects.
