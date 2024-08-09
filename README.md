@@ -205,6 +205,9 @@ We don't assign priorities to individual issues, although, of course, within a
 milestone, some issues will be higher-priority than others, and some issues
 will be prerequisites for others. But we rely on our own memory for those.
 
+We also don't track issue sizes, or estimates for how much time they take.
+Again, we rely on our memory for that.
+
 There is also a generic developer experience milestone, that is somewhat
 long-living, and has been growing to be synonymous to the `dev` label. Although
 in cases when a `dev` task pertains to another milestone, the other milestone
