@@ -50,7 +50,7 @@ test: git_add_precommit_run
 test_1: git_add_precommit_run_1
 
 .PHONY: publish
-publish: anki_publish mobi_publish epub_publish site_publish
+publish: anki_publish epub_publish site_publish
 
 .PHONY: stats
 stats: stats_row
@@ -191,6 +191,9 @@ flashcards_kellia_html: FORCE
 		--tsvs_mask "" "" ""
 
 # KINDLE RULES
+# TODO: Restore the rules (with appropriate paths) once the pipeline is
+# designed.
+ifeq ("true", "false")
 kindle: FORCE
 	./archive/kindlegen/kindlegen \
 	-gen_ff_mobi7 \
@@ -202,6 +205,12 @@ mobi_publish:
 	cp \
 	"dictionary/marcion.sourceforge.net/data/output/mobi/dialect-B/dialect-B.mobi" \
 	"$${KINDLE_DIR}"
+else
+kindle: FORCE
+	echo "Work in prgress!"
+mobi_publish:
+	echo "Work in prgress!"
+endif
 
 # SITE RULES
 
