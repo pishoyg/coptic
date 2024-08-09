@@ -36,7 +36,7 @@ install: pip_install python_install precommit_install bin_install
 
 # generate_1 rules are prerequisites for generate_2 rules.
 .PHONY: generate_1
-generate_1: bible copticsite crum crum_dawoud crum_img kellia kellia_analysis
+generate_1: bible copticsite crum crum_dawoud crum_notes crum_img kellia kellia_analysis
 
 .PHONY: generate_2
 generate_2: flashcards kindle
