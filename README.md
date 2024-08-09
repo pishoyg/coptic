@@ -17,10 +17,7 @@
   - [`data/`](#data)
   - [`vault.sh`](#vaultsh)
   - [Planning](#planning)
-    - [Priorities](#priorities)
-    - [Nature of Tasks](#nature-of-tasks)
-    - [Audience](#audience)
-  - [Guidelines](#guidelines)
+  - [Technical Guidelines](#technical-guidelines)
 - [Credits](#credits)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -189,66 +186,49 @@ You need your own version of `vault.sh` in order to be able to run all the
 ### Planning
 
 We use GitHub to track our TODO's and plans. See [
-https://github.com/pishoyg/coptic/issues](https://github.com/pishoyg/coptic/issues).
+Issues](https://github.com/pishoyg/coptic/issues).
 
-Here are some information about the labels and conventions:
+To assist our planning, every issue must belong to a milestone. See [
+Milestone](https://github.com/pishoyg/coptic/milestones/).
 
-*N.B. When in doubt, it is safer to use a higher priority.*
+All issues should be labeled. See [
+Labels](https://github.com/pishoyg/coptic/labels).
 
-*N.B. We can have at most one label from each category.*
+When it comes to prioritization, generally speaking, we assign priorities to
+milestones, and those dictate the priorities of their child issues.
 
-#### Priorities
+Milestone priorities are assigned using due dates. Milestones help make
+long-term plans.
+Their count should be in a small order of magnitude to make this possible.
 
-- `p-1`: Ideas that have been proposed, but have not yet been assessed for
-impact or feasibility. These should be triaged *soon*, because they could
-potentially change other plans and priorities.
+We don't assign priorities to individual issues, although, of course, within a
+milestone, some issues will be higher-priority than others, and some issues
+will be prerequisites for others. But we rely on our own memory for those.
 
-   The action that these items need is not implementation or execution, it's
-   triage or contemplation. Once this is done, they should move to one of the
-   executable categories below before they get executed.
+There is also a generic developer experience milestone, that is somewhat
+long-living, and has been growing to be synonymous to the `dev` label. Although
+in cases when a `dev` task pertains to another milestone, the other milestone
+trumps the developer experience milestone.
 
-- `p0`: Tasks that should be done _as soon as possible_. These should be the
-ones that you look up the next time you log in. They generally belong to one of
-two categories:
+We assign the following categories of labels to issues:
 
-   - Critical coding / documentation tasks, essential for the integrity of
-     the project. Bug fixes, major blockers, vulnerabilities, ...
-   - Items that you were recently working on and are still fresh in your mind,
-   or small leftover items that seal off a big project or task that you have
-   been working on for a while! In other words, it's items that have a
-   disproportionately small cost-to-benefit ratio.
+- Nature of Tasks
 
-- `p2`: Thought-through tasks that have been concluded to be both impactful and
-feasible. These are not general goals, but concrete tasks. They do not need
-triage or contemplation, we've already decided that we want to implement them.
+  - How can the task be achieved? Coding? Diplomacy? Manual data
+  collection? Planning? Writing Documentation?
+  - Please note the following:
+    - A coding task that facilitates data collection is a coding task, not a
+    data collection task.
+    - We don't assign a coding label, because that includes most tasks. A task
+      that doesn't have a nature label should be a coding task.
 
-In other words, these are items that we _will_ do.
+- Audience
 
-- `p3`: Thought-through tasks that are either less impactful or less feasible.
+  - Is the issue user-facing or developer-oriented?
 
-In other words, these are items that we _want_ to do.
+- We also have a generic `app` label and `bug` label.
 
-- `p4`: This is the backlog. It includes ideas that have not yet been thought
-through, but from a first glance, don't show promise. These shouldn't be
-implemented, but occasionally contemplated, and then either discarded, or
-promoted to a higher priority. If there is something that you already deemed
-desirable, and having a decent degree of impact, then it shouldn't be assigned
-this priority.
-
-In other words, these are items that we _might_ do.
-
-#### Nature of Tasks
-
-This is somewhat self-explanatory, but we define some labels below:
-
-- `data collection`: Manual data collection, rather than coding. Coding tasks
-that aim to facilitate data collection tasks do NOT belong in this category.
-
-#### Audience
-
-Either developer-oriented or user-oriented improvements.
-
-### Guidelines
+### Technical Guidelines
 
 1. Add in-code assertions and checks. This is our first line of defense, and
    has been the champion when it comes to ensuring correctness and catching
