@@ -1,3 +1,4 @@
+import re
 import typing
 
 import deck
@@ -9,6 +10,8 @@ CRUM_A_FMT = '<a href="https://coptot.manuscriptroom.com/crum-coptic-dictionary?
 PARENT_URL = "https://pishoyg.github.io/crum"
 HOME = "https://github.com/pishoyg/coptic/"
 EMAIL = "pishoybg@gmail.com"
+
+COPTIC_WORD_RE = re.compile("([Ⲁ-ⲱϢ-ϯⳈⳉ]+)")
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -35,6 +38,16 @@ def crum(
             col_name,
             line_br=line_br,
             force=force,
+        )
+
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
+    # TODO: This replaces all Coptic words, regardless of whether they
+    # represent plain text. Coptic text that occurs inside a tag (for example
+    # as a tag property) would still acquire this hyperlink.
+    def cdo(text: str) -> str:
+        return COPTIC_WORD_RE.sub(
+            r'<a class="nostyle" href="https://coptic-dictionary.org/results.cgi?quick_search=\1">\1</a>',
+            text,
         )
 
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -82,110 +95,102 @@ def crum(
         ".right { float:right; }"
         ".left { float: left; }"
         ".center { text-align: center; }"
-        ".nightMode .bordered { border:1px solid white; }",
+        ".nightMode .bordered { border:1px solid white; }"
+        "a.nostyle:link { text-decoration: inherit; color: inherit; }"
+        "a.nostyle:visited { text-decoration: inherit; color: inherit; }"
+        "a.nostyle:hover { text-decoration: underline; color: blue; }",
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
         key=roots_col("key", force=True),
-        front=create_front(),
-        back=field.cat(
-            # Type and Crum page.
+        front=field.apl(cdo, create_front()),
+        back=field.apl(
+            cdo,
             field.cat(
-                field.fmt(
-                    "(<b>{type_parsed}</b>)",
-                    {"type_parsed": roots_col("type-parsed", force=True)},
+                # Type and Crum page.
+                field.cat(
+                    field.fmt(
+                        "(<b>{type_parsed}</b>)",
+                        {"type_parsed": roots_col("type-parsed", force=True)},
+                    ),
+                    field.fmt(
+                        '<span class="right"><b>Crum: </b><a href="{crum_link}">{crum}</a></span>',
+                        {
+                            "crum_link": roots_col("crum-link", force=True),
+                            "crum": roots_col("crum", force=True),
+                        },
+                    ),
+                    "<br/>",
                 ),
-                field.fmt(
-                    '<span class="right"><b>Crum: </b><a href="{crum_link}">{crum}</a></span>',
-                    {
-                        "crum_link": roots_col("crum-link", force=True),
-                        "crum": roots_col("crum", force=True),
-                    },
+                # Meaning.
+                field.aon(
+                    roots_col("en-parsed-link-light-greek", line_br=True, force=False),
+                    "<br/>",
                 ),
-                "<br/>",
-            ),
-            # Meaning.
-            field.aon(
-                roots_col("en-parsed-link-light-greek", line_br=True, force=False),
-                "<br/>",
-            ),
-            # Image.
-            field.img(
-                keys=field.tsvs(
-                    tsvs="dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs",
-                    column_name="key",
-                ),
-                # Although the same result can be obtained using
-                # glob.glob(f"dictionary/marcion.sourceforge.net/data/img-300/{key}-*")
-                # we use this method in order to avoid using the computationally expensive
-                # glob.glob.
-                get_paths=explanatory_images.get,
-                sort_paths=field.sort_semver,
-                fmt_args=lambda path: {
-                    "caption": field.stem(path),
-                    "alt": field.stem(path),
-                },
-                caption=True,
-                force=False,
-            ),
-            # Editor's notes.
-            field.aon(
-                "<i>Editor's Note: </i>",
-                field.tsv(
-                    file_path="dictionary/marcion.sourceforge.net/data/notes/notes.tsv",
-                    column_name="notes",
-                    line_br=True,
-                    force=False,
-                ),
-                "<br/>",
-            ),
-            # Horizontal line.
-            "<hr/>",
-            # Full entry.
-            roots_col("word-parsed-no-ref", line_br=True, force=True),
-            # Derivations.
-            roots_col("derivations-table", line_br=True, force=False),
-            # Crum's pages.
-            field.cat(
-                "<hr/>",
+                # Image.
                 field.img(
                     keys=field.tsvs(
                         tsvs="dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs",
-                        column_name="crum-pages",
-                        force=False,  # TODO: Why is this not enforced? Is it the Nag Hammadi words?
+                        column_name="key",
                     ),
-                    get_paths=lambda page_ranges: [
-                        f"dictionary/marcion.sourceforge.net/data/crum/{k+20}.png"
-                        for k in field.page_numbers(page_ranges=page_ranges)
-                    ],
+                    # Although the same result can be obtained using
+                    # glob.glob(f"dictionary/marcion.sourceforge.net/data/img-300/{key}-*")
+                    # we use this method in order to avoid using the computationally expensive
+                    # glob.glob.
+                    get_paths=explanatory_images.get,
                     sort_paths=field.sort_semver,
                     fmt_args=lambda path: {
-                        "caption": CRUM_A_FMT.format(
-                            page_id=int(field.stem(path)) - 20
-                        ),
-                        "alt": int(field.stem(path)) - 20,
+                        "caption": field.stem(path),
+                        "alt": field.stem(path),
                     },
                     caption=True,
                     force=False,
                 ),
-            ),
-            # Dawoud's pages.
-            field.aon(
-                "<hr/>",
-                '<span class="right">',
-                "<b>Dawoud: </b>",
-                field.grp(
-                    keys=roots_col("key", force=True),
-                    group_by=dawoud_col("key", force=True),
-                    selected=field.xor(
-                        dawoud_col("dawoud-pages-redone", force=False),
-                        dawoud_col("dawoud-pages", force=False),
+                # Editor's notes.
+                field.aon(
+                    "<i>Editor's Note: </i>",
+                    field.tsv(
+                        file_path="dictionary/marcion.sourceforge.net/data/notes/notes.tsv",
+                        column_name="notes",
+                        line_br=True,
+                        force=False,
                     ),
-                    force=False,
-                    unique=True,
+                    "<br/>",
                 ),
-                "</span>",
-                "<br/>",
-                field.img(
+                # Horizontal line.
+                "<hr/>",
+                # Full entry.
+                roots_col("word-parsed-no-ref", line_br=True, force=True),
+                # Derivations.
+                roots_col("derivations-table", line_br=True, force=False),
+                # Crum's pages.
+                field.cat(
+                    "<hr/>",
+                    field.img(
+                        keys=field.tsvs(
+                            tsvs="dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs",
+                            column_name="crum-pages",
+                            force=False,  # TODO: Why is this not enforced? Is it the Nag Hammadi words?
+                        ),
+                        get_paths=lambda page_ranges: [
+                            f"dictionary/marcion.sourceforge.net/data/crum/{k+20}.png"
+                            for k in field.page_numbers(page_ranges=page_ranges)
+                        ],
+                        sort_paths=field.sort_semver,
+                        fmt_args=lambda path: {
+                            "caption": CRUM_A_FMT.format(
+                                page_id=int(field.stem(path)) - 20
+                            ),
+                            "alt": int(field.stem(path)) - 20,
+                        },
+                        caption=True,
+                        force=False,
+                    ),
+                ),
+                # Dawoud's pages.
+                field.aon(
+                    "<hr/>",
+                    '<span class="right">',
+                    "<b>Dawoud: </b>",
                     field.grp(
                         keys=roots_col("key", force=True),
                         group_by=dawoud_col("key", force=True),
@@ -196,71 +201,85 @@ def crum(
                         force=False,
                         unique=True,
                     ),
-                    get_paths=lambda page_ranges: [
-                        f"dictionary/copticocc.org/dawoud-D100/{k+16}.jpg"
-                        for k in field.page_numbers(page_ranges=page_ranges)
-                    ],
-                    fmt_args=lambda path: {
-                        "caption": int(field.stem(path)) - 16,
-                        "alt": int(field.stem(path)) - 16,
-                    },
-                    caption=True,
-                    force=False,
+                    "</span>",
+                    "<br/>",
+                    field.img(
+                        field.grp(
+                            keys=roots_col("key", force=True),
+                            group_by=dawoud_col("key", force=True),
+                            selected=field.xor(
+                                dawoud_col("dawoud-pages-redone", force=False),
+                                dawoud_col("dawoud-pages", force=False),
+                            ),
+                            force=False,
+                            unique=True,
+                        ),
+                        get_paths=lambda page_ranges: [
+                            f"dictionary/copticocc.org/dawoud-D100/{k+16}.jpg"
+                            for k in field.page_numbers(page_ranges=page_ranges)
+                        ],
+                        fmt_args=lambda path: {
+                            "caption": int(field.stem(path)) - 16,
+                            "alt": int(field.stem(path)) - 16,
+                        },
+                        caption=True,
+                        force=False,
+                    ),
                 ),
-            ),
-            # Audio.
-            # TODO: Label the per-dialect audios, like you did for the front.
-            # If this deck contains multiple dialects, it won't be clear for
-            # the user which audios belong to which dialect!
-            # Note: The use of nested all-or-nothing and concatenate fields
-            # here is intentional. It may not be obvious now, but this
-            # structure will be necessary if we want to include more audio
-            # authors.
-            field.aon(
-                "<hr/>",
-                field.cat(
-                    # Pishoy's pronunciation.
-                    field.aon(
-                        "Pishoy: ",
-                        field.cat(
-                            *[
-                                field.snd(
-                                    keys=field.tsvs(
-                                        tsvs="dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs",
-                                        column_name="key",
-                                    ),
-                                    get_paths=pronunciations[col].get,
-                                    sort_paths=sorted,
-                                    force=False,
-                                )
-                                for col in dialect_cols
-                            ],
+                # Audio.
+                # TODO: Label the per-dialect audios, like you did for the front.
+                # If this deck contains multiple dialects, it won't be clear for
+                # the user which audios belong to which dialect!
+                # Note: The use of nested all-or-nothing and concatenate fields
+                # here is intentional. It may not be obvious now, but this
+                # structure will be necessary if we want to include more audio
+                # authors.
+                field.aon(
+                    "<hr/>",
+                    field.cat(
+                        # Pishoy's pronunciation.
+                        field.aon(
+                            "Pishoy: ",
+                            field.cat(
+                                *[
+                                    field.snd(
+                                        keys=field.tsvs(
+                                            tsvs="dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs",
+                                            column_name="key",
+                                        ),
+                                        get_paths=pronunciations[col].get,
+                                        sort_paths=sorted,
+                                        force=False,
+                                    )
+                                    for col in dialect_cols
+                                ],
+                            ),
                         ),
                     ),
                 ),
-            ),
-            # Footer.
-            field.cat(
-                # TODO: Update the home page, it will no longer be the repo.
-                f"""<table class="bordered" style="width: 100%; table-layout: fixed;"> <tr> <td><a href="{HOME}">Home</a></td> <td>""",
-                field.aon(
-                    f'<a href="{PARENT_URL}/',
-                    roots_col("key-prev", force=False),
-                    '.html">prev</a>',
+                # Footer.
+                field.cat(
+                    # TODO: Update the home page, it will no longer be the repo.
+                    f"""<table class="bordered" style="width: 100%; table-layout: fixed;"> <tr> <td><a href="{HOME}">Home</a></td> <td>""",
+                    field.aon(
+                        f'<a href="{PARENT_URL}/',
+                        roots_col("key-prev", force=False),
+                        '.html">prev</a>',
+                    ),
+                    field.fmt(
+                        """ </td> <td><b>Key: </b><a href="{key_link}">{key}</a></td> <td>""",
+                        {
+                            "key": roots_col("key", force=True),
+                            "key_link": roots_col("key-link", force=True),
+                        },
+                    ),
+                    field.aon(
+                        f'<a href="{PARENT_URL}/',
+                        roots_col("key-next", force=False),
+                        '.html">next</a>',
+                    ),
+                    f"""</td> <td><a href="mailto:{EMAIL}">Contact</a></td> </tr> </table>""",
                 ),
-                field.fmt(
-                    """ </td> <td><b>Key: </b><a href="{key_link}">{key}</a></td> <td>""",
-                    {
-                        "key": roots_col("key", force=True),
-                        "key_link": roots_col("key-link", force=True),
-                    },
-                ),
-                field.aon(
-                    f'<a href="{PARENT_URL}/',
-                    roots_col("key-next", force=False),
-                    '.html">next</a>',
-                ),
-                f"""</td> <td><a href="mailto:{EMAIL}">Contact</a></td> </tr> </table>""",
             ),
         ),
         title=roots_col("word-title"),
