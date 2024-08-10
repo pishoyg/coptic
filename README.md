@@ -18,6 +18,7 @@
   - [`vault.sh`](#vaultsh)
   - [Planning](#planning)
   - [Technical Guidelines](#technical-guidelines)
+- [Data Collection](#data-collection)
 - [Credits](#credits)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -269,6 +270,15 @@ We assign the following categories of labels to issues:
 
 1. Keep your code `grep`-able, especially when it comes to the constants used
    across directories.
+
+## Data Collection
+
+Images:
+- Here are some examples of words that are very difficult to represent using
+images, but icons have come for the rescue:
+  - https://pishoyg.github.io/crum/2236.html
+  - https://pishoyg.github.io/crum/89.html
+  - https://pishoyg.github.io/crum/2189.html
 
 ## Credits
 
