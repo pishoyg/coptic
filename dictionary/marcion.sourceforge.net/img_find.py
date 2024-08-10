@@ -262,19 +262,31 @@ def main():
         open_images(g)
         q = query(row[MEANING_COL])
         subprocess.run(["open", "-a", args.browser, q, row[LINK_COL]])
-        utils.info("Key:", row[KEY_COL])
-        utils.info("Link:", row[LINK_COL])
-        utils.info("Existing:", g)
 
         while True:
             # Force read a valid sense, or no sense at all.
+            utils.info("Key:", row[KEY_COL])
+            utils.info("Link:", row[LINK_COL])
+            utils.info("Existing:", g)
+            utils.info("Downloads:", get_downloads())
+            utils.info("Sources:", sources)
             sense = input(
-                f"Enter sense number, 's' to skip, 'cs' to clear sources, an"
-                f" image URL to retrieve said image, a search query to use"
-                f" `thenounproject`, '=${{SOURCE}}' to populate the source for"
-                f" the only image in {args.downloads} that is missing a"
-                f" source, or source(${{PATH}})=${{SOURCE}} to populate the"
-                f" source for a given image.\n"
+                "\n".join(
+                    [
+                        "Enter,",
+                        "- an image URL to retrieve said image,",
+                        "- 'nount/${QUERY}' to query `thenounproject`,",
+                        "- 'wiki/${PAGE}' to open a Wikipedia page,",
+                        "- 'source=${SOURCE}' to populate the source for the only"
+                        f" image in {args.downloads} that is missing a source,",
+                        "- source(${PATH})=${SOURCE} to populate the source for a given image:",
+                        "- 's' to skip,",
+                        "- 'ss' to force-skip,",
+                        "- 'cs' to clear sources, or",
+                        "- sense number to initiate transfer",
+                        "",
+                    ]
+                )
             )
             sense = sense.strip()
             if not sense:
@@ -285,7 +297,7 @@ def main():
                 files = get_downloads()
                 if files:
                     utils.error(
-                        f"You can't skip with a dirty downloads directory. Please remove {files}."
+                        "You can't skip with a dirty downloads directory:", files
                     )
                     continue
                 # We clear the sources!
@@ -303,12 +315,13 @@ def main():
                 utils.info("Sources cleared!")
                 continue
 
-            if sense.startswith("="):
+            if sense.startswith("source="):
                 files = get_downloads()
                 files = [f for f in files if f not in sources]
                 if len(files) != 1:
                     utils.error(
-                        f"Can't assign source because the number of new files != 1: {files}"
+                        "Can't assign source because the number of new files != 1:",
+                        files,
                     )
                     continue
                 sense = sense[1:]
@@ -318,6 +331,12 @@ def main():
                 sources[files[0]] = sense
                 continue
 
+            source_search = SOURCE_RE.search(sense)
+            if source_search:
+                sources[source_search.group(1)] = source_search.group(2)
+                continue
+            del source_search
+
             if sense.startswith("http"):
                 url = sense
                 headers: dict[str, str] = {}
@@ -326,35 +345,38 @@ def main():
                 retrieve(url, headers=headers)
                 continue
 
-            source_search = SOURCE_RE.search(sense)
-            if source_search:
-                sources[source_search.group(1)] = source_search.group(2)
+            if sense.lower().startswith("wiki/"):
+                subprocess.call(["open", "https://en.wikipedia.org/" + sense])
                 continue
-            del source_search
 
-            if not sense.isdigit():
+            if sense.lower().startswith("noun/"):
                 # This is likely a search query.
+                sense = sense[5:]
                 auth = requests_oauthlib.OAuth1(
                     args.thenounproject_key, args.thenounproject_secret
                 )
                 resp = requests.get(ICON_SEARCH_FMT.format(query=sense), auth=auth)
                 if not resp.ok:
-                    utils.error(resp.text)
+                    utils.error("", resp.text)
                     continue
                 resp = resp.json()
                 resp = resp["icons"]
                 if not resp:
-                    utils.error("Nothing found on thenounproject! :/")
+                    utils.error("Nothing found on thenounproject for:", sense)
                     continue
                 for icon in resp:
                     retrieve(icon["thumbnail_url"])
                 open_images(get_downloads())
                 continue
 
+            if not sense.isdigit():
+                utils.error("Can't make sense of", sense)
+                continue
+
             assert sense.isdigit()  # Sanity check.
             sense = int(sense)
             if sense <= 0:
-                utils.error("Sense must be a positive integer.")
+                utils.error("Sense must be a positive integer, got:", sense)
                 continue
 
             files = get_downloads()
@@ -362,14 +384,14 @@ def main():
             # Force size.
             invalid = invalid_size(files)
             if invalid:
-                utils.error(f"{invalid} are too small, please replace them.")
+                utils.error("Images are too small:", invalid)
                 continue
 
             # Force sources.
             absent_source = False
             for file in files:
                 if file not in sources:
-                    utils.error(f"Please populate the source for {file}")
+                    utils.error("Please populate the source for:", file)
                     absent_source = True
             if absent_source:
                 utils.info("Known sources:", sources)
@@ -386,17 +408,21 @@ def main():
                 continue
 
             # Verify the images.
-            i = "n"
+            i = ""
+            move = False
             while True:
                 open_images(files)
-                utils.info("Sense:", sense)
-                utils.info("Sources:", sources)
-                i = input("Looks good? (yes/no/sense)").lower()
+                i = input("Looks good? (y/n)").lower()
                 files = get_downloads()
-                if i.isdigit():
-                    sense = int(i)
-                if i in {"y", "yes"}:
+                if i in ["y", "yes"]:
+                    move = True
                     break
+                if i in ["n", "no"]:
+                    move = False
+                    break
+
+            if not move:
+                continue
 
             # Move the files.
             idx = get_max_idx(existing(), key, sense)
