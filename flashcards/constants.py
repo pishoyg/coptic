@@ -263,6 +263,7 @@ def crum(
                 f"""</td> <td><a href="mailto:{EMAIL}">Contact</a></td> </tr> </table>""",
             ),
         ),
+        title=roots_col("word-title"),
         force_front=force_front,
     )
 
@@ -304,8 +305,11 @@ def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
             ),
             col("Meaning", line_br=True, force=False),
         ),
+        title=field.txt("", force=False),
         force_front=False,
         force_back=False,
+        force_title=False,
+        key_for_title=True,
     )
 
 
@@ -359,6 +363,9 @@ def kellia(deck_name: str, deck_id: int, basename: str) -> deck.deck:
                 "</a>",
             ),
         ),
+        title=field.txt("", force=False),
+        force_title=False,
+        key_for_title=True,
     )
 
 

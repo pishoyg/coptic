@@ -44,6 +44,7 @@ class stats:
         self._no_key = 0
         self._no_front = 0
         self._no_back = 0
+        self._no_title = 0
         self._duplicate_key = 0
 
     def problematic(self, count: int, message: str) -> None:
@@ -57,6 +58,7 @@ class stats:
         self.problematic(self._no_key, "notes are missing a key.")
         self.problematic(self._no_front, "notes are missing a front.")
         self.problematic(self._no_back, "notes are missing a back.")
+        self.problematic(self._no_title, "notes are missing a title.")
         self.problematic(self._duplicate_key, "notes have duplicate keys.")
 
 
@@ -94,11 +96,14 @@ class deck:
         key: field.Field,
         front: field.Field,
         back: field.Field,
+        title: field.Field,
         force_key: bool = True,
         force_no_duplicate_keys: bool = True,
         force_front: bool = True,
         force_back: bool = True,
+        force_title: bool = True,
         back_for_front: bool = False,
+        key_for_title: bool = False,
     ) -> None:
         """Generate an Anki package.
 
@@ -115,7 +120,10 @@ class deck:
             Format of the card fronts. See description for syntax.
 
             back:
-            Format of the card backs. See description for syntax.,
+            Format of the card backs. See description for syntax.
+
+            title:
+            The "title" field. If absent, the keys will be used as title.
 
             css:
             Global CSS. Please notice that the front will be given the id
@@ -145,6 +153,7 @@ class deck:
         self.raw_keys: list[str] = []
         self.fronts: list[str] = []
         self.backs: list[str] = []
+        self.titles: list[str] = []
         self.length: int = field.num_entries(key, front, back)
 
         assert self.length != field.NO_LENGTH
@@ -154,11 +163,13 @@ class deck:
             k = key.next()
             f = front.next()
             b = back.next()
+            t = title.next()
 
             assert k or not force_key
             assert k not in seen_keys or not force_no_duplicate_keys
             assert f or not force_front
             assert b or not force_back
+            assert t or not force_title
 
             if not k:
                 # No key! Skip!
@@ -180,10 +191,18 @@ class deck:
                 # No back! Do nothing!
                 ss._no_back += 1
                 pass
+            if not t:
+                # No title!
+                ss._no_title += 1
+                if key_for_title:
+                    t = k
+                else:
+                    continue
 
             self.keys.append(f"{deck_name} - {k}")
             self.fronts.append(f)
             self.backs.append(b)
+            self.titles.append(t)
             ss._exported_notes += 1
             self.raw_keys.append(k)
 
