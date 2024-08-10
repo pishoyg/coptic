@@ -17,6 +17,9 @@
   - [`data/`](#data)
   - [`vault.sh`](#vaultsh)
   - [Planning](#planning)
+    - [Issues](#issues)
+    - [Milestones](#milestones)
+    - [Labels](#labels)
   - [Technical Guidelines](#technical-guidelines)
 - [Data Collection](#data-collection)
 - [Credits](#credits)
@@ -186,51 +189,68 @@ You need your own version of `vault.sh` in order to be able to run all the
 
 ### Planning
 
-We use GitHub to track our TODO's and plans. See [
+#### Issues
+
+- We use GitHub to track our TODO's and plans. See [
 Issues](https://github.com/pishoyg/coptic/issues).
 
-To assist our planning, every issue must belong to a milestone. See [
+#### Milestones
+
+- To assist our planning, every issue must belong to a milestone. See [
 Milestone](https://github.com/pishoyg/coptic/milestones/).
 
-All issues should be labeled. See [
-Labels](https://github.com/pishoyg/coptic/labels).
+- When it comes to prioritization, generally speaking, we **assign priorities to
+milestones**, and those dictate the priorities of their child issues.
 
-When it comes to prioritization, generally speaking, we assign priorities to
-milestones, and those dictate the priorities of their child issues.
-
-Milestone priorities are assigned using due dates. Milestones help make
-long-term plans.
-Their count should be in a small order of magnitude to make this possible.
-
-We don't assign priorities to individual issues, although, of course, within a
+- We don't assign priorities to individual issues, although, of course, within a
 milestone, some issues will be higher-priority than others, and some issues
 will be prerequisites for others. But we rely on our own memory for those.
 
-We also don't track issue sizes, or estimates for how much time they take.
+- Milestone priorities are assigned using **due dates**. Milestones help make
+long-term plans.
+Their count should be in a small order of magnitude to make this possible.
+
+- We also don't track issue sizes, or estimates for how much time they take.
 Again, we rely on our memory for that.
 
-There is also a generic developer experience milestone, that is somewhat
-long-living, and has been growing to be synonymous to the `dev` label. Although
+- There is also a generic developer experience milestone, that is somewhat
+perpetual, and has been growing to be synonymous to the `dev` label. Although
 in cases when a `dev` task pertains to another milestone, the other milestone
 trumps the developer experience milestone.
 
-We assign the following categories of labels to issues:
+- Some milestones can be *done* while having open issues. In this sense, every
+  milestone is perpetual, but we close it when it's good enough, and let the
+issues attached to it live and show us what room there is for improvement if
+any. We do this because it's a good option, and all the other options are
+pretty bad:
+  - Create another milestone for the tapering line of improvements.
+  - Let the issues get orphaned (not having a parent milestone).
+  - Keep the milestone open, although it's good enough.
 
-- Nature of Tasks
+  The developer experience milestone somewhat belongs to this category already.
 
-  - How can the task be achieved? Coding? Diplomacy? Manual data
-  collection? Planning? Writing Documentation?
-  - Please note the following:
-    - A coding task that facilitates data collection is a coding task, not a
-    data collection task.
-    - We don't assign a coding label, because that includes most tasks. A task
-      that doesn't have a nature label should be a coding task.
+#### Labels
 
-- Audience
+- All issues should be labeled. See [
+Labels](https://github.com/pishoyg/coptic/labels).
 
-  - Is the issue user-facing or developer-oriented?
+- We assign the following categories of labels to issues:
 
-- We also have a generic `app` label and `bug` label.
+   - Nature of Tasks
+
+     - How can the task be achieved? Coding? Diplomacy? Manual data
+     collection? Planning? Writing Documentation?
+     - Please note the following:
+       - A coding task that facilitates data collection is a coding task, not a
+       data collection task.
+       - We don't assign a coding label, because that includes most tasks. A task
+         that doesn't have a nature label should be a coding task.
+
+   - Audience
+
+     - Is the issue user-facing or developer-oriented?
+
+   - We also have a generic `app` label and `bug` label.
 
 ### Technical Guidelines
 
