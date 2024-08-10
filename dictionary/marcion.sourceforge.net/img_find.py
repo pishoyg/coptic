@@ -277,6 +277,7 @@ def main():
                         "- an image URL to retrieve said image,",
                         "- 'nount/${QUERY}' to query `thenounproject`,",
                         "- 'wiki/${PAGE}' to open a Wikipedia page,",
+                        "- 'key=${KEY}' to change the key"
                         "- 'source=${SOURCE}' to populate the source for the only"
                         f" image in {args.downloads} that is missing a source,",
                         "- source(${PATH})=${SOURCE} to populate the source for a given image:",
@@ -313,6 +314,10 @@ def main():
             if sense.lower() == "cs":
                 sources.clear()
                 utils.info("Sources cleared!")
+                continue
+
+            if sense.startswith("key="):
+                key = sense[4:]
                 continue
 
             if sense.startswith("source="):
