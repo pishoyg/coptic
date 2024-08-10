@@ -1,8 +1,13 @@
 #!/bin/bash
 
+set -e  # Exit upon encountering a failure.
+set -u  # Consider an undefined variable to be an error.
+
 # shellcheck disable=SC2034
 GREEN="\033[0;32m"
+# shellcheck disable=SC2034
 RED="\033[0;31m"
+# shellcheck disable=SC2034
 YELLOW="\033[0;33m"
 RESET_COLOR="\033[0m"
 
@@ -15,18 +20,22 @@ IMG_300_DIR="dictionary/marcion.sourceforge.net/data/img-300"
 IMG_SOURCES_DIR="dictionary/marcion.sourceforge.net/data/img-sources"
 
 VALID_EXTENSIONS=".avif .gif .jpeg .jpg .png .webp .svg"
+VALID_EXTENSIONS_300=".avif .gif .jpeg .jpg .webp"
 
 find_basenames () {
   find "${1}" -type f -exec basename {} \; | sort
 }
 
-find_stems () {
-  find_basenames "${1}" | grep -oE '^[^.]+' | sort
-}
-
 IMG_DIR_BASENAMES="$(find_basenames "${IMG_DIR}" | sort)"
 IMG_DIR_STEMS="$(echo "${IMG_DIR_BASENAMES}" | grep -oE '^[^.]+')"
 IMG_DIR_EXTENSIONS="$(echo "${IMG_DIR_BASENAMES}" | grep -oE '\.[^.]+$' | tr '[:upper:]' '[:lower:]' | sort | uniq)"
+
+IMG_300_DIR_BASENAMES="$(find_basenames "${IMG_300_DIR}" | sort)"
+IMG_300_DIR_STEMS="$(echo "${IMG_300_DIR_BASENAMES}" | grep -oE '^[^.]+')"
+IMG_300_DIR_EXTENSIONS="$(echo "${IMG_300_DIR_BASENAMES}" | grep -oE '\.[^.]+$' | tr '[:upper:]' '[:lower:]' | sort | uniq)"
+
+IMG_SOURCES_DIR_BASENAMES="$(find_basenames "${IMG_SOURCES_DIR}" | sort)"
+IMG_SOURCES_DIR_STEMS="$(echo "${IMG_SOURCES_DIR_BASENAMES}" | grep -oE '^[^.]+')"
 
 # Checking for unknown image extensions:
 # shellcheck disable=SC2086
@@ -39,6 +48,18 @@ if [ -n "${DIFF}" ]; then
   exit 1
 fi
 color GREEN "Extensions are valid."
+
+# Checking for unknown image extensions:
+# shellcheck disable=SC2086
+DIFF=$(comm -23 <(echo "${IMG_300_DIR_EXTENSIONS}" | uniq) <(echo ${VALID_EXTENSIONS_300} | tr ' ' '\n' | sort))
+if [ -n "${DIFF}" ]; then
+  color RED "The following extensions are unacceptable in converted images:"
+  color RED "${DIFF}"
+  color YELLOW "If you're sure your script can handle those, add them to the list so"
+  color YELLOW " this error will disappear."
+  exit 1
+fi
+color GREEN "Extensions of converted images are valid."
 
 # Check that all images have valid names.
 DIFF=$(comm -3 <(echo "${IMG_DIR_STEMS}") <(echo "${IMG_DIR_STEMS}" | grep -oE '^[[:digit:]]+-[[:digit:]]+-[[:digit:]]+$' | grep --invert '^$'))
@@ -61,7 +82,7 @@ color GREEN "All image ID's are unique."
 # Check that the two sets of IDs of original and converted images are equal.
 # This guarantees that all images have been converted, and that we don't have
 # any leftover converted images that need to be cleaned up.
-DIFF=$(comm -3 <(echo "${IMG_DIR_STEMS}") <(find_stems "${IMG_300_DIR}"))
+DIFF=$(comm -3 <(echo "${IMG_DIR_STEMS}") <(echo "${IMG_300_DIR_STEMS}"))
 if [ -n "${DIFF}" ]; then
   color RED "Delta:"
   color RED "${DIFF}"
@@ -74,7 +95,7 @@ color GREEN "All images have converted versions."
 # Check that the two sets of IDs of images and source files are equal.
 # This guarantees that all images have sources specified, and that we don't
 # have leftover sources that need to be cleaned up
-DIFF=$(comm -3 <(echo "${IMG_DIR_STEMS}") <(find_stems "${IMG_SOURCES_DIR}"))
+DIFF=$(comm -3 <(echo "${IMG_DIR_STEMS}") <(echo "${IMG_SOURCES_DIR_STEMS}"))
 if [ -n "${DIFF}" ]; then
   color RED "Delta:"
   color RED "${DIFF}"
