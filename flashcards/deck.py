@@ -261,7 +261,9 @@ class deck:
 
     def write_html(self, dir: str) -> None:
         self.clean_dir(dir)
-        for rk, front, back in zip(self.raw_keys, self.fronts, self.backs):
+        for rk, front, back, title in zip(
+            self.raw_keys, self.fronts, self.backs, self.titles
+        ):
             with open(os.path.join(dir, rk + ".html"), "w") as f:
                 f.write(
                     HTML_FMT.format(
@@ -269,7 +271,7 @@ class deck:
                         deck_name=self.deck_name,
                         deck_description=self.deck_description,
                         css=self.css,
-                        title=rk,
+                        title=title,
                         front=front,
                         back=back,
                     )
