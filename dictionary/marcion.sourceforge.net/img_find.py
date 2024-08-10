@@ -462,7 +462,8 @@ def main():
                         "-resize",
                         f"{TARGET_WIDTH}x",
                         os.path.join(
-                            IMG_300_DIR, file_name(ext=".jpg" if ext == ".png" else ext)
+                            IMG_300_DIR,
+                            file_name(ext=".jpg" if ext in [".png", ".svg"] else ext),
                         ),
                     ]
                 )
