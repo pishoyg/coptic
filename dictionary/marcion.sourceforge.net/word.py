@@ -167,14 +167,19 @@ class structured_word:
         include_references: bool = True,
         append_root_type: bool = False,
         parenthesize_assumed: bool = True,
+        append_types: bool = True,
     ) -> str:
         d = ""
         if include_dialects and self._dialects:
             d = "({})".format(", ".join(self._dialects))
         s = ", ".join(self.spellings(parenthesize_assumed))
-        t = " ".join(i.coptic_symbol() for i in self._types if i.append())
-        if not t and append_root_type and self._root_type.append():
-            t = self._root_type.coptic_symbol()
+        t = ""
+        if append_types:
+            t = " ".join(i.coptic_symbol() for i in self._types if i.append())
+        if append_root_type:
+            assert self._root_type
+            if not t and self._root_type.append():
+                t = self._root_type.coptic_symbol()
         r = ""
         if include_references:
             r = ", ".join("{" + r + "}" for r in self._references)
