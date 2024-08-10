@@ -253,6 +253,8 @@ def main():
         open_images(g)
         q = query(row[MEANING_COL])
         subprocess.run(["open", "-a", args.browser, q, row[LINK_COL]])
+        utils.info("Key:", row[KEY_COL])
+        utils.info("Link:", row[LINK_COL])
         utils.info("Existing:", g)
 
         while True:
