@@ -17,18 +17,20 @@ import utils
 
 TARGET_WIDTH = 300
 MIN_WIDTH = 200
+IMG_DIR = "dictionary/marcion.sourceforge.net/data/img"
 IMG_300_DIR = "dictionary/marcion.sourceforge.net/data/img-300"
 FILE_NAME_RE = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
 SOURCE_RE = re.compile(r"^source\(([^=]+)\)=(.+)$")
 
 
-INPUT_TSVS = "dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs"
-MEANING_COL = "en-parsed-no-greek-no-html"
-KEY_COL = "key"
-LINK_COL = "key-link"
-SOURCES_DIR = "dictionary/marcion.sourceforge.net/data/img-sources/"
+INPUT_TSVS: str = "dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs"
+MEANING_COL: str = "en-parsed-no-greek-no-html"
+KEY_COL: str = "key"
+LINK_COL: str = "key-link"
+SOURCES_DIR: str = "dictionary/marcion.sourceforge.net/data/img-sources/"
 
 
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def params_str(params: dict) -> str:
     return "?" + "&".join(f"{k}={v}" for k, v in params.items())
 
@@ -50,6 +52,7 @@ WIKI_HEADERS = {
     "User-Agent": "Coptic/1.0 (https://github.com/pishoyg/coptic/; pishoybg@gmail.com)",
 }
 
+BASENAME_RE = re.compile("[0-9]+-[0-9]+-[0-9]+")
 
 argparser = argparse.ArgumentParser(
     description="""Find images for the dictionary words.
@@ -98,13 +101,6 @@ argparser.add_argument(
     type=str,
     default=os.path.join(os.path.expanduser("~"), "Desktop/"),
     help="Path to the downloads directory.",
-)
-
-argparser.add_argument(
-    "--destination",
-    type=str,
-    default="dictionary/marcion.sourceforge.net/data/img/",
-    help="Path to the destination directory.",
 )
 
 argparser.add_argument(
@@ -212,6 +208,19 @@ def is_wiki(url: str) -> bool:
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def target_ext(ext: str) -> str:
+    if ext in [".png", ".svg"]:
+        return ".jpg"
+    return ext
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def extension(file: str) -> str:
+    _, ext = os.path.splitext(file)
+    return ext
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def main():
     global args
     args = argparser.parse_args()
@@ -220,6 +229,7 @@ def main():
 
     sources: dict[str, str] = {}
 
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def retrieve(
         url: str, filename: typing.Optional[str] = None, headers: dict[str, str] = {}
     ) -> None:
@@ -252,8 +262,9 @@ def main():
         if any(row[k] == v for k, v in exclude.items()):
             continue
 
-        def existing():
-            return glob.glob(os.path.join(args.destination, f"{key}-*"))
+        @type_enforced.Enforcer(enabled=enforcer.ENABLED)
+        def existing() -> list[str]:
+            return glob.glob(os.path.join(IMG_DIR, f"{key}-*"))
 
         g = existing()
         if args.skip_existing and g:
@@ -261,10 +272,19 @@ def main():
 
         open_images(g)
         q = query(row[MEANING_COL])
-        subprocess.run(["open", "-a", args.browser, q, row[LINK_COL]])
+        subprocess.run(
+            [
+                "open",
+                "-a",
+                args.browser,
+                row[LINK_COL],
+                q,
+            ]
+        )
 
         while True:
             # Force read a valid sense, or no sense at all.
+            g = existing()
             utils.info("Key:", row[KEY_COL])
             utils.info("Link:", row[LINK_COL])
             utils.info("Existing:", g)
@@ -334,6 +354,24 @@ def main():
                     utils.error("No source given!")
                     continue
                 sources[files[0]] = sense
+                continue
+
+            if BASENAME_RE.fullmatch(sense):
+                # Delete the image.
+                path = glob.glob(os.path.join(IMG_DIR, sense + "*"))
+                assert len(path) == 1
+                path = path[0]
+                ext = extension(path)
+                os.remove(path)
+
+                # Delete the source.
+                path = os.path.join(SOURCES_DIR, sense + ".txt")
+                os.remove(path)
+
+                # Delete the converted version.
+                path = os.path.join(IMG_300_DIR, sense + target_ext(ext))
+                os.remove(path)
+
                 continue
 
             source_search = SOURCE_RE.search(sense)
@@ -434,13 +472,14 @@ def main():
             for file in files:
                 idx += 1
 
-                _, ext = os.path.splitext(file)
+                ext = extension(file)
 
-                def file_name(ext=ext):
+                @type_enforced.Enforcer(enabled=enforcer.ENABLED)
+                def file_name(ext: str = ext) -> str:
                     return f"{key}-{sense}-{idx}{ext}"
 
                 # Write the image.
-                new_file = os.path.join(args.destination, file_name())
+                new_file = os.path.join(IMG_DIR, file_name())
                 pathlib.Path(file).rename(new_file)
                 # Write the source.
                 with open(
@@ -463,7 +502,7 @@ def main():
                         f"{TARGET_WIDTH}x",
                         os.path.join(
                             IMG_300_DIR,
-                            file_name(ext=".jpg" if ext in [".png", ".svg"] else ext),
+                            file_name(ext=target_ext(ext)),
                         ),
                     ]
                 )
