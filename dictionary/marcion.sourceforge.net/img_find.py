@@ -225,6 +225,9 @@ def main():
     ) -> None:
         if filename is None:
             filename = os.path.basename(url)
+            idx = filename.find("?")
+            if idx != -1:
+                filename = filename[:idx]
         download = requests.get(url, headers=headers)
         if not download.ok:
             utils.error(download.text)
