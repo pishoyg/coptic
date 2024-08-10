@@ -142,8 +142,8 @@ repos:
   # Local scripts.
   - repo: local
     hooks:
-      - id: marcion-validate
-        name: marcion-validate
+      - id: crum-img-validate
+        name: crum-img-validate
         entry: dictionary/marcion.sourceforge.net/img_validate.sh
         language: script
         # N.B. This hook should also run when files are deleted. But
