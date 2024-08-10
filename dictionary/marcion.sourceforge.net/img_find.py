@@ -7,11 +7,11 @@ import subprocess
 import typing
 
 import enforcer
+import PIL
 import pillow_avif
 import requests
 import requests_oauthlib
 import type_enforced
-from PIL import Image
 
 import utils
 
@@ -193,7 +193,13 @@ def invalid_size(files: list[str]) -> list[str]:
     assert MIN_WIDTH > 0
     invalid = []
     for f in files:
-        image = Image.open(f)
+        try:
+            image = PIL.Image.open(f)
+        except PIL.UnidentifiedImageError:
+            utils.warn(
+                "Unable to verify the size for", f, "so relying on manual verification."
+            )
+            continue
         width, _ = image.size
         if width < MIN_WIDTH:
             invalid.append(f)
