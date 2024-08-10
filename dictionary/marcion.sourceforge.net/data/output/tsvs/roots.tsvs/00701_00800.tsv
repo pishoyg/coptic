@@ -1,4 +1,4 @@
-key	word	type	cz	en	gr	crum	quality	pos	added	updated	created_by	updated_by	key-link	word-parsed	word-parsed-no-ref	word-parsed-no-html	word-parsed-no-ref-no-html	word-parsed-prettify	word-dawoud-sort-key	dawoud-pages	crum-last-page	quality-parsed	type-parsed	gr-parsed	en-parsed	en-parsed-no-html	en-parsed-no-greek	en-parsed-light-greek	en-parsed-link-light-greek	en-parsed-no-greek-no-html	crum-link	crum-page	crum-column	dialect-S	lemma-S	dialect-Sa	lemma-Sa	dialect-Sf	lemma-Sf	dialect-A	lemma-A	dialect-sA	lemma-sA	dialect-B	lemma-B	dialect-F	lemma-F	dialect-Fb	lemma-Fb	dialect-O	lemma-O	dialect-NH	lemma-NH	key-next	key-prev	crum-pages	derivations-table	derivations-list	derivations-txt
+key	word	type	cz	en	gr	crum	quality	pos	added	updated	created_by	updated_by	key-link	word-parsed	word-parsed-no-ref	word-parsed-no-html	word-parsed-no-ref-no-html	word-title	word-parsed-prettify	word-dawoud-sort-key	dawoud-pages	crum-last-page	quality-parsed	type-parsed	gr-parsed	en-parsed	en-parsed-no-html	en-parsed-no-greek	en-parsed-light-greek	en-parsed-link-light-greek	en-parsed-no-greek-no-html	crum-link	crum-page	crum-column	dialect-S	lemma-S	dialect-Sa	lemma-Sa	dialect-Sf	lemma-Sf	dialect-A	lemma-A	dialect-sA	lemma-sA	dialect-B	lemma-B	dialect-F	lemma-F	dialect-Fb	lemma-Fb	dialect-O	lemma-O	dialect-NH	lemma-NH	key-next	key-prev	crum-pages	derivations-table	derivations-list	derivations-txt
 718	(S) HloG (A,sA,F) HlaG (Sa) Hlak (B) HloJ (S) HolG+ (Sf) HalleJ+ (A,sA,F) HalG+ (sA,F) HaleG+ (B) HolJ+ (F) HalJ+ (S,sA) ^HalG- (sA) ^HlG-	2	{intr:} be sweet, take delight /$gk: [[glukainesqai, hdunein]]$/ | {qual:} /$gk: [[glukos]]$/	{intr:} be sweet, take delight /$gk: [[glukainesqai, hdunein]]$/ | {qual:} /$gk: [[glukos]]$/	glukainesqai, hdunein, glukos	673a	8	0	2009-09-14	2010-08-12	vagrant	vagrant	https://pishoyg.github.io/crum/718.html	"(S) ϩⲗⲟϭ
 (A, sA, F) ϩⲗⲁϭ
 (Sa) ϩⲗⲁⲕ
@@ -43,7 +43,7 @@ key	word	type	cz	en	gr	crum	quality	pos	added	updated	created_by	updated_by	key-
 (B) ϩⲟⲗϫ+
 (F) ϩⲁⲗϫ+
 (S, sA) p c ϩⲁⲗϭ-
-(sA) p c ϩⲗϭ-"	"(S) ϩⲗⲟϭ
+(sA) p c ϩⲗϭ-"	ϩⲗⲟϭ, ϩⲗⲁϭ, ϩⲗⲁⲕ, ϩⲗⲟϫ, ϩⲟⲗϭ+, ϩⲁⲗⲗⲉϫ+, ϩⲁⲗϭ+, ϩⲁⲗⲉϭ+, ϩⲟⲗϫ+, ϩⲁⲗϫ+, ϩⲁⲗϭ- (p.c.), ϩⲗϭ- (p.c.)	"(S) ϩⲗⲟϭ
 (A, sA, F) ϩⲗⲁϭ
 (Sa) ϩⲗⲁⲕ
 (B) ϩⲗⲟϫ
@@ -112,7 +112,7 @@ __(B) ⲙⲉⲧϩ.
 (S, B) ϫⲉϥϫⲱϥ+"	"(S) ϫⲟϥϫϥ, ϫⲟⲃϫⲃ
 (S, B) ϫⲟϥϫⲉϥ, ϫⲉϥϫⲱϥ=
 (F) ϫⲃϫⲱⲃ=
-(S, B) ϫⲉϥϫⲱϥ+"	"(S) ϫⲟϥϫϥ, ϫⲟⲃϫⲃ
+(S, B) ϫⲉϥϫⲱϥ+"	ϫⲟϥϫϥ, ϫⲟⲃϫⲃ, ϫⲟϥϫⲉϥ, ϫⲉϥϫⲱϥ=, ϫⲃϫⲱⲃ=, ϫⲉϥϫⲱϥ+	"(S) ϫⲟϥϫϥ, ϫⲟⲃϫⲃ
 (S, B) ϫⲟϥϫⲉϥ, ϫⲉϥϫⲱϥ=
 (F) ϫⲃϫⲱⲃ=
 (S, B) ϫⲉϥϫⲱϥ+"	ϫⲟϥϫⲉϥ (B)			complete	verb	κατακαιειν, περιφλεγειν, οπτοσ, οπταν, πεσσειν	"<b>intr:</b> burn, cook [κατακαιειν, περιφλεγειν]
@@ -187,7 +187,7 @@ tr:"	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=796b	796	b	
 (S, B) ⲧⲟⲧⲥ+
 (Sf) ⲧⲁⲕⲥ+, ⲧⲁⲧⲥ+
 (B) ⲑⲟⲧⲥ+
-(S) p c ⲧⲁⲕⲥ-"	"(S, A) ⲧⲱⲕⲥ
+(S) p c ⲧⲁⲕⲥ-"	ⲧⲱⲕⲥ, ⲧⲱϭⲥ, ⲧⲱⲧⲥ, ⲑⲟⲩⲝ, ⲑⲟⲩⲕⲥ, ⲧⲱϫⲥ, ⲧⲉⲕⲥ-, ⲧⲟⲕⲥ=, ⲧⲟϭⲥ=, ⲑⲟⲕⲥ=, ⲧⲟⲕⲥ+, ⲧⲟϭⲥ+, ⲑⲟⲕⲥ, ⲧⲟⲧⲥ+, ⲧⲁⲕⲥ+, ⲧⲁⲧⲥ+, ⲑⲟⲧⲥ+, ⲧⲁⲕⲥ- (p.c.)	"(S, A) ⲧⲱⲕⲥ
 (S) ⲧⲱϭⲥ
 (S, B) ⲧⲱⲧⲥ
 (B) ⲑⲟⲩⲝ, ⲑⲟⲩⲕⲥ
@@ -291,7 +291,7 @@ thing studded, incrusted
 (A) ⲥⲱⲱϩⲉ
 (B) ⲥⲟϩⲓ
 (F) ⲥⲁⲁϩⲓ, ⲥⲁϩⲉ-
-(B) ⲥⲁϩⲱ="	"(S) ⲥⲟⲟϩⲉ, ⲥⲟϩⲉ
+(B) ⲥⲁϩⲱ="	ⲥⲟⲟϩⲉ, ⲥⲟϩⲉ, ⲥⲁⲁϩⲉ, ⲥⲱⲱϩⲉ, ⲥⲟϩⲓ, ⲥⲁⲁϩⲓ, ⲥⲁϩⲉ-, ⲥⲁϩⲱ=	"(S) ⲥⲟⲟϩⲉ, ⲥⲟϩⲉ
 (Sf) ⲥⲁⲁϩⲉ
 (A) ⲥⲱⲱϩⲉ
 (B) ⲥⲟϩⲓ
@@ -311,12 +311,12 @@ __(B) ⲛⲉⲙ- (c) dispute with
 (S, B) ⲣⲉϥⲥ. reprover
 (B) ϫⲓⲛⲥ. reproval
 (B) ϭⲓ ⲥ. receive reproof"
-722	(S,A) eine	1	chain /$gk: [[pedh, alusis, sxoinion]]$/	chain /$gk: [[pedh, alusis, sxoinion]]$/	pedh, alusis, sxoinion	81a	6	0	2009-09-14	2010-01-29	vagrant	vagrant	https://pishoyg.github.io/crum/722.html	(S, A) ⲉⲓⲛⲉ	(S, A) ⲉⲓⲛⲉ	(S, A) ⲉⲓⲛⲉ	(S, A) ⲉⲓⲛⲉ	(S, A) ⲉⲓⲛⲉ (ⲡ)	ⲉⲓⲛⲉ (S)			complete	noun male	πεδη, αλυσισ, σχοινιον	chain [πεδη, αλυσισ, σχοινιον]	chain [πεδη, αλυσισ, σχοινιον]	chain	"chain <span style=""opacity:0.7"">[πεδη, αλυσισ, σχοινιον]</span>"	"chain <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CF%80%CE%B5%CE%B4%CE%B7"">πεδη</a>, <a href=""https://logeion.uchicago.edu/%CE%B1%CE%BB%CF%85%CF%83%CE%B9%CF%83"">αλυσισ</a>, <a href=""https://logeion.uchicago.edu/%CF%83%CF%87%CE%BF%CE%B9%CE%BD%CE%B9%CE%BF%CE%BD"">σχοινιον</a>]</span>"	chain	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=81a	81	a	ⲉⲓⲛⲉ (ⲡ)	ⲉⲓⲛⲉ					ⲉⲓⲛⲉ (ⲡ)	ⲉⲓⲛⲉ													723	721	81			
+722	(S,A) eine	1	chain /$gk: [[pedh, alusis, sxoinion]]$/	chain /$gk: [[pedh, alusis, sxoinion]]$/	pedh, alusis, sxoinion	81a	6	0	2009-09-14	2010-01-29	vagrant	vagrant	https://pishoyg.github.io/crum/722.html	(S, A) ⲉⲓⲛⲉ	(S, A) ⲉⲓⲛⲉ	(S, A) ⲉⲓⲛⲉ	(S, A) ⲉⲓⲛⲉ	ⲉⲓⲛⲉ	(S, A) ⲉⲓⲛⲉ (ⲡ)	ⲉⲓⲛⲉ (S)			complete	noun male	πεδη, αλυσισ, σχοινιον	chain [πεδη, αλυσισ, σχοινιον]	chain [πεδη, αλυσισ, σχοινιον]	chain	"chain <span style=""opacity:0.7"">[πεδη, αλυσισ, σχοινιον]</span>"	"chain <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CF%80%CE%B5%CE%B4%CE%B7"">πεδη</a>, <a href=""https://logeion.uchicago.edu/%CE%B1%CE%BB%CF%85%CF%83%CE%B9%CF%83"">αλυσισ</a>, <a href=""https://logeion.uchicago.edu/%CF%83%CF%87%CE%BF%CE%B9%CE%BD%CE%B9%CE%BF%CE%BD"">σχοινιον</a>]</span>"	chain	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=81a	81	a	ⲉⲓⲛⲉ (ⲡ)	ⲉⲓⲛⲉ					ⲉⲓⲛⲉ (ⲡ)	ⲉⲓⲛⲉ													723	721	81			
 723	(S) eine,ine (B) ini	4	thumb | great toe	thumb | great toe		81a	6	0	2009-09-14	2010-01-29	vagrant	vagrant	https://pishoyg.github.io/crum/723.html	"(S) ⲉⲓⲛⲉ, ⲓⲛⲉ
 (B) ⲓⲛⲓ"	"(S) ⲉⲓⲛⲉ, ⲓⲛⲉ
 (B) ⲓⲛⲓ"	"(S) ⲉⲓⲛⲉ, ⲓⲛⲉ
 (B) ⲓⲛⲓ"	"(S) ⲉⲓⲛⲉ, ⲓⲛⲉ
-(B) ⲓⲛⲓ"	"(S) ⲉⲓⲛⲉ, ⲓⲛⲉ (ⲧ)
+(B) ⲓⲛⲓ"	ⲉⲓⲛⲉ, ⲓⲛⲉ, ⲓⲛⲓ	"(S) ⲉⲓⲛⲉ, ⲓⲛⲉ (ⲧ)
 (B) ⲓⲛⲓ (ⲧ)"	ⲓⲛⲓ (B)			complete	noun female		"thumb
 great toe"	"thumb
 great toe"	"thumb
@@ -328,7 +328,7 @@ great toe"	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=81a	8
 (B) ⲓⲛⲓ"	"(S) ⲉⲓⲛⲉ
 (B) ⲓⲛⲓ"	"(S) ⲉⲓⲛⲉ
 (B) ⲓⲛⲓ"	"(S) ⲉⲓⲛⲉ
-(B) ⲓⲛⲓ"	"(S) ⲉⲓⲛⲉ (ⲧ)
+(B) ⲓⲛⲓ"	ⲉⲓⲛⲉ, ⲓⲛⲓ	"(S) ⲉⲓⲛⲉ (ⲧ)
 (B) ⲓⲛⲓ (ⲧ)"	ⲓⲛⲓ (B)			complete	noun female	σκεπαρνον	carpenter's axe, adze [σκεπαρνον]	carpenter's axe, adze [σκεπαρνον]	carpenter's axe, adze	"carpenter's axe, adze <span style=""opacity:0.7"">[σκεπαρνον]</span>"	"carpenter's axe, adze <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CF%83%CE%BA%CE%B5%CF%80%CE%B1%CF%81%CE%BD%CE%BF%CE%BD"">σκεπαρνον</a>]</span>"	carpenter's axe, adze	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=81a	81	a	ⲉⲓⲛⲉ (ⲧ)	ⲉⲓⲛⲉ									ⲓⲛⲓ (ⲧ)	ⲓⲛⲓ									725	723	81			
 725	(S,A,sA) rwHt (sA) rwHe (B) rwKt (F) lwHt (S,F) reHt- (B) reKt- (S,A,F) raHt= (S) roHt= (B) raKt= (F) leHt= (S) raHt+ (B) raKt+	2	{intr:} strike, be struck, (so) fall /$gk: [[kaqairein, piptein]]$/ | {tr:} strike, cast	{intr:} strike, be struck, (so) fall /$gk: [[kaqairein, piptein]]$/ | {tr:} strike, cast	kaqairein, piptein	311a	8	0	2009-09-14	2010-07-08	vagrant	vagrant	https://pishoyg.github.io/crum/725.html	"(S, A, sA) ⲣⲱϩⲧ
 (sA) ⲣⲱϩⲉ
@@ -374,7 +374,7 @@ great toe"	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=81a	8
 (B) ⲣⲁϧⲧ=
 (F) ⲗⲉϩⲧ=
 (S) ⲣⲁϩⲧ+
-(B) ⲣⲁϧⲧ+"	"(S, A, sA) ⲣⲱϩⲧ
+(B) ⲣⲁϧⲧ+"	ⲣⲱϩⲧ, ⲣⲱϩⲉ, ⲣⲱϧⲧ, ⲗⲱϩⲧ, ⲣⲉϩⲧ-, ⲣⲉϧⲧ-, ⲣⲁϩⲧ=, ⲣⲟϩⲧ=, ⲣⲁϧⲧ=, ⲗⲉϩⲧ=, ⲣⲁϩⲧ+, ⲣⲁϧⲧ+	"(S, A, sA) ⲣⲱϩⲧ
 (sA) ⲣⲱϩⲉ
 (B) ⲣⲱϧⲧ
 (F) ⲗⲱϩⲧ
@@ -451,7 +451,7 @@ __ϭⲓ ⲉⲣ. receive blow, be smitten [πλησσειν]"
 (B) ⲕⲉⲛⲧⲉ
 (F) ⲕⲉⲛⲧⲏ"	"(S, A) ⲕⲛⲧⲉ
 (B) ⲕⲉⲛⲧⲉ
-(F) ⲕⲉⲛⲧⲏ"	"(S, A) ⲕⲛⲧⲉ (ⲡ)
+(F) ⲕⲉⲛⲧⲏ"	ⲕⲛⲧⲉ, ⲕⲉⲛⲧⲉ, ⲕⲉⲛⲧⲏ	"(S, A) ⲕⲛⲧⲉ (ⲡ)
 (B) ⲕⲉⲛⲧⲉ (ⲡ)
 (F) ⲕⲉⲛⲧⲏ (ⲡ)"	ⲕⲉⲛⲧⲉ (B)			complete	noun male	συκον	fig [συκον]	fig [συκον]	fig	"fig <span style=""opacity:0.7"">[συκον]</span>"	"fig <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CF%83%CF%85%CE%BA%CE%BF%CE%BD"">συκον</a>]</span>"	fig	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=112b	112	b	ⲕⲛⲧⲉ (ⲡ)	ⲕⲛⲧⲉ					ⲕⲛⲧⲉ (ⲡ)	ⲕⲛⲧⲉ			ⲕⲉⲛⲧⲉ (ⲡ)	ⲕⲉⲛⲧⲉ	ⲕⲉⲛⲧⲏ (ⲡ)	ⲕⲉⲛⲧⲏ							727	725	112			
 727	(S,A,sA,F) twk (A) twke (S) tek-,tok= (S,A,sA,F) thk+ (B) qhk+	2	{intr:} be strong, firm, thick /$gk: [[isxuein, dunasqai]]$/ | {tr:} strenghten, confirm, stiffen	{intr:} be strong, firm, thick /$gk: [[isxuein, dunasqai]]$/ | {tr:} strenghten, confirm, stiffen	isxuein, dunasqai	403a	8	0	2009-09-14	2010-07-23	vagrant	vagrant	https://pishoyg.github.io/crum/727.html	"(S, A, sA, F) ⲧⲱⲕ
@@ -470,7 +470,7 @@ __ϭⲓ ⲉⲣ. receive blow, be smitten [πλησσειν]"
 (A) ⲧⲱⲕⲉ
 (S) ⲧⲉⲕ-, ⲧⲟⲕ=
 (S, A, sA, F) ⲧⲏⲕ+
-(B) ⲑⲏⲕ+"	"(S, A, sA, F) ⲧⲱⲕ
+(B) ⲑⲏⲕ+"	ⲧⲱⲕ, ⲧⲱⲕⲉ, ⲧⲉⲕ-, ⲧⲟⲕ=, ⲧⲏⲕ+, ⲑⲏⲕ+	"(S, A, sA, F) ⲧⲱⲕ
 (A) ⲧⲱⲕⲉ
 (S) ⲧⲉⲕ-, ⲧⲟⲕ=
 (S, A, sA, F) ⲧⲏⲕ+
@@ -518,7 +518,7 @@ __ϫⲓ ⲧ. take courage
 (S) p c ⲛⲁϥⲣ-, ⲛⲁⲃⲉⲣ- {in names}"	"(S) ⲛⲟⲩϥⲣ
 (S) ⲛⲉϥⲣ-, ⲛⲟϥⲣ+
 (B) ⲛⲟϥⲉⲣ+
-(S) p c ⲛⲁϥⲣ-, ⲛⲁⲃⲉⲣ- {in names}"	"(S) ⲛⲟⲩϥⲣ
+(S) p c ⲛⲁϥⲣ-, ⲛⲁⲃⲉⲣ- {in names}"	ⲛⲟⲩϥⲣ, ⲛⲉϥⲣ-, ⲛⲟϥⲣ+, ⲛⲟϥⲉⲣ+, ⲛⲁϥⲣ-, ⲛⲁⲃⲉⲣ- {in names} (p.c.)	"(S) ⲛⲟⲩϥⲣ
 (S) ⲛⲉϥⲣ-, ⲛⲟϥⲣ+
 (B) ⲛⲟϥⲉⲣ+
 (S) ⲛⲁϥⲣ-, ⲛⲁⲃⲉⲣ- {in names} (p.c.)"	ⲛⲟϥⲉⲣ+ (B)			complete++	verb	χρηστοσ, ωφελιμοσ	<b>intr:</b> be good, profitable [χρηστοσ, ωφελιμοσ]	intr: be good, profitable [χρηστοσ, ωφελιμοσ]	<b>intr:</b> be good, profitable	"<b>intr:</b> be good, profitable <span style=""opacity:0.7"">[χρηστοσ, ωφελιμοσ]</span>"	"<b>intr:</b> be good, profitable <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CF%87%CF%81%CE%B7%CF%83%CF%84%CE%BF%CF%83"">χρηστοσ</a>, <a href=""https://logeion.uchicago.edu/%CF%89%CF%86%CE%B5%CE%BB%CE%B9%CE%BC%CE%BF%CF%83"">ωφελιμοσ</a>]</span>"	intr: be good, profitable	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=239b	239	b	"ⲛⲟⲩϥⲣ
@@ -570,7 +570,7 @@ __ⲛ- (c) dat, be profitable for [λυσιτελειν, ανηκειν]
 (O) ⲉⲓⲁⲡⲉ, ⲓⲁⲡⲓ, ⲓⲟⲡⲓ
 (S, A, O) ⲉⲓⲉⲡ-
 (B, F) ⲓⲉⲡ-
-(B) ⲓⲉⲫ-, ⲓⲉⲃ-"	"(S) ⲉⲓⲟⲡⲉ, ⲓⲟⲡⲉ (ⲧ)
+(B) ⲓⲉⲫ-, ⲓⲉⲃ-"	ⲉⲓⲟⲡⲉ, ⲓⲟⲡⲉ, ⲉⲓⲁⲡⲉ, ⲓⲁⲡⲉ, ⲓⲟⲡⲏ, ⲓⲟⲡⲓ, ⲓⲉⲃ, ⲓⲏⲃ, ⲉⲓⲁⲡⲉ, ⲓⲁⲡⲓ, ⲓⲟⲡⲓ, ⲉⲓⲉⲡ-, ⲓⲉⲡ-, ⲓⲉⲫ-, ⲓⲉⲃ-	"(S) ⲉⲓⲟⲡⲉ, ⲓⲟⲡⲉ (ⲧ)
 (Sa) ⲉⲓⲁⲡⲉ (ⲧ)
 (A) ⲓⲁⲡⲉ (ⲧ)
 (B) ⲓⲟⲡⲏ, ⲓⲟⲡⲓ, ⲓⲉⲃ, ⲓⲏⲃ (ⲧ)
@@ -599,7 +599,7 @@ ____(B) ⲙⲉⲧⲓⲉⲃ. {ϣⲱⲧ} (ⲧ) (noun female) trading, merchandise
 (B) ⲣ ⲉⲓⲟⲡⲉ, ⲉⲣ ⲓⲉⲃ, ⲉⲣ ⲓⲏⲃ, ⲉⲣ ϩⲓⲏⲃ spin [νηθειν]
 (S, B) ⲣⲉϥⲣ ⲉⲓ. (noun) (noun) craftsman [τεχνιτησ]
 __(S) ⲙⲛⲧⲣⲉϥⲣ ⲉⲓ. craft, art"
-731	(S) eione	4	(a measure /*or vessel*/ of oil)	(a measure /*or vessel*/ of oil)		82a	6	0	2009-09-14	2010-01-29	vagrant	vagrant	https://pishoyg.github.io/crum/731.html	(S) ⲉⲓⲟⲛⲉ	(S) ⲉⲓⲟⲛⲉ	(S) ⲉⲓⲟⲛⲉ	(S) ⲉⲓⲟⲛⲉ	(S) ⲉⲓⲟⲛⲉ (ⲧ)	ⲉⲓⲟⲛⲉ (S)			complete	noun female		<i>a measure (or vessel) of oil</i>	a measure (or vessel) of oil	<i>a measure (or vessel) of oil</i>	<i>a measure (or vessel) of oil</i>	<i>a measure (or vessel) of oil</i>	a measure (or vessel) of oil	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=82a	82	a	ⲉⲓⲟⲛⲉ (ⲧ)	ⲉⲓⲟⲛⲉ																			732	730	82			
+731	(S) eione	4	(a measure /*or vessel*/ of oil)	(a measure /*or vessel*/ of oil)		82a	6	0	2009-09-14	2010-01-29	vagrant	vagrant	https://pishoyg.github.io/crum/731.html	(S) ⲉⲓⲟⲛⲉ	(S) ⲉⲓⲟⲛⲉ	(S) ⲉⲓⲟⲛⲉ	(S) ⲉⲓⲟⲛⲉ	ⲉⲓⲟⲛⲉ	(S) ⲉⲓⲟⲛⲉ (ⲧ)	ⲉⲓⲟⲛⲉ (S)			complete	noun female		<i>a measure (or vessel) of oil</i>	a measure (or vessel) of oil	<i>a measure (or vessel) of oil</i>	<i>a measure (or vessel) of oil</i>	<i>a measure (or vessel) of oil</i>	a measure (or vessel) of oil	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=82a	82	a	ⲉⲓⲟⲛⲉ (ⲧ)	ⲉⲓⲟⲛⲉ																			732	730	82			
 732	(S) eioor,eioore (A) ioore,iwwre (B) ior (F) iaar,iaal	1	canal /$gk: [[diwruj]]$/	canal /$gk: [[diwruj]]$/	diwruj	82a	6	0	2009-09-14	2010-01-29	vagrant	vagrant	https://pishoyg.github.io/crum/732.html	"(S) ⲉⲓⲟⲟⲣ, ⲉⲓⲟⲟⲣⲉ
 (A) ⲓⲟⲟⲣⲉ, ⲓⲱⲱⲣⲉ
 (B) ⲓⲟⲣ
@@ -612,7 +612,7 @@ __(S) ⲙⲛⲧⲣⲉϥⲣ ⲉⲓ. craft, art"
 (F) ⲓⲁⲁⲣ, ⲓⲁⲁⲗ"	"(S) ⲉⲓⲟⲟⲣ, ⲉⲓⲟⲟⲣⲉ
 (A) ⲓⲟⲟⲣⲉ, ⲓⲱⲱⲣⲉ
 (B) ⲓⲟⲣ
-(F) ⲓⲁⲁⲣ, ⲓⲁⲁⲗ"	"(S) ⲉⲓⲟⲟⲣ, ⲉⲓⲟⲟⲣⲉ (ⲡ)
+(F) ⲓⲁⲁⲣ, ⲓⲁⲁⲗ"	ⲉⲓⲟⲟⲣ, ⲉⲓⲟⲟⲣⲉ, ⲓⲟⲟⲣⲉ, ⲓⲱⲱⲣⲉ, ⲓⲟⲣ, ⲓⲁⲁⲣ, ⲓⲁⲁⲗ	"(S) ⲉⲓⲟⲟⲣ, ⲉⲓⲟⲟⲣⲉ (ⲡ)
 (A) ⲓⲟⲟⲣⲉ, ⲓⲱⲱⲣⲉ (ⲡ)
 (B) ⲓⲟⲣ (ⲡ)
 (F) ⲓⲁⲁⲣ, ⲓⲁⲁⲗ (ⲡ)"	ⲓⲟⲣ (B)			complete	noun male	διωρυξ	canal [διωρυξ]	canal [διωρυξ]	canal	"canal <span style=""opacity:0.7"">[διωρυξ]</span>"	"canal <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%B4%CE%B9%CF%89%CF%81%CF%85%CE%BE"">διωρυξ</a>]</span>"	canal	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=82a	82	a	ⲉⲓⲟⲟⲣ, ⲉⲓⲟⲟⲣⲉ (ⲡ)	ⲉⲓⲟⲟⲣ					ⲓⲟⲟⲣⲉ, ⲓⲱⲱⲣⲉ (ⲡ)	ⲓⲟⲟⲣⲉ			ⲓⲟⲣ (ⲡ)	ⲓⲟⲣ	ⲓⲁⲁⲣ, ⲓⲁⲁⲗ (ⲡ)	ⲓⲁⲁⲣ							733	731	82	"<table> <colgroup> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> </colgroup> <tr> <!--Key: 386-->  <td colspan=""5"" class=""bordered"">(B) ϧⲁⲓⲟⲣ (num. ⲡ)</td> <td colspan=""4"" class=""bordered""> <b>(numeral male)</b><br/> canal <i>(? river)</i> bank </td> <td rowspan=""2"" class=""bordered""><b>Crum: </b><a href=""https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=82a"">82a</a></td> </tr> <tr> <!--Key: 387-->  <td colspan=""5"" class=""bordered"">(S) ϫⲓⲟⲟⲣ, ϫⲓⲉⲓⲟⲟⲣ
@@ -677,12 +677,12 @@ ferryman
 (A, sA) ⲓⲉⲣⲱⲟⲩ (ⲛ)
 (S) ⲓⲁⲣⲱⲟⲩ (ⲛ)
 (F) ⲓⲉⲣⲱⲟⲩ, ⲓⲉⲣⲣⲱⲟⲩ (ⲛ) (noun male) river, lit great canal, stream (ⲉⲓⲟⲟⲣ +ⲟ)"
-733	(S) eire,eeire,eieire	3	(meaning uncertain)	(meaning uncertain)		84a	6	0	2009-09-14	2010-01-29	vagrant	vagrant	https://pishoyg.github.io/crum/733.html	(S) ⲉⲓⲣⲉ, ⲉⲉⲓⲣⲉ, ⲉⲓⲉⲓⲣⲉ	(S) ⲉⲓⲣⲉ, ⲉⲉⲓⲣⲉ, ⲉⲓⲉⲓⲣⲉ	(S) ⲉⲓⲣⲉ, ⲉⲉⲓⲣⲉ, ⲉⲓⲉⲓⲣⲉ	(S) ⲉⲓⲣⲉ, ⲉⲉⲓⲣⲉ, ⲉⲓⲉⲓⲣⲉ	(S) ⲉⲓⲣⲉ, ⲉⲉⲓⲣⲉ, ⲉⲓⲉⲓⲣⲉ (noun)	ⲉⲓⲣⲉ (S)			complete	noun		<i>meaning uncertain</i>	meaning uncertain	<i>meaning uncertain</i>	<i>meaning uncertain</i>	<i>meaning uncertain</i>	meaning uncertain	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=84a	84	a	ⲉⲓⲣⲉ, ⲉⲉⲓⲣⲉ, ⲉⲓⲉⲓⲣⲉ (noun)	ⲉⲓⲣⲉ																			735	732	84			
+733	(S) eire,eeire,eieire	3	(meaning uncertain)	(meaning uncertain)		84a	6	0	2009-09-14	2010-01-29	vagrant	vagrant	https://pishoyg.github.io/crum/733.html	(S) ⲉⲓⲣⲉ, ⲉⲉⲓⲣⲉ, ⲉⲓⲉⲓⲣⲉ	(S) ⲉⲓⲣⲉ, ⲉⲉⲓⲣⲉ, ⲉⲓⲉⲓⲣⲉ	(S) ⲉⲓⲣⲉ, ⲉⲉⲓⲣⲉ, ⲉⲓⲉⲓⲣⲉ	(S) ⲉⲓⲣⲉ, ⲉⲉⲓⲣⲉ, ⲉⲓⲉⲓⲣⲉ	ⲉⲓⲣⲉ, ⲉⲉⲓⲣⲉ, ⲉⲓⲉⲓⲣⲉ	(S) ⲉⲓⲣⲉ, ⲉⲉⲓⲣⲉ, ⲉⲓⲉⲓⲣⲉ (noun)	ⲉⲓⲣⲉ (S)			complete	noun		<i>meaning uncertain</i>	meaning uncertain	<i>meaning uncertain</i>	<i>meaning uncertain</i>	<i>meaning uncertain</i>	meaning uncertain	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=84a	84	a	ⲉⲓⲣⲉ, ⲉⲉⲓⲣⲉ, ⲉⲓⲉⲓⲣⲉ (noun)	ⲉⲓⲣⲉ																			735	732	84			
 735	(S,sA) swSe (A) swQe	2	{intr:} drag, creep /$gk: [[erpein]]$/ | {tr:} /$gk: [[surein]]$/ 	{intr:} drag, creep /$gk: [[erpein]]$/ | {tr:} /$gk: [[surein]]$/ 	erpein, surein	376b	8	0	2009-09-14	2010-07-21	vagrant	vagrant	https://pishoyg.github.io/crum/735.html	"(S, sA) ⲥⲱϣⲉ
 (A) ⲥⲱⳉⲉ"	"(S, sA) ⲥⲱϣⲉ
 (A) ⲥⲱⳉⲉ"	"(S, sA) ⲥⲱϣⲉ
 (A) ⲥⲱⳉⲉ"	"(S, sA) ⲥⲱϣⲉ
-(A) ⲥⲱⳉⲉ"	"(S, sA) ⲥⲱϣⲉ
+(A) ⲥⲱⳉⲉ"	ⲥⲱϣⲉ, ⲥⲱⳉⲉ	"(S, sA) ⲥⲱϣⲉ
 (A) ⲥⲱⳉⲉ"	ⲥⲱϣⲉ (S)			complete++	verb	ερπειν, συρειν	"<b>intr:</b> drag, creep [ερπειν]
 <b>tr:</b> [συρειν]"	"intr: drag, creep [ερπειν]
 tr: [συρειν]"	"<b>intr:</b> drag, creep 
@@ -711,7 +711,7 @@ __ϩⲓϫⲛ- (c) "
 (A, F) ⲛⲁϭⲛϭ, ⲛⲁϭⲛⲉϭ
 (B) ⲛⲟϫⲛⲉϫ
 (S) ⲛⲉϭⲛⲉϭ-
-(S, A) ⲛⲉϭⲛⲟⲩϭ="	"(S) ⲛⲟϭⲛⲉϭ
+(S, A) ⲛⲉϭⲛⲟⲩϭ="	ⲛⲟϭⲛⲉϭ, ⲛⲁϭⲛϭ, ⲛⲁϭⲛⲉϭ, ⲛⲟϫⲛⲉϫ, ⲛⲉϭⲛⲉϭ-, ⲛⲉϭⲛⲟⲩϭ=	"(S) ⲛⲟϭⲛⲉϭ
 (A, F) ⲛⲁϭⲛϭ, ⲛⲁϭⲛⲉϭ
 (B) ⲛⲟϫⲛⲉϫ
 (S) ⲛⲉϭⲛⲉϭ-
@@ -730,7 +730,7 @@ intr: S"	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=252b	25
 (B) ⲓⲥ"	"(S, Sa, A, sA) ⲉⲓⲥ, ⲉⲥ
 (B) ⲓⲥ"	"(S, Sa, A, sA) ⲉⲓⲥ, ⲉⲥ
 (B) ⲓⲥ"	"(S, Sa, A, sA) ⲉⲓⲥ, ⲉⲥ
-(B) ⲓⲥ"	"(S, Sa, A, sA) ⲉⲓⲥ, ⲉⲥ (interjection)
+(B) ⲓⲥ"	ⲉⲓⲥ, ⲉⲥ, ⲓⲥ	"(S, Sa, A, sA) ⲉⲓⲥ, ⲉⲥ (interjection)
 (B) ⲓⲥ (interjection)"	ⲓⲥ (B)			complete	interjection	ιδου	behold, lo, here is, <i>used properly before nn</i> [ιδου]	behold, lo, here is, used properly before nn [ιδου]	behold, lo, here is, <i>used properly before nn</i>	"behold, lo, here is, <i>used properly before nn</i> <span style=""opacity:0.7"">[ιδου]</span>"	"behold, lo, here is, <i>used properly before nn</i> <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%B9%CE%B4%CE%BF%CF%85"">ιδου</a>]</span>"	behold, lo, here is, used properly before nn	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=85a	85	a	ⲉⲓⲥ, ⲉⲥ (interjection)	ⲉⲓⲥ	ⲉⲓⲥ, ⲉⲥ (interjection)	ⲉⲓⲥ			ⲉⲓⲥ, ⲉⲥ (interjection)	ⲉⲓⲥ	ⲉⲓⲥ, ⲉⲥ (interjection)	ⲉⲓⲥ	ⲓⲥ (interjection)	ⲓⲥ									738	736	85,86	"<table> <colgroup> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> </colgroup> <tr> <!--Key: 407-->  <td colspan=""5"" class=""bordered"">(S, sA) ― ϩⲏⲏⲧⲉ, ― ϩⲏⲧⲉ
 (S) ― ϩⲏⲏⲡⲉ
 (B) ― ϩⲏⲡⲡⲉ, ϩⲏⲡⲡⲉ ⲓⲥ</td> <td colspan=""4"" class=""bordered"">  <i>meaning as ⲉⲓⲥ , properly before pron, vb</i> </td> <td rowspan=""4"" class=""bordered""><b>Crum: </b><a href=""https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=85b"">85b</a></td> </tr> <tr> <!--Key: 8772--> <td colspan=""1""></td> <td colspan=""4"" class=""bordered"">(S, B) ⲉⲓⲥ ϩ. ⲉⲓⲥ</td> <td colspan=""4"" class=""bordered"">  <i>before nn</i> <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%B9%CE%B4%CE%BF%CF%85"">ιδου</a>]</span> </td>  </tr> <tr> <!--Key: 408-->  <td colspan=""5"" class=""bordered"">(S, A) ⲉⲓⲥⲧⲉ
@@ -775,7 +775,7 @@ __(S, B) ⲉⲓⲥ ϩ. ⲉⲓⲥ before nn [ιδου]
 (S) ⲥⲓⲕⲧ=, ⲥⲁⲕⲧ=
 (Sf) ⲥⲉⲕⲧ=
 (S) ⲥⲟⲕⲉ+, ⲥⲟⲟⲕⲉ+
-(Sf) ⲥⲁⲕⲓ+"	"(S, A) ⲥⲓⲕⲉ
+(Sf) ⲥⲁⲕⲓ+"	ⲥⲓⲕⲉ, ⲥⲓⲕⲓ, ⲥⲉⲕⲧ-, ⲥⲓⲕⲧ=, ⲥⲁⲕⲧ=, ⲥⲉⲕⲧ=, ⲥⲟⲕⲉ+, ⲥⲟⲟⲕⲉ+, ⲥⲁⲕⲓ+	"(S, A) ⲥⲓⲕⲉ
 (B) ⲥⲓⲕⲓ
 (Sf) ⲥⲉⲕⲧ-
 (S) ⲥⲓⲕⲧ=, ⲥⲁⲕⲧ=
@@ -797,7 +797,7 @@ __(S, B) ⲉⲓⲥ ϩ. ⲉⲓⲥ before nn [ιδου]
 (A) ⲙⲉⲕϩ, ⲙⲉⲭϩ
 (O) ⲙⲉϩⲭ"	"(S) ⲙⲁⲕϩ, ⲙⲁⲭ, ⲙⲟⲕϩ
 (A) ⲙⲉⲕϩ, ⲙⲉⲭϩ
-(O) ⲙⲉϩⲭ"	"(S) ⲙⲁⲕϩ, ⲙⲁⲭ, ⲙⲟⲕϩ (ⲡ)
+(O) ⲙⲉϩⲭ"	ⲙⲁⲕϩ, ⲙⲁⲭ, ⲙⲟⲕϩ, ⲙⲉⲕϩ, ⲙⲉⲭϩ, ⲙⲉϩⲭ	"(S) ⲙⲁⲕϩ, ⲙⲁⲭ, ⲙⲟⲕϩ (ⲡ)
 (A) ⲙⲉⲕϩ, ⲙⲉⲭϩ (ⲡ)
 (O) ⲙⲉϩⲭ (ⲡ)"	ⲙⲁⲕϩ (S)			complete	noun male	τραχηλοσ	neck <i>of man or beast</i> [τραχηλοσ]	neck of man or beast [τραχηλοσ]	neck <i>of man or beast</i>	"neck <i>of man or beast</i> <span style=""opacity:0.7"">[τραχηλοσ]</span>"	"neck <i>of man or beast</i> <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CF%84%CF%81%CE%B1%CF%87%CE%B7%CE%BB%CE%BF%CF%83"">τραχηλοσ</a>]</span>"	neck of man or beast	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=162b	162	b	ⲙⲁⲕϩ, ⲙⲁⲭ, ⲙⲟⲕϩ (ⲡ)	ⲙⲁⲕϩ					ⲙⲉⲕϩ, ⲙⲉⲭϩ (ⲡ)	ⲙⲉⲕϩ									ⲙⲉϩⲭ (ⲡ)	ⲙⲉϩⲭ			741	738	162,163	"<table> <colgroup> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> </colgroup> <tr> <!--Key: 768-->  <td colspan=""5"" class=""bordered"">(S) ⲛⲁϣⲧ ⲙ.
 (A) ⲛⲁⳉⲧ ⲙ.</td> <td colspan=""4"" class=""bordered"">  stiff-necked person <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CF%83%CE%BA%CE%BB%CE%B7%CF%81%CE%BF%CF%84%CF%81%CE%B1%CF%87%CE%B7%CE%BB%CE%BF%CF%83"">σκληροτραχηλοσ</a>]</span> </td> <td rowspan=""2"" class=""bordered""><b>Crum: </b><a href=""https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=163a"">163a</a></td> </tr> <tr> <!--Key: 769--> <td colspan=""1""></td> <td colspan=""4"" class=""bordered"">(S, A) ⲙⲛⲧⲛ. ⲙ. (ⲧ)</td> <td colspan=""4"" class=""bordered""> <b>(noun female)</b><br/> stiff-neckedness <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%B1%CF%85%CE%B8%CE%B1%CE%B4%CE%B5%CE%B9%CE%B1"">αυθαδεια</a>]</span> </td>  </tr> </table>"	"<ul> <li> (S) ⲛⲁϣⲧ ⲙ.
@@ -824,7 +824,7 @@ __(S, A) ⲙⲛⲧⲛ. ⲙ. (ⲧ) (noun female) stiff-neckedness [αυθαδει
 (S) ϫⲛⲉ
 (B) ϭⲉⲛⲟ
 (S) ϫⲛⲉ-, ϫⲉⲛⲁ=
-(B) ϭⲉⲛⲟ=, ϭⲉⲛⲏⲟⲩⲧ+"	"(S) ϫⲛⲁ, ϫⲉⲛⲁ
+(B) ϭⲉⲛⲟ=, ϭⲉⲛⲏⲟⲩⲧ+"	ϫⲛⲁ, ϫⲉⲛⲁ, ϫⲉⲛⲉ, ϫⲛⲉ, ϭⲉⲛⲟ, ϫⲛⲉ-, ϫⲉⲛⲁ=, ϭⲉⲛⲟ=, ϭⲉⲛⲏⲟⲩⲧ+	"(S) ϫⲛⲁ, ϫⲉⲛⲁ
 (sA) ϫⲉⲛⲉ
 (S) ϫⲛⲉ
 (B) ϭⲉⲛⲟ
@@ -868,7 +868,7 @@ __ϩⲓϫⲉⲛ- (c)
 (S) ϭⲱⲙⲉ
 (S, A, sA) plural: ϭⲟⲟⲙ
 (sA) plural: ϭⲟⲟⲙⲉ
-(S) plural: ⲕⲁⲁⲙ"	"(S, A, sA, B, F) ϭⲱⲙ (ⲡ)
+(S) plural: ⲕⲁⲁⲙ"	ϭⲱⲙ, ϭⲟⲙ, ⲕⲟⲙ, ϫⲱⲙ, ϭⲱⲙⲉ, ϭⲟⲟⲙ (ⲛ), ϭⲟⲟⲙⲉ (ⲛ), ⲕⲁⲁⲙ (ⲛ)	"(S, A, sA, B, F) ϭⲱⲙ (ⲡ)
 (S) ϭⲟⲙ, ⲕⲟⲙ (ⲡ)
 (B) ϫⲱⲙ (ⲡ)
 (S) ϭⲱⲙⲉ (ⲡ)
@@ -908,7 +908,7 @@ __ⲙⲛⲧϭ. vinedressing"
 (B) ⲓⲏⲥ+ {oftenest, as if ⲓⲱⲥ}
 (F) ⲉⲓⲉⲥ+"	"(B, F) ⲓⲱⲥ
 (B) ⲓⲏⲥ+ {oftenest, as if ⲓⲱⲥ}
-(F) ⲉⲓⲉⲥ+"	"(B, F) ⲓⲱⲥ
+(F) ⲉⲓⲉⲥ+"	ⲓⲱⲥ, ⲓⲏⲥ+ {oftenest, as if ⲓⲱⲥ}, ⲉⲓⲉⲥ+	"(B, F) ⲓⲱⲥ
 (B) ⲓⲏⲥ+ {oftenest, as if ⲓⲱⲥ}
 (F) ⲉⲓⲉⲥ+"	ⲓⲱⲥ (B)			complete++	verb	σπουδαζειν, σπευδειν, ταχυνειν	"<b>intr:</b>
 ― hasten, be urgent [σπουδαζειν, σπευδειν, ταχυνειν]
@@ -943,7 +943,7 @@ as adv (oftenest), ϧⲉⲛⲟⲩⲓⲱⲥ [ταχυσ, ταχυ]"
 (S) ⲉⲓⲟⲩⲧ
 (S) ⲓⲱⲧ"	"(S, sA) ⲉⲓⲱⲧ
 (S) ⲉⲓⲟⲩⲧ
-(S) ⲓⲱⲧ"	"(S, sA) ⲉⲓⲱⲧ (ⲡ)
+(S) ⲓⲱⲧ"	ⲉⲓⲱⲧ, ⲉⲓⲟⲩⲧ, ⲓⲱⲧ	"(S, sA) ⲉⲓⲱⲧ (ⲡ)
 (S) ⲉⲓⲟⲩⲧ (ⲡ)
 (S) ⲓⲱⲧ (ⲡ)"	ⲉⲓⲱⲧ (S)			complete	noun male	κριθη	barley [κριθη]	barley [κριθη]	barley	"barley <span style=""opacity:0.7"">[κριθη]</span>"	"barley <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%BA%CF%81%CE%B9%CE%B8%CE%B7"">κριθη</a>]</span>"	barley	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=87a	87	a	"ⲉⲓⲱⲧ (ⲡ)
 ⲉⲓⲟⲩⲧ (ⲡ)
@@ -952,7 +952,7 @@ as adv (oftenest), ϧⲉⲛⲟⲩⲓⲱⲥ [ταχυσ, ταχυ]"
 (B, F) ⲓⲱϯ"	"(S, A) ⲉⲓⲱⲧⲉ
 (B, F) ⲓⲱϯ"	"(S, A) ⲉⲓⲱⲧⲉ
 (B, F) ⲓⲱϯ"	"(S, A) ⲉⲓⲱⲧⲉ
-(B, F) ⲓⲱϯ"	"(S, A) ⲉⲓⲱⲧⲉ (ⲧ)
+(B, F) ⲓⲱϯ"	ⲉⲓⲱⲧⲉ, ⲓⲱϯ	"(S, A) ⲉⲓⲱⲧⲉ (ⲧ)
 (B, F) ⲓⲱϯ (ⲧ)"	ⲓⲱϯ (B)			complete	noun female	δροσοσ	"<i>sg as pl</i>, dew [δροσοσ]
 ― <i>honey as dew</i>
 ― <i>manna as dew</i>"	"sg as pl, dew [δροσοσ]
@@ -974,20 +974,20 @@ as adv (oftenest), ϧⲉⲛⲟⲩⲓⲱⲥ [ταχυσ, ταχυ]"
 (S) ⲉⲓⲱ, ⲓⲱ
 (B) ⲓⲁⲩ"	"(S) ⲉⲓⲁⲁⲩ
 (S) ⲉⲓⲱ, ⲓⲱ
-(B) ⲓⲁⲩ"	"(S) ⲉⲓⲁⲁⲩ (ⲡ)
+(B) ⲓⲁⲩ"	ⲉⲓⲁⲁⲩ, ⲉⲓⲱ, ⲓⲱ, ⲓⲁⲩ	"(S) ⲉⲓⲁⲁⲩ (ⲡ)
 (S) ⲉⲓⲱ, ⲓⲱ (ⲡ)
 (B) ⲓⲁⲩ (ⲡ)"	ⲓⲁⲩ (B)			complete	noun male	λινον, λινουσ	linen [λινον, λινουσ]	linen [λινον, λινουσ]	linen	"linen <span style=""opacity:0.7"">[λινον, λινουσ]</span>"	"linen <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%BB%CE%B9%CE%BD%CE%BF%CE%BD"">λινον</a>, <a href=""https://logeion.uchicago.edu/%CE%BB%CE%B9%CE%BD%CE%BF%CF%85%CF%83"">λινουσ</a>]</span>"	linen	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=88a	88	a	"ⲉⲓⲁⲁⲩ (ⲡ)
 ⲉⲓⲱ, ⲓⲱ (ⲡ)"	ⲉⲓⲁⲁⲩ									ⲓⲁⲩ (ⲡ)	ⲓⲁⲩ									747	745	88	"<table> <colgroup> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> </colgroup> <tr> <!--Key: 423-->  <td colspan=""5"" class=""bordered"">(S) ⲡⲉⲓⲁⲁⲩ, ⲡⲓⲁⲁⲩ</td> <td colspan=""4"" class=""bordered"">  <i>for ⲉⲓ.</i> </td> <td rowspan=""1"" class=""bordered""><b>Crum: </b><a href=""https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=88a"">88a</a></td> </tr> </table>"	<ul> <li> (S) ⲡⲉⲓⲁⲁⲩ, ⲡⲓⲁⲁⲩ<br/><i>for ⲉⲓ.</i> </li> </ul>	(S) ⲡⲉⲓⲁⲁⲩ, ⲡⲓⲁⲁⲩ for ⲉⲓ.
-747	(S) *eioue,eiooue	3	waters /*?*/	waters /*?*/		88a	6	0	2009-09-14	2010-01-29	vagrant	vagrant	https://pishoyg.github.io/crum/747.html	(S) <i>plural: </i>ⲉⲓⲟⲩⲉ, ⲉⲓⲟⲟⲩⲉ	(S) <i>plural: </i>ⲉⲓⲟⲩⲉ, ⲉⲓⲟⲟⲩⲉ	(S) plural: ⲉⲓⲟⲩⲉ, ⲉⲓⲟⲟⲩⲉ	(S) plural: ⲉⲓⲟⲩⲉ, ⲉⲓⲟⲟⲩⲉ	(S) ⲉⲓⲟⲩⲉ, ⲉⲓⲟⲟⲩⲉ (ⲛ)	ⲉⲓⲟⲩⲉ (S)			complete	noun		waters (?)	waters (?)	waters (?)	waters (?)	waters (?)	waters (?)	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=88a	88	a	ⲉⲓⲟⲩⲉ, ⲉⲓⲟⲟⲩⲉ (ⲛ)	ⲉⲓⲟⲩⲉ																			748	746	88			
-748	(S) eiaouba	3	(meaning unknown)	(meaning unknown)		88a	6	0	2009-09-14	2010-01-29	vagrant	vagrant	https://pishoyg.github.io/crum/748.html	(S) ⲉⲓⲁⲟⲩⲃⲁ	(S) ⲉⲓⲁⲟⲩⲃⲁ	(S) ⲉⲓⲁⲟⲩⲃⲁ	(S) ⲉⲓⲁⲟⲩⲃⲁ	(S) ⲉⲓⲁⲟⲩⲃⲁ (noun)	ⲉⲓⲁⲟⲩⲃⲁ (S)			complete	noun		<i>meaning unknown</i>	meaning unknown	<i>meaning unknown</i>	<i>meaning unknown</i>	<i>meaning unknown</i>	meaning unknown	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=88a	88	a	ⲉⲓⲁⲟⲩⲃⲁ (noun)	ⲉⲓⲁⲟⲩⲃⲁ																			749	747	88			
+747	(S) *eioue,eiooue	3	waters /*?*/	waters /*?*/		88a	6	0	2009-09-14	2010-01-29	vagrant	vagrant	https://pishoyg.github.io/crum/747.html	(S) <i>plural: </i>ⲉⲓⲟⲩⲉ, ⲉⲓⲟⲟⲩⲉ	(S) <i>plural: </i>ⲉⲓⲟⲩⲉ, ⲉⲓⲟⲟⲩⲉ	(S) plural: ⲉⲓⲟⲩⲉ, ⲉⲓⲟⲟⲩⲉ	(S) plural: ⲉⲓⲟⲩⲉ, ⲉⲓⲟⲟⲩⲉ	ⲉⲓⲟⲩⲉ, ⲉⲓⲟⲟⲩⲉ (ⲛ)	(S) ⲉⲓⲟⲩⲉ, ⲉⲓⲟⲟⲩⲉ (ⲛ)	ⲉⲓⲟⲩⲉ (S)			complete	noun		waters (?)	waters (?)	waters (?)	waters (?)	waters (?)	waters (?)	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=88a	88	a	ⲉⲓⲟⲩⲉ, ⲉⲓⲟⲟⲩⲉ (ⲛ)	ⲉⲓⲟⲩⲉ																			748	746	88			
+748	(S) eiaouba	3	(meaning unknown)	(meaning unknown)		88a	6	0	2009-09-14	2010-01-29	vagrant	vagrant	https://pishoyg.github.io/crum/748.html	(S) ⲉⲓⲁⲟⲩⲃⲁ	(S) ⲉⲓⲁⲟⲩⲃⲁ	(S) ⲉⲓⲁⲟⲩⲃⲁ	(S) ⲉⲓⲁⲟⲩⲃⲁ	ⲉⲓⲁⲟⲩⲃⲁ	(S) ⲉⲓⲁⲟⲩⲃⲁ (noun)	ⲉⲓⲁⲟⲩⲃⲁ (S)			complete	noun		<i>meaning unknown</i>	meaning unknown	<i>meaning unknown</i>	<i>meaning unknown</i>	<i>meaning unknown</i>	meaning unknown	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=88a	88	a	ⲉⲓⲁⲟⲩⲃⲁ (noun)	ⲉⲓⲁⲟⲩⲃⲁ																			749	747	88			
 749	(S) ***eiooun,iooun (S) ****iooune	3	(a title, meaning unknown)	(a title, meaning unknown)		88a	6	0	2009-09-14	2010-01-29	vagrant	vagrant	https://pishoyg.github.io/crum/749.html	"(S) <i>male: </i>ⲉⲓⲟⲟⲩⲛ, ⲓⲟⲟⲩⲛ
 (S) <i>female: </i>ⲓⲟⲟⲩⲛⲉ"	"(S) <i>male: </i>ⲉⲓⲟⲟⲩⲛ, ⲓⲟⲟⲩⲛ
 (S) <i>female: </i>ⲓⲟⲟⲩⲛⲉ"	"(S) male: ⲉⲓⲟⲟⲩⲛ, ⲓⲟⲟⲩⲛ
 (S) female: ⲓⲟⲟⲩⲛⲉ"	"(S) male: ⲉⲓⲟⲟⲩⲛ, ⲓⲟⲟⲩⲛ
-(S) female: ⲓⲟⲟⲩⲛⲉ"	"(S) ⲉⲓⲟⲟⲩⲛ, ⲓⲟⲟⲩⲛ (ⲡ)
+(S) female: ⲓⲟⲟⲩⲛⲉ"	ⲉⲓⲟⲟⲩⲛ, ⲓⲟⲟⲩⲛ (ⲡ), ⲓⲟⲟⲩⲛⲉ (ⲧ)	"(S) ⲉⲓⲟⲟⲩⲛ, ⲓⲟⲟⲩⲛ (ⲡ)
 (S) ⲓⲟⲟⲩⲛⲉ (ⲧ)"	ⲉⲓⲟⲟⲩⲛ (S)			complete	noun		<i>a title, meaning unknown</i>	a title, meaning unknown	<i>a title, meaning unknown</i>	<i>a title, meaning unknown</i>	<i>a title, meaning unknown</i>	a title, meaning unknown	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=88a	88	a	"ⲉⲓⲟⲟⲩⲛ, ⲓⲟⲟⲩⲛ (ⲡ)
 ⲓⲟⲟⲩⲛⲉ (ⲧ)"	ⲉⲓⲟⲟⲩⲛ																			750	748	88			
-750	(S,B,F) iS	4	urine /$gk: [[ouron]]$/	urine /$gk: [[ouron]]$/	ouron	88a	6	0	2009-09-14	2010-01-29	vagrant	vagrant	https://pishoyg.github.io/crum/750.html	(S, B, F) ⲓϣ	(S, B, F) ⲓϣ	(S, B, F) ⲓϣ	(S, B, F) ⲓϣ	(S, B, F) ⲓϣ (ⲧ)	ⲓϣ (B)			complete	noun female	ουρον	urine [ουρον]	urine [ουρον]	urine	"urine <span style=""opacity:0.7"">[ουρον]</span>"	"urine <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%BF%CF%85%CF%81%CE%BF%CE%BD"">ουρον</a>]</span>"	urine	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=88a	88	a	ⲓϣ (ⲧ)	ⲓϣ									ⲓϣ (ⲧ)	ⲓϣ	ⲓϣ (ⲧ)	ⲓϣ							751	749	88	"<table> <colgroup> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> </colgroup> <tr> <!--Key: 9026-->  <td colspan=""5"" class=""bordered"">(B) ⲓϣ ⲛϩⲉⲙⲥⲓ</td> <td colspan=""4"" class=""bordered"">   </td> <td rowspan=""1"" class=""bordered""><b>Crum: </b><a href=""https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=88b"">88b</a></td> </tr> </table>"	<ul> <li> (B) ⲓϣ ⲛϩⲉⲙⲥⲓ </li> </ul>	(B) ⲓϣ ⲛϩⲉⲙⲥⲓ 
+750	(S,B,F) iS	4	urine /$gk: [[ouron]]$/	urine /$gk: [[ouron]]$/	ouron	88a	6	0	2009-09-14	2010-01-29	vagrant	vagrant	https://pishoyg.github.io/crum/750.html	(S, B, F) ⲓϣ	(S, B, F) ⲓϣ	(S, B, F) ⲓϣ	(S, B, F) ⲓϣ	ⲓϣ	(S, B, F) ⲓϣ (ⲧ)	ⲓϣ (B)			complete	noun female	ουρον	urine [ουρον]	urine [ουρον]	urine	"urine <span style=""opacity:0.7"">[ουρον]</span>"	"urine <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%BF%CF%85%CF%81%CE%BF%CE%BD"">ουρον</a>]</span>"	urine	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=88a	88	a	ⲓϣ (ⲧ)	ⲓϣ									ⲓϣ (ⲧ)	ⲓϣ	ⲓϣ (ⲧ)	ⲓϣ							751	749	88	"<table> <colgroup> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> </colgroup> <tr> <!--Key: 9026-->  <td colspan=""5"" class=""bordered"">(B) ⲓϣ ⲛϩⲉⲙⲥⲓ</td> <td colspan=""4"" class=""bordered"">   </td> <td rowspan=""1"" class=""bordered""><b>Crum: </b><a href=""https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=88b"">88b</a></td> </tr> </table>"	<ul> <li> (B) ⲓϣ ⲛϩⲉⲙⲥⲓ </li> </ul>	(B) ⲓϣ ⲛϩⲉⲙⲥⲓ 
 751	"(S,sA) eiSe (A) eiQe (B) iSi (S) aSt-,eSt- (A) eQt- (B) eS- (S) aSt= (sA,F) eSt= (B,F) aS= (S) aSe+ (A) aQe+ (B) aSi+ (F) eSi+,eSe+$$ (NH) oSe+ *^<a href=ext codex II - The Gospel of Philip;108;73;13;peFGroG neFoSe apentaFtoGF;codex II - The Gospel of Thomas;107;51;10;ouoei ntsarj taei etoSe ntcuxh ouoei ntcuxh taei etoSe ntsarj"">Ext</a>^*"""	2	{tr:} hang, suspend /$gk: [[kremannunai, stauroun]]$/ | {intr /*rarely not qual*/:} be hung, depend	{tr:} hang, suspend /$gk: [[kremannunai, stauroun]]$/ | {intr /*rarely not qual*/:} be hung, depend	kremannunai, stauroun	88b	8	0	2009-09-14	2011-01-18	vagrant	vagrant	https://pishoyg.github.io/crum/751.html	"(S, sA) ⲉⲓϣⲉ
 (A) ⲉⲓⳉⲉ
 (B) ⲓϣⲓ
@@ -1040,7 +1040,7 @@ as adv (oftenest), ϧⲉⲛⲟⲩⲓⲱⲥ [ταχυσ, ταχυ]"
 (A) ⲁⳉⲉ+
 (B) ⲁϣⲓ+
 (F) ⲉϣⲓ+, ⲉϣⲉ+(?)
-(NH) ⲟϣⲉ+"	"(S, sA) ⲉⲓϣⲉ
+(NH) ⲟϣⲉ+"	ⲉⲓϣⲉ, ⲉⲓⳉⲉ, ⲓϣⲓ, ⲁϣⲧ-, ⲉϣⲧ-, ⲉⳉⲧ-, ⲉϣ-, ⲁϣⲧ=, ⲉϣⲧ=, ⲁϣ=, ⲁϣⲉ+, ⲁⳉⲉ+, ⲁϣⲓ+, ⲉϣⲓ+, ⲉϣⲉ+ (?), ⲟϣⲉ+	"(S, sA) ⲉⲓϣⲉ
 (A) ⲉⲓⳉⲉ
 (B) ⲓϣⲓ
 (S) ⲁϣⲧ-, ⲉϣⲧ-
@@ -1093,9 +1093,9 @@ ____ⲉⲃⲟⲗ (c) hang out, overhang
 ____(B) ⲉⲡϣⲱⲓ (c) be hung up
 ____ⲉϩⲣⲁⲓ, ⲉϩⲣⲏⲓ (c) meaning same
 (B) ϫⲓⲛⲓϣⲓ (ⲡ) (noun male) hanging, crucifixion"
-752	(S) iSt	3	(meaning unknown)	(meaning unknown)		89a	6	0	2009-09-14	2010-01-29	vagrant	vagrant	https://pishoyg.github.io/crum/752.html	(S) ⲓϣⲧ	(S) ⲓϣⲧ	(S) ⲓϣⲧ	(S) ⲓϣⲧ	(S) ⲓϣⲧ (noun)	ⲓϣⲧ (S)			complete	noun		<i>meaning unknown</i>	meaning unknown	<i>meaning unknown</i>	<i>meaning unknown</i>	<i>meaning unknown</i>	meaning unknown	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=89a	89	a	ⲓϣⲧ (noun)	ⲓϣⲧ																			753	751	89			
-753	(S) eiSoueu,eSouei	2	roast, dry (by heating)	roast, dry (by heating)		89a	6	0	2009-09-14	2010-01-29	vagrant	vagrant	https://pishoyg.github.io/crum/753.html	(S) ⲉⲓϣⲟⲩⲉⲩ, ⲉϣⲟⲩⲉⲓ	(S) ⲉⲓϣⲟⲩⲉⲩ, ⲉϣⲟⲩⲉⲓ	(S) ⲉⲓϣⲟⲩⲉⲩ, ⲉϣⲟⲩⲉⲓ	(S) ⲉⲓϣⲟⲩⲉⲩ, ⲉϣⲟⲩⲉⲓ	(S) ⲉⲓϣⲟⲩⲉⲩ, ⲉϣⲟⲩⲉⲓ	ⲉⲓϣⲟⲩⲉⲩ (S)			complete	verb		roast, dry <i>by heating</i>	roast, dry by heating	roast, dry <i>by heating</i>	roast, dry <i>by heating</i>	roast, dry <i>by heating</i>	roast, dry by heating	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=89a	89	a	ⲉⲓϣⲟⲩⲉⲩ, ⲉϣⲟⲩⲉⲓ	ⲉⲓϣⲟⲩⲉⲩ																			754	752	89			
-754	(B) iK	1	demon /$gk: [[daimonion, daimwn]]$/	demon /$gk: [[daimonion, daimwn]]$/	daimonion, daimwn	89a	6	0	2009-09-14	2010-01-29	vagrant	vagrant	https://pishoyg.github.io/crum/754.html	(B) ⲓϧ	(B) ⲓϧ	(B) ⲓϧ	(B) ⲓϧ	(B) ⲓϧ (ⲡ)	ⲓϧ (B)			complete	noun male	δαιμονιον, δαιμων	demon [δαιμονιον, δαιμων]	demon [δαιμονιον, δαιμων]	demon	"demon <span style=""opacity:0.7"">[δαιμονιον, δαιμων]</span>"	"demon <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%B4%CE%B1%CE%B9%CE%BC%CE%BF%CE%BD%CE%B9%CE%BF%CE%BD"">δαιμονιον</a>, <a href=""https://logeion.uchicago.edu/%CE%B4%CE%B1%CE%B9%CE%BC%CF%89%CE%BD"">δαιμων</a>]</span>"	demon	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=89a	89	a											ⲓϧ (ⲡ)	ⲓϧ									755	753	89			
+752	(S) iSt	3	(meaning unknown)	(meaning unknown)		89a	6	0	2009-09-14	2010-01-29	vagrant	vagrant	https://pishoyg.github.io/crum/752.html	(S) ⲓϣⲧ	(S) ⲓϣⲧ	(S) ⲓϣⲧ	(S) ⲓϣⲧ	ⲓϣⲧ	(S) ⲓϣⲧ (noun)	ⲓϣⲧ (S)			complete	noun		<i>meaning unknown</i>	meaning unknown	<i>meaning unknown</i>	<i>meaning unknown</i>	<i>meaning unknown</i>	meaning unknown	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=89a	89	a	ⲓϣⲧ (noun)	ⲓϣⲧ																			753	751	89			
+753	(S) eiSoueu,eSouei	2	roast, dry (by heating)	roast, dry (by heating)		89a	6	0	2009-09-14	2010-01-29	vagrant	vagrant	https://pishoyg.github.io/crum/753.html	(S) ⲉⲓϣⲟⲩⲉⲩ, ⲉϣⲟⲩⲉⲓ	(S) ⲉⲓϣⲟⲩⲉⲩ, ⲉϣⲟⲩⲉⲓ	(S) ⲉⲓϣⲟⲩⲉⲩ, ⲉϣⲟⲩⲉⲓ	(S) ⲉⲓϣⲟⲩⲉⲩ, ⲉϣⲟⲩⲉⲓ	ⲉⲓϣⲟⲩⲉⲩ, ⲉϣⲟⲩⲉⲓ	(S) ⲉⲓϣⲟⲩⲉⲩ, ⲉϣⲟⲩⲉⲓ	ⲉⲓϣⲟⲩⲉⲩ (S)			complete	verb		roast, dry <i>by heating</i>	roast, dry by heating	roast, dry <i>by heating</i>	roast, dry <i>by heating</i>	roast, dry <i>by heating</i>	roast, dry by heating	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=89a	89	a	ⲉⲓϣⲟⲩⲉⲩ, ⲉϣⲟⲩⲉⲓ	ⲉⲓϣⲟⲩⲉⲩ																			754	752	89			
+754	(B) iK	1	demon /$gk: [[daimonion, daimwn]]$/	demon /$gk: [[daimonion, daimwn]]$/	daimonion, daimwn	89a	6	0	2009-09-14	2010-01-29	vagrant	vagrant	https://pishoyg.github.io/crum/754.html	(B) ⲓϧ	(B) ⲓϧ	(B) ⲓϧ	(B) ⲓϧ	ⲓϧ	(B) ⲓϧ (ⲡ)	ⲓϧ (B)			complete	noun male	δαιμονιον, δαιμων	demon [δαιμονιον, δαιμων]	demon [δαιμονιον, δαιμων]	demon	"demon <span style=""opacity:0.7"">[δαιμονιον, δαιμων]</span>"	"demon <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%B4%CE%B1%CE%B9%CE%BC%CE%BF%CE%BD%CE%B9%CE%BF%CE%BD"">δαιμονιον</a>, <a href=""https://logeion.uchicago.edu/%CE%B4%CE%B1%CE%B9%CE%BC%CF%89%CE%BD"">δαιμων</a>]</span>"	demon	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=89a	89	a											ⲓϧ (ⲡ)	ⲓϧ									755	753	89			
 755	(S,A) eiwHe,iwHe (B,F) ioHi (F) iwHi (S) eieH-,eiwH- (B) iaH- (F) ieH- (S) *eiaHou,eiaHoue	1	field /$gk: [[agros, gewrgion, xwrion]]$/	field /$gk: [[agros, gewrgion, xwrion]]$/	agros, gewrgion, xwrion	89b	6	0	2009-09-14	2010-01-29	vagrant	vagrant	https://pishoyg.github.io/crum/755.html	"(S, A) ⲉⲓⲱϩⲉ, ⲓⲱϩⲉ
 (B, F) ⲓⲟϩⲓ
 (F) ⲓⲱϩⲓ
@@ -1120,7 +1120,7 @@ ____ⲉϩⲣⲁⲓ, ⲉϩⲣⲏⲓ (c) meaning same
 (S) ⲉⲓⲉϩ-, ⲉⲓⲱϩ-
 (B) ⲓⲁϩ-
 (F) ⲓⲉϩ-
-(S) plural: ⲉⲓⲁϩⲟⲩ, ⲉⲓⲁϩⲟⲩⲉ"	"(S, A) ⲉⲓⲱϩⲉ, ⲓⲱϩⲉ (ⲡ)
+(S) plural: ⲉⲓⲁϩⲟⲩ, ⲉⲓⲁϩⲟⲩⲉ"	ⲉⲓⲱϩⲉ, ⲓⲱϩⲉ, ⲓⲟϩⲓ, ⲓⲱϩⲓ, ⲉⲓⲉϩ-, ⲉⲓⲱϩ-, ⲓⲁϩ-, ⲓⲉϩ-, ⲉⲓⲁϩⲟⲩ, ⲉⲓⲁϩⲟⲩⲉ (ⲛ)	"(S, A) ⲉⲓⲱϩⲉ, ⲓⲱϩⲉ (ⲡ)
 (B, F) ⲓⲟϩⲓ (ⲡ)
 (F) ⲓⲱϩⲓ (ⲡ)
 (S) ⲉⲓⲉϩ-, ⲉⲓⲱϩ- (ⲡ)
@@ -1146,10 +1146,10 @@ ____ⲉϩⲣⲁⲓ, ⲉϩⲣⲏⲓ (c) meaning same
 (A) ⳉⲓ ⲓ.
 (F) ϣⲓ ⲓ. (verb) measure field, whence ⲛⲟⲩϩ ⲛϣ. a mesure of length
 (S) ⲗⲉⲃⲓⲱϩⲉ (noun) (noun) meaning unknown"
-756	(S) eiGri	2	{tr:} (meaning unknown)	{tr:} (meaning unknown)		90b	6	0	2009-09-14	2010-01-29	vagrant	vagrant	https://pishoyg.github.io/crum/756.html	(S) ⲉⲓϭⲣⲓ	(S) ⲉⲓϭⲣⲓ	(S) ⲉⲓϭⲣⲓ	(S) ⲉⲓϭⲣⲓ	(S) ⲉⲓϭⲣⲓ	ⲉⲓϭⲣⲓ (S)			complete	verb		<b>tr:</b> <i>meaning unknown</i>	tr: meaning unknown	<b>tr:</b> <i>meaning unknown</i>	<b>tr:</b> <i>meaning unknown</i>	<b>tr:</b> <i>meaning unknown</i>	tr: meaning unknown	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=90b	90	b	ⲉⲓϭⲣⲓ	ⲉⲓϭⲣⲓ																			757	755	90			
-757	(B) kh	4	(meaning unknown), ? river-bank	(meaning unknown), ? river-bank		92a	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/757.html	(B) ⲕⲏ	(B) ⲕⲏ	(B) ⲕⲏ	(B) ⲕⲏ	(B) ⲕⲏ (ⲧ)	ⲕⲏ (B)			complete	noun female		<i>meaning unknown</i>, ? river-bank	meaning unknown, ? river-bank	<i>meaning unknown</i>, ? river-bank	<i>meaning unknown</i>, ? river-bank	<i>meaning unknown</i>, ? river-bank	meaning unknown, ? river-bank	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=92a	92	a											ⲕⲏ (ⲧ)	ⲕⲏ									758	756	92			
-758	(O) ko	1	? bull	? bull		92a	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/758.html	(O) ⲕⲟ	(O) ⲕⲟ	(O) ⲕⲟ	(O) ⲕⲟ	(O) ⲕⲟ (ⲡ)				complete	noun male		? bull	? bull	? bull	? bull	? bull	? bull	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=92a	92	a																	ⲕⲟ (ⲡ)	ⲕⲟ			759	757	92			
-759	(S) ko	1	(meaning unknown)	(meaning unknown)		92a	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/759.html	(S) ⲕⲟ	(S) ⲕⲟ	(S) ⲕⲟ	(S) ⲕⲟ	(S) ⲕⲟ (ⲡ)	ⲕⲟ (S)			complete	noun male		<i>meaning unknown</i>	meaning unknown	<i>meaning unknown</i>	<i>meaning unknown</i>	<i>meaning unknown</i>	meaning unknown	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=92a	92	a	ⲕⲟ (ⲡ)	ⲕⲟ																			760	758	92			
+756	(S) eiGri	2	{tr:} (meaning unknown)	{tr:} (meaning unknown)		90b	6	0	2009-09-14	2010-01-29	vagrant	vagrant	https://pishoyg.github.io/crum/756.html	(S) ⲉⲓϭⲣⲓ	(S) ⲉⲓϭⲣⲓ	(S) ⲉⲓϭⲣⲓ	(S) ⲉⲓϭⲣⲓ	ⲉⲓϭⲣⲓ	(S) ⲉⲓϭⲣⲓ	ⲉⲓϭⲣⲓ (S)			complete	verb		<b>tr:</b> <i>meaning unknown</i>	tr: meaning unknown	<b>tr:</b> <i>meaning unknown</i>	<b>tr:</b> <i>meaning unknown</i>	<b>tr:</b> <i>meaning unknown</i>	tr: meaning unknown	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=90b	90	b	ⲉⲓϭⲣⲓ	ⲉⲓϭⲣⲓ																			757	755	90			
+757	(B) kh	4	(meaning unknown), ? river-bank	(meaning unknown), ? river-bank		92a	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/757.html	(B) ⲕⲏ	(B) ⲕⲏ	(B) ⲕⲏ	(B) ⲕⲏ	ⲕⲏ	(B) ⲕⲏ (ⲧ)	ⲕⲏ (B)			complete	noun female		<i>meaning unknown</i>, ? river-bank	meaning unknown, ? river-bank	<i>meaning unknown</i>, ? river-bank	<i>meaning unknown</i>, ? river-bank	<i>meaning unknown</i>, ? river-bank	meaning unknown, ? river-bank	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=92a	92	a											ⲕⲏ (ⲧ)	ⲕⲏ									758	756	92			
+758	(O) ko	1	? bull	? bull		92a	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/758.html	(O) ⲕⲟ	(O) ⲕⲟ	(O) ⲕⲟ	(O) ⲕⲟ	ⲕⲟ	(O) ⲕⲟ (ⲡ)				complete	noun male		? bull	? bull	? bull	? bull	? bull	? bull	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=92a	92	a																	ⲕⲟ (ⲡ)	ⲕⲟ			759	757	92			
+759	(S) ko	1	(meaning unknown)	(meaning unknown)		92a	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/759.html	(S) ⲕⲟ	(S) ⲕⲟ	(S) ⲕⲟ	(S) ⲕⲟ	ⲕⲟ	(S) ⲕⲟ (ⲡ)	ⲕⲟ (S)			complete	noun male		<i>meaning unknown</i>	meaning unknown	<i>meaning unknown</i>	<i>meaning unknown</i>	<i>meaning unknown</i>	meaning unknown	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=92a	92	a	ⲕⲟ (ⲡ)	ⲕⲟ																			760	758	92			
 760	(S) koie (Sa) kae (S,A) kaie,kaeie (S,B) koi	4	(oftenest B), field (/*high lying*/ as tillage or pasture) /$gk: [[agros, pedion, gewrgion]]$/	(oftenest B), field (/*high lying*/ as tillage or pasture) /$gk: [[agros, pedion, gewrgion]]$/	agros, pedion, gewrgion	92b	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/760.html	"(S) ⲕⲟⲓⲉ
 (Sa) ⲕⲁⲉ
 (S, A) ⲕⲁⲓⲉ, ⲕⲁⲉⲓⲉ
@@ -1162,18 +1162,18 @@ ____ⲉϩⲣⲁⲓ, ⲉϩⲣⲏⲓ (c) meaning same
 (S, B) ⲕⲟⲓ"	"(S) ⲕⲟⲓⲉ
 (Sa) ⲕⲁⲉ
 (S, A) ⲕⲁⲓⲉ, ⲕⲁⲉⲓⲉ
-(S, B) ⲕⲟⲓ"	"(S) ⲕⲟⲓⲉ (ⲧ)
+(S, B) ⲕⲟⲓ"	ⲕⲟⲓⲉ, ⲕⲁⲉ, ⲕⲁⲓⲉ, ⲕⲁⲉⲓⲉ, ⲕⲟⲓ	"(S) ⲕⲟⲓⲉ (ⲧ)
 (Sa) ⲕⲁⲉ (ⲧ)
 (S, A) ⲕⲁⲓⲉ, ⲕⲁⲉⲓⲉ (ⲧ)
 (S, B) ⲕⲟⲓ (ⲧ)"	ⲕⲟⲓ (B)			complete	noun female	αγροσ, πεδιον, γεωργιον	<i>oftenest B</i>, field <i>(high lying) as tillage or pasture</i> [αγροσ, πεδιον, γεωργιον]	oftenest B, field (high lying) as tillage or pasture [αγροσ, πεδιον, γεωργιον]	<i>oftenest B</i>, field <i>(high lying) as tillage or pasture</i>	"<i>oftenest B</i>, field <i>(high lying) as tillage or pasture</i> <span style=""opacity:0.7"">[αγροσ, πεδιον, γεωργιον]</span>"	"<i>oftenest B</i>, field <i>(high lying) as tillage or pasture</i> <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%B1%CE%B3%CF%81%CE%BF%CF%83"">αγροσ</a>, <a href=""https://logeion.uchicago.edu/%CF%80%CE%B5%CE%B4%CE%B9%CE%BF%CE%BD"">πεδιον</a>, <a href=""https://logeion.uchicago.edu/%CE%B3%CE%B5%CF%89%CF%81%CE%B3%CE%B9%CE%BF%CE%BD"">γεωργιον</a>]</span>"	oftenest B, field (high lying) as tillage or pasture	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=92b	92	b	"ⲕⲟⲓⲉ (ⲧ)
 ⲕⲁⲓⲉ, ⲕⲁⲉⲓⲉ (ⲧ)
 ⲕⲟⲓ (ⲧ)"	ⲕⲟⲓⲉ	ⲕⲁⲉ (ⲧ)	ⲕⲁⲉ			ⲕⲁⲓⲉ, ⲕⲁⲉⲓⲉ (ⲧ)	ⲕⲁⲓⲉ			ⲕⲟⲓ (ⲧ)	ⲕⲟⲓ									761	759	92	"<table> <colgroup> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> </colgroup> <tr> <!--Key: 437-->  <td colspan=""5"" class=""bordered"">(B) ⲙⲁ ⲛⲕ.</td> <td colspan=""4"" class=""bordered"">  plain </td> <td rowspan=""2"" class=""bordered""><b>Crum: </b><a href=""https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=92b"">92b</a></td> </tr> <tr> <!--Key: 438-->  <td colspan=""5"" class=""bordered"">(B) ⲣⲉⲙⲛⲕ.</td> <td colspan=""4"" class=""bordered"">  husbandman </td>  </tr> </table>"	<ul> <li> (B) ⲙⲁ ⲛⲕ.<br/>plain </li> <li> (B) ⲣⲉⲙⲛⲕ.<br/>husbandman </li> </ul>	"(B) ⲙⲁ ⲛⲕ. plain
 (B) ⲣⲉⲙⲛⲕ. husbandman"
-761	(S) *kou	3	(meaning unknown)	(meaning unknown)		92b	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/761.html	(S) <i>plural: </i>ⲕⲟⲩ	(S) <i>plural: </i>ⲕⲟⲩ	(S) plural: ⲕⲟⲩ	(S) plural: ⲕⲟⲩ	(S) ⲕⲟⲩ (ⲛ)	ⲕⲟⲩ (S)			complete	noun		<i>meaning unknown</i>	meaning unknown	<i>meaning unknown</i>	<i>meaning unknown</i>	<i>meaning unknown</i>	meaning unknown	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=92b	92	b	ⲕⲟⲩ (ⲛ)	ⲕⲟⲩ																			763	760	92			
-763	(S) kw	3	(meaning unknown, paral) idols	(meaning unknown, paral) idols		98b	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/763.html	(S) ⲕⲱ	(S) ⲕⲱ	(S) ⲕⲱ	(S) ⲕⲱ	(S) ⲕⲱ (noun)	ⲕⲱ (S)			complete	noun		<i>meaning unknown, paral</i> idols	meaning unknown, paral idols	<i>meaning unknown, paral</i> idols	<i>meaning unknown, paral</i> idols	<i>meaning unknown, paral</i> idols	meaning unknown, paral idols	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=98b	98	b	ⲕⲱ (noun)	ⲕⲱ																			764	761	98			
-764	(B) kwb	1	leaven /$gk: [[zumh]]$/	leaven /$gk: [[zumh]]$/	zumh	99a	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/764.html	(B) ⲕⲱⲃ	(B) ⲕⲱⲃ	(B) ⲕⲱⲃ	(B) ⲕⲱⲃ	(B) ⲕⲱⲃ (ⲡ)	ⲕⲱⲃ (B)			complete	noun male	ζυμη	leaven [ζυμη]	leaven [ζυμη]	leaven	"leaven <span style=""opacity:0.7"">[ζυμη]</span>"	"leaven <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%B6%CF%85%CE%BC%CE%B7"">ζυμη</a>]</span>"	leaven	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=99a	99	a											ⲕⲱⲃ (ⲡ)	ⲕⲱⲃ									765	763	99	"<table> <colgroup> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> </colgroup> <tr> <!--Key: 445-->  <td colspan=""5"" class=""bordered"">(B) ⲁⲧⲕ. (adj.)</td> <td colspan=""4"" class=""bordered""> <b>(adjective)</b><br/> without leaven <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%B1%CE%B6%CF%85%CE%BC%CE%BF%CF%83"">αζυμοσ</a>]</span> </td> <td rowspan=""1"" class=""bordered""><b>Crum: </b><a href=""https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=99a"">99a</a></td> </tr> </table>"	"<ul> <li> (B) ⲁⲧⲕ. (adj.)<br/>(adjective) without leaven <span style=""opacity:0.7"">[αζυμοσ]</span> </li> </ul>"	(B) ⲁⲧⲕ. (adj.) (adjective) without leaven [αζυμοσ]
-765	(S) *kibiu	3	(among fish) 	(among fish) 		99b	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/765.html	(S) <i>plural: </i>ⲕⲓⲃⲓⲩ	(S) <i>plural: </i>ⲕⲓⲃⲓⲩ	(S) plural: ⲕⲓⲃⲓⲩ	(S) plural: ⲕⲓⲃⲓⲩ	(S) ⲕⲓⲃⲓⲩ (ⲛ)	ⲕⲓⲃⲓⲩ (S)			complete	noun		<i>among fish</i>	among fish	<i>among fish</i>	<i>among fish</i>	<i>among fish</i>	among fish	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=99b	99	b	ⲕⲓⲃⲓⲩ (ⲛ)	ⲕⲓⲃⲓⲩ																			766	764	99			
-766	"(S) kwwbe,kwwFe,keebe-,kaabe-,keFe- *^<a href=ext Mark;2;15;21;aukeFe oua de eFmooSe epeFran pe simwn pkurhnaios"">Ext</a>^*,koobe="""	2	{tr:} compel, seize by force /$gk: [[aggareuein]]$/	{tr:} compel, seize by force /$gk: [[aggareuein]]$/	aggareuein	99b	6	0	2009-09-14	2012-04-02	vagrant	vagrant	https://pishoyg.github.io/crum/766.html	(S) ⲕⲱⲱⲃⲉ, ⲕⲱⲱϥⲉ, ⲕⲉⲉⲃⲉ-, ⲕⲁⲁⲃⲉ-, ⲕⲉϥⲉ-, , ⲕⲟⲟⲃⲉ= {ext Mark; 2; 15; 21; ⲁⲩⲕⲉϥⲉ ⲟⲩⲁ ⲇⲉ ⲉϥⲙⲟⲟϣⲉ ⲉⲡⲉϥⲣⲁⲛ ⲡⲉ ⲥⲓⲙⲱⲛ ⲡⲕⲩⲣⲏⲛⲁⲓⲟⲥ; Ext}	(S) ⲕⲱⲱⲃⲉ, ⲕⲱⲱϥⲉ, ⲕⲉⲉⲃⲉ-, ⲕⲁⲁⲃⲉ-, ⲕⲉϥⲉ-, , ⲕⲟⲟⲃⲉ=	(S) ⲕⲱⲱⲃⲉ, ⲕⲱⲱϥⲉ, ⲕⲉⲉⲃⲉ-, ⲕⲁⲁⲃⲉ-, ⲕⲉϥⲉ-, , ⲕⲟⲟⲃⲉ= {ext Mark; 2; 15; 21; ⲁⲩⲕⲉϥⲉ ⲟⲩⲁ ⲇⲉ ⲉϥⲙⲟⲟϣⲉ ⲉⲡⲉϥⲣⲁⲛ ⲡⲉ ⲥⲓⲙⲱⲛ ⲡⲕⲩⲣⲏⲛⲁⲓⲟⲥ; Ext}	(S) ⲕⲱⲱⲃⲉ, ⲕⲱⲱϥⲉ, ⲕⲉⲉⲃⲉ-, ⲕⲁⲁⲃⲉ-, ⲕⲉϥⲉ-, , ⲕⲟⲟⲃⲉ=	(S) ⲕⲱⲱⲃⲉ, ⲕⲱⲱϥⲉ, ⲕⲉⲉⲃⲉ-, ⲕⲁⲁⲃⲉ-, ⲕⲉϥⲉ-, , ⲕⲟⲟⲃⲉ=	ⲕⲱⲱⲃⲉ (S)			complete	verb	αγγαρευειν	<b>tr:</b> compel, seize by force [αγγαρευειν]	tr: compel, seize by force [αγγαρευειν]	<b>tr:</b> compel, seize by force	"<b>tr:</b> compel, seize by force <span style=""opacity:0.7"">[αγγαρευειν]</span>"	"<b>tr:</b> compel, seize by force <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%B1%CE%B3%CE%B3%CE%B1%CF%81%CE%B5%CF%85%CE%B5%CE%B9%CE%BD"">αγγαρευειν</a>]</span>"	tr: compel, seize by force	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=99b	99	b	ⲕⲱⲱⲃⲉ, ⲕⲱⲱϥⲉ, ⲕⲉⲉⲃⲉ-, ⲕⲁⲁⲃⲉ-, ⲕⲉϥⲉ-, , ⲕⲟⲟⲃⲉ=	ⲕⲱⲱⲃⲉ																			767	765	99,100	"<table> <colgroup> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> </colgroup> <tr> <!--Key: 450-->  <td colspan=""5"" class=""bordered"">(S) ⲕⲃⲁ (noun)
+761	(S) *kou	3	(meaning unknown)	(meaning unknown)		92b	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/761.html	(S) <i>plural: </i>ⲕⲟⲩ	(S) <i>plural: </i>ⲕⲟⲩ	(S) plural: ⲕⲟⲩ	(S) plural: ⲕⲟⲩ	ⲕⲟⲩ (ⲛ)	(S) ⲕⲟⲩ (ⲛ)	ⲕⲟⲩ (S)			complete	noun		<i>meaning unknown</i>	meaning unknown	<i>meaning unknown</i>	<i>meaning unknown</i>	<i>meaning unknown</i>	meaning unknown	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=92b	92	b	ⲕⲟⲩ (ⲛ)	ⲕⲟⲩ																			763	760	92			
+763	(S) kw	3	(meaning unknown, paral) idols	(meaning unknown, paral) idols		98b	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/763.html	(S) ⲕⲱ	(S) ⲕⲱ	(S) ⲕⲱ	(S) ⲕⲱ	ⲕⲱ	(S) ⲕⲱ (noun)	ⲕⲱ (S)			complete	noun		<i>meaning unknown, paral</i> idols	meaning unknown, paral idols	<i>meaning unknown, paral</i> idols	<i>meaning unknown, paral</i> idols	<i>meaning unknown, paral</i> idols	meaning unknown, paral idols	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=98b	98	b	ⲕⲱ (noun)	ⲕⲱ																			764	761	98			
+764	(B) kwb	1	leaven /$gk: [[zumh]]$/	leaven /$gk: [[zumh]]$/	zumh	99a	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/764.html	(B) ⲕⲱⲃ	(B) ⲕⲱⲃ	(B) ⲕⲱⲃ	(B) ⲕⲱⲃ	ⲕⲱⲃ	(B) ⲕⲱⲃ (ⲡ)	ⲕⲱⲃ (B)			complete	noun male	ζυμη	leaven [ζυμη]	leaven [ζυμη]	leaven	"leaven <span style=""opacity:0.7"">[ζυμη]</span>"	"leaven <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%B6%CF%85%CE%BC%CE%B7"">ζυμη</a>]</span>"	leaven	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=99a	99	a											ⲕⲱⲃ (ⲡ)	ⲕⲱⲃ									765	763	99	"<table> <colgroup> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> </colgroup> <tr> <!--Key: 445-->  <td colspan=""5"" class=""bordered"">(B) ⲁⲧⲕ. (adj.)</td> <td colspan=""4"" class=""bordered""> <b>(adjective)</b><br/> without leaven <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%B1%CE%B6%CF%85%CE%BC%CE%BF%CF%83"">αζυμοσ</a>]</span> </td> <td rowspan=""1"" class=""bordered""><b>Crum: </b><a href=""https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=99a"">99a</a></td> </tr> </table>"	"<ul> <li> (B) ⲁⲧⲕ. (adj.)<br/>(adjective) without leaven <span style=""opacity:0.7"">[αζυμοσ]</span> </li> </ul>"	(B) ⲁⲧⲕ. (adj.) (adjective) without leaven [αζυμοσ]
+765	(S) *kibiu	3	(among fish) 	(among fish) 		99b	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/765.html	(S) <i>plural: </i>ⲕⲓⲃⲓⲩ	(S) <i>plural: </i>ⲕⲓⲃⲓⲩ	(S) plural: ⲕⲓⲃⲓⲩ	(S) plural: ⲕⲓⲃⲓⲩ	ⲕⲓⲃⲓⲩ (ⲛ)	(S) ⲕⲓⲃⲓⲩ (ⲛ)	ⲕⲓⲃⲓⲩ (S)			complete	noun		<i>among fish</i>	among fish	<i>among fish</i>	<i>among fish</i>	<i>among fish</i>	among fish	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=99b	99	b	ⲕⲓⲃⲓⲩ (ⲛ)	ⲕⲓⲃⲓⲩ																			766	764	99			
+766	"(S) kwwbe,kwwFe,keebe-,kaabe-,keFe- *^<a href=ext Mark;2;15;21;aukeFe oua de eFmooSe epeFran pe simwn pkurhnaios"">Ext</a>^*,koobe="""	2	{tr:} compel, seize by force /$gk: [[aggareuein]]$/	{tr:} compel, seize by force /$gk: [[aggareuein]]$/	aggareuein	99b	6	0	2009-09-14	2012-04-02	vagrant	vagrant	https://pishoyg.github.io/crum/766.html	(S) ⲕⲱⲱⲃⲉ, ⲕⲱⲱϥⲉ, ⲕⲉⲉⲃⲉ-, ⲕⲁⲁⲃⲉ-, ⲕⲉϥⲉ-, , ⲕⲟⲟⲃⲉ= {ext Mark; 2; 15; 21; ⲁⲩⲕⲉϥⲉ ⲟⲩⲁ ⲇⲉ ⲉϥⲙⲟⲟϣⲉ ⲉⲡⲉϥⲣⲁⲛ ⲡⲉ ⲥⲓⲙⲱⲛ ⲡⲕⲩⲣⲏⲛⲁⲓⲟⲥ; Ext}	(S) ⲕⲱⲱⲃⲉ, ⲕⲱⲱϥⲉ, ⲕⲉⲉⲃⲉ-, ⲕⲁⲁⲃⲉ-, ⲕⲉϥⲉ-, , ⲕⲟⲟⲃⲉ=	(S) ⲕⲱⲱⲃⲉ, ⲕⲱⲱϥⲉ, ⲕⲉⲉⲃⲉ-, ⲕⲁⲁⲃⲉ-, ⲕⲉϥⲉ-, , ⲕⲟⲟⲃⲉ= {ext Mark; 2; 15; 21; ⲁⲩⲕⲉϥⲉ ⲟⲩⲁ ⲇⲉ ⲉϥⲙⲟⲟϣⲉ ⲉⲡⲉϥⲣⲁⲛ ⲡⲉ ⲥⲓⲙⲱⲛ ⲡⲕⲩⲣⲏⲛⲁⲓⲟⲥ; Ext}	(S) ⲕⲱⲱⲃⲉ, ⲕⲱⲱϥⲉ, ⲕⲉⲉⲃⲉ-, ⲕⲁⲁⲃⲉ-, ⲕⲉϥⲉ-, , ⲕⲟⲟⲃⲉ=	ⲕⲱⲱⲃⲉ, ⲕⲱⲱϥⲉ, ⲕⲉⲉⲃⲉ-, ⲕⲁⲁⲃⲉ-, ⲕⲉϥⲉ-, , ⲕⲟⲟⲃⲉ=	(S) ⲕⲱⲱⲃⲉ, ⲕⲱⲱϥⲉ, ⲕⲉⲉⲃⲉ-, ⲕⲁⲁⲃⲉ-, ⲕⲉϥⲉ-, , ⲕⲟⲟⲃⲉ=	ⲕⲱⲱⲃⲉ (S)			complete	verb	αγγαρευειν	<b>tr:</b> compel, seize by force [αγγαρευειν]	tr: compel, seize by force [αγγαρευειν]	<b>tr:</b> compel, seize by force	"<b>tr:</b> compel, seize by force <span style=""opacity:0.7"">[αγγαρευειν]</span>"	"<b>tr:</b> compel, seize by force <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%B1%CE%B3%CE%B3%CE%B1%CF%81%CE%B5%CF%85%CE%B5%CE%B9%CE%BD"">αγγαρευειν</a>]</span>"	tr: compel, seize by force	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=99b	99	b	ⲕⲱⲱⲃⲉ, ⲕⲱⲱϥⲉ, ⲕⲉⲉⲃⲉ-, ⲕⲁⲁⲃⲉ-, ⲕⲉϥⲉ-, , ⲕⲟⲟⲃⲉ=	ⲕⲱⲱⲃⲉ																			767	765	99,100	"<table> <colgroup> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> </colgroup> <tr> <!--Key: 450-->  <td colspan=""5"" class=""bordered"">(S) ⲕⲃⲁ (noun)
 (B) ⲭⲃⲁ (noun)</td> <td colspan=""4"" class=""bordered""> <b>(noun)</b><br/> compulsion, forced labour </td> <td rowspan=""8"" class=""bordered""><b>Crum: </b><a href=""https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=99b"">99b</a></td> </tr> <tr> <!--Key: 451--> <td colspan=""1""></td> <td colspan=""4"" class=""bordered"">(S) ⲣ ⲕ.</td> <td colspan=""4"" class=""bordered"">  do forced labour </td>  </tr> <tr> <!--Key: 452--> <td colspan=""1""></td> <td colspan=""4"" class=""bordered"">(S) ϭⲓⲛⲣ ⲕ.</td> <td colspan=""4"" class=""bordered"">  doing of forced labour </td>  </tr> <tr> <!--Key: 453--> <td colspan=""1""></td> <td colspan=""4"" class=""bordered"">(B) ϭⲓ ⲛⲭ.</td> <td colspan=""4"" class=""bordered"">  compel <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%B1%CE%B3%CE%B3%CE%B1%CF%81%CE%B5%CF%85%CE%B5%CE%B9%CE%BD"">αγγαρευειν</a>]</span> </td>  </tr> <tr> <!--Key: 454-->  <td colspan=""5"" class=""bordered"">(S, A, F) ⲕⲃⲁ (ⲡ)</td> <td colspan=""4"" class=""bordered""> <b>(noun male)</b><br/> vengeance <i>(? noc conceded with preceding)</i> <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%B5%CE%BA%CE%B4%CE%B9%CE%BA%CE%B7%CF%83%CE%B9%CF%83"">εκδικησισ</a>]</span> </td>  </tr> <tr> <!--Key: 455--> <td colspan=""1""></td> <td colspan=""4"" class=""bordered"">ⲉⲓⲣⲉ ⲕ., ⲣ ⲕ.</td> <td colspan=""4"" class=""bordered"">  do vengeance <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%B5%CE%BA%CE%B4%CE%B9%CE%BA%CE%B5%CE%B9%CE%BD"">εκδικειν</a>]</span> </td>  </tr> <tr> <!--Key: 456--> <td colspan=""1""></td> <td colspan=""4"" class=""bordered"">ϯ ⲕ.</td> <td colspan=""4"" class=""bordered"">  avenge </td>  </tr> <tr> <!--Key: 457--> <td colspan=""1""></td> <td colspan=""4"" class=""bordered"">ϫⲓ ⲕ.</td> <td colspan=""4"" class=""bordered"">  take vengeance </td>  </tr> <tr> <!--Key: 458--> <td colspan=""1""></td> <td colspan=""4"" class=""bordered"">ϫⲓ ⲕ. (ⲡ)</td> <td colspan=""4"" class=""bordered""> <b>(noun male)</b><br/> retribution, compensation </td> <td rowspan=""1"" class=""bordered""><b>Crum: </b><a href=""https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=100a"">100a</a></td> </tr> </table>"	"<ul> <li> (S) ⲕⲃⲁ (noun)
 (B) ⲭⲃⲁ (noun)<br/>(noun) compulsion, forced labour </li> <li> <ul> <li> (S) ⲣ ⲕ.<br/>do forced labour </li> <li> (S) ϭⲓⲛⲣ ⲕ.<br/>doing of forced labour </li> <li> (B) ϭⲓ ⲛⲭ.<br/>compel <span style=""opacity:0.7"">[αγγαρευειν]</span> </li> </ul> </li> <li> (S, A, F) ⲕⲃⲁ (ⲡ)<br/>(noun male) vengeance <i>(? noc conceded with preceding)</i> <span style=""opacity:0.7"">[εκδικησισ]</span> </li> <li> <ul> <li> ⲉⲓⲣⲉ ⲕ., ⲣ ⲕ.<br/>do vengeance <span style=""opacity:0.7"">[εκδικειν]</span> </li> <li> ϯ ⲕ.<br/>avenge </li> <li> ϫⲓ ⲕ.<br/>take vengeance </li> <li> ϫⲓ ⲕ. (ⲡ)<br/>(noun male) retribution, compensation </li> </ul> </li> </ul>"	"(S) ⲕⲃⲁ (noun)
 (B) ⲭⲃⲁ (noun) (noun) compulsion, forced labour
@@ -1205,7 +1205,7 @@ __ϫⲓ ⲕ. (ⲡ) (noun male) retribution, compensation"
 (B) ⲭⲃⲟⲃ
 (S) ⲕⲃⲉ-
 (S, A, B) ⲕⲏⲃ+
-(S) ⲕⲏⲡ+"	"(S) ⲕⲃⲟ, ⲕⲃⲁ
+(S) ⲕⲏⲡ+"	ⲕⲃⲟ, ⲕⲃⲁ, ⲕⲃⲁⲃ, ⲭⲃⲟⲃ, ⲕⲃⲉ-, ⲕⲏⲃ+, ⲕⲏⲡ+	"(S) ⲕⲃⲟ, ⲕⲃⲁ
 (Sa, F) ⲕⲃⲁⲃ
 (B) ⲭⲃⲟⲃ
 (S) ⲕⲃⲉ-
@@ -1238,11 +1238,11 @@ as adj
 (B) <i>plural: </i>ⲭⲁⲕ"	"(S, F) <i>plural: </i>ⲕⲁⲕ
 (B) <i>plural: </i>ⲭⲁⲕ"	"(S, F) plural: ⲕⲁⲕ
 (B) plural: ⲭⲁⲕ"	"(S, F) plural: ⲕⲁⲕ
-(B) plural: ⲭⲁⲕ"	"(S, F) ⲕⲁⲕ (ⲛ)
+(B) plural: ⲭⲁⲕ"	ⲕⲁⲕ (ⲛ), ⲭⲁⲕ (ⲛ)	"(S, F) ⲕⲁⲕ (ⲛ)
 (B) ⲭⲁⲕ (ⲛ)"	ⲭⲁⲕ (B)			complete	noun		<i>part of bird</i>	part of bird	<i>part of bird</i>	<i>part of bird</i>	<i>part of bird</i>	part of bird	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=100b	100	b	ⲕⲁⲕ (ⲛ)	ⲕⲁⲕ									ⲭⲁⲕ (ⲛ)	ⲭⲁⲕ	ⲕⲁⲕ (ⲛ)	ⲕⲁⲕ							769	767	100			
-769	(S) *kouk	3	rind /*?*/	rind /*?*/		100b	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/769.html	(S) <i>plural: </i>ⲕⲟⲩⲕ	(S) <i>plural: </i>ⲕⲟⲩⲕ	(S) plural: ⲕⲟⲩⲕ	(S) plural: ⲕⲟⲩⲕ	(S) ⲕⲟⲩⲕ (ⲛ)	ⲕⲟⲩⲕ (S)			complete	noun		rind (?)	rind (?)	rind (?)	rind (?)	rind (?)	rind (?)	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=100b	100	b	ⲕⲟⲩⲕ (ⲛ)	ⲕⲟⲩⲕ																			770	768	100			
-770	(S) kako	3	(prob is) [[kokkos]]	(prob is) [[kokkos]]		101b	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/770.html	(S) ⲕⲁⲕⲟ	(S) ⲕⲁⲕⲟ	(S) ⲕⲁⲕⲟ	(S) ⲕⲁⲕⲟ	(S) ⲕⲁⲕⲟ (noun)	ⲕⲁⲕⲟ (S)			complete	noun		<i>prob is</i> κοκκοσ	prob is κοκκοσ	<i>prob is</i> κοκκοσ	<i>prob is</i> κοκκοσ	"<i>prob is</i> <a href=""https://logeion.uchicago.edu/%CE%BA%CE%BF%CE%BA%CE%BA%CE%BF%CF%83"">κοκκοσ</a>"	prob is κοκκοσ	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=101b	101	b	ⲕⲁⲕⲟ (noun)	ⲕⲁⲕⲟ																			771	769	101			
-771	(S) keke	1	child /$gk: [[teknon]]$/	child /$gk: [[teknon]]$/	teknon	101b	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/771.html	(S) ⲕⲉⲕⲉ	(S) ⲕⲉⲕⲉ	(S) ⲕⲉⲕⲉ	(S) ⲕⲉⲕⲉ	(S) ⲕⲉⲕⲉ (ⲡ)	ⲕⲉⲕⲉ (S)			complete	noun male	τεκνον	child [τεκνον]	child [τεκνον]	child	"child <span style=""opacity:0.7"">[τεκνον]</span>"	"child <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CF%84%CE%B5%CE%BA%CE%BD%CE%BF%CE%BD"">τεκνον</a>]</span>"	child	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=101b	101	b	ⲕⲉⲕⲉ (ⲡ)	ⲕⲉⲕⲉ																			772	770	101	"<table> <colgroup> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> </colgroup> <tr> <!--Key: 472-->  <td colspan=""5"" class=""bordered"">(S) ⲕⲉⲕⲉ, ⲕⲁⲕⲉ, ⲕⲁⲁⲕⲉ (ⲡ/ⲧ)</td> <td colspan=""4"" class=""bordered""> <b>(noun male/female)</b><br/> pupil (<i>lit</i> maiden) <i>of eye</i> <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%BA%CE%BF%CF%81%CE%B7"">κορη</a>]</span> </td> <td rowspan=""1"" class=""bordered""><b>Crum: </b><a href=""https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=101b"">101b</a></td> </tr> </table>"	"<ul> <li> (S) ⲕⲉⲕⲉ, ⲕⲁⲕⲉ, ⲕⲁⲁⲕⲉ (ⲡ/ⲧ)<br/>(noun male/female) pupil (<i>lit</i> maiden) <i>of eye</i> <span style=""opacity:0.7"">[κορη]</span> </li> </ul>"	(S) ⲕⲉⲕⲉ, ⲕⲁⲕⲉ, ⲕⲁⲁⲕⲉ (ⲡ/ⲧ) (noun male/female) pupil (lit maiden) of eye [κορη]
+769	(S) *kouk	3	rind /*?*/	rind /*?*/		100b	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/769.html	(S) <i>plural: </i>ⲕⲟⲩⲕ	(S) <i>plural: </i>ⲕⲟⲩⲕ	(S) plural: ⲕⲟⲩⲕ	(S) plural: ⲕⲟⲩⲕ	ⲕⲟⲩⲕ (ⲛ)	(S) ⲕⲟⲩⲕ (ⲛ)	ⲕⲟⲩⲕ (S)			complete	noun		rind (?)	rind (?)	rind (?)	rind (?)	rind (?)	rind (?)	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=100b	100	b	ⲕⲟⲩⲕ (ⲛ)	ⲕⲟⲩⲕ																			770	768	100			
+770	(S) kako	3	(prob is) [[kokkos]]	(prob is) [[kokkos]]		101b	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/770.html	(S) ⲕⲁⲕⲟ	(S) ⲕⲁⲕⲟ	(S) ⲕⲁⲕⲟ	(S) ⲕⲁⲕⲟ	ⲕⲁⲕⲟ	(S) ⲕⲁⲕⲟ (noun)	ⲕⲁⲕⲟ (S)			complete	noun		<i>prob is</i> κοκκοσ	prob is κοκκοσ	<i>prob is</i> κοκκοσ	<i>prob is</i> κοκκοσ	"<i>prob is</i> <a href=""https://logeion.uchicago.edu/%CE%BA%CE%BF%CE%BA%CE%BA%CE%BF%CF%83"">κοκκοσ</a>"	prob is κοκκοσ	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=101b	101	b	ⲕⲁⲕⲟ (noun)	ⲕⲁⲕⲟ																			771	769	101			
+771	(S) keke	1	child /$gk: [[teknon]]$/	child /$gk: [[teknon]]$/	teknon	101b	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/771.html	(S) ⲕⲉⲕⲉ	(S) ⲕⲉⲕⲉ	(S) ⲕⲉⲕⲉ	(S) ⲕⲉⲕⲉ	ⲕⲉⲕⲉ	(S) ⲕⲉⲕⲉ (ⲡ)	ⲕⲉⲕⲉ (S)			complete	noun male	τεκνον	child [τεκνον]	child [τεκνον]	child	"child <span style=""opacity:0.7"">[τεκνον]</span>"	"child <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CF%84%CE%B5%CE%BA%CE%BD%CE%BF%CE%BD"">τεκνον</a>]</span>"	child	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=101b	101	b	ⲕⲉⲕⲉ (ⲡ)	ⲕⲉⲕⲉ																			772	770	101	"<table> <colgroup> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> </colgroup> <tr> <!--Key: 472-->  <td colspan=""5"" class=""bordered"">(S) ⲕⲉⲕⲉ, ⲕⲁⲕⲉ, ⲕⲁⲁⲕⲉ (ⲡ/ⲧ)</td> <td colspan=""4"" class=""bordered""> <b>(noun male/female)</b><br/> pupil (<i>lit</i> maiden) <i>of eye</i> <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%BA%CE%BF%CF%81%CE%B7"">κορη</a>]</span> </td> <td rowspan=""1"" class=""bordered""><b>Crum: </b><a href=""https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=101b"">101b</a></td> </tr> </table>"	"<ul> <li> (S) ⲕⲉⲕⲉ, ⲕⲁⲕⲉ, ⲕⲁⲁⲕⲉ (ⲡ/ⲧ)<br/>(noun male/female) pupil (<i>lit</i> maiden) <i>of eye</i> <span style=""opacity:0.7"">[κορη]</span> </li> </ul>"	(S) ⲕⲉⲕⲉ, ⲕⲁⲕⲉ, ⲕⲁⲁⲕⲉ (ⲡ/ⲧ) (noun male/female) pupil (lit maiden) of eye [κορη]
 772	(S) koukle (Sf) koukli (F) koukla (B) koulla	4	hood, cowl (of monks, whence ?) [[koukoullion]]	hood, cowl (of monks, whence ?) [[koukoullion]]	koukoullion	101b	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/772.html	"(S) ⲕⲟⲩⲕⲗⲉ
 (Sf) ⲕⲟⲩⲕⲗⲓ
 (F) ⲕⲟⲩⲕⲗⲁ
@@ -1255,11 +1255,11 @@ as adj
 (B) ⲕⲟⲩⲗⲗⲁ"	"(S) ⲕⲟⲩⲕⲗⲉ
 (Sf) ⲕⲟⲩⲕⲗⲓ
 (F) ⲕⲟⲩⲕⲗⲁ
-(B) ⲕⲟⲩⲗⲗⲁ"	"(S) ⲕⲟⲩⲕⲗⲉ (ⲧ)
+(B) ⲕⲟⲩⲗⲗⲁ"	ⲕⲟⲩⲕⲗⲉ, ⲕⲟⲩⲕⲗⲓ, ⲕⲟⲩⲕⲗⲁ, ⲕⲟⲩⲗⲗⲁ	"(S) ⲕⲟⲩⲕⲗⲉ (ⲧ)
 (Sf) ⲕⲟⲩⲕⲗⲓ (ⲧ)
 (F) ⲕⲟⲩⲕⲗⲁ (ⲧ)
 (B) ⲕⲟⲩⲗⲗⲁ (ⲧ)"	ⲕⲟⲩⲗⲗⲁ (B)			complete	noun female	κουκουλλιον	hood, cowl <i>of monks, whence ?</i> κουκουλλιον	hood, cowl of monks, whence ? κουκουλλιον	hood, cowl <i>of monks, whence ?</i> κουκουλλιον	hood, cowl <i>of monks, whence ?</i> κουκουλλιον	"hood, cowl <i>of monks, whence ?</i> <a href=""https://logeion.uchicago.edu/%CE%BA%CE%BF%CF%85%CE%BA%CE%BF%CF%85%CE%BB%CE%BB%CE%B9%CE%BF%CE%BD"">κουκουλλιον</a>"	hood, cowl of monks, whence ? κουκουλλιον	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=101b	101	b	ⲕⲟⲩⲕⲗⲉ (ⲧ)	ⲕⲟⲩⲕⲗⲉ			ⲕⲟⲩⲕⲗⲓ (ⲧ)	ⲕⲟⲩⲕⲗⲓ					ⲕⲟⲩⲗⲗⲁ (ⲧ)	ⲕⲟⲩⲗⲗⲁ	ⲕⲟⲩⲕⲗⲁ (ⲧ)	ⲕⲟⲩⲕⲗⲁ							773	771	101			
-773	(S) koukoumau	3	pan	pan		102a	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/773.html	(S) ⲕⲟⲩⲕⲟⲩⲙⲁⲩ	(S) ⲕⲟⲩⲕⲟⲩⲙⲁⲩ	(S) ⲕⲟⲩⲕⲟⲩⲙⲁⲩ	(S) ⲕⲟⲩⲕⲟⲩⲙⲁⲩ	(S) ⲕⲟⲩⲕⲟⲩⲙⲁⲩ (noun)	ⲕⲟⲩⲕⲟⲩⲙⲁⲩ (S)			complete	noun		pan	pan	pan	pan	pan	pan	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=102a	102	a	ⲕⲟⲩⲕⲟⲩⲙⲁⲩ (noun)	ⲕⲟⲩⲕⲟⲩⲙⲁⲩ																			774	772	102			
+773	(S) koukoumau	3	pan	pan		102a	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/773.html	(S) ⲕⲟⲩⲕⲟⲩⲙⲁⲩ	(S) ⲕⲟⲩⲕⲟⲩⲙⲁⲩ	(S) ⲕⲟⲩⲕⲟⲩⲙⲁⲩ	(S) ⲕⲟⲩⲕⲟⲩⲙⲁⲩ	ⲕⲟⲩⲕⲟⲩⲙⲁⲩ	(S) ⲕⲟⲩⲕⲟⲩⲙⲁⲩ (noun)	ⲕⲟⲩⲕⲟⲩⲙⲁⲩ (S)			complete	noun		pan	pan	pan	pan	pan	pan	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=102a	102	a	ⲕⲟⲩⲕⲟⲩⲙⲁⲩ (noun)	ⲕⲟⲩⲕⲟⲩⲙⲁⲩ																			774	772	102			
 774	(Sf) kakoupat (B) koukoufat (F) koukoupet	22	hoopoe	hoopoe		102a	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/774.html	"(Sf) ⲕⲁⲕⲟⲩⲡⲁⲧ
 (B) ⲕⲟⲩⲕⲟⲩⲫⲁⲧ
 (F) ⲕⲟⲩⲕⲟⲩⲡⲉⲧ"	"(Sf) ⲕⲁⲕⲟⲩⲡⲁⲧ
@@ -1268,17 +1268,17 @@ as adj
 (B) ⲕⲟⲩⲕⲟⲩⲫⲁⲧ
 (F) ⲕⲟⲩⲕⲟⲩⲡⲉⲧ"	"(Sf) ⲕⲁⲕⲟⲩⲡⲁⲧ
 (B) ⲕⲟⲩⲕⲟⲩⲫⲁⲧ
-(F) ⲕⲟⲩⲕⲟⲩⲡⲉⲧ"	"(Sf) ⲕⲁⲕⲟⲩⲡⲁⲧ (ⲡ/ⲧ)
+(F) ⲕⲟⲩⲕⲟⲩⲡⲉⲧ"	ⲕⲁⲕⲟⲩⲡⲁⲧ, ⲕⲟⲩⲕⲟⲩⲫⲁⲧ, ⲕⲟⲩⲕⲟⲩⲡⲉⲧ	"(Sf) ⲕⲁⲕⲟⲩⲡⲁⲧ (ⲡ/ⲧ)
 (B) ⲕⲟⲩⲕⲟⲩⲫⲁⲧ (ⲡ/ⲧ)
 (F) ⲕⲟⲩⲕⲟⲩⲡⲉⲧ (ⲡ/ⲧ)"	ⲕⲟⲩⲕⲟⲩⲫⲁⲧ (B)			complete	noun male/female		hoopoe	hoopoe	hoopoe	hoopoe	hoopoe	hoopoe	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=102a	102	a					ⲕⲁⲕⲟⲩⲡⲁⲧ (ⲡ/ⲧ)	ⲕⲁⲕⲟⲩⲡⲁⲧ					ⲕⲟⲩⲕⲟⲩⲫⲁⲧ (ⲡ/ⲧ)	ⲕⲟⲩⲕⲟⲩⲫⲁⲧ	ⲕⲟⲩⲕⲟⲩⲡⲉⲧ (ⲡ/ⲧ)	ⲕⲟⲩⲕⲟⲩⲡⲉⲧ							775	773	102			
 775	(S) kakte,katke (B) kakqi,kakti,xakqi	4	louse	louse		102a	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/775.html	"(S) ⲕⲁⲕⲧⲉ, ⲕⲁⲧⲕⲉ
 (B) ⲕⲁⲕⲑⲓ, ⲕⲁⲕⲧⲓ, ⲭⲁⲕⲑⲓ"	"(S) ⲕⲁⲕⲧⲉ, ⲕⲁⲧⲕⲉ
 (B) ⲕⲁⲕⲑⲓ, ⲕⲁⲕⲧⲓ, ⲭⲁⲕⲑⲓ"	"(S) ⲕⲁⲕⲧⲉ, ⲕⲁⲧⲕⲉ
 (B) ⲕⲁⲕⲑⲓ, ⲕⲁⲕⲧⲓ, ⲭⲁⲕⲑⲓ"	"(S) ⲕⲁⲕⲧⲉ, ⲕⲁⲧⲕⲉ
-(B) ⲕⲁⲕⲑⲓ, ⲕⲁⲕⲧⲓ, ⲭⲁⲕⲑⲓ"	"(S) ⲕⲁⲕⲧⲉ, ⲕⲁⲧⲕⲉ (ⲧ)
+(B) ⲕⲁⲕⲑⲓ, ⲕⲁⲕⲧⲓ, ⲭⲁⲕⲑⲓ"	ⲕⲁⲕⲧⲉ, ⲕⲁⲧⲕⲉ, ⲕⲁⲕⲑⲓ, ⲕⲁⲕⲧⲓ, ⲭⲁⲕⲑⲓ	"(S) ⲕⲁⲕⲧⲉ, ⲕⲁⲧⲕⲉ (ⲧ)
 (B) ⲕⲁⲕⲑⲓ, ⲕⲁⲕⲧⲓ, ⲭⲁⲕⲑⲓ (ⲧ)"	ⲕⲁⲕⲑⲓ (B)			complete	noun female		louse	louse	louse	louse	louse	louse	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=102a	102	a	ⲕⲁⲕⲧⲉ, ⲕⲁⲧⲕⲉ (ⲧ)	ⲕⲁⲕⲧⲉ									ⲕⲁⲕⲑⲓ, ⲕⲁⲕⲧⲓ, ⲭⲁⲕⲑⲓ (ⲧ)	ⲕⲁⲕⲑⲓ									776	774	102			
-776	(S) *khl	3	(iron object in list of metal) varia	(iron object in list of metal) varia		102a	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/776.html	(S) <i>plural: </i>ⲕⲏⲗ	(S) <i>plural: </i>ⲕⲏⲗ	(S) plural: ⲕⲏⲗ	(S) plural: ⲕⲏⲗ	(S) ⲕⲏⲗ (ⲛ)	ⲕⲏⲗ (S)			complete	noun		<i>iron object in list of metal</i> varia	iron object in list of metal varia	<i>iron object in list of metal</i> varia	<i>iron object in list of metal</i> varia	<i>iron object in list of metal</i> varia	iron object in list of metal varia	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=102a	102	a	ⲕⲏⲗ (ⲛ)	ⲕⲏⲗ																			777	775	102			
-777	(S) kwl	3	(meaning uncertain)	(meaning uncertain)		102a	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/777.html	(S) ⲕⲱⲗ	(S) ⲕⲱⲗ	(S) ⲕⲱⲗ	(S) ⲕⲱⲗ	(S) ⲕⲱⲗ (noun)	ⲕⲱⲗ (S)			complete	noun		<i>meaning uncertain</i>	meaning uncertain	<i>meaning uncertain</i>	<i>meaning uncertain</i>	<i>meaning uncertain</i>	meaning uncertain	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=102a	102	a	ⲕⲱⲗ (noun)	ⲕⲱⲗ																			778	776	102			
+776	(S) *khl	3	(iron object in list of metal) varia	(iron object in list of metal) varia		102a	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/776.html	(S) <i>plural: </i>ⲕⲏⲗ	(S) <i>plural: </i>ⲕⲏⲗ	(S) plural: ⲕⲏⲗ	(S) plural: ⲕⲏⲗ	ⲕⲏⲗ (ⲛ)	(S) ⲕⲏⲗ (ⲛ)	ⲕⲏⲗ (S)			complete	noun		<i>iron object in list of metal</i> varia	iron object in list of metal varia	<i>iron object in list of metal</i> varia	<i>iron object in list of metal</i> varia	<i>iron object in list of metal</i> varia	iron object in list of metal varia	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=102a	102	a	ⲕⲏⲗ (ⲛ)	ⲕⲏⲗ																			777	775	102			
+777	(S) kwl	3	(meaning uncertain)	(meaning uncertain)		102a	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/777.html	(S) ⲕⲱⲗ	(S) ⲕⲱⲗ	(S) ⲕⲱⲗ	(S) ⲕⲱⲗ	ⲕⲱⲗ	(S) ⲕⲱⲗ (noun)	ⲕⲱⲗ (S)			complete	noun		<i>meaning uncertain</i>	meaning uncertain	<i>meaning uncertain</i>	<i>meaning uncertain</i>	<i>meaning uncertain</i>	meaning uncertain	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=102a	102	a	ⲕⲱⲗ (noun)	ⲕⲱⲗ																			778	776	102			
 778	(S) kle,kelh (B) klh,xlh (F) kele	1	(vessel for liquids)	(vessel for liquids)		102a	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/778.html	"(S) ⲕⲗⲉ, ⲕⲉⲗⲏ
 (B) ⲕⲗⲏ, ⲭⲗⲏ
 (F) ⲕⲉⲗⲉ"	"(S) ⲕⲗⲉ, ⲕⲉⲗⲏ
@@ -1287,11 +1287,11 @@ as adj
 (B) ⲕⲗⲏ, ⲭⲗⲏ
 (F) ⲕⲉⲗⲉ"	"(S) ⲕⲗⲉ, ⲕⲉⲗⲏ
 (B) ⲕⲗⲏ, ⲭⲗⲏ
-(F) ⲕⲉⲗⲉ"	"(S) ⲕⲗⲉ, ⲕⲉⲗⲏ (ⲡ)
+(F) ⲕⲉⲗⲉ"	ⲕⲗⲉ, ⲕⲉⲗⲏ, ⲕⲗⲏ, ⲭⲗⲏ, ⲕⲉⲗⲉ	"(S) ⲕⲗⲉ, ⲕⲉⲗⲏ (ⲡ)
 (B) ⲕⲗⲏ, ⲭⲗⲏ (ⲡ)
 (F) ⲕⲉⲗⲉ (ⲡ)"	ⲕⲗⲏ (B)			complete	noun male		<i>vessel for liquids</i>	vessel for liquids	<i>vessel for liquids</i>	<i>vessel for liquids</i>	<i>vessel for liquids</i>	vessel for liquids	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=102a	102	a	ⲕⲗⲉ, ⲕⲉⲗⲏ (ⲡ)	ⲕⲗⲉ									ⲕⲗⲏ, ⲭⲗⲏ (ⲡ)	ⲕⲗⲏ	ⲕⲉⲗⲉ (ⲡ)	ⲕⲉⲗⲉ							779	777	102			
-779	(S) kle	1	(meaning unknown)	(meaning unknown)		102a	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/779.html	(S) ⲕⲗⲉ	(S) ⲕⲗⲉ	(S) ⲕⲗⲉ	(S) ⲕⲗⲉ	(S) ⲕⲗⲉ (ⲡ)	ⲕⲗⲉ (S)			complete	noun male		<i>meaning unknown</i>	meaning unknown	<i>meaning unknown</i>	<i>meaning unknown</i>	<i>meaning unknown</i>	meaning unknown	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=102a	102	a	ⲕⲗⲉ (ⲡ)	ⲕⲗⲉ																			780	778	102			
-780	(S) klh	4	cat	cat		102a	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/780.html	(S) ⲕⲗⲏ	(S) ⲕⲗⲏ	(S) ⲕⲗⲏ	(S) ⲕⲗⲏ	(S) ⲕⲗⲏ (ⲧ)	ⲕⲗⲏ (S)			complete	noun female		cat	cat	cat	cat	cat	cat	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=102a	102	a	ⲕⲗⲏ (ⲧ)	ⲕⲗⲏ																			781	779	102	"<table> <colgroup> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> </colgroup> <tr> <!--Key: 473-->  <td colspan=""5"" class=""bordered"">(S) ⲙⲁϫⲉ ⲕ.</td> <td colspan=""4"" class=""bordered"">  cat's ear, <i>a plant</i> </td> <td rowspan=""2"" class=""bordered""><b>Crum: </b><a href=""https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=102a"">102a</a></td> </tr> <tr> <!--Key: 474-->  <td colspan=""5"" class=""bordered"">(S, B) ⲕⲁⲗⲏ</td> <td colspan=""4"" class=""bordered"">  weasel </td>  </tr> </table>"	<ul> <li> (S) ⲙⲁϫⲉ ⲕ.<br/>cat's ear, <i>a plant</i> </li> <li> (S, B) ⲕⲁⲗⲏ<br/>weasel </li> </ul>	"(S) ⲙⲁϫⲉ ⲕ. cat's ear, a plant
+779	(S) kle	1	(meaning unknown)	(meaning unknown)		102a	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/779.html	(S) ⲕⲗⲉ	(S) ⲕⲗⲉ	(S) ⲕⲗⲉ	(S) ⲕⲗⲉ	ⲕⲗⲉ	(S) ⲕⲗⲉ (ⲡ)	ⲕⲗⲉ (S)			complete	noun male		<i>meaning unknown</i>	meaning unknown	<i>meaning unknown</i>	<i>meaning unknown</i>	<i>meaning unknown</i>	meaning unknown	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=102a	102	a	ⲕⲗⲉ (ⲡ)	ⲕⲗⲉ																			780	778	102			
+780	(S) klh	4	cat	cat		102a	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/780.html	(S) ⲕⲗⲏ	(S) ⲕⲗⲏ	(S) ⲕⲗⲏ	(S) ⲕⲗⲏ	ⲕⲗⲏ	(S) ⲕⲗⲏ (ⲧ)	ⲕⲗⲏ (S)			complete	noun female		cat	cat	cat	cat	cat	cat	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=102a	102	a	ⲕⲗⲏ (ⲧ)	ⲕⲗⲏ																			781	779	102	"<table> <colgroup> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> </colgroup> <tr> <!--Key: 473-->  <td colspan=""5"" class=""bordered"">(S) ⲙⲁϫⲉ ⲕ.</td> <td colspan=""4"" class=""bordered"">  cat's ear, <i>a plant</i> </td> <td rowspan=""2"" class=""bordered""><b>Crum: </b><a href=""https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=102a"">102a</a></td> </tr> <tr> <!--Key: 474-->  <td colspan=""5"" class=""bordered"">(S, B) ⲕⲁⲗⲏ</td> <td colspan=""4"" class=""bordered"">  weasel </td>  </tr> </table>"	<ul> <li> (S) ⲙⲁϫⲉ ⲕ.<br/>cat's ear, <i>a plant</i> </li> <li> (S, B) ⲕⲁⲗⲏ<br/>weasel </li> </ul>	"(S) ⲙⲁϫⲉ ⲕ. cat's ear, a plant
 (S, B) ⲕⲁⲗⲏ weasel"
 781	(S,A) klo (B) xlo (F) kla	1	(vegetable /*?*/ poison used for arrows)	(vegetable /*?*/ poison used for arrows)		102b	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/781.html	"(S, A) ⲕⲗⲟ
 (B) ⲭⲗⲟ
@@ -1301,22 +1301,22 @@ as adj
 (B) ⲭⲗⲟ
 (F) ⲕⲗⲁ"	"(S, A) ⲕⲗⲟ
 (B) ⲭⲗⲟ
-(F) ⲕⲗⲁ"	"(S, A) ⲕⲗⲟ (ⲡ)
+(F) ⲕⲗⲁ"	ⲕⲗⲟ, ⲭⲗⲟ, ⲕⲗⲁ	"(S, A) ⲕⲗⲟ (ⲡ)
 (B) ⲭⲗⲟ (ⲡ)
 (F) ⲕⲗⲁ (ⲡ)"	ⲭⲗⲟ (B)			complete	noun male		<i>vegetable (?) poison used for arrows</i>	vegetable (?) poison used for arrows	<i>vegetable (?) poison used for arrows</i>	<i>vegetable (?) poison used for arrows</i>	<i>vegetable (?) poison used for arrows</i>	vegetable (?) poison used for arrows	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=102b	102	b	ⲕⲗⲟ (ⲡ)	ⲕⲗⲟ					ⲕⲗⲟ (ⲡ)	ⲕⲗⲟ			ⲭⲗⲟ (ⲡ)	ⲭⲗⲟ	ⲕⲗⲁ (ⲡ)	ⲕⲗⲁ							782	780	102	"<table> <colgroup> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> </colgroup> <tr> <!--Key: 475-->  <td colspan=""5"" class=""bordered"">(S) ⲕⲗⲱ (noun)</td> <td colspan=""4"" class=""bordered""> <b>(noun)</b><br/> <i>? same as ⲕⲗⲟ</i> </td> <td rowspan=""1"" class=""bordered""><b>Crum: </b><a href=""https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=102b"">102b</a></td> </tr> </table>"	<ul> <li> (S) ⲕⲗⲱ (noun)<br/>(noun) <i>? same as ⲕⲗⲟ</i> </li> </ul>	(S) ⲕⲗⲱ (noun) (noun) ? same as ⲕⲗⲟ
-782	(S) kale	1	(meaning unknown)	(meaning unknown)		102b	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/782.html	(S) ⲕⲁⲗⲉ	(S) ⲕⲁⲗⲉ	(S) ⲕⲁⲗⲉ	(S) ⲕⲁⲗⲉ	(S) ⲕⲁⲗⲉ (ⲡ)	ⲕⲁⲗⲉ (S)			complete	noun male		<i>meaning unknown</i>	meaning unknown	<i>meaning unknown</i>	<i>meaning unknown</i>	<i>meaning unknown</i>	meaning unknown	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=102b	102	b	ⲕⲁⲗⲉ (ⲡ)	ⲕⲁⲗⲉ																			783	781	102			
-783	(S) kwwle ebol	2	{intr:} (meaning uncertain), ? return, (so) collapse (/*opp swell, protrude*/)	{intr:} (meaning uncertain), ? return, (so) collapse (/*opp swell, protrude*/)		102b	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/783.html	(S) ⲕⲱⲱⲗⲉ ⲉⲃⲟⲗ	(S) ⲕⲱⲱⲗⲉ ⲉⲃⲟⲗ	(S) ⲕⲱⲱⲗⲉ ⲉⲃⲟⲗ	(S) ⲕⲱⲱⲗⲉ ⲉⲃⲟⲗ	(S) ⲕⲱⲱⲗⲉ ⲉⲃⲟⲗ	ⲕⲱⲱⲗⲉ ⲉⲃⲟⲗ (S)			complete	verb		<b>intr:</b> <i>meaning uncertain</i>, ? return, <i>so</i> collapse <i>(opp swell, protrude)</i>	intr: meaning uncertain, ? return, so collapse (opp swell, protrude)	<b>intr:</b> <i>meaning uncertain</i>, ? return, <i>so</i> collapse <i>(opp swell, protrude)</i>	<b>intr:</b> <i>meaning uncertain</i>, ? return, <i>so</i> collapse <i>(opp swell, protrude)</i>	<b>intr:</b> <i>meaning uncertain</i>, ? return, <i>so</i> collapse <i>(opp swell, protrude)</i>	intr: meaning uncertain, ? return, so collapse (opp swell, protrude)	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=102b	102	b	ⲕⲱⲱⲗⲉ ⲉⲃⲟⲗ	ⲕⲱⲱⲗⲉ ⲉⲃⲟⲗ																			784	782	102			
+782	(S) kale	1	(meaning unknown)	(meaning unknown)		102b	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/782.html	(S) ⲕⲁⲗⲉ	(S) ⲕⲁⲗⲉ	(S) ⲕⲁⲗⲉ	(S) ⲕⲁⲗⲉ	ⲕⲁⲗⲉ	(S) ⲕⲁⲗⲉ (ⲡ)	ⲕⲁⲗⲉ (S)			complete	noun male		<i>meaning unknown</i>	meaning unknown	<i>meaning unknown</i>	<i>meaning unknown</i>	<i>meaning unknown</i>	meaning unknown	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=102b	102	b	ⲕⲁⲗⲉ (ⲡ)	ⲕⲁⲗⲉ																			783	781	102			
+783	(S) kwwle ebol	2	{intr:} (meaning uncertain), ? return, (so) collapse (/*opp swell, protrude*/)	{intr:} (meaning uncertain), ? return, (so) collapse (/*opp swell, protrude*/)		102b	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/783.html	(S) ⲕⲱⲱⲗⲉ ⲉⲃⲟⲗ	(S) ⲕⲱⲱⲗⲉ ⲉⲃⲟⲗ	(S) ⲕⲱⲱⲗⲉ ⲉⲃⲟⲗ	(S) ⲕⲱⲱⲗⲉ ⲉⲃⲟⲗ	ⲕⲱⲱⲗⲉ ⲉⲃⲟⲗ	(S) ⲕⲱⲱⲗⲉ ⲉⲃⲟⲗ	ⲕⲱⲱⲗⲉ ⲉⲃⲟⲗ (S)			complete	verb		<b>intr:</b> <i>meaning uncertain</i>, ? return, <i>so</i> collapse <i>(opp swell, protrude)</i>	intr: meaning uncertain, ? return, so collapse (opp swell, protrude)	<b>intr:</b> <i>meaning uncertain</i>, ? return, <i>so</i> collapse <i>(opp swell, protrude)</i>	<b>intr:</b> <i>meaning uncertain</i>, ? return, <i>so</i> collapse <i>(opp swell, protrude)</i>	<b>intr:</b> <i>meaning uncertain</i>, ? return, <i>so</i> collapse <i>(opp swell, protrude)</i>	intr: meaning uncertain, ? return, so collapse (opp swell, protrude)	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=102b	102	b	ⲕⲱⲱⲗⲉ ⲉⲃⲟⲗ	ⲕⲱⲱⲗⲉ ⲉⲃⲟⲗ																			784	782	102			
 784	(S,B,F) kelebin (S) kelabin,kalabin	1	axe, pickaxe /$gk: [[pelekus, peluj]]$/	axe, pickaxe /$gk: [[pelekus, peluj]]$/	pelekus, peluj	102b	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/784.html	"(S, B, F) ⲕⲉⲗⲉⲃⲓⲛ
 (S) ⲕⲉⲗⲁⲃⲓⲛ, ⲕⲁⲗⲁⲃⲓⲛ"	"(S, B, F) ⲕⲉⲗⲉⲃⲓⲛ
 (S) ⲕⲉⲗⲁⲃⲓⲛ, ⲕⲁⲗⲁⲃⲓⲛ"	"(S, B, F) ⲕⲉⲗⲉⲃⲓⲛ
 (S) ⲕⲉⲗⲁⲃⲓⲛ, ⲕⲁⲗⲁⲃⲓⲛ"	"(S, B, F) ⲕⲉⲗⲉⲃⲓⲛ
-(S) ⲕⲉⲗⲁⲃⲓⲛ, ⲕⲁⲗⲁⲃⲓⲛ"	"(S, B, F) ⲕⲉⲗⲉⲃⲓⲛ (ⲡ)
+(S) ⲕⲉⲗⲁⲃⲓⲛ, ⲕⲁⲗⲁⲃⲓⲛ"	ⲕⲉⲗⲉⲃⲓⲛ, ⲕⲉⲗⲁⲃⲓⲛ, ⲕⲁⲗⲁⲃⲓⲛ	"(S, B, F) ⲕⲉⲗⲉⲃⲓⲛ (ⲡ)
 (S) ⲕⲉⲗⲁⲃⲓⲛ, ⲕⲁⲗⲁⲃⲓⲛ (ⲡ)"	ⲕⲉⲗⲉⲃⲓⲛ (B)			complete	noun male	πελεκυσ, πελυξ	axe, pickaxe [πελεκυσ, πελυξ]	axe, pickaxe [πελεκυσ, πελυξ]	axe, pickaxe	"axe, pickaxe <span style=""opacity:0.7"">[πελεκυσ, πελυξ]</span>"	"axe, pickaxe <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CF%80%CE%B5%CE%BB%CE%B5%CE%BA%CF%85%CF%83"">πελεκυσ</a>, <a href=""https://logeion.uchicago.edu/%CF%80%CE%B5%CE%BB%CF%85%CE%BE"">πελυξ</a>]</span>"	axe, pickaxe	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=102b	102	b	"ⲕⲉⲗⲉⲃⲓⲛ (ⲡ)
 ⲕⲉⲗⲁⲃⲓⲛ, ⲕⲁⲗⲁⲃⲓⲛ (ⲡ)"	ⲕⲉⲗⲉⲃⲓⲛ									ⲕⲉⲗⲉⲃⲓⲛ (ⲡ)	ⲕⲉⲗⲉⲃⲓⲛ	ⲕⲉⲗⲉⲃⲓⲛ (ⲡ)	ⲕⲉⲗⲉⲃⲓⲛ							785	783	102			
-785	(S) kelkeb	3	(nn?, on oval figure beside drawnings of 2 animals)	(nn?, on oval figure beside drawnings of 2 animals)		103a	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/785.html	(S) ⲕⲉⲗⲕⲉⲃ	(S) ⲕⲉⲗⲕⲉⲃ	(S) ⲕⲉⲗⲕⲉⲃ	(S) ⲕⲉⲗⲕⲉⲃ	(S) ⲕⲉⲗⲕⲉⲃ (noun)	ⲕⲉⲗⲕⲉⲃ (S)			complete	noun		<i>nn?, on oval figure beside drawnings of 2 animals</i>	nn?, on oval figure beside drawnings of 2 animals	<i>nn?, on oval figure beside drawnings of 2 animals</i>	<i>nn?, on oval figure beside drawnings of 2 animals</i>	<i>nn?, on oval figure beside drawnings of 2 animals</i>	nn?, on oval figure beside drawnings of 2 animals	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=103a	103	a	ⲕⲉⲗⲕⲉⲃ (noun)	ⲕⲉⲗⲕⲉⲃ																			786	784	103			
-786	(S) kolkl,kelkwl+	2	be round, curved /*?*/	be round, curved /*?*/		103a	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/786.html	(S) ⲕⲟⲗⲕⲗ, ⲕⲉⲗⲕⲱⲗ+	(S) ⲕⲟⲗⲕⲗ, ⲕⲉⲗⲕⲱⲗ+	(S) ⲕⲟⲗⲕⲗ, ⲕⲉⲗⲕⲱⲗ+	(S) ⲕⲟⲗⲕⲗ, ⲕⲉⲗⲕⲱⲗ+	(S) ⲕⲟⲗⲕⲗ, ⲕⲉⲗⲕⲱⲗ+	ⲕⲟⲗⲕⲗ (S)			complete	verb		be round, curved (?)	be round, curved (?)	be round, curved (?)	be round, curved (?)	be round, curved (?)	be round, curved (?)	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=103a	103	a	ⲕⲟⲗⲕⲗ, ⲕⲉⲗⲕⲱⲗ+	ⲕⲟⲗⲕⲗ																			787	785	103	"<table> <colgroup> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> </colgroup> <tr> <!--Key: 476-->  <td colspan=""5"" class=""bordered"">(S) ⲕⲁⲗⲕⲓⲗ, ⲕⲁⲗⲕⲉⲗ, ⲕⲉⲗⲕⲓⲗ, ϭⲉⲗϭⲓⲗ, ⲕⲉⲗⲕⲉⲗ, ϭⲉⲓⲗϭⲉⲓⲗ (ⲡ)</td> <td colspan=""4"" class=""bordered""> <b>(noun male)</b><br/> wheel </td> <td rowspan=""1"" class=""bordered""><b>Crum: </b><a href=""https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=103a"">103a</a></td> </tr> </table>"	<ul> <li> (S) ⲕⲁⲗⲕⲓⲗ, ⲕⲁⲗⲕⲉⲗ, ⲕⲉⲗⲕⲓⲗ, ϭⲉⲗϭⲓⲗ, ⲕⲉⲗⲕⲉⲗ, ϭⲉⲓⲗϭⲉⲓⲗ (ⲡ)<br/>(noun male) wheel </li> </ul>	(S) ⲕⲁⲗⲕⲓⲗ, ⲕⲁⲗⲕⲉⲗ, ⲕⲉⲗⲕⲓⲗ, ϭⲉⲗϭⲓⲗ, ⲕⲉⲗⲕⲉⲗ, ϭⲉⲓⲗϭⲉⲓⲗ (ⲡ) (noun male) wheel
-787	(S) *kelkoule,kelkwle	3	(meaning prob as [kelka])	(meaning prob as [kelka])		103a	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/787.html	(S) <i>plural: </i>ⲕⲉⲗⲕⲟⲩⲗⲉ, ⲕⲉⲗⲕⲱⲗⲉ	(S) <i>plural: </i>ⲕⲉⲗⲕⲟⲩⲗⲉ, ⲕⲉⲗⲕⲱⲗⲉ	(S) plural: ⲕⲉⲗⲕⲟⲩⲗⲉ, ⲕⲉⲗⲕⲱⲗⲉ	(S) plural: ⲕⲉⲗⲕⲟⲩⲗⲉ, ⲕⲉⲗⲕⲱⲗⲉ	(S) ⲕⲉⲗⲕⲟⲩⲗⲉ, ⲕⲉⲗⲕⲱⲗⲉ (ⲛ)	ⲕⲉⲗⲕⲟⲩⲗⲉ (S)			complete	noun		<i>meaning prob as ⲕⲉⲗⲕⲁ</i>	meaning prob as ⲕⲉⲗⲕⲁ	<i>meaning prob as ⲕⲉⲗⲕⲁ</i>	<i>meaning prob as ⲕⲉⲗⲕⲁ</i>	<i>meaning prob as ⲕⲉⲗⲕⲁ</i>	meaning prob as ⲕⲉⲗⲕⲁ	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=103a	103	a	ⲕⲉⲗⲕⲟⲩⲗⲉ, ⲕⲉⲗⲕⲱⲗⲉ (ⲛ)	ⲕⲉⲗⲕⲟⲩⲗⲉ																			788	786	103			
-788	(S) klaklek	3	astragalus, (the plant or its gum)	astragalus, (the plant or its gum)		103a	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/788.html	(S) ⲕⲗⲁⲕⲗⲉⲕ	(S) ⲕⲗⲁⲕⲗⲉⲕ	(S) ⲕⲗⲁⲕⲗⲉⲕ	(S) ⲕⲗⲁⲕⲗⲉⲕ	(S) ⲕⲗⲁⲕⲗⲉⲕ (noun)	ⲕⲗⲁⲕⲗⲉⲕ (S)			complete	noun		astragalus, <i>the plant or its gum</i>	astragalus, the plant or its gum	astragalus, <i>the plant or its gum</i>	astragalus, <i>the plant or its gum</i>	astragalus, <i>the plant or its gum</i>	astragalus, the plant or its gum	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=103a	103	a	ⲕⲗⲁⲕⲗⲉⲕ (noun)	ⲕⲗⲁⲕⲗⲉⲕ																			789	787	103			
+785	(S) kelkeb	3	(nn?, on oval figure beside drawnings of 2 animals)	(nn?, on oval figure beside drawnings of 2 animals)		103a	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/785.html	(S) ⲕⲉⲗⲕⲉⲃ	(S) ⲕⲉⲗⲕⲉⲃ	(S) ⲕⲉⲗⲕⲉⲃ	(S) ⲕⲉⲗⲕⲉⲃ	ⲕⲉⲗⲕⲉⲃ	(S) ⲕⲉⲗⲕⲉⲃ (noun)	ⲕⲉⲗⲕⲉⲃ (S)			complete	noun		<i>nn?, on oval figure beside drawnings of 2 animals</i>	nn?, on oval figure beside drawnings of 2 animals	<i>nn?, on oval figure beside drawnings of 2 animals</i>	<i>nn?, on oval figure beside drawnings of 2 animals</i>	<i>nn?, on oval figure beside drawnings of 2 animals</i>	nn?, on oval figure beside drawnings of 2 animals	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=103a	103	a	ⲕⲉⲗⲕⲉⲃ (noun)	ⲕⲉⲗⲕⲉⲃ																			786	784	103			
+786	(S) kolkl,kelkwl+	2	be round, curved /*?*/	be round, curved /*?*/		103a	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/786.html	(S) ⲕⲟⲗⲕⲗ, ⲕⲉⲗⲕⲱⲗ+	(S) ⲕⲟⲗⲕⲗ, ⲕⲉⲗⲕⲱⲗ+	(S) ⲕⲟⲗⲕⲗ, ⲕⲉⲗⲕⲱⲗ+	(S) ⲕⲟⲗⲕⲗ, ⲕⲉⲗⲕⲱⲗ+	ⲕⲟⲗⲕⲗ, ⲕⲉⲗⲕⲱⲗ+	(S) ⲕⲟⲗⲕⲗ, ⲕⲉⲗⲕⲱⲗ+	ⲕⲟⲗⲕⲗ (S)			complete	verb		be round, curved (?)	be round, curved (?)	be round, curved (?)	be round, curved (?)	be round, curved (?)	be round, curved (?)	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=103a	103	a	ⲕⲟⲗⲕⲗ, ⲕⲉⲗⲕⲱⲗ+	ⲕⲟⲗⲕⲗ																			787	785	103	"<table> <colgroup> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> </colgroup> <tr> <!--Key: 476-->  <td colspan=""5"" class=""bordered"">(S) ⲕⲁⲗⲕⲓⲗ, ⲕⲁⲗⲕⲉⲗ, ⲕⲉⲗⲕⲓⲗ, ϭⲉⲗϭⲓⲗ, ⲕⲉⲗⲕⲉⲗ, ϭⲉⲓⲗϭⲉⲓⲗ (ⲡ)</td> <td colspan=""4"" class=""bordered""> <b>(noun male)</b><br/> wheel </td> <td rowspan=""1"" class=""bordered""><b>Crum: </b><a href=""https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=103a"">103a</a></td> </tr> </table>"	<ul> <li> (S) ⲕⲁⲗⲕⲓⲗ, ⲕⲁⲗⲕⲉⲗ, ⲕⲉⲗⲕⲓⲗ, ϭⲉⲗϭⲓⲗ, ⲕⲉⲗⲕⲉⲗ, ϭⲉⲓⲗϭⲉⲓⲗ (ⲡ)<br/>(noun male) wheel </li> </ul>	(S) ⲕⲁⲗⲕⲓⲗ, ⲕⲁⲗⲕⲉⲗ, ⲕⲉⲗⲕⲓⲗ, ϭⲉⲗϭⲓⲗ, ⲕⲉⲗⲕⲉⲗ, ϭⲉⲓⲗϭⲉⲓⲗ (ⲡ) (noun male) wheel
+787	(S) *kelkoule,kelkwle	3	(meaning prob as [kelka])	(meaning prob as [kelka])		103a	6	0	2009-09-14	2010-01-30	vagrant	vagrant	https://pishoyg.github.io/crum/787.html	(S) <i>plural: </i>ⲕⲉⲗⲕⲟⲩⲗⲉ, ⲕⲉⲗⲕⲱⲗⲉ	(S) <i>plural: </i>ⲕⲉⲗⲕⲟⲩⲗⲉ, ⲕⲉⲗⲕⲱⲗⲉ	(S) plural: ⲕⲉⲗⲕⲟⲩⲗⲉ, ⲕⲉⲗⲕⲱⲗⲉ	(S) plural: ⲕⲉⲗⲕⲟⲩⲗⲉ, ⲕⲉⲗⲕⲱⲗⲉ	ⲕⲉⲗⲕⲟⲩⲗⲉ, ⲕⲉⲗⲕⲱⲗⲉ (ⲛ)	(S) ⲕⲉⲗⲕⲟⲩⲗⲉ, ⲕⲉⲗⲕⲱⲗⲉ (ⲛ)	ⲕⲉⲗⲕⲟⲩⲗⲉ (S)			complete	noun		<i>meaning prob as ⲕⲉⲗⲕⲁ</i>	meaning prob as ⲕⲉⲗⲕⲁ	<i>meaning prob as ⲕⲉⲗⲕⲁ</i>	<i>meaning prob as ⲕⲉⲗⲕⲁ</i>	<i>meaning prob as ⲕⲉⲗⲕⲁ</i>	meaning prob as ⲕⲉⲗⲕⲁ	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=103a	103	a	ⲕⲉⲗⲕⲟⲩⲗⲉ, ⲕⲉⲗⲕⲱⲗⲉ (ⲛ)	ⲕⲉⲗⲕⲟⲩⲗⲉ																			788	786	103			
+788	(S) klaklek	3	astragalus, (the plant or its gum)	astragalus, (the plant or its gum)		103a	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/788.html	(S) ⲕⲗⲁⲕⲗⲉⲕ	(S) ⲕⲗⲁⲕⲗⲉⲕ	(S) ⲕⲗⲁⲕⲗⲉⲕ	(S) ⲕⲗⲁⲕⲗⲉⲕ	ⲕⲗⲁⲕⲗⲉⲕ	(S) ⲕⲗⲁⲕⲗⲉⲕ (noun)	ⲕⲗⲁⲕⲗⲉⲕ (S)			complete	noun		astragalus, <i>the plant or its gum</i>	astragalus, the plant or its gum	astragalus, <i>the plant or its gum</i>	astragalus, <i>the plant or its gum</i>	astragalus, <i>the plant or its gum</i>	astragalus, the plant or its gum	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=103a	103	a	ⲕⲗⲁⲕⲗⲉⲕ (noun)	ⲕⲗⲁⲕⲗⲉⲕ																			789	787	103			
 789	(S) klal,klhl (S,A,sA,F) klel (B) xlal	1	chain (especially on neck) /$gk: [[kloios, xlidwn]]$/ | (dogs chain) /$gk: [[desmos]]$/	chain (especially on neck) /$gk: [[kloios, xlidwn]]$/ | (dogs chain) /$gk: [[desmos]]$/	kloios, xlidwn, desmos	103a	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/789.html	"(S) ⲕⲗⲁⲗ, ⲕⲗⲏⲗ
 (S, A, sA, F) ⲕⲗⲉⲗ
 (B) ⲭⲗⲁⲗ"	"(S) ⲕⲗⲁⲗ, ⲕⲗⲏⲗ
@@ -1325,7 +1325,7 @@ as adj
 (S, A, sA, F) ⲕⲗⲉⲗ
 (B) ⲭⲗⲁⲗ"	"(S) ⲕⲗⲁⲗ, ⲕⲗⲏⲗ
 (S, A, sA, F) ⲕⲗⲉⲗ
-(B) ⲭⲗⲁⲗ"	"(S) ⲕⲗⲁⲗ, ⲕⲗⲏⲗ (ⲡ)
+(B) ⲭⲗⲁⲗ"	ⲕⲗⲁⲗ, ⲕⲗⲏⲗ, ⲕⲗⲉⲗ, ⲭⲗⲁⲗ	"(S) ⲕⲗⲁⲗ, ⲕⲗⲏⲗ (ⲡ)
 (S, A, sA, F) ⲕⲗⲉⲗ (ⲡ)
 (B) ⲭⲗⲁⲗ (ⲡ)"	ⲭⲗⲁⲗ (B)			complete	noun male	κλοιοσ, χλιδων, δεσμοσ	"chain <i>especially on neck</i> [κλοιοσ, χλιδων]
 <i>dogs chain</i> [δεσμοσ]"	"chain especially on neck [κλοιοσ, χλιδων]
@@ -1339,7 +1339,7 @@ dogs chain"	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=103a
 (B) ⲕⲉⲗⲉⲗⲓ"	"(S) ⲕⲁⲗⲉⲗⲉ, ⲕⲁⲗⲉⲉⲗⲉ, ⲕⲁⲗⲏⲗⲉ, ⲕⲁⲗⲏⲗⲁ, ⲕⲉⲗⲉⲉⲗⲉ
 (B) ⲕⲉⲗⲉⲗⲓ"	"(S) ⲕⲁⲗⲉⲗⲉ, ⲕⲁⲗⲉⲉⲗⲉ, ⲕⲁⲗⲏⲗⲉ, ⲕⲁⲗⲏⲗⲁ, ⲕⲉⲗⲉⲉⲗⲉ
 (B) ⲕⲉⲗⲉⲗⲓ"	"(S) ⲕⲁⲗⲉⲗⲉ, ⲕⲁⲗⲉⲉⲗⲉ, ⲕⲁⲗⲏⲗⲉ, ⲕⲁⲗⲏⲗⲁ, ⲕⲉⲗⲉⲉⲗⲉ
-(B) ⲕⲉⲗⲉⲗⲓ"	"(S) ⲕⲁⲗⲉⲗⲉ, ⲕⲁⲗⲉⲉⲗⲉ, ⲕⲁⲗⲏⲗⲉ, ⲕⲁⲗⲏⲗⲁ, ⲕⲉⲗⲉⲉⲗⲉ (ⲧ)
+(B) ⲕⲉⲗⲉⲗⲓ"	ⲕⲁⲗⲉⲗⲉ, ⲕⲁⲗⲉⲉⲗⲉ, ⲕⲁⲗⲏⲗⲉ, ⲕⲁⲗⲏⲗⲁ, ⲕⲉⲗⲉⲉⲗⲉ, ⲕⲉⲗⲉⲗⲓ	"(S) ⲕⲁⲗⲉⲗⲉ, ⲕⲁⲗⲉⲉⲗⲉ, ⲕⲁⲗⲏⲗⲉ, ⲕⲁⲗⲏⲗⲁ, ⲕⲉⲗⲉⲉⲗⲉ (ⲧ)
 (B) ⲕⲉⲗⲉⲗⲓ (ⲧ)"	ⲕⲉⲗⲉⲗⲓ (B)			complete	noun female		<i>sonorous wooden board (or pl), struck to assemble congregation</i>	sonorous wooden board (or pl), struck to assemble congregation	<i>sonorous wooden board (or pl), struck to assemble congregation</i>	<i>sonorous wooden board (or pl), struck to assemble congregation</i>	<i>sonorous wooden board (or pl), struck to assemble congregation</i>	sonorous wooden board (or pl), struck to assemble congregation	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=103b	103	b	ⲕⲁⲗⲉⲗⲉ, ⲕⲁⲗⲉⲉⲗⲉ, ⲕⲁⲗⲏⲗⲉ, ⲕⲁⲗⲏⲗⲁ, ⲕⲉⲗⲉⲉⲗⲉ (ⲧ)	ⲕⲁⲗⲉⲗⲉ									ⲕⲉⲗⲉⲗⲓ (ⲧ)	ⲕⲉⲗⲉⲗⲓ									791	789	103			
 791	(S) klle (S,A) kl (B,O) keli (B) kal (F) khlli,kuli (S,B) kel- (B) kal-	22	bolt /$gk: [[kleiqron]]$/ | knee /$gk: [[gonu]]$/ | (other joints)	bolt /$gk: [[kleiqron]]$/ | knee /$gk: [[gonu]]$/ | (other joints)	kleiqron, gonu	103b	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/791.html	"(S) ⲕⲗⲗⲉ
 (S, A) ⲕⲗ
@@ -1365,7 +1365,7 @@ dogs chain"	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=103a
 (B) ⲕⲁⲗ
 (F) ⲕⲏⲗⲗⲓ, ⲕⲩⲗⲓ
 (S, B) ⲕⲉⲗ-
-(B) ⲕⲁⲗ-"	"(S) ⲕⲗⲗⲉ (ⲡ/ⲧ)
+(B) ⲕⲁⲗ-"	ⲕⲗⲗⲉ, ⲕⲗ, ⲕⲉⲗⲓ, ⲕⲁⲗ, ⲕⲏⲗⲗⲓ, ⲕⲩⲗⲓ, ⲕⲉⲗ-, ⲕⲁⲗ-	"(S) ⲕⲗⲗⲉ (ⲡ/ⲧ)
 (S, A) ⲕⲗ (ⲡ/ⲧ)
 (B, O) ⲕⲉⲗⲓ (ⲡ/ⲧ)
 (B) ⲕⲁⲗ (ⲡ/ⲧ)
@@ -1410,7 +1410,7 @@ other joints"	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=10
 (S) ⲕⲟⲗⲟⲗ
 (B) ⲕⲉⲗⲟⲗ
 (B) noun male: ⲕⲉⲗⲟⲗⲓ, ⲉⲕⲗⲟⲗⲓ
-(S) female: (?) plural: (?) ⲕⲉⲗⲟⲟⲗⲉ"	"(S, B) ⲕⲉⲗⲱⲗ, ⲕⲟⲩⲗⲱⲗ (ⲡ)
+(S) female: (?) plural: (?) ⲕⲉⲗⲟⲟⲗⲉ"	ⲕⲉⲗⲱⲗ, ⲕⲟⲩⲗⲱⲗ, ⲕⲟⲗⲟⲗ, ⲕⲉⲗⲟⲗ, ⲕⲉⲗⲟⲗⲓ, ⲉⲕⲗⲟⲗⲓ (ⲡ), ⲕⲉⲗⲟⲟⲗⲉ (?) (ⲧ) (ⲛ)	"(S, B) ⲕⲉⲗⲱⲗ, ⲕⲟⲩⲗⲱⲗ (ⲡ)
 (S) ⲕⲟⲗⲟⲗ (ⲡ)
 (B) ⲕⲉⲗⲟⲗ (ⲡ)
 (B) ⲕⲉⲗⲟⲗⲓ, ⲉⲕⲗⲟⲗⲓ (ⲡ)
@@ -1419,7 +1419,7 @@ other joints"	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=10
 ⲕⲉⲗⲟⲟⲗⲉ (?) (ⲧ) (ⲛ)"	ⲕⲉⲗⲱⲗ									"ⲕⲉⲗⲱⲗ, ⲕⲟⲩⲗⲱⲗ (ⲡ)
 ⲕⲉⲗⲟⲗ (ⲡ)
 ⲕⲉⲗⲟⲗⲓ, ⲉⲕⲗⲟⲗⲓ (ⲡ)"	ⲕⲉⲗⲱⲗ									793	791	104			
-793	(S) kloole	4	(meaning unknown, among agricultural /*?*/ tools)	(meaning unknown, among agricultural /*?*/ tools)		104b	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/793.html	(S) ⲕⲗⲟⲟⲗⲉ	(S) ⲕⲗⲟⲟⲗⲉ	(S) ⲕⲗⲟⲟⲗⲉ	(S) ⲕⲗⲟⲟⲗⲉ	(S) ⲕⲗⲟⲟⲗⲉ (ⲧ)	ⲕⲗⲟⲟⲗⲉ (S)			complete	noun female		<i>meaning unknown, among agricultural (?) tools</i>	meaning unknown, among agricultural (?) tools	<i>meaning unknown, among agricultural (?) tools</i>	<i>meaning unknown, among agricultural (?) tools</i>	<i>meaning unknown, among agricultural (?) tools</i>	meaning unknown, among agricultural (?) tools	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=104b	104	b	ⲕⲗⲟⲟⲗⲉ (ⲧ)	ⲕⲗⲟⲟⲗⲉ																			794	792	104			
+793	(S) kloole	4	(meaning unknown, among agricultural /*?*/ tools)	(meaning unknown, among agricultural /*?*/ tools)		104b	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/793.html	(S) ⲕⲗⲟⲟⲗⲉ	(S) ⲕⲗⲟⲟⲗⲉ	(S) ⲕⲗⲟⲟⲗⲉ	(S) ⲕⲗⲟⲟⲗⲉ	ⲕⲗⲟⲟⲗⲉ	(S) ⲕⲗⲟⲟⲗⲉ (ⲧ)	ⲕⲗⲟⲟⲗⲉ (S)			complete	noun female		<i>meaning unknown, among agricultural (?) tools</i>	meaning unknown, among agricultural (?) tools	<i>meaning unknown, among agricultural (?) tools</i>	<i>meaning unknown, among agricultural (?) tools</i>	<i>meaning unknown, among agricultural (?) tools</i>	meaning unknown, among agricultural (?) tools	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=104b	104	b	ⲕⲗⲟⲟⲗⲉ (ⲧ)	ⲕⲗⲟⲟⲗⲉ																			794	792	104			
 794	(S) kwlm (A) kwlme (B) xwlem	1	corner of eye /$gk: [[kanqos]]$/	corner of eye /$gk: [[kanqos]]$/	kanqos	104b	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/794.html	"(S) ⲕⲱⲗⲙ
 (A) ⲕⲱⲗⲙⲉ
 (B) ⲭⲱⲗⲉⲙ"	"(S) ⲕⲱⲗⲙ
@@ -1428,7 +1428,7 @@ other joints"	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=10
 (A) ⲕⲱⲗⲙⲉ
 (B) ⲭⲱⲗⲉⲙ"	"(S) ⲕⲱⲗⲙ
 (A) ⲕⲱⲗⲙⲉ
-(B) ⲭⲱⲗⲉⲙ"	"(S) ⲕⲱⲗⲙ (ⲡ)
+(B) ⲭⲱⲗⲉⲙ"	ⲕⲱⲗⲙ, ⲕⲱⲗⲙⲉ, ⲭⲱⲗⲉⲙ	"(S) ⲕⲱⲗⲙ (ⲡ)
 (A) ⲕⲱⲗⲙⲉ (ⲡ)
 (B) ⲭⲱⲗⲉⲙ (ⲡ)"	ⲭⲱⲗⲉⲙ (B)			complete	noun male	κανθοσ	corner of eye [κανθοσ]	corner of eye [κανθοσ]	corner of eye	"corner of eye <span style=""opacity:0.7"">[κανθοσ]</span>"	"corner of eye <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%BA%CE%B1%CE%BD%CE%B8%CE%BF%CF%83"">κανθοσ</a>]</span>"	corner of eye	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=104b	104	b	ⲕⲱⲗⲙ (ⲡ)	ⲕⲱⲗⲙ					ⲕⲱⲗⲙⲉ (ⲡ)	ⲕⲱⲗⲙⲉ			ⲭⲱⲗⲉⲙ (ⲡ)	ⲭⲱⲗⲉⲙ									795	793	104			
 795	(S,O) klom (Sa,A,sA,F) klam (B) xlom (S) *kloom (A) *kloome	1	crown, wreath /$gk: [[stefanos, stemma, brabeion]]$/	crown, wreath /$gk: [[stefanos, stemma, brabeion]]$/	stefanos, stemma, brabeion	104b	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/795.html	"(S, O) ⲕⲗⲟⲙ
@@ -1447,7 +1447,7 @@ other joints"	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=10
 (Sa, A, sA, F) ⲕⲗⲁⲙ
 (B) ⲭⲗⲟⲙ
 (S) plural: ⲕⲗⲟⲟⲙ
-(A) plural: ⲕⲗⲟⲟⲙⲉ"	"(S, O) ⲕⲗⲟⲙ (ⲡ)
+(A) plural: ⲕⲗⲟⲟⲙⲉ"	ⲕⲗⲟⲙ, ⲕⲗⲁⲙ, ⲭⲗⲟⲙ, ⲕⲗⲟⲟⲙ (ⲛ), ⲕⲗⲟⲟⲙⲉ (ⲛ)	"(S, O) ⲕⲗⲟⲙ (ⲡ)
 (Sa, A, sA, F) ⲕⲗⲁⲙ (ⲡ)
 (B) ⲭⲗⲟⲙ (ⲡ)
 (S) ⲕⲗⲟⲟⲙ (ⲛ)
@@ -1468,19 +1468,19 @@ other joints"	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=10
 (B) ϭⲓ ⲭ. receive, bear crown
 (S) ⲣⲉϥϫⲣⲟ ⲕ. victoriously crowned
 (S) ϥⲁⲓⲕ. crown bearer"
-796	(S) klme	4	pad, poultice (of wool)	pad, poultice (of wool)		105a	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/796.html	(S) ⲕⲗⲙⲉ	(S) ⲕⲗⲙⲉ	(S) ⲕⲗⲙⲉ	(S) ⲕⲗⲙⲉ	(S) ⲕⲗⲙⲉ (ⲧ)	ⲕⲗⲙⲉ (S)			complete	noun female		pad, poultice <i>of wool</i>	pad, poultice of wool	pad, poultice <i>of wool</i>	pad, poultice <i>of wool</i>	pad, poultice <i>of wool</i>	pad, poultice of wool	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=105a	105	a	ⲕⲗⲙⲉ (ⲧ)	ⲕⲗⲙⲉ																			797	795	105			
+796	(S) klme	4	pad, poultice (of wool)	pad, poultice (of wool)		105a	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/796.html	(S) ⲕⲗⲙⲉ	(S) ⲕⲗⲙⲉ	(S) ⲕⲗⲙⲉ	(S) ⲕⲗⲙⲉ	ⲕⲗⲙⲉ	(S) ⲕⲗⲙⲉ (ⲧ)	ⲕⲗⲙⲉ (S)			complete	noun female		pad, poultice <i>of wool</i>	pad, poultice of wool	pad, poultice <i>of wool</i>	pad, poultice <i>of wool</i>	pad, poultice <i>of wool</i>	pad, poultice of wool	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=105a	105	a	ⲕⲗⲙⲉ (ⲧ)	ⲕⲗⲙⲉ																			797	795	105			
 797	(S) kloome (A) kllame,klame	4	weal /$gk: [[upwpion, mwlwc]]$/	weal /$gk: [[upwpion, mwlwc]]$/	upwpion, mwlwc	105a	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/797.html	"(S) ⲕⲗⲟⲟⲙⲉ
 (A) ⲕⲗⲗⲁⲙⲉ, ⲕⲗⲁⲙⲉ"	"(S) ⲕⲗⲟⲟⲙⲉ
 (A) ⲕⲗⲗⲁⲙⲉ, ⲕⲗⲁⲙⲉ"	"(S) ⲕⲗⲟⲟⲙⲉ
 (A) ⲕⲗⲗⲁⲙⲉ, ⲕⲗⲁⲙⲉ"	"(S) ⲕⲗⲟⲟⲙⲉ
-(A) ⲕⲗⲗⲁⲙⲉ, ⲕⲗⲁⲙⲉ"	"(S) ⲕⲗⲟⲟⲙⲉ (ⲧ)
+(A) ⲕⲗⲗⲁⲙⲉ, ⲕⲗⲁⲙⲉ"	ⲕⲗⲟⲟⲙⲉ, ⲕⲗⲗⲁⲙⲉ, ⲕⲗⲁⲙⲉ	"(S) ⲕⲗⲟⲟⲙⲉ (ⲧ)
 (A) ⲕⲗⲗⲁⲙⲉ, ⲕⲗⲁⲙⲉ (ⲧ)"	ⲕⲗⲟⲟⲙⲉ (S)			complete	noun female	υπωπιον, μωλωξ	weal [υπωπιον, μωλωξ]	weal [υπωπιον, μωλωξ]	weal	"weal <span style=""opacity:0.7"">[υπωπιον, μωλωξ]</span>"	"weal <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CF%85%CF%80%CF%89%CF%80%CE%B9%CE%BF%CE%BD"">υπωπιον</a>, <a href=""https://logeion.uchicago.edu/%CE%BC%CF%89%CE%BB%CF%89%CE%BE"">μωλωξ</a>]</span>"	weal	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=105a	105	a	ⲕⲗⲟⲟⲙⲉ (ⲧ)	ⲕⲗⲟⲟⲙⲉ					ⲕⲗⲗⲁⲙⲉ, ⲕⲗⲁⲙⲉ (ⲧ)	ⲕⲗⲗⲁⲙⲉ													798	796	105			
-798	(S) klanta,klanda	4	(apparently gloss on) [[lobos]]	(apparently gloss on) [[lobos]]		105b	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/798.html	(S) ⲕⲗⲁⲛⲧⲁ, ⲕⲗⲁⲛⲇⲁ	(S) ⲕⲗⲁⲛⲧⲁ, ⲕⲗⲁⲛⲇⲁ	(S) ⲕⲗⲁⲛⲧⲁ, ⲕⲗⲁⲛⲇⲁ	(S) ⲕⲗⲁⲛⲧⲁ, ⲕⲗⲁⲛⲇⲁ	(S) ⲕⲗⲁⲛⲧⲁ, ⲕⲗⲁⲛⲇⲁ (ⲧ)	ⲕⲗⲁⲛⲧⲁ (S)			complete	noun female		<i>apparently gloss on</i> λοβοσ	apparently gloss on λοβοσ	<i>apparently gloss on</i> λοβοσ	<i>apparently gloss on</i> λοβοσ	"<i>apparently gloss on</i> <a href=""https://logeion.uchicago.edu/%CE%BB%CE%BF%CE%B2%CE%BF%CF%83"">λοβοσ</a>"	apparently gloss on λοβοσ	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=105b	105	b	ⲕⲗⲁⲛⲧⲁ, ⲕⲗⲁⲛⲇⲁ (ⲧ)	ⲕⲗⲁⲛⲧⲁ																			799	797	105			
+798	(S) klanta,klanda	4	(apparently gloss on) [[lobos]]	(apparently gloss on) [[lobos]]		105b	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/798.html	(S) ⲕⲗⲁⲛⲧⲁ, ⲕⲗⲁⲛⲇⲁ	(S) ⲕⲗⲁⲛⲧⲁ, ⲕⲗⲁⲛⲇⲁ	(S) ⲕⲗⲁⲛⲧⲁ, ⲕⲗⲁⲛⲇⲁ	(S) ⲕⲗⲁⲛⲧⲁ, ⲕⲗⲁⲛⲇⲁ	ⲕⲗⲁⲛⲧⲁ, ⲕⲗⲁⲛⲇⲁ	(S) ⲕⲗⲁⲛⲧⲁ, ⲕⲗⲁⲛⲇⲁ (ⲧ)	ⲕⲗⲁⲛⲧⲁ (S)			complete	noun female		<i>apparently gloss on</i> λοβοσ	apparently gloss on λοβοσ	<i>apparently gloss on</i> λοβοσ	<i>apparently gloss on</i> λοβοσ	"<i>apparently gloss on</i> <a href=""https://logeion.uchicago.edu/%CE%BB%CE%BF%CE%B2%CE%BF%CF%83"">λοβοσ</a>"	apparently gloss on λοβοσ	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=105b	105	b	ⲕⲗⲁⲛⲧⲁ, ⲕⲗⲁⲛⲇⲁ (ⲧ)	ⲕⲗⲁⲛⲧⲁ																			799	797	105			
 799	(B) kwlp,kelp-,kolp=,kolp+ (B) ^kalp-	2	{tr:} steal, rob /$gk: [[kleptein, sulan]]$/ | (as nn), theft, thing stolen | (as adv), thievishly	{tr:} steal, rob /$gk: [[kleptein, sulan]]$/ | (as nn), theft, thing stolen | (as adv), thievishly	kleptein, sulan	105b	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/799.html	"(B) ⲕⲱⲗⲡ, ⲕⲉⲗⲡ-, ⲕⲟⲗⲡ=, ⲕⲟⲗⲡ+
 (B) <i>p c </i>ⲕⲁⲗⲡ-"	"(B) ⲕⲱⲗⲡ, ⲕⲉⲗⲡ-, ⲕⲟⲗⲡ=, ⲕⲟⲗⲡ+
 (B) <i>p c </i>ⲕⲁⲗⲡ-"	"(B) ⲕⲱⲗⲡ, ⲕⲉⲗⲡ-, ⲕⲟⲗⲡ=, ⲕⲟⲗⲡ+
 (B) p c ⲕⲁⲗⲡ-"	"(B) ⲕⲱⲗⲡ, ⲕⲉⲗⲡ-, ⲕⲟⲗⲡ=, ⲕⲟⲗⲡ+
-(B) p c ⲕⲁⲗⲡ-"	"(B) ⲕⲱⲗⲡ, ⲕⲉⲗⲡ-, ⲕⲟⲗⲡ=, ⲕⲟⲗⲡ+
+(B) p c ⲕⲁⲗⲡ-"	ⲕⲱⲗⲡ, ⲕⲉⲗⲡ-, ⲕⲟⲗⲡ=, ⲕⲟⲗⲡ+, ⲕⲁⲗⲡ- (p.c.)	"(B) ⲕⲱⲗⲡ, ⲕⲉⲗⲡ-, ⲕⲟⲗⲡ=, ⲕⲟⲗⲡ+
 (B) ⲕⲁⲗⲡ- (p.c.)"	ⲕⲱⲗⲡ (B)			complete	verb	κλεπτειν, συλαν	"<b>tr:</b> steal, rob [κλεπτειν, συλαν]
 <i>as nn</i>, theft, thing stolen
 <i>as adv</i>, thievishly"	"tr: steal, rob [κλεπτειν, συλαν]
@@ -1497,9 +1497,9 @@ as adv, thievishly"	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pag
 ⲕⲁⲗⲡ- (p.c.)"	ⲕⲱⲗⲡ									800	798	105	"<table> <colgroup> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> </colgroup> <tr> <!--Key: 489-->  <td colspan=""5"" class=""bordered"">ϫⲓⲛⲕ. (ⲡ)</td> <td colspan=""4"" class=""bordered""> <b>(noun male)</b><br/> robbing </td> <td rowspan=""3"" class=""bordered""><b>Crum: </b><a href=""https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=105b"">105b</a></td> </tr> <tr> <!--Key: 490-->  <td colspan=""5"" class=""bordered"">ⲁⲧⲕ. (adj.)</td> <td colspan=""4"" class=""bordered""> <b>(adjective)</b><br/> unstolen, inviolate </td>  </tr> <tr> <!--Key: 491-->  <td colspan=""5"" class=""bordered"">(S, B) ⲕⲟⲗⲡⲥ (ⲧ)</td> <td colspan=""4"" class=""bordered""> <b>(noun female)</b><br/> theft </td>  </tr> </table>"	<ul> <li> ϫⲓⲛⲕ. (ⲡ)<br/>(noun male) robbing </li> <li> ⲁⲧⲕ. (adj.)<br/>(adjective) unstolen, inviolate </li> <li> (S, B) ⲕⲟⲗⲡⲥ (ⲧ)<br/>(noun female) theft </li> </ul>	"ϫⲓⲛⲕ. (ⲡ) (noun male) robbing
 ⲁⲧⲕ. (adj.) (adjective) unstolen, inviolate
 (S, B) ⲕⲟⲗⲡⲥ (ⲧ) (noun female) theft"
-800	(S,A) klc	3	blow	blow		105b	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/800.html	(S, A) ⲕⲗⲯ	(S, A) ⲕⲗⲯ	(S, A) ⲕⲗⲯ	(S, A) ⲕⲗⲯ	(S, A) ⲕⲗⲯ (noun)	ⲕⲗⲯ (S)			complete	noun		blow	blow	blow	blow	blow	blow	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=105b	105	b	ⲕⲗⲯ (noun)	ⲕⲗⲯ					ⲕⲗⲯ (noun)	ⲕⲗⲯ													801	799	105	"<table> <colgroup> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> </colgroup> <tr> <!--Key: 492-->  <td colspan=""5"" class=""bordered"">ϯ ⲕ. ⲉϫⲛ-</td> <td colspan=""4"" class=""bordered"">  <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%BA%CE%BF%CE%BB%CE%B1%CF%86%CE%B9%CE%B6%CE%B5%CE%B9%CE%BD"">κολαφιζειν</a>, <a href=""https://logeion.uchicago.edu/%CE%BA%CE%BF%CE%BD%CE%B4%CF%85%CE%BB%CE%B9%CE%B6%CE%B5%CE%B9%CE%BD"">κονδυλιζειν</a>]</span> </td> <td rowspan=""1"" class=""bordered""><b>Crum: </b><a href=""https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=105b"">105b</a></td> </tr> </table>"	"<ul> <li> ϯ ⲕ. ⲉϫⲛ-<br/><span style=""opacity:0.7"">[κολαφιζειν, κονδυλιζειν]</span> </li> </ul>"	ϯ ⲕ. ⲉϫⲛ- [κολαφιζειν, κονδυλιζειν]
-801	(S) klousme	1	(meaning unknown)	(meaning unknown)		106a	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/801.html	(S) ⲕⲗⲟⲩⲥⲙⲉ	(S) ⲕⲗⲟⲩⲥⲙⲉ	(S) ⲕⲗⲟⲩⲥⲙⲉ	(S) ⲕⲗⲟⲩⲥⲙⲉ	(S) ⲕⲗⲟⲩⲥⲙⲉ (ⲡ)	ⲕⲗⲟⲩⲥⲙⲉ (S)			complete	noun male		<i>meaning unknown</i>	meaning unknown	<i>meaning unknown</i>	<i>meaning unknown</i>	<i>meaning unknown</i>	meaning unknown	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=106a	106	a	ⲕⲗⲟⲩⲥⲙⲉ (ⲡ)	ⲕⲗⲟⲩⲥⲙⲉ																			802	800	106			
-802	(S) kalaSiSte, kalaSit	4	(part of house, on its roof)	(part of house, on its roof)		106a	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/802.html	(S) ⲕⲁⲗⲁϣⲓϣⲧⲉ, ⲕⲁⲗⲁϣⲓⲧ	(S) ⲕⲁⲗⲁϣⲓϣⲧⲉ, ⲕⲁⲗⲁϣⲓⲧ	(S) ⲕⲁⲗⲁϣⲓϣⲧⲉ, ⲕⲁⲗⲁϣⲓⲧ	(S) ⲕⲁⲗⲁϣⲓϣⲧⲉ, ⲕⲁⲗⲁϣⲓⲧ	(S) ⲕⲁⲗⲁϣⲓϣⲧⲉ, ⲕⲁⲗⲁϣⲓⲧ (ⲧ)	ⲕⲁⲗⲁϣⲓϣⲧⲉ (S)			complete	noun female		<i>part of house, on its roof</i>	part of house, on its roof	<i>part of house, on its roof</i>	<i>part of house, on its roof</i>	<i>part of house, on its roof</i>	part of house, on its roof	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=106a	106	a	ⲕⲁⲗⲁϣⲓϣⲧⲉ, ⲕⲁⲗⲁϣⲓⲧ (ⲧ)	ⲕⲁⲗⲁϣⲓϣⲧⲉ																			803	801	106			
+800	(S,A) klc	3	blow	blow		105b	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/800.html	(S, A) ⲕⲗⲯ	(S, A) ⲕⲗⲯ	(S, A) ⲕⲗⲯ	(S, A) ⲕⲗⲯ	ⲕⲗⲯ	(S, A) ⲕⲗⲯ (noun)	ⲕⲗⲯ (S)			complete	noun		blow	blow	blow	blow	blow	blow	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=105b	105	b	ⲕⲗⲯ (noun)	ⲕⲗⲯ					ⲕⲗⲯ (noun)	ⲕⲗⲯ													801	799	105	"<table> <colgroup> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> </colgroup> <tr> <!--Key: 492-->  <td colspan=""5"" class=""bordered"">ϯ ⲕ. ⲉϫⲛ-</td> <td colspan=""4"" class=""bordered"">  <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%BA%CE%BF%CE%BB%CE%B1%CF%86%CE%B9%CE%B6%CE%B5%CE%B9%CE%BD"">κολαφιζειν</a>, <a href=""https://logeion.uchicago.edu/%CE%BA%CE%BF%CE%BD%CE%B4%CF%85%CE%BB%CE%B9%CE%B6%CE%B5%CE%B9%CE%BD"">κονδυλιζειν</a>]</span> </td> <td rowspan=""1"" class=""bordered""><b>Crum: </b><a href=""https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=105b"">105b</a></td> </tr> </table>"	"<ul> <li> ϯ ⲕ. ⲉϫⲛ-<br/><span style=""opacity:0.7"">[κολαφιζειν, κονδυλιζειν]</span> </li> </ul>"	ϯ ⲕ. ⲉϫⲛ- [κολαφιζειν, κονδυλιζειν]
+801	(S) klousme	1	(meaning unknown)	(meaning unknown)		106a	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/801.html	(S) ⲕⲗⲟⲩⲥⲙⲉ	(S) ⲕⲗⲟⲩⲥⲙⲉ	(S) ⲕⲗⲟⲩⲥⲙⲉ	(S) ⲕⲗⲟⲩⲥⲙⲉ	ⲕⲗⲟⲩⲥⲙⲉ	(S) ⲕⲗⲟⲩⲥⲙⲉ (ⲡ)	ⲕⲗⲟⲩⲥⲙⲉ (S)			complete	noun male		<i>meaning unknown</i>	meaning unknown	<i>meaning unknown</i>	<i>meaning unknown</i>	<i>meaning unknown</i>	meaning unknown	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=106a	106	a	ⲕⲗⲟⲩⲥⲙⲉ (ⲡ)	ⲕⲗⲟⲩⲥⲙⲉ																			802	800	106			
+802	(S) kalaSiSte, kalaSit	4	(part of house, on its roof)	(part of house, on its roof)		106a	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/802.html	(S) ⲕⲁⲗⲁϣⲓϣⲧⲉ, ⲕⲁⲗⲁϣⲓⲧ	(S) ⲕⲁⲗⲁϣⲓϣⲧⲉ, ⲕⲁⲗⲁϣⲓⲧ	(S) ⲕⲁⲗⲁϣⲓϣⲧⲉ, ⲕⲁⲗⲁϣⲓⲧ	(S) ⲕⲁⲗⲁϣⲓϣⲧⲉ, ⲕⲁⲗⲁϣⲓⲧ	ⲕⲁⲗⲁϣⲓϣⲧⲉ, ⲕⲁⲗⲁϣⲓⲧ	(S) ⲕⲁⲗⲁϣⲓϣⲧⲉ, ⲕⲁⲗⲁϣⲓⲧ (ⲧ)	ⲕⲁⲗⲁϣⲓϣⲧⲉ (S)			complete	noun female		<i>part of house, on its roof</i>	part of house, on its roof	<i>part of house, on its roof</i>	<i>part of house, on its roof</i>	<i>part of house, on its roof</i>	part of house, on its roof	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=106a	106	a	ⲕⲁⲗⲁϣⲓϣⲧⲉ, ⲕⲁⲗⲁϣⲓⲧ (ⲧ)	ⲕⲁⲗⲁϣⲓϣⲧⲉ																			803	801	106			
 803	(S,B) klaFt (S) kleFt,klbt (B) xlaFt	4	hood, cowl (mostly of monks) /$gk: [[tiara]]$/	hood, cowl (mostly of monks) /$gk: [[tiara]]$/	tiara	106a	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/803.html	"(S, B) ⲕⲗⲁϥⲧ
 (S) ⲕⲗⲉϥⲧ, ⲕⲗⲃⲧ
 (B) ⲭⲗⲁϥⲧ"	"(S, B) ⲕⲗⲁϥⲧ
@@ -1508,7 +1508,7 @@ as adv, thievishly"	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pag
 (S) ⲕⲗⲉϥⲧ, ⲕⲗⲃⲧ
 (B) ⲭⲗⲁϥⲧ"	"(S, B) ⲕⲗⲁϥⲧ
 (S) ⲕⲗⲉϥⲧ, ⲕⲗⲃⲧ
-(B) ⲭⲗⲁϥⲧ"	"(S, B) ⲕⲗⲁϥⲧ (ⲧ)
+(B) ⲭⲗⲁϥⲧ"	ⲕⲗⲁϥⲧ, ⲕⲗⲉϥⲧ, ⲕⲗⲃⲧ, ⲭⲗⲁϥⲧ	"(S, B) ⲕⲗⲁϥⲧ (ⲧ)
 (S) ⲕⲗⲉϥⲧ, ⲕⲗⲃⲧ (ⲧ)
 (B) ⲭⲗⲁϥⲧ (ⲧ)"	ⲕⲗⲁϥⲧ (B)			complete	noun female	τιαρα	hood, cowl <i>mostly of monks</i> [τιαρα]	hood, cowl mostly of monks [τιαρα]	hood, cowl <i>mostly of monks</i>	"hood, cowl <i>mostly of monks</i> <span style=""opacity:0.7"">[τιαρα]</span>"	"hood, cowl <i>mostly of monks</i> <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CF%84%CE%B9%CE%B1%CF%81%CE%B1"">τιαρα</a>]</span>"	hood, cowl mostly of monks	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=106a	106	a	"ⲕⲗⲁϥⲧ (ⲧ)
 ⲕⲗⲉϥⲧ, ⲕⲗⲃⲧ (ⲧ)"	ⲕⲗⲁϥⲧ									"ⲕⲗⲁϥⲧ (ⲧ)
@@ -1529,7 +1529,7 @@ as adv, thievishly"	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pag
 (S) ⲕⲗϩ-
 (S) ⲕⲟⲗϩ=
 (A, sA) ⲕⲁⲗϩ=
-(S) ⲕⲟⲗϩ+"	"(S, A, sA, B) ⲕⲱⲗϩ
+(S) ⲕⲟⲗϩ+"	ⲕⲱⲗϩ, ⲕⲗϩ-, ⲕⲟⲗϩ=, ⲕⲁⲗϩ=, ⲕⲟⲗϩ+	"(S, A, sA, B) ⲕⲱⲗϩ
 (S) ⲕⲗϩ-
 (S) ⲕⲟⲗϩ=
 (A, sA) ⲕⲁⲗϩ=
@@ -1583,7 +1583,7 @@ __(S, B) ― ⲉϩⲟⲩⲛ, ― ⲉϧⲟⲩⲛ knock inwards from without
 (Sa) ϭⲉⲙ(?)
 (Sf) ⲕⲏⲙ"	"(S, B) ⲕⲁⲙ
 (Sa) ϭⲉⲙ(?)
-(Sf) ⲕⲏⲙ"	"(S, B) ⲕⲁⲙ (ⲡ)
+(Sf) ⲕⲏⲙ"	ⲕⲁⲙ, ϭⲉⲙ (?), ⲕⲏⲙ	"(S, B) ⲕⲁⲙ (ⲡ)
 (Sa) ϭⲉⲙ (?)
 (Sf) ⲕⲏⲙ (ⲡ)"	ⲕⲁⲙ (B)			complete	noun male	θροιον	reed, rush [θροιον]	reed, rush [θροιον]	reed, rush	"reed, rush <span style=""opacity:0.7"">[θροιον]</span>"	"reed, rush <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%B8%CF%81%CE%BF%CE%B9%CE%BF%CE%BD"">θροιον</a>]</span>"	reed, rush	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=108a	108	a	ⲕⲁⲙ (ⲡ)	ⲕⲁⲙ	ϭⲉⲙ (?)	ϭⲉⲙ	ⲕⲏⲙ (ⲡ)	ⲕⲏⲙ					ⲕⲁⲙ (ⲡ)	ⲕⲁⲙ									806	804	108	"<table> <colgroup> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> </colgroup> <tr> <!--Key: 497-->  <td colspan=""5"" class=""bordered"">(S) ⲛⲟⲩⲛⲉ ⲛⲕ. (ⲧ)</td> <td colspan=""4"" class=""bordered""> <b>(noun female)</b><br/> <i>lit</i> root of reed, <i>a plant</i> <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%BC%CE%B5%CE%BB%CE%B5%CE%BD%CF%84%CE%B7%CF%81%CE%B9%CE%BF%CE%BD"">μελεντηριον</a>]</span> </td> <td rowspan=""1"" class=""bordered""><b>Crum: </b><a href=""https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=108a"">108a</a></td> </tr> </table>"	"<ul> <li> (S) ⲛⲟⲩⲛⲉ ⲛⲕ. (ⲧ)<br/>(noun female) <i>lit</i> root of reed, <i>a plant</i> <span style=""opacity:0.7"">[μελεντηριον]</span> </li> </ul>"	(S) ⲛⲟⲩⲛⲉ ⲛⲕ. (ⲧ) (noun female) lit root of reed, a plant [μελεντηριον]
 806	(S) kmkm,koumkm,koukm (B) kemkem (F) koukem	2	{intr:} |$ strike, beat (a musical instrument) |$ make a repeated sound, (as of bird voice) |$ (noun m), drum	{intr:} |$ strike, beat (a musical instrument) |$ make a repeated sound, (as of bird voice) |$ (noun m), drum		109a	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/806.html	"(S) ⲕⲙⲕⲙ, ⲕⲟⲩⲙⲕⲙ, ⲕⲟⲩⲕⲙ
@@ -1594,7 +1594,7 @@ __(S, B) ― ⲉϩⲟⲩⲛ, ― ⲉϧⲟⲩⲛ knock inwards from without
 (B) ⲕⲉⲙⲕⲉⲙ
 (F) ⲕⲟⲩⲕⲉⲙ"	"(S) ⲕⲙⲕⲙ, ⲕⲟⲩⲙⲕⲙ, ⲕⲟⲩⲕⲙ
 (B) ⲕⲉⲙⲕⲉⲙ
-(F) ⲕⲟⲩⲕⲉⲙ"	"(S) ⲕⲙⲕⲙ, ⲕⲟⲩⲙⲕⲙ, ⲕⲟⲩⲕⲙ
+(F) ⲕⲟⲩⲕⲉⲙ"	ⲕⲙⲕⲙ, ⲕⲟⲩⲙⲕⲙ, ⲕⲟⲩⲕⲙ, ⲕⲉⲙⲕⲉⲙ, ⲕⲟⲩⲕⲉⲙ	"(S) ⲕⲙⲕⲙ, ⲕⲟⲩⲙⲕⲙ, ⲕⲟⲩⲕⲙ
 (B) ⲕⲉⲙⲕⲉⲙ
 (F) ⲕⲟⲩⲕⲉⲙ"	ⲕⲉⲙⲕⲉⲙ (B)			complete	verb		"<b>intr:</b>
 ― strike, beat <i>a musical instrument</i>
@@ -1619,10 +1619,10 @@ __(S, B) ― ⲉϩⲟⲩⲛ, ― ⲉϧⲟⲩⲛ knock inwards from without
 (B) ⲕⲟⲙⲏ, ⲕⲟⲙⲓ"	"(S) ⲕⲟⲙⲙⲉ, ⲕⲟⲙⲏ, ⲕⲟⲙⲓ, ⲕⲙⲙⲉ, ⲕⲏⲙⲙⲉ, ⲕⲏⲙⲉ
 (B) ⲕⲟⲙⲏ, ⲕⲟⲙⲓ"	"(S) ⲕⲟⲙⲙⲉ, ⲕⲟⲙⲏ, ⲕⲟⲙⲓ, ⲕⲙⲙⲉ, ⲕⲏⲙⲙⲉ, ⲕⲏⲙⲉ
 (B) ⲕⲟⲙⲏ, ⲕⲟⲙⲓ"	"(S) ⲕⲟⲙⲙⲉ, ⲕⲟⲙⲏ, ⲕⲟⲙⲓ, ⲕⲙⲙⲉ, ⲕⲏⲙⲙⲉ, ⲕⲏⲙⲉ
-(B) ⲕⲟⲙⲏ, ⲕⲟⲙⲓ"	"(S) ⲕⲟⲙⲙⲉ, ⲕⲟⲙⲏ, ⲕⲟⲙⲓ, ⲕⲙⲙⲉ, ⲕⲏⲙⲙⲉ, ⲕⲏⲙⲉ (ⲡ)
+(B) ⲕⲟⲙⲏ, ⲕⲟⲙⲓ"	ⲕⲟⲙⲙⲉ, ⲕⲟⲙⲏ, ⲕⲟⲙⲓ, ⲕⲙⲙⲉ, ⲕⲏⲙⲙⲉ, ⲕⲏⲙⲉ, ⲕⲟⲙⲏ, ⲕⲟⲙⲓ	"(S) ⲕⲟⲙⲙⲉ, ⲕⲟⲙⲏ, ⲕⲟⲙⲓ, ⲕⲙⲙⲉ, ⲕⲏⲙⲙⲉ, ⲕⲏⲙⲉ (ⲡ)
 (B) ⲕⲟⲙⲏ, ⲕⲟⲙⲓ (ⲡ)"	ⲕⲟⲙⲏ (B)			complete	noun male	κομμι	gum [κομμι]	gum [κομμι]	gum	"gum <span style=""opacity:0.7"">[κομμι]</span>"	"gum <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%BA%CE%BF%CE%BC%CE%BC%CE%B9"">κομμι</a>]</span>"	gum	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=110b	110	b	ⲕⲟⲙⲙⲉ, ⲕⲟⲙⲏ, ⲕⲟⲙⲓ, ⲕⲙⲙⲉ, ⲕⲏⲙⲙⲉ, ⲕⲏⲙⲉ (ⲡ)	ⲕⲟⲙⲙⲉ									ⲕⲟⲙⲏ, ⲕⲟⲙⲓ (ⲡ)	ⲕⲟⲙⲏ									808	806	110			
-808	(S) kamte	4	(vessel containing oil)	(vessel containing oil)		110b	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/808.html	(S) ⲕⲁⲙⲧⲉ	(S) ⲕⲁⲙⲧⲉ	(S) ⲕⲁⲙⲧⲉ	(S) ⲕⲁⲙⲧⲉ	(S) ⲕⲁⲙⲧⲉ (ⲧ)	ⲕⲁⲙⲧⲉ (S)			complete	noun female		<i>vessel containing oil</i>	vessel containing oil	<i>vessel containing oil</i>	<i>vessel containing oil</i>	<i>vessel containing oil</i>	vessel containing oil	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=110b	110	b	ⲕⲁⲙⲧⲉ (ⲧ)	ⲕⲁⲙⲧⲉ																			809	807	110			
-809	(S) kwmS,kmS-,komS=	2	{intr:} sneer | {tr:} mock /$gk: [[mukthrizein]]$/	{intr:} sneer | {tr:} mock /$gk: [[mukthrizein]]$/	mukthrizein	110b	7	0	2009-09-14	2010-04-06	vagrant	vagrant	https://pishoyg.github.io/crum/809.html	(S) ⲕⲱⲙϣ, ⲕⲙϣ-, ⲕⲟⲙϣ=	(S) ⲕⲱⲙϣ, ⲕⲙϣ-, ⲕⲟⲙϣ=	(S) ⲕⲱⲙϣ, ⲕⲙϣ-, ⲕⲟⲙϣ=	(S) ⲕⲱⲙϣ, ⲕⲙϣ-, ⲕⲟⲙϣ=	(S) ⲕⲱⲙϣ, ⲕⲙϣ-, ⲕⲟⲙϣ=	ⲕⲱⲙϣ (S)			complete+	verb	μυκτηριζειν	"<b>intr:</b> sneer
+808	(S) kamte	4	(vessel containing oil)	(vessel containing oil)		110b	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/808.html	(S) ⲕⲁⲙⲧⲉ	(S) ⲕⲁⲙⲧⲉ	(S) ⲕⲁⲙⲧⲉ	(S) ⲕⲁⲙⲧⲉ	ⲕⲁⲙⲧⲉ	(S) ⲕⲁⲙⲧⲉ (ⲧ)	ⲕⲁⲙⲧⲉ (S)			complete	noun female		<i>vessel containing oil</i>	vessel containing oil	<i>vessel containing oil</i>	<i>vessel containing oil</i>	<i>vessel containing oil</i>	vessel containing oil	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=110b	110	b	ⲕⲁⲙⲧⲉ (ⲧ)	ⲕⲁⲙⲧⲉ																			809	807	110			
+809	(S) kwmS,kmS-,komS=	2	{intr:} sneer | {tr:} mock /$gk: [[mukthrizein]]$/	{intr:} sneer | {tr:} mock /$gk: [[mukthrizein]]$/	mukthrizein	110b	7	0	2009-09-14	2010-04-06	vagrant	vagrant	https://pishoyg.github.io/crum/809.html	(S) ⲕⲱⲙϣ, ⲕⲙϣ-, ⲕⲟⲙϣ=	(S) ⲕⲱⲙϣ, ⲕⲙϣ-, ⲕⲟⲙϣ=	(S) ⲕⲱⲙϣ, ⲕⲙϣ-, ⲕⲟⲙϣ=	(S) ⲕⲱⲙϣ, ⲕⲙϣ-, ⲕⲟⲙϣ=	ⲕⲱⲙϣ, ⲕⲙϣ-, ⲕⲟⲙϣ=	(S) ⲕⲱⲙϣ, ⲕⲙϣ-, ⲕⲟⲙϣ=	ⲕⲱⲙϣ (S)			complete+	verb	μυκτηριζειν	"<b>intr:</b> sneer
 <b>tr:</b> mock [μυκτηριζειν]"	"intr: sneer
 tr: mock [μυκτηριζειν]"	"<b>intr:</b> sneer
 <b>tr:</b> mock"	"<b>intr:</b> sneer
@@ -1631,7 +1631,7 @@ tr: mock [μυκτηριζειν]"	"<b>intr:</b> sneer
 tr: mock"	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=110b	110	b	ⲕⲱⲙϣ, ⲕⲙϣ-, ⲕⲟⲙϣ=	ⲕⲱⲙϣ																			810	808	110	"<table> <colgroup> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> <col style=""width: 10.0%;""> </colgroup> <tr> <!--Key: 4279-->  <td colspan=""5"" class=""bordered"">― ⲛⲥⲁ-</td> <td colspan=""4"" class=""bordered"">  mock, contemn <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%BC%CF%85%CE%BA%CF%84%CE%B7%CF%81%CE%B9%CE%B6%CE%B5%CE%B9%CE%BD"">μυκτηριζειν</a>]</span> </td> <td rowspan=""3"" class=""bordered""><b>Crum: </b><a href=""https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=110b"">110b</a></td> </tr> <tr> <!--Key: 513-->  <td colspan=""5"" class=""bordered"">― (ⲡ)</td> <td colspan=""4"" class=""bordered""> <b>(noun male)</b><br/> mockery, contempt <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%BC%CF%85%CE%BA%CF%84%CE%B7%CF%81%CE%B9%CF%83%CE%BC%CE%BF%CF%83"">μυκτηρισμοσ</a>, <a href=""https://logeion.uchicago.edu/%CE%B5%CE%BE%CE%BF%CF%85%CE%B4%CE%B5%CE%BD%CF%89%CF%83%CE%B9%CF%83"">εξουδενωσισ</a>]</span> </td>  </tr> <tr> <!--Key: 514-->  <td colspan=""5"" class=""bordered"">ⲙⲛⲧⲣⲉϥⲕ. (ⲧ)</td> <td colspan=""4"" class=""bordered""> <b>(noun female)</b><br/> mockery, contempt </td>  </tr> </table>"	"<ul> <li> ― ⲛⲥⲁ-<br/>mock, contemn <span style=""opacity:0.7"">[μυκτηριζειν]</span> </li> <li> ― (ⲡ)<br/>(noun male) mockery, contempt <span style=""opacity:0.7"">[μυκτηρισμοσ, εξουδενωσισ]</span> </li> <li> ⲙⲛⲧⲣⲉϥⲕ. (ⲧ)<br/>(noun female) mockery, contempt </li> </ul>"	"― ⲛⲥⲁ- mock, contemn [μυκτηριζειν]
 ― (ⲡ) (noun male) mockery, contempt [μυκτηρισμοσ, εξουδενωσισ]
 ⲙⲛⲧⲣⲉϥⲕ. (ⲧ) (noun female) mockery, contempt"
-810	(S) koomF,komF	1	blight /$gk: [[erusibh]]$/	blight /$gk: [[erusibh]]$/	erusibh	110b	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/810.html	(S) ⲕⲟⲟⲙϥ, ⲕⲟⲙϥ	(S) ⲕⲟⲟⲙϥ, ⲕⲟⲙϥ	(S) ⲕⲟⲟⲙϥ, ⲕⲟⲙϥ	(S) ⲕⲟⲟⲙϥ, ⲕⲟⲙϥ	(S) ⲕⲟⲟⲙϥ, ⲕⲟⲙϥ (ⲡ)	ⲕⲟⲟⲙϥ (S)			complete	noun male	ερυσιβη	blight [ερυσιβη]	blight [ερυσιβη]	blight	"blight <span style=""opacity:0.7"">[ερυσιβη]</span>"	"blight <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%B5%CF%81%CF%85%CF%83%CE%B9%CE%B2%CE%B7"">ερυσιβη</a>]</span>"	blight	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=110b	110	b	ⲕⲟⲟⲙϥ, ⲕⲟⲙϥ (ⲡ)	ⲕⲟⲟⲙϥ																			811	809	110			
+810	(S) koomF,komF	1	blight /$gk: [[erusibh]]$/	blight /$gk: [[erusibh]]$/	erusibh	110b	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/810.html	(S) ⲕⲟⲟⲙϥ, ⲕⲟⲙϥ	(S) ⲕⲟⲟⲙϥ, ⲕⲟⲙϥ	(S) ⲕⲟⲟⲙϥ, ⲕⲟⲙϥ	(S) ⲕⲟⲟⲙϥ, ⲕⲟⲙϥ	ⲕⲟⲟⲙϥ, ⲕⲟⲙϥ	(S) ⲕⲟⲟⲙϥ, ⲕⲟⲙϥ (ⲡ)	ⲕⲟⲟⲙϥ (S)			complete	noun male	ερυσιβη	blight [ερυσιβη]	blight [ερυσιβη]	blight	"blight <span style=""opacity:0.7"">[ερυσιβη]</span>"	"blight <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%B5%CF%81%CF%85%CF%83%CE%B9%CE%B2%CE%B7"">ερυσιβη</a>]</span>"	blight	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=110b	110	b	ⲕⲟⲟⲙϥ, ⲕⲟⲙϥ (ⲡ)	ⲕⲟⲟⲙϥ																			811	809	110			
 811	(S,A,sA,F) Gerwb (S) GerwF (Sf,F) Garwm (B) Garwp (F) Jarwb (S,sA) *Geroob (S) *Gerwwb	1	staff, rod /$gk: [[rabdos, bakthria]]$/	staff, rod /$gk: [[rabdos, bakthria]]$/	rabdos, bakthria	828a	6	0	2009-09-14	2010-04-01	vagrant	vagrant	https://pishoyg.github.io/crum/811.html	"(S, A, sA, F) ϭⲉⲣⲱⲃ
 (S) ϭⲉⲣⲱϥ
 (Sf, F) ϭⲁⲣⲱⲙ
@@ -1656,7 +1656,7 @@ tr: mock"	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=110b	1
 (B) ϭⲁⲣⲱⲡ
 (F) ϫⲁⲣⲱⲃ
 (S, sA) plural: ϭⲉⲣⲟⲟⲃ
-(S) plural: ϭⲉⲣⲱⲱⲃ"	"(S, A, sA, F) ϭⲉⲣⲱⲃ (ⲡ)
+(S) plural: ϭⲉⲣⲱⲱⲃ"	ϭⲉⲣⲱⲃ, ϭⲉⲣⲱϥ, ϭⲁⲣⲱⲙ, ϭⲁⲣⲱⲡ, ϫⲁⲣⲱⲃ, ϭⲉⲣⲟⲟⲃ (ⲛ), ϭⲉⲣⲱⲱⲃ (ⲛ)	"(S, A, sA, F) ϭⲉⲣⲱⲃ (ⲡ)
 (S) ϭⲉⲣⲱϥ (ⲡ)
 (Sf, F) ϭⲁⲣⲱⲙ (ⲡ)
 (B) ϭⲁⲣⲱⲡ (ⲡ)
@@ -1682,7 +1682,7 @@ tr: mock"	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=110b	1
 (B) ⲱⲓⲕ"	"(S) ⲟⲉⲓⲕ
 (A, sA, F) ⲁⲉⲓⲕ
 (Sf, F) ⲁⲓⲕ
-(B) ⲱⲓⲕ"	"(S) ⲟⲉⲓⲕ (ⲡ)
+(B) ⲱⲓⲕ"	ⲟⲉⲓⲕ, ⲁⲉⲓⲕ, ⲁⲓⲕ, ⲱⲓⲕ	"(S) ⲟⲉⲓⲕ (ⲡ)
 (A, sA, F) ⲁⲉⲓⲕ (ⲡ)
 (Sf, F) ⲁⲓⲕ (ⲡ)
 (B) ⲱⲓⲕ (ⲡ)"	ⲱⲓⲕ (B)			complete	noun male	αρτοσ, ξωμοσ, χορτασμα	bread, loaf [αρτοσ, ξωμοσ, χορτασμα]	bread, loaf [αρτοσ, ξωμοσ, χορτασμα]	bread, loaf	"bread, loaf <span style=""opacity:0.7"">[αρτοσ, ξωμοσ, χορτασμα]</span>"	"bread, loaf <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%B1%CF%81%CF%84%CE%BF%CF%83"">αρτοσ</a>, <a href=""https://logeion.uchicago.edu/%CE%BE%CF%89%CE%BC%CE%BF%CF%83"">ξωμοσ</a>, <a href=""https://logeion.uchicago.edu/%CF%87%CE%BF%CF%81%CF%84%CE%B1%CF%83%CE%BC%CE%B1"">χορτασμα</a>]</span>"	bread, loaf	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=254a	254	a	ⲟⲉⲓⲕ (ⲡ)	ⲟⲉⲓⲕ			ⲁⲓⲕ (ⲡ)	ⲁⲓⲕ	ⲁⲉⲓⲕ (ⲡ)	ⲁⲉⲓⲕ	ⲁⲉⲓⲕ (ⲡ)	ⲁⲉⲓⲕ	ⲱⲓⲕ (ⲡ)	ⲱⲓⲕ	"ⲁⲉⲓⲕ (ⲡ)
@@ -1700,7 +1700,7 @@ tr: mock"	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=110b	1
 (F) ϫⲁϫⲉ, ϭⲁϫⲉ
 (B) plural: ϫⲁϭⲁⲩ"	"(B) ϫⲁϭⲏ
 (F) ϫⲁϫⲉ, ϭⲁϫⲉ
-(B) plural: ϫⲁϭⲁⲩ"	"(B) ϫⲁϭⲏ (ⲧ)
+(B) plural: ϫⲁϭⲁⲩ"	ϫⲁϭⲏ, ϫⲁϫⲉ, ϭⲁϫⲉ, ϫⲁϭⲁⲩ (ⲛ)	"(B) ϫⲁϭⲏ (ⲧ)
 (F) ϫⲁϫⲉ, ϭⲁϫⲉ (ⲧ)
 (B) ϫⲁϭⲁⲩ (ⲛ)"	ϫⲁϭⲏ (B)			complete++	noun female	αριστεροσ, ευωνυμοσ	"left hand [αριστεροσ, ευωνυμοσ]
 <i>as adj</i>"	"left hand [αριστεροσ, ευωνυμοσ]
@@ -1727,7 +1727,7 @@ as adj"	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=800b	800
 (S, F) ϩⲱⲡⲧ
 (S, B) ϩⲉⲧⲡ-, ϩⲟⲧⲡ=, {often} ϩⲟⲡⲧ=
 (S, B) ϩⲟⲧⲡ+
-(sA) ϩⲁⲧⲡ+"	"(S, A, sA, B, F) ϩⲱⲧⲡ
+(sA) ϩⲁⲧⲡ+"	ϩⲱⲧⲡ, ϩⲱⲡⲧ, ϩⲉⲧⲡ-, ϩⲟⲧⲡ=, {often} ϩⲟⲡⲧ=, ϩⲟⲧⲡ+, ϩⲁⲧⲡ+	"(S, A, sA, B, F) ϩⲱⲧⲡ
 (S, F) ϩⲱⲡⲧ
 (S, B) ϩⲉⲧⲡ-, ϩⲟⲧⲡ=, {often} ϩⲟⲡⲧ=
 (S, B) ϩⲟⲧⲡ+
@@ -1779,7 +1779,7 @@ sinking of sun [δυσμη]
 (S, A, sA) ⲥⲉϩⲧ="	"(S) ⲥⲓϩⲉ
 (B) ⲥⲓϩⲓ
 (S) ⲥⲉϩ-, ⲥⲁϩⲧ=
-(S, A, sA) ⲥⲉϩⲧ="	"(S) ⲥⲓϩⲉ
+(S, A, sA) ⲥⲉϩⲧ="	ⲥⲓϩⲉ, ⲥⲓϩⲓ, ⲥⲉϩ-, ⲥⲁϩⲧ=, ⲥⲉϩⲧ=	"(S) ⲥⲓϩⲉ
 (B) ⲥⲓϩⲓ
 (S) ⲥⲉϩ-, ⲥⲁϩⲧ=
 (S, A, sA) ⲥⲉϩⲧ="	ⲥⲓϩⲓ (B)			complete	verb	εξισταναι	"<b>intr:</b> be removed, displaced [εξισταναι]
@@ -1791,7 +1791,7 @@ tr: move, remove self, withdraw"	"<b>intr:</b> be removed, displaced
 tr: move, remove self, withdraw"	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=379b	379	b	"ⲥⲓϩⲉ
 ⲥⲉϩ-, ⲥⲁϩⲧ=
 ⲥⲉϩⲧ="	ⲥⲓϩⲉ					ⲥⲉϩⲧ=	ⲥⲉϩⲧ=	ⲥⲉϩⲧ=	ⲥⲉϩⲧ=	ⲥⲓϩⲓ	ⲥⲓϩⲓ									816	814	379			
-816	(S) kon	3	(meaning unknown)	(meaning unknown)		111b	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/816.html	(S) ⲕⲟⲛ	(S) ⲕⲟⲛ	(S) ⲕⲟⲛ	(S) ⲕⲟⲛ	(S) ⲕⲟⲛ (noun)	ⲕⲟⲛ (S)			complete	noun		<i>meaning unknown</i>	meaning unknown	<i>meaning unknown</i>	<i>meaning unknown</i>	<i>meaning unknown</i>	meaning unknown	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=111b	111	b	ⲕⲟⲛ (noun)	ⲕⲟⲛ																			817	815	111			
+816	(S) kon	3	(meaning unknown)	(meaning unknown)		111b	6	0	2009-09-14	2010-01-31	vagrant	vagrant	https://pishoyg.github.io/crum/816.html	(S) ⲕⲟⲛ	(S) ⲕⲟⲛ	(S) ⲕⲟⲛ	(S) ⲕⲟⲛ	ⲕⲟⲛ	(S) ⲕⲟⲛ (noun)	ⲕⲟⲛ (S)			complete	noun		<i>meaning unknown</i>	meaning unknown	<i>meaning unknown</i>	<i>meaning unknown</i>	<i>meaning unknown</i>	meaning unknown	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=111b	111	b	ⲕⲟⲛ (noun)	ⲕⲟⲛ																			817	815	111			
 817	(S,F) koun= (S,sA) kououn= (S) kouon=,kouwn= (A) koon=,kon= (S,B) ken=	3	(only with suffix) |$ bosom /$gk: [[sthqos, kolpos]]$/ |$ (as) genital parts /$gk: [[didumoi]]$/	(only with suffix) |$ bosom /$gk: [[sthqos, kolpos]]$/ |$ (as) genital parts /$gk: [[didumoi]]$/	sthqos, kolpos, didumoi	111b	6	0	2009-09-14	2012-04-05	vagrant	vagrant	https://pishoyg.github.io/crum/817.html	"(S, F) ⲕⲟⲩⲛ=
 (S, sA) ⲕⲟⲩⲟⲩⲛ=
 (S) ⲕⲟⲩⲟⲛ=, ⲕⲟⲩⲱⲛ=
@@ -1808,7 +1808,7 @@ tr: move, remove self, withdraw"	https://coptot.manuscriptroom.com/crum-coptic-d
 (S, sA) ⲕⲟⲩⲟⲩⲛ=
 (S) ⲕⲟⲩⲟⲛ=, ⲕⲟⲩⲱⲛ=
 (A) ⲕⲟⲟⲛ=, ⲕⲟⲛ=
-(S, B) ⲕⲉⲛ="	"(S, F) ⲕⲟⲩⲛ= (noun)
+(S, B) ⲕⲉⲛ="	ⲕⲟⲩⲛ=, ⲕⲟⲩⲟⲩⲛ=, ⲕⲟⲩⲟⲛ=, ⲕⲟⲩⲱⲛ=, ⲕⲟⲟⲛ=, ⲕⲟⲛ=, ⲕⲉⲛ=	"(S, F) ⲕⲟⲩⲛ= (noun)
 (S, sA) ⲕⲟⲩⲟⲩⲛ= (noun)
 (S) ⲕⲟⲩⲟⲛ=, ⲕⲟⲩⲱⲛ= (noun)
 (A) ⲕⲟⲟⲛ=, ⲕⲟⲛ= (noun)
@@ -1851,7 +1851,7 @@ tr: move, remove self, withdraw"	https://coptot.manuscriptroom.com/crum-coptic-d
 (B) ⲕⲉⲛⲓ
 (F) ⲕⲏⲛⲛⲓ
 (A) ⲕⲛⲓⲱⲟⲩ+
-(B) ⲕⲉⲛⲓⲱⲟⲩⲧ+"	"(S) ⲕⲛⲛⲉ
+(B) ⲕⲉⲛⲓⲱⲟⲩⲧ+"	ⲕⲛⲛⲉ, ⲕⲛⲉⲓⲉ, ⲕⲛⲛⲓⲉ, ⲕⲉⲛⲓ, ⲕⲏⲛⲛⲓ, ⲕⲛⲓⲱⲟⲩ+, ⲕⲉⲛⲓⲱⲟⲩⲧ+	"(S) ⲕⲛⲛⲉ
 (A) ⲕⲛⲉⲓⲉ, ⲕⲛⲛⲓⲉ
 (B) ⲕⲉⲛⲓ
 (F) ⲕⲏⲛⲛⲓ
@@ -1885,7 +1885,7 @@ tr: move, remove self, withdraw"	https://coptot.manuscriptroom.com/crum-coptic-d
 (S) ⲕⲉⲛⲥ-, ⲕⲟⲛⲥ=, ⲕⲟⲟⲛⲥ=
 (A, F) ⲕⲁⲛⲥ=
 (sA) ⲕⲁⲁⲛⲥ=
-(S) ⲕⲟⲛⲥ+"	"(S, A, F) ⲕⲱⲛⲥ
+(S) ⲕⲟⲛⲥ+"	ⲕⲱⲛⲥ, ⲕⲱⲱⲛⲥ, ⲭⲱⲛⲥ, ⲕⲉⲛⲥ-, ⲕⲟⲛⲥ=, ⲕⲟⲟⲛⲥ=, ⲕⲁⲛⲥ=, ⲕⲁⲁⲛⲥ=, ⲕⲟⲛⲥ+	"(S, A, F) ⲕⲱⲛⲥ
 (S, sA) ⲕⲱⲱⲛⲥ
 (B) ⲭⲱⲛⲥ
 (S) ⲕⲉⲛⲥ-, ⲕⲟⲛⲥ=, ⲕⲟⲟⲛⲥ=
@@ -1917,7 +1917,7 @@ intr:"	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=112a	112	
 (B) ⲭⲟⲛⲥ+"	"(S) ⲕⲛⲟⲥ, ⲕⲛⲟⲟⲥ, ⲕⲛⲱⲱⲥ
 (B) ⲭⲱⲛⲥ
 (S) ⲕⲟⲛⲥ+
-(B) ⲭⲟⲛⲥ+"	"(S) ⲕⲛⲟⲥ, ⲕⲛⲟⲟⲥ, ⲕⲛⲱⲱⲥ
+(B) ⲭⲟⲛⲥ+"	ⲕⲛⲟⲥ, ⲕⲛⲟⲟⲥ, ⲕⲛⲱⲱⲥ, ⲭⲱⲛⲥ, ⲕⲟⲛⲥ+, ⲭⲟⲛⲥ+	"(S) ⲕⲛⲟⲥ, ⲕⲛⲟⲟⲥ, ⲕⲛⲱⲱⲥ
 (B) ⲭⲱⲛⲥ
 (S) ⲕⲟⲛⲥ+
 (B) ⲭⲟⲛⲥ+"	ⲭⲱⲛⲥ (B)			complete	verb	οζειν	"<b>intr:</b> stink, be putrid [οζειν]
@@ -1947,7 +1947,7 @@ as noun m, stink"	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageI
 (F) ⲕⲛⲉⲩ"	"(S) ⲕⲛⲁⲁⲩ
 (A) ⲕⲛⲟ
 (B) ⲭⲛⲁⲩ
-(F) ⲕⲛⲉⲩ"	"(S) ⲕⲛⲁⲁⲩ (ⲡ)
+(F) ⲕⲛⲉⲩ"	ⲕⲛⲁⲁⲩ, ⲕⲛⲟ, ⲭⲛⲁⲩ, ⲕⲛⲉⲩ	"(S) ⲕⲛⲁⲁⲩ (ⲡ)
 (A) ⲕⲛⲟ (ⲡ)
 (B) ⲭⲛⲁⲩ (ⲡ)
 (F) ⲕⲛⲉⲩ (ⲡ)"	ⲭⲛⲁⲩ (B)			complete	noun male	δραγμα, αγκαλισ	sheaf [δραγμα, αγκαλισ]	sheaf [δραγμα, αγκαλισ]	sheaf	"sheaf <span style=""opacity:0.7"">[δραγμα, αγκαλισ]</span>"	"sheaf <span style=""opacity:0.7"">[<a href=""https://logeion.uchicago.edu/%CE%B4%CF%81%CE%B1%CE%B3%CE%BC%CE%B1"">δραγμα</a>, <a href=""https://logeion.uchicago.edu/%CE%B1%CE%B3%CE%BA%CE%B1%CE%BB%CE%B9%CF%83"">αγκαλισ</a>]</span>"	sheaf	https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=112b	112	b	ⲕⲛⲁⲁⲩ (ⲡ)	ⲕⲛⲁⲁⲩ					ⲕⲛⲟ (ⲡ)	ⲕⲛⲟ			ⲭⲛⲁⲩ (ⲡ)	ⲭⲛⲁⲩ	ⲕⲛⲉⲩ (ⲡ)	ⲕⲛⲉⲩ							822	820	112			
