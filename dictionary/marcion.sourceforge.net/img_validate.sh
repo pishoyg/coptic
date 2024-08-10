@@ -14,7 +14,7 @@ IMG_DIR="dictionary/marcion.sourceforge.net/data/img"
 IMG_300_DIR="dictionary/marcion.sourceforge.net/data/img-300"
 IMG_SOURCES_DIR="dictionary/marcion.sourceforge.net/data/img-sources"
 
-VALID_EXTENSIONS=".avif .gif .jpeg .jpg .png .webp"
+VALID_EXTENSIONS=".avif .gif .jpeg .jpg .png .webp .svg"
 
 find_basenames () {
   find "${1}" -type f -exec basename {} \; | sort
@@ -87,7 +87,9 @@ color GREEN "All images have sources."
 # Check that the converted images are more recent than the original ones.
 for BASENAME in ${IMG_DIR_BASENAMES}; do
   IMAGE="${IMG_DIR}/${BASENAME}"
-  IMAGE_300="${IMG_300_DIR}/${BASENAME/.png/.jpg}"
+  IMAGE_300="${IMG_300_DIR}/${BASENAME}"
+  IMAGE_300="${IMAGE_300/.png/.jpg}"
+  IMAGE_300="${IMAGE_300/.svg/.jpg}"
   if (($(date +%s -r "${IMAGE}") > $(date +%s -r "${IMAGE_300}"))); then
     color RED "${IMAGE} has a more recent timestamp than its converted version ${IMAGE_300}!"
     exit 1

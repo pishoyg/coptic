@@ -48,7 +48,7 @@ done
 # Delete obsolete images.
 find "${IMG_300_DIR}" -type f | while read -r FILE; do
   BASENAME="$(basename "${FILE}")"
-  if [ ! -f "${IMG_DIR}/${BASENAME}" ] && [ ! -f "${IMG_DIR}/${BASENAME/.jpg/.png}" ]; then
+  if [ ! -f "${IMG_DIR}/${BASENAME}" ] && [ ! -f "${IMG_DIR}/${BASENAME/.jpg/.png}" ] && [ ! -f "${IMG_DIR}/${BASENAME/.jpg/.svg}" ]; then
     rm "${FILE}"
   fi
 done
@@ -65,7 +65,9 @@ done
 # Convert images.
 find "${IMG_DIR}" -type f | while read -r FILE; do
   BASENAME=$(basename "${FILE}")
-  FILE_300="${IMG_300_DIR}/${BASENAME/.png/.jpg}"
+  FILE_300="${IMG_300_DIR}/${BASENAME}"
+  FILE_300="${FILE_300/.png/.jpg}"
+  FILE_300="${FILE_300/.svg/.jpg}"
   if ${SKIP_EXISTING} && [ -f "${FILE_300}" ]; then
     continue
   fi
