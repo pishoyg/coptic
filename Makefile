@@ -27,7 +27,7 @@ SHELL := /bin/bash
 
 .PHONY: all
 # You might want to run `make clean` following this.
-all: install generate_1 test_1 generate_2 test publish stats
+all: install generate_1 test_1 generate_2 test publish report
 
 # LEVEL 2 RULES ###############################################################
 
@@ -52,8 +52,8 @@ test_1: git_add_precommit_run_1
 .PHONY: publish
 publish: anki_publish epub_publish site_publish
 
-.PHONY: stats
-stats: stats_row
+.PHONY: report
+report: stats_report
 
 # The following level-2 rules are not included in any of the level-3 rules
 # above. This is because they are mainly relevant during development, but are
@@ -70,6 +70,9 @@ flashcards_kellia: flashcards_kellia_html
 
 .PHONY: bible_no_epub
 bible_no_epub: bible_no_epub_aux
+
+.PHONY: stats
+stats: stats_save
 
 .PHONY: clean
 clean: git_clean bible_epub_clean kellia_analysis_clean
@@ -258,8 +261,11 @@ git_clean: FORCE
 git_status: FORCE
 	git status --short
 
-stats_row: FORCE
+stats_report: FORCE
 	bash stats.sh
+
+stats_save: FORCE
+	bash stats.sh --save
 
 camera_images: FORCE
 	grep \

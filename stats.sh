@@ -1,5 +1,23 @@
 #!/bin/bash
 
+SAVE=false
+while [ $# -gt 0 ]; do
+  case $1 in
+  --save)
+    SAVE=true
+    ;;
+  --help)
+    echo "Pass --save to also save to the stats file."
+    exit
+    ;;
+  *)
+    echo "Unknown flag: ${1}"
+    exit 1
+    ;;
+  esac
+  shift
+done
+
 LOC=$(find . \
   -name "*.py" -o -name "*.java" \
   -o -name "*.proto" -o -name "*.sh" \
@@ -27,5 +45,7 @@ echo "${MARCION_IMG}"
 echo "Number of words that have at least one page from Dawoud:"
 echo "${MARCION_DAWOUD}"
 
-echo -e "$(date)\t$(date +%s)\t${LOC}\t${MARCION_IMG}\t${MARCION_DAWOUD}" \
-  >> stats.tsv
+if ${SAVE}; then
+  echo -e "$(date)\t$(date +%s)\t${LOC}\t${MARCION_IMG}\t${MARCION_DAWOUD}" \
+    >> stats.tsv
+fi
