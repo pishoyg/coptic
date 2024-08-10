@@ -162,6 +162,11 @@ class keyer:
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def title(word: list[lexical.structured_word]) -> str:
+    return ", ".join(w.string(False, False, False, True) for w in word)
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def process_data(df: pd.DataFrame, strict: bool) -> None:
     extra_cols = {}
 
@@ -212,6 +217,7 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         word = parser.parse_word_cell(
             row[WORD_COL], root_type, strict, detach_types=True, use_coptic_symbol=True
         )
+        insert(WORD_COL, "-title", title(word))
         insert(
             WORD_COL,
             "-parsed-prettify",
