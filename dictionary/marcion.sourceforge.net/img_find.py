@@ -350,7 +350,7 @@ def main():
                         files,
                     )
                     continue
-                sense = sense[1:]
+                sense = sense[7:]
                 if not sense:
                     utils.error("No source given!")
                     continue
