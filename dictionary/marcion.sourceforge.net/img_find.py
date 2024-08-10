@@ -254,6 +254,7 @@ def main():
         assert k not in exclude
         exclude[k] = v
 
+    key_to_row = {row[KEY_COL]: row for _, row in df.iterrows()}
     for _, row in df.iterrows():
         key = row[KEY_COL]
         key = int(key)
@@ -271,14 +272,13 @@ def main():
             continue
 
         open_images(g)
-        q = query(row[MEANING_COL])
         subprocess.run(
             [
                 "open",
                 "-a",
                 args.browser,
                 row[LINK_COL],
-                q,
+                query(row[MEANING_COL]),
             ]
         )
 
@@ -338,6 +338,7 @@ def main():
 
             if sense.startswith("key="):
                 key = sense[4:]
+                row = key_to_row[key]
                 continue
 
             if sense.startswith("source="):
