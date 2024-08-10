@@ -1,5 +1,8 @@
 #!/bin/bash
 
+set -o errexit  # Exit upon encountering a failure.
+set -o nounset  # Consider an undefined variable to be an error.
+
 # JSON_KEYFILE_NAME contains access tokens for a Google Cloud project.
 # See
 # https://oauth2client.readthedocs.io/en/latest/source/oauth2client.service_account.html.

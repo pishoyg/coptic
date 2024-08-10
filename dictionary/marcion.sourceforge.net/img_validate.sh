@@ -1,7 +1,7 @@
 #!/bin/bash
 
-set -e  # Exit upon encountering a failure.
-set -u  # Consider an undefined variable to be an error.
+set -o errexit  # Exit upon encountering a failure.
+set -o nounset  # Consider an undefined variable to be an error.
 
 # shellcheck disable=SC2034
 GREEN="\033[0;32m"

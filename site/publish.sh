@@ -1,6 +1,7 @@
 #!/bin/bash
 
-set -o nounset
+set -o errexit  # Exit upon encountering a failure.
+set -o nounset  # Consider an undefined variable to be an error.
 
 if [ -n "$(git -C "${SITE_DIR}" status --short)" ]; then
   echo "Git repo is dirty. This should be done in a standalone commit."

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+set -o errexit  # Exit upon encountering a failure.
+set -o nounset  # Consider an undefined variable to be an error.
+
 IMG_DIR="dictionary/marcion.sourceforge.net/data/img"
 WIDTH="300"
 IMG_300_DIR="dictionary/marcion.sourceforge.net/data/img-300"

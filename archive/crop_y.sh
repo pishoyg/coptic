@@ -1,7 +1,8 @@
 # Crop out the bottom part of an image, keeping only the given proportion of
 # the original height.
-set -e  # Exit upon encountering a failure.
-set -u  # Consider an undefined variable to be an error.
+
+set -o errexit  # Exit upon encountering a failure.
+set -o nounset  # Consider an undefined variable to be an error.
 
 # TODO: Use named args instead of positional args.
 FILE="${1}"
