@@ -7,6 +7,8 @@ import type_enforced
 
 CRUM_FMT = '<span class="crum-page">{crum}</span>'
 CRUM_EXTERNAL_FMT = '<span class="crum-page-external">{crum}</span>'
+# TODO: Update the home page, it will no longer be the repo.
+# TODO: Update the parent URL. You should get your own domain.
 PARENT_URL = "https://pishoyg.github.io/crum"
 HOME = "https://github.com/pishoyg/coptic/"
 EMAIL = "pishoybg@gmail.com"
@@ -270,7 +272,6 @@ def crum(
             field.cat(
                 # Header.
                 field.cat(
-                    # TODO: Update the home page, it will no longer be the repo.
                     f"""<table style="width: 100%; table-layout: fixed;"> <tr> <td><a href="{HOME}">home</a></td> <td>""",
                     field.aon(
                         f'<a class="navigate" href="{PARENT_URL}/',
