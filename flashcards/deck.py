@@ -266,6 +266,7 @@ class deck:
             os.path.join(dir, "data.tsvs"),
             columns=["key", "front", "back", "timestamp"],
         )
+        utils.wrote(dir)
 
     def write_html(self, dir: str) -> None:
         self.clean_dir(dir)
@@ -287,6 +288,7 @@ class deck:
                 )
         for f in self.media:
             shutil.copy(f, dir)
+        utils.wrote(dir)
 
     def html_to_anki(self, html: str) -> str:
         # TODO: This won't work if the HTML gets formatted before making it to

@@ -10,6 +10,8 @@ import field
 import genanki
 import type_enforced
 
+import utils
+
 argparser = argparse.ArgumentParser(
     formatter_class=argparse.RawTextHelpFormatter,
     description="Regenerate the Anki package.",
@@ -102,6 +104,7 @@ def write_anki(decks: list[deck.deck], path: str) -> None:
     package = genanki.Package(anki_decks, media_files=media_files)
     assert path
     package.write_to_file(path)
+    utils.wrote(path)
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
