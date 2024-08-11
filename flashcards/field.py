@@ -5,7 +5,6 @@ import shutil
 
 import enforcer
 import gspread
-import pandas as pd
 import type_enforced
 from oauth2client import service_account
 
