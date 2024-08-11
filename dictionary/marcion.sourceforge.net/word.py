@@ -161,6 +161,12 @@ class structured_word:
             " order to provide the necessary arguments."
         )
 
+    def __repr__(self) -> str:
+        raise ValueError(
+            "Please use an explicitly string conversion method in"
+            " order to provide the necessary arguments."
+        )
+
     def string(
         self,
         include_dialects: bool = True,
@@ -168,18 +174,25 @@ class structured_word:
         append_root_type: bool = False,
         parenthesize_assumed: bool = True,
         append_types: bool = True,
+        classify: bool = False,
     ) -> str:
         d = ""
         if include_dialects and self._dialects:
-            d = "({})".format(
-                ", ".join(
-                    f'<span class="dialect {d}">{d}</span>' for d in self._dialects
-                )
+            dialects = (
+                [f'<span class="dialect {d}">{d}</span>' for d in self._dialects]
+                if classify
+                else self._dialects
             )
+            d = "(" + ", ".join(dialects) + ")"
         s = ", ".join(
-            f'<span class="{" ".join(["spelling"] + self._dialects)}">{s}</span>'
-            for s in self.spellings(parenthesize_assumed)
+            [
+                f'<span class="{" ".join(["spelling"] + self._dialects)}">{s}</span>'
+                for s in self.spellings(parenthesize_assumed)
+            ]
+            if classify
+            else self.spellings(parenthesize_assumed)
         )
+
         t = ""
         if append_types:
             t = " ".join(i.coptic_symbol() for i in self._types if i.append())
@@ -191,7 +204,8 @@ class structured_word:
         if include_references:
             r = ", ".join("{" + r + "}" for r in self._references)
         word = " ".join(filter(None, [d, s, t, r]))
-        word = f'<span class="{" ".join(["word"] + self._dialects)}">{word}</span>'
+        if classify:
+            word = f'<span class="{" ".join(["word"] + self._dialects)}">{word}</span>'
         return word
 
     def dialects(self) -> list[str]:

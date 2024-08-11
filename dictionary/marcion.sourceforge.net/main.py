@@ -163,7 +163,17 @@ class keyer:
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def title(word: list[lexical.structured_word]) -> str:
-    return ", ".join(w.string(False, False, False, True) for w in word)
+    return ", ".join(
+        w.string(
+            include_dialects=False,
+            include_references=False,
+            append_root_type=False,
+            parenthesize_assumed=True,
+            append_types=False,
+            classify=False,
+        )
+        for w in word
+    )
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -203,7 +213,8 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
             WORD_COL,
             "-parsed-prettify",
             "\n".join(
-                w.string(include_references=False, append_root_type=True) for w in word
+                w.string(include_references=False, append_root_type=True, classify=True)
+                for w in word
             ),
         )
         if strict:
