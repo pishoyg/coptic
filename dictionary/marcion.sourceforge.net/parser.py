@@ -471,21 +471,6 @@ def lighten(line: str) -> str:
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def add_greek_links(line: str) -> str:
-    before, greek, line = _chop(
-        line, constants.GREEK_WORD, strict=False, strip_ends=False
-    )
-    if not greek:
-        assert not line
-        return before
-    return (
-        before
-        + add_a_href(constants.KOINE_GREEK_DICTIONARY_FMT, greek)
-        + add_greek_links(line)
-    )
-
-
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def add_a_href(link_fmt: str, key: str) -> str:
     link = link_fmt.format(key=urllib.parse.quote(key))
     return '<a href="{link}">{key}</a>'.format(link=link, key=key)

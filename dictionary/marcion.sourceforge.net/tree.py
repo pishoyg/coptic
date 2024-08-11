@@ -256,7 +256,8 @@ class node:
                 depth -= 1
             word = d.cell("word-parsed-prettify")
             type = d.cell("type-parsed")
-            meaning = d.cell("en-parsed-light-greek")
+            # Calling the parser in tree? A little unorthodox, eh?!
+            meaning = parser.lighten_greek(d.cell("en-parsed"))
             assert word or (type == "HEADER" and meaning)
             if type and type not in ["-", "HEADER"]:
                 meaning = f"({type}) {meaning}"

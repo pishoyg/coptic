@@ -219,12 +219,6 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         ep = parser.parse_english_cell(row[EN_COL])
         insert(EN_COL, "-parsed", ep)
         insert(EN_COL, "-parsed-no-greek", parser.remove_greek(ep))
-        insert(EN_COL, "-parsed-light-greek", parser.lighten_greek(ep))
-        insert(
-            EN_COL,
-            "-parsed-link-light-greek",
-            parser.add_greek_links(parser.lighten_greek(ep)),
-        )
         crum = row[CRUM_COL]
         insert(CRUM_COL, "-link", constants.CRUM_PAGE_FMT.format(key=crum))
         for d in FILTER_DIALECTS:
