@@ -370,13 +370,18 @@ def parse_english_cell(line: str) -> str:
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def parse_crum_cell(line: str):
+def parse_crum_cell(line: str) -> tuple[str, str]:
     match = constants.CRUM_RE.match(line)
     assert match
     assert len(match.groups()) == 2
     page, column = match.groups()
     assert int(page) >= 0 and int(page) <= constants.CRUM_LAST_PAGE_NUM, page
     return page, column
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def crum_page(crum: str) -> str:
+    return parse_crum_cell(crum)[0]
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)

@@ -69,7 +69,10 @@ class node:
     def crum_pages(self) -> list[str]:
         assert self.is_root()
         assert self._preprocessed
-        cur = {d.row()["crum-page"] for d in self.descendants(include_root=True)}
+        cur = {
+            parser.crum_page(d.row()["crum"])
+            for d in self.descendants(include_root=True)
+        }
         cur = map(int, cur)
         cur = filter(None, cur)  # Delete the zero page.
         cur = sorted(cur)  # Sort numerically, not lexicographically.

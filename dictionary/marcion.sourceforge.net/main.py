@@ -226,10 +226,7 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
             parser.add_greek_links(parser.lighten_greek(ep)),
         )
         crum = row[CRUM_COL]
-        crum_page, crum_column = parser.parse_crum_cell(crum)
         insert(CRUM_COL, "-link", constants.CRUM_PAGE_FMT.format(key=crum))
-        insert(CRUM_COL, "-page", crum_page)
-        insert(CRUM_COL, "-column", crum_column)
         for d in FILTER_DIALECTS:
             subset = [w for w in word if w.is_dialect(d, undialected_is_all=True)]
             entry = "\n".join(
