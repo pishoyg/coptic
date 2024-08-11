@@ -12,6 +12,7 @@ PARENT_URL = "https://pishoyg.github.io/crum"
 HOME = "https://github.com/pishoyg/coptic/"
 EMAIL = "pishoybg@gmail.com"
 
+DICTIONARY_PAGE_RE = re.compile("([0-9]+(a|b))")
 COPTIC_WORD_RE = re.compile("([Ⲁ-ⲱϢ-ϯⳈⳉ]+)")
 GREEK_WORD_RE = re.compile("([Α-Ωα-ω]+)")
 
@@ -151,6 +152,14 @@ def crum(
                     + btn.innerHTML, '_blank').focus();
             }
         });
+        // Handle 'dawoud' class.
+        var els = document.getElementsByClassName('dawoud');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('link');
+            btn.onclick = () => {
+                document.getElementById('dawoud' + btn.innerHTML.slice(0, -1)).scrollIntoView();
+            }
+        });
         """,
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
@@ -247,15 +256,20 @@ def crum(
                     "<hr/>",
                     '<span class="right">',
                     "<b>Dawoud: </b>",
-                    field.grp(
-                        keys=roots_col("key", force=True),
-                        group_by=dawoud_col("key", force=True),
-                        selected=field.xor(
-                            dawoud_col("dawoud-pages-redone", force=False),
-                            dawoud_col("dawoud-pages", force=False),
+                    field.apl(
+                        lambda pages: DICTIONARY_PAGE_RE.sub(
+                            r'<span class="dawoud">\1</span>', pages
                         ),
-                        force=False,
-                        unique=True,
+                        field.grp(
+                            keys=roots_col("key", force=True),
+                            group_by=dawoud_col("key", force=True),
+                            selected=field.xor(
+                                dawoud_col("dawoud-pages-redone", force=False),
+                                dawoud_col("dawoud-pages", force=False),
+                            ),
+                            force=False,
+                            unique=True,
+                        ),
                     ),
                     "</span>",
                     "<br/>",
