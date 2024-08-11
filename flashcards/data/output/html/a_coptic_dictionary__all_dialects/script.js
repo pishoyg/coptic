@@ -70,8 +70,12 @@ window.addEventListener("load", function() {
         });
     }
     function dialect(d) {
+        document.querySelectorAll(
+            '.dialect-parenthesis,.dialect-comma,.spelling-comma,.type').forEach((el) => {
+                el.classList.add('very-light');
+        });
         toggle(d);
-        document.querySelectorAll('.word,.dialect').forEach((el) => {
+        document.querySelectorAll('.dialect,.spelling').forEach((el) => {
             if (!dialected(el)) {
                 return;
             }
