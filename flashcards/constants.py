@@ -71,45 +71,36 @@ CRUM_JS = """
     // Handle the 'dialect' class.
     const dialects = ['S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
     const dialectStyle = new Map();
-    dialects.forEach((d) => {
-        dialectStyle.set(d, 'normal');
-    });
+    dialects.forEach((d) => { dialectStyle.set(d, ''); });
     function toggle(d) {
-        dialectStyle.set(
-            d,
-            dialectStyle.get(d) == 'normal' ? 'bold' : 'normal');
+        dialectStyle.set(d, dialectStyle.get(d) == '' ? 'heavy' : '');
     }
-    function shouldBold(el) {
-        for (var i in dialects) {
-            if (dialectStyle.get(dialects[i]) == 'bold' &&
-                el.classList.contains(dialects[i])) {
-                return true;
-            }
-        }
-        return false;
+    function shouldHeavy(el) {
+        return dialects.some((d) => {
+            return dialectStyle.get(d) == 'heavy' && el.classList.contains(d);
+        });
     }
     function dialected(el) {
         return dialects.some((d) => {
             return el.classList.contains(d);
         });
     }
-    var els = document.getElementsByClassName('dialect');
     function dialect(d) {
         toggle(d);
-        document.querySelectorAll('.word').forEach((el) => {
+        document.querySelectorAll('.word,.dialect').forEach((el) => {
             if (!dialected(el)) {
                 return;
             }
-            if (shouldBold(el)) {
+            if (shouldHeavy(el)) {
                 el.classList.remove('very-light');
-                el.classList.add('bold');
+                el.classList.add('heavy');
             } else {
-                el.classList.remove('bold');
+                el.classList.remove('heavy');
                 el.classList.add('very-light');
             }
         });
         navigateQuery = "?d=" + dialects.filter((d) => {
-            return dialectStyle.get(d) == 'bold';
+            return dialectStyle.get(d) == 'heavy';
         }).join(',');
         document.querySelectorAll('.navigate').forEach((el) => {
             const url = new URL(el.getAttribute('href'));
@@ -117,6 +108,7 @@ CRUM_JS = """
             el.setAttribute('href', url.toString() + navigateQuery);
         });
     }
+    var els = document.getElementsByClassName('dialect');
     Array.prototype.forEach.call(els, (btn) => {
         btn.classList.add('hover-link');
         btn.onclick = () => { dialect(btn.innerHTML); };
@@ -126,39 +118,42 @@ CRUM_JS = """
 """
 
 CRUM_CSS = """
- .bordered {
-     border:1px solid black;
-}
  .card {
      font-size: 18px;
 }
- .center {
-     text-align: center;
+ .nightMode .bordered {
+     border:1px solid white;
 }
  .front {
      text-align: center;
 }
- .hover-link:hover {
-     color: blue;
-     cursor: pointer;
-     text-decoration: underline;
+ .bordered {
+     border:1px solid black;
 }
  .left {
      float: left;
 }
- .light {
-     opacity:0.7;
+ .center {
+     text-align: center;
+}
+ .right {
+     float:right;
 }
  .link {
      color: blue;
      cursor: pointer;
      text-decoration: underline;
 }
- .nightMode .bordered {
-     border:1px solid white;
+ .hover-link:hover {
+     color: blue;
+     cursor: pointer;
+     text-decoration: underline;
 }
- .right {
-     float:right;
+ .light {
+     opacity:0.7;
+}
+ .heavy {
+     opacity:1.0;
 }
  .very-light {
      opacity:0.3;
