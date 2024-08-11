@@ -516,7 +516,14 @@ def sort_semver(paths: list[str]) -> list[str]:
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def dedup_consec(arr: list[int]) -> list[int]:
+def dedup(arr: list[int], unique: bool = False) -> list[int]:
+    """
+    Args:
+        unique: If true, make sure every page occurs at most once.
+        If false, only deduplicate consecutive occurrences.
+    """
+    if unique:
+        return list(dict.fromkeys(arr))
     out = []
     for x in arr:
         if out and out[-1] == x:
@@ -553,7 +560,7 @@ def page_numbers(page_ranges: str) -> list[int]:
         assert end >= start, f"start={start}, end={end}"
         for x in range(start, end + 1):
             out.append(x)
-    out = dedup_consec(out)
+    out = dedup(out, unique=True)
     return out
 
 
