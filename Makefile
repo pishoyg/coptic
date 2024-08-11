@@ -59,8 +59,8 @@ report: stats_report
 # above. This is because they are mainly relevant during development, but are
 # not part of the main deployment pipeline.
 
-.PHONY: flashcards_crum_bohairic
-flashcards_crum_bohairic: flashcards_crum_bohairic_html
+.PHONY: flashcards_crum_all_dialects
+flashcards_crum_all_dialects: flashcards_crum_all_dialects_html
 
 .PHONY: flashcards_copticsite
 flashcards_copticsite: flashcards_copticsite_html
@@ -171,11 +171,11 @@ anki_publish: $(shell find flashcards/data/output/anki/ -type f)
 		flashcards/data/output/anki/coptic.apkg \
 		"$${FLASHCARD_DIR}"
 
-flashcards_crum_bohairic_html: FORCE
+flashcards_crum_all_dialects_html: FORCE
 	python flashcards/main.py \
-		--decks "A Coptic Dictionary::Bohairic" \
+		--decks "A Coptic Dictionary::All Dialects" \
 		--output_dir "/tmp/" \
-		--anki "/tmp/crum_bohairic.apkg" \
+		--anki "/tmp/crum_all_dialects.apkg" \
 		--html_mask "true" \
 		--tsvs_mask ""
 
