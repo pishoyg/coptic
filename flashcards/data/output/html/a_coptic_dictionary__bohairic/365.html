@@ -7,65 +7,77 @@
   <meta name="deck_description" content=
   "https://github.com/pishoyg/coptic/. pishoybg@gmail.com.">
   <style>
-      .card { font-size: 18px; }.front { text-align: center; }figure { display: inline-block; border: 1px transparent; margin: 10px; }figure figcaption { text-align: center; }figure img { vertical-align: top; }.bordered { border:1px solid black; }.right { float:right; }.left { float: left; }.center { text-align: center; }.nightMode .bordered { border:1px solid white; }a.nostyle:link { text-decoration: inherit; color: inherit; }a.nostyle:visited { text-decoration: inherit; color: inherit; }a.nostyle:hover { text-decoration: underline; color: blue; }
+      .card { font-size: 18px; }.front { text-align: center; }figure { display: inline-block; border: 1px transparent; margin: 10px; }figure figcaption { text-align: center; }figure img { vertical-align: top; }.bordered { border:1px solid black; }.right { float:right; }.left { float: left; }.center { text-align: center; }.nightMode .bordered { border:1px solid white; }.link { text-decoration: underline; color: blue; cursor: pointer; }.light { opacity:0.7 }.hover-link:hover { text-decoration: underline; color: blue; cursor: pointer; }
   </style>
+  <script type="text/javascript">
+      window.addEventListener("load", function() {
+        
+        // Handle 'crum-page' class.
+        var els = document.getElementsByClassName('crum-page');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('link');
+            btn.onclick = () => {
+                window.open(
+                    'https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID='
+                    + btn.innerHTML, '_blank').focus();
+            }
+        });
+        var els = document.getElementsByClassName('coptic');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('hover-link');
+            btn.onclick = () => {
+                window.open(
+                    'https://coptic-dictionary.org/results.cgi?quick_search='
+                    + btn.innerHTML, '_blank').focus();
+            }
+        });
+        var els = document.getElementsByClassName('greek');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('link');
+            btn.classList.add('light');
+            btn.onclick = () => {
+                window.open(
+                    'https://logeion.uchicago.edu/'
+                    + btn.innerHTML, '_blank').focus();
+            }
+        });
+        
+      })
+  </script>
 </head>
 <body>
   <div class="front">
-    <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%CF%AB%E2%B2%89">ϫⲉ</a>-
-    (conj.)<br>
-    <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9B%CF%AB%E2%B2%89">
-    ⲛϫⲉ</a>- (conj.)
+    <span class="coptic">ϫⲉ</span>- (conj.)<br>
+    <span class="coptic">ⲛϫⲉ</span>- (conj.)
   </div>
   <hr>
   <div class="back">
-    (<b>conjunction</b>)<span class="right"><b>Crum:</b> <a href=
-    "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=746b">746b</a></span><br>
-
-    <i>conjunction (from <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%CF%AB%E2%B2%B1">ϫⲱ</a></i>
-    say<i>)</i><br>
+    (<b>conjunction</b>)<span class="right"><b>Crum:</b> <span class=
+    "crum-page">746b</span></span><br>
+    <i>conjunction (from <span class="coptic">ϫⲱ</span></i> say<i>)</i><br>
     ― <i>apposition</i>, namely<br>
     ― <i>after vbs</i> call, name<br>
     ― <i>before direct statement or question</i><br>
-    ―― <a href="https://logeion.uchicago.edu/%CE%BF%CF%84%CE%B9">οτι</a><br>
-    ―― <a href=
-    "https://logeion.uchicago.edu/%CE%BA%CE%B1%CE%B8%CE%BF%CF%84%CE%B9">καθοτι</a><br>
-
-    ―― <a href=
-    "https://logeion.uchicago.edu/%CE%B4%CE%B9%CE%BF%CF%84%CE%B9">διοτι</a><br>
+    ―― <span class="greek">οτι</span><br>
+    ―― <span class="greek">καθοτι</span><br>
+    ―― <span class="greek">διοτι</span><br>
     ― <i>explicative</i>, because<br>
-    ― <i>final</i>, <a href=
-    "https://logeion.uchicago.edu/%CE%B9%CE%BD%CE%B1">ινα</a><br>
+    ― <i>final</i>, <span class="greek">ινα</span><br>
     ―― <i>vb inf</i><br>
     ― <i>ellipse</i><br>
-    ― <a href="https://logeion.uchicago.edu/%CE%B5%CE%B9">ει</a> , if,
-    whether<br>
+    ― <span class="greek">ει</span> , if, whether<br>
     ― <i>after Gk particles</i><br>
     <hr>
-    (S, A, sA, B, F, O) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%CF%AB%E2%B2%89">ϫⲉ</a>-<br>
-
-    (S, A, F) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%CF%AB">ϫ</a>(<a class="nostyle"
-    href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89">ⲉ</a>)-<br>
-
-    (S, B, F) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9B%CF%AB%E2%B2%89">
-    ⲛϫⲉ</a>-<br>
-    (NH) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%CF%AB%E2%B2%8F%E2%B2%89">
-    ϫⲏⲉ</a>-
+    (S, A, sA, B, F, O) <span class="coptic">ϫⲉ</span>-<br>
+    (S, A, F) <span class="coptic">ϫ</span>(<span class="coptic">ⲉ</span>)-<br>
+    (S, B, F) <span class="coptic">ⲛϫⲉ</span>-<br>
+    (NH) <span class="coptic">ϫⲏⲉ</span>-
     <hr>
     <figure>
       <img src="dictionary_marcion.sourceforge.net_data_crum_766.png" alt=
       "746"><br>
       <figcaption>
-        <a href=
-        "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=746">746</a>
+        <span class="crum-page">746</span>
       </figcaption>
     </figure><br>
     <hr>

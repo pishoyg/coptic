@@ -7,39 +7,58 @@
   <meta name="deck_description" content=
   "https://github.com/pishoyg/coptic/. pishoybg@gmail.com.">
   <style>
-      .card { font-size: 18px; }.front { text-align: center; }figure { display: inline-block; border: 1px transparent; margin: 10px; }figure figcaption { text-align: center; }figure img { vertical-align: top; }.bordered { border:1px solid black; }.right { float:right; }.left { float: left; }.center { text-align: center; }.nightMode .bordered { border:1px solid white; }a.nostyle:link { text-decoration: inherit; color: inherit; }a.nostyle:visited { text-decoration: inherit; color: inherit; }a.nostyle:hover { text-decoration: underline; color: blue; }
+      .card { font-size: 18px; }.front { text-align: center; }figure { display: inline-block; border: 1px transparent; margin: 10px; }figure figcaption { text-align: center; }figure img { vertical-align: top; }.bordered { border:1px solid black; }.right { float:right; }.left { float: left; }.center { text-align: center; }.nightMode .bordered { border:1px solid white; }.link { text-decoration: underline; color: blue; cursor: pointer; }.light { opacity:0.7 }.hover-link:hover { text-decoration: underline; color: blue; cursor: pointer; }
   </style>
+  <script type="text/javascript">
+      window.addEventListener("load", function() {
+        
+        // Handle 'crum-page' class.
+        var els = document.getElementsByClassName('crum-page');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('link');
+            btn.onclick = () => {
+                window.open(
+                    'https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID='
+                    + btn.innerHTML, '_blank').focus();
+            }
+        });
+        var els = document.getElementsByClassName('coptic');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('hover-link');
+            btn.onclick = () => {
+                window.open(
+                    'https://coptic-dictionary.org/results.cgi?quick_search='
+                    + btn.innerHTML, '_blank').focus();
+            }
+        });
+        var els = document.getElementsByClassName('greek');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('link');
+            btn.classList.add('light');
+            btn.onclick = () => {
+                window.open(
+                    'https://logeion.uchicago.edu/'
+                    + btn.innerHTML, '_blank').focus();
+            }
+        });
+        
+      })
+  </script>
 </head>
 <body>
   <div class="front">
-    (S, B) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%9F%E2%B2%A9%E2%B2%89%E2%B2%9B">
-    ⲥⲟⲩⲉⲛ</a> (<a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A1">ⲡ</a>)<br>
-
-    (S, sA) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%9F%E2%B2%A9%E2%B2%9B%E2%B2%A7">
-    ⲥⲟⲩⲛⲧ</a>= (<a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A1">ⲡ</a>)<br>
-
-    (B) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%9F%E2%B2%A9%E2%B2%89%E2%B2%9B">
-    ⲥⲟⲩⲉⲛ</a>= (<a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A1">ⲡ</a>)<br>
-
-    (F) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%9F%E2%B2%A9%E2%B2%89%E2%B2%9B%E2%B2%A7">
-    ⲥⲟⲩⲉⲛⲧ</a>= (<a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A1">ⲡ</a>)
+    (S, B) <span class="coptic">ⲥⲟⲩⲉⲛ</span> (<span class=
+    "coptic">ⲡ</span>)<br>
+    (S, sA) <span class="coptic">ⲥⲟⲩⲛⲧ</span>= (<span class=
+    "coptic">ⲡ</span>)<br>
+    (B) <span class="coptic">ⲥⲟⲩⲉⲛ</span>= (<span class="coptic">ⲡ</span>)<br>
+    (F) <span class="coptic">ⲥⲟⲩⲉⲛⲧ</span>= (<span class="coptic">ⲡ</span>)
   </div>
   <hr>
   <div class="back">
-    (<b>noun male</b>)<span class="right"><b>Crum:</b> <a href=
-    "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=369b">369b</a></span><br>
-
-    value, price <span style="opacity:0.7">[<a href=
-    "https://logeion.uchicago.edu/%CF%84%CE%B9%CE%BC%CE%B7">τιμη</a>]</span><br>
-
+    (<b>noun male</b>)<span class="right"><b>Crum:</b> <span class=
+    "crum-page">369b</span></span><br>
+    value, price [<span class="greek">τιμη</span>]<br>
     <figure>
       <img src="dictionary_marcion.sourceforge.net_data_img-300_1511-1-1.jpg"
       alt="1511-1-1"><br>
@@ -48,18 +67,10 @@
       </figcaption>
     </figure><br>
     <hr>
-    (S, B) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%9F%E2%B2%A9%E2%B2%89%E2%B2%9B">
-    ⲥⲟⲩⲉⲛ</a><br>
-    (S, sA) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%9F%E2%B2%A9%E2%B2%9B%E2%B2%A7">
-    ⲥⲟⲩⲛⲧ</a>=<br>
-    (B) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%9F%E2%B2%A9%E2%B2%89%E2%B2%9B">
-    ⲥⲟⲩⲉⲛ</a>=<br>
-    (F) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%9F%E2%B2%A9%E2%B2%89%E2%B2%9B%E2%B2%A7">
-    ⲥⲟⲩⲉⲛⲧ</a>=
+    (S, B) <span class="coptic">ⲥⲟⲩⲉⲛ</span><br>
+    (S, sA) <span class="coptic">ⲥⲟⲩⲛⲧ</span>=<br>
+    (B) <span class="coptic">ⲥⲟⲩⲉⲛ</span>=<br>
+    (F) <span class="coptic">ⲥⲟⲩⲉⲛⲧ</span>=
     <table>
       <colgroup>
         <col style="width: 10.0%;">
@@ -75,29 +86,14 @@
       </colgroup>
       <tr>
         <!--Key: 2030-->
-        <td colspan="5" class="bordered">
-          (S, sA, F) <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9B%E2%B2%81%CF%A3%E2%B2%89">
-          ⲛⲁϣⲉ</a> <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5">ⲥ</a>.<br>
-
-          (B) <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9B%E2%B2%81%CF%A3%E2%B2%89">
-          ⲛⲁϣⲉ</a> <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9B%E2%B2%A5">
-          ⲛⲥ</a>.
-        </td>
-        <td colspan="4" class="bordered">of great value <span style=
-        "opacity:0.7">[<a href=
-        "https://logeion.uchicago.edu/%CF%80%CE%BF%CE%BB%CF%85%CF%84%CE%B5%CE%BB%CE%B7%CF%83">πολυτελησ</a>,
-        <a href=
-        "https://logeion.uchicago.edu/%CF%80%CE%BF%CE%BB%CF%85%CF%84%CE%B9%CE%BC%CE%BF%CF%83">
-        πολυτιμοσ</a>]</span></td>
-        <td rowspan="1" class="bordered">
-          <b>Crum:</b> <a href=
-          "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=369b">
-          369b</a>
-        </td>
+        <td colspan="5" class="bordered">(S, sA, F) <span class=
+        "coptic">ⲛⲁϣⲉ</span> <span class="coptic">ⲥ</span>.<br>
+        (B) <span class="coptic">ⲛⲁϣⲉ</span> <span class=
+        "coptic">ⲛⲥ</span>.</td>
+        <td colspan="4" class="bordered">of great value [πολυτελησ,
+        πολυτιμοσ]</td>
+        <td rowspan="1" class="bordered"><b>Crum:</b> <span class=
+        "crum-page">369b</span></td>
       </tr>
     </table>
     <hr>
@@ -105,8 +101,7 @@
       <img src="dictionary_marcion.sourceforge.net_data_crum_389.png" alt=
       "369"><br>
       <figcaption>
-        <a href=
-        "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=369">369</a>
+        <span class="crum-page">369</span>
       </figcaption>
     </figure><br>
     <hr>

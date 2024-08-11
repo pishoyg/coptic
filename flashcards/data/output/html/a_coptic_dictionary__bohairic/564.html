@@ -7,55 +7,71 @@
   <meta name="deck_description" content=
   "https://github.com/pishoyg/coptic/. pishoybg@gmail.com.">
   <style>
-      .card { font-size: 18px; }.front { text-align: center; }figure { display: inline-block; border: 1px transparent; margin: 10px; }figure figcaption { text-align: center; }figure img { vertical-align: top; }.bordered { border:1px solid black; }.right { float:right; }.left { float: left; }.center { text-align: center; }.nightMode .bordered { border:1px solid white; }a.nostyle:link { text-decoration: inherit; color: inherit; }a.nostyle:visited { text-decoration: inherit; color: inherit; }a.nostyle:hover { text-decoration: underline; color: blue; }
+      .card { font-size: 18px; }.front { text-align: center; }figure { display: inline-block; border: 1px transparent; margin: 10px; }figure figcaption { text-align: center; }figure img { vertical-align: top; }.bordered { border:1px solid black; }.right { float:right; }.left { float: left; }.center { text-align: center; }.nightMode .bordered { border:1px solid white; }.link { text-decoration: underline; color: blue; cursor: pointer; }.light { opacity:0.7 }.hover-link:hover { text-decoration: underline; color: blue; cursor: pointer; }
   </style>
+  <script type="text/javascript">
+      window.addEventListener("load", function() {
+        
+        // Handle 'crum-page' class.
+        var els = document.getElementsByClassName('crum-page');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('link');
+            btn.onclick = () => {
+                window.open(
+                    'https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID='
+                    + btn.innerHTML, '_blank').focus();
+            }
+        });
+        var els = document.getElementsByClassName('coptic');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('hover-link');
+            btn.onclick = () => {
+                window.open(
+                    'https://coptic-dictionary.org/results.cgi?quick_search='
+                    + btn.innerHTML, '_blank').focus();
+            }
+        });
+        var els = document.getElementsByClassName('greek');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('link');
+            btn.classList.add('light');
+            btn.onclick = () => {
+                window.open(
+                    'https://logeion.uchicago.edu/'
+                    + btn.innerHTML, '_blank').focus();
+            }
+        });
+        
+      })
+  </script>
 </head>
 <body>
   <div class="front">
-    <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%83%E2%B2%8F%E2%B2%83">
-    ⲃⲏⲃ</a> (<a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A1">ⲡ</a>)
+    <span class="coptic">ⲃⲏⲃ</span> (<span class="coptic">ⲡ</span>)
   </div>
   <hr>
   <div class="back">
-    (<b>noun male</b>)<span class="right"><b>Crum:</b> <a href=
-    "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=28b">28b</a></span><br>
-
+    (<b>noun male</b>)<span class="right"><b>Crum:</b> <span class=
+    "crum-page">28b</span></span><br>
     cave, hole, den, nest<br>
-    ― <i>of animals</i> <span style="opacity:0.7">[<a href=
-    "https://logeion.uchicago.edu/%CE%BC%CE%B1%CE%BD%CE%B4%CF%81%CE%B1">μανδρα</a>,
-    <a href=
-    "https://logeion.uchicago.edu/%CF%83%CF%80%CE%B7%CE%BB%CE%B1%CE%B9%CE%BF%CE%BD">
-    σπηλαιον</a>, <a href=
-    "https://logeion.uchicago.edu/%CE%BD%CE%BF%CF%83%CF%83%CE%B9%CE%B1">νοσσια</a>,
-    <a href=
-    "https://logeion.uchicago.edu/%CF%86%CF%89%CE%BB%CE%B5%CE%BF%CF%83">φωλεοσ</a>]</span><br>
-
+    ― <i>of animals</i> [<span class="greek">μανδρα</span>, <span class=
+    "greek">σπηλαιον</span>, <span class="greek">νοσσια</span>, <span class=
+    "greek">φωλεοσ</span>]<br>
     ― <i>birds</i><br>
     ― <i>insects</i><br>
     ― <i>demons</i><br>
-    ― <i>thieves</i> <span style="opacity:0.7">[<a href=
-    "https://logeion.uchicago.edu/%CF%83%CF%80%CE%B7%CE%BB%CE%B1%CE%B9%CE%BF%CE%BD">σπηλαιον</a>]</span><br>
-
-    ― <i>fugitives</i> <span style="opacity:0.7">[<a href=
-    "https://logeion.uchicago.edu/%CF%83%CF%80%CE%B7%CE%BB%CE%B1%CE%B9%CE%BF%CE%BD">σπηλαιον</a>]</span><br>
-
+    ― <i>thieves</i> [<span class="greek">σπηλαιον</span>]<br>
+    ― <i>fugitives</i> [<span class="greek">σπηλαιον</span>]<br>
     ― <i>hermits</i><br>
-    cleft <i>in rock</i> <span style="opacity:0.7">[<a href=
-    "https://logeion.uchicago.edu/%CF%84%CF%81%CF%85%CE%BC%CE%B1%CE%BB%CE%B9%CE%B1">τρυμαλια</a>]</span><br>
-
+    cleft <i>in rock</i> [<span class="greek">τρυμαλια</span>]<br>
     <hr>
-    (S, A, B, F) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%83%E2%B2%8F%E2%B2%83">
-    ⲃⲏⲃ</a>
+    (S, A, B, F) <span class="coptic">ⲃⲏⲃ</span>
     <hr>
     <figure>
       <img src="dictionary_marcion.sourceforge.net_data_crum_48.png" alt=
       "28"><br>
       <figcaption>
-        <a href=
-        "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=28">28</a>
+        <span class="crum-page">28</span>
       </figcaption>
     </figure><br>
     <hr>

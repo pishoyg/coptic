@@ -7,94 +7,80 @@
   <meta name="deck_description" content=
   "https://github.com/pishoyg/coptic/. pishoybg@gmail.com.">
   <style>
-      .card { font-size: 18px; }.front { text-align: center; }figure { display: inline-block; border: 1px transparent; margin: 10px; }figure figcaption { text-align: center; }figure img { vertical-align: top; }.bordered { border:1px solid black; }.right { float:right; }.left { float: left; }.center { text-align: center; }.nightMode .bordered { border:1px solid white; }a.nostyle:link { text-decoration: inherit; color: inherit; }a.nostyle:visited { text-decoration: inherit; color: inherit; }a.nostyle:hover { text-decoration: underline; color: blue; }
+      .card { font-size: 18px; }.front { text-align: center; }figure { display: inline-block; border: 1px transparent; margin: 10px; }figure figcaption { text-align: center; }figure img { vertical-align: top; }.bordered { border:1px solid black; }.right { float:right; }.left { float: left; }.center { text-align: center; }.nightMode .bordered { border:1px solid white; }.link { text-decoration: underline; color: blue; cursor: pointer; }.light { opacity:0.7 }.hover-link:hover { text-decoration: underline; color: blue; cursor: pointer; }
   </style>
+  <script type="text/javascript">
+      window.addEventListener("load", function() {
+        
+        // Handle 'crum-page' class.
+        var els = document.getElementsByClassName('crum-page');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('link');
+            btn.onclick = () => {
+                window.open(
+                    'https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID='
+                    + btn.innerHTML, '_blank').focus();
+            }
+        });
+        var els = document.getElementsByClassName('coptic');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('hover-link');
+            btn.onclick = () => {
+                window.open(
+                    'https://coptic-dictionary.org/results.cgi?quick_search='
+                    + btn.innerHTML, '_blank').focus();
+            }
+        });
+        var els = document.getElementsByClassName('greek');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('link');
+            btn.classList.add('light');
+            btn.onclick = () => {
+                window.open(
+                    'https://logeion.uchicago.edu/'
+                    + btn.innerHTML, '_blank').focus();
+            }
+        });
+        
+      })
+  </script>
 </head>
 <body>
   <div class="front">
-    (B) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%CF%A3%E2%B2%8F%E2%B2%A3%E2%B2%93">
-    ϣⲏⲣⲓ</a> (noun)
+    (B) <span class="coptic">ϣⲏⲣⲓ</span> (noun)
   </div>
   <hr>
   <div class="back">
-    (<b>noun</b>)<span class="right"><b>Crum:</b> <a href=
-    "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=585b">585b</a></span><br>
-
-    <i>var of <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89%E2%B2%A3%E2%B2%93">
-    ⲉⲣⲓ</a></i> <span style="opacity:0.7">[<a href=
-    "https://logeion.uchicago.edu/%CE%B1%CF%81%CF%84%CE%BF%CF%83">αρτοσ</a>]</span><br>
-
-    <i>Editor's Note:</i> <i><a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89%E2%B2%A3%E2%B2%93">
-    ⲉⲣⲓ</a></i> means <i>bread</i>. It consistently occurs in Leviticus 22:7 -
-    <i><a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9F%E2%B2%A9%E2%B2%9F%CF%A9">
-    ⲟⲩⲟϩ</a> <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9B">ⲛ</a>̀<a class="nostyle"
-    href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A7%E2%B2%89">ⲧⲉ</a>
-    <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%AB%E2%B2%A3%E2%B2%8F">
-    ⲫⲣⲏ</a> <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%CF%A9%E2%B2%B1%E2%B2%A7%E2%B2%A1">
-    ϩⲱⲧⲡ</a> <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9F%E2%B2%A9%E2%B2%9F%CF%A9">
-    ⲟⲩⲟϩ</a> <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89%CF%A5%E2%B2%89">
-    ⲉϥⲉ</a>̀<a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%CF%A3%E2%B2%B1%E2%B2%A1%E2%B2%93">ϣⲱⲡⲓ</a>
-    <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89%CF%A5%E2%B2%A7%E2%B2%9F%E2%B2%A9%E2%B2%83%E2%B2%8F%E2%B2%9F%E2%B2%A9%E2%B2%A7">
-    ⲉϥⲧⲟⲩⲃⲏⲟⲩⲧ</a> <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9F%E2%B2%A9%E2%B2%9F%CF%A9">
-    ⲟⲩⲟϩ</a> <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A7%E2%B2%9F%E2%B2%A7%E2%B2%89">
-    ⲧⲟⲧⲉ</a> <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89%CF%A5%E2%B2%89">
-    ⲉϥⲉ</a>̀<a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9F%E2%B2%A9%E2%B2%B1%E2%B2%99">ⲟⲩⲱⲙ</a>
-    <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89">ⲉ</a>̀<a class="nostyle"
-    href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%83%E2%B2%9F%E2%B2%97">ⲃⲟⲗ</a>
-    <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%CF%A7%E2%B2%89%E2%B2%9B">
-    ϧⲉⲛ</a> <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9B%E2%B2%8F">
-    ⲛⲏ</a> <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89%E2%B2%91%E2%B2%9F%E2%B2%A9%E2%B2%81%E2%B2%83">
-    ⲉⲑⲟⲩⲁⲃ</a> <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%CF%AB%E2%B2%89">ϫⲉ</a>
-    <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9F%E2%B2%A9%E2%B2%8F%E2%B2%93">
-    ⲟⲩⲏⲓ</a> <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9F%E2%B2%A9%E2%B2%89%E2%B2%A3%E2%B2%93">
-    ⲟⲩⲉⲣⲓ</a> <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9B">ⲛ</a>̀<a class="nostyle"
-    href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A7%E2%B2%81%CF%A5">ⲧⲁϥ</a>
-    <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A1%E2%B2%89">
-    ⲡⲉ</a></i>. According to Crum, <i><a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%CF%A3%E2%B2%8F%E2%B2%A3%E2%B2%93">
-    ϣⲏⲣⲓ</a></i> occurs as a variant of <i><a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89%E2%B2%A3%E2%B2%93">
-    ⲉⲣⲓ</a></i> in this verse. Westendorf mentions it in Koptisches
-    Handwörterbuch, along with its etymology. KELLIA has rightfully accepted it
-    as such.<br>
+    (<b>noun</b>)<span class="right"><b>Crum:</b> <span class=
+    "crum-page">585b</span></span><br>
+    <i>var of <span class="coptic">ⲉⲣⲓ</span></i> [<span class=
+    "greek">αρτοσ</span>]<br>
+    <i>Editor's Note:</i> <i><span class="coptic">ⲉⲣⲓ</span></i> means
+    <i>bread</i>. It consistently occurs in Leviticus 22:7 - <i><span class=
+    "coptic">ⲟⲩⲟϩ</span> <span class="coptic">ⲛ</span>̀<span class=
+    "coptic">ⲧⲉ</span> <span class="coptic">ⲫⲣⲏ</span> <span class=
+    "coptic">ϩⲱⲧⲡ</span> <span class="coptic">ⲟⲩⲟϩ</span> <span class=
+    "coptic">ⲉϥⲉ</span>̀<span class="coptic">ϣⲱⲡⲓ</span> <span class=
+    "coptic">ⲉϥⲧⲟⲩⲃⲏⲟⲩⲧ</span> <span class="coptic">ⲟⲩⲟϩ</span> <span class=
+    "coptic">ⲧⲟⲧⲉ</span> <span class="coptic">ⲉϥⲉ</span>̀<span class=
+    "coptic">ⲟⲩⲱⲙ</span> <span class="coptic">ⲉ</span>̀<span class=
+    "coptic">ⲃⲟⲗ</span> <span class="coptic">ϧⲉⲛ</span> <span class=
+    "coptic">ⲛⲏ</span> <span class="coptic">ⲉⲑⲟⲩⲁⲃ</span> <span class=
+    "coptic">ϫⲉ</span> <span class="coptic">ⲟⲩⲏⲓ</span> <span class=
+    "coptic">ⲟⲩⲉⲣⲓ</span> <span class="coptic">ⲛ</span>̀<span class=
+    "coptic">ⲧⲁϥ</span> <span class="coptic">ⲡⲉ</span></i>. According to Crum,
+    <i><span class="coptic">ϣⲏⲣⲓ</span></i> occurs as a variant of
+    <i><span class="coptic">ⲉⲣⲓ</span></i> in this verse. Westendorf mentions
+    it in Koptisches Handwörterbuch, along with its etymology. KELLIA has
+    rightfully accepted it as such.<br>
     <hr>
-    (B) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%CF%A3%E2%B2%8F%E2%B2%A3%E2%B2%93">
-    ϣⲏⲣⲓ</a>
+    (B) <span class="coptic">ϣⲏⲣⲓ</span>
     <hr>
     <figure>
       <img src="dictionary_marcion.sourceforge.net_data_crum_605.png" alt=
       "585"><br>
       <figcaption>
-        <a href=
-        "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=585">585</a>
+        <span class="crum-page">585</span>
       </figcaption>
     </figure><br>
     <table class="bordered" style="width: 100%; table-layout: fixed;">

@@ -7,70 +7,69 @@
   <meta name="deck_description" content=
   "https://github.com/pishoyg/coptic/. pishoybg@gmail.com.">
   <style>
-      .card { font-size: 18px; }.front { text-align: center; }figure { display: inline-block; border: 1px transparent; margin: 10px; }figure figcaption { text-align: center; }figure img { vertical-align: top; }.bordered { border:1px solid black; }.right { float:right; }.left { float: left; }.center { text-align: center; }.nightMode .bordered { border:1px solid white; }a.nostyle:link { text-decoration: inherit; color: inherit; }a.nostyle:visited { text-decoration: inherit; color: inherit; }a.nostyle:hover { text-decoration: underline; color: blue; }
+      .card { font-size: 18px; }.front { text-align: center; }figure { display: inline-block; border: 1px transparent; margin: 10px; }figure figcaption { text-align: center; }figure img { vertical-align: top; }.bordered { border:1px solid black; }.right { float:right; }.left { float: left; }.center { text-align: center; }.nightMode .bordered { border:1px solid white; }.link { text-decoration: underline; color: blue; cursor: pointer; }.light { opacity:0.7 }.hover-link:hover { text-decoration: underline; color: blue; cursor: pointer; }
   </style>
+  <script type="text/javascript">
+      window.addEventListener("load", function() {
+        
+        // Handle 'crum-page' class.
+        var els = document.getElementsByClassName('crum-page');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('link');
+            btn.onclick = () => {
+                window.open(
+                    'https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID='
+                    + btn.innerHTML, '_blank').focus();
+            }
+        });
+        var els = document.getElementsByClassName('coptic');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('hover-link');
+            btn.onclick = () => {
+                window.open(
+                    'https://coptic-dictionary.org/results.cgi?quick_search='
+                    + btn.innerHTML, '_blank').focus();
+            }
+        });
+        var els = document.getElementsByClassName('greek');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('link');
+            btn.classList.add('light');
+            btn.onclick = () => {
+                window.open(
+                    'https://logeion.uchicago.edu/'
+                    + btn.innerHTML, '_blank').focus();
+            }
+        });
+        
+      })
+  </script>
 </head>
 <body>
   <div class="front">
-    <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89%E2%B2%99%E2%B2%93">
-    ⲉⲙⲓ</a>
+    <span class="coptic">ⲉⲙⲓ</span>
   </div>
   <hr>
   <div class="back">
-    (<b>verb</b>)<span class="right"><b>Crum:</b> <a href=
-    "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=77b">77b</a></span><br>
-
+    (<b>verb</b>)<span class="right"><b>Crum:</b> <span class=
+    "crum-page">77b</span></span><br>
     <b>intr:</b> know, understand<br>
-    ― <i>without obj</i> <span style="opacity:0.7">[<a href=
-    "https://logeion.uchicago.edu/%CE%B3%CE%B9%CE%BD%CF%89%CF%83%CE%BA%CE%B5%CE%B9%CE%BD">γινωσκειν</a>,
-    <a href=
-    "https://logeion.uchicago.edu/%CE%B5%CE%B9%CE%B4%CE%B5%CE%BD%CE%B1%CE%B9">ειδεναι</a>,
-    <a href=
-    "https://logeion.uchicago.edu/%CF%83%CF%85%CE%BD%CE%B5%CE%B9%CE%B4%CE%B5%CE%BD%CE%B1%CE%B9">
-    συνειδεναι</a>, <a href=
-    "https://logeion.uchicago.edu/%CF%83%CF%85%CE%BD%CE%B9%CE%B5%CE%BD%CE%B1%CE%B9">
-    συνιεναι</a>, <a href=
-    "https://logeion.uchicago.edu/%CE%BC%CE%B1%CE%BD%CE%B8%CE%B1%CE%BD%CE%B5%CE%B9%CE%BD">
-    μανθανειν</a>, <a href=
-    "https://logeion.uchicago.edu/%CE%BD%CE%BF%CE%B5%CE%B9%CE%BD">νοειν</a>]</span><br>
-
-    ― <i>+ <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%CF%AB%E2%B2%89">ϫⲉ</a></i><br>
-
+    ― <i>without obj</i> [<span class="greek">γινωσκειν</span>, <span class=
+    "greek">ειδεναι</span>, <span class="greek">συνειδεναι</span>, <span class=
+    "greek">συνιεναι</span>, <span class="greek">μανθανειν</span>, <span class=
+    "greek">νοειν</span>]<br>
+    ― <i>+ <span class="coptic">ϫⲉ</span></i><br>
     ― <i>with ethic dat</i><br>
     ― <i>direct obj, as if constr (rare ? incorrect)</i><br>
-    ― <i>obj with <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89">ⲉ</a>-</i><br>
-
-    ― <i>with <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89%E2%B2%A7%E2%B2%83%E2%B2%89">
-    ⲉⲧⲃⲉ</a>-</i><br>
-    ― <i>with <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9B">ⲛ</a>- B
-    (rare)</i><br>
+    ― <i>obj with <span class="coptic">ⲉ</span>-</i><br>
+    ― <i>with <span class="coptic">ⲉⲧⲃⲉ</span>-</i><br>
+    ― <i>with <span class="coptic">ⲛ</span>- B (rare)</i><br>
     <hr>
-    (S) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89%E2%B2%93%E2%B2%99%E2%B2%89">
-    ⲉⲓⲙⲉ</a>, <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89%E2%B2%93%E2%B2%99%E2%B2%99%E2%B2%89">
-    ⲉⲓⲙⲙⲉ</a><br>
-    (A, sA) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%99%E2%B2%99%E2%B2%89">
-    ⲙⲙⲉ</a><br>
-    (B) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89%E2%B2%99%E2%B2%93">
-    ⲉⲙⲓ</a><br>
-    (F) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89%E2%B2%93%E2%B2%99%E2%B2%93">
-    ⲉⲓⲙⲓ</a>, <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%93%E2%B2%99%E2%B2%93">
-    ⲓⲙⲓ</a><br>
-    (O) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89%E2%B2%99%E2%B2%93">
-    ⲉⲙⲓ</a>, <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%99%E2%B2%99%E2%B2%93">
-    ⲙⲙⲓ</a>
+    (S) <span class="coptic">ⲉⲓⲙⲉ</span>, <span class="coptic">ⲉⲓⲙⲙⲉ</span><br>
+    (A, sA) <span class="coptic">ⲙⲙⲉ</span><br>
+    (B) <span class="coptic">ⲉⲙⲓ</span><br>
+    (F) <span class="coptic">ⲉⲓⲙⲓ</span>, <span class="coptic">ⲓⲙⲓ</span><br>
+    (O) <span class="coptic">ⲉⲙⲓ</span>, <span class="coptic">ⲙⲙⲓ</span>
     <table>
       <colgroup>
         <col style="width: 10.0%;">
@@ -87,193 +86,106 @@
       <tr>
         <!--Key: 8737-->
         <td colspan="9" class="bordered">intr :</td>
-        <td rowspan="2" class="bordered">
-          <b>Crum:</b> <a href=
-          "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=77b">
-          77b</a>
-        </td>
+        <td rowspan="2" class="bordered"><b>Crum:</b> <span class=
+        "crum-page">77b</span></td>
       </tr>
       <tr>
         <!--Key: 8738-->
         <td colspan="1"></td>
-        <td colspan="4" class="bordered">
-          <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%CF%AB%E2%B2%89">
-          ϫⲉ</a>- (c)
-        </td>
+        <td colspan="4" class="bordered"><span class="coptic">ϫⲉ</span>-
+        (c)</td>
         <td colspan="4" class="bordered"></td>
       </tr>
       <tr>
         <!--Key: 8739-->
         <td colspan="1"></td>
-        <td colspan="4" class="bordered">
-          <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89">ⲉ</a>-
-          (c)
-        </td>
+        <td colspan="4" class="bordered"><span class="coptic">ⲉ</span>-
+        (c)</td>
         <td colspan="4" class="bordered"></td>
-        <td rowspan="8" class="bordered">
-          <b>Crum:</b> <a href=
-          "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=78a">
-          78a</a>
-        </td>
+        <td rowspan="8" class="bordered"><b>Crum:</b> <span class=
+        "crum-page">78a</span></td>
       </tr>
       <tr>
         <!--Key: 8740-->
         <td colspan="1"></td>
-        <td colspan="4" class="bordered">
-          <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89%E2%B2%A7%E2%B2%83%E2%B2%89">
-          ⲉⲧⲃⲉ</a>- (c)
-        </td>
+        <td colspan="4" class="bordered"><span class="coptic">ⲉⲧⲃⲉ</span>-
+        (c)</td>
         <td colspan="4" class="bordered"></td>
       </tr>
       <tr>
         <!--Key: 8741-->
         <td colspan="1"></td>
-        <td colspan="4" class="bordered">
-          <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9B">ⲛ</a>-
-          (c)
-        </td>
+        <td colspan="4" class="bordered"><span class="coptic">ⲛ</span>-
+        (c)</td>
         <td colspan="4" class="bordered"></td>
       </tr>
       <tr>
         <!--Key: 337-->
-        <td colspan="5" class="bordered">
-          (B, F) <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89%E2%B2%99%E2%B2%93">
-          ⲉⲙⲓ</a>, <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%93%E2%B2%99%E2%B2%93">
-          ⲓⲙⲓ</a> (<a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A1">ⲡ</a>)
-        </td>
+        <td colspan="5" class="bordered">(B, F) <span class=
+        "coptic">ⲉⲙⲓ</span>, <span class="coptic">ⲓⲙⲓ</span> (<span class=
+        "coptic">ⲡ</span>)</td>
         <td colspan="4" class="bordered"><b>(noun male)</b><br>
-        knowledge <span style="opacity:0.7">[<a href=
-        "https://logeion.uchicago.edu/%CE%B3%CE%BD%CF%89%CF%83%CE%B9%CF%83">γνωσισ</a>]</span></td>
+        knowledge [γνωσισ]</td>
       </tr>
       <tr>
         <!--Key: 338-->
-        <td colspan="5" class="bordered">
-          (S) <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%81%E2%B2%A7%E2%B2%89%E2%B2%93%E2%B2%99%E2%B2%89">
-          ⲁⲧⲉⲓⲙⲉ</a><br>
-          (B) <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%81%E2%B2%A7%E2%B2%89%E2%B2%99%E2%B2%93">
-          ⲁⲧⲉⲙⲓ</a><br>
-          (F) <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%81%E2%B2%A7%E2%B2%93%E2%B2%99%E2%B2%93">
-          ⲁⲧⲓⲙⲓ</a>
-        </td>
-        <td colspan="4" class="bordered">ignorant, innocent <span style=
-        "opacity:0.7">[<a href=
-        "https://logeion.uchicago.edu/%CE%B1%CE%BD%CE%B5%CE%BE%CE%B5%CE%BB%CE%B5%CE%B3%CE%BA%CF%84%CE%BF%CF%83">ανεξελεγκτοσ</a>,
-        <a href=
-        "https://logeion.uchicago.edu/%CE%B1%CE%BD%CE%BF%CE%B7%CF%84%CE%BF%CF%83">
-        ανοητοσ</a>, <a href=
-        "https://logeion.uchicago.edu/%CE%B1%CF%80%CE%B5%CE%B9%CF%81%CE%BF%CF%83">
-        απειροσ</a>]</span></td>
+        <td colspan="5" class="bordered">(S) <span class=
+        "coptic">ⲁⲧⲉⲓⲙⲉ</span><br>
+        (B) <span class="coptic">ⲁⲧⲉⲙⲓ</span><br>
+        (F) <span class="coptic">ⲁⲧⲓⲙⲓ</span></td>
+        <td colspan="4" class="bordered">ignorant, innocent [ανεξελεγκτοσ,
+        ανοητοσ, απειροσ]</td>
       </tr>
       <tr>
         <!--Key: 339-->
         <td colspan="1"></td>
-        <td colspan="4" class="bordered">
-          <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A3">ⲣ</a>
-          <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%81%E2%B2%A7%E2%B2%89%E2%B2%93%E2%B2%99%E2%B2%89">
-          ⲁⲧⲉⲓⲙⲉ</a>, <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9F">ⲟ</a>
-          <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9B%E2%B2%81%E2%B2%A7">
-          ⲛⲁⲧ</a>. (&amp;c)
-        </td>
-        <td colspan="4" class="bordered">be ignorant, unconscious <span style=
-        "opacity:0.7">[<a href=
-        "https://logeion.uchicago.edu/%CE%B1%CE%B3%CE%BD%CE%BF%CE%B5%CE%B9%CE%BD">αγνοειν</a>]</span></td>
+        <td colspan="4" class="bordered"><span class="coptic">ⲣ</span>
+        <span class="coptic">ⲁⲧⲉⲓⲙⲉ</span>, <span class="coptic">ⲟ</span>
+        <span class="coptic">ⲛⲁⲧ</span>. (&amp;c)</td>
+        <td colspan="4" class="bordered">be ignorant, unconscious
+        [αγνοειν]</td>
       </tr>
       <tr>
         <!--Key: 340-->
         <td colspan="1"></td>
-        <td colspan="4" class="bordered">
-          (S) <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%99%E2%B2%9B%E2%B2%A7%E2%B2%81%E2%B2%A7">
-          ⲙⲛⲧⲁⲧ</a>.<br>
-          (B) <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%99%E2%B2%89%E2%B2%A7%E2%B2%81%E2%B2%A7">
-          ⲙⲉⲧⲁⲧ</a>.
-        </td>
-        <td colspan="4" class="bordered">ignorance, innocence <span style=
-        "opacity:0.7">[<a href=
-        "https://logeion.uchicago.edu/%CE%B1%CE%B3%CE%BD%CE%BF%CE%B7%CE%BC%CE%B1">αγνοημα</a>]</span></td>
+        <td colspan="4" class="bordered">(S) <span class=
+        "coptic">ⲙⲛⲧⲁⲧ</span>.<br>
+        (B) <span class="coptic">ⲙⲉⲧⲁⲧ</span>.</td>
+        <td colspan="4" class="bordered">ignorance, innocence [αγνοημα]</td>
       </tr>
       <tr>
         <!--Key: 341-->
-        <td colspan="5" class="bordered">
-          (B) <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A3%E2%B2%89%CF%A5%E2%B2%89%E2%B2%99%E2%B2%93">
-          ⲣⲉϥⲉⲙⲓ</a> (<a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A1">ⲡ</a>)
-        </td>
+        <td colspan="5" class="bordered">(B) <span class="coptic">ⲣⲉϥⲉⲙⲓ</span>
+        (<span class="coptic">ⲡ</span>)</td>
         <td colspan="4" class="bordered"><b>(noun male)</b><br>
         one that knows</td>
       </tr>
       <tr>
         <!--Key: 342-->
-        <td colspan="5" class="bordered">
-          (S) <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%CF%AD%E2%B2%93%E2%B2%9B%E2%B2%89%E2%B2%93%E2%B2%99%E2%B2%89">
-          ϭⲓⲛⲉⲓⲙⲉ</a> (<a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A7">ⲧ</a>)
-        </td>
+        <td colspan="5" class="bordered">(S) <span class=
+        "coptic">ϭⲓⲛⲉⲓⲙⲉ</span> (<span class="coptic">ⲧ</span>)</td>
         <td colspan="4" class="bordered"><b>(noun female)</b><br>
         knowledge</td>
-        <td rowspan="3" class="bordered">
-          <b>Crum:</b> <a href=
-          "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=78b">
-          78b</a>
-        </td>
+        <td rowspan="3" class="bordered"><b>Crum:</b> <span class=
+        "crum-page">78b</span></td>
       </tr>
       <tr>
         <!--Key: 343-->
-        <td colspan="5" class="bordered">
-          (S) <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9B%E2%B2%81%CF%A3%E2%B2%A7%E2%B2%89%E2%B2%93%E2%B2%99%E2%B2%89">
-          ⲛⲁϣⲧⲉⲓⲙⲉ</a>, <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9B%E2%B2%81%CF%A3%E2%B2%A7%E2%B2%89%E2%B2%93%E2%B2%99%E2%B2%99%E2%B2%89">
-          ⲛⲁϣⲧⲉⲓⲙⲙⲉ</a>, <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9B%E2%B2%81%CF%A3%CF%AF%E2%B2%99%E2%B2%99%E2%B2%89">
-          ⲛⲁϣϯⲙⲙⲉ</a>, <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9B%E2%B2%81%CF%A3%E2%B2%A7%E2%B2%99%E2%B2%99%E2%B2%89">
-          ⲛⲁϣⲧⲙⲙⲉ</a>, <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9B%E2%B2%81%CF%A3%E2%B2%A7%E2%B2%99%E2%B2%89">
-          ⲛⲁϣⲧⲙⲉ</a> (adj.)<br>
-          (A) <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9B%E2%B2%81%E2%B3%89%E2%B2%A7%E2%B2%99%E2%B2%99%E2%B2%89">
-          ⲛⲁⳉⲧⲙⲙⲉ</a> (adj.)
-        </td>
+        <td colspan="5" class="bordered">(S) <span class=
+        "coptic">ⲛⲁϣⲧⲉⲓⲙⲉ</span>, <span class="coptic">ⲛⲁϣⲧⲉⲓⲙⲙⲉ</span>,
+        <span class="coptic">ⲛⲁϣϯⲙⲙⲉ</span>, <span class=
+        "coptic">ⲛⲁϣⲧⲙⲙⲉ</span>, <span class="coptic">ⲛⲁϣⲧⲙⲉ</span> (adj.)<br>
+        (A) <span class="coptic">ⲛⲁⳉⲧⲙⲙⲉ</span> (adj.)</td>
         <td colspan="4" class="bordered"><b>(adjective)</b><br>
-        presumptuous, impudent, obdurate <span style="opacity:0.7">[<a href=
-        "https://logeion.uchicago.edu/%CE%B8%CF%81%CE%B1%CF%83%CF%85%CF%83">θρασυσ</a>,
-        <a href=
-        "https://logeion.uchicago.edu/%CE%B1%CF%85%CE%B8%CE%B1%CE%B4%CE%B7%CF%83">
-        αυθαδησ</a>, <a href=
-        "https://logeion.uchicago.edu/%CE%B1%CE%B4%CE%B9%CE%B1%CF%84%CF%81%CE%B5%CF%80%CF%84%CE%BF%CF%83">
-        αδιατρεπτοσ</a>]</span></td>
+        presumptuous, impudent, obdurate [θρασυσ, αυθαδησ, αδιατρεπτοσ]</td>
       </tr>
       <tr>
         <!--Key: 344-->
-        <td colspan="5" class="bordered">
-          (S) <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%99%E2%B2%9B%E2%B2%A7%E2%B2%9B%E2%B2%81%CF%A3%E2%B2%A7">
-          ⲙⲛⲧⲛⲁϣⲧ</a> <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%99%E2%B2%99%E2%B2%89">
-          ⲙⲙⲉ</a> (<a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A7">ⲧ</a>)
-        </td>
+        <td colspan="5" class="bordered">(S) <span class=
+        "coptic">ⲙⲛⲧⲛⲁϣⲧ</span> <span class="coptic">ⲙⲙⲉ</span> (<span class=
+        "coptic">ⲧ</span>)</td>
         <td colspan="4" class="bordered"><b>(noun female)</b><br>
-        presumption, stubbornness <span style="opacity:0.7">[<a href=
-        "https://logeion.uchicago.edu/%CE%B1%CF%85%CE%B8%CE%B1%CE%B4%CE%B5%CE%B9%CE%B1">αυθαδεια</a>]</span></td>
+        presumption, stubbornness [αυθαδεια]</td>
       </tr>
     </table>
     <hr>
@@ -281,16 +193,14 @@
       <img src="dictionary_marcion.sourceforge.net_data_crum_97.png" alt=
       "77"><br>
       <figcaption>
-        <a href=
-        "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=77">77</a>
+        <span class="crum-page">77</span>
       </figcaption>
     </figure><br>
     <figure>
       <img src="dictionary_marcion.sourceforge.net_data_crum_98.png" alt=
       "78"><br>
       <figcaption>
-        <a href=
-        "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=78">78</a>
+        <span class="crum-page">78</span>
       </figcaption>
     </figure><br>
     <hr>

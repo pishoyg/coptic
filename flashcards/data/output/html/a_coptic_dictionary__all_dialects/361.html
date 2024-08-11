@@ -8,96 +8,79 @@
   <meta name="deck_description" content=
   "https://github.com/pishoyg/coptic/. pishoybg@gmail.com.">
   <style>
-      .card { font-size: 18px; }.front { text-align: center; }figure { display: inline-block; border: 1px transparent; margin: 10px; }figure figcaption { text-align: center; }figure img { vertical-align: top; }.bordered { border:1px solid black; }.right { float:right; }.left { float: left; }.center { text-align: center; }.nightMode .bordered { border:1px solid white; }a.nostyle:link { text-decoration: inherit; color: inherit; }a.nostyle:visited { text-decoration: inherit; color: inherit; }a.nostyle:hover { text-decoration: underline; color: blue; }
+      .card { font-size: 18px; }.front { text-align: center; }figure { display: inline-block; border: 1px transparent; margin: 10px; }figure figcaption { text-align: center; }figure img { vertical-align: top; }.bordered { border:1px solid black; }.right { float:right; }.left { float: left; }.center { text-align: center; }.nightMode .bordered { border:1px solid white; }.link { text-decoration: underline; color: blue; cursor: pointer; }.light { opacity:0.7 }.hover-link:hover { text-decoration: underline; color: blue; cursor: pointer; }
   </style>
+  <script type="text/javascript">
+      window.addEventListener("load", function() {
+        
+        // Handle 'crum-page' class.
+        var els = document.getElementsByClassName('crum-page');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('link');
+            btn.onclick = () => {
+                window.open(
+                    'https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID='
+                    + btn.innerHTML, '_blank').focus();
+            }
+        });
+        var els = document.getElementsByClassName('coptic');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('hover-link');
+            btn.onclick = () => {
+                window.open(
+                    'https://coptic-dictionary.org/results.cgi?quick_search='
+                    + btn.innerHTML, '_blank').focus();
+            }
+        });
+        var els = document.getElementsByClassName('greek');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('link');
+            btn.classList.add('light');
+            btn.onclick = () => {
+                window.open(
+                    'https://logeion.uchicago.edu/'
+                    + btn.innerHTML, '_blank').focus();
+            }
+        });
+        
+      })
+  </script>
 </head>
 <body>
   <div class="front">
-    (S, A, sA, F) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%B1%E2%B2%9F%E2%B2%A9%CF%A9">
-    ⲥⲱⲟⲩϩ</a><br>
-    (Sf) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%B1%E2%B2%9F%E2%B2%A9%E2%B2%81%CF%A9">
-    ⲥⲱⲟⲩⲁϩ</a><br>
-    (S) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%89%E2%B2%A9%CF%A9">
-    ⲥⲉⲩϩ</a>-<br>
-    (A) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%B1%E2%B2%9F%E2%B2%A9%CF%A9">
-    ⲥⲱⲟⲩϩ</a>-<br>
-    (S) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%9F%E2%B2%9F%E2%B2%A9%CF%A9">
-    ⲥⲟⲟⲩϩ</a>=<br>
-    (A, sA, F) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%81%E2%B2%A9%CF%A9">
-    ⲥⲁⲩϩ</a>=<br>
-    (A) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%B1%CF%A9">
-    ⲥⲱϩ</a>=<br>
-    (sA) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%81%E2%B2%9F%E2%B2%A9%CF%A9">
-    ⲥⲁⲟⲩϩ</a>=<br>
-    (S) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%9F%E2%B2%9F%E2%B2%A9%CF%A9">
-    ⲥⲟⲟⲩϩ</a>+<br>
-    (A) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%81%E2%B2%A9%CF%A9">
-    ⲥⲁⲩϩ</a>+<br>
-    (sA) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%81%E2%B2%9F%E2%B2%A9%CF%A9">
-    ⲥⲁⲟⲩϩ</a>+
+    (S, A, sA, F) <span class="coptic">ⲥⲱⲟⲩϩ</span><br>
+    (Sf) <span class="coptic">ⲥⲱⲟⲩⲁϩ</span><br>
+    (S) <span class="coptic">ⲥⲉⲩϩ</span>-<br>
+    (A) <span class="coptic">ⲥⲱⲟⲩϩ</span>-<br>
+    (S) <span class="coptic">ⲥⲟⲟⲩϩ</span>=<br>
+    (A, sA, F) <span class="coptic">ⲥⲁⲩϩ</span>=<br>
+    (A) <span class="coptic">ⲥⲱϩ</span>=<br>
+    (sA) <span class="coptic">ⲥⲁⲟⲩϩ</span>=<br>
+    (S) <span class="coptic">ⲥⲟⲟⲩϩ</span>+<br>
+    (A) <span class="coptic">ⲥⲁⲩϩ</span>+<br>
+    (sA) <span class="coptic">ⲥⲁⲟⲩϩ</span>+
   </div>
   <hr>
   <div class="back">
-    (<b>verb</b>)<span class="right"><b>Crum:</b> <a href=
-    "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=372b">372b</a></span><br>
-
-    <b>intr:</b> be gathered, collected <span style="opacity:0.7">[<a href=
-    "https://logeion.uchicago.edu/%CF%83%CF%85%CE%BD%CE%B1%CE%B3%CE%B5%CE%B9%CE%BD">συναγειν</a>,
-    <a href=
-    "https://logeion.uchicago.edu/%CF%83%CF%85%CE%BD%CE%B5%CF%81%CF%87%CE%B5%CF%83%CE%B8%CE%B1%CE%B9">
-    συνερχεσθαι</a>, <a href=
-    "https://logeion.uchicago.edu/%CF%83%CF%85%CE%BD%CE%B1%CE%B8%CF%81%CE%BF%CE%B9%CE%B6%CE%B5%CF%83%CE%B8%CE%B1%CE%B9">
-    συναθροιζεσθαι</a>]</span><br>
-    <b>tr:</b> gather, collect <span style="opacity:0.7">[<a href=
-    "https://logeion.uchicago.edu/%CF%83%CF%85%CE%BD%CE%B1%CE%B3%CE%B5%CE%B9%CE%BD">συναγειν</a>,
-    <a href=
-    "https://logeion.uchicago.edu/%CF%83%CF%85%CE%BB%CE%BB%CE%B5%CE%B3%CE%B5%CE%B9%CE%BD">
-    συλλεγειν</a>]</span><br>
+    (<b>verb</b>)<span class="right"><b>Crum:</b> <span class=
+    "crum-page">372b</span></span><br>
+    <b>intr:</b> be gathered, collected [<span class="greek">συναγειν</span>,
+    <span class="greek">συνερχεσθαι</span>, <span class=
+    "greek">συναθροιζεσθαι</span>]<br>
+    <b>tr:</b> gather, collect [<span class="greek">συναγειν</span>,
+    <span class="greek">συλλεγειν</span>]<br>
     <hr>
-    (S, A, sA, F) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%B1%E2%B2%9F%E2%B2%A9%CF%A9">
-    ⲥⲱⲟⲩϩ</a><br>
-    (Sf) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%B1%E2%B2%9F%E2%B2%A9%E2%B2%81%CF%A9">
-    ⲥⲱⲟⲩⲁϩ</a><br>
-    (S) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%89%E2%B2%A9%CF%A9">
-    ⲥⲉⲩϩ</a>-<br>
-    (A) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%B1%E2%B2%9F%E2%B2%A9%CF%A9">
-    ⲥⲱⲟⲩϩ</a>-<br>
-    (S) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%9F%E2%B2%9F%E2%B2%A9%CF%A9">
-    ⲥⲟⲟⲩϩ</a>=<br>
-    (A, sA, F) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%81%E2%B2%A9%CF%A9">
-    ⲥⲁⲩϩ</a>=<br>
-    (A) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%B1%CF%A9">
-    ⲥⲱϩ</a>=<br>
-    (sA) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%81%E2%B2%9F%E2%B2%A9%CF%A9">
-    ⲥⲁⲟⲩϩ</a>=<br>
-    (S) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%9F%E2%B2%9F%E2%B2%A9%CF%A9">
-    ⲥⲟⲟⲩϩ</a>+<br>
-    (A) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%81%E2%B2%A9%CF%A9">
-    ⲥⲁⲩϩ</a>+<br>
-    (sA) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%81%E2%B2%9F%E2%B2%A9%CF%A9">
-    ⲥⲁⲟⲩϩ</a>+
+    (S, A, sA, F) <span class="coptic">ⲥⲱⲟⲩϩ</span><br>
+    (Sf) <span class="coptic">ⲥⲱⲟⲩⲁϩ</span><br>
+    (S) <span class="coptic">ⲥⲉⲩϩ</span>-<br>
+    (A) <span class="coptic">ⲥⲱⲟⲩϩ</span>-<br>
+    (S) <span class="coptic">ⲥⲟⲟⲩϩ</span>=<br>
+    (A, sA, F) <span class="coptic">ⲥⲁⲩϩ</span>=<br>
+    (A) <span class="coptic">ⲥⲱϩ</span>=<br>
+    (sA) <span class="coptic">ⲥⲁⲟⲩϩ</span>=<br>
+    (S) <span class="coptic">ⲥⲟⲟⲩϩ</span>+<br>
+    (A) <span class="coptic">ⲥⲁⲩϩ</span>+<br>
+    (sA) <span class="coptic">ⲥⲁⲟⲩϩ</span>+
     <table>
       <colgroup>
         <col style="width: 10.0%;">
@@ -114,19 +97,14 @@
       <tr>
         <!--Key: 4778-->
         <td colspan="9" class="bordered">With following preposition:</td>
-        <td rowspan="2" class="bordered">
-          <b>Crum:</b> <a href=
-          "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=372b">
-          372b</a>
-        </td>
+        <td rowspan="2" class="bordered"><b>Crum:</b> <span class=
+        "crum-page">372b</span></td>
       </tr>
       <tr>
         <!--Key: 4779-->
         <td colspan="1"></td>
-        <td colspan="4" class="bordered">
-          (S, A, sA, F) ― <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89">ⲉ</a>-
-        </td>
+        <td colspan="4" class="bordered">(S, A, sA, F) ― <span class=
+        "coptic">ⲉ</span>-</td>
         <td colspan="4" class="bordered">collect at, to<br>
         against<br>
         <b>tr:</b><br>
@@ -136,61 +114,40 @@
       <tr>
         <!--Key: 4780-->
         <td colspan="1"></td>
-        <td colspan="4" class="bordered">
-          (S) ― <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89%CF%AB%E2%B2%9B">
-          ⲉϫⲛ</a>-
-        </td>
+        <td colspan="4" class="bordered">(S) ― <span class=
+        "coptic">ⲉϫⲛ</span>-</td>
         <td colspan="4" class="bordered">gather to</td>
-        <td rowspan="10" class="bordered">
-          <b>Crum:</b> <a href=
-          "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=373a">
-          373a</a>
-        </td>
+        <td rowspan="10" class="bordered"><b>Crum:</b> <span class=
+        "crum-page">373a</span></td>
       </tr>
       <tr>
         <!--Key: 6390-->
         <td colspan="1"></td>
-        <td colspan="4" class="bordered">
-          (S) <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89%CF%A9%E2%B2%A3%E2%B2%81%E2%B2%93">
-          ⲉϩⲣⲁⲓ</a> <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89%CF%AB%E2%B2%9B">
-          ⲉϫⲛ</a>- (c)
-        </td>
+        <td colspan="4" class="bordered">(S) <span class="coptic">ⲉϩⲣⲁⲓ</span>
+        <span class="coptic">ⲉϫⲛ</span>- (c)</td>
         <td colspan="4" class="bordered">―<br>
         against</td>
       </tr>
       <tr>
         <!--Key: 4781-->
         <td colspan="1"></td>
-        <td colspan="4" class="bordered">
-          (S, A) ― <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%99%E2%B2%9B">
-          ⲙⲛ</a>-
-        </td>
+        <td colspan="4" class="bordered">(S, A) ― <span class=
+        "coptic">ⲙⲛ</span>-</td>
         <td colspan="4" class="bordered">meet with</td>
       </tr>
       <tr>
         <!--Key: 4782-->
         <td colspan="1"></td>
-        <td colspan="4" class="bordered">
-          (S) ― <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9B">ⲛ</a>-
-        </td>
+        <td colspan="4" class="bordered">(S) ― <span class=
+        "coptic">ⲛ</span>-</td>
         <td colspan="4" class="bordered">gather at</td>
       </tr>
       <tr>
         <!--Key: 4783-->
         <td colspan="1"></td>
-        <td colspan="4" class="bordered">
-          (S) ― <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%CF%A9%E2%B2%9B">
-          ϩⲛ</a>-<br>
-          (F) ― <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%CF%A9%E2%B2%93">
-          ϩⲓ</a>-
-        </td>
+        <td colspan="4" class="bordered">(S) ― <span class=
+        "coptic">ϩⲛ</span>-<br>
+        (F) ― <span class="coptic">ϩⲓ</span>-</td>
         <td colspan="4" class="bordered">gather at, for</td>
       </tr>
       <tr>
@@ -200,17 +157,11 @@
       <tr>
         <!--Key: 4785-->
         <td colspan="1"></td>
-        <td colspan="4" class="bordered">
-          (S, A, sA, F) ― <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89%CF%A9%E2%B2%9F%E2%B2%A9%E2%B2%9B">
-          ⲉϩⲟⲩⲛ</a>
-        </td>
+        <td colspan="4" class="bordered">(S, A, sA, F) ― <span class=
+        "coptic">ⲉϩⲟⲩⲛ</span></td>
         <td colspan="4" class="bordered">gather together<br>
-        ― <b>intr:</b> <span style="opacity:0.7">[<a href=
-        "https://logeion.uchicago.edu/%CF%83%CF%85%CE%BD%CE%B1%CE%B3%CE%B5%CE%B9%CE%BD">συναγειν</a>]</span><br>
-
-        ― <b>tr:</b> <span style="opacity:0.7">[<a href=
-        "https://logeion.uchicago.edu/%CF%83%CF%85%CE%BD%CE%B1%CE%B3%CE%B5%CE%B9%CE%BD">συναγειν</a>]</span></td>
+        ― <b>intr:</b> [συναγειν]<br>
+        ― <b>tr:</b> [συναγειν]</td>
       </tr>
       <tr>
         <!--Key: 6393-->
@@ -220,145 +171,85 @@
       <tr>
         <!--Key: 6391-->
         <td colspan="3"></td>
-        <td colspan="3" class="bordered">
-          {<a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89%CF%A9%E2%B2%9F%E2%B2%A9%E2%B2%9B">ⲉϩⲟⲩⲛ</a>}
-          <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89">ⲉ</a>-
-          (c)
-        </td>
+        <td colspan="3" class="bordered">{<span class="coptic">ⲉϩⲟⲩⲛ</span>}
+        <span class="coptic">ⲉ</span>- (c)</td>
         <td colspan="3" class="bordered">gather to, for</td>
       </tr>
       <tr>
         <!--Key: 6392-->
         <td colspan="3"></td>
-        <td colspan="3" class="bordered">
-          {<a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89%CF%A9%E2%B2%9F%E2%B2%A9%E2%B2%9B">ⲉϩⲟⲩⲛ</a>}
-          <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%99%E2%B2%9B">
-          ⲙⲛ</a>- (c)
-        </td>
+        <td colspan="3" class="bordered">{<span class="coptic">ⲉϩⲟⲩⲛ</span>}
+        <span class="coptic">ⲙⲛ</span>- (c)</td>
         <td colspan="3" class="bordered">foregather with</td>
       </tr>
       <tr>
         <!--Key: 6394-->
         <td colspan="2"></td>
         <td colspan="7" class="bordered">tr :</td>
-        <td rowspan="8" class="bordered">
-          <b>Crum:</b> <a href=
-          "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=373b">
-          373b</a>
-        </td>
+        <td rowspan="8" class="bordered"><b>Crum:</b> <span class=
+        "crum-page">373b</span></td>
       </tr>
       <tr>
         <!--Key: 6395-->
         <td colspan="3"></td>
-        <td colspan="3" class="bordered">
-          {<a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89%CF%A9%E2%B2%9F%E2%B2%A9%E2%B2%9B">ⲉϩⲟⲩⲛ</a>}
-          <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%89">ⲉ</a>-
-          (c)
-        </td>
+        <td colspan="3" class="bordered">{<span class="coptic">ⲉϩⲟⲩⲛ</span>}
+        <span class="coptic">ⲉ</span>- (c)</td>
         <td colspan="3" class="bordered"></td>
       </tr>
       <tr>
         <!--Key: 2047-->
-        <td colspan="5" class="bordered">
-          (S, F) ― (<a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A1">ⲡ</a>)
-        </td>
+        <td colspan="5" class="bordered">(S, F) ― (<span class=
+        "coptic">ⲡ</span>)</td>
         <td colspan="4" class="bordered"><b>(noun male)</b><br>
-        gathering <span style="opacity:0.7">[<a href=
-        "https://logeion.uchicago.edu/%CF%83%CF%85%CE%BD%CE%BF%CF%87%CE%B7">συνοχη</a>]</span><br>
-
+        gathering [συνοχη]<br>
         meeting-place <i>for service</i></td>
       </tr>
       <tr>
         <!--Key: 2053-->
         <td colspan="1"></td>
-        <td colspan="4" class="bordered">
-          <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A3">ⲣ</a>
-          <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A1%E2%B2%A5">
-          ⲡⲥ</a>.
-        </td>
+        <td colspan="4" class="bordered"><span class="coptic">ⲣ</span>
+        <span class="coptic">ⲡⲥ</span>.</td>
         <td colspan="4" class="bordered">do, attend service</td>
       </tr>
       <tr>
         <!--Key: 2048-->
-        <td colspan="5" class="bordered">
-          (S) <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%99%E2%B2%81">
-          ⲙⲁ</a> <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%9B%E2%B2%A5">
-          ⲛⲥ</a>.
-        </td>
+        <td colspan="5" class="bordered">(S) <span class="coptic">ⲙⲁ</span>
+        <span class="coptic">ⲛⲥ</span>.</td>
         <td colspan="4" class="bordered">place of meeting<br>
         store-house</td>
       </tr>
       <tr>
         <!--Key: 2049-->
-        <td colspan="5" class="bordered">
-          (S) <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A3%E2%B2%89%CF%A5%E2%B2%A5%E2%B2%89%E2%B2%A9%CF%A9">
-          ⲣⲉϥⲥⲉⲩϩ</a>-
-        </td>
+        <td colspan="5" class="bordered">(S) <span class=
+        "coptic">ⲣⲉϥⲥⲉⲩϩ</span>-</td>
         <td colspan="4" class="bordered">collector</td>
       </tr>
       <tr>
         <!--Key: 2050-->
-        <td colspan="5" class="bordered">
-          (S) <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%CF%AD%E2%B2%93%E2%B2%9B%E2%B2%A5">
-          ϭⲓⲛⲥ</a>.
-        </td>
+        <td colspan="5" class="bordered">(S) <span class=
+        "coptic">ϭⲓⲛⲥ</span>.</td>
         <td colspan="4" class="bordered">gathering</td>
       </tr>
       <tr>
         <!--Key: 2051-->
-        <td colspan="5" class="bordered">
-          (S) <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%9F%E2%B2%9F%E2%B2%A9%CF%A9%E2%B2%A5">
-          ⲥⲟⲟⲩϩⲥ</a>, <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%9F%E2%B2%9F%E2%B2%A9%E2%B2%81%CF%A9%E2%B2%A5">
-          ⲥⲟⲟⲩⲁϩⲥ</a> (<a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A7">ⲧ</a>)<br>
-
-          (A, sA) <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%81%E2%B2%A9%CF%A9%E2%B2%A5">
-          ⲥⲁⲩϩⲥ</a> (<a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A7">ⲧ</a>)<br>
-
-          (F) <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5%E2%B2%81%E2%B2%9F%E2%B2%A9%CF%A9%E2%B2%A5">
-          ⲥⲁⲟⲩϩⲥ</a> (<a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A7">ⲧ</a>)
-        </td>
+        <td colspan="5" class="bordered">(S) <span class=
+        "coptic">ⲥⲟⲟⲩϩⲥ</span>, <span class="coptic">ⲥⲟⲟⲩⲁϩⲥ</span>
+        (<span class="coptic">ⲧ</span>)<br>
+        (A, sA) <span class="coptic">ⲥⲁⲩϩⲥ</span> (<span class=
+        "coptic">ⲧ</span>)<br>
+        (F) <span class="coptic">ⲥⲁⲟⲩϩⲥ</span> (<span class=
+        "coptic">ⲧ</span>)</td>
         <td colspan="4" class="bordered"><b>(noun female)</b><br>
-        congregation, collection <span style="opacity:0.7">[<a href=
-        "https://logeion.uchicago.edu/%CE%B5%CE%BA%CE%BA%CE%BB%CE%B7%CF%83%CE%B9%CE%B1">εκκλησια</a>,
-        <a href=
-        "https://logeion.uchicago.edu/%CF%83%CF%85%CE%BD%CE%B1%CE%B3%CF%89%CE%B3%CE%B7">
-        συναγωγη</a>]</span></td>
+        congregation, collection [εκκλησια, συναγωγη]</td>
       </tr>
       <tr>
         <!--Key: 2052-->
         <td colspan="1"></td>
-        <td colspan="4" class="bordered">
-          <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A3">ⲣ</a>
-          <a class="nostyle" href=
-          "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%A5">ⲥ</a>.
-        </td>
+        <td colspan="4" class="bordered"><span class="coptic">ⲣ</span>
+        <span class="coptic">ⲥ</span>.</td>
         <td colspan="4" class="bordered">be collected</td>
-        <td rowspan="1" class="bordered">
-          <b>Crum:</b> <a href=
-          "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=374a">
-          374a</a>
-        </td>
+        <td rowspan="1" class="bordered"><b>Crum:</b> <span class=
+        "crum-page">374a</span></td>
       </tr>
     </table>
     <hr>
@@ -366,24 +257,21 @@
       <img src="dictionary_marcion.sourceforge.net_data_crum_392.png" alt=
       "372"><br>
       <figcaption>
-        <a href=
-        "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=372">372</a>
+        <span class="crum-page">372</span>
       </figcaption>
     </figure><br>
     <figure>
       <img src="dictionary_marcion.sourceforge.net_data_crum_393.png" alt=
       "373"><br>
       <figcaption>
-        <a href=
-        "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=373">373</a>
+        <span class="crum-page">373</span>
       </figcaption>
     </figure><br>
     <figure>
       <img src="dictionary_marcion.sourceforge.net_data_crum_394.png" alt=
       "374"><br>
       <figcaption>
-        <a href=
-        "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=374">374</a>
+        <span class="crum-page">374</span>
       </figcaption>
     </figure><br>
     <hr>

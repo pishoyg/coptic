@@ -7,44 +7,64 @@
   <meta name="deck_description" content=
   "https://github.com/pishoyg/coptic/. pishoybg@gmail.com.">
   <style>
-      .card { font-size: 18px; }.front { text-align: center; }figure { display: inline-block; border: 1px transparent; margin: 10px; }figure figcaption { text-align: center; }figure img { vertical-align: top; }.bordered { border:1px solid black; }.right { float:right; }.left { float: left; }.center { text-align: center; }.nightMode .bordered { border:1px solid white; }a.nostyle:link { text-decoration: inherit; color: inherit; }a.nostyle:visited { text-decoration: inherit; color: inherit; }a.nostyle:hover { text-decoration: underline; color: blue; }
+      .card { font-size: 18px; }.front { text-align: center; }figure { display: inline-block; border: 1px transparent; margin: 10px; }figure figcaption { text-align: center; }figure img { vertical-align: top; }.bordered { border:1px solid black; }.right { float:right; }.left { float: left; }.center { text-align: center; }.nightMode .bordered { border:1px solid white; }.link { text-decoration: underline; color: blue; cursor: pointer; }.light { opacity:0.7 }.hover-link:hover { text-decoration: underline; color: blue; cursor: pointer; }
   </style>
+  <script type="text/javascript">
+      window.addEventListener("load", function() {
+        
+        // Handle 'crum-page' class.
+        var els = document.getElementsByClassName('crum-page');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('link');
+            btn.onclick = () => {
+                window.open(
+                    'https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID='
+                    + btn.innerHTML, '_blank').focus();
+            }
+        });
+        var els = document.getElementsByClassName('coptic');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('hover-link');
+            btn.onclick = () => {
+                window.open(
+                    'https://coptic-dictionary.org/results.cgi?quick_search='
+                    + btn.innerHTML, '_blank').focus();
+            }
+        });
+        var els = document.getElementsByClassName('greek');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('link');
+            btn.classList.add('light');
+            btn.onclick = () => {
+                window.open(
+                    'https://logeion.uchicago.edu/'
+                    + btn.innerHTML, '_blank').focus();
+            }
+        });
+        
+      })
+  </script>
 </head>
 <body>
   <div class="front">
-    (S, A, sA) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%99%E2%B2%A1%CF%A3%E2%B2%81">
-    ⲙⲡϣⲁ</a> (adv.)
+    (S, A, sA) <span class="coptic">ⲙⲡϣⲁ</span> (adv.)
   </div>
   <hr>
   <div class="back">
-    (<b>adverb</b>)<span class="right"><b>Crum:</b> <a href=
-    "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=180a">180a</a></span><br>
-
-    much, greatly <span style="opacity:0.7">[<a href=
-    "https://logeion.uchicago.edu/%CF%83%CF%86%CE%BF%CE%B4%CF%81%CE%B1">σφοδρα</a>,
-    <a href="https://logeion.uchicago.edu/%CF%80%CE%BF%CE%BB%CF%85">πολυ</a>,
-    <a href="https://logeion.uchicago.edu/%CF%80%CE%B1%CE%BD%CF%85">πανυ</a>,
-    <a href=
-    "https://logeion.uchicago.edu/%CE%BC%CE%B5%CE%B3%CE%B1%CE%BB%CF%89%CF%83">μεγαλωσ</a>,
-    <a href=
-    "https://logeion.uchicago.edu/%CE%B9%CF%83%CF%87%CF%85%CF%81%CF%89%CF%83">ισχυρωσ</a>,
-    <a href=
-    "https://logeion.uchicago.edu/%CE%B4%CE%B5%CE%B9%CE%BD%CF%89%CF%83">δεινωσ</a>,
-    <a href=
-    "https://logeion.uchicago.edu/%CE%BB%CE%B9%CE%B1%CE%BD">λιαν</a>]</span><br>
-
+    (<b>adverb</b>)<span class="right"><b>Crum:</b> <span class=
+    "crum-page">180a</span></span><br>
+    much, greatly [<span class="greek">σφοδρα</span>, <span class=
+    "greek">πολυ</span>, <span class="greek">πανυ</span>, <span class=
+    "greek">μεγαλωσ</span>, <span class="greek">ισχυρωσ</span>, <span class=
+    "greek">δεινωσ</span>, <span class="greek">λιαν</span>]<br>
     <hr>
-    (S, A, sA) <a class="nostyle" href=
-    "https://coptic-dictionary.org/results.cgi?quick_search=%E2%B2%99%E2%B2%A1%CF%A3%E2%B2%81">
-    ⲙⲡϣⲁ</a>
+    (S, A, sA) <span class="coptic">ⲙⲡϣⲁ</span>
     <hr>
     <figure>
       <img src="dictionary_marcion.sourceforge.net_data_crum_200.png" alt=
       "180"><br>
       <figcaption>
-        <a href=
-        "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID=180">180</a>
+        <span class="crum-page">180</span>
       </figcaption>
     </figure><br>
     <hr>
