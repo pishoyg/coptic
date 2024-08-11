@@ -12,6 +12,7 @@ HOME = "https://github.com/pishoyg/coptic/"
 EMAIL = "pishoybg@gmail.com"
 
 COPTIC_WORD_RE = re.compile("([Ⲁ-ⲱϢ-ϯⳈⳉ]+)")
+GREEK_WORD_RE = re.compile("([Α-Ωα-ω]+)")
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -40,13 +41,23 @@ def crum(
             force=force,
         )
 
-    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     # TODO: This replaces all Coptic words, regardless of whether they
     # represent plain text. Coptic text that occurs inside a tag (for example
     # as a tag property) would still get wrapped inside this <span> tag.
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def cdo(text: str) -> str:
         return COPTIC_WORD_RE.sub(
             r'<span class="coptic">\1</span>',
+            text,
+        )
+
+    # TODO: This replaces all Greek words, regardless of whether they
+    # represent plain text. Greek text that occurs inside a tag (for example
+    # as a tag property) would still acquire this tag.
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
+    def greek(text: str) -> str:
+        return GREEK_WORD_RE.sub(
+            r'<span class="greek">\1</span>',
             text,
         )
 
@@ -119,6 +130,16 @@ def crum(
                     + btn.innerHTML, '_blank').focus();
             }
         });
+        var els = document.getElementsByClassName('greek');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('link');
+            btn.classList.add('light');
+            btn.onclick = () => {
+                window.open(
+                    'https://logeion.uchicago.edu/'
+                    + btn.innerHTML, '_blank').focus();
+            }
+        });
         """,
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
@@ -143,7 +164,7 @@ def crum(
                 ),
                 # Meaning.
                 field.aon(
-                    roots_col("en-parsed-link-light-greek", line_br=True, force=False),
+                    field.apl(greek, roots_col("en-parsed", line_br=True, force=False)),
                     "<br/>",
                 ),
                 # Image.
