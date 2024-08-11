@@ -214,11 +214,8 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
             ),
         )
         if strict:
-            insert(
-                WORD_COL,
-                "-dawoud-sort-key",
-                dawoud_sort_key(word),
-            )
+            # The following columns don't have any data because they are meant
+            # to be provided externally.
             insert("", "dawoud-pages", "")
             insert(CRUM_COL, "-last-page", "")
 
@@ -289,26 +286,6 @@ def build_trees(roots: pd.DataFrame, derivations: pd.DataFrame) -> None:
     roots[CRUM_COL + "-pages"] = [",".join(trees[key].crum_pages()) for key in keys]
     roots["derivations-table"] = [trees[key].html_table() for key in keys]
     roots["derivations-list"] = [trees[key].html_list() for key in keys]
-
-
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def dawoud_sort_key(words: list[lexical.structured_word]) -> str:
-    for d in ["B", "S"]:
-        for w in words:
-            if not w.is_dialect(d):
-                continue
-            for s in w.spellings(parenthesize_assumed=False):
-                # This spelling has at least one Coptic letter.
-                if not constants.COPTIC_LETTER_RE.search(s):
-                    continue
-                if s.startswith("(") and s.endswith(")"):
-                    s = s[1:-1]
-                if s.startswith("-"):
-                    s = s[1:]
-                assert s
-                return f"{s} ({d})"
-
-    return ""
 
 
 if __name__ == "__main__":
