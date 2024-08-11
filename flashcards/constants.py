@@ -113,10 +113,9 @@ def crum(
                         {"type_parsed": roots_col("type-parsed", force=True)},
                     ),
                     field.fmt(
-                        '<span class="right"><b>Crum: </b><a href="{crum_link}">{crum}</a></span>',
+                        f'<span class="right"><b>Crum: </b>{CRUM_A_FMT}</span>',
                         {
-                            "crum_link": roots_col("crum-link", force=True),
-                            "crum": roots_col("crum", force=True),
+                            "page_id": roots_col("crum", force=True),
                         },
                     ),
                     "<br/>",
