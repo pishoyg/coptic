@@ -448,14 +448,6 @@ def clean(line: str) -> str:
     return line.strip()
 
 
-# TODO: This is incomplete. You've added tags. Make sure this is comprehensive.
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def remove_html(line: str) -> str:
-    for t in constants.HTML_TAGS:
-        line = line.replace(t, "")
-    return clean(line)
-
-
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def remove_greek(line: str) -> str:
     line = constants.PARSED_GREEK_WITHIN_ENGLISH_RE.sub("", line)
@@ -486,13 +478,6 @@ def add_greek_links(line: str) -> str:
         + add_a_href(constants.KOINE_GREEK_DICTIONARY_FMT, greek)
         + add_greek_links(line)
     )
-
-
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def remove_greek_and_html(line: str) -> str:
-    line = remove_html(line)
-    line = remove_greek(line)
-    return line
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)

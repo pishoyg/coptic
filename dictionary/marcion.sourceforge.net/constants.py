@@ -362,17 +362,6 @@ ENGLISH_PRETTIFYING = [
     (re.compile(r"\bp c\b"), "p.c."),
 ]
 
-# HTML_TAGS should be a comprehensive list of all tags used in the output. It
-# can be used to eliminate the tags from the output in order to produce a plain
-# text version.
-# TODO: Find a smarter way to clean the HTML without having to maintain this list!
-HTML_TAGS = [
-    "<b>",
-    "</b>",
-    "<i>",
-    "</i>",
-]
-
 # CLEAN is used to prettify the output.
 CLEAN = [
     ("  ", " "),

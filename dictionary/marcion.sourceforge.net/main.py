@@ -202,18 +202,6 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
             "-parsed-no-ref",
             "\n".join(w.string(include_references=False) for w in word),
         )
-        insert(
-            WORD_COL,
-            "-parsed-no-html",
-            parser.remove_html("\n".join(w.string() for w in word)),
-        )
-        insert(
-            WORD_COL,
-            "-parsed-no-ref-no-html",
-            parser.remove_html(
-                "\n".join(w.string(include_references=False) for w in word)
-            ),
-        )
         word = parser.parse_word_cell(
             row[WORD_COL], root_type, strict, detach_types=True, use_coptic_symbol=True
         )
@@ -240,7 +228,6 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         insert(GR_COL, "-parsed", parser.parse_greek_cell(row[GR_COL]))
         ep = parser.parse_english_cell(row[EN_COL])
         insert(EN_COL, "-parsed", ep)
-        insert(EN_COL, "-parsed-no-html", parser.remove_html(ep))
         insert(EN_COL, "-parsed-no-greek", parser.remove_greek(ep))
         insert(EN_COL, "-parsed-light-greek", parser.lighten_greek(ep))
         insert(
@@ -248,7 +235,6 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
             "-parsed-link-light-greek",
             parser.add_greek_links(parser.lighten_greek(ep)),
         )
-        insert(EN_COL, "-parsed-no-greek-no-html", parser.remove_greek_and_html(ep))
         crum = row[CRUM_COL]
         crum_page, crum_column = parser.parse_crum_cell(crum)
         insert(CRUM_COL, "-link", constants.CRUM_PAGE_FMT.format(key=crum))
