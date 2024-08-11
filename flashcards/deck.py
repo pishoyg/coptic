@@ -22,6 +22,11 @@ HTML_FMT = f"""<!DOCTYPE html>
     <style>
       {{css}}
     </style>
+    <script type="text/javascript">
+      window.addEventListener("load", function() {{{{
+        {{javascript}}
+      }}}})
+    </script>
   </head>
   <body>
     <div class="front">
@@ -93,6 +98,7 @@ class deck:
         deck_id: int,
         deck_description: str,
         css: str,
+        javascript: str,
         key: field.Field,
         front: field.Field,
         back: field.Field,
@@ -149,6 +155,7 @@ class deck:
         self.deck_id: int = deck_id
         self.deck_description: str = deck_description
         self.css: str = css
+        self.javascript: str = javascript
         self.keys: list[str] = []
         self.raw_keys: list[str] = []
         self.fronts: list[str] = []
@@ -234,6 +241,7 @@ class deck:
                 "deck_id": self.deck_id,
                 "deck_description": self.deck_description,
                 "css": self.css,
+                "javascript": self.javascript,
             },
             sort_keys=True,
         )
@@ -271,6 +279,7 @@ class deck:
                         deck_name=self.deck_name,
                         deck_description=self.deck_description,
                         css=self.css,
+                        javascript=self.javascript,
                         title=title,
                         front=front,
                         back=back,
@@ -298,8 +307,10 @@ class deck:
             templates=[
                 {
                     "name": "template 1",
-                    "qfmt": '<div class="front"> {{Front}} </div>',
-                    "afmt": '<div class="front"> {{Front}} </div> <hr/> <div class="back"> {{Back}} </div>',
+                    "qfmt": '<div class="front"> {{Front}} </div>'
+                    + f'<script type="text/javascript">{self.javascript}</script>',
+                    "afmt": '<div class="front"> {{Front}} </div> <hr/> <div class="back"> {{Back}} </div>'
+                    + f'<script type="text/javascript">{self.javascript}</script>',
                 },
             ],
             css=self.css,

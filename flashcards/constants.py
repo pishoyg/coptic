@@ -99,6 +99,7 @@ def crum(
         "a.nostyle:link { text-decoration: inherit; color: inherit; }"
         "a.nostyle:visited { text-decoration: inherit; color: inherit; }"
         "a.nostyle:hover { text-decoration: underline; color: blue; }",
+        javascript="",
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
         key=roots_col("key", force=True),
@@ -303,6 +304,7 @@ def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
         deck_id=deck_id,
         deck_description=f"{HOME}\n{EMAIL}",
         css=".card { text-align: center; font-size: 18px; }",
+        javascript="",
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
         key=field.seq(),
@@ -362,6 +364,7 @@ def kellia(deck_name: str, deck_id: int, basename: str) -> deck.deck:
         ".ref_xr { }"
         ".xr { color: gray; }"
         ".lang { color: gray }",
+        javascript="",
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
         key=col("entry_xml_id"),
