@@ -18,10 +18,6 @@ cp -r \
   "${CRUM_DIR}"
 
 cp -r \
-  flashcards/data/output/html/a_coptic_dictionary__bohairic/* \
-  "${CRUM_DIR}"
-
-cp -r \
   bible/stshenouda.org/data/output/html/bohairic_english \
   bible/stshenouda.org/data/output/html/bohairic \
   bible/stshenouda.org/data/output/html/sahidic \
