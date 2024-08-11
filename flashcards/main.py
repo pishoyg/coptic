@@ -22,16 +22,7 @@ argparser.add_argument(
     "--decks",
     type=str,
     nargs="*",
-    default=[
-        constants.CRUM_ALL,
-        constants.CRUM_BOHAIRIC,
-        constants.CRUM_SAHIDIC,
-        constants.CRUM_BOHAIRIC_SAHIDIC,
-        constants.COPTICSITE_NAME,
-        constants.KELLIA_COMPREHENSIVE,
-        constants.KELLIA_EGYPTIAN,
-        constants.KELLIA_GREEK,
-    ],
+    default=list(constants.LAMBDAS.keys()),
     help="The list of deck names to export. If None, export all.",
 )
 
@@ -65,7 +56,7 @@ argparser.add_argument(
     "--html_mask",
     type=bool,
     nargs="*",
-    default=[True, True, False, False, False, False, False, False],
+    default=[True] + [False] * (len(constants.LAMBDAS) - 1),
     help="A mask indicating whether to write output for deck_i in HTML."
     "The path will be ${OUTPUT_DIR}/html/${DECK_NAME_NORMALIZED}.html.",
 )
@@ -113,7 +104,7 @@ def main() -> None:
 
     work_dir = tempfile.TemporaryDirectory()
     field.init(work_dir.name)
-    decks = constants.DECKS(args.decks)
+    decks = [constants.LAMBDAS[name](name) for name in args.decks]
     assert len(decks) == len(args.html_mask) == len(args.tsvs_mask)
 
     for idx, d in enumerate(decks):

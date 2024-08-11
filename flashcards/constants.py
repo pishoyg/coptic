@@ -505,6 +505,11 @@ def file_name(deck_name: str) -> str:
 
 
 LAMBDAS: dict[str, enforcer.Callable] = {
+    CRUM_ALL: lambda deck_name: crum(
+        deck_name,
+        1284010387,
+        ["word-parsed-prettify"],
+    ),
     CRUM_BOHAIRIC: lambda deck_name: crum(
         deck_name, 1284010383, ["dialect-B"], force_front=False
     ),
@@ -517,11 +522,6 @@ LAMBDAS: dict[str, enforcer.Callable] = {
         ["dialect-B", "dialect-S"],
         force_front=False,
     ),
-    CRUM_ALL: lambda deck_name: crum(
-        deck_name,
-        1284010387,
-        ["word-parsed-prettify"],
-    ),
     COPTICSITE_NAME: lambda deck_name: copticsite_com(deck_name, 1284010385),
     KELLIA_COMPREHENSIVE: lambda deck_name: kellia(
         deck_name, 1284010391, "comprehensive"
@@ -529,11 +529,3 @@ LAMBDAS: dict[str, enforcer.Callable] = {
     KELLIA_EGYPTIAN: lambda deck_name: kellia(deck_name, 1284010392, "egyptian"),
     KELLIA_GREEK: lambda deck_name: kellia(deck_name, 1284010393, "greek"),
 }
-
-
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def DECKS(deck_names: typing.Optional[list[str]]) -> list[deck.deck]:
-    if deck_names is None:
-        deck_names = list(LAMBDAS.keys())
-    assert deck_names
-    return [LAMBDAS[name](name) for name in deck_names]
