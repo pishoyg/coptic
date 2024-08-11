@@ -265,7 +265,37 @@ def crum(
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
         key=roots_col("key", force=True),
-        front=field.apl(cdo, create_front()),
+        front=field.apl(
+            cdo,
+            field.cat(
+                # Header.
+                field.cat(
+                    # TODO: Update the home page, it will no longer be the repo.
+                    f"""<table style="width: 100%; table-layout: fixed;"> <tr> <td><a href="{HOME}">home</a></td> <td>""",
+                    field.aon(
+                        f'<a class="navigate" href="{PARENT_URL}/',
+                        roots_col("key-prev", force=False),
+                        '.html">prev</a>',
+                    ),
+                    field.fmt(
+                        """ </td> <td><b>key: </b><a href="{key_link}">{key}</a></td> <td>""",
+                        {
+                            "key": roots_col("key", force=True),
+                            "key_link": roots_col("key-link", force=True),
+                        },
+                    ),
+                    field.aon(
+                        f'<a class="navigate" href="{PARENT_URL}/',
+                        roots_col("key-next", force=False),
+                        '.html">next</a>',
+                    ),
+                    f"""</td> <td><a href="mailto:{EMAIL}">contact</a></td> </tr> </table>""",
+                ),
+                "<hr/>",
+                # Actual front.
+                create_front(),
+            ),
+        ),
         back=field.apl(
             cdo,
             field.cat(
@@ -431,29 +461,6 @@ def crum(
                             ),
                         ),
                     ),
-                ),
-                # Footer.
-                field.cat(
-                    # TODO: Update the home page, it will no longer be the repo.
-                    f"""<table class="bordered" style="width: 100%; table-layout: fixed;"> <tr> <td><a href="{HOME}">Home</a></td> <td>""",
-                    field.aon(
-                        f'<a class="navigate" href="{PARENT_URL}/',
-                        roots_col("key-prev", force=False),
-                        '.html">prev</a>',
-                    ),
-                    field.fmt(
-                        """ </td> <td><b>Key: </b><a href="{key_link}">{key}</a></td> <td>""",
-                        {
-                            "key": roots_col("key", force=True),
-                            "key_link": roots_col("key-link", force=True),
-                        },
-                    ),
-                    field.aon(
-                        f'<a class="navigate" href="{PARENT_URL}/',
-                        roots_col("key-next", force=False),
-                        '.html">next</a>',
-                    ),
-                    f"""</td> <td><a href="mailto:{EMAIL}">Contact</a></td> </tr> </table>""",
                 ),
             ),
         ),
