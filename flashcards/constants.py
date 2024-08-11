@@ -1,5 +1,4 @@
 import re
-import typing
 
 import deck
 import enforcer
@@ -15,6 +14,167 @@ EMAIL = "pishoybg@gmail.com"
 DICTIONARY_PAGE_RE = re.compile("([0-9]+(a|b))")
 COPTIC_WORD_RE = re.compile("([Ⲁ-ⲱϢ-ϯⳈⳉ]+)")
 GREEK_WORD_RE = re.compile("([Α-Ωα-ω]+)")
+
+CRUM_JS = """
+    // Handle 'crum-page' class.
+    var els = document.getElementsByClassName('crum-page');
+    Array.prototype.forEach.call(els, function(btn) {
+        btn.classList.add('link');
+        btn.onclick = () => {
+            document.getElementById('crum' + btn.innerHTML.slice(0, -1)).scrollIntoView();
+        };
+    });
+
+    // Handle 'crum-page-external' class.
+    var els = document.getElementsByClassName('crum-page-external');
+    Array.prototype.forEach.call(els, function(btn) {
+        btn.classList.add('link');
+        btn.onclick = () => {
+            window.open(
+                'https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID='
+                + btn.innerHTML, '_blank').focus();
+        };
+    });
+
+    // Handle 'coptic' class.
+    var els = document.getElementsByClassName('coptic');
+    Array.prototype.forEach.call(els, function(btn) {
+        btn.classList.add('hover-link');
+        btn.onclick = () => {
+            window.open(
+                'https://coptic-dictionary.org/results.cgi?quick_search='
+                + btn.innerHTML, '_blank').focus();
+        };
+    });
+
+    // Handle 'greek' class.
+    var els = document.getElementsByClassName('greek');
+    Array.prototype.forEach.call(els, function(btn) {
+        btn.classList.add('link');
+        btn.classList.add('light');
+        btn.onclick = () => {
+            window.open(
+                'https://logeion.uchicago.edu/'
+                + btn.innerHTML, '_blank').focus();
+        };
+    });
+
+    // Handle 'dawoud' class.
+    var els = document.getElementsByClassName('dawoud');
+    Array.prototype.forEach.call(els, function(btn) {
+        btn.classList.add('link');
+        btn.onclick = () => {
+            document.getElementById('dawoud' + btn.innerHTML.slice(0, -1)).scrollIntoView();
+        };
+    });
+
+    // Handle the 'dialect' class.
+    const dialects = ['S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
+    const dialectStyle = new Map();
+    dialects.forEach((d) => {
+        dialectStyle.set(d, 'normal');
+    });
+    function toggle(d) {
+        dialectStyle.set(
+            d,
+            dialectStyle.get(d) == 'normal' ? 'bold' : 'normal');
+    }
+    function shouldBold(el) {
+        for (var i in dialects) {
+            if (dialectStyle.get(dialects[i]) == 'bold' &&
+                el.classList.contains(dialects[i])) {
+                return true;
+            }
+        }
+        return false;
+    }
+    function dialected(el) {
+        return dialects.some((d) => {
+            return el.classList.contains(d);
+        });
+    }
+    var els = document.getElementsByClassName('dialect');
+    function dialect(d) {
+        toggle(d);
+        document.querySelectorAll('.word').forEach((el) => {
+            if (!dialected(el)) {
+                return;
+            }
+            if (shouldBold(el)) {
+                el.classList.remove('very-light');
+                el.classList.add('bold');
+            } else {
+                el.classList.remove('bold');
+                el.classList.add('very-light');
+            }
+        });
+        navigateQuery = "?d=" + dialects.filter((d) => {
+            return dialectStyle.get(d) == 'bold';
+        }).join(',');
+        document.querySelectorAll('.navigate').forEach((el) => {
+            const url = new URL(el.getAttribute('href'));
+            url.searchParams.delete('d');
+            el.setAttribute('href', url.toString() + navigateQuery);
+        });
+    }
+    Array.prototype.forEach.call(els, (btn) => {
+        btn.classList.add('hover-link');
+        btn.onclick = () => { dialect(btn.innerHTML); };
+    });
+    (new URLSearchParams(window.location.search)).get('d').split(',').forEach(
+        dialect);
+"""
+
+CRUM_CSS = """
+ .bordered {
+     border:1px solid black;
+}
+ .card {
+     font-size: 18px;
+}
+ .center {
+     text-align: center;
+}
+ .front {
+     text-align: center;
+}
+ .hover-link:hover {
+     color: blue;
+     cursor: pointer;
+     text-decoration: underline;
+}
+ .left {
+     float: left;
+}
+ .light {
+     opacity:0.7;
+}
+ .link {
+     color: blue;
+     cursor: pointer;
+     text-decoration: underline;
+}
+ .nightMode .bordered {
+     border:1px solid white;
+}
+ .right {
+     float:right;
+}
+ .very-light {
+     opacity:0.3;
+}
+ figure figcaption {
+     text-align: center;
+}
+ figure img {
+     vertical-align: top;
+}
+ figure {
+     border: 1px transparent;
+     display: inline-block;
+     margin: 10px;
+}
+"""
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -99,128 +259,8 @@ def crum(
         deck_name=deck_name,
         deck_id=deck_id,
         deck_description=f"{HOME}.\n{EMAIL}.",
-        css=".card { font-size: 18px; }"
-        ".front { text-align: center; }"
-        "figure { display: inline-block; border: 1px transparent; margin: 10px; }"
-        "figure figcaption { text-align: center; }"
-        "figure img { vertical-align: top; }"
-        ".bordered { border:1px solid black; }"
-        ".right { float:right; }"
-        ".left { float: left; }"
-        ".center { text-align: center; }"
-        ".nightMode .bordered { border:1px solid white; }"
-        ".link { text-decoration: underline; color: blue; cursor: pointer; }"
-        ".light { opacity:0.7 }"
-        ".very-light { opacity:0.3 }"
-        ".hover-link:hover { text-decoration: underline; color: blue; cursor: pointer; }",
-        javascript="""
-        // Handle 'crum-page' class.
-        var els = document.getElementsByClassName('crum-page');
-        Array.prototype.forEach.call(els, function(btn) {
-            btn.classList.add('link');
-            btn.onclick = () => {
-                document.getElementById('crum' + btn.innerHTML.slice(0, -1)).scrollIntoView();
-            }
-        });
-
-        // Handle 'crum-page-external' class.
-        var els = document.getElementsByClassName('crum-page-external');
-        Array.prototype.forEach.call(els, function(btn) {
-            btn.classList.add('link');
-            btn.onclick = () => {
-                window.open(
-                    'https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID='
-                    + btn.innerHTML, '_blank').focus();
-            }
-        });
-
-        // Handle 'coptic' class.
-        var els = document.getElementsByClassName('coptic');
-        Array.prototype.forEach.call(els, function(btn) {
-            btn.classList.add('hover-link');
-            btn.onclick = () => {
-                window.open(
-                    'https://coptic-dictionary.org/results.cgi?quick_search='
-                    + btn.innerHTML, '_blank').focus();
-            }
-        });
-
-        // Handle 'greek' class.
-        var els = document.getElementsByClassName('greek');
-        Array.prototype.forEach.call(els, function(btn) {
-            btn.classList.add('link');
-            btn.classList.add('light');
-            btn.onclick = () => {
-                window.open(
-                    'https://logeion.uchicago.edu/'
-                    + btn.innerHTML, '_blank').focus();
-            }
-        });
-
-        // Handle 'dawoud' class.
-        var els = document.getElementsByClassName('dawoud');
-        Array.prototype.forEach.call(els, function(btn) {
-            btn.classList.add('link');
-            btn.onclick = () => {
-                document.getElementById('dawoud' + btn.innerHTML.slice(0, -1)).scrollIntoView();
-            }
-        });
-
-        // Handle the 'dialect' class.
-        const dialects = ['S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
-        const dialectStyle = new Map();
-        dialects.forEach((d) => {
-            dialectStyle.set(d, 'normal');
-        });
-        function toggle(d) {
-            dialectStyle.set(
-                d,
-                dialectStyle.get(d) == 'normal' ? 'bold' : 'normal');
-        }
-        function shouldBold(el) {
-          for (var i in dialects) {
-            if (dialectStyle.get(dialects[i]) == 'bold' &&
-              el.classList.contains(dialects[i])) {
-              return true;
-            }
-          }
-          return false;
-        }
-        function dialected(el) {
-          return dialects.some((d) => {
-              return el.classList.contains(d);
-          });
-        }
-        var els = document.getElementsByClassName('dialect');
-        function dialect(d) {
-            toggle(d);
-            document.querySelectorAll('.word').forEach((el) => {
-                if (!dialected(el)) {
-                    return;
-                }
-                if (shouldBold(el)) {
-                    el.classList.remove('very-light');
-                    el.classList.add('bold');
-                } else {
-                    el.classList.remove('bold');
-                    el.classList.add('very-light');
-                }
-            });
-            navigateQuery = "?d=" + dialects.filter((d) => {
-                return dialectStyle.get(d) == 'bold'; }).join(',');
-            document.querySelectorAll('.navigate').forEach((el) => {
-                let url = new URL(el.getAttribute('href'));
-                url.searchParams.delete('d');
-                el.setAttribute('href', url.toString() + navigateQuery);
-                });
-        }
-        Array.prototype.forEach.call(els, (btn) => {
-            btn.classList.add('hover-link');
-            btn.onclick = () => { dialect(btn.innerHTML); };
-        });
-        (new URLSearchParams(window.location.search)).get('d').split(',').forEach(
-                 dialect);
-        """,
+        css=CRUM_CSS,
+        javascript=CRUM_JS,
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
         key=roots_col("key", force=True),

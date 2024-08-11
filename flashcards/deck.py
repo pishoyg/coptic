@@ -36,9 +36,7 @@ HTML_FMT = f"""<!DOCTYPE html>
 """
 
 JS_FMT = f"""
-window.addEventListener("load", function() {{{{
-  {{javascript}}
-}}}})
+window.addEventListener("load", function() {{{{{{javascript}}}}}});
 """
 
 
@@ -288,9 +286,9 @@ class deck:
                     )
                 )
         with open(os.path.join(dir, JS_BASENAME), "w") as f:
-            f.write(JS_FMT.format(javascript=self.javascript) + "\n")
+            f.write(JS_FMT.format(javascript=self.javascript))
         with open(os.path.join(dir, CSS_BASENAME), "w") as f:
-            f.write(self.css + "\n")
+            f.write(self.css)
         for f in self.media:
             shutil.copy(f, dir)
         utils.wrote(dir)
