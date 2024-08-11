@@ -43,8 +43,8 @@ window.addEventListener("load", function() {
         };
     });
 
-    // Handle 'dawoud' class.
-    var els = document.getElementsByClassName('dawoud');
+    // Handle 'dawoud-page' class.
+    var els = document.getElementsByClassName('dawoud-page');
     Array.prototype.forEach.call(els, function(btn) {
         btn.classList.add('link');
         btn.onclick = () => {
