@@ -294,6 +294,8 @@ DETACHED_TYPES_1 = [
             "<i>noun: </i>", "(noun)", "noun", inflect.Type.NOUN_UNKNOWN_GENDER
         ),
     ),  # (ⲟⲩ)
+    # TODO: The following types likely apply to the subset of spellings
+    # occurring after the type, not the whole line.
     ("****", lexical.type("<i>female: </i>", "(ⲧ)", "female", lexical.Gender.FEMININE)),
     ("***", lexical.type("<i>male: </i>", "(ⲡ)", "male", lexical.Gender.MASCULINE)),
     (
