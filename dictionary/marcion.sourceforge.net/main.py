@@ -303,7 +303,6 @@ def build_trees(roots: pd.DataFrame, derivations: pd.DataFrame) -> None:
     roots[CRUM_COL + "-pages"] = [",".join(trees[key].crum_pages()) for key in keys]
     roots["derivations-table"] = [trees[key].html_table() for key in keys]
     roots["derivations-list"] = [trees[key].html_list() for key in keys]
-    roots["derivations-txt"] = [trees[key].txt() for key in keys]
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
