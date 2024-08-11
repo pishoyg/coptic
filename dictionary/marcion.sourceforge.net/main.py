@@ -202,8 +202,8 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         insert(WORD_COL, "-parsed", "\n".join(w.string() for w in word))
         insert(
             WORD_COL,
-            "-parsed-no-ref",
-            "\n".join(w.string(include_references=False) for w in word),
+            "-parsed-classify",
+            "\n".join(w.string(classify=True) for w in word),
         )
         word = parser.parse_word_cell(
             row[WORD_COL], root_type, strict, detach_types=True, use_coptic_symbol=True
