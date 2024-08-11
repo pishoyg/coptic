@@ -175,7 +175,7 @@ flashcards_crum_bohairic_html: FORCE
 	python flashcards/main.py \
 		--decks "A Coptic Dictionary::Bohairic" \
 		--output_dir "/tmp/" \
-		--anki "" \
+		--anki "/tmp/crum_bohairic.apkg" \
 		--html_mask "true" \
 		--tsvs_mask ""
 
@@ -183,7 +183,7 @@ flashcards_copticsite_html: FORCE
 	python flashcards/main.py \
 		--decks "copticsite.com" \
 		--output_dir "/tmp/" \
-		--anki "" \
+		--anki "/tmp/anki/copticsite.apkg" \
 		--html_mask "true" \
 		--tsvs_mask ""
 
@@ -191,7 +191,7 @@ flashcards_kellia_html: FORCE
 	python flashcards/main.py \
 		--decks "KELLIA::Comprehensive" "KELLIA::Egyptian" "KELLIA::Greek"\
 		--output_dir "/tmp/" \
-		--anki "" \
+		--anki "/tmp/anki/kellia.apkg" \
 		--html_mask "true" "true" "true" \
 		--tsvs_mask "" "" ""
 
