@@ -111,6 +111,7 @@ def crum(
         ".nightMode .bordered { border:1px solid white; }"
         ".link { text-decoration: underline; color: blue; cursor: pointer; }"
         ".light { opacity:0.7 }"
+        ".very-light { opacity:0.3 }"
         ".hover-link:hover { text-decoration: underline; color: blue; cursor: pointer; }",
         javascript="""
         // Handle 'crum-page' class.
@@ -158,6 +159,50 @@ def crum(
             btn.classList.add('link');
             btn.onclick = () => {
                 document.getElementById('dawoud' + btn.innerHTML.slice(0, -1)).scrollIntoView();
+            }
+        });
+        // Handle the 'dialect' class.
+        const dialects = ['S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
+        const dialectStyle = new Map();
+        dialects.forEach((d) => {
+            dialectStyle.set(d, 'normal');
+        });
+        function toggle(d) {
+            dialectStyle.set(
+                d,
+                dialectStyle.get(d) == 'normal' ? 'bold' : 'normal');
+        }
+        function shouldBold(el) {
+          for (var i in dialects) {
+            if (dialectStyle.get(dialects[i]) == 'bold' &&
+              el.classList.contains(dialects[i])) {
+              return true;
+            }
+          }
+          return false;
+        }
+        function dialected(el) {
+          return dialects.some((d) => {
+              return el.classList.contains(d);
+          });
+        }
+        var els = document.getElementsByClassName('dialect');
+        Array.prototype.forEach.call(els, (btn) => {
+            btn.classList.add('hover-link');
+            btn.onclick = () => {
+                toggle(btn.innerHTML);
+                document.querySelectorAll('.word').forEach((el) => {
+                    if (!dialected(el)) {
+                        return;
+                    }
+                    if (shouldBold(el)) {
+                        el.classList.remove('very-light');
+                        el.classList.add('bold');
+                    } else {
+                        el.classList.remove('bold');
+                        el.classList.add('very-light');
+                    }
+                });
             }
         });
         """,
