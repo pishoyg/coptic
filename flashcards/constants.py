@@ -317,7 +317,7 @@ def crum(
                 # Horizontal line.
                 "<hr/>",
                 # Full entry.
-                roots_col("word-parsed-no-ref", line_br=True, force=True),
+                roots_col("word-parsed-classify", line_br=True, force=True),
                 # Derivations.
                 field.apl(
                     greek, roots_col("derivations-table", line_br=True, force=False)
