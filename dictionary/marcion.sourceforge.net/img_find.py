@@ -24,7 +24,7 @@ SOURCE_RE = re.compile(r"^source\(([^=]+)\)=(.+)$")
 
 
 INPUT_TSVS: str = "dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs"
-MEANING_COL: str = "en-parsed-no-greek-no-html"
+MEANING_COL: str = "en-parsed-no-greek"
 KEY_COL: str = "key"
 LINK_COL: str = "key-link"
 SOURCES_DIR: str = "dictionary/marcion.sourceforge.net/data/img-sources/"
@@ -277,8 +277,8 @@ def main():
                 "open",
                 "-a",
                 args.browser,
-                row[LINK_COL],
-                query(row[MEANING_COL]),
+                str(row[LINK_COL]),
+                query(utils.html_text(str(row[MEANING_COL]))),
             ]
         )
 
