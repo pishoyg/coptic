@@ -1,1 +1,49 @@
-.card { font-size: 18px; }.front { text-align: center; }figure { display: inline-block; border: 1px transparent; margin: 10px; }figure figcaption { text-align: center; }figure img { vertical-align: top; }.bordered { border:1px solid black; }.right { float:right; }.left { float: left; }.center { text-align: center; }.nightMode .bordered { border:1px solid white; }.link { text-decoration: underline; color: blue; cursor: pointer; }.light { opacity:0.7 }.very-light { opacity:0.3 }.hover-link:hover { text-decoration: underline; color: blue; cursor: pointer; }
+
+ .bordered {
+     border:1px solid black;
+}
+ .card {
+     font-size: 18px;
+}
+ .center {
+     text-align: center;
+}
+ .front {
+     text-align: center;
+}
+ .hover-link:hover {
+     color: blue;
+     cursor: pointer;
+     text-decoration: underline;
+}
+ .left {
+     float: left;
+}
+ .light {
+     opacity:0.7;
+}
+ .link {
+     color: blue;
+     cursor: pointer;
+     text-decoration: underline;
+}
+ .nightMode .bordered {
+     border:1px solid white;
+}
+ .right {
+     float:right;
+}
+ .very-light {
+     opacity:0.3;
+}
+ figure figcaption {
+     text-align: center;
+}
+ figure img {
+     vertical-align: top;
+}
+ figure {
+     border: 1px transparent;
+     display: inline-block;
+     margin: 10px;
+}
