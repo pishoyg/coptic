@@ -98,6 +98,8 @@ camera: camera_images
 .PHONY: yo
 yo: say_yo
 
+.PHONY: notify
+notify: git_add_precommit_run git_status say_yo
 # LEVEL 1 RULES ###############################################################
 
 # BIBLE RULES
