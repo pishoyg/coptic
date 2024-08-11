@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ϭⲗⲟⲙⲗⲙ, ⲕⲗⲟⲙⲗⲙ (nn), ϭⲗⲁⲙⲗⲙ, ϭⲗⲟⲙⲗⲉⲙ, ⲕⲗⲟⲙⲗⲉⲙ, ⲭⲗⲟⲙⲗⲉⲙ, ϭⲗⲙⲗⲱⲙ-,
-  ϭⲗⲉⲙⲗⲱⲙ-, ϭⲗⲙⲗⲱⲙ=, ⲗⲙⲗⲱⲙ=, ϭⲗⲉⲙⲗⲱⲙ=, ϭⲗⲙⲗⲱⲙ+, ϭⲗⲙⲗⲟⲙ+, ϭⲗⲙⲗⲟⲙⲧ+, ⲗⲙⲗⲱⲙ+,
-  ⲗⲙⲗⲏⲙ+, ϭⲗⲉⲙⲗⲱⲙ+, ⲗⲉⲙⲗⲏⲙ+</title>
+  <title>ϭⲗⲟⲙⲗⲙ, ⲕⲗⲟⲙⲗⲙ, ϭⲗⲁⲙⲗⲙ, ϭⲗⲟⲙⲗⲉⲙ, ⲕⲗⲟⲙⲗⲉⲙ, ⲭⲗⲟⲙⲗⲉⲙ, ϭⲗⲙⲗⲱⲙ-, ϭⲗⲉⲙⲗⲱⲙ-,
+  ϭⲗⲙⲗⲱⲙ=, ⲗⲙⲗⲱⲙ=, ϭⲗⲉⲙⲗⲱⲙ=, ϭⲗⲙⲗⲱⲙ+, ϭⲗⲙⲗⲟⲙ+, ϭⲗⲙⲗⲟⲙⲧ+, ⲗⲙⲗⲱⲙ+, ⲗⲙⲗⲏⲙ+,
+  ϭⲗⲉⲙⲗⲱⲙ+, ⲗⲉⲙⲗⲏⲙ+</title>
   <meta name="deck_id" content="1284010387">
   <meta name="deck_name" content="A Coptic Dictionary::All Dialects">
   <meta name="deck_description" content=
   "https://github.com/pishoyg/coptic/. pishoybg@gmail.com.">
   <style>
-      .card { font-size: 18px; }.front { text-align: center; }figure { display: inline-block; border: 1px transparent; margin: 10px; }figure figcaption { text-align: center; }figure img { vertical-align: top; }.bordered { border:1px solid black; }.right { float:right; }.left { float: left; }.center { text-align: center; }.nightMode .bordered { border:1px solid white; }.link { text-decoration: underline; color: blue; cursor: pointer; }.light { opacity:0.7 }.hover-link:hover { text-decoration: underline; color: blue; cursor: pointer; }
+      .card { font-size: 18px; }.front { text-align: center; }figure { display: inline-block; border: 1px transparent; margin: 10px; }figure figcaption { text-align: center; }figure img { vertical-align: top; }.bordered { border:1px solid black; }.right { float:right; }.left { float: left; }.center { text-align: center; }.nightMode .bordered { border:1px solid white; }.link { text-decoration: underline; color: blue; cursor: pointer; }.light { opacity:0.7 }.very-light { opacity:0.3 }.hover-link:hover { text-decoration: underline; color: blue; cursor: pointer; }
   </style>
   <script type="text/javascript">
       window.addEventListener("load", function() {
@@ -19,11 +19,22 @@
         Array.prototype.forEach.call(els, function(btn) {
             btn.classList.add('link');
             btn.onclick = () => {
+                document.getElementById('crum' + btn.innerHTML.slice(0, -1)).scrollIntoView();
+            }
+        });
+
+        // Handle 'crum-page-external' class.
+        var els = document.getElementsByClassName('crum-page-external');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('link');
+            btn.onclick = () => {
                 window.open(
                     'https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID='
                     + btn.innerHTML, '_blank').focus();
             }
         });
+
+        // Handle 'coptic' class.
         var els = document.getElementsByClassName('coptic');
         Array.prototype.forEach.call(els, function(btn) {
             btn.classList.add('hover-link');
@@ -33,6 +44,8 @@
                     + btn.innerHTML, '_blank').focus();
             }
         });
+
+        // Handle 'greek' class.
         var els = document.getElementsByClassName('greek');
         Array.prototype.forEach.call(els, function(btn) {
             btn.classList.add('link');
@@ -43,28 +56,109 @@
                     + btn.innerHTML, '_blank').focus();
             }
         });
+
+        // Handle 'dawoud' class.
+        var els = document.getElementsByClassName('dawoud');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('link');
+            btn.onclick = () => {
+                document.getElementById('dawoud' + btn.innerHTML.slice(0, -1)).scrollIntoView();
+            }
+        });
+
+        // Handle the 'dialect' class.
+        const dialects = ['S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
+        const dialectStyle = new Map();
+        dialects.forEach((d) => {
+            dialectStyle.set(d, 'normal');
+        });
+        function toggle(d) {
+            dialectStyle.set(
+                d,
+                dialectStyle.get(d) == 'normal' ? 'bold' : 'normal');
+        }
+        function shouldBold(el) {
+          for (var i in dialects) {
+            if (dialectStyle.get(dialects[i]) == 'bold' &&
+              el.classList.contains(dialects[i])) {
+              return true;
+            }
+          }
+          return false;
+        }
+        function dialected(el) {
+          return dialects.some((d) => {
+              return el.classList.contains(d);
+          });
+        }
+        var els = document.getElementsByClassName('dialect');
+        function dialect(d) {
+            toggle(d);
+            document.querySelectorAll('.word').forEach((el) => {
+                if (!dialected(el)) {
+                    return;
+                }
+                if (shouldBold(el)) {
+                    el.classList.remove('very-light');
+                    el.classList.add('bold');
+                } else {
+                    el.classList.remove('bold');
+                    el.classList.add('very-light');
+                }
+            });
+            navigateQuery = "?d=" + dialects.filter((d) => {
+                return dialectStyle.get(d) == 'bold'; }).join(',');
+            document.querySelectorAll('.navigate').forEach((el) => {
+                let url = new URL(el.getAttribute('href'));
+                url.searchParams.delete('d');
+                el.setAttribute('href', url.toString() + navigateQuery);
+                });
+        }
+        Array.prototype.forEach.call(els, (btn) => {
+            btn.classList.add('hover-link');
+            btn.onclick = () => { dialect(btn.innerHTML); };
+        });
+        (new URLSearchParams(window.location.search)).get('d').split(',').forEach(
+                 dialect);
         
       })
   </script>
 </head>
 <body>
   <div class="front">
-    (S) <span class="coptic">ϭⲗⲟⲙⲗⲙ</span>, <span class="coptic">ⲕⲗⲟⲙⲗⲙ</span>
-    (nn)<br>
-    (A, sA) <span class="coptic">ϭⲗⲁⲙⲗⲙ</span><br>
-    (B) <span class="coptic">ϭⲗⲟⲙⲗⲉⲙ</span>, <span class=
-    "coptic">ⲕⲗⲟⲙⲗⲉⲙ</span>, <span class="coptic">ⲭⲗⲟⲙⲗⲉⲙ</span><br>
-    (S) <span class="coptic">ϭⲗⲙⲗⲱⲙ</span>-, <span class=
-    "coptic">ϭⲗⲉⲙⲗⲱⲙ</span>-<br>
-    (S, sA) <span class="coptic">ϭⲗⲙⲗⲱⲙ</span>=<br>
-    (S, Sf) <span class="coptic">ⲗⲙⲗⲱⲙ</span>=<br>
-    (S, B) <span class="coptic">ϭⲗⲉⲙⲗⲱⲙ</span>=<br>
-    (S, sA) <span class="coptic">ϭⲗⲙⲗⲱⲙ</span>+<br>
-    (S) <span class="coptic">ϭⲗⲙⲗⲟⲙ</span>+, <span class=
-    "coptic">ϭⲗⲙⲗⲟⲙⲧ</span>+, <span class="coptic">ⲗⲙⲗⲱⲙ</span>+, <span class=
-    "coptic">ⲗⲙⲗⲏⲙ</span>+<br>
-    (B) <span class="coptic">ϭⲗⲉⲙⲗⲱⲙ</span>+, <span class=
-    "coptic">ⲗⲉⲙⲗⲏⲙ</span>+
+    <span class="word S">(<span class="dialect S">S</span>) <span class=
+    "spelling S"><span class="coptic">ϭⲗⲟⲙⲗⲙ</span></span>, <span class=
+    "spelling S"><span class="coptic">ⲕⲗⲟⲙⲗⲙ</span></span> (nn)</span><br>
+    <span class="word A sA">(<span class="dialect A">A</span>, <span class=
+    "dialect sA">sA</span>) <span class="spelling A sA"><span class=
+    "coptic">ϭⲗⲁⲙⲗⲙ</span></span></span><br>
+    <span class="word B">(<span class="dialect B">B</span>) <span class=
+    "spelling B"><span class="coptic">ϭⲗⲟⲙⲗⲉⲙ</span></span>, <span class=
+    "spelling B"><span class="coptic">ⲕⲗⲟⲙⲗⲉⲙ</span></span>, <span class=
+    "spelling B"><span class="coptic">ⲭⲗⲟⲙⲗⲉⲙ</span></span></span><br>
+    <span class="word S">(<span class="dialect S">S</span>) <span class=
+    "spelling S"><span class="coptic">ϭⲗⲙⲗⲱⲙ</span>-</span>, <span class=
+    "spelling S"><span class="coptic">ϭⲗⲉⲙⲗⲱⲙ</span>-</span></span><br>
+    <span class="word S sA">(<span class="dialect S">S</span>, <span class=
+    "dialect sA">sA</span>) <span class="spelling S sA"><span class=
+    "coptic">ϭⲗⲙⲗⲱⲙ</span>=</span></span><br>
+    <span class="word S Sf">(<span class="dialect S">S</span>, <span class=
+    "dialect Sf">Sf</span>) <span class="spelling S Sf"><span class=
+    "coptic">ⲗⲙⲗⲱⲙ</span>=</span></span><br>
+    <span class="word S B">(<span class="dialect S">S</span>, <span class=
+    "dialect B">B</span>) <span class="spelling S B"><span class=
+    "coptic">ϭⲗⲉⲙⲗⲱⲙ</span>=</span></span><br>
+    <span class="word S sA">(<span class="dialect S">S</span>, <span class=
+    "dialect sA">sA</span>) <span class="spelling S sA"><span class=
+    "coptic">ϭⲗⲙⲗⲱⲙ</span>+</span></span><br>
+    <span class="word S">(<span class="dialect S">S</span>) <span class=
+    "spelling S"><span class="coptic">ϭⲗⲙⲗⲟⲙ</span>+</span>, <span class=
+    "spelling S"><span class="coptic">ϭⲗⲙⲗⲟⲙⲧ</span>+</span>, <span class=
+    "spelling S"><span class="coptic">ⲗⲙⲗⲱⲙ</span>+</span>, <span class=
+    "spelling S"><span class="coptic">ⲗⲙⲗⲏⲙ</span>+</span></span><br>
+    <span class="word B">(<span class="dialect B">B</span>) <span class=
+    "spelling B"><span class="coptic">ϭⲗⲉⲙⲗⲱⲙ</span>+</span>, <span class=
+    "spelling B"><span class="coptic">ⲗⲉⲙⲗⲏⲙ</span>+</span></span>
   </div>
   <hr>
   <div class="back">
@@ -114,85 +208,96 @@
       <tr>
         <!--Key: 8564-->
         <td colspan="1"></td>
-        <td colspan="4" class="bordered"><span class="coptic">ⲉ</span>-
-        (c)</td>
+        <td colspan="4" class="bordered"><span class="word"><span class=
+        "spelling"><span class="coptic">ⲉ</span>-</span> (c)</span></td>
         <td colspan="4" class="bordered"></td>
       </tr>
       <tr>
         <!--Key: 8565-->
         <td colspan="1"></td>
-        <td colspan="4" class="bordered"><span class="coptic">ⲉϩⲟⲩⲛ</span>
-        <span class="coptic">ⲉ</span>- (c)</td>
+        <td colspan="4" class="bordered"><span class="word"><span class=
+        "spelling"><span class="coptic">ⲉϩⲟⲩⲛ</span> <span class=
+        "coptic">ⲉ</span>-</span> (c)</span></td>
         <td colspan="4" class="bordered"></td>
       </tr>
       <tr>
         <!--Key: 8566-->
         <td colspan="1"></td>
-        <td colspan="4" class="bordered"><span class="coptic">ⲉϫⲛ</span>-
-        (c)</td>
+        <td colspan="4" class="bordered"><span class="word"><span class=
+        "spelling"><span class="coptic">ⲉϫⲛ</span>-</span> (c)</span></td>
         <td colspan="4" class="bordered"></td>
       </tr>
       <tr>
         <!--Key: 8567-->
         <td colspan="1"></td>
-        <td colspan="4" class="bordered">(B) <span class="coptic">ⲛⲉⲙ</span>-
-        (c)</td>
+        <td colspan="4" class="bordered"><span class="word B">(<span class=
+        "dialect B">B</span>) <span class="spelling B"><span class=
+        "coptic">ⲛⲉⲙ</span>-</span> (c)</span></td>
         <td colspan="4" class="bordered"></td>
       </tr>
       <tr>
         <!--Key: 8568-->
         <td colspan="1"></td>
-        <td colspan="4" class="bordered">(sA) <span class="coptic">ⲁϩⲟⲩⲛ</span>
-        <span class="coptic">ⲙⲛ</span>- (c)</td>
+        <td colspan="4" class="bordered"><span class="word sA">(<span class=
+        "dialect sA">sA</span>) <span class="spelling sA"><span class=
+        "coptic">ⲁϩⲟⲩⲛ</span> <span class="coptic">ⲙⲛ</span>-</span>
+        (c)</span></td>
         <td colspan="4" class="bordered"></td>
       </tr>
       <tr>
         <!--Key: 8569-->
         <td colspan="1"></td>
-        <td colspan="4" class="bordered"><span class="coptic">ⲛ</span>-
-        (c)</td>
+        <td colspan="4" class="bordered"><span class="word"><span class=
+        "spelling"><span class="coptic">ⲛ</span>-</span> (c)</span></td>
         <td colspan="4" class="bordered"></td>
       </tr>
       <tr>
         <!--Key: 8570-->
         <td colspan="1"></td>
-        <td colspan="4" class="bordered"><span class="coptic">ϩⲛ</span>-,
-        <span class="coptic">ϧⲉⲛ</span>- (c)</td>
+        <td colspan="4" class="bordered"><span class="word"><span class=
+        "spelling"><span class="coptic">ϩⲛ</span>-</span>, <span class=
+        "spelling"><span class="coptic">ϧⲉⲛ</span>-</span> (c)</span></td>
         <td colspan="4" class="bordered"></td>
       </tr>
       <tr>
         <!--Key: 3978-->
-        <td colspan="5" class="bordered">(S) <span class="coptic">ϭ</span>.,
-        <span class="coptic">ⲕ</span>. (noun)</td>
+        <td colspan="5" class="bordered"><span class="word S">(<span class=
+        "dialect S">S</span>) <span class="spelling S"><span class=
+        "coptic">ϭ</span>.</span>, <span class="spelling S"><span class=
+        "coptic">ⲕ</span>.</span> (noun)</span></td>
         <td colspan="4" class="bordered"><b>(noun)</b><br>
         complication (?)</td>
       </tr>
       <tr>
         <!--Key: 8571-->
         <td colspan="1"></td>
-        <td colspan="4" class="bordered">(B) <span class="coptic">ϭ</span>.
-        <span class="coptic">ⲉϧⲟⲩⲛ</span></td>
+        <td colspan="4" class="bordered"><span class="word B">(<span class=
+        "dialect B">B</span>) <span class="spelling B"><span class=
+        "coptic">ϭ</span>. <span class="coptic">ⲉϧⲟⲩⲛ</span></span></span></td>
         <td colspan="4" class="bordered"><i>sim</i></td>
       </tr>
     </table>
     <hr>
     <figure>
-      <img src="dictionary_marcion.sourceforge.net_data_crum_831.png" alt=
-      "811"><br>
+      <img src="dictionary_marcion.sourceforge.net_data_crum_831.png" alt="811"
+      id="crum811"><br>
       <figcaption>
-        <span class="crum-page">811</span>
+        <span class="crum-page-external">811</span>
       </figcaption>
     </figure><br>
     <hr>
-    <span class="right"><b>Dawoud:</b> 808b-809a</span><br>
+    <span class="right"><b>Dawoud:</b> <span class=
+    "dawoud">808b</span>-<span class="dawoud">809a</span></span><br>
     <figure>
-      <img src="dictionary_copticocc.org_dawoud-D100_824.jpg" alt="808"><br>
+      <img src="dictionary_copticocc.org_dawoud-D100_824.jpg" alt="808" id=
+      "dawoud808"><br>
       <figcaption>
         808
       </figcaption>
     </figure><br>
     <figure>
-      <img src="dictionary_copticocc.org_dawoud-D100_825.jpg" alt="809"><br>
+      <img src="dictionary_copticocc.org_dawoud-D100_825.jpg" alt="809" id=
+      "dawoud809"><br>
       <figcaption>
         809
       </figcaption>
@@ -203,14 +308,16 @@
           <a href="https://github.com/pishoyg/coptic/">Home</a>
         </td>
         <td>
-          <a href="https://pishoyg.github.io/crum/2544.html">prev</a>
+          <a class="navigate" href=
+          "https://pishoyg.github.io/crum/2544.html">prev</a>
         </td>
         <td>
           <b>Key:</b> <a href=
           "https://pishoyg.github.io/crum/2545.html">2545</a>
         </td>
         <td>
-          <a href="https://pishoyg.github.io/crum/2546.html">next</a>
+          <a class="navigate" href=
+          "https://pishoyg.github.io/crum/2546.html">next</a>
         </td>
         <td>
           <a href="mailto:pishoybg@gmail.com">Contact</a>
