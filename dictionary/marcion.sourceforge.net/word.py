@@ -171,8 +171,15 @@ class structured_word:
     ) -> str:
         d = ""
         if include_dialects and self._dialects:
-            d = "({})".format(", ".join(self._dialects))
-        s = ", ".join(self.spellings(parenthesize_assumed))
+            d = "({})".format(
+                ", ".join(
+                    f'<span class="dialect {d}">{d}</span>' for d in self._dialects
+                )
+            )
+        s = ", ".join(
+            f'<span class="{" ".join(["spelling"] + self._dialects)}">{s}</span>'
+            for s in self.spellings(parenthesize_assumed)
+        )
         t = ""
         if append_types:
             t = " ".join(i.coptic_symbol() for i in self._types if i.append())
@@ -183,7 +190,9 @@ class structured_word:
         r = ""
         if include_references:
             r = ", ".join("{" + r + "}" for r in self._references)
-        return " ".join(filter(None, [d, s, t, r]))
+        word = " ".join(filter(None, [d, s, t, r]))
+        word = f'<span class="{" ".join(["word"] + self._dialects)}">{word}</span>'
+        return word
 
     def dialects(self) -> list[str]:
         return self._dialects
