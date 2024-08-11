@@ -117,8 +117,10 @@ CRUM_JS = """
         btn.classList.add('hover-link');
         btn.onclick = () => { dialect(btn.innerHTML); };
     });
-    (new URLSearchParams(window.location.search)).get('d').split(',').forEach(
-        dialect);
+    d = (new URLSearchParams(window.location.search)).get('d');
+    if (d !== undefined) {
+        d.split(',').forEach(dialect);
+    }
 """
 
 CRUM_CSS = """
