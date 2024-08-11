@@ -7,6 +7,7 @@ import field
 import type_enforced
 
 CRUM_FMT = '<span class="crum-page">{crum}</span>'
+CRUM_EXTERNAL_FMT = '<span class="crum-page-external">{crum}</span>'
 PARENT_URL = "https://pishoyg.github.io/crum"
 HOME = "https://github.com/pishoyg/coptic/"
 EMAIL = "pishoybg@gmail.com"
@@ -116,11 +117,20 @@ def crum(
         Array.prototype.forEach.call(els, function(btn) {
             btn.classList.add('link');
             btn.onclick = () => {
+                document.getElementById('crum' + btn.innerHTML.slice(0, -1)).scrollIntoView();
+            }
+        });
+        // Handle 'crum-page-external' class.
+        var els = document.getElementsByClassName('crum-page-external');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('link');
+            btn.onclick = () => {
                 window.open(
                     'https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID='
                     + btn.innerHTML, '_blank').focus();
             }
         });
+        // Handle 'coptic' class.
         var els = document.getElementsByClassName('coptic');
         Array.prototype.forEach.call(els, function(btn) {
             btn.classList.add('hover-link');
@@ -130,6 +140,7 @@ def crum(
                     + btn.innerHTML, '_blank').focus();
             }
         });
+        // Handle 'greek' class.
         var els = document.getElementsByClassName('greek');
         Array.prototype.forEach.call(els, function(btn) {
             btn.classList.add('link');
@@ -181,9 +192,11 @@ def crum(
                     sort_paths=field.sort_semver,
                     fmt_args=lambda path: {
                         "caption": field.stem(path),
+                        "id": "explanatory" + field.stem(path),
                         "alt": field.stem(path),
                     },
                     caption=True,
+                    id=True,
                     force=False,
                 ),
                 # Editor's notes.
@@ -218,10 +231,14 @@ def crum(
                         ],
                         sort_paths=field.sort_semver,
                         fmt_args=lambda path: {
-                            "caption": CRUM_FMT.format(crum=int(field.stem(path)) - 20),
+                            "caption": CRUM_EXTERNAL_FMT.format(
+                                crum=int(field.stem(path)) - 20
+                            ),
+                            "id": f"crum{int(field.stem(path)) - 20}",
                             "alt": int(field.stem(path)) - 20,
                         },
                         caption=True,
+                        id=True,
                         force=False,
                     ),
                 ),
@@ -259,9 +276,11 @@ def crum(
                         ],
                         fmt_args=lambda path: {
                             "caption": int(field.stem(path)) - 16,
+                            "id": f"dawoud{int(field.stem(path)) - 16}",
                             "alt": int(field.stem(path)) - 16,
                         },
                         caption=True,
+                        id=True,
                         force=False,
                     ),
                 ),

@@ -330,6 +330,7 @@ def img(
     sort_paths: enforcer.OptionalCallable = None,
     fmt_args: enforcer.OptionalCallable = None,
     caption: bool = True,
+    id: bool = True,
     force: bool = True,
 ) -> media:
     """
@@ -337,8 +338,11 @@ def img(
         fmt_args: A lambda that, given the path, would return the HTML format
         dictionary. The key "alt" must exist in the returned dictionary.
         If `caption` is set to True, then "caption" must also exist.
+        If `id` is set to True, then "id" must also exist.
     """
-    html_fmt = '<img src="{basename}" alt={alt}><br/>'
+    html_fmt = '<img src="{basename}" alt="{alt}"><br/>'
+    if id:
+        html_fmt = '<img src="{basename}" alt="{alt}" id="{id}"><br/>'
     if caption:
         html_fmt = (
             "<figure>"
