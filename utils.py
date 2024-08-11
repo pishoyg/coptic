@@ -3,6 +3,7 @@ import os
 import pathlib
 import shutil
 
+import bs4
 import colorama
 import pandas as pd
 import type_enforced
@@ -110,3 +111,9 @@ def read_tsvs(tsvs: str) -> pd.DataFrame:
         cur = read_tsv(f)
         df = pd.concat([df, cur], ignore_index=True)
     return df
+
+
+@type_enforced.Enforcer(enabled=ENFORCED)
+def html_text(html: str) -> str:
+    soup = bs4.BeautifulSoup(html)
+    return soup.get_text()
