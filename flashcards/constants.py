@@ -43,10 +43,10 @@ def crum(
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     # TODO: This replaces all Coptic words, regardless of whether they
     # represent plain text. Coptic text that occurs inside a tag (for example
-    # as a tag property) would still acquire this hyperlink.
+    # as a tag property) would still get wrapped inside this <span> tag.
     def cdo(text: str) -> str:
         return COPTIC_WORD_RE.sub(
-            r'<a class="nostyle" href="https://coptic-dictionary.org/results.cgi?quick_search=\1">\1</a>',
+            r'<span class="coptic">\1</span>',
             text,
         )
 
@@ -97,9 +97,8 @@ def crum(
         ".center { text-align: center; }"
         ".nightMode .bordered { border:1px solid white; }"
         ".link { text-decoration: underline; color: blue; cursor: pointer; }"
-        "a.nostyle:link { text-decoration: inherit; color: inherit; }"
-        "a.nostyle:visited { text-decoration: inherit; color: inherit; }"
-        "a.nostyle:hover { text-decoration: underline; color: blue; }",
+        ".light { opacity:0.7 }"
+        ".hover-link:hover { text-decoration: underline; color: blue; cursor: pointer; }",
         javascript="""
         // Handle 'crum-page' class.
         var els = document.getElementsByClassName('crum-page');
@@ -108,6 +107,15 @@ def crum(
             btn.onclick = () => {
                 window.open(
                     'https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID='
+                    + btn.innerHTML, '_blank').focus();
+            }
+        });
+        var els = document.getElementsByClassName('coptic');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('hover-link');
+            btn.onclick = () => {
+                window.open(
+                    'https://coptic-dictionary.org/results.cgi?quick_search='
                     + btn.innerHTML, '_blank').focus();
             }
         });
