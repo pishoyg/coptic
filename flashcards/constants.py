@@ -102,11 +102,15 @@ CRUM_JS = """
         navigateQuery = "?d=" + dialects.filter((d) => {
             return dialectStyle.get(d) == 'heavy';
         }).join(',');
-        document.querySelectorAll('.navigate').forEach((el) => {
-            const url = new URL(el.getAttribute('href'));
+        function update(href) {
+            const url = new URL(href);
             url.searchParams.delete('d');
-            el.setAttribute('href', url.toString() + navigateQuery);
+            return url.toString() + navigateQuery;
+        }
+        document.querySelectorAll('.navigate').forEach((el) => {
+            el.setAttribute('href', update(el.getAttribute('href')));
         });
+        window.history.pushState("", "", update(window.location.href));
     }
     var els = document.getElementsByClassName('dialect');
     Array.prototype.forEach.call(els, (btn) => {
