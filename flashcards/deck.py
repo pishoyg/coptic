@@ -1,6 +1,5 @@
 import os
 import pathlib
-import re
 import shutil
 import time
 
@@ -12,6 +11,8 @@ import type_enforced
 
 import utils
 
+JS_BASENAME = "script.js"
+CSS_BASENAME = "style.css"
 HTML_FMT = f"""<!DOCTYPE html>
 <html>
   <head>
@@ -19,14 +20,8 @@ HTML_FMT = f"""<!DOCTYPE html>
     <meta name="deck_id" content="{{deck_id}}"/>
     <meta name="deck_name" content="{{deck_name}}"/>
     <meta name="deck_description" content="{{deck_description}}"/>
-    <style>
-      {{css}}
-    </style>
-    <script type="text/javascript">
-      window.addEventListener("load", function() {{{{
-        {{javascript}}
-      }}}})
-    </script>
+    <link rel="stylesheet" type="text/css" href="{CSS_BASENAME}">
+    <script type="text/javascript" src="{JS_BASENAME}"></script>
   </head>
   <body>
     <div class="front">
@@ -38,6 +33,12 @@ HTML_FMT = f"""<!DOCTYPE html>
     </div>
   </body>
 </html>
+"""
+
+JS_FMT = f"""
+window.addEventListener("load", function() {{{{
+  {{javascript}}
+}}}})
 """
 
 
@@ -286,6 +287,10 @@ class deck:
                         back=back,
                     )
                 )
+        with open(os.path.join(dir, JS_BASENAME), "w") as f:
+            f.write(JS_FMT.format(javascript=self.javascript) + "\n")
+        with open(os.path.join(dir, CSS_BASENAME), "w") as f:
+            f.write(self.css + "\n")
         for f in self.media:
             shutil.copy(f, dir)
         utils.wrote(dir)
