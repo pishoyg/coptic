@@ -122,6 +122,7 @@ def crum(
                 document.getElementById('crum' + btn.innerHTML.slice(0, -1)).scrollIntoView();
             }
         });
+
         // Handle 'crum-page-external' class.
         var els = document.getElementsByClassName('crum-page-external');
         Array.prototype.forEach.call(els, function(btn) {
@@ -132,6 +133,7 @@ def crum(
                     + btn.innerHTML, '_blank').focus();
             }
         });
+
         // Handle 'coptic' class.
         var els = document.getElementsByClassName('coptic');
         Array.prototype.forEach.call(els, function(btn) {
@@ -142,6 +144,7 @@ def crum(
                     + btn.innerHTML, '_blank').focus();
             }
         });
+
         // Handle 'greek' class.
         var els = document.getElementsByClassName('greek');
         Array.prototype.forEach.call(els, function(btn) {
@@ -153,6 +156,7 @@ def crum(
                     + btn.innerHTML, '_blank').focus();
             }
         });
+
         // Handle 'dawoud' class.
         var els = document.getElementsByClassName('dawoud');
         Array.prototype.forEach.call(els, function(btn) {
@@ -161,6 +165,7 @@ def crum(
                 document.getElementById('dawoud' + btn.innerHTML.slice(0, -1)).scrollIntoView();
             }
         });
+
         // Handle the 'dialect' class.
         const dialects = ['S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
         const dialectStyle = new Map();
@@ -187,24 +192,27 @@ def crum(
           });
         }
         var els = document.getElementsByClassName('dialect');
+        function dialect(d) {
+            toggle(d);
+            document.querySelectorAll('.word').forEach((el) => {
+                if (!dialected(el)) {
+                    return;
+                }
+                if (shouldBold(el)) {
+                    el.classList.remove('very-light');
+                    el.classList.add('bold');
+                } else {
+                    el.classList.remove('bold');
+                    el.classList.add('very-light');
+                }
+            });
+        }
         Array.prototype.forEach.call(els, (btn) => {
             btn.classList.add('hover-link');
-            btn.onclick = () => {
-                toggle(btn.innerHTML);
-                document.querySelectorAll('.word').forEach((el) => {
-                    if (!dialected(el)) {
-                        return;
-                    }
-                    if (shouldBold(el)) {
-                        el.classList.remove('very-light');
-                        el.classList.add('bold');
-                    } else {
-                        el.classList.remove('bold');
-                        el.classList.add('very-light');
-                    }
-                });
-            }
+            btn.onclick = () => { dialect(btn.innerHTML); };
         });
+        (new URLSearchParams(window.location.search)).get('d').split(',').forEach(
+                 dialect);
         """,
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
