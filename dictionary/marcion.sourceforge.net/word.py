@@ -203,6 +203,8 @@ class structured_word:
         r = ""
         if include_references:
             r = ", ".join("{" + r + "}" for r in self._references)
+            if classify:
+                r = f'<span class="nag-hammadi">{r}</span>'
         word = " ".join(filter(None, [d, s, t, r]))
         if classify:
             word = f'<span class="{" ".join(["word"] + self._dialects)}">{word}</span>'
