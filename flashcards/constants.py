@@ -6,7 +6,7 @@ import enforcer
 import field
 import type_enforced
 
-CRUM_A_FMT = '<a href="https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID={page_id}">{page_id}</a>'
+CRUM_FMT = '<span class="crum-page">{crum}</span>'
 PARENT_URL = "https://pishoyg.github.io/crum"
 HOME = "https://github.com/pishoyg/coptic/"
 EMAIL = "pishoybg@gmail.com"
@@ -96,10 +96,22 @@ def crum(
         ".left { float: left; }"
         ".center { text-align: center; }"
         ".nightMode .bordered { border:1px solid white; }"
+        ".link { text-decoration: underline; color: blue; cursor: pointer; }"
         "a.nostyle:link { text-decoration: inherit; color: inherit; }"
         "a.nostyle:visited { text-decoration: inherit; color: inherit; }"
         "a.nostyle:hover { text-decoration: underline; color: blue; }",
-        javascript="",
+        javascript="""
+        // Handle 'crum-page' class.
+        var els = document.getElementsByClassName('crum-page');
+        Array.prototype.forEach.call(els, function(btn) {
+            btn.classList.add('link');
+            btn.onclick = () => {
+                window.open(
+                    'https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID='
+                    + btn.innerHTML, '_blank').focus();
+            }
+        });
+        """,
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
         key=roots_col("key", force=True),
@@ -114,9 +126,9 @@ def crum(
                         {"type_parsed": roots_col("type-parsed", force=True)},
                     ),
                     field.fmt(
-                        f'<span class="right"><b>Crum: </b>{CRUM_A_FMT}</span>',
+                        f'<span class="right"><b>Crum: </b>{CRUM_FMT}</span>',
                         {
-                            "page_id": roots_col("crum", force=True),
+                            "crum": roots_col("crum", force=True),
                         },
                     ),
                     "<br/>",
@@ -177,9 +189,7 @@ def crum(
                         ],
                         sort_paths=field.sort_semver,
                         fmt_args=lambda path: {
-                            "caption": CRUM_A_FMT.format(
-                                page_id=int(field.stem(path)) - 20
-                            ),
+                            "caption": CRUM_FMT.format(crum=int(field.stem(path)) - 20),
                             "alt": int(field.stem(path)) - 20,
                         },
                         caption=True,

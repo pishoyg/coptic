@@ -200,7 +200,10 @@ class node:
                         else ""
                     ),
                     (
-                        f'<td rowspan="{crum_span}" class="bordered"><b>Crum: </b>{parser.add_a_href(constants.CRUM_PAGE_FMT, crum)}</td>'
+                        f'<td rowspan="{crum_span}" class="bordered">'
+                        "<b>Crum: </b>"
+                        f'<span class="crum-page">{crum}</span>'
+                        "</td>"
                         if crum_span
                         else ""
                     ),
