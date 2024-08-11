@@ -176,21 +176,26 @@ class structured_word:
         append_types: bool = True,
         classify: bool = False,
     ) -> str:
+        def _span(content: str, classes: list[str]) -> str:
+            assert classes
+            if not content:
+                return ""
+            if not classify:
+                return content
+            return f'<span class="{" ".join(classes)}">{content}</span>'
+
         d = ""
         if include_dialects and self._dialects:
-            dialects = (
-                [f'<span class="dialect {d}">{d}</span>' for d in self._dialects]
-                if classify
-                else self._dialects
+            dialects = [_span(d, ["dialect", d]) for d in self._dialects]
+
+            d = (
+                _span("(", ["dialect-parenthesis"])
+                + _span(", ", ["dialect-comma"]).join(dialects)
+                + _span(")", ["dialect-parenthesis"])
             )
-            d = "(" + ", ".join(dialects) + ")"
-        s = ", ".join(
-            [
-                f'<span class="{" ".join(["spelling"] + self._dialects)}">{s}</span>'
-                for s in self.spellings(parenthesize_assumed)
-            ]
-            if classify
-            else self.spellings(parenthesize_assumed)
+        s = _span(", ", ["spelling-comma"]).join(
+            _span(s, ["spelling"] + self._dialects)
+            for s in self.spellings(parenthesize_assumed)
         )
 
         t = ""
@@ -200,14 +205,13 @@ class structured_word:
             assert self._root_type
             if not t and self._root_type.append():
                 t = self._root_type.coptic_symbol()
+        t = _span(t, ["type"] + self._dialects)
         r = ""
         if include_references:
             r = ", ".join("{" + r + "}" for r in self._references)
-            if classify:
-                r = f'<span class="nag-hammadi">{r}</span>'
+            r = _span(r, ["nag-hammadi"])
         word = " ".join(filter(None, [d, s, t, r]))
-        if classify:
-            word = f'<span class="{" ".join(["word"] + self._dialects)}">{word}</span>'
+        word = _span(word, ["word"] + self._dialects)
         return word
 
     def dialects(self) -> list[str]:
