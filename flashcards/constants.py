@@ -59,8 +59,8 @@ CRUM_JS = """
         };
     });
 
-    // Handle 'dawoud' class.
-    var els = document.getElementsByClassName('dawoud');
+    // Handle 'dawoud-page' class.
+    var els = document.getElementsByClassName('dawoud-page');
     Array.prototype.forEach.call(els, function(btn) {
         btn.classList.add('link');
         btn.onclick = () => {
@@ -269,18 +269,37 @@ def crum(
         back=field.apl(
             cdo,
             field.cat(
-                # Type and Crum page.
+                # Type, Crum page, and Dawoud pages.
                 field.cat(
                     field.fmt(
                         "(<b>{type_parsed}</b>)",
                         {"type_parsed": roots_col("type-parsed", force=True)},
                     ),
+                    '<span class="right">',
                     field.fmt(
-                        f'<span class="right"><b>Crum: </b>{CRUM_FMT}</span>',
-                        {
-                            "crum": roots_col("crum", force=True),
-                        },
+                        f"<b>Crum: </b>{CRUM_FMT}",
+                        {"crum": roots_col("crum", force=True)},
                     ),
+                    field.aon(
+                        "<br/>",
+                        "<b>Dawoud: </b>",
+                        field.apl(
+                            lambda pages: DICTIONARY_PAGE_RE.sub(
+                                r'<span class="dawoud-page">\1</span>', pages
+                            ),
+                            field.grp(
+                                keys=roots_col("key", force=True),
+                                group_by=dawoud_col("key", force=True),
+                                selected=field.xor(
+                                    dawoud_col("dawoud-pages-redone", force=False),
+                                    dawoud_col("dawoud-pages", force=False),
+                                ),
+                                force=False,
+                                unique=True,
+                            ),
+                        ),
+                    ),
+                    "</span>",
                     "<br/>",
                 ),
                 # Meaning.
@@ -357,25 +376,6 @@ def crum(
                 # Dawoud's pages.
                 field.aon(
                     "<hr/>",
-                    '<span class="right">',
-                    "<b>Dawoud: </b>",
-                    field.apl(
-                        lambda pages: DICTIONARY_PAGE_RE.sub(
-                            r'<span class="dawoud">\1</span>', pages
-                        ),
-                        field.grp(
-                            keys=roots_col("key", force=True),
-                            group_by=dawoud_col("key", force=True),
-                            selected=field.xor(
-                                dawoud_col("dawoud-pages-redone", force=False),
-                                dawoud_col("dawoud-pages", force=False),
-                            ),
-                            force=False,
-                            unique=True,
-                        ),
-                    ),
-                    "</span>",
-                    "<br/>",
                     field.img(
                         field.grp(
                             keys=roots_col("key", force=True),
