@@ -178,13 +178,6 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
             extra_cols[col] = []
         extra_cols[col].append(cell)
 
-    def lemma(word: list[lexical.structured_word]) -> str:
-        for w in word:
-            l = w.lemma()
-            if l:
-                return l
-        return ""
-
     keysmith = keyer(df)
     for _, row in df.iterrows():
         insert("key", "-link", constants.CARD_LINK_FMT.format(key=row["key"]))
@@ -248,7 +241,6 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
                 for w in subset
             )
             insert("dialect-", d, entry)
-            insert("lemma-", d, lemma(subset))
         if strict:
             insert("key", "-next", keysmith.next(int(row["key"])))
             insert("key", "-prev", keysmith.prev(int(row["key"])))

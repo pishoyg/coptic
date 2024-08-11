@@ -208,13 +208,6 @@ class structured_word:
             return True
         return bool(self._assumed)
 
-    def lemma(self) -> str:
-        # TODO: Use a smart heuristic to select the lemma form.
-        for s in self.spellings(parenthesize_assumed=False):
-            if s:
-                return s
-        return ""
-
     def infer(
         self, rt: inflect.Type | None, it: Gender
     ) -> typing.Optional[inflect.Type]:
