@@ -206,6 +206,13 @@ def crum(
                     el.classList.add('very-light');
                 }
             });
+            navigateQuery = "?d=" + dialects.filter((d) => {
+                return dialectStyle.get(d) == 'bold'; }).join(',');
+            document.querySelectorAll('.navigate').forEach((el) => {
+                let url = new URL(el.getAttribute('href'));
+                url.searchParams.delete('d');
+                el.setAttribute('href', url.toString() + navigateQuery);
+                });
         }
         Array.prototype.forEach.call(els, (btn) => {
             btn.classList.add('hover-link');
@@ -389,7 +396,7 @@ def crum(
                     # TODO: Update the home page, it will no longer be the repo.
                     f"""<table class="bordered" style="width: 100%; table-layout: fixed;"> <tr> <td><a href="{HOME}">Home</a></td> <td>""",
                     field.aon(
-                        f'<a href="{PARENT_URL}/',
+                        f'<a class="navigate" href="{PARENT_URL}/',
                         roots_col("key-prev", force=False),
                         '.html">prev</a>',
                     ),
@@ -401,7 +408,7 @@ def crum(
                         },
                     ),
                     field.aon(
-                        f'<a href="{PARENT_URL}/',
+                        f'<a class="navigate" href="{PARENT_URL}/',
                         roots_col("key-next", force=False),
                         '.html">next</a>',
                     ),
