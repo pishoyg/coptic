@@ -166,6 +166,9 @@ CRUM_CSS = """
  .very-light {
      opacity:0.3;
 }
+ .nag-hammadi {
+     opacity:0.5;
+}
  figure figcaption {
      text-align: center;
 }
