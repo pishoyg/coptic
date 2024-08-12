@@ -103,7 +103,9 @@ loc_archive () {
 }
 
 LOC_ARCHIVE=$(loc_archive)
+
 LOC=$(( $(loc .) + LOC_ARCHIVE))
+
 LOC_CRUM=$(loc "dictionary/marcion.sourceforge.net")
 LOC_COPTICSITE=$(loc "dictionary/copticsite.com")
 LOC_KELLIA=$(loc "dictionary/kellia.uni-goettingen.de")
@@ -114,6 +116,7 @@ LOC_KEYBOARD=$(loc "keyboard")
 LOC_MORPHOLOGY=$(loc "morphology")
 LOC_SITE=$(loc "site")
 LOC_SHARED=$(loc_shared)
+
 TOTAL="$((
   LOC_ARCHIVE
   + LOC_CRUM
@@ -174,6 +177,6 @@ if [ -n "${DIFF}" ]; then
 fi
 
 if ${SAVE}; then
-  echo -e "$(date)\t$(date +%s)\t${LOC}\t${MARCION_IMG}\t${MARCION_DAWOUD}" \
+  echo -e "$(date)\t$(date +%s)\t${LOC}\t${MARCION_IMG}\t${MARCION_DAWOUD}\t${LOC_CRUM}\t${LOC_COPTICSITE}\t${LOC_KELLIA}\t${LOC_BIBLE}\t${LOC_FLASHCARDS}\t${LOC_GRAMMAR}\t${LOC_KEYBOARD}\t${LOC_MORPHOLOGY}\t${LOC_SITE}\t${LOC_SHARED}\t${LOC_ARCHIVE}" \
     >> stats.tsv
 fi
