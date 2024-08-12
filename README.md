@@ -6,23 +6,44 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [How to Get the Flashcards](#how-to-get-the-flashcards)
-- [Description](#description)
-  - [A Coptic Dictionary](#a-coptic-dictionary)
-  - [copticsite.com](#copticsitecom)
-- [Contact and Contributions](#contact-and-contributions)
-- [For Developers / Owners](#for-developers--owners)
-  - [Getting started](#getting-started)
-  - [Directory Structure](#directory-structure)
-  - [`data/`](#data)
-  - [`.env`](#env)
-  - [Planning](#planning)
-    - [Issues](#issues)
-    - [Milestones](#milestones)
-    - [Labels](#labels)
-  - [Technical Guidelines](#technical-guidelines)
-- [Data Collection](#data-collection)
-- [Credits](#credits)
+  - [How to Get the Flashcards](#how-to-get-the-flashcards)
+  - [Description](#description)
+    - [A Coptic Dictionary](#a-coptic-dictionary)
+    - [copticsite.com](#copticsitecom)
+  - [Contact and Contributions](#contact-and-contributions)
+  - [For Developers / Owners](#for-developers--owners)
+    - [Getting started](#getting-started)
+    - [Directory Structure](#directory-structure)
+    - [`data/`](#data)
+    - [`.env`](#env)
+    - [Planning](#planning)
+      - [Issues](#issues)
+      - [Milestones](#milestones)
+      - [Labels](#labels)
+    - [Technical Guidelines](#technical-guidelines)
+  - [Data Collection](#data-collection)
+  - [Credits](#credits)
+- [dictionary](#dictionary)
+  - [Marcion](#marcion)
+    - [Data Store](#data-store)
+      - [`marcion-raw/`](#marcion-raw)
+      - [`marcion-input/`](#marcion-input)
+      - [`output/`](#output)
+      - [`img/`](#img)
+      - [`crum`](#crum)
+      - [`obsolete/`](#obsolete)
+      - [(planned) `dawoud-raw`](#planned-dawoud-raw)
+      - [(planned) `dawoud-input`](#planned-dawoud-input)
+      - [(planned) `notes`](#planned-notes)
+    - [Undialected Entries](#undialected-entries)
+  - [copticocc.org](#copticoccorg)
+- [bible](#bible)
+  - [Data](#data)
+    - [Output Directories](#output-directories)
+    - [Output Files](#output-files)
+- [flashcards](#flashcards)
+  - [Anki Keys and Synchronization](#anki-keys-and-synchronization)
+  - [Type Enforcement](#type-enforcement)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -313,3 +334,296 @@ The data used here was digitalized and published through the efforts of:
 1. [Kyrillos Wannes](https://twitter.com/kyrilloswannes), author of *Een
    Inleiding tot Bohairisch Koptisch*, who is rigorously
    collecting Marcion-Dawoud mapping for the flashcards project.
+
+# dictionary
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [Marcion](#marcion)
+  - [Data Store](#data-store)
+    - [`marcion-raw/`](#marcion-raw)
+    - [`marcion-input/`](#marcion-input)
+    - [`output/`](#output)
+    - [`img/`](#img)
+    - [`crum`](#crum)
+    - [`obsolete/`](#obsolete)
+    - [(planned) `dawoud-raw`](#planned-dawoud-raw)
+    - [(planned) `dawoud-input`](#planned-dawoud-input)
+    - [(planned) `notes`](#planned-notes)
+  - [Undialected Entries](#undialected-entries)
+- [copticocc.org](#copticoccorg)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Marcion
+
+### Data Store
+
+Identical data was retrieved from [Marcion](http://marcion.sourceforge.net/) in
+both SQL and HTML formats. The directory contains the raw data, processing
+scripts, as well as some utilities.
+
+#### `marcion-raw/`
+
+This directory contains raw, uncurated data from Marcion.
+
+- `cop-3357-8977-3.msql` represents the raw data retrieved from Marcion.
+  It contains two tables, namely `coptwrd` and `coptdrv`.
+
+- `coptwrd.tsv` and `coptdrv.tsv`, represent simple rewriting of the raw data
+  in `tsv` format.
+
+- `coptwrd.tab` contains a lot of redundant data. It may have been used as an
+  index for the purpose of increasing search efficiency.
+
+- `search_results.html` was obtained by searching for the regex `.*` in the
+  web version of Marcion.
+
+P.S. It is possible that some typos have been corrected in the `tsv` files. In
+this case, the `msql` file should prevail, and the corrections should be undone
+in the interest of preserving blind copying fidelity to Marcion.
+
+#### `marcion-input/`
+
+This directory contains curated versions of the subset of interest of the files
+in `marcion-raw/`. Curation is an ongoing process, so the data in this
+directory can change with some liberty. Primarily, our purpose is to fix the
+typos. File histories should show the changes. You can also run
+`diff marcion-input/${FILE_NAME} marcion-raw/${FILE_NAME}` to view the
+differences.
+
+#### `output/`
+
+- `roots.csv` contains the roots in TSV format.
+
+- (planned) `derivations.csv` contains the derivations in TSV format.
+
+- (planned) `combined.csv` contains the roots and derivations in TSV format.
+
+- (planned) `anki.apkg` contains a generated [Anki](https://apps.ankiweb.net/)
+  package.
+
+#### `img/`
+
+This directory contains explanatory images, named according to the keys used in
+Marcion.
+
+The image file names should have the format
+`${KEY}-${SENSE}-${SEQUENCE}.${EXTENSION}` or `${KEY}-${SEQUENCE}.${EXTENSION}`.
+
+If three fields are given, the second field (the sense) is used to indicate
+which sense of the word the image represents. This is useful for words that have
+different (potentially unrelated or even conflicting) meanings. The second
+field is optional. If two fields are given in the image name, the image will be
+understood as representing some basic sense of the words.
+If, for a certain words, images are given in both formats, the senseless images
+will precede the sense-indicated images, and the sense-indicated images will be
+sorted according to the integer used to represent the sense.
+
+#### `crum`
+
+This directory contains scans of the pages in Crum's dictionary, also obtained
+from Marcion.
+
+#### `obsolete/`
+
+This directory contains obsolete files.
+
+- `coptwrd.txt` seems to represent raw data, and is used as an input file in
+  the code. Though it's possible that it was generated from the raw
+  `coptwrd.tsv` using an earlier version of the script, and blindly used
+  afterwards. It has been abandoned in the interest of keeping a single source
+  of truth, and due to the fact that it contains a subset of the data.
+
+- `coptwrd.txt.anki.txt` in an Anki dataset derived from `coptwrd.txt`.
+
+- `marcion-crum.tsv` is obtained from the raw `coptwrd.tsv` by augmenting the
+  data with extra columns containing a unicode version of the `word` column,
+  and a per-dialect column.
+
+#### (planned) `dawoud-raw`
+
+This directory contains raw data from Moawad Dawoud's dictionary.
+
+#### (planned) `dawoud-input`
+
+This directory contains curated data from Moawad Dawoud's dictionary.
+
+#### (planned) `notes`
+
+This directory contains notes. We can exercise full liberty over the contents
+of this file.
+
+### Undialected Entries
+
+The following entries have no dialect specified in Crum, so they are treated as
+part of all dialects.
+
+1. https://pishoyg.github.io/crum/1274.html
+2. https://pishoyg.github.io/crum/1292.html
+3. https://pishoyg.github.io/crum/1367.html
+4. https://pishoyg.github.io/crum/1462.html
+5. https://pishoyg.github.io/crum/1553.html
+6. https://pishoyg.github.io/crum/1555.html
+7. https://pishoyg.github.io/crum/1557.html
+8. https://pishoyg.github.io/crum/1558.html
+9. https://pishoyg.github.io/crum/1657.html
+10. https://pishoyg.github.io/crum/1659.html
+11. https://pishoyg.github.io/crum/1712.html
+12. https://pishoyg.github.io/crum/1957.html
+13. https://pishoyg.github.io/crum/2074.html
+14. https://pishoyg.github.io/crum/2075.html
+15. https://pishoyg.github.io/crum/2076.html
+16. https://pishoyg.github.io/crum/2077.html
+17. https://pishoyg.github.io/crum/2078.html
+18. https://pishoyg.github.io/crum/2079.html
+19. https://pishoyg.github.io/crum/2081.html
+20. https://pishoyg.github.io/crum/2082.html
+21. https://pishoyg.github.io/crum/2084.html
+22. https://pishoyg.github.io/crum/2085.html
+23. https://pishoyg.github.io/crum/2086.html
+24. https://pishoyg.github.io/crum/2087.html
+25. https://pishoyg.github.io/crum/2088.html
+26. https://pishoyg.github.io/crum/2090.html
+27. https://pishoyg.github.io/crum/2091.html
+28. https://pishoyg.github.io/crum/2092.html
+29. https://pishoyg.github.io/crum/2093.html
+30. https://pishoyg.github.io/crum/2195.html
+31. https://pishoyg.github.io/crum/2205.html
+32. https://pishoyg.github.io/crum/2832.html
+33. https://pishoyg.github.io/crum/3117.html
+34. https://pishoyg.github.io/crum/3230.html
+35. https://pishoyg.github.io/crum/3231.html
+36. https://pishoyg.github.io/crum/3257.html
+37. https://pishoyg.github.io/crum/3302.html
+
+## copticocc.org
+
+`dawoud-D100/` contains scans of Moawad Dawoud's dictionary. They are obtained
+from the PDF using the following imagemagick command (The density used is 100,
+hence the prefix `-D100`.):
+
+```bash
+convert -density 100 -colorspace sRGB dawoud.pdf %d.jpg
+```
+
+The PDF was obtained [from the Coptic Treasures
+website](https://coptic-treasures.com/book/coptic-dictionary-moawad-abd-al-nour/).
+
+# bible
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [Data](#data)
+  - [Output Directories](#output-directories)
+  - [Output Files](#output-files)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+There are several published versions of the Coptic Bible. The most
+recent, and most complete, is that of [St. Shenouda the Archmandrite
+Coptic Society](stshenouda.org). It is the Coptic Bible project that is
+most worthy of investment at the moment.
+
+## Data
+
+The `data/` directory contains raw (input) and output data.
+
+The raw data was obtained from the Coptic Bible app published by [St. Shenouda
+the Archimandrite Coptic Society](http://www.stshenouda.org/). (Download for
+[iOS](https://apps.apple.com/us/app/coptic-bible/id1555182007),
+[Android](https://play.google.com/store/apps/details?id=com.xpproductions.copticbible&hl=en&gl=US).)
+
+### Output Directories
+
+We produce the following output formats:
+
+- `data/output/csv/`: A CSV (comma-separated values) file.
+
+- `data/output/html*/`: HTML files (viewable in the browser).
+
+- `data/output/epub*/`: EPUB files (suited for ebook readers).
+
+### Output Files
+
+Each of the output directories can contain several times that fall into one of
+three categories:
+
+- The files named `bible.${FORMAT}` contain the full data.
+
+- The files named `${LANGUAGE}.${FORMAT}` contain data for a specific language.
+
+- The files named `${LANGUAGE}_${LANGUAGE}.${FORMAT}` contain parallel data for
+  a pair of languages. (Usually Bohairic-English is the pair of interest,
+though you can control which pair(s) get generated using the CLI arguments.)
+
+# flashcards
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+- [flashcards](#flashcards)
+
+- [Anki Keys and Synchronization](#anki-keys-and-synchronization)
+- [Type Enforcement](#type-enforcement)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Anki Keys and Synchronization
+
+When you import a package into your (personal) Anki database, Anki uses the
+IDs to eliminate duplicates.
+
+Uniqueness is therefore important. But what is trickier, and perhaps more
+important, is persistence. If we export new versions of a certain deck
+regularly, we should maintain persistent IDs to ensure correct
+synchronization. Otherwise, identical pieces of data that have distinct IDs
+will result in duplicates.
+
+There are three types of IDs in the generated package:
+
+1. Note ID
+
+`genanki`
+[suggests](https://github.com/kerrickstaley/genanki?tab=readme-ov-file#note-guids)
+defining the GUID as a hash of a subset of fields that uniquely identify a
+note.
+
+**The GUID must be unique across decks.** Therefore, this subset of field
+values must be unique, including across decks. You can solve this by
+prefixing the keys with the name of the deck.
+
+In our script, we ask the user to provide a list of keys as part of their
+input, along the list of fronts, backs, deck names, ... etc.
+The users of the package must assign the keys properly, ensuring uniqueness,
+and refraining from changing / reassigning them afterwards.
+
+This is somewhat straightforward for Marcion's words. Use of Marcion's IDs
+for synchronization should suffice.
+
+For the Bible, we could use the verse reference as a note ID, and ensure
+that the book names, chapter numbers, and verse numbers don't change in a
+following version.
+
+For other data creators without programming expertise, a sequence number
+works as long as nobody inserts a new row in the middle of the CSV, which
+would mess up the keys. **Discuss keying with those creators.** *As of today,
+only copticsite.com's data has this problem.*
+
+1. Deck ID
+
+Whenever possible, we use a hardcoded deck ID. This is not possible for
+decks that are autogenerated, such as the Bible decks which are separated
+for nesting (as opposed to being grouped in a single deck). In such cases,
+we use a hash of the deck name, and **the deck name becomes a protected
+field.**
+
+1. Model ID
+
+Model IDs are hardcoded.
+
+## Type Enforcement
+
+Set `ENABLED = True` in `enforcer.py` during development in order to enable
+type enforcement. It is disabled in production due to the high cost.
