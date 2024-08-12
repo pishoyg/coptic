@@ -286,7 +286,7 @@ def crum(
                         '.html">prev</a>',
                     ),
                     field.fmt(
-                        """ </td> <td><b>key: </b><a href="{key_link}">{key}</a></td> <td>""",
+                        """ </td> <td><a href="{key_link}">{key}</a></td> <td>""",
                         {
                             "key": roots_col("key", force=True),
                             "key_link": roots_col("key-link", force=True),
