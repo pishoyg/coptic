@@ -45,5 +45,5 @@ if ${AUTO}; then
   git -C "${SITE_DIR}" push --force
 else
   # shellcheck disable=SC2016
-  echo -e '\033[0;32m' Run '\033[0;33m' 'git -C "${SITE_DIR}" rebase --root --autosquash && git -C "${SITE_DIR}" push --force'
+  echo -e "${GREEN}" Run "${YELLOW}" 'git -C "${SITE_DIR}" rebase --root --autosquash && git -C "${SITE_DIR}" push --force'
 fi

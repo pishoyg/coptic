@@ -18,7 +18,7 @@ repos:
     hooks:
       - id: python-unittest-exists
         name: python-unittest-exists
-        entry: bash -c 'for FILE in "$@"; do DIRNAME="$(dirname "${FILE}")" && if [[ "$(basename "${DIRNAME}")" != "test" ]]; then TEST="${DIRNAME}/test/test_$(basename "${FILE}")" && if [ ! -f "${TEST}" ]; then echo -e "\033[0;31m" Please create a unit test in "\033[0;33m" "${TEST}" "\033[0;31m" and import "\033[0;33m" "${FILE}" "\033[0m" && exit 1; fi; else INIT="${DIRNAME}/__init__.py" && if [ ! -f "${INIT}" ]; then echo -e "\033[0;31m" You forgot "\033[0;33m" "${INIT}" "\033[0m" && exit 1; fi; fi; done' --
+        entry: bash -c 'for FILE in "$@"; do DIRNAME="$(dirname "${FILE}")" && if [[ "$(basename "${DIRNAME}")" != "test" ]]; then TEST="${DIRNAME}/test/test_$(basename "${FILE}")" && if [ ! -f "${TEST}" ]; then echo -e "${RED}" Please create a unit test in "${YELLOW}" "${TEST}" "${RED}" and import "${YELLOW}" "${FILE}" "${RESET}" && exit 1; fi; else INIT="${DIRNAME}/__init__.py" && if [ ! -f "${INIT}" ]; then echo -e "${RED}" You forgot "${YELLOW}" "${INIT}" "${RESET}" && exit 1; fi; fi; done' --
         language: system
         types: [python]
         verbose: true
@@ -167,7 +167,7 @@ repos:
         pass_filenames: false
       - id: stats
         name: stats
-        entry: bash -c 'if (( $(date +%s) - $(tail -n 1 stats.tsv | cut --fields 2) >= 86400 )); then echo -e "\033[0;31m" Run "\033[0;33m" \`make stats\` "\033[0;31m" or "\033[0;33m" \`touch stats.tsv\`"\033[0;31m"\. "\033[0m" && exit 1; fi'
+        entry: bash -c 'if (( $(date +%s) - $(tail -n 1 stats.tsv | cut --fields 2) >= 86400 )); then echo -e "${RED}" Run "${YELLOW}" \`make stats\` "${RED}" or "${YELLOW}" \`touch stats.tsv\`"${RED}"\. "${RESET}" && exit 1; fi'
         language: system
         pass_filenames: false
         always_run: true
@@ -179,6 +179,6 @@ repos:
         verbose: true
       - id: check-do-not-submit
         name: check-do-not-submit
-        entry: bash -c 'check_do_not_submit () { for FILE in "$@"; do DO_NOT_SUBMIT="$(grep "DO NOT SUBMIT" --files-with-matches "${FILE}")" && [ -z "${DO_NOT_SUBMIT}" ] || (echo -e "\033[0;31m" "DO NOT SUBMIT" markers found in "\033[0;33m" "${DO_NOT_SUBMIT}" "\033[0m" && exit 1); done }; check_do_not_submit' --
+        entry: bash -c 'check_do_not_submit () { for FILE in "$@"; do DO_NOT_SUBMIT="$(grep "DO NOT SUBMIT" --files-with-matches "${FILE}")" && [ -z "${DO_NOT_SUBMIT}" ] || (echo -e "${RED}" "DO NOT SUBMIT" markers found in "${YELLOW}" "${DO_NOT_SUBMIT}" "${RESET}" && exit 1); done }; check_do_not_submit' --
         language: system
         exclude: ^\.pre-commit-config\.yaml$

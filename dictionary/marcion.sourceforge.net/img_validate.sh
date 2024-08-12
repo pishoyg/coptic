@@ -3,16 +3,8 @@
 set -o errexit  # Exit upon encountering a failure.
 set -o nounset  # Consider an undefined variable to be an error.
 
-# shellcheck disable=SC2034
-GREEN="\033[0;32m"
-# shellcheck disable=SC2034
-RED="\033[0;31m"
-# shellcheck disable=SC2034
-YELLOW="\033[0;33m"
-RESET_COLOR="\033[0m"
-
 color () {
-  echo -e "${!1}${*:2}${RESET_COLOR}"
+  echo -e "${!1}${*:2}${RESET}"
 }
 
 IMG_DIR="dictionary/marcion.sourceforge.net/data/img"
