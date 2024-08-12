@@ -1,5 +1,5 @@
 # N.B. If you update .gitignore, make sure to update the `git_clean` rule in
-# Makefile.
+# Makefile, and the loc function in stats.sh.
 
 # Garbage.
 .DS_Store
