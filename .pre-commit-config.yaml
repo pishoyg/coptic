@@ -167,7 +167,7 @@ repos:
         pass_filenames: false
       - id: stats
         name: stats
-        entry: bash -c 'if (( $(date +%s) - $(tail -n 1 stats.tsv | cut --fields 2) >= 86400 )); then echo -e "${RED}" Run "${YELLOW}" \`make stats\` "${RED}" or "${YELLOW}" \`touch stats.tsv\`"${RED}"\. "${RESET}" && exit 1; fi'
+        entry: bash -c 'if (( $(date +%s) - $(tail -n 1 stats.tsv | cut --fields 2) >= 86400 )); then echo -e "${RED}" Run "${YELLOW}" \`make stats\`"${RED}"\."${RESET}" && exit 1; fi'
         language: system
         pass_filenames: false
         always_run: true
