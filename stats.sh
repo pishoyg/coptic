@@ -41,12 +41,16 @@ MARCION_DAWOUD=$(cut --fields=2,3 \
   < dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv \
   | grep --invert -E '^[[:space:]]*$' --count)
 
-echo "Number of lines of code:"
-echo "${LOC}"
-echo "Number of words possessing at least one image:"
-echo "${MARCION_IMG}"
-echo "Number of words that have at least one page from Dawoud:"
-echo "${MARCION_DAWOUD}"
+# shellcheck disable=SC2140
+echo -e "${BLUE}Number of lines of code: "\
+"${GREEN}${LOC}${BLUE}."
+# shellcheck disable=SC2140
+echo -e "${BLUE}Number of words possessing at least one image: "\
+"${GREEN}${MARCION_IMG}${BLUE}."
+# shellcheck disable=SC2140
+echo -e "${BLUE}Number of words that have at least one page from Dawoud: "\
+"${GREEN}${MARCION_DAWOUD}${BLUE}."
+echo -e "${RESET}"
 
 if ${SAVE}; then
   echo -e "$(date)\t$(date +%s)\t${LOC}\t${MARCION_IMG}\t${MARCION_DAWOUD}" \
