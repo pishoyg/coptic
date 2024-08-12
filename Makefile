@@ -1,22 +1,9 @@
 SHELL := /bin/bash
 
-# VAULT
+# .env
 #
-# If you know the secrets, then you can run the privileged tasks. They require
-# a set of variables to be exported. These are contained in a file,
-# (referred to as `vault.sh` although you can call it whatever you want), that
-# you need to source before running the privileged make rules.
-# ```
-# source vault.sh && make ${PRIVILEGED_RULE}
-# ```
-# Some variables are used by rules below, but they are not necessary for the
-# rules to run.
-# Most variables are trivial to replace with viable values. Some variables
-# (such as the Google Cloud API access token, required for communication with
-# Drive) require setting up your own account and destination in Drive. Relevant
-# scripts will have more information.
-#
-# See env.sh for more information.
+# N.B. Some rules require the environment variables to be exported.
+# See .env_INFO.
 
 # LEVELS
 #
@@ -257,7 +244,7 @@ git_clean: FORCE
 		-x \
 		-d \
 		--exclude "flashcards/data/output/anki/coptic.apkg" \
-		--exclude "vault.sh" \
+		--exclude ".env" \
 		--force
 
 git_status: FORCE

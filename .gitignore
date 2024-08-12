@@ -13,4 +13,6 @@ flashcards/data/output/anki/coptic.apkg
 
 # This contains secrets (authorization tokens for Drive, local file paths,
 # idiosyncratic flag values, ...).
-vault.sh
+# You have to create your own version of this file in order to be able to
+# execute some of the pipelines. See .env_INFO.
+.env

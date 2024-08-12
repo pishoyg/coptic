@@ -15,7 +15,7 @@
   - [Getting started](#getting-started)
   - [Directory Structure](#directory-structure)
   - [`data/`](#data)
-  - [`vault.sh`](#vaultsh)
+  - [`.env`](#env)
   - [Planning](#planning)
     - [Issues](#issues)
     - [Milestones](#milestones)
@@ -179,13 +179,12 @@ includes the data that we created ourselves.
 - `output/`: This contains the data written by our pipelines, **one subdirectory per format**. If your pipeline writes
 both TSV and HTML, they should go respectively to `output/tsv/` and `output/html/`.
 
-### `vault.sh`
+### `.env`
 
-`vault.sh` (which is hidden by a rule in `.gitignore`) contains variables
-that are used inside `Makefile`. Some `make` rules can only run if preceded by
-`source vault.sh` in order to export the variables needed for those rules.
-You need your own version of `vault.sh` in order to be able to run all the
-`make` rules. See `env.sh` for more information.
+`.env` (which is hidden by a rule in `.gitignore`) contains the environment
+variables. They are essential for some pipelines.
+
+It is documented in `.env_INFO`, so this README section is intentionally brief.
 
 ### Planning
 
