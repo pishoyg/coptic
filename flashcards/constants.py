@@ -276,7 +276,7 @@ def crum(
         key=roots_col("key", force=True),
         front=field.apl(
             cdo,
-            field.cat(
+            field.aon(
                 # Header.
                 field.cat(
                     f"""<table style="width: 100%; table-layout: fixed;"> <tr> <td><a href="{HOME}">home</a></td> <td>""",
