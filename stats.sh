@@ -152,13 +152,13 @@ if [ -n "${DIFF}" ]; then
 fi
 
 # shellcheck disable=SC2010  # Allow grep after ls.
-MARCION_IMG=$(ls dictionary/marcion.sourceforge.net/data/img/ \
+CRUM_IMG=$(ls dictionary/marcion.sourceforge.net/data/img/ \
   | grep -oE '^[0-9]+' \
   | sort \
   | uniq \
   | wc --lines)
 
-MARCION_DAWOUD=$(cut --fields=2,3 \
+CRUM_DAWOUD=$(cut --fields=2,3 \
   < dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv \
   | grep --invert -E '^[[:space:]]*$' --count)
 
@@ -183,17 +183,17 @@ echo -e "${BLUE}Number of lines of code: "\
 
 # shellcheck disable=SC2140
 echo -e "${BLUE}Number of words possessing at least one image: "\
-"${GREEN}${MARCION_IMG}${BLUE}."
+"${GREEN}${CRUM_IMG}${BLUE}."
 
 # shellcheck disable=SC2140
 echo -e "${BLUE}Number of words that have at least one page from Dawoud: "\
-"${GREEN}${MARCION_DAWOUD}${BLUE}."
+"${GREEN}${CRUM_DAWOUD}${BLUE}."
 
 # shellcheck disable=SC2140
 echo -e "${BLUE}Number of Crum typos fixed: "\
   "${GREEN}${CRUM_TYPOS}${BLUE}."
 
 if ${SAVE}; then
-  echo -e "$(date)\t$(date +%s)\t${LOC}\t${MARCION_IMG}\t${MARCION_DAWOUD}\t${LOC_CRUM}\t${LOC_COPTICSITE}\t${LOC_KELLIA}\t${LOC_BIBLE}\t${LOC_FLASHCARDS}\t${LOC_GRAMMAR}\t${LOC_KEYBOARD}\t${LOC_MORPHOLOGY}\t${LOC_SITE}\t${LOC_SHARED}\t${LOC_ARCHIVE}\t${CRUM_TYPOS}" \
+  echo -e "$(date)\t$(date +%s)\t${LOC}\t${CRUM_IMG}\t${CRUM_DAWOUD}\t${LOC_CRUM}\t${LOC_COPTICSITE}\t${LOC_KELLIA}\t${LOC_BIBLE}\t${LOC_FLASHCARDS}\t${LOC_GRAMMAR}\t${LOC_KEYBOARD}\t${LOC_MORPHOLOGY}\t${LOC_SITE}\t${LOC_SHARED}\t${LOC_ARCHIVE}\t${CRUM_TYPOS}" \
     >> stats.tsv
 fi
