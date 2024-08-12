@@ -3,10 +3,6 @@
 set -o errexit  # Exit upon encountering a failure.
 set -o nounset  # Consider an undefined variable to be an error.
 
-color () {
-  echo -e "${!1}${*:2}${RESET}"
-}
-
 IMG_DIR="dictionary/marcion.sourceforge.net/data/img"
 IMG_300_DIR="dictionary/marcion.sourceforge.net/data/img-300"
 IMG_SOURCES_DIR="dictionary/marcion.sourceforge.net/data/img-sources"
