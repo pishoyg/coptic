@@ -139,6 +139,8 @@ TOTAL="$((
   + LOC_SITE
   + LOC_SHARED))"
 
+DELTA=$(( LOC - TOTAL ))
+
 # shellcheck disable=SC2140
 EXTENSIONS="$(extensions .)"
 DIFF=$(comm -23 <(echo "${EXTENSIONS}") <(echo "${KNOWN_EXTENSIONS}" | tr ' ' '\n' | sort) | tr '\n' ' ')
@@ -185,8 +187,12 @@ echo -e "${BLUE}Number of lines of code: "\
 "\n  ${BLUE}SITE: ${GREEN}${LOC_SITE}"\
 "\n  ${BLUE}SHARED: ${GREEN}${LOC_SHARED}"\
 "\n  ${BLUE}ARCHIVE: ${GREEN}${LOC_ARCHIVE}"\
-"\n  ${BLUE}Total: ${GREEN}${TOTAL}"\
-"\n  ${BLUE}Delta: ${GREEN}$(( LOC - TOTAL ))"
+"\n  ${BLUE}Total: ${GREEN}${TOTAL}"
+
+if [ "${DELTA}" != "0" ]; then
+  echo -e "${PURPLE}The total doesn't equal the sum of the parts, delta is ${RED}${DELTA}${PURPLE}.${RESET}"
+  exit 1
+fi
 
 # shellcheck disable=SC2140
 echo -e "${BLUE}Number of words possessing at least one image: "\
