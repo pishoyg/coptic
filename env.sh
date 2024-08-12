@@ -54,8 +54,8 @@ export SKIP_EXISTING=""
 export THENOUNPROJECT_KEY=""
 export THENOUNPROJECT_SECRET=""
 
-bohairic () {
-  open "flashcards/data/output/html/a_coptic_dictionary__bohairic/${1}.html"
+flash () {
+  open "https://pishoyg.github.io/crum/${1}.html"
 }
 
 # Colors are used to prettify outputs.
