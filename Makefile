@@ -85,6 +85,12 @@ camera: camera_images
 .PHONY: yo
 yo: say_yo
 
+.PHONY: env_backup
+env_backup: env_cp_to_home
+
+.PHONY: env_restore
+env_restore: env_cp_from_home
+
 .PHONY: notify
 notify: git_add_precommit_run git_status say_yo
 # LEVEL 1 RULES ###############################################################
@@ -232,6 +238,12 @@ precommit_run: FORCE
 
 git_add_precommit_run git_add_precommit_run_1: FORCE
 	until git add --all && pre-commit run; do : ; done
+
+env_cp_to_home: FORCE
+	cp .env "$${HOME}/.env_coptic"
+
+env_cp_from_home: FORCE
+	cp "$${HOME}/.env_coptic" .env
 
 precommit_update: FORCE
 	pre-commit autoupdate
