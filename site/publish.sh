@@ -3,6 +3,20 @@
 set -o errexit  # Exit upon encountering a failure.
 set -o nounset  # Consider an undefined variable to be an error.
 
+AUTO=false
+while [ $# -gt 0 ]; do
+  case $1 in
+  --auto)
+    AUTO=true
+    ;;
+  *)
+    echo "Unknown flag: ${1}"
+    exit 1
+    ;;
+  esac
+  shift
+done
+
 if [ -n "$(git -C "${SITE_DIR}" status --short)" ]; then
   echo "Git repo is dirty. This should be done in a standalone commit."
   exit 1
@@ -24,5 +38,12 @@ cp -r \
   "${BIBLE_DIR}"
 
 git -C "${SITE_DIR}" add --all
-git -C "${SITE_DIR}" commit -m "AUTOMATED COMMIT"
-git -C "${SITE_DIR}" push
+git -C "${SITE_DIR}" commit --fixup HEAD
+
+if ${AUTO}; then
+  git -C "${SITE_DIR}" rebase --root --autosquash
+  git -C "${SITE_DIR}" push --force
+else
+  # shellcheck disable=SC2016
+  echo -e '\033[0;32m' Run '\033[0;33m' 'git -C "${SITE_DIR}" rebase --root --autosquash && git -C "${SITE_DIR}" push --force'
+fi
