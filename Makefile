@@ -132,8 +132,7 @@ crum_notes: FORCE
 		> "dictionary/marcion.sourceforge.net/data/notes/notes.tsv"
 
 crum_img: $(shell find dictionary/marcion.sourceforge.net/data/ -type f)
-	bash dictionary/marcion.sourceforge.net/img_setup.sh \
-		$${SKIP_EXISTING} $${MANUAL_SOURCES}
+	bash dictionary/marcion.sourceforge.net/img_setup.sh
 
 crum_img_find: FORCE
 	# TODO: Remove the filters. Do all the words.
@@ -205,9 +204,9 @@ mobi_publish:
 	"$${KINDLE_DIR}"
 else
 kindle: FORCE
-	echo "Work in prgress!"
+	echo -e "$${YELLOW}Work in prgress!$${RESET}"
 mobi_publish:
-	echo "Work in prgress!"
+	echo -e "$${YELLOW}Work in prgress!$${RESET}"
 endif
 
 # SITE RULES
@@ -221,14 +220,14 @@ bin_install:
 	if ! command -v magick &> /dev/null; then echo "Please install magick from https://imagemagick.org/." && exit 1; fi
 
 pip_install: requirements.txt
-	python -m pip install --upgrade pip "$${BREAK_SYSTEM_PACKAGES}"
-	python -m pip install -r requirements.txt "$${BREAK_SYSTEM_PACKAGES}"
+	python -m pip install --upgrade pip
+	python -m pip install -r requirements.txt
 
 pip_update: FORCE
 	pip-review --local --auto
 
 python_install:
-	python -m pip install -e . "$${BREAK_SYSTEM_PACKAGES}"
+	python -m pip install -e .
 
 precommit_install:
 	pre-commit install
