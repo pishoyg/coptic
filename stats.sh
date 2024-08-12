@@ -102,6 +102,15 @@ loc_archive () {
     | while read -r FILE; do cat "${FILE}"; done | wc --lines
 }
 
+diff_lines() {
+  diff --suppress-common-lines --speed-large-files --side-by-side "${1}" "${2}" | wc --lines
+}
+
+crum_typos() {
+  PARENT="dictionary/marcion.sourceforge.net/data"
+  diff_lines "${PARENT}/marcion-input/${1}" "${PARENT}/marcion-raw/${1}"
+}
+
 LOC_ARCHIVE=$(loc_archive)
 
 LOC=$(( $(loc .) + LOC_ARCHIVE))
@@ -130,6 +139,18 @@ TOTAL="$((
   + LOC_SITE
   + LOC_SHARED))"
 
+# shellcheck disable=SC2140
+EXTENSIONS="$(extensions .)"
+DIFF=$(comm -23 <(echo "${EXTENSIONS}") <(echo "${KNOWN_EXTENSIONS}" | tr ' ' '\n' | sort) | tr '\n' ' ')
+if [ -n "${DIFF}" ]; then
+  echo -e "${PURPLE}Unknown extensions:"
+  echo -e "${RED}  ${DIFF}"
+  echo -e "${PURPLE}Lines of code statistics may become inaccurate. Add them to"
+  echo -e "list of known extension if they represent code, otherwise exclude them"
+  echo -e "from the stat.${RESET}"
+  exit 1
+fi
+
 # shellcheck disable=SC2010  # Allow grep after ls.
 MARCION_IMG=$(ls dictionary/marcion.sourceforge.net/data/img/ \
   | grep -oE '^[0-9]+' \
@@ -140,6 +161,8 @@ MARCION_IMG=$(ls dictionary/marcion.sourceforge.net/data/img/ \
 MARCION_DAWOUD=$(cut --fields=2,3 \
   < dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv \
   | grep --invert -E '^[[:space:]]*$' --count)
+
+CRUM_TYPOS=$(( $(crum_typos "coptwrd.tsv") + $(crum_typos "coptdrv.tsv") ))
 
 # shellcheck disable=SC2140
 echo -e "${BLUE}Number of lines of code: "\
@@ -161,22 +184,16 @@ echo -e "${BLUE}Number of lines of code: "\
 # shellcheck disable=SC2140
 echo -e "${BLUE}Number of words possessing at least one image: "\
 "${GREEN}${MARCION_IMG}${BLUE}."
+
 # shellcheck disable=SC2140
 echo -e "${BLUE}Number of words that have at least one page from Dawoud: "\
 "${GREEN}${MARCION_DAWOUD}${BLUE}."
+
 # shellcheck disable=SC2140
-EXTENSIONS="$(extensions .)"
-DIFF=$(comm -23 <(echo "${EXTENSIONS}") <(echo "${KNOWN_EXTENSIONS}" | tr ' ' '\n' | sort) | tr '\n' ' ')
-if [ -n "${DIFF}" ]; then
-  echo -e "${PURPLE}Unknown extensions:"
-  echo -e "${RED}  ${DIFF}"
-  echo -e "${PURPLE}Lines of code statistics may become inaccurate. Add them to"
-  echo -e "list of known extension if they represent code, otherwise exclude them"
-  echo -e "from the stat.${RESET}"
-  exit 1
-fi
+echo -e "${BLUE}Number of Crum typos fixed: "\
+  "${GREEN}${CRUM_TYPOS}${BLUE}."
 
 if ${SAVE}; then
-  echo -e "$(date)\t$(date +%s)\t${LOC}\t${MARCION_IMG}\t${MARCION_DAWOUD}\t${LOC_CRUM}\t${LOC_COPTICSITE}\t${LOC_KELLIA}\t${LOC_BIBLE}\t${LOC_FLASHCARDS}\t${LOC_GRAMMAR}\t${LOC_KEYBOARD}\t${LOC_MORPHOLOGY}\t${LOC_SITE}\t${LOC_SHARED}\t${LOC_ARCHIVE}" \
+  echo -e "$(date)\t$(date +%s)\t${LOC}\t${MARCION_IMG}\t${MARCION_DAWOUD}\t${LOC_CRUM}\t${LOC_COPTICSITE}\t${LOC_KELLIA}\t${LOC_BIBLE}\t${LOC_FLASHCARDS}\t${LOC_GRAMMAR}\t${LOC_KEYBOARD}\t${LOC_MORPHOLOGY}\t${LOC_SITE}\t${LOC_SHARED}\t${LOC_ARCHIVE}\t${CRUM_TYPOS}" \
     >> stats.tsv
 fi
