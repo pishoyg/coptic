@@ -44,6 +44,12 @@ def error(*args):
 
 
 @type_enforced.Enforcer(enabled=ENFORCED)
+def fatal(*args):
+    _print(colorama.Fore.RED, "fatal", colorama.Fore.MAGENTA, *args)
+    exit(1)
+
+
+@type_enforced.Enforcer(enabled=ENFORCED)
 def write(content: str, path: str, log: bool = True) -> None:
     with open(path, "w") as f:
         f.write(content)
@@ -123,3 +129,22 @@ def html_text(html: str) -> str:
 def read(path: str) -> str:
     with open(path) as f:
         return f.read()
+
+
+@type_enforced.Enforcer(enabled=ENFORCED)
+def paths(dir: str) -> list[str]:
+    return [os.path.join(dir, f) for f in os.listdir(dir)]
+
+
+@type_enforced.Enforcer(enabled=ENFORCED)
+def stem(path: str) -> str:
+    path = os.path.basename(path)
+    stem, _ = os.path.splitext(path)
+    return stem
+
+
+@type_enforced.Enforcer(enabled=ENFORCED)
+def ext(path: str) -> str:
+    path = os.path.basename(path)
+    _, ext = os.path.splitext(path)
+    return ext
