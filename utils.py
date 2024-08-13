@@ -55,7 +55,9 @@ def fatal(*args):
 
 
 @type_enforced.Enforcer(enabled=ENFORCED)
-def write(content: str, path: str, log: bool = True) -> None:
+def write(content: str, path: str, log: bool = True, fix_newline: bool = True) -> None:
+    if fix_newline and (not content or content[-1] != "\n"):
+        content += "\n"
     with open(path, "w") as f:
         f.write(content)
     if not log:
