@@ -94,26 +94,30 @@ suppress(() => {
         el.classList.add('very-light');
       }
     });
-    navigateQuery = "?d=" + dialects.filter((d) => {
+
+    const query = dialects.filter((d) => {
       return dialectStyle.get(d) == 'heavy';
     }).join(',');
     function update(href) {
       const url = new URL(href);
       url.searchParams.delete('d');
-      return url.toString() + navigateQuery;
+      return url.toString() + (query ? "?d=" + query : "");
     }
     document.querySelectorAll('.navigate').forEach((el) => {
       el.setAttribute('href', update(el.getAttribute('href')));
     });
     window.history.pushState("", "", update(window.location.href));
+    localStorage.setItem("d", query);
   }
   var els = document.getElementsByClassName('dialect');
   Array.prototype.forEach.call(els, (btn) => {
     btn.classList.add('hover-link');
     btn.onclick = () => { dialect(btn.innerHTML); };
   });
-  d = (new URLSearchParams(window.location.search)).get('d');
-  if (d !== undefined) {
+  local_d = localStorage.getItem("d");
+  url_d = (new URLSearchParams(window.location.search)).get('d');
+  d = url_d ? url_d : local_d;
+  if (d) {
     d.split(',').forEach(dialect);
   }
 });
