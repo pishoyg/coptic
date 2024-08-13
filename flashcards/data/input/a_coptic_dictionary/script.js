@@ -1,3 +1,10 @@
+function suppress(func) {
+  try {
+    func();
+  } catch (err) {
+  }
+}
+
 // Handle 'crum-page' class.
 var els = document.getElementsByClassName('crum-page');
 Array.prototype.forEach.call(els, function(btn) {
@@ -51,59 +58,61 @@ Array.prototype.forEach.call(els, function(btn) {
 });
 
 // Handle the 'dialect' class.
-const dialects = ['S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
-const dialectStyle = new Map();
-dialects.forEach((d) => { dialectStyle.set(d, ''); });
-function toggle(d) {
-  dialectStyle.set(d, dialectStyle.get(d) == '' ? 'heavy' : '');
-}
-function shouldHeavy(el) {
-  return dialects.some((d) => {
-    return dialectStyle.get(d) == 'heavy' && el.classList.contains(d);
-  });
-}
-function dialected(el) {
-  return dialects.some((d) => {
-    return el.classList.contains(d);
-  });
-}
-function dialect(d) {
-  document.querySelectorAll(
-    '.dialect-parenthesis,.dialect-comma,.spelling-comma,.type').forEach((el) => {
-    el.classList.add('very-light');
-  });
-  toggle(d);
-  document.querySelectorAll('.dialect,.spelling').forEach((el) => {
-    if (!dialected(el)) {
-      return;
-    }
-    if (shouldHeavy(el)) {
-      el.classList.remove('very-light');
-      el.classList.add('heavy');
-    } else {
-      el.classList.remove('heavy');
-      el.classList.add('very-light');
-    }
-  });
-  navigateQuery = "?d=" + dialects.filter((d) => {
-    return dialectStyle.get(d) == 'heavy';
-  }).join(',');
-  function update(href) {
-    const url = new URL(href);
-    url.searchParams.delete('d');
-    return url.toString() + navigateQuery;
+suppress(() => {
+  const dialects = ['S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
+  const dialectStyle = new Map();
+  dialects.forEach((d) => { dialectStyle.set(d, ''); });
+  function toggle(d) {
+    dialectStyle.set(d, dialectStyle.get(d) == '' ? 'heavy' : '');
   }
-  document.querySelectorAll('.navigate').forEach((el) => {
-    el.setAttribute('href', update(el.getAttribute('href')));
+  function shouldHeavy(el) {
+    return dialects.some((d) => {
+      return dialectStyle.get(d) == 'heavy' && el.classList.contains(d);
+    });
+  }
+  function dialected(el) {
+    return dialects.some((d) => {
+      return el.classList.contains(d);
+    });
+  }
+  function dialect(d) {
+    document.querySelectorAll(
+      '.dialect-parenthesis,.dialect-comma,.spelling-comma,.type').forEach((el) => {
+      el.classList.add('very-light');
+    });
+    toggle(d);
+    document.querySelectorAll('.dialect,.spelling').forEach((el) => {
+      if (!dialected(el)) {
+        return;
+      }
+      if (shouldHeavy(el)) {
+        el.classList.remove('very-light');
+        el.classList.add('heavy');
+      } else {
+        el.classList.remove('heavy');
+        el.classList.add('very-light');
+      }
+    });
+    navigateQuery = "?d=" + dialects.filter((d) => {
+      return dialectStyle.get(d) == 'heavy';
+    }).join(',');
+    function update(href) {
+      const url = new URL(href);
+      url.searchParams.delete('d');
+      return url.toString() + navigateQuery;
+    }
+    document.querySelectorAll('.navigate').forEach((el) => {
+      el.setAttribute('href', update(el.getAttribute('href')));
+    });
+    window.history.pushState("", "", update(window.location.href));
+  }
+  var els = document.getElementsByClassName('dialect');
+  Array.prototype.forEach.call(els, (btn) => {
+    btn.classList.add('hover-link');
+    btn.onclick = () => { dialect(btn.innerHTML); };
   });
-  window.history.pushState("", "", update(window.location.href));
-}
-var els = document.getElementsByClassName('dialect');
-Array.prototype.forEach.call(els, (btn) => {
-  btn.classList.add('hover-link');
-  btn.onclick = () => { dialect(btn.innerHTML); };
+  d = (new URLSearchParams(window.location.search)).get('d');
+  if (d !== undefined) {
+    d.split(',').forEach(dialect);
+  }
 });
-d = (new URLSearchParams(window.location.search)).get('d');
-if (d !== undefined) {
-  d.split(',').forEach(dialect);
-}
