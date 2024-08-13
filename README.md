@@ -16,6 +16,8 @@
     - [Directory Structure](#directory-structure)
     - [`data/`](#data)
     - [`.env`](#env)
+    - [`stats`](#stats)
+    - [Languages](#languages)
     - [Planning](#planning)
       - [Issues](#issues)
       - [Milestones](#milestones)
@@ -206,6 +208,39 @@ both TSV and HTML, they should go respectively to `output/tsv/` and `output/html
 variables. They are essential for some pipelines.
 
 It is documented in `.env_INFO`, so this README section is intentionally brief.
+
+### `stats`
+
+- We collect extensive stats, and we force them using a pre-commit. The primary
+  targets of our statistics are:
+  - The size of our code (represented by the number of lines of code). We also
+  collect this stat for each subproject or pipeline step independently.
+  - The number of data items we've collected for data collection tasks.
+  - We also record the number of commits, and the number of contributors.
+
+### Languages
+
+- Our pipelines are primarily written in Python. There is minimal logic in
+  Bash.
+
+- We have a strong bias for Python over Bash. Use Bash if you expect the number
+of lines of code of an equivalent Python piece to be significantly more.
+
+- We started using JavaScript for static web content, and we expect to make a
+similar platform-specific expansion into another territory for the app.
+
+- In the past, we voluntarily used Java (for an archived project). Won't happen
+again! We also used VBA and JS for Microsoft Excel and Google Sheet macros,
+because they were required by the platform (but those pieces are also archived
+at the moment).
+
+- It is desirable to strike a balance between the benefits of focusing on a
+small number of languages, and the different powers that different language can
+uniquely exhibit. We won't compromise the latter for the former. Use the
+*right* language for a task. When two languages can do a job equally well,
+uncompromisingly choose the one that is more familiar.
+
+- You can view some code statistics in `stats.sh`.
 
 ### Planning
 
