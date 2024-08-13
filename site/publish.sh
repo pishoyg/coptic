@@ -31,6 +31,8 @@ cp -r \
   flashcards/data/output/html/a_coptic_dictionary__all_dialects/* \
   "${CRUM_DIR}"
 
+rm -r "${BIBLE_DIR:?}"/*
+
 cp -r \
   bible/stshenouda.org/data/output/html/bohairic_english \
   bible/stshenouda.org/data/output/html/bohairic \
