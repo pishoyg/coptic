@@ -47,13 +47,13 @@ report: stats_report
 # not part of the main deployment pipeline.
 
 .PHONY: flashcards_crum_all_dialects
-flashcards_crum_all_dialects: flashcards_crum_all_dialects_html
+flashcards_crum_all_dialects: _flashcards_crum_all_dialects
 
 .PHONY: flashcards_copticsite
-flashcards_copticsite: flashcards_copticsite_html
+flashcards_copticsite: _flashcards_copticsite
 
 .PHONY: flashcards_kellia
-flashcards_kellia: flashcards_kellia_html
+flashcards_kellia: _flashcards_kellia
 
 .PHONY: bible_no_epub
 bible_no_epub: bible_no_epub_aux
@@ -166,7 +166,7 @@ anki_publish: $(shell find flashcards/data/output/anki/ -type f)
 		flashcards/data/output/anki/coptic.apkg \
 		"$${FLASHCARD_DIR}"
 
-flashcards_crum_all_dialects_html: FORCE
+_flashcards_crum_all_dialects: FORCE
 	python flashcards/main.py \
 		--decks "A Coptic Dictionary::All Dialects" \
 		--output_dir "/tmp/" \
@@ -174,7 +174,7 @@ flashcards_crum_all_dialects_html: FORCE
 		--html_mask "true" \
 		--tsvs_mask ""
 
-flashcards_copticsite_html: FORCE
+_flashcards_copticsite: FORCE
 	python flashcards/main.py \
 		--decks "copticsite.com" \
 		--output_dir "/tmp/" \
@@ -182,7 +182,7 @@ flashcards_copticsite_html: FORCE
 		--html_mask "true" \
 		--tsvs_mask ""
 
-flashcards_kellia_html: FORCE
+_flashcards_kellia: FORCE
 	python flashcards/main.py \
 		--decks "KELLIA::Comprehensive" "KELLIA::Egyptian" "KELLIA::Greek"\
 		--output_dir "/tmp/" \
