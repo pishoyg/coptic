@@ -33,10 +33,9 @@ SOURCES_DIR: str = "dictionary/marcion.sourceforge.net/data/img-sources/"
 
 EXT_MAP = {
     ".png": ".jpg",
-    ".svg": ".jpg",
 }
 
-VALID_EXTENSIONS = {".avif", ".gif", ".jpeg", ".jpg", ".JPG", ".png", ".webp", ".svg"}
+VALID_EXTENSIONS = {".avif", ".gif", ".jpeg", ".jpg", ".JPG", ".png", ".webp"}
 VALID_EXTENSIONS_300 = {".avif", ".gif", ".jpeg", ".jpg", ".JPG", ".webp"}
 
 
