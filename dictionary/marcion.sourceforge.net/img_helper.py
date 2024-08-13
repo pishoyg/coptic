@@ -251,6 +251,11 @@ def main():
     if args.validate:
         validate()
         exit()
+    prompt()
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def prompt():
 
     df = utils.read_tsvs(INPUT_TSVS)
     df.sort_values(by=KEY_COL, inplace=True)
