@@ -127,7 +127,7 @@ def read_tsvs(tsvs: str) -> pd.DataFrame:
 
 @type_enforced.Enforcer(enabled=ENFORCED)
 def html_text(html: str) -> str:
-    soup = bs4.BeautifulSoup(html)
+    soup = bs4.BeautifulSoup(html, "html.parser")
     return soup.get_text()
 
 
