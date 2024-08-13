@@ -326,7 +326,7 @@ def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
         deck_name=deck_name,
         deck_id=deck_id,
         deck_description=f"{HOME}\n{EMAIL}",
-        css=".card { text-align: center; font-size: 18px; }",
+        css=utils.read("flashcards/data/input/copticsite/style.css"),
         javascript="",
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
@@ -372,21 +372,7 @@ def kellia(deck_name: str, deck_id: int, basename: str) -> deck.deck:
         deck_name=deck_name,
         deck_id=deck_id,
         deck_description=f"{HOME}\n{EMAIL}",
-        css=".card { font-size: 18px; }"
-        ".table { display: block; width: 100%; text-align: center; }"
-        ".orth { min-width: 120px; }"
-        ".geo { text-align: center; color: darkred; min-width: 40px; }"
-        ".gram_grp { color: gray; font-style: italic; }"
-        ".sense_n { display: none; }"
-        ".sense_id { display: none; }"
-        ".quote { }"
-        ".definition { }"
-        ".bibl { color: gray; float: right; text-align: right; min-width: 100px; }"
-        ".ref { color: gray; }"
-        ".meaning { min-width: 220px; }"
-        ".ref_xr { }"
-        ".xr { color: gray; }"
-        ".lang { color: gray }",
+        css=utils.read("flashcards/data/input/kellia/style.css"),
         javascript="",
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
