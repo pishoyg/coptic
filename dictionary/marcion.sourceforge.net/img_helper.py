@@ -19,10 +19,9 @@ TARGET_WIDTH = 300
 MIN_WIDTH = 200
 IMG_DIR = "dictionary/marcion.sourceforge.net/data/img"
 IMG_300_DIR = "dictionary/marcion.sourceforge.net/data/img-300"
+
 FILE_NAME_RE = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
 STEM_RE = re.compile("[0-9]+-[0-9]+-[0-9]+")
-
-ASSIGN_SOURCE_RE = re.compile(r"^source\(([^=]+)\)=(.+)$")
 
 
 INPUT_TSVS: str = "dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs"
@@ -31,10 +30,13 @@ KEY_COL: str = "key"
 LINK_COL: str = "key-link"
 SOURCES_DIR: str = "dictionary/marcion.sourceforge.net/data/img-sources/"
 
+# NOTE: SVG conversion is nondeterministic, which is badly disruptive to our
+# pipelines, so we ban it.
+# PNG conversion is deterministic as long as it's converted to JPG, so we
+# accept it but convert it.
 EXT_MAP = {
     ".png": ".jpg",
 }
-
 VALID_EXTENSIONS = {".avif", ".gif", ".jpeg", ".jpg", ".JPG", ".png", ".webp"}
 VALID_EXTENSIONS_300 = {".avif", ".gif", ".jpeg", ".jpg", ".JPG", ".webp"}
 
@@ -44,9 +46,7 @@ def params_str(params: dict) -> str:
     return "?" + "&".join(f"{k}={v}" for k, v in params.items())
 
 
-# TODO: Reconsider the use of SVG images.
 # TODO: Download a higher-quality image instead of just the thumbnail.
-EXTENSION = "png"
 URL = "https://api.thenounproject.com/v2"
 SEARCH_PARAMS = {
     "query": "{query}",
@@ -62,15 +62,7 @@ WIKI_HEADERS = {
 }
 
 argparser = argparse.ArgumentParser(
-    description="""Find images for the dictionary words.
-The tool works as follows:
-1. For each word in the dictionary, search for the meaning of the word using a
-search engine.
-2. Give the user some time to download some images to a given downloads
-directory.
-3. Once the user comes back and hits the return button on the script, move the
-images to the destination directory.
-"""
+    description="""Find and process images for the dictionary words."""
 )
 
 argparser.add_argument(
@@ -222,13 +214,7 @@ def invalid_size(files: list[str]) -> list[str]:
     assert MIN_WIDTH > 0
     invalid = []
     for f in files:
-        try:
-            image = PIL.Image.open(f)
-        except PIL.UnidentifiedImageError:
-            utils.warn(
-                "Unable to verify the size for", f, "so relying on manual verification."
-            )
-            continue
+        image = PIL.Image.open(f)
         width, _ = image.size
         if width < MIN_WIDTH:
             invalid.append(f)
@@ -356,6 +342,7 @@ def prompt():
             ]
         )
 
+        assign_source_re = re.compile(r"^source\(([^=]+)\)=(.+)$")
         while True:
             # Force read a valid sense, or no sense at all.
             g = existing()
@@ -448,7 +435,7 @@ def prompt():
                 os.remove(get_target(path))
                 continue
 
-            source_search = ASSIGN_SOURCE_RE.search(sense)
+            source_search = assign_source_re.search(sense)
             if source_search:
                 sources[source_search.group(1)] = source_search.group(2)
                 continue
@@ -503,6 +490,16 @@ def prompt():
 
             files = get_downloads()
 
+            # Force valid extension.
+            invalid = [e for e in map(utils.ext, files) if e not in VALID_EXTENSIONS]
+            if invalid:
+                utils.error(
+                    "Invalid extensions:",
+                    invalid,
+                    "Add them to the list if you're sure your script can process them.",
+                )
+                continue
+
             # Force size.
             invalid = invalid_size(files)
             if invalid:
@@ -516,7 +513,6 @@ def prompt():
                     utils.error("Please populate the source for:", file)
                     absent_source = True
             if absent_source:
-                utils.info("Known sources:", sources)
                 continue
 
             # If there are no files, we assume that the user doesn't want to
