@@ -1,58 +1,65 @@
 
-window.addEventListener("load", function() {
-  // Handle 'crum-page' class.
-  var els = document.getElementsByClassName('crum-page');
-  Array.prototype.forEach.call(els, function(btn) {
-    btn.classList.add('link');
-    btn.onclick = () => {
-      document.getElementById('crum' + btn.innerHTML.slice(0, -1)).scrollIntoView();
-    };
-  });
+window.addEventListener("load", function() {function suppress(func) {
+  try {
+    func();
+  } catch (err) {
+  }
+}
 
-  // Handle 'crum-page-external' class.
-  var els = document.getElementsByClassName('crum-page-external');
-  Array.prototype.forEach.call(els, function(btn) {
-    btn.classList.add('link');
-    btn.onclick = () => {
-      window.open(
-        'https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID='
-                + btn.innerHTML, '_blank').focus();
-    };
-  });
+// Handle 'crum-page' class.
+var els = document.getElementsByClassName('crum-page');
+Array.prototype.forEach.call(els, function(btn) {
+  btn.classList.add('link');
+  btn.onclick = () => {
+    document.getElementById('crum' + btn.innerHTML.slice(0, -1)).scrollIntoView();
+  };
+});
 
-  // Handle 'coptic' class.
-  var els = document.getElementsByClassName('coptic');
-  Array.prototype.forEach.call(els, function(btn) {
-    btn.classList.add('hover-link');
-    btn.onclick = () => {
-      window.open(
-        'https://coptic-dictionary.org/results.cgi?quick_search='
-                + btn.innerHTML, '_blank').focus();
-    };
-  });
+// Handle 'crum-page-external' class.
+var els = document.getElementsByClassName('crum-page-external');
+Array.prototype.forEach.call(els, function(btn) {
+  btn.classList.add('link');
+  btn.onclick = () => {
+    window.open(
+      'https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID='
+      + btn.innerHTML, '_blank').focus();
+  };
+});
 
-  // Handle 'greek' class.
-  var els = document.getElementsByClassName('greek');
-  Array.prototype.forEach.call(els, function(btn) {
-    btn.classList.add('link');
-    btn.classList.add('light');
-    btn.onclick = () => {
-      window.open(
-        'https://logeion.uchicago.edu/'
-                + btn.innerHTML, '_blank').focus();
-    };
-  });
+// Handle 'coptic' class.
+var els = document.getElementsByClassName('coptic');
+Array.prototype.forEach.call(els, function(btn) {
+  btn.classList.add('hover-link');
+  btn.onclick = () => {
+    window.open(
+      'https://coptic-dictionary.org/results.cgi?quick_search='
+      + btn.innerHTML, '_blank').focus();
+  };
+});
 
-  // Handle 'dawoud-page' class.
-  var els = document.getElementsByClassName('dawoud-page');
-  Array.prototype.forEach.call(els, function(btn) {
-    btn.classList.add('link');
-    btn.onclick = () => {
-      document.getElementById('dawoud' + btn.innerHTML.slice(0, -1)).scrollIntoView();
-    };
-  });
+// Handle 'greek' class.
+var els = document.getElementsByClassName('greek');
+Array.prototype.forEach.call(els, function(btn) {
+  btn.classList.add('link');
+  btn.classList.add('light');
+  btn.onclick = () => {
+    window.open(
+      'https://logeion.uchicago.edu/'
+      + btn.innerHTML, '_blank').focus();
+  };
+});
 
-  // Handle the 'dialect' class.
+// Handle 'dawoud-page' class.
+var els = document.getElementsByClassName('dawoud-page');
+Array.prototype.forEach.call(els, function(btn) {
+  btn.classList.add('link');
+  btn.onclick = () => {
+    document.getElementById('dawoud' + btn.innerHTML.slice(0, -1)).scrollIntoView();
+  };
+});
+
+// Handle the 'dialect' class.
+suppress(() => {
   const dialects = ['S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
   const dialectStyle = new Map();
   dialects.forEach((d) => { dialectStyle.set(d, ''); });
@@ -109,4 +116,5 @@ window.addEventListener("load", function() {
   if (d !== undefined) {
     d.split(',').forEach(dialect);
   }
+});
 });
