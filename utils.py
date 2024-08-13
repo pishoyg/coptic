@@ -1,6 +1,8 @@
+import collections
 import json
 import os
 import pathlib
+import re
 import shutil
 
 import bs4
@@ -9,6 +11,9 @@ import pandas as pd
 import type_enforced
 
 ENFORCED = False
+
+INTEGER_RE = re.compile("[0-9]+")
+MAX_INTEGER_LENGTH = 10
 
 
 @type_enforced.Enforcer(enabled=ENFORCED)
@@ -96,7 +101,8 @@ def write_tsvs(
 ) -> None:
     clean_dir(tsvs)
     starts = list(range(0, len(df.index), chunk_size))
-    zfill = zfill or len(str(len(df.index))) + 1  # We add 1 to allow for growth.
+    # We add 1 to allow for growth.
+    zfill = zfill or len(str(len(df.index))) + 1
 
     def iota(i):
         return str(i).zfill(zfill)
@@ -144,7 +150,60 @@ def stem(path: str) -> str:
 
 
 @type_enforced.Enforcer(enabled=ENFORCED)
+def stems(paths: list[str]) -> list[str]:
+    return list(map(stem, paths))
+
+
+@type_enforced.Enforcer(enabled=ENFORCED)
 def ext(path: str) -> str:
     path = os.path.basename(path)
     _, ext = os.path.splitext(path)
     return ext
+
+
+@type_enforced.Enforcer(enabled=ENFORCED)
+def exts(paths: list[str]) -> list[str]:
+    return list(map(ext, paths))
+
+
+@type_enforced.Enforcer(enabled=ENFORCED)
+def use_html_line_breaks(text: str) -> str:
+    return text.replace("\n", "<br/>")
+
+
+@type_enforced.Enforcer(enabled=ENFORCED)
+def _semver_sort_key(path: str) -> list[str]:
+    path = os.path.basename(path)
+    return [x.zfill(MAX_INTEGER_LENGTH) for x in INTEGER_RE.findall(path)] + [path]
+
+
+@type_enforced.Enforcer(enabled=ENFORCED)
+def sort_semver(paths: list[str]) -> list[str]:
+    return sorted(paths, key=_semver_sort_key)
+
+
+@type_enforced.Enforcer(enabled=ENFORCED)
+def verify_unique(arr, message: str) -> None:
+    dupes = [item for item, count in collections.Counter(arr).items() if count > 1]
+    if dupes:
+        fatal(message, "duplicate elements:", dupes)
+
+
+@type_enforced.Enforcer(enabled=ENFORCED)
+def verify_all_belong_to_set(arr, accepted: set[str], message: str) -> None:
+    for x in arr:
+        if x in accepted:
+            continue
+        fatal(message, x, "does not belong to the set", accepted)
+
+
+@type_enforced.Enforcer(enabled=ENFORCED)
+def verify_equal_sets(s1, s2, message: str) -> None:
+    s1, s2 = set(s1), set(s2)
+    diff = s1.difference(s2)
+    if diff:
+        fatal(message, diff, "present in the former but not the latter")
+
+    diff = s2.difference(s1)
+    if diff:
+        fatal(message, diff, "present in the latter but not the former")

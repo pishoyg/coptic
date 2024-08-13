@@ -215,12 +215,6 @@ def target_ext(ext: str) -> str:
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def extension(file: str) -> str:
-    _, ext = os.path.splitext(file)
-    return ext
-
-
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def main():
     global args
     args = argparser.parse_args()
@@ -362,7 +356,7 @@ def main():
                 path = glob.glob(os.path.join(IMG_DIR, sense + "*"))
                 assert len(path) == 1
                 path = path[0]
-                ext = extension(path)
+                ext = utils.ext(path)
                 os.remove(path)
 
                 # Delete the source.
@@ -473,7 +467,7 @@ def main():
             for file in files:
                 idx += 1
 
-                ext = extension(file)
+                ext = utils.ext(file)
 
                 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
                 def file_name(ext: str = ext) -> str:

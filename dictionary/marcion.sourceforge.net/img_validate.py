@@ -19,73 +19,56 @@ TYPE_ENFORCED = True
 
 
 @type_enforced.Enforcer(enabled=TYPE_ENFORCED)
-def validate_extensions(images: list[str], accepted: set[str]) -> None:
-    for file in images:
-        ext = utils.ext(file)
-        if ext in accepted:
-            continue
-        utils.fatal(
-            "Unknown extension: ",
-            ext,
-            "Add it to the list if you're sure you can handle it.",
-        )
-
-
-@type_enforced.Enforcer(enabled=TYPE_ENFORCED)
-def validate_equal_sets(s1: set[str], s2: set[str], message: str) -> None:
-    diff = s1.difference(s2)
-    if diff:
-        utils.fatal(message, diff, "present in the former but not the latter")
-
-    diff = s2.difference(s1)
-    if diff:
-        utils.fatal(message, diff, "present in the latter but not the former")
-
-
-@type_enforced.Enforcer(enabled=TYPE_ENFORCED)
-def stem_to_file(dir: str) -> dict[str, str]:
-    paths = utils.paths(dir)
-    # Check that all stems are unique.
-    stems = list(map(utils.stem, paths))
-    dupes = [stem for stem, count in collections.Counter(stems).items() if count > 1]
-    if dupes:
-        utils.fatal("The following keys are duplicate:", dupes)
-    del dupes
-
-    return {stem: path for stem, path in zip(stems, paths)}
+def listdir_sorted(dir: str) -> list[str]:
+    return utils.sort_semver(utils.paths(dir))
 
 
 @type_enforced.Enforcer(enabled=TYPE_ENFORCED)
 def main():
-    images = stem_to_file(IMG_DIR)
-    converted_images = stem_to_file(IMG_300_DIR)
-    sources = stem_to_file(IMG_SOURCES_DIR)
+    images = listdir_sorted(IMG_DIR)
+    converted_images = listdir_sorted(IMG_300_DIR)
+    sources = listdir_sorted(IMG_SOURCES_DIR)
+
+    utils.verify_unique(utils.stems(images), "images:")
+    utils.verify_unique(utils.stems(converted_images), "converted images:")
+    utils.verify_unique(utils.stems(sources), "sources:")
 
     # Checking that extensions are valid.
-    validate_extensions(list(images.values()), VALID_EXTENSIONS)
-    validate_extensions(list(converted_images.values()), VALID_EXTENSIONS_300)
-    validate_extensions(list(sources.values()), {".txt"})
+    utils.verify_all_belong_to_set(
+        utils.exts(images), VALID_EXTENSIONS, "Images: Unknown extension:"
+    )
+    utils.verify_all_belong_to_set(
+        utils.exts(converted_images),
+        VALID_EXTENSIONS_300,
+        "Converted Images: Unknown extension:",
+    )
+    utils.verify_all_belong_to_set(
+        utils.exts(sources), {".txt"}, "Sources: Unknown extension:"
+    )
 
-    # Check that all images have valid names.
-    for stem in images:
+    # Verify that all three directories have the same set of IDs.
+    utils.verify_equal_sets(
+        utils.stems(images),
+        utils.stems(converted_images),
+        "Images and converted images:",
+    )
+    utils.verify_equal_sets(
+        utils.stems(images), utils.stems(sources), "Images and sources:"
+    )
+
+    # Check that all images have valid IDs.
+    for stem in utils.stems(images):
         match = STEM_RE.fullmatch(stem)
         if match:
             continue
-        utils.fatal("Invalid stem: ", stem)
-
-    # Verify that all three directories have the same set of IDs.
-    validate_equal_sets(
-        set(images.keys()), set(converted_images.keys()), "Images and converted images:"
-    )
-    validate_equal_sets(set(images.keys()), set(sources.keys()), "Images and sources:")
+        utils.fatal("Invalid stem:", stem)
 
     # Check that the sources and converted images are more recent than the
     # original ones.
     offending: list[str] = []
-    for k in images:
-        image = images[k]
-        converted = converted_images[k]
-        source = sources[k]
+    for image, converted, source in zip(images, converted_images, sources):
+        # Sanity check!
+        assert utils.stem(image) == utils.stem(converted) == utils.stem(source)
         mtime = os.stat(image).st_mtime
         if mtime > os.stat(converted).st_mtime:
             offending.append(converted)

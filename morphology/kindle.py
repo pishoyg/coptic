@@ -257,7 +257,7 @@ class dictionary:
         assert not any(name.endswith(".opf") for name in content_filenames)
         # Get the cover information.
         cover_id = self.basename_to_id(self._cover_basename)
-        _, cover_ext = os.path.splitext(self._cover_basename)
+        cover_ext = utils.ext(self._cover_basename)
         assert cover_ext.startswith(".")
         cover_ext = cover_ext[1:]
         assert cover_ext

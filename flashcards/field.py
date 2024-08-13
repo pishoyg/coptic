@@ -1,6 +1,5 @@
 import itertools
 import os
-import re
 import shutil
 
 import enforcer
@@ -11,8 +10,6 @@ from oauth2client import service_account
 import utils
 
 NO_LENGTH = -1
-INTEGER_RE = re.compile("[0-9]+")
-MAX_INTEGER_LENGTH = 10
 
 GSPREAD_SCOPE = [
     "https://spreadsheets.google.com/feeds",
@@ -84,7 +81,7 @@ class txt(_primitive_field):
         if force:
             assert text
         if line_br:
-            text = use_html_line_breaks(text)
+            text = utils.use_html_line_breaks(text)
         self._text = text
 
     def next(self) -> str:
@@ -154,7 +151,7 @@ class tsv(_content_field):
             _tsv[file_path] = df
         content = [str(cell).strip() for cell in df[column_name]]
         if line_br:
-            content = list(map(use_html_line_breaks, content))
+            content = list(map(utils.use_html_line_breaks, content))
         super().__init__(content, [], force=force)
 
 
@@ -178,7 +175,7 @@ class tsvs(_content_field):
             _tsv[tsvs] = df
         content = [str(cell).strip() for cell in df[column_name]]
         if line_br:
-            content = list(map(use_html_line_breaks, content))
+            content = list(map(utils.use_html_line_breaks, content))
         super().__init__(content, [], force=force)
 
 
@@ -211,7 +208,7 @@ class gsheet(_content_field):
         records = sheet.get_worksheet(0).get_all_records()
         content = [str(row[column_name]).strip() for row in records]
         if line_br:
-            content = list(map(use_html_line_breaks, content))
+            content = list(map(utils.use_html_line_breaks, content))
         super().__init__(content, [], force=force)
 
 
@@ -308,10 +305,10 @@ class media(_content_field):
                 new_path = _add_to_work_dir(path)
                 args = {
                     "basename": os.path.basename(new_path),
-                    "stem": stem(new_path),
+                    "stem": utils.stem(new_path),
                     "key": key,
                     "original_basename": os.path.basename(path),
-                    "original_stem": stem(path),
+                    "original_stem": utils.stem(path),
                 }
                 if fmt_args:
                     args.update(fmt_args(path))
@@ -490,29 +487,6 @@ def merge_media_files(*fields: Field) -> list[str]:
     # Eliminate duplicates. This significantly reduces the package size.
     # While this is handled by Anki, it's not supported in genanki.
     return sorted(list(set(m)))
-
-
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def use_html_line_breaks(text: str) -> str:
-    return text.replace("\n", "<br/>")
-
-
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def stem(s: str) -> str:
-    s = os.path.basename(s)
-    s, _ = os.path.splitext(s)
-    return s
-
-
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def _semver_sort_key(path: str) -> list[str]:
-    path = os.path.basename(path)
-    return [x.zfill(MAX_INTEGER_LENGTH) for x in INTEGER_RE.findall(path)] + [path]
-
-
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def sort_semver(paths: list[str]) -> list[str]:
-    return sorted(paths, key=_semver_sort_key)
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)

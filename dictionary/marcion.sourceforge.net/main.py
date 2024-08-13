@@ -71,11 +71,6 @@ argparser.add_argument(
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def use_html_line_breaks(text: str) -> str:
-    return text.replace("\n", "<br/>")
-
-
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def series_to_int(series: pd.Series) -> list[int]:
     return [int(cell) for cell in series]
 

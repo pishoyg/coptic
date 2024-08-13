@@ -189,11 +189,11 @@ def crum(
                     # we use this method in order to avoid using the computationally expensive
                     # glob.glob.
                     get_paths=explanatory_images.get,
-                    sort_paths=field.sort_semver,
+                    sort_paths=utils.sort_semver,
                     fmt_args=lambda path: {
-                        "caption": field.stem(path),
-                        "id": "explanatory" + field.stem(path),
-                        "alt": field.stem(path),
+                        "caption": utils.stem(path),
+                        "id": "explanatory" + utils.stem(path),
+                        "alt": utils.stem(path),
                     },
                     caption=True,
                     id=True,
@@ -231,13 +231,13 @@ def crum(
                             f"dictionary/marcion.sourceforge.net/data/crum/{k+20}.png"
                             for k in field.page_numbers(page_ranges=page_ranges)
                         ],
-                        sort_paths=field.sort_semver,
+                        sort_paths=utils.sort_semver,
                         fmt_args=lambda path: {
                             "caption": CRUM_EXTERNAL_FMT.format(
-                                crum=int(field.stem(path)) - 20
+                                crum=int(utils.stem(path)) - 20
                             ),
-                            "id": f"crum{int(field.stem(path)) - 20}",
-                            "alt": int(field.stem(path)) - 20,
+                            "id": f"crum{int(utils.stem(path)) - 20}",
+                            "alt": int(utils.stem(path)) - 20,
                         },
                         caption=True,
                         id=True,
@@ -263,9 +263,9 @@ def crum(
                             for k in field.page_numbers(page_ranges=page_ranges)
                         ],
                         fmt_args=lambda path: {
-                            "caption": int(field.stem(path)) - 16,
-                            "id": f"dawoud{int(field.stem(path)) - 16}",
-                            "alt": int(field.stem(path)) - 16,
+                            "caption": int(utils.stem(path)) - 16,
+                            "id": f"dawoud{int(utils.stem(path)) - 16}",
+                            "alt": int(utils.stem(path)) - 16,
                         },
                         caption=True,
                         id=True,
