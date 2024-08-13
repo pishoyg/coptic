@@ -1,6 +1,6 @@
 import unittest
 
-import img_find
+import img_helper
 
 
 class Test(unittest.TestCase):

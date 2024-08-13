@@ -71,7 +71,7 @@ clean: git_clean bible_epub_clean kellia_analysis_clean
 status: git_status
 
 .PHONY: toil
-toil: crum_img_find
+toil: crum_img_helper
 
 .PHONY: todo
 todo: todo_grep
@@ -137,9 +137,9 @@ crum_notes: FORCE
 crum_img: $(shell find dictionary/marcion.sourceforge.net/data/ -type f)
 	bash dictionary/marcion.sourceforge.net/img_setup.sh
 
-crum_img_find: FORCE
+crum_img_helper: FORCE
 	# TODO: Remove the filters. Do all the words.
-	python dictionary/marcion.sourceforge.net/img_find.py \
+	python dictionary/marcion.sourceforge.net/img_helper.py \
 		--skip_existing=true \
 		--exclude "type-parsed:verb" "dialect-B:" \
 		--start_at_key="$${START_AT_KEY}" \
