@@ -153,7 +153,7 @@ repos:
     hooks:
       - id: crum-img-validate
         name: crum-img-validate
-        entry: python dictionary/marcion.sourceforge.net/img_validate.py
+        entry: python dictionary/marcion.sourceforge.net/img_find.py --validate
         language: system
         # N.B. This hook should also run when files are deleted. But
         # pre-commits don't work that way! If a file is deleted, even if it
