@@ -22,7 +22,7 @@ IMG_300_DIR = "dictionary/marcion.sourceforge.net/data/img-300"
 FILE_NAME_RE = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
 STEM_RE = re.compile("[0-9]+-[0-9]+-[0-9]+")
 
-SOURCE_RE = re.compile(r"^source\(([^=]+)\)=(.+)$")
+ASSIGN_SOURCE_RE = re.compile(r"^source\(([^=]+)\)=(.+)$")
 
 
 INPUT_TSVS: str = "dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs"
@@ -30,8 +30,6 @@ MEANING_COL: str = "en-parsed-no-greek"
 KEY_COL: str = "key"
 LINK_COL: str = "key-link"
 SOURCES_DIR: str = "dictionary/marcion.sourceforge.net/data/img-sources/"
-
-UNKNOWN_SOURCE = "manual"
 
 EXT_MAP = {
     ".png": ".jpg",
@@ -297,30 +295,32 @@ def main():
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def retrieve(
+    url: str, filename: typing.Optional[str] = None, headers: dict[str, str] = {}
+) -> str:
+    if filename is None:
+        filename = os.path.basename(url)
+        idx = filename.find("?")
+        if idx != -1:
+            filename = filename[:idx]
+    download = requests.get(url, headers=headers)
+    if not download.ok:
+        utils.error(download.text)
+        return ""
+    filename = os.path.join(args.downloads, filename)
+    with open(filename, "wb") as f:
+        f.write(download.content)
+        utils.wrote(filename)
+    return filename
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def prompt():
 
     df = utils.read_tsvs(INPUT_TSVS)
     df.sort_values(by=KEY_COL, inplace=True)
 
     sources: dict[str, str] = {}
-
-    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-    def retrieve(
-        url: str, filename: typing.Optional[str] = None, headers: dict[str, str] = {}
-    ) -> None:
-        if filename is None:
-            filename = os.path.basename(url)
-            idx = filename.find("?")
-            if idx != -1:
-                filename = filename[:idx]
-        download = requests.get(url, headers=headers)
-        if not download.ok:
-            utils.error(download.text)
-            return
-        filename = os.path.join(args.downloads, filename)
-        with open(filename, "wb") as f:
-            f.write(download.content)
-        sources[filename] = url
 
     exclude = {}
     for e in args.exclude:
@@ -443,20 +443,13 @@ def prompt():
                 path = glob.glob(os.path.join(IMG_DIR, sense + "*"))
                 assert len(path) == 1
                 path = path[0]
-                ext = utils.ext(path)
-                os.remove(path)
 
-                # Delete the source.
-                path = os.path.join(SOURCES_DIR, sense + ".txt")
                 os.remove(path)
-
-                # Delete the converted version.
-                path = os.path.join(IMG_300_DIR, sense + EXT_MAP.get(ext, ext))
-                os.remove(path)
-
+                os.remove(get_source(path))
+                os.remove(get_target(path))
                 continue
 
-            source_search = SOURCE_RE.search(sense)
+            source_search = ASSIGN_SOURCE_RE.search(sense)
             if source_search:
                 sources[source_search.group(1)] = source_search.group(2)
                 continue
@@ -467,7 +460,10 @@ def prompt():
                 headers: dict[str, str] = {}
                 if is_wiki(url):
                     headers = WIKI_HEADERS
-                retrieve(url, headers=headers)
+                path = retrieve(url, headers=headers)
+                if not path:
+                    continue
+                sources[path] = sense
                 continue
 
             if sense.lower().startswith("wiki/"):
@@ -490,7 +486,10 @@ def prompt():
                     utils.error("Nothing found on thenounproject for:", sense)
                     continue
                 for icon in resp:
-                    retrieve(icon["thumbnail_url"])
+                    path = retrieve(icon["thumbnail_url"])
+                    if not path:
+                        continue
+                    sources[path] = icon["thumbnail_url"]
                 open_images(get_downloads())
                 continue
 
@@ -553,15 +552,13 @@ def prompt():
             for file in files:
                 idx += 1
                 ext = utils.ext(file)
-                # Move the image.
-                stem = f"{key}-{sense}-{idx}"
-                new_file = os.path.join(IMG_DIR, f"{stem}{ext}")
+                new_file = os.path.join(IMG_DIR, f"{key}-{sense}-{idx}{ext}")
                 pathlib.Path(file).rename(new_file)
+                file = new_file
+                del new_file
                 # Write the source.
-                utils.write(
-                    sources[file] + "\n", os.path.join(SOURCES_DIR, stem + ".txt")
-                )
-                convert(new_file)
+                utils.write(sources[file], get_source(file))
+                convert(file)
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)

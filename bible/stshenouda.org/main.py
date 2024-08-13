@@ -269,7 +269,7 @@ def write_tsv(df: pd.DataFrame) -> None:
 def write_txt(lang: str, column: pd.Series) -> None:
     path = writing_path("txt", "", f"{lang}")
     content = "\n".join(filter(None, column))
-    utils.write(content + "\n", path)
+    utils.write(content, path)
 
 
 @type_enforced.Enforcer(enabled=ENFORCED)
