@@ -63,17 +63,14 @@ argparser.add_argument(
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def verify_unique(lis: list) -> None:
-    assert len(set(lis)) == len(lis)
-
-
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def verify_unique_object_keys(decks: list[genanki.Deck]) -> None:
-    verify_unique([d.deck_id for d in decks])
-    verify_unique([d.name for d in decks])
-    verify_unique([model.name for d in decks for model in d.models])
-    verify_unique([model.id for d in decks for model in d.models])
-    verify_unique([node.guid for d in decks for node in d.notes])
+    utils.verify_unique([d.deck_id for d in decks], "Deck ids")
+    utils.verify_unique([d.name for d in decks], "Deck names")
+    utils.verify_unique(
+        [model.name for d in decks for model in d.models], "Model names"
+    )
+    utils.verify_unique([model.id for d in decks for model in d.models], "Model ids")
+    utils.verify_unique([node.guid for d in decks for node in d.notes], "Node GUIDs.")
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
