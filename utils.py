@@ -117,3 +117,9 @@ def read_tsvs(tsvs: str) -> pd.DataFrame:
 def html_text(html: str) -> str:
     soup = bs4.BeautifulSoup(html)
     return soup.get_text()
+
+
+@type_enforced.Enforcer(enabled=ENFORCED)
+def read(path: str) -> str:
+    with open(path) as f:
+        return f.read()
