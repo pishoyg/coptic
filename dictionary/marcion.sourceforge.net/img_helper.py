@@ -20,6 +20,8 @@ MIN_WIDTH = 200
 IMG_DIR = "dictionary/marcion.sourceforge.net/data/img"
 IMG_300_DIR = "dictionary/marcion.sourceforge.net/data/img-300"
 FILE_NAME_RE = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
+STEM_RE = re.compile("[0-9]+-[0-9]+-[0-9]+")
+
 SOURCE_RE = re.compile(r"^source\(([^=]+)\)=(.+)$")
 
 
@@ -29,6 +31,12 @@ KEY_COL: str = "key"
 LINK_COL: str = "key-link"
 SOURCES_DIR: str = "dictionary/marcion.sourceforge.net/data/img-sources/"
 
+UNKNOWN_SOURCE = "manual"
+
+EXT_MAP = {
+    ".png": ".jpg",
+    ".svg": ".jpg",
+}
 
 VALID_EXTENSIONS = {".avif", ".gif", ".jpeg", ".jpg", ".JPG", ".png", ".webp", ".svg"}
 VALID_EXTENSIONS_300 = {".avif", ".gif", ".jpeg", ".jpg", ".JPG", ".webp"}
@@ -55,8 +63,6 @@ WIKI_HEADERS = {
     "Api-User-Agent": "Coptic/1.0 (https://github.com/pishoyg/coptic/; pishoybg@gmail.com)",
     "User-Agent": "Coptic/1.0 (https://github.com/pishoyg/coptic/; pishoybg@gmail.com)",
 }
-
-BASENAME_RE = re.compile("[0-9]+-[0-9]+-[0-9]+")
 
 argparser = argparse.ArgumentParser(
     description="""Find images for the dictionary words.
@@ -186,15 +192,6 @@ def query(meaning: str) -> str:
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def file_name(key: int, sense: int, idx: int, ext: str):
-    assert key
-    assert sense
-    assert idx
-    assert ext
-    return f"{key}-{sense}-{idx}{ext}"
-
-
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def invalid_size(files: list[str]) -> list[str]:
     if MIN_WIDTH == -1:
         return []
@@ -220,10 +217,31 @@ def is_wiki(url: str) -> bool:
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def target_ext(ext: str) -> str:
-    if ext in [".png", ".svg"]:
-        return ".jpg"
-    return ext
+def write_artifacts(path: str, source: str = "") -> None:
+    # Write the source.
+    stem, ext = os.path.splitext(os.path.basename(path))
+    with open(os.path.join(SOURCES_DIR, stem + ".txt"), "w") as f:
+        f.write((source or UNKNOWN_SOURCE) + "\n")
+
+    # Write the converted image.
+    subprocess.call(
+        [
+            "magick",
+            path,
+            "-alpha",
+            "remove",
+            "-alpha",
+            "off",
+            "-background",
+            "white",
+            "-resize",
+            f"{TARGET_WIDTH}x",
+            os.path.join(
+                IMG_300_DIR,
+                stem + EXT_MAP.get(ext, ext),
+            ),
+        ]
+    )
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -305,9 +323,10 @@ def main():
                     [
                         "Enter,",
                         "- an image URL to retrieve said image,",
-                        "- 'nount/${QUERY}' to query `thenounproject`,",
+                        "- 'noun/${QUERY}' to query `thenounproject`,",
                         "- 'wiki/${PAGE}' to open a Wikipedia page,",
-                        "- 'key=${KEY}' to change the key"
+                        "- 'key=${KEY}' to change the key",
+                        "- 'del=${KEY}' to delete one image and its artifacts",
                         "- 'source=${SOURCE}' to populate the source for the only"
                         f" image in {args.downloads} that is missing a source,",
                         "- source(${PATH})=${SOURCE} to populate the source for a given image:",
@@ -367,7 +386,12 @@ def main():
                 sources[files[0]] = sense
                 continue
 
-            if BASENAME_RE.fullmatch(sense):
+            if sense.startswith("del="):
+                if not STEM_RE.fullmatch(sense):
+                    utils.error(
+                        "To delete an image, please provide the stem.",
+                    )
+                    continue
                 # Delete the image.
                 path = glob.glob(os.path.join(IMG_DIR, sense + "*"))
                 assert len(path) == 1
@@ -380,7 +404,7 @@ def main():
                 os.remove(path)
 
                 # Delete the converted version.
-                path = os.path.join(IMG_300_DIR, sense + target_ext(ext))
+                path = os.path.join(IMG_300_DIR, sense + EXT_MAP.get(ext, ext))
                 os.remove(path)
 
                 continue
@@ -427,7 +451,6 @@ def main():
                 utils.error("Can't make sense of", sense)
                 continue
 
-            assert sense.isdigit()  # Sanity check.
             sense = int(sense)
             if sense <= 0:
                 utils.error("Sense must be a positive integer, got:", sense)
@@ -482,41 +505,11 @@ def main():
             idx = get_max_idx(existing(), key, sense)
             for file in files:
                 idx += 1
-
                 ext = utils.ext(file)
-
-                @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-                def file_name(ext: str = ext) -> str:
-                    return f"{key}-{sense}-{idx}{ext}"
-
-                # Write the image.
-                new_file = os.path.join(IMG_DIR, file_name())
+                # Move the image.
+                new_file = os.path.join(IMG_DIR, f"{key}-{sense}-{idx}{ext}")
                 pathlib.Path(file).rename(new_file)
-                # Write the source.
-                with open(
-                    os.path.join(SOURCES_DIR, file_name(ext=".txt")),
-                    "w",
-                ) as f:
-                    f.write(sources[file] + "\n")
-                # Write the converted image.
-                subprocess.call(
-                    [
-                        "magick",
-                        new_file,
-                        "-alpha",
-                        "remove",
-                        "-alpha",
-                        "off",
-                        "-background",
-                        "white",
-                        "-resize",
-                        f"{TARGET_WIDTH}x",
-                        os.path.join(
-                            IMG_300_DIR,
-                            file_name(ext=target_ext(ext)),
-                        ),
-                    ]
-                )
+                write_artifacts(new_file, sources[file])
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)

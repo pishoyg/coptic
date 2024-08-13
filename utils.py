@@ -143,9 +143,13 @@ def paths(dir: str) -> list[str]:
 
 
 @type_enforced.Enforcer(enabled=ENFORCED)
+def splitext(path: str) -> tuple[str, str]:
+    return os.path.splitext(os.path.basename(path))
+
+
+@type_enforced.Enforcer(enabled=ENFORCED)
 def stem(path: str) -> str:
-    path = os.path.basename(path)
-    stem, _ = os.path.splitext(path)
+    stem, _ = splitext(path)
     return stem
 
 
@@ -156,8 +160,7 @@ def stems(paths: list[str]) -> list[str]:
 
 @type_enforced.Enforcer(enabled=ENFORCED)
 def ext(path: str) -> str:
-    path = os.path.basename(path)
-    _, ext = os.path.splitext(path)
+    _, ext = splitext(path)
     return ext
 
 
