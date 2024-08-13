@@ -135,7 +135,7 @@ crum_notes: FORCE
 		> "dictionary/marcion.sourceforge.net/data/notes/notes.tsv"
 
 crum_img: $(shell find dictionary/marcion.sourceforge.net/data/ -type f)
-	bash dictionary/marcion.sourceforge.net/img_setup.sh
+	python dictionary/marcion.sourceforge.net/img_helper.py --batch
 
 crum_img_helper: FORCE
 	# TODO: Remove the filters. Do all the words.

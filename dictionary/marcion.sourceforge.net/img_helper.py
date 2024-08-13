@@ -125,7 +125,23 @@ argparser.add_argument(
     "--skip_existing",
     type=bool,
     default=False,
-    help="If true, skip word with existing images.",
+    help="If true, skip word with existing images."
+    " If --batch is given, this flag has a different interpretation."
+    " It means don't convert already converted files."
+    "You should only use this"
+    f" flag if there are no obsolete images in {IMG_300_DIR}/."
+    " Images can be obsolete if, for example, an image was modified"
+    f" in {IMG_DIR}/, and the generated version of the old image is"
+    f" still present in ${IMG_300_DIR}/."
+    " If run with --skip_existing, this script (as the flag name suggests)"
+    " will generate only the absent images, but (unlike other scripts in"
+    " this repo) won't look at the file modification timestamps."
+    " It does NOT convert images based on their timestamps, but rather"
+    " based on their mere existence or absence."
+    " In other words, the script would *generate an absent file*, but"
+    " wouldn't *regenerate an outdated file*."
+    " In other words, you might have to manually delete the artefacts in"
+    " order for this script to generate replacements.",
 )
 
 argparser.add_argument(
@@ -149,6 +165,17 @@ argparser.add_argument(
     help="If true, just validate the directories and exit.",
 )
 
+argparser.add_argument(
+    "--batch",
+    default=False,
+    action="store_true",
+    help=f"If true, batch-process images in {IMG_DIR} and exit."
+    "Batch-processing includes converting images, and deleting obsolete images"
+    " and sources."
+    " N.B. We intentionally refrain from populating absent sources with a"
+    " default value, since now we have become stricter with collecting image"
+    " sources.",
+)
 
 global args
 
@@ -217,12 +244,26 @@ def is_wiki(url: str) -> bool:
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def write_artifacts(path: str, source: str = "") -> None:
-    # Write the source.
-    stem, ext = os.path.splitext(os.path.basename(path))
-    with open(os.path.join(SOURCES_DIR, stem + ".txt"), "w") as f:
-        f.write((source or UNKNOWN_SOURCE) + "\n")
+def get_target(path: str) -> str:
+    assert path.startswith(IMG_DIR)
+    stem, ext = utils.splitext(path)
+    assert STEM_RE.fullmatch(stem)
+    assert ext in VALID_EXTENSIONS
+    return os.path.join(IMG_300_DIR, stem + EXT_MAP.get(ext, ext))
 
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def get_source(path: str) -> str:
+    assert path.startswith(IMG_DIR)
+    return os.path.join(SOURCES_DIR, utils.stem(path) + ".txt")
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def convert(path: str, skip_existing: bool = False) -> None:
+    assert path.startswith(IMG_DIR)
+    target = get_target(path)
+    if os.path.exists(target) and skip_existing:
+        return
     # Write the converted image.
     subprocess.call(
         [
@@ -236,10 +277,7 @@ def write_artifacts(path: str, source: str = "") -> None:
             "white",
             "-resize",
             f"{TARGET_WIDTH}x",
-            os.path.join(
-                IMG_300_DIR,
-                stem + EXT_MAP.get(ext, ext),
-            ),
+            target,
         ]
     )
 
@@ -250,6 +288,9 @@ def main():
     args = argparser.parse_args()
     if args.validate:
         validate()
+        exit()
+    if args.batch:
+        batch()
         exit()
     prompt()
 
@@ -512,9 +553,28 @@ def prompt():
                 idx += 1
                 ext = utils.ext(file)
                 # Move the image.
-                new_file = os.path.join(IMG_DIR, f"{key}-{sense}-{idx}{ext}")
+                stem = f"{key}-{sense}-{idx}"
+                new_file = os.path.join(IMG_DIR, f"{stem}{ext}")
                 pathlib.Path(file).rename(new_file)
-                write_artifacts(new_file, sources[file])
+                # Write the source.
+                with open(os.path.join(SOURCES_DIR, stem + ".txt"), "w") as f:
+                    f.write(sources[file] + "\n")
+                convert(new_file)
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def batch():
+    images = utils.paths(IMG_DIR)
+    for path in images:
+        convert(path, args.skip_existing)
+    targets = {get_target(p) for p in images}
+    for converted in utils.paths(IMG_300_DIR):
+        if converted not in targets:
+            os.remove(converted)
+    sources = {get_source(path) for path in images}
+    for src in utils.paths(SOURCES_DIR):
+        if src not in sources:
+            os.remove(src)
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
