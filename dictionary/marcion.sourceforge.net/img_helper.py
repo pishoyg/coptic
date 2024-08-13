@@ -280,6 +280,7 @@ def convert(path: str, skip_existing: bool = False) -> None:
             target,
         ]
     )
+    utils.wrote(target)
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -557,8 +558,9 @@ def prompt():
                 new_file = os.path.join(IMG_DIR, f"{stem}{ext}")
                 pathlib.Path(file).rename(new_file)
                 # Write the source.
-                with open(os.path.join(SOURCES_DIR, stem + ".txt"), "w") as f:
-                    f.write(sources[file] + "\n")
+                utils.write(
+                    sources[file] + "\n", os.path.join(SOURCES_DIR, stem + ".txt")
+                )
                 convert(new_file)
 
 
