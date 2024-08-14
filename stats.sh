@@ -177,6 +177,12 @@ CRUM_DAWOUD=$(tsv_nonempty \
   "2,3" \
   | wc --lines)
 
+CRUM_DAWOUD_SUM=$(tsv_nonempty \
+  "dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv" \
+  "2,3" \
+  | grep '[0-9]+' --only-matching --extended-regexp \
+  | wc --lines)
+
 CRUM_TYPOS=$(( $(crum_typos "coptwrd.tsv") + $(crum_typos "coptdrv.tsv") ))
 
 # shellcheck disable=SC2140
@@ -213,10 +219,14 @@ echo -e "${BLUE}Number of words that have at least one page from Dawoud: "\
 "${GREEN}${CRUM_DAWOUD}${BLUE}."
 
 # shellcheck disable=SC2140
+echo -e "${BLUE}Number of Dawoud pages added: "\
+"${GREEN}${CRUM_DAWOUD_SUM}${BLUE}."
+
+# shellcheck disable=SC2140
 echo -e "${BLUE}Number of Crum entries changed: "\
   "${GREEN}${CRUM_TYPOS}${BLUE}."
 
 if ${SAVE}; then
-  echo -e "$(date)\t$(date +%s)\t${LOC}\t${CRUM_IMG}\t${CRUM_DAWOUD}\t${LOC_CRUM}\t${LOC_COPTICSITE}\t${LOC_KELLIA}\t${LOC_BIBLE}\t${LOC_FLASHCARDS}\t${LOC_GRAMMAR}\t${LOC_KEYBOARD}\t${LOC_MORPHOLOGY}\t${LOC_SITE}\t${LOC_SHARED}\t${LOC_ARCHIVE}\t${CRUM_TYPOS}\t${CRUM_IMG_SUM}" \
+  echo -e "$(date)\t$(date +%s)\t${LOC}\t${CRUM_IMG}\t${CRUM_DAWOUD}\t${LOC_CRUM}\t${LOC_COPTICSITE}\t${LOC_KELLIA}\t${LOC_BIBLE}\t${LOC_FLASHCARDS}\t${LOC_GRAMMAR}\t${LOC_KEYBOARD}\t${LOC_MORPHOLOGY}\t${LOC_SITE}\t${LOC_SHARED}\t${LOC_ARCHIVE}\t${CRUM_TYPOS}\t${CRUM_IMG_SUM}\t${CRUM_DAWOUD_SUM}" \
     >> stats.tsv
 fi
