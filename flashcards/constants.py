@@ -1,3 +1,4 @@
+import os
 import re
 
 import deck
@@ -86,12 +87,12 @@ def crum(
 
         return field.jne("<br/>", *[dialect(col) for col in dialect_cols])
 
-    explanatory_images = field.dir_lister(
+    explanatory_images = _dir_lister(
         "dictionary/marcion.sourceforge.net/data/img-300",
         lambda file: file[: file.find("-")],
     )
     pronunciations = {
-        col: field.dir_lister(
+        col: _dir_lister(
             f"dictionary/marcion.sourceforge.net/data/snd-pishoy/{col}/",
             lambda file: file[: file.find(".")],
         )
@@ -229,7 +230,7 @@ def crum(
                         ),
                         get_paths=lambda page_ranges: [
                             f"dictionary/marcion.sourceforge.net/data/crum/{k+20}.png"
-                            for k in field.page_numbers(page_ranges=page_ranges)
+                            for k in _page_numbers(page_ranges=page_ranges)
                         ],
                         sort_paths=utils.sort_semver,
                         fmt_args=lambda path: {
@@ -260,7 +261,7 @@ def crum(
                         ),
                         get_paths=lambda page_ranges: [
                             f"dictionary/copticocc.org/dawoud-D100/{k+16}.jpg"
-                            for k in field.page_numbers(page_ranges=page_ranges)
+                            for k in _page_numbers(page_ranges=page_ranges)
                         ],
                         fmt_args=lambda path: {
                             "caption": int(utils.stem(path)) - 16,
@@ -397,6 +398,77 @@ def kellia(deck_name: str, deck_id: int, basename: str) -> deck.deck:
         force_title=False,
         key_for_title=True,
     )
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def _dedup(arr: list[int], at_most_once: bool = False) -> list[int]:
+    """
+    Args:
+        at_most_once: If true, deduplicate across the whole list.
+        If false, only deduplicate consecutive occurrences.
+        For example, given the list 1,1,2,1.
+        If deduped with `at_most_once`, it will return 1,2, with each page
+        occurring at most once.
+        If deduped with `at_most_once=False`, it will return 1,2,1, only
+        removing the consecutive entries.
+    """
+    if at_most_once:
+        return list(dict.fromkeys(arr))
+    out = []
+    for x in arr:
+        if out and out[-1] == x:
+            continue
+        out.append(x)
+    return out
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def _page_numbers(page_ranges: str) -> list[int]:
+    """
+    page_ranges is a comma-separated list of integers or integer ranges, just
+    like what you type when you're using your printer.
+    For example, "1,3-5,8-9" means [1, 3, 4, 5, 8, 9].
+    """
+
+    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
+    def parse(page_number: str) -> int:
+        page_number = page_number.strip()
+        if page_number[-1] in ["a", "b"]:
+            page_number = page_number[:-1]
+        assert page_number.isdigit()
+        return int(page_number)
+
+    out = []
+    page_ranges = page_ranges.strip()
+    for page_or_page_range in page_ranges.split(","):
+        if "-" not in page_or_page_range:
+            # This is a single page.
+            out.append(parse(page_or_page_range))
+            continue
+        # This is a page range.
+        start, end = map(parse, page_or_page_range.split("-"))
+        assert end >= start, f"start={start}, end={end}"
+        for x in range(start, end + 1):
+            out.append(x)
+    out = _dedup(out, at_most_once=True)
+    return out
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
+class _dir_lister:
+    def __init__(self, dir: str, get_key: enforcer.Callable) -> None:
+        self.cache = {}
+        if not os.path.exists(dir):
+            return
+        for file in os.listdir(dir):
+            path = os.path.join(dir, file)
+            key = get_key(file)
+            if key not in self.cache:
+                self.cache[key] = []
+            self.cache[key].append(path)
+
+    def get(self, key: str) -> list[str]:
+        return self.cache.get(key, [])
 
 
 # N.B. The deck IDs are protected fields. They are used as database keys for the
