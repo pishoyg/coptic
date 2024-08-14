@@ -41,7 +41,7 @@ TWO_TABS_RE = re.compile("\t\t")
 ENGLISH_LETTER_RE = re.compile("[a-zA-Z]")
 
 CRUM_PAGE_FMT = "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID={key}"
-CARD_LINK_FMT = "https://pishoyg.github.io/crum/{key}.html"
+CARD_LINK_FMT = "https://metremnqymi.com/crum/{key}.html"
 
 # LETTER_ENCODING is used to convert ASCII-encoded Coptic text to unicode.
 LETTER_ENCODING = {

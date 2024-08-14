@@ -351,9 +351,9 @@ Labels](https://github.com/pishoyg/coptic/labels).
 Images:
 - Here are some examples of words that are very difficult to represent using
 images, but icons have come for the rescue:
-  - https://pishoyg.github.io/crum/2236.html
-  - https://pishoyg.github.io/crum/89.html
-  - https://pishoyg.github.io/crum/2189.html
+  - https://metremnqymi.com/crum/2236.html
+  - https://metremnqymi.com/crum/89.html
+  - https://metremnqymi.com/crum/2189.html
 
 ## Credits
 
@@ -495,43 +495,43 @@ of this file.
 The following entries have no dialect specified in Crum, so they are treated as
 part of all dialects.
 
-1. https://pishoyg.github.io/crum/1274.html
-2. https://pishoyg.github.io/crum/1292.html
-3. https://pishoyg.github.io/crum/1367.html
-4. https://pishoyg.github.io/crum/1462.html
-5. https://pishoyg.github.io/crum/1553.html
-6. https://pishoyg.github.io/crum/1555.html
-7. https://pishoyg.github.io/crum/1557.html
-8. https://pishoyg.github.io/crum/1558.html
-9. https://pishoyg.github.io/crum/1657.html
-10. https://pishoyg.github.io/crum/1659.html
-11. https://pishoyg.github.io/crum/1712.html
-12. https://pishoyg.github.io/crum/1957.html
-13. https://pishoyg.github.io/crum/2074.html
-14. https://pishoyg.github.io/crum/2075.html
-15. https://pishoyg.github.io/crum/2076.html
-16. https://pishoyg.github.io/crum/2077.html
-17. https://pishoyg.github.io/crum/2078.html
-18. https://pishoyg.github.io/crum/2079.html
-19. https://pishoyg.github.io/crum/2081.html
-20. https://pishoyg.github.io/crum/2082.html
-21. https://pishoyg.github.io/crum/2084.html
-22. https://pishoyg.github.io/crum/2085.html
-23. https://pishoyg.github.io/crum/2086.html
-24. https://pishoyg.github.io/crum/2087.html
-25. https://pishoyg.github.io/crum/2088.html
-26. https://pishoyg.github.io/crum/2090.html
-27. https://pishoyg.github.io/crum/2091.html
-28. https://pishoyg.github.io/crum/2092.html
-29. https://pishoyg.github.io/crum/2093.html
-30. https://pishoyg.github.io/crum/2195.html
-31. https://pishoyg.github.io/crum/2205.html
-32. https://pishoyg.github.io/crum/2832.html
-33. https://pishoyg.github.io/crum/3117.html
-34. https://pishoyg.github.io/crum/3230.html
-35. https://pishoyg.github.io/crum/3231.html
-36. https://pishoyg.github.io/crum/3257.html
-37. https://pishoyg.github.io/crum/3302.html
+1. https://metremnqymi.com/crum/1274.html
+2. https://metremnqymi.com/crum/1292.html
+3. https://metremnqymi.com/crum/1367.html
+4. https://metremnqymi.com/crum/1462.html
+5. https://metremnqymi.com/crum/1553.html
+6. https://metremnqymi.com/crum/1555.html
+7. https://metremnqymi.com/crum/1557.html
+8. https://metremnqymi.com/crum/1558.html
+9. https://metremnqymi.com/crum/1657.html
+10. https://metremnqymi.com/crum/1659.html
+11. https://metremnqymi.com/crum/1712.html
+12. https://metremnqymi.com/crum/1957.html
+13. https://metremnqymi.com/crum/2074.html
+14. https://metremnqymi.com/crum/2075.html
+15. https://metremnqymi.com/crum/2076.html
+16. https://metremnqymi.com/crum/2077.html
+17. https://metremnqymi.com/crum/2078.html
+18. https://metremnqymi.com/crum/2079.html
+19. https://metremnqymi.com/crum/2081.html
+20. https://metremnqymi.com/crum/2082.html
+21. https://metremnqymi.com/crum/2084.html
+22. https://metremnqymi.com/crum/2085.html
+23. https://metremnqymi.com/crum/2086.html
+24. https://metremnqymi.com/crum/2087.html
+25. https://metremnqymi.com/crum/2088.html
+26. https://metremnqymi.com/crum/2090.html
+27. https://metremnqymi.com/crum/2091.html
+28. https://metremnqymi.com/crum/2092.html
+29. https://metremnqymi.com/crum/2093.html
+30. https://metremnqymi.com/crum/2195.html
+31. https://metremnqymi.com/crum/2205.html
+32. https://metremnqymi.com/crum/2832.html
+33. https://metremnqymi.com/crum/3117.html
+34. https://metremnqymi.com/crum/3230.html
+35. https://metremnqymi.com/crum/3231.html
+36. https://metremnqymi.com/crum/3257.html
+37. https://metremnqymi.com/crum/3302.html
 
 ## copticocc.org
 
