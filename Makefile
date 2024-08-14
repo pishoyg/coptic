@@ -128,13 +128,13 @@ crum: $(shell find dictionary/marcion.sourceforge.net/ -type f)
 crum_dawoud: FORCE
 	curl -L \
 		"https://docs.google.com/spreadsheets/d/e/2PACX-1vTItxV4E4plQrzjWLSea85ZFQWcQ4ba-p2BBIDG9h5yI0i9URn9GD9zZhxEj8kVI7jhCoPWPEapd9D7/pub?output=tsv" \
-		| cut --fields 1,2 \
+		| cut --fields 1,3 \
 		> "dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv"
 
 crum_notes: FORCE
 	curl -L \
-		"https://docs.google.com/spreadsheets/d/e/2PACX-1vRi-3twJ_GWXhvbeXU9cxtmHc6j1rY8XJI7pggMyG3EP5KZHrK__S7GQmwMm8tGelPHU2ye6mZMo831/pub?output=tsv" \
-		| cut --fields 1,2 \
+		"https://docs.google.com/spreadsheets/d/e/2PACX-1vTItxV4E4plQrzjWLSea85ZFQWcQ4ba-p2BBIDG9h5yI0i9URn9GD9zZhxEj8kVI7jhCoPWPEapd9D7/pub?output=tsv" \
+		| cut --fields 1,4 \
 		> "dictionary/marcion.sourceforge.net/data/notes/notes.tsv"
 
 crum_img: $(shell find dictionary/marcion.sourceforge.net/data/ -type f)
