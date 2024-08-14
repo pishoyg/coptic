@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# shellcheck disable=SC2140
+
 set -o errexit  # Exit upon encountering a failure.
 set -o nounset  # Consider an undefined variable to be an error.
 
@@ -150,7 +152,6 @@ TOTAL="$((
 
 DELTA=$(( LOC - TOTAL ))
 
-# shellcheck disable=SC2140
 EXTENSIONS="$(extensions .)"
 DIFF=$(comm -23 <(echo "${EXTENSIONS}") <(echo "${KNOWN_EXTENSIONS}" | tr ' ' '\n' | sort) | tr '\n' ' ')
 if [ -n "${DIFF}" ]; then
@@ -185,7 +186,6 @@ CRUM_DAWOUD_SUM=$(tsv_nonempty \
 
 CRUM_TYPOS=$(( $(crum_typos "coptwrd.tsv") + $(crum_typos "coptdrv.tsv") ))
 
-# shellcheck disable=SC2140
 echo -e "${BLUE}Number of lines of code: "\
 "${GREEN}${LOC}${BLUE}."\
 "\n  ${BLUE}CRUM: ${GREEN}${LOC_CRUM}"\
@@ -206,28 +206,22 @@ if [ "${DELTA}" != "0" ]; then
   exit 1
 fi
 
-# shellcheck disable=SC2140
 echo -e "${BLUE}Number of words possessing at least one image: "\
 "${GREEN}${CRUM_IMG}${BLUE}."
 
-# shellcheck disable=SC2140
 echo -e "${BLUE}Total number of images: "\
 "${GREEN}${CRUM_IMG_SUM}${BLUE}."
 
-# shellcheck disable=SC2140
 echo -e "${BLUE}Number of words that have at least one page from Dawoud: "\
 "${GREEN}${CRUM_DAWOUD}${BLUE}."
 
-# shellcheck disable=SC2140
 echo -e "${BLUE}Number of Dawoud pages added: "\
 "${GREEN}${CRUM_DAWOUD_SUM}${BLUE}."
 
-# shellcheck disable=SC2140
 echo -e "${BLUE}Number of Crum entries changed: "\
   "${GREEN}${CRUM_TYPOS}${BLUE}."
 
 NUM_COMMITS="$(git rev-list --count --all)"
-# shellcheck disable=SC2140
 echo -e "${BLUE}Number of commits: "\
   "${GREEN}${NUM_COMMITS}${BLUE}."
 
