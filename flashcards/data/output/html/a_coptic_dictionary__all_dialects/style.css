@@ -52,3 +52,7 @@
      display: inline-block;
      margin: 10px;
 }
+ .header {
+     table-layout: fixed;
+     width: 100%;
+ }
