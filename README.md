@@ -11,6 +11,7 @@
     - [A Coptic Dictionary](#a-coptic-dictionary)
     - [copticsite.com](#copticsitecom)
   - [Contact and Contributions](#contact-and-contributions)
+  - [Hosting](#hosting)
   - [For Developers / Owners](#for-developers--owners)
     - [Getting started](#getting-started)
     - [Directory Structure](#directory-structure)
@@ -155,6 +156,16 @@ The contribution pipeline is not yet well-defined. We plan to make it clearer
 as to how exactly you can contribute (which files you can write, in which
 formats, ... etc.) In the meantime, feel free to look below and reach out with
 suggestions or questions, or data! :)
+
+## Hosting
+
+We use:
+
+- GitHub for our code base.
+- GitHub Pages for our website.
+- Google Drive to share large files.
+- Google Analytics to analyze traffic.
+- Squarespace for DNS registration.
 
 ## For Developers / Owners
 
