@@ -59,7 +59,7 @@ flashcards_kellia: _flashcards_kellia
 bible_no_epub: bible_no_epub_aux
 
 .PHONY: site_prepublish
-site_prepublish: site_commit
+site_prepublish: _site_prepublish
 
 .PHONY: stats
 stats: stats_save
@@ -220,7 +220,7 @@ endif
 site_publish: FORCE
 	bash site/publish.sh --auto
 
-site_commit: FORCE
+_site_prepublish: FORCE
 	bash site/publish.sh
 
 # INFRASTRUCTURE RULES
