@@ -106,6 +106,15 @@ diff_lines() {
   diff --suppress-common-lines --speed-large-files --side-by-side "${1}" "${2}" | wc --lines
 }
 
+tsv_nonempty() {
+  FILE="${1}"
+  FIELDS="${2}"
+  tail -n +2 \
+    "${FILE}" \
+    | cut --fields="${FIELDS}" \
+    | grep '^[[:space:]]*$' --invert --extended-regexp
+}
+
 crum_typos() {
   PARENT="dictionary/marcion.sourceforge.net/data"
   diff_lines "${PARENT}/marcion-input/${1}" "${PARENT}/marcion-raw/${1}"
@@ -163,13 +172,16 @@ CRUM_IMG=$(ls dictionary/marcion.sourceforge.net/data/img/ \
 CRUM_IMG_SUM=$(find dictionary/marcion.sourceforge.net/data/img/ -type f \
   | wc --lines)
 
-CRUM_DAWOUD=$(cut --fields=2,3 \
-  < dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv \
-  | grep --invert -E '^[[:space:]]*$' --count)
+CRUM_DAWOUD=$(tsv_nonempty \
+  "dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv" \
+  "2,3" \
+  | wc --lines)
 
-CRUM_DAWOUD_SUM=$(cut --fields=2,3 \
-  < dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv \
-  | grep --only-matching --extended-regexp '[0-9]+' | wc --lines)
+CRUM_DAWOUD_SUM=$(tsv_nonempty \
+  "dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv" \
+  "2,3" \
+  | grep '[0-9]+' --only-matching --extended-regexp \
+  | wc --lines)
 
 CRUM_TYPOS=$(( $(crum_typos "coptwrd.tsv") + $(crum_typos "coptdrv.tsv") ))
 
