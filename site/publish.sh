@@ -43,9 +43,11 @@ git -C "${SITE_DIR}" add --all
 git -C "${SITE_DIR}" commit --fixup HEAD
 
 if ${AUTO}; then
-  git -C "${SITE_DIR}" rebase --root --autosquash
+  git -C "${SITE_DIR}" rebase HEAD~2 --autosquash
   git -C "${SITE_DIR}" push --force
 else
   # shellcheck disable=SC2016
-  echo -e "${GREEN}" Run "${YELLOW}" 'git -C "${SITE_DIR}" rebase --root --autosquash && git -C "${SITE_DIR}" push --force'
+  echo -e "${YELLOW}Run:${RESET}"
+  echo -e "  ${GREEN}git -C ${BLUE}${SITE_DIR}${GREEN} rebase HEAD~2 --autosquash${RESET}"
+  echo -e "  ${GREEN}git -C ${BLUE}${SITE_DIR}${GREEN} push --force${RESET}"
 fi
