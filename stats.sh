@@ -174,12 +174,12 @@ CRUM_IMG_SUM=$(find dictionary/marcion.sourceforge.net/data/img/ -type f \
 
 CRUM_DAWOUD=$(tsv_nonempty \
   "dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv" \
-  "2,3" \
+  "2" \
   | wc --lines)
 
 CRUM_DAWOUD_SUM=$(tsv_nonempty \
   "dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv" \
-  "2,3" \
+  "2" \
   | grep '[0-9]+' --only-matching --extended-regexp \
   | wc --lines)
 

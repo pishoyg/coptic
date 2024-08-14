@@ -128,7 +128,7 @@ crum: $(shell find dictionary/marcion.sourceforge.net/ -type f)
 crum_dawoud: FORCE
 	curl -L \
 		"https://docs.google.com/spreadsheets/d/e/2PACX-1vTItxV4E4plQrzjWLSea85ZFQWcQ4ba-p2BBIDG9h5yI0i9URn9GD9zZhxEj8kVI7jhCoPWPEapd9D7/pub?output=tsv" \
-		| cut --fields 1,2,3 \
+		| cut --fields 1,2 \
 		> "dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv"
 
 crum_notes: FORCE

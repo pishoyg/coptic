@@ -186,16 +186,7 @@ def crum(
                             lambda pages: DICTIONARY_PAGE_RE.sub(
                                 r'<span class="dawoud-page">\1</span>', pages
                             ),
-                            field.grp(
-                                keys=roots_col("key"),
-                                group_by=dawoud_col("key"),
-                                selected=field.xor(
-                                    dawoud_col("dawoud-pages-redone", force=False),
-                                    dawoud_col("dawoud-pages", force=False),
-                                ),
-                                force=False,
-                                unique=True,
-                            ),
+                            dawoud_col("dawoud-pages", force=False),
                         ),
                     ),
                     "</span>",
@@ -276,16 +267,7 @@ def crum(
                 field.aon(
                     "<hr/>",
                     field.img(
-                        field.grp(
-                            keys=roots_col("key"),
-                            group_by=dawoud_col("key"),
-                            selected=field.xor(
-                                dawoud_col("dawoud-pages-redone", force=False),
-                                dawoud_col("dawoud-pages", force=False),
-                            ),
-                            force=False,
-                            unique=True,
-                        ),
+                        dawoud_col("dawoud-pages", force=False),
                         get_paths=lambda page_ranges: [
                             f"dictionary/copticocc.org/dawoud-D100/{k+16}.jpg"
                             for k in _page_numbers(page_ranges=page_ranges)
