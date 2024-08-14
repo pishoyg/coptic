@@ -1,6 +1,7 @@
 import itertools
 import os
 import shutil
+import typing
 
 import enforcer
 import gspread
@@ -191,7 +192,7 @@ class gsheet(_content_field):
         gspread_url: str,
         column_name: str,
         line_br: bool = False,
-        force: bool = False,
+        force: bool = True,
     ) -> None:
         assert json_keyfile_name
         assert gspread_url
@@ -400,16 +401,28 @@ FieldOrStr = Field + [str]
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def fmt(fmt: str, key_to_field: dict[str, Field], force: bool = True) -> apl:
+def fmt(
+    fmt: str,
+    key_to_field: dict[str, Field],
+    force: bool = True,
+    aon: typing.Optional[bool] = None,
+) -> apl:
     """
     A string formatting field.
     """
     keys = list(key_to_field.keys())
+    if not force and aon is None:
+        utils.fatal(
+            "If the format data is allowed to be absent, then the"
+            "all-or-nothing behaviour must be specified"
+        )
 
     def format(*nexts: str) -> str:
         assert len(nexts) == len(keys)
-        if force:
-            assert all(nexts)
+        all_present = all(nexts)
+        assert all_present or not force
+        if aon and not all_present:
+            return ""
         return fmt.format(**{key: next for key, next in zip(keys, nexts)})
 
     return apl(format, *[key_to_field[k] for k in keys])

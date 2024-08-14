@@ -11,9 +11,8 @@ import utils
 CRUM_FMT = '<span class="crum-page">{crum}</span>'
 CRUM_EXTERNAL_FMT = '<span class="crum-page-external">{crum}</span>'
 # TODO: Update the home page, it will no longer be the repo.
-# TODO: Update the parent URL. You should get your own domain.
-PARENT_URL = "https://pishoyg.github.io/crum"
-HOME = "https://github.com/pishoyg/coptic/"
+HOME = "https://metremnqymi.com"
+CRUM_ROOT = f"{HOME}/crum"
 EMAIL = "pishoybg@gmail.com"
 
 DICTIONARY_PAGE_RE = re.compile("([0-9]+(a|b))")
@@ -107,31 +106,59 @@ def crum(
         javascript=utils.read("flashcards/data/input/a_coptic_dictionary/script.js"),
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
-        key=roots_col("key", force=True),
+        key=roots_col("key"),
         front=field.apl(
             cdo,
             field.aon(
                 # Header.
                 field.cat(
-                    f"""<table style="width: 100%; table-layout: fixed;"> <tr> <td><a href="{HOME}">home</a></td> <td>""",
-                    field.aon(
-                        f'<a class="navigate" href="{PARENT_URL}/',
-                        roots_col("key-prev", force=False),
-                        '.html">prev</a>',
-                    ),
+                    # Open the table.
+                    '<table class="header">',
+                    "<tr>",
+                    # Home
+                    "<td>" f'<a class="home" href="{HOME}">' "home" "</a>" "</td>",
+                    # Prev
+                    "<td>",
                     field.fmt(
-                        """ </td> <td><a href="{key_link}">{key}</a></td> <td>""",
+                        f'<a class="navigate" href="{CRUM_ROOT}/{{key_prev}}.html">'
+                        "prev"
+                        "</a>",
+                        {"key_prev": roots_col("key-prev", force=False)},
+                        force=False,
+                        aon=True,
+                    ),
+                    "</td>",
+                    # Key.
+                    "<td>",
+                    field.fmt(
+                        f'<a class="navigate" href="{CRUM_ROOT}/{{key}}.html">'
+                        "{key}"
+                        "</a>",
                         {
-                            "key": roots_col("key", force=True),
-                            "key_link": roots_col("key-link", force=True),
+                            "key": roots_col("key"),
                         },
                     ),
-                    field.aon(
-                        f'<a class="navigate" href="{PARENT_URL}/',
-                        roots_col("key-next", force=False),
-                        '.html">next</a>',
+                    "</td>",
+                    # Next
+                    "<td>",
+                    field.fmt(
+                        f'<a class="navigate" href="{CRUM_ROOT}/{{key_next}}.html">'
+                        "next"
+                        "</a>",
+                        {"key_next": roots_col("key-next", force=False)},
+                        force=False,
+                        aon=True,
                     ),
-                    f"""</td> <td><a href="mailto:{EMAIL}">contact</a></td> </tr> </table>""",
+                    "</td>",
+                    # Contact
+                    "<td>"
+                    f'<a class="contact" href="mailto:{EMAIL}">'
+                    "contact"
+                    "</a>"
+                    "</td>",
+                    # Close the table.
+                    "</tr>",
+                    "</table>",
                 ),
                 "<hr/>",
                 # Actual front.
@@ -145,12 +172,12 @@ def crum(
                 field.cat(
                     field.fmt(
                         "(<b>{type_parsed}</b>)",
-                        {"type_parsed": roots_col("type-parsed", force=True)},
+                        {"type_parsed": roots_col("type-parsed")},
                     ),
                     '<span class="right">',
                     field.fmt(
                         f"<b>Crum: </b>{CRUM_FMT}",
-                        {"crum": roots_col("crum", force=True)},
+                        {"crum": roots_col("crum")},
                     ),
                     field.aon(
                         "<br/>",
@@ -160,8 +187,8 @@ def crum(
                                 r'<span class="dawoud-page">\1</span>', pages
                             ),
                             field.grp(
-                                keys=roots_col("key", force=True),
-                                group_by=dawoud_col("key", force=True),
+                                keys=roots_col("key"),
+                                group_by=dawoud_col("key"),
                                 selected=field.xor(
                                     dawoud_col("dawoud-pages-redone", force=False),
                                     dawoud_col("dawoud-pages", force=False),
@@ -214,7 +241,7 @@ def crum(
                 # Horizontal line.
                 "<hr/>",
                 # Full entry.
-                roots_col("word-parsed-classify", line_br=True, force=True),
+                roots_col("word-parsed-classify", line_br=True),
                 # Derivations.
                 field.apl(
                     greek, roots_col("derivations-table", line_br=True, force=False)
@@ -250,8 +277,8 @@ def crum(
                     "<hr/>",
                     field.img(
                         field.grp(
-                            keys=roots_col("key", force=True),
-                            group_by=dawoud_col("key", force=True),
+                            keys=roots_col("key"),
+                            group_by=dawoud_col("key"),
                             selected=field.xor(
                                 dawoud_col("dawoud-pages-redone", force=False),
                                 dawoud_col("dawoud-pages", force=False),
