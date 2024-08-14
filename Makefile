@@ -70,6 +70,9 @@ clean: git_clean bible_epub_clean kellia_analysis_clean
 .PHONY: status
 status: git_status
 
+.PHONY: diff
+diff: git_diff
+
 .PHONY: toil
 toil: crum_img_helper
 
@@ -266,6 +269,9 @@ git_clean: FORCE
 
 git_status: FORCE
 	git status --short
+
+git_diff: FORCE
+	git diff --cached --word-diff
 
 stats_report: FORCE
 	bash stats.sh
