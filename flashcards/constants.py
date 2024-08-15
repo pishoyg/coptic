@@ -10,7 +10,6 @@ import utils
 
 CRUM_FMT = '<span class="crum-page">{crum}</span>'
 CRUM_EXTERNAL_FMT = '<span class="crum-page-external">{crum}</span>'
-# TODO: Update the home page, it will no longer be the repo.
 HOME = "https://metremnqymi.com"
 CRUM_ROOT = f"{HOME}/crum"
 EMAIL = "pishoybg@gmail.com"
@@ -174,12 +173,12 @@ def crum(
                     ),
                     '<span class="right">',
                     field.fmt(
-                        f"<b>Crum: </b>{CRUM_FMT}",
+                        f'<b><a href="#crum" class="hover-link">Crum: </a></b>{CRUM_FMT}',
                         {"crum": roots_col("crum")},
                     ),
                     field.aon(
                         "<br/>",
-                        "<b>Dawoud: </b>",
+                        '<b><a href="#dawoud" class="hover-link">Dawoud: </a></b>',
                         field.apl(
                             lambda pages: DICTIONARY_PAGE_RE.sub(
                                 r'<span class="dawoud-page">\1</span>', pages
@@ -233,6 +232,12 @@ def crum(
                 # Crum's pages.
                 field.cat(
                     "<hr/>",
+                    '<span id="crum" class="right">',
+                    field.fmt(
+                        f"<b>Crum: </b>{CRUM_FMT}",
+                        {"crum": roots_col("crum")},
+                    ),
+                    "</span>",
                     field.img(
                         keys=field.tsvs(
                             tsvs="dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs",
@@ -259,6 +264,17 @@ def crum(
                 # Dawoud's pages.
                 field.aon(
                     "<hr/>",
+                    '<span id="dawoud" class="right">',
+                    field.aon(
+                        "<b>Dawoud: </b>",
+                        field.apl(
+                            lambda pages: DICTIONARY_PAGE_RE.sub(
+                                r'<span class="dawoud-page">\1</span>', pages
+                            ),
+                            appendix("dawoud-pages", force=False),
+                        ),
+                    ),
+                    "</span>",
                     field.img(
                         appendix("dawoud-pages", force=False),
                         get_paths=lambda page_ranges: [
