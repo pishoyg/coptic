@@ -23,7 +23,7 @@ install: pip_install python_install precommit_install bin_install
 
 # generate_1 rules are prerequisites for generate_2 rules.
 .PHONY: generate_1
-generate_1: bible copticsite crum crum_dawoud crum_notes crum_img kellia kellia_analysis
+generate_1: bible copticsite crum crum_appendices crum_img kellia kellia_analysis
 
 .PHONY: generate_2
 generate_2: flashcards kindle
@@ -131,17 +131,10 @@ copticsite: FORCE
 crum: $(shell find dictionary/marcion.sourceforge.net/ -type f)
 	python dictionary/marcion.sourceforge.net/main.py
 
-crum_dawoud: FORCE
+crum_appendices: FORCE
 	curl -L \
 		"https://docs.google.com/spreadsheets/d/e/2PACX-1vTItxV4E4plQrzjWLSea85ZFQWcQ4ba-p2BBIDG9h5yI0i9URn9GD9zZhxEj8kVI7jhCoPWPEapd9D7/pub?output=tsv" \
-		| cut --fields 1,3 \
-		> "dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv"
-
-crum_notes: FORCE
-	curl -L \
-		"https://docs.google.com/spreadsheets/d/e/2PACX-1vTItxV4E4plQrzjWLSea85ZFQWcQ4ba-p2BBIDG9h5yI0i9URn9GD9zZhxEj8kVI7jhCoPWPEapd9D7/pub?output=tsv" \
-		| cut --fields 1,4 \
-		> "dictionary/marcion.sourceforge.net/data/notes/notes.tsv"
+		> "dictionary/marcion.sourceforge.net/data/input/appendices.tsv"
 
 crum_img: $(shell find dictionary/marcion.sourceforge.net/data/ -type f)
 	python dictionary/marcion.sourceforge.net/img_helper.py --batch
@@ -154,7 +147,6 @@ crum_img_helper: FORCE
 		--start_at_key="$${START_AT_KEY}" \
 		--thenounproject_key="$${THENOUNPROJECT_KEY}" \
 		--thenounproject_secret="$${THENOUNPROJECT_SECRET}"
-
 
 # KELLIA RULES
 kellia: FORCE

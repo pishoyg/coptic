@@ -36,11 +36,9 @@ def crum(
             force=force,
         )
 
-    def dawoud_col(
-        col_name: str, line_br: bool = False, force: bool = True
-    ) -> field.tsv:
+    def appendix(col_name: str, line_br: bool = False, force: bool = True) -> field.tsv:
         return field.tsv(
-            "dictionary/marcion.sourceforge.net/data/marcion-dawoud/marcion_dawoud.tsv",
+            "dictionary/marcion.sourceforge.net/data/input/appendices.tsv",
             col_name,
             line_br=line_br,
             force=force,
@@ -186,7 +184,7 @@ def crum(
                             lambda pages: DICTIONARY_PAGE_RE.sub(
                                 r'<span class="dawoud-page">\1</span>', pages
                             ),
-                            dawoud_col("dawoud-pages", force=False),
+                            appendix("dawoud-pages", force=False),
                         ),
                     ),
                     "</span>",
@@ -221,12 +219,7 @@ def crum(
                 # Editor's notes.
                 field.aon(
                     "<i>Editor's Note: </i>",
-                    field.tsv(
-                        file_path="dictionary/marcion.sourceforge.net/data/notes/notes.tsv",
-                        column_name="notes",
-                        line_br=True,
-                        force=False,
-                    ),
+                    appendix("notes", line_br=True, force=False),
                     "<br/>",
                 ),
                 # Horizontal line.
@@ -267,7 +260,7 @@ def crum(
                 field.aon(
                     "<hr/>",
                     field.img(
-                        dawoud_col("dawoud-pages", force=False),
+                        appendix("dawoud-pages", force=False),
                         get_paths=lambda page_ranges: [
                             f"dictionary/copticocc.org/dawoud-D100/{k+16}.jpg"
                             for k in _page_numbers(page_ranges=page_ranges)
