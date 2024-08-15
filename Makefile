@@ -64,9 +64,6 @@ site_commit: _site_commit
 .PHONY: site_push
 site_push: _site_push
 
-.PHONY: site_tidy
-site_tidy: _site_tidy
-
 .PHONY: stats
 stats: stats_save
 
@@ -227,10 +224,6 @@ _site_commit: FORCE
 _site_push: FORCE
 	git -C "$${SITE_DIR}" rebase --root --autosquash
 	git -C "$${SITE_DIR}" push --force
-
-_site_tidy: FORCE
-	find "$${SITE_DIR}" -type f -name "*.html" | while read -r FILE; do \
-		tidy -indent -modify -quiet --tidy-mark no -wrap 80 "$${FILE}"; done
 
 # INFRASTRUCTURE RULES
 bin_install:

@@ -69,6 +69,7 @@ find "${SITE_DIR}" -type f -name "*.html" | while read -r FILE; do
   fi
   NEW="$(head -n "${LINE_NUM}" "${FILE}")${GOOGLE_TAG}${ICON_TAG}$(tail -n "+$((LINE_NUM + 1))" "${FILE}")"
   echo "${NEW}" > "${FILE}"
+  tidy -indent -modify -quiet --tidy-mark no -wrap 80 "${FILE}"
 done
 
 git -C "${SITE_DIR}" add --all
@@ -78,5 +79,4 @@ if ${AUTO}; then
   make site_push
 else
   echo -e "${BLUE}Run ${GREEN}\`make site_push\`${BLUE}.${RESET}"
-  echo -e "${BLUE}(Optionally) run ${GREEN}\`make site_tidy\`${BLUE} first.${RESET}"
 fi
