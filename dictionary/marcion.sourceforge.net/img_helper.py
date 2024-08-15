@@ -420,6 +420,7 @@ def prompt():
                 continue
 
             if sense.startswith("del="):
+                sense = sense[4:]
                 if not STEM_RE.fullmatch(sense):
                     utils.error(
                         "To delete an image, please provide the stem.",
