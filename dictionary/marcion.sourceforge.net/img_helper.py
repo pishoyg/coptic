@@ -549,11 +549,8 @@ def prompt():
                 ext = utils.ext(file)
                 new_file = os.path.join(IMG_DIR, f"{key}-{sense}-{idx}{ext}")
                 pathlib.Path(file).rename(new_file)
-                file = new_file
-                del new_file
-                # Write the source.
-                utils.write(sources[file], get_source(file))
-                convert(file)
+                convert(new_file)
+                utils.write(sources[file], get_source(new_file))
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
