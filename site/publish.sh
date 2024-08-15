@@ -40,7 +40,10 @@ fi
 CRUM_DIR="${SITE_DIR}/crum"
 BIBLE_DIR="${SITE_DIR}/bible"
 
-cp "site/icon-circle.png" "${SITE_DIR}/"
+cp \
+  "site/CNAME" \
+  "site/icon-circle.png" \
+  "${SITE_DIR}/"
 
 rm -r "${CRUM_DIR:?}"/*
 
