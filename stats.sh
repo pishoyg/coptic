@@ -151,6 +151,37 @@ TOTAL="$((
   + LOC_SHARED))"
 
 DELTA=$(( LOC - TOTAL ))
+if [ "${DELTA}" != "0" ]; then
+  echo -e "${PURPLE}The total doesn't equal the sum of the parts, delta is ${RED}${DELTA}${PURPLE}.${RESET}"
+  exit 1
+fi
+
+LOC_PYTHON=$(loc . -name "*.py")
+LOC_MAKE=$(loc . -name "Makefile")
+LOC_CSS=$(loc . -name "*.css")
+LOC_SH=$(loc . -a \( -name "*.sh" -o -name ".env" -o -name ".env_INFO" \))
+LOC_JS=$(loc . -name "*.js")
+LOC_MD=$(loc . -name "*.md")
+LOC_YAML=$(loc . -name "*.yaml")
+LOC_DOT=$(loc . -a \( -name ".csslintrc" -o -name ".gitignore" \) )
+LOC_KEYBOARD=$(loc . -a \( -name "*.keylayout" -o -name "*.plist" -o -name "*.strings" \) )
+
+TOTAL_BY_LANG="$((
+  LOC_PYTHON
+  + LOC_MAKE
+  + LOC_CSS
+  + LOC_SH
+  + LOC_JS
+  + LOC_MD
+  + LOC_YAML
+  + LOC_DOT
+  + LOC_KEYBOARD))"
+
+DELTA=$(( LOC - TOTAL_BY_LANG - LOC_ARCHIVE ))
+if [ "${DELTA}" != "0" ]; then
+  echo -e "${PURPLE}The total doesn't equal the sum of the parts, delta is ${RED}${DELTA}${PURPLE}.${RESET}"
+  exit 1
+fi
 
 EXTENSIONS="$(extensions .)"
 DIFF=$(comm -23 <(echo "${EXTENSIONS}") <(echo "${KNOWN_EXTENSIONS}" | tr ' ' '\n' | sort) | tr '\n' ' ')
@@ -175,36 +206,48 @@ CRUM_IMG_SUM=$(find dictionary/marcion.sourceforge.net/data/img/ -type f \
 
 CRUM_DAWOUD=$(tsv_nonempty \
   "dictionary/marcion.sourceforge.net/data/input/appendices.tsv" \
-  "2" \
+  "3" \
   | wc --lines)
 
 CRUM_DAWOUD_SUM=$(tsv_nonempty \
   "dictionary/marcion.sourceforge.net/data/input/appendices.tsv" \
-  "2" \
+  "3" \
   | grep '[0-9]+' --only-matching --extended-regexp \
+  | wc --lines)
+
+CRUM_NOTES=$(tsv_nonempty \
+  "dictionary/marcion.sourceforge.net/data/input/appendices.tsv" \
+  "4" \
   | wc --lines)
 
 CRUM_TYPOS=$(( $(crum_typos "coptwrd.tsv") + $(crum_typos "coptdrv.tsv") ))
 
 echo -e "${BLUE}Number of lines of code: "\
 "${GREEN}${LOC}${BLUE}."\
-"\n  ${BLUE}CRUM: ${GREEN}${LOC_CRUM}"\
-"\n  ${BLUE}COPTICSITE: ${GREEN}${LOC_COPTICSITE}"\
+"\n  ${BLUE}Crum: ${GREEN}${LOC_CRUM}"\
+"\n  ${BLUE}copticsite: ${GREEN}${LOC_COPTICSITE}"\
 "\n  ${BLUE}KELLIA: ${GREEN}${LOC_KELLIA}"\
-"\n  ${BLUE}BIBLE: ${GREEN}${LOC_BIBLE}"\
-"\n  ${BLUE}FLASHCARDS: ${GREEN}${LOC_FLASHCARDS}"\
-"\n  ${BLUE}GRAMMAR: ${GREEN}${LOC_GRAMMAR}"\
-"\n  ${BLUE}KEYBOARD: ${GREEN}${LOC_KEYBOARD}"\
-"\n  ${BLUE}MORPHOLOGY: ${GREEN}${LOC_MORPHOLOGY}"\
-"\n  ${BLUE}SITE: ${GREEN}${LOC_SITE}"\
-"\n  ${BLUE}SHARED: ${GREEN}${LOC_SHARED}"\
-"\n  ${BLUE}ARCHIVE: ${GREEN}${LOC_ARCHIVE}"\
-"\n  ${BLUE}Total: ${GREEN}${TOTAL}"
+"\n  ${BLUE}Bible: ${GREEN}${LOC_BIBLE}"\
+"\n  ${BLUE}Flashcards: ${GREEN}${LOC_FLASHCARDS}"\
+"\n  ${BLUE}Grammar: ${GREEN}${LOC_GRAMMAR}"\
+"\n  ${BLUE}Keyboard: ${GREEN}${LOC_KEYBOARD}"\
+"\n  ${BLUE}Morphology: ${GREEN}${LOC_MORPHOLOGY}"\
+"\n  ${BLUE}Site: ${GREEN}${LOC_SITE}"\
+"\n  ${BLUE}Shared: ${GREEN}${LOC_SHARED}"\
+"\n  ${BLUE}Archive: ${GREEN}${LOC_ARCHIVE}"\
+"\n  ${BLUE}TOTAL: ${GREEN}${TOTAL}"
 
-if [ "${DELTA}" != "0" ]; then
-  echo -e "${PURPLE}The total doesn't equal the sum of the parts, delta is ${RED}${DELTA}${PURPLE}.${RESET}"
-  exit 1
-fi
+echo -e "${BLUE}Number of live lines of code per language: "\
+"\n  ${BLUE}Python: ${GREEN}${LOC_PYTHON}"\
+"\n  ${BLUE}Make: ${GREEN}${LOC_MAKE}"\
+"\n  ${BLUE}CSS: ${GREEN}${LOC_CSS}"\
+"\n  ${BLUE}Shell: ${GREEN}${LOC_SH}"\
+"\n  ${BLUE}JavaScript: ${GREEN}${LOC_JS}"\
+"\n  ${BLUE}Markdown: ${GREEN}${LOC_MD}"\
+"\n  ${BLUE}YAML: ${GREEN}${LOC_YAML}"\
+"\n  ${BLUE}dot: ${GREEN}${LOC_DOT}"\
+"\n  ${BLUE}keyboard: ${GREEN}${LOC_KEYBOARD}"\
+"\n  ${BLUE}TOTAL: ${GREEN}${TOTAL_BY_LANG}"
 
 echo -e "${BLUE}Number of words possessing at least one image: "\
 "${GREEN}${CRUM_IMG}${BLUE}."
@@ -218,6 +261,9 @@ echo -e "${BLUE}Number of words that have at least one page from Dawoud: "\
 echo -e "${BLUE}Number of Dawoud pages added: "\
 "${GREEN}${CRUM_DAWOUD_SUM}${BLUE}."
 
+echo -e "${BLUE}Number of editor's note added to Crum: "\
+"${GREEN}${CRUM_NOTES}${BLUE}."
+
 echo -e "${BLUE}Number of Crum entries changed: "\
   "${GREEN}${CRUM_TYPOS}${BLUE}."
 
@@ -230,6 +276,6 @@ echo -e "${BLUE}Number of contributors: "\
   "${GREEN}${NUM_CONTRIBUTORS}${BLUE}."
 
 if ${SAVE}; then
-  echo -e "$(date)\t$(date +%s)\t${LOC}\t${CRUM_IMG}\t${CRUM_DAWOUD}\t${LOC_CRUM}\t${LOC_COPTICSITE}\t${LOC_KELLIA}\t${LOC_BIBLE}\t${LOC_FLASHCARDS}\t${LOC_GRAMMAR}\t${LOC_KEYBOARD}\t${LOC_MORPHOLOGY}\t${LOC_SITE}\t${LOC_SHARED}\t${LOC_ARCHIVE}\t${CRUM_TYPOS}\t${CRUM_IMG_SUM}\t${CRUM_DAWOUD_SUM}\t${NUM_COMMITS}\t${NUM_CONTRIBUTORS}" \
+  echo -e "$(date)\t$(date +%s)\t${LOC}\t${CRUM_IMG}\t${CRUM_DAWOUD}\t${LOC_CRUM}\t${LOC_COPTICSITE}\t${LOC_KELLIA}\t${LOC_BIBLE}\t${LOC_FLASHCARDS}\t${LOC_GRAMMAR}\t${LOC_KEYBOARD}\t${LOC_MORPHOLOGY}\t${LOC_SITE}\t${LOC_SHARED}\t${LOC_ARCHIVE}\t${CRUM_TYPOS}\t${CRUM_IMG_SUM}\t${CRUM_DAWOUD_SUM}\t${NUM_COMMITS}\t${NUM_CONTRIBUTORS}\t${CRUM_NOTES}\t${LOC_PYTHON}\t${LOC_MAKE}\t${LOC_CSS}\t${LOC_SH}\t${LOC_JS}\t${LOC_MD}\t${LOC_YAML}\t${LOC_DOT}\t${LOC_KEYBOARD}" \
     >> stats.tsv
 fi
