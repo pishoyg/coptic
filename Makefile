@@ -225,7 +225,7 @@ _site_commit: FORCE
 	bash site/publish.sh
 
 _site_push: FORCE
-	git -C "$${SITE_DIR}" rebase HEAD~2 --autosquash
+	git -C "$${SITE_DIR}" rebase --root --autosquash
 	git -C "$${SITE_DIR}" push --force
 
 _site_tidy: FORCE
