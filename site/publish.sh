@@ -33,7 +33,7 @@ while [ $# -gt 0 ]; do
 done
 
 if [ -n "$(git -C "${SITE_DIR}" status --short)" ]; then
-  echo "Git repo is dirty. This should be done in a standalone commit."
+  echo -e "${PURPLE}${SITE_DIR}${RED} is dirty. This should be done in a standalone commit.${RESET}"
   exit 1
 fi
 
@@ -72,11 +72,8 @@ git -C "${SITE_DIR}" add --all
 git -C "${SITE_DIR}" commit --fixup HEAD
 
 if ${AUTO}; then
-  git -C "${SITE_DIR}" rebase HEAD~2 --autosquash
-  git -C "${SITE_DIR}" push --force
+  make site_push
 else
-  # shellcheck disable=SC2016
-  echo -e "${YELLOW}Run:${RESET}"
-  echo -e "  ${GREEN}git -C ${BLUE}${SITE_DIR}${GREEN} rebase HEAD~2 --autosquash${RESET}"
-  echo -e "  ${GREEN}git -C ${BLUE}${SITE_DIR}${GREEN} push --force${RESET}"
+  echo -e "${BLUE}Run ${GREEN}\`make site_push\`${BLUE}.${RESET}"
+  echo -e "${BLUE}(Optionally) run ${GREEN}\`make site_tidy\`${BLUE} first.${RESET}"
 fi
