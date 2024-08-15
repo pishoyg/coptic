@@ -24,6 +24,16 @@
      cursor: pointer;
      text-decoration: underline;
 }
+ .hover-link {
+     color: inherit;
+     cursor: inherit;
+     text-decoration: inherit;
+}
+ .hover-link:visited {
+     color: inherit;
+     cursor: inherit;
+     text-decoration: inherit;
+}
  .hover-link:hover {
      color: blue;
      cursor: pointer;
