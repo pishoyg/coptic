@@ -37,6 +37,8 @@ if [ -n "$(git -C "${SITE_DIR}" status --short)" ]; then
   exit 1
 fi
 
+find "${SITE_DIR}" -not -path "${SITE_DIR}/.git/*" -not -name ".git" -delete
+
 CRUM_DIR="${SITE_DIR}/crum"
 BIBLE_DIR="${SITE_DIR}/bible"
 
@@ -45,14 +47,12 @@ cp \
   "site/icon-circle.png" \
   "${SITE_DIR}/"
 
-rm -r "${CRUM_DIR:?}"/*
-
+mkdir "${CRUM_DIR}"
 cp -r \
   flashcards/data/output/html/a_coptic_dictionary__all_dialects/* \
   "${CRUM_DIR}"
 
-rm -r "${BIBLE_DIR:?}"/*
-
+mkdir "${BIBLE_DIR}"
 cp -r \
   bible/stshenouda.org/data/output/html/bohairic_english \
   bible/stshenouda.org/data/output/html/bohairic \
