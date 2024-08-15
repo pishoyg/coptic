@@ -5,13 +5,17 @@ set -o nounset  # Consider an undefined variable to be an error.
 
 GOOGLE_TAG='
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCVZFDFZR3"></script>
+
+  <script async src=
+  "https://www.googletagmanager.com/gtag/js?id=G-VCVZFDFZR3"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag("js", new Date());
     gtag("config", "G-VCVZFDFZR3");
   </script>
+'
+ICON_TAG='  <link rel="icon" type="image/x-icon" href="/icon-circle.png">
 '
 
 AUTO=false
@@ -36,6 +40,8 @@ fi
 CRUM_DIR="${SITE_DIR}/crum"
 BIBLE_DIR="${SITE_DIR}/bible"
 
+cp "site/icon-circle.png" "${SITE_DIR}/"
+
 rm -r "${CRUM_DIR:?}"/*
 
 cp -r \
@@ -58,7 +64,7 @@ find "${SITE_DIR}" -type f -name "*.html" | while read -r FILE; do
     echo -e "${PURPLE}Can't find <head> in ${RED}${FILE}"
     exit 1
   fi
-  NEW="$(head -n "${LINE_NUM}" "${FILE}")${GOOGLE_TAG}$(tail -n "+$((LINE_NUM + 1))" "${FILE}")"
+  NEW="$(head -n "${LINE_NUM}" "${FILE}")${GOOGLE_TAG}${ICON_TAG}$(tail -n "+$((LINE_NUM + 1))" "${FILE}")"
   echo "${NEW}" > "${FILE}"
 done
 
