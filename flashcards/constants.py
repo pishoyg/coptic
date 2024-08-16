@@ -99,8 +99,8 @@ def crum(
         deck_name=deck_name,
         deck_id=deck_id,
         deck_description=f"{HOME}.\n{EMAIL}.",
-        css=utils.read("flashcards/data/input/a_coptic_dictionary/style.css"),
-        javascript=utils.read("flashcards/data/input/a_coptic_dictionary/script.js"),
+        css=utils.read("flashcards/constants/a_coptic_dictionary/style.css"),
+        javascript=utils.read("flashcards/constants/a_coptic_dictionary/script.js"),
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
         key=roots_col("key"),
@@ -345,7 +345,7 @@ def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
         deck_name=deck_name,
         deck_id=deck_id,
         deck_description=f"{HOME}\n{EMAIL}",
-        css=utils.read("flashcards/data/input/copticsite/style.css"),
+        css=utils.read("flashcards/constants/copticsite/style.css"),
         javascript="",
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
@@ -391,7 +391,7 @@ def kellia(deck_name: str, deck_id: int, basename: str) -> deck.deck:
         deck_name=deck_name,
         deck_id=deck_id,
         deck_description=f"{HOME}\n{EMAIL}",
-        css=utils.read("flashcards/data/input/kellia/style.css"),
+        css=utils.read("flashcards/constants/kellia/style.css"),
         javascript="",
         # N.B. The key is a protected field. Do not change unless you know what
         # you're doing.
