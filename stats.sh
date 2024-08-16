@@ -94,12 +94,28 @@ diff_lines() {
   diff --suppress-common-lines --speed-large-files --side-by-side "${1}" "${2}"
 }
 
+col_num() {
+  FILE="${1}"
+  TARGET="${2}"
+  COL=1
+  for NAME in $(head "${FILE}" -n 1); do
+    if [ "${NAME}" == "${TARGET}" ]; then
+      echo "${COL}"
+      return
+    else
+      COL=$(( COL + 1 ))
+    fi
+  done
+  echo "${RED}Unable to find column ${PURPLE}${TARGET} in ${PURPLE}${FILE}${RED}!${RESET}"
+  exit 1
+}
+
 tsv_nonempty() {
   FILE="${1}"
-  FIELDS="${2}"
+  FIELD="$(col_num "${FILE}" "${2}")"
   tail -n +2 \
     "${FILE}" \
-    | cut --fields="${FIELDS}" \
+    | cut --fields="${FIELD}" \
     | grep '^[[:space:]]*$' --invert --extended-regexp
 }
 
@@ -182,18 +198,18 @@ CRUM_IMG_SUM=$(find dictionary/marcion.sourceforge.net/data/img/ -type f \
 
 CRUM_DAWOUD=$(tsv_nonempty \
   "dictionary/marcion.sourceforge.net/data/input/appendices.tsv" \
-  "3" \
+  "dawoud-pages" \
   | wc --lines)
 
 CRUM_DAWOUD_SUM=$(tsv_nonempty \
   "dictionary/marcion.sourceforge.net/data/input/appendices.tsv" \
-  "3" \
+  "dawoud-pages" \
   | grep '[0-9]+' --only-matching --extended-regexp \
   | wc --lines)
 
 CRUM_NOTES=$(tsv_nonempty \
   "dictionary/marcion.sourceforge.net/data/input/appendices.tsv" \
-  "4" \
+  "notes" \
   | wc --lines)
 
 CRUM_WRD_TYPOS=$(crum_typos "coptwrd.tsv" | wc --lines)
