@@ -4,11 +4,14 @@ import os
 import pathlib
 import re
 import shutil
+import typing
 
 import bs4
 import colorama
+import gspread
 import pandas as pd
 import type_enforced
+from oauth2client import service_account
 
 ENFORCED = False
 
@@ -212,3 +215,24 @@ def verify_equal_sets(s1, s2, message: str) -> None:
     diff = s2.difference(s1)
     if diff:
         fatal(message, diff, "present in the latter but not the former")
+
+
+@type_enforced.Enforcer(enabled=ENFORCED)
+def download_gsheet(
+    gspread_url: str,
+    out_tsv: str,
+    columns: typing.Optional[list[str]] = None,
+) -> None:
+    GSPREAD_SCOPE = [
+        "https://spreadsheets.google.com/feeds",
+        "https://www.googleapis.com/auth/spreadsheets",
+        "https://www.googleapis.com/auth/drive.file",
+        "https://www.googleapis.com/auth/drive",
+    ]
+    credentials = service_account.ServiceAccountCredentials.from_json_keyfile_name(
+        os.environ["JSON_KEYFILE_NAME"], GSPREAD_SCOPE
+    )
+    sheet = gspread.authorize(credentials).open_by_url(gspread_url)
+    records = sheet.get_worksheet(0).get_all_records()
+    df = pd.DataFrame(records)
+    df.to_csv(out_tsv, sep="\t", index=False, columns=columns)
