@@ -157,7 +157,7 @@ LOC_JS=$(loc . -name "*.js")
 LOC_MD=$(loc . -name "*.md")
 LOC_YAML=$(loc . -name "*.yaml")
 LOC_DOT=$(loc . -a \( -name ".csslintrc" -o -name ".gitignore" \) )
-LOC_KEYBOARD=$(loc . -a \( -name "*.keylayout" -o -name "*.plist" -o -name "*.strings" \) )
+LOC_KEYBOARD_LAYOUT=$(loc . -a \( -name "*.keylayout" -o -name "*.plist" -o -name "*.strings" \) )
 
 TOTAL_BY_LANG="$((
   LOC_PYTHON
@@ -168,7 +168,7 @@ TOTAL_BY_LANG="$((
   + LOC_MD
   + LOC_YAML
   + LOC_DOT
-  + LOC_KEYBOARD))"
+  + LOC_KEYBOARD_LAYOUT))"
 
 EXTENSIONS="$(extensions .)"
 DIFF=$(comm -23 <(echo "${EXTENSIONS}") <(echo "${KNOWN_EXTENSIONS}" | tr ' ' '\n' | sort) | tr '\n' ' ')
@@ -233,7 +233,7 @@ echo -e "${BLUE}Number of live lines of code per language: "\
 "\n  ${BLUE}Markdown: ${GREEN}${LOC_MD}"\
 "\n  ${BLUE}YAML: ${GREEN}${LOC_YAML}"\
 "\n  ${BLUE}dot: ${GREEN}${LOC_DOT}"\
-"\n  ${BLUE}keyboard: ${GREEN}${LOC_KEYBOARD}"\
+"\n  ${BLUE}keyboard: ${GREEN}${LOC_KEYBOARD_LAYOUT}"\
 "\n  ${BLUE}TOTAL: ${GREEN}${TOTAL_BY_LANG}"
 
 echo -e "${BLUE}Number of words possessing at least one image: "\
@@ -275,6 +275,6 @@ if [ "${DELTA}" != "0" ]; then
 fi
 
 if ${SAVE}; then
-  echo -e "$(date)\t$(date +%s)\t${LOC}\t${CRUM_IMG}\t${CRUM_DAWOUD}\t${LOC_CRUM}\t${LOC_COPTICSITE}\t${LOC_KELLIA}\t${LOC_BIBLE}\t${LOC_FLASHCARDS}\t${LOC_GRAMMAR}\t${LOC_KEYBOARD}\t${LOC_MORPHOLOGY}\t${LOC_SITE}\t${LOC_SHARED}\t${LOC_ARCHIVE}\t${CRUM_TYPOS}\t${CRUM_IMG_SUM}\t${CRUM_DAWOUD_SUM}\t${NUM_COMMITS}\t${NUM_CONTRIBUTORS}\t${CRUM_NOTES}\t${LOC_PYTHON}\t${LOC_MAKE}\t${LOC_CSS}\t${LOC_SH}\t${LOC_JS}\t${LOC_MD}\t${LOC_YAML}\t${LOC_DOT}\t${LOC_KEYBOARD}" \
+  echo -e "$(date)\t$(date +%s)\t${LOC}\t${CRUM_IMG}\t${CRUM_DAWOUD}\t${LOC_CRUM}\t${LOC_COPTICSITE}\t${LOC_KELLIA}\t${LOC_BIBLE}\t${LOC_FLASHCARDS}\t${LOC_GRAMMAR}\t${LOC_KEYBOARD}\t${LOC_MORPHOLOGY}\t${LOC_SITE}\t${LOC_SHARED}\t${LOC_ARCHIVE}\t${CRUM_TYPOS}\t${CRUM_IMG_SUM}\t${CRUM_DAWOUD_SUM}\t${NUM_COMMITS}\t${NUM_CONTRIBUTORS}\t${CRUM_NOTES}\t${LOC_PYTHON}\t${LOC_MAKE}\t${LOC_CSS}\t${LOC_SH}\t${LOC_JS}\t${LOC_MD}\t${LOC_YAML}\t${LOC_DOT}\t${LOC_KEYBOARD_LAYOUT}" \
     >> data/stats.tsv
 fi
