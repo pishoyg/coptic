@@ -265,6 +265,18 @@ if [ "${DELTA}" != "0" ]; then
 fi
 
 if ${SAVE}; then
-  echo -e "$(date)\t$(date +%s)\t${LOC}\t${CRUM_IMG}\t${CRUM_DAWOUD}\t${LOC_CRUM}\t${LOC_COPTICSITE}\t${LOC_KELLIA}\t${LOC_BIBLE}\t${LOC_FLASHCARDS}\t${LOC_GRAMMAR}\t${LOC_KEYBOARD}\t${LOC_MORPHOLOGY}\t${LOC_SITE}\t${LOC_SHARED}\t${LOC_ARCHIVE}\t${CRUM_TYPOS}\t${CRUM_IMG_SUM}\t${CRUM_DAWOUD_SUM}\t${NUM_COMMITS}\t${NUM_CONTRIBUTORS}\t${CRUM_NOTES}\t${LOC_PYTHON}\t${LOC_MAKE}\t${LOC_CSS}\t${LOC_SH}\t${LOC_JS}\t${LOC_MD}\t${LOC_YAML}\t${LOC_DOT}\t${LOC_KEYBOARD_LAYOUT}\t${LOC_TXT}" \
+  # The first field (data) has 5 spaces within it, so we skip them in `sed`.
+  # The rest doesn't have any spaces, so we can safely assume that any spaces
+  # are ones that we inserted between the cells, and they should be converted
+  # to tab characters.
+  # We do this by first converting all spaces to tabs, then converting five
+  # tabs to spaces.
+  echo -e "$(date) $(date +%s) ${LOC} ${CRUM_IMG} ${CRUM_DAWOUD} ${LOC_CRUM} ${LOC_COPTICSITE} ${LOC_KELLIA} ${LOC_BIBLE} ${LOC_FLASHCARDS} ${LOC_GRAMMAR} ${LOC_KEYBOARD} ${LOC_MORPHOLOGY} ${LOC_SITE} ${LOC_SHARED} ${LOC_ARCHIVE} ${CRUM_TYPOS} ${CRUM_IMG_SUM} ${CRUM_DAWOUD_SUM} ${NUM_COMMITS} ${NUM_CONTRIBUTORS} ${CRUM_NOTES} ${LOC_PYTHON} ${LOC_MAKE} ${LOC_CSS} ${LOC_SH} ${LOC_JS} ${LOC_MD} ${LOC_YAML} ${LOC_DOT} ${LOC_KEYBOARD_LAYOUT} ${LOC_TXT}" \
+    | sed 's/ /\t/g' \
+    | sed 's/\t/ /' \
+    | sed 's/\t/ /' \
+    | sed 's/\t/ /' \
+    | sed 's/\t/ /' \
+    | sed 's/\t/ /' \
     >> data/stats.tsv
 fi
