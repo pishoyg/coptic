@@ -119,7 +119,7 @@ tsv_nonempty() {
 
 crum_typos() {
   PARENT="dictionary/marcion.sourceforge.net/data"
-  diff_lines "${PARENT}/marcion-input/${1}" "${PARENT}/marcion-raw/${1}"
+  diff_lines "${PARENT}/input/${1}" "${PARENT}/raw/${1}"
 }
 
 LOC_ARCHIVE=$(loc_archive)

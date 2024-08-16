@@ -14,8 +14,8 @@ from oauth2client.service_account import ServiceAccountCredentials
 import utils
 
 # Input arguments.#############################################################
-COPTWRD_TSV = "dictionary/marcion.sourceforge.net/data/marcion-input/coptwrd.tsv"
-COPTDRV_TSV = "dictionary/marcion.sourceforge.net/data/marcion-input/coptdrv.tsv"
+COPTWRD_TSV = "dictionary/marcion.sourceforge.net/data/input/coptwrd.tsv"
+COPTDRV_TSV = "dictionary/marcion.sourceforge.net/data/input/coptdrv.tsv"
 
 WORD_COL = "word"
 QUALITY_COL = "quality"
