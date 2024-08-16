@@ -5,7 +5,7 @@
 set -o errexit  # Exit upon encountering a failure.
 set -o nounset  # Consider an undefined variable to be an error.
 
-KNOWN_EXTENSIONS="Makefile css csslintrc env env_INFO gitignore js keylayout md plist py sh strings yaml"
+KNOWN_EXTENSIONS="Makefile css csslintrc env_INFO gitignore js keylayout md plist py sh strings txt yaml"
 
 SAVE=false
 while [ $# -gt 0 ]; do
@@ -33,35 +33,21 @@ foc () {
     EXEC="echo"
   fi
 
+  # Code in our current repository setup is everything that is not:
+  # - Ignored by Git, or
+  # - is data, or
+  # - is archived.
+  # This calculation is possible because we maintain strict requirements about
+  # our repository structure, ensuring that all archived logic does live under
+  # `archive/`, and that all data lives under a `data/` directory.
   find "${DIR}" \
     -type f \
-    -not -name "*.tsv" \
-    -not -name "*.html" \
-    -not -name "*.xml" \
-    -not -name "*.xsd" \
-    -not -name "*.txt" \
-    -not -name "*.json" \
-    -not -name "*.pdf" \
-    -not -name "*.tab" \
-    -not -name "*.msql" \
-    -not -name "*.avif" \
-    -not -name "*.gif" \
-    -not -name "*.jpeg" \
-    -not -name "*.jpg" \
-    -not -name "*.png" \
-    -not -name "*.webp" \
-    -not -name "*.svg" \
-    -not -name "*.JPG" \
-    -not -name "*.xlsx" \
-    -not -name "*.csv" \
-    -not -name "*.m4a" \
-    -not -name "*.epub" \
-    -not -name "*.apkg" \
-    -not -name "PKG-INFO" \
-    -not -name ".DS_Store" \
     -not -path "./.git/*" \
+    -not -name ".DS_Store" \
     -not -path "*/__pycache__/*" \
     -not -path "./coptic.egg-info/*" \
+    -not -name ".env" \
+    -not -path "*/data/*" \
     -not -path "./archive/*" "${@:3}" -exec "${EXEC}" {} \;
 }
 
@@ -80,6 +66,7 @@ extensions () {
   done | sort | uniq
 }
 
+# TODO: Calculate the archived lines of code more rigorously.
 loc_archive () {
   find archive \
     -type f \
@@ -158,6 +145,7 @@ LOC_MD=$(loc . -name "*.md")
 LOC_YAML=$(loc . -name "*.yaml")
 LOC_DOT=$(loc . -a \( -name ".csslintrc" -o -name ".gitignore" \) )
 LOC_KEYBOARD_LAYOUT=$(loc . -a \( -name "*.keylayout" -o -name "*.plist" -o -name "*.strings" \) )
+LOC_TXT=$(loc . -name "*.txt")
 
 TOTAL_BY_LANG="$((
   LOC_PYTHON
@@ -168,7 +156,8 @@ TOTAL_BY_LANG="$((
   + LOC_MD
   + LOC_YAML
   + LOC_DOT
-  + LOC_KEYBOARD_LAYOUT))"
+  + LOC_KEYBOARD_LAYOUT
+  + LOC_TXT))"
 
 EXTENSIONS="$(extensions .)"
 DIFF=$(comm -23 <(echo "${EXTENSIONS}") <(echo "${KNOWN_EXTENSIONS}" | tr ' ' '\n' | sort) | tr '\n' ' ')
@@ -234,6 +223,7 @@ echo -e "${BLUE}Number of live lines of code per language: "\
 "\n  ${BLUE}YAML: ${GREEN}${LOC_YAML}"\
 "\n  ${BLUE}dot: ${GREEN}${LOC_DOT}"\
 "\n  ${BLUE}keyboard: ${GREEN}${LOC_KEYBOARD_LAYOUT}"\
+"\n  ${BLUE}txt: ${GREEN}${LOC_TXT}"\
 "\n  ${BLUE}TOTAL: ${GREEN}${TOTAL_BY_LANG}"
 
 echo -e "${BLUE}Number of words possessing at least one image: "\
@@ -275,6 +265,6 @@ if [ "${DELTA}" != "0" ]; then
 fi
 
 if ${SAVE}; then
-  echo -e "$(date)\t$(date +%s)\t${LOC}\t${CRUM_IMG}\t${CRUM_DAWOUD}\t${LOC_CRUM}\t${LOC_COPTICSITE}\t${LOC_KELLIA}\t${LOC_BIBLE}\t${LOC_FLASHCARDS}\t${LOC_GRAMMAR}\t${LOC_KEYBOARD}\t${LOC_MORPHOLOGY}\t${LOC_SITE}\t${LOC_SHARED}\t${LOC_ARCHIVE}\t${CRUM_TYPOS}\t${CRUM_IMG_SUM}\t${CRUM_DAWOUD_SUM}\t${NUM_COMMITS}\t${NUM_CONTRIBUTORS}\t${CRUM_NOTES}\t${LOC_PYTHON}\t${LOC_MAKE}\t${LOC_CSS}\t${LOC_SH}\t${LOC_JS}\t${LOC_MD}\t${LOC_YAML}\t${LOC_DOT}\t${LOC_KEYBOARD_LAYOUT}" \
+  echo -e "$(date)\t$(date +%s)\t${LOC}\t${CRUM_IMG}\t${CRUM_DAWOUD}\t${LOC_CRUM}\t${LOC_COPTICSITE}\t${LOC_KELLIA}\t${LOC_BIBLE}\t${LOC_FLASHCARDS}\t${LOC_GRAMMAR}\t${LOC_KEYBOARD}\t${LOC_MORPHOLOGY}\t${LOC_SITE}\t${LOC_SHARED}\t${LOC_ARCHIVE}\t${CRUM_TYPOS}\t${CRUM_IMG_SUM}\t${CRUM_DAWOUD_SUM}\t${NUM_COMMITS}\t${NUM_CONTRIBUTORS}\t${CRUM_NOTES}\t${LOC_PYTHON}\t${LOC_MAKE}\t${LOC_CSS}\t${LOC_SH}\t${LOC_JS}\t${LOC_MD}\t${LOC_YAML}\t${LOC_DOT}\t${LOC_KEYBOARD_LAYOUT}\t${LOC_TXT}" \
     >> data/stats.tsv
 fi
