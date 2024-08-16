@@ -43,8 +43,8 @@ CRUM_DIR="${SITE_DIR}/crum"
 BIBLE_DIR="${SITE_DIR}/bible"
 
 cp \
-  "site/CNAME" \
-  "site/icon-circle.png" \
+  "site/data/CNAME" \
+  "site/data/icon-circle.png" \
   "${SITE_DIR}/"
 
 mkdir "${CRUM_DIR}"
