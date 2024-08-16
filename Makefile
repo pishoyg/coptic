@@ -128,10 +128,13 @@ copticsite: FORCE
 crum: $(shell find dictionary/marcion.sourceforge.net/ -type f)
 	python dictionary/marcion.sourceforge.net/main.py
 
+
+
 crum_appendices: FORCE
-	curl -L \
-		"https://docs.google.com/spreadsheets/d/e/2PACX-1vTItxV4E4plQrzjWLSea85ZFQWcQ4ba-p2BBIDG9h5yI0i9URn9GD9zZhxEj8kVI7jhCoPWPEapd9D7/pub?output=tsv" \
-		> "dictionary/marcion.sourceforge.net/data/input/appendices.tsv"
+	python -c $$'import utils\n\
+	utils.download_gsheet(\
+	"https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg",\
+	"dictionary/marcion.sourceforge.net/data/input/appendices.tsv")'
 
 crum_img: $(shell find dictionary/marcion.sourceforge.net/data/ -type f)
 	python dictionary/marcion.sourceforge.net/img_helper.py --batch
