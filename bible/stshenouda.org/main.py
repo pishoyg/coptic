@@ -32,8 +32,8 @@ BOOK_TITLE = "Ⲡⲓϫⲱⲙ Ⲉⲑⲟⲩⲁⲃ"
 VERSE_PREFIX = re.compile(r"^\(([^)]+)\)")
 
 JSON = "bible/stshenouda.org/data/input/bible.json"
-INPUT_DIR = "bible/stshenouda.org/data/input/"
-SOURCES_DIR = "bible/stshenouda.org/data/input/Sources/"
+INPUT_DIR = "bible/stshenouda.org/data/raw/"
+SOURCES_DIR = "bible/stshenouda.org/data/raw/Sources/"
 OUTPUT_DIR = "bible/stshenouda.org/data/output"
 PARALLELS = ["Bohairic_English"]
 COVER = "bible/stshenouda.org/data/img/stauros.jpeg"
