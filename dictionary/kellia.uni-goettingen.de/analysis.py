@@ -48,7 +48,7 @@ argparser.add_argument(
 argparser.add_argument(
     "--output",
     type=str,
-    default="dictionary/kellia.uni-goettingen.de/analysis.json",
+    default="dictionary/kellia.uni-goettingen.de/data/output/analysis.json",
     help="Path to the output JSON.",
 )
 

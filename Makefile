@@ -152,8 +152,8 @@ kellia: FORCE
 kellia_analysis: FORCE
 	python dictionary/kellia.uni-goettingen.de/analysis.py
 
-kellia_analysis_clean: dictionary/kellia.uni-goettingen.de/analysis.json
-	git restore "dictionary/kellia.uni-goettingen.de/analysis.json"
+kellia_analysis_clean: dictionary/kellia.uni-goettingen.de/data/output/analysis.json
+	git restore "dictionary/kellia.uni-goettingen.de/data/output/analysis.json"
 
 # FLASHCARD RULES
 flashcards: FORCE
