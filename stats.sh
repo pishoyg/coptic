@@ -149,12 +149,6 @@ TOTAL="$((
   + LOC_SITE
   + LOC_SHARED))"
 
-DELTA=$(( LOC - TOTAL ))
-if [ "${DELTA}" != "0" ]; then
-  echo -e "${PURPLE}The total doesn't equal the sum of the parts, delta is ${RED}${DELTA}${PURPLE}.${RESET}"
-  exit 1
-fi
-
 LOC_PYTHON=$(loc . -name "*.py")
 LOC_MAKE=$(loc . -name "Makefile")
 LOC_CSS=$(loc . -name "*.css")
@@ -175,12 +169,6 @@ TOTAL_BY_LANG="$((
   + LOC_YAML
   + LOC_DOT
   + LOC_KEYBOARD))"
-
-DELTA=$(( LOC - TOTAL_BY_LANG - LOC_ARCHIVE ))
-if [ "${DELTA}" != "0" ]; then
-  echo -e "${PURPLE}The total doesn't equal the sum of the parts, delta is ${RED}${DELTA}${PURPLE}.${RESET}"
-  exit 1
-fi
 
 EXTENSIONS="$(extensions .)"
 DIFF=$(comm -23 <(echo "${EXTENSIONS}") <(echo "${KNOWN_EXTENSIONS}" | tr ' ' '\n' | sort) | tr '\n' ' ')
@@ -273,6 +261,18 @@ echo -e "${BLUE}Number of commits: "\
 NUM_CONTRIBUTORS="$(git shortlog --summary --number --email | wc --lines)"
 echo -e "${BLUE}Number of contributors: "\
   "${GREEN}${NUM_CONTRIBUTORS}${BLUE}."
+
+DELTA=$(( LOC - TOTAL ))
+if [ "${DELTA}" != "0" ]; then
+  echo -e "${PURPLE}The total doesn't equal the sum of the parts, delta is ${RED}${DELTA}${PURPLE}.${RESET}"
+  exit 1
+fi
+
+DELTA=$(( LOC - TOTAL_BY_LANG - LOC_ARCHIVE ))
+if [ "${DELTA}" != "0" ]; then
+  echo -e "${PURPLE}The total doesn't equal the sum of the parts, delta is ${RED}${DELTA}${PURPLE}.${RESET}"
+  exit 1
+fi
 
 if ${SAVE}; then
   echo -e "$(date)\t$(date +%s)\t${LOC}\t${CRUM_IMG}\t${CRUM_DAWOUD}\t${LOC_CRUM}\t${LOC_COPTICSITE}\t${LOC_KELLIA}\t${LOC_BIBLE}\t${LOC_FLASHCARDS}\t${LOC_GRAMMAR}\t${LOC_KEYBOARD}\t${LOC_MORPHOLOGY}\t${LOC_SITE}\t${LOC_SHARED}\t${LOC_ARCHIVE}\t${CRUM_TYPOS}\t${CRUM_IMG_SUM}\t${CRUM_DAWOUD_SUM}\t${NUM_COMMITS}\t${NUM_CONTRIBUTORS}\t${CRUM_NOTES}\t${LOC_PYTHON}\t${LOC_MAKE}\t${LOC_CSS}\t${LOC_SH}\t${LOC_JS}\t${LOC_MD}\t${LOC_YAML}\t${LOC_DOT}\t${LOC_KEYBOARD}" \
