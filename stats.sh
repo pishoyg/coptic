@@ -91,7 +91,7 @@ loc_archive () {
 }
 
 diff_lines() {
-  diff --suppress-common-lines --speed-large-files --side-by-side "${1}" "${2}" | wc --lines
+  diff --suppress-common-lines --speed-large-files --side-by-side "${1}" "${2}"
 }
 
 tsv_nonempty() {
@@ -196,7 +196,14 @@ CRUM_NOTES=$(tsv_nonempty \
   "4" \
   | wc --lines)
 
-CRUM_TYPOS=$(( $(crum_typos "coptwrd.tsv") + $(crum_typos "coptdrv.tsv") ))
+CRUM_WRD_TYPOS=$(crum_typos "coptwrd.tsv" | wc --lines)
+CRUM_DRV_TYPOS=$(crum_typos "coptdrv.tsv" | wc --lines)
+CRUM_TYPOS=$(( CRUM_WRD_TYPOS + CRUM_DRV_TYPOS ))
+crum_root_keys () {
+  crum_typos "coptwrd.tsv" | cut -f1
+  crum_typos "coptdrv.tsv" | cut -f2
+}
+CRUM_PAGES_CHANGED=$(crum_root_keys | sort | uniq | wc --lines)
 
 echo -e "${BLUE}Number of lines of code: "\
 "${GREEN}${LOC}${BLUE}."\
@@ -241,8 +248,17 @@ echo -e "${BLUE}Number of Dawoud pages added: "\
 echo -e "${BLUE}Number of editor's note added to Crum: "\
 "${GREEN}${CRUM_NOTES}${BLUE}."
 
-echo -e "${BLUE}Number of Crum entries changed: "\
+echo -e "${BLUE}Number of Crum WRD entries changed: "\
+  "${GREEN}${CRUM_WRD_TYPOS}${BLUE}."
+
+echo -e "${BLUE}Number of Crum DRV entries changed: "\
+  "${GREEN}${CRUM_DRV_TYPOS}${BLUE}."
+
+echo -e "${BLUE}Total number of Crum lins changed: "\
   "${GREEN}${CRUM_TYPOS}${BLUE}."
+
+echo -e "${BLUE}Number of Crum pages changed: "\
+  "${GREEN}${CRUM_PAGES_CHANGED}${BLUE}."
 
 NUM_COMMITS="$(git rev-list --count --all)"
 echo -e "${BLUE}Number of commits: "\
@@ -271,7 +287,7 @@ if ${SAVE}; then
   # to tab characters.
   # We do this by first converting all spaces to tabs, then converting five
   # tabs to spaces.
-  echo -e "$(date) $(date +%s) ${LOC} ${CRUM_IMG} ${CRUM_DAWOUD} ${LOC_CRUM} ${LOC_COPTICSITE} ${LOC_KELLIA} ${LOC_BIBLE} ${LOC_FLASHCARDS} ${LOC_GRAMMAR} ${LOC_KEYBOARD} ${LOC_MORPHOLOGY} ${LOC_SITE} ${LOC_SHARED} ${LOC_ARCHIVE} ${CRUM_TYPOS} ${CRUM_IMG_SUM} ${CRUM_DAWOUD_SUM} ${NUM_COMMITS} ${NUM_CONTRIBUTORS} ${CRUM_NOTES} ${LOC_PYTHON} ${LOC_MAKE} ${LOC_CSS} ${LOC_SH} ${LOC_JS} ${LOC_MD} ${LOC_YAML} ${LOC_DOT} ${LOC_KEYBOARD_LAYOUT} ${LOC_TXT}" \
+  echo -e "$(date) $(date +%s) ${LOC} ${CRUM_IMG} ${CRUM_DAWOUD} ${LOC_CRUM} ${LOC_COPTICSITE} ${LOC_KELLIA} ${LOC_BIBLE} ${LOC_FLASHCARDS} ${LOC_GRAMMAR} ${LOC_KEYBOARD} ${LOC_MORPHOLOGY} ${LOC_SITE} ${LOC_SHARED} ${LOC_ARCHIVE} ${CRUM_TYPOS} ${CRUM_IMG_SUM} ${CRUM_DAWOUD_SUM} ${NUM_COMMITS} ${NUM_CONTRIBUTORS} ${CRUM_NOTES} ${LOC_PYTHON} ${LOC_MAKE} ${LOC_CSS} ${LOC_SH} ${LOC_JS} ${LOC_MD} ${LOC_YAML} ${LOC_DOT} ${LOC_KEYBOARD_LAYOUT} ${LOC_TXT} ${CRUM_WRD_TYPOS} ${CRUM_DRV_TYPOS} ${CRUM_PAGES_CHANGED}" \
     | sed 's/ /\t/g' \
     | sed 's/\t/ /' \
     | sed 's/\t/ /' \
