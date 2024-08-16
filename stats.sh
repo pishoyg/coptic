@@ -56,7 +56,6 @@ foc () {
     -not -name "*.csv" \
     -not -name "*.m4a" \
     -not -name "*.epub" \
-    -not -name "Icon*" \
     -not -name "*.apkg" \
     -not -name "PKG-INFO" \
     -not -name ".DS_Store" \
