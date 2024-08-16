@@ -41,7 +41,7 @@ argparser = argparse.ArgumentParser(description="Process the Coptic Lexicon.")
 argparser.add_argument(
     "--input",
     type=str,
-    default="dictionary/kellia.uni-goettingen.de/data/v1.2/Comprehensive_Coptic_Lexicon-v1.2-2020.xml",
+    default="dictionary/kellia.uni-goettingen.de/data/raw/v1.2/Comprehensive_Coptic_Lexicon-v1.2-2020.xml",
     help="Path to the input XML file.",
 )
 

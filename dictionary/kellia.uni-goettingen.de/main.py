@@ -1058,9 +1058,9 @@ parser.add_argument(
     type=str,
     nargs="*",
     default=[
-        "dictionary/kellia.uni-goettingen.de/data/v1.2/BBAW_Lexicon_of_Coptic_Egyptian-v4-2020.xml",
-        "dictionary/kellia.uni-goettingen.de/data/v1.2/DDGLC_Lexicon_of_Greek_Loanwords_in_Coptic-v2-2020.xml",
-        "dictionary/kellia.uni-goettingen.de/data/v1.2/Comprehensive_Coptic_Lexicon-v1.2-2020.xml",
+        "dictionary/kellia.uni-goettingen.de/data/raw/v1.2/BBAW_Lexicon_of_Coptic_Egyptian-v4-2020.xml",
+        "dictionary/kellia.uni-goettingen.de/data/raw/v1.2/DDGLC_Lexicon_of_Greek_Loanwords_in_Coptic-v2-2020.xml",
+        "dictionary/kellia.uni-goettingen.de/data/raw/v1.2/Comprehensive_Coptic_Lexicon-v1.2-2020.xml",
     ],
     help="directory with dictionary XML files",
 )
