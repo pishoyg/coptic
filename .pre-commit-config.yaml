@@ -179,7 +179,7 @@ repos:
         verbose: true
       - id: check-do-not-submit
         name: check-do-not-submit
-        entry: bash -c 'check_do_not_submit () { for FILE in "$@"; do DO_NOT_SUBMIT="$(grep "DO NOT SUBMIT" --files-with-matches "${FILE}")" && [ -z "${DO_NOT_SUBMIT}" ] || (echo -e "${RED}" "DO NOT SUBMIT" markers found in "${YELLOW}" "${DO_NOT_SUBMIT}" "${RESET}" && exit 1); done }; check_do_not_submit' --
+        entry: bash -c 'DO_NOT_SUBMIT="$(grep "DO NOT SUBMIT" --files-with-matches "${@}")" && [ -z "${DO_NOT_SUBMIT}" ] || (echo -e "${RED}DO NOT SUBMIT markers found in ${YELLOW}${DO_NOT_SUBMIT}${RED}.${RESET}" && exit 1)' --
         language: system
         exclude: ^\.pre-commit-config\.yaml$
       - id: check-one-readme
