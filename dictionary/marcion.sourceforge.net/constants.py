@@ -161,12 +161,6 @@ TYPE_ENCODING = {
         "noun male/female",
         inflect.Type.NOUN_MASCULINE_OR_FEMININE,
     ),
-    25: lexical.type(
-        "noun female/male",
-        "(ⲧ/ⲡ)",
-        "noun female/male",
-        inflect.Type.NOUN_MASCULINE_OR_FEMININE,
-    ),
     8: lexical.type("plural", "(ⲛ)", "plural", inflect.Type.NOUN_PLURAL),
     5: lexical.type("pronoun", "(pron.)", "pronoun", None),
     23: lexical.type(
