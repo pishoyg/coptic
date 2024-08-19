@@ -5,6 +5,22 @@ function suppress(func) {
   }
 }
 
+function get_url_or_local(param) {
+  value = (new URLSearchParams(window.location.search)).get(param);
+  // TODO: Distinguish between the empty string and null or defined.
+  if (value) {
+    return value;
+  }
+  return localStorage.getItem(param);
+}
+
+function set_url_and_local(param, value) {
+  localStorage.setItem(param, value);
+  const url = new URL(window.location.href);
+  url.searchParams.set(param, value);
+  window.history.pushState("", "", url.toString());
+}
+
 // Handle 'crum-page' class.
 var els = document.getElementsByClassName('crum-page');
 Array.prototype.forEach.call(els, function(btn) {
@@ -103,31 +119,27 @@ suppress(() => {
     const query = dialects.filter((d) => {
       return dialectStyle.get(d) == 'heavy';
     }).join(',');
-    function update(href) {
-      const url = new URL(href);
-      url.searchParams.set('d', query);
-      return url.toString();
-    }
-    window.history.pushState("", "", update(window.location.href));
-    localStorage.setItem("d", query);
+    set_url_and_local("d", query);
   }
   var els = document.getElementsByClassName('dialect');
   Array.prototype.forEach.call(els, (btn) => {
     btn.classList.add('hover-link');
     btn.onclick = () => { dialect(btn.innerHTML); };
   });
-  local_d = localStorage.getItem("d");
-  url_d = (new URLSearchParams(window.location.search)).get('d');
-  d = url_d ? url_d : local_d;
+  d = get_url_or_local('d');
   if (d) {
     d.split(',').forEach(dialect);
   }
   // TODO: Add a `dev` button to the HTML page that does the same thing as the
   // `dev` parameter.
-  url_dev = (new URLSearchParams(window.location.search)).get('dev');
-  if (url_dev) {
-    document.querySelectorAll('[hidden]').forEach((el) => {
-      el.removeAttribute('hidden');
-    });
+  dev = get_url_or_local("dev");
+  if (dev) {
+    dev = (dev == 'false') ? 'false' : 'true';
+    set_url_and_local("dev", dev);
+    if (dev == 'true') {
+      document.querySelectorAll('[hidden]').forEach((el) => {
+        el.removeAttribute('hidden');
+      });
+    }
   }
 });
