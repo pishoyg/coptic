@@ -180,7 +180,11 @@ class node:
                             [
                                 f'<td colspan="{word_width}" class="bordered">',
                                 word,
-                                f'<span hidden="" class="drv-key right">{key}</span>'
+                                (
+                                    f'<span hidden="" class="drv-key right">{key}</span>'
+                                    if not meaning_width
+                                    else ""
+                                ),
                                 "</td>",
                             ]
                         )
