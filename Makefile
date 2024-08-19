@@ -137,17 +137,24 @@ crum_appendices: FORCE
 	"dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv",\
 	0,\
 	)'
+	python -c $$'import utils\n\
+	utils.download_gsheet(\
+	"https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg",\
+	"dictionary/marcion.sourceforge.net/data/input/derivation_appendices.tsv",\
+	1,\
+	)'
 	# Verify the senses have valid JSON.
-	cut \
-		--fields 5 \
-		"dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
-		| tail -n +2  \
-		| grep --invert -E '^[[:space:]]*$$' \
-		| sed 's/""/"/g' \
-		| sed 's/"//' \
-		| rev | sed 's/"//' | rev \
-		| sed -r 's/([0-9]+)/"&"/g' \
-		| jq .
+	for BASENAME in "root_appendices.tsv" "derivation_appendices.tsv"; do \
+		cut \
+			--fields 5 \
+			"dictionary/marcion.sourceforge.net/data/input/$${BASENAME}" \
+			| tail -n +2  \
+			| grep --invert -E '^[[:space:]]*$$' \
+			| sed 's/""/"/g' \
+			| sed 's/"//' \
+			| rev | sed 's/"//' | rev \
+			| sed -r 's/([0-9]+)/"&"/g' \
+			| jq .; done
 
 crum_img: $(shell find dictionary/marcion.sourceforge.net/data/ -type f)
 	python dictionary/marcion.sourceforge.net/img_helper.py --batch
