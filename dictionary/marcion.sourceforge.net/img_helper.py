@@ -3,6 +3,7 @@ import glob
 import os
 import pathlib
 import re
+import shutil
 import subprocess
 import typing
 
@@ -148,6 +149,31 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
+    "--rm",
+    type=str,
+    default="",
+    help="If given, delete the artifacts for the given stem, and exit.",
+)
+
+argparser.add_argument(
+    "--mv",
+    type=str,
+    default=[],
+    nargs="*",
+    help="If given, rename the artifacts for the given stem, and exit. Exactly"
+    " two arguments must be given, the source and destination stems.",
+)
+
+argparser.add_argument(
+    "--cp",
+    type=str,
+    default=[],
+    nargs="*",
+    help="If given, copy the artifacts for the given stem, and exit. Exactly"
+    " two arguments must be given, the source and destination stems.",
+)
+
+argparser.add_argument(
     "--validate",
     default=False,
     action="store_true",
@@ -270,11 +296,24 @@ def convert(path: str, skip_existing: bool = False) -> None:
 def main():
     global args
     args = argparser.parse_args()
+    actions = list(filter(None, [args.validate, args.batch, args.rm, args.mv, args.cp]))
+    if len(actions) >= 2:
+        utils.fatal("Up to one action argument can be given at a time.")
+
     if args.validate:
         validate()
         exit()
     if args.batch:
         batch()
+        exit()
+    if args.rm:
+        rm(args.rm)
+        exit()
+    if args.mv:
+        mv(*args.mv)
+        exit()
+    if args.cp:
+        cp(*args.cp)
         exit()
     prompt()
 
@@ -297,6 +336,50 @@ def retrieve(
         f.write(download.content)
         utils.wrote(filename)
     return filename
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def _stem_to_img_path(stem: str, ext: str = "") -> str:
+    if ext:
+        return os.path.join(IMG_DIR, stem + ext)
+    path = glob.glob(os.path.join(IMG_DIR, stem + ".*"))
+    assert len(path) == 1
+    return path[0]
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def _get_artifacts(stem: str, img_ext: str = "") -> str:
+    if not STEM_RE.fullmatch(stem):
+        utils.error(
+            "To delete an image, please provide the stem.",
+        )
+        return
+    path = _stem_to_img_path(stem, img_ext)
+    return [path, get_target(path), get_source(path)]
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def rm(stem: str) -> None:
+    for art in _get_artifacts(stem):
+        os.remove(art)
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def mv(a_stem: str, b_stem: str) -> None:
+    a = _get_artifacts(a_stem)
+    img_ext = utils.ext(a[0])
+    b = _get_artifacts(b_stem, img_ext)
+    for a, b in zip(a, b):
+        pathlib.Path(a).rename(b)
+
+
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def cp(a_stem: str, b_stem: str) -> None:
+    a = _get_artifacts(a_stem)
+    img_ext = utils.ext(a[0])
+    b = _get_artifacts(b_stem, img_ext)
+    for a, b in zip(a, b):
+        shutil.copyfile(a, b)
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -359,7 +442,7 @@ def prompt():
                         "- 'noun/${QUERY}' to query `thenounproject`,",
                         "- 'wiki/${PAGE}' to open a Wikipedia page,",
                         "- 'key=${KEY}' to change the key",
-                        "- 'del=${KEY}' to delete one image and its artifacts",
+                        "- 'rm=${KEY}' to delete one image and its artifacts",
                         "- 'source=${SOURCE}' to populate the source for the only"
                         f" image in {args.downloads} that is missing a source,",
                         "- source(${PATH})=${SOURCE} to populate the source for a given image:",
@@ -419,21 +502,27 @@ def prompt():
                 sources[files[0]] = sense
                 continue
 
-            if sense.startswith("del="):
-                sense = sense[4:]
-                if not STEM_RE.fullmatch(sense):
-                    utils.error(
-                        "To delete an image, please provide the stem.",
-                    )
-                    continue
-                # Delete the image.
-                path = glob.glob(os.path.join(IMG_DIR, sense + "*"))
-                assert len(path) == 1
-                path = path[0]
+            if sense.startswith("rm="):
+                try:
+                    rm(sense[3:])
+                except Exception as e:
+                    utils.error(e)
+                continue
 
-                os.remove(path)
-                os.remove(get_source(path))
-                os.remove(get_target(path))
+            if sense.startswith("cp="):
+                try:
+                    sense = sense[3:]
+                    cp(*sense.split(":"))
+                except Exception as e:
+                    utils.error(e)
+                continue
+
+            if sense.startswith("mv="):
+                try:
+                    sense = sense[3:]
+                    mv(*sense.split(":"))
+                except Exception as e:
+                    utils.error(e)
                 continue
 
             source_search = assign_source_re.search(sense)
