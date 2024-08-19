@@ -84,8 +84,11 @@ def to_tsv(df: pd.DataFrame, path: str, **kwargs):
 
 
 @type_enforced.Enforcer(enabled=ENFORCED)
-def read_tsv(path: str) -> pd.DataFrame:
-    return pd.read_csv(path, sep="\t", dtype=str, encoding="utf-8").fillna("")
+def read_tsv(path: str, sort_values_by=None) -> pd.DataFrame:
+    df = pd.read_csv(path, sep="\t", dtype=str, encoding="utf-8").fillna("")
+    if sort_values_by:
+        df.sort_values(sort_values_by, inplace=True)
+    return df
 
 
 @type_enforced.Enforcer(enabled=ENFORCED)
@@ -120,13 +123,15 @@ def write_tsvs(
 
 
 @type_enforced.Enforcer(enabled=ENFORCED)
-def read_tsvs(tsvs: str) -> pd.DataFrame:
+def read_tsvs(tsvs: str, sort_values_by=None) -> pd.DataFrame:
     files = [os.path.join(tsvs, basename) for basename in os.listdir(tsvs)]
     files = sorted(files)
     df = pd.DataFrame()
     for f in files:
         cur = read_tsv(f)
         df = pd.concat([df, cur], ignore_index=True)
+    if sort_values_by:
+        df.sort_values(sort_values_by, inplace=True)
     return df
 
 

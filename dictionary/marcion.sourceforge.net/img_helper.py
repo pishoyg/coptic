@@ -26,6 +26,9 @@ STEM_RE = re.compile("[0-9]+-[0-9]+-[0-9]+")
 
 
 INPUT_TSVS: str = "dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs"
+APPENDICES_TSV: str = (
+    "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv"
+)
 MEANING_COL: str = "en-parsed-no-greek"
 KEY_COL: str = "key"
 LINK_COL: str = "key-link"
@@ -385,8 +388,8 @@ def cp(a_stem: str, b_stem: str) -> None:
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def prompt():
 
-    df = utils.read_tsvs(INPUT_TSVS)
-    df.sort_values(by=KEY_COL, inplace=True)
+    df = utils.read_tsvs(INPUT_TSVS, KEY_COL)
+    df["senses"] = utils.read_tsv(APPENDICES_TSV, KEY_COL)["senses"]
 
     sources: dict[str, str] = {}
 
@@ -429,10 +432,13 @@ def prompt():
         while True:
             # Force read a valid sense, or no sense at all.
             g = existing()
+            # TODO: Prettify the output a little bit. Maybe use JSON
+            # indentations.
             utils.info("Key:", row[KEY_COL])
             utils.info("Link:", row[LINK_COL])
             utils.info("Existing:", g)
             utils.info("Downloads:", get_downloads())
+            utils.info("Senses:", row["senses"])
             utils.info("Sources:", sources)
             sense = input(
                 "\n".join(
