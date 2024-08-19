@@ -35,9 +35,11 @@ def crum(
             force=force,
         )
 
-    def appendix(col_name: str, line_br: bool = False, force: bool = True) -> field.tsv:
+    def root_appendix(
+        col_name: str, line_br: bool = False, force: bool = True
+    ) -> field.tsv:
         return field.tsv(
-            "dictionary/marcion.sourceforge.net/data/input/appendices.tsv",
+            "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv",
             col_name,
             line_br=line_br,
             force=force,
@@ -46,7 +48,7 @@ def crum(
     # TODO: Add a similar alignment check for the derivations keys and
     # derivations appendices keys, once we start using them.
     roots_keys = roots_col("key")
-    appendices_keys = appendix("key")
+    appendices_keys = root_appendix("key")
     for _ in range(field.num_entries(roots_keys, appendices_keys)):
         assert roots_keys.next() == appendices_keys.next()
     del roots_keys, appendices_keys
@@ -191,7 +193,7 @@ def crum(
                             lambda pages: DICTIONARY_PAGE_RE.sub(
                                 r'<span class="dawoud-page">\1</span>', pages
                             ),
-                            appendix("dawoud-pages", force=False),
+                            root_appendix("dawoud-pages", force=False),
                         ),
                     ),
                     "</span>",
@@ -226,7 +228,7 @@ def crum(
                 # Editor's notes.
                 field.aon(
                     "<i>Editor's Note: </i>",
-                    appendix("notes", line_br=True, force=False),
+                    root_appendix("notes", line_br=True, force=False),
                     "<br/>",
                 ),
                 # Horizontal line.
@@ -279,12 +281,12 @@ def crum(
                             lambda pages: DICTIONARY_PAGE_RE.sub(
                                 r'<span class="dawoud-page">\1</span>', pages
                             ),
-                            appendix("dawoud-pages", force=False),
+                            root_appendix("dawoud-pages", force=False),
                         ),
                     ),
                     "</span>",
                     field.img(
-                        appendix("dawoud-pages", force=False),
+                        root_appendix("dawoud-pages", force=False),
                         get_paths=lambda page_ranges: [
                             f"dictionary/copticocc.org/data/dawoud-D100/{k+16}.jpg"
                             for k in _page_numbers(page_ranges=page_ranges)

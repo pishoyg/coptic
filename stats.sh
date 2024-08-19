@@ -197,28 +197,28 @@ CRUM_IMG_SUM=$(find dictionary/marcion.sourceforge.net/data/img/ -type f \
   | wc --lines)
 
 CRUM_DAWOUD=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/appendices.tsv" \
+  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
   "dawoud-pages" \
   | wc --lines)
 
 CRUM_DAWOUD_SUM=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/appendices.tsv" \
+  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
   "dawoud-pages" \
   | grep '[0-9]+' --only-matching --extended-regexp \
   | wc --lines)
 
 CRUM_NOTES=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/appendices.tsv" \
+  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
   "notes" \
   | wc --lines)
 
 CRUM_ROOT_SENSES=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/appendices.tsv" \
+  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
   "senses" \
   | wc --lines)
 
 CRUM_ROOT_SENSES_SUM=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/appendices.tsv" \
+  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
   "senses" \
   | grep '[0-9]+' --only-matching --extended-regexp \
   | wc --lines)

@@ -134,11 +134,13 @@ crum_appendices: FORCE
 	python -c $$'import utils\n\
 	utils.download_gsheet(\
 	"https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg",\
-	"dictionary/marcion.sourceforge.net/data/input/appendices.tsv")'
+	"dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv",\
+	0,\
+	)'
 	# Verify the senses have valid JSON.
 	cut \
 		--fields 5 \
-		"dictionary/marcion.sourceforge.net/data/input/appendices.tsv" \
+		"dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
 		| tail -n +2  \
 		| grep --invert -E '^[[:space:]]*$$' \
 		| sed 's/""/"/g' \
