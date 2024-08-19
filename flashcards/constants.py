@@ -1,3 +1,4 @@
+import json
 import os
 import re
 
@@ -96,6 +97,10 @@ def crum(
     explanatory_images = _dir_lister(
         "dictionary/marcion.sourceforge.net/data/img-300",
         lambda file: file[: file.find("-")],
+    )
+    image_sensor = _sensor(
+        roots_col("key")._content,
+        root_appendix("senses", force=False)._content,
     )
     pronunciations = {
         col: _dir_lister(
@@ -216,7 +221,7 @@ def crum(
                     get_paths=explanatory_images.get,
                     sort_paths=utils.sort_semver,
                     fmt_args=lambda path: {
-                        "caption": utils.stem(path),
+                        "caption": image_sensor.get_caption(path),
                         "id": "explanatory" + utils.stem(path),
                         "alt": utils.stem(path),
                     },
@@ -498,6 +503,34 @@ class _dir_lister:
         return self.cache.get(key, [])
 
 
+@type_enforced.Enforcer(enabled=enforcer.ENABLED)
+class _sensor:
+    def __init__(self, keys: list[str], sense_jsons: list[str]) -> None:
+        assert len(keys) == len(sense_jsons)
+        self.d: dict = {
+            k: json.loads(ss) if ss else {} for k, ss in zip(keys, sense_jsons)
+        }
+
+    def get_caption(self, path: str) -> str:
+        stem = utils.stem(path)
+        key, sense, _ = stem.split("-")
+        assert key.isdigit()
+        assert sense.isdigit()
+        return "".join(
+            [
+                '<span hidden="" class="div">',
+                stem,
+                " ",
+                "</span>",
+                '<span class="italic lighter small">',
+                # TODO: (#189): Require the presence of a sense once the sense
+                # data has been fully populated.
+                self.d[key].get(sense, sense),
+                "</span>",
+            ]
+        )
+
+
 # N.B. The deck IDs are protected fields. They are used as database keys for the
 # decks. Do NOT change them!
 #
@@ -520,7 +553,6 @@ class _dir_lister:
 # The "name" argument is used to generate deck names for datasets that generate
 # multiple decks.
 # The "key" field is used to key the notes.
-
 CRUM_BOHAIRIC = "A Coptic Dictionary::Bohairic"
 CRUM_SAHIDIC = "A Coptic Dictionary::Sahidic"
 CRUM_BOHAIRIC_SAHIDIC = "A Coptic Dictionary::Bohairic / Sahidic"
