@@ -43,6 +43,14 @@ def crum(
             force=force,
         )
 
+    # TODO: Add a similar alignment check for the derivations keys and
+    # derivations appendices keys, once we start using them.
+    roots_keys = roots_col("key")
+    appendices_keys = appendix("key")
+    for _ in range(field.num_entries(roots_keys, appendices_keys)):
+        assert roots_keys.next() == appendices_keys.next()
+    del roots_keys, appendices_keys
+
     # TODO: This replaces all Coptic words, regardless of whether they
     # represent plain text. Coptic text that occurs inside a tag (for example
     # as a tag property) would still get wrapped inside this <span> tag.
