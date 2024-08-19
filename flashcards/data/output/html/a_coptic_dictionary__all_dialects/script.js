@@ -100,12 +100,9 @@ suppress(() => {
     }).join(',');
     function update(href) {
       const url = new URL(href);
-      url.searchParams.delete('d');
-      return url.toString() + (query ? "?d=" + query : "");
+      url.searchParams.set('d', query);
+      return url.toString();
     }
-    document.querySelectorAll('.navigate').forEach((el) => {
-      el.setAttribute('href', update(el.getAttribute('href')));
-    });
     window.history.pushState("", "", update(window.location.href));
     localStorage.setItem("d", query);
   }
