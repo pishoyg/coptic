@@ -187,6 +187,14 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
     for _, row in df.iterrows():
         if strict:
             insert("key", "-link", constants.CARD_LINK_FMT.format(key=row["key"]))
+        else:
+            insert(
+                "key",
+                "-link",
+                constants.CARD_LINK_FMT.format(key=row["key_word"])
+                + "#drv"
+                + row["key"],
+            )
         root_type = parser.parse_type_cell(row[TYPE_COL])
         word = parser.parse_word_cell(
             row[WORD_COL],
