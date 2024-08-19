@@ -144,6 +144,8 @@ crum_appendices: FORCE
 	1,\
 	)'
 	# Verify the senses have valid JSON.
+	# TODO: JQ simply drops duplicate keys. You should verify their absence
+	# instead.
 	for BASENAME in "root_appendices.tsv" "derivation_appendices.tsv"; do \
 		cut \
 			--fields 5 \
