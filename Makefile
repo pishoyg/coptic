@@ -155,7 +155,6 @@ crum_appendices: FORCE
 			| sed 's/""/"/g' \
 			| sed 's/"//' \
 			| rev | sed 's/"//' | rev \
-			| sed -r 's/([0-9]+)/"&"/g' \
 			| jq .; done
 
 crum_img: $(shell find dictionary/marcion.sourceforge.net/data/ -type f)
