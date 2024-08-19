@@ -135,6 +135,17 @@ crum_appendices: FORCE
 	utils.download_gsheet(\
 	"https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg",\
 	"dictionary/marcion.sourceforge.net/data/input/appendices.tsv")'
+	# Verify the senses have valid JSON.
+	cut \
+		--fields 5 \
+		"dictionary/marcion.sourceforge.net/data/input/appendices.tsv" \
+		| tail -n +2  \
+		| grep --invert -E '^[[:space:]]*$$' \
+		| sed 's/""/"/g' \
+		| sed 's/"//' \
+		| rev | sed 's/"//' | rev \
+		| sed -r 's/([0-9]+)/"&"/g' \
+		| jq .
 
 crum_img: $(shell find dictionary/marcion.sourceforge.net/data/ -type f)
 	python dictionary/marcion.sourceforge.net/img_helper.py --batch
