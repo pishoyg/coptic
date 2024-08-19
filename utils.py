@@ -221,6 +221,7 @@ def verify_equal_sets(s1, s2, message: str) -> None:
 def download_gsheet(
     gspread_url: str,
     out_tsv: str,
+    worksheet: int = 0,
     columns: typing.Optional[list[str]] = None,
 ) -> None:
     GSPREAD_SCOPE = [
@@ -233,6 +234,6 @@ def download_gsheet(
         os.environ["JSON_KEYFILE_NAME"], GSPREAD_SCOPE
     )
     sheet = gspread.authorize(credentials).open_by_url(gspread_url)
-    records = sheet.get_worksheet(0).get_all_records()
+    records = sheet.get_worksheet(worksheet).get_all_records()
     df = pd.DataFrame(records)
     df.to_csv(out_tsv, sep="\t", index=False, columns=columns)
