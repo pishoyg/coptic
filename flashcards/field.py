@@ -306,10 +306,7 @@ class media(_content_field):
                 new_path = _add_to_work_dir(path)
                 args = {
                     "basename": os.path.basename(new_path),
-                    "stem": utils.stem(new_path),
-                    "key": key,
-                    "original_basename": os.path.basename(path),
-                    "original_stem": utils.stem(path),
+                    "alt": utils.stem(path),
                 }
                 if fmt_args:
                     args.update(fmt_args(path))
@@ -334,9 +331,11 @@ def img(
     """
     Args:
         fmt_args: A lambda that, given the path, would return the HTML format
-        dictionary. The key "alt" must exist in the returned dictionary.
+        kwargs.
         If `caption` is set to True, then "caption" must also exist.
         If `id` is set to True, then "id" must also exist.
+        The `alt` key is optional, and can be used to override the alternative
+        text (which defaults to the stem).
     """
     html_fmt = '<img src="{basename}" alt="{alt}"><br/>'
     if id:

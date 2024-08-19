@@ -223,7 +223,6 @@ def crum(
                     fmt_args=lambda path: {
                         "caption": image_sensor.get_caption(path),
                         "id": "explanatory" + utils.stem(path),
-                        "alt": utils.stem(path),
                     },
                     caption=True,
                     id=True,
