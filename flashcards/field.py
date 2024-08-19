@@ -306,6 +306,7 @@ class media(_content_field):
                 new_path = _add_to_work_dir(path)
                 args = {
                     "basename": os.path.basename(new_path),
+                    "width": "auto",
                     "alt": utils.stem(path),
                 }
                 if fmt_args:
@@ -339,7 +340,9 @@ def img(
     """
     html_fmt = '<img src="{basename}" alt="{alt}"><br/>'
     if id:
-        html_fmt = '<img src="{basename}" alt="{alt}" id="{id}"><br/>'
+        html_fmt = (
+            '<img src="{basename}" alt="{alt}" id="{id}" style="width: {width}"><br/>'
+        )
     if caption:
         html_fmt = (
             "<figure>"

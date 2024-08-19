@@ -19,6 +19,8 @@ DICTIONARY_PAGE_RE = re.compile("([0-9]+(a|b))")
 COPTIC_WORD_RE = re.compile("([Ⲁ-ⲱϢ-ϯⳈⳉ]+)")
 GREEK_WORD_RE = re.compile("([Α-Ωα-ω]+)")
 
+DICT_WIDTH = "1000px"
+
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def crum(
@@ -268,6 +270,7 @@ def crum(
                             ),
                             "id": f"crum{int(utils.stem(path)) - 20}",
                             "alt": int(utils.stem(path)) - 20,
+                            "width": DICT_WIDTH,
                         },
                         caption=True,
                         id=True,
@@ -298,6 +301,7 @@ def crum(
                             "caption": int(utils.stem(path)) - 16,
                             "id": f"dawoud{int(utils.stem(path)) - 16}",
                             "alt": int(utils.stem(path)) - 16,
+                            "width": DICT_WIDTH,
                         },
                         caption=True,
                         id=True,
