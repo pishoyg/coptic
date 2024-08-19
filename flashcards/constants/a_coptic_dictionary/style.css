@@ -66,3 +66,9 @@
      table-layout: fixed;
      width: 100%;
  }
+ .small {
+     font-size: small;
+ }
+ .italic {
+     font-style: italic;
+ }

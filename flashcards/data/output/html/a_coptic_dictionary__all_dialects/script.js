@@ -58,6 +58,12 @@ Array.prototype.forEach.call(els, function(btn) {
   };
 });
 
+// Handle the `drv-key` class.
+Array.prototype.forEach.call(
+  document.getElementsByClassName('drv-key'),
+  function(btn) {
+    btn.classList.add('small', 'light', 'italic');
+  });
 // Handle the 'dialect' class.
 suppress(() => {
   const dialects = ['S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
@@ -116,6 +122,14 @@ suppress(() => {
   d = url_d ? url_d : local_d;
   if (d) {
     d.split(',').forEach(dialect);
+  }
+  // TODO: Add a `dev` button to the HTML page that does the same thing as the
+  // `dev` parameter.
+  url_dev = (new URLSearchParams(window.location.search)).get('dev');
+  if (url_dev) {
+    document.querySelectorAll('[hidden]').forEach((el) => {
+      el.removeAttribute('hidden');
+    });
   }
 });
 });
