@@ -12,6 +12,7 @@
     - [copticsite.com](#copticsitecom)
   - [Contact and Contributions](#contact-and-contributions)
   - [Hosting](#hosting)
+  - [Diagram](#diagram)
   - [For Developers / Owners](#for-developers--owners)
     - [Getting started](#getting-started)
     - [Directory Structure](#directory-structure)
@@ -166,6 +167,17 @@ We use:
 - Google Drive to share large files.
 - Google Analytics to analyze traffic.
 - Squarespace for DNS registration.
+
+## Diagram
+
+<div align="center">
+   <figure>
+      <img src="data/coptic.drawio.png" alt="diagram"/>
+   </figure>
+</div>
+
+*NOTE: You can update the diagram by uploading it to
+[draw.io](https://draw.io/).*
 
 ## For Developers / Owners
 
