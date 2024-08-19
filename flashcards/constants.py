@@ -175,12 +175,16 @@ def crum(
         back=field.apl(
             cdo,
             field.cat(
-                # Type, Crum page, and Dawoud pages.
+                # Type.
+                field.fmt(
+                    "(<b>{type_parsed}</b>)",
+                    {"type_parsed": roots_col("type-parsed")},
+                ),
+                "<br/>",
+                # Meaning.
+                field.apl(greek, roots_col("en-parsed", line_br=True, force=False)),
+                # Dictionary pages.
                 field.cat(
-                    field.fmt(
-                        "(<b>{type_parsed}</b>)",
-                        {"type_parsed": roots_col("type-parsed")},
-                    ),
                     '<span class="right">',
                     field.fmt(
                         f'<b><a href="#crum" class="hover-link">Crum: </a></b>{CRUM_FMT}',
@@ -197,13 +201,8 @@ def crum(
                         ),
                     ),
                     "</span>",
-                    "<br/>",
                 ),
-                # Meaning.
-                field.aon(
-                    field.apl(greek, roots_col("en-parsed", line_br=True, force=False)),
-                    "<br/>",
-                ),
+                "<br/>",
                 # Image.
                 field.img(
                     keys=field.tsvs(
