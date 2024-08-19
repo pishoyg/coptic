@@ -176,13 +176,20 @@ class node:
                     f'<td colspan="{depth}"></td>' if depth else "",
                     # Word.
                     (
-                        f'<td colspan="{word_width}" class="bordered">{word}</td>'
+                        "".join(
+                            [
+                                f'<td colspan="{word_width}" class="bordered">',
+                                word,
+                                f'<span hidden="" class="drv-key right">{key}</span>'
+                                "</td>",
+                            ]
+                        )
                         if word_width
                         else ""
                     ),
                     # Meaning.
                     (
-                        " ".join(
+                        "".join(
                             [
                                 f'<td colspan="{meaning_width}" class="bordered">',
                                 (
@@ -191,6 +198,7 @@ class node:
                                     else ""
                                 ),
                                 meaning,
+                                f'<span hidden="" class="drv-key right">{key}</span>'
                                 "</td>",
                             ]
                         )
