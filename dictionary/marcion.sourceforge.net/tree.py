@@ -171,9 +171,7 @@ class node:
             out.extend(
                 [
                     # New row.
-                    "<tr>",
-                    # Key (commented).
-                    f"<!--Key: {key}-->",
+                    f'<tr id="drv{key}" class="drv">',
                     # Margin.
                     f'<td colspan="{depth}"></td>' if depth else "",
                     # Word.
