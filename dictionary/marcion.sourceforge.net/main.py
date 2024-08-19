@@ -221,11 +221,6 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
                 for w in word
             ),
         )
-        if strict:
-            # The following columns don't have any data because they are meant
-            # to be provided externally.
-            insert("", "dawoud-pages", "")
-            insert(CRUM_COL, "-last-page", "")
 
         if strict:
             insert(QUALITY_COL, "-parsed", parser.parse_quality_cell(row[QUALITY_COL]))
