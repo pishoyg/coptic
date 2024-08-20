@@ -24,12 +24,10 @@ window.addEventListener("load", function() {"use strict";
     url.search = '';
     location.replace(url.toString());
   }
-  // Handle 'reset' class.
   Array.prototype.forEach.call(document.getElementsByClassName('reset'), (btn) => {
     btn.classList.add('link');
     btn.onclick = reset;
   });
-  // Handle 'crum-page' class.
   Array.prototype.forEach.call(document.getElementsByClassName('crum-page'), (btn) => {
     btn.classList.add('link');
     btn.onclick = () => {
@@ -37,7 +35,6 @@ window.addEventListener("load", function() {"use strict";
       (_a = document.getElementById(`crum${btn.innerHTML.slice(0, -1)}`)) === null || _a === void 0 ? void 0 : _a.scrollIntoView();
     };
   });
-  // Handle 'crum-page-external' class.
   Array.prototype.forEach.call(document.getElementsByClassName('crum-page-external'), (btn) => {
     btn.classList.add('link');
     btn.onclick = () => {
@@ -45,7 +42,6 @@ window.addEventListener("load", function() {"use strict";
       (_a = window.open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${btn.innerHTML}`, '_blank')) === null || _a === void 0 ? void 0 : _a.focus();
     };
   });
-  // Handle 'coptic' class.
   Array.prototype.forEach.call(document.getElementsByClassName('coptic'), (btn) => {
     btn.classList.add('hover-link');
     btn.onclick = () => {
@@ -53,7 +49,6 @@ window.addEventListener("load", function() {"use strict";
       (_a = window.open(`https://coptic-dictionary.org/results.cgi?quick_search=${btn.innerHTML}`, '_blank')) === null || _a === void 0 ? void 0 : _a.focus();
     };
   });
-  // Handle 'greek' class.
   Array.prototype.forEach.call(document.getElementsByClassName('greek'), (btn) => {
     btn.classList.add('link');
     btn.classList.add('light');
@@ -62,7 +57,6 @@ window.addEventListener("load", function() {"use strict";
       (_a = window.open(`https://logeion.uchicago.edu/${btn.innerHTML}`, '_blank')) === null || _a === void 0 ? void 0 : _a.focus();
     };
   });
-  // Handle 'dawoud-page' class.
   Array.prototype.forEach.call(document.getElementsByClassName('dawoud-page'), (btn) => {
     btn.classList.add('link');
     btn.onclick = () => {
@@ -70,7 +64,6 @@ window.addEventListener("load", function() {"use strict";
       (_a = document.getElementById(`dawoud${btn.innerHTML.slice(0, -1)}`)) === null || _a === void 0 ? void 0 : _a.scrollIntoView();
     };
   });
-  // Handle the `drv-key` class.
   Array.prototype.forEach.call(document.getElementsByClassName('drv-key'), (btn) => {
     btn.classList.add('small', 'light', 'italic');
   });
