@@ -46,7 +46,7 @@ repos:
         entry: bash -c 'for x in "$@"; do python -m json.tool --no-ensure-ascii --indent 2 "$x" "$x"; done' --
         language: system
         types: [json]
-        exclude: ^tsconfig\.json$
+        exclude: tsconfig\.json$
   # Python.
   - repo: https://github.com/psf/black-pre-commit-mirror
     rev: 24.4.2
