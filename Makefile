@@ -19,7 +19,7 @@ all: install compile generate_1 test_1 generate_2 test publish report
 # LEVEL 2 RULES ###############################################################
 
 .PHONY: install
-install: pip_install python_install precommit_install bin_install ts_install
+install: pip_install python_install precommit_install bin_install npm_install
 
 .PHONY: compile
 compile: ts_compile
@@ -259,8 +259,10 @@ bin_install:
 	if ! command -v tidy &> /dev/null; then echo "Please install tidy from https://www.html-tidy.org/." && exit 1; fi
 	if ! command -v magick &> /dev/null; then echo "Please install magick from https://imagemagick.org/." && exit 1; fi
 
-ts_install:
-	npm install typescript --save-dev
+npm_install:
+	npm install \
+		--save-dev \
+		"typescript"
 
 pip_install: requirements.txt
 	python -m pip install --upgrade pip
