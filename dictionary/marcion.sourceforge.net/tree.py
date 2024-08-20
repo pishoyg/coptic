@@ -181,7 +181,7 @@ class node:
                                 f'<td colspan="{word_width}" class="bordered">',
                                 word,
                                 (
-                                    f'<span hidden="" class="drv-key right">{key}</span>'
+                                    f'<span hidden="" class="drv-key dev right">{key}</span>'
                                     if not meaning_width
                                     else ""
                                 ),
@@ -202,7 +202,7 @@ class node:
                                     else ""
                                 ),
                                 meaning,
-                                f'<span hidden="" class="drv-key right">{key}</span>'
+                                f'<span hidden="" class="drv-key dev right">{key}</span>'
                                 "</td>",
                             ]
                         )

@@ -131,6 +131,12 @@ def crum(
                     "<tr>",
                     # Home
                     "<td>" f'<a class="home" href="{HOME}">' "home" "</a>" "</td>",
+                    # Contact
+                    "<td>"
+                    f'<a class="contact" href="mailto:{EMAIL}">'
+                    "contact"
+                    "</a>"
+                    "</td>",
                     # Prev
                     "<td>",
                     field.fmt(
@@ -164,11 +170,13 @@ def crum(
                         aon=True,
                     ),
                     "</td>",
-                    # Contact
-                    "<td>"
-                    f'<a class="contact" href="mailto:{EMAIL}">'
-                    "contact"
-                    "</a>"
+                    # Reset.
+                    "<td>",
+                    '<span class="reset">reset</span>',
+                    "</td>",
+                    # Dev.
+                    "<td>",
+                    '<span class="developer">dev</span>',
                     "</td>",
                     # Close the table.
                     "</tr>",
@@ -521,7 +529,7 @@ class _sensor:
         assert sense.isdigit()
         return "".join(
             [
-                '<span hidden="" class="div">',
+                '<span hidden="" class="dev explanatory-key">',
                 stem,
                 " ",
                 "</span>",

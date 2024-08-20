@@ -5,13 +5,16 @@ function suppress(func) {
   }
 }
 
-function get_url_or_local(param) {
-  value = (new URLSearchParams(window.location.search)).get(param);
-  // TODO: Distinguish between the empty string and null or defined.
-  if (value) {
+function get_url_or_local(param, default_value = null) {
+  const urlSearch = new URLSearchParams(window.location.search);
+  if (urlSearch.has(param)) {
+    return urlSearch.get(param);
+  }
+  const value = localStorage.getItem(param);
+  if (value != null) {
     return value;
   }
-  return localStorage.getItem(param);
+  return default_value;
 }
 
 function set_url_and_local(param, value) {
@@ -20,6 +23,21 @@ function set_url_and_local(param, value) {
   url.searchParams.set(param, value);
   window.history.pushState("", "", url.toString());
 }
+
+function reset() {
+  localStorage.clear();
+  const url = new URL(window.location.href);
+  url.search = '';
+  location.replace(url.toString());
+}
+
+// Handle 'reset' class.
+Array.prototype.forEach.call(
+  document.getElementsByClassName('reset'),
+  function(btn) {
+    btn.classList.add('link');
+    btn.onclick = reset;
+  });
 
 // Handle 'crum-page' class.
 var els = document.getElementsByClassName('crum-page');
@@ -79,6 +97,7 @@ Array.prototype.forEach.call(
   function(btn) {
     btn.classList.add('small', 'light', 'italic');
   });
+
 // Handle the 'dialect' class.
 suppress(() => {
   const dialects = ['S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
@@ -127,19 +146,44 @@ suppress(() => {
     btn.onclick = () => { dialect(btn.innerHTML); };
   });
   d = get_url_or_local('d');
-  if (d) {
+  if (d != null) {
     d.split(',').forEach(dialect);
   }
-  // TODO: Add a `dev` button to the HTML page that does the same thing as the
-  // `dev` parameter.
-  dev = get_url_or_local("dev");
-  if (dev) {
-    dev = (dev == 'false') ? 'false' : 'true';
-    set_url_and_local("dev", dev);
-    if (dev == 'true') {
-      document.querySelectorAll('[hidden]').forEach((el) => {
-        el.removeAttribute('hidden');
-      });
-    }
-  }
 });
+
+// Handle 'developer' and 'dev' classes.
+function opposite(value) {
+  if (value == 'true') {
+    return 'false';
+  }
+  if (value == 'false') {
+    return 'true';
+  }
+  if (!value) {
+    return 'true';
+  }
+  return 'false';
+}
+
+function dev(value = null) {
+  document.querySelectorAll('.dev').forEach((el) => {
+    if (value == 'true') {
+      el.removeAttribute('hidden');
+    } else {
+      el.setAttribute('hidden', '');
+    }
+  });
+  if (value != null) {
+    set_url_and_local("dev", value);
+    ;
+  }
+}
+
+Array.prototype.forEach.call(
+  document.getElementsByClassName('developer'),
+  function(btn) {
+    btn.classList.add('link');
+    btn.onclick = () => {dev(opposite(get_url_or_local("dev")));};
+  });
+
+dev(get_url_or_local("dev"));
