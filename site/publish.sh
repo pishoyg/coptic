@@ -72,6 +72,12 @@ find "${SITE_DIR}" -type f -name "*.html" | while read -r FILE; do
   tidy -indent -modify -quiet --tidy-mark no -wrap 80 "${FILE}"
 done
 
+find "${SITE_DIR}" -type f -name "*.js" | while read -r FILE; do
+  npx javascript-obfuscator \
+    "${FILE}" \
+    --output "${FILE}"
+done
+
 git -C "${SITE_DIR}" add --all
 git -C "${SITE_DIR}" commit --fixup HEAD
 
