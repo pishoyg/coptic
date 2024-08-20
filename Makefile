@@ -100,8 +100,6 @@ env_backup: env_cp_to_home
 .PHONY: env_restore
 env_restore: env_cp_from_home
 
-.PHONY: notify
-notify: git_add_precommit_run git_status say_yo
 # LEVEL 1 RULES ###############################################################
 
 # BIBLE RULES
