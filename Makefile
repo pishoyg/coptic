@@ -262,7 +262,8 @@ bin_install:
 npm_install:
 	npm install \
 		--save-dev \
-		"typescript"
+		"typescript" \
+		"javascript-obfuscator"
 
 pip_install: requirements.txt
 	python -m pip install --upgrade pip
