@@ -9,15 +9,8 @@ window.addEventListener("load", function() {"use strict";
     }
   }
   function get_url_or_local(param, default_value = null) {
-    const urlSearch = new URLSearchParams(window.location.search);
-    if (urlSearch.has(param)) {
-      return urlSearch.get(param);
-    }
-    const value = localStorage.getItem(param);
-    if (value != null) {
-      return value;
-    }
-    return default_value;
+    var _a, _b;
+    return (_b = (_a = (new URLSearchParams(window.location.search)).get(param)) !== null && _a !== void 0 ? _a : localStorage.getItem(param)) !== null && _b !== void 0 ? _b : default_value;
   }
   function set_url_and_local(param, value) {
     localStorage.setItem(param, value);
@@ -81,7 +74,6 @@ window.addEventListener("load", function() {"use strict";
   Array.prototype.forEach.call(document.getElementsByClassName('drv-key'), (btn) => {
     btn.classList.add('small', 'light', 'italic');
   });
-  // Handle the 'dialect' class.
   suppress(() => {
     const dialects = [
         'S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'
@@ -124,23 +116,13 @@ window.addEventListener("load", function() {"use strict";
     });
     const d = get_url_or_local('d');
     if (d != null) {
-      d.split(',').forEach(dialect);
+      d.split(',').map((d) => d).forEach(dialect);
     }
   });
-  // Handle 'developer' and 'dev' classes.
   function opposite(value) {
-    if (value == 'true') {
-      return 'false';
-    }
-    if (value == 'false') {
-      return 'true';
-    }
-    if (!value) {
-      return 'true';
-    }
-    return 'false';
+    return (value == "true") ? "false" : "true";
   }
-  function dev(value = null) {
+  function dev(value) {
     document.querySelectorAll('.dev').forEach((el) => {
       if (value == 'true') {
         el.removeAttribute('hidden');
