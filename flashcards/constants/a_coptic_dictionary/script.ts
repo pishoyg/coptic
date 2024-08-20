@@ -1,11 +1,11 @@
-function suppress(func: Function) {
+function suppress(func: () => void): void {
   try {
     func();
   } catch (err) {
   }
 }
 
-function get_url_or_local(param: string, default_value: string | null = null) {
+function get_url_or_local(param: string, default_value: string | null = null): string | null {
   const urlSearch = new URLSearchParams(window.location.search);
   if (urlSearch.has(param)) {
     return urlSearch.get(param);
@@ -17,14 +17,14 @@ function get_url_or_local(param: string, default_value: string | null = null) {
   return default_value;
 }
 
-function set_url_and_local(param: string, value: string) {
+function set_url_and_local(param: string, value: string): void {
   localStorage.setItem(param, value);
   const url = new URL(window.location.href);
   url.searchParams.set(param, value);
   window.history.pushState("", "", url.toString());
 }
 
-function reset() {
+function reset(): void {
   localStorage.clear();
   const url = new URL(window.location.href);
   url.search = '';
@@ -34,25 +34,23 @@ function reset() {
 // Handle 'reset' class.
 Array.prototype.forEach.call(
   document.getElementsByClassName('reset'),
-  function(btn) {
+  function(btn: HTMLElement): void {
     btn.classList.add('link');
     btn.onclick = reset;
   });
 
 // Handle 'crum-page' class.
-var els = document.getElementsByClassName('crum-page');
-Array.prototype.forEach.call(els, function(btn) {
+Array.prototype.forEach.call(document.getElementsByClassName('crum-page'), function(btn: HTMLElement): void {
   btn.classList.add('link');
-  btn.onclick = () => {
+  btn.onclick = (): void => {
     document.getElementById('crum' + btn.innerHTML.slice(0, -1))!.scrollIntoView();
   };
 });
 
 // Handle 'crum-page-external' class.
-var els = document.getElementsByClassName('crum-page-external');
-Array.prototype.forEach.call(els, function(btn) {
+Array.prototype.forEach.call(document.getElementsByClassName('crum-page-external'), function(btn: HTMLElement): void {
   btn.classList.add('link');
-  btn.onclick = () => {
+  btn.onclick = (): void => {
     window.open(
       'https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID='
       + btn.innerHTML, '_blank')!.focus();
@@ -60,10 +58,9 @@ Array.prototype.forEach.call(els, function(btn) {
 });
 
 // Handle 'coptic' class.
-var els = document.getElementsByClassName('coptic');
-Array.prototype.forEach.call(els, function(btn) {
+Array.prototype.forEach.call(document.getElementsByClassName('coptic'), function(btn: HTMLElement): void {
   btn.classList.add('hover-link');
-  btn.onclick = () => {
+  btn.onclick = (): void => {
     window.open(
       'https://coptic-dictionary.org/results.cgi?quick_search='
       + btn.innerHTML, '_blank')!.focus();
@@ -71,11 +68,10 @@ Array.prototype.forEach.call(els, function(btn) {
 });
 
 // Handle 'greek' class.
-var els = document.getElementsByClassName('greek');
-Array.prototype.forEach.call(els, function(btn) {
+Array.prototype.forEach.call(document.getElementsByClassName('greek'), function(btn: HTMLElement): void {
   btn.classList.add('link');
   btn.classList.add('light');
-  btn.onclick = () => {
+  btn.onclick = (): void => {
     window.open(
       'https://logeion.uchicago.edu/'
       + btn.innerHTML, '_blank')!.focus();
@@ -83,10 +79,9 @@ Array.prototype.forEach.call(els, function(btn) {
 });
 
 // Handle 'dawoud-page' class.
-var els = document.getElementsByClassName('dawoud-page');
-Array.prototype.forEach.call(els, function(btn) {
+Array.prototype.forEach.call(document.getElementsByClassName('dawoud-page'), function(btn: HTMLElement): void {
   btn.classList.add('link');
-  btn.onclick = () => {
+  btn.onclick = (): void => {
     document.getElementById('dawoud' + btn.innerHTML.slice(0, -1))!.scrollIntoView();
   };
 });
@@ -94,33 +89,33 @@ Array.prototype.forEach.call(els, function(btn) {
 // Handle the `drv-key` class.
 Array.prototype.forEach.call(
   document.getElementsByClassName('drv-key'),
-  function(btn) {
+  function(btn: HTMLElement): void {
     btn.classList.add('small', 'light', 'italic');
   });
 
 // Handle the 'dialect' class.
 suppress(() => {
-  const dialects = ['S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
-  const dialectStyle = new Map();
-  dialects.forEach((d) => { dialectStyle.set(d, ''); });
-  function toggle(d: string) {
+  const dialects: string[] = ['S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
+  const dialectStyle: Map<string, string> = new Map();
+  dialects.forEach((d: string) => { dialectStyle.set(d, ''); });
+  function toggle(d: string): void {
     dialectStyle.set(d, dialectStyle.get(d) == '' ? 'heavy' : '');
   }
-  function shouldHeavy(el: Element) {
-    return dialects.some((d) => {
+  function shouldHeavy(el: Element): boolean {
+    return dialects.some((d: string) => {
       return dialectStyle.get(d) == 'heavy' && el.classList.contains(d);
     });
   }
-  function dialected(el: Element) {
-    return dialects.some((d) => {
+  function dialected(el: Element): boolean {
+    return dialects.some((d: string) => {
       return el.classList.contains(d);
     });
   }
-  function dialect(d: string) {
+  function dialect(d: string): void {
     document.querySelectorAll(
       '.dialect-parenthesis,.dialect-comma,.spelling-comma,.type').forEach((el) => {
-      el.classList.add('very-light');
-    });
+        el.classList.add('very-light');
+      });
     toggle(d);
     document.querySelectorAll('.dialect,.spelling').forEach((el) => {
       if (!dialected(el)) {
@@ -135,24 +130,23 @@ suppress(() => {
       }
     });
 
-    const query = dialects.filter((d) => {
+    const query: string = dialects.filter((d) => {
       return dialectStyle.get(d) == 'heavy';
     }).join(',');
     set_url_and_local("d", query);
   }
-  var els = document.getElementsByClassName('dialect');
-  Array.prototype.forEach.call(els, (btn) => {
+  Array.prototype.forEach.call(document.getElementsByClassName('dialect'), (btn) => {
     btn.classList.add('hover-link');
     btn.onclick = () => { dialect(btn.innerHTML); };
   });
-  const d = get_url_or_local('d');
+  const d: string | null = get_url_or_local('d');
   if (d != null) {
     d.split(',').forEach(dialect);
   }
 });
 
 // Handle 'developer' and 'dev' classes.
-function opposite(value: string | null) {
+function opposite(value: string | null): string {
   if (value == 'true') {
     return 'false';
   }
@@ -165,7 +159,7 @@ function opposite(value: string | null) {
   return 'false';
 }
 
-function dev(value: string | null = null) {
+function dev(value: string | null = null): void {
   document.querySelectorAll('.dev').forEach((el) => {
     if (value == 'true') {
       el.removeAttribute('hidden');
@@ -173,17 +167,17 @@ function dev(value: string | null = null) {
       el.setAttribute('hidden', '');
     }
   });
-  if (value != null) {
-    set_url_and_local("dev", value);
-    ;
+  if (value == null) {
+    return;
   }
+  set_url_and_local("dev", value);
 }
 
 Array.prototype.forEach.call(
   document.getElementsByClassName('developer'),
-  function(btn) {
+  function(btn: HTMLElement): void {
     btn.classList.add('link');
-    btn.onclick = () => {dev(opposite(get_url_or_local("dev")));};
+    btn.onclick = () => { dev(opposite(get_url_or_local("dev"))); };
   });
 
 dev(get_url_or_local("dev"));
