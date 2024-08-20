@@ -134,7 +134,7 @@ def crum(
                     # Contact
                     "<td>"
                     f'<a class="contact" href="mailto:{EMAIL}">'
-                    "contact"
+                    "email"
                     "</a>"
                     "</td>",
                     # Prev
