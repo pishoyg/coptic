@@ -18,7 +18,13 @@ repos:
     rev: v9.9.0
     hooks:
       - id: eslint
+        additional_dependencies:
+          - "typescript"
+          - "globals"
+          - "typescript-eslint"
         args: [--fix]
+        files: \.[jt]sx?$ # *.js, *.jsx, *.ts and *.tsx
+        types: [file]
   - repo: https://github.com/pre-commit/mirrors-csslint
     rev: v1.0.5
     hooks:
@@ -31,6 +37,7 @@ repos:
         language: system
         types: [python]
         verbose: true
+        exclude: setup.py
       - id: tidy-html
         name: tidy-html
         entry: tidy -indent -modify -quiet --tidy-mark no -wrap 80
