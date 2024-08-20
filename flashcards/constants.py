@@ -220,10 +220,7 @@ def crum(
                 "<br/>",
                 # Image.
                 field.img(
-                    keys=field.tsvs(
-                        tsvs="dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs",
-                        column_name="key",
-                    ),
+                    keys=roots_col("key"),
                     # Although the same result can be obtained using
                     # glob.glob(f"dictionary/marcion.sourceforge.net/data/img-300/{key}-*")
                     # we use this method in order to avoid using the computationally expensive
@@ -262,9 +259,8 @@ def crum(
                     ),
                     "</span>",
                     field.img(
-                        keys=field.tsvs(
-                            tsvs="dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs",
-                            column_name="crum-pages",
+                        keys=roots_col(
+                            "crum-pages",
                             force=False,  # TODO: Why is this not enforced? Is it the Nag Hammadi words?
                         ),
                         get_paths=lambda page_ranges: [
@@ -333,10 +329,7 @@ def crum(
                             field.cat(
                                 *[
                                     field.snd(
-                                        keys=field.tsvs(
-                                            tsvs="dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs",
-                                            column_name="key",
-                                        ),
+                                        keys=roots_col("key"),
                                         get_paths=pronunciations[col].get,
                                         sort_paths=sorted,
                                         force=False,
