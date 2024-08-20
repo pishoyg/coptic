@@ -46,6 +46,7 @@ repos:
         entry: bash -c 'for x in "$@"; do python -m json.tool --no-ensure-ascii --indent 2 "$x" "$x"; done' --
         language: system
         types: [json]
+        exclude: ^tsconfig\.json$
   # Python.
   - repo: https://github.com/psf/black-pre-commit-mirror
     rev: 24.4.2
@@ -184,7 +185,7 @@ repos:
         exclude: ^\.pre-commit-config\.yaml$
       - id: check-one-readme
         name: check-one-readme
-        entry: bash -c 'FOUND="$(find . -name README.md -mindepth 2 -not -path "./archive/*")" && [ -z "${FOUND}" ] || (echo -e "${PURPLE}Only the README.md at the root is allowed. Please delete ${RED}${FOUND}${PURPLE}.${RESET}" && exit 1)'
+        entry: bash -c 'FOUND="$(find . -name README.md -mindepth 2 -not -path "./archive/*" -not -path "./node_modules/*")" && [ -z "${FOUND}" ] || (echo -e "${PURPLE}Only the README.md at the root is allowed. Please delete ${RED}${FOUND}${PURPLE}.${RESET}" && exit 1)'
         language: system
         pass_filenames: false
         always_run: true

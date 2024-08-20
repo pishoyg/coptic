@@ -19,7 +19,7 @@ all: install generate_1 test_1 generate_2 test publish report
 # LEVEL 2 RULES ###############################################################
 
 .PHONY: install
-install: pip_install python_install precommit_install bin_install
+install: pip_install python_install precommit_install bin_install ts_install
 
 # generate_1 rules are prerequisites for generate_2 rules.
 .PHONY: generate_1
@@ -249,8 +249,12 @@ _site_push: FORCE
 
 # INFRASTRUCTURE RULES
 bin_install:
+	if ! command -v npm &> /dev/null; then echo "Please install npm. See https://docs.npmjs.com/downloading-and-installing-node-js-and-npm.html-tidy.org/." && exit 1; fi
 	if ! command -v tidy &> /dev/null; then echo "Please install tidy from https://www.html-tidy.org/." && exit 1; fi
 	if ! command -v magick &> /dev/null; then echo "Please install magick from https://imagemagick.org/." && exit 1; fi
+
+ts_install:
+	npm install typescript --save-dev
 
 pip_install: requirements.txt
 	python -m pip install --upgrade pip
