@@ -9,15 +9,9 @@ function suppress(func: () => void): void {
 function get_url_or_local(
   param: string,
   default_value: string | null = null): string | null {
-  const urlSearch = new URLSearchParams(window.location.search);
-  if (urlSearch.has(param)) {
-    return urlSearch.get(param);
-  }
-  const value = localStorage.getItem(param);
-  if (value != null) {
-    return value;
-  }
-  return default_value;
+  return (new URLSearchParams(window.location.search)).get(param)
+    ?? localStorage.getItem(param)
+    ?? default_value;
 }
 
 function set_url_and_local(param: string, value: string): void {
@@ -107,23 +101,25 @@ Array.prototype.forEach.call(
   });
 
 // Handle the 'dialect' class.
+type Dialect = 'S'| 'Sa'| 'Sf'| 'A'| 'sA'| 'B'| 'F'| 'Fb'| 'O'| 'NH';
+type DialectState = "" | "heavy";
 suppress(() => {
-  const dialects: string[] = [
+  const dialects: Dialect[] = [
     'S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'],
-    dialectStyle = new Map<string, string>();
-  dialects.forEach((d: string) => { dialectStyle.set(d, ''); });
-  function toggle(d: string): void {
+    dialectStyle = new Map<Dialect, DialectState>();
+  dialects.forEach((d: Dialect) => { dialectStyle.set(d, ''); });
+  function toggle(d: Dialect): void {
     dialectStyle.set(d, dialectStyle.get(d) == '' ? 'heavy' : '');
   }
   function shouldHeavy(el: Element): boolean {
-    return dialects.some((d: string) =>
+    return dialects.some((d: Dialect) =>
       dialectStyle.get(d) == 'heavy'
       && el.classList.contains(d));
   }
   function dialected(el: Element): boolean {
-    return dialects.some((d: string) => el.classList.contains(d));
+    return dialects.some((d: Dialect) => el.classList.contains(d));
   }
-  function dialect(d: string): void {
+  function dialect(d: Dialect): void {
     document.querySelectorAll(
       '.dialect-parenthesis,.dialect-comma,.spelling-comma,.type').forEach(
       (el) => {
@@ -155,25 +151,18 @@ suppress(() => {
     });
   const d: string | null = get_url_or_local('d');
   if (d != null) {
-    d.split(',').forEach(dialect);
+    d.split(',').map((d) => d as Dialect).forEach(dialect);
   }
 });
 
 // Handle 'developer' and 'dev' classes.
-function opposite(value: string | null): string {
-  if (value == 'true') {
-    return 'false';
-  }
-  if (value == 'false') {
-    return 'true';
-  }
-  if (!value) {
-    return 'true';
-  }
-  return 'false';
+type DevState = "true" | "false" | null;
+
+function opposite(value: DevState): DevState {
+  return (value == "true") ? "false" : "true";
 }
 
-function dev(value: string | null = null): void {
+function dev(value: DevState): void {
   document.querySelectorAll('.dev').forEach((el) => {
     if (value == 'true') {
       el.removeAttribute('hidden');
@@ -191,7 +180,7 @@ Array.prototype.forEach.call(
   document.getElementsByClassName('developer'),
   (btn: HTMLElement): void => {
     btn.classList.add('link');
-    btn.onclick = () => { dev(opposite(get_url_or_local("dev"))); };
+    btn.onclick = () => { dev(opposite(get_url_or_local("dev") as DevState)); };
   });
 
-dev(get_url_or_local("dev"));
+dev(get_url_or_local("dev") as DevState);
