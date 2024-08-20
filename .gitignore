@@ -1,10 +1,14 @@
 # N.B. If you update .gitignore, make sure to update the `git_clean` rule in
 # Makefile, and the loc function in stats.sh.
 
-# Garbage.
+# MacOS system files.
 .DS_Store
+
+# Python artifacts.
 __pycache__
 coptic.egg-info
+
+# TypeScript artifacts.
 node_modules
 package-lock.json
 package.json
