@@ -338,7 +338,7 @@ def img(
         The `alt` key is optional, and can be used to override the alternative
         text (which defaults to the stem).
     """
-    html_fmt = '<img src="{basename}" alt="{alt}"><br/>'
+    html_fmt = '<img src="{basename}" alt="{alt}" style="width: {width}"><br/>'
     if id:
         html_fmt = (
             '<img src="{basename}" alt="{alt}" id="{id}" style="width: {width}"><br/>'
