@@ -58,12 +58,6 @@ flashcards_kellia: _flashcards_kellia
 .PHONY: bible_no_epub
 bible_no_epub: bible_no_epub_aux
 
-.PHONY: site_commit
-site_commit: _site_commit
-
-.PHONY: site_push
-site_push: _site_push
-
 .PHONY: stats
 stats: stats_save
 
@@ -234,18 +228,8 @@ endif
 
 # SITE RULES
 
-# N.B. `make site_publish` (currently accomplished by
-# `bash site/publish.sh --auto`) should be equivalent to
-# `make site_commit site_push`.
-site_publish: FORCE
-	bash site/publish.sh --auto
-
-_site_commit: FORCE
-	bash site/publish.sh
-
-_site_push: FORCE
-	git -C "$${SITE_DIR}" rebase --root --autosquash
-	git -C "$${SITE_DIR}" push --force
+site_publish:
+	bash site/publish.sh --pre --post
 
 # INFRASTRUCTURE RULES
 bin_install:
