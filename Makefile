@@ -14,15 +14,15 @@ SHELL := /bin/bash
 
 .PHONY: all
 # You might want to run `make clean` following this.
-all: install compile generate_1 test_1 generate_2 test publish report
+all: install transpile generate_1 test_1 generate_2 test publish report
 
 # LEVEL 2 RULES ###############################################################
 
 .PHONY: install
 install: pip_install python_install precommit_install bin_install npm_install
 
-.PHONY: compile
-compile: ts_compile
+.PHONY: transpile
+transpile: ts_transpile
 
 # generate_1 rules are prerequisites for generate_2 rules.
 .PHONY: generate_1
@@ -105,7 +105,7 @@ env_restore: env_cp_from_home
 
 # LEVEL 1 RULES ###############################################################
 
-ts_compile: FORCE
+ts_transpile: FORCE
 	npx tsc -p "flashcards/constants/a_coptic_dictionary/tsconfig.json"
 
 # BIBLE RULES
