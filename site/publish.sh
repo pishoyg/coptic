@@ -59,8 +59,6 @@ cp -r \
   bible/stshenouda.org/data/output/html/sahidic \
   "${BIBLE_DIR}"
 
-# TODO: Speed up the pipeline a little bit by merging the copying and
-# tag insertions steps. Write the files only once.
 find "${SITE_DIR}" -type f -name "*.html" | while read -r FILE; do
   LINE_NUM="$(grep "^<head>$" "${FILE}" --line-number --max-count=1 | cut -f1 -d:)"
   if [ -z "${LINE_NUM}" ]; then
