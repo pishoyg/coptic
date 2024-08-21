@@ -14,19 +14,16 @@ SHELL := /bin/bash
 
 .PHONY: all
 # You might want to run `make clean` following this.
-all: install transpile generate_1 test_1 generate_2 test publish report
+all: install generate_1 test_1 generate_2 test publish report
 
 # LEVEL 2 RULES ###############################################################
 
 .PHONY: install
 install: pip_install python_install precommit_install bin_install npm_install
 
-.PHONY: transpile
-transpile: ts_transpile
-
 # generate_1 rules are prerequisites for generate_2 rules.
 .PHONY: generate_1
-generate_1: bible copticsite crum crum_appendices crum_img kellia kellia_analysis
+generate_1: bible copticsite crum crum_appendices crum_img kellia kellia_analysis ts_transpile
 
 .PHONY: generate_2
 generate_2: flashcards kindle
@@ -84,9 +81,6 @@ toil: crum_img_helper
 
 .PHONY: todo
 todo: todo_grep
-
-.PHONY: precommit
-precommit: precommit_run
 
 .PHONY: update
 update: precommit_update pip_update
@@ -277,9 +271,6 @@ python_install:
 
 precommit_install:
 	pre-commit install
-
-precommit_run: FORCE
-	pre-commit run
 
 git_add_precommit_run git_add_precommit_run_1: FORCE
 	until git add --all && pre-commit run; do : ; done
