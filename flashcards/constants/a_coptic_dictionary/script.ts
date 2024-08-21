@@ -1,11 +1,3 @@
-function suppress(func: () => void): void {
-  try {
-    func();
-  } catch (err) {
-    console.log(err);
-  }
-}
-
 function get_url_or_local(
   param: string,
   default_value: string | null = null): string | null {
@@ -14,7 +6,14 @@ function get_url_or_local(
     ?? default_value;
 }
 
-function set_url_and_local(param: string, value: string): void {
+function set_url_and_local(param: string, value: string | null): void {
+  if (value == null) {
+    localStorage.removeItem(param);
+    const url = new URL(window.location.href);
+    url.searchParams.delete(param);
+    window.history.pushState("", "", url.toString());
+    return;
+  }
   localStorage.setItem(param, value);
   const url = new URL(window.location.href);
   url.searchParams.set(param, value);
@@ -25,7 +24,9 @@ function reset(): void {
   localStorage.clear();
   const url = new URL(window.location.href);
   url.search = '';
-  location.replace(url.toString());
+  window.history.pushState("", "", url.toString());
+  dev();
+  dialect();
 }
 
 // Handle 'reset' class.
@@ -101,86 +102,98 @@ Array.prototype.forEach.call(
   });
 
 // Handle the 'dialect' class.
-type Dialect = 'S'| 'Sa'| 'Sf'| 'A'| 'sA'| 'B'| 'F'| 'Fb'| 'O'| 'NH';
-type DialectState = "" | "heavy";
-suppress(() => {
-  const dialects: Dialect[] = [
-    'S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'],
-    dialectStyle = new Map<Dialect, DialectState>();
-  dialects.forEach((d: Dialect) => { dialectStyle.set(d, ''); });
-  function toggle(d: Dialect): void {
-    dialectStyle.set(d, dialectStyle.get(d) == '' ? 'heavy' : '');
+type Dialect = 'S' | 'Sa' | 'Sf' | 'A' | 'sA' | 'B' | 'F' | 'Fb' | 'O' | 'NH';
+function activeDialects(): Set<Dialect> | null {
+  const d = get_url_or_local("d");
+  if (d == null) {
+    return null;
   }
-  function shouldHeavy(el: Element): boolean {
-    return dialects.some((d: Dialect) =>
-      dialectStyle.get(d) == 'heavy'
-      && el.classList.contains(d));
-  }
+  return new Set(d.split(",").map((d) => d as Dialect));
+}
+
+/* Update the display based on the value of the `d` parameter.
+ */
+function dialect(): void {
+  const dialects: readonly Dialect[] = [
+    'S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
+  const active: Set<Dialect> | null = activeDialects();
   function dialected(el: Element): boolean {
     return dialects.some((d: Dialect) => el.classList.contains(d));
   }
-  function dialect(d: Dialect): void {
-    document.querySelectorAll(
-      '.dialect-parenthesis,.dialect-comma,.spelling-comma,.type').forEach(
-      (el) => {
-        el.classList.add('very-light');
-      });
-    toggle(d);
-    document.querySelectorAll('.dialect,.spelling').forEach((el) => {
-      if (!dialected(el)) {
-        return;
-      }
-      if (shouldHeavy(el)) {
+  document.querySelectorAll(
+    '.dialect-parenthesis,.dialect-comma,.spelling-comma,.type').forEach(
+    (el) => {
+      if (active == null) {
         el.classList.remove('very-light');
-        el.classList.add('heavy');
       } else {
-        el.classList.remove('heavy');
         el.classList.add('very-light');
       }
     });
+  document.querySelectorAll('.dialect,.spelling').forEach((el) => {
+    if (!dialected(el)) {
+      return;
+    }
+    if (active == null) {
+      el.classList.remove('very-light');
+      el.classList.remove('heavy');
+      return;
+    }
+    if (Array.from(active).some((d: Dialect) => el.classList.contains(d))) {
+      el.classList.remove('very-light');
+      el.classList.add('heavy');
+    } else {
+      el.classList.remove('heavy');
+      el.classList.add('very-light');
+    }
+  });
+}
 
-    const query: string = dialects.filter(
-      (d) => dialectStyle.get(d) == 'heavy').join(',');
-    set_url_and_local("d", query);
-  }
-  Array.prototype.forEach.call(
-    document.getElementsByClassName('dialect'),
-    (btn) => {
-      btn.classList.add('hover-link');
-      btn.onclick = () => { dialect(btn.innerHTML); };
-    });
-  const d: string | null = get_url_or_local('d');
-  if (d != null) {
-    d.split(',').map((d) => d as Dialect).forEach(dialect);
-  }
-});
+Array.prototype.forEach.call(
+  document.getElementsByClassName('dialect'),
+  (btn) => {
+    btn.classList.add('hover-link');
+    btn.onclick = () => {
+      const d: Dialect = btn.innerHTML;
+      let active = activeDialects();
+      if (active == null) {
+        active = new Set<Dialect>();
+      }
+      if (active.has(d)) {
+        active.delete(d);
+      } else {
+        active.add(d);
+      }
+      set_url_and_local("d", Array.from(active).join(","));
+      dialect();
+    };
+  });
+dialect();
 
 // Handle 'developer' and 'dev' classes.
 type DevState = "true" | "false" | null;
-
-function opposite(value: DevState): DevState {
-  return (value == "true") ? "false" : "true";
+function devState(): DevState {
+  return get_url_or_local("dev") as DevState;
 }
 
-function dev(value: DevState): void {
+function dev(): void {
+  const state = devState();
   document.querySelectorAll('.dev').forEach((el) => {
-    if (value == 'true') {
+    if (state == 'true') {
       el.removeAttribute('hidden');
     } else {
       el.setAttribute('hidden', '');
     }
   });
-  if (value == null) {
-    return;
-  }
-  set_url_and_local("dev", value);
 }
 
 Array.prototype.forEach.call(
   document.getElementsByClassName('developer'),
   (btn: HTMLElement): void => {
     btn.classList.add('link');
-    btn.onclick = () => { dev(opposite(get_url_or_local("dev") as DevState)); };
+    btn.onclick = () => {
+      set_url_and_local("dev", devState() == "true" ? "false" : "true");
+      dev();
+    };
   });
 
-dev(get_url_or_local("dev") as DevState);
+dev();
