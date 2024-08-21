@@ -69,7 +69,8 @@ pre () {
     bible/stshenouda.org/data/output/html/sahidic \
     "${BIBLE_DIR}"
 
-  find "${SITE_DIR}" -type f -name "*.html" | while read -r FILE; do
+  _html () {
+    FILE="${1}"
     LINE_NUM="$(grep "^<head>$" "${FILE}" --line-number --max-count=1 | cut -f1 -d:)"
     if [ -z "${LINE_NUM}" ]; then
       echo -e "${PURPLE}Can't find <head> in ${RED}${FILE}"
@@ -78,7 +79,17 @@ pre () {
     NEW="$(head -n "${LINE_NUM}" "${FILE}")${GOOGLE_TAG}${ICON_TAG}$(tail -n "+$((LINE_NUM + 1))" "${FILE}")"
     echo "${NEW}" > "${FILE}"
     tidy -indent -modify -quiet --tidy-mark no -wrap 80 "${FILE}"
+  }
+
+  COUNTER=0
+  readonly PARALLEL=10
+  find "${SITE_DIR}" -type f -name "*.html" | while read -r FILE; do
+    _html "${FILE}" &
+    if (( ++COUNTER % PARALLEL == 0 )); then
+      wait
+    fi
   done
+  wait
 }
 
 post() {
