@@ -123,23 +123,26 @@ crum: $(shell find dictionary/marcion.sourceforge.net/ -type f)
 
 
 crum_appendices: FORCE
+
 	python -c $$'import utils\n\
 	utils.download_gsheet(\
 	"https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg",\
 	"dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv",\
 	0,\
 	)'
+
 	python -c $$'import utils\n\
 	utils.download_gsheet(\
 	"https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg",\
 	"dictionary/marcion.sourceforge.net/data/input/derivation_appendices.tsv",\
 	1,\
 	)'
-	# Verify the senses have valid JSON.
-	# TODO: JQ simply drops duplicate keys. You should verify their absence
-	# instead.
+
+	# Verify the senses have valid JSON, and numerical keys.
+	# TODO: Verify that the keys are unique. This is currently not
+	# straightforward in JQ because it simply drops duplicate keys.
 	for BASENAME in "root_appendices.tsv" "derivation_appendices.tsv"; do \
-		cut \
+		KEYS=$$(cut \
 			--fields 5 \
 			"dictionary/marcion.sourceforge.net/data/input/$${BASENAME}" \
 			| tail -n +2  \
@@ -147,7 +150,14 @@ crum_appendices: FORCE
 			| sed 's/""/"/g' \
 			| sed 's/"//' \
 			| rev | sed 's/"//' | rev \
-			| jq .; done
+			| jq "keys" \
+			| grep -o '".*"' \
+			| grep '"[[:digit:]]+"' --extended-regexp --invert); \
+		if [ -n "$${KEYS}" ]; then \
+			echo -e "$${RED}$${KEYS}$${PURPLE} are invalid.$${RESET}"; \
+			exit 1; \
+		fi; \
+	done
 
 crum_img: $(shell find dictionary/marcion.sourceforge.net/data/ -type f)
 	python dictionary/marcion.sourceforge.net/img_helper.py --batch
