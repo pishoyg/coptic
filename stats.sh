@@ -5,7 +5,7 @@
 set -o errexit  # Exit upon encountering a failure.
 set -o nounset  # Consider an undefined variable to be an error.
 
-KNOWN_EXTENSIONS="Makefile css csslintrc env_INFO gitignore json js mjs keylayout md plist py sh strings txt yaml ts"
+KNOWN_EXTENSIONS="Makefile css csslintrc env_INFO gitignore json mjs keylayout md plist py sh strings txt yaml ts"
 
 SAVE=false
 while [ $# -gt 0 ]; do
@@ -164,7 +164,7 @@ LOC_PYTHON=$(loc . -name "*.py")
 LOC_MAKE=$(loc . -name "Makefile")
 LOC_CSS=$(loc . -name "*.css")
 LOC_SH=$(loc . -a \( -name "*.sh" -o -name ".env" -o -name ".env_INFO" \))
-LOC_JS=$(loc . -a \( -name "*.js" -o -name "*.mjs" \))
+LOC_JS=$(loc . -name "*.mjs" )
 LOC_MD=$(loc . -name "*.md")
 LOC_YAML=$(loc . -name "*.yaml")
 LOC_DOT=$(loc . -a \( -name ".csslintrc" -o -name ".gitignore" \) )

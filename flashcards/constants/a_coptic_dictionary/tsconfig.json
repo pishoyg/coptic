@@ -1,4 +1,7 @@
 {
   "extends": "../../../tsconfig.json",
   "include": ["script.ts"],
+  "compilerOptions": {
+    "outDir": "../../data/build/a_coptic_dictionary/",
+  },
 }
