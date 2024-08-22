@@ -46,8 +46,6 @@ while [ $# -gt 0 ]; do
   shift
 done
 
-# TODO: Run as `until tidy "${FILE}"; do : ; done` to force it.
-# The current blocker is that the Home page has a blank `title` element.
 tidy () {
   command tidy -indent -modify -quiet --tidy-mark no -wrap 80 "${1}"
 }
@@ -75,7 +73,7 @@ pre () {
   BODY="$(python -m markdown \
     "site/home.md" \
     --output_format="html")" envsubst < "site/data/home.html" > "${SITE_DIR}/index.html"
-  tidy "${SITE_DIR}/index.html" ||  # Suppress the failure.
+  tidy "${SITE_DIR}/index.html"
 
   mkdir "${IMG_DIR}"
   cp -r \
