@@ -257,10 +257,7 @@ def crum(
                     ),
                     "</span>",
                     field.img(
-                        keys=roots_col(
-                            "crum-pages",
-                            force=False,  # TODO: Why is this not enforced? Is it the Nag Hammadi words?
-                        ),
+                        keys=roots_col("crum-pages", force=False),
                         get_paths=lambda page_ranges: [
                             f"dictionary/marcion.sourceforge.net/data/crum/{k+20}.png"
                             for k in _page_numbers(page_ranges=page_ranges)
