@@ -100,6 +100,20 @@ def crum(
         "dictionary/marcion.sourceforge.net/data/img-300",
         lambda file: file[: file.find("-")],
     )
+
+    def _explanatory_alt(path: str) -> str:
+        assert (
+            os.path.dirname(path) == "dictionary/marcion.sourceforge.net/data/img-300"
+        )
+        stem = utils.stem(path)
+        source_path = os.path.join(
+            "dictionary/marcion.sourceforge.net/data/img-sources", stem + ".txt"
+        )
+        source = utils.read(source_path).strip()
+        if source == "manual":
+            return stem
+        return source
+
     image_sensor = _sensor(
         roots_col("key")._content,
         root_appendix("senses", force=False)._content,
@@ -234,6 +248,7 @@ def crum(
                             "caption": image_sensor.get_caption(path),
                             "id": "explanatory" + utils.stem(path),
                             "class": "explanatory",
+                            "alt": _explanatory_alt(path),
                         },
                         force=False,
                     ),
