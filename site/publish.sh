@@ -16,8 +16,7 @@ readonly GOOGLE_TAG='
   </script>
 '
 
-# TODO: Move the icon to the `img/` subdirectory.
-readonly ICON_TAG='  <link rel="icon" type="image/x-icon" href="/icon-circle.png">
+readonly ICON_TAG='  <link rel="icon" type="image/x-icon" href="/img/icon/icon-circle.png">
 '
 
 CLEAN=false
@@ -71,11 +70,10 @@ pre () {
 
   cp \
     "site/data/CNAME" \
-    "site/data/icon-circle.png" \
     "${SITE_DIR}/"
 
   python -m markdown \
-    "site/data/home.md" \
+    "site/home.md" \
     --file="${SITE_DIR}/index.html" \
     --output_format="html"
   tidy "${SITE_DIR}/index.html" ||  # Suppress the failure.
