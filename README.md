@@ -34,6 +34,7 @@
       - [(planned) `dawoud-input`](#planned-dawoud-input)
       - [(planned) `notes`](#planned-notes)
     - [Undialected Entries](#undialected-entries)
+    - [Entries that are Absent in Crum](#entries-that-are-absent-in-crum)
   - [copticocc.org](#copticoccorg)
 - [bible](#bible)
   - [Data](#data)
@@ -433,6 +434,17 @@ part of all dialects.
 35. https://metremnqymi.com/crum/3231.html
 36. https://metremnqymi.com/crum/3257.html
 37. https://metremnqymi.com/crum/3302.html
+
+### Entries that are Absent in Crum
+
+The following entries are absent from Crum's dictionary. They were added to our
+database from other sources:
+
+1. https://metremnqymi.com/crum/3379.html
+2. https://metremnqymi.com/crum/3380.html
+3. https://metremnqymi.com/crum/3381.html
+4. https://metremnqymi.com/crum/3382.html
+5. https://metremnqymi.com/crum/3385.html
 
 ## copticocc.org
 
