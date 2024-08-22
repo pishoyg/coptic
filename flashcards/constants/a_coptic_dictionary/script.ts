@@ -59,6 +59,17 @@ Array.prototype.forEach.call(
     };
   });
 
+// Handle 'crum-page-img' class.
+Array.prototype.forEach.call(
+  document.getElementsByClassName('crum-page-img'),
+  (btn: HTMLElement): void => {
+    btn.classList.add('link');
+    btn.onclick = (): void => {
+      window.open(
+        `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${btn.getAttribute("alt")}`, '_blank')?.focus();
+    };
+  });
+
 // Handle 'coptic' class.
 Array.prototype.forEach.call(
   document.getElementsByClassName('coptic'),
