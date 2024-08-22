@@ -149,6 +149,10 @@ class node:
 
         for d, crum_row_span in zip(descendants, crum_row_spans):
             crum, crum_span = crum_row_span
+            if not crum_span:
+                assert not crum
+            if not crum:
+                crum_span = 0
             if not explain:
                 crum, crum_span = "", 0
             depth = int(d.cell("depth"))
