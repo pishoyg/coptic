@@ -9,12 +9,11 @@ import type_enforced
 
 import utils
 
-CRUM_FMT = '<span class="crum-page">{crum}</span>'
-CRUM_EXTERNAL_FMT = '<span class="crum-page-external">{crum}</span>'
 HOME = "https://metremnqymi.com"
 CRUM_ROOT = f"{HOME}/crum"
 EMAIL = "pishoybg@gmail.com"
 
+INTEGER_RE = re.compile("([0-9]+)")
 DICTIONARY_PAGE_RE = re.compile("([0-9]+(a|b))")
 COPTIC_WORD_RE = re.compile("([Ⲁ-ⲱϢ-ϯⳈⳉ]+)")
 GREEK_WORD_RE = re.compile("([Α-Ωα-ω]+)")
@@ -215,21 +214,25 @@ def crum(
                 # Dictionary pages.
                 field.cat(
                     '<span class="right">',
-                    field.fmt(
-                        # TODO: For consistency with Dawoud, this should
-                        # include the full list of pages, not just the first
-                        # page.
-                        f'<b><a href="#crum" class="hover-link">Crum: </a></b>{CRUM_FMT}',
-                        {"crum": roots_col("crum")},
-                    ),
-                    field.aon(
-                        "<br/>",
-                        '<b><a href="#dawoud" class="hover-link">Dawoud: </a></b>',
-                        field.apl(
-                            lambda pages: DICTIONARY_PAGE_RE.sub(
-                                r'<span class="dawoud-page">\1</span>', pages
+                    field.cat(
+                        field.aon(
+                            '<b><a href="#crum" class="hover-link">Crum: </a></b>',
+                            field.fmt(
+                                '<span class="crum-page">{crum}</span>',
+                                {"crum": roots_col("crum", force=False)},
+                                force=False,
+                                aon=True,
                             ),
-                            root_appendix("dawoud-pages", force=False),
+                        ),
+                        field.aon(
+                            "<br/>",
+                            '<b><a href="#dawoud" class="hover-link">Dawoud: </a></b>',
+                            field.apl(
+                                lambda pages: DICTIONARY_PAGE_RE.sub(
+                                    r'<span class="dawoud-page">\1</span>', pages
+                                ),
+                                root_appendix("dawoud-pages", force=False),
+                            ),
                         ),
                     ),
                     "</span>",
@@ -272,12 +275,14 @@ def crum(
                 field.aon(
                     "<hr/>",
                     '<span id="crum" class="right">',
-                    field.fmt(
-                        # TODO: For consistency with Dawoud, this should
-                        # include the full list of pages, not just the first
-                        # page.
-                        f"<b>Crum: </b>{CRUM_FMT}",
-                        {"crum": roots_col("crum")},
+                    field.aon(
+                        "<b>Crum: </b>",
+                        field.apl(
+                            lambda pages: INTEGER_RE.sub(
+                                r'<span class="crum-page">\1</span>', pages
+                            ),
+                            roots_col("crum-pages", force=False),
+                        ),
                     ),
                     "</span>",
                     field.img(
@@ -289,7 +294,7 @@ def crum(
                             ]
                         ),
                         fmt_args=lambda path: {
-                            "caption": CRUM_EXTERNAL_FMT.format(
+                            "caption": '<span class="crum-page-external">{crum}</span>'.format(
                                 crum=int(utils.stem(path)) - 20
                             ),
                             "id": f"crum{int(utils.stem(path)) - 20}",

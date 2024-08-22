@@ -43,8 +43,12 @@ Array.prototype.forEach.call(
   (btn: HTMLElement): void => {
     btn.classList.add('link');
     btn.onclick = (): void => {
-      document.getElementById(
-        `crum${btn.innerHTML.slice(0, -1)}`)?.scrollIntoView();
+      let pageNumber: string = btn.innerHTML;
+      const lastChar = pageNumber.substr(pageNumber.length - 1);
+      if (lastChar == "a" || lastChar == "b") {
+        pageNumber = pageNumber.slice(0, -1);
+      }
+      document.getElementById(`crum${pageNumber}`)?.scrollIntoView();
     };
   });
 
