@@ -248,7 +248,7 @@ def crum(
                     greek, roots_col("derivations-table", line_br=True, force=False)
                 ),
                 # Crum's pages.
-                field.cat(
+                field.aon(
                     "<hr/>",
                     '<span id="crum" class="right">',
                     field.fmt(
