@@ -5,7 +5,9 @@
 GITHUB="https://github.com/pishoyg/coptic"
 # crum opens a Crum page on ⲙⲉⲧⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ.
 crum () {
-  open "https://metremnqymi.com/crum/${1}.html"
+  for KEY in "${@}"; do
+    open "https://metremnqymi.com/crum/${KEY}.html"
+  done
 }
 
 # issues open issue pages in GitHub.
