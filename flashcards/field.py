@@ -266,8 +266,6 @@ class media(_content_field):
         keys,
         # Map key to list of paths.
         get_paths: enforcer.Callable,
-        # Sort list of paths.
-        sort_paths: enforcer.OptionalCallable = None,
         # Map path to `format` arguments.
         # Your final HTML will be `html_fmt.format(fmt_args(path))`.
         fmt_args: enforcer.OptionalCallable = None,
@@ -299,8 +297,6 @@ class media(_content_field):
             paths = get_paths(key)
             if force:
                 assert paths
-            if sort_paths:
-                paths = sort_paths(paths)
             cur = ""
             for path in paths:
                 new_path = _add_to_work_dir(path)
@@ -323,7 +319,6 @@ class media(_content_field):
 def img(
     keys,
     get_paths: enforcer.Callable,
-    sort_paths: enforcer.OptionalCallable = None,
     fmt_args: enforcer.OptionalCallable = None,
     force: bool = True,
 ) -> media:
@@ -350,7 +345,6 @@ def img(
         html_fmt=html_fmt,
         keys=keys,
         get_paths=get_paths,
-        sort_paths=sort_paths,
         fmt_args=fmt_args,
         force=force,
     )
@@ -360,14 +354,12 @@ def img(
 def snd(
     keys,
     get_paths: enforcer.Callable,
-    sort_paths: enforcer.OptionalCallable = None,
     force: bool = True,
 ) -> media:
     return media(
         html_fmt=AUDIO_FMT,
         keys=keys,
         get_paths=get_paths,
-        sort_paths=sort_paths,
         force=force,
     )
 

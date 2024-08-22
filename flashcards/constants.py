@@ -230,7 +230,6 @@ def crum(
                         # we use this method in order to avoid using the computationally expensive
                         # glob.glob.
                         get_paths=explanatory_images.get,
-                        sort_paths=utils.sort_semver,
                         fmt_args=lambda path: {
                             "caption": image_sensor.get_caption(path),
                             "id": "explanatory" + utils.stem(path),
@@ -268,11 +267,12 @@ def crum(
                     "</span>",
                     field.img(
                         keys=roots_col("crum-pages", force=False),
-                        get_paths=lambda page_ranges: [
-                            f"dictionary/marcion.sourceforge.net/data/crum/{k+20}.png"
-                            for k in _page_numbers(page_ranges=page_ranges)
-                        ],
-                        sort_paths=utils.sort_semver,
+                        get_paths=lambda page_ranges: utils.sort_semver(
+                            [
+                                f"dictionary/marcion.sourceforge.net/data/crum/{k+20}.png"
+                                for k in _page_numbers(page_ranges=page_ranges)
+                            ]
+                        ),
                         fmt_args=lambda path: {
                             "caption": CRUM_EXTERNAL_FMT.format(
                                 crum=int(utils.stem(path)) - 20
@@ -334,7 +334,6 @@ def crum(
                                     field.snd(
                                         keys=roots_col("key"),
                                         get_paths=pronunciations[col].get,
-                                        sort_paths=sorted,
                                         force=False,
                                     )
                                     for col in dialect_cols
@@ -507,7 +506,7 @@ class _dir_lister:
             self.cache[key].append(path)
 
     def get(self, key: str) -> list[str]:
-        return self.cache.get(key, [])
+        return utils.sort_semver(self.cache.get(key, []))
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
