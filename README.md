@@ -274,25 +274,6 @@ images, but icons have come for the rescue:
 
 # dictionary
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-- [Marcion](#marcion)
-  - [Data Store](#data-store)
-    - [`marcion-raw/`](#marcion-raw)
-    - [`marcion-input/`](#marcion-input)
-    - [`output/`](#output)
-    - [`img/`](#img)
-    - [`crum`](#crum)
-    - [`obsolete/`](#obsolete)
-    - [(planned) `dawoud-raw`](#planned-dawoud-raw)
-    - [(planned) `dawoud-input`](#planned-dawoud-input)
-    - [(planned) `notes`](#planned-notes)
-  - [Undialected Entries](#undialected-entries)
-- [copticocc.org](#copticoccorg)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 ## Marcion
 
 ### Data Store
@@ -461,15 +442,6 @@ website](https://coptic-treasures.com/book/coptic-dictionary-moawad-abd-al-nour/
 
 # bible
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-- [Data](#data)
-  - [Output Directories](#output-directories)
-  - [Output Files](#output-files)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 There are several published versions of the Coptic Bible. The most
 recent, and most complete, is that of [St. Shenouda the Archmandrite
 Coptic Society](stshenouda.org). It is the Coptic Bible project that is
@@ -508,15 +480,6 @@ three categories:
 though you can control which pair(s) get generated using the CLI arguments.)
 
 # flashcards
-
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-- [flashcards](#flashcards)
-
-- [Anki Keys and Synchronization](#anki-keys-and-synchronization)
-- [Type Enforcement](#type-enforcement)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Anki Keys and Synchronization
 
