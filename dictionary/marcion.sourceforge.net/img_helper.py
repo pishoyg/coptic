@@ -70,13 +70,6 @@ argparser = argparse.ArgumentParser(
 )
 
 argparser.add_argument(
-    "--browser",
-    type=str,
-    default="Google Chrome",
-    help="The browser.",
-)
-
-argparser.add_argument(
     "--start_at_key",
     type=int,
     default=0,
@@ -95,8 +88,9 @@ argparser.add_argument(
     "--search_url",
     type=str,
     default="https://www.google.com/search?q={query}&tbm=isch",
-    help="Search format string. We will open the browser at"
-    " `search_url.format(query=query)`",
+    help="Search format string. We will open"
+    " `search_url.format(query=query)`."
+    " Your OS should use your default browser for that.",
 )
 
 argparser.add_argument(
@@ -421,8 +415,6 @@ def prompt():
         subprocess.run(
             [
                 "open",
-                "-a",
-                args.browser,
                 str(row[LINK_COL]),
                 query(utils.html_text(str(row[MEANING_COL]))),
             ]
