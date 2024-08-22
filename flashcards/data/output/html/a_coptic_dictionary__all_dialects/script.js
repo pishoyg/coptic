@@ -33,7 +33,12 @@ window.addEventListener("load", function() {"use strict";
     btn.classList.add('link');
     btn.onclick = () => {
       var _a;
-      (_a = document.getElementById(`crum${btn.innerHTML.slice(0, -1)}`)) === null || _a === void 0 ? void 0 : _a.scrollIntoView();
+      let pageNumber = btn.innerHTML;
+      const lastChar = pageNumber.substr(pageNumber.length - 1);
+      if (lastChar == "a" || lastChar == "b") {
+        pageNumber = pageNumber.slice(0, -1);
+      }
+      (_a = document.getElementById(`crum${pageNumber}`)) === null || _a === void 0 ? void 0 : _a.scrollIntoView();
     };
   });
   Array.prototype.forEach.call(document.getElementsByClassName('crum-page-external'), (btn) => {
