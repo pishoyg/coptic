@@ -43,6 +43,13 @@ window.addEventListener("load", function() {"use strict";
       (_a = window.open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${btn.innerHTML}`, '_blank')) === null || _a === void 0 ? void 0 : _a.focus();
     };
   });
+  Array.prototype.forEach.call(document.getElementsByClassName('crum-page-img'), (btn) => {
+    btn.classList.add('link');
+    btn.onclick = () => {
+      var _a;
+      (_a = window.open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${btn.getAttribute("alt")}`, '_blank')) === null || _a === void 0 ? void 0 : _a.focus();
+    };
+  });
   Array.prototype.forEach.call(document.getElementsByClassName('coptic'), (btn) => {
     btn.classList.add('hover-link');
     btn.onclick = () => {
