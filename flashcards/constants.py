@@ -202,6 +202,9 @@ def crum(
                 field.cat(
                     '<span class="right">',
                     field.fmt(
+                        # TODO: For consistency with Dawoud, this should
+                        # include the full list of pages, not just the first
+                        # page.
                         f'<b><a href="#crum" class="hover-link">Crum: </a></b>{CRUM_FMT}',
                         {"crum": roots_col("crum")},
                     ),
@@ -231,6 +234,7 @@ def crum(
                         fmt_args=lambda path: {
                             "caption": image_sensor.get_caption(path),
                             "id": "explanatory" + utils.stem(path),
+                            "class": "explanatory",
                         },
                         force=False,
                     ),
@@ -255,6 +259,9 @@ def crum(
                     "<hr/>",
                     '<span id="crum" class="right">',
                     field.fmt(
+                        # TODO: For consistency with Dawoud, this should
+                        # include the full list of pages, not just the first
+                        # page.
                         f"<b>Crum: </b>{CRUM_FMT}",
                         {"crum": roots_col("crum")},
                     ),
@@ -271,6 +278,7 @@ def crum(
                                 crum=int(utils.stem(path)) - 20
                             ),
                             "id": f"crum{int(utils.stem(path)) - 20}",
+                            "class": "crum-page-img",
                             "alt": int(utils.stem(path)) - 20,
                             "width": DICT_WIDTH,
                         },
@@ -300,6 +308,7 @@ def crum(
                         fmt_args=lambda path: {
                             "caption": int(utils.stem(path)) - 16,
                             "id": f"dawoud{int(utils.stem(path)) - 16}",
+                            "class": "dawoud-page-external",
                             "alt": int(utils.stem(path)) - 16,
                             "width": DICT_WIDTH,
                         },

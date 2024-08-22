@@ -340,7 +340,7 @@ def img(
     """
     html_fmt: str = (
         "<figure>"
-        '<img src="{basename}" alt="{alt}" id="{id}" style="width: {width}">'
+        '<img src="{basename}" alt="{alt}" id="{id}" class="{class}" style="width: {width}">'
         "<figcaption> {caption} </figcaption>"
         "</figure>"
         "<br/>"
