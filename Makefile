@@ -279,7 +279,7 @@ precommit_update: FORCE
 	pre-commit autoupdate
 
 todo_grep: FORCE
-	grep TODO -R . --exclude-dir="archive" --exclude-dir=.git
+	. ./.helpers && grepexx TODO
 
 git_clean: FORCE
 	git clean \
