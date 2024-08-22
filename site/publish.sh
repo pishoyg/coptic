@@ -72,10 +72,9 @@ pre () {
     "site/data/CNAME" \
     "${SITE_DIR}/"
 
-  python -m markdown \
+  BODY="$(python -m markdown \
     "site/home.md" \
-    --file="${SITE_DIR}/index.html" \
-    --output_format="html"
+    --output_format="html")" envsubst < "site/data/home.html" > "${SITE_DIR}/index.html"
   tidy "${SITE_DIR}/index.html" ||  # Suppress the failure.
 
   mkdir "${IMG_DIR}"
