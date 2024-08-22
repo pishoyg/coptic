@@ -49,15 +49,20 @@ color () {
 findex () {
   find . \
     -not -path "./.git/*" \
+    -not -path "./.git" \
     -not -name ".DS_Store" \
     -not -path "*/__pycache__/*" \
+    -not -path "*/__pycache__" \
     -not -path "./coptic.egg-info/*" \
+    -not -path "./coptic.egg-info" \
     -not -path "./node_modules/*" \
+    -not -path "./node_modules" \
     -not -name "package-lock.json" \
     -not -name "package.json" \
     -not -name "flashcards/data/output/anki/coptic.apkg" \
     -not -name ".env" \
     -not -path "./archive/*" \
+    -not -path "./archive" \
     "${@}"
 }
 
