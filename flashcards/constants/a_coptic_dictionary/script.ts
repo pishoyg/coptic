@@ -70,6 +70,23 @@ Array.prototype.forEach.call(
     };
   });
 
+// Handle 'crum-page-img' class.
+Array.prototype.forEach.call(
+  document.getElementsByClassName('explanatory'),
+  (btn: HTMLElement): void => {
+    const alt = btn.getAttribute("alt");
+    if (!alt) {
+      return;
+    }
+    if (!alt.startsWith("http")) {
+      return;
+    }
+    btn.classList.add('link');
+    btn.onclick = (): void => {
+      window.open(alt, '_blank')?.focus();
+    };
+  });
+
 // Handle 'coptic' class.
 Array.prototype.forEach.call(
   document.getElementsByClassName('coptic'),
