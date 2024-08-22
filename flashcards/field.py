@@ -325,30 +325,26 @@ def img(
     get_paths: enforcer.Callable,
     sort_paths: enforcer.OptionalCallable = None,
     fmt_args: enforcer.OptionalCallable = None,
-    caption: bool = True,
-    id: bool = True,
     force: bool = True,
 ) -> media:
     """
     Args:
         fmt_args: A lambda that, given the path, would return the HTML format
         kwargs.
-        If `caption` is set to True, then "caption" must also exist.
-        If `id` is set to True, then "id" must also exist.
-        The `alt` key is optional, and can be used to override the alternative
-        text (which defaults to the stem).
+        The following keys are required:
+            - "caption"
+            - "id"
+        The following keys are optional:
+            - "alt": defaults to the stem of the file.
+            - "width": defaults to "auto".
     """
-    html_fmt = '<img src="{basename}" alt="{alt}" style="width: {width}"><br/>'
-    if id:
-        html_fmt = (
-            '<img src="{basename}" alt="{alt}" id="{id}" style="width: {width}"><br/>'
-        )
-    if caption:
-        html_fmt = (
-            "<figure>"
-            + html_fmt
-            + "<figcaption> {caption} </figcaption> </figure> <br/>"
-        )
+    html_fmt: str = (
+        "<figure>"
+        '<img src="{basename}" alt="{alt}" id="{id}" style="width: {width}">'
+        "<figcaption> {caption} </figcaption>"
+        "</figure>"
+        "<br/>"
+    )
 
     return media(
         html_fmt=html_fmt,
