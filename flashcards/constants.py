@@ -219,19 +219,22 @@ def crum(
                 ),
                 "<br/>",
                 # Image.
-                field.img(
-                    keys=roots_col("key"),
-                    # Although the same result can be obtained using
-                    # glob.glob(f"dictionary/marcion.sourceforge.net/data/img-300/{key}-*")
-                    # we use this method in order to avoid using the computationally expensive
-                    # glob.glob.
-                    get_paths=explanatory_images.get,
-                    sort_paths=utils.sort_semver,
-                    fmt_args=lambda path: {
-                        "caption": image_sensor.get_caption(path),
-                        "id": "explanatory" + utils.stem(path),
-                    },
-                    force=False,
+                field.xor(
+                    field.img(
+                        keys=roots_col("key"),
+                        # Although the same result can be obtained using
+                        # glob.glob(f"dictionary/marcion.sourceforge.net/data/img-300/{key}-*")
+                        # we use this method in order to avoid using the computationally expensive
+                        # glob.glob.
+                        get_paths=explanatory_images.get,
+                        sort_paths=utils.sort_semver,
+                        fmt_args=lambda path: {
+                            "caption": image_sensor.get_caption(path),
+                            "id": "explanatory" + utils.stem(path),
+                        },
+                        force=False,
+                    ),
+                    "<br/>",
                 ),
                 # Editor's notes.
                 field.aon(
