@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# NOTE: These GitHub helpers work, but also consider using the `gh` CLI. See
+# https://cli.github.com/.
+GITHUB="https://github.com/pishoyg/coptic"
 # crum opens a Crum page on ⲙⲉⲧⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ.
 crum () {
   open "https://metremnqymi.com/crum/${1}.html"
@@ -8,7 +11,19 @@ crum () {
 # issues open issue pages in GitHub.
 issues () {
   for ISSUE in "${@}"; do
-    open "https://github.com/pishoyg/coptic/issues/${ISSUE}"
+    open "${GITHUB}/issues/${ISSUE}"
+  done
+}
+
+# github opens the GitHub page for the project.
+github () {
+  open "${GITHUB}"
+}
+
+# commits opens the commits in GitHub.
+commits () {
+  for ISSUE in "${@}"; do
+    open "${GITHUB}/commit/$(git rev-parse "${ISSUE}")"
   done
 }
 
