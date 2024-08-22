@@ -371,6 +371,8 @@ def parse_english_cell(line: str) -> str:
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def parse_crum_cell(line: str) -> tuple[str, str]:
+    if not line:
+        return "", ""
     match = constants.CRUM_RE.match(line)
     assert match
     assert len(match.groups()) == 2

@@ -73,8 +73,10 @@ class node:
             parser.crum_page(d.row()["crum"])
             for d in self.descendants(include_root=True)
         }
+        cur = filter(None, cur)
         cur = map(int, cur)
-        cur = filter(None, cur)  # Delete the zero page.
+        cur = list(cur)
+        assert all(cur)  # Verify that there is no zero page.
         cur = sorted(cur)  # Sort numerically, not lexicographically.
         cur = map(str, cur)  # Convert back to string.
         cur = list(cur)
@@ -147,7 +149,6 @@ class node:
 
         for d, crum_row_span in zip(descendants, crum_row_spans):
             crum, crum_span = crum_row_span
-            assert bool(crum) == bool(crum_span)
             if not explain:
                 crum, crum_span = "", 0
             depth = int(d.cell("depth"))

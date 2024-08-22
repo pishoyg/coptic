@@ -230,7 +230,11 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         insert(EN_COL, "-parsed", ep)
         insert(EN_COL, "-parsed-no-greek", parser.remove_greek(ep))
         crum = row[CRUM_COL]
-        insert(CRUM_COL, "-link", constants.CRUM_PAGE_FMT.format(key=crum))
+        if crum == "0a":
+            row[CRUM_COL] = ""
+            insert(CRUM_COL, "-link", "")
+        else:
+            insert(CRUM_COL, "-link", constants.CRUM_PAGE_FMT.format(key=crum))
         for d in FILTER_DIALECTS:
             subset = [w for w in word if w.is_dialect(d, undialected_is_all=True)]
             entry = "\n".join(
