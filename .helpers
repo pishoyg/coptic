@@ -5,9 +5,11 @@ crum () {
   open "https://metremnqymi.com/crum/${1}.html"
 }
 
-# issue opens an issue page in GitHub.
-issue () {
-  open "https://github.com/pishoyg/coptic/issues/${1}"
+# issues open issue pages in GitHub.
+issues () {
+  for ISSUE in "${@}"; do
+    open "https://github.com/pishoyg/coptic/issues/${ISSUE}"
+  done
 }
 
 # Print the Makefile recipe without executing it.
