@@ -15,13 +15,19 @@ readonly GOOGLE_TAG='
     gtag("config", "G-VCVZFDFZR3");
   </script>
 '
+
+# TODO: Move the icon to the `img/` subdirectory.
 readonly ICON_TAG='  <link rel="icon" type="image/x-icon" href="/icon-circle.png">
 '
 
+CLEAN=false
 PRE=false
 POST=false
 while [ $# -gt 0 ]; do
   case $1 in
+  --clean)
+    CLEAN=true
+    ;;
   --pre)
     PRE=true
     ;;
@@ -41,6 +47,16 @@ while [ $# -gt 0 ]; do
   shift
 done
 
+# TODO: Run as `until tidy "${FILE}"; do : ; done` to force it.
+# The current blocker is that the Home page has a blank `title` element.
+tidy () {
+  command tidy -indent -modify -quiet --tidy-mark no -wrap 80 "${1}"
+}
+
+clean () {
+  git -C "${SITE_DIR}" clean -d --force && git -C "${SITE_DIR}" reset --hard
+}
+
 pre () {
   if [ -n "$(git -C "${SITE_DIR}" status --short)" ]; then
     echo -e "${PURPLE}${SITE_DIR}${RED} is dirty. This should be done in a standalone commit.${RESET}"
@@ -51,11 +67,23 @@ pre () {
 
   readonly CRUM_DIR="${SITE_DIR}/crum"
   readonly BIBLE_DIR="${SITE_DIR}/bible"
+  readonly IMG_DIR="${SITE_DIR}/img"
 
   cp \
     "site/data/CNAME" \
     "site/data/icon-circle.png" \
     "${SITE_DIR}/"
+
+  python -m markdown \
+    "site/data/home.md" \
+    --file="${SITE_DIR}/index.html" \
+    --output_format="html"
+  tidy "${SITE_DIR}/index.html" ||  # Suppress the failure.
+
+  mkdir "${IMG_DIR}"
+  cp -r \
+    site/data/img/* \
+    "${IMG_DIR}/"
 
   mkdir "${CRUM_DIR}"
   cp -r \
@@ -78,7 +106,7 @@ pre () {
     fi
     NEW="$(head -n "${LINE_NUM}" "${FILE}")${GOOGLE_TAG}${ICON_TAG}$(tail -n "+$((LINE_NUM + 1))" "${FILE}")"
     echo "${NEW}" > "${FILE}"
-    tidy -indent -modify -quiet --tidy-mark no -wrap 80 "${FILE}"
+    tidy "${FILE}"
   }
 
   COUNTER=0
@@ -107,6 +135,9 @@ post() {
   git -C "${SITE_DIR}" commit --fixup HEAD
 }
 
+if ${CLEAN}; then
+  clean
+fi
 if ${PRE}; then
   pre
 fi
