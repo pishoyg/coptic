@@ -128,9 +128,6 @@ post() {
 
   git -C "${SITE_DIR}" rebase --root --autosquash
   git -C "${SITE_DIR}" push --force
-
-  git -C "${SITE_DIR}" add --all
-  git -C "${SITE_DIR}" commit --fixup HEAD
 }
 
 if ${CLEAN}; then
