@@ -9,7 +9,7 @@ function get_url_or_local(
     ?? default_value;
 }
 
-function open(url: string): void {
+function window_open(url: string): void {
   window.open(url, '_blank', 'noopener,noreferrer')!.focus();
 }
 
@@ -62,7 +62,7 @@ Array.prototype.forEach.call(
   (el: HTMLElement): void => {
     el.classList.add('link');
     el.onclick = (): void => {
-      open(
+      window_open(
         `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.innerHTML}`);
     };
   });
@@ -73,7 +73,7 @@ Array.prototype.forEach.call(
   (el: HTMLElement): void => {
     el.classList.add('link');
     el.onclick = (): void => {
-      open(
+      window_open(
         `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.getAttribute('alt')}`);
     };
   });
@@ -87,7 +87,7 @@ Array.prototype.forEach.call(
       return;
     }
     el.classList.add('link');
-    el.onclick = (): void => { open(alt); };
+    el.onclick = (): void => { window_open(alt); };
   });
 
 // Handle 'coptic' class.
@@ -96,7 +96,7 @@ Array.prototype.forEach.call(
   (el: HTMLElement): void => {
     el.classList.add('hover-link');
     el.onclick = (): void => {
-      open(
+      window_open(
         `https://coptic-dictionary.org/results.cgi?quick_search=${el.innerHTML}`);
     };
   });
@@ -108,7 +108,7 @@ Array.prototype.forEach.call(
     el.classList.add('link');
     el.classList.add('light');
     el.onclick = (): void => {
-      open(`https://logeion.uchicago.edu/${el.innerHTML}`);
+      window_open(`https://logeion.uchicago.edu/${el.innerHTML}`);
     };
   });
 
@@ -269,4 +269,3 @@ Array.prototype.forEach.call(
     el.classList.add('link');
     el.onclick = reset;
   });
-
