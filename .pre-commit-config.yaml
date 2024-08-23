@@ -23,7 +23,7 @@ repos:
           - "globals"
           - "typescript-eslint"
         args: [--fix]
-        files: \.[jt]sx?$ # *.js, *.jsx, *.ts and *.tsx
+        files: \.(js|jsx|mjs|cjs|ts|tsx|mts|cts)$
         types: [file]
   - repo: https://github.com/pre-commit/mirrors-csslint
     rev: v1.0.5
