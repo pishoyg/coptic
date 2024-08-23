@@ -13,6 +13,7 @@
 fail_fast: true
 exclude: ^archive/
 repos:
+  # TypeScript and JavaScript
   - repo: https://github.com/pre-commit/mirrors-eslint
     rev: v9.9.0
     hooks:
@@ -25,12 +26,14 @@ repos:
         args: [--fix]
         files: \.(js|jsx|mjs|cjs|ts|tsx|mts|cts)$
         types: [file]
+  # CSS
   - repo: https://github.com/pre-commit/mirrors-csslint
     rev: v1.0.5
     hooks:
       - id: csslint
   - repo: local
     hooks:
+      # Python Unit Tests Exist
       - id: python-unittest-exists
         name: python-unittest-exists
         entry: bash -c 'for FILE in "$@"; do DIRNAME="$(dirname "${FILE}")" && if [[ "$(basename "${DIRNAME}")" != "test" ]]; then TEST="${DIRNAME}/test/test_$(basename "${FILE}")" && if [ ! -f "${TEST}" ]; then echo -e "${RED}" Please create a unit test in "${YELLOW}" "${TEST}" "${RED}" and import "${YELLOW}" "${FILE}" "${RESET}" && exit 1; fi; else INIT="${DIRNAME}/__init__.py" && if [ ! -f "${INIT}" ]; then echo -e "${RED}" You forgot "${YELLOW}" "${INIT}" "${RESET}" && exit 1; fi; fi; done' --
@@ -38,23 +41,26 @@ repos:
         types: [python]
         verbose: true
         exclude: setup.py
+      # HTML
       - id: tidy-html
         name: tidy-html
         entry: tidy -indent -modify -quiet --tidy-mark no -wrap 80
         language: system
         files: '.*\.html'
+      # XML
       - id: tidy-xml
         name: tidy-xml
         entry: tidy -indent -modify -quiet --tidy-mark no -wrap 80 -xml
         language: system
         files: .*\.(xml|xhtml|opf)$
+      # JSON
       - id: json-tool
         name: json-tool
         entry: bash -c 'for x in "$@"; do python -m json.tool --no-ensure-ascii --indent 2 "$x" "$x"; done' --
         language: system
         types: [json]
         exclude: tsconfig\.json$
-  # Python.
+  # Python
   - repo: https://github.com/psf/black-pre-commit-mirror
     rev: 24.4.2
     hooks:
@@ -85,7 +91,7 @@ repos:
         # requirements.txt (which, of course, in turn, should remain in sync
         # with your repo).
         additional_dependencies: [bs4, clipboard, colorama, EbookLib, genanki, gspread, json5, markdown, oauth2client, openpyxl, pandas, pathlib, Pillow, pip-review, pre-commit, setuptools, type_enforced, typing, urllib3]
-  # Language-agnostic.
+  # Language-agnostic
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
     hooks:
@@ -127,7 +133,7 @@ repos:
         # Other types of files are data files, not code files. We don't take
         # data updates lightly.
         exclude: .*\.(xml|html|xhtml|txt|tsv|csv|json|tab|msql|xsd)$|dictionary/kellia.uni-goettingen.de/main.py
-  # Shell.
+  # Shell
   - repo: https://github.com/shellcheck-py/shellcheck-py
     rev: v0.10.0.1
     hooks:
@@ -142,7 +148,7 @@ repos:
     hooks:
       - id: shfmt
         args: [-indent, '2']
-  # Markdown.
+  # Markdown
   - repo: https://github.com/igorshubovych/markdownlint-cli
     rev: v0.41.0
     hooks:
@@ -152,12 +158,12 @@ repos:
     rev: v2.2.0
     hooks:
       - id: doctoc
-  # YAML.
+  # YAML
   - repo: https://github.com/google/yamlfmt
     rev: v0.13.0
     hooks:
       - id: yamlfmt
-  # Protobuf.
+  # Protobuf
   - repo: https://github.com/bufbuild/buf
     rev: v1.34.0
     hooks:
@@ -167,7 +173,7 @@ repos:
       - id: buf-lint
       - id: buf-breaking
       - id: buf-generate
-  # Lua.
+  # Lua
   - repo: https://github.com/JohnnyMorganz/StyLua
     rev: v0.20.0
     hooks:
@@ -177,9 +183,9 @@ repos:
     rev: 0.2.2
     hooks:
       - id: checkmake
-  # Local scripts.
   - repo: local
     hooks:
+      # Crum Images
       - id: crum-img-validate
         name: crum-img-validate
         entry: python dictionary/marcion.sourceforge.net/img_helper.py --validate
@@ -194,23 +200,27 @@ repos:
         # to be deleted are deleted.
         files: ^dictionary/marcion.sourceforge.net/data/img.*
         pass_filenames: false
+      # Daily Statistics
       - id: stats
         name: stats
         entry: bash -c 'if (( $(date +%s) - $(tail -n 1 data/stats.tsv | cut --fields 2) >= 86400 )); then echo -e "${RED}" Run "${YELLOW}" \`make stats\`"${RED}"\."${RESET}" && exit 1; fi'
         language: system
         pass_filenames: false
         always_run: true
+      # Python Unit Tests
       - id: python-unittest
         name: python-unittest
         entry: bash -c 'for x in $(dirname "$@" | grep --invert "/test$" | sort | uniq); do python -m unittest discover "$x"; done' --
         language: system
         types: [python]
         verbose: true
+      # DO NOT SUBMIT
       - id: check-do-not-submit
         name: check-do-not-submit
         entry: bash -c 'check_do_not_submit () { for FILE in "$@"; do DO_NOT_SUBMIT="$(grep "DO NOT SUBMIT" --files-with-matches "${FILE}")" && [ -z "${DO_NOT_SUBMIT}" ] || (echo -e "${RED}" "DO NOT SUBMIT" markers found in "${YELLOW}" "${DO_NOT_SUBMIT}" "${RESET}" && exit 1); done }; check_do_not_submit' --
         language: system
         exclude: ^\.pre-commit-config\.yaml$
+      # One README
       - id: check-one-readme
         name: check-one-readme
         entry: bash -c 'FOUND="$(find . -name README.md -mindepth 2 -not -path "./archive/*" -not -path "./node_modules/*")" && [ -z "${FOUND}" ] || (echo -e "${PURPLE}Only the README.md at the root is allowed. Please delete ${RED}${FOUND}${PURPLE}.${RESET}" && exit 1)'
