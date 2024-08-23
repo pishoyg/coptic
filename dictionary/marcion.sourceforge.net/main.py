@@ -1,15 +1,12 @@
-import argparse
 import os
 import parser
 
 import constants
 import enforcer
-import gspread
 import pandas as pd
 import tree
 import type_enforced
 import word as lexical
-from oauth2client.service_account import ServiceAccountCredentials
 
 import utils
 
@@ -41,32 +38,6 @@ MORPH_DIALECTS = ["B"]
 # flashcards) is not feasible.
 SIMPLE_DEFINITION_FMT = "(<b>{type}</b>) <b>Crum: </b> {crum} <hr/> {meaning} <hr/> {word} <hr/> {derivations} <hr/>"
 
-# Gspread arguments.###########################################################
-GSPREAD_SCOPE = [
-    "https://spreadsheets.google.com/feeds",
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive",
-]
-
-GSPREAD_NAME = "marcion-crum-parser"
-
-argparser = argparse.ArgumentParser(
-    description="Parse and process the Marcion digital Coptic database,"
-    "which is in turn based on the Crum Coptic dictionary."
-)
-
-argparser.add_argument(
-    "--gspread_credentials_json",
-    type=str,
-    help="Credentials file, used to write output to google sheet.",
-)
-argparser.add_argument(
-    "--gspread_owner",
-    type=str,
-    help="In case a new sheet is created, assign this as the owner of the sheet.",
-)
-
 # Main.########################################################################
 
 
@@ -76,33 +47,11 @@ def series_to_int(series: pd.Series) -> list[int]:
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def write(
-    df: pd.DataFrame, name: str, gspread_credentials_json: str, gspread_owner: str
-) -> None:
+def write(df: pd.DataFrame, name: str) -> None:
     utils.write_tsvs(df, os.path.join(OUTPUT, "tsvs", name + ".tsvs"))
-    if not gspread_owner:
-        return
-
-    # TODO: Parameterize to make it possible to write to multiple sheets at the
-    # same time, particularly for roots and derivations.
-    credentials = ServiceAccountCredentials.from_json_keyfile_name(
-        gspread_credentials_json, GSPREAD_SCOPE
-    )
-    client = gspread.authorize(credentials)
-
-    try:
-        spreadsheet = client.open(GSPREAD_NAME)
-    except Exception:
-        spreadsheet = client.create(GSPREAD_NAME)
-        spreadsheet.share(gspread_owner, perm_type="user", role="owner")
-
-    spreadsheet.get_worksheet(0).update(
-        [df.columns.values.tolist()] + df.values.tolist()
-    )
 
 
 def main() -> None:
-    args = argparser.parse_args()
     # Process roots.
     roots = utils.read_tsv(COPTWRD_TSV)
     process_data(roots, strict=True)
@@ -120,11 +69,11 @@ def main() -> None:
 
     # Write the roots.
     roots.sort_values(by=SORT_ROOTS, key=series_to_int, inplace=True)
-    write(roots, "roots", args.gspread_credentials_json, args.gspread_owner)
+    write(roots, "roots")
 
     # Write the derivations.
     derivations.sort_values(by=SORT_DERIVATIONS, key=series_to_int, inplace=True)
-    write(derivations, "derivations", args.gspread_credentials_json, args.gspread_owner)
+    write(derivations, "derivations")
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -252,20 +201,6 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
 
     for col, values in extra_cols.items():
         df[col] = values
-
-
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def dedupe(i: list[str]) -> list[str]:
-    """
-    Deduplicate elements from a list of strings, while maintaining the order.
-    """
-    seen: set[str] = set()
-    o: list[str] = []
-    for x in i:
-        if x not in seen:
-            seen.add(x)
-            o.append(x)
-    return o
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
