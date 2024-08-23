@@ -30,6 +30,18 @@ function reset(): void {
   dialect();
 }
 
+function moveElement(el: HTMLElement, tag: string, attrs: Record<string, string>): void {
+  const copy = document.createElement(tag);
+  copy.innerHTML = el.innerHTML;
+  el.getAttributeNames().forEach((attr) => {
+    copy.setAttribute(attr, el.getAttribute(attr)!);
+  });
+  for (const key in attrs) {
+    copy.setAttribute(key, attrs[key]!);
+  }
+  el.parentNode?.replaceChild(copy, el);
+}
+
 // Handle 'reset' class.
 Array.prototype.forEach.call(
   document.getElementsByClassName('reset'),
@@ -128,7 +140,8 @@ Array.prototype.forEach.call(
 Array.prototype.forEach.call(
   document.getElementsByClassName('drv-key'),
   (el: HTMLElement): void => {
-    el.classList.add('small', 'light', 'italic');
+    el.classList.add('small', 'light', 'italic', 'hover-link');
+    moveElement(el, 'a', {'href': `#drv${el.innerHTML}`});
   });
 
 // Handle the 'dialect' class.

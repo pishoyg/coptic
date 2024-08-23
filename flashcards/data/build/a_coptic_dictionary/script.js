@@ -24,6 +24,18 @@ function reset() {
   dev();
   dialect();
 }
+function moveElement(el, tag, attrs) {
+  var _a;
+  const copy = document.createElement(tag);
+  copy.innerHTML = el.innerHTML;
+  el.getAttributeNames().forEach((attr) => {
+    copy.setAttribute(attr, el.getAttribute(attr));
+  });
+  for (const key in attrs) {
+    copy.setAttribute(key, attrs[key]);
+  }
+  (_a = el.parentNode) === null || _a === void 0 ? void 0 : _a.replaceChild(copy, el);
+}
 Array.prototype.forEach.call(document.getElementsByClassName('reset'), (el) => {
   el.classList.add('link');
   el.onclick = reset;
@@ -81,7 +93,8 @@ Array.prototype.forEach.call(document.getElementsByClassName('dawoud-page'), (el
   };
 });
 Array.prototype.forEach.call(document.getElementsByClassName('drv-key'), (el) => {
-  el.classList.add('small', 'light', 'italic');
+  el.classList.add('small', 'light', 'italic', 'hover-link');
+  moveElement(el, 'a', { 'href': `#drv${el.innerHTML}` });
 });
 const dialects = [
   'S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'
