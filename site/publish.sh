@@ -3,6 +3,8 @@
 set -o errexit  # Exit upon encountering a failure.
 set -o nounset  # Consider an undefined variable to be an error.
 
+readonly DOMAIN="metremnqymi.com"
+
 readonly GOOGLE_TAG='
   <!-- Google tag (gtag.js) -->
 
@@ -117,7 +119,17 @@ pre () {
 
 post() {
   find "${SITE_DIR}" -type f -name "*.js" | while read -r FILE; do
-    npx javascript-obfuscator "${FILE}" --output "${FILE}"
+    # NOTE: Some of the flags below have strong warnings regarding their
+    # possibility to break your code. Check the docs if something doesn't work.
+    npx javascript-obfuscator "${FILE}" \
+      --output "${FILE}" \
+      --options-preset "high-obfuscation" \
+      --domain-lock "${DOMAIN}" \
+      --rename-globals "true" \
+      --rename-properties "true" \
+      --rename-properties-mode "unsafe" \
+      --unicode-escape-sequence "true"
+
   done
 
   git -C "${SITE_DIR}" add --all
