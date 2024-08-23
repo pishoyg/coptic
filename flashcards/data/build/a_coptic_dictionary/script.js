@@ -31,63 +31,53 @@ Array.prototype.forEach.call(document.getElementsByClassName('reset'), (el) => {
 Array.prototype.forEach.call(document.getElementsByClassName('crum-page'), (el) => {
   el.classList.add('link');
   el.onclick = () => {
-    var _a;
     let pageNumber = el.innerHTML;
     const lastChar = pageNumber.substr(pageNumber.length - 1);
     if (lastChar == 'a' || lastChar == 'b') {
       pageNumber = pageNumber.slice(0, -1);
     }
-    (_a = document.getElementById(`crum${pageNumber}`)) === null || _a === void 0 ? void 0 : _a.scrollIntoView();
+    document.getElementById(`crum${pageNumber}`).scrollIntoView();
   };
 });
 Array.prototype.forEach.call(document.getElementsByClassName('crum-page-external'), (el) => {
   el.classList.add('link');
   el.onclick = () => {
-    var _a;
-    (_a = window.open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.innerHTML}`, '_blank')) === null || _a === void 0 ? void 0 : _a.focus();
+    window.open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.innerHTML}`, '_blank').focus();
   };
 });
 Array.prototype.forEach.call(document.getElementsByClassName('crum-page-img'), (el) => {
   el.classList.add('link');
   el.onclick = () => {
-    var _a;
-    (_a = window.open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.getAttribute('alt')}`, '_blank')) === null || _a === void 0 ? void 0 : _a.focus();
+    window.open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.getAttribute('alt')}`, '_blank').focus();
   };
 });
 Array.prototype.forEach.call(document.getElementsByClassName('explanatory'), (el) => {
   const alt = el.getAttribute('alt');
-  if (!alt) {
-    return;
-  }
   if (!alt.startsWith('http')) {
     return;
   }
   el.classList.add('link');
   el.onclick = () => {
-    var _a;
-    (_a = window.open(alt, '_blank')) === null || _a === void 0 ? void 0 : _a.focus();
+    window.open(alt, '_blank').focus();
   };
 });
 Array.prototype.forEach.call(document.getElementsByClassName('coptic'), (el) => {
   el.classList.add('hover-link');
   el.onclick = () => {
-    var _a;
-    (_a = window.open(`https://coptic-dictionary.org/results.cgi?quick_search=${el.innerHTML}`, '_blank')) === null || _a === void 0 ? void 0 : _a.focus();
+    window.open(`https://coptic-dictionary.org/results.cgi?quick_search=${el.innerHTML}`, '_blank').focus();
   };
 });
 Array.prototype.forEach.call(document.getElementsByClassName('greek'), (el) => {
   el.classList.add('link');
   el.classList.add('light');
   el.onclick = () => {
-    var _a;
-    (_a = window.open(`https://logeion.uchicago.edu/${el.innerHTML}`, '_blank')) === null || _a === void 0 ? void 0 : _a.focus();
+    window.open(`https://logeion.uchicago.edu/${el.innerHTML}`, '_blank').focus();
   };
 });
 Array.prototype.forEach.call(document.getElementsByClassName('dawoud-page'), (el) => {
   el.classList.add('link');
   el.onclick = () => {
-    var _a;
-    (_a = document.getElementById(`dawoud${el.innerHTML.slice(0, -1)}`)) === null || _a === void 0 ? void 0 : _a.scrollIntoView();
+    document.getElementById(`dawoud${el.innerHTML.slice(0, -1)}`).scrollIntoView();
   };
 });
 Array.prototype.forEach.call(document.getElementsByClassName('drv-key'), (el) => {

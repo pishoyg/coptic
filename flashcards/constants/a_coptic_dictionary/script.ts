@@ -49,7 +49,7 @@ Array.prototype.forEach.call(
       if (lastChar == 'a' || lastChar == 'b') {
         pageNumber = pageNumber.slice(0, -1);
       }
-      document.getElementById(`crum${pageNumber}`)?.scrollIntoView();
+      document.getElementById(`crum${pageNumber}`)!.scrollIntoView();
     };
   });
 
@@ -60,7 +60,7 @@ Array.prototype.forEach.call(
     el.classList.add('link');
     el.onclick = (): void => {
       window.open(
-        `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.innerHTML}`, '_blank')?.focus();
+        `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.innerHTML}`, '_blank')!.focus();
     };
   });
 
@@ -71,7 +71,7 @@ Array.prototype.forEach.call(
     el.classList.add('link');
     el.onclick = (): void => {
       window.open(
-        `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.getAttribute('alt')}`, '_blank')?.focus();
+        `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.getAttribute('alt')}`, '_blank')!.focus();
     };
   });
 
@@ -79,16 +79,13 @@ Array.prototype.forEach.call(
 Array.prototype.forEach.call(
   document.getElementsByClassName('explanatory'),
   (el: HTMLElement): void => {
-    const alt = el.getAttribute('alt');
-    if (!alt) {
-      return;
-    }
+    const alt = el.getAttribute('alt')!;
     if (!alt.startsWith('http')) {
       return;
     }
     el.classList.add('link');
     el.onclick = (): void => {
-      window.open(alt, '_blank')?.focus();
+      window.open(alt, '_blank')!.focus();
     };
   });
 
@@ -100,7 +97,7 @@ Array.prototype.forEach.call(
     el.onclick = (): void => {
       window.open(
         `https://coptic-dictionary.org/results.cgi?quick_search=${el.innerHTML}`,
-        '_blank')?.focus();
+        '_blank')!.focus();
     };
   });
 
@@ -112,7 +109,7 @@ Array.prototype.forEach.call(
     el.classList.add('light');
     el.onclick = (): void => {
       window.open(
-        `https://logeion.uchicago.edu/${el.innerHTML}`, '_blank')?.focus();
+        `https://logeion.uchicago.edu/${el.innerHTML}`, '_blank')!.focus();
     };
   });
 
@@ -123,7 +120,7 @@ Array.prototype.forEach.call(
     el.classList.add('link');
     el.onclick = (): void => {
       document.getElementById(
-        `dawoud${el.innerHTML.slice(0, -1)}`)?.scrollIntoView();
+        `dawoud${el.innerHTML.slice(0, -1)}`)!.scrollIntoView();
     };
   });
 
