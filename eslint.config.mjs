@@ -23,6 +23,7 @@ export default tseslint.config(
         'ignoreTrailingComments': false,
       }],
       '@typescript-eslint/no-unused-expressions': 'warn',
+      '@typescript-eslint/no-non-null-assertion': 'warn',
       '@stylistic/quotes': ['error', 'single'],
     },
     languageOptions: {
