@@ -93,6 +93,9 @@ Array.prototype.forEach.call(document.getElementsByClassName('dawoud-page'), (bt
 Array.prototype.forEach.call(document.getElementsByClassName('drv-key'), (btn) => {
   btn.classList.add('small', 'light', 'italic');
 });
+const dialects = [
+  'S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'
+];
 function activeDialects() {
   const d = get_url_or_local('d');
   if (d == null) {
@@ -101,9 +104,6 @@ function activeDialects() {
   return new Set(d.split(',').map((d) => d));
 }
 function dialect() {
-  const dialects = [
-    'S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'
-  ];
   const active = activeDialects();
   function dialected(el) {
     return dialects.some((d) => el.classList.contains(d));
@@ -138,7 +138,15 @@ function dialect() {
 Array.prototype.forEach.call(document.getElementsByClassName('dialect'), (btn) => {
   btn.classList.add('hover-link');
   btn.onclick = () => {
-    const d = btn.innerHTML;
+    const dClasses = dialects.filter((d) => btn.classList.contains(d));
+    if (dClasses.length != 1) {
+      console.log('Unable to determine dialect, classList: ', btn.classList);
+      return;
+    }
+    const d = dClasses[0];
+    if (!d) {
+      return;
+    }
     let active = activeDialects();
     if (active == null) {
       active = new Set();

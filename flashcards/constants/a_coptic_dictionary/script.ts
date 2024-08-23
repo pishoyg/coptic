@@ -1,3 +1,4 @@
+// TODO: Reduce the dependency on `innerHTML`. Use attributes when possible.
 function get_url_or_local(
   param: string,
   default_value: string | null = null): string | null {
@@ -135,6 +136,9 @@ Array.prototype.forEach.call(
 
 // Handle the 'dialect' class.
 type Dialect = 'S' | 'Sa' | 'Sf' | 'A' | 'sA' | 'B' | 'F' | 'Fb' | 'O' | 'NH';
+const dialects: readonly Dialect[] = [
+  'S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
+
 function activeDialects(): Set<Dialect> | null {
   const d = get_url_or_local('d');
   if (d == null) {
@@ -146,8 +150,6 @@ function activeDialects(): Set<Dialect> | null {
 /* Update the display based on the value of the `d` parameter.
  */
 function dialect(): void {
-  const dialects: readonly Dialect[] = [
-    'S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
   const active: Set<Dialect> | null = activeDialects();
   function dialected(el: Element): boolean {
     return dialects.some((d: Dialect) => el.classList.contains(d));
@@ -185,7 +187,16 @@ Array.prototype.forEach.call(
   (btn) => {
     btn.classList.add('hover-link');
     btn.onclick = () => {
-      const d: Dialect = btn.innerHTML;
+      const dClasses: readonly Dialect[] = dialects.filter(
+        (d) => btn.classList.contains(d));
+      if (dClasses.length != 1) {
+        console.log('Unable to determine dialect, classList: ', btn.classList);
+        return;
+      }
+      const d: Dialect | undefined = dClasses[0];
+      if (!d) {
+        return;
+      }
       let active = activeDialects();
       if (active == null) {
         active = new Set<Dialect>();
