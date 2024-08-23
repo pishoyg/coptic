@@ -226,6 +226,14 @@ backlog milestone.
 
 ### Technical Guidelines
 
+1. Minimize dependence on HTML, and keep behavior as much as possible in
+   JavaScript (TypeScript).
+   - We have (so far) a single, relatively small, JavaScript file. But we have
+     a huge number of HTML files. Having to regenerate one file is much
+   cheaper.
+   - You can protect your data better. JavaScript has good obfuscators. HTML
+   content can not be as easily concealed.
+
 1. Add in-code assertions and checks. This is our first line of defense, and
    has been the champion when it comes to ensuring correctness and catching
    bugs.
@@ -262,6 +270,9 @@ backlog milestone.
 
 1. Keep your code `grep`-able, especially when it comes to the constants used
    across directories.
+
+1. Privatize methods whenever possible. Use the name mangling feature in
+   Python.
 
 ## Data Collection
 
