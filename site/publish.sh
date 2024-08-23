@@ -6,8 +6,6 @@ set -o nounset  # Consider an undefined variable to be an error.
 readonly DOMAIN="metremnqymi.com"
 
 readonly GOOGLE_TAG='
-  <!-- Google tag (gtag.js) -->
-
   <script async src=
   "https://www.googletagmanager.com/gtag/js?id=G-VCVZFDFZR3"></script>
   <script>
