@@ -140,7 +140,6 @@ Array.prototype.forEach.call(document.getElementsByClassName('dialect'), (el) =>
   el.onclick = () => {
     const dClasses = dialects.filter((d) => el.classList.contains(d));
     if (dClasses.length != 1) {
-      console.log('Unable to determine dialect, classList: ', el.classList);
       return;
     }
     const d = dClasses[0];

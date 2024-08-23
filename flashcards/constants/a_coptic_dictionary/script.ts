@@ -190,7 +190,7 @@ Array.prototype.forEach.call(
       const dClasses: readonly Dialect[] = dialects.filter(
         (d) => el.classList.contains(d));
       if (dClasses.length != 1) {
-        console.log('Unable to determine dialect, classList: ', el.classList);
+        // This is unexpected!
         return;
       }
       const d: Dialect | undefined = dClasses[0];
