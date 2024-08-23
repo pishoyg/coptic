@@ -3,6 +3,9 @@ function get_url_or_local(param, default_value = null) {
   var _a, _b;
   return (_b = (_a = (new URLSearchParams(window.location.search)).get(param)) !== null && _a !== void 0 ? _a : localStorage.getItem(param)) !== null && _b !== void 0 ? _b : default_value;
 }
+function open(url) {
+  window.open(url, '_blank', 'noopener,noreferrer').focus();
+}
 function set_url_and_local(param, value) {
   if (value == null) {
     localStorage.removeItem(param);
@@ -56,13 +59,13 @@ Array.prototype.forEach.call(document.getElementsByClassName('crum-page'), (el) 
 Array.prototype.forEach.call(document.getElementsByClassName('crum-page-external'), (el) => {
   el.classList.add('link');
   el.onclick = () => {
-    window.open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.innerHTML}`, '_blank').focus();
+    open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.innerHTML}`);
   };
 });
 Array.prototype.forEach.call(document.getElementsByClassName('crum-page-img'), (el) => {
   el.classList.add('link');
   el.onclick = () => {
-    window.open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.getAttribute('alt')}`, '_blank').focus();
+    open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.getAttribute('alt')}`);
   };
 });
 Array.prototype.forEach.call(document.getElementsByClassName('explanatory'), (el) => {
@@ -71,21 +74,19 @@ Array.prototype.forEach.call(document.getElementsByClassName('explanatory'), (el
     return;
   }
   el.classList.add('link');
-  el.onclick = () => {
-    window.open(alt, '_blank').focus();
-  };
+  el.onclick = () => { open(alt); };
 });
 Array.prototype.forEach.call(document.getElementsByClassName('coptic'), (el) => {
   el.classList.add('hover-link');
   el.onclick = () => {
-    window.open(`https://coptic-dictionary.org/results.cgi?quick_search=${el.innerHTML}`, '_blank').focus();
+    open(`https://coptic-dictionary.org/results.cgi?quick_search=${el.innerHTML}`);
   };
 });
 Array.prototype.forEach.call(document.getElementsByClassName('greek'), (el) => {
   el.classList.add('link');
   el.classList.add('light');
   el.onclick = () => {
-    window.open(`https://logeion.uchicago.edu/${el.innerHTML}`, '_blank').focus();
+    open(`https://logeion.uchicago.edu/${el.innerHTML}`);
   };
 });
 Array.prototype.forEach.call(document.getElementsByClassName('dawoud-page'), (el) => {

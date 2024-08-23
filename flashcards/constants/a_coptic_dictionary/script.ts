@@ -9,6 +9,10 @@ function get_url_or_local(
     ?? default_value;
 }
 
+function open(url: string): void {
+  window.open(url, '_blank', 'noopener,noreferrer')!.focus();
+}
+
 function set_url_and_local(param: string, value: string | null): void {
   if (value == null) {
     localStorage.removeItem(param);
@@ -75,8 +79,8 @@ Array.prototype.forEach.call(
   (el: HTMLElement): void => {
     el.classList.add('link');
     el.onclick = (): void => {
-      window.open(
-        `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.innerHTML}`, '_blank')!.focus();
+      open(
+        `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.innerHTML}`);
     };
   });
 
@@ -86,8 +90,8 @@ Array.prototype.forEach.call(
   (el: HTMLElement): void => {
     el.classList.add('link');
     el.onclick = (): void => {
-      window.open(
-        `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.getAttribute('alt')}`, '_blank')!.focus();
+      open(
+        `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.getAttribute('alt')}`);
     };
   });
 
@@ -100,9 +104,7 @@ Array.prototype.forEach.call(
       return;
     }
     el.classList.add('link');
-    el.onclick = (): void => {
-      window.open(alt, '_blank')!.focus();
-    };
+    el.onclick = (): void => { open(alt); };
   });
 
 // Handle 'coptic' class.
@@ -111,9 +113,8 @@ Array.prototype.forEach.call(
   (el: HTMLElement): void => {
     el.classList.add('hover-link');
     el.onclick = (): void => {
-      window.open(
-        `https://coptic-dictionary.org/results.cgi?quick_search=${el.innerHTML}`,
-        '_blank')!.focus();
+      open(
+        `https://coptic-dictionary.org/results.cgi?quick_search=${el.innerHTML}`);
     };
   });
 
@@ -124,8 +125,7 @@ Array.prototype.forEach.call(
     el.classList.add('link');
     el.classList.add('light');
     el.onclick = (): void => {
-      window.open(
-        `https://logeion.uchicago.edu/${el.innerHTML}`, '_blank')!.focus();
+      open(`https://logeion.uchicago.edu/${el.innerHTML}`);
     };
   });
 
@@ -145,7 +145,7 @@ Array.prototype.forEach.call(
   document.getElementsByClassName('drv-key'),
   (el: HTMLElement): void => {
     el.classList.add('small', 'light', 'italic', 'hover-link');
-    moveElement(el, 'a', {'href': `#drv${el.innerHTML}`});
+    moveElement(el, 'a', { 'href': `#drv${el.innerHTML}` });
   });
 
 // Handle the `explanatory-key` class.
@@ -153,7 +153,7 @@ Array.prototype.forEach.call(
   document.getElementsByClassName('explanatory-key'),
   (el: HTMLElement): void => {
     el.classList.add('hover-link');
-    moveElement(el, 'a', {'href': `#explanatory${el.innerHTML}`});
+    moveElement(el, 'a', { 'href': `#explanatory${el.innerHTML}` });
   });
 
 // Handle the 'dialect' class.
