@@ -9,12 +9,14 @@ window.addEventListener('load', () => { 'use strict';
       localStorage.removeItem(param);
       const url = new URL(window.location.href);
       url.searchParams.delete(param);
+      url.search = decodeURIComponent(url.search);
       window.history.pushState('', '', url.toString());
       return;
     }
     localStorage.setItem(param, value);
     const url = new URL(window.location.href);
     url.searchParams.set(param, value);
+    url.search = decodeURIComponent(url.search);
     window.history.pushState('', '', url.toString());
   }
   function reset() {
