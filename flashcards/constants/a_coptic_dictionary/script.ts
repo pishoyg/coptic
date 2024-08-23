@@ -11,20 +11,20 @@ function set_url_and_local(param: string, value: string | null): void {
     localStorage.removeItem(param);
     const url = new URL(window.location.href);
     url.searchParams.delete(param);
-    window.history.pushState("", "", url.toString());
+    window.history.pushState('', '', url.toString());
     return;
   }
   localStorage.setItem(param, value);
   const url = new URL(window.location.href);
   url.searchParams.set(param, value);
-  window.history.pushState("", "", url.toString());
+  window.history.pushState('', '', url.toString());
 }
 
 function reset(): void {
   localStorage.clear();
   const url = new URL(window.location.href);
   url.search = '';
-  window.history.pushState("", "", url.toString());
+  window.history.pushState('', '', url.toString());
   dev();
   dialect();
 }
@@ -45,7 +45,7 @@ Array.prototype.forEach.call(
     btn.onclick = (): void => {
       let pageNumber: string = btn.innerHTML;
       const lastChar = pageNumber.substr(pageNumber.length - 1);
-      if (lastChar == "a" || lastChar == "b") {
+      if (lastChar == 'a' || lastChar == 'b') {
         pageNumber = pageNumber.slice(0, -1);
       }
       document.getElementById(`crum${pageNumber}`)?.scrollIntoView();
@@ -70,7 +70,7 @@ Array.prototype.forEach.call(
     btn.classList.add('link');
     btn.onclick = (): void => {
       window.open(
-        `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${btn.getAttribute("alt")}`, '_blank')?.focus();
+        `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${btn.getAttribute('alt')}`, '_blank')?.focus();
     };
   });
 
@@ -78,11 +78,11 @@ Array.prototype.forEach.call(
 Array.prototype.forEach.call(
   document.getElementsByClassName('explanatory'),
   (btn: HTMLElement): void => {
-    const alt = btn.getAttribute("alt");
+    const alt = btn.getAttribute('alt');
     if (!alt) {
       return;
     }
-    if (!alt.startsWith("http")) {
+    if (!alt.startsWith('http')) {
       return;
     }
     btn.classList.add('link');
@@ -136,11 +136,11 @@ Array.prototype.forEach.call(
 // Handle the 'dialect' class.
 type Dialect = 'S' | 'Sa' | 'Sf' | 'A' | 'sA' | 'B' | 'F' | 'Fb' | 'O' | 'NH';
 function activeDialects(): Set<Dialect> | null {
-  const d = get_url_or_local("d");
+  const d = get_url_or_local('d');
   if (d == null) {
     return null;
   }
-  return new Set(d.split(",").map((d) => d as Dialect));
+  return new Set(d.split(',').map((d) => d as Dialect));
 }
 
 /* Update the display based on the value of the `d` parameter.
@@ -195,16 +195,16 @@ Array.prototype.forEach.call(
       } else {
         active.add(d);
       }
-      set_url_and_local("d", Array.from(active).join(","));
+      set_url_and_local('d', Array.from(active).join(','));
       dialect();
     };
   });
 dialect();
 
 // Handle 'developer' and 'dev' classes.
-type DevState = "true" | "false" | null;
+type DevState = 'true' | 'false' | null;
 function devState(): DevState {
-  return get_url_or_local("dev") as DevState;
+  return get_url_or_local('dev') as DevState;
 }
 
 function dev(): void {
@@ -223,7 +223,7 @@ Array.prototype.forEach.call(
   (btn: HTMLElement): void => {
     btn.classList.add('link');
     btn.onclick = () => {
-      set_url_and_local("dev", devState() == "true" ? "false" : "true");
+      set_url_and_local('dev', devState() == 'true' ? 'false' : 'true');
       dev();
     };
   });

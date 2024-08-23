@@ -1,5 +1,5 @@
 
-window.addEventListener("load", function() {"use strict";
+window.addEventListener('load', function() {'use strict';
   function get_url_or_local(param, default_value = null) {
     var _a, _b;
     return (_b = (_a = (new URLSearchParams(window.location.search)).get(param)) !== null && _a !== void 0 ? _a : localStorage.getItem(param)) !== null && _b !== void 0 ? _b : default_value;
@@ -9,19 +9,19 @@ window.addEventListener("load", function() {"use strict";
       localStorage.removeItem(param);
       const url = new URL(window.location.href);
       url.searchParams.delete(param);
-      window.history.pushState("", "", url.toString());
+      window.history.pushState('', '', url.toString());
       return;
     }
     localStorage.setItem(param, value);
     const url = new URL(window.location.href);
     url.searchParams.set(param, value);
-    window.history.pushState("", "", url.toString());
+    window.history.pushState('', '', url.toString());
   }
   function reset() {
     localStorage.clear();
     const url = new URL(window.location.href);
     url.search = '';
-    window.history.pushState("", "", url.toString());
+    window.history.pushState('', '', url.toString());
     dev();
     dialect();
   }
@@ -35,7 +35,7 @@ window.addEventListener("load", function() {"use strict";
       var _a;
       let pageNumber = btn.innerHTML;
       const lastChar = pageNumber.substr(pageNumber.length - 1);
-      if (lastChar == "a" || lastChar == "b") {
+      if (lastChar == 'a' || lastChar == 'b') {
         pageNumber = pageNumber.slice(0, -1);
       }
       (_a = document.getElementById(`crum${pageNumber}`)) === null || _a === void 0 ? void 0 : _a.scrollIntoView();
@@ -52,15 +52,15 @@ window.addEventListener("load", function() {"use strict";
     btn.classList.add('link');
     btn.onclick = () => {
       var _a;
-      (_a = window.open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${btn.getAttribute("alt")}`, '_blank')) === null || _a === void 0 ? void 0 : _a.focus();
+      (_a = window.open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${btn.getAttribute('alt')}`, '_blank')) === null || _a === void 0 ? void 0 : _a.focus();
     };
   });
   Array.prototype.forEach.call(document.getElementsByClassName('explanatory'), (btn) => {
-    const alt = btn.getAttribute("alt");
+    const alt = btn.getAttribute('alt');
     if (!alt) {
       return;
     }
-    if (!alt.startsWith("http")) {
+    if (!alt.startsWith('http')) {
       return;
     }
     btn.classList.add('link');
@@ -95,11 +95,11 @@ window.addEventListener("load", function() {"use strict";
     btn.classList.add('small', 'light', 'italic');
   });
   function activeDialects() {
-    const d = get_url_or_local("d");
+    const d = get_url_or_local('d');
     if (d == null) {
       return null;
     }
-    return new Set(d.split(",").map((d) => d));
+    return new Set(d.split(',').map((d) => d));
   }
   function dialect() {
     const dialects = [
@@ -150,13 +150,13 @@ window.addEventListener("load", function() {"use strict";
       else {
         active.add(d);
       }
-      set_url_and_local("d", Array.from(active).join(","));
+      set_url_and_local('d', Array.from(active).join(','));
       dialect();
     };
   });
   dialect();
   function devState() {
-    return get_url_or_local("dev");
+    return get_url_or_local('dev');
   }
   function dev() {
     const state = devState();
@@ -172,7 +172,7 @@ window.addEventListener("load", function() {"use strict";
   Array.prototype.forEach.call(document.getElementsByClassName('developer'), (btn) => {
     btn.classList.add('link');
     btn.onclick = () => {
-      set_url_and_local("dev", devState() == "true" ? "false" : "true");
+      set_url_and_local('dev', devState() == 'true' ? 'false' : 'true');
       dev();
     };
   });
