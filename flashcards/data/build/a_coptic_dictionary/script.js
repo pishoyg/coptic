@@ -24,15 +24,15 @@ function reset() {
   dev();
   dialect();
 }
-Array.prototype.forEach.call(document.getElementsByClassName('reset'), (btn) => {
-  btn.classList.add('link');
-  btn.onclick = reset;
+Array.prototype.forEach.call(document.getElementsByClassName('reset'), (el) => {
+  el.classList.add('link');
+  el.onclick = reset;
 });
-Array.prototype.forEach.call(document.getElementsByClassName('crum-page'), (btn) => {
-  btn.classList.add('link');
-  btn.onclick = () => {
+Array.prototype.forEach.call(document.getElementsByClassName('crum-page'), (el) => {
+  el.classList.add('link');
+  el.onclick = () => {
     var _a;
-    let pageNumber = btn.innerHTML;
+    let pageNumber = el.innerHTML;
     const lastChar = pageNumber.substr(pageNumber.length - 1);
     if (lastChar == 'a' || lastChar == 'b') {
       pageNumber = pageNumber.slice(0, -1);
@@ -40,58 +40,58 @@ Array.prototype.forEach.call(document.getElementsByClassName('crum-page'), (btn)
     (_a = document.getElementById(`crum${pageNumber}`)) === null || _a === void 0 ? void 0 : _a.scrollIntoView();
   };
 });
-Array.prototype.forEach.call(document.getElementsByClassName('crum-page-external'), (btn) => {
-  btn.classList.add('link');
-  btn.onclick = () => {
+Array.prototype.forEach.call(document.getElementsByClassName('crum-page-external'), (el) => {
+  el.classList.add('link');
+  el.onclick = () => {
     var _a;
-    (_a = window.open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${btn.innerHTML}`, '_blank')) === null || _a === void 0 ? void 0 : _a.focus();
+    (_a = window.open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.innerHTML}`, '_blank')) === null || _a === void 0 ? void 0 : _a.focus();
   };
 });
-Array.prototype.forEach.call(document.getElementsByClassName('crum-page-img'), (btn) => {
-  btn.classList.add('link');
-  btn.onclick = () => {
+Array.prototype.forEach.call(document.getElementsByClassName('crum-page-img'), (el) => {
+  el.classList.add('link');
+  el.onclick = () => {
     var _a;
-    (_a = window.open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${btn.getAttribute('alt')}`, '_blank')) === null || _a === void 0 ? void 0 : _a.focus();
+    (_a = window.open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.getAttribute('alt')}`, '_blank')) === null || _a === void 0 ? void 0 : _a.focus();
   };
 });
-Array.prototype.forEach.call(document.getElementsByClassName('explanatory'), (btn) => {
-  const alt = btn.getAttribute('alt');
+Array.prototype.forEach.call(document.getElementsByClassName('explanatory'), (el) => {
+  const alt = el.getAttribute('alt');
   if (!alt) {
     return;
   }
   if (!alt.startsWith('http')) {
     return;
   }
-  btn.classList.add('link');
-  btn.onclick = () => {
+  el.classList.add('link');
+  el.onclick = () => {
     var _a;
     (_a = window.open(alt, '_blank')) === null || _a === void 0 ? void 0 : _a.focus();
   };
 });
-Array.prototype.forEach.call(document.getElementsByClassName('coptic'), (btn) => {
-  btn.classList.add('hover-link');
-  btn.onclick = () => {
+Array.prototype.forEach.call(document.getElementsByClassName('coptic'), (el) => {
+  el.classList.add('hover-link');
+  el.onclick = () => {
     var _a;
-    (_a = window.open(`https://coptic-dictionary.org/results.cgi?quick_search=${btn.innerHTML}`, '_blank')) === null || _a === void 0 ? void 0 : _a.focus();
+    (_a = window.open(`https://coptic-dictionary.org/results.cgi?quick_search=${el.innerHTML}`, '_blank')) === null || _a === void 0 ? void 0 : _a.focus();
   };
 });
-Array.prototype.forEach.call(document.getElementsByClassName('greek'), (btn) => {
-  btn.classList.add('link');
-  btn.classList.add('light');
-  btn.onclick = () => {
+Array.prototype.forEach.call(document.getElementsByClassName('greek'), (el) => {
+  el.classList.add('link');
+  el.classList.add('light');
+  el.onclick = () => {
     var _a;
-    (_a = window.open(`https://logeion.uchicago.edu/${btn.innerHTML}`, '_blank')) === null || _a === void 0 ? void 0 : _a.focus();
+    (_a = window.open(`https://logeion.uchicago.edu/${el.innerHTML}`, '_blank')) === null || _a === void 0 ? void 0 : _a.focus();
   };
 });
-Array.prototype.forEach.call(document.getElementsByClassName('dawoud-page'), (btn) => {
-  btn.classList.add('link');
-  btn.onclick = () => {
+Array.prototype.forEach.call(document.getElementsByClassName('dawoud-page'), (el) => {
+  el.classList.add('link');
+  el.onclick = () => {
     var _a;
-    (_a = document.getElementById(`dawoud${btn.innerHTML.slice(0, -1)}`)) === null || _a === void 0 ? void 0 : _a.scrollIntoView();
+    (_a = document.getElementById(`dawoud${el.innerHTML.slice(0, -1)}`)) === null || _a === void 0 ? void 0 : _a.scrollIntoView();
   };
 });
-Array.prototype.forEach.call(document.getElementsByClassName('drv-key'), (btn) => {
-  btn.classList.add('small', 'light', 'italic');
+Array.prototype.forEach.call(document.getElementsByClassName('drv-key'), (el) => {
+  el.classList.add('small', 'light', 'italic');
 });
 const dialects = [
   'S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'
@@ -135,12 +135,12 @@ function dialect() {
     }
   });
 }
-Array.prototype.forEach.call(document.getElementsByClassName('dialect'), (btn) => {
-  btn.classList.add('hover-link');
-  btn.onclick = () => {
-    const dClasses = dialects.filter((d) => btn.classList.contains(d));
+Array.prototype.forEach.call(document.getElementsByClassName('dialect'), (el) => {
+  el.classList.add('hover-link');
+  el.onclick = () => {
+    const dClasses = dialects.filter((d) => el.classList.contains(d));
     if (dClasses.length != 1) {
-      console.log('Unable to determine dialect, classList: ', btn.classList);
+      console.log('Unable to determine dialect, classList: ', el.classList);
       return;
     }
     const d = dClasses[0];
@@ -167,7 +167,7 @@ function devState() {
 }
 function dev() {
   const state = devState();
-  document.querySelectorAll('.dev').forEach((el) => {
+  Array.prototype.forEach.call(document.getElementsByClassName('dev'), (el) => {
     if (state == 'true') {
       el.removeAttribute('hidden');
     }
@@ -176,9 +176,9 @@ function dev() {
     }
   });
 }
-Array.prototype.forEach.call(document.getElementsByClassName('developer'), (btn) => {
-  btn.classList.add('link');
-  btn.onclick = () => {
+Array.prototype.forEach.call(document.getElementsByClassName('developer'), (el) => {
+  el.classList.add('link');
+  el.onclick = () => {
     set_url_and_local('dev', devState() == 'true' ? 'false' : 'true');
     dev();
   };
