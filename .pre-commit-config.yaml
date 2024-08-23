@@ -76,6 +76,15 @@ repos:
       - id: rst-directive-colons
       - id: rst-inline-touching-normal
       - id: text-unicode-replacement-char
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: 'v1.11.1'
+    hooks:
+      - id: mypy
+        args: [--strict]
+        # NOTE: This list should, ideally, remain in sync with your
+        # requirements.txt (which, of course, in turn, should remain in sync
+        # with your repo).
+        additional_dependencies: [bs4, clipboard, colorama, EbookLib, genanki, gspread, json5, markdown, oauth2client, openpyxl, pandas, pathlib, Pillow, pip-review, pre-commit, setuptools, type_enforced, typing, urllib3]
   # Language-agnostic.
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
