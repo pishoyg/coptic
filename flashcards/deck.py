@@ -21,7 +21,7 @@ HTML_FMT = f"""<!DOCTYPE html>
     <meta name="deck_name" content="{{deck_name}}"/>
     <meta name="deck_description" content="{{deck_description}}"/>
     <link rel="stylesheet" type="text/css" href="{CSS_BASENAME}">
-    <script type="text/javascript" src="{JS_BASENAME}"></script>
+    <script type="text/javascript" src="{JS_BASENAME}" defer></script>
   </head>
   <body>
     <div class="front">
