@@ -153,6 +153,9 @@ function activeDialects(): Set<Dialect> | null {
   if (d == null) {
     return null;
   }
+  if (d == '') {
+    return new Set();
+  }
   return new Set(d.split(',').map((d) => d as Dialect));
 }
 
