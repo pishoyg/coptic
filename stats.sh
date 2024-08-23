@@ -167,11 +167,11 @@ LOC_SH=$(loc . -a \( -name "*.sh" -o -name ".env" -o -name ".env_INFO" -o -name 
 LOC_JS=$(loc . -name "*.mjs" )
 LOC_MD=$(loc . -name "*.md")
 LOC_YAML=$(loc . -name "*.yaml")
-LOC_DOT=$(loc . -a \( -name ".csslintrc" -o -name ".gitignore" \) )
+LOC_DOT=$(loc . -name ".gitignore" )
 LOC_KEYBOARD_LAYOUT=$(loc . -a \( -name "*.keylayout" -o -name "*.plist" -o -name "*.strings" \) )
 LOC_TXT=$(loc . -name "*.txt")
 LOC_TS=$(loc . -name "*.ts")
-LOC_JSON=$(loc . -a \( -name "*.json" -o -name ".jshintrc" \) )
+LOC_JSON=$(loc . -a \( -name "*.json" -o -name ".jshintrc" -o -name ".csslintrc" \) )
 
 TOTAL_BY_LANG="$((
   LOC_PYTHON
