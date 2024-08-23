@@ -279,7 +279,7 @@ precommit_update: FORCE
 	pre-commit autoupdate
 
 todo_grep: FORCE
-	. ./.helpers && grepexx TODO
+	. ./.helpers && grepexx . TODO
 
 git_clean: FORCE
 	git clean \

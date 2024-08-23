@@ -49,7 +49,7 @@ color () {
 
 # Find, excluding "garbage" files and directories.
 findex () {
-  find . \
+  find "${1}" \
     -not -path "./.git/*" \
     -not -path "./.git" \
     -not -name ".DS_Store" \
@@ -65,32 +65,32 @@ findex () {
     -not -name ".env" \
     -not -path "./archive/*" \
     -not -path "./archive" \
-    "${@}"
+    "${@:2}"
 }
 
 # Find, excluding "garbage", and data!
 findexx () {
-  findex \
+  findex "${1}" \
     -not -path "*/data/*" \
-    "${@}"
+    "${@:2}"
 }
 
 # Find files, excluding "garbage".
 ffindex () {
-  findex -type f "${@}"
+  findex "${1}" -type f "${@:2}"
 }
 
 # Find files, excluding "garbage", and data.
 ffindexx () {
-  findexx -type f "${@}"
+  findexx "${1}" -type f "${@:2}"
 }
 
 # Grep, excluding "garbage" and binary files.
 grepex () {
-  ffindex -exec grep "${@}" --binary-files="without-match" --color=auto --with-filename --line-number {} \;
+  ffindex "${1}" -exec grep "${@:2}" --binary-files="without-match" --color=auto --with-filename --line-number {} \;
 }
 
 # Grep, excluding "garbage", binary files, and data.
 grepexx () {
-  ffindexx -exec grep "${@}" --binary-files="without-match" --color=auto --with-filename --line-number {} \;
+  ffindexx "${1}" -exec grep "${@:2}" --binary-files="without-match" --color=auto --with-filename --line-number {} \;
 }
