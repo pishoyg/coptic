@@ -1,7 +1,6 @@
 # See https://pre-commit.com for more information
 
 # TODO: Add hooks from https://pre-commit.com/hooks.html.
-# TODO: Add hooks from https://github.com/pre-commit/pygrep-hooks.
 # TODO: Add hooks from
 # https://github.com/orgs/pre-commit/repositories?language=&q=%22mirrors-%22+archived%3AFalse&sort=.
 
@@ -65,6 +64,18 @@ repos:
     hooks:
       - id: isort
         name: isort (python)
+  - repo: https://github.com/pre-commit/pygrep-hooks
+    rev: v1.10.0
+    hooks:
+      - id: python-check-blanket-noqa
+      - id: python-check-blanket-type-ignore
+      - id: python-check-mock-methods
+      - id: python-no-eval
+      - id: python-use-type-annotations
+      - id: rst-backticks
+      - id: rst-directive-colons
+      - id: rst-inline-touching-normal
+      - id: text-unicode-replacement-char
   # Language-agnostic.
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
