@@ -91,7 +91,7 @@ Array.prototype.forEach.call(
     };
   });
 
-// Handle 'crum-page-img' class.
+// Handle 'explanatory' class.
 Array.prototype.forEach.call(
   document.getElementsByClassName('explanatory'),
   (el: HTMLElement): void => {
