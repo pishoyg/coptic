@@ -99,6 +99,10 @@ window.addEventListener('load', () => { 'use strict';
     el.classList.add('small', 'light', 'italic', 'hover-link');
     moveElement(el, 'a', { 'href': `#drv${el.innerHTML}` });
   });
+  Array.prototype.forEach.call(document.getElementsByClassName('explanatory-key'), (el) => {
+    el.classList.add('hover-link');
+    moveElement(el, 'a', { 'href': `#explanatory${el.innerHTML}` });
+  });
   function DIALECTS() {
     return ['S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
   }

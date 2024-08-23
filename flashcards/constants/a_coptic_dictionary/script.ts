@@ -148,6 +148,14 @@ Array.prototype.forEach.call(
     moveElement(el, 'a', {'href': `#drv${el.innerHTML}`});
   });
 
+// Handle the `explanatory-key` class.
+Array.prototype.forEach.call(
+  document.getElementsByClassName('explanatory-key'),
+  (el: HTMLElement): void => {
+    el.classList.add('hover-link');
+    moveElement(el, 'a', {'href': `#explanatory${el.innerHTML}`});
+  });
+
 // Handle the 'dialect' class.
 type Dialect = 'S' | 'Sa' | 'Sf' | 'A' | 'sA' | 'B' | 'F' | 'Fb' | 'O' | 'NH';
 function DIALECTS(): Dialect[] {
