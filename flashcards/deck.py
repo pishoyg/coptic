@@ -35,8 +35,8 @@ HTML_FMT = f"""<!DOCTYPE html>
 </html>
 """
 
-JS_FMT = f"""
-window.addEventListener("load", function() {{{{{{javascript}}}}}});
+JS_FMT = """
+window.addEventListener("load", () => {{ {javascript} }});
 """
 
 
