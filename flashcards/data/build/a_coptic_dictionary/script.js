@@ -7,7 +7,7 @@ function open(url) {
   window.open(url, '_blank', 'noopener,noreferrer').focus();
 }
 function set_url_and_local(param, value) {
-  if (value == null) {
+  if (value === null) {
     localStorage.removeItem(param);
     const url = new URL(window.location.href);
     url.searchParams.delete(param);
@@ -21,14 +21,6 @@ function set_url_and_local(param, value) {
   url.search = decodeURIComponent(url.search);
   window.history.pushState('', '', url.toString());
 }
-function reset() {
-  localStorage.clear();
-  const url = new URL(window.location.href);
-  url.search = '';
-  window.history.pushState('', '', url.toString());
-  dev();
-  dialect();
-}
 function moveElement(el, tag, attrs) {
   var _a;
   const copy = document.createElement(tag);
@@ -36,21 +28,17 @@ function moveElement(el, tag, attrs) {
   el.getAttributeNames().forEach((attr) => {
     copy.setAttribute(attr, el.getAttribute(attr));
   });
-  for (const key in attrs) {
-    copy.setAttribute(key, attrs[key]);
-  }
+  Object.entries(attrs).forEach(([key, value]) => {
+    copy.setAttribute(key, value);
+  });
   (_a = el.parentNode) === null || _a === void 0 ? void 0 : _a.replaceChild(copy, el);
 }
-Array.prototype.forEach.call(document.getElementsByClassName('reset'), (el) => {
-  el.classList.add('link');
-  el.onclick = reset;
-});
 Array.prototype.forEach.call(document.getElementsByClassName('crum-page'), (el) => {
   el.classList.add('link');
   el.onclick = () => {
     let pageNumber = el.innerHTML;
     const lastChar = pageNumber.substr(pageNumber.length - 1);
-    if (lastChar == 'a' || lastChar == 'b') {
+    if (lastChar === 'a' || lastChar === 'b') {
       pageNumber = pageNumber.slice(0, -1);
     }
     document.getElementById(`crum${pageNumber}`).scrollIntoView();
@@ -108,10 +96,10 @@ function DIALECTS() {
 }
 function activeDialects() {
   const d = get_url_or_local('d');
-  if (d == null) {
+  if (d === null) {
     return null;
   }
-  if (d == '') {
+  if (d === '') {
     return new Set();
   }
   return new Set(d.split(',').map((d) => d));
@@ -122,7 +110,7 @@ function dialect() {
     return DIALECTS().some((d) => el.classList.contains(d));
   }
   document.querySelectorAll('.dialect-parenthesis,.dialect-comma,.spelling-comma,.type').forEach((el) => {
-    if (active == null) {
+    if (active === null) {
       el.classList.remove('very-light');
     }
     else {
@@ -133,7 +121,7 @@ function dialect() {
     if (!dialected(el)) {
       return;
     }
-    if (active == null) {
+    if (active === null) {
       el.classList.remove('very-light');
       el.classList.remove('heavy');
       return;
@@ -152,7 +140,7 @@ Array.prototype.forEach.call(document.getElementsByClassName('dialect'), (el) =>
   el.classList.add('hover-link');
   el.onclick = () => {
     const dClasses = DIALECTS().filter((d) => el.classList.contains(d));
-    if (dClasses.length != 1) {
+    if (dClasses.length !== 1) {
       return;
     }
     const d = dClasses[0];
@@ -160,7 +148,7 @@ Array.prototype.forEach.call(document.getElementsByClassName('dialect'), (el) =>
       return;
     }
     let active = activeDialects();
-    if (active == null) {
+    if (active === null) {
       active = new Set();
     }
     if (active.has(d)) {
@@ -180,7 +168,7 @@ function devState() {
 function dev() {
   const state = devState();
   Array.prototype.forEach.call(document.getElementsByClassName('dev'), (el) => {
-    if (state == 'true') {
+    if (state === 'true') {
       el.removeAttribute('hidden');
     }
     else {
@@ -191,8 +179,20 @@ function dev() {
 Array.prototype.forEach.call(document.getElementsByClassName('developer'), (el) => {
   el.classList.add('link');
   el.onclick = () => {
-    set_url_and_local('dev', devState() == 'true' ? 'false' : 'true');
+    set_url_and_local('dev', devState() === 'true' ? 'false' : 'true');
     dev();
   };
 });
 dev();
+function reset() {
+  localStorage.clear();
+  const url = new URL(window.location.href);
+  url.search = '';
+  window.history.pushState('', '', url.toString());
+  dev();
+  dialect();
+}
+Array.prototype.forEach.call(document.getElementsByClassName('reset'), (el) => {
+  el.classList.add('link');
+  el.onclick = reset;
+});

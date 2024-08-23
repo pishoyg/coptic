@@ -1,8 +1,8 @@
 # See https://pre-commit.com for more information
 
 # TODO: Add hooks from https://pre-commit.com/hooks.html.
-# TODO: Add hooks from
-# https://github.com/orgs/pre-commit/repositories?language=&q=%22mirrors-%22+archived%3AFalse&sort=.
+# TODO: Add https://github.com/pre-commit/mirrors-fixmyjs. We ran into some
+# versioning issues when we tried to add it today.
 
 # N.B. Given fail_fast, you should the more problematic hooks first.
 # See https://github.com/pishoyg/coptic/issues/94.
@@ -14,6 +14,7 @@ fail_fast: true
 exclude: ^archive/
 repos:
   # TypeScript and JavaScript
+  # TOOD: Revisit your `eslint` configuration.
   - repo: https://github.com/pre-commit/mirrors-eslint
     rev: v9.9.0
     hooks:
@@ -26,6 +27,12 @@ repos:
         args: [--fix]
         files: \.(js|jsx|mjs|cjs|ts|tsx|mts|cts)$
         types: [file]
+  # TODO: Make your `jshint` configuration stricter.
+  # See https://jshint.com/docs/options/ and your `.jshintrc`.
+  - repo: https://github.com/pre-commit/mirrors-jshint
+    rev: 'v2.13.6'
+    hooks:
+      - id: jshint
   # CSS
   - repo: https://github.com/pre-commit/mirrors-csslint
     rev: v1.0.5

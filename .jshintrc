@@ -1,0 +1,31 @@
+{
+  "asi": true,
+  "bitwise": true,
+  "boss": true,
+  "curly": true,
+  "eqeqeq": true,
+  "eqnull": true,
+  "esversion": 15,
+  "expr": true,
+  "forin": true,
+  "freeze": true,
+  "futurehostile": true,
+  "globals": {
+    "document": true,
+    "localStorage": true,
+    "window": true
+  },
+  "immed": true,
+  "latedef": true,
+  "laxbreak": true,
+  "leanswitch": true,
+  "newcap": true,
+  "noarg": true,
+  "node": true,
+  "nonew": true,
+  "plusplus": true,
+  "quotmark": "single",
+  "strict": true,
+  "undef": true,
+  "unused": true
+}

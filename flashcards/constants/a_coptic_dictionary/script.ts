@@ -14,7 +14,7 @@ function open(url: string): void {
 }
 
 function set_url_and_local(param: string, value: string | null): void {
-  if (value == null) {
+  if (value === null) {
     localStorage.removeItem(param);
     const url = new URL(window.location.href);
     url.searchParams.delete(param);
@@ -29,34 +29,17 @@ function set_url_and_local(param: string, value: string | null): void {
   window.history.pushState('', '', url.toString());
 }
 
-function reset(): void {
-  localStorage.clear();
-  const url = new URL(window.location.href);
-  url.search = '';
-  window.history.pushState('', '', url.toString());
-  dev();
-  dialect();
-}
-
 function moveElement(el: HTMLElement, tag: string, attrs: Record<string, string>): void {
   const copy = document.createElement(tag);
   copy.innerHTML = el.innerHTML;
   el.getAttributeNames().forEach((attr) => {
     copy.setAttribute(attr, el.getAttribute(attr)!);
   });
-  for (const key in attrs) {
-    copy.setAttribute(key, attrs[key]!);
-  }
+  Object.entries(attrs).forEach(([key, value]) => {
+    copy.setAttribute(key, value);
+  });
   el.parentNode?.replaceChild(copy, el);
 }
-
-// Handle 'reset' class.
-Array.prototype.forEach.call(
-  document.getElementsByClassName('reset'),
-  (el: HTMLElement): void => {
-    el.classList.add('link');
-    el.onclick = reset;
-  });
 
 // Handle 'crum-page' class.
 Array.prototype.forEach.call(
@@ -66,7 +49,7 @@ Array.prototype.forEach.call(
     el.onclick = (): void => {
       let pageNumber: string = el.innerHTML;
       const lastChar = pageNumber.substr(pageNumber.length - 1);
-      if (lastChar == 'a' || lastChar == 'b') {
+      if (lastChar === 'a' || lastChar === 'b') {
         pageNumber = pageNumber.slice(0, -1);
       }
       document.getElementById(`crum${pageNumber}`)!.scrollIntoView();
@@ -164,10 +147,10 @@ function DIALECTS(): Dialect[] {
 
 function activeDialects(): Set<Dialect> | null {
   const d = get_url_or_local('d');
-  if (d == null) {
+  if (d === null) {
     return null;
   }
-  if (d == '') {
+  if (d === '') {
     return new Set();
   }
   return new Set(d.split(',').map((d) => d as Dialect));
@@ -183,7 +166,7 @@ function dialect(): void {
   document.querySelectorAll(
     '.dialect-parenthesis,.dialect-comma,.spelling-comma,.type').forEach(
     (el: Element) => {
-      if (active == null) {
+      if (active === null) {
         el.classList.remove('very-light');
       } else {
         el.classList.add('very-light');
@@ -193,7 +176,7 @@ function dialect(): void {
     if (!dialected(el)) {
       return;
     }
-    if (active == null) {
+    if (active === null) {
       el.classList.remove('very-light');
       el.classList.remove('heavy');
       return;
@@ -215,7 +198,7 @@ Array.prototype.forEach.call(
     el.onclick = () => {
       const dClasses: readonly Dialect[] = DIALECTS().filter(
         (d) => el.classList.contains(d));
-      if (dClasses.length != 1) {
+      if (dClasses.length !== 1) {
         // This is unexpected!
         return;
       }
@@ -224,7 +207,7 @@ Array.prototype.forEach.call(
         return;
       }
       let active = activeDialects();
-      if (active == null) {
+      if (active === null) {
         active = new Set<Dialect>();
       }
       if (active.has(d)) {
@@ -236,6 +219,7 @@ Array.prototype.forEach.call(
       dialect();
     };
   });
+
 dialect();
 
 // Handle 'developer' and 'dev' classes.
@@ -249,7 +233,7 @@ function dev(): void {
   Array.prototype.forEach.call(
     document.getElementsByClassName('dev'),
     (el: HTMLElement) => {
-      if (state == 'true') {
+      if (state === 'true') {
         el.removeAttribute('hidden');
       } else {
         el.setAttribute('hidden', '');
@@ -262,9 +246,27 @@ Array.prototype.forEach.call(
   (el: HTMLElement): void => {
     el.classList.add('link');
     el.onclick = () => {
-      set_url_and_local('dev', devState() == 'true' ? 'false' : 'true');
+      set_url_and_local('dev', devState() === 'true' ? 'false' : 'true');
       dev();
     };
   });
 
 dev();
+
+// Handle 'reset' class.
+function reset(): void {
+  localStorage.clear();
+  const url = new URL(window.location.href);
+  url.search = '';
+  window.history.pushState('', '', url.toString());
+  dev();
+  dialect();
+}
+
+Array.prototype.forEach.call(
+  document.getElementsByClassName('reset'),
+  (el: HTMLElement): void => {
+    el.classList.add('link');
+    el.onclick = reset;
+  });
+
