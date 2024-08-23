@@ -129,8 +129,10 @@ post() {
       --rename-properties "true" \
       --rename-properties-mode "unsafe" \
       --unicode-escape-sequence "true"
-
   done
+
+  python site/obfuscate_paths.py \
+    --dir="${CRUM_DIR}"
 
   git -C "${SITE_DIR}" add --all
   git -C "${SITE_DIR}" commit --fixup HEAD
