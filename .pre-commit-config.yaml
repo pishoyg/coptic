@@ -7,6 +7,37 @@
 fail_fast: true
 exclude: ^archive/
 repos:
+  # Language-agnostic
+  - repo: local
+    hooks:
+      - id: commit-file-sizes
+        name: commit-file-sizes
+        entry: |
+          bash -c '
+          announce () {
+            echo -e "${1}Files in this batch total ${2}${SIZE}${1}.${RESET}"
+          }
+          FILES="${@}"
+          if [ -z "${FILES}" ]; then
+            exit
+          fi
+          SIZE="$(du --apparent-size --human-readable --summarize --total ${FILES} | tail -n 1 | cut --fields 1)"
+          MAGNITUDE="$(echo ${SIZE} | grep -o [A-Z])"
+          COUNT="$(echo ${SIZE} | grep --only --extended-regexp "^[0-9]+")"
+          if [[ "${MAGNITUDE}" == "" || "${MAGNITUDE}" == "K" ]]; then
+            announce "${BLUE}" "${GREEN}"
+          elif [[ "${MAGNITUDE}" == "M" ]] && (( COUNT < 128 )); then
+            announce "${YELLOW}" "${CYAN}"
+          else
+            announce "${RED}" "${PURPLE}"
+            exit 1
+          fi
+          ' --
+        language: system
+        always_run: true
+        pass_filenames: true
+        verbose: true
+        require_serial: true
   # TypeScript and JavaScript
   - repo: https://github.com/pre-commit/mirrors-eslint
     rev: v9.9.0
