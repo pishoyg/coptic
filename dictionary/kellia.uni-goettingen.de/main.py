@@ -10,7 +10,6 @@ import io
 import os
 import re
 import xml.etree.ElementTree as ET
-from argparse import ArgumentParser
 from collections import OrderedDict, defaultdict
 
 import pandas as pd
@@ -20,6 +19,21 @@ import utils
 CLEAN = set("ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ ")
 CRUM_RE = re.compile(r"\b(CD ([0-9]+[ab]?)-?[0-9]*[ab]?)\b")
 SENSE_CHILDREN = ["quote", "definition", "bibl", "ref", "xr"]
+
+XML_PATH = [
+    "dictionary/kellia.uni-goettingen.de/data/raw/v1.2/BBAW_Lexicon_of_Coptic_Egyptian-v4-2020.xml",
+    "dictionary/kellia.uni-goettingen.de/data/raw/v1.2/DDGLC_Lexicon_of_Greek_Loanwords_in_Coptic-v2-2020.xml",
+    "dictionary/kellia.uni-goettingen.de/data/raw/v1.2/Comprehensive_Coptic_Lexicon-v1.2-2020.xml",
+]
+# TODO: (#51) Support entity types.
+PUB_CORPORA = None
+OUTPUT = [
+    "dictionary/kellia.uni-goettingen.de/data/output/tsvs/egyptian.tsvs",
+    "dictionary/kellia.uni-goettingen.de/data/output/tsvs/greek.tsvs",
+    "dictionary/kellia.uni-goettingen.de/data/output/tsvs/comprehensive.tsvs",
+]
+
+entity_types = defaultdict(set)
 
 
 def add_crum_links(ref_bibl: str) -> str:
@@ -1052,51 +1066,17 @@ def pos_map(pos, subc, orthstring):
     return "?"
 
 
-parser = ArgumentParser()
-parser.add_argument(
-    "--xml_path",
-    type=str,
-    nargs="*",
-    default=[
-        "dictionary/kellia.uni-goettingen.de/data/raw/v1.2/BBAW_Lexicon_of_Coptic_Egyptian-v4-2020.xml",
-        "dictionary/kellia.uni-goettingen.de/data/raw/v1.2/DDGLC_Lexicon_of_Greek_Loanwords_in_Coptic-v2-2020.xml",
-        "dictionary/kellia.uni-goettingen.de/data/raw/v1.2/Comprehensive_Coptic_Lexicon-v1.2-2020.xml",
-    ],
-    help="directory with dictionary XML files",
-)
-# TODO: (#51) Support entity types.
-parser.add_argument(
-    "--pub_corpora",
-    default=None,
-    help="directory with dictionary Coptic Scriptorium Corpora repo",
-)
-parser.add_argument(
-    "--output",
-    type=str,
-    nargs="*",
-    default=[
-        "dictionary/kellia.uni-goettingen.de/data/output/tsvs/egyptian.tsvs",
-        "dictionary/kellia.uni-goettingen.de/data/output/tsvs/greek.tsvs",
-        "dictionary/kellia.uni-goettingen.de/data/output/tsvs/comprehensive.tsvs",
-    ],
-    help="Path to the output TSVS.",
-)
-
-entity_types = defaultdict(set)
-
-
 def main():
-    args = parser.parse_args()
     # Gather entity data
-    if args.pub_corpora is not None:
+    if PUB_CORPORA is not None:
         global entity_types
-        entity_types = get_entity_types(args.pub_corpora)
+        entity_types = get_entity_types(PUB_CORPORA)
 
     super_id = 1
     entry_id = 1
 
-    assert len(args.xml_path) == len(args.output)
-    for xml_path, output in zip(args.xml_path, args.output):
+    assert len(XML_PATH) == len(OUTPUT)
+    for xml_path, output in zip(XML_PATH, OUTPUT):
         body = (
             ET.parse(xml_path)
             .getroot()

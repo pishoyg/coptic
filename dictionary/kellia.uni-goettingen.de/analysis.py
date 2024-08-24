@@ -1,7 +1,6 @@
 # TODO: (#51) Read this file for inspiration:
 # https://github.com/KELLIA/dictionary/blob/master/utils/dictionary_reader.py.
 # TODO: There are some typos in the data. Fix at the origin.
-import argparse
 import collections
 import re
 
@@ -9,6 +8,9 @@ import bs4
 import type_enforced
 
 import utils
+
+INPUT_XML = "dictionary/kellia.uni-goettingen.de/data/raw/v1.2/Comprehensive_Coptic_Lexicon-v1.2-2020.xml"
+OUTPUT = "dictionary/kellia.uni-goettingen.de/data/output/analysis.json"
 
 MAX_LIST_LEN = 10
 LIST_ELEMENT_CLOSING_QUOTE = re.compile(r'",\s+')
@@ -35,22 +37,6 @@ ORDER = [
     "orth",
     "bibl",
 ]
-
-argparser = argparse.ArgumentParser(description="Process the Coptic Lexicon.")
-
-argparser.add_argument(
-    "--input",
-    type=str,
-    default="dictionary/kellia.uni-goettingen.de/data/raw/v1.2/Comprehensive_Coptic_Lexicon-v1.2-2020.xml",
-    help="Path to the input XML file.",
-)
-
-argparser.add_argument(
-    "--output",
-    type=str,
-    default="dictionary/kellia.uni-goettingen.de/data/output/analysis.json",
-    help="Path to the output JSON.",
-)
 
 
 @type_enforced.Enforcer
@@ -121,15 +107,14 @@ def analyze(soup: bs4.BeautifulSoup | bs4.Tag) -> str:
 
 @type_enforced.Enforcer
 def main():
-    args = argparser.parse_args()
-    with open(args.input) as f:
+    with open(INPUT_XML) as f:
         soup = bs4.BeautifulSoup(f, "lxml-xml")
     # We only care about the body.
     soup = soup.body
     assert soup
 
     analysis = analyze(soup)
-    with open(args.output, "w") as f:
+    with open(OUTPUT, "w") as f:
         f.write(analysis)
 
 
