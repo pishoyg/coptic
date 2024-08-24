@@ -1,5 +1,5 @@
-
-window.addEventListener('load', () => { 'use strict';
+'use strict';
+window.addEventListener('load', () => {
   function get_url_or_local(param, default_value = null) {
     var _a, _b;
     return (_b = (_a = (new URLSearchParams(window.location.search)).get(param)) !== null && _a !== void 0 ? _a : localStorage.getItem(param)) !== null && _b !== void 0 ? _b : default_value;

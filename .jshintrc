@@ -25,7 +25,15 @@
   "nonew": true,
   "plusplus": true,
   "quotmark": "single",
-  "strict": true,
   "undef": true,
+  "maxcomplexity": 10,
+  "maxdepth": 2,
+  "maxparams": 3,
+  "nonbsp": true,
+  "noreturnawait": true,
+  "nocomma": true,
+  "regexpu": true,
+  "singleGroups": true,
+  "strict": "global",
   "unused": true
 }

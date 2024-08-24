@@ -1,8 +1,11 @@
+// See https://eslint.org/docs/latest/use/configure/.
+'use strict';
 import globals from 'globals';
 import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import stylistic from '@stylistic/eslint-plugin';
 
+// TODO: Revisit the configuration.
 export default tseslint.config(
   eslint.configs.recommended,
   tseslint.configs.eslintRecommended,

@@ -57,6 +57,8 @@ findex () {
     -not -path "*/__pycache__" \
     -not -path "./coptic.egg-info/*" \
     -not -path "./coptic.egg-info" \
+    -not -path "./.mypy_cache/*" \
+    -not -path "./.mypy_cache" \
     -not -path "./node_modules/*" \
     -not -path "./node_modules" \
     -not -name "package-lock.json" \

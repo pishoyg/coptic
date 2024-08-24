@@ -1,0 +1,17 @@
+# See https://github.com/google/yamlfmt/blob/main/docs/config-file.md.
+---
+include:
+  - .yamlfmt
+  - .yamllint
+formatter:
+  include_document_start: true
+  retain_line_breaks_single: true
+  # NOTE: This option is known to be problematic. See
+  # https://github.com/google/yamlfmt/blob/main/docs/config-file.md#note-on-max_line_length.
+  # We set it to 70 instead of 80 because it's usually unable to respect the
+  # actual value, lines tend to end up being a little longer!
+  # If it's too problematic, remove it!
+  max_line_length: 70
+  eof_newline: true
+  trim_trailing_whitespace: true
+  disallow_anchors: true

@@ -5,7 +5,7 @@
 set -o errexit  # Exit upon encountering a failure.
 set -o nounset  # Consider an undefined variable to be an error.
 
-KNOWN_EXTENSIONS="Makefile css jshintrc csslintrc env_INFO helpers gitignore json mjs keylayout md plist py sh strings txt yaml ts"
+KNOWN_EXTENSIONS="Makefile css jshintrc csslintrc env_INFO helpers gitignore yamlfmt yamllint json mjs keylayout md plist py sh strings txt yaml ts"
 
 SAVE=false
 while [ $# -gt 0 ]; do
@@ -51,6 +51,7 @@ foc () {
     -not -name ".DS_Store" \
     -not -path "*/__pycache__/*" \
     -not -path "./coptic.egg-info/*" \
+    -not -path "./.mypy_cache/*" \
     -not -path "./node_modules/*" \
     -not -name ".env" \
     -not -name "package-lock.json" \
@@ -166,7 +167,7 @@ LOC_CSS=$(loc . -name "*.css")
 LOC_SH=$(loc . -a \( -name "*.sh" -o -name ".env" -o -name ".env_INFO" -o -name ".helpers" \))
 LOC_JS=$(loc . -name "*.mjs" )
 LOC_MD=$(loc . -name "*.md")
-LOC_YAML=$(loc . -name "*.yaml")
+LOC_YAML=$(loc . -a \( -name "*.yaml" -o -name ".yamlfmt" -o -name ".yamllint" \) )
 LOC_DOT=$(loc . -name ".gitignore" )
 LOC_KEYBOARD_LAYOUT=$(loc . -a \( -name "*.keylayout" -o -name "*.plist" -o -name "*.strings" \) )
 LOC_TXT=$(loc . -name "*.txt")

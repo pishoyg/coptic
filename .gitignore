@@ -14,6 +14,9 @@ node_modules
 package-lock.json
 package.json
 
+# Pre-commit artifacts
+.my_pycache
+
 # Flashcard decks are too big to host on GitHub.
 # TODO: Consider unzipping them, and having your publishing pipeline rezip
 # everything.

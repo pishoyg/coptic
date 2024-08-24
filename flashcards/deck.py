@@ -35,7 +35,7 @@ HTML_FMT = f"""<!DOCTYPE html>
 </html>
 """
 
-JS_FMT = """
+JS_FMT = """'use strict';
 window.addEventListener("load", () => {{ {javascript} }});
 """
 
@@ -286,7 +286,9 @@ class deck:
                     )
                 )
         with open(os.path.join(dir, JS_BASENAME), "w") as f:
-            f.write(JS_FMT.format(javascript=self.javascript))
+            f.write(
+                JS_FMT.format(javascript=self.javascript.replace("'use strict';", ""))
+            )
         with open(os.path.join(dir, CSS_BASENAME), "w") as f:
             f.write(self.css)
         for f in self.media:

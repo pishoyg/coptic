@@ -1,3 +1,4 @@
+'use strict';
 // NOTE: Do NOT use global variables. They don't work on Anki!
 // Instead, we represent them as getter functions that return the values.
 // TODO: Reduce the dependency on `innerHTML`. Use attributes when possible.

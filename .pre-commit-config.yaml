@@ -1,10 +1,8 @@
+---
 # See https://pre-commit.com for more information
-
-# TODO: Add hooks from https://pre-commit.com/hooks.html.
-
-# N.B. Given fail_fast, you should the more problematic hooks first.
+# NOTE: Given fail_fast, you should the more problematic hooks first.
 # See https://github.com/pishoyg/coptic/issues/94.
-# TODO: Fail fast won't be optimal if your pipelines get better at writing
+# NOTE: Fail fast won't be optimal if your pipelines get better at writing
 # consistent output that doesn't get modified by the pre-commits. Revisit.
 # TODO: Install the tidy pre-commit from a remote repo, so you don't
 # have to manually install the binary.
@@ -12,16 +10,16 @@ fail_fast: true
 exclude: ^archive/
 repos:
   # TypeScript and JavaScript
-  # TOOD: Revisit your `eslint` configuration.
   - repo: https://github.com/pre-commit/mirrors-eslint
     rev: v9.9.0
     hooks:
       - id: eslint
         additional_dependencies:
-          - "typescript"
-          - "globals"
-          - "typescript-eslint"
+          - typescript
+          - globals
+          - typescript-eslint
           - "@stylistic/eslint-plugin"
+          - "eslint-config-standard@latest"
         args: [--fix]
         files: \.(js|jsx|mjs|cjs|ts|tsx|mts|cts)$
         types: [file]
@@ -29,14 +27,12 @@ repos:
   # https://github.com/pre-commit/mirrors-fixmyjs?tab=readme-ov-file#using-fixmyjs-with-pre-commit.
   # Consider running with `--legacy` (or `-l`) if you run into any issues.
   - repo: https://github.com/pre-commit/mirrors-fixmyjs
-    rev: 'v2.0.0'
+    rev: v2.0.0
     hooks:
       - id: fixmyjs
-        args: ['-c', '.jshintrc']
-  # TODO: Make your `jshint` configuration stricter.
-  # See https://jshint.com/docs/options/ and your `.jshintrc`.
+        args: [-c, .jshintrc]
   - repo: https://github.com/pre-commit/mirrors-jshint
-    rev: 'v2.13.6'
+    rev: v2.13.6
     hooks:
       - id: jshint
   # CSS
@@ -49,7 +45,27 @@ repos:
       # Python Unit Tests Exist
       - id: python-unittest-exists
         name: python-unittest-exists
-        entry: bash -c 'for FILE in "$@"; do DIRNAME="$(dirname "${FILE}")" && if [[ "$(basename "${DIRNAME}")" != "test" ]]; then TEST="${DIRNAME}/test/test_$(basename "${FILE}")" && if [ ! -f "${TEST}" ]; then echo -e "${RED}" Please create a unit test in "${YELLOW}" "${TEST}" "${RED}" and import "${YELLOW}" "${FILE}" "${RESET}" && exit 1; fi; else INIT="${DIRNAME}/__init__.py" && if [ ! -f "${INIT}" ]; then echo -e "${RED}" You forgot "${YELLOW}" "${INIT}" "${RESET}" && exit 1; fi; fi; done' --
+        entry: |
+          bash -c '
+          set -o nounset
+          for FILE in "$@"; do
+            DIRNAME="$(dirname "${FILE}")"
+            if [[ "$(basename "${DIRNAME}")" != "test" ]]; then
+              TEST="${DIRNAME}/test/test_$(basename "${FILE}")"
+              if [ ! -f "${TEST}" ]; then
+                echo -e "${RED}Please create a unit test in"\
+                  "${YELLOW}${TEST}${RED} and import"\
+                  "${YELLOW}${FILE}${RED}.${RESET}"
+                exit 1
+              fi
+            else
+              INIT="${DIRNAME}/__init__.py"
+              if [ ! -f "${INIT}" ]; then
+                echo -e "${RED}You forgot ${YELLOW}${INIT}${RED}.${RESET}"
+                exit 1
+              fi
+            fi
+          done' --
         language: system
         types: [python]
         verbose: true
@@ -59,7 +75,7 @@ repos:
         name: tidy-html
         entry: tidy -indent -modify -quiet --tidy-mark no -wrap 80
         language: system
-        files: '.*\.html'
+        files: .*\.html
       # XML
       - id: tidy-xml
         name: tidy-xml
@@ -69,11 +85,19 @@ repos:
       # JSON
       - id: json-tool
         name: json-tool
-        entry: bash -c 'for x in "$@"; do python -m json.tool --no-ensure-ascii --indent 2 "$x" "$x"; done' --
+        entry: |
+          bash -c '
+          set -o nounset
+          for FILE in "$@"; do
+            python -m json.tool --no-ensure-ascii --indent 2 \
+              "${FILE}" "${FILE}";
+          done' --
         language: system
-        types: [json]
+        files: (.jshintrc|.csslintrc|\.jsonc?)$
+        types: [file]
         exclude: tsconfig\.json$
   # Python
+  # TODO: Add more Python hooks from https://pre-commit.com/hooks.html.
   - repo: https://github.com/psf/black-pre-commit-mirror
     rev: 24.4.2
     hooks:
@@ -96,14 +120,20 @@ repos:
       - id: rst-inline-touching-normal
       - id: text-unicode-replacement-char
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: 'v1.11.1'
+    rev: v1.11.1
     hooks:
       - id: mypy
         args: [--strict]
         # NOTE: This list should, ideally, remain in sync with your
         # requirements.txt (which, of course, in turn, should remain in sync
         # with your repo).
-        additional_dependencies: [bs4, clipboard, colorama, EbookLib, genanki, gspread, json5, markdown, oauth2client, openpyxl, pandas, pathlib, Pillow, pip-review, pre-commit, setuptools, type_enforced, typing, urllib3]
+        additional_dependencies: [bs4, clipboard, colorama, EbookLib, genanki,
+          gspread, json5, markdown, oauth2client, openpyxl, pandas, pathlib,
+          Pillow, pip-review, pre-commit, setuptools, type_enforced, typing,
+          urllib3]
+        # TODO: `mypy` will require significant refactoring. Perform it, and
+        # enable the hook.
+        exclude: .*
   # Language-agnostic
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
@@ -138,6 +168,7 @@ repos:
     rev: v0.0.1
     hooks:
       - id: sync-pre-commit-deps
+  # Spell Checking
   - repo: https://github.com/codespell-project/codespell
     rev: v2.2.4
     hooks:
@@ -145,7 +176,36 @@ repos:
         # The KELLIA driver contains non-English text.
         # Other types of files are data files, not code files. We don't take
         # data updates lightly.
-        exclude: .*\.(xml|html|xhtml|txt|tsv|csv|json|tab|msql|xsd)$|dictionary/kellia.uni-goettingen.de/main.py
+        exclude: ".*\\.(xml|html|xhtml|txt|tsv|csv|json|tab|msql|xsd)$|dictionary/kellia.uni-goettingen.de/main.py"
+  # NOTE: This hook was problematic in the past. It was found to change code
+  # variable names, assuming that they are typos!
+  # We pass `--diff` to make it report typos before fixing them.
+  # Keep an eye for it.
+  - repo: https://github.com/crate-ci/typos
+    rev: v1.24.1
+    hooks:
+      - id: typos
+        exclude: ".*\\.(xml|html|xhtml|txt|tsv|csv|json|tab|msql|xsd)$|dictionary/kellia.uni-goettingen.de/main.py"
+        args: [--diff]
+  # Git Commit Messages
+  - repo: https://github.com/jorisroovers/gitlint
+    rev: v0.19.1
+    hooks:
+      - id: gitlint
+  # Security
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.16.1
+    hooks:
+      - id: gitleaks
+  - repo: https://github.com/trufflesecurity/truffleHog
+    rev: v3.81.9
+    hooks:
+      - id: trufflehog
+  - repo: https://github.com/thoughtworks/talisman
+    rev: v1.32.0
+    hooks:
+      - id: talisman-commit
+        entry: cmd --githook pre-commit
   # Shell
   - repo: https://github.com/shellcheck-py/shellcheck-py
     rev: v0.10.0.1
@@ -176,6 +236,11 @@ repos:
     rev: v0.13.0
     hooks:
       - id: yamlfmt
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.35.1
+    hooks:
+      - id: yamllint
+        args: [--strict]
   # Protobuf
   - repo: https://github.com/bufbuild/buf
     rev: v1.34.0
@@ -192,7 +257,7 @@ repos:
     hooks:
       - id: stylua
   # Makefile
-  - repo: https://github.com/mrtazz/checkmake.git
+  - repo: https://github.com/mrtazz/checkmake
     rev: 0.2.2
     hooks:
       - id: checkmake
@@ -216,27 +281,58 @@ repos:
       # Daily Statistics
       - id: stats
         name: stats
-        entry: bash -c 'if (( $(date +%s) - $(tail -n 1 data/stats.tsv | cut --fields 2) >= 86400 )); then echo -e "${RED}" Run "${YELLOW}" \`make stats\`"${RED}"\."${RESET}" && exit 1; fi'
+        entry: |
+          bash -c '
+          set -o nounset
+          if ((
+            $(date +%s) - $(tail -n 1 data/stats.tsv | cut --fields 2) >= 86400
+          )); then
+            echo -e "${RED}Run ${YELLOW}\`make stats\`${RED}.${RESET}"
+            exit 1;
+          fi'
         language: system
         pass_filenames: false
         always_run: true
       # Python Unit Tests
       - id: python-unittest
         name: python-unittest
-        entry: bash -c 'for x in $(dirname "$@" | grep --invert "/test$" | sort | uniq); do python -m unittest discover "$x"; done' --
+        entry: |
+          bash -c '
+          set -o nounset
+          for DIR in $(dirname "$@" | grep --invert "/test$" | sort | uniq); do
+            python -m unittest discover "${DIR}";
+          done' --
         language: system
         types: [python]
         verbose: true
       # DO NOT SUBMIT
       - id: check-do-not-submit
         name: check-do-not-submit
-        entry: bash -c 'check_do_not_submit () { for FILE in "$@"; do DO_NOT_SUBMIT="$(grep "DO NOT SUBMIT" --files-with-matches "${FILE}")" && [ -z "${DO_NOT_SUBMIT}" ] || (echo -e "${RED}" "DO NOT SUBMIT" markers found in "${YELLOW}" "${DO_NOT_SUBMIT}" "${RESET}" && exit 1); done }; check_do_not_submit' --
+        entry: |
+          bash -c '
+          set -o nounset
+          DO_NOT_SUBMIT="$(grep "DO NOT (SUBMIT|COMMIT)" --extended-regexp \
+            --files-with-matches --ignore-case "${@}")"
+          if [ -n "${DO_NOT_SUBMIT}" ]; then
+            echo -e "${RED} DO NOT SUBMIT markers found in"\
+              "${YELLOW}${DO_NOT_SUBMIT}${RED}.${RESET}"
+            exit 1
+          fi' --
         language: system
         exclude: ^\.pre-commit-config\.yaml$
       # One README
       - id: check-one-readme
         name: check-one-readme
-        entry: bash -c 'FOUND="$(find . -name README.md -mindepth 2 -not -path "./archive/*" -not -path "./node_modules/*")" && [ -z "${FOUND}" ] || (echo -e "${PURPLE}Only the README.md at the root is allowed. Please delete ${RED}${FOUND}${PURPLE}.${RESET}" && exit 1)'
+        entry: |
+          bash -c '
+          set -o nounset
+          FOUND="$(find . -name README.md -mindepth 2 \
+            -not -path "./archive/*" -not -path "./node_modules/*")"
+          if [ -n "${FOUND}" ]; then
+            echo -e "${PURPLE}Only the README.md at the root is allowed."\
+              "Please delete ${RED}${FOUND}${PURPLE}.${RESET}"
+            exit 1
+          fi'
         language: system
         pass_filenames: false
         always_run: true
