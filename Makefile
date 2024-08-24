@@ -74,7 +74,10 @@ diff: git_diff
 toil: crum_img_helper
 
 .PHONY: todo
-todo: todo_grep
+todo: _todo
+
+.PHONY: todo_no_issue
+todo_no_issue: _todo_no_issue
 
 .PHONY: update
 update: precommit_update pip_update
@@ -278,8 +281,13 @@ env_cp_from_home: FORCE
 precommit_update: FORCE
 	pre-commit autoupdate
 
-todo_grep: FORCE
-	. ./.helpers && grepexx . TODO
+# NOTE: We "mangle" the regex using extra parentheses in order to prevent it
+# from matching itself. Same below.
+_todo: FORCE
+	. ./.helpers && grepexx . 'TODO(:) '
+
+_todo_no_issue: FORCE
+	. ./.helpers && grepexx . 'TODO(:) (?!\(#[0-9]+\))' -P
 
 git_clean: FORCE
 	git clean \
