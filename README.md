@@ -50,6 +50,8 @@
 This repo hosts a Coptic flashcard / dictionary project that aims to make the
 language more **learnable**.
 
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+
 ## Hosting
 
 We use:
