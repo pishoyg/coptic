@@ -384,7 +384,7 @@ class apl(field):
         return num_entries(*self._fields)
 
 
-# N.B. This must follow the last field subclass definition.
+# NOTE: This must follow the last field subclass definition.
 Field = type_enforced.utils.WithSubclasses(field)
 OptionalField = Field + [None]
 FieldOrStr = Field + [str]

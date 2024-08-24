@@ -2,7 +2,7 @@ SHELL := /bin/bash
 
 # .env
 #
-# N.B. Some rules require the environment variables to be exported.
+# NOTE: Some rules require the environment variables to be exported.
 # See .env_INFO.
 
 # LEVELS

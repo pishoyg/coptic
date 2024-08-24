@@ -25,7 +25,7 @@ This line has several words, namely:
 
 Grammar:
   - The parser assumes the following grammar:
-    N.B. Please take this with a grain of salt. The parser wasn't implemented
+    NOTE: Please take this with a grain of salt. The parser wasn't implemented
     strictly to parse entries that match this grammar. A lot of flexibility was
     allowed.
   <word> = <dialected_word>+ | <undialected_word>
@@ -254,7 +254,7 @@ def _parse_spellings_and_types(
 
 
 def _analyze_no_english(line_no_english: str) -> None:
-    # N.B. The body of this method is largely similar to
+    # NOTE: The body of this method is largely similar to
     # _parse_spellings_and_types.
     # For the sake of rigor, investigate the content of the no-English subset.
     line_no_english = _apply_substitutions(

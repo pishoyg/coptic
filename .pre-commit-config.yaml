@@ -268,7 +268,7 @@ repos:
         name: crum-img-validate
         entry: python dictionary/marcion.sourceforge.net/img_helper.py --validate
         language: system
-        # N.B. This hook should also run when files are deleted. But
+        # NOTE: This hook should also run when files are deleted. But
         # pre-commits don't work that way! If a file is deleted, even if it
         # matches the pattern below, the hook won't be triggered.
         # We still use the pattern to run the hook selectively because it's

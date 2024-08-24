@@ -92,7 +92,7 @@ class structured_word:
 
     def _is_assumed(self, spelling: str) -> bool:
         """
-        N.B. Spellings passed are expected to have already been normalized from
+        NOTE: Spellings passed are expected to have already been normalized from
         the presence of other types of parentheses.
         """
         # TODO: Remove the special case.

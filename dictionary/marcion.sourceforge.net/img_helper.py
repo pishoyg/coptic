@@ -184,7 +184,7 @@ argparser.add_argument(
     help=f"If true, batch-process images in {IMG_DIR} and exit."
     "Batch-processing includes converting images, and deleting obsolete images"
     " and sources."
-    " N.B. We intentionally refrain from populating absent sources with a"
+    " NOTE: We intentionally refrain from populating absent sources with a"
     " default value, since now we have become stricter with collecting image"
     " sources.",
 )

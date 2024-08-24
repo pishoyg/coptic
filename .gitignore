@@ -1,4 +1,4 @@
-# N.B. If you update .gitignore, make sure to update the `git_clean` rule in
+# NOTE: If you update .gitignore, make sure to update the `git_clean` rule in
 # Makefile, and the loc function in stats.sh, and the `findex` and `findexx`
 # helpers in `.env_INFO`.
 

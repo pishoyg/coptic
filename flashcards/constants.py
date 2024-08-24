@@ -125,13 +125,13 @@ def crum(
         for col in dialect_cols
     }
     return deck.deck(
-        # N.B. The deck name is a protected field.
+        # NOTE: The deck name is a protected field.
         deck_name=deck_name,
         deck_id=deck_id,
         deck_description=f"{HOME}.\n{EMAIL}.",
         css=utils.read("flashcards/constants/a_coptic_dictionary/style.css"),
         javascript=utils.read("flashcards/data/build/a_coptic_dictionary/script.js"),
-        # N.B. The key is a protected field. Do not change unless you know what
+        # NOTE: The key is a protected field. Do not change unless you know what
         # you're doing.
         key=roots_col("key"),
         front=field.apl(
@@ -381,13 +381,13 @@ def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
         )
 
     return deck.deck(
-        # N.B. The deck name is a protected field.
+        # NOTE: The deck name is a protected field.
         deck_name=deck_name,
         deck_id=deck_id,
         deck_description=f"{HOME}\n{EMAIL}",
         css=utils.read("flashcards/constants/copticsite/style.css"),
         javascript="",
-        # N.B. The key is a protected field. Do not change unless you know what
+        # NOTE: The key is a protected field. Do not change unless you know what
         # you're doing.
         key=field.seq(),
         front=col("prettify", force=False),
@@ -427,13 +427,13 @@ def kellia(deck_name: str, deck_id: int, basename: str) -> deck.deck:
         )
 
     return deck.deck(
-        # N.B. The deck name is a protected field.
+        # NOTE: The deck name is a protected field.
         deck_name=deck_name,
         deck_id=deck_id,
         deck_description=f"{HOME}\n{EMAIL}",
         css=utils.read("flashcards/constants/kellia/style.css"),
         javascript="",
-        # N.B. The key is a protected field. Do not change unless you know what
+        # NOTE: The key is a protected field. Do not change unless you know what
         # you're doing.
         key=col("entry_xml_id"),
         front=col("orthstring-pishoy", line_br=True),
@@ -557,7 +557,7 @@ class _sensor:
         )
 
 
-# N.B. The deck IDs are protected fields. They are used as database keys for the
+# NOTE: The deck IDs are protected fields. They are used as database keys for the
 # decks. Do NOT change them!
 #
 # The deck names are protected fields. Do NOT change them. They are used for:
@@ -566,7 +566,7 @@ class _sensor:
 #    different decks.
 # 3. Model names (largely irrelevant).
 #
-# N.B. If the `name` argument is provided, it overrides the first use case
+# NOTE: If the `name` argument is provided, it overrides the first use case
 # (display), but the deck names continue to be used for prefixing and model
 # names.
 # It's for the second reason, and to a lesser extend the first as well, that
@@ -574,7 +574,7 @@ class _sensor:
 # mess up the data! Importing a new deck will result in the notes being
 # duplicated rather than replaced or updated.
 
-# N.B. Besides the constants hardcoded below, the "name" and "key" fields in
+# NOTE: Besides the constants hardcoded below, the "name" and "key" fields in
 # the deck generation logic are also protected.
 # The "name" argument is used to generate deck names for datasets that generate
 # multiple decks.

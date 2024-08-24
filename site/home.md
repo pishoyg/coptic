@@ -29,7 +29,7 @@ paid, unfortunately!*)
 2. Download [the Coptic package](https://drive.google.com/file/d/1KV0fH23Zucmlvdc0dwTJiDdqKIvbuYY_/view?usp=sharing),
 and open it / import it in Anki. This package includes all the data.
 
-   **N.B. The package is updated regularly (almost daily), so make sure
+   **NOTE: The package is updated regularly (almost daily), so make sure
    to save the link and come back occasionally to download the updated version.**
 
 ## Description
