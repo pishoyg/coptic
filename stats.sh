@@ -14,11 +14,12 @@ while [ $# -gt 0 ]; do
     SAVE=true
     ;;
   --help)
-    echo "Pass --save to also save to the stats file."
+    echo -e "${BLUE}Report project statistics.${RESET}"
+    echo -e "${BLUE}Pass ${GREEN}--save ${BLUE}to also save to the stats file.${RESET}"
     exit
     ;;
   *)
-    echo "Unknown flag: ${1}"
+    echo -e "${RED}Unknown flag: ${YELLOW}${1}${RED}.${RESET}"
     exit 1
     ;;
   esac
@@ -115,7 +116,7 @@ col_num() {
       COL=$(( COL + 1 ))
     fi
   done
-  echo "${RED}Unable to find column ${PURPLE}${TARGET} in ${PURPLE}${FILE}${RED}!${RESET}"
+  echo -e "${RED}Unable to find column ${PURPLE}${TARGET} in ${PURPLE}${FILE}${RED}!${RESET}"
   exit 1
 }
 
