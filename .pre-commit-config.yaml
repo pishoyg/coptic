@@ -4,8 +4,6 @@
 # See https://github.com/pishoyg/coptic/issues/94.
 # NOTE: Fail fast won't be optimal if your pipelines get better at writing
 # consistent output that doesn't get modified by the pre-commits. Revisit.
-# TODO: Install the tidy pre-commit from a remote repo, so you don't
-# have to manually install the binary.
 fail_fast: true
 exclude: ^archive/
 repos:

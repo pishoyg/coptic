@@ -243,7 +243,7 @@ site_publish:
 
 # INFRASTRUCTURE RULES
 bin_install:
-	if ! command -v npm &> /dev/null; then echo "Please install npm. See https://docs.npmjs.com/downloading-and-installing-node-js-and-npm.html-tidy.org/." && exit 1; fi
+	if ! command -v npm &> /dev/null; then echo "Please install npm. See https://docs.npmjs.com/downloading-and-installing-node-js-and-npm." && exit 1; fi
 	if ! command -v tidy &> /dev/null; then echo "Please install tidy from https://www.html-tidy.org/." && exit 1; fi
 	if ! command -v magick &> /dev/null; then echo "Please install magick from https://imagemagick.org/." && exit 1; fi
 
