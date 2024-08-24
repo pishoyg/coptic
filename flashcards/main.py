@@ -44,15 +44,6 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
-    "--tsvs_mask",
-    type=bool,
-    nargs="*",
-    default=[False] * len(constants.LAMBDAS),
-    help="A mask indicating whether to write output for deck_i in TSVS."
-    "The path will be ${OUTPUT_DIR}/tsvs/${DECK_NAME_NORMALIZED}.tsvs.",
-)
-
-argparser.add_argument(
     "--html_mask",
     type=bool,
     nargs="*",
@@ -102,14 +93,10 @@ def main() -> None:
     work_dir = tempfile.TemporaryDirectory()
     field.init(work_dir.name)
     decks = [constants.LAMBDAS[name](name) for name in args.decks]
-    assert len(decks) == len(args.html_mask) == len(args.tsvs_mask)
+    assert len(decks) == len(args.html_mask)
 
     for idx, d in enumerate(decks):
         filename = constants.file_name(d.deck_name)
-        if args.tsvs_mask[idx]:
-            dir = os.path.join(args.output_dir, "tsvs", filename)
-            pathlib.Path(dir).mkdir(exist_ok=True)
-            d.write_tsvs(dir)
         if args.html_mask[idx]:
             dir = os.path.join(args.output_dir, "html", filename)
             pathlib.Path(dir).mkdir(exist_ok=True)

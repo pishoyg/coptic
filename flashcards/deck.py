@@ -1,12 +1,10 @@
 import os
 import pathlib
 import shutil
-import time
 
 import enforcer
 import field
 import genanki
-import pandas as pd
 import type_enforced
 
 import utils
@@ -73,20 +71,6 @@ class Note(genanki.Note):
         # Only use the key field to generate a GUID.
         assert self.fields
         return genanki.guid_for(self.fields[2])
-
-
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
-class record:
-    def __init__(self, d: pd.Series) -> None:
-        KEYS = {"key", "front", "back", "timestamp"}
-        assert set(d.keys()) == KEYS
-        self.d: dict = {k: d[k] for k in KEYS}
-
-    def supersede(self, old) -> None:
-        # We can only compare records with the same key.
-        assert self.d["key"] == old.d["key"]
-        if self.d["front"] == old.d["front"] and self.d["back"] == old.d["back"]:
-            self.d["timestamp"] = old.d["timestamp"]
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -222,50 +206,6 @@ class deck:
             assert os.path.isdir(dir)
             shutil.rmtree(dir)
         pathlib.Path(dir).mkdir(parents=True)
-
-    def read_tsvs(self, dir: str) -> dict[str, record]:
-        tsvs = os.path.join(dir, "data.tsvs")
-        if not os.path.exists(tsvs):
-            return {}
-        df = utils.read_tsvs(tsvs)
-        # TODO: Also read the old JSON, for consistency.
-        return {row["key"]: record(row) for _, row in df.iterrows()}
-
-    def write_tsvs(self, dir: str) -> None:
-        old_records: dict[str, record] = self.read_tsvs(dir)
-        self.clean_dir(dir)
-        metadata = utils.json_dumps(
-            {
-                "deck_name": self.deck_name,
-                "deck_id": self.deck_id,
-                "deck_description": self.deck_description,
-                "css": self.css,
-                "javascript": self.javascript,
-            },
-            sort_keys=True,
-        )
-        with open(os.path.join(dir, "metadata.json"), "w") as f:
-            f.write(metadata + "\n")
-
-        now: int = int(time.time())
-        new_records: dict[str, record] = {
-            k: record({"key": k, "front": f, "back": b, "timestamp": now})
-            for k, f, b in zip(self.keys, self.fronts, self.backs)
-        }
-
-        # TODO: Sometimes, keys will be present in the new records but absent
-        # from the old records. This is impossible today, but things might
-        # change in the future. Consider supporting that.
-        if old_records:
-            for key in new_records:
-                new_records[key].supersede(old_records[key])
-        df = pd.DataFrame([r.d for r in new_records.values()])
-        utils.write_tsvs(
-            df,
-            os.path.join(dir, "data.tsvs"),
-            columns=["key", "front", "back", "timestamp"],
-        )
-        utils.wrote(dir)
 
     def write_html(self, dir: str) -> None:
         self.clean_dir(dir)
