@@ -247,7 +247,7 @@ SPELLING_ANNOTATIONS_1 = [
 ]
 
 DETACHED_TYPES_1 = [
-    # TODO: The question mark is not a detached type, and it might be
+    # TODO: (#115) The question mark is not a detached type, and it might be
     # spelling-specific. Investigate.
     ("$$", lexical.type("<i>(?)</i>", "(?)", "probably", None)),  # Probably.
     (
@@ -282,7 +282,7 @@ DETACHED_TYPES_1 = [
             "<i>noun: </i>", "(noun)", "noun", inflect.Type.NOUN_UNKNOWN_GENDER
         ),
     ),  # (ⲟⲩ)
-    # TODO: The following types likely apply to the subset of spellings
+    # TODO: (#115) The following types likely apply to the subset of spellings
     # occurring after the type, not the whole line.
     ("****", lexical.type("<i>female: </i>", "(ⲧ)", "female", lexical.Gender.FEMININE)),
     ("***", lexical.type("<i>male: </i>", "(ⲡ)", "male", lexical.Gender.MASCULINE)),
@@ -295,8 +295,9 @@ DETACHED_TYPES_1 = [
     ("*", lexical.type("<i>plural: </i>", "(ⲛ)", "plural", lexical.Gender.PLURAL)),
     ("$", lexical.type("<i> &c</i>", "(&c)", "constructed with", None)),
     ("^^^", lexical.type("<i><b>c</b></i>", "(c)", "Not sure what this means!", None)),
-    # TODO: {nic} is definitely spelling-specific! Its presence here means it's
-    # currently interpreted as applying to all spellings in a word! Fix!
+    # TODO: (#115) {nic} is definitely spelling-specific! Its presence here
+    # means it's currently interpreted as applying to all spellings in a word!
+    # Fix!
     ("{nic}", lexical.type("{nic}", "{nic}", "{nic}", None, append=False)),  # No idea!
 ]
 

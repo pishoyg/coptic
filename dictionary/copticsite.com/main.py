@@ -16,7 +16,7 @@ SUFFIX_COL = "suffix"
 PRETTIFY_COL = "prettify"
 
 # SUFFIX maps the word kinds to a map of word genders to suffixes.
-# TODO: Revisit the suffixes. Make display more friendly.
+# TODO: (#10) Revisit the suffixes. Make display more friendly.
 SUFFIX = {
     "": {
         "": "",

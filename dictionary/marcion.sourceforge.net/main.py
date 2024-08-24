@@ -29,7 +29,7 @@ OUTPUT = "dictionary/marcion.sourceforge.net/data/output"
 FILTER_DIALECTS = constants.DIALECTS
 SORT_ROOTS = ["key"]
 SORT_DERIVATIONS = ["key_word", "pos"]
-# TODO: Generate the definitions and morphemes.
+# TODO: (#44) Generate the definitions and morphemes.
 # For each dialect in MORPH_DIALECTS, we will generate definitions and
 # morphemes tables, consumable by a morphology pipeline.
 MORPH_DIALECTS = ["B"]

@@ -1,4 +1,4 @@
-# TODO: Learn more about the spell attribute and wildcard search. See ENTRY.
+# TODO: (#39) Learn more about the spell attribute and wildcard search. See ENTRY.
 import os
 import pathlib
 import shutil
@@ -11,7 +11,7 @@ import utils
 CREATOR = "pishoybg@gmail.com"
 # "cop" is not supported.
 # See https://kdp.amazon.com/en_US/help/topic/G200673300.
-# TODO: Choose a default obscure language. Otherwise, a reader who has another
+# TODO: (#39) Choose a default obscure language. Otherwise, a reader who has another
 # dictionary for "en-us" will keep switching between the two in order to
 # translate.
 IN_LANG = "en-us"

@@ -1064,7 +1064,7 @@ parser.add_argument(
     ],
     help="directory with dictionary XML files",
 )
-# TODO: Support entity types.
+# TODO: (#51) Support entity types.
 parser.add_argument(
     "--pub_corpora",
     default=None,
@@ -1173,7 +1173,7 @@ def main():
             df.columns, key=lambda col_name: col_to_idx.get(col_name, 1000)
         )
         utils.write_tsvs(df, output)
-        # TODO: Add network graphs.
+        # TODO: (#51) Add network graphs.
 
 
 if __name__ == "__main__":

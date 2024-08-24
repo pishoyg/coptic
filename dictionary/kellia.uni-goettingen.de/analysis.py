@@ -1,4 +1,4 @@
-# TODO: Read this file for inspiration:
+# TODO: (#51) Read this file for inspiration:
 # https://github.com/KELLIA/dictionary/blob/master/utils/dictionary_reader.py.
 # TODO: There are some typos in the data. Fix at the origin.
 import argparse

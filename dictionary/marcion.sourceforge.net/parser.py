@@ -332,7 +332,7 @@ def _parse_english(line: str) -> str:
                 copt, detach_types=True, use_coptic_symbol=True
             )
             assert not t
-            # TODO: Stop using words for Coptic within English!
+            # TODO: (#63) Stop using words for Coptic within English!
             out.append(
                 lexical.structured_word([], s, t, [], None, normalize=True).string(
                     include_references=True,
@@ -358,8 +358,8 @@ def parse_english_cell(line: str) -> str:
             greek = greek[2:-2]
             out.append(parse_greek_cell(greek))
     out = " ".join(out)
-    # TODO: English post-processing likely shouldn't apply to Coptic within
-    # English.
+    # TODO: (#63) English post-processing likely shouldn't apply to Coptic
+    # within English.
     out = _apply_substitutions(
         out, constants.ENGLISH_POSTPROCESSING, use_coptic_symbol=False
     )
