@@ -1,10 +1,12 @@
-import argparse
 import os
 
 import pandas as pd
 import type_enforced
 
 import utils
+
+INPUT_XLSX = "dictionary/copticsite.com/data/raw/coptic dictionary northern dialect unicode complete.xlsx"
+OUTPUT = "dictionary/copticsite.com/data/output/"
 
 UNNAMED_PREFIX = "Unnamed: "
 MEANING_COL = "Meaning"
@@ -285,29 +287,9 @@ def get_suffix(kind: str, gender: str) -> str:
     return ""
 
 
-argparser = argparse.ArgumentParser(
-    description="Process copticsite.com's dictionary.",
-)
-
-argparser.add_argument(
-    "--input_xlsx",
-    type=str,
-    default="dictionary/copticsite.com/data/raw/coptic dictionary northern dialect unicode complete.xlsx",
-    help="Path to the input Excel file.",
-)
-
-argparser.add_argument(
-    "--output",
-    type=str,
-    default="dictionary/copticsite.com/data/output/",
-    help="Path to the output directory.",
-)
-
-
 @type_enforced.Enforcer
 def main() -> None:
-    args = argparser.parse_args()
-    df = pd.read_excel(args.input_xlsx, dtype=str).fillna("")
+    df = pd.read_excel(INPUT_XLSX, dtype=str).fillna("")
     df.dropna(inplace=True)
     df = df.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
     df[ORIGIN_COL] = df[MEANING_COL]
@@ -340,7 +322,7 @@ def main() -> None:
         if key.startswith(UNNAMED_PREFIX):
             df.drop(key, axis=1, inplace=True)
 
-    utils.write_tsvs(df, os.path.join(args.output, "tsvs", "output.tsvs"))
+    utils.write_tsvs(df, os.path.join(OUTPUT, "tsvs", "output.tsvs"))
 
 
 if __name__ == "__main__":
