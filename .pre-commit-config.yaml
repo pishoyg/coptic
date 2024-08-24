@@ -8,6 +8,10 @@ fail_fast: true
 exclude: ^archive/
 repos:
   # Language-agnostic
+  - repo: meta
+    hooks:
+      - id: check-useless-excludes
+      - id: identity
   - repo: local
     hooks:
       - id: commit-file-sizes
