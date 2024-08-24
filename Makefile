@@ -244,9 +244,10 @@ site_publish:
 
 # INFRASTRUCTURE RULES
 bin_install:
-	if ! command -v npm &> /dev/null; then echo "Please install npm. See https://docs.npmjs.com/downloading-and-installing-node-js-and-npm." && exit 1; fi
-	if ! command -v tidy &> /dev/null; then echo "Please install tidy from https://www.html-tidy.org/." && exit 1; fi
-	if ! command -v magick &> /dev/null; then echo "Please install magick from https://imagemagick.org/." && exit 1; fi
+	if ! command -v npm &> /dev/null; then echo -e "$${RED}Please install $${YELLOW}npm.$${RED} See https://docs.npmjs.com/downloading-and-installing-node-js-and-npm.$${RESET}" && exit 1; fi
+	if ! command -v tidy &> /dev/null; then echo -e "$${RED}Please install $${YELLOW}tidy$${RED} from https://www.html-tidy.org/.$${RESET}" && exit 1; fi
+	if ! command -v magick &> /dev/null; then echo -e "$${RED}Please install $${YELLOW}magick$${RED} from https://imagemagick.org/.$${RESET}" && exit 1; fi
+	if ! command -v say &> /dev/null; then echo -e "$${YELLOW}Consider installing $${CYAN}say$${YELLOW}. This should be possible with $${CYAN}sudo apt-get install gnustep-gui-runtime$${YELLOW} on Ubuntu.$${RESET}"; fi
 
 npm_install:
 	npm install \
@@ -325,7 +326,6 @@ camera_images: FORCE
 		| sed "s/\.txt$$/\.*/" \
 		| while read -r GLOB; do ls $${GLOB} | xargs open; done
 
-# TODO: This works on OS X, but it doesn't exist by default on Ubuntu.
 say_yo: FORCE
 	say yo
 
