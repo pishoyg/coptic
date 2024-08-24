@@ -29,9 +29,9 @@ window.addEventListener('load', () => { 'use strict';
     el.getAttributeNames().forEach((attr) => {
       copy.setAttribute(attr, el.getAttribute(attr));
     });
-    Object.entries(attrs).forEach(([key, value]) => {
+    for (const [key, value] of Object.entries(attrs)) {
       copy.setAttribute(key, value);
-    });
+    }
     (_a = el.parentNode) === null || _a === void 0 ? void 0 : _a.replaceChild(copy, el);
   }
   Array.prototype.forEach.call(document.getElementsByClassName('crum-page'), (el) => {

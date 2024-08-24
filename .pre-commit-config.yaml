@@ -1,8 +1,6 @@
 # See https://pre-commit.com for more information
 
 # TODO: Add hooks from https://pre-commit.com/hooks.html.
-# TODO: Add https://github.com/pre-commit/mirrors-fixmyjs. We ran into some
-# versioning issues when we tried to add it today.
 
 # N.B. Given fail_fast, you should the more problematic hooks first.
 # See https://github.com/pishoyg/coptic/issues/94.
@@ -27,6 +25,14 @@ repos:
         args: [--fix]
         files: \.(js|jsx|mjs|cjs|ts|tsx|mts|cts)$
         types: [file]
+  # NOTE:The non-legacy version of `fixmyjs` is rumored to be problematic. See
+  # https://github.com/pre-commit/mirrors-fixmyjs?tab=readme-ov-file#using-fixmyjs-with-pre-commit.
+  # Consider running with `--legacy` (or `-l`) if you run into any issues.
+  - repo: https://github.com/pre-commit/mirrors-fixmyjs
+    rev: 'v2.0.0'
+    hooks:
+      - id: fixmyjs
+        args: ['-c', '.jshintrc']
   # TODO: Make your `jshint` configuration stricter.
   # See https://jshint.com/docs/options/ and your `.jshintrc`.
   - repo: https://github.com/pre-commit/mirrors-jshint

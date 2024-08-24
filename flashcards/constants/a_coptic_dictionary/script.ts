@@ -35,9 +35,9 @@ function moveElement(el: HTMLElement, tag: string, attrs: Record<string, string>
   el.getAttributeNames().forEach((attr) => {
     copy.setAttribute(attr, el.getAttribute(attr)!);
   });
-  Object.entries(attrs).forEach(([key, value]) => {
+  for (const [key, value] of Object.entries(attrs)) {
     copy.setAttribute(key, value);
-  });
+  }
   el.parentNode?.replaceChild(copy, el);
 }
 
