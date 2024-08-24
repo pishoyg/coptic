@@ -47,7 +47,7 @@ def crum(
             force=force,
         )
 
-    # TODO: Add a similar alignment check for the derivations keys and
+    # TODO: (#75) Add a similar alignment check for the derivations keys and
     # derivations appendices keys, once we start using them.
     roots_keys = roots_col("key")
     appendices_keys = root_appendix("key")
@@ -55,7 +55,8 @@ def crum(
         assert roots_keys.next() == appendices_keys.next()
     del roots_keys, appendices_keys
 
-    # TODO: This replaces all Coptic words, regardless of whether they
+    # TODO: Insert the tags in the Crum pipeline.
+    # This replaces all Coptic words, regardless of whether they
     # represent plain text. Coptic text that occurs inside a tag (for example
     # as a tag property) would still get wrapped inside this <span> tag.
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -65,7 +66,8 @@ def crum(
             text,
         )
 
-    # TODO: This replaces all Greek words, regardless of whether they
+    # TODO: Insert tags in the Crum pipeline.
+    # This replaces all Greek words, regardless of whether they
     # represent plain text. Greek text that occurs inside a tag (for example
     # as a tag property) would still acquire this tag.
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -336,9 +338,9 @@ def crum(
                     ),
                 ),
                 # Audio.
-                # TODO: Label the per-dialect audios, like you did for the front.
-                # If this deck contains multiple dialects, it won't be clear for
-                # the user which audios belong to which dialect!
+                # TODO: (#23) Label the per-dialect audios, like you did for
+                # the front. If this deck contains multiple dialects, it won't
+                # be clear for the user which audios belong to which dialect!
                 # Note: The use of nested all-or-nothing and concatenate fields
                 # here is intentional. It may not be obvious now, but this
                 # structure will be necessary if we want to include more audio
@@ -549,7 +551,7 @@ class _sensor:
                 " ",
                 "</span>",
                 '<span class="italic lighter small">',
-                # TODO: (#189): Require the presence of a sense once the sense
+                # TODO: (#189) Require the presence of a sense once the sense
                 # data has been fully populated.
                 self.d[key].get(sense, sense),
                 "</span>",

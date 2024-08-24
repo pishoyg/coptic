@@ -95,7 +95,7 @@ repos:
         types: [file]
         exclude: tsconfig\.json$
   # Python
-  # TODO: Add more Python hooks from https://pre-commit.com/hooks.html.
+  # TODO: (#213) Add more Python hooks from https://pre-commit.com/hooks.html.
   - repo: https://github.com/psf/black-pre-commit-mirror
     rev: 24.4.2
     hooks:
@@ -129,8 +129,8 @@ repos:
           gspread, json5, markdown, oauth2client, openpyxl, pandas, pathlib,
           Pillow, pip-review, pre-commit, setuptools, type_enforced, typing,
           urllib3]
-        # TODO: `mypy` will require significant refactoring. Perform it, and
-        # enable the hook.
+        # TODO: (#215) `mypy` will require significant refactoring. Perform it,
+        # and enable the hook.
         exclude: .*
   # Language-agnostic
   - repo: https://github.com/pre-commit/pre-commit-hooks

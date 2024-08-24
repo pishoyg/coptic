@@ -163,7 +163,7 @@ crum_img: $(shell find dictionary/marcion.sourceforge.net/data/ -type f)
 	python dictionary/marcion.sourceforge.net/img_helper.py --batch
 
 crum_img_helper: FORCE
-	# TODO: Remove the filters. Do all the words.
+	# TODO: (#5) Remove the filters. Do all the words.
 	python dictionary/marcion.sourceforge.net/img_helper.py \
 		--skip_existing=true \
 		--exclude "type-parsed:verb" "dialect-B:" \
@@ -215,7 +215,7 @@ _flashcards_kellia: FORCE
 		--tsvs_mask "" "" ""
 
 # KINDLE RULES
-# TODO: Restore the rules (with appropriate paths) once the pipeline is
+# TODO: (#44) Restore the rules (with appropriate paths) once the pipeline is
 # designed.
 ifeq ("true", "false")
 kindle: FORCE

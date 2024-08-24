@@ -75,7 +75,7 @@ extensions () {
   done | sort | uniq
 }
 
-# TODO: Calculate the archived lines of code more rigorously.
+# TODO: (#214) Calculate the archived lines of code more rigorously.
 loc_archive () {
   find archive \
     -type f \
