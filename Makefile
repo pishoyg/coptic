@@ -282,10 +282,10 @@ precommit_update: FORCE
 # NOTE: We "mangle" the regex using extra parentheses in order to prevent it
 # from matching itself. Same below.
 _todo: FORCE
-	. ./.helpers && grepexx . 'TODO(:) '
+	. ./.helpers && grepexx . --extended-regexp 'TODO(:) '
 
 _todo_no_issue: FORCE
-	. ./.helpers && grepexx . 'TODO(:) (?!\(#[0-9]+\))' -P
+	. ./.helpers && grepexx . --perl-regexp 'TODO(:) (?!\(#[0-9]+\))'
 
 git_clean: FORCE
 	git clean \
