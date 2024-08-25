@@ -16,16 +16,18 @@ repos:
     hooks:
       - id: commit-file-sizes
         name: commit-file-sizes
+        # NOTE: Running the script with `errexit` is problematic, although it
+        # is not understood why.
         entry: |
           bash -c '
+          set -o nounset  # Consider an undefined variable to be an error.
           announce () {
             echo -e "${1}Files in this batch total ${2}${SIZE}${1}.${RESET}"
           }
-          FILES="${@}"
-          if [ -z "${FILES}" ]; then
+          if (( "$#" == 0 )); then
             exit
           fi
-          SIZE="$(du --apparent-size --human-readable --summarize --total ${FILES} | tail -n 1 | cut --fields 1)"
+          SIZE="$(du --apparent-size --human-readable --summarize --total "${@}" | tail -n 1 | cut --fields 1)"
           MAGNITUDE="$(echo ${SIZE} | grep -o [A-Z])"
           COUNT="$(echo ${SIZE} | grep --only --extended-regexp "^[0-9]+")"
           if [[ "${MAGNITUDE}" == "" || "${MAGNITUDE}" == "K" ]]; then
@@ -38,17 +40,20 @@ repos:
           fi
           ' --
         language: system
-        always_run: true
-        pass_filenames: true
         verbose: true
         require_serial: true
       - id: check-todo
         name: check-todo
         # TODO: (#66) Once all existing TODO's have been assigned issues,
         # change the following to an error rather than simply a warning.
+        # NOTE: Running the script with `errexit` is problematic, although it
+        # is not understood why.
         entry: |
           bash -c '
-          set -o nounset
+          set -o nounset  # Consider an undefined variable to be an error.
+          if (( "$#" == 0 )); then
+            exit
+          fi
           TODO="$(grep "TODO(:) (?!\(#[0-9]+\))" --perl-regexp \
             --ignore-case --color=auto "${@}")"
           if [ -n "${TODO}" ]; then
@@ -56,8 +61,6 @@ repos:
               "number to each TODO:\n${YELLOW}${TODO}${RED}.${RESET}"
           fi' --
         language: system
-        always_run: true
-        pass_filenames: true
         verbose: true
         require_serial: true
   # TypeScript and JavaScript
@@ -98,7 +101,11 @@ repos:
         name: python-unittest-exists
         entry: |
           bash -c '
-          set -o nounset
+          set -o errexit  # Exit upon encountering a failure.
+          set -o nounset  # Consider an undefined variable to be an error.
+          if (( "$#" == 0 )); then
+            exit
+          fi
           for FILE in "$@"; do
             DIRNAME="$(dirname "${FILE}")"
             if [[ "$(basename "${DIRNAME}")" != "test" ]]; then
@@ -138,7 +145,11 @@ repos:
         name: json-tool
         entry: |
           bash -c '
-          set -o nounset
+          set -o errexit  # Exit upon encountering a failure.
+          set -o nounset  # Consider an undefined variable to be an error.
+          if (( "$#" == 0 )); then
+            exit
+          fi
           for FILE in "$@"; do
             python -m json.tool --no-ensure-ascii --indent 2 \
               "${FILE}" "${FILE}";
@@ -334,7 +345,8 @@ repos:
         name: stats
         entry: |
           bash -c '
-          set -o nounset
+          set -o errexit  # Exit upon encountering a failure.
+          set -o nounset  # Consider an undefined variable to be an error.
           if ((
             $(date +%s) - $(tail -n 1 data/stats.tsv | cut --fields 2) >= 86400
           )); then
@@ -343,47 +355,60 @@ repos:
           fi'
         language: system
         pass_filenames: false
-        always_run: true
       # Python Unit Tests
       - id: python-unittest
         name: python-unittest
         entry: |
           bash -c '
-          set -o nounset
+          set -o errexit  # Exit upon encountering a failure.
+          set -o nounset  # Consider an undefined variable to be an error.
+          if (( "$#" == 0 )); then
+            exit
+          fi
           for DIR in $(dirname "$@" | grep --invert "/test$" | sort | uniq); do
             python -m unittest discover "${DIR}";
           done' --
         language: system
         types: [python]
         verbose: true
-      # DO NOT SUBMIT
+      # DO-NOT-SUBMIT
       - id: check-do-not-submit
         name: check-do-not-submit
+        # NOTE: Running the script with `errexit` is problematic, although it
+        # is not understood why.
+        # NOTE: We mangle the regex using extra parentheses to prevent it from
+        # matching itself.
         entry: |
           bash -c '
-          set -o nounset
-          DO_NOT_SUBMIT="$(grep "DO NOT (SUBMIT|COMMIT)" --extended-regexp \
+          set -o nounset  # Consider an undefined variable to be an error.
+          if (( "$#" == 0 )); then
+            exit
+          fi
+          DO_NOT_SUBMIT="$(grep "(DO) (NOT) (SUBMIT|COMMIT)" --extended-regexp \
             --files-with-matches --ignore-case "${@}")"
           if [ -n "${DO_NOT_SUBMIT}" ]; then
-            echo -e "${RED} DO NOT SUBMIT markers found in"\
+            echo -e "${RED} DO-NOT-SUBMIT markers found in"\
               "${YELLOW}${DO_NOT_SUBMIT}${RED}.${RESET}"
             exit 1
           fi' --
         language: system
-        exclude: ^\.pre-commit-config\.yaml$
       # One README
       - id: check-one-readme
         name: check-one-readme
         entry: |
           bash -c '
-          set -o nounset
-          FOUND="$(find . -name README.md -mindepth 2 \
-            -not -path "./archive/*" -not -path "./node_modules/*")"
-          if [ -n "${FOUND}" ]; then
-            echo -e "${PURPLE}Only the README.md at the root is allowed."\
-              "Please delete ${RED}${FOUND}${PURPLE}.${RESET}"
-            exit 1
-          fi'
+          set -o errexit  # Exit upon encountering a failure.
+          set -o nounset  # Consider an undefined variable to be an error.
+          if (( "$#" == 0 )); then
+            exit
+          fi
+          for FILE in "${@}"; do
+            BASENAME="$(basename "${FILE}")"
+            if [[ "${BASENAME}" == "README.md" ]]; then
+              echo -e "${PURPLE}Only the README.md at the root is allowed."\
+                "Please delete ${RED}${FILE}${PURPLE}.${RESET}"
+              exit 1
+            fi
+          done'
         language: system
-        pass_filenames: false
-        always_run: true
+        exclude: ^README.md$
