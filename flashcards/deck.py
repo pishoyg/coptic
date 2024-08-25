@@ -15,9 +15,6 @@ HTML_FMT = f"""<!DOCTYPE html>
 <html>
   <head>
     <title>{{title}}</title>
-    <meta name="deck_id" content="{{deck_id}}"/>
-    <meta name="deck_name" content="{{deck_name}}"/>
-    <meta name="deck_description" content="{{deck_description}}"/>
     <link rel="stylesheet" type="text/css" href="{CSS_BASENAME}">
     <script type="text/javascript" src="{JS_BASENAME}" defer></script>
   </head>
@@ -215,9 +212,6 @@ class deck:
             with open(os.path.join(dir, rk + ".html"), "w") as f:
                 f.write(
                     HTML_FMT.format(
-                        deck_id=self.deck_id,
-                        deck_name=self.deck_name,
-                        deck_description=self.deck_description,
                         css=self.css,
                         javascript=self.javascript,
                         title=title,
