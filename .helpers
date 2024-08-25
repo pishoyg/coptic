@@ -96,3 +96,26 @@ grepex () {
 grepexx () {
   ffindexx "${1}" -exec grep "${@:2}" --binary-files="without-match" --color=auto --with-filename --line-number {} \;
 }
+
+# Search for TODO's.
+# NOTE: We "mangle" the regex using extra parentheses in order to prevent it
+# from matching itself.
+todo() {
+  PATTERN='TODO(:) '
+  ISSUE="${1}"
+  if (( "$#" > 1 )); then
+    echo -e "${RED}This takes up to one parameter, namely ${YELLOW}an issue number${RED}, or the string ${YELLOW}'stray'${RED}. Got ${PURPLE}${*}${RED}.${RESET}"
+    return
+  fi
+  if [[ "${ISSUE}" == "stray" ]]; then
+    # Search for TODO's without an assigned issue.
+    PATTERN="${PATTERN}(?!\(#[0-9]+\))"
+  elif [ -n "${ISSUE}" ]; then
+    if echo "${ISSUE}" | grep --quiet --extended-regexp '^[0-9]+$'; then
+      echo -e "${RED}The parameter should be either ${YELLOW}an issue number${RED}, or the string ${YELLOW}'stray'${RED}. Got ${PURPLE}${ISSUE}${RED}.${RESET}"
+      return
+    fi
+    PATTERN="${PATTERN}\(#${ISSUE}\)"
+  fi
+  grepexx . --perl-regexp "${PATTERN}"
+}

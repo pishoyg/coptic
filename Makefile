@@ -73,12 +73,6 @@ diff: git_diff
 .PHONY: toil
 toil: crum_img_helper
 
-.PHONY: todo
-todo: _todo
-
-.PHONY: todo_no_issue
-todo_no_issue: _todo_no_issue
-
 .PHONY: update
 update: precommit_update pip_update
 
@@ -87,12 +81,6 @@ camera: camera_images
 
 .PHONY: yo
 yo: say_yo
-
-.PHONY: env_backup
-env_backup: env_cp_to_home
-
-.PHONY: env_restore
-env_restore: env_cp_from_home
 
 # LEVEL 1 RULES ###############################################################
 
@@ -271,22 +259,8 @@ precommit_install:
 git_add_precommit_run git_add_precommit_run_1: FORCE
 	until git add --all && pre-commit run; do : ; done
 
-env_cp_to_home: FORCE
-	cp .env "$${HOME}/.env_coptic"
-
-env_cp_from_home: FORCE
-	cp "$${HOME}/.env_coptic" .env
-
 precommit_update: FORCE
 	pre-commit autoupdate
-
-# NOTE: We "mangle" the regex using extra parentheses in order to prevent it
-# from matching itself. Same below.
-_todo: FORCE
-	. ./.helpers && grepexx . --extended-regexp 'TODO(:) '
-
-_todo_no_issue: FORCE
-	. ./.helpers && grepexx . --perl-regexp 'TODO(:) (?!\(#[0-9]+\))'
 
 git_clean: FORCE
 	git clean \
