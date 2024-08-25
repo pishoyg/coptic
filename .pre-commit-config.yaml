@@ -55,10 +55,10 @@ repos:
             exit
           fi
           TODO="$(grep "TODO(:) (?!\(#[0-9]+\))" --perl-regexp \
-            --ignore-case --color=auto "${@}")"
+            --ignore-case --color=always "${@}")"
           if [ -n "${TODO}" ]; then
-            echo -e "${RED} Stray TODO markers found. Please add an issue"\
-              "number to each TODO:\n${YELLOW}${TODO}${RED}.${RESET}"
+            echo -e "${YELLOW}Stray TODO markers found. Please add an issue"\
+              "number to each TODO:\n${RESET}${TODO}"
           fi' --
         language: system
         verbose: true
