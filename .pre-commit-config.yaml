@@ -42,6 +42,24 @@ repos:
         pass_filenames: true
         verbose: true
         require_serial: true
+      - id: check-todo
+        name: check-todo
+        # TODO: (#66) Once all existing TODO's have been assigned issues,
+        # change the following to an error rather than simply a warning.
+        entry: |
+          bash -c '
+          set -o nounset
+          TODO="$(grep "TODO(:) (?!\(#[0-9]+\))" --perl-regexp \
+            --ignore-case --color=auto "${@}")"
+          if [ -n "${TODO}" ]; then
+            echo -e "${RED} Stray TODO markers found. Please add an issue"\
+              "number to each TODO:\n${YELLOW}${TODO}${RED}.${RESET}"
+          fi' --
+        language: system
+        always_run: true
+        pass_filenames: true
+        verbose: true
+        require_serial: true
   # TypeScript and JavaScript
   - repo: https://github.com/pre-commit/mirrors-eslint
     rev: v9.9.0
