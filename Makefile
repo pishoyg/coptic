@@ -56,7 +56,7 @@ flashcards_copticsite: _flashcards_copticsite
 flashcards_kellia: _flashcards_kellia
 
 .PHONY: bible_no_epub
-bible_no_epub: bible_no_epub_aux
+bible_no_epub: _bible_no_epub
 
 .PHONY: stats
 stats: stats_save
@@ -91,7 +91,7 @@ ts_transpile: FORCE
 bible: FORCE
 	python bible/stshenouda.org/main.py
 
-bible_no_epub_aux: FORCE
+_bible_no_epub: FORCE
 	python bible/stshenouda.org/main.py \
 		--no_epub=true
 
