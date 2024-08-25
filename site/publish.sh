@@ -82,7 +82,7 @@ pre () {
 
   mkdir "${CRUM_DIR}"
   cp -r \
-    flashcards/data/output/html/a_coptic_dictionary__all_dialects/* \
+    flashcards/data/output/web/a_coptic_dictionary__all_dialects/* \
     "${CRUM_DIR}"
 
   mkdir "${BIBLE_DIR}"

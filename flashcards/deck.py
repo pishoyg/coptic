@@ -204,7 +204,7 @@ class deck:
             shutil.rmtree(dir)
         pathlib.Path(dir).mkdir(parents=True)
 
-    def write_html(self, dir: str) -> None:
+    def write_web(self, dir: str) -> None:
         self.clean_dir(dir)
         for rk, front, back, title in zip(
             self.raw_keys, self.fronts, self.backs, self.titles

@@ -196,7 +196,7 @@ _flashcards_crum_all_dialects: FORCE
 		--decks "A Coptic Dictionary::All Dialects" \
 		--output_dir "/tmp/" \
 		--anki "/tmp/crum_all_dialects.apkg" \
-		--html_mask "true" \
+		--web_mask "true" \
 		--tsvs_mask ""
 
 _flashcards_copticsite: FORCE
@@ -204,7 +204,7 @@ _flashcards_copticsite: FORCE
 		--decks "copticsite.com" \
 		--output_dir "/tmp/" \
 		--anki "/tmp/anki/copticsite.apkg" \
-		--html_mask "true" \
+		--web_mask "true" \
 		--tsvs_mask ""
 
 _flashcards_kellia: FORCE
@@ -212,7 +212,7 @@ _flashcards_kellia: FORCE
 		--decks "KELLIA::Comprehensive" "KELLIA::Egyptian" "KELLIA::Greek"\
 		--output_dir "/tmp/" \
 		--anki "/tmp/anki/kellia.apkg" \
-		--html_mask "true" "true" "true" \
+		--web_mask "true" "true" "true" \
 		--tsvs_mask "" "" ""
 
 # KINDLE RULES

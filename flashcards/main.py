@@ -44,12 +44,12 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
-    "--html_mask",
+    "--web_mask",
     type=bool,
     nargs="*",
     default=[True] + [False] * (len(constants.LAMBDAS) - 1),
-    help="A mask indicating whether to write output for deck_i in HTML."
-    "The path will be ${OUTPUT_DIR}/html/${DECK_NAME_NORMALIZED}.html.",
+    help="A mask indicating whether to write output for deck_i in WEB format."
+    "The path will be ${OUTPUT_DIR}/web/${DECK_NAME_NORMALIZED}/${FILE_BASENAME}",
 )
 
 
@@ -93,14 +93,14 @@ def main() -> None:
     work_dir = tempfile.TemporaryDirectory()
     field.init(work_dir.name)
     decks = [constants.LAMBDAS[name](name) for name in args.decks]
-    assert len(decks) == len(args.html_mask)
+    assert len(decks) == len(args.web_mask)
 
     for idx, d in enumerate(decks):
         filename = constants.file_name(d.deck_name)
-        if args.html_mask[idx]:
-            dir = os.path.join(args.output_dir, "html", filename)
+        if args.web_mask[idx]:
+            dir = os.path.join(args.output_dir, "web", filename)
             pathlib.Path(dir).mkdir(exist_ok=True)
-            d.write_html(dir)
+            d.write_web(dir)
 
     if args.anki:
         write_anki(decks, os.path.join(args.output_dir, "anki", args.anki))
