@@ -41,7 +41,9 @@ COVER = "bible/stshenouda.org/data/img/stauros.jpeg"
 ENFORCED = True
 Callable = typing.Callable | type_enforced.enforcer.FunctionMethodEnforcer
 
-argparser = argparse.ArgumentParser(description="Process the Coptic Bible data.")
+argparser = argparse.ArgumentParser(
+    description="Process the Coptic Bible data."
+)
 
 argparser.add_argument(
     "--no_epub",
@@ -152,7 +154,10 @@ def recolor(v: str, verse: dict) -> str:
         if not word or not color:
             continue
         ranges.extend(
-            [RangeColor(idx, idx + len(word), color) for idx in find_all(v, word)]
+            [
+                RangeColor(idx, idx + len(word), color)
+                for idx in find_all(v, word)
+            ]
         )
     ranges = sorted(ranges, key=compare_range_color)
     if not ranges:
@@ -318,7 +323,9 @@ def html_toc(books: list[str], href: Callable) -> str:
 def write_html(html: dict, books: list[str]) -> None:
     for lang in LANGUAGES + PARALLELS:
         for book_name in books:
-            out = html_head(book_name) + html_body("\n".join(html[lang][book_name]))
+            out = html_head(book_name) + html_body(
+                "\n".join(html[lang][book_name])
+            )
             path = writing_path("html", lang, file_name(book_name))
             utils.write(out, path)
 
@@ -358,7 +365,9 @@ def write_epub(html: dict, books: list, subdir: str) -> None:
         spine = [cover, toc]
 
         for book_name in books:
-            c = epub.EpubHtml(title=book_name, file_name=epub_book_href(book_name))
+            c = epub.EpubHtml(
+                title=book_name, file_name=epub_book_href(book_name)
+            )
             c.set_content(
                 html_head(book_name)
                 + "<body>"
@@ -382,7 +391,9 @@ def process_sources(books: list[str]) -> None:
     out = []
     for book_name in books:
         try:
-            t = open(os.path.join(SOURCES_DIR, book_name + "_Sources.json")).read()
+            t = open(
+                os.path.join(SOURCES_DIR, book_name + "_Sources.json")
+            ).read()
         except FileNotFoundError:
             utils.warn("No sources found for", book_name)
             continue
@@ -394,7 +405,9 @@ def process_sources(books: list[str]) -> None:
         for lang in LANGUAGES:
             out.append("<h2>" + lang + "</h2>")
             out.append(
-                "<br/>".join("  - " + line for line in data[lang].split("\n") if line)
+                "<br/>".join(
+                    "  - " + line for line in data[lang].split("\n") if line
+                )
             )
 
     out = "\n".join(out)
@@ -441,8 +454,11 @@ def main() -> None:
                     book_to_section_indexed[book_name] = "{}. {}".format(
                         section_idx, section_name
                     )
-                    book_to_section_indexed_no_testament[book_name] = "{}. {}".format(
-                        str(section_idx_no_testament).zfill(2), section_name
+                    book_to_section_indexed_no_testament[book_name] = (
+                        "{}. {}".format(
+                            str(section_idx_no_testament).zfill(2),
+                            section_name,
+                        )
                     )
                     book_to_book_indexed[book_name] = "{}. {}".format(
                         str(book_idx).zfill(2), book_name
@@ -524,7 +540,9 @@ def main() -> None:
                     html2[lang][book_name].append(pb2.verse(*recolored))
                     html3[lang][book_name].append(pb3.verse(*recolored))
 
-                book_df = pd.concat([book_df, pd.DataFrame([d])], ignore_index=True)
+                book_df = pd.concat(
+                    [book_df, pd.DataFrame([d])], ignore_index=True
+                )
             for lang in PARALLELS:
                 html1[lang][book_name].append(pb1.end_chapter())
                 html2[lang][book_name].append(pb2.end_chapter())

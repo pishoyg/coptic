@@ -58,7 +58,9 @@ def fatal(*args):
 
 
 @type_enforced.Enforcer(enabled=ENFORCED)
-def write(content: str, path: str, log: bool = True, fix_newline: bool = True) -> None:
+def write(
+    content: str, path: str, log: bool = True, fix_newline: bool = True
+) -> None:
     if fix_newline and (not content or content[-1] != "\n"):
         content += "\n"
     with open(path, "w") as f:
@@ -75,7 +77,9 @@ def wrote(path: str) -> None:
 
 @type_enforced.Enforcer(enabled=ENFORCED)
 def json_dumps(j, **kwargs) -> str:
-    return json.dumps(j, indent=2, ensure_ascii=False, allow_nan=False, **kwargs)
+    return json.dumps(
+        j, indent=2, ensure_ascii=False, allow_nan=False, **kwargs
+    )
 
 
 @type_enforced.Enforcer(enabled=ENFORCED)
@@ -187,7 +191,9 @@ def use_html_line_breaks(text: str) -> str:
 @type_enforced.Enforcer(enabled=ENFORCED)
 def _semver_sort_key(path: str) -> list[str]:
     path = os.path.basename(path)
-    return [x.zfill(MAX_INTEGER_LENGTH) for x in INTEGER_RE.findall(path)] + [path]
+    return [x.zfill(MAX_INTEGER_LENGTH) for x in INTEGER_RE.findall(path)] + [
+        path
+    ]
 
 
 @type_enforced.Enforcer(enabled=ENFORCED)
@@ -197,7 +203,9 @@ def sort_semver(paths: list[str]) -> list[str]:
 
 @type_enforced.Enforcer(enabled=ENFORCED)
 def verify_unique(arr, message: str) -> None:
-    dupes = [item for item, count in collections.Counter(arr).items() if count > 1]
+    dupes = [
+        item for item, count in collections.Counter(arr).items() if count > 1
+    ]
     if dupes:
         fatal(message, "duplicate elements:", dupes)
 
@@ -235,8 +243,10 @@ def download_gsheet(
         "https://www.googleapis.com/auth/drive.file",
         "https://www.googleapis.com/auth/drive",
     ]
-    credentials = service_account.ServiceAccountCredentials.from_json_keyfile_name(
-        os.environ["JSON_KEYFILE_NAME"], GSPREAD_SCOPE
+    credentials = (
+        service_account.ServiceAccountCredentials.from_json_keyfile_name(
+            os.environ["JSON_KEYFILE_NAME"], GSPREAD_SCOPE
+        )
     )
     sheet = gspread.authorize(credentials).open_by_url(gspread_url)
     records = sheet.get_worksheet(worksheet).get_all_records()

@@ -78,7 +78,9 @@ class txt(_primitive_field):
     A constant text field.
     """
 
-    def __init__(self, text: str, line_br: bool = False, force: bool = True) -> None:
+    def __init__(
+        self, text: str, line_br: bool = False, force: bool = True
+    ) -> None:
         if force:
             assert text
         if line_br:
@@ -200,10 +202,8 @@ class gsheet(_content_field):
         if gspread_url in _gsheet:
             sheet = _gsheet[gspread_url]
         else:
-            credentials = (
-                service_account.ServiceAccountCredentials.from_json_keyfile_name(
-                    json_keyfile_name, GSPREAD_SCOPE
-                )
+            credentials = service_account.ServiceAccountCredentials.from_json_keyfile_name(
+                json_keyfile_name, GSPREAD_SCOPE
             )
             sheet = gspread.authorize(credentials).open_by_url(gspread_url)
         records = sheet.get_worksheet(0).get_all_records()
@@ -251,7 +251,9 @@ class grp(_content_field):
             key_to_selected[group_by.next()].append(selected.next())
         if unique:
             assert all(len(value) == 1 for value in key_to_selected.values())
-            key_to_selected = {key: value[0] for key, value in key_to_selected.items()}
+            key_to_selected = {
+                key: value[0] for key, value in key_to_selected.items()
+            }
         content = [key_to_selected[k] for k in keys]
         super().__init__(content, [], force)
 
@@ -466,7 +468,8 @@ def _convert_strings(
     *fields: FieldOrStr,
 ) -> list[*Field]:
     return [
-        txt(f, line_br=False, force=False) if isinstance(f, str) else f for f in fields
+        txt(f, line_br=False, force=False) if isinstance(f, str) else f
+        for f in fields
     ]
 
 

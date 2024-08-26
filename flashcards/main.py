@@ -60,8 +60,12 @@ def verify_unique_object_keys(decks: list[genanki.Deck]) -> None:
     utils.verify_unique(
         [model.name for d in decks for model in d.models], "Model names"
     )
-    utils.verify_unique([model.id for d in decks for model in d.models], "Model ids")
-    utils.verify_unique([node.guid for d in decks for node in d.notes], "Node GUIDs.")
+    utils.verify_unique(
+        [model.id for d in decks for model in d.models], "Model ids"
+    )
+    utils.verify_unique(
+        [node.guid for d in decks for node in d.notes], "Node GUIDs."
+    )
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)

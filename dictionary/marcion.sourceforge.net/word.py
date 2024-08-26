@@ -34,7 +34,9 @@ class type:
         if is_root:
             # Genders are not allowed as root types.
             # TODO: Add some root-specific checks for extra rigor.
-            assert inflect_type is None or isinstance(inflect_type, inflect.Type)
+            assert inflect_type is None or isinstance(
+                inflect_type, inflect.Type
+            )
 
     def marcion(self) -> str:
         return self._marcion
@@ -82,7 +84,8 @@ class structured_word:
         if normalize_assumed:
             self._assumed = [self._is_assumed(s) for s in self._spellings]
             self._spellings = [
-                s[1:-1] if a else s for s, a in zip(self._spellings, self._assumed)
+                s[1:-1] if a else s
+                for s, a in zip(self._spellings, self._assumed)
             ]
             for s in self._spellings:
                 # TODO: Remove the special case.
@@ -228,7 +231,10 @@ class structured_word:
         if not parenthesize_assumed:
             return self._spellings
         assert len(self._spellings) == len(self._assumed)
-        return [f"({s})" if a else s for s, a in zip(self._spellings, self._assumed)]
+        return [
+            f"({s})" if a else s
+            for s, a in zip(self._spellings, self._assumed)
+        ]
 
     def _is_normalized_assumed(self) -> bool:
         if not self._spellings:

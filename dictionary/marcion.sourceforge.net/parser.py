@@ -75,7 +75,9 @@ def verify(want_reference_count):
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def _apply_substitutions(line: str, subs: list, use_coptic_symbol: bool) -> str:
+def _apply_substitutions(
+    line: str, subs: list, use_coptic_symbol: bool
+) -> str:
     for pair in subs:
         p0 = pair[0]
         p1 = pair[1]
@@ -167,7 +169,9 @@ def parse_word_cell(
         # Undialected and Ⳉ, it's Akhmimic!
         if any("ⳉ" in spelling for spelling in s):
             d = ["A"]
-        return [lexical.structured_word(d, s, t, r, root_type, normalize=normalize)]
+        return [
+            lexical.structured_word(d, s, t, r, root_type, normalize=normalize)
+        ]
 
     while line:
         # Parse the dialects.
@@ -235,7 +239,9 @@ def _parse_spellings_and_types(
         cur, line = _pick_up_detached_types(line, constants.DETACHED_TYPES_1)
         types.extend(cur)
     else:
-        line = _apply_substitutions(line, constants.DETACHED_TYPES_1, use_coptic_symbol)
+        line = _apply_substitutions(
+            line, constants.DETACHED_TYPES_1, use_coptic_symbol
+        )
 
     line = _apply_substitutions(
         line, constants.SPELLING_ANNOTATIONS_2, use_coptic_symbol
@@ -245,7 +251,9 @@ def _parse_spellings_and_types(
         cur, line = _pick_up_detached_types(line, constants.DETACHED_TYPES_2)
         types.extend(cur)
     else:
-        line = _apply_substitutions(line, constants.DETACHED_TYPES_2, use_coptic_symbol)
+        line = _apply_substitutions(
+            line, constants.DETACHED_TYPES_2, use_coptic_symbol
+        )
 
     spellings = constants.COMMA_NOT_BETWEEN_PARENTHESES_RE.split(line)
     spellings = list(map(clean, spellings))
@@ -258,22 +266,31 @@ def _analyze_no_english(line_no_english: str) -> None:
     # _parse_spellings_and_types.
     # For the sake of rigor, investigate the content of the no-English subset.
     line_no_english = _apply_substitutions(
-        line_no_english, constants.SPELLING_ANNOTATIONS_1, use_coptic_symbol=True
+        line_no_english,
+        constants.SPELLING_ANNOTATIONS_1,
+        use_coptic_symbol=True,
     )
     _, line_no_english = _pick_up_detached_types(
         line_no_english, constants.DETACHED_TYPES_1
     )
     line_no_english = _apply_substitutions(
-        line_no_english, constants.SPELLING_ANNOTATIONS_2, use_coptic_symbol=True
+        line_no_english,
+        constants.SPELLING_ANNOTATIONS_2,
+        use_coptic_symbol=True,
     )
     _, line_no_english = _pick_up_detached_types(
         line_no_english, constants.DETACHED_TYPES_2
     )
     line_no_english = line_no_english.replace("(?)", "")  # TODO: Ugly! :/
-    spellings = constants.COMMA_NOT_BETWEEN_PARENTHESES_RE.split(line_no_english)
+    spellings = constants.COMMA_NOT_BETWEEN_PARENTHESES_RE.split(
+        line_no_english
+    )
     for s in spellings:
         for c in s:
-            valid = c in constants.LETTERS or c in constants.ACCEPTED_UNKNOWN_CHARS_2
+            valid = (
+                c in constants.LETTERS
+                or c in constants.ACCEPTED_UNKNOWN_CHARS_2
+            )
             if not valid:
                 utils.error(s)
 
@@ -301,7 +318,10 @@ def _parse_coptic(line: str) -> tuple[str, str]:
     out_no_english = []
     while line:
         copt, eng, line = _chop(
-            line, constants.ENGLISH_WITHIN_COPTIC_RE, strict=False, strip_ends=True
+            line,
+            constants.ENGLISH_WITHIN_COPTIC_RE,
+            strict=False,
+            strip_ends=True,
         )
         if copt:
             copt = _ascii_to_unicode(copt)
@@ -320,7 +340,10 @@ def _parse_english(line: str) -> str:
     out = []
     while line:
         eng, copt, line = _chop(
-            line, constants.COPTIC_WITHIN_ENGLISH_RE, strict=False, strip_ends=True
+            line,
+            constants.COPTIC_WITHIN_ENGLISH_RE,
+            strict=False,
+            strip_ends=True,
         )
         if eng:
             out.append(eng)
@@ -334,7 +357,9 @@ def _parse_english(line: str) -> str:
             assert not t
             # TODO: (#63) Stop using words for Coptic within English!
             out.append(
-                lexical.structured_word([], s, t, [], None, normalize=True).string(
+                lexical.structured_word(
+                    [], s, t, [], None, normalize=True
+                ).string(
                     include_references=True,
                     parenthesize_assumed=True,
                 )
@@ -349,7 +374,10 @@ def parse_english_cell(line: str) -> str:
     out = []
     while line:
         eng, greek, line = _chop(
-            line, constants.GREEK_WITHIN_ENGLISH_RE, strict=False, strip_ends=True
+            line,
+            constants.GREEK_WITHIN_ENGLISH_RE,
+            strict=False,
+            strip_ends=True,
         )
         if eng:
             out.append(_parse_english(eng))
@@ -439,7 +467,9 @@ def _parse_reference(line: str):  # -> typing.Generator[str, None, None]:
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def _munch_and_parse_dialects(line: str, strict: bool) -> tuple[list[str], str]:
+def _munch_and_parse_dialects(
+    line: str, strict: bool
+) -> tuple[list[str], str]:
     match, line = _munch(line, constants.DIALECTS_RE, strict)
     if not strict and not match:
         return [], line

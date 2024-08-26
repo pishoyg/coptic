@@ -221,7 +221,9 @@ class deck:
                 )
         with open(os.path.join(dir, JS_BASENAME), "w") as f:
             f.write(
-                JS_FMT.format(javascript=self.javascript.replace("'use strict';", ""))
+                JS_FMT.format(
+                    javascript=self.javascript.replace("'use strict';", "")
+                )
             )
         with open(os.path.join(dir, CSS_BASENAME), "w") as f:
             f.write(self.css)

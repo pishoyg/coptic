@@ -101,7 +101,9 @@ class OrthString(Reformat):
         if not geos:
             geos = ["S"]
         for g in geos:
-            self._pishoy.append(Line(self._last_gram_grp, orth_text, g, form_id))
+            self._pishoy.append(
+                Line(self._last_gram_grp, orth_text, g, form_id)
+            )
         geos = [g + "^^" + form_id for g in geos]
         for g in geos:
             self._amir += orth_text + "~" + g + "\n"
@@ -127,11 +129,17 @@ class EtymString(Reformat):
                 elif child.tag == "{http://www.tei-c.org/ns/1.0}ref":
                     if "type" in child.attrib and "target" in child.attrib:
                         self._amir += (
-                            child.attrib["type"] + ": " + child.attrib["target"] + " "
+                            child.attrib["type"]
+                            + ": "
+                            + child.attrib["target"]
+                            + " "
                         )
                     elif "targetLang" in child.attrib:
                         self._amir += (
-                            child.attrib["targetLang"] + ": " + child.text + " "
+                            child.attrib["targetLang"]
+                            + ": "
+                            + child.text
+                            + " "
                         )
                     elif "type" in child.attrib:
                         if "greek" in child.attrib["type"]:
@@ -177,7 +185,13 @@ class EtymString(Reformat):
             for ref in xr:
                 ref_target = clean(ref.attrib["target"])
                 self._amir += (
-                    xr.attrib["type"] + ". " + "#" + ref_target + "# " + ref.text + " "
+                    xr.attrib["type"]
+                    + ". "
+                    + "#"
+                    + ref_target
+                    + "# "
+                    + ref.text
+                    + " "
                 )
 
     def greek_id(self):
@@ -258,7 +272,8 @@ class Sense:
                 "<tr>",
                 '<td id="meaning">',
                 "\n".join(
-                    self.format(*pair) for pair in self.subset("quote", "definition")
+                    self.format(*pair)
+                    for pair in self.subset("quote", "definition")
                 ),
                 "</td>",
                 '<td id="bibl">',
@@ -549,13 +564,17 @@ def link_greek(etym):
     if m is None:
         return etym
     greek = m.group(1).strip()
-    href = "https://www.billmounce.com/search/node/{key}%20type%3Alexicon".format(
-        key=greek
+    href = (
+        "https://www.billmounce.com/search/node/{key}%20type%3Alexicon".format(
+            key=greek
+        )
     )
 
     # Convert polytonic Greek to beta-code using perseids-tools/beta-code-py conversion table
     link = ' <a href="{href}">'.format(href=href) + greek + ";</a>"
-    linked = re.sub(r"(cf\. Gr\.[^<>]*</span>)[^<>]+(<i>)", r"\1" + link + r"\2", etym)
+    linked = re.sub(
+        r"(cf\. Gr\.[^<>]*</span>)[^<>]+(<i>)", r"\1" + link + r"\2", etym
+    )
 
     return linked
 
@@ -590,7 +609,9 @@ def get(attr, line):
 def get_entity_types(pub_corpora_dir):
     if not pub_corpora_dir.endswith(os.sep):
         pub_corpora_dir += os.sep
-    tt_files = glob.glob(pub_corpora_dir + "**" + os.sep + "*.tt", recursive=True)
+    tt_files = glob.glob(
+        pub_corpora_dir + "**" + os.sep + "*.tt", recursive=True
+    )
     entity_types = defaultdict(set)
     for file_ in tt_files:
         sgml = io.open(file_, encoding="utf8").read()
@@ -820,8 +841,12 @@ def process_entry(id, super_id, entry, entry_xml_id):
         for sense_child in sense:
             if sense_child.tag == "{http://www.tei-c.org/ns/1.0}cit":
                 bibl = sense_child.find("{http://www.tei-c.org/ns/1.0}bibl")
-                quotes = sense_child.findall("{http://www.tei-c.org/ns/1.0}quote")
-                definitions = sense_child.findall("{http://www.tei-c.org/ns/1.0}def")
+                quotes = sense_child.findall(
+                    "{http://www.tei-c.org/ns/1.0}quote"
+                )
+                definitions = sense_child.findall(
+                    "{http://www.tei-c.org/ns/1.0}def"
+                )
 
                 q = Quote()
                 for quote in quotes:
@@ -831,7 +856,9 @@ def process_entry(id, super_id, entry, entry_xml_id):
                             q.no_definitions()
                         else:
                             q.yes_definitions()
-                        lang = quote.get("{http://www.w3.org/XML/1998/namespace}lang")
+                        lang = quote.get(
+                            "{http://www.w3.org/XML/1998/namespace}lang"
+                        )
                         if lang == "de":
                             de.add_quote(q)
                         elif lang == "en":
@@ -963,7 +990,9 @@ def process_super_entry(entry_id, super_id, super_entry):
         ]
         lemma = [f for f in forms if f.attrib["type"] == "lemma"]
         if len(lemma) > 0:
-            lemma_form_id = lemma[0].attrib["{http://www.w3.org/XML/1998/namespace}id"]
+            lemma_form_id = lemma[0].attrib[
+                "{http://www.w3.org/XML/1998/namespace}id"
+            ]
         else:
             lemma_form_id = ""
 
@@ -993,7 +1022,10 @@ def pos_map(pos, subc, orthstring):
         or pos == "Kompositum"
     ):
         return "N"
-    elif "Ausdruck der Nichtexistenz" in subc or "Ausdruck des Nicht-Habens" in subc:
+    elif (
+        "Ausdruck der Nichtexistenz" in subc
+        or "Ausdruck des Nicht-Habens" in subc
+    ):
         return "EXIST"
     elif pos == "Adv.":
         return "ADV"
@@ -1010,9 +1042,17 @@ def pos_map(pos, subc, orthstring):
             return "V"
     elif pos == "Präp.":
         return "PREP"
-    elif pos == "Zahlzeichen" or pos == "Zahlwort" or pos == "Präfix der Ordinalzahlen":
+    elif (
+        pos == "Zahlzeichen"
+        or pos == "Zahlwort"
+        or pos == "Präfix der Ordinalzahlen"
+    ):
         return "NUM"
-    elif pos == "Partikel" or pos == "Interjektion" or pos == "Partikel, enklitisch":
+    elif (
+        pos == "Partikel"
+        or pos == "Interjektion"
+        or pos == "Partikel, enklitisch"
+    ):
         return "PTC"
     elif (
         pos == "Selbst. Pers. Pron."
@@ -1089,7 +1129,8 @@ def main():
             if child.tag == "{http://www.tei-c.org/ns/1.0}entry":
                 entry_xml_id = (
                     child.attrib["{http://www.w3.org/XML/1998/namespace}id"]
-                    if "{http://www.w3.org/XML/1998/namespace}id" in child.attrib
+                    if "{http://www.w3.org/XML/1998/namespace}id"
+                    in child.attrib
                     else ""
                 )
 

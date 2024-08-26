@@ -24,7 +24,10 @@ DICT_WIDTH = "1000px"
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def crum(
-    deck_name: str, deck_id: int, dialect_cols: list[str], force_front: bool = True
+    deck_name: str,
+    deck_id: int,
+    dialect_cols: list[str],
+    force_front: bool = True,
 ) -> deck.deck:
 
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -105,11 +108,13 @@ def crum(
 
     def _explanatory_alt(path: str) -> str:
         assert (
-            os.path.dirname(path) == "dictionary/marcion.sourceforge.net/data/img-300"
+            os.path.dirname(path)
+            == "dictionary/marcion.sourceforge.net/data/img-300"
         )
         stem = utils.stem(path)
         source_path = os.path.join(
-            "dictionary/marcion.sourceforge.net/data/img-sources", stem + ".txt"
+            "dictionary/marcion.sourceforge.net/data/img-sources",
+            stem + ".txt",
         )
         source = utils.read(source_path).strip()
         if source == "manual":
@@ -133,7 +138,9 @@ def crum(
         deck_id=deck_id,
         deck_description=f"{HOME}.\n{EMAIL}.",
         css=utils.read("flashcards/constants/a_coptic_dictionary/style.css"),
-        javascript=utils.read("flashcards/data/build/a_coptic_dictionary/script.js"),
+        javascript=utils.read(
+            "flashcards/data/build/a_coptic_dictionary/script.js"
+        ),
         # NOTE: The key is a protected field. Do not change unless you know what
         # you're doing.
         key=roots_col("key"),
@@ -146,7 +153,11 @@ def crum(
                     '<table class="header">',
                     "<tr>",
                     # Home
-                    "<td>" f'<a class="home" href="{HOME}">' "home" "</a>" "</td>",
+                    "<td>"
+                    f'<a class="home" href="{HOME}">'
+                    "home"
+                    "</a>"
+                    "</td>",
                     # Contact
                     "<td>"
                     f'<a class="contact" href="mailto:{EMAIL}">'
@@ -213,7 +224,9 @@ def crum(
                 ),
                 "<br/>",
                 # Meaning.
-                field.apl(greek, roots_col("en-parsed", line_br=True, force=False)),
+                field.apl(
+                    greek, roots_col("en-parsed", line_br=True, force=False)
+                ),
                 # Dictionary pages.
                 field.cat(
                     '<span class="right">',
@@ -232,7 +245,8 @@ def crum(
                             '<b><a href="#dawoud" class="hover-link">Dawoud: </a></b>',
                             field.apl(
                                 lambda pages: DICTIONARY_PAGE_RE.sub(
-                                    r'<span class="dawoud-page">\1</span>', pages
+                                    r'<span class="dawoud-page">\1</span>',
+                                    pages,
                                 ),
                                 root_appendix("dawoud-pages", force=False),
                             ),
@@ -272,7 +286,8 @@ def crum(
                 roots_col("word-parsed-classify", line_br=True),
                 # Derivations.
                 field.apl(
-                    greek, roots_col("derivations-table", line_br=True, force=False)
+                    greek,
+                    roots_col("derivations-table", line_br=True, force=False),
                 ),
                 # Crum's pages.
                 field.aon(
@@ -375,7 +390,9 @@ def crum(
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-    def col(col_name: str, line_br: bool = False, force: bool = True) -> field.tsvs:
+    def col(
+        col_name: str, line_br: bool = False, force: bool = True
+    ) -> field.tsvs:
         return field.tsvs(
             "dictionary/copticsite.com/data/output/tsvs/output.tsvs",
             col_name,
@@ -421,7 +438,9 @@ def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def kellia(deck_name: str, deck_id: int, basename: str) -> deck.deck:
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-    def col(col_name: str, line_br: bool = False, force: bool = True) -> field.tsvs:
+    def col(
+        col_name: str, line_br: bool = False, force: bool = True
+    ) -> field.tsvs:
         return field.tsvs(
             f"dictionary/kellia.uni-goettingen.de/data/output/tsvs/{basename}.tsvs",
             col_name,
@@ -535,16 +554,21 @@ class _dir_lister:
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class _sensor:
     def __init__(self, keys: list[str], sense_jsons: list[str]) -> None:
-        self.decoder = json.JSONDecoder(object_pairs_hook=self.dupe_checking_hook)
+        self.decoder = json.JSONDecoder(
+            object_pairs_hook=self.dupe_checking_hook
+        )
         assert len(keys) == len(sense_jsons)
         self.d: dict = {
-            k: self.decoder.decode(ss) if ss else {} for k, ss in zip(keys, sense_jsons)
+            k: self.decoder.decode(ss) if ss else {}
+            for k, ss in zip(keys, sense_jsons)
         }
 
     def dupe_checking_hook(self, pairs: list) -> dict[str, str]:
         if any(
             count > 1
-            for _, count in collections.Counter(map(lambda p: p[0], pairs)).items()
+            for _, count in collections.Counter(
+                map(lambda p: p[0], pairs)
+            ).items()
         ):
             utils.fatal("duplicate elements in JSON:", pairs)
         return {key: value for key, value in pairs}
@@ -607,7 +631,9 @@ def file_name(deck_name: str) -> str:
     Given a deck name, return a string that is valid as a file name. Remove
     invalid characters, and make it filename-like.
     """
-    return deck_name.lower().replace(" ", "_").replace(":", "_").replace("/", "-")
+    return (
+        deck_name.lower().replace(" ", "_").replace(":", "_").replace("/", "-")
+    )
 
 
 LAMBDAS: dict[str, enforcer.Callable] = {
@@ -632,6 +658,8 @@ LAMBDAS: dict[str, enforcer.Callable] = {
     KELLIA_COMPREHENSIVE: lambda deck_name: kellia(
         deck_name, 1284010391, "comprehensive"
     ),
-    KELLIA_EGYPTIAN: lambda deck_name: kellia(deck_name, 1284010392, "egyptian"),
+    KELLIA_EGYPTIAN: lambda deck_name: kellia(
+        deck_name, 1284010392, "egyptian"
+    ),
     KELLIA_GREEK: lambda deck_name: kellia(deck_name, 1284010393, "greek"),
 }

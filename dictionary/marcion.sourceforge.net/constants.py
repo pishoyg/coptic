@@ -23,7 +23,9 @@ MAX_DERIVATION_DEPTH = 4
 CRUM_LAST_PAGE_NUM = 953
 
 # Regular expressions used for parsing.
-DIALECTS_RE = re.compile(r"\({d}(,{d})*\)".format(d="({})".format("|".join(DIALECTS))))
+DIALECTS_RE = re.compile(
+    r"\({d}(,{d})*\)".format(d="({})".format("|".join(DIALECTS)))
+)
 SPELLINGS_TYPES_REFERENCES_RE = re.compile(r"[^()]+")
 
 ENGLISH_WITHIN_COPTIC_RE = re.compile(r"\{[^\{\}]+\}")
@@ -33,14 +35,18 @@ PARSED_GREEK_WITHIN_ENGLISH_RE = re.compile(r"(\[[ ,()&c?;Α-Ωα-ω]+\])")
 
 CRUM_RE = re.compile(r"^(\d{1,3})(a|b)$")
 REFERENCE_RE = re.compile(r'\*\^<a href="([^"<>]+)">([^<>]+)</a>([^<>]*)\^\*')
-COMMA_NOT_BETWEEN_PARENTHESES_RE = re.compile(r",(?![^()]*\)|[^{}]*\}|[^\[\]]*\])")
+COMMA_NOT_BETWEEN_PARENTHESES_RE = re.compile(
+    r",(?![^()]*\)|[^{}]*\}|[^\[\]]*\])"
+)
 PURE_COPTIC_RE = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
 PAGE_NUMER_RE = re.compile("[0-9]{1,3}[ab]$")
 CLASS_RE = re.compile("[a-z ]+|-")
 TWO_TABS_RE = re.compile("\t\t")
 ENGLISH_LETTER_RE = re.compile("[a-zA-Z]")
 
-CRUM_PAGE_FMT = "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID={key}"
+CRUM_PAGE_FMT = (
+    "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID={key}"
+)
 CARD_LINK_FMT = "https://metremnqymi.com/crum/{key}.html"
 
 # LETTER_ENCODING is used to convert ASCII-encoded Coptic text to unicode.
@@ -152,9 +158,15 @@ QUALITY_ENCODING = {
 TYPE_ENCODING = {
     0: lexical.type("-", "(-)", "-", None, append=False),
     # (ⲟⲩ)
-    3: lexical.type("noun", "(noun)", "noun", inflect.Type.NOUN_UNKNOWN_GENDER),
-    1: lexical.type("noun male", "(ⲡ)", "noun male", inflect.Type.NOUN_MASCULINE),
-    4: lexical.type("noun female", "(ⲧ)", "noun female", inflect.Type.NOUN_FEMININE),
+    3: lexical.type(
+        "noun", "(noun)", "noun", inflect.Type.NOUN_UNKNOWN_GENDER
+    ),
+    1: lexical.type(
+        "noun male", "(ⲡ)", "noun male", inflect.Type.NOUN_MASCULINE
+    ),
+    4: lexical.type(
+        "noun female", "(ⲧ)", "noun female", inflect.Type.NOUN_FEMININE
+    ),
     22: lexical.type(
         "noun male/female",
         "(ⲡ/ⲧ)",
@@ -164,28 +176,44 @@ TYPE_ENCODING = {
     8: lexical.type("plural", "(ⲛ)", "plural", inflect.Type.NOUN_PLURAL),
     5: lexical.type("pronoun", "(pron.)", "pronoun", None),
     23: lexical.type(
-        "interrogative particle", "(interr. part.)", "interrogative particle", None
+        "interrogative particle",
+        "(interr. part.)",
+        "interrogative particle",
+        None,
     ),
     14: lexical.type(
-        "interrogative pronoun", "(interr. pron.)", "interrogative pronoun", None
+        "interrogative pronoun",
+        "(interr. pron.)",
+        "interrogative pronoun",
+        None,
     ),
     15: lexical.type(
         "interrogative adverb", "(interr. adv.)", "interrogative adverb", None
     ),
-    2: lexical.type("verb", "(v.)", "verb", inflect.Type.VERB_INFINITIVE, append=False),
+    2: lexical.type(
+        "verb", "(v.)", "verb", inflect.Type.VERB_INFINITIVE, append=False
+    ),
     21: lexical.type("verbal prefix", "(v. prefix)", "verbal prefix", None),
     6: lexical.type(
-        "adjective", "(adj.)", "adjective", inflect.Type.NOUN_MASCULINE_OR_FEMININE
+        "adjective",
+        "(adj.)",
+        "adjective",
+        inflect.Type.NOUN_MASCULINE_OR_FEMININE,
     ),
     16: lexical.type("conjunction", "(conj.)", "conjunction", None),
     7: lexical.type("adverb", "(adv.)", "adverb", None),
     9: lexical.type("preposition", "(prep.)", "preposition", None),
-    13: lexical.type("numeral", "(num.)", "numeral", inflect.Type.NOUN_UNKNOWN_GENDER),
+    13: lexical.type(
+        "numeral", "(num.)", "numeral", inflect.Type.NOUN_UNKNOWN_GENDER
+    ),
     10: lexical.type(
         "numeral male", "(num. ⲡ)", "numeral male", inflect.Type.NOUN_MASCULINE
     ),
     11: lexical.type(
-        "numeral female", "(num. ⲧ)", "numeral female", inflect.Type.NOUN_FEMININE
+        "numeral female",
+        "(num. ⲧ)",
+        "numeral female",
+        inflect.Type.NOUN_FEMININE,
     ),
     24: lexical.type(
         "numeral male/female",
@@ -195,7 +223,9 @@ TYPE_ENCODING = {
     ),
     17: lexical.type("particle", "(part.)", "particle", None),
     18: lexical.type("interjection", "(interjection)", "interjection", None),
-    20: lexical.type("personal pronoun", "(pers. pron.)", "personal pronoun", None),
+    20: lexical.type(
+        "personal pronoun", "(pers. pron.)", "personal pronoun", None
+    ),
     99: lexical.type("HEADER", "(HEADER)", "HEADER", None, append=False),
 }
 
@@ -238,11 +268,15 @@ SPELLING_ANNOTATIONS_1 = [
     ),
     (
         "=",
-        lexical.type("=", "=", "pronominal form", inflect.Type.VERB_PRONOMINAL),
+        lexical.type(
+            "=", "=", "pronominal form", inflect.Type.VERB_PRONOMINAL
+        ),
     ),  # Pronominal form. # ⸗
     (
         "+",
-        lexical.type("+", "+", "qualitative form", inflect.Type.VERB_QUALITATIVE),
+        lexical.type(
+            "+", "+", "qualitative form", inflect.Type.VERB_QUALITATIVE
+        ),
     ),  # (ⲉϥ)
 ]
 
@@ -262,18 +296,26 @@ DETACHED_TYPES_1 = [
     ("$**", lexical.type("<i>neg </i>", "(neg.)", "neg", None)),
     (
         "$*",
-        lexical.type("<i>(nn)</i>", "(nn)", "(nn)", inflect.Type.NOUN_UNKNOWN_GENDER),
+        lexical.type(
+            "<i>(nn)</i>", "(nn)", "(nn)", inflect.Type.NOUN_UNKNOWN_GENDER
+        ),
     ),
     (
         "**$",
         lexical.type(
-            "<i>noun female: </i>", "(ⲧ)", "noun female", inflect.Type.NOUN_FEMININE
+            "<i>noun female: </i>",
+            "(ⲧ)",
+            "noun female",
+            inflect.Type.NOUN_FEMININE,
         ),
     ),
     (
         "*$",
         lexical.type(
-            "<i>noun male: </i>", "(ⲡ)", "noun male", inflect.Type.NOUN_MASCULINE
+            "<i>noun male: </i>",
+            "(ⲡ)",
+            "noun male",
+            inflect.Type.NOUN_MASCULINE,
         ),
     ),
     (
@@ -284,21 +326,45 @@ DETACHED_TYPES_1 = [
     ),  # (ⲟⲩ)
     # TODO: (#115) The following types likely apply to the subset of spellings
     # occurring after the type, not the whole line.
-    ("****", lexical.type("<i>female: </i>", "(ⲧ)", "female", lexical.Gender.FEMININE)),
-    ("***", lexical.type("<i>male: </i>", "(ⲡ)", "male", lexical.Gender.MASCULINE)),
+    (
+        "****",
+        lexical.type(
+            "<i>female: </i>", "(ⲧ)", "female", lexical.Gender.FEMININE
+        ),
+    ),
+    (
+        "***",
+        lexical.type("<i>male: </i>", "(ⲡ)", "male", lexical.Gender.MASCULINE),
+    ),
     (
         "**",
         lexical.type(
-            "<i>imperative: </i>", "(imp.)", "imperative", inflect.Type.VERB_IMPERATIVE
+            "<i>imperative: </i>",
+            "(imp.)",
+            "imperative",
+            inflect.Type.VERB_IMPERATIVE,
         ),
     ),
-    ("*", lexical.type("<i>plural: </i>", "(ⲛ)", "plural", lexical.Gender.PLURAL)),
+    (
+        "*",
+        lexical.type(
+            "<i>plural: </i>", "(ⲛ)", "plural", lexical.Gender.PLURAL
+        ),
+    ),
     ("$", lexical.type("<i> &c</i>", "(&c)", "constructed with", None)),
-    ("^^^", lexical.type("<i><b>c</b></i>", "(c)", "Not sure what this means!", None)),
+    (
+        "^^^",
+        lexical.type(
+            "<i><b>c</b></i>", "(c)", "Not sure what this means!", None
+        ),
+    ),
     # TODO: (#115) {nic} is definitely spelling-specific! Its presence here
     # means it's currently interpreted as applying to all spellings in a word!
     # Fix!
-    ("{nic}", lexical.type("{nic}", "{nic}", "{nic}", None, append=False)),  # No idea!
+    (
+        "{nic}",
+        lexical.type("{nic}", "{nic}", "{nic}", None, append=False),
+    ),  # No idea!
 ]
 
 SPELLING_ANNOTATIONS_2 = [
@@ -306,7 +372,10 @@ SPELLING_ANNOTATIONS_2 = [
 ]
 
 DETACHED_TYPES_2 = [
-    ("^", lexical.type("<i>p c </i>", "(p.c.)", "conjunctive participle", None)),
+    (
+        "^",
+        lexical.type("<i>p c </i>", "(p.c.)", "conjunctive participle", None),
+    ),
 ]
 
 # ACCEPTED_UNKNOWN_CHARS are characters that shouldn't cause confusion when

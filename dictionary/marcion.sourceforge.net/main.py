@@ -72,7 +72,9 @@ def main() -> None:
     write(roots, "roots")
 
     # Write the derivations.
-    derivations.sort_values(by=SORT_DERIVATIONS, key=series_to_int, inplace=True)
+    derivations.sort_values(
+        by=SORT_DERIVATIONS, key=series_to_int, inplace=True
+    )
     write(derivations, "derivations")
 
 
@@ -135,7 +137,9 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
     keysmith = keyer(df)
     for _, row in df.iterrows():
         if strict:
-            insert("key", "-link", constants.CARD_LINK_FMT.format(key=row["key"]))
+            insert(
+                "key", "-link", constants.CARD_LINK_FMT.format(key=row["key"])
+            )
         else:
             insert(
                 "key",
@@ -159,20 +163,32 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
             "\n".join(w.string(classify=True) for w in word),
         )
         word = parser.parse_word_cell(
-            row[WORD_COL], root_type, strict, detach_types=True, use_coptic_symbol=True
+            row[WORD_COL],
+            root_type,
+            strict,
+            detach_types=True,
+            use_coptic_symbol=True,
         )
         insert(WORD_COL, "-title", title(word))
         insert(
             WORD_COL,
             "-parsed-prettify",
             "\n".join(
-                w.string(include_references=False, append_root_type=True, classify=True)
+                w.string(
+                    include_references=False,
+                    append_root_type=True,
+                    classify=True,
+                )
                 for w in word
             ),
         )
 
         if strict:
-            insert(QUALITY_COL, "-parsed", parser.parse_quality_cell(row[QUALITY_COL]))
+            insert(
+                QUALITY_COL,
+                "-parsed",
+                parser.parse_quality_cell(row[QUALITY_COL]),
+            )
         insert(TYPE_COL, "-parsed", root_type.marcion())
         insert(GR_COL, "-parsed", parser.parse_greek_cell(row[GR_COL]))
         ep = parser.parse_english_cell(row[EN_COL])
@@ -185,7 +201,9 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         else:
             insert(CRUM_COL, "-link", constants.CRUM_PAGE_FMT.format(key=crum))
         for d in FILTER_DIALECTS:
-            subset = [w for w in word if w.is_dialect(d, undialected_is_all=True)]
+            subset = [
+                w for w in word if w.is_dialect(d, undialected_is_all=True)
+            ]
             entry = "\n".join(
                 w.string(
                     include_dialects=False,
@@ -215,7 +233,9 @@ def build_trees(roots: pd.DataFrame, derivations: pd.DataFrame) -> None:
         t.preprocess()
 
     # Add extra columns to the parents, using the derivations.
-    roots[CRUM_COL + "-pages"] = [",".join(trees[key].crum_pages()) for key in keys]
+    roots[CRUM_COL + "-pages"] = [
+        ",".join(trees[key].crum_pages()) for key in keys
+    ]
     roots["derivations-table"] = [trees[key].html_table() for key in keys]
     roots["derivations-list"] = [trees[key].html_list() for key in keys]
 

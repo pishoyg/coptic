@@ -46,7 +46,9 @@ class node:
         assert self.is_root()
         assert not self._preprocessed
         # Sort.
-        self._descendants = sorted(self._descendants, key=lambda n: int(n.cell("pos")))
+        self._descendants = sorted(
+            self._descendants, key=lambda n: int(n.cell("pos"))
+        )
         # Populate the field needed for retrieving children by key.
         self._key_to_idx = {
             d.cell("key"): idx for idx, d in enumerate(self._descendants)
@@ -63,7 +65,9 @@ class node:
     def descendants(self, include_root: bool = False):
         assert self.is_root()
         assert self._preprocessed
-        return [self] + self._descendants if include_root else self._descendants
+        return (
+            [self] + self._descendants if include_root else self._descendants
+        )
 
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def crum_pages(self) -> list[str]:
@@ -122,8 +126,12 @@ class node:
         Args:
             explain: If true, include the meaning, type, and Crum page number.
         """
-        assert dialect is None, "Grouping derivations by dialect is still premature."
-        assert not include_root, "An HTML tree with the root is not yet supported."
+        assert (
+            dialect is None
+        ), "Grouping derivations by dialect is still premature."
+        assert (
+            not include_root
+        ), "An HTML tree with the root is not yet supported."
         assert self.is_root()
         assert self._preprocessed
 
@@ -235,7 +243,9 @@ class node:
         self,
         include_root: bool = False,
     ) -> str:
-        assert not include_root, "An HTML tree with the root is not yet supported."
+        assert (
+            not include_root
+        ), "An HTML tree with the root is not yet supported."
         assert self.is_root()
         assert self._preprocessed
 

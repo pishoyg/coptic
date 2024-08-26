@@ -153,7 +153,9 @@ class entry:
         self._inflections = inflections
 
     def xhtml(self) -> str:
-        inflections = [INFL_XHTML_FMT.format(form=i) for i in self._inflections]
+        inflections = [
+            INFL_XHTML_FMT.format(form=i) for i in self._inflections
+        ]
         inflections = "\n".join(inflections)
         xhtml = ENTRY_XHTML_FMT.format(
             id=self._id,
@@ -178,7 +180,12 @@ class volume:
 @type_enforced.Enforcer(enabled=TYPE_ENFORCED)
 class dictionary:
     def __init__(
-        self, title: str, author: str, identifier: str, cover_path: str, zfill: int = 0
+        self,
+        title: str,
+        author: str,
+        identifier: str,
+        cover_path: str,
+        zfill: int = 0,
     ) -> None:
         """
         Args:
@@ -296,7 +303,9 @@ class dictionary:
         pathlib.Path(dir).mkdir(exist_ok=True)
 
         # Copy the cover image.
-        shutil.copyfile(self._cover_path, os.path.join(dir, self._cover_basename))
+        shutil.copyfile(
+            self._cover_path, os.path.join(dir, self._cover_basename)
+        )
 
         # Add the dictionary files.
         filename_to_content: dict[str, str] = dict(self.xhtmls())

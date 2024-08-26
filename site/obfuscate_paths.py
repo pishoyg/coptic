@@ -56,7 +56,9 @@ def obfuscate_paths(dir: str) -> None:
                 return match.group(0)
             return f'{match.group(1)}="{map[original]}"'
 
-        utils.write(SRC_RE.sub(replacer, html), path, log=False, fix_newline=False)
+        utils.write(
+            SRC_RE.sub(replacer, html), path, log=False, fix_newline=False
+        )
 
 
 def main():

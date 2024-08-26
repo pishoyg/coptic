@@ -25,7 +25,9 @@ FILE_NAME_RE = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
 STEM_RE = re.compile("[0-9]+-[0-9]+-[0-9]+")
 
 
-INPUT_TSVS: str = "dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs"
+INPUT_TSVS: str = (
+    "dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs"
+)
 APPENDICES_TSV: str = (
     "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv"
 )
@@ -293,7 +295,9 @@ def convert(path: str, skip_existing: bool = False) -> None:
 def main():
     global args
     args = argparser.parse_args()
-    actions = list(filter(None, [args.validate, args.batch, args.rm, args.mv, args.cp]))
+    actions = list(
+        filter(None, [args.validate, args.batch, args.rm, args.mv, args.cp])
+    )
     if len(actions) >= 2:
         utils.fatal("Up to one action argument can be given at a time.")
 
@@ -317,7 +321,9 @@ def main():
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def retrieve(
-    url: str, filename: typing.Optional[str] = None, headers: dict[str, str] = {}
+    url: str,
+    filename: typing.Optional[str] = None,
+    headers: dict[str, str] = {},
 ) -> str:
     if filename is None:
         filename = os.path.basename(url)
@@ -461,7 +467,8 @@ def prompt():
                 files = get_downloads()
                 if files:
                     utils.error(
-                        "You can't skip with a dirty downloads directory:", files
+                        "You can't skip with a dirty downloads directory:",
+                        files,
                     )
                     continue
                 # We clear the sources!
@@ -550,7 +557,9 @@ def prompt():
                 auth = requests_oauthlib.OAuth1(
                     args.thenounproject_key, args.thenounproject_secret
                 )
-                resp = requests.get(ICON_SEARCH_FMT.format(query=sense), auth=auth)
+                resp = requests.get(
+                    ICON_SEARCH_FMT.format(query=sense), auth=auth
+                )
                 if not resp.ok:
                     utils.error("", resp.text)
                     continue
@@ -579,7 +588,9 @@ def prompt():
             files = get_downloads()
 
             # Force valid extension.
-            invalid = [e for e in map(utils.ext, files) if e not in VALID_EXTENSIONS]
+            invalid = [
+                e for e in map(utils.ext, files) if e not in VALID_EXTENSIONS
+            ]
             if invalid:
                 utils.error(
                     "Invalid extensions:",

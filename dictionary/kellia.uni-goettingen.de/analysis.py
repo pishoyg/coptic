@@ -74,7 +74,9 @@ def prettify(d: dict) -> str:
 # ... etc.
 @type_enforced.Enforcer
 def analyze(soup: bs4.BeautifulSoup | bs4.Tag) -> str:
-    all_tag_names = {tag.name for tag in soup.descendants if isinstance(tag, bs4.Tag)}
+    all_tag_names = {
+        tag.name for tag in soup.descendants if isinstance(tag, bs4.Tag)
+    }
 
     tree = {}
     for name in all_tag_names:
