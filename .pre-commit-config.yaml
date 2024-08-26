@@ -62,6 +62,7 @@ repos:
           fi' --
         language: system
         verbose: true
+        types: [text]
         require_serial: true
   # TypeScript and JavaScript
   - repo: https://github.com/pre-commit/mirrors-eslint
@@ -392,6 +393,7 @@ repos:
             exit 1
           fi' --
         language: system
+        types: [text]
       # One README
       - id: check-one-readme
         name: check-one-readme
@@ -412,3 +414,4 @@ repos:
           done'
         language: system
         exclude: ^README.md$
+        types: [markdown]
