@@ -51,7 +51,6 @@ Remarks about the parsing:
 """
 
 import re
-import urllib
 
 import constants
 import enforcer
@@ -554,9 +553,3 @@ def lighten_greek(line: str) -> str:
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def lighten(line: str) -> str:
     return f'<span style="opacity:0.7">{line}</span>'
-
-
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def add_a_href(link_fmt: str, key: str) -> str:
-    link = link_fmt.format(key=urllib.parse.quote(key))
-    return '<a href="{link}">{key}</a>'.format(link=link, key=key)

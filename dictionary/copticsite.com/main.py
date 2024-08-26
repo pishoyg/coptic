@@ -273,21 +273,6 @@ SUFFIX = {
 
 
 @type_enforced.Enforcer
-def get_suffix(kind: str, gender: str) -> str:
-    if kind not in SUFFIX:
-        return ""
-    gender_map = SUFFIX[kind]
-    if isinstance(gender_map, str):
-        return gender_map
-    assert isinstance(gender_map, dict)
-    if gender in gender_map:
-        return gender_map[gender]
-    if "*" in gender_map:
-        return gender_map["*"]
-    return ""
-
-
-@type_enforced.Enforcer
 def main() -> None:
     df = pd.read_excel(INPUT_XLSX, dtype=str).fillna("")
     df.dropna(inplace=True)

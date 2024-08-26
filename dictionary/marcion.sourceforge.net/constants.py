@@ -6,7 +6,7 @@ from morphology import inflect
 
 # Dialects.
 DIALECTS = ["S", "Sa", "Sf", "A", "sA", "B", "F", "Fb", "O", "NH"]
-DIALECT_TO_NAME = {
+DIALECT_TO_NAME = {  # dead: disable
     "S": "Sahidic",
     "Sa": "Akhmimic Sahidic",
     "Sf": "Fayyumic Sahidic",
@@ -39,10 +39,6 @@ COMMA_NOT_BETWEEN_PARENTHESES_RE = re.compile(
     r",(?![^()]*\)|[^{}]*\}|[^\[\]]*\])",
 )
 PURE_COPTIC_RE = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
-PAGE_NUMER_RE = re.compile("[0-9]{1,3}[ab]$")
-CLASS_RE = re.compile("[a-z ]+|-")
-TWO_TABS_RE = re.compile("\t\t")
-ENGLISH_LETTER_RE = re.compile("[a-zA-Z]")
 
 CRUM_PAGE_FMT = (
     "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID={key}"

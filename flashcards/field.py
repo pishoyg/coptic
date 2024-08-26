@@ -176,7 +176,7 @@ class tsvs(_content_field):
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-class gsheet(_content_field):
+class gsheet(_content_field):  # dead: disable
     """A column from a Google sheet."""
 
     def __init__(
@@ -206,7 +206,7 @@ class gsheet(_content_field):
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-class grp(_content_field):
+class grp(_content_field):  # dead: disable
     """
     Group entries in a TSV or gsheet column using another column.
     See this example:
@@ -376,7 +376,6 @@ class apl(field):
 
 # NOTE: This must follow the last field subclass definition.
 Field = type_enforced.utils.WithSubclasses(field)
-OptionalField = Field + [None]
 FieldOrStr = Field + [str]
 
 
