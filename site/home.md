@@ -127,10 +127,14 @@ The data used here was digitalized and published through the efforts of:
 
 1. Milan Konvicka, creator of [Marcion](https://marcion.sourceforge.net/)
 
-1. Hany Takla, founder of [Saint Shenouda The Archimandrite – Coptic
+1. [KELLIA](https://kellia.uni-goettingen.de/) Alliance
+
+1. Hany Takla, founder of [Saint Shenouda The Archimandrite Coptic
    Society](http://stshenouda.org/)
 
 1. Osama Thabet, creator of [copticsite.com](https://copticsite.com/)
 
+1. The [Coptic Treasures](https://coptic-treasures.com/) team
+
 1. [Kyrillos Wannes](https://twitter.com/kyrilloswannes), author of *Een
-   Inleiding tot Bohairisch Koptisch*.
+   Inleiding tot Bohairisch Koptisch*
