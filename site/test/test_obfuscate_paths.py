@@ -4,7 +4,6 @@ import obfuscate_paths
 
 
 class Test(unittest.TestCase):
-
     def test(self):
         pass
 

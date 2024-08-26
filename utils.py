@@ -59,7 +59,10 @@ def fatal(*args):
 
 @type_enforced.Enforcer(enabled=ENFORCED)
 def write(
-    content: str, path: str, log: bool = True, fix_newline: bool = True
+    content: str,
+    path: str,
+    log: bool = True,
+    fix_newline: bool = True,
 ) -> None:
     if fix_newline and (not content or content[-1] != "\n"):
         content += "\n"
@@ -78,7 +81,11 @@ def wrote(path: str) -> None:
 @type_enforced.Enforcer(enabled=ENFORCED)
 def json_dumps(j, **kwargs) -> str:
     return json.dumps(
-        j, indent=2, ensure_ascii=False, allow_nan=False, **kwargs
+        j,
+        indent=2,
+        ensure_ascii=False,
+        allow_nan=False,
+        **kwargs,
     )
 
 
@@ -192,7 +199,7 @@ def use_html_line_breaks(text: str) -> str:
 def _semver_sort_key(path: str) -> list[str]:
     path = os.path.basename(path)
     return [x.zfill(MAX_INTEGER_LENGTH) for x in INTEGER_RE.findall(path)] + [
-        path
+        path,
     ]
 
 
@@ -245,7 +252,8 @@ def download_gsheet(
     ]
     credentials = (
         service_account.ServiceAccountCredentials.from_json_keyfile_name(
-            os.environ["JSON_KEYFILE_NAME"], GSPREAD_SCOPE
+            os.environ["JSON_KEYFILE_NAME"],
+            GSPREAD_SCOPE,
         )
     )
     sheet = gspread.authorize(credentials).open_by_url(gspread_url)

@@ -4,7 +4,6 @@ import img_helper
 
 
 class Test(unittest.TestCase):
-
     def test(self):
         pass
 

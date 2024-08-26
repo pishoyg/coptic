@@ -68,7 +68,7 @@ WIKI_HEADERS = {
 }
 
 argparser = argparse.ArgumentParser(
-    description="""Find and process images for the dictionary words."""
+    description="""Find and process images for the dictionary words.""",
 )
 
 argparser.add_argument(
@@ -286,7 +286,7 @@ def convert(path: str, skip_existing: bool = False) -> None:
             "-resize",
             f"{TARGET_WIDTH}x",
             target,
-        ]
+        ],
     )
     utils.wrote(target)
 
@@ -296,7 +296,7 @@ def main():
     global args
     args = argparser.parse_args()
     actions = list(
-        filter(None, [args.validate, args.batch, args.rm, args.mv, args.cp])
+        filter(None, [args.validate, args.batch, args.rm, args.mv, args.cp]),
     )
     if len(actions) >= 2:
         utils.fatal("Up to one action argument can be given at a time.")
@@ -387,7 +387,6 @@ def cp(a_stem: str, b_stem: str) -> None:
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def prompt():
-
     df = utils.read_tsvs(INPUT_TSVS, KEY_COL)
     df["senses"] = utils.read_tsv(APPENDICES_TSV, KEY_COL)["senses"]
 
@@ -423,7 +422,7 @@ def prompt():
                 "open",
                 str(row[LINK_COL]),
                 query(utils.html_text(str(row[MEANING_COL]))),
-            ]
+            ],
         )
 
         assign_source_re = re.compile(r"^source\(([^=]+)\)=(.+)$")
@@ -455,8 +454,8 @@ def prompt():
                         "- 'cs' to clear sources, or",
                         "- sense number to initiate transfer",
                         "",
-                    ]
-                )
+                    ],
+                ),
             )
             sense = sense.strip()
             if not sense:
@@ -555,10 +554,12 @@ def prompt():
                 # This is likely a search query.
                 sense = sense[5:]
                 auth = requests_oauthlib.OAuth1(
-                    args.thenounproject_key, args.thenounproject_secret
+                    args.thenounproject_key,
+                    args.thenounproject_secret,
                 )
                 resp = requests.get(
-                    ICON_SEARCH_FMT.format(query=sense), auth=auth
+                    ICON_SEARCH_FMT.format(query=sense),
+                    auth=auth,
                 )
                 if not resp.ok:
                     utils.error("", resp.text)
@@ -620,7 +621,7 @@ def prompt():
             if not files:
                 utils.error(
                     "You typed a sense, but there are no pictures! This"
-                    " doesn't make sense!"
+                    " doesn't make sense!",
                 )
                 continue
 
@@ -684,7 +685,9 @@ def validate():
 
     # Checking that extensions are valid.
     utils.verify_all_belong_to_set(
-        utils.exts(images), VALID_EXTENSIONS, "Images: Unknown extension:"
+        utils.exts(images),
+        VALID_EXTENSIONS,
+        "Images: Unknown extension:",
     )
     utils.verify_all_belong_to_set(
         utils.exts(converted_images),
@@ -692,7 +695,9 @@ def validate():
         "Converted Images: Unknown extension:",
     )
     utils.verify_all_belong_to_set(
-        utils.exts(sources), {".txt"}, "Sources: Unknown extension:"
+        utils.exts(sources),
+        {".txt"},
+        "Sources: Unknown extension:",
     )
 
     # Verify that all three directories have the same set of IDs.
@@ -702,7 +707,9 @@ def validate():
         "Images and converted images:",
     )
     utils.verify_equal_sets(
-        utils.stems(images), utils.stems(sources), "Images and sources:"
+        utils.stems(images),
+        utils.stems(sources),
+        "Images and sources:",
     )
 
     # Check that all images have valid IDs.

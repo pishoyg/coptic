@@ -76,7 +76,9 @@ def verify(want_reference_count):
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _apply_substitutions(
-    line: str, subs: list, use_coptic_symbol: bool
+    line: str,
+    subs: list,
+    use_coptic_symbol: bool,
 ) -> str:
     for pair in subs:
         p0 = pair[0]
@@ -108,7 +110,10 @@ def _munch(text: str, regex: re.Pattern, strict: bool) -> tuple[str, str]:
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _chop(
-    text: str, regex: re.Pattern, strict: bool, strip_ends: bool
+    text: str,
+    regex: re.Pattern,
+    strict: bool,
+    strip_ends: bool,
 ) -> tuple[str, str, str]:
     # Extract a substring matching the given regex from the given text. Return
     # all three parts.
@@ -120,10 +125,10 @@ def _chop(
     elif not s:
         return text, "", ""
     i, j = s.span()
-    l, m, r = text[:i], text[i:j], text[j:]
+    left, mid, right = text[:i], text[i:j], text[j:]
     if strip_ends:
-        l, r = l.strip(), r.strip()
-    return l, m, r
+        left, right = left.strip(), right.strip()
+    return left, mid, right
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -162,7 +167,10 @@ def parse_word_cell(
     if strict and not constants.DIALECTS_RE.search(line):
         d = []
         s, t, r, line = _munch_and_parse_spellings_types_and_references(
-            line, strict, detach_types, use_coptic_symbol
+            line,
+            strict,
+            detach_types,
+            use_coptic_symbol,
         )
         # In strict mode, an undialected entry exists on its own.
         assert not line
@@ -170,7 +178,14 @@ def parse_word_cell(
         if any("ⳉ" in spelling for spelling in s):
             d = ["A"]
         return [
-            lexical.structured_word(d, s, t, r, root_type, normalize=normalize)
+            lexical.structured_word(
+                d,
+                s,
+                t,
+                r,
+                root_type,
+                normalize=normalize,
+            ),
         ]
 
     while line:
@@ -178,10 +193,20 @@ def parse_word_cell(
         d, line = _munch_and_parse_dialects(line, strict)
         # Parse the spellings, types, and references.
         s, t, r, line = _munch_and_parse_spellings_types_and_references(
-            line, strict, detach_types, use_coptic_symbol
+            line,
+            strict,
+            detach_types,
+            use_coptic_symbol,
         )
         words.append(
-            lexical.structured_word(d, s, t, r, root_type, normalize=normalize)
+            lexical.structured_word(
+                d,
+                s,
+                t,
+                r,
+                root_type,
+                normalize=normalize,
+            ),
         )
 
     return words
@@ -194,14 +219,16 @@ def _munch_and_parse_spellings_types_and_references(
     detach_types: bool,
     use_coptic_symbol: bool,
 ):  # -> tuple[list[str], list[lexical.type], list[str], str]:
-
     match, line = _munch(line, constants.SPELLINGS_TYPES_REFERENCES_RE, strict)
 
     ss, tt, rr = [], [], []
 
     while match:
         spelling_and_types, reference, match = _chop(
-            match, constants.REFERENCE_RE, strict=False, strip_ends=True
+            match,
+            constants.REFERENCE_RE,
+            strict=False,
+            strip_ends=True,
         )
         if reference:
             rr.extend(_parse_reference(reference))
@@ -209,7 +236,9 @@ def _munch_and_parse_spellings_types_and_references(
             _reference_count += 1
         if spelling_and_types:
             s, t = _parse_spellings_and_types(
-                spelling_and_types, detach_types, use_coptic_symbol
+                spelling_and_types,
+                detach_types,
+                use_coptic_symbol,
             )
             ss.extend(s)
             tt.extend(t)
@@ -219,20 +248,26 @@ def _munch_and_parse_spellings_types_and_references(
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _parse_spellings_and_types(
-    line: str, detach_types: bool, use_coptic_symbol: bool
+    line: str,
+    detach_types: bool,
+    use_coptic_symbol: bool,
 ):  # ) -> tuple[list[str], list[lexical.type]]:
     # This makes the assumption that references have been removed.
     types = []
 
     line = _apply_substitutions(
-        line, constants.PARENTHESES_AND_BRACKETS, use_coptic_symbol
+        line,
+        constants.PARENTHESES_AND_BRACKETS,
+        use_coptic_symbol,
     )
 
     line, line_no_english = _parse_coptic(line)
     _analyze_no_english(line_no_english)
 
     line = _apply_substitutions(
-        line, constants.SPELLING_ANNOTATIONS_1, use_coptic_symbol
+        line,
+        constants.SPELLING_ANNOTATIONS_1,
+        use_coptic_symbol,
     )
 
     if detach_types:
@@ -240,11 +275,15 @@ def _parse_spellings_and_types(
         types.extend(cur)
     else:
         line = _apply_substitutions(
-            line, constants.DETACHED_TYPES_1, use_coptic_symbol
+            line,
+            constants.DETACHED_TYPES_1,
+            use_coptic_symbol,
         )
 
     line = _apply_substitutions(
-        line, constants.SPELLING_ANNOTATIONS_2, use_coptic_symbol
+        line,
+        constants.SPELLING_ANNOTATIONS_2,
+        use_coptic_symbol,
     )
 
     if detach_types:
@@ -252,7 +291,9 @@ def _parse_spellings_and_types(
         types.extend(cur)
     else:
         line = _apply_substitutions(
-            line, constants.DETACHED_TYPES_2, use_coptic_symbol
+            line,
+            constants.DETACHED_TYPES_2,
+            use_coptic_symbol,
         )
 
     spellings = constants.COMMA_NOT_BETWEEN_PARENTHESES_RE.split(line)
@@ -271,7 +312,8 @@ def _analyze_no_english(line_no_english: str) -> None:
         use_coptic_symbol=True,
     )
     _, line_no_english = _pick_up_detached_types(
-        line_no_english, constants.DETACHED_TYPES_1
+        line_no_english,
+        constants.DETACHED_TYPES_1,
     )
     line_no_english = _apply_substitutions(
         line_no_english,
@@ -279,11 +321,12 @@ def _analyze_no_english(line_no_english: str) -> None:
         use_coptic_symbol=True,
     )
     _, line_no_english = _pick_up_detached_types(
-        line_no_english, constants.DETACHED_TYPES_2
+        line_no_english,
+        constants.DETACHED_TYPES_2,
     )
     line_no_english = line_no_english.replace("(?)", "")  # TODO: Ugly! :/
     spellings = constants.COMMA_NOT_BETWEEN_PARENTHESES_RE.split(
-        line_no_english
+        line_no_english,
     )
     for s in spellings:
         for c in s:
@@ -297,7 +340,8 @@ def _analyze_no_english(line_no_english: str) -> None:
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _pick_up_detached_types(
-    line: str, detached_types: list[tuple[str, lexical.type]]
+    line: str,
+    detached_types: list[tuple[str, lexical.type]],
 ) -> tuple[list[lexical.type], str]:
     t = []
     for p in detached_types:
@@ -309,10 +353,10 @@ def _pick_up_detached_types(
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _parse_coptic(line: str) -> tuple[str, str]:
-    """
-    _parse_coptic parses one line of ASCII-encoded Coptic. It is possible for
-    the text to contain English text within it, and for the English text to
-    contain Coptic text within.
+    """_parse_coptic parses one line of ASCII-encoded Coptic.
+
+    It is possible for the text to contain English text within it, and
+    for the English text to contain Coptic text within.
     """
     out = []
     out_no_english = []
@@ -352,17 +396,24 @@ def _parse_english(line: str) -> str:
             copt = copt[1:-1]
             assert copt
             s, t = _parse_spellings_and_types(
-                copt, detach_types=True, use_coptic_symbol=True
+                copt,
+                detach_types=True,
+                use_coptic_symbol=True,
             )
             assert not t
             # TODO: (#63) Stop using words for Coptic within English!
             out.append(
                 lexical.structured_word(
-                    [], s, t, [], None, normalize=True
+                    [],
+                    s,
+                    t,
+                    [],
+                    None,
+                    normalize=True,
                 ).string(
                     include_references=True,
                     parenthesize_assumed=True,
-                )
+                ),
             )
 
     out = " ".join(out)
@@ -389,10 +440,14 @@ def parse_english_cell(line: str) -> str:
     # TODO: (#63) English post-processing likely shouldn't apply to Coptic
     # within English.
     out = _apply_substitutions(
-        out, constants.ENGLISH_POSTPROCESSING, use_coptic_symbol=False
+        out,
+        constants.ENGLISH_POSTPROCESSING,
+        use_coptic_symbol=False,
     )
     out = _apply_substitutions(
-        out, constants.ENGLISH_PRETTIFYING, use_coptic_symbol=False
+        out,
+        constants.ENGLISH_PRETTIFYING,
+        use_coptic_symbol=False,
     )
     return clean(out)
 
@@ -440,16 +495,14 @@ def _ascii_to_unicode_greek(ascii: str) -> str:
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _parse_reference(line: str):  # -> typing.Generator[str, None, None]:
-    """
-    This method makes the assumption that the input is a single
-    (not nested nor concatenated) reference, whose boundaries have been
-    removed.
+    """This method makes the assumption that the input is a single (not nested
+    nor concatenated) reference, whose boundaries have been removed.
 
-    A reference is an <a></a> HTML tag with some text as the body, and an
-    'href' property that has the following format:
-        "ext name;id;chapter;verse;text"
-    The 'href' contains most of the information. The body can contain
-    something, and the tag could optionally be followed by some text.
+    A reference is an <a></a> HTML tag with some text as the body, and
+    an 'href' property that has the following format:     "ext
+    name;id;chapter;verse;text" The 'href' contains most of the
+    information. The body can contain something, and the tag could
+    optionally be followed by some text.
     """
 
     line = line.strip()
@@ -468,7 +521,8 @@ def _parse_reference(line: str):  # -> typing.Generator[str, None, None]:
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _munch_and_parse_dialects(
-    line: str, strict: bool
+    line: str,
+    strict: bool,
 ) -> tuple[list[str], str]:
     match, line = _munch(line, constants.DIALECTS_RE, strict)
     if not strict and not match:

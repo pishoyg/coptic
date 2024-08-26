@@ -37,7 +37,6 @@ window.addEventListener("load", () => {{ {javascript} }});
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class stats:
-
     def __init__(self) -> None:
         self._exported_notes = 0
         self._no_key = 0
@@ -177,7 +176,6 @@ class deck:
             if not b:
                 # No back! Do nothing!
                 ss._no_back += 1
-                pass
             if not t:
                 # No title!
                 ss._no_title += 1
@@ -207,7 +205,10 @@ class deck:
     def write_web(self, dir: str) -> None:
         self.clean_dir(dir)
         for rk, front, back, title in zip(
-            self.raw_keys, self.fronts, self.backs, self.titles
+            self.raw_keys,
+            self.fronts,
+            self.backs,
+            self.titles,
         ):
             with open(os.path.join(dir, rk + ".html"), "w") as f:
                 f.write(
@@ -217,13 +218,13 @@ class deck:
                         title=title,
                         front=front,
                         back=back,
-                    )
+                    ),
                 )
         with open(os.path.join(dir, JS_BASENAME), "w") as f:
             f.write(
                 JS_FMT.format(
-                    javascript=self.javascript.replace("'use strict';", "")
-                )
+                    javascript=self.javascript.replace("'use strict';", ""),
+                ),
             )
         with open(os.path.join(dir, CSS_BASENAME), "w") as f:
             f.write(self.css)

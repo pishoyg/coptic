@@ -58,13 +58,16 @@ def verify_unique_object_keys(decks: list[genanki.Deck]) -> None:
     utils.verify_unique([d.deck_id for d in decks], "Deck ids")
     utils.verify_unique([d.name for d in decks], "Deck names")
     utils.verify_unique(
-        [model.name for d in decks for model in d.models], "Model names"
+        [model.name for d in decks for model in d.models],
+        "Model names",
     )
     utils.verify_unique(
-        [model.id for d in decks for model in d.models], "Model ids"
+        [model.id for d in decks for model in d.models],
+        "Model ids",
     )
     utils.verify_unique(
-        [node.guid for d in decks for node in d.notes], "Node GUIDs."
+        [node.guid for d in decks for node in d.notes],
+        "Node GUIDs.",
     )
 
 

@@ -6,7 +6,6 @@
 # https://github.com/KELLIA/dictionary/commits/master/utils/dictionary_reader.py
 
 import glob
-import io
 import os
 import re
 import xml.etree.ElementTree as ET
@@ -102,7 +101,7 @@ class OrthString(Reformat):
             geos = ["S"]
         for g in geos:
             self._pishoy.append(
-                Line(self._last_gram_grp, orth_text, g, form_id)
+                Line(self._last_gram_grp, orth_text, g, form_id),
             )
         geos = [g + "^^" + form_id for g in geos]
         for g in geos:
@@ -173,11 +172,11 @@ class EtymString(Reformat):
                         greek_parts.append("<i>" + val + "</i>.")
                     elif "_pos" in key and len(val) > 0:
                         greek_parts.append(
-                            '<span style="color:grey">' + val + "</span>"
+                            '<span style="color:grey">' + val + "</span>",
                         )
                     elif "grl_ref" in key:
                         greek_parts.append(
-                            '<span style="color:grey">(' + val + ")</span>"
+                            '<span style="color:grey">(' + val + ")</span>",
                         )
                 self._amir += " ".join(greek_parts)
 
@@ -280,7 +279,7 @@ class Sense:
                 "\n".join(self.format(*pair) for pair in self.subset("bibl")),
                 "</td>",
                 "</tr>",
-            ]
+            ],
         )
         ref_xr = self.subset("ref", "xr")
         if ref_xr:
@@ -291,7 +290,7 @@ class Sense:
                     "\n".join(self.format(*pair) for pair in ref_xr),
                     "</td>",
                     "</tr>",
-                ]
+                ],
             )
         content = "".join(content)
         while True:
@@ -375,7 +374,7 @@ class Lang(Reformat):
                 "<col>",
                 "<col>",
                 "</colgroup>",
-            ]
+            ],
         )
         out.extend(sense.pishoy() for sense in self._pishoy)
         out.append("</table>")
@@ -430,7 +429,7 @@ class Quote(Reformat):
 
 
 def gloss_bibl(ref_bibl):
-    """Adds tooltips to lexical resource names"""
+    """Adds tooltips to lexical resource names."""
 
     page_expression = r"(?: §)? ?[0-9A-Za-z:]+(, ?[0-9A-Za-z:]+)*"
     sources = [
@@ -559,21 +558,22 @@ def gloss_bibl(ref_bibl):
 
 
 def link_greek(etym):
-
     m = re.search(r"cf\. Gr\.[^<>]+</span>([^<>]+)<i>", etym)
     if m is None:
         return etym
     greek = m.group(1).strip()
     href = (
         "https://www.billmounce.com/search/node/{key}%20type%3Alexicon".format(
-            key=greek
+            key=greek,
         )
     )
 
     # Convert polytonic Greek to beta-code using perseids-tools/beta-code-py conversion table
     link = ' <a href="{href}">'.format(href=href) + greek + ";</a>"
     linked = re.sub(
-        r"(cf\. Gr\.[^<>]*</span>)[^<>]+(<i>)", r"\1" + link + r"\2", etym
+        r"(cf\. Gr\.[^<>]*</span>)[^<>]+(<i>)",
+        r"\1" + link + r"\2",
+        etym,
     )
 
     return linked
@@ -610,11 +610,12 @@ def get_entity_types(pub_corpora_dir):
     if not pub_corpora_dir.endswith(os.sep):
         pub_corpora_dir += os.sep
     tt_files = glob.glob(
-        pub_corpora_dir + "**" + os.sep + "*.tt", recursive=True
+        pub_corpora_dir + "**" + os.sep + "*.tt",
+        recursive=True,
     )
     entity_types = defaultdict(set)
     for file_ in tt_files:
-        sgml = io.open(file_, encoding="utf8").read()
+        sgml = open(file_, encoding="utf8").read()
         if ' entities="gold"' not in sgml:
             continue  # Only use gold entities
         lines = sgml.split("\n")
@@ -769,10 +770,8 @@ def process_entry(id, super_id, entry, entry_xml_id):
         oref_string += oref_text
         oref_string += "|||"
         orthstring._amir += "|||"
-        # search_string += "|||"
     orthstring._amir = re.sub(r"\|\|\|$", "", orthstring._amir)
     oref_string = re.sub(r"\|\|\|$", "", oref_string)
-    # search_string = re.sub(r'\|\|\|$', '', search_string)
 
     first_orth_re = re.search(r"\n(.*?)~", orthstring._amir)
     if first_orth_re is not None:
@@ -842,10 +841,10 @@ def process_entry(id, super_id, entry, entry_xml_id):
             if sense_child.tag == "{http://www.tei-c.org/ns/1.0}cit":
                 bibl = sense_child.find("{http://www.tei-c.org/ns/1.0}bibl")
                 quotes = sense_child.findall(
-                    "{http://www.tei-c.org/ns/1.0}quote"
+                    "{http://www.tei-c.org/ns/1.0}quote",
                 )
                 definitions = sense_child.findall(
-                    "{http://www.tei-c.org/ns/1.0}def"
+                    "{http://www.tei-c.org/ns/1.0}def",
                 )
 
                 q = Quote()
@@ -857,7 +856,7 @@ def process_entry(id, super_id, entry, entry_xml_id):
                         else:
                             q.yes_definitions()
                         lang = quote.get(
-                            "{http://www.w3.org/XML/1998/namespace}lang"
+                            "{http://www.w3.org/XML/1998/namespace}lang",
                         )
                         if lang == "de":
                             de.add_quote(q)
@@ -870,7 +869,7 @@ def process_entry(id, super_id, entry, entry_xml_id):
                     if definition is not None:
                         if definition.text is not None:
                             lang = definition.get(
-                                "{http://www.w3.org/XML/1998/namespace}lang"
+                                "{http://www.w3.org/XML/1998/namespace}lang",
                             )
                             if lang == "de":
                                 de.add_definition(definition)
@@ -1191,7 +1190,8 @@ def main():
 
         col_to_idx = {col_name: idx for idx, col_name in enumerate(columns)}
         columns = sorted(
-            df.columns, key=lambda col_name: col_to_idx.get(col_name, 1000)
+            df.columns,
+            key=lambda col_name: col_to_idx.get(col_name, 1000),
         )
         utils.write_tsvs(df, output)
         # TODO: (#51) Add network graphs.

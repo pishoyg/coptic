@@ -13,7 +13,7 @@ SRC_RE = re.compile(r'(href|src)=\s*"([^"]+)"')
 TYPE_ENFORCED = True
 argparser = argparse.ArgumentParser(
     description="Parse and process the Marcion digital Coptic database,"
-    "which is in turn based on the Crum Coptic dictionary."
+    "which is in turn based on the Crum Coptic dictionary.",
 )
 argparser.add_argument(
     "--dir",
@@ -57,7 +57,10 @@ def obfuscate_paths(dir: str) -> None:
             return f'{match.group(1)}="{map[original]}"'
 
         utils.write(
-            SRC_RE.sub(replacer, html), path, log=False, fix_newline=False
+            SRC_RE.sub(replacer, html),
+            path,
+            log=False,
+            fix_newline=False,
         )
 
 

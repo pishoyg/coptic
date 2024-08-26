@@ -47,7 +47,8 @@ class node:
         assert not self._preprocessed
         # Sort.
         self._descendants = sorted(
-            self._descendants, key=lambda n: int(n.cell("pos"))
+            self._descendants,
+            key=lambda n: int(n.cell("pos")),
         )
         # Populate the field needed for retrieving children by key.
         self._key_to_idx = {
@@ -150,7 +151,7 @@ class node:
             [
                 "<table>",
                 "<colgroup>",
-            ]
+            ],
         )
         out.extend([f'<col style="width: {100/NUM_COLS}%;">'] * NUM_COLS)
         out.extend(["</colgroup>"])
@@ -199,7 +200,7 @@ class node:
                                     else ""
                                 ),
                                 "</td>",
-                            ]
+                            ],
                         )
                         if word_width
                         else ""
@@ -217,7 +218,7 @@ class node:
                                 meaning,
                                 f'<span hidden="" class="drv-key dev right">{key}</span>'
                                 "</td>",
-                            ]
+                            ],
                         )
                         if meaning_width
                         else ""
@@ -232,7 +233,7 @@ class node:
                     ),
                     # End row.
                     "</tr>",
-                ]
+                ],
             )
         out.append("</table>")
         out = " ".join(out)
@@ -257,7 +258,7 @@ class node:
         out.extend(
             [
                 "<ul>",
-            ]
+            ],
         )
 
         depth = 0
@@ -268,7 +269,7 @@ class node:
                     [
                         "<li>",
                         "<ul>",
-                    ]
+                    ],
                 )
                 depth += 1
             while cur_depth < depth:
@@ -276,7 +277,7 @@ class node:
                     [
                         "</ul>",
                         "</li>",
-                    ]
+                    ],
                 )
                 depth -= 1
             word = d.cell("word-parsed-prettify")
@@ -292,7 +293,7 @@ class node:
                     "<li>",
                     li,
                     "</li>",
-                ]
+                ],
             )
 
         while depth > 0:
@@ -300,13 +301,13 @@ class node:
                 [
                     "</ul>",
                     "</li>",
-                ]
+                ],
             )
             depth -= 1
         out.extend(
             [
                 "</ul>",
-            ]
+            ],
         )
 
         out = " ".join(out)

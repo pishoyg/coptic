@@ -64,7 +64,6 @@ class field:
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class _primitive_field(field):
-
     def length(self) -> int:
         return NO_LENGTH
 
@@ -74,12 +73,13 @@ class _primitive_field(field):
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class txt(_primitive_field):
-    """
-    A constant text field.
-    """
+    """A constant text field."""
 
     def __init__(
-        self, text: str, line_br: bool = False, force: bool = True
+        self,
+        text: str,
+        line_br: bool = False,
+        force: bool = True,
     ) -> None:
         if force:
             assert text
@@ -96,9 +96,7 @@ class txt(_primitive_field):
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class seq(_primitive_field):
-    """
-    A numerical sequence field.
-    """
+    """A numerical sequence field."""
 
     def __init__(self, start: int = 1, step: int = 1) -> None:
         self._counter = itertools.count(start=start, step=step)
@@ -109,7 +107,6 @@ class seq(_primitive_field):
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class _content_field(field):
-
     def __init__(
         self,
         content: list[list[str]] | list[str],
@@ -136,9 +133,7 @@ class _content_field(field):
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class tsv(_content_field):
-    """
-    A TSV column field.
-    """
+    """A TSV column field."""
 
     def __init__(
         self,
@@ -160,9 +155,7 @@ class tsv(_content_field):
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class tsvs(_content_field):
-    """
-    A TSVS column field.
-    """
+    """A TSVS column field."""
 
     def __init__(
         self,
@@ -184,9 +177,7 @@ class tsvs(_content_field):
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class gsheet(_content_field):
-    """
-    A column from a Google sheet.
-    """
+    """A column from a Google sheet."""
 
     def __init__(
         self,
@@ -203,7 +194,8 @@ class gsheet(_content_field):
             sheet = _gsheet[gspread_url]
         else:
             credentials = service_account.ServiceAccountCredentials.from_json_keyfile_name(
-                json_keyfile_name, GSPREAD_SCOPE
+                json_keyfile_name,
+                GSPREAD_SCOPE,
             )
             sheet = gspread.authorize(credentials).open_by_url(gspread_url)
         records = sheet.get_worksheet(0).get_all_records()
@@ -260,7 +252,6 @@ class grp(_content_field):
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class media(_content_field):
-
     def __init__(
         self,
         # HTML format string.
@@ -273,10 +264,9 @@ class media(_content_field):
         fmt_args: enforcer.OptionalCallable = None,
         force: bool = True,
     ) -> None:
-        """
-        The final path to a media file must be a basename. Directories
-        are not allowed. This implies that all basenames must be unique.
-        See github.com/kerrickstaley/genanki?tab=readme-ov-file#media-files.
+        """The final path to a media file must be a basename. Directories are
+        not allowed. This implies that all basenames must be unique. See
+        github.com/kerrickstaley/genanki?tab=readme-ov-file#media-files.
 
         We have media files from multiple source directories, and their
         basenames may be conflicting.
@@ -368,9 +358,7 @@ def snd(
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class apl(field):
-    """
-    Apply a lambda to a field.
-    """
+    """Apply a lambda to a field."""
 
     def __init__(self, lam: enforcer.Callable, *fields) -> None:
         self._lambda = lam
@@ -399,14 +387,12 @@ def fmt(
     force: bool = True,
     aon: typing.Optional[bool] = None,
 ) -> apl:
-    """
-    A string formatting field.
-    """
+    """A string formatting field."""
     keys = list(key_to_field.keys())
     if not force and aon is None:
         utils.fatal(
             "If the format data is allowed to be absent, then the"
-            "all-or-nothing behaviour must be specified"
+            "all-or-nothing behaviour must be specified",
         )
 
     def format(*nexts: str) -> str:
@@ -422,9 +408,7 @@ def fmt(
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def aon(*fields: FieldOrStr) -> apl:
-    """
-    Construct an all-or-nothing field.
-    """
+    """Construct an all-or-nothing field."""
 
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def all_or_nothing(*nexts: str) -> str:

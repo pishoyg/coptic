@@ -59,9 +59,7 @@ _TYPE_TO_PREFIX_LIST = {
 
 @type_enforced.Enforcer(enabled=True)
 def inflect(morpheme: str, type: Type) -> list[str]:
-    """
-    Given a word, return a list of inflected forms.
-    """
+    """Given a word, return a list of inflected forms."""
     prefixes = _TYPE_TO_PREFIX_LIST[type]
     prefixes = sum(prefixes, [])
     assert COPTIC_ONLY_BLOCK.fullmatch(morpheme)

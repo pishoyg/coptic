@@ -4,7 +4,6 @@ import field
 
 
 class TestTxt(unittest.TestCase):
-
     def test_txt(self):
         t = field.txt("hello")
         self.assertEqual(t.next(), "hello")

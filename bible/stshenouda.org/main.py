@@ -42,7 +42,7 @@ ENFORCED = True
 Callable = typing.Callable | type_enforced.enforcer.FunctionMethodEnforcer
 
 argparser = argparse.ArgumentParser(
-    description="Process the Coptic Bible data."
+    description="Process the Coptic Bible data.",
 )
 
 argparser.add_argument(
@@ -104,8 +104,8 @@ class RangeColor:
         return self.start < other.end and self.end > other.start
 
     def winner(self, other):
-        """
-        Given two ranges, return whichever one contains the other.
+        """Given two ranges, return whichever one contains the other.
+
         If neither contains the other, crash!
         """
         if self.within(other):
@@ -157,7 +157,7 @@ def recolor(v: str, verse: dict) -> str:
             [
                 RangeColor(idx, idx + len(word), color)
                 for idx in find_all(v, word)
-            ]
+            ],
         )
     ranges = sorted(ranges, key=compare_range_color)
     if not ranges:
@@ -203,7 +203,10 @@ def epub_book_href(book_name: str) -> str:
 @type_enforced.Enforcer(enabled=ENFORCED)
 class parallel_builder:
     def __init__(
-        self, chapter_beginner: str, verse_format: str, chapter_end: str
+        self,
+        chapter_beginner: str,
+        verse_format: str,
+        chapter_end: str,
     ) -> None:
         self.chapter_beginner: str = chapter_beginner
         self.chapter_end: str = chapter_end
@@ -297,7 +300,7 @@ def html_head(title: str = "") -> str:
     }}
   </style>
 </head>""".format(
-        title=title
+        title=title,
     )
 
 
@@ -324,7 +327,7 @@ def write_html(html: dict, books: list[str]) -> None:
     for lang in LANGUAGES + PARALLELS:
         for book_name in books:
             out = html_head(book_name) + html_body(
-                "\n".join(html[lang][book_name])
+                "\n".join(html[lang][book_name]),
             )
             path = writing_path("html", lang, file_name(book_name))
             utils.write(out, path)
@@ -332,7 +335,6 @@ def write_html(html: dict, books: list[str]) -> None:
 
 @type_enforced.Enforcer(enabled=ENFORCED)
 def write_epub(html: dict, books: list, subdir: str) -> None:
-
     for lang in LANGUAGES + PARALLELS:
         kindle = epub.EpubBook()
         kindle.set_identifier(lang)
@@ -358,7 +360,7 @@ def write_epub(html: dict, books: list, subdir: str) -> None:
             + "<body>"
             + html_h1(BOOK_TITLE)
             + html_toc(books, epub_book_href)
-            + "</body>"
+            + "</body>",
         )
         kindle.add_item(toc)
 
@@ -366,13 +368,14 @@ def write_epub(html: dict, books: list, subdir: str) -> None:
 
         for book_name in books:
             c = epub.EpubHtml(
-                title=book_name, file_name=epub_book_href(book_name)
+                title=book_name,
+                file_name=epub_book_href(book_name),
             )
             c.set_content(
                 html_head(book_name)
                 + "<body>"
                 + "\n".join(html[lang][book_name])
-                + "</body>"
+                + "</body>",
             )
             spine.append(c)
             kindle.add_item(c)
@@ -392,7 +395,7 @@ def process_sources(books: list[str]) -> None:
     for book_name in books:
         try:
             t = open(
-                os.path.join(SOURCES_DIR, book_name + "_Sources.json")
+                os.path.join(SOURCES_DIR, book_name + "_Sources.json"),
             ).read()
         except FileNotFoundError:
             utils.warn("No sources found for", book_name)
@@ -407,7 +410,7 @@ def process_sources(books: list[str]) -> None:
             out.append(
                 "<br/>".join(
                     "  - " + line for line in data[lang].split("\n") if line
-                )
+                ),
             )
 
     out = "\n".join(out)
@@ -448,11 +451,13 @@ def main() -> None:
                     books.append(book_name)
                     book_to_testament[book_name] = testament_name
                     book_to_testament_indexed[book_name] = "{}. {}".format(
-                        testament_idx, testament_name
+                        testament_idx,
+                        testament_name,
                     )
                     book_to_section[book_name] = section_name
                     book_to_section_indexed[book_name] = "{}. {}".format(
-                        section_idx, section_name
+                        section_idx,
+                        section_name,
                     )
                     book_to_section_indexed_no_testament[book_name] = (
                         "{}. {}".format(
@@ -461,7 +466,8 @@ def main() -> None:
                         )
                     )
                     book_to_book_indexed[book_name] = "{}. {}".format(
-                        str(book_idx).zfill(2), book_name
+                        str(book_idx).zfill(2),
+                        book_name,
                     )
 
     process_sources(books)
@@ -485,7 +491,8 @@ def main() -> None:
             for chapter in data:
                 chapter_num = chapter_number(chapter)
                 a = '<a href="#{}">{}</a>'.format(
-                    html_id(book_name, chapter_num), chapter_num
+                    html_id(book_name, chapter_num),
+                    chapter_num,
                 )
                 html1[lang][book_name].append(a)
                 html2[lang][book_name].append(a)
@@ -500,7 +507,8 @@ def main() -> None:
             chapter_num = chapter_number(chapter)
             for lang in LANGUAGES + PARALLELS:
                 h3 = '<h3 id="{}">{}</h3>'.format(
-                    html_id(book_name, chapter_num), chapter_num
+                    html_id(book_name, chapter_num),
+                    chapter_num,
                 )
 
                 html1[lang][book_name].append(h3)
@@ -541,7 +549,8 @@ def main() -> None:
                     html3[lang][book_name].append(pb3.verse(*recolored))
 
                 book_df = pd.concat(
-                    [book_df, pd.DataFrame([d])], ignore_index=True
+                    [book_df, pd.DataFrame([d])],
+                    ignore_index=True,
                 )
             for lang in PARALLELS:
                 html1[lang][book_name].append(pb1.end_chapter())

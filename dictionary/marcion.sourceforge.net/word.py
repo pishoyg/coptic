@@ -25,7 +25,6 @@ class type:
         append: bool = True,
         is_root: bool = False,
     ):
-
         self._marcion: str = marcion
         self._coptic_symbol: str = coptic_symbol
         self._description: str = description
@@ -35,7 +34,8 @@ class type:
             # Genders are not allowed as root types.
             # TODO: Add some root-specific checks for extra rigor.
             assert inflect_type is None or isinstance(
-                inflect_type, inflect.Type
+                inflect_type,
+                inflect.Type,
             )
 
     def marcion(self) -> str:
@@ -56,7 +56,6 @@ class type:
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class structured_word:
-
     def __init__(
         self,
         dialects: list[str],
@@ -108,7 +107,6 @@ class structured_word:
         raise ValueError(f"Unexpected parentheses in {spelling}")
 
     def _normalize_optional_letters(self, spelling: str) -> list[str]:
-
         # TODO: This is ugly! And it's not even a structured word, but a piece
         # of English-within-Coptic text! The logic shouldn't come here in the
         # first place.
@@ -146,7 +144,7 @@ class structured_word:
         # We have two possibilities. We recursively normalize them in case
         # there are other parentheses.
         return self._normalize_optional_letters(
-            left + right
+            left + right,
         ) + self._normalize_optional_letters(left + middle + right)
 
     def is_dialect(self, d: str, undialected_is_all: bool = False) -> bool:
@@ -161,13 +159,13 @@ class structured_word:
     def __str__(self) -> str:
         raise ValueError(
             "Please use an explicitly string conversion method in"
-            " order to provide the necessary arguments."
+            " order to provide the necessary arguments.",
         )
 
     def __repr__(self) -> str:
         raise ValueError(
             "Please use an explicitly string conversion method in"
-            " order to provide the necessary arguments."
+            " order to provide the necessary arguments.",
         )
 
     def string(
@@ -223,7 +221,7 @@ class structured_word:
     def spellings(self, parenthesize_assumed: bool = True) -> list[str]:
         if not parenthesize_assumed and not self._is_normalized_assumed():
             raise ValueError(
-                "Can not remove assumed-spelling parentheses from unnormalized words!"
+                "Can not remove assumed-spelling parentheses from unnormalized words!",
             )
         if not self._is_normalized_assumed():
             # The assumed-spelling parentheses are already there.
@@ -244,7 +242,9 @@ class structured_word:
         return bool(self._assumed)
 
     def infer(
-        self, rt: inflect.Type | None, it: Gender
+        self,
+        rt: inflect.Type | None,
+        it: Gender,
     ) -> typing.Optional[inflect.Type]:
         if rt is None:
             return None

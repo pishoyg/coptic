@@ -29,10 +29,11 @@ def crum(
     dialect_cols: list[str],
     force_front: bool = True,
 ) -> deck.deck:
-
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def roots_col(
-        col_name: str, line_br: bool = False, force: bool = True
+        col_name: str,
+        line_br: bool = False,
+        force: bool = True,
     ) -> field.tsvs:
         return field.tsvs(
             "dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs",
@@ -42,7 +43,9 @@ def crum(
         )
 
     def root_appendix(
-        col_name: str, line_br: bool = False, force: bool = True
+        col_name: str,
+        line_br: bool = False,
+        force: bool = True,
     ) -> field.tsv:
         return field.tsv(
             "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv",
@@ -139,7 +142,7 @@ def crum(
         deck_description=f"{HOME}.\n{EMAIL}.",
         css=utils.read("flashcards/constants/a_coptic_dictionary/style.css"),
         javascript=utils.read(
-            "flashcards/data/build/a_coptic_dictionary/script.js"
+            "flashcards/data/build/a_coptic_dictionary/script.js",
         ),
         # NOTE: The key is a protected field. Do not change unless you know what
         # you're doing.
@@ -225,7 +228,8 @@ def crum(
                 "<br/>",
                 # Meaning.
                 field.apl(
-                    greek, roots_col("en-parsed", line_br=True, force=False)
+                    greek,
+                    roots_col("en-parsed", line_br=True, force=False),
                 ),
                 # Dictionary pages.
                 field.cat(
@@ -260,9 +264,8 @@ def crum(
                     field.img(
                         keys=roots_col("key"),
                         # Although the same result can be obtained using
-                        # glob.glob(f"dictionary/marcion.sourceforge.net/data/img-300/{key}-*")
-                        # we use this method in order to avoid using the computationally expensive
-                        # glob.glob.
+                        # `glob.glob` on each image key, we cache the paths
+                        # because this significantly reduces the running time.
                         get_paths=explanatory_images.get,
                         fmt_args=lambda path: {
                             "caption": image_sensor.get_caption(path),
@@ -297,7 +300,8 @@ def crum(
                         "<b>Crum: </b>",
                         field.apl(
                             lambda pages: INTEGER_RE.sub(
-                                r'<span class="crum-page">\1</span>', pages
+                                r'<span class="crum-page">\1</span>',
+                                pages,
                             ),
                             roots_col("crum-pages", force=False),
                         ),
@@ -309,11 +313,11 @@ def crum(
                             [
                                 f"dictionary/marcion.sourceforge.net/data/crum/{k+20}.png"
                                 for k in _page_numbers(page_ranges=page_ranges)
-                            ]
+                            ],
                         ),
                         fmt_args=lambda path: {
                             "caption": '<span class="crum-page-external">{crum}</span>'.format(
-                                crum=int(utils.stem(path)) - 20
+                                crum=int(utils.stem(path)) - 20,
                             ),
                             "id": f"crum{int(utils.stem(path)) - 20}",
                             "class": "crum-page-img",
@@ -331,7 +335,8 @@ def crum(
                         "<b>Dawoud: </b>",
                         field.apl(
                             lambda pages: DICTIONARY_PAGE_RE.sub(
-                                r'<span class="dawoud-page">\1</span>', pages
+                                r'<span class="dawoud-page">\1</span>',
+                                pages,
                             ),
                             root_appendix("dawoud-pages", force=False),
                         ),
@@ -391,7 +396,9 @@ def crum(
 def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def col(
-        col_name: str, line_br: bool = False, force: bool = True
+        col_name: str,
+        line_br: bool = False,
+        force: bool = True,
     ) -> field.tsvs:
         return field.tsvs(
             "dictionary/copticsite.com/data/output/tsvs/output.tsvs",
@@ -439,7 +446,9 @@ def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
 def kellia(deck_name: str, deck_id: int, basename: str) -> deck.deck:
     @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def col(
-        col_name: str, line_br: bool = False, force: bool = True
+        col_name: str,
+        line_br: bool = False,
+        force: bool = True,
     ) -> field.tsvs:
         return field.tsvs(
             f"dictionary/kellia.uni-goettingen.de/data/output/tsvs/{basename}.tsvs",
@@ -504,9 +513,9 @@ def _dedup(arr: list[int], at_most_once: bool = False) -> list[int]:
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _page_numbers(page_ranges: str) -> list[int]:
-    """
-    page_ranges is a comma-separated list of integers or integer ranges, just
-    like what you type when you're using your printer.
+    """page_ranges is a comma-separated list of integers or integer ranges,
+    just like what you type when you're using your printer.
+
     For example, "1,3-5,8-9" means [1, 3, 4, 5, 8, 9].
     """
 
@@ -555,7 +564,7 @@ class _dir_lister:
 class _sensor:
     def __init__(self, keys: list[str], sense_jsons: list[str]) -> None:
         self.decoder = json.JSONDecoder(
-            object_pairs_hook=self.dupe_checking_hook
+            object_pairs_hook=self.dupe_checking_hook,
         )
         assert len(keys) == len(sense_jsons)
         self.d: dict = {
@@ -567,7 +576,7 @@ class _sensor:
         if any(
             count > 1
             for _, count in collections.Counter(
-                map(lambda p: p[0], pairs)
+                map(lambda p: p[0], pairs),
             ).items()
         ):
             utils.fatal("duplicate elements in JSON:", pairs)
@@ -589,7 +598,7 @@ class _sensor:
                 # data has been fully populated.
                 self.d[key].get(sense, sense),
                 "</span>",
-            ]
+            ],
         )
 
 
@@ -627,9 +636,9 @@ KELLIA_GREEK = "KELLIA::Greek"
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def file_name(deck_name: str) -> str:
-    """
-    Given a deck name, return a string that is valid as a file name. Remove
-    invalid characters, and make it filename-like.
+    """Given a deck name, return a string that is valid as a file name.
+
+    Remove invalid characters, and make it filename-like.
     """
     return (
         deck_name.lower().replace(" ", "_").replace(":", "_").replace("/", "-")
@@ -643,10 +652,16 @@ LAMBDAS: dict[str, enforcer.Callable] = {
         ["word-parsed-prettify"],
     ),
     CRUM_BOHAIRIC: lambda deck_name: crum(
-        deck_name, 1284010383, ["dialect-B"], force_front=False
+        deck_name,
+        1284010383,
+        ["dialect-B"],
+        force_front=False,
     ),
     CRUM_SAHIDIC: lambda deck_name: crum(
-        deck_name, 1284010386, ["dialect-S"], force_front=False
+        deck_name,
+        1284010386,
+        ["dialect-S"],
+        force_front=False,
     ),
     CRUM_BOHAIRIC_SAHIDIC: lambda deck_name: crum(
         deck_name,
@@ -656,10 +671,14 @@ LAMBDAS: dict[str, enforcer.Callable] = {
     ),
     COPTICSITE_NAME: lambda deck_name: copticsite_com(deck_name, 1284010385),
     KELLIA_COMPREHENSIVE: lambda deck_name: kellia(
-        deck_name, 1284010391, "comprehensive"
+        deck_name,
+        1284010391,
+        "comprehensive",
     ),
     KELLIA_EGYPTIAN: lambda deck_name: kellia(
-        deck_name, 1284010392, "egyptian"
+        deck_name,
+        1284010392,
+        "egyptian",
     ),
     KELLIA_GREEK: lambda deck_name: kellia(deck_name, 1284010393, "greek"),
 }

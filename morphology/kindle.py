@@ -118,9 +118,7 @@ def _no_tags(text: str) -> bool:
 
 @type_enforced.Enforcer(enabled=TYPE_ENFORCED)
 def _escape_amp(text: str) -> str:
-    """
-    Escape the special characters inside this string.
-    """
+    """Escape the special characters inside this string."""
     assert _not_escaped(text)
     return text.replace("&", "&amp;")
 
@@ -296,15 +294,14 @@ class dictionary:
         return stem
 
     def write_pre_mobi(self, dir: str) -> None:
-        """
-        I don't really know what this format is called, so I am calling it
-        "pre-mobi".
-        """
+        """I don't really know what this format is called, so I am calling it
+        "pre-mobi"."""
         pathlib.Path(dir).mkdir(exist_ok=True)
 
         # Copy the cover image.
         shutil.copyfile(
-            self._cover_path, os.path.join(dir, self._cover_basename)
+            self._cover_path,
+            os.path.join(dir, self._cover_basename),
         )
 
         # Add the dictionary files.

@@ -4,7 +4,6 @@ import inflect
 
 
 class TestInflect(unittest.TestCase):
-
     def test_inflect(self):
         pass
 

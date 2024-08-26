@@ -24,7 +24,7 @@ CRUM_LAST_PAGE_NUM = 953
 
 # Regular expressions used for parsing.
 DIALECTS_RE = re.compile(
-    r"\({d}(,{d})*\)".format(d="({})".format("|".join(DIALECTS)))
+    r"\({d}(,{d})*\)".format(d="({})".format("|".join(DIALECTS))),
 )
 SPELLINGS_TYPES_REFERENCES_RE = re.compile(r"[^()]+")
 
@@ -36,7 +36,7 @@ PARSED_GREEK_WITHIN_ENGLISH_RE = re.compile(r"(\[[ ,()&c?;Α-Ωα-ω]+\])")
 CRUM_RE = re.compile(r"^(\d{1,3})(a|b)$")
 REFERENCE_RE = re.compile(r'\*\^<a href="([^"<>]+)">([^<>]+)</a>([^<>]*)\^\*')
 COMMA_NOT_BETWEEN_PARENTHESES_RE = re.compile(
-    r",(?![^()]*\)|[^{}]*\}|[^\[\]]*\])"
+    r",(?![^()]*\)|[^{}]*\}|[^\[\]]*\])",
 )
 PURE_COPTIC_RE = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
 PAGE_NUMER_RE = re.compile("[0-9]{1,3}[ab]$")
@@ -157,15 +157,23 @@ QUALITY_ENCODING = {
 # TYPE_ENCODING is used to parse the "type" column.
 TYPE_ENCODING = {
     0: lexical.type("-", "(-)", "-", None, append=False),
-    # (ⲟⲩ)
     3: lexical.type(
-        "noun", "(noun)", "noun", inflect.Type.NOUN_UNKNOWN_GENDER
-    ),
+        "noun",
+        "(noun)",
+        "noun",
+        inflect.Type.NOUN_UNKNOWN_GENDER,
+    ),  # (ⲟⲩ)
     1: lexical.type(
-        "noun male", "(ⲡ)", "noun male", inflect.Type.NOUN_MASCULINE
+        "noun male",
+        "(ⲡ)",
+        "noun male",
+        inflect.Type.NOUN_MASCULINE,
     ),
     4: lexical.type(
-        "noun female", "(ⲧ)", "noun female", inflect.Type.NOUN_FEMININE
+        "noun female",
+        "(ⲧ)",
+        "noun female",
+        inflect.Type.NOUN_FEMININE,
     ),
     22: lexical.type(
         "noun male/female",
@@ -188,10 +196,17 @@ TYPE_ENCODING = {
         None,
     ),
     15: lexical.type(
-        "interrogative adverb", "(interr. adv.)", "interrogative adverb", None
+        "interrogative adverb",
+        "(interr. adv.)",
+        "interrogative adverb",
+        None,
     ),
     2: lexical.type(
-        "verb", "(v.)", "verb", inflect.Type.VERB_INFINITIVE, append=False
+        "verb",
+        "(v.)",
+        "verb",
+        inflect.Type.VERB_INFINITIVE,
+        append=False,
     ),
     21: lexical.type("verbal prefix", "(v. prefix)", "verbal prefix", None),
     6: lexical.type(
@@ -204,10 +219,16 @@ TYPE_ENCODING = {
     7: lexical.type("adverb", "(adv.)", "adverb", None),
     9: lexical.type("preposition", "(prep.)", "preposition", None),
     13: lexical.type(
-        "numeral", "(num.)", "numeral", inflect.Type.NOUN_UNKNOWN_GENDER
+        "numeral",
+        "(num.)",
+        "numeral",
+        inflect.Type.NOUN_UNKNOWN_GENDER,
     ),
     10: lexical.type(
-        "numeral male", "(num. ⲡ)", "numeral male", inflect.Type.NOUN_MASCULINE
+        "numeral male",
+        "(num. ⲡ)",
+        "numeral male",
+        inflect.Type.NOUN_MASCULINE,
     ),
     11: lexical.type(
         "numeral female",
@@ -224,7 +245,10 @@ TYPE_ENCODING = {
     17: lexical.type("particle", "(part.)", "particle", None),
     18: lexical.type("interjection", "(interjection)", "interjection", None),
     20: lexical.type(
-        "personal pronoun", "(pers. pron.)", "personal pronoun", None
+        "personal pronoun",
+        "(pers. pron.)",
+        "personal pronoun",
+        None,
     ),
     99: lexical.type("HEADER", "(HEADER)", "HEADER", None, append=False),
 }
@@ -255,7 +279,10 @@ SPELLING_ANNOTATIONS_1 = [
     (
         "-",
         lexical.type(
-            "-", "-", "prenominal form (likely)", inflect.Type.VERB_PRENOMINAL
+            "-",
+            "-",
+            "prenominal form (likely)",
+            inflect.Type.VERB_PRENOMINAL,
         ),
     ),
     # TODO: The dash is a typo. Fix at the origin. It should be a hyphen.
@@ -263,19 +290,28 @@ SPELLING_ANNOTATIONS_1 = [
     (
         "–",
         lexical.type(
-            "-", "-", "prenominal form (likely)", inflect.Type.VERB_PRENOMINAL
+            "-",
+            "-",
+            "prenominal form (likely)",
+            inflect.Type.VERB_PRENOMINAL,
         ),
     ),
     (
         "=",
         lexical.type(
-            "=", "=", "pronominal form", inflect.Type.VERB_PRONOMINAL
+            "=",
+            "=",
+            "pronominal form",
+            inflect.Type.VERB_PRONOMINAL,
         ),
     ),  # Pronominal form. # ⸗
     (
         "+",
         lexical.type(
-            "+", "+", "qualitative form", inflect.Type.VERB_QUALITATIVE
+            "+",
+            "+",
+            "qualitative form",
+            inflect.Type.VERB_QUALITATIVE,
         ),
     ),  # (ⲉϥ)
 ]
@@ -297,7 +333,10 @@ DETACHED_TYPES_1 = [
     (
         "$*",
         lexical.type(
-            "<i>(nn)</i>", "(nn)", "(nn)", inflect.Type.NOUN_UNKNOWN_GENDER
+            "<i>(nn)</i>",
+            "(nn)",
+            "(nn)",
+            inflect.Type.NOUN_UNKNOWN_GENDER,
         ),
     ),
     (
@@ -321,7 +360,10 @@ DETACHED_TYPES_1 = [
     (
         "*****",
         lexical.type(
-            "<i>noun: </i>", "(noun)", "noun", inflect.Type.NOUN_UNKNOWN_GENDER
+            "<i>noun: </i>",
+            "(noun)",
+            "noun",
+            inflect.Type.NOUN_UNKNOWN_GENDER,
         ),
     ),  # (ⲟⲩ)
     # TODO: (#115) The following types likely apply to the subset of spellings
@@ -329,7 +371,10 @@ DETACHED_TYPES_1 = [
     (
         "****",
         lexical.type(
-            "<i>female: </i>", "(ⲧ)", "female", lexical.Gender.FEMININE
+            "<i>female: </i>",
+            "(ⲧ)",
+            "female",
+            lexical.Gender.FEMININE,
         ),
     ),
     (
@@ -348,14 +393,20 @@ DETACHED_TYPES_1 = [
     (
         "*",
         lexical.type(
-            "<i>plural: </i>", "(ⲛ)", "plural", lexical.Gender.PLURAL
+            "<i>plural: </i>",
+            "(ⲛ)",
+            "plural",
+            lexical.Gender.PLURAL,
         ),
     ),
     ("$", lexical.type("<i> &c</i>", "(&c)", "constructed with", None)),
     (
         "^^^",
         lexical.type(
-            "<i><b>c</b></i>", "(c)", "Not sure what this means!", None
+            "<i><b>c</b></i>",
+            "(c)",
+            "Not sure what this means!",
+            None,
         ),
     ),
     # TODO: (#115) {nic} is definitely spelling-specific! Its presence here

@@ -2,7 +2,6 @@ import unittest
 
 
 class TestKindle(unittest.TestCase):
-
     def test_kindle(self):
         pass
 

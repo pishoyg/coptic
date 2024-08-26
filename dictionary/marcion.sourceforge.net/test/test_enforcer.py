@@ -4,7 +4,6 @@ import enforcer
 
 
 class Test(unittest.TestCase):
-
     def test(self):
         pass
 

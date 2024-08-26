@@ -73,7 +73,9 @@ def main() -> None:
 
     # Write the derivations.
     derivations.sort_values(
-        by=SORT_DERIVATIONS, key=series_to_int, inplace=True
+        by=SORT_DERIVATIONS,
+        key=series_to_int,
+        inplace=True,
     )
     write(derivations, "derivations")
 
@@ -138,7 +140,9 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
     for _, row in df.iterrows():
         if strict:
             insert(
-                "key", "-link", constants.CARD_LINK_FMT.format(key=row["key"])
+                "key",
+                "-link",
+                constants.CARD_LINK_FMT.format(key=row["key"]),
             )
         else:
             insert(
