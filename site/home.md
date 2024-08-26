@@ -26,7 +26,7 @@ This site hosts a suite of products that aims to make Coptic more **learnable**.
    (\**The iOS version is
 paid, unfortunately!*)
 
-2. Download [the Coptic package](https://drive.google.com/file/d/1KV0fH23Zucmlvdc0dwTJiDdqKIvbuYY_/view?usp=sharing),
+2. Download [the Coptic package](https://drive.google.com/uc?export=download&id=1KV0fH23Zucmlvdc0dwTJiDdqKIvbuYY_),
 and open it / import it in Anki. This package includes all the data.
 
    **NOTE: The package is updated regularly (almost daily), so make sure
