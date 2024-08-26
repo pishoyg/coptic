@@ -122,6 +122,12 @@ todo() {
 
 # Search for dead Python code, or `dead` disable markers.
 pydead () {
-  dead --exclude=archive
+  dead --exclude=archive | while read -r MATCH; do
+    SYMBOL="$(echo "${MATCH}" | awk '{ print $1 }')"
+    MESSAGE="$(echo "${MATCH}" | awk '{ $1=""; $NF=""; print }')"
+    FILE="$(echo "${MATCH}" | awk '{ print $NF }' | cut --field=1 --delimiter=":")"
+    LINE_NUM="$(echo "${MATCH}" | awk '{ print $NF }' | cut --field=2 --delimiter=":")"
+    echo -e "${RED}${SYMBOL}${RESET}${MESSAGE}${PURPLE}${FILE}${RESET}:${GREEN}${LINE_NUM}${RESET}"
+  done
   grepexx . '# dead: disable' --include="*.py"
 }
