@@ -325,7 +325,7 @@ def crum(
                     field.img(
                         root_appendix("dawoud-pages", force=False),
                         get_paths=lambda page_ranges: [
-                            f"dictionary/copticocc.org/data/dawoud-D100/{k+16}.jpg"
+                            f"dictionary/copticocc.org/data/dawoud-D100-cropped/{k+16}.jpg"
                             for k in _page_numbers(page_ranges=page_ranges)
                         ],
                         fmt_args=lambda path: {
