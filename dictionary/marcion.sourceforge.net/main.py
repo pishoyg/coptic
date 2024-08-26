@@ -1,9 +1,9 @@
 import os
-import parser
 
 import constants
 import enforcer
 import pandas as pd
+import parse
 import tree
 import type_enforced
 import word as lexical
@@ -55,14 +55,14 @@ def main() -> None:
     # Process roots.
     roots = utils.read_tsv(COPTWRD_TSV)
     process_data(roots, strict=True)
-    parser.verify(constants.ROOTS_REFERENCE_COUNT * 2)
-    parser.reset()
+    parse.verify(constants.ROOTS_REFERENCE_COUNT * 2)
+    parse.reset()
 
     # Process derivations.
     derivations = utils.read_tsv(COPTDRV_TSV)
     process_data(derivations, strict=False)
-    parser.verify(constants.DERIVATIONS_REFERENCE_COUNT * 2)
-    parser.reset()
+    parse.verify(constants.DERIVATIONS_REFERENCE_COUNT * 2)
+    parse.reset()
 
     # Gain tree insights.
     build_trees(roots, derivations)
@@ -152,8 +152,8 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
                 + "#drv"
                 + row["key"],
             )
-        root_type = parser.parse_type_cell(row[TYPE_COL])
-        word = parser.parse_word_cell(
+        root_type = parse.parse_type_cell(row[TYPE_COL])
+        word = parse.parse_word_cell(
             row[WORD_COL],
             root_type,
             strict,
@@ -166,7 +166,7 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
             "-parsed-classify",
             "\n".join(w.string(classify=True) for w in word),
         )
-        word = parser.parse_word_cell(
+        word = parse.parse_word_cell(
             row[WORD_COL],
             root_type,
             strict,
@@ -191,13 +191,13 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
             insert(
                 QUALITY_COL,
                 "-parsed",
-                parser.parse_quality_cell(row[QUALITY_COL]),
+                parse.parse_quality_cell(row[QUALITY_COL]),
             )
         insert(TYPE_COL, "-parsed", root_type.marcion())
-        insert(GR_COL, "-parsed", parser.parse_greek_cell(row[GR_COL]))
-        ep = parser.parse_english_cell(row[EN_COL])
+        insert(GR_COL, "-parsed", parse.parse_greek_cell(row[GR_COL]))
+        ep = parse.parse_english_cell(row[EN_COL])
         insert(EN_COL, "-parsed", ep)
-        insert(EN_COL, "-parsed-no-greek", parser.remove_greek(ep))
+        insert(EN_COL, "-parsed-no-greek", parse.remove_greek(ep))
         crum = row[CRUM_COL]
         if crum == "0a":
             row[CRUM_COL] = ""

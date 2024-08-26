@@ -1,6 +1,6 @@
 import unittest
 
-# TODO: (#213) Rename the `parser` package, and restore the import.
+import parse
 
 
 class Test(unittest.TestCase):

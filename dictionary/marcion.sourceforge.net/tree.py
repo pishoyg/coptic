@@ -1,10 +1,10 @@
 import itertools
-import parser
 import typing
 
 import constants
 import enforcer
 import pandas as pd
+import parse
 import type_enforced
 
 NUM_COLS = 10
@@ -75,7 +75,7 @@ class node:
         assert self.is_root()
         assert self._preprocessed
         cur = {
-            parser.crum_page(d.row()["crum"])
+            parse.crum_page(d.row()["crum"])
             for d in self.descendants(include_root=True)
         }
         cur = filter(None, cur)
@@ -283,7 +283,7 @@ class node:
             word = d.cell("word-parsed-prettify")
             type = d.cell("type-parsed")
             # Calling the parser in tree? A little unorthodox, eh?!
-            meaning = parser.lighten_greek(d.cell("en-parsed"))
+            meaning = parse.lighten_greek(d.cell("en-parsed"))
             assert word or (type == "HEADER" and meaning)
             if type and type not in ["-", "HEADER"]:
                 meaning = f"({type}) {meaning}"
