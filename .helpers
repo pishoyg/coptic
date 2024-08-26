@@ -119,3 +119,9 @@ todo() {
   fi
   grepexx . --perl-regexp "${PATTERN}"
 }
+
+# Search for dead Python code, or `dead` disable markers.
+pydead () {
+  dead --exclude=archive
+  grepexx . '# dead: disable' --include="*.py"
+}

@@ -199,9 +199,23 @@ repos:
     rev: v1.5.2
     hooks:
       - id: dead
+        # We wrap `dead` in a Bash script that suppresses its errors.
+        # It has some false positives[1]. One of them is global variables,
+        # which the creator doesn't intend to fix.[2]
+        # [1] https://github.com/asottile/dead?tab=readme-ov-file#false-positives
+        # [2] https://github.com/asottile/dead/issues/184
+        # It also can't be disabled on a class level, we would have to disable
+        # it for each method individually.
+        # Although we can (and should) get rid of our global variables, we
+        # might end up continuously having unused (albeit not dead per se)
+        # classes in our repo. Disabling dead on a per-method basis is going to
+        # be annoying, so we just change it to a warning for now.
+        entry: bash -c 'dead "${@}" || true' --
+        verbose: true
+        # `dead` doesn't respect the pre-commit `exclude` directive[1], so we
+        # have to exclude the archive using a flag.
+        # [1] https://github.com/asottile/dead/issues/185
         args: [--exclude, archive/.*]
-        # TODO: (#213) Appease and enable.
-        exclude: .*
   - repo: https://github.com/asottile/yesqa
     rev: v1.5.0
     hooks:
