@@ -443,8 +443,8 @@ database from other sources:
 
 ## copticocc.org
 
-`dawoud-D100/` contains scans of Moawad Dawoud's dictionary. They are obtained
-from the PDF using the following imagemagick command (The density used is 100,
+- `dawoud-D100/` contains scans of Moawad Dawoud's dictionary. They are obtained
+from the PDF using the following imagemagick command (the density used is 100,
 hence the prefix `-D100`.):
 
 ```bash
@@ -453,6 +453,33 @@ convert -density 100 -colorspace sRGB dawoud.pdf %d.jpg
 
 The PDF was obtained [from the Coptic Treasures
 website](https://coptic-treasures.com/book/coptic-dictionary-moawad-abd-al-nour/).
+
+- `dawoud-D100-cropped/` contains scans of Moawad Dawoud's dictionary, with the
+`https://coptic-treasures.com` watermark removed. They are obtained using this
+command:
+```sh
+find "dictionary/copticocc.org/data/dawoud-D100" -type f \
+  | while read -r FILE; do \
+    magick "${FILE}" -crop "827x1145+0+0" \
+      "${FILE/dawoud-D100/dawoud-D100-cropped}"; done
+```
+
+For the record, the original sizes were as follows:
+```sh
+$ magick identify dictionary/copticocc.org/data/dawoud-D100/* \
+| cut --fields 3 --delimiter ' ' \
+| sort \
+| uniq --count
+```
+
+```
+      2 827x1098
+   1055 827x1169
+```
+The two smaller images represent the front and back of the cover (not printed
+pages). Thus, this is a loss of exactly 24 pixels on the Y axis (roughly 2%)
+for all printed pages, and it doesn't impact the two (currently unused) cover
+images.
 
 # bible
 
