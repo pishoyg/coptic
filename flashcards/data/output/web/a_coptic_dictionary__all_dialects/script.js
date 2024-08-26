@@ -51,6 +51,12 @@ window.addEventListener('load', () => {
       window_open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.innerHTML}`);
     };
   });
+  Array.prototype.forEach.call(document.getElementsByClassName('dawoud-page-external'), (el) => {
+    el.classList.add('link');
+    el.onclick = () => {
+      window_open('https://coptic-treasures.com/book/coptic-dictionary-moawad-abd-al-nour/');
+    };
+  });
   Array.prototype.forEach.call(document.getElementsByClassName('crum-page-img'), (el) => {
     el.classList.add('link');
     el.onclick = () => {

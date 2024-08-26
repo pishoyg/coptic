@@ -68,6 +68,17 @@ Array.prototype.forEach.call(
     };
   });
 
+// Handle 'dawoud-page-external' class.
+Array.prototype.forEach.call(
+  document.getElementsByClassName('dawoud-page-external'),
+  (el: HTMLElement): void => {
+    el.classList.add('link');
+    el.onclick = (): void => {
+      window_open(
+        'https://coptic-treasures.com/book/coptic-dictionary-moawad-abd-al-nour/');
+    };
+  });
+
 // Handle 'crum-page-img' class.
 Array.prototype.forEach.call(
   document.getElementsByClassName('crum-page-img'),
