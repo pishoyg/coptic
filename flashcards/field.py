@@ -4,20 +4,11 @@ import shutil
 import typing
 
 import enforcer
-import gspread
 import type_enforced
-from oauth2client import service_account
 
 import utils
 
 NO_LENGTH = -1
-
-GSPREAD_SCOPE = [
-    "https://spreadsheets.google.com/feeds",
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive",
-]
 
 AUDIO_FMT = '<audio controls><source src="{basename}"/></audio>'
 AUDIO_FMT_L = '<audio controls><source src="'
@@ -28,7 +19,6 @@ _work_dir = ""
 _initialized = False
 _in_work_dir = {}
 _tsv = {}
-_gsheet = {}
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -176,39 +166,9 @@ class tsvs(_content_field):
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-class gsheet(_content_field):  # dead: disable
-    """A column from a Google sheet."""
-
-    def __init__(
-        self,
-        json_keyfile_name: str,
-        gspread_url: str,
-        column_name: str,
-        line_br: bool = False,
-        force: bool = True,
-    ) -> None:
-        assert json_keyfile_name
-        assert gspread_url
-        assert column_name
-        if gspread_url in _gsheet:
-            sheet = _gsheet[gspread_url]
-        else:
-            credentials = service_account.ServiceAccountCredentials.from_json_keyfile_name(
-                json_keyfile_name,
-                GSPREAD_SCOPE,
-            )
-            sheet = gspread.authorize(credentials).open_by_url(gspread_url)
-        records = sheet.get_worksheet(0).get_all_records()
-        content = [str(row[column_name]).strip() for row in records]
-        if line_br:
-            content = list(map(utils.use_html_line_breaks, content))
-        super().__init__(content, [], force=force)
-
-
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class grp(_content_field):  # dead: disable
     """
-    Group entries in a TSV or gsheet column using another column.
+    Group entries in a TSV column using another column.
     See this example:
         keys: [1, 2, 3]
         groupby: [1, 2, 1, 2, 3, 3]
