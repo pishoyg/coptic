@@ -29,15 +29,6 @@ def _random_basename():
 
 
 @type_enforced.Enforcer(enabled=TYPE_ENFORCED)
-def _chop(text: str, regex: re.Pattern) -> tuple[str, str, str]:
-    s = regex.search(text)
-    if not s:
-        return text, "", ""
-    i, j = s.span()
-    return text[:i], text[i:j], text[j:]
-
-
-@type_enforced.Enforcer(enabled=TYPE_ENFORCED)
 def obfuscate_paths(dir: str) -> None:
     map: dict[str, str] = {}
     paths = utils.paths(dir)
@@ -49,29 +40,23 @@ def obfuscate_paths(dir: str) -> None:
         map[os.path.basename(path)] = new_basename
         shutil.move(path, os.path.join(dir, new_basename))
 
-    def transform(html: str) -> str:
-        before, src, after = _chop(html, SRC_RE)
-        if not src or not after:
-            assert not src and not after
-            assert before == html
-            return before
-        match = SRC_RE.match(src)
-        assert match
-        original = match.group(2)
-        if (
-            original.startswith("http")
-            or original.startswith("mailto:")
-            or original.startswith("#")
-            or os.path.dirname(original)
-        ):
-            return before + src + transform(after)
-        return before + f'{match.group(1)}="{map[original]}"' + transform(after)
-
     for path in paths:
         if utils.ext(path) != ".html":
             continue
         html = utils.read(path)
-        utils.write(transform(html), path, log=False, fix_newline=False)
+
+        def replacer(match: re.Match):
+            original = match.group(2)
+            if (
+                original.startswith("http")
+                or original.startswith("mailto:")
+                or original.startswith("#")
+                or os.path.dirname(original)
+            ):
+                return match.group(0)
+            return f'{match.group(1)}="{map[original]}"'
+
+        utils.write(SRC_RE.sub(replacer, html), path, log=False, fix_newline=False)
 
 
 def main():
