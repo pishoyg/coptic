@@ -8,20 +8,19 @@
 
   - [Hosting](#hosting)
   - [Diagram](#diagram)
-  - [For Developers / Owners](#for-developers--owners)
-    - [Getting started](#getting-started)
-    - [Directory Structure](#directory-structure)
-    - [`data/`](#data)
-    - [`.env`](#env)
-    - [`stats`](#stats)
-    - [Languages](#languages)
-    - [Planning](#planning)
-      - [Issues](#issues)
-      - [Milestones](#milestones)
-      - [Labels](#labels)
-    - [Technical Guidelines](#technical-guidelines)
+  - [Getting started](#getting-started)
+  - [Directory Structure](#directory-structure)
+  - [`data/`](#data)
+  - [`.env`](#env)
+  - [`stats`](#stats)
+  - [Languages](#languages)
+  - [Planning](#planning)
+    - [Issues](#issues)
+    - [Milestones](#milestones)
+    - [Labels](#labels)
+  - [Technical Guidelines](#technical-guidelines)
   - [Data Collection](#data-collection)
-- [dictionary](#dictionary)
+- [`dictionary/`](#dictionary)
   - [Marcion](#marcion)
     - [Data Store](#data-store)
       - [`marcion-raw/`](#marcion-raw)
@@ -36,11 +35,11 @@
     - [Undialected Entries](#undialected-entries)
     - [Entries that are Absent in Crum](#entries-that-are-absent-in-crum)
   - [copticocc.org](#copticoccorg)
-- [bible](#bible)
+- [`bible/`](#bible)
   - [Data](#data)
     - [Output Directories](#output-directories)
     - [Output Files](#output-files)
-- [flashcards](#flashcards)
+- [`flashcards/`](#flashcards)
   - [Anki Keys and Synchronization](#anki-keys-and-synchronization)
   - [Anki JavaScript (TypeScript)](#anki-javascript-typescript)
   - [Type Enforcement](#type-enforcement)
@@ -73,17 +72,16 @@ We use:
 *NOTE: You can update the diagram by uploading it to
 [draw.io](https://draw.io/).*
 
-## For Developers / Owners
-
-### Getting started
+## Getting started
 
 Running `make install` should take care of most of the python installations.
 
-Some pipelines also use the following binaries:
-- [tidy](https://www.html-tidy.org/)
-- [magick](https://imagemagick.org/)
+If there are missing binaries that you need to download them, `make install`
+will let you know.
 
-### Directory Structure
+You might also want to alias `python` to the latest version.
+
+## Directory Structure
 
 `dictionary/` contains subdirectories, each containing one dictionary, its data,
 and the scripts used to process the data into other formats. `bible/` currently
@@ -104,7 +102,7 @@ Most scripts have default parameters with the assumption that they are being
 invoked from the repo's root directory, rather than from the directory where
 the script lives.
 
-### `data/`
+## `data/`
 
 We have somewhat strict rules regarding our `data/` directory. It usually (and this means almost always) contains four
 subdirectories:
@@ -119,14 +117,14 @@ includes the data that we created ourselves.
 - `output/`: This contains the data written by our pipelines, **one subdirectory per format**. If your pipeline writes
 both TSV and HTML, they should go respectively to `output/tsv/` and `output/html/`.
 
-### `.env`
+## `.env`
 
 `.env` (which is hidden by a rule in `.gitignore`) contains the environment
 variables. They are essential for some pipelines.
 
 It is documented in `.env_INFO`, so this README section is intentionally brief.
 
-### `stats`
+## `stats`
 
 - We collect extensive stats, and we force them using a pre-commit. The primary
   targets of our statistics are:
@@ -135,7 +133,7 @@ It is documented in `.env_INFO`, so this README section is intentionally brief.
   - The number of data items we've collected for data collection tasks.
   - We also record the number of commits, and the number of contributors.
 
-### Languages
+## Languages
 
 - Our pipelines are primarily written in Python. There is minimal logic in
   Bash.
@@ -159,9 +157,9 @@ uncompromisingly choose the one that is more familiar.
 
 - You can view some code statistics in `stats.sh`.
 
-### Planning
+## Planning
 
-#### [Issues](https://github.com/pishoyg/coptic/issues/)
+### [Issues](https://github.com/pishoyg/coptic/issues/)
 
 - We use GitHub to track our TODO's and plans. See [
 Issues](https://github.com/pishoyg/coptic/issues).
@@ -177,7 +175,7 @@ High-priority issues are defined in two ways:
 - Assignment to a developer
 - Belonging to a component that has already been agreed to be high-priority.
 
-#### [Milestones](https://github.com/pishoyg/coptic/milestones/)
+### [Milestones](https://github.com/pishoyg/coptic/milestones/)
 
 Milestones represent more complex pieces of work. Their size is undetermined.
 They could weeks or years, but they are not simple enough to span just a few
@@ -204,7 +202,7 @@ milestones that represent concrete goals.
 celebrated, and its remaining issues move to the corresponding component
 backlog milestone.
 
-#### [Labels](https://github.com/pishoyg/coptic/labels)
+### [Labels](https://github.com/pishoyg/coptic/labels)
 
 - All issues should be labeled.
 
@@ -227,7 +225,7 @@ backlog milestone.
      - What is the purpose of this issue?
 
 
-### Technical Guidelines
+## Technical Guidelines
 
 1. Minimize dependence on HTML, and keep behavior as much as possible in
    JavaScript (TypeScript).
@@ -286,7 +284,7 @@ images, but icons have come for the rescue:
   - https://metremnqymi.com/crum/89.html
   - https://metremnqymi.com/crum/2189.html
 
-# dictionary
+# `dictionary/`
 
 ## Marcion
 
@@ -481,7 +479,7 @@ pages). Thus, this is a loss of exactly 24 pixels on the Y axis (roughly 2%)
 for all printed pages, and it doesn't impact the two (currently unused) cover
 images.
 
-# bible
+# `bible/`
 
 There are several published versions of the Coptic Bible. The most
 recent, and most complete, is that of [St. Shenouda the Archmandrite
@@ -520,7 +518,7 @@ three categories:
   a pair of languages. (Usually Bohairic-English is the pair of interest,
 though you can control which pair(s) get generated using the CLI arguments.)
 
-# flashcards
+# `flashcards/`
 
 ## Anki Keys and Synchronization
 
