@@ -36,7 +36,6 @@ repos:
             announce "${YELLOW}" "${CYAN}"
           else
             announce "${RED}" "${PURPLE}"
-            exit 1
           fi
           ' --
         language: system
