@@ -1,0 +1,6 @@
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint]
+# Ignore unused imports (`F401`).
+ignore = ["F401", "F541"]
