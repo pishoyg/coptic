@@ -97,9 +97,7 @@ Array.prototype.forEach.call(document.getElementsByClassName('explanatory-key'),
   el.classList.add('hover-link');
   moveElement(el, 'a', { 'href': `#explanatory${el.innerHTML}` });
 });
-function DIALECTS() {
-  return ['S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
-}
+const DIALECTS = ['S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
 function activeDialects() {
   const d = get_url_or_local('d');
   if (d === null) {
@@ -113,7 +111,7 @@ function activeDialects() {
 function dialect() {
   const active = activeDialects();
   function dialected(el) {
-    return DIALECTS().some((d) => el.classList.contains(d));
+    return DIALECTS.some((d) => el.classList.contains(d));
   }
   document.querySelectorAll('.dialect-parenthesis,.dialect-comma,.spelling-comma,.type').forEach((el) => {
     if (active === null) {
@@ -145,7 +143,7 @@ function dialect() {
 Array.prototype.forEach.call(document.getElementsByClassName('dialect'), (el) => {
   el.classList.add('hover-link');
   el.onclick = () => {
-    const dClasses = DIALECTS().filter((d) => el.classList.contains(d));
+    const dClasses = DIALECTS.filter((d) => el.classList.contains(d));
     if (dClasses.length !== 1) {
       return;
     }

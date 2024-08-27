@@ -1,6 +1,4 @@
 'use strict';
-// NOTE: Do NOT use global variables. They don't work on Anki!
-// Instead, we represent them as getter functions that return the values.
 // TODO: Reduce the dependency on `innerHTML`. Use attributes when possible.
 function get_url_or_local(
   param: string,
@@ -153,9 +151,7 @@ Array.prototype.forEach.call(
 
 // Handle the 'dialect' class.
 type Dialect = 'S' | 'Sa' | 'Sf' | 'A' | 'sA' | 'B' | 'F' | 'Fb' | 'O' | 'NH';
-function DIALECTS(): Dialect[] {
-  return ['S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
-}
+const DIALECTS: readonly Dialect[] = ['S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
 
 function activeDialects(): Set<Dialect> | null {
   const d = get_url_or_local('d');
@@ -173,7 +169,7 @@ function activeDialects(): Set<Dialect> | null {
 function dialect(): void {
   const active: Set<Dialect> | null = activeDialects();
   function dialected(el: Element): boolean {
-    return DIALECTS().some((d: Dialect) => el.classList.contains(d));
+    return DIALECTS.some((d: Dialect) => el.classList.contains(d));
   }
   document.querySelectorAll(
     '.dialect-parenthesis,.dialect-comma,.spelling-comma,.type').forEach(
@@ -208,7 +204,7 @@ Array.prototype.forEach.call(
   (el: HTMLElement) => {
     el.classList.add('hover-link');
     el.onclick = () => {
-      const dClasses: readonly Dialect[] = DIALECTS().filter(
+      const dClasses: readonly Dialect[] = DIALECTS.filter(
         (d) => el.classList.contains(d));
       if (dClasses.length !== 1) {
         // This is unexpected!
