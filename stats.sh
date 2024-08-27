@@ -66,6 +66,10 @@ loc () {
   foc "${1}" cat "${@:2}" | wc --lines
 }
 
+foc_count () {
+  foc "${1}" echo "${@:2}" | wc --lines
+}
+
 loc_shared () {
   echo $(( $(loc . -depth 1) + $(loc test) + $(loc pre-commit) ))
 }
@@ -224,7 +228,35 @@ readonly TOTAL_BY_LANG="$((
   + LOC_TS
   + LOC_JSON))"
 
-FOC=$(foc . "echo" | wc --lines)
+FOC=$(foc_count .)
+FOC_PYTHON=$(foc_count . -name "*.py")
+FOC_MAKE=$(foc_count . -name "Makefile")
+FOC_CSS=$(foc_count . -name "*.css")
+FOC_SH=$(foc_count . -a \( -name "*.sh" -o -name ".env" -o -name ".env_INFO" -o -name ".helpers" \))
+FOC_JS=$(foc_count . -name "*.mjs" )
+FOC_MD=$(foc_count . -name "*.md")
+FOC_YAML=$(foc_count . -a \( -name "*.yaml" -o -name ".yamlfmt" -o -name ".yamllint" \) )
+FOC_TOML=$(foc_count . -name "*.toml")
+FOC_DOT=$(foc_count . -name ".gitignore" )
+FOC_KEYBOARD_LAYOUT=$(foc_count . -a \( -name "*.keylayout" -o -name "*.plist" -o -name "*.strings" \) )
+FOC_TXT=$(foc_count . -name "*.txt")
+FOC_TS=$(foc_count . -name "*.ts")
+FOC_JSON=$(foc_count . -a \( -name "*.json" -o -name ".jshintrc" -o -name ".csslintrc" \) )
+
+readonly TOTAL_FOC="$((
+  FOC_PYTHON
+  + FOC_MAKE
+  + FOC_CSS
+  + FOC_SH
+  + FOC_JS
+  + FOC_MD
+  + FOC_YAML
+  + FOC_TOML
+  + FOC_DOT
+  + FOC_KEYBOARD_LAYOUT
+  + FOC_TXT
+  + FOC_TS
+  + FOC_JSON))"
 
 DISK_USAGE="$(du --apparent-size --summarize . | cut --fields 1)"
 DISK_USAGE_HUMAN="$(du --apparent-size --human-readable --summarize . | cut --fields 1)"
@@ -285,8 +317,10 @@ crum_root_keys () {
 }
 CRUM_PAGES_CHANGED=$(crum_root_keys | sort | uniq | wc --lines)
 
-echo -e "${BLUE}Number of lines of code: "\
-"${GREEN}${LOC}${BLUE}."\
+# TODO: (#214) It's confusing to print the number of lines of code as two
+# distinct values, one including the archive and one excluding it! Remove the
+# archive from both. We're only interested in the live lines.
+echo -e "${BLUE}Number of lines of code: ${GREEN}${LOC}${BLUE}."\
 "\n  ${BLUE}Crum: ${GREEN}${LOC_CRUM}"\
 "\n  ${BLUE}copticsite: ${GREEN}${LOC_COPTICSITE}"\
 "\n  ${BLUE}KELLIA: ${GREEN}${LOC_KELLIA}"\
@@ -300,7 +334,7 @@ echo -e "${BLUE}Number of lines of code: "\
 "\n  ${BLUE}Archive: ${GREEN}${LOC_ARCHIVE}"\
 "\n  ${BLUE}TOTAL: ${GREEN}${TOTAL}"
 
-echo -e "${BLUE}Number of live lines of code per language: "\
+echo -e "${BLUE}Live lines of code: ${BLUE}$((LOC - LOC_ARCHIVE))"\
 "\n  ${BLUE}Python: ${GREEN}${LOC_PYTHON}"\
 "\n  ${BLUE}Make: ${GREEN}${LOC_MAKE}"\
 "\n  ${BLUE}CSS: ${GREEN}${LOC_CSS}"\
@@ -316,7 +350,21 @@ echo -e "${BLUE}Number of live lines of code per language: "\
 "\n  ${BLUE}JSON: ${GREEN}${LOC_JSON}"\
 "\n  ${BLUE}TOTAL: ${GREEN}${TOTAL_BY_LANG}"
 
-echo -e "${BLUE}Number of files of code: ${GREEN}${FOC}${BLUE}.${RESET}"
+echo -e "${BLUE}Number of files of code: ${GREEN}${FOC}${BLUE}."\
+"\n  ${BLUE}Python: ${GREEN}${FOC_PYTHON}"\
+"\n  ${BLUE}Make: ${GREEN}${FOC_MAKE}"\
+"\n  ${BLUE}CSS: ${GREEN}${FOC_CSS}"\
+"\n  ${BLUE}Shell: ${GREEN}${FOC_SH}"\
+"\n  ${BLUE}JavaScript: ${GREEN}${FOC_JS}"\
+"\n  ${BLUE}Markdown: ${GREEN}${FOC_MD}"\
+"\n  ${BLUE}YAML: ${GREEN}${FOC_YAML}"\
+"\n  ${BLUE}TOML: ${GREEN}${FOC_TOML}"\
+"\n  ${BLUE}dot: ${GREEN}${FOC_DOT}"\
+"\n  ${BLUE}keyboard: ${GREEN}${FOC_KEYBOARD_LAYOUT}"\
+"\n  ${BLUE}txt: ${GREEN}${FOC_TXT}"\
+"\n  ${BLUE}TypeScript: ${GREEN}${FOC_TS}"\
+"\n  ${BLUE}JSON: ${GREEN}${FOC_JSON}"\
+"\n  ${BLUE}TOTAL: ${GREEN}${TOTAL_FOC}"
 
 echo -e "${BLUE}Disk usage: \
 ${GREEN}${DISK_USAGE}${BLUE} (${GREEN}${DISK_USAGE_HUMAN}${BLUE})${RESET}"
@@ -368,6 +416,12 @@ if [ "${DELTA}" != "0" ]; then
   exit 1
 fi
 
+DELTA=$(( FOC - TOTAL_FOC ))
+if [ "${DELTA}" != "0" ]; then
+  echo -e "${PURPLE}The total doesn't equal the sum of the parts, delta is ${RED}${DELTA}${PURPLE}.${RESET}"
+  exit 1
+fi
+
 DELTA=$(( LOC - TOTAL_BY_LANG - LOC_ARCHIVE ))
 if [ "${DELTA}" != "0" ]; then
   echo -e "${PURPLE}The total doesn't equal the sum of the parts, delta is ${RED}${DELTA}${PURPLE}.${RESET}"
@@ -381,7 +435,7 @@ if ${SAVE}; then
   # to tab characters.
   # We do this by first converting all spaces to tabs, then converting five
   # tabs to spaces.
-  echo -e "$(date) $(date +%s) ${LOC} ${CRUM_IMG} ${CRUM_DAWOUD} ${LOC_CRUM} ${LOC_COPTICSITE} ${LOC_KELLIA} ${LOC_BIBLE} ${LOC_FLASHCARDS} ${LOC_GRAMMAR} ${LOC_KEYBOARD} ${LOC_MORPHOLOGY} ${LOC_SITE} ${LOC_SHARED} ${LOC_ARCHIVE} ${CRUM_TYPOS} ${CRUM_IMG_SUM} ${CRUM_DAWOUD_SUM} ${NUM_COMMITS} ${NUM_CONTRIBUTORS} ${CRUM_NOTES} ${LOC_PYTHON} ${LOC_MAKE} ${LOC_CSS} ${LOC_SH} ${LOC_JS} ${LOC_MD} ${LOC_YAML} ${LOC_DOT} ${LOC_KEYBOARD_LAYOUT} ${LOC_TXT} ${CRUM_WRD_TYPOS} ${CRUM_DRV_TYPOS} ${CRUM_PAGES_CHANGED} ${CRUM_ROOT_SENSES} ${CRUM_ROOT_SENSES_SUM} ${LOC_TS} ${LOC_JSON} ${DISK_USAGE} ${DISK_USAGE_HUMAN} ${LOC_TOML} ${FOC}" \
+  echo -e "$(date) $(date +%s) ${LOC} ${CRUM_IMG} ${CRUM_DAWOUD} ${LOC_CRUM} ${LOC_COPTICSITE} ${LOC_KELLIA} ${LOC_BIBLE} ${LOC_FLASHCARDS} ${LOC_GRAMMAR} ${LOC_KEYBOARD} ${LOC_MORPHOLOGY} ${LOC_SITE} ${LOC_SHARED} ${LOC_ARCHIVE} ${CRUM_TYPOS} ${CRUM_IMG_SUM} ${CRUM_DAWOUD_SUM} ${NUM_COMMITS} ${NUM_CONTRIBUTORS} ${CRUM_NOTES} ${LOC_PYTHON} ${LOC_MAKE} ${LOC_CSS} ${LOC_SH} ${LOC_JS} ${LOC_MD} ${LOC_YAML} ${LOC_DOT} ${LOC_KEYBOARD_LAYOUT} ${LOC_TXT} ${CRUM_WRD_TYPOS} ${CRUM_DRV_TYPOS} ${CRUM_PAGES_CHANGED} ${CRUM_ROOT_SENSES} ${CRUM_ROOT_SENSES_SUM} ${LOC_TS} ${LOC_JSON} ${DISK_USAGE} ${DISK_USAGE_HUMAN} ${LOC_TOML} ${FOC} ${FOC_PYTHON} ${FOC_MAKE} ${FOC_CSS} ${FOC_SH} ${FOC_JS} ${FOC_MD} ${FOC_YAML} ${FOC_TOML} ${FOC_DOT} ${FOC_KEYBOARD_LAYOUT} ${FOC_TXT} ${FOC_TS} ${FOC_JSON}" \
     | sed 's/ /\t/g' \
     | sed 's/\t/ /' \
     | sed 's/\t/ /' \
