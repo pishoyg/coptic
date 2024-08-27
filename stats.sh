@@ -224,6 +224,8 @@ readonly TOTAL_BY_LANG="$((
   + LOC_TS
   + LOC_JSON))"
 
+FOC=$(foc . "echo" | wc --lines)
+
 DISK_USAGE="$(du --apparent-size --summarize . | cut --fields 1)"
 DISK_USAGE_HUMAN="$(du --apparent-size --human-readable --summarize . | cut --fields 1)"
 
@@ -314,6 +316,8 @@ echo -e "${BLUE}Number of live lines of code per language: "\
 "\n  ${BLUE}JSON: ${GREEN}${LOC_JSON}"\
 "\n  ${BLUE}TOTAL: ${GREEN}${TOTAL_BY_LANG}"
 
+echo -e "${BLUE}Number of files of code: ${GREEN}${FOC}${BLUE}.${RESET}"
+
 echo -e "${BLUE}Disk usage: \
 ${GREEN}${DISK_USAGE}${BLUE} (${GREEN}${DISK_USAGE_HUMAN}${BLUE})${RESET}"
 
@@ -377,7 +381,7 @@ if ${SAVE}; then
   # to tab characters.
   # We do this by first converting all spaces to tabs, then converting five
   # tabs to spaces.
-  echo -e "$(date) $(date +%s) ${LOC} ${CRUM_IMG} ${CRUM_DAWOUD} ${LOC_CRUM} ${LOC_COPTICSITE} ${LOC_KELLIA} ${LOC_BIBLE} ${LOC_FLASHCARDS} ${LOC_GRAMMAR} ${LOC_KEYBOARD} ${LOC_MORPHOLOGY} ${LOC_SITE} ${LOC_SHARED} ${LOC_ARCHIVE} ${CRUM_TYPOS} ${CRUM_IMG_SUM} ${CRUM_DAWOUD_SUM} ${NUM_COMMITS} ${NUM_CONTRIBUTORS} ${CRUM_NOTES} ${LOC_PYTHON} ${LOC_MAKE} ${LOC_CSS} ${LOC_SH} ${LOC_JS} ${LOC_MD} ${LOC_YAML} ${LOC_DOT} ${LOC_KEYBOARD_LAYOUT} ${LOC_TXT} ${CRUM_WRD_TYPOS} ${CRUM_DRV_TYPOS} ${CRUM_PAGES_CHANGED} ${CRUM_ROOT_SENSES} ${CRUM_ROOT_SENSES_SUM} ${LOC_TS} ${LOC_JSON} ${DISK_USAGE} ${DISK_USAGE_HUMAN} ${LOC_TOML}" \
+  echo -e "$(date) $(date +%s) ${LOC} ${CRUM_IMG} ${CRUM_DAWOUD} ${LOC_CRUM} ${LOC_COPTICSITE} ${LOC_KELLIA} ${LOC_BIBLE} ${LOC_FLASHCARDS} ${LOC_GRAMMAR} ${LOC_KEYBOARD} ${LOC_MORPHOLOGY} ${LOC_SITE} ${LOC_SHARED} ${LOC_ARCHIVE} ${CRUM_TYPOS} ${CRUM_IMG_SUM} ${CRUM_DAWOUD_SUM} ${NUM_COMMITS} ${NUM_CONTRIBUTORS} ${CRUM_NOTES} ${LOC_PYTHON} ${LOC_MAKE} ${LOC_CSS} ${LOC_SH} ${LOC_JS} ${LOC_MD} ${LOC_YAML} ${LOC_DOT} ${LOC_KEYBOARD_LAYOUT} ${LOC_TXT} ${CRUM_WRD_TYPOS} ${CRUM_DRV_TYPOS} ${CRUM_PAGES_CHANGED} ${CRUM_ROOT_SENSES} ${CRUM_ROOT_SENSES_SUM} ${LOC_TS} ${LOC_JSON} ${DISK_USAGE} ${DISK_USAGE_HUMAN} ${LOC_TOML} ${FOC}" \
     | sed 's/ /\t/g' \
     | sed 's/\t/ /' \
     | sed 's/\t/ /' \
