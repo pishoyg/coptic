@@ -5,7 +5,7 @@
 set -o errexit  # Exit upon encountering a failure.
 set -o nounset  # Consider an undefined variable to be an error.
 
-KNOWN_EXTENSIONS="Makefile css jshintrc csslintrc env_INFO helpers gitignore yamlfmt yamllint json mjs keylayout md plist py sh strings txt yaml ts"
+KNOWN_EXTENSIONS="Makefile css jshintrc csslintrc env_INFO helpers gitignore yamlfmt yamllint json mjs keylayout md plist py sh strings txt yaml toml ts"
 
 SAVE=false
 while [ $# -gt 0 ]; do
@@ -170,6 +170,7 @@ LOC_SH=$(loc . -a \( -name "*.sh" -o -name ".env" -o -name ".env_INFO" -o -name 
 LOC_JS=$(loc . -name "*.mjs" )
 LOC_MD=$(loc . -name "*.md")
 LOC_YAML=$(loc . -a \( -name "*.yaml" -o -name ".yamlfmt" -o -name ".yamllint" \) )
+LOC_TOML=$(loc . -name "*.toml")
 LOC_DOT=$(loc . -name ".gitignore" )
 LOC_KEYBOARD_LAYOUT=$(loc . -a \( -name "*.keylayout" -o -name "*.plist" -o -name "*.strings" \) )
 LOC_TXT=$(loc . -name "*.txt")
@@ -184,6 +185,7 @@ TOTAL_BY_LANG="$((
   + LOC_JS
   + LOC_MD
   + LOC_YAML
+  + LOC_TOML
   + LOC_DOT
   + LOC_KEYBOARD_LAYOUT
   + LOC_TXT
@@ -273,6 +275,7 @@ echo -e "${BLUE}Number of live lines of code per language: "\
 "\n  ${BLUE}JavaScript: ${GREEN}${LOC_JS}"\
 "\n  ${BLUE}Markdown: ${GREEN}${LOC_MD}"\
 "\n  ${BLUE}YAML: ${GREEN}${LOC_YAML}"\
+"\n  ${BLUE}TOML: ${GREEN}${LOC_TOML}"\
 "\n  ${BLUE}dot: ${GREEN}${LOC_DOT}"\
 "\n  ${BLUE}keyboard: ${GREEN}${LOC_KEYBOARD_LAYOUT}"\
 "\n  ${BLUE}txt: ${GREEN}${LOC_TXT}"\
@@ -343,7 +346,7 @@ if ${SAVE}; then
   # to tab characters.
   # We do this by first converting all spaces to tabs, then converting five
   # tabs to spaces.
-  echo -e "$(date) $(date +%s) ${LOC} ${CRUM_IMG} ${CRUM_DAWOUD} ${LOC_CRUM} ${LOC_COPTICSITE} ${LOC_KELLIA} ${LOC_BIBLE} ${LOC_FLASHCARDS} ${LOC_GRAMMAR} ${LOC_KEYBOARD} ${LOC_MORPHOLOGY} ${LOC_SITE} ${LOC_SHARED} ${LOC_ARCHIVE} ${CRUM_TYPOS} ${CRUM_IMG_SUM} ${CRUM_DAWOUD_SUM} ${NUM_COMMITS} ${NUM_CONTRIBUTORS} ${CRUM_NOTES} ${LOC_PYTHON} ${LOC_MAKE} ${LOC_CSS} ${LOC_SH} ${LOC_JS} ${LOC_MD} ${LOC_YAML} ${LOC_DOT} ${LOC_KEYBOARD_LAYOUT} ${LOC_TXT} ${CRUM_WRD_TYPOS} ${CRUM_DRV_TYPOS} ${CRUM_PAGES_CHANGED} ${CRUM_ROOT_SENSES} ${CRUM_ROOT_SENSES_SUM} ${LOC_TS} ${LOC_JSON} ${DISK_USAGE} ${DISK_USAGE_HUMAN}" \
+  echo -e "$(date) $(date +%s) ${LOC} ${CRUM_IMG} ${CRUM_DAWOUD} ${LOC_CRUM} ${LOC_COPTICSITE} ${LOC_KELLIA} ${LOC_BIBLE} ${LOC_FLASHCARDS} ${LOC_GRAMMAR} ${LOC_KEYBOARD} ${LOC_MORPHOLOGY} ${LOC_SITE} ${LOC_SHARED} ${LOC_ARCHIVE} ${CRUM_TYPOS} ${CRUM_IMG_SUM} ${CRUM_DAWOUD_SUM} ${NUM_COMMITS} ${NUM_CONTRIBUTORS} ${CRUM_NOTES} ${LOC_PYTHON} ${LOC_MAKE} ${LOC_CSS} ${LOC_SH} ${LOC_JS} ${LOC_MD} ${LOC_YAML} ${LOC_DOT} ${LOC_KEYBOARD_LAYOUT} ${LOC_TXT} ${CRUM_WRD_TYPOS} ${CRUM_DRV_TYPOS} ${CRUM_PAGES_CHANGED} ${CRUM_ROOT_SENSES} ${CRUM_ROOT_SENSES_SUM} ${LOC_TS} ${LOC_JSON} ${DISK_USAGE} ${DISK_USAGE_HUMAN} ${LOC_TOML}" \
     | sed 's/ /\t/g' \
     | sed 's/\t/ /' \
     | sed 's/\t/ /' \
