@@ -7,11 +7,13 @@
 fail_fast: true
 exclude: ^archive/
 repos:
+
   # Language-agnostic
   - repo: meta
     hooks:
       - id: check-useless-excludes
       - id: identity
+
   - repo: local
     hooks:
       - id: commit-file-sizes
@@ -27,6 +29,7 @@ repos:
         verbose: true
         types: [text]
         require_serial: true
+
   # TypeScript and JavaScript
   - repo: https://github.com/pre-commit/mirrors-eslint
     rev: v9.9.0
@@ -41,6 +44,7 @@ repos:
         args: [--fix]
         files: \.(js|jsx|mjs|cjs|ts|tsx|mts|cts)$
         types: [file]
+
   # NOTE:The non-legacy version of `fixmyjs` is rumored to be problematic. See
   # https://github.com/pre-commit/mirrors-fixmyjs?tab=readme-ov-file#using-fixmyjs-with-pre-commit.
   # Consider running with `--legacy` (or `-l`) if you run into any issues.
@@ -49,15 +53,18 @@ repos:
     hooks:
       - id: fixmyjs
         args: [-c, .jshintrc]
+
   - repo: https://github.com/pre-commit/mirrors-jshint
     rev: v2.13.6
     hooks:
       - id: jshint
+
   # CSS
   - repo: https://github.com/pre-commit/mirrors-csslint
     rev: v1.0.5
     hooks:
       - id: csslint
+
   - repo: local
     hooks:
       # Python Unit Tests Exist
@@ -87,16 +94,19 @@ repos:
         files: (.jshintrc|.csslintrc|\.jsonc?)$
         types: [file]
         exclude: tsconfig\.json$
+
   # Python
   - repo: https://github.com/psf/black-pre-commit-mirror
     rev: 24.4.2
     hooks:
       - id: black
         args: [--line-length, '79']
+
   - repo: https://github.com/pycqa/isort
     rev: 5.13.2
     hooks:
       - id: isort
+
   - repo: https://github.com/pre-commit/pygrep-hooks
     rev: v1.10.0
     hooks:
@@ -109,19 +119,23 @@ repos:
       - id: rst-directive-colons
       - id: rst-inline-touching-normal
       - id: text-unicode-replacement-char
+
   - repo: https://github.com/asottile/pyupgrade
     rev: v3.17.0
     hooks:
       - id: pyupgrade
+
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.6.2
     hooks:
       - id: ruff
         args: [--fix]
+
   - repo: https://github.com/asottile/add-trailing-comma
     rev: v3.1.0
     hooks:
       - id: add-trailing-comma
+
   - repo: https://github.com/asottile/dead
     rev: v1.5.2
     hooks:
@@ -143,30 +157,37 @@ repos:
         # have to exclude the archive using a flag.
         # [1] https://github.com/asottile/dead/issues/185
         args: [--exclude, archive/.*]
+
   - repo: https://github.com/asottile/yesqa
     rev: v1.5.0
     hooks:
       - id: yesqa
+
   - repo: https://github.com/asottile/setup-cfg-fmt
     rev: v2.5.0
     hooks:
       - id: setup-cfg-fmt
+
   - repo: https://github.com/PyCQA/docformatter
     rev: v1.7.5
     hooks:
       - id: docformatter
+
   - repo: https://github.com/PyCQA/autoflake
     rev: v2.3.1
     hooks:
       - id: autoflake
+
   - repo: https://github.com/PyCQA/doc8
     rev: v1.1.1
     hooks:
       - id: doc8
+
   - repo: https://github.com/PyCQA/eradicate
     rev: 2.3.0
     hooks:
       - id: eradicate
+
   # Language-agnostic
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
@@ -197,10 +218,12 @@ repos:
       - id: trailing-whitespace
         exclude: .*\.(tsv|csv|xml|html|xhtml)$
       - id: check-xml
+
   - repo: https://github.com/mxr/sync-pre-commit-deps
     rev: v0.0.1
     hooks:
       - id: sync-pre-commit-deps
+
   # Spell Checking
   - repo: https://github.com/codespell-project/codespell
     rev: v2.2.4
@@ -210,6 +233,7 @@ repos:
         # Other types of files are data files, not code files. We don't take
         # data updates lightly.
         exclude: ".*\\.(xml|html|xhtml|txt|tsv|csv|json|tab|msql|xsd)$|dictionary/kellia.uni-goettingen.de/main.py"
+
   # NOTE: This hook was problematic in the past. It was found to change code
   # variable names, assuming that they are typos!
   # We pass `--diff` to make it report typos before fixing them.
@@ -220,60 +244,72 @@ repos:
       - id: typos
         exclude: ".*\\.(xml|html|xhtml|txt|tsv|csv|json|tab|msql|xsd)$|dictionary/kellia.uni-goettingen.de/main.py"
         args: [--diff]
+
   # Git Commit Messages
   - repo: https://github.com/jorisroovers/gitlint
     rev: v0.19.1
     hooks:
       - id: gitlint
+
   # Security
   - repo: https://github.com/gitleaks/gitleaks
     rev: v8.16.1
     hooks:
       - id: gitleaks
+
   - repo: https://github.com/trufflesecurity/truffleHog
     rev: v3.81.9
     hooks:
       - id: trufflehog
+
   - repo: https://github.com/thoughtworks/talisman
     rev: v1.32.0
     hooks:
       - id: talisman-commit
         entry: cmd --githook pre-commit
+
   # Shell
   - repo: https://github.com/shellcheck-py/shellcheck-py
     rev: v0.10.0.1
     hooks:
       - id: shellcheck
+
   - repo: https://github.com/openstack/bashate
     rev: 2.1.1
     hooks:
       - id: bashate
         args: [-i, E003]
+
   - repo: https://github.com/scop/pre-commit-shfmt
     rev: v3.8.0-1
     hooks:
       - id: shfmt
         args: [-indent, '2']
+
   # Markdown
   - repo: https://github.com/igorshubovych/markdownlint-cli
     rev: v0.41.0
     hooks:
       - id: markdownlint-fix
         args: [--disable, MD033, MD036]
+
   - repo: https://github.com/thlorenz/doctoc
     rev: v2.2.0
     hooks:
       - id: doctoc
+
   # YAML
   - repo: https://github.com/google/yamlfmt
     rev: v0.13.0
     hooks:
       - id: yamlfmt
+
   - repo: https://github.com/adrienverge/yamllint
     rev: v1.35.1
     hooks:
       - id: yamllint
         args: [--strict]
+
   # Protobuf
   - repo: https://github.com/bufbuild/buf
     rev: v1.34.0
@@ -284,16 +320,19 @@ repos:
       - id: buf-lint
       - id: buf-breaking
       - id: buf-generate
+
   # Lua
   - repo: https://github.com/JohnnyMorganz/StyLua
     rev: v0.20.0
     hooks:
       - id: stylua
+
   # Makefile
   - repo: https://github.com/mrtazz/checkmake
     rev: 0.2.2
     hooks:
       - id: checkmake
+
   - repo: local
     hooks:
       # Crum Images
