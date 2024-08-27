@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# NOTE: Adding `set -o errexit` causes the script to fail, although it is not
-# clear why.
+# NOTE: Adding `set -o errexit` causes the script to fail, because `grep`
+# returns a status code of 1 when no matches are found.
 set -o nounset  # Consider an undefined variable to be an error.
 
 if (( "$#" == 0 )); then
