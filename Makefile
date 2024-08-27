@@ -61,6 +61,9 @@ bible_no_epub: _bible_no_epub
 .PHONY: stats
 stats: stats_save
 
+.PHONY: stats_format
+stats_format: _stats_format
+
 .PHONY: clean
 clean: git_clean bible_epub_clean kellia_analysis_clean
 
@@ -281,6 +284,10 @@ stats_report: FORCE
 
 stats_save: FORCE
 	bash stats.sh --save
+
+_stats_format: FORCE
+	python -c $$'import utils\n\
+	utils.to_tsv(utils.read_tsv("data/stats.tsv"), "data/stats.tsv")'
 
 camera_images: FORCE
 	grep \
