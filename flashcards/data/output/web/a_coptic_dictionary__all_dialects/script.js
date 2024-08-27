@@ -1,5 +1,34 @@
 'use strict';
 window.addEventListener('load', () => {
+  const CLS_CRUM_PAGE = 'crum-page';
+  const CLS_CRUM_PAGE_EXTERNAL = 'crum-page-external';
+  const CLS_DAWOUD_PAGE_EXTERNAL = 'dawoud-page-external';
+  const CLS_CRUM_PAGE_IMG = 'crum-page-img';
+  const CLS_EXPLANATORY = 'explanatory';
+  const CLS_COPTIC = 'coptic';
+  const CLS_GREEK = 'greek';
+  const CLS_DAWOUD_PAGE = 'dawoud-page';
+  const CLS_DRV_KEY = 'drv-key';
+  const CLS_EXPLANATORY_KEY = 'explanatory-key';
+  const CLS_DIALECT = 'dialect';
+  const CLS_DEV = 'dev';
+  const CLS_DEVELOPER = 'developer';
+  const CLS_RESET = 'reset';
+  const CLS_HEAVY = 'heavy';
+  const CLS_HOVER_LINK = 'hover-link';
+  const CLS_ITALIC = 'italic';
+  const CLS_LIGHT = 'light';
+  const CLS_LINK = 'link';
+  const CLS_SMALL = 'small';
+  const CLS_VERY_LIGHT = 'very-light';
+  const CLS_DIALECT_PARENTHESIS = 'dialect-parenthesis';
+  const CLS_DIALECT_COMMA = 'dialect-comma';
+  const CLS_SPELLING_COMMA = 'spelling-comma';
+  const CLS_TYPE = 'type';
+  const CLS_SPELLING = 'spelling';
+  function querySelectorAll(...classes) {
+    return document.querySelectorAll(classes.map((c) => '.' + c).join(','));
+  }
   function get_url_or_local(param, default_value = null) {
     var _a, _b;
     return (_b = (_a = (new URLSearchParams(window.location.search)).get(param)) !== null && _a !== void 0 ? _a : localStorage.getItem(param)) !== null && _b !== void 0 ? _b : default_value;
@@ -34,8 +63,8 @@ window.addEventListener('load', () => {
     }
     (_a = el.parentNode) === null || _a === void 0 ? void 0 : _a.replaceChild(copy, el);
   }
-  Array.prototype.forEach.call(document.getElementsByClassName('crum-page'), (el) => {
-    el.classList.add('link');
+  Array.prototype.forEach.call(document.getElementsByClassName(CLS_CRUM_PAGE), (el) => {
+    el.classList.add(CLS_LINK);
     el.onclick = () => {
       let pageNumber = el.innerHTML;
       const lastChar = pageNumber.substr(pageNumber.length - 1);
@@ -45,57 +74,57 @@ window.addEventListener('load', () => {
       document.getElementById(`crum${pageNumber}`).scrollIntoView();
     };
   });
-  Array.prototype.forEach.call(document.getElementsByClassName('crum-page-external'), (el) => {
-    el.classList.add('link');
+  Array.prototype.forEach.call(document.getElementsByClassName(CLS_CRUM_PAGE_EXTERNAL), (el) => {
+    el.classList.add(CLS_LINK);
     el.onclick = () => {
       window_open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.innerHTML}`);
     };
   });
-  Array.prototype.forEach.call(document.getElementsByClassName('dawoud-page-external'), (el) => {
-    el.classList.add('link');
+  Array.prototype.forEach.call(document.getElementsByClassName(CLS_DAWOUD_PAGE_EXTERNAL), (el) => {
+    el.classList.add(CLS_LINK);
     el.onclick = () => {
       window_open('https://coptic-treasures.com/book/coptic-dictionary-moawad-abd-al-nour/');
     };
   });
-  Array.prototype.forEach.call(document.getElementsByClassName('crum-page-img'), (el) => {
-    el.classList.add('link');
+  Array.prototype.forEach.call(document.getElementsByClassName(CLS_CRUM_PAGE_IMG), (el) => {
+    el.classList.add(CLS_LINK);
     el.onclick = () => {
       window_open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.getAttribute('alt')}`);
     };
   });
-  Array.prototype.forEach.call(document.getElementsByClassName('explanatory'), (el) => {
+  Array.prototype.forEach.call(document.getElementsByClassName(CLS_EXPLANATORY), (el) => {
     const alt = el.getAttribute('alt');
     if (!alt.startsWith('http')) {
       return;
     }
-    el.classList.add('link');
+    el.classList.add(CLS_LINK);
     el.onclick = () => { window_open(alt); };
   });
-  Array.prototype.forEach.call(document.getElementsByClassName('coptic'), (el) => {
-    el.classList.add('hover-link');
+  Array.prototype.forEach.call(document.getElementsByClassName(CLS_COPTIC), (el) => {
+    el.classList.add(CLS_HOVER_LINK);
     el.onclick = () => {
       window_open(`https://coptic-dictionary.org/results.cgi?quick_search=${el.innerHTML}`);
     };
   });
-  Array.prototype.forEach.call(document.getElementsByClassName('greek'), (el) => {
-    el.classList.add('link');
-    el.classList.add('light');
+  Array.prototype.forEach.call(document.getElementsByClassName(CLS_GREEK), (el) => {
+    el.classList.add(CLS_LINK);
+    el.classList.add(CLS_LIGHT);
     el.onclick = () => {
       window_open(`https://logeion.uchicago.edu/${el.innerHTML}`);
     };
   });
-  Array.prototype.forEach.call(document.getElementsByClassName('dawoud-page'), (el) => {
-    el.classList.add('link');
+  Array.prototype.forEach.call(document.getElementsByClassName(CLS_DAWOUD_PAGE), (el) => {
+    el.classList.add(CLS_LINK);
     el.onclick = () => {
       document.getElementById(`dawoud${el.innerHTML.slice(0, -1)}`).scrollIntoView();
     };
   });
-  Array.prototype.forEach.call(document.getElementsByClassName('drv-key'), (el) => {
-    el.classList.add('small', 'light', 'italic', 'hover-link');
+  Array.prototype.forEach.call(document.getElementsByClassName(CLS_DRV_KEY), (el) => {
+    el.classList.add(CLS_SMALL, CLS_LIGHT, CLS_ITALIC, CLS_HOVER_LINK);
     moveElement(el, 'a', { 'href': `#drv${el.innerHTML}` });
   });
-  Array.prototype.forEach.call(document.getElementsByClassName('explanatory-key'), (el) => {
-    el.classList.add('hover-link');
+  Array.prototype.forEach.call(document.getElementsByClassName(CLS_EXPLANATORY_KEY), (el) => {
+    el.classList.add(CLS_HOVER_LINK);
     moveElement(el, 'a', { 'href': `#explanatory${el.innerHTML}` });
   });
   const DIALECTS = ['S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
@@ -114,35 +143,35 @@ window.addEventListener('load', () => {
     function dialected(el) {
       return DIALECTS.some((d) => el.classList.contains(d));
     }
-    document.querySelectorAll('.dialect-parenthesis,.dialect-comma,.spelling-comma,.type').forEach((el) => {
+    querySelectorAll(CLS_DIALECT_PARENTHESIS, CLS_DIALECT_COMMA, CLS_SPELLING_COMMA, CLS_TYPE).forEach((el) => {
       if (active === null) {
-        el.classList.remove('very-light');
+        el.classList.remove(CLS_VERY_LIGHT);
       }
       else {
-        el.classList.add('very-light');
+        el.classList.add(CLS_VERY_LIGHT);
       }
     });
-    document.querySelectorAll('.dialect,.spelling').forEach((el) => {
+    querySelectorAll(CLS_DIALECT, CLS_SPELLING).forEach((el) => {
       if (!dialected(el)) {
         return;
       }
       if (active === null) {
-        el.classList.remove('very-light');
-        el.classList.remove('heavy');
+        el.classList.remove(CLS_VERY_LIGHT);
+        el.classList.remove(CLS_HEAVY);
         return;
       }
       if (Array.from(active).some((d) => el.classList.contains(d))) {
-        el.classList.remove('very-light');
-        el.classList.add('heavy');
+        el.classList.remove(CLS_VERY_LIGHT);
+        el.classList.add(CLS_HEAVY);
       }
       else {
-        el.classList.remove('heavy');
-        el.classList.add('very-light');
+        el.classList.remove(CLS_HEAVY);
+        el.classList.add(CLS_VERY_LIGHT);
       }
     });
   }
-  Array.prototype.forEach.call(document.getElementsByClassName('dialect'), (el) => {
-    el.classList.add('hover-link');
+  Array.prototype.forEach.call(document.getElementsByClassName(CLS_DIALECT), (el) => {
+    el.classList.add(CLS_HOVER_LINK);
     el.onclick = () => {
       const dClasses = DIALECTS.filter((d) => el.classList.contains(d));
       if (dClasses.length !== 1) {
@@ -172,7 +201,7 @@ window.addEventListener('load', () => {
   }
   function dev() {
     const state = devState();
-    Array.prototype.forEach.call(document.getElementsByClassName('dev'), (el) => {
+    Array.prototype.forEach.call(document.getElementsByClassName(CLS_DEV), (el) => {
       if (state === 'true') {
         el.removeAttribute('hidden');
       }
@@ -181,8 +210,8 @@ window.addEventListener('load', () => {
       }
     });
   }
-  Array.prototype.forEach.call(document.getElementsByClassName('developer'), (el) => {
-    el.classList.add('link');
+  Array.prototype.forEach.call(document.getElementsByClassName(CLS_DEVELOPER), (el) => {
+    el.classList.add(CLS_LINK);
     el.onclick = () => {
       set_url_and_local('dev', devState() === 'true' ? 'false' : 'true');
       dev();
@@ -197,8 +226,8 @@ window.addEventListener('load', () => {
     dev();
     dialect();
   }
-  Array.prototype.forEach.call(document.getElementsByClassName('reset'), (el) => {
-    el.classList.add('link');
+  Array.prototype.forEach.call(document.getElementsByClassName(CLS_RESET), (el) => {
+    el.classList.add(CLS_LINK);
     el.onclick = reset;
   });
 });
