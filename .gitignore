@@ -16,6 +16,7 @@ package.json
 
 # Pre-commit artifacts
 .my_pycache
+.ruff_cache
 
 # Flashcard decks are too big to host on GitHub.
 flashcards/data/output/anki/coptic.apkg

@@ -53,6 +53,7 @@ foc () {
     -not -path "*/__pycache__/*" \
     -not -path "./coptic.egg-info/*" \
     -not -path "./.mypy_cache/*" \
+    -not -path "./.ruff_cache/*" \
     -not -path "./node_modules/*" \
     -not -name ".env" \
     -not -name "package-lock.json" \
