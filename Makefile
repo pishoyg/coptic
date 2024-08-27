@@ -187,24 +187,21 @@ _flashcards_crum_all_dialects: FORCE
 		--decks "A Coptic Dictionary::All Dialects" \
 		--output_dir "/tmp/" \
 		--anki "/tmp/crum_all_dialects.apkg" \
-		--web_mask "true" \
-		--tsvs_mask ""
+		--web_mask "true"
 
 _flashcards_copticsite: FORCE
 	python flashcards/main.py \
 		--decks "copticsite.com" \
 		--output_dir "/tmp/" \
 		--anki "/tmp/anki/copticsite.apkg" \
-		--web_mask "true" \
-		--tsvs_mask ""
+		--web_mask "true"
 
 _flashcards_kellia: FORCE
 	python flashcards/main.py \
 		--decks "KELLIA::Comprehensive" "KELLIA::Egyptian" "KELLIA::Greek"\
 		--output_dir "/tmp/" \
 		--anki "/tmp/anki/kellia.apkg" \
-		--web_mask "true" "true" "true" \
-		--tsvs_mask "" "" ""
+		--web_mask "true" "true" "true"
 
 # KINDLE RULES
 # TODO: (#44) Restore the rules (with appropriate paths) once the pipeline is
