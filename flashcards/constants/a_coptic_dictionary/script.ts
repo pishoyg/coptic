@@ -1,5 +1,8 @@
 'use strict';
-// TODO: Reduce the dependency on `innerHTML`. Use attributes when possible.
+// TODO: (#202) Reduce the dependency on `innerHTML`. Use attributes when
+// possible. NOTE: The associated issue is closed. Judge whether it should be
+// reopened, or if we should create a new issue, or just delete this TODO.
+
 function get_url_or_local(
   param: string,
   default_value: string | null = null): string | null {
