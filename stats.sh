@@ -5,9 +5,9 @@
 set -o errexit  # Exit upon encountering a failure.
 set -o nounset  # Consider an undefined variable to be an error.
 
-KNOWN_EXTENSIONS="Makefile css jshintrc csslintrc env_INFO helpers gitignore yamlfmt yamllint json mjs keylayout md plist py sh strings txt yaml toml ts"
-KNOWN_EXTENSIONS_ARCHIVE="gitignore java js md proto py sh sql vba"
-KNOWN_ARCHIVE_SUBDIRS="bible dictionary ipa-transliteration unicode-converters"
+readonly KNOWN_EXTENSIONS="Makefile css jshintrc csslintrc env_INFO helpers gitignore yamlfmt yamllint json mjs keylayout md plist py sh strings txt yaml toml ts"
+readonly KNOWN_EXTENSIONS_ARCHIVE="gitignore java js md proto py sh sql vba"
+readonly KNOWN_ARCHIVE_SUBDIRS="bible dictionary ipa-transliteration unicode-converters"
 
 SAVE=false
 while [ $# -gt 0 ]; do
@@ -35,8 +35,8 @@ done
 # exclusion clauses below still take effect. See examples throughout the file.
 foc () {
   # Files of code.
-  DIR="${1}"
-  EXEC="${2}"
+  local -r DIR="${1}"
+  local -r EXEC="${2}"
 
   # Code in our current repository setup is everything that is not:
   # - Ignored by Git, or
@@ -77,8 +77,8 @@ extensions () {
 }
 
 foc_archive() {
-  DIR="./archive"
-  EXEC="${1}"
+  local -r DIR="./archive"
+  local -r EXEC="${1}"
 
   find "${DIR}" \
     -type f \
@@ -121,6 +121,7 @@ if [ -n "${DIFF}" ]; then
   echo -e "exclude them from the stat.${RESET}"
   exit 1
 fi
+
 ARCHIVE_SUBDIRS=$(foc_archive echo | grep -oE '\./archive/[^/]+/' | sort | uniq | while read -r LINE; do basename "${LINE}"; done)
 DIFF=$(comm -23 <(echo "${ARCHIVE_SUBDIRS}") <(echo "${KNOWN_ARCHIVE_SUBDIRS}" | tr ' ' '\n') | tr '\n' ' ')
 if [ -n "${DIFF}" ]; then
@@ -137,9 +138,9 @@ diff_lines() {
 }
 
 col_num() {
-  FILE="${1}"
-  TARGET="${2}"
-  COL=1
+  local -r FILE="${1}"
+  local -r TARGET="${2}"
+  local COL=1
   for NAME in $(head "${FILE}" -n 1); do
     if [ "${NAME}" == "${TARGET}" ]; then
       echo "${COL}"
@@ -153,8 +154,8 @@ col_num() {
 }
 
 tsv_nonempty() {
-  FILE="${1}"
-  FIELD="$(col_num "${FILE}" "${2}")"
+  local -r FILE="${1}"
+  local -r FIELD="$(col_num "${FILE}" "${2}")"
   tail -n +2 \
     "${FILE}" \
     | cut --fields="${FIELD}" \
@@ -162,7 +163,7 @@ tsv_nonempty() {
 }
 
 crum_typos() {
-  PARENT="dictionary/marcion.sourceforge.net/data"
+  local -r PARENT="dictionary/marcion.sourceforge.net/data"
   diff_lines "${PARENT}/input/${1}" "${PARENT}/raw/${1}"
 }
 
@@ -181,7 +182,7 @@ LOC_MORPHOLOGY=$(loc "morphology")
 LOC_SITE=$(loc "site")
 LOC_SHARED=$(loc_shared)
 
-TOTAL="$((
+readonly TOTAL="$((
   LOC_ARCHIVE
   + LOC_CRUM
   + LOC_COPTICSITE
@@ -208,7 +209,7 @@ LOC_TXT=$(loc . -name "*.txt")
 LOC_TS=$(loc . -name "*.ts")
 LOC_JSON=$(loc . -a \( -name "*.json" -o -name ".jshintrc" -o -name ".csslintrc" \) )
 
-TOTAL_BY_LANG="$((
+readonly TOTAL_BY_LANG="$((
   LOC_PYTHON
   + LOC_MAKE
   + LOC_CSS
@@ -237,8 +238,7 @@ if [ -n "${DIFF}" ]; then
   exit 1
 fi
 
-# shellcheck disable=SC2010  # Allow grep after ls.
-CRUM_IMG=$(ls dictionary/marcion.sourceforge.net/data/img/ \
+CRUM_IMG=$(find "dictionary/marcion.sourceforge.net/data/img/" -type f -exec basename {} \; \
   | grep -oE '^[0-9]+' \
   | sort \
   | uniq \
@@ -276,7 +276,7 @@ CRUM_ROOT_SENSES_SUM=$(tsv_nonempty \
 
 CRUM_WRD_TYPOS=$(crum_typos "coptwrd.tsv" | wc --lines)
 CRUM_DRV_TYPOS=$(crum_typos "coptdrv.tsv" | wc --lines)
-CRUM_TYPOS=$(( CRUM_WRD_TYPOS + CRUM_DRV_TYPOS ))
+readonly CRUM_TYPOS=$(( CRUM_WRD_TYPOS + CRUM_DRV_TYPOS ))
 crum_root_keys () {
   crum_typos "coptwrd.tsv" | cut -f1
   crum_typos "coptdrv.tsv" | cut -f2
