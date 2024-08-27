@@ -457,3 +457,9 @@ repos:
         language: system
         exclude: ^README.md$
         types: [markdown]
+      # Restrict String Literals in TypeScript.
+      - id: typescript-string-literals
+        name: typescript-string-literals
+        entry: pre-commit/typescript-string-literals.sh
+        language: system
+        types: [ts]
