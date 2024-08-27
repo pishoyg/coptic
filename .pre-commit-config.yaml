@@ -16,49 +16,13 @@ repos:
     hooks:
       - id: commit-file-sizes
         name: commit-file-sizes
-        # NOTE: Running the script with `errexit` is problematic, although it
-        # is not understood why.
-        entry: |
-          bash -c '
-          set -o nounset  # Consider an undefined variable to be an error.
-          announce () {
-            echo -e "${1}Files in this batch total ${2}${SIZE}${1}.${RESET}"
-          }
-          if (( "$#" == 0 )); then
-            exit
-          fi
-          SIZE="$(du --apparent-size --human-readable --summarize --total "${@}" | tail -n 1 | cut --fields 1)"
-          MAGNITUDE="$(echo ${SIZE} | grep -o [A-Z])"
-          COUNT="$(echo ${SIZE} | grep --only --extended-regexp "^[0-9]+")"
-          if [[ "${MAGNITUDE}" == "" || "${MAGNITUDE}" == "K" ]]; then
-            announce "${BLUE}" "${GREEN}"
-          elif [[ "${MAGNITUDE}" == "M" ]] && (( COUNT < 128 )); then
-            announce "${YELLOW}" "${CYAN}"
-          else
-            announce "${RED}" "${PURPLE}"
-          fi
-          ' --
+        entry: pre-commit/commit-file-size.sh
         language: system
         verbose: true
         require_serial: true
       - id: check-todo
         name: check-todo
-        # TODO: (#66) Once all existing TODO's have been assigned issues,
-        # change the following to an error rather than simply a warning.
-        # NOTE: Running the script with `errexit` is problematic, although it
-        # is not understood why.
-        entry: |
-          bash -c '
-          set -o nounset  # Consider an undefined variable to be an error.
-          if (( "$#" == 0 )); then
-            exit
-          fi
-          TODO="$(grep "TODO(:) (?!\(#[0-9]+\))" --perl-regexp \
-            --ignore-case --color=always "${@}")"
-          if [ -n "${TODO}" ]; then
-            echo -e "${YELLOW}Stray TODO markers found. Please add an issue"\
-              "number to each TODO:\n${RESET}${TODO}"
-          fi' --
+        entry: pre-commit/check-todo.sh
         language: system
         verbose: true
         types: [text]
@@ -99,34 +63,9 @@ repos:
       # Python Unit Tests Exist
       - id: python-unittest-exists
         name: python-unittest-exists
-        entry: |
-          bash -c '
-          set -o errexit  # Exit upon encountering a failure.
-          set -o nounset  # Consider an undefined variable to be an error.
-          if (( "$#" == 0 )); then
-            exit
-          fi
-          for FILE in "$@"; do
-            DIRNAME="$(dirname "${FILE}")"
-            if [[ "$(basename "${DIRNAME}")" != "test" ]]; then
-              TEST="${DIRNAME}/test/test_$(basename "${FILE}")"
-              if [ ! -f "${TEST}" ]; then
-                echo -e "${RED}Please create a unit test in"\
-                  "${YELLOW}${TEST}${RED} and import"\
-                  "${YELLOW}${FILE}${RED}.${RESET}"
-                exit 1
-              fi
-            else
-              INIT="${DIRNAME}/__init__.py"
-              if [ ! -f "${INIT}" ]; then
-                echo -e "${RED}You forgot ${YELLOW}${INIT}${RED}.${RESET}"
-                exit 1
-              fi
-            fi
-          done' --
+        entry: pre-commit/python-unittest-exists.sh
         language: system
         types: [python]
-        verbose: true
         exclude: setup.py
       # HTML
       - id: tidy-html
@@ -143,23 +82,12 @@ repos:
       # JSON
       - id: json-tool
         name: json-tool
-        entry: |
-          bash -c '
-          set -o errexit  # Exit upon encountering a failure.
-          set -o nounset  # Consider an undefined variable to be an error.
-          if (( "$#" == 0 )); then
-            exit
-          fi
-          for FILE in "$@"; do
-            python -m json.tool --no-ensure-ascii --indent 2 \
-              "${FILE}" "${FILE}";
-          done' --
+        entry: pre-commit/json-tool.sh
         language: system
         files: (.jshintrc|.csslintrc|\.jsonc?)$
         types: [file]
         exclude: tsconfig\.json$
   # Python
-  # TODO: (#213) Add more Python hooks from https://pre-commit.com/hooks.html.
   - repo: https://github.com/psf/black-pre-commit-mirror
     rev: 24.4.2
     hooks:
@@ -386,74 +314,26 @@ repos:
       # Daily Statistics
       - id: stats
         name: stats
-        entry: |
-          bash -c '
-          set -o errexit  # Exit upon encountering a failure.
-          set -o nounset  # Consider an undefined variable to be an error.
-          if ((
-            $(date +%s) - $(tail -n 1 data/stats.tsv | cut --fields 2) >= 86400
-          )); then
-            echo -e "${RED}Run ${YELLOW}\`make stats\`${RED}.${RESET}"
-            exit 1;
-          fi'
+        entry: pre-commit/stats.sh
         language: system
         pass_filenames: false
       # Python Unit Tests
       - id: python-unittest
         name: python-unittest
-        entry: |
-          bash -c '
-          set -o errexit  # Exit upon encountering a failure.
-          set -o nounset  # Consider an undefined variable to be an error.
-          if (( "$#" == 0 )); then
-            exit
-          fi
-          for DIR in $(dirname "$@" | grep --invert "/test$" | sort | uniq); do
-            python -m unittest discover "${DIR}";
-          done' --
+        entry: pre-commit/python-unittest.sh
         language: system
         types: [python]
         verbose: true
       # DO-NOT-SUBMIT
       - id: check-do-not-submit
         name: check-do-not-submit
-        # NOTE: Running the script with `errexit` is problematic, although it
-        # is not understood why.
-        # NOTE: We mangle the regex using extra parentheses to prevent it from
-        # matching itself.
-        entry: |
-          bash -c '
-          set -o nounset  # Consider an undefined variable to be an error.
-          if (( "$#" == 0 )); then
-            exit
-          fi
-          DO_NOT_SUBMIT="$(grep "(DO) (NOT) (SUBMIT|COMMIT)" --extended-regexp \
-            --files-with-matches --ignore-case "${@}")"
-          if [ -n "${DO_NOT_SUBMIT}" ]; then
-            echo -e "${RED} DO-NOT-SUBMIT markers found in"\
-              "${YELLOW}${DO_NOT_SUBMIT}${RED}.${RESET}"
-            exit 1
-          fi' --
+        entry: pre-commit/check-do-not-submit.sh
         language: system
         types: [text]
       # One README
       - id: check-one-readme
         name: check-one-readme
-        entry: |
-          bash -c '
-          set -o errexit  # Exit upon encountering a failure.
-          set -o nounset  # Consider an undefined variable to be an error.
-          if (( "$#" == 0 )); then
-            exit
-          fi
-          for FILE in "${@}"; do
-            BASENAME="$(basename "${FILE}")"
-            if [[ "${BASENAME}" == "README.md" ]]; then
-              echo -e "${PURPLE}Only the README.md at the root is allowed."\
-                "Please delete ${RED}${FILE}${PURPLE}.${RESET}"
-              exit 1
-            fi
-          done'
+        entry: pre-commit/check-one-readme.sh
         language: system
         exclude: ^README.md$
         types: [markdown]
