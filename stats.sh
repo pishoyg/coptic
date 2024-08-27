@@ -369,46 +369,74 @@ echo -e "${BLUE}Number of files of code: ${GREEN}${FOC}${BLUE}."\
 echo -e "${BLUE}Disk usage: \
 ${GREEN}${DISK_USAGE}${BLUE} (${GREEN}${DISK_USAGE_HUMAN}${BLUE})${RESET}"
 
+((DISK_USAGE >= 8890891 && DISK_USAGE <= 88908910 )) || (echo -e "${PURPLE}${DISK_USAGE} ${RED}looks suspicious.${RESET}" && exit 1)
+
 echo -e "${BLUE}Number of words possessing at least one image: "\
 "${GREEN}${CRUM_IMG}${BLUE}."
+
+((CRUM_IMG >= 700 && CRUM_IMG <= 3357 )) || (echo -e "${PURPLE}${CRUM_IMG} ${RED}looks suspicious.${RESET}" && exit 1)
 
 echo -e "${BLUE}Total number of images: "\
 "${GREEN}${CRUM_IMG_SUM}${BLUE}."
 
+((CRUM_IMG_SUM >= 1200 && CRUM_IMG_SUM <= 33570 )) || (echo -e "${PURPLE}${CRUM_IMG_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
+
 echo -e "${BLUE}Number of words that have at least one page from Dawoud: "\
 "${GREEN}${CRUM_DAWOUD}${BLUE}."
+
+((CRUM_DAWOUD >= 2600 && CRUM_DAWOUD <= 3357 )) || (echo -e "${PURPLE}${CRUM_DAWOUD} ${RED}looks suspicious.${RESET}" && exit 1)
 
 echo -e "${BLUE}Number of Dawoud pages added: "\
 "${GREEN}${CRUM_DAWOUD_SUM}${BLUE}."
 
+((CRUM_DAWOUD_SUM >= 4300 && CRUM_DAWOUD_SUM <= 5000 )) || (echo -e "${PURPLE}${CRUM_DAWOUD_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
+
 echo -e "${BLUE}Number of roots with at least one sense: "\
 "${GREEN}${CRUM_ROOT_SENSES}${BLUE}."
+
+((CRUM_ROOT_SENSES >= 70 && CRUM_ROOT_SENSES <= 3357 )) || (echo -e "${PURPLE}${CRUM_ROOT_SENSES} ${RED}looks suspicious.${RESET}" && exit 1)
 
 echo -e "${BLUE}Total number of root senses: "\
 "${GREEN}${CRUM_ROOT_SENSES_SUM}${BLUE}."
 
+((CRUM_ROOT_SENSES_SUM >= 160 && CRUM_ROOT_SENSES_SUM <= 33570 )) || (echo -e "${PURPLE}${CRUM_ROOT_SENSES_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
+
 echo -e "${BLUE}Number of editor's note added to Crum: "\
 "${GREEN}${CRUM_NOTES}${BLUE}."
+
+((CRUM_NOTES >= 4 && CRUM_NOTES <= 3357 )) || (echo -e "${PURPLE}${CRUM_NOTES} ${RED}looks suspicious.${RESET}" && exit 1)
 
 echo -e "${BLUE}Number of Crum WRD entries changed: "\
   "${GREEN}${CRUM_WRD_TYPOS}${BLUE}."
 
+((CRUM_WRD_TYPOS >= 33 && CRUM_WRD_TYPOS <= 335 )) || (echo -e "${PURPLE}${CRUM_WRD_TYPOS} ${RED}looks suspicious.${RESET}" && exit 1)
+
 echo -e "${BLUE}Number of Crum DRV entries changed: "\
   "${GREEN}${CRUM_DRV_TYPOS}${BLUE}."
+
+((CRUM_DRV_TYPOS >= 24 && CRUM_DRV_TYPOS <= 335 )) || (echo -e "${PURPLE}${CRUM_DRV_TYPOS} ${RED}looks suspicious.${RESET}" && exit 1)
 
 echo -e "${BLUE}Total number of Crum lins changed: "\
   "${GREEN}${CRUM_TYPOS}${BLUE}."
 
+((CRUM_TYPOS >= 57 && CRUM_TYPOS <= 335 )) || (echo -e "${PURPLE}${CRUM_TYPOS} ${RED}looks suspicious.${RESET}" && exit 1)
+
 echo -e "${BLUE}Number of Crum pages changed: "\
   "${GREEN}${CRUM_PAGES_CHANGED}${BLUE}."
+
+((CRUM_PAGES_CHANGED >= 51 && CRUM_PAGES_CHANGED <= 335 )) || (echo -e "${PURPLE}${CRUM_PAGES_CHANGED} ${RED}looks suspicious.${RESET}" && exit 1)
 
 NUM_COMMITS="$(git rev-list --count --all)"
 echo -e "${BLUE}Number of commits: "\
   "${GREEN}${NUM_COMMITS}${BLUE}."
 
+((NUM_COMMITS >= 1300 && NUM_COMMITS <= 10000 )) || (echo -e "${PURPLE}${NUM_COMMITS} ${RED}looks suspicious.${RESET}" && exit 1)
+
 NUM_CONTRIBUTORS="$(git shortlog --summary --number --email | wc --lines)"
 echo -e "${BLUE}Number of contributors: "\
   "${GREEN}${NUM_CONTRIBUTORS}${BLUE}."
+
+((NUM_CONTRIBUTORS >= 1 && NUM_CONTRIBUTORS <= 10 )) || (echo -e "${PURPLE}${NUM_CONTRIBUTORS} ${RED}looks suspicious.${RESET}" && exit 1)
 
 DELTA=$(( LOC - TOTAL ))
 if [ "${DELTA}" != "0" ]; then
