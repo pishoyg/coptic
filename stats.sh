@@ -68,7 +68,7 @@ loc () {
 }
 
 loc_shared () {
-  echo $(( $(loc . -depth 1) + $(loc test) ))
+  echo $(( $(loc . -depth 1) + $(loc test) + $(loc pre-commit) ))
 }
 
 extensions () {
