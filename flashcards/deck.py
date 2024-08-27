@@ -30,9 +30,10 @@ HTML_FMT = f"""<!DOCTYPE html>
 </html>
 """
 
-JS_FMT = """'use strict';
+WEB_JS_FMT = """'use strict';
 window.addEventListener("load", () => {{ {javascript} }});
 """
+ANKI_JS_FMT = """(() => {{ {javascript} }})();"""
 
 
 @type_enforced.Enforcer(enabled=enforcer.ENABLED)
@@ -222,7 +223,7 @@ class deck:
                 )
         with open(os.path.join(dir, JS_BASENAME), "w") as f:
             f.write(
-                JS_FMT.format(
+                WEB_JS_FMT.format(
                     javascript=self.javascript.replace("'use strict';", ""),
                 ),
             )
@@ -240,6 +241,7 @@ class deck:
         return html
 
     def anki(self) -> tuple[genanki.Deck, list[str]]:
+        javascript = ANKI_JS_FMT.format(javascript=self.javascript)
         model = genanki.Model(
             model_id=self.deck_id,
             name=self.deck_name,
@@ -252,9 +254,9 @@ class deck:
                 {
                     "name": "template 1",
                     "qfmt": '<div class="front"> {{Front}} </div>'
-                    + f'<script type="text/javascript">{self.javascript}</script>',
+                    + f'<script type="text/javascript">{javascript}</script>',
                     "afmt": '<div class="front"> {{Front}} </div> <hr/> <div class="back"> {{Back}} </div>'
-                    + f'<script type="text/javascript">{self.javascript}</script>',
+                    + f'<script type="text/javascript">{javascript}</script>',
                 },
             ],
             css=self.css,
