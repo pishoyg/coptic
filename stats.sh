@@ -6,6 +6,8 @@ set -o errexit  # Exit upon encountering a failure.
 set -o nounset  # Consider an undefined variable to be an error.
 
 KNOWN_EXTENSIONS="Makefile css jshintrc csslintrc env_INFO helpers gitignore yamlfmt yamllint json mjs keylayout md plist py sh strings txt yaml toml ts"
+KNOWN_EXTENSIONS_ARCHIVE="gitignore java js md proto py sh sql vba"
+KNOWN_ARCHIVE_SUBDIRS="bible dictionary ipa-transliteration unicode-converters"
 
 SAVE=false
 while [ $# -gt 0 ]; do
@@ -35,9 +37,6 @@ foc () {
   # Files of code.
   DIR="${1}"
   EXEC="${2}"
-  if [ -z "${EXEC}" ]; then
-    EXEC="echo"
-  fi
 
   # Code in our current repository setup is everything that is not:
   # - Ignored by Git, or
@@ -72,34 +71,66 @@ loc_shared () {
 }
 
 extensions () {
-  foc "${1}" basename | while read -r FILE; do
-    echo "${FILE##*.}"
+  foc "${1}" basename | while read -r BASENAME; do
+    echo "${BASENAME##*.}"
   done | sort | uniq
 }
 
-# TODO: (#214) Calculate the archived lines of code more rigorously.
-loc_archive () {
-  find archive \
+foc_archive() {
+  DIR="./archive"
+  EXEC="${1}"
+
+  find "${DIR}" \
     -type f \
-    -a \( \
-      -name "*.py" \
-      -o -name "*.java" \
-      -o -name "*.proto" \
-      -o -name "*.sh" \
-      -o -name "*.js" \
-      -o -name "*.vba" \
-      -o -name "Makefile" \
-      -o -name "*.yaml" \
-    \) \
-    -a \( \
-    \( -path "archive/*" -a -depth 1 \) \
-      -o -path "archive/bible/*" \
-      -o -path "archive/dictionary/*" \
-      -o -path "archive/ipa-transliteration/*" \
-      -o -path "archive/unicode-converters/*" \
-    \) \
-    | while read -r FILE; do cat "${FILE}"; done | wc --lines
+    -not -name "*.txt" \
+    -not -name "*.DOC" \
+    -not -name "*.docx" \
+    -not -name "*.xml" \
+    -not -name "*.html" \
+    -not -name "*.TTF" \
+    -not -name "*.doc" \
+    -not -name "*.tsv" \
+    -not -name "*.jar" \
+    -not -name "*.db" \
+    -not -name "*.csv" \
+    -not -name "*.msql" \
+    -not -name "*.pdf" \
+    -not -name "*.tab" \
+    -not -name "*.json" \
+    -not -name ".DS_Store" \
+    -not -path "./archive/copticbible.apk/*" \
+    -not -path "./archive/moheb.de/*" \
+    -not -path "./archive/copticagpeya.apk/*" \
+    -not -path "./archive/kindlegen/*" \
+    -not -path "./archive/marcion-1.8.3-src/*" \
+    -not -path "./archive/fonts/*" \
+    "${@:2}" -exec "${EXEC}" {} \;
 }
+
+loc_archive () {
+  foc_archive cat | wc --lines
+}
+
+EXTENSIONS_ARCHIVE=$(foc_archive basename | while read -r BASENAME; do echo "${BASENAME##*.}"; done | sort | uniq)
+DIFF=$(comm -23 <(echo "${EXTENSIONS_ARCHIVE}") <(echo "${KNOWN_EXTENSIONS_ARCHIVE}" | tr ' ' '\n') | tr '\n' ' ')
+if [ -n "${DIFF}" ]; then
+  echo -e "${PURPLE}Unknown extensions in the archive:"
+  echo -e "${RED}  ${DIFF}"
+  echo -e "${PURPLE}Lines of code statistics may become inaccurate. Add them to"
+  echo -e "list of known archive extension if they represent code, otherwise"
+  echo -e "exclude them from the stat.${RESET}"
+  exit 1
+fi
+ARCHIVE_SUBDIRS=$(foc_archive echo | grep -oE '\./archive/[^/]+/' | sort | uniq | while read -r LINE; do basename "${LINE}"; done)
+DIFF=$(comm -23 <(echo "${ARCHIVE_SUBDIRS}") <(echo "${KNOWN_ARCHIVE_SUBDIRS}" | tr ' ' '\n') | tr '\n' ' ')
+if [ -n "${DIFF}" ]; then
+  echo -e "${PURPLE}Unknown subdirectories in the archive:"
+  echo -e "${RED}  ${DIFF}"
+  echo -e "${PURPLE}Lines of code statistics may become inaccurate. Add them to"
+  echo -e "list of known archive subdirectories if they represent code,"
+  echo -e "otherwise exclude them from the stat.${RESET}"
+  exit 1
+fi
 
 diff_lines() {
   diff --suppress-common-lines --speed-large-files --side-by-side "${1}" "${2}"
