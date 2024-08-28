@@ -36,9 +36,21 @@ window.addEventListener('load', () => {
   const CLS_Fb = 'Fb';
   const CLS_O = 'O';
   const CLS_NH = 'NH';
-  function querySelectorAll(...classes) {
-    return document.querySelectorAll(classes.map((c) => '.' + c).join(','));
-  }
+  const DIALECTS = [
+    CLS_S, CLS_Sa, CLS_Sf, CLS_A, CLS_sA, CLS_B, CLS_F, CLS_Fb, CLS_O, CLS_NH,
+  ];
+  const DIALECT_CODE_TO_CLASS = (function () {
+    const codeToClass = new Map();
+    DIALECTS.forEach((cls) => {
+      var _a;
+      const code = (_a = document.querySelector(`.${CLS_DIALECT}.${cls}`)) === null || _a === void 0 ? void 0 : _a.innerHTML;
+      if (code === undefined) {
+        return;
+      }
+      codeToClass.set(code, cls);
+    });
+    return codeToClass;
+  }());
   function get_url_or_local(param, default_value = null) {
     var _a, _b;
     return (_b = (_a = (new URLSearchParams(window.location.search)).get(param)) !== null && _a !== void 0 ? _a : localStorage.getItem(param)) !== null && _b !== void 0 ? _b : default_value;
@@ -65,12 +77,12 @@ window.addEventListener('load', () => {
     var _a;
     const copy = document.createElement(tag);
     copy.innerHTML = el.innerHTML;
-    el.getAttributeNames().forEach((attr) => {
-      copy.setAttribute(attr, el.getAttribute(attr));
+    Array.from(el.attributes).forEach((att) => {
+      copy.setAttribute(att.name, att.value);
     });
-    for (const [key, value] of Object.entries(attrs)) {
+    Object.entries(attrs).forEach(([key, value]) => {
       copy.setAttribute(key, value);
-    }
+    });
     (_a = el.parentNode) === null || _a === void 0 ? void 0 : _a.replaceChild(copy, el);
   }
   Array.prototype.forEach.call(document.getElementsByClassName(CLS_CRUM_PAGE), (el) => {
@@ -137,10 +149,7 @@ window.addEventListener('load', () => {
     el.classList.add(CLS_HOVER_LINK);
     moveElement(el, 'a', { 'href': `#explanatory${el.innerHTML}` });
   });
-  const DIALECTS = [
-    CLS_S, CLS_Sa, CLS_Sf, CLS_A, CLS_sA, CLS_B, CLS_F, CLS_Fb, CLS_O, CLS_NH,
-  ];
-  function activeDialects() {
+  function getActiveDialectClassesInCurrentPage() {
     const d = get_url_or_local('d');
     if (d === null) {
       return null;
@@ -148,14 +157,29 @@ window.addEventListener('load', () => {
     if (d === '') {
       return new Set();
     }
-    return new Set(d.split(',').map((d) => d));
+    return new Set(d.split(',').filter((d) => DIALECT_CODE_TO_CLASS.has(d)).map((d) => DIALECT_CODE_TO_CLASS.get(d)));
+  }
+  function toggleDialect(code) {
+    let d = get_url_or_local('d');
+    if (d === null) {
+      d = '';
+    }
+    const dd = new Set(d.split(','));
+    if (dd.has(code)) {
+      dd.delete(code);
+    }
+    else {
+      dd.add(code);
+    }
+    d = Array.from(dd).join(',');
+    set_url_and_local('d', d);
   }
   function dialect() {
-    const active = activeDialects();
+    const active = getActiveDialectClassesInCurrentPage();
     function dialected(el) {
       return DIALECTS.some((d) => el.classList.contains(d));
     }
-    querySelectorAll(CLS_DIALECT_PARENTHESIS, CLS_DIALECT_COMMA, CLS_SPELLING_COMMA, CLS_TYPE).forEach((el) => {
+    document.querySelectorAll(`.${CLS_DIALECT_PARENTHESIS},.${CLS_DIALECT_COMMA},.${CLS_SPELLING_COMMA},.${CLS_TYPE}`).forEach((el) => {
       if (active === null) {
         el.classList.remove(CLS_VERY_LIGHT);
       }
@@ -163,7 +187,7 @@ window.addEventListener('load', () => {
         el.classList.add(CLS_VERY_LIGHT);
       }
     });
-    querySelectorAll(CLS_DIALECT, CLS_SPELLING).forEach((el) => {
+    document.querySelectorAll(`.${CLS_DIALECT},.${CLS_SPELLING}`).forEach((el) => {
       if (!dialected(el)) {
         return;
       }
@@ -185,25 +209,7 @@ window.addEventListener('load', () => {
   Array.prototype.forEach.call(document.getElementsByClassName(CLS_DIALECT), (el) => {
     el.classList.add(CLS_HOVER_LINK);
     el.onclick = () => {
-      const dClasses = DIALECTS.filter((d) => el.classList.contains(d));
-      if (dClasses.length !== 1) {
-        return;
-      }
-      const d = dClasses[0];
-      if (!d) {
-        return;
-      }
-      let active = activeDialects();
-      if (active === null) {
-        active = new Set();
-      }
-      if (active.has(d)) {
-        active.delete(d);
-      }
-      else {
-        active.add(d);
-      }
-      set_url_and_local('d', Array.from(active).join(','));
+      toggleDialect(el.innerHTML);
       dialect();
     };
   });

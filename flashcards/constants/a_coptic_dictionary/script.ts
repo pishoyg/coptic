@@ -36,6 +36,7 @@ const CLS_TYPE = 'type';
 const CLS_SPELLING = 'spelling';
 
 // The following classes represent the dialects.
+type Dialect = 'S' | 'Sa' | 'Sf' | 'A' | 'sA' | 'B' | 'F' | 'Fb' | 'O' | 'NH';
 const CLS_S: Dialect = 'S';
 const CLS_Sa: Dialect = 'Sa';
 const CLS_Sf: Dialect = 'Sf';
@@ -47,9 +48,55 @@ const CLS_Fb: Dialect = 'Fb';
 const CLS_O: Dialect = 'O';
 const CLS_NH: Dialect = 'NH';
 
-function querySelectorAll(...classes: string[]): NodeListOf<Element> {
-  return document.querySelectorAll(classes.map((c) => '.' + c).join(','));
-}
+const DIALECTS: readonly Dialect[] = [
+  CLS_S, CLS_Sa, CLS_Sf, CLS_A, CLS_sA, CLS_B, CLS_F, CLS_Fb, CLS_O, CLS_NH,
+];
+
+/*
+ * Dialect classes are to be found in:
+ * 1. HTML classes
+ * 2. JavaScript classes
+ *
+ * Dialect codes are to be found in:
+ * 1. Dialect Elements' inner HTML
+ * 2. The `d` parameter (which will be set using #1)
+ *
+ * For example, consider the following HTML:
+ * ```
+ * <span class="dialect cls_B">B</span>
+ * ```
+ *
+ * The class is "cls_B". The code is "B". The code will be used to set the
+ * parameter `d`. The class will be used in JavaScript.
+ * Thus, expect the following line to live in your JavaScript:
+ * ```
+ * const CLS_B: Dialect = "cls_B";
+ * ```
+ *
+ * We also use this HTML span to construct a mapping between dialect codes
+ * and classes.
+ * The mapping is restricted to the dialects that are present in a given
+ * page, and that's OK. On a given page, we have no need for the dialects
+ * that are absent from the page! Makes sense, eh?
+ *
+ * It is the classes that are used for internal processing, and it is the
+ * codes that are presented to the user. This way, the `d` parameter has a
+ * "pretty" value, and is persistent.
+ *
+ * As for the classes, we can obfuscate them as we like!
+ */
+
+const DIALECT_CODE_TO_CLASS: Map<string, Dialect> = (function(): Map<string, Dialect> {
+  const codeToClass: Map<string, Dialect> = new Map<string, Dialect>();
+  DIALECTS.forEach((cls) => {
+    const code: string | undefined = document.querySelector(`.${CLS_DIALECT}.${cls}`)?.innerHTML;
+    if (code === undefined) {
+      return;
+    }
+    codeToClass.set(code, cls);
+  });
+  return codeToClass;
+}());
 
 function get_url_or_local(
   param: string,
@@ -82,12 +129,12 @@ function set_url_and_local(param: string, value: string | null): void {
 function moveElement(el: HTMLElement, tag: string, attrs: Record<string, string>): void {
   const copy = document.createElement(tag);
   copy.innerHTML = el.innerHTML;
-  el.getAttributeNames().forEach((attr) => {
-    copy.setAttribute(attr, el.getAttribute(attr)!);
+  Array.from(el.attributes).forEach((att: Attr): void => {
+    copy.setAttribute(att.name, att.value);
   });
-  for (const [key, value] of Object.entries(attrs)) {
+  Object.entries(attrs).forEach(([key, value]: [string, string]): void => {
     copy.setAttribute(key, value);
-  }
+  });
   el.parentNode?.replaceChild(copy, el);
 }
 
@@ -201,12 +248,7 @@ Array.prototype.forEach.call(
   });
 
 // Handle CLS_DIALECT class.
-type Dialect = 'S' | 'Sa' | 'Sf' | 'A' | 'sA' | 'B' | 'F' | 'Fb' | 'O' | 'NH';
-const DIALECTS: readonly Dialect[] = [
-  CLS_S, CLS_Sa, CLS_Sf, CLS_A, CLS_sA, CLS_B, CLS_F, CLS_Fb, CLS_O, CLS_NH,
-];
-
-function activeDialects(): Set<Dialect> | null {
+function getActiveDialectClassesInCurrentPage(): Set<Dialect> | null {
   const d = get_url_or_local('d');
   if (d === null) {
     return null;
@@ -214,17 +256,34 @@ function activeDialects(): Set<Dialect> | null {
   if (d === '') {
     return new Set();
   }
-  return new Set(d.split(',').map((d) => d as Dialect));
+  return new Set<Dialect>(
+    d.split(',').filter((d: string): boolean => DIALECT_CODE_TO_CLASS.has(d)).map(
+      (d: string): Dialect => DIALECT_CODE_TO_CLASS.get(d)!));
+}
+
+function toggleDialect(code: string): void {
+  let d: string | null = get_url_or_local('d');
+  if (d === null) {
+    d = '';
+  }
+  const dd = new Set<string>(d.split(','));
+  if (dd.has(code)) {
+    dd.delete(code);
+  } else {
+    dd.add(code);
+  }
+  d = Array.from(dd).join(',');
+  set_url_and_local('d', d);
 }
 
 /* Update the display based on the value of the `d` parameter.
  */
 function dialect(): void {
-  const active: Set<Dialect> | null = activeDialects();
+  const active: Set<Dialect> | null = getActiveDialectClassesInCurrentPage();
   function dialected(el: Element): boolean {
     return DIALECTS.some((d: Dialect) => el.classList.contains(d));
   }
-  querySelectorAll(CLS_DIALECT_PARENTHESIS, CLS_DIALECT_COMMA, CLS_SPELLING_COMMA, CLS_TYPE).forEach(
+  document.querySelectorAll(`.${CLS_DIALECT_PARENTHESIS},.${CLS_DIALECT_COMMA},.${CLS_SPELLING_COMMA},.${CLS_TYPE}`).forEach(
     (el: Element) => {
       if (active === null) {
         el.classList.remove(CLS_VERY_LIGHT);
@@ -232,7 +291,7 @@ function dialect(): void {
         el.classList.add(CLS_VERY_LIGHT);
       }
     });
-  querySelectorAll(CLS_DIALECT, CLS_SPELLING).forEach((el: Element) => {
+  document.querySelectorAll(`.${CLS_DIALECT},.${CLS_SPELLING}`).forEach((el: Element) => {
     if (!dialected(el)) {
       return;
     }
@@ -256,26 +315,7 @@ Array.prototype.forEach.call(
   (el: HTMLElement) => {
     el.classList.add(CLS_HOVER_LINK);
     el.onclick = () => {
-      const dClasses: readonly Dialect[] = DIALECTS.filter(
-        (d) => el.classList.contains(d));
-      if (dClasses.length !== 1) {
-        // This is unexpected!
-        return;
-      }
-      const d: Dialect | undefined = dClasses[0];
-      if (!d) {
-        return;
-      }
-      let active = activeDialects();
-      if (active === null) {
-        active = new Set<Dialect>();
-      }
-      if (active.has(d)) {
-        active.delete(d);
-      } else {
-        active.add(d);
-      }
-      set_url_and_local('d', Array.from(active).join(','));
+      toggleDialect(el.innerHTML);
       dialect();
     };
   });
