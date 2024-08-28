@@ -35,6 +35,18 @@ const CLS_SPELLING_COMMA = 'spelling-comma';
 const CLS_TYPE = 'type';
 const CLS_SPELLING = 'spelling';
 
+// The following classes represent the dialects.
+const CLS_S: Dialect = 'S';
+const CLS_Sa: Dialect = 'Sa';
+const CLS_Sf: Dialect = 'Sf';
+const CLS_A: Dialect = 'A';
+const CLS_sA: Dialect = 'sA';
+const CLS_B: Dialect = 'B';
+const CLS_F: Dialect = 'F';
+const CLS_Fb: Dialect = 'Fb';
+const CLS_O: Dialect = 'O';
+const CLS_NH: Dialect = 'NH';
+
 function querySelectorAll(...classes: string[]): NodeListOf<Element> {
   return document.querySelectorAll(classes.map((c) => '.' + c).join(','));
 }
@@ -189,10 +201,10 @@ Array.prototype.forEach.call(
   });
 
 // Handle CLS_DIALECT class.
-// NOTE: We, unfortunately, can not obfuscate the dialect classes, because
-// they are used as parameters.
 type Dialect = 'S' | 'Sa' | 'Sf' | 'A' | 'sA' | 'B' | 'F' | 'Fb' | 'O' | 'NH';
-const DIALECTS: readonly Dialect[] = ['S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
+const DIALECTS: readonly Dialect[] = [
+  CLS_S, CLS_Sa, CLS_Sf, CLS_A, CLS_sA, CLS_B, CLS_F, CLS_Fb, CLS_O, CLS_NH,
+];
 
 function activeDialects(): Set<Dialect> | null {
   const d = get_url_or_local('d');

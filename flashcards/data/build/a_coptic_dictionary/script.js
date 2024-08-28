@@ -25,6 +25,16 @@ const CLS_DIALECT_COMMA = 'dialect-comma';
 const CLS_SPELLING_COMMA = 'spelling-comma';
 const CLS_TYPE = 'type';
 const CLS_SPELLING = 'spelling';
+const CLS_S = 'S';
+const CLS_Sa = 'Sa';
+const CLS_Sf = 'Sf';
+const CLS_A = 'A';
+const CLS_sA = 'sA';
+const CLS_B = 'B';
+const CLS_F = 'F';
+const CLS_Fb = 'Fb';
+const CLS_O = 'O';
+const CLS_NH = 'NH';
 function querySelectorAll(...classes) {
   return document.querySelectorAll(classes.map((c) => '.' + c).join(','));
 }
@@ -126,7 +136,9 @@ Array.prototype.forEach.call(document.getElementsByClassName(CLS_EXPLANATORY_KEY
   el.classList.add(CLS_HOVER_LINK);
   moveElement(el, 'a', { 'href': `#explanatory${el.innerHTML}` });
 });
-const DIALECTS = ['S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
+const DIALECTS = [
+  CLS_S, CLS_Sa, CLS_Sf, CLS_A, CLS_sA, CLS_B, CLS_F, CLS_Fb, CLS_O, CLS_NH,
+];
 function activeDialects() {
   const d = get_url_or_local('d');
   if (d === null) {
