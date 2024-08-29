@@ -119,6 +119,12 @@ pre () {
 }
 
 post() {
+  python site/obfuscate_paths.py \
+    --dir="${CRUM_DIR}"
+
+  python site/obfuscate_classes.py \
+    --dir="${CRUM_DIR}"
+
   find "${SITE_DIR}" -type f -name "*.js" | while read -r FILE; do
     # NOTE: Some of the flags below have strong warnings regarding their
     # possibility to break your code. Check the docs if something doesn't work.
@@ -131,9 +137,6 @@ post() {
       --rename-properties-mode "unsafe" \
       --unicode-escape-sequence "true"
   done
-
-  python site/obfuscate_paths.py \
-    --dir="${CRUM_DIR}"
 
   git -C "${SITE_DIR}" add --all
   git -C "${SITE_DIR}" commit --fixup HEAD
