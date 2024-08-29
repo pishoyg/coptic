@@ -6,10 +6,7 @@ NOTE: The original source of this file is:
 We expect to change it radically.
 """
 
-# TODO: (#141) Adapt for your own use.
-
 import argparse
-import glob
 import random
 import re
 import string
@@ -21,22 +18,18 @@ argparser = argparse.ArgumentParser(
 )
 
 argparser.add_argument(
-    "--html",
+    "--dir",
     type=str,
-    help="Glob pattern for HTML files.",
+    help="Path to the directory containing all files."
+    " If given, will obfuscate the files in this directory based on extension."
+    " If given, --html, --css, and --js, must remain unused.",
 )
 
-argparser.add_argument(
-    "--css",
-    type=str,
-    help="Glob pattern for CSS files.",
+HTML_CLASS_RE = re.compile(
+    r"class=[\"\']?((?:.(?![\"\']?\s+(?:\S+)=|\s*\/?[>\"\']))+.)[\"\']?",
 )
 
-argparser.add_argument(
-    "--js",
-    type=str,
-    help="Glob pattern for JavaScript files.",
-)
+JS_CLASS_RE = re.compile(r"const (CLS_[a-zA-Z_]+) = '([a-zA-Z-]+)';")
 
 
 def _random_class() -> str:
@@ -45,85 +38,57 @@ def _random_class() -> str:
 
 def _parse_html_class_names(
     old_html: str,
-    equivalents_obfuscated_html_classes: dict[str, str],
-) -> tuple[list, list, dict]:
+    mapping: dict[str, str],
+) -> dict[str, str]:
     """Parse HTML class names.
 
     Args:
-        old_html (string): HTML we want to parse
-        equivalents_obfuscated_html_classes (Dict):
-            Dict<HTMLClasses, ObfuscatedHTMLClasses>
-
-    Returns:
-        Tuple: _description_
+        old_html (string): HTML we want to parse.
+        mapping (dict): Dict<HTMLClasses, ObfuscatedHTMLClasses>
     """
 
-    # Regex to fetch HTML classes in the file
-    html_class_regex = (
-        r"class=[\"\']?((?:.(?![\"\']?\s+(?:\S+)=|\s*\/?[>\"\']))+.)[\"\']?"
-    )
+    classes_groups = HTML_CLASS_RE.findall(old_html)
 
-    # classes_groups can be ['navbar p-5', 'navbar-brand', 'navbar-item',
-    # 'title is-4']
-    classes_groups = re.findall(html_class_regex, old_html)
-    obfuscate_classes_groups = []
+    for classes in classes_groups:
+        for old_class_name in classes.split():
+            if old_class_name not in mapping:
+                mapping[old_class_name] = _random_class()
 
-    for i, classes in enumerate(classes_groups):
-        div_of_classes = classes.split()
-        obfuscate_classes_groups.append([])
-
-        for old_class_name in div_of_classes:
-            if old_class_name not in equivalents_obfuscated_html_classes:
-                equivalents_obfuscated_html_classes[old_class_name] = (
-                    _random_class()
-                )
-
-            obfuscate_classes_groups[i].append(
-                equivalents_obfuscated_html_classes[old_class_name],
-            )
-
-    for i, classes in enumerate(obfuscate_classes_groups):
-        obfuscate_classes_groups[i] = " ".join(classes)
-
-    return (
-        classes_groups,
-        obfuscate_classes_groups,
-        equivalents_obfuscated_html_classes,
-    )
+    return mapping
 
 
 def _generate_html(
     html_content: str,
-    classes_groups: list[str],
-    obfuscate_classes_groups: list[str],
+    mapping: dict[str, str],
 ) -> str:
     """Generate the obfuscated HTML.
 
     Args:
         html_content (str): HTML content before obfuscation.
-        classes_groups (dict): Class groups, like
-            `["navbar", "btn btn-primary"]`
-        obfuscate_classes_groups (dict): _description_.
+        mapping (dict): _description_.
 
     Returns:
         str: Obfuscated HTML
     """
 
-    for i, classes_group in enumerate(classes_groups):
-        html_content = html_content.replace(
-            f'class="{classes_group}"',
-            f'class="{obfuscate_classes_groups[i]}"',
+    def replace(match: re.Match) -> str:
+        new_class = " ".join(
+            map(
+                lambda c: mapping[c],
+                match.group(1).split(),
+            ),
         )
+        return f'class="{new_class}"'
 
-    return html_content
+    return HTML_CLASS_RE.sub(replace, html_content)
 
 
-def _generate_css(css_content: str, equivalent_class: dict) -> str:
+def _generate_css(css_content: str, mapping: dict[str, str]) -> str:
     """Generate the obfuscated CSS.
 
     Args:
         css_content (str): CSS before obfuscation.
-        equivalent_class (Dict): Dictionary of new class names.
+        mapping (Dict): Dictionary of new class names.
 
     Returns:
         str: Obfuscated CSS
@@ -132,8 +97,8 @@ def _generate_css(css_content: str, equivalent_class: dict) -> str:
     # We sort by the key length ; to first replace long classes names and
     # after short one ".navbar-brand", and then ".navbar" avoid
     # "RENAMED_CLASS-brand" and "RENAMED_CLASS" bug
-    for old_class_name in sorted(equivalent_class, key=len, reverse=True):
-        new_class_name = equivalent_class[old_class_name]
+    for old_class_name in sorted(mapping, key=len, reverse=True):
+        new_class_name = mapping[old_class_name]
 
         # CSS classes modifications
         # Example: a class like "lg:1/4" should be "lg\:1\/4" in CSS
@@ -182,7 +147,7 @@ def _generate_css(css_content: str, equivalent_class: dict) -> str:
     return css_content
 
 
-def _generate_js(js_content: str, equivalent_class: dict) -> str:
+def _generate_js(js_content: str, mapping: dict) -> str:
     """Generate the obfuscated JS.
 
     Args:
@@ -193,75 +158,48 @@ def _generate_js(js_content: str, equivalent_class: dict) -> str:
         str: Obfuscated JS
     """
 
-    # We sort by the key length; to first replace long classes names and after
-    # short ones. For example, ".navbar-brand", and then ".navbar", to avoid
-    # "RENAMED_CLASS-brand" and "RENAMED_CLASS" bug.
-    for old_class_name in sorted(equivalent_class, key=len, reverse=True):
-        new_class_name = equivalent_class[old_class_name]
-
-        # JS modifications
-        js_content = js_content.replace(
-            '.querySelector(".' + old_class_name + '")',
-            '.querySelector(".' + new_class_name + '")',
-        )
-        js_content = js_content.replace(
-            '.querySelectorAll(".' + old_class_name + '")',
-            '.querySelectorAll(".' + new_class_name + '")',
-        )
-        js_content = js_content.replace(
-            '.classList.toggle("' + old_class_name + '")',
-            '.classList.toggle("' + new_class_name + '")',
+    def replace(match: re.Match) -> str:
+        old_class = match.group(2)
+        return (
+            f"const {match.group(1)} = '{mapping.get(old_class, old_class)}';"
         )
 
-    return js_content
+    return JS_CLASS_RE.sub(replace, js_content)
 
 
-def obfuscate(htmlfiles: list[str], cssfiles: list[str], jsfiles: list[str]):
+def obfuscate(files: list[str]):
     """
     Args:
-        htmlfiles (list): HTML files path.
-        cssfiles (list): CSS files path.
-        jsfiles (list): JS files path.
+        html_files (list): HTML files path.
+        css_files (list): CSS files path.
+        js_files (list): JS files path.
     """
 
-    # Dict<HTMLClasses, ObfuscatedHTMLClasses>
-    equivalents_obfuscated_html_classes = {}
+    mapping = {}
 
-    # HTML FILES GENERATION : Fetch HTML classes and rename them
-    for path in htmlfiles:
+    # TODO: (#141) This only collects classes from HTML files, maps them,
+    # then rewrites everything. Some classes live in CSS and JavaScript, but
+    # not in the HTML. Modify the pipeline to account for those.
+    for path in [f for f in files if f.endswith(".html")]:
 
         old_html = utils.read(path)
-        (
-            classes_groups,
-            obfuscate_classes_groups,
-            equivalents_obfuscated_html_classes,
-        ) = _parse_html_class_names(
-            old_html,
-            equivalents_obfuscated_html_classes,
-        )
+        mapping = _parse_html_class_names(old_html, mapping)
+        utils.write(_generate_html(old_html, mapping), path)
 
-        new_html = _generate_html(
-            old_html,
-            classes_groups,
-            obfuscate_classes_groups,
-        )
-
-        utils.write(new_html, path)
-
-    for path in cssfiles:
+    for path in [f for f in files if f.endswith(".css")]:
         utils.write(
             _generate_css(
                 utils.read(path),
-                equivalents_obfuscated_html_classes,
+                mapping,
             ),
             path,
         )
 
-    for path in jsfiles:
+    for path in [f for f in files if f.endswith(".js")]:
         utils.write(
             _generate_js(
                 utils.read(path),
-                equivalents_obfuscated_html_classes,
+                mapping,
             ),
             path,
         )
@@ -270,10 +208,8 @@ def obfuscate(htmlfiles: list[str], cssfiles: list[str], jsfiles: list[str]):
 def main() -> None:
     args = argparser.parse_args()
 
-    def g(p):
-        return glob.glob(p, recursive=True)
-
-    obfuscate(g(args.html), g(args.css), g(args.js))
+    paths = utils.paths(args.dir)
+    obfuscate(paths)
 
 
 if __name__ == "__main__":
