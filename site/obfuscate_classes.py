@@ -26,7 +26,7 @@ argparser.add_argument(
 )
 
 HTML_CLASS_RE = re.compile(
-    r"class=[\"\']?((?:.(?![\"\']?\s+(?:\S+)=|\s*\/?[>\"\']))+.)[\"\']?",
+    r"class=\s*[\"\']?((?:.(?![\"\']?\s+(?:\S+)=|\s*\/?[>\"\']))+.)[\"\']?",
 )
 
 JS_CLASS_RE = re.compile(r"const (CLS_[a-zA-Z_]+) = '([a-zA-Z-]+)';")
