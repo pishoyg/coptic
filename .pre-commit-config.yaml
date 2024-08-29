@@ -8,6 +8,15 @@ fail_fast: true
 exclude: ^archive/
 repos:
 
+  # HTML
+  - repo: local
+    hooks:
+      - id: tidy-html
+        name: tidy-html
+        entry: tidy -indent -modify -quiet --tidy-mark no -wrap 80
+        language: system
+        files: .*\.html
+
   # Language-agnostic
   - repo: meta
     hooks:
@@ -74,12 +83,6 @@ repos:
         language: system
         types: [python]
         exclude: setup.py
-      # HTML
-      - id: tidy-html
-        name: tidy-html
-        entry: tidy -indent -modify -quiet --tidy-mark no -wrap 80
-        language: system
-        files: .*\.html
       # XML
       - id: tidy-xml
         name: tidy-xml
