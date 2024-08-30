@@ -232,7 +232,7 @@ site_publish:
 		--build \
 		--obf \
 		--tidy \
-		--comit \
+		--commit \
 		--push
 
 # INFRASTRUCTURE RULES
