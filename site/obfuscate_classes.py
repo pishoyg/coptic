@@ -36,25 +36,29 @@ def _random_class() -> str:
     return "".join(random.choice(string.ascii_lowercase) for _ in range(24))
 
 
-def _parse_html_class_names(
-    old_html: str,
-    mapping: dict[str, str],
-) -> dict[str, str]:
-    """Parse HTML class names.
+def _gather_classes(files: list[str]) -> set[str]:
+    """Given a list of file paths, return a list of all classes that occur in
+    them."""
+    # TODO: (#141) Currently, we only look for classes in the HTML and JS
+    # files. This is OK. If a class only occurs in CSS, but never in JavaScript
+    # or HTML, then it's definitely unused.
+    # Nevertheless, for consistency, we should search for classes in CSS as
+    # well. It might turn out to be useful at some point in the future.
 
-    Args:
-        old_html (string): HTML we want to parse.
-        mapping (dict): Dict<HTMLClasses, ObfuscatedHTMLClasses>
-    """
+    classes: set[str] = set()
+    # Gather classes from HTML files.
+    for f in [f for f in files if f.endswith(".html")]:
+        content = utils.read(f)
+        for occurrence in HTML_CLASS_RE.findall(content):
+            classes.update(occurrence.split())
+    # Gather classes from JavaScript files.
+    for f in [f for f in files if f.endswith(".js")]:
+        content = utils.read(f)
+        classes.update(
+            match.group(2) for match in JS_CLASS_RE.finditer(content)
+        )
 
-    classes_groups = HTML_CLASS_RE.findall(old_html)
-
-    for classes in classes_groups:
-        for old_class_name in classes.split():
-            if old_class_name not in mapping:
-                mapping[old_class_name] = _random_class()
-
-    return mapping
+    return classes
 
 
 def _generate_html(
@@ -175,34 +179,19 @@ def obfuscate(files: list[str]):
         js_files (list): JS files path.
     """
 
-    mapping = {}
-
     # TODO: (#141) This only collects classes from HTML files, maps them,
     # then rewrites everything. Some classes live in CSS and JavaScript, but
     # not in the HTML. Modify the pipeline to account for those.
-    for path in [f for f in files if f.endswith(".html")]:
+    mapping = {cls: _random_class() for cls in _gather_classes(files)}
 
-        old_html = utils.read(path)
-        mapping = _parse_html_class_names(old_html, mapping)
-        utils.write(_generate_html(old_html, mapping), path)
+    for path in [f for f in files if f.endswith(".html")]:
+        utils.write(_generate_html(utils.read(path), mapping), path)
 
     for path in [f for f in files if f.endswith(".css")]:
-        utils.write(
-            _generate_css(
-                utils.read(path),
-                mapping,
-            ),
-            path,
-        )
+        utils.write(_generate_css(utils.read(path), mapping), path)
 
     for path in [f for f in files if f.endswith(".js")]:
-        utils.write(
-            _generate_js(
-                utils.read(path),
-                mapping,
-            ),
-            path,
-        )
+        utils.write(_generate_js(utils.read(path), mapping), path)
 
 
 def main() -> None:
