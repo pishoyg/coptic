@@ -262,18 +262,14 @@ function getActiveDialectClassesInCurrentPage(): Set<Dialect> | null {
 }
 
 function toggleDialect(code: string): void {
-  let d: string | null = get_url_or_local('d');
-  if (d === null) {
-    d = '';
-  }
-  const dd = new Set<string>(d.split(','));
+  const cur: string | null = get_url_or_local('d');
+  const dd = new Set<string>(cur ? cur.split(',') : []);
   if (dd.has(code)) {
     dd.delete(code);
   } else {
     dd.add(code);
   }
-  d = Array.from(dd).join(',');
-  set_url_and_local('d', d);
+  set_url_and_local('d', Array.from(dd).join(','));
 }
 
 /* Update the display based on the value of the `d` parameter.

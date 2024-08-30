@@ -159,19 +159,15 @@ function getActiveDialectClassesInCurrentPage() {
   return new Set(d.split(',').filter((d) => DIALECT_CODE_TO_CLASS.has(d)).map((d) => DIALECT_CODE_TO_CLASS.get(d)));
 }
 function toggleDialect(code) {
-  let d = get_url_or_local('d');
-  if (d === null) {
-    d = '';
-  }
-  const dd = new Set(d.split(','));
+  const cur = get_url_or_local('d');
+  const dd = new Set(cur ? cur.split(',') : []);
   if (dd.has(code)) {
     dd.delete(code);
   }
   else {
     dd.add(code);
   }
-  d = Array.from(dd).join(',');
-  set_url_and_local('d', d);
+  set_url_and_local('d', Array.from(dd).join(','));
 }
 function dialect() {
   const active = getActiveDialectClassesInCurrentPage();
