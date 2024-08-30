@@ -15,6 +15,8 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+*NOTE: This site is still under construction.*
+
 This site hosts a suite of products that aims to make Coptic more **learnable**.
 
 ## How to Get the Flashcards
