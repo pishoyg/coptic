@@ -228,7 +228,12 @@ endif
 # SITE RULES
 
 site_publish:
-	bash site/publish.sh --pre --post
+	bash site/publish.sh \
+		--build \
+		--obf \
+		--tidy \
+		--comit \
+		--push
 
 # INFRASTRUCTURE RULES
 bin_install:
