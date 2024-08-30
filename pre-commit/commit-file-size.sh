@@ -12,8 +12,8 @@ if (( "$#" == 0 )); then
 fi
 
 SIZE="$(du --apparent-size --human-readable --summarize --total "${@}" | tail -n 1 | cut --fields 1)"
-MAGNITUDE="$(echo "${SIZE}" | grep -o '[A-Z]')"
-COUNT="$(echo "${SIZE}" | grep --only --extended-regexp "^[0-9]+")"
+MAGNITUDE="$(echo "${SIZE}" | grep -o '[A-Z]' || true)"
+COUNT="$(echo "${SIZE}" | grep --only --extended-regexp "^[0-9]+" || true)"
 if [[ "${MAGNITUDE}" == "" || "${MAGNITUDE}" == "K" ]]; then
   announce "${BLUE}" "${GREEN}"
 elif [[ "${MAGNITUDE}" == "M" ]] && (( COUNT < 128 )); then
