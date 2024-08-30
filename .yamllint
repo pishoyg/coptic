@@ -1,5 +1,6 @@
 ---
 # See https://yamllint.readthedocs.io/en/stable/configuration.html.
 yaml-files:
-  - .yamlfmt
-  - .yamllint
+  - '*.yaml'
+  - '.yamlfmt'
+  - '.yamllint'

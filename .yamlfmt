@@ -1,8 +1,9 @@
 # See https://github.com/google/yamlfmt/blob/main/docs/config-file.md.
 ---
 include:
-  - .yamlfmt
-  - .yamllint
+  - '*.yaml'
+  - '.yamlfmt'
+  - '.yamllint'
 formatter:
   include_document_start: true
   retain_line_breaks_single: true
