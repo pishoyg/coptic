@@ -23,6 +23,7 @@ IMG_300_DIR = "dictionary/marcion.sourceforge.net/data/img-300"
 
 FILE_NAME_RE = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
 STEM_RE = re.compile("[0-9]+-[0-9]+-[0-9]+")
+NAME_RE = re.compile("[A-Z][a-zA-Z ]*")
 
 
 INPUT_TSVS: str = (
@@ -732,6 +733,29 @@ def validate():
             offending.append(source)
     if offending:
         utils.fatal("Artifacts may be obsolete:", offending)
+
+    # Validate content of the source files.
+    for path in sources:
+        content: str = utils.read(path)
+        lines: list[str] = list(
+            filter(None, [line.strip() for line in content.split("\n")]),
+        )
+        del content
+        if not lines:
+            utils.fatal("Source file is empty:", path)
+        for line in lines:
+            if line.startswith("http"):
+                continue
+            if line == "manual":
+                continue
+            if NAME_RE.fullmatch(line):
+                continue
+            utils.fatal(
+                "Can't make sense of this source:",
+                line,
+                "in file",
+                path,
+            )
 
 
 if __name__ == "__main__":
