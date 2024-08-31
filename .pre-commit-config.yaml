@@ -90,6 +90,12 @@ repos:
         exclude: tsconfig\.json$
 
   # Python
+  # NOTE: Running `add-trailing-comma` before `black` is intentional.
+  - repo: https://github.com/asottile/add-trailing-comma
+    rev: v3.1.0
+    hooks:
+      - id: add-trailing-comma
+
   - repo: local
     hooks:
       - id: mypy
@@ -131,11 +137,6 @@ repos:
     hooks:
       - id: ruff
         args: [--fix]
-
-  - repo: https://github.com/asottile/add-trailing-comma
-    rev: v3.1.0
-    hooks:
-      - id: add-trailing-comma
 
   - repo: https://github.com/asottile/dead
     rev: v1.5.2
