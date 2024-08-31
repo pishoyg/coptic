@@ -42,7 +42,7 @@
 - [`flashcards/`](#flashcards)
   - [Anki Keys and Synchronization](#anki-keys-and-synchronization)
   - [Anki JavaScript (TypeScript)](#anki-javascript-typescript)
-  - [Type Enforcement](#type-enforcement)
+  - [Unused Media](#unused-media)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -258,12 +258,10 @@ backlog milestone.
 
 1. Document the code.
 
-1. We force type hints throughout the repo, although as a pipeline matures we
-   disable them to reduce the running time. See
-   [type_enforced](https://github.com/connor-makowski/type_enforced).
-   - We tend to have an `enforcer` package that hosts the flag that enables or
-     disables type enforcement. We also use it to define classes that we use
-   for enforcement.
+1. We use `mypy` for static typing checks. While not required by `mypy` (which
+can often infer the types without hints, and would throw an error whenever an
+explicit type annotation is needed), it's still encouraged to use type hints
+extensively.
 
 1. Collect and print stats.
 
@@ -598,7 +596,10 @@ We also don't introduce special code for Anki. This is highly undesirable. As
 much as possible, our pipelines should be uniform for all platforms, and should
 only diverge right before the final step.
 
-## Type Enforcement
+## Unused Media
 
-Set `ENABLED = True` in `enforcer.py` during development in order to enable
-type enforcement. It is disabled in production due to the high cost.
+The current handling of media files implies that media files that end
+up being unused remain stored, which results in some unused media files
+making it to the output. This was brought up in #96, but it was deemed of too
+little impact to be worth fixing. Be aware that the exported packages can
+have unused media files, and address it if necessary.
