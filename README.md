@@ -41,7 +41,6 @@
     - [Output Files](#output-files)
 - [`flashcards/`](#flashcards)
   - [Anki Keys and Synchronization](#anki-keys-and-synchronization)
-  - [Anki JavaScript (TypeScript)](#anki-javascript-typescript)
   - [Unused Media](#unused-media)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -570,31 +569,6 @@ field.**
 1. Model ID
 
 Model IDs are hardcoded.
-
-## Anki JavaScript (TypeScript)
-
-Global variables have been problematic in Anki (for unknown reasons). We avoid
-them by declaring functions!
-Instead of
-```ts
-const DIALECTS = ['S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
-DIALECTS.forEach(...);
-```
-
-We write
-```ts
-function DIALECTS(): Dialect[] {
-  return ['S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'];
-}
-DIALECTS().forEach(...);
-```
-
-We also don't save the return value of those function in a local variable.
-Instead, we use the variable directly, as shown above.
-
-We also don't introduce special code for Anki. This is highly undesirable. As
-much as possible, our pipelines should be uniform for all platforms, and should
-only diverge right before the final step.
 
 ## Unused Media
 

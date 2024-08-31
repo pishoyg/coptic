@@ -31,6 +31,9 @@ HTML_FMT = f"""<!DOCTYPE html>
 WEB_JS_FMT = """'use strict';
 window.addEventListener("load", () => {{ {javascript} }});
 """
+# NOTE: In the Anki version of JavaScript, everything is wrapped in a function,
+# because global variables have been problematic with Anki.
+# See https://github.com/pishoyg/coptic/issues/186.
 ANKI_JS_FMT = """(() => {{ {javascript} }})();"""
 
 
