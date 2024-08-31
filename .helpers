@@ -117,21 +117,31 @@ grepexx () {
 # NOTE: We "mangle" the regex using extra parentheses in order to prevent it
 # from matching itself.
 todo() {
+  HELP="${BLUE}Display TODO markers in the repo.
+  Run ${GREEN}todo \"\${ISSUE_NUMBER}\" ${BLUE}to show TODOs for a specific issue.
+  Run ${GREEN}todo \"stray\" ${BLUE}to show TODOs without an associated issue.
+  Run ${GREEN}todo --help ${BLUE}to display this message.${RESET}"
   PATTERN='TODO(:) '
-  ISSUE="${1}"
+  PARAM="${1}"
   if (( "$#" > 1 )); then
-    echo -e "${RED}This takes up to one parameter, namely ${YELLOW}an issue number${RED}, or the string ${YELLOW}'stray'${RED}. Got ${PURPLE}${*}${RED}.${RESET}"
-    return
+    echo -e "${RED}Too many parameters!${RESET}"
+    echo -e "${HELP}"
+    return 1
   fi
-  if [[ "${ISSUE}" == "stray" ]]; then
+  if [[ "${PARAM}" == "--help" ]]; then
+    echo -e "${HELP}"
+    return 0
+  fi
+  if [[ "${PARAM}" == "stray" ]]; then
     # Search for TODO's without an assigned issue.
     PATTERN="${PATTERN}(?!\(#[0-9]+\))"
-  elif [ -n "${ISSUE}" ]; then
-    if echo "${ISSUE}" | grep --quiet --extended-regexp '^[0-9]+$'; then
-      echo -e "${RED}The parameter should be either ${YELLOW}an issue number${RED}, or the string ${YELLOW}'stray'${RED}. Got ${PURPLE}${ISSUE}${RED}.${RESET}"
-      return
+  elif [ -n "${PARAM}" ]; then
+    if ! echo "${PARAM}" | grep --quiet --extended-regexp '^[0-9]+$'; then
+      echo -e "${RED}Invalid parameter.${RESET}"
+      echo -e "${HELP}"
+      return 1
     fi
-    PATTERN="${PATTERN}\(#${ISSUE}\)"
+    PATTERN="${PATTERN}\(#${PARAM}\)"
   fi
   grepexx . --perl-regexp "${PATTERN}"
 }
