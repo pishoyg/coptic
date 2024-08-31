@@ -5,8 +5,6 @@ import re
 import shutil
 import string
 
-import type_enforced
-
 import utils
 
 SRC_RE = re.compile(r'(href|src)=\s*"([^"]+)"')
@@ -23,12 +21,10 @@ argparser.add_argument(
 )
 
 
-@type_enforced.Enforcer(enabled=TYPE_ENFORCED)
 def _random_basename():
     return "".join(random.choice(string.ascii_lowercase) for _ in range(24))
 
 
-@type_enforced.Enforcer(enabled=TYPE_ENFORCED)
 def obfuscate_paths(dir: str) -> None:
     map: dict[str, str] = {}
     paths = utils.paths(dir)

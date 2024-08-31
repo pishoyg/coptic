@@ -37,7 +37,7 @@ _mypy "dictionary/copticsite.com" "${@}"
 # _mypy "dictionary/marcion.sourceforge.net" "${@}"
 # _mypy "flashcards" "${@}"
 # _mypy "morphology" "${@}"
-# _mypy "site" "${@}"
+_mypy "site" "${@}"
 
 NONMATCHES=$(echo "${@}" | tr ' ' '\n' \
   | _grep --invert "^bible/" \
