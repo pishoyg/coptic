@@ -2,11 +2,10 @@ import collections
 import json
 import os
 import re
+import typing
 
 import deck
-import enforcer
 import field
-import type_enforced
 
 import utils
 
@@ -22,14 +21,12 @@ GREEK_WORD_RE = re.compile("([Α-Ωα-ω]+)")
 DICT_WIDTH = "1000px"
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def crum(
     deck_name: str,
     deck_id: int,
     dialect_cols: list[str],
     force_front: bool = True,
 ) -> deck.deck:
-    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def roots_col(
         col_name: str,
         line_br: bool = False,
@@ -66,7 +63,6 @@ def crum(
     # This replaces all Coptic words, regardless of whether they
     # represent plain text. Coptic text that occurs inside a tag (for example
     # as a tag property) would still get wrapped inside this <span> tag.
-    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def cdo(text: str) -> str:
         return COPTIC_WORD_RE.sub(
             r'<span class="coptic">\1</span>',
@@ -77,19 +73,17 @@ def crum(
     # This replaces all Greek words, regardless of whether they
     # represent plain text. Greek text that occurs inside a tag (for example
     # as a tag property) would still acquire this tag.
-    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def greek(text: str) -> str:
         return GREEK_WORD_RE.sub(
             r'<span class="greek">\1</span>',
             text,
         )
 
-    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
-    def create_front() -> field.Field:
+    def create_front() -> field.field:
         if len(dialect_cols) == 1:
             return roots_col(dialect_cols[0], line_br=True, force=False)
 
-        def dialect(col: str) -> field.Field:
+        def dialect(col: str) -> field.field:
             return field.aon(
                 '<span class="left">',
                 "(",
@@ -392,9 +386,7 @@ def crum(
     )
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
-    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def col(
         col_name: str,
         line_br: bool = False,
@@ -442,9 +434,7 @@ def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
     )
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def kellia(deck_name: str, deck_id: int, basename: str) -> deck.deck:
-    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def col(
         col_name: str,
         line_br: bool = False,
@@ -489,7 +479,6 @@ def kellia(deck_name: str, deck_id: int, basename: str) -> deck.deck:
     )
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _dedup(arr: list[int], at_most_once: bool = False) -> list[int]:
     """
     Args:
@@ -503,7 +492,7 @@ def _dedup(arr: list[int], at_most_once: bool = False) -> list[int]:
     """
     if at_most_once:
         return list(dict.fromkeys(arr))
-    out = []
+    out: list[int] = []
     for x in arr:
         if out and out[-1] == x:
             continue
@@ -511,7 +500,6 @@ def _dedup(arr: list[int], at_most_once: bool = False) -> list[int]:
     return out
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _page_numbers(page_ranges: str) -> list[int]:
     """page_ranges is a comma-separated list of integers or integer ranges,
     just like what you type when you're using your printer.
@@ -519,7 +507,6 @@ def _page_numbers(page_ranges: str) -> list[int]:
     For example, "1,3-5,8-9" means [1, 3, 4, 5, 8, 9].
     """
 
-    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def parse(page_number: str) -> int:
         page_number = page_number.strip()
         if page_number[-1] in ["a", "b"]:
@@ -543,10 +530,9 @@ def _page_numbers(page_ranges: str) -> list[int]:
     return out
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class _dir_lister:
-    def __init__(self, dir: str, get_key: enforcer.Callable) -> None:
-        self.cache = {}
+    def __init__(self, dir: str, get_key: typing.Callable) -> None:
+        self.cache: dict[str, list[str]] = {}
         if not os.path.exists(dir):
             return
         for file in os.listdir(dir):
@@ -560,7 +546,6 @@ class _dir_lister:
         return utils.sort_semver(self.cache.get(key, []))
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class _sensor:
     def __init__(self, keys: list[str], sense_jsons: list[str]) -> None:
         self.decoder = json.JSONDecoder(
@@ -634,7 +619,6 @@ KELLIA_EGYPTIAN = "KELLIA::Egyptian"
 KELLIA_GREEK = "KELLIA::Greek"
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def file_name(deck_name: str) -> str:
     """Given a deck name, return a string that is valid as a file name.
 
@@ -645,7 +629,7 @@ def file_name(deck_name: str) -> str:
     )
 
 
-LAMBDAS: dict[str, enforcer.Callable] = {
+LAMBDAS: dict[str, typing.Callable] = {
     CRUM_ALL: lambda deck_name: crum(
         deck_name,
         1284010387,

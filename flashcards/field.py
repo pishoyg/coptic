@@ -3,8 +3,7 @@ import os
 import shutil
 import typing
 
-import enforcer
-import type_enforced
+import pandas as pd
 
 import utils
 
@@ -17,18 +16,16 @@ assert AUDIO_FMT_L + "{basename}" + AUDIO_FMT_R == AUDIO_FMT
 
 _work_dir = ""
 _initialized = False
-_in_work_dir = {}
-_tsv = {}
+_in_work_dir: dict[str, str] = {}
+_tsv: dict[str, pd.DataFrame] = {}
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def init(work_dir: str) -> None:
     global _work_dir, _initialized
     _work_dir = work_dir
     _initialized = True
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _add_to_work_dir(path: str) -> str:
     assert _initialized
     if path in _in_work_dir:
@@ -40,19 +37,17 @@ def _add_to_work_dir(path: str) -> str:
     return new_path
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class field:
     def next(self) -> str | list[str]:
-        raise ValueError("Unimplemented!")
+        raise NotImplementedError()
 
     def length(self) -> int:
-        raise ValueError("Unimplemented!")
+        raise NotImplementedError()
 
     def media_files(self) -> list[str]:
-        raise ValueError("Unimplemented!")
+        raise NotImplementedError()
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class _primitive_field(field):
     def length(self) -> int:
         return NO_LENGTH
@@ -61,7 +56,6 @@ class _primitive_field(field):
         return []
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class txt(_primitive_field):
     """A constant text field."""
 
@@ -84,7 +78,6 @@ class txt(_primitive_field):
         return self._text
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class seq(_primitive_field):
     """A numerical sequence field."""
 
@@ -95,11 +88,10 @@ class seq(_primitive_field):
         return str(next(self._counter))
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class _content_field(field):
     def __init__(
         self,
-        content: list[list[str]] | list[str],
+        content: list[str],
         media_files: list[str],
         force: bool = True,
     ) -> None:
@@ -112,7 +104,7 @@ class _content_field(field):
     def media_files(self) -> list[str]:
         return self._media_files
 
-    def next(self) -> str | list[str]:
+    def next(self) -> str:
         val = self._content[self._counter]
         self._counter += 1
         return val
@@ -121,7 +113,6 @@ class _content_field(field):
         return len(self._content)
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class tsv(_content_field):
     """A TSV column field."""
 
@@ -143,7 +134,6 @@ class tsv(_content_field):
         super().__init__(content, [], force=force)
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class tsvs(_content_field):
     """A TSVS column field."""
 
@@ -165,52 +155,6 @@ class tsvs(_content_field):
         super().__init__(content, [], force=force)
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
-class grp(_content_field):  # dead: disable
-    """
-    Group entries in a TSV column using another column.
-    See this example:
-        keys: [1, 2, 3]
-        groupby: [1, 2, 1, 2, 3, 3]
-        selected: ["a", "b", "c", "d", "e", "f"]
-
-        The first step is to zip `groupby` and `selected` to obtain the
-        following:
-            [(1, "a"),
-             (2, "b"),
-             (1, "c"),
-             (2, "d"),
-             (3, "e"),
-             (e, f")]
-        And then, for each call to next(), we return the selected entries with
-        a corresponding gropuby that matches the key.
-
-        This type is complicated and currently unused. Maybe we should just
-        delete it!
-    """
-
-    def __init__(
-        self,
-        keys,
-        group_by,
-        selected,
-        force: bool = True,
-        unique: bool = False,
-    ) -> None:
-        keys = [keys.next() for _ in range(keys.length())]
-        key_to_selected = {k: [] for k in keys}
-        for _ in range(num_entries(group_by, selected)):
-            key_to_selected[group_by.next()].append(selected.next())
-        if unique:
-            assert all(len(value) == 1 for value in key_to_selected.values())
-            key_to_selected = {
-                key: value[0] for key, value in key_to_selected.items()
-            }
-        content = [key_to_selected[k] for k in keys]
-        super().__init__(content, [], force)
-
-
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class media(_content_field):
     def __init__(
         self,
@@ -218,10 +162,10 @@ class media(_content_field):
         html_fmt: str,
         keys,
         # Map key to list of paths.
-        get_paths: enforcer.Callable,
+        get_paths: typing.Callable,
         # Map path to `format` arguments.
         # Your final HTML will be `html_fmt.format(fmt_args(path))`.
-        fmt_args: enforcer.OptionalCallable = None,
+        fmt_args: typing.Optional[typing.Callable] = None,
         force: bool = True,
     ) -> None:
         """The final path to a media file must be a basename. Directories are
@@ -238,7 +182,7 @@ class media(_content_field):
         """
 
         content = []
-        media_files = set()
+        media_files: set[str] = set()
         for _ in range(keys.length()):
             key = keys.next()
             if force:
@@ -263,15 +207,13 @@ class media(_content_field):
                 media_files.add(new_path)
             content.append(cur)
 
-        media_files = list(media_files)
-        super().__init__(content, media_files, force=force)
+        super().__init__(content, list(media_files), force=force)
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def img(
     keys,
-    get_paths: enforcer.Callable,
-    fmt_args: enforcer.OptionalCallable = None,
+    get_paths: typing.Callable,
+    fmt_args: typing.Optional[typing.Callable] = None,
     force: bool = True,
 ) -> media:
     """
@@ -302,10 +244,9 @@ def img(
     )
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def snd(
     keys,
-    get_paths: enforcer.Callable,
+    get_paths: typing.Callable,
     force: bool = True,
 ) -> media:
     return media(
@@ -316,11 +257,10 @@ def snd(
     )
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class apl(field):
     """Apply a lambda to a field."""
 
-    def __init__(self, lam: enforcer.Callable, *fields) -> None:
+    def __init__(self, lam: typing.Callable, *fields) -> None:
         self._lambda = lam
         self._fields = _convert_strings(*fields)
 
@@ -334,15 +274,9 @@ class apl(field):
         return num_entries(*self._fields)
 
 
-# NOTE: This must follow the last field subclass definition.
-Field = type_enforced.utils.WithSubclasses(field)
-FieldOrStr = Field + [str]
-
-
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def fmt(
     fmt: str,
-    key_to_field: dict[str, Field],
+    key_to_field: dict[str, field],
     force: bool = True,
     aon: typing.Optional[bool] = None,
 ) -> apl:
@@ -365,29 +299,23 @@ def fmt(
     return apl(format, *[key_to_field[k] for k in keys])
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def aon(*fields: FieldOrStr) -> apl:
+def aon(*fields: field | str) -> apl:
     """Construct an all-or-nothing field."""
 
-    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def all_or_nothing(*nexts: str) -> str:
         return "".join(nexts) if all(nexts) else ""
 
     return apl(all_or_nothing, *fields)
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def cat(*fields: FieldOrStr) -> apl:
-    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def cat(*fields: field | str) -> apl:
     def concatenate(*nexts: str) -> str:
         return "".join(nexts)
 
     return apl(concatenate, *fields)
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def xor(*fields: FieldOrStr) -> apl:
-    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def xor(*fields: field | str) -> apl:
     def first_match(*nexts: str) -> str:
         for n in nexts:
             if n:
@@ -397,27 +325,21 @@ def xor(*fields: FieldOrStr) -> apl:
     return apl(first_match, *fields)
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def jne(sep: str, *fields: FieldOrStr) -> apl:
-    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
+def jne(sep: str, *fields: field | str) -> apl:
     def join_non_empty(*nexts: str) -> str:
         return sep.join(filter(None, nexts))
 
     return apl(join_non_empty, *fields)
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def _convert_strings(
-    *fields: FieldOrStr,
-) -> list[*Field]:
+def _convert_strings(*fields: field | str) -> list[field]:
     return [
         txt(f, line_br=False, force=False) if isinstance(f, str) else f
         for f in fields
     ]
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def num_entries(*fields: Field) -> int:
+def num_entries(*fields: field) -> int:
     cur = NO_LENGTH
     for f in fields:
         length = f.length()
@@ -430,8 +352,7 @@ def num_entries(*fields: Field) -> int:
     return cur
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def merge_media_files(*fields: Field) -> list[str]:
+def merge_media_files(*fields: field) -> list[str]:
     m = sum([f.media_files() for f in fields], [])
     # Eliminate duplicates. This significantly reduces the package size.
     # While this is handled by Anki, it's not supported in genanki.

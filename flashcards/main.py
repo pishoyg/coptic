@@ -5,10 +5,8 @@ import tempfile
 
 import constants
 import deck
-import enforcer
 import field
-import genanki
-import type_enforced
+import genanki  # type: ignore[import-untyped]
 
 import utils
 
@@ -53,7 +51,6 @@ argparser.add_argument(
 )
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def verify_unique_object_keys(decks: list[genanki.Deck]) -> None:
     utils.verify_unique([d.deck_id for d in decks], "Deck ids")
     utils.verify_unique([d.name for d in decks], "Deck names")
@@ -71,20 +68,20 @@ def verify_unique_object_keys(decks: list[genanki.Deck]) -> None:
     )
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def write_anki(decks: list[deck.deck], path: str) -> None:
-    media_files = set()
+    media_files_set: set[str] = set()
     anki_decks = []
 
     for d in decks:
         anki_deck, anki_media = d.anki()
 
         anki_decks.append(anki_deck)
-        media_files.update(anki_media)
+        media_files_set.update(anki_media)
 
     # Sorting the media files increases the chances that we will get an
     # identical Anki package in the output.
-    media_files = sorted(list(media_files))
+    media_files: list[str] = sorted(list(media_files_set))
+    del media_files_set
 
     verify_unique_object_keys(anki_decks)
     package = genanki.Package(anki_decks, media_files=media_files)
@@ -93,7 +90,6 @@ def write_anki(decks: list[deck.deck], path: str) -> None:
     utils.wrote(path)
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def main() -> None:
     args = argparser.parse_args()
 

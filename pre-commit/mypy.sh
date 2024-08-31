@@ -35,7 +35,7 @@ _mypy "bible" "${@}"
 _mypy "dictionary/copticsite.com" "${@}"
 # _mypy "dictionary/kellia.uni-goettingen.de" "${@}"
 # _mypy "dictionary/marcion.sourceforge.net" "${@}"
-# _mypy "flashcards" "${@}"
+_mypy "flashcards" "${@}"
 _mypy "morphology" "${@}"
 _mypy "site" "${@}"
 

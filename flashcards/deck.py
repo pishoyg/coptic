@@ -2,10 +2,8 @@ import os
 import pathlib
 import shutil
 
-import enforcer
 import field
-import genanki
-import type_enforced
+import genanki  # type: ignore[import-untyped]
 
 import utils
 
@@ -36,7 +34,6 @@ window.addEventListener("load", () => {{ {javascript} }});
 ANKI_JS_FMT = """(() => {{ {javascript} }})();"""
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class stats:
     def __init__(self) -> None:
         self._exported_notes = 0
@@ -61,7 +58,6 @@ class stats:
         self.problematic(self._duplicate_key, "notes have duplicate keys.")
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class Note(genanki.Note):
     @property
     def guid(self):
@@ -70,7 +66,6 @@ class Note(genanki.Note):
         return genanki.guid_for(self.fields[2])
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class deck:
     def __init__(
         self,
@@ -79,10 +74,10 @@ class deck:
         deck_description: str,
         css: str,
         javascript: str,
-        key: field.Field,
-        front: field.Field,
-        back: field.Field,
-        title: field.Field,
+        key: field.field,
+        front: field.field,
+        back: field.field,
+        title: field.field,
         force_key: bool = True,
         force_no_duplicate_keys: bool = True,
         force_front: bool = True,
@@ -185,6 +180,10 @@ class deck:
                 else:
                     continue
 
+            assert isinstance(k, str)
+            assert isinstance(f, str)
+            assert isinstance(b, str)
+            assert isinstance(t, str)
             self.keys.append(f"{deck_name} - {k}")
             self.fronts.append(f)
             self.backs.append(b)
@@ -229,8 +228,8 @@ class deck:
             )
         with open(os.path.join(dir, CSS_BASENAME), "w") as f:
             f.write(self.css)
-        for f in self.media:
-            shutil.copy(f, dir)
+        for path in self.media:
+            shutil.copy(path, dir)
         utils.wrote(dir)
 
     def html_to_anki(self, html: str) -> str:
