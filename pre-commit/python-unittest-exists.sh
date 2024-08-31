@@ -11,8 +11,9 @@ fi
 
 for FILE in "$@"; do
   DIRNAME="$(dirname "${FILE}")"
-  if [[ "$(basename "${DIRNAME}")" != "test" ]]; then
-    TEST="${DIRNAME}/test/test_$(basename "${FILE}")"
+  BASENAME="$(basename "${FILE}")"
+  if [[ "$(basename "${DIRNAME}")" != "test" && "${BASENAME}" != "__init__.py" ]]; then
+    TEST="${DIRNAME}/test/test_${BASENAME}"
     if [ ! -f "${TEST}" ]; then
       echo -e "${RED}Please create a unit test in"\
         "${YELLOW}${TEST}${RED} and import"\
