@@ -1,7 +1,6 @@
 import os
 
 import pandas as pd
-import type_enforced
 
 import utils
 
@@ -272,7 +271,6 @@ SUFFIX = {
 }
 
 
-@type_enforced.Enforcer
 def main() -> None:
     df = pd.read_excel(INPUT_XLSX, dtype=str).fillna("")
     df.dropna(inplace=True)
@@ -290,8 +288,8 @@ def main() -> None:
                     continue
                 key = int(key[len(UNNAMED_PREFIX) :])
                 cur[key] = value
-        cur = "\n".join(v for _, v in sorted(cur.items()))
-        meaning.append(cur)
+        meaning.append("\n".join(v for _, v in sorted(cur.items())))
+        del cur
         p = row[COPTIC_COL]
         kind = row[KIND_COL]
         gender = row[GENDER_COL]

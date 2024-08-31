@@ -32,7 +32,7 @@ _mypy() {
 
 # TODO: (#215) Enable `mypy` for all projects.
 _mypy "bible" "${@}"
-# _mypy "dictionary/copticsite.com" "${@}"
+_mypy "dictionary/copticsite.com" "${@}"
 # _mypy "dictionary/kellia.uni-goettingen.de" "${@}"
 # _mypy "dictionary/marcion.sourceforge.net" "${@}"
 # _mypy "flashcards" "${@}"
