@@ -85,7 +85,7 @@ repos:
         name: json-tool
         entry: pre-commit/json-tool.sh
         language: system
-        files: (.jshintrc|.csslintrc|\.jsonc?)$
+        files: (.jshintrc|.csslintrc|\.json)$
         types: [file]
         exclude: tsconfig\.json$
 
