@@ -3,6 +3,8 @@
 set -o errexit  # Exit upon encountering a failure.
 set -o nounset  # Consider an undefined variable to be an error.
 
+source .helpers
+
 announce () {
   echo -e "${1}Files in this batch total ${2}${SIZE}${1}.${RESET}"
 }

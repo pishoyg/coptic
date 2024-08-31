@@ -10,6 +10,8 @@
 set -o errexit  # Exit upon encountering a failure.
 set -o nounset  # Consider an undefined variable to be an error.
 
+source .helpers
+
 for FILE in "${@}"; do
   FOUND=$(grep --invert "^const CLS_" "${FILE}" \
     | grep --only --extended-regexp "'[^']*'" \

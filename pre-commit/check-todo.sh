@@ -4,6 +4,8 @@
 # returns a status code of 1 when no matches are found.
 set -o nounset  # Consider an undefined variable to be an error.
 
+source .helpers
+
 if (( "$#" == 0 )); then
   exit
 fi
