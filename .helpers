@@ -47,6 +47,20 @@ color () {
   echo -e "${!1}${*:2}${RESET}"
 }
 
+# _grep runs `grep` but changes the exit code 1 to 0.
+# `grep` returns an exit code of 0 if matches are found, 1 if NO matches are
+# found, or something else if it runs into an error.
+# _grep is essentially a version of `grep` that considers the absence of a
+# match to be a success.
+_grep() {
+  grep "${@}"
+  RES=$?
+  if [[ "${RES}" == "1" || "${RES}" == "0" ]]; then
+    return 0
+  fi
+  return "${RES}"
+}
+
 # Find, excluding "garbage" files and directories.
 findex () {
   find "${1}" \

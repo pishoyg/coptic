@@ -10,8 +10,8 @@ import bs4
 import colorama
 import gspread
 import pandas as pd
-import type_enforced
-from oauth2client import service_account
+import type_enforced  # type: ignore[import-untyped]
+from oauth2client import service_account  # type: ignore[import-untyped]
 
 ENFORCED = False
 
