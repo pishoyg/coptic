@@ -1,11 +1,9 @@
 import os
 
 import constants
-import enforcer
 import pandas as pd
 import parse
 import tree
-import type_enforced
 import word as lexical
 
 import utils
@@ -41,12 +39,10 @@ SIMPLE_DEFINITION_FMT = "(<b>{type}</b>) <b>Crum: </b> {crum} <hr/> {meaning} <h
 # Main.########################################################################
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def series_to_int(series: pd.Series) -> list[int]:
     return [int(cell) for cell in series]
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def write(df: pd.DataFrame, name: str) -> None:
     utils.write_tsvs(df, os.path.join(OUTPUT, "tsvs", name + ".tsvs"))
 
@@ -80,7 +76,6 @@ def main() -> None:
     write(derivations, "derivations")
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class keyer:
     def __init__(self, df: pd.DataFrame):
         self.keys = {str(row["key"]) for _, row in df.iterrows()}
@@ -109,7 +104,6 @@ class keyer:
         return str(prev)
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def title(word: list[lexical.structured_word]) -> str:
     return ", ".join(
         w.string(
@@ -124,11 +118,9 @@ def title(word: list[lexical.structured_word]) -> str:
     )
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def process_data(df: pd.DataFrame, strict: bool) -> None:
-    extra_cols = {}
+    extra_cols: dict[str, list[str]] = {}
 
-    @type_enforced.Enforcer(enabled=enforcer.ENABLED)
     def insert(prefix: str, col: str, cell: str) -> None:
         col = prefix + col
         del prefix
@@ -225,7 +217,6 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         df[col] = values
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def build_trees(roots: pd.DataFrame, derivations: pd.DataFrame) -> None:
     derivations["depth"] = tree.depths(derivations)
     # Build trees.

@@ -53,8 +53,6 @@ Remarks about the parsing:
 import re
 
 import constants
-import enforcer
-import type_enforced
 import word as lexical
 
 import utils
@@ -62,18 +60,15 @@ import utils
 _reference_count = 0
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def reset():
     global _reference_count
     _reference_count = 0
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def verify(want_reference_count):
     assert _reference_count == want_reference_count
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _apply_substitutions(
     line: str,
     subs: list,
@@ -93,7 +88,6 @@ def _apply_substitutions(
     return line
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _munch(text: str, regex: re.Pattern, strict: bool) -> tuple[str, str]:
     # Munch the prefix of `text` which matches `regex`, and return both parts.
     m = regex.match(text)
@@ -107,7 +101,6 @@ def _munch(text: str, regex: re.Pattern, strict: bool) -> tuple[str, str]:
     return text[:j], text[j:].strip()
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _chop(
     text: str,
     regex: re.Pattern,
@@ -130,17 +123,14 @@ def _chop(
     return left, mid, right
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def parse_quality_cell(q: str) -> str:
     return constants.QUALITY_ENCODING[int(q)]
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def parse_type_cell(t: str) -> lexical.type:
     return constants.TYPE_ENCODING[int(t)]
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def parse_word_cell(
     line: str,
     root_type: lexical.type,
@@ -211,7 +201,6 @@ def parse_word_cell(
     return words
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _munch_and_parse_spellings_types_and_references(
     line: str,
     strict: bool,
@@ -245,7 +234,6 @@ def _munch_and_parse_spellings_types_and_references(
     return ss, tt, rr, line
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _parse_spellings_and_types(
     line: str,
     detach_types: bool,
@@ -337,7 +325,6 @@ def _analyze_no_english(line_no_english: str) -> None:
                 utils.error(s)
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _pick_up_detached_types(
     line: str,
     detached_types: list[tuple[str, lexical.type]],
@@ -350,7 +337,6 @@ def _pick_up_detached_types(
     return t, line.strip()
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _parse_coptic(line: str) -> tuple[str, str]:
     """_parse_coptic parses one line of ASCII-encoded Coptic.
 
@@ -373,12 +359,9 @@ def _parse_coptic(line: str) -> tuple[str, str]:
         if eng:
             eng = _parse_english(eng)
             out.append(eng)
-    out = " ".join(out)
-    out_no_english = " ".join(out_no_english)
-    return clean(out), clean(out_no_english)
+    return clean(" ".join(out)), clean(" ".join(out_no_english))
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _parse_english(line: str) -> str:
     out = []
     while line:
@@ -415,13 +398,11 @@ def _parse_english(line: str) -> str:
                 ),
             )
 
-    out = " ".join(out)
-    return clean(out)
+    return clean(" ".join(out))
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def parse_english_cell(line: str) -> str:
-    out = []
+    out_parts = []
     while line:
         eng, greek, line = _chop(
             line,
@@ -430,12 +411,12 @@ def parse_english_cell(line: str) -> str:
             strip_ends=True,
         )
         if eng:
-            out.append(_parse_english(eng))
+            out_parts.append(_parse_english(eng))
         if greek:
             assert greek.startswith("[[") and greek.endswith("]]")
             greek = greek[2:-2]
-            out.append(parse_greek_cell(greek))
-    out = " ".join(out)
+            out_parts.append(parse_greek_cell(greek))
+    out = " ".join(out_parts)
     # TODO: (#63) English post-processing likely shouldn't apply to Coptic
     # within English.
     out = _apply_substitutions(
@@ -451,7 +432,6 @@ def parse_english_cell(line: str) -> str:
     return clean(out)
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def parse_crum_cell(line: str) -> tuple[str, str]:
     if not line:
         return "", ""
@@ -463,18 +443,15 @@ def parse_crum_cell(line: str) -> tuple[str, str]:
     return page, column
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def crum_page(crum: str) -> str:
     return parse_crum_cell(crum)[0]
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def parse_greek_cell(line: str) -> str:
     line = _ascii_to_unicode_greek(line)
     return clean(line)
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _ascii_to_unicode(ascii: str) -> str:
     uni = ""
     for c in ascii:
@@ -486,13 +463,11 @@ def _ascii_to_unicode(ascii: str) -> str:
     return clean(uni)
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _ascii_to_unicode_greek(ascii: str) -> str:
     uni = "".join(constants.GREEK_LETTER_ENCODING.get(c, c) for c in ascii)
     return clean(uni)
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _parse_reference(line: str):  # -> typing.Generator[str, None, None]:
     """This method makes the assumption that the input is a single (not nested
     nor concatenated) reference, whose boundaries have been removed.
@@ -511,14 +486,13 @@ def _parse_reference(line: str):  # -> typing.Generator[str, None, None]:
     line = match.group(1)
     body = _parse_english(match.group(2))
     note = _parse_english(match.group(3))
-    line = line.split(";")
-    assert not (len(line) % 5), line
-    for i in range(0, len(line), 5):
-        line[i + 4], _ = _parse_coptic(line[i + 4])
-        yield "; ".join(filter(None, line[i : i + 5] + [body, note]))
+    parts = line.split(";")
+    assert not (len(parts) % 5), parts
+    for i in range(0, len(parts), 5):
+        parts[i + 4], _ = _parse_coptic(parts[i + 4])
+        yield "; ".join(filter(None, parts[i : i + 5] + [body, note]))
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _munch_and_parse_dialects(
     line: str,
     strict: bool,
@@ -531,25 +505,21 @@ def _munch_and_parse_dialects(
     return match[1:-1].split(","), line
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def clean(line: str) -> str:
     for _ in range(2):
         line = _apply_substitutions(line, constants.CLEAN, False)
     return line.strip()
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def remove_greek(line: str) -> str:
     line = constants.PARSED_GREEK_WITHIN_ENGLISH_RE.sub("", line)
     return clean(line)
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def lighten_greek(line: str) -> str:
     line = constants.PARSED_GREEK_WITHIN_ENGLISH_RE.sub(lighten(r"\1"), line)
     return clean(line)
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def lighten(line: str) -> str:
     return f'<span style="opacity:0.7">{line}</span>'

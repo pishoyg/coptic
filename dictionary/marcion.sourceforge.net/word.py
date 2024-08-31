@@ -2,8 +2,6 @@ import enum
 import typing
 
 import constants
-import enforcer
-import type_enforced
 
 from morphology import inflect
 
@@ -14,7 +12,6 @@ class Gender(enum.Enum):
     PLURAL = 3
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class type:
     def __init__(
         self,
@@ -54,7 +51,6 @@ class type:
         return self._append
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 class structured_word:
     def __init__(
         self,
@@ -260,6 +256,10 @@ class structured_word:
 
     def inflect_type(self) -> typing.Optional[inflect.Type]:
         rt = self._root_type.inflect_type() if self._root_type else None
+        # NOTE: The following if statement was introduced to appease `mypy`.
+        # Reassess.
+        if isinstance(rt, Gender):
+            return None
         for t in self._types:
             it = t.inflect_type()
             if not it:

@@ -7,12 +7,10 @@ import shutil
 import subprocess
 import typing
 
-import enforcer
 import PIL
-import pillow_avif
+import pillow_avif  # type: ignore[import-untyped]
 import requests
-import requests_oauthlib
-import type_enforced
+import requests_oauthlib  # type: ignore[import-untyped]
 
 import utils
 
@@ -48,7 +46,6 @@ VALID_EXTENSIONS = {".avif", ".gif", ".jpeg", ".jpg", ".JPG", ".png", ".webp"}
 VALID_EXTENSIONS_300 = {".avif", ".gif", ".jpeg", ".jpg", ".JPG", ".webp"}
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def params_str(params: dict) -> str:
     return "?" + "&".join(f"{k}={v}" for k, v in params.items())
 
@@ -85,15 +82,6 @@ argparser.add_argument(
     nargs="*",
     default=[],
     help="A list of types to exclude.",
-)
-
-argparser.add_argument(
-    "--search_url",
-    type=str,
-    default="https://www.google.com/search?q={query}&tbm=isch",
-    help="Search format string. We will open"
-    " `search_url.format(query=query)`."
-    " Your OS should use your default browser for that.",
 )
 
 argparser.add_argument(
@@ -192,13 +180,8 @@ argparser.add_argument(
     " sources.",
 )
 
-global args
 
-
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def get_max_idx(g: list[str], key: int, sense: int) -> int:
-    key: str = str(key)
-    sense: str = str(sense)
+def get_max_idx(g: list[str], key: str, sense: str) -> int:
     highest = 0
     for path in g:
         match = FILE_NAME_RE.match(os.path.basename(path))
@@ -210,15 +193,13 @@ def get_max_idx(g: list[str], key: int, sense: int) -> int:
     return highest
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def open_images(images: list[str]):
     if not images:
         return
     subprocess.run(["open"] + images)
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def get_downloads() -> list[str]:
+def get_downloads(args) -> list[str]:
     files = os.listdir(args.downloads)
     files = [f for f in files if f not in args.ignore]
     files = [os.path.join(args.downloads, f) for f in files]
@@ -226,33 +207,29 @@ def get_downloads() -> list[str]:
     return files
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def query(meaning: str) -> str:
     meaning = meaning.replace("&", " and ").replace("\n", " | ")
     meaning = " ".join(meaning.split())
-    return args.search_url.format(query=meaning)
+    return f"https://www.google.com/search?q={meaning}&tbm=isch"
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def invalid_size(files: list[str]) -> list[str]:
     if MIN_WIDTH == -1:
         return []
     assert MIN_WIDTH > 0
     invalid = []
     for f in files:
-        image = PIL.Image.open(f)
+        image = PIL.Image.open(f)  # type: ignore[attr-defined]
         width, _ = image.size
         if width < MIN_WIDTH:
             invalid.append(f)
     return invalid
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def is_wiki(url: str) -> bool:
     return url.startswith("https://upload.wikimedia.org/")
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def get_target(path: str) -> str:
     assert path.startswith(IMG_DIR)
     stem, ext = utils.splitext(path)
@@ -261,13 +238,11 @@ def get_target(path: str) -> str:
     return os.path.join(IMG_300_DIR, stem + EXT_MAP.get(ext, ext))
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def get_source(path: str) -> str:
     assert path.startswith(IMG_DIR)
     return os.path.join(SOURCES_DIR, utils.stem(path) + ".txt")
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def convert(path: str, skip_existing: bool = False) -> None:
     assert path.startswith(IMG_DIR)
     target = get_target(path)
@@ -292,11 +267,9 @@ def convert(path: str, skip_existing: bool = False) -> None:
     utils.wrote(target)
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def main():
-    global args
     args = argparser.parse_args()
-    actions = list(
+    actions: list[str] = list(
         filter(None, [args.validate, args.batch, args.rm, args.mv, args.cp]),
     )
     if len(actions) >= 2:
@@ -306,7 +279,7 @@ def main():
         validate()
         exit()
     if args.batch:
-        batch()
+        batch(args)
         exit()
     if args.rm:
         rm(args.rm)
@@ -317,11 +290,11 @@ def main():
     if args.cp:
         cp(*args.cp)
         exit()
-    prompt()
+    prompt(args)
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def retrieve(
+    args,
     url: str,
     filename: typing.Optional[str] = None,
     headers: dict[str, str] = {},
@@ -342,7 +315,6 @@ def retrieve(
     return filename
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def _stem_to_img_path(stem: str, ext: str = "") -> str:
     if ext:
         return os.path.join(IMG_DIR, stem + ext)
@@ -351,43 +323,38 @@ def _stem_to_img_path(stem: str, ext: str = "") -> str:
     return path[0]
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def _get_artifacts(stem: str, img_ext: str = "") -> str:
+def _get_artifacts(stem: str, img_ext: str = "") -> list[str]:
     if not STEM_RE.fullmatch(stem):
         utils.error(
             "To delete an image, please provide the stem.",
         )
-        return
+        return []
     path = _stem_to_img_path(stem, img_ext)
     return [path, get_target(path), get_source(path)]
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def rm(stem: str) -> None:
     for art in _get_artifacts(stem):
         os.remove(art)
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def mv(a_stem: str, b_stem: str) -> None:
-    a = _get_artifacts(a_stem)
-    img_ext = utils.ext(a[0])
-    b = _get_artifacts(b_stem, img_ext)
-    for a, b in zip(a, b):
+    a_arts = _get_artifacts(a_stem)
+    img_ext = utils.ext(a_arts[0])
+    b_arts = _get_artifacts(b_stem, img_ext)
+    for a, b in zip(a_arts, b_arts):
         pathlib.Path(a).rename(b)
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def cp(a_stem: str, b_stem: str) -> None:
-    a = _get_artifacts(a_stem)
-    img_ext = utils.ext(a[0])
-    b = _get_artifacts(b_stem, img_ext)
-    for a, b in zip(a, b):
+    a_arts = _get_artifacts(a_stem)
+    img_ext = utils.ext(a_arts[0])
+    b_arts = _get_artifacts(b_stem, img_ext)
+    for a, b in zip(a_arts, b_arts):
         shutil.copyfile(a, b)
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def prompt():
+def prompt(args):
     df = utils.read_tsvs(INPUT_TSVS, KEY_COL)
     df["senses"] = utils.read_tsv(APPENDICES_TSV, KEY_COL)["senses"]
 
@@ -409,7 +376,6 @@ def prompt():
         if any(row[k] == v for k, v in exclude.items()):
             continue
 
-        @type_enforced.Enforcer(enabled=enforcer.ENABLED)
         def existing() -> list[str]:
             return glob.glob(os.path.join(IMG_DIR, f"{key}-*"))
 
@@ -435,10 +401,10 @@ def prompt():
             utils.info("Key:", row[KEY_COL])
             utils.info("Link:", row[LINK_COL])
             utils.info("Existing:", g)
-            utils.info("Downloads:", get_downloads())
+            utils.info("Downloads:", get_downloads(args))
             utils.info("Senses:", row["senses"])
             utils.info("Sources:", sources)
-            sense = input(
+            command = input(
                 "\n".join(
                     [
                         "Enter,",
@@ -458,13 +424,13 @@ def prompt():
                     ],
                 ),
             )
-            sense = sense.strip()
-            if not sense:
+            command = command.strip()
+            if not command:
                 continue
 
-            if sense.lower() == "s":
+            if command.lower() == "s":
                 # S for skip!
-                files = get_downloads()
+                files = get_downloads(args)
                 if files:
                     utils.error(
                         "You can't skip with a dirty downloads directory:",
@@ -477,22 +443,22 @@ def prompt():
                 utils.info("Sources cleared!")
                 break
 
-            if sense.lower() == "ss":
+            if command.lower() == "ss":
                 # Force skip!
                 break
 
-            if sense.lower() == "cs":
+            if command.lower() == "cs":
                 sources.clear()
                 utils.info("Sources cleared!")
                 continue
 
-            if sense.startswith("key="):
-                key = sense[4:]
+            if command.startswith("key="):
+                key = command[4:]
                 row = key_to_row[key]
                 continue
 
-            if sense.startswith("source="):
-                files = get_downloads()
+            if command.startswith("source="):
+                files = get_downloads(args)
                 files = [f for f in files if f not in sources]
                 if len(files) != 1:
                     utils.error(
@@ -500,94 +466,99 @@ def prompt():
                         files,
                     )
                     continue
-                sense = sense[7:]
-                if not sense:
+                command = command[7:]
+                if not command:
                     utils.error("No source given!")
                     continue
-                sources[files[0]] = sense
+                sources[files[0]] = command
                 continue
 
-            if sense.startswith("rm="):
+            if command.startswith("rm="):
                 try:
-                    rm(sense[3:])
+                    rm(command[3:])
                 except Exception as e:
                     utils.error(e)
                 continue
 
-            if sense.startswith("cp="):
+            if command.startswith("cp="):
                 try:
-                    sense = sense[3:]
-                    cp(*sense.split(":"))
+                    command = command[3:]
+                    cp(*command.split(":"))
                 except Exception as e:
                     utils.error(e)
                 continue
 
-            if sense.startswith("mv="):
+            if command.startswith("mv="):
                 try:
-                    sense = sense[3:]
-                    mv(*sense.split(":"))
+                    command = command[3:]
+                    mv(*command.split(":"))
                 except Exception as e:
                     utils.error(e)
                 continue
 
-            source_search = assign_source_re.search(sense)
+            source_search = assign_source_re.search(command)
             if source_search:
                 sources[source_search.group(1)] = source_search.group(2)
                 continue
             del source_search
 
-            if sense.startswith("http"):
-                url = sense
+            if command.startswith("http"):
+                url = command
                 headers: dict[str, str] = {}
                 if is_wiki(url):
                     headers = WIKI_HEADERS
-                path = retrieve(url, headers=headers)
+                path = retrieve(args, url, headers=headers)
                 if not path:
                     continue
-                sources[path] = sense
+                sources[path] = command
                 continue
 
-            if sense.lower().startswith("wiki/"):
-                subprocess.call(["open", "https://en.wikipedia.org/" + sense])
+            if command.lower().startswith("wiki/"):
+                subprocess.call(
+                    ["open", "https://en.wikipedia.org/" + command],
+                )
                 continue
 
-            if sense.lower().startswith("noun/"):
+            if command.lower().startswith("noun/"):
                 # This is likely a search query.
-                sense = sense[5:]
+                command = command[5:]
                 auth = requests_oauthlib.OAuth1(
                     args.thenounproject_key,
                     args.thenounproject_secret,
                 )
                 resp = requests.get(
-                    ICON_SEARCH_FMT.format(query=sense),
+                    ICON_SEARCH_FMT.format(query=command),
                     auth=auth,
                 )
                 if not resp.ok:
                     utils.error("", resp.text)
                     continue
-                resp = resp.json()
-                resp = resp["icons"]
-                if not resp:
-                    utils.error("Nothing found on thenounproject for:", sense)
+                icons = resp.json()["icons"]
+                del resp
+                if not icons:
+                    utils.error(
+                        "Nothing found on thenounproject for:",
+                        command,
+                    )
                     continue
-                for icon in resp:
-                    path = retrieve(icon["thumbnail_url"])
+                for icon in icons:
+                    path = retrieve(args, icon["thumbnail_url"])
                     if not path:
                         continue
                     sources[path] = icon["thumbnail_url"]
-                open_images(get_downloads())
+                open_images(get_downloads(args))
                 continue
 
-            if not sense.isdigit():
-                utils.error("Can't make sense of", sense)
+            if not command.isdigit():
+                utils.error("Can't make sense of", command)
                 continue
 
-            sense = int(sense)
+            sense = int(command)
             if sense <= 0:
                 utils.error("Sense must be a positive integer, got:", sense)
                 continue
 
-            files = get_downloads()
+            files = get_downloads(args)
 
             # Force valid extension.
             invalid = [
@@ -632,7 +603,7 @@ def prompt():
             while True:
                 open_images(files)
                 i = input("Looks good? (y/n)").lower()
-                files = get_downloads()
+                files = get_downloads(args)
                 if i in ["y", "yes"]:
                     move = True
                     break
@@ -644,7 +615,7 @@ def prompt():
                 continue
 
             # Move the files.
-            idx = get_max_idx(existing(), key, sense)
+            idx = get_max_idx(existing(), str(key), str(sense))
             for file in files:
                 idx += 1
                 ext = utils.ext(file)
@@ -654,8 +625,7 @@ def prompt():
                 utils.write(sources[file], get_source(new_file))
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
-def batch():
+def batch(args):
     images = utils.paths(IMG_DIR)
     for path in images:
         convert(path, args.skip_existing)
@@ -669,12 +639,10 @@ def batch():
             os.remove(src)
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def listdir_sorted(dir: str) -> list[str]:
     return utils.sort_semver(utils.paths(dir))
 
 
-@type_enforced.Enforcer(enabled=enforcer.ENABLED)
 def validate():
     images = listdir_sorted(IMG_DIR)
     converted_images = listdir_sorted(IMG_300_DIR)

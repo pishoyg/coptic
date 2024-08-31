@@ -26,7 +26,7 @@ _mypy() {
   MATCHES="$(echo "${@:2}" | tr ' ' '\n' | _grep "^${PREFIX}/")"
   if [ -n "${MATCHES}" ]; then
     # shellcheck disable=SC2046
-    mypy $(echo "${MATCHES}" | tr '\n' ' ')
+    mypy $(echo "${MATCHES}" | tr '\n' ' ') --check-untyped-defs
   fi
 }
 
@@ -35,7 +35,7 @@ _mypy() {
 _mypy "bible" "${@}"
 _mypy "dictionary/copticsite.com" "${@}"
 # _mypy "dictionary/kellia.uni-goettingen.de" "${@}"
-# _mypy "dictionary/marcion.sourceforge.net" "${@}"
+_mypy "dictionary/marcion.sourceforge.net" "${@}"
 _mypy "flashcards" "${@}"
 _mypy "morphology" "${@}"
 _mypy "site" "${@}"
@@ -50,5 +50,5 @@ NONMATCHES=$(echo "${@}" | tr ' ' '\n' \
   | _grep --invert "^site/")
 if [ -n "${NONMATCHES}" ]; then
   # shellcheck disable=SC2046
-  mypy $(echo "${NONMATCHES}" | tr '\n' ' ')
+  mypy $(echo "${NONMATCHES}" | tr '\n' ' ') --check-untyped-defs
 fi
