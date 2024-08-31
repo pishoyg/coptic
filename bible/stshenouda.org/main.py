@@ -7,8 +7,7 @@ import typing
 
 import json5
 import pandas as pd
-import type_enforced
-from ebooklib import epub
+from ebooklib import epub  # type: ignore[import-untyped]
 
 import utils
 
@@ -39,7 +38,6 @@ PARALLELS = ["Bohairic_English"]
 COVER = "bible/stshenouda.org/data/img/stauros.jpeg"
 
 ENFORCED = True
-Callable = typing.Callable | type_enforced.enforcer.FunctionMethodEnforcer
 
 argparser = argparse.ArgumentParser(
     description="Process the Coptic Bible data.",
@@ -53,12 +51,10 @@ argparser.add_argument(
 )
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def file_name(book_name: str) -> str:
     return book_name.lower().replace(" ", "_").replace(".", "_")
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def writing_path(output_format: str, subdir: str, stem: str) -> str:
     assert output_format
     assert stem
@@ -71,7 +67,6 @@ def writing_path(output_format: str, subdir: str, stem: str) -> str:
     return path
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def normalize(txt: str) -> str:
     # The Jinkim is represented by the Combining Overline, not the Combining
     # Conjoining Msacron.
@@ -82,7 +77,6 @@ def normalize(txt: str) -> str:
     return txt.replace(chr(0xFE26), chr(0x0305))
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def json_loads(t: str) -> dict | list:
     try:
         return json.loads(t)
@@ -90,7 +84,6 @@ def json_loads(t: str) -> dict | list:
         return json5.loads(t)
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 class RangeColor:
     def __init__(self, start: int, end: int, color: str) -> None:
         self.start = start
@@ -115,12 +108,10 @@ class RangeColor:
         assert False
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def compare_range_color(rc: RangeColor) -> tuple[int, int]:
     return (rc.start, rc.end)
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def remove_overlap(ranges: list[RangeColor]) -> list[RangeColor]:
     if not ranges:
         return []
@@ -135,7 +126,6 @@ def remove_overlap(ranges: list[RangeColor]) -> list[RangeColor]:
     return out
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def find_all(s: str, p: str):
     i = s.find(p)
     while i != -1:
@@ -143,7 +133,6 @@ def find_all(s: str, p: str):
         i = s.find(p, i + 1)
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def recolor(v: str, verse: dict) -> str:
     v = html.escape(v)
     if "coloredWords" not in verse:
@@ -175,19 +164,16 @@ def recolor(v: str, verse: dict) -> str:
     return out
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def chapter_number(chapter: dict) -> str:
     return chapter["sectionNameEnglish"] or "1"
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def verse_number(verse: dict) -> str:
     t = verse["English"] or verse["Greek"]
     s = VERSE_PREFIX.search(t)
     return s.groups()[0] if s else ""
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def html_id(book_name: str, chapter_num: typing.Optional[str] = None) -> str:
     id = book_name.lower().replace(" ", "_")
     if chapter_num:
@@ -195,12 +181,10 @@ def html_id(book_name: str, chapter_num: typing.Optional[str] = None) -> str:
     return id
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def epub_book_href(book_name: str) -> str:
     return html_id(book_name) + ".xhtml"
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 class parallel_builder:
     def __init__(
         self,
@@ -255,7 +239,6 @@ PARALLEL_BUILDERS: dict[int, parallel_builder] = {
 }
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def load_book(book_name: str) -> dict | list:
     try:
         t = open(os.path.join(INPUT_DIR, book_name + ".json")).read()
@@ -268,19 +251,16 @@ def load_book(book_name: str) -> dict | list:
     return json_loads(t)
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def write_tsv(df: pd.DataFrame) -> None:
     utils.write_tsvs(df, writing_path("tsvs", "", "bible"))
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def write_txt(lang: str, column: pd.Series) -> None:
     path = writing_path("txt", "", f"{lang}")
     content = "\n".join(filter(None, column))
     utils.write(content, path)
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def html_head(title: str = "") -> str:
     return """<!DOCTYPE html>
 <head>
@@ -304,25 +284,21 @@ def html_head(title: str = "") -> str:
     )
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def html_body(body: str = "") -> str:
     return f"<body>{body}</body>"
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def html_h1(title: str) -> str:
     return "<h1>{title}</h1>".format(title=title)
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
-def html_toc(books: list[str], href: Callable) -> str:
+def html_toc(books: list[str], href: typing.Callable) -> str:
     return "\n".join(
         '<p><a href="{}">{}</a></p>'.format(href(book_name), book_name)
         for book_name in books
     )
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def write_html(html: dict, books: list[str]) -> None:
     for lang in LANGUAGES + PARALLELS:
         for book_name in books:
@@ -333,7 +309,6 @@ def write_html(html: dict, books: list[str]) -> None:
             utils.write(out, path)
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def write_epub(html: dict, books: list, subdir: str) -> None:
     for lang in LANGUAGES + PARALLELS:
         kindle = epub.EpubBook()
@@ -389,9 +364,8 @@ def write_epub(html: dict, books: list, subdir: str) -> None:
         utils.wrote(path)
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def process_sources(books: list[str]) -> None:
-    out = []
+    body_parts = []
     for book_name in books:
         try:
             t = open(
@@ -401,30 +375,30 @@ def process_sources(books: list[str]) -> None:
             utils.warn("No sources found for", book_name)
             continue
 
-        out.append("<h1>" + book_name + "</h1>")
-        data = json_loads(t)
+        body_parts.append("<h1>" + book_name + "</h1>")
+        json_loaded = json_loads(t)
         del t
+        assert isinstance(json_loaded, dict)
+        data: dict = json_loaded
+        del json_loaded
 
         for lang in LANGUAGES:
-            out.append("<h2>" + lang + "</h2>")
-            out.append(
+            body_parts.append("<h2>" + lang + "</h2>")
+            body_parts.append(
                 "<br/>".join(
                     "  - " + line for line in data[lang].split("\n") if line
                 ),
             )
 
-    out = "\n".join(out)
-    out = html_head(title="Sources") + html_body(out)
+    html = html_head(title="Sources") + html_body("\n".join(body_parts))
     path = writing_path("html", "", "sources")
-    utils.write(out, path)
+    utils.write(html, path)
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def _per_lang() -> dict[str, dict[str, list[str]]]:
     return {lang: {} for lang in LANGUAGES + PARALLELS}
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def main() -> None:
     args = argparser.parse_args()
     books = []
