@@ -3,8 +3,7 @@ import os
 import pathlib
 import shutil
 
-import type_enforced
-from ebooklib import epub
+from ebooklib import epub  # type: ignore[import-untyped]
 
 import utils
 
@@ -101,29 +100,24 @@ INFL_XHTML_FMT = f"""\
 """
 
 
-@type_enforced.Enforcer(enabled=TYPE_ENFORCED)
 def _nothing_to_escape(text: str) -> bool:
     return all(x not in text for x in ["<", ">", "&"])
 
 
-@type_enforced.Enforcer(enabled=TYPE_ENFORCED)
 def _not_escaped(text: str) -> bool:
     return all(x not in text for x in ["&lt;", "&gt;", "&amp;"])
 
 
-@type_enforced.Enforcer(enabled=TYPE_ENFORCED)
 def _no_tags(text: str) -> bool:
     return all(x not in text for x in ["<", ">"])
 
 
-@type_enforced.Enforcer(enabled=TYPE_ENFORCED)
 def _escape_amp(text: str) -> str:
     """Escape the special characters inside this string."""
     assert _not_escaped(text)
     return text.replace("&", "&amp;")
 
 
-@type_enforced.Enforcer(enabled=TYPE_ENFORCED)
 class entry:
     def __init__(
         self,
@@ -151,10 +145,9 @@ class entry:
         self._inflections = inflections
 
     def xhtml(self) -> str:
-        inflections = [
-            INFL_XHTML_FMT.format(form=i) for i in self._inflections
-        ]
-        inflections = "\n".join(inflections)
+        inflections: str = "\n".join(
+            [INFL_XHTML_FMT.format(form=i) for i in self._inflections],
+        )
         xhtml = ENTRY_XHTML_FMT.format(
             id=self._id,
             orth=self._orth,
@@ -175,7 +168,6 @@ class volume:
         return xhtml
 
 
-@type_enforced.Enforcer(enabled=TYPE_ENFORCED)
 class dictionary:
     def __init__(
         self,
@@ -267,15 +259,17 @@ class dictionary:
         cover_ext = cover_ext[1:]
         assert cover_ext
         # Build the manifest and the spine.
-        manifest = []
-        spine = []
+        manifest_parts = []
+        spine_parts = []
         for name in content_filenames:
             id = self.basename_to_id(name)
-            manifest.append(OPF_MANIFEST_ITEM_FMT.format(id=id, href=name))
-            spine.append(OPF_SPINE_ITEM_FMT.format(idref=id))
+            manifest_parts.append(
+                OPF_MANIFEST_ITEM_FMT.format(id=id, href=name),
+            )
+            spine_parts.append(OPF_SPINE_ITEM_FMT.format(idref=id))
 
-        manifest = "\n".join(manifest)
-        spine = "\n".join(spine)
+        manifest = "\n".join(manifest_parts)
+        spine = "\n".join(spine_parts)
         return OPF_FMT.format(
             title=self._title,
             manifest=manifest,

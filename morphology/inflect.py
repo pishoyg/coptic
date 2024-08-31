@@ -1,8 +1,6 @@
 import enum
 import re
 
-import type_enforced
-
 from morphology import constants
 
 COPTIC_ONLY_BLOCK = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
@@ -57,11 +55,9 @@ _TYPE_TO_PREFIX_LIST = {
 }
 
 
-@type_enforced.Enforcer(enabled=True)
 def inflect(morpheme: str, type: Type) -> list[str]:
     """Given a word, return a list of inflected forms."""
-    prefixes = _TYPE_TO_PREFIX_LIST[type]
-    prefixes = sum(prefixes, [])
+    prefixes: list[str] = sum(_TYPE_TO_PREFIX_LIST[type], [])
     assert COPTIC_ONLY_BLOCK.fullmatch(morpheme)
     assert morpheme
     return [p + morpheme for p in prefixes]
