@@ -12,7 +12,7 @@ import utils
 
 HOME = "https://metremnqymi.com"
 CRUM_ROOT = f"{HOME}/crum"
-EMAIL = "pishoybg@gmail.com"
+EMAIL = "metremnqymi@gmail.com"
 
 INTEGER_RE = re.compile("([0-9]+)")
 DICTIONARY_PAGE_RE = re.compile("([0-9]+(a|b))")

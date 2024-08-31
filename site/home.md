@@ -109,7 +109,7 @@ loanwords, as we as **neologisms liberally added by the author!**
 
 ## Contact and Contributions
 
-You can reach out at <pishoybg@gmail.com> for any questions, feedback, or if
+You can reach out at <metremnqymi@gmail.com> for any questions, feedback, or if
 you want to contribute. I always read my email, and I read it promptly.
 
 There are two ways you can contribute:

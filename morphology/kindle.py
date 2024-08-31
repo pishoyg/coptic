@@ -8,7 +8,7 @@ from ebooklib import epub
 
 import utils
 
-CREATOR = "pishoybg@gmail.com"
+CREATOR = "metremnqymi@gmail.com"
 # "cop" is not supported.
 # See https://kdp.amazon.com/en_US/help/topic/G200673300.
 # TODO: (#39) Choose a default obscure language. Otherwise, a reader who has another

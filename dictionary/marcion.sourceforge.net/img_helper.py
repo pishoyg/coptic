@@ -63,8 +63,8 @@ SEARCH_PARAMS = {
 ICON_SEARCH_FMT = URL + "/icon" + params_str(SEARCH_PARAMS)
 
 WIKI_HEADERS = {
-    "Api-User-Agent": "Coptic/1.0 (https://metremnqymi.com; pishoybg@gmail.com)",
-    "User-Agent": "Coptic/1.0 (https://metremnqymi.com; pishoybg@gmail.com)",
+    "Api-User-Agent": "Coptic/1.0 (https://metremnqymi.com; metremnqymi@gmail.com)",
+    "User-Agent": "Coptic/1.0 (https://metremnqymi.com; metremnqymi@gmail.com)",
 }
 
 argparser = argparse.ArgumentParser(
