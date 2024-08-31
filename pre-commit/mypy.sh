@@ -31,6 +31,7 @@ _mypy() {
 }
 
 # TODO: (#215) Enable `mypy` for all projects.
+# TODO: (#215) Maintain one list of projects instead of duplicating it.
 _mypy "bible" "${@}"
 _mypy "dictionary/copticsite.com" "${@}"
 # _mypy "dictionary/kellia.uni-goettingen.de" "${@}"
