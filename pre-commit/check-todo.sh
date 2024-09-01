@@ -11,9 +11,19 @@ fi
 
 # TODO: (#66) Once all existing TODO's have been assigned issues,
 # change the following to an error rather than simply a warning.
-TODO="$(_grep "TODO(:) (?!\(#[0-9]+\))" --perl-regexp \
-  --ignore-case --color=always "${@}")"
+TODO="$(_grep "TODO(:) (?!\(#[0-9]+\))" --perl-regexp --color=always "${@}")"
 if [ -n "${TODO}" ]; then
   echo -e "${YELLOW}Stray TODO markers found. Please add an issue"\
     "number to each TODO:\n${RESET}${TODO}"
 fi
+
+TODO="$(_grep "TODO(:) \(#[0-9]+\)" --only --extended-regexp "${@}" \
+  | _grep --only --extended-regexp '[0-9]+')"
+for ISSUE in ${TODO}; do
+  CLOSED=$(gh issue view "${ISSUE}" --json "closed" --jq ".closed")
+  if [[ "${CLOSED}" == "true" ]]; then
+    echo -e "${RED}Issue ${YELLOW}#${ISSUE} ${RED}is closed, but is assigned a TODO!"
+    echo -e "${RED}Run ${YELLOW}todo ${ISSUE}${RED} to find TODO's assigned to this issue."
+    exit 1
+  fi
+done
