@@ -84,9 +84,9 @@ def parse_nkjv_json(nkjv_json_path):
 
 def parse_indexed_verses_book(name, print_name, path, want_num_chapters):
     def parse_line(l):
-        assert re.match("\d+:\d+ ", l), (
+        assert re.match(r"\d+:\d+ ", l), (
             'Error parsing htakla Coptic book {}: line "{}" does '
-            'not match the expected regex "{}"'.format(name, l, "\d+:\d+ ")
+            'not match the expected regex "{}"'.format(name, l, r"\d+:\d+ ")
         )
         numbers = l[: l.find(" ")]
         assert re.match("\d+:\d+$", numbers)
@@ -146,7 +146,7 @@ def parse_delimited_chapters_book(
         )
         idx = m.group(0)[:-chapter_idx_suffix]
         idx = int(idx)
-        lines = re.compile("\d+").split(text)
+        lines = re.compile(r"\d+").split(text)
         lines = map(lambda l: l.strip(), lines)
         lines = list(lines)
         if not lines[0]:
