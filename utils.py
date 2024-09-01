@@ -10,16 +10,12 @@ import bs4
 import colorama
 import gspread
 import pandas as pd
-import type_enforced  # type: ignore[import-untyped]
 from oauth2client import service_account  # type: ignore[import-untyped]
-
-ENFORCED = False
 
 INTEGER_RE = re.compile("[0-9]+")
 MAX_INTEGER_LENGTH = 10
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def _print(color, severity, recolor, *args, suppress: bool = False):
     print(
         colorama.Style.DIM
@@ -36,28 +32,23 @@ def _print(color, severity, recolor, *args, suppress: bool = False):
     print(colorama.Style.RESET_ALL, end="")
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def info(*args):
     _print(colorama.Fore.GREEN, "info", colorama.Fore.BLUE, *args)
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def warn(*args):
     _print(colorama.Fore.YELLOW, "warn", colorama.Fore.CYAN, *args)
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def error(*args):
     _print(colorama.Fore.RED, "error", colorama.Fore.MAGENTA, *args)
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def fatal(*args):
     _print(colorama.Fore.RED, "fatal", colorama.Fore.MAGENTA, *args)
     exit(1)
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def write(
     content: str,
     path: str,
@@ -73,12 +64,10 @@ def write(
     wrote(path)
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def wrote(path: str) -> None:
     info("Wrote", path)
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def json_dumps(j, **kwargs) -> str:
     return json.dumps(
         j,
@@ -89,12 +78,10 @@ def json_dumps(j, **kwargs) -> str:
     )
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def to_tsv(df: pd.DataFrame, path: str, **kwargs):
     df.to_csv(path, sep="\t", index=False, **kwargs)
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def read_tsv(path: str, sort_values_by=None) -> pd.DataFrame:
     df = pd.read_csv(path, sep="\t", dtype=str, encoding="utf-8").fillna("")
     if sort_values_by:
@@ -102,7 +89,6 @@ def read_tsv(path: str, sort_values_by=None) -> pd.DataFrame:
     return df
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def clean_dir(dir: str) -> None:
     if os.path.exists(dir):
         assert os.path.isdir(dir)
@@ -110,7 +96,6 @@ def clean_dir(dir: str) -> None:
     pathlib.Path(dir).mkdir(parents=True)
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def write_tsvs(
     df: pd.DataFrame,
     tsvs: str,
@@ -133,7 +118,6 @@ def write_tsvs(
     wrote(tsvs)
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def read_tsvs(tsvs: str, sort_values_by=None) -> pd.DataFrame:
     files = [os.path.join(tsvs, basename) for basename in os.listdir(tsvs)]
     files = sorted(files)
@@ -146,56 +130,46 @@ def read_tsvs(tsvs: str, sort_values_by=None) -> pd.DataFrame:
     return df
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def html_text(html: str) -> str:
     soup = bs4.BeautifulSoup(html, "html.parser")
     return soup.get_text()
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def read(path: str) -> str:
     with open(path) as f:
         return f.read()
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def paths(dir: str) -> list[str]:
     return [os.path.join(dir, f) for f in os.listdir(dir)]
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def splitext(path: str) -> tuple[str, str]:
     return os.path.splitext(os.path.basename(path))
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def stem(path: str) -> str:
     stem, _ = splitext(path)
     return stem
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def stems(paths: list[str]) -> list[str]:
     return list(map(stem, paths))
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def ext(path: str) -> str:
     _, ext = splitext(path)
     return ext
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def exts(paths: list[str]) -> list[str]:
     return list(map(ext, paths))
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def use_html_line_breaks(text: str) -> str:
     return text.replace("\n", "<br/>")
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def _semver_sort_key(path: str) -> list[str]:
     path = os.path.basename(path)
     return [x.zfill(MAX_INTEGER_LENGTH) for x in INTEGER_RE.findall(path)] + [
@@ -203,12 +177,10 @@ def _semver_sort_key(path: str) -> list[str]:
     ]
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def sort_semver(paths: list[str]) -> list[str]:
     return sorted(paths, key=_semver_sort_key)
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def verify_unique(arr, message: str) -> None:
     dupes = [
         item for item, count in collections.Counter(arr).items() if count > 1
@@ -217,7 +189,6 @@ def verify_unique(arr, message: str) -> None:
         fatal(message, "duplicate elements:", dupes)
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def verify_all_belong_to_set(arr, accepted: set[str], message: str) -> None:
     for x in arr:
         if x in accepted:
@@ -225,7 +196,6 @@ def verify_all_belong_to_set(arr, accepted: set[str], message: str) -> None:
         fatal(message, x, "does not belong to the set", accepted)
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def verify_equal_sets(s1, s2, message: str) -> None:
     s1, s2 = set(s1), set(s2)
     diff = s1.difference(s2)
@@ -237,7 +207,6 @@ def verify_equal_sets(s1, s2, message: str) -> None:
         fatal(message, diff, "present in the latter but not the former")
 
 
-@type_enforced.Enforcer(enabled=ENFORCED)
 def download_gsheet(
     gspread_url: str,
     out_tsv: str,
