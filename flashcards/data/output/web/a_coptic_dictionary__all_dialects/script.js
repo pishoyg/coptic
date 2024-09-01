@@ -175,7 +175,12 @@ window.addEventListener('load', () => {
     function dialected(el) {
       return DIALECTS.some((d) => el.classList.contains(d));
     }
-    document.querySelectorAll(`.${CLS_DIALECT_PARENTHESIS},.${CLS_DIALECT_COMMA},.${CLS_SPELLING_COMMA},.${CLS_TYPE}`).forEach((el) => {
+    document.querySelectorAll([
+      CLS_DIALECT_PARENTHESIS,
+      CLS_DIALECT_COMMA,
+      CLS_SPELLING_COMMA,
+      CLS_TYPE,
+    ].map((cls) => '.' + cls).join(',')).forEach((el) => {
       if (active === null) {
         el.classList.remove(CLS_VERY_LIGHT);
       }
