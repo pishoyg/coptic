@@ -132,6 +132,8 @@ todo() {
     echo -e "${HELP}"
     return 0
   fi
+  # TODO: (#66) There will be no need to support stray TODO's once they have
+  # been eradicated and banned.
   if [[ "${PARAM}" == "stray" ]]; then
     # Search for TODO's without an assigned issue.
     PATTERN="${PATTERN}(?!\(#[0-9]+\))"
@@ -142,6 +144,11 @@ todo() {
       return 1
     fi
     PATTERN="${PATTERN}\(#${PARAM}\)"
+    CLOSED=$(gh issue view "${PARAM}" --json "closed" --jq ".closed")
+    if [[ "${CLOSED}" == "true" ]]; then
+      echo -e "${RED}Warning: Issue ${YELLOW}#${PARAM} ${RED}is closed!"\
+        "See ${YELLOW}https://github.com/pishoyg/coptic/issues/${PARAM}${RED}.${RESET}"
+    fi
   fi
   grepexx . --perl-regexp "${PATTERN}"
 }
