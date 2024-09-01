@@ -1,6 +1,6 @@
 import unittest
 
-import constants
+from morphology import constants
 
 
 class Test(unittest.TestCase):

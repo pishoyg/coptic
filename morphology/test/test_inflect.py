@@ -1,6 +1,6 @@
 import unittest
 
-import inflect
+from morphology import inflect
 
 
 class TestInflect(unittest.TestCase):
