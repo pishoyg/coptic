@@ -5,13 +5,12 @@ import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import stylistic from '@stylistic/eslint-plugin';
 
-// TODO: Revisit the configuration.
 export default tseslint.config(
+  // Shared rules.
   eslint.configs.recommended,
   tseslint.configs.eslintRecommended,
-  ...tseslint.configs.recommended,
-  ...tseslint.configs.strict,
-  ...tseslint.configs.stylistic,
+  ...tseslint.configs.strictTypeChecked,
+  ...tseslint.configs.stylisticTypeChecked,
   {
     plugins: {
       '@stylistic': stylistic,
@@ -20,12 +19,12 @@ export default tseslint.config(
       semi: 'error',
       'prefer-const': 'error',
       'indent': ['error', 2],
-      'max-len': ['warn', {
+      'max-len': ['error', {
         'code': 80,
-        'ignoreComments': false,
-        'ignoreTrailingComments': false,
+        'ignoreTemplateLiterals': true,
+        'ignoreStrings': true,
+        'ignoreRegExpLiterals': true,
       }],
-      '@typescript-eslint/no-unused-expressions': 'warn',
       '@typescript-eslint/no-non-null-assertion': 'warn',
       '@stylistic/quotes': ['error', 'single'],
     },
@@ -37,5 +36,16 @@ export default tseslint.config(
         ...globals.browser,
       },
     }
-  }
+  },
+  {
+    files: ['**/*.js', '**/*.jsx', '**/*.cjs', '**/*.mjs'],
+    ...tseslint.configs.disableTypeChecked,
+  },
+  {
+    files: ['**/*.js', '**/*.jsx', '**/*.cjs', '**/*.mjs'],
+    rules: {
+      'max-len': ['warn'],
+      '@typescript-eslint/no-unused-expressions': 'warn',
+    },
+  },
 );

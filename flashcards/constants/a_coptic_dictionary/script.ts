@@ -86,17 +86,19 @@ const DIALECTS: readonly Dialect[] = [
  * As for the classes, we can obfuscate them as we like!
  */
 
-const DIALECT_CODE_TO_CLASS: Map<string, Dialect> = (function(): Map<string, Dialect> {
-  const codeToClass: Map<string, Dialect> = new Map<string, Dialect>();
-  DIALECTS.forEach((cls) => {
-    const code: string | undefined = document.querySelector(`.${CLS_DIALECT}.${cls}`)?.innerHTML;
-    if (code === undefined) {
-      return;
-    }
-    codeToClass.set(code, cls);
-  });
-  return codeToClass;
-}());
+const DIALECT_CODE_TO_CLASS: Map<string, Dialect> = (
+  function(): Map<string, Dialect> {
+    const codeToClass: Map<string, Dialect> = new Map<string, Dialect>();
+    DIALECTS.forEach((cls) => {
+      const code: string | undefined = document.querySelector(
+        `.${CLS_DIALECT}.${cls}`)?.innerHTML;
+      if (code === undefined) {
+        return;
+      }
+      codeToClass.set(code, cls);
+    });
+    return codeToClass;
+  }());
 
 function get_url_or_local(
   param: string,
@@ -126,7 +128,8 @@ function set_url_and_local(param: string, value: string | null): void {
   window.history.pushState('', '', url.toString());
 }
 
-function moveElement(el: HTMLElement, tag: string, attrs: Record<string, string>): void {
+function moveElement(
+  el: HTMLElement, tag: string, attrs: Record<string, string>): void {
   const copy = document.createElement(tag);
   copy.innerHTML = el.innerHTML;
   Array.from(el.attributes).forEach((att: Attr): void => {
@@ -171,7 +174,8 @@ Array.prototype.forEach.call(
     el.classList.add(CLS_LINK);
     el.onclick = (): void => {
       window_open(
-        'https://coptic-treasures.com/book/coptic-dictionary-moawad-abd-al-nour/');
+        'https://coptic-treasures.com/book/coptic-dictionary-moawad-abd-al-nour/',
+      );
     };
   });
 
@@ -182,7 +186,7 @@ Array.prototype.forEach.call(
     el.classList.add(CLS_LINK);
     el.onclick = (): void => {
       window_open(
-        `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.getAttribute('alt')}`);
+        `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.getAttribute('alt')!}`);
     };
   });
 
@@ -257,8 +261,10 @@ function getActiveDialectClassesInCurrentPage(): Set<Dialect> | null {
     return new Set();
   }
   return new Set<Dialect>(
-    d.split(',').filter((d: string): boolean => DIALECT_CODE_TO_CLASS.has(d)).map(
-      (d: string): Dialect => DIALECT_CODE_TO_CLASS.get(d)!));
+    d.split(',').filter(
+      (d: string): boolean => DIALECT_CODE_TO_CLASS.has(d)).map(
+      (d: string): Dialect => DIALECT_CODE_TO_CLASS.get(d)!)
+  );
 }
 
 function toggleDialect(code: string): void {
@@ -279,7 +285,13 @@ function dialect(): void {
   function dialected(el: Element): boolean {
     return DIALECTS.some((d: Dialect) => el.classList.contains(d));
   }
-  document.querySelectorAll(`.${CLS_DIALECT_PARENTHESIS},.${CLS_DIALECT_COMMA},.${CLS_SPELLING_COMMA},.${CLS_TYPE}`).forEach(
+  document.querySelectorAll(
+    [
+      CLS_DIALECT_PARENTHESIS,
+      CLS_DIALECT_COMMA,
+      CLS_SPELLING_COMMA,
+      CLS_TYPE,
+    ].map((cls) => '.' + cls).join(',')).forEach(
     (el: Element) => {
       if (active === null) {
         el.classList.remove(CLS_VERY_LIGHT);
@@ -287,23 +299,24 @@ function dialect(): void {
         el.classList.add(CLS_VERY_LIGHT);
       }
     });
-  document.querySelectorAll(`.${CLS_DIALECT},.${CLS_SPELLING}`).forEach((el: Element) => {
-    if (!dialected(el)) {
-      return;
-    }
-    if (active === null) {
-      el.classList.remove(CLS_VERY_LIGHT);
-      el.classList.remove(CLS_HEAVY);
-      return;
-    }
-    if (Array.from(active).some((d: Dialect) => el.classList.contains(d))) {
-      el.classList.remove(CLS_VERY_LIGHT);
-      el.classList.add(CLS_HEAVY);
-    } else {
-      el.classList.remove(CLS_HEAVY);
-      el.classList.add(CLS_VERY_LIGHT);
-    }
-  });
+  document.querySelectorAll(`.${CLS_DIALECT},.${CLS_SPELLING}`).forEach(
+    (el: Element) => {
+      if (!dialected(el)) {
+        return;
+      }
+      if (active === null) {
+        el.classList.remove(CLS_VERY_LIGHT);
+        el.classList.remove(CLS_HEAVY);
+        return;
+      }
+      if (Array.from(active).some((d: Dialect) => el.classList.contains(d))) {
+        el.classList.remove(CLS_VERY_LIGHT);
+        el.classList.add(CLS_HEAVY);
+      } else {
+        el.classList.remove(CLS_HEAVY);
+        el.classList.add(CLS_VERY_LIGHT);
+      }
+    });
 }
 
 Array.prototype.forEach.call(
