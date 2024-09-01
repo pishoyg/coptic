@@ -8,7 +8,6 @@ import string
 import utils
 
 SRC_RE = re.compile(r'(href|src)=\s*"([^"]+)"')
-TYPE_ENFORCED = True
 argparser = argparse.ArgumentParser(
     description="Parse and process the Marcion digital Coptic database,"
     "which is in turn based on the Crum Coptic dictionary.",

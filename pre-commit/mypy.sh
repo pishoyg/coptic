@@ -34,7 +34,7 @@ for PREFIX in "${SUBPROJECTS[@]}"; do
     # not just the affected files.
     _mypy "${PREFIX}"
   fi
-  NONMATCHES=$(echo "${NONMATCHES}" | grep --invert "^${PREFIX}/")
+  NONMATCHES=$(echo "${NONMATCHES}" | _grep --invert "^${PREFIX}/")
 done
 
 # Run against the affected files that didn't match any of the prefixes above.

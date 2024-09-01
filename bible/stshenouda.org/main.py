@@ -37,8 +37,6 @@ OUTPUT_DIR = "bible/stshenouda.org/data/output"
 PARALLELS = ["Bohairic_English"]
 COVER = "bible/stshenouda.org/data/img/stauros.jpeg"
 
-ENFORCED = True
-
 argparser = argparse.ArgumentParser(
     description="Process the Coptic Bible data.",
 )
