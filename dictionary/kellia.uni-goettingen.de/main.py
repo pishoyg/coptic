@@ -32,7 +32,7 @@ OUTPUT = [
     "dictionary/kellia.uni-goettingen.de/data/output/tsvs/comprehensive.tsvs",
 ]
 
-entity_types = defaultdict(set)
+entity_types: defaultdict = defaultdict(set)
 
 
 def add_crum_links(ref_bibl: str) -> str:
@@ -74,15 +74,13 @@ class Line:
         self._form_id = form_id
 
     def pishoy_tr(self) -> str:
-        fmt = '<td id="{id}">{text}</td>'
-        content = [
+        pairs = [
             ("orth", self._orth),
             ("geo", self._geo),
             ("gram_grp", self._gram_grp),
         ]
-        content = [fmt.format(id=pair[0], text=pair[1]) for pair in content]
-        content = "<tr>" + "".join(content) + "</tr>"
-        return content
+        content = map(lambda pair: f'<td id="{pair[0]}">{pair[1]}</td>', pairs)
+        return "<tr>" + "".join(content) + "</tr>"
 
 
 class OrthString(Reformat):
@@ -154,7 +152,7 @@ class EtymString(Reformat):
                             + " "
                         )
             if len(greek_dict) > 0:
-                greek_parts = []
+                greek_parts: list[str] = []
                 for key, val in sorted(greek_dict.items()):
                     if val is None:
                         greek_parts = []
@@ -222,10 +220,10 @@ class EtymString(Reformat):
 
 
 class Sense:
-    def __init__(self, sense_n, sense_id) -> None:
-        self._sense_n = sense_n
-        self._sense_id = sense_id
-        self._content = []
+    def __init__(self, sense_n: int, sense_id: str) -> None:
+        self._sense_n: int = sense_n
+        self._sense_id: str = sense_id
+        self._content: list[tuple[str, str]] = []
 
     def extend_quotes(self, quotes: list[str]) -> None:
         for q in quotes:
@@ -260,10 +258,10 @@ class Sense:
             return tag_text
         return fmt.format(id=tag_name, text=tag_text)
 
-    def identify(self):
+    def identify(self) -> tuple[int, str]:
         return (self._sense_n, self._sense_id)
 
-    def pishoy(self):
+    def pishoy(self) -> str:
         content = []
         content.extend(
             [
@@ -292,15 +290,15 @@ class Sense:
                     "</tr>",
                 ],
             )
-        content = "".join(content)
+        out = "".join(content)
         while True:
-            new_content = content.replace("\n\n\n", "\n\n")
-            if new_content == content:
+            new_out = out.replace("\n\n\n", "\n\n")
+            if new_out == out:
                 break
-            content = new_content
-        return content
+            out = new_out
+        return out
 
-    def subset(self, *names: str) -> list[str]:
+    def subset(self, *names: str) -> list[tuple[str, str]]:
         assert all(n in SENSE_CHILDREN for n in names), names
         return [pair for pair in self._content if pair[0] in names]
 
@@ -410,13 +408,13 @@ class Quote(Reformat):
         self.reset()
 
     def add_quote(self, quote) -> None:
-        text = compress(quote.text)
+        text: str = compress(quote.text)
         self._amir += text
         self._pishoy.append(text)
 
     def reset(self) -> None:
         self._amir = "~~~"
-        self._pishoy = []
+        self._pishoy: list[str] = []
 
     def no_definitions(self) -> None:
         self._amir += ";;;"
@@ -603,7 +601,9 @@ def order_forms(formlist):
 
 
 def get(attr, line):
-    return re.search(" " + attr + r'="([^"]*)"', line).group(1)
+    s = re.search(" " + attr + r'="([^"]*)"', line)
+    assert s
+    return s.group(1)
 
 
 def get_entity_types(pub_corpora_dir):
@@ -702,6 +702,7 @@ def process_entry(id, super_id, entry, entry_xml_id):
         if form.text is not None and form.text.strip():
             orths.append(form)
         if type(lemma).__name__ == "Element":
+            assert lemma is not None
             if any([orth.text == lemma.text for orth in orths]):
                 first.append(form)
             else:
@@ -735,8 +736,8 @@ def process_entry(id, super_id, entry, entry_xml_id):
         all_geos = form.find("{http://www.tei-c.org/ns/1.0}usg")
         if all_geos is not None:
             if all_geos.text is not None:
-                geos = re.sub(r"[\(\)]", r"", all_geos.text)
-                geos = re.sub(r"Ak", r"K", geos).split(" ")
+                geos_text = re.sub(r"[\(\)]", r"", all_geos.text)
+                geos = re.sub(r"Ak", r"K", geos_text).split(" ")
                 geos = list(filter(lambda g: len(g) == 1, geos))
             else:
                 geos = []
@@ -918,8 +919,12 @@ def process_entry(id, super_id, entry, entry_xml_id):
         if new_pos not in pos_list:
             pos_list.append(new_pos)
     if len(list(pos_list)) > 1:
-        pos_list = filter(lambda p: p not in ["NULL", "NONE", "?"], pos_list)
-        pos_list = list(pos_list)
+        pos_list = list(
+            filter(
+                lambda p: p not in ["NULL", "NONE", "?"],
+                pos_list,
+            ),
+        )
     if len(pos_list) == 0:
         pos_list.append("NULL")
     pos_string = pos_list[
@@ -1116,12 +1121,17 @@ def main():
 
     assert len(XML_PATH) == len(OUTPUT)
     for xml_path, output in zip(XML_PATH, OUTPUT):
-        body = (
+        text = (
             ET.parse(xml_path)
             .getroot()
-            .find("{http://www.tei-c.org/ns/1.0}text")
-            .find("{http://www.tei-c.org/ns/1.0}body")
+            .find(
+                "{http://www.tei-c.org/ns/1.0}text",
+            )
         )
+        assert text is not None
+        body = text.find("{http://www.tei-c.org/ns/1.0}body")
+        del text
+        assert body is not None
 
         rows = []
         for child in body:

@@ -5,7 +5,6 @@ import collections
 import re
 
 import bs4
-import type_enforced
 
 import utils
 
@@ -39,26 +38,23 @@ ORDER = [
 ]
 
 
-@type_enforced.Enforcer
 def sort_children(children: list[str]) -> list[str]:
     name_to_idx = {name: idx for idx, name in enumerate(ORDER)}
 
-    @type_enforced.Enforcer
     def key(name: str) -> int:
         return name_to_idx[name]
 
     return sorted(children, key=key)
 
 
-@type_enforced.Enforcer
-def format_set(s: set) -> list:
-    s = list(s)
+def format_set(st: set) -> list:
+    s = list(st)
+    del st
     if len(s) > MAX_LIST_LEN:
         return [f"{len(s)} DISTINCT VALUES"] + s[: MAX_LIST_LEN - 2] + ["..."]
     return s
 
 
-@type_enforced.Enforcer
 def prettify(d: dict) -> str:
     od = collections.OrderedDict()
     for k in ORDER:
@@ -72,15 +68,14 @@ def prettify(d: dict) -> str:
 
 # TODO: Add statistics. Count the tags, attributes, children, attribute values,
 # ... etc.
-@type_enforced.Enforcer
 def analyze(soup: bs4.BeautifulSoup | bs4.Tag) -> str:
     all_tag_names = {
         tag.name for tag in soup.descendants if isinstance(tag, bs4.Tag)
     }
 
-    tree = {}
+    tree: dict[str, dict[str, list[str]]] = {}
     for name in all_tag_names:
-        attrs = {}
+        attrs: dict[str, set[str]] = {}
         children = set()
         strings = set()
         for tag in soup.find_all(name):
@@ -107,15 +102,12 @@ def analyze(soup: bs4.BeautifulSoup | bs4.Tag) -> str:
     return prettify(tree)
 
 
-@type_enforced.Enforcer
 def main():
     with open(INPUT_XML) as f:
         soup = bs4.BeautifulSoup(f, "lxml-xml")
     # We only care about the body.
-    soup = soup.body
-    assert soup
-
-    analysis = analyze(soup)
+    assert soup.body
+    analysis = analyze(soup.body)
     with open(OUTPUT, "w") as f:
         f.write(analysis)
 

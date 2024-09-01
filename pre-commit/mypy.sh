@@ -23,18 +23,17 @@ source .helpers
 
 _mypy() {
   PREFIX="${1}"
-  MATCHES="$(echo "${@:2}" | tr ' ' '\n' | _grep "^${PREFIX}/")"
+  MATCHES="$(echo "${@:2}" | tr ' ' '\n' | _grep "^${PREFIX}")"
   if [ -n "${MATCHES}" ]; then
     # shellcheck disable=SC2046
     mypy $(echo "${MATCHES}" | tr '\n' ' ') --check-untyped-defs
   fi
 }
 
-# TODO: (#215) Enable `mypy` for all projects.
 # TODO: (#215) Maintain one list of projects instead of duplicating it.
 _mypy "bible" "${@}"
 _mypy "dictionary/copticsite.com" "${@}"
-# _mypy "dictionary/kellia.uni-goettingen.de" "${@}"
+_mypy "dictionary/kellia.uni-goettingen.de" "${@}"
 _mypy "dictionary/marcion.sourceforge.net" "${@}"
 _mypy "flashcards" "${@}"
 _mypy "morphology" "${@}"
