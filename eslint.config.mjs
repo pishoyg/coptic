@@ -30,6 +30,9 @@ export default tseslint.config(
       '@stylistic/quotes': ['error', 'single'],
     },
     languageOptions: {
+      parserOptions: {
+        project: true,
+      },
       globals: {
         ...globals.browser,
       },
