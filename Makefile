@@ -1,20 +1,16 @@
 SHELL := /bin/bash
 
-# .env
-#
 # NOTE: Some rules require the environment variables to be exported.
 # See .env_INFO.
 
-# LEVELS
-#
-# Level-3 rules use level-2 rules.
-# Level-2 rules use level-1 rules.
+# NOTE: We maintain a hierarchical structure for our rules. Level-2 rules are
+# only allowed to use level-1 rules, and level-3 rules are only allowed to use
+# level-2 rules.
 
 # LEVEL 3 RULES ###############################################################
 
 .PHONY: all
-# You might want to run `make clean` following this.
-all: install generate_1 test_1 generate_2 test publish report
+all: install generate_1 add generate_2 test publish report
 
 # LEVEL 2 RULES ###############################################################
 
@@ -23,28 +19,32 @@ install: pip_install python_install precommit_install bin_install npm_install
 
 # generate_1 rules are prerequisites for generate_2 rules.
 .PHONY: generate_1
-generate_1: bible copticsite crum crum_appendices crum_img kellia kellia_analysis ts_transpile
+generate_1: bible copticsite crum crum_appendices crum_img kellia ts_transpile
 
 .PHONY: generate_2
 generate_2: flashcards kindle
 
-# NOTE: We have to duplicate the rules, otherwise Make would deduplicate a rule
-# called twice in a recipe.
-.PHONY: test
-test: git_add_precommit_run
+# NOTE: We have to duplicate the add / test rule, otherwise Make would
+# deduplicate a rule that is mentioned twice as a prerequisite of some rule,
+# therefore executing it only once!
+# We call the identical twins `add` and `test` instead of `add_1` and `add_2`
+# because Makefile normally requires a `test` rule. We prefer the name `add`
+# since it's indicative of the fact that this rules adds all local changes from
+# the worktree to the index.
+.PHONY: add
+add: _add
 
-.PHONY: test_1
-test_1: git_add_precommit_run_1
+.PHONY: test
+test: _test
 
 .PHONY: publish
-publish: anki_publish epub_publish site_publish
+publish: anki_publish epub_publish mobi_publish site_publish
 
 .PHONY: report
 report: stats_report
 
-# The following level-2 rules are not included in any of the level-3 rules
-# above. This is because they are mainly relevant during development, but are
-# not part of the main deployment pipeline.
+# The following rules are more or less only relevant for testing / development,
+# rather content (re)generation.
 
 .PHONY: flashcards_crum_all_dialects
 flashcards_crum_all_dialects: _flashcards_crum_all_dialects
@@ -57,6 +57,9 @@ flashcards_kellia: _flashcards_kellia
 
 .PHONY: bible_no_epub
 bible_no_epub: _bible_no_epub
+
+.PHONY: kellia_analysis
+kellia_analysis: _kellia_analysis
 
 .PHONY: stats
 stats: stats_save
@@ -167,7 +170,7 @@ crum_img_helper: FORCE
 kellia: FORCE
 	python dictionary/kellia.uni-goettingen.de/main.py
 
-kellia_analysis: FORCE
+_kellia_analysis: FORCE
 	python dictionary/kellia.uni-goettingen.de/analysis.py
 
 kellia_analysis_clean: dictionary/kellia.uni-goettingen.de/data/output/analysis.json
@@ -263,7 +266,7 @@ python_install:
 precommit_install:
 	pre-commit install
 
-git_add_precommit_run git_add_precommit_run_1: FORCE
+_add _test: FORCE
 	until git add --all && pre-commit run; do : ; done
 
 precommit_update: FORCE
