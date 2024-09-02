@@ -63,10 +63,6 @@ while [ $# -gt 0 ]; do
   shift
 done
 
-_tidy() {
-  command tidy -indent -modify -quiet --tidy-mark no -wrap 80 "${1}"
-}
-
 clean() {
   echo -e "${GREEN}Cleaning.${RESET}"
   git -C "${SITE_DIR}" clean -d --force && git -C "${SITE_DIR}" reset --hard
@@ -160,7 +156,7 @@ obf() {
 tidy() {
   echo -e "${GREEN}Tidying.${RESET}"
   find "${SITE_DIR}" -type f -name "*.html" | while read -r FILE; do
-    _tidy "${FILE}"
+    command tidy -config "tidy_config.txt" "${FILE}"
   done
 }
 

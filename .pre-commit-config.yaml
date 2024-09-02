@@ -13,7 +13,7 @@ repos:
     hooks:
       - id: tidy-html
         name: tidy-html
-        entry: tidy -indent -modify -quiet --tidy-mark no -wrap 80
+        entry: tidy -config "tidy_config.txt"
         language: system
         files: .*\.html
 
@@ -77,7 +77,7 @@ repos:
       # XML
       - id: tidy-xml
         name: tidy-xml
-        entry: tidy -indent -modify -quiet --tidy-mark no -wrap 80 -xml
+        entry: tidy -config "tidy_config.txt" -xml
         language: system
         files: .*\.(xml|xhtml|opf)$
       # JSON
