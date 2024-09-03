@@ -244,7 +244,7 @@ def crum(
                             field.apl(
                                 lambda pages: DICTIONARY_PAGE_RE.sub(
                                     r'<span class="dawoud-page">\1</span>',
-                                    pages,
+                                    pages.replace(",", ", "),
                                 ),
                                 root_appendix("dawoud-pages", force=False),
                             ),
@@ -330,7 +330,7 @@ def crum(
                         field.apl(
                             lambda pages: DICTIONARY_PAGE_RE.sub(
                                 r'<span class="dawoud-page">\1</span>',
-                                pages,
+                                pages.replace(",", ", "),
                             ),
                             root_appendix("dawoud-pages", force=False),
                         ),
