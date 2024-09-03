@@ -3,8 +3,6 @@
 set -o errexit  # Exit upon encountering a failure.
 set -o nounset  # Consider an undefined variable to be an error.
 
-readonly DOMAIN="metremnqymi.com"
-
 readonly GOOGLE_TAG='
   <script async src=
   "https://www.googletagmanager.com/gtag/js?id=G-VCVZFDFZR3"></script>
@@ -21,7 +19,6 @@ readonly ICON_TAG='  <link rel="icon" type="image/x-icon" href="/img/icon/icon-c
 
 CLEAN=false
 BUILD=false
-OBF=false
 TIDY=false
 COMMIT=false
 PUSH=false
@@ -32,9 +29,6 @@ while [ $# -gt 0 ]; do
     ;;
   --build)
     BUILD=true
-    ;;
-  --obf)
-    OBF=true
     ;;
   --tidy)
     TIDY=true
@@ -48,7 +42,6 @@ while [ $# -gt 0 ]; do
   --help)
     echo -e "${GREEN}--clean ${BLUE}CLEANES uncommitted changes from the site repo.${RESET}"
     echo -e "${GREEN}--build ${BLUE}regenerates the site in the site repo.${RESET}"
-    echo -e "${GREEN}--obf ${BLUE}obfuscates the files.${RESET}"
     echo -e "${GREEN}--tidy ${BLUE}tidies the HTML files.${RESET}"
     echo -e "${GREEN}--commit ${BLUE}creates a FIXUP commit, and rebases it.${RESET}"
     echo -e "${GREEN}--push ${BLUE}FORCE-pushes the commit to the repo.${RESET}"
@@ -137,28 +130,6 @@ build() {
   wait
 }
 
-obf() {
-  echo -e "${GREEN}Obfuscating.${RESET}"
-  python site/obfuscate_paths.py \
-    --dir="${CRUM_DIR}"
-
-  python site/obfuscate_classes.py \
-    --dir="${CRUM_DIR}"
-
-  find "${SITE_DIR}" -type f -name "*.js" | while read -r FILE; do
-    # NOTE: Some of the flags below have strong warnings regarding their
-    # possibility to break your code. Check the docs if something doesn't work.
-    npx javascript-obfuscator "${FILE}" \
-      --output "${FILE}" \
-      --options-preset "high-obfuscation" \
-      --domain-lock "${DOMAIN}" \
-      --rename-globals "true" \
-      --rename-properties "true" \
-      --rename-properties-mode "unsafe" \
-      --unicode-escape-sequence "true"
-  done
-}
-
 tidy() {
   echo -e "${GREEN}Tidying.${RESET}"
   find "${SITE_DIR}" -type f -name "*.html" | while read -r FILE; do
@@ -184,10 +155,6 @@ fi
 
 if ${BUILD}; then
   build
-fi
-
-if ${OBF}; then
-  obf
 fi
 
 if ${TIDY}; then

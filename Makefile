@@ -233,7 +233,6 @@ endif
 site_publish:
 	bash site/publish.sh \
 		--build \
-		--obf \
 		--tidy \
 		--commit \
 		--push
@@ -250,8 +249,7 @@ bin_install:
 npm_install:
 	npm install \
 		--save-dev \
-		"typescript" \
-		"javascript-obfuscator"
+		"typescript"
 
 pip_install: requirements.txt
 	python -m pip install --upgrade pip
