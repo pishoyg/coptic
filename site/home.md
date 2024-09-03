@@ -10,6 +10,7 @@
 - [Description](#description)
   - [A Coptic Dictionary](#a-coptic-dictionary)
   - [copticsite.com](#copticsitecom)
+- [A Coptic Dictionary, Walter E. Crum](#a-coptic-dictionary-walter-e-crum)
 - [Contact and Contributions](#contact-and-contributions)
 - [Credits](#credits)
 
@@ -106,6 +107,15 @@ loanwords, as we as **neologisms liberally added by the author!**
    </figure>
 
 </div>
+
+## A Coptic Dictionary, Walter E. Crum
+
+We have a basic search box for Crum's dictionary (backed by Google) at
+[https://metremnqymi.com/crum/](https://metremnqymi.com/crum/). It's not
+working right now, because Google hasn't indexed our site yet!
+
+In the meantime, you could use Anki's built-in search feature, or you could go
+to [ⲟⲩⲱⲓⲛⲓ](https://metremnqymi.com/crum/1.html) and keep clicking `next`!
 
 ## Contact and Contributions
 
