@@ -33,9 +33,12 @@ parser.add_argument(
 def extract_text_from_html(
     html_content: str,
     excluded_classes: list[str],
-) -> str:
+) -> tuple[str, str]:
     # Parse the HTML content.
     soup = BeautifulSoup(html_content, "html.parser")
+
+    # Get the page title.
+    title: str = (soup.title.string or "") if soup.title else ""
 
     # Remove elements with the specified classes.
     for class_name in excluded_classes:
@@ -48,10 +51,13 @@ def extract_text_from_html(
     # Remove excess space.
     text = " ".join(text.split()).strip()
 
-    return text
+    return title, text
 
 
-def read_html_files(directory: str, exclude: list[str]) -> dict[str, str]:
+def read_html_files(
+    directory: str,
+    exclude: list[str],
+) -> dict[str, list[str]]:
     html_files_map = {}
 
     # Recursively search for all HTML files.
@@ -62,14 +68,14 @@ def read_html_files(directory: str, exclude: list[str]) -> dict[str, str]:
             file_path = os.path.join(root, file)
 
             # Extract text from the HTML content
-            text_content = extract_text_from_html(
+            title, text_content = extract_text_from_html(
                 utils.read(file_path),
                 exclude,
             )
 
             # Store the relative file path and extracted text in the map
             relative_path = os.path.relpath(file_path, directory)
-            html_files_map[relative_path] = text_content
+            html_files_map[relative_path] = [title, text_content]
     return html_files_map
 
 
