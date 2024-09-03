@@ -13,7 +13,9 @@
   "globals": {
     "document": true,
     "localStorage": true,
-    "window": true
+    "window": true,
+    "fetch": true,
+    "alert": true
   },
   "immed": true,
   "latedef": true,
