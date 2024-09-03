@@ -84,10 +84,12 @@ build() {
   readonly BIBLE_DIR="${SITE_DIR}/bible"
   readonly IMG_DIR="${SITE_DIR}/img"
 
+  # CNAME
   cp \
     "site/data/CNAME" \
     "${SITE_DIR}/"
 
+  # Home
   BODY="$(python -m markdown \
     "site/home.md" \
     --output_format="html")" envsubst < "site/data/home.html" > "${SITE_DIR}/index.html"
@@ -97,11 +99,14 @@ build() {
     site/data/img/* \
     "${IMG_DIR}/"
 
+  # Crum
   mkdir "${CRUM_DIR}"
   cp -r \
     flashcards/data/output/web/a_coptic_dictionary__all_dialects/* \
     "${CRUM_DIR}"
+  cp "site/data/crum.html" "${CRUM_DIR}/index.html"
 
+  # Bible
   mkdir "${BIBLE_DIR}"
   cp -r \
     bible/stshenouda.org/data/output/html/bohairic_english \
@@ -109,6 +114,7 @@ build() {
     bible/stshenouda.org/data/output/html/sahidic \
     "${BIBLE_DIR}"
 
+  # generic
   _html() {
     FILE="${1}"
     LINE_NUM="$(grep "^<head>$" "${FILE}" --line-number --max-count=1 | cut -f1 -d:)"

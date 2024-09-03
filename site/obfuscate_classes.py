@@ -31,6 +31,9 @@ HTML_CLASS_RE = re.compile(
 
 JS_CLASS_RE = re.compile(r"const (CLS_[a-zA-Z_]+) = '([a-zA-Z-]+)';")
 
+# WHITELIST is a list of classes that will be excluded form obfuscation.
+WHITELIST = {"gcse-search"}
+
 
 def _random_class() -> str:
     return "".join(random.choice(string.ascii_lowercase) for _ in range(24))
@@ -182,7 +185,10 @@ def obfuscate(files: list[str]):
     # TODO: (#141) This only collects classes from HTML files, maps them,
     # then rewrites everything. Some classes live in CSS and JavaScript, but
     # not in the HTML. Modify the pipeline to account for those.
-    mapping = {cls: _random_class() for cls in _gather_classes(files)}
+    mapping = {
+        cls: cls if cls in WHITELIST else _random_class()
+        for cls in _gather_classes(files)
+    }
 
     for path in [f for f in files if f.endswith(".html")]:
         utils.write(_generate_html(utils.read(path), mapping), path)
