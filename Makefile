@@ -19,7 +19,7 @@ install: pip_install python_install precommit_install bin_install npm_install
 
 # generate_1 rules are prerequisites for generate_2 rules.
 .PHONY: generate_1
-generate_1: bible copticsite crum crum_appendices crum_img kellia ts_transpile
+generate_1: bible copticsite crum crum_appendices crum_img kellia ts_transpile xooxle
 
 .PHONY: generate_2
 generate_2: flashcards kindle
@@ -89,6 +89,12 @@ camera: camera_images
 yo: say_yo
 
 # LEVEL 1 RULES ###############################################################
+
+xooxle: FORCE
+	python site/xooxle.py \
+		--directory "flashcards/data/output/web/a_coptic_dictionary__all_dialects/" \
+		--output "site/data/crum/index.json" \
+		--exclude "header"
 
 ts_transpile: FORCE
 	npx tsc -p "flashcards/constants/a_coptic_dictionary/tsconfig.json"
