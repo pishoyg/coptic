@@ -58,6 +58,7 @@ foc () {
     -not -name "package-lock.json" \
     -not -name "package.json" \
     -not -path "*/data/*" \
+    -not -name "LICENSE" \
     -not -path "./archive/*" "${@:3}" -exec "${EXEC}" {} \;
 }
 
