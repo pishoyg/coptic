@@ -1,6 +1,7 @@
 import os
 import pathlib
 import shutil
+import typing
 
 import field
 import genanki  # type: ignore[import-untyped]
@@ -15,6 +16,7 @@ HTML_FMT = f"""<!DOCTYPE html>
     <title>{{title}}</title>
     <link rel="stylesheet" type="text/css" href="{CSS_BASENAME}">
     <script type="text/javascript" src="{JS_BASENAME}" defer></script>
+    {{links}}
   </head>
   <body>
     <div class="front">
@@ -81,6 +83,9 @@ class deck:
         front: field.field,
         back: field.field,
         title: field.field,
+        prev: typing.Optional[field.field] = None,
+        next: typing.Optional[field.field] = None,
+        search: str = "",
         force_key: bool = True,
         force_no_duplicate_keys: bool = True,
         force_front: bool = True,
@@ -139,6 +144,9 @@ class deck:
         self.fronts: list[str] = []
         self.backs: list[str] = []
         self.titles: list[str] = []
+        self.prevs: list[str] = []
+        self.nexts: list[str] = []
+        self.search: str = search
         self.length: int = field.num_entries(key, front, back)
 
         assert self.length != field.NO_LENGTH
@@ -149,6 +157,8 @@ class deck:
             f = front.next()
             b = back.next()
             t = title.next()
+            p = prev.next() if prev else ""
+            n = next.next() if next else ""
 
             assert k or not force_key
             assert k not in seen_keys or not force_no_duplicate_keys
@@ -187,12 +197,16 @@ class deck:
             assert isinstance(f, str)
             assert isinstance(b, str)
             assert isinstance(t, str)
+            assert isinstance(n, str)
+            assert isinstance(p, str)
             self.keys.append(f"{deck_name} - {k}")
+            self.raw_keys.append(k)
             self.fronts.append(f)
             self.backs.append(b)
             self.titles.append(t)
+            self.nexts.append(n)
+            self.prevs.append(p)
             ss._exported_notes += 1
-            self.raw_keys.append(k)
 
         utils.info("Deck:", deck_name)
         ss.print()
@@ -207,13 +221,23 @@ class deck:
 
     def write_web(self, dir: str) -> None:
         self.clean_dir(dir)
-        for rk, front, back, title in zip(
+        for rk, front, back, title, prev, next in zip(
             self.raw_keys,
             self.fronts,
             self.backs,
             self.titles,
+            self.prevs,
+            self.nexts,
         ):
             with open(os.path.join(dir, rk + ".html"), "w") as f:
+                links: list[str] = []
+                if prev:
+                    links.append(f'<link rel="prev" href="{prev}">')
+                if next:
+                    links.append(f'<link rel="next" href="{next}">')
+                if self.search:
+                    links.append(f'<link rel="search" href="{self.search}">')
+
                 f.write(
                     HTML_FMT.format(
                         css=self.css,
@@ -221,6 +245,7 @@ class deck:
                         title=title,
                         front=front,
                         back=back,
+                        links="\n".join(links),
                     ),
                 )
         with open(os.path.join(dir, JS_BASENAME), "w") as f:

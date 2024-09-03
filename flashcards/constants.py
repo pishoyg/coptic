@@ -382,6 +382,19 @@ def crum(
             ),
         ),
         title=roots_col("word-title"),
+        prev=field.fmt(
+            f"{CRUM_ROOT}/{{key_prev}}.html",
+            {"key_prev": roots_col("key-prev", force=False)},
+            force=False,
+            aon=True,
+        ),
+        next=field.fmt(
+            f"{CRUM_ROOT}/{{key_next}}.html",
+            {"key_next": roots_col("key-next", force=False)},
+            force=False,
+            aon=True,
+        ),
+        search=f"{CRUM_ROOT}/",
         force_front=force_front,
     )
 
