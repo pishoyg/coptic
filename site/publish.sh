@@ -17,9 +17,10 @@ readonly GOOGLE_TAG='
 readonly ICON_TAG='  <link rel="icon" type="image/x-icon" href="/img/icon/icon-circle.png">
 '
 
+readonly MESSAGE="Automated Site Publishing."
+
 CLEAN=false
 BUILD=false
-TIDY=false
 COMMIT=false
 PUSH=false
 while [ $# -gt 0 ]; do
@@ -30,9 +31,6 @@ while [ $# -gt 0 ]; do
   --build)
     BUILD=true
     ;;
-  --tidy)
-    TIDY=true
-    ;;
   --commit)
     COMMIT=true
     ;;
@@ -42,9 +40,8 @@ while [ $# -gt 0 ]; do
   --help)
     echo -e "${GREEN}--clean ${BLUE}CLEANES uncommitted changes from the site repo.${RESET}"
     echo -e "${GREEN}--build ${BLUE}regenerates the site in the site repo.${RESET}"
-    echo -e "${GREEN}--tidy ${BLUE}tidies the HTML files.${RESET}"
-    echo -e "${GREEN}--commit ${BLUE}creates a FIXUP commit, and rebases it.${RESET}"
-    echo -e "${GREEN}--push ${BLUE}FORCE-pushes the commit to the repo.${RESET}"
+    echo -e "${GREEN}--commit ${BLUE}creates a commit.${RESET}"
+    echo -e "${GREEN}--push ${BLUE}pushes the commit to the repo.${RESET}"
     echo -e "${BLUE}You can use any combination of flags that you want.${RESET}"
     exit
     ;;
@@ -117,6 +114,7 @@ build() {
     fi
     NEW="$(head -n "${LINE_NUM}" "${FILE}")${GOOGLE_TAG}${ICON_TAG}$(tail -n "+$((LINE_NUM + 1))" "${FILE}")"
     echo "${NEW}" > "${FILE}"
+    tidy -config "tidy_config.txt" "${FILE}"
   }
 
   COUNTER=0
@@ -130,23 +128,15 @@ build() {
   wait
 }
 
-tidy() {
-  echo -e "${GREEN}Tidying.${RESET}"
-  find "${SITE_DIR}" -type f -name "*.html" | while read -r FILE; do
-    command tidy -config "tidy_config.txt" "${FILE}"
-  done
-}
-
 commit() {
   echo -e "${GREEN}Committing.${RESET}"
   git -C "${SITE_DIR}" add --all
-  git -C "${SITE_DIR}" commit --fixup HEAD
+  git -C "${SITE_DIR}" commit --message "${MESSAGE}"
 }
 
 push() {
   echo -e "${GREEN}Pushing.${RESET}"
-  git -C "${SITE_DIR}" rebase --root --autosquash
-  git -C "${SITE_DIR}" push --force
+  git -C "${SITE_DIR}" push
 }
 
 if ${CLEAN}; then
@@ -155,10 +145,6 @@ fi
 
 if ${BUILD}; then
   build
-fi
-
-if ${TIDY}; then
-  tidy
 fi
 
 if ${COMMIT}; then

@@ -233,7 +233,6 @@ endif
 site_publish:
 	bash site/publish.sh \
 		--build \
-		--tidy \
 		--commit \
 		--push
 
