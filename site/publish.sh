@@ -94,7 +94,11 @@ build() {
   cp -r \
     flashcards/data/output/web/a_coptic_dictionary__all_dialects/* \
     "${CRUM_DIR}"
-  cp "site/data/crum.html" "${CRUM_DIR}/index.html"
+  cp \
+    "site/data/crum/index.html" \
+    "site/data/crum/index.json" \
+    "site/data/build/xooxle.js" \
+    "${CRUM_DIR}"
 
   # Bible
   mkdir "${BIBLE_DIR}"
