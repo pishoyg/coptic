@@ -1,6 +1,8 @@
 const searchBox = document.getElementById('searchBox') as HTMLInputElement;
 const searchButton = document.getElementById('searchButton') as HTMLButtonElement;
 const resultList = document.getElementById('resultList') as HTMLUListElement;
+const fullWordCheckbox = document.getElementById('fullWordCheckbox') as HTMLInputElement;
+const regexCheckbox = document.getElementById('regexCheckbox') as HTMLInputElement;
 
 class Result {
   constructor(
@@ -8,61 +10,139 @@ class Result {
     readonly title: string,
     readonly text: string,
   ) { }
-  match(query: string): boolean {
-    return this.text.toLowerCase().includes(query.toLowerCase());
+
+  match(query: string, fullWord: boolean, useRegex: boolean): string | null {
+    if (!useRegex) {
+      // Escape all the special characters in the string, in order to search
+      // for raw matches.
+      query = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+    if (fullWord) {
+      query = `\\b${query}\\b`;
+    }
+    try {
+      const regex = new RegExp(query, 'i'); // Case-insensitive.
+      const match = this.text.match(regex);
+      if (!match) {
+        return null;
+      }
+      if (fullWord) {
+        return match[0];
+      }
+      return this.getMatchFullWords(match[0]);
+    } catch (e) {
+      console.error('Invalid regular expression:', e);
+      return null;
+    }
+  }
+
+  getMatchFullWords(match: string): string {
+    // Find the index of the match within the text.
+    const matchStart = this.text.indexOf(match);
+
+    if (matchStart === -1) {
+      return match; // If the match is not found, return it as-is.
+    }
+
+    let start = matchStart;
+    let end = matchStart + match.length;
+
+    // Expand left: Move the start index left until a word boundary is found.
+    while (start > 0 && !/\W/.test(this.text[start - 1]!)) {
+      start--;
+    }
+
+    // Expand right: Move the end index right until a word boundary is found.
+    while (end < this.text.length && !/\W/.test(this.text[end]!)) {
+      end++;
+    }
+
+    // Return the expanded substring.
+    return this.text.substring(start, end);
   }
 }
 
-// Load the JSON File.
+// Load the JSON file as a Promise that will resolve once the data is fetched.
 const fileMap: Promise<Result[]> = (async function(): Promise<Result[]> {
   let resp: Response;
   try {
     resp = await fetch('index.json', { mode: 'cors' });
   } catch {
-    // NOTE: `fetch` fails locally due to CORS. We return a dummy value in
-    // order to support local testing.
-    resp = new Response('[{"path": "1.html", "title": "ⲟⲩⲱⲓⲛⲓ", "text": "light" }]');
+    // If fetch fails (e.g., due to CORS issues), return dummy data.
+    resp = new Response(
+      '[{"path": "1.html", "title": "ⲟⲩⲱⲓⲛⲓ", "text": "light" }]',
+    );
   }
 
   const json = await resp.json().then((resp) => resp as object[]);
-
-  return Array.from(json)
-    .map((dict: object) => Object.assign(new Result('', '', ''), dict));
+  return Array.from(json).map((dict: object) =>
+    Object.assign(new Result('', '', ''), dict),
+  );
 })();
 
 // Event listener for the search button.
-function search() {
-  const query = searchBox.value.trim();
+let currentAbortController: AbortController | null = null;
 
+async function search() {
+  // If there is an ongoing search, abort it.
+  if (currentAbortController) {
+    currentAbortController.abort();
+  }
+
+  // Create a new AbortController for the current search.
+  const abortController = new AbortController();
+  currentAbortController = abortController;
+
+  const query = searchBox.value.trim();
+  const fullWord = fullWordCheckbox.checked;
+  const useRegex = regexCheckbox.checked;
+
+  // If search is requested with an empty query, clear results and return.
   if (!query) {
-    alert('Please enter a search query');
+    resultList.innerHTML = '';
     return;
   }
 
+  // Wait for fileMap to resolve and get the list of results.
+  const results = await fileMap;
+
   resultList.innerHTML = ''; // Clear previous results.
-  void fileMap.then((results): void => {
 
-    let found = false;
-    results.filter((res) => res.match(query)).forEach((res) => {
-      found = true;
-      const li = document.createElement('li');
-      li.innerHTML = `<a href="${res.path}#:~:text=${query}">${res.path.replace('.html', '')}</a> ${res.title}`;
-      resultList.appendChild(li);
-    });
+  let found = false;
 
-    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-    if (found) {
-      return;
+  for (const res of results) {
+    // Check if the search has been aborted.
+    if (abortController.signal.aborted) {
+      return; // Exit the function early if the search was aborted.
     }
-    const li = document.createElement('li');
-    li.innerHTML = 'No matching files found';
-    resultList.appendChild(li);
-    return;
-  });
 
+    const matchedWord = res.match(query, fullWord, useRegex);
+    if (!matchedWord) {
+      continue;
+    }
+    found = true;
+    const li = document.createElement('li');
+    li.innerHTML = `<a href="${res.path}#:~:text=${encodeURIComponent(matchedWord)}">
+      ${res.path.replace('.html', '')}</a> ${res.title}`;
+    resultList.appendChild(li);
+
+    // Yield to update the display incrementally.
+    await new Promise((resolve) => setTimeout(resolve, 0));
+  }
+
+  if (!found && !abortController.signal.aborted) {
+    const li = document.createElement('li');
+    li.innerHTML = 'No matching files found.';
+    resultList.appendChild(li);
+  }
 }
 
-searchButton.addEventListener('click', search);
+// Wrapper function to handle the async search call.
+function handleSearchClick() {
+  void search(); // Call the async function and ignore the returned Promise.
+}
+
+searchButton.addEventListener('click', handleSearchClick);
 searchBox.addEventListener('keypress', (event) => {
   if (event.key === 'Enter') {
     event.preventDefault();

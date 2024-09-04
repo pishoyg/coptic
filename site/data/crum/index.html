@@ -5,8 +5,19 @@
 </head>
 <body>
   <h1>A Coptic Dictionary, Walter E. Crum</h1>
-  <h2>Ϧⲟⲟϧⲗⲉ</h2><input type="text" id="searchBox" placeholder=
-  "Enter search query"> <button id="searchButton">Search</button>
+  <h2>Ϧⲟⲟϧⲗⲉ</h2>
+  <div>
+    <label for="searchBox">Search:</label> <input type="text" id="searchBox"
+    placeholder="Enter search query">
+  </div>
+  <div>
+    <input type="checkbox" id="fullWordCheckbox"> <label for=
+    "fullWordCheckbox">Full Word Match</label>
+  </div>
+  <div>
+    <input type="checkbox" id="regexCheckbox"> <label for="regexCheckbox">Use
+    Regular Expressions</label>
+  </div><button id="searchButton">Search</button>
   <ul id="resultList"></ul>
   <script src="xooxle.js" defer></script>
   <h2>Ⲅⲟⲟⲅⲗⲉ</h2>
