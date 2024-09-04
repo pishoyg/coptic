@@ -225,6 +225,7 @@ def crum(
                     greek,
                     roots_col("en-parsed", line_br=True, force=False),
                 ),
+                "<br/>",
                 # Dictionary pages.
                 field.cat(
                     '<span class="right">',
