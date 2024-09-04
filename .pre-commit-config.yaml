@@ -54,11 +54,6 @@ repos:
         files: \.(js|jsx|mjs|cjs|ts|tsx|mts|cts)$
         types: [file]
 
-  - repo: https://github.com/pre-commit/mirrors-jshint
-    rev: v2.13.6
-    hooks:
-      - id: jshint
-
   # CSS
   - repo: https://github.com/pre-commit/mirrors-csslint
     rev: v1.0.5
@@ -85,7 +80,7 @@ repos:
         name: json-tool
         entry: pre-commit/json-tool.sh
         language: system
-        files: (.jshintrc|.csslintrc|\.json)$
+        files: (.csslintrc|\.json)$
         types: [file]
         exclude: tsconfig\.json$
 
