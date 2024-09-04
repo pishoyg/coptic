@@ -30,35 +30,12 @@ parser.add_argument(
 )
 
 
-def extract_text_from_html(
-    html_content: str,
-    excluded_classes: list[str],
-) -> tuple[str, str]:
-    # Parse the HTML content.
-    soup = BeautifulSoup(html_content, "html.parser")
-
-    # Get the page title.
-    title: str = (soup.title.string or "") if soup.title else ""
-
-    # Remove elements with the specified classes.
-    for class_name in excluded_classes:
-        for element in soup.find_all(class_=class_name):
-            element.decompose()  # Removes the element from the tree.
-
-    # Extract the remaining text
-    text = soup.get_text()
-
-    # Remove excess space.
-    text = " ".join(text.split()).strip()
-
-    return title, text
-
-
-def read_html_files(
+def build_index(
     directory: str,
     exclude: list[str],
-) -> dict[str, list[str]]:
-    html_files_map = {}
+) -> list[dict[str, str]]:
+
+    index: list[dict[str, str]] = []
 
     # Recursively search for all HTML files.
     for root, _, files in os.walk(directory):
@@ -67,16 +44,36 @@ def read_html_files(
                 continue
             file_path = os.path.join(root, file)
 
-            # Extract text from the HTML content
-            title, text_content = extract_text_from_html(
-                utils.read(file_path),
-                exclude,
+            # Parse the HTML content.
+            soup = BeautifulSoup(utils.read(file_path), "html.parser")
+
+            # Get the page title.
+            assert soup.title
+            assert soup.title.string
+            title: str = soup.title.string
+
+            # Remove elements with the specified classes.
+            for class_name in exclude:
+                for element in soup.find_all(class_=class_name):
+                    element.decompose()  # Removes the element from the tree.
+
+            # Extract the remaining text
+            text = soup.get_text()
+
+            # Remove excess space.
+            text = " ".join(text.split()).strip()
+
+            # Store the relative file path and extracted text in the index.
+            relative_path = os.path.relpath(file_path, directory)
+            index.append(
+                {
+                    "path": relative_path,
+                    "title": title,
+                    "text": text,
+                },
             )
 
-            # Store the relative file path and extracted text in the map
-            relative_path = os.path.relpath(file_path, directory)
-            html_files_map[relative_path] = [title, text_content]
-    return html_files_map
+    return index
 
 
 def main():
@@ -84,10 +81,10 @@ def main():
     args = parser.parse_args()
 
     # Read HTML files and extract text.
-    html_files_map = read_html_files(args.directory, args.exclude)
+    index = build_index(args.directory, args.exclude)
 
     # Write the resulting map to a JSON file.
-    utils.write(utils.json_dumps(html_files_map), args.output)
+    utils.write(utils.json_dumps(index), args.output)
 
 
 if __name__ == "__main__":
