@@ -1,5 +1,15 @@
+break-before-br: yes
+enclose-block-text: yes
+enclose-text: yes
+indent-spaces: 2
 indent: auto
+join-classes: yes
+priority-attributes: id,name,class
+punctuation-wrap: yes
 quiet: yes
+sort-attributes: alpha
+strict-tags-attributes: yes
 tidy-mark: no
+vertical-space: yes
 wrap: 80
 write-back: yes
