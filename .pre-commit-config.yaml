@@ -8,6 +8,12 @@ fail_fast: true
 exclude: ^archive/
 repos:
 
+  # Language-agnostic
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+
   # HTML
   - repo: local
     hooks:
@@ -212,7 +218,6 @@ repos:
       - id: sort-simple-yaml
       - id: forbid-submodules
       - id: mixed-line-ending
-      - id: trailing-whitespace
         exclude: .*\.(tsv|csv|xml|html|xhtml)$
       - id: check-xml
 
