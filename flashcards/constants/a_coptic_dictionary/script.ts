@@ -9,7 +9,7 @@
 // Whether or not to retain this convention can be decided later.
 const CLS_CRUM_PAGE = 'crum-page';
 const CLS_CRUM_PAGE_EXTERNAL = 'crum-page-external';
-const CLS_DAWOUD_PAGE_EXTERNAL = 'dawoud-page-external';
+const CLS_DAWOUD_PAGE_IMG = 'dawoud-page-img';
 const CLS_CRUM_PAGE_IMG = 'crum-page-img';
 const CLS_EXPLANATORY = 'explanatory';
 const CLS_COPTIC = 'coptic';
@@ -168,7 +168,7 @@ Array.prototype.forEach.call(
 
 // Handle CLS_DAWOUD_PAGE_EXTERNAL class.
 Array.prototype.forEach.call(
-  document.getElementsByClassName(CLS_DAWOUD_PAGE_EXTERNAL),
+  document.getElementsByClassName(CLS_DAWOUD_PAGE_IMG),
   (el: HTMLElement): void => {
     el.classList.add(CLS_LINK);
     el.onclick = (): void => {

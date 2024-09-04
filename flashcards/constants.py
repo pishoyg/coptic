@@ -216,22 +216,24 @@ def crum(
             field.cat(
                 # Type.
                 field.fmt(
-                    "(<b>{type_parsed}</b>)",
+                    '(<b><span class="root-type">{type_parsed}</span></b>)',
                     {"type_parsed": roots_col("type-parsed")},
                 ),
                 "<br/>",
                 # Meaning.
+                '<span class="meaning">',
                 field.apl(
                     greek,
                     roots_col("en-parsed", line_br=True, force=False),
                 ),
+                "</span>",
                 "<br/>",
                 # Dictionary pages.
                 field.cat(
-                    '<span class="right">',
+                    '<span class="right dictionary">',
                     field.cat(
                         field.aon(
-                            '<b><a href="#crum" class="hover-link">Crum: </a></b>',
+                            '<b><a href="#crum" class="crum hover-link">Crum: </a></b>',
                             field.fmt(
                                 '<span class="crum-page">{crum}</span>',
                                 {"crum": roots_col("crum", force=False)},
@@ -241,7 +243,7 @@ def crum(
                         ),
                         field.aon(
                             "<br/>",
-                            '<b><a href="#dawoud" class="hover-link">Dawoud: </a></b>',
+                            '<b><a href="#dawoud" class="dawoud hover-link">Dawoud: </a></b>',
                             field.apl(
                                 lambda pages: DICTIONARY_PAGE_RE.sub(
                                     r'<span class="dawoud-page">\1</span>',
@@ -281,7 +283,9 @@ def crum(
                 # Horizontal line.
                 "<hr/>",
                 # Full entry.
+                '<span class="marcion">',
                 roots_col("word-parsed-classify", line_br=True),
+                "</span>",
                 # Derivations.
                 field.apl(
                     greek,
@@ -290,9 +294,9 @@ def crum(
                 # Crum's pages.
                 field.aon(
                     "<hr/>",
-                    '<span id="crum" class="right">',
+                    '<span id="crum" class="right dictionary">',
                     field.aon(
-                        "<b>Crum: </b>",
+                        '<b><span class="crum">Crum: </span></b>',
                         field.apl(
                             lambda pages: INTEGER_RE.sub(
                                 r'<span class="crum-page">\1</span>',
@@ -311,8 +315,8 @@ def crum(
                             ],
                         ),
                         fmt_args=lambda path: {
-                            "caption": '<span class="crum-page-external">{crum}</span>'.format(
-                                crum=int(utils.stem(path)) - 20,
+                            "caption": '<span class="crum-page-external">{page_num}</span>'.format(
+                                page_num=int(utils.stem(path)) - 20,
                             ),
                             "id": f"crum{int(utils.stem(path)) - 20}",
                             "class": "crum-page-img",
@@ -325,9 +329,9 @@ def crum(
                 # Dawoud's pages.
                 field.aon(
                     "<hr/>",
-                    '<span id="dawoud" class="right">',
+                    '<span id="dawoud" class="right dictionary">',
                     field.aon(
-                        "<b>Dawoud: </b>",
+                        '<b><span class="dawoud">Dawoud: </span></b>',
                         field.apl(
                             lambda pages: DICTIONARY_PAGE_RE.sub(
                                 r'<span class="dawoud-page">\1</span>',
@@ -344,9 +348,11 @@ def crum(
                             for k in _page_numbers(page_ranges=page_ranges)
                         ],
                         fmt_args=lambda path: {
-                            "caption": int(utils.stem(path)) - 16,
+                            "caption": '<span class="dawoud-page-external">{page_num}</span>'.format(
+                                page_num=int(utils.stem(path)) - 16,
+                            ),
                             "id": f"dawoud{int(utils.stem(path)) - 16}",
-                            "class": "dawoud-page-external",
+                            "class": "dawoud-page-img",
                             "alt": int(utils.stem(path)) - 16,
                             "width": DICT_WIDTH,
                         },
