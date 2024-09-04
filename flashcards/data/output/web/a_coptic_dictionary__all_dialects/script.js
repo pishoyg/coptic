@@ -2,7 +2,7 @@
 window.addEventListener('load', () => {
   const CLS_CRUM_PAGE = 'crum-page';
   const CLS_CRUM_PAGE_EXTERNAL = 'crum-page-external';
-  const CLS_DAWOUD_PAGE_EXTERNAL = 'dawoud-page-external';
+  const CLS_DAWOUD_PAGE_IMG = 'dawoud-page-img';
   const CLS_CRUM_PAGE_IMG = 'crum-page-img';
   const CLS_EXPLANATORY = 'explanatory';
   const CLS_COPTIC = 'coptic';
@@ -102,7 +102,7 @@ window.addEventListener('load', () => {
       window_open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.innerHTML}`);
     };
   });
-  Array.prototype.forEach.call(document.getElementsByClassName(CLS_DAWOUD_PAGE_EXTERNAL), (el) => {
+  Array.prototype.forEach.call(document.getElementsByClassName(CLS_DAWOUD_PAGE_IMG), (el) => {
     el.classList.add(CLS_LINK);
     el.onclick = () => {
       window_open('https://coptic-treasures.com/book/coptic-dictionary-moawad-abd-al-nour/');
