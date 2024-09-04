@@ -94,7 +94,8 @@ xooxle: FORCE
 	python site/xooxle.py \
 		--directory "flashcards/data/output/web/a_coptic_dictionary__all_dialects/" \
 		--output "site/data/crum/index.json" \
-		--exclude "header"
+		--exclude "header" "dictionary" "crum" "crum-page" "crum-page-external" \
+		"dawoud" "dawoud-page" "dawoud-page-external" "drv-key" "explanatory-key"
 
 ts_transpile: FORCE
 	npx tsc -p "flashcards/constants/a_coptic_dictionary/tsconfig.json"
