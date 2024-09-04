@@ -15,7 +15,8 @@
     "localStorage": true,
     "window": true,
     "fetch": true,
-    "alert": true
+    "alert": true,
+    "Response": true
   },
   "immed": true,
   "latedef": true,
@@ -32,7 +33,7 @@
   "maxdepth": 2,
   "maxparams": 3,
   "nonbsp": true,
-  "noreturnawait": true,
+  "noreturnawait": false,
   "nocomma": true,
   "regexpu": true,
   "singleGroups": true,
