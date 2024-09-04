@@ -14,7 +14,7 @@ class Result {
 }
 
 // Load the JSON File.
-async function loadFileMap(): Promise<Result[]> {
+const fileMap: Promise<Result[]> = (async function(): Promise<Result[]> {
   let resp: Response;
   try {
     resp = await fetch('index.json', { mode: 'cors' });
@@ -28,26 +28,7 @@ async function loadFileMap(): Promise<Result[]> {
 
   return Array.from(json)
     .map((dict: object) => Object.assign(new Result('', '', ''), dict));
-}
-
-// Function to search for files containing the search query
-// Function to display the search results.
-function displayResults(query: string, results: Result[]): void {
-  resultList.innerHTML = ''; // Clear previous results.
-
-  if (results.length === 0) {
-    const li = document.createElement('li');
-    li.innerHTML = 'No matching files found';
-    resultList.appendChild(li);
-    return;
-  }
-
-  results.forEach((res) => {
-    const li = document.createElement('li');
-    li.innerHTML = `<a href="${res.path}#:~:text=${query}">${res.path.replace('.html', '')}</a> ${res.title}`;
-    resultList.appendChild(li);
-  });
-}
+})();
 
 // Event listener for the search button.
 function search() {
@@ -58,10 +39,27 @@ function search() {
     return;
   }
 
-  void loadFileMap().then((results) => {
-    results = results.filter((res) => res.match(query));
-    displayResults(query, results);
+  resultList.innerHTML = ''; // Clear previous results.
+  void fileMap.then((results): void => {
+
+    let found = false;
+    results.filter((res) => res.match(query)).forEach((res) => {
+      found = true;
+      const li = document.createElement('li');
+      li.innerHTML = `<a href="${res.path}#:~:text=${query}">${res.path.replace('.html', '')}</a> ${res.title}`;
+      resultList.appendChild(li);
+    });
+
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+    if (found) {
+      return;
+    }
+    const li = document.createElement('li');
+    li.innerHTML = 'No matching files found';
+    resultList.appendChild(li);
+    return;
   });
+
 }
 
 searchButton.addEventListener('click', search);

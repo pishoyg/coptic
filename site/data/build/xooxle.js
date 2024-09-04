@@ -12,7 +12,7 @@ class Result {
     return this.text.toLowerCase().includes(query.toLowerCase());
   }
 }
-async function loadFileMap() {
+const fileMap = (async function () {
   let resp;
   try {
     resp = await fetch('index.json', { mode: 'cors' });
@@ -23,30 +23,29 @@ async function loadFileMap() {
   const json = await resp.json().then((resp) => resp);
   return Array.from(json)
     .map((dict) => Object.assign(new Result('', '', ''), dict));
-}
-function displayResults(query, results) {
-  resultList.innerHTML = '';
-  if (results.length === 0) {
-    const li = document.createElement('li');
-    li.innerHTML = 'No matching files found';
-    resultList.appendChild(li);
-    return;
-  }
-  results.forEach((res) => {
-    const li = document.createElement('li');
-    li.innerHTML = `<a href="${res.path}#:~:text=${query}">${res.path.replace('.html', '')}</a> ${res.title}`;
-    resultList.appendChild(li);
-  });
-}
+})();
 function search() {
   const query = searchBox.value.trim();
   if (!query) {
     alert('Please enter a search query');
     return;
   }
-  void loadFileMap().then((results) => {
-    results = results.filter((res) => res.match(query));
-    displayResults(query, results);
+  resultList.innerHTML = '';
+  void fileMap.then((results) => {
+    let found = false;
+    results.filter((res) => res.match(query)).forEach((res) => {
+      found = true;
+      const li = document.createElement('li');
+      li.innerHTML = `<a href="${res.path}#:~:text=${query}">${res.path.replace('.html', '')}</a> ${res.title}`;
+      resultList.appendChild(li);
+    });
+    if (found) {
+      return;
+    }
+    const li = document.createElement('li');
+    li.innerHTML = 'No matching files found';
+    resultList.appendChild(li);
+    return;
   });
 }
 searchButton.addEventListener('click', search);
