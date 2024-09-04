@@ -3,11 +3,10 @@
 // possible. NOTE: The associated issue is closed. Judge whether it should be
 // reopened, or if we should create a new issue, or just delete this TODO.
 
-// NOTE: All our classes must be defined as constants, in order to facilitate
-// obfuscation of the HTML and CSS.
-// NOTE: Be careful to only use those constants in contexts where they are
-// intended as HTML classes. If a constant (e.g. a query parameter) happens to
-// bear a name that is similar to the class name, use the bare constant.
+// NOTE: The use of classes as constants starting with CLS_ is a remnant of an
+// old restriction that was introduced to support class obfuscation. The
+// restriction has been lifted, and the enforcing pre-commit has been removed.
+// Whether or not to retain this convention can be decided later.
 const CLS_CRUM_PAGE = 'crum-page';
 const CLS_CRUM_PAGE_EXTERNAL = 'crum-page-external';
 const CLS_DAWOUD_PAGE_EXTERNAL = 'dawoud-page-external';
