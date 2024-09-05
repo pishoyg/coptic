@@ -83,9 +83,14 @@ const fileMap: Promise<Result[]> = (async function(): Promise<Result[]> {
     resp = await fetch('index.json', { mode: 'cors' });
   } catch {
     // If fetch fails (e.g., due to CORS issues), return dummy data.
-    resp = new Response(
-      '[{"path": "1.html", "title": "ⲟⲩⲱⲓⲛⲓ", "text": "light\\nman of light" }]',
-    );
+    const dummy = [
+      {
+        'path': '1.html',
+        'title': 'ⲟⲩⲟⲉⲓⲛ, ⲟⲩⲁⲓⲛⲉ, ⲟⲩⲁⲉⲓⲛⲉ, ⲟⲩⲁⲉⲓⲛ, ⲟⲩⲱⲓⲛⲓ, ⲟⲩⲟⲓⲛ, ⲟⲩⲟⲉⲓⲛⲉ',
+        'text': '(S) ⲟⲩⲟⲉⲓⲛ (ⲡ)\n(A, sA) ⲟⲩⲁⲓⲛⲉ,\nⲟⲩⲁⲉⲓⲛⲉ\n(ⲡ)\n(Sa, sA, F) ⲟⲩⲁⲉⲓⲛ (ⲡ)\n(B) ⲟⲩⲱⲓⲛⲓ (ⲡ)\n(O) ⲟⲩⲟⲓⲛ (ⲡ)\n(NH)\nⲟⲩⲟⲉⲓⲛⲉ\n(ⲡ)\n(noun male)\nlight [φωσ, φωτισμοσ]\ndawn [ανατολη, ορθροσ]\nlight of eyes\nas adj [φωτεινοσ]\nlight\ndawn\nlight (of eyes)\n(S) ⲟⲩⲟⲉⲓⲛ\n(A, sA) ⲟⲩⲁ(ⲉ)ⲓⲛⲉ\n(Sa, sA, F) ⲟⲩⲁⲉⲓⲛ\n(B) ⲟⲩⲱⲓⲛⲓ\n(O) ⲟⲩⲟⲓⲛ\n(NH)\nⲟⲩⲟⲉⲓⲛⲉ\n{ext codex XIII - Trimorphic Protennoia; 158; 36;\n32; ⲟⲩⲟⲉⲓⲛⲉ ⲡⲉ\nⲉϥϣⲟⲟⲡ ϩⲛ\nⲟⲩⲟⲉⲓⲛⲉ; Ext}, {codex II - The Apocryphon of\nJohn; 106; 4; 9; ⲉϥϯ ⲙⲡⲟⲩⲟⲉⲓⲛⲉ ⲛⲁⲧϣⲓⲧϥ;\nExt}\nⲁⲧⲟⲩ., ⲁⲑⲟⲩ.\nwithout light [αωρια]\nCrum:\n(S, sA)\nⲣⲙⲛⲟⲩ.\n(NH)\nⲣⲙⲟⲩ.\nman of, dweller in light\n(S, A, B, F)\nⲣ\nⲟⲩ., ⲉⲣ ⲟⲩ., ⲉⲗ ⲟⲩ.\nmake, be light, shine\nWith prep or advb:\nⲉϫⲛ- (c)\n(B)\nϩⲓϫⲉⲛ-\n(c)\n(B)\nⲛ-\n(c)\n(S)\nⲉⲃⲟⲗ\n(c)\nⲣⲉϥⲣ ⲟⲩ.\none who lights, illuminator\n[φωστηρ]\nϭⲓⲛⲣ ⲟⲩ.,\nϫⲓⲛⲉⲣ ⲟⲩ.\nshining, illumination\nCrum:\n(B)\nϯ ⲟⲩ.\ngive light [φωτιζειν]\nϫⲓ ⲟⲩ.,\nϭⲓ ⲟⲩ.\ntake, get light\n(sA)\nⲧⲣⲟⲩ.\n(verb)\nshine'
+      },
+    ];
+    resp = new Response(JSON.stringify(dummy));
   }
 
   return (await resp.json() as object[]).map(
