@@ -169,7 +169,7 @@ crum_img_helper: FORCE
 	# TODO: (#5) Remove the filters. Do all the words.
 	python dictionary/marcion.sourceforge.net/img_helper.py \
 		--skip_existing=true \
-		--exclude "type-parsed:verb" "dialect-B:" \
+		--exclude "dialect-B:" \
 		--start_at_key="$${START_AT_KEY}" \
 		--thenounproject_key="$${THENOUNPROJECT_KEY}" \
 		--thenounproject_secret="$${THENOUNPROJECT_SECRET}"
