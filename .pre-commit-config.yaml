@@ -13,6 +13,7 @@ repos:
     rev: v4.6.0
     hooks:
       - id: trailing-whitespace
+        exclude: .*\.(tsv|csv|xml|html|xhtml)$
 
   # HTML
   - repo: local
@@ -218,7 +219,6 @@ repos:
       - id: sort-simple-yaml
       - id: forbid-submodules
       - id: mixed-line-ending
-        exclude: .*\.(tsv|csv|xml|html|xhtml)$
       - id: check-xml
 
   - repo: https://github.com/mxr/sync-pre-commit-deps
