@@ -5,59 +5,78 @@ const resultTable = document.getElementById('resultList').querySelector('tbody')
 const fullWordCheckbox = document.getElementById('fullWordCheckbox');
 const regexCheckbox = document.getElementById('regexCheckbox');
 class Result {
+  // TODO: (#229) Find all matches, not just the first one.
+  // TODO: (#229) Return the matching text in context, not just the text on its
+  // own.
   match(query, fullWord, useRegex) {
     if (!useRegex) {
+      // Escape all the special characters in the string, in order to search
+      // for raw matches.
       query = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     }
     if (fullWord) {
       query = `\\b${query}\\b`;
     }
     try {
-      const regex = new RegExp(query, 'i');
+      const regex = new RegExp(query, 'i'); // Case-insensitive.
       const match = this.text.match(regex);
       if ((match === null || match === void 0 ? void 0 : match.index) === undefined) {
         return [null, null];
       }
+      // With `fullWord`, we already force matching to be restricted to full
+      // words, so there is nothing that we need to do expand our match to fall
+      // on word boundaries, it's already the case.
+      // Otherwise, we have to expand our boundaries.
       const word = fullWord ? match[0] :
         this.getMatchFullWords(match.index, match[0]);
       const matchedLines = [];
       this.text.split('\n').forEach((line) => {
+        // TODO: (#229) It's possible for several matches, not necessarily
+        // containing the same text, to be present on the one line.
         const match = line.match(regex);
         if ((match === null || match === void 0 ? void 0 : match.index) === undefined) {
           return;
         }
+        // Highlight the matched text by wrapping it in a span with a light
+        // purple background.
         const highlightedLine = line.replace(match[0], `<span style="background-color: #f0d4fc;">${match[0]}</span>`);
         matchedLines.push(highlightedLine);
       });
       return [word, matchedLines.join('<br>')];
     }
-    catch (e) {
-      console.error('Invalid regular expression:', e);
+    catch {
+      alert('Invalid regular expression');
       return [null, null];
     }
   }
   getMatchFullWords(matchStart, match) {
     let start = matchStart;
     let end = matchStart + match.length;
+    // Expand left: Move the start index left until a word boundary is found.
     while (start > 0 && !/\W/.test(this.text[start - 1])) {
       start--;
     }
+    // Expand right: Move the end index right until a word boundary is found.
     while (end < this.text.length && !/\W/.test(this.text[end])) {
       end++;
     }
+    // Return the expanded substring.
     return this.text.substring(start, end);
   }
 }
+// Load the JSON file as a Promise that will resolve once the data is fetched.
 const fileMap = (async function () {
   let resp;
   try {
     resp = await fetch('index.json', { mode: 'cors' });
   }
   catch {
+    // If fetch fails (e.g., due to CORS issues), return dummy data.
     resp = new Response('[{"path": "1.html", "title": "ⲟⲩⲱⲓⲛⲓ", "text": "light\\nman of light" }]');
   }
   return (await resp.json()).map((obj) => Object.assign(new Result(), obj));
 })();
+// Event listener for the search button.
 let currentAbortController = null;
 async function search() {
   if (currentAbortController) {
@@ -69,22 +88,22 @@ async function search() {
   const fullWord = fullWordCheckbox.checked;
   const useRegex = regexCheckbox.checked;
   if (!query) {
-    resultTable.innerHTML = '';
+    resultTable.innerHTML = ''; // Clear previous results.
     return;
   }
   const results = await fileMap;
-  resultTable.innerHTML = '';
+  resultTable.innerHTML = ''; // Clear previous results.
   let found = false;
   for (const res of results) {
     if (abortController.signal.aborted) {
       return;
     }
     const [matchedWord, matchedLines] = res.match(query, fullWord, useRegex);
-    console.log(matchedLines);
     if (matchedWord === null || matchedLines === null) {
       continue;
     }
     found = true;
+    // Create a new row for the table
     const row = document.createElement('tr');
     const pathCell = document.createElement('td');
     const titleCell = document.createElement('td');
@@ -108,8 +127,9 @@ async function search() {
     resultTable.appendChild(row);
   }
 }
+// Wrapper function to handle the async search call.
 function handleSearchClick() {
-  void search();
+  void search(); // Call the async function and ignore the returned Promise.
 }
 searchButton.addEventListener('click', handleSearchClick);
 searchBox.addEventListener('keypress', (event) => {
