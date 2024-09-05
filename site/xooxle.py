@@ -64,7 +64,12 @@ def build_index(
             text = soup.get_text()
 
             # Remove excess space.
-            text = " ".join(text.split()).strip()
+            lines: list[str] = text.split("\n")
+            lines = [ln.strip() for ln in lines]
+            lines = list(filter(None, lines))
+            lines = [" ".join(line.split()) for line in lines]
+            text = "\n".join(lines)
+            del lines
 
             # Store the relative file path and extracted text in the index.
             relative_path = os.path.relpath(file_path, directory)
