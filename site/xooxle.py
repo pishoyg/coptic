@@ -52,6 +52,9 @@ def build_index(
             assert soup.title.string
             title: str = soup.title.string
 
+            # Remove the title before extracting text.
+            soup.title.decompose()
+
             # Remove elements with the specified classes.
             for class_name in exclude:
                 for element in soup.find_all(class_=class_name):
