@@ -1,4 +1,3 @@
-import collections
 import json
 import os
 import re
@@ -568,24 +567,10 @@ class _dir_lister:
 
 class _sensor:
     def __init__(self, keys: list[str], sense_jsons: list[str]) -> None:
-        self.decoder = json.JSONDecoder(
-            object_pairs_hook=self.dupe_checking_hook,
-        )
         assert len(keys) == len(sense_jsons)
         self.d: dict = {
-            k: self.decoder.decode(ss) if ss else {}
-            for k, ss in zip(keys, sense_jsons)
+            k: json.loads(ss) if ss else {} for k, ss in zip(keys, sense_jsons)
         }
-
-    def dupe_checking_hook(self, pairs: list) -> dict[str, str]:
-        if any(
-            count > 1
-            for _, count in collections.Counter(
-                map(lambda p: p[0], pairs),
-            ).items()
-        ):
-            utils.fatal("duplicate elements in JSON:", pairs)
-        return {key: value for key, value in pairs}
 
     def get_caption(self, path: str) -> str:
         stem = utils.stem(path)

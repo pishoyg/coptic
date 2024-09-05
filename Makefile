@@ -126,41 +126,8 @@ crum: $(shell find dictionary/marcion.sourceforge.net/ -type f)
 	python dictionary/marcion.sourceforge.net/main.py
 
 
-
 crum_appendices: FORCE
-
-	python -c $$'import utils\n\
-	utils.download_gsheet(\
-	"https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg",\
-	"dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv",\
-	0,\
-	)'
-
-	python -c $$'import utils\n\
-	utils.download_gsheet(\
-	"https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg",\
-	"dictionary/marcion.sourceforge.net/data/input/derivation_appendices.tsv",\
-	1,\
-	)'
-
-	# Verify the senses have valid JSON, and numerical keys.
-	for BASENAME in "root_appendices.tsv" "derivation_appendices.tsv"; do \
-		KEYS=$$(cut \
-			--fields 5 \
-			"dictionary/marcion.sourceforge.net/data/input/$${BASENAME}" \
-			| tail -n +2  \
-			| grep --invert -E '^[[:space:]]*$$' \
-			| sed 's/""/"/g' \
-			| sed 's/"//' \
-			| rev | sed 's/"//' | rev \
-			| jq "keys" \
-			| grep -o '".*"' \
-			| grep '"[[:digit:]]+"' --extended-regexp --invert); \
-		if [ -n "$${KEYS}" ]; then \
-			echo -e "$${RED}$${KEYS}$${PURPLE} are invalid.$${RESET}"; \
-			exit 1; \
-		fi; \
-	done
+	python dictionary/marcion.sourceforge.net/appendices.py --download
 
 crum_img: $(shell find dictionary/marcion.sourceforge.net/data/ -type f)
 	python dictionary/marcion.sourceforge.net/img_helper.py --batch
