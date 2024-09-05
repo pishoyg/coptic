@@ -5,11 +5,6 @@ const resultList = document.getElementById('resultList');
 const fullWordCheckbox = document.getElementById('fullWordCheckbox');
 const regexCheckbox = document.getElementById('regexCheckbox');
 class Result {
-  constructor(path, title, text) {
-    this.path = path;
-    this.title = title;
-    this.text = text;
-  }
   match(query, fullWord, useRegex) {
     if (!useRegex) {
       query = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -57,8 +52,7 @@ const fileMap = (async function () {
   catch {
     resp = new Response('[{"path": "1.html", "title": "ⲟⲩⲱⲓⲛⲓ", "text": "light" }]');
   }
-  const json = await resp.json().then((resp) => resp);
-  return Array.from(json).map((dict) => Object.assign(new Result('', '', ''), dict));
+  return (await resp.json()).map((obj) => Object.assign(new Result(), obj));
 })();
 let currentAbortController = null;
 async function search() {

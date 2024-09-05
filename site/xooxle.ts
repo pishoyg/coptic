@@ -5,12 +5,13 @@ const fullWordCheckbox = document.getElementById('fullWordCheckbox') as HTMLInpu
 const regexCheckbox = document.getElementById('regexCheckbox') as HTMLInputElement;
 
 class Result {
-  constructor(
-    readonly path: string,
-    readonly title: string,
-    readonly text: string,
-  ) { }
+  readonly path!: string;
+  readonly title!: string;
+  readonly text!: string;
 
+  // TODO: (#229) Find all matches, not just the first one.
+  // TODO: (#229) Return the matching text in context, not just the text on its
+  // own.
   match(query: string, fullWord: boolean, useRegex: boolean): string | null {
     if (!useRegex) {
       // Escape all the special characters in the string, in order to search
@@ -27,6 +28,9 @@ class Result {
         return null;
       }
       if (fullWord) {
+        // We already force matching to be restricted to full words, so there
+        // is nothing that we need to do expand our match to fall on word
+        // boundaries. This is already the case.
         return match[0];
       }
       return this.getMatchFullWords(match[0]);
@@ -74,10 +78,8 @@ const fileMap: Promise<Result[]> = (async function(): Promise<Result[]> {
     );
   }
 
-  const json = await resp.json().then((resp) => resp as object[]);
-  return Array.from(json).map((dict: object) =>
-    Object.assign(new Result('', '', ''), dict),
-  );
+  return (await resp.json() as object[]).map(
+    (obj) => Object.assign(new Result(), obj));
 })();
 
 // Event listener for the search button.
