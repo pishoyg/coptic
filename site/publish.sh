@@ -63,6 +63,8 @@ build() {
   if [ -n "$(git -C "${SITE_DIR}" status --short)" ]; then
     echo -e "${RED}The site repo is dirty. This should be done in a standalone commit.${RESET}"
     echo -e "${RED}You can (irreversibly) clean it by running the following:${RESET}"
+    echo -e "${PURPLE}bash site/publish.sh --clean${RESET}"
+    echo -e "${RED}You can also do it manually:${RESET}"
     echo -e "${PURPLE}git -C '${SITE_DIR}' clean -d --force${RESET}"
     echo -e "${PURPLE}git -C '${SITE_DIR}' reset --hard${RESET}"
     exit 1
