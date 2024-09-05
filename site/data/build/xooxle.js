@@ -139,6 +139,8 @@ function handleSearchClick() {
   void search(); // Call the async function and ignore the returned Promise.
 }
 searchButton.addEventListener('click', handleSearchClick);
+fullWordCheckbox.addEventListener('click', handleSearchClick);
+fullWordCheckbox.addEventListener('click', handleSearchClick);
 searchBox.addEventListener('keypress', (event) => {
   if (event.key === 'Enter') {
     event.preventDefault();

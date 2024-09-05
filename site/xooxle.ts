@@ -169,6 +169,8 @@ function handleSearchClick() {
 }
 
 searchButton.addEventListener('click', handleSearchClick);
+fullWordCheckbox.addEventListener('click', handleSearchClick);
+fullWordCheckbox.addEventListener('click', handleSearchClick);
 searchBox.addEventListener('keypress', (event) => {
   if (event.key === 'Enter') {
     event.preventDefault();
