@@ -24,7 +24,7 @@ class Result {
     try {
       const regex = new RegExp(query, 'i'); // Case-insensitive.
       const match = this.text.match(regex);
-      if (!match) {
+      if (match?.index === undefined) {
         return null;
       }
       if (fullWord) {
@@ -33,21 +33,15 @@ class Result {
         // boundaries. This is already the case.
         return match[0];
       }
-      return this.getMatchFullWords(match[0]);
+
+      return this.getMatchFullWords(match.index, match[0]);
     } catch (e) {
       console.error('Invalid regular expression:', e);
       return null;
     }
   }
 
-  getMatchFullWords(match: string): string {
-    // Find the index of the match within the text.
-    const matchStart = this.text.indexOf(match);
-
-    if (matchStart === -1) {
-      return match; // If the match is not found, return it as-is.
-    }
-
+  getMatchFullWords(matchStart: number, match: string): string {
     let start = matchStart;
     let end = matchStart + match.length;
 

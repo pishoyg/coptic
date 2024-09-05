@@ -15,24 +15,20 @@ class Result {
     try {
       const regex = new RegExp(query, 'i');
       const match = this.text.match(regex);
-      if (!match) {
+      if (!match || match.index === undefined) {
         return null;
       }
       if (fullWord) {
         return match[0];
       }
-      return this.getMatchFullWords(match[0]);
+      return this.getMatchFullWords(match.index, match[0]);
     }
     catch (e) {
       console.error('Invalid regular expression:', e);
       return null;
     }
   }
-  getMatchFullWords(match) {
-    const matchStart = this.text.indexOf(match);
-    if (matchStart === -1) {
-      return match;
-    }
+  getMatchFullWords(matchStart, match) {
     let start = matchStart;
     let end = matchStart + match.length;
     while (start > 0 && !/\W/.test(this.text[start - 1])) {
