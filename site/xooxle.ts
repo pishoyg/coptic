@@ -12,7 +12,8 @@ class Result {
   // TODO: (#229) Find all matches, not just the first one.
   // TODO: (#229) Return the matching text in context, not just the text on its
   // own.
-  match(query: string, fullWord: boolean, useRegex: boolean): string | null {
+  match(query: string, fullWord: boolean, useRegex: boolean):
+    [string | null, string | null] {
     if (!useRegex) {
       // Escape all the special characters in the string, in order to search
       // for raw matches.
@@ -25,19 +26,34 @@ class Result {
       const regex = new RegExp(query, 'i'); // Case-insensitive.
       const match = this.text.match(regex);
       if (match?.index === undefined) {
-        return null;
+        return [null, null];
       }
-      if (fullWord) {
-        // We already force matching to be restricted to full words, so there
-        // is nothing that we need to do expand our match to fall on word
-        // boundaries. This is already the case.
-        return match[0];
-      }
-
-      return this.getMatchFullWords(match.index, match[0]);
-    } catch (e) {
-      console.error('Invalid regular expression:', e);
-      return null;
+      // With `fullWord`, we already force matching to be restricted to full
+      // words, so there is nothing that we need to do expand our match to fall
+      // on word boundaries, it's already the case.
+      // Otherwise, we have to expand our boundaries.
+      const word = fullWord ? match[0] :
+        this.getMatchFullWords(match.index, match[0]);
+      const matchedLines: string[] = [];
+      this.text.split('\n').forEach((line: string) => {
+        // TODO: (#229) It's possible for several matches, not necessarily
+        // containing the same text, to be present on the one line.
+        const match = line.match(regex);
+        if (match?.index === undefined) {
+          return;
+        }
+        // Highlight the matched text by wrapping it in a span with a light
+        // purple background.
+        const highlightedLine = line.replace(
+          match[0],
+          `<span style="background-color: #f0d4fc;">${match[0]}</span>`
+        );
+        matchedLines.push(highlightedLine);
+      });
+      return [word, matchedLines.join('<br>')];
+    } catch {
+      alert('Invalid regular expression');
+      return [null, null];
     }
   }
 
@@ -68,7 +84,7 @@ const fileMap: Promise<Result[]> = (async function(): Promise<Result[]> {
   } catch {
     // If fetch fails (e.g., due to CORS issues), return dummy data.
     resp = new Response(
-      '[{"path": "1.html", "title": "ⲟⲩⲱⲓⲛⲓ", "text": "light" }]',
+      '[{"path": "1.html", "title": "ⲟⲩⲱⲓⲛⲓ", "text": "light\\nman of light" }]',
     );
   }
 
@@ -106,8 +122,8 @@ async function search() {
       return;
     }
 
-    const matchedWord = res.match(query, fullWord, useRegex);
-    if (!matchedWord) {
+    const [matchedWord, matchedLines] = res.match(query, fullWord, useRegex);
+    if (matchedWord === null || matchedLines === null) {
       continue;
     }
     found = true;
@@ -117,13 +133,16 @@ async function search() {
 
     const pathCell = document.createElement('td');
     const titleCell = document.createElement('td');
+    const linesCell = document.createElement('td');
 
     pathCell.innerHTML = `<a href="${res.path}#:~:text=${encodeURIComponent(matchedWord)}">
       ${res.path.replace('.html', '')}</a>`;
-    titleCell.textContent = res.title;
+    titleCell.innerHTML = res.title;
+    linesCell.innerHTML = matchedLines;
 
     row.appendChild(pathCell);
     row.appendChild(titleCell);
+    row.appendChild(linesCell);
 
     resultTable.appendChild(row);
 

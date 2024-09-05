@@ -15,17 +15,25 @@ class Result {
     try {
       const regex = new RegExp(query, 'i');
       const match = this.text.match(regex);
-      if (!match || match.index === undefined) {
-        return null;
+      if ((match === null || match === void 0 ? void 0 : match.index) === undefined) {
+        return [null, null];
       }
-      if (fullWord) {
-        return match[0];
-      }
-      return this.getMatchFullWords(match.index, match[0]);
+      const word = fullWord ? match[0] :
+        this.getMatchFullWords(match.index, match[0]);
+      const matchedLines = [];
+      this.text.split('\n').forEach((line) => {
+        const match = line.match(regex);
+        if ((match === null || match === void 0 ? void 0 : match.index) === undefined) {
+          return;
+        }
+        const highlightedLine = line.replace(match[0], `<span style="background-color: #f0d4fc;">${match[0]}</span>`);
+        matchedLines.push(highlightedLine);
+      });
+      return [word, matchedLines.join('<br>')];
     }
     catch (e) {
       console.error('Invalid regular expression:', e);
-      return null;
+      return [null, null];
     }
   }
   getMatchFullWords(matchStart, match) {
@@ -46,7 +54,7 @@ const fileMap = (async function () {
     resp = await fetch('index.json', { mode: 'cors' });
   }
   catch {
-    resp = new Response('[{"path": "1.html", "title": "ⲟⲩⲱⲓⲛⲓ", "text": "light" }]');
+    resp = new Response('[{"path": "1.html", "title": "ⲟⲩⲱⲓⲛⲓ", "text": "light\\nman of light" }]');
   }
   return (await resp.json()).map((obj) => Object.assign(new Result(), obj));
 })();
@@ -71,19 +79,23 @@ async function search() {
     if (abortController.signal.aborted) {
       return;
     }
-    const matchedWord = res.match(query, fullWord, useRegex);
-    if (!matchedWord) {
+    const [matchedWord, matchedLines] = res.match(query, fullWord, useRegex);
+    console.log(matchedLines);
+    if (matchedWord === null || matchedLines === null) {
       continue;
     }
     found = true;
     const row = document.createElement('tr');
     const pathCell = document.createElement('td');
     const titleCell = document.createElement('td');
+    const linesCell = document.createElement('td');
     pathCell.innerHTML = `<a href="${res.path}#:~:text=${encodeURIComponent(matchedWord)}">
       ${res.path.replace('.html', '')}</a>`;
-    titleCell.textContent = res.title;
+    titleCell.innerHTML = res.title;
+    linesCell.innerHTML = matchedLines;
     row.appendChild(pathCell);
     row.appendChild(titleCell);
+    row.appendChild(linesCell);
     resultTable.appendChild(row);
     await new Promise((resolve) => setTimeout(resolve, 0));
   }
