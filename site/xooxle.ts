@@ -1,6 +1,6 @@
 const searchBox = document.getElementById('searchBox') as HTMLInputElement;
 const searchButton = document.getElementById('searchButton') as HTMLButtonElement;
-const resultList = document.getElementById('resultList') as HTMLUListElement;
+const resultTable = document.getElementById('resultList')!.querySelector('tbody')!;
 const fullWordCheckbox = document.getElementById('fullWordCheckbox') as HTMLInputElement;
 const regexCheckbox = document.getElementById('regexCheckbox') as HTMLInputElement;
 
@@ -81,17 +81,14 @@ const fileMap: Promise<Result[]> = (async function(): Promise<Result[]> {
   return (await resp.json() as object[]).map(
     (obj) => Object.assign(new Result(), obj));
 })();
-
 // Event listener for the search button.
 let currentAbortController: AbortController | null = null;
 
 async function search() {
-  // If there is an ongoing search, abort it.
   if (currentAbortController) {
     currentAbortController.abort();
   }
 
-  // Create a new AbortController for the current search.
   const abortController = new AbortController();
   currentAbortController = abortController;
 
@@ -99,23 +96,20 @@ async function search() {
   const fullWord = fullWordCheckbox.checked;
   const useRegex = regexCheckbox.checked;
 
-  // If search is requested with an empty query, clear results and return.
   if (!query) {
-    resultList.innerHTML = '';
+    resultTable.innerHTML = ''; // Clear previous results.
     return;
   }
 
-  // Wait for fileMap to resolve and get the list of results.
   const results = await fileMap;
 
-  resultList.innerHTML = ''; // Clear previous results.
+  resultTable.innerHTML = ''; // Clear previous results.
 
   let found = false;
 
   for (const res of results) {
-    // Check if the search has been aborted.
     if (abortController.signal.aborted) {
-      return; // Exit the function early if the search was aborted.
+      return;
     }
 
     const matchedWord = res.match(query, fullWord, useRegex);
@@ -123,19 +117,31 @@ async function search() {
       continue;
     }
     found = true;
-    const li = document.createElement('li');
-    li.innerHTML = `<a href="${res.path}#:~:text=${encodeURIComponent(matchedWord)}">
-      ${res.path.replace('.html', '')}</a> ${res.title}`;
-    resultList.appendChild(li);
 
-    // Yield to update the display incrementally.
+    // Create a new row for the table
+    const row = document.createElement('tr');
+
+    const pathCell = document.createElement('td');
+    const titleCell = document.createElement('td');
+
+    pathCell.innerHTML = `<a href="${res.path}#:~:text=${encodeURIComponent(matchedWord)}">
+      ${res.path.replace('.html', '')}</a>`;
+    titleCell.textContent = res.title;
+
+    row.appendChild(pathCell);
+    row.appendChild(titleCell);
+
+    resultTable.appendChild(row);
+
     await new Promise((resolve) => setTimeout(resolve, 0));
   }
-
   if (!found && !abortController.signal.aborted) {
-    const li = document.createElement('li');
-    li.innerHTML = 'No matching files found.';
-    resultList.appendChild(li);
+    const row = document.createElement('tr');
+    const cell = document.createElement('td');
+    cell.setAttribute('colspan', '2');
+    cell.textContent = 'No matching files found.';
+    row.appendChild(cell);
+    resultTable.appendChild(row);
   }
 }
 

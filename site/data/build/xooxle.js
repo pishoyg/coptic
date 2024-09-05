@@ -1,7 +1,7 @@
 'use strict';
 const searchBox = document.getElementById('searchBox');
 const searchButton = document.getElementById('searchButton');
-const resultList = document.getElementById('resultList');
+const resultTable = document.getElementById('resultList').querySelector('tbody');
 const fullWordCheckbox = document.getElementById('fullWordCheckbox');
 const regexCheckbox = document.getElementById('regexCheckbox');
 class Result {
@@ -65,11 +65,11 @@ async function search() {
   const fullWord = fullWordCheckbox.checked;
   const useRegex = regexCheckbox.checked;
   if (!query) {
-    resultList.innerHTML = '';
+    resultTable.innerHTML = '';
     return;
   }
   const results = await fileMap;
-  resultList.innerHTML = '';
+  resultTable.innerHTML = '';
   let found = false;
   for (const res of results) {
     if (abortController.signal.aborted) {
@@ -80,16 +80,24 @@ async function search() {
       continue;
     }
     found = true;
-    const li = document.createElement('li');
-    li.innerHTML = `<a href="${res.path}#:~:text=${encodeURIComponent(matchedWord)}">
-      ${res.path.replace('.html', '')}</a> ${res.title}`;
-    resultList.appendChild(li);
+    const row = document.createElement('tr');
+    const pathCell = document.createElement('td');
+    const titleCell = document.createElement('td');
+    pathCell.innerHTML = `<a href="${res.path}#:~:text=${encodeURIComponent(matchedWord)}">
+      ${res.path.replace('.html', '')}</a>`;
+    titleCell.textContent = res.title;
+    row.appendChild(pathCell);
+    row.appendChild(titleCell);
+    resultTable.appendChild(row);
     await new Promise((resolve) => setTimeout(resolve, 0));
   }
   if (!found && !abortController.signal.aborted) {
-    const li = document.createElement('li');
-    li.innerHTML = 'No matching files found.';
-    resultList.appendChild(li);
+    const row = document.createElement('tr');
+    const cell = document.createElement('td');
+    cell.setAttribute('colspan', '2');
+    cell.textContent = 'No matching files found.';
+    row.appendChild(cell);
+    resultTable.appendChild(row);
   }
 }
 function handleSearchClick() {
