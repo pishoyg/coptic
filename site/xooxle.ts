@@ -6,8 +6,9 @@ const regexCheckbox = document.getElementById('regexCheckbox') as HTMLInputEleme
 document.getElementById('resultTable')!.innerHTML = `
 <thead>
   <colgroup>
-    <col style="width: 50.0%;">
-    <col style="width: 50.0%;">
+    <col style="width: 10.0%;">
+    <col style="width: 30.0%;">
+    <col style="width: 60.0%;">
   </colgroup>
 </thead>
 <tbody>
@@ -163,9 +164,9 @@ async function search() {
     viewCell.innerHTML = `<a href="${res.path}#:~:text=${encodeURIComponent(matchedWord)}">
       view</a>`;
 
+    row.appendChild(viewCell);
     row.appendChild(titleCell);
     row.appendChild(linesCell);
-    row.appendChild(viewCell);
 
     resultTable.appendChild(row);
 
