@@ -29,6 +29,12 @@ parser.add_argument(
     default=[],
     help="List of HTML classes to exclude.",
 )
+parser.add_argument(
+    "--title_id",
+    type=str,
+    default="",
+    help="If given, find a tag with this id, and use its text as the title.",
+)
 
 
 def get_text(tag: bs4.Tag) -> str:
@@ -115,6 +121,7 @@ def clean_text(text: str) -> str:
 def build_index(
     directory: str,
     exclude: list[str],
+    title_id: str,
 ) -> list[dict[str, str]]:
 
     index: list[dict[str, str]] = []
@@ -132,15 +139,22 @@ def build_index(
             # Get the page title.
             assert soup.title
             assert soup.title.string
-            title: str = soup.title.string
-
-            # Remove the title before extracting text.
-            soup.title.decompose()
 
             # Remove elements with the specified classes.
             for class_name in exclude:
                 for element in soup.find_all(class_=class_name):
+                    assert isinstance(element, bs4.Tag)
                     element.decompose()  # Removes the element from the tree.
+
+            if title_id:
+                element = soup.find(id=title_id)
+                assert isinstance(element, bs4.Tag)
+                title = clean_text(get_text(element))
+            else:
+                title = soup.title.string
+
+            # Remove the title before extracting text.
+            soup.title.decompose()
 
             # Extract the remaining text
             text = clean_text(get_text(soup))
@@ -163,7 +177,7 @@ def main():
     args = parser.parse_args()
 
     # Read HTML files and extract text.
-    index = build_index(args.directory, args.exclude)
+    index = build_index(args.directory, args.exclude, args.title_id)
 
     # Write the resulting map to a JSON file.
     utils.write(utils.json_dumps(index), args.output)
