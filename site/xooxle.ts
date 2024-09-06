@@ -174,7 +174,7 @@ function handleSearchQuery() {
     // Call the async function after the timeout.
     // Use void to ignore the returned promise.
     void search();
-  }, 150);
+  }, 100);
 }
 
 searchBox.addEventListener('input', handleSearchQuery);
