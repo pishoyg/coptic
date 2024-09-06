@@ -318,7 +318,7 @@ crum_root_keys () {
 }
 CRUM_PAGES_CHANGED=$(crum_root_keys | sort | uniq | wc --lines)
 
-# TODO: (#214) It's confusing to print the number of lines of code as two
+# TODO: (#231) It's confusing to print the number of lines of code as two
 # distinct values, one including the archive and one excluding it! Remove the
 # archive from both. We're only interested in the live lines.
 echo -e "${BLUE}Number of lines of code: ${GREEN}${LOC}${BLUE}."\
