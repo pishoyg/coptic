@@ -81,8 +81,7 @@ const DIALECTS = [
 const DIALECT_CODE_TO_CLASS = (function () {
   const codeToClass = new Map();
   DIALECTS.forEach((cls) => {
-    var _a;
-    const code = (_a = document.querySelector(`.${CLS_DIALECT}.${cls}`)) === null || _a === void 0 ? void 0 : _a.innerHTML;
+    const code = document.querySelector(`.${CLS_DIALECT}.${cls}`)?.innerHTML;
     if (code === undefined) {
       return;
     }
@@ -91,8 +90,9 @@ const DIALECT_CODE_TO_CLASS = (function () {
   return codeToClass;
 }());
 function get_url_or_local(param, default_value = null) {
-  var _a, _b;
-  return (_b = (_a = (new URLSearchParams(window.location.search)).get(param)) !== null && _a !== void 0 ? _a : localStorage.getItem(param)) !== null && _b !== void 0 ? _b : default_value;
+  return (new URLSearchParams(window.location.search)).get(param)
+        ?? localStorage.getItem(param)
+        ?? default_value;
 }
 function window_open(url) {
   window.open(url, '_blank', 'noopener,noreferrer').focus();
@@ -113,7 +113,6 @@ function set_url_and_local(param, value) {
   window.history.pushState('', '', url.toString());
 }
 function moveElement(el, tag, attrs) {
-  var _a;
   const copy = document.createElement(tag);
   copy.innerHTML = el.innerHTML;
   Array.from(el.attributes).forEach((att) => {
@@ -122,7 +121,7 @@ function moveElement(el, tag, attrs) {
   Object.entries(attrs).forEach(([key, value]) => {
     copy.setAttribute(key, value);
   });
-  (_a = el.parentNode) === null || _a === void 0 ? void 0 : _a.replaceChild(copy, el);
+  el.parentNode?.replaceChild(copy, el);
 }
 // Handle CLS_CRUM_PAGE class.
 Array.prototype.forEach.call(document.getElementsByClassName(CLS_CRUM_PAGE), (el) => {

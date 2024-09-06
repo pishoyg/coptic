@@ -30,7 +30,7 @@ class Result {
     try {
       const regex = new RegExp(query, 'i'); // Case-insensitive.
       const match = this.text.match(regex);
-      if ((match === null || match === void 0 ? void 0 : match.index) === undefined) {
+      if (match?.index === undefined) {
         return [null, null];
       }
       // With `fullWord`, we already force matching to be restricted to full
@@ -44,7 +44,7 @@ class Result {
         // TODO: (#229) It's possible for several matches, not necessarily
         // containing the same text, to be present on the one line.
         const match = line.match(regex);
-        if ((match === null || match === void 0 ? void 0 : match.index) === undefined) {
+        if (match?.index === undefined) {
           return;
         }
         // Highlight the matched text by wrapping it in a span with a light
