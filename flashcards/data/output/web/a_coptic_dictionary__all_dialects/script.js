@@ -1,5 +1,12 @@
 'use strict';
 window.addEventListener('load', () => {
+// TODO: (#202) Reduce the dependency on `innerHTML`. Use attributes when
+// possible. NOTE: The associated issue is closed. Judge whether it should be
+// reopened, or if we should create a new issue, or just delete this TODO.
+// NOTE: The use of classes as constants starting with CLS_ is a remnant of an
+// old restriction that was introduced to support class obfuscation. The
+// restriction has been lifted, and the enforcing pre-commit has been removed.
+// Whether or not to retain this convention can be decided later.
   const CLS_CRUM_PAGE = 'crum-page';
   const CLS_CRUM_PAGE_EXTERNAL = 'crum-page-external';
   const CLS_DAWOUD_PAGE_IMG = 'dawoud-page-img';
@@ -39,6 +46,39 @@ window.addEventListener('load', () => {
   const DIALECTS = [
     CLS_S, CLS_Sa, CLS_Sf, CLS_A, CLS_sA, CLS_B, CLS_F, CLS_Fb, CLS_O, CLS_NH,
   ];
+  /*
+ * Dialect classes are to be found in:
+ * 1. HTML classes
+ * 2. JavaScript classes
+ *
+ * Dialect codes are to be found in:
+ * 1. Dialect Elements' inner HTML
+ * 2. The `d` parameter (which will be set using #1)
+ *
+ * For example, consider the following HTML:
+ * ```
+ * <span class="dialect cls_B">B</span>
+ * ```
+ *
+ * The class is "cls_B". The code is "B". The code will be used to set the
+ * parameter `d`. The class will be used in JavaScript.
+ * Thus, expect the following line to live in your JavaScript:
+ * ```
+ * const CLS_B: Dialect = "cls_B";
+ * ```
+ *
+ * We also use this HTML span to construct a mapping between dialect codes
+ * and classes.
+ * The mapping is restricted to the dialects that are present in a given
+ * page, and that's OK. On a given page, we have no need for the dialects
+ * that are absent from the page! Makes sense, eh?
+ *
+ * It is the classes that are used for internal processing, and it is the
+ * codes that are presented to the user. This way, the `d` parameter has a
+ * "pretty" value, and is persistent.
+ *
+ * As for the classes, we can obfuscate them as we like!
+ */
   const DIALECT_CODE_TO_CLASS = (function () {
     const codeToClass = new Map();
     DIALECTS.forEach((cls) => {
@@ -85,6 +125,7 @@ window.addEventListener('load', () => {
     });
     (_a = el.parentNode) === null || _a === void 0 ? void 0 : _a.replaceChild(copy, el);
   }
+  // Handle CLS_CRUM_PAGE class.
   Array.prototype.forEach.call(document.getElementsByClassName(CLS_CRUM_PAGE), (el) => {
     el.classList.add(CLS_LINK);
     el.onclick = () => {
@@ -96,24 +137,28 @@ window.addEventListener('load', () => {
       document.getElementById(`crum${pageNumber}`).scrollIntoView();
     };
   });
+  // Handle CLS_CRUM_PAGE_EXTERNAL class.
   Array.prototype.forEach.call(document.getElementsByClassName(CLS_CRUM_PAGE_EXTERNAL), (el) => {
     el.classList.add(CLS_LINK);
     el.onclick = () => {
       window_open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.innerHTML}`);
     };
   });
+  // Handle CLS_DAWOUD_PAGE_EXTERNAL class.
   Array.prototype.forEach.call(document.getElementsByClassName(CLS_DAWOUD_PAGE_IMG), (el) => {
     el.classList.add(CLS_LINK);
     el.onclick = () => {
       window_open('https://coptic-treasures.com/book/coptic-dictionary-moawad-abd-al-nour/');
     };
   });
+  // Handle CLS_CRUM_PAGE_IMG class.
   Array.prototype.forEach.call(document.getElementsByClassName(CLS_CRUM_PAGE_IMG), (el) => {
     el.classList.add(CLS_LINK);
     el.onclick = () => {
       window_open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.getAttribute('alt')}`);
     };
   });
+  // Handle CLS_EXPLANATORY class.
   Array.prototype.forEach.call(document.getElementsByClassName(CLS_EXPLANATORY), (el) => {
     const alt = el.getAttribute('alt');
     if (!alt.startsWith('http')) {
@@ -122,12 +167,14 @@ window.addEventListener('load', () => {
     el.classList.add(CLS_LINK);
     el.onclick = () => { window_open(alt); };
   });
+  // Handle CLS_COPTIC class.
   Array.prototype.forEach.call(document.getElementsByClassName(CLS_COPTIC), (el) => {
     el.classList.add(CLS_HOVER_LINK);
     el.onclick = () => {
       window_open(`https://coptic-dictionary.org/results.cgi?quick_search=${el.innerHTML}`);
     };
   });
+  // Handle CLS_GREEK class.
   Array.prototype.forEach.call(document.getElementsByClassName(CLS_GREEK), (el) => {
     el.classList.add(CLS_LINK);
     el.classList.add(CLS_LIGHT);
@@ -135,20 +182,24 @@ window.addEventListener('load', () => {
       window_open(`https://logeion.uchicago.edu/${el.innerHTML}`);
     };
   });
+  // Handle CLS_DAWOUD_PAGE class.
   Array.prototype.forEach.call(document.getElementsByClassName(CLS_DAWOUD_PAGE), (el) => {
     el.classList.add(CLS_LINK);
     el.onclick = () => {
       document.getElementById(`dawoud${el.innerHTML.slice(0, -1)}`).scrollIntoView();
     };
   });
+  // Handle CLS_DRV_KEY class.
   Array.prototype.forEach.call(document.getElementsByClassName(CLS_DRV_KEY), (el) => {
     el.classList.add(CLS_SMALL, CLS_LIGHT, CLS_ITALIC, CLS_HOVER_LINK);
     moveElement(el, 'a', { 'href': `#drv${el.innerHTML}` });
   });
+  // Handle CLS_EXPLANATORY_KEY class.
   Array.prototype.forEach.call(document.getElementsByClassName(CLS_EXPLANATORY_KEY), (el) => {
     el.classList.add(CLS_HOVER_LINK);
     moveElement(el, 'a', { 'href': `#explanatory${el.innerHTML}` });
   });
+  // Handle CLS_DIALECT class.
   function getActiveDialectClassesInCurrentPage() {
     const d = get_url_or_local('d');
     if (d === null) {
@@ -170,6 +221,8 @@ window.addEventListener('load', () => {
     }
     set_url_and_local('d', Array.from(dd).join(','));
   }
+  /* Update the display based on the value of the `d` parameter.
+ */
   function dialect() {
     const active = getActiveDialectClassesInCurrentPage();
     function dialected(el) {
@@ -237,6 +290,7 @@ window.addEventListener('load', () => {
     };
   });
   dev();
+  // Handle CLS_RESET class.
   function reset() {
     localStorage.clear();
     const url = new URL(window.location.href);

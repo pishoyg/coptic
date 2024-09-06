@@ -9,8 +9,8 @@
   <link href="https://metremnqymi.com/crum/" rel="search">
 </head>
 <body>
-  <div class="front">
-    <table class="header">
+  <div id="front" class="front">
+    <table id="header" class="header">
       <tr>
         <td>
           <a class="home" href="https://metremnqymi.com">home</a>
@@ -38,33 +38,47 @@
     </table>
 
     <hr>
-    <span class="word B"><span class="dialect-parenthesis">(</span><span class=
-    "dialect B">B</span><span class="dialect-parenthesis">)</span> <span class=
-    "spelling B"><span class="coptic">ⲃⲁⲕⲓ</span></span> <span class=
-    "type B">(<span class="coptic">ⲧ</span>)</span></span>
+
+    <div id="pretty" class="pretty">
+      <span class="word B"><span class=
+      "dialect-parenthesis">(</span><span class=
+      "dialect B">B</span><span class="dialect-parenthesis">)</span>
+      <span class="spelling B"><span class="coptic">ⲃⲁⲕⲓ</span></span>
+      <span class="type B">(<span class="coptic">ⲧ</span>)</span></span>
+    </div>
   </div>
 
   <hr>
 
-  <div class="back">
-    (<b><span class="root-type">noun female</span></b>)
-    <br>
-    <span class="meaning">city, town [<span class="greek">πολισ</span>]</span>
-    <br>
-    <span class="right dictionary"><b><a class="crum hover-link" href=
-    "#crum">Crum:</a></b> <span class="crum-page">30b</span>
-    <br>
-    <b><a class="dawoud hover-link" href="#dawoud">Dawoud:</a></b> <span class=
-    "dawoud-page">18b</span></span>
-    <br>
+  <div id="back" class="back">
+    <div id="root-type" class="root-type">
+      (<b>noun female</b>)
+    </div>
+
+    <div id="meaning" class="meaning">
+      city, town [<span class="greek">πολισ</span>]
+    </div>
+
+    <div id="dictionary" class="dictionary">
+      <span class="right"><b><a class="crum hover-link" href=
+      "#crum">Crum:</a></b> <span class="crum-page">30b</span>
+      <br>
+      <b><a class="dawoud hover-link" href="#dawoud">Dawoud:</a></b>
+      <span class="dawoud-page">18b</span></span>
+    </div>
+
     <br>
 
     <hr>
-    <span class="marcion"><span class="word B"><span class=
-    "dialect-parenthesis">(</span><span class="dialect B">B</span><span class=
-    "dialect-parenthesis">)</span> <span class="spelling B"><span class=
-    "coptic">ⲃⲁⲕⲓ</span></span></span></span>
-    <table>
+
+    <div id="marcion" class="marcion">
+      <span class="word B"><span class=
+      "dialect-parenthesis">(</span><span class=
+      "dialect B">B</span><span class="dialect-parenthesis">)</span>
+      <span class="spelling B"><span class="coptic">ⲃⲁⲕⲓ</span></span></span>
+    </div>
+
+    <table id="derivations" class="derivations">
       <colgroup>
         <col style="width: 10.0%;">
         <col style="width: 10.0%;">
@@ -79,30 +93,33 @@
       </colgroup>
 
       <tr id="drv128" class="drv">
-        <td class="bordered" colspan="5"><span class="word"><span class=
-        "spelling"><span class="coptic">ⲫⲁϯⲃ</span>.</span></span>
+        <td class="marcion bordered" colspan="5"><span class=
+        "word"><span class="spelling"><span class=
+        "coptic">ⲫⲁϯⲃ</span>.</span></span>
         </td>
-        <td class="bordered" colspan="4">citizen<span class="drv-key dev right"
-        hidden="">128</span></td>
-        <td class="bordered" rowspan="3"><b>Crum:</b> <span class=
+        <td class="meaning bordered" colspan="4">citizen<span class=
+        "drv-key dev right" hidden="">128</span></td>
+        <td class="dictionary bordered" rowspan="3"><b>Crum:</b> <span class=
         "crum-page">30b</span></td>
       </tr>
 
       <tr id="drv129" class="drv">
-        <td class="bordered" colspan="5"><span class="word"><span class=
-        "spelling"><span class="coptic">ⲣⲉⲙⲛⲃ</span>.</span></span>
+        <td class="marcion bordered" colspan="5"><span class=
+        "word"><span class="spelling"><span class=
+        "coptic">ⲣⲉⲙⲛⲃ</span>.</span></span>
         </td>
-        <td class="bordered" colspan="4">[<span class=
+        <td class="meaning bordered" colspan="4">[<span class=
         "greek">πολιτησ</span>]<span class="drv-key dev right" hidden=
         "">129</span></td>
       </tr>
 
       <tr id="drv130" class="drv">
-        <td class="bordered" colspan="5"><span class="word"><span class=
-        "spelling"><span class="coptic">ⲙⲉⲧⲣⲉⲙⲛⲃ</span>.</span> <span class=
-        "type">(<span class="coptic">ⲧ</span>)</span></span>
+        <td class="marcion bordered" colspan="5"><span class=
+        "word"><span class="spelling"><span class=
+        "coptic">ⲙⲉⲧⲣⲉⲙⲛⲃ</span>.</span> <span class="type">(<span class=
+        "coptic">ⲧ</span>)</span></span>
         </td>
-        <td class="bordered" colspan="4"><b>(noun female)</b>
+        <td class="meaning bordered" colspan="4"><b>(noun female)</b>
         <br>
         [<span class="greek">πολιτευμα</span>]<span class="drv-key dev right"
         hidden="">130</span></td>
@@ -110,32 +127,37 @@
     </table>
 
     <hr>
-    <span id="crum" class="right dictionary"><b><span class=
-    "crum">Crum:</span></b> <span class="crum-page">30</span></span>
-    <figure>
-      <img id="crum30" class="crum-page-img" alt="30" src=
-      "dictionary_marcion.sourceforge.net_data_crum_50.png" style=
-      "width: 1000px">
-      <figcaption>
-        <span class="crum-page-external">30</span>
-      </figcaption>
-    </figure>
 
-    <br>
+    <div id="crum" class="crum dictionary">
+      <span class="right"><b>Crum:</b> <span class="crum-page">30</span></span>
+      <figure>
+        <img id="crum30" class="crum-page-img" alt="30" src=
+        "dictionary_marcion.sourceforge.net_data_crum_50.png" style=
+        "width: 1000px">
+        <figcaption>
+          <span class="crum-page-external">30</span>
+        </figcaption>
+      </figure>
+
+      <br>
+    </div>
 
     <hr>
-    <span id="dawoud" class="right dictionary"><b><span class=
-    "dawoud">Dawoud:</span></b> <span class="dawoud-page">18b</span></span>
-    <figure>
-      <img id="dawoud18" class="dawoud-page-img" alt="18" src=
-      "dictionary_copticocc.org_data_dawoud-D100-cropped_34.jpg" style=
-      "width: 1000px">
-      <figcaption>
-        <span class="dawoud-page-external">18</span>
-      </figcaption>
-    </figure>
 
-    <br>
+    <div id="dawoud" class="dawoud dictionary">
+      <span class="right"><b>Dawoud:</b> <span class=
+      "dawoud-page">18b</span></span>
+      <figure>
+        <img id="dawoud18" class="dawoud-page-img" alt="18" src=
+        "dictionary_copticocc.org_data_dawoud-D100-cropped_34.jpg" style=
+        "width: 1000px">
+        <figcaption>
+          <span class="dawoud-page-external">18</span>
+        </figcaption>
+      </figure>
+
+      <br>
+    </div>
   </div>
 </body>
 </html>
