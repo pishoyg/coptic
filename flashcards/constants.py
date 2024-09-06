@@ -282,9 +282,9 @@ def crum(
                 # Horizontal line.
                 "<hr/>",
                 # Full entry.
-                '<span class="marcion">',
+                '<div class="marcion" id="marcion">',
                 roots_col("word-parsed-classify", line_br=True),
-                "</span>",
+                "</div>",
                 # Derivations.
                 field.apl(
                     greek,

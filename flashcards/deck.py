@@ -19,11 +19,11 @@ HTML_FMT = f"""<!DOCTYPE html>
     {{links}}
   </head>
   <body>
-    <div class="front">
+    <div class="front" id="front">
         {{front}}
     </div>
     <hr/>
-    <div class="back">
+    <div class="back" id="back">
         {{back}}
     </div>
   </body>
