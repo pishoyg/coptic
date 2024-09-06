@@ -139,15 +139,18 @@ async function search() {
     // Create a new row for the table
     const row = document.createElement('tr');
 
-    const pathCell = document.createElement('td');
+    const titleCell = document.createElement('td');
     const linesCell = document.createElement('td');
+    const viewCell = document.createElement('td');
 
-    pathCell.innerHTML = `<a href="${res.path}#:~:text=${encodeURIComponent(matchedWord)}">
-      ${res.title}</a>`;
+    titleCell.innerHTML = res.title;
     linesCell.innerHTML = matchedLines;
+    viewCell.innerHTML = `<a href="${res.path}#:~:text=${encodeURIComponent(matchedWord)}">
+      view</a>`;
 
-    row.appendChild(pathCell);
+    row.appendChild(titleCell);
     row.appendChild(linesCell);
+    row.appendChild(viewCell);
 
     resultTable.appendChild(row);
 

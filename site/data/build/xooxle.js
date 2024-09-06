@@ -115,13 +115,16 @@ async function search() {
     found = true;
     // Create a new row for the table
     const row = document.createElement('tr');
-    const pathCell = document.createElement('td');
+    const titleCell = document.createElement('td');
     const linesCell = document.createElement('td');
-    pathCell.innerHTML = `<a href="${res.path}#:~:text=${encodeURIComponent(matchedWord)}">
-      ${res.title}</a>`;
+    const viewCell = document.createElement('td');
+    titleCell.innerHTML = res.title;
     linesCell.innerHTML = matchedLines;
-    row.appendChild(pathCell);
+    viewCell.innerHTML = `<a href="${res.path}#:~:text=${encodeURIComponent(matchedWord)}">
+      view</a>`;
+    row.appendChild(titleCell);
     row.appendChild(linesCell);
+    row.appendChild(viewCell);
     resultTable.appendChild(row);
     await new Promise((resolve) => setTimeout(resolve, 0));
   }
