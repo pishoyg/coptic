@@ -207,29 +207,35 @@ def crum(
                 ),
                 "<hr/>",
                 # Actual front.
+                "<div>",
                 create_front(),
+                "</div>",
             ),
         ),
         back=field.apl(
             cdo,
             field.cat(
                 # Type.
-                field.fmt(
-                    '(<b><span class="root-type">{type_parsed}</span></b>)',
-                    {"type_parsed": roots_col("type-parsed")},
-                ),
-                "<br/>",
-                # Meaning.
-                '<span class="meaning">',
-                field.apl(
-                    greek,
-                    roots_col("en-parsed", line_br=True, force=False),
-                ),
-                "</span>",
-                "<br/>",
-                # Dictionary pages.
                 field.cat(
-                    '<span class="right dictionary">',
+                    '<div class="root-type">',
+                    "(<b>",
+                    roots_col("type-parsed"),
+                    "</b>)",
+                    "</div>",
+                ),
+                # Meaning.
+                field.aon(
+                    '<div class="meaning">',
+                    field.apl(
+                        greek,
+                        roots_col("en-parsed", line_br=True, force=False),
+                    ),
+                    "</div>",
+                ),
+                # Dictionary pages.
+                field.aon(
+                    '<div class="dictionary">',
+                    '<span class="right">',
                     field.cat(
                         field.aon(
                             '<b><a href="#crum" class="crum hover-link">Crum: </a></b>',
@@ -253,10 +259,12 @@ def crum(
                         ),
                     ),
                     "</span>",
+                    "</div>",
+                    "<br>",
                 ),
-                "<br/>",
                 # Image.
-                field.xor(
+                field.aon(
+                    "<div>",
                     field.img(
                         keys=roots_col("key"),
                         # Although the same result can be obtained using
@@ -271,28 +279,36 @@ def crum(
                         },
                         force=False,
                     ),
-                    "<br/>",
+                    "</div>",
                 ),
                 # Editor's notes.
                 field.aon(
+                    "<div>",
                     "<i>Editor's Note: </i>",
                     root_appendix("notes", line_br=True, force=False),
-                    "<br/>",
+                    "</div>",
                 ),
                 # Horizontal line.
                 "<hr/>",
                 # Full entry.
-                '<div class="marcion" id="marcion">',
-                roots_col("word-parsed-classify", line_br=True),
-                "</div>",
+                field.cat(
+                    '<div class="marcion" id="marcion">',
+                    roots_col("word-parsed-classify", line_br=True),
+                    "</div>",
+                ),
                 # Derivations.
                 field.apl(
                     greek,
-                    roots_col("derivations-table", line_br=True, force=False),
+                    roots_col(
+                        "derivations-table",
+                        line_br=True,
+                        force=False,
+                    ),
                 ),
                 # Crum's pages.
                 field.aon(
                     "<hr/>",
+                    "<div>",
                     '<span id="crum" class="right dictionary">',
                     field.aon(
                         '<b><span class="crum">Crum: </span></b>',
@@ -324,10 +340,12 @@ def crum(
                         },
                         force=False,
                     ),
+                    "</div>",
                 ),
                 # Dawoud's pages.
                 field.aon(
                     "<hr/>",
+                    "<div>",
                     '<span id="dawoud" class="right dictionary">',
                     field.aon(
                         '<b><span class="dawoud">Dawoud: </span></b>',
@@ -357,6 +375,7 @@ def crum(
                         },
                         force=False,
                     ),
+                    "</div>",
                 ),
                 # Audio.
                 # TODO: (#23) Label the per-dialect audios, like you did for
@@ -367,6 +386,7 @@ def crum(
                 # structure will be necessary if we want to include more audio
                 # authors.
                 field.aon(
+                    "<div>",
                     "<hr/>",
                     field.cat(
                         # Pishoy's pronunciation.
@@ -384,6 +404,7 @@ def crum(
                             ),
                         ),
                     ),
+                    "</div>",
                 ),
             ),
         ),
