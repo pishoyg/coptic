@@ -178,5 +178,6 @@ function handleSearchQuery() {
 }
 
 searchBox.addEventListener('input', handleSearchQuery);
+searchBox.addEventListener('keypress', handleSearchQuery);
 fullWordCheckbox.addEventListener('click', handleSearchQuery);
 fullWordCheckbox.addEventListener('click', handleSearchQuery);
