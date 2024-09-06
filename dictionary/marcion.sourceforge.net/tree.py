@@ -177,7 +177,7 @@ class node:
                     (
                         "".join(
                             [
-                                f'<td colspan="{word_width}" class="bordered">',
+                                f'<td colspan="{word_width}" class="marcion bordered">',
                                 word,
                                 (
                                     f'<span hidden="" class="drv-key dev right">{key}</span>'
@@ -194,7 +194,7 @@ class node:
                     (
                         "".join(
                             [
-                                f'<td colspan="{meaning_width}" class="bordered">',
+                                f'<td colspan="{meaning_width}" class="meaning bordered">',
                                 (
                                     f"<b>({type})</b><br/>"
                                     if type not in ["-", "HEADER"]
@@ -209,7 +209,7 @@ class node:
                         else ""
                     ),
                     (
-                        f'<td rowspan="{crum_span}" class="bordered">'
+                        f'<td rowspan="{crum_span}" class="dictionary bordered">'
                         "<b>Crum: </b>"
                         f'<span class="crum-page">{crum}</span>'
                         "</td>"
