@@ -133,9 +133,16 @@ async function search() {
     resultTable.appendChild(row);
   }
 }
-// Wrapper function to handle the async search call.
+let debounceTimeout = null;
 function handleSearchQuery() {
-  void search(); // Call the async function and ignore the returned Promise.
+  if (debounceTimeout) {
+    clearTimeout(debounceTimeout);
+  }
+  debounceTimeout = setTimeout(() => {
+    // Call the async function after the timeout.
+    // Use void to ignore the returned promise.
+    void search();
+  }, 150);
 }
 searchBox.addEventListener('input', handleSearchQuery);
 fullWordCheckbox.addEventListener('click', handleSearchQuery);
