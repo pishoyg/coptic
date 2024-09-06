@@ -1,8 +1,21 @@
 const searchBox = document.getElementById('searchBox') as HTMLInputElement;
-const resultTable = document.getElementById('resultList')!.querySelector('tbody')!;
 const fullWordCheckbox = document.getElementById('fullWordCheckbox') as HTMLInputElement;
 const regexCheckbox = document.getElementById('regexCheckbox') as HTMLInputElement;
 
+// Initialize the results table. This only needs to happen once.
+document.getElementById('resultTable')!.innerHTML = `
+<thead>
+  <colgroup>
+    <col style="width: 50.0%;">
+    <col style="width: 50.0%;">
+  </colgroup>
+</thead>
+<tbody>
+</tbody>
+`;
+const resultTable = document.getElementById('resultTable')!.querySelector('tbody')!;
+
+// Set the table header once in the beginning.
 class Result {
   readonly path!: string;
   readonly title!: string;
@@ -101,6 +114,8 @@ const fileMap: Promise<Result[]> = (async function(): Promise<Result[]> {
 })();
 // Event listener for the search button.
 let currentAbortController: AbortController | null = null;
+
+// Initialize the result table header.
 
 async function search() {
   if (currentAbortController) {

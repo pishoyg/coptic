@@ -1,8 +1,20 @@
 'use strict';
 const searchBox = document.getElementById('searchBox');
-const resultTable = document.getElementById('resultList').querySelector('tbody');
 const fullWordCheckbox = document.getElementById('fullWordCheckbox');
 const regexCheckbox = document.getElementById('regexCheckbox');
+// Initialize the results table. This only needs to happen once.
+document.getElementById('resultTable').innerHTML = `
+<thead>
+  <colgroup>
+    <col style="width: 50.0%;">
+    <col style="width: 50.0%;">
+  </colgroup>
+</thead>
+<tbody>
+</tbody>
+`;
+const resultTable = document.getElementById('resultTable').querySelector('tbody');
+// Set the table header once in the beginning.
 class Result {
   // TODO: (#229) Return the matching text in context, not just the text on its
   // own.
@@ -88,6 +100,7 @@ const fileMap = (async function () {
 })();
 // Event listener for the search button.
 let currentAbortController = null;
+// Initialize the result table header.
 async function search() {
   if (currentAbortController) {
     currentAbortController.abort();
