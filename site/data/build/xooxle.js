@@ -2,6 +2,7 @@
 const searchBox = document.getElementById('searchBox');
 const fullWordCheckbox = document.getElementById('fullWordCheckbox');
 const regexCheckbox = document.getElementById('regexCheckbox');
+const HIGHLIGHT_COLOR = '#f0d4fc';
 // Initialize the results table. This only needs to happen once.
 document.getElementById('resultTable').innerHTML = `
 <thead>
@@ -15,10 +16,9 @@ document.getElementById('resultTable').innerHTML = `
 </tbody>
 `;
 const resultTable = document.getElementById('resultTable').querySelector('tbody');
-// Set the table header once in the beginning.
+// TODO: (#229) Use a smarter heuristic to show context. Instead of splitting
+// into lines, split into meaningful search units.
 class Result {
-  // TODO: (#229) Return the matching text in context, not just the text on its
-  // own.
   match(query, fullWord, useRegex) {
     if (!useRegex) {
       // Escape all the special characters in the string, in order to search
@@ -32,6 +32,9 @@ class Result {
       query = `(?<=^|[^\\p{L}\\p{N}])${query}(?=$|[^\\p{L}\\p{N}])`;
     }
     try {
+      // NOTE: We can't use the `g` flag (for global) to retrieve all regex
+      // matches, because there are some limitations regarding supporting
+      // regular expressions using both `u` and `g` flags.
       const regex = new RegExp(query, 'iu'); // Case-insensitive and Unicode-aware.
       const match = this.text.match(regex);
       if (match?.index === undefined) {
@@ -45,15 +48,10 @@ class Result {
         this.getMatchFullWords(match.index, match[0]);
       const matchedLines = [];
       this.text.split('\n').forEach((line) => {
-        // TODO: (#229) It's possible for several matches, not necessarily
-        // containing the same text, to be present on the one line.
-        const match = line.match(regex);
-        if (match?.index === undefined) {
+        const highlightedLine = this.highlightAllMatches(line, regex);
+        if (highlightedLine === line) {
           return;
         }
-        // Highlight the matched text by wrapping it in a span with a light
-        // purple background.
-        const highlightedLine = line.replace(match[0], `<span style="background-color: #f0d4fc;">${match[0]}</span>`);
         matchedLines.push(highlightedLine);
       });
       return [word, matchedLines.join('<br>')];
@@ -62,6 +60,21 @@ class Result {
       alert('Invalid regular expression');
       return [null, null];
     }
+  }
+  highlightAllMatches(line, regex) {
+    let result = '';
+    let match;
+    // Loop through all matches in the line
+    while ((match = regex.exec(line)) !== null) {
+      // Append the text before the match and the highlighted match
+      result += line.substring(0, match.index);
+      result += `<span style="background-color: ${HIGHLIGHT_COLOR};">${match[0]}</span>`;
+      // Trim the already processed part of the line
+      line = line.substring(match.index + match[0].length);
+    }
+    // Append the remaining part of the line after the last match
+    result += line;
+    return result;
   }
   getMatchFullWords(matchStart, match) {
     let start = matchStart;
@@ -106,7 +119,6 @@ const fileMap = (async function () {
 })();
 // Event listener for the search button.
 let currentAbortController = null;
-// Initialize the result table header.
 async function search() {
   if (currentAbortController) {
     currentAbortController.abort();
