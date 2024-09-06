@@ -26,10 +26,13 @@ class Result {
       query = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     }
     if (fullWord) {
-      query = `\\b${query}\\b`;
+      // Using Unicode-aware word boundaries: `\b` doesn't work for non-ASCII
+      // so we use `\p{L}` (letter) and `\p{N}` (number) to match words in any
+      // Unicode script.
+      query = `(?<=^|[^\\p{L}\\p{N}])${query}(?=$|[^\\p{L}\\p{N}])`;
     }
     try {
-      const regex = new RegExp(query, 'i'); // Case-insensitive.
+      const regex = new RegExp(query, 'iu'); // Case-insensitive and Unicode-aware.
       const match = this.text.match(regex);
       if (match?.index === undefined) {
         return [null, null];
@@ -63,12 +66,14 @@ class Result {
   getMatchFullWords(matchStart, match) {
     let start = matchStart;
     let end = matchStart + match.length;
+    // Unicode-aware boundary expansion
+    const isWordChar = (char) => /\p{L}|\p{N}/u.test(char);
     // Expand left: Move the start index left until a word boundary is found.
-    while (start > 0 && !/\W/.test(this.text[start - 1])) {
+    while (start > 0 && isWordChar(this.text[start - 1])) {
       start--;
     }
     // Expand right: Move the end index right until a word boundary is found.
-    while (end < this.text.length && !/\W/.test(this.text[end])) {
+    while (end < this.text.length && isWordChar(this.text[end])) {
       end++;
     }
     // Return the expanded substring.
