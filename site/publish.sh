@@ -22,6 +22,7 @@ readonly MESSAGE="Automated Site Publishing."
 CLEAN=false
 BUILD=false
 COMMIT=false
+SQUASH=false
 PUSH=false
 while [ $# -gt 0 ]; do
   case $1 in
@@ -34,6 +35,9 @@ while [ $# -gt 0 ]; do
   --commit)
     COMMIT=true
     ;;
+  --squash)
+    SQUASH=true
+    ;;
   --push)
     PUSH=true
     ;;
@@ -41,7 +45,8 @@ while [ $# -gt 0 ]; do
     echo -e "${GREEN}--clean ${BLUE}CLEANES uncommitted changes from the site repo.${RESET}"
     echo -e "${GREEN}--build ${BLUE}regenerates the site in the site repo.${RESET}"
     echo -e "${GREEN}--commit ${BLUE}creates a commit.${RESET}"
-    echo -e "${GREEN}--push ${BLUE}pushes the commit to the repo.${RESET}"
+    echo -e "${GREEN}--squash ${PURPLE}squashes ${BLUE}the entire commit history.${RESET}"
+    echo -e "${GREEN}--push ${PURPLE}force${BLUE}-pushes the commit to the repo.${RESET}"
     echo -e "${BLUE}You can use any combination of flags that you want.${RESET}"
     exit
     ;;
@@ -140,9 +145,14 @@ commit() {
   git -C "${SITE_DIR}" commit --message "${MESSAGE}"
 }
 
+squash() {
+  echo -e "${GREEN}Squashing.${RESET}"
+  git -C "${SITE_DIR}" reset "$(git -C "${SITE_DIR}" commit-tree "HEAD^{tree}" -m "Initial commit.")"
+}
+
 push() {
   echo -e "${GREEN}Pushing.${RESET}"
-  git -C "${SITE_DIR}" push
+  git -C "${SITE_DIR}" push --force
 }
 
 if ${CLEAN}; then
@@ -155,6 +165,10 @@ fi
 
 if ${COMMIT}; then
   commit
+fi
+
+if ${SQUASH}; then
+  squash
 fi
 
 if ${PUSH}; then
