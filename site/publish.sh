@@ -17,8 +17,6 @@ readonly GOOGLE_TAG='
 readonly ICON_TAG='  <link rel="icon" type="image/x-icon" href="/img/icon/icon-circle.png">
 '
 
-readonly MESSAGE="Automated Site Publishing."
-
 CLEAN=false
 BUILD=false
 COMMIT=false
@@ -139,10 +137,24 @@ build() {
   wait
 }
 
+_message() {
+  # NOTE: The Git commands here in this function run on the main repo, not the
+  # target (site) repo.
+  echo "github.com/pishoyg/coptic/commit/$(git rev-parse HEAD)"
+  echo '```'
+  git log -1 --pretty=%B
+  echo '```'
+  STATUS="$(git status --short | awk '{ print $2 }')"
+  if [ -n "${STATUS}" ]; then
+    echo "NOTE: Work tree was dirty:"
+    echo "${STATUS}"
+  fi
+}
+
 commit() {
   echo -e "${GREEN}Committing.${RESET}"
   git -C "${SITE_DIR}" add --all
-  git -C "${SITE_DIR}" commit --message "${MESSAGE}"
+  git -C "${SITE_DIR}" commit --message "$(_message)"
 }
 
 squash() {
