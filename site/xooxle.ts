@@ -136,16 +136,13 @@ async function search() {
     const row = document.createElement('tr');
 
     const pathCell = document.createElement('td');
-    const titleCell = document.createElement('td');
     const linesCell = document.createElement('td');
 
     pathCell.innerHTML = `<a href="${res.path}#:~:text=${encodeURIComponent(matchedWord)}">
-      ${res.path.replace('.html', '')}</a>`;
-    titleCell.innerHTML = res.title;
+      ${res.title}</a>`;
     linesCell.innerHTML = matchedLines;
 
     row.appendChild(pathCell);
-    row.appendChild(titleCell);
     row.appendChild(linesCell);
 
     resultTable.appendChild(row);
