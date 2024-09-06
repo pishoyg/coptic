@@ -158,7 +158,7 @@ async function search() {
     const linesCell = document.createElement('td');
     const viewCell = document.createElement('td');
 
-    titleCell.innerHTML = res.title;
+    titleCell.innerHTML = res.title.replaceAll('\n', '<br>');
     linesCell.innerHTML = matchedLines;
     viewCell.innerHTML = `<a href="${res.path}#:~:text=${encodeURIComponent(matchedWord)}">
       view</a>`;
