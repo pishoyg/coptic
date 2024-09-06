@@ -8,7 +8,6 @@ class Result {
   readonly title!: string;
   readonly text!: string;
 
-  // TODO: (#229) Find all matches, not just the first one.
   // TODO: (#229) Return the matching text in context, not just the text on its
   // own.
   match(query: string, fullWord: boolean, useRegex: boolean):

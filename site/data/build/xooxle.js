@@ -4,7 +4,6 @@ const resultTable = document.getElementById('resultList').querySelector('tbody')
 const fullWordCheckbox = document.getElementById('fullWordCheckbox');
 const regexCheckbox = document.getElementById('regexCheckbox');
 class Result {
-  // TODO: (#229) Find all matches, not just the first one.
   // TODO: (#229) Return the matching text in context, not just the text on its
   // own.
   match(query, fullWord, useRegex) {
