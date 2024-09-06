@@ -135,7 +135,7 @@ class node:
         out = []
         out.extend(
             [
-                "<table>",
+                '<table class="derivations" id="derivations">',
                 "<colgroup>",
             ],
         )
