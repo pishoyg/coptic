@@ -1,5 +1,4 @@
 const searchBox = document.getElementById('searchBox') as HTMLInputElement;
-const searchButton = document.getElementById('searchButton') as HTMLButtonElement;
 const resultTable = document.getElementById('resultList')!.querySelector('tbody')!;
 const fullWordCheckbox = document.getElementById('fullWordCheckbox') as HTMLInputElement;
 const regexCheckbox = document.getElementById('regexCheckbox') as HTMLInputElement;
@@ -164,16 +163,10 @@ async function search() {
 }
 
 // Wrapper function to handle the async search call.
-function handleSearchClick() {
+function handleSearchQuery() {
   void search(); // Call the async function and ignore the returned Promise.
 }
 
-searchButton.addEventListener('click', handleSearchClick);
-fullWordCheckbox.addEventListener('click', handleSearchClick);
-fullWordCheckbox.addEventListener('click', handleSearchClick);
-searchBox.addEventListener('keypress', (event) => {
-  if (event.key === 'Enter') {
-    event.preventDefault();
-    searchButton.click();
-  }
-});
+searchBox.addEventListener('input', handleSearchQuery);
+fullWordCheckbox.addEventListener('click', handleSearchQuery);
+fullWordCheckbox.addEventListener('click', handleSearchQuery);
