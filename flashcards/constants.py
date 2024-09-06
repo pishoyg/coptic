@@ -146,7 +146,7 @@ def crum(
                 # Header.
                 field.cat(
                     # Open the table.
-                    '<table class="header">',
+                    '<table id="header" class="header">',
                     "<tr>",
                     # Home
                     "<td>"
@@ -207,7 +207,7 @@ def crum(
                 ),
                 "<hr/>",
                 # Actual front.
-                "<div>",
+                '<div id="pretty" class="pretty">',
                 create_front(),
                 "</div>",
             ),
@@ -217,7 +217,12 @@ def crum(
             field.cat(
                 # Type.
                 field.cat(
-                    '<div class="root-type">',
+                    # TODO: (#233) For consistency, this should be renamed to
+                    # "type", and the existing "type" class that is used
+                    # elsewhere should be renamed to something else.
+                    # We have had the convention to use an unqualified class
+                    # name to refer to elements that relate to the root.
+                    '<div id="root-type" class="root-type">',
                     "(<b>",
                     roots_col("type-parsed"),
                     "</b>)",
@@ -225,7 +230,7 @@ def crum(
                 ),
                 # Meaning.
                 field.aon(
-                    '<div class="meaning">',
+                    '<div id="meaning" class="meaning">',
                     field.apl(
                         greek,
                         roots_col("en-parsed", line_br=True, force=False),
@@ -234,7 +239,7 @@ def crum(
                 ),
                 # Dictionary pages.
                 field.aon(
-                    '<div class="dictionary">',
+                    '<div id="dictionary" class="dictionary">',
                     '<span class="right">',
                     field.cat(
                         field.aon(
@@ -264,7 +269,7 @@ def crum(
                 ),
                 # Image.
                 field.aon(
-                    "<div>",
+                    '<div id="images" class="images">',
                     field.img(
                         keys=roots_col("key"),
                         # Although the same result can be obtained using
@@ -283,7 +288,7 @@ def crum(
                 ),
                 # Editor's notes.
                 field.aon(
-                    "<div>",
+                    '<div id="notes" class="notes">',
                     "<i>Editor's Note: </i>",
                     root_appendix("notes", line_br=True, force=False),
                     "</div>",
@@ -292,7 +297,7 @@ def crum(
                 "<hr/>",
                 # Full entry.
                 field.cat(
-                    '<div class="marcion" id="marcion">',
+                    '<div id="marcion" class="marcion">',
                     roots_col("word-parsed-classify", line_br=True),
                     "</div>",
                 ),
@@ -308,10 +313,10 @@ def crum(
                 # Crum's pages.
                 field.aon(
                     "<hr/>",
-                    "<div>",
-                    '<span id="crum" class="right dictionary">',
+                    '<div id="crum" class="crum dictionary">',
+                    '<span class="right">',
                     field.aon(
-                        '<b><span class="crum">Crum: </span></b>',
+                        "<b>Crum: </b>",
                         field.apl(
                             lambda pages: INTEGER_RE.sub(
                                 r'<span class="crum-page">\1</span>',
@@ -345,10 +350,10 @@ def crum(
                 # Dawoud's pages.
                 field.aon(
                     "<hr/>",
-                    "<div>",
-                    '<span id="dawoud" class="right dictionary">',
+                    '<div id="dawoud" class="dawoud dictionary">',
+                    '<span class="right">',
                     field.aon(
-                        '<b><span class="dawoud">Dawoud: </span></b>',
+                        "<b>Dawoud: </b>",
                         field.apl(
                             lambda pages: DICTIONARY_PAGE_RE.sub(
                                 r'<span class="dawoud-page">\1</span>',
@@ -386,8 +391,8 @@ def crum(
                 # structure will be necessary if we want to include more audio
                 # authors.
                 field.aon(
-                    "<div>",
                     "<hr/>",
+                    '<div id="sound" class="sound">',
                     field.cat(
                         # Pishoy's pronunciation.
                         field.aon(
