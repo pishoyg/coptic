@@ -5,7 +5,7 @@
 set -o errexit  # Exit upon encountering a failure.
 set -o nounset  # Consider an undefined variable to be an error.
 
-readonly KNOWN_EXTENSIONS="Makefile css csslintrc env_INFO helpers gitignore yamlfmt yamllint json mjs keylayout md plist py sh strings txt yaml toml ts"
+readonly KNOWN_EXTENSIONS="Makefile css csslintrc env_INFO helpers gitignore yamlfmt yamllint json mjs keylayout md plist py sh strings txt yaml toml ts html"
 readonly KNOWN_EXTENSIONS_ARCHIVE="gitignore java js md proto py sh sql vba"
 readonly KNOWN_ARCHIVE_SUBDIRS="bible dictionary ipa-transliteration unicode-converters"
 
@@ -213,6 +213,7 @@ LOC_KEYBOARD_LAYOUT=$(loc . -a \( -name "*.keylayout" -o -name "*.plist" -o -nam
 LOC_TXT=$(loc . -name "*.txt")
 LOC_TS=$(loc . -name "*.ts")
 LOC_JSON=$(loc . -a \( -name "*.json" -o -name ".csslintrc" \) )
+LOC_HTML=$(loc . -name "*.html")
 
 readonly TOTAL_BY_LANG="$((
   LOC_PYTHON
@@ -227,7 +228,8 @@ readonly TOTAL_BY_LANG="$((
   + LOC_KEYBOARD_LAYOUT
   + LOC_TXT
   + LOC_TS
-  + LOC_JSON))"
+  + LOC_JSON
+  + LOC_HTML))"
 
 FOC=$(foc_count .)
 FOC_PYTHON=$(foc_count . -name "*.py")
@@ -243,6 +245,7 @@ FOC_KEYBOARD_LAYOUT=$(foc_count . -a \( -name "*.keylayout" -o -name "*.plist" -
 FOC_TXT=$(foc_count . -name "*.txt")
 FOC_TS=$(foc_count . -name "*.ts")
 FOC_JSON=$(foc_count . -a \( -name "*.json" -o -name ".csslintrc" \) )
+FOC_HTML=$(foc_count . -name "*.html")
 
 readonly TOTAL_FOC="$((
   FOC_PYTHON
@@ -257,7 +260,8 @@ readonly TOTAL_FOC="$((
   + FOC_KEYBOARD_LAYOUT
   + FOC_TXT
   + FOC_TS
-  + FOC_JSON))"
+  + FOC_JSON
+  + FOC_HTML))"
 
 DISK_USAGE="$(du --apparent-size --summarize . | cut --fields 1)"
 DISK_USAGE_HUMAN="$(du --apparent-size --human-readable --summarize . | cut --fields 1)"
@@ -349,6 +353,7 @@ echo -e "${BLUE}Live lines of code: ${BLUE}$((LOC - LOC_ARCHIVE))"\
 "\n  ${BLUE}txt: ${GREEN}${LOC_TXT}"\
 "\n  ${BLUE}TypeScript: ${GREEN}${LOC_TS}"\
 "\n  ${BLUE}JSON: ${GREEN}${LOC_JSON}"\
+"\n  ${BLUE}HTML: ${GREEN}${LOC_HTML}"\
 "\n  ${BLUE}TOTAL: ${GREEN}${TOTAL_BY_LANG}"
 
 echo -e "${BLUE}Number of files of code: ${GREEN}${FOC}${BLUE}."\
@@ -365,6 +370,7 @@ echo -e "${BLUE}Number of files of code: ${GREEN}${FOC}${BLUE}."\
 "\n  ${BLUE}txt: ${GREEN}${FOC_TXT}"\
 "\n  ${BLUE}TypeScript: ${GREEN}${FOC_TS}"\
 "\n  ${BLUE}JSON: ${GREEN}${FOC_JSON}"\
+"\n  ${BLUE}HTML: ${GREEN}${FOC_HTML}"\
 "\n  ${BLUE}TOTAL: ${GREEN}${TOTAL_FOC}"
 
 echo -e "${BLUE}Disk usage: \
@@ -463,6 +469,6 @@ if ${SAVE}; then
   # We have to exclude the first field (`data`) from this though, because it
   # has spaces within it that would be unintentionally replaced with tabs if we
   # were to include it.
-  echo "$(date)$(echo " $(date +%s) ${LOC} ${CRUM_IMG} ${CRUM_DAWOUD} ${LOC_CRUM} ${LOC_COPTICSITE} ${LOC_KELLIA} ${LOC_BIBLE} ${LOC_FLASHCARDS} ${LOC_GRAMMAR} ${LOC_KEYBOARD} ${LOC_MORPHOLOGY} ${LOC_SITE} ${LOC_SHARED} ${LOC_ARCHIVE} ${CRUM_TYPOS} ${CRUM_IMG_SUM} ${CRUM_DAWOUD_SUM} ${NUM_COMMITS} ${NUM_CONTRIBUTORS} ${CRUM_NOTES} ${LOC_PYTHON} ${LOC_MAKE} ${LOC_CSS} ${LOC_SH} ${LOC_JS} ${LOC_MD} ${LOC_YAML} ${LOC_DOT} ${LOC_KEYBOARD_LAYOUT} ${LOC_TXT} ${CRUM_WRD_TYPOS} ${CRUM_DRV_TYPOS} ${CRUM_PAGES_CHANGED} ${CRUM_ROOT_SENSES} ${CRUM_ROOT_SENSES_SUM} ${LOC_TS} ${LOC_JSON} ${DISK_USAGE} ${DISK_USAGE_HUMAN} ${LOC_TOML} ${FOC} ${FOC_PYTHON} ${FOC_MAKE} ${FOC_CSS} ${FOC_SH} ${FOC_JS} ${FOC_MD} ${FOC_YAML} ${FOC_TOML} ${FOC_DOT} ${FOC_KEYBOARD_LAYOUT} ${FOC_TXT} ${FOC_TS} ${FOC_JSON}" | sed 's/ /\t/g')" \
+  echo "$(date)$(echo " $(date +%s) ${LOC} ${CRUM_IMG} ${CRUM_DAWOUD} ${LOC_CRUM} ${LOC_COPTICSITE} ${LOC_KELLIA} ${LOC_BIBLE} ${LOC_FLASHCARDS} ${LOC_GRAMMAR} ${LOC_KEYBOARD} ${LOC_MORPHOLOGY} ${LOC_SITE} ${LOC_SHARED} ${LOC_ARCHIVE} ${CRUM_TYPOS} ${CRUM_IMG_SUM} ${CRUM_DAWOUD_SUM} ${NUM_COMMITS} ${NUM_CONTRIBUTORS} ${CRUM_NOTES} ${LOC_PYTHON} ${LOC_MAKE} ${LOC_CSS} ${LOC_SH} ${LOC_JS} ${LOC_MD} ${LOC_YAML} ${LOC_DOT} ${LOC_KEYBOARD_LAYOUT} ${LOC_TXT} ${CRUM_WRD_TYPOS} ${CRUM_DRV_TYPOS} ${CRUM_PAGES_CHANGED} ${CRUM_ROOT_SENSES} ${CRUM_ROOT_SENSES_SUM} ${LOC_TS} ${LOC_JSON} ${DISK_USAGE} ${DISK_USAGE_HUMAN} ${LOC_TOML} ${FOC} ${FOC_PYTHON} ${FOC_MAKE} ${FOC_CSS} ${FOC_SH} ${FOC_JS} ${FOC_MD} ${FOC_YAML} ${FOC_TOML} ${FOC_DOT} ${FOC_KEYBOARD_LAYOUT} ${FOC_TXT} ${FOC_TS} ${FOC_JSON} ${LOC_HTML} ${FOC_HTML}" | sed 's/ /\t/g')" \
     >> data/stats.tsv
 fi
