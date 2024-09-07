@@ -123,7 +123,7 @@ class Result {
 const fileMap: Promise<Result[]> = (async function(): Promise<Result[]> {
   let resp: Response;
   try {
-    resp = await fetch('index.json', { mode: 'cors' });
+    resp = await fetch('xooxle.json', { mode: 'cors' });
   } catch {
     // If fetch fails (e.g., due to CORS issues), return dummy data.
     const dummy = [

@@ -2,7 +2,7 @@ import xooxle
 
 _CRUM_INDEX = xooxle.index(
     directory="flashcards/data/output/web/a_coptic_dictionary__all_dialects/",
-    output="site/data/crum/index.json",
+    output="site/data/xooxle/crum.json",
     extract=[
         xooxle.selector({"name": "title"}),
         xooxle.selector({"class_": "header"}),

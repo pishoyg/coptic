@@ -106,7 +106,7 @@ class Result {
 const fileMap = (async function () {
   let resp;
   try {
-    resp = await fetch('index.json', { mode: 'cors' });
+    resp = await fetch('xooxle.json', { mode: 'cors' });
   }
   catch {
     // If fetch fails (e.g., due to CORS issues), return dummy data.
