@@ -1,4 +1,3 @@
-import argparse
 import os
 import typing
 
@@ -6,88 +5,91 @@ import bs4
 
 import utils
 
-# Set up argument parsing.
-parser = argparse.ArgumentParser(
-    description="Recursively search for HTML files and extract text content.",
-)
-parser.add_argument(
-    "--directory",
-    type=str,
-    default="",
-    help="The directory to search for HTML files.",
-)
-parser.add_argument(
-    "--output",
-    type=str,
-    default="",
-    help="Output JSON file.",
-)
-parser.add_argument(
-    "--exclude",
-    type=str,
-    nargs="*",
-    default=[],
-    help="List of HTML classes to exclude.",
-)
-parser.add_argument(
-    "--title_id",
-    type=str,
-    default="",
-    help="If given, find a tag with this id, and use its text as the title.",
-)
+# NOTE: Our text extraction implementation is somewhat hacky. The output may
+# contain superfluous newlines. It may fail to parse HTML special space
+# character entities. This function is expected to be revisited in the future
+# if our HTML output changes.
+# NOTE: We get to decide what is a block element and what is an inline
+# element. There is no canonical list, but the following list includes the
+# tags that are generally agreed to represent inline tags. It works for our
+# current use case.
+_INLINE_ELEMENTS = {
+    "a",
+    "span",
+    "em",
+    "strong",
+    "u",
+    "i",
+    "font",
+    "mark",
+    "label",
+    "s",
+    "sub",
+    "sup",
+    "tt",
+    "bdo",
+    "button",
+    "cite",
+    "del",
+    "b",
+    "a",
+    "font",
+    # NOTE: `td` is generally considered a block element, but we treat it
+    # as an inline element for our purposes.
+    "td",
+}
+_NEWLINE_ELEMENTS = {
+    "br",
+    "hr",
+}
 
 
-def get_text(tag: bs4.Tag) -> str:
-    # NOTE: This implementation is somewhat hacky. The output may contain
-    # superfluous newlines. It may fail to parse HTML special space character
-    # entities. This function is expected to be revisited in the future if our
-    # HTML output changes.
-    # NOTE: We get to decide what is a block element and what is an inline
-    # element. There is no canonical list, but the following list includes the
-    # tags that are generally agreed to represent inline tags. It works for our
-    # current use case.
-    _inline_elements = {
-        "a",
-        "span",
-        "em",
-        "strong",
-        "u",
-        "i",
-        "font",
-        "mark",
-        "label",
-        "s",
-        "sub",
-        "sup",
-        "tt",
-        "bdo",
-        "button",
-        "cite",
-        "del",
-        "b",
-        "a",
-        "font",
-        # NOTE: `td` is generally considered a block element, but we treat it
-        # as an inline element for our purposes.
-        "td",
-    }
-    _newline_elements = {
-        "br",
-        "hr",
-    }
+class selector:
+    def __init__(self, kwargs: dict, force: bool = True) -> None:
+        self._kwargs = kwargs
+        self._force = force
 
-    def _get_text(tag: bs4.Tag) -> typing.Generator:
+    def find_all(
+        self,
+        soup: bs4.BeautifulSoup,
+    ) -> list[bs4.Tag | bs4.NavigableString]:
+        found = soup.find_all(**self._kwargs)
+        assert found or not self._force
+        return found
+
+    def find(
+        self,
+        soup: bs4.BeautifulSoup,
+    ) -> bs4.Tag | bs4.NavigableString | None:
+        """Unlike BeautifulSoup.find, this method forces exactly one element
+        matching the query to be present."""
+        found = soup.find_all(**self._kwargs)
+        assert len(found) <= 1
+        assert found or not self._force
+        return found[0] if found else None
+
+    def find_tag(self, soup: bs4.BeautifulSoup) -> bs4.Tag | None:
+        elem = self.find(soup)
+        assert elem or not self._force
+        if elem is None:
+            return None
+        assert isinstance(elem, bs4.Tag)
+        return elem
+
+
+def _get_text(tag: bs4.Tag) -> str:
+    def __get_text(tag: bs4.Tag) -> typing.Generator:
         for child in tag.children:
             if isinstance(child, bs4.Tag):
                 # If the tag is a block type tag, then yield new lines before
                 # and after.
-                is_block_element = child.name not in _inline_elements
+                is_block_element = child.name not in _INLINE_ELEMENTS
                 if is_block_element:
                     yield "\n"
                 yield from (
                     ["\n"]
-                    if child.name in _newline_elements
-                    else _get_text(child)
+                    if child.name in _NEWLINE_ELEMENTS
+                    else __get_text(child)
                 )
                 if is_block_element:
                     yield "\n"
@@ -106,10 +108,10 @@ def get_text(tag: bs4.Tag) -> str:
                     s = s + " "
                 yield s
 
-    return "".join(_get_text(tag))
+    return "".join(__get_text(tag))
 
 
-def clean_text(text: str) -> str:
+def _clean_text(text: str) -> str:
     lines: list[str] = text.split("\n")
     lines = [ln.strip() for ln in lines]
     lines = list(filter(None, lines))
@@ -118,70 +120,55 @@ def clean_text(text: str) -> str:
     return text
 
 
-def build_index(
-    directory: str,
-    exclude: list[str],
-    title_id: str,
-) -> list[dict[str, str]]:
+class index:
+    def __init__(
+        self,
+        directory: str,
+        output: str,
+        extract: list[selector],
+        capture: list[tuple[str, selector]],
+    ) -> None:
+        """
+        Args:
+            directory: The directory to search for HTML files.
+            output: Output JSON file.
+            extract: List of kwargs queries that will be passed to
+                `soup.find_all` and extracted from the tree.
+            capture: List of kwargs queries that will be passed to
+                `soup.find_all`. and capture from the tree.
+        """
 
-    index: list[dict[str, str]] = []
+        self._directory: str = directory
+        self._output: str = output
+        self._extract: list[selector] = extract
+        self._capture: list[tuple[str, selector]] = capture
 
-    # Recursively search for all HTML files.
-    for root, _, files in os.walk(directory):
-        for file in files:
-            if not file.endswith(".html"):
-                continue
-            file_path = os.path.join(root, file)
+    def build(self) -> None:
 
-            # Parse the HTML content.
-            soup = bs4.BeautifulSoup(utils.read(file_path), "html.parser")
+        index: list[dict[str, str]] = []
 
-            # Get the page title.
-            assert soup.title
-            assert soup.title.string
+        # Recursively search for all HTML files.
+        for root, _, files in os.walk(self._directory):
+            for file in files:
+                if not file.endswith(".html"):
+                    continue
+                file_path = os.path.join(root, file)
 
-            # Remove elements with the specified classes.
-            for class_name in exclude:
-                for element in soup.find_all(class_=class_name):
-                    assert isinstance(element, bs4.Tag)
-                    element.decompose()  # Removes the element from the tree.
+                # Parse the HTML content.
+                soup = bs4.BeautifulSoup(utils.read(file_path), "html.parser")
 
-            if title_id:
-                element = soup.find(id=title_id)
-                assert isinstance(element, bs4.Tag)
-                title = clean_text(get_text(element))
-            else:
-                title = soup.title.string
+                for selector in self._extract:
+                    for element in selector.find_all(soup):
+                        element.extract()
 
-            # Remove the title before extracting text.
-            soup.title.decompose()
+                # Store the relative file path.
+                data = {
+                    "path": os.path.relpath(file_path, self._directory),
+                }
+                for name, selector in self._capture:
+                    elem: bs4.Tag | None = selector.find_tag(soup)
+                    data[name] = _clean_text(_get_text(elem)) if elem else ""
 
-            # Extract the remaining text
-            text = clean_text(get_text(soup))
+                index.append(data)
 
-            # Store the relative file path and extracted text in the index.
-            relative_path = os.path.relpath(file_path, directory)
-            index.append(
-                {
-                    "path": relative_path,
-                    "title": title,
-                    "text": text,
-                },
-            )
-
-    return index
-
-
-def main():
-    # Parse the arguments.
-    args = parser.parse_args()
-
-    # Read HTML files and extract text.
-    index = build_index(args.directory, args.exclude, args.title_id)
-
-    # Write the resulting map to a JSON file.
-    utils.write(utils.json_dumps(index), args.output)
-
-
-if __name__ == "__main__":
-    main()
+        utils.write(utils.json_dumps(index), self._output)
