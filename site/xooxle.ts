@@ -4,12 +4,16 @@ const regexCheckbox = document.getElementById('regexCheckbox') as HTMLInputEleme
 const HIGHLIGHT_COLOR = '#f0d4fc';
 
 // Initialize the results table. This only needs to happen once.
+// TODO:(#230) The table header should be inferred from the index, rather than
+// hard-coded. This only works for Crum! You could, for example, always assign
+// 10% to the `view` (path) column, and divide 90 over the others.
 document.getElementById('resultTable')!.innerHTML = `
 <thead>
   <colgroup>
     <col style="width: 10.0%;">
     <col style="width: 30.0%;">
-    <col style="width: 60.0%;">
+    <col style="width: 30.0%;">
+    <col style="width: 30.0%;">
   </colgroup>
 </thead>
 <tbody>
@@ -125,15 +129,18 @@ const fileMap: Promise<Result[]> = (async function(): Promise<Result[]> {
     const dummy = [
       {
         'path': '2.html',
-        'title': '(S, A, sA, B, F) ϯ\n(S, F) ⲧⲓ\n(S) ϯⲓ, ϯⲉⲓ, ⲧⲉⲓ, ⲧⲛ\n(A) ⲧⲉ\n(S, B, F) ϯ-\n(A, F) ⲧⲉ-\n(F) ⲧⲁ-\n(S) ⲧⲁ(ⲁ)=, ϯ=\n(A, sA, F) ⲧⲉⲉ=\n(A, sA) ⲧⲉⲉⲧ=\n(A) ⲧⲉ=\n(sA, F) ⲧⲉⲉⲓⲧ=\n(B) ⲧⲏⲓ=, ⲧⲏⲓⲧ=\n(F) ⲧⲉⲓ=, ⲧⲉⲓⲉⲓ=, ⲧⲉⲓⲧ=, ⲧⲁⲓⲧ= {and other irregular S,Sa,F forms}\n(S) ⲧⲟ+, ⲧⲱ+\n(Sf) ⲧⲁ+\n(A) ⲧⲉⲓⲉ+, ⲧⲉ+\n(sA) ⲧⲟⲉⲓⲉ+\n(B) ⲧⲟⲓ+\n(F) ⲧⲁ(ⲁ)ⲓ+, ⲧⲁⲁⲓⲉ+\n(S, sA, F) p c ⲧⲁⲓ-\n(S, A, sA) imperative: ⲙⲁ\n(B) imperative: ⲙⲟⲓ\n(F) imperative: ⲙⲁⲓ\n(S, B, F) imperative: ⲙⲁ-\n(S) imperative: ⲙⲁⲧ=, ⲙⲏⲉⲓ=\n(B) imperative: ⲙⲏⲓ=, ⲙⲏⲓⲧ=, ⲙⲟⲓⲧ=\n(F) imperative: ⲙⲁⲓ=\n(NH) imperative: ⲙⲁ=',
+        'marcion': '(S, A, sA, B, F) ϯ\n(S, F) ⲧⲓ\n(S) ϯⲓ, ϯⲉⲓ, ⲧⲉⲓ, ⲧⲛ\n(A) ⲧⲉ\n(S, B, F) ϯ-\n(A, F) ⲧⲉ-\n(F) ⲧⲁ-\n(S) ⲧⲁ(ⲁ)=, ϯ=\n(A, sA, F) ⲧⲉⲉ=\n(A, sA) ⲧⲉⲉⲧ=\n(A) ⲧⲉ=\n(sA, F) ⲧⲉⲉⲓⲧ=\n(B) ⲧⲏⲓ=, ⲧⲏⲓⲧ=\n(F) ⲧⲉⲓ=, ⲧⲉⲓⲉⲓ=, ⲧⲉⲓⲧ=, ⲧⲁⲓⲧ= {and other irregular S,Sa,F forms}\n(S) ⲧⲟ+, ⲧⲱ+\n(Sf) ⲧⲁ+\n(A) ⲧⲉⲓⲉ+, ⲧⲉ+\n(sA) ⲧⲟⲉⲓⲉ+\n(B) ⲧⲟⲓ+\n(F) ⲧⲁ(ⲁ)ⲓ+, ⲧⲁⲁⲓⲉ+\n(S, sA, F) p c ⲧⲁⲓ-\n(S, A, sA) imperative: ⲙⲁ\n(B) imperative: ⲙⲟⲓ\n(F) imperative: ⲙⲁⲓ\n(S, B, F) imperative: ⲙⲁ-\n(S) imperative: ⲙⲁⲧ=, ⲙⲏⲉⲓ=\n(B) imperative: ⲙⲏⲓ=, ⲙⲏⲓⲧ=, ⲙⲟⲓⲧ=\n(F) imperative: ⲙⲁⲓ=\n(NH) imperative: ⲙⲁ=',
+        'meaning': 'intr:\n― give, pay & related meanings [διδοναι]\n― fight\ntr:\n― mostly c dat\n― pay\n― sell S\n― smite [τυπτειν]\nimperative\n― with ϯ\n― not as imperative B\n― ϫⲓⲛⲙ.\nqual: given, being upon\np.c., giver',
         'text': '(S, A, sA, B, F) ϯ\n(S, F) ⲧⲓ\n(S) ϯⲓ, ϯⲉⲓ, ⲧⲉⲓ, ⲧⲛ\n(A) ⲧⲉ\n(S, B, F) ϯ-\n(A, F) ⲧⲉ-\n(F) ⲧⲁ-\n(S) ⲧⲁ=, ⲧⲁⲁ=, ϯ=\n(A, sA, F) ⲧⲉⲉ=\n(A, sA) ⲧⲉⲉⲧ=\n(A) ⲧⲉ=\n(sA, F) ⲧⲉⲉⲓⲧ=\n(B) ⲧⲏⲓ=, ⲧⲏⲓⲧ=\n(F) ⲧⲉⲓ=, ⲧⲉⲓⲉⲓ=, ⲧⲉⲓⲧ=, ⲧⲁⲓⲧ= {and other irregular S,Sa,F forms}\n(S) ⲧⲟ+, ⲧⲱ+\n(Sf) ⲧⲁ+\n(A) ⲧⲉⲓⲉ+, ⲧⲉ+\n(sA) ⲧⲟⲉⲓⲉ+\n(B) ⲧⲟⲓ+\n(F) ⲧⲁⲓ+, ⲧⲁⲁⲓ+, ⲧⲁⲁⲓⲉ+\n(S, sA, F) ⲧⲁⲓ- (p.c.)\n(S, A, sA) ⲙⲁ (imp.)\n(B) ⲙⲟⲓ (imp.)\n(F) ⲙⲁⲓ (imp.)\n(S, B, F) ⲙⲁ- (imp.)\n(S) ⲙⲁⲧ=, ⲙⲏⲉⲓ= (imp.)\n(B) ⲙⲏⲓ=, ⲙⲏⲓⲧ=, ⲙⲟⲓⲧ= (imp.)\n(F) ⲙⲁⲓ= (imp.)\n(NH) ⲙⲁ= (imp.)\n(verb)\nintr:\n― give, pay & related meanings [διδοναι]\n― fight\ntr:\n― mostly c dat\n― pay\n― sell S\n― smite [τυπτειν]\nimperative\n― with ϯ\n― not as imperative B\n― ϫⲓⲛⲙ.\nqual: given, being upon\np.c., giver\n(S, A, sA, B, F) ϯ\n(S, F) ⲧⲓ\n(S) ϯⲓ, ϯⲉⲓ, ⲧⲉⲓ, ⲧⲛ\n(A) ⲧⲉ\n(S, B, F) ϯ-\n(A, F) ⲧⲉ-\n(F) ⲧⲁ-\n(S) ⲧⲁ(ⲁ)=, ϯ=\n(A, sA, F) ⲧⲉⲉ=\n(A, sA) ⲧⲉⲉⲧ=\n(A) ⲧⲉ=\n(sA, F) ⲧⲉⲉⲓⲧ=\n(B) ⲧⲏⲓ=, ⲧⲏⲓⲧ=\n(F) ⲧⲉⲓ=, ⲧⲉⲓⲉⲓ=, ⲧⲉⲓⲧ=, ⲧⲁⲓⲧ= {and other irregular S,Sa,F forms}\n(S) ⲧⲟ+, ⲧⲱ+\n(Sf) ⲧⲁ+\n(A) ⲧⲉⲓⲉ+, ⲧⲉ+\n(sA) ⲧⲟⲉⲓⲉ+\n(B) ⲧⲟⲓ+\n(F) ⲧⲁ(ⲁ)ⲓ+, ⲧⲁⲁⲓⲉ+\n(S, sA, F) p c ⲧⲁⲓ-\n(S, A, sA) imperative: ⲙⲁ\n(B) imperative: ⲙⲟⲓ\n(F) imperative: ⲙⲁⲓ\n(S, B, F) imperative: ⲙⲁ-\n(S) imperative: ⲙⲁⲧ=, ⲙⲏⲉⲓ=\n(B) imperative: ⲙⲏⲓ=, ⲙⲏⲓⲧ=, ⲙⲟⲓⲧ=\n(F) imperative: ⲙⲁⲓ=\n(NH) imperative: ⲙⲁ=\nWith following preposition:\n(S, A, sA, B, F) ― ⲉ- intr: [δανιζειν]\ntr: give to\n(S) ― ⲉⲣⲛ- go toward\n(S, sA, B) ― ⲉⲧⲛ- {ⲉⲧⲟⲟⲧ= ⲛ-} intr: lay upon, command\ntr: give into hands, entrust\n(S, B) ― ⲉϫⲛ- put upon, add to, on behalf of\n― tr:\n― intr:\npay for\nfight for\n(S, B) ― ⲙⲛ-, ― ⲛⲉⲙ- fight with [πολεμειν, ανθισταναι]\n(S, sA, B) ― ⲛⲥⲁ- intr: go after, pursue\ntr: give to, upon, pursue\n(S, sA, B) ― ⲛⲧⲛ- entrust to\nsupport\ngive in, decrease\n(S, A, sA, B, F) ― ⲟⲩⲃⲉ- fight against [πολεμειν, ανθισταναι, αντικεισθαι]\n(S) ⲁⲧϯ ⲟⲩⲃⲉ. not to be opposed\n(B) ⲣⲉϥϯ ⲟⲩⲃⲉ. opponent\n(B) ⲙⲉⲧⲣⲉϥϯ ⲟⲩⲃⲉ. opposition\n(S, B, F) ― ϩⲁ-, ― ϧⲁ- give, sell for\nas nn S\n(S, A, B) ― ϩⲓ-\n(Sf, F) ― ⲉϩⲓ- lay upon, clothe [περιβαλλειν]\nfight for\n(S) ― ϩⲁⲧⲛ-\n(S, B, F) ― ϩⲓϫⲛ- intr: give for, on behalf of (?)\ntr: put upon\nWith following adverb:\n(S, A, sA, B, F) ― ⲉⲃⲟⲗ intr: give forth, away, sell [πωλειν, πιπρασκειν]\ntr: [πωλειν, πιπρασκειν]\nas nn, sale\n{ⲉⲃⲟⲗ} ⲉ- (c) sell for, as\nto\nset, put forth upon\n{ⲉⲃⲟⲗ} ϩⲁ-, {ⲉⲃⲟⲗ} ϧⲁ- (c) for, against\n{ⲉⲃⲟⲗ} ϩⲓϫⲛ- (c) fight on behalf of\nⲣⲉϥϯ ⲉⲃⲟⲗ. seller\n(S, B) ― ⲉⲡⲉⲥⲏⲧ put, send downward [καταβαλλειν]\n(B) ― ⲉⲡϣⲱⲓ raise up\n(S, A) ― ⲉⲡⲁϩⲟⲩ go backward\n(S) ― ⲉⲑⲏ go forward, progress\n(S, A, sA, B, F) ― ⲉϩⲟⲩⲛ give, hand in\n{ⲉϩⲟⲩⲛ} ⲉ- (c) into\n{ⲉϩⲟⲩⲛ} ⲛⲥⲁ- (c)\n{ⲉϩⲟⲩⲛ} ⲛⲁϩⲣⲛ- (c) respond to\n{ⲉϩⲟⲩⲛ} ϩⲁ- (c) place beneath\n(S) {ⲉϩⲟⲩⲛ} ϩⲛ- (c)\n(A) {ⲉϩⲟⲩⲛ} ϩⲁⲛ- (c)\n(B) {ⲉϩⲟⲩⲛ} ϧⲉⲛ- (c) strike into, upon\n{ⲉϩⲟⲩⲛ} ⲉϩⲣⲛ- (c) strike against, oppose\n(B) ⲣⲉϥϯ ⲉϧⲟⲩⲛ ⲉϩⲣⲛ- opposer\n(S, A, sA, B, F) ― ⲉϩⲣⲁⲓ\n(B) ― ⲉϧⲣⲁⲓ send up, in, lay down\n― intr: S\n― tr: [επιβαλλειν]\nintr :\n{ⲉϩⲣⲁⲓ} ⲉ- (c)\n{ⲉϩⲣⲁⲓ} ⲙⲛ- (c)\ntr :\n{ⲉϩⲣⲁⲓ} ⲉ- (c) lift up, commit to\n{ⲉϩⲣⲁⲓ} ϩⲁ- (c)\n(S, B) ϫⲓ ϯ, ϭⲓ ϯ (verb)\nas one vb, buy and sell, trade\n(S, A, B) ― (ⲡ) (noun male)\ngift, bonuty [δομα, δοσισ]\nsale [πρασισ]\nfight [μαχη]\nparal ϫⲓ, ϭⲓ, exchange, trading\n(B) ⲙⲁ ⲛϯ fighting place\n(S, B) ⲣⲉϥϯ giver [δοτησ]\nfighter [μαχητησ, πολεμιστησ]\nⲙⲛⲧⲣⲉϥϯ, ⲙⲉⲧⲣⲉϥϯ generosity, charity\nⲣ ⲣⲉϥϯ, ⲉⲣ ⲣⲉϥϯ be giver\nϭⲓⲛϯ, ϫⲓⲛϯ giving, selling\nfighting B'
       },
       {
         'path': '1.html',
-        'title': '(S) ⲟⲩⲟⲉⲓⲛ\n(A, sA) ⲟⲩⲁ(ⲉ)ⲓⲛⲉ\n(Sa, sA, F) ⲟⲩⲁⲉⲓⲛ\n(B) ⲟⲩⲱⲓⲛⲓ\n(O) ⲟⲩⲟⲓⲛ\n(NH) ⲟⲩⲟⲉⲓⲛⲉ',
+        'marcion': '(S) ⲟⲩⲟⲉⲓⲛ\n(A, sA) ⲟⲩⲁ(ⲉ)ⲓⲛⲉ\n(Sa, sA, F) ⲟⲩⲁⲉⲓⲛ\n(B) ⲟⲩⲱⲓⲛⲓ\n(O) ⲟⲩⲟⲓⲛ\n(NH) ⲟⲩⲟⲉⲓⲛⲉ',
+        'meaning': 'light [φωσ, φωτισμοσ]\ndawn [ανατολη, ορθροσ]\nlight of eyes\nas adj [φωτεινοσ]',
         'text': '(S) ⲟⲩⲟⲉⲓⲛ (ⲡ)\n(A, sA) ⲟⲩⲁⲓⲛⲉ, ⲟⲩⲁⲉⲓⲛⲉ (ⲡ)\n(Sa, sA, F) ⲟⲩⲁⲉⲓⲛ (ⲡ)\n(B) ⲟⲩⲱⲓⲛⲓ (ⲡ)\n(O) ⲟⲩⲟⲓⲛ (ⲡ)\n(NH) ⲟⲩⲟⲉⲓⲛⲉ (ⲡ)\n(noun male)\nlight [φωσ, φωτισμοσ]\ndawn [ανατολη, ορθροσ]\nlight of eyes\nas adj [φωτεινοσ]\nlight\ndawn\nlight (of eyes)\n(S) ⲟⲩⲟⲉⲓⲛ\n(A, sA) ⲟⲩⲁ(ⲉ)ⲓⲛⲉ\n(Sa, sA, F) ⲟⲩⲁⲉⲓⲛ\n(B) ⲟⲩⲱⲓⲛⲓ\n(O) ⲟⲩⲟⲓⲛ\n(NH) ⲟⲩⲟⲉⲓⲛⲉ\nⲁⲧⲟⲩ., ⲁⲑⲟⲩ. without light [αωρια]\n(S, sA) ⲣⲙⲛⲟⲩ.\n(NH) ⲣⲙⲟⲩ. man of, dweller in light\n(S, A, B, F) ⲣ ⲟⲩ., ⲉⲣ ⲟⲩ., ⲉⲗ ⲟⲩ. make, be light, shine\nWith prep or advb:\nⲉϫⲛ- (c)\n(B) ϩⲓϫⲉⲛ- (c)\n(B) ⲛ- (c)\n(S) ⲉⲃⲟⲗ (c)\nⲣⲉϥⲣ ⲟⲩ. one who lights, illuminator [φωστηρ]\nϭⲓⲛⲣ ⲟⲩ., ϫⲓⲛⲉⲣ ⲟⲩ. shining, illumination\n(B) ϯ ⲟⲩ. give light [φωτιζειν]\nϫⲓ ⲟⲩ., ϭⲓ ⲟⲩ. take, get light\n(sA) ⲧⲣⲟⲩ. (verb)\nshine'
       }
-    ];
+    ]
+      ;
     resp = new Response(JSON.stringify(dummy));
   }
 
