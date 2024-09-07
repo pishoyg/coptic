@@ -1,4 +1,5 @@
 const searchBox = document.getElementById('searchBox') as HTMLInputElement;
+searchBox.focus();
 const fullWordCheckbox = document.getElementById('fullWordCheckbox') as HTMLInputElement;
 const regexCheckbox = document.getElementById('regexCheckbox') as HTMLInputElement;
 const resultTable = document.getElementById('resultTable')!.querySelector('tbody')!;
@@ -224,5 +225,4 @@ searchBox.addEventListener('input', handleSearchQuery);
 searchBox.addEventListener('keypress', handleSearchQuery);
 fullWordCheckbox.addEventListener('click', handleSearchQuery);
 fullWordCheckbox.addEventListener('click', handleSearchQuery);
-
-searchBox.focus();
+window.addEventListener('load', handleSearchQuery);

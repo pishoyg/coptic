@@ -1,5 +1,6 @@
 'use strict';
 const searchBox = document.getElementById('searchBox');
+searchBox.focus();
 const fullWordCheckbox = document.getElementById('fullWordCheckbox');
 const regexCheckbox = document.getElementById('regexCheckbox');
 const resultTable = document.getElementById('resultTable').querySelector('tbody');
@@ -187,4 +188,4 @@ searchBox.addEventListener('input', handleSearchQuery);
 searchBox.addEventListener('keypress', handleSearchQuery);
 fullWordCheckbox.addEventListener('click', handleSearchQuery);
 fullWordCheckbox.addEventListener('click', handleSearchQuery);
-searchBox.focus();
+window.addEventListener('load', handleSearchQuery);
