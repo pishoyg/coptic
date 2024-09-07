@@ -1,25 +1,9 @@
 const searchBox = document.getElementById('searchBox') as HTMLInputElement;
 const fullWordCheckbox = document.getElementById('fullWordCheckbox') as HTMLInputElement;
 const regexCheckbox = document.getElementById('regexCheckbox') as HTMLInputElement;
-const HIGHLIGHT_COLOR = '#f0d4fc';
-
-// Initialize the results table. This only needs to happen once.
-// TODO:(#230) The table header should be inferred from the index, rather than
-// hard-coded. This only works for Crum! You could, for example, always assign
-// 10% to the `view` (path) column, and divide 90 over the others.
-document.getElementById('resultTable')!.innerHTML = `
-<thead>
-  <colgroup>
-    <col style="width: 10.0%;">
-    <col style="width: 30.0%;">
-    <col style="width: 30.0%;">
-    <col style="width: 30.0%;">
-  </colgroup>
-</thead>
-<tbody>
-</tbody>
-`;
 const resultTable = document.getElementById('resultTable')!.querySelector('tbody')!;
+
+const HIGHLIGHT_COLOR = '#f0d4fc';
 
 // TODO: (#229) Use a smarter heuristic to show context. Instead of splitting
 // into lines, split into meaningful search units.
