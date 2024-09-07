@@ -18,7 +18,8 @@ _CRUM_INDEX = xooxle.index(
         xooxle.selector({"class_": "nag-hammadi"}, force=False),
     ],
     capture=[
-        ("title", xooxle.selector({"id": "marcion"})),
+        ("marcion", xooxle.selector({"id": "marcion"})),
+        ("meaning", xooxle.selector({"id": "meaning"}, force=False)),
         ("text", xooxle.selector({"name": "body"})),
     ],
 )
