@@ -268,23 +268,26 @@ def crum(
                     "<br>",
                 ),
                 # Image.
-                field.aon(
-                    '<div id="images" class="images">',
-                    field.img(
-                        keys=roots_col("key"),
-                        # Although the same result can be obtained using
-                        # `glob.glob` on each image key, we cache the paths
-                        # because this significantly reduces the running time.
-                        get_paths=explanatory_images.get,
-                        fmt_args=lambda path: {
-                            "caption": image_sensor.get_caption(path),
-                            "id": "explanatory" + utils.stem(path),
-                            "class": "explanatory",
-                            "alt": _explanatory_alt(path),
-                        },
-                        force=False,
+                field.xor(
+                    field.aon(
+                        '<div id="images" class="images">',
+                        field.img(
+                            keys=roots_col("key"),
+                            # Although the same result can be obtained using
+                            # `glob.glob` on each image key, we cache the paths
+                            # because this significantly reduces the running time.
+                            get_paths=explanatory_images.get,
+                            fmt_args=lambda path: {
+                                "caption": image_sensor.get_caption(path),
+                                "id": "explanatory" + utils.stem(path),
+                                "class": "explanatory",
+                                "alt": _explanatory_alt(path),
+                            },
+                            force=False,
+                        ),
+                        "</div>",
                     ),
-                    "</div>",
+                    "<br/>",
                 ),
                 # Editor's notes.
                 field.aon(
