@@ -47,7 +47,7 @@ class Result {
         }
         matchedLines.push(highlightedLine);
       });
-      return [word, matchedLines.join('<br>')];
+      return [word, matchedLines.join('<hr color="#E0E0E0">')];
     }
     catch {
       alert('Invalid regular expression');
