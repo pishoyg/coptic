@@ -85,9 +85,7 @@ build() {
     "${SITE_DIR}/"
 
   # Home
-  BODY="$(python -m markdown \
-    "site/home.md" \
-    --output_format="html")" envsubst < "site/data/home.html" > "${SITE_DIR}/index.html"
+  cp "site/index.html" "${SITE_DIR}"
 
   mkdir "${IMG_DIR}"
   cp -r \
