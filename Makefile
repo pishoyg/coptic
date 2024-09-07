@@ -203,6 +203,7 @@ endif
 
 site_publish:
 	bash site/publish.sh \
+		--clean \
 		--build \
 		--commit \
 		--push
