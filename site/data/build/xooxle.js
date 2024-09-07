@@ -19,6 +19,11 @@ const resultTable = document.getElementById('resultTable').querySelector('tbody'
 // TODO: (#229) Use a smarter heuristic to show context. Instead of splitting
 // into lines, split into meaningful search units.
 class Result {
+  constructor(path, text, fields) {
+    this.path = path;
+    this.text = text;
+    this.fields = fields;
+  }
   match(query, fullWord, useRegex) {
     if (!useRegex) {
       // Escape all the special characters in the string, in order to search
@@ -115,7 +120,14 @@ const fileMap = (async function () {
     ];
     resp = new Response(JSON.stringify(dummy));
   }
-  return (await resp.json()).map((obj) => Object.assign(new Result(), obj));
+  const records = await resp.json();
+  return records.map((record) => {
+    const path = record['path'];
+    delete record['path'];
+    const text = record['text'];
+    delete record['text'];
+    return new Result(path, text, record);
+  });
 })();
 // Event listener for the search button.
 let currentAbortController = null;
@@ -146,16 +158,18 @@ async function search() {
     found = true;
     // Create a new row for the table
     const row = document.createElement('tr');
-    const titleCell = document.createElement('td');
-    const linesCell = document.createElement('td');
     const viewCell = document.createElement('td');
-    titleCell.innerHTML = res.title.replaceAll('\n', '<br>');
-    linesCell.innerHTML = matchedLines;
     viewCell.innerHTML = `<a href="${res.path}#:~:text=${encodeURIComponent(matchedWord)}">
       view</a>`;
     row.appendChild(viewCell);
-    row.appendChild(titleCell);
-    row.appendChild(linesCell);
+    Object.values(res.fields).forEach((value) => {
+      const cell = document.createElement('td');
+      cell.innerHTML = value.replaceAll('\n', '<br>');
+      row.appendChild(cell);
+    });
+    const matchesCell = document.createElement('td');
+    matchesCell.innerHTML = matchedLines;
+    row.appendChild(matchesCell);
     resultTable.appendChild(row);
     await new Promise((resolve) => setTimeout(resolve, 0));
   }
@@ -183,3 +197,4 @@ searchBox.addEventListener('input', handleSearchQuery);
 searchBox.addEventListener('keypress', handleSearchQuery);
 fullWordCheckbox.addEventListener('click', handleSearchQuery);
 fullWordCheckbox.addEventListener('click', handleSearchQuery);
+searchBox.focus();

@@ -20,9 +20,15 @@ const resultTable = document.getElementById('resultTable')!.querySelector('tbody
 // TODO: (#229) Use a smarter heuristic to show context. Instead of splitting
 // into lines, split into meaningful search units.
 class Result {
-  readonly path!: string;
-  readonly title!: string;
-  readonly text!: string;
+  readonly path: string;
+  readonly text: string;
+  readonly fields: Record<string, string>;
+  public constructor(
+    path: string, text: string, fields: Record<string, string>) {
+    this.path = path;
+    this.text = text;
+    this.fields = fields;
+  }
 
   match(query: string, fullWord: boolean, useRegex: boolean):
     [string | null, string | null] {
@@ -131,8 +137,15 @@ const fileMap: Promise<Result[]> = (async function(): Promise<Result[]> {
     resp = new Response(JSON.stringify(dummy));
   }
 
-  return (await resp.json() as object[]).map(
-    (obj) => Object.assign(new Result(), obj));
+  const records: Record<string, string>[] = (
+    await resp.json() as Record<string, string>[]);
+  return records.map((record: Record<string, string>): Result => {
+    const path = record['path']!;
+    delete record['path'];
+    const text = record['text']!;
+    delete record['text'];
+    return new Result(path, text, record);
+  });
 })();
 // Event listener for the search button.
 let currentAbortController: AbortController | null = null;
@@ -174,18 +187,20 @@ async function search() {
     // Create a new row for the table
     const row = document.createElement('tr');
 
-    const titleCell = document.createElement('td');
-    const linesCell = document.createElement('td');
     const viewCell = document.createElement('td');
-
-    titleCell.innerHTML = res.title.replaceAll('\n', '<br>');
-    linesCell.innerHTML = matchedLines;
     viewCell.innerHTML = `<a href="${res.path}#:~:text=${encodeURIComponent(matchedWord)}">
       view</a>`;
-
     row.appendChild(viewCell);
-    row.appendChild(titleCell);
-    row.appendChild(linesCell);
+
+    Object.values(res.fields).forEach((value: string) => {
+      const cell = document.createElement('td');
+      cell.innerHTML = value.replaceAll('\n', '<br>');
+      row.appendChild(cell);
+    });
+
+    const matchesCell = document.createElement('td');
+    matchesCell.innerHTML = matchedLines;
+    row.appendChild(matchesCell);
 
     resultTable.appendChild(row);
 
@@ -218,3 +233,5 @@ searchBox.addEventListener('input', handleSearchQuery);
 searchBox.addEventListener('keypress', handleSearchQuery);
 fullWordCheckbox.addEventListener('click', handleSearchQuery);
 fullWordCheckbox.addEventListener('click', handleSearchQuery);
+
+searchBox.focus();
