@@ -355,7 +355,7 @@ repos:
         pass_filenames: false
       - id: crum-appendices-validate
         name: crum-appendices-validate
-        entry: python dictionary/marcion.sourceforge.net/appendices.py --validate
+        entry: python dictionary/marcion.sourceforge.net/appendices.py
         language: system
         files: ^dictionary/marcion.sourceforge.net/data/input/.*_appendices.tsv$
         pass_filenames: false

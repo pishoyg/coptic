@@ -1,30 +1,8 @@
-import argparse
 import collections
 import json
 
 import utils
 
-argparser = argparse.ArgumentParser(
-    description="""Process Crum's Appendices Sheet.""",
-)
-
-argparser.add_argument(
-    "--download",
-    action="store_true",
-    default=False,
-    help="Download the sheets.",
-)
-
-argparser.add_argument(
-    "--validate",
-    action="store_true",
-    default=False,
-    help="Validate the local (TSV) mirrors of the sheets.",
-)
-
-# TODO: (#223) Publish the sheet to the web so you can download it without
-# credentials. It's good for the project portability.
-SHEET = "https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg"
 ROOTS = "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv"
 DERIVATIONS = (
     "dictionary/marcion.sourceforge.net/data/input/derivation_appendices.tsv"
@@ -80,20 +58,9 @@ class validator:
 
 
 def main():
-
-    args = argparser.parse_args()
-
-    if not any([args.download, args.validate]):
-        utils.fatal("No actions specified, please run with", "--help")
-
-    if args.download:
-        utils.download_gsheet(SHEET, ROOTS, 0)
-        utils.download_gsheet(SHEET, DERIVATIONS, 1)
-
-    if args.validate:
-        validatoor = validator()
-        validatoor.validate(ROOTS)
-        validatoor.validate(DERIVATIONS)
+    validatoor = validator()
+    validatoor.validate(ROOTS)
+    validatoor.validate(DERIVATIONS)
 
 
 if __name__ == "__main__":
