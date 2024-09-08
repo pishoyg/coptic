@@ -157,7 +157,7 @@ async function search() {
   }
 }
 let debounceTimeout = null;
-function handleSearchQuery() {
+function handleSearchQuery(timeout = 100) {
   if (debounceTimeout) {
     clearTimeout(debounceTimeout);
   }
@@ -165,33 +165,40 @@ function handleSearchQuery() {
     // Call the async function after the timeout.
     // Use void to ignore the returned promise.
     void search();
-  }, 100);
+  }, timeout);
 }
-searchBox.addEventListener('input', handleSearchQuery);
-searchBox.addEventListener('keypress', handleSearchQuery);
-fullWordCheckbox.addEventListener('click', handleSearchQuery);
-regexCheckbox.addEventListener('click', handleSearchQuery);
+searchBox.addEventListener('input', () => { handleSearchQuery(100); });
+searchBox.addEventListener('keypress', () => { handleSearchQuery(100); });
+fullWordCheckbox.addEventListener('click', () => { handleSearchQuery(0); });
+regexCheckbox.addEventListener('click', () => { handleSearchQuery(0); });
 // Handle dialect highlighting.
 // TODO: (#230) This is Crum-specific, and doesn't apply to all Xooxle pages.
 // Remove from this file, and insert in a Crum-specific file.
-const DIALECTS = [
-  'S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'
-];
 const dialectCheckboxes = document.querySelectorAll('.dialect-checkbox');
 const sheet = window.document.styleSheets[0];
 const spellingRuleIndex = sheet.cssRules.length;
-sheet.insertRule('.spelling, .dialect { opacity: 1.0; }', spellingRuleIndex);
+const initSpellingRule = '.spelling, .dialect { opacity: 1.0; }';
+sheet.insertRule(initSpellingRule, spellingRuleIndex);
 const undialectedRuleIndex = sheet.cssRules.length;
 const undialectedQuery = '.spelling:not(.S,.Sa,.Sf,.A,.sA,.B,.F,.Fb,.O,.NH)';
-sheet.insertRule(`${undialectedQuery} { opacity: 1.0; }`, undialectedRuleIndex);
+const initUndialectedRule = `${undialectedQuery} { opacity: 1.0; }`;
+sheet.insertRule(initUndialectedRule, undialectedRuleIndex);
 const punctuationQuery = '.dialect-parenthesis, .dialect-comma, .spelling-comma';
 const punctuationRuleIndex = sheet.cssRules.length;
-sheet.insertRule(`${punctuationQuery} { opacity: 1.0; }`, punctuationRuleIndex);
+const initPuncutationRule = `${punctuationQuery} { opacity: 1.0; }`;
+sheet.insertRule(initPuncutationRule, punctuationRuleIndex);
 function replaceRule(index, rule) {
   sheet.deleteRule(index);
   sheet.insertRule(rule, index);
 }
-function updateDialectHighlighting() {
+function updateDialectHighlighting(init = false) {
+  if (init) {
+    console.log(initSpellingRule, initUndialectedRule, initSpellingRule);
+    replaceRule(spellingRuleIndex, initSpellingRule);
+    replaceRule(undialectedRuleIndex, initUndialectedRule);
+    replaceRule(punctuationRuleIndex, initPuncutationRule);
+    return;
+  }
   const enabled = Array.from(dialectCheckboxes)
     .filter((box) => box.checked)
     .map((box) => box.name);
@@ -207,19 +214,26 @@ function updateDialectHighlighting() {
   replaceRule(punctuationRuleIndex, '.dialect-parenthesis, .dialect-comma, .spelling-comma { opacity: 0.3; }');
 }
 dialectCheckboxes.forEach(checkbox => {
-  checkbox.addEventListener('click', updateDialectHighlighting);
+  checkbox.addEventListener('click', () => { updateDialectHighlighting(false); });
 });
 window.addEventListener('pageshow', () => {
+  // Handle dialect highlighting, in case it changed on another page.
   const d = localStorage.getItem('d');
-  console.log(d);
   if (d === null) {
-    return;
+    dialectCheckboxes.forEach((box) => {
+      box.checked = false;
+    });
+    updateDialectHighlighting(true);
   }
-  const active = new Set(d === '' ? [] : d.split(','));
-  DIALECTS.forEach((d) => {
-    const elem = document.getElementById(`checkbox-${d}`);
-    elem.checked = active.has(d);
-  });
-  updateDialectHighlighting();
+  else {
+    const active = new Set(d === '' ? [] : d.split(','));
+    dialectCheckboxes.forEach((box) => {
+      box.checked = active.has(box.name);
+    });
+    updateDialectHighlighting(false);
+  }
+  // Handle the search query.
+  handleSearchQuery(0);
+  // Focus on the search box.
   searchBox.focus();
 });
