@@ -285,3 +285,14 @@ dialectCheckboxes.forEach(checkbox => {
     updateDialectCSS(active);
   });
 });
+
+function reset() {
+  localStorage.removeItem('d');
+  dialectCheckboxes.forEach((box) => { box.checked = false; });
+  updateDialectCSS(null);
+  searchBox.value = '';
+  handleSearchQuery(0);
+  searchBox.focus();
+}
+
+document.getElementById('reset')!.onclick = reset;
