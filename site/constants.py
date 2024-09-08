@@ -21,7 +21,7 @@ _CRUM_INDEX = xooxle.index(
         xooxle.capture(
             "marcion",
             xooxle.selector({"id": "marcion"}),
-            raw=False,
+            raw=True,
         ),
         xooxle.capture(
             "meaning",
