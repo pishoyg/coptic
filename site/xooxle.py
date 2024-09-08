@@ -120,13 +120,19 @@ def _clean_text(text: str) -> str:
     return text
 
 
+class capture:
+    def __init__(self, name: str, select: selector) -> None:
+        self.name: str = name
+        self.selector: selector = select
+
+
 class index:
     def __init__(
         self,
         directory: str,
         output: str,
         extract: list[selector],
-        capture: list[tuple[str, selector]],
+        captures: list[capture],
     ) -> None:
         """
         Args:
@@ -141,7 +147,7 @@ class index:
         self._directory: str = directory
         self._output: str = output
         self._extract: list[selector] = extract
-        self._capture: list[tuple[str, selector]] = capture
+        self._captures: list[capture] = captures
 
     def build(self) -> None:
 
@@ -165,9 +171,12 @@ class index:
                 data = {
                     "path": os.path.relpath(file_path, self._directory),
                 }
-                for name, selector in self._capture:
-                    elem: bs4.Tag | None = selector.find_tag(soup)
-                    data[name] = _clean_text(_get_text(elem)) if elem else ""
+                for capture in self._captures:
+                    elem: bs4.Tag | None = capture.selector.find_tag(soup)
+                    if not elem:
+                        data[capture.name] = ""
+                        continue
+                    data[capture.name] = _clean_text(_get_text(elem))
 
                 index.append(data)
 
