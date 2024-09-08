@@ -88,6 +88,9 @@ camera: camera_images
 .PHONY: yo
 yo: say_yo
 
+.PHONY: server
+server: _server
+
 # LEVEL 1 RULES ###############################################################
 
 xooxle: FORCE
@@ -207,6 +210,17 @@ site_publish:
 		--build \
 		--commit \
 		--push
+
+_server:
+	if [ -z "$${SITE_DIR}" ]; then \
+		RESET='\033[0m'; \
+		RED='\033[0;31m'; \
+		PURPLE='\033[0;35m'; \
+		echo -e "$${PURPLE}SITE_DIR $${RED}is not defined. Did you forget to source $${PURPLE}.env$${RED}?$${RESET}"; \
+	else \
+		echo -e "$${BLUE}Serving at $${GREEN}http://localhost:8000/$${BLUE}.$${RESET}"; \
+	  python -m http.server 8000 --bind 127.0.0.1 --directory "$${SITE_DIR}"; \
+	fi
 
 # INFRASTRUCTURE RULES
 bin_install:
