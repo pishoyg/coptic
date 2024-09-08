@@ -174,66 +174,47 @@ regexCheckbox.addEventListener('click', () => { handleSearchQuery(0); });
 // Handle dialect highlighting.
 // TODO: (#230) This is Crum-specific, and doesn't apply to all Xooxle pages.
 // Remove from this file, and insert in a Crum-specific file.
-const dialectCheckboxes = document.querySelectorAll('.dialect-checkbox');
 const sheet = window.document.styleSheets[0];
 const spellingRuleIndex = sheet.cssRules.length;
-const initSpellingRule = '.spelling, .dialect { opacity: 1.0; }';
-sheet.insertRule(initSpellingRule, spellingRuleIndex);
-const undialectedRuleIndex = sheet.cssRules.length;
-const undialectedQuery = '.spelling:not(.S,.Sa,.Sf,.A,.sA,.B,.F,.Fb,.O,.NH)';
-const initUndialectedRule = `${undialectedQuery} { opacity: 1.0; }`;
-sheet.insertRule(initUndialectedRule, undialectedRuleIndex);
-const punctuationQuery = '.dialect-parenthesis, .dialect-comma, .spelling-comma';
-const punctuationRuleIndex = sheet.cssRules.length;
-const initPuncutationRule = `${punctuationQuery} { opacity: 1.0; }`;
-sheet.insertRule(initPuncutationRule, punctuationRuleIndex);
-function replaceRule(index, rule) {
-  sheet.deleteRule(index);
+const undialectedRuleIndex = sheet.cssRules.length + 1;
+const punctuationRuleIndex = sheet.cssRules.length + 2;
+function addOrReplaceRule(index, rule) {
+  if (index < sheet.cssRules.length) {
+    sheet.deleteRule(index);
+  }
   sheet.insertRule(rule, index);
 }
-function updateDialectHighlighting(init = false) {
-  if (init) {
-    console.log(initSpellingRule, initUndialectedRule, initSpellingRule);
-    replaceRule(spellingRuleIndex, initSpellingRule);
-    replaceRule(undialectedRuleIndex, initUndialectedRule);
-    replaceRule(punctuationRuleIndex, initPuncutationRule);
-    return;
-  }
-  const enabled = Array.from(dialectCheckboxes)
-    .filter((box) => box.checked)
-    .map((box) => box.name);
-  const query = enabled.map((d) => `.${d}`).join(',');
-  // The 'd' parameter is not used in this script. It's used in the pages of
-  // individual words for dialect highlighting.
-  localStorage.setItem('d', enabled.join(','));
-  const spellingRule = query
+function updateDialectCSS(active) {
+  const query = active === null ? '' : active.map((d) => `.${d}`).join(',');
+  addOrReplaceRule(spellingRuleIndex, query
     ? `.spelling:not(${query}), .dialect:not(${query}) {opacity: 0.3;}`
-    : '.spelling, .dialect {opacity: 0.3;}';
-  replaceRule(spellingRuleIndex, spellingRule);
-  replaceRule(undialectedRuleIndex, `${undialectedQuery} { opacity: ${String(query ? 1.0 : 0.3)}; }`);
-  replaceRule(punctuationRuleIndex, '.dialect-parenthesis, .dialect-comma, .spelling-comma { opacity: 0.3; }');
+    : `.spelling, .dialect {opacity: ${String(active === null ? 1.0 : 0.3)};}`);
+  addOrReplaceRule(undialectedRuleIndex, `.spelling:not(.S,.Sa,.Sf,.A,.sA,.B,.F,.Fb,.O,.NH) { opacity: ${String(active === null || query !== '' ? 1.0 : 0.3)}; }`);
+  addOrReplaceRule(punctuationRuleIndex, `.dialect-parenthesis, .dialect-comma, .spelling-comma { opacity: ${String(active === null ? 1.0 : 0.3)}; }`);
 }
-dialectCheckboxes.forEach(checkbox => {
-  checkbox.addEventListener('click', () => { updateDialectHighlighting(false); });
-});
+const dialectCheckboxes = document.querySelectorAll('.dialect-checkbox');
+// When we first load the page, 'd' dictates the set of active dialects and
+// hence highlighting. We load 'd' from the local storage, and we update the
+// boxes to match this set. Then we update the CSS.
 window.addEventListener('pageshow', () => {
-  // Handle dialect highlighting, in case it changed on another page.
   const d = localStorage.getItem('d');
-  if (d === null) {
-    dialectCheckboxes.forEach((box) => {
-      box.checked = false;
-    });
-    updateDialectHighlighting(true);
-  }
-  else {
-    const active = new Set(d === '' ? [] : d.split(','));
-    dialectCheckboxes.forEach((box) => {
-      box.checked = active.has(box.name);
-    });
-    updateDialectHighlighting(false);
-  }
-  // Handle the search query.
+  const active = d === null ? null : d === '' ? [] : d.split(',');
+  Array.from(dialectCheckboxes).forEach((box) => {
+    box.checked = active?.includes(box.name) ?? false;
+  });
+  updateDialectCSS(active);
   handleSearchQuery(0);
-  // Focus on the search box.
   searchBox.focus();
+});
+// When we click a checkbox, it is the boxes that dictate the set of active
+// dialects and highlighting. So we use the boxes to update 'd', and then
+// update highlighting.
+dialectCheckboxes.forEach(checkbox => {
+  checkbox.addEventListener('click', () => {
+    const active = Array.from(dialectCheckboxes)
+      .filter((box) => box.checked)
+      .map((box) => box.name);
+    localStorage.setItem('d', active.join(','));
+    updateDialectCSS(active);
+  });
 });
