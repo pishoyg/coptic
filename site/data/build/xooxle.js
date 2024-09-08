@@ -173,3 +173,34 @@ searchBox.addEventListener('keypress', handleSearchQuery);
 fullWordCheckbox.addEventListener('click', handleSearchQuery);
 regexCheckbox.addEventListener('click', handleSearchQuery);
 window.addEventListener('load', handleSearchQuery);
+// Handle dialect highlighting.
+// TODO: (#230) This is Crum-specific, and doesn't apply to all Xooxle pages.
+// Remove from this file, and insert in a Crum-specific file.
+const dialectCheckboxes = document.querySelectorAll('.dialect-checkbox');
+const sheet = window.document.styleSheets[0];
+const spellingRuleIndex = sheet.cssRules.length;
+sheet.insertRule('.spelling, .dialect { opacity: 1.0; }', spellingRuleIndex);
+const undialectedRuleIndex = sheet.cssRules.length;
+const undialectedQuery = '.spelling:not(.S,.Sa,.Sf,.A,.sA,.B,.F,.Fb,.O,.NH)';
+sheet.insertRule(`${undialectedQuery} { opacity: 1.0; }`, undialectedRuleIndex);
+const punctuationQuery = '.dialect-parenthesis, .dialect-comma, .spelling-comma';
+const punctuationRuleIndex = sheet.cssRules.length;
+sheet.insertRule(`${punctuationQuery} { opacity: 1.0; }`, punctuationRuleIndex);
+function replaceRule(index, rule) {
+  sheet.deleteRule(index);
+  sheet.insertRule(rule, index);
+}
+function updateDialectHighlighting() {
+  const enabled = Array.from(dialectCheckboxes)
+    .filter((box) => box.checked)
+    .map((box) => `.${box.name}`).join(',');
+  const spellingRule = enabled
+    ? `.spelling:not(${enabled}), .dialect:not(${enabled}) {opacity: 0.3;}`
+    : '.spelling, .dialect {opacity: 0.3;}';
+  replaceRule(spellingRuleIndex, spellingRule);
+  replaceRule(undialectedRuleIndex, `${undialectedQuery} { opacity: ${String(enabled ? 1.0 : 0.3)}; }`);
+  replaceRule(punctuationRuleIndex, '.dialect-parenthesis, .dialect-comma, .spelling-comma { opacity: 0.3; }');
+}
+dialectCheckboxes.forEach(checkbox => {
+  checkbox.addEventListener('click', updateDialectHighlighting);
+});
