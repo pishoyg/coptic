@@ -1,6 +1,5 @@
 'use strict';
 const searchBox = document.getElementById('searchBox');
-searchBox.focus();
 const fullWordCheckbox = document.getElementById('fullWordCheckbox');
 const regexCheckbox = document.getElementById('regexCheckbox');
 const resultTable = document.getElementById('resultTable').querySelector('tbody');
@@ -172,10 +171,12 @@ searchBox.addEventListener('input', handleSearchQuery);
 searchBox.addEventListener('keypress', handleSearchQuery);
 fullWordCheckbox.addEventListener('click', handleSearchQuery);
 regexCheckbox.addEventListener('click', handleSearchQuery);
-window.addEventListener('load', handleSearchQuery);
 // Handle dialect highlighting.
 // TODO: (#230) This is Crum-specific, and doesn't apply to all Xooxle pages.
 // Remove from this file, and insert in a Crum-specific file.
+const DIALECTS = [
+  'S', 'Sa', 'Sf', 'A', 'sA', 'B', 'F', 'Fb', 'O', 'NH'
+];
 const dialectCheckboxes = document.querySelectorAll('.dialect-checkbox');
 const sheet = window.document.styleSheets[0];
 const spellingRuleIndex = sheet.cssRules.length;
@@ -193,14 +194,32 @@ function replaceRule(index, rule) {
 function updateDialectHighlighting() {
   const enabled = Array.from(dialectCheckboxes)
     .filter((box) => box.checked)
-    .map((box) => `.${box.name}`).join(',');
-  const spellingRule = enabled
-    ? `.spelling:not(${enabled}), .dialect:not(${enabled}) {opacity: 0.3;}`
+    .map((box) => box.name);
+  const query = enabled.map((d) => `.${d}`).join(',');
+  // The 'd' parameter is not used in this script. It's used in the pages of
+  // individual words for dialect highlighting.
+  localStorage.setItem('d', enabled.join(','));
+  const spellingRule = query
+    ? `.spelling:not(${query}), .dialect:not(${query}) {opacity: 0.3;}`
     : '.spelling, .dialect {opacity: 0.3;}';
   replaceRule(spellingRuleIndex, spellingRule);
-  replaceRule(undialectedRuleIndex, `${undialectedQuery} { opacity: ${String(enabled ? 1.0 : 0.3)}; }`);
+  replaceRule(undialectedRuleIndex, `${undialectedQuery} { opacity: ${String(query ? 1.0 : 0.3)}; }`);
   replaceRule(punctuationRuleIndex, '.dialect-parenthesis, .dialect-comma, .spelling-comma { opacity: 0.3; }');
 }
 dialectCheckboxes.forEach(checkbox => {
   checkbox.addEventListener('click', updateDialectHighlighting);
+});
+window.addEventListener('pageshow', () => {
+  const d = localStorage.getItem('d');
+  console.log(d);
+  if (d === null) {
+    return;
+  }
+  const active = new Set(d === '' ? [] : d.split(','));
+  DIALECTS.forEach((d) => {
+    const elem = document.getElementById(`checkbox-${d}`);
+    elem.checked = active.has(d);
+  });
+  updateDialectHighlighting();
+  searchBox.focus();
 });
