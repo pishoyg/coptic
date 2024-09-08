@@ -89,17 +89,19 @@ class Result {
 }
 // Load the JSON file as a Promise that will resolve once the data is fetched.
 const fileMap = (async function () {
-  // NOTE: Due to this `fetch`, trying to open the website as a local file in
-  // the browser may not work. You have to serve it through a server.
-  return await fetch('xooxle.json')
-    .then(async (resp) => await resp.json())
-    .then((records) => records.map((record) => {
-      const path = record['path'];
-      delete record['path'];
-      const text = record['text'];
-      delete record['text'];
-      return new Result(path, text, record);
-    }));
+  const xooxle = await fetch('xooxle.json')
+    .then(async (resp) => await resp.json());
+  const results = xooxle.data.map((record) => {
+    const path = record['path'];
+    delete record['path'];
+    const text = record['text'];
+    delete record['text'];
+    return new Result(path, text, record);
+  });
+  return {
+    data: results,
+    metadata: xooxle.metadata,
+  };
 })();
 // Event listener for the search button.
 let currentAbortController = null;
@@ -116,10 +118,10 @@ async function search() {
     resultTable.innerHTML = ''; // Clear previous results.
     return;
   }
-  const results = await fileMap;
+  const xooxle = await fileMap;
   resultTable.innerHTML = ''; // Clear previous results.
   let found = false;
-  for (const res of results) {
+  for (const res of xooxle.data) {
     if (abortController.signal.aborted) {
       return;
     }
@@ -134,9 +136,10 @@ async function search() {
     viewCell.innerHTML = `<a href="${res.path}#:~:text=${encodeURIComponent(matchedWord)}">
       view</a>`;
     row.appendChild(viewCell);
-    Object.values(res.fields).forEach((value) => {
+    Object.entries(res.fields).forEach(([key, value]) => {
       const cell = document.createElement('td');
-      cell.innerHTML = value.replaceAll('\n', '<br>');
+      const raw = xooxle.metadata[key].raw;
+      cell.innerHTML = raw ? value : value.replaceAll('\n', '<br>');
       row.appendChild(cell);
     });
     const matchesCell = document.createElement('td');

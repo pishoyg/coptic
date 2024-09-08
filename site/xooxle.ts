@@ -6,6 +6,14 @@ const resultTable = document.getElementById('resultTable')!.querySelector('tbody
 
 const HIGHLIGHT_COLOR = '#f0d4fc';
 
+interface Field {
+  readonly raw: boolean;
+}
+interface Xooxle {
+  readonly data: Result[];
+  readonly metadata: Record<string, Field>;
+}
+
 // TODO: (#229) Use a smarter heuristic to show context. Instead of splitting
 // into lines, split into meaningful search units.
 class Result {
@@ -105,18 +113,27 @@ class Result {
 }
 
 // Load the JSON file as a Promise that will resolve once the data is fetched.
-const fileMap: Promise<Result[]> = (async function(): Promise<Result[]> {
+const fileMap: Promise<Xooxle> = (async function(): Promise<Xooxle> {
   // NOTE: Due to this `fetch`, trying to open the website as a local file in
   // the browser may not work. You have to serve it through a server.
-  return await fetch('xooxle.json')
-    .then(async (resp) => await resp.json() as Record<string, string>[])
-    .then((records) => records.map((record: Record<string, string>): Result => {
-      const path = record['path']!;
-      delete record['path'];
-      const text = record['text']!;
-      delete record['text'];
-      return new Result(path, text, record);
-    }));
+  interface xooxle {
+    readonly data: Record<string, string>[];
+    readonly metadata: Record<string, Field>;
+  }
+
+  const xooxle = await fetch('xooxle.json')
+    .then(async (resp) => await resp.json() as xooxle);
+  const results = xooxle.data.map((record: Record<string, string>): Result => {
+    const path = record['path']!;
+    delete record['path'];
+    const text = record['text']!;
+    delete record['text'];
+    return new Result(path, text, record);
+  });
+  return {
+    data: results,
+    metadata: xooxle.metadata,
+  } as Xooxle;
 })();
 
 // Event listener for the search button.
@@ -139,13 +156,13 @@ async function search() {
     return;
   }
 
-  const results = await fileMap;
+  const xooxle = await fileMap;
 
   resultTable.innerHTML = ''; // Clear previous results.
 
   let found = false;
 
-  for (const res of results) {
+  for (const res of xooxle.data) {
     if (abortController.signal.aborted) {
       return;
     }
@@ -164,9 +181,10 @@ async function search() {
       view</a>`;
     row.appendChild(viewCell);
 
-    Object.values(res.fields).forEach((value: string) => {
+    Object.entries(res.fields).forEach(([key, value]: [string, string]) => {
       const cell = document.createElement('td');
-      cell.innerHTML = value.replaceAll('\n', '<br>');
+      const raw = xooxle.metadata[key]!.raw;
+      cell.innerHTML = raw ? value : value.replaceAll('\n', '<br>');
       row.appendChild(cell);
     });
 

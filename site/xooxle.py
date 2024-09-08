@@ -121,9 +121,10 @@ def _clean_text(text: str) -> str:
 
 
 class capture:
-    def __init__(self, name: str, select: selector) -> None:
+    def __init__(self, name: str, select: selector, raw: bool) -> None:
         self.name: str = name
         self.selector: selector = select
+        self.raw: bool = raw
 
 
 class index:
@@ -151,7 +152,7 @@ class index:
 
     def build(self) -> None:
 
-        index: list[dict[str, str]] = []
+        data: list[dict[str, str]] = []
 
         # Recursively search for all HTML files.
         for root, _, files in os.walk(self._directory):
@@ -168,16 +169,28 @@ class index:
                         element.extract()
 
                 # Store the relative file path.
-                data = {
+                datum = {
                     "path": os.path.relpath(file_path, self._directory),
                 }
                 for capture in self._captures:
                     elem: bs4.Tag | None = capture.selector.find_tag(soup)
                     if not elem:
-                        data[capture.name] = ""
+                        datum[capture.name] = ""
                         continue
-                    data[capture.name] = _clean_text(_get_text(elem))
+                    if capture.raw:
+                        datum[capture.name] = str(elem)
+                    else:
+                        datum[capture.name] = _clean_text(_get_text(elem))
 
-                index.append(data)
+                data.append(datum)
 
+        index = {
+            "data": data,
+            "metadata": {
+                capture.name: {
+                    "raw": capture.raw,
+                }
+                for capture in self._captures
+            },
+        }
         utils.write(utils.json_dumps(index), self._output)
