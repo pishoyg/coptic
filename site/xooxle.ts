@@ -159,8 +159,8 @@ async function search() {
 
   resultTable.innerHTML = ''; // Clear previous results.
 
-  let found = false;
-
+  let count = 0;
+  const resultsToUpdateDisplay = 5;
   for (const res of xooxle.data) {
     if (abortController.signal.aborted) {
       return;
@@ -170,7 +170,6 @@ async function search() {
     if (matchedWord === null || matchedLines === null) {
       continue;
     }
-    found = true;
 
     // Create a new row for the table
     const row = document.createElement('tr');
@@ -193,15 +192,9 @@ async function search() {
 
     resultTable.appendChild(row);
 
-    await new Promise((resolve) => setTimeout(resolve, 0));
-  }
-  if (!found && !abortController.signal.aborted) {
-    const row = document.createElement('tr');
-    const cell = document.createElement('td');
-    cell.setAttribute('colspan', '2');
-    cell.textContent = 'No matching files found.';
-    row.appendChild(cell);
-    resultTable.appendChild(row);
+    if (++count % resultsToUpdateDisplay == 0) {
+      await new Promise((resolve) => setTimeout(resolve, 0));
+    }
   }
 }
 
@@ -219,7 +212,6 @@ function handleSearchQuery(timeout = 100) {
 }
 
 searchBox.addEventListener('input', () => { handleSearchQuery(100); });
-searchBox.addEventListener('keypress', () => { handleSearchQuery(100); });
 fullWordCheckbox.addEventListener('click', () => { handleSearchQuery(0); });
 regexCheckbox.addEventListener('click', () => { handleSearchQuery(0); });
 
@@ -240,7 +232,7 @@ function addOrReplaceRule(index: number, rule: string) {
 }
 
 function updateDialectCSS(active: string[] | null) {
-  const query: string = active === null ? '' :active.map((d) => `.${d}`).join(',');
+  const query: string = active === null ? '' : active.map((d) => `.${d}`).join(',');
 
   addOrReplaceRule(
     spellingRuleIndex,
@@ -286,13 +278,20 @@ dialectCheckboxes.forEach(checkbox => {
   });
 });
 
-function reset() {
+function reset(event: Event) {
   localStorage.removeItem('d');
   dialectCheckboxes.forEach((box) => { box.checked = false; });
   updateDialectCSS(null);
-  searchBox.value = '';
-  handleSearchQuery(0);
   searchBox.focus();
+  // Prevent clicking the button from submitting the form, thus resetting
+  // everything!
+  event.preventDefault();
 }
 
-document.getElementById('reset')!.onclick = reset;
+document.getElementById('reset')!.addEventListener('click', reset);
+// Prevent pressing Enter from submitting the form, thus resetting everything!
+searchBox.addEventListener('keypress', (event) => {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+  }
+});
