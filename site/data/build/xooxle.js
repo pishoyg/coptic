@@ -119,7 +119,8 @@ async function search() {
   }
   const xooxle = await fileMap;
   resultTable.innerHTML = ''; // Clear previous results.
-  let found = false;
+  let count = 0;
+  const resultsToUpdateDisplay = 5;
   for (const res of xooxle.data) {
     if (abortController.signal.aborted) {
       return;
@@ -128,7 +129,6 @@ async function search() {
     if (matchedWord === null || matchedLines === null) {
       continue;
     }
-    found = true;
     // Create a new row for the table
     const row = document.createElement('tr');
     const viewCell = document.createElement('td');
@@ -145,15 +145,9 @@ async function search() {
     matchesCell.innerHTML = matchedLines;
     row.appendChild(matchesCell);
     resultTable.appendChild(row);
-    await new Promise((resolve) => setTimeout(resolve, 0));
-  }
-  if (!found && !abortController.signal.aborted) {
-    const row = document.createElement('tr');
-    const cell = document.createElement('td');
-    cell.setAttribute('colspan', '2');
-    cell.textContent = 'No matching files found.';
-    row.appendChild(cell);
-    resultTable.appendChild(row);
+    if (++count % resultsToUpdateDisplay == 0) {
+      await new Promise((resolve) => setTimeout(resolve, 0));
+    }
   }
 }
 let debounceTimeout = null;
@@ -168,7 +162,6 @@ function handleSearchQuery(timeout = 100) {
   }, timeout);
 }
 searchBox.addEventListener('input', () => { handleSearchQuery(100); });
-searchBox.addEventListener('keypress', () => { handleSearchQuery(100); });
 fullWordCheckbox.addEventListener('click', () => { handleSearchQuery(0); });
 regexCheckbox.addEventListener('click', () => { handleSearchQuery(0); });
 // Handle dialect highlighting.
@@ -218,12 +211,19 @@ dialectCheckboxes.forEach(checkbox => {
     updateDialectCSS(active);
   });
 });
-function reset() {
+function reset(event) {
   localStorage.removeItem('d');
   dialectCheckboxes.forEach((box) => { box.checked = false; });
   updateDialectCSS(null);
-  searchBox.value = '';
-  handleSearchQuery(0);
   searchBox.focus();
+  // Prevent clicking the button from submitting the form, thus resetting
+  // everything!
+  event.preventDefault();
 }
-document.getElementById('reset').onclick = reset;
+document.getElementById('reset').addEventListener('click', reset);
+// Prevent pressing Enter from submitting the form, thus resetting everything!
+searchBox.addEventListener('keypress', (event) => {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+  }
+});
