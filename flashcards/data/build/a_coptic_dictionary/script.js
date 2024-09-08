@@ -103,14 +103,14 @@ function set_url_and_local(param, value) {
     const url = new URL(window.location.href);
     url.searchParams.delete(param);
     url.search = decodeURIComponent(url.search);
-    window.history.pushState('', '', url.toString());
+    window.history.replaceState('', '', url.toString());
     return;
   }
   localStorage.setItem(param, value);
   const url = new URL(window.location.href);
   url.searchParams.set(param, value);
   url.search = decodeURIComponent(url.search);
-  window.history.pushState('', '', url.toString());
+  window.history.replaceState('', '', url.toString());
 }
 function moveElement(el, tag, attrs) {
   const copy = document.createElement(tag);
@@ -293,7 +293,7 @@ function reset() {
   localStorage.clear();
   const url = new URL(window.location.href);
   url.search = '';
-  window.history.pushState('', '', url.toString());
+  window.history.replaceState('', '', url.toString());
   dev();
   dialect();
 }
