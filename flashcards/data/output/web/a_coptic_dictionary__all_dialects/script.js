@@ -46,50 +46,6 @@ window.addEventListener('load', () => {
   const DIALECTS = [
     CLS_S, CLS_Sa, CLS_Sf, CLS_A, CLS_sA, CLS_B, CLS_F, CLS_Fb, CLS_O, CLS_NH,
   ];
-  /*
- * Dialect classes are to be found in:
- * 1. HTML classes
- * 2. JavaScript classes
- *
- * Dialect codes are to be found in:
- * 1. Dialect Elements' inner HTML
- * 2. The `d` parameter (which will be set using #1)
- *
- * For example, consider the following HTML:
- * ```
- * <span class="dialect cls_B">B</span>
- * ```
- *
- * The class is "cls_B". The code is "B". The code will be used to set the
- * parameter `d`. The class will be used in JavaScript.
- * Thus, expect the following line to live in your JavaScript:
- * ```
- * const CLS_B: Dialect = "cls_B";
- * ```
- *
- * We also use this HTML span to construct a mapping between dialect codes
- * and classes.
- * The mapping is restricted to the dialects that are present in a given
- * page, and that's OK. On a given page, we have no need for the dialects
- * that are absent from the page! Makes sense, eh?
- *
- * It is the classes that are used for internal processing, and it is the
- * codes that are presented to the user. This way, the `d` parameter has a
- * "pretty" value, and is persistent.
- *
- * As for the classes, we can obfuscate them as we like!
- */
-  const DIALECT_CODE_TO_CLASS = (function () {
-    const codeToClass = new Map();
-    DIALECTS.forEach((cls) => {
-      const code = document.querySelector(`.${CLS_DIALECT}.${cls}`)?.innerHTML;
-      if (code === undefined) {
-        return;
-      }
-      codeToClass.set(code, cls);
-    });
-    return codeToClass;
-  }());
   function get_url_or_local(param, default_value = null) {
     return (new URLSearchParams(window.location.search)).get(param)
         ?? localStorage.getItem(param)
@@ -201,13 +157,11 @@ window.addEventListener('load', () => {
   // Handle CLS_DIALECT class.
   function getActiveDialectClassesInCurrentPage() {
     const d = get_url_or_local('d');
-    if (d === null) {
-      return null;
-    }
-    if (d === '') {
-      return new Set();
-    }
-    return new Set(d.split(',').filter((d) => DIALECT_CODE_TO_CLASS.has(d)).map((d) => DIALECT_CODE_TO_CLASS.get(d)));
+    return d === null
+      ? null
+      : d === ''
+        ? new Set()
+        : new Set(d.split(',').map((d) => d));
   }
   function toggleDialect(code) {
     const cur = get_url_or_local('d');
