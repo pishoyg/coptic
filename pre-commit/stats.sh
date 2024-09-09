@@ -7,6 +7,5 @@ source .helpers
 
 if (( $(date +%s) - $(tail -n 1 data/stats.tsv | cut --fields 2) >= 86400 ));
 then
-  echo -e "${RED}Run ${YELLOW}\`make stats\`${RED}.${RESET}"
-  exit 1;
+  echo -e "${RED}Reminder: Run ${YELLOW}\`make stats\`${RED}.${RESET}"
 fi

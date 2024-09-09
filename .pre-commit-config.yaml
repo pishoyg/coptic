@@ -359,12 +359,6 @@ repos:
         language: system
         files: ^dictionary/marcion.sourceforge.net/data/input/.*_appendices.tsv$
         pass_filenames: false
-      # Daily Statistics
-      - id: stats
-        name: stats
-        entry: pre-commit/stats.sh
-        language: system
-        pass_filenames: false
       # Python Unit Tests
       - id: python-unittest
         name: python-unittest
@@ -385,3 +379,10 @@ repos:
         language: system
         exclude: ^README.md$
         types: [markdown]
+      # Daily Statistics
+      - id: stats
+        name: stats
+        entry: pre-commit/stats.sh
+        language: system
+        pass_filenames: false
+        verbose: true
