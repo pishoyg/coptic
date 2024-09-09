@@ -51,11 +51,15 @@ that aims to make the Coptic language more **learnable**.
 
 We use:
 
-- GitHub for our code base.
-- GitHub Pages for our website.
-- Google Drive to share large files.
-- Google Analytics to analyze traffic.
-- Squarespace for DNS registration.
+<!-- Update the Google Drive link to point to your public folder. -->
+
+- [GitHub](https://github.com/pishoyg/coptic/) for our code base.
+- [GitHub Pages](https://github.com/pishoyg/pishoyg.github.io/) for our
+[website](https://metremnqymi.com/).
+- [Google Drive](https://drive.google.com/) to share large files.
+- [Google
+Analytics](https://analytics.google.com/analytics/web/#/p454349148) to analyze traffic.
+- [Squarespace](https://account.squarespace.com/domains/managed/metremnqymi.com) for DNS registration.
 
 ## Diagram
 
@@ -169,17 +173,18 @@ Issues should involve a local change or set of local changes.
 
 High-priority issues are defined in two ways:
 - Assignment to a developer
-- Belonging to a component that has already been agreed to be high-priority.
+- Belonging to a component version that we are working to release.
 
 ### [Milestones](https://github.com/pishoyg/coptic/milestones/)
 
 Milestones represent more complex pieces of work. Their size is undetermined.
 They could weeks or years, but they are not simple enough to span just a few
-days.
+days. This is their main use case.
 
-Milestones can also be used as component backlogs, for miscellaneous issues
-related to some component that don't belong to a goal that we've already
-defined and crystalized into a milestone.
+There is a second, somewhat unorthodox, use case for milestones as component
+backlogs backlogs, for miscellaneous issues related to some component that
+don't belong to a goal that we've already defined and crystalized into a
+milestone.
 
 - Every issue must belong to a milestone.
 
@@ -187,7 +192,7 @@ defined and crystalized into a milestone.
 long-term plans.
 Their count should be in a relatively small order of magnitude.
 
-- There is also a generic developer experience milestone, that is somewhat
+- There is also a generic developer experience milestone, which is somewhat
 perpetual, and has been growing to be synonymous to the `dev` label. Although
 in cases when a `dev` task pertains to another milestone, the other milestone
 trumps the developer experience milestone. This milestone is therefore somewhat
@@ -198,6 +203,13 @@ milestones that represent concrete goals.
 celebrated, and its remaining issues move to the corresponding component
 backlog milestone.
 
+- Component-specific milestones are often named as component versions. (For
+example, *Site v1.0* is a milestone referring to the first release of the
+Site).
+
+- Backlog milestone are often named after the component, but without a version,
+  and often with the prefix *Pipeline:*.
+
 ### [Labels](https://github.com/pishoyg/coptic/labels)
 
 - All issues should be labeled.
@@ -205,21 +217,28 @@ backlog milestone.
 - We assign the following categories of labels to issues:
 
    - `How`
-
      - How can the task be achieved? Coding? Diplomacy? Manual labor (data
      collection)? Planning? Design? Writing Documentation?
-     - Please note the following:
-       - We don't assign a coding label, because that includes most tasks. A task
-         that doesn't have a nature label should be a coding task.
-
+       - `architect`: Architecture and design.
+       - `diplomacy`: Diplomacy, connections, and reachout.
+       - `documentation`: Writing documentation.
+       - `labor`: Manual data collection.
+       - `freelance`: Hiring a freelancer.
+     - We don't assign a coding label, because that includes most tasks. A task
+       that doesn't have a nature label should be a coding task.
    - `Who`
-
      - Is the issue user-facing or developer-oriented?
-
+       - `user`: A user-oriented improvement.
+       - `dev`: A developer-oriented, not user-visible, improvement.
    - `Why`
-
      - What is the purpose of this issue?
-
+       - `data collection`: Expand the data that we own.
+       - `maintenance`: Maintain existing territories, rather than expand into
+         new ones.
+       - `rigor`: Improve the rigor (particularly parsing, or inflection
+       generation).
+       - `UI`: Improve the user interface.
+       - `bug`: Fix a bug.
 
 ## Technical Guidelines
 
@@ -421,6 +440,10 @@ part of all dialects.
 35. https://metremnqymi.com/crum/3231.html
 36. https://metremnqymi.com/crum/3257.html
 37. https://metremnqymi.com/crum/3302.html
+
+*NOTE:* Some undialected entries in this list have been removed because their
+dialect was inferred, e.g. all the entries under Ⳉ have been labeled as
+Akhmimic.
 
 ### Entries that are Absent in Crum
 
