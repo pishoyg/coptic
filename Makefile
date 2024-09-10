@@ -253,14 +253,14 @@ npm_install: FORCE
 		"typescript"
 
 pip_install: requirements.txt
-	python -m pip install --upgrade pip --break-system-packages
-	python -m pip install -r requirements.txt --break-system-packages
+	python -m pip install --upgrade pip $${PIP_FLAGS}
+	python -m pip install -r requirements.txt $${PIP_FLAGS}
 
 pip_update: FORCE
 	pip-review --local --auto
 
 python_install: FORCE
-	python -m pip install -e . --break-system-packages
+	python -m pip install -e . $${PIP_FLAGS}
 
 precommit_install: FORCE
 	pre-commit install
