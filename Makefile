@@ -23,7 +23,7 @@ SHELL := /bin/bash
 # LEVEL 3 RULES ###############################################################
 
 .PHONY: all
-all: install generate_1 add_1 generate_2 test publish report
+all: install generate_1 add generate_2 index generate_3 test publish report
 
 # LEVEL 2 RULES ###############################################################
 
@@ -32,23 +32,31 @@ install: pip_install python_install precommit_install bin_install npm_install
 
 # generate_1 rules are prerequisites for generate_2 rules.
 .PHONY: generate_1
-generate_1: bible copticsite crum crum_appendices crum_img kellia ts_transpile xooxle
+generate_1: bible copticsite crum crum_appendices crum_img kellia ts_transpile
 
 .PHONY: generate_2
 generate_2: flashcards kindle
 
-# NOTE: We have to duplicate the add / test rule, otherwise Make would
+.PHONY: generate_3
+generate_3: xooxle
+
+# NOTE: We have to duplicate the add / index / test rule, otherwise Make would
 # deduplicate a rule that is mentioned twice as a prerequisite of some rule,
 # therefore executing it only once!
-# We call the identical twins `add` and `test` instead of `add_1` and `add_2`
-# because Makefile normally requires a `test` rule. We prefer the name `add`
-# since it's indicative of the fact that this rules adds all local changes from
-# the worktree to the index.
+# We call the identical triplets `add`, `index`, and `test` instead of
+# `add_1`, `add_2`, and `add_3`, because (1) Makefile normally has a `test`
+# rule, and (2) they are easier to type, and we need to type them often.
+# We prefer the name `add` or `index` since it's indicative of the fact that
+# this rules adds all local changes from the worktree to the index. We also
+# prefer uniformity. But in this case, we prioritize convenience!
 .PHONY: add
-add: _add
+add: _add_1
+
+.PHONY: index
+index: _add_2
 
 .PHONY: test
-test: _test
+test: _add_3
 
 .PHONY: publish
 publish: anki_publish epub_publish mobi_publish site_publish
@@ -257,7 +265,7 @@ python_install: FORCE
 precommit_install: FORCE
 	pre-commit install
 
-_add _test: FORCE
+_add_1 _add_2 _add_3: FORCE
 	until git add --all && pre-commit run; do : ; done
 
 precommit_update: FORCE
