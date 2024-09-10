@@ -3,6 +3,8 @@
 set -o errexit  # Exit upon encountering a failure.
 set -o nounset  # Consider an undefined variable to be an error.
 
+source .helpers
+
 readonly GOOGLE_TAG='
   <script async src=
   "https://www.googletagmanager.com/gtag/js?id=G-VCVZFDFZR3"></script>

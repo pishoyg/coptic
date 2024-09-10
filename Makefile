@@ -1,7 +1,20 @@
 SHELL := /bin/bash
 
-# NOTE: Some rules require the environment variables to be exported.
-# See .env_INFO.
+# NOTE:
+# - For those rules that use helpers, shell commands should be preceded by
+#   `. ./.helpers` in order to make sure the helpers are sourced before
+#   execution. This is done in order to allow rules to execute normally even if
+#   the user forgot to source their `.env`.
+#   Notice that it doesn't suffice to source the helpers once, they need to be
+#   sourced before every line, because Make executes each line in a separate
+#   shell, and each shell must have its own sourcing.
+# - For those rules that require environment variables (other than the
+#   helpers), they depend on the REQUIRE_ENV rule, which asks the users to
+#   source their `.env` file. We can't take the liberty to source it on their
+#   behalf (as we do with the helpers), because we don't know which file we
+#   should be sourcing. (It could be `.env` or `.env_INFO`.) We also need to
+#   make sure they are aware of the environment variables as a requirement.
+# See also `.env_INFO`.
 
 # NOTE: We maintain a hierarchical structure for our rules. Level-2 rules are
 # only allowed to use level-1 rules, and level-3 rules are only allowed to use
@@ -10,7 +23,7 @@ SHELL := /bin/bash
 # LEVEL 3 RULES ###############################################################
 
 .PHONY: all
-all: install generate_1 add generate_2 test publish report
+all: install generate_1 add_1 generate_2 test publish report
 
 # LEVEL 2 RULES ###############################################################
 
@@ -108,7 +121,7 @@ _bible_no_epub: FORCE
 	python bible/stshenouda.org/main.py \
 		--no_epub=true
 
-epub_publish: FORCE
+epub_publish: REQUIRE_ENV FORCE
 	cp \
 	"bible/stshenouda.org/data/output/epub/1/bohairic_english.epub" \
 	"$${DRIVE_DIR}/2. bohairic_english - single-column - Kindle.epub"
@@ -133,7 +146,7 @@ crum_appendices: FORCE
 crum_img: $(shell find dictionary/marcion.sourceforge.net/data/ -type f)
 	python dictionary/marcion.sourceforge.net/img_helper.py --batch
 
-crum_img_helper: FORCE
+crum_img_helper: REQUIRE_ENV FORCE
 	# TODO: (#5) Remove the filters. Do all the words.
 	python dictionary/marcion.sourceforge.net/img_helper.py \
 		--skip_existing=true \
@@ -156,7 +169,7 @@ kellia_analysis_clean: dictionary/kellia.uni-goettingen.de/data/output/analysis.
 flashcards: FORCE
 	python flashcards/main.py
 
-anki_publish: $(shell find flashcards/data/output/anki/ -type f)
+anki_publish: REQUIRE_ENV $(shell find flashcards/data/output/anki/ -type f)
 	cp \
 		flashcards/data/output/anki/coptic.apkg \
 		"$${DRIVE_DIR}"
@@ -193,62 +206,55 @@ kindle: FORCE
 	-c0 \
 	"dictionary/marcion.sourceforge.net/data/output/mobi/dialect-B/dialect-B.opf"
 
-mobi_publish:
+mobi_publish: REQUIRE_ENV FORCE
 	cp \
 	"dictionary/marcion.sourceforge.net/data/output/mobi/dialect-B/dialect-B.mobi" \
 	"$${DRIVE_DIR}"
 else
 kindle: FORCE
-	echo -e "$${YELLOW}Work in prgress!$${RESET}"
-mobi_publish:
-	echo -e "$${YELLOW}Work in prgress!$${RESET}"
+	. ./.helpers && echo -e "$${YELLOW}Work in prgress!$${RESET}"
+mobi_publish: REQUIRE_ENV FORCE
+	. ./.helpers && echo -e "$${YELLOW}Work in prgress!$${RESET}"
 endif
 
 # SITE RULES
 
-site_publish:
+site_publish: REQUIRE_ENV FORCE
 	bash site/publish.sh \
 		--clean \
 		--build \
 		--commit \
 		--push
 
-_server:
-	if [ -z "$${SITE_DIR}" ]; then \
-		RESET='\033[0m'; \
-		RED='\033[0;31m'; \
-		PURPLE='\033[0;35m'; \
-		echo -e "$${PURPLE}SITE_DIR $${RED}is not defined. Did you forget to source $${PURPLE}.env$${RED}?$${RESET}"; \
-	else \
-		echo -e "$${BLUE}Serving at $${GREEN}http://localhost:8000/$${BLUE}.$${RESET}"; \
-	  python -m http.server 8000 --bind 127.0.0.1 --directory "$${SITE_DIR}"; \
-	fi
+_server: REQUIRE_ENV FORCE
+	. ./.helpers && echo -e "$${BLUE}Serving at $${GREEN}http://localhost:8000/$${BLUE}.$${RESET}"; \
+	python -m http.server 8000 --bind 127.0.0.1 --directory "$${SITE_DIR}"; \
 
 # INFRASTRUCTURE RULES
-bin_install:
-	if ! command -v npm &> /dev/null; then echo -e "$${RED}Please install $${YELLOW}npm$${RED}. See $${YELLOW}https://docs.npmjs.com/downloading-and-installing-node-js-and-npm${RED}.$${RESET}" && exit 1; fi
-	if ! command -v tidy &> /dev/null; then echo -e "$${RED}Please install $${YELLOW}tidy$${RED} from $${YELLOW}https://www.html-tidy.org/${RED}.$${RESET}" && exit 1; fi
-	if ! command -v magick &> /dev/null; then echo -e "$${RED}Please install $${YELLOW}magick$${RED} from $${YELLOW}https://imagemagick.org/${RED}.$${RESET}" && exit 1; fi
-	if ! command -v gh &> /dev/null; then echo -e "$${RED}Please install $${YELLOW}gh$${RED} from $${YELLOW}https://cli.github.com/${RED}.$${RESET}" && exit 1; fi
-	if ! command -v say &> /dev/null; then echo -e "$${YELLOW}Consider installing $${CYAN}say$${YELLOW}. This should be possible with $${CYAN}sudo apt-get install gnustep-gui-runtime$${YELLOW} on Ubuntu.$${RESET}"; fi
+bin_install: FORCE
+	. ./.helpers && if ! command -v npm &> /dev/null; then echo -e "$${RED}Please install $${YELLOW}npm$${RED}. See $${YELLOW}https://docs.npmjs.com/downloading-and-installing-node-js-and-npm${RED}.$${RESET}" && exit 1; fi
+	. ./.helpers && if ! command -v tidy &> /dev/null; then echo -e "$${RED}Please install $${YELLOW}tidy$${RED} from $${YELLOW}https://www.html-tidy.org/${RED}.$${RESET}" && exit 1; fi
+	. ./.helpers && if ! command -v magick &> /dev/null; then echo -e "$${RED}Please install $${YELLOW}magick$${RED} from $${YELLOW}https://imagemagick.org/${RED}.$${RESET}" && exit 1; fi
+	. ./.helpers && if ! command -v gh &> /dev/null; then echo -e "$${RED}Please install $${YELLOW}gh$${RED} from $${YELLOW}https://cli.github.com/${RED}.$${RESET}" && exit 1; fi
+	. ./.helpers && if ! command -v say &> /dev/null; then echo -e "$${YELLOW}Consider installing $${CYAN}say$${YELLOW}. This should be possible with $${CYAN}sudo apt-get install gnustep-gui-runtime$${YELLOW} on Ubuntu.$${RESET}"; fi
 
 
-npm_install:
+npm_install: FORCE
 	npm install \
 		--save-dev \
 		"typescript"
 
 pip_install: requirements.txt
-	python -m pip install --upgrade pip
-	python -m pip install -r requirements.txt
+	python -m pip install --upgrade pip --break-system-packages
+	python -m pip install -r requirements.txt --break-system-packages
 
 pip_update: FORCE
 	pip-review --local --auto
 
-python_install:
-	python -m pip install -e .
+python_install: FORCE
+	python -m pip install -e . --break-system-packages
 
-precommit_install:
+precommit_install: FORCE
 	pre-commit install
 
 _add _test: FORCE
@@ -307,3 +313,13 @@ say_yo: FORCE
 # FORCE
 .PHONY: FORCE
 FORCE:
+
+.PHONY: REQUIRE_ENV
+REQUIRE_ENV: FORCE
+	. ./.helpers && if [ -z "$${ENV_HAS_BEEN_SOURCED}" ]; then \
+		echo -e "$${RED}Environment variables are required by this recipe.$${RESET}"; \
+		echo -e "$${RED}They seem not to have been exported.$${RESET}"; \
+		echo -e "$${RED}Did you forget to source $${YELLOW}.env$${RED}?$${RESET}"; \
+		echo -e "$${RED}See $${YELLOW}.env_INFO$${RED} for more information.$${RESET}"; \
+		exit 1; \
+	fi
