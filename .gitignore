@@ -7,7 +7,8 @@
 
 # Python artifacts.
 __pycache__
-coptic.egg-info
+coptic.egg-info/
+build/
 
 # TypeScript artifacts.
 node_modules
