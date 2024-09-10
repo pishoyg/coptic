@@ -63,15 +63,7 @@ function window_open(url: string): void {
   window.open(url, '_blank', 'noopener,noreferrer')!.focus();
 }
 
-function set_url_and_local(param: string, value: string | null): void {
-  if (value === null) {
-    localStorage.removeItem(param);
-    const url = new URL(window.location.href);
-    url.searchParams.delete(param);
-    url.search = decodeURIComponent(url.search);
-    window.history.replaceState('', '', url.toString());
-    return;
-  }
+function set_url_and_local(param: string, value: string): void {
   localStorage.setItem(param, value);
   const url = new URL(window.location.href);
   url.searchParams.set(param, value);
@@ -300,7 +292,7 @@ Array.prototype.forEach.call(
   (el: HTMLElement): void => {
     el.classList.add(CLS_LINK);
     el.onclick = () => {
-      set_url_and_local('dev', devState() === 'true' ? 'false' : 'true');
+      localStorage.setItem('dev', devState() === 'true' ? 'false' : 'true');
       dev();
     };
   });

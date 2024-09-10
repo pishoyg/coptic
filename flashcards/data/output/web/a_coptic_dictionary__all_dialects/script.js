@@ -55,14 +55,6 @@ window.addEventListener('load', () => {
     window.open(url, '_blank', 'noopener,noreferrer').focus();
   }
   function set_url_and_local(param, value) {
-    if (value === null) {
-      localStorage.removeItem(param);
-      const url = new URL(window.location.href);
-      url.searchParams.delete(param);
-      url.search = decodeURIComponent(url.search);
-      window.history.replaceState('', '', url.toString());
-      return;
-    }
     localStorage.setItem(param, value);
     const url = new URL(window.location.href);
     url.searchParams.set(param, value);
@@ -238,7 +230,7 @@ window.addEventListener('load', () => {
   Array.prototype.forEach.call(document.getElementsByClassName(CLS_DEVELOPER), (el) => {
     el.classList.add(CLS_LINK);
     el.onclick = () => {
-      set_url_and_local('dev', devState() === 'true' ? 'false' : 'true');
+      localStorage.setItem('dev', devState() === 'true' ? 'false' : 'true');
       dev();
     };
   });
