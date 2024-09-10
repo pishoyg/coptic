@@ -51,12 +51,10 @@ that aims to make the Coptic language more **learnable**.
 
 We use:
 
-<!-- Update the Google Drive link to point to your public folder. -->
-
 - [GitHub](https://github.com/pishoyg/coptic/) for our code base.
 - [GitHub Pages](https://github.com/pishoyg/pishoyg.github.io/) for our
 [website](https://metremnqymi.com/).
-- [Google Drive](https://drive.google.com/) to share large files.
+- [Google Drive](https://drive.google.com/drive/folders/17jI92CKumjYQTXghThaaejPeD8ZbifPm?usp=drive_link) to share large files.
 - [Google
 Analytics](https://analytics.google.com/analytics/web/#/p454349148) to analyze traffic.
 - [Squarespace](https://account.squarespace.com/domains/managed/metremnqymi.com) for DNS registration.

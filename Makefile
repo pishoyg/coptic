@@ -111,7 +111,7 @@ _bible_no_epub: FORCE
 epub_publish: FORCE
 	cp \
 	"bible/stshenouda.org/data/output/epub/1/bohairic_english.epub" \
-	"$${BIBLE_DIR}/2. bohairic_english - single-column - Kindle.epub"
+	"$${DRIVE_DIR}/2. bohairic_english - single-column - Kindle.epub"
 
 bible_epub_clean: $(shell ls bible/stshenouda.org/data/output/epub/*/*.epub)
 	git restore "bible/stshenouda.org/data/output/epub/*/*.epub"
@@ -159,7 +159,7 @@ flashcards: FORCE
 anki_publish: $(shell find flashcards/data/output/anki/ -type f)
 	cp \
 		flashcards/data/output/anki/coptic.apkg \
-		"$${FLASHCARD_DIR}"
+		"$${DRIVE_DIR}"
 
 _flashcards_crum_all_dialects: FORCE
 	python flashcards/main.py \
@@ -196,7 +196,7 @@ kindle: FORCE
 mobi_publish:
 	cp \
 	"dictionary/marcion.sourceforge.net/data/output/mobi/dialect-B/dialect-B.mobi" \
-	"$${KINDLE_DIR}"
+	"$${DRIVE_DIR}"
 else
 kindle: FORCE
 	echo -e "$${YELLOW}Work in prgress!$${RESET}"
