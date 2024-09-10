@@ -74,14 +74,12 @@ function moveElement(el, tag, attrs) {
 // Handle CLS_CRUM_PAGE class.
 Array.prototype.forEach.call(document.getElementsByClassName(CLS_CRUM_PAGE), (el) => {
   el.classList.add(CLS_LINK);
-  el.onclick = () => {
-    let pageNumber = el.innerHTML;
-    const lastChar = pageNumber.substr(pageNumber.length - 1);
-    if (lastChar === 'a' || lastChar === 'b') {
-      pageNumber = pageNumber.slice(0, -1);
-    }
-    document.getElementById(`crum${pageNumber}`).scrollIntoView();
-  };
+  let pageNumber = el.innerHTML;
+  const lastChar = pageNumber.substr(pageNumber.length - 1);
+  if (lastChar === 'a' || lastChar === 'b') {
+    pageNumber = pageNumber.slice(0, -1);
+  }
+  moveElement(el, 'a', { 'href': `#crum${pageNumber}` });
 });
 // Handle CLS_CRUM_PAGE_EXTERNAL class.
 Array.prototype.forEach.call(document.getElementsByClassName(CLS_CRUM_PAGE_EXTERNAL), (el) => {
@@ -131,9 +129,7 @@ Array.prototype.forEach.call(document.getElementsByClassName(CLS_GREEK), (el) =>
 // Handle CLS_DAWOUD_PAGE class.
 Array.prototype.forEach.call(document.getElementsByClassName(CLS_DAWOUD_PAGE), (el) => {
   el.classList.add(CLS_LINK);
-  el.onclick = () => {
-    document.getElementById(`dawoud${el.innerHTML.slice(0, -1)}`).scrollIntoView();
-  };
+  moveElement(el, 'a', { 'href': `#dawoud${el.innerHTML.slice(0, -1)}` });
 });
 // Handle CLS_DRV_KEY class.
 Array.prototype.forEach.call(document.getElementsByClassName(CLS_DRV_KEY), (el) => {
