@@ -1,4 +1,3 @@
-import argparse
 import html
 import json
 import os
@@ -36,17 +35,6 @@ SOURCES_DIR = "bible/stshenouda.org/data/raw/Sources/"
 OUTPUT_DIR = "bible/stshenouda.org/data/output"
 PARALLELS = ["Bohairic_English"]
 COVER = "bible/stshenouda.org/data/img/stauros.jpeg"
-
-argparser = argparse.ArgumentParser(
-    description="Process the Coptic Bible data.",
-)
-
-argparser.add_argument(
-    "--no_epub",
-    type=bool,
-    help="If true, do not generate EPUB's.",
-    default=False,
-)
 
 
 def file_name(book_name: str) -> str:
@@ -394,7 +382,6 @@ def _per_lang() -> dict[str, dict[str, list[str]]]:
 
 
 def main() -> None:
-    args = argparser.parse_args()
     books = []
     book_to_testament = {}
     book_to_testament_indexed = {}
@@ -531,8 +518,6 @@ def main() -> None:
 
     write_html(html2, books)
 
-    if args.no_epub:
-        return
     write_epub(html1, books, "1")
     write_epub(html2, books, "2")
     write_epub(html3, books, "3")

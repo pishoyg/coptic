@@ -76,9 +76,6 @@ flashcards_copticsite: _flashcards_copticsite
 .PHONY: flashcards_kellia
 flashcards_kellia: _flashcards_kellia
 
-.PHONY: bible_no_epub
-bible_no_epub: _bible_no_epub
-
 .PHONY: kellia_analysis
 kellia_analysis: _kellia_analysis
 
@@ -89,7 +86,7 @@ stats: stats_save
 stats_format: _stats_format
 
 .PHONY: clean
-clean: git_clean bible_epub_clean kellia_analysis_clean
+clean: git_clean kellia_analysis_clean
 
 .PHONY: status
 status: git_status
@@ -125,17 +122,10 @@ ts_transpile: FORCE
 bible: FORCE
 	python bible/stshenouda.org/main.py
 
-_bible_no_epub: FORCE
-	python bible/stshenouda.org/main.py \
-		--no_epub=true
-
 epub_publish: REQUIRE_ENV FORCE
 	cp \
 	"bible/stshenouda.org/data/output/epub/1/bohairic_english.epub" \
 	"$${DRIVE_DIR}/2. bohairic_english - single-column - Kindle.epub"
-
-bible_epub_clean: $(shell ls bible/stshenouda.org/data/output/epub/*/*.epub)
-	git restore "bible/stshenouda.org/data/output/epub/*/*.epub"
 
 # COPTICSITE_COM RULES
 copticsite: FORCE
