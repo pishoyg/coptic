@@ -20,7 +20,7 @@ package.json
 .ruff_cache
 
 # Flashcard decks are too big to host on GitHub.
-flashcards/data/output/anki/coptic.apkg
+flashcards/data/output/anki/
 
 # EPUB files are large (though not too large for GitHub). We don't persist them
 # for the following reasons:

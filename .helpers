@@ -79,9 +79,10 @@ findex () {
     -not -path "./node_modules" \
     -not -path "bible/stshenouda.org/data/output/epub/*" \
     -not -path "bible/stshenouda.org/data/output/epub" \
+    -not -path "flashcards/data/output/anki/*" \
+    -not -path "flashcards/data/output/anki/" \
     -not -name "package-lock.json" \
     -not -name "package.json" \
-    -not -name "flashcards/data/output/anki/coptic.apkg" \
     -not -name ".env" \
     -not -path "./archive/*" \
     -not -path "./archive" \

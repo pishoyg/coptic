@@ -265,7 +265,6 @@ git_clean: FORCE
 	git clean \
 		-x \
 		-d \
-		--exclude "flashcards/data/output/anki/coptic.apkg" \
 		--exclude ".env" \
 		--force
 
