@@ -22,6 +22,18 @@ package.json
 # Flashcard decks are too big to host on GitHub.
 flashcards/data/output/anki/coptic.apkg
 
+# EPUB files are large (though not too large for GitHub). We don't persist them
+# for the following reasons:
+# 1. To save some space, and keep our repo size under control. (#139)
+# 2. Because the pipeline is nondeterministic, meaning that running it twice
+# would produce different results, which dirties our worktree and makes some
+# operations complex. (#152, #220)
+# 3. We publish them to Drive, and this has generally been our approach towards
+# "opaque" data that gets published. It's opaque in the sense that we can't run
+# `git diff` against it to inspect the impact that a given change has on the
+# output data. The Bible EPUB has a `diff`-able counterpart, namely the HTML.
+bible/stshenouda.org/data/output/epub/
+
 # This contains secrets (authorization tokens for Drive, local file paths,
 # idiosyncratic flag values, ...).
 # You have to create your own version of this file in order to be able to
