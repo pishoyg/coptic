@@ -237,12 +237,6 @@ def load_book(book_name: str) -> dict | list:
     return json_loads(t)
 
 
-def write_txt(lang: str, column: pd.Series) -> None:
-    path = writing_path("txt", "", f"{lang}")
-    content = "\n".join(filter(None, column))
-    utils.write(content, path)
-
-
 def html_head(title: str = "") -> str:
     return """<!DOCTYPE html>
 <head>
@@ -512,9 +506,6 @@ def main() -> None:
                 html2[lang][book_name].append(pb2.end_chapter())
                 html3[lang][book_name].append(pb3.end_chapter())
         df = pd.concat([df, book_df], ignore_index=True)
-
-    for lang in LANGUAGES:
-        write_txt(lang, df[lang])
 
     write_html(html2, books)
 
