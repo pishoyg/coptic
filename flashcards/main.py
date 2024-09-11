@@ -106,7 +106,9 @@ def main() -> None:
             d.write_web(dir)
 
     if args.anki:
-        write_anki(decks, os.path.join(args.output_dir, "anki", args.anki))
+        dir = os.path.join(args.output_dir, "anki")
+        pathlib.Path(dir).mkdir(exist_ok=True)
+        write_anki(decks, os.path.join(dir, args.anki))
 
     work_dir.cleanup()
 
