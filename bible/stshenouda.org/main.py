@@ -249,10 +249,6 @@ def load_book(book_name: str) -> dict | list:
     return json_loads(t)
 
 
-def write_tsv(df: pd.DataFrame) -> None:
-    utils.write_tsvs(df, writing_path("tsvs", "", "bible"))
-
-
 def write_txt(lang: str, column: pd.Series) -> None:
     path = writing_path("txt", "", f"{lang}")
     content = "\n".join(filter(None, column))
@@ -529,8 +525,6 @@ def main() -> None:
                 html2[lang][book_name].append(pb2.end_chapter())
                 html3[lang][book_name].append(pb3.end_chapter())
         df = pd.concat([df, book_df], ignore_index=True)
-
-    write_tsv(df)
 
     for lang in LANGUAGES:
         write_txt(lang, df[lang])
