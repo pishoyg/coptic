@@ -215,6 +215,7 @@ def img(
     get_paths: typing.Callable,
     fmt_args: typing.Optional[typing.Callable] = None,
     force: bool = True,
+    line_br: bool = True,
 ) -> media:
     """
     Args:
@@ -232,8 +233,9 @@ def img(
         '<img src="{basename}" alt="{alt}" id="{id}" class="{class}" style="width: {width}">'
         "<figcaption> {caption} </figcaption>"
         "</figure>"
-        "<br/>"
     )
+    if line_br:
+        html_fmt += "<br>"
 
     return media(
         html_fmt=html_fmt,
