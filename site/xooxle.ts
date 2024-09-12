@@ -4,6 +4,7 @@ const regexCheckbox = document.getElementById('regexCheckbox') as HTMLInputEleme
 const resultTable = document.getElementById('resultTable')!.querySelector('tbody')!;
 
 const HIGHLIGHT_COLOR = '#f0d4fc';
+const RESULTS_TO_UPDATE_DISPLAY = 5;
 
 interface Field {
   readonly raw: boolean;
@@ -26,48 +27,22 @@ class Result {
     this.fields = fields;
   }
 
-  match(query: string, fullWord: boolean, useRegex: boolean):
-    [string | null, string | null] {
-    if (!useRegex) {
-      // Escape all the special characters in the string, in order to search
-      // for raw matches.
-      query = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    }
-    if (fullWord) {
-      // Using Unicode-aware word boundaries: `\b` doesn't work for non-ASCII
-      // so we use `\p{L}` (letter) and `\p{N}` (number) to match words in any
-      // Unicode script.
-      query = `(?<=^|[^\\p{L}\\p{N}])${query}(?=$|[^\\p{L}\\p{N}])`;
-    }
-    try {
-      // NOTE: We can't use the `g` flag (for global) to retrieve all regex
-      // matches, because there are some limitations regarding supporting
-      // regular expressions using both `u` and `g` flags.
-      const regex = new RegExp(query, 'iu'); // Case-insensitive and Unicode-aware.
-      const match = this.text.match(regex);
-      if (match?.index === undefined) {
-        return [null, null];
-      }
-      // With `fullWord`, we already force matching to be restricted to full
-      // words, so there is nothing that we need to do expand our match to fall
-      // on word boundaries, it's already the case.
-      // Otherwise, we have to expand our boundaries.
-      const word = fullWord ? match[0] :
-        this.getMatchFullWords(match.index, match[0]);
-
-      const matchedLines: string[] = [];
-      this.text.split('\n').forEach((line: string) => {
-        const highlightedLine = this.highlightAllMatches(line, regex);
-        if (highlightedLine === line) {
-          return;
-        }
-        matchedLines.push(highlightedLine);
-      });
-      return [word, matchedLines.join('<hr color="#E0E0E0">')];
-    } catch {
-      alert('Invalid regular expression');
+  match(regex: RegExp): [string | null, string | null] {
+    const match = this.text.match(regex);
+    if (match?.index === undefined) {
       return [null, null];
     }
+    const word = this.getMatchFullWords(match.index, match[0]);
+
+    const matchedLines: string[] = [];
+    this.text.split('\n').forEach((line: string) => {
+      const highlightedLine = this.highlightAllMatches(line, regex);
+      if (highlightedLine === line) {
+        return;
+      }
+      matchedLines.push(highlightedLine);
+    });
+    return [word, matchedLines.join('<hr color="#E0E0E0">')];
   }
 
   highlightAllMatches(line: string, regex: RegExp): string {
@@ -146,12 +121,33 @@ async function search() {
   const abortController = new AbortController();
   currentAbortController = abortController;
 
-  const query = searchBox.value.trim();
-  const fullWord = fullWordCheckbox.checked;
-  const useRegex = regexCheckbox.checked;
+  let query = searchBox.value.trim();
 
   if (!query) {
     resultTable.innerHTML = ''; // Clear previous results.
+    return;
+  }
+
+  if (!regexCheckbox.checked) {
+    // Escape all the special characters in the string, in order to search
+    // for raw matches.
+    query = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+  if (fullWordCheckbox.checked) {
+    // Using Unicode-aware word boundaries: `\b` doesn't work for non-ASCII
+    // so we use `\p{L}` (letter) and `\p{N}` (number) to match words in any
+    // Unicode script.
+    query = `(?<=^|[^\\p{L}\\p{N}])${query}(?=$|[^\\p{L}\\p{N}])`;
+  }
+
+  let regex: RegExp;
+  try {
+    // NOTE: We can't use the `g` flag (for global) to retrieve all regex
+    // matches, because there are some limitations regarding supporting
+    // regular expressions using both `u` and `g` flags.
+    regex = new RegExp(query, 'iu'); // Case-insensitive and Unicode-aware.
+  } catch {
+    alert('invalid regular expression');
     return;
   }
 
@@ -159,17 +155,18 @@ async function search() {
 
   resultTable.innerHTML = ''; // Clear previous results.
 
-  let count = 1;
-  const resultsToUpdateDisplay = 5;
+  let count = 0;
   for (const res of xooxle.data) {
     if (abortController.signal.aborted) {
       return;
     }
 
-    const [matchedWord, matchedLines] = res.match(query, fullWord, useRegex);
+    const [matchedWord, matchedLines] = res.match(regex);
     if (matchedWord === null || matchedLines === null) {
       continue;
     }
+
+    ++count;
 
     // Create a new row for the table
     const row = document.createElement('tr');
@@ -193,10 +190,9 @@ async function search() {
 
     resultTable.appendChild(row);
 
-    if (count % resultsToUpdateDisplay == 0) {
+    if (count % RESULTS_TO_UPDATE_DISPLAY == 0) {
       await new Promise((resolve) => setTimeout(resolve, 0));
     }
-    ++count;
   }
 }
 
