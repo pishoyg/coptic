@@ -173,6 +173,46 @@ class structured_word:
         append_types: bool = True,
         classify: bool = False,
     ) -> str:
+        """
+        Args:
+            include_dialects:
+                Determine whether to include the list of dialect codes in the
+                output.
+            include_references:
+                Determine whether to include references in the output. (This is
+                currently present only for Nag Hammadi spellings.)
+            append_root_type:
+                Determine whether to prettify the output by appending a symbol
+                that represents the root type.
+                If the line already has types, those types trump, as they often
+                invalidate / override the type of the root. However, if the
+                line of spellings doesn't have any types specific to it, then
+                the spellings likely have the same type as the root, so we
+                append it.
+            parenthesize_assumed:
+                Determine whether to surround assumed spellings with
+                parentheses. Notice that assumed spellings have parentheses by
+                default, that may or may not have been normalized during
+                parsing.
+                - If they have, then we can either add them back or leave them
+                  out.
+                - If they have not, then we can keep them (they are there
+                already), but we can't remove them in the output generation
+                phase.
+            append_types:
+                Determine whether to prettify the output by appending symbols
+                representing the detached types that have been picked up.
+                This won't have any effect if types are not populated, which
+                could be the case if detached types were not picked up but
+                simply left in the text during the parsing phase.
+            classify:
+                Determine whether or not to wrap each element in an HTML
+                `<span>` tag with classes indicating its "category".
+                Categories could be a dialect code, a spelling, or a type. They
+                could also be as simple as commas and parentheses.
+                See below for which classes get populated for which elements.
+        """
+
         def _span(content: str, classes: list[str]) -> str:
             assert classes
             if not content:
