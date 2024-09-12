@@ -119,7 +119,7 @@ async function search() {
   }
   const xooxle = await fileMap;
   resultTable.innerHTML = ''; // Clear previous results.
-  let count = 0;
+  let count = 1;
   const resultsToUpdateDisplay = 5;
   for (const res of xooxle.data) {
     if (abortController.signal.aborted) {
@@ -132,7 +132,8 @@ async function search() {
     // Create a new row for the table
     const row = document.createElement('tr');
     const viewCell = document.createElement('td');
-    viewCell.innerHTML = `<a href="${res.path}#:~:text=${encodeURIComponent(matchedWord)}">
+    viewCell.innerHTML = `${String(count)}.
+      <a href="${res.path}#:~:text=${encodeURIComponent(matchedWord)}">
       view</a>`;
     row.appendChild(viewCell);
     Object.entries(res.fields).forEach(([key, value]) => {
@@ -145,9 +146,10 @@ async function search() {
     matchesCell.innerHTML = matchedLines;
     row.appendChild(matchesCell);
     resultTable.appendChild(row);
-    if (++count % resultsToUpdateDisplay == 0) {
+    if (count % resultsToUpdateDisplay == 0) {
       await new Promise((resolve) => setTimeout(resolve, 0));
     }
+    ++count;
   }
 }
 let debounceTimeout = null;

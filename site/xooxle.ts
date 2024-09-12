@@ -159,7 +159,7 @@ async function search() {
 
   resultTable.innerHTML = ''; // Clear previous results.
 
-  let count = 0;
+  let count = 1;
   const resultsToUpdateDisplay = 5;
   for (const res of xooxle.data) {
     if (abortController.signal.aborted) {
@@ -175,7 +175,8 @@ async function search() {
     const row = document.createElement('tr');
 
     const viewCell = document.createElement('td');
-    viewCell.innerHTML = `<a href="${res.path}#:~:text=${encodeURIComponent(matchedWord)}">
+    viewCell.innerHTML = `${String(count)}.
+      <a href="${res.path}#:~:text=${encodeURIComponent(matchedWord)}">
       view</a>`;
     row.appendChild(viewCell);
 
@@ -192,9 +193,10 @@ async function search() {
 
     resultTable.appendChild(row);
 
-    if (++count % resultsToUpdateDisplay == 0) {
+    if (count % resultsToUpdateDisplay == 0) {
       await new Promise((resolve) => setTimeout(resolve, 0));
     }
+    ++count;
   }
 }
 
