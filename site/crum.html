@@ -52,8 +52,11 @@
       <button id="reset">reset</button>
     </div>
   </form>
+  <!-- We always use a full-width table in order to reduce jitter. Otherwise,
+the table width will expand gradually as results with longer and longer lines
+get added to the list, creating a jittery gradual expansion.-->
 
-  <table id="resultTable">
+  <table id="resultTable" style="width: 100%">
     <thead>
       <tr>
         <td style="width: 10.0%;">
@@ -72,8 +75,8 @@
     </tbody>
   </table>
   <script defer src="xooxle.js"></script>
-
-  <hr>
+  <p><br>
+  </p>
 
   <h2>Ⲅⲟⲟⲅⲗⲉ</h2>
 
