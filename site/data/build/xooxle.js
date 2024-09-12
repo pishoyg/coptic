@@ -177,69 +177,6 @@ function handleSearchQuery(timeout) {
 searchBox.addEventListener('input', () => { handleSearchQuery(100); });
 fullWordCheckbox.addEventListener('click', () => { handleSearchQuery(0); });
 regexCheckbox.addEventListener('click', () => { handleSearchQuery(0); });
-// Handle dialect highlighting.
-// TODO: (#230) This is Crum-specific, and doesn't apply to all Xooxle pages.
-// Remove from this file, and insert in a Crum-specific file.
-const sheet = window.document.styleSheets[0];
-const spellingRuleIndex = sheet.cssRules.length;
-const undialectedRuleIndex = sheet.cssRules.length + 1;
-const punctuationRuleIndex = sheet.cssRules.length + 2;
-function addOrReplaceRule(index, rule) {
-  if (index < sheet.cssRules.length) {
-    sheet.deleteRule(index);
-  }
-  sheet.insertRule(rule, index);
-}
-function updateDialectCSS(active) {
-  const query = active === null ? '' : active.map((d) => `.${d}`).join(',');
-  addOrReplaceRule(spellingRuleIndex, query
-    ? `.spelling:not(${query}), .dialect:not(${query}) {opacity: 0.3;}`
-    : `.spelling, .dialect {opacity: ${String(active === null ? 1.0 : 0.3)};}`);
-  addOrReplaceRule(undialectedRuleIndex, `.spelling:not(.S,.Sa,.Sf,.A,.sA,.B,.F,.Fb,.O,.NH) { opacity: ${String(active === null || query !== '' ? 1.0 : 0.3)}; }`);
-  addOrReplaceRule(punctuationRuleIndex, `.dialect-parenthesis, .dialect-comma, .spelling-comma { opacity: ${String(active === null ? 1.0 : 0.3)}; }`);
-}
-const dialectCheckboxes = document.querySelectorAll('.dialect-checkbox');
-// When we first load the page, 'd' dictates the set of active dialects and
-// hence highlighting. We load 'd' from the local storage, and we update the
-// boxes to match this set. Then we update the CSS.
-window.addEventListener('pageshow', () => {
-  const d = localStorage.getItem('d');
-  const active = d === null ? null : d === '' ? [] : d.split(',');
-  Array.from(dialectCheckboxes).forEach((box) => {
-    box.checked = active?.includes(box.name) ?? false;
-  });
-  updateDialectCSS(active);
-  handleSearchQuery(0);
-  searchBox.focus();
-});
-// When we click a checkbox, it is the boxes that dictate the set of active
-// dialects and highlighting. So we use the boxes to update 'd', and then
-// update highlighting.
-dialectCheckboxes.forEach(checkbox => {
-  checkbox.addEventListener('click', () => {
-    const active = Array.from(dialectCheckboxes)
-      .filter((box) => box.checked)
-      .map((box) => box.name);
-    localStorage.setItem('d', active.join(','));
-    updateDialectCSS(active);
-  });
-});
-function reset(event) {
-  localStorage.removeItem('d');
-  dialectCheckboxes.forEach((box) => { box.checked = false; });
-  updateDialectCSS(null);
-  searchBox.focus();
-  // Prevent clicking the button from submitting the form, thus resetting
-  // everything!
-  event.preventDefault();
-}
-document.getElementById('reset').addEventListener('click', reset);
-// Prevent pressing Enter from submitting the form, thus resetting everything!
-searchBox.addEventListener('keypress', (event) => {
-  if (event.key === 'Enter') {
-    event.preventDefault();
-  }
-});
 // Check if a query is passed in the query parameters.
 {
   let found = false;
@@ -262,4 +199,73 @@ searchBox.addEventListener('keypress', (event) => {
   if (found) {
     handleSearchQuery(0);
   }
+}
+window.addEventListener('pageshow', () => {
+  handleSearchQuery(0);
+  searchBox.focus();
+});
+// Handle dialect highlighting.
+// TODO: (#230) This is Crum-specific, and doesn't apply to all Xooxle pages.
+// Remove from this file, and insert in a Crum-specific file.
+// NOTE: We keep this in a separate scope to reduce the likelihood of it mixing
+// with other pieces of logic.
+{
+  const sheet = window.document.styleSheets[0];
+  const spellingRuleIndex = sheet.cssRules.length;
+  const undialectedRuleIndex = sheet.cssRules.length + 1;
+  const punctuationRuleIndex = sheet.cssRules.length + 2;
+  function addOrReplaceRule(index, rule) {
+    if (index < sheet.cssRules.length) {
+      sheet.deleteRule(index);
+    }
+    sheet.insertRule(rule, index);
+  }
+  function updateDialectCSS(active) {
+    const query = active === null ? '' : active.map((d) => `.${d}`).join(',');
+    addOrReplaceRule(spellingRuleIndex, query
+      ? `.spelling:not(${query}), .dialect:not(${query}) {opacity: 0.3;}`
+      : `.spelling, .dialect {opacity: ${String(active === null ? 1.0 : 0.3)};}`);
+    addOrReplaceRule(undialectedRuleIndex, `.spelling:not(.S,.Sa,.Sf,.A,.sA,.B,.F,.Fb,.O,.NH) { opacity: ${String(active === null || query !== '' ? 1.0 : 0.3)}; }`);
+    addOrReplaceRule(punctuationRuleIndex, `.dialect-parenthesis, .dialect-comma, .spelling-comma { opacity: ${String(active === null ? 1.0 : 0.3)}; }`);
+  }
+  const dialectCheckboxes = document.querySelectorAll('.dialect-checkbox');
+  // When we first load the page, 'd' dictates the set of active dialects and
+  // hence highlighting. We load 'd' from the local storage, and we update the
+  // boxes to match this set. Then we update the CSS.
+  window.addEventListener('pageshow', () => {
+    const d = localStorage.getItem('d');
+    const active = d === null ? null : d === '' ? [] : d.split(',');
+    Array.from(dialectCheckboxes).forEach((box) => {
+      box.checked = active?.includes(box.name) ?? false;
+    });
+    updateDialectCSS(active);
+  });
+  // When we click a checkbox, it is the boxes that dictate the set of active
+  // dialects and highlighting. So we use the boxes to update 'd', and then
+  // update highlighting.
+  dialectCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener('click', () => {
+      const active = Array.from(dialectCheckboxes)
+        .filter((box) => box.checked)
+        .map((box) => box.name);
+      localStorage.setItem('d', active.join(','));
+      updateDialectCSS(active);
+    });
+  });
+  function reset(event) {
+    localStorage.removeItem('d');
+    dialectCheckboxes.forEach((box) => { box.checked = false; });
+    updateDialectCSS(null);
+    searchBox.focus();
+    // Prevent clicking the button from submitting the form, thus resetting
+    // everything!
+    event.preventDefault();
+  }
+  document.getElementById('reset').addEventListener('click', reset);
+  // Prevent pressing Enter from submitting the form, thus resetting everything!
+  searchBox.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+    }
+  });
 }
