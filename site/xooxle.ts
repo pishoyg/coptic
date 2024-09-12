@@ -161,7 +161,14 @@ async function search() {
       return;
     }
 
-    const [matchedWord, matchedLines] = res.match(regex);
+    let matchedWord: string | null, matchedLines: string | null;
+    try {
+      [matchedWord, matchedLines] = res.match(regex);
+    } catch {
+      alert('invalid regular expression');
+      break;
+    }
+
     if (matchedWord === null || matchedLines === null) {
       continue;
     }
