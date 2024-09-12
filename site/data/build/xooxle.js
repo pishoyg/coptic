@@ -154,14 +154,24 @@ async function search() {
   }
 }
 let debounceTimeout = null;
-function handleSearchQuery(timeout = 100) {
+function handleSearchQuery(timeout) {
   if (debounceTimeout) {
     clearTimeout(debounceTimeout);
   }
   debounceTimeout = setTimeout(() => {
     // Call the async function after the timeout.
     // Use void to ignore the returned promise.
-    void search();
+    try {
+      void search();
+    }
+    finally {
+      // Update the URL.
+      const url = new URL(window.location.href);
+      url.searchParams.set('query', searchBox.value.trim());
+      url.searchParams.set('full', String(fullWordCheckbox.checked));
+      url.searchParams.set('regex', String(regexCheckbox.checked));
+      window.history.replaceState('', '', url.toString());
+    }
   }, timeout);
 }
 searchBox.addEventListener('input', () => { handleSearchQuery(100); });
@@ -230,3 +240,26 @@ searchBox.addEventListener('keypress', (event) => {
     event.preventDefault();
   }
 });
+// Check if a query is passed in the query parameters.
+{
+  let found = false;
+  const url = new URL(window.location.href);
+  const query = url.searchParams.get('query');
+  if (query) {
+    found = true;
+    searchBox.value = query;
+  }
+  const fullWord = url.searchParams.get('full');
+  if (fullWord !== null) {
+    found = true;
+    fullWordCheckbox.checked = fullWord === 'true';
+  }
+  const useRegex = url.searchParams.get('regex');
+  if (useRegex !== null) {
+    found = true;
+    regexCheckbox.checked = useRegex === 'true';
+  }
+  if (found) {
+    handleSearchQuery(0);
+  }
+}
