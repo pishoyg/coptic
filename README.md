@@ -25,7 +25,7 @@ that aims to make the Coptic language more **learnable**.
       - [Technical Guidelines](#technical-guidelines-1)
     - [Undialected Entries](#undialected-entries)
     - [Entries that are Absent in Crum](#entries-that-are-absent-in-crum)
-  - [copticocc.org](#copticoccorg)
+  - [Dawoud](#dawoud)
 - [`bible/`](#bible)
 - [`flashcards/`](#flashcards)
   - [Anki Keys and Synchronization](#anki-keys-and-synchronization)
@@ -282,7 +282,7 @@ extensively.
 1. Privatize methods whenever possible. Use the name mangling feature in
    Python.
 
-## `stats`
+## [`stats`](data/stats.tsv)
 
 - We collect extensive stats, and we remind you of them using a pre-commit. The
 primary targets of our statistics are:
@@ -293,7 +293,7 @@ primary targets of our statistics are:
 
 # [`dictionary/`](dictionary/)
 
-## Crum
+## [Crum](dictionary/marcion.sourceforge.net)
 
 ### Image Collection
 
@@ -437,7 +437,7 @@ database from other sources:
 4. https://metremnqymi.com/crum/3382.html
 5. https://metremnqymi.com/crum/3385.html
 
-## copticocc.org
+## [Dawoud](dictionary/copticocc.org)
 
 - [`dawoud-D100/`](dictionary/copticocc.org/data/dawoud-D100) contains scans of
 Moawad Dawoud's dictionary. They are obtained from the PDF using the following
@@ -483,7 +483,7 @@ images.
 
 There are several published versions of the Coptic Bible. The most
 recent, and most complete, is that of [St. Shenouda the Archmandrite
-Coptic Society](stshenouda.org). It is the Coptic Bible project that is
+Coptic Society](http://stshenouda.org). It is the Coptic Bible project that is
 most worthy of investment at the moment.
 
 # [`flashcards/`](flashcards/)
