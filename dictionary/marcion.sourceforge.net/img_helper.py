@@ -15,7 +15,12 @@ import requests_oauthlib  # type: ignore[import-untyped]
 import utils
 
 TARGET_WIDTH = 300
-MIN_WIDTH = 200
+MIN_WIDTH = 200  # Minimum height of the input image.
+PREFER_MIN_WIDTH = 300
+MIN_RESIZE_HEIGHT = 100  # Minimum allowed height of the resized image. (#240)
+PREFER_MIN_RESIZE_HEIGHT = 200
+MAX_RESIZE_HEIGHT = 500  # Maximum allowed height of the resized image. (#240)
+PREFER_MAX_RESIZE_HEIGHT = 400
 IMG_DIR = "dictionary/marcion.sourceforge.net/data/img"
 IMG_300_DIR = "dictionary/marcion.sourceforge.net/data/img-300"
 
@@ -214,15 +219,58 @@ def query(meaning: str) -> str:
 
 
 def invalid_size(files: list[str]) -> list[str]:
-    if MIN_WIDTH == -1:
-        return []
     assert MIN_WIDTH > 0
     invalid = []
     for f in files:
         image = PIL.Image.open(f)  # type: ignore[attr-defined]
-        width, _ = image.size
+        width, height = image.size
         if width < MIN_WIDTH:
+            utils.warn(
+                f,
+                "has a width of",
+                width,
+                "; the valid range is",
+                MIN_WIDTH,
+                "-",
+            )
             invalid.append(f)
+            continue
+        if width < PREFER_MIN_WIDTH:
+            utils.warn(
+                f,
+                "has a width of",
+                width,
+                "; this is allowed but discouraged, consider fetching an"
+                " image with a minimum width of",
+                PREFER_MIN_WIDTH,
+            )
+        height = int(height * 300 / width)
+        if height < MIN_RESIZE_HEIGHT or height > MAX_RESIZE_HEIGHT:
+            utils.warn(
+                f,
+                "will have a resized height of",
+                height,
+                "; the valid range is",
+                MIN_RESIZE_HEIGHT,
+                "-",
+                MAX_RESIZE_HEIGHT,
+            )
+            invalid.append(f)
+            continue
+        if (
+            height < PREFER_MIN_RESIZE_HEIGHT
+            or height > PREFER_MAX_RESIZE_HEIGHT
+        ):
+            utils.warn(
+                f,
+                "will have a resized height of",
+                height,
+                "; this is allowed, but the preferred range is",
+                MIN_RESIZE_HEIGHT,
+                "-",
+                MAX_RESIZE_HEIGHT,
+                "; we prefer images with close-to-square dimensions.",
+            )
     return invalid
 
 
@@ -575,7 +623,7 @@ def prompt(args):
             # Force size.
             invalid = invalid_size(files)
             if invalid:
-                utils.error("Images are too small:", invalid)
+                utils.error("Images have an invalid size:", invalid)
                 continue
 
             # Force sources.
