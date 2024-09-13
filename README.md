@@ -9,16 +9,15 @@ that aims to make the Coptic language more **learnable**.
   - [Hosting](#hosting)
   - [Diagram](#diagram)
   - [Getting started](#getting-started)
-  - [Directory Structure](#directory-structure)
   - [`data/` Subdirectories](#data-subdirectories)
   - [`.env`](#env)
-  - [`stats`](#stats)
   - [Languages](#languages)
   - [Planning](#planning)
     - [Issues](#issues)
     - [Milestones](#milestones)
     - [Labels](#labels)
   - [Technical Guidelines](#technical-guidelines)
+  - [`stats`](#stats)
 - [`dictionary/`](#dictionary)
   - [Crum](#crum)
     - [Image Collection](#image-collection)
@@ -61,33 +60,41 @@ Analytics](https://analytics.google.com/analytics/web/#/p454349148) to analyze t
 
 ## Getting started
 
-Running `make install` should take care of most of the python installations.
+1. Running `make install` should take care of most of the python installations.
 
-If there are missing binaries that you need to download them, `make install`
-will let you know.
+   If there are missing binaries that you need to download them, `make install`
+   will let you know.
 
-You might also want to alias `python` to the latest version.
+1. You might also want to alias `python` to the latest version.
 
-## Directory Structure
+1. Our pipelines are defined in [`Makefile`](Makefile), and they correspond to
+blue circles in the diagram. Other pipelines in [`Makefile`](Makefile) are only
+used during development and testing, and are not relevant for output
+(re)generation.
 
-`dictionary/` contains subdirectories, each containing one dictionary, its data,
-and the scripts used to process the data into other formats. `bible/` currently
-contains a single subdirectory, containing [stshenouda.org](stshenouda.org)'s
-version of the Coptic Bible, and the scripts used to process it.
+1. Keep in mind that parameters are written with the assumption that they are
+   being invoked from the repo's root directory, rather than from the directory
+where the script lives. You should do most of your development from within the
+root directory.
 
-`flashcards/` hosts the logic for creating the flashcard decks. It relies on
-data produced under `dictionary/` and `bible/`.
+1. This README is the single out-of-code documentation source for the whole
+   repo. This is actually enforced. (If you try to create another `README.md`,
+the pre-commits will fail.) Other documentation lives within the code.
 
-`archive/` and `utils/` are not of particular interest.
+1. With the exception of `archive/`, `test/`, and `data/`, and `pre-commit/`,
+   each subdirectory of the root directory represents a major pipeline, or
+category of pipelines, along with their associated data.
 
-There is a total of three README files in this repo. This is intentional, in
-order to prevent the documentation from scattering all over. The other two are
-under `dictionary/` and `bible/`, and they concern those subprojects
-specifically.
-
-Most scripts have default parameters with the assumption that they are being
-invoked from the repo's root directory, rather than from the directory where
-the script lives.
+1. We use pre-commit hooks extensively, and they have helped us discover a lot
+   of bugs and issues with our code, and also keep our repo organized. They are
+not optional, and many of our pipelines assume that the pre-commits have done
+their job. Their installation should be covered by `make install`. They are
+defined in [`.pre-commit-config.yaml`](.pre-commit-config.yaml). They run
+automatically before a commit, but you can trigger them with Make recipes as
+well.
+Until [#120](https://github.com/pishoyg/coptic/issues/120) is resolved, you
+might need to pay some attention to when to trigger them manually, though you
+likely only need to worry about that later.
 
 ## `data/` Subdirectories
 
@@ -112,21 +119,12 @@ the liberty to modify the copies that live under `input/`.
 **one subdirectory per format**. If your pipeline writes both TSV and HTML,
 they should go respectively to `output/tsv/` and `output/html/`.
 
-## `.env`
+## [`.env`](.env)
 
 `.env` (which is hidden by a rule in `.gitignore`) contains the environment
 variables. They are essential for some pipelines.
 
 It is documented in `.env_INFO`, so this README section is intentionally brief.
-
-## `stats`
-
-- We collect extensive stats, and we remind you of them using a pre-commit. The
-primary targets of our statistics are:
-  - The size of our code (represented by the number of lines of code). We also
-  collect this stat for each subproject or pipeline step independently.
-  - The number of data items we've collected for data collection tasks.
-  - We also record the number of commits, and the number of contributors.
 
 ## Languages
 
@@ -253,9 +251,6 @@ Site).
    The `git --word-diff` command is helpful when our line-oriented `diff` is
    not readable. Keep this in mind when structuring your output data.
 
-1. We use pre-commit hooks extensively, and they have helped us discover a lot
-   of bugs and issues with our code, and also keep our repo clean.
-
 1. We force the existence of unit tests, at least one for each Python file.
    While these have so far been mere placeholders, the mere import of a package
    sometimes catches syntax errors, and the placeholders will make it
@@ -283,7 +278,16 @@ extensively.
 1. Privatize methods whenever possible. Use the name mangling feature in
    Python.
 
-# `dictionary/`
+## `stats`
+
+- We collect extensive stats, and we remind you of them using a pre-commit. The
+primary targets of our statistics are:
+  - The size of our code (represented by the number of lines of code). We also
+  collect this stat for each subproject or pipeline step independently.
+  - The number of data items we've collected for data collection tasks.
+  - We also record the number of commits, and the number of contributors.
+
+# [`dictionary/`](dictionary/)
 
 ## Crum
 
@@ -468,14 +472,14 @@ pages). Thus, this is a loss of exactly 24 pixels on the Y axis (roughly 2%)
 for all printed pages, and it doesn't impact the two (currently unused) cover
 images.
 
-# `bible/`
+# [`bible/`](bible/)
 
 There are several published versions of the Coptic Bible. The most
 recent, and most complete, is that of [St. Shenouda the Archmandrite
 Coptic Society](stshenouda.org). It is the Coptic Bible project that is
 most worthy of investment at the moment.
 
-# `flashcards/`
+# [`flashcards/`](flashcards/)
 
 ## Anki Keys and Synchronization
 
