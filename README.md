@@ -10,7 +10,7 @@ that aims to make the Coptic language more **learnable**.
   - [Diagram](#diagram)
   - [Getting started](#getting-started)
   - [Directory Structure](#directory-structure)
-  - [`data/`](#data)
+  - [`data/` Subdirectories](#data-subdirectories)
   - [`.env`](#env)
   - [`stats`](#stats)
   - [Languages](#languages)
@@ -19,26 +19,15 @@ that aims to make the Coptic language more **learnable**.
     - [Milestones](#milestones)
     - [Labels](#labels)
   - [Technical Guidelines](#technical-guidelines)
-  - [Data Collection](#data-collection)
 - [`dictionary/`](#dictionary)
-  - [Marcion](#marcion)
-    - [Data Store](#data-store)
-      - [`marcion-raw/`](#marcion-raw)
-      - [`marcion-input/`](#marcion-input)
-      - [`output/`](#output)
-      - [`img/`](#img)
-      - [`crum`](#crum)
-      - [`obsolete/`](#obsolete)
-      - [(planned) `dawoud-raw`](#planned-dawoud-raw)
-      - [(planned) `dawoud-input`](#planned-dawoud-input)
-      - [(planned) `notes`](#planned-notes)
+  - [Crum](#crum)
+    - [Image Collection](#image-collection)
+      - [Why?](#why)
+      - [Technical Guidelines](#technical-guidelines-1)
     - [Undialected Entries](#undialected-entries)
     - [Entries that are Absent in Crum](#entries-that-are-absent-in-crum)
   - [copticocc.org](#copticoccorg)
 - [`bible/`](#bible)
-  - [Data](#data)
-    - [Output Directories](#output-directories)
-    - [Output Files](#output-files)
 - [`flashcards/`](#flashcards)
   - [Anki Keys and Synchronization](#anki-keys-and-synchronization)
   - [Unused Media](#unused-media)
@@ -100,20 +89,28 @@ Most scripts have default parameters with the assumption that they are being
 invoked from the repo's root directory, rather than from the directory where
 the script lives.
 
-## `data/`
+## `data/` Subdirectories
 
-We have somewhat strict rules regarding our `data/` directory. It usually (and this means almost always) contains four
-subdirectories:
+Most of our projects have a `data` subdirectory. We have somewhat strict rules
+regarding its content. It usually (which, in our repo, means _almost always_)
+contains three subdirectories:
 
-- `raw/`: Data that is **copied** from elsewhere. This would, for example, include the Marcion SQL tables copied as is,
-  unmodified. We don't use files in this directory as inputs to our program.
+- `raw/`: Data that is **copied** from elsewhere. This would, for example,
+include the Marcion SQL tables copied as is, unmodified. The contents of this
+directory remain true to the original source.
 
-- `input/`: Data that we either *modified* or *created*. If we want to fix typos to data that we copied, we don't touch
-  the data under `raw/`, but we take the liberty to modify the copies that live under `input/`. This directory also
-includes the data that we created ourselves.
+- `input/`: Data that we either *modified* or *created*. If we want to fix
+typos to data that we copied, we don't touch the data under `raw/`, but we take
+the liberty to modify the copies that live under `input/`.
 
-- `output/`: This contains the data written by our pipelines, **one subdirectory per format**. If your pipeline writes
-both TSV and HTML, they should go respectively to `output/tsv/` and `output/html/`.
+   This directory also includes the data that we created ourselves.
+
+   You can show the delta between raw and input data using `git diff
+   --no-index`. It's also good to be aware of the `--word-diff` flag.
+
+- `output/`: This contains the data written by our pipelines,
+**one subdirectory per format**. If your pipeline writes both TSV and HTML,
+they should go respectively to `output/tsv/` and `output/html/`.
 
 ## `.env`
 
@@ -124,8 +121,8 @@ It is documented in `.env_INFO`, so this README section is intentionally brief.
 
 ## `stats`
 
-- We collect extensive stats, and we force them using a pre-commit. The primary
-  targets of our statistics are:
+- We collect extensive stats, and we remind you of them using a pre-commit. The
+primary targets of our statistics are:
   - The size of our code (represented by the number of lines of code). We also
   collect this stat for each subproject or pipeline step independently.
   - The number of data items we've collected for data collection tasks.
@@ -286,115 +283,91 @@ extensively.
 1. Privatize methods whenever possible. Use the name mangling feature in
    Python.
 
-## Data Collection
-
-Images:
-- Here are some examples of words that are very difficult to represent using
-images, but icons have come for the rescue:
-  - https://metremnqymi.com/crum/2236.html
-  - https://metremnqymi.com/crum/89.html
-  - https://metremnqymi.com/crum/2189.html
-
 # `dictionary/`
 
-## Marcion
+## Crum
 
-### Data Store
+### Image Collection
 
-Identical data was retrieved from [Marcion](http://marcion.sourceforge.net/) in
-both SQL and HTML formats. The directory contains the raw data, processing
-scripts, as well as some utilities.
+#### Why?
 
-#### `marcion-raw/`
+There are many reasons we have decided to add pictures to our dictionary, and
+heavily invested in the image pipeline. They have become one of the integral
+pieces of our dictionary framework.
 
-This directory contains raw, uncurated data from Marcion.
+1. Oftentimes, the words describe an entity or concept that is unfamiliar to
+   most users. Things like ancient crafts, plant or fish species, farmer's
+tools, and the like, are unfamiliar. Showing a user the English translation of
+a word doesn't suffice for the user to understand what it is, and they would
+often look up images themselves in order to find out what the word actually
+means. By embedding the pictures in the dictionary, we save users some time so
+they don't have to look it up themselves
+([example](https://metremnqymi.com/crum/2426.html)).
 
-- `cop-3357-8977-3.msql` represents the raw data retrieved from Marcion.
-  It contains two tables, namely `coptwrd` and `coptdrv`.
+2. Translations are often taken lightly by users. Pictures are not. When a
+   dictionary author translates a given Coptic word into different English
+words, for example, the extra translations are often seen by users as
+auxiliary - tokens added there to convey a meaning that the dictionary author
+couldn't convey using fewer words. That's not the case for pictures. Pictures
+are taken seriously by users, and are more readily accepted as bearing a true,
+authentic, independent meaning of the word. Listing images (especially after we
+have started ascribing each image to a *sense* that the word conveys) is a way
+to recognize and legitimize those different senses and meanings that a word
+possesses.
 
-- `coptwrd.tsv` and `coptdrv.tsv`, represent simple rewriting of the raw data
-  in `tsv` format.
+   It's for this reason that images must be deeply contemplated, and a word must
+   be digested well, before we add explanatory images for it. Collecting images is
+   tantamount to authoring a dictionary.
 
-- `coptwrd.tab` contains a lot of redundant data. It may have been used as an
-  index for the purpose of increasing search efficiency.
+3. The meaning of an image is much more strongly and concretely conveyed by an
+   image than by a word. Learning is not about knowing vocabulary or grammar.
+Learning is ultimately about creating the neural pathways that enable language
+to flow out of you naturally. A given word needs to settle and connect with
+nodes in your [associative
+memory](https://en.wikipedia.org/wiki/Associative_memory_(psychology)) in order
+for you to be able to use it. If our goal is to create or strengthen the neural
+pathways between a Coptic word and related nodes in your brain, then it aids
+the learning process to achieve as much neural activation as possible during
+learning. This is much better achieved by an image than by a mere translation,
+given the way human brains work. After all, the visual processing areas of
+our brains are bigger, faster, and far more ancient and primordial (even
+reptiles can see) compared to the language processing areas. You will often
+find that, when you learn a new word, the associated images pop up in your
+brain more readily than the translation. Thus the use of images essentially
+revolutionizes the language learning process.
 
-- `search_results.html` was obtained by searching for the regex `.*` in the
-  web version of Marcion.
+#### Technical Guidelines
 
-P.S. It is possible that some typos have been corrected in the `tsv` files. In
-this case, the `msql` file should prevail, and the corrections should be undone
-in the interest of preserving blind copying fidelity to Marcion.
+Our experience collecting images have taught us a few lessons. We tend to
+follow the following guidelines when we search for pictures:
 
-#### `marcion-input/`
+1. Each image ends up being resized to a width of 300 pixel and a height
+proportional to the original. We prefer images with a minimum width of 300
+pixels, though down to 200 is acceptable.
 
-This directory contains curated versions of the subset of interest of the files
-in `marcion-raw/`. Curation is an ongoing process, so the data in this
-directory can change with some liberty. Primarily, our purpose is to fix the
-typos. File histories should show the changes. You can also run
-`diff marcion-input/${FILE_NAME} marcion-raw/${FILE_NAME}` to view the
-differences.
+1. As for image height, short images are rarely ugly, but long images usually
+are. So we set a generously low lower bound of 100 pixels on the resized
+height, but set a stricter upper bound of 500 pixels. Although we tend to
+prefer the height to fall within a range of 200 to 400 pixels.
 
-#### `output/`
+1. Collecting sources is mandatory. We always record the URL that an image is
+retrieved from. Our `img_helper` script, which we use to process images, can be
+supplied by a URL, and it will download the image and store the source (and
+also resize the image to the final version). This simplifies the process.
 
-- `roots.csv` contains the roots in TSV format.
+1. We make extensive use of *icons*. They can capture the meaning of a word in
+situations when it's otherwise hard to describe a word using an image
+([example](https://metremnqymi.com/crum/11.html)).
 
-- (planned) `derivations.csv` contains the derivations in TSV format.
+1. This hasn't been contemplated, but when given a choice, prefer an ancient
+Egyptian explanatory image, followed by an old (not necessarily Egyptian)
+image, followed by a modern image ([example](
+https://metremnqymi.com/crum/1436.html)). We prefer to keep the images as close
+as possible to their reflections in the mind of a native speaker. We also want
+to stress the fact that those Coptic words can be equally used to refer to
+entities from other cultures, or modern entities.
 
-- (planned) `combined.csv` contains the roots and derivations in TSV format.
-
-- (planned) `anki.apkg` contains a generated [Anki](https://apps.ankiweb.net/)
-  package.
-
-#### `img/`
-
-This directory contains explanatory images, named according to the keys used in
-Marcion.
-
-The image file names should have the format
-`${KEY}-${SENSE}-${SEQUENCE}.${EXTENSION}` or `${KEY}-${SEQUENCE}.${EXTENSION}`.
-
-If three fields are given, the second field (the sense) is used to indicate
-which sense of the word the image represents. This is useful for words that have
-different (potentially unrelated or even conflicting) meanings. The second
-field is optional. If two fields are given in the image name, the image will be
-understood as representing some basic sense of the words.
-If, for a certain words, images are given in both formats, the senseless images
-will precede the sense-indicated images, and the sense-indicated images will be
-sorted according to the integer used to represent the sense.
-
-#### `crum`
-
-This directory contains scans of the pages in Crum's dictionary, also obtained
-from Marcion.
-
-#### `obsolete/`
-
-This directory contains obsolete files.
-
-- `coptwrd.txt` seems to represent raw data, and is used as an input file in
-  the code. Though it's possible that it was generated from the raw
-  `coptwrd.tsv` using an earlier version of the script, and blindly used
-  afterwards. It has been abandoned in the interest of keeping a single source
-  of truth, and due to the fact that it contains a subset of the data.
-
-- `coptwrd.txt.anki.txt` in an Anki dataset derived from `coptwrd.txt`.
-
-- `marcion-crum.tsv` is obtained from the raw `coptwrd.tsv` by augmenting the
-  data with extra columns containing a unicode version of the `word` column,
-  and a per-dialect column.
-
-#### (planned) `dawoud-raw`
-
-This directory contains raw data from Moawad Dawoud's dictionary.
-
-#### (planned) `dawoud-input`
-
-This directory contains curated data from Moawad Dawoud's dictionary.
-
-#### (planned) `notes`
-
-This directory contains notes. We can exercise full liberty over the contents
-of this file.
+   This could be revisited later.
 
 ### Undialected Entries
 
@@ -464,8 +437,9 @@ hence the prefix `-D100`.):
 convert -density 100 -colorspace sRGB dawoud.pdf %d.jpg
 ```
 
-The PDF was obtained [from the Coptic Treasures
-website](https://coptic-treasures.com/book/coptic-dictionary-moawad-abd-al-nour/).
+The PDF was obtained [from the Coptic Treasures website](
+https://coptic-treasures.com/book/coptic-dictionary-moawad-abd-al-nour/),
+although we intend to obtain a new one (this is an old edition).
 
 - `dawoud-D100-cropped/` contains scans of Moawad Dawoud's dictionary, with the
 `https://coptic-treasures.com` watermark removed. They are obtained using this
@@ -500,38 +474,6 @@ There are several published versions of the Coptic Bible. The most
 recent, and most complete, is that of [St. Shenouda the Archmandrite
 Coptic Society](stshenouda.org). It is the Coptic Bible project that is
 most worthy of investment at the moment.
-
-## Data
-
-The `data/` directory contains raw (input) and output data.
-
-The raw data was obtained from the Coptic Bible app published by [St. Shenouda
-the Archimandrite Coptic Society](http://www.stshenouda.org/). (Download for
-[iOS](https://apps.apple.com/us/app/coptic-bible/id1555182007),
-[Android](https://play.google.com/store/apps/details?id=com.xpproductions.copticbible&hl=en&gl=US).)
-
-### Output Directories
-
-We produce the following output formats:
-
-- `data/output/csv/`: A CSV (comma-separated values) file.
-
-- `data/output/html*/`: HTML files (viewable in the browser).
-
-- `data/output/epub*/`: EPUB files (suited for ebook readers).
-
-### Output Files
-
-Each of the output directories can contain several times that fall into one of
-three categories:
-
-- The files named `bible.${FORMAT}` contain the full data.
-
-- The files named `${LANGUAGE}.${FORMAT}` contain data for a specific language.
-
-- The files named `${LANGUAGE}_${LANGUAGE}.${FORMAT}` contain parallel data for
-  a pair of languages. (Usually Bohairic-English is the pair of interest,
-though you can control which pair(s) get generated using the CLI arguments.)
 
 # `flashcards/`
 
