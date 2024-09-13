@@ -81,9 +81,12 @@ root directory.
    repo. This is actually enforced. (If you try to create another `README.md`,
 the pre-commits will fail.) Other documentation lives within the code.
 
-1. With the exception of `archive/`, `test/`, and `data/`, and `pre-commit/`,
-   each subdirectory of the root directory represents a major pipeline, or
-category of pipelines, along with their associated data.
+1. With the exception of [`archive/`](archive/), [`test/`](test/), and [
+`data/`](data/), and [`pre-commit/`](pre-commit/), each subdirectory of the
+root directory represents a major pipeline, or category of pipelines, along
+with their associated data. You will also notice that shared code is
+(intentionally) minimized, and restricted to the pre-commits and some helpers
+and utility functions.
 
 1. We use pre-commit hooks extensively, and they have helped us discover a lot
    of bugs and issues with our code, and also keep our repo organized. They are
@@ -119,12 +122,13 @@ the liberty to modify the copies that live under `input/`.
 **one subdirectory per format**. If your pipeline writes both TSV and HTML,
 they should go respectively to `output/tsv/` and `output/html/`.
 
-## [`.env`](.env)
+## `.env`
 
-`.env` (which is hidden by a rule in `.gitignore`) contains the environment
-variables. They are essential for some pipelines.
+`.env` (which is hidden by a rule in [`.gitignore`](.gitignore)) contains the
+environment variables. They are essential for some pipelines.
 
-It is documented in `.env_INFO`, so this README section is intentionally brief.
+It is documented in [`.env_INFO`](.env_INFO), so this README section is
+intentionally brief.
 
 ## Languages
 
@@ -148,7 +152,7 @@ uniquely exhibit. We won't compromise the latter for the former. Use the
 *right* language for a task. When two languages can do a job equally well,
 uncompromisingly choose the one that is more familiar.
 
-- You can view some code statistics in `stats.sh`.
+- You can view some code statistics in [`stats.sh`](stats.sh).
 
 ## Planning
 
@@ -355,9 +359,11 @@ height, but set a stricter upper bound of 500 pixels. Although we tend to
 prefer the height to fall within a range of 200 to 400 pixels.
 
 1. Collecting sources is mandatory. We always record the URL that an image is
-retrieved from. Our `img_helper` script, which we use to process images, can be
-supplied by a URL, and it will download the image and store the source (and
-also resize the image to the final version). This simplifies the process.
+retrieved from. Our [`img_helper`](
+dictionary/marcion.sourceforge.net/img_helper.py) script, which we use to
+process images, can be supplied by a URL, and it will download the image and
+store the source (and also resize the image to the final version). This
+simplifies the process.
 
 1. We make extensive use of *icons*. They can capture the meaning of a word in
 situations when it's otherwise hard to describe a word using an image
@@ -433,9 +439,9 @@ database from other sources:
 
 ## copticocc.org
 
-- `dawoud-D100/` contains scans of Moawad Dawoud's dictionary. They are obtained
-from the PDF using the following imagemagick command (the density used is 100,
-hence the prefix `-D100`.):
+- [`dawoud-D100/`](dictionary/copticocc.org/data/dawoud-D100) contains scans of
+Moawad Dawoud's dictionary. They are obtained from the PDF using the following
+`imagemagick` command (the density used is 100, hence the prefix `-D100`.):
 
 ```bash
 convert -density 100 -colorspace sRGB dawoud.pdf %d.jpg
@@ -445,7 +451,8 @@ The PDF was obtained [from the Coptic Treasures website](
 https://coptic-treasures.com/book/coptic-dictionary-moawad-abd-al-nour/),
 although we intend to obtain a new one (this is an old edition).
 
-- `dawoud-D100-cropped/` contains scans of Moawad Dawoud's dictionary, with the
+- [`dawoud-D100-cropped/`](dictionary/copticocc.org/data/dawoud-D100-cropped)
+contains scans of Moawad Dawoud's dictionary, with the
 `https://coptic-treasures.com` watermark removed. They are obtained using this
 command:
 ```sh
