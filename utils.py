@@ -19,12 +19,12 @@ def _print(color, severity, recolor, *args, suppress: bool = False):
         + color
         + ("" if suppress else severity.capitalize() + ": ")
         + colorama.Style.NORMAL
-        + str(args[0])
-        + (" " if args[0] and len(args) > 1 else "")
-        + recolor
-        + ("".join(map(str, args[1:2])))
-        + color,
-        *args[2:],
+        + " ".join(
+            [
+                (recolor if idx % 2 else color) + str(arg)
+                for idx, arg in enumerate(args)
+            ],
+        ),
     )
     print(colorama.Style.RESET_ALL, end="")
 
