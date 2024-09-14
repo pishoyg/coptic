@@ -1,19 +1,21 @@
 SHELL := /bin/bash
 
 # NOTE:
-# - For those rules that use helpers, shell commands should be preceded by
-#   `. ./.helpers` in order to make sure the helpers are sourced before
-#   execution. This is done in order to allow rules to execute normally even if
-#   the user forgot to source their `.env`.
-#   Notice that it doesn't suffice to source the helpers once, they need to be
-#   sourced before every line, because Make executes each line in a separate
-#   shell, and each shell must have its own sourcing.
+# - For those rules that use helpers, shell commands should be preceded by `.
+#   ./.helpers` in order to make sure the helpers are sourced before execution.
+#   This is done in order to allow rules to execute normally even if the user
+#   forgot to source their `.env` (or `.helpers`). Notice that it doesn't
+#   suffice to source the helpers once, they need to be sourced before every
+#   line, because Make executes each line in a separate shell, and each shell
+#   must have its own sourcing.
 # - For those rules that require environment variables (other than the
 #   helpers), they depend on the REQUIRE_ENV rule, which asks the users to
-#   source their `.env` file. We can't take the liberty to source it on their
-#   behalf (as we do with the helpers), because we don't know which file we
-#   should be sourcing. (It could be `.env` or `.env_INFO`.) We also need to
-#   make sure they are aware of the environment variables as a requirement.
+#   source their `.env` file (if it's not sourced already). We can't take the
+#   liberty to source it on their behalf (as we do with the helpers), because
+#   (1) we don't know which file we should be sourcing (it could be `.env` or
+#   `.env_INFO`), and (2) they need to know what they are doing, and the
+#   implications of running rules with certain variables, so we can't take this
+#   decision on their behalf.
 # See also `.env_INFO`.
 
 # NOTE: We maintain a hierarchical structure for our rules. Level-2 rules are

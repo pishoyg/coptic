@@ -1,4 +1,4 @@
-# coptic
+# [ⲙⲉⲧⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ](https://metremnqymi.com/)
 
 This is the backing repo for [ⲙⲉⲧⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ](https://metremnqymi.com/), a project
 that aims to make the Coptic language more **learnable**.
@@ -6,32 +6,40 @@ that aims to make the Coptic language more **learnable**.
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+- [Technical Docs](#technical-docs)
   - [Hosting](#hosting)
   - [Diagram](#diagram)
   - [Getting started](#getting-started)
   - [`data/` Subdirectories](#data-subdirectories)
   - [`.env`](#env)
-  - [Languages](#languages)
   - [Planning](#planning)
     - [Issues](#issues)
+    - [Project](#project)
     - [Milestones](#milestones)
     - [Labels](#labels)
-  - [Technical Guidelines](#technical-guidelines)
+  - [Guidelines](#guidelines)
+    - [Languages](#languages)
   - [`stats`](#stats)
-- [`dictionary/`](#dictionary)
-  - [Crum](#crum)
-    - [Image Collection](#image-collection)
-      - [Why?](#why)
-      - [Technical Guidelines](#technical-guidelines-1)
-    - [Undialected Entries](#undialected-entries)
-    - [Entries that are Absent in Crum](#entries-that-are-absent-in-crum)
-  - [Dawoud](#dawoud)
-- [`bible/`](#bible)
-- [`flashcards/`](#flashcards)
-  - [Anki Keys and Synchronization](#anki-keys-and-synchronization)
-  - [Unused Media](#unused-media)
+- [Project-specific](#project-specific)
+  - [`dictionary/`](#dictionary)
+    - [`marcion.sourceforge.net/`](#marcionsourceforgenet)
+      - [Image Collection](#image-collection)
+        - [Why?](#why)
+        - [Technical Guidelines](#technical-guidelines)
+      - [Undialected Entries](#undialected-entries)
+      - [Entries that are Absent in Crum](#entries-that-are-absent-in-crum)
+    - [`copticocc.org/`](#copticoccorg)
+    - [`kellia.uni-goettingen.de/`](#kelliauni-goettingende)
+    - [`copticsite.com/`](#copticsitecom)
+  - [`bible/`](#bible)
+    - [`stshenouda.org/`](#stshenoudaorg)
+  - [`flashcards/`](#flashcards)
+    - [Anki Keys and Synchronization](#anki-keys-and-synchronization)
+  - [`morphology/`](#morphology)
+  - [`site/`](#site)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+# Technical Docs
 
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 
@@ -94,10 +102,12 @@ not optional, and many of our pipelines assume that the pre-commits have done
 their job. Their installation should be covered by `make install`. They are
 defined in [`.pre-commit-config.yaml`](.pre-commit-config.yaml). They run
 automatically before a commit, but you can trigger them with Make recipes as
-well.
+well by typing `make add`, `make index`, or `make test` (the three are
+synonymous).
 Until [#120](https://github.com/pishoyg/coptic/issues/120) is resolved, you
-might need to pay some attention to when to trigger them manually, though you
-likely only need to worry about that later.
+will need to pay some attention to when to trigger them manually. As a rule of
+thumb, run them once after each pipeline, and before starting another
+downstream pipeline.
 
 ## `data/` Subdirectories
 
@@ -124,42 +134,30 @@ they should go respectively to `output/tsv/` and `output/html/`.
 
 ## `.env`
 
-`.env` (which is hidden by a rule in [`.gitignore`](.gitignore)) contains the
-environment variables. They are essential for some pipelines.
+For now, run this once at the beginning of your coding session to export
+environment variables, which are necessary for some pipelines:
 
-It is documented in [`.env_INFO`](.env_INFO), so this README section is
-intentionally brief.
+```sh
+source .env_INFO
+```
 
-## Languages
+Equivalently:
 
-- Our pipelines are primarily written in Python. There is minimal logic in
-  Bash.
+```sh
+. ./.env_INFO
+```
 
-- We have a strong bias for Python over Bash. Use Bash if you expect the number
-of lines of code of an equivalent Python piece to be significantly more.
+Later on, you might need to create your own `.env` file. It is ignored by a
+rule in [`.gitignore`](.gitignore), so there is no shared version.
 
-- We started using JavaScript for static web content, and we expect to make a
-similar platform-specific expansion into another territory for the app.
-
-- In the past, we voluntarily used Java (for an archived project). Won't happen
-again! We also used VBA and JS for Microsoft Excel and Google Sheet macros,
-because they were required by the platform (but those pieces are also archived
-at the moment).
-
-- It is desirable to strike a balance between the benefits of focusing on a
-small number of languages, and the different powers that different language can
-uniquely exhibit. We won't compromise the latter for the former. Use the
-*right* language for a task. When two languages can do a job equally well,
-uncompromisingly choose the one that is more familiar.
-
-- You can view some code statistics in [`stats.sh`](stats.sh).
+It is documented in [`.env_INFO`](.env_INFO), so this section is intentionally
+brief.
 
 ## Planning
 
-### [Issues](https://github.com/pishoyg/coptic/issues/)
+We use GitHub to track our plans and TODO's.
 
-- We use GitHub to track our TODO's and plans. See [
-Issues](https://github.com/pishoyg/coptic/issues).
+### [Issues](https://github.com/pishoyg/coptic/issues/)
 
 Issues need to be as specific and isolated as possible. Most of the time, they
 span a single component, although they can often work mainly in one component
@@ -171,6 +169,12 @@ Issues should involve a local change or set of local changes.
 High-priority issues are defined in two ways:
 - Assignment to a developer
 - Belonging to a component version that we are working to release.
+
+### [Project](https://github.com/users/pishoyg/projects/3)
+
+The [project](https://github.com/users/pishoyg/projects/3) page offers
+alternative *views* of the issues, which can come in handy for planning
+purposes.
 
 ### [Milestones](https://github.com/pishoyg/coptic/milestones/)
 
@@ -237,7 +241,7 @@ Site).
        - `UI`: Improve the user interface.
        - `bug`: Fix a bug.
 
-## Technical Guidelines
+## Guidelines
 
 1. Minimize dependence on HTML, and keep behavior as much as possible in
    JavaScript (TypeScript).
@@ -282,6 +286,28 @@ extensively.
 1. Privatize methods whenever possible. Use the name mangling feature in
    Python.
 
+### Languages
+
+- Our pipelines are primarily written in Python. There is minimal logic in
+  Bash.
+
+- We have a strong bias for Python over Bash. Use Bash if you expect the number
+of lines of code of an equivalent Python piece to be significantly more.
+
+- We started using JavaScript for static web content, and we expect to make a
+similar platform-specific expansion into another territory for the app.
+
+- In the past, we voluntarily used Java (for an archived project). Won't happen
+again! We also used VBA and JS for Microsoft Excel and Google Sheet macros,
+because they were required by the platform (but those pieces are also archived
+at the moment).
+
+- It is desirable to strike a balance between the benefits of focusing on a
+small number of languages, and the different powers that different language can
+uniquely exhibit. We won't compromise the latter for the former. Use the
+*right* language for a task. When two languages can do a job equally well,
+uncompromisingly choose the one that is more familiar.
+
 ## [`stats`](data/stats.tsv)
 
 - We collect extensive stats, and we remind you of them using a pre-commit. The
@@ -291,13 +317,17 @@ primary targets of our statistics are:
   - The number of data items we've collected for data collection tasks.
   - We also record the number of commits, and the number of contributors.
 
-# [`dictionary/`](dictionary/)
+# Project-specific
 
-## [Crum](dictionary/marcion.sourceforge.net)
+## [`dictionary/`](dictionary/)
 
-### Image Collection
+This directory contains the data and logic for processing our dictionaries.
 
-#### Why?
+### [`marcion.sourceforge.net/`](dictionary/marcion.sourceforge.net)
+
+#### Image Collection
+
+##### Why?
 
 There are many reasons we have decided to add pictures to our dictionary, and
 heavily invested in the image pipeline. They have become one of the integral
@@ -344,7 +374,7 @@ find that, when you learn a new word, the associated images pop up in your
 brain more readily than the translation. Thus the use of images essentially
 revolutionizes the language learning process.
 
-#### Technical Guidelines
+##### Technical Guidelines
 
 Our experience collecting images have taught us a few lessons. We tend to
 follow the following guidelines when we search for pictures:
@@ -379,7 +409,7 @@ entities from other cultures, or modern entities.
 
    This could be revisited later.
 
-### Undialected Entries
+#### Undialected Entries
 
 The following entries have no dialect specified in Crum, so they are treated as
 part of all dialects.
@@ -426,7 +456,7 @@ part of all dialects.
 dialect was inferred, e.g. all the entries under Ⳉ have been labeled as
 Akhmimic.
 
-### Entries that are Absent in Crum
+#### Entries that are Absent in Crum
 
 The following entries are absent from Crum's dictionary. They were added to our
 database from other sources:
@@ -437,7 +467,7 @@ database from other sources:
 4. https://metremnqymi.com/crum/3382.html
 5. https://metremnqymi.com/crum/3385.html
 
-## [Dawoud](dictionary/copticocc.org)
+### [`copticocc.org/`](dictionary/copticocc.org)
 
 - [`dawoud-D100/`](dictionary/copticocc.org/data/dawoud-D100) contains scans of
 Moawad Dawoud's dictionary. They are obtained from the PDF using the following
@@ -455,6 +485,7 @@ although we intend to obtain a new one (this is an old edition).
 contains scans of Moawad Dawoud's dictionary, with the
 `https://coptic-treasures.com` watermark removed. They are obtained using this
 command:
+
 ```sh
 find "dictionary/copticocc.org/data/dawoud-D100" -type f \
   | while read -r FILE; do \
@@ -463,6 +494,7 @@ find "dictionary/copticocc.org/data/dawoud-D100" -type f \
 ```
 
 For the record, the original sizes were as follows:
+
 ```sh
 $ magick identify dictionary/copticocc.org/data/dawoud-D100/* \
 | cut --fields 3 --delimiter ' ' \
@@ -474,21 +506,34 @@ $ magick identify dictionary/copticocc.org/data/dawoud-D100/* \
       2 827x1098
    1055 827x1169
 ```
+
 The two smaller images represent the front and back of the cover (not printed
 pages). Thus, this is a loss of exactly 24 pixels on the Y axis (roughly 2%)
 for all printed pages, and it doesn't impact the two (currently unused) cover
 images.
 
-# [`bible/`](bible/)
+### [`kellia.uni-goettingen.de/`](dictionary/kellia.uni-goettingen.de)
+
+### [`copticsite.com/`](dictionary/copticsite.com/)
+
+## [`bible/`](bible/)
+
+This directory contains the data and logic for processing the Bible corpus.
+
+### [`stshenouda.org/`](bible/stshenouda.org/)
 
 There are several published versions of the Coptic Bible. The most
 recent, and most complete, is that of [St. Shenouda the Archmandrite
 Coptic Society](http://stshenouda.org). It is the Coptic Bible project that is
 most worthy of investment at the moment.
 
-# [`flashcards/`](flashcards/)
+## [`flashcards/`](flashcards/)
 
-## Anki Keys and Synchronization
+This directory contains the data and logic for processing dictionaries into
+*flashcards*. It is named as such because our first use case was a flashcard
+app, although our use of the dictionaries has since become more versatile.
+
+### Anki Keys and Synchronization
 
 When you import a package into your (personal) Anki database, Anki uses the
 IDs to eliminate duplicates.
@@ -541,13 +586,15 @@ field.**
 
 Model IDs are hardcoded.
 
-## Unused Media
+## [`morphology/`](morphology/)
 
-The current handling of media files implies that media files that end
-up being unused remain stored, which results in some unused media files
-making it to the output. This was brought up in #96, but it was deemed of too
-little impact to be worth fixing. Be aware that the exported packages can
-have unused media files, and address it if necessary.
+This directory contains the data and logic for generating the morphological
+dictionaries (to support inflections).
+
+## [`site/`](site/)
+
+This directory contains the data and logic for creating and publishing [our
+website](http://metremnqymi.com/).
 
 ***
 Ⲉ̀ϣⲱⲡ ⲁⲓϣⲁⲛⲉⲣⲡⲉⲱⲃϣ Ⲓⲗ̅ⲏ̅ⲙ̅, ⲉⲓⲉ̀ⲉⲣⲡⲱⲃϣ ⲛ̀ⲧⲁⲟⲩⲓⲛⲁⲙ: Ⲡⲁⲗⲁⲥ ⲉϥⲉ̀ϫⲱⲗϫ ⲉ̀ⲧⲁϣ̀ⲃⲱⲃⲓ ⲉ̀ϣⲱⲡ
