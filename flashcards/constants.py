@@ -8,9 +8,9 @@ import field
 
 import utils
 
-HOME = "https://metremnqymi.com"
+HOME = "https://remnqymi.com"
 CRUM_ROOT = f"{HOME}/crum"
-EMAIL = "metremnqymi@gmail.com"
+EMAIL = "remnqymi@gmail.com"
 
 INTEGER_RE = re.compile("([0-9]+)")
 DICTIONARY_PAGE_RE = re.compile("([0-9]+(a|b))")

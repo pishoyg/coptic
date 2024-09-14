@@ -43,7 +43,7 @@ PURE_COPTIC_RE = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
 CRUM_PAGE_FMT = (
     "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID={key}"
 )
-CARD_LINK_FMT = "https://metremnqymi.com/crum/{key}.html"
+CARD_LINK_FMT = "https://remnqymi.com/crum/{key}.html"
 
 # LETTER_ENCODING is used to convert ASCII-encoded Coptic text to unicode.
 LETTER_ENCODING = {

@@ -1,6 +1,6 @@
-# [ⲙⲉⲧⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ](https://metremnqymi.com/)
+# [ⲙⲉⲧⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ](https://remnqymi.com/)
 
-This is the backing repo for [ⲙⲉⲧⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ](https://metremnqymi.com/), a project
+This is the backing repo for [ⲙⲉⲧⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ](https://remnqymi.com/), a project
 that aims to make the Coptic language more **learnable**.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -49,11 +49,11 @@ We use:
 
 - [GitHub](https://github.com/pishoyg/coptic/) for our code base.
 - [GitHub Pages](https://github.com/pishoyg/pishoyg.github.io/) for our
-[website](https://metremnqymi.com/).
+[website](https://remnqymi.com/).
 - [Google Drive](https://drive.google.com/drive/folders/17jI92CKumjYQTXghThaaejPeD8ZbifPm?usp=drive_link) to share large files.
 - [Google
 Analytics](https://analytics.google.com/analytics/web/#/p454349148) to analyze traffic.
-- [Squarespace](https://account.squarespace.com/domains/managed/metremnqymi.com) for DNS registration.
+- [Squarespace](https://account.squarespace.com/domains/managed/remnqymi.com) for DNS registration.
 
 ## Diagram
 
@@ -95,7 +95,7 @@ Besides this file, docs can be found in:
    less significantly*)
 
    User-facing documentation shouldn't live on the repo, but should go on [the
-   website](http://metremnqymi.com/) instead.
+   website](http://remnqymi.com/) instead.
 
 1. With the exception of [`archive/`](archive/), [`test/`](test/), and [
 `data/`](data/), and [`pre-commit/`](pre-commit/), each subdirectory of the
@@ -344,7 +344,7 @@ a word doesn't suffice for the user to understand what it is, and they would
 often look up images themselves in order to find out what the word actually
 means. By embedding the pictures in the dictionary, we save users some time so
 they don't have to look it up themselves
-([example](https://metremnqymi.com/crum/2426.html)).
+([example](https://remnqymi.com/crum/2426.html)).
 
 2. Translations are often taken lightly by users. Pictures are not. When a
    dictionary author translates a given Coptic word into different English
@@ -401,12 +401,12 @@ simplifies the process.
 
 1. We make extensive use of *icons*. They can capture the meaning of a word in
 situations when it's otherwise hard to describe a word using an image
-([example](https://metremnqymi.com/crum/11.html)).
+([example](https://remnqymi.com/crum/11.html)).
 
 1. This hasn't been contemplated, but when given a choice, prefer an ancient
 Egyptian explanatory image, followed by an old (not necessarily Egyptian)
 image, followed by a modern image ([example](
-https://metremnqymi.com/crum/1436.html)). We prefer to keep the images as close
+https://remnqymi.com/crum/1436.html)). We prefer to keep the images as close
 as possible to their reflections in the mind of a native speaker. We also want
 to stress the fact that those Coptic words can be equally used to refer to
 entities from other cultures, or modern entities.
@@ -418,43 +418,43 @@ entities from other cultures, or modern entities.
 The following entries have no dialect specified in Crum, so they are treated as
 part of all dialects.
 
-1. https://metremnqymi.com/crum/1274.html
-2. https://metremnqymi.com/crum/1292.html
-3. https://metremnqymi.com/crum/1367.html
-4. https://metremnqymi.com/crum/1462.html
-5. https://metremnqymi.com/crum/1553.html
-6. https://metremnqymi.com/crum/1555.html
-7. https://metremnqymi.com/crum/1557.html
-8. https://metremnqymi.com/crum/1558.html
-9. https://metremnqymi.com/crum/1657.html
-10. https://metremnqymi.com/crum/1659.html
-11. https://metremnqymi.com/crum/1712.html
-12. https://metremnqymi.com/crum/1957.html
-13. https://metremnqymi.com/crum/2074.html
-14. https://metremnqymi.com/crum/2075.html
-15. https://metremnqymi.com/crum/2076.html
-16. https://metremnqymi.com/crum/2077.html
-17. https://metremnqymi.com/crum/2078.html
-18. https://metremnqymi.com/crum/2079.html
-19. https://metremnqymi.com/crum/2081.html
-20. https://metremnqymi.com/crum/2082.html
-21. https://metremnqymi.com/crum/2084.html
-22. https://metremnqymi.com/crum/2085.html
-23. https://metremnqymi.com/crum/2086.html
-24. https://metremnqymi.com/crum/2087.html
-25. https://metremnqymi.com/crum/2088.html
-26. https://metremnqymi.com/crum/2090.html
-27. https://metremnqymi.com/crum/2091.html
-28. https://metremnqymi.com/crum/2092.html
-29. https://metremnqymi.com/crum/2093.html
-30. https://metremnqymi.com/crum/2195.html
-31. https://metremnqymi.com/crum/2205.html
-32. https://metremnqymi.com/crum/2832.html
-33. https://metremnqymi.com/crum/3117.html
-34. https://metremnqymi.com/crum/3230.html
-35. https://metremnqymi.com/crum/3231.html
-36. https://metremnqymi.com/crum/3257.html
-37. https://metremnqymi.com/crum/3302.html
+1. https://remnqymi.com/crum/1274.html
+2. https://remnqymi.com/crum/1292.html
+3. https://remnqymi.com/crum/1367.html
+4. https://remnqymi.com/crum/1462.html
+5. https://remnqymi.com/crum/1553.html
+6. https://remnqymi.com/crum/1555.html
+7. https://remnqymi.com/crum/1557.html
+8. https://remnqymi.com/crum/1558.html
+9. https://remnqymi.com/crum/1657.html
+10. https://remnqymi.com/crum/1659.html
+11. https://remnqymi.com/crum/1712.html
+12. https://remnqymi.com/crum/1957.html
+13. https://remnqymi.com/crum/2074.html
+14. https://remnqymi.com/crum/2075.html
+15. https://remnqymi.com/crum/2076.html
+16. https://remnqymi.com/crum/2077.html
+17. https://remnqymi.com/crum/2078.html
+18. https://remnqymi.com/crum/2079.html
+19. https://remnqymi.com/crum/2081.html
+20. https://remnqymi.com/crum/2082.html
+21. https://remnqymi.com/crum/2084.html
+22. https://remnqymi.com/crum/2085.html
+23. https://remnqymi.com/crum/2086.html
+24. https://remnqymi.com/crum/2087.html
+25. https://remnqymi.com/crum/2088.html
+26. https://remnqymi.com/crum/2090.html
+27. https://remnqymi.com/crum/2091.html
+28. https://remnqymi.com/crum/2092.html
+29. https://remnqymi.com/crum/2093.html
+30. https://remnqymi.com/crum/2195.html
+31. https://remnqymi.com/crum/2205.html
+32. https://remnqymi.com/crum/2832.html
+33. https://remnqymi.com/crum/3117.html
+34. https://remnqymi.com/crum/3230.html
+35. https://remnqymi.com/crum/3231.html
+36. https://remnqymi.com/crum/3257.html
+37. https://remnqymi.com/crum/3302.html
 
 *NOTE:* Some undialected entries in this list have been removed because their
 dialect was inferred, e.g. all the entries under Ⳉ have been labeled as
@@ -468,11 +468,11 @@ We are rethinking the current handling of undialected entries. See
 The following entries are absent from Crum's dictionary. They were added to our
 database from other sources:
 
-1. https://metremnqymi.com/crum/3379.html
-2. https://metremnqymi.com/crum/3380.html
-3. https://metremnqymi.com/crum/3381.html
-4. https://metremnqymi.com/crum/3382.html
-5. https://metremnqymi.com/crum/3385.html
+1. https://remnqymi.com/crum/3379.html
+2. https://remnqymi.com/crum/3380.html
+3. https://remnqymi.com/crum/3381.html
+4. https://remnqymi.com/crum/3382.html
+5. https://remnqymi.com/crum/3385.html
 
 ### [`copticocc.org/`](dictionary/copticocc.org)
 
@@ -601,7 +601,7 @@ dictionaries (to support inflections).
 ## [`site/`](site/)
 
 This directory contains the data and logic for creating and publishing [our
-website](http://metremnqymi.com/).
+website](http://remnqymi.com/).
 
 ***
 Ⲉ̀ϣⲱⲡ ⲁⲓϣⲁⲛⲉⲣⲡⲉⲱⲃϣ Ⲓⲗ̅ⲏ̅ⲙ̅, ⲉⲓⲉ̀ⲉⲣⲡⲱⲃϣ ⲛ̀ⲧⲁⲟⲩⲓⲛⲁⲙ: Ⲡⲁⲗⲁⲥ ⲉϥⲉ̀ϫⲱⲗϫ ⲉ̀ⲧⲁϣ̀ⲃⲱⲃⲓ ⲉ̀ϣⲱⲡ
