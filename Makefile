@@ -25,12 +25,9 @@ SHELL := /bin/bash
 # LEVEL 3 RULES ###############################################################
 
 .PHONY: all
-all: install generate_1 add generate_2 index generate_3 test publish report
+all: generate_1 add generate_2 index generate_3 test publish report
 
 # LEVEL 2 RULES ###############################################################
-
-.PHONY: install
-install: pip_install python_install precommit_install bin_install npm_install
 
 # generate_1 rules are prerequisites for generate_2 rules.
 .PHONY: generate_1
@@ -68,6 +65,9 @@ report: stats_report
 
 # The following rules are more or less only relevant for testing / development,
 # rather content (re)generation.
+
+.PHONY: install
+install: pip_install python_install precommit_install bin_install npm_install
 
 .PHONY: flashcards_crum_all_dialects
 flashcards_crum_all_dialects: _flashcards_crum_all_dialects
