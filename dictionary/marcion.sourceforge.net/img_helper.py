@@ -266,9 +266,9 @@ def invalid_size(files: list[str]) -> list[str]:
                 "will have a resized height of",
                 height,
                 "; this is allowed, but the preferred range is",
-                MIN_RESIZE_HEIGHT,
+                PREFER_MIN_RESIZE_HEIGHT,
                 "-",
-                MAX_RESIZE_HEIGHT,
+                PREFER_MAX_RESIZE_HEIGHT,
                 "; we prefer images with close-to-square dimensions.",
             )
     return invalid
