@@ -87,7 +87,7 @@ build() {
     "${SITE_DIR}/"
 
   # Home
-  cp "site/index.html" "${SITE_DIR}"
+  cp "site/index.html" "site/style.css" "${SITE_DIR}"
 
   mkdir "${IMG_DIR}"
   cp -r \
