@@ -461,6 +461,8 @@ def prompt(args):
                         "- 'wiki/${PAGE}' to open a Wikipedia page,",
                         "- 'key=${KEY}' to change the key",
                         "- 'rm=${KEY}' to delete one image and its artifacts",
+                        "- 'mv=${KEY_1}:${KEY_2}' to move one image and its artefacts",
+                        "- 'cp=${KEY_1}:${KEY_2}' to copy one image and its artefacts",
                         "- 'source=${SOURCE}' to populate the source for the only"
                         f" image in {args.downloads} that is missing a source,",
                         "- source(${PATH})=${SOURCE} to populate the source for a given image:",
