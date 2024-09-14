@@ -1,6 +1,6 @@
-# [ⲙⲉⲧⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ](https://remnqymi.com/)
+# [ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ](https://remnqymi.com/)
 
-This is the backing repo for [ⲙⲉⲧⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ](https://remnqymi.com/), a project
+This is the backing repo for [ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ](https://remnqymi.com/), a project
 that aims to make the Coptic language more **learnable**.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
