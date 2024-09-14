@@ -85,9 +85,17 @@ used during development and testing, and are not relevant for output
 where the script lives. You should do most of your development from within the
 root directory.
 
-1. This README is the single out-of-code documentation source for the whole
-   repo. This is actually enforced. (If you try to create another `README.md`,
-the pre-commits will fail.) Other documentation lives within the code.
+1. This file is the only `README.md` in the repo (and this is enforced by a
+   pre-commit hook). Technical documentation is intentionally centralized.
+Besides this file, docs can be found in:
+
+   - In-code comments
+   - [Planning framework](#planning)
+   - [Commit messages](https://github.com/pishoyg/coptic/commits/) (*albeit
+   less significantly*)
+
+   User-facing documentation shouldn't live on the repo, but should go on [the
+   website](http://metremnqymi.com/) instead.
 
 1. With the exception of [`archive/`](archive/), [`test/`](test/), and [
 `data/`](data/), and [`pre-commit/`](pre-commit/), each subdirectory of the
@@ -163,8 +171,8 @@ Issues need to be as specific and isolated as possible. Most of the time, they
 span a single component, although they can often work mainly in one component
 and spill to others, and sometimes they're generic and span one aspect of
 multiple components (such as the conventions set for the whole repo). Issues
-mostly have exactly one How (see [labels](#labels) below), and usually one Why.
-Issues should involve a local change or set of local changes.
+mostly have exactly one *How*, and usually one *Why* (see [labels](#labels)
+below). Issues should involve a local change or set of local changes.
 
 High-priority issues are defined in two ways:
 - Assignment to a developer
@@ -178,12 +186,12 @@ purposes.
 
 ### [Milestones](https://github.com/pishoyg/coptic/milestones/)
 
-Milestones represent more complex pieces of work. Their size is undetermined.
-They could weeks or years, but they are not simple enough to span just a few
+- Milestones represent more complex pieces of work. Their size is undetermined.
+  They could weeks or years, but they are not simple enough to span just a few
 days. This is their main use case.
 
-There is a second, somewhat unorthodox, use case for milestones as component
-backlogs backlogs, for miscellaneous issues related to some component that
+- There is a second, somewhat unorthodox, use case for milestones as component
+  backlogs backlogs, for miscellaneous issues related to some component that
 don't belong to a goal that we've already defined and crystalized into a
 milestone.
 
@@ -191,14 +199,14 @@ milestone.
 
 - Milestone priorities are assigned using **due dates**. Milestones help make
 long-term plans.
-Their count should be in a relatively small order of magnitude.
 
-- There is also a generic developer experience milestone, which is somewhat
-perpetual, and has been growing to be synonymous to the `dev` label. Although
-in cases when a `dev` task pertains to another milestone, the other milestone
-trumps the developer experience milestone. This milestone is therefore somewhat
-similar to the component backlog class of milestones, rather than the
-milestones that represent concrete goals.
+- The number of milestones should remain "under control".
+
+- The *platform* component milestone refers to the development platform and
+tooling. Issues under this milestone are mainly developer-facing rather than
+user-facing, and their purpose is to improve the framework that developers use
+to drive the project forward. This component is about sharpening our saw so we
+can cut wood faster.
 
 - When work on a milestone is good enough, it's closed, the achievement is
 celebrated, and its remaining issues move to the corresponding component
@@ -218,8 +226,7 @@ Site).
 - We assign the following categories of labels to issues:
 
    - `How`
-     - How can the task be achieved? Coding? Diplomacy? Manual labor (data
-     collection)? Planning? Design? Writing Documentation?
+     - How can the task be achieved?
        - `architect`: Architecture and design.
        - `diplomacy`: Diplomacy, connections, and reachout.
        - `documentation`: Writing documentation.
@@ -243,13 +250,8 @@ Site).
 
 ## Guidelines
 
-1. Minimize dependence on HTML, and keep behavior as much as possible in
-   JavaScript (TypeScript).
-   - We have (so far) a single, relatively small, JavaScript file. But we have
-     a huge number of HTML files. Having to regenerate one file is much
-   cheaper.
-   - You can protect your data better. JavaScript has good obfuscators. HTML
-   content can not be as easily concealed.
+1. Minimize dependence on HTML, and implement behaviours in TypeScript when
+   possible.
 
 1. Add in-code assertions and checks. This is our first line of defense, and
    has been the champion when it comes to ensuring correctness and catching
@@ -294,13 +296,15 @@ extensively.
 - We have a strong bias for Python over Bash. Use Bash if you expect the number
 of lines of code of an equivalent Python piece to be significantly more.
 
-- We started using JavaScript for static web content, and we expect to make a
-similar platform-specific expansion into another territory for the app.
+- We use TypeScript for static site logic. It then gets transpiled to
+JavaScript by running `make ts_transpile`. We don't write JavaScript directly.
+
+- We expect to make a similar platform-specific expansion into another
+territory for the app.
 
 - In the past, we voluntarily used Java (for an archived project). Won't happen
-again! We also used VBA and JS for Microsoft Excel and Google Sheet macros,
-because they were required by the platform (but those pieces are also archived
-at the moment).
+again! We also used VBA and JS for Microsoft Excel and Google Sheet macros
+(also archived at the moment) because they were required by the platform.
 
 - It is desirable to strike a balance between the benefits of focusing on a
 small number of languages, and the different powers that different language can
@@ -455,6 +459,9 @@ part of all dialects.
 *NOTE:* Some undialected entries in this list have been removed because their
 dialect was inferred, e.g. all the entries under Ⳉ have been labeled as
 Akhmimic.
+
+We are rethinking the current handling of undialected entries. See
+[#237](https://github.com/pishoyg/coptic/issues/237).
 
 #### Entries that are Absent in Crum
 
