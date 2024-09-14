@@ -82,7 +82,7 @@ flashcards_kellia: _flashcards_kellia
 kellia_analysis: _kellia_analysis
 
 .PHONY: stats
-stats: stats_save
+stats: stats_commit
 
 .PHONY: stats_format
 stats_format: _stats_format
@@ -279,8 +279,8 @@ git_diff: FORCE
 stats_report: FORCE
 	bash stats.sh
 
-stats_save: FORCE
-	bash stats.sh --save
+stats_commit: FORCE
+	bash stats.sh --commit
 
 _stats_format: FORCE
 	python -c $$'import utils\n\
