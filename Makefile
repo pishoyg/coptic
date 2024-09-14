@@ -127,7 +127,11 @@ bible: FORCE
 epub_publish: REQUIRE_ENV FORCE
 	cp \
 	"bible/stshenouda.org/data/output/epub/1/bohairic_english.epub" \
-	"$${DRIVE_DIR}/2. bohairic_english - single-column - Kindle.epub"
+	"$${DRIVE_DIR}/bohairic_english - e-reader.epub"
+
+	cp \
+	"bible/stshenouda.org/data/output/epub/2/bohairic_english.epub" \
+	"$${DRIVE_DIR}/bohairic_english - desktop.epub"
 
 # COPTICSITE_COM RULES
 copticsite: FORCE
