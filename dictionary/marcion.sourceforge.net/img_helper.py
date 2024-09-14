@@ -1,5 +1,6 @@
 import argparse
 import glob
+import json
 import os
 import pathlib
 import re
@@ -38,6 +39,7 @@ APPENDICES_TSV: str = (
 MEANING_COL: str = "en-parsed-no-greek"
 KEY_COL: str = "key"
 LINK_COL: str = "key-link"
+SENSES_COL: str = "senses"
 SOURCES_DIR: str = "dictionary/marcion.sourceforge.net/data/img-sources/"
 
 # NOTE: SVG conversion is nondeterministic, which is badly disruptive to our
@@ -404,7 +406,9 @@ def cp(a_stem: str, b_stem: str) -> None:
 
 def prompt(args):
     df = utils.read_tsvs(INPUT_TSVS, KEY_COL)
-    df["senses"] = utils.read_tsv(APPENDICES_TSV, KEY_COL)["senses"]
+    key_to_senses: dict[str, dict] = {}
+    for _, row in utils.read_tsv(APPENDICES_TSV, KEY_COL).iterrows():
+        key_to_senses[row[KEY_COL]] = json.loads(row[SENSES_COL] or "{}")
 
     sources: dict[str, str] = {}
 
@@ -417,9 +421,8 @@ def prompt(args):
 
     key_to_row = {row[KEY_COL]: row for _, row in df.iterrows()}
     for _, row in df.iterrows():
-        key = row[KEY_COL]
-        key = int(key)
-        if key < args.start_at_key:
+        key: str = row[KEY_COL]
+        if int(key) < args.start_at_key:
             continue
         if any(row[k] == v for k, v in exclude.items()):
             continue
@@ -446,34 +449,61 @@ def prompt(args):
             g = existing()
             # TODO: Prettify the output a little bit. Maybe use JSON
             # indentations.
-            utils.info("Key:", row[KEY_COL])
+            utils.info("Key:", key)
             utils.info("Link:", row[LINK_COL])
-            utils.info("Existing:", g)
-            utils.info("Downloads:", get_downloads(args))
-            utils.info("Senses:", row["senses"])
-            utils.info("Sources:", sources)
-            command = input(
-                "\n".join(
-                    [
-                        "Enter,",
-                        "- an image URL to retrieve said image,",
-                        "- 'noun/${QUERY}' to query `thenounproject`,",
-                        "- 'wiki/${PAGE}' to open a Wikipedia page,",
-                        "- 'key=${KEY}' to change the key",
-                        "- 'rm=${KEY}' to delete one image and its artifacts",
-                        "- 'mv=${KEY_1}:${KEY_2}' to move one image and its artefacts",
-                        "- 'cp=${KEY_1}:${KEY_2}' to copy one image and its artefacts",
-                        "- 'source=${SOURCE}' to populate the source for the only"
-                        f" image in {args.downloads} that is missing a source,",
-                        "- source(${PATH})=${SOURCE} to populate the source for a given image:",
-                        "- 's' to skip,",
-                        "- 'ss' to force-skip,",
-                        "- 'cs' to clear sources, or",
-                        "- sense number to initiate transfer",
-                        "",
-                    ],
-                ),
+            utils.info("Existing:", utils.json_dumps(g))
+            utils.info("Downloads:", utils.json_dumps(get_downloads(args)))
+            utils.info("Senses:", utils.json_dumps(key_to_senses[key]))
+            utils.info("Sources:", utils.json_dumps(sources))
+            print()
+            utils.info("Enter:")
+            utils.info(
+                "-",
+                "${URL}",
+                "to download an image and store the URL as the source.",
             )
+            utils.info(
+                "-",
+                "noun/${QUERY}",
+                "to query",
+                "thenounproject",
+                "API.",
+            )
+            utils.info("-", "wiki/${PAGE}", "to open a", "Wikipedia", "page.")
+            utils.info("-", "key=${KEY}", "to point to a different key.")
+            utils.info(
+                "-",
+                "rm=${KEY}",
+                "to delete an image and its artifacts.",
+            )
+            utils.info(
+                "-",
+                "mv=${KEY_1}:${KEY_2}",
+                "to move an image and its artefacts.",
+            )
+            utils.info(
+                "-",
+                "cp=${KEY_1}:${KEY_2}",
+                "to copy an image and its artefacts.",
+            )
+            utils.info(
+                "-",
+                "source=${SOURCE}",
+                "to populate the source for the only image in",
+                args.downloads,
+                "that is missing a source.",
+            )
+            utils.info(
+                "-",
+                "source(${PATH})=${SOURCE}",
+                "to populate the source for a given image.",
+            )
+            utils.info("-", "s", "to skip.")
+            utils.info("-", "ss", "to force-skip.")
+            utils.info("-", "cs", "to clear sources.")
+            utils.info("-", "sense number to initiate transfer.")
+            print()
+            command = input()
             command = command.strip()
             if not command:
                 continue
