@@ -60,6 +60,7 @@ foc () {
     -not -name ".DS_Store" \
     -not -path "*/__pycache__/*" \
     -not -path "./coptic.egg-info/*" \
+    -not -path "./build/*" \
     -not -path "./.mypy_cache/*" \
     -not -path "./.ruff_cache/*" \
     -not -path "./node_modules/*" \
