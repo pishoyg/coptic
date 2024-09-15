@@ -35,6 +35,7 @@ that aims to make the Coptic language more **learnable**.
     - [`stshenouda.org/`](#stshenoudaorg)
   - [`flashcards/`](#flashcards)
     - [Anki Keys and Synchronization](#anki-keys-and-synchronization)
+      - [See also](#see-also)
   - [`morphology/`](#morphology)
   - [`site/`](#site)
 
@@ -521,6 +522,11 @@ images.
 
 ### [`kellia.uni-goettingen.de/`](dictionary/kellia.uni-goettingen.de)
 
+We had some plans to combine the strength of KELLIA and Crum
+([#53](https://github.com/pishoyg/coptic/issues/53),
+[#6](https://github.com/pishoyg/coptic/issues/6)), but they have been
+abandoned.
+
 ### [`copticsite.com/`](dictionary/copticsite.com/)
 
 ## [`bible/`](bible/)
@@ -592,6 +598,11 @@ field.**
 1. Model ID
 
 Model IDs are hardcoded.
+
+#### See also
+
+1. [#36](https://github.com/pishoyg/coptic/issues/36)
+1. [#37](https://github.com/pishoyg/coptic/issues/37)
 
 ## [`morphology/`](morphology/)
 
