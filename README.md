@@ -381,7 +381,7 @@ revolutionizes the language learning process.
 
 ##### Technical Guidelines
 
-Our experience collecting images have taught us a few lessons. We tend to
+Our experience collecting images has taught us a few lessons. We tend to
 follow the following guidelines when we search for pictures:
 
 1. Each image ends up being resized to a width of 300 pixel and a height
