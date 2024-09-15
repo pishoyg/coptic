@@ -88,7 +88,7 @@ body {
 }
 
 /* Style download links */
-ol li a, .download {
+.download, .download-list li a {
   background-color: #3498DB;
   border-radius: 4px;
   color: #fff;
@@ -165,4 +165,23 @@ td:not(:first-child) {
     margin-bottom: 5px;
     margin-right: 10px;
   }
+}
+
+.inline-list {
+  padding: 20px;
+}
+
+.inline-list li {
+  display: block;
+  float: left;
+  margin: 0 20px;
+  padding: 0 0;
+}
+
+.flashcards {
+  text-align: center;
+}
+
+.flashcards figure {
+  display: inline-block;
 }
