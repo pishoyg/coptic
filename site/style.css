@@ -88,7 +88,7 @@ body {
 }
 
 /* Style download links */
-ol li a {
+ol li a, .download {
   background-color: #3498DB;
   border-radius: 4px;
   color: #fff;
