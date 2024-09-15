@@ -1,5 +1,6 @@
 table {
   border-collapse: collapse;
+  width: 100%;
 }
 
 tbody tr:not(:last-child) {
@@ -13,4 +14,36 @@ thead tr {
 td:not(:first-child) {
   border-left: 1px solid black;
   padding-left: 5px;
+}
+
+/* Responsive table layout for mobile */
+@media (max-width: 500px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  td {
+    border: none;
+    padding-bottom: 10px;
+    padding-left: 0;
+  }
+
+  td:before {
+    content: attr(data-label);
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  /* Center and space checkboxes for small screens */
+  .checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .checkboxes label {
+    margin-bottom: 5px;
+    margin-right: 10px;
+  }
 }

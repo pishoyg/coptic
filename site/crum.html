@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Viewport for mobile scaling -->
+
   <title>A Coptic Dictionary, Walter E. Crum</title>
   <link href="index.css" rel="stylesheet" type="text/css">
 </head>
@@ -34,38 +37,39 @@
     </div>
 
     <div>
-      <label><input id="checkbox-S" name="S" class="dialect-checkbox" type=
-      "checkbox" value="S"> S</label> <label><input id="checkbox-Sa" name="Sa"
-      class="dialect-checkbox" type="checkbox" value="Sa"> Sa</label>
-      <label><input id="checkbox-Sf" name="Sf" class="dialect-checkbox" type=
-      "checkbox" value="Sf"> Sf</label> <label><input id="checkbox-A" name="A"
-      class="dialect-checkbox" type="checkbox" value="A"> A</label>
-      <label><input id="checkbox-sA" name="sA" class="dialect-checkbox" type=
-      "checkbox" value="sA"> sA</label> <label><input id="checkbox-B" name="B"
-      class="dialect-checkbox" type="checkbox" value="B"> B</label>
-      <label><input id="checkbox-F" name="F" class="dialect-checkbox" type=
-      "checkbox" value="F"> F</label> <label><input id="checkbox-Fb" name="Fb"
-      class="dialect-checkbox" type="checkbox" value="Fb"> Fb</label>
-      <label><input id="checkbox-O" name="O" class="dialect-checkbox" type=
-      "checkbox" value="O"> O</label> <label><input id="checkbox-NH" name="NH"
-      class="dialect-checkbox" type="checkbox" value="NH"> NH</label>
+      <!-- Form checkboxes updated for mobile layout -->
+
+      <div class="checkboxes">
+        <label><input id="checkbox-S" name="S" class="dialect-checkbox" type=
+        "checkbox" value="S"> S</label> <label><input id="checkbox-Sa" name=
+        "Sa" class="dialect-checkbox" type="checkbox" value="Sa"> Sa</label>
+        <label><input id="checkbox-Sf" name="Sf" class="dialect-checkbox" type=
+        "checkbox" value="Sf"> Sf</label> <label><input id="checkbox-A" name=
+        "A" class="dialect-checkbox" type="checkbox" value="A"> A</label>
+        <label><input id="checkbox-sA" name="sA" class="dialect-checkbox" type=
+        "checkbox" value="sA"> sA</label> <label><input id="checkbox-B" name=
+        "B" class="dialect-checkbox" type="checkbox" value="B"> B</label>
+        <label><input id="checkbox-F" name="F" class="dialect-checkbox" type=
+        "checkbox" value="F"> F</label> <label><input id="checkbox-Fb" name=
+        "Fb" class="dialect-checkbox" type="checkbox" value="Fb"> Fb</label>
+        <label><input id="checkbox-O" name="O" class="dialect-checkbox" type=
+        "checkbox" value="O"> O</label> <label><input id="checkbox-NH" name=
+        "NH" class="dialect-checkbox" type="checkbox" value="NH"> NH</label>
+      </div>
       <button id="reset">reset</button>
     </div>
   </form>
-  <!-- We always use a full-width table in order to reduce jitter. Otherwise,
-the table width will expand gradually as results with longer and longer lines
-get added to the list, creating a jittery gradual expansion.-->
 
-  <table id="resultTable" style="width: 100%">
+  <table id="resultTable">
     <thead>
       <tr>
-        <td style="width: 10.0%;">
+        <td style="width: 10%;">
         </td>
-        <td style="width: 30.0%;"><em><strong>Root</strong></em>
+        <td style="width: 30%;"><em><strong>Root</strong></em>
         </td>
-        <td style="width: 30.0%;"><em><strong>Meaning</strong></em>
+        <td style="width: 30%;"><em><strong>Meaning</strong></em>
         </td>
-        <td style="width: 30.0%;"><em><strong>Matches</strong></em>
+        <td style="width: 30%;"><em><strong>Matches</strong></em>
         </td>
       </tr>
     </thead>
@@ -75,9 +79,6 @@ get added to the list, creating a jittery gradual expansion.-->
     </tbody>
   </table>
   <script defer src="xooxle.js"></script>
-  <p><br>
-  </p>
-
   <h2>Ⲅⲟⲟⲅⲗⲉ</h2>
 
   <p><small><i>Ⲅⲟⲟⲅⲗⲉ often doesn't work as expected! Use Ϧⲟⲟϧⲗⲉ!</i></small>
