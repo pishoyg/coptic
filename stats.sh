@@ -116,6 +116,7 @@ foc_archive() {
     -not -name "*.tab" \
     -not -name "*.json" \
     -not -name ".DS_Store" \
+    -not -path "./archive/com.xpproductions.copticLiterature/*" \
     -not -path "./archive/copticbible.apk/*" \
     -not -path "./archive/moheb.de/*" \
     -not -path "./archive/copticagpeya.apk/*" \
