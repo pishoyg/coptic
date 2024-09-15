@@ -167,9 +167,24 @@ function handleSearchQuery(timeout) {
     finally {
       // Update the URL.
       const url = new URL(window.location.href);
-      url.searchParams.set('query', searchBox.value.trim());
-      url.searchParams.set('full', String(fullWordCheckbox.checked));
-      url.searchParams.set('regex', String(regexCheckbox.checked));
+      if (searchBox.value.trim()) {
+        url.searchParams.set('query', searchBox.value.trim());
+      }
+      else {
+        url.searchParams.delete('query');
+      }
+      if (fullWordCheckbox.checked) {
+        url.searchParams.set('full', String(fullWordCheckbox.checked));
+      }
+      else {
+        url.searchParams.delete('full');
+      }
+      if (regexCheckbox.checked) {
+        url.searchParams.set('regex', String(regexCheckbox.checked));
+      }
+      else {
+        url.searchParams.delete('regex');
+      }
       window.history.replaceState('', '', url.toString());
     }
   }, timeout);
