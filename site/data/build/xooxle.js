@@ -3,6 +3,7 @@ const searchBox = document.getElementById('searchBox');
 const fullWordCheckbox = document.getElementById('fullWordCheckbox');
 const regexCheckbox = document.getElementById('regexCheckbox');
 const resultTable = document.getElementById('resultTable').querySelector('tbody');
+const messageBox = document.getElementById('message');
 const HIGHLIGHT_COLOR = '#f0d4fc';
 const RESULTS_TO_UPDATE_DISPLAY = 5;
 // TODO: (#229) Use a smarter heuristic to show context. Instead of splitting
@@ -107,9 +108,11 @@ async function search() {
     // matches, because there are some limitations regarding supporting
     // regular expressions using both `u` and `g` flags.
     regex = new RegExp(query, 'iu'); // Case-insensitive and Unicode-aware.
+    messageBox.innerHTML = '';
   }
   catch {
-    alert('invalid regular expression');
+    resultTable.innerHTML = '';
+    messageBox.innerHTML = '<em>Invalid regular expression!</em>';
     return;
   }
   const xooxle = await fileMap;
