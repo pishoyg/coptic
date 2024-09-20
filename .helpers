@@ -167,3 +167,5 @@ pydead () {
   done
   grepexx . '# dead: disable' --include="*.py"
 }
+
+alias gits='git -C "${SITE_DIR}"'
