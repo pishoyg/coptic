@@ -29,6 +29,7 @@ IMG_300_DIR = "dictionary/marcion.sourceforge.net/data/img-300"
 FILE_NAME_RE = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
 STEM_RE = re.compile("[0-9]+-[0-9]+-[0-9]+")
 NAME_RE = re.compile("[A-Z][a-zA-Z ]*")
+ASSIGN_SOURCE_RE = re.compile(r"^source\(([^=]+)\)=(.+)$")
 
 
 INPUT_TSVS: str = (
@@ -205,6 +206,16 @@ def open_images(images: list[str]):
     if not images:
         return
     subprocess.run(["open"] + images)
+
+
+def open_links(row: pd.Series) -> None:
+    subprocess.run(
+        [
+            "open",
+            str(row[LINK_COL]),
+            query(utils.html_text(str(row[MEANING_COL]))),
+        ],
+    )
 
 
 def get_downloads(args) -> list[str]:
@@ -434,20 +445,12 @@ def prompt(args):
         def existing() -> list[str]:
             return glob.glob(os.path.join(IMG_DIR, f"{key}-*"))
 
-        g = existing()
-        if args.skip_existing and g:
+        if args.skip_existing and existing():
             continue
 
-        open_images(g)
-        subprocess.run(
-            [
-                "open",
-                str(row[LINK_COL]),
-                query(utils.html_text(str(row[MEANING_COL]))),
-            ],
-        )
+        open_images(existing())
+        open_links(row)
 
-        assign_source_re = re.compile(r"^source\(([^=]+)\)=(.+)$")
         while True:
             # Force read a valid sense, or no sense at all.
             g = existing()
@@ -539,6 +542,8 @@ def prompt(args):
             if command.startswith("key="):
                 key = command[4:]
                 row = key_to_row[key]
+                open_images(existing())
+                open_links(row)
                 continue
 
             if command.startswith("source="):
@@ -580,7 +585,7 @@ def prompt(args):
                     utils.error(e)
                 continue
 
-            source_search = assign_source_re.search(command)
+            source_search = ASSIGN_SOURCE_RE.search(command)
             if source_search:
                 sources[source_search.group(1)] = source_search.group(2)
                 continue
