@@ -156,6 +156,9 @@ diff_lines() {
   diff --suppress-common-lines --speed-large-files --side-by-side "${1}" "${2}"
 }
 
+# NOTE: This function, for some reason, is unable to find the last (rightmost)
+# in the sheet, so we added a dummy EMPTY column to make it work for the last
+# column as well!
 col_num() {
   local -r FILE="${1}"
   local -r TARGET="${2}"
@@ -327,6 +330,16 @@ CRUM_ROOT_SENSES_SUM=$(tsv_nonempty \
   | grep '[0-9]+' --only-matching --extended-regexp \
   | wc --lines)
 
+CRUM_LAST_PAGES=$(tsv_nonempty \
+  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
+  "crum-last-page" \
+  | wc --lines)
+
+CRUM_OVERRIDE_TYPES=$(tsv_nonempty \
+  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
+  "override-type" \
+  | wc --lines)
+
 CRUM_WRD_TYPOS=$(crum_typos "coptwrd.tsv" | wc --lines)
 CRUM_DRV_TYPOS=$(crum_typos "coptdrv.tsv" | wc --lines)
 readonly CRUM_TYPOS=$(( CRUM_WRD_TYPOS + CRUM_DRV_TYPOS ))
@@ -427,6 +440,16 @@ echo -e "${BLUE}Number of editor's note added to Crum: "\
 
 ((CRUM_NOTES >= 4 && CRUM_NOTES <= 3357 )) || (echo -e "${PURPLE}${CRUM_NOTES} ${RED}looks suspicious.${RESET}" && exit 1)
 
+echo -e "${BLUE}Number of Crum last pages overridden: "\
+"${GREEN}${CRUM_LAST_PAGES}${BLUE}."
+
+((CRUM_LAST_PAGES >= 4 && CRUM_LAST_PAGES <= 3357 )) || (echo -e "${PURPLE}${CRUM_LAST_PAGES} ${RED}looks suspicious.${RESET}" && exit 1)
+
+echo -e "${BLUE}Number of types overridden: "\
+"${GREEN}${CRUM_OVERRIDE_TYPES}${BLUE}."
+
+((CRUM_OVERRIDE_TYPES >= 0 && CRUM_OVERRIDE_TYPES <= 3357 )) || (echo -e "${PURPLE}${CRUM_OVERRIDE_TYPES} ${RED}looks suspicious.${RESET}" && exit 1)
+
 echo -e "${BLUE}Number of Crum WRD entries changed: "\
   "${GREEN}${CRUM_WRD_TYPOS}${BLUE}."
 
@@ -483,7 +506,7 @@ if ${COMMIT}; then
   # We have to exclude the first field (`data`) from this though, because it
   # has spaces within it that would be unintentionally replaced with tabs if we
   # were to include it.
-  echo "$(date)$(echo " $(date +%s) ${LOC} ${CRUM_IMG} ${CRUM_DAWOUD} ${LOC_CRUM} ${LOC_COPTICSITE} ${LOC_KELLIA} ${LOC_BIBLE} ${LOC_FLASHCARDS} ${LOC_GRAMMAR} ${LOC_KEYBOARD} ${LOC_MORPHOLOGY} ${LOC_SITE} ${LOC_SHARED} ${LOC_ARCHIVE} ${CRUM_TYPOS} ${CRUM_IMG_SUM} ${CRUM_DAWOUD_SUM} ${NUM_COMMITS} ${NUM_CONTRIBUTORS} ${CRUM_NOTES} ${LOC_PYTHON} ${LOC_MAKE} ${LOC_CSS} ${LOC_SH} ${LOC_JS} ${LOC_MD} ${LOC_YAML} ${LOC_DOT} ${LOC_KEYBOARD_LAYOUT} ${LOC_TXT} ${CRUM_WRD_TYPOS} ${CRUM_DRV_TYPOS} ${CRUM_PAGES_CHANGED} ${CRUM_ROOT_SENSES} ${CRUM_ROOT_SENSES_SUM} ${LOC_TS} ${LOC_JSON} ${DISK_USAGE} ${DISK_USAGE_HUMAN} ${LOC_TOML} ${FOC} ${FOC_PYTHON} ${FOC_MAKE} ${FOC_CSS} ${FOC_SH} ${FOC_JS} ${FOC_MD} ${FOC_YAML} ${FOC_TOML} ${FOC_DOT} ${FOC_KEYBOARD_LAYOUT} ${FOC_TXT} ${FOC_TS} ${FOC_JSON} ${LOC_HTML} ${FOC_HTML}" | sed 's/ /\t/g')" \
+  echo "$(date)$(echo " $(date +%s) ${LOC} ${CRUM_IMG} ${CRUM_DAWOUD} ${LOC_CRUM} ${LOC_COPTICSITE} ${LOC_KELLIA} ${LOC_BIBLE} ${LOC_FLASHCARDS} ${LOC_GRAMMAR} ${LOC_KEYBOARD} ${LOC_MORPHOLOGY} ${LOC_SITE} ${LOC_SHARED} ${LOC_ARCHIVE} ${CRUM_TYPOS} ${CRUM_IMG_SUM} ${CRUM_DAWOUD_SUM} ${NUM_COMMITS} ${NUM_CONTRIBUTORS} ${CRUM_NOTES} ${LOC_PYTHON} ${LOC_MAKE} ${LOC_CSS} ${LOC_SH} ${LOC_JS} ${LOC_MD} ${LOC_YAML} ${LOC_DOT} ${LOC_KEYBOARD_LAYOUT} ${LOC_TXT} ${CRUM_WRD_TYPOS} ${CRUM_DRV_TYPOS} ${CRUM_PAGES_CHANGED} ${CRUM_ROOT_SENSES} ${CRUM_ROOT_SENSES_SUM} ${LOC_TS} ${LOC_JSON} ${DISK_USAGE} ${DISK_USAGE_HUMAN} ${LOC_TOML} ${FOC} ${FOC_PYTHON} ${FOC_MAKE} ${FOC_CSS} ${FOC_SH} ${FOC_JS} ${FOC_MD} ${FOC_YAML} ${FOC_TOML} ${FOC_DOT} ${FOC_KEYBOARD_LAYOUT} ${FOC_TXT} ${FOC_TS} ${FOC_JSON} ${LOC_HTML} ${FOC_HTML} ${CRUM_LAST_PAGES} ${CRUM_OVERRIDE_TYPES}" | sed 's/ /\t/g')" \
     >> "data/stats.tsv"
   git add "data/stats.tsv"
   git commit --message "${COMMIT_MESSAGE}"
