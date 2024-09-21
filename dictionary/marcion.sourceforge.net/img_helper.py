@@ -8,6 +8,7 @@ import shutil
 import subprocess
 import typing
 
+import pandas as pd
 import PIL
 import pillow_avif  # type: ignore[import-untyped]
 import requests
@@ -405,10 +406,14 @@ def cp(a_stem: str, b_stem: str) -> None:
 
 
 def prompt(args):
-    df = utils.read_tsvs(INPUT_TSVS, KEY_COL)
-    key_to_senses: dict[str, dict] = {}
-    for _, row in utils.read_tsv(APPENDICES_TSV, KEY_COL).iterrows():
-        key_to_senses[row[KEY_COL]] = json.loads(row[SENSES_COL] or "{}")
+    key_to_senses: dict[str, dict] = {
+        row[KEY_COL]: json.loads(row[SENSES_COL] or "{}")
+        for _, row in utils.read_tsv(APPENDICES_TSV, KEY_COL).iterrows()
+    }
+    key_to_row: dict[str, pd.Series] = {
+        row[KEY_COL]: row
+        for _, row in utils.read_tsvs(INPUT_TSVS, KEY_COL).iterrows()
+    }
 
     sources: dict[str, str] = {}
 
@@ -419,9 +424,8 @@ def prompt(args):
         assert k not in exclude
         exclude[k] = v
 
-    key_to_row = {row[KEY_COL]: row for _, row in df.iterrows()}
-    for _, row in df.iterrows():
-        key: str = row[KEY_COL]
+    for key in sorted(key_to_row.keys(), key=lambda k: int(k)):
+        row = key_to_row[key]
         if int(key) < args.start_at_key:
             continue
         if any(row[k] == v for k, v in exclude.items()):
