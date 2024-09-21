@@ -14,13 +14,6 @@ readonly KNOWN_EXTENSIONS="Makefile css csslintrc env_INFO helpers gitignore yam
 readonly KNOWN_EXTENSIONS_ARCHIVE="gitignore java js md proto py sh sql vba"
 readonly KNOWN_ARCHIVE_SUBDIRS="bible dictionary ipa-transliteration unicode-converters"
 
-if [ -n "$(git status --short)" ]; then
-  echo -e "${RED}The repo is dirty. This should be done with a clean worktree.${RESET}"
-  echo -e "${RED}Please stash your changes.${RESET}"
-  echo -e "${RED}Ideally, you should also run it on a commit that has already been pushed to the origin.${RESET}"
-  exit 1
-fi
-
 COMMIT=false
 while [ $# -gt 0 ]; do
   case $1 in
@@ -39,6 +32,13 @@ while [ $# -gt 0 ]; do
   esac
   shift
 done
+
+if ${COMMIT} && [ -n "$(git status --short)" ]; then
+  echo -e "${RED}The repo is dirty. This should be done with a clean worktree.${RESET}"
+  echo -e "${RED}Please stash your changes.${RESET}"
+  echo -e "${RED}Ideally, you should also run it on a commit that has already been pushed to the origin.${RESET}"
+  exit 1
+fi
 
 # NOTE: It's important to notice that the arguments get appended to a long list
 # of exclusion arguments below. Thus, be careful when you use an OR clause, as
