@@ -396,11 +396,21 @@ def _get_artifacts(stem: str, img_ext: str = "") -> list[str]:
 
 
 def rm(stem: str) -> None:
+    if not exists(stem):
+        utils.error(stem, "doesn't exist!")
+        return
     for art in _get_artifacts(stem):
         os.remove(art)
 
 
+def exists(stem: str) -> bool:
+    return bool(glob.glob(os.path.join(IMG_DIR, stem + ".*")))
+
+
 def mv(a_stem: str, b_stem: str) -> None:
+    if exists(b_stem):
+        utils.error(b_stem, "already exists!")
+        return
     a_arts = _get_artifacts(a_stem)
     img_ext = utils.ext(a_arts[0])
     b_arts = _get_artifacts(b_stem, img_ext)
@@ -409,6 +419,9 @@ def mv(a_stem: str, b_stem: str) -> None:
 
 
 def cp(a_stem: str, b_stem: str) -> None:
+    if exists(b_stem):
+        utils.error(b_stem, "already exists!")
+        return
     a_arts = _get_artifacts(a_stem)
     img_ext = utils.ext(a_arts[0])
     b_arts = _get_artifacts(b_stem, img_ext)
