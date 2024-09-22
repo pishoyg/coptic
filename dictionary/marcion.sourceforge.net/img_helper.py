@@ -86,6 +86,13 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
+    "--end_at_key",
+    type=int,
+    default=1000000000,
+    help="Terminate after reaching this key.",
+)
+
+argparser.add_argument(
     "--exclude",
     type=str,
     nargs="*",
@@ -472,6 +479,8 @@ def prompt(args):
         row = key_to_row[key]
         if int(key) < args.start_at_key:
             continue
+        if int(key) > args.end_at_key:
+            break
         if any(row[k] == v for k, v in exclude.items()):
             continue
 
