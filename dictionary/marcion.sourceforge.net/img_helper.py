@@ -171,6 +171,13 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
+    "--convert",
+    type=str,
+    default="",
+    help="If given, (re)convert the images with the given stem, and exit.",
+)
+
+argparser.add_argument(
     "--validate",
     default=False,
     action="store_true",
@@ -332,7 +339,17 @@ def convert(path: str, skip_existing: bool = False) -> None:
 def main():
     args = argparser.parse_args()
     actions: list[str] = list(
-        filter(None, [args.validate, args.batch, args.rm, args.mv, args.cp]),
+        filter(
+            None,
+            [
+                args.validate,
+                args.batch,
+                args.rm,
+                args.mv,
+                args.cp,
+                args.convert,
+            ],
+        ),
     )
     if len(actions) >= 2:
         utils.fatal("Up to one action argument can be given at a time.")
@@ -351,6 +368,9 @@ def main():
         exit()
     if args.cp:
         cp(*args.cp)
+        exit()
+    if args.convert:
+        convert(_stem_to_img_path(args.convert))
         exit()
     prompt(args)
 
@@ -508,6 +528,11 @@ def prompt(args):
             )
             utils.info(
                 "-",
+                "convert=${KEY}",
+                "to (re)convert one image.",
+            )
+            utils.info(
+                "-",
                 "source=${SOURCE}",
                 "to populate the source for the only image in",
                 args.downloads,
@@ -557,6 +582,11 @@ def prompt(args):
                 row = key_to_row[key]
                 open_images(existing())
                 open_links(row)
+                continue
+
+            if command.startswith("convert="):
+                key = command[8:]
+                convert(_stem_to_img_path(key))
                 continue
 
             if command.startswith("source="):
