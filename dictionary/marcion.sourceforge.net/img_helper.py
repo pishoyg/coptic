@@ -204,6 +204,14 @@ argparser.add_argument(
     " sources.",
 )
 
+argparser.add_argument(
+    "--plot",
+    default=False,
+    action="store_true",
+    help="If true, plot a YES or NO for whether each included picture has an"
+    " image.",
+)
+
 
 def get_max_idx(g: list[str], key: str, sense: str) -> int:
     highest = 0
@@ -350,6 +358,7 @@ def main():
         filter(
             None,
             [
+                args.plot,
                 args.validate,
                 args.batch,
                 args.rm,
@@ -501,6 +510,17 @@ def prompt(args):
         if args.skip_existing and existing():
             continue
 
+        if args.plot:
+            print(
+                key,
+                (
+                    colorama.Fore.GREEN + "YES"
+                    if existing()
+                    else colorama.Fore.RED + "NO"
+                )
+                + colorama.Fore.RESET,
+            )
+            continue
         open_images(existing())
         open_links(row)
 

@@ -105,6 +105,9 @@ update: precommit_update pip_update
 .PHONY: camera
 camera: camera_images
 
+.PHONY: crum_img_plot
+crum_img_plot: _crum_img_plot
+
 .PHONY: yo
 yo: say_yo
 
@@ -149,6 +152,9 @@ crum_appendices: FORCE
 
 crum_img: $(shell find dictionary/marcion.sourceforge.net/data/ -type f)
 	python dictionary/marcion.sourceforge.net/img_helper.py --batch
+
+_crum_img_plot: FORCE
+	python dictionary/marcion.sourceforge.net/img_helper.py --plot | less
 
 crum_img_helper: REQUIRE_ENV FORCE
 	# TODO: (#5) Remove the filters. Do all the words.
