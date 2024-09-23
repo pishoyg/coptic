@@ -528,43 +528,43 @@ def prompt(args):
             )
             utils.info(
                 "-",
-                "noun/${QUERY}",
+                "noun ${QUERY}",
                 "to query",
                 "thenounproject",
                 "API.",
             )
-            utils.info("-", "wiki/${PAGE}", "to open a", "Wikipedia", "page.")
-            utils.info("-", "key=${KEY}", "to point to a different key.")
+            utils.info("-", "wiki ${PAGE}", "to open a", "Wikipedia", "page.")
+            utils.info("-", "key ${KEY}", "to point to a different key.")
             utils.info(
                 "-",
-                "rm=${KEY}",
+                "rm ${KEY}",
                 "to delete an image and its artifacts.",
             )
             utils.info(
                 "-",
-                "mv=${KEY_1}:${KEY_2}",
+                "mv ${KEY_1} ${KEY_2}",
                 "to move an image and its artefacts.",
             )
             utils.info(
                 "-",
-                "cp=${KEY_1}:${KEY_2}",
+                "cp ${KEY_1} ${KEY_2}",
                 "to copy an image and its artefacts.",
             )
             utils.info(
                 "-",
-                "convert=${KEY}",
+                "convert ${KEY}",
                 "to (re)convert one image.",
             )
             utils.info(
                 "-",
-                "source=${SOURCE}",
+                "source ${SOURCE}",
                 "to populate the source for the only image in",
                 args.downloads,
                 "that is missing a source.",
             )
             utils.info(
                 "-",
-                "source(${PATH})=${SOURCE}",
+                "source ${PATH} ${SOURCE}",
                 "to populate the source for a given image.",
             )
             utils.info("-", "s", "to skip.")
@@ -601,19 +601,19 @@ def prompt(args):
                 utils.info("Sources cleared!")
                 continue
 
-            if command.startswith("key="):
+            if command.startswith("key "):
                 key = command[4:]
                 row = key_to_row[key]
                 open_images(existing())
                 open_links(row)
                 continue
 
-            if command.startswith("convert="):
+            if command.startswith("convert "):
                 key = command[8:]
                 convert(_stem_to_img_path(key))
                 continue
 
-            if command.startswith("source="):
+            if command.startswith("source "):
                 files = get_downloads(args)
                 files = [f for f in files if f not in sources]
                 if len(files) != 1:
@@ -629,14 +629,14 @@ def prompt(args):
                 sources[files[0]] = command
                 continue
 
-            if command.startswith("rm="):
+            if command.startswith("rm "):
                 try:
                     rm(command[3:])
                 except Exception as e:
                     utils.error(e)
                 continue
 
-            if command.startswith("cp="):
+            if command.startswith("cp "):
                 try:
                     command = command[3:]
                     cp(*command.split(":"))
@@ -644,7 +644,7 @@ def prompt(args):
                     utils.error(e)
                 continue
 
-            if command.startswith("mv="):
+            if command.startswith("mv "):
                 try:
                     command = command[3:]
                     mv(*command.split(":"))
@@ -669,13 +669,13 @@ def prompt(args):
                 sources[path] = command
                 continue
 
-            if command.lower().startswith("wiki/"):
+            if command.lower().startswith("wiki "):
                 subprocess.call(
-                    ["open", "https://en.wikipedia.org/" + command],
+                    ["open", f"https://en.wikipedia.org/wiki/{command[5:]}"],
                 )
                 continue
 
-            if command.lower().startswith("noun/"):
+            if command.lower().startswith("noun "):
                 # This is likely a search query.
                 command = command[5:]
                 auth = requests_oauthlib.OAuth1(
