@@ -8,6 +8,7 @@ import shutil
 import subprocess
 import typing
 
+import colorama
 import pandas as pd
 import PIL
 import pillow_avif  # type: ignore[import-untyped]
@@ -456,6 +457,16 @@ def cp(a_stem: str, b_stem: str) -> None:
         shutil.copyfile(a, b)
 
 
+def _pretty(json: dict[str, str] | list[str]):
+    if isinstance(json, list):
+        for x in json:
+            print(colorama.Fore.CYAN + x)
+        return
+    assert isinstance(json, dict)
+    for key, value in json.items():
+        print(colorama.Fore.CYAN + key + ": " + colorama.Fore.MAGENTA + value)
+
+
 def prompt(args):
     key_to_senses: dict[str, dict] = {
         row[KEY_COL]: json.loads(row[SENSES_COL] or "{}")
@@ -500,10 +511,14 @@ def prompt(args):
             # indentations.
             utils.info("Key:", key)
             utils.info("Link:", row[LINK_COL])
-            utils.info("Existing:", utils.json_dumps(g))
-            utils.info("Downloads:", utils.json_dumps(get_downloads(args)))
-            utils.info("Senses:", utils.json_dumps(key_to_senses[key]))
-            utils.info("Sources:", utils.json_dumps(sources))
+            utils.info("Existing:")
+            _pretty(g)
+            utils.info("Downloads:")
+            _pretty(get_downloads(args))
+            utils.info("Senses:")
+            _pretty(key_to_senses[key])
+            utils.info("Sources:")
+            _pretty(sources)
             print()
             utils.info("Enter:")
             utils.info(
