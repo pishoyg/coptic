@@ -52,8 +52,18 @@ SOURCES_DIR: str = "dictionary/marcion.sourceforge.net/data/img-sources/"
 EXT_MAP = {
     ".png": ".jpg",
 }
-VALID_EXTENSIONS = {".avif", ".gif", ".jpeg", ".jpg", ".JPG", ".png", ".webp"}
-VALID_EXTENSIONS_300 = {".avif", ".gif", ".jpeg", ".jpg", ".JPG", ".webp"}
+IMAGE_EXTENSIONS = {
+    ".avif",
+    ".gif",
+    ".jpeg",
+    ".jpg",
+    ".JPG",
+    ".png",
+    ".webp",
+    ".svg",
+}
+VALID_EXTENSIONS = IMAGE_EXTENSIONS.difference({".svg"})
+VALID_EXTENSIONS_300 = VALID_EXTENSIONS.difference({".png"})
 
 
 def params_str(params: dict) -> str:
@@ -61,14 +71,15 @@ def params_str(params: dict) -> str:
 
 
 # TODO: Download a higher-quality image instead of just the thumbnail.
-URL = "https://api.thenounproject.com/v2"
+NOUN_URL = "https://thenounproject.com"
+NOUN_API = "https://api.thenounproject.com/v2"
 SEARCH_PARAMS = {
     "query": "{query}",
     "include_svg": 0,
     "thumbnail_size": 200,
     "limit": 10,
 }
-ICON_SEARCH_FMT = URL + "/icon" + params_str(SEARCH_PARAMS)
+ICON_SEARCH_FMT = NOUN_API + "/icon" + params_str(SEARCH_PARAMS)
 
 WIKI_HEADERS = {
     "Api-User-Agent": "Coptic/1.0 (https://remnqymi.com; remnqymi@gmail.com)",
@@ -392,17 +403,23 @@ def main():
     prompt(args)
 
 
+def basename(url: str) -> str:
+    filename = os.path.basename(url)
+    idx = filename.find("?")
+    if idx != -1:
+        filename = filename[:idx]
+    return filename
+
+
 def retrieve(
     args,
     url: str,
     filename: typing.Optional[str] = None,
-    headers: dict[str, str] = {},
 ) -> str:
-    if filename is None:
-        filename = os.path.basename(url)
-        idx = filename.find("?")
-        if idx != -1:
-            filename = filename[:idx]
+    headers = {}
+    if is_wiki(url):
+        headers = WIKI_HEADERS
+    filename = filename or basename(url)
     download = requests.get(url, headers=headers)
     if not download.ok:
         utils.error(download.text)
@@ -466,18 +483,78 @@ def cp(a_stem: str, b_stem: str) -> None:
         shutil.copyfile(a, b)
 
 
-def _pretty(json: dict[str, str] | list[str]):
+def _pretty(json: dict[str, str] | dict[str, list[str]] | list[str]):
     if isinstance(json, list):
         for x in json:
-            print(colorama.Fore.CYAN + x)
+            print(colorama.Fore.CYAN + x + colorama.Fore.RESET)
         return
+
     assert isinstance(json, dict)
+    if all(isinstance(v, str) for v in json.values()):
+        for key, value in json.items():
+            assert isinstance(value, str)
+            print(
+                colorama.Fore.CYAN
+                + key
+                + colorama.Fore.RESET
+                + ": "
+                + colorama.Fore.MAGENTA
+                + value
+                + colorama.Fore.RESET,
+            )
+        return
+
+    assert all(isinstance(v, list) for v in json.values())
     for key, value in json.items():
-        print(colorama.Fore.CYAN + key + ": " + colorama.Fore.MAGENTA + value)
+        assert isinstance(value, list)
+        print(
+            colorama.Fore.CYAN
+            + key
+            + colorama.Fore.RESET
+            + ": ["
+            + ", ".join(
+                colorama.Fore.MAGENTA + v + colorama.Fore.RESET for v in value
+            )
+            + "]",
+        )
+
+
+def is_image_url(url: str) -> bool:
+    return any(basename(url).endswith(ext) for ext in IMAGE_EXTENSIONS)
+
+
+def infer_urls(command) -> tuple[list[str], list[str]]:
+    urls: list[str] = list(filter(None, command.split()))
+
+    reference: list[str] = []
+    download: list[str] = []
+    for url in urls:
+        (reference, download)[is_image_url(url)].append(url)
+    while not reference or not download:
+        utils.warn(
+            "We encourage you to provide both reference and download URLs.",
+        )
+        extras = list(filter(None, input("URLs: (s to skip)").lower().split()))
+        if extras == ["s"]:
+            break
+        valid = True
+        for ext in extras:
+            if not ext.startswith("http"):
+                utils.error(ext, "is not a URL!")
+                valid = False
+                break
+        if not valid:
+            continue
+        urls.extend(extras)
+        reference.clear()
+        download.clear()
+        for url in urls:
+            (reference, download)[is_image_url(url)].append(url)
+    return reference, download
 
 
 def prompt(args):
-    key_to_senses: dict[str, dict] = {
+    key_to_senses: dict[str, dict[str, str]] = {
         row[KEY_COL]: json.loads(row[SENSES_COL] or "{}")
         for _, row in utils.read_tsv(APPENDICES_TSV, KEY_COL).iterrows()
     }
@@ -486,7 +563,7 @@ def prompt(args):
         for _, row in utils.read_tsvs(INPUT_TSVS, KEY_COL).iterrows()
     }
 
-    sources: dict[str, str] = {}
+    sources: dict[str, list[str]] = {}
 
     exclude = {}
     for e in args.exclude:
@@ -638,7 +715,8 @@ def prompt(args):
                 files = [f for f in files if f not in sources]
                 if len(files) != 1:
                     utils.error(
-                        "Can't assign source because the number of new files != 1:",
+                        "Can't assign source because the number of new files"
+                        " != 1:",
                         files,
                     )
                     continue
@@ -646,7 +724,7 @@ def prompt(args):
                 if not command:
                     utils.error("No source given!")
                     continue
-                sources[files[0]] = command
+                sources[files[0]] = sum(infer_urls(command), [])
                 continue
 
             if command.startswith("rm "):
@@ -674,19 +752,21 @@ def prompt(args):
 
             source_search = ASSIGN_SOURCE_RE.search(command)
             if source_search:
-                sources[source_search.group(1)] = source_search.group(2)
+                sources[
+                    source_search.group(
+                        1,
+                    )
+                ] = sum(infer_urls(source_search.group(2)), [])
                 continue
             del source_search
 
             if command.startswith("http"):
-                url = command
-                headers: dict[str, str] = {}
-                if is_wiki(url):
-                    headers = WIKI_HEADERS
-                path = retrieve(args, url, headers=headers)
-                if not path:
-                    continue
-                sources[path] = command
+                reference, download = infer_urls(command)
+                for url in download:
+                    path = retrieve(args, url)
+                    if not path:
+                        continue
+                    sources[path] = reference + [url]
                 continue
 
             if command.lower().startswith("wiki "):
@@ -721,7 +801,10 @@ def prompt(args):
                     path = retrieve(args, icon["thumbnail_url"])
                     if not path:
                         continue
-                    sources[path] = icon["thumbnail_url"]
+                    sources[path] = [
+                        NOUN_URL + icon["permalink"],
+                        icon["thumbnail_url"],
+                    ]
                 open_images(get_downloads(args))
                 continue
 
@@ -744,7 +827,8 @@ def prompt(args):
                 utils.error(
                     "Invalid extensions:",
                     invalid,
-                    "Add them to the list if you're sure your script can process them.",
+                    "Add them to the list if you're sure your script can"
+                    " process them.",
                 )
                 continue
 
@@ -798,7 +882,7 @@ def prompt(args):
                 new_file = os.path.join(IMG_DIR, f"{key}-{sense}-{idx}{ext}")
                 pathlib.Path(file).rename(new_file)
                 convert(new_file)
-                utils.write(sources[file], get_source(new_file))
+                utils.write("\n".join(sources[file]), get_source(new_file))
 
 
 def batch(args):
@@ -890,6 +974,8 @@ def validate():
         for line in lines:
             if line.startswith("http"):
                 continue
+            # TODO: (#258) Stop using the "manual" placeholder or city names.
+            # Always have a URL.
             if line == "manual":
                 continue
             if NAME_RE.fullmatch(line):

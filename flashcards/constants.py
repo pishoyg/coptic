@@ -112,10 +112,11 @@ def crum(
             "dictionary/marcion.sourceforge.net/data/img-sources",
             stem + ".txt",
         )
-        source = utils.read(source_path).strip()
-        if source == "manual":
-            return stem
-        return source
+        sources: list[str] = [
+            line.strip() for line in utils.read(source_path).split("\n")
+        ]
+        sources = [line for line in sources if line.startswith("http")]
+        return sources[0] if sources else stem
 
     image_sensor = _sensor(
         roots_col("key")._content,
