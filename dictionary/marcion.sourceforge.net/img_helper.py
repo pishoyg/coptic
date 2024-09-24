@@ -750,7 +750,7 @@ def prompt(args):
             if command.startswith("cp "):
                 try:
                     command = command[3:]
-                    cp(*command.split(":"))
+                    cp(*command.split())
                 except Exception as e:
                     utils.error(e)
                 continue
@@ -758,7 +758,7 @@ def prompt(args):
             if command.startswith("mv "):
                 try:
                     command = command[3:]
-                    mv(*command.split(":"))
+                    mv(*command.split())
                 except Exception as e:
                     utils.error(e)
                 continue
