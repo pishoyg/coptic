@@ -965,12 +965,15 @@ def validate():
     # Validate content of the source files.
     for path in sources:
         content: str = utils.read(path)
+        if not content:
+            # TODO: (#258) Ban empty sources.
+            continue
         lines: list[str] = list(
             filter(None, [line.strip() for line in content.split("\n")]),
         )
         del content
         if not lines:
-            utils.fatal("Source file is empty:", path)
+            utils.fatal("Source file is not empty, but has empty lines:", path)
         for line in lines:
             if line.startswith("http"):
                 continue
