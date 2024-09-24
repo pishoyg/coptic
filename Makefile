@@ -300,7 +300,7 @@ _stats_format: FORCE
 camera_images: FORCE
 	grep \
 		--invert \
-		-E "^manual$$|^http.*$$" \
+		-E "^http.*$$" \
 		-R "dictionary/marcion.sourceforge.net/data/img-sources" \
 		| grep -oE "[^/]+$$" \
 		| sed 's/\.txt:/ /' \
@@ -308,7 +308,7 @@ camera_images: FORCE
 
 	grep \
 		--invert \
-		-E "^manual$$|^http.*$$" \
+		-E "^http.*$$" \
 		-R "dictionary/marcion.sourceforge.net/data/img-sources" \
 		--files-with-matches \
 		| sed 's/img-sources/img/' \

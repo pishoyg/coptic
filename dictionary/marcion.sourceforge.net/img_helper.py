@@ -977,10 +977,7 @@ def validate():
         for line in lines:
             if line.startswith("http"):
                 continue
-            # TODO: (#258) Stop using the "manual" placeholder or city names.
-            # Always have a URL.
-            if line == "manual":
-                continue
+            # TODO: (#258) Stop using city names. Always have a URL.
             if NAME_RE.fullmatch(line):
                 continue
             utils.fatal(
