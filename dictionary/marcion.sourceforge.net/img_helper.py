@@ -217,10 +217,13 @@ argparser.add_argument(
 
 argparser.add_argument(
     "--plot",
-    default=False,
-    action="store_true",
-    help="If true, plot a YES or NO for whether each included picture has an"
-    " image.",
+    default=None,
+    type=int,
+    nargs="*",
+    help="If given, plot a YES or NO for whether each included picture has an"
+    " image. If a number, use as the lower bound for the keys. If two numbers,"
+    " use as a lower and upper bound respectively. More than two arguments is"
+    " an error.",
 )
 
 
@@ -365,7 +368,13 @@ def convert(path: str, skip_existing: bool = False) -> None:
 
 def main():
     args = argparser.parse_args()
-    actions: list[str] = list(
+    # Preprocess arguments.
+    if args.plot is not None and not args.plot:
+        # The user has used --plot without providing any bounds. We add a
+        # sentinel for our code to work with.
+        assert args.plot == []
+        args.plot = [0]
+    actions: list = list(
         filter(
             None,
             [
@@ -554,6 +563,8 @@ def infer_urls(command) -> tuple[list[str], list[str]]:
 
 
 def prompt(args):
+    plot_yes: int = 0
+    plot_no: int = 0
     key_to_senses: dict[str, dict[str, str]] = {
         row[KEY_COL]: json.loads(row[SENSES_COL] or "{}")
         for _, row in utils.read_tsv(APPENDICES_TSV, KEY_COL).iterrows()
@@ -588,15 +599,17 @@ def prompt(args):
             continue
 
         if args.plot:
-            print(
-                key,
-                (
-                    colorama.Fore.GREEN + "YES"
-                    if existing()
-                    else colorama.Fore.RED + "NO"
-                )
-                + colorama.Fore.RESET,
-            )
+            if int(key) < int(args.plot[0]):
+                continue
+            if len(args.plot) > 1 and int(key) > int(args.plot[1]):
+                break
+            if existing():
+                plot_yes += 1
+                message = colorama.Fore.GREEN + "YES"
+            else:
+                plot_no += 1
+                message = colorama.Fore.RED + "NO"
+            print(key, message + colorama.Fore.RESET)
             continue
         open_images(existing())
         open_links(row)
@@ -883,6 +896,11 @@ def prompt(args):
                 pathlib.Path(file).rename(new_file)
                 convert(new_file)
                 utils.write("\n".join(sources[file]), get_source(new_file))
+    if plot_yes or plot_no:
+        print(
+            colorama.Fore.GREEN + str(plot_yes) + colorama.Fore.RESET,
+            colorama.Fore.RED + str(plot_no) + colorama.Fore.RESET,
+        )
 
 
 def batch(args):
