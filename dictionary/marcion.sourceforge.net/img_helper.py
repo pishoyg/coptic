@@ -819,7 +819,6 @@ def prompt(args):
                         NOUN_URL + icon["permalink"],
                         icon["thumbnail_url"],
                     ]
-                open_images(get_downloads(args))
                 continue
 
             if not command.isdigit():
