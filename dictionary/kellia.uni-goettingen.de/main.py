@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # This was forked from:
 # https://github.com/KELLIA/dictionary/blob/master/utils/dictionary_reader.py
 # The original file was snapshotted on 2024.06.01.
