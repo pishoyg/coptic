@@ -978,7 +978,7 @@ def validate():
         if mtime > os.stat(source).st_mtime:
             offending.append(source)
     if offending:
-        utils.fatal("Artifacts may be obsolete:", "\n".join(offending))
+        utils.fatal("Artifacts may be obsolete:", " ".join(offending))
 
     # Validate content of the source files.
     for path in sources:
