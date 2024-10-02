@@ -162,9 +162,7 @@ crum_img_helper: REQUIRE_ENV FORCE
 		--skip_existing=true \
 		--exclude "dialect-B:" \
 		--start_at_key="$${START_AT_KEY}" \
-		--end_at_key="$${END_AT_KEY}" \
-		--thenounproject_key="$${THENOUNPROJECT_KEY}" \
-		--thenounproject_secret="$${THENOUNPROJECT_SECRET}"
+		--end_at_key="$${END_AT_KEY}"
 
 # KELLIA RULES
 kellia: FORCE
