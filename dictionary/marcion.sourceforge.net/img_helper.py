@@ -247,13 +247,7 @@ def open_images(images: list[str]):
 
 
 def open_links(row: pd.Series) -> None:
-    subprocess.run(
-        [
-            "open",
-            str(row[LINK_COL]),
-            query(utils.html_text(str(row[MEANING_COL]))),
-        ],
-    )
+    subprocess.run(["open", str(row[LINK_COL])])
 
 
 def get_downloads(args) -> list[str]:
@@ -262,12 +256,6 @@ def get_downloads(args) -> list[str]:
     files = [os.path.join(args.downloads, f) for f in files]
     files = [f for f in files if os.path.isfile(f)]
     return files
-
-
-def query(meaning: str) -> str:
-    meaning = meaning.replace("&", " and ").replace("\n", " | ")
-    meaning = " ".join(meaning.split())
-    return f"https://www.google.com/search?q={meaning}&tbm=isch"
 
 
 def invalid_size(files: list[str]) -> list[str]:
@@ -645,6 +633,34 @@ def prompt(args):
                 "API.",
             )
             utils.info("-", "wiki ${PAGE}", "to open a", "Wikipedia", "page.")
+            utils.info(
+                "-",
+                "goog ${QUERY}",
+                "to search",
+                "Google",
+                "for the given query.",
+            )
+            utils.info(
+                "-",
+                "free ${QUERY}",
+                "to search",
+                "Freepik",
+                "for the given query.",
+            )
+            utils.info(
+                "-",
+                "vec ${QUERY}",
+                "to search",
+                "Vecteezy",
+                "for the given query.",
+            )
+            utils.info(
+                "-",
+                "flat ${QUERY}",
+                "to search",
+                "Flaticon",
+                "for the given query.",
+            )
             utils.info("-", "key ${KEY}", "to point to a different key.")
             utils.info(
                 "-",
@@ -717,6 +733,46 @@ def prompt(args):
                 row = key_to_row[key]
                 open_images(existing())
                 open_links(row)
+                continue
+
+            if command.startswith("goog "):
+                query = command[5:]
+                subprocess.call(
+                    [
+                        "open",
+                        f"https://www.google.com/search?q={query}&tbm=isch",
+                    ],
+                )
+                continue
+
+            if command.startswith("free "):
+                query = command[5:]
+                subprocess.call(
+                    [
+                        "open",
+                        f"https://www.freepik.com/search?format=search&type=icon&query={query}",
+                    ],
+                )
+                continue
+
+            if command.startswith("vec "):
+                query = command[4:]
+                subprocess.call(
+                    [
+                        "open",
+                        f"https://www.vecteezy.com/free-png/{query}?license-free=true",
+                    ],
+                )
+                continue
+
+            if command.startswith("flat "):
+                query = command[5:]
+                subprocess.call(
+                    [
+                        "open",
+                        f"https://www.flaticon.com/search?word={query}",
+                    ],
+                )
                 continue
 
             if command.startswith("convert "):
