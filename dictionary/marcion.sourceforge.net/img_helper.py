@@ -31,7 +31,6 @@ IMG_300_DIR = "dictionary/marcion.sourceforge.net/data/img-300"
 FILE_NAME_RE = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
 STEM_RE = re.compile("[0-9]+-[0-9]+-[0-9]+")
 NAME_RE = re.compile("[A-Z][a-zA-Z ]*")
-ASSIGN_SOURCE_RE = re.compile(r"^source\(([^=]+)\)=(.+)$")
 
 
 INPUT_TSVS: str = (
@@ -541,9 +540,7 @@ def is_image_url(url: str) -> bool:
     return any(basename(url).endswith(ext) for ext in IMAGE_EXTENSIONS)
 
 
-def infer_urls(command) -> tuple[list[str], list[str]]:
-    urls: list[str] = list(filter(None, command.split()))
-
+def infer_urls(*urls: str) -> tuple[list[str], list[str]]:
     reference: list[str] = []
     download: list[str] = []
     for url in urls:
@@ -552,7 +549,7 @@ def infer_urls(command) -> tuple[list[str], list[str]]:
         utils.warn(
             "We encourage you to provide both reference and download URLs.",
         )
-        extras = list(filter(None, input("URLs: (s to skip)").lower().split()))
+        extras = utils.ssplit(input("URLs: (s to skip)").lower())
         if extras == ["s"]:
             break
         valid = True
@@ -563,10 +560,9 @@ def infer_urls(command) -> tuple[list[str], list[str]]:
                 break
         if not valid:
             continue
-        urls.extend(extras)
         reference.clear()
         download.clear()
-        for url in urls:
+        for url in list(urls) + extras:
             (reference, download)[is_image_url(url)].append(url)
     return reference, download
 
@@ -677,8 +673,6 @@ def prompt(args):
             )
             utils.info(
                 "-",
-                # TODO: #261: Support this format. The current logic expects
-                # the path to be surrounded by parentheses!
                 "source ${PATH} ${SOURCE}",
                 "to populate the source for a given image. Multiple URLs are"
                 " allowed, in which case all are recorded as sources for the"
@@ -689,7 +683,7 @@ def prompt(args):
             utils.info("-", "cs", "to clear sources.")
             utils.info(
                 "-",
-                "sense ${SENSE}",
+                "${SENSE}",
                 "to assign a sense ID and initiate transfer.",
             )
             print()
@@ -734,8 +728,11 @@ def prompt(args):
             command = command.strip()
             if not command:
                 continue
+            split = utils.split(command)
+            command, params = split[0].lower(), split[1:]
+            del split
 
-            if command.lower() == "s":
+            if command == "s":
                 # S for skip!
                 files = get_downloads(args)
                 if files:
@@ -750,84 +747,71 @@ def prompt(args):
                 utils.info("Sources cleared!")
                 break
 
-            if command.lower() == "ss":
+            if command == "ss":
                 # Force skip!
                 break
 
-            if command.lower() == "cs":
+            if command == "cs":
                 sources.clear()
                 utils.info("Sources cleared!")
                 continue
 
-            if command.startswith("key "):
-                key = command[4:]
-                row = key_to_row[key]
-                os_open(*existing(), row[LINK_COL])
+            if command == "key":
+                for key in params:
+                    row = key_to_row[key]
+                    os_open(*existing(), row[LINK_COL])
                 continue
 
-            if command.startswith("convert "):
-                key = command[8:]
-                convert(_stem_to_img_path(key))
+            if command == "convert":
+                for stem in params:
+                    convert(_stem_to_img_path(stem))
                 continue
 
-            if command.startswith("source "):
-                files = get_downloads(args)
-                files = [f for f in files if f not in sources]
+            if command == "source":
+                files = [p for p in params if not p.startswith("http")] or [
+                    f for f in get_downloads(args) if f not in sources
+                ]
                 if len(files) != 1:
                     utils.error(
-                        "Can't assign source because the number of new files"
-                        " != 1:",
+                        "We can only assign sources to 1 file, got:",
                         files,
                     )
                     continue
-                command = command[7:]
-                if not command:
+                params = [p for p in params if p.startswith("http")]
+                if not params:
                     utils.error("No source given!")
                     continue
-                sources[files[0]] = sum(infer_urls(command), [])
+                sources[files[0]] = sum(infer_urls(*params), [])
                 continue
 
-            querier = command.split()[0]
-            if querier in QUERIERS_FMT:
-                query = command[len(querier) + 1 :]
-                os_open(QUERIERS_FMT[querier].format(query=query))
+            if command in QUERIERS_FMT:
+                query = " ".join(params)
+                os_open(QUERIERS_FMT[command].format(query=query))
                 continue
 
-            if command.startswith("rm "):
+            if command == "rm":
                 try:
-                    rm(command[3:])
+                    rm(*params)
                 except Exception as e:
                     utils.error(e)
                 continue
 
-            if command.startswith("cp "):
+            if command == "cp":
                 try:
-                    command = command[3:]
-                    cp(*command.split())
+                    cp(*params)
                 except Exception as e:
                     utils.error(e)
                 continue
 
-            if command.startswith("mv "):
+            if command == "mv":
                 try:
-                    command = command[3:]
-                    mv(*command.split())
+                    mv(*params)
                 except Exception as e:
                     utils.error(e)
                 continue
-
-            source_search = ASSIGN_SOURCE_RE.search(command)
-            if source_search:
-                sources[
-                    source_search.group(
-                        1,
-                    )
-                ] = sum(infer_urls(source_search.group(2)), [])
-                continue
-            del source_search
 
             if command.startswith("http"):
-                reference, download = infer_urls(command)
+                reference, download = infer_urls(command, *params)
                 for url in download:
                     path = retrieve(args, url)
                     if not path:
@@ -835,15 +819,14 @@ def prompt(args):
                     sources[path] = reference + [url]
                 continue
 
-            if command.lower().startswith("noun "):
+            if command == "noun":
                 # This is likely a search query.
-                command = command[5:]
                 auth = requests_oauthlib.OAuth1(
                     args.thenounproject_key,
                     args.thenounproject_secret,
                 )
                 resp = requests.get(
-                    ICON_SEARCH_FMT.format(query=command),
+                    ICON_SEARCH_FMT.format(query=" ".join(params)),
                     auth=auth,
                 )
                 if not resp.ok:
@@ -854,7 +837,7 @@ def prompt(args):
                 if not icons:
                     utils.error(
                         "Nothing found on thenounproject for:",
-                        command,
+                        " ".join(params),
                     )
                     continue
                 for icon in icons:
@@ -1032,9 +1015,7 @@ def validate():
         if not content:
             # TODO: (#258) Ban empty sources.
             continue
-        lines: list[str] = list(
-            filter(None, [line.strip() for line in content.split("\n")]),
-        )
+        lines: list[str] = utils.split(content, "\n")
         del content
         if not lines:
             utils.fatal("Source file is not empty, but has empty lines:", path)

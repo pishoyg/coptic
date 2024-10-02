@@ -163,6 +163,19 @@ def exts(paths: list[str]) -> list[str]:
     return list(map(ext, paths))
 
 
+def split(line: str, *args) -> list[str]:
+    """Split a string, discarding empty entries."""
+    return list(filter(None, line.split(*args)))
+
+
+def ssplit(line: str, *args) -> list[str]:
+    """Split a string, stripping whitespace from each entry, and discarding
+    empty entries."""
+    return list(
+        filter(None, map(lambda word: word.strip(), line.split(*args))),
+    )
+
+
 def use_html_line_breaks(text: str) -> str:
     return text.replace("\n", "<br/>")
 
