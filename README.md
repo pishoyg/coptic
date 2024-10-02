@@ -351,18 +351,19 @@ they don't have to look it up themselves
    dictionary author translates a given Coptic word into different English
 words, for example, the extra translations are often seen by users as
 auxiliary - tokens added there to convey a meaning that the dictionary author
-couldn't convey using fewer words. That's not the case for pictures. Pictures
-are taken seriously by users, and are more readily accepted as bearing a true,
-authentic, independent meaning of the word. Listing images (especially after we
-have started ascribing each image to a *sense* that the word conveys) is a way
-to recognize and legitimize those different senses and meanings that a word
-possesses.
+couldn't convey using fewer words.
 
-   It's for this reason that images must be deeply contemplated, and a word must
-   be digested well, before we add explanatory images for it. Collecting images is
-   tantamount to authoring a dictionary.
+That's not the case for pictures. Pictures are taken seriously by users, and are
+more readily accepted as bearing a true, authentic, independent meaning of the
+word. Listing images (especially after we have started ascribing each image to a
+*sense* that the word conveys) is a way to recognize and legitimize those
+different senses and meanings that a word possesses.
 
-3. The meaning of an image is much more strongly and concretely conveyed by an
+It's for this reason that images must be deeply contemplated, and a word must
+be digested well, before we add explanatory images for it. Collecting images is
+tantamount to authoring a dictionary.
+
+3. The meaning of a word is much more strongly and concretely conveyed by an
    image than by a word. Learning is not about knowing vocabulary or grammar.
 Learning is ultimately about creating the neural pathways that enable language
 to flow out of you naturally. A given word needs to settle and connect with
