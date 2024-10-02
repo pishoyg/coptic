@@ -100,14 +100,14 @@ argparser = argparse.ArgumentParser(
 )
 
 argparser.add_argument(
-    "--start_at_key",
+    "--start",
     type=int,
     default=0,
     help="Skips keys lower than this value.",
 )
 
 argparser.add_argument(
-    "--end_at_key",
+    "--end",
     type=int,
     default=1000000000,
     help="Terminate after reaching this key.",
@@ -561,9 +561,9 @@ def prompt(args):
 
     for key in sorted(key_to_row.keys(), key=lambda k: int(k)):
         row = key_to_row[key]
-        if int(key) < args.start_at_key:
+        if int(key) < args.start:
             continue
-        if int(key) > args.end_at_key:
+        if int(key) > args.end:
             break
         if any(row[k] == v for k, v in exclude.items()):
             continue

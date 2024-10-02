@@ -161,8 +161,8 @@ crum_img_helper: REQUIRE_ENV FORCE
 	python dictionary/marcion.sourceforge.net/img_helper.py \
 		--skip_existing=true \
 		--exclude "dialect-B:" \
-		--start_at_key="$${START_AT_KEY}" \
-		--end_at_key="$${END_AT_KEY}"
+		--start="$${START_KEY}" \
+		--end="$${END_KEY}"
 
 # KELLIA RULES
 kellia: FORCE
