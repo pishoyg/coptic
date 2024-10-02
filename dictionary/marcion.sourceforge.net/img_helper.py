@@ -625,23 +625,75 @@ def prompt(args):
         while True:
             # Force read a valid sense, or no sense at all.
             g = existing()
-            utils.info("Key:", key)
-            utils.info("Link:", row[LINK_COL])
-            utils.info("Existing:")
+            utils.info("Data:")
+            utils.info("- Key:", key)
+            utils.info("- Link:", row[LINK_COL])
+            utils.info("- Existing:")
             _pretty(g)
-            utils.info("Downloads:")
+            utils.info("- Downloads:")
             _pretty(get_downloads(args))
-            utils.info("Senses:")
+            utils.info("- Senses:")
             _pretty(key_to_senses[key])
-            utils.info("Sources:")
+            utils.info("- Sources:")
             _pretty(sources)
             print()
-            utils.info("Enter:")
+            utils.info("Commands:")
             utils.info(
                 "-",
-                "${URL}",
-                "to download an image and store the URL as the source.",
+                "${URL}*",
+                "to download an image and store the URL as the source."
+                "The URLs will be categorized into image-URLs and non-image"
+                " URLs. The former will be retrieved, and the latter will"
+                " simply be stored as sources.",
             )
+            utils.info("-", "key ${KEY}", "to point to a different key.")
+            utils.info(
+                "-",
+                "rm ${KEY}",
+                "to delete an image and its artifacts.",
+            )
+            utils.info(
+                "-",
+                "mv ${KEY_1} ${KEY_2}",
+                "to move an image and its artefacts.",
+            )
+            utils.info(
+                "-",
+                "cp ${KEY_1} ${KEY_2}",
+                "to copy an image and its artefacts.",
+            )
+            utils.info(
+                "-",
+                "convert ${KEY}",
+                "to (re)convert one image.",
+            )
+            utils.info(
+                "-",
+                "source ${SOURCE}",
+                "to populate the source for the only image in",
+                args.downloads,
+                "that is missing a source. Multiple URLs are allowed, in which"
+                " case all are recorded as sources for the said image.",
+            )
+            utils.info(
+                "-",
+                # TODO: #261: Support this format. The current logic expects
+                # the path to be surrounded by parentheses!
+                "source ${PATH} ${SOURCE}",
+                "to populate the source for a given image. Multiple URLs are"
+                " allowed, in which case all are recorded as sources for the"
+                " said image.",
+            )
+            utils.info("-", "s", "to skip.")
+            utils.info("-", "ss", "to force-skip.")
+            utils.info("-", "cs", "to clear sources.")
+            utils.info(
+                "-",
+                "sense ${SENSE}",
+                "to assign a sense ID and initiate transfer.",
+            )
+            print()
+            utils.info("Queries:")
             utils.info(
                 "-",
                 "noun ${QUERY}",
@@ -676,49 +728,6 @@ def prompt(args):
                 "to search",
                 "Google/Bing",
                 "for the given query, restricting results to known icon-providing sites.",
-            )
-            utils.info("-", "key ${KEY}", "to point to a different key.")
-            utils.info(
-                "-",
-                "rm ${KEY}",
-                "to delete an image and its artifacts.",
-            )
-            utils.info(
-                "-",
-                "mv ${KEY_1} ${KEY_2}",
-                "to move an image and its artefacts.",
-            )
-            utils.info(
-                "-",
-                "cp ${KEY_1} ${KEY_2}",
-                "to copy an image and its artefacts.",
-            )
-            utils.info(
-                "-",
-                "convert ${KEY}",
-                "to (re)convert one image.",
-            )
-            utils.info(
-                "-",
-                "source ${SOURCE}",
-                "to populate the source for the only image in",
-                args.downloads,
-                "that is missing a source.",
-            )
-            utils.info(
-                "-",
-                # TODO: #261: Support this format. The current logic expects
-                # the path to be surrounded by parentheses!
-                "source ${PATH} ${SOURCE}",
-                "to populate the source for a given image.",
-            )
-            utils.info("-", "s", "to skip.")
-            utils.info("-", "ss", "to force-skip.")
-            utils.info("-", "cs", "to clear sources.")
-            utils.info(
-                "-",
-                "sense ${SENSE}",
-                "to assign a sense ID and initiate transfer.",
             )
             print()
             command = input()
