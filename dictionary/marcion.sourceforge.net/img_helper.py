@@ -71,6 +71,14 @@ def params_str(params: dict) -> str:
     return "?" + "&".join(f"{k}={v}" for k, v in params.items())
 
 
+QUERIERS_FMT: dict[str, str] = {
+    "goog": "https://www.google.com/search?q={query}&tbm=isch",
+    "free": "https://www.freepik.com/search?format=search&type=icon&query={query}",
+    "vec": "https://www.vecteezy.com/free-png/{query}?license-free=true",
+    "flat": "https://www.flaticon.com/search?word={query}",
+    "wiki": "https://en.wikipedia.org/wiki/{query}",
+}
+
 # TODO: Download a higher-quality image instead of just the thumbnail.
 NOUN_URL = "https://thenounproject.com"
 NOUN_API = "https://api.thenounproject.com/v2"
@@ -635,30 +643,9 @@ def prompt(args):
             utils.info("-", "wiki ${PAGE}", "to open a", "Wikipedia", "page.")
             utils.info(
                 "-",
-                "goog ${QUERY}",
+                "[goog|free|flat|vec] ${QUERY}",
                 "to search",
-                "Google",
-                "for the given query.",
-            )
-            utils.info(
-                "-",
-                "free ${QUERY}",
-                "to search",
-                "Freepik",
-                "for the given query.",
-            )
-            utils.info(
-                "-",
-                "vec ${QUERY}",
-                "to search",
-                "Vecteezy",
-                "for the given query.",
-            )
-            utils.info(
-                "-",
-                "flat ${QUERY}",
-                "to search",
-                "Flaticon",
+                "Google/Freepik/Flaticon/Vecteezy",
                 "for the given query.",
             )
             utils.info("-", "key ${KEY}", "to point to a different key.")
@@ -691,13 +678,15 @@ def prompt(args):
             )
             utils.info(
                 "-",
+                # TODO: #261: Support this format. The current logic expects
+                # the path to be surrounded by parentheses!
                 "source ${PATH} ${SOURCE}",
                 "to populate the source for a given image.",
             )
             utils.info("-", "s", "to skip.")
             utils.info("-", "ss", "to force-skip.")
             utils.info("-", "cs", "to clear sources.")
-            utils.info("-", "sense number to initiate transfer.")
+            utils.info("-", "sense number", "to initiate transfer.")
             print()
             command = input()
             command = command.strip()
@@ -735,46 +724,6 @@ def prompt(args):
                 open_links(row)
                 continue
 
-            if command.startswith("goog "):
-                query = command[5:]
-                subprocess.call(
-                    [
-                        "open",
-                        f"https://www.google.com/search?q={query}&tbm=isch",
-                    ],
-                )
-                continue
-
-            if command.startswith("free "):
-                query = command[5:]
-                subprocess.call(
-                    [
-                        "open",
-                        f"https://www.freepik.com/search?format=search&type=icon&query={query}",
-                    ],
-                )
-                continue
-
-            if command.startswith("vec "):
-                query = command[4:]
-                subprocess.call(
-                    [
-                        "open",
-                        f"https://www.vecteezy.com/free-png/{query}?license-free=true",
-                    ],
-                )
-                continue
-
-            if command.startswith("flat "):
-                query = command[5:]
-                subprocess.call(
-                    [
-                        "open",
-                        f"https://www.flaticon.com/search?word={query}",
-                    ],
-                )
-                continue
-
             if command.startswith("convert "):
                 key = command[8:]
                 convert(_stem_to_img_path(key))
@@ -795,6 +744,17 @@ def prompt(args):
                     utils.error("No source given!")
                     continue
                 sources[files[0]] = sum(infer_urls(command), [])
+                continue
+
+            querier = command.split()[0]
+            if querier in QUERIERS_FMT:
+                query = command[len(querier) + 1 :]
+                subprocess.call(
+                    [
+                        "open",
+                        QUERIERS_FMT[querier].format(query=query),
+                    ],
+                )
                 continue
 
             if command.startswith("rm "):
@@ -837,12 +797,6 @@ def prompt(args):
                     if not path:
                         continue
                     sources[path] = reference + [url]
-                continue
-
-            if command.lower().startswith("wiki "):
-                subprocess.call(
-                    ["open", f"https://en.wikipedia.org/wiki/{command[5:]}"],
-                )
                 continue
 
             if command.lower().startswith("noun "):
