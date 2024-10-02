@@ -72,11 +72,24 @@ def params_str(params: dict) -> str:
 
 
 QUERIERS_FMT: dict[str, str] = {
+    "bing": "https://www.bing.com/images/search?q={query}",
     "goog": "https://www.google.com/search?q={query}&tbm=isch",
     "free": "https://www.freepik.com/search?format=search&type=icon&query={query}",
     "vec": "https://www.vecteezy.com/free-png/{query}?license-free=true",
     "flat": "https://www.flaticon.com/search?word={query}",
     "wiki": "https://en.wikipedia.org/wiki/{query}",
+    # Search Google, restricting the results to a given site.
+    "gnoun": "https://www.google.com/search?q=site:thenounproject.com {query}&tbm=isch",
+    "gfree": "https://www.google.com/search?q=site:freepik.com {query}&tbm=isch",
+    "gvec": "https://www.google.com/search?q=site:vecteezy.com {query}&tbm=isch",
+    "gflat": "https://www.google.com/search?q=site:flaticon.com {query}&tbm=isch",
+    "gwiki": "https://www.google.com/search?q=site:wikipedia.org {query}&tbm=isch",
+    # Search Bing, restricting the results to a given site.
+    "bnoun": "https://www.bing.com/images/search?q=site:thenounproject.com {query}",
+    "bfree": "https://www.bing.com/images/search?q=site:freepik.com {query}",
+    "bvec": "https://www.bing.com/images/search?q=site:vecteezy.com {query}",
+    "bflat": "https://www.bing.com/images/search?q=site:flaticon.com {query}",
+    "bwiki": "https://www.bing.com/images/search?q=site:wikipedia.org {query}",
 }
 
 # TODO: Download a higher-quality image instead of just the thumbnail.
@@ -614,8 +627,6 @@ def prompt(args):
         while True:
             # Force read a valid sense, or no sense at all.
             g = existing()
-            # TODO: Prettify the output a little bit. Maybe use JSON
-            # indentations.
             utils.info("Key:", key)
             utils.info("Link:", row[LINK_COL])
             utils.info("Existing:")
@@ -640,13 +651,26 @@ def prompt(args):
                 "thenounproject",
                 "API.",
             )
-            utils.info("-", "wiki ${PAGE}", "to open a", "Wikipedia", "page.")
             utils.info(
                 "-",
-                "[goog|free|flat|vec] ${QUERY}",
+                "[goog|bing|wiki|free|flat|vec] ${QUERY}",
                 "to search",
-                "Google/Freepik/Flaticon/Vecteezy",
+                "Google/Bing/Wikipedia/Freepik/Flaticon/Vecteezy",
                 "for the given query.",
+            )
+            utils.info(
+                "-",
+                "[gnoun|gwiki|gfree|gflat|gvec] ${QUERY}",
+                "to search",
+                "Google",
+                "for the given query, restricting results to the given site.",
+            )
+            utils.info(
+                "-",
+                "[bnoun|bwiki|bfree|bflat|bvec] ${QUERY}",
+                "to search",
+                "Bing",
+                "for the given query, restricting results to the given site.",
             )
             utils.info("-", "key ${KEY}", "to point to a different key.")
             utils.info(
@@ -686,7 +710,11 @@ def prompt(args):
             utils.info("-", "s", "to skip.")
             utils.info("-", "ss", "to force-skip.")
             utils.info("-", "cs", "to clear sources.")
-            utils.info("-", "sense number", "to initiate transfer.")
+            utils.info(
+                "-",
+                "sense ${SENSE}",
+                "to assign a sense ID and initiate transfer.",
+            )
             print()
             command = input()
             command = command.strip()
