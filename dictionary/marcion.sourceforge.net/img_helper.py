@@ -264,14 +264,10 @@ def get_max_idx(g: list[str], key: str, sense: str) -> int:
     return highest
 
 
-def open_images(images: list[str]):
-    if not images:
+def os_open(*args: str):
+    if not args:
         return
-    subprocess.run(["open"] + images)
-
-
-def open_links(row: pd.Series) -> None:
-    subprocess.run(["open", str(row[LINK_COL])])
+    subprocess.run(["open"] + list(args))
 
 
 def get_downloads(args) -> list[str]:
@@ -624,8 +620,7 @@ def prompt(args):
                 message = colorama.Fore.RED + "NO"
             print(key, message + colorama.Fore.RESET)
             continue
-        open_images(existing())
-        open_links(row)
+        os_open(*existing(), row[LINK_COL])
 
         while True:
             # Force read a valid sense, or no sense at all.
@@ -758,8 +753,7 @@ def prompt(args):
             if command.startswith("key "):
                 key = command[4:]
                 row = key_to_row[key]
-                open_images(existing())
-                open_links(row)
+                os_open(*existing(), row[LINK_COL])
                 continue
 
             if command.startswith("convert "):
@@ -787,12 +781,7 @@ def prompt(args):
             querier = command.split()[0]
             if querier in QUERIERS_FMT:
                 query = command[len(querier) + 1 :]
-                subprocess.call(
-                    [
-                        "open",
-                        QUERIERS_FMT[querier].format(query=query),
-                    ],
-                )
+                os_open(QUERIERS_FMT[querier].format(query=query))
                 continue
 
             if command.startswith("rm "):
@@ -922,7 +911,7 @@ def prompt(args):
             i = ""
             move = False
             while True:
-                open_images(files)
+                os_open(*files)
                 i = input("Looks good? (y/n)").lower()
                 files = get_downloads(args)
                 if i in ["y", "yes"]:
