@@ -32,6 +32,7 @@ const CLS_DIALECT_COMMA = 'dialect-comma';
 const CLS_SPELLING_COMMA = 'spelling-comma';
 const CLS_TYPE = 'type';
 const CLS_SPELLING = 'spelling';
+const DAWOUD_OFFSET = 16;
 const CLS_S = 'S';
 const CLS_Sa = 'Sa';
 const CLS_Sf = 'Sf';
@@ -92,7 +93,7 @@ Array.prototype.forEach.call(document.getElementsByClassName(CLS_CRUM_PAGE_EXTER
 Array.prototype.forEach.call(document.getElementsByClassName(CLS_DAWOUD_PAGE_IMG), (el) => {
   el.classList.add(CLS_LINK);
   el.onclick = () => {
-    window_open('https://coptic-treasures.com/book/coptic-dictionary-moawad-abd-al-nour/');
+    window_open(`https://remnqymi.com/dawoud/${(+el.getAttribute('alt') + DAWOUD_OFFSET).toString()}.jpg`);
   };
 });
 // Handle CLS_CRUM_PAGE_IMG class.

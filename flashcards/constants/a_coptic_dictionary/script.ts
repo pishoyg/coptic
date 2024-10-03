@@ -34,6 +34,8 @@ const CLS_SPELLING_COMMA = 'spelling-comma';
 const CLS_TYPE = 'type';
 const CLS_SPELLING = 'spelling';
 
+const DAWOUD_OFFSET = 16;
+
 // The following classes represent the dialects.
 type Dialect = 'S' | 'Sa' | 'Sf' | 'A' | 'sA' | 'B' | 'F' | 'Fb' | 'O' | 'NH';
 const CLS_S: Dialect = 'S';
@@ -115,7 +117,7 @@ Array.prototype.forEach.call(
     el.classList.add(CLS_LINK);
     el.onclick = (): void => {
       window_open(
-        'https://coptic-treasures.com/book/coptic-dictionary-moawad-abd-al-nour/',
+        `https://remnqymi.com/dawoud/${(+el.getAttribute('alt')! + DAWOUD_OFFSET).toString()}.jpg`,
       );
     };
   });
