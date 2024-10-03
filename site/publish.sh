@@ -83,6 +83,7 @@ build() {
 
   readonly CRUM_DIR="${SITE_DIR}/crum"
   readonly BIBLE_DIR="${SITE_DIR}/bible"
+  readonly DAWOUD_DIR="${SITE_DIR}/dawoud"
   readonly IMG_DIR="${SITE_DIR}/img"
 
   # CNAME
@@ -114,6 +115,11 @@ build() {
     bible/stshenouda.org/data/output/html/bohairic \
     bible/stshenouda.org/data/output/html/sahidic \
     "${BIBLE_DIR}"
+
+  # Dawoud
+  mkdir "${DAWOUD_DIR}"
+  cp dictionary/copticocc.org/data/dawoud-D100-cropped/*.jpg \
+    "${DAWOUD_DIR}"
 
   # generic
   _html() {
