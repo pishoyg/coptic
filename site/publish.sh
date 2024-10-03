@@ -20,8 +20,6 @@ readonly ICON_TAG='  <link rel="icon" type="image/x-icon" href="/img/icon/icon-c
 '
 readonly STYLE_TAG='  <link href="/style.css" rel="stylesheet" type="text/css">
 '
-readonly CHARSET_TAG='  <meta charset="utf-8">
-'
 
 CLEAN=false
 BUILD=false
@@ -137,7 +135,7 @@ build() {
       echo -e "${PURPLE}Can't find <head> in ${RED}${FILE}"
       exit 1
     fi
-    NEW="$(head -n "${LINE_NUM}" "${FILE}")${GOOGLE_TAG}${ICON_TAG}${STYLE_TAG}${CHARSET_TAG}$(tail -n "+$((LINE_NUM + 1))" "${FILE}")"
+    NEW="$(head -n "${LINE_NUM}" "${FILE}")${GOOGLE_TAG}${ICON_TAG}${STYLE_TAG}$(tail -n "+$((LINE_NUM + 1))" "${FILE}")"
     echo "${NEW}" > "${FILE}"
     tidy -config "tidy_config.txt" "${FILE}"
   }
