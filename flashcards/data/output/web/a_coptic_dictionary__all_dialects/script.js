@@ -9,6 +9,7 @@ window.addEventListener('load', () => {
 // Whether or not to retain this convention can be decided later.
   const CLS_CRUM_PAGE = 'crum-page';
   const CLS_CRUM_PAGE_EXTERNAL = 'crum-page-external';
+  const CLS_DAWOUD_PAGE_EXTERNAL = 'dawoud-page-external';
   const CLS_DAWOUD_PAGE_IMG = 'dawoud-page-img';
   const CLS_CRUM_PAGE_IMG = 'crum-page-img';
   const CLS_EXPLANATORY = 'explanatory';
@@ -33,6 +34,7 @@ window.addEventListener('load', () => {
   const CLS_SPELLING_COMMA = 'spelling-comma';
   const CLS_TYPE = 'type';
   const CLS_SPELLING = 'spelling';
+  const DAWOUD_OFFSET = 16;
   const CLS_S = 'S';
   const CLS_Sa = 'Sa';
   const CLS_Sf = 'Sf';
@@ -90,10 +92,17 @@ window.addEventListener('load', () => {
     };
   });
   // Handle CLS_DAWOUD_PAGE_EXTERNAL class.
+  Array.prototype.forEach.call(document.getElementsByClassName(CLS_DAWOUD_PAGE_EXTERNAL), (el) => {
+    el.classList.add(CLS_LINK);
+    el.onclick = () => {
+      window_open(`https://remnqymi.com/dawoud/${(+el.innerHTML + DAWOUD_OFFSET).toString()}.jpg`);
+    };
+  });
+  // Handle CLS_DAWOUD_PAGE_IMG class.
   Array.prototype.forEach.call(document.getElementsByClassName(CLS_DAWOUD_PAGE_IMG), (el) => {
     el.classList.add(CLS_LINK);
     el.onclick = () => {
-      window_open('https://coptic-treasures.com/book/coptic-dictionary-moawad-abd-al-nour/');
+      window_open(`https://remnqymi.com/dawoud/${(+el.getAttribute('alt') + DAWOUD_OFFSET).toString()}.jpg`);
     };
   });
   // Handle CLS_CRUM_PAGE_IMG class.
