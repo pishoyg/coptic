@@ -31,7 +31,7 @@ all: generate_1 add generate_2 index generate_3 test publish report
 
 # generate_1 rules are prerequisites for generate_2 rules.
 .PHONY: generate_1
-generate_1: bible copticsite crum crum_appendices crum_img kellia ts_transpile
+generate_1: bible copticsite crum crum_appendices crum_img kellia transpile
 
 .PHONY: generate_2
 generate_2: flashcards kindle
@@ -119,7 +119,7 @@ server: _server
 xooxle: FORCE
 	python site/main.py
 
-ts_transpile: FORCE
+transpile: FORCE
 	npx tsc -p "flashcards/constants/a_coptic_dictionary/tsconfig.json"
 	npx tsc -p "site/tsconfig.json"
 

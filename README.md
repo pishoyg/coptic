@@ -298,7 +298,7 @@ extensively.
 of lines of code of an equivalent Python piece to be significantly more.
 
 - We use TypeScript for static site logic. It then gets transpiled to
-JavaScript by running `make ts_transpile`. We don't write JavaScript directly.
+JavaScript by running `make transpile`. We don't write JavaScript directly.
 
 - We expect to make a similar platform-specific expansion into another
 territory for the app.
