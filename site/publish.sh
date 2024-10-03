@@ -101,10 +101,18 @@ build() {
 
   # Crum
   mkdir "${CRUM_DIR}"
+  INDEX=$(find flashcards/data/output/web/a_coptic_dictionary__all_dialects \
+    -type f \
+    -name "*.html" \
+      | while read -r FILE; do basename "${FILE}"; done \
+      | sort -n \
+      | while read -r BASENAME; do
+        echo "  <a href=\"${BASENAME}\">${BASENAME}</a>"
+      done)
+  INDEX="${INDEX}" envsubst < site/crum.html > "${CRUM_DIR}/index.html"
   cp -r \
     flashcards/data/output/web/a_coptic_dictionary__all_dialects/* \
     "${CRUM_DIR}"
-  cp "site/crum.html" "${CRUM_DIR}/index.html"
   cp "site/data/xooxle/crum.json" "${CRUM_DIR}/xooxle.json"
   cp "site/data/build/xooxle.js" "${CRUM_DIR}/"
 
