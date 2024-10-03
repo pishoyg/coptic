@@ -9,6 +9,7 @@
 // Whether or not to retain this convention can be decided later.
 const CLS_CRUM_PAGE = 'crum-page';
 const CLS_CRUM_PAGE_EXTERNAL = 'crum-page-external';
+const CLS_DAWOUD_PAGE_EXTERNAL = 'dawoud-page-external';
 const CLS_DAWOUD_PAGE_IMG = 'dawoud-page-img';
 const CLS_CRUM_PAGE_IMG = 'crum-page-img';
 const CLS_EXPLANATORY = 'explanatory';
@@ -111,6 +112,18 @@ Array.prototype.forEach.call(
   });
 
 // Handle CLS_DAWOUD_PAGE_EXTERNAL class.
+Array.prototype.forEach.call(
+  document.getElementsByClassName(CLS_DAWOUD_PAGE_EXTERNAL),
+  (el: HTMLElement): void => {
+    el.classList.add(CLS_LINK);
+    el.onclick = (): void => {
+      window_open(
+        `https://remnqymi.com/dawoud/${(+el.innerHTML + DAWOUD_OFFSET).toString()}.jpg`,
+      );
+    };
+  });
+
+// Handle CLS_DAWOUD_PAGE_IMG class.
 Array.prototype.forEach.call(
   document.getElementsByClassName(CLS_DAWOUD_PAGE_IMG),
   (el: HTMLElement): void => {
