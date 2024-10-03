@@ -3,10 +3,17 @@
 # NOTE: These GitHub helpers work, but also consider using the `gh` CLI. See
 # https://cli.github.com/.
 GITHUB="https://github.com/pishoyg/coptic"
+DOMAIN="remnqymi.com"
 # crum opens a Crum page on ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ.
 crum () {
   for KEY in "${@}"; do
-    open "https://remnqymi.com/crum/${KEY}.html"
+    open "https://${DOMAIN}/crum/${KEY}.html"
+  done
+}
+
+dawoud () {
+  for KEY in "${@}"; do
+    open "https://${DOMAIN}/dawoud/$((KEY + 16)).jpg"
   done
 }
 
