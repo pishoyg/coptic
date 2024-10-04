@@ -51,10 +51,15 @@ We use:
 - [GitHub](https://github.com/pishoyg/coptic/) for our code base.
 - [GitHub Pages](https://github.com/pishoyg/pishoyg.github.io/) for our
 [website](https://remnqymi.com/).
-- [Google Drive](https://drive.google.com/drive/folders/17jI92CKumjYQTXghThaaejPeD8ZbifPm?usp=drive_link) to share large files.
 - [Google
-Analytics](https://analytics.google.com/analytics/web/#/p454349148) to analyze traffic.
-- [Squarespace](https://account.squarespace.com/domains/managed/remnqymi.com) for DNS registration.
+Drive](https://drive.google.com/drive/folders/17jI92CKumjYQTXghThaaejPeD8ZbifPm?usp=drive_link)
+to share large files.
+- [Squarespace](https://account.squarespace.com/domains/managed/remnqymi.com)
+for DNS registration.
+- [Google Analytics](https://analytics.google.com/analytics/web/#/p454349148)
+and [Google Search
+Console](https://search.google.com/search-console?resource_id=sc-domain%3Aremnqymi.com)
+to analyze traffic.
 
 ## Diagram
 
@@ -353,15 +358,15 @@ words, for example, the extra translations are often seen by users as
 auxiliary - tokens added there to convey a meaning that the dictionary author
 couldn't convey using fewer words.
 
-That's not the case for pictures. Pictures are taken seriously by users, and are
-more readily accepted as bearing a true, authentic, independent meaning of the
-word. Listing images (especially after we have started ascribing each image to a
-*sense* that the word conveys) is a way to recognize and legitimize those
-different senses and meanings that a word possesses.
+   That's not the case for pictures. Pictures are taken seriously by users, and
+   are more readily accepted as bearing a true, authentic, independent meaning
+   of the word. Listing images (especially after we have started ascribing each
+   image to a *sense* that the word conveys) is a way to recognize and
+   legitimize those different senses and meanings that a word possesses.
 
-It's for this reason that images must be deeply contemplated, and a word must
-be digested well, before we add explanatory images for it. Collecting images is
-tantamount to authoring a dictionary.
+   It's for this reason that images must be deeply contemplated, and a word must
+   be digested well, before we add explanatory images for it. Collecting images
+   is tantamount to authoring a dictionary.
 
 3. The meaning of a word is much more strongly and concretely conveyed by an
    image than by a word. Learning is not about knowing vocabulary or grammar.
