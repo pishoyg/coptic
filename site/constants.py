@@ -37,9 +37,37 @@ _CRUM_INDEX = xooxle.index(
                 raw=False,
             ),
         ],
-        result_table_name="resultTable",
+        result_table_name="crum",
         path_prefix="",
         retain_extension=True,
+    ),
+    xooxle.subindex(
+        directory="flashcards/data/output/web/kellia__comprehensive/",
+        extract=[
+            xooxle.selector({"name": "footer"}),
+        ],
+        captures=[
+            xooxle.capture(
+                "orths",
+                xooxle.selector({"id": "orths"}),
+                raw=False,
+            ),
+            xooxle.capture(
+                "senses",
+                xooxle.selector({"id": "senses"}),
+                raw=False,
+            ),
+            xooxle.capture(
+                "text",
+                xooxle.selector(
+                    {"name": "body"},
+                ),
+                raw=False,
+            ),
+        ],
+        result_table_name="kellia",
+        path_prefix="https://coptic-dictionary.org/entry.cgi?tla=",
+        retain_extension=False,
     ),
 )
 
