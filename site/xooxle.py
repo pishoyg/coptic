@@ -127,11 +127,10 @@ class capture:
         self.raw: bool = raw
 
 
-class index:
+class subindex:
     def __init__(
         self,
         directory: str,
-        output: str,
         extract: list[selector],
         captures: list[capture],
     ) -> None:
@@ -146,11 +145,10 @@ class index:
         """
 
         self._directory: str = directory
-        self._output: str = output
         self._extract: list[selector] = extract
         self._captures: list[capture] = captures
 
-    def build(self) -> None:
+    def build(self) -> dict:
 
         data: list[dict[str, str]] = []
 
@@ -184,7 +182,7 @@ class index:
 
                 data.append(datum)
 
-        index = {
+        return {
             "data": data,
             "metadata": {
                 capture.name: {
@@ -193,4 +191,13 @@ class index:
                 for capture in self._captures
             },
         }
-        utils.write(utils.json_dumps(index), self._output)
+
+
+class index:
+    def __init__(self, output: str, *indexes: subindex) -> None:
+        self._output: str = output
+        self._indexes = indexes
+
+    def build(self) -> None:
+        json = [index.build() for index in self._indexes]
+        utils.write(utils.json_dumps(json), self._output)

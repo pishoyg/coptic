@@ -88,7 +88,7 @@ class Result {
 }
 
 // Load the JSON file as a Promise that will resolve once the data is fetched.
-const fileMap: Promise<Xooxle> = (async function(): Promise<Xooxle> {
+const fileMap: Promise<Xooxle[]> = (async function(): Promise<Xooxle[]> {
   // NOTE: Due to this `fetch`, trying to open the website as a local file in
   // the browser may not work. You have to serve it through a server.
   interface xooxle {
@@ -96,19 +96,22 @@ const fileMap: Promise<Xooxle> = (async function(): Promise<Xooxle> {
     readonly metadata: Record<string, Field>;
   }
 
-  const xooxle = await fetch('xooxle.json')
-    .then(async (resp) => await resp.json() as xooxle);
-  const results = xooxle.data.map((record: Record<string, string>): Result => {
-    const path = record['path']!;
-    delete record['path'];
-    const text = record['text']!;
-    delete record['text'];
-    return new Result(path, text, record);
+  const xooxles = await fetch('xooxle.json')
+    .then(async (resp) => await resp.json() as xooxle[]);
+  return xooxles.map((xooxle) => {
+    const results = xooxle.data.map(
+      (record: Record<string, string>): Result => {
+        const path = record['path']!;
+        delete record['path'];
+        const text = record['text']!;
+        delete record['text'];
+        return new Result(path, text, record);
+      });
+    return {
+      data: results,
+      metadata: xooxle.metadata,
+    } as Xooxle;
   });
-  return {
-    data: results,
-    metadata: xooxle.metadata,
-  } as Xooxle;
 })();
 
 // Event listener for the search button.
@@ -153,10 +156,20 @@ async function search() {
     return;
   }
 
-  const xooxle = await fileMap;
+  const xooxles = await fileMap;
 
   resultTable.innerHTML = ''; // Clear previous results.
 
+  xooxles.forEach((xooxle) => {
+    void searchOneDictionary(regex, xooxle, abortController);
+  });
+}
+
+async function searchOneDictionary(
+  regex: RegExp,
+  xooxle: Xooxle,
+  abortController: AbortController,
+) {
   let count = 0;
   for (const res of xooxle.data) {
     if (abortController.signal.aborted) {
