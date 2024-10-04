@@ -37,6 +37,9 @@ _CRUM_INDEX = xooxle.index(
                 raw=False,
             ),
         ],
+        result_table_name="resultTable",
+        path_prefix="",
+        retain_extension=True,
     ),
 )
 

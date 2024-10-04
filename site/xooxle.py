@@ -133,6 +133,9 @@ class subindex:
         directory: str,
         extract: list[selector],
         captures: list[capture],
+        result_table_name: str,
+        path_prefix: str,
+        retain_extension: bool,
     ) -> None:
         """
         Args:
@@ -147,6 +150,9 @@ class subindex:
         self._directory: str = directory
         self._extract: list[selector] = extract
         self._captures: list[capture] = captures
+        self._result_table_name: str = result_table_name
+        self._path_prefix: str = path_prefix
+        self._retain_extension: bool = retain_extension
 
     def build(self) -> dict:
 
@@ -189,6 +195,11 @@ class subindex:
                     "raw": capture.raw,
                 }
                 for capture in self._captures
+            },
+            "params": {
+                "path_prefix": self._path_prefix,
+                "retain_extension": self._retain_extension,
+                "result_table_name": self._result_table_name,
             },
         }
 

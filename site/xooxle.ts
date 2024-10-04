@@ -1,18 +1,25 @@
 const searchBox = document.getElementById('searchBox') as HTMLInputElement;
 const fullWordCheckbox = document.getElementById('fullWordCheckbox') as HTMLInputElement;
 const regexCheckbox = document.getElementById('regexCheckbox') as HTMLInputElement;
-const resultTable = document.getElementById('resultTable')!.querySelector('tbody')!;
 const messageBox = document.getElementById('message')!;
 
 const HIGHLIGHT_COLOR = '#f0d4fc';
 const RESULTS_TO_UPDATE_DISPLAY = 5;
 
+interface Params {
+  readonly path_prefix: string,
+  readonly retain_extension: boolean,
+  readonly result_table_name: string,
+}
+
 interface Field {
   readonly raw: boolean;
 }
+
 interface Xooxle {
   readonly data: Result[];
   readonly metadata: Record<string, Field>;
+  readonly params: Params;
 }
 
 // TODO: (#229) Use a smarter heuristic to show context. Instead of splitting
@@ -94,6 +101,7 @@ const fileMap: Promise<Xooxle[]> = (async function(): Promise<Xooxle[]> {
   interface xooxle {
     readonly data: Record<string, string>[];
     readonly metadata: Record<string, Field>;
+    readonly params: Params;
   }
 
   const xooxles = await fetch('xooxle.json')
@@ -110,6 +118,7 @@ const fileMap: Promise<Xooxle[]> = (async function(): Promise<Xooxle[]> {
     return {
       data: results,
       metadata: xooxle.metadata,
+      params: xooxle.params,
     } as Xooxle;
   });
 })();
@@ -125,9 +134,18 @@ async function search() {
   const abortController = new AbortController();
   currentAbortController = abortController;
 
+  const xooxles = await fileMap;
+
+  function clear() {
+    xooxles.forEach((xooxle) => {
+      document.getElementById(
+        xooxle.params.result_table_name)!.querySelector('tbody')!.innerHTML = '';
+    });
+  }
+
   let query = searchBox.value.trim();
   if (!query) {
-    resultTable.innerHTML = ''; // Clear previous results.
+    clear();
     return;
   }
 
@@ -151,14 +169,12 @@ async function search() {
     regex = new RegExp(query, 'iu'); // Case-insensitive and Unicode-aware.
     messageBox.innerHTML = '';
   } catch {
-    resultTable.innerHTML = '';
+    clear();
     messageBox.innerHTML = '<em>Invalid regular expression!</em>';
     return;
   }
 
-  const xooxles = await fileMap;
-
-  resultTable.innerHTML = ''; // Clear previous results.
+  clear(); // Clear previous results.
 
   xooxles.forEach((xooxle) => {
     void searchOneDictionary(regex, xooxle, abortController);
@@ -171,6 +187,8 @@ async function searchOneDictionary(
   abortController: AbortController,
 ) {
   let count = 0;
+  const resultTable = document.getElementById(xooxle.params.result_table_name)!.querySelector('tbody')!;
+
   for (const res of xooxle.data) {
     if (abortController.signal.aborted) {
       return;
@@ -195,7 +213,9 @@ async function searchOneDictionary(
 
     const viewCell = document.createElement('td');
     viewCell.innerHTML = `${String(count)}.
-      <a href="${res.path}#:~:text=${encodeURIComponent(matchedWord)}">
+      <a href="${xooxle.params.path_prefix +
+      (xooxle.params.retain_extension ? res.path : res.path.replace('.html', ''))
+}#:~:text=${encodeURIComponent(matchedWord)}">
       view</a>`;
     row.appendChild(viewCell);
 
