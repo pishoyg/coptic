@@ -80,7 +80,10 @@ class Line:
             ("geo", self._geo),
             ("gram_grp", self._gram_grp),
         ]
-        content = map(lambda pair: f'<td id="{pair[0]}">{pair[1]}</td>', pairs)
+        content = map(
+            lambda pair: f'<td class="{pair[0]}">{pair[1]}</td>',
+            pairs,
+        )
         return "<tr>" + "".join(content) + "</tr>"
 
 
@@ -217,7 +220,7 @@ class EtymString(Reformat):
         etym = compress(etym)
         if not etym:
             return ""
-        return '<span id="etym" class="etym">\n\t' + etym + "\n</span>"
+        return '<span class="etym">\n\t' + etym + "\n</span>"
 
 
 class Sense:
@@ -249,7 +252,7 @@ class Sense:
     def format(self, tag_name: str, tag_text: str) -> str:
         if not tag_name and not tag_text:
             return ""
-        fmt = '<span id="{id}">{text}</span>'
+        fmt = '<span class="{id}">{text}</span>'
         if tag_name == "bibl":
             split = tag_text.split("; ")
             split = [s.strip() for s in split]
@@ -268,13 +271,13 @@ class Sense:
             [
                 f"<!--sense_number:{self._sense_n}, sense_id:{self._sense_id}-->",
                 "<tr>",
-                '<td id="meaning">',
+                '<td class="meaning">',
                 "\n".join(
                     self.format(*pair)
                     for pair in self.subset("quote", "definition")
                 ),
                 "</td>",
-                '<td id="bibl">',
+                '<td class="bibl">',
                 "\n".join(self.format(*pair) for pair in self.subset("bibl")),
                 "</td>",
                 "</tr>",
@@ -285,7 +288,7 @@ class Sense:
             content.extend(
                 [
                     "<tr>",
-                    '<td id="ref_xr" colspan="2">',
+                    '<td class="ref_xr" colspan="2">',
                     "\n".join(self.format(*pair) for pair in ref_xr),
                     "</td>",
                     "</tr>",
@@ -389,13 +392,13 @@ def merge_langs(de: Lang, en: Lang, fr: Lang):
     for de_s, en_s, fr_s in zip(de.senses(), en.senses(), fr.senses()):
         assert de_s.identify() == en_s.identify() == fr_s.identify()
         merged.add_sense(*de_s.identify())
-        for row in en_s.explain('<span id="lang">(En.) </span>'):
+        for row in en_s.explain('<span class="lang">(En.) </span>'):
             merged.add(*row)
         merged.add("", "")
-        for row in de_s.explain('<span id="lang">(De.) </span>'):
+        for row in de_s.explain('<span class="lang">(De.) </span>'):
             merged.add(*row)
         merged.add("", "")
-        for row in fr_s.explain('<span id="lang">(Fr.) </span>'):
+        for row in fr_s.explain('<span class="lang">(Fr.) </span>'):
             merged.add(*row)
         merged.add("", "")
         for row in de_s.give_references():
