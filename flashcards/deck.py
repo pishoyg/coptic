@@ -248,12 +248,16 @@ class deck:
                         links="\n".join(links),
                     ),
                 )
-        with open(os.path.join(dir, JS_BASENAME), "w") as f:
-            f.write(
-                WEB_JS_FMT.format(
-                    javascript=self.javascript.replace("'use strict';", ""),
-                ),
-            )
+        if self.javascript:
+            with open(os.path.join(dir, JS_BASENAME), "w") as f:
+                f.write(
+                    WEB_JS_FMT.format(
+                        javascript=self.javascript.replace(
+                            "'use strict';",
+                            "",
+                        ),
+                    ),
+                )
         with open(os.path.join(dir, CSS_BASENAME), "w") as f:
             f.write(self.css)
         for path in self.media:
