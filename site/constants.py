@@ -77,6 +77,33 @@ _CRUM_INDEX = xooxle.index(
         path_prefix="https://coptic-dictionary.org/entry.cgi?tla=",
         retain_extension=False,
     ),
+    xooxle.subindex(
+        input="flashcards/data/output/web/copticsite.com/",
+        extract=[],
+        captures=[
+            xooxle.capture(
+                "front",
+                xooxle.htmlSelector({"id": "front"}),
+                raw=False,
+            ),
+            xooxle.capture(
+                "back",
+                xooxle.htmlSelector({"id": "back"}),
+                raw=False,
+            ),
+            xooxle.capture(
+                "text",
+                xooxle.htmlSelector(
+                    {"name": "body"},
+                ),
+                raw=False,
+            ),
+        ],
+        result_table_name="copticsite",
+        view=False,
+        path_prefix="https://coptic-dictionary.org/entry.cgi?tla=",
+        retain_extension=False,
+    ),
 )
 
 INDEXES = [
