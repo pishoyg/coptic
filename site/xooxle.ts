@@ -336,7 +336,7 @@ window.addEventListener('pageshow', (): void => {
         : `.spelling, .dialect {opacity: ${String(active === null ? 1.0 : 0.3)};}`);
     addOrReplaceRule(
       undialectedRuleIndex,
-      `.spelling:not(.S,.Sa,.Sf,.A,.sA,.B,.F,.Fb,.O,.NH) { opacity: ${String(active === null || query !== '' ? 1.0 : 0.3)}; }`);
+      `.spelling:not(.S,.Sa,.Sf,.A,.sA,.B,.F,.Fb,.O,.NH,.Ak,.M,.L,.P,.V,.W,.?) { opacity: ${String(active === null || query !== '' ? 1.0 : 0.3)}; }`);
     addOrReplaceRule(
       punctuationRuleIndex,
       `.dialect-parenthesis, .dialect-comma, .spelling-comma { opacity: ${String(active === null ? 1.0 : 0.3)}; }`);
