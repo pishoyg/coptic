@@ -30,9 +30,9 @@ def crum(
         col_name: str,
         line_br: bool = False,
         force: bool = True,
-    ) -> field.tsvs:
-        return field.tsvs(
-            "dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs",
+    ) -> field.tsv:
+        return field.tsv(
+            "dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv",
             col_name,
             line_br=line_br,
             force=force,

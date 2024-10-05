@@ -32,9 +32,7 @@ STEM_RE = re.compile("[0-9]+-[0-9]+-[0-9]+")
 NAME_RE = re.compile("[A-Z][a-zA-Z ]*")
 
 
-INPUT_TSVS: str = (
-    "dictionary/marcion.sourceforge.net/data/output/tsvs/roots.tsvs"
-)
+INPUT_TSV: str = "dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv"
 APPENDICES_TSV: str = (
     "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv"
 )
@@ -547,7 +545,7 @@ def prompt(args):
     }
     key_to_row: dict[str, pd.Series] = {
         row[KEY_COL]: row
-        for _, row in utils.read_tsvs(INPUT_TSVS, KEY_COL).iterrows()
+        for _, row in utils.read_tsv(INPUT_TSV, KEY_COL).iterrows()
     }
 
     sources: dict[str, list[str]] = {}
