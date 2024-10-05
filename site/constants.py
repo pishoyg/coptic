@@ -50,12 +50,12 @@ _CRUM_INDEX = xooxle.index(
             xooxle.capture(
                 "orths",
                 xooxle.selector({"id": "orths"}),
-                raw=False,
+                raw=True,
             ),
             xooxle.capture(
                 "senses",
                 xooxle.selector({"id": "senses"}),
-                raw=False,
+                raw=True,
             ),
             xooxle.capture(
                 "text",
