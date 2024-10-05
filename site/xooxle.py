@@ -1,7 +1,9 @@
+import enum
 import os
 import typing
 
 import bs4
+import pandas as pd
 
 import utils
 
@@ -45,13 +47,34 @@ _NEWLINE_ELEMENTS = {
 
 
 class selector:
+    def select(self, _: pd.Series | bs4.Tag) -> bs4.Tag | None:
+        raise NotImplementedError()
+
+
+class tsvSelector(selector):
+    def __init__(self, fields: list[str], force: bool = True) -> None:
+        self._fields: list[str] = fields
+        self._force: bool = force
+
+    def select(self, row: pd.Series | bs4.Tag) -> bs4.Tag | None:
+        assert isinstance(row, pd.Series)
+        content = "\n".join(filter(None, [str(row[f]) for f in self._fields]))
+        content = content.replace("\n", "<br>")
+        if self._force:
+            assert content
+        if not content:
+            return None
+        return bs4.BeautifulSoup(content, "html.parser")
+
+
+class htmlSelector(selector):
     def __init__(self, kwargs: dict, force: bool = True) -> None:
         self._kwargs = kwargs
         self._force = force
 
     def find_all(
         self,
-        soup: bs4.BeautifulSoup,
+        soup: bs4.Tag,
     ) -> list[bs4.Tag | bs4.NavigableString]:
         found = soup.find_all(**self._kwargs)
         assert found or not self._force
@@ -59,7 +82,7 @@ class selector:
 
     def find(
         self,
-        soup: bs4.BeautifulSoup,
+        soup: bs4.Tag,
     ) -> bs4.Tag | bs4.NavigableString | None:
         """Unlike BeautifulSoup.find, this method forces exactly one element
         matching the query to be present."""
@@ -68,7 +91,8 @@ class selector:
         assert found or not self._force
         return found[0] if found else None
 
-    def find_tag(self, soup: bs4.BeautifulSoup) -> bs4.Tag | None:
+    def select(self, soup: pd.Series | bs4.Tag) -> bs4.Tag | None:
+        assert isinstance(soup, bs4.Tag)
         elem = self.find(soup)
         assert elem or not self._force
         if elem is None:
@@ -121,17 +145,22 @@ def _clean_text(text: str) -> str:
 
 
 class capture:
-    def __init__(self, name: str, select: selector, raw: bool) -> None:
+    def __init__(self, name: str, _selector: selector, raw: bool) -> None:
         self.name: str = name
-        self.selector: selector = select
+        self.selector: selector = _selector
         self.raw: bool = raw
+
+
+class InputType(enum.Enum):
+    TSV = 0
+    HTML = 1
 
 
 class subindex:
     def __init__(
         self,
         input: str,
-        extract: list[selector],
+        extract: list[htmlSelector],
         captures: list[capture],
         result_table_name: str,
         path_prefix: str,
@@ -148,45 +177,78 @@ class subindex:
         """
 
         self._input: str = input
-        self._extract: list[selector] = extract
+        self._extract: list[htmlSelector] = extract
         self._captures: list[capture] = captures
         self._result_table_name: str = result_table_name
         self._path_prefix: str = path_prefix
         self._retain_extension: bool = retain_extension
 
-    def build(self) -> dict:
+    def iter_input(
+        self,
+    ) -> typing.Generator[
+        tuple[str, bs4.BeautifulSoup | pd.Series],
+        None,
+        None,
+    ]:
+        """If the input is a TSV file, yield rows.
 
-        data: list[dict[str, str]] = []
+        If the input is a directory containing HTML files, yield paths.
+        """
+        if os.path.isfile(self._input):
+            # The input is a TSV.
+            assert self._input.endswith(".tsv")
+            for _, row in utils.read_tsv(self._input).iterrows():
+                yield "", row
+            return
+        # The input is a list of HTML files.
+        assert os.path.isdir(self._input)
 
         # Recursively search for all HTML files.
         for root, _, files in os.walk(self._input):
             for file in files:
                 if not file.endswith(".html"):
                     continue
-                file_path = os.path.join(root, file)
+                path = os.path.join(root, file)
+                yield path, bs4.BeautifulSoup(utils.read(path), "html.parser")
 
-                # Parse the HTML content.
-                soup = bs4.BeautifulSoup(utils.read(file_path), "html.parser")
+    def input_type(self) -> InputType:
+        if os.path.isfile(self._input):
+            return InputType.TSV
+        assert os.path.isdir(self._input)
+        return InputType.HTML
 
-                for selector in self._extract:
-                    for element in selector.find_all(soup):
-                        element.extract()
+    def build(self) -> dict:
 
+        data: list[dict[str, str]] = []
+
+        # Recursively search for all HTML files.
+        for path, entry in self.iter_input():
+            # Parse the HTML content.
+            # TODO: #230: Don't require a path parameter.
+            datum = {"path": ""}
+            if self.input_type() == InputType.HTML:
                 # Store the relative file path.
                 datum = {
-                    "path": os.path.relpath(file_path, self._input),
+                    "path": os.path.relpath(path, self._input),
                 }
-                for capture in self._captures:
-                    elem: bs4.Tag | None = capture.selector.find_tag(soup)
-                    if not elem:
-                        datum[capture.name] = ""
-                        continue
-                    if capture.raw:
-                        datum[capture.name] = str(elem)
-                    else:
-                        datum[capture.name] = _clean_text(_get_text(elem))
 
-                data.append(datum)
+            for cap in self._captures:
+                elem: bs4.Tag | None = None
+                elem = cap.selector.select(entry)
+                if not elem:
+                    datum[cap.name] = ""
+                    continue
+
+                for selector in self._extract:
+                    for element in selector.find_all(elem):
+                        element.extract()
+
+                if cap.raw:
+                    datum[cap.name] = str(elem)
+                else:
+                    datum[cap.name] = _clean_text(_get_text(elem))
+
+            data.append(datum)
 
         return {
             "data": data,

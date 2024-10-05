@@ -5,33 +5,36 @@ _CRUM_INDEX = xooxle.index(
     xooxle.subindex(
         input="flashcards/data/output/web/a_coptic_dictionary__all_dialects/",
         extract=[
-            xooxle.selector({"name": "title"}),
-            xooxle.selector({"class_": "header"}),
-            xooxle.selector({"class_": "dictionary"}, force=False),
-            xooxle.selector({"class_": "crum"}, force=False),
-            xooxle.selector({"class_": "crum-page"}, force=False),
-            xooxle.selector({"class_": "crum-page-external"}, force=False),
-            xooxle.selector({"class_": "dawoud"}, force=False),
-            xooxle.selector({"class_": "dawoud-page"}, force=False),
-            xooxle.selector({"class_": "dawoud-page-external"}, force=False),
-            xooxle.selector({"class_": "drv-key"}, force=False),
-            xooxle.selector({"class_": "explanatory-key"}, force=False),
-            xooxle.selector({"class_": "nag-hammadi"}, force=False),
+            xooxle.htmlSelector({"name": "title"}, force=False),
+            xooxle.htmlSelector({"class_": "header"}, force=False),
+            xooxle.htmlSelector({"class_": "dictionary"}, force=False),
+            xooxle.htmlSelector({"class_": "crum"}, force=False),
+            xooxle.htmlSelector({"class_": "crum-page"}, force=False),
+            xooxle.htmlSelector({"class_": "crum-page-external"}, force=False),
+            xooxle.htmlSelector({"class_": "dawoud"}, force=False),
+            xooxle.htmlSelector({"class_": "dawoud-page"}, force=False),
+            xooxle.htmlSelector(
+                {"class_": "dawoud-page-external"},
+                force=False,
+            ),
+            xooxle.htmlSelector({"class_": "drv-key"}, force=False),
+            xooxle.htmlSelector({"class_": "explanatory-key"}, force=False),
+            xooxle.htmlSelector({"class_": "nag-hammadi"}, force=False),
         ],
         captures=[
             xooxle.capture(
                 "marcion",
-                xooxle.selector({"id": "marcion"}),
+                xooxle.htmlSelector({"id": "marcion"}),
                 raw=True,
             ),
             xooxle.capture(
                 "meaning",
-                xooxle.selector({"id": "meaning"}, force=False),
+                xooxle.htmlSelector({"id": "meaning"}, force=False),
                 raw=False,
             ),
             xooxle.capture(
                 "text",
-                xooxle.selector(
+                xooxle.htmlSelector(
                     {"name": "body"},
                 ),
                 raw=False,
@@ -44,25 +47,25 @@ _CRUM_INDEX = xooxle.index(
     xooxle.subindex(
         input="flashcards/data/output/web/kellia__comprehensive/",
         extract=[
-            xooxle.selector({"name": "footer"}),
-            xooxle.selector({"class_": "bibl"}),
-            xooxle.selector({"class_": "ref_xr"}, force=False),
-            xooxle.selector({"class_": "ref"}, force=False),
+            xooxle.htmlSelector({"name": "footer"}, force=False),
+            xooxle.htmlSelector({"class_": "bibl"}, force=False),
+            xooxle.htmlSelector({"class_": "ref_xr"}, force=False),
+            xooxle.htmlSelector({"class_": "ref"}, force=False),
         ],
         captures=[
             xooxle.capture(
                 "orths",
-                xooxle.selector({"id": "orths"}),
+                xooxle.htmlSelector({"id": "orths"}),
                 raw=True,
             ),
             xooxle.capture(
                 "senses",
-                xooxle.selector({"id": "senses"}),
+                xooxle.htmlSelector({"id": "senses"}),
                 raw=True,
             ),
             xooxle.capture(
                 "text",
-                xooxle.selector(
+                xooxle.htmlSelector(
                     {"name": "body"},
                 ),
                 raw=False,
