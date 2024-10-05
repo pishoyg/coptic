@@ -76,15 +76,15 @@ class Line:
 
     def pishoy_tr(self) -> str:
         pairs = [
-            ("orth", self._orth),
-            ("geo", self._geo),
+            (f"orth spelling {self._geo}", self._orth),
+            (f"geo dialect {self._geo}", self._geo),
             ("gram_grp", self._gram_grp),
         ]
         content = map(
             lambda pair: f'<td class="{pair[0]}">{pair[1]}</td>',
             pairs,
         )
-        return "<tr>" + "".join(content) + "</tr>"
+        return f'<tr class="word {self._geo}">' + "".join(content) + "</tr>"
 
 
 class OrthString(Reformat):
