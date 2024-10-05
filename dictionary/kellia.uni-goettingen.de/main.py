@@ -71,7 +71,7 @@ class Line:
     def __init__(self, gram_grp, orth, geo, form_id):
         self._gram_grp = gram_grp
         self._orth = orth
-        self._geo = geo
+        self._geo = "U" if geo == "?" else geo
         self._form_id = form_id
 
     def pishoy_tr(self) -> str:
