@@ -7,6 +7,7 @@ const HIGHLIGHT_COLOR = '#f0d4fc';
 const RESULTS_TO_UPDATE_DISPLAY = 5;
 
 interface Params {
+  readonly view: boolean,
   readonly path_prefix: string,
   readonly retain_extension: boolean,
   readonly result_table_name: string,
@@ -212,11 +213,13 @@ async function searchOneDictionary(
     const row = document.createElement('tr');
 
     const viewCell = document.createElement('td');
-    viewCell.innerHTML = `${String(count)}.
-      <a href="${xooxle.params.path_prefix +
-      (xooxle.params.retain_extension ? res.path : res.path.replace('.html', ''))
-}#:~:text=${encodeURIComponent(matchedWord)}" target="_blank">
+    viewCell.innerHTML = `${String(count)}.`;
+    if (xooxle.params.view) {
+      viewCell.innerHTML += `<a href="${xooxle.params.path_prefix +
+        (xooxle.params.retain_extension ? res.path : res.path.replace('.html', ''))
+      }#:~:text=${encodeURIComponent(matchedWord)}" target="_blank">
       view</a>`;
+    }
     row.appendChild(viewCell);
 
     Object.entries(res.fields).forEach(([key, value]: [string, string]) => {

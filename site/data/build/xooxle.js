@@ -150,10 +150,12 @@ async function searchOneDictionary(regex, xooxle, abortController) {
     // Create a new row for the table
     const row = document.createElement('tr');
     const viewCell = document.createElement('td');
-    viewCell.innerHTML = `${String(count)}.
-      <a href="${xooxle.params.path_prefix +
-            (xooxle.params.retain_extension ? res.path : res.path.replace('.html', ''))}#:~:text=${encodeURIComponent(matchedWord)}" target="_blank">
+    viewCell.innerHTML = `${String(count)}.`;
+    if (xooxle.params.view) {
+      viewCell.innerHTML += `<a href="${xooxle.params.path_prefix +
+                (xooxle.params.retain_extension ? res.path : res.path.replace('.html', ''))}#:~:text=${encodeURIComponent(matchedWord)}" target="_blank">
       view</a>`;
+    }
     row.appendChild(viewCell);
     Object.entries(res.fields).forEach(([key, value]) => {
       const cell = document.createElement('td');

@@ -163,6 +163,7 @@ class subindex:
         extract: list[htmlSelector],
         captures: list[capture],
         result_table_name: str,
+        view: bool,
         path_prefix: str,
         retain_extension: bool,
     ) -> None:
@@ -180,6 +181,7 @@ class subindex:
         self._extract: list[htmlSelector] = extract
         self._captures: list[capture] = captures
         self._result_table_name: str = result_table_name
+        self._view = view
         self._path_prefix: str = path_prefix
         self._retain_extension: bool = retain_extension
 
@@ -224,7 +226,7 @@ class subindex:
         # Recursively search for all HTML files.
         for path, entry in self.iter_input():
             # Parse the HTML content.
-            # TODO: #230: Don't require a path parameter.
+            # TODO: (#230) Don't require a path parameter.
             datum = {"path": ""}
             if self.input_type() == InputType.HTML:
                 # Store the relative file path.
@@ -259,6 +261,7 @@ class subindex:
                 for capture in self._captures
             },
             "params": {
+                "view": self._view,
                 "path_prefix": self._path_prefix,
                 "retain_extension": self._retain_extension,
                 "result_table_name": self._result_table_name,
