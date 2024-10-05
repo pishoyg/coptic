@@ -264,12 +264,6 @@ repos:
     hooks:
       - id: trufflehog
 
-  - repo: https://github.com/thoughtworks/talisman
-    rev: v1.32.0
-    hooks:
-      - id: talisman-commit
-        entry: cmd --githook pre-commit
-
   # Shell
   - repo: https://github.com/shellcheck-py/shellcheck-py
     rev: v0.10.0.1
