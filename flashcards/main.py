@@ -46,7 +46,7 @@ argparser.add_argument(
     "--web_mask",
     type=bool,
     nargs="*",
-    default=[True, False, False, False, False, True, False, False],
+    default=[True, False, False, False, True, True, False, False],
     help="A mask indicating whether to write output for deck_i in WEB format."
     "The path will be ${OUTPUT_DIR}/web/${DECK_NAME_NORMALIZED}/${FILE_BASENAME}",
 )
