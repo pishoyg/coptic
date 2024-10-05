@@ -486,14 +486,14 @@ def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
     )
 
 
-def kellia(deck_name: str, deck_id: int, basename: str) -> deck.deck:
-    def col(
+def kellia(deck_name: str, deck_id: int, tsv_basename: str) -> deck.deck:
+    def tsv_col(
         col_name: str,
         line_br: bool = False,
         force: bool = True,
-    ) -> field.tsvs:
-        return field.tsvs(
-            f"dictionary/kellia.uni-goettingen.de/data/output/tsvs/{basename}.tsvs",
+    ) -> field.tsv:
+        return field.tsv(
+            f"dictionary/kellia.uni-goettingen.de/data/output/tsv/{tsv_basename}.tsv",
             col_name,
             line_br=line_br,
             force=force,
@@ -508,21 +508,21 @@ def kellia(deck_name: str, deck_id: int, basename: str) -> deck.deck:
         javascript="",
         # NOTE: The key is a protected field. Do not change unless you know what
         # you're doing.
-        key=col("entry_xml_id"),
-        front=col("orthstring-pishoy", line_br=True),
+        key=tsv_col("entry_xml_id"),
+        front=tsv_col("orthstring-pishoy", line_br=True),
         back=field.cat(
             field.cat(
-                col("merged-pishoy", line_br=True),
-                col("etym_string-processed", line_br=True, force=False),
+                tsv_col("merged-pishoy", line_br=True),
+                tsv_col("etym_string-processed", line_br=True, force=False),
                 "<hr/>",
             ),
             "<footer>",
             field.aon(
                 "Coptic Dictionary Online: ",
                 '<a href="',
-                col("cdo"),
+                tsv_col("cdo"),
                 '">',
-                col("entry_xml_id"),
+                tsv_col("entry_xml_id"),
                 "</a>",
             ),
             "</footer>",

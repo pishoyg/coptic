@@ -28,9 +28,9 @@ XML_PATH = [
 # TODO: (#51) Support entity types.
 PUB_CORPORA = None
 OUTPUT = [
-    "dictionary/kellia.uni-goettingen.de/data/output/tsvs/egyptian.tsvs",
-    "dictionary/kellia.uni-goettingen.de/data/output/tsvs/greek.tsvs",
-    "dictionary/kellia.uni-goettingen.de/data/output/tsvs/comprehensive.tsvs",
+    "dictionary/kellia.uni-goettingen.de/data/output/tsv/egyptian.tsv",
+    "dictionary/kellia.uni-goettingen.de/data/output/tsv/greek.tsv",
+    "dictionary/kellia.uni-goettingen.de/data/output/tsv/comprehensive.tsv",
 ]
 
 entity_types: defaultdict = defaultdict(set)
@@ -1207,8 +1207,8 @@ def main():
             df.columns,
             key=lambda col_name: col_to_idx.get(col_name, 1000),
         )
-        utils.write_tsvs(df, output)
         # TODO: (#51) Add network graphs.
+        utils.to_tsv(df, output, columns=columns)
 
 
 if __name__ == "__main__":
