@@ -516,6 +516,7 @@ def kellia(deck_name: str, deck_id: int, basename: str) -> deck.deck:
                 col("etym_string-processed", line_br=True, force=False),
                 "<hr/>",
             ),
+            "<footer>",
             field.aon(
                 "Coptic Dictionary Online: ",
                 '<a href="',
@@ -524,6 +525,7 @@ def kellia(deck_name: str, deck_id: int, basename: str) -> deck.deck:
                 col("entry_xml_id"),
                 "</a>",
             ),
+            "</footer>",
         ),
         title=field.txt("", force=False),
         force_title=False,
