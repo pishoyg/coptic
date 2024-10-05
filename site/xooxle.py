@@ -130,7 +130,7 @@ class capture:
 class subindex:
     def __init__(
         self,
-        directory: str,
+        input: str,
         extract: list[selector],
         captures: list[capture],
         result_table_name: str,
@@ -139,7 +139,7 @@ class subindex:
     ) -> None:
         """
         Args:
-            directory: The directory to search for HTML files.
+            input: Input path - a directory to search for HTML files.
             output: Output JSON file.
             extract: List of kwargs queries that will be passed to
                 `soup.find_all` and extracted from the tree.
@@ -147,7 +147,7 @@ class subindex:
                 `soup.find_all`. and capture from the tree.
         """
 
-        self._directory: str = directory
+        self._input: str = input
         self._extract: list[selector] = extract
         self._captures: list[capture] = captures
         self._result_table_name: str = result_table_name
@@ -159,7 +159,7 @@ class subindex:
         data: list[dict[str, str]] = []
 
         # Recursively search for all HTML files.
-        for root, _, files in os.walk(self._directory):
+        for root, _, files in os.walk(self._input):
             for file in files:
                 if not file.endswith(".html"):
                     continue
@@ -174,7 +174,7 @@ class subindex:
 
                 # Store the relative file path.
                 datum = {
-                    "path": os.path.relpath(file_path, self._directory),
+                    "path": os.path.relpath(file_path, self._input),
                 }
                 for capture in self._captures:
                     elem: bs4.Tag | None = capture.selector.find_tag(soup)

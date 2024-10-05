@@ -3,7 +3,7 @@ import xooxle
 _CRUM_INDEX = xooxle.index(
     "site/data/xooxle/crum.json",
     xooxle.subindex(
-        directory="flashcards/data/output/web/a_coptic_dictionary__all_dialects/",
+        input="flashcards/data/output/web/a_coptic_dictionary__all_dialects/",
         extract=[
             xooxle.selector({"name": "title"}),
             xooxle.selector({"class_": "header"}),
@@ -42,7 +42,7 @@ _CRUM_INDEX = xooxle.index(
         retain_extension=True,
     ),
     xooxle.subindex(
-        directory="flashcards/data/output/web/kellia__comprehensive/",
+        input="flashcards/data/output/web/kellia__comprehensive/",
         extract=[
             xooxle.selector({"name": "footer"}),
             xooxle.selector({"class_": "bibl"}),
