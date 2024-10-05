@@ -461,9 +461,14 @@ def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
         # NOTE: The key is a protected field. Do not change unless you know what
         # you're doing.
         key=field.seq(),
-        front=tsv_col("prettify", force=False),
+        front=field.cat(
+            '<span class="dialect B">',
+            tsv_col("prettify", force=False),
+            "</span>",
+        ),
         back=field.cat(
             field.aon(
+                '<span class="type B">',
                 "(",
                 "<b>",
                 field.jne(
@@ -474,6 +479,7 @@ def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
                 ),
                 "</b>",
                 ")",
+                "</span>",
                 "<br/>",
             ),
             tsv_col("Meaning", line_br=True, force=False),
