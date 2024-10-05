@@ -84,7 +84,7 @@ _CRUM_INDEX = xooxle.index(
             xooxle.capture(
                 "front",
                 xooxle.htmlSelector({"id": "front"}),
-                raw=False,
+                raw=True,
             ),
             xooxle.capture(
                 "back",
