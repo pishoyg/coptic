@@ -439,13 +439,13 @@ def crum(
 
 
 def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
-    def col(
+    def tsv_col(
         col_name: str,
         line_br: bool = False,
         force: bool = True,
-    ) -> field.tsvs:
-        return field.tsvs(
-            "dictionary/copticsite.com/data/output/tsvs/output.tsvs",
+    ) -> field.tsv:
+        return field.tsv(
+            "dictionary/copticsite.com/data/output/tsv/output.tsv",
             col_name,
             line_br=line_br,
             force=force,
@@ -461,22 +461,22 @@ def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
         # NOTE: The key is a protected field. Do not change unless you know what
         # you're doing.
         key=field.seq(),
-        front=col("prettify", force=False),
+        front=tsv_col("prettify", force=False),
         back=field.cat(
             field.aon(
                 "(",
                 "<b>",
                 field.jne(
                     " - ",
-                    col("Word Kind", force=False),
-                    col("Word Gender", force=False),
-                    col("Origin", force=False),
+                    tsv_col("Word Kind", force=False),
+                    tsv_col("Word Gender", force=False),
+                    tsv_col("Origin", force=False),
                 ),
                 "</b>",
                 ")",
                 "<br/>",
             ),
-            col("Meaning", line_br=True, force=False),
+            tsv_col("Meaning", line_br=True, force=False),
         ),
         title=field.txt("", force=False),
         force_front=False,

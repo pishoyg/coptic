@@ -306,7 +306,7 @@ def main() -> None:
         if key.startswith(UNNAMED_PREFIX):
             df.drop(key, axis=1, inplace=True)
 
-    utils.write_tsvs(df, os.path.join(OUTPUT, "tsvs", "output.tsvs"))
+    utils.to_tsv(df, os.path.join(OUTPUT, "tsv", "output.tsv"))
 
 
 if __name__ == "__main__":
