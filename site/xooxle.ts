@@ -215,7 +215,7 @@ async function searchOneDictionary(
     viewCell.innerHTML = `${String(count)}.
       <a href="${xooxle.params.path_prefix +
       (xooxle.params.retain_extension ? res.path : res.path.replace('.html', ''))
-}#:~:text=${encodeURIComponent(matchedWord)}">
+}#:~:text=${encodeURIComponent(matchedWord)}" target="_blank">
       view</a>`;
     row.appendChild(viewCell);
 

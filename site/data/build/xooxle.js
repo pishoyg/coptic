@@ -152,7 +152,7 @@ async function searchOneDictionary(regex, xooxle, abortController) {
     const viewCell = document.createElement('td');
     viewCell.innerHTML = `${String(count)}.
       <a href="${xooxle.params.path_prefix +
-            (xooxle.params.retain_extension ? res.path : res.path.replace('.html', ''))}#:~:text=${encodeURIComponent(matchedWord)}">
+            (xooxle.params.retain_extension ? res.path : res.path.replace('.html', ''))}#:~:text=${encodeURIComponent(matchedWord)}" target="_blank">
       view</a>`;
     row.appendChild(viewCell);
     Object.entries(res.fields).forEach(([key, value]) => {
