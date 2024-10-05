@@ -185,3 +185,44 @@ td:not(:first-child) {
 .flashcards figure {
   display: inline-block;
 }
+
+/* KELLIA */
+.orth {
+  min-width: 120px;
+}
+.geo {
+  color: darkred;
+  min-width: 40px;
+  text-align: center;
+}
+.gram_grp {
+  color: gray;
+  font-style: italic;
+}
+.sense_n {
+  display: none;
+}
+.sense_id {
+  display: none;
+}
+.quote { }
+.definition { }
+.bibl {
+  color: gray;
+  float: right;
+  min-width: 100px;
+  text-align: right;
+}
+.ref {
+  color: gray;
+}
+.meaning {
+  min-width: 220px;
+}
+.ref_xr { }
+.xr {
+  color: gray;
+}
+.lang {
+  color: gray
+}
