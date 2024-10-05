@@ -93,40 +93,6 @@ def clean_dir(dir: str) -> None:
     pathlib.Path(dir).mkdir(parents=True)
 
 
-def write_tsvs(
-    df: pd.DataFrame,
-    tsvs: str,
-    chunk_size: int = 100,
-    zfill: int = 0,
-    **kwargs,
-) -> None:
-    clean_dir(tsvs)
-    starts = list(range(0, len(df.index), chunk_size))
-    # We add 1 to allow for growth.
-    zfill = zfill or len(str(len(df.index))) + 1
-
-    def iota(i):
-        return str(i).zfill(zfill)
-
-    for start in starts:
-        chunk = df.iloc[start : start + chunk_size]
-        basename = f"{iota(start+1)}_{iota(start+chunk_size)}.tsv"
-        to_tsv(chunk, os.path.join(tsvs, basename), **kwargs)
-    wrote(tsvs)
-
-
-def read_tsvs(tsvs: str, sort_values_by=None) -> pd.DataFrame:
-    files = [os.path.join(tsvs, basename) for basename in os.listdir(tsvs)]
-    files = sorted(files)
-    df = pd.DataFrame()
-    for f in files:
-        cur = read_tsv(f)
-        df = pd.concat([df, cur], ignore_index=True)
-    if sort_values_by:
-        df.sort_values(sort_values_by, inplace=True)
-    return df
-
-
 def html_text(html: str) -> str:
     soup = bs4.BeautifulSoup(html, "html.parser")
     return soup.get_text()
