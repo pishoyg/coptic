@@ -45,7 +45,7 @@ def series_to_int(series: pd.Series) -> list[int]:
 
 
 def write(df: pd.DataFrame, name: str) -> None:
-    utils.write_tsvs(df, os.path.join(OUTPUT, "tsvs", name + ".tsvs"))
+    utils.to_tsv(df, os.path.join(OUTPUT, "tsv", name + ".tsv"))
 
 
 def main() -> None:
