@@ -45,6 +45,9 @@ _CRUM_INDEX = xooxle.index(
         directory="flashcards/data/output/web/kellia__comprehensive/",
         extract=[
             xooxle.selector({"name": "footer"}),
+            xooxle.selector({"class_": "bibl"}),
+            xooxle.selector({"class_": "ref_xr"}, force=False),
+            xooxle.selector({"class_": "ref"}, force=False),
         ],
         captures=[
             xooxle.capture(
