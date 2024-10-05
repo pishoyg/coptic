@@ -2,7 +2,6 @@
 const searchBox = document.getElementById('searchBox');
 const fullWordCheckbox = document.getElementById('fullWordCheckbox');
 const regexCheckbox = document.getElementById('regexCheckbox');
-const resultTable = document.getElementById('resultTable').querySelector('tbody');
 const messageBox = document.getElementById('message');
 const HIGHLIGHT_COLOR = '#f0d4fc';
 const RESULTS_TO_UPDATE_DISPLAY = 5;
@@ -64,19 +63,22 @@ class Result {
 }
 // Load the JSON file as a Promise that will resolve once the data is fetched.
 const fileMap = (async function () {
-  const xooxle = await fetch('xooxle.json')
+  const xooxles = await fetch('xooxle.json')
     .then(async (resp) => await resp.json());
-  const results = xooxle.data.map((record) => {
-    const path = record['path'];
-    delete record['path'];
-    const text = record['text'];
-    delete record['text'];
-    return new Result(path, text, record);
+  return xooxles.map((xooxle) => {
+    const results = xooxle.data.map((record) => {
+      const path = record['path'];
+      delete record['path'];
+      const text = record['text'];
+      delete record['text'];
+      return new Result(path, text, record);
+    });
+    return {
+      data: results,
+      metadata: xooxle.metadata,
+      params: xooxle.params,
+    };
   });
-  return {
-    data: results,
-    metadata: xooxle.metadata,
-  };
 })();
 // Event listener for the search button.
 let currentAbortController = null;
@@ -86,9 +88,15 @@ async function search() {
   }
   const abortController = new AbortController();
   currentAbortController = abortController;
+  const xooxles = await fileMap;
+  function clear() {
+    xooxles.forEach((xooxle) => {
+      document.getElementById(xooxle.params.result_table_name).querySelector('tbody').innerHTML = '';
+    });
+  }
   let query = searchBox.value.trim();
   if (!query) {
-    resultTable.innerHTML = ''; // Clear previous results.
+    clear();
     return;
   }
   if (!regexCheckbox.checked) {
@@ -111,13 +119,18 @@ async function search() {
     messageBox.innerHTML = '';
   }
   catch {
-    resultTable.innerHTML = '';
+    clear();
     messageBox.innerHTML = '<em>Invalid regular expression!</em>';
     return;
   }
-  const xooxle = await fileMap;
-  resultTable.innerHTML = ''; // Clear previous results.
+  clear(); // Clear previous results.
+  xooxles.forEach((xooxle) => {
+    void searchOneDictionary(regex, xooxle, abortController);
+  });
+}
+async function searchOneDictionary(regex, xooxle, abortController) {
   let count = 0;
+  const resultTable = document.getElementById(xooxle.params.result_table_name).querySelector('tbody');
   for (const res of xooxle.data) {
     if (abortController.signal.aborted) {
       return;
@@ -138,7 +151,8 @@ async function search() {
     const row = document.createElement('tr');
     const viewCell = document.createElement('td');
     viewCell.innerHTML = `${String(count)}.
-      <a href="${res.path}#:~:text=${encodeURIComponent(matchedWord)}">
+      <a href="${xooxle.params.path_prefix +
+            (xooxle.params.retain_extension ? res.path : res.path.replace('.html', ''))}#:~:text=${encodeURIComponent(matchedWord)}">
       view</a>`;
     row.appendChild(viewCell);
     Object.entries(res.fields).forEach(([key, value]) => {
@@ -243,7 +257,7 @@ window.addEventListener('pageshow', () => {
     addOrReplaceRule(spellingRuleIndex, query
       ? `.spelling:not(${query}), .dialect:not(${query}) {opacity: 0.3;}`
       : `.spelling, .dialect {opacity: ${String(active === null ? 1.0 : 0.3)};}`);
-    addOrReplaceRule(undialectedRuleIndex, `.spelling:not(.S,.Sa,.Sf,.A,.sA,.B,.F,.Fb,.O,.NH) { opacity: ${String(active === null || query !== '' ? 1.0 : 0.3)}; }`);
+    addOrReplaceRule(undialectedRuleIndex, `.spelling:not(.S,.Sa,.Sf,.A,.sA,.B,.F,.Fb,.O,.NH,.Ak,.M,.L,.P,.V,.W,.U) { opacity: ${String(active === null || query !== '' ? 1.0 : 0.3)}; }`);
     addOrReplaceRule(punctuationRuleIndex, `.dialect-parenthesis, .dialect-comma, .spelling-comma { opacity: ${String(active === null ? 1.0 : 0.3)}; }`);
   }
   const dialectCheckboxes = document.querySelectorAll('.dialect-checkbox');
