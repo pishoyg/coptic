@@ -68,8 +68,8 @@ def params_str(params: dict) -> str:
 
 
 QUERIERS_FMT: dict[str, str] = {
-    "goog": "https://www.google.com/search?q={query}&tbm=isch",
-    "bing": "https://www.bing.com/images/search?q={query}",
+    "g": "https://www.google.com/search?q={query}&tbm=isch",
+    "b": "https://www.bing.com/images/search?q={query}",
     "free": "https://www.freepik.com/search?format=search&type=icon&query={query}",
     "flat": "https://www.flaticon.com/search?word={query}",
     "vec": "https://www.vecteezy.com/free-png/{query}?license-free=true",
@@ -659,7 +659,7 @@ def prompt(args):
             utils.info("Queries:")
             utils.info(
                 "-",
-                "[goog|bing|free|flat|vec|wiki] ${QUERY}",
+                "[g|b|free|flat|vec|wiki] ${QUERY}",
                 "to search",
                 "Google/Bing/Freepik/Flaticon/Vecteezy/Wikipedia",
                 "for the given query.",
