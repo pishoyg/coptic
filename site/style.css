@@ -226,3 +226,14 @@ td:not(:first-child) {
 .lang {
   color: gray
 }
+
+.collapse:hover {
+     cursor: pointer;
+     text-decoration: underline;
+}
+
+.collapsible {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}

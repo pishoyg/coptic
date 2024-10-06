@@ -235,6 +235,12 @@ async function searchOneDictionary(
 
     resultTable.appendChild(row);
 
+    // TODO: Remove the dependency on the HTML structure.
+    const collapsible = resultTable.parentElement!.parentElement!;
+    if (collapsible.style.maxHeight) {
+      collapsible.style.maxHeight = collapsible.scrollHeight.toString() + 'px';
+    }
+
     if (count % RESULTS_TO_UPDATE_DISPLAY == 0) {
       await new Promise((resolve) => setTimeout(resolve, 0));
     }
@@ -391,4 +397,16 @@ window.addEventListener('pageshow', (): void => {
       event.preventDefault();
     }
   });
+
+  // Collapse logic.
+  Array.prototype.forEach.call(
+    document.getElementsByClassName('collapse'),
+    (collapse: HTMLElement): void => {
+      collapse.addEventListener('click', function() {
+        // TODO: Remove the dependency on the HTML structure.
+        const collapsible = collapse.nextElementSibling! as HTMLElement;
+        collapsible.style.maxHeight = collapsible.style.maxHeight ? '' : collapsible.scrollHeight.toString() + 'px';
+      });
+      collapse.click();
+    });
 }
