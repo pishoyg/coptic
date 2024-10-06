@@ -73,7 +73,7 @@ _CRUM_INDEX = xooxle.index(
             ),
         ],
         result_table_name="kellia",
-        view=False,
+        view=True,
         path_prefix="https://coptic-dictionary.org/entry.cgi?tla=",
         retain_extension=False,
     ),
