@@ -67,25 +67,43 @@ def params_str(params: dict) -> str:
     return "?" + "&".join(f"{k}={v}" for k, v in params.items())
 
 
-QUERIERS_FMT: dict[str, str] = {
-    "g": "https://www.google.com/search?q={query}&tbm=isch",
-    "b": "https://www.bing.com/images/search?q={query}",
-    "free": "https://www.freepik.com/search?format=search&type=icon&query={query}",
-    "flat": "https://www.flaticon.com/search?word={query}",
-    "vec": "https://www.vecteezy.com/free-png/{query}?license-free=true",
-    "wiki": "https://en.wikipedia.org/wiki/{query}",
+QUERIERS_FMT: dict[str, list[str]] = {
+    "g": ["https://www.google.com/search?q={query}&tbm=isch"],
+    "b": ["https://www.bing.com/images/search?q={query}"],
+    "free": [
+        "https://www.freepik.com/search?format=search&type=icon&query={query}",
+    ],
+    "flat": ["https://www.flaticon.com/search?word={query}"],
+    "vec": ["https://www.vecteezy.com/free-png/{query}?license-free=true"],
+    "wiki": ["https://en.wikipedia.org/wiki/{query}"],
     # Search Google, restricting the results to a given site.
-    "gfree": "https://www.google.com/search?q=site:freepik.com {query}&tbm=isch",
-    "gflat": "https://www.google.com/search?q=site:flaticon.com {query}&tbm=isch",
-    "gvec": "https://www.google.com/search?q=site:vecteezy.com {query}&tbm=isch",
-    "gwiki": "https://www.google.com/search?q=site:wikipedia.org {query}&tbm=isch",
-    "gicon": "https://www.google.com/search?q=(site:freepik.com OR site:flaticon.com OR site:vecteezy.com) {query} icon&tbm=isch",
+    "gfree": [
+        "https://www.google.com/search?q=site:freepik.com {query}&tbm=isch",
+    ],
+    "gflat": [
+        "https://www.google.com/search?q=site:flaticon.com {query}&tbm=isch",
+    ],
+    "gvec": [
+        "https://www.google.com/search?q=site:vecteezy.com {query}&tbm=isch",
+    ],
+    "gwiki": [
+        "https://www.google.com/search?q=site:wikipedia.org {query}&tbm=isch",
+    ],
+    "gicon": [
+        "https://www.google.com/search?q=(site:freepik.com OR site:flaticon.com OR site:vecteezy.com) {query} icon&tbm=isch",
+    ],
     # Search Bing, restricting the results to a given site.
-    "bfree": "https://www.bing.com/images/search?q=site:freepik.com {query}",
-    "bflat": "https://www.bing.com/images/search?q=site:flaticon.com {query}",
-    "bvec": "https://www.bing.com/images/search?q=site:vecteezy.com {query}",
-    "bwiki": "https://www.bing.com/images/search?q=site:wikipedia.org {query}",
-    "bicon": "https://www.bing.com/images/search?q=(site:freepik.com OR site:flaticon.com OR site:vecteezy.com) {query} icon",
+    "bfree": ["https://www.bing.com/images/search?q=site:freepik.com {query}"],
+    "bflat": [
+        "https://www.bing.com/images/search?q=site:flaticon.com {query}",
+    ],
+    "bvec": ["https://www.bing.com/images/search?q=site:vecteezy.com {query}"],
+    "bwiki": [
+        "https://www.bing.com/images/search?q=site:wikipedia.org {query}",
+    ],
+    "bicon": [
+        "https://www.bing.com/images/search?q=(site:freepik.com OR site:flaticon.com OR site:vecteezy.com) {query} icon",
+    ],
 }
 
 WIKI_HEADERS = {
@@ -748,7 +766,8 @@ def prompt(args):
 
             if command in QUERIERS_FMT:
                 query = " ".join(params)
-                os_open(QUERIERS_FMT[command].format(query=query))
+                for fmt in QUERIERS_FMT[command]:
+                    os_open(fmt.format(query=query))
                 continue
 
             if command == "rm":
