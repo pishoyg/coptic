@@ -74,6 +74,7 @@ QUERIERS_FMT: dict[str, list[str]] = {
         "https://www.freepik.com/search?format=search&type=icon&query={query}",
     ],
     "flat": ["https://www.flaticon.com/search?word={query}"],
+    "wing": ["https://uxwing.com/?s={query}"],
     "vec": ["https://www.vecteezy.com/free-png/{query}?license-free=true"],
     "wiki": ["https://en.wikipedia.org/wiki/{query}"],
     # Search Google, restricting the results to a given site.
@@ -83,6 +84,9 @@ QUERIERS_FMT: dict[str, list[str]] = {
     "gflat": [
         "https://www.google.com/search?q=site:flaticon.com {query}&tbm=isch",
     ],
+    "gwing": [
+        "https://www.google.com/search?q=site:uxwing.com {query}&tbm=isch",
+    ],
     "gvec": [
         "https://www.google.com/search?q=site:vecteezy.com {query}&tbm=isch",
     ],
@@ -90,19 +94,22 @@ QUERIERS_FMT: dict[str, list[str]] = {
         "https://www.google.com/search?q=site:wikipedia.org {query}&tbm=isch",
     ],
     "gicon": [
-        "https://www.google.com/search?q=(site:freepik.com OR site:flaticon.com OR site:vecteezy.com) {query} icon&tbm=isch",
+        "https://www.google.com/search?q=(site:freepik.com OR site:flaticon.com OR site:uxwing.com OR site:vecteezy.com) {query} icon&tbm=isch",
     ],
     # Search Bing, restricting the results to a given site.
     "bfree": ["https://www.bing.com/images/search?q=site:freepik.com {query}"],
     "bflat": [
         "https://www.bing.com/images/search?q=site:flaticon.com {query}",
     ],
+    "bwing": [
+        "https://www.bing.com/images/search?q=site:uxwing.com {query}",
+    ],
     "bvec": ["https://www.bing.com/images/search?q=site:vecteezy.com {query}"],
     "bwiki": [
         "https://www.bing.com/images/search?q=site:wikipedia.org {query}",
     ],
     "bicon": [
-        "https://www.bing.com/images/search?q=(site:freepik.com OR site:flaticon.com OR site:vecteezy.com) {query} icon",
+        "https://www.bing.com/images/search?q=(site:freepik.com OR site:flaticon.com OR site:uxwing.com OR site:vecteezy.com) {query} icon",
     ],
 }
 
@@ -677,21 +684,21 @@ def prompt(args):
             utils.info("Queries:")
             utils.info(
                 "-",
-                "[g|b|free|flat|vec|wiki] ${QUERY}",
+                "[g|b|free|flat|wing|vec|wiki] ${QUERY}",
                 "to search",
-                "Google/Bing/Freepik/Flaticon/Vecteezy/Wikipedia",
+                "Google / Bing / Freepik / UXWing / Flaticon / Vecteezy / Wikipedia",
                 "for the given query.",
             )
             utils.info(
                 "-",
-                "[gfree|gflat|gvec|gwiki] ${QUERY}",
+                "[gfree|gflat|gwing|gvec|gwiki] ${QUERY}",
                 "to search",
                 "Google",
                 "for the given query, restricting results to the given site.",
             )
             utils.info(
                 "-",
-                "[bfree|bflat|bvec|bwiki] ${QUERY}",
+                "[bfree|bflat|bwing|bvec|bwiki] ${QUERY}",
                 "to search",
                 "Bing",
                 "for the given query, restricting results to the given site.",
