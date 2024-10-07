@@ -1,3 +1,11 @@
+<div align="center">
+   <figure>
+      <a href="https://remnqymi.com/" target="_blank"><img src="site/data/img/icon/icon.png" alt="ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ"
+      /></a>
+   </figure>
+</div>
+
+
 # [ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ](https://remnqymi.com/)
 
 This is the backing repo for [ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ](https://remnqymi.com/), a project
