@@ -343,32 +343,7 @@ There are many reasons we have decided to add pictures to our dictionary, and
 heavily invested in the image pipeline. They have become one of the integral
 pieces of our dictionary framework.
 
-1. Oftentimes, the words describe an entity or concept that is unfamiliar to
-   most users. Things like ancient crafts, plant or fish species, farmer's
-tools, and the like, are unfamiliar. Showing a user the English translation of
-a word doesn't suffice for the user to understand what it is, and they would
-often look up images themselves in order to find out what the word actually
-means. By embedding the pictures in the dictionary, we save users some time so
-they don't have to look it up themselves
-([example](https://remnqymi.com/crum/2426.html)).
-
-2. Translations are often taken lightly by users. Pictures are not. When a
-   dictionary author translates a given Coptic word into different English
-words, for example, the extra translations are often seen by users as
-auxiliary - tokens added there to convey a meaning that the dictionary author
-couldn't convey using fewer words.
-
-   That's not the case for pictures. Pictures are taken seriously by users, and
-   are more readily accepted as bearing a true, authentic, independent meaning
-   of the word. Listing images (especially after we have started ascribing each
-   image to a *sense* that the word conveys) is a way to recognize and
-   legitimize those different senses and meanings that a word possesses.
-
-   It's for this reason that images must be deeply contemplated, and a word must
-   be digested well, before we add explanatory images for it. Collecting images
-   is tantamount to authoring a dictionary.
-
-3. The meaning of a word is much more strongly and concretely conveyed by an
+1. The meaning of a word is much more strongly and concretely conveyed by an
    image than by a word. Learning is not about knowing vocabulary or grammar.
 Learning is ultimately about creating the neural pathways that enable language
 to flow out of you naturally. A given word needs to settle and connect with
@@ -384,6 +359,30 @@ reptiles can see) compared to the language processing areas. You will often
 find that, when you learn a new word, the associated images pop up in your
 brain more readily than the translation. Thus the use of images essentially
 revolutionizes the language learning process.
+
+2. Oftentimes, the words describe an entity or concept that is unfamiliar to
+   many users. Things like ancient crafts, plant or fish species, farmer's
+tools, and the like, are unfamiliar. Showing a user the English translation of
+a word doesn't suffice for the user to understand what it is, and they would
+often look up images themselves in order to find out what the word actually
+means. By embedding the pictures in the dictionary, we save users some time so
+they don't have to look it up themselves.
+
+3. Translations are often taken lightly by users. Pictures are not. When a
+   dictionary author translates a given Coptic word into different English
+words, for example, the extra translations are often seen by users as
+auxiliary - tokens added there to convey a meaning that the dictionary author
+couldn't convey using fewer words.
+
+   That's not the case for pictures. Pictures are taken seriously by users, and
+   are more readily accepted as bearing a true, authentic, independent meaning
+   of the word. Listing images (especially after we have started ascribing each
+   image to a *sense* that the word conveys) is a way to recognize and
+   legitimize those different senses and meanings that a word possesses.
+
+   It's for this reason that images must be deeply contemplated, and a word must
+   be digested well, before we add explanatory images for it. Collecting images
+   is tantamount to authoring a dictionary.
 
 ##### Technical Guidelines
 
