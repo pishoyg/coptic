@@ -10,7 +10,7 @@ source .helpers
 # shellcheck disable=SC2016
 readonly COMMIT_MESSAGE='[Stats] Run `make stats`.'
 
-readonly KNOWN_EXTENSIONS="Makefile css env_INFO helpers gitignore yamlfmt yamllint json mjs keylayout md plist py sh strings txt yaml toml ts html"
+readonly KNOWN_EXTENSIONS="Makefile css env_INFO helpers gitignore yamlfmt yamllint json mjs js keylayout md plist py sh strings txt yaml toml ts html"
 readonly KNOWN_EXTENSIONS_ARCHIVE="gitignore java js md proto py sh sql vba"
 readonly KNOWN_ARCHIVE_SUBDIRS="bible dictionary ipa-transliteration unicode-converters"
 
@@ -221,7 +221,7 @@ LOC_PYTHON=$(loc . -name "*.py")
 LOC_MAKE=$(loc . -name "Makefile")
 LOC_CSS=$(loc . -name "*.css")
 LOC_SH=$(loc . -a \( -name "*.sh" -o -name ".env" -o -name ".env_INFO" -o -name ".helpers" \))
-LOC_JS=$(loc . -name "*.mjs" )
+LOC_JS=$(loc . -a \( -name "*.mjs" -o -name "*.js" \) )
 LOC_MD=$(loc . -name "*.md")
 LOC_YAML=$(loc . -a \( -name "*.yaml" -o -name ".yamlfmt" -o -name ".yamllint" \) )
 LOC_TOML=$(loc . -name "*.toml")
@@ -253,7 +253,7 @@ FOC_PYTHON=$(foc_count . -name "*.py")
 FOC_MAKE=$(foc_count . -name "Makefile")
 FOC_CSS=$(foc_count . -name "*.css")
 FOC_SH=$(foc_count . -a \( -name "*.sh" -o -name ".env" -o -name ".env_INFO" -o -name ".helpers" \))
-FOC_JS=$(foc_count . -name "*.mjs" )
+FOC_JS=$(foc_count . -a \( -name "*.mjs" -o -name "*.js" \) )
 FOC_MD=$(foc_count . -name "*.md")
 FOC_YAML=$(foc_count . -a \( -name "*.yaml" -o -name ".yamlfmt" -o -name ".yamllint" \) )
 FOC_TOML=$(foc_count . -name "*.toml")
