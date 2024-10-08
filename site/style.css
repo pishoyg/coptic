@@ -57,7 +57,8 @@ ul, ol {
 }
 
 figure {
-  margin: 20px 0;
+ display: inline-block;
+  margin: 10px 0;
   text-align: center;
 }
 
@@ -66,12 +67,14 @@ figure img {
   border-radius: 5px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   margin: 5px;
+  vertical-align: top;
 }
 
 figcaption {
   color: #7f8c8d;
   font-size: 0.9em;
   margin-top: 8px;
+  text-align: center;
 }
 
 hr {
@@ -182,10 +185,6 @@ td:not(:first-child) {
   text-align: center;
 }
 
-.flashcards figure {
-  display: inline-block;
-}
-
 /* KELLIA */
 .orth {
   min-width: 120px;
@@ -228,12 +227,20 @@ td:not(:first-child) {
 }
 
 .collapse:hover {
-     cursor: pointer;
-     text-decoration: underline;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .collapsible {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-out;
+}
+
+.logo {
+  height: 100px;
+}
+
+.inline-logo {
+  height: 20px;
 }
