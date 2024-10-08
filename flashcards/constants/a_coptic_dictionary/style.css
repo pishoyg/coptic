@@ -74,20 +74,6 @@
   opacity: 0.5;
 }
 
-figure figcaption {
-  text-align: center;
-}
-
-figure img {
-  vertical-align: top;
-}
-
-figure {
-  border: 1px transparent;
-  display: inline-block;
-  margin: 10px;
-}
-
 .header {
   table-layout: fixed;
   width: 100%;
