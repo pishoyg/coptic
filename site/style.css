@@ -6,12 +6,21 @@ h1 {
   text-align: center;
 }
 
-a {
+a,.link {
   color: #3498DB;
+  cursor: pointer;
   text-decoration: none;
 }
 
-a:hover {
+.hover-link {
+  color: inherit;
+  cursor: inherit;
+  text-decoration: inherit;
+}
+
+a:hover,.link:hover,.hover-link:hover {
+  color: #3498DB;
+  cursor: pointer;
   text-decoration: underline;
 }
 
@@ -242,30 +251,6 @@ table {
 
 .right {
   float: right;
-}
-
-.link {
-  color: blue;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.hover-link {
-  color: inherit;
-  cursor: inherit;
-  text-decoration: inherit;
-}
-
-.hover-link:visited {
-  color: inherit;
-  cursor: inherit;
-  text-decoration: inherit;
-}
-
-.hover-link:hover {
-  color: blue;
-  cursor: pointer;
-  text-decoration: underline;
 }
 
 .light {
