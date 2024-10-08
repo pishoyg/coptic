@@ -71,15 +71,15 @@ table {
   width: 100%;
 }
 
-thead tr {
+.results thead tr {
   border-bottom: 1px solid black;
 }
 
-tbody tr:not(:last-child) {
+.results tbody tr:not(:last-child) {
   border-bottom: 1px solid black;
 }
 
-td:not(:first-child) {
+.results td:not(:first-child) {
   border-left: 1px solid black;
   padding-left: 5px;
 }
@@ -92,8 +92,12 @@ td:not(:first-child) {
     width: 100%;
   }
 
-  td {
+  .results td {
     border: 1px solid #ddd;
+  }
+
+  hr {
+    margin: 10px 0;
   }
 
   /* Center and space checkboxes for small screens */
@@ -174,7 +178,7 @@ td:not(:first-child) {
 }
 
 .meaning {
-  min-width: 220px;
+  min-width: 200px;
 }
 
 .xr {
@@ -206,4 +210,97 @@ td:not(:first-child) {
 
 .inline-logo {
   height: 20px;
+}
+
+.card {
+  font-size: 18px;
+}
+
+.bordered {
+  border: 1px solid black;
+}
+
+/* stylelint-disable selector-class-pattern */
+
+.nightMode .bordered {
+  border: 1px solid white;
+}
+
+/* stylelint-enable selector-class-pattern */
+
+.front {
+  text-align: center;
+}
+
+.left {
+  float: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  float: right;
+}
+
+.link {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.hover-link {
+  color: inherit;
+  cursor: inherit;
+  text-decoration: inherit;
+}
+
+.hover-link:visited {
+  color: inherit;
+  cursor: inherit;
+  text-decoration: inherit;
+}
+
+.hover-link:hover {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.light {
+  opacity: 0.7;
+}
+
+.heavy {
+  opacity: 1.0;
+}
+
+.lighter {
+  opacity: 0.7;
+}
+
+.very-light {
+  opacity: 0.3;
+}
+
+.nag-hammadi {
+  opacity: 0.5;
+}
+
+.header {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.header td:not(:first-child) {
+  border-left: 1px solid #ddd;
+}
+
+.small {
+  font-size: small;
+}
+
+.italic {
+  font-style: italic;
 }
