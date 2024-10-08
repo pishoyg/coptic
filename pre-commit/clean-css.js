@@ -10,21 +10,21 @@ const minifier = new CleanCSS({
       // Controls if a line break comes after an at-rule; e.g. `@charset`.
       afterAtRule: 2,
       // Controls if a line break comes after a block begins; e.g. `@media`.
-      afterBlockBegins: true,
+      afterBlockBegins: 1,
       // Controls if a line break comes after a block ends.
       afterBlockEnds: 2,
       // Controls if a line break comes after a comment.
       afterComment: 2,
       // Controls if a line break comes after a property.
-      afterProperty: true,
+      afterProperty: 1,
       // Controls if a line break comes after a rule begins.
-      afterRuleBegins: true,
+      afterRuleBegins: 1,
       // Controls if a line break comes after a rule ends.
       afterRuleEnds: 2,
       // Controls if a line break comes before a block ends.
       beforeBlockEnds: 2,
       // Controls if a line break comes between selectors.
-      betweenSelectors: false
+      betweenSelectors: 0
     },
     indentBy: 2,
     indentWith: 'space',
