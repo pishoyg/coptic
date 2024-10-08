@@ -1,3 +1,217 @@
+h1,h2,h3,strong {
+  color: #2C3E50;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  color: #3498DB;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+em {
+  color: #7f8c8d;
+}
+
+figure {
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+}
+
+figure img {
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgb(0 0 0 / 10%);
+  margin: 0;
+}
+
+figcaption {
+  color: #7f8c8d;
+  font-size: 0.9em;
+}
+
+hr {
+  border: 1px solid #ddd;
+  margin: 30px 0;
+}
+
+/* Add some padding to body content */
+
+body {
+  font-family: Arial,sans-serif;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+/* Style download links */
+
+.download,.download-list li a {
+  background-color: #3498DB;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  margin: 2px 0;
+  padding: 2px;
+}
+
+ol li a:hover {
+  background-color: #2980B9;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.results thead tr {
+  border-bottom: 1px solid black;
+}
+
+.results tbody tr:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+.results td:not(:first-child) {
+  border-left: 1px solid black;
+  padding-left: 5px;
+}
+
+/* Responsive table layout for mobile */
+
+@media (width <= 500px) {
+  figure img {
+    height: auto;
+    width: 100%;
+  }
+
+  .results td {
+    border: 1px solid #ddd;
+  }
+
+  hr {
+    margin: 10px 0;
+  }
+
+  /* Center and space checkboxes for small screens */
+
+  .checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .checkboxes label {
+    margin-right: 10px;
+  }
+
+}
+
+.inline-list {
+  padding: 20px;
+}
+
+.inline-list li {
+  display: block;
+  float: left;
+  margin: 0 20px;
+  padding: 0;
+}
+
+.flashcards {
+  text-align: center;
+}
+
+/* KELLIA */
+
+.orth {
+  min-width: 120px;
+}
+
+.geo {
+  color: darkred;
+  min-width: 40px;
+  text-align: center;
+}
+
+/* stylelint-disable selector-class-pattern */
+
+.gram_grp {
+  color: gray;
+  font-style: italic;
+}
+
+/* stylelint-enable selector-class-pattern */
+
+/* stylelint-disable selector-class-pattern */
+
+.sense_n {
+  display: none;
+}
+
+/* stylelint-enable selector-class-pattern */
+
+/* stylelint-disable selector-class-pattern */
+
+.sense_id {
+  display: none;
+}
+
+/* stylelint-enable selector-class-pattern */
+
+.bibl {
+  color: gray;
+  float: right;
+  min-width: 100px;
+  text-align: right;
+}
+
+.ref {
+  color: gray;
+}
+
+.meaning {
+  min-width: 200px;
+}
+
+.xr {
+  color: gray;
+}
+
+.lang {
+  color: gray;
+}
+
+/* Collapsible Elements */
+
+.collapse:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.collapsible {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+/* Logos */
+
+.logo {
+  height: 100px;
+}
+
+.inline-logo {
+  height: 20px;
+}
+
 .card {
   font-size: 18px;
 }
@@ -74,23 +288,13 @@
   opacity: 0.5;
 }
 
-figure figcaption {
-  text-align: center;
-}
-
-figure img {
-  vertical-align: top;
-}
-
-figure {
-  border: 1px transparent;
-  display: inline-block;
-  margin: 10px;
-}
-
 .header {
   table-layout: fixed;
   width: 100%;
+}
+
+.header td:not(:first-child) {
+  border-left: 1px solid #ddd;
 }
 
 .small {
