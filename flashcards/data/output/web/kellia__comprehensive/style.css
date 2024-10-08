@@ -19,22 +19,28 @@
 }
 
 /* stylelint-disable selector-class-pattern */
+
 .gram_grp {
   color: gray;
   font-style: italic;
 }
+
 /* stylelint-enable selector-class-pattern */
 
 /* stylelint-disable selector-class-pattern */
+
 .sense_n {
   display: none;
 }
+
 /* stylelint-enable selector-class-pattern */
 
 /* stylelint-disable selector-class-pattern */
+
 .sense_id {
   display: none;
 }
+
 /* stylelint-enable selector-class-pattern */
 
 .bibl {
@@ -57,5 +63,5 @@
 }
 
 .lang {
-  color: gray
+  color: gray;
 }

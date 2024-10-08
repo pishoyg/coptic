@@ -1,4 +1,4 @@
-h1, h2, h3, h4 {
+h1,h2,h3,h4 {
   color: #2C3E50;
 }
 
@@ -43,12 +43,12 @@ em {
   font-style: italic;
 }
 
-ul, ol {
+ul,ol {
   margin-left: 20px;
 }
 
 figure {
- display: inline-block;
+  display: inline-block;
   margin: 10px 0;
   text-align: center;
 }
@@ -74,10 +74,11 @@ hr {
 }
 
 /* Add some padding to body content */
+
 body {
   background: #fff;
   color: #333;
-  font-family: Arial, sans-serif;
+  font-family: Arial,sans-serif;
   line-height: 1.6;
   margin: 0 auto;
   max-width: 900px;
@@ -85,7 +86,8 @@ body {
 }
 
 /* Style download links */
-.download, .download-list li a {
+
+.download,.download-list li a {
   background-color: #3498DB;
   border-radius: 4px;
   color: #fff;
@@ -99,6 +101,7 @@ ol li a:hover {
 }
 
 /* Media queries for responsiveness */
+
 @media (width <= 768px) {
   body {
     padding: 10px;
@@ -116,6 +119,7 @@ ol li a:hover {
     height: auto;
     width: 100%;
   }
+
 }
 
 table {
@@ -137,8 +141,9 @@ td:not(:first-child) {
 }
 
 /* Responsive table layout for mobile */
+
 @media (width <= 500px) {
-  table, thead, tbody, th, td, tr {
+  table,  thead,  tbody,  th,  td,  tr {
     display: block;
   }
 
@@ -156,6 +161,7 @@ td:not(:first-child) {
   }
 
   /* Center and space checkboxes for small screens */
+
   .checkboxes {
     display: flex;
     flex-wrap: wrap;
@@ -166,6 +172,7 @@ td:not(:first-child) {
     margin-bottom: 5px;
     margin-right: 10px;
   }
+
 }
 
 .inline-list {
@@ -184,6 +191,7 @@ td:not(:first-child) {
 }
 
 /* KELLIA */
+
 .orth {
   min-width: 120px;
 }
@@ -195,22 +203,28 @@ td:not(:first-child) {
 }
 
 /* stylelint-disable selector-class-pattern */
+
 .gram_grp {
   color: gray;
   font-style: italic;
 }
+
 /* stylelint-enable selector-class-pattern */
 
 /* stylelint-disable selector-class-pattern */
+
 .sense_n {
   display: none;
 }
+
 /* stylelint-enable selector-class-pattern */
 
 /* stylelint-disable selector-class-pattern */
+
 .sense_id {
   display: none;
 }
+
 /* stylelint-enable selector-class-pattern */
 
 .bibl {
@@ -233,7 +247,7 @@ td:not(:first-child) {
 }
 
 .lang {
-  color: gray
+  color: gray;
 }
 
 .collapse:hover {

@@ -1,100 +1,102 @@
- .card {
-     font-size: 18px;
+.card {
+  font-size: 18px;
 }
 
- .bordered {
-     border:1px solid black;
+.bordered {
+  border: 1px solid black;
 }
 
 /* stylelint-disable selector-class-pattern */
- .nightMode .bordered {
-     border:1px solid white;
+
+.nightMode .bordered {
+  border: 1px solid white;
 }
+
 /* stylelint-enable selector-class-pattern */
 
- .front {
-     text-align: center;
+.front {
+  text-align: center;
 }
 
- .left {
-     float: left;
+.left {
+  float: left;
 }
 
- .center {
-     text-align: center;
+.center {
+  text-align: center;
 }
 
- .right {
-     float:right;
+.right {
+  float: right;
 }
 
- .link {
-     color: blue;
-     cursor: pointer;
-     text-decoration: underline;
+.link {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
- .hover-link {
-     color: inherit;
-     cursor: inherit;
-     text-decoration: inherit;
+.hover-link {
+  color: inherit;
+  cursor: inherit;
+  text-decoration: inherit;
 }
 
- .hover-link:visited {
-     color: inherit;
-     cursor: inherit;
-     text-decoration: inherit;
+.hover-link:visited {
+  color: inherit;
+  cursor: inherit;
+  text-decoration: inherit;
 }
 
- .hover-link:hover {
-     color: blue;
-     cursor: pointer;
-     text-decoration: underline;
+.hover-link:hover {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
- .light {
-     opacity:0.7;
+.light {
+  opacity: 0.7;
 }
 
- .heavy {
-     opacity:1.0;
+.heavy {
+  opacity: 1.0;
 }
 
- .lighter {
-     opacity:0.7;
+.lighter {
+  opacity: 0.7;
 }
 
- .very-light {
-     opacity:0.3;
+.very-light {
+  opacity: 0.3;
 }
 
- .nag-hammadi {
-     opacity:0.5;
+.nag-hammadi {
+  opacity: 0.5;
 }
 
- figure figcaption {
-     text-align: center;
+figure figcaption {
+  text-align: center;
 }
 
- figure img {
-     vertical-align: top;
+figure img {
+  vertical-align: top;
 }
 
- figure {
-     border: 1px transparent;
-     display: inline-block;
-     margin: 10px;
+figure {
+  border: 1px transparent;
+  display: inline-block;
+  margin: 10px;
 }
 
- .header {
-     table-layout: fixed;
-     width: 100%;
- }
+.header {
+  table-layout: fixed;
+  width: 100%;
+}
 
- .small {
-     font-size: small;
- }
+.small {
+  font-size: small;
+}
 
- .italic {
-     font-style: italic;
- }
+.italic {
+  font-style: italic;
+}
