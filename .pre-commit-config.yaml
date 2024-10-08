@@ -62,10 +62,14 @@ repos:
         types: [file]
 
   # CSS
-  - repo: https://github.com/pre-commit/mirrors-csslint
-    rev: v1.0.5
+  - repo: local
     hooks:
-      - id: csslint
+      - id: stylelint
+        name: stylelint
+        entry: npx stylelint
+        language: system
+        types: [css]
+        args: [--fix, --color, --report-invalid-scope-disables, --report-needless-disables]
 
   - repo: local
     hooks:
@@ -87,7 +91,7 @@ repos:
         name: json-tool
         entry: pre-commit/json-tool.sh
         language: system
-        files: (.csslintrc|\.json)$
+        files: \.json$
         types: [file]
         exclude: tsconfig\.json$
 

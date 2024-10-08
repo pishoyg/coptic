@@ -251,7 +251,8 @@ bin_install: FORCE
 npm_install: FORCE
 	npm install \
 		--save-dev \
-		"typescript"
+		"typescript" \
+		"stylelint"
 
 pip_install: requirements.txt
 	python -m pip install --upgrade pip $${PIP_FLAGS}

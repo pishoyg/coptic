@@ -10,7 +10,7 @@ source .helpers
 # shellcheck disable=SC2016
 readonly COMMIT_MESSAGE='[Stats] Run `make stats`.'
 
-readonly KNOWN_EXTENSIONS="Makefile css csslintrc env_INFO helpers gitignore yamlfmt yamllint json mjs keylayout md plist py sh strings txt yaml toml ts html"
+readonly KNOWN_EXTENSIONS="Makefile css env_INFO helpers gitignore yamlfmt yamllint json mjs keylayout md plist py sh strings txt yaml toml ts html"
 readonly KNOWN_EXTENSIONS_ARCHIVE="gitignore java js md proto py sh sql vba"
 readonly KNOWN_ARCHIVE_SUBDIRS="bible dictionary ipa-transliteration unicode-converters"
 
@@ -229,7 +229,7 @@ LOC_DOT=$(loc . -name ".gitignore" )
 LOC_KEYBOARD_LAYOUT=$(loc . -a \( -name "*.keylayout" -o -name "*.plist" -o -name "*.strings" \) )
 LOC_TXT=$(loc . -name "*.txt")
 LOC_TS=$(loc . -name "*.ts")
-LOC_JSON=$(loc . -a \( -name "*.json" -o -name ".csslintrc" \) )
+LOC_JSON=$(loc . -name "*.json" )
 LOC_HTML=$(loc . -name "*.html")
 
 readonly TOTAL_BY_LANG="$((
@@ -261,7 +261,7 @@ FOC_DOT=$(foc_count . -name ".gitignore" )
 FOC_KEYBOARD_LAYOUT=$(foc_count . -a \( -name "*.keylayout" -o -name "*.plist" -o -name "*.strings" \) )
 FOC_TXT=$(foc_count . -name "*.txt")
 FOC_TS=$(foc_count . -name "*.ts")
-FOC_JSON=$(foc_count . -a \( -name "*.json" -o -name ".csslintrc" \) )
+FOC_JSON=$(foc_count . -name "*.json" )
 FOC_HTML=$(foc_count . -name "*.html")
 
 readonly TOTAL_FOC="$((
