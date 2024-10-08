@@ -1,47 +1,61 @@
 .card {
   font-size: 18px;
 }
+
 .table {
   display: block;
   text-align: center;
   width: 100%;
 }
+
 .orth {
   min-width: 120px;
 }
+
 .geo {
   color: darkred;
   min-width: 40px;
   text-align: center;
 }
+
+/* stylelint-disable selector-class-pattern */
 .gram_grp {
   color: gray;
   font-style: italic;
 }
+/* stylelint-enable selector-class-pattern */
+
+/* stylelint-disable selector-class-pattern */
 .sense_n {
   display: none;
 }
+/* stylelint-enable selector-class-pattern */
+
+/* stylelint-disable selector-class-pattern */
 .sense_id {
   display: none;
 }
-.quote { }
-.definition { }
+/* stylelint-enable selector-class-pattern */
+
 .bibl {
   color: gray;
   float: right;
   min-width: 100px;
   text-align: right;
 }
+
 .ref {
   color: gray;
 }
+
 .meaning {
   min-width: 220px;
 }
-.ref_xr { }
+
 .xr {
   color: gray;
 }
+
 .lang {
   color: gray
 }
