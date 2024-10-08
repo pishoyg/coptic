@@ -252,7 +252,8 @@ npm_install: FORCE
 	npm install \
 		--save-dev \
 		"typescript" \
-		"stylelint"
+		"stylelint" \
+		"clean-css"
 
 pip_install: requirements.txt
 	python -m pip install --upgrade pip $${PIP_FLAGS}
