@@ -134,7 +134,7 @@ def crum(
         deck_name=deck_name,
         deck_id=deck_id,
         deck_description=f"{HOME}.\n{EMAIL}.",
-        css=utils.read("flashcards/constants/a_coptic_dictionary/style.css"),
+        css=utils.read("site/style.css"),
         javascript=utils.read(
             "flashcards/data/build/a_coptic_dictionary/script.js",
         ),
@@ -456,7 +456,7 @@ def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
         deck_name=deck_name,
         deck_id=deck_id,
         deck_description=f"{HOME}\n{EMAIL}",
-        css=utils.read("flashcards/constants/copticsite/style.css"),
+        css=utils.read("site/style.css"),
         javascript="",
         # NOTE: The key is a protected field. Do not change unless you know what
         # you're doing.
@@ -510,7 +510,7 @@ def kellia(deck_name: str, deck_id: int, tsv_basename: str) -> deck.deck:
         deck_name=deck_name,
         deck_id=deck_id,
         deck_description=f"{HOME}\n{EMAIL}",
-        css=utils.read("flashcards/constants/kellia/style.css"),
+        css=utils.read("site/style.css"),
         javascript="",
         # NOTE: The key is a protected field. Do not change unless you know what
         # you're doing.
