@@ -104,14 +104,21 @@ class htmlSelector(selector):
         return elem
 
 
-def _get_text(tag: bs4.Tag) -> str:
+def _get_text(tag: bs4.Tag, retain_classes: list[str]) -> str:
     def __get_text(tag: bs4.Tag) -> typing.Generator:
         for child in tag.children:
             if isinstance(child, bs4.Tag):
+                if child.has_attr("class") and any(
+                    c in child["class"] for c in retain_classes
+                ):
+                    child.name = "span"
+                    yield _clean_html(child)
+                    continue
                 # If the tag is a block type tag, then yield new lines before
                 # and after.
                 is_block_element = child.name not in _INLINE_ELEMENTS
                 if is_block_element:
+                    # TODO: (230) Use <br>. Same below!
                     yield "\n"
                 yield from (
                     ["\n"]
@@ -168,10 +175,17 @@ def _clean_html(tag: bs4.Tag) -> str:
 
 
 class capture:
-    def __init__(self, name: str, _selector: selector, raw: bool) -> None:
+    def __init__(
+        self,
+        name: str,
+        _selector: selector,
+        raw: bool,
+        retain_classes: list[str] = [],
+    ) -> None:
         self.name: str = name
         self.selector: selector = _selector
         self.raw: bool = raw
+        self.retain_classes: list[str] = retain_classes
 
 
 class InputType(enum.Enum):
@@ -271,7 +285,9 @@ class subindex:
                 if cap.raw:
                     datum[cap.name] = _clean_html(elem)
                 else:
-                    datum[cap.name] = _clean_text(_get_text(elem))
+                    datum[cap.name] = _clean_text(
+                        _get_text(elem, cap.retain_classes),
+                    )
 
             data.append(datum)
 
