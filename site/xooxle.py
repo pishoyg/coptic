@@ -101,12 +101,12 @@ class htmlSelector(selector):
         return elem
 
 
-def _get_text(tag: bs4.Tag, retain_classes: list[str]) -> str:
+def _get_text(tag: bs4.Tag, retain_classes: set[str]) -> str:
     def __get_text(tag: bs4.Tag) -> typing.Generator:
         for child in tag.children:
             if isinstance(child, bs4.Tag):
-                if child.has_attr("class") and any(
-                    c in child["class"] for c in retain_classes
+                if child.has_attr("class") and retain_classes.intersection(
+                    set(child["class"]),
                 ):
                     child.name = "span"
                     yield _clean_html(child)
@@ -165,12 +165,12 @@ class capture:
         name: str,
         _selector: selector,
         raw: bool,
-        retain_classes: list[str] = [],
+        retain_classes: set[str] = set(),
     ) -> None:
         self.name: str = name
         self.selector: selector = _selector
         self.raw: bool = raw
-        self.retain_classes: list[str] = retain_classes
+        self.retain_classes: set[str] = retain_classes
 
 
 class InputType(enum.Enum):
