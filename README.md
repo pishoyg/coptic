@@ -630,44 +630,20 @@ website](http://remnqymi.com/).
 
 # License and Cited Works
 
-<style>
-.logo {
-  height: 100px;
-}
-.inline-logo {
-  height: 20px;
-}
-</style>
-  <p>Lexicon data is released under <a href=
-  "https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY-SA
-  4.0</a>. <a href="https://github.com/pishoyg/coptic/" target=
-  "_blank">Code</a> is released under <a href=
-  "https://www.gnu.org/licenses/gpl-3.0.en.html#license-text" target=
-  "_blank">GPL-3.0.</a> <a href="https://creativecommons.org/licenses/by/4.0/"
-  target="_blank"><img class="inline-logo" alt="CC BY-SA 4.0" src=
-  "site/data/img/logos/cc-by-sa.png"></a> <a href=
-  "https://www.gnu.org/licenses/gpl-3.0.en.html#license-text" target=
-  "_blank"><img class="inline-logo" alt="GPL-3.0" src=
-  "site/data/img/logos/gplv3.png"></a></p>
+Code is released under
+[GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
+Lexicon data is released under [CC BY-SA
+4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
+[![License: GPL v3](site/data/img/logos/resized-gplv3.png)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: CC BY-SA 4.0](site/data/img/logos/resized-cc-by-sa.png)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-  <p><br>
-  </p>
-  <a href="https://marcion.sourceforge.net/" target="_blank"><img class="logo"
-  alt="Marcion" src="site/data/img/logos/marcion-logo.png"></a> <a href=
-  "http://www.stshenouda.org/coptic-Bible-app" target="_blank"><img class=
-  "logo" alt="Saint Shenouda The Archimandrite – Coptic Society" src=
-  "site/data/img/logos/stshenouda-logo.jpg"></a> <a href="https://copticsite.com/"
-  target="_blank"><img class="logo" alt="copticsite.com" src=
-  "site/data/img/logos/copticsite-logo.png"></a> <a href=
-  "https://copticscriptorium.org/" target="_blank"><img class="logo" alt=
-  "Coptic Scriptorium" src="site/data/img/logos/copticscriptorium-logo.png"></a>
-  <a href="https://refubium.fu-berlin.de/handle/fub188/27813" target=
-  "_blank"><img class="logo" alt="Freie Universität Berlin" src=
-  "site/data/img/logos/fu-logo.png"></a> <a href="https://aaew.bbaw.de/tla/" target=
-  "_blank"><img class="logo" alt="BBAW TLA" src=
-  "site/data/img/logos/bbaw-logo.png"></a> <a href=
-  "https://kellia.uni-goettingen.de/" target="_blank"><img class="logo" alt=
-  "KELLIA" src="site/data/img/logos/kellia-logo.png"></a>
+[![Marcion](site/data/img/logos/resized-marcion-logo.png)](https://marcion.sourceforge.net/)
+[![Saint Shenouda The Archimandrite – Coptic Society](site/data/img/logos/resized-stshenouda-logo.jpg)](http://www.stshenouda.org/coptic-Bible-app)
+[![copticsite.com](site/data/img/logos/resized-copticsite-logo.png)](https://copticsite.com/)
+[![Coptic Scriptorium](site/data/img/logos/resized-copticscriptorium-logo.png)](https://copticscriptorium.org/)
+[![Freie Universität Berlin](site/data/img/logos/resized-fu-logo.png)](https://refubium.fu-berlin.de/handle/fub188/27813)
+[![BBAW TLA](site/data/img/logos/resized-bbaw-logo.png)](https://aaew.bbaw.de/tla/)
+[![KELLIA](site/data/img/logos/resized-kellia-logo.png)](https://kellia.uni-goettingen.de/)
 
 ***
 Ⲉ̀ϣⲱⲡ ⲁⲓϣⲁⲛⲉⲣⲡⲉⲱⲃϣ Ⲓⲗ̅ⲏ̅ⲙ̅, ⲉⲓⲉ̀ⲉⲣⲡⲱⲃϣ ⲛ̀ⲧⲁⲟⲩⲓⲛⲁⲙ: Ⲡⲁⲗⲁⲥ ⲉϥⲉ̀ϫⲱⲗϫ ⲉ̀ⲧⲁϣ̀ⲃⲱⲃⲓ ⲉ̀ϣⲱⲡ
