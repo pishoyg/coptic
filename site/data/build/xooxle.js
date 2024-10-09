@@ -265,7 +265,7 @@ window.addEventListener('pageshow', () => {
       ? `.spelling:not(${query}), .dialect:not(${query}) {opacity: 0.3;}`
       : `.spelling, .dialect {opacity: ${String(active === null ? 1.0 : 0.3)};}`);
     addOrReplaceRule(undialectedRuleIndex, `.spelling:not(.S,.Sa,.Sf,.A,.sA,.B,.F,.Fb,.O,.NH,.Ak,.M,.L,.P,.V,.W,.U) { opacity: ${String(active === null || query !== '' ? 1.0 : 0.3)}; }`);
-    addOrReplaceRule(punctuationRuleIndex, `.dialect-parenthesis, .dialect-comma, .spelling-comma { opacity: ${String(active === null ? 1.0 : 0.3)}; }`);
+    addOrReplaceRule(punctuationRuleIndex, `.dialect-parenthesis, .dialect-comma, .spelling-comma, .type { opacity: ${String(active === null ? 1.0 : 0.3)}; }`);
   }
   const dialectCheckboxes = document.querySelectorAll('.dialect-checkbox');
   // When we first load the page, 'd' dictates the set of active dialects and
