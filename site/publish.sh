@@ -104,7 +104,7 @@ build() {
   cp -r \
     flashcards/data/output/web/a_coptic_dictionary__all_dialects/* \
     "${CRUM_DIR}"
-  cp "site/data/xooxle/crum.json" "${CRUM_DIR}/xooxle.json"
+  jq --indent 0 < "site/data/xooxle/crum.json" > "${CRUM_DIR}/xooxle.json"
   cp "site/data/build/xooxle.js" "${CRUM_DIR}/"
 
   # Bible
