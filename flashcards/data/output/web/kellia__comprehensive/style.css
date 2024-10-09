@@ -18,7 +18,7 @@ a,.link {
   text-decoration: inherit;
 }
 
-a:hover,.link:hover,.hover-link:hover {
+a:hover,.link:hover,.hover-link:hover,.collapse:hover {
   color: #3498DB;
   cursor: pointer;
   text-decoration: underline;
@@ -180,11 +180,6 @@ table {
 
 /* Collapsible Elements */
 
-.collapse:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
 .collapsible {
   max-height: 0;
   overflow: hidden;
@@ -200,6 +195,8 @@ table {
 .inline-logo {
   height: 20px;
 }
+
+/* Crum */
 
 .card {
   font-size: 18px;
