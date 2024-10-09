@@ -78,7 +78,7 @@ class Line:
         pairs = [
             (f"orth spelling {self._geo}", self._orth),
             (f"geo dialect {self._geo}", self._geo),
-            ("gram_grp", self._gram_grp),
+            (f"gram_grp type {self._geo}", self._gram_grp),
         ]
         content = map(
             lambda pair: f'<td class="{pair[0]}">{pair[1]}</td>',
