@@ -25,7 +25,16 @@ _CRUM_INDEX = xooxle.index(
             xooxle.capture(
                 "marcion",
                 xooxle.htmlSelector({"id": "marcion"}),
-                raw=True,
+                raw=False,
+                # This is the list of classes needed for highlighting. If the
+                # highlighting rules change, you might have to add new classes!
+                retain_classes=[
+                    "dialect",
+                    "spelling",
+                    "dialect-comma",
+                    "spelling-comma",
+                    "dialect-parenthesis",
+                ],
             ),
             xooxle.capture(
                 "meaning",
@@ -57,12 +66,18 @@ _CRUM_INDEX = xooxle.index(
             xooxle.capture(
                 "orths",
                 xooxle.htmlSelector({"id": "orths"}),
-                raw=True,
+                raw=False,
+                retain_classes=[
+                    "spelling",
+                    "dialect",
+                    "gram_grp",
+                ],
             ),
             xooxle.capture(
                 "senses",
                 xooxle.htmlSelector({"id": "senses"}),
-                raw=True,
+                raw=False,
+                retain_classes=["lang"],
             ),
             xooxle.capture(
                 "text",
@@ -84,7 +99,8 @@ _CRUM_INDEX = xooxle.index(
             xooxle.capture(
                 "front",
                 xooxle.htmlSelector({"id": "front"}),
-                raw=True,
+                raw=False,
+                retain_classes=["spelling"],
             ),
             xooxle.capture(
                 "back",
