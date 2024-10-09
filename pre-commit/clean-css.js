@@ -1,4 +1,11 @@
 // Documentation lives at https://github.com/clean-css/clean-css.
+//  NOTE: This was implemented in JavaScript, not TypeScript, because the
+//  TypeScript package[^1] is outdated. We required a `clean-css` version >= 5.0
+//  for our use case; in particular, we want to assign numerical values for line
+//  breaks, not just a boolean.
+//
+// [^1] https://www.npmjs.com/package/@types/clean-css
+
 import CleanCSS from 'clean-css';
 import { readFileSync, writeFileSync } from 'fs';
 
