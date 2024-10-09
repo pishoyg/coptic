@@ -115,7 +115,6 @@ def _get_text(tag: bs4.Tag, retain_classes: set[str]) -> str:
                 # and after.
                 is_block_element = child.name not in _INLINE_ELEMENTS
                 if is_block_element:
-                    # TODO: (230) Use <br>. Same below!
                     yield "\n"
                 yield from (
                     ["\n"]

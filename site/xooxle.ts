@@ -225,6 +225,11 @@ async function searchOneDictionary(
     Object.entries(res.fields).forEach(([key, value]: [string, string]) => {
       const cell = document.createElement('td');
       const raw = xooxle.metadata[key]!.raw;
+      // TODO: (#230) If the value is non-raw (meaning that it's plain text,
+      // rather than raw HTML), then we should escape its special characters.
+      // For example, `&` needs to be replaced with `&amp;`.
+      // TODO: (#230) Consider getting rid of the `raw` parameter, and
+      // populating `<br>` tags at the source. This needs some planning.
       cell.innerHTML = raw ? value : value.replaceAll('\n', '<br>');
       row.appendChild(cell);
     });
