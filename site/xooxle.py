@@ -1,6 +1,5 @@
 import enum
 import os
-import re
 import typing
 
 import bs4
@@ -45,8 +44,6 @@ _NEWLINE_ELEMENTS = {
     "br",
     "hr",
 }
-
-_MULTIPLE_SPACES = re.compile(r"\s{2,}")
 
 
 class selector:
@@ -155,23 +152,11 @@ def _clean_text(text: str) -> str:
 
 
 def _clean_html(tag: bs4.Tag) -> str:
-    """We delete all comments, and then replace any occurrence of multiple
-    whitespace characters with a single space.
-
-    The reason we do this instead
-    of simply this:
-    ```
-    " ".join(s.split())
-    ```
-    is to avoid replacement of non-space whitespace characters that are
-    on their own. In those cases, we retain the original character to minimize
-    the discrepancy between the output and the source.
-    """
     for comments in tag.findAll(
         text=lambda text: isinstance(text, bs4.Comment),
     ):
         comments.extract()
-    return _MULTIPLE_SPACES.sub(" ", str(tag))
+    return " ".join(str(tag).split())
 
 
 class capture:
