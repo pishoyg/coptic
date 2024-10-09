@@ -102,10 +102,6 @@ table {
     width: 100%;
   }
 
-  .results td {
-    border: 1px solid #ddd;
-  }
-
   hr {
     margin: 10px 0;
   }
@@ -142,12 +138,12 @@ table {
 /* KELLIA */
 
 .orth {
-  min-width: 120px;
+  width: 50%;
 }
 
 .geo {
   color: darkred;
-  min-width: 40px;
+  width: 10%;
   text-align: center;
 }
 
@@ -160,26 +156,9 @@ table {
 
 /* stylelint-enable selector-class-pattern */
 
-/* stylelint-disable selector-class-pattern */
-
-.sense_n {
-  display: none;
-}
-
-/* stylelint-enable selector-class-pattern */
-
-/* stylelint-disable selector-class-pattern */
-
-.sense_id {
-  display: none;
-}
-
-/* stylelint-enable selector-class-pattern */
-
 .bibl {
   color: gray;
-  float: right;
-  min-width: 100px;
+  width: 30%;
   text-align: right;
 }
 
@@ -188,7 +167,7 @@ table {
 }
 
 .meaning {
-  min-width: 200px;
+  width: 70%;
 }
 
 .xr {
