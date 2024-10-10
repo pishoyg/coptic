@@ -8,6 +8,7 @@ import re
 import shutil
 import subprocess
 import typing
+import urllib
 
 import colorama
 import pandas as pd
@@ -41,6 +42,10 @@ KEY_COL: str = "key"
 LINK_COL: str = "key-link"
 SENSES_COL: str = "senses"
 SOURCES_DIR: str = "dictionary/marcion.sourceforge.net/data/img-sources/"
+
+BANNED_TOP_LEVEL_DOMAINS = {
+    "gstatic.com",
+}
 
 # NOTE: SVG conversion is nondeterministic, which is badly disruptive to our
 # pipelines, so we ban it.
@@ -534,9 +539,26 @@ def is_image_url(url: str) -> bool:
     return any(basename(url).endswith(ext) for ext in IMAGE_EXTENSIONS)
 
 
+def is_invalid_url(url: str) -> list[str]:
+    """Return an empty list if valid, or an error message if invalid."""
+    if not url.startswith("http"):
+        return ["Invalid URL!"]
+    top_level_domain = ".".join(
+        urllib.parse.urlparse(url).netloc.split(".")[-2:],
+    )
+    if top_level_domain in BANNED_TOP_LEVEL_DOMAINS:
+        return ["Banned domain:", top_level_domain]
+    return []
+
+
 def infer_urls(*urls: str) -> tuple[list[str], list[str]]:
     reference: list[str] = []
     download: list[str] = []
+    for url in urls:
+        err = is_invalid_url(url)
+        if err:
+            utils.error(*err)
+            return [], []
     for url in urls:
         (reference, download)[is_image_url(url)].append(url)
     while not reference or not download:
@@ -548,8 +570,9 @@ def infer_urls(*urls: str) -> tuple[list[str], list[str]]:
             break
         valid = True
         for ext in extras:
-            if not ext.startswith("http"):
-                utils.error(ext, "is not a URL!")
+            err = is_invalid_url(ext)
+            if err:
+                utils.error(*err)
                 valid = False
                 break
         if not valid:
