@@ -34,6 +34,12 @@ figure {
   text-align: center;
 }
 
+.centerer {
+  text-align: center;
+  display: flex;
+  place-content: center center;
+}
+
 figure img {
   border: 2px solid #ddd;
   border-radius: 5px;
@@ -63,17 +69,13 @@ body {
 
 /* Style download links */
 
-.download,.download-list li a {
+a.download,.download-list li a {
   background-color: #3498DB;
   border-radius: 4px;
   color: #fff;
   display: inline-block;
   margin: 2px 0;
   padding: 2px;
-}
-
-ol li a:hover {
-  background-color: #2980B9;
 }
 
 table {
@@ -97,7 +99,7 @@ table {
 /* Responsive table layout for mobile */
 
 @media (width <= 500px) {
-  figure img,  iframe {
+  figure img:not(.logo) {
     height: auto;
     width: 100%;
   }
@@ -129,10 +131,6 @@ table {
   float: left;
   margin: 0 20px;
   padding: 0;
-}
-
-.flashcards {
-  text-align: center;
 }
 
 /* KELLIA */
@@ -198,6 +196,9 @@ table {
 
 /* Crum */
 
+/* TODO: (#241) Use classes that represent types, rather than desired behaviour.
+*  Otherwise, this doesn't represent real decoupling of the style from the HTML.: */
+
 .card {
   font-size: 18px;
 }
@@ -248,6 +249,11 @@ table {
 
 .nag-hammadi {
   opacity: 0.5;
+}
+
+.logo-list {
+  text-align: center;
+  table-layout: fixed;
 }
 
 .header {
