@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+import argparse
 import collections
 import json
 
@@ -72,10 +74,32 @@ class validator:
             self.validate_sisters(df)
 
 
-def main():
+argparser = argparse.ArgumentParser(
+    description="""Find and process appendices.""",
+)
+
+argparser.add_argument(
+    "--validate",
+    action="store_true",
+    default=False,
+    help="Validate the appendices.",
+)
+
+
+def validate():
     validatoor = validator()
     validatoor.validate(ROOTS)
     validatoor.validate(DERIVATIONS)
+
+
+def main():
+    args = argparser.parse_args()
+    actions: list = list(filter(None, [args.validate]))
+    if len(actions) != 1:
+        utils.fatal("Exactly one command is required.")
+
+    if args.validate:
+        validate()
 
 
 if __name__ == "__main__":

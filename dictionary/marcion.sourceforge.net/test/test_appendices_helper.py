@@ -1,6 +1,6 @@
 import unittest
 
-import appendices
+import appendices_helper
 
 
 class Test(unittest.TestCase):
