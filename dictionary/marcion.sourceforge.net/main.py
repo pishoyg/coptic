@@ -119,6 +119,23 @@ def title(word: list[lexical.structured_word]) -> str:
     )
 
 
+def short_title(word: list[lexical.structured_word]) -> str:
+    kwargs = {
+        "include_dialects": True,
+        "include_references": False,
+        "append_root_type": False,
+        "parenthesize_assumed": True,
+        "append_types": False,
+        "classify": True,
+        "infinitive_only": True,
+    }
+    title = " ".join(filter(None, [w.string(**kwargs) for w in word]))
+    if title:
+        return title
+    kwargs["infinitive_only"] = False
+    return " ".join(filter(None, [w.string(**kwargs) for w in word]))
+
+
 def process_data(df: pd.DataFrame, strict: bool) -> None:
     extra_cols: dict[str, list[str]] = {}
 
@@ -162,6 +179,7 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
             use_coptic_symbol=True,
         )
         insert("word-title", title(word))
+        insert("short-title", short_title(word))
         insert(
             "word-parsed-prettify",
             "\n".join(

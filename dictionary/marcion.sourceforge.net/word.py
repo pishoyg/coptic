@@ -172,6 +172,7 @@ class structured_word:
         parenthesize_assumed: bool = True,
         append_types: bool = True,
         classify: bool = False,
+        infinitive_only: bool = False,
     ) -> str:
         """
         Args:
@@ -233,7 +234,15 @@ class structured_word:
         s = _span(", ", ["spelling-comma"]).join(
             _span(s, ["spelling"] + self._dialects)
             for s in self.spellings(parenthesize_assumed)
+            # TODO (#268) Get rid of empty spellings.
+            if s
+            and (
+                not infinitive_only
+                or s[-1] not in constants.NON_INFINITIVE_SUFFIXES
+            )
         )
+        if not s:
+            return ""
 
         t = ""
         if append_types:
