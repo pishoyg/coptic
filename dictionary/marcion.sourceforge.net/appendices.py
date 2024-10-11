@@ -1,6 +1,8 @@
 import collections
 import json
 
+import pandas as pd
+
 import utils
 
 ROOTS = "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv"
@@ -50,11 +52,24 @@ class validator:
         if largest != len(parsed):
             utils.fatal(key, "has a gap in the senses!")
 
+    def validate_sisters(self, df: pd.DataFrame) -> None:
+        keys: set[str] = {str(cell).strip() for cell in df["key"]}
+        for key, sisters in zip(df["key"], df["sisters"]):
+            if not sisters:
+                continue
+            for s in sisters.split(","):
+                if s == key:
+                    utils.fatal("Circular sisterhood at", key)
+                if s not in keys:
+                    utils.fatal("Nonexisting sister", s, "at", key)
+
     def validate(self, path: str) -> None:
         df = utils.read_tsv(path)
         for _, row in df.iterrows():
             key: str = row["key"]
             self.validate_senses(key, row["senses"])
+        if "sisters" in df:
+            self.validate_sisters(df)
 
 
 def main():
