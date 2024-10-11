@@ -37,7 +37,6 @@ INPUT_TSV: str = "dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv"
 APPENDICES_TSV: str = (
     "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv"
 )
-MEANING_COL: str = "en-parsed-no-greek"
 KEY_COL: str = "key"
 LINK_COL: str = "key-link"
 SENSES_COL: str = "senses"
