@@ -511,11 +511,6 @@ def clean(line: str) -> str:
     return line.strip()
 
 
-def remove_greek(line: str) -> str:
-    line = constants.PARSED_GREEK_WITHIN_ENGLISH_RE.sub("", line)
-    return clean(line)
-
-
 def lighten_greek(line: str) -> str:
     line = constants.PARSED_GREEK_WITHIN_ENGLISH_RE.sub(lighten(r"\1"), line)
     return clean(line)

@@ -201,7 +201,6 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         insert("gr-parsed", parse.parse_greek_cell(row["gr"]))
         ep = parse.parse_english_cell(row["en"])
         insert("en-parsed", ep)
-        insert("en-parsed-no-greek", parse.remove_greek(ep))
         crum = row["crum"]
         if crum == "0a":
             row["crum"] = ""
