@@ -16,6 +16,7 @@ INTEGER_RE = re.compile("([0-9]+)")
 DICTIONARY_PAGE_RE = re.compile("([0-9]+(a|b))")
 COPTIC_WORD_RE = re.compile("([Ⲁ-ⲱϢ-ϯⳈⳉ]+)")
 GREEK_WORD_RE = re.compile("([Α-Ωα-ω]+)")
+NON_INFINITIVE_SUFFIXES = {"-", "=", "+"}
 
 DICT_WIDTH = "1000px"
 
@@ -52,11 +53,7 @@ def crum(
 
     # TODO: (#75) Add a similar alignment check for the derivations keys and
     # derivations appendices keys, once we start using them.
-    roots_keys = roots_col("key")
-    appendices_keys = root_appendix("key")
-    for _ in range(field.num_entries(roots_keys, appendices_keys)):
-        assert roots_keys.next() == appendices_keys.next()
-    del roots_keys, appendices_keys
+    assert roots_col("key")._content == root_appendix("key")._content
 
     # TODO: Insert the tags in the Crum pipeline.
     # This replaces all Coptic words, regardless of whether they
@@ -118,6 +115,10 @@ def crum(
         sources = [line for line in sources if line.startswith("http")]
         return sources[0] if sources else stem
 
+    mother = _mother(
+        roots_col("key")._content,
+        roots_col("short-title")._content,
+    )
     image_sensor = _sensor(
         roots_col("key")._content,
         root_appendix("senses", force=False)._content,
@@ -314,6 +315,20 @@ def crum(
                         line_br=True,
                         force=False,
                     ),
+                ),
+                # Sisters.
+                field.aon(
+                    "<br/>",
+                    '<div id="sisters" class="sisters">',
+                    "<i>See also: </i>",
+                    "<ol>",
+                    field.apl(
+                        mother.gather,
+                        roots_col("key"),
+                        root_appendix("sisters", force=False),
+                    ),
+                    "</ol>",
+                    "</div>",
                 ),
                 # Crum's pages.
                 field.aon(
@@ -604,6 +619,22 @@ class _dir_lister:
 
     def get(self, key: str) -> list[str]:
         return utils.sort_semver(self.cache.get(key, []))
+
+
+class _mother:
+    def __init__(self, keys: list[str], short_titles: list[str]) -> None:
+        self.key_to_title = dict(zip(keys, short_titles))
+
+    def gather(self, key: str, _sisters: str) -> str:
+        if not _sisters:
+            return ""
+        sisters = _sisters.split(",")
+        del _sisters
+        assert key not in sisters
+        return "\n".join(
+            f'<li><a class="hover-link" href="{CRUM_ROOT}/{s}.html">{self.key_to_title[s]}</a></li>'
+            for s in sisters
+        )
 
 
 class _sensor:
