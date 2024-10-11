@@ -7,10 +7,19 @@ import shutil
 
 import bs4
 import colorama
+import gspread
 import pandas as pd
+from oauth2client import service_account  # type: ignore[import-untyped]
 
 INTEGER_RE = re.compile("[0-9]+")
 MAX_INTEGER_LENGTH = 10
+
+GSPREAD_SCOPE = [
+    "https://spreadsheets.google.com/feeds",
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive",
+]
 
 
 def _print(color, severity, recolor, *args, suppress: bool = False):
@@ -91,6 +100,56 @@ def clean_dir(dir: str) -> None:
         assert os.path.isdir(dir)
         shutil.rmtree(dir)
     pathlib.Path(dir).mkdir(parents=True)
+
+
+_gclient: gspread.Client | None = None
+
+
+def get_gclient() -> gspread.Client:
+    json_keyfile_name = os.environ["JSON_KEYFILE_NAME"]
+    global _gclient
+    if _gclient:
+        return _gclient
+    credentials = (
+        service_account.ServiceAccountCredentials.from_json_keyfile_name(
+            json_keyfile_name,
+            GSPREAD_SCOPE,
+        )
+    )
+    _gclient = gspread.authorize(credentials)
+    return _gclient
+
+
+def read_gspread(
+    gspread_name: str,
+    worksheet: int = 0,
+):
+    _gclient = get_gclient()
+    return _gclient.open(gspread_name).get_worksheet(worksheet)
+
+
+def get_column_index(worksheet, column: str) -> int:
+    for idx, value in enumerate(worksheet.row_values(1)):
+        if value == column:
+            return idx + 1  # Google  Sheets uses 1-based indexing.
+    fatal(column, "not found in sheet")
+    return -1  # Appease the linter.
+
+
+def as_dataframe(worksheet) -> pd.DataFrame:
+    return pd.DataFrame(worksheet.get_all_records())
+
+
+def write_gspread(
+    gspread_name: str,
+    df: pd.DataFrame,
+    worksheet: int = 0,
+) -> None:
+    _gclient = get_gclient()
+    spreadsheet = _gclient.open(gspread_name)
+    spreadsheet.get_worksheet(worksheet).update(
+        [df.columns.values.tolist()] + df.values.tolist(),
+    )
 
 
 def html_text(html: str) -> str:
