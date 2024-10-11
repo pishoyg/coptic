@@ -11,6 +11,30 @@ ROOTS = "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv"
 DERIVATIONS = (
     "dictionary/marcion.sourceforge.net/data/input/derivation_appendices.tsv"
 )
+GSPREAD_NAME = "Appendices"
+GSPREAD_URL = "https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg"
+
+argparser = argparse.ArgumentParser(
+    description="""Find and process appendices.""",
+)
+
+argparser.add_argument(
+    "--validate",
+    action="store_true",
+    default=False,
+    help="Validate the appendices.",
+)
+
+argparser.add_argument(
+    "--sisters",
+    type=str,
+    nargs="*",
+    default=None,
+    help="Read a list of keys, possessing a symmetric sisterhood relation,"
+    " and mark them as sisters in the appendices sheet."
+    " A symmetric relation is one such that whenever a relates to b, then b"
+    " relates to a.",
+)
 
 
 class validator:
@@ -59,7 +83,7 @@ class validator:
         for key, sisters in zip(df["key"], df["sisters"]):
             if not sisters:
                 continue
-            for s in sisters.split(","):
+            for s in utils.split(sisters, ","):
                 if s == key:
                     utils.fatal("Circular sisterhood at", key)
                 if s not in keys:
@@ -74,16 +98,27 @@ class validator:
             self.validate_sisters(df)
 
 
-argparser = argparse.ArgumentParser(
-    description="""Find and process appendices.""",
-)
-
-argparser.add_argument(
-    "--validate",
-    action="store_true",
-    default=False,
-    help="Validate the appendices.",
-)
+def sisters(arg: list[str]) -> None:
+    # Worksheet 0 has the roots.
+    # TODO: (#226) Google Sheets tracks the history of changes. Write one cell
+    # at a time, instead of rewriting the whole sheet every time; in order to
+    # make the `diff` more meaningful.
+    sheet = utils.read_gspread(GSPREAD_NAME, worksheet=0)
+    df = utils.as_dataframe(sheet).astype("string")
+    col_idx = utils.get_column_index(sheet, "sisters")
+    row_idx = 0
+    for _, row in df.iterrows():
+        # Googls Sheets uses 1-based indexing.
+        row_idx += 1
+        key = row["key"]
+        if key not in arg:
+            continue
+        existing = utils.split(row["sisters"], ",")
+        value = ",".join(
+            existing + [s for s in arg if s != key and s not in existing],
+        )
+        # Add 1 to account for the header row.
+        sheet.update_cell(row_idx + 1, col_idx, value)
 
 
 def validate():
@@ -94,12 +129,15 @@ def validate():
 
 def main():
     args = argparser.parse_args()
-    actions: list = list(filter(None, [args.validate]))
+    actions: list = list(filter(None, [args.validate, args.sisters]))
     if len(actions) != 1:
         utils.fatal("Exactly one command is required.")
 
     if args.validate:
         validate()
+
+    if args.sisters:
+        sisters(args.sisters)
 
 
 if __name__ == "__main__":
