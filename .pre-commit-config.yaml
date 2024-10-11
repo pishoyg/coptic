@@ -304,6 +304,7 @@ repos:
     rev: v2.2.0
     hooks:
       - id: doctoc
+        exclude: ^site/README.md$
 
   # YAML
   - repo: https://github.com/google/yamlfmt
@@ -381,7 +382,7 @@ repos:
         name: check-one-readme
         entry: pre-commit/check-one-readme.sh
         language: system
-        exclude: ^README.md$
+        exclude: ^(site/)?README.md$
         types: [markdown]
       # Daily Statistics
       - id: stats

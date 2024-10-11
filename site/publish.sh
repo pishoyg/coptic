@@ -77,9 +77,10 @@ build() {
   readonly DAWOUD_DIR="${SITE_DIR}/dawoud"
   readonly IMG_DIR="${SITE_DIR}/img"
 
-  # CNAME
+  # CNAME and README
   cp \
     "site/data/CNAME" \
+    "site/README.md" \
     "${SITE_DIR}/"
 
   # Home
