@@ -115,11 +115,11 @@ class validator:
             df[SISTERS_COL],
             df[ANTONYMS_COL],
         ):
-            sisters = ",".join(filter(None, [sisters, antonyms]))
+            sisters = ";".join(filter(None, [sisters, antonyms]))
             del antonyms
             if not sisters:
                 continue
-            split = utils.split(sisters, ",")
+            split = utils.split(sisters, ";")
             del sisters
             if len(set(split)) < len(split):
                 utils.fatal("Duplicate sisters found at", key)
@@ -153,15 +153,15 @@ def sisters(sisters: list[str], antonyms: list[str] = []) -> None:
     def update(row_idx: int, row: pd.Series, col: str, add: list[str]) -> None:
         cur = row[col]
         key = row[KEY_COL]
-        existing = utils.split(cur, ",")
+        existing = utils.split(cur, ";")
         if all(a == key or a in existing for a in add):
             # All values are there already.
             return
-        value = ",".join(
+        value = ";".join(
             existing + [a for a in add if a != key and a not in existing],
         )
         # Verify the value.
-        split = utils.split(value, ",")
+        split = utils.split(value, ";")
         utils.verify_unique(split, "Sisters:")
         utils.verify_all_belong_to_set(split, keys, "Sister keys:")
         assert value != cur

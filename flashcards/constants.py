@@ -642,7 +642,7 @@ class _mother:
     def gather(self, key: str, _sisters: str) -> str:
         if not _sisters:
             return ""
-        sisters = _sisters.split(",")
+        sisters = _sisters.split(";")
         del _sisters
         assert key not in sisters
         assert len(set(sisters)) == len(sisters)
