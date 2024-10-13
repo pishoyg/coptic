@@ -137,7 +137,7 @@ def get_column_index(worksheet, column: str) -> int:
 
 
 def as_dataframe(worksheet) -> pd.DataFrame:
-    return pd.DataFrame(worksheet.get_all_records())
+    return pd.DataFrame(worksheet.get_all_records()).astype("string")
 
 
 def write_gspread(
