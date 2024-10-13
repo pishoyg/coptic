@@ -68,6 +68,13 @@ argparser.add_argument(
 )
 
 
+class family:
+    def __init__(self, row: pd.Series) -> None:
+        self.key: str = row[KEY_COL]
+        self.sisters: list[str] = utils.split(row[SISTERS_COL], ";")
+        self.antonyms: list[str] = utils.split(row[ANTONYMS_COL], ";")
+
+
 class validator:
     def __init__(self):
         self.decoder = json.JSONDecoder(
@@ -110,25 +117,27 @@ class validator:
             utils.fatal(key, "has a gap in the senses!")
 
     def validate_sisters(self, df: pd.DataFrame) -> None:
-        keys: set[str] = {str(cell).strip() for cell in df[KEY_COL]}
-        for key, sisters, antonyms in zip(
-            df[KEY_COL],
-            df[SISTERS_COL],
-            df[ANTONYMS_COL],
-        ):
-            sisters = ";".join(filter(None, [sisters, antonyms]))
-            del antonyms
-            if not sisters:
-                continue
-            split = utils.split(sisters, ";")
-            del sisters
-            if len(set(split)) < len(split):
+        key_to_family: dict[str, family] = {
+            row[KEY_COL]: family(row) for _, row in df.iterrows()
+        }
+        for key, fam in key_to_family.items():
+            relatives: list[str] = fam.sisters + fam.antonyms
+            if len(relatives) != len(set(relatives)):
                 utils.fatal("Duplicate sisters found at", key)
-            for s in split:
-                if s == key:
-                    utils.fatal("Circular sisterhood at", key)
-                if s not in keys:
-                    utils.fatal("Nonexisting sister", s, "at", key)
+            if key in relatives:
+                utils.fatal("Circular sisterhood at", key)
+            utils.verify_all_belong_to_set(
+                relatives,
+                set(
+                    key_to_family.keys(),
+                ),
+                "Nonexisting sister",
+            )
+            # Enforce symmetry.
+            # If a is sister to b, then b is sister to a.
+            assert all(key in key_to_family[s].sisters for s in fam.sisters)
+            # If a is antonym to b, then b is antonym to a.
+            assert all(key in key_to_family[s].antonyms for s in fam.antonyms)
 
     def validate(self, path: str, roots: bool = False) -> None:
         df = utils.read_tsv(path)
