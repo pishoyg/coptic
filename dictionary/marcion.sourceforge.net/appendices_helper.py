@@ -2,6 +2,7 @@
 import argparse
 import collections
 import json
+import urllib
 
 import pandas as pd
 
@@ -193,8 +194,27 @@ def validate():
     validatoor.validate(DERIVATIONS)
 
 
+def preprocess_args(args):
+    def url_to_key(url_or_key: str) -> str:
+        if not url_or_key.startswith("http"):
+            # This is not a URL, this is already a key.
+            return url_or_key
+        url = url_or_key
+        del url_or_key
+        basename = urllib.parse.urlparse(url).path.split("/")[-1]
+        assert basename.endswith(".html")
+        basename = basename[:-5]
+        assert basename.isdigit()
+        return basename
+
+    args.sisters = list(map(url_to_key, args.sisters))
+    args.antonyms = list(map(url_to_key, args.antonyms))
+
+
 def main():
     args = argparser.parse_args()
+    preprocess_args(args)
+
     actions: list = list(
         filter(
             None,
