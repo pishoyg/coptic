@@ -320,14 +320,28 @@ def crum(
                 field.aon(
                     "<br/>",
                     '<div id="sisters" class="sisters">',
-                    "<i>See also: </i>",
-                    "<ol>",
-                    field.apl(
-                        mother.gather,
-                        roots_col("key"),
-                        root_appendix("sisters", force=False),
+                    field.cat(
+                        field.aon(
+                            "<i>See also: </i>",
+                            "<ol>",
+                            field.apl(
+                                mother.gather,
+                                roots_col("key"),
+                                root_appendix("sisters", force=False),
+                            ),
+                            "</ol>",
+                        ),
+                        field.aon(
+                            "<i>Opposite: </i>",
+                            "<ol>",
+                            field.apl(
+                                mother.gather,
+                                roots_col("key"),
+                                root_appendix("antonyms", force=False),
+                            ),
+                            "</ol>",
+                        ),
                     ),
-                    "</ol>",
                     "</div>",
                 ),
                 # Crum's pages.
@@ -631,6 +645,7 @@ class _mother:
         sisters = _sisters.split(",")
         del _sisters
         assert key not in sisters
+        assert len(set(sisters)) == len(sisters)
         return "\n".join(
             f'<li><a class="hover-link" href="{CRUM_ROOT}/{s}.html">{self.key_to_title[s]}</a></li>'
             for s in sisters
