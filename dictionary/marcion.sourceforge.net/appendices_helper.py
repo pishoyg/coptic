@@ -171,63 +171,73 @@ class validator:
         self.validate_sisters(df)
 
 
-def sisters(
-    sisters: list[str] = [],
-    antonyms: list[str] = [],
-    homonyms: list[str] = [],
-) -> None:
-    assert bool(homonyms) != bool(sisters or antonyms)
-    assert not antonyms or sisters
-    # Worksheet 0 has the roots.
-    sheet = utils.read_gspread(GSPREAD_NAME, worksheet=0)
-    df = utils.as_dataframe(sheet).astype("string")
-    keys: set[str] = set(df[KEY_COL])
+class _mother:
 
-    col_idx = {
-        SISTERS_COL: utils.get_column_index(sheet, SISTERS_COL),
-        ANTONYMS_COL: utils.get_column_index(sheet, ANTONYMS_COL),
-        HOMONYMS_COL: utils.get_column_index(sheet, HOMONYMS_COL),
-    }
+    def __init__(self):
+        self.sheet = utils.read_gspread(GSPREAD_NAME, worksheet=0)
+        self.df = utils.as_dataframe(self.sheet).astype("string")
+        self.keys: set[str] = set(self.df[KEY_COL])
 
-    def update(row_idx: int, row: pd.Series, col: str, add: list[str]) -> None:
-        """Given a row and its index, and a column name, and a list of values
-        to add, update the call with the new values."""
-        cur = row[col]
-        key = row[KEY_COL]
-        existing = utils.split(cur, ";")
-        if all(a == key or a in existing for a in add):
-            # All values are there already.
-            return
-        value = ";".join(
-            existing + [a for a in add if a != key and a not in existing],
-        )
-        # Verify the value.
-        split = utils.split(value, ";")
-        utils.verify_unique(split, "Sisters:")
-        utils.verify_all_belong_to_set(split, keys, "Sister keys:")
-        assert value != cur
-        assert value.startswith(cur)
-        # Update.
-        sheet.update_cell(row_idx, col_idx[col], value)
+        self.col_idx = {
+            SISTERS_COL: utils.get_column_index(self.sheet, SISTERS_COL),
+            ANTONYMS_COL: utils.get_column_index(self.sheet, ANTONYMS_COL),
+            HOMONYMS_COL: utils.get_column_index(self.sheet, HOMONYMS_COL),
+        }
 
-    row_idx = 0
-    for _, row in df.iterrows():
-        # Googls Sheets uses 1-based indexing.
-        row_idx += 1
-        key = row[KEY_COL]
-        if key in sisters:
-            # Add 1 to account for the header row.
-            assert key not in antonyms
-            update(row_idx + 1, row, SISTERS_COL, sisters)
-            update(row_idx + 1, row, ANTONYMS_COL, antonyms)
-            continue
-        if key in antonyms:
-            assert key not in sisters
-            update(row_idx + 1, row, SISTERS_COL, antonyms)
-            update(row_idx + 1, row, ANTONYMS_COL, sisters)
-            continue
-        if key in homonyms:
-            update(row_idx + 1, row, HOMONYMS_COL, homonyms)
+    def sisters(
+        self,
+        sisters: list[str] = [],
+        antonyms: list[str] = [],
+        homonyms: list[str] = [],
+    ) -> None:
+        assert bool(homonyms) != bool(sisters or antonyms)
+        assert not antonyms or sisters
+        # Worksheet 0 has the roots.
+
+        def update(
+            row_idx: int,
+            row: pd.Series,
+            col: str,
+            add: list[str],
+        ) -> None:
+            """Given a row and its index, and a column name, and a list of
+            values to add, update the call with the new values."""
+            cur = row[col]
+            key = row[KEY_COL]
+            existing = utils.split(cur, ";")
+            if all(a == key or a in existing for a in add):
+                # All values are there already.
+                return
+            value = ";".join(
+                existing + [a for a in add if a != key and a not in existing],
+            )
+            # Verify the value.
+            split = utils.split(value, ";")
+            utils.verify_unique(split, "Sisters:")
+            utils.verify_all_belong_to_set(split, self.keys, "Sister keys:")
+            assert value != cur
+            assert value.startswith(cur)
+            # Update.
+            self.sheet.update_cell(row_idx, self.col_idx[col], value)
+
+        row_idx = 0
+        for _, row in self.df.iterrows():
+            # Googls Sheets uses 1-based indexing.
+            row_idx += 1
+            key = row[KEY_COL]
+            if key in sisters:
+                # Add 1 to account for the header row.
+                assert key not in antonyms
+                update(row_idx + 1, row, SISTERS_COL, sisters)
+                update(row_idx + 1, row, ANTONYMS_COL, antonyms)
+                continue
+            if key in antonyms:
+                assert key not in sisters
+                update(row_idx + 1, row, SISTERS_COL, antonyms)
+                update(row_idx + 1, row, ANTONYMS_COL, sisters)
+                continue
+            if key in homonyms:
+                update(row_idx + 1, row, HOMONYMS_COL, homonyms)
 
 
 def validate():
@@ -268,6 +278,7 @@ def main():
     args = argparser.parse_args()
     oneoff = preprocess_args(args)
 
+    mother = _mother()
     while True:
         try:
             if not oneoff:
@@ -280,10 +291,10 @@ def main():
                 validate()
 
             if args.sisters or args.antonyms:
-                sisters(sisters=args.sisters, antonyms=args.antonyms)
+                mother.sisters(sisters=args.sisters, antonyms=args.antonyms)
 
             if args.homonyms:
-                sisters(homonyms=args.homonyms)
+                mother.sisters(homonyms=args.homonyms)
 
             # This was just a one-off!
             if oneoff:
