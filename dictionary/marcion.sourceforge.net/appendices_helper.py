@@ -85,16 +85,17 @@ argparser.add_argument(
 )
 
 
+def split(keys: str) -> list[str]:
+    return utils.ssplit(keys, ";")
+
+
 class family:
     def __init__(self, row: pd.Series) -> None:
         self.key: str = row[KEY_COL]
-        self.sisters: list[str] = utils.split(row[SISTERS_COL], ";")
-        self.antonyms: list[str] = utils.split(row[ANTONYMS_COL], ";")
-        self.homonyms: list[str] = utils.split(row[HOMONYMS_COL], ";")
-        self.greek_sisters: list[str] = utils.split(
-            row[GREEK_SISTERS_COL],
-            ";",
-        )
+        self.sisters: list[str] = split(row[SISTERS_COL])
+        self.antonyms: list[str] = split(row[ANTONYMS_COL])
+        self.homonyms: list[str] = split(row[HOMONYMS_COL])
+        self.greek_sisters: list[str] = split(row[GREEK_SISTERS_COL])
 
 
 class validator:
@@ -207,16 +208,20 @@ class _mother:
             values to add, update the call with the new values."""
             cur = row[col]
             key = row[KEY_COL]
-            existing = utils.split(cur, ";")
+            existing = split(cur)
             if all(a == key or a in existing for a in add):
                 # All values are there already.
                 return
             new = [a for a in add if a != key and a not in existing]
             value = ";".join(existing + new)
             # Verify the value.
-            split = utils.split(value, ";")
-            utils.verify_unique(split, "Sisters:")
-            utils.verify_all_belong_to_set(split, self.keys, "Sister keys:")
+            value_split = split(value)
+            utils.verify_unique(value_split, "Sisters:")
+            utils.verify_all_belong_to_set(
+                value_split,
+                self.keys,
+                "Sister keys:",
+            )
             assert value != cur
             assert value.startswith(cur)
             if new:
