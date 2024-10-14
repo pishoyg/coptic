@@ -25,6 +25,7 @@ argparser = argparse.ArgumentParser(
 )
 
 argparser.add_argument(
+    "-v",
     "--validate",
     action="store_true",
     default=False,
@@ -32,6 +33,7 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
+    "-s",
     "--sisters",
     type=str,
     nargs="*",
@@ -59,6 +61,7 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
+    "-a",
     "--antonyms",
     type=str,
     nargs="*",

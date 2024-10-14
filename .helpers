@@ -176,3 +176,7 @@ pydead () {
 }
 
 alias gits='git -C "${SITE_DIR}"'
+
+alias img='./dictionary/marcion.sourceforge.net/img_helper.py'
+
+alias app='./dictionary/marcion.sourceforge.net/appendices_helper.py'
