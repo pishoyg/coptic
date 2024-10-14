@@ -213,7 +213,7 @@ class _mother:
                 # All values are there already.
                 return
             new = [a for a in add if a != key and a not in existing]
-            value = ";".join(existing + new)
+            value = "; ".join(existing + new)
             # Verify the value.
             value_split = split(value)
             utils.verify_unique(value_split, "Sisters:")
