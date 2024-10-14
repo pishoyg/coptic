@@ -657,8 +657,8 @@ class _mother:
         assert key not in sisters
         assert len(set(sisters)) == len(sisters)
         return "\n".join(
-            "<li>"
-            f'<span id="sister{s}" hidden="" class="dev sister-key">'
+            f'<li id="sister{s}" class="sister">'
+            f'<span hidden="" class="dev sister-key">'
             f"{s}"
             "</span>"
             " "
