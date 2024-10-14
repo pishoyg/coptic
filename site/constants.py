@@ -20,6 +20,7 @@ _CRUM_INDEX = xooxle.index(
             xooxle.htmlSelector({"class_": "drv-key"}, force=False),
             xooxle.htmlSelector({"class_": "explanatory-key"}, force=False),
             xooxle.htmlSelector({"class_": "nag-hammadi"}, force=False),
+            xooxle.htmlSelector({"class_": "sisters"}, force=False),
         ],
         captures=[
             xooxle.capture(
