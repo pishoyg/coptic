@@ -657,7 +657,15 @@ class _mother:
         assert key not in sisters
         assert len(set(sisters)) == len(sisters)
         return "\n".join(
-            f'<li><a class="hover-link" href="{CRUM_ROOT}/{s}.html">{self.key_to_title[s]}</a></li>'
+            "<li>"
+            f'<span id="sister{s}" hidden="" class="dev sister-key">'
+            f"{s}"
+            "</span>"
+            " "
+            f'<a class="hover-link" href="{CRUM_ROOT}/{s}.html">'
+            f"{self.key_to_title[s]}"
+            "</a>"
+            "</li>"
             for s in sisters
         )
 
