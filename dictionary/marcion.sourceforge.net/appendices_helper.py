@@ -2,6 +2,7 @@
 import argparse
 import collections
 import json
+import shlex
 import urllib
 
 import pandas as pd
@@ -24,6 +25,7 @@ GREEK_SISTERS_COL = "TLA-sisters"
 argparser = argparse.ArgumentParser(
     description="""Find and process appendices.""",
     formatter_class=argparse.RawTextHelpFormatter,
+    exit_on_error=False,
 )
 
 argparser.add_argument(
@@ -234,7 +236,7 @@ def validate():
     validatoor.validate(DERIVATIONS)
 
 
-def preprocess_args(args):
+def preprocess_args(args) -> bool:
     def url_to_key(url_or_key: str) -> str:
         if not url_or_key.startswith("http"):
             # This is not a URL, this is already a key.
@@ -250,35 +252,44 @@ def preprocess_args(args):
     args.sisters = list(map(url_to_key, args.sisters))
     args.antonyms = list(map(url_to_key, args.antonyms))
 
+    num_actions = sum(
+        map(
+            bool,
+            [args.validate, args.sisters or args.antonyms, args.homonyms],
+        ),
+    )
+
+    if num_actions > 1:
+        utils.fatal("At most one command is required.")
+    return bool(num_actions)
+
 
 def main():
     args = argparser.parse_args()
-    preprocess_args(args)
+    oneoff = preprocess_args(args)
 
-    actions: list = list(
-        filter(
-            None,
-            [
-                args.validate,
-                args.sisters or args.antonyms,
-                args.homonyms,
-            ],
-        ),
-    )
-    if len(actions) != 1:
-        utils.fatal("Exactly one command is required.")
+    while True:
+        try:
+            if not oneoff:
+                args = argparser.parse_args(shlex.split(input()))
+                if not preprocess_args(args):
+                    # No arguments provided!
+                    continue
 
-    if args.validate:
-        validate()
-        return
+            if args.validate:
+                validate()
 
-    if args.sisters or args.antonyms:
-        sisters(sisters=args.sisters, antonyms=args.antonyms)
-        return
+            if args.sisters or args.antonyms:
+                sisters(sisters=args.sisters, antonyms=args.antonyms)
 
-    if args.homonyms:
-        sisters(homonyms=args.homonyms)
-        return
+            if args.homonyms:
+                sisters(homonyms=args.homonyms)
+
+            # This was just a one-off!
+            if oneoff:
+                break
+        except Exception as e:
+            utils.error(e)
 
 
 if __name__ == "__main__":
