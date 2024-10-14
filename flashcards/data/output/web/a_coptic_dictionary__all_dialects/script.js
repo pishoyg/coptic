@@ -162,7 +162,7 @@ window.addEventListener('load', () => {
   // Handle CLS_SISTER_KEY class.
   Array.prototype.forEach.call(document.getElementsByClassName(CLS_SISTER_KEY), (el) => {
     el.classList.add(CLS_HOVER_LINK);
-    moveElement(el, 'a', { 'href': `#${el.id}` });
+    moveElement(el, 'a', { 'href': `#sister${el.innerHTML}` });
   });
   // Handle CLS_DIALECT class.
   function getActiveDialectClassesInCurrentPage() {
