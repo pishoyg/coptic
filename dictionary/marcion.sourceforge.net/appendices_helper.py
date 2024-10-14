@@ -160,6 +160,8 @@ class validator:
             assert all(key in key_to_family[s].sisters for s in fam.sisters)
             # If a is antonym to b, then b is antonym to a.
             assert all(key in key_to_family[s].antonyms for s in fam.antonyms)
+            # If a is homonym to b, then b is homonym to a.
+            assert all(key in key_to_family[s].homonyms for s in fam.homonyms)
 
     def validate(self, path: str, roots: bool = False) -> None:
         df = utils.read_tsv(path)
@@ -175,8 +177,9 @@ class _mother:
 
     def __init__(self):
         self.sheet = utils.read_gspread(GSPREAD_NAME, worksheet=0)
-        self.df = utils.as_dataframe(self.sheet).astype("string")
-        self.keys: set[str] = set(self.df[KEY_COL])
+        self.keys: set[str] = {
+            str(record[KEY_COL]) for record in self.sheet.get_all_records()
+        }
 
         self.col_idx = {
             SISTERS_COL: utils.get_column_index(self.sheet, SISTERS_COL),
@@ -196,7 +199,7 @@ class _mother:
 
         def update(
             row_idx: int,
-            row: pd.Series,
+            row: dict,
             col: str,
             add: list[str],
         ) -> None:
@@ -223,24 +226,25 @@ class _mother:
             # Update.
             self.sheet.update_cell(row_idx, self.col_idx[col], value)
 
-        row_idx = 0
-        for _, row in self.df.iterrows():
-            # Googls Sheets uses 1-based indexing.
+        # Googls Sheets uses 1-based indexing.
+        # We also add 1 to account for the header row.
+        row_idx = 1
+        for row in self.sheet.get_all_records():
+            row = {key: str(value) for key, value in row.items()}
             row_idx += 1
             key = row[KEY_COL]
             if key in sisters:
-                # Add 1 to account for the header row.
                 assert key not in antonyms
-                update(row_idx + 1, row, SISTERS_COL, sisters)
-                update(row_idx + 1, row, ANTONYMS_COL, antonyms)
+                update(row_idx, row, SISTERS_COL, sisters)
+                update(row_idx, row, ANTONYMS_COL, antonyms)
                 continue
             if key in antonyms:
                 assert key not in sisters
-                update(row_idx + 1, row, SISTERS_COL, antonyms)
-                update(row_idx + 1, row, ANTONYMS_COL, sisters)
+                update(row_idx, row, SISTERS_COL, antonyms)
+                update(row_idx, row, ANTONYMS_COL, sisters)
                 continue
             if key in homonyms:
-                update(row_idx + 1, row, HOMONYMS_COL, homonyms)
+                update(row_idx, row, HOMONYMS_COL, homonyms)
 
 
 def validate():
