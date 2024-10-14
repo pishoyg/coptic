@@ -165,7 +165,9 @@ def crum(
                     # Prev
                     "<td>",
                     field.fmt(
-                        f'<a class="navigate" href="{CRUM_ROOT}/{{key_prev}}.html">'
+                        f'<a class="navigate" href="{
+                            CRUM_ROOT
+                        }/{{key_prev}}.html">'
                         "prev"
                         "</a>",
                         {"key_prev": roots_col("key-prev", force=False)},
@@ -187,7 +189,9 @@ def crum(
                     # Next
                     "<td>",
                     field.fmt(
-                        f'<a class="navigate" href="{CRUM_ROOT}/{{key_next}}.html">'
+                        f'<a class="navigate" href="{
+                            CRUM_ROOT
+                        }/{{key_next}}.html">'
                         "next"
                         "</a>",
                         {"key_next": roots_col("key-next", force=False)},
@@ -369,7 +373,9 @@ def crum(
                         keys=roots_col("crum-pages", force=False),
                         get_paths=lambda page_ranges: utils.sort_semver(
                             [
-                                f"dictionary/marcion.sourceforge.net/data/crum/{k+20}.png"
+                                f"dictionary/marcion.sourceforge.net/data/crum/{
+                                    k+20
+                                }.png"
                                 for k in _page_numbers(page_ranges=page_ranges)
                             ],
                         ),
@@ -406,7 +412,9 @@ def crum(
                     field.img(
                         root_appendix("dawoud-pages", force=False),
                         get_paths=lambda page_ranges: [
-                            f"dictionary/copticocc.org/data/dawoud-D100-cropped/{k+16}.jpg"
+                            f"dictionary/copticocc.org/data/dawoud-D100-cropped/{
+                                k+16
+                            }.jpg"
                             for k in _page_numbers(page_ranges=page_ranges)
                         ],
                         fmt_args=lambda path: {
@@ -533,7 +541,9 @@ def kellia(deck_name: str, deck_id: int, tsv_basename: str) -> deck.deck:
         force: bool = True,
     ) -> field.tsv:
         return field.tsv(
-            f"dictionary/kellia.uni-goettingen.de/data/output/tsv/{tsv_basename}.tsv",
+            f"dictionary/kellia.uni-goettingen.de/data/output/tsv/{
+                tsv_basename
+            }.tsv",
             col_name,
             line_br=line_br,
             force=force,
@@ -648,6 +658,47 @@ class sister:
         self.type = _type
 
 
+class sister_with_frag:
+    def __init__(self, sister: sister, fragment: str) -> None:
+        self.sister = sister
+        self.fragment = fragment
+
+    def frag(self) -> str:
+        if not self.fragment:
+            return ""
+        if self.fragment.startswith("#"):
+            return self.fragment
+        return f"#:~:text={self.fragment}"
+
+    def string(self) -> str:
+        return (
+            f'<tr id="sister{self.sister.key}" class="sister">'
+            '<td class="sister-view">'
+            f'<a href="{
+                CRUM_ROOT
+            }/{self.sister.key}.html{self.frag()}" target="_blank">'
+            "view"
+            "</a>"
+            "</td>"
+            '<td class="sister-title">'
+            f"{self.sister.title}"
+            "</td>"
+            '<td class="sister-meaning">'
+            "("
+            "<b>"
+            f"{self.sister.type}"
+            "</b>"
+            ")"
+            " "
+            f"{self.sister.meaning}"
+            f'<span hidden="" class="dev sister-key right">'
+            f"{self.sister.key}"
+            "</span>"
+            "</td>"
+            "</tr>"
+        )
+
+
 class _mother:
     def __init__(self, roots_col: typing.Callable) -> None:
         keys = roots_col("key")._content
@@ -664,40 +715,23 @@ class _mother:
             )
         }
 
+    def parse(self, raw: str) -> sister_with_frag:
+        assert raw
+        split = raw.split()
+        return sister_with_frag(
+            self.key_to_sister[split[0]],
+            " ".join(split[1:]),
+        )
+
     def gather(self, key: str, _sisters: str) -> str:
         if not _sisters:
             return ""
-        sisters = [
-            self.key_to_sister[key] for key in utils.ssplit(_sisters, ";")
-        ]
+        sisters = [self.parse(raw) for raw in utils.ssplit(_sisters, ";")]
         del _sisters
-        assert key not in sisters
-        assert len(set(sisters)) == len(sisters)
-        return "\n".join(
-            f'<tr id="sister{s.key}" class="sister">'
-            '<td class="sister-view">'
-            f'<a href="{CRUM_ROOT}/{s.key}.html" target="_blank">'
-            "view"
-            "</a>"
-            "</td>"
-            '<td class="sister-title">'
-            f"{s.title}"
-            "</td>"
-            '<td class="sister-meaning">'
-            "("
-            "<b>"
-            f"{s.type}"
-            "</b>"
-            ")"
-            " "
-            f"{s.meaning}"
-            f'<span hidden="" class="dev sister-key right">'
-            f"{s.key}"
-            "</span>"
-            "</td>"
-            "</tr>"
-            for s in sisters
-        )
+        sister_keys = [s.sister.key for s in sisters]
+        assert key not in sister_keys
+        assert len(set(sister_keys)) == len(sister_keys)
+        return "\n".join(s.string() for s in sisters)
 
 
 class _sensor:

@@ -22,6 +22,8 @@ ANTONYMS_COL = "antonyms"
 HOMONYMS_COL = "homonyms"
 GREEK_SISTERS_COL = "TLA-sisters"
 
+TEXT_FRAG_PREFIX = ":~:text="
+
 argparser = argparse.ArgumentParser(
     description="""Find and process appendices.""",
     formatter_class=argparse.RawTextHelpFormatter,
@@ -84,13 +86,45 @@ argparser.add_argument(
     " This flag can only be used alone.",
 )
 
+argparser.add_argument(
+    "-d",
+    "--delete_empty_fragment",
+    action="store_true",
+    default=False,
+    help="In normal situations, when a new sisterhood relation is proposed, if"
+    " the relation already exists, we just update the fragment."
+    " However, we do NOT update the fragment if the new fragment is empty,"
+    " because we assume that this is not intentional."
+    " Use this flag to update this behaviour, so we will delete the existing"
+    " fragment if requested.",
+)
+
 
 def split(cell: str) -> list[str]:
     return utils.ssplit(cell, ";")
 
 
+class person:
+    def __init__(self, raw: str):
+        # TODO: (#226) Validate that the fragment, if present, actually exists
+        # in this person's page.
+        # This can be done by caching a parsed HTML tree of every person there
+        # is. Out of the tree, you only need to store all the anchors, and all
+        # the text.
+        raw = raw.strip()
+        assert raw
+        split = raw.split()
+        self.key = split[0]
+        self.fragment = " ".join(split[1:])
+
+    def string(self) -> str:
+        return " ".join(filter(None, [self.key, self.fragment]))
+
+
 class house:
     """A house represents a branch of the family."""
+
+    delete_empty_fragment = False
 
     def __init__(self, key: str, cell: str) -> None:
         # key is the key of the current house.
@@ -99,39 +133,63 @@ class house:
         # has new joiners, they won't show here.
         self.ancestors_raw = cell
         # member is the current list of house members.
-        self.members: list[str] = split(cell)
-        self.members = [" ".join(m.split()) for m in self.members]
+        self.members: list[person] = [person(raw) for raw in split(cell)]
         # ancestors_formatted is a formatted representation of the list of the
         # original members.
         self.ancestors_formatted = self.string()
 
     def string(self) -> str:
-        return "; ".join(self.members)
+        return "; ".join(m.string() for m in self.members)
 
-    def has(self, key: str) -> bool:
-        return key in self.members
+    def has(self, p: person | str) -> bool:
+        if isinstance(p, person):
+            key = p.key
+        else:
+            assert isinstance(p, str)
+            key = p
+        del p
+        return any(m.key == key for m in self.members)
 
-    def strangers(self, joiners: list[str]) -> list[str]:
-        """Given a list of joiners, retrieve the strangers leaving out the
-        current members (including yourself)."""
-        return [j for j in joiners if j != self.key and not self.has(j)]
-
-    def marry(self, spouses: list[str], strangers: bool = True) -> list[str]:
+    def marry(
+        self,
+        spouses: list[person],
+    ) -> tuple[list[person], list[person]]:
         """Marry the given spouses into your house.
 
-        Args:
-            strangers: If true, force all new spouses to be strangers.
         Return:
-            The list of spouses that have been married to the family. This
-            should be all the spouses in the input if all of them are strangers.
+            A boolean indicating whether any changes were made.
         """
-        if strangers:
-            assert self.strangers(spouses) == spouses
-        else:
-            spouses = self.strangers(spouses)
-        self.members = self.members + spouses
-        assert self.string().startswith(self.ancestors_formatted)
-        return spouses
+        added, updated = [], []
+
+        for spouse in spouses:
+            if spouse.key == self.key:
+                # Nothing to be done here! Even if this spouse (representing
+                # us).
+                # has a fragment, we never update ourselves, we only update our relations.
+                # It's our relations that need to have the fragments in their
+                # contact books.
+                continue
+            # Check if the spouse is already a member.
+            existing_member = next(
+                (m for m in self.members if m.key == spouse.key),
+                None,
+            )
+            if not existing_member:
+                # Add new member.
+                self.members.append(spouse)
+                added.append(spouse)
+                continue
+            # Update the fragment if it has changed.
+            if existing_member.fragment != spouse.fragment:
+                if not spouse.fragment and not house.delete_empty_fragment:
+                    # The new spouse doesn't have a fragment. We still retain
+                    # this member's fragment! It's likely that the deletion is
+                    # not intended.
+                    continue
+                existing_member.fragment = spouse.fragment
+                updated.append(spouse)
+
+        return added, updated
 
 
 class family:
@@ -144,7 +202,7 @@ class family:
         self.homonyms: house = house(row[KEY_COL], row[HOMONYMS_COL])
         self.greek_sisters: house = house(row[KEY_COL], row[GREEK_SISTERS_COL])
 
-    def all_except_you(self) -> list[str]:
+    def all_except_you(self) -> list[person]:
         return sum(
             [
                 house.members
@@ -158,7 +216,7 @@ class family:
             [],
         )
 
-    def natives_except_you(self) -> list[str]:
+    def natives_except_you(self) -> list[person]:
         return sum(
             [
                 house.members
@@ -177,7 +235,7 @@ class family:
             symmetry: If true, validate symmetric relations as well.
         """
         # TODO: (#271) Add validation for Greek sisters as well.
-        relatives: list[str] = self.all_except_you()
+        relatives: list[person] = self.all_except_you()
         # Verify no relative is recorded twice.
         if len(relatives) != len(set(relatives)):
             utils.fatal("Duplicate sisters found at", self.key)
@@ -199,7 +257,7 @@ class family:
             return
         # Verify that all relatives are documented.
         utils.verify_all_belong_to_set(
-            relatives,
+            [r.key for r in relatives],
             key_to_family,
             "Nonexisting sister",
         )
@@ -207,18 +265,18 @@ class family:
             return
         # If a is sister to b, then b is sister to a.
         assert all(
-            key_to_family[s].sisters.has(self.key)
-            for s in self.sisters.members
+            key_to_family[m.key].sisters.has(self.key)
+            for m in self.sisters.members
         )
         # If a is antonym to b, then b is antonym to a.
         assert all(
-            key_to_family[s].antonyms.has(self.key)
-            for s in self.antonyms.members
+            key_to_family[m.key].antonyms.has(self.key)
+            for m in self.antonyms.members
         )
         # If a is homonym to b, then b is homonym to a.
         assert all(
-            key_to_family[s].homonyms.has(self.key)
-            for s in self.homonyms.members
+            key_to_family[m.key].homonyms.has(self.key)
+            for m in self.homonyms.members
         )
 
 
@@ -285,7 +343,6 @@ def stringify(row: dict) -> dict[str, str]:
 
 
 class _matriarch:
-
     def __init__(self):
         # Worksheet 0 has the roots.
         self.sheet = utils.read_gspread(GSPREAD_NAME, worksheet=0)
@@ -299,13 +356,7 @@ class _matriarch:
             HOMONYMS_COL: utils.get_column_index(self.sheet, HOMONYMS_COL),
         }
 
-    def marry_house(
-        self,
-        row_idx: int,
-        row: dict,
-        col: str,
-        spouses: list[str],
-    ) -> house:
+    def marry_house(self, row: dict, col: str, spouses: list[person]) -> house:
         """Given a row and its index, and a column name, and a list of values
         to add, update the call with the new values.
 
@@ -314,26 +365,46 @@ class _matriarch:
 
         Return the new house.
         """
-        huis = house(row[KEY_COL], row[col])
-        married = huis.marry(spouses, strangers=False)
-        if married:
-            utils.info("Adding", ", ".join(married), "to", huis.key, "/", col)
+        huis: house = house(row[KEY_COL], row[col])
+        added, updated = huis.marry(spouses)
+        if added:
+            utils.info(
+                "Adding",
+                "; ".join(m.string() for m in added),
+                "to",
+                huis.key,
+                "/",
+                col,
+            )
+        elif updated:
+            utils.info(
+                "Updating",
+                "; ".join(m.string() for m in updated),
+                "in",
+                huis.key,
+                "/",
+                col,
+            )
         elif huis.string() != huis.ancestors_raw:
             utils.info("Reformatting", huis.key, "/", col)
         else:
             if spouses:
                 # We only log this line when verbosity is warranted.
+                # Verbosity is warranted if we have an actual update request.
                 utils.warn("No changes to", huis.key, "/", col)
         return huis
 
     def marry_family(
         self,
-        sisters: list[str] = [],
-        antonyms: list[str] = [],
-        homonyms: list[str] = [],
+        sisters: list[person] = [],
+        antonyms: list[person] = [],
+        homonyms: list[person] = [],
     ) -> None:
         assert bool(homonyms) != bool(sisters or antonyms)
         assert not antonyms or sisters
+
+        def has(members: list[person], key: str) -> bool:
+            return any(m.key == key for m in members)
 
         # Googls Sheets uses 1-based indexing.
         # We also add 1 to account for the header row.
@@ -347,29 +418,28 @@ class _matriarch:
             row_idx += 1
             key = row[KEY_COL]
             s, a, h = [], [], []
-            if key in sisters:
-                assert key not in antonyms
+            if has(sisters, key):
+                assert not has(antonyms, key)
                 s, a = sisters, antonyms
-            elif key in antonyms:
-                assert key not in sisters
+            elif has(antonyms, key):
+                assert not has(sisters, key)
                 a, s = sisters, antonyms
-            elif key in homonyms:
+            elif has(homonyms, key):
                 h = homonyms
 
             houses = {
-                SISTERS_COL: self.marry_house(row_idx, row, SISTERS_COL, s),
-                ANTONYMS_COL: self.marry_house(row_idx, row, ANTONYMS_COL, a),
-                HOMONYMS_COL: self.marry_house(row_idx, row, HOMONYMS_COL, h),
+                SISTERS_COL: self.marry_house(row, SISTERS_COL, s),
+                ANTONYMS_COL: self.marry_house(row, ANTONYMS_COL, a),
+                HOMONYMS_COL: self.marry_house(row, HOMONYMS_COL, h),
             }
-            new_fam = family(
+            # Validate the proposed marriages.
+            family(
                 {
                     KEY_COL: key,
                     GREEK_SISTERS_COL: str(row[GREEK_SISTERS_COL]),
                 }
                 | {col: house.string() for col, house in houses.items()},
-            )
-            # Validate the proposed marriages.
-            new_fam.validate(key_to_family, symmetry=False)
+            ).validate(key_to_family, symmetry=False)
 
             for col, house in houses.items():
                 new = house.string()
@@ -383,69 +453,117 @@ def validate():
     validatoor.validate(DERIVATIONS)
 
 
-def preprocess_args(args) -> bool:
-    def url_to_key(url_or_key: str) -> str:
-        if not url_or_key.startswith("http"):
-            # This is not a URL, this is already a key.
-            return url_or_key
-        url = url_or_key
-        del url_or_key
-        basename = urllib.parse.urlparse(url).path.split("/")[-1]
-        assert basename.endswith(".html")
-        basename = basename[:-5]
-        assert basename.isdigit()
-        return basename
+class runner:
+    def preprocess_args(self, args: list[str] | None = None) -> bool:
+        """
+        Return:
+            A boolean indicating whether any *action* arguments have been
+            provided. *Option* argument don't affect this return value.
+        """
+        if args is None:
+            self.args = argparser.parse_args()
+        else:
+            self.args = argparser.parse_args(args)
+        house.delete_empty_fragment = self.args.delete_empty_fragment
 
-    args.sisters = list(map(url_to_key, args.sisters))
-    args.antonyms = list(map(url_to_key, args.antonyms))
+        def url_to_person(url_or_raw: str) -> person:
+            """Given a URL, return a string representing an encoded person
+            initializer.
 
-    num_actions = sum(
-        map(
-            bool,
-            [args.validate, args.sisters or args.antonyms, args.homonyms],
-        ),
-    )
+            Examples:
+                - Input: "https://remnqymi.com/crum/26.html#drv895"
+                - Output: "26 #drv895"
 
-    if num_actions > 1:
-        utils.fatal("At most one command is required.")
-    return bool(num_actions)
+                - Input: "https://remnqymi.com/crum/26.html#:~:text=calf"
+                - Output: "26 calf"
+            """
+            # NOTE: The following replacement of back slashes might be problematic.
+            # It was introduced to appease an idiosyncratic shell!
+            url_or_raw = url_or_raw.replace("\\", "")
+            if not url_or_raw.startswith("http"):
+                # This is not a URL, this is already a key.
+                return person(url_or_raw)
+            url = url_or_raw
+            del url_or_raw
+            url = urllib.parse.unquote(url)
+            parsed = urllib.parse.urlparse(url)
+            basename = parsed.path.split("/")[-1]
+            assert basename.endswith(".html")
+            key = basename[:-5]
+            del basename
+            assert key.isdigit()
+            if parsed.fragment.startswith(TEXT_FRAG_PREFIX):
+                raw = key + " " + parsed.fragment[len(TEXT_FRAG_PREFIX) :]
+            elif parsed.fragment:
+                # This is not a text fragment, but a regular fragment.
+                raw = f"{key} #{parsed.fragment}"
+            else:
+                # No fragment!
+                raw = key
+            return person(raw)
+
+        self.args.sisters = list(map(url_to_person, self.args.sisters))
+        self.args.antonyms = list(map(url_to_person, self.args.antonyms))
+        self.args.homonyms = list(map(url_to_person, self.args.homonyms))
+
+        num_actions = sum(
+            map(
+                bool,
+                [
+                    self.args.validate,
+                    self.args.sisters or self.args.antonyms,
+                    self.args.homonyms,
+                ],
+            ),
+        )
+
+        if num_actions > 1:
+            utils.fatal("At most one command is required.")
+        return bool(num_actions)
+
+    def once(self):
+        if self.args.validate:
+            validate()
+
+        if self.args.sisters or self.args.antonyms:
+            self.mother.marry_family(
+                sisters=self.args.sisters,
+                antonyms=self.args.antonyms,
+            )
+
+        if self.args.homonyms:
+            self.mother.marry_family(homonyms=self.args.homonyms)
+
+    def run(self):
+        # NOTE: We perform validation before initialization to speed it up, as
+        # we don't need to initialize if we just need a one-off validation.
+        oneoff = self.preprocess_args()
+        if self.args.validate:
+            validate()
+            return
+
+        utils.info("Initializing...")
+        self.mother = _matriarch()
+
+        if oneoff:
+            # This is a one-off, because there are action commands provided on
+            # the invocation.
+            self.once()
+            return
+
+        # This is not a one-off. Read the commands interactively, until the
+        # user decides to exit.
+        while True:
+            try:
+                self.preprocess_args(shlex.split(input("Command: ")))
+                self.once()
+            except Exception as e:
+                utils.error(e)
 
 
 def main():
-    args = argparser.parse_args()
-    oneoff = preprocess_args(args)
-
-    if args.validate:
-        validate()
-        return
-
-    utils.info("Initializing...")
-    mother = _matriarch()
-    while True:
-        try:
-            if not oneoff:
-                args = argparser.parse_args(shlex.split(input("Command: ")))
-                if not preprocess_args(args):
-                    # No arguments provided!
-                    continue
-
-            if args.validate:
-                validate()
-
-            if args.sisters or args.antonyms:
-                mother.marry_family(
-                    sisters=args.sisters,
-                    antonyms=args.antonyms,
-                )
-
-            if args.homonyms:
-                mother.marry_family(homonyms=args.homonyms)
-
-        except Exception as e:
-            utils.error(e)
-        finally:
-            if oneoff:
-                break
+    r = runner()
+    r.run()
 
 
 if __name__ == "__main__":
