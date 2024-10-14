@@ -341,6 +341,16 @@ def crum(
                             ),
                             "</ol>",
                         ),
+                        field.aon(
+                            "<i>Homonyms: </i>",
+                            "<ol>",
+                            field.apl(
+                                mother.gather,
+                                roots_col("key"),
+                                root_appendix("homonyms", force=False),
+                            ),
+                            "</ol>",
+                        ),
                     ),
                     "</div>",
                 ),
