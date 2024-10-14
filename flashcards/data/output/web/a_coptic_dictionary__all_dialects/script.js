@@ -35,6 +35,7 @@ window.addEventListener('load', () => {
   const CLS_TYPE = 'type';
   const CLS_SPELLING = 'spelling';
   const CLS_SISTERS = 'sisters';
+  const CLS_SISTER_KEY = 'sister-key';
   const LOOKUP_URL_PREFIX = 'https://remnqymi.com/crum/?query=';
   const DAWOUD_OFFSET = 16;
   const CLS_S = 'S';
@@ -157,6 +158,11 @@ window.addEventListener('load', () => {
   Array.prototype.forEach.call(document.getElementsByClassName(CLS_EXPLANATORY_KEY), (el) => {
     el.classList.add(CLS_HOVER_LINK);
     moveElement(el, 'a', { 'href': `#explanatory${el.innerHTML}` });
+  });
+  // Handle CLS_SISTER_KEY class.
+  Array.prototype.forEach.call(document.getElementsByClassName(CLS_SISTER_KEY), (el) => {
+    el.classList.add(CLS_HOVER_LINK);
+    moveElement(el, 'a', { 'href': `#${el.id}` });
   });
   // Handle CLS_DIALECT class.
   function getActiveDialectClassesInCurrentPage() {
