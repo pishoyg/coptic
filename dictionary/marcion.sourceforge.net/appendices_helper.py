@@ -208,15 +208,18 @@ class _mother:
             if all(a == key or a in existing for a in add):
                 # All values are there already.
                 return
-            value = ";".join(
-                existing + [a for a in add if a != key and a not in existing],
-            )
+            new = [a for a in add if a != key and a not in existing]
+            value = ";".join(existing + new)
             # Verify the value.
             split = utils.split(value, ";")
             utils.verify_unique(split, "Sisters:")
             utils.verify_all_belong_to_set(split, self.keys, "Sister keys:")
             assert value != cur
             assert value.startswith(cur)
+            if new:
+                utils.info("Adding", " ".join(new), "to", key, "under", col)
+            else:
+                utils.info("Nothing to add to", key, "under", col)
             # Update.
             self.sheet.update_cell(row_idx, self.col_idx[col], value)
 
@@ -282,11 +285,12 @@ def main():
         validate()
         return
 
+    utils.info("Initializing...")
     mother = _mother()
     while True:
         try:
             if not oneoff:
-                args = argparser.parse_args(shlex.split(input()))
+                args = argparser.parse_args(shlex.split(input("Command: ")))
                 if not preprocess_args(args):
                     # No arguments provided!
                     continue
