@@ -314,7 +314,8 @@ def crum(
                 field.aon(
                     "<hr/>",
                     '<div id="sisters" class="sisters">',
-                    field.cat(
+                    field.jne(
+                        "<br/>",
                         field.aon(
                             "<i>See also: </i>",
                             '<table class="sisters-table">',
