@@ -18,6 +18,8 @@ GSPREAD_URL = "https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzH
 KEY_COL = "key"
 SISTERS_COL = "sisters"
 ANTONYMS_COL = "antonyms"
+HOMONYMS_COL = "homonyms"
+GREEK_SISTERS_COL = "TLA-sisters"
 
 argparser = argparse.ArgumentParser(
     description="""Find and process appendices.""",
@@ -66,8 +68,18 @@ argparser.add_argument(
     type=str,
     nargs="*",
     default=[],
-    help="Must be used in combination with --antonyms."
+    help="Must be used in combination with --sisters."
     " See --sisters for usage.",
+)
+
+argparser.add_argument(
+    "-o",
+    "--homonyms",
+    type=str,
+    nargs="*",
+    default=[],
+    help="Record a group of words as homonyms."
+    " This flag can only be used alone.",
 )
 
 
@@ -76,6 +88,11 @@ class family:
         self.key: str = row[KEY_COL]
         self.sisters: list[str] = utils.split(row[SISTERS_COL], ";")
         self.antonyms: list[str] = utils.split(row[ANTONYMS_COL], ";")
+        self.homonyms: list[str] = utils.split(row[HOMONYMS_COL], ";")
+        self.greek_sisters: list[str] = utils.split(
+            row[GREEK_SISTERS_COL],
+            ";",
+        )
 
 
 class validator:
@@ -124,7 +141,7 @@ class validator:
             row[KEY_COL]: family(row) for _, row in df.iterrows()
         }
         for key, fam in key_to_family.items():
-            relatives: list[str] = fam.sisters + fam.antonyms
+            relatives: list[str] = fam.sisters + fam.antonyms + fam.homonyms
             if len(relatives) != len(set(relatives)):
                 utils.fatal("Duplicate sisters found at", key)
             if key in relatives:
@@ -152,7 +169,13 @@ class validator:
         self.validate_sisters(df)
 
 
-def sisters(sisters: list[str], antonyms: list[str] = []) -> None:
+def sisters(
+    sisters: list[str] = [],
+    antonyms: list[str] = [],
+    homonyms: list[str] = [],
+) -> None:
+    assert bool(homonyms) != bool(sisters or antonyms)
+    assert not antonyms or sisters
     # Worksheet 0 has the roots.
     sheet = utils.read_gspread(GSPREAD_NAME, worksheet=0)
     df = utils.as_dataframe(sheet).astype("string")
@@ -161,9 +184,12 @@ def sisters(sisters: list[str], antonyms: list[str] = []) -> None:
     col_idx = {
         SISTERS_COL: utils.get_column_index(sheet, SISTERS_COL),
         ANTONYMS_COL: utils.get_column_index(sheet, ANTONYMS_COL),
+        HOMONYMS_COL: utils.get_column_index(sheet, HOMONYMS_COL),
     }
 
     def update(row_idx: int, row: pd.Series, col: str, add: list[str]) -> None:
+        """Given a row and its index, and a column name, and a list of values
+        to add, update the call with the new values."""
         cur = row[col]
         key = row[KEY_COL]
         existing = utils.split(cur, ";")
@@ -198,6 +224,8 @@ def sisters(sisters: list[str], antonyms: list[str] = []) -> None:
             update(row_idx + 1, row, SISTERS_COL, antonyms)
             update(row_idx + 1, row, ANTONYMS_COL, sisters)
             continue
+        if key in homonyms:
+            update(row_idx + 1, row, HOMONYMS_COL, homonyms)
 
 
 def validate():
@@ -233,6 +261,7 @@ def main():
             [
                 args.validate,
                 args.sisters or args.antonyms,
+                args.homonyms,
             ],
         ),
     )
@@ -241,9 +270,15 @@ def main():
 
     if args.validate:
         validate()
+        return
 
     if args.sisters or args.antonyms:
-        sisters(args.sisters, args.antonyms)
+        sisters(sisters=args.sisters, antonyms=args.antonyms)
+        return
+
+    if args.homonyms:
+        sisters(homonyms=args.homonyms)
+        return
 
 
 if __name__ == "__main__":
