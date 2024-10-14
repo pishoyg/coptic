@@ -278,6 +278,10 @@ def main():
     args = argparser.parse_args()
     oneoff = preprocess_args(args)
 
+    if args.validate:
+        validate()
+        return
+
     mother = _mother()
     while True:
         try:
