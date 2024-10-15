@@ -153,12 +153,13 @@ Array.prototype.forEach.call(
 Array.prototype.forEach.call(
   document.getElementsByClassName(CLS_EXPLANATORY),
   (el: HTMLElement): void => {
-    const alt = el.getAttribute('alt')!;
+    const img = el.children[0]! as HTMLElement;
+    const alt = img.getAttribute('alt')!;
     if (!alt.startsWith('http')) {
       return;
     }
-    el.classList.add(CLS_LINK);
-    el.onclick = (): void => { window_open(alt); };
+    img.classList.add(CLS_LINK);
+    img.onclick = (): void => { window_open(alt); };
   });
 
 // Handle CLS_COPTIC class.

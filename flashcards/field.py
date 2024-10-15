@@ -208,9 +208,9 @@ def img(
             - "width": defaults to "auto".
     """
     html_fmt: str = (
-        "<figure>"
-        '<img src="{basename}" alt="{alt}" id="{id}" class="{class}" style="width: {width}">'
-        "<figcaption> {caption} </figcaption>"
+        '<figure id="{id}" class="{class}">'
+        '<img src="{basename}" alt="{alt}" style="width: {width}">'
+        "<figcaption>{caption}</figcaption>"
         "</figure>"
     )
     if line_br:
