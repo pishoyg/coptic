@@ -33,7 +33,6 @@ const CLS_DIALECT_COMMA = 'dialect-comma';
 const CLS_SPELLING_COMMA = 'spelling-comma';
 const CLS_TYPE = 'type';
 const CLS_SPELLING = 'spelling';
-const CLS_SISTERS = 'sisters';
 const CLS_SISTER_KEY = 'sister-key';
 const LOOKUP_URL_PREFIX = 'https://remnqymi.com/crum/?query=';
 const DAWOUD_OFFSET = 16;
@@ -125,11 +124,6 @@ Array.prototype.forEach.call(document.getElementsByClassName(CLS_EXPLANATORY), (
 });
 // Handle CLS_COPTIC class.
 Array.prototype.forEach.call(document.getElementsByClassName(CLS_COPTIC), (el) => {
-  if (el.closest(`.${CLS_SISTERS}`)) {
-    // Exclude any element with a "sisters" parent. This is because sisters
-    // have their own links.
-    return;
-  }
   el.classList.add(CLS_HOVER_LINK);
   el.onclick = () => {
     window_open(LOOKUP_URL_PREFIX + el.innerHTML);
