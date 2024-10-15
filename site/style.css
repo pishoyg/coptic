@@ -69,14 +69,8 @@ body {
 
 /* Anchor highlighting. */
 
-:target {
+:target.explanatory,:target.sister,:target.drv .marcion,:target.drv .meaning {
   background-color: #ffa;
-}
-
-/* Retain the original background color of some elements. */
-
-.derivations td:not(.marcion, .meaning) {
-  background-color: #fff;
 }
 
 /* Style download links */
@@ -176,9 +170,13 @@ table {
   color: gray;
 }
 
+/* stylelint-disable no-descending-specificity */
+
 .meaning {
   width: 70%;
 }
+
+/* stylelint-enable no-descending-specificity */
 
 .xr {
   color: gray;
