@@ -673,7 +673,7 @@ class _mother:
         return "\n".join(
             f'<tr id="sister{s.key}" class="sister">'
             '<td class="sister-view">'
-            f'<a href="{CRUM_ROOT}/{s.key}.html">'
+            f'<a href="{CRUM_ROOT}/{s.key}.html" target="_blank">'
             "view"
             "</a>"
             "</td>"
