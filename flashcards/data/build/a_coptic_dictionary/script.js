@@ -116,12 +116,13 @@ Array.prototype.forEach.call(document.getElementsByClassName(CLS_CRUM_PAGE_IMG),
 });
 // Handle CLS_EXPLANATORY class.
 Array.prototype.forEach.call(document.getElementsByClassName(CLS_EXPLANATORY), (el) => {
-  const alt = el.getAttribute('alt');
+  const img = el.children[0];
+  const alt = img.getAttribute('alt');
   if (!alt.startsWith('http')) {
     return;
   }
-  el.classList.add(CLS_LINK);
-  el.onclick = () => { window_open(alt); };
+  img.classList.add(CLS_LINK);
+  img.onclick = () => { window_open(alt); };
 });
 // Handle CLS_COPTIC class.
 Array.prototype.forEach.call(document.getElementsByClassName(CLS_COPTIC), (el) => {
