@@ -67,6 +67,18 @@ body {
   padding: 10px;
 }
 
+/* Anchor highlighting. */
+
+:target {
+  background-color: #ffa;
+}
+
+/* Retain the original background color of some elements. */
+
+.derivations td:not(.marcion, .meaning) {
+  background-color: #fff;
+}
+
 /* Style download links */
 
 a.download,.download-list li a {
