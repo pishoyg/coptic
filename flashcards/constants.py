@@ -55,6 +55,9 @@ def crum(
     # derivations appendices keys, once we start using them.
     assert roots_col("key")._content == root_appendix("key")._content
 
+    def add_lookup_classes(text: str) -> str:
+        return greek(cdo(text))
+
     # TODO: Insert the tags in the Crum pipeline.
     # This replaces all Coptic words, regardless of whether they
     # represent plain text. Coptic text that occurs inside a tag (for example
@@ -115,10 +118,7 @@ def crum(
         sources = [line for line in sources if line.startswith("http")]
         return sources[0] if sources else stem
 
-    mother = _mother(
-        roots_col("key")._content,
-        roots_col("short-title")._content,
-    )
+    mother = _mother(roots_col)
     image_sensor = _sensor(
         roots_col("key")._content,
         root_appendix("senses", force=False)._content,
@@ -143,7 +143,7 @@ def crum(
         # you're doing.
         key=roots_col("key"),
         front=field.apl(
-            cdo,
+            add_lookup_classes,
             field.aon(
                 # Header.
                 field.cat(
@@ -215,7 +215,7 @@ def crum(
             ),
         ),
         back=field.apl(
-            cdo,
+            add_lookup_classes,
             field.cat(
                 # Type.
                 field.cat(
@@ -233,10 +233,7 @@ def crum(
                 # Meaning.
                 field.aon(
                     '<div id="meaning" class="meaning">',
-                    field.apl(
-                        greek,
-                        roots_col("en-parsed", line_br=True, force=False),
-                    ),
+                    roots_col("en-parsed", line_br=True, force=False),
                     "</div>",
                 ),
                 # Dictionary pages.
@@ -308,13 +305,10 @@ def crum(
                     "</div>",
                 ),
                 # Derivations.
-                field.apl(
-                    greek,
-                    roots_col(
-                        "derivations-table",
-                        line_br=True,
-                        force=False,
-                    ),
+                roots_col(
+                    "derivations-table",
+                    line_br=True,
+                    force=False,
                 ),
                 # Sisters.
                 field.aon(
@@ -323,33 +317,33 @@ def crum(
                     field.cat(
                         field.aon(
                             "<i>See also: </i>",
-                            "<ol>",
+                            '<table class="sisters-table">',
                             field.apl(
                                 mother.gather,
                                 roots_col("key"),
                                 root_appendix("sisters", force=False),
                             ),
-                            "</ol>",
+                            "</table>",
                         ),
                         field.aon(
                             "<i>Opposite: </i>",
-                            "<ol>",
+                            '<table class="sisters-table">',
                             field.apl(
                                 mother.gather,
                                 roots_col("key"),
                                 root_appendix("antonyms", force=False),
                             ),
-                            "</ol>",
+                            "</table>",
                         ),
                         field.aon(
                             "<i>Homonyms: </i>",
-                            "<ol>",
+                            '<table class="sisters-table">',
                             field.apl(
                                 mother.gather,
                                 roots_col("key"),
                                 root_appendix("homonyms", force=False),
                             ),
-                            "</ol>",
+                            "</table>",
                         ),
                     ),
                     "</div>",
@@ -645,27 +639,60 @@ class _dir_lister:
         return utils.sort_semver(self.cache.get(key, []))
 
 
+class sister:
+    def __init__(self, key: str, title: str, meaning: str, _type: str) -> None:
+        self.key = key
+        self.title = title
+        self.meaning = meaning
+        self.type = _type
+
+
 class _mother:
-    def __init__(self, keys: list[str], short_titles: list[str]) -> None:
-        self.key_to_title = dict(zip(keys, short_titles))
+    def __init__(self, roots_col: typing.Callable) -> None:
+        keys = roots_col("key")._content
+        titles = roots_col("short-title")._content
+        meanings = roots_col("en-parsed", line_br=True, force=False)._content
+        types = roots_col("type-parsed")._content
+        self.key_to_sister = {
+            key: sister(key, title, meaning, _type)
+            for key, title, meaning, _type in zip(
+                keys,
+                titles,
+                meanings,
+                types,
+            )
+        }
 
     def gather(self, key: str, _sisters: str) -> str:
         if not _sisters:
             return ""
-        sisters = _sisters.split(";")
+        sisters = [self.key_to_sister[key] for key in _sisters.split(";")]
         del _sisters
         assert key not in sisters
         assert len(set(sisters)) == len(sisters)
         return "\n".join(
-            f'<li id="sister{s}" class="sister">'
-            f'<span hidden="" class="dev sister-key">'
-            f"{s}"
-            "</span>"
-            " "
-            f'<a class="hover-link" href="{CRUM_ROOT}/{s}.html">'
-            f"{self.key_to_title[s]}"
+            f'<tr id="sister{s.key}" class="sister">'
+            '<td class="sister-view">'
+            f'<a href="{CRUM_ROOT}/{s.key}.html">'
+            "view"
             "</a>"
-            "</li>"
+            "</td>"
+            '<td class="sister-title">'
+            f"{s.title}"
+            "</td>"
+            '<td class="sister-meaning">'
+            "("
+            "<b>"
+            f"{s.type}"
+            "</b>"
+            ")"
+            " "
+            f"{s.meaning}"
+            f'<span hidden="" class="dev sister-key right">'
+            f"{s.key}"
+            "</span>"
+            "</td>"
+            "</tr>"
             for s in sisters
         )
 
