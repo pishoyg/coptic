@@ -157,7 +157,7 @@ todo() {
     CLOSED=$(gh issue view "${PARAM}" --json "closed" --jq ".closed")
     if [[ "${CLOSED}" == "true" ]]; then
       echo -e "${RED}Warning: Issue ${YELLOW}#${PARAM} ${RED}is closed!"\
-        "See ${YELLOW}https://github.com/pishoyg/coptic/issues/${PARAM}${RED}.${RESET}"
+        "See ${YELLOW}${GITHUB}/issues/${PARAM}${RED}.${RESET}"
     fi
   fi
   grepexx . --perl-regexp "${PATTERN}"
