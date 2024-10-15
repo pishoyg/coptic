@@ -35,6 +35,7 @@ const CLS_SPELLING_COMMA = 'spelling-comma';
 const CLS_TYPE = 'type';
 const CLS_SPELLING = 'spelling';
 const CLS_SISTER_KEY = 'sister-key';
+const CLS_NAG_HAMMADI = 'nag-hammadi';
 
 const LOOKUP_URL_PREFIX = 'https://remnqymi.com/crum/?query=';
 const DAWOUD_OFFSET = 16;
@@ -99,7 +100,7 @@ Array.prototype.forEach.call(
     if (lastChar === 'a' || lastChar === 'b') {
       pageNumber = pageNumber.slice(0, -1);
     }
-    moveElement(el, 'a', {'href': `#crum${pageNumber}`});
+    moveElement(el, 'a', { 'href': `#crum${pageNumber}` });
   });
 
 // Handle CLS_CRUM_PAGE_EXTERNAL class.
@@ -186,7 +187,7 @@ Array.prototype.forEach.call(
   document.getElementsByClassName(CLS_DAWOUD_PAGE),
   (el: HTMLElement): void => {
     el.classList.add(CLS_LINK);
-    moveElement(el, 'a', {'href': `#dawoud${el.innerHTML.slice(0, -1)}`});
+    moveElement(el, 'a', { 'href': `#dawoud${el.innerHTML.slice(0, -1)}` });
   });
 
 // Handle CLS_DRV_KEY class.
@@ -295,9 +296,8 @@ function devState(): DevState {
 
 function dev(): void {
   const state = devState();
-  Array.prototype.forEach.call(
-    document.getElementsByClassName(CLS_DEV),
-    (el: HTMLElement) => {
+  document.querySelectorAll(`.${CLS_DEV},.${CLS_NAG_HAMMADI}`).forEach(
+    (el: Element) => {
       if (state === 'true') {
         el.removeAttribute('hidden');
       } else {
