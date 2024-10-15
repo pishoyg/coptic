@@ -34,6 +34,7 @@ const CLS_SPELLING_COMMA = 'spelling-comma';
 const CLS_TYPE = 'type';
 const CLS_SPELLING = 'spelling';
 const CLS_SISTER_KEY = 'sister-key';
+const CLS_NAG_HAMMADI = 'nag-hammadi';
 const LOOKUP_URL_PREFIX = 'https://remnqymi.com/crum/?query=';
 const DAWOUD_OFFSET = 16;
 const CLS_S = 'S';
@@ -229,7 +230,7 @@ function devState() {
 }
 function dev() {
   const state = devState();
-  Array.prototype.forEach.call(document.getElementsByClassName(CLS_DEV), (el) => {
+  document.querySelectorAll(`.${CLS_DEV},.${CLS_NAG_HAMMADI}`).forEach((el) => {
     if (state === 'true') {
       el.removeAttribute('hidden');
     }
