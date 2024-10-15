@@ -67,6 +67,18 @@ body {
   padding: 10px;
 }
 
+/* Anchor highlighting. */
+
+:target {
+  background-color: #ffa;
+}
+
+/* Retain the original background color of some elements. */
+
+.derivations td:not(.marcion, .meaning) {
+  background-color: #fff;
+}
+
 /* Style download links */
 
 a.download,.download-list li a {
@@ -271,4 +283,30 @@ table {
 
 .italic {
   font-style: italic;
+}
+
+.sister:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+.sister td:not(:first-child) {
+  border-left: 1px solid black;
+  padding-left: 5px;
+  vertical-align: top;
+}
+
+.sisters-table {
+  margin-left: 20px;
+}
+
+.sister-view {
+  width: 10%;
+}
+
+.sister-title {
+  width: 40%;
+}
+
+.sister-meaning {
+  width: 50%;
 }
