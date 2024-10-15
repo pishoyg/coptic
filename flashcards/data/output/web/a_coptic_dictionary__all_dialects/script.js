@@ -35,6 +35,7 @@ window.addEventListener('load', () => {
   const CLS_TYPE = 'type';
   const CLS_SPELLING = 'spelling';
   const CLS_SISTER_KEY = 'sister-key';
+  const CLS_NAG_HAMMADI = 'nag-hammadi';
   const LOOKUP_URL_PREFIX = 'https://remnqymi.com/crum/?query=';
   const DAWOUD_OFFSET = 16;
   const CLS_S = 'S';
@@ -116,12 +117,13 @@ window.addEventListener('load', () => {
   });
   // Handle CLS_EXPLANATORY class.
   Array.prototype.forEach.call(document.getElementsByClassName(CLS_EXPLANATORY), (el) => {
-    const alt = el.getAttribute('alt');
+    const img = el.children[0];
+    const alt = img.getAttribute('alt');
     if (!alt.startsWith('http')) {
       return;
     }
-    el.classList.add(CLS_LINK);
-    el.onclick = () => { window_open(alt); };
+    img.classList.add(CLS_LINK);
+    img.onclick = () => { window_open(alt); };
   });
   // Handle CLS_COPTIC class.
   Array.prototype.forEach.call(document.getElementsByClassName(CLS_COPTIC), (el) => {
@@ -230,7 +232,7 @@ window.addEventListener('load', () => {
   }
   function dev() {
     const state = devState();
-    Array.prototype.forEach.call(document.getElementsByClassName(CLS_DEV), (el) => {
+    document.querySelectorAll(`.${CLS_DEV},.${CLS_NAG_HAMMADI}`).forEach((el) => {
       if (state === 'true') {
         el.removeAttribute('hidden');
       }
