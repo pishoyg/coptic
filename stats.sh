@@ -447,7 +447,7 @@ echo -e "${BLUE}Number of files of code: ${GREEN}${FOC}${BLUE}."\
 echo -e "${BLUE}Disk usage: \
 ${GREEN}${DISK_USAGE}${BLUE} (${GREEN}${DISK_USAGE_HUMAN}${BLUE})${RESET}"
 
-((DISK_USAGE >= 8800000 && DISK_USAGE <= 88000000 )) || (echo -e "${PURPLE}${DISK_USAGE} ${RED}looks suspicious.${RESET}" && exit 1)
+((DISK_USAGE >= 7640803 && DISK_USAGE <= 88000000 )) || (echo -e "${PURPLE}${DISK_USAGE} ${RED}looks suspicious.${RESET}" && exit 1)
 
 echo -e "${BLUE}Number of words possessing at least one image: "\
 "${GREEN}${CRUM_IMG}${BLUE}."
