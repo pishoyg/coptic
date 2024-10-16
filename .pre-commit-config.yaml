@@ -10,7 +10,7 @@ repos:
 
   # Language-agnostic
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v5.0.0
     hooks:
       - id: trailing-whitespace
         exclude: .*\.(tsv|csv|xml|html|xhtml)$
@@ -48,7 +48,7 @@ repos:
 
   # TypeScript and JavaScript
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v9.9.0
+    rev: v9.12.0
     hooks:
       - id: eslint
         additional_dependencies:
@@ -115,7 +115,7 @@ repos:
         language: system
         types: [python]
   - repo: https://github.com/psf/black-pre-commit-mirror
-    rev: 24.4.2
+    rev: 24.10.0
     hooks:
       - id: black
         args: [--line-length, '79']
@@ -139,12 +139,12 @@ repos:
       - id: text-unicode-replacement-char
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.17.0
+    rev: v3.18.0
     hooks:
       - id: pyupgrade
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.6.2
+    rev: v0.6.9
     hooks:
       - id: ruff
         args: [--fix]
@@ -177,7 +177,7 @@ repos:
       - id: yesqa
 
   - repo: https://github.com/asottile/setup-cfg-fmt
-    rev: v2.5.0
+    rev: v2.7.0
     hooks:
       - id: setup-cfg-fmt
 
@@ -192,7 +192,7 @@ repos:
       - id: autoflake
 
   - repo: https://github.com/PyCQA/doc8
-    rev: v1.1.1
+    rev: v1.1.2
     hooks:
       - id: doc8
 
@@ -203,7 +203,7 @@ repos:
 
   # Language-agnostic
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v5.0.0
     hooks:
       - id: end-of-file-fixer
         exclude: .*\.css$
@@ -238,7 +238,7 @@ repos:
 
   # Spell Checking
   - repo: https://github.com/codespell-project/codespell
-    rev: v2.2.4
+    rev: v2.3.0
     hooks:
       - id: codespell
         # The KELLIA driver contains non-English text.
@@ -251,7 +251,7 @@ repos:
   # We pass `--diff` to make it report typos before fixing them.
   # Keep an eye for it.
   - repo: https://github.com/crate-ci/typos
-    rev: v1.24.1
+    rev: v1.26.0
     hooks:
       - id: typos
         exclude: ".*\\.(xml|html|xhtml|txt|tsv|csv|json|tab|msql|xsd)$|dictionary/kellia.uni-goettingen.de/main.py"
@@ -265,12 +265,12 @@ repos:
 
   # Security
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.16.1
+    rev: v8.21.0
     hooks:
       - id: gitleaks
 
   - repo: https://github.com/trufflesecurity/truffleHog
-    rev: v3.81.9
+    rev: v3.82.9
     hooks:
       - id: trufflehog
 
@@ -288,14 +288,14 @@ repos:
         args: [-i, E003]
 
   - repo: https://github.com/scop/pre-commit-shfmt
-    rev: v3.8.0-1
+    rev: v3.9.0-1
     hooks:
       - id: shfmt
         args: [-indent, '2']
 
   # Markdown
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.41.0
+    rev: v0.42.0
     hooks:
       - id: markdownlint-fix
         args: [--disable, MD033, MD036]
@@ -320,7 +320,7 @@ repos:
 
   # Protobuf
   - repo: https://github.com/bufbuild/buf
-    rev: v1.34.0
+    rev: v1.45.0
     hooks:
       - id: buf-dep-prune
       - id: buf-dep-update
