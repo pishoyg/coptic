@@ -224,7 +224,7 @@ def verify_unique(arr, message: str) -> None:
         fatal(message, "duplicate elements:", dupes)
 
 
-def verify_all_belong_to_set(arr, accepted: set[str], message: str) -> None:
+def verify_all_belong_to_set(arr, accepted: set | dict, message: str) -> None:
     for x in arr:
         if x in accepted:
             continue
