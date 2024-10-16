@@ -13,7 +13,6 @@ import urllib
 import colorama
 import pandas as pd
 import PIL
-import pillow_avif  # type: ignore[import-untyped]
 import requests
 
 import utils
@@ -912,7 +911,11 @@ def prompt(args):
 
 
 def batch(args):
+    def key(path):
+        return int(utils.stem(path).split("-")[0])
+
     images = utils.paths(IMG_DIR)
+    images = sorted(images, key=key)
     for path in images:
         convert(path, args.skip_existing)
     targets = {get_target(p) for p in images}
