@@ -60,6 +60,7 @@ repos:
         args: [--fix]
         files: \.(js|jsx|mjs|cjs|ts|tsx|mts|cts)$
         types: [file]
+        entry: npx eslint
 
   # CSS
   - repo: local

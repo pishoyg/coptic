@@ -221,9 +221,9 @@ mobi_publish: REQUIRE_ENV FORCE
 	"$${DRIVE_DIR}"
 else
 kindle: FORCE
-	. ./.helpers && echo -e "$${YELLOW}Work in prgress!$${RESET}"
+	. ./.helpers && echo -e "$${YELLOW}Work in progress!$${RESET}"
 mobi_publish: REQUIRE_ENV FORCE
-	. ./.helpers && echo -e "$${YELLOW}Work in prgress!$${RESET}"
+	. ./.helpers && echo -e "$${YELLOW}Work in progress!$${RESET}"
 endif
 
 # SITE RULES
@@ -253,7 +253,9 @@ npm_install: FORCE
 		--save-dev \
 		"typescript" \
 		"stylelint" \
-		"clean-css"
+		"clean-css" \
+		"eslint" \
+		"@stylistic/eslint-plugin"
 
 pip_install: requirements.txt
 	python -m pip install --upgrade pip $${PIP_FLAGS}
