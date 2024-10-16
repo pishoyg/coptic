@@ -16,7 +16,7 @@ package-lock.json
 package.json
 
 # Pre-commit artifacts
-.my_pycache
+.mypy_cache
 .ruff_cache
 
 # Flashcard decks are too big to host on GitHub.
