@@ -12,8 +12,8 @@ import urllib
 
 import colorama
 import pandas as pd
-import PIL
 import requests
+from PIL import Image
 
 import utils
 
@@ -278,7 +278,7 @@ def invalid_size(files: list[str]) -> list[str]:
     assert MIN_WIDTH > 0
     invalid = []
     for f in files:
-        image = PIL.Image.open(f)  # type: ignore[attr-defined]
+        image = Image.open(f)  # type: ignore[attr-defined]
         width, height = image.size
         if width < MIN_WIDTH:
             utils.warn(
