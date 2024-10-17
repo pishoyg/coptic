@@ -220,7 +220,7 @@ readonly TOTAL="$((
 LOC_PYTHON=$(loc . -name "*.py")
 LOC_MAKE=$(loc . -name "Makefile")
 LOC_CSS=$(loc . -name "*.css")
-LOC_SH=$(loc . -a \( -name "*.sh" -o -name ".env" -o -name ".env_INFO" -o -name ".helpers" \))
+LOC_SH=$(loc . -a \( -name "*.sh" -o -name ".env_INFO" -o -name ".helpers" \))
 LOC_JS=$(loc . -a \( -name "*.mjs" -o -name "*.js" \) )
 LOC_MD=$(loc . -name "*.md")
 LOC_YAML=$(loc . -a \( -name "*.yaml" -o -name ".yamlfmt" -o -name ".yamllint" \) )
@@ -393,10 +393,7 @@ crum_root_keys () {
 }
 CRUM_PAGES_CHANGED=$(crum_root_keys | sort | uniq | wc --lines)
 
-# TODO: (#231) It's confusing to print the number of lines of code as two
-# distinct values, one including the archive and one excluding it! Remove the
-# archive from both. We're only interested in the live lines.
-echo -e "${BLUE}Number of lines of code: ${GREEN}${LOC}${BLUE}."\
+echo -e "${BLUE}Number of lines of code (including archive): ${GREEN}${LOC}${BLUE}."\
 "\n  ${BLUE}Crum: ${GREEN}${LOC_CRUM}"\
 "\n  ${BLUE}copticsite: ${GREEN}${LOC_COPTICSITE}"\
 "\n  ${BLUE}KELLIA: ${GREEN}${LOC_KELLIA}"\
@@ -410,7 +407,7 @@ echo -e "${BLUE}Number of lines of code: ${GREEN}${LOC}${BLUE}."\
 "\n  ${BLUE}Archive: ${GREEN}${LOC_ARCHIVE}"\
 "\n  ${BLUE}TOTAL: ${GREEN}${TOTAL}"
 
-echo -e "${BLUE}Live lines of code: ${BLUE}$((LOC - LOC_ARCHIVE))"\
+echo -e "${BLUE}Live lines of code: ${GREEN}$((LOC - LOC_ARCHIVE))"\
 "\n  ${BLUE}Python: ${GREEN}${LOC_PYTHON}"\
 "\n  ${BLUE}Make: ${GREEN}${LOC_MAKE}"\
 "\n  ${BLUE}CSS: ${GREEN}${LOC_CSS}"\
