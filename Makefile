@@ -255,7 +255,9 @@ npm_install: FORCE
 		"stylelint" \
 		"clean-css" \
 		"eslint" \
-		"@stylistic/eslint-plugin"
+		"@stylistic/eslint-plugin" \
+		"stylelint" \
+		"stylelint-config-standard-scss"
 
 pip_install: requirements.txt
 	python -m pip install --upgrade pip $${PIP_FLAGS}
