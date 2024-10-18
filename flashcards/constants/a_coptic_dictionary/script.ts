@@ -90,17 +90,21 @@ function moveElement(
   el.parentNode?.replaceChild(copy, el);
 }
 
+function chopColumn(pageNumber: string): string {
+  const lastChar = pageNumber.slice(pageNumber.length - 1);
+  if (lastChar === 'a' || lastChar === 'b') {
+    pageNumber = pageNumber.slice(0, -1);
+  }
+  return pageNumber;
+}
+
 // Handle CLS_CRUM_PAGE class.
 Array.prototype.forEach.call(
   document.getElementsByClassName(CLS_CRUM_PAGE),
   (el: HTMLElement): void => {
     el.classList.add(CLS_LINK);
-    let pageNumber: string = el.innerHTML;
-    const lastChar = pageNumber.substr(pageNumber.length - 1);
-    if (lastChar === 'a' || lastChar === 'b') {
-      pageNumber = pageNumber.slice(0, -1);
-    }
-    moveElement(el, 'a', { 'href': `#crum${pageNumber}` });
+    const pageNumber: string = el.innerHTML;
+    moveElement(el, 'a', { 'href': `#crum${chopColumn(pageNumber)}` });
   });
 
 // Handle CLS_CRUM_PAGE_EXTERNAL class.
@@ -130,6 +134,8 @@ Array.prototype.forEach.call(
 Array.prototype.forEach.call(
   document.getElementsByClassName(CLS_DAWOUD_PAGE_IMG),
   (el: HTMLElement): void => {
+    // TODO: (#202) Eliminate the dependency on the HTML structure.
+    el = el.children[0]! as HTMLElement;
     el.classList.add(CLS_LINK);
     el.onclick = (): void => {
       window_open(
@@ -142,6 +148,8 @@ Array.prototype.forEach.call(
 Array.prototype.forEach.call(
   document.getElementsByClassName(CLS_CRUM_PAGE_IMG),
   (el: HTMLElement): void => {
+    // TODO: (#202) Eliminate the dependency on the HTML structure.
+    el = el.children[0]! as HTMLElement;
     el.classList.add(CLS_LINK);
     el.onclick = (): void => {
       window_open(
@@ -153,6 +161,7 @@ Array.prototype.forEach.call(
 Array.prototype.forEach.call(
   document.getElementsByClassName(CLS_EXPLANATORY),
   (el: HTMLElement): void => {
+    // TODO: (#202) Eliminate the dependency on the HTML structure.
     const img = el.children[0]! as HTMLElement;
     const alt = img.getAttribute('alt')!;
     if (!alt.startsWith('http')) {
@@ -188,7 +197,7 @@ Array.prototype.forEach.call(
   document.getElementsByClassName(CLS_DAWOUD_PAGE),
   (el: HTMLElement): void => {
     el.classList.add(CLS_LINK);
-    moveElement(el, 'a', { 'href': `#dawoud${el.innerHTML.slice(0, -1)}` });
+    moveElement(el, 'a', { 'href': `#dawoud${chopColumn(el.innerHTML)}` });
   });
 
 // Handle CLS_DRV_KEY class.
