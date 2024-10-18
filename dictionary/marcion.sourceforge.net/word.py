@@ -233,7 +233,10 @@ class structured_word:
         s = _span(", ", ["spelling-comma"]).join(
             _span(s, ["spelling"] + self._dialects)
             for s in self.spellings(parenthesize_assumed)
+            if s
         )
+        if not s:
+            return ""
 
         t = ""
         if append_types:
