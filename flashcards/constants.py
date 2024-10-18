@@ -702,7 +702,10 @@ class sister_with_frag:
 class _mother:
     def __init__(self, roots_col: typing.Callable) -> None:
         keys = roots_col("key")._content
-        titles = roots_col("short-title")._content
+        titles = [
+            line.replace("<br>", " ").replace("</br>", " ")
+            for line in roots_col("word-parsed-classify", force=False)._content
+        ]
         meanings = roots_col("en-parsed", line_br=True, force=False)._content
         types = roots_col("type-parsed")._content
         self.key_to_sister = {
