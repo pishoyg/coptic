@@ -77,15 +77,18 @@ window.addEventListener('load', () => {
     });
     el.parentNode?.replaceChild(copy, el);
   }
-  // Handle CLS_CRUM_PAGE class.
-  Array.prototype.forEach.call(document.getElementsByClassName(CLS_CRUM_PAGE), (el) => {
-    el.classList.add(CLS_LINK);
-    let pageNumber = el.innerHTML;
-    const lastChar = pageNumber.substr(pageNumber.length - 1);
+  function chopColumn(pageNumber) {
+    const lastChar = pageNumber.slice(pageNumber.length - 1);
     if (lastChar === 'a' || lastChar === 'b') {
       pageNumber = pageNumber.slice(0, -1);
     }
-    moveElement(el, 'a', { 'href': `#crum${pageNumber}` });
+    return pageNumber;
+  }
+  // Handle CLS_CRUM_PAGE class.
+  Array.prototype.forEach.call(document.getElementsByClassName(CLS_CRUM_PAGE), (el) => {
+    el.classList.add(CLS_LINK);
+    const pageNumber = el.innerHTML;
+    moveElement(el, 'a', { 'href': `#crum${chopColumn(pageNumber)}` });
   });
   // Handle CLS_CRUM_PAGE_EXTERNAL class.
   Array.prototype.forEach.call(document.getElementsByClassName(CLS_CRUM_PAGE_EXTERNAL), (el) => {
@@ -103,6 +106,8 @@ window.addEventListener('load', () => {
   });
   // Handle CLS_DAWOUD_PAGE_IMG class.
   Array.prototype.forEach.call(document.getElementsByClassName(CLS_DAWOUD_PAGE_IMG), (el) => {
+  // TODO: (#202) Eliminate the dependency on the HTML structure.
+    el = el.children[0];
     el.classList.add(CLS_LINK);
     el.onclick = () => {
       window_open(`https://remnqymi.com/dawoud/${(+el.getAttribute('alt') + DAWOUD_OFFSET).toString()}.jpg`);
@@ -110,6 +115,8 @@ window.addEventListener('load', () => {
   });
   // Handle CLS_CRUM_PAGE_IMG class.
   Array.prototype.forEach.call(document.getElementsByClassName(CLS_CRUM_PAGE_IMG), (el) => {
+  // TODO: (#202) Eliminate the dependency on the HTML structure.
+    el = el.children[0];
     el.classList.add(CLS_LINK);
     el.onclick = () => {
       window_open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.getAttribute('alt')}`);
@@ -117,6 +124,7 @@ window.addEventListener('load', () => {
   });
   // Handle CLS_EXPLANATORY class.
   Array.prototype.forEach.call(document.getElementsByClassName(CLS_EXPLANATORY), (el) => {
+  // TODO: (#202) Eliminate the dependency on the HTML structure.
     const img = el.children[0];
     const alt = img.getAttribute('alt');
     if (!alt.startsWith('http')) {
@@ -143,7 +151,7 @@ window.addEventListener('load', () => {
   // Handle CLS_DAWOUD_PAGE class.
   Array.prototype.forEach.call(document.getElementsByClassName(CLS_DAWOUD_PAGE), (el) => {
     el.classList.add(CLS_LINK);
-    moveElement(el, 'a', { 'href': `#dawoud${el.innerHTML.slice(0, -1)}` });
+    moveElement(el, 'a', { 'href': `#dawoud${chopColumn(el.innerHTML)}` });
   });
   // Handle CLS_DRV_KEY class.
   Array.prototype.forEach.call(document.getElementsByClassName(CLS_DRV_KEY), (el) => {
