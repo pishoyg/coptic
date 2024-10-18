@@ -446,7 +446,6 @@ ACCEPTED_UNKNOWN_CHARS = ",. []()-=+$*^"
 #    source.
 # , occurred only once, should be fixable at the source.
 ACCEPTED_UNKNOWN_CHARS_2 = ".()-=+― [],"
-NON_INFINITIVE_SUFFIXES = "-=+"
 
 # The following is used to parse the English meaning column.
 ENGLISH_POSTPROCESSING = [
