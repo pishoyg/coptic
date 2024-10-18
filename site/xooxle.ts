@@ -199,8 +199,8 @@ async function searchOneDictionary(
     try {
       [matchedWord, matchedLines] = res.match(regex);
     } catch {
-      alert('invalid regular expression');
-      break;
+      messageBox.innerHTML = '<em>Invalid regular expression!</em>';
+      return;
     }
 
     if (matchedWord === null || matchedLines === null) {
