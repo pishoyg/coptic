@@ -84,6 +84,9 @@ kellia_analysis: _kellia_analysis
 .PHONY: stats
 stats: stats_commit
 
+.PHONY: plot
+plot: stats_plot
+
 .PHONY: stats_format
 stats_format: _stats_format
 
@@ -296,6 +299,9 @@ stats_report: FORCE
 
 stats_commit: FORCE
 	bash stats.sh --commit
+
+stats_plot: FORCE
+	./stats.py
 
 _stats_format: FORCE
 	python -c $$'import utils\n\
