@@ -261,9 +261,9 @@ function reset() {
   localStorage.clear();
   const url = new URL(window.location.href);
   url.search = '';
+  url.hash = '';
   window.history.replaceState('', '', url.toString());
-  dev();
-  dialect();
+  window.location.reload();
 }
 Array.prototype.forEach.call(document.getElementsByClassName(CLS_RESET), (el) => {
   el.classList.add(CLS_LINK);
