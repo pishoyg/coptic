@@ -326,6 +326,9 @@ function scroll(id) {
     case '?':
       togglePanel();
       break;
+    case 'Escape':
+      togglePanel(false);
+      break;
       // Dialects:
     case 'B':
     case 'S':
@@ -426,7 +429,7 @@ function scroll(id) {
     const closeButton = document.createElement('button');
     closeButton.className = 'close-btn';
     closeButton.innerHTML = '&times;'; // HTML entity for '×'.
-    closeButton.onclick = togglePanel;
+    closeButton.onclick = () => { togglePanel(); };
     panel.appendChild(closeButton);
     panel.appendChild(createSection(commands, 'Commands'));
     panel.appendChild(createSection(dialects, 'Dialect Highlighting'));
@@ -488,8 +491,14 @@ function scroll(id) {
     document.body.appendChild(panel);
     return { panel, overlay };
   }();
-  function togglePanel() {
-    panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
-    overlay.style.display = panel.style.display;
+  function togglePanel(visible) {
+    const target = visible !== undefined ? (visible ? 'block' : 'none') : (panel.style.display === 'block' ? 'none' : 'block');
+    panel.style.display = target;
+    overlay.style.display = target;
   }
+  document.addEventListener('click', function (event) {
+    if (panel.style.display === 'block' && !panel.contains(event.target)) {
+      togglePanel(false);
+    }
+  });
 }
