@@ -74,8 +74,8 @@ function get_url_or_local(
 ): string | null {
   return (
     new URLSearchParams(window.location.search).get(param) ??
-      localStorage.getItem(param)
-      ?? default_value
+    localStorage.getItem(param)
+    ?? default_value
   );
 }
 
@@ -432,6 +432,9 @@ function scroll(id: string): void {
     case '?':
       togglePanel();
       break;
+    case 'Escape':
+      togglePanel(false);
+      break;
 
       // Dialects:
     case 'B':
@@ -540,7 +543,7 @@ function scroll(id: string): void {
     const closeButton = document.createElement('button');
     closeButton.className = 'close-btn';
     closeButton.innerHTML = '&times;'; // HTML entity for '×'.
-    closeButton.onclick = togglePanel;
+    closeButton.onclick = () => { togglePanel(); };
     panel.appendChild(closeButton);
 
     panel.appendChild(createSection(commands, 'Commands'));
@@ -622,9 +625,15 @@ function scroll(id: string): void {
     return { panel, overlay };
   }();
 
-  function togglePanel() {
-    panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
-    overlay.style.display = panel.style.display;
+  function togglePanel(visible?: boolean) {
+    const target = visible !== undefined ? (visible ? 'block' : 'none') : (panel.style.display === 'block' ? 'none' : 'block');
+    panel.style.display = target;
+    overlay.style.display = target;
   }
 
+  document.addEventListener('click', function(event: MouseEvent) {
+    if (panel.style.display === 'block' && !panel.contains(event.target as Node)) {
+      togglePanel(false);
+    }
+  });
 }
