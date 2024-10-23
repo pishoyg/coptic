@@ -405,170 +405,19 @@ function scroll(id: string): void {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 }
 
-{
-  // NOTE: It's important for this mapping to be in sync with the help panel.
-  document.addEventListener('keyup', (e: KeyboardEvent) => {
-    switch (e.key) {
-
-    // Commands:
-    case 'r':
-      reset();
-      break;
-    case 'd':
-      dev(true);
-      break;
-    case 'h':
-      window_open(HOME, false);
-      break;
-    case 'n':
-      window_open(getLinkHrefByRel('next'), false);
-      break;
-    case 'p':
-      window_open(getLinkHrefByRel('prev'), false);
-      break;
-    case 'e':
-      window_open(EMAIL, false);
-      break;
-    case '?':
-      togglePanel();
-      break;
-    case 'Escape':
-      togglePanel(false);
-      break;
-
-      // Dialects:
-    case 'B':
-    case 'S':
-    case 'A':
-    case 'F':
-    case 'O':
-      dialect(e.key);
-      break;
-    case 'N':
-      dialect('NH');
-      break;
-    case 'a':
-      dialect('Sa');
-      break;
-    case 'f':
-      dialect('Sf');
-      break;
-    case 's':
-      dialect('sA');
-      break;
-    case 'b':
-      dialect('Fb');
-      break;
-
-      // Scrolling:
-    case 'C':
-      scroll('crum');
-      break;
-    case 'D':
-      scroll('dawoud');
-      break;
-    case 'l':
-      scroll('sisters');
-      break;
-    case 'm':
-      scroll('meaning');
-      break;
-    case 't':
-      scroll('root-type');
-      break;
-    case 'i':
-      scroll('images');
-      break;
-    case 'W':
-      scroll('marcion');
-      break;
-    case 'w':
-      scroll('pretty');
-      break;
-    case 'v':
-      scroll('derivations');
-      break;
-    case 'u':
-      scroll('header');
-      break;
-    case 'c':
-      scroll('dictionary');
-      break;
-    }
-  });
-
-  const commands: Record<string, string> = {
-    r: 'Reset highlighting',
-    n: 'Go to next word',
-    p: 'Go to previous word',
-    h: 'Go to homepage',
-    e: 'Email <a class="contact" href="mailto:remnqymi@gmail.com">remnqymi@gmail.com</a>',
-    d: 'Developer mode',
-    '?': 'Toggle help panel',
-  };
-
-  const dialects: Record<string, string> = {
-    B: 'Bohairic',
-    S: 'Sahidic',
-    A: 'Akhmimic',
-    F: 'Fayyumic',
-    O: 'Old Coptic',
-    N: 'NH: Nag Hammadi',
-    a: 'Sa: Sahidic with Akhmimic tendency',
-    f: 'Sf: Sahidic with Fayyumic tendency',
-    s: 'sA: Subakhmimic (Lycopolitan)',
-    b: 'Fb: Fayyumic with Bohairic tendency',
-  };
-
-  const scrolling: Record<string, string> = {
-    C: 'Crum pages',
-    D: 'Dawoud pages',
-    l: 'Related words',
-    m: 'Meaning',
-    t: 'Type',
-    i: 'Images',
-    w: 'Words',
-    W: 'Words',
-    v: 'Derivations table',
-    u: 'Header (up)',
-    c: 'Dictionary page list',
-  };
-
-
-  function createHelp(): HTMLDivElement {
-    const panel = document.createElement('div');
-    panel.className = 'info-panel';
-    panel.style.display = 'none'; // Hidden by default.
-
-    const closeButton = document.createElement('button');
-    closeButton.className = 'close-btn';
-    closeButton.innerHTML = '&times;'; // HTML entity for '×'.
-    closeButton.onclick = () => { togglePanel(); };
-    panel.appendChild(closeButton);
-
-    panel.appendChild(createSection(commands, 'Commands'));
-    panel.appendChild(createSection(dialects, 'Dialect Highlighting'));
-    panel.appendChild(createSection(scrolling, 'Scroll To'));
-
-    return panel;
+class Section {
+  readonly title: string;
+  readonly commands: Record<string, string>;
+  public constructor(title: string, commands: Record<string, string>) {
+    this.title = title;
+    this.commands = commands;
   }
 
-  function highlightFirstOccurrence(char: string, str: string): string {
-    const index = str.toLowerCase().indexOf(char.toLowerCase());
-    if (index === -1) {
-      return str;
-    }
-
-    return `${str.slice(0, index)}<strong>${str[index]!}</strong>${str.slice(index + 1)}`;
-  }
-
-  function createSection(
-    record: Record<string, string>, name: string,
-  ): HTMLDivElement {
+  createSection(): HTMLDivElement {
     const div = document.createElement('div');
 
     const title = document.createElement('h2');
-    title.textContent = name;
+    title.textContent = this.title;
     div.appendChild(title);
 
     const table = document.createElement('table');
@@ -578,7 +427,7 @@ function scroll(id: string): void {
     table.style.borderCollapse = 'collapse'; // Optional: to collapse the borders
 
     // Iterate over the entries in the record
-    Object.entries(record).forEach(([key, value]) => {
+    Object.entries(this.commands).forEach(([key, value]) => {
       // Create a row for each entry
       const row = document.createElement('tr');
 
@@ -593,7 +442,7 @@ function scroll(id: string): void {
 
       // Create a cell for the value (right column)
       const valueCell = document.createElement('td');
-      valueCell.innerHTML = highlightFirstOccurrence(key, value);
+      valueCell.innerHTML = this.highlightFirstOccurrence(key, value);
       valueCell.style.width = '90%'; // Set the width of the right column to 90%
       valueCell.style.border = '1px solid black'; // Optional: Add a border for visibility
       valueCell.style.padding = '8px'; // Optional: Add padding
@@ -610,8 +459,21 @@ function scroll(id: string): void {
     return div;
   }
 
-  // Function to create the panel and overlay dynamically
-  const { panel, overlay } = function() {
+  highlightFirstOccurrence(char: string, str: string): string {
+    const index = str.toLowerCase().indexOf(char.toLowerCase());
+    if (index === -1) {
+      return str;
+    }
+
+    return `${str.slice(0, index)}<strong>${str[index]!}</strong>${str.slice(index + 1)}`;
+  }
+};
+
+class HelpPanel {
+
+  readonly overlay: HTMLDivElement;
+  readonly panel: HTMLDivElement;
+  public constructor(sections: Section[]) {
     // Create overlay background.
     const overlay = document.createElement('div');
     overlay.className = 'overlay-background';
@@ -619,21 +481,159 @@ function scroll(id: string): void {
     document.body.appendChild(overlay);
 
     // Create info panel.
-    const panel = createHelp();
+    const panel = document.createElement('div');
+    panel.className = 'info-panel';
+    panel.style.display = 'none'; // Hidden by default.
+
+    const closeButton = document.createElement('button');
+    closeButton.className = 'close-btn';
+    closeButton.innerHTML = '&times;'; // HTML entity for '×'.
+    closeButton.onclick = () => { this.togglePanel(); };
+    panel.appendChild(closeButton);
+
+    sections.forEach((s) => { panel.appendChild(s.createSection()); });
+
     document.body.appendChild(panel);
 
-    return { panel, overlay };
-  }();
-
-  function togglePanel(visible?: boolean) {
-    const target = visible !== undefined ? (visible ? 'block' : 'none') : (panel.style.display === 'block' ? 'none' : 'block');
-    panel.style.display = target;
-    overlay.style.display = target;
+    this.panel = panel;
+    this.overlay = overlay;
+    document.addEventListener('click', this.handleClick);
   }
 
-  document.addEventListener('click', function(event: MouseEvent) {
-    if (panel.style.display === 'block' && !panel.contains(event.target as Node)) {
-      togglePanel(false);
+  togglePanel(visible?: boolean) {
+    const target = visible !== undefined ? (visible ? 'block' : 'none') : (this.panel.style.display === 'block' ? 'none' : 'block');
+    this.panel.style.display = target;
+    this.overlay.style.display = target;
+  }
+
+  handleClick(event: MouseEvent) {
+    if (this.panel.style.display === 'block' && !this.panel.contains(event.target as Node)) {
+      this.togglePanel(false);
+      this.togglePanel(false);
     }
-  });
+  }
 }
+
+const helpPanel = new HelpPanel([new Section('Commands', {
+  r: 'Reset highlighting',
+  n: 'Go to next word',
+  p: 'Go to previous word',
+  h: 'Go to homepage',
+  e: 'Email <a class="contact" href="mailto:remnqymi@gmail.com">remnqymi@gmail.com</a>',
+  d: 'Developer mode',
+  '?': 'Toggle help panel',
+}), new Section('Dialect Highlighting', {
+  B: 'Bohairic',
+  S: 'Sahidic',
+  A: 'Akhmimic',
+  F: 'Fayyumic',
+  O: 'Old Coptic',
+  N: 'NH: Nag Hammadi',
+  a: 'Sa: Sahidic with Akhmimic tendency',
+  f: 'Sf: Sahidic with Fayyumic tendency',
+  s: 'sA: Subakhmimic (Lycopolitan)',
+  b: 'Fb: Fayyumic with Bohairic tendency',
+}), new Section('Scroll To', {
+  C: 'Crum pages',
+  D: 'Dawoud pages',
+  l: 'Related words',
+  m: 'Meaning',
+  t: 'Type',
+  i: 'Images',
+  w: 'Words',
+  W: 'Words',
+  v: 'Derivations table',
+  u: 'Header (up)',
+  c: 'Dictionary page list',
+})]);
+
+// NOTE: It's important for this mapping to be in sync with the help panel.
+document.addEventListener('keyup', (e: KeyboardEvent) => {
+  switch (e.key) {
+
+  // Commands:
+  case 'r':
+    reset();
+    break;
+  case 'd':
+    dev(true);
+    break;
+  case 'h':
+    window_open(HOME, false);
+    break;
+  case 'n':
+    window_open(getLinkHrefByRel('next'), false);
+    break;
+  case 'p':
+    window_open(getLinkHrefByRel('prev'), false);
+    break;
+  case 'e':
+    window_open(EMAIL, false);
+    break;
+  case '?':
+    helpPanel.togglePanel();
+    break;
+  case 'Escape':
+    helpPanel.togglePanel(false);
+    break;
+
+    // Dialects:
+  case 'B':
+  case 'S':
+  case 'A':
+  case 'F':
+  case 'O':
+    dialect(e.key);
+    break;
+  case 'N':
+    dialect('NH');
+    break;
+  case 'a':
+    dialect('Sa');
+    break;
+  case 'f':
+    dialect('Sf');
+    break;
+  case 's':
+    dialect('sA');
+    break;
+  case 'b':
+    dialect('Fb');
+    break;
+
+    // Scrolling:
+  case 'C':
+    scroll('crum');
+    break;
+  case 'D':
+    scroll('dawoud');
+    break;
+  case 'l':
+    scroll('sisters');
+    break;
+  case 'm':
+    scroll('meaning');
+    break;
+  case 't':
+    scroll('root-type');
+    break;
+  case 'i':
+    scroll('images');
+    break;
+  case 'W':
+    scroll('marcion');
+    break;
+  case 'w':
+    scroll('pretty');
+    break;
+  case 'v':
+    scroll('derivations');
+    break;
+  case 'u':
+    scroll('header');
+    break;
+  case 'c':
+    scroll('dictionary');
+    break;
+  }
+});
