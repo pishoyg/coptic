@@ -11,7 +11,7 @@ function addOrReplaceRule(index, rule) {
   sheet.insertRule(rule, index);
 }
 function updateDialectCSS(active) {
-  const query = active === null ? '' : active.map((d) => `.${d}`).join(',');
+  const query = active?.map((d) => `.${d}`).join(',') ?? '';
   addOrReplaceRule(spellingRuleIndex, query
     ? `.spelling:not(${query}), .dialect:not(${query}) {opacity: 0.3;}`
     : `.spelling, .dialect {opacity: ${String(active === null ? 1.0 : 0.3)};}`);
@@ -60,6 +60,9 @@ Array.prototype.forEach.call(document.getElementsByClassName('collapse'), (colla
   });
   collapse.click();
 });
+// dialectSingleChar is a mapping for the dialects that have shortcuts other
+// than their codes. If the shortcut to toggle a dialect is not the same as its
+// code, it should be included in this record.
 const dialectSingleChar = {
   'N': 'NH',
   'a': 'Sa',
@@ -125,6 +128,15 @@ document.addEventListener('keyup', (e) => {
     break;
   case 'T':
     scroll('copticsite-title');
+    break;
+  case 'c':
+    click('crum-title');
+    break;
+  case 'l':
+    click('kellia-title');
+    break;
+  case 't':
+    click('copticsite-title');
     break;
   }
 });
