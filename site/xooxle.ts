@@ -290,6 +290,9 @@ function handleSearchQuery(timeout: number) {
 }
 
 searchBox.addEventListener('input', () => { handleSearchQuery(100); });
+// Prevent other elements in the page from picking up a `keyup` event on the
+// search box.
+searchBox.addEventListener('keyup', (event: KeyboardEvent) => { event.stopPropagation(); });
 fullWordCheckbox.addEventListener('click', () => { handleSearchQuery(0); });
 regexCheckbox.addEventListener('click', () => { handleSearchQuery(0); });
 
@@ -324,97 +327,9 @@ window.addEventListener('pageshow', (): void => {
   searchBox.focus();
 });
 
-// Handle dialect highlighting.
-// TODO: (#230) This is Crum-specific, and doesn't apply to all Xooxle pages.
-// Remove from this file, and insert in a Crum-specific file.
-// NOTE: We keep this in a separate scope to reduce the likelihood of it mixing
-// with other pieces of logic.
-{
-  const sheet = window.document.styleSheets[0]!;
-
-  const spellingRuleIndex = sheet.cssRules.length;
-  const undialectedRuleIndex = sheet.cssRules.length + 1;
-  const punctuationRuleIndex = sheet.cssRules.length + 2;
-
-  function addOrReplaceRule(index: number, rule: string) {
-    if (index < sheet.cssRules.length) {
-      sheet.deleteRule(index);
-    }
-    sheet.insertRule(rule, index);
-  }
-
-  function updateDialectCSS(active: string[] | null) {
-    const query: string = active === null ? '' : active.map((d) => `.${d}`).join(',');
-
-    addOrReplaceRule(
-      spellingRuleIndex,
-      query
-        ? `.spelling:not(${query}), .dialect:not(${query}) {opacity: 0.3;}`
-        : `.spelling, .dialect {opacity: ${String(active === null ? 1.0 : 0.3)};}`);
-    addOrReplaceRule(
-      undialectedRuleIndex,
-      `.spelling:not(.S,.Sa,.Sf,.A,.sA,.B,.F,.Fb,.O,.NH,.Ak,.M,.L,.P,.V,.W,.U) { opacity: ${String(active === null || query !== '' ? 1.0 : 0.3)}; }`);
-    addOrReplaceRule(
-      punctuationRuleIndex,
-      `.dialect-parenthesis, .dialect-comma, .spelling-comma, .type { opacity: ${String(active === null ? 1.0 : 0.3)}; }`);
-  }
-
-  const dialectCheckboxes = document.querySelectorAll<HTMLInputElement>(
-    '.dialect-checkbox');
-
-  // When we first load the page, 'd' dictates the set of active dialects and
-  // hence highlighting. We load 'd' from the local storage, and we update the
-  // boxes to match this set. Then we update the CSS.
-  window.addEventListener('pageshow', (): void => {
-    const d = localStorage.getItem('d');
-    const active: string[] | null =
-      d === null ? null : d === '' ? [] : d.split(',');
-    Array.from(dialectCheckboxes).forEach((box) => {
-      box.checked = active?.includes(box.name) ?? false;
-    });
-    updateDialectCSS(active);
-  });
-
-  // When we click a checkbox, it is the boxes that dictate the set of active
-  // dialects and highlighting. So we use the boxes to update 'd', and then
-  // update highlighting.
-  dialectCheckboxes.forEach(checkbox => {
-    checkbox.addEventListener('click', () => {
-      const active = Array.from(dialectCheckboxes)
-        .filter((box) => box.checked)
-        .map((box) => box.name);
-      localStorage.setItem('d', active.join(','));
-      updateDialectCSS(active);
-    });
-  });
-
-  function reset(event: Event) {
-    localStorage.removeItem('d');
-    dialectCheckboxes.forEach((box) => { box.checked = false; });
-    updateDialectCSS(null);
-    searchBox.focus();
-    // Prevent clicking the button from submitting the form, thus resetting
-    // everything!
+// Prevent pressing Enter from submitting the form, thus resetting everything!
+searchBox.addEventListener('keypress', (event) => {
+  if (event.key === 'Enter') {
     event.preventDefault();
   }
-
-  document.getElementById('reset')!.addEventListener('click', reset);
-  // Prevent pressing Enter from submitting the form, thus resetting everything!
-  searchBox.addEventListener('keypress', (event) => {
-    if (event.key === 'Enter') {
-      event.preventDefault();
-    }
-  });
-
-  // Collapse logic.
-  Array.prototype.forEach.call(
-    document.getElementsByClassName('collapse'),
-    (collapse: HTMLElement): void => {
-      collapse.addEventListener('click', function() {
-        // TODO: Remove the dependency on the HTML structure.
-        const collapsible = collapse.nextElementSibling! as HTMLElement;
-        collapsible.style.maxHeight = collapsible.style.maxHeight ? '' : collapsible.scrollHeight.toString() + 'px';
-      });
-      collapse.click();
-    });
-}
+});
