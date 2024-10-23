@@ -8,12 +8,10 @@
 # Python artifacts.
 __pycache__
 coptic.egg-info/
-build/
 
 # TypeScript artifacts.
 node_modules
 package-lock.json
-package.json
 
 # Pre-commit artifacts
 .mypy_cache
