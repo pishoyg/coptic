@@ -25,29 +25,26 @@ COMMIT=false
 PUSH=false
 while [ $# -gt 0 ]; do
   case $1 in
-  --clean)
+  --clean|-C)
     CLEAN=true
     ;;
-  --build)
+  --build|-b)
     BUILD=true
     ;;
-  --commit)
+  --commit|-c)
     COMMIT=true
     ;;
-  --push)
+  --push|-p)
     PUSH=true
     ;;
-  --help)
-    echo -e "${GREEN}--clean ${BLUE}CLEANES uncommitted changes from the site repo.${RESET}"
-    echo -e "${GREEN}--build ${BLUE}regenerates the site in the site repo.${RESET}"
-    echo -e "${GREEN}--commit ${BLUE}creates a commit.${RESET}"
-    echo -e "${GREEN}--push ${BLUE}pushes the commit to the repo.${RESET}"
+  --help|-h|*)
+    echo -e "${GREEN}--clean ${BLUE}(${GREEN}-C${BLUE}) CLEANES uncommitted changes from the site repo.${RESET}"
+    echo -e "${GREEN}--build ${BLUE}(${GREEN}-B${BLUE}) regenerates the site in the site repo.${RESET}"
+    echo -e "${GREEN}--commit ${BLUE}(${GREEN}-c${BLUE}) creates a commit.${RESET}"
+    echo -e "${GREEN}--push ${BLUE}(${GREEN}-p${BLUE}) pushes the commit to the repo.${RESET}"
     echo -e "${BLUE}You can use any combination of flags that you want.${RESET}"
+    echo -e "${GREEN}--help ${BLUE}(${GREEN}-h${BLUE}) prints this information and exits.${RESET}"
     exit
-    ;;
-  *)
-    echo "Unknown flag: ${1}"
-    exit 1
     ;;
   esac
   shift
