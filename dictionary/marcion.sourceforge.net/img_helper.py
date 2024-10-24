@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+# NOTE: About errors: Much of the logic is now wrapped inside a `try-except`
+# block. Exceptions work well with that, but not assertions because they don't
+# have error messages! Assertion errors are often not visible or not visible
+# enough! Consider replacing them with an exception so you will have a
+# meaningful error message, or exiting with a non-zero status if that is the
+# desired behavior.
 import argparse
 import glob
 import json
@@ -64,10 +70,6 @@ IMAGE_EXTENSIONS = {
 }
 VALID_EXTENSIONS = IMAGE_EXTENSIONS.difference({".svg"})
 VALID_EXTENSIONS_300 = VALID_EXTENSIONS.difference({".png"})
-
-
-def params_str(params: dict) -> str:
-    return "?" + "&".join(f"{k}={v}" for k, v in params.items())
 
 
 QUERIERS_FMT: dict[str, list[str]] = {
@@ -338,7 +340,7 @@ def get_target(path: str) -> str:
     assert path.startswith(IMG_DIR)
     stem, ext = utils.splitext(path)
     assert STEM_RE.fullmatch(stem)
-    assert ext in VALID_EXTENSIONS
+    utils.ass(ext in VALID_EXTENSIONS, ext, "is not a valid extension")
     return os.path.join(IMG_300_DIR, stem + EXT_MAP.get(ext, ext))
 
 
@@ -414,7 +416,7 @@ def main():
     if args.convert:
         convert(_stem_to_img_path(args.convert))
         exit()
-    prompt(args)
+    prompter(args).prompt()
 
 
 def basename(url: str) -> str:
@@ -435,9 +437,7 @@ def retrieve(
         headers = WIKI_HEADERS
     filename = filename or basename(url)
     download = requests.get(url, headers=headers)
-    if not download.ok:
-        utils.error(download.text)
-        return ""
+    assert download.ok, download.text
     filename = os.path.join(args.downloads, filename)
     with open(filename, "wb") as f:
         f.write(download.content)
@@ -454,19 +454,14 @@ def _stem_to_img_path(stem: str, ext: str = "") -> str:
 
 
 def _get_artifacts(stem: str, img_ext: str = "") -> list[str]:
-    if not STEM_RE.fullmatch(stem):
-        utils.error(
-            "To delete an image, please provide the stem.",
-        )
-        return []
+    assert STEM_RE.fullmatch(stem)
     path = _stem_to_img_path(stem, img_ext)
     return [path, get_target(path), get_source(path)]
 
 
 def rm(stem: str) -> None:
     if not exists(stem):
-        utils.error(stem, "doesn't exist!")
-        return
+        utils.throw(stem, "doesn't exist!")
     for art in _get_artifacts(stem):
         os.remove(art)
 
@@ -477,8 +472,7 @@ def exists(stem: str) -> bool:
 
 def mv(a_stem: str, b_stem: str) -> None:
     if exists(b_stem):
-        utils.error(b_stem, "already exists!")
-        return
+        utils.throw(b_stem, "already exists!")
     a_arts = _get_artifacts(a_stem)
     img_ext = utils.ext(a_arts[0])
     b_arts = _get_artifacts(b_stem, img_ext)
@@ -488,8 +482,7 @@ def mv(a_stem: str, b_stem: str) -> None:
 
 def cp(a_stem: str, b_stem: str) -> None:
     if exists(b_stem):
-        utils.error(b_stem, "already exists!")
-        return
+        utils.throw(b_stem, "already exists!")
     a_arts = _get_artifacts(a_stem)
     img_ext = utils.ext(a_arts[0])
     b_arts = _get_artifacts(b_stem, img_ext)
@@ -555,8 +548,7 @@ def infer_urls(*urls: str) -> tuple[list[str], list[str]]:
     for url in urls:
         err = is_invalid_url(url)
         if err:
-            utils.error(*err)
-            return [], []
+            utils.throw(*err)
     for url in urls:
         (reference, download)[is_image_url(url)].append(url)
     while not reference or not download:
@@ -589,350 +581,363 @@ def existing(key: str) -> list[str]:
 
 def clear(key: str) -> None:
     if not key.isdigit():
-        raise ValueError("We can only clear a word using a word key.")
+        utils.throw(key, "is not a valid word key.")
     for path in existing(key):
-        rm(utils.stem(path))
+        stem = utils.stem(path)
+        rm(stem)
+        utils.info("cleared", stem)
 
 
-def prompt(args):
-    plot_yes: int = 0
-    plot_no: int = 0
-    key_to_senses: dict[str, dict[str, str]] = {
-        row[KEY_COL]: json.loads(row[SENSES_COL] or "{}")
-        for _, row in utils.read_tsv(APPENDICES_TSV, KEY_COL).iterrows()
-    }
-    key_to_row: dict[str, pd.Series] = {
-        row[KEY_COL]: row
-        for _, row in utils.read_tsv(INPUT_TSV, KEY_COL).iterrows()
-    }
+class prompter:
+    def __init__(self, args):
+        self.args = args
+        self.plot_yes: int = 0
+        self.plot_no: int = 0
+        self.key_to_senses: dict[str, dict[str, str]] = {
+            row[KEY_COL]: json.loads(row[SENSES_COL] or "{}")
+            for _, row in utils.read_tsv(APPENDICES_TSV, KEY_COL).iterrows()
+        }
+        self.key_to_row: dict[str, pd.Series] = {
+            row[KEY_COL]: row
+            for _, row in utils.read_tsv(INPUT_TSV, KEY_COL).iterrows()
+        }
 
-    sources: dict[str, list[str]] = {}
+        self.sources: dict[str, list[str]] = {}
 
-    exclude = {}
-    for e in args.exclude:
-        k, v = e.split(":")
-        assert k
-        assert k not in exclude
-        exclude[k] = v
+        self.exclude: dict[str, str] = {}
+        for e in args.exclude:
+            k, v = e.split(":")
+            assert k
+            assert k not in self.exclude
+            self.exclude[k] = v
 
-    for key in sorted(key_to_row.keys(), key=lambda k: int(k)):
-        row = key_to_row[key]
-        if int(key) < args.start:
-            continue
-        if int(key) > args.end:
-            break
-        if any(row[k] == v for k, v in exclude.items()):
-            continue
+        self.key: str = ""
+        self.row: pd.Series = pd.Series()
 
-        if args.skip_existing and existing(key):
-            continue
+    def print_info(self):
+        print()
+        utils.info("Data:")
+        utils.info("- Key:", self.key)
+        utils.info("- Link:", self.row[LINK_COL])
+        utils.info("- Existing:")
+        _pretty(existing(self.key))
+        utils.info("- Downloads:")
+        _pretty(get_downloads(self.args))
+        utils.info("- Senses:")
+        _pretty(self.key_to_senses[self.key])
+        utils.info("- Sources:")
+        _pretty(self.sources)
+        print()
+        utils.info("Commands:")
+        utils.info(
+            "-",
+            "${URL}*",
+            "to download an image and store the URL as the source."
+            "The URLs will be categorized into image-URLs and non-image"
+            " URLs. The former will be retrieved, and the latter will"
+            " simply be stored as sources.",
+        )
+        utils.info("-", "key ${KEY}", "to point to a different key.")
+        utils.info(
+            "-",
+            "rm ${KEY}",
+            "to delete an image and its artifacts.",
+        )
+        utils.info(
+            "-",
+            "mv ${KEY_1} ${KEY_2}",
+            "to move an image and its artefacts.",
+        )
+        utils.info(
+            "-",
+            "cp ${KEY_1} ${KEY_2}",
+            "to copy an image and its artefacts.",
+        )
+        utils.info(
+            "-",
+            "clear [${KEY}]",
+            "to delete all images and artifacts belonging to the given"
+            " key, or the current key if none is specified.",
+        )
 
-        if args.plot:
-            if int(key) < int(args.plot[0]):
-                continue
-            if len(args.plot) > 1 and int(key) > int(args.plot[1]):
+        utils.info(
+            "-",
+            "convert ${KEY}",
+            "to (re)convert one image.",
+        )
+        utils.info(
+            "-",
+            "source ${SOURCE}",
+            "to populate the source for the only image in",
+            self.args.downloads,
+            "that is missing a source. Multiple URLs are allowed, in which"
+            " case all are recorded as sources for the said image.",
+        )
+        utils.info(
+            "-",
+            "source ${PATH} ${SOURCE}",
+            "to populate the source for a given image. Multiple URLs are"
+            " allowed, in which case all are recorded as sources for the"
+            " said image.",
+        )
+        utils.info("-", "s", "to skip.")
+        utils.info("-", "ss", "to force-skip.")
+        utils.info("-", "cs", "to clear sources.")
+        utils.info(
+            "-",
+            "${SENSE}",
+            "to assign a sense ID and initiate transfer.",
+        )
+        print()
+        utils.info("Queries:")
+        utils.info(
+            "-",
+            "[g|b|free|flat|wing|vec|wiki] ${QUERY}",
+            "to search",
+            "Google / Bing / Freepik / UXWing / Flaticon / Vecteezy / Wikipedia",
+            "for the given query.",
+        )
+        utils.info(
+            "-",
+            "[gfree|gflat|gwing|gvec|gwiki] ${QUERY}",
+            "to search",
+            "Google",
+            "for the given query, restricting results to the given site.",
+        )
+        utils.info(
+            "-",
+            "[bfree|bflat|bwing|bvec|bwiki] ${QUERY}",
+            "to search",
+            "Bing",
+            "for the given query, restricting results to the given site.",
+        )
+        utils.info(
+            "-",
+            "[gicon|bicon] ${QUERY}",
+            "to search",
+            "Google/Bing",
+            "for the given query, restricting results to known icon-providing sites.",
+        )
+        print()
+
+    def prompt(self):
+        for _key in sorted(self.key_to_row.keys(), key=lambda k: int(k)):
+            self.key = _key
+            self.row = self.key_to_row[self.key]
+            if not self.prompt_for_word():
                 break
-            if existing(key):
-                plot_yes += 1
+        if self.args.plot:
+            print(
+                colorama.Fore.GREEN + str(self.plot_yes) + colorama.Fore.RESET,
+                colorama.Fore.RED + str(self.plot_no) + colorama.Fore.RESET,
+            )
+
+    def prompt_for_word(self) -> bool:
+        """
+        Ret:
+            True if you should continue, False if you should stop.
+        """
+        if int(self.key) < self.args.start:
+            return True
+        if int(self.key) > self.args.end:
+            return False
+        if any(self.row[k] == v for k, v in self.exclude.items()):
+            return True
+        if self.args.skip_existing and existing(self.key):
+            return True
+
+        if self.args.plot:
+            if int(self.key) < int(self.args.plot[0]):
+                return True
+            if len(self.args.plot) > 1 and int(self.key) > int(
+                self.args.plot[1],
+            ):
+                return False
+            if existing(self.key):
+                self.plot_yes += 1
                 message = colorama.Fore.GREEN + "YES"
             else:
-                plot_no += 1
+                self.plot_no += 1
                 message = colorama.Fore.RED + "NO"
-            print(key, message + colorama.Fore.RESET)
-            continue
-        os_open(*existing(key), row[LINK_COL])
+            print(self.key, message + colorama.Fore.RESET)
+            return True
+
+        os_open(*existing(self.key), self.row[LINK_COL])
 
         while True:
-            # Force read a valid sense, or no sense at all.
-            g = existing(key)
-            utils.info("Data:")
-            utils.info("- Key:", key)
-            utils.info("- Link:", row[LINK_COL])
-            utils.info("- Existing:")
-            _pretty(g)
-            utils.info("- Downloads:")
-            _pretty(get_downloads(args))
-            utils.info("- Senses:")
-            _pretty(key_to_senses[key])
-            utils.info("- Sources:")
-            _pretty(sources)
-            print()
-            utils.info("Commands:")
-            utils.info(
-                "-",
-                "${URL}*",
-                "to download an image and store the URL as the source."
-                "The URLs will be categorized into image-URLs and non-image"
-                " URLs. The former will be retrieved, and the latter will"
-                " simply be stored as sources.",
-            )
-            utils.info("-", "key ${KEY}", "to point to a different key.")
-            utils.info(
-                "-",
-                "rm ${KEY}",
-                "to delete an image and its artifacts.",
-            )
-            utils.info(
-                "-",
-                "mv ${KEY_1} ${KEY_2}",
-                "to move an image and its artefacts.",
-            )
-            utils.info(
-                "-",
-                "cp ${KEY_1} ${KEY_2}",
-                "to copy an image and its artefacts.",
-            )
-            utils.info(
-                "-",
-                "clear [${KEY}]",
-                "to delete all images and artifacts belonging to the given"
-                " key, or the current key if none is specified.",
-            )
+            try:
+                if not self.prompt_for_command():
+                    return True
+            except Exception as e:
+                utils.error(e)
 
-            utils.info(
-                "-",
-                "convert ${KEY}",
-                "to (re)convert one image.",
-            )
-            utils.info(
-                "-",
-                "source ${SOURCE}",
-                "to populate the source for the only image in",
-                args.downloads,
-                "that is missing a source. Multiple URLs are allowed, in which"
-                " case all are recorded as sources for the said image.",
-            )
-            utils.info(
-                "-",
-                "source ${PATH} ${SOURCE}",
-                "to populate the source for a given image. Multiple URLs are"
-                " allowed, in which case all are recorded as sources for the"
-                " said image.",
-            )
-            utils.info("-", "s", "to skip.")
-            utils.info("-", "ss", "to force-skip.")
-            utils.info("-", "cs", "to clear sources.")
-            utils.info(
-                "-",
-                "${SENSE}",
-                "to assign a sense ID and initiate transfer.",
-            )
-            print()
-            utils.info("Queries:")
-            utils.info(
-                "-",
-                "[g|b|free|flat|wing|vec|wiki] ${QUERY}",
-                "to search",
-                "Google / Bing / Freepik / UXWing / Flaticon / Vecteezy / Wikipedia",
-                "for the given query.",
-            )
-            utils.info(
-                "-",
-                "[gfree|gflat|gwing|gvec|gwiki] ${QUERY}",
-                "to search",
-                "Google",
-                "for the given query, restricting results to the given site.",
-            )
-            utils.info(
-                "-",
-                "[bfree|bflat|bwing|bvec|bwiki] ${QUERY}",
-                "to search",
-                "Bing",
-                "for the given query, restricting results to the given site.",
-            )
-            utils.info(
-                "-",
-                "[gicon|bicon] ${QUERY}",
-                "to search",
-                "Google/Bing",
-                "for the given query, restricting results to known icon-providing sites.",
-            )
-            print()
-            command = input()
-            command = command.strip()
-            if not command:
-                continue
-            split = utils.split(command)
-            command, params = split[0].lower(), split[1:]
-            del split
+    def prompt_for_command(self) -> bool:
+        """
+        Ret:
+            True if you should continue, False if you should stop.
+        """
+        self.print_info()
 
-            if command == "s":
-                # S for skip!
-                files = get_downloads(args)
-                if files:
-                    utils.error(
-                        "You can't skip with a dirty downloads directory:",
-                        files,
-                    )
-                    continue
-                # We clear the sources!
-                # It's guaranteed that the downloads directory is clean.
-                sources.clear()
-                utils.info("Sources cleared!")
-                break
+        command = input()
+        command = command.strip()
+        if not command:
+            return True
+        split = utils.split(command)
+        command, params = split[0].lower(), split[1:]
+        del split
 
-            if command == "ss":
-                # Force skip!
-                break
+        if command == "s":
+            # S for skip!
+            files = get_downloads(self.args)
+            if files:
+                utils.throw(
+                    "You can't skip with a dirty downloads directory:",
+                    files,
+                )
+            # We clear the sources!
+            # It's guaranteed that the downloads directory is clean.
+            self.sources.clear()
+            utils.info("Sources cleared!")
+            return False
 
-            if command == "cs":
-                sources.clear()
-                utils.info("Sources cleared!")
-                continue
+        if command == "ss":
+            # Force skip!
+            return False
 
-            if command == "key":
-                for key in params:
-                    row = key_to_row[key]
-                    os_open(*existing(key), row[LINK_COL])
-                continue
+        if command == "cs":
+            self.sources.clear()
+            utils.info("Sources cleared!")
+            return True
 
-            if command == "convert":
-                for stem in params:
-                    convert(_stem_to_img_path(stem))
-                continue
+        if command == "key":
+            for key in params:
+                row = self.key_to_row[key]
+                os_open(*existing(key), row[LINK_COL])
+            return True
 
-            if command == "source":
-                files = [p for p in params if not p.startswith("http")] or [
-                    f for f in get_downloads(args) if f not in sources
-                ]
-                if len(files) != 1:
-                    utils.error(
-                        "We can only assign sources to 1 file, got:",
-                        files,
-                    )
-                    continue
-                params = [p for p in params if p.startswith("http")]
-                if not params:
-                    utils.error("No source given!")
-                    continue
-                sources[files[0]] = sum(infer_urls(*params), [])
-                continue
+        if command == "convert":
+            for stem in params:
+                convert(_stem_to_img_path(stem))
+            return True
 
-            if command in QUERIERS_FMT:
-                query = " ".join(params)
-                for fmt in QUERIERS_FMT[command]:
-                    os_open(fmt.format(query=query))
-                continue
-
-            if command == "rm":
-                try:
-                    rm(*params)
-                except Exception as e:
-                    utils.error(e)
-                continue
-
-            if command == "cp":
-                try:
-                    cp(*params)
-                except Exception as e:
-                    utils.error(e)
-                continue
-
-            if command == "mv":
-                try:
-                    mv(*params)
-                except Exception as e:
-                    utils.error(e)
-                continue
-
-            if command == "clear":
-                if len(params) > 1:
-                    raise ValueError("Too many arguments!")
-                try:
-                    clear(params[0] if params else key)
-                except Exception as e:
-                    utils.error(e)
-                continue
-
-            if command.startswith("http"):
-                reference, download = infer_urls(command, *params)
-                for url in download:
-                    path = retrieve(args, url)
-                    if not path:
-                        continue
-                    sources[path] = reference + [url]
-                continue
-
-            if not command.isdigit():
-                utils.error("Can't make sense of", command)
-                continue
-
-            sense = int(command)
-            if sense <= 0:
-                utils.error("Sense must be a positive integer, got:", sense)
-                continue
-
-            files = get_downloads(args)
-
-            # Force valid extension.
-            invalid = [
-                e for e in map(utils.ext, files) if e not in VALID_EXTENSIONS
+        if command == "source":
+            files = [p for p in params if not p.startswith("http")] or [
+                f for f in get_downloads(self.args) if f not in self.sources
             ]
-            if invalid:
-                utils.error(
-                    "Invalid extensions:",
-                    invalid,
-                    "Add them to the list if you're sure your script can"
-                    " process them.",
+            if len(files) != 1:
+                utils.throw(
+                    "We can only assign sources to 1 file, got:",
+                    files,
                 )
-                continue
+            params = [p for p in params if p.startswith("http")]
+            if not params:
+                utils.throw("No source given!")
+            self.sources[files[0]] = sum(infer_urls(*params), [])
+            return True
 
-            # Force size.
-            invalid = invalid_size(files)
-            if invalid:
-                utils.error("Images have an invalid size:", invalid)
-                continue
+        if command in QUERIERS_FMT:
+            query = " ".join(params)
+            for fmt in QUERIERS_FMT[command]:
+                os_open(fmt.format(query=query))
+            return True
 
-            # Force sources.
-            absent_source = False
-            for file in files:
-                if file not in sources:
-                    utils.error("Please populate the source for:", file)
-                    absent_source = True
-            if absent_source:
-                continue
+        if command == "rm":
+            rm(*params)
+            return True
 
-            # If there are no files, we assume that the user doesn't want to
-            # add pictures for this word. (Unless they typed a sense, in which
-            # case it would be weird!)
-            if not files:
-                utils.error(
-                    "You typed a sense, but there are no pictures! This"
-                    " doesn't make sense!",
-                )
-                continue
+        if command == "cp":
+            cp(*params)
+            return True
 
-            # Verify the images.
-            i = ""
-            move = False
-            while True:
-                os_open(*files)
-                i = input("Looks good? (y/n)").lower()
-                files = get_downloads(args)
-                if i in ["y", "yes"]:
-                    move = True
-                    break
-                if i in ["n", "no"]:
-                    move = False
-                    break
+        if command == "mv":
+            mv(*params)
+            return True
 
-            if not move:
-                continue
+        if command == "clear":
+            if params:
+                for p in params:
+                    clear(p)
+            else:
+                clear(self.key)
+            return True
 
-            # Move the files.
-            idx = get_max_idx(existing(key), str(key), str(sense))
-            for file in files:
-                idx += 1
-                ext = utils.ext(file)
-                new_file = os.path.join(IMG_DIR, f"{key}-{sense}-{idx}{ext}")
-                pathlib.Path(file).rename(new_file)
-                convert(new_file)
-                utils.write("\n".join(sources[file]), get_source(new_file))
-    if plot_yes or plot_no:
-        print(
-            colorama.Fore.GREEN + str(plot_yes) + colorama.Fore.RESET,
-            colorama.Fore.RED + str(plot_no) + colorama.Fore.RESET,
-        )
+        if command.startswith("http"):
+            reference, download = infer_urls(command, *params)
+            for url in download:
+                path = retrieve(self.args, url)
+                if not path:
+                    continue
+                self.sources[path] = reference + [url]
+            return True
+
+        if not command.isdigit():
+            utils.throw("Can't make sense of", command)
+
+        sense = int(command)
+        if sense <= 0:
+            utils.throw("Sense must be a positive integer, got:", sense)
+
+        files = get_downloads(self.args)
+
+        # Force valid extension.
+        invalid = [
+            e for e in map(utils.ext, files) if e not in VALID_EXTENSIONS
+        ]
+        if invalid:
+            utils.throw(
+                "Invalid extensions:",
+                invalid,
+                "Add them to the list if you're sure your script can"
+                " process them.",
+            )
+
+        # Force size.
+        invalid = invalid_size(files)
+        if invalid:
+            utils.throw("Images have an invalid size:", invalid)
+
+        # Force sources.
+        for file in files:
+            if file not in self.sources:
+                utils.throw("Please populate the source for:", file)
+
+        # If there are no files, we assume that the user doesn't want to
+        # add pictures for this word. (Unless they typed a sense, in which
+        # case it would be weird!)
+        if not files:
+            utils.throw(
+                "You typed a sense, but there are no pictures! This"
+                " doesn't make sense!",
+            )
+
+        # Verify the images.
+        i = ""
+        move = False
+        while True:
+            os_open(*files)
+            i = input("Looks good? (y/n)").lower()
+            files = get_downloads(self.args)
+            if i in ["y", "yes"]:
+                move = True
+                break
+            if i in ["n", "no"]:
+                move = False
+                break
+
+        if not move:
+            return True
+
+        # Move the files.
+        idx = get_max_idx(existing(self.key), str(self.key), str(sense))
+        for file in files:
+            idx += 1
+            ext = utils.ext(file)
+            new_file = os.path.join(IMG_DIR, f"{self.key}-{sense}-{idx}{ext}")
+            pathlib.Path(file).rename(new_file)
+            convert(new_file)
+            utils.write("\n".join(self.sources[file]), get_source(new_file))
+
+        return True
 
 
 def batch(args):
