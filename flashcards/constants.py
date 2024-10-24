@@ -12,6 +12,8 @@ HOME = "https://remnqymi.com"
 CRUM_ROOT = f"{HOME}/crum"
 EMAIL = "remnqymi@gmail.com"
 
+KELLIA_PREFIX = "https://coptic-dictionary.org/entry.cgi?tla="
+
 INTEGER_RE = re.compile("([0-9]+)")
 DICTIONARY_PAGE_RE = re.compile("([0-9]+(a|b))")
 COPTIC_WORD_RE = re.compile("([Ⲁ-ⲱϢ-ϯⳈⳉ]+)")
@@ -119,6 +121,7 @@ def crum(
         return sources[0] if sources else stem
 
     mother = _mother(roots_col)
+    step_mother = _step_mother()
     image_sensor = _sensor(
         roots_col("key")._content,
         root_appendix("senses", force=False)._content,
@@ -327,6 +330,19 @@ def crum(
                                 mother.gather,
                                 roots_col("key"),
                                 root_appendix("sisters", force=False),
+                            ),
+                            "</table>",
+                        ),
+                        field.aon(
+                            "<i>Greek: </i>",
+                            '<table class="sisters-table">',
+                            field.apl(
+                                step_mother.gather,
+                                roots_col("key"),
+                                root_appendix(
+                                    "TLA-sisters",
+                                    force=False,
+                                ),
                             ),
                             "</table>",
                         ),
@@ -659,6 +675,8 @@ class sister:
 
 
 class sister_with_frag:
+    HREF_FMT = CRUM_ROOT + "/{key}.html"
+
     def __init__(self, sister: sister, fragment: str) -> None:
         self.sister = sister
         self.fragment = fragment
@@ -675,8 +693,10 @@ class sister_with_frag:
             f'<tr id="sister{self.sister.key}" class="sister">'
             '<td class="sister-view">'
             f'<a href="{
-                CRUM_ROOT
-            }/{self.sister.key}.html{self.frag()}" target="_blank">'
+                self.HREF_FMT.format(
+                    key=self.sister.key
+                ) + self.frag()
+            }" target="_blank">'
             "view"
             "</a>"
             "</td>"
@@ -684,12 +704,7 @@ class sister_with_frag:
             f"{self.sister.title}"
             "</td>"
             '<td class="sister-meaning">'
-            "("
-            "<b>"
-            f"{self.sister.type}"
-            "</b>"
-            ")"
-            " "
+            f"{f"(<b>{self.sister.type}</b>) " if self.sister.type else ""}"
             f"{self.sister.meaning}"
             f'<span hidden="" class="dev sister-key right">'
             f"{self.sister.key}"
@@ -699,7 +714,13 @@ class sister_with_frag:
         )
 
 
+class step_sister_with_frag(sister_with_frag):
+    HREF_FMT = KELLIA_PREFIX + "{key}"
+
+
 class _mother:
+    with_frag: typing.Callable = sister_with_frag
+
     def __init__(self, roots_col: typing.Callable) -> None:
         keys = roots_col("key")._content
         titles = [
@@ -708,7 +729,7 @@ class _mother:
         ]
         meanings = roots_col("en-parsed", line_br=True, force=False)._content
         types = roots_col("type-parsed")._content
-        self.key_to_sister = {
+        self.key_to_sister: dict[str, sister] = {
             key: sister(key, title, meaning, _type)
             for key, title, meaning, _type in zip(
                 keys,
@@ -718,10 +739,10 @@ class _mother:
             )
         }
 
-    def parse(self, raw: str) -> sister_with_frag:
+    def parse(self, raw: str):
         assert raw
         split = raw.split()
-        return sister_with_frag(
+        return self.with_frag(
             self.key_to_sister[split[0]],
             " ".join(split[1:]),
         )
@@ -735,6 +756,42 @@ class _mother:
         assert key not in sister_keys
         assert len(set(sister_keys)) == len(sister_keys)
         return "\n".join(s.string() for s in sisters)
+
+
+class _step_mother(_mother):
+    with_frag: typing.Callable = step_sister_with_frag
+    ID_RE = re.compile(r'\bid="[^"]+"')
+
+    def clean_ids(self, html: str) -> str:
+        return self.ID_RE.sub("", html)
+
+    def _kellia_col(self, col_name: str) -> list[str]:
+        content = field.tsv(
+            "dictionary/kellia.uni-goettingen.de/data/output/tsv/comprehensive.tsv",
+            col_name,
+            line_br=True,
+        )._content
+        # NOTE: TLA sister elements possess IDs that are often identical, which
+        # we remove here in order to avoid having HTML element ID conflicts,
+        # given that, in this view, we can include several TLA entries in the
+        # same HTML page.
+        return list(map(self.clean_ids, content))
+
+    def __init__(self) -> None:
+        keys = self._kellia_col("entry_xml_id")
+        titles = [
+            line.replace("<br>", " ").replace("</br>", " ")
+            for line in self._kellia_col("orthstring-pishoy")
+        ]
+        meanings = self._kellia_col("merged-pishoy")
+        self.key_to_sister: dict[str, sister] = {
+            key: sister(key, title, meaning, "")
+            for key, title, meaning in zip(
+                keys,
+                titles,
+                meanings,
+            )
+        }
 
 
 class _sensor:
