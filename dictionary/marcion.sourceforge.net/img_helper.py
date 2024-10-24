@@ -128,6 +128,7 @@ argparser = argparse.ArgumentParser(
 )
 
 argparser.add_argument(
+    "-s",
     "--start",
     type=int,
     default=0,
@@ -135,6 +136,7 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
+    "-e",
     "--end",
     type=int,
     default=1000000000,
@@ -142,6 +144,7 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
+    "-x",
     "--exclude",
     type=str,
     nargs="*",
@@ -150,6 +153,7 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
+    "-d",
     "--downloads",
     type=str,
     default=os.path.join(os.path.expanduser("~"), "Desktop/"),
@@ -157,6 +161,7 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
+    "-i",
     "--ignore",
     type=str,
     nargs="*",
@@ -165,6 +170,7 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
+    "-k",
     "--skip_existing",
     type=bool,
     default=False,
@@ -188,6 +194,7 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
+    "-r",
     "--rm",
     type=str,
     default="",
@@ -195,6 +202,7 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
+    "-z",
     "--mv",
     type=str,
     default=[],
@@ -204,6 +212,7 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
+    "-c",
     "--cp",
     type=str,
     default=[],
@@ -213,6 +222,7 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
+    "-n",
     "--convert",
     type=str,
     default="",
@@ -220,6 +230,7 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
+    "-v",
     "--validate",
     default=False,
     action="store_true",
@@ -227,6 +238,7 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
+    "-b",
     "--batch",
     default=False,
     action="store_true",
@@ -239,14 +251,12 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
+    "-p",
     "--plot",
-    default=None,
-    type=int,
-    nargs="*",
+    default=False,
+    action="store_true",
     help="If given, plot a YES or NO for whether each included picture has an"
-    " image. If a number, use as the lower bound for the keys. If two numbers,"
-    " use as a lower and upper bound respectively. More than two arguments is"
-    " an error.",
+    " image.",
 )
 
 
@@ -376,11 +386,6 @@ def convert(path: str, skip_existing: bool = False) -> None:
 def main():
     args = argparser.parse_args()
     # Preprocess arguments.
-    if args.plot is not None and not args.plot:
-        # The user has used --plot without providing any bounds. We add a
-        # sentinel for our code to work with.
-        assert args.plot == []
-        args.plot = [0]
     actions: list = list(
         filter(
             None,
@@ -747,11 +752,9 @@ class prompter:
             return True
 
         if self.args.plot:
-            if int(self.key) < int(self.args.plot[0]):
+            if int(self.key) < int(self.args.start):
                 return True
-            if len(self.args.plot) > 1 and int(self.key) > int(
-                self.args.plot[1],
-            ):
+            if int(self.key) > int(self.args.end):
                 return False
             if existing(self.key):
                 self.plot_yes += 1
