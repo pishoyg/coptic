@@ -587,6 +587,13 @@ def existing(key: str) -> list[str]:
     return glob.glob(os.path.join(IMG_DIR, f"{key}-*"))
 
 
+def clear(key: str) -> None:
+    if not key.isdigit():
+        raise ValueError("We can only clear a word using a word key.")
+    for path in existing(key):
+        rm(utils.stem(path))
+
+
 def prompt(args):
     plot_yes: int = 0
     plot_no: int = 0
@@ -675,6 +682,13 @@ def prompt(args):
                 "cp ${KEY_1} ${KEY_2}",
                 "to copy an image and its artefacts.",
             )
+            utils.info(
+                "-",
+                "clear [${KEY}]",
+                "to delete all images and artifacts belonging to the given"
+                " key, or the current key if none is specified.",
+            )
+
             utils.info(
                 "-",
                 "convert ${KEY}",
@@ -817,6 +831,15 @@ def prompt(args):
             if command == "mv":
                 try:
                     mv(*params)
+                except Exception as e:
+                    utils.error(e)
+                continue
+
+            if command == "clear":
+                if len(params) > 1:
+                    raise ValueError("Too many arguments!")
+                try:
+                    clear(params[0] if params else key)
                 except Exception as e:
                     utils.error(e)
                 continue
