@@ -503,9 +503,23 @@ class HelpPanel {
 
     document.body.appendChild(panel);
 
+    // Create help button.
+    const footer = document.createElement('footer');
+    const help = document.createElement('span');
+    help.classList.add('link');
+    help.innerHTML = '<center>help</center>';
+    footer.appendChild(help);
+    document.body.appendChild(footer);
+    help.onclick = (event: MouseEvent) => {
+      this.togglePanel();
+      event.stopPropagation();
+    };
+
+    // A mouse click outside the panel closes it.
+    document.addEventListener('click', (event: MouseEvent) => { this.handleClick(event); } );
+
     this.panel = panel;
     this.overlay = overlay;
-    document.addEventListener('click', (event: MouseEvent) => { this.handleClick(event); } );
   }
 
   togglePanel(visible?: boolean) {
@@ -516,7 +530,6 @@ class HelpPanel {
 
   handleClick(event: MouseEvent) {
     if (this.panel.style.display === 'block' && !this.panel.contains(event.target as Node)) {
-      this.togglePanel(false);
       this.togglePanel(false);
     }
   }
