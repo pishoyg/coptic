@@ -405,6 +405,10 @@ function scroll(id: string): void {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 }
 
+// TODO: (#276) The help panel logic is duplicated between this and
+// site/crum.ts. Figure out a way to use a common source. In the meantime,
+// manually keep them in sync.
+// BEGIN duplicated code.
 class Section {
   readonly title: string;
   readonly commands: Record<string, string>;
@@ -497,7 +501,7 @@ class HelpPanel {
 
     this.panel = panel;
     this.overlay = overlay;
-    document.addEventListener('click', this.handleClick);
+    document.addEventListener('click', (event: MouseEvent) => { this.handleClick(event); } );
   }
 
   togglePanel(visible?: boolean) {
@@ -513,6 +517,10 @@ class HelpPanel {
     }
   }
 }
+// TODO: (#276) The help panel logic is duplicated between this and
+// site/crum.ts. Figure out a way to use a common source. In the meantime,
+// manually keep them in sync.
+// END duplicated code.
 
 const helpPanel = new HelpPanel([new Section('Commands', {
   r: 'Reset highlighting',

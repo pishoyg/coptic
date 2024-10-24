@@ -1,3 +1,7 @@
+// TODO: (#276) The help panel logic is duplicated between this and
+// flashcards/constants/a_coptic_dictionary/script.ts. Figure out a way to use a
+// common source. In the meantime, manually keep them in sync.
+// BEGIN duplicated code.
 class Section {
   readonly title: string;
   readonly commands: Record<string, string>;
@@ -110,6 +114,10 @@ class HelpPanel {
     }
   }
 }
+// TODO: (#276) The help panel logic is duplicated between this and
+// flashcards/constants/a_coptic_dictionary/script.ts. Figure out a way to use a
+// common source. In the meantime, manually keep them in sync.
+// END duplicated code.
 
 const sheet = window.document.styleSheets[0]!;
 
