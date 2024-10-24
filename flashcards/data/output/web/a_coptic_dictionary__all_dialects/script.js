@@ -377,9 +377,21 @@ window.addEventListener('load', () => {
       panel.appendChild(closeButton);
       sections.forEach((s) => { panel.appendChild(s.createSection()); });
       document.body.appendChild(panel);
+      // Create help button.
+      const footer = document.createElement('footer');
+      const help = document.createElement('span');
+      help.classList.add('link');
+      help.innerHTML = '<center>help</center>';
+      footer.appendChild(help);
+      document.body.appendChild(footer);
+      help.onclick = (event) => {
+        this.togglePanel();
+        event.stopPropagation();
+      };
+      // A mouse click outside the panel closes it.
+      document.addEventListener('click', (event) => { this.handleClick(event); });
       this.panel = panel;
       this.overlay = overlay;
-      document.addEventListener('click', (event) => { this.handleClick(event); });
     }
     togglePanel(visible) {
       const target = visible !== undefined ? (visible ? 'block' : 'none') : (this.panel.style.display === 'block' ? 'none' : 'block');
@@ -388,7 +400,6 @@ window.addEventListener('load', () => {
     }
     handleClick(event) {
       if (this.panel.style.display === 'block' && !this.panel.contains(event.target)) {
-        this.togglePanel(false);
         this.togglePanel(false);
       }
     }
