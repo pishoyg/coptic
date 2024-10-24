@@ -186,7 +186,7 @@ const panel = new HelpPanel([
     f: 'Sf: Sahidic with <strong>F</strong>ayyumic tendency',
     s: 'sA: <strong>s</strong>ubAkhmimic (Lycopolitan)',
     b: 'Fb: Fayyumic with <strong>B</strong>ohairic tendency',
-    k: 'Ak: Old Coptic<strong></strong>', // Don't highlight anything!
+    k: 'Ak: Old Coptic',
     M: 'Mesokemic',
     L: 'Lycopolitan (subAkhmimic)',
     P: 'Proto-Theban',
@@ -202,12 +202,12 @@ const panel = new HelpPanel([
   new Section('Scrol To', {
     'C': 'Crum',
     'K': 'KELLIA',
-    'T': 'copticsite',
+    'T': 'copticsi<strong>t</strong>e',
   }),
   new Section('Collapse', {
     'c': 'Crum',
     'l': 'KELLIA',
-    't': 'copticsite',
+    't': 'copticsi<strong>t</strong>e',
   }),
 ]);
 document.addEventListener('keyup', (e) => {
