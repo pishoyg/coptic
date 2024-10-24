@@ -22,8 +22,15 @@ GSPREAD_SCOPE = [
 ]
 
 
-def _print(color, severity, recolor, *args, suppress: bool = False):
-    print(
+def _print(
+    color,
+    severity,
+    recolor,
+    *args,
+    suppress: bool = False,
+    throw: bool = False,
+):
+    message: str = (
         colorama.Style.DIM
         + color
         + ("" if suppress else severity.capitalize() + ": ")
@@ -33,26 +40,69 @@ def _print(color, severity, recolor, *args, suppress: bool = False):
                 (recolor if idx % 2 else color) + str(arg)
                 for idx, arg in enumerate(args)
             ],
-        ),
+        )
+        + colorama.Style.RESET_ALL
     )
-    print(colorama.Style.RESET_ALL, end="")
+    if throw:
+        raise Exception(message)
+    else:
+        print(message)
 
 
 def info(*args):
+    """Log an informational message."""
     _print(colorama.Fore.GREEN, "info", colorama.Fore.BLUE, *args)
 
 
 def warn(*args):
+    """Log a warning."""
     _print(colorama.Fore.YELLOW, "warn", colorama.Fore.CYAN, *args)
 
 
 def error(*args):
+    """Log an error."""
     _print(colorama.Fore.RED, "error", colorama.Fore.MAGENTA, *args)
 
 
+def err(cond, *args):
+    """If the condition is not satisfied, log an error."""
+    if not cond:
+        error(*args)
+
+
+def throw(*args):
+    """Throw an exception."""
+    _print(
+        colorama.Fore.RED,
+        "error",
+        colorama.Fore.MAGENTA,
+        *args,
+        throw=True,
+    )
+
+
+def ass(cond, *args):
+    """Assert!
+
+    If the condition is not satisfied, throw an error.
+    """
+    if not cond:
+        throw(*args)
+
+
 def fatal(*args):
+    """Log an error and exit with a nonzero status!"""
     _print(colorama.Fore.RED, "fatal", colorama.Fore.MAGENTA, *args)
     exit(1)
+
+
+def assass(cond, *args):
+    """Assassinate.
+
+    If a condition is not satisfied, exit with a nonzero status.
+    """
+    if not cond:
+        fatal(*args)
 
 
 def write(
