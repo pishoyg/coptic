@@ -539,7 +539,7 @@ const helpPanel = new HelpPanel([new Section('Commands', {
   N: 'NH: Nag Hammadi',
   a: 'Sa: Sahidic with Akhmimic tendency',
   f: 'Sf: Sahidic with Fayyumic tendency',
-  s: 'sA: Subakhmimic (Lycopolitan)',
+  s: 'sA: subAkhmimic (Lycopolitan)',
   b: 'Fb: Fayyumic with Bohairic tendency',
 }), new Section('Scroll To', {
   C: 'Crum pages',
