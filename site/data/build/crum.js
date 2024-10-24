@@ -1,6 +1,102 @@
 'use strict';
+// TODO: (#276) The help panel logic is duplicated between this and
+// flashcards/constants/a_coptic_dictionary/script.ts. Figure out a way to use a
+// common source. In the meantime, manually keep them in sync.
+// BEGIN duplicated code.
+class Section {
+  constructor(title, commands) {
+    this.title = title;
+    this.commands = commands;
+  }
+  createSection() {
+    const div = document.createElement('div');
+    const title = document.createElement('h2');
+    title.textContent = this.title;
+    div.appendChild(title);
+    const table = document.createElement('table');
+    // Add styles to ensure the left column is 10% of the width
+    table.style.width = '100%'; // Make the table take 100% of the container width
+    table.style.borderCollapse = 'collapse'; // Optional: to collapse the borders
+    // Iterate over the entries in the record
+    Object.entries(this.commands).forEach(([key, value]) => {
+      // Create a row for each entry
+      const row = document.createElement('tr');
+      // Create a cell for the key (left column)
+      const keyCell = document.createElement('td');
+      const code = document.createElement('code');
+      code.textContent = key;
+      keyCell.appendChild(code);
+      keyCell.style.width = '10%'; // Set the width of the left column to 10%
+      keyCell.style.border = '1px solid black'; // Optional: Add a border for visibility
+      keyCell.style.padding = '8px'; // Optional: Add padding
+      // Create a cell for the value (right column)
+      const valueCell = document.createElement('td');
+      valueCell.innerHTML = this.highlightFirstOccurrence(key, value);
+      valueCell.style.width = '90%'; // Set the width of the right column to 90%
+      valueCell.style.border = '1px solid black'; // Optional: Add a border for visibility
+      valueCell.style.padding = '8px'; // Optional: Add padding
+      // Append cells to the row
+      row.appendChild(keyCell);
+      row.appendChild(valueCell);
+      // Append the row to the table
+      table.appendChild(row);
+    });
+    div.appendChild(table);
+    return div;
+  }
+  highlightFirstOccurrence(char, str) {
+    if (str.includes('<strong>')) {
+      // Already highlighted.
+      return str;
+    }
+    const index = str.toLowerCase().indexOf(char.toLowerCase());
+    if (index === -1) {
+      return str;
+    }
+    return `${str.slice(0, index)}<strong>${str[index]}</strong>${str.slice(index + 1)}`;
+  }
+}
+class HelpPanel {
+  constructor(sections) {
+    // Create overlay background.
+    const overlay = document.createElement('div');
+    overlay.className = 'overlay-background';
+    overlay.style.display = 'none'; // Hidden by default.
+    document.body.appendChild(overlay);
+    // Create info panel.
+    const panel = document.createElement('div');
+    panel.className = 'info-panel';
+    panel.style.display = 'none'; // Hidden by default.
+    const closeButton = document.createElement('button');
+    closeButton.className = 'close-btn';
+    closeButton.innerHTML = '&times;'; // HTML entity for '×'.
+    closeButton.onclick = () => { this.togglePanel(); };
+    panel.appendChild(closeButton);
+    sections.forEach((s) => { panel.appendChild(s.createSection()); });
+    document.body.appendChild(panel);
+    this.panel = panel;
+    this.overlay = overlay;
+    document.addEventListener('click', (event) => { this.handleClick(event); });
+  }
+  togglePanel(visible) {
+    const target = visible !== undefined ? (visible ? 'block' : 'none') : (this.panel.style.display === 'block' ? 'none' : 'block');
+    this.panel.style.display = target;
+    this.overlay.style.display = target;
+  }
+  handleClick(event) {
+    if (this.panel.style.display === 'block' && !this.panel.contains(event.target)) {
+      this.togglePanel(false);
+      this.togglePanel(false);
+    }
+  }
+}
+// TODO: (#276) The help panel logic is duplicated between this and
+// flashcards/constants/a_coptic_dictionary/script.ts. Figure out a way to use a
+// common source. In the meantime, manually keep them in sync.
+// END duplicated code.
 const sheet = window.document.styleSheets[0];
 const HOME = 'http://remnqymi.com/';
+const EMAIL = 'mailto:remnqymi@gmail.com';
 const spellingRuleIndex = sheet.cssRules.length;
 const undialectedRuleIndex = sheet.cssRules.length + 1;
 const punctuationRuleIndex = sheet.cssRules.length + 2;
@@ -71,6 +167,49 @@ const dialectSingleChar = {
   'b': 'Fb',
   'k': 'Ak',
 };
+const panel = new HelpPanel([
+  new Section('Commands', {
+    r: 'Reset highlighting',
+    d: 'Developer mode',
+    e: 'Email <a class="contact" href="mailto:remnqymi@gmail.com">remnqymi@gmail.com</a>',
+    h: 'Go to homepage',
+    '?': 'Toggle help panel',
+  }),
+  new Section('Dialect Highlighting', {
+    B: 'Bohairic',
+    S: 'Sahidic',
+    A: 'Akhmimic',
+    F: 'Fayyumic',
+    O: 'Old Coptic',
+    N: 'NH: Nag Hammadi',
+    a: 'Sa: Sahidic with <strong>A</strong>khmimic tendency',
+    f: 'Sf: Sahidic with Fayyumic tendency',
+    s: 'sA: subAkhmimic (Lycopolitan)',
+    b: 'Fb: Fayyumic with Bohairic tendency',
+    k: 'Old Coptic',
+    M: 'Mesokemic',
+    L: 'Lycopolitan (subAkhmimic)',
+    P: 'Proto-Theban',
+    V: 'South Fayyumic Greek',
+    W: 'Crypto-Mesokemic Greek',
+    U: 'Greek (usage <strong>u</strong>nclear)',
+  }),
+  new Section('Search', {
+    w: 'Toggle full word search',
+    x: 'Toggle regex search',
+    '/': 'Focus search box',
+  }),
+  new Section('Scrol To', {
+    'C': 'Crum',
+    'K': 'KELLIA',
+    'T': 'copticsite',
+  }),
+  new Section('Collapse', {
+    'c': 'Crum',
+    'l': 'KELLIA',
+    't': 'copticsite',
+  }),
+]);
 document.addEventListener('keyup', (e) => {
   switch (e.key) {
   // Commands:
@@ -80,14 +219,17 @@ document.addEventListener('keyup', (e) => {
   case 'd':
     localStorage.setItem('dev', localStorage.getItem('dev') === 'true' ? 'false' : 'true');
     break;
+  case 'e':
+    window.open(EMAIL, '_self');
+    break;
   case 'h':
     window.open(HOME, '_self');
     break;
   case '?':
-    togglePanel();
+    panel.togglePanel();
     break;
   case 'Escape':
-    togglePanel(false);
+    panel.togglePanel(false);
     break;
     // Search panel:
   case '/':
@@ -96,7 +238,7 @@ document.addEventListener('keyup', (e) => {
   case 'w':
     click('fullWordCheckbox');
     break;
-  case 'e':
+  case 'x':
     click('regexCheckbox');
     break;
     // Dialects:
@@ -148,8 +290,4 @@ function click(id) {
 }
 function focus(id) {
   document.getElementById(id)?.focus();
-}
-function togglePanel(visible) {
-  // TODO: (#274) Implement!
-  console.log(visible);
 }
