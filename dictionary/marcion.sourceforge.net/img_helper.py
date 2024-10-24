@@ -582,6 +582,11 @@ def infer_urls(*urls: str) -> tuple[list[str], list[str]]:
     return reference, download
 
 
+def existing(key: str) -> list[str]:
+    assert key.isdigit()
+    return glob.glob(os.path.join(IMG_DIR, f"{key}-*"))
+
+
 def prompt(args):
     plot_yes: int = 0
     plot_no: int = 0
@@ -612,10 +617,7 @@ def prompt(args):
         if any(row[k] == v for k, v in exclude.items()):
             continue
 
-        def existing() -> list[str]:
-            return glob.glob(os.path.join(IMG_DIR, f"{key}-*"))
-
-        if args.skip_existing and existing():
+        if args.skip_existing and existing(key):
             continue
 
         if args.plot:
@@ -623,7 +625,7 @@ def prompt(args):
                 continue
             if len(args.plot) > 1 and int(key) > int(args.plot[1]):
                 break
-            if existing():
+            if existing(key):
                 plot_yes += 1
                 message = colorama.Fore.GREEN + "YES"
             else:
@@ -631,11 +633,11 @@ def prompt(args):
                 message = colorama.Fore.RED + "NO"
             print(key, message + colorama.Fore.RESET)
             continue
-        os_open(*existing(), row[LINK_COL])
+        os_open(*existing(key), row[LINK_COL])
 
         while True:
             # Force read a valid sense, or no sense at all.
-            g = existing()
+            g = existing(key)
             utils.info("Data:")
             utils.info("- Key:", key)
             utils.info("- Link:", row[LINK_COL])
@@ -767,7 +769,7 @@ def prompt(args):
             if command == "key":
                 for key in params:
                     row = key_to_row[key]
-                    os_open(*existing(), row[LINK_COL])
+                    os_open(*existing(key), row[LINK_COL])
                 continue
 
             if command == "convert":
@@ -895,7 +897,7 @@ def prompt(args):
                 continue
 
             # Move the files.
-            idx = get_max_idx(existing(), str(key), str(sense))
+            idx = get_max_idx(existing(key), str(key), str(sense))
             for file in files:
                 idx += 1
                 ext = utils.ext(file)
