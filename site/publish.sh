@@ -39,7 +39,7 @@ while [ $# -gt 0 ]; do
     ;;
   --help|-h|*)
     echo -e "${GREEN}--clean ${BLUE}(${GREEN}-C${BLUE}) CLEANES uncommitted changes from the site repo.${RESET}"
-    echo -e "${GREEN}--build ${BLUE}(${GREEN}-B${BLUE}) regenerates the site in the site repo.${RESET}"
+    echo -e "${GREEN}--build ${BLUE}(${GREEN}-b${BLUE}) regenerates the site in the site repo.${RESET}"
     echo -e "${GREEN}--commit ${BLUE}(${GREEN}-c${BLUE}) creates a commit.${RESET}"
     echo -e "${GREEN}--push ${BLUE}(${GREEN}-p${BLUE}) pushes the commit to the repo.${RESET}"
     echo -e "${BLUE}You can use any combination of flags that you want.${RESET}"
