@@ -464,6 +464,10 @@ class Section {
   }
 
   highlightFirstOccurrence(char: string, str: string): string {
+    if (str.includes('<strong>')) {
+      // Already highlighted.
+      return str;
+    }
     const index = str.toLowerCase().indexOf(char.toLowerCase());
     if (index === -1) {
       return str;
@@ -536,11 +540,11 @@ const helpPanel = new HelpPanel([new Section('Commands', {
   A: 'Akhmimic',
   F: 'Fayyumic',
   O: 'Old Coptic',
-  N: 'NH: Nag Hammadi',
-  a: 'Sa: Sahidic with Akhmimic tendency',
-  f: 'Sf: Sahidic with Fayyumic tendency',
-  s: 'sA: subAkhmimic (Lycopolitan)',
-  b: 'Fb: Fayyumic with Bohairic tendency',
+  N: 'NH: <strong>N</strong>ag Hammadi',
+  a: 'Sa: Sahidic with <strong>A</strong>khmimic tendency',
+  f: 'Sf: Sahidic with <strong>F</strong>ayyumic tendency',
+  s: 'sA: <strong>s</strong>ubAkhmimic (Lycopolitan)',
+  b: 'Fb: Fayyumic with <strong>B</strong>ohairic tendency',
 }), new Section('Scroll To', {
   C: 'Crum pages',
   D: 'Dawoud pages',
