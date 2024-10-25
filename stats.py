@@ -10,11 +10,26 @@ COLUMNS: dict[str | None, list[str]] = {
     # We ignore the following fields, but we have to include them nevertheless
     # to appease our tests.
     None: [
+        # Timestamps
         "date",
         "timestamp",
+        # Disk usage
         "disk_usage",
         "disk_usage_human",
+        # The number of contributors is quite stable!
         "num_contributors",
+        # Noisy code statistics.
+        "foc",
+        "loc",
+        "loc_archive",
+        # Noise Crum statistics.
+        "crum_sisters_sum",
+        "crum_antonyms_sum",
+        "crum_dawoud_sum",
+        "crum_greek_sisters_sum",
+        "crum_homonyms_sum",
+        "crum_img_sum",
+        "crum_root_senses_sum",
     ],
     "Crum Fixes": [
         # The following Crum fields are not expected to be populated for every
@@ -31,22 +46,14 @@ COLUMNS: dict[str | None, list[str]] = {
         # The following Crum fields are ones that we seek to populated for most
         # entries.
         "crum_antonyms",
-        "crum_antonyms_sum",
         "crum_dawoud",
-        "crum_dawoud_sum",
         "crum_greek_sisters",
-        "crum_greek_sisters_sum",
         "crum_homonyms",
-        "crum_homonyms_sum",
         "crum_img",
-        "crum_img_sum",
         "crum_root_senses",
-        "crum_root_senses_sum",
         "crum_sisters",
-        "crum_sisters_sum",
     ],
     "Files of Code per Language": [
-        "foc",
         "foc_css",
         "foc_dot",
         "foc_html",
@@ -64,7 +71,6 @@ COLUMNS: dict[str | None, list[str]] = {
     ],
     "Lines of code per Language": [
         # Lines of code, broken by language.
-        "loc",
         "loc_css",
         "loc_dot",
         "loc_html",
@@ -82,8 +88,6 @@ COLUMNS: dict[str | None, list[str]] = {
     ],
     "Lines of Code per Project": [
         # Lines of code, broken by project.
-        "loc",
-        "loc_archive",
         "loc_bible",
         "loc_copticsite",
         "loc_crum",
@@ -102,15 +106,28 @@ COLUMNS: dict[str | None, list[str]] = {
 
 
 def validate(df: pd.DataFrame) -> None:
-    available = set(df.columns)
-    included = set(sum(COLUMNS.values(), []))
-    if available != included:
+    available: set[str] = set(df.columns)
+    included: set[str] = set(
+        sum([COLUMNS[key] for key in COLUMNS if key is not None], []),
+    )
+    excluded: set[str] = set(COLUMNS[None])
+    if available != (included | excluded):
         utils.fatal(
             "Absent columns:",
             available - included,
             "Extra columns",
             included - available,
         )
+    dupe = included & excluded
+    if dupe:
+        utils.fatal(
+            "The following elements are marked as excluded although they are used:",
+            dupe,
+        )
+    del dupe
+    for key, columns in COLUMNS.items():
+        if not columns:
+            utils.fatal(key, "is empty!")
 
 
 def main():
