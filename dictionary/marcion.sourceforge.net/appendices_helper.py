@@ -367,24 +367,16 @@ class _matriarch:
         """
         huis: house = house(row[KEY_COL], row[col])
         added, updated = huis.marry(spouses)
-        if added:
-            utils.info(
-                "Adding",
-                "; ".join(m.string() for m in added),
-                "to",
-                huis.key,
-                "/",
-                col,
-            )
-        elif updated:
-            utils.info(
-                "Updating",
-                "; ".join(m.string() for m in updated),
-                "in",
-                huis.key,
-                "/",
-                col,
-            )
+        if added or updated:
+            args: list[str] = []
+            if added:
+                args.extend(["Adding", "; ".join(m.string() for m in added)])
+            if updated:
+                args.extend(
+                    ["Updating", "; ".join(m.string() for m in updated)],
+                )
+            args.extend(["in", huis.key, "/", col])
+            utils.info(*args)
         elif huis.string() != huis.ancestors_raw:
             utils.info("Reformatting", huis.key, "/", col)
         else:
