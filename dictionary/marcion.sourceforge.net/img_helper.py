@@ -1,10 +1,4 @@
 #!/usr/bin/env python3
-# NOTE: About errors: Much of the logic is now wrapped inside a `try-except`
-# block. Exceptions work well with that, but not assertions because they don't
-# have error messages! Assertion errors are often not visible or not visible
-# enough! Consider replacing them with an exception so you will have a
-# meaningful error message, or exiting with a non-zero status if that is the
-# desired behavior.
 import argparse
 import glob
 import json
@@ -771,6 +765,19 @@ class prompter:
             try:
                 if not self.prompt_for_command():
                     return True
+            # Rethrowing assertion errors is desirable. Assertions have a
+            # different use case than other types of exceptions, as they are
+            # meant to flag errors that never happen, rather than errors that
+            # happen occasionally. We use assertions for sanity checks or code
+            # invariants, while we use exceptions for user input errors and the
+            # like. The former (assertion) category isn't expected!
+            # Another point is that most assertions don't have error messages
+            # associated with them, so they aren't informative when caught.
+            # Exiting the program upon encountering an assertion is a way to
+            # flag their presence to us so we will replace them with exceptions
+            # that have meaningful error messages.
+            except AssertionError as e:
+                raise e
             except Exception as e:
                 utils.error(e)
 
