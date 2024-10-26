@@ -7,20 +7,23 @@
 // pages belonging to individual notes. We use the `XOOXLE` global variable to
 // distinguish the two. In the Xooxle page, `XOOXLE` is defined and set to
 // `true`.
-declare let XOOXLE: boolean;
+declare const XOOXLE: boolean;
 function xooxle(): boolean {
   return typeof XOOXLE !== 'undefined' && XOOXLE;
 }
 
-declare let ANKI: boolean;
+declare const ANKI: boolean;
 function anki(): boolean {
   return typeof ANKI !== 'undefined' && ANKI;
 }
 
-const HOME = 'http://remnqymi.com/';
-const SEARCH = 'http://remnqymi.com/crum';
-const EMAIL = 'mailto:remnqymi@gmail.com';
-const LOOKUP_URL_PREFIX = 'https://remnqymi.com/crum/?query=';
+const HOME = 'http://remnqymi.com';
+const SEARCH = `${HOME}/crum`;
+const LOOKUP_URL_PREFIX = `${SEARCH}/?query=`;
+
+const EMAIL = 'remnqymi@gmail.com';
+const EMAIL_LINK = `mailto:${EMAIL}`;
+
 const DAWOUD_OFFSET = 16;
 
 const DIALECTS: readonly string[] = [
@@ -150,6 +153,7 @@ class Highlighter {
     this.sheet!.insertRule(rule, index);
   }
 }
+
 const highlighter = new Highlighter();
 
 function window_open(url: string | null, external = true): void {
@@ -229,9 +233,7 @@ Array.prototype.forEach.call(
     el.classList.add('link');
     el.onclick = (): void => {
       window_open(
-        `https://remnqymi.com/dawoud/${(
-          +el.innerHTML + DAWOUD_OFFSET
-        ).toString()}.jpg`,
+        `${HOME}/dawoud/${(+el.innerHTML + DAWOUD_OFFSET).toString()}.jpg`,
       );
     };
   },
@@ -245,10 +247,7 @@ Array.prototype.forEach.call(
     el = el.children[0]! as HTMLElement;
     el.classList.add('link');
     el.onclick = (): void => {
-      window_open(
-        `https://remnqymi.com/dawoud/${(
-          +el.getAttribute('alt')! + DAWOUD_OFFSET
-        ).toString()}.jpg`,
+      window_open(`${HOME}/dawoud/${(+el.getAttribute('alt')! + DAWOUD_OFFSET).toString()}.jpg`,
       );
     };
   },
@@ -394,17 +393,24 @@ Array.prototype.forEach.call(
 
 // Handle 'reset' class.
 function reset(event: Event): void {
-  localStorage.clear();
   dialectCheckboxes.forEach((box) => { box.checked = false; });
-  if (anki()) {
-    highlighter.update();
-  } else {
-    const url = new URL(window.location.href);
+  const url = new URL(window.location.href);
+  if (url.hash) {
     url.hash = '';
     window.history.replaceState('', '', url.toString());
-    window.location.reload();
-    // In case his comes from the reset button in XOOXLE, prevent clicking the
-    // button from submitting the form, thus resetting everything!
+    // Reload to get rid of the highlighting caused by the hash, if any.
+    // This fails on some Anki platforms!
+    try {
+      window.location.reload();
+    } catch { /* Do nothing. */ }
+  }
+
+  localStorage.clear();
+  highlighter.update();
+
+  if (xooxle()) {
+    // In case this event comes from the reset button in XOOXLE, prevent
+    // clicking the button from submitting the form, thus resetting everything!
     event.preventDefault();
   }
 }
@@ -611,12 +617,12 @@ function makeHelpPanel(): HelpPanel {
   const commands: Record<string, string> = {
     r: 'Reset highlighting',
     d: 'Developer mode',
-    e: 'Email <a class="contact" href="mailto:remnqymi@gmail.com">remnqymi@gmail.com</a>',
-    h: 'Go to homepage',
+    e: `Email <a class="contact" href="${EMAIL_LINK}">${EMAIL}</a>`,
+    h: 'Open homepage',
+    X: 'Open the dictionary search page',
     '?': 'Toggle help panel',
   };
   if (!xooxle()) {
-    commands['X'] = 'Go to the dictionary search page';
     commands['n'] = 'Go to next word';
     commands['p'] = 'Go to previous word';
   }
@@ -705,13 +711,13 @@ document.addEventListener('keyup', (e: KeyboardEvent) => {
     highlighter.updateDev();
     break;
   case 'e':
-    window_open(EMAIL);
+    window_open(EMAIL_LINK);
     break;
   case 'h':
     window_open(HOME);
     break;
   case 'X':
-    if (!xooxle()) window_open(SEARCH);
+    window_open(SEARCH);
     break;
   case 'n':
     window_open(getLinkHrefByRel('next'), false);
