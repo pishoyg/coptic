@@ -6,10 +6,11 @@ window.addEventListener('load', () => {
   function anki() {
     return typeof ANKI !== 'undefined' && ANKI;
   }
-  const HOME = 'http://remnqymi.com/';
-  const SEARCH = 'http://remnqymi.com/crum';
-  const EMAIL = 'mailto:remnqymi@gmail.com';
-  const LOOKUP_URL_PREFIX = 'https://remnqymi.com/crum/?query=';
+  const HOME = 'http://remnqymi.com';
+  const SEARCH = `${HOME}/crum`;
+  const LOOKUP_URL_PREFIX = `${SEARCH}/?query=`;
+  const EMAIL = 'remnqymi@gmail.com';
+  const EMAIL_LINK = `mailto:${EMAIL}`;
   const DAWOUD_OFFSET = 16;
   const DIALECTS = [
   // Crum dialects.
@@ -32,6 +33,17 @@ window.addEventListener('load', () => {
     'W',
     'U',
   ];
+  // DIALECT_SINGLE_CHAR is a mapping for the dialects that have shortcuts other
+  // than their codes. If the shortcut to toggle a dialect is not the same as its
+  // code, it should be included in this record.
+  const DIALECT_SINGLE_CHAR = {
+    'N': 'NH',
+    'a': 'Sa',
+    'f': 'Sf',
+    's': 'sA',
+    'b': 'Fb',
+    'k': 'Ak',
+  };
   class Highlighter {
     constructor() {
       this.anki = anki();
@@ -107,7 +119,6 @@ window.addEventListener('load', () => {
   }
   Highlighter.BRIGHT = '1.0';
   Highlighter.DIM = '0.3';
-  const highlighter = new Highlighter();
   function window_open(url, external = true) {
     if (!url) {
       return;
@@ -147,92 +158,6 @@ window.addEventListener('load', () => {
     }
     return pageNumber;
   }
-  // Handle 'crum-page' class.
-  Array.prototype.forEach.call(document.getElementsByClassName('crum-page'), (el) => {
-    const pageNumber = el.innerHTML;
-    el.classList.add('link');
-    makeLink(el, `#crum${chopColumn(pageNumber)}`);
-  });
-  // Handle 'crum-page-external' class.
-  Array.prototype.forEach.call(document.getElementsByClassName('crum-page-external'), (el) => {
-    el.classList.add('link');
-    el.onclick = () => {
-      window_open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.innerHTML}`);
-    };
-  });
-  // Handle 'dawoud-page-external' class.
-  Array.prototype.forEach.call(document.getElementsByClassName('dawoud-page-external'), (el) => {
-    el.classList.add('link');
-    el.onclick = () => {
-      window_open(`https://remnqymi.com/dawoud/${(+el.innerHTML + DAWOUD_OFFSET).toString()}.jpg`);
-    };
-  });
-  // Handle 'dawoud-page-img' class.
-  Array.prototype.forEach.call(document.getElementsByClassName('dawoud-page-img'), (el) => {
-  // TODO: (#202) Eliminate the dependency on the HTML structure.
-    el = el.children[0];
-    el.classList.add('link');
-    el.onclick = () => {
-      window_open(`https://remnqymi.com/dawoud/${(+el.getAttribute('alt') + DAWOUD_OFFSET).toString()}.jpg`);
-    };
-  });
-  // Handle 'crum-page-img' class.
-  Array.prototype.forEach.call(document.getElementsByClassName('crum-page-img'), (el) => {
-  // TODO: (#202) Eliminate the dependency on the HTML structure.
-    el = el.children[0];
-    el.classList.add('link');
-    el.onclick = () => {
-      window_open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.getAttribute('alt')}`);
-    };
-  });
-  // Handle 'explanatory' class.
-  Array.prototype.forEach.call(document.getElementsByClassName('explanatory'), (el) => {
-  // TODO: (#202) Eliminate the dependency on the HTML structure.
-    const img = el.children[0];
-    const alt = img.getAttribute('alt');
-    if (!alt.startsWith('http')) {
-      return;
-    }
-    img.classList.add('link');
-    img.onclick = () => {
-      window_open(alt);
-    };
-  });
-  // Handle 'coptic' class.
-  Array.prototype.forEach.call(document.getElementsByClassName('coptic'), (el) => {
-    el.classList.add('hover-link');
-    el.onclick = () => {
-      window_open(LOOKUP_URL_PREFIX + el.innerHTML);
-    };
-  });
-  // Handle 'greek' class.
-  Array.prototype.forEach.call(document.getElementsByClassName('greek'), (el) => {
-    el.classList.add('link');
-    el.classList.add('light');
-    el.onclick = () => {
-      window_open(`https://logeion.uchicago.edu/${el.innerHTML}`);
-    };
-  });
-  // Handle 'dawoud-page' class.
-  Array.prototype.forEach.call(document.getElementsByClassName('dawoud-page'), (el) => {
-    el.classList.add('link');
-    makeLink(el, `#dawoud${chopColumn(el.innerHTML)}`);
-  });
-  // Handle 'drv-key' class.
-  Array.prototype.forEach.call(document.getElementsByClassName('drv-key'), (el) => {
-    el.classList.add('small', 'light', 'italic', 'hover-link');
-    makeLink(el, `#drv${el.innerHTML}`);
-  });
-  // Handle 'explanatory-key' class.
-  Array.prototype.forEach.call(document.getElementsByClassName('explanatory-key'), (el) => {
-    el.classList.add('hover-link');
-    makeLink(el, `#explanatory${el.innerHTML}`);
-  });
-  // Handle 'sister-key' class.
-  Array.prototype.forEach.call(document.getElementsByClassName('sister-key'), (el) => {
-    el.classList.add('hover-link');
-    makeLink(el, `#sister${el.innerHTML}`);
-  });
   // Handle 'dialect' class.
   function activeDialects() {
     const d = localStorage.getItem('d');
@@ -249,49 +174,33 @@ window.addEventListener('load', () => {
       dd.add(toggle);
     }
     localStorage.setItem('d', Array.from(dd).join(','));
-    highlighter.updateDialects();
   }
-  Array.prototype.forEach.call(document.getElementsByClassName('dialect'), (el) => {
-    el.classList.add('hover-link');
-    el.onclick = () => {
-      toggleDialect(el.innerHTML);
-    };
-  });
   // Handle 'developer' and 'dev' classes.
   function toggleDev() {
     localStorage.setItem('dev', localStorage.getItem('dev') === 'true' ? 'false' : 'true');
   }
-  Array.prototype.forEach.call(document.getElementsByClassName('developer'), (el) => {
-    el.classList.add('link');
-    el.onclick = () => {
-      toggleDev();
-      highlighter.updateDev();
-    };
-  });
   // Handle 'reset' class.
-  function reset(event) {
-    localStorage.clear();
+  function reset(dialectCheckboxes, highlighter, event) {
     dialectCheckboxes.forEach((box) => { box.checked = false; });
-    if (anki()) {
-      highlighter.update();
-    }
-    else {
-      const url = new URL(window.location.href);
+    const url = new URL(window.location.href);
+    if (url.hash) {
       url.hash = '';
       window.history.replaceState('', '', url.toString());
-      window.location.reload();
-      // In case his comes from the reset button in XOOXLE, prevent clicking the
-      // button from submitting the form, thus resetting everything!
+      // Reload to get rid of the highlighting caused by the hash, if any.
+      // This fails on some Anki platforms!
+      try {
+        window.location.reload();
+      }
+      catch { /* Do nothing. */ }
+    }
+    localStorage.clear();
+    highlighter.update();
+    if (xooxle()) {
+    // In case this event comes from the reset button in XOOXLE, prevent
+    // clicking the button from submitting the form, thus resetting everything!
       event.preventDefault();
     }
   }
-  // NOTE: The `reset` class is only used in the notes pages.
-  Array.prototype.forEach.call(document.getElementsByClassName('reset'), (el) => {
-    el.classList.add('link');
-    el.onclick = reset;
-  });
-  // NOTE: The element with the ID `reset` is only present on the XOOXLE page.
-  document.getElementById('reset')?.addEventListener('click', reset);
   function getLinkHrefByRel(rel) {
     const linkElement = document.querySelector(`link[rel="${rel}"]`);
     return linkElement instanceof HTMLLinkElement ? linkElement.href : null;
@@ -398,58 +307,16 @@ window.addEventListener('load', () => {
       }
     }
   }
-  const dialectCheckboxes = document.querySelectorAll('.dialect-checkbox');
-  // When we first load the page, 'd' dictates the set of active dialects and
-  // hence highlighting. We load 'd' from the local storage, and we update the
-  // boxes to match this set. Then we update the CSS.
-  window.addEventListener('pageshow', () => {
-    const active = activeDialects();
-    Array.from(dialectCheckboxes).forEach((box) => {
-      box.checked = active?.includes(box.name) ?? false;
-    });
-    highlighter.update();
-  });
-  // When we click a checkbox, it is the boxes that dictate the set of active
-  // dialects and highlighting. So we use the boxes to update 'd', and then
-  // update highlighting.
-  dialectCheckboxes.forEach(checkbox => {
-    checkbox.addEventListener('click', () => {
-      localStorage.setItem('d', Array.from(dialectCheckboxes)
-        .filter((box) => box.checked)
-        .map((box) => box.name).join(','));
-      highlighter.updateDialects();
-    });
-  });
-  // Collapse logic.
-  Array.prototype.forEach.call(document.getElementsByClassName('collapse'), (collapse) => {
-    collapse.addEventListener('click', function () {
-    // TODO: Remove the dependency on the HTML structure.
-      const collapsible = collapse.nextElementSibling;
-      collapsible.style.maxHeight = collapsible.style.maxHeight ? '' : collapsible.scrollHeight.toString() + 'px';
-    });
-    collapse.click();
-  });
-  // DIALECT_SINGLE_CHAR is a mapping for the dialects that have shortcuts other
-  // than their codes. If the shortcut to toggle a dialect is not the same as its
-  // code, it should be included in this record.
-  const DIALECT_SINGLE_CHAR = {
-    'N': 'NH',
-    'a': 'Sa',
-    'f': 'Sf',
-    's': 'sA',
-    'b': 'Fb',
-    'k': 'Ak',
-  };
   function makeHelpPanel() {
     const commands = {
       r: 'Reset highlighting',
       d: 'Developer mode',
-      e: 'Email <a class="contact" href="mailto:remnqymi@gmail.com">remnqymi@gmail.com</a>',
-      h: 'Go to homepage',
+      e: `Email <a class="contact" href="${EMAIL_LINK}">${EMAIL}</a>`,
+      h: 'Open homepage',
+      X: 'Open the dictionary search page',
       '?': 'Toggle help panel',
     };
     if (!xooxle()) {
-      commands['X'] = 'Go to the dictionary search page';
       commands['n'] = 'Go to next word';
       commands['p'] = 'Go to previous word';
     }
@@ -509,149 +376,294 @@ window.addEventListener('load', () => {
     }
     return new HelpPanel(sections);
   }
-  // The help panel is irrelevant in Anki because there is no keyboard. It's also,
-  // generally, much less relevant on mobile!
-  const panel = anki() ? null : makeHelpPanel();
-  document.addEventListener('keyup', (e) => {
-    if (anki()) {
-    // Keyboard shortcuts are problematic on Anki Desktop, because it has its
-    // own shortcuts! They also don't work properly for some reason!
-    // They are irrelevant on mobile, because there is no keyboard.
-      return;
-    }
-    switch (e.key) {
-    // Commands:
-    case 'r':
-      reset(e);
-      break;
-    case 'd':
-      toggleDev();
-      highlighter.updateDev();
-      break;
-    case 'e':
-      window_open(EMAIL);
-      break;
-    case 'h':
-      window_open(HOME);
-      break;
-    case 'X':
-      if (!xooxle())
-        window_open(SEARCH);
-      break;
-    case 'n':
-      window_open(getLinkHrefByRel('next'), false);
-      break;
-    case 'p':
-      window_open(getLinkHrefByRel('prev'), false);
-      break;
-    case '?':
-      panel?.togglePanel();
-      break;
-    case 'Escape':
-      panel?.togglePanel(false);
-      break;
-    // Search panel:
-    case '/':
-      focus('searchBox');
-      break;
-    case 'w':
-      click('fullWordCheckbox');
-      break;
-    case 'x':
-      click('regexCheckbox');
-      break;
-    // Dialects:
-    case 'B':
-    case 'S':
-    case 'A':
-    case 'F':
-    case 'O':
-    case 'N':
-    case 'a':
-    case 'f':
-    case 's':
-    case 'b':
-    case 'k':
-    case 'M':
-    case 'L':
-    case 'P':
-    case 'V':
-    case 'W':
-    case 'U':
-      if (xooxle()) {
-        click(`checkbox-${DIALECT_SINGLE_CHAR[e.key] ?? e.key}`);
-      }
-      else {
-        toggleDialect(DIALECT_SINGLE_CHAR[e.key] ?? e.key);
-        highlighter.updateDialects();
-      }
-      break;
-    // Scrolling and collapsing:
-    case 'C':
-      if (xooxle()) {
-        scroll('crum-title');
-      }
-      else {
-        scroll('crum');
-      }
-      break;
-    case 'K':
-      scroll('kellia-title');
-      break;
-    case 'T':
-      scroll('copticsite-title');
-      break;
-    case 'c':
-      if (xooxle()) {
-        click('crum-title');
-      }
-      else {
-        scroll('dictionary');
-      }
-      break;
-    case 'l':
-      if (xooxle()) {
-        click('kellia-title');
-      }
-      else {
-        scroll('sisters');
-      }
-      break;
-    case 't':
-      if (xooxle()) {
-        click('copticsite-title');
-      }
-      else {
-        scroll('root-type');
-      }
-      break;
-    case 'D':
-      scroll('dawoud');
-      break;
-    case 'm':
-      scroll('meaning');
-      break;
-    case 'i':
-      scroll('images');
-      break;
-    case 'Q':
-      scroll('marcion');
-      break;
-    case 'q':
-      scroll('pretty');
-      break;
-    case 'v':
-      scroll('derivations');
-      break;
-    case 'u':
-      scroll('header');
-      break;
-    }
-  });
   function click(id) {
     document.getElementById(id)?.click();
   }
   function focus(id) {
     document.getElementById(id)?.focus();
   }
+  function main() {
+    const highlighter = new Highlighter();
+    // The help panel is irrelevant in Anki because there is no keyboard. It's
+    // also, generally, much less relevant on mobile!
+    const panel = anki() ? null : makeHelpPanel();
+    const dialectCheckboxes = document.querySelectorAll('.dialect-checkbox');
+    // Handle 'crum-page' class.
+    Array.prototype.forEach.call(document.getElementsByClassName('crum-page'), (el) => {
+      const pageNumber = el.innerHTML;
+      el.classList.add('link');
+      makeLink(el, `#crum${chopColumn(pageNumber)}`);
+    });
+    // Handle 'crum-page-external' class.
+    Array.prototype.forEach.call(document.getElementsByClassName('crum-page-external'), (el) => {
+      el.classList.add('link');
+      el.onclick = () => {
+        window_open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.innerHTML}`);
+      };
+    });
+    // Handle 'dawoud-page-external' class.
+    Array.prototype.forEach.call(document.getElementsByClassName('dawoud-page-external'), (el) => {
+      el.classList.add('link');
+      el.onclick = () => {
+        window_open(`${HOME}/dawoud/${(+el.innerHTML + DAWOUD_OFFSET).toString()}.jpg`);
+      };
+    });
+    // Handle 'dawoud-page-img' class.
+    Array.prototype.forEach.call(document.getElementsByClassName('dawoud-page-img'), (el) => {
+    // TODO: (#202) Eliminate the dependency on the HTML structure.
+      el = el.children[0];
+      el.classList.add('link');
+      el.onclick = () => {
+        window_open(`${HOME}/dawoud/${(+el.getAttribute('alt') + DAWOUD_OFFSET).toString()}.jpg`);
+      };
+    });
+    // Handle 'crum-page-img' class.
+    Array.prototype.forEach.call(document.getElementsByClassName('crum-page-img'), (el) => {
+    // TODO: (#202) Eliminate the dependency on the HTML structure.
+      el = el.children[0];
+      el.classList.add('link');
+      el.onclick = () => {
+        window_open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.getAttribute('alt')}`);
+      };
+    });
+    // Handle 'explanatory' class.
+    Array.prototype.forEach.call(document.getElementsByClassName('explanatory'), (el) => {
+    // TODO: (#202) Eliminate the dependency on the HTML structure.
+      const img = el.children[0];
+      const alt = img.getAttribute('alt');
+      if (!alt.startsWith('http')) {
+        return;
+      }
+      img.classList.add('link');
+      img.onclick = () => {
+        window_open(alt);
+      };
+    });
+    // Handle 'coptic' class.
+    Array.prototype.forEach.call(document.getElementsByClassName('coptic'), (el) => {
+      el.classList.add('hover-link');
+      el.onclick = () => {
+        window_open(LOOKUP_URL_PREFIX + el.innerHTML);
+      };
+    });
+    // Handle 'greek' class.
+    Array.prototype.forEach.call(document.getElementsByClassName('greek'), (el) => {
+      el.classList.add('link');
+      el.classList.add('light');
+      el.onclick = () => {
+        window_open(`https://logeion.uchicago.edu/${el.innerHTML}`);
+      };
+    });
+    // Handle 'dawoud-page' class.
+    Array.prototype.forEach.call(document.getElementsByClassName('dawoud-page'), (el) => {
+      el.classList.add('link');
+      makeLink(el, `#dawoud${chopColumn(el.innerHTML)}`);
+    });
+    // Handle 'drv-key' class.
+    Array.prototype.forEach.call(document.getElementsByClassName('drv-key'), (el) => {
+      el.classList.add('small', 'light', 'italic', 'hover-link');
+      makeLink(el, `#drv${el.innerHTML}`);
+    });
+    // Handle 'explanatory-key' class.
+    Array.prototype.forEach.call(document.getElementsByClassName('explanatory-key'), (el) => {
+      el.classList.add('hover-link');
+      makeLink(el, `#explanatory${el.innerHTML}`);
+    });
+    // Handle 'sister-key' class.
+    Array.prototype.forEach.call(document.getElementsByClassName('sister-key'), (el) => {
+      el.classList.add('hover-link');
+      makeLink(el, `#sister${el.innerHTML}`);
+    });
+    Array.prototype.forEach.call(document.getElementsByClassName('dialect'), (el) => {
+      el.classList.add('hover-link');
+      el.onclick = () => {
+        toggleDialect(el.innerHTML);
+        highlighter.updateDialects();
+      };
+    });
+    Array.prototype.forEach.call(document.getElementsByClassName('developer'), (el) => {
+      el.classList.add('link');
+      el.onclick = () => {
+        toggleDev();
+        highlighter.updateDev();
+      };
+    });
+    // NOTE: The `reset` class is only used in the notes pages.
+    Array.prototype.forEach.call(document.getElementsByClassName('reset'), (el) => {
+      el.classList.add('link');
+      el.onclick = (event) => {
+        reset(dialectCheckboxes, highlighter, event);
+      };
+    });
+    // NOTE: The element with the ID `reset` is only present on the XOOXLE page.
+    document.getElementById('reset')?.addEventListener('click', (event) => {
+      reset(dialectCheckboxes, highlighter, event);
+    });
+    // When we first load the page, 'd' dictates the set of active dialects and
+    // hence highlighting. We load 'd' from the local storage, and we update the
+    // boxes to match this set. Then we update the CSS.
+    window.addEventListener('pageshow', () => {
+      const active = activeDialects();
+      Array.from(dialectCheckboxes).forEach((box) => {
+        box.checked = active?.includes(box.name) ?? false;
+      });
+      highlighter.update();
+    });
+    // When we click a checkbox, it is the boxes that dictate the set of active
+    // dialects and highlighting. So we use the boxes to update 'd', and then
+    // update highlighting.
+    dialectCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('click', () => {
+        localStorage.setItem('d', Array.from(dialectCheckboxes)
+          .filter((box) => box.checked)
+          .map((box) => box.name).join(','));
+        highlighter.updateDialects();
+      });
+    });
+    // Collapse logic.
+    Array.prototype.forEach.call(document.getElementsByClassName('collapse'), (collapse) => {
+      collapse.addEventListener('click', function () {
+      // TODO: Remove the dependency on the HTML structure.
+        const collapsible = collapse.nextElementSibling;
+        collapsible.style.maxHeight = collapsible.style.maxHeight ? '' : collapsible.scrollHeight.toString() + 'px';
+      });
+      collapse.click();
+    });
+    document.addEventListener('keyup', (e) => {
+      if (anki()) {
+      // Keyboard shortcuts are problematic on Anki Desktop, because it has its
+      // own shortcuts! They also don't work properly for some reason!
+      // They are irrelevant on mobile, because there is no keyboard.
+        return;
+      }
+      switch (e.key) {
+      // Commands:
+      case 'r':
+        reset(dialectCheckboxes, highlighter, e);
+        break;
+      case 'd':
+        toggleDev();
+        highlighter.updateDev();
+        break;
+      case 'e':
+        window_open(EMAIL_LINK);
+        break;
+      case 'h':
+        window_open(HOME);
+        break;
+      case 'X':
+        window_open(SEARCH);
+        break;
+      case 'n':
+        window_open(getLinkHrefByRel('next'), false);
+        break;
+      case 'p':
+        window_open(getLinkHrefByRel('prev'), false);
+        break;
+      case '?':
+        panel?.togglePanel();
+        break;
+      case 'Escape':
+        panel?.togglePanel(false);
+        break;
+      // Search panel:
+      case '/':
+        focus('searchBox');
+        break;
+      case 'w':
+        click('fullWordCheckbox');
+        break;
+      case 'x':
+        click('regexCheckbox');
+        break;
+      // Dialects:
+      case 'B':
+      case 'S':
+      case 'A':
+      case 'F':
+      case 'O':
+      case 'N':
+      case 'a':
+      case 'f':
+      case 's':
+      case 'b':
+      case 'k':
+      case 'M':
+      case 'L':
+      case 'P':
+      case 'V':
+      case 'W':
+      case 'U':
+        if (xooxle()) {
+          click(`checkbox-${DIALECT_SINGLE_CHAR[e.key] ?? e.key}`);
+        }
+        else {
+          toggleDialect(DIALECT_SINGLE_CHAR[e.key] ?? e.key);
+          highlighter.updateDialects();
+        }
+        break;
+      // Scrolling and collapsing:
+      case 'C':
+        if (xooxle()) {
+          scroll('crum-title');
+        }
+        else {
+          scroll('crum');
+        }
+        break;
+      case 'K':
+        scroll('kellia-title');
+        break;
+      case 'T':
+        scroll('copticsite-title');
+        break;
+      case 'c':
+        if (xooxle()) {
+          click('crum-title');
+        }
+        else {
+          scroll('dictionary');
+        }
+        break;
+      case 'l':
+        if (xooxle()) {
+          click('kellia-title');
+        }
+        else {
+          scroll('sisters');
+        }
+        break;
+      case 't':
+        if (xooxle()) {
+          click('copticsite-title');
+        }
+        else {
+          scroll('root-type');
+        }
+        break;
+      case 'D':
+        scroll('dawoud');
+        break;
+      case 'm':
+        scroll('meaning');
+        break;
+      case 'i':
+        scroll('images');
+        break;
+      case 'Q':
+        scroll('marcion');
+        break;
+      case 'q':
+        scroll('pretty');
+        break;
+      case 'v':
+        scroll('derivations');
+        break;
+      case 'u':
+        scroll('header');
+        break;
+      }
+    });
+  }
+  main();
 });
