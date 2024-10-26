@@ -76,7 +76,7 @@ window.addEventListener('load', () => {
         this.updateDevNoSheet(display);
         return;
       }
-      this.addOrReplaceRule(this.devRuleIndex, `.dev {display: ${display};}`);
+      this.addOrReplaceRule(this.devRuleIndex, `.dev, .nag-hammadi {display: ${display};}`);
     }
     updateDialectsNoSheet(active) {
       if (active === null) {
@@ -106,7 +106,7 @@ window.addEventListener('load', () => {
       });
     }
     updateDevNoSheet(display) {
-      document.querySelectorAll('.dev,.nag-hammadi').forEach((el) => {
+      document.querySelectorAll('.dev, .nag-hammadi').forEach((el) => {
         el.style.display = display;
       });
     }
@@ -141,14 +141,6 @@ window.addEventListener('load', () => {
     el.parentNode?.replaceChild(copy, el);
   }
   function makeLink(el, target) {
-    if (anki()) {
-    // Moving elements doesn't work on Anki, for some reason!
-      el.onclick = () => {
-        const external = !target.startsWith('#');
-        window_open(target, external);
-      };
-      return;
-    }
     moveElement(el, 'a', { 'href': target });
   }
   function chopColumn(pageNumber) {
@@ -384,8 +376,13 @@ window.addEventListener('load', () => {
   }
   function main() {
     const highlighter = new Highlighter();
-    // The help panel is irrelevant in Anki because there is no keyboard. It's
-    // also, generally, much less relevant on mobile!
+    // We disable the help panel on Anki for the following reasons:
+    // - There is no keyboard on mobile.
+    // - Many of the shortcuts simply don't work, for some reason.
+    // - Anki on macOS (and possibly on other platforms) has its own shortcuts,
+    //   which conflict with ours!
+    // - Elements created by the panel logic (such as the `help` footer) were
+    //   found to be duplicated on some Anki platforms!
     const panel = anki() ? null : makeHelpPanel();
     const dialectCheckboxes = document.querySelectorAll('.dialect-checkbox');
     // Handle 'crum-page' class.
@@ -531,9 +528,7 @@ window.addEventListener('load', () => {
     });
     document.addEventListener('keyup', (e) => {
       if (anki()) {
-      // Keyboard shortcuts are problematic on Anki Desktop, because it has its
-      // own shortcuts! They also don't work properly for some reason!
-      // They are irrelevant on mobile, because there is no keyboard.
+      // The help panel and keyboard shortcuts are disabled on Anki!
         return;
       }
       switch (e.key) {
