@@ -478,8 +478,13 @@ function focus(id: string): void {
 function main() {
 
   const highlighter = new Highlighter();
-  // The help panel is irrelevant in Anki because there is no keyboard. It's
-  // also, generally, much less relevant on mobile!
+  // We disable the help panel on Anki for the following reasons:
+  // - There is no keyboard on mobile.
+  // - Many of the shortcuts simply don't work, for some reason.
+  // - Anki on macOS (and possibly on other platforms) has its own shortcuts,
+  //   which conflict with ours!
+  // - Elements created by the panel logic (such as the `help` footer) were
+  //   found to be duplicated on some Anki platforms!
   const panel: HelpPanel | null = anki() ? null : makeHelpPanel();
   const dialectCheckboxes = document.querySelectorAll<HTMLInputElement>(
     '.dialect-checkbox');
@@ -704,9 +709,7 @@ function main() {
 
   document.addEventListener('keyup', (e: KeyboardEvent) => {
     if (anki()) {
-      // Keyboard shortcuts are problematic on Anki Desktop, because it has its
-      // own shortcuts! They also don't work properly for some reason!
-      // They are irrelevant on mobile, because there is no keyboard.
+      // The help panel and keyboard shortcuts are disabled on Anki!
       return;
     }
 
