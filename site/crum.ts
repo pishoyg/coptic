@@ -12,6 +12,11 @@ function xooxle(): boolean {
   return typeof XOOXLE !== 'undefined' && XOOXLE;
 }
 
+declare let ANKI: boolean;
+function anki(): boolean {
+  return typeof ANKI !== 'undefined' && ANKI;
+}
+
 const HOME = 'http://remnqymi.com/';
 const SEARCH = 'http://remnqymi.com/crum';
 const EMAIL = 'mailto:remnqymi@gmail.com';
@@ -40,6 +45,113 @@ const DIALECTS: readonly string[] = [
   'U',
 ];
 
+class Highlighter {
+  // Sheets are problematic on Anki, for some reason! We update the elements
+  // individually instead!
+  private readonly anki: boolean;
+  private readonly sheet: CSSStyleSheet | null;
+  private readonly spellingRuleIndex: number;
+  private readonly undialectedRuleIndex: number;
+  private readonly punctuationRuleIndex: number;
+  private readonly devRuleIndex: number;
+
+  private static readonly BRIGHT = '1.0';
+  private static readonly DIM = '0.3';
+
+  constructor() {
+    this.anki = anki();
+    this.sheet = this.anki ? null : window.document.styleSheets[0]!;
+    this.spellingRuleIndex = this.sheet?.cssRules.length ?? 0;
+    this.undialectedRuleIndex = (this.sheet?.cssRules.length ?? 0) + 1;
+    this.punctuationRuleIndex = (this.sheet?.cssRules.length ?? 0) + 2;
+    this.devRuleIndex = (this.sheet?.cssRules.length ?? 0) + 3;
+  }
+
+  update(): void {
+    this.updateDialects();
+    this.updateDev();
+  }
+
+  updateDialects(): void {
+    const active = activeDialects();
+    if (this.anki) {
+      this.updateDialectsNoSheet(active);
+      return;
+    }
+
+    const query: string | null = active?.map((d) => `.${d}`).join(',') ?? '';
+    this.addOrReplaceRule(
+      this.spellingRuleIndex,
+      query
+        ? `.spelling:not(${query}), .dialect:not(${query}) {opacity: ${Highlighter.DIM};}`
+        : `.spelling, .dialect {opacity: ${String(active === null ? Highlighter.BRIGHT : Highlighter.DIM)};}`);
+    this.addOrReplaceRule(
+      this.undialectedRuleIndex,
+      `.spelling:not(${DIALECTS.map((d) => `.${d}`).join(',')}) { opacity: ${String(active === null || query ? Highlighter.BRIGHT : Highlighter.DIM)}; }`);
+    this.addOrReplaceRule(
+      this.punctuationRuleIndex,
+      `.dialect-parenthesis, .dialect-comma, .spelling-comma, .type { opacity: ${String(active === null ? Highlighter.BRIGHT : Highlighter.DIM)}; }`);
+  }
+
+  updateDev(): void {
+    const display = localStorage.getItem('dev') === 'true' ? 'block' : 'none';
+    if (this.anki) {
+      this.updateDevNoSheet(display);
+      return;
+    }
+    this.addOrReplaceRule(this.devRuleIndex, `.dev {display: ${display};}`);
+  }
+
+  private updateDialectsNoSheet(active: string[] | null): void {
+    if (active === null) {
+      // Highlighting is off. Show everything.
+      document.querySelectorAll<HTMLElement>('.spelling, .dialect, .dialect-parenthesis, .dialect-comma, .spelling-comma, .type').forEach(
+        (el: HTMLElement) => {
+          el.style.opacity = Highlighter.BRIGHT;
+        }
+      );
+      return;
+    }
+
+    // Update spelling highlighting.
+    document.querySelectorAll<HTMLElement>('.spelling, .dialect').forEach(
+      (el: HTMLElement) => {
+        let opacity: string = Highlighter.DIM;
+        if (active.some((d) => el.classList.contains(d))) {
+          opacity = Highlighter.BRIGHT;
+        } else if (
+          active.length > 1 &&
+          !DIALECTS.some((d: string) => el.classList.contains(d))) {
+          // If the element has no dialects, it should be shown provided that at
+          // least one dialect is active.
+          opacity = Highlighter.BRIGHT;
+        }
+
+        el.style.opacity = opacity;
+      });
+
+    // Update punctuation highlighting.
+    document.querySelectorAll<HTMLElement>('.dialect-parenthesis, .dialect-comma, .spelling-comma, .type').forEach(
+      (el: HTMLElement) => {
+        el.style.opacity = Highlighter.DIM;
+      });
+  }
+  private updateDevNoSheet(display: string): void {
+    document.querySelectorAll<HTMLElement>('.dev,.nag-hammadi').forEach(
+      (el: HTMLElement) => {
+        el.style.display = display;
+      });
+  }
+
+  private addOrReplaceRule(index: number, rule: string) {
+    if (index < this.sheet!.cssRules.length) {
+      this.sheet!.deleteRule(index);
+    }
+    this.sheet!.insertRule(rule, index);
+  }
+}
+const highlighter = new Highlighter();
+
 function window_open(url: string | null, external = true): void {
   if (!url) {
     return;
@@ -67,6 +179,18 @@ function moveElement(
   el.parentNode?.replaceChild(copy, el);
 }
 
+function makeLink(el: HTMLElement, target: string): void {
+  if (anki()) {
+    // Moving elements doesn't work on Anki, for some reason!
+    el.onclick = () => {
+      const external = !target.startsWith('#');
+      window_open(target, external);
+    };
+    return;
+  }
+  moveElement(el, 'a', { 'href': target });
+}
+
 function chopColumn(pageNumber: string): string {
   const lastChar = pageNumber.slice(pageNumber.length - 1);
   if (lastChar === 'a' || lastChar === 'b') {
@@ -79,9 +203,9 @@ function chopColumn(pageNumber: string): string {
 Array.prototype.forEach.call(
   document.getElementsByClassName('crum-page'),
   (el: HTMLElement): void => {
-    el.classList.add('link');
     const pageNumber: string = el.innerHTML;
-    moveElement(el, 'a', { href: `#crum${chopColumn(pageNumber)}` });
+    el.classList.add('link');
+    makeLink(el, `#crum${chopColumn(pageNumber)}`);
   },
 );
 
@@ -192,7 +316,7 @@ Array.prototype.forEach.call(
   document.getElementsByClassName('dawoud-page'),
   (el: HTMLElement): void => {
     el.classList.add('link');
-    moveElement(el, 'a', { href: `#dawoud${chopColumn(el.innerHTML)}` });
+    makeLink(el, `#dawoud${chopColumn(el.innerHTML)}`);
   },
 );
 
@@ -201,7 +325,7 @@ Array.prototype.forEach.call(
   document.getElementsByClassName('drv-key'),
   (el: HTMLElement): void => {
     el.classList.add('small', 'light', 'italic', 'hover-link');
-    moveElement(el, 'a', { href: `#drv${el.innerHTML}` });
+    makeLink(el, `#drv${el.innerHTML}` );
   },
 );
 
@@ -210,7 +334,7 @@ Array.prototype.forEach.call(
   document.getElementsByClassName('explanatory-key'),
   (el: HTMLElement): void => {
     el.classList.add('hover-link');
-    moveElement(el, 'a', { href: `#explanatory${el.innerHTML}` });
+    makeLink(el, `#explanatory${el.innerHTML}` );
   },
 );
 
@@ -219,20 +343,16 @@ Array.prototype.forEach.call(
   document.getElementsByClassName('sister-key'),
   (el: HTMLElement): void => {
     el.classList.add('hover-link');
-    moveElement(el, 'a', { href: `#sister${el.innerHTML}` });
+    makeLink(el, `#sister${el.innerHTML}` );
   },
 );
 
 // Handle 'dialect' class.
 function activeDialects(): string[] | null {
   const d = localStorage.getItem('d');
-  if (d === null) {
-    return null;
-  }
-  if (d === '') {
-    return [];
-  }
-  return d.split(',');
+  // NOTE: ''.split(',') returns [''], which is not what we want!
+  // The empty string requires special handling.
+  return d === '' ? [] : d?.split(',') ?? null;
 }
 
 function toggleDialect(toggle: string): void {
@@ -243,7 +363,7 @@ function toggleDialect(toggle: string): void {
     dd.add(toggle);
   }
   localStorage.setItem('d', Array.from(dd).join(','));
-  updateDialectCSS();
+  highlighter.updateDialects();
 }
 
 Array.prototype.forEach.call(
@@ -267,7 +387,7 @@ Array.prototype.forEach.call(
     el.classList.add('link');
     el.onclick = () => {
       toggleDev();
-      updateDevCSS();
+      highlighter.updateDev();
     };
   },
 );
@@ -276,17 +396,17 @@ Array.prototype.forEach.call(
 function reset(event: Event): void {
   localStorage.clear();
   dialectCheckboxes.forEach((box) => { box.checked = false; });
-  const url = new URL(window.location.href);
-  url.search = '';
-  url.hash = '';
-  window.history.replaceState('', '', url.toString());
-  window.location.reload();
-
-  updateDialectCSS();
-  updateDevCSS();
-  // In case his comes from the reset button in XOOXLE, prevent clicking the
-  // button from submitting the form, thus resetting everything!
-  event.preventDefault();
+  if (anki()) {
+    highlighter.update();
+  } else {
+    const url = new URL(window.location.href);
+    url.hash = '';
+    window.history.replaceState('', '', url.toString());
+    window.location.reload();
+    // In case his comes from the reset button in XOOXLE, prevent clicking the
+    // button from submitting the form, thus resetting everything!
+    event.preventDefault();
+  }
 }
 
 // NOTE: The `reset` class is only used in the notes pages.
@@ -311,9 +431,9 @@ function scroll(id: string): void {
 }
 
 class Section {
-  readonly title: string;
-  readonly commands: Record<string, string>;
-  public constructor(title: string, commands: Record<string, string>) {
+  private readonly title: string;
+  private readonly commands: Record<string, string>;
+  constructor(title: string, commands: Record<string, string>) {
     this.title = title;
     this.commands = commands;
   }
@@ -379,10 +499,10 @@ class Section {
 };
 
 class HelpPanel {
+  private readonly overlay: HTMLDivElement;
+  private readonly panel: HTMLDivElement;
 
-  readonly overlay: HTMLDivElement;
-  readonly panel: HTMLDivElement;
-  public constructor(sections: Section[]) {
+  constructor(sections: Section[]) {
     // Create overlay background.
     const overlay = document.createElement('div');
     overlay.className = 'overlay-background';
@@ -436,41 +556,6 @@ class HelpPanel {
   }
 }
 
-const sheet = window.document.styleSheets[0]!;
-
-const spellingRuleIndex = sheet.cssRules.length;
-const undialectedRuleIndex = sheet.cssRules.length + 1;
-const punctuationRuleIndex = sheet.cssRules.length + 2;
-const devRuleIndex = sheet.cssRules.length + 2;
-
-function addOrReplaceRule(index: number, rule: string) {
-  if (index < sheet.cssRules.length) {
-    sheet.deleteRule(index);
-  }
-  sheet.insertRule(rule, index);
-}
-
-function updateDialectCSS() {
-  const active = activeDialects();
-  const query: string = active?.map((d) => `.${d}`).join(',') ?? '';
-
-  addOrReplaceRule(
-    spellingRuleIndex,
-    query
-      ? `.spelling:not(${query}), .dialect:not(${query}) {opacity: 0.3;}`
-      : `.spelling, .dialect {opacity: ${String(active === null ? 1.0 : 0.3)};}`);
-  addOrReplaceRule(
-    undialectedRuleIndex,
-    `.spelling:not(${DIALECTS.map((d) => `.${d}`).join(',')}) { opacity: ${String(active === null || query !== '' ? 1.0 : 0.3)}; }`);
-  addOrReplaceRule(
-    punctuationRuleIndex,
-    `.dialect-parenthesis, .dialect-comma, .spelling-comma, .type { opacity: ${String(active === null ? 1.0 : 0.3)}; }`);
-}
-
-function updateDevCSS() {
-  addOrReplaceRule(devRuleIndex, `.dev {display: ${localStorage.getItem('dev') == 'true' ? 'block' : 'none'};}`);
-}
-
 const dialectCheckboxes = document.querySelectorAll<HTMLInputElement>(
   '.dialect-checkbox');
 
@@ -482,8 +567,7 @@ window.addEventListener('pageshow', (): void => {
   Array.from(dialectCheckboxes).forEach((box) => {
     box.checked = active?.includes(box.name) ?? false;
   });
-  updateDialectCSS();
-  updateDevCSS();
+  highlighter.update();
 });
 
 // When we click a checkbox, it is the boxes that dictate the set of active
@@ -495,7 +579,7 @@ dialectCheckboxes.forEach(checkbox => {
       Array.from(dialectCheckboxes)
         .filter((box) => box.checked)
         .map((box) => box.name).join(','));
-    updateDialectCSS();
+    highlighter.updateDialects();
   });
 });
 
@@ -598,9 +682,18 @@ function makeHelpPanel(): HelpPanel {
   return new HelpPanel(sections);
 }
 
-const panel = makeHelpPanel();
+// The help panel is irrelevant in Anki because there is no keyboard. It's also,
+// generally, much less relevant on mobile!
+const panel: HelpPanel | null = anki() ? null : makeHelpPanel();
 
 document.addEventListener('keyup', (e: KeyboardEvent) => {
+  if (anki()) {
+    // Keyboard shortcuts are problematic on Anki Desktop, because it has its
+    // own shortcuts! They also don't work properly for some reason!
+    // They are irrelevant on mobile, because there is no keyboard.
+    return;
+  }
+
   switch (e.key) {
 
   // Commands:
@@ -609,16 +702,16 @@ document.addEventListener('keyup', (e: KeyboardEvent) => {
     break;
   case 'd':
     toggleDev();
-    updateDevCSS();
+    highlighter.updateDev();
     break;
   case 'e':
-    window.open(EMAIL, '_self');
+    window_open(EMAIL);
     break;
   case 'h':
-    window.open(HOME, '_self');
+    window_open(HOME);
     break;
   case 'X':
-    if (!xooxle()) window.open(SEARCH, '_self');
+    if (!xooxle()) window_open(SEARCH);
     break;
   case 'n':
     window_open(getLinkHrefByRel('next'), false);
@@ -627,10 +720,10 @@ document.addEventListener('keyup', (e: KeyboardEvent) => {
     window_open(getLinkHrefByRel('prev'), false);
     break;
   case '?':
-    panel.togglePanel();
+    panel?.togglePanel();
     break;
   case 'Escape':
-    panel.togglePanel(false);
+    panel?.togglePanel(false);
     break;
 
   // Search panel:
@@ -666,6 +759,7 @@ document.addEventListener('keyup', (e: KeyboardEvent) => {
       click(`checkbox-${DIALECT_SINGLE_CHAR[e.key] ?? e.key}`);
     } else {
       toggleDialect(DIALECT_SINGLE_CHAR[e.key] ?? e.key);
+      highlighter.updateDialects();
     }
     break;
 
