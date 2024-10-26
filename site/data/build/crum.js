@@ -3,6 +3,7 @@ function xooxle() {
   return typeof XOOXLE !== 'undefined' && XOOXLE;
 }
 const HOME = 'http://remnqymi.com/';
+const SEARCH = 'http://remnqymi.com/crum';
 const EMAIL = 'mailto:remnqymi@gmail.com';
 const LOOKUP_URL_PREFIX = 'https://remnqymi.com/crum/?query=';
 const DAWOUD_OFFSET = 16;
@@ -380,6 +381,7 @@ function makeHelpPanel() {
     '?': 'Toggle help panel',
   };
   if (!xooxle()) {
+    commands['X'] = 'Go to the dictionary search page';
     commands['n'] = 'Go to next word';
     commands['p'] = 'Go to previous word';
   }
@@ -455,6 +457,10 @@ document.addEventListener('keyup', (e) => {
     break;
   case 'h':
     window.open(HOME, '_self');
+    break;
+  case 'X':
+    if (!xooxle())
+      window.open(SEARCH, '_self');
     break;
   case 'n':
     window_open(getLinkHrefByRel('next'), false);
