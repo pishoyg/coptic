@@ -36,6 +36,7 @@ export default tseslint.config(
         ...globals.browser,
         ...globals.node,
         XOOXLE: true,
+        ANKI: true,
       },
     }
   },
