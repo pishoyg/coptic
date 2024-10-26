@@ -139,9 +139,7 @@ def crum(
         deck_id=deck_id,
         deck_description=f"{HOME}.\n{EMAIL}.",
         css=utils.read("site/style.css"),
-        javascript=utils.read(
-            "flashcards/data/build/a_coptic_dictionary/script.js",
-        ),
+        javascript=utils.read("site/data/build/crum.js"),
         # NOTE: The key is a protected field. Do not change unless you know what
         # you're doing.
         key=roots_col("key"),

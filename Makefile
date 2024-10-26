@@ -123,7 +123,6 @@ xooxle: FORCE
 	python site/main.py
 
 transpile: FORCE
-	npx tsc -p "flashcards/constants/a_coptic_dictionary/tsconfig.json"
 	npx tsc -p "site/tsconfig.json"
 
 # BIBLE RULES
