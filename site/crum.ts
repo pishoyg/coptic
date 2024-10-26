@@ -235,7 +235,7 @@ function activeDialects(): string[] | null {
   return d.split(',');
 }
 
-function dialect(toggle: string): void {
+function toggleDialect(toggle: string): void {
   const dd = new Set(activeDialects());
   if (dd.has(toggle)) {
     dd.delete(toggle);
@@ -251,13 +251,13 @@ Array.prototype.forEach.call(
   (el: HTMLElement) => {
     el.classList.add('hover-link');
     el.onclick = () => {
-      dialect(el.innerHTML);
+      toggleDialect(el.innerHTML);
     };
   },
 );
 
 // Handle 'developer' and 'dev' classes.
-function dev(): void {
+function toggleDev(): void {
   localStorage.setItem('dev', localStorage.getItem('dev') === 'true' ? 'false' : 'true');
 }
 
@@ -265,7 +265,10 @@ Array.prototype.forEach.call(
   document.getElementsByClassName('developer'),
   (el: HTMLElement): void => {
     el.classList.add('link');
-    el.onclick = dev;
+    el.onclick = () => {
+      toggleDev();
+      updateDevCSS();
+    };
   },
 );
 
@@ -605,7 +608,7 @@ document.addEventListener('keyup', (e: KeyboardEvent) => {
     reset(e);
     break;
   case 'd':
-    dev();
+    toggleDev();
     updateDevCSS();
     break;
   case 'e':
@@ -662,7 +665,7 @@ document.addEventListener('keyup', (e: KeyboardEvent) => {
     if (xooxle()) {
       click(`checkbox-${DIALECT_SINGLE_CHAR[e.key] ?? e.key}`);
     } else {
-      dialect(DIALECT_SINGLE_CHAR[e.key] ?? e.key);
+      toggleDialect(DIALECT_SINGLE_CHAR[e.key] ?? e.key);
     }
     break;
 
