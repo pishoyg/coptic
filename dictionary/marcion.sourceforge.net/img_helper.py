@@ -436,7 +436,8 @@ def retrieve(
         headers = WIKI_HEADERS
     filename = filename or basename(url)
     download = requests.get(url, headers=headers)
-    assert download.ok, download.text
+    if not download.ok:
+        utils.throw(download.text)
     filename = os.path.join(args.downloads, filename)
     with open(filename, "wb") as f:
         f.write(download.content)
