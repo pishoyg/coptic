@@ -1,72 +1,33 @@
 'use strict';
 window.addEventListener('load', () => {
-// TODO: (#202) Reduce the dependency on `innerHTML`. Use attributes when
-// possible. NOTE: The associated issue is closed. Judge whether it should be
-// reopened, or if we should create a new issue, or just delete this TODO.
-// NOTE: The use of classes as constants starting with CLS_ is a remnant of an
-// old restriction that was introduced to support class obfuscation. The
-// restriction has been lifted, and the enforcing pre-commit has been removed.
-// Whether or not to retain this convention can be decided later.
-  const CLS_CRUM_PAGE = 'crum-page';
-  const CLS_CRUM_PAGE_EXTERNAL = 'crum-page-external';
-  const CLS_DAWOUD_PAGE_EXTERNAL = 'dawoud-page-external';
-  const CLS_DAWOUD_PAGE_IMG = 'dawoud-page-img';
-  const CLS_CRUM_PAGE_IMG = 'crum-page-img';
-  const CLS_EXPLANATORY = 'explanatory';
-  const CLS_COPTIC = 'coptic';
-  const CLS_GREEK = 'greek';
-  const CLS_DAWOUD_PAGE = 'dawoud-page';
-  const CLS_DRV_KEY = 'drv-key';
-  const CLS_EXPLANATORY_KEY = 'explanatory-key';
-  const CLS_DIALECT = 'dialect';
-  const CLS_DEV = 'dev';
-  const CLS_DEVELOPER = 'developer';
-  const CLS_RESET = 'reset';
-  const CLS_HEAVY = 'heavy';
-  const CLS_HOVER_LINK = 'hover-link';
-  const CLS_ITALIC = 'italic';
-  const CLS_LIGHT = 'light';
-  const CLS_LINK = 'link';
-  const CLS_SMALL = 'small';
-  const CLS_VERY_LIGHT = 'very-light';
-  const CLS_DIALECT_PARENTHESIS = 'dialect-parenthesis';
-  const CLS_DIALECT_COMMA = 'dialect-comma';
-  const CLS_SPELLING_COMMA = 'spelling-comma';
-  const CLS_TYPE = 'type';
-  const CLS_SPELLING = 'spelling';
-  const CLS_SISTER_KEY = 'sister-key';
-  const CLS_NAG_HAMMADI = 'nag-hammadi';
+  function xooxle() {
+    return typeof XOOXLE !== 'undefined' && XOOXLE;
+  }
   const HOME = 'http://remnqymi.com/';
   const EMAIL = 'mailto:remnqymi@gmail.com';
   const LOOKUP_URL_PREFIX = 'https://remnqymi.com/crum/?query=';
   const DAWOUD_OFFSET = 16;
-  const CLS_S = 'S';
-  const CLS_Sa = 'Sa';
-  const CLS_Sf = 'Sf';
-  const CLS_A = 'A';
-  const CLS_sA = 'sA';
-  const CLS_B = 'B';
-  const CLS_F = 'F';
-  const CLS_Fb = 'Fb';
-  const CLS_O = 'O';
-  const CLS_NH = 'NH';
   const DIALECTS = [
-    CLS_S,
-    CLS_Sa,
-    CLS_Sf,
-    CLS_A,
-    CLS_sA,
-    CLS_B,
-    CLS_F,
-    CLS_Fb,
-    CLS_O,
-    CLS_NH,
+  // Crum dialects.
+    'S',
+    'Sa',
+    'Sf',
+    'A',
+    'sA',
+    'B',
+    'F',
+    'Fb',
+    'O',
+    'NH',
+    // KELLIA-only dialects.
+    'Ak',
+    'M',
+    'L',
+    'P',
+    'V',
+    'W',
+    'U',
   ];
-  function get_url_or_local(param, default_value = null) {
-    return (new URLSearchParams(window.location.search).get(param) ??
-        localStorage.getItem(param)
-        ?? default_value);
-  }
   function window_open(url, external = true) {
     if (!url) {
       return;
@@ -76,13 +37,6 @@ window.addEventListener('load', () => {
       return;
     }
     window.open(url, '_self');
-  }
-  function set_url_and_local(param, value) {
-    localStorage.setItem(param, value);
-    const url = new URL(window.location.href);
-    url.searchParams.set(param, value);
-    url.search = decodeURIComponent(url.search);
-    window.history.replaceState('', '', url.toString());
   }
   function moveElement(el, tag, attrs) {
     const copy = document.createElement(tag);
@@ -102,198 +56,150 @@ window.addEventListener('load', () => {
     }
     return pageNumber;
   }
-  // Handle CLS_CRUM_PAGE class.
-  Array.prototype.forEach.call(document.getElementsByClassName(CLS_CRUM_PAGE), (el) => {
-    el.classList.add(CLS_LINK);
+  // Handle 'crum-page' class.
+  Array.prototype.forEach.call(document.getElementsByClassName('crum-page'), (el) => {
+    el.classList.add('link');
     const pageNumber = el.innerHTML;
     moveElement(el, 'a', { href: `#crum${chopColumn(pageNumber)}` });
   });
-  // Handle CLS_CRUM_PAGE_EXTERNAL class.
-  Array.prototype.forEach.call(document.getElementsByClassName(CLS_CRUM_PAGE_EXTERNAL), (el) => {
-    el.classList.add(CLS_LINK);
+  // Handle 'crum-page-external' class.
+  Array.prototype.forEach.call(document.getElementsByClassName('crum-page-external'), (el) => {
+    el.classList.add('link');
     el.onclick = () => {
       window_open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.innerHTML}`);
     };
   });
-  // Handle CLS_DAWOUD_PAGE_EXTERNAL class.
-  Array.prototype.forEach.call(document.getElementsByClassName(CLS_DAWOUD_PAGE_EXTERNAL), (el) => {
-    el.classList.add(CLS_LINK);
+  // Handle 'dawoud-page-external' class.
+  Array.prototype.forEach.call(document.getElementsByClassName('dawoud-page-external'), (el) => {
+    el.classList.add('link');
     el.onclick = () => {
       window_open(`https://remnqymi.com/dawoud/${(+el.innerHTML + DAWOUD_OFFSET).toString()}.jpg`);
     };
   });
-  // Handle CLS_DAWOUD_PAGE_IMG class.
-  Array.prototype.forEach.call(document.getElementsByClassName(CLS_DAWOUD_PAGE_IMG), (el) => {
+  // Handle 'dawoud-page-img' class.
+  Array.prototype.forEach.call(document.getElementsByClassName('dawoud-page-img'), (el) => {
   // TODO: (#202) Eliminate the dependency on the HTML structure.
     el = el.children[0];
-    el.classList.add(CLS_LINK);
+    el.classList.add('link');
     el.onclick = () => {
       window_open(`https://remnqymi.com/dawoud/${(+el.getAttribute('alt') + DAWOUD_OFFSET).toString()}.jpg`);
     };
   });
-  // Handle CLS_CRUM_PAGE_IMG class.
-  Array.prototype.forEach.call(document.getElementsByClassName(CLS_CRUM_PAGE_IMG), (el) => {
+  // Handle 'crum-page-img' class.
+  Array.prototype.forEach.call(document.getElementsByClassName('crum-page-img'), (el) => {
   // TODO: (#202) Eliminate the dependency on the HTML structure.
     el = el.children[0];
-    el.classList.add(CLS_LINK);
+    el.classList.add('link');
     el.onclick = () => {
       window_open(`https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.getAttribute('alt')}`);
     };
   });
-  // Handle CLS_EXPLANATORY class.
-  Array.prototype.forEach.call(document.getElementsByClassName(CLS_EXPLANATORY), (el) => {
+  // Handle 'explanatory' class.
+  Array.prototype.forEach.call(document.getElementsByClassName('explanatory'), (el) => {
   // TODO: (#202) Eliminate the dependency on the HTML structure.
     const img = el.children[0];
     const alt = img.getAttribute('alt');
     if (!alt.startsWith('http')) {
       return;
     }
-    img.classList.add(CLS_LINK);
+    img.classList.add('link');
     img.onclick = () => {
       window_open(alt);
     };
   });
-  // Handle CLS_COPTIC class.
-  Array.prototype.forEach.call(document.getElementsByClassName(CLS_COPTIC), (el) => {
-    el.classList.add(CLS_HOVER_LINK);
+  // Handle 'coptic' class.
+  Array.prototype.forEach.call(document.getElementsByClassName('coptic'), (el) => {
+    el.classList.add('hover-link');
     el.onclick = () => {
       window_open(LOOKUP_URL_PREFIX + el.innerHTML);
     };
   });
-  // Handle CLS_GREEK class.
-  Array.prototype.forEach.call(document.getElementsByClassName(CLS_GREEK), (el) => {
-    el.classList.add(CLS_LINK);
-    el.classList.add(CLS_LIGHT);
+  // Handle 'greek' class.
+  Array.prototype.forEach.call(document.getElementsByClassName('greek'), (el) => {
+    el.classList.add('link');
+    el.classList.add('light');
     el.onclick = () => {
       window_open(`https://logeion.uchicago.edu/${el.innerHTML}`);
     };
   });
-  // Handle CLS_DAWOUD_PAGE class.
-  Array.prototype.forEach.call(document.getElementsByClassName(CLS_DAWOUD_PAGE), (el) => {
-    el.classList.add(CLS_LINK);
+  // Handle 'dawoud-page' class.
+  Array.prototype.forEach.call(document.getElementsByClassName('dawoud-page'), (el) => {
+    el.classList.add('link');
     moveElement(el, 'a', { href: `#dawoud${chopColumn(el.innerHTML)}` });
   });
-  // Handle CLS_DRV_KEY class.
-  Array.prototype.forEach.call(document.getElementsByClassName(CLS_DRV_KEY), (el) => {
-    el.classList.add(CLS_SMALL, CLS_LIGHT, CLS_ITALIC, CLS_HOVER_LINK);
+  // Handle 'drv-key' class.
+  Array.prototype.forEach.call(document.getElementsByClassName('drv-key'), (el) => {
+    el.classList.add('small', 'light', 'italic', 'hover-link');
     moveElement(el, 'a', { href: `#drv${el.innerHTML}` });
   });
-  // Handle CLS_EXPLANATORY_KEY class.
-  Array.prototype.forEach.call(document.getElementsByClassName(CLS_EXPLANATORY_KEY), (el) => {
-    el.classList.add(CLS_HOVER_LINK);
+  // Handle 'explanatory-key' class.
+  Array.prototype.forEach.call(document.getElementsByClassName('explanatory-key'), (el) => {
+    el.classList.add('hover-link');
     moveElement(el, 'a', { href: `#explanatory${el.innerHTML}` });
   });
-  // Handle CLS_SISTER_KEY class.
-  Array.prototype.forEach.call(document.getElementsByClassName(CLS_SISTER_KEY), (el) => {
-    el.classList.add(CLS_HOVER_LINK);
+  // Handle 'sister-key' class.
+  Array.prototype.forEach.call(document.getElementsByClassName('sister-key'), (el) => {
+    el.classList.add('hover-link');
     moveElement(el, 'a', { href: `#sister${el.innerHTML}` });
   });
-  // Handle CLS_DIALECT class.
-  function getActiveDialectClassesInCurrentPage() {
-    const d = get_url_or_local('d');
-    return d === null
-      ? null
-      : d === ''
-        ? new Set()
-        : new Set(d.split(',').map((d) => d));
+  // Handle 'dialect' class.
+  function activeDialects() {
+    const d = localStorage.getItem('d');
+    if (d === null) {
+      return null;
+    }
+    if (d === '') {
+      return [];
+    }
+    return d.split(',');
   }
-  /* Update the display based on the value of the `d` parameter.
- */
   function dialect(toggle) {
-    if (toggle) {
-      const cur = get_url_or_local('d');
-      const dd = new Set(cur ? cur.split(',') : []);
-      if (dd.has(toggle)) {
-        dd.delete(toggle);
-      }
-      else {
-        dd.add(toggle);
-      }
-      set_url_and_local('d', Array.from(dd).join(','));
+    const dd = new Set(activeDialects());
+    if (dd.has(toggle)) {
+      dd.delete(toggle);
     }
-    const active = getActiveDialectClassesInCurrentPage();
-    function dialected(el) {
-      return DIALECTS.some((d) => el.classList.contains(d));
+    else {
+      dd.add(toggle);
     }
-    document
-      .querySelectorAll([CLS_DIALECT_PARENTHESIS, CLS_DIALECT_COMMA, CLS_SPELLING_COMMA, CLS_TYPE]
-        .map((cls) => '.' + cls)
-        .join(','))
-      .forEach((el) => {
-        if (active === null) {
-          el.classList.remove(CLS_VERY_LIGHT);
-        }
-        else {
-          el.classList.add(CLS_VERY_LIGHT);
-        }
-      });
-    document
-      .querySelectorAll(`.${CLS_DIALECT},.${CLS_SPELLING}`)
-      .forEach((el) => {
-        if (!dialected(el)) {
-          return;
-        }
-        if (active === null) {
-          el.classList.remove(CLS_VERY_LIGHT);
-          el.classList.remove(CLS_HEAVY);
-          return;
-        }
-        if (Array.from(active).some((d) => el.classList.contains(d))) {
-          el.classList.remove(CLS_VERY_LIGHT);
-          el.classList.add(CLS_HEAVY);
-        }
-        else {
-          el.classList.remove(CLS_HEAVY);
-          el.classList.add(CLS_VERY_LIGHT);
-        }
-      });
+    localStorage.setItem('d', Array.from(dd).join(','));
+    updateDialectCSS();
   }
-  Array.prototype.forEach.call(document.getElementsByClassName(CLS_DIALECT), (el) => {
-    el.classList.add(CLS_HOVER_LINK);
+  Array.prototype.forEach.call(document.getElementsByClassName('dialect'), (el) => {
+    el.classList.add('hover-link');
     el.onclick = () => {
       dialect(el.innerHTML);
     };
   });
-  dialect();
-  function devState() {
-    return get_url_or_local('dev');
+  // Handle 'developer' and 'dev' classes.
+  function dev() {
+    localStorage.setItem('dev', localStorage.getItem('dev') === 'true' ? 'false' : 'true');
   }
-  function dev(toggle = false) {
-    if (toggle) {
-      localStorage.setItem('dev', devState() === 'true' ? 'false' : 'true');
-    }
-    const state = devState();
-    document
-      .querySelectorAll(`.${CLS_DEV},.${CLS_NAG_HAMMADI}`)
-      .forEach((el) => {
-        if (state === 'true') {
-          el.removeAttribute('hidden');
-        }
-        else {
-          el.setAttribute('hidden', '');
-        }
-      });
-  }
-  Array.prototype.forEach.call(document.getElementsByClassName(CLS_DEVELOPER), (el) => {
-    el.classList.add(CLS_LINK);
-    el.onclick = () => {
-      dev();
-    };
+  Array.prototype.forEach.call(document.getElementsByClassName('developer'), (el) => {
+    el.classList.add('link');
+    el.onclick = dev;
   });
-  dev();
-  // Handle CLS_RESET class.
-  function reset() {
+  // Handle 'reset' class.
+  function reset(event) {
     localStorage.clear();
+    dialectCheckboxes.forEach((box) => { box.checked = false; });
     const url = new URL(window.location.href);
     url.search = '';
     url.hash = '';
     window.history.replaceState('', '', url.toString());
     window.location.reload();
+    updateDialectCSS();
+    updateDevCSS();
+    // In case his comes from the reset button in XOOXLE, prevent clicking the
+    // button from submitting the form, thus resetting everything!
+    event.preventDefault();
   }
-  Array.prototype.forEach.call(document.getElementsByClassName(CLS_RESET), (el) => {
-    el.classList.add(CLS_LINK);
+  // NOTE: The `reset` class is only used in the notes pages.
+  Array.prototype.forEach.call(document.getElementsByClassName('reset'), (el) => {
+    el.classList.add('link');
     el.onclick = reset;
   });
+  // NOTE: The element with the ID `reset` is only present on the XOOXLE page.
+  document.getElementById('reset')?.addEventListener('click', reset);
   function getLinkHrefByRel(rel) {
     const linkElement = document.querySelector(`link[rel="${rel}"]`);
     return linkElement instanceof HTMLLinkElement ? linkElement.href : null;
@@ -301,10 +207,6 @@ window.addEventListener('load', () => {
   function scroll(id) {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   }
-  // TODO: (#276) The help panel logic is duplicated between this and
-  // site/crum.ts. Figure out a way to use a common source. In the meantime,
-  // manually keep them in sync.
-  // BEGIN duplicated code.
   class Section {
     constructor(title, commands) {
       this.title = title;
@@ -404,54 +306,156 @@ window.addEventListener('load', () => {
       }
     }
   }
-  // TODO: (#276) The help panel logic is duplicated between this and
-  // site/crum.ts. Figure out a way to use a common source. In the meantime,
-  // manually keep them in sync.
-  // END duplicated code.
-  const helpPanel = new HelpPanel([new Section('Commands', {
-    r: 'Reset highlighting',
-    n: 'Go to next word',
-    p: 'Go to previous word',
-    h: 'Go to homepage',
-    e: 'Email <a class="contact" href="mailto:remnqymi@gmail.com">remnqymi@gmail.com</a>',
-    d: 'Developer mode',
-    '?': 'Toggle help panel',
-  }), new Section('Dialect Highlighting', {
-    B: 'Bohairic',
-    S: 'Sahidic',
-    A: 'Akhmimic',
-    F: 'Fayyumic',
-    O: 'Old Coptic',
-    N: 'NH: <strong>N</strong>ag Hammadi',
-    a: 'Sa: Sahidic with <strong>A</strong>khmimic tendency',
-    f: 'Sf: Sahidic with <strong>F</strong>ayyumic tendency',
-    s: 'sA: <strong>s</strong>ubAkhmimic (Lycopolitan)',
-    b: 'Fb: Fayyumic with <strong>B</strong>ohairic tendency',
-  }), new Section('Scroll To', {
-    C: 'Crum pages',
-    D: 'Dawoud pages',
-    l: 'Related words',
-    m: 'Meaning',
-    t: 'Type',
-    i: 'Images',
-    w: 'Words',
-    W: 'Words',
-    v: 'Derivations table',
-    u: 'Header (up)',
-    c: 'Dictionary page list',
-  })]);
-  // NOTE: It's important for this mapping to be in sync with the help panel.
+  const sheet = window.document.styleSheets[0];
+  const spellingRuleIndex = sheet.cssRules.length;
+  const undialectedRuleIndex = sheet.cssRules.length + 1;
+  const punctuationRuleIndex = sheet.cssRules.length + 2;
+  const devRuleIndex = sheet.cssRules.length + 2;
+  function addOrReplaceRule(index, rule) {
+    if (index < sheet.cssRules.length) {
+      sheet.deleteRule(index);
+    }
+    sheet.insertRule(rule, index);
+  }
+  function updateDialectCSS() {
+    const active = activeDialects();
+    const query = active?.map((d) => `.${d}`).join(',') ?? '';
+    addOrReplaceRule(spellingRuleIndex, query
+      ? `.spelling:not(${query}), .dialect:not(${query}) {opacity: 0.3;}`
+      : `.spelling, .dialect {opacity: ${String(active === null ? 1.0 : 0.3)};}`);
+    addOrReplaceRule(undialectedRuleIndex, `.spelling:not(${DIALECTS.map((d) => `.${d}`).join(',')}) { opacity: ${String(active === null || query !== '' ? 1.0 : 0.3)}; }`);
+    addOrReplaceRule(punctuationRuleIndex, `.dialect-parenthesis, .dialect-comma, .spelling-comma, .type { opacity: ${String(active === null ? 1.0 : 0.3)}; }`);
+  }
+  function updateDevCSS() {
+    addOrReplaceRule(devRuleIndex, `.dev {display: ${localStorage.getItem('dev') == 'true' ? 'block' : 'none'};}`);
+  }
+  const dialectCheckboxes = document.querySelectorAll('.dialect-checkbox');
+  // When we first load the page, 'd' dictates the set of active dialects and
+  // hence highlighting. We load 'd' from the local storage, and we update the
+  // boxes to match this set. Then we update the CSS.
+  window.addEventListener('pageshow', () => {
+    const active = activeDialects();
+    Array.from(dialectCheckboxes).forEach((box) => {
+      box.checked = active?.includes(box.name) ?? false;
+    });
+    updateDialectCSS();
+    updateDevCSS();
+  });
+  // When we click a checkbox, it is the boxes that dictate the set of active
+  // dialects and highlighting. So we use the boxes to update 'd', and then
+  // update highlighting.
+  dialectCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener('click', () => {
+      localStorage.setItem('d', Array.from(dialectCheckboxes)
+        .filter((box) => box.checked)
+        .map((box) => box.name).join(','));
+      updateDialectCSS();
+    });
+  });
+  // Collapse logic.
+  Array.prototype.forEach.call(document.getElementsByClassName('collapse'), (collapse) => {
+    collapse.addEventListener('click', function () {
+    // TODO: Remove the dependency on the HTML structure.
+      const collapsible = collapse.nextElementSibling;
+      collapsible.style.maxHeight = collapsible.style.maxHeight ? '' : collapsible.scrollHeight.toString() + 'px';
+    });
+    collapse.click();
+  });
+  // DIALECT_SINGLE_CHAR is a mapping for the dialects that have shortcuts other
+  // than their codes. If the shortcut to toggle a dialect is not the same as its
+  // code, it should be included in this record.
+  const DIALECT_SINGLE_CHAR = {
+    'N': 'NH',
+    'a': 'Sa',
+    'f': 'Sf',
+    's': 'sA',
+    'b': 'Fb',
+    'k': 'Ak',
+  };
+  function makeHelpPanel() {
+    const commands = {
+      r: 'Reset highlighting',
+      d: 'Developer mode',
+      e: 'Email <a class="contact" href="mailto:remnqymi@gmail.com">remnqymi@gmail.com</a>',
+      h: 'Go to homepage',
+      '?': 'Toggle help panel',
+    };
+    if (!xooxle()) {
+      commands['n'] = 'Go to next word';
+      commands['p'] = 'Go to previous word';
+    }
+    const sections = [
+      new Section('Commands', commands),
+      new Section('Dialect Highlighting', {
+        S: 'Sahidic',
+        a: 'Sa: Sahidic with <strong>A</strong>khmimic tendency',
+        f: 'Sf: Sahidic with <strong>F</strong>ayyumic tendency',
+        A: 'Akhmimic',
+        s: 'sA: <strong>s</strong>ubAkhmimic (Lycopolitan)',
+        B: 'Bohairic',
+        F: 'Fayyumic',
+        b: 'Fb: Fayyumic with <strong>B</strong>ohairic tendency',
+        O: 'Old Coptic',
+        N: 'NH: <strong>N</strong>ag Hammadi',
+        k: 'Ak: Old Coptic',
+        M: 'Mesokemic',
+        L: 'Lycopolitan (subAkhmimic)',
+        P: 'Proto-Theban',
+        V: 'South Fayyumic Greek',
+        W: 'Crypto-Mesokemic Greek',
+        U: 'Greek (usage <strong>u</strong>nclear)',
+      }),
+    ];
+    if (xooxle()) {
+      sections.push(new Section('Search', {
+        w: 'Toggle full word search',
+        x: 'Toggle regex search',
+        '/': 'Focus search box',
+      }));
+      sections.push(new Section('Scrol To', {
+        'C': 'Crum',
+        'K': 'KELLIA',
+        'T': 'copticsi<strong>t</strong>e',
+      }));
+      sections.push(new Section('Collapse', {
+        'c': 'Crum',
+        'l': 'KELLIA',
+        't': 'copticsi<strong>t</strong>e',
+      }));
+    }
+    else {
+      sections.push(new Section('Scroll To', {
+        C: 'Crum pages',
+        D: 'Dawoud pages',
+        l: 'Related words',
+        m: 'Meaning',
+        t: 'Type',
+        i: 'Images',
+        y: 'Words',
+        Y: 'Words',
+        v: 'Derivations table',
+        u: 'Header (up)',
+        c: 'Dictionary page list',
+      }));
+    }
+    return new HelpPanel(sections);
+  }
+  const panel = makeHelpPanel();
   document.addEventListener('keyup', (e) => {
     switch (e.key) {
     // Commands:
     case 'r':
-      reset();
+      reset(e);
       break;
     case 'd':
-      dev(true);
+      dev();
+      updateDevCSS();
+      break;
+    case 'e':
+      window.open(EMAIL, '_self');
       break;
     case 'h':
-      window_open(HOME, false);
+      window.open(HOME, '_self');
       break;
     case 'n':
       window_open(getLinkHrefByRel('next'), false);
@@ -459,14 +463,21 @@ window.addEventListener('load', () => {
     case 'p':
       window_open(getLinkHrefByRel('prev'), false);
       break;
-    case 'e':
-      window_open(EMAIL, false);
-      break;
     case '?':
-      helpPanel.togglePanel();
+      panel.togglePanel();
       break;
     case 'Escape':
-      helpPanel.togglePanel(false);
+      panel.togglePanel(false);
+      break;
+    // Search panel:
+    case '/':
+      focus('searchBox');
+      break;
+    case 'w':
+      click('fullWordCheckbox');
+      break;
+    case 'x':
+      click('regexCheckbox');
       break;
     // Dialects:
     case 'B':
@@ -474,46 +485,77 @@ window.addEventListener('load', () => {
     case 'A':
     case 'F':
     case 'O':
-      dialect(e.key);
-      break;
     case 'N':
-      dialect('NH');
-      break;
     case 'a':
-      dialect('Sa');
-      break;
     case 'f':
-      dialect('Sf');
-      break;
     case 's':
-      dialect('sA');
-      break;
     case 'b':
-      dialect('Fb');
+    case 'k':
+    case 'M':
+    case 'L':
+    case 'P':
+    case 'V':
+    case 'W':
+    case 'U':
+      if (xooxle()) {
+        click(`checkbox-${DIALECT_SINGLE_CHAR[e.key] ?? e.key}`);
+      }
+      else {
+        dialect(DIALECT_SINGLE_CHAR[e.key] ?? e.key);
+      }
       break;
-    // Scrolling:
+    // Scrolling and collapsing:
     case 'C':
-      scroll('crum');
+      if (xooxle()) {
+        scroll('crum-title');
+      }
+      else {
+        scroll('crum');
+      }
+      break;
+    case 'K':
+      scroll('kellia-title');
+      break;
+    case 'T':
+      scroll('copticsite-title');
+      break;
+    case 'c':
+      if (xooxle()) {
+        click('crum-title');
+      }
+      else {
+        scroll('dictionary');
+      }
+      break;
+    case 'l':
+      if (xooxle()) {
+        click('kellia-title');
+      }
+      else {
+        scroll('sisters');
+      }
+      break;
+    case 't':
+      if (xooxle()) {
+        click('copticsite-title');
+      }
+      else {
+        scroll('root-type');
+      }
       break;
     case 'D':
       scroll('dawoud');
       break;
-    case 'l':
-      scroll('sisters');
-      break;
     case 'm':
       scroll('meaning');
-      break;
-    case 't':
-      scroll('root-type');
       break;
     case 'i':
       scroll('images');
       break;
-    case 'W':
+    case 'Q':
       scroll('marcion');
       break;
-    case 'w':
+    case 'q':
       scroll('pretty');
       break;
     case 'v':
@@ -522,9 +564,12 @@ window.addEventListener('load', () => {
     case 'u':
       scroll('header');
       break;
-    case 'c':
-      scroll('dictionary');
-      break;
     }
   });
+  function click(id) {
+    document.getElementById(id)?.click();
+  }
+  function focus(id) {
+    document.getElementById(id)?.focus();
+  }
 });
