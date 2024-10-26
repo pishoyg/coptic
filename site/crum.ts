@@ -194,14 +194,6 @@ function moveElement(
 }
 
 function makeLink(el: HTMLElement, target: string): void {
-  if (anki()) {
-    // Moving elements doesn't work on Anki, for some reason!
-    el.onclick = () => {
-      const external = !target.startsWith('#');
-      window_open(target, external);
-    };
-    return;
-  }
   moveElement(el, 'a', { 'href': target });
 }
 
