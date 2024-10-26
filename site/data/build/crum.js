@@ -2,6 +2,9 @@
 function xooxle() {
   return typeof XOOXLE !== 'undefined' && XOOXLE;
 }
+function anki() {
+  return typeof ANKI !== 'undefined' && ANKI;
+}
 const HOME = 'http://remnqymi.com/';
 const SEARCH = 'http://remnqymi.com/crum';
 const EMAIL = 'mailto:remnqymi@gmail.com';
@@ -28,6 +31,82 @@ const DIALECTS = [
   'W',
   'U',
 ];
+class Highlighter {
+  constructor() {
+    this.anki = anki();
+    this.sheet = this.anki ? null : window.document.styleSheets[0];
+    this.spellingRuleIndex = this.sheet?.cssRules.length ?? 0;
+    this.undialectedRuleIndex = (this.sheet?.cssRules.length ?? 0) + 1;
+    this.punctuationRuleIndex = (this.sheet?.cssRules.length ?? 0) + 2;
+    this.devRuleIndex = (this.sheet?.cssRules.length ?? 0) + 3;
+  }
+  update() {
+    this.updateDialects();
+    this.updateDev();
+  }
+  updateDialects() {
+    const active = activeDialects();
+    if (this.anki) {
+      this.updateDialectsNoSheet(active);
+      return;
+    }
+    const query = active?.map((d) => `.${d}`).join(',') ?? '';
+    this.addOrReplaceRule(this.spellingRuleIndex, query
+      ? `.spelling:not(${query}), .dialect:not(${query}) {opacity: ${Highlighter.DIM};}`
+      : `.spelling, .dialect {opacity: ${String(active === null ? Highlighter.BRIGHT : Highlighter.DIM)};}`);
+    this.addOrReplaceRule(this.undialectedRuleIndex, `.spelling:not(${DIALECTS.map((d) => `.${d}`).join(',')}) { opacity: ${String(active === null || query ? Highlighter.BRIGHT : Highlighter.DIM)}; }`);
+    this.addOrReplaceRule(this.punctuationRuleIndex, `.dialect-parenthesis, .dialect-comma, .spelling-comma, .type { opacity: ${String(active === null ? Highlighter.BRIGHT : Highlighter.DIM)}; }`);
+  }
+  updateDev() {
+    const display = localStorage.getItem('dev') === 'true' ? 'block' : 'none';
+    if (this.anki) {
+      this.updateDevNoSheet(display);
+      return;
+    }
+    this.addOrReplaceRule(this.devRuleIndex, `.dev {display: ${display};}`);
+  }
+  updateDialectsNoSheet(active) {
+    if (active === null) {
+      // Highlighting is off. Show everything.
+      document.querySelectorAll('.spelling, .dialect, .dialect-parenthesis, .dialect-comma, .spelling-comma, .type').forEach((el) => {
+        el.style.opacity = Highlighter.BRIGHT;
+      });
+      return;
+    }
+    // Update spelling highlighting.
+    document.querySelectorAll('.spelling, .dialect').forEach((el) => {
+      let opacity = Highlighter.DIM;
+      if (active.some((d) => el.classList.contains(d))) {
+        opacity = Highlighter.BRIGHT;
+      }
+      else if (active.length > 1 &&
+                !DIALECTS.some((d) => el.classList.contains(d))) {
+        // If the element has no dialects, it should be shown provided that at
+        // least one dialect is active.
+        opacity = Highlighter.BRIGHT;
+      }
+      el.style.opacity = opacity;
+    });
+    // Update punctuation highlighting.
+    document.querySelectorAll('.dialect-parenthesis, .dialect-comma, .spelling-comma, .type').forEach((el) => {
+      el.style.opacity = Highlighter.DIM;
+    });
+  }
+  updateDevNoSheet(display) {
+    document.querySelectorAll('.dev,.nag-hammadi').forEach((el) => {
+      el.style.display = display;
+    });
+  }
+  addOrReplaceRule(index, rule) {
+    if (index < this.sheet.cssRules.length) {
+      this.sheet.deleteRule(index);
+    }
+    this.sheet.insertRule(rule, index);
+  }
+}
+Highlighter.BRIGHT = '1.0';
+Highlighter.DIM = '0.3';
+const highlighter = new Highlighter();
 function window_open(url, external = true) {
   if (!url) {
     return;
@@ -49,6 +128,17 @@ function moveElement(el, tag, attrs) {
   });
   el.parentNode?.replaceChild(copy, el);
 }
+function makeLink(el, target) {
+  if (anki()) {
+    // Moving elements doesn't work on Anki, for some reason!
+    el.onclick = () => {
+      const external = !target.startsWith('#');
+      window_open(target, external);
+    };
+    return;
+  }
+  moveElement(el, 'a', { 'href': target });
+}
 function chopColumn(pageNumber) {
   const lastChar = pageNumber.slice(pageNumber.length - 1);
   if (lastChar === 'a' || lastChar === 'b') {
@@ -58,9 +148,9 @@ function chopColumn(pageNumber) {
 }
 // Handle 'crum-page' class.
 Array.prototype.forEach.call(document.getElementsByClassName('crum-page'), (el) => {
-  el.classList.add('link');
   const pageNumber = el.innerHTML;
-  moveElement(el, 'a', { href: `#crum${chopColumn(pageNumber)}` });
+  el.classList.add('link');
+  makeLink(el, `#crum${chopColumn(pageNumber)}`);
 });
 // Handle 'crum-page-external' class.
 Array.prototype.forEach.call(document.getElementsByClassName('crum-page-external'), (el) => {
@@ -125,35 +215,31 @@ Array.prototype.forEach.call(document.getElementsByClassName('greek'), (el) => {
 // Handle 'dawoud-page' class.
 Array.prototype.forEach.call(document.getElementsByClassName('dawoud-page'), (el) => {
   el.classList.add('link');
-  moveElement(el, 'a', { href: `#dawoud${chopColumn(el.innerHTML)}` });
+  makeLink(el, `#dawoud${chopColumn(el.innerHTML)}`);
 });
 // Handle 'drv-key' class.
 Array.prototype.forEach.call(document.getElementsByClassName('drv-key'), (el) => {
   el.classList.add('small', 'light', 'italic', 'hover-link');
-  moveElement(el, 'a', { href: `#drv${el.innerHTML}` });
+  makeLink(el, `#drv${el.innerHTML}`);
 });
 // Handle 'explanatory-key' class.
 Array.prototype.forEach.call(document.getElementsByClassName('explanatory-key'), (el) => {
   el.classList.add('hover-link');
-  moveElement(el, 'a', { href: `#explanatory${el.innerHTML}` });
+  makeLink(el, `#explanatory${el.innerHTML}`);
 });
 // Handle 'sister-key' class.
 Array.prototype.forEach.call(document.getElementsByClassName('sister-key'), (el) => {
   el.classList.add('hover-link');
-  moveElement(el, 'a', { href: `#sister${el.innerHTML}` });
+  makeLink(el, `#sister${el.innerHTML}`);
 });
 // Handle 'dialect' class.
 function activeDialects() {
   const d = localStorage.getItem('d');
-  if (d === null) {
-    return null;
-  }
-  if (d === '') {
-    return [];
-  }
-  return d.split(',');
+  // NOTE: ''.split(',') returns [''], which is not what we want!
+  // The empty string requires special handling.
+  return d === '' ? [] : d?.split(',') ?? null;
 }
-function dialect(toggle) {
+function toggleDialect(toggle) {
   const dd = new Set(activeDialects());
   if (dd.has(toggle)) {
     dd.delete(toggle);
@@ -162,36 +248,41 @@ function dialect(toggle) {
     dd.add(toggle);
   }
   localStorage.setItem('d', Array.from(dd).join(','));
-  updateDialectCSS();
+  highlighter.updateDialects();
 }
 Array.prototype.forEach.call(document.getElementsByClassName('dialect'), (el) => {
   el.classList.add('hover-link');
   el.onclick = () => {
-    dialect(el.innerHTML);
+    toggleDialect(el.innerHTML);
   };
 });
 // Handle 'developer' and 'dev' classes.
-function dev() {
+function toggleDev() {
   localStorage.setItem('dev', localStorage.getItem('dev') === 'true' ? 'false' : 'true');
 }
 Array.prototype.forEach.call(document.getElementsByClassName('developer'), (el) => {
   el.classList.add('link');
-  el.onclick = dev;
+  el.onclick = () => {
+    toggleDev();
+    highlighter.updateDev();
+  };
 });
 // Handle 'reset' class.
 function reset(event) {
   localStorage.clear();
   dialectCheckboxes.forEach((box) => { box.checked = false; });
-  const url = new URL(window.location.href);
-  url.search = '';
-  url.hash = '';
-  window.history.replaceState('', '', url.toString());
-  window.location.reload();
-  updateDialectCSS();
-  updateDevCSS();
-  // In case his comes from the reset button in XOOXLE, prevent clicking the
-  // button from submitting the form, thus resetting everything!
-  event.preventDefault();
+  if (anki()) {
+    highlighter.update();
+  }
+  else {
+    const url = new URL(window.location.href);
+    url.hash = '';
+    window.history.replaceState('', '', url.toString());
+    window.location.reload();
+    // In case his comes from the reset button in XOOXLE, prevent clicking the
+    // button from submitting the form, thus resetting everything!
+    event.preventDefault();
+  }
 }
 // NOTE: The `reset` class is only used in the notes pages.
 Array.prototype.forEach.call(document.getElementsByClassName('reset'), (el) => {
@@ -306,29 +397,6 @@ class HelpPanel {
     }
   }
 }
-const sheet = window.document.styleSheets[0];
-const spellingRuleIndex = sheet.cssRules.length;
-const undialectedRuleIndex = sheet.cssRules.length + 1;
-const punctuationRuleIndex = sheet.cssRules.length + 2;
-const devRuleIndex = sheet.cssRules.length + 2;
-function addOrReplaceRule(index, rule) {
-  if (index < sheet.cssRules.length) {
-    sheet.deleteRule(index);
-  }
-  sheet.insertRule(rule, index);
-}
-function updateDialectCSS() {
-  const active = activeDialects();
-  const query = active?.map((d) => `.${d}`).join(',') ?? '';
-  addOrReplaceRule(spellingRuleIndex, query
-    ? `.spelling:not(${query}), .dialect:not(${query}) {opacity: 0.3;}`
-    : `.spelling, .dialect {opacity: ${String(active === null ? 1.0 : 0.3)};}`);
-  addOrReplaceRule(undialectedRuleIndex, `.spelling:not(${DIALECTS.map((d) => `.${d}`).join(',')}) { opacity: ${String(active === null || query !== '' ? 1.0 : 0.3)}; }`);
-  addOrReplaceRule(punctuationRuleIndex, `.dialect-parenthesis, .dialect-comma, .spelling-comma, .type { opacity: ${String(active === null ? 1.0 : 0.3)}; }`);
-}
-function updateDevCSS() {
-  addOrReplaceRule(devRuleIndex, `.dev {display: ${localStorage.getItem('dev') == 'true' ? 'block' : 'none'};}`);
-}
 const dialectCheckboxes = document.querySelectorAll('.dialect-checkbox');
 // When we first load the page, 'd' dictates the set of active dialects and
 // hence highlighting. We load 'd' from the local storage, and we update the
@@ -338,8 +406,7 @@ window.addEventListener('pageshow', () => {
   Array.from(dialectCheckboxes).forEach((box) => {
     box.checked = active?.includes(box.name) ?? false;
   });
-  updateDialectCSS();
-  updateDevCSS();
+  highlighter.update();
 });
 // When we click a checkbox, it is the boxes that dictate the set of active
 // dialects and highlighting. So we use the boxes to update 'd', and then
@@ -349,7 +416,7 @@ dialectCheckboxes.forEach(checkbox => {
     localStorage.setItem('d', Array.from(dialectCheckboxes)
       .filter((box) => box.checked)
       .map((box) => box.name).join(','));
-    updateDialectCSS();
+    highlighter.updateDialects();
   });
 });
 // Collapse logic.
@@ -441,26 +508,34 @@ function makeHelpPanel() {
   }
   return new HelpPanel(sections);
 }
-const panel = makeHelpPanel();
+// The help panel is irrelevant in Anki because there is no keyboard. It's also,
+// generally, much less relevant on mobile!
+const panel = anki() ? null : makeHelpPanel();
 document.addEventListener('keyup', (e) => {
+  if (anki()) {
+    // Keyboard shortcuts are problematic on Anki Desktop, because it has its
+    // own shortcuts! They also don't work properly for some reason!
+    // They are irrelevant on mobile, because there is no keyboard.
+    return;
+  }
   switch (e.key) {
   // Commands:
   case 'r':
     reset(e);
     break;
   case 'd':
-    dev();
-    updateDevCSS();
+    toggleDev();
+    highlighter.updateDev();
     break;
   case 'e':
-    window.open(EMAIL, '_self');
+    window_open(EMAIL);
     break;
   case 'h':
-    window.open(HOME, '_self');
+    window_open(HOME);
     break;
   case 'X':
     if (!xooxle())
-      window.open(SEARCH, '_self');
+      window_open(SEARCH);
     break;
   case 'n':
     window_open(getLinkHrefByRel('next'), false);
@@ -469,10 +544,10 @@ document.addEventListener('keyup', (e) => {
     window_open(getLinkHrefByRel('prev'), false);
     break;
   case '?':
-    panel.togglePanel();
+    panel?.togglePanel();
     break;
   case 'Escape':
-    panel.togglePanel(false);
+    panel?.togglePanel(false);
     break;
     // Search panel:
   case '/':
@@ -506,7 +581,8 @@ document.addEventListener('keyup', (e) => {
       click(`checkbox-${DIALECT_SINGLE_CHAR[e.key] ?? e.key}`);
     }
     else {
-      dialect(DIALECT_SINGLE_CHAR[e.key] ?? e.key);
+      toggleDialect(DIALECT_SINGLE_CHAR[e.key] ?? e.key);
+      highlighter.updateDialects();
     }
     break;
     // Scrolling and collapsing:
