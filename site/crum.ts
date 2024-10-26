@@ -114,7 +114,7 @@ class Highlighter {
       this.updateDevNoSheet(display);
       return;
     }
-    this.addOrReplaceRule(this.devRuleIndex, `.dev {display: ${display};}`);
+    this.addOrReplaceRule(this.devRuleIndex, `.dev, .nag-hammadi {display: ${display};}`);
   }
 
   private updateDialectsNoSheet(active: string[] | null): void {
@@ -152,7 +152,7 @@ class Highlighter {
       });
   }
   private updateDevNoSheet(display: string): void {
-    document.querySelectorAll<HTMLElement>('.dev,.nag-hammadi').forEach(
+    document.querySelectorAll<HTMLElement>('.dev, .nag-hammadi').forEach(
       (el: HTMLElement) => {
         el.style.display = display;
       });
