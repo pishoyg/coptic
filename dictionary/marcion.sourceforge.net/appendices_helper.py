@@ -9,22 +9,26 @@ import pandas as pd
 
 import utils
 
-ROOTS = "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv"
-DERIVATIONS = (
+ROOTS: str = (
+    "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv"
+)
+DERIVATIONS: str = (
     "dictionary/marcion.sourceforge.net/data/input/derivation_appendices.tsv"
 )
-GSPREAD_NAME = "Appendices"
-GSPREAD_URL = "https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg"
+GSPREAD_NAME: str = "Appendices"
+GSPREAD_URL: str = (
+    "https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg"
+)
 
-KEY_COL = "key"
-SISTERS_COL = "sisters"
-ANTONYMS_COL = "antonyms"
-HOMONYMS_COL = "homonyms"
-GREEK_SISTERS_COL = "TLA-sisters"
+KEY_COL: str = "key"
+SISTERS_COL: str = "sisters"
+ANTONYMS_COL: str = "antonyms"
+HOMONYMS_COL: str = "homonyms"
+GREEK_SISTERS_COL: str = "TLA-sisters"
 
-TEXT_FRAG_PREFIX = ":~:text="
+TEXT_FRAG_PREFIX: str = ":~:text="
 
-argparser = argparse.ArgumentParser(
+argparser: argparse.ArgumentParser = argparse.ArgumentParser(
     description="""Find and process appendices.""",
     formatter_class=argparse.RawTextHelpFormatter,
     exit_on_error=False,
@@ -105,7 +109,7 @@ def split(cell: str) -> list[str]:
 
 
 class person:
-    def __init__(self, raw: str):
+    def __init__(self, raw: str) -> None:
         # TODO: (#226) Validate that the fragment, if present, actually exists
         # in this person's page.
         # This can be done by caching a parsed HTML tree of every person there
@@ -114,8 +118,8 @@ class person:
         raw = raw.strip()
         assert raw
         split = raw.split()
-        self.key = split[0]
-        self.fragment = " ".join(split[1:])
+        self.key: str = split[0]
+        self.fragment: str = " ".join(split[1:])
 
     def string(self) -> str:
         return " ".join(filter(None, [self.key, self.fragment]))
@@ -124,24 +128,25 @@ class person:
 class house:
     """A house represents a branch of the family."""
 
-    delete_empty_fragment = False
+    delete_empty_fragment: bool = False
 
     def __init__(self, key: str, cell: str) -> None:
         # key is the key of the current house.
-        self.key = key
+        self.key: str = key
         # ancestors_raw is the raw format of the ancestor house. If your house
         # has new joiners, they won't show here.
-        self.ancestors_raw = cell
+        self.ancestors_raw: str = cell
         # member is the current list of house members.
         self.members: list[person] = [person(raw) for raw in split(cell)]
         # ancestors_formatted is a formatted representation of the list of the
         # original members.
-        self.ancestors_formatted = self.string()
+        self.ancestors_formatted: str = self.string()
 
     def string(self) -> str:
         return "; ".join(m.string() for m in self.members)
 
     def has(self, p: person | str) -> bool:
+        key: str = ""
         if isinstance(p, person):
             key = p.key
         else:
@@ -170,7 +175,7 @@ class house:
                 # contact books.
                 continue
             # Check if the spouse is already a member.
-            existing_member = next(
+            existing_member: person | None = next(
                 (m for m in self.members if m.key == spouse.key),
                 None,
             )
@@ -281,8 +286,8 @@ class family:
 
 
 class validator:
-    def __init__(self):
-        self.decoder = json.JSONDecoder(
+    def __init__(self) -> None:
+        self.decoder: json.JSONDecoder = json.JSONDecoder(
             object_pairs_hook=self.dupe_checking_hook,
         )
 
@@ -317,7 +322,7 @@ class validator:
                 sense_id,
                 "sense keys must be integers.",
             )
-        largest = max(map(int, parsed.keys()))
+        largest: int = max(map(int, parsed.keys()))
         if largest != len(parsed):
             utils.fatal(key, "has a gap in the senses!")
 
@@ -329,7 +334,7 @@ class validator:
             fam.validate(key_to_family)
 
     def validate(self, path: str, roots: bool = False) -> None:
-        df = utils.read_tsv(path)
+        df: pd.DataFrame = utils.read_tsv(path)
         for _, row in df.iterrows():
             key: str = row[KEY_COL]
             self.validate_senses(key, row["senses"])
@@ -343,14 +348,14 @@ def stringify(row: dict) -> dict[str, str]:
 
 
 class _matriarch:
-    def __init__(self):
+    def __init__(self) -> None:
         # Worksheet 0 has the roots.
         self.sheet = utils.read_gspread(GSPREAD_NAME, worksheet=0)
         self.keys: set[str] = {
             str(record[KEY_COL]) for record in self.sheet.get_all_records()
         }
 
-        self.col_idx = {
+        self.col_idx: dict[str, int] = {
             SISTERS_COL: utils.get_column_index(self.sheet, SISTERS_COL),
             ANTONYMS_COL: utils.get_column_index(self.sheet, ANTONYMS_COL),
             HOMONYMS_COL: utils.get_column_index(self.sheet, HOMONYMS_COL),
@@ -400,15 +405,15 @@ class _matriarch:
 
         # Googls Sheets uses 1-based indexing.
         # We also add 1 to account for the header row.
-        all_records = self.sheet.get_all_records()
+        all_records: list[dict] = self.sheet.get_all_records()
         all_records = list(map(stringify, all_records))
         key_to_family: dict[str, family] = {
             row[KEY_COL]: family(row) for row in all_records
         }
-        row_idx = 1
+        row_idx: int = 1
         for row in all_records:
             row_idx += 1
-            key = row[KEY_COL]
+            key: str = row[KEY_COL]
             s, a, h = [], [], []
             if has(sisters, key):
                 assert not has(antonyms, key)
@@ -419,7 +424,7 @@ class _matriarch:
             elif has(homonyms, key):
                 h = homonyms
 
-            houses = {
+            houses: dict[str, house] = {
                 SISTERS_COL: self.marry_house(row, SISTERS_COL, s),
                 ANTONYMS_COL: self.marry_house(row, ANTONYMS_COL, a),
                 HOMONYMS_COL: self.marry_house(row, HOMONYMS_COL, h),
@@ -430,17 +435,17 @@ class _matriarch:
                     KEY_COL: key,
                     GREEK_SISTERS_COL: str(row[GREEK_SISTERS_COL]),
                 }
-                | {col: house.string() for col, house in houses.items()},
+                | {col: huis.string() for col, huis in houses.items()},
             ).validate(key_to_family, symmetry=False)
 
-            for col, house in houses.items():
-                new = house.string()
-                if new != house.ancestors_raw:
+            for col, huis in houses.items():
+                new: str = huis.string()
+                if new != huis.ancestors_raw:
                     self.sheet.update_cell(row_idx, self.col_idx[col], new)
 
 
-def validate():
-    validatoor = validator()
+def validate() -> None:
+    validatoor: validator = validator()
     validatoor.validate(ROOTS, roots=True)
     validatoor.validate(DERIVATIONS)
 
@@ -452,10 +457,7 @@ class runner:
             A boolean indicating whether any *action* arguments have been
             provided. *Option* argument don't affect this return value.
         """
-        if args is None:
-            self.args = argparser.parse_args()
-        else:
-            self.args = argparser.parse_args(args)
+        self.args: argparse.Namespace = argparser.parse_args(args)
         house.delete_empty_fragment = self.args.delete_empty_fragment
 
         def url_to_person(url_or_raw: str) -> person:
@@ -475,15 +477,16 @@ class runner:
             if not url_or_raw.startswith("http"):
                 # This is not a URL, this is already a key.
                 return person(url_or_raw)
-            url = url_or_raw
+            url: str = url_or_raw
             del url_or_raw
             url = urllib.parse.unquote(url)
             parsed = urllib.parse.urlparse(url)
-            basename = parsed.path.split("/")[-1]
+            basename: str = parsed.path.split("/")[-1]
             assert basename.endswith(".html")
-            key = basename[:-5]
+            key: str = basename[:-5]
             del basename
             assert key.isdigit()
+            raw: str = ""
             if parsed.fragment.startswith(TEXT_FRAG_PREFIX):
                 raw = key + " " + parsed.fragment[len(TEXT_FRAG_PREFIX) :]
             elif parsed.fragment:
@@ -498,7 +501,7 @@ class runner:
         self.args.antonyms = list(map(url_to_person, self.args.antonyms))
         self.args.homonyms = list(map(url_to_person, self.args.homonyms))
 
-        num_actions = sum(
+        num_actions: int = sum(
             map(
                 bool,
                 [
@@ -513,7 +516,7 @@ class runner:
             utils.fatal("At most one command is required.")
         return bool(num_actions)
 
-    def once(self):
+    def once(self) -> None:
         if self.args.validate:
             validate()
 
@@ -526,16 +529,16 @@ class runner:
         if self.args.homonyms:
             self.mother.marry_family(homonyms=self.args.homonyms)
 
-    def run(self):
+    def run(self) -> None:
         # NOTE: We perform validation before initialization to speed it up, as
         # we don't need to initialize if we just need a one-off validation.
-        oneoff = self.preprocess_args()
+        oneoff: bool = self.preprocess_args()
         if self.args.validate:
             validate()
             return
 
         utils.info("Initializing...")
-        self.mother = _matriarch()
+        self.mother: _matriarch = _matriarch()
 
         if oneoff:
             # This is a one-off, because there are action commands provided on
@@ -553,8 +556,8 @@ class runner:
                 utils.error(e)
 
 
-def main():
-    r = runner()
+def main() -> None:
+    r: runner = runner()
     r.run()
 
 
