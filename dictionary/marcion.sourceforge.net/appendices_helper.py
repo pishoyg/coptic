@@ -235,7 +235,7 @@ class family:
             symmetry: If true, validate symmetric relations as well.
         """
         # TODO: (#271) Add validation for Greek sisters as well.
-        relatives: list[person] = self.all_except_you()
+        relatives: list[str] = [r.key for r in self.all_except_you()]
         # Verify no relative is recorded twice.
         if len(relatives) != len(set(relatives)):
             utils.fatal("Duplicate sisters found at", self.key)
@@ -244,7 +244,7 @@ class family:
         if self.key in relatives:
             utils.fatal("Circular sisterhood at", self.key)
         # Restrict the checks from here on to the native relatives.
-        relatives = self.natives_except_you()
+        relatives = [r.key for r in self.natives_except_you()]
         for house, name in [
             (self.sisters, "sisters"),
             (self.antonyms, "antonyms"),
@@ -257,7 +257,7 @@ class family:
             return
         # Verify that all relatives are documented.
         utils.verify_all_belong_to_set(
-            [r.key for r in relatives],
+            relatives,
             key_to_family,
             "Nonexisting sister",
         )
