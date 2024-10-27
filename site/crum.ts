@@ -236,7 +236,13 @@ function reset(
 ): void {
   dialectCheckboxes.forEach((box) => { box.checked = false; });
   const url = new URL(window.location.href);
-  if (url.hash) {
+  // NOTE: `url.hash` doesn't include text fragments (expressed by `#:~:text=`),
+  // which is why we need to use `performance.getEntriesByType('navigation')`.
+  // However, the latter doesn't always work, for some reason. In our
+  // experience, it can retrieve the text fragment once, but if you reset and
+  // then add a text fragment manually, it doesn't recognize it! This is not a
+  // huge issue right now, so we aren't prioritizing fixing it!
+  if (url.hash || performance.getEntriesByType('navigation')[0]?.name.includes('#')) {
     url.hash = '';
     window.history.replaceState('', '', url.toString());
     // Reload to get rid of the highlighting caused by the hash, if any.
