@@ -45,12 +45,23 @@ const DIALECT_SINGLE_CHAR = {
 };
 class Highlighter {
   constructor() {
-    this.anki = anki();
-    this.sheet = this.anki ? null : window.document.styleSheets[0];
-    this.spellingRuleIndex = this.sheet?.cssRules.length ?? 0;
-    this.undialectedRuleIndex = (this.sheet?.cssRules.length ?? 0) + 1;
-    this.punctuationRuleIndex = (this.sheet?.cssRules.length ?? 0) + 2;
-    this.devRuleIndex = (this.sheet?.cssRules.length ?? 0) + 3;
+    // Reading CSS rules often fails locally due to CORS.
+    try {
+      this.anki = anki();
+      this.sheet = this.anki ? null : window.document.styleSheets[0];
+      this.spellingRuleIndex = this.sheet?.cssRules.length ?? 0;
+      this.undialectedRuleIndex = (this.sheet?.cssRules.length ?? 0) + 1;
+      this.punctuationRuleIndex = (this.sheet?.cssRules.length ?? 0) + 2;
+      this.devRuleIndex = (this.sheet?.cssRules.length ?? 0) + 3;
+    }
+    catch {
+      this.anki = true;
+      this.sheet = null;
+      this.spellingRuleIndex = 0;
+      this.undialectedRuleIndex = 0;
+      this.punctuationRuleIndex = 0;
+      this.devRuleIndex = 0;
+    }
   }
   update() {
     this.updateDialects();
