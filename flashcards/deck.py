@@ -14,7 +14,7 @@ HTML_FMT = f"""<!DOCTYPE html>
 <html>
   <head>
     <title>{{title}}</title>
-    <link rel="stylesheet" type="text/css" href="{CSS_BASENAME}" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{CSS_BASENAME}">
     <script type="text/javascript" src="{JS_BASENAME}" defer></script>
     {{links}}
   </head>
