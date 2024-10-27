@@ -721,8 +721,8 @@ class prompter:
         print()
 
     def prompt(self):
-        for _key in sorted(self.key_to_row.keys(), key=lambda k: int(k)):
-            self.key = _key
+        for key in sorted(self.key_to_row.keys(), key=lambda k: int(k)):
+            self.key = key
             self.row = self.key_to_row[self.key]
             if not self.prompt_for_word():
                 break
@@ -822,8 +822,9 @@ class prompter:
 
         if command == "key":
             for key in params:
-                row = self.key_to_row[key]
-                os_open(*existing(key), row[LINK_COL])
+                self.key = key
+                self.row = self.key_to_row[self.key]
+                os_open(*existing(self.key), self.row[LINK_COL])
             return True
 
         if command == "convert":
