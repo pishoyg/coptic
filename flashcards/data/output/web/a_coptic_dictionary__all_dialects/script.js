@@ -306,6 +306,8 @@ window.addEventListener('load', () => {
     }
   }
   function makeHelpPanel() {
+  // NOTE: This constructs the help panel. It's important for the content to
+  // remain consistent with the commands that the page responds to.
     const commands = {
       r: 'Reset highlighting',
       d: 'Developer mode',
@@ -315,6 +317,7 @@ window.addEventListener('load', () => {
       '?': 'Toggle help panel',
     };
     if (!xooxle()) {
+      commands['y'] = 'Yank (copy) the word key';
       commands['n'] = 'Go to next word';
       commands['p'] = 'Go to previous word';
     }
@@ -532,6 +535,8 @@ window.addEventListener('load', () => {
       });
       collapse.click();
     });
+    // NOTE: This is where we define all our command shortcuts. It's important for
+    // the content to remain in sync with the help panel.
     document.addEventListener('keyup', (e) => {
       if (anki()) {
       // The help panel and keyboard shortcuts are disabled on Anki!
@@ -560,6 +565,11 @@ window.addEventListener('load', () => {
         break;
       case 'p':
         window_open(getLinkHrefByRel('prev'), false);
+        break;
+      case 'y':
+        if (!xooxle()) {
+          void navigator.clipboard.writeText(window.location.pathname.split('/').pop().replace('.html', ''));
+        }
         break;
       case '?':
         panel?.togglePanel();
