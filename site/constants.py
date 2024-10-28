@@ -1,53 +1,65 @@
 import xooxle
 
+_CRUM_RETAIN_CLASSES = {
+    "dialect",
+    "spelling",
+    "dialect-comma",
+    "spelling-comma",
+    "dialect-parenthesis",
+}
+
+_KELLIA_RETAIN_CLASSES = {
+    "spelling",
+    "dialect",
+    "gram_grp",
+    "lang",
+    "bibl",
+    "ref",
+    "xr",
+}
+
 _CRUM_INDEX = xooxle.index(
     "site/data/xooxle/crum.json",
     xooxle.subindex(
         input="flashcards/data/output/web/a_coptic_dictionary__all_dialects/",
         extract=[
-            xooxle.htmlSelector({"name": "title"}, force=False),
-            xooxle.htmlSelector({"class_": "header"}, force=False),
-            xooxle.htmlSelector({"class_": "dictionary"}, force=False),
-            xooxle.htmlSelector({"class_": "crum"}, force=False),
-            xooxle.htmlSelector({"class_": "crum-page"}, force=False),
-            xooxle.htmlSelector({"class_": "crum-page-external"}, force=False),
-            xooxle.htmlSelector({"class_": "dawoud"}, force=False),
-            xooxle.htmlSelector({"class_": "dawoud-page"}, force=False),
-            xooxle.htmlSelector(
+            xooxle.selector({"name": "title"}, force=False),
+            xooxle.selector({"class_": "header"}, force=False),
+            xooxle.selector({"class_": "dictionary"}, force=False),
+            xooxle.selector({"class_": "crum"}, force=False),
+            xooxle.selector({"class_": "crum-page"}, force=False),
+            xooxle.selector({"class_": "crum-page-external"}, force=False),
+            xooxle.selector({"class_": "dawoud"}, force=False),
+            xooxle.selector({"class_": "dawoud-page"}, force=False),
+            xooxle.selector(
                 {"class_": "dawoud-page-external"},
                 force=False,
             ),
-            xooxle.htmlSelector({"class_": "drv-key"}, force=False),
-            xooxle.htmlSelector({"class_": "explanatory-key"}, force=False),
-            xooxle.htmlSelector({"class_": "nag-hammadi"}, force=False),
-            xooxle.htmlSelector({"class_": "sisters"}, force=False),
+            xooxle.selector({"class_": "drv-key"}, force=False),
+            xooxle.selector({"class_": "explanatory-key"}, force=False),
+            xooxle.selector({"class_": "nag-hammadi"}, force=False),
+            xooxle.selector({"class_": "sisters"}, force=False),
+            xooxle.selector({"id": "pretty"}),
         ],
         captures=[
             xooxle.capture(
                 "marcion",
-                xooxle.htmlSelector({"id": "marcion"}),
-                raw=False,
+                xooxle.selector({"id": "marcion"}),
                 # This is the list of classes needed for highlighting. If the
                 # highlighting rules change, you might have to add new classes!
-                retain_classes={
-                    "dialect",
-                    "spelling",
-                    "dialect-comma",
-                    "spelling-comma",
-                    "dialect-parenthesis",
-                },
+                retain_classes=_CRUM_RETAIN_CLASSES,
             ),
             xooxle.capture(
                 "meaning",
-                xooxle.htmlSelector({"id": "meaning"}, force=False),
-                raw=False,
+                xooxle.selector({"id": "meaning"}, force=False),
+                retain_classes=_CRUM_RETAIN_CLASSES,
             ),
             xooxle.capture(
-                "text",
-                xooxle.htmlSelector(
+                "notes",
+                xooxle.selector(
                     {"name": "body"},
                 ),
-                raw=False,
+                retain_classes=_CRUM_RETAIN_CLASSES,
             ),
         ],
         result_table_name="crum",
@@ -58,34 +70,27 @@ _CRUM_INDEX = xooxle.index(
     xooxle.subindex(
         input="flashcards/data/output/web/kellia__comprehensive/",
         extract=[
-            xooxle.htmlSelector({"name": "footer"}, force=False),
-            xooxle.htmlSelector({"class_": "bibl"}, force=False),
-            xooxle.htmlSelector({"class_": "ref_xr"}, force=False),
-            xooxle.htmlSelector({"class_": "ref"}, force=False),
+            xooxle.selector({"name": "footer"}, force=False),
+            xooxle.selector({"class_": "bibl"}, force=False),
+            xooxle.selector({"class_": "ref_xr"}, force=False),
+            xooxle.selector({"class_": "ref"}, force=False),
         ],
         captures=[
             xooxle.capture(
                 "orths",
-                xooxle.htmlSelector({"id": "orths"}),
-                raw=False,
-                retain_classes={
-                    "spelling",
-                    "dialect",
-                    "gram_grp",
-                },
+                xooxle.selector({"id": "orths"}),
+                retain_classes=_KELLIA_RETAIN_CLASSES,
             ),
             xooxle.capture(
                 "senses",
-                xooxle.htmlSelector({"id": "senses"}),
-                raw=False,
-                retain_classes={"lang"},
+                xooxle.selector({"id": "senses"}),
+                retain_classes=_KELLIA_RETAIN_CLASSES,
             ),
             xooxle.capture(
                 "text",
-                xooxle.htmlSelector(
+                xooxle.selector(
                     {"name": "body"},
                 ),
-                raw=False,
             ),
         ],
         result_table_name="kellia",
@@ -99,21 +104,12 @@ _CRUM_INDEX = xooxle.index(
         captures=[
             xooxle.capture(
                 "front",
-                xooxle.htmlSelector({"id": "front"}),
-                raw=False,
+                xooxle.selector({"id": "front"}),
                 retain_classes={"spelling"},
             ),
             xooxle.capture(
                 "back",
-                xooxle.htmlSelector({"id": "back"}),
-                raw=False,
-            ),
-            xooxle.capture(
-                "text",
-                xooxle.htmlSelector(
-                    {"name": "body"},
-                ),
-                raw=False,
+                xooxle.selector({"id": "back"}),
             ),
         ],
         result_table_name="copticsite",

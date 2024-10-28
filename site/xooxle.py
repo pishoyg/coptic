@@ -1,4 +1,3 @@
-import enum
 import os
 import typing
 
@@ -45,29 +44,15 @@ _NEWLINE_ELEMENTS = {
     "hr",
 }
 
+_RETAIN_TAGS_DEFAULT = {
+    "b",
+    "i",
+    "string",
+    "em",
+}
+
 
 class selector:
-    def select(self, _: pd.Series | bs4.Tag) -> bs4.Tag | None:
-        raise NotImplementedError()
-
-
-class tsvSelector(selector):
-    def __init__(self, fields: list[str], force: bool = True) -> None:
-        self._fields: list[str] = fields
-        self._force: bool = force
-
-    def select(self, row: pd.Series | bs4.Tag) -> bs4.Tag | None:
-        assert isinstance(row, pd.Series)
-        content = "\n".join(filter(None, [str(row[f]) for f in self._fields]))
-        content = content.replace("\n", "<br>")
-        if self._force:
-            assert content
-        if not content:
-            return None
-        return bs4.BeautifulSoup(content, "html.parser")
-
-
-class htmlSelector(selector):
     def __init__(self, kwargs: dict, force: bool = True) -> None:
         self._kwargs = kwargs
         self._force = force
@@ -101,10 +86,17 @@ class htmlSelector(selector):
         return elem
 
 
-def _get_text(tag: bs4.Tag, retain_classes: set[str]) -> str:
+def _get_text(
+    tag: bs4.Tag,
+    retain_classes: set[str],
+    retain_tags: set[str],
+) -> str:
     def __get_text(tag: bs4.Tag) -> typing.Generator:
         for child in tag.children:
             if isinstance(child, bs4.Tag):
+                if child.name in retain_tags:
+                    yield _clean_html(child)
+                    continue
                 if child.has_attr("class") and retain_classes.intersection(
                     set(child["class"]),
                 ):
@@ -146,7 +138,7 @@ def _clean_text(text: str) -> str:
     lines = [ln.strip() for ln in lines]
     lines = list(filter(None, lines))
     lines = [" ".join(line.split()) for line in lines]
-    text = "\n".join(lines)
+    text = "<br>".join(lines)
     return text
 
 
@@ -163,25 +155,20 @@ class capture:
         self,
         name: str,
         _selector: selector,
-        raw: bool,
         retain_classes: set[str] = set(),
+        retain_tags: set[str] = _RETAIN_TAGS_DEFAULT,
     ) -> None:
         self.name: str = name
         self.selector: selector = _selector
-        self.raw: bool = raw
         self.retain_classes: set[str] = retain_classes
-
-
-class InputType(enum.Enum):
-    TSV = 0
-    HTML = 1
+        self.retain_tags: set[str] = retain_tags
 
 
 class subindex:
     def __init__(
         self,
         input: str,
-        extract: list[htmlSelector],
+        extract: list[selector],
         captures: list[capture],
         result_table_name: str,
         view: bool,
@@ -199,7 +186,7 @@ class subindex:
         """
 
         self._input: str = input
-        self._extract: list[htmlSelector] = extract
+        self._extract: list[selector] = extract
         self._captures: list[capture] = captures
         self._result_table_name: str = result_table_name
         self._view = view
@@ -209,21 +196,10 @@ class subindex:
     def iter_input(
         self,
     ) -> typing.Generator[
-        tuple[str, bs4.BeautifulSoup | pd.Series],
+        tuple[str, bs4.BeautifulSoup],
         None,
         None,
     ]:
-        """If the input is a TSV file, yield rows.
-
-        If the input is a directory containing HTML files, yield paths.
-        """
-        if os.path.isfile(self._input):
-            # The input is a TSV.
-            assert self._input.endswith(".tsv")
-            for _, row in utils.read_tsv(self._input).iterrows():
-                yield "", row
-            return
-        # The input is a list of HTML files.
         assert os.path.isdir(self._input)
 
         # Recursively search for all HTML files.
@@ -234,26 +210,20 @@ class subindex:
                 path = os.path.join(root, file)
                 yield path, bs4.BeautifulSoup(utils.read(path), "html.parser")
 
-    def input_type(self) -> InputType:
-        if os.path.isfile(self._input):
-            return InputType.TSV
-        assert os.path.isdir(self._input)
-        return InputType.HTML
-
     def build(self) -> dict:
-
         data: list[dict[str, str]] = []
 
         # Recursively search for all HTML files.
         for path, entry in self.iter_input():
             # Parse the HTML content.
             # TODO: (#230) Don't require a path parameter.
-            datum = {"path": ""}
-            if self.input_type() == InputType.HTML:
-                # Store the relative file path.
-                datum = {
-                    "path": os.path.relpath(path, self._input),
-                }
+            datum = {
+                "path": os.path.relpath(path, self._input),
+            }
+
+            for selector in self._extract:
+                for element in selector.find_all(entry):
+                    element.extract()
 
             for cap in self._captures:
                 elem: bs4.Tag | None = None
@@ -262,32 +232,23 @@ class subindex:
                     datum[cap.name] = ""
                     continue
 
-                for selector in self._extract:
-                    for element in selector.find_all(elem):
-                        element.extract()
-
-                if cap.raw:
-                    datum[cap.name] = _clean_html(elem)
-                else:
-                    datum[cap.name] = _clean_text(
-                        _get_text(elem, cap.retain_classes),
-                    )
+                datum[cap.name] = _clean_text(
+                    _get_text(elem, cap.retain_classes, cap.retain_tags),
+                )
+                # We no longer allow duplicate content in the output. If an
+                # element has been selected once, delete it!
+                elem.extract()
 
             data.append(datum)
 
         return {
             "data": data,
-            "metadata": {
-                capture.name: {
-                    "raw": capture.raw,
-                }
-                for capture in self._captures
-            },
             "params": {
                 "view": self._view,
                 "path_prefix": self._path_prefix,
                 "retain_extension": self._retain_extension,
                 "result_table_name": self._result_table_name,
+                "field_order": [c.name for c in self._captures],
             },
         }
 

@@ -5,75 +5,167 @@ const messageBox = document.getElementById('message')!;
 
 const HIGHLIGHT_COLOR = '#f0d4fc';
 const RESULTS_TO_UPDATE_DISPLAY = 5;
+const TAG_REGEX = /<\/?[^>]+>/g;
 
 interface Params {
+  // result_table_name is the ID of the table containing the results in the HTML
+  // page. Xooxle will retrieve the element using this ID, and will populated
+  // with the results encountered.
+  readonly result_table_name: string,
+  // The following parameters determine the behavior of the view column in the
+  // results table.
+  // - view determines whether the path / key will be shown at all. If false,
+  //   the view column will have a mere index.
+  // - path_prefix is the prefix to be prepended to the path.
+  // - retain_extension determines whether the `.html` extension will be
+  //   retained.
+  // For example, with the following configuration:
+  //   view = true;
+  //   path_prefix = 'https://www.google.com/search?q=';
+  //   retain_extension = false;
+  // A key / path of `hello.html` would result in the view column bearing a
+  // link to 'https://www.google.com/search?q=hello'.
   readonly view: boolean,
   readonly path_prefix: string,
   readonly retain_extension: boolean,
-  readonly result_table_name: string,
-}
-
-interface Field {
-  readonly raw: boolean;
+  // field_order is the order of the fields in the results table.
+  readonly field_order: string[],
 }
 
 interface Xooxle {
-  readonly data: Result[];
-  readonly metadata: Record<string, Field>;
+  // data contains our candidate search results.
+  readonly data: Candidate[];
+  // params bears the search parameters.
   readonly params: Params;
 }
 
-// TODO: (#229) Use a smarter heuristic to show context. Instead of splitting
-// into lines, split into meaningful search units.
-class Result {
+interface FieldSearch {
+  // match indicates whether a match has been found.
+  readonly match: boolean;
+  // name bears the field name.
+  readonly name: string;
+  // html bears the HTML content of the field, with the matches highlighted.
+  readonly html: string;
+  // word bears a full matching word.
+  readonly word: string;
+}
+
+class Candidate {
+  // path bears a path / key for this candidate.
   readonly path: string;
-  readonly text: string;
-  readonly fields: Record<string, string>;
+  // fieldHTML bears the HTML content of each searchable field.
+  private readonly fieldHTML: Record<string, string>;
+  // fieldText bears the plain text content of each searchable field.
+  private readonly fieldText: Record<string, string>;
   public constructor(
-    path: string, text: string, fields: Record<string, string>) {
+    path: string, fieldHTML: Record<string, string>) {
     this.path = path;
-    this.text = text;
-    this.fields = fields;
-  }
-
-  match(regex: RegExp): [string | null, string | null] {
-    const match = this.text.match(regex);
-    if (match?.index === undefined) {
-      return [null, null];
-    }
-    const word = this.getMatchFullWords(match.index, match[0]);
-
-    const matchedLines: string[] = [];
-    this.text.split('\n').forEach((line: string) => {
-      const highlightedLine = this.highlightAllMatches(line, regex);
-      if (highlightedLine === line) {
-        return;
-      }
-      matchedLines.push(highlightedLine);
+    this.fieldHTML = fieldHTML;
+    this.fieldText = {};
+    Object.entries(fieldHTML).forEach(([name, html]: [string, string]) => {
+      this.fieldText[name] = html.replace(TAG_REGEX, '');
     });
-    return [word, matchedLines.join('<hr color="#E0E0E0">')];
   }
 
-  highlightAllMatches(line: string, regex: RegExp): string {
-    let result = '';
+  public search(regex: RegExp): Record<string, FieldSearch> {
+    return Object.entries(this.fieldHTML).map(
+      ([name, html]: [string, string]): FieldSearch => {
+        const text = this.fieldText[name]!;
+        const match = text.match(regex);
+        if (match?.index === undefined) {
+          return { match: false, name: name, html: html, word: '' };
+        }
+
+        return {
+          match: true,
+          name: name,
+          html: Candidate.highlightAllMatches(html, text, regex),
+          word: Candidate.getMatchFullWords(text, match.index, match[0]),
+        };
+      }).reduce<Record<string, FieldSearch>>(
+        (record: Record<string, FieldSearch>, field_search: FieldSearch) =>
+          (record[field_search.name] = field_search, record),
+        {});
+  }
+
+  private static findAllMatches(text: string, regex: RegExp): Set<string> {
+    const matches = new Set<string>();
     let match;
 
     // Loop through all matches in the line
-    while ((match = regex.exec(line)) !== null) {
-      // Append the text before the match and the highlighted match
-      result += line.substring(0, match.index);
-      result += `<span style="background-color: ${HIGHLIGHT_COLOR};">${match[0]}</span>`;
+    while ((match = regex.exec(text)) !== null) {
+      matches.add(match[0]);
+      text = text.substring(match.index + match[0].length);
+    }
+    return matches;
+  }
 
-      // Trim the already processed part of the line
-      line = line.substring(match.index + match[0].length);
+  private static highlightOneMatch(html: string, target: string): string {
+    if (!target) {
+      return html;
     }
 
-    // Append the remaining part of the line after the last match
-    result += line;
+    let result = '';
+    let i = 0;
+
+    while (i <= html.length - target.length) {
+      // If we stopped at a tag, add it to the output without searching it.
+      if (html[i] === '<') {
+        const k = html.indexOf('>', i) + 1;
+        result += html.slice(i, k);
+        i = k;
+      }
+      if (i > html.length) {
+        break;
+      }
+      // Search html at index i.
+      // We attempt to have j point at the end of the match.
+      let j = i;
+
+      let match = true;
+      for (const c of target) {
+        if (html[j] === '<') {
+          j = html.indexOf('>', j) + 1;
+        }
+        if (j > html.length) {
+          match = false;
+          break;
+        }
+
+        if (html[j] !== c) {
+          match = false;
+          break;
+        }
+        ++j;
+      }
+
+      if (match) {
+        result += `<span style="background-color: ${HIGHLIGHT_COLOR};">${html.slice(i, j)}</span>`;
+        i = j;
+      } else {
+        result += html[i]!;
+        i++;
+      }
+    }
+
+    // Append any remaining characters after the last match
+    result += html.slice(i);
+
     return result;
   }
 
-  getMatchFullWords(matchStart: number, match: string): string {
+  private static highlightAllMatches(
+    html: string, text: string, regex: RegExp): string {
+    const matches = Candidate.findAllMatches(text, regex);
+    matches.forEach((m: string) => {
+      html = Candidate.highlightOneMatch(html, m);
+    });
+    return html;
+  }
+
+  private static getMatchFullWords(
+    text: string, matchStart: number, match: string
+  ): string {
     let start = matchStart;
     let end = matchStart + match.length;
 
@@ -81,17 +173,17 @@ class Result {
     const isWordChar = (char: string) => /\p{L}|\p{N}/u.test(char);
 
     // Expand left: Move the start index left until a word boundary is found.
-    while (start > 0 && isWordChar(this.text[start - 1]!)) {
+    while (start > 0 && isWordChar(text[start - 1]!)) {
       start--;
     }
 
     // Expand right: Move the end index right until a word boundary is found.
-    while (end < this.text.length && isWordChar(this.text[end]!)) {
+    while (end < text.length && isWordChar(text[end]!)) {
       end++;
     }
 
     // Return the expanded substring.
-    return this.text.substring(start, end);
+    return text.substring(start, end);
   }
 }
 
@@ -101,27 +193,22 @@ const fileMap: Promise<Xooxle[]> = (async function(): Promise<Xooxle[]> {
   // the browser may not work. You have to serve it through a server.
   interface xooxle {
     readonly data: Record<string, string>[];
-    readonly metadata: Record<string, Field>;
     readonly params: Params;
   }
 
-  const xooxles = await fetch('xooxle.json')
-    .then(async (resp) => await resp.json() as xooxle[]);
-  return xooxles.map((xooxle) => {
-    const results = xooxle.data.map(
-      (record: Record<string, string>): Result => {
-        const path = record['path']!;
-        delete record['path'];
-        const text = record['text']!;
-        delete record['text'];
-        return new Result(path, text, record);
-      });
-    return {
-      data: results,
-      metadata: xooxle.metadata,
-      params: xooxle.params,
-    } as Xooxle;
-  });
+  return (await fetch('xooxle.json')
+    .then(async (resp) => await resp.json() as xooxle[])).map(
+    (xooxle: xooxle) => {
+      return {
+        data: xooxle.data.map(
+          (record: Record<string, string>): Candidate => {
+            const path = record['path']!;
+            delete record['path'];
+            return new Candidate(path, record);
+          }),
+        params: xooxle.params,
+      } as Xooxle;
+    });
 })();
 
 // Event listener for the search button.
@@ -195,15 +282,22 @@ async function searchOneDictionary(
       return;
     }
 
-    let matchedWord: string | null, matchedLines: string | null;
-    try {
-      [matchedWord, matchedLines] = res.match(regex);
-    } catch {
-      messageBox.innerHTML = '<em>Invalid regular expression!</em>';
-      return;
+    // field_searches is ordered based on the field_order parameter.
+    const field_searches: FieldSearch[] | null = (() => {
+      try {
+        const record = res.search(regex);
+        return xooxle.params.field_order.map((name) => record[name]!);;
+      } catch {
+        messageBox.innerHTML = '<em>Invalid regular expression!</em>';
+        return null;
+      }
+    })();
+
+    if (field_searches === null) {
+      continue;
     }
 
-    if (matchedWord === null || matchedLines === null) {
+    if (!Object.values(field_searches).some((fs: FieldSearch) => fs.match)) {
       continue;
     }
 
@@ -215,32 +309,28 @@ async function searchOneDictionary(
     const viewCell = document.createElement('td');
     viewCell.innerHTML = `${String(count)}.`;
     if (xooxle.params.view) {
-      viewCell.innerHTML += ` <a href="${
-        xooxle.params.path_prefix +
+      // Get the word of the first field that has a match.
+      const word: string = field_searches.find(
+        (fs: FieldSearch) => fs.match)!.word;
+      viewCell.innerHTML += ` <a href="${xooxle.params.path_prefix +
         (xooxle.params.retain_extension ? res.path : res.path.replace('.html', ''))
-      }#:~:text=${encodeURIComponent(matchedWord)}" target="_blank">${
-        localStorage.getItem('dev') === 'true' ?
-          res.path.replace('.html', '') : 'view'
+      }#:~:text=${encodeURIComponent(word)}" target="_blank">${localStorage.getItem('dev') === 'true' ?
+        res.path.replace('.html', '') : 'view'
       }</a>`;
     }
     row.appendChild(viewCell);
 
-    Object.entries(res.fields).forEach(([key, value]: [string, string]) => {
+    field_searches.forEach((fs: FieldSearch) => {
       const cell = document.createElement('td');
-      const raw = xooxle.metadata[key]!.raw;
-      // TODO: (#230) If the value is non-raw (meaning that it's plain text,
-      // rather than raw HTML), then we should escape its special characters.
-      // For example, `&` needs to be replaced with `&amp;`.
-      // TODO: (#230) Consider getting rid of the `raw` parameter, and
-      // populating `<br>` tags at the source. This needs some planning.
-      cell.innerHTML = raw ? value : value.replaceAll('\n', '<br>');
+      cell.innerHTML = fs.html;
       row.appendChild(cell);
     });
 
-    const matchesCell = document.createElement('td');
-    matchesCell.innerHTML = matchedLines;
-    row.appendChild(matchesCell);
-
+    // TODO: (#229) We want to sort results based on relevance. However, we
+    // don't want to first retrieve all results and then sort them, as they
+    // would reduce responsiveness. We should continue to display results "on
+    // the fly" as we find them, but insert them at locations in the table
+    // based on which field has matches.
     resultTable.appendChild(row);
 
     // TODO: Remove the dependency on the HTML structure.
