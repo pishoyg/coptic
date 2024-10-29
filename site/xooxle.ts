@@ -334,12 +334,11 @@ async function searchOneDictionary(
 
     const viewCell = document.createElement('td');
     viewCell.classList.add('view');
-    viewCell.innerHTML = `${String(count)}.`;
     if (xooxle.params.view) {
       // Get the word of the first field that has a match.
       const word: string = field_searches.find(
         (fs: FieldSearch) => fs.match)!.word;
-      viewCell.innerHTML += ` <a href="${xooxle.params.path_prefix +
+      viewCell.innerHTML = `<a href="${xooxle.params.path_prefix +
         (xooxle.params.retain_extension ? res.path : res.path.replace('.html', ''))
       }#:~:text=${encodeURIComponent(word)}" target="_blank">${localStorage.getItem('dev') === 'true' ?
         res.path.replace('.html', '') : 'view'
