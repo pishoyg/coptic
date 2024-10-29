@@ -202,6 +202,7 @@ async function searchOneDictionary(regex, xooxle, abortController) {
     // Create a new row for the table
     const row = document.createElement('tr');
     const viewCell = document.createElement('td');
+    viewCell.classList.add('view');
     viewCell.innerHTML = `${String(count)}.`;
     if (xooxle.params.view) {
       // Get the word of the first field that has a match.

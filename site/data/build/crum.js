@@ -216,6 +216,23 @@ function getLinkHrefByRel(rel) {
 function scroll(id) {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 }
+function height(elem) {
+  return elem.getBoundingClientRect().top + window.scrollY;
+}
+function scrollToNextElement(className, prev = false) {
+  const elements = Array.from(document.getElementsByClassName(className));
+  elements.sort((a, b) => prev
+    ? height(b) - height(a)
+    : height(a) - height(b));
+  const currentScrollY = window.scrollY;
+  const elem = elements.find((element) => prev
+    ? height(element) < currentScrollY - 10
+    : height(element) > currentScrollY + 10);
+  if (!elem) {
+    return;
+  }
+  elem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 class Section {
   constructor(title, commands) {
     this.title = title;
@@ -324,12 +341,12 @@ function makeHelpPanel() {
     e: `Email <a class="contact" href="${EMAIL_LINK}">${EMAIL}</a>`,
     h: 'Open homepage',
     X: 'Open the dictionary search page',
+    n: `Go to next ${xooxle() ? 'search result' : 'word'}`,
+    p: `Go to previous ${xooxle() ? 'search result' : 'word'}`,
     '?': 'Toggle help panel',
   };
   if (!xooxle()) {
     commands['y'] = 'Yank (copy) the word key';
-    commands['n'] = 'Go to next word';
-    commands['p'] = 'Go to previous word';
   }
   const sections = [
     new Section('Commands', commands),
@@ -571,10 +588,20 @@ function main() {
       window_open(SEARCH);
       break;
     case 'n':
-      window_open(getLinkHrefByRel('next'), false);
+      if (xooxle()) {
+        scrollToNextElement('view');
+      }
+      else {
+        window_open(getLinkHrefByRel('next'), false);
+      }
       break;
     case 'p':
-      window_open(getLinkHrefByRel('prev'), false);
+      if (xooxle()) {
+        scrollToNextElement('view', true);
+      }
+      else {
+        window_open(getLinkHrefByRel('prev'), false);
+      }
       break;
     case 'y':
       if (!xooxle()) {
