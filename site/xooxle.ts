@@ -366,6 +366,21 @@ async function searchOneDictionary(
       await new Promise((resolve) => setTimeout(resolve, 0));
     }
   }
+
+  let counter = 0;
+  resultTable.childNodes.forEach((node: ChildNode) => {
+    const tr = node as HTMLTableRowElement;
+    if (tr.style.display === 'none') {
+      // This is one of the sentinel rows. Nothing to do here!
+      return;
+    }
+    const small = document.createElement('small');
+    small.classList.add('very-light');
+    small.innerHTML = `${(++counter).toString()} / ${count.toString()}`;
+    const td = tr.firstElementChild as HTMLTableCellElement;
+    td.prepend(' ');
+    td.prepend(small);
+  });
 }
 
 let debounceTimeout: number | null = null;
