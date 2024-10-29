@@ -254,6 +254,20 @@ async function searchOneDictionary(regex, xooxle, abortController) {
       await new Promise((resolve) => setTimeout(resolve, 0));
     }
   }
+  let counter = 0;
+  resultTable.childNodes.forEach((node) => {
+    const tr = node;
+    if (tr.style.display === 'none') {
+      // This is one of the sentinel rows. Nothing to do here!
+      return;
+    }
+    const small = document.createElement('small');
+    small.classList.add('very-light');
+    small.innerHTML = `${(++counter).toString()} / ${count.toString()}`;
+    const td = tr.firstElementChild;
+    td.prepend(' ');
+    td.prepend(small);
+  });
 }
 let debounceTimeout = null;
 function handleSearchQuery(timeout) {
