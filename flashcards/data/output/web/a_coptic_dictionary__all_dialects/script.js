@@ -393,13 +393,13 @@ window.addEventListener('load', () => {
         n: 'Next search result',
         p: 'Previous search result',
         C: 'Crum',
-        Z: 'KELLIA',
-        T: 'copticsi<strong>t</strong>e',
+        Z: '<a href="https://kellia.uni-goettingen.de/" target="_blank" rel="noopener,noreferrer">KELLIA</a>',
+        T: '<a href="http://copticsite.com/" target="_blank" rel="noopener,noreferrer">copticsi<strong>t</strong>e</a>',
       }));
       sections.push(new Section('Collapse', {
         c: 'Crum',
-        z: 'KELLIA',
-        t: 'copticsi<strong>t</strong>e',
+        z: '<a href="https://kellia.uni-goettingen.de/" target="_blank" rel="noopener,noreferrer">KELLIA</a>',
+        t: '<a href="http://copticsite.com/" target="_blank" rel="noopener,noreferrer">copticsi<strong>t</strong>e</a>',
       }));
     }
     else {
