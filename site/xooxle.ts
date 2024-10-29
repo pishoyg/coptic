@@ -307,6 +307,7 @@ async function searchOneDictionary(
     const row = document.createElement('tr');
 
     const viewCell = document.createElement('td');
+    viewCell.classList.add('view');
     viewCell.innerHTML = `${String(count)}.`;
     if (xooxle.params.view) {
       // Get the word of the first field that has a match.
