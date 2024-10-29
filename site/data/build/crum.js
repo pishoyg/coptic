@@ -31,6 +31,7 @@ const DIALECTS = [
   'V',
   'W',
   'U',
+  'K',
 ];
 // DIALECT_SINGLE_CHAR is a mapping for the dialects that have shortcuts other
 // than their codes. If the shortcut to toggle a dialect is not the same as its
@@ -376,6 +377,9 @@ function makeHelpPanel() {
       V: 'South Fayyumic Greek',
       W: 'Crypto-Mesokemic Greek',
       U: 'Greek (usage <strong>u</strong>nclear)',
+      // TODO: (#279) What is this dialect called?
+      // It's from TLA (e.g. https://coptic-dictionary.org/entry.cgi?tla=C2537).
+      K: '',
     }),
   ];
   if (xooxle()) {
@@ -388,12 +392,12 @@ function makeHelpPanel() {
       n: 'Next search result',
       p: 'Previous search result',
       C: 'Crum',
-      K: 'KELLIA',
+      Z: 'KELLIA',
       T: 'copticsi<strong>t</strong>e',
     }));
     sections.push(new Section('Collapse', {
       c: 'Crum',
-      l: 'KELLIA',
+      z: 'KELLIA',
       t: 'copticsi<strong>t</strong>e',
     }));
   }
@@ -657,6 +661,7 @@ function main() {
     case 'V':
     case 'W':
     case 'U':
+    case 'K':
       if (xooxle()) {
         click(`checkbox-${DIALECT_SINGLE_CHAR[e.key] ?? e.key}`);
       }
@@ -674,7 +679,7 @@ function main() {
         scroll('crum');
       }
       break;
-    case 'K':
+    case 'Z':
       scroll('kellia-title');
       break;
     case 'T':
@@ -688,13 +693,11 @@ function main() {
         scroll('dictionary');
       }
       break;
+    case 'z':
+      click('kellia-title');
+      break;
     case 'l':
-      if (xooxle()) {
-        click('kellia-title');
-      }
-      else {
-        scroll('sisters');
-      }
+      scroll('sisters');
       break;
     case 't':
       if (xooxle()) {
