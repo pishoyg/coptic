@@ -439,12 +439,12 @@ function makeHelpPanel(): HelpPanel {
     e: `Email <a class="contact" href="${EMAIL_LINK}">${EMAIL}</a>`,
     h: 'Open homepage',
     X: 'Open the dictionary search page',
-    n: `Go to next ${xooxle() ? 'search result' : 'word'}`,
-    p: `Go to previous ${xooxle() ? 'search result' : 'word'}`,
     '?': 'Toggle help panel',
   };
 
   if (!xooxle()) {
+    commands['n'] = 'Go to next word';
+    commands['p'] = 'Go to previous word';
     commands['y'] = 'Yank (copy) the word key';
   }
 
@@ -479,15 +479,17 @@ function makeHelpPanel(): HelpPanel {
     }));
 
     sections.push(new Section('Scrol To', {
-      'C': 'Crum',
-      'K': 'KELLIA',
-      'T': 'copticsi<strong>t</strong>e',
+      n: 'Next search result',
+      p: 'Previous search result',
+      C: 'Crum',
+      K: 'KELLIA',
+      T: 'copticsi<strong>t</strong>e',
     }));
 
     sections.push(new Section('Collapse', {
-      'c': 'Crum',
-      'l': 'KELLIA',
-      't': 'copticsi<strong>t</strong>e',
+      c: 'Crum',
+      l: 'KELLIA',
+      t: 'copticsi<strong>t</strong>e',
     }));
 
   } else {
