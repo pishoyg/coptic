@@ -285,19 +285,28 @@ function height(elem: HTMLElement): number {
   return elem.getBoundingClientRect().top + window.scrollY;
 }
 
-function scrollToNextElement(className: string, prev = false): void {
+function findNextElement(
+  className: string,
+  target: 'next' | 'prev' | 'cur',
+): HTMLElement | undefined {
   const elements = Array.from(
     document.getElementsByClassName(className)
   ) as HTMLElement[];
-  elements.sort((a, b) => prev
+  elements.sort((a, b) => target == 'prev'
     ? height(b) - height(a)
     : height(a) - height(b));
   const currentScrollY = window.scrollY;
-  const elem = elements.find(
-    (element) => prev
+  return elements.find(
+    (element) => target === 'prev'
       ? height(element) < currentScrollY - 10
-      : height(element) > currentScrollY + 10
+      : target === 'next'
+        ? height(element) > currentScrollY + 10
+        : height(element) >= currentScrollY - 1
   );
+}
+
+function scrollToNextElement(className: string, target: 'next' | 'prev' | 'cur'): void {
+  const elem = findNextElement(className, target);
   if (!elem) {
     return;
   }
@@ -442,7 +451,9 @@ function makeHelpPanel(): HelpPanel {
     '?': 'Toggle help panel',
   };
 
-  if (!xooxle()) {
+  if (xooxle()) {
+    commands['o'] = 'Open the current result';
+  } else {
     commands['n'] = 'Go to next word';
     commands['p'] = 'Go to previous word';
     commands['y'] = 'Yank (copy) the word key';
@@ -781,14 +792,14 @@ function main() {
       break;
     case 'n':
       if (xooxle()) {
-        scrollToNextElement('view');
+        scrollToNextElement('view', 'next');
       } else {
         window_open(getLinkHrefByRel('next'), false);
       }
       break;
     case 'p':
       if (xooxle()) {
-        scrollToNextElement('view', true);
+        scrollToNextElement('view', 'prev');
       } else {
         window_open(getLinkHrefByRel('prev'), false);
       }
@@ -797,6 +808,11 @@ function main() {
       if (!xooxle()) {
         void navigator.clipboard.writeText(
             window.location.pathname.split('/').pop()!.replace('.html', ''));
+      }
+      break;
+    case 'o':
+      if (xooxle()) {
+        findNextElement('view', 'cur')?.querySelector('a')?.click();
       }
       break;
     case '?':
