@@ -230,9 +230,13 @@ async function searchOneDictionary(regex, xooxle, abortController) {
     if (xooxle.params.view) {
       // Get the word of the first field that has a match.
       const word = field_searches.find((fs) => fs.match).word;
-      viewCell.innerHTML = `<a href="${xooxle.params.path_prefix +
-                (xooxle.params.retain_extension ? res.path : res.path.replace('.html', ''))}#:~:text=${encodeURIComponent(word)}" target="_blank">${localStorage.getItem('dev') === 'true' ?
-        res.path.replace('.html', '') : 'view'}</a>`;
+      const a = document.createElement('a');
+      a.href = `${xooxle.params.path_prefix + (xooxle.params.retain_extension
+        ? res.path
+        : res.path.replace('.html', ''))}#:~:text=${encodeURIComponent(word)}`;
+      a.target = '_blank';
+      a.textContent = localStorage.getItem('dev') === 'true' ? res.path.replace('.html', '') : 'view';
+      viewCell.appendChild(a);
     }
     row.appendChild(viewCell);
     field_searches.forEach((fs) => {
