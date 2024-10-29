@@ -278,6 +278,31 @@ async function searchOneDictionary(
   let count = 0;
   const resultTable = document.getElementById(xooxle.params.result_table_name)!.querySelector('tbody')!;
 
+  // idx_to_bottom is a set of hidden table rows that represent break points in
+  // the results table.
+  //
+  // These rows are used to divide the column into sections.
+  // Results with matches in their first column will be added right on top of
+  // the first hidden row. Results with matches in their second column will be
+  // added right on top of the second hidden row, etc.
+  //
+  // This allows us to avoid having to re-render the entire table on each
+  // match, while making it possible to sort the results by some criterion (the
+  // criterion being the index of the column of first match). We do so based on
+  // the assumption that the earlier columns contain more relevant data, and
+  // thus are more interesting to the user.
+  //
+  // Notice that we use those rows or break points as bottoms for the sections,
+  // rather than tops, because we want results to expand downwards rather than
+  // upwards, to avoid jitter at the top of the table, which is the area that
+  // the user will be looking at.
+  const idx_to_bottom: Element[] = xooxle.params.field_order.map(() => {
+    const tr = document.createElement('tr');
+    tr.style.display = 'none';
+    resultTable.appendChild(tr);
+    return tr;
+  });
+
   for (const res of xooxle.data) {
     if (abortController.signal.aborted) {
       return;
@@ -328,12 +353,7 @@ async function searchOneDictionary(
       row.appendChild(cell);
     });
 
-    // TODO: (#229) We want to sort results based on relevance. However, we
-    // don't want to first retrieve all results and then sort them, as they
-    // would reduce responsiveness. We should continue to display results "on
-    // the fly" as we find them, but insert them at locations in the table
-    // based on which field has matches.
-    resultTable.appendChild(row);
+    idx_to_bottom[field_searches.findIndex((fs) => fs.match)]!.insertAdjacentElement('beforebegin', row);
 
     // TODO: Remove the dependency on the HTML structure.
     const collapsible = resultTable.parentElement!.parentElement!;
