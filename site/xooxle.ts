@@ -115,7 +115,7 @@ class Candidate {
         result += html.slice(i, k);
         i = k;
       }
-      if (i > html.length) {
+      if (i >= html.length) {
         break;
       }
       // Search html at index i.
@@ -127,7 +127,7 @@ class Candidate {
         if (html[j] === '<') {
           j = html.indexOf('>', j) + 1;
         }
-        if (j > html.length) {
+        if (j >= html.length) {
           match = false;
           break;
         }
