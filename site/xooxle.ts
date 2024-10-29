@@ -110,7 +110,7 @@ class Candidate {
 
     while (i <= html.length - target.length) {
       // If we stopped at a tag, add it to the output without searching it.
-      if (html[i] === '<') {
+      while (i < html.length && html[i] === '<') {
         const k = html.indexOf('>', i) + 1;
         result += html.slice(i, k);
         i = k;
@@ -118,13 +118,14 @@ class Candidate {
       if (i >= html.length) {
         break;
       }
+
       // Search html at index i.
       // We attempt to have j point at the end of the match.
       let j = i;
 
       let match = true;
       for (const c of target) {
-        if (html[j] === '<') {
+        while (j < html.length && html[j] === '<') {
           j = html.indexOf('>', j) + 1;
         }
         if (j >= html.length) {
