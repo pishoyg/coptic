@@ -552,6 +552,7 @@ window.addEventListener('load', () => {
     });
     // NOTE: This is where we define all our command shortcuts. It's important for
     // the content to remain in sync with the help panel.
+    // TODO: (#280) Combine the help panel and `keyup` listener code.
     document.addEventListener('keyup', (e) => {
       if (anki()) {
       // The help panel and keyboard shortcuts are disabled on Anki!

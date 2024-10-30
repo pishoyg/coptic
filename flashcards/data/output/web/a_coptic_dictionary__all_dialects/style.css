@@ -6,7 +6,7 @@ h1 {
   text-align: center;
 }
 
-a,.link {
+a,.link,a strong {
   color: #3498DB;
   cursor: pointer;
   text-decoration: none;
@@ -104,6 +104,11 @@ table {
 .results td:not(:first-child) {
   border-left: 1px solid black;
   padding-left: 5px;
+}
+
+.error {
+  color: darkred;
+  font-style: italic;
 }
 
 /* Responsive table layout for mobile */
