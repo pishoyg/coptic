@@ -3,7 +3,6 @@ const searchBox = document.getElementById('searchBox');
 const fullWordCheckbox = document.getElementById('fullWordCheckbox');
 const regexCheckbox = document.getElementById('regexCheckbox');
 const messageBox = document.getElementById('message');
-const HIGHLIGHT_COLOR = '#f0d4fc';
 const RESULTS_TO_UPDATE_DISPLAY = 5;
 const TAG_REGEX = /<\/?[^>]+>/g;
 class Candidate {
@@ -60,9 +59,24 @@ class Candidate {
       // We attempt to have j point at the end of the match.
       let j = i;
       let match = true;
+      // segments is the list of segments that we will push to the result (if we
+      // end up having a match). Each segment is either:
+      // - An HTML (closing or opening) tag.
+      // - A piece of text.
+      const segments = [];
+      // last_push_end is the index of the end of the last pushed segment.
+      let last_push_end = i;
       for (const c of target) {
         while (j < html.length && html[j] === '<') {
+          // We have encountered a tag. Push the matching text first (if
+          // non-empty). Then push the tag segment.
+          if (j !== last_push_end) {
+            segments.push(html.slice(last_push_end, j));
+            last_push_end = j;
+          }
           j = html.indexOf('>', j) + 1;
+          segments.push(html.slice(last_push_end, j));
+          last_push_end = j;
         }
         if (j >= html.length) {
           match = false;
@@ -75,7 +89,13 @@ class Candidate {
         ++j;
       }
       if (match) {
-        result += `<span style="background-color: ${HIGHLIGHT_COLOR};">${html.slice(i, j)}</span>`;
+        // Push the last piece of text. It's guaranteed to be non-empty, because
+        // our matching algorithm always stops within a text, not a tag.
+        segments.push(html.slice(last_push_end, j));
+        last_push_end = j;
+        // Surround all the text (non-tag) segments with <span class="match">
+        // tags.
+        result += segments.map((s) => s.startsWith('<') ? s : `<span class="match">${s}</span>`).join('');
         i = j;
       }
       else {
