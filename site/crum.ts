@@ -26,6 +26,30 @@ const EMAIL_LINK = `mailto:${EMAIL}`;
 
 const DAWOUD_OFFSET = 16;
 
+const DIALECTS = [
+  // The following dialects are found in Crum.
+  'S',
+  'Sa',
+  'Sf',
+  'A',
+  'sA',
+  'B',
+  'F',
+  'Fb',
+  'O',
+  // The following dialects are only found in Marcion.
+  'NH',
+  // The following dialects are only found in TLA / KELLIA.
+  'Ak',
+  'M',
+  'L',
+  'P',
+  'V',
+  'W',
+  'U',
+  'K',
+];
+
 // DIALECT_SINGLE_CHAR is a mapping for the dialects that have shortcuts other
 // than their codes. If the shortcut to toggle a dialect is not the same as its
 // code, it should be included in this record.
@@ -37,6 +61,10 @@ const DIALECT_SINGLE_CHAR: Record<string, string> = {
   'b': 'Fb',
   'k': 'Ak',
 };
+
+function classQuery(classes: string[]): string {
+  return classes.map(c => `.${c}`).join(', ');
+}
 
 class Highlighter {
   // Sheets are problematic on Anki, for some reason! We update the elements
@@ -74,6 +102,14 @@ class Highlighter {
     this.updateDev();
   }
 
+  nonEmptyActiveQuery(active: string[]): string {
+    // Some dialects are off.
+    // Dim all children of `word` elements, with the exception of:
+    // - Active dialects.
+    // - Undialected spellings.
+    return `.word > :not(${classQuery(active)},.spelling:not(${classQuery(DIALECTS)}))`;
+  }
+
   updateDialects(): void {
     const active = activeDialects();
     if (this.anki) {
@@ -81,11 +117,17 @@ class Highlighter {
       return;
     }
 
-    const style = active === null
-      ? '.word {}' // No dialect highlighting whatsoever!
-      : active.length === 0
-        ? `.word { opacity: ${Highlighter.DIM}; }`  // All dialects are off.
-        : `.word > :not(${active.map((d) => `.${d}`).join(',')}) {opacity: ${Highlighter.DIM};}`;  // Some dialects are off.
+    let style: string;
+
+    if (active === null) {
+      // No dialect highlighting whatsoever!
+      style = '.word {}';
+    } else if (active.length === 0) {
+      // All dialects are off.
+      style = `.word { opacity: ${Highlighter.DIM}; }`;
+    } else {
+      style = `${this.nonEmptyActiveQuery(active)} { opacity: ${Highlighter.DIM}; }`;
+    }
 
     this.addOrReplaceRule(this.dialectRuleIndex, style);
   }
@@ -109,7 +151,7 @@ class Highlighter {
     // selected.
     const init = (active !== null && active.length === 0)
       ? Highlighter.DIM : Highlighter.BRIGHT;
-    document.querySelectorAll<HTMLElement>('.word, .word *').forEach(
+    document.querySelectorAll<HTMLElement>('.word *').forEach(
       (el: HTMLElement) => {
         el.style.opacity = init;
       }
@@ -120,7 +162,8 @@ class Highlighter {
       return;
     }
 
-    document.querySelectorAll<HTMLElement>(`.word > :not(${active.map((d) => `.${d}`).join(',')})`).forEach(
+    document.querySelectorAll<HTMLElement>(
+      this.nonEmptyActiveQuery(active)).forEach(
       (el: HTMLElement) => {
         el.style.opacity = Highlighter.DIM;
       });
