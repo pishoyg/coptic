@@ -26,29 +26,6 @@ const EMAIL_LINK = `mailto:${EMAIL}`;
 
 const DAWOUD_OFFSET = 16;
 
-const DIALECTS: readonly string[] = [
-  // Crum dialects.
-  'S',
-  'Sa',
-  'Sf',
-  'A',
-  'sA',
-  'B',
-  'F',
-  'Fb',
-  'O',
-  'NH',
-  // KELLIA-only dialects.
-  'Ak',
-  'M',
-  'L',
-  'P',
-  'V',
-  'W',
-  'U',
-  'K',
-];
-
 // DIALECT_SINGLE_CHAR is a mapping for the dialects that have shortcuts other
 // than their codes. If the shortcut to toggle a dialect is not the same as its
 // code, it should be included in this record.
@@ -66,29 +43,28 @@ class Highlighter {
   // individually instead!
   private readonly anki: boolean;
   private readonly sheet: CSSStyleSheet | null;
-  private readonly spellingRuleIndex: number;
-  private readonly undialectedRuleIndex: number;
-  private readonly punctuationRuleIndex: number;
+  private readonly dialectRuleIndex: number;
   private readonly devRuleIndex: number;
 
   private static readonly BRIGHT = '1.0';
   private static readonly DIM = '0.3';
 
   constructor() {
-    // Reading CSS rules often fails locally due to CORS.
+    // NOTE: Reading CSS rules often fails locally due to CORS. This is why we
+    // use the `try` block here. In case it fails, we fall back to Anki mode,
+    // which doesn't need to read the CSS.
+    // This failure, however, is not expected to be encountered if you're
+    // reading locally through a server. It only fails when you open the HTML
+    // file in the browser directly.
     try {
       this.anki = anki();
       this.sheet = this.anki ? null : window.document.styleSheets[0]!;
-      this.spellingRuleIndex = this.sheet?.cssRules.length ?? 0;
-      this.undialectedRuleIndex = (this.sheet?.cssRules.length ?? 0) + 1;
-      this.punctuationRuleIndex = (this.sheet?.cssRules.length ?? 0) + 2;
-      this.devRuleIndex = (this.sheet?.cssRules.length ?? 0) + 3;
+      this.dialectRuleIndex = this.sheet?.cssRules.length ?? 0;
+      this.devRuleIndex = this.dialectRuleIndex + 1;
     } catch {
       this.anki = true;
       this.sheet = null;
-      this.spellingRuleIndex = 0;
-      this.undialectedRuleIndex = 0;
-      this.punctuationRuleIndex = 0;
+      this.dialectRuleIndex = 0;
       this.devRuleIndex = 0;
     }
   }
@@ -105,18 +81,13 @@ class Highlighter {
       return;
     }
 
-    const query: string | null = active?.map((d) => `.${d}`).join(',') ?? '';
-    this.addOrReplaceRule(
-      this.spellingRuleIndex,
-      query
-        ? `.spelling:not(${query}), .dialect:not(${query}) {opacity: ${Highlighter.DIM};}`
-        : `.spelling, .dialect {opacity: ${String(active === null ? Highlighter.BRIGHT : Highlighter.DIM)};}`);
-    this.addOrReplaceRule(
-      this.undialectedRuleIndex,
-      `.spelling:not(${DIALECTS.map((d) => `.${d}`).join(',')}) { opacity: ${String(active === null || query ? Highlighter.BRIGHT : Highlighter.DIM)}; }`);
-    this.addOrReplaceRule(
-      this.punctuationRuleIndex,
-      `.dialect-parenthesis, .dialect-comma, .spelling-comma, .type { opacity: ${String(active === null ? Highlighter.BRIGHT : Highlighter.DIM)}; }`);
+    const style = active === null
+      ? '.word {}' // No dialect highlighting whatsoever!
+      : active.length === 0
+        ? `.word { opacity: ${Highlighter.DIM}; }`  // All dialects are off.
+        : `.word > :not(${active.map((d) => `.${d}`).join(',')}) {opacity: ${Highlighter.DIM};}`;  // Some dialects are off.
+
+    this.addOrReplaceRule(this.dialectRuleIndex, style);
   }
 
   updateDev(): void {
@@ -129,39 +100,32 @@ class Highlighter {
   }
 
   private updateDialectsNoSheet(active: string[] | null): void {
-    if (active === null) {
-      // Highlighting is off. Show everything.
-      document.querySelectorAll<HTMLElement>('.spelling, .dialect, .dialect-parenthesis, .dialect-comma, .spelling-comma, .type').forEach(
-        (el: HTMLElement) => {
-          el.style.opacity = Highlighter.BRIGHT;
-        }
-      );
+    // If active.length === 0 (all dialects off), we dim all elements and
+    // return.
+    // If active === null (no highlighting requested), we brighten all elements
+    // and return.
+    // Otherwise, if we need to highlight a subset of the elements, we initially
+    // brighten all of them, then we selectively dim the ones that are not
+    // selected.
+    const init = (active !== null && active.length === 0)
+      ? Highlighter.DIM : Highlighter.BRIGHT;
+    document.querySelectorAll<HTMLElement>('.word, .word *').forEach(
+      (el: HTMLElement) => {
+        el.style.opacity = init;
+      }
+    );
+
+    if (active === null || active.length === 0) {
+      // Our job is already done.
       return;
     }
 
-    // Update spelling highlighting.
-    document.querySelectorAll<HTMLElement>('.spelling, .dialect').forEach(
-      (el: HTMLElement) => {
-        let opacity: string = Highlighter.DIM;
-        if (active.some((d) => el.classList.contains(d))) {
-          opacity = Highlighter.BRIGHT;
-        } else if (
-          active.length > 1 &&
-          !DIALECTS.some((d: string) => el.classList.contains(d))) {
-          // If the element has no dialects, it should be shown provided that at
-          // least one dialect is active.
-          opacity = Highlighter.BRIGHT;
-        }
-
-        el.style.opacity = opacity;
-      });
-
-    // Update punctuation highlighting.
-    document.querySelectorAll<HTMLElement>('.dialect-parenthesis, .dialect-comma, .spelling-comma, .type').forEach(
+    document.querySelectorAll<HTMLElement>(`.word > :not(${active.map((d) => `.${d}`).join(',')})`).forEach(
       (el: HTMLElement) => {
         el.style.opacity = Highlighter.DIM;
       });
   }
+
   private updateDevNoSheet(display: string): void {
     document.querySelectorAll<HTMLElement>('.dev, .nag-hammadi').forEach(
       (el: HTMLElement) => {

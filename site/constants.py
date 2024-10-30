@@ -1,8 +1,14 @@
 import xooxle
 
+# Xooxle search will work fine even if we don't retain any HTML tags, because it
+# relies entirely on searching the text payloads of the HTML. However, we retain
+# the subset of the classes that are needed for highlighting, in order to make
+# the Xooxle search results pretty.
 _CRUM_RETAIN_CLASSES = {
+    "word",
     "dialect",
     "spelling",
+    "type",
     "dialect-comma",
     "spelling-comma",
     "dialect-parenthesis",
@@ -11,7 +17,7 @@ _CRUM_RETAIN_CLASSES = {
 _KELLIA_RETAIN_CLASSES = {
     "spelling",
     "dialect",
-    "gram_grp",
+    "type",
     "lang",
     "bibl",
     "ref",

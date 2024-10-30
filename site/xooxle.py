@@ -94,14 +94,23 @@ def _get_text(
     def __get_text(tag: bs4.Tag) -> typing.Generator:
         for child in tag.children:
             if isinstance(child, bs4.Tag):
-                if child.name in retain_tags:
-                    yield _clean_html(child)
-                    continue
-                if child.has_attr("class") and retain_classes.intersection(
-                    set(child["class"]),
+                if child.name in retain_tags or retain_classes.intersection(
+                    child.get_attribute_list("class"),
                 ):
-                    child.name = "span"
-                    yield _clean_html(child)
+                    # We need to retain this tag.
+                    name = child.name if child.name in retain_tags else "span"
+                    if child.has_attr("class"):
+                        yield f'<{name} class="{
+                                " ".join(child.get_attribute_list("class"))
+                        }">'
+                    else:
+                        yield f"<{name}>"
+                    # Mangle the child to make sure it doesn't get picked up
+                    # again, but its children should.
+                    child.name = "RANDOM"
+                    child.attrs = {}
+                    yield from __get_text(child)
+                    yield f"</{name}>"
                     continue
                 # If the tag is a block type tag, then yield new lines before
                 # and after.
