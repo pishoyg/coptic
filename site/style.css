@@ -73,6 +73,10 @@ body {
   background-color: #ffa;
 }
 
+.match {
+  background-color: #f0d4fc;
+}
+
 /* Style download links */
 
 a.download,.download-list li a {
