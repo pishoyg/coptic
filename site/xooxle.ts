@@ -256,7 +256,7 @@ async function search() {
     });
   }
 
-  let query = searchBox.value.trim();
+  let query = searchBox.value;
   if (!query) {
     clear();
     return;
@@ -421,8 +421,8 @@ function handleSearchQuery(timeout: number) {
     } finally {
       // Update the URL.
       const url = new URL(window.location.href);
-      if (searchBox.value.trim()) {
-        url.searchParams.set('query', searchBox.value.trim());
+      if (searchBox.value) {
+        url.searchParams.set('query', searchBox.value);
       } else {
         url.searchParams.delete('query');
       }
