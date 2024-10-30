@@ -6,7 +6,7 @@ h1 {
   text-align: center;
 }
 
-a,.link {
+a,.link,a strong {
   color: #3498DB;
   cursor: pointer;
   text-decoration: none;
