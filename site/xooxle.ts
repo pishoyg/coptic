@@ -67,6 +67,9 @@ class Candidate {
   }
 
   public search(regex: RegExp): Record<string, FieldSearch> {
+    // TODO: (#230) Only search the searchable fields. Right now, all fields are
+    // searchable, so this doesn't incur an extra overhead. This may no longer
+    // be the case in the future.
     return Object.entries(this.fieldHTML).map(
       ([name, html]: [string, string]): FieldSearch => {
         const text = this.fieldText[name]!;
@@ -93,6 +96,11 @@ class Candidate {
 
     // Loop through all matches in the line
     while ((match = regex.exec(text)) !== null) {
+      if (!match[0]) {
+        // The regex matched the empty string! This would result in an infinite
+        // loop! Throw an exception!
+        throw new Error('Empty string matched by regex!');
+      }
       matches.add(match[0]);
       text = text.substring(match.index + match[0].length);
     }
@@ -239,6 +247,11 @@ const fileMap: Promise<Xooxle[]> = (async function(): Promise<Xooxle[]> {
 // Event listener for the search button.
 let currentAbortController: AbortController | null = null;
 
+function errorMessage(): string {
+  const message = regexCheckbox.checked ? 'Invalid regular expression!' : 'Internal error! Please send us an email!';
+  return `<span class="error">${message}</div>`;
+}
+
 async function search() {
   if (currentAbortController) {
     currentAbortController.abort();
@@ -283,7 +296,7 @@ async function search() {
     messageBox.innerHTML = '';
   } catch {
     clear();
-    messageBox.innerHTML = '<em>Invalid regular expression!</em>';
+    messageBox.innerHTML = errorMessage();
     return;
   }
 
@@ -338,13 +351,15 @@ async function searchOneDictionary(
         const record = res.search(regex);
         return xooxle.params.field_order.map((name) => record[name]!);;
       } catch {
-        messageBox.innerHTML = '<em>Invalid regular expression!</em>';
+        messageBox.innerHTML = errorMessage();
         return null;
       }
     })();
 
     if (field_searches === null) {
-      continue;
+      // Searching the current candidate has failed. The same will likely happen
+      // with future candidates. Abort.
+      return;
     }
 
     if (!Object.values(field_searches).some((fs: FieldSearch) => fs.match)) {
