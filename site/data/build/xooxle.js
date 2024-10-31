@@ -3,14 +3,20 @@ const searchBox = document.getElementById('searchBox');
 const fullWordCheckbox = document.getElementById('fullWordCheckbox');
 const regexCheckbox = document.getElementById('regexCheckbox');
 const messageBox = document.getElementById('message');
+// KEY is the name of the field that bears the word key. The key can be used to
+// generate an HREF to open the word page.
+const KEY = 'KEY';
 const RESULTS_TO_UPDATE_DISPLAY = 5;
 const TAG_REGEX = /<\/?[^>]+>/g;
 class Candidate {
-  constructor(path, fieldHTML) {
-    this.path = path;
-    this.fieldHTML = fieldHTML;
+  constructor(record) {
+    this.key = record[KEY];
+    // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
+    delete record[KEY];
+    this.fieldHTML = record;
     this.fieldText = {};
-    Object.entries(fieldHTML).forEach(([name, html]) => {
+    // TODO: Only memorize the searchable fields.
+    Object.entries(this.fieldHTML).forEach(([name, html]) => {
       this.fieldText[name] = html.replace(TAG_REGEX, '');
     });
   }
@@ -141,17 +147,13 @@ class Candidate {
 }
 // Load the JSON file as a Promise that will resolve once the data is fetched.
 const fileMap = (async function () {
+  // NOTE: Due to this `fetch`, trying to open the website as a local file in
+  // the browser may not work. You have to serve it through a server.
   return (await fetch('xooxle.json')
-    .then(async (resp) => await resp.json())).map((xooxle) => {
-    return {
-      data: xooxle.data.map((record) => {
-        const path = record['path'];
-        delete record['path'];
-        return new Candidate(path, record);
-      }),
-      params: xooxle.params,
-    };
-  });
+    .then(async (resp) => await resp.json())).map((xooxle) => ({
+    data: xooxle.data.map(record => new Candidate(record)),
+    params: xooxle.params,
+  }));
 })();
 // Event listener for the search button.
 let currentAbortController = null;
@@ -261,15 +263,13 @@ async function searchOneDictionary(regex, xooxle, abortController) {
     const row = document.createElement('tr');
     const viewCell = document.createElement('td');
     viewCell.classList.add('view');
-    if (xooxle.params.view) {
+    if (xooxle.params.href_fmt) {
       // Get the word of the first field that has a match.
       const word = field_searches.find((fs) => fs.match).word;
       const a = document.createElement('a');
-      a.href = `${xooxle.params.path_prefix + (xooxle.params.retain_extension
-        ? res.path
-        : res.path.replace('.html', ''))}#:~:text=${encodeURIComponent(word)}`;
+      a.href = xooxle.params.href_fmt.replace(`{${KEY}}`, res.key) + `#:~:text=${encodeURIComponent(word)}`;
       a.target = '_blank';
-      a.textContent = localStorage.getItem('dev') === 'true' ? res.path.replace('.html', '') : 'view';
+      a.textContent = localStorage.getItem('dev') === 'true' ? res.key : 'view';
       viewCell.appendChild(a);
     }
     row.appendChild(viewCell);
