@@ -3,6 +3,10 @@ const fullWordCheckbox = document.getElementById('fullWordCheckbox') as HTMLInpu
 const regexCheckbox = document.getElementById('regexCheckbox') as HTMLInputElement;
 const messageBox = document.getElementById('message')!;
 
+// KEY is the name of the field that bears the word key. The key can be used to
+// generate an HREF to open the word page.
+const KEY = 'KEY';
+
 const RESULTS_TO_UPDATE_DISPLAY = 5;
 const TAG_REGEX = /<\/?[^>]+>/g;
 
@@ -11,23 +15,19 @@ interface Params {
   // page. Xooxle will retrieve the element using this ID, and will populated
   // with the results encountered.
   readonly result_table_name: string,
-  // The following parameters determine the behavior of the view column in the
-  // results table.
-  // - view determines whether the path / key will be shown at all. If false,
-  //   the view column will have a mere index.
-  // - path_prefix is the prefix to be prepended to the path.
-  // - retain_extension determines whether the `.html` extension will be
-  //   retained.
-  // For example, with the following configuration:
-  //   view = true;
-  //   path_prefix = 'https://www.google.com/search?q=';
-  //   retain_extension = false;
-  // A key / path of `hello.html` would result in the view column bearing a
-  // link to 'https://www.google.com/search?q=hello'.
-  readonly view: boolean,
-  readonly path_prefix: string,
-  readonly retain_extension: boolean,
-  // field_order is the order of the fields in the results table.
+  // href_fmt is a format string for generating a URL to this result's page.
+  // The HREF will be generated based on the KEY field of the candidate by
+  // substituting the string `{KEY}`.
+  // If href_fmt is zero (the empty string), no HREF will be generated.
+  readonly href_fmt: string,
+  // field_order is the order of fields in the output. For each
+  // search result from the data, a row will be added to the table.
+  // The first cell in the row will contain the index of the result, and
+  // potentially the HREF to the result page. The following cells will contain
+  // other fields from the result, in this order.
+  // TODO: Document the behavior about whether absent fields get searched or
+  // not. Consider ensuring that it's possible to search a field that doesn't
+  // necessarily show in the output. This may be a desirable use case.
   readonly field_order: string[],
 }
 
@@ -50,18 +50,21 @@ interface FieldSearch {
 }
 
 class Candidate {
-  // path bears a path / key for this candidate.
-  readonly path: string;
+  // key bears the candidate key.
+  readonly key: string;
   // fieldHTML bears the HTML content of each searchable field.
   private readonly fieldHTML: Record<string, string>;
   // fieldText bears the plain text content of each searchable field.
   private readonly fieldText: Record<string, string>;
   public constructor(
-    path: string, fieldHTML: Record<string, string>) {
-    this.path = path;
-    this.fieldHTML = fieldHTML;
+    record: Record<string, string>) {
+    this.key = record[KEY]!;
+    // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
+    delete record[KEY];
+    this.fieldHTML = record;
     this.fieldText = {};
-    Object.entries(fieldHTML).forEach(([name, html]: [string, string]) => {
+    // TODO: Only memorize the searchable fields.
+    Object.entries(this.fieldHTML).forEach(([name, html]: [string, string]) => {
       this.fieldText[name] = html.replace(TAG_REGEX, '');
     });
   }
@@ -222,26 +225,20 @@ class Candidate {
 
 // Load the JSON file as a Promise that will resolve once the data is fetched.
 const fileMap: Promise<Xooxle[]> = (async function(): Promise<Xooxle[]> {
-  // NOTE: Due to this `fetch`, trying to open the website as a local file in
-  // the browser may not work. You have to serve it through a server.
   interface xooxle {
     readonly data: Record<string, string>[];
     readonly params: Params;
   }
 
+  // NOTE: Due to this `fetch`, trying to open the website as a local file in
+  // the browser may not work. You have to serve it through a server.
   return (await fetch('xooxle.json')
     .then(async (resp) => await resp.json() as xooxle[])).map(
-    (xooxle: xooxle) => {
-      return {
-        data: xooxle.data.map(
-          (record: Record<string, string>): Candidate => {
-            const path = record['path']!;
-            delete record['path'];
-            return new Candidate(path, record);
-          }),
-        params: xooxle.params,
-      } as Xooxle;
-    });
+    (xooxle: xooxle) => ({
+      data: xooxle.data.map(record => new Candidate(record)),
+      params: xooxle.params,
+    } as Xooxle)
+  );
 })();
 
 // Event listener for the search button.
@@ -373,16 +370,15 @@ async function searchOneDictionary(
 
     const viewCell = document.createElement('td');
     viewCell.classList.add('view');
-    if (xooxle.params.view) {
+    if (xooxle.params.href_fmt) {
       // Get the word of the first field that has a match.
       const word: string = field_searches.find(
         (fs: FieldSearch) => fs.match)!.word;
       const a = document.createElement('a');
-      a.href = `${xooxle.params.path_prefix + (xooxle.params.retain_extension
-        ? res.path
-        : res.path.replace('.html', ''))}#:~:text=${encodeURIComponent(word)}`;
+      a.href = xooxle.params.href_fmt.replace(
+        `{${KEY}}`, res.key) + `#:~:text=${encodeURIComponent(word)}`;
       a.target = '_blank';
-      a.textContent = localStorage.getItem('dev') === 'true' ? res.path.replace('.html', '') : 'view';
+      a.textContent = localStorage.getItem('dev') === 'true' ? res.key : 'view';
       viewCell.appendChild(a);
     }
     row.appendChild(viewCell);

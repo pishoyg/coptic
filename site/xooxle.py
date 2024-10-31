@@ -1,3 +1,5 @@
+# This package defines the logic required to build a Xooxle index.
+# See Xooxle documentation for the required structure.
 import os
 import typing
 
@@ -50,6 +52,12 @@ _RETAIN_TAGS_DEFAULT = {
     "string",
     "em",
 }
+
+# EXTENSION is the extension of the files that we are building an index for.
+EXTENSION = ".html"
+# KEY is the name of the key field in the output. This must match the name
+# expected by the Xooxle search logic.
+KEY = "KEY"
 
 
 class selector:
@@ -151,14 +159,6 @@ def _clean_text(text: str) -> str:
     return text
 
 
-def _clean_html(tag: bs4.Tag) -> str:
-    for comments in tag.findAll(
-        text=lambda text: isinstance(text, bs4.Comment),
-    ):
-        comments.extract()
-    return " ".join(str(tag).split())
-
-
 class capture:
     def __init__(
         self,
@@ -180,9 +180,7 @@ class subindex:
         extract: list[selector],
         captures: list[capture],
         result_table_name: str,
-        view: bool,
-        path_prefix: str,
-        retain_extension: bool,
+        href_fmt: str,
     ) -> None:
         """
         Args:
@@ -198,9 +196,7 @@ class subindex:
         self._extract: list[selector] = extract
         self._captures: list[capture] = captures
         self._result_table_name: str = result_table_name
-        self._view = view
-        self._path_prefix: str = path_prefix
-        self._retain_extension: bool = retain_extension
+        self._href_fmt: str = href_fmt
 
     def iter_input(
         self,
@@ -214,7 +210,7 @@ class subindex:
         # Recursively search for all HTML files.
         for root, _, files in os.walk(self._input):
             for file in files:
-                if not file.endswith(".html"):
+                if not file.endswith(EXTENSION):
                     continue
                 path = os.path.join(root, file)
                 yield path, bs4.BeautifulSoup(utils.read(path), "html.parser")
@@ -227,7 +223,7 @@ class subindex:
             # Parse the HTML content.
             # TODO: (#230) Don't require a path parameter.
             datum = {
-                "path": os.path.relpath(path, self._input),
+                KEY: os.path.relpath(path, self._input)[: -len(EXTENSION)],
             }
 
             for selector in self._extract:
@@ -253,10 +249,8 @@ class subindex:
         return {
             "data": data,
             "params": {
-                "view": self._view,
-                "path_prefix": self._path_prefix,
-                "retain_extension": self._retain_extension,
                 "result_table_name": self._result_table_name,
+                "href_fmt": self._href_fmt,
                 "field_order": [c.name for c in self._captures],
             },
         }

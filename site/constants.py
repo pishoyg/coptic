@@ -69,9 +69,7 @@ _CRUM_INDEX = xooxle.index(
             ),
         ],
         result_table_name="crum",
-        view=True,
-        path_prefix="",
-        retain_extension=True,
+        href_fmt="{KEY}.html",
     ),
     xooxle.subindex(
         input="flashcards/data/output/web/kellia__comprehensive/",
@@ -100,9 +98,7 @@ _CRUM_INDEX = xooxle.index(
             ),
         ],
         result_table_name="kellia",
-        view=True,
-        path_prefix="https://coptic-dictionary.org/entry.cgi?tla=",
-        retain_extension=False,
+        href_fmt="https://coptic-dictionary.org/entry.cgi?tla={KEY}",
     ),
     xooxle.subindex(
         input="flashcards/data/output/web/copticsite.com/",
@@ -119,9 +115,7 @@ _CRUM_INDEX = xooxle.index(
             ),
         ],
         result_table_name="copticsite",
-        view=False,
-        path_prefix="https://coptic-dictionary.org/entry.cgi?tla=",
-        retain_extension=False,
+        href_fmt="",
     ),
 )
 
