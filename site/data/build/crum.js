@@ -73,64 +73,29 @@ class Highlighter {
     this.updateDialects();
     this.updateDev();
   }
-  nonEmptyActiveQuery(active) {
-    // Some dialects are off.
+  updateDialects() {
+    const active = activeDialects();
+    if (active === null) {
+      // No dialect highlighting whatsoever.
+      this.updateSheetOrElements(this.dialectRuleIndex, '.word *', '', (el) => { el.style.opacity = Highlighter.BRIGHT; });
+      return;
+    }
+    if (active.length === 0) {
+      // All dialects are off.
+      this.updateSheetOrElements(this.dialectRuleIndex, '.word *', `opacity: ${Highlighter.DIM};`, (el) => { el.style.opacity = Highlighter.DIM; });
+      return;
+    }
+    // Some dialects are on, some are off.
     // Dim all children of `word` elements, with the exception of:
     // - Active dialects.
     // - Undialected spellings.
-    return `.word > :not(${classQuery(active)},.spelling:not(${classQuery(DIALECTS)}))`;
-  }
-  updateDialects() {
-    const active = activeDialects();
-    if (this.anki) {
-      this.updateDialectsNoSheet(active);
-      return;
-    }
-    let style;
-    if (active === null) {
-      // No dialect highlighting whatsoever!
-      style = '.word {}';
-    }
-    else if (active.length === 0) {
-      // All dialects are off.
-      style = `.word { opacity: ${Highlighter.DIM}; }`;
-    }
-    else {
-      style = `${this.nonEmptyActiveQuery(active)} { opacity: ${Highlighter.DIM}; }`;
-    }
-    this.addOrReplaceRule(this.dialectRuleIndex, style);
+    const query = `.word > :not(${classQuery(active)},.spelling:not(${classQuery(DIALECTS)}))`;
+    const style = `opacity: ${Highlighter.DIM};`;
+    this.updateSheetOrElements(this.dialectRuleIndex, query, style, (el) => { el.style.opacity = Highlighter.DIM; }, '.word *', (el) => { el.style.opacity = Highlighter.BRIGHT; });
   }
   updateDev() {
     const display = localStorage.getItem('dev') === 'true' ? 'block' : 'none';
-    if (this.anki) {
-      this.updateDevNoSheet(display);
-      return;
-    }
-    this.addOrReplaceRule(this.devRuleIndex, `.dev, .nag-hammadi {display: ${display};}`);
-  }
-  updateDialectsNoSheet(active) {
-    // If active.length === 0 (all dialects off), we dim all elements and
-    // return.
-    // If active === null (no highlighting requested), we brighten all elements
-    // and return.
-    // Otherwise, if we need to highlight a subset of the elements, we initially
-    // brighten all of them, then we selectively dim the ones that are not
-    // selected.
-    const init = (active !== null && active.length === 0)
-      ? Highlighter.DIM : Highlighter.BRIGHT;
-    document.querySelectorAll('.word *').forEach((el) => {
-      el.style.opacity = init;
-    });
-    if (active === null || active.length === 0) {
-      // Our job is already done.
-      return;
-    }
-    document.querySelectorAll(this.nonEmptyActiveQuery(active)).forEach((el) => {
-      el.style.opacity = Highlighter.DIM;
-    });
-  }
-  updateDevNoSheet(display) {
-    document.querySelectorAll('.dev, .nag-hammadi').forEach((el) => {
+    this.updateSheetOrElements(this.devRuleIndex, '.dev, .nag-hammadi', `display: ${display};`, (el) => {
       el.style.display = display;
     });
   }
@@ -139,6 +104,23 @@ class Highlighter {
       this.sheet.deleteRule(index);
     }
     this.sheet.insertRule(rule, index);
+  }
+  // If we're in Anki, we update the elements directly.
+  // Otherwise, we update the CSS rules.
+  // NOTE: If you're updating the sheet, then it's guaranteed that the update
+  // will erase the effects of previous calls to this function.
+  // However, if you're updating elements, that's not guaranteed. If this is the
+  // case, you should pass a `reset_func` that resets the elements to the
+  // default style.
+  updateSheetOrElements(rule_index, query, style, func, reset_query, reset_func) {
+    if (this.anki) {
+      if (reset_query && reset_func) {
+        document.querySelectorAll(reset_query).forEach(reset_func);
+      }
+      document.querySelectorAll(query).forEach(func);
+      return;
+    }
+    this.addOrReplaceRule(rule_index, `${query} { ${style} }`);
   }
 }
 Highlighter.BRIGHT = '1.0';
