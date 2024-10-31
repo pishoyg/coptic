@@ -199,28 +199,37 @@ window.addEventListener('load', () => {
   // Handle 'reset' class.
   function reset(dialectCheckboxes, highlighter, event) {
     dialectCheckboxes.forEach((box) => { box.checked = false; });
+    // The local storage is the source of truth for some highlighting variables.
+    // Clearing it results restores a pristine display.
+    localStorage.clear();
+    highlighter.update();
     const url = new URL(window.location.href);
+    // NOTE: We only reload when we actually detect an anchor (hash) or text
+    // fragment in order to minimize disruption. Reloading the page causes a
+    // small jitter.
     // NOTE: `url.hash` doesn't include text fragments (expressed by `#:~:text=`),
     // which is why we need to use `performance.getEntriesByType('navigation')`.
     // However, the latter doesn't always work, for some reason. In our
     // experience, it can retrieve the text fragment once, but if you reset and
     // then add a text fragment manually, it doesn't recognize it! This is not a
     // huge issue right now, so we aren't prioritizing fixing it!
+    // NOTE: Attempting to reload the page on Ankidroid opens a the browser at a
+    // 127.0.0.0 port! We avoid reloading on all Anki platforms!
     if (url.hash || performance.getEntriesByType('navigation')[0]?.name.includes('#')) {
       url.hash = '';
       window.history.replaceState('', '', url.toString());
-      // Reload to get rid of the highlighting caused by the hash, if any.
-      // This fails on some Anki platforms!
-      try {
+      // Reload to get rid of the highlighting caused by the hash / fragment,
+      // if any.
+      if (!anki()) {
         window.location.reload();
       }
-      catch { /* Do nothing. */ }
     }
-    localStorage.clear();
-    highlighter.update();
     if (xooxle()) {
-    // In case this event comes from the reset button in XOOXLE, prevent
-    // clicking the button from submitting the form, thus resetting everything!
+    // The XOOXLE page has a reset button that also triggers this handler. In
+    // case we're on XOOXLE, there is a chance this event comes from clicking
+    // the button, which would submit the form and reset everything (including
+    // the search box and the option checkboxes). So prevent the event from
+    // propagating further.
       event.preventDefault();
     }
   }
