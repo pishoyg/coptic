@@ -25,7 +25,7 @@ SHELL := /bin/bash
 # LEVEL 3 RULES ###############################################################
 
 .PHONY: all
-all: generate_1 add generate_2 index generate_3 test publish report
+all: generate_1 add generate_2 index generate_3 test generate_4 publish report
 
 # LEVEL 2 RULES ###############################################################
 
@@ -38,6 +38,9 @@ generate_2: flashcards kindle
 
 .PHONY: generate_3
 generate_3: xooxle
+
+.PHONY: generate_4
+generate_4: site
 
 # NOTE: We have to duplicate the add / index / test rule, otherwise Make would
 # deduplicate a rule that is mentioned twice as a prerequisite of some rule,
@@ -230,16 +233,19 @@ endif
 
 # SITE RULES
 
-site_publish: REQUIRE_ENV FORCE
+site: REQUIRE_ENV FORCE
 	bash site/publish.sh \
 		--clean \
 		--build \
-		--commit \
+		--commit
+
+site_publish: REQUIRE_ENV FORCE
+	bash site/publish.sh \
 		--push
 
 _server: REQUIRE_ENV FORCE
 	. ./.helpers && echo -e "$${BLUE}Serving at $${GREEN}http://localhost:8000/$${BLUE}.$${RESET}"; \
-	python -m http.server 8000 --bind 127.0.0.1 --directory "$${SITE_DIR}"; \
+	python -m http.server 8000 --bind 127.0.0.1 --directory "$${SITE_DIR}"
 
 # INFRASTRUCTURE RULES
 bin_install: FORCE
