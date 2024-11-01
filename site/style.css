@@ -77,6 +77,16 @@ body {
   background-color: #f0d4fc;
 }
 
+.match-separator {
+  color: gray;
+  margin: 3px 0;
+}
+
+.view-for-more {
+  float: right;
+  font-size: small;
+}
+
 /* Style download links */
 
 a.download,.download-list li a {
@@ -99,6 +109,10 @@ table {
 
 .results tbody tr:not(:last-child) {
   border-bottom: 1px solid black;
+}
+
+.results td {
+  vertical-align: top;
 }
 
 .results td:not(:first-child) {
