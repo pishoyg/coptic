@@ -222,23 +222,27 @@ def crum(
         back=field.apl(
             add_lookup_classes,
             field.cat(
-                # Type.
                 field.cat(
-                    # TODO: (#233) For consistency, this should be renamed to
-                    # "type", and the existing "type" class that is used
-                    # elsewhere should be renamed to something else.
-                    # We have had the convention to use an unqualified class
-                    # name to refer to elements that relate to the root.
-                    '<div id="root-type" class="root-type">',
-                    "(<b>",
-                    roots_col("type-parsed"),
-                    "</b>)",
-                    "</div>",
-                ),
-                # Meaning.
-                field.aon(
-                    '<div id="meaning" class="meaning">',
-                    roots_col("en-parsed", line_br=True, force=False),
+                    '<div id="root-type-meaning" class="root-type-meaning">',
+                    # Type.
+                    field.cat(
+                        # TODO: (#233) For consistency, this should be renamed to
+                        # "type", and the existing "type" class that is used
+                        # elsewhere should be renamed to something else.
+                        # We have had the convention to use an unqualified class
+                        # name to refer to elements that relate to the root.
+                        '<div id="root-type" class="root-type">',
+                        "(<b>",
+                        roots_col("type-parsed"),
+                        "</b>)",
+                        "</div>",
+                    ),
+                    # Meaning.
+                    field.aon(
+                        '<div id="meaning" class="meaning">',
+                        roots_col("en-parsed", line_br=True, force=False),
+                        "</div>",
+                    ),
                     "</div>",
                 ),
                 # Dictionary pages.
