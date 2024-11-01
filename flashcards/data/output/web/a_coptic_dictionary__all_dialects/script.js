@@ -583,8 +583,8 @@ window.addEventListener('load', () => {
     });
     // NOTE: This is where we define all our command shortcuts. It's important for
     // the content to remain in sync with the help panel.
-    // TODO: (#280) Combine the help panel and `keyup` listener code.
-    document.addEventListener('keyup', (e) => {
+    // TODO: (#280) Combine the help panel and `keydown` listener code.
+    document.addEventListener('keydown', (e) => {
       if (e.metaKey || e.ctrlKey || e.altKey) {
       // If the user is holding down a modifier key, we don't want to do
       // anything.
