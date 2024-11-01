@@ -522,8 +522,10 @@ def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
         # you're doing.
         key=field.seq(),
         front=field.cat(
+            '<span class="word B">',
             '<span class="spelling B">',
             tsv_col("prettify", force=False),
+            "</span>",
             "</span>",
         ),
         back=field.cat(
