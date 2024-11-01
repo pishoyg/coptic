@@ -1,3 +1,5 @@
+/********** Home Page, and Generic **********/
+
 h1,h2,h3,strong {
   color: #2C3E50;
 }
@@ -57,8 +59,6 @@ hr {
   margin: 30px 0;
 }
 
-/* Add some padding to body content */
-
 body {
   font-family: Arial,sans-serif;
   line-height: 1.6;
@@ -66,28 +66,6 @@ body {
   max-width: 1000px;
   padding: 10px;
 }
-
-/* Anchor highlighting. */
-
-:target.explanatory,:target.sister,:target.drv .marcion,:target.drv .meaning {
-  background-color: #ffa;
-}
-
-.match {
-  background-color: #f0d4fc;
-}
-
-.match-separator {
-  color: gray;
-  margin: 3px 0;
-}
-
-.view-for-more {
-  float: right;
-  font-size: small;
-}
-
-/* Style download links */
 
 a.download,.download-list li a {
   background-color: #3498DB;
@@ -103,32 +81,15 @@ table {
   width: 100%;
 }
 
-.results thead tr {
-  border-bottom: 1px solid black;
+.inline-list {
+  padding: 20px;
 }
 
-.results tbody tr:not(:last-child) {
-  border-bottom: 1px solid black;
-}
-
-.results td {
-  vertical-align: top;
-}
-
-.results td:not(:first-child) {
-  border-left: 1px solid black;
-  padding-left: 5px;
-}
-
-.error {
-  color: darkred;
-  font-style: italic;
-}
-
-/* Responsive table layout for mobile */
-
-.sisters-table {
-  margin-left: 20px;
+.inline-list li {
+  display: block;
+  float: left;
+  margin: 0 20px;
+  padding: 0;
 }
 
 @media (width <= 500px) {
@@ -141,91 +102,7 @@ table {
     margin: 10px 0;
   }
 
-  /* Center and space checkboxes for small screens */
-
-  .checkboxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .checkboxes label {
-    margin-right: 10px;
-  }
-
-  .sisters-table {
-    margin-left: 0;
-  }
-
 }
-
-.inline-list {
-  padding: 20px;
-}
-
-.inline-list li {
-  display: block;
-  float: left;
-  margin: 0 20px;
-  padding: 0;
-}
-
-/* KELLIA */
-
-.orth {
-  width: 50%;
-}
-
-.geo {
-  color: darkred;
-  width: 10%;
-  text-align: center;
-}
-
-/* stylelint-disable selector-class-pattern */
-
-.gram_grp {
-  color: gray;
-  font-style: italic;
-}
-
-/* stylelint-enable selector-class-pattern */
-
-.bibl {
-  color: gray;
-  width: 30%;
-  text-align: right;
-}
-
-.ref {
-  color: gray;
-}
-
-/* stylelint-disable no-descending-specificity */
-
-.meaning {
-  width: 70%;
-}
-
-/* stylelint-enable no-descending-specificity */
-
-.xr {
-  color: gray;
-}
-
-.lang {
-  color: gray;
-}
-
-/* Collapsible Elements */
-
-.collapsible {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out;
-}
-
-/* Logos */
 
 .logo {
   height: 100px;
@@ -235,7 +112,12 @@ table {
   height: 20px;
 }
 
-/* Crum */
+.logo-list {
+  text-align: center;
+  table-layout: fixed;
+}
+
+/********** Crum's Notes **********/
 
 /* TODO: (#241) Use classes that represent types, rather than desired behaviour.
 *  Otherwise, this doesn't represent real decoupling of the style from the HTML.: */
@@ -293,9 +175,8 @@ table {
   opacity: 0.5;
 }
 
-.logo-list {
-  text-align: center;
-  table-layout: fixed;
+:target.explanatory,:target.sister,:target.drv .marcion,:target.drv .meaning {
+  background-color: #ffa;
 }
 
 .header {
@@ -345,7 +226,128 @@ table {
 
 /* stylelint-enable selector-class-pattern */
 
-/* Crum's help panel */
+/********** Xooxle **********/
+
+.match {
+  background-color: #f0d4fc;
+}
+
+.match-separator {
+  color: gray;
+  margin: 3px 0;
+}
+
+.view-for-more {
+  float: right;
+  font-size: small;
+}
+
+/* Style download links */
+
+.results thead tr {
+  border-bottom: 1px solid black;
+}
+
+.results tbody tr:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+/* stylelint-disable no-descending-specificity */
+
+.results td {
+  vertical-align: top;
+}
+
+/* stylelint-enable no-descending-specificity */
+
+.results td:not(:first-child) {
+  border-left: 1px solid black;
+  padding-left: 5px;
+}
+
+.error {
+  color: darkred;
+  font-style: italic;
+}
+
+.sisters-table {
+  margin-left: 20px;
+}
+
+@media (width <= 500px) {
+  .sisters-table {
+    margin-left: 0;
+  }
+
+}
+
+@media (width <= 500px) {
+  .checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .checkboxes label {
+    margin-right: 10px;
+  }
+
+}
+
+.collapsible {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+/********** KELLIA **********/
+
+.orth {
+  width: 50%;
+}
+
+.geo {
+  color: darkred;
+  width: 10%;
+  text-align: center;
+}
+
+/* stylelint-disable selector-class-pattern */
+
+.gram_grp {
+  color: gray;
+  font-style: italic;
+}
+
+/* stylelint-enable selector-class-pattern */
+
+/* stylelint-disable no-descending-specificity */
+
+.bibl {
+  color: gray;
+  width: 30%;
+  text-align: right;
+}
+
+.ref {
+  color: gray;
+}
+
+.meaning {
+  width: 70%;
+}
+
+/* stylelint-enable no-descending-specificity */
+
+.xr {
+  color: gray;
+}
+
+.lang {
+  color: gray;
+}
+
+/********** Xooxle and Crum's help panel **********/
 
 .overlay-background {
   position: fixed;
