@@ -4,6 +4,30 @@ import xooxle
 # relies entirely on searching the text payloads of the HTML. However, we retain
 # the subset of the classes that are needed for highlighting, in order to make
 # the Xooxle search results pretty.
+
+_DIALECTS = {
+    "S",
+    "Sa",
+    "Sf",
+    "A",
+    "sA",
+    "B",
+    "F",
+    "Fb",
+    "O",
+    # The following dialects are only found in Marcion.
+    "NH",
+    # The following dialects are only found in TLA / KELLIA.
+    "Ak",
+    "M",
+    "L",
+    "P",
+    "V",
+    "W",
+    "U",
+    "K",
+}
+
 _CRUM_RETAIN_CLASSES = {
     "word",
     "dialect",
@@ -12,17 +36,22 @@ _CRUM_RETAIN_CLASSES = {
     "dialect-comma",
     "spelling-comma",
     "dialect-parenthesis",
-}
+} | _DIALECTS
 
 _KELLIA_RETAIN_CLASSES = {
+    "word",
     "spelling",
     "dialect",
     "type",
     "lang",
-    "bibl",
-    "ref",
-    "xr",
-}
+    "geo",
+    "gram_grp",
+} | _DIALECTS
+
+_COPTICSITE_RETAIN_CLASSES = {
+    "word",
+    "spelling",
+} | _DIALECTS
 
 _CRUM_INDEX = xooxle.index(
     "site/data/xooxle/crum.json",
@@ -57,15 +86,17 @@ _CRUM_INDEX = xooxle.index(
             ),
             xooxle.capture(
                 "meaning",
-                xooxle.selector({"id": "meaning"}, force=False),
+                xooxle.selector({"id": "root-type-meaning"}, force=False),
                 retain_classes=_CRUM_RETAIN_CLASSES,
             ),
             xooxle.capture(
-                "notes",
+                "appendix",
                 xooxle.selector(
                     {"name": "body"},
                 ),
                 retain_classes=_CRUM_RETAIN_CLASSES,
+                unit_tags={"tr", "div", "hr"},
+                block_elements=xooxle.BLOCK_ELEMENTS_DEFAULT | {"td"},
             ),
         ],
         result_table_name="crum",
@@ -107,7 +138,7 @@ _CRUM_INDEX = xooxle.index(
             xooxle.capture(
                 "front",
                 xooxle.selector({"id": "front"}),
-                retain_classes={"spelling"},
+                retain_classes=_COPTICSITE_RETAIN_CLASSES,
             ),
             xooxle.capture(
                 "back",
