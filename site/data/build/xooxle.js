@@ -6,42 +6,61 @@ const messageBox = document.getElementById('message');
 // KEY is the name of the field that bears the word key. The key can be used to
 // generate an HREF to open the word page.
 const KEY = 'KEY';
+// UNIT_LIMIT determines the behavior of the fields that should be split into
+// units.
+// If the number of units in a field is at most UNIT_LIMIT, the field will
+// always be produced whole.
+// Otherwise:
+// - If there are units with matches, matching units will be produced
+//   (regardless of their number).
+// - If there are no units with matches, the first UNIT_LIMIT units will be
+//   produced.
+// - In either case, a message will be shown indicating that more content is
+//   available.
+const UNITS_LIMIT = 5;
+// UNIT_SEPARATOR is the string that separates a units field into units.
+const UNIT_DELIMITER = '<hr class="match-separator">';
+// LONG_UNITS_FIELD_MESSAGE is the message shown at the end of a units field,
+// if the field gets truncated.
+const LONG_UNITS_FIELD_MESSAGE = '<br><span class="view-for-more">... (<em>view</em> for more)</span>';
 const RESULTS_TO_UPDATE_DISPLAY = 5;
 const TAG_REGEX = /<\/?[^>]+>/g;
 class Candidate {
-  constructor(record) {
+  constructor(record, fields) {
     this.key = record[KEY];
-    // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
-    delete record[KEY];
-    this.fieldHTML = record;
-    this.fieldText = {};
-    // TODO: Only memorize the searchable fields.
-    Object.entries(this.fieldHTML).forEach(([name, html]) => {
-      this.fieldText[name] = html.replace(TAG_REGEX, '');
-    });
+    this.search_fields = fields.map((field) => ({
+      field: field,
+      html: record[field.name],
+      text: record[field.name].replace(TAG_REGEX, ''),
+    }));
   }
   search(regex) {
-    // TODO: (#230) Only search the searchable fields. Right now, all fields are
-    // searchable, so this doesn't incur an extra overhead. This may no longer
-    // be the case in the future.
-    return Object.entries(this.fieldHTML).map(([name, html]) => {
-      const text = this.fieldText[name];
-      const match = text.match(regex);
+    return this.search_fields.map((sf) => {
+      const match = sf.text.match(regex);
       if (match?.index === undefined) {
-        return { match: false, name: name, html: html, word: '' };
+        return {
+          match: false,
+          field: sf.field,
+          html: sf.field.units
+            ? Candidate.chopUnits(sf.html.split(UNIT_DELIMITER))
+            : sf.html,
+          word: '',
+        };
       }
       return {
         match: true,
-        name: name,
-        html: Candidate.highlightAllMatches(html, text, regex),
-        word: Candidate.getMatchFullWords(text, match.index, match[0]),
+        field: sf.field,
+        html: Candidate.highlightAllMatches(sf.html, sf.text, regex, sf.field.units),
+        word: Candidate.getMatchFullWords(sf.text, match.index, match[0]),
       };
-    }).reduce((record, field_search) => (record[field_search.name] = field_search, record), {});
+    });
   }
+  // TODO: (#230) This should be a method of the SearchableField type. Same
+  // below.
   static findAllMatches(text, regex) {
     const matches = new Set();
     let match;
-    // Loop through all matches in the line
+    // Loop through all matches in the text.
     while ((match = regex.exec(text)) !== null) {
       if (!match[0]) {
         // The regex matched the empty string! This would result in an infinite
@@ -121,7 +140,46 @@ class Candidate {
     result += html.slice(i);
     return result;
   }
-  static highlightAllMatches(html, text, regex) {
+  static chopUnits(units) {
+    if (!units.length) {
+      return '';
+    }
+    if (units.length <= UNITS_LIMIT) {
+      return units.join(UNIT_DELIMITER);
+    }
+    return units.slice(0, UNITS_LIMIT).join(UNIT_DELIMITER)
+            + LONG_UNITS_FIELD_MESSAGE;
+  }
+  static highlightAllMatches(html, text, regex, units_field) {
+    /*
+         * Args:
+         *   units_field: If true, split the input into units, and output only
+         *   the units with matches, separated by a delimiter.
+         */
+    if (units_field) {
+      // TODO: Memorize the HTML and text of each unit, to speed up this
+      // computation. This method should probably be polymorphic depending on
+      // the field type (currently units or non-units).
+      // TODO: Read a list of strings, instead of a delimiter-separated string!
+      // We only retain the units that have matches, and we detect that by
+      // whether the unit has changed.
+      // TODO: Use a cleaner check to filter the units that have matches.
+      const units = html.split(UNIT_DELIMITER);
+      if (units.length <= UNITS_LIMIT) {
+        // The number of units is small enough to display them all.
+        // We first replace the unit delimiters with line breaks, to make sure
+        // units won't be compacted into the same line.
+        return Candidate.highlightAllMatches(html, text, regex, false);
+      }
+      const units_with_matches = units
+        .map(unit => Candidate.highlightAllMatches(unit, unit.replace(TAG_REGEX, ''), regex, false))
+        .filter((h, idx) => units[idx] !== h);
+      if (units_with_matches.length) {
+        return units_with_matches.join(UNIT_DELIMITER)
+                    + LONG_UNITS_FIELD_MESSAGE;
+      }
+      return Candidate.chopUnits(units);
+    }
     const matches = Candidate.findAllMatches(text, regex);
     matches.forEach((m) => {
       html = Candidate.highlightOneMatch(html, m);
@@ -151,7 +209,7 @@ const fileMap = (async function () {
   // the browser may not work. You have to serve it through a server.
   return (await fetch('xooxle.json')
     .then(async (resp) => await resp.json())).map((xooxle) => ({
-    data: xooxle.data.map(record => new Candidate(record)),
+    data: xooxle.data.map(record => new Candidate(record, xooxle.params.fields)),
     params: xooxle.params,
   }));
 })();
@@ -228,7 +286,7 @@ async function searchOneDictionary(regex, xooxle, abortController) {
   // rather than tops, because we want results to expand downwards rather than
   // upwards, to avoid jitter at the top of the table, which is the area that
   // the user will be looking at.
-  const idx_to_bottom = xooxle.params.field_order.map(() => {
+  const idx_to_bottom = xooxle.params.fields.map(() => {
     const tr = document.createElement('tr');
     tr.style.display = 'none';
     resultTable.appendChild(tr);
@@ -238,24 +296,22 @@ async function searchOneDictionary(regex, xooxle, abortController) {
     if (abortController.signal.aborted) {
       return;
     }
-    // field_searches is ordered based on the field_order parameter.
-    const field_searches = (() => {
+    // field_searches is ordered based on the fields parameter.
+    const search_results = (() => {
       try {
-        const record = res.search(regex);
-        return xooxle.params.field_order.map((name) => record[name]);
-        ;
+        return res.search(regex);
       }
       catch {
         messageBox.innerHTML = errorMessage();
         return null;
       }
     })();
-    if (field_searches === null) {
+    if (search_results === null) {
       // Searching the current candidate has failed. The same will likely happen
       // with future candidates. Abort.
       return;
     }
-    if (!Object.values(field_searches).some((fs) => fs.match)) {
+    if (!Object.values(search_results).some((sr) => sr.match)) {
       continue;
     }
     ++count;
@@ -265,7 +321,7 @@ async function searchOneDictionary(regex, xooxle, abortController) {
     viewCell.classList.add('view');
     if (xooxle.params.href_fmt) {
       // Get the word of the first field that has a match.
-      const word = field_searches.find((fs) => fs.match).word;
+      const word = search_results.find((sr) => sr.match).word;
       const a = document.createElement('a');
       a.href = xooxle.params.href_fmt.replace(`{${KEY}}`, res.key) + `#:~:text=${encodeURIComponent(word)}`;
       a.target = '_blank';
@@ -273,12 +329,12 @@ async function searchOneDictionary(regex, xooxle, abortController) {
       viewCell.appendChild(a);
     }
     row.appendChild(viewCell);
-    field_searches.forEach((fs) => {
+    search_results.forEach((sr) => {
       const cell = document.createElement('td');
-      cell.innerHTML = fs.html;
+      cell.innerHTML = sr.html;
       row.appendChild(cell);
     });
-    idx_to_bottom[field_searches.findIndex((fs) => fs.match)].insertAdjacentElement('beforebegin', row);
+    idx_to_bottom[search_results.findIndex((sr) => sr.match)].insertAdjacentElement('beforebegin', row);
     // TODO: Remove the dependency on the HTML structure.
     const collapsible = resultTable.parentElement.parentElement;
     if (collapsible.style.maxHeight) {
