@@ -585,6 +585,11 @@ window.addEventListener('load', () => {
     // the content to remain in sync with the help panel.
     // TODO: (#280) Combine the help panel and `keyup` listener code.
     document.addEventListener('keyup', (e) => {
+      if (e.metaKey || e.ctrlKey || e.altKey) {
+      // If the user is holding down a modifier key, we don't want to do
+      // anything.
+        return;
+      }
       if (anki()) {
       // The help panel and keyboard shortcuts are disabled on Anki!
         return;
