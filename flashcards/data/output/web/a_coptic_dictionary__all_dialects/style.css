@@ -77,6 +77,11 @@ body {
   background-color: #f0d4fc;
 }
 
+.match-separator {
+  color: gray;
+  margin: 3px 0;
+}
+
 /* Style download links */
 
 a.download,.download-list li a {
