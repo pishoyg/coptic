@@ -537,9 +537,11 @@ function handleSearchQuery(timeout: number) {
 }
 
 searchBox.addEventListener('input', () => { handleSearchQuery(100); });
-// Prevent other elements in the page from picking up a `keyup` event on the
+// Prevent other elements in the page from picking up key events on the
 // search box.
 searchBox.addEventListener('keyup', (event: KeyboardEvent) => { event.stopPropagation(); });
+searchBox.addEventListener('keydown', (event: KeyboardEvent) => { event.stopPropagation(); });
+searchBox.addEventListener('keypress', (event: KeyboardEvent) => { event.stopPropagation(); });
 fullWordCheckbox.addEventListener('click', () => { handleSearchQuery(0); });
 regexCheckbox.addEventListener('click', () => { handleSearchQuery(0); });
 
