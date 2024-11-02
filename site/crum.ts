@@ -802,8 +802,8 @@ function main() {
       return;
     }
 
+    let consumed = true;
     switch (e.key) {
-
     // Commands:
     case 'r':
       reset(dialectCheckboxes, highlighter, e);
@@ -853,7 +853,6 @@ function main() {
       panel?.togglePanel(false);
       break;
 
-      // Search panel:
     case '/':
       focus('searchBox');
       break;
@@ -864,7 +863,6 @@ function main() {
       click('regexCheckbox');
       break;
 
-      // Dialects:
     case 'B':
     case 'S':
     case 'A':
@@ -891,7 +889,6 @@ function main() {
       }
       break;
 
-      // Scrolling and collapsing:
     case 'C':
       if (xooxle()) {
         scroll('crum-title');
@@ -947,6 +944,13 @@ function main() {
     case 'u':
       scroll('header');
       break;
+    default:
+      consumed = false;
+    }
+
+    if (consumed) {
+      e.preventDefault();
+      e.stopPropagation();
     }
   });
 }
