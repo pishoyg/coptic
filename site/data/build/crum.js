@@ -593,6 +593,7 @@ function main() {
       // The help panel and keyboard shortcuts are disabled on Anki!
       return;
     }
+    let consumed = true;
     switch (e.key) {
     // Commands:
     case 'r':
@@ -643,7 +644,6 @@ function main() {
     case 'Escape':
       panel?.togglePanel(false);
       break;
-      // Search panel:
     case '/':
       focus('searchBox');
       break;
@@ -653,7 +653,6 @@ function main() {
     case 'x':
       click('regexCheckbox');
       break;
-      // Dialects:
     case 'B':
     case 'S':
     case 'A':
@@ -680,7 +679,6 @@ function main() {
         highlighter.updateDialects();
       }
       break;
-      // Scrolling and collapsing:
     case 'C':
       if (xooxle()) {
         scroll('crum-title');
@@ -738,6 +736,12 @@ function main() {
     case 'u':
       scroll('header');
       break;
+    default:
+      consumed = false;
+    }
+    if (consumed) {
+      e.preventDefault();
+      e.stopPropagation();
     }
   });
 }

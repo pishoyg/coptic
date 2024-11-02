@@ -594,6 +594,7 @@ window.addEventListener('load', () => {
       // The help panel and keyboard shortcuts are disabled on Anki!
         return;
       }
+      let consumed = true;
       switch (e.key) {
       // Commands:
       case 'r':
@@ -644,7 +645,6 @@ window.addEventListener('load', () => {
       case 'Escape':
         panel?.togglePanel(false);
         break;
-      // Search panel:
       case '/':
         focus('searchBox');
         break;
@@ -654,7 +654,6 @@ window.addEventListener('load', () => {
       case 'x':
         click('regexCheckbox');
         break;
-      // Dialects:
       case 'B':
       case 'S':
       case 'A':
@@ -681,7 +680,6 @@ window.addEventListener('load', () => {
           highlighter.updateDialects();
         }
         break;
-      // Scrolling and collapsing:
       case 'C':
         if (xooxle()) {
           scroll('crum-title');
@@ -739,6 +737,12 @@ window.addEventListener('load', () => {
       case 'u':
         scroll('header');
         break;
+      default:
+        consumed = false;
+      }
+      if (consumed) {
+        e.preventDefault();
+        e.stopPropagation();
       }
     });
   }
