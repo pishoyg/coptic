@@ -180,3 +180,33 @@ alias gits='git -C "${SITE_DIR}"'
 alias img='./dictionary/marcion.sourceforge.net/img_helper.py'
 
 alias app='./dictionary/marcion.sourceforge.net/appendices_helper.py'
+
+_senses() {
+    words=()
+    # Check if input is provided through a pipe.
+    if [ -p /dev/stdin ]; then
+        while IFS= read -r line; do
+            words+=("$line")
+        done
+    else
+        # Otherwise, read from function arguments.
+        words=("$@")
+    fi
+
+    echo -n "{"
+
+    array_length=${#words[@]}
+    for (( i=1; i<=array_length; i++ )); do
+        printf '"%d": "%s"' "$i" "${words[i]}"
+        if [ "$i" -le $((array_length - 1)) ]; then
+            echo -n ", "
+        fi
+    done
+    echo -n "}"
+}
+
+senses() {
+    SENSES=$(_senses "$@")
+    echo "${SENSES}" | pbcopy
+    echo "${SENSES}"
+}
