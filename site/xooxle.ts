@@ -397,28 +397,33 @@ async function searchOneDictionary(
   let count = 0;
   const resultTable = document.getElementById(xooxle.params.result_table_name)!.querySelector('tbody')!;
 
-  // idx_to_bottom is a set of hidden table rows that represent break points in
-  // the results table.
+  // column_sentinels is a set of hidden table rows that represent sentinels
+  // (anchors / break points) in the results table.
   //
-  // These rows are used to divide the table into sections.
-  // Results with matches in their first column will be added right on top of
-  // the first hidden row. Results with matches in their second column will be
-  // added right on top of the second hidden row, etc.
+  // The sentinels are used to divide the table into sections.
+  // Matching results will be added right on top of the sentinels, so that each
+  // sentinel represents the (hidden) bottom row of a section.
+  // Results with a (first) match in their n^th column will be added on top of
+  // the n^th sentinel. (By first match, we mean that a result containing a
+  // match in the 1st and 2nd column, for example, will be added on top of the
+  // 1st, not the 2nd, sentinel.)
+  // We do so based on the assumption that the earlier columns contain more
+  // relevant data. So a result with a match in the 1st column is likely more
+  // interesting to the user than a result with a match in the 2nd column, so it
+  // should show first.
   //
-  // This allows us to avoid having to re-render the entire table on each
-  // match, while making it possible to sort the results by some criterion (the
-  // criterion being the index of the column of first match). We do so based on
-  // the assumption that the earlier columns contain more relevant data, and
-  // thus are more interesting to the user.
+  // This allows us to achieve some form of result sorting, without actually
+  // having to retrieve all results, sort them, and then render them. We can
+  // start showing results immediately after one match, thus maintaining
+  // Xooxle's high responsiveness and speed.
   //
-  // Notice that we use those rows or break points as bottoms for the sections,
-  // rather than tops, because we want results to expand downwards rather than
-  // upwards, to avoid jitter at the top of the table, which is the area that
-  // the user will be looking at.
-  //
-  // We do this, instead of retrieving all results and sorting them, in order to
-  // maintain Xooxle's high responsiveness and speed.
-  const idx_to_bottom: Element[] = xooxle.params.fields.map(() => {
+  // We also insert rows in the table, without displacing or recreating the
+  // other rows, thus reducing jitter.
+  // We use the sentinels as bottoms for the sections, rather than tops,
+  // because we want results to expand downwards rather than upwards, to
+  // avoid jitter at the top of the table, which is the area that the user
+  // will be looking at.
+  const column_sentinels: Element[] = xooxle.params.fields.map(() => {
     const tr = document.createElement('tr');
     tr.style.display = 'none';
     resultTable.appendChild(tr);
@@ -476,7 +481,7 @@ async function searchOneDictionary(
       row.appendChild(cell);
     });
 
-    idx_to_bottom[search_results.findIndex((sr) => sr.match)]!.insertAdjacentElement('beforebegin', row);
+    column_sentinels[search_results.findIndex((sr) => sr.match)]!.insertAdjacentElement('beforebegin', row);
 
     // TODO: Remove the dependency on the HTML structure.
     const collapsible = resultTable.parentElement!.parentElement!;
