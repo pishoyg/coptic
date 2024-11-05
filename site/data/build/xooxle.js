@@ -18,11 +18,16 @@ const KEY = 'KEY';
 // - In either case, a message will be shown indicating that more content is
 //   available.
 const UNITS_LIMIT = 5;
-// UNIT_SEPARATOR is the string that separates a units field into units.
+// UNIT_DELIMITER is the string that separates a units field into units.
 const UNIT_DELIMITER = '<hr class="match-separator">';
 // LONG_UNITS_FIELD_MESSAGE is the message shown at the end of a units field,
 // if the field gets truncated.
-const LONG_UNITS_FIELD_MESSAGE = '<br><span class="view-for-more">... (<em>view</em> for more)</span>';
+const LONG_UNITS_FIELD_MESSAGE = '<br><span class="view-for-more">... (<em>view</em> for full context)</span>';
+// Our currently index building algorithm results in HTML with a simplified
+// structure, with only <span> tags, styling tags, or <br> tags. Styling tags
+// don't affect the output text, and are simply ignored during text search.
+// Line breaks, however, require special handling.
+const LINE_BREAK = '<br>';
 const RESULTS_TO_UPDATE_DISPLAY = 5;
 const TAG_REGEX = /<\/?[^>]+>/g;
 class Candidate {
@@ -31,7 +36,7 @@ class Candidate {
     this.search_fields = fields.map((field) => ({
       field: field,
       html: record[field.name],
-      text: record[field.name].replace(TAG_REGEX, ''),
+      text: record[field.name].replaceAll(LINE_BREAK, '\n').replace(TAG_REGEX, ''),
     }));
   }
   search(regex) {
@@ -108,7 +113,13 @@ class Candidate {
             last_push_end = j;
           }
           j = html.indexOf('>', j) + 1;
-          segments.push(html.slice(last_push_end, j));
+          const tag = html.slice(last_push_end, j);
+          if (tag == LINE_BREAK) {
+            // We don't allow a match to span multiple lines.
+            match = false;
+            break;
+          }
+          segments.push(tag);
           last_push_end = j;
         }
         if (j >= html.length) {
@@ -141,6 +152,10 @@ class Candidate {
     return result;
   }
   static chopUnits(units) {
+    /* chopUnits joins at most UNITS_LIMIT units together. If we can't
+         * accommodate all units, appends a message indicating the fact that more
+         * content is available.
+         * */
     if (!units.length) {
       return '';
     }
@@ -153,22 +168,26 @@ class Candidate {
   static highlightAllMatches(html, text, regex, units_field) {
     /*
          * Args:
-         *   units_field: If true, split the input into units, and output only
-         *   the units with matches, separated by a delimiter.
+         *   units_field: If true, split the input into units, and:
+         *   - If the number of units is small (below a certain limit), output all
+         *     units, with the matches highlighted.
+         *   - If there are many units, output only the units with matches,
+         *     separated by a delimiter. (If we opt for this, then the output will
+         *     contain the units with matches, regardless of their number. They
+         *     could be fewer or more numerous than the limit.)
          */
     if (units_field) {
       // TODO: Memorize the HTML and text of each unit, to speed up this
       // computation. This method should probably be polymorphic depending on
       // the field type (currently units or non-units).
-      // TODO: Read a list of strings, instead of a delimiter-separated string!
-      // We only retain the units that have matches, and we detect that by
-      // whether the unit has changed.
-      // TODO: Use a cleaner check to filter the units that have matches.
+      // TODO: Read a list of strings, instead of a single delimiter
+      // separated string!
+      // TODO: We only retain the units that have matches, and we detect that
+      // by whether the unit has changed. Use a cleaner check to filter the
+      // units that have matches.
       const units = html.split(UNIT_DELIMITER);
       if (units.length <= UNITS_LIMIT) {
         // The number of units is small enough to display them all.
-        // We first replace the unit delimiters with line breaks, to make sure
-        // units won't be compacted into the same line.
         return Candidate.highlightAllMatches(html, text, regex, false);
       }
       const units_with_matches = units
