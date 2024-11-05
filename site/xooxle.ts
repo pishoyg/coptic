@@ -36,6 +36,10 @@ const LINE_BREAK = '<br>';
 const RESULTS_TO_UPDATE_DISPLAY = 5;
 const TAG_REGEX = /<\/?[^>]+>/g;
 
+function htmlToText(html: string): string {
+  return html.replaceAll(LINE_BREAK, '\n').replace(TAG_REGEX, '');
+}
+
 interface Field {
   readonly name: string;
   readonly units: boolean;
@@ -104,7 +108,7 @@ class Candidate {
       {
         field: field,
         html: record[field.name]!,
-        text: record[field.name]!.replaceAll(LINE_BREAK, '\n').replace(TAG_REGEX, ''),
+        text: htmlToText(record[field.name]!),
       } as SearchableField
     ));
   }
@@ -289,7 +293,7 @@ class Candidate {
 
       const units_with_matches: string[] = units
         .map(unit => Candidate.highlightAllMatches(
-          unit, unit.replace(TAG_REGEX, ''), regex, false))
+          unit, htmlToText(unit), regex, false))
         .filter((h, idx) => units[idx] !== h);
       if (units_with_matches.length) {
         return units_with_matches.join(UNIT_DELIMITER)
