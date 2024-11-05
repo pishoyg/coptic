@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 
 import utils
@@ -103,6 +104,7 @@ COLUMNS: dict[str | None, list[str]] = {
         "num_commits",
     ],
 }
+TARGET_ANNOTATIONS = 15
 
 
 def validate(df: pd.DataFrame) -> None:
@@ -147,7 +149,24 @@ def main():
             continue
         plt.figure(figsize=(10, 6))
         for column in columns:
+            total_points: int = len(df[column])
+            interval: int = max(1, total_points // TARGET_ANNOTATIONS)
             plt.plot(df.index, df[column], label=column)
+            for i, (x, y) in enumerate(zip(df.index, df[column])):
+                if not np.isfinite(y):
+                    continue
+                if i == total_points - 1 or (
+                    i % interval == 0 and total_points - i >= interval / 2
+                ):
+                    plt.text(
+                        x,
+                        y,
+                        str(int(y)),
+                        ha="center",
+                        va="bottom",
+                        fontsize=8,
+                        color="black",
+                    )
 
         plt.title(title)
         plt.xlabel("Time")
