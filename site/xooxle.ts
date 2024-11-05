@@ -415,6 +415,9 @@ async function searchOneDictionary(
   // rather than tops, because we want results to expand downwards rather than
   // upwards, to avoid jitter at the top of the table, which is the area that
   // the user will be looking at.
+  //
+  // We do this, instead of retrieving all results and sorting them, in order to
+  // maintain Xooxle's high responsiveness and speed.
   const idx_to_bottom: Element[] = xooxle.params.fields.map(() => {
     const tr = document.createElement('tr');
     tr.style.display = 'none';
