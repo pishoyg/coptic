@@ -400,7 +400,7 @@ async function searchOneDictionary(
   // idx_to_bottom is a set of hidden table rows that represent break points in
   // the results table.
   //
-  // These rows are used to divide the column into sections.
+  // These rows are used to divide the table into sections.
   // Results with matches in their first column will be added right on top of
   // the first hidden row. Results with matches in their second column will be
   // added right on top of the second hidden row, etc.
