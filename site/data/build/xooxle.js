@@ -30,13 +30,16 @@ const LONG_UNITS_FIELD_MESSAGE = '<br><span class="view-for-more">... (<em>view<
 const LINE_BREAK = '<br>';
 const RESULTS_TO_UPDATE_DISPLAY = 5;
 const TAG_REGEX = /<\/?[^>]+>/g;
+function htmlToText(html) {
+  return html.replaceAll(LINE_BREAK, '\n').replace(TAG_REGEX, '');
+}
 class Candidate {
   constructor(record, fields) {
     this.key = record[KEY];
     this.search_fields = fields.map((field) => ({
       field: field,
       html: record[field.name],
-      text: record[field.name].replaceAll(LINE_BREAK, '\n').replace(TAG_REGEX, ''),
+      text: htmlToText(record[field.name]),
     }));
   }
   search(regex) {
@@ -191,7 +194,7 @@ class Candidate {
         return Candidate.highlightAllMatches(html, text, regex, false);
       }
       const units_with_matches = units
-        .map(unit => Candidate.highlightAllMatches(unit, unit.replace(TAG_REGEX, ''), regex, false))
+        .map(unit => Candidate.highlightAllMatches(unit, htmlToText(unit), regex, false))
         .filter((h, idx) => units[idx] !== h);
       if (units_with_matches.length) {
         return units_with_matches.join(UNIT_DELIMITER)
