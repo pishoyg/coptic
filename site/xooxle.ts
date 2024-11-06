@@ -35,9 +35,20 @@ const LINE_BREAK = '<br>';
 
 const RESULTS_TO_UPDATE_DISPLAY = 5;
 const TAG_REGEX = /<\/?[^>]+>/g;
+const CHROME_WORD_CHARS: Set<string> = new Set<string>([
+  '\'',
+]);
+
 function isWordChar(char: string): boolean {
   // Unicode-aware boundary expansion
   return /\p{L}|\p{N}/u.test(char);
+}
+
+function isWordCharInChrome(char: string): boolean {
+  // isWordCharInChrome returns whether this character is considered a word
+  // character in Chrome.
+  // See https://github.com/pishoyg/coptic/issues/286 for context.
+  return isWordChar(char) || CHROME_WORD_CHARS.has(char);
 }
 
 function htmlToText(html: string): string {
@@ -141,7 +152,8 @@ class Candidate {
             regex,
             sf.field.units,
           ),
-          word: Candidate.getMatchFullWords(sf.text, match.index, match[0]),
+          word: Candidate.getMatchFullWordsForTextFragments(
+            sf.text, match.index, match[0]),
         };
       });
   }
@@ -346,11 +358,21 @@ class Candidate {
     return html;
   }
 
-  private static getMatchFullWords(
+  private static getMatchFullWordsForTextFragments(
     text: string, matchStart: number, match: string
   ): string {
+    /* Expand the match left and right such that it contains full words, for
+     * text fragment purposes.
+     * See
+     * https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments
+     * for information about text fragments.
+     * Notice that browsers don't treat them uniformly, and we try to obtain a
+     * match that will work on most browsers.
+     * */
     let start = matchStart;
     let end = matchStart + match.length;
+
+    const isWordChar = isWordCharInChrome;
 
     // Expand left: Move the start index left until a word boundary is found.
     while (start > 0 && isWordChar(text[start - 1]!)) {
