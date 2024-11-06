@@ -30,6 +30,10 @@ const LONG_UNITS_FIELD_MESSAGE = '<br><span class="view-for-more">... (<em>view<
 const LINE_BREAK = '<br>';
 const RESULTS_TO_UPDATE_DISPLAY = 5;
 const TAG_REGEX = /<\/?[^>]+>/g;
+function isWordChar(char) {
+  // Unicode-aware boundary expansion
+  return /\p{L}|\p{N}/u.test(char);
+}
 function htmlToText(html) {
   return html.replaceAll(LINE_BREAK, '\n').replace(TAG_REGEX, '');
 }
@@ -65,7 +69,7 @@ class Candidate {
   }
   // TODO: (#230) This should be a method of the SearchableField type. Same
   // below.
-  static findAllMatches(text, regex) {
+  static findAllMatchingSubstrings(text, regex) {
     const matches = new Set();
     let match;
     // Loop through all matches in the text.
@@ -80,7 +84,25 @@ class Candidate {
     }
     return matches;
   }
-  static highlightOneMatch(html, target) {
+  static isBoundary(str, i, i_plus_1) {
+    // Return true if there is a boundary between `str[i]` and `str[i_plus_1]`.
+    // This function assumes that i_plus_1 = i + 1.
+    // The reason we still ask the user to pass the two indices is to make it
+    // easier for them to decide where exactly they expect the boundary to be.
+    if (i - 1 < 0 || i_plus_1 >= str.length) {
+      return true;
+    }
+    if (isWordChar(str[i]) && isWordChar(str[i_plus_1])) {
+      return false;
+    }
+    return true;
+  }
+  static highlightSubstring(html, target) {
+    // TODO: This part of the code should be blind to the checkboxes.
+    const fullWord = fullWordCheckbox.checked;
+    /* Highlight all occurrences of `target` in `html`.
+         * if `fullWord` is true, only highlight the full-word occurrences.
+         * */
     if (!target) {
       return html;
     }
@@ -107,6 +129,10 @@ class Candidate {
       const segments = [];
       // last_push_end is the index of the end of the last pushed segment.
       let last_push_end = i;
+      if (fullWord && !Candidate.isBoundary(html, i - 1, i)) {
+        // This is not a full-word occurrence.
+        match = false;
+      }
       for (const c of target) {
         while (j < html.length && html[j] === '<') {
           // We have encountered a tag. Push the matching text first (if
@@ -127,13 +153,17 @@ class Candidate {
         }
         if (j >= html.length) {
           match = false;
-          break;
         }
         if (html[j] !== c) {
           match = false;
+        }
+        if (!match) {
           break;
         }
         ++j;
+      }
+      if (match && fullWord && !Candidate.isBoundary(html, j - 1, j)) {
+        match = false;
       }
       if (match) {
         // Push the last piece of text. It's guaranteed to be non-empty, because
@@ -202,17 +232,17 @@ class Candidate {
       }
       return Candidate.chopUnits(units);
     }
-    const matches = Candidate.findAllMatches(text, regex);
+    // TODO: Use the regex directly for highlighting, instead of using raw
+    // strings.
+    const matches = Candidate.findAllMatchingSubstrings(text, regex);
     matches.forEach((m) => {
-      html = Candidate.highlightOneMatch(html, m);
+      html = Candidate.highlightSubstring(html, m);
     });
     return html;
   }
   static getMatchFullWords(text, matchStart, match) {
     let start = matchStart;
     let end = matchStart + match.length;
-    // Unicode-aware boundary expansion
-    const isWordChar = (char) => /\p{L}|\p{N}/u.test(char);
     // Expand left: Move the start index left until a word boundary is found.
     while (start > 0 && isWordChar(text[start - 1])) {
       start--;
