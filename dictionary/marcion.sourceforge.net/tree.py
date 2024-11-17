@@ -101,7 +101,7 @@ class node:
         """
         We use the following fields from each child:
         - depth
-        - word-parsed-prettify
+        - word-parsed-classify
         - type-parsed
         - en-parsed
         - crum
@@ -143,7 +143,7 @@ class node:
             if not explain:
                 crum, crum_span = "", 0
             depth = int(d.cell("depth"))
-            word = d.cell("word-parsed-prettify")
+            word = d.cell("word-parsed-classify")
             type = d.cell("type-parsed")
             meaning = d.cell("en-parsed")
             key = d.cell("key")
