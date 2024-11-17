@@ -194,7 +194,7 @@ class capture:
             # If we're retaining the tag name, we keep it as-is.
             name = child.name if child.name in self._retain_tags else "span"
             if classes:
-                yield f'<{name} class="{" ".join(classes)}">'
+                yield f'<{name} class="{" ".join(sorted(classes))}">'
             else:
                 yield f"<{name}>"
             yield from self._get_children_text(child)
