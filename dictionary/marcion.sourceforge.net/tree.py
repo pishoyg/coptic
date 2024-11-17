@@ -95,14 +95,13 @@ class node:
 
     def html_table(
         self,
-        dialect: typing.Optional[str] = None,
         explain: bool = True,
         include_root: bool = False,
     ) -> str:
         """
         We use the following fields from each child:
         - depth
-        - word-parsed-prettify || dialect-*
+        - word-parsed-prettify
         - type-parsed
         - en-parsed
         - crum
@@ -113,9 +112,7 @@ class node:
         Args:
             explain: If true, include the meaning, type, and Crum page number.
         """
-        assert (
-            dialect is None
-        ), "Grouping derivations by dialect is still premature."
+
         assert (
             not include_root
         ), "An HTML tree with the root is not yet supported."
@@ -123,11 +120,6 @@ class node:
         assert self._preprocessed
 
         descendants = self.descendants()
-        if dialect:
-            is_dialect = build_has_cell(self, "dialect-" + dialect)
-            descendants = [
-                d for d, included in zip(descendants, is_dialect) if included
-            ]
         if not descendants:
             return ""
         crum_row_spans = build_crum_row_spans(descendants)
@@ -151,10 +143,7 @@ class node:
             if not explain:
                 crum, crum_span = "", 0
             depth = int(d.cell("depth"))
-            if dialect is not None:
-                word = d.cell("dialect-" + dialect)
-            else:
-                word = d.cell("word-parsed-prettify")
+            word = d.cell("word-parsed-prettify")
             type = d.cell("type-parsed")
             meaning = d.cell("en-parsed")
             key = d.cell("key")
