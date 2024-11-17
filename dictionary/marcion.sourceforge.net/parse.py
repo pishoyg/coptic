@@ -173,7 +173,8 @@ def parse_word_cell(
                 t,
                 r,
                 root_type,
-                normalize=normalize,
+                normalize_optional=normalize,
+                normalize_assumed=normalize,
             ),
         ]
 
@@ -194,7 +195,8 @@ def parse_word_cell(
                 t,
                 r,
                 root_type,
-                normalize=normalize,
+                normalize_optional=normalize,
+                normalize_assumed=normalize,
             ),
         )
 
@@ -391,7 +393,8 @@ def _parse_english(line: str) -> str:
                     t,
                     [],
                     None,
-                    normalize=True,
+                    normalize_optional=True,
+                    normalize_assumed=True,
                 ).string(
                     include_references=True,
                     parenthesize_assumed=True,

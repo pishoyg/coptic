@@ -59,7 +59,8 @@ class structured_word:
         types: list[type],
         references: list[str],
         root_type: typing.Optional[type],
-        normalize: bool = False,
+        normalize_optional: bool = False,
+        normalize_assumed: bool = False,
     ) -> None:
         assert all(d in constants.DIALECTS for d in dialects)
         self._dialects: list[str] = dialects
@@ -68,9 +69,8 @@ class structured_word:
         self._references: list[str] = references
         self._root_type: typing.Optional[type] = root_type
         self._assumed: list[bool] = []
-        normalize_assumed = normalize
 
-        if normalize:
+        if normalize_optional:
             self._spellings = sum(
                 [self._normalize_optional_letters(s) for s in self._spellings],
                 [],
@@ -136,7 +136,7 @@ class structured_word:
         assert constants.PURE_COPTIC_RE.match(spelling[i + 1])
         left = spelling[:i]
         middle = spelling[i + 1 : j]
-        right = spelling[j + 1 :] if j + 1 < len(spelling) else ""
+        right = spelling[j + 1 :]
         # We have two possibilities. We recursively normalize them in case
         # there are other parentheses.
         return self._normalize_optional_letters(
