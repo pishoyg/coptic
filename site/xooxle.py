@@ -63,8 +63,10 @@ import utils
 
 # The sets of tags used below is expected to produce excess newlines, which
 # will later get cleaned up.
+# NOTE: This method (initially) results in superfluous consecutive newlines,
+# which later get cleaned up.
 BLOCK_ELEMENTS_DEFAULT = {
-    # Each table cell goes to a block.
+    # Each table row goes to a block.
     "table",
     "thead",
     "tbody",
@@ -154,8 +156,8 @@ class capture:
         # _block_elements is the list of HTML tags that result in newlines in
         # the output.
         self._block_elements: set[str] = block_elements
-        # _units is a list of HTML tags that produce <!----> separators in the
-        # output. You can use this separator to separate the text into
+        # _units is a list of HTML tags that produce `UNIT_DELIMITER` separators
+        # in the output. You can use this separator to separate the text into
         # meaningful units.
         self._unit_tags = unit_tags
 
@@ -166,20 +168,22 @@ class capture:
         if not tag:
             return ""
         tag.extract()
-        return self.get_text(tag)
+        return self.get_simplified_html(tag)
 
-    def get_text(self, tag: bs4.Tag) -> str:
+    def get_simplified_html(self, tag: bs4.Tag) -> str:
         """Get the text from the given tag."""
-        return self._clean_text("".join(self._get_children_text(tag)))
+        # TODO: (#230) Remove navigable strings that consist entirely of space,
+        # and are followed by newlines or unit separators.
+        return self._clean("".join(self._get_children_simplified_html(tag)))
 
-    def _get_children_text(self, tag: bs4.Tag) -> typing.Generator:
+    def _get_children_simplified_html(self, tag: bs4.Tag) -> typing.Generator:
         for child in tag.children:
             if isinstance(child, bs4.NavigableString):
-                yield self._get_navigable_string_test(child)
+                yield self._get_navigable_string_text(child)
             elif isinstance(child, bs4.Tag):
-                yield from self._get_tag_text(child)
+                yield from self._get_tag_html(child)
 
-    def _get_tag_text(self, child: bs4.Tag) -> typing.Generator:
+    def _get_tag_html(self, child: bs4.Tag) -> typing.Generator:
         if child.name in self._block_elements:
             yield "\n"
         if self._unit_tags and child.name in self._unit_tags:
@@ -197,34 +201,31 @@ class capture:
                 yield f'<{name} class="{" ".join(sorted(classes))}">'
             else:
                 yield f"<{name}>"
-            yield from self._get_children_text(child)
+            yield from self._get_children_simplified_html(child)
             yield f"</{name}>"
         else:
             # Neither the tag name nor any of its classes need retention, we
             # simply produce the text.
-            yield from self._get_children_text(child)
+            yield from self._get_children_simplified_html(child)
 
         if self._unit_tags and child.name in self._unit_tags:
             yield UNIT_DELIMITER
         if child.name in self._block_elements:
             yield "\n"
 
-    def _get_navigable_string_test(self, child: bs4.NavigableString) -> str:
-        # Join all strings with a space, just like you expect a browser
-        # to do.
-        s = " ".join(child.strings)
-        # Remove excess space, again just like you would expect a
-        # browser to do.
-        s = " ".join(s.split())
+    def _get_navigable_string_text(self, child: bs4.NavigableString) -> str:
+        raw: str = str(child)
+        # # Remove excess space, again just like you would expect a
+        # # browser to do.
+        s: str = " ".join(raw.split())
         # Append spaces before and after, if they existed.
-        raw = str(child)
         if raw[0].isspace():
             s = " " + s
         if raw[-1].isspace():
             s = s + " "
         return s
 
-    def _clean_text(self, text: str) -> str:
+    def _clean(self, text: str) -> str:
         lines = text.split(UNIT_DELIMITER)
         lines = [self._clean_excess_whitespace(ln) for ln in lines]
         lines = list(filter(None, lines))
@@ -287,6 +288,12 @@ class subindex:
 
         # Recursively search for all HTML files.
         for path, entry in self.iter_input():
+            # Extract all comments.
+            comment: bs4.Comment
+            for comment in entry.find_all(
+                text=lambda text: isinstance(text, bs4.Comment),
+            ):
+                _ = comment.extract()
             # Extract all unwanted content.
             for selector in self._extract:
                 for element in selector.find_all(entry):
