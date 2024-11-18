@@ -102,6 +102,10 @@ table {
     margin: 10px 0;
   }
 
+  #xooxle td {
+    display: block;
+  }
+
 }
 
 .logo {
@@ -228,6 +232,23 @@ table {
 
 /********** Xooxle **********/
 
+/* stylelint-disable selector-id-pattern */
+
+#searchBox {
+  width: 100%;
+}
+
+/* stylelint-enable selector-id-pattern */
+
+#xooxle td {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+#xooxle td:first-child {
+  width: 50%;
+}
+
 .match {
   background-color: #f0d4fc;
 }
@@ -258,12 +279,12 @@ table {
   vertical-align: top;
 }
 
-/* stylelint-enable no-descending-specificity */
-
 .results td:not(:first-child) {
   border-left: 1px solid black;
   padding-left: 5px;
 }
+
+/* stylelint-enable no-descending-specificity */
 
 .error {
   color: darkred;

@@ -179,7 +179,7 @@ window.addEventListener('load', () => {
     localStorage.setItem('dev', localStorage.getItem('dev') === 'true' ? 'false' : 'true');
   }
   // Handle 'reset' class.
-  function reset(dialectCheckboxes, highlighter, event) {
+  function reset(dialectCheckboxes, highlighter) {
     dialectCheckboxes.forEach((box) => { box.checked = false; });
     // The local storage is the source of truth for some highlighting variables.
     // Clearing it results restores a pristine display.
@@ -205,14 +205,6 @@ window.addEventListener('load', () => {
       if (!anki()) {
         window.location.reload();
       }
-    }
-    if (xooxle()) {
-    // The XOOXLE page has a reset button that also triggers this handler. In
-    // case we're on XOOXLE, there is a chance this event comes from clicking
-    // the button, which would submit the form and reset everything (including
-    // the search box and the option checkboxes). So prevent the event from
-    // propagating further.
-      event.preventDefault();
     }
   }
   function getLinkHrefByRel(rel) {
@@ -392,6 +384,7 @@ window.addEventListener('load', () => {
         w: 'Toggle full word search',
         x: 'Toggle regex search',
         '/': 'Focus search box',
+        ';': 'Focus the Crum Google search box',
       }));
       sections.push(new Section('Scrol To', {
         n: 'Next search result',
@@ -543,13 +536,17 @@ window.addEventListener('load', () => {
     // NOTE: The `reset` class is only used in the notes pages.
     Array.prototype.forEach.call(document.getElementsByClassName('reset'), (el) => {
       el.classList.add('link');
-      el.onclick = (event) => {
-        reset(dialectCheckboxes, highlighter, event);
+      el.onclick = () => {
+        reset(dialectCheckboxes, highlighter);
       };
     });
     // NOTE: The element with the ID `reset` is only present on the XOOXLE page.
     document.getElementById('reset')?.addEventListener('click', (event) => {
-      reset(dialectCheckboxes, highlighter, event);
+      reset(dialectCheckboxes, highlighter);
+      // On Xooxle, clicking the button would normally submit the form and
+      // reset everything (including the search box and the option checkboxes).
+      // So prevent the event from propagating further.
+      event.preventDefault();
     });
     // When we first load the page, 'd' dictates the set of active dialects and
     // hence highlighting. We load 'd' from the local storage, and we update the
@@ -584,6 +581,9 @@ window.addEventListener('load', () => {
     // NOTE: This is where we define all our command shortcuts. It's important for
     // the content to remain in sync with the help panel.
     // TODO: (#280) Combine the help panel and `keydown` listener code.
+    // NOTE: We intentionally use the `keydown` event rather than the `keyup`
+    // event, so that a long press would trigger a shortcut command repeatedly.
+    // This is helpful for some of the commands.
     document.addEventListener('keydown', (e) => {
       if (e.metaKey || e.ctrlKey || e.altKey) {
       // If the user is holding down a modifier key, we don't want to do
@@ -598,7 +598,7 @@ window.addEventListener('load', () => {
       switch (e.key) {
       // Commands:
       case 'r':
-        reset(dialectCheckboxes, highlighter, e);
+        reset(dialectCheckboxes, highlighter);
         break;
       case 'd':
         toggleDev();
@@ -647,6 +647,9 @@ window.addEventListener('load', () => {
         break;
       case '/':
         focus('searchBox');
+        break;
+      case ';':
+        document.querySelector('#google input').focus();
         break;
       case 'w':
         click('fullWordCheckbox');
@@ -745,6 +748,17 @@ window.addEventListener('load', () => {
         e.stopPropagation();
       }
     });
+    if (xooxle()) {
+    // We have to do this when the page is fully loaded to guarantee that the
+    // Google search box has already been loaded by the Google-provided script.
+      const googleSearchBox = document.querySelector('#google input');
+      // Prevent search query typing from triggering a shortcut command.
+      googleSearchBox.addEventListener('keydown', (e) => {
+        e.stopPropagation();
+      });
+      googleSearchBox.placeholder = 'Search A Coptic Dictionary, W. E. Crum, using Ⲅⲟⲟⲅⲗⲉ';
+      googleSearchBox.ariaPlaceholder = 'Search A Coptic Dictionary, W. E. Crum, using Ⲅⲟⲟⲅⲗⲉ';
+    }
   }
   main();
 });
