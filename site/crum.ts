@@ -419,13 +419,17 @@ class HelpPanel {
 
     document.body.appendChild(panel);
 
-    // Create help button.
-    const footer = document.createElement('footer');
-    const help = document.createElement('span');
-    help.classList.add('link');
-    help.innerHTML = '<center>help</center>';
-    footer.appendChild(help);
-    document.body.appendChild(footer);
+    // Create help button, if it doesn't already exist.
+    const help: HTMLElement = document.getElementById('help') ?? ((): HTMLElement => {
+      const footer = document.createElement('footer');
+      const help = document.createElement('span');
+      help.classList.add('link');
+      help.innerHTML = '<center>help</center>';
+      footer.appendChild(help);
+      document.body.appendChild(footer);
+      return help;
+    })();
+
     help.onclick = (event: MouseEvent) => {
       this.togglePanel();
       event.stopPropagation();
