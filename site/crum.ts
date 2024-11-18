@@ -505,7 +505,7 @@ function makeHelpPanel(): HelpPanel {
       ';': 'Focus the Crum Google search box',
     }));
 
-    sections.push(new Section('Scrol To', {
+    sections.push(new Section('Scroll To', {
       n: 'Next search result',
       p: 'Previous search result',
       C: 'Crum',
