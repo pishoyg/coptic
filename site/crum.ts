@@ -273,15 +273,27 @@ function reset(
   // huge issue right now, so we aren't prioritizing fixing it!
   // NOTE: Attempting to reload the page on Ankidroid opens a the browser at a
   // 127.0.0.0 port! We avoid reloading on all Anki platforms!
-  if (url.hash || performance.getEntriesByType('navigation')[0]?.name.includes('#')) {
-    url.hash = '';
-    window.history.replaceState('', '', url.toString());
-    // Reload to get rid of the highlighting caused by the hash / fragment,
-    // if any.
-    if (!anki()) {
-      window.location.reload();
-    }
+  // NOTE: In Xooxle, there is no hash-based highlighting, so we don't need to
+  // reload the page.
+  // Additionally, the presence of the Google Programmable Search Engine
+  // widget results in the presence of a pseudo-hash in the URL, which would
+  // cause the page to unnecessarily reload.
+  if (xooxle()) {
+    return;
   }
+
+  if (!url.hash && !performance.getEntriesByType('navigation')[0]?.name.includes('#')) {
+    return;
+  }
+
+  url.hash = '';
+  window.history.replaceState('', '', url.toString());
+  // Reload to get rid of the highlighting caused by the hash / fragment,
+  // if any.
+  if (anki()) {
+    return;
+  }
+  window.location.reload();
 }
 
 function getLinkHrefByRel(rel: string): string | null {
