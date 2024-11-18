@@ -626,12 +626,13 @@ function handleSearchQuery(timeout: number) {
   }, timeout);
 }
 
-searchBox.addEventListener('input', () => { handleSearchQuery(100); });
 // Prevent other elements in the page from picking up key events on the
 // search box.
 searchBox.addEventListener('keyup', (event: KeyboardEvent) => { event.stopPropagation(); });
 searchBox.addEventListener('keydown', (event: KeyboardEvent) => { event.stopPropagation(); });
 searchBox.addEventListener('keypress', (event: KeyboardEvent) => { event.stopPropagation(); });
+// Make the page responsive to user input.
+searchBox.addEventListener('input', () => { handleSearchQuery(100); });
 fullWordCheckbox.addEventListener('click', () => { handleSearchQuery(0); });
 regexCheckbox.addEventListener('click', () => { handleSearchQuery(0); });
 
@@ -664,11 +665,4 @@ regexCheckbox.addEventListener('click', () => { handleSearchQuery(0); });
 window.addEventListener('pageshow', (): void => {
   handleSearchQuery(0);
   searchBox.focus();
-});
-
-// Prevent pressing Enter from submitting the form, thus resetting everything!
-searchBox.addEventListener('keypress', (event) => {
-  if (event.key === 'Enter') {
-    event.preventDefault();
-  }
 });

@@ -16,21 +16,20 @@
 
   <form>
     <div>
-      <label for="searchBox">Search:</label> <input id="searchBox" placeholder=
-      "Enter search query" type="text">
-    </div>
-
-    <div>
-      <input id="fullWordCheckbox" type="checkbox"> <label for=
-      "fullWordCheckbox">Full Word Match</label>
-    </div>
-
-    <div>
-      <input id="regexCheckbox" type="checkbox"> <label for="regexCheckbox">Use
-      Regular Expressions (<a href=
-      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions"
-      rel="noopener noreferrer" style="color: black" target=
-      "_blank">syntax</a>)</label>
+      <table id="xooxle">
+        <tr>
+          <td><input id="searchBox" placeholder="Search using Ϧⲟⲟϧⲗⲉ" type=
+          "text">
+          </td>
+          <td><input id="fullWordCheckbox" type="checkbox"> <label for=
+          "fullWordCheckbox">Full-Word Match</label></td>
+          <td><input id="regexCheckbox" type="checkbox"> <label for=
+          "regexCheckbox">Use Regular Expressions (<a href=
+          "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions"
+          rel="noopener noreferrer" style="color: black" target=
+          "_blank">syntax</a>)</label></td>
+        </tr>
+      </table>
     </div>
 
     <div class="checkboxes">
@@ -61,7 +60,7 @@
       "checkbox" value="W"> W</label> <label><input id="checkbox-U" name="U"
       class="dialect-checkbox" type="checkbox" value="U"> U</label>
       <label><input id="checkbox-K" name="K" class="dialect-checkbox" type=
-      "checkbox" value="K"> K</label> <button id="reset">reset</button>
+      "checkbox" value="K"> K</label> &nbsp; <button id="reset">reset</button>
     </div>
   </form>
 
@@ -137,13 +136,15 @@
     </table>
   </div>
   <script defer src="xooxle.js"></script> 
-  <script defer src="script.js"></script> <!--
-  <h2>Ⲅⲟⲟⲅⲗⲉ</h2>
+  <script defer src="script.js"></script>
+
+  <hr>
   <script async src=
   "https://cse.google.com/cse.js?cx=e350c6229ed584e08"></script>
-  <div class="gcse-search">
+  <div id="google">
+    <div class="gcse-search">
+    </div>
   </div>
--->
 
   <div id="index" hidden="">
     <!--The index will go here. It's used to retain (hidden) references to all words

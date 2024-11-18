@@ -254,7 +254,6 @@ function toggleDev(): void {
 function reset(
   dialectCheckboxes: NodeListOf<HTMLInputElement>,
   highlighter: Highlighter,
-  event: Event,
 ): void {
   dialectCheckboxes.forEach((box) => { box.checked = false; });
   // The local storage is the source of truth for some highlighting variables.
@@ -282,15 +281,6 @@ function reset(
     if (!anki()) {
       window.location.reload();
     }
-  }
-
-  if (xooxle()) {
-    // The XOOXLE page has a reset button that also triggers this handler. In
-    // case we're on XOOXLE, there is a chance this event comes from clicking
-    // the button, which would submit the form and reset everything (including
-    // the search box and the option checkboxes). So prevent the event from
-    // propagating further.
-    event.preventDefault();
   }
 }
 
@@ -512,6 +502,7 @@ function makeHelpPanel(): HelpPanel {
       w: 'Toggle full word search',
       x: 'Toggle regex search',
       '/': 'Focus search box',
+      ';': 'Focus the Crum Google search box',
     }));
 
     sections.push(new Section('Scrol To', {
@@ -740,8 +731,8 @@ function main() {
     document.getElementsByClassName('reset'),
     (el: HTMLElement): void => {
       el.classList.add('link');
-      el.onclick = (event: Event) => {
-        reset(dialectCheckboxes, highlighter, event);
+      el.onclick = () => {
+        reset(dialectCheckboxes, highlighter);
       };
     },
   );
@@ -749,7 +740,11 @@ function main() {
   // NOTE: The element with the ID `reset` is only present on the XOOXLE page.
   document.getElementById('reset')?.addEventListener('click',
     (event: Event) => {
-      reset(dialectCheckboxes, highlighter, event);
+      reset(dialectCheckboxes, highlighter);
+      // On Xooxle, clicking the button would normally submit the form and
+      // reset everything (including the search box and the option checkboxes).
+      // So prevent the event from propagating further.
+      event.preventDefault();
     });
 
   // When we first load the page, 'd' dictates the set of active dialects and
@@ -791,6 +786,9 @@ function main() {
   // NOTE: This is where we define all our command shortcuts. It's important for
   // the content to remain in sync with the help panel.
   // TODO: (#280) Combine the help panel and `keydown` listener code.
+  // NOTE: We intentionally use the `keydown` event rather than the `keyup`
+  // event, so that a long press would trigger a shortcut command repeatedly.
+  // This is helpful for some of the commands.
   document.addEventListener('keydown', (e: KeyboardEvent) => {
     if (e.metaKey || e.ctrlKey || e.altKey) {
       // If the user is holding down a modifier key, we don't want to do
@@ -806,7 +804,7 @@ function main() {
     switch (e.key) {
     // Commands:
     case 'r':
-      reset(dialectCheckboxes, highlighter, e);
+      reset(dialectCheckboxes, highlighter);
       break;
     case 'd':
       toggleDev();
@@ -855,6 +853,9 @@ function main() {
 
     case '/':
       focus('searchBox');
+      break;
+    case ';':
+      document.querySelector<HTMLElement>('#google input')!.focus();
       break;
     case 'w':
       click('fullWordCheckbox');
@@ -953,6 +954,18 @@ function main() {
       e.stopPropagation();
     }
   });
+
+  if (xooxle()) {
+    // We have to do this when the page is fully loaded to guarantee that the
+    // Google search box has already been loaded by the Google-provided script.
+    const googleSearchBox = document.querySelector<HTMLInputElement>('#google input')!;
+    // Prevent search query typing from triggering a shortcut command.
+    googleSearchBox.addEventListener('keydown', (e: KeyboardEvent) => {
+      e.stopPropagation();
+    });
+    googleSearchBox.placeholder = 'Search A Coptic Dictionary, W. E. Crum, using Ⲅⲟⲟⲅⲗⲉ';
+    googleSearchBox.ariaPlaceholder = 'Search A Coptic Dictionary, W. E. Crum, using Ⲅⲟⲟⲅⲗⲉ';
+  }
 }
 
 main();
