@@ -307,13 +307,16 @@ class HelpPanel {
     panel.appendChild(closeButton);
     sections.forEach((s) => { panel.appendChild(s.createSection()); });
     document.body.appendChild(panel);
-    // Create help button.
-    const footer = document.createElement('footer');
-    const help = document.createElement('span');
-    help.classList.add('link');
-    help.innerHTML = '<center>help</center>';
-    footer.appendChild(help);
-    document.body.appendChild(footer);
+    // Create help button, if it doesn't already exist.
+    const help = document.getElementById('help') ?? (() => {
+      const footer = document.createElement('footer');
+      const help = document.createElement('span');
+      help.classList.add('link');
+      help.innerHTML = '<center>help</center>';
+      footer.appendChild(help);
+      document.body.appendChild(footer);
+      return help;
+    })();
     help.onclick = (event) => {
       this.togglePanel();
       event.stopPropagation();
@@ -385,7 +388,7 @@ function makeHelpPanel() {
       '/': 'Focus search box',
       ';': 'Focus the Crum Google search box',
     }));
-    sections.push(new Section('Scrol To', {
+    sections.push(new Section('Scroll To', {
       n: 'Next search result',
       p: 'Previous search result',
       C: 'Crum',
