@@ -12,22 +12,31 @@
 </head>
 <body>
   <a href="http://remnqymi.com/">Home</a>
-  <h1>ⲡⲓⲀⲛⲥⲁϫⲓ - Coptic Dictionary</h1>
-
   <form>
     <div>
       <table id="xooxle">
+        <thead>
+          <tr>
+            <td colspan="3">ⲡⲓⲀⲛⲥⲁϫⲓ - Coptic Dictionary</td>
+          </tr>
+        </thead>
+
         <tr>
-          <td><input id="searchBox" placeholder="Search using Ϧⲟⲟϧⲗⲉ" type=
-          "text">
+          <td class="search-box"><input id="searchBox" placeholder=
+          "Search using Ϧⲟⲟϧⲗⲉ" type="text">
           </td>
           <td><input id="fullWordCheckbox" type="checkbox"> <label for=
-          "fullWordCheckbox">Full-Word Match</label></td>
+          "fullWordCheckbox"><span class="big-screen-only">Full-Word
+          Match</span> <span class="small-screen-only">Word</span></label></td>
           <td><input id="regexCheckbox" type="checkbox"> <label for=
-          "regexCheckbox">Use Regular Expressions (<a href=
+          "regexCheckbox"><span class="big-screen-only">Use Regular
+          Expressions(<a href=
           "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions"
           rel="noopener noreferrer" style="color: black" target=
-          "_blank">syntax</a>)</label></td>
+          "_blank">syntax</a>)</span> <span class="small-screen-only"><a href=
+          "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions"
+          rel="noopener noreferrer" style="color: black" target=
+          "_blank">RegEx</a></span></label></td>
         </tr>
       </table>
     </div>
@@ -70,7 +79,7 @@
   <p id="message"><!--Placeholder for warnings and messages.-->
   </p>
 
-  <h2 id="crum-title" class="collapse">A Coptic Dictionary, Walter E. Crum</h2>
+  <h3 id="crum-title" class="collapse">A Coptic Dictionary, Walter E. Crum</h3>
 
   <div class="collapsible">
     <table id="crum" class="results">
@@ -93,7 +102,7 @@
     </table>
   </div>
 
-  <h2 id="kellia-title" class="collapse">KELLIA</h2>
+  <h3 id="kellia-title" class="collapse">KELLIA</h3>
 
   <div class="collapsible">
     <table id="kellia" class="results">
@@ -116,7 +125,7 @@
     </table>
   </div>
 
-  <h2 id="copticsite-title" class="collapse">copticsite</h2>
+  <h3 id="copticsite-title" class="collapse">copticsite</h3>
 
   <div class="collapsible">
     <table id="copticsite" class="results">
