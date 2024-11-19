@@ -801,7 +801,7 @@ class _step_mother(_mother):
 class _sensor:
     def __init__(self, keys: list[str], sense_jsons: list[str]) -> None:
         assert len(keys) == len(sense_jsons)
-        self.d: dict = {
+        self.d: dict[str, dict[str, str]] = {
             k: json.loads(ss) if ss else {} for k, ss in zip(keys, sense_jsons)
         }
 
@@ -819,7 +819,7 @@ class _sensor:
                 '<span class="italic lighter small">',
                 # TODO: (#189) Require the presence of a sense once the sense
                 # data has been fully populated.
-                self.d[key].get(sense, sense),
+                self.d[key].get(sense, ""),
                 "</span>",
             ],
         )
