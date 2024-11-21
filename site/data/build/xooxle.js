@@ -514,7 +514,7 @@ window.addEventListener('pageshow', () => {
 });
 // Show the "use-chrome" section randomly.
 function maybeRecommendChrome() {
-  if (Math.random() >= 0.1) {
+  if (Math.random() >= 0.25) {
     return;
   }
   const elem = document.getElementById('use-chrome');
