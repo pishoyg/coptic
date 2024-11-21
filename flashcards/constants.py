@@ -377,7 +377,7 @@ def crum(
                     '<div id="crum" class="crum dictionary">',
                     '<span class="right">',
                     field.aon(
-                        "<b>Crum: </b>",
+                        '<b><a href="#crum" class="crum hover-link">Crum: </a></b>',
                         field.apl(
                             lambda pages: ", ".join(
                                 f'<span class="crum-page">{p}</span>'
@@ -427,7 +427,7 @@ def crum(
                     '<div id="dawoud" class="dawoud dictionary">',
                     '<span class="right">',
                     field.aon(
-                        "<b>Dawoud: </b>",
+                        '<b><a href="#dawoud" class="dawoud hover-link">Dawoud: </a></b>',
                         field.apl(
                             lambda pages: DICTIONARY_PAGE_RE.sub(
                                 r'<span class="dawoud-page">\1</span>',
