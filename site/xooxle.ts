@@ -52,7 +52,10 @@ function isWordCharInChrome(char: string): boolean {
 }
 
 function htmlToText(html: string): string {
-  return html.replaceAll(LINE_BREAK, '\n').replace(TAG_REGEX, '');
+  return html
+    .replaceAll(LINE_BREAK, '\n')
+    .replaceAll(UNIT_DELIMITER, '\n')
+    .replace(TAG_REGEX, '');
 }
 
 interface Field {
