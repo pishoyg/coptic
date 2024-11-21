@@ -44,7 +44,10 @@ function isWordCharInChrome(char) {
   return isWordChar(char) || CHROME_WORD_CHARS.has(char);
 }
 function htmlToText(html) {
-  return html.replaceAll(LINE_BREAK, '\n').replace(TAG_REGEX, '');
+  return html
+    .replaceAll(LINE_BREAK, '\n')
+    .replaceAll(UNIT_DELIMITER, '\n')
+    .replace(TAG_REGEX, '');
 }
 class Candidate {
   constructor(record, fields) {
