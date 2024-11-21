@@ -307,6 +307,13 @@ table {
 
 /* stylelint-enable no-descending-specificity */
 
+.use-chrome {
+  display: none;
+  font-size: small;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
 .error {
   color: darkred;
   font-style: italic;
