@@ -275,7 +275,7 @@ def crum(
                     "</div>",
                     "<br>",
                 ),
-                # Image.
+                # Images.
                 field.xor(
                     field.aon(
                         '<div id="images" class="images">',
@@ -297,6 +297,15 @@ def crum(
                         "</div>",
                     ),
                     "<br/>",
+                ),
+                # Senses.
+                field.aon(
+                    '<div id="senses" class="senses">',
+                    field.apl(
+                        senses_json_to_html,
+                        root_appendix("senses", force=False),
+                    ),
+                    "</div>",
                 ),
                 # Editor's notes.
                 field.aon(
@@ -828,6 +837,16 @@ class _step_mother(_mother):
                 meanings,
             )
         }
+
+
+def senses_json_to_html(senses_dump: str) -> str:
+    if not senses_dump:
+        return ""
+    senses: dict[str, str] = json.loads(senses_dump)
+    return "; ".join(
+        f'<span class="sense" id="sense{k}">{senses[k]}</span>'
+        for k in sorted(senses.keys(), key=int)
+    )
 
 
 class _sensor:
