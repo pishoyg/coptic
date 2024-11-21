@@ -379,22 +379,32 @@ def crum(
                     field.aon(
                         "<b>Crum: </b>",
                         field.apl(
-                            lambda pages: INTEGER_RE.sub(
-                                r'<span class="crum-page">\1</span>',
-                                pages,
+                            lambda pages: ",".join(
+                                f'<span class="crum-page">{p}</span>'
+                                for p in pages
                             ),
-                            roots_col("crum-pages", force=False),
+                            field.apl(
+                                _crum_page_numbers,
+                                root_appendix("crum-last-page", force=False),
+                                roots_col("crum", force=False),
+                                roots_col("crum-pages", force=False),
+                            ),
                         ),
                     ),
                     "</span>",
                     field.img(
-                        keys=roots_col("crum-pages", force=False),
-                        get_paths=lambda page_ranges: utils.sort_semver(
+                        keys=field.apl(
+                            _crum_page_numbers,
+                            root_appendix("crum-last-page", force=False),
+                            roots_col("crum", force=False),
+                            roots_col("crum-pages", force=False),
+                        ),
+                        get_paths=lambda pages: utils.sort_semver(
                             [
                                 f"dictionary/marcion.sourceforge.net/data/crum/{
                                     k+20
                                 }.png"
-                                for k in _page_numbers(page_ranges=page_ranges)
+                                for k in pages
                             ],
                         ),
                         fmt_args=lambda path: {
@@ -624,6 +634,26 @@ def _dedup(arr: list[int], at_most_once: bool = False) -> list[int]:
     return out
 
 
+def col_number_to_page(col_number: str) -> int:
+    assert col_number[-1] in ["a", "b"]
+    return int(col_number[:-1])
+
+
+def _crum_page_numbers(
+    last_page_override: str,
+    first_page: str,
+    page_ranges: str,
+) -> list[int]:
+    if not last_page_override:
+        return _page_numbers(page_ranges)
+    return list(
+        range(
+            col_number_to_page(first_page),
+            col_number_to_page(last_page_override) + 1,
+        ),
+    )
+
+
 def _page_numbers(page_ranges: str) -> list[int]:
     """page_ranges is a comma-separated list of integers or integer ranges,
     just like what you type when you're using your printer.
@@ -640,6 +670,8 @@ def _page_numbers(page_ranges: str) -> list[int]:
 
     out = []
     page_ranges = page_ranges.strip()
+    if not page_ranges:
+        return []
     for page_or_page_range in page_ranges.split(","):
         if "-" not in page_or_page_range:
             # This is a single page.
