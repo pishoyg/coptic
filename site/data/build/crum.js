@@ -319,7 +319,8 @@ class HelpPanel {
     document.body.appendChild(panel);
     // Create help button, if it doesn't already exist.
     const help = document.getElementById('help') ?? (() => {
-      const footer = document.createElement('footer');
+      const footer = document.getElementsByTagName('footer')[0]
+                ?? document.createElement('footer');
       const help = document.createElement('span');
       help.classList.add('link');
       help.innerHTML = '<center>help</center>';
