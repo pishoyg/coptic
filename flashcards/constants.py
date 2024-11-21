@@ -379,7 +379,7 @@ def crum(
                     field.aon(
                         "<b>Crum: </b>",
                         field.apl(
-                            lambda pages: ",".join(
+                            lambda pages: ", ".join(
                                 f'<span class="crum-page">{p}</span>'
                                 for p in pages
                             ),
