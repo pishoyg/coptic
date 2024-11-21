@@ -238,6 +238,12 @@ table {
 
 /* stylelint-enable selector-class-pattern */
 
+.senses {
+  font-size: small;
+  font-style: italic;
+  color: #7f8c8d;
+}
+
 /********** Xooxle **********/
 
 /* stylelint-disable selector-id-pattern */
