@@ -71,7 +71,7 @@ _CRUM_INDEX = xooxle.index(
                 force=False,
             ),
             xooxle.selector({"class_": "drv-key"}, force=False),
-            xooxle.selector({"class_": "explanatory-key"}, force=False),
+            xooxle.selector({"id": "images"}, force=False),
             xooxle.selector({"class_": "nag-hammadi"}, force=False),
             xooxle.selector({"class_": "sisters"}, force=False),
             xooxle.selector({"id": "pretty"}),
