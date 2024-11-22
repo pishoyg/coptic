@@ -252,7 +252,7 @@ class Section {
   }
   createSection() {
     const div = document.createElement('div');
-    const title = document.createElement('h2');
+    const title = document.createElement('h3');
     title.textContent = this.title;
     div.appendChild(title);
     const table = document.createElement('table');
@@ -273,7 +273,7 @@ class Section {
       keyCell.style.padding = '8px'; // Optional: Add padding
       // Create a cell for the value (right column)
       const valueCell = document.createElement('td');
-      valueCell.innerHTML = this.highlightFirstOccurrence(key, value);
+      valueCell.innerHTML = highlightFirstOccurrence(key, value);
       valueCell.style.width = '90%'; // Set the width of the right column to 90%
       valueCell.style.border = '1px solid black'; // Optional: Add a border for visibility
       valueCell.style.padding = '8px'; // Optional: Add padding
@@ -286,19 +286,19 @@ class Section {
     div.appendChild(table);
     return div;
   }
-  highlightFirstOccurrence(char, str) {
-    if (str.includes('<strong>')) {
-      // Already highlighted.
-      return str;
-    }
-    const index = str.toLowerCase().indexOf(char.toLowerCase());
-    if (index === -1) {
-      return str;
-    }
-    return `${str.slice(0, index)}<strong>${str[index]}</strong>${str.slice(index + 1)}`;
-  }
 }
 ;
+function highlightFirstOccurrence(char, str) {
+  if (str.includes('<strong>')) {
+    // Already highlighted.
+    return str;
+  }
+  const index = str.toLowerCase().indexOf(char.toLowerCase());
+  if (index === -1) {
+    return str;
+  }
+  return `${str.slice(0, index)}<strong>${str[index]}</strong>${str.slice(index + 1)}`;
+}
 class HelpPanel {
   constructor(sections) {
     // Create overlay background.
@@ -310,6 +310,9 @@ class HelpPanel {
     const panel = document.createElement('div');
     panel.className = 'info-panel';
     panel.style.display = 'none'; // Hidden by default.
+    const h2 = document.createElement('h2');
+    h2.textContent = 'Keyboard Shortcuts';
+    panel.appendChild(h2);
     const closeButton = document.createElement('button');
     closeButton.className = 'close-btn';
     closeButton.innerHTML = '&times;'; // HTML entity for '×'.
@@ -348,6 +351,21 @@ class HelpPanel {
     }
   }
 }
+function makeDialectDescription(key, name, code, dictionaries, link) {
+  code = highlightFirstOccurrence(key, code);
+  name = highlightFirstOccurrence(key, name);
+  if (link) {
+    name = `<a href="${link}" target="_blank" rel="noopener,noreferrer">${name}</a>`;
+  }
+  return `
+<table>
+  <tr>
+    <td class="dialect-code">(${code})</td>
+    <td class="dialect-name">${name}</td>
+    <td class="dialect-dictionaries">(${dictionaries.join(', ')})</td>
+  </tr>
+</table>`;
+}
 function makeHelpPanel() {
   // NOTE: This constructs the help panel. It's important for the content to
   // remain consistent with the commands that the page responds to.
@@ -368,29 +386,29 @@ function makeHelpPanel() {
     commands['y'] = 'Yank (copy) the word key';
   }
   const sections = [
-    new Section('Commands', commands),
     new Section('Dialect Highlighting', {
-      S: 'Sahidic',
-      a: 'Sa: Sahidic with <strong>A</strong>khmimic tendency',
-      f: 'Sf: Sahidic with <strong>F</strong>ayyumic tendency',
-      A: 'Akhmimic',
-      s: 'sA: <strong>s</strong>ubAkhmimic (Lycopolitan)',
-      B: 'Bohairic',
-      F: 'Fayyumic',
-      b: 'Fb: Fayyumic with <strong>B</strong>ohairic tendency',
-      O: 'Old Coptic',
-      N: 'NH: <strong>N</strong>ag Hammadi',
-      k: 'Ak: Old Coptic',
-      M: 'Mesokemic',
-      L: 'Lycopolitan (subAkhmimic)',
-      P: 'Proto-Theban',
-      V: 'South Fayyumic Greek',
-      W: 'Crypto-Mesokemic Greek',
-      U: 'Greek (usage <strong>u</strong>nclear)',
+      S: makeDialectDescription('S', 'Sahidic', 'S', ['Crum', 'KELLIA']),
+      a: makeDialectDescription('a', 'Sahidic with <strong>A</strong>khmimic tendency', 'Sa', ['Crum']),
+      f: makeDialectDescription('f', 'Sahidic with <strong>F</strong>ayyumic tendency', 'Sf', ['Crum']),
+      A: makeDialectDescription('A', 'Akhmimic', 'A', ['Crum', 'KELLIA'], 'https://drive.google.com/file/d/1-8NnctwGRuELh5vUyg8Q6cLvC18QFQ_7/view?usp=sharing'),
+      s: makeDialectDescription('s', 'subAkhmimic', 'sA', ['Crum'], 'https://drive.google.com/file/d/1-DlCHvLq4BW9D-Na9l5tSTMMAqk5RyS7/view?usp=sharing'),
+      B: makeDialectDescription('B', 'Bohairic', 'B', ['Crum', 'KELLIA', 'copticsite']),
+      F: makeDialectDescription('F', 'Fayyumic', 'F', ['Crum', 'KELLIA'], 'https://drive.google.com/file/d/1-7irhAMOrhIUuOZO4L0PS70WN362-8qM/view?usp=sharing'),
+      b: makeDialectDescription('b', 'Fayyumic with <strong>B</strong>ohairic tendency', 'Fb', ['Crum']),
+      O: makeDialectDescription('O', 'Old Coptic', 'O', ['Crum']),
+      N: makeDialectDescription('N', 'Nag Hammadi', 'NH', ['Crum (Marcion)']),
+      k: makeDialectDescription('k', 'Old Coptic', 'Ak', ['KELLIA']),
+      M: makeDialectDescription('M', 'Mesokemic', 'M', ['KELLIA'], 'https://drive.google.com/file/d/1-8oyA_aogjiAL6pt2L7DvqsTgrZHoVD8/view?usp=sharing'),
+      L: makeDialectDescription('L', 'Lycopolitan', 'L', ['KELLIA'], 'https://drive.google.com/file/d/1-DlCHvLq4BW9D-Na9l5tSTMMAqk5RyS7/view?usp=sharing'),
+      P: makeDialectDescription('P', 'Proto-Theban', 'P', ['KELLIA'], 'https://drive.google.com/file/d/1-8mMgSvtM9JMzQAvM9HEOotxYUOBo1Bc/view?usp=sharing'),
+      V: makeDialectDescription('V', 'South Fayyumic Greek', 'V', ['KELLIA']),
+      W: makeDialectDescription('W', 'Crypto-Mesokemic Greek', 'W', ['KELLIA']),
+      U: makeDialectDescription('U', 'Greek (usage <strong>u</strong>nclear)', 'U', ['KELLIA']),
       // TODO: (#279) What is this dialect called?
       // It's from TLA (e.g. https://coptic-dictionary.org/entry.cgi?tla=C2537).
-      K: '',
+      K: makeDialectDescription('K', '', 'K', ['KELLIA']),
     }),
+    new Section('Control', commands),
   ];
   if (xooxle()) {
     sections.push(new Section('Search', {
