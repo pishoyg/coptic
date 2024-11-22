@@ -518,31 +518,48 @@ function makeHelpPanel(): HelpPanel {
 
   const sections: Section[] = [
     new Section('Dialect Highlighting', {
-      S: makeDialectDescription('S', 'Sahidic', 'S', ['Crum', 'KELLIA']),
+      S: makeDialectDescription('S', 'Sahidic', 'S', ['Crum', 'KELLIA'],
+        'https://drive.google.com/file/d/1-VrJkEEY3Ln9zTryhzfAOQITUGKh4nX1/view?usp=sharing',
+      ),
+      // TODO: (#290) Add a Link for Sahidic with Akhimic tendency.
       a: makeDialectDescription('a', 'Sahidic with <strong>A</strong>khmimic tendency', 'Sa', ['Crum']),
+      // TODO: (#290) Add a Link for Sahidic with Fayyumic tendency.
       f: makeDialectDescription('f', 'Sahidic with <strong>F</strong>ayyumic tendency', 'Sf', ['Crum']),
       A: makeDialectDescription('A', 'Akhmimic', 'A', ['Crum', 'KELLIA'],
         'https://drive.google.com/file/d/1-8NnctwGRuELh5vUyg8Q6cLvC18QFQ_7/view?usp=sharing'),
       s: makeDialectDescription('s', 'subAkhmimic', 'sA', ['Crum'],
         'https://drive.google.com/file/d/1-DlCHvLq4BW9D-Na9l5tSTMMAqk5RyS7/view?usp=sharing'),
-      B: makeDialectDescription('B', 'Bohairic', 'B', ['Crum', 'KELLIA', 'copticsite']),
+      B: makeDialectDescription('B', 'Bohairic', 'B', ['Crum', 'KELLIA', 'copticsite'],
+        'https://drive.google.com/file/d/1-PLhTRIuMdQWCQjEiKQA7Z6kI9_EQU1r/view?usp=sharing',
+      ),
       F: makeDialectDescription('F', 'Fayyumic', 'F', ['Crum', 'KELLIA'],
         'https://drive.google.com/file/d/1-7irhAMOrhIUuOZO4L0PS70WN362-8qM/view?usp=sharing'),
+      // TODO: (#290) Add a Link for Fayymic with Bohairic Influence.
       b: makeDialectDescription('b', 'Fayyumic with <strong>B</strong>ohairic tendency', 'Fb', ['Crum']),
-      O: makeDialectDescription('O', 'Old Coptic', 'O', ['Crum']),
-      N: makeDialectDescription('N', 'Nag Hammadi', 'NH', ['Crum (Marcion)']),
-      k: makeDialectDescription('k', 'Old Coptic', 'Ak', ['KELLIA']),
+      O: makeDialectDescription('O', 'Old Coptic', 'O', ['Crum'],
+        'https://drive.google.com/file/d/1-JShCo-nvO11X2QrWVip1n9UjLmadRyN/view?usp=sharing',
+      ),
+      N: makeDialectDescription('N', 'Nag Hammadi', 'NH', ['Crum (Marcion)'],
+        'https://drive.google.com/file/d/1-XYu8BUiLgLKnlhy5rTC_JLmrDW67J5T/view?usp=sharing',
+      ),
+      k: makeDialectDescription('k', 'Old Coptic', 'Ak', ['KELLIA'],
+        'https://drive.google.com/file/d/1-JShCo-nvO11X2QrWVip1n9UjLmadRyN/view?usp=sharing',
+      ),
       M: makeDialectDescription('M', 'Mesokemic', 'M', ['KELLIA'],
         'https://drive.google.com/file/d/1-8oyA_aogjiAL6pt2L7DvqsTgrZHoVD8/view?usp=sharing'),
       L: makeDialectDescription('L', 'Lycopolitan', 'L', ['KELLIA'],
         'https://drive.google.com/file/d/1-DlCHvLq4BW9D-Na9l5tSTMMAqk5RyS7/view?usp=sharing'),
       P: makeDialectDescription('P', 'Proto-Theban', 'P', ['KELLIA'],
         'https://drive.google.com/file/d/1-8mMgSvtM9JMzQAvM9HEOotxYUOBo1Bc/view?usp=sharing'),
+      // TODO: (#290) Add a Link for South Fayyumic Greek.
       V: makeDialectDescription('V', 'South Fayyumic Greek', 'V', ['KELLIA']),
+      // TODO: (#290) Add a Link for Crypto-Mesokemic Greek.
       W: makeDialectDescription('W', 'Crypto-Mesokemic Greek', 'W', ['KELLIA']),
+      // TODO: (#290) Add a Link for Greek (usage unclear).
       U: makeDialectDescription('U', 'Greek (usage <strong>u</strong>nclear)', 'U', ['KELLIA']),
       // TODO: (#279) What is this dialect called?
       // It's from TLA (e.g. https://coptic-dictionary.org/entry.cgi?tla=C2537).
+      // TODO: (#290) Add a Link for ...!
       K: makeDialectDescription('K', '', 'K', ['KELLIA']),
     }),
     new Section('Control', commands),
