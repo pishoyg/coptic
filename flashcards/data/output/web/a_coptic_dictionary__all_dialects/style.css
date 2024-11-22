@@ -244,6 +244,20 @@ table {
   color: #7f8c8d;
 }
 
+.dialect-dictionaries {
+  font-size: small;
+  font-style: italic;
+  color: #7f8c8d;
+}
+
+.dialect-code {
+  width: 10%;
+}
+
+.dialect-name {
+  width: 60%;
+}
+
 /********** Xooxle **********/
 
 /* stylelint-disable selector-id-pattern */
