@@ -186,6 +186,7 @@ class Highlighter {
 
     this.addOrReplaceRule(rule_index, `${query} { ${style} }`);
   }
+
 }
 
 function window_open(url: string | null, external = true): void {
@@ -212,7 +213,7 @@ function moveElement(
   Object.entries(attrs).forEach(([key, value]: [string, string]): void => {
     copy.setAttribute(key, value);
   });
-  el.parentNode?.replaceChild(copy, el);
+  el.parentNode!.replaceChild(copy, el);
 }
 
 function makeLink(el: HTMLElement, target: string): void {
@@ -252,7 +253,7 @@ function toggleDev(): void {
 
 // Handle 'reset' class.
 function reset(
-  dialectCheckboxes: NodeListOf<HTMLInputElement>,
+  dialectCheckboxes: HTMLInputElement[],
   highlighter: Highlighter,
 ): void {
   dialectCheckboxes.forEach((box) => { box.checked = false; });
@@ -302,7 +303,7 @@ function getLinkHrefByRel(rel: string): string | null {
 }
 
 function scroll(id: string): void {
-  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  document.getElementById(id)!.scrollIntoView({ behavior: 'smooth' });
 }
 
 function height(elem: HTMLElement): number {
@@ -337,13 +338,11 @@ function scrollToNextElement(className: string, target: 'next' | 'prev' | 'cur')
   elem.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
+// Section represents a group of related shortcuts.
 class Section {
-  private readonly title: string;
-  private readonly commands: Record<string, string>;
-  constructor(title: string, commands: Record<string, string>) {
-    this.title = title;
-    this.commands = commands;
-  }
+  constructor(
+    private readonly title: string,
+    private readonly shortcuts: Record<string, Shortcut[]>) { }
 
   createSection(): HTMLDivElement {
     const div = document.createElement('div');
@@ -359,36 +358,48 @@ class Section {
     table.style.borderCollapse = 'collapse'; // Optional: to collapse the borders
 
     // Iterate over the entries in the record
-    Object.entries(this.commands).forEach(([key, value]) => {
-      // Create a row for each entry
-      const row = document.createElement('tr');
-
-      // Create a cell for the key (left column)
-      const keyCell = document.createElement('td');
-      const code = document.createElement('code');
-      code.textContent = key;
-      keyCell.appendChild(code);
-      keyCell.style.width = '10%'; // Set the width of the left column to 10%
-      keyCell.style.border = '1px solid black'; // Optional: Add a border for visibility
-      keyCell.style.padding = '8px'; // Optional: Add padding
-
-      // Create a cell for the value (right column)
-      const valueCell = document.createElement('td');
-      valueCell.innerHTML = highlightFirstOccurrence(key, value);
-      valueCell.style.width = '90%'; // Set the width of the right column to 90%
-      valueCell.style.border = '1px solid black'; // Optional: Add a border for visibility
-      valueCell.style.padding = '8px'; // Optional: Add padding
-
-      // Append cells to the row
-      row.appendChild(keyCell);
-      row.appendChild(valueCell);
-
-      // Append the row to the table
-      table.appendChild(row);
+    Object.entries(this.shortcuts).forEach(([key, shortcuts]) => {
+      shortcuts
+        .filter((s) => s.visible())
+        .forEach((s) => { table.appendChild(s.row(key)); });
     });
 
     div.appendChild(table);
     return div;
+  }
+
+  visible(): boolean {
+    return Object.values(this.shortcuts).some((shortcuts: Shortcut[]) => {
+      return shortcuts.some((s: Shortcut) => s.visible());
+    });
+  }
+
+  executable(): boolean {
+    return Object.values(this.shortcuts).some((shortcuts: Shortcut[]) => {
+      return shortcuts.some((s: Shortcut) => s.executable());
+    });
+  }
+
+  consume(event: KeyboardEvent): boolean {
+    if (!this.executable()) {
+      return false;
+    }
+    const shortcuts = this.shortcuts[event.key];
+    if (!shortcuts) {
+      return false;
+    }
+    return shortcuts.some((s) => s.consume(event));
+  }
+
+  canConsume(key: string): Shortcut[] {
+    if (!this.executable()) {
+      return [];
+    }
+    return this.shortcuts[key]?.filter((s) => s.executable()) ?? [];
+  }
+
+  shortcutsRecord(): Record<string, Shortcut[]> {
+    return this.shortcuts;
   }
 
 };
@@ -407,10 +418,12 @@ function highlightFirstOccurrence(char: string, str: string): string {
 }
 
 class HelpPanel {
+  private readonly sections: Section[];
   private readonly overlay: HTMLDivElement;
   private readonly panel: HTMLDivElement;
 
   constructor(sections: Section[]) {
+    this.sections = sections.filter((s) => s.executable());
     // Create overlay background.
     const overlay = document.createElement('div');
     overlay.className = 'overlay-background';
@@ -432,7 +445,9 @@ class HelpPanel {
     closeButton.onclick = () => { this.togglePanel(); };
     panel.appendChild(closeButton);
 
-    sections.forEach((s) => { panel.appendChild(s.createSection()); });
+    this.sections
+      .filter((s) => s.visible())
+      .forEach((s) => { panel.appendChild(s.createSection()); });
 
     document.body.appendChild(panel);
 
@@ -458,6 +473,12 @@ class HelpPanel {
 
     this.panel = panel;
     this.overlay = overlay;
+
+    this.validate();
+  }
+
+  consume(event: KeyboardEvent): boolean {
+    return this.sections.some((s) => s.consume(event));
   }
 
   togglePanel(visible?: boolean) {
@@ -471,14 +492,116 @@ class HelpPanel {
       this.togglePanel(false);
     }
   }
+
+  validate() {
+    // Validate that no key can trigger two shortcuts!
+    const keys = this.sections
+      .map((s) => s.shortcutsRecord())
+      .map((record) => Object.keys(record)).flat();
+    keys.forEach((key) => {
+      const canConsume = this.sections.map((s) => s.canConsume(key)).flat();
+      if (canConsume.length <= 1) {
+        return;
+      }
+      // Alerting is a good option if developers always test locally, otherwise
+      // this might make it to production!
+      alert(`${key} is consumable by multiple shortcuts: ${canConsume.map((s) => s.textDescription()).join(', ')}`);
+    });
+  }
+
 }
 
-function makeDialectDescription(
+enum Where {
+  XOOXLE,
+  NOTE,
+  XOOXLE_AND_NOTE,
+}
+
+class Shortcut {
+  constructor(
+    private readonly description: string,
+    private readonly availability: Where,
+    private readonly action: (event: KeyboardEvent) => void,
+    private readonly show = true,
+  ) { }
+
+  executable(): boolean {
+    switch (this.availability) {
+    case Where.XOOXLE_AND_NOTE:
+      return true;
+    case Where.XOOXLE:
+      return xooxle();
+    case Where.NOTE:
+      return !xooxle();
+    }
+  }
+
+  visible(): boolean {
+    return this.executable() && this.show;
+  }
+
+  consume(event: KeyboardEvent): boolean {
+    if (!this.executable()) {
+      return false;
+    }
+    // Actions throw an exception if they cannot consume the event.
+    try {
+      this.action(event);
+    } catch {
+      return false;
+    }
+    return true;
+  }
+
+  row(key: string): HTMLTableRowElement {
+    // TODO: Move the styling to CSS.
+    const row = document.createElement('tr');
+    const keyCell = document.createElement('td');
+    const code = document.createElement('code');
+    code.textContent = key;
+    keyCell.appendChild(code);
+    keyCell.style.width = '10%';
+    keyCell.style.border = '1px solid black';
+    keyCell.style.padding = '8px';
+
+    // Create a cell for the value (right column)
+    const valueCell = document.createElement('td');
+    valueCell.innerHTML = highlightFirstOccurrence(key, this.description);
+    valueCell.style.width = '90%';
+    valueCell.style.border = '1px solid black';
+    valueCell.style.padding = '8px';
+
+    // Append cells to the row
+    row.appendChild(keyCell);
+    row.appendChild(valueCell);
+
+    return row;
+  }
+
+  textDescription() {
+    return this.description.replace(/<[^>]*>/g, '');
+  }
+}
+
+
+const highlighter = new Highlighter();
+const dialectCheckboxes = Array.from(
+  document.querySelectorAll<HTMLInputElement>('.dialect-checkbox'));
+// We disable the help panel on Anki for the following reasons:
+// - There is no keyboard on mobile.
+// - Many of the shortcuts simply don't work, for some reason.
+// - Anki on macOS (and possibly on other platforms) has its own shortcuts,
+//   which conflict with ours!
+// - Elements created by the panel logic (such as the `help` footer) were
+//   found to be duplicated on some Anki platforms!
+const panel: HelpPanel | null = anki() ? null : makeHelpPanel();
+
+function makeDialectShortcut(
   key: string,
   name: string,
   code: string,
   dictionaries: string[],
-  link?: string): string {
+  link?: string): Shortcut {
 
   code = highlightFirstOccurrence(key, code);
   name = highlightFirstOccurrence(key, name);
@@ -486,148 +609,214 @@ function makeDialectDescription(
     name = `<a href="${link}" target="_blank" rel="noopener,noreferrer">${name}</a>`;
   }
 
-  return `
+  const description = `
 <table>
-  <tr>
-    <td class="dialect-code">(${code})</td>
-    <td class="dialect-name">${name}</td>
-    <td class="dialect-dictionaries">(${dictionaries.join(', ')})</td>
-  </tr>
+<tr>
+  <td class="dialect-code">(${code})</td>
+  <td class="dialect-name">${name}</td>
+  ${xooxle() ? `<td class="dialect-dictionaries">(${dictionaries.join(', ')})</td>` : ''}
+</tr>
 </table>`;
+
+  // All dialects are available in Xooxle. Only Crum dialects area available on
+  // notes.
+  const availability = dictionaries.includes('Crum') ? Where.XOOXLE_AND_NOTE : Where.XOOXLE;
+  return new Shortcut(description, availability, (e: KeyboardEvent) => {
+    const dialectCode = DIALECT_SINGLE_CHAR[e.key] ?? e.key;
+    if (xooxle()) {
+      click(`checkbox-${dialectCode}`);
+    } else {
+      toggleDialect(dialectCode);
+      highlighter.updateDialects();
+    }
+  });
 }
 
 function makeHelpPanel(): HelpPanel {
-  // NOTE: This constructs the help panel. It's important for the content to
-  // remain consistent with the commands that the page responds to.
-  const commands: Record<string, string> = {
-    r: 'Reset highlighting',
-    d: 'Developer mode',
-    e: `Email <a class="contact" href="${EMAIL_LINK}">${EMAIL}</a>`,
-    h: 'Open homepage',
-    X: 'Open the dictionary search page',
-    '?': 'Toggle help panel',
+
+  const dialectHighlighting = {
+    S: [makeDialectShortcut('S', 'Sahidic', 'S', ['Crum', 'KELLIA'],
+      'https://drive.google.com/file/d/1-VrJkEEY3Ln9zTryhzfAOQITUGKh4nX1/view?usp=sharing',
+    )],
+    // TODO: (#290) Add a Link for Sahidic with Akhimic tendency.
+    a: [makeDialectShortcut('a', 'Sahidic with <strong>A</strong>khmimic tendency', 'Sa', ['Crum'])],
+    // TODO: (#290) Add a Link for Sahidic with Fayyumic tendency.
+    f: [makeDialectShortcut('f', 'Sahidic with <strong>F</strong>ayyumic tendency', 'Sf', ['Crum'])],
+    A: [makeDialectShortcut('A', 'Akhmimic', 'A', ['Crum', 'KELLIA'],
+      'https://drive.google.com/file/d/1-8NnctwGRuELh5vUyg8Q6cLvC18QFQ_7/view?usp=sharing')],
+    s: [makeDialectShortcut('s', 'subAkhmimic', 'sA', ['Crum'],
+      'https://drive.google.com/file/d/1-DlCHvLq4BW9D-Na9l5tSTMMAqk5RyS7/view?usp=sharing')],
+    B: [makeDialectShortcut('B', 'Bohairic', 'B', ['Crum', 'KELLIA', 'copticsite'],
+      'https://drive.google.com/file/d/1-PLhTRIuMdQWCQjEiKQA7Z6kI9_EQU1r/view?usp=sharing',
+    )],
+    F: [makeDialectShortcut('F', 'Fayyumic', 'F', ['Crum', 'KELLIA'],
+      'https://drive.google.com/file/d/1-7irhAMOrhIUuOZO4L0PS70WN362-8qM/view?usp=sharing')],
+    // TODO: (#290) Add a Link for Fayymic with Bohairic Influence.
+    b: [makeDialectShortcut('b', 'Fayyumic with <strong>B</strong>ohairic tendency', 'Fb', ['Crum'])],
+    O: [makeDialectShortcut('O', 'Old Coptic', 'O', ['Crum'],
+      'https://drive.google.com/file/d/1-JShCo-nvO11X2QrWVip1n9UjLmadRyN/view?usp=sharing',
+    )],
+    N: [makeDialectShortcut('N', 'Nag Hammadi', 'NH', ['Crum (Marcion)'],
+      'https://drive.google.com/file/d/1-XYu8BUiLgLKnlhy5rTC_JLmrDW67J5T/view?usp=sharing',
+    )],
+    k: [makeDialectShortcut('k', 'Old Coptic', 'Ak', ['KELLIA'],
+      'https://drive.google.com/file/d/1-JShCo-nvO11X2QrWVip1n9UjLmadRyN/view?usp=sharing',
+    )],
+    M: [makeDialectShortcut('M', 'Mesokemic', 'M', ['KELLIA'],
+      'https://drive.google.com/file/d/1-8oyA_aogjiAL6pt2L7DvqsTgrZHoVD8/view?usp=sharing')],
+    L: [makeDialectShortcut('L', 'Lycopolitan', 'L', ['KELLIA'],
+      'https://drive.google.com/file/d/1-DlCHvLq4BW9D-Na9l5tSTMMAqk5RyS7/view?usp=sharing')],
+    P: [makeDialectShortcut('P', 'Proto-Theban', 'P', ['KELLIA'],
+      'https://drive.google.com/file/d/1-8mMgSvtM9JMzQAvM9HEOotxYUOBo1Bc/view?usp=sharing')],
+    // TODO: (#290) Add a Link for South Fayyumic Greek.
+    V: [makeDialectShortcut('V', 'South Fayyumic Greek', 'V', ['KELLIA'])],
+    // TODO: (#290) Add a Link for Crypto-Mesokemic Greek.
+    W: [makeDialectShortcut('W', 'Crypto-Mesokemic Greek', 'W', ['KELLIA'])],
+    // TODO: (#290) Add a Link for Greek (usage unclear).
+    U: [makeDialectShortcut('U', 'Greek (usage <strong>u</strong>nclear)', 'U', ['KELLIA'])],
+    // TODO: (#279) What is this dialect called?
+    // It's from TLA (e.g. https://coptic-dictionary.org/entry.cgi?tla=C2537).
+    // TODO: (#290) Add a Link for ...!
+    K: [makeDialectShortcut('K', '', 'K', ['KELLIA'])],
   };
 
-  if (xooxle()) {
-    commands['o'] = 'Open the current result';
-  } else {
-    commands['n'] = 'Go to next word';
-    commands['p'] = 'Go to previous word';
-    commands['y'] = 'Yank (copy) the word key';
-  }
+  const control = {
+    r: [new Shortcut('Reset highlighting', Where.XOOXLE_AND_NOTE, () => {
+      reset(dialectCheckboxes, highlighter);
+    })],
+    d: [new Shortcut('Developer mode', Where.XOOXLE_AND_NOTE, () => {
+      toggleDev(); highlighter.updateDev();
+    })],
+    e: [new Shortcut(`Email <a class="contact" href="${EMAIL_LINK}">${EMAIL}</a>`, Where.XOOXLE_AND_NOTE, () => {
+      window_open(EMAIL_LINK);
+    })],
+    h: [new Shortcut('Open homepage', Where.XOOXLE_AND_NOTE, () => {
+      window_open(HOME);
+    })],
+    X: [new Shortcut('Open the dictionary search page', Where.XOOXLE_AND_NOTE, () => {
+      window_open(SEARCH);
+    })],
+    '?': [new Shortcut('Toggle help panel', Where.XOOXLE_AND_NOTE, () => {
+      panel!.togglePanel();
+    })],
+    'Escape': [new Shortcut('Toggle help panel', Where.XOOXLE_AND_NOTE, () => {
+      panel!.togglePanel(false);
+    }, false)],
+    o: [new Shortcut('Open the current result', Where.XOOXLE, () => {
+      findNextElement('view', 'cur')?.querySelector('a')?.click();
+    })],
+    n: [new Shortcut('Go to next word', Where.NOTE, () => {
+      window_open(getLinkHrefByRel('next'), false);
+    })],
+    p: [new Shortcut('Go to previous word', Where.NOTE, () => {
+      window_open(getLinkHrefByRel('prev'), false);
+    })],
+    y: [new Shortcut('Yank (copy) the word key', Where.NOTE, () => {
+      void navigator.clipboard.writeText(window.location.pathname.split('/').pop()!.replace('.html', ''));
+    })],
+  };
+
+
+  const search = {
+    w: [new Shortcut('Toggle full word search', Where.XOOXLE, () => {
+      click('fullWordCheckbox');
+    })],
+    x: [new Shortcut('Toggle regex search', Where.XOOXLE, () => {
+      click('regexCheckbox');
+    })],
+    '/': [new Shortcut('Focus search box', Where.XOOXLE, () => {
+      focus('searchBox');
+    })],
+    ';': [new Shortcut('Focus the Crum Google search box', Where.XOOXLE, () => {
+      document.querySelector<HTMLElement>('#google input')!.focus();
+    })],
+  };
+
+  const scrollTo = {
+    n: [new Shortcut('Next search result', Where.XOOXLE, () => {
+      scrollToNextElement('view', 'next');
+    })],
+    p: [new Shortcut('Previous search result', Where.XOOXLE, () => {
+      scrollToNextElement('view', 'prev');
+    })],
+    C: [new Shortcut('Crum', Where.XOOXLE, () => {
+      scroll('crum-title');
+    }),
+    new Shortcut('Crum pages', Where.NOTE, () => {
+      scroll('crum');
+    })],
+    Z: [new Shortcut('<a href="https://kellia.uni-goettingen.de/" target="_blank" rel="noopener,noreferrer">KELLIA</a>', Where.XOOXLE, () => {
+      scroll('kellia-title');
+    })],
+    T: [new Shortcut('<a href="http://copticsite.com/" target="_blank" rel="noopener,noreferrer">copticsi<strong>t</strong>e</a>', Where.XOOXLE, () => {
+      scroll('copticsite-title');
+    })],
+    D: [new Shortcut('Dawoud pages', Where.NOTE, () => {
+      scroll('dawoud');
+    })],
+    l: [new Shortcut('Related words', Where.NOTE, () => {
+      scroll('sisters');
+    })],
+    m: [new Shortcut('Meaning', Where.NOTE, () => {
+      scroll('meaning');
+    })],
+    t: [new Shortcut('Type', Where.NOTE, () => {
+      scroll('root-type');
+    })],
+    i: [new Shortcut('Images', Where.NOTE, () => {
+      scroll('images');
+    })],
+    q: [new Shortcut('Words', Where.NOTE, () => {
+      scroll('pretty');
+    })],
+    Q: [new Shortcut('Words', Where.NOTE, () => {
+      scroll('marcion');
+    })],
+    v: [new Shortcut('Derivations table', Where.NOTE, () => {
+      scroll('derivations');
+    })],
+    u: [new Shortcut('Header (up)', Where.NOTE, () => {
+      scroll('header');
+    })],
+    c: [new Shortcut('Dictionary page list', Where.NOTE, () => {
+      scroll('dictionary');
+    })],
+  };
+
+  const collapse = {
+    c: [new Shortcut('Crum', Where.XOOXLE, () => {
+      click('crum-title');
+    })],
+    z: [new Shortcut('<a href="https://kellia.uni-goettingen.de/" target="_blank" rel="noopener,noreferrer">KELLIA</a>', Where.XOOXLE, () => {
+      click('kellia-title');
+    })],
+    t: [new Shortcut('<a href="http://copticsite.com/" target="_blank" rel="noopener,noreferrer">copticsi<strong>t</strong>e</a>', Where.XOOXLE, () => {
+      click('copticsite-title');
+    })],
+  };
+
 
   const sections: Section[] = [
-    new Section('Dialect Highlighting', {
-      S: makeDialectDescription('S', 'Sahidic', 'S', ['Crum', 'KELLIA'],
-        'https://drive.google.com/file/d/1-VrJkEEY3Ln9zTryhzfAOQITUGKh4nX1/view?usp=sharing',
-      ),
-      // TODO: (#290) Add a Link for Sahidic with Akhimic tendency.
-      a: makeDialectDescription('a', 'Sahidic with <strong>A</strong>khmimic tendency', 'Sa', ['Crum']),
-      // TODO: (#290) Add a Link for Sahidic with Fayyumic tendency.
-      f: makeDialectDescription('f', 'Sahidic with <strong>F</strong>ayyumic tendency', 'Sf', ['Crum']),
-      A: makeDialectDescription('A', 'Akhmimic', 'A', ['Crum', 'KELLIA'],
-        'https://drive.google.com/file/d/1-8NnctwGRuELh5vUyg8Q6cLvC18QFQ_7/view?usp=sharing'),
-      s: makeDialectDescription('s', 'subAkhmimic', 'sA', ['Crum'],
-        'https://drive.google.com/file/d/1-DlCHvLq4BW9D-Na9l5tSTMMAqk5RyS7/view?usp=sharing'),
-      B: makeDialectDescription('B', 'Bohairic', 'B', ['Crum', 'KELLIA', 'copticsite'],
-        'https://drive.google.com/file/d/1-PLhTRIuMdQWCQjEiKQA7Z6kI9_EQU1r/view?usp=sharing',
-      ),
-      F: makeDialectDescription('F', 'Fayyumic', 'F', ['Crum', 'KELLIA'],
-        'https://drive.google.com/file/d/1-7irhAMOrhIUuOZO4L0PS70WN362-8qM/view?usp=sharing'),
-      // TODO: (#290) Add a Link for Fayymic with Bohairic Influence.
-      b: makeDialectDescription('b', 'Fayyumic with <strong>B</strong>ohairic tendency', 'Fb', ['Crum']),
-      O: makeDialectDescription('O', 'Old Coptic', 'O', ['Crum'],
-        'https://drive.google.com/file/d/1-JShCo-nvO11X2QrWVip1n9UjLmadRyN/view?usp=sharing',
-      ),
-      N: makeDialectDescription('N', 'Nag Hammadi', 'NH', ['Crum (Marcion)'],
-        'https://drive.google.com/file/d/1-XYu8BUiLgLKnlhy5rTC_JLmrDW67J5T/view?usp=sharing',
-      ),
-      k: makeDialectDescription('k', 'Old Coptic', 'Ak', ['KELLIA'],
-        'https://drive.google.com/file/d/1-JShCo-nvO11X2QrWVip1n9UjLmadRyN/view?usp=sharing',
-      ),
-      M: makeDialectDescription('M', 'Mesokemic', 'M', ['KELLIA'],
-        'https://drive.google.com/file/d/1-8oyA_aogjiAL6pt2L7DvqsTgrZHoVD8/view?usp=sharing'),
-      L: makeDialectDescription('L', 'Lycopolitan', 'L', ['KELLIA'],
-        'https://drive.google.com/file/d/1-DlCHvLq4BW9D-Na9l5tSTMMAqk5RyS7/view?usp=sharing'),
-      P: makeDialectDescription('P', 'Proto-Theban', 'P', ['KELLIA'],
-        'https://drive.google.com/file/d/1-8mMgSvtM9JMzQAvM9HEOotxYUOBo1Bc/view?usp=sharing'),
-      // TODO: (#290) Add a Link for South Fayyumic Greek.
-      V: makeDialectDescription('V', 'South Fayyumic Greek', 'V', ['KELLIA']),
-      // TODO: (#290) Add a Link for Crypto-Mesokemic Greek.
-      W: makeDialectDescription('W', 'Crypto-Mesokemic Greek', 'W', ['KELLIA']),
-      // TODO: (#290) Add a Link for Greek (usage unclear).
-      U: makeDialectDescription('U', 'Greek (usage <strong>u</strong>nclear)', 'U', ['KELLIA']),
-      // TODO: (#279) What is this dialect called?
-      // It's from TLA (e.g. https://coptic-dictionary.org/entry.cgi?tla=C2537).
-      // TODO: (#290) Add a Link for ...!
-      K: makeDialectDescription('K', '', 'K', ['KELLIA']),
-    }),
-    new Section('Control', commands),
+    new Section('Dialect Highlighting', dialectHighlighting),
+    new Section('Control', control),
+    new Section('Search', search),
+    new Section('Scroll To', scrollTo),
+    new Section('Collapse', collapse),
   ];
-
-  if (xooxle()) {
-    sections.push(new Section('Search', {
-      w: 'Toggle full word search',
-      x: 'Toggle regex search',
-      '/': 'Focus search box',
-      ';': 'Focus the Crum Google search box',
-    }));
-
-    sections.push(new Section('Scroll To', {
-      n: 'Next search result',
-      p: 'Previous search result',
-      C: 'Crum',
-      Z: '<a href="https://kellia.uni-goettingen.de/" target="_blank" rel="noopener,noreferrer">KELLIA</a>',
-      T: '<a href="http://copticsite.com/" target="_blank" rel="noopener,noreferrer">copticsi<strong>t</strong>e</a>',
-    }));
-
-    sections.push(new Section('Collapse', {
-      c: 'Crum',
-      z: '<a href="https://kellia.uni-goettingen.de/" target="_blank" rel="noopener,noreferrer">KELLIA</a>',
-      t: '<a href="http://copticsite.com/" target="_blank" rel="noopener,noreferrer">copticsi<strong>t</strong>e</a>',
-    }));
-
-  } else {
-    sections.push(new Section('Scroll To', {
-      C: 'Crum pages',
-      D: 'Dawoud pages',
-      l: 'Related words',
-      m: 'Meaning',
-      t: 'Type',
-      i: 'Images',
-      y: 'Words',
-      Y: 'Words',
-      v: 'Derivations table',
-      u: 'Header (up)',
-      c: 'Dictionary page list',
-    }));
-  }
 
   return new HelpPanel(sections);
 }
 
 
 function click(id: string): void {
-  document.getElementById(id)?.click();
+  document.getElementById(id)!.click();
 }
 
 function focus(id: string): void {
-  document.getElementById(id)?.focus();
+  document.getElementById(id)!.focus();
 }
 
 function main() {
-
-  const highlighter = new Highlighter();
-  // We disable the help panel on Anki for the following reasons:
-  // - There is no keyboard on mobile.
-  // - Many of the shortcuts simply don't work, for some reason.
-  // - Anki on macOS (and possibly on other platforms) has its own shortcuts,
-  //   which conflict with ours!
-  // - Elements created by the panel logic (such as the `help` footer) were
-  //   found to be duplicated on some Anki platforms!
-  const panel: HelpPanel | null = anki() ? null : makeHelpPanel();
-  const dialectCheckboxes = document.querySelectorAll<HTMLInputElement>(
-    '.dialect-checkbox');
 
   // Handle 'crum-page' class.
   Array.prototype.forEach.call(
@@ -832,7 +1021,7 @@ function main() {
   dialectCheckboxes.forEach(checkbox => {
     checkbox.addEventListener('click', () => {
       localStorage.setItem('d',
-        Array.from(dialectCheckboxes)
+        dialectCheckboxes
           .filter((box) => box.checked)
           .map((box) => box.name).join(','));
       highlighter.updateDialects();
@@ -851,9 +1040,6 @@ function main() {
       collapse.click();
     });
 
-  // NOTE: This is where we define all our command shortcuts. It's important for
-  // the content to remain in sync with the help panel.
-  // TODO: (#280) Combine the help panel and `keydown` listener code.
   // NOTE: We intentionally use the `keydown` event rather than the `keyup`
   // event, so that a long press would trigger a shortcut command repeatedly.
   // This is helpful for some of the commands.
@@ -863,161 +1049,13 @@ function main() {
       // anything.
       return;
     }
+
     if (anki()) {
       // The help panel and keyboard shortcuts are disabled on Anki!
       return;
     }
 
-    let consumed = true;
-    switch (e.key) {
-    // Commands:
-    case 'r':
-      reset(dialectCheckboxes, highlighter);
-      break;
-    case 'd':
-      toggleDev();
-      highlighter.updateDev();
-      break;
-    case 'e':
-      window_open(EMAIL_LINK);
-      break;
-    case 'h':
-      window_open(HOME);
-      break;
-    case 'X':
-      window_open(SEARCH);
-      break;
-    case 'n':
-      if (xooxle()) {
-        scrollToNextElement('view', 'next');
-      } else {
-        window_open(getLinkHrefByRel('next'), false);
-      }
-      break;
-    case 'p':
-      if (xooxle()) {
-        scrollToNextElement('view', 'prev');
-      } else {
-        window_open(getLinkHrefByRel('prev'), false);
-      }
-      break;
-    case 'y':
-      if (!xooxle()) {
-        void navigator.clipboard.writeText(
-            window.location.pathname.split('/').pop()!.replace('.html', ''));
-      }
-      break;
-    case 'o':
-      if (xooxle()) {
-        findNextElement('view', 'cur')?.querySelector('a')?.click();
-      }
-      break;
-    case '?':
-      panel?.togglePanel();
-      break;
-    case 'Escape':
-      panel?.togglePanel(false);
-      break;
-
-    case '/':
-      focus('searchBox');
-      break;
-    case ';':
-      document.querySelector<HTMLElement>('#google input')!.focus();
-      break;
-    case 'w':
-      click('fullWordCheckbox');
-      break;
-    case 'x':
-      click('regexCheckbox');
-      break;
-
-    case 'B':
-    case 'S':
-    case 'A':
-    case 'F':
-    case 'O':
-    case 'N':
-    case 'a':
-    case 'f':
-    case 's':
-    case 'b':
-    case 'k':
-    case 'M':
-    case 'L':
-    case 'P':
-    case 'V':
-    case 'W':
-    case 'U':
-    case 'K':
-      if (xooxle()) {
-        click(`checkbox-${DIALECT_SINGLE_CHAR[e.key] ?? e.key}`);
-      } else {
-        toggleDialect(DIALECT_SINGLE_CHAR[e.key] ?? e.key);
-        highlighter.updateDialects();
-      }
-      break;
-
-    case 'C':
-      if (xooxle()) {
-        scroll('crum-title');
-      } else {
-        scroll('crum');
-      }
-      break;
-    case 'Z':
-      scroll('kellia-title');
-      break;
-    case 'T':
-      scroll('copticsite-title');
-      break;
-
-    case 'c':
-      if (xooxle()) {
-        click('crum-title');
-      } else {
-        scroll('dictionary');
-      }
-      break;
-    case 'z':
-      click('kellia-title');
-      break;
-    case 'l':
-      scroll('sisters');
-      break;
-    case 't':
-      if (xooxle()) {
-        click('copticsite-title');
-      } else {
-        scroll('root-type');
-      }
-      break;
-    case 'D':
-      scroll('dawoud');
-      break;
-    case 'm':
-      scroll('meaning');
-      break;
-    case 'i':
-      scroll('images');
-      break;
-    case 'Q':
-      scroll('marcion');
-      break;
-    case 'q':
-      scroll('pretty');
-      break;
-    case 'v':
-      scroll('derivations');
-      break;
-    case 'u':
-      scroll('header');
-      break;
-    default:
-      consumed = false;
-    }
-
-    if (consumed) {
+    if (panel?.consume(e)) {
       e.preventDefault();
       e.stopPropagation();
     }
