@@ -670,9 +670,12 @@ window.addEventListener('pageshow', (): void => {
   searchBox.focus();
 });
 
-// Show the "use-chrome" section randomly.
 function maybeRecommendChrome() {
-  if (Math.random() >= 0.25) {
+  if (navigator.userAgent.toLowerCase().includes('chrome')) {
+    // We are on Chrome already!
+    return;
+  }
+  if (Math.random() >= 0.5) {
     return;
   }
   const elem = document.getElementById('use-chrome');
