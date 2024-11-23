@@ -1,17 +1,29 @@
 'use strict';
+
+// NOTE: While this file is used for both Crum and Xooxle, make sure that only
+// the Crum-specific Xooxle content lives here, and that any generic Xooxle
+// logic (applicable for other instances of Xooxle) live in the shared Xooxle
+// files.
+
 // TODO: (#202) Reduce the dependency on `innerHTML`. Use attributes when
 // possible. NOTE: The associated issue is closed. Judge whether it should be
 // reopened, or if we should create a new issue, or just delete this TODO.
 
-// NOTE: This file is used in both Crum's Xooxle search page, as well as the
-// pages belonging to individual notes. We use the `XOOXLE` global variable to
-// distinguish the two. In the Xooxle page, `XOOXLE` is defined and set to
-// `true`.
+const dialectCheckboxes = Array.from(
+  document.querySelectorAll<HTMLInputElement>('.dialect-checkbox'));
+
+// XOOXLE (which should be defined externally) is used to distinguish whether we
+// are running on Xooxle or not.
 declare const XOOXLE: boolean;
 function xooxle(): boolean {
   return typeof XOOXLE !== 'undefined' && XOOXLE;
 }
+// Since we (currently) only run on Crum notes or Xooxle, the fact that we're
+// not running on Xooxle implies that we're running on a Crum note.
+function note(): boolean { return !xooxle(); }
 
+// ANKI (which should be defined externally) is used to distinguish whether we
+// are running on Anki or not.
 declare const ANKI: boolean;
 function anki(): boolean {
   return typeof ANKI !== 'undefined' && ANKI;
@@ -186,8 +198,9 @@ class Highlighter {
 
     this.addOrReplaceRule(rule_index, `${query} { ${style} }`);
   }
-
 }
+// TODO: This is a bad place to define a global variable.
+const highlighter = new Highlighter();
 
 function window_open(url: string | null, external = true): void {
   if (!url) {
@@ -453,8 +466,13 @@ class HelpPanel {
 
     // Create help button, if it doesn't already exist.
     const help: HTMLElement = document.getElementById('help') ?? ((): HTMLElement => {
-      const footer = document.getElementsByTagName('footer')[0]
-        ?? document.createElement('footer');
+      const footer: HTMLElement = document.getElementsByTagName('footer')[0]
+        ?? (() => {
+          const footer = document.createElement('footer');
+          footer.id = 'footer';
+          footer.classList.add('footer');
+          return footer;
+        })();
       const help = document.createElement('span');
       help.classList.add('link');
       help.innerHTML = '<center>help</center>';
@@ -532,7 +550,7 @@ class Shortcut {
     case Where.XOOXLE:
       return xooxle();
     case Where.NOTE:
-      return !xooxle();
+      return note();
     }
   }
 
@@ -583,19 +601,6 @@ class Shortcut {
   }
 }
 
-
-const highlighter = new Highlighter();
-const dialectCheckboxes = Array.from(
-  document.querySelectorAll<HTMLInputElement>('.dialect-checkbox'));
-// We disable the help panel on Anki for the following reasons:
-// - There is no keyboard on mobile.
-// - Many of the shortcuts simply don't work, for some reason.
-// - Anki on macOS (and possibly on other platforms) has its own shortcuts,
-//   which conflict with ours!
-// - Elements created by the panel logic (such as the `help` footer) were
-//   found to be duplicated on some Anki platforms!
-const panel: HelpPanel | null = anki() ? null : makeHelpPanel();
-
 function makeDialectShortcut(
   key: string,
   name: string,
@@ -631,6 +636,15 @@ function makeDialectShortcut(
     }
   });
 }
+
+// We disable the help panel on Anki for the following reasons:
+// - There is no keyboard on mobile.
+// - Many of the shortcuts simply don't work, for some reason.
+// - Anki on macOS (and possibly on other platforms) has its own shortcuts,
+//   which conflict with ours!
+// - Elements created by the panel logic (such as the `help` footer) were
+//   found to be duplicated on some Anki platforms!
+const panel: HelpPanel | null = anki() ? null : makeHelpPanel();
 
 function makeHelpPanel(): HelpPanel {
 
@@ -739,13 +753,14 @@ function makeHelpPanel(): HelpPanel {
     p: [new Shortcut('Previous search result', Where.XOOXLE, () => {
       scrollToNextElement('view', 'prev');
     })],
-    C: [new Shortcut('Crum', Where.XOOXLE, () => {
-      scroll('crum-title');
-    }),
-    new Shortcut('Crum pages', Where.NOTE, () => {
-      scroll('crum');
-    })],
-    Z: [new Shortcut('<a href="https://kellia.uni-goettingen.de/" target="_blank" rel="noopener,noreferrer">KELLIA</a>', Where.XOOXLE, () => {
+    C: [
+      new Shortcut('Crum', Where.XOOXLE, () => {
+        scroll('crum-title');
+      }),
+      new Shortcut('Crum pages', Where.NOTE, () => {
+        scroll('crum');
+      })],
+    J: [new Shortcut('<a href="https://kellia.uni-goettingen.de/" target="_blank" rel="noopener,noreferrer">KELLIA</a>', Where.XOOXLE, () => {
       scroll('kellia-title');
     })],
     T: [new Shortcut('<a href="http://copticsite.com/" target="_blank" rel="noopener,noreferrer">copticsi<strong>t</strong>e</a>', Where.XOOXLE, () => {
@@ -759,6 +774,9 @@ function makeHelpPanel(): HelpPanel {
     })],
     m: [new Shortcut('Meaning', Where.NOTE, () => {
       scroll('meaning');
+    })],
+    e: [new Shortcut('Senses', Where.NOTE, () => {
+      scroll('senses');
     })],
     t: [new Shortcut('Type', Where.NOTE, () => {
       scroll('root-type');
@@ -775,11 +793,14 @@ function makeHelpPanel(): HelpPanel {
     v: [new Shortcut('Derivations table', Where.NOTE, () => {
       scroll('derivations');
     })],
-    u: [new Shortcut('Header (up)', Where.NOTE, () => {
-      scroll('header');
-    })],
     c: [new Shortcut('Dictionary page list', Where.NOTE, () => {
       scroll('dictionary');
+    })],
+    g: [new Shortcut('Header', Where.XOOXLE_AND_NOTE, () => {
+      scroll('header');
+    })],
+    G: [new Shortcut('Footer', Where.XOOXLE_AND_NOTE, () => {
+      scroll('footer');
     })],
   };
 
@@ -787,7 +808,7 @@ function makeHelpPanel(): HelpPanel {
     c: [new Shortcut('Crum', Where.XOOXLE, () => {
       click('crum-title');
     })],
-    z: [new Shortcut('<a href="https://kellia.uni-goettingen.de/" target="_blank" rel="noopener,noreferrer">KELLIA</a>', Where.XOOXLE, () => {
+    j: [new Shortcut('<a href="https://kellia.uni-goettingen.de/" target="_blank" rel="noopener,noreferrer">KELLIA</a>', Where.XOOXLE, () => {
       click('kellia-title');
     })],
     t: [new Shortcut('<a href="http://copticsite.com/" target="_blank" rel="noopener,noreferrer">copticsi<strong>t</strong>e</a>', Where.XOOXLE, () => {
@@ -807,7 +828,6 @@ function makeHelpPanel(): HelpPanel {
   return new HelpPanel(sections);
 }
 
-
 function click(id: string): void {
   document.getElementById(id)!.click();
 }
@@ -816,8 +836,7 @@ function focus(id: string): void {
   document.getElementById(id)!.focus();
 }
 
-function main() {
-
+function handleNoteElements() {
   // Handle 'crum-page' class.
   Array.prototype.forEach.call(
     document.getElementsByClassName('crum-page'),
@@ -993,7 +1012,9 @@ function main() {
       };
     },
   );
+}
 
+function handleXooxleElements() {
   // NOTE: The element with the ID `reset` is only present on the XOOXLE page.
   document.getElementById('reset')?.addEventListener('click',
     (event: Event) => {
@@ -1004,16 +1025,17 @@ function main() {
       event.preventDefault();
     });
 
-  // When we first load the page, 'd' dictates the set of active dialects and
-  // hence highlighting. We load 'd' from the local storage, and we update the
-  // boxes to match this set. Then we update the CSS.
-  window.addEventListener('pageshow', (): void => {
-    const active: string[] | null = activeDialects();
-    Array.from(dialectCheckboxes).forEach((box) => {
-      box.checked = active?.includes(box.name) ?? false;
+  // Collapse logic.
+  Array.prototype.forEach.call(
+    document.getElementsByClassName('collapse'),
+    (collapse: HTMLElement): void => {
+      collapse.addEventListener('click', function() {
+        // TODO: Remove the dependency on the HTML structure.
+        const collapsible = collapse.nextElementSibling! as HTMLElement;
+        collapsible.style.maxHeight = collapsible.style.maxHeight ? '' : collapsible.scrollHeight.toString() + 'px';
+      });
+      collapse.click();
     });
-    highlighter.update();
-  });
 
   // When we click a checkbox, it is the boxes that dictate the set of active
   // dialects and highlighting. So we use the boxes to update 'd', and then
@@ -1028,17 +1050,30 @@ function main() {
     });
   });
 
-  // Collapse logic.
-  Array.prototype.forEach.call(
-    document.getElementsByClassName('collapse'),
-    (collapse: HTMLElement): void => {
-      collapse.addEventListener('click', function() {
-        // TODO: Remove the dependency on the HTML structure.
-        const collapsible = collapse.nextElementSibling! as HTMLElement;
-        collapsible.style.maxHeight = collapsible.style.maxHeight ? '' : collapsible.scrollHeight.toString() + 'px';
-      });
-      collapse.click();
+  window.addEventListener('load', () => {
+    // We have to do this when the page is fully loaded to guarantee that the
+    // Google search box has already been loaded by the Google-provided script.
+    const googleSearchBox = document.querySelector<HTMLInputElement>('#google input')!;
+    // Prevent search query typing from triggering a shortcut command.
+    googleSearchBox.addEventListener('keydown', (e: KeyboardEvent) => {
+      e.stopPropagation();
     });
+    googleSearchBox.placeholder = 'Search A Coptic Dictionary, W. E. Crum, using Ⲅⲟⲟⲅⲗⲉ';
+    googleSearchBox.ariaPlaceholder = 'Search A Coptic Dictionary, W. E. Crum, using Ⲅⲟⲟⲅⲗⲉ';
+  });
+}
+
+function handleCommonElements() {
+  // When we first load the page, 'd' dictates the set of active dialects and
+  // hence highlighting. We load 'd' from the local storage, and we update the
+  // boxes to match this set. Then we update the CSS.
+  window.addEventListener('pageshow', (): void => {
+    const active: string[] | null = activeDialects();
+    Array.from(dialectCheckboxes).forEach((box) => {
+      box.checked = active?.includes(box.name) ?? false;
+    });
+    highlighter.update();
+  });
 
   // NOTE: We intentionally use the `keydown` event rather than the `keyup`
   // event, so that a long press would trigger a shortcut command repeatedly.
@@ -1060,18 +1095,18 @@ function main() {
       e.stopPropagation();
     }
   });
+}
+
+function main() {
+  if (note()) {
+    handleNoteElements();
+  }
 
   if (xooxle()) {
-    // We have to do this when the page is fully loaded to guarantee that the
-    // Google search box has already been loaded by the Google-provided script.
-    const googleSearchBox = document.querySelector<HTMLInputElement>('#google input')!;
-    // Prevent search query typing from triggering a shortcut command.
-    googleSearchBox.addEventListener('keydown', (e: KeyboardEvent) => {
-      e.stopPropagation();
-    });
-    googleSearchBox.placeholder = 'Search A Coptic Dictionary, W. E. Crum, using Ⲅⲟⲟⲅⲗⲉ';
-    googleSearchBox.ariaPlaceholder = 'Search A Coptic Dictionary, W. E. Crum, using Ⲅⲟⲟⲅⲗⲉ';
+    handleXooxleElements();
   }
+
+  handleCommonElements();
 }
 
 main();
