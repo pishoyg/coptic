@@ -42,7 +42,7 @@ enum DIALECT_ARTICLE {
   // NO_ARTICLE indicates the absence of an article.
   NO_ARTICLE = '',
   // DIALECTS is a generic article about dialects.
-  DIALECTS = 'https://drive.google.com/file/d/14fsJw3lXdhVcxTernouXVgZR1GAqYeP4/view?usp=sharing',
+  DIALECTS = 'https://drive.google.com/file/d/1-lWPn7XzVQdiYW0y1EKGASHWN32l416W/view?usp=sharing',
   // DIALECTS_WANTING_HOME is also a generic article about dialects.
   DIALECTS_WANTING_HOME = 'https://drive.google.com/file/d/1-0pUitCFq00NxUuog2zKWqmVAXSJcEaa/view?usp=sharing',
   Sahidic = 'https://drive.google.com/file/d/1-VrJkEEY3Ln9zTryhzfAOQITUGKh4nX1/view?usp=sharing',
