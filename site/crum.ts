@@ -36,6 +36,26 @@ const LOOKUP_URL_PREFIX = `${SEARCH}/?query=`;
 const EMAIL = 'remnqymi@gmail.com';
 const EMAIL_LINK = `mailto:${EMAIL}`;
 
+// TODO: (#290) Eliminate the use of generic articles, or the absence of an
+// article. Seek to have informative articles for all varieties.
+enum DIALECT_ARTICLE {
+  // NO_ARTICLE indicates the absence of an article.
+  NO_ARTICLE = '',
+  // DIALECTS is a generic article about dialects.
+  DIALECTS = 'https://drive.google.com/file/d/14fsJw3lXdhVcxTernouXVgZR1GAqYeP4/view?usp=sharing',
+  // DIALECTS_WANTING_HOME is also a generic article about dialects.
+  DIALECTS_WANTING_HOME = 'https://drive.google.com/file/d/1-0pUitCFq00NxUuog2zKWqmVAXSJcEaa/view?usp=sharing',
+  Sahidic = 'https://drive.google.com/file/d/1-VrJkEEY3Ln9zTryhzfAOQITUGKh4nX1/view?usp=sharing',
+  Akhmimic = 'https://drive.google.com/file/d/1-8NnctwGRuELh5vUyg8Q6cLvC18QFQ_7/view?usp=sharing',
+  subAkhmimic_Lycopolitan = 'https://drive.google.com/file/d/1-DlCHvLq4BW9D-Na9l5tSTMMAqk5RyS7/view?usp=sharing',
+  Bohairic = 'https://drive.google.com/file/d/1-PLhTRIuMdQWCQjEiKQA7Z6kI9_EQU1r/view?usp=sharing',
+  Fayyumic = 'https://drive.google.com/file/d/1-7irhAMOrhIUuOZO4L0PS70WN362-8qM/view?usp=sharing',
+  OldCoptic = 'https://drive.google.com/file/d/1-JShCo-nvO11X2QrWVip1n9UjLmadRyN/view?usp=sharing',
+  NagHammadi = 'https://drive.google.com/file/d/1-XYu8BUiLgLKnlhy5rTC_JLmrDW67J5T/view?usp=sharing',
+  Mesokemic = 'https://drive.google.com/file/d/1-8oyA_aogjiAL6pt2L7DvqsTgrZHoVD8/view?usp=sharing',
+  ProtoTheban = 'https://drive.google.com/file/d/1-8mMgSvtM9JMzQAvM9HEOotxYUOBo1Bc/view?usp=sharing',
+};
+
 const DAWOUD_OFFSET = 16;
 
 const DIALECTS = [
@@ -606,11 +626,11 @@ function makeDialectShortcut(
   name: string,
   code: string,
   dictionaries: string[],
-  link?: string): Shortcut {
+  link: DIALECT_ARTICLE): Shortcut {
 
   code = highlightFirstOccurrence(key, code);
   name = highlightFirstOccurrence(key, name);
-  if (link) {
+  if (link != DIALECT_ARTICLE.NO_ARTICLE) {
     name = `<a href="${link}" target="_blank" rel="noopener,noreferrer">${name}</a>`;
   }
 
@@ -648,50 +668,29 @@ const panel: HelpPanel | null = anki() ? null : makeHelpPanel();
 
 function makeHelpPanel(): HelpPanel {
 
+  // NOTE: Some (minor) dialects are missing articles. If you find a reference
+  // that explains what those dialects are, that would be great.
   const dialectHighlighting = {
-    S: [makeDialectShortcut('S', 'Sahidic', 'S', ['Crum', 'KELLIA'],
-      'https://drive.google.com/file/d/1-VrJkEEY3Ln9zTryhzfAOQITUGKh4nX1/view?usp=sharing',
-    )],
-    // TODO: (#290) Add a Link for Sahidic with Akhimic tendency.
-    a: [makeDialectShortcut('a', 'Sahidic with <strong>A</strong>khmimic tendency', 'Sa', ['Crum'])],
-    // TODO: (#290) Add a Link for Sahidic with Fayyumic tendency.
-    f: [makeDialectShortcut('f', 'Sahidic with <strong>F</strong>ayyumic tendency', 'Sf', ['Crum'])],
-    A: [makeDialectShortcut('A', 'Akhmimic', 'A', ['Crum', 'KELLIA'],
-      'https://drive.google.com/file/d/1-8NnctwGRuELh5vUyg8Q6cLvC18QFQ_7/view?usp=sharing')],
-    s: [makeDialectShortcut('s', 'subAkhmimic', 'sA', ['Crum'],
-      'https://drive.google.com/file/d/1-DlCHvLq4BW9D-Na9l5tSTMMAqk5RyS7/view?usp=sharing')],
-    B: [makeDialectShortcut('B', 'Bohairic', 'B', ['Crum', 'KELLIA', 'copticsite'],
-      'https://drive.google.com/file/d/1-PLhTRIuMdQWCQjEiKQA7Z6kI9_EQU1r/view?usp=sharing',
-    )],
-    F: [makeDialectShortcut('F', 'Fayyumic', 'F', ['Crum', 'KELLIA'],
-      'https://drive.google.com/file/d/1-7irhAMOrhIUuOZO4L0PS70WN362-8qM/view?usp=sharing')],
-    // TODO: (#290) Add a Link for Fayymic with Bohairic Influence.
-    b: [makeDialectShortcut('b', 'Fayyumic with <strong>B</strong>ohairic tendency', 'Fb', ['Crum'])],
-    O: [makeDialectShortcut('O', 'Old Coptic', 'O', ['Crum'],
-      'https://drive.google.com/file/d/1-JShCo-nvO11X2QrWVip1n9UjLmadRyN/view?usp=sharing',
-    )],
-    N: [makeDialectShortcut('N', 'Nag Hammadi', 'NH', ['Crum (Marcion)'],
-      'https://drive.google.com/file/d/1-XYu8BUiLgLKnlhy5rTC_JLmrDW67J5T/view?usp=sharing',
-    )],
-    k: [makeDialectShortcut('k', 'Old Coptic', 'Ak', ['KELLIA'],
-      'https://drive.google.com/file/d/1-JShCo-nvO11X2QrWVip1n9UjLmadRyN/view?usp=sharing',
-    )],
-    M: [makeDialectShortcut('M', 'Mesokemic', 'M', ['KELLIA'],
-      'https://drive.google.com/file/d/1-8oyA_aogjiAL6pt2L7DvqsTgrZHoVD8/view?usp=sharing')],
-    L: [makeDialectShortcut('L', 'Lycopolitan', 'L', ['KELLIA'],
-      'https://drive.google.com/file/d/1-DlCHvLq4BW9D-Na9l5tSTMMAqk5RyS7/view?usp=sharing')],
-    P: [makeDialectShortcut('P', 'Proto-Theban', 'P', ['KELLIA'],
-      'https://drive.google.com/file/d/1-8mMgSvtM9JMzQAvM9HEOotxYUOBo1Bc/view?usp=sharing')],
-    // TODO: (#290) Add a Link for South Fayyumic Greek.
-    V: [makeDialectShortcut('V', 'South Fayyumic Greek', 'V', ['KELLIA'])],
-    // TODO: (#290) Add a Link for Crypto-Mesokemic Greek.
-    W: [makeDialectShortcut('W', 'Crypto-Mesokemic Greek', 'W', ['KELLIA'])],
-    // TODO: (#290) Add a Link for Greek (usage unclear).
-    U: [makeDialectShortcut('U', 'Greek (usage <strong>u</strong>nclear)', 'U', ['KELLIA'])],
+    S: [makeDialectShortcut('S', 'Sahidic', 'S', ['Crum', 'KELLIA'], DIALECT_ARTICLE.Sahidic)],
+    a: [makeDialectShortcut('a', 'Sahidic with <strong>A</strong>khmimic tendency', 'Sa', ['Crum'], DIALECT_ARTICLE.NO_ARTICLE)],
+    f: [makeDialectShortcut('f', 'Sahidic with <strong>F</strong>ayyumic tendency', 'Sf', ['Crum'], DIALECT_ARTICLE.NO_ARTICLE)],
+    A: [makeDialectShortcut('A', 'Akhmimic', 'A', ['Crum', 'KELLIA'], DIALECT_ARTICLE.Akhmimic)],
+    s: [makeDialectShortcut('s', 'subAkhmimic', 'sA', ['Crum'], DIALECT_ARTICLE.subAkhmimic_Lycopolitan)],
+    B: [makeDialectShortcut('B', 'Bohairic', 'B', ['Crum', 'KELLIA', 'copticsite'], DIALECT_ARTICLE.Bohairic)],
+    F: [makeDialectShortcut('F', 'Fayyumic', 'F', ['Crum', 'KELLIA'], DIALECT_ARTICLE.Fayyumic)],
+    b: [makeDialectShortcut('b', 'Fayyumic with <strong>B</strong>ohairic tendency', 'Fb', ['Crum'], DIALECT_ARTICLE.NO_ARTICLE)],
+    O: [makeDialectShortcut('O', 'Old Coptic', 'O', ['Crum'], DIALECT_ARTICLE.OldCoptic)],
+    N: [makeDialectShortcut('N', 'Nag Hammadi', 'NH', ['Crum (Marcion)'], DIALECT_ARTICLE.NagHammadi)],
+    k: [makeDialectShortcut('k', 'Old Coptic', 'Ak', ['KELLIA'], DIALECT_ARTICLE.OldCoptic)],
+    M: [makeDialectShortcut('M', 'Mesokemic', 'M', ['KELLIA'], DIALECT_ARTICLE.Mesokemic)],
+    L: [makeDialectShortcut('L', 'Lycopolitan', 'L', ['KELLIA'], DIALECT_ARTICLE.subAkhmimic_Lycopolitan)],
+    P: [makeDialectShortcut('P', 'Proto-Theban', 'P', ['KELLIA'], DIALECT_ARTICLE.ProtoTheban)],
+    V: [makeDialectShortcut('V', 'South Fayyumic Greek', 'V', ['KELLIA'], DIALECT_ARTICLE.DIALECTS)],
+    W: [makeDialectShortcut('W', 'Crypto-Mesokemic Greek', 'W', ['KELLIA'], DIALECT_ARTICLE.DIALECTS)],
+    U: [makeDialectShortcut('U', 'Greek (usage <strong>u</strong>nclear)', 'U', ['KELLIA'], DIALECT_ARTICLE.NO_ARTICLE)],
     // TODO: (#279) What is this dialect called?
     // It's from TLA (e.g. https://coptic-dictionary.org/entry.cgi?tla=C2537).
-    // TODO: (#290) Add a Link for ...!
-    K: [makeDialectShortcut('K', '', 'K', ['KELLIA'])],
+    K: [makeDialectShortcut('K', '', 'K', ['KELLIA'], DIALECT_ARTICLE.NO_ARTICLE)],
   };
 
   const control = {
