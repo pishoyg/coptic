@@ -3,6 +3,19 @@ const searchBox = document.getElementById('searchBox');
 const fullWordCheckbox = document.getElementById('fullWordCheckbox');
 const regexCheckbox = document.getElementById('regexCheckbox');
 const messageBox = document.getElementById('message');
+// Load the JSON file as a Promise that will resolve once the data is fetched.
+const fileMap = (async function () {
+  // NOTE: Due to this `fetch`, trying to open the website as a local file in
+  // the browser may not work. You have to serve it through a server.
+  return (await fetch('xooxle.json')
+    .then(async (resp) => await resp.json())).map((xooxle) => ({
+    data: xooxle.data.map(record => new Candidate(record, xooxle.params.fields)),
+    params: xooxle.params,
+  }));
+})();
+// Event listener for the search button.
+let currentAbortController = null;
+let debounceTimeout = null;
 // KEY is the name of the field that bears the word key. The key can be used to
 // generate an HREF to open the word page.
 const KEY = 'KEY';
@@ -276,18 +289,6 @@ class Candidate {
     return text.substring(start, end);
   }
 }
-// Load the JSON file as a Promise that will resolve once the data is fetched.
-const fileMap = (async function () {
-  // NOTE: Due to this `fetch`, trying to open the website as a local file in
-  // the browser may not work. You have to serve it through a server.
-  return (await fetch('xooxle.json')
-    .then(async (resp) => await resp.json())).map((xooxle) => ({
-    data: xooxle.data.map(record => new Candidate(record, xooxle.params.fields)),
-    params: xooxle.params,
-  }));
-})();
-// Event listener for the search button.
-let currentAbortController = null;
 function errorMessage() {
   const message = regexCheckbox.checked ? 'Invalid regular expression!' : 'Internal error! Please send us an email!';
   return `<span class="error">${message}</div>`;
@@ -440,7 +441,6 @@ async function searchOneDictionary(regex, xooxle, abortController) {
     td.prepend(small);
   });
 }
-let debounceTimeout = null;
 function handleSearchQuery(timeout) {
   if (debounceTimeout) {
     clearTimeout(debounceTimeout);
@@ -476,17 +476,8 @@ function handleSearchQuery(timeout) {
     }
   }, timeout);
 }
-// Prevent other elements in the page from picking up key events on the
-// search box.
-searchBox.addEventListener('keyup', (event) => { event.stopPropagation(); });
-searchBox.addEventListener('keydown', (event) => { event.stopPropagation(); });
-searchBox.addEventListener('keypress', (event) => { event.stopPropagation(); });
-// Make the page responsive to user input.
-searchBox.addEventListener('input', () => { handleSearchQuery(100); });
-fullWordCheckbox.addEventListener('click', () => { handleSearchQuery(0); });
-regexCheckbox.addEventListener('click', () => { handleSearchQuery(0); });
 // Check if a query is passed in the query parameters.
-{
+function executeQueryParameters() {
   let found = false;
   const url = new URL(window.location.href);
   const query = url.searchParams.get('query');
@@ -508,13 +499,12 @@ regexCheckbox.addEventListener('click', () => { handleSearchQuery(0); });
     handleSearchQuery(0);
   }
 }
-window.addEventListener('pageshow', () => {
-  handleSearchQuery(0);
-  searchBox.focus();
-});
-// Show the "use-chrome" section randomly.
 function maybeRecommendChrome() {
-  if (Math.random() >= 0.25) {
+  if (navigator.userAgent.toLowerCase().includes('chrome')) {
+    // We are on Chrome already!
+    return;
+  }
+  if (Math.random() >= 0.5) {
     return;
   }
   const elem = document.getElementById('use-chrome');
@@ -523,4 +513,24 @@ function maybeRecommendChrome() {
   }
   elem.style.display = 'block';
 }
-maybeRecommendChrome();
+function xooxleMain() {
+  // We intentionally recommend Chrome first thing because, if we're on a
+  // different browser, and we try to do something else first, the code might
+  // break by the time we get to the recommendation.
+  maybeRecommendChrome();
+  executeQueryParameters();
+  // Prevent other elements in the page from picking up key events on the
+  // search box.
+  searchBox.addEventListener('keyup', (event) => { event.stopPropagation(); });
+  searchBox.addEventListener('keydown', (event) => { event.stopPropagation(); });
+  searchBox.addEventListener('keypress', (event) => { event.stopPropagation(); });
+  // Make the page responsive to user input.
+  searchBox.addEventListener('input', () => { handleSearchQuery(100); });
+  fullWordCheckbox.addEventListener('click', () => { handleSearchQuery(0); });
+  regexCheckbox.addEventListener('click', () => { handleSearchQuery(0); });
+  window.addEventListener('pageshow', () => {
+    handleSearchQuery(0);
+    searchBox.focus();
+  });
+}
+xooxleMain();
