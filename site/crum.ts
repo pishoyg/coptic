@@ -541,9 +541,7 @@ class HelpPanel {
       if (canConsume.length <= 1) {
         return;
       }
-      // Alerting is a good option if developers always test locally, otherwise
-      // this might make it to production!
-      alert(`${key} is consumable by multiple shortcuts: ${canConsume.map((s) => s.textDescription()).join(', ')}`);
+      console.error(`${key} is consumable by multiple shortcuts: ${canConsume.map((s) => s.textDescription()).join(', ')}`);
     });
   }
 
@@ -700,7 +698,7 @@ function makeHelpPanel(): HelpPanel {
     d: [new Shortcut('Developer mode', Where.XOOXLE_AND_NOTE, () => {
       toggleDev(); highlighter.updateDev();
     })],
-    e: [new Shortcut(`Email <a class="contact" href="${EMAIL_LINK}">${EMAIL}</a>`, Where.XOOXLE_AND_NOTE, () => {
+    R: [new Shortcut(`Reports / Contact <a class="contact" href="${EMAIL_LINK}">${EMAIL}</a>`, Where.XOOXLE_AND_NOTE, () => {
       window_open(EMAIL_LINK);
     })],
     h: [new Shortcut('Open homepage', Where.XOOXLE_AND_NOTE, () => {
