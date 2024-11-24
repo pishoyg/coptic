@@ -790,6 +790,21 @@ function handleNoteElements() {
     };
   });
 }
+function initGoogleSearchBox() {
+  // NOTE: We have to do this when the page is fully loaded to guarantee that
+  // the Google search box has already been loaded by the Google-provided
+  // script. Right now, our entire script is wrapped inside a function that
+  // is triggered by the `load` event, so we don't have to worry about this.
+  // If the script usage were to change, this needs to be wrapped inside a
+  // function that is triggered by `load`.
+  const googleSearchBox = document.querySelector('#google input');
+  // Prevent search query typing from triggering a shortcut command.
+  googleSearchBox.addEventListener('keydown', (e) => {
+    e.stopPropagation();
+  });
+  googleSearchBox.placeholder = 'Search A Coptic Dictionary, W. E. Crum, using Ⲅⲟⲟⲅⲗⲉ';
+  googleSearchBox.ariaPlaceholder = 'Search A Coptic Dictionary, W. E. Crum, using Ⲅⲟⲟⲅⲗⲉ';
+}
 function handleXooxleElements() {
   // NOTE: The element with the ID `reset` is only present on the XOOXLE page.
   document.getElementById('reset')?.addEventListener('click', (event) => {
@@ -819,17 +834,7 @@ function handleXooxleElements() {
       highlighter.updateDialects();
     });
   });
-  window.addEventListener('load', () => {
-    // We have to do this when the page is fully loaded to guarantee that the
-    // Google search box has already been loaded by the Google-provided script.
-    const googleSearchBox = document.querySelector('#google input');
-    // Prevent search query typing from triggering a shortcut command.
-    googleSearchBox.addEventListener('keydown', (e) => {
-      e.stopPropagation();
-    });
-    googleSearchBox.placeholder = 'Search A Coptic Dictionary, W. E. Crum, using Ⲅⲟⲟⲅⲗⲉ';
-    googleSearchBox.ariaPlaceholder = 'Search A Coptic Dictionary, W. E. Crum, using Ⲅⲟⲟⲅⲗⲉ';
-  });
+  initGoogleSearchBox();
 }
 function handleCommonElements() {
   // When we first load the page, 'd' dictates the set of active dialects and
