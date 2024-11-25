@@ -592,8 +592,8 @@ async function searchOneDictionary(
     small.classList.add('very-light');
     small.innerHTML = `${(++counter).toString()} / ${count.toString()}`;
     const td = tr.firstElementChild as HTMLTableCellElement;
-    td.prepend(' ');
-    td.prepend(small);
+    td.append(' ');
+    td.append(small);
   });
 }
 
