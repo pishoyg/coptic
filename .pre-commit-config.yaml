@@ -38,13 +38,6 @@ repos:
         language: system
         verbose: true
         require_serial: true
-      - id: check-todo
-        name: check-todo
-        entry: pre-commit/check-todo.sh
-        language: system
-        verbose: true
-        types: [text]
-        require_serial: true
 
   # TypeScript and JavaScript
   - repo: https://github.com/pre-commit/mirrors-eslint
@@ -392,3 +385,11 @@ repos:
         language: system
         pass_filenames: false
         verbose: true
+      # TODO's
+      - id: check-todo
+        name: check-todo
+        entry: pre-commit/check-todo.sh
+        language: system
+        verbose: true
+        types: [text]
+        require_serial: true
