@@ -547,17 +547,8 @@ async function searchOneDictionary(
     // Create a new row for the table
     const row = document.createElement('tr');
 
-    // Add the view cell.
     const viewCell = document.createElement('td');
-    const viewTable = document.createElement('table');
-    const viewRow = document.createElement('tr');
-    const viewIndexCell = document.createElement('td');
-    viewTable.classList.add('view-table');
-    viewIndexCell.classList.add('view-index');
-    viewIndexCell.innerHTML = '&nbsp;';
-    viewRow.appendChild(viewIndexCell);
-    viewTable.appendChild(viewRow);
-    viewCell.appendChild(viewTable);
+    viewCell.classList.add('view');
     if (xooxle.params.href_fmt) {
       // Get the word of the first field that has a match.
       const word: string = search_results.find(
@@ -567,20 +558,16 @@ async function searchOneDictionary(
         `{${KEY}}`, res.key) + `#:~:text=${encodeURIComponent(word)}`;
       a.target = '_blank';
       a.textContent = localStorage.getItem('dev') === 'true' ? res.key : 'view';
-      const viewLinkCell = document.createElement('td');
-      viewLinkCell.appendChild(a);
-      viewRow.appendChild(viewLinkCell);
+      viewCell.appendChild(a);
     }
     row.appendChild(viewCell);
 
-    // Add the content cells.
     search_results.forEach((sr: SearchResult) => {
       const cell = document.createElement('td');
       cell.innerHTML = sr.html;
       row.appendChild(cell);
     });
 
-    // Insert the row in the correct position.
     column_sentinels[search_results.findIndex((sr) => sr.match)]!.insertAdjacentElement('beforebegin', row);
 
     // TODO: Remove the dependency on the HTML structure.
@@ -594,7 +581,6 @@ async function searchOneDictionary(
     }
   }
 
-  // Add the indices to the view cell.
   let counter = 0;
   resultTable.childNodes.forEach((node: ChildNode) => {
     const tr = node as HTMLTableRowElement;
@@ -605,13 +591,8 @@ async function searchOneDictionary(
     const small = document.createElement('small');
     small.classList.add('very-light');
     small.innerHTML = `${(++counter).toString()} / ${count.toString()}`;
-    const td = tr
-      .firstElementChild // <td>
-      ?.firstElementChild // <table class="view-table">
-      ?.firstElementChild  // <tr>
-      ?.firstElementChild as  // <td class="view-index">
-      HTMLTableCellElement;
-    td.innerHTML = ''; // Clear the previous placeholder.
+    const td = tr.firstElementChild as HTMLTableCellElement;
+    td.prepend(' ');
     td.prepend(small);
   });
 }
