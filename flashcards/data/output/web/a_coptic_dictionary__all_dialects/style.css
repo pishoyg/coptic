@@ -314,16 +314,12 @@ table {
   vertical-align: top;
 }
 
-.results td:not(:first-child,.view-table *) {
+.results td:not(:first-child) {
   border-left: 1px solid black;
   padding-left: 5px;
 }
 
 /* stylelint-enable no-descending-specificity */
-
-.view-index {
-  width: 50%;
-}
 
 .use-chrome {
   display: none;
@@ -357,14 +353,6 @@ table {
 
   .checkboxes label {
     margin-right: 10px;
-  }
-
-  .view-table td {
-    display: block;
-  }
-
-  .view-index {
-    width: unset;
   }
 
 }
