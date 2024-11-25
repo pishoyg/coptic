@@ -437,8 +437,8 @@ async function searchOneDictionary(regex, xooxle, abortController) {
     small.classList.add('very-light');
     small.innerHTML = `${(++counter).toString()} / ${count.toString()}`;
     const td = tr.firstElementChild;
-    td.prepend(' ');
-    td.prepend(small);
+    td.append(' ');
+    td.append(small);
   });
 }
 function handleSearchQuery(timeout) {
