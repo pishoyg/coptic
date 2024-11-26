@@ -255,17 +255,8 @@ bin_install: FORCE
 	. ./.helpers && if ! command -v gh &> /dev/null; then echo -e "$${RED}Please install $${YELLOW}gh$${RED} from $${YELLOW}https://cli.github.com/${RED}.$${RESET}" && exit 1; fi
 	. ./.helpers && if ! command -v say &> /dev/null; then echo -e "$${YELLOW}Consider installing $${CYAN}say$${YELLOW}. This should be possible with $${CYAN}sudo apt-get install gnustep-gui-runtime$${YELLOW} on Ubuntu.$${RESET}"; fi
 
-
 npm_install: FORCE
-	npm install \
-		--save-dev \
-		"typescript" \
-		"stylelint" \
-		"clean-css" \
-		"eslint" \
-		"@stylistic/eslint-plugin" \
-		"stylelint" \
-		"stylelint-config-standard-scss"
+	npm install
 
 pip_install: requirements.txt
 	python -m pip install --upgrade pip $${PIP_FLAGS}
