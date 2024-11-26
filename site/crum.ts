@@ -438,8 +438,9 @@ class Section {
 };
 
 function highlightFirstOccurrence(char: string, str: string): string {
-  if (str.includes('<strong>')) {
-    // Already highlighted.
+  if (str.includes('<')) {
+    // This might already have an HTML tag, so we don't risk highlighting it to
+    // avoid breaking something.
     return str;
   }
   const index = str.toLowerCase().indexOf(char.toLowerCase());
@@ -698,13 +699,13 @@ function makeHelpPanel(): HelpPanel {
     d: [new Shortcut('Developer mode', Where.XOOXLE_AND_NOTE, () => {
       toggleDev(); highlighter.updateDev();
     })],
-    R: [new Shortcut(`Reports / Contact <a class="contact" href="${EMAIL_LINK}">${EMAIL}</a>`, Where.XOOXLE_AND_NOTE, () => {
+    R: [new Shortcut(`<strong>R</strong>eports / Contact <a class="contact" href="${EMAIL_LINK}">${EMAIL}</a>`, Where.XOOXLE_AND_NOTE, () => {
       window_open(EMAIL_LINK);
     })],
-    h: [new Shortcut('Open homepage', Where.XOOXLE_AND_NOTE, () => {
+    h: [new Shortcut(`Open <a href="${HOME}" target="_blank"><strong>h</strong>omepage</a>`, Where.XOOXLE_AND_NOTE, () => {
       window_open(HOME);
     })],
-    X: [new Shortcut('Open the dictionary search page', Where.XOOXLE_AND_NOTE, () => {
+    X: [new Shortcut(`Open the <a href="${SEARCH}" target="_blank">dictionary search page</a>`, Where.XOOXLE_AND_NOTE, () => {
       window_open(SEARCH);
     })],
     '?': [new Shortcut('Toggle help panel', Where.XOOXLE_AND_NOTE, () => {
@@ -729,16 +730,16 @@ function makeHelpPanel(): HelpPanel {
 
 
   const search = {
-    w: [new Shortcut('Toggle full word search', Where.XOOXLE, () => {
+    w: [new Shortcut('Toggle full-word search', Where.XOOXLE, () => {
       click('fullWordCheckbox');
     })],
     x: [new Shortcut('Toggle regex search', Where.XOOXLE, () => {
       click('regexCheckbox');
     })],
-    '/': [new Shortcut('Focus search box', Where.XOOXLE, () => {
+    '/': [new Shortcut('Focus on the search box', Where.XOOXLE, () => {
       focus('searchBox');
     })],
-    ';': [new Shortcut('Focus the Crum Google search box', Where.XOOXLE, () => {
+    ';': [new Shortcut('Focus on the Crum Google search box', Where.XOOXLE, () => {
       document.querySelector<HTMLElement>('#google input')!.focus();
     })],
   };
@@ -772,7 +773,7 @@ function makeHelpPanel(): HelpPanel {
     m: [new Shortcut('Meaning', Where.NOTE, () => {
       scroll('meaning');
     })],
-    e: [new Shortcut('Senses', Where.NOTE, () => {
+    e: [new Shortcut('S<strong>e</strong>ns<strong>e</strong>s', Where.NOTE, () => {
       scroll('senses');
     })],
     t: [new Shortcut('Type', Where.NOTE, () => {
