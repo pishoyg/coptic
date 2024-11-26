@@ -613,7 +613,7 @@ window.addEventListener('load', () => {
           scroll('crum');
         })
       ],
-      J: [new Shortcut('<a href="https://kellia.uni-goettingen.de/" target="_blank" rel="noopener,noreferrer">KELLIA</a>', Where.XOOXLE, () => {
+      E: [new Shortcut('<a href="https://kellia.uni-goettingen.de/" target="_blank" rel="noopener,noreferrer">K<strong>E</strong>LLIA</a>', Where.XOOXLE, () => {
         scroll('kellia-title');
       })],
       T: [new Shortcut('<a href="http://copticsite.com/" target="_blank" rel="noopener,noreferrer">copticsi<strong>t</strong>e</a>', Where.XOOXLE, () => {
@@ -660,7 +660,7 @@ window.addEventListener('load', () => {
       c: [new Shortcut('Crum', Where.XOOXLE, () => {
         click('crum-title');
       })],
-      j: [new Shortcut('<a href="https://kellia.uni-goettingen.de/" target="_blank" rel="noopener,noreferrer">KELLIA</a>', Where.XOOXLE, () => {
+      e: [new Shortcut('<a href="https://kellia.uni-goettingen.de/" target="_blank" rel="noopener,noreferrer">K<strong>E</strong>LLIA</a>', Where.XOOXLE, () => {
         click('kellia-title');
       })],
       t: [new Shortcut('<a href="http://copticsite.com/" target="_blank" rel="noopener,noreferrer">copticsi<strong>t</strong>e</a>', Where.XOOXLE, () => {
