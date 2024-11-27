@@ -45,7 +45,7 @@ repos:
       - id: prettier
         name: prettier
         args: [--write]
-        files: \.(js|jsx|mjs|cjs|ts|tsx|mts|cts|json)$
+        files: \.(js|jsx|mjs|cjs|ts|tsx|mts|cts|json|css)$
         types: [file]
         entry: npx prettier
         language: system
@@ -73,11 +73,6 @@ repos:
         language: system
         types: [css]
         args: [--fix, --color, --report-invalid-scope-disables, --report-needless-disables]
-      - id: clean-css
-        name: clean-css
-        entry: node pre-commit/clean-css.js
-        language: system
-        types: [css]
 
   - repo: local
     hooks:
