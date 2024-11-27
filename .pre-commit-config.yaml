@@ -45,7 +45,7 @@ repos:
       - id: prettier
         name: prettier
         args: [--write]
-        files: \.(js|jsx|mjs|cjs|ts|tsx|mts|cts)$
+        files: \.(js|jsx|mjs|cjs|ts|tsx|mts|cts|json)$
         types: [file]
         entry: npx prettier
         language: system
@@ -94,14 +94,6 @@ repos:
         entry: tidy -config "tidy_config.txt" -xml
         language: system
         files: .*\.(xml|xhtml|opf)$
-      # JSON
-      - id: json-tool
-        name: json-tool
-        entry: pre-commit/json-tool.sh
-        language: system
-        files: \.json$
-        types: [file]
-        exclude: tsconfig\.json$
 
   # Python
   # NOTE: Running `add-trailing-comma` before `black` is intentional.
