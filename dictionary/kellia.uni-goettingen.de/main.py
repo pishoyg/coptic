@@ -772,8 +772,7 @@ def process_entry(
         if all_geos is not None:
             if all_geos.text is not None:
                 geos_text = re.sub(r"[\(\)]", r"", all_geos.text)
-                geos = re.sub(r"Ak", r"K", geos_text).split(" ")
-                geos = list(filter(lambda g: len(g) == 1, geos))
+                geos = geos_text.split(" ")
             else:
                 geos = []
         else:
