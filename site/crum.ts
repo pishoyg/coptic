@@ -82,7 +82,6 @@ const DIALECTS = [
   'V',
   'W',
   'U',
-  'K',
 ];
 
 // DIALECT_SINGLE_CHAR is a mapping for the dialects that have shortcuts other
@@ -864,11 +863,6 @@ function makeHelpPanel(): HelpPanel {
         ['KELLIA'],
         DIALECT_ARTICLE.NO_ARTICLE
       ),
-    ],
-    // TODO: (#279) What is this dialect called?
-    // It's from TLA (e.g. https://coptic-dictionary.org/entry.cgi?tla=C2537).
-    K: [
-      makeDialectShortcut('K', '', 'K', ['KELLIA'], DIALECT_ARTICLE.NO_ARTICLE),
     ],
   };
 
