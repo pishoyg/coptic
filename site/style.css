@@ -1,15 +1,20 @@
 /********** Home Page, and Generic **********/
 
-h1,h2,h3,strong {
-  color: #2C3E50;
+h1,
+h2,
+h3,
+strong {
+  color: #2c3e50;
 }
 
 h1 {
   text-align: center;
 }
 
-a,.link,a strong {
-  color: #3498DB;
+a,
+.link,
+a strong {
+  color: #3498db;
   cursor: pointer;
   text-decoration: none;
 }
@@ -20,8 +25,11 @@ a,.link,a strong {
   text-decoration: inherit;
 }
 
-a:hover,.link:hover,.hover-link:hover,.collapse:hover {
-  color: #3498DB;
+a:hover,
+.link:hover,
+.hover-link:hover,
+.collapse:hover {
+  color: #3498db;
   cursor: pointer;
   text-decoration: underline;
 }
@@ -60,15 +68,16 @@ hr {
 }
 
 body {
-  font-family: Arial,sans-serif;
+  font-family: Arial, sans-serif;
   line-height: 1.6;
   margin: 0 auto;
   max-width: 1000px;
   padding: 10px;
 }
 
-a.download,.download-list li a {
-  background-color: #3498DB;
+a.download,
+.download-list li a {
+  background-color: #3498db;
   border-radius: 4px;
   color: #fff;
   display: inline-block;
@@ -113,7 +122,6 @@ table {
   .big-screen-only {
     display: none;
   }
-
 }
 
 .logo {
@@ -171,7 +179,7 @@ table {
 }
 
 .heavy {
-  opacity: 1.0;
+  opacity: 1;
 }
 
 .lighter {
@@ -187,7 +195,10 @@ table {
   opacity: 0.5;
 }
 
-:target.explanatory,:target.sister,:target.drv .marcion,:target.drv .meaning {
+:target.explanatory,
+:target.sister,
+:target.drv .marcion,
+:target.drv .meaning {
   background-color: #ffa;
 }
 
@@ -232,7 +243,8 @@ table {
 
 /* stylelint-disable selector-class-pattern */
 
-.sister-meaning .bibl,.sister-meaning .ref_xr {
+.sister-meaning .bibl,
+.sister-meaning .ref_xr {
   display: none;
 }
 
@@ -271,7 +283,7 @@ table {
 #xooxle thead * {
   text-align: center;
   font-weight: bold;
-  color: #2C3E50;
+  color: #2c3e50;
   font-size: 120%;
 }
 
@@ -341,7 +353,6 @@ table {
   .sisters-table {
     margin-left: 0;
   }
-
 }
 
 @media (width <= 500px) {
@@ -354,7 +365,6 @@ table {
   .checkboxes label {
     margin-right: 10px;
   }
-
 }
 
 .collapsible {

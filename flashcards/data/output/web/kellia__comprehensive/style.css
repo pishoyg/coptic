@@ -1,13 +1,17 @@
-h1,h2,h3,strong {
-  color: #2C3E50;
+h1,
+h2,
+h3,
+strong {
+  color: #2c3e50;
 }
 
 h1 {
   text-align: center;
 }
 
-a,.link {
-  color: #3498DB;
+a,
+.link {
+  color: #3498db;
   cursor: pointer;
   text-decoration: none;
 }
@@ -18,8 +22,11 @@ a,.link {
   text-decoration: inherit;
 }
 
-a:hover,.link:hover,.hover-link:hover,.collapse:hover {
-  color: #3498DB;
+a:hover,
+.link:hover,
+.hover-link:hover,
+.collapse:hover {
+  color: #3498db;
   cursor: pointer;
   text-decoration: underline;
 }
@@ -60,7 +67,7 @@ hr {
 /* Add some padding to body content */
 
 body {
-  font-family: Arial,sans-serif;
+  font-family: Arial, sans-serif;
   line-height: 1.6;
   margin: 0 auto;
   max-width: 1000px;
@@ -69,14 +76,18 @@ body {
 
 /* Anchor highlighting. */
 
-:target.explanatory,:target.sister,:target.drv .marcion,:target.drv .meaning {
+:target.explanatory,
+:target.sister,
+:target.drv .marcion,
+:target.drv .meaning {
   background-color: #ffa;
 }
 
 /* Style download links */
 
-a.download,.download-list li a {
-  background-color: #3498DB;
+a.download,
+.download-list li a {
+  background-color: #3498db;
   border-radius: 4px;
   color: #fff;
   display: inline-block;
@@ -133,7 +144,6 @@ table {
   .sisters-table {
     margin-left: 0;
   }
-
 }
 
 .inline-list {
@@ -254,7 +264,7 @@ table {
 }
 
 .heavy {
-  opacity: 1.0;
+  opacity: 1;
 }
 
 .lighter {
