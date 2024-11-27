@@ -80,9 +80,11 @@ window.addEventListener('load', () => {
     'W',
     'U',
   ];
+  // SYNC_DIALECTS is a list of lists of dialects that should be synchronized with
+  // each other.
   const SYNC_DIALECTS = [
-    ['O', 'Ak'],
-    ['L', 'sA'],
+    ['O', 'Ak'], // Old Coptic is O in Crum, and Ak (for Altkoptisch) in KELLIA.
+    ['sA', 'L'], // Lycopolitan is sA (for subAkhmimic) in Crum, and L in KELLIA.
   ];
   // DIALECT_SINGLE_CHAR is a mapping for the dialects that have shortcuts other
   // than their codes. If the shortcut to toggle a dialect is not the same as its
@@ -251,18 +253,16 @@ window.addEventListener('load', () => {
     // The empty string requires special handling.
     return d === '' ? [] : (d?.split(',') ?? null);
   }
+  // syncDialects returns the list of dialects that should be synced with the
+  // given dialect. This includes the given dialect itself.
   function syncDialects(dialect) {
-    for (const list of SYNC_DIALECTS) {
-      if (list.includes(dialect)) {
-        return list;
-      }
-    }
-    return [dialect];
+    return SYNC_DIALECTS.find((list) => list.includes(dialect)) ?? [dialect];
   }
   function toggleDialect(toggle) {
     const active = new Set(activeDialects());
+    const has = active.has(toggle);
     for (const dialect of syncDialects(toggle)) {
-      if (active.has(dialect)) {
+      if (has) {
         active.delete(dialect);
       } else {
         active.add(dialect);
@@ -535,7 +535,7 @@ window.addEventListener('load', () => {
     executable() {
       switch (this.availability) {
         case Where.XOOXLE_AND_NOTE:
-          return true;
+          return xooxle() || note();
         case Where.XOOXLE:
           return xooxle();
         case Where.NOTE:
@@ -1192,9 +1192,6 @@ window.addEventListener('load', () => {
     // If the script usage were to change, this needs to be wrapped inside a
     // function that is triggered by `load`.
     const googleSearchBox = document.querySelector('#google input');
-    if (!googleSearchBox) {
-      return;
-    }
     // Prevent search query typing from triggering a shortcut command.
     googleSearchBox.addEventListener('keydown', (e) => {
       e.stopPropagation();
@@ -1232,15 +1229,9 @@ window.addEventListener('load', () => {
     // update highlighting.
     dialectCheckboxes.forEach((checkbox) => {
       checkbox.addEventListener('click', () => {
-        SYNC_DIALECTS.forEach((list) => {
-          if (list.includes(checkbox.name)) {
-            list
-              .filter((d) => d !== checkbox.name)
-              .forEach((d) => {
-                const checkboxToSync = document.getElementById(`checkbox-${d}`);
-                checkboxToSync.checked = checkbox.checked;
-              });
-          }
+        syncDialects(checkbox.name).forEach((d) => {
+          const checkboxToSync = document.getElementById(`checkbox-${d}`);
+          checkboxToSync.checked = checkbox.checked;
         });
         localStorage.setItem(
           'd',
