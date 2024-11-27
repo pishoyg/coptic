@@ -31,7 +31,7 @@ const minifier = new CleanCSS({
       // Controls if a line break comes before a block ends.
       beforeBlockEnds: 2,
       // Controls if a line break comes between selectors.
-      betweenSelectors: 0
+      betweenSelectors: 0,
     },
     indentBy: 2,
     indentWith: 'space',
@@ -42,44 +42,50 @@ const minifier = new CleanCSS({
       // Controls if a space comes before a block begins; e.g. `.block {`.
       beforeBlockBegins: true,
       // Controls if a space comes before a value; e.g. `width: 1rem`.
-      beforeValue: true
+      beforeValue: true,
     },
     // Controls maximum line length.
     wrapAt: false,
     // Controls removing trailing semicolons in rule.
-    semicolonAfterLastProperty: true
-  }
+    semicolonAfterLastProperty: true,
+  },
 });
 
-const success = process.argv.slice(2).map((fileName) => {
-  try {
-    // Read the content of the file.
-    const input = readFileSync(fileName, 'utf-8');
+const success = process.argv
+  .slice(2)
+  .map((fileName) => {
+    try {
+      // Read the content of the file.
+      const input = readFileSync(fileName, 'utf-8');
 
-    // Minify the CSS content.
-    const output = minifier.minify(input);
+      // Minify the CSS content.
+      const output = minifier.minify(input);
 
-    // Check if there were any errors during minification.
-    if (output.errors.length > 0) {
-      console.error(`Minification errors in file: ${fileName}`, output.errors);
+      // Check if there were any errors during minification.
+      if (output.errors.length > 0) {
+        console.error(
+          `Minification errors in file: ${fileName}`,
+          output.errors
+        );
+        return false;
+      }
+
+      // Check if the minified output differs from the input.
+      if (input !== output.styles) {
+        // File content has been modified.
+        writeFileSync(fileName, output.styles, 'utf-8');
+        console.log(`Successfully minified and modified: ${fileName}`);
+        return false;
+      }
+
+      console.log(`No modifications were needed for: ${fileName}`);
+      return true;
+    } catch (err) {
+      console.error(`Error processing file: ${fileName}`, err);
       return false;
     }
-
-    // Check if the minified output differs from the input.
-    if (input !== output.styles) {
-      // File content has been modified.
-      writeFileSync(fileName, output.styles, 'utf-8');
-      console.log(`Successfully minified and modified: ${fileName}`);
-      return false;
-    }
-
-    console.log(`No modifications were needed for: ${fileName}`);
-    return true;
-  } catch (err) {
-    console.error(`Error processing file: ${fileName}`, err);
-    return false;
-  }
-}).some(x => x);
+  })
+  .some((x) => x);
 
 // Exit with a non-zero status if there was any error or file modification.
 if (!success) {

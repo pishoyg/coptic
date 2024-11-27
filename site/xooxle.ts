@@ -1,10 +1,14 @@
 const searchBox = document.getElementById('searchBox') as HTMLInputElement;
-const fullWordCheckbox = document.getElementById('fullWordCheckbox') as HTMLInputElement;
-const regexCheckbox = document.getElementById('regexCheckbox') as HTMLInputElement;
+const fullWordCheckbox = document.getElementById(
+  'fullWordCheckbox'
+) as HTMLInputElement;
+const regexCheckbox = document.getElementById(
+  'regexCheckbox'
+) as HTMLInputElement;
 const messageBox = document.getElementById('message')!;
 
 // Load the JSON file as a Promise that will resolve once the data is fetched.
-const fileMap: Promise<Xooxle[]> = (async function(): Promise<Xooxle[]> {
+const fileMap: Promise<Xooxle[]> = (async function (): Promise<Xooxle[]> {
   interface xooxle {
     readonly data: Record<string, string>[];
     readonly params: Params;
@@ -12,13 +16,18 @@ const fileMap: Promise<Xooxle[]> = (async function(): Promise<Xooxle[]> {
 
   // NOTE: Due to this `fetch`, trying to open the website as a local file in
   // the browser may not work. You have to serve it through a server.
-  return (await fetch('xooxle.json')
-    .then(async (resp) => await resp.json() as xooxle[])).map(
-    (xooxle: xooxle) => ({
-      data: xooxle.data.map(
-        record => new Candidate(record, xooxle.params.fields)),
-      params: xooxle.params,
-    } as Xooxle)
+  return (
+    await fetch('xooxle.json').then(
+      async (resp) => (await resp.json()) as xooxle[]
+    )
+  ).map(
+    (xooxle: xooxle) =>
+      ({
+        data: xooxle.data.map(
+          (record) => new Candidate(record, xooxle.params.fields)
+        ),
+        params: xooxle.params,
+      }) as Xooxle
   );
 })();
 
@@ -49,7 +58,8 @@ const UNIT_DELIMITER = '<hr class="match-separator">';
 
 // LONG_UNITS_FIELD_MESSAGE is the message shown at the end of a units field,
 // if the field gets truncated.
-const LONG_UNITS_FIELD_MESSAGE = '<br><span class="view-for-more">... (<em>view</em> for full context)</span>';
+const LONG_UNITS_FIELD_MESSAGE =
+  '<br><span class="view-for-more">... (<em>view</em> for full context)</span>';
 
 // Our currently index building algorithm results in HTML with a simplified
 // structure, with only <span> tags, styling tags, or <br> tags. Styling tags
@@ -59,9 +69,7 @@ const LINE_BREAK = '<br>';
 
 const RESULTS_TO_UPDATE_DISPLAY = 5;
 const TAG_REGEX = /<\/?[^>]+>/g;
-const CHROME_WORD_CHARS: Set<string> = new Set<string>([
-  '\'',
-]);
+const CHROME_WORD_CHARS: Set<string> = new Set<string>(["'"]);
 
 function isWordChar(char: string): boolean {
   // Unicode-aware boundary expansion
@@ -91,12 +99,12 @@ interface Params {
   // result_table_name is the ID of the table containing the results in the HTML
   // page. Xooxle will retrieve the element using this ID, and will populated
   // with the results encountered.
-  readonly result_table_name: string,
+  readonly result_table_name: string;
   // href_fmt is a format string for generating a URL to this result's page.
   // The HREF will be generated based on the KEY field of the candidate by
   // substituting the string `{KEY}`.
   // If href_fmt is zero (the empty string), no HREF will be generated.
-  readonly href_fmt: string,
+  readonly href_fmt: string;
   // fields is the list of fields in the output. For each
   // search result from the data, a row will be added to the table.
   // The first cell in the row will contain the index of the result, and
@@ -106,7 +114,7 @@ interface Params {
   // absent from this list get searched or not. Consider ensuring that it's
   // possible to search a field that doesn't necessarily show in the output.
   // This may be a desirable use case.
-  readonly fields: Field[],
+  readonly fields: Field[];
 }
 
 interface Xooxle {
@@ -141,54 +149,56 @@ class Candidate {
   readonly key: string;
   private readonly search_fields: SearchableField[];
 
-  public constructor(
-    record: Record<string, string>,
-    fields: Field[],
-  ) {
+  public constructor(record: Record<string, string>, fields: Field[]) {
     this.key = record[KEY]!;
-    this.search_fields = fields.map((field: Field) => (
-      {
-        field: field,
-        html: record[field.name]!,
-        text: htmlToText(record[field.name]!),
-      } as SearchableField
-    ));
+    this.search_fields = fields.map(
+      (field: Field) =>
+        ({
+          field: field,
+          html: record[field.name]!,
+          text: htmlToText(record[field.name]!),
+        }) as SearchableField
+    );
   }
 
   public search(regex: RegExp): SearchResult[] {
-    return this.search_fields.map(
-      (sf: SearchableField): SearchResult => {
-        const match = sf.text.match(regex);
-        if (match?.index === undefined) {
-          return {
-            match: false,
-            field: sf.field,
-            html: sf.field.units
-              ? Candidate.chopUnits(sf.html.split(UNIT_DELIMITER))
-              : sf.html,
-            word: '',
-          };
-        }
-
+    return this.search_fields.map((sf: SearchableField): SearchResult => {
+      const match = sf.text.match(regex);
+      if (match?.index === undefined) {
         return {
-          match: true,
+          match: false,
           field: sf.field,
-          html: Candidate.highlightAllMatches(
-            sf.html,
-            sf.text,
-            regex,
-            sf.field.units,
-          ),
-          word: Candidate.getMatchFullWordsForTextFragments(
-            sf.text, match.index, match[0]),
+          html: sf.field.units
+            ? Candidate.chopUnits(sf.html.split(UNIT_DELIMITER))
+            : sf.html,
+          word: '',
         };
-      });
+      }
+
+      return {
+        match: true,
+        field: sf.field,
+        html: Candidate.highlightAllMatches(
+          sf.html,
+          sf.text,
+          regex,
+          sf.field.units
+        ),
+        word: Candidate.getMatchFullWordsForTextFragments(
+          sf.text,
+          match.index,
+          match[0]
+        ),
+      };
+    });
   }
 
   // TODO: (#230) This should be a method of the SearchableField type. Same
   // below.
   private static findAllMatchingSubstrings(
-    text: string, regex: RegExp): Set<string> {
+    text: string,
+    regex: RegExp
+  ): Set<string> {
     const matches = new Set<string>();
     let match;
 
@@ -256,7 +266,7 @@ class Candidate {
       // last_push_end is the index of the end of the last pushed segment.
       let last_push_end = i;
 
-      if (fullWord && !Candidate.isBoundary(html, i-1, i)) {
+      if (fullWord && !Candidate.isBoundary(html, i - 1, i)) {
         // This is not a full-word occurrence.
         match = false;
       }
@@ -292,7 +302,7 @@ class Candidate {
         ++j;
       }
 
-      if (match && fullWord && !Candidate.isBoundary(html, j-1, j)) {
+      if (match && fullWord && !Candidate.isBoundary(html, j - 1, j)) {
         match = false;
       }
 
@@ -303,9 +313,11 @@ class Candidate {
         last_push_end = j;
         // Surround all the text (non-tag) segments with <span class="match">
         // tags.
-        result += segments.map(
-          (s: string) => s.startsWith('<') ? s : `<span class="match">${s}</span>`
-        ).join('');
+        result += segments
+          .map((s: string) =>
+            s.startsWith('<') ? s : `<span class="match">${s}</span>`
+          )
+          .join('');
         i = j;
       } else {
         result += html[i]!;
@@ -331,12 +343,18 @@ class Candidate {
     if (units.length <= UNITS_LIMIT) {
       return units.join(UNIT_DELIMITER);
     }
-    return units.slice(0, UNITS_LIMIT).join(UNIT_DELIMITER)
-      + LONG_UNITS_FIELD_MESSAGE;
+    return (
+      units.slice(0, UNITS_LIMIT).join(UNIT_DELIMITER) +
+      LONG_UNITS_FIELD_MESSAGE
+    );
   }
 
   private static highlightAllMatches(
-    html: string, text: string, regex: RegExp, units_field: boolean): string {
+    html: string,
+    text: string,
+    regex: RegExp,
+    units_field: boolean
+  ): string {
     /*
      * Args:
      *   units_field: If true, split the input into units, and:
@@ -360,17 +378,18 @@ class Candidate {
       const units = html.split(UNIT_DELIMITER);
       if (units.length <= UNITS_LIMIT) {
         // The number of units is small enough to display them all.
-        return Candidate.highlightAllMatches(
-          html, text, regex, false);
+        return Candidate.highlightAllMatches(html, text, regex, false);
       }
 
       const units_with_matches: string[] = units
-        .map(unit => Candidate.highlightAllMatches(
-          unit, htmlToText(unit), regex, false))
+        .map((unit) =>
+          Candidate.highlightAllMatches(unit, htmlToText(unit), regex, false)
+        )
         .filter((h, idx) => units[idx] !== h);
       if (units_with_matches.length) {
-        return units_with_matches.join(UNIT_DELIMITER)
-          + LONG_UNITS_FIELD_MESSAGE;
+        return (
+          units_with_matches.join(UNIT_DELIMITER) + LONG_UNITS_FIELD_MESSAGE
+        );
       }
 
       return Candidate.chopUnits(units);
@@ -386,7 +405,9 @@ class Candidate {
   }
 
   private static getMatchFullWordsForTextFragments(
-    text: string, matchStart: number, match: string
+    text: string,
+    matchStart: number,
+    match: string
   ): string {
     /* Expand the match left and right such that it contains full words, for
      * text fragment purposes.
@@ -417,7 +438,9 @@ class Candidate {
 }
 
 function errorMessage(): string {
-  const message = regexCheckbox.checked ? 'Invalid regular expression!' : 'Internal error! Please send us an email!';
+  const message = regexCheckbox.checked
+    ? 'Invalid regular expression!'
+    : 'Internal error! Please send us an email!';
   return `<span class="error">${message}</div>`;
 }
 
@@ -433,8 +456,9 @@ async function search() {
 
   function clear() {
     xooxles.forEach((xooxle) => {
-      document.getElementById(
-        xooxle.params.result_table_name)!.querySelector('tbody')!.innerHTML = '';
+      document
+        .getElementById(xooxle.params.result_table_name)!
+        .querySelector('tbody')!.innerHTML = '';
     });
   }
 
@@ -479,10 +503,12 @@ async function search() {
 async function searchOneDictionary(
   regex: RegExp,
   xooxle: Xooxle,
-  abortController: AbortController,
+  abortController: AbortController
 ) {
   let count = 0;
-  const resultTable = document.getElementById(xooxle.params.result_table_name)!.querySelector('tbody')!;
+  const resultTable = document
+    .getElementById(xooxle.params.result_table_name)!
+    .querySelector('tbody')!;
 
   // column_sentinels is a set of hidden table rows that represent sentinels
   // (anchors / break points) in the results table.
@@ -552,10 +578,12 @@ async function searchOneDictionary(
     if (xooxle.params.href_fmt) {
       // Get the word of the first field that has a match.
       const word: string = search_results.find(
-        (sr: SearchResult) => sr.match)!.word;
+        (sr: SearchResult) => sr.match
+      )!.word;
       const a = document.createElement('a');
-      a.href = xooxle.params.href_fmt.replace(
-        `{${KEY}}`, res.key) + `#:~:text=${encodeURIComponent(word)}`;
+      a.href =
+        xooxle.params.href_fmt.replace(`{${KEY}}`, res.key) +
+        `#:~:text=${encodeURIComponent(word)}`;
       a.target = '_blank';
       a.textContent = localStorage.getItem('dev') === 'true' ? res.key : 'view';
       viewCell.appendChild(a);
@@ -568,7 +596,9 @@ async function searchOneDictionary(
       row.appendChild(cell);
     });
 
-    column_sentinels[search_results.findIndex((sr) => sr.match)]!.insertAdjacentElement('beforebegin', row);
+    column_sentinels[
+      search_results.findIndex((sr) => sr.match)
+    ]!.insertAdjacentElement('beforebegin', row);
 
     // TODO: Remove the dependency on the HTML structure.
     const collapsible = resultTable.parentElement!.parentElement!;
@@ -678,20 +708,31 @@ function xooxleMain() {
 
   // Prevent other elements in the page from picking up key events on the
   // search box.
-  searchBox.addEventListener('keyup', (event: KeyboardEvent) => { event.stopPropagation(); });
-  searchBox.addEventListener('keydown', (event: KeyboardEvent) => { event.stopPropagation(); });
-  searchBox.addEventListener('keypress', (event: KeyboardEvent) => { event.stopPropagation(); });
+  searchBox.addEventListener('keyup', (event: KeyboardEvent) => {
+    event.stopPropagation();
+  });
+  searchBox.addEventListener('keydown', (event: KeyboardEvent) => {
+    event.stopPropagation();
+  });
+  searchBox.addEventListener('keypress', (event: KeyboardEvent) => {
+    event.stopPropagation();
+  });
 
   // Make the page responsive to user input.
-  searchBox.addEventListener('input', () => { handleSearchQuery(100); });
-  fullWordCheckbox.addEventListener('click', () => { handleSearchQuery(0); });
-  regexCheckbox.addEventListener('click', () => { handleSearchQuery(0); });
+  searchBox.addEventListener('input', () => {
+    handleSearchQuery(100);
+  });
+  fullWordCheckbox.addEventListener('click', () => {
+    handleSearchQuery(0);
+  });
+  regexCheckbox.addEventListener('click', () => {
+    handleSearchQuery(0);
+  });
 
   window.addEventListener('pageshow', (): void => {
     handleSearchQuery(0);
     searchBox.focus();
   });
-
 }
 
 xooxleMain();
