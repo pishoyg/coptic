@@ -19,6 +19,7 @@ declare const XOOXLE: boolean;
 function xooxle(): boolean {
   return typeof XOOXLE !== 'undefined' && XOOXLE;
 }
+
 // Since we (currently) only run on Crum notes or Xooxle, the fact that we're
 // not running on Xooxle implies that we're running on a Crum note.
 function note(): boolean {
@@ -84,9 +85,11 @@ const DIALECTS = [
   'U',
 ];
 
+// SYNC_DIALECTS is a list of lists of dialects that should be synchronized with
+// each other.
 const SYNC_DIALECTS = [
-  ['O', 'Ak'],
-  ['L', 'sA'],
+  ['O', 'Ak'], // Old Coptic is O in Crum, and Ak (for Altkoptisch) in KELLIA.
+  ['sA', 'L'], // Lycopolitan is sA (for subAkhmimic) in Crum, and L in KELLIA.
 ];
 
 // DIALECT_SINGLE_CHAR is a mapping for the dialects that have shortcuts other
@@ -280,19 +283,17 @@ function activeDialects(): string[] | null {
   return d === '' ? [] : (d?.split(',') ?? null);
 }
 
+// syncDialects returns the list of dialects that should be synced with the
+// given dialect. This includes the given dialect itself.
 function syncDialects(dialect: string): string[] {
-  for (const list of SYNC_DIALECTS) {
-    if (list.includes(dialect)) {
-      return list;
-    }
-  }
-  return [dialect];
+  return SYNC_DIALECTS.find((list) => list.includes(dialect)) ?? [dialect];
 }
 
 function toggleDialect(toggle: string): void {
   const active = new Set(activeDialects());
+  const has = active.has(toggle);
   for (const dialect of syncDialects(toggle)) {
-    if (active.has(dialect)) {
+    if (has) {
       active.delete(dialect);
     } else {
       active.add(dialect);
@@ -621,7 +622,7 @@ class Shortcut {
   executable(): boolean {
     switch (this.availability) {
       case Where.XOOXLE_AND_NOTE:
-        return true;
+        return xooxle() || note();
       case Where.XOOXLE:
         return xooxle();
       case Where.NOTE:
@@ -1361,17 +1362,11 @@ function handleXooxleElements() {
   // update highlighting.
   dialectCheckboxes.forEach((checkbox) => {
     checkbox.addEventListener('click', () => {
-      SYNC_DIALECTS.forEach((list) => {
-        if (list.includes(checkbox.name)) {
-          list
-            .filter((d) => d !== checkbox.name)
-            .forEach((d) => {
-              const checkboxToSync = document.getElementById(
-                `checkbox-${d}`
-              ) as HTMLInputElement;
-              checkboxToSync.checked = checkbox.checked;
-            });
-        }
+      syncDialects(checkbox.name).forEach((d) => {
+        const checkboxToSync = document.getElementById(
+          `checkbox-${d}`
+        ) as HTMLInputElement;
+        checkboxToSync.checked = checkbox.checked;
       });
       localStorage.setItem(
         'd',
