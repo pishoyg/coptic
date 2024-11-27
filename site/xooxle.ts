@@ -34,7 +34,7 @@ const fileMap: Promise<Xooxle[]> = (async function (): Promise<Xooxle[]> {
 // Event listener for the search button.
 let currentAbortController: AbortController | null = null;
 
-let debounceTimeout: number | null = null;
+let debounceTimeout: ReturnType<typeof setTimeout> | null = null;
 
 // KEY is the name of the field that bears the word key. The key can be used to
 // generate an HREF to open the word page.
