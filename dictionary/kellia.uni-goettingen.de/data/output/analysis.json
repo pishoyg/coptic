@@ -1,15 +1,9 @@
 {
   "superEntry": {
-    "CHILDREN": [
-      "entry"
-    ]
+    "CHILDREN": ["entry"]
   },
   "entry": {
-    "type": [
-      "compound",
-      "hom",
-      "foreign"
-    ],
+    "type": ["compound", "hom", "foreign"],
     "xml:id": [
       "11284 DISTINCT VALUES",
       "C1497",
@@ -22,27 +16,12 @@
       "C4986",
       "..."
     ],
-    "change": [
-      "#deprecated #v1.2"
-    ],
-    "STRINGS": [
-      "to be deleted?; no longer in DB"
-    ],
-    "CHILDREN": [
-      "form",
-      "gramGrp",
-      "sense",
-      "etym",
-      "xr",
-      "note"
-    ]
+    "change": ["#deprecated #v1.2"],
+    "STRINGS": ["to be deleted?; no longer in DB"],
+    "CHILDREN": ["form", "gramGrp", "sense", "etym", "xr", "note"]
   },
   "form": {
-    "type": [
-      "compound",
-      "lemma",
-      "inflected"
-    ],
+    "type": ["compound", "lemma", "inflected"],
     "xml:id": [
       "32230 DISTINCT VALUES",
       "CF31022",
@@ -55,10 +34,7 @@
       "CF20081",
       "..."
     ],
-    "change": [
-      "#added #v1.2",
-      "#deprecated #v1.2"
-    ],
+    "change": ["#added #v1.2", "#deprecated #v1.2"],
     "corresp": [
       "762 DISTINCT VALUES",
       "'CF31954', 'CF31955'",
@@ -71,18 +47,8 @@
       "CF17553",
       "..."
     ],
-    "STRINGS": [
-      "ⲙⲉⲧϩⲟⲩⲟ",
-      "ⲓ",
-      "ⲣⲧϭⲟⲧ"
-    ],
-    "CHILDREN": [
-      "gramGrp",
-      "note",
-      "usg",
-      "oRef",
-      "orth"
-    ]
+    "STRINGS": ["ⲙⲉⲧϩⲟⲩⲟ", "ⲓ", "ⲣⲧϭⲟⲧ"],
+    "CHILDREN": ["gramGrp", "note", "usg", "oRef", "orth"]
   },
   "gramGrp": {
     "STRINGS": [
@@ -93,14 +59,7 @@
       "<gram type=\"pos\">Possessivartikel</gram>\n         <gram type=\"gen\">f.</gram>\n         <gram type=\"number\">sg.</gram>\n         <gram type=\"person[psor]\">1.</gram>\n         <gram type=\"number[psor]\">sg.</gram>",
       "<gram type=\"pos\">Possessivartikel</gram>\n          <gram type=\"number\">pl.</gram>\n          <gram type=\"person[psor]\">1.</gram>\n          <gram type=\"number[psor]\">sg.</gram>"
     ],
-    "CHILDREN": [
-      "note",
-      "gram",
-      "subc",
-      "gen",
-      "pos",
-      "number"
-    ]
+    "CHILDREN": ["note", "gram", "subc", "gen", "pos", "number"]
   },
   "sense": {
     "xml:id": [
@@ -115,36 +74,17 @@
       "CS11727",
       "..."
     ],
-    "CHILDREN": [
-      "xr",
-      "note",
-      "cit",
-      "ref"
-    ]
+    "CHILDREN": ["xr", "note", "cit", "ref"]
   },
   "etym": {
-    "CHILDREN": [
-      "xr",
-      "note",
-      "ref"
-    ]
+    "CHILDREN": ["xr", "note", "ref"]
   },
   "xr": {
-    "type": [
-      "syn",
-      "ant",
-      "cf"
-    ],
-    "CHILDREN": [
-      "ref"
-    ]
+    "type": ["syn", "ant", "cf"],
+    "CHILDREN": ["ref"]
   },
   "note": {
-    "xml:lang": [
-      "de",
-      "fr",
-      "en"
-    ],
+    "xml:lang": ["de", "fr", "en"],
     "STRINGS": [
       "405 DISTINCT VALUES",
       "nicht von Personen",
@@ -159,16 +99,8 @@
     ]
   },
   "cit": {
-    "type": [
-      "translation",
-      "example"
-    ],
-    "CHILDREN": [
-      "note",
-      "def",
-      "quote",
-      "bibl"
-    ]
+    "type": ["translation", "example"],
+    "CHILDREN": ["note", "def", "quote", "bibl"]
   },
   "gram": {
     "type": [
@@ -193,11 +125,7 @@
     ]
   },
   "def": {
-    "xml:lang": [
-      "de",
-      "fr",
-      "en"
-    ],
+    "xml:lang": ["de", "fr", "en"],
     "STRINGS": [
       "146 DISTINCT VALUES",
       "indiquant une approximation",
@@ -212,11 +140,7 @@
     ]
   },
   "quote": {
-    "xml:lang": [
-      "de",
-      "fr",
-      "en"
-    ],
+    "xml:lang": ["de", "fr", "en"],
     "STRINGS": [
       "28320 DISTINCT VALUES",
       "market",
@@ -254,9 +178,7 @@
       "greek_lemma::grl_meaning",
       "greek_lemma::grl_ref"
     ],
-    "xml:lang": [
-      "grc"
-    ],
+    "xml:lang": ["grc"],
     "STRINGS": [
       "17117 DISTINCT VALUES",
       "6689",
@@ -271,9 +193,7 @@
     ]
   },
   "usg": {
-    "type": [
-      "geo"
-    ],
+    "type": ["geo"],
     "STRINGS": [
       "11 DISTINCT VALUES",
       "A",
@@ -302,10 +222,7 @@
     ]
   },
   "gen": {
-    "STRINGS": [
-      "f.",
-      "m."
-    ]
+    "STRINGS": ["f.", "m."]
   },
   "pos": {
     "STRINGS": [
@@ -322,10 +239,7 @@
     ]
   },
   "number": {
-    "STRINGS": [
-      "sg.",
-      "pl."
-    ]
+    "STRINGS": ["sg.", "pl."]
   },
   "oRef": {
     "STRINGS": [

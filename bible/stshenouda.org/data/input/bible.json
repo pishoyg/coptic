@@ -1,12 +1,6 @@
 {
   "OT": {
-    "Pentateuch": [
-      "Genesis",
-      "Exodus",
-      "Leviticus",
-      "Numbers",
-      "Deuteronomy"
-    ],
+    "Pentateuch": ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy"],
     "Historical Books": [
       "Joshua",
       "Judges",
@@ -65,9 +59,7 @@
       "Gospel of St. Luke",
       "Gospel of St. John"
     ],
-    "Acts of the Apostles": [
-      "Acts of the Apostles"
-    ],
+    "Acts of the Apostles": ["Acts of the Apostles"],
     "Pauline Epistles": [
       "Epistle to the Romans",
       "First Epistle to the Corinthians",
@@ -93,8 +85,6 @@
       "Third Epistle of St. John",
       "Epistle of St. Jude"
     ],
-    "Apocalypse": [
-      "Apocalypse"
-    ]
+    "Apocalypse": ["Apocalypse"]
   }
 }
