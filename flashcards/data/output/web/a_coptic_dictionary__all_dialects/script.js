@@ -80,6 +80,10 @@ window.addEventListener('load', () => {
     'W',
     'U',
   ];
+  const SYNC_DIALECTS = [
+    ['O', 'Ak'],
+    ['L', 'sA'],
+  ];
   // DIALECT_SINGLE_CHAR is a mapping for the dialects that have shortcuts other
   // than their codes. If the shortcut to toggle a dialect is not the same as its
   // code, it should be included in this record.
@@ -247,14 +251,24 @@ window.addEventListener('load', () => {
     // The empty string requires special handling.
     return d === '' ? [] : (d?.split(',') ?? null);
   }
-  function toggleDialect(toggle) {
-    const dd = new Set(activeDialects());
-    if (dd.has(toggle)) {
-      dd.delete(toggle);
-    } else {
-      dd.add(toggle);
+  function syncDialects(dialect) {
+    for (const list of SYNC_DIALECTS) {
+      if (list.includes(dialect)) {
+        return list;
+      }
     }
-    localStorage.setItem('d', Array.from(dd).join(','));
+    return [dialect];
+  }
+  function toggleDialect(toggle) {
+    const active = new Set(activeDialects());
+    for (const dialect of syncDialects(toggle)) {
+      if (active.has(dialect)) {
+        active.delete(dialect);
+      } else {
+        active.add(dialect);
+      }
+    }
+    localStorage.setItem('d', Array.from(active).join(','));
   }
   // Handle 'developer' and 'dev' classes.
   function toggleDev() {
@@ -1178,6 +1192,9 @@ window.addEventListener('load', () => {
     // If the script usage were to change, this needs to be wrapped inside a
     // function that is triggered by `load`.
     const googleSearchBox = document.querySelector('#google input');
+    if (!googleSearchBox) {
+      return;
+    }
     // Prevent search query typing from triggering a shortcut command.
     googleSearchBox.addEventListener('keydown', (e) => {
       e.stopPropagation();
@@ -1215,6 +1232,16 @@ window.addEventListener('load', () => {
     // update highlighting.
     dialectCheckboxes.forEach((checkbox) => {
       checkbox.addEventListener('click', () => {
+        SYNC_DIALECTS.forEach((list) => {
+          if (list.includes(checkbox.name)) {
+            list
+              .filter((d) => d !== checkbox.name)
+              .forEach((d) => {
+                const checkboxToSync = document.getElementById(`checkbox-${d}`);
+                checkboxToSync.checked = checkbox.checked;
+              });
+          }
+        });
         localStorage.setItem(
           'd',
           dialectCheckboxes
