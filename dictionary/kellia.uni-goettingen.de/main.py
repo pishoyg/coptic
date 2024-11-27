@@ -9,6 +9,7 @@
 import glob
 import os
 import re
+import typing
 import xml.etree.ElementTree as ET
 from collections import OrderedDict, defaultdict
 
@@ -33,7 +34,7 @@ OUTPUT = [
     "dictionary/kellia.uni-goettingen.de/data/output/tsv/comprehensive.tsv",
 ]
 
-entity_types: defaultdict = defaultdict(set)
+entity_types: defaultdict[str, set[str]] = defaultdict(set)
 
 
 def add_crum_links(ref_bibl: str) -> str:
@@ -43,7 +44,8 @@ def add_crum_links(ref_bibl: str) -> str:
     )
 
 
-def compress(text: str) -> str:
+def compress(text: str | None) -> str:
+    assert text is not None
     return " ".join(text.split())
 
 
@@ -58,24 +60,24 @@ def cdo(entry_xml_id: str) -> str:
 
 class Reformat:
     def __init__(self):
-        self._amir = ""
+        self._amir: str = ""
 
-    def amir(self):
+    def amir(self) -> str:
         return self._amir
 
-    def pishoy(self):
+    def pishoy(self) -> str | list[str]:
         raise ValueError("Not implemented!")
 
 
 class Line:
-    def __init__(self, gram_grp, orth, geo, form_id):
-        self._gram_grp = gram_grp
-        self._orth = orth
-        self._geo = "U" if geo == "?" else geo
-        self._form_id = form_id
+    def __init__(self, gram_grp: str, orth: str, geo: str, form_id: str):
+        self._gram_grp: str = gram_grp
+        self._orth: str = orth
+        self._geo: str = "U" if geo == "?" else geo
+        self._form_id: str = form_id
 
     def pishoy_tr(self) -> str:
-        pairs = [
+        pairs: list[tuple[str, str]] = [
             (f"orth spelling {self._geo}", self._orth),
             (f"geo dialect {self._geo}", self._geo),
             (f"gram_grp type {self._geo}", self._gram_grp),
@@ -90,15 +92,21 @@ class Line:
 class OrthString(Reformat):
     def __init__(self):
         super().__init__()
-        self._pishoy = []
+        self._pishoy: list[Line] = []
+        self._last_gram_grp: str = ""
 
     # For each entry, you add one grammar group, then several orth's per form.
-    def add_gram_grp(self, gramGrp) -> None:
+    def add_gram_grp(self, gramGrp: ET.Element) -> None:
         gram_string = " ".join(compress(child.text) for child in gramGrp)
         self._last_gram_grp = gram_string
         self._amir += gram_string + "\n"
 
-    def add_orth_geo_id(self, orth_text, geos, form_id) -> None:
+    def add_orth_geo_id(
+        self,
+        orth_text: str,
+        geos: list[str],
+        form_id: str,
+    ) -> None:
         if not geos:
             geos = ["S"]
         for g in geos:
@@ -109,8 +117,9 @@ class OrthString(Reformat):
         for g in geos:
             self._amir += orth_text + "~" + g + "\n"
 
+    @typing.override
     def pishoy(self):
-        out = []
+        out: list[str] = []
         out.append('<table id="orths">')
         for line in self._pishoy:
             out.append(line.pishoy_tr())
@@ -119,16 +128,18 @@ class OrthString(Reformat):
 
 
 class EtymString(Reformat):
-    def __init__(self, etym, xrs) -> None:
+    def __init__(self, etym: ET.Element | None, xrs: list[ET.Element]) -> None:
         super().__init__()
-        self._greek_id = ""
+        self._greek_id: str = ""
         if etym is not None:
-            greek_dict = OrderedDict()
+            greek_dict: OrderedDict[str, str | None] = OrderedDict()
             for child in etym:
                 if child.tag == "{http://www.tei-c.org/ns/1.0}note":
                     self._amir += compress(child.text)
                 elif child.tag == "{http://www.tei-c.org/ns/1.0}ref":
                     if "type" in child.attrib and "target" in child.attrib:
+                        assert child.attrib["type"]
+                        assert child.attrib["target"]
                         self._amir += (
                             child.attrib["type"]
                             + ": "
@@ -136,6 +147,8 @@ class EtymString(Reformat):
                             + " "
                         )
                     elif "targetLang" in child.attrib:
+                        assert child.attrib["targetLang"]
+                        assert child.text
                         self._amir += (
                             child.attrib["targetLang"]
                             + ": "
@@ -147,6 +160,9 @@ class EtymString(Reformat):
                             greek_dict[child.attrib["type"]] = child.text
                 elif child.tag == "{http://www.tei-c.org/ns/1.0}xr":
                     for ref in child:
+                        assert child.attrib["type"]
+                        assert ref.attrib["target"]
+                        assert ref.text
                         self._amir += (
                             child.attrib["type"]
                             + ". "
@@ -185,6 +201,9 @@ class EtymString(Reformat):
         for xr in xrs:
             for ref in xr:
                 ref_target = clean(ref.attrib["target"])
+                assert xr.attrib["type"]
+                assert ref_target
+                assert ref.text
                 self._amir += (
                     xr.attrib["type"]
                     + ". "
@@ -200,20 +219,19 @@ class EtymString(Reformat):
 
     def process(self):
         etym = self.amir()
-        xrs = re.findall(r" #(.*?)#", etym)
-        if xrs is not None:
-            for xr in xrs:
-                word = xr
-                link = (
-                    '<a href="https://coptic-dictionary.org/results.cgi?coptic='
-                    + word
-                    + '">'
-                    + word
-                    + "</a>"
-                )
-                word = re.sub(r"\(", "\\(", word)
-                word = re.sub(r"\)", "\\)", word)
-                etym = re.sub(r"#" + word + "#", link, etym)
+        xrs: list[str] = re.findall(r" #(.*?)#", etym)
+        for xr in xrs:
+            word = xr
+            link: str = (
+                '<a href="https://coptic-dictionary.org/results.cgi?coptic='
+                + word
+                + '">'
+                + word
+                + "</a>"
+            )
+            word = re.sub(r"\(", "\\(", word)
+            word = re.sub(r"\)", "\\)", word)
+            etym = re.sub(r"#" + word + "#", link, etym)
         if "cf. Gr." in etym:
             etym = link_greek(etym)
         etym = gloss_bibl(etym)
@@ -233,20 +251,20 @@ class Sense:
         for q in quotes:
             self._content.append(("quote", q))
 
-    def add(self, name, value):
+    def add(self, name: str, value: str):
         assert name in SENSE_CHILDREN or (not name and not value)
         self._content.append((name, value))
 
-    def add_definition(self, definition):
+    def add_definition(self, definition: str):
         self.add("definition", definition)
 
-    def add_bibl(self, bibl):
+    def add_bibl(self, bibl: str):
         self.add("bibl", bibl)
 
-    def add_ref(self, ref):
+    def add_ref(self, ref: str):
         self.add("ref", ref)
 
-    def add_xr(self, xr):
+    def add_xr(self, xr: str):
         self.add("xr", xr)
 
     def format(self, tag_name: str, tag_text: str) -> str:
@@ -266,7 +284,7 @@ class Sense:
         return (self._sense_n, self._sense_id)
 
     def pishoy(self) -> str:
-        content = []
+        content: list[str] = []
         content.extend(
             [
                 f"<!--sense_number:{self._sense_n}, sense_id:{self._sense_id}-->",
@@ -318,32 +336,58 @@ class Sense:
         return self.subset("bibl", "ref", "xr")
 
 
-class Lang(Reformat):
-    def __init__(self, name):
+class Quote(Reformat):
+    def __init__(self):
         super().__init__()
-        assert name in ["de", "en", "fr", "MERGED"]
-        self._name = name
+        self.reset()
+        self._pishoy: list[str] = []
+
+    def add_quote(self, quote: ET.Element) -> None:
+        text: str = compress(quote.text)
+        self._amir += text
+        self._pishoy.append(text)
+
+    def reset(self) -> None:
+        self._amir: str = "~~~"
         self._pishoy = []
 
-    def add_sense(self, sense_n, sense_id):
+    def no_definitions(self) -> None:
+        self._amir += ";;;"
+
+    def yes_definitions(self) -> None:
+        self._amir += "; "
+
+    @typing.override
+    def pishoy(self) -> list[str]:
+        return self._pishoy
+
+
+class Lang(Reformat):
+    def __init__(self, name: str):
+        super().__init__()
+        assert name in ["de", "en", "fr", "MERGED"]
+        self._name: str = name
+        self._pishoy: list[Sense] = []
+
+    def add_sense(self, sense_n: int, sense_id: str):
         self._amir += str(sense_n) + "@" + sense_id + "|"
         self._pishoy.append(Sense(sense_n, sense_id))
 
     def _last_sense(self) -> Sense:
         return self._pishoy[-1]
 
-    def add_quote(self, quote) -> None:
+    def add_quote(self, quote: Quote) -> None:
         self._amir += quote.amir()
         self._last_sense().extend_quotes(quote.pishoy())
 
-    def add_definition(self, definition) -> None:
+    def add_definition(self, definition: ET.Element) -> None:
         self._last_sense().add_definition(compress(definition.text))
         if self._amir.endswith("|"):
             self._amir += "~~~"
         definition_text = compress(definition.text) + ";;;"
         self._amir += definition_text
 
-    def add_bibl(self, bibl):
+    def add_bibl(self, bibl: ET.Element | None) -> None:
         if bibl is None:
             return
         if not bibl.text:
@@ -351,24 +395,27 @@ class Lang(Reformat):
         self._amir += bibl.text + " "
         self._last_sense().add_bibl(bibl.text)
 
-    def add_ref(self, ref):
+    def add_ref(self, ref: ET.Element):
+        assert ref.text
         self._last_sense().add_ref(ref.text)
         self._amir += "ref: " + ref.text + " "
 
-    def add_xr(self, xr):
+    def add_xr(self, xr: ET.Element):
         for ref in xr:
+            assert ref.text
             text = xr.tag[29:] + ". " + ref.attrib["target"] + "# " + ref.text
             self._amir += text + " "
             self._last_sense().add_xr(text)
 
     def finalize(self):
-        self._amir = compress(self._amir)
+        self._amir: str = compress(self._amir)
 
-    def add(self, name, value):
+    def add(self, name: str, value: str):
         self._last_sense().add(name, value)
 
+    @typing.override
     def pishoy(self):
-        out = []
+        out: list[str] = []
         out.extend(
             [
                 '<table id="senses">',
@@ -406,31 +453,7 @@ def merge_langs(de: Lang, en: Lang, fr: Lang):
     return merged
 
 
-class Quote(Reformat):
-    def __init__(self):
-        super().__init__()
-        self.reset()
-
-    def add_quote(self, quote) -> None:
-        text: str = compress(quote.text)
-        self._amir += text
-        self._pishoy.append(text)
-
-    def reset(self) -> None:
-        self._amir = "~~~"
-        self._pishoy: list[str] = []
-
-    def no_definitions(self) -> None:
-        self._amir += ";;;"
-
-    def yes_definitions(self) -> None:
-        self._amir += "; "
-
-    def pishoy(self) -> list[str]:
-        return self._pishoy
-
-
-def gloss_bibl(ref_bibl):
+def gloss_bibl(ref_bibl: str) -> str:
     """Adds tooltips to lexical resource names."""
 
     page_expression = r"(?: §)? ?[0-9A-Za-z:]+(, ?[0-9A-Za-z:]+)*"
@@ -559,7 +582,7 @@ def gloss_bibl(ref_bibl):
     return ref_bibl
 
 
-def link_greek(etym):
+def link_greek(etym: str):
     m = re.search(r"cf\. Gr\.[^<>]+</span>([^<>]+)<i>", etym)
     if m is None:
         return etym
@@ -581,50 +604,52 @@ def link_greek(etym):
     return linked
 
 
-def order_forms(formlist):
-    temp = []
+def order_forms(formlist: list[ET.Element]) -> list[ET.Element]:
+    temp: list[tuple[str, str, ET.Element]] = []
     for form in formlist:
         orths = form.findall("{http://www.tei-c.org/ns/1.0}orth")
         text = ""
         dialect = ""
         for orth in orths:
+            assert orth.text
             text = orth.text.replace("⸗", "--")  # Sort angle dash after hyphen
             geo = form.find("{http://www.tei-c.org/ns/1.0}usg")
             if geo is not None:
+                assert geo.text
                 dialect = geo.text.replace("Ak", "K")
                 if dialect != "S":
                     dialect = "_" + dialect  # Sahidic always first
 
         temp.append((text, dialect, form))
 
-    output = []
+    output: list[ET.Element] = []
     for _, _, f in sorted(temp, key=lambda x: (x[0], x[1])):
         output.append(f)
 
     return output
 
 
-def get(attr, line):
+def get(attr: str, line: str) -> str:
     s = re.search(" " + attr + r'="([^"]*)"', line)
     assert s
     return s.group(1)
 
 
-def get_entity_types(pub_corpora_dir):
+def get_entity_types(pub_corpora_dir: str) -> defaultdict[str, set[str]]:
     if not pub_corpora_dir.endswith(os.sep):
         pub_corpora_dir += os.sep
     tt_files = glob.glob(
         pub_corpora_dir + "**" + os.sep + "*.tt",
         recursive=True,
     )
-    entity_types = defaultdict(set)
+    entity_types: defaultdict[str, set[str]] = defaultdict(set)
     for file_ in tt_files:
         sgml = open(file_, encoding="utf8").read()
         if ' entities="gold"' not in sgml:
             continue  # Only use gold entities
         lines = sgml.split("\n")
         # Pass 1 - get head lemmas
-        id2lemma = {}
+        id2lemma: dict[str, str] = {}
         for line in lines:
             if "norm" in line and "xml:id" in line:
                 xml_id = get("xml:id", line)
@@ -640,7 +665,12 @@ def get_entity_types(pub_corpora_dir):
     return entity_types
 
 
-def process_entry(id, super_id, entry, entry_xml_id):
+def process_entry(
+    id: int,
+    super_id: int,
+    entry: ET.Element,
+    entry_xml_id: str,
+) -> dict[str, int | str] | None:
     """
     :param id: int, id of the entry
     :param super_id: int, id of the superentry
@@ -672,6 +702,7 @@ def process_entry(id, super_id, entry, entry_xml_id):
     search_string = "\n"
 
     lemma = None
+    orths: list[ET.Element] = []
     for form in forms:
         is_lemma = False
         if "status" in form.attrib:
@@ -693,8 +724,8 @@ def process_entry(id, super_id, entry, entry_xml_id):
     if lemma is None:
         utils.error("No lemma type for entry of", orths[0].text)
 
-    first = []
-    last = []
+    first: list[ET.Element] = []
+    last: list[ET.Element] = []
     for form in forms:
         if "status" in form.attrib:
             if form.attrib["status"] == "deprecated":
@@ -756,14 +787,17 @@ def process_entry(id, super_id, entry, entry_xml_id):
 
         geos_with_id = [g + "^^" + form_id for g in geos]
         for orth in orths:
+            assert orth.text
             orth_text = orth.text.strip()
 
             if len(orefs) > 0:
+                assert orefs[0].text
                 oref_text = orefs[0].text
             else:
                 oref_text = orth_text
 
             search_text = clean(orth_text)
+            assert oref_text
             oref_text = clean(oref_text)
 
             orthstring.add_orth_geo_id(orth_text, geos, form_id)
@@ -780,7 +814,6 @@ def process_entry(id, super_id, entry, entry_xml_id):
 
     first_orth_re = re.search(r"\n(.*?)~", orthstring._amir)
     if first_orth_re is not None:
-        first_orth = first_orth_re.group(1)
         ascii_orth = ""
         mapping = {
             "ⲁ": "A",
@@ -817,7 +850,8 @@ def process_entry(id, super_id, entry, entry_xml_id):
             "ϯ": "SI",
             " ": " ",
         }
-        for char in first_orth:
+        # Extract the first orth.
+        for char in first_orth_re.group(1):
             if char in mapping:
                 ascii_orth += mapping[char]
     else:
@@ -854,9 +888,9 @@ def process_entry(id, super_id, entry, entry_xml_id):
 
                 q = Quote()
                 for quote in quotes:
-                    if quote is not None and quote.text is not None:
+                    if quote.text is not None:
                         q.add_quote(quote)
-                        if definitions is None or len(definitions) == 0:
+                        if len(definitions) == 0:
                             q.no_definitions()
                         else:
                             q.yes_definitions()
@@ -871,17 +905,16 @@ def process_entry(id, super_id, entry, entry_xml_id):
                             fr.add_quote(q)
                         q.reset()
                 for definition in definitions:
-                    if definition is not None:
-                        if definition.text is not None:
-                            lang = definition.get(
-                                "{http://www.w3.org/XML/1998/namespace}lang",
-                            )
-                            if lang == "de":
-                                de.add_definition(definition)
-                            elif lang == "en":
-                                en.add_definition(definition)
-                            elif lang == "fr":
-                                fr.add_definition(definition)
+                    if definition.text is not None:
+                        lang = definition.get(
+                            "{http://www.w3.org/XML/1998/namespace}lang",
+                        )
+                        if lang == "de":
+                            de.add_definition(definition)
+                        elif lang == "en":
+                            en.add_definition(definition)
+                        elif lang == "fr":
+                            fr.add_definition(definition)
                 de.add_bibl(bibl)
                 en.add_bibl(bibl)
                 fr.add_bibl(bibl)
@@ -907,19 +940,21 @@ def process_entry(id, super_id, entry, entry_xml_id):
     fr.finalize()
 
     # POS -- a single Scriptorium POS tag for each entry
-    pos_list = []
+    pos_list: list[str] = []
     for gramgrp in entry.iter("{http://www.tei-c.org/ns/1.0}gramGrp"):
         pos = gramgrp.find("{http://www.tei-c.org/ns/1.0}pos")
         if pos is not None:
+            assert pos.text
             pos_text = pos.text
         else:
             pos_text = "None"
         subc = gramgrp.find("{http://www.tei-c.org/ns/1.0}subc")
         if subc is not None:
+            assert subc.text
             subc_text = subc.text
         else:
             subc_text = "None"
-        new_pos = pos_map(pos_text, subc_text, orthstring._amir)
+        new_pos: str = pos_map(pos_text, subc_text, orthstring._amir)
         if new_pos not in pos_list:
             pos_list.append(new_pos)
     if len(list(pos_list)) > 1:
@@ -981,8 +1016,12 @@ def process_entry(id, super_id, entry, entry_xml_id):
     }
 
 
-def process_super_entry(entry_id, super_id, super_entry):
-    row_list = []
+def process_super_entry(
+    entry_id: int,
+    super_id: int,
+    super_entry: ET.Element,
+) -> list[dict[str, str | int]]:
+    row_list: list[dict[str, str | int]] = []
     for entry in super_entry:
         entry_xml_id = (
             entry.attrib["{http://www.w3.org/XML/1998/namespace}id"]
@@ -1015,7 +1054,7 @@ def process_super_entry(entry_id, super_id, super_entry):
     return row_list
 
 
-def pos_map(pos, subc, orthstring):
+def pos_map(pos: str, subc: str, orthstring: str) -> str:
     """
     :param pos: string
     :param subc: string
@@ -1133,11 +1172,13 @@ def main():
             )
         )
         assert text is not None
-        body = text.find("{http://www.tei-c.org/ns/1.0}body")
+        body: ET.Element | None = text.find(
+            "{http://www.tei-c.org/ns/1.0}body",
+        )
         del text
         assert body is not None
 
-        rows = []
+        rows: list[dict[str, str | int]] = []
         for child in body:
             if child.tag == "{http://www.tei-c.org/ns/1.0}entry":
                 entry_xml_id = (
@@ -1170,10 +1211,10 @@ def main():
                 super_id += 1
                 entry_id += 1
             elif child.tag == "{http://www.tei-c.org/ns/1.0}superEntry":
-                cur = process_super_entry(entry_id, super_id, child)
-                rows.extend(cur)
+                cur_rows = process_super_entry(entry_id, super_id, child)
+                rows.extend(cur_rows)
                 super_id += 1
-                entry_id += len(cur)
+                entry_id += len(cur_rows)
 
         df = pd.DataFrame(rows)
         df["cdo"] = [cdo(entry) for entry in df["entry_xml_id"]]
