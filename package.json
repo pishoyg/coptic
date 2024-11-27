@@ -8,11 +8,18 @@
     "clean-css": "^5.3.3",
     "eslint": "^9.15.0",
     "globals": "^15.11.0",
+    "prettier": "^3.4.1",
     "stylelint": "^16.10.0",
     "stylelint-config-standard-scss": "^13.1.0",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.9.0",
     "webpack": "^5.96.1",
     "webpack-cli": "^5.1.4"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true
   }
 }

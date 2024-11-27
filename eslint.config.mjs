@@ -18,15 +18,24 @@ export default tseslint.config(
     rules: {
       semi: 'error',
       'prefer-const': 'error',
-      'indent': ['error', 2],
-      'max-len': ['error', {
-        'code': 80,
-        'ignoreTemplateLiterals': true,
-        'ignoreStrings': true,
-        'ignoreRegExpLiterals': true,
-      }],
+      indent: ['error', 2, { SwitchCase: 1 }],
+      'max-len': [
+        'error',
+        {
+          code: 80,
+          ignoreTemplateLiterals: true,
+          ignoreStrings: true,
+          ignoreRegExpLiterals: true,
+        },
+      ],
       '@typescript-eslint/no-non-null-assertion': 'warn',
-      '@stylistic/quotes': ['error', 'single'],
+      '@stylistic/quotes': [
+        'error',
+        'single',
+        {
+          avoidEscape: true,
+        },
+      ],
     },
     languageOptions: {
       parserOptions: {
@@ -38,7 +47,7 @@ export default tseslint.config(
         XOOXLE: true,
         ANKI: true,
       },
-    }
+    },
   },
   {
     files: ['**/*.js', '**/*.jsx', '**/*.cjs', '**/*.mjs'],
@@ -50,5 +59,5 @@ export default tseslint.config(
       'max-len': ['warn'],
       '@typescript-eslint/no-unused-expressions': 'warn',
     },
-  },
+  }
 );
