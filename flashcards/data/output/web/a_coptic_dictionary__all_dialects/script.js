@@ -34,28 +34,25 @@ window.addEventListener('load', () => {
     DIALECT_ARTICLE['NO_ARTICLE'] = '';
     // DIALECTS is a generic article about dialects.
     DIALECT_ARTICLE['DIALECTS'] =
-      'https://drive.google.com/file/d/1-lWPn7XzVQdiYW0y1EKGASHWN32l416W/view?usp=sharing';
-    // DIALECTS_WANTING_HOME is also a generic article about dialects.
-    DIALECT_ARTICLE['DIALECTS_WANTING_HOME'] =
-      'https://drive.google.com/file/d/1-0pUitCFq00NxUuog2zKWqmVAXSJcEaa/view?usp=sharing';
+      'https://ccdl.claremont.edu/digital/collection/cce/id/2015/rec/6';
     DIALECT_ARTICLE['Sahidic'] =
-      'https://drive.google.com/file/d/1-VrJkEEY3Ln9zTryhzfAOQITUGKh4nX1/view?usp=sharing';
+      'https://ccdl.claremont.edu/digital/collection/cce/id/2029/rec/2';
     DIALECT_ARTICLE['Akhmimic'] =
-      'https://drive.google.com/file/d/1-8NnctwGRuELh5vUyg8Q6cLvC18QFQ_7/view?usp=sharing';
+      'https://ccdl.claremont.edu/digital/collection/cce/id/1962/rec/1';
     DIALECT_ARTICLE['subAkhmimic_Lycopolitan'] =
-      'https://drive.google.com/file/d/1-DlCHvLq4BW9D-Na9l5tSTMMAqk5RyS7/view?usp=sharing';
+      'https://ccdl.claremont.edu/digital/collection/cce/id/2026/rec/1';
     DIALECT_ARTICLE['Bohairic'] =
-      'https://drive.google.com/file/d/1-PLhTRIuMdQWCQjEiKQA7Z6kI9_EQU1r/view?usp=sharing';
+      'https://ccdl.claremont.edu/digital/collection/cce/id/2011/rec/2';
     DIALECT_ARTICLE['Fayyumic'] =
-      'https://drive.google.com/file/d/1-7irhAMOrhIUuOZO4L0PS70WN362-8qM/view?usp=sharing';
+      'https://ccdl.claremont.edu/digital/collection/cce/id/1989/rec/2';
     DIALECT_ARTICLE['OldCoptic'] =
-      'https://drive.google.com/file/d/1-JShCo-nvO11X2QrWVip1n9UjLmadRyN/view?usp=sharing';
+      'https://ccdl.claremont.edu/digital/collection/cce/id/2027/rec/2';
     DIALECT_ARTICLE['NagHammadi'] =
-      'https://drive.google.com/file/d/1-XYu8BUiLgLKnlhy5rTC_JLmrDW67J5T/view?usp=sharing';
+      'https://ccdl.claremont.edu/digital/collection/cce/id/1418/rec/2';
     DIALECT_ARTICLE['Mesokemic'] =
-      'https://drive.google.com/file/d/1-8oyA_aogjiAL6pt2L7DvqsTgrZHoVD8/view?usp=sharing';
+      'https://ccdl.claremont.edu/digital/collection/cce/id/1996/rec/2';
     DIALECT_ARTICLE['ProtoTheban'] =
-      'https://drive.google.com/file/d/1-8mMgSvtM9JMzQAvM9HEOotxYUOBo1Bc/view?usp=sharing';
+      'https://ccdl.claremont.edu/digital/collection/cce/id/1984/rec/1';
   })(DIALECT_ARTICLE || (DIALECT_ARTICLE = {}));
   const DAWOUD_OFFSET = 16;
   const DIALECTS = [
