@@ -25,8 +25,6 @@ const SEARCH = `${HOME}/crum`;
 const LOOKUP_URL_PREFIX = `${SEARCH}/?query=`;
 const EMAIL = 'remnqymi@gmail.com';
 const EMAIL_LINK = `mailto:${EMAIL}`;
-// TODO: (#290) Eliminate the use of generic articles, or the absence of an
-// article. Seek to have informative articles for all varieties.
 var DIALECT_ARTICLE;
 (function (DIALECT_ARTICLE) {
   // NO_ARTICLE indicates the absence of an article.
@@ -1172,12 +1170,6 @@ function handleNoteElements() {
   );
 }
 function initGoogleSearchBox() {
-  // NOTE: We have to do this when the page is fully loaded to guarantee that
-  // the Google search box has already been loaded by the Google-provided
-  // script. Right now, our entire script is wrapped inside a function that
-  // is triggered by the `load` event, so we don't have to worry about this.
-  // If the script usage were to change, this needs to be wrapped inside a
-  // function that is triggered by `load`.
   const googleSearchBox = document.querySelector('#google input');
   // Prevent search query typing from triggering a shortcut command.
   googleSearchBox.addEventListener('keydown', (e) => {
@@ -1230,7 +1222,11 @@ function handleXooxleElements() {
       highlighter.updateDialects();
     });
   });
-  initGoogleSearchBox();
+  // NOTE: We have to do this when the page is fully loaded to guarantee that
+  // the Google search box has already been loaded by the Google-provided
+  // script. The correct way to do this is to wrap this in a `load` event
+  // handler.
+  window.addEventListener('load', initGoogleSearchBox);
 }
 function handleCommonElements() {
   // When we first load the page, 'd' dictates the set of active dialects and
