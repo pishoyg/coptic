@@ -30,9 +30,6 @@ HTML_FMT = f"""<!DOCTYPE html>
 </html>
 """
 
-WEB_JS_FMT = """'use strict';
-window.addEventListener("load", () => {{ {javascript} }});
-"""
 # NOTE: In the Anki version of JavaScript, everything is wrapped in a function,
 # because global variables have been problematic with Anki.
 # See https://github.com/pishoyg/coptic/issues/186.
@@ -253,14 +250,7 @@ class deck:
                 )
         if self.javascript:
             with open(os.path.join(dir, JS_BASENAME), "w") as f:
-                f.write(
-                    WEB_JS_FMT.format(
-                        javascript=self.javascript.replace(
-                            "'use strict';",
-                            "",
-                        ),
-                    ),
-                )
+                f.write(self.javascript)
         with open(os.path.join(dir, CSS_BASENAME), "w") as f:
             f.write(self.css)
         for path in self.media:
