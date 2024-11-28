@@ -1203,10 +1203,12 @@ function handleXooxleElements() {
       collapse.click();
     }
   );
-  // When we click a checkbox, it is the boxes that dictate the set of active
-  // dialects and highlighting. So we use the boxes to update 'd', and then
-  // update highlighting.
+  const active = activeDialects();
   dialectCheckboxes.forEach((checkbox) => {
+    // When we first load the page, 'd' dictates the set of active dialects and
+    // hence highlighting. We load 'd' from the local storage, and we update the
+    // boxes to match this set.
+    checkbox.checked = active?.includes(checkbox.name) ?? false;
     checkbox.addEventListener('click', () => {
       syncDialects(checkbox.name).forEach((d) => {
         const checkboxToSync = document.getElementById(`checkbox-${d}`);
@@ -1229,14 +1231,7 @@ function handleXooxleElements() {
   window.addEventListener('load', initGoogleSearchBox);
 }
 function handleCommonElements() {
-  // When we first load the page, 'd' dictates the set of active dialects and
-  // hence highlighting. We load 'd' from the local storage, and we update the
-  // boxes to match this set. Then we update the CSS.
   window.addEventListener('pageshow', () => {
-    const active = activeDialects();
-    Array.from(dialectCheckboxes).forEach((box) => {
-      box.checked = active?.includes(box.name) ?? false;
-    });
     highlighter.update();
   });
   // NOTE: We intentionally use the `keydown` event rather than the `keyup`
