@@ -1348,10 +1348,14 @@ function handleXooxleElements() {
     }
   );
 
-  // When we click a checkbox, it is the boxes that dictate the set of active
-  // dialects and highlighting. So we use the boxes to update 'd', and then
-  // update highlighting.
+  const active: string[] | null = activeDialects();
+
   dialectCheckboxes.forEach((checkbox) => {
+    // When we first load the page, 'd' dictates the set of active dialects and
+    // hence highlighting. We load 'd' from the local storage, and we update the
+    // boxes to match this set.
+    checkbox.checked = active?.includes(checkbox.name) ?? false;
+
     checkbox.addEventListener('click', () => {
       syncDialects(checkbox.name).forEach((d) => {
         const checkboxToSync = document.getElementById(
@@ -1378,14 +1382,7 @@ function handleXooxleElements() {
 }
 
 function handleCommonElements() {
-  // When we first load the page, 'd' dictates the set of active dialects and
-  // hence highlighting. We load 'd' from the local storage, and we update the
-  // boxes to match this set. Then we update the CSS.
-  window.addEventListener('pageshow', (): void => {
-    const active: string[] | null = activeDialects();
-    Array.from(dialectCheckboxes).forEach((box) => {
-      box.checked = active?.includes(box.name) ?? false;
-    });
+  window.addEventListener('pageshow', () => {
     highlighter.update();
   });
 
