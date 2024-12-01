@@ -103,6 +103,10 @@ COLUMNS: dict[str | None, list[str]] = {
     "Number of Commits": [
         "num_commits",
     ],
+    "Number of GitHub Issues": [
+        "open_issues",
+        "closed_issues",
+    ],
 }
 TARGET_ANNOTATIONS = 15
 
