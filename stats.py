@@ -120,9 +120,9 @@ def validate(df: pd.DataFrame) -> None:
     if available != (included | excluded):
         utils.fatal(
             "Absent columns:",
-            available - included,
+            available - (included | excluded),
             "Extra columns",
-            included - available,
+            (included | excluded) - available,
         )
     dupe = included & excluded
     if dupe:
