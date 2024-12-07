@@ -17,8 +17,6 @@ COLUMNS: dict[str | None, list[str]] = {
         # Disk usage
         "disk_usage",
         "disk_usage_human",
-        # The number of contributors is quite stable!
-        "num_contributors",
         # Noisy code statistics.
         "foc",
         "loc",
@@ -106,6 +104,9 @@ COLUMNS: dict[str | None, list[str]] = {
     "Number of GitHub Issues": [
         "open_issues",
         "closed_issues",
+    ],
+    "Number of Contributors": [
+        "num_contributors",
     ],
 }
 TARGET_ANNOTATIONS = 15
