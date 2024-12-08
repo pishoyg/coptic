@@ -195,6 +195,10 @@ table {
   opacity: 0.5;
 }
 
+.dev {
+  display: none;
+}
+
 :target.explanatory,
 :target.sister,
 :target.drv .marcion,
@@ -254,6 +258,7 @@ table {
   font-size: small;
   font-style: italic;
   color: #7f8c8d;
+  display: none;
 }
 
 .dialect-dictionaries {
