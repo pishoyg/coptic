@@ -22,6 +22,7 @@ readonly ICON_TAG='  <link rel="icon" type="image/x-icon" href="/img/icon/icon-c
 CLEAN=false
 BUILD=false
 COMMIT=false
+SQUASH=false
 PUSH=false
 while [ $# -gt 0 ]; do
   case $1 in
@@ -34,6 +35,9 @@ while [ $# -gt 0 ]; do
   --commit|-c)
     COMMIT=true
     ;;
+  --squash|-s)
+    SQUASH=true
+    ;;
   --push|-p)
     PUSH=true
     ;;
@@ -41,7 +45,8 @@ while [ $# -gt 0 ]; do
     echo -e "${GREEN}--clean ${BLUE}(${GREEN}-C${BLUE}) CLEANES uncommitted changes from the site repo.${RESET}"
     echo -e "${GREEN}--build ${BLUE}(${GREEN}-b${BLUE}) regenerates the site in the site repo.${RESET}"
     echo -e "${GREEN}--commit ${BLUE}(${GREEN}-c${BLUE}) creates a commit.${RESET}"
-    echo -e "${GREEN}--push ${BLUE}(${GREEN}-p${BLUE}) pushes the commit to the repo.${RESET}"
+    echo -e "${GREEN}--squash ${BLUE}(${GREEN}-s${BLUE}) SQUASHES the entire commit history.${RESET}"
+    echo -e "${GREEN}--push ${BLUE}(${GREEN}-p${BLUE}) FORCE-pushes the commit to the repo.${RESET}"
     echo -e "${BLUE}You can use any combination of flags that you want.${RESET}"
     echo -e "${GREEN}--help ${BLUE}(${GREEN}-h${BLUE}) prints this information and exits.${RESET}"
     exit
@@ -163,9 +168,14 @@ commit() {
   git -C "${SITE_DIR}" commit --message "$(_message)"
 }
 
+squash() {
+  echo -e "${GREEN}Squashing.${RESET}"
+  git -C "${SITE_DIR}" reset "$(git -C "${SITE_DIR}" commit-tree "HEAD^{tree}" -m "Initial commit.")"
+}
+
 push() {
   echo -e "${GREEN}Pushing.${RESET}"
-  git -C "${SITE_DIR}" push
+  git -C "${SITE_DIR}" push --force
 }
 
 if ${CLEAN}; then
@@ -178,6 +188,10 @@ fi
 
 if ${COMMIT}; then
   commit
+fi
+
+if ${SQUASH}; then
+  squash
 fi
 
 if ${PUSH}; then
