@@ -49,6 +49,16 @@ repos:
         types: [file]
         entry: npx prettier
         language: system
+      - id: typescript-unittest-exists
+        name: typescript-unittest-exists
+        types: [ts]
+        entry: pre-commit/typescript-unittest-exists.sh
+        language: system
+      - id: typescript-unittest
+        name: typescript-unittest
+        types: [ts]
+        entry: bun test
+        language: system
   - repo: https://github.com/pre-commit/mirrors-eslint
     rev: v9.12.0
     hooks:
