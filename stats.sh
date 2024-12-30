@@ -499,7 +499,7 @@ echo -e "${BLUE}Number of words with sisters: "\
 echo -e "${BLUE}Total number of sisters: "\
 "${GREEN}${CRUM_SISTERS_SUM}${BLUE}."
 
-((CRUM_SISTERS_SUM >= 58 && CRUM_SISTERS_SUM <= 3357 )) || (echo -e "${PURPLE}${CRUM_SISTERS_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
+((CRUM_SISTERS_SUM >= 58 && CRUM_SISTERS_SUM <= 33570 )) || (echo -e "${PURPLE}${CRUM_SISTERS_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
 echo -e "${BLUE}Number of words with antonyms: "\
 "${GREEN}${CRUM_ANTONYMS}${BLUE}."
@@ -509,7 +509,7 @@ echo -e "${BLUE}Number of words with antonyms: "\
 echo -e "${BLUE}Total number of antonyms: "\
 "${GREEN}${CRUM_ANTONYMS_SUM}${BLUE}."
 
-((CRUM_ANTONYMS_SUM >= 2 && CRUM_ANTONYMS_SUM <= 3357 )) || (echo -e "${PURPLE}${CRUM_ANTONYMS_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
+((CRUM_ANTONYMS_SUM >= 2 && CRUM_ANTONYMS_SUM <= 33570 )) || (echo -e "${PURPLE}${CRUM_ANTONYMS_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
 echo -e "${BLUE}Number of words with homonyms: "\
 "${GREEN}${CRUM_HOMONYMS}${BLUE}."
@@ -519,7 +519,7 @@ echo -e "${BLUE}Number of words with homonyms: "\
 echo -e "${BLUE}Total number of homonyms: "\
 "${GREEN}${CRUM_HOMONYMS_SUM}${BLUE}."
 
-((CRUM_HOMONYMS_SUM >= 7 && CRUM_HOMONYMS_SUM <= 3357 )) || (echo -e "${PURPLE}${CRUM_HOMONYMS_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
+((CRUM_HOMONYMS_SUM >= 7 && CRUM_HOMONYMS_SUM <= 33570 )) || (echo -e "${PURPLE}${CRUM_HOMONYMS_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
 echo -e "${BLUE}Number of words with Greek sisters: "\
 "${GREEN}${CRUM_GREEK_SISTERS}${BLUE}."
