@@ -1,13 +1,17 @@
 SHELL := /bin/bash
 
 # NOTE:
-# - For those rules that use helpers, shell commands should be preceded by `.
-#   ./.helpers` in order to make sure the helpers are sourced before execution.
-#   This is done in order to allow rules to execute normally even if the user
-#   forgot to source their `.env` (or `.helpers`). Notice that it doesn't
-#   suffice to source the helpers once, they need to be sourced before every
-#   line, because Make executes each line in a separate shell, and each shell
-#   must have its own sourcing.
+# - For those rules that use helpers, shell commands should be preceded by
+#   ```
+#   . ./.helpers
+#   ```
+#   in order to make sure the helpers are sourced before
+#   execution. This is done in order to allow rules to execute normally even if
+#   the user forgot to source their `.env` (or `.helpers`). Notice that it
+#   doesn't suffice to source the helpers once, they need to be sourced before
+#   every line, because Make executes each line in a separate shell, and each
+#   shell must have its own sourcing.
+#
 # - For those rules that require environment variables (other than the
 #   helpers), they depend on the REQUIRE_ENV rule, which asks the users to
 #   source their `.env` file (if it's not sourced already). We can't take the
@@ -16,6 +20,7 @@ SHELL := /bin/bash
 #   `.env_INFO`), and (2) they need to know what they are doing, and the
 #   implications of running rules with certain variables, so we can't take this
 #   decision on their behalf.
+#
 # See also `.env_INFO`.
 
 # NOTE: We maintain a hierarchical structure for our rules. Level-2 rules are
@@ -66,11 +71,15 @@ publish: anki_publish epub_publish mobi_publish site_publish
 .PHONY: report
 report: stats_report
 
+# LEVEL 2 RULES - DEV #########################################################
 # The following rules are more or less only relevant for testing / development,
 # rather content (re)generation.
+# NOTE: For level-1 rules that are only relevant for development, we prefix the
+# names with an underscore. As for level-1 rules that are used for content
+# generation, we don't have this requirement.
 
 .PHONY: install
-install: pip_install python_install precommit_install bin_install npm_install
+install: _pip_install _python_install _precommit_install _bin_install _npm_install
 
 .PHONY: flashcards_crum_all_dialects
 flashcards_crum_all_dialects: _flashcards_crum_all_dialects
@@ -85,37 +94,37 @@ flashcards_kellia: _flashcards_kellia
 kellia_analysis: _kellia_analysis
 
 .PHONY: stats
-stats: stats_commit
+stats: _stats_commit
 
 .PHONY: plot
-plot: stats_plot
+plot: _stats_plot
 
 .PHONY: stats_format
 stats_format: _stats_format
 
 .PHONY: clean
-clean: git_clean kellia_analysis_clean
+clean: _git_clean _kellia_analysis_clean
 
 .PHONY: status
-status: git_status
+status: _git_status
 
 .PHONY: diff
-diff: git_diff
+diff: _git_diff
 
 .PHONY: toil
-toil: crum_img_helper
+toil: _crum_img_helper
 
 .PHONY: update
-update: precommit_update pip_update
+update: _precommit_update _pip_update
 
 .PHONY: camera
-camera: camera_images
+camera: _camera_images
 
 .PHONY: crum_img_plot
 crum_img_plot: _crum_img_plot
 
 .PHONY: yo
-yo: say_yo
+yo: _say_yo
 
 .PHONY: server
 server: _server
@@ -161,7 +170,7 @@ crum_img: $(shell find dictionary/marcion.sourceforge.net/data/ -type f)
 _crum_img_plot: FORCE
 	python dictionary/marcion.sourceforge.net/img_helper.py --plot | less -R
 
-crum_img_helper: REQUIRE_ENV FORCE
+_crum_img_helper: REQUIRE_ENV FORCE
 	# TODO: (#5) Remove the filters. Do all the words.
 	python dictionary/marcion.sourceforge.net/img_helper.py \
 		--skip_existing=true \
@@ -176,7 +185,11 @@ kellia: FORCE
 _kellia_analysis: FORCE
 	python dictionary/kellia.uni-goettingen.de/analysis.py
 
-kellia_analysis_clean: dictionary/kellia.uni-goettingen.de/data/output/analysis.json
+_kellia_analysis_clean: dictionary/kellia.uni-goettingen.de/data/output/analysis.json
+	# Reset the KELLIA analysis JSON. Seemingly, it gets rewritten in a
+	# nondeterministic manner by the pipeline, introducing noisy changes in the
+	# repo, so we reset it to remove the noise.
+	# TODO: Make the pipeline deterministic, and remove this rule.
 	git restore "dictionary/kellia.uni-goettingen.de/data/output/analysis.json"
 
 # FLASHCARD RULES
@@ -248,62 +261,67 @@ _server: REQUIRE_ENV FORCE
 	python -m http.server 8000 --bind 127.0.0.1 --directory "$${SITE_DIR}"
 
 # INFRASTRUCTURE RULES
-bin_install: FORCE
+_bin_install: FORCE
 	. ./.helpers && if ! command -v npm &> /dev/null; then echo -e "$${RED}Please install $${YELLOW}npm$${RED}. See $${YELLOW}https://docs.npmjs.com/downloading-and-installing-node-js-and-npm${RED}.$${RESET}" && exit 1; fi
 	. ./.helpers && if ! command -v tidy &> /dev/null; then echo -e "$${RED}Please install $${YELLOW}tidy$${RED} from $${YELLOW}https://www.html-tidy.org/${RED}.$${RESET}" && exit 1; fi
 	. ./.helpers && if ! command -v magick &> /dev/null; then echo -e "$${RED}Please install $${YELLOW}magick$${RED} from $${YELLOW}https://imagemagick.org/${RED}.$${RESET}" && exit 1; fi
 	. ./.helpers && if ! command -v gh &> /dev/null; then echo -e "$${RED}Please install $${YELLOW}gh$${RED} from $${YELLOW}https://cli.github.com/${RED}.$${RESET}" && exit 1; fi
 	. ./.helpers && if ! command -v say &> /dev/null; then echo -e "$${YELLOW}Consider installing $${CYAN}say$${YELLOW}. This should be possible with $${CYAN}sudo apt-get install gnustep-gui-runtime$${YELLOW} on Ubuntu.$${RESET}"; fi
 
-npm_install: FORCE
+_npm_install: FORCE
 	npm install
 
-pip_install: requirements.txt
+_pip_install: requirements.txt
 	python -m pip install --upgrade pip $${PIP_FLAGS}
 	python -m pip install -r requirements.txt $${PIP_FLAGS}
 
-pip_update: FORCE
+_pip_update: FORCE
 	pip-review --local --auto
 
-python_install: FORCE
+_python_install: FORCE
 	python -m pip install -e . $${PIP_FLAGS}
 
-precommit_install: FORCE
+_precommit_install: FORCE
 	pre-commit install
 
 _add_1 _add_2 _add_3: FORCE
 	until git add --all && pre-commit run; do : ; done
 
-precommit_update: FORCE
+_precommit_update: FORCE
 	pre-commit autoupdate
 
-git_clean: FORCE
+_git_clean: FORCE
+	# Clean up all untracked files and directories.
+	# -x: Also remove ignored files.
+	# -d: Recurse into directories.
+	# --exclude ".env": Keep the `.env` file.
+	# --force: This is not a dry run.
 	git clean \
 		-x \
 		-d \
 		--exclude ".env" \
 		--force
 
-git_status: FORCE
+_git_status: FORCE
 	git status --short
 
-git_diff: FORCE
+_git_diff: FORCE
 	git diff --cached --word-diff
 
 stats_report: FORCE
 	bash stats.sh
 
-stats_commit: FORCE
+_stats_commit: FORCE
 	bash stats.sh --commit
 
-stats_plot: FORCE
+_stats_plot: FORCE
 	./stats.py
 
 _stats_format: FORCE
 	python -c $$'import utils\n\
 	utils.to_tsv(utils.read_tsv("data/stats.tsv"), "data/stats.tsv")'
 
-camera_images: FORCE
+_camera_images: FORCE
 	grep \
 		--invert \
 		-E "^http.*$$" \
@@ -321,7 +339,7 @@ camera_images: FORCE
 		| sed "s/\.txt$$/\.*/" \
 		| while read -r GLOB; do ls $${GLOB} | xargs open; done
 
-say_yo: FORCE
+_say_yo: FORCE
 	say yo
 
 # LEVEL-0 rules ###############################################################
