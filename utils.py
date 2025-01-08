@@ -21,6 +21,8 @@ GSPREAD_SCOPE = [
     "https://www.googleapis.com/auth/drive",
 ]
 
+JSON_KEYFILE_NAME = "google_cloud_keyfile.json"
+
 
 def _print(
     color,
@@ -156,13 +158,12 @@ _gclient: gspread.Client | None = None
 
 
 def get_gclient() -> gspread.Client:
-    json_keyfile_name = os.environ["JSON_KEYFILE_NAME"]
     global _gclient
     if _gclient:
         return _gclient
     credentials = (
         service_account.ServiceAccountCredentials.from_json_keyfile_name(
-            json_keyfile_name,
+            JSON_KEYFILE_NAME,
             GSPREAD_SCOPE,
         )
     )

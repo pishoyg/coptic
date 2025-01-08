@@ -36,3 +36,8 @@ bible/stshenouda.org/data/output/epub/
 # You have to create your own version of this file in order to be able to
 # execute some of the pipelines. See .env_INFO.
 .env
+
+# google_cloud_keyfile.json stores the credentials for access to to Google
+# Drive.
+# We don't want this to be committed to the repo.
+google_cloud_keyfile.json
