@@ -477,7 +477,7 @@ async function search() {
     // Using Unicode-aware word boundaries: `\b` doesn't work for non-ASCII
     // so we use `\p{L}` (letter) and `\p{N}` (number) to match words in any
     // Unicode script.
-    query = `(?<=^|[^\\p{L}\\p{N}])${query}(?=$|[^\\p{L}\\p{N}])`;
+    query = `(?<=^|[^\\p{L}\\p{N}])(${query})(?=$|[^\\p{L}\\p{N}])`;
   }
 
   let regex: RegExp;
