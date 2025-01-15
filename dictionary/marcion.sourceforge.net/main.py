@@ -148,6 +148,8 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
             strict,
             detach_types=False,
             use_coptic_symbol=False,
+            normalize_optional=False,
+            normalize_assumed=False,
         )
         insert("word-parsed", "\n".join(w.string() for w in word))
         insert(
@@ -160,6 +162,8 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
             strict,
             detach_types=True,
             use_coptic_symbol=True,
+            normalize_optional=True,
+            normalize_assumed=True,
         )
         insert("word-title", title(word))
         insert(

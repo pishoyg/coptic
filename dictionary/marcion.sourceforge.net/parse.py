@@ -137,8 +137,9 @@ def parse_word_cell(
     strict: bool,
     detach_types: bool,
     use_coptic_symbol: bool,
+    normalize_optional: bool,
+    normalize_assumed: bool,
 ) -> list[lexical.structured_word]:
-    normalize = detach_types
     line = line.strip()
     # Replace the non-breaking space with a unicode space.
     line = line.replace("\xa0", " ")
@@ -173,8 +174,8 @@ def parse_word_cell(
                 t,
                 r,
                 root_type,
-                normalize_optional=normalize,
-                normalize_assumed=normalize,
+                normalize_optional=normalize_optional,
+                normalize_assumed=normalize_assumed,
             ),
         ]
 
@@ -195,8 +196,8 @@ def parse_word_cell(
                 t,
                 r,
                 root_type,
-                normalize_optional=normalize,
-                normalize_assumed=normalize,
+                normalize_optional=normalize_optional,
+                normalize_assumed=normalize_assumed,
             ),
         )
 
