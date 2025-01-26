@@ -249,6 +249,7 @@ class subindex:
         captures: list[capture],
         result_table_name: str,
         href_fmt: str,
+        include: typing.Callable | None = None,
     ) -> None:
         """
         Args:
@@ -261,6 +262,7 @@ class subindex:
         """
 
         self._input: str = input
+        self._include: typing.Callable | None = include
         self._extract: list[selector] = extract
         self._captures: list[capture] = captures
         self._result_table_name: str = result_table_name
@@ -279,6 +281,8 @@ class subindex:
         for root, _, files in os.walk(self._input):
             for file in files:
                 if not file.endswith(EXTENSION):
+                    continue
+                if self._include and not self._include(file):
                     continue
                 path = os.path.join(root, file)
                 yield path, bs4.BeautifulSoup(utils.read(path), "html.parser")
