@@ -29,6 +29,7 @@ COLUMNS: dict[str | None, list[str]] = {
         "crum_homonyms_sum",
         "crum_img_sum",
         "crum_root_senses_sum",
+        "crum_categories_sum",
     ],
     "Crum Fixes": [
         # The following Crum fields are not expected to be populated for every
@@ -51,6 +52,7 @@ COLUMNS: dict[str | None, list[str]] = {
         "crum_img",
         "crum_root_senses",
         "crum_sisters",
+        "crum_categories",
     ],
     "Files of Code per Language": [
         "foc_css",
