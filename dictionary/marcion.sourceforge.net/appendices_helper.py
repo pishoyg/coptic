@@ -32,25 +32,36 @@ CATEGORIES_COL: str = "categories"
 
 TEXT_FRAG_PREFIX: str = ":~:text="
 
-KNOWN_CATEGORIES: set[str] = {
-    "species",
-    "anatomy",
-    # "biology" includes everything biology-related, which doesn't fit
-    # in a more precise category, such as "species" or "anatomy".
-    "biology",
-    "substance",
-    "geography",
-    # "physics" includes everything physics-related, which doesn't fit
-    # in a more precise category, such as "substance" or "geography".
-    "physics",
-    # "crafts" includes human arts, crafts, and occupations.
-    "crafts",
-    "tool",
-    # "calendar" includes number, days, months, ...
-    "calendar",
-    "concept",
-    "direction",
-}
+KNOWN_CATEGORIES: set[str] = (
+    {  # Biology
+        "species",
+        "anatomy",
+        "person",
+        # "biology" includes everything biology-related, which doesn't fit
+        # in a more precise category, such as "species", "person", or "anatomy".
+        "biology",
+    }
+    | {  # Physics & Chemistry
+        "substance",
+        "geography",
+        # "physics" includes everything physics-related, which doesn't fit
+        # in a more precise category, such as "substance" or "geography".
+        "physics",
+    }
+    | {  # Man-made
+        "building",
+        "tool",
+        "vehicle",
+    }
+    | {  # Conceptual
+        "time",
+        "number",
+        "measure",
+        "direction",
+        "emotion",
+        "concept",
+    }
+)
 
 argparser: argparse.ArgumentParser = argparse.ArgumentParser(
     description="""Find and process appendices.""",
@@ -72,7 +83,18 @@ argparser.add_argument(
     type=str,
     nargs="*",
     default=[],
-    help="Print word keys belonging to any of the given categories.",
+    help="If used with --keys, assign the given categories to the words with"
+    "\nthe given keys. Otherwise, print the list of words belonging to ANY of"
+    "\nthe given categories.",
+)
+
+argparser.add_argument(
+    "-k",
+    "--keys",
+    type=str,
+    nargs="*",
+    default=[],
+    help="A list of word keys, to assign the given categories to.",
 )
 
 argparser.add_argument(
@@ -280,11 +302,11 @@ class family:
         relatives: list[str] = [r.key for r in self.all_except_you()]
         # Verify no relative is recorded twice.
         if len(relatives) != len(set(relatives)):
-            utils.fatal("Duplicate sisters found at", self.key)
+            utils.throw("Duplicate sisters found at", self.key)
         # Verify that you haven't been mistakenly counted as a relative of
         # yourself.
         if self.key in relatives:
-            utils.fatal("Circular sisterhood at", self.key)
+            utils.throw("Circular sisterhood at", self.key)
         # Restrict the checks from here on to the native relatives.
         relatives = [r.key for r in self.natives_except_you()]
         for house, name in [
@@ -293,7 +315,7 @@ class family:
             (self.homonyms, "homonyms"),
         ]:
             if house.string() != house.ancestors_raw:
-                utils.fatal("House", self.key, "/", name, "needs formatting!")
+                utils.throw("House", self.key, "/", name, "needs formatting!")
         if not key_to_family:
             # We can't perform further validation.
             return
@@ -335,7 +357,7 @@ class validator:
                 map(lambda p: p[0], pairs),
             ).items()
         ):
-            utils.fatal("duplicate elements in JSON:", pairs)
+            utils.throw("duplicate elements in JSON:", pairs)
         return {key: value for key, value in pairs}
 
     def parse_senses(self, senses: str) -> dict[str, str]:
@@ -353,7 +375,7 @@ class validator:
         for sense_id in parsed:
             if sense_id.isdigit():
                 continue
-            utils.fatal(
+            utils.throw(
                 key,
                 "has a sense with an invalid key",
                 sense_id,
@@ -361,7 +383,7 @@ class validator:
             )
         largest: int = max(map(int, parsed.keys()))
         if largest != len(parsed):
-            utils.fatal(key, "has a gap in the senses!")
+            utils.throw(key, "has a gap in the senses!")
 
     def validate_sisters(self, df: pd.DataFrame) -> None:
         key_to_family: dict[str, family] = {
@@ -374,7 +396,7 @@ class validator:
         categories = utils.ssplit(raw_categories, ",")
         for cat in categories:
             if cat not in KNOWN_CATEGORIES:
-                utils.fatal(key, "has an unknown category:", cat)
+                utils.throw(key, "has an unknown category:", cat)
 
     def validate(self, path: str, roots: bool = False) -> None:
         df: pd.DataFrame = utils.read_tsv(path)
@@ -399,6 +421,11 @@ class _matriarch:
             SISTERS_COL: utils.get_column_index(self.sheet, SISTERS_COL),
             ANTONYMS_COL: utils.get_column_index(self.sheet, ANTONYMS_COL),
             HOMONYMS_COL: utils.get_column_index(self.sheet, HOMONYMS_COL),
+            GREEK_SISTERS_COL: utils.get_column_index(
+                self.sheet,
+                GREEK_SISTERS_COL,
+            ),
+            CATEGORIES_COL: utils.get_column_index(self.sheet, CATEGORIES_COL),
         }
 
     def marry_house(self, row: dict, col: str, spouses: list[person]) -> house:
@@ -497,6 +524,11 @@ class runner:
         self.args: argparse.Namespace = argparser.parse_args(args)
         house.delete_empty_fragment = self.args.delete_empty_fragment
 
+        utils.verify_unique(self.args.cat, "Duplicate categories!")
+        for c in self.args.cat:
+            if c not in KNOWN_CATEGORIES:
+                utils.throw(c, "is not a known category!")
+
         def url_to_person(url_or_raw: str) -> person:
             """Given a URL, return a string representing an encoded person
             initializer.
@@ -543,7 +575,7 @@ class runner:
                 bool,
                 [
                     self.args.validate,
-                    self.args.cat,
+                    self.args.cat or self.args.keys,
                     self.args.sisters or self.args.antonyms,
                     self.args.homonyms,
                 ],
@@ -551,7 +583,7 @@ class runner:
         )
 
         if num_actions > 1:
-            utils.fatal("At most one command is required.")
+            utils.throw("At most one command is required.")
         return bool(num_actions)
 
     def validate(self) -> None:
@@ -560,14 +592,29 @@ class runner:
         validatoor.validate(DERIVATIONS)
 
     def categories(self) -> None:
-        df: pd.DataFrame = utils.read_tsv(ROOTS)
-        cat: set[str] = set(self.args.cat)
-        for c in cat:
-            if c not in KNOWN_CATEGORIES:
-                utils.fatal(c, "is not a known category!")
-        for _, row in df.iterrows():
-            if cat & set(utils.ssplit(row[CATEGORIES_COL])):
-                print(row[KEY_COL])
+        self.init()
+        assert self.mother
+        if not self.args.keys:
+            for row in self.mother.sheet.get_all_records():
+                cat = row[CATEGORIES_COL]
+                assert isinstance(cat, str)
+                if any(c in self.args.cat for c in utils.ssplit(cat)):
+                    print(row[KEY_COL])
+            return
+        for key in self.args.keys:
+            assert key in self.mother.keys
+        cat = ", ".join(self.args.cat)
+        row_idx = 1
+        col_idx = self.mother.col_idx[CATEGORIES_COL]
+        for record in self.mother.sheet.get_all_records():
+            row_idx += 1
+            key = str(record[KEY_COL])
+            if key not in self.args.keys:
+                continue
+            # TODO: (#287) Make it possible to choose between *adding*
+            # categories or *replacing* them.
+            utils.info("Updating categories of", key, "to", cat)
+            self.mother.sheet.update_cell(row_idx, col_idx, cat)
 
     def once(self) -> None:
         # NOTE: We perform validation before initialization to speed it up, as
@@ -591,6 +638,8 @@ class runner:
             self.mother.marry_family(homonyms=self.args.homonyms)
 
     def init(self) -> None:
+        if self.mother:
+            return
         utils.info("Initializing...")
         self.mother = _matriarch()
 
