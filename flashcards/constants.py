@@ -237,6 +237,12 @@ def crum(
                         "</b>)",
                         "</div>",
                     ),
+                    # Category.
+                    field.aon(
+                        '<div id="categories" class="categories">',
+                        root_appendix("categories", force=False),
+                        "</div>",
+                    ),
                     # Meaning.
                     field.aon(
                         '<div id="meaning" class="meaning">',

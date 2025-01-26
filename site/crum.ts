@@ -188,7 +188,7 @@ class Highlighter {
     const display = localStorage.getItem('dev') === 'true' ? 'block' : 'none';
     this.updateSheetOrElements(
       this.devRuleIndex,
-      '.dev, .nag-hammadi, .senses',
+      '.dev, .nag-hammadi, .senses, .categories',
       `display: ${display};`,
       (el: HTMLElement) => {
         el.style.display = display;

@@ -26,7 +26,31 @@ ANTONYMS_COL: str = "antonyms"
 HOMONYMS_COL: str = "homonyms"
 GREEK_SISTERS_COL: str = "TLA-sisters"
 
+SENSES_COL: str = "senses"
+
+CATEGORIES_COL: str = "categories"
+
 TEXT_FRAG_PREFIX: str = ":~:text="
+
+KNOWN_CATEGORIES: set[str] = {
+    "species",
+    "anatomy",
+    # "biology" includes everything biology-related, which doesn't fit
+    # in a more precise category, such as "species" or "anatomy".
+    "biology",
+    "substance",
+    "geography",
+    # "physics" includes everything physics-related, which doesn't fit
+    # in a more precise category, such as "substance" or "geography".
+    "physics",
+    # "crafts" includes human arts, crafts, and occupations.
+    "crafts",
+    "tool",
+    # "calendar" includes number, days, months, ...
+    "calendar",
+    "concept",
+    "direction",
+}
 
 argparser: argparse.ArgumentParser = argparse.ArgumentParser(
     description="""Find and process appendices.""",
@@ -333,11 +357,18 @@ class validator:
         for fam in key_to_family.values():
             fam.validate(key_to_family)
 
+    def validate_categories(self, key: str, raw_categories: str) -> None:
+        categories = utils.ssplit(raw_categories, ",")
+        for cat in categories:
+            if cat not in KNOWN_CATEGORIES:
+                utils.fatal(key, "has an unknown category:", cat)
+
     def validate(self, path: str, roots: bool = False) -> None:
         df: pd.DataFrame = utils.read_tsv(path)
         for _, row in df.iterrows():
             key: str = row[KEY_COL]
-            self.validate_senses(key, row["senses"])
+            self.validate_senses(key, row[SENSES_COL])
+            self.validate_categories(key, row[CATEGORIES_COL])
         if not roots:
             return
         self.validate_sisters(df)
