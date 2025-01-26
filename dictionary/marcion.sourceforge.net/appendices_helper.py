@@ -67,6 +67,15 @@ argparser.add_argument(
 )
 
 argparser.add_argument(
+    "-c",
+    "--cat",
+    type=str,
+    nargs="*",
+    default=[],
+    help="Print word keys belonging to any of the given categories.",
+)
+
+argparser.add_argument(
     "-s",
     "--sisters",
     type=str,
@@ -130,6 +139,10 @@ argparser.add_argument(
 
 def split(cell: str) -> list[str]:
     return utils.ssplit(cell, ";")
+
+
+def stringify(row: dict) -> dict[str, str]:
+    return {key: str(value) for key, value in row.items()}
 
 
 class person:
@@ -374,10 +387,6 @@ class validator:
         self.validate_sisters(df)
 
 
-def stringify(row: dict) -> dict[str, str]:
-    return {key: str(value) for key, value in row.items()}
-
-
 class _matriarch:
     def __init__(self) -> None:
         # Worksheet 0 has the roots.
@@ -475,13 +484,10 @@ class _matriarch:
                     self.sheet.update_cell(row_idx, self.col_idx[col], new)
 
 
-def validate() -> None:
-    validatoor: validator = validator()
-    validatoor.validate(ROOTS, roots=True)
-    validatoor.validate(DERIVATIONS)
-
-
 class runner:
+
+    mother: _matriarch | None = None
+
     def preprocess_args(self, args: list[str] | None = None) -> bool:
         """
         Return:
@@ -537,6 +543,7 @@ class runner:
                 bool,
                 [
                     self.args.validate,
+                    self.args.cat,
                     self.args.sisters or self.args.antonyms,
                     self.args.homonyms,
                 ],
@@ -547,10 +554,33 @@ class runner:
             utils.fatal("At most one command is required.")
         return bool(num_actions)
 
-    def once(self) -> None:
-        if self.args.validate:
-            validate()
+    def validate(self) -> None:
+        validatoor: validator = validator()
+        validatoor.validate(ROOTS, roots=True)
+        validatoor.validate(DERIVATIONS)
 
+    def categories(self) -> None:
+        df: pd.DataFrame = utils.read_tsv(ROOTS)
+        cat: set[str] = set(self.args.cat)
+        for c in cat:
+            if c not in KNOWN_CATEGORIES:
+                utils.fatal(c, "is not a known category!")
+        for _, row in df.iterrows():
+            if cat & set(utils.ssplit(row[CATEGORIES_COL])):
+                print(row[KEY_COL])
+
+    def once(self) -> None:
+        # NOTE: We perform validation before initialization to speed it up, as
+        # we don't need to initialize if we just need a one-off validation.
+        if self.args.validate:
+            self.validate()
+
+        if self.args.cat:
+            self.categories()
+            return
+
+        self.init()
+        assert self.mother
         if self.args.sisters or self.args.antonyms:
             self.mother.marry_family(
                 sisters=self.args.sisters,
@@ -560,17 +590,12 @@ class runner:
         if self.args.homonyms:
             self.mother.marry_family(homonyms=self.args.homonyms)
 
-    def run(self) -> None:
-        # NOTE: We perform validation before initialization to speed it up, as
-        # we don't need to initialize if we just need a one-off validation.
-        oneoff: bool = self.preprocess_args()
-        if self.args.validate:
-            validate()
-            return
-
+    def init(self) -> None:
         utils.info("Initializing...")
-        self.mother: _matriarch = _matriarch()
+        self.mother = _matriarch()
 
+    def run(self) -> None:
+        oneoff: bool = self.preprocess_args()
         if oneoff:
             # This is a one-off, because there are action commands provided on
             # the invocation.
