@@ -1,5 +1,7 @@
 import xooxle
 
+import utils
+
 # Xooxle search will work fine even if we don't retain any HTML tags, because it
 # relies entirely on searching the text payloads of the HTML. However, we retain
 # the subset of the classes that are needed for highlighting, in order to make
@@ -57,6 +59,7 @@ _CRUM_INDEX = xooxle.index(
     "site/data/xooxle/crum.json",
     xooxle.subindex(
         input="flashcards/data/output/web/a_coptic_dictionary__all_dialects/",
+        include=lambda file: utils.stem(file).isdigit(),
         extract=[
             xooxle.selector({"name": "title"}, force=False),
             xooxle.selector({"class_": "header"}, force=False),
@@ -75,6 +78,7 @@ _CRUM_INDEX = xooxle.index(
             xooxle.selector({"class_": "nag-hammadi"}, force=False),
             xooxle.selector({"class_": "sisters"}, force=False),
             xooxle.selector({"id": "pretty"}),
+            xooxle.selector({"id": "categories"}, force=False),
         ],
         captures=[
             xooxle.capture(
