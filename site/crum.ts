@@ -1129,6 +1129,25 @@ function focus(id: string): void {
 }
 
 function handleNoteElements() {
+  // Handle 'categories' class.
+  Array.prototype.forEach.call(
+    document.getElementsByClassName('categories'),
+    (elem: HTMLElement) => {
+      const linked = elem.innerHTML
+        .trim()
+        .split(',')
+        .map((s) => s.trim())
+        // TODO: (#287) This won't work on Anki! You should link to the web
+        // version.
+        .map(
+          (s) =>
+            `<a class="hover-link" href="${s}.html" target="_blank">${s}</a>`
+        )
+        .join(', ');
+      elem.innerHTML = linked;
+    }
+  );
+
   // Handle 'crum-page' class.
   Array.prototype.forEach.call(
     document.getElementsByClassName('crum-page'),
