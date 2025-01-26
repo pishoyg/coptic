@@ -2,6 +2,7 @@ import json
 import os
 import re
 import typing
+from collections import defaultdict
 
 import deck
 import field
@@ -22,6 +23,11 @@ NON_INFINITIVE_SUFFIXES = {"-", "=", "+"}
 
 DICT_WIDTH = "1000px"
 
+ROOTS = "dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv"
+ROOT_APPENDICES = (
+    "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv"
+)
+
 
 def crum(
     deck_name: str,
@@ -35,7 +41,7 @@ def crum(
         force: bool = True,
     ) -> field.tsv:
         return field.tsv(
-            "dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv",
+            ROOTS,
             col_name,
             line_br=line_br,
             force=force,
@@ -47,7 +53,7 @@ def crum(
         force: bool = True,
     ) -> field.tsv:
         return field.tsv(
-            "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv",
+            ROOT_APPENDICES,
             col_name,
             line_br=line_br,
             force=force,
@@ -520,6 +526,10 @@ def crum(
         ),
         search=f"{CRUM_ROOT}/",
         force_front=force_front,
+        category_generate=_crum_categorizer(
+            roots_col,
+            root_appendix,
+        ).generate_category_indexes,
     )
 
 
@@ -843,6 +853,44 @@ class _step_mother(_mother):
                 meanings,
             )
         }
+
+
+class _crum_categorizer(_mother):
+    HREF_FMT = CRUM_ROOT + "/{key}.html"
+
+    def __init__(
+        self,
+        roots_col: typing.Callable,
+        root_appendix: typing.Callable,
+    ):
+        self.root_appendix = root_appendix
+        super().__init__(roots_col=roots_col)
+
+    def __generate_category_index_aux(
+        self,
+        cat: str,
+        keys: list[str],
+    ) -> typing.Generator[str]:
+        yield f"<h1>{cat}</h2>"
+        yield "<table>"
+        for key in keys:
+            sister = self.with_frag(self.key_to_sister[key], "")
+            yield sister.string()
+        yield "</table>"
+
+    def __generate_category_index(self, cat: str, keys: list[str]) -> str:
+        return "".join(self.__generate_category_index_aux(cat, keys))
+
+    def generate_category_indexes(self) -> typing.Generator[tuple[str, str]]:
+        category_to_keys: defaultdict = defaultdict(list)
+        for key, categories in zip(
+            self.root_appendix("key")._content,
+            self.root_appendix("categories", force=False)._content,
+        ):
+            for cat in utils.ssplit(categories, ","):
+                category_to_keys[cat].append(key)
+        for cat, keys in category_to_keys.items():
+            yield cat, self.__generate_category_index(cat, keys)
 
 
 def senses_json_to_html(senses_dump: str) -> str:

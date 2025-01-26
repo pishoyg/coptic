@@ -10,14 +10,18 @@ import utils
 
 JS_BASENAME = "script.js"
 CSS_BASENAME = "style.css"
-HTML_FMT = f"""<!DOCTYPE html>
-<html>
+HTML_HEAD = f"""
   <head>
     <title>{{title}}</title>
     <link rel="stylesheet" type="text/css" href="{CSS_BASENAME}">
     <script type="text/javascript" src="{JS_BASENAME}" defer></script>
     {{links}}
   </head>
+"""
+
+HTML_FMT = f"""<!DOCTYPE html>
+<html>
+  {HTML_HEAD}
   <body>
     <div class="front" id="front">
         {{front}}
@@ -26,6 +30,16 @@ HTML_FMT = f"""<!DOCTYPE html>
     <div class="back" id="back">
         {{back}}
     </div>
+  </body>
+</html>
+"""
+
+# The HTML FMT string for a category index.
+HTML_CAT_FMT = f"""<!DOCTYPE html>
+<html>
+  {HTML_HEAD}
+  <body>
+  {{body}}
   </body>
 </html>
 """
@@ -93,6 +107,7 @@ class deck:
         force_title: bool = True,
         back_for_front: bool = False,
         key_for_title: bool = False,
+        category_generate: typing.Callable | None = None,
     ) -> None:
         """Generate an Anki package.
 
@@ -212,6 +227,7 @@ class deck:
         ss.print()
         utils.info("____________________")
         self.media = field.merge_media_files(key, front, back)
+        self.category_generate = category_generate
 
     def clean_dir(self, dir: str) -> None:
         if os.path.exists(dir):
@@ -240,8 +256,6 @@ class deck:
 
                 f.write(
                     HTML_FMT.format(
-                        css=self.css,
-                        javascript=self.javascript,
                         title=title,
                         front=front,
                         back=back,
@@ -255,6 +269,19 @@ class deck:
             f.write(self.css)
         for path in self.media:
             shutil.copy(path, dir)
+        utils.wrote(dir)
+
+        if not self.category_generate:
+            return
+        for title, html_body in self.category_generate():
+            with open(os.path.join(dir, title + ".html"), "w") as f:
+                f.write(
+                    HTML_CAT_FMT.format(
+                        title=title,
+                        links="",
+                        body=html_body,
+                    ),
+                )
         utils.wrote(dir)
 
     def html_to_anki(self, html: str) -> str:
