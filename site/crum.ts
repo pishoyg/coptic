@@ -371,12 +371,10 @@ function height(elem: HTMLElement): number {
 }
 
 function findNextElement(
-  className: string,
+  query: string,
   target: 'next' | 'prev' | 'cur'
 ): HTMLElement | undefined {
-  const elements = Array.from(
-    document.getElementsByClassName(className)
-  ) as HTMLElement[];
+  const elements = Array.from(document.querySelectorAll<HTMLElement>(query));
   elements.sort((a, b) =>
     target == 'prev' ? height(b) - height(a) : height(a) - height(b)
   );
@@ -391,10 +389,10 @@ function findNextElement(
 }
 
 function scrollToNextElement(
-  className: string,
+  query: string,
   target: 'next' | 'prev' | 'cur'
 ): void {
-  const elem = findNextElement(className, target);
+  const elem = findNextElement(query, target);
   if (!elem) {
     return;
   }
@@ -900,7 +898,7 @@ function makeHelpPanel(): HelpPanel {
         }
       ),
     ],
-    h: [
+    H: [
       new Shortcut(
         `Open <a href="${HOME}" target="_blank"><strong>h</strong>omepage</a>`,
         Where.XOOXLE_AND_NOTE,
@@ -934,16 +932,18 @@ function makeHelpPanel(): HelpPanel {
       ),
     ],
     o: [
-      new Shortcut('Open the current result', Where.XOOXLE, () => {
-        findNextElement('view', 'cur')?.querySelector('a')?.click();
+      new Shortcut('Open the current result', Where.XOOXLE_AND_NOTE, () => {
+        findNextElement('.view,.sister-view', 'cur')
+          ?.querySelector('a')
+          ?.click();
       }),
     ],
-    n: [
+    l: [
       new Shortcut('Go to next word', Where.NOTE, () => {
         window_open(getLinkHrefByRel('next'), false);
       }),
     ],
-    p: [
+    h: [
       new Shortcut('Go to previous word', Where.NOTE, () => {
         window_open(getLinkHrefByRel('prev'), false);
       }),
@@ -982,13 +982,13 @@ function makeHelpPanel(): HelpPanel {
 
   const scrollTo = {
     n: [
-      new Shortcut('Next search result', Where.XOOXLE, () => {
-        scrollToNextElement('view', 'next');
+      new Shortcut('Next search result', Where.XOOXLE_AND_NOTE, () => {
+        scrollToNextElement('.view,.sister-view', 'next');
       }),
     ],
     p: [
-      new Shortcut('Previous search result', Where.XOOXLE, () => {
-        scrollToNextElement('view', 'prev');
+      new Shortcut('Previous search result', Where.XOOXLE_AND_NOTE, () => {
+        scrollToNextElement('.view,.sister-view', 'prev');
       }),
     ],
     C: [
@@ -1022,7 +1022,7 @@ function makeHelpPanel(): HelpPanel {
         scroll('dawoud');
       }),
     ],
-    l: [
+    w: [
       new Shortcut('Related words', Where.NOTE, () => {
         scroll('sisters');
       }),
