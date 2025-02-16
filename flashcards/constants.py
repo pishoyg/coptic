@@ -872,7 +872,7 @@ class _crum_categorizer(_mother):
         keys: list[str],
     ) -> typing.Generator[str]:
         yield f"<h1>{cat}</h2>"
-        yield "<table>"
+        yield '<table class="category-table">'
         for key in keys:
             sister = self.with_frag(self.key_to_sister[key], "")
             yield sister.string()

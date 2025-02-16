@@ -1292,6 +1292,27 @@ function handleNoteElements() {
     }
   );
 
+  // Handle 'sister-view' class.
+  [
+    ...document.getElementsByClassName('sisters-table'),
+    ...document.getElementsByClassName('category-table'),
+  ].forEach((table: Element): void => {
+    let counter = 1;
+    [...table.getElementsByTagName('tr')].forEach((el: HTMLElement) => {
+      const td = el.getElementsByClassName('sister-view')[0];
+      if (!td) {
+        console.error(
+          'A raw in the sisters table does not have a "sister-view" element!'
+        );
+        return;
+      }
+      td.innerHTML =
+        `<span class="sister-index">${counter.toString()}. </span>` +
+        td.innerHTML;
+      counter += 1;
+    });
+  });
+
   Array.prototype.forEach.call(
     document.getElementsByClassName('dialect'),
     (el: HTMLElement) => {
