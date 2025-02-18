@@ -871,6 +871,7 @@ class _crum_categorizer(_mother):
         cat: str,
         keys: list[str],
     ) -> typing.Generator[str]:
+        yield '<div id="header"></div>'
         yield f"<h1>{cat}</h2>"
         yield '<table class="category-table">'
         for key in keys:
