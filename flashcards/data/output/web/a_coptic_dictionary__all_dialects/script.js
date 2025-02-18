@@ -18,15 +18,15 @@ function note() {
 function anki() {
   return typeof ANKI !== 'undefined' && ANKI;
 }
-function category() {
-  return typeof CATEGORY !== 'undefined' && CATEGORY;
+function index() {
+  return typeof INDEX !== 'undefined' && INDEX;
 }
 const HOME = 'http://remnqymi.com';
 function home() {
   return anki() ? HOME : '..';
 }
 function crum() {
-  return `${home()}/crum`;
+  return anki() ? `${HOME}/crum` : '.';
 }
 const LOOKUP_URL_PREFIX = `${crum()}/?query=`;
 const EMAIL = 'remnqymi@gmail.com';
@@ -584,7 +584,7 @@ function makeDialectShortcut(key, name, code, dictionaries, link) {
   // All dialects are available in Xooxle. Only Crum dialects area available on
   // notes.
   const availability = dictionaries.includes('Crum')
-    ? [xooxle, note, category]
+    ? [xooxle, note, index]
     : [xooxle];
   return new Shortcut(description, availability, (e) => {
     const dialectCode = DIALECT_SINGLE_CHAR[e.key] ?? e.key;
@@ -764,12 +764,12 @@ function makeHelpPanel() {
   };
   const control = {
     r: [
-      new Shortcut('Reset highlighting', [xooxle, note, category], () => {
+      new Shortcut('Reset highlighting', [xooxle, note, index], () => {
         reset(dialectCheckboxes, highlighter);
       }),
     ],
     d: [
-      new Shortcut('Developer mode', [xooxle, note, category], () => {
+      new Shortcut('Developer mode', [xooxle, note, index], () => {
         toggleDev();
         highlighter.updateDev();
       }),
@@ -777,7 +777,7 @@ function makeHelpPanel() {
     R: [
       new Shortcut(
         `<strong>R</strong>eports / Contact <a class="contact" href="${EMAIL_LINK}">${EMAIL}</a>`,
-        [xooxle, note, category],
+        [xooxle, note, index],
         () => {
           window_open(EMAIL_LINK);
         }
@@ -786,7 +786,7 @@ function makeHelpPanel() {
     H: [
       new Shortcut(
         `Open <a href="${home()}" target="_blank"><strong>h</strong>omepage</a>`,
-        [xooxle, note, category],
+        [xooxle, note, index],
         () => {
           window_open(home());
         }
@@ -795,21 +795,21 @@ function makeHelpPanel() {
     X: [
       new Shortcut(
         `Open the <a href="${crum()}" target="_blank">dictionary search page</a>`,
-        [xooxle, note, category],
+        [xooxle, note, index],
         () => {
           window_open(crum());
         }
       ),
     ],
     '?': [
-      new Shortcut('Toggle help panel', [xooxle, note, category], () => {
+      new Shortcut('Toggle help panel', [xooxle, note, index], () => {
         panel.togglePanel();
       }),
     ],
     Escape: [
       new Shortcut(
         'Toggle help panel',
-        [xooxle, note, category],
+        [xooxle, note, index],
         () => {
           panel.togglePanel(false);
         },
@@ -819,7 +819,7 @@ function makeHelpPanel() {
     o: [
       new Shortcut(
         'Open the word currently being viewed',
-        [xooxle, note, category],
+        [xooxle, note, index],
         () => {
           findNextElement('.view,.sister-view', 'cur')
             ?.querySelector('a')
@@ -869,18 +869,14 @@ function makeHelpPanel() {
   };
   const scrollTo = {
     n: [
-      new Shortcut('Next word in the table', [xooxle, note, category], () => {
+      new Shortcut('Next word in the table', [xooxle, note, index], () => {
         scrollToNextElement('.view,.sister-view', 'next');
       }),
     ],
     p: [
-      new Shortcut(
-        'Previous word in the table',
-        [xooxle, note, category],
-        () => {
-          scrollToNextElement('.view,.sister-view', 'prev');
-        }
-      ),
+      new Shortcut('Previous word in the table', [xooxle, note, index], () => {
+        scrollToNextElement('.view,.sister-view', 'prev');
+      }),
     ],
     C: [
       new Shortcut('Crum', [xooxle], () => {
@@ -964,12 +960,12 @@ function makeHelpPanel() {
       }),
     ],
     g: [
-      new Shortcut('Header', [xooxle, note, category], () => {
+      new Shortcut('Header', [xooxle, note, index], () => {
         scroll('header');
       }),
     ],
     G: [
-      new Shortcut('Footer', [xooxle, note, category], () => {
+      new Shortcut('Footer', [xooxle, note, index], () => {
         scroll('footer');
       }),
     ],
@@ -1016,13 +1012,11 @@ function focus(id) {
 }
 function handleNonXooxleOnlyElements() {
   // Handle 'categories' class.
-  Array.from(document.getElementsByClassName('categories')).forEach((elem) => {
+  document.querySelectorAll('.categories').forEach((elem) => {
     const linked = elem.innerHTML
       .trim()
       .split(',')
       .map((s) => s.trim())
-      // TODO: (#287) This won't work on Anki! You should link to the web
-      // version.
       .map(
         (s) =>
           `<a class="hover-link" href="${crum()}/${s}.html" target="_blank">${s}</a>`
@@ -1030,49 +1024,55 @@ function handleNonXooxleOnlyElements() {
       .join(', ');
     elem.innerHTML = linked;
   });
+  // Handle 'root-type' class.
+  document.querySelectorAll('.root-type').forEach((elem) => {
+    const type = elem
+      .getElementsByTagName('b')[0]
+      ?.innerHTML.replaceAll('/', '_');
+    if (!type) {
+      console.error('Unable to infer the root type for element!', elem);
+      return;
+    }
+    const linked = `(<a class="hover-link" href="${crum()}/${type}.html" target="_blank">${type}</a>)`;
+    elem.innerHTML = linked;
+  });
   // Handle 'crum-page' class.
-  Array.from(document.getElementsByClassName('crum-page')).forEach((el) => {
+  document.querySelectorAll('.crum-page').forEach((el) => {
     const pageNumber = el.innerHTML;
     el.classList.add('link');
     makeSpanLinkToAnchor(el, `#crum${chopColumn(pageNumber)}`);
   });
   // Handle 'crum-page-external' class.
-  Array.from(document.getElementsByClassName('crum-page-external')).forEach(
-    (el) => {
-      el.classList.add('link');
-      el.onclick = () => {
-        window_open(
-          `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.innerHTML}`
-        );
-      };
-    }
-  );
+  document.querySelectorAll('.crum-page-external').forEach((el) => {
+    el.classList.add('link');
+    el.onclick = () => {
+      window_open(
+        `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.innerHTML}`
+      );
+    };
+  });
   // Handle 'dawoud-page-external' class.
-  Array.from(document.getElementsByClassName('dawoud-page-external')).forEach(
-    (el) => {
-      el.classList.add('link');
-      el.onclick = () => {
-        window_open(
-          `${home()}/dawoud/${(+el.innerHTML + DAWOUD_OFFSET).toString()}.jpg`
-        );
-      };
-    }
-  );
+  document.querySelectorAll('.dawoud-page-external').forEach((el) => {
+    el.classList.add('link');
+    el.onclick = () => {
+      window_open(
+        `${home()}/dawoud/${(+el.innerHTML + DAWOUD_OFFSET).toString()}.jpg`
+      );
+    };
+  });
   // Handle 'dawoud-page-img' class.
-  Array.from(document.getElementsByClassName('dawoud-page-img')).forEach(
-    (el) => {
-      // TODO: (#202) Eliminate the dependency on the HTML structure.
-      el = el.children[0];
-      el.classList.add('link');
-      el.onclick = () => {
-        window_open(
-          `${home()}/dawoud/${(+el.getAttribute('alt') + DAWOUD_OFFSET).toString()}.jpg`
-        );
-      };
-    }
-  );
+  document.querySelectorAll('.dawoud-page-img').forEach((el) => {
+    // TODO: (#202) Eliminate the dependency on the HTML structure.
+    el = el.children[0];
+    el.classList.add('link');
+    el.onclick = () => {
+      window_open(
+        `${home()}/dawoud/${(+el.getAttribute('alt') + DAWOUD_OFFSET).toString()}.jpg`
+      );
+    };
+  });
   // Handle 'crum-page-img' class.
-  Array.from(document.getElementsByClassName('crum-page-img')).forEach((el) => {
+  document.querySelectorAll('.crum-page-img').forEach((el) => {
     // TODO: (#202) Eliminate the dependency on the HTML structure.
     el = el.children[0];
     el.classList.add('link');
@@ -1083,7 +1083,7 @@ function handleNonXooxleOnlyElements() {
     };
   });
   // Handle 'explanatory' class.
-  Array.from(document.getElementsByClassName('explanatory')).forEach((el) => {
+  document.querySelectorAll('.explanatory').forEach((el) => {
     // TODO: (#202) Eliminate the dependency on the HTML structure.
     const img = el.children[0];
     const alt = img.getAttribute('alt');
@@ -1096,50 +1096,44 @@ function handleNonXooxleOnlyElements() {
     };
   });
   // Handle 'coptic' class.
-  Array.from(document.getElementsByClassName('coptic')).forEach((el) => {
+  document.querySelectorAll('.coptic').forEach((el) => {
     el.classList.add('hover-link');
     el.onclick = () => {
       window_open(LOOKUP_URL_PREFIX + el.innerHTML);
     };
   });
   // Handle 'greek' class.
-  Array.from(document.getElementsByClassName('greek')).forEach((el) => {
-    el.classList.add('link');
-    el.classList.add('light');
+  document.querySelectorAll('.greek').forEach((el) => {
+    el.classList.add('link', 'light');
     el.onclick = () => {
       window_open(`https://logeion.uchicago.edu/${el.innerHTML}`);
     };
   });
   // Handle 'dawoud-page' class.
-  Array.from(document.getElementsByClassName('dawoud-page')).forEach((el) => {
+  document.querySelectorAll('.dawoud-page').forEach((el) => {
     el.classList.add('link');
     makeSpanLinkToAnchor(el, `#dawoud${chopColumn(el.innerHTML)}`);
   });
   // Handle 'drv-key' class.
-  Array.from(document.getElementsByClassName('drv-key')).forEach((el) => {
+  document.querySelectorAll('.drv-key').forEach((el) => {
     el.classList.add('small', 'light', 'italic', 'hover-link');
     makeSpanLinkToAnchor(el, `#drv${el.innerHTML}`);
   });
   // Handle 'explanatory-key' class.
-  Array.from(document.getElementsByClassName('explanatory-key')).forEach(
-    (el) => {
-      el.classList.add('hover-link');
-      makeSpanLinkToAnchor(el, `#explanatory${el.innerHTML}`);
-    }
-  );
+  document.querySelectorAll('.explanatory-key').forEach((el) => {
+    el.classList.add('hover-link');
+    makeSpanLinkToAnchor(el, `#explanatory${el.innerHTML}`);
+  });
   // Handle 'sister-key' class.
-  Array.from(document.getElementsByClassName('sister-key')).forEach((el) => {
+  document.querySelectorAll('.sister-key').forEach((el) => {
     el.classList.add('hover-link');
     makeSpanLinkToAnchor(el, `#sister${el.innerHTML}`);
   });
   // Handle 'sister-view' class.
-  [
-    ...document.getElementsByClassName('sisters-table'),
-    ...document.getElementsByClassName('category-table'),
-  ].forEach((table) => {
+  document.querySelectorAll('.sisters-table,.index-table').forEach((table) => {
     let counter = 1;
     Array.from(table.getElementsByTagName('tr')).forEach((el) => {
-      const td = el.getElementsByClassName('sister-view')[0];
+      const td = el.querySelector('.sister-view');
       if (!td) {
         console.error(
           'A raw in the sisters table does not have a "sister-view" element!'
@@ -1152,14 +1146,14 @@ function handleNonXooxleOnlyElements() {
       counter += 1;
     });
   });
-  Array.from(document.getElementsByClassName('dialect')).forEach((el) => {
+  document.querySelectorAll('.dialect').forEach((el) => {
     el.classList.add('hover-link');
     el.onclick = () => {
       toggleDialect(el.innerHTML);
       highlighter.updateDialects();
     };
   });
-  Array.from(document.getElementsByClassName('developer')).forEach((el) => {
+  document.querySelectorAll('.developer').forEach((el) => {
     el.classList.add('link');
     el.onclick = () => {
       toggleDev();
@@ -1167,7 +1161,8 @@ function handleNonXooxleOnlyElements() {
     };
   });
   if (anki()) {
-    Array.from(document.getElementsByClassName('navigate')).forEach((e) => {
+    const CRUM = crum();
+    document.querySelectorAll('.navigate').forEach((e) => {
       if (e.tagName !== 'A' || !e.hasAttribute('href')) {
         console.error(
           'This "navigate" element is not an <a> tag with an "href" property!',
@@ -1175,11 +1170,11 @@ function handleNonXooxleOnlyElements() {
         );
         return;
       }
-      e.setAttribute('href', `${crum()}/${e.getAttribute('href')}`);
+      e.setAttribute('href', `${CRUM}/${e.getAttribute('href')}`);
     });
   }
   // NOTE: The `reset` class is only used in the notes pages.
-  Array.from(document.getElementsByClassName('reset')).forEach((el) => {
+  document.querySelectorAll('.reset').forEach((el) => {
     el.classList.add('link');
     el.onclick = () => {
       reset(dialectCheckboxes, highlighter);
@@ -1207,18 +1202,16 @@ function handleXooxleOnlyElements() {
     event.preventDefault();
   });
   // Collapse logic.
-  Array.from(document.getElementsByClassName('collapse')).forEach(
-    (collapse) => {
-      collapse.addEventListener('click', function () {
-        // TODO: Remove the dependency on the HTML structure.
-        const collapsible = collapse.nextElementSibling;
-        collapsible.style.maxHeight = collapsible.style.maxHeight
-          ? ''
-          : collapsible.scrollHeight.toString() + 'px';
-      });
-      collapse.click();
-    }
-  );
+  document.querySelectorAll('.collapse').forEach((collapse) => {
+    collapse.addEventListener('click', function () {
+      // TODO: Remove the dependency on the HTML structure.
+      const collapsible = collapse.nextElementSibling;
+      collapsible.style.maxHeight = collapsible.style.maxHeight
+        ? ''
+        : collapsible.scrollHeight.toString() + 'px';
+    });
+    collapse.click();
+  });
   const active = activeDialects();
   dialectCheckboxes.forEach((checkbox) => {
     // When we first load the page, 'd' dictates the set of active dialects and
