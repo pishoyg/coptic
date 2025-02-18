@@ -1006,7 +1006,7 @@ function click(id) {
 function focus(id) {
   document.getElementById(id).focus();
 }
-function handleNoteElements() {
+function handleNonXooxleOnlyElements() {
   // Handle 'categories' class.
   Array.prototype.forEach.call(
     document.getElementsByClassName('categories'),
@@ -1019,7 +1019,7 @@ function handleNoteElements() {
         // version.
         .map(
           (s) =>
-            `<a class="hover-link" href="${s}.html" target="_blank">${s}</a>`
+            `<a class="hover-link" href="${anki() ? SEARCH + '/' : ''}${s}.html" target="_blank">${s}</a>`
         )
         .join(', ');
       elem.innerHTML = linked;
@@ -1053,7 +1053,7 @@ function handleNoteElements() {
       el.classList.add('link');
       el.onclick = () => {
         window_open(
-          `${HOME}/dawoud/${(+el.innerHTML + DAWOUD_OFFSET).toString()}.jpg`
+          `${anki() ? HOME : '..'}/dawoud/${(+el.innerHTML + DAWOUD_OFFSET).toString()}.jpg`
         );
       };
     }
@@ -1067,7 +1067,7 @@ function handleNoteElements() {
       el.classList.add('link');
       el.onclick = () => {
         window_open(
-          `${HOME}/dawoud/${(+el.getAttribute('alt') + DAWOUD_OFFSET).toString()}.jpg`
+          `${anki() ? HOME : '..'}/dawoud/${(+el.getAttribute('alt') + DAWOUD_OFFSET).toString()}.jpg`
         );
       };
     }
@@ -1195,6 +1195,18 @@ function handleNoteElements() {
       };
     }
   );
+  if (anki()) {
+    [...document.getElementsByClassName('navigate')].forEach((e) => {
+      if (e.tagName !== 'A' || !e.hasAttribute('href')) {
+        console.log(
+          'This "navigate" element is not an <a> tag with an "href" property!',
+          e
+        );
+        return;
+      }
+      e.setAttribute('href', `${SEARCH}/${e.getAttribute('href')}`);
+    });
+  }
   // NOTE: The `reset` class is only used in the notes pages.
   Array.prototype.forEach.call(
     document.getElementsByClassName('reset'),
@@ -1217,7 +1229,7 @@ function initGoogleSearchBox() {
   googleSearchBox.ariaPlaceholder =
     'Search A Coptic Dictionary, W. E. Crum, using Ⲅⲟⲟⲅⲗⲉ';
 }
-function handleXooxleElements() {
+function handleXooxleOnlyElements() {
   // NOTE: The element with the ID `reset` is only present on the XOOXLE page.
   document.getElementById('reset')?.addEventListener('click', (event) => {
     reset(dialectCheckboxes, highlighter);
@@ -1291,11 +1303,10 @@ function handleCommonElements() {
   });
 }
 function main() {
-  if (note()) {
-    handleNoteElements();
-  }
   if (xooxle()) {
-    handleXooxleElements();
+    handleXooxleOnlyElements();
+  } else {
+    handleNonXooxleOnlyElements();
   }
   handleCommonElements();
 }
