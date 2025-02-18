@@ -46,6 +46,8 @@ export default tseslint.config(
         ...globals.node,
         XOOXLE: true,
         ANKI: true,
+        NOTE: true,
+        CATEGORY: true,
       },
     },
   },

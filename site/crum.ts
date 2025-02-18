@@ -20,10 +20,11 @@ function xooxle(): boolean {
   return typeof XOOXLE !== 'undefined' && XOOXLE;
 }
 
-// Since we (currently) only run on Crum notes or Xooxle, the fact that we're
-// not running on Xooxle implies that we're running on a Crum note.
+// NOTE (which should be defined externally) is used to distinguish whether we
+// are running on a note.
+declare const NOTE: boolean;
 function note(): boolean {
-  return !xooxle();
+  return typeof NOTE !== 'undefined' && NOTE;
 }
 
 // ANKI (which should be defined externally) is used to distinguish whether we
@@ -31,6 +32,13 @@ function note(): boolean {
 declare const ANKI: boolean;
 function anki(): boolean {
   return typeof ANKI !== 'undefined' && ANKI;
+}
+
+// CATEGORY (which should be defined externally) is used to distinguish
+// whether we are running on a category page or not.
+declare const CATEGORY: boolean;
+function category(): boolean {
+  return typeof CATEGORY !== 'undefined' && CATEGORY;
 }
 
 const HOME = 'http://remnqymi.com';
@@ -683,7 +691,7 @@ function makeDialectShortcut(
   // All dialects are available in Xooxle. Only Crum dialects area available on
   // notes.
   const availability = dictionaries.includes('Crum')
-    ? [xooxle, note]
+    ? [xooxle, note, category]
     : [xooxle];
   return new Shortcut(description, availability, (e: KeyboardEvent) => {
     const dialectCode = DIALECT_SINGLE_CHAR[e.key] ?? e.key;
@@ -866,12 +874,12 @@ function makeHelpPanel(): HelpPanel {
 
   const control = {
     r: [
-      new Shortcut('Reset highlighting', [xooxle, note], () => {
+      new Shortcut('Reset highlighting', [xooxle, note, category], () => {
         reset(dialectCheckboxes, highlighter);
       }),
     ],
     d: [
-      new Shortcut('Developer mode', [xooxle, note], () => {
+      new Shortcut('Developer mode', [xooxle, note, category], () => {
         toggleDev();
         highlighter.updateDev();
       }),
@@ -879,7 +887,7 @@ function makeHelpPanel(): HelpPanel {
     R: [
       new Shortcut(
         `<strong>R</strong>eports / Contact <a class="contact" href="${EMAIL_LINK}">${EMAIL}</a>`,
-        [xooxle, note],
+        [xooxle, note, category],
         () => {
           window_open(EMAIL_LINK);
         }
@@ -888,7 +896,7 @@ function makeHelpPanel(): HelpPanel {
     H: [
       new Shortcut(
         `Open <a href="${HOME}" target="_blank"><strong>h</strong>omepage</a>`,
-        [xooxle, note],
+        [xooxle, note, category],
         () => {
           window_open(HOME);
         }
@@ -897,21 +905,21 @@ function makeHelpPanel(): HelpPanel {
     X: [
       new Shortcut(
         `Open the <a href="${SEARCH}" target="_blank">dictionary search page</a>`,
-        [xooxle, note],
+        [xooxle, note, category],
         () => {
           window_open(SEARCH);
         }
       ),
     ],
     '?': [
-      new Shortcut('Toggle help panel', [xooxle, note], () => {
+      new Shortcut('Toggle help panel', [xooxle, note, category], () => {
         panel!.togglePanel();
       }),
     ],
     Escape: [
       new Shortcut(
         'Toggle help panel',
-        [xooxle, note],
+        [xooxle, note, category],
         () => {
           panel!.togglePanel(false);
         },
@@ -919,11 +927,15 @@ function makeHelpPanel(): HelpPanel {
       ),
     ],
     o: [
-      new Shortcut('Open the current result', [xooxle, note], () => {
-        findNextElement('.view,.sister-view', 'cur')
-          ?.querySelector('a')
-          ?.click();
-      }),
+      new Shortcut(
+        'Open the word currently being viewed',
+        [xooxle, note, category],
+        () => {
+          findNextElement('.view,.sister-view', 'cur')
+            ?.querySelector('a')
+            ?.click();
+        }
+      ),
     ],
     l: [
       new Shortcut('Go to next word', [note], () => {
@@ -969,14 +981,18 @@ function makeHelpPanel(): HelpPanel {
 
   const scrollTo = {
     n: [
-      new Shortcut('Next search result', [xooxle, note], () => {
+      new Shortcut('Next word in the table', [xooxle, note, category], () => {
         scrollToNextElement('.view,.sister-view', 'next');
       }),
     ],
     p: [
-      new Shortcut('Previous search result', [xooxle, note], () => {
-        scrollToNextElement('.view,.sister-view', 'prev');
-      }),
+      new Shortcut(
+        'Previous word in the table',
+        [xooxle, note, category],
+        () => {
+          scrollToNextElement('.view,.sister-view', 'prev');
+        }
+      ),
     ],
     C: [
       new Shortcut('Crum', [xooxle], () => {
@@ -1060,12 +1076,12 @@ function makeHelpPanel(): HelpPanel {
       }),
     ],
     g: [
-      new Shortcut('Header', [xooxle, note], () => {
+      new Shortcut('Header', [xooxle, note, category], () => {
         scroll('header');
       }),
     ],
     G: [
-      new Shortcut('Footer', [xooxle, note], () => {
+      new Shortcut('Footer', [xooxle, note, category], () => {
         scroll('footer');
       }),
     ],
