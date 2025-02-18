@@ -1145,7 +1145,7 @@ function handleNoteElements() {
         // version.
         .map(
           (s) =>
-            `<a class="hover-link" href="${s}.html" target="_blank">${s}</a>`
+            `<a class="hover-link" href="${anki() ? SEARCH + '/' : ''}${s}.html" target="_blank">${s}</a>`
         )
         .join(', ');
       elem.innerHTML = linked;
@@ -1182,7 +1182,7 @@ function handleNoteElements() {
       el.classList.add('link');
       el.onclick = (): void => {
         window_open(
-          `${HOME}/dawoud/${(+el.innerHTML + DAWOUD_OFFSET).toString()}.jpg`
+          `${anki() ? HOME : '..'}/dawoud/${(+el.innerHTML + DAWOUD_OFFSET).toString()}.jpg`
         );
       };
     }
@@ -1197,7 +1197,7 @@ function handleNoteElements() {
       el.classList.add('link');
       el.onclick = (): void => {
         window_open(
-          `${HOME}/dawoud/${(+el.getAttribute('alt')! + DAWOUD_OFFSET).toString()}.jpg`
+          `${anki() ? HOME : '..'}/dawoud/${(+el.getAttribute('alt')! + DAWOUD_OFFSET).toString()}.jpg`
         );
       };
     }
