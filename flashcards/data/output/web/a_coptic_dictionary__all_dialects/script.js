@@ -12,13 +12,14 @@ const dialectCheckboxes = Array.from(
 function xooxle() {
   return typeof XOOXLE !== 'undefined' && XOOXLE;
 }
-// Since we (currently) only run on Crum notes or Xooxle, the fact that we're
-// not running on Xooxle implies that we're running on a Crum note.
 function note() {
-  return !xooxle();
+  return typeof NOTE !== 'undefined' && NOTE;
 }
 function anki() {
   return typeof ANKI !== 'undefined' && ANKI;
+}
+function category() {
+  return typeof CATEGORY !== 'undefined' && CATEGORY;
 }
 const HOME = 'http://remnqymi.com';
 const SEARCH = `${HOME}/crum`;
@@ -508,28 +509,15 @@ class HelpPanel {
     });
   }
 }
-var Where;
-(function (Where) {
-  Where[(Where['XOOXLE'] = 0)] = 'XOOXLE';
-  Where[(Where['NOTE'] = 1)] = 'NOTE';
-  Where[(Where['XOOXLE_AND_NOTE'] = 2)] = 'XOOXLE_AND_NOTE';
-})(Where || (Where = {}));
 class Shortcut {
-  constructor(description, availability, action, show = true) {
+  constructor(description, available, action, show = true) {
     this.description = description;
-    this.availability = availability;
+    this.available = available;
     this.action = action;
     this.show = show;
   }
   executable() {
-    switch (this.availability) {
-      case Where.XOOXLE_AND_NOTE:
-        return xooxle() || note();
-      case Where.XOOXLE:
-        return xooxle();
-      case Where.NOTE:
-        return note();
-    }
+    return this.available.some((f) => f());
   }
   visible() {
     return this.executable() && this.show;
@@ -588,8 +576,8 @@ function makeDialectShortcut(key, name, code, dictionaries, link) {
   // All dialects are available in Xooxle. Only Crum dialects area available on
   // notes.
   const availability = dictionaries.includes('Crum')
-    ? Where.XOOXLE_AND_NOTE
-    : Where.XOOXLE;
+    ? [xooxle, note, category]
+    : [xooxle];
   return new Shortcut(description, availability, (e) => {
     const dialectCode = DIALECT_SINGLE_CHAR[e.key] ?? e.key;
     if (xooxle()) {
@@ -768,12 +756,12 @@ function makeHelpPanel() {
   };
   const control = {
     r: [
-      new Shortcut('Reset highlighting', Where.XOOXLE_AND_NOTE, () => {
+      new Shortcut('Reset highlighting', [xooxle, note, category], () => {
         reset(dialectCheckboxes, highlighter);
       }),
     ],
     d: [
-      new Shortcut('Developer mode', Where.XOOXLE_AND_NOTE, () => {
+      new Shortcut('Developer mode', [xooxle, note, category], () => {
         toggleDev();
         highlighter.updateDev();
       }),
@@ -781,7 +769,7 @@ function makeHelpPanel() {
     R: [
       new Shortcut(
         `<strong>R</strong>eports / Contact <a class="contact" href="${EMAIL_LINK}">${EMAIL}</a>`,
-        Where.XOOXLE_AND_NOTE,
+        [xooxle, note, category],
         () => {
           window_open(EMAIL_LINK);
         }
@@ -790,7 +778,7 @@ function makeHelpPanel() {
     H: [
       new Shortcut(
         `Open <a href="${HOME}" target="_blank"><strong>h</strong>omepage</a>`,
-        Where.XOOXLE_AND_NOTE,
+        [xooxle, note, category],
         () => {
           window_open(HOME);
         }
@@ -799,21 +787,21 @@ function makeHelpPanel() {
     X: [
       new Shortcut(
         `Open the <a href="${SEARCH}" target="_blank">dictionary search page</a>`,
-        Where.XOOXLE_AND_NOTE,
+        [xooxle, note, category],
         () => {
           window_open(SEARCH);
         }
       ),
     ],
     '?': [
-      new Shortcut('Toggle help panel', Where.XOOXLE_AND_NOTE, () => {
+      new Shortcut('Toggle help panel', [xooxle, note, category], () => {
         panel.togglePanel();
       }),
     ],
     Escape: [
       new Shortcut(
         'Toggle help panel',
-        Where.XOOXLE_AND_NOTE,
+        [xooxle, note, category],
         () => {
           panel.togglePanel(false);
         },
@@ -821,24 +809,28 @@ function makeHelpPanel() {
       ),
     ],
     o: [
-      new Shortcut('Open the current result', Where.XOOXLE_AND_NOTE, () => {
-        findNextElement('.view,.sister-view', 'cur')
-          ?.querySelector('a')
-          ?.click();
-      }),
+      new Shortcut(
+        'Open the word currently being viewed',
+        [xooxle, note, category],
+        () => {
+          findNextElement('.view,.sister-view', 'cur')
+            ?.querySelector('a')
+            ?.click();
+        }
+      ),
     ],
     l: [
-      new Shortcut('Go to next word', Where.NOTE, () => {
+      new Shortcut('Go to next word', [note], () => {
         window_open(getLinkHrefByRel('next'), false);
       }),
     ],
     h: [
-      new Shortcut('Go to previous word', Where.NOTE, () => {
+      new Shortcut('Go to previous word', [note], () => {
         window_open(getLinkHrefByRel('prev'), false);
       }),
     ],
     y: [
-      new Shortcut('Yank (copy) the word key', Where.NOTE, () => {
+      new Shortcut('Yank (copy) the word key', [note], () => {
         void navigator.clipboard.writeText(
           window.location.pathname.split('/').pop().replace('.html', '')
         );
@@ -847,49 +839,53 @@ function makeHelpPanel() {
   };
   const search = {
     w: [
-      new Shortcut('Toggle full-word search', Where.XOOXLE, () => {
+      new Shortcut('Toggle full-word search', [xooxle], () => {
         click('fullWordCheckbox');
       }),
     ],
     x: [
-      new Shortcut('Toggle regex search', Where.XOOXLE, () => {
+      new Shortcut('Toggle regex search', [xooxle], () => {
         click('regexCheckbox');
       }),
     ],
     '/': [
-      new Shortcut('Focus on the search box', Where.XOOXLE, () => {
+      new Shortcut('Focus on the search box', [xooxle], () => {
         focus('searchBox');
       }),
     ],
     ';': [
-      new Shortcut('Focus on the Crum Google search box', Where.XOOXLE, () => {
+      new Shortcut('Focus on the Crum Google search box', [xooxle], () => {
         document.querySelector('#google input').focus();
       }),
     ],
   };
   const scrollTo = {
     n: [
-      new Shortcut('Next search result', Where.XOOXLE_AND_NOTE, () => {
+      new Shortcut('Next word in the table', [xooxle, note, category], () => {
         scrollToNextElement('.view,.sister-view', 'next');
       }),
     ],
     p: [
-      new Shortcut('Previous search result', Where.XOOXLE_AND_NOTE, () => {
-        scrollToNextElement('.view,.sister-view', 'prev');
-      }),
+      new Shortcut(
+        'Previous word in the table',
+        [xooxle, note, category],
+        () => {
+          scrollToNextElement('.view,.sister-view', 'prev');
+        }
+      ),
     ],
     C: [
-      new Shortcut('Crum', Where.XOOXLE, () => {
+      new Shortcut('Crum', [xooxle], () => {
         scroll('crum-title');
       }),
-      new Shortcut('Crum pages', Where.NOTE, () => {
+      new Shortcut('Crum pages', [note], () => {
         scroll('crum');
       }),
     ],
     E: [
       new Shortcut(
         '<a href="https://kellia.uni-goettingen.de/" target="_blank" rel="noopener,noreferrer">K<strong>E</strong>LLIA</a>',
-        Where.XOOXLE,
+        [xooxle],
         () => {
           scroll('kellia-title');
         }
@@ -898,87 +894,88 @@ function makeHelpPanel() {
     T: [
       new Shortcut(
         '<a href="http://copticsite.com/" target="_blank" rel="noopener,noreferrer">copticsi<strong>t</strong>e</a>',
-        Where.XOOXLE,
+        [xooxle],
         () => {
           scroll('copticsite-title');
         }
       ),
     ],
     D: [
-      new Shortcut('Dawoud pages', Where.NOTE, () => {
+      new Shortcut('Dawoud pages', [note], () => {
         scroll('dawoud');
       }),
     ],
     w: [
-      new Shortcut('Related words', Where.NOTE, () => {
+      new Shortcut('Related words', [note], () => {
         scroll('sisters');
       }),
     ],
     m: [
-      new Shortcut('Meaning', Where.NOTE, () => {
+      new Shortcut('Meaning', [note], () => {
         scroll('meaning');
       }),
     ],
     e: [
-      new Shortcut(
-        'S<strong>e</strong>ns<strong>e</strong>s',
-        Where.NOTE,
-        () => {
-          scroll('senses');
-        }
-      ),
+      new Shortcut('S<strong>e</strong>ns<strong>e</strong>s', [note], () => {
+        scroll('senses');
+      }),
     ],
     t: [
-      new Shortcut('Type', Where.NOTE, () => {
+      new Shortcut('Type', [note], () => {
         scroll('root-type');
       }),
     ],
+    j: [
+      new Shortcut('Categories', [note], () => {
+        scroll('categories');
+      }),
+    ],
     i: [
-      new Shortcut('Images', Where.NOTE, () => {
+      new Shortcut('Images', [note], () => {
         scroll('images');
       }),
     ],
     q: [
-      new Shortcut('Words', Where.NOTE, () => {
+      new Shortcut('Words', [note], () => {
         scroll('pretty');
       }),
     ],
     Q: [
-      new Shortcut('Words', Where.NOTE, () => {
+      new Shortcut('Words', [note], () => {
         scroll('marcion');
       }),
     ],
     v: [
-      new Shortcut('Derivations table', Where.NOTE, () => {
+      new Shortcut('Derivations table', [note], () => {
         scroll('derivations');
       }),
     ],
     c: [
-      new Shortcut('Dictionary page list', Where.NOTE, () => {
+      new Shortcut('Dictionary page list', [note], () => {
         scroll('dictionary');
       }),
     ],
     g: [
-      new Shortcut('Header', Where.XOOXLE_AND_NOTE, () => {
+      new Shortcut('Header', [xooxle, note, category], () => {
         scroll('header');
       }),
     ],
     G: [
-      new Shortcut('Footer', Where.XOOXLE_AND_NOTE, () => {
+      new Shortcut('Footer', [xooxle, note, category], () => {
         scroll('footer');
       }),
     ],
   };
   const collapse = {
     c: [
-      new Shortcut('Crum', Where.XOOXLE, () => {
+      new Shortcut('Crum', [xooxle], () => {
         click('crum-title');
       }),
     ],
     e: [
       new Shortcut(
         '<a href="https://kellia.uni-goettingen.de/" target="_blank" rel="noopener,noreferrer">K<strong>E</strong>LLIA</a>',
-        Where.XOOXLE,
+        [xooxle],
         () => {
           click('kellia-title');
         }
@@ -987,7 +984,7 @@ function makeHelpPanel() {
     t: [
       new Shortcut(
         '<a href="http://copticsite.com/" target="_blank" rel="noopener,noreferrer">copticsi<strong>t</strong>e</a>',
-        Where.XOOXLE,
+        [xooxle],
         () => {
           click('copticsite-title');
         }
