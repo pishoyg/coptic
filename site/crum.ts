@@ -46,7 +46,7 @@ function home(): string {
   return anki() ? HOME : '..';
 }
 function crum(): string {
-  return `${home()}/crum`;
+  return anki() ? `${HOME}/crum` : '.';
 }
 
 const LOOKUP_URL_PREFIX = `${crum()}/?query=`;
@@ -1139,8 +1139,9 @@ function focus(id: string): void {
 
 function handleNonXooxleOnlyElements() {
   // Handle 'categories' class.
-  Array.from(document.getElementsByClassName('categories')).forEach(
-    (elem: Element) => {
+  document
+    .querySelectorAll<HTMLElement>('.categories')
+    .forEach((elem: HTMLElement) => {
       const linked = elem.innerHTML
         .trim()
         .split(',')
@@ -1151,8 +1152,7 @@ function handleNonXooxleOnlyElements() {
         )
         .join(', ');
       elem.innerHTML = linked;
-    }
-  );
+    });
 
   // Handle 'root-type' class.
   document
@@ -1170,71 +1170,72 @@ function handleNonXooxleOnlyElements() {
     });
 
   // Handle 'crum-page' class.
-  Array.from(document.getElementsByClassName('crum-page')).forEach(
-    (el: Element): void => {
+  document
+    .querySelectorAll<HTMLElement>('.crum-page')
+    .forEach((el: HTMLElement): void => {
       const pageNumber: string = el.innerHTML;
       el.classList.add('link');
       makeSpanLinkToAnchor(el, `#crum${chopColumn(pageNumber)}`);
-    }
-  );
+    });
 
   // Handle 'crum-page-external' class.
-  Array.from(document.getElementsByClassName('crum-page-external')).forEach(
-    (el: Element): void => {
+  document
+    .querySelectorAll<HTMLElement>('.crum-page-external')
+    .forEach((el: HTMLElement): void => {
       el.classList.add('link');
-      (el as HTMLElement).onclick = (): void => {
+      el.onclick = (): void => {
         window_open(
           `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.innerHTML}`
         );
       };
-    }
-  );
+    });
 
   // Handle 'dawoud-page-external' class.
-  Array.from(document.getElementsByClassName('dawoud-page-external')).forEach(
-    (el: Element): void => {
+  document
+    .querySelectorAll<HTMLElement>('.dawoud-page-external')
+    .forEach((el: HTMLElement): void => {
       el.classList.add('link');
-      (el as HTMLElement).onclick = (): void => {
+      el.onclick = (): void => {
         window_open(
           `${home()}/dawoud/${(+el.innerHTML + DAWOUD_OFFSET).toString()}.jpg`
         );
       };
-    }
-  );
+    });
 
   // Handle 'dawoud-page-img' class.
-  Array.from(document.getElementsByClassName('dawoud-page-img')).forEach(
-    (el: Element): void => {
+  document
+    .querySelectorAll<HTMLElement>('.dawoud-page-img')
+    .forEach((el: HTMLElement): void => {
       // TODO: (#202) Eliminate the dependency on the HTML structure.
       el = el.children[0]! as HTMLElement;
       el.classList.add('link');
-      (el as HTMLElement).onclick = (): void => {
+      el.onclick = (): void => {
         window_open(
           `${home()}/dawoud/${(+el.getAttribute('alt')! + DAWOUD_OFFSET).toString()}.jpg`
         );
       };
-    }
-  );
+    });
 
   // Handle 'crum-page-img' class.
-  Array.from(document.getElementsByClassName('crum-page-img')).forEach(
-    (el: Element): void => {
+  document
+    .querySelectorAll<HTMLElement>('.crum-page-img')
+    .forEach((el: HTMLElement): void => {
       // TODO: (#202) Eliminate the dependency on the HTML structure.
       el = el.children[0]! as HTMLElement;
       el.classList.add('link');
-      (el as HTMLElement).onclick = (): void => {
+      el.onclick = (): void => {
         window_open(
           `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.getAttribute(
             'alt'
           )!}`
         );
       };
-    }
-  );
+    });
 
   // Handle 'explanatory' class.
-  Array.from(document.getElementsByClassName('explanatory')).forEach(
-    (el: Element): void => {
+  document
+    .querySelectorAll<HTMLElement>('.explanatory')
+    .forEach((el: HTMLElement): void => {
       // TODO: (#202) Eliminate the dependency on the HTML structure.
       const img = el.children[0]! as HTMLElement;
       const alt = img.getAttribute('alt')!;
@@ -1245,106 +1246,107 @@ function handleNonXooxleOnlyElements() {
       img.onclick = (): void => {
         window_open(alt);
       };
-    }
-  );
+    });
 
   // Handle 'coptic' class.
-  Array.from(document.getElementsByClassName('coptic')).forEach(
-    (el: Element): void => {
+  document
+    .querySelectorAll<HTMLElement>('.coptic')
+    .forEach((el: HTMLElement): void => {
       el.classList.add('hover-link');
-      (el as HTMLElement).onclick = (): void => {
+      el.onclick = (): void => {
         window_open(LOOKUP_URL_PREFIX + el.innerHTML);
       };
-    }
-  );
+    });
 
   // Handle 'greek' class.
-  Array.from(document.getElementsByClassName('greek')).forEach(
-    (el: Element): void => {
-      el.classList.add('link');
-      el.classList.add('light');
-      (el as HTMLElement).onclick = (): void => {
+  document
+    .querySelectorAll<HTMLElement>('.greek')
+    .forEach((el: HTMLElement): void => {
+      el.classList.add('link', 'light');
+      el.onclick = (): void => {
         window_open(`https://logeion.uchicago.edu/${el.innerHTML}`);
       };
-    }
-  );
+    });
 
   // Handle 'dawoud-page' class.
-  Array.from(document.getElementsByClassName('dawoud-page')).forEach(
-    (el: Element): void => {
+  document
+    .querySelectorAll<HTMLElement>('.dawoud-page')
+    .forEach((el: HTMLElement): void => {
       el.classList.add('link');
       makeSpanLinkToAnchor(el, `#dawoud${chopColumn(el.innerHTML)}`);
-    }
-  );
+    });
 
   // Handle 'drv-key' class.
-  Array.from(document.getElementsByClassName('drv-key')).forEach(
-    (el: Element): void => {
+  document
+    .querySelectorAll<HTMLElement>('.drv-key')
+    .forEach((el: HTMLElement): void => {
       el.classList.add('small', 'light', 'italic', 'hover-link');
       makeSpanLinkToAnchor(el, `#drv${el.innerHTML}`);
-    }
-  );
+    });
 
   // Handle 'explanatory-key' class.
-  Array.from(document.getElementsByClassName('explanatory-key')).forEach(
-    (el: Element): void => {
+  document
+    .querySelectorAll<HTMLElement>('.explanatory-key')
+    .forEach((el: HTMLElement): void => {
       el.classList.add('hover-link');
       makeSpanLinkToAnchor(el, `#explanatory${el.innerHTML}`);
-    }
-  );
+    });
 
   // Handle 'sister-key' class.
-  Array.from(document.getElementsByClassName('sister-key')).forEach(
-    (el: Element): void => {
+  document
+    .querySelectorAll<HTMLElement>('.sister-key')
+    .forEach((el: HTMLElement): void => {
       el.classList.add('hover-link');
       makeSpanLinkToAnchor(el, `#sister${el.innerHTML}`);
-    }
-  );
+    });
 
   // Handle 'sister-view' class.
-  [
-    ...document.getElementsByClassName('sisters-table'),
-    ...document.getElementsByClassName('index-table'),
-  ].forEach((table: Element): void => {
-    let counter = 1;
-    Array.from(table.getElementsByTagName('tr')).forEach((el: HTMLElement) => {
-      const td = el.getElementsByClassName('sister-view')[0];
-      if (!td) {
-        console.error(
-          'A raw in the sisters table does not have a "sister-view" element!'
-        );
-        return;
-      }
-      td.innerHTML =
-        `<span class="sister-index">${counter.toString()}. </span>` +
-        td.innerHTML;
-      counter += 1;
+  document
+    .querySelectorAll<HTMLElement>('.sisters-table,.index-table')
+    .forEach((table: Element): void => {
+      let counter = 1;
+      Array.from(table.getElementsByTagName('tr')).forEach(
+        (el: HTMLElement) => {
+          const td = el.querySelector('.sister-view');
+          if (!td) {
+            console.error(
+              'A raw in the sisters table does not have a "sister-view" element!'
+            );
+            return;
+          }
+          td.innerHTML =
+            `<span class="sister-index">${counter.toString()}. </span>` +
+            td.innerHTML;
+          counter += 1;
+        }
+      );
     });
-  });
 
-  Array.from(document.getElementsByClassName('dialect')).forEach(
-    (el: Element) => {
+  document
+    .querySelectorAll<HTMLElement>('.dialect')
+    .forEach((el: HTMLElement) => {
       el.classList.add('hover-link');
-      (el as HTMLElement).onclick = () => {
+      el.onclick = () => {
         toggleDialect(el.innerHTML);
         highlighter.updateDialects();
       };
-    }
-  );
+    });
 
-  Array.from(document.getElementsByClassName('developer')).forEach(
-    (el: Element): void => {
+  document
+    .querySelectorAll<HTMLElement>('.developer')
+    .forEach((el: HTMLElement): void => {
       el.classList.add('link');
-      (el as HTMLElement).onclick = () => {
+      el.onclick = () => {
         toggleDev();
         highlighter.updateDev();
       };
-    }
-  );
+    });
 
   if (anki()) {
-    Array.from(document.getElementsByClassName('navigate')).forEach(
-      (e: Element) => {
+    const CRUM = crum();
+    document
+      .querySelectorAll<HTMLElement>('.navigate')
+      .forEach((e: HTMLElement) => {
         if (e.tagName !== 'A' || !e.hasAttribute('href')) {
           console.error(
             'This "navigate" element is not an <a> tag with an "href" property!',
@@ -1352,20 +1354,19 @@ function handleNonXooxleOnlyElements() {
           );
           return;
         }
-        e.setAttribute('href', `${crum()}/${e.getAttribute('href')!}`);
-      }
-    );
+        e.setAttribute('href', `${CRUM}/${e.getAttribute('href')!}`);
+      });
   }
 
   // NOTE: The `reset` class is only used in the notes pages.
-  Array.from(document.getElementsByClassName('reset')).forEach(
-    (el: Element): void => {
+  document
+    .querySelectorAll<HTMLElement>('.reset')
+    .forEach((el: HTMLElement): void => {
       el.classList.add('link');
-      (el as HTMLElement).onclick = () => {
+      el.onclick = () => {
         reset(dialectCheckboxes, highlighter);
       };
-    }
-  );
+    });
 }
 
 function initGoogleSearchBox(): void {
@@ -1395,8 +1396,9 @@ function handleXooxleOnlyElements() {
     });
 
   // Collapse logic.
-  Array.from(document.getElementsByClassName('collapse')).forEach(
-    (collapse: Element): void => {
+  document
+    .querySelectorAll<HTMLElement>('.collapse')
+    .forEach((collapse: HTMLElement): void => {
       collapse.addEventListener('click', function () {
         // TODO: Remove the dependency on the HTML structure.
         const collapsible = collapse.nextElementSibling! as HTMLElement;
@@ -1404,9 +1406,8 @@ function handleXooxleOnlyElements() {
           ? ''
           : collapsible.scrollHeight.toString() + 'px';
       });
-      (collapse as HTMLElement).click();
-    }
-  );
+      collapse.click();
+    });
 
   const active: string[] | null = activeDialects();
 
