@@ -22,8 +22,13 @@ function category() {
   return typeof CATEGORY !== 'undefined' && CATEGORY;
 }
 const HOME = 'http://remnqymi.com';
-const SEARCH = `${HOME}/crum`;
-const LOOKUP_URL_PREFIX = `${SEARCH}/?query=`;
+function home() {
+  return anki() ? HOME : '..';
+}
+function crum() {
+  return `${home()}/crum`;
+}
+const LOOKUP_URL_PREFIX = `${crum()}/?query=`;
 const EMAIL = 'remnqymi@gmail.com';
 const EMAIL_LINK = `mailto:${EMAIL}`;
 var DIALECT_ARTICLE;
@@ -226,7 +231,10 @@ function moveElement(el, tag, attrs) {
   });
   el.parentNode.replaceChild(copy, el);
 }
-function makeLink(el, target) {
+function makeSpanLinkToAnchor(el, target) {
+  if (el.tagName !== 'SPAN') {
+    console.warn(`Converting ${el.tagName} tag to <a> tag!`);
+  }
   moveElement(el, 'a', { href: target });
 }
 function chopColumn(pageNumber) {
@@ -777,19 +785,19 @@ function makeHelpPanel() {
     ],
     H: [
       new Shortcut(
-        `Open <a href="${HOME}" target="_blank"><strong>h</strong>omepage</a>`,
+        `Open <a href="${home()}" target="_blank"><strong>h</strong>omepage</a>`,
         [xooxle, note, category],
         () => {
-          window_open(HOME);
+          window_open(home());
         }
       ),
     ],
     X: [
       new Shortcut(
-        `Open the <a href="${SEARCH}" target="_blank">dictionary search page</a>`,
+        `Open the <a href="${crum()}" target="_blank">dictionary search page</a>`,
         [xooxle, note, category],
         () => {
-          window_open(SEARCH);
+          window_open(crum());
         }
       ),
     ],
@@ -1008,35 +1016,28 @@ function focus(id) {
 }
 function handleNonXooxleOnlyElements() {
   // Handle 'categories' class.
-  Array.prototype.forEach.call(
-    document.getElementsByClassName('categories'),
-    (elem) => {
-      const linked = elem.innerHTML
-        .trim()
-        .split(',')
-        .map((s) => s.trim())
-        // TODO: (#287) This won't work on Anki! You should link to the web
-        // version.
-        .map(
-          (s) =>
-            `<a class="hover-link" href="${anki() ? SEARCH + '/' : ''}${s}.html" target="_blank">${s}</a>`
-        )
-        .join(', ');
-      elem.innerHTML = linked;
-    }
-  );
+  Array.from(document.getElementsByClassName('categories')).forEach((elem) => {
+    const linked = elem.innerHTML
+      .trim()
+      .split(',')
+      .map((s) => s.trim())
+      // TODO: (#287) This won't work on Anki! You should link to the web
+      // version.
+      .map(
+        (s) =>
+          `<a class="hover-link" href="${crum()}/${s}.html" target="_blank">${s}</a>`
+      )
+      .join(', ');
+    elem.innerHTML = linked;
+  });
   // Handle 'crum-page' class.
-  Array.prototype.forEach.call(
-    document.getElementsByClassName('crum-page'),
-    (el) => {
-      const pageNumber = el.innerHTML;
-      el.classList.add('link');
-      makeLink(el, `#crum${chopColumn(pageNumber)}`);
-    }
-  );
+  Array.from(document.getElementsByClassName('crum-page')).forEach((el) => {
+    const pageNumber = el.innerHTML;
+    el.classList.add('link');
+    makeSpanLinkToAnchor(el, `#crum${chopColumn(pageNumber)}`);
+  });
   // Handle 'crum-page-external' class.
-  Array.prototype.forEach.call(
-    document.getElementsByClassName('crum-page-external'),
+  Array.from(document.getElementsByClassName('crum-page-external')).forEach(
     (el) => {
       el.classList.add('link');
       el.onclick = () => {
@@ -1047,121 +1048,97 @@ function handleNonXooxleOnlyElements() {
     }
   );
   // Handle 'dawoud-page-external' class.
-  Array.prototype.forEach.call(
-    document.getElementsByClassName('dawoud-page-external'),
+  Array.from(document.getElementsByClassName('dawoud-page-external')).forEach(
     (el) => {
       el.classList.add('link');
       el.onclick = () => {
         window_open(
-          `${anki() ? HOME : '..'}/dawoud/${(+el.innerHTML + DAWOUD_OFFSET).toString()}.jpg`
+          `${home()}/dawoud/${(+el.innerHTML + DAWOUD_OFFSET).toString()}.jpg`
         );
       };
     }
   );
   // Handle 'dawoud-page-img' class.
-  Array.prototype.forEach.call(
-    document.getElementsByClassName('dawoud-page-img'),
+  Array.from(document.getElementsByClassName('dawoud-page-img')).forEach(
     (el) => {
       // TODO: (#202) Eliminate the dependency on the HTML structure.
       el = el.children[0];
       el.classList.add('link');
       el.onclick = () => {
         window_open(
-          `${anki() ? HOME : '..'}/dawoud/${(+el.getAttribute('alt') + DAWOUD_OFFSET).toString()}.jpg`
+          `${home()}/dawoud/${(+el.getAttribute('alt') + DAWOUD_OFFSET).toString()}.jpg`
         );
       };
     }
   );
   // Handle 'crum-page-img' class.
-  Array.prototype.forEach.call(
-    document.getElementsByClassName('crum-page-img'),
-    (el) => {
-      // TODO: (#202) Eliminate the dependency on the HTML structure.
-      el = el.children[0];
-      el.classList.add('link');
-      el.onclick = () => {
-        window_open(
-          `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.getAttribute('alt')}`
-        );
-      };
-    }
-  );
+  Array.from(document.getElementsByClassName('crum-page-img')).forEach((el) => {
+    // TODO: (#202) Eliminate the dependency on the HTML structure.
+    el = el.children[0];
+    el.classList.add('link');
+    el.onclick = () => {
+      window_open(
+        `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.getAttribute('alt')}`
+      );
+    };
+  });
   // Handle 'explanatory' class.
-  Array.prototype.forEach.call(
-    document.getElementsByClassName('explanatory'),
-    (el) => {
-      // TODO: (#202) Eliminate the dependency on the HTML structure.
-      const img = el.children[0];
-      const alt = img.getAttribute('alt');
-      if (!alt.startsWith('http')) {
-        return;
-      }
-      img.classList.add('link');
-      img.onclick = () => {
-        window_open(alt);
-      };
+  Array.from(document.getElementsByClassName('explanatory')).forEach((el) => {
+    // TODO: (#202) Eliminate the dependency on the HTML structure.
+    const img = el.children[0];
+    const alt = img.getAttribute('alt');
+    if (!alt.startsWith('http')) {
+      return;
     }
-  );
+    img.classList.add('link');
+    img.onclick = () => {
+      window_open(alt);
+    };
+  });
   // Handle 'coptic' class.
-  Array.prototype.forEach.call(
-    document.getElementsByClassName('coptic'),
-    (el) => {
-      el.classList.add('hover-link');
-      el.onclick = () => {
-        window_open(LOOKUP_URL_PREFIX + el.innerHTML);
-      };
-    }
-  );
+  Array.from(document.getElementsByClassName('coptic')).forEach((el) => {
+    el.classList.add('hover-link');
+    el.onclick = () => {
+      window_open(LOOKUP_URL_PREFIX + el.innerHTML);
+    };
+  });
   // Handle 'greek' class.
-  Array.prototype.forEach.call(
-    document.getElementsByClassName('greek'),
-    (el) => {
-      el.classList.add('link');
-      el.classList.add('light');
-      el.onclick = () => {
-        window_open(`https://logeion.uchicago.edu/${el.innerHTML}`);
-      };
-    }
-  );
+  Array.from(document.getElementsByClassName('greek')).forEach((el) => {
+    el.classList.add('link');
+    el.classList.add('light');
+    el.onclick = () => {
+      window_open(`https://logeion.uchicago.edu/${el.innerHTML}`);
+    };
+  });
   // Handle 'dawoud-page' class.
-  Array.prototype.forEach.call(
-    document.getElementsByClassName('dawoud-page'),
-    (el) => {
-      el.classList.add('link');
-      makeLink(el, `#dawoud${chopColumn(el.innerHTML)}`);
-    }
-  );
+  Array.from(document.getElementsByClassName('dawoud-page')).forEach((el) => {
+    el.classList.add('link');
+    makeSpanLinkToAnchor(el, `#dawoud${chopColumn(el.innerHTML)}`);
+  });
   // Handle 'drv-key' class.
-  Array.prototype.forEach.call(
-    document.getElementsByClassName('drv-key'),
-    (el) => {
-      el.classList.add('small', 'light', 'italic', 'hover-link');
-      makeLink(el, `#drv${el.innerHTML}`);
-    }
-  );
+  Array.from(document.getElementsByClassName('drv-key')).forEach((el) => {
+    el.classList.add('small', 'light', 'italic', 'hover-link');
+    makeSpanLinkToAnchor(el, `#drv${el.innerHTML}`);
+  });
   // Handle 'explanatory-key' class.
-  Array.prototype.forEach.call(
-    document.getElementsByClassName('explanatory-key'),
+  Array.from(document.getElementsByClassName('explanatory-key')).forEach(
     (el) => {
       el.classList.add('hover-link');
-      makeLink(el, `#explanatory${el.innerHTML}`);
+      makeSpanLinkToAnchor(el, `#explanatory${el.innerHTML}`);
     }
   );
   // Handle 'sister-key' class.
-  Array.prototype.forEach.call(
-    document.getElementsByClassName('sister-key'),
-    (el) => {
-      el.classList.add('hover-link');
-      makeLink(el, `#sister${el.innerHTML}`);
-    }
-  );
+  Array.from(document.getElementsByClassName('sister-key')).forEach((el) => {
+    el.classList.add('hover-link');
+    makeSpanLinkToAnchor(el, `#sister${el.innerHTML}`);
+  });
   // Handle 'sister-view' class.
   [
     ...document.getElementsByClassName('sisters-table'),
     ...document.getElementsByClassName('category-table'),
   ].forEach((table) => {
     let counter = 1;
-    [...table.getElementsByTagName('tr')].forEach((el) => {
+    Array.from(table.getElementsByTagName('tr')).forEach((el) => {
       const td = el.getElementsByClassName('sister-view')[0];
       if (!td) {
         console.error(
@@ -1175,48 +1152,39 @@ function handleNonXooxleOnlyElements() {
       counter += 1;
     });
   });
-  Array.prototype.forEach.call(
-    document.getElementsByClassName('dialect'),
-    (el) => {
-      el.classList.add('hover-link');
-      el.onclick = () => {
-        toggleDialect(el.innerHTML);
-        highlighter.updateDialects();
-      };
-    }
-  );
-  Array.prototype.forEach.call(
-    document.getElementsByClassName('developer'),
-    (el) => {
-      el.classList.add('link');
-      el.onclick = () => {
-        toggleDev();
-        highlighter.updateDev();
-      };
-    }
-  );
+  Array.from(document.getElementsByClassName('dialect')).forEach((el) => {
+    el.classList.add('hover-link');
+    el.onclick = () => {
+      toggleDialect(el.innerHTML);
+      highlighter.updateDialects();
+    };
+  });
+  Array.from(document.getElementsByClassName('developer')).forEach((el) => {
+    el.classList.add('link');
+    el.onclick = () => {
+      toggleDev();
+      highlighter.updateDev();
+    };
+  });
   if (anki()) {
-    [...document.getElementsByClassName('navigate')].forEach((e) => {
+    Array.from(document.getElementsByClassName('navigate')).forEach((e) => {
       if (e.tagName !== 'A' || !e.hasAttribute('href')) {
-        console.log(
+        console.error(
           'This "navigate" element is not an <a> tag with an "href" property!',
           e
         );
         return;
       }
-      e.setAttribute('href', `${SEARCH}/${e.getAttribute('href')}`);
+      e.setAttribute('href', `${crum()}/${e.getAttribute('href')}`);
     });
   }
   // NOTE: The `reset` class is only used in the notes pages.
-  Array.prototype.forEach.call(
-    document.getElementsByClassName('reset'),
-    (el) => {
-      el.classList.add('link');
-      el.onclick = () => {
-        reset(dialectCheckboxes, highlighter);
-      };
-    }
-  );
+  Array.from(document.getElementsByClassName('reset')).forEach((el) => {
+    el.classList.add('link');
+    el.onclick = () => {
+      reset(dialectCheckboxes, highlighter);
+    };
+  });
 }
 function initGoogleSearchBox() {
   const googleSearchBox = document.querySelector('#google input');
@@ -1239,8 +1207,7 @@ function handleXooxleOnlyElements() {
     event.preventDefault();
   });
   // Collapse logic.
-  Array.prototype.forEach.call(
-    document.getElementsByClassName('collapse'),
+  Array.from(document.getElementsByClassName('collapse')).forEach(
     (collapse) => {
       collapse.addEventListener('click', function () {
         // TODO: Remove the dependency on the HTML structure.
