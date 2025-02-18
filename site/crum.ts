@@ -42,8 +42,14 @@ function category(): boolean {
 }
 
 const HOME = 'http://remnqymi.com';
-const SEARCH = `${HOME}/crum`;
-const LOOKUP_URL_PREFIX = `${SEARCH}/?query=`;
+function home(): string {
+  return anki() ? HOME : '..';
+}
+function crum(): string {
+  return `${home()}/crum`;
+}
+
+const LOOKUP_URL_PREFIX = `${crum()}/?query=`;
 
 const EMAIL = 'remnqymi@gmail.com';
 const EMAIL_LINK = `mailto:${EMAIL}`;
@@ -895,19 +901,19 @@ function makeHelpPanel(): HelpPanel {
     ],
     H: [
       new Shortcut(
-        `Open <a href="${HOME}" target="_blank"><strong>h</strong>omepage</a>`,
+        `Open <a href="${home()}" target="_blank"><strong>h</strong>omepage</a>`,
         [xooxle, note, category],
         () => {
-          window_open(HOME);
+          window_open(home());
         }
       ),
     ],
     X: [
       new Shortcut(
-        `Open the <a href="${SEARCH}" target="_blank">dictionary search page</a>`,
+        `Open the <a href="${crum()}" target="_blank">dictionary search page</a>`,
         [xooxle, note, category],
         () => {
-          window_open(SEARCH);
+          window_open(crum());
         }
       ),
     ],
@@ -1145,7 +1151,7 @@ function handleNonXooxleOnlyElements() {
         // version.
         .map(
           (s) =>
-            `<a class="hover-link" href="${anki() ? SEARCH + '/' : ''}${s}.html" target="_blank">${s}</a>`
+            `<a class="hover-link" href="${crum()}/${s}.html" target="_blank">${s}</a>`
         )
         .join(', ');
       elem.innerHTML = linked;
@@ -1182,7 +1188,7 @@ function handleNonXooxleOnlyElements() {
       el.classList.add('link');
       el.onclick = (): void => {
         window_open(
-          `${anki() ? HOME : '..'}/dawoud/${(+el.innerHTML + DAWOUD_OFFSET).toString()}.jpg`
+          `${home()}/dawoud/${(+el.innerHTML + DAWOUD_OFFSET).toString()}.jpg`
         );
       };
     }
@@ -1197,7 +1203,7 @@ function handleNonXooxleOnlyElements() {
       el.classList.add('link');
       el.onclick = (): void => {
         window_open(
-          `${anki() ? HOME : '..'}/dawoud/${(+el.getAttribute('alt')! + DAWOUD_OFFSET).toString()}.jpg`
+          `${home()}/dawoud/${(+el.getAttribute('alt')! + DAWOUD_OFFSET).toString()}.jpg`
         );
       };
     }
@@ -1348,7 +1354,7 @@ function handleNonXooxleOnlyElements() {
         );
         return;
       }
-      e.setAttribute('href', `${SEARCH}/${e.getAttribute('href')!}`);
+      e.setAttribute('href', `${crum()}/${e.getAttribute('href')!}`);
     });
   }
 
