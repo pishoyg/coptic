@@ -1046,6 +1046,11 @@ function makeHelpPanel(): HelpPanel {
         scroll('root-type');
       }),
     ],
+    j: [
+      new Shortcut('Categories', Where.NOTE, () => {
+        scroll('categories');
+      }),
+    ],
     i: [
       new Shortcut('Images', Where.NOTE, () => {
         scroll('images');
