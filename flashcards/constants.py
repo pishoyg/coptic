@@ -9,17 +9,14 @@ import field
 
 import utils
 
-HOME = "https://remnqymi.com"
-CRUM_ROOT = f"{HOME}/crum"
 EMAIL = "remnqymi@gmail.com"
+DESCRIPTION = f"https://remnqymi.com\n{EMAIL}"
 
 KELLIA_PREFIX = "https://coptic-dictionary.org/entry.cgi?tla="
 
-INTEGER_RE = re.compile("([0-9]+)")
 DICTIONARY_PAGE_RE = re.compile("([0-9]+(a|b))")
 COPTIC_WORD_RE = re.compile("([Ⲁ-ⲱϢ-ϯⳈⳉ]+)")
 GREEK_WORD_RE = re.compile("([Α-Ωα-ω]+)")
-NON_INFINITIVE_SUFFIXES = {"-", "=", "+"}
 
 DICT_WIDTH = "1000px"
 
@@ -143,7 +140,7 @@ def crum(
         # NOTE: The deck name is a protected field.
         deck_name=deck_name,
         deck_id=deck_id,
-        deck_description=f"{HOME}.\n{EMAIL}.",
+        deck_description=DESCRIPTION,
         css=utils.read("site/style.css"),
         javascript=utils.read("site/data/build/crum.js"),
         # NOTE: The key is a protected field. Do not change unless you know what
@@ -158,11 +155,7 @@ def crum(
                     '<table id="header" class="header">',
                     "<tr>",
                     # Home
-                    "<td>"
-                    f'<a class="home" href="{HOME}">'
-                    "home"
-                    "</a>"
-                    "</td>",
+                    '<td><a class="navigate" href="../">home</a></td>',
                     # Contact
                     "<td>"
                     f'<a class="contact" href="mailto:{EMAIL}">'
@@ -172,9 +165,7 @@ def crum(
                     # Prev
                     "<td>",
                     field.fmt(
-                        f'<a class="navigate" href="{
-                            CRUM_ROOT
-                        }/{{key_prev}}.html">'
+                        f'<a class="navigate" href="{{key_prev}}.html">'
                         "prev"
                         "</a>",
                         {"key_prev": roots_col("key-prev", force=False)},
@@ -185,7 +176,7 @@ def crum(
                     # Key.
                     "<td>",
                     field.fmt(
-                        f'<a class="navigate" href="{CRUM_ROOT}/{{key}}.html">'
+                        f'<a class="navigate" href="{{key}}.html">'
                         "{key}"
                         "</a>",
                         {
@@ -196,9 +187,7 @@ def crum(
                     # Next
                     "<td>",
                     field.fmt(
-                        f'<a class="navigate" href="{
-                            CRUM_ROOT
-                        }/{{key_next}}.html">'
+                        f'<a class="navigate" href="{{key_next}}.html">'
                         "next"
                         "</a>",
                         {"key_next": roots_col("key-next", force=False)},
@@ -513,18 +502,18 @@ def crum(
         ),
         title=roots_col("word-title"),
         prev=field.fmt(
-            f"{CRUM_ROOT}/{{key_prev}}.html",
+            f"{{key_prev}}.html",
             {"key_prev": roots_col("key-prev", force=False)},
             force=False,
             aon=True,
         ),
         next=field.fmt(
-            f"{CRUM_ROOT}/{{key_next}}.html",
+            f"{{key_next}}.html",
             {"key_next": roots_col("key-next", force=False)},
             force=False,
             aon=True,
         ),
-        search=f"{CRUM_ROOT}/",
+        search=f"./",
         force_front=force_front,
         category_generate=_crum_categorizer(
             roots_col,
@@ -550,7 +539,7 @@ def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
         # NOTE: The deck name is a protected field.
         deck_name=deck_name,
         deck_id=deck_id,
-        deck_description=f"{HOME}\n{EMAIL}",
+        deck_description=DESCRIPTION,
         css=utils.read("site/style.css"),
         javascript="",
         # NOTE: The key is a protected field. Do not change unless you know what
@@ -608,7 +597,7 @@ def kellia(deck_name: str, deck_id: int, tsv_basename: str) -> deck.deck:
         # NOTE: The deck name is a protected field.
         deck_name=deck_name,
         deck_id=deck_id,
-        deck_description=f"{HOME}\n{EMAIL}",
+        deck_description=DESCRIPTION,
         css=utils.read("site/style.css"),
         javascript="",
         # NOTE: The key is a protected field. Do not change unless you know what
@@ -736,7 +725,7 @@ class sister:
 
 
 class sister_with_frag:
-    HREF_FMT = CRUM_ROOT + "/{key}.html"
+    HREF_FMT = "{key}.html"
 
     def __init__(self, sister: sister, fragment: str) -> None:
         self.sister = sister
@@ -753,7 +742,7 @@ class sister_with_frag:
         return (
             f'<tr id="sister{self.sister.key}" class="sister">'
             '<td class="sister-view">'
-            f'<a href="{
+            f'<a class="navigate" href="{
                 self.HREF_FMT.format(
                     key=self.sister.key
                 ) + self.frag()
@@ -856,8 +845,6 @@ class _step_mother(_mother):
 
 
 class _crum_categorizer(_mother):
-    HREF_FMT = CRUM_ROOT + "/{key}.html"
-
     def __init__(
         self,
         roots_col: typing.Callable,

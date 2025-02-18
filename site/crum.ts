@@ -1132,7 +1132,7 @@ function focus(id: string): void {
   document.getElementById(id)!.focus();
 }
 
-function handleNoteElements() {
+function handleNonXooxleOnlyElements() {
   // Handle 'categories' class.
   Array.prototype.forEach.call(
     document.getElementsByClassName('categories'),
@@ -1339,6 +1339,19 @@ function handleNoteElements() {
     }
   );
 
+  if (anki()) {
+    [...document.getElementsByClassName('navigate')].forEach((e: Element) => {
+      if (e.tagName !== 'A' || !e.hasAttribute('href')) {
+        console.log(
+          'This "navigate" element is not an <a> tag with an "href" property!',
+          e
+        );
+        return;
+      }
+      e.setAttribute('href', `${SEARCH}/${e.getAttribute('href')!}`);
+    });
+  }
+
   // NOTE: The `reset` class is only used in the notes pages.
   Array.prototype.forEach.call(
     document.getElementsByClassName('reset'),
@@ -1365,7 +1378,7 @@ function initGoogleSearchBox(): void {
     'Search A Coptic Dictionary, W. E. Crum, using Ⲅⲟⲟⲅⲗⲉ';
 }
 
-function handleXooxleElements() {
+function handleXooxleOnlyElements() {
   // NOTE: The element with the ID `reset` is only present on the XOOXLE page.
   document
     .getElementById('reset')
@@ -1453,12 +1466,10 @@ function handleCommonElements() {
 }
 
 function main() {
-  if (note()) {
-    handleNoteElements();
-  }
-
   if (xooxle()) {
-    handleXooxleElements();
+    handleXooxleOnlyElements();
+  } else {
+    handleNonXooxleOnlyElements();
   }
 
   handleCommonElements();
