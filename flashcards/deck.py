@@ -14,6 +14,7 @@ HTML_HEAD = f"""
   <head>
     <title>{{title}}</title>
     <link rel="stylesheet" type="text/css" href="{CSS_BASENAME}">
+    <script>const {{page_class}} = true;</script>
     <script type="text/javascript" src="{JS_BASENAME}" defer></script>
     {{links}}
   </head>
@@ -257,6 +258,7 @@ class deck:
                 f.write(
                     HTML_FMT.format(
                         title=title,
+                        page_class="NOTE",
                         front=front,
                         back=back,
                         links="\n".join(links),
@@ -278,6 +280,7 @@ class deck:
                 f.write(
                     HTML_CAT_FMT.format(
                         title=title,
+                        page_class="CATEGORY",
                         links="",
                         body=html_body,
                     ),
