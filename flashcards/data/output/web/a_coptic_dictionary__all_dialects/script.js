@@ -1037,14 +1037,12 @@ function handleNonXooxleOnlyElements() {
   });
   // Handle 'root-type' class.
   document.querySelectorAll('.root-type').forEach((elem) => {
-    const type = elem
-      .getElementsByTagName('b')[0]
-      ?.innerHTML.replaceAll('/', '_');
+    const type = elem.getElementsByTagName('b')[0]?.innerHTML;
     if (!type) {
       console.error('Unable to infer the root type for element!', elem);
       return;
     }
-    const linked = `(<a class="hover-link" href="${crum()}/${type}.html" target="_blank">${type}</a>)`;
+    const linked = `(<a class="hover-link" href="${crum()}/${type.replaceAll('/', '_')}.html" target="_blank">${type}</a>)`;
     elem.innerHTML = linked;
   });
   // Handle 'crum-page' class.
