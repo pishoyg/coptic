@@ -32,29 +32,71 @@ CATEGORIES_COL: str = "categories"
 
 TEXT_FRAG_PREFIX: str = ":~:text="
 
+# The list of word categories is likely to evolve as we work on categorizing
+# more and more words.
+# For the time being, we have paid more attention to categorizing nouns in
+# particular.
+# It is generally acceptable for some words to belong to several categories,
+# though our categories should be selected such that such cases are uncommon.
+# As much as possible, aim to provide very precise definitions of each category,
+# to minimize uncertainty during the labeling process.
 KNOWN_CATEGORIES: set[str] = (
     {  # Biology
+        # "species" includes not only species, but also nouns describing
+        # concepts that would be considered genera, families, orders, ... etc. or even
+        # overlaps of such populations and ranks.
         "species",
+        # "anatomy" includes both animal and plant anatomy. Secretions also belong
+        # to this category (saliva, milk, urine, ...).
         "anatomy",
+        # "person" includes categories of people, jobs, roles, or family members.
         "person",
         # "food" includes edibles that don't fit into anatomy or species.
         "food",
         # "biology" includes everything biology-related, which doesn't fit
-        # in a more precise category, such as "species", "person", or "anatomy".
+        # in a more precise category, such as "species", "person", "anatomy", or
+        # "food". For example, included in this category are diseases and life
+        # functions.
         "biology",
     }
     | {  # Physics & Chemistry
+        # "substance" should include elements and compounds, and also more
+        # generic term such as stone, water, or dirt.
+        # Food substances (milk, wine, oil, ...) should be marked as "food" (and/or
+        # "anatomy" where appropriate).
         "substance",
+        # "geography" includes description of earthly phenomena that are not
+        # man-made, and are not simply substances.
+        # TODO: (#287) Consider renaming to "plant" and including astronomical terms,
+        # removing them from the "physics" category.
         "geography",
         # "physics" includes everything physics-related, which doesn't fit
         # in a more precise category, such as "substance" or "geography".
+        # This includes astronomical terms, as well as physical phenomena (e.g.
+        # related to heat).
         "physics",
     }
     | {  # Man-made
+        # "building" includes man-made objects that are fixed at a given
+        # location.
+        # This includes build things that are not exactly buildings, such as
+        # 'city'.
+        # Some nouns (such as canal) can be either natural or man-made. In this
+        # case, it can be included in both the "geography" and "building"
+        # categories.
+        # TODO: (#287) Consider renaming to "construction" to reflect the current usage.
         "building",
+        # "container" includes such nouns as pot, jar, dish, box, chest,
+        # vessel, receptacle, quiver, pitcher, basket, ... Generally any,
+        # potentially-movable, object that is used for storage.
+        # Non-movable storage objects (such as cistern or treasure house) belong
+        # to the "building" category.
         "container",
+        # "tool" represents tools or utilities that don't fit in the "container"
+        # or "building" category. These are generally man-made, but can include
+        # natural non-living objects that are employed as tools by humans.
         "tool",
-        # TODO: Merge "vehicle" into "tool". This category is too small!
+        # TODO: (#287) Merge "vehicle" into "tool". This category is too small!
         "vehicle",
     }
     | {  # Conceptual
