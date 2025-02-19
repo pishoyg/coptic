@@ -49,14 +49,21 @@ KNOWN_CATEGORIES: set[str] = (
         # "anatomy" includes both animal and plant anatomy. Secretions also belong
         # to this category (saliva, milk, urine, ...).
         "anatomy",
-        # "person" includes categories of people, jobs, roles, or family members.
+        # "person" includes categories of people (man, woman, ...), jobs and
+        # roles (fisher, farmer, gambler, ...), family members (father, mother, ...), and
+        # also epithets of people (blind, bald, wise, ...).
+        # TODO: (#287): The "person" category may be too generic! Also, many
+        # words included in this category apply to non-persons (male, female, ...; blind, lame, ...)
         "person",
-        # "food" includes edibles that don't fit into anatomy or species.
+        # "food" includes edibles that don't fit into anatomy or species. This
+        # includes such items as bread, gruel, ... and also ingredients.
         "food",
         # "biology" includes everything biology-related, which doesn't fit
         # in a more precise category, such as "species", "person", "anatomy", or
-        # "food". For example, included in this category are diseases and life
-        # functions.
+        # "food". For example, included in this category are diseases, and life
+        # functions (breathe, eat, ...).
+        # TODO: (#287): Reconsider the category for diseases.
+        # TODO: (#287): "biology" is a bad category. It's too generic to be useful.
         "biology",
     }
     | {  # Physics & Chemistry
@@ -64,16 +71,31 @@ KNOWN_CATEGORIES: set[str] = (
         # generic term such as stone, water, or dirt.
         # Food substances (milk, wine, oil, ...) should be marked as "food" (and/or
         # "anatomy" where appropriate).
+        # TODO: (#287): Consider the category for fabrics (e.g. linen).
+        # TODO: (#287): Consider the category for such words as fuel.
         "substance",
         # "geography" includes description of earthly phenomena that are not
         # man-made, and are not simply substances.
-        # TODO: (#287) Consider renaming to "planet" and including astronomical terms,
-        # removing them from the "physics" category.
+        # TODO: (#287): Consider the category for cities and place names. Also
+        # consider the categories for such words as "border".
+        # TODO: (#287): Consider the category for ethnicities.
+        # TODO: (#287): Consider the category for natural phenomena on earth,
+        # that don't fit into the "geography" category (rain, dew, storm, ...).
+        # Perhaps rename "geography" to "earth" and include those?
+        # TODO: (#287): Consider the category for such words as dirt, rubbish,
+        # ...
         "geography",
         # "physics" includes everything physics-related, which doesn't fit
         # in a more precise category, such as "substance" or "geography".
         # This includes astronomical terms, as well as physical phenomena (e.g.
         # related to heat).
+        # TODO: (#287) Include an "astronomy" category, and remove astronomical
+        # terms from "physics".
+        # TODO: (#287): Get rid of the "physics" category. It's too generic to be
+        # useful.
+        # TODO: (#287): Consider the category for colors.
+        # TODO: (#287): Consider the category for shapes (ball, corner,
+        # fragment,piece, ...).
         "physics",
     }
     | {  # Man-made
@@ -95,8 +117,10 @@ KNOWN_CATEGORIES: set[str] = (
         # "tool" represents tools or utilities that don't fit in the "container"
         # or "building" category. These are generally man-made, but can include
         # natural non-living objects that are employed as tools by humans.
+        # TODO: (#287) Consider the category for clothes (cloak, tunic, ...).
+        # TODO: (#287) Consider the category for furniture or equipment (chair,
+        # ladder). "tool" may not be the best category for such words.
         "tool",
-        # TODO: (#287) Merge "vehicle" into "tool". This category is too small!
         "vehicle",
     }
     | {  # Conceptual
@@ -120,6 +144,7 @@ KNOWN_CATEGORIES: set[str] = (
         # "doubtful" represents words with an unknown or uncertain meaning.
         "doubtful",
     }
+    # TODO: (#287): Consider adding a category for "movement" verbs.
 )
 
 argparser: argparse.ArgumentParser = argparse.ArgumentParser(
