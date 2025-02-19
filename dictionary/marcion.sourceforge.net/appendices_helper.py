@@ -102,7 +102,12 @@ KNOWN_CATEGORIES: set[str] = (
     | {  # Conceptual
         "time",
         "number",
-        "measure",
+        # "unit" represents quantities, measures, or units of length, time, weight,
+        # currency, weight, volume, ...
+        # Notice that entities representing specific points rather than
+        # quantities (e.g. Monday vs. 24 hours, or here vs. 10 meters) do NOT
+        # belong in this category.
+        "unit",
         "direction",
         "emotion",
         "concept",
