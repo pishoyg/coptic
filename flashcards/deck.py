@@ -35,8 +35,8 @@ HTML_FMT = f"""<!DOCTYPE html>
 </html>
 """
 
-# The HTML FMT string for a category index.
-HTML_CAT_FMT = f"""<!DOCTYPE html>
+# The HTML FMT string for an index.
+HTML_INDEX_FMT = f"""<!DOCTYPE html>
 <html>
   {HTML_HEAD}
   <body>
@@ -108,7 +108,7 @@ class deck:
         force_title: bool = True,
         back_for_front: bool = False,
         key_for_title: bool = False,
-        category_generate: typing.Callable | None = None,
+        index_generate: typing.Callable | None = None,
     ) -> None:
         """Generate an Anki package.
 
@@ -148,6 +148,11 @@ class deck:
 
             back_for_front:
             If true, and the front is absent, use the back instead.
+
+            index_generate:
+            A function that can be used to provide indexes about the deck. Each
+            index should be a pair of strings representing the title and the
+            content of an index.
         """
 
         self.deck_name: str = deck_name
@@ -228,7 +233,7 @@ class deck:
         ss.print()
         utils.info("____________________")
         self.media = field.merge_media_files(key, front, back)
-        self.category_generate = category_generate
+        self.index_generate = index_generate
 
     def clean_dir(self, dir: str) -> None:
         if os.path.exists(dir):
@@ -273,14 +278,17 @@ class deck:
             shutil.copy(path, dir)
         utils.wrote(dir)
 
-        if not self.category_generate:
+        if not self.index_generate:
             return
-        for title, html_body in self.category_generate():
-            with open(os.path.join(dir, title + ".html"), "w") as f:
+        for title, html_body in self.index_generate():
+            with open(
+                os.path.join(dir, title.replace("/", "_") + ".html"),
+                "w",
+            ) as f:
                 f.write(
-                    HTML_CAT_FMT.format(
+                    HTML_INDEX_FMT.format(
                         title=title,
-                        page_class="CATEGORY",
+                        page_class="INDEX",
                         links="",
                         body=html_body,
                     ),

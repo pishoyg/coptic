@@ -199,6 +199,10 @@ table {
   opacity: 0.5;
 }
 
+.root-type {
+  font-weight: bold;
+}
+
 .categories {
   display: none;
   opacity: 0.5;

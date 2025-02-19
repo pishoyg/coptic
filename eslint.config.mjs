@@ -47,7 +47,7 @@ export default tseslint.config(
         XOOXLE: true,
         ANKI: true,
         NOTE: true,
-        CATEGORY: true,
+        INDEX: true,
       },
     },
   },

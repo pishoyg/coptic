@@ -1,3 +1,4 @@
+import itertools
 import json
 import os
 import re
@@ -515,10 +516,10 @@ def crum(
         ),
         search=f"./",
         force_front=force_front,
-        category_generate=_crum_categorizer(
+        index_generate=_crum_indexer(
             roots_col,
             root_appendix,
-        ).generate_category_indexes,
+        ).generate_indexes,
     )
 
 
@@ -844,41 +845,60 @@ class _step_mother(_mother):
         }
 
 
-class _crum_categorizer(_mother):
+class _crum_indexer(_mother):
     def __init__(
         self,
         roots_col: typing.Callable,
         root_appendix: typing.Callable,
     ):
         self.root_appendix = root_appendix
+        self.roots_col = roots_col
         super().__init__(roots_col=roots_col)
 
-    def __generate_category_index_aux(
+    def __generate_index_aux(
         self,
         cat: str,
         keys: list[str],
     ) -> typing.Generator[str]:
         yield '<div id="header"></div>'
         yield f"<h1>{cat}</h2>"
-        yield '<table class="category-table">'
+        yield '<table class="index-table">'
         for key in keys:
             sister = self.with_frag(self.key_to_sister[key], "")
             yield sister.string()
         yield "</table>"
 
-    def __generate_category_index(self, cat: str, keys: list[str]) -> str:
-        return "".join(self.__generate_category_index_aux(cat, keys))
+    def __generate_index(self, index: str, keys: list[str]) -> str:
+        return "".join(self.__generate_index_aux(index, keys))
 
-    def generate_category_indexes(self) -> typing.Generator[tuple[str, str]]:
-        category_to_keys: defaultdict = defaultdict(list)
-        for key, categories in zip(
-            self.root_appendix("key")._content,
-            self.root_appendix("categories", force=False)._content,
-        ):
-            for cat in utils.ssplit(categories, ","):
-                category_to_keys[cat].append(key)
-        for cat, keys in category_to_keys.items():
-            yield cat, self.__generate_category_index(cat, keys)
+    def generate_indexes_aux(
+        self,
+        axis: list[list[str]],
+    ) -> typing.Generator[tuple[str, str]]:
+        index_keys: defaultdict = defaultdict(list)
+        keys: list[str] = self.root_appendix("key")._content
+        assert len(keys) == len(axis)
+        for key, index_names in zip(keys, axis):
+            for name in index_names:
+                index_keys[name].append(key)
+        for name, keys in index_keys.items():
+            yield name, self.__generate_index(name, keys)
+
+    def generate_indexes(self) -> typing.Iterable[tuple[str, str]]:
+        return itertools.chain(
+            self.generate_indexes_aux(
+                [[t] for t in self.roots_col("type-parsed")._content],
+            ),
+            self.generate_indexes_aux(
+                [
+                    utils.ssplit(cats, ",")
+                    for cats in self.root_appendix(
+                        "categories",
+                        force=False,
+                    )._content
+                ],
+            ),
+        )
 
 
 def senses_json_to_html(senses_dump: str) -> str:

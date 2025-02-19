@@ -34,11 +34,11 @@ function anki(): boolean {
   return typeof ANKI !== 'undefined' && ANKI;
 }
 
-// CATEGORY (which should be defined externally) is used to distinguish
-// whether we are running on a category page or not.
-declare const CATEGORY: boolean;
-function category(): boolean {
-  return typeof CATEGORY !== 'undefined' && CATEGORY;
+// INDEX (which should be defined externally) is used to distinguish
+// whether we are running on an index page or not.
+declare const INDEX: boolean;
+function index(): boolean {
+  return typeof INDEX !== 'undefined' && INDEX;
 }
 
 const HOME = 'http://remnqymi.com';
@@ -700,7 +700,7 @@ function makeDialectShortcut(
   // All dialects are available in Xooxle. Only Crum dialects area available on
   // notes.
   const availability = dictionaries.includes('Crum')
-    ? [xooxle, note, category]
+    ? [xooxle, note, index]
     : [xooxle];
   return new Shortcut(description, availability, (e: KeyboardEvent) => {
     const dialectCode = DIALECT_SINGLE_CHAR[e.key] ?? e.key;
@@ -883,12 +883,12 @@ function makeHelpPanel(): HelpPanel {
 
   const control = {
     r: [
-      new Shortcut('Reset highlighting', [xooxle, note, category], () => {
+      new Shortcut('Reset highlighting', [xooxle, note, index], () => {
         reset(dialectCheckboxes, highlighter);
       }),
     ],
     d: [
-      new Shortcut('Developer mode', [xooxle, note, category], () => {
+      new Shortcut('Developer mode', [xooxle, note, index], () => {
         toggleDev();
         highlighter.updateDev();
       }),
@@ -896,7 +896,7 @@ function makeHelpPanel(): HelpPanel {
     R: [
       new Shortcut(
         `<strong>R</strong>eports / Contact <a class="contact" href="${EMAIL_LINK}">${EMAIL}</a>`,
-        [xooxle, note, category],
+        [xooxle, note, index],
         () => {
           window_open(EMAIL_LINK);
         }
@@ -905,7 +905,7 @@ function makeHelpPanel(): HelpPanel {
     H: [
       new Shortcut(
         `Open <a href="${home()}" target="_blank"><strong>h</strong>omepage</a>`,
-        [xooxle, note, category],
+        [xooxle, note, index],
         () => {
           window_open(home());
         }
@@ -914,21 +914,21 @@ function makeHelpPanel(): HelpPanel {
     X: [
       new Shortcut(
         `Open the <a href="${crum()}" target="_blank">dictionary search page</a>`,
-        [xooxle, note, category],
+        [xooxle, note, index],
         () => {
           window_open(crum());
         }
       ),
     ],
     '?': [
-      new Shortcut('Toggle help panel', [xooxle, note, category], () => {
+      new Shortcut('Toggle help panel', [xooxle, note, index], () => {
         panel!.togglePanel();
       }),
     ],
     Escape: [
       new Shortcut(
         'Toggle help panel',
-        [xooxle, note, category],
+        [xooxle, note, index],
         () => {
           panel!.togglePanel(false);
         },
@@ -938,7 +938,7 @@ function makeHelpPanel(): HelpPanel {
     o: [
       new Shortcut(
         'Open the word currently being viewed',
-        [xooxle, note, category],
+        [xooxle, note, index],
         () => {
           findNextElement('.view,.sister-view', 'cur')
             ?.querySelector('a')
@@ -990,18 +990,14 @@ function makeHelpPanel(): HelpPanel {
 
   const scrollTo = {
     n: [
-      new Shortcut('Next word in the table', [xooxle, note, category], () => {
+      new Shortcut('Next word in the table', [xooxle, note, index], () => {
         scrollToNextElement('.view,.sister-view', 'next');
       }),
     ],
     p: [
-      new Shortcut(
-        'Previous word in the table',
-        [xooxle, note, category],
-        () => {
-          scrollToNextElement('.view,.sister-view', 'prev');
-        }
-      ),
+      new Shortcut('Previous word in the table', [xooxle, note, index], () => {
+        scrollToNextElement('.view,.sister-view', 'prev');
+      }),
     ],
     C: [
       new Shortcut('Crum', [xooxle], () => {
@@ -1085,12 +1081,12 @@ function makeHelpPanel(): HelpPanel {
       }),
     ],
     g: [
-      new Shortcut('Header', [xooxle, note, category], () => {
+      new Shortcut('Header', [xooxle, note, index], () => {
         scroll('header');
       }),
     ],
     G: [
-      new Shortcut('Footer', [xooxle, note, category], () => {
+      new Shortcut('Footer', [xooxle, note, index], () => {
         scroll('footer');
       }),
     ],
@@ -1149,8 +1145,6 @@ function handleNonXooxleOnlyElements() {
         .trim()
         .split(',')
         .map((s) => s.trim())
-        // TODO: (#287) This won't work on Anki! You should link to the web
-        // version.
         .map(
           (s) =>
             `<a class="hover-link" href="${crum()}/${s}.html" target="_blank">${s}</a>`
@@ -1159,6 +1153,21 @@ function handleNonXooxleOnlyElements() {
       elem.innerHTML = linked;
     }
   );
+
+  // Handle 'root-type' class.
+  document
+    .querySelectorAll<HTMLElement>('.root-type')
+    .forEach((elem: HTMLElement) => {
+      const type: string | undefined = elem
+        .getElementsByTagName('b')[0]
+        ?.innerHTML.replaceAll('/', '_');
+      if (!type) {
+        console.error('Unable to infer the root type for element!', elem);
+        return;
+      }
+      const linked = `(<a class="hover-link" href="${crum()}/${type}.html" target="_blank">${type}</a>)`;
+      elem.innerHTML = linked;
+    });
 
   // Handle 'crum-page' class.
   Array.from(document.getElementsByClassName('crum-page')).forEach(
@@ -1295,7 +1304,7 @@ function handleNonXooxleOnlyElements() {
   // Handle 'sister-view' class.
   [
     ...document.getElementsByClassName('sisters-table'),
-    ...document.getElementsByClassName('category-table'),
+    ...document.getElementsByClassName('index-table'),
   ].forEach((table: Element): void => {
     let counter = 1;
     Array.from(table.getElementsByTagName('tr')).forEach((el: HTMLElement) => {
