@@ -224,6 +224,7 @@ table {
 }
 
 .header {
+  text-align: center;
   table-layout: fixed;
   width: 100%;
 }
