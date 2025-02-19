@@ -21,6 +21,9 @@ function anki() {
 function index() {
   return typeof INDEX !== 'undefined' && INDEX;
 }
+function index_index() {
+  return typeof INDEX_INDEX !== 'undefined' && INDEX_INDEX;
+}
 const HOME = 'http://remnqymi.com';
 function home() {
   return anki() ? HOME : '..';
@@ -764,12 +767,16 @@ function makeHelpPanel() {
   };
   const control = {
     r: [
-      new Shortcut('Reset highlighting', [xooxle, note, index], () => {
-        reset(dialectCheckboxes, highlighter);
-      }),
+      new Shortcut(
+        'Reset highlighting',
+        [xooxle, note, index, index_index],
+        () => {
+          reset(dialectCheckboxes, highlighter);
+        }
+      ),
     ],
     d: [
-      new Shortcut('Developer mode', [xooxle, note, index], () => {
+      new Shortcut('Developer mode', [xooxle, note, index, index_index], () => {
         toggleDev();
         highlighter.updateDev();
       }),
@@ -777,7 +784,7 @@ function makeHelpPanel() {
     R: [
       new Shortcut(
         `<strong>R</strong>eports / Contact <a class="contact" href="${EMAIL_LINK}">${EMAIL}</a>`,
-        [xooxle, note, index],
+        [xooxle, note, index, index_index],
         () => {
           window_open(EMAIL_LINK);
         }
@@ -786,7 +793,7 @@ function makeHelpPanel() {
     H: [
       new Shortcut(
         `Open <a href="${home()}" target="_blank"><strong>h</strong>omepage</a>`,
-        [xooxle, note, index],
+        [xooxle, note, index, index_index],
         () => {
           window_open(home());
         }
@@ -795,21 +802,25 @@ function makeHelpPanel() {
     X: [
       new Shortcut(
         `Open the <a href="${crum()}" target="_blank">dictionary search page</a>`,
-        [xooxle, note, index],
+        [xooxle, note, index, index_index],
         () => {
           window_open(crum());
         }
       ),
     ],
     '?': [
-      new Shortcut('Toggle help panel', [xooxle, note, index], () => {
-        panel.togglePanel();
-      }),
+      new Shortcut(
+        'Toggle help panel',
+        [xooxle, note, index, index_index],
+        () => {
+          panel.togglePanel();
+        }
+      ),
     ],
     Escape: [
       new Shortcut(
         'Toggle help panel',
-        [xooxle, note, index],
+        [xooxle, note, index, index_index],
         () => {
           panel.togglePanel(false);
         },
@@ -821,7 +832,7 @@ function makeHelpPanel() {
         'Open the word currently being viewed',
         [xooxle, note, index],
         () => {
-          findNextElement('.view,.sister-view', 'cur')
+          findNextElement('.view, .sister-view', 'cur')
             ?.querySelector('a')
             ?.click();
         }
@@ -869,13 +880,13 @@ function makeHelpPanel() {
   };
   const scrollTo = {
     n: [
-      new Shortcut('Next word in the table', [xooxle, note, index], () => {
-        scrollToNextElement('.view,.sister-view', 'next');
+      new Shortcut('Next word in the list', [xooxle, note, index], () => {
+        scrollToNextElement('.view, .sister-view', 'next');
       }),
     ],
     p: [
-      new Shortcut('Previous word in the table', [xooxle, note, index], () => {
-        scrollToNextElement('.view,.sister-view', 'prev');
+      new Shortcut('Previous word in the list', [xooxle, note, index], () => {
+        scrollToNextElement('.view, .sister-view', 'prev');
       }),
     ],
     C: [
@@ -960,12 +971,12 @@ function makeHelpPanel() {
       }),
     ],
     g: [
-      new Shortcut('Header', [xooxle, note, index], () => {
+      new Shortcut('Header', [xooxle, note, index, index_index], () => {
         scroll('header');
       }),
     ],
     G: [
-      new Shortcut('Footer', [xooxle, note, index], () => {
+      new Shortcut('Footer', [xooxle, note, index, index_index], () => {
         scroll('footer');
       }),
     ],
@@ -1130,7 +1141,7 @@ function handleNonXooxleOnlyElements() {
     makeSpanLinkToAnchor(el, `#sister${el.innerHTML}`);
   });
   // Handle 'sister-view' class.
-  document.querySelectorAll('.sisters-table,.index-table').forEach((table) => {
+  document.querySelectorAll('.sisters-table, .index-table').forEach((table) => {
     let counter = 1;
     Array.from(table.getElementsByTagName('tr')).forEach((el) => {
       const td = el.querySelector('.sister-view');

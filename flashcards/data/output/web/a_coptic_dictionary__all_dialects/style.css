@@ -199,6 +199,10 @@ table {
   opacity: 0.5;
 }
 
+.index-index-list li::marker {
+  color: rgb(0 0 0 / 50%);
+}
+
 .root-type {
   font-weight: bold;
 }
