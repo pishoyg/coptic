@@ -514,7 +514,8 @@ def crum(
             force=False,
             aon=True,
         ),
-        search=f"./",
+        search="./",
+        home="../",
         force_front=force_front,
         index_generate=_crum_indexer(
             roots_col,
@@ -860,7 +861,6 @@ class _crum_indexer(_mother):
         cat: str,
         keys: list[str],
     ) -> typing.Generator[str]:
-        yield '<div id="header"></div>'
         yield f"<h1>{cat}</h2>"
         yield '<table class="index-table">'
         for key in keys:

@@ -101,6 +101,7 @@ class deck:
         prev: typing.Optional[field.field] = None,
         next: typing.Optional[field.field] = None,
         search: str = "",
+        home: str = "",
         force_key: bool = True,
         force_no_duplicate_keys: bool = True,
         force_front: bool = True,
@@ -168,6 +169,7 @@ class deck:
         self.prevs: list[str] = []
         self.nexts: list[str] = []
         self.search: str = search
+        self.home: str = home
         self.length: int = field.num_entries(key, front, back)
 
         assert self.length != field.NO_LENGTH
@@ -282,7 +284,6 @@ class deck:
             shutil.copy(path, dir)
         utils.wrote(dir)
 
-        # TODO: (#329]): Link the index indexes from the indexes.
         for name, generator in self.index_generate:
             titles: list[str] = []
             titles_set: set[str] = set()
@@ -300,7 +301,7 @@ class deck:
                             title=title,
                             page_class="INDEX",
                             links=self.search_link(),
-                            body=html_body,
+                            body=self.build_index_header(name) + html_body,
                         ),
                     )
             # Write the index index!
@@ -325,12 +326,34 @@ class deck:
     def to_file_name(self, name: str) -> str:
         return name.replace("/", "_").lower()
 
+    def build_index_header(self, name: str) -> str:
+        return "".join(
+            self.generate_header([(self.to_file_name(name) + ".html", name)]),
+        )
+
+    def generate_header(
+        self,
+        cells: list[tuple[str, str]] = [],
+    ) -> typing.Generator[str]:
+        if self.search:
+            cells = [(self.search, "Search")] + cells
+        if self.home:
+            cells = [(self.home, "Home")] + cells
+        yield '<table id="header" class="header">'
+        yield "<tr>"
+        for cell in cells:
+            yield "<td>"
+            yield f'<a class="navigate" href="{cell[0]}">{cell[1]}</a>'
+            yield "</td>"
+        yield "</tr>"
+        yield "</table>"
+
     def generate_index_index_body(
         self,
         name: str,
         titles: list[str],
     ) -> typing.Generator[str]:
-        yield '<div id="header"></div>'
+        yield from self.generate_header()
         yield f"<h1>{name}</h2>"
         yield '<ol class="index-index-list">'
         for title in titles:
