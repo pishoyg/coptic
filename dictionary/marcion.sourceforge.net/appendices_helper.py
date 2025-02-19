@@ -37,6 +37,8 @@ KNOWN_CATEGORIES: set[str] = (
         "species",
         "anatomy",
         "person",
+        # "food" includes edibles that don't fit into anatomy or species.
+        "food",
         # "biology" includes everything biology-related, which doesn't fit
         # in a more precise category, such as "species", "person", or "anatomy".
         "biology",
@@ -50,7 +52,9 @@ KNOWN_CATEGORIES: set[str] = (
     }
     | {  # Man-made
         "building",
+        "container",
         "tool",
+        # TODO: Merge "vehicle" into "tool". This category is too small!
         "vehicle",
     }
     | {  # Conceptual
@@ -60,6 +64,10 @@ KNOWN_CATEGORIES: set[str] = (
         "direction",
         "emotion",
         "concept",
+    }
+    | {
+        # "doubtful" represents words with an unknown or uncertain meaning.
+        "doubtful",
     }
 )
 
