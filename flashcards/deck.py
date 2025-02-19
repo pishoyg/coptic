@@ -108,7 +108,7 @@ class deck:
         force_title: bool = True,
         back_for_front: bool = False,
         key_for_title: bool = False,
-        index_generate: typing.Callable | None = None,
+        index_generate: list[tuple[str, typing.Callable]] = [],
     ) -> None:
         """Generate an Anki package.
 
@@ -233,13 +233,17 @@ class deck:
         ss.print()
         utils.info("____________________")
         self.media = field.merge_media_files(key, front, back)
-        self.index_generate = index_generate
+        self.index_generate: list[tuple[str, typing.Callable]] = index_generate
 
     def clean_dir(self, dir: str) -> None:
         if os.path.exists(dir):
             assert os.path.isdir(dir)
             shutil.rmtree(dir)
         pathlib.Path(dir).mkdir(parents=True)
+
+    def search_link(self) -> str:
+        assert self.search
+        return f'<link rel="search" href="{self.search}">'
 
     def write_web(self, dir: str) -> None:
         self.clean_dir(dir)
@@ -258,7 +262,7 @@ class deck:
                 if next:
                     links.append(f'<link rel="next" href="{next}">')
                 if self.search:
-                    links.append(f'<link rel="search" href="{self.search}">')
+                    links.append(self.search_link())
 
                 f.write(
                     HTML_FMT.format(
@@ -278,22 +282,62 @@ class deck:
             shutil.copy(path, dir)
         utils.wrote(dir)
 
-        if not self.index_generate:
-            return
-        for title, html_body in self.index_generate():
+        # TODO: (#329]): Link the index indexes from the indexes.
+        for name, generator in self.index_generate:
+            titles: list[str] = []
+            titles_set: set[str] = set()
+            for title, html_body in generator():
+                assert title not in titles_set
+                assert len(titles) == len(titles_set)
+                titles.append(title)
+                titles_set.add(title)
+                with open(
+                    os.path.join(dir, self.to_file_name(title) + ".html"),
+                    "w",
+                ) as f:
+                    f.write(
+                        HTML_INDEX_FMT.format(
+                            title=title,
+                            page_class="INDEX",
+                            links=self.search_link(),
+                            body=html_body,
+                        ),
+                    )
+            # Write the index index!
+            del titles_set
+            index_index_body = "".join(
+                self.generate_index_index_body(name, titles),
+            )
             with open(
-                os.path.join(dir, title.replace("/", "_") + ".html"),
+                os.path.join(dir, self.to_file_name(name) + ".html"),
                 "w",
             ) as f:
                 f.write(
                     HTML_INDEX_FMT.format(
-                        title=title,
-                        page_class="INDEX",
-                        links="",
-                        body=html_body,
+                        title=name,
+                        page_class="INDEX_INDEX",
+                        links=self.search_link(),
+                        body=index_index_body,
                     ),
                 )
         utils.wrote(dir)
+
+    def to_file_name(self, name: str) -> str:
+        return name.replace("/", "_").lower()
+
+    def generate_index_index_body(
+        self,
+        name: str,
+        titles: list[str],
+    ) -> typing.Generator[str]:
+        yield '<div id="header"></div>'
+        yield f"<h1>{name}</h2>"
+        yield '<ol class="index-index-list">'
+        for title in titles:
+            yield '<li class="index-view">'
+            yield f'<a class="navigate" href="{self.to_file_name(title)}.html">{title}</a>'
+            yield "</li>"
+        yield "</ol>"
 
     def html_to_anki(self, html: str) -> str:
         # TODO: This won't work if the HTML gets formatted before making it to

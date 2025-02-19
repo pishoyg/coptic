@@ -48,6 +48,7 @@ export default tseslint.config(
         ANKI: true,
         NOTE: true,
         INDEX: true,
+        INDEX_INDEX: true,
       },
     },
   },

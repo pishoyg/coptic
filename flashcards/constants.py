@@ -519,7 +519,7 @@ def crum(
         index_generate=_crum_indexer(
             roots_col,
             root_appendix,
-        ).generate_indexes,
+        ).generate_indexes(),
     )
 
 
@@ -881,24 +881,30 @@ class _crum_indexer(_mother):
         for key, index_names in zip(keys, axis):
             for name in index_names:
                 index_keys[name].append(key)
-        for name, keys in index_keys.items():
+        for name, keys in sorted(index_keys.items(), key=lambda pair: pair[0]):
             yield name, self.__generate_index(name, keys)
 
-    def generate_indexes(self) -> typing.Iterable[tuple[str, str]]:
-        return itertools.chain(
-            self.generate_indexes_aux(
-                [[t] for t in self.roots_col("type-parsed")._content],
-            ),
-            self.generate_indexes_aux(
-                [
-                    utils.ssplit(cats, ",")
-                    for cats in self.root_appendix(
-                        "categories",
-                        force=False,
-                    )._content
-                ],
-            ),
+    def generate_type_indexes(self) -> typing.Iterable[tuple[str, str]]:
+        return self.generate_indexes_aux(
+            [[t] for t in self.roots_col("type-parsed")._content],
         )
+
+    def generate_category_indexes(self) -> typing.Iterable[tuple[str, str]]:
+        return self.generate_indexes_aux(
+            [
+                utils.ssplit(cats, ",")
+                for cats in self.root_appendix(
+                    "categories",
+                    force=False,
+                )._content
+            ],
+        )
+
+    def generate_indexes(self) -> list[tuple[str, typing.Callable]]:
+        return [
+            ("Categories", self.generate_category_indexes),
+            ("Types", self.generate_type_indexes),
+        ]
 
 
 def senses_json_to_html(senses_dump: str) -> str:
