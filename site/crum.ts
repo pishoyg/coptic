@@ -1173,14 +1173,13 @@ function handleNonXooxleOnlyElements() {
   document
     .querySelectorAll<HTMLElement>('.root-type')
     .forEach((elem: HTMLElement) => {
-      const type: string | undefined = elem
-        .getElementsByTagName('b')[0]
-        ?.innerHTML.replaceAll('/', '_');
+      const type: string | undefined =
+        elem.getElementsByTagName('b')[0]?.innerHTML;
       if (!type) {
         console.error('Unable to infer the root type for element!', elem);
         return;
       }
-      const linked = `(<a class="hover-link" href="${crum()}/${type}.html" target="_blank">${type}</a>)`;
+      const linked = `(<a class="hover-link" href="${crum()}/${type.replaceAll('/', '_')}.html" target="_blank">${type}</a>)`;
       elem.innerHTML = linked;
     });
 
