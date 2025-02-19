@@ -208,6 +208,15 @@ argparser.add_argument(
     " fragment if requested.",
 )
 
+argparser.add_argument(
+    "-r",
+    "--override_cat",
+    action="store_true",
+    default=False,
+    help="Normally, we append categories. This flag overrides the behavior, so"
+    "we will delete the existing categories before replacing them.",
+)
+
 
 def split(cell: str) -> list[str]:
     return utils.ssplit(cell, ";")
@@ -574,6 +583,7 @@ class runner:
         self.args: argparse.Namespace = argparser.parse_args(args)
         house.delete_empty_fragment = self.args.delete_empty_fragment
 
+        self.args.cat = sorted(self.args.cat)
         utils.verify_unique(self.args.cat, "Duplicate categories!")
         for c in self.args.cat:
             if c not in KNOWN_CATEGORIES:
@@ -653,7 +663,6 @@ class runner:
             return
         for key in self.args.keys:
             assert key in self.mother.keys
-        cat = ", ".join(self.args.cat)
         row_idx = 1
         col_idx = self.mother.col_idx[CATEGORIES_COL]
         for record in self.mother.sheet.get_all_records():
@@ -663,8 +672,15 @@ class runner:
                 continue
             # TODO: (#287) Make it possible to choose between *adding*
             # categories or *replacing* them.
-            utils.info("Updating categories of", key, "to", cat)
-            self.mother.sheet.update_cell(row_idx, col_idx, cat)
+            if self.args.override_cat:
+                new_cat = ", ".join(self.args.cat)
+            else:
+                current_cats = set(
+                    utils.ssplit(str(record[CATEGORIES_COL]), ","),
+                )
+                new_cat = ", ".join(sorted(current_cats | set(self.args.cat)))
+            utils.info("Updating categories of", key, "to", new_cat)
+            self.mother.sheet.update_cell(row_idx, col_idx, new_cat)
 
     def once(self) -> None:
         # NOTE: We perform validation before initialization to speed it up, as
