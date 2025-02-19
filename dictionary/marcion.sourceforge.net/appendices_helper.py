@@ -67,7 +67,7 @@ KNOWN_CATEGORIES: set[str] = (
         "substance",
         # "geography" includes description of earthly phenomena that are not
         # man-made, and are not simply substances.
-        # TODO: (#287) Consider renaming to "plant" and including astronomical terms,
+        # TODO: (#287) Consider renaming to "planet" and including astronomical terms,
         # removing them from the "physics" category.
         "geography",
         # "physics" includes everything physics-related, which doesn't fit
@@ -107,6 +107,10 @@ KNOWN_CATEGORIES: set[str] = (
         # Notice that entities representing specific points rather than
         # quantities (e.g. Monday vs. 24 hours, or here vs. 10 meters) do NOT
         # belong in this category.
+        # TODO: (#287): Consider removing time units, since they are already
+        # covered by "time". Also consider removing coins and introducing a new
+        # "money" category that would include such words as loan, interest,
+        # pledge, ...
         "unit",
         "direction",
         "emotion",
@@ -675,8 +679,6 @@ class runner:
             key = str(record[KEY_COL])
             if key not in self.args.keys:
                 continue
-            # TODO: (#287) Make it possible to choose between *adding*
-            # categories or *replacing* them.
             if self.args.override_cat:
                 new_cat = ", ".join(self.args.cat)
             else:
