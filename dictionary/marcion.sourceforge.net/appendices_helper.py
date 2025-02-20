@@ -4,6 +4,7 @@ import collections
 import json
 import shlex
 import subprocess
+import threading
 import urllib
 
 import pandas as pd
@@ -144,7 +145,21 @@ argparser.add_argument(
     type=str,
     nargs="*",
     default=[],
-    help="A list of word keys, to assign the given categories to.",
+    help="A list of word keys, to assign the given categories to. If no"
+    " categories given, we will assume that the desired behavior is to delete"
+    " the existing categories. Since that behavior requires the --override_cat"
+    " flag, it's an error not to use it in that case."
+    " Thus, --keys must be used in combination with either --cat or"
+    " --override_cat.",
+)
+
+argparser.add_argument(
+    "-r",
+    "--override_cat",
+    action="store_true",
+    default=False,
+    help="Normally, we append categories. This flag overrides the behavior, so"
+    "we will delete the existing categories before replacing them.",
 )
 
 argparser.add_argument(
@@ -206,15 +221,6 @@ argparser.add_argument(
     " because we assume that this is not intentional."
     " Use this flag to update this behaviour, so we will delete the existing"
     " fragment if requested.",
-)
-
-argparser.add_argument(
-    "-r",
-    "--override_cat",
-    action="store_true",
-    default=False,
-    help="Normally, we append categories. This flag overrides the behavior, so"
-    "we will delete the existing categories before replacing them.",
 )
 
 argparser.add_argument(
@@ -652,15 +658,26 @@ class runner:
         self.args.antonyms = list(map(url_to_person, self.args.antonyms))
         self.args.homonyms = list(map(url_to_person, self.args.homonyms))
 
+        if self.args.keys:
+            utils.ass(
+                self.args.cat or self.args.override_cat,
+                "--keys must be used in combination with either --cat or --override_cat.",
+            )
+        if self.args.delete_empty_fragment:
+            utils.ass(
+                self.args.sisters or self.args.antonyms or self.args.homonyms,
+                "--delete_empty_fragment used without any sisterhood arguments!",
+            )
+        # NOTE: The --delete_empty_fragment flag is not accounted for below!
         num_actions: int = sum(
             map(
                 bool,
                 [
                     self.args.validate,
-                    self.args.cat or self.args.keys,
+                    self.args.cat or self.args.keys or self.args.override_cat,
                     self.args.sisters or self.args.antonyms,
                     self.args.homonyms,
-                    self.args.cat_prompt,
+                    self.args.cat_prompt or self.args.first,
                 ],
             ),
         )
@@ -742,7 +759,9 @@ class runner:
             cats: list[str] = []
             subprocess.run(["open", CRUM_FMT.format(key=key)])
             while True:
-                cats = utils.ssplit(input("Categories (empty to skip): "))
+                cats = utils.ssplit(
+                    input(f"Key = {key}. Categories (empty to skip): "),
+                )
                 unknown = [c for c in cats if c not in KNOWN_CATEGORIES]
                 if unknown:
                     utils.error("Unknown categories:", unknown)
@@ -753,7 +772,10 @@ class runner:
                 continue
             new_cat = CAT_SEP.join(cats)
             utils.info("Updating categories to", new_cat)
-            self.mother.sheet.update_cell(row_idx, col_idx, new_cat)
+            threading.Thread(
+                target=self.mother.sheet.update_cell,
+                args=(row_idx, col_idx, new_cat),
+            ).start()
 
     def once(self) -> None:
         # NOTE: We perform validation before initialization to speed it up, as
@@ -761,7 +783,8 @@ class runner:
         if self.args.validate:
             self.validate()
 
-        if self.args.cat:
+        # If --keys is present but --cat is absent, we still
+        if self.args.cat or self.args.keys:
             self.categories()
             return
 
