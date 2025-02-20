@@ -3,12 +3,15 @@ import argparse
 import collections
 import json
 import shlex
+import subprocess
 import urllib
 
 import pandas as pd
 
 import utils
 
+CRUM_FMT = "https://remnqymi.com/crum/{key}.html"
+ROOTS_MAIN = "dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv"
 ROOTS: str = (
     "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv"
 )
@@ -25,12 +28,16 @@ SISTERS_COL: str = "sisters"
 ANTONYMS_COL: str = "antonyms"
 HOMONYMS_COL: str = "homonyms"
 GREEK_SISTERS_COL: str = "TLA-sisters"
+TYPE_PARSED_COL: str = "type-parsed"
 
 SENSES_COL: str = "senses"
 
 CATEGORIES_COL: str = "categories"
 
 TEXT_FRAG_PREFIX: str = ":~:text="
+
+SENSE_SEP: str = "; "  # Sense separator.
+CAT_SEP: str = ", "  # Category separator.
 
 # The list of word categories is likely to evolve as we work on categorizing
 # more and more words.
@@ -81,6 +88,8 @@ KNOWN_CATEGORIES: dict[str, str] = (
         "container": "Includes storage objects like pots, jars, dishes, boxes, chests, and baskets. Any movable storage object belongs in this category.",
         # TODO: (#287) Consider the category for furniture or equipment (chair, ladder). "tool" may not be the best category for such words.
         "tool": "Represents tools or utilities that don’t fit in 'container' or 'construction'. Can include natural non-living objects used as tools.",
+        # TODO: (#287) Consider generalizing "clothes" to include such words as
+        # curtain, awning, bandage, ...
         "clothes": "Clothes and fabrics.",
         "vehicle": "Includes various forms of transportation.",
     }
@@ -208,9 +217,29 @@ argparser.add_argument(
     "we will delete the existing categories before replacing them.",
 )
 
+argparser.add_argument(
+    "-p",
+    "--cat_prompt",
+    action="store_true",
+    default=False,
+    help="Prompt for manually entering categories.",
+)
 
-def split(cell: str) -> list[str]:
-    return utils.ssplit(cell, ";")
+argparser.add_argument(
+    "-f",
+    "--first",
+    type=int,
+    default=0,
+    help="First item to start prompting at!",
+)
+
+
+def csplit(cell: str) -> list[str]:
+    return utils.ssplit(cell, CAT_SEP.strip())
+
+
+def ssplit(cell: str) -> list[str]:
+    return utils.ssplit(cell, SENSE_SEP.strip())
 
 
 def stringify(row: dict) -> dict[str, str]:
@@ -246,13 +275,13 @@ class house:
         # has new joiners, they won't show here.
         self.ancestors_raw: str = cell
         # member is the current list of house members.
-        self.members: list[person] = [person(raw) for raw in split(cell)]
+        self.members: list[person] = [person(raw) for raw in ssplit(cell)]
         # ancestors_formatted is a formatted representation of the list of the
         # original members.
         self.ancestors_formatted: str = self.string()
 
     def string(self) -> str:
-        return "; ".join(m.string() for m in self.members)
+        return SENSE_SEP.join(m.string() for m in self.members)
 
     def has(self, p: person | str) -> bool:
         key: str = ""
@@ -443,7 +472,7 @@ class validator:
             fam.validate(key_to_family)
 
     def validate_categories(self, key: str, raw_categories: str) -> None:
-        categories = utils.ssplit(raw_categories, ",")
+        categories = csplit(raw_categories)
         for cat in categories:
             if cat not in KNOWN_CATEGORIES:
                 utils.throw(key, "has an unknown category:", cat)
@@ -492,10 +521,12 @@ class _matriarch:
         if added or updated:
             args: list[str] = []
             if added:
-                args.extend(["Adding", "; ".join(m.string() for m in added)])
+                args.extend(
+                    ["Adding", SENSE_SEP.join(m.string() for m in added)],
+                )
             if updated:
                 args.extend(
-                    ["Updating", "; ".join(m.string() for m in updated)],
+                    ["Updating", SENSE_SEP.join(m.string() for m in updated)],
                 )
             args.extend(["in", huis.key, "/", col])
             utils.info(*args)
@@ -629,6 +660,7 @@ class runner:
                     self.args.cat or self.args.keys,
                     self.args.sisters or self.args.antonyms,
                     self.args.homonyms,
+                    self.args.cat_prompt,
                 ],
             ),
         )
@@ -662,13 +694,65 @@ class runner:
             if key not in self.args.keys:
                 continue
             if self.args.override_cat:
-                new_cat = ", ".join(self.args.cat)
+                new_cat = CAT_SEP.join(self.args.cat)
             else:
                 current_cats = set(
-                    utils.ssplit(str(record[CATEGORIES_COL]), ","),
+                    csplit(str(record[CATEGORIES_COL])),
                 )
-                new_cat = ", ".join(sorted(current_cats | set(self.args.cat)))
+                new_cat = CAT_SEP.join(
+                    sorted(current_cats | set(self.args.cat)),
+                )
             utils.info("Updating categories of", key, "to", new_cat)
+            self.mother.sheet.update_cell(row_idx, col_idx, new_cat)
+
+    def categories_prompt(self) -> None:
+        self.init()
+        assert self.mother
+        row_idx = 1
+        col_idx = self.mother.col_idx[CATEGORIES_COL]
+        key_to_main_record = {
+            row[KEY_COL]: row
+            for _, row in utils.read_tsv(ROOTS_MAIN).iterrows()
+        }
+        for record in self.mother.sheet.get_all_records():
+            row_idx += 1
+            key = int(record[KEY_COL])
+            if key < self.args.first:
+                continue
+            if record[CATEGORIES_COL]:
+                # This record already has a category.
+                continue
+            if key_to_main_record[str(key)][TYPE_PARSED_COL] in {
+                "-",
+                "adjective",
+                "conjunction",
+                "interjection",
+                "interrogative adverb",
+                "interrogative particle",
+                "interrogative pronoun",
+                "particle",
+                "personal pronoun",
+                "preposition",
+                "pronoun",
+                "verb",
+                "verbal prefix",
+            }:
+                # This type is of little interest at the moment.
+                continue
+            cats: list[str] = []
+            subprocess.run(["open", CRUM_FMT.format(key=key)])
+            while True:
+                cats = utils.ssplit(input("Categories (empty to skip): "))
+                unknown = [c for c in cats if c not in KNOWN_CATEGORIES]
+                if unknown:
+                    utils.error("Unknown categories:", unknown)
+                    continue
+                break
+            if not cats:
+                # The user didn't input anything!
+                continue
+            new_cat = CAT_SEP.join(cats)
+            utils.info("Updating categories to", new_cat)
             self.mother.sheet.update_cell(row_idx, col_idx, new_cat)
 
     def once(self) -> None:
@@ -679,6 +763,10 @@ class runner:
 
         if self.args.cat:
             self.categories()
+            return
+
+        if self.args.cat_prompt:
+            self.categories_prompt()
             return
 
         self.init()
