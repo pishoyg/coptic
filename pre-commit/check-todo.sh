@@ -18,7 +18,7 @@ if [ -n "${TODO}" ]; then
 fi
 
 TODO="$(_grep "TODO(:) \(#[0-9]+\)" --only --extended-regexp "${@}" \
-  | _grep --only --extended-regexp '[0-9]+')"
+  | _grep --only --extended-regexp '[0-9]+' | sort | uniq)"
 for ISSUE in ${TODO}; do
   CLOSED=$(gh issue view "${ISSUE}" --json "closed" --jq ".closed")
   if [[ "${CLOSED}" == "true" ]]; then
