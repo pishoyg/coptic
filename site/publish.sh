@@ -133,18 +133,11 @@ build() {
     fi
     NEW="$(head -n "${LINE_NUM}" "${FILE}")${GOOGLE_TAG}${ICON_TAG}$(tail -n "+$((LINE_NUM + 1))" "${FILE}")"
     echo "${NEW}" > "${FILE}"
-    tidy -config "tidy_config.txt" "${FILE}"
   }
+  export -f _html  # Export the function to parallel can access it.
+  find "${SITE_DIR}" -type f -name "*.html" | parallel _html {}
 
-  COUNTER=0
-  readonly PARALLEL=10
-  find "${SITE_DIR}" -type f -name "*.html" | while read -r FILE; do
-    _html "${FILE}" &
-    if (( ++COUNTER % PARALLEL == 0 )); then
-      wait
-    fi
-  done
-  wait
+  tidy -config "tidy_config.txt" "${SITE_DIR}"/**/*.html || true  # Ignore failures.
 }
 
 _message() {

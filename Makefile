@@ -264,6 +264,7 @@ _server: REQUIRE_ENV FORCE
 _bin_install: FORCE
 	. ./.helpers && if ! command -v npm &> /dev/null; then echo -e "$${RED}Please install $${YELLOW}npm$${RED}. See $${YELLOW}https://docs.npmjs.com/downloading-and-installing-node-js-and-npm${RED}.$${RESET}" && exit 1; fi
 	. ./.helpers && if ! command -v tidy &> /dev/null; then echo -e "$${RED}Please install $${YELLOW}tidy$${RED} from $${YELLOW}https://www.html-tidy.org/${RED}.$${RESET}" && exit 1; fi
+	. ./.helpers && if ! command -v parallel &> /dev/null; then echo -e "$${RED}Please install $${YELLOW}parallel$${RED} from $${YELLOW}https://www.gnu.org/software/parallel/${RED}.$${RESET}" && exit 1; fi
 	. ./.helpers && if ! command -v magick &> /dev/null; then echo -e "$${RED}Please install $${YELLOW}magick$${RED} from $${YELLOW}https://imagemagick.org/${RED}.$${RESET}" && exit 1; fi
 	. ./.helpers && if ! command -v gh &> /dev/null; then echo -e "$${RED}Please install $${YELLOW}gh$${RED} from $${YELLOW}https://cli.github.com/${RED}.$${RESET}" && exit 1; fi
 	. ./.helpers && if ! command -v say &> /dev/null; then echo -e "$${YELLOW}Consider installing $${CYAN}say$${YELLOW}. This should be possible with $${CYAN}sudo apt-get install gnustep-gui-runtime$${YELLOW} on Ubuntu.$${RESET}"; fi
