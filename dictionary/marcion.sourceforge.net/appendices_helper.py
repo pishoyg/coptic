@@ -58,25 +58,19 @@ KNOWN_CATEGORIES: dict[str, str] = (
         # Biology
         "species": "Includes not only species but also genera, families, orders, and overlaps of such populations and ranks.",
         "anatomy": "Includes both animal and plant anatomy. Secretions (e.g., saliva, milk, urine) also belong here.",
-        # TODO: (#287): The "person" category may be too generic! Also, many words included in this category apply to non-persons (male, female, ...; blind, lame, ...)
         "person": "Includes categories of people (man, woman), jobs and roles (fisher, farmer), family members (father, mother), and epithets (blind, bald, wise).",
         "food": "Includes edibles that don’t fit into anatomy or species, such as bread, gruel, and ingredients.",
-        # TODO: (#287): Reconsider the category for diseases.
-        # TODO: (#287): "biology" is a bad category. It's too generic to be useful.
         "biology": "Covers general biology-related terms not fitting into more precise categories. Includes diseases and life functions (breathe, eat).",
     }
     | {
         # Physics & Chemistry
         # Food substances (milk, wine, oil, flesh, honey, ...) should be marked as "food" (and/or "anatomy" where appropriate).
-        # TODO: (#287): Consider the category for such words as fuel. Maybe merge
-        # with "food" into a new "consumable" category?
         "substance": "Includes elements and compounds, as well as more generic substances like stone, water, and dirt.",
         "proper nouns": "Proper nouns, such as place names, ethnicities, ...",
         "earth": "Describes natural earthly phenomena that are not man-made and are not simply substances.",
         "astronomy": "Astronomy.",
         "colors": "Colors.",
         "shapes": "Shapes (e.g. ball, corner, fragment, piece, ...).",
-        # TODO: (#287): Get rid of the "physics" category. It's too generic to be useful.
         "physics": "Covers physics-related terms not fitting into more specific categories, including astronomical terms and physical phenomena (e.g., energy, light, heat).",
     }
     | {
@@ -87,10 +81,7 @@ KNOWN_CATEGORIES: dict[str, str] = (
         # Non-movable storage objects (such as cistern or treasure house) belong
         # to the "construction" category.
         "container": "Includes storage objects like pots, jars, dishes, boxes, chests, and baskets. Any movable storage object belongs in this category.",
-        # TODO: (#287) Consider the category for furniture or equipment (chair, ladder). "tool" may not be the best category for such words.
         "tool": "Represents tools or utilities that don’t fit in 'container' or 'construction'. Can include natural non-living objects used as tools.",
-        # TODO: (#287) Consider generalizing "clothes" to include such words as
-        # curtain, awning, bandage, ...
         "clothes": "Clothes and fabrics.",
         "vehicle": "Includes various forms of transportation.",
     }
@@ -99,8 +90,6 @@ KNOWN_CATEGORIES: dict[str, str] = (
         "time": "Represents time-related concepts.",
         "number": "Represents numerical concepts.",
         # Notice that entities representing specific points rather than quantities (e.g. Monday vs. 24 hours, or here vs. 10 meters) do NOT belong in this category.
-        # TODO: (#287): Many coins are included as units be default because they
-        # were also used as weights. Consider a category for such words as loan, interest, pledge, ...
         "unit": "Represents quantities, measures, or units of length, time, weight, currency, and volume.",
         "direction": "Represents directional concepts.",
         "emotion": "Covers words related to emotions.",
@@ -109,8 +98,6 @@ KNOWN_CATEGORIES: dict[str, str] = (
     | {
         # Miscellaneous
         "doubtful": "Represents words with an unknown or uncertain meaning.",
-        # TODO: (#287): Consider adding a category for "movement" verbs.
-        # TODO: (#287): Consider adding a category for "mental" verbs.
     }
 )
 
