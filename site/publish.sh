@@ -101,7 +101,7 @@ build() {
       | while read -r FILE; do basename "${FILE}"; done \
       | sort -n \
       | while read -r BASENAME; do
-        echo "  <a href=\"${BASENAME}\">${BASENAME%.*}</a>"
+        echo "  <a href=\"${BASENAME/ /%20}\">${BASENAME%.*}</a>"
       done)
   INDEX="${INDEX}" envsubst < site/crum.html > "${CRUM_DIR}/index.html"
   cp -r \
