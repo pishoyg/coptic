@@ -11,7 +11,7 @@ from ebooklib import epub  # type: ignore[import-untyped]
 
 import utils
 
-LANGUAGES = [
+LANGUAGES: list[str] = [
     "Bohairic",
     "Sahidic",
     "English",
@@ -24,32 +24,53 @@ LANGUAGES = [
     "Lycopolitan",
 ]
 
+BOOK_TITLE: str = "Ⲡⲓϫⲱⲙ Ⲉⲑⲟⲩⲁⲃ"
 
-BOOK_TITLE = "Ⲡⲓϫⲱⲙ Ⲉⲑⲟⲩⲁⲃ"
+VERSE_PREFIX: re.Pattern = re.compile(r"^\(([^)]+)\)")
 
+JSON: str = "bible/stshenouda.org/data/input/bible.json"
+INPUT_DIR: str = "bible/stshenouda.org/data/raw/"
+SOURCES_DIR: str = "bible/stshenouda.org/data/raw/Sources/"
+OUTPUT_DIR: str = "bible/stshenouda.org/data/output"
+PARALLELS: list[str] = ["Bohairic_English"]
+COVER: str = "bible/stshenouda.org/data/img/stauros.jpeg"
 
-VERSE_PREFIX = re.compile(r"^\(([^)]+)\)")
-
-JSON = "bible/stshenouda.org/data/input/bible.json"
-INPUT_DIR = "bible/stshenouda.org/data/raw/"
-SOURCES_DIR = "bible/stshenouda.org/data/raw/Sources/"
-OUTPUT_DIR = "bible/stshenouda.org/data/output"
-PARALLELS = ["Bohairic_English"]
-COVER = "bible/stshenouda.org/data/img/stauros.jpeg"
+# TODO: Move styling to a CSS sheet.
+HTML_HEAD_FMT = """<!DOCTYPE html>
+<head>
+  <title>{title}</title>
+  <style>
+    .a {{
+      color: blue;
+    }}
+    .column {{
+        float: left;
+        width: 50%;
+    }}
+    .row:after {{
+        content: "";
+        display: table;
+        clear: both;
+    }}
+  </style>
+</head>"""
 
 
 def file_name(book_name: str) -> str:
     return book_name.lower().replace(" ", "_").replace(".", "_")
 
 
-def writing_path(output_format: str, subdir: str, stem: str) -> str:
+def writing_path(output_format: str, *subdirs: str, stem: str) -> str:
     assert output_format
     assert stem
-    output_format = output_format.lower()
-    subdir = subdir.lower()
-    stem = stem.lower()
-    parts = [OUTPUT_DIR, output_format, subdir, f"{stem}.{output_format}"]
-    path = os.path.join(*filter(None, parts))
+    parts: list[str] = [
+        OUTPUT_DIR,
+        output_format,
+        *subdirs,
+        f"{stem}.{output_format}",
+    ]
+    parts = [p.lower() for p in parts]
+    path: str = os.path.join(*parts)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     return path
 
@@ -73,9 +94,9 @@ def json_loads(t: str) -> dict | list:
 
 class RangeColor:
     def __init__(self, start: int, end: int, color: str) -> None:
-        self.start = start
-        self.end = end
-        self.color = color
+        self.start: int = start
+        self.end: int = end
+        self.color: str = color
 
     def within(self, other) -> bool:
         return self.start >= other.start and self.end <= other.end
@@ -104,7 +125,7 @@ def remove_overlap(ranges: list[RangeColor]) -> list[RangeColor]:
         return []
     out: list[RangeColor] = [ranges[0]]
     for cur in ranges[1:]:
-        prev = out[-1]
+        prev: RangeColor = out[-1]
         if not cur.overlap(prev):
             # No overlap.
             out.append(cur)
@@ -114,19 +135,21 @@ def remove_overlap(ranges: list[RangeColor]) -> list[RangeColor]:
 
 
 def find_all(s: str, p: str):
-    i = s.find(p)
+    i: int = s.find(p)
     while i != -1:
         yield i
         i = s.find(p, i + 1)
 
 
-def recolor(v: str, verse: dict) -> str:
+def _recolor_aux(v: str, verse: dict) -> typing.Generator[str]:
     v = html.escape(v)
     if "coloredWords" not in verse:
-        return v
+        yield v
+        return
     ranges: list[RangeColor] = []
     for d in verse["coloredWords"]:
-        word, color = d["word"], d["light"]
+        word: str = d["word"]
+        color: str = d["light"]
         if not word or not color:
             continue
         ranges.extend(
@@ -137,18 +160,21 @@ def recolor(v: str, verse: dict) -> str:
         )
     ranges = sorted(ranges, key=compare_range_color)
     if not ranges:
-        return v
+        yield v
+        return
     ranges = remove_overlap(ranges)
     assert ranges
-    out = ""
-    last = 0
+    last: int = 0
     for rc in ranges:
         assert rc.start != rc.end
-        out += v[last : rc.start]
-        out += f'<span style="color:{rc.color}">{v[rc.start:rc.end]}</span>'
+        yield v[last : rc.start]
+        yield f'<span style="color:{rc.color}">{v[rc.start:rc.end]}</span>'
         last = rc.end
-    out = out + v[last:]
-    return out
+    yield v[last:]
+
+
+def recolor(v: str, verse: dict) -> str:
+    return "".join(_recolor_aux(v, verse))
 
 
 def chapter_number(chapter: dict) -> str:
@@ -156,145 +182,132 @@ def chapter_number(chapter: dict) -> str:
 
 
 def verse_number(verse: dict) -> str:
-    t = verse["English"] or verse["Greek"]
-    s = VERSE_PREFIX.search(t)
+    t: str = verse["English"] or verse["Greek"]
+    s: re.Match | None = VERSE_PREFIX.search(t)
     return s.groups()[0] if s else ""
 
 
-def html_id(book_name: str, chapter_num: typing.Optional[str] = None) -> str:
-    id = book_name.lower().replace(" ", "_")
-    if chapter_num:
-        id += str(chapter_num)
-    return id
-
-
-def epub_book_href(book_name: str) -> str:
-    return html_id(book_name) + ".xhtml"
-
-
-class parallel_builder:
+class html_builder:
     def __init__(
         self,
+        html_subdir: str | None,
+        epub_subdir: str | None,
         chapter_beginner: str,
         verse_format: str,
         chapter_end: str,
     ) -> None:
-        self.chapter_beginner: str = chapter_beginner
-        self.chapter_end: str = chapter_end
-        self.verse_format: str = verse_format
+        # Output directories.
+        self._html_subdir: str | None = html_subdir
+        self._epub_subdir: str | None = epub_subdir
 
-    def begin_chapter(self) -> str:
-        return self.chapter_beginner
+        # Format.
+        self._chapter_beginner: str = chapter_beginner
+        self._verse_format: str = verse_format
+        self._chapter_end: str = chapter_end
 
-    def end_chapter(self) -> str:
-        return self.chapter_end
+        # Progress.
+        self._cur_book: str = ""
+        self._cur_book_content: list[str] = []
 
-    def verse(self, v1: str, v2: str) -> str:
-        return self.verse_format.format(v1, v2)
+        # Content.
+        self._books: dict[str, str] = {}
+        self._book_names: list[str] = []
 
+    def assert_book_in_progress(self) -> None:
+        assert self._cur_book
 
-PARALLEL_BUILDERS: dict[int, parallel_builder] = {
-    1: parallel_builder(
-        chapter_beginner="",
-        verse_format="""
-        {}
-        <br/>
-        {}
-        <br/>
-        <br/>
-        """,
-        chapter_end="",
-    ),
-    2: parallel_builder(
-        chapter_beginner="<table>",
-        verse_format="""
-        <tr>
-            <td>{}</td>
-            <td>{}</td>
-        </tr>""",
-        chapter_end="</table>",
-    ),
-    3: parallel_builder(
-        chapter_beginner="",
-        verse_format="""
-        <div class="row">
-            <div class="column">{}</div>
-            <div class="column">{}</div>
-        </div>""",
-        chapter_end="",
-    ),
-}
+    def assert_no_book_in_progress(self) -> None:
+        assert not self._cur_book
+        assert not self._cur_book_content
 
+    def start(self, parallel: bool) -> None:
+        self._parallel = parallel
 
-def load_book(book_name: str) -> dict | list:
-    try:
-        t = open(os.path.join(INPUT_DIR, book_name + ".json")).read()
-    except FileNotFoundError:
-        utils.warn("Book not found:", book_name)
-        return {}
+    def start_book(self, name):
+        self.assert_no_book_in_progress()
+        assert name not in self._books
+        self._cur_book = name
+        self._book_names.append(name)
+        self.__extend(f'<h2 id="{self.__html_id(name)}">{name}</h2>')
 
-    utils.info("Loaded book:", book_name)
-    t = normalize(t)
-    return json_loads(t)
+    def add_chapter_anchor(self, chapter_num: str) -> None:
+        self.assert_book_in_progress()
+        self.__extend(
+            f'<a href="#{self.__html_id(self._cur_book, chapter_num)}">{chapter_num}</a>',
+        )
 
+    def begin_chapter(self, chapter_num: str) -> None:
+        assert self._cur_book
+        self.__extend(
+            f'<h3 id="{self.__html_id(self._cur_book, chapter_num)}">{chapter_num}</h3>',
+        )
+        if not self._parallel:
+            return
+        self.__extend(self._chapter_beginner)
 
-def html_head(title: str = "") -> str:
-    return """<!DOCTYPE html>
-<head>
-  <title>{title}</title>
-  <style>
-    .a {{
-      color: blue;
-    }}
-    .column {{
-        float: left;
-        width: 50%;
-    }}
-    .row:after {{
-        content: "";
-        display: table;
-        clear: both;
-    }}
-  </style>
-</head>""".format(
-        title=title,
-    )
+    def verse(self, v1: str, v2: str | None = None) -> None:
+        if not self._parallel:
+            assert not v2
+            self.__extend(v1)
+            return
+        self.__extend(self._verse_format.format(v1, v2))
 
+    def end_chapter(self) -> None:
+        if not self._parallel:
+            return
+        self.__extend(self._chapter_end)
 
-def html_body(body: str = "") -> str:
-    return f"<body>{body}</body>"
+    def end_book(self):
+        self._books[self._cur_book] = "\n".join(self._cur_book_content)
+        self._cur_book_content.clear()
+        self._cur_book = ""
 
+    def __clear(self):
+        self.assert_no_book_in_progress()
+        self._books.clear()
+        self._book_names.clear()
 
-def html_h1(title: str) -> str:
-    return "<h1>{title}</h1>".format(title=title)
+    def __extend(self, *args: str):
+        assert self._cur_book
+        self._cur_book_content.extend(args)
 
+    def __html_id(self, book_name: str, chapter_num: str | None = None) -> str:
+        id: str = book_name.lower().replace(" ", "_")
+        if chapter_num:
+            id += str(chapter_num)
+        return id
 
-def html_toc(books: list[str], href: typing.Callable) -> str:
-    return "\n".join(
-        '<p><a href="{}">{}</a></p>'.format(href(book_name), book_name)
-        for book_name in books
-    )
+    def __epub_book_href(self, book_name: str) -> str:
+        return self.__html_id(book_name) + ".xhtml"
 
-
-def write_html(html: dict, books: list[str]) -> None:
-    for lang in LANGUAGES + PARALLELS:
-        for book_name in books:
-            out = html_head(book_name) + html_body(
-                "\n".join(html[lang][book_name]),
+    def __write_html(self, lang: str) -> None:
+        assert self._html_subdir is not None
+        for book_name, book_content in self._books.items():
+            out: str = "\n".join(
+                [
+                    HTML_HEAD_FMT.format(title=book_name),
+                    "<body>",
+                    book_content,
+                    "</body>",
+                ],
             )
-            path = writing_path("html", lang, file_name(book_name))
+            path: str = writing_path(
+                "html",
+                self._html_subdir,
+                lang,
+                stem=file_name(book_name),
+            )
             utils.write(out, path)
 
-
-def write_epub(html: dict, books: list, subdir: str) -> None:
-    for lang in LANGUAGES + PARALLELS:
-        kindle = epub.EpubBook()
+    def __write_epub(self, lang: str) -> None:
+        assert self._epub_subdir is not None
+        kindle: epub.EpubBook = epub.EpubBook()
         kindle.set_identifier(lang)
         kindle.set_language("cop")
         kindle.set_title("Ⲡⲓϫⲱⲙ Ⲉⲑⲟⲩⲁⲃ")
         kindle.add_author("Saint Shenouda The Archimandrite Coptic Society")
-        cover_file_name = os.path.basename(COVER)
-        cover = epub.EpubCover(file_name=cover_file_name)
+        cover_file_name: str = os.path.basename(COVER)
+        cover: epub.EpubCover = epub.EpubCover(file_name=cover_file_name)
         with open(COVER, "rb") as f:
             cover.content = f.read()
         kindle.add_item(cover)
@@ -306,27 +319,33 @@ def write_epub(html: dict, books: list, subdir: str) -> None:
             epub.OrderedDict([("name", "cover"), ("content", "cover-img")]),
         )
 
-        toc = epub.EpubHtml(title="Table of Contents", file_name="toc.xhtml")
+        toc: epub.EpubHtml = epub.EpubHtml(
+            title="Table of Contents",
+            file_name="toc.xhtml",
+        )
         toc.set_content(
-            html_head(BOOK_TITLE)
+            HTML_HEAD_FMT.format(title=BOOK_TITLE)
             + "<body>"
-            + html_h1(BOOK_TITLE)
-            + html_toc(books, epub_book_href)
+            + f"<h1>{BOOK_TITLE}</h1>"
+            + "\n".join(
+                f'<p><a href="{self.__epub_book_href(book_name)}">{book_name}</a></p>'
+                for book_name in self._book_names
+            )
             + "</body>",
         )
         kindle.add_item(toc)
 
         spine = [cover, toc]
 
-        for book_name in books:
-            c = epub.EpubHtml(
+        for book_name in self._book_names:
+            c: epub.EpubHtml = epub.EpubHtml(
                 title=book_name,
-                file_name=epub_book_href(book_name),
+                file_name=self.__epub_book_href(book_name),
             )
             c.set_content(
-                html_head(book_name)
+                HTML_HEAD_FMT.format(title=book_name)
                 + "<body>"
-                + "\n".join(html[lang][book_name])
+                + self._books[book_name]
                 + "</body>",
             )
             spine.append(c)
@@ -336,54 +355,171 @@ def write_epub(html: dict, books: list, subdir: str) -> None:
         kindle.add_item(epub.EpubNcx())
         kindle.add_item(epub.EpubNav())
 
-        path = writing_path("epub", subdir, lang)
+        path: str = writing_path("epub", self._epub_subdir, stem=lang)
         epub.write_epub(path, kindle)
         utils.wrote(path)
 
+    def write_and_clear(self, lang: str):
+        assert not self._cur_book
+        assert not self._cur_book_content
+        assert self._books
+        if self._html_subdir is not None:
+            self.__write_html(lang)
+        if self._epub_subdir is not None:
+            self.__write_epub(lang)
+        self.__clear()
 
-def process_sources(books: list[str]) -> None:
-    body_parts = []
+
+class multi_html_builder:
+    def __init__(self, *builders: html_builder) -> None:
+        self.builders = builders
+        utils.verify_unique(
+            [
+                b._html_subdir
+                for b in self.builders
+                if b._html_subdir is not None
+            ],
+            "It looks like HTML outputs will override one another!",
+        )
+        utils.verify_unique(
+            [
+                b._epub_subdir
+                for b in self.builders
+                if b._epub_subdir is not None
+            ],
+            "It looks like EPUB outputs will override one another!",
+        )
+
+    def start(self, *args):
+        for builder in self.builders:
+            builder.start(*args)
+
+    def start_book(self, *args):
+        for builder in self.builders:
+            builder.start_book(*args)
+
+    def add_chapter_anchor(self, *args) -> None:
+        for builder in self.builders:
+            builder.add_chapter_anchor(*args)
+
+    def begin_chapter(self, *args) -> None:
+        for builder in self.builders:
+            builder.begin_chapter(*args)
+
+    def verse(self, *args) -> None:
+        for builder in self.builders:
+            builder.verse(*args)
+
+    def end_chapter(self) -> None:
+        for builder in self.builders:
+            builder.end_chapter()
+
+    def end_book(self):
+        for builder in self.builders:
+            builder.end_book()
+
+    def write_and_clear(self, *args):
+        for builder in self.builders:
+            builder.write_and_clear(*args)
+
+
+HTMLS: multi_html_builder = multi_html_builder(
+    html_builder(
+        html_subdir=None,
+        epub_subdir="1",
+        chapter_beginner="",
+        verse_format="{}" "<br/>" "{}" "<br/>" "<br/>",
+        chapter_end="",
+    ),
+    html_builder(
+        html_subdir="",
+        epub_subdir="2",
+        chapter_beginner="<table>",
+        verse_format="<tr>" "<td>{}</td>" "<td>{}</td>" "</tr>",
+        chapter_end="</table>",
+    ),
+    html_builder(
+        html_subdir=None,
+        epub_subdir="3",
+        chapter_beginner="",
+        verse_format='<div class="row">'
+        '<div class="column">{}</div>'
+        '<div class="column">{}</div>'
+        "</div>",
+        chapter_end="",
+    ),
+)
+
+
+class book_loader:
+    def __init__(self):
+        self.cache: dict[str, dict | list] = {}
+
+    def load(self, book_name: str) -> dict | list:
+        if book_name in self.cache:
+            return self.cache[book_name]
+        try:
+            t: str = open(os.path.join(INPUT_DIR, book_name + ".json")).read()
+        except FileNotFoundError:
+            utils.warn("Book not found:", book_name)
+            self.cache[book_name] = {}
+            return {}
+
+        utils.info("Loaded book:", book_name)
+        t = normalize(t)
+        self.cache[book_name] = json_loads(t)
+        return self.cache[book_name]
+
+
+def _process_sources_aux(books: list[str]) -> typing.Generator[str]:
+    yield HTML_HEAD_FMT.format(title="Sources")
+    yield "<body>"
     for book_name in books:
         try:
-            t = open(
+            t: str = open(
                 os.path.join(SOURCES_DIR, book_name + "_Sources.json"),
             ).read()
+            yield "<h1>" + book_name + "</h1>"
+            json_loaded = json_loads(t)
+            del t
+            assert isinstance(json_loaded, dict)
+            data: dict = json_loaded
+            del json_loaded
         except FileNotFoundError:
             utils.warn("No sources found for", book_name)
             continue
 
-        body_parts.append("<h1>" + book_name + "</h1>")
-        json_loaded = json_loads(t)
-        del t
-        assert isinstance(json_loaded, dict)
-        data: dict = json_loaded
-        del json_loaded
-
         for lang in LANGUAGES:
-            body_parts.append("<h2>" + lang + "</h2>")
-            body_parts.append(
-                "<br/>".join(
-                    "  - " + line for line in data[lang].split("\n") if line
-                ),
+            yield f"<h2>{lang}</h2>"
+            yield "<br/>".join(
+                f"  - {line}" for line in data[lang].split("\n") if line
             )
+    yield "</body>"
 
-    html = html_head(title="Sources") + html_body("\n".join(body_parts))
-    path = writing_path("html", "", "sources")
+
+def process_sources(books: list[str]) -> None:
+    html = "\n".join(_process_sources_aux(books))
+    path = writing_path("html", "", stem="sources")
     utils.write(html, path)
 
 
-def _per_lang() -> dict[str, dict[str, list[str]]]:
-    return {lang: {} for lang in LANGUAGES + PARALLELS}
+def split(lang_pair) -> tuple[str, str] | None:
+    if lang_pair in LANGUAGES:
+        assert lang_pair not in PARALLELS
+        return None
+    assert lang_pair in PARALLELS
+    a, b = lang_pair.split("_")
+    return a, b
 
 
 def main() -> None:
-    books = []
-    book_to_testament = {}
-    book_to_testament_indexed = {}
-    book_to_section = {}
-    book_to_section_indexed = {}
-    book_to_section_indexed_no_testament = {}
-    book_to_book_indexed = {}
+    books: list[str] = []
+    book_to_testament: dict[str, str] = {}
+    book_to_testament_indexed: dict[str, str] = {}
+    book_to_section: dict[str, str] = {}
+    book_to_section_indexed: dict[str, str] = {}
+    book_to_section_indexed_no_testament: dict[str, str] = {}
+    book_to_book_indexed: dict[str, str] = {}
 
     with open(JSON) as j:
         bible = json.loads(j.read())
@@ -400,119 +536,74 @@ def main() -> None:
                     book_idx += 1
                     books.append(book_name)
                     book_to_testament[book_name] = testament_name
-                    book_to_testament_indexed[book_name] = "{}. {}".format(
-                        testament_idx,
-                        testament_name,
+                    book_to_testament_indexed[book_name] = (
+                        f"{testament_idx}. {testament_name}"
                     )
                     book_to_section[book_name] = section_name
-                    book_to_section_indexed[book_name] = "{}. {}".format(
-                        section_idx,
-                        section_name,
+                    book_to_section_indexed[book_name] = (
+                        f"{section_idx}. {section_name}"
                     )
                     book_to_section_indexed_no_testament[book_name] = (
-                        "{}. {}".format(
-                            str(section_idx_no_testament).zfill(2),
-                            section_name,
-                        )
+                        f"{str(section_idx_no_testament).zfill(2)}. {section_name}"
                     )
-                    book_to_book_indexed[book_name] = "{}. {}".format(
-                        str(book_idx).zfill(2),
-                        book_name,
+                    book_to_book_indexed[book_name] = (
+                        f"{str(book_idx).zfill(2)}. {book_name}"
                     )
 
     process_sources(books)
 
-    df = pd.DataFrame()
-    # Reduce duplication for the different HTML formats.
-    html1 = _per_lang()
-    html2 = _per_lang()
-    html3 = _per_lang()
+    df: pd.DataFrame = pd.DataFrame()
+    loader = book_loader()
+    for lang in LANGUAGES + PARALLELS:
+        pair: tuple[str, str] | None = split(lang)
+        HTMLS.start(bool(pair))
+        for book_name in books:
+            HTMLS.start_book(book_name)
 
-    for book_name in books:
-        for lang in LANGUAGES + PARALLELS:
-            h2 = '<h2 id="{}">{}</h2>'.format(html_id(book_name), book_name)
-            html1[lang][book_name] = [h2]
-            html2[lang][book_name] = [h2]
-            html3[lang][book_name] = [h2]
+            data = loader.load(book_name)
+            book_df = pd.DataFrame()
+            for chapter in data:
+                HTMLS.add_chapter_anchor(chapter_number(chapter))
 
-        data = load_book(book_name)
-        book_df = pd.DataFrame()
-        for lang in LANGUAGES + PARALLELS:
+            zfill_len = len(str(len(data)))
             for chapter in data:
                 chapter_num = chapter_number(chapter)
-                a = '<a href="#{}">{}</a>'.format(
-                    html_id(book_name, chapter_num),
-                    chapter_num,
-                )
-                html1[lang][book_name].append(a)
-                html2[lang][book_name].append(a)
-                html3[lang][book_name].append(a)
+                HTMLS.begin_chapter(chapter_num)
+                for verse in chapter["data"]:
+                    verse_num = verse_number(verse)
+                    d = {
+                        "book": book_name,
+                        "chapter": chapter_num,
+                        "chapter-zfilled": str(chapter_num).zfill(zfill_len),
+                        "verse": verse_num,
+                        "testament": book_to_testament[book_name],
+                        "testament-indexed": book_to_testament_indexed[
+                            book_name
+                        ],
+                        "section": book_to_section[book_name],
+                        "section-indexed": book_to_section_indexed[book_name],
+                        "section-indexed-no-testament": book_to_section_indexed_no_testament[
+                            book_name
+                        ],
+                        "book-indexed": book_to_book_indexed[book_name],
+                    }
+                    book_df = pd.concat(
+                        [book_df, pd.DataFrame([d])],
+                        ignore_index=True,
+                    )
+                    if pair:
+                        HTMLS.verse(
+                            recolor(verse[pair[0]], verse),
+                            recolor(verse[pair[1]], verse),
+                        )
+                    else:
+                        HTMLS.verse(recolor(verse[lang], verse))
+                        d[lang] = VERSE_PREFIX.sub("", verse[lang]).strip()
 
-        parallel_pairs = [p.split("_") for p in PARALLELS]
-        pb1 = PARALLEL_BUILDERS[1]
-        pb2 = PARALLEL_BUILDERS[2]
-        pb3 = PARALLEL_BUILDERS[3]
-        zfill_len = len(str(len(data)))
-        for chapter in data:
-            chapter_num = chapter_number(chapter)
-            for lang in LANGUAGES + PARALLELS:
-                h3 = '<h3 id="{}">{}</h3>'.format(
-                    html_id(book_name, chapter_num),
-                    chapter_num,
-                )
-
-                html1[lang][book_name].append(h3)
-                html2[lang][book_name].append(h3)
-                html3[lang][book_name].append(h3)
-            for lang in PARALLELS:
-                html1[lang][book_name].append(pb1.begin_chapter())
-                html2[lang][book_name].append(pb2.begin_chapter())
-                html3[lang][book_name].append(pb3.begin_chapter())
-            for verse in chapter["data"]:
-                verse_num = verse_number(verse)
-                d = {
-                    "book": book_name,
-                    "chapter": chapter_num,
-                    "chapter-zfilled": str(chapter_num).zfill(zfill_len),
-                    "verse": verse_num,
-                    "testament": book_to_testament[book_name],
-                    "testament-indexed": book_to_testament_indexed[book_name],
-                    "section": book_to_section[book_name],
-                    "section-indexed": book_to_section_indexed[book_name],
-                    "section-indexed-no-testament": book_to_section_indexed_no_testament[
-                        book_name
-                    ],
-                    "book-indexed": book_to_book_indexed[book_name],
-                }
-                for lang in LANGUAGES:
-                    d[lang] = VERSE_PREFIX.sub("", verse[lang]).strip()
-                    html1[lang][book_name].append(recolor(verse[lang], verse))
-                    html2[lang][book_name].append(recolor(verse[lang], verse))
-                    html3[lang][book_name].append(recolor(verse[lang], verse))
-                for lang, pair in zip(PARALLELS, parallel_pairs):
-                    recolored = [
-                        recolor(verse[pair[0]], verse),
-                        recolor(verse[pair[1]], verse),
-                    ]
-                    html1[lang][book_name].append(pb1.verse(*recolored))
-                    html2[lang][book_name].append(pb2.verse(*recolored))
-                    html3[lang][book_name].append(pb3.verse(*recolored))
-
-                book_df = pd.concat(
-                    [book_df, pd.DataFrame([d])],
-                    ignore_index=True,
-                )
-            for lang in PARALLELS:
-                html1[lang][book_name].append(pb1.end_chapter())
-                html2[lang][book_name].append(pb2.end_chapter())
-                html3[lang][book_name].append(pb3.end_chapter())
-        df = pd.concat([df, book_df], ignore_index=True)
-
-    write_html(html2, books)
-
-    write_epub(html1, books, "1")
-    write_epub(html2, books, "2")
-    write_epub(html3, books, "3")
+                HTMLS.end_chapter()
+            df = pd.concat([df, book_df], ignore_index=True)
+            HTMLS.end_book()
+        HTMLS.write_and_clear(lang)
 
 
 if __name__ == "__main__":
