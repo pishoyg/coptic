@@ -86,6 +86,109 @@ class Note(genanki.Note):
         return genanki.guid_for(self.fields[2])
 
 
+def to_file_name(name: str) -> str:
+    return name.replace("/", "_").lower()
+
+
+class header_cell:
+    def __init__(self, title: str, link: str) -> None:
+        self.title = title
+        self.link = link
+
+    def td(self) -> typing.Generator[str]:
+        yield "<td>"
+        yield f'<a class="navigate" href="{self.link}">{self.title}</a>'
+        yield "</td>"
+
+
+class header_generator:
+    def __init__(self, base_cells: list[header_cell]) -> None:
+        self.base_cells = base_cells
+
+    def generate_header(self, cells) -> str:
+        return "".join(self._generate_header_aux(cells))
+
+    def _generate_header_aux(
+        self,
+        cells: list[header_cell] = [],
+    ) -> typing.Generator[str]:
+        cells = self.base_cells + cells
+        yield '<table id="header" class="header">'
+        yield "<tr>"
+        for cell in cells:
+            yield from cell.td()
+        yield "</tr>"
+        yield "</table>"
+
+
+class index:
+    def __init__(self, title: str, count: int, html_body: str) -> None:
+        self.title = title
+        self.count = count
+        self.html_body = html_body
+
+    def basename(self) -> str:
+        return to_file_name(self.title) + ".html"
+
+    def write(self, dir: str, links: str, header: str) -> None:
+        with open(os.path.join(dir, self.basename()), "w") as f:
+            f.write(
+                HTML_INDEX_FMT.format(
+                    title=self.title,
+                    page_class="INDEX",
+                    links=links,
+                    body=header + self.html_body,
+                ),
+            )
+
+
+class index_index:
+    def __init__(self, name: str, indexes: list[index]):
+        self.name = name
+        self.indexes = indexes
+
+    def basename(self) -> str:
+        return to_file_name(self.name) + ".html"
+
+    def write(
+        self,
+        dir: str,
+        links: str,
+        header_base_cells: list[header_cell],
+    ):
+        headerer = header_generator(header_base_cells)
+        # A subindex header includes a link to the index that contains
+        # this subindex.
+        subindex_header = headerer.generate_header(
+            [header_cell(self.name, self.basename())],
+        )
+        for index in self.indexes:
+            index.write(dir=dir, links=links, header=subindex_header)
+        del subindex_header
+
+        # Write the index index!
+        body = headerer.generate_header([]) + "".join(self._generate_body())
+        with open(os.path.join(dir, self.basename()), "w") as f:
+            f.write(
+                HTML_INDEX_FMT.format(
+                    title=self.name,
+                    page_class="INDEX_INDEX",
+                    links=links,
+                    body=body,
+                ),
+            )
+
+    def _generate_body(self) -> typing.Generator[str]:
+        yield f"<h1>{self.name}</h2>"
+        yield '<ol class="index-index-list">'
+        for index in self.indexes:
+            yield '<li class="index-view">'
+            yield f'<a class="navigate" href="{to_file_name(index.title)}.html">{index.title}</a>'
+            yield f' <span class="index-count">({index.count})</span>'
+            yield "</li>"
+        yield "</ol>"
+
+
 class deck:
     def __init__(
         self,
@@ -109,7 +212,7 @@ class deck:
         force_title: bool = True,
         back_for_front: bool = False,
         key_for_title: bool = False,
-        index_generate: list[tuple[str, typing.Callable]] = [],
+        index_indexes: list[index_index] = [],
     ) -> None:
         """Generate an Anki package.
 
@@ -235,7 +338,7 @@ class deck:
         ss.print()
         utils.info("____________________")
         self.media = field.merge_media_files(key, front, back)
-        self.index_generate: list[tuple[str, typing.Callable]] = index_generate
+        self.index_indexes: list[index_index] = index_indexes
 
     def clean_dir(self, dir: str) -> None:
         if os.path.exists(dir):
@@ -284,83 +387,19 @@ class deck:
             shutil.copy(path, dir)
         utils.wrote(dir)
 
-        for name, generator in self.index_generate:
-            titles: list[str] = []
-            titles_set: set[str] = set()
-            for title, html_body in generator():
-                assert title not in titles_set
-                assert len(titles) == len(titles_set)
-                titles.append(title)
-                titles_set.add(title)
-                with open(
-                    os.path.join(dir, self.to_file_name(title) + ".html"),
-                    "w",
-                ) as f:
-                    f.write(
-                        HTML_INDEX_FMT.format(
-                            title=title,
-                            page_class="INDEX",
-                            links=self.search_link(),
-                            body=self.build_index_header(name) + html_body,
-                        ),
-                    )
-            # Write the index index!
-            del titles_set
-            index_index_body = "".join(
-                self.generate_index_index_body(name, titles),
-            )
-            with open(
-                os.path.join(dir, self.to_file_name(name) + ".html"),
-                "w",
-            ) as f:
-                f.write(
-                    HTML_INDEX_FMT.format(
-                        title=name,
-                        page_class="INDEX_INDEX",
-                        links=self.search_link(),
-                        body=index_index_body,
-                    ),
-                )
-        utils.wrote(dir)
-
-    def to_file_name(self, name: str) -> str:
-        return name.replace("/", "_").lower()
-
-    def build_index_header(self, name: str) -> str:
-        return "".join(
-            self.generate_header([(self.to_file_name(name) + ".html", name)]),
-        )
-
-    def generate_header(
-        self,
-        cells: list[tuple[str, str]] = [],
-    ) -> typing.Generator[str]:
-        if self.search:
-            cells = [(self.search, "Search")] + cells
+        header_base_cells: list[header_cell] = []
         if self.home:
-            cells = [(self.home, "Home")] + cells
-        yield '<table id="header" class="header">'
-        yield "<tr>"
-        for cell in cells:
-            yield "<td>"
-            yield f'<a class="navigate" href="{cell[0]}">{cell[1]}</a>'
-            yield "</td>"
-        yield "</tr>"
-        yield "</table>"
+            header_base_cells.append(header_cell("Home", self.home))
+        if self.search:
+            header_base_cells.append(header_cell("Search", self.search))
+        for idx_idx in self.index_indexes:
+            idx_idx.write(
+                dir=dir,
+                links=self.search_link(),
+                header_base_cells=header_base_cells,
+            )
 
-    def generate_index_index_body(
-        self,
-        name: str,
-        titles: list[str],
-    ) -> typing.Generator[str]:
-        yield from self.generate_header()
-        yield f"<h1>{name}</h2>"
-        yield '<ol class="index-index-list">'
-        for title in titles:
-            yield '<li class="index-view">'
-            yield f'<a class="navigate" href="{self.to_file_name(title)}.html">{title}</a>'
-            yield "</li>"
-        yield "</ol>"
+        utils.wrote(dir)
 
     def html_to_anki(self, html: str) -> str:
         # TODO: This won't work if the HTML gets formatted before making it to

@@ -517,7 +517,7 @@ def crum(
         search="./",
         home="../",
         force_front=force_front,
-        index_generate=_crum_indexer(
+        index_indexes=_crum_indexer(
             roots_col,
             root_appendix,
         ).generate_indexes(),
@@ -868,13 +868,13 @@ class _crum_indexer(_mother):
             yield sister.string()
         yield "</table>"
 
-    def __generate_index(self, index_name: str, keys: list[str]) -> str:
+    def __generate_index_body(self, index_name: str, keys: list[str]) -> str:
         return "".join(self.__generate_index_aux(index_name, keys))
 
     def generate_indexes_aux(
         self,
         indexes: list[list[str]],
-    ) -> typing.Generator[tuple[str, str]]:
+    ) -> list[deck.index]:
         """
         Args:
             indexes: A list such that indexes_i gives the indexes that word_i
@@ -886,18 +886,24 @@ class _crum_indexer(_mother):
         for word_key, word_indexes in zip(keys, indexes):
             for word_index in word_indexes:
                 index_to_keys[word_index].append(word_key)
-        for index_name, keys in sorted(
-            index_to_keys.items(),
-            key=lambda pair: pair[0],
-        ):
-            yield index_name, self.__generate_index(index_name, keys)
+        return [
+            deck.index(
+                title=index_name,
+                count=len(keys),
+                html_body=self.__generate_index_body(index_name, keys),
+            )
+            for index_name, keys in sorted(
+                index_to_keys.items(),
+                key=lambda pair: pair[0],
+            )
+        ]
 
-    def generate_type_indexes(self) -> typing.Iterable[tuple[str, str]]:
+    def generate_type_indexes(self) -> list[deck.index]:
         return self.generate_indexes_aux(
             [[t] for t in self.roots_col("type-parsed")._content],
         )
 
-    def generate_category_indexes(self) -> typing.Iterable[tuple[str, str]]:
+    def generate_category_indexes(self) -> list[deck.index]:
         return self.generate_indexes_aux(
             [
                 utils.ssplit(cats, ",")
@@ -908,10 +914,13 @@ class _crum_indexer(_mother):
             ],
         )
 
-    def generate_indexes(self) -> list[tuple[str, typing.Callable]]:
+    def generate_indexes(self) -> list[deck.index_index]:
         return [
-            ("Categories", self.generate_category_indexes),
-            ("Types", self.generate_type_indexes),
+            deck.index_index(
+                "Categories",
+                self.generate_category_indexes(),
+            ),
+            deck.index_index("Types", self.generate_type_indexes()),
         ]
 
 
