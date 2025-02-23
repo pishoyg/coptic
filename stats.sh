@@ -130,6 +130,17 @@ loc_archive () {
   foc_archive cat | wc --lines
 }
 
+EXTENSIONS="$(extensions .)"
+DIFF=$(comm -23 <(echo "${EXTENSIONS}") <(echo "${KNOWN_EXTENSIONS}" | tr ' ' '\n' | sort) | tr '\n' ' ')
+if [ -n "${DIFF}" ]; then
+  echo -e "${PURPLE}Unknown extensions:"
+  echo -e "${RED}  ${DIFF}"
+  echo -e "${PURPLE}Lines of code statistics may become inaccurate. Add them to"
+  echo -e "list of known extension if they represent code, otherwise exclude them"
+  echo -e "from the stat.${RESET}"
+  exit 1
+fi
+
 EXTENSIONS_ARCHIVE=$(foc_archive basename | while read -r BASENAME; do echo "${BASENAME##*.}"; done | sort | uniq)
 DIFF=$(comm -23 <(echo "${EXTENSIONS_ARCHIVE}") <(echo "${KNOWN_EXTENSIONS_ARCHIVE}" | tr ' ' '\n') | tr '\n' ' ')
 if [ -n "${DIFF}" ]; then
@@ -217,6 +228,26 @@ readonly TOTAL="$((
   + LOC_SITE
   + LOC_SHARED))"
 
+DELTA=$(( LOC - TOTAL ))
+if [ "${DELTA}" != "0" ]; then
+  echo -e "${PURPLE}The total doesn't equal the sum of the parts, delta is ${RED}${DELTA}${PURPLE}.${RESET}"
+  exit 1
+fi
+
+echo -e "${BLUE}Number of lines of code (including archive): ${GREEN}${LOC}${BLUE}."\
+"\n  ${BLUE}Crum: ${GREEN}${LOC_CRUM}"\
+"\n  ${BLUE}copticsite: ${GREEN}${LOC_COPTICSITE}"\
+"\n  ${BLUE}KELLIA: ${GREEN}${LOC_KELLIA}"\
+"\n  ${BLUE}Bible: ${GREEN}${LOC_BIBLE}"\
+"\n  ${BLUE}Flashcards: ${GREEN}${LOC_FLASHCARDS}"\
+"\n  ${BLUE}Grammar: ${GREEN}${LOC_GRAMMAR}"\
+"\n  ${BLUE}Keyboard: ${GREEN}${LOC_KEYBOARD}"\
+"\n  ${BLUE}Morphology: ${GREEN}${LOC_MORPHOLOGY}"\
+"\n  ${BLUE}Site: ${GREEN}${LOC_SITE}"\
+"\n  ${BLUE}Shared: ${GREEN}${LOC_SHARED}"\
+"\n  ${BLUE}Archive: ${GREEN}${LOC_ARCHIVE}"\
+"\n  ${BLUE}TOTAL: ${GREEN}${TOTAL}"
+
 LOC_PYTHON=$(loc . -name "*.py")
 LOC_MAKE=$(loc . -name "Makefile")
 LOC_CSS=$(loc . -name "*.css")
@@ -247,6 +278,29 @@ readonly TOTAL_BY_LANG="$((
   + LOC_TS
   + LOC_JSON
   + LOC_HTML))"
+
+DELTA=$(( LOC - TOTAL_BY_LANG - LOC_ARCHIVE ))
+if [ "${DELTA}" != "0" ]; then
+  echo -e "${PURPLE}The total doesn't equal the sum of the parts, delta is ${RED}${DELTA}${PURPLE}.${RESET}"
+  exit 1
+fi
+
+echo -e "${BLUE}Live lines of code: ${GREEN}$((LOC - LOC_ARCHIVE))"\
+"\n  ${BLUE}Python: ${GREEN}${LOC_PYTHON}"\
+"\n  ${BLUE}Make: ${GREEN}${LOC_MAKE}"\
+"\n  ${BLUE}CSS: ${GREEN}${LOC_CSS}"\
+"\n  ${BLUE}Shell: ${GREEN}${LOC_SH}"\
+"\n  ${BLUE}JavaScript: ${GREEN}${LOC_JS}"\
+"\n  ${BLUE}Markdown: ${GREEN}${LOC_MD}"\
+"\n  ${BLUE}YAML: ${GREEN}${LOC_YAML}"\
+"\n  ${BLUE}TOML: ${GREEN}${LOC_TOML}"\
+"\n  ${BLUE}dot: ${GREEN}${LOC_DOT}"\
+"\n  ${BLUE}keyboard: ${GREEN}${LOC_KEYBOARD_LAYOUT}"\
+"\n  ${BLUE}txt: ${GREEN}${LOC_TXT}"\
+"\n  ${BLUE}TypeScript: ${GREEN}${LOC_TS}"\
+"\n  ${BLUE}JSON: ${GREEN}${LOC_JSON}"\
+"\n  ${BLUE}HTML: ${GREEN}${LOC_HTML}"\
+"\n  ${BLUE}TOTAL: ${GREEN}${TOTAL_BY_LANG}"
 
 FOC=$(foc_count .)
 FOC_PYTHON=$(foc_count . -name "*.py")
@@ -280,160 +334,11 @@ readonly TOTAL_FOC="$((
   + FOC_JSON
   + FOC_HTML))"
 
-DISK_USAGE="$(du --apparent-size --summarize . | cut --fields 1)"
-DISK_USAGE_HUMAN="$(du --apparent-size --human-readable --summarize . | cut --fields 1)"
-
-EXTENSIONS="$(extensions .)"
-DIFF=$(comm -23 <(echo "${EXTENSIONS}") <(echo "${KNOWN_EXTENSIONS}" | tr ' ' '\n' | sort) | tr '\n' ' ')
-if [ -n "${DIFF}" ]; then
-  echo -e "${PURPLE}Unknown extensions:"
-  echo -e "${RED}  ${DIFF}"
-  echo -e "${PURPLE}Lines of code statistics may become inaccurate. Add them to"
-  echo -e "list of known extension if they represent code, otherwise exclude them"
-  echo -e "from the stat.${RESET}"
+DELTA=$(( FOC - TOTAL_FOC ))
+if [ "${DELTA}" != "0" ]; then
+  echo -e "${PURPLE}The total doesn't equal the sum of the parts, delta is ${RED}${DELTA}${PURPLE}.${RESET}"
   exit 1
 fi
-
-CRUM_IMG=$(find "dictionary/marcion.sourceforge.net/data/img/" -type f -exec basename {} \; \
-  | grep -oE '^[0-9]+' \
-  | sort \
-  | uniq \
-  | wc --lines)
-
-CRUM_IMG_SUM=$(find dictionary/marcion.sourceforge.net/data/img/ -type f \
-  | wc --lines)
-
-CRUM_DAWOUD=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
-  "dawoud-pages" \
-  | wc --lines)
-
-CRUM_DAWOUD_SUM=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
-  "dawoud-pages" \
-  | grep '[0-9]+' --only-matching --extended-regexp \
-  | wc --lines)
-
-CRUM_NOTES=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
-  "notes" \
-  | wc --lines)
-
-CRUM_ROOT_SENSES=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
-  "senses" \
-  | wc --lines)
-
-CRUM_ROOT_SENSES_SUM=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
-  "senses" \
-  | grep '[0-9]+' --only-matching --extended-regexp \
-  | wc --lines)
-
-CRUM_LAST_PAGES=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
-  "crum-last-page" \
-  | wc --lines)
-
-CRUM_OVERRIDE_TYPES=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
-  "override-type" \
-  | wc --lines)
-
-CRUM_SISTERS=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
-  "sisters" \
-  | wc --lines)
-
-CRUM_SISTERS_SUM=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
-  "sisters" \
-  | grep '[0-9]+' --only-matching --extended-regexp \
-  | wc --lines)
-
-CRUM_ANTONYMS=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
-  "antonyms" \
-  | wc --lines)
-
-CRUM_ANTONYMS_SUM=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
-  "antonyms" \
-  | grep '[0-9]+' --only-matching --extended-regexp \
-  | wc --lines)
-
-CRUM_HOMONYMS=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
-  "homonyms" \
-  | wc --lines)
-
-CRUM_HOMONYMS_SUM=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
-  "homonyms" \
-  | grep '[0-9]+' --only-matching --extended-regexp \
-  | wc --lines)
-
-CRUM_GREEK_SISTERS=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
-  "TLA-sisters" \
-  | wc --lines)
-
-CRUM_GREEK_SISTERS_SUM=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
-  "TLA-sisters" \
-  | grep '[0-9]+' --only-matching --extended-regexp \
-  | wc --lines)
-
-CRUM_CATEGORIES=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
-  "categories" \
-  | wc --lines)
-
-CRUM_CATEGORIES_SUM=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
-  "categories" \
-  | grep '[^,]+' --only-matching --extended-regexp \
-  | wc --lines)
-
-CRUM_WRD_TYPOS=$(crum_typos "coptwrd.tsv" | wc --lines)
-CRUM_DRV_TYPOS=$(crum_typos "coptdrv.tsv" | wc --lines)
-readonly CRUM_TYPOS=$(( CRUM_WRD_TYPOS + CRUM_DRV_TYPOS ))
-crum_root_keys () {
-  crum_typos "coptwrd.tsv" | cut -f1
-  crum_typos "coptdrv.tsv" | cut -f2
-}
-CRUM_PAGES_CHANGED=$(crum_root_keys | sort | uniq | wc --lines)
-
-echo -e "${BLUE}Number of lines of code (including archive): ${GREEN}${LOC}${BLUE}."\
-"\n  ${BLUE}Crum: ${GREEN}${LOC_CRUM}"\
-"\n  ${BLUE}copticsite: ${GREEN}${LOC_COPTICSITE}"\
-"\n  ${BLUE}KELLIA: ${GREEN}${LOC_KELLIA}"\
-"\n  ${BLUE}Bible: ${GREEN}${LOC_BIBLE}"\
-"\n  ${BLUE}Flashcards: ${GREEN}${LOC_FLASHCARDS}"\
-"\n  ${BLUE}Grammar: ${GREEN}${LOC_GRAMMAR}"\
-"\n  ${BLUE}Keyboard: ${GREEN}${LOC_KEYBOARD}"\
-"\n  ${BLUE}Morphology: ${GREEN}${LOC_MORPHOLOGY}"\
-"\n  ${BLUE}Site: ${GREEN}${LOC_SITE}"\
-"\n  ${BLUE}Shared: ${GREEN}${LOC_SHARED}"\
-"\n  ${BLUE}Archive: ${GREEN}${LOC_ARCHIVE}"\
-"\n  ${BLUE}TOTAL: ${GREEN}${TOTAL}"
-
-echo -e "${BLUE}Live lines of code: ${GREEN}$((LOC - LOC_ARCHIVE))"\
-"\n  ${BLUE}Python: ${GREEN}${LOC_PYTHON}"\
-"\n  ${BLUE}Make: ${GREEN}${LOC_MAKE}"\
-"\n  ${BLUE}CSS: ${GREEN}${LOC_CSS}"\
-"\n  ${BLUE}Shell: ${GREEN}${LOC_SH}"\
-"\n  ${BLUE}JavaScript: ${GREEN}${LOC_JS}"\
-"\n  ${BLUE}Markdown: ${GREEN}${LOC_MD}"\
-"\n  ${BLUE}YAML: ${GREEN}${LOC_YAML}"\
-"\n  ${BLUE}TOML: ${GREEN}${LOC_TOML}"\
-"\n  ${BLUE}dot: ${GREEN}${LOC_DOT}"\
-"\n  ${BLUE}keyboard: ${GREEN}${LOC_KEYBOARD_LAYOUT}"\
-"\n  ${BLUE}txt: ${GREEN}${LOC_TXT}"\
-"\n  ${BLUE}TypeScript: ${GREEN}${LOC_TS}"\
-"\n  ${BLUE}JSON: ${GREEN}${LOC_JSON}"\
-"\n  ${BLUE}HTML: ${GREEN}${LOC_HTML}"\
-"\n  ${BLUE}TOTAL: ${GREEN}${TOTAL_BY_LANG}"
 
 echo -e "${BLUE}Number of files of code: ${GREEN}${FOC}${BLUE}."\
 "\n  ${BLUE}Python: ${GREEN}${FOC_PYTHON}"\
@@ -452,165 +357,213 @@ echo -e "${BLUE}Number of files of code: ${GREEN}${FOC}${BLUE}."\
 "\n  ${BLUE}HTML: ${GREEN}${FOC_HTML}"\
 "\n  ${BLUE}TOTAL: ${GREEN}${TOTAL_FOC}"
 
+DISK_USAGE="$(du --apparent-size --summarize . | cut --fields 1)"
+DISK_USAGE_HUMAN="$(du --apparent-size --human-readable --summarize . | cut --fields 1)"
 echo -e "${BLUE}Disk usage: \
 ${GREEN}${DISK_USAGE}${BLUE} (${GREEN}${DISK_USAGE_HUMAN}${BLUE})${RESET}"
-
 ((DISK_USAGE >= 7640803 && DISK_USAGE <= 88000000 )) || (echo -e "${PURPLE}${DISK_USAGE} ${RED}looks suspicious.${RESET}" && exit 1)
 
+CRUM_IMG=$(find "dictionary/marcion.sourceforge.net/data/img/" -type f -exec basename {} \; \
+  | grep -oE '^[0-9]+' \
+  | sort \
+  | uniq \
+  | wc --lines)
 echo -e "${BLUE}Number of words possessing at least one image: "\
 "${GREEN}${CRUM_IMG}${BLUE}."
-
 ((CRUM_IMG >= 700 && CRUM_IMG <= 3357 )) || (echo -e "${PURPLE}${CRUM_IMG} ${RED}looks suspicious.${RESET}" && exit 1)
 
+CRUM_IMG_SUM=$(find dictionary/marcion.sourceforge.net/data/img/ -type f \
+  | wc --lines)
 echo -e "${BLUE}Total number of images: "\
 "${GREEN}${CRUM_IMG_SUM}${BLUE}."
-
 ((CRUM_IMG_SUM >= 1200 && CRUM_IMG_SUM <= 33570 )) || (echo -e "${PURPLE}${CRUM_IMG_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
+CRUM_DAWOUD=$(tsv_nonempty \
+  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
+  "dawoud-pages" \
+  | wc --lines)
 echo -e "${BLUE}Number of words that have at least one page from Dawoud: "\
 "${GREEN}${CRUM_DAWOUD}${BLUE}."
-
 ((CRUM_DAWOUD >= 2600 && CRUM_DAWOUD <= 3357 )) || (echo -e "${PURPLE}${CRUM_DAWOUD} ${RED}looks suspicious.${RESET}" && exit 1)
 
+CRUM_DAWOUD_SUM=$(tsv_nonempty \
+  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
+  "dawoud-pages" \
+  | grep '[0-9]+' --only-matching --extended-regexp \
+  | wc --lines)
 echo -e "${BLUE}Number of Dawoud pages added: "\
 "${GREEN}${CRUM_DAWOUD_SUM}${BLUE}."
-
 ((CRUM_DAWOUD_SUM >= 4300 && CRUM_DAWOUD_SUM <= 5000 )) || (echo -e "${PURPLE}${CRUM_DAWOUD_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
-echo -e "${BLUE}Number of roots with at least one sense: "\
-"${GREEN}${CRUM_ROOT_SENSES}${BLUE}."
-
-((CRUM_ROOT_SENSES >= 70 && CRUM_ROOT_SENSES <= 3357 )) || (echo -e "${PURPLE}${CRUM_ROOT_SENSES} ${RED}looks suspicious.${RESET}" && exit 1)
-
-echo -e "${BLUE}Total number of root senses: "\
-"${GREEN}${CRUM_ROOT_SENSES_SUM}${BLUE}."
-
-((CRUM_ROOT_SENSES_SUM >= 160 && CRUM_ROOT_SENSES_SUM <= 33570 )) || (echo -e "${PURPLE}${CRUM_ROOT_SENSES_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
-
+CRUM_NOTES=$(tsv_nonempty \
+  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
+  "notes" \
+  | wc --lines)
 echo -e "${BLUE}Number of editor's note added to Crum: "\
 "${GREEN}${CRUM_NOTES}${BLUE}."
-
 ((CRUM_NOTES >= 4 && CRUM_NOTES <= 3357 )) || (echo -e "${PURPLE}${CRUM_NOTES} ${RED}looks suspicious.${RESET}" && exit 1)
 
+CRUM_ROOT_SENSES=$(tsv_nonempty \
+  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
+  "senses" \
+  | wc --lines)
+echo -e "${BLUE}Number of roots with at least one sense: "\
+"${GREEN}${CRUM_ROOT_SENSES}${BLUE}."
+((CRUM_ROOT_SENSES >= 70 && CRUM_ROOT_SENSES <= 3357 )) || (echo -e "${PURPLE}${CRUM_ROOT_SENSES} ${RED}looks suspicious.${RESET}" && exit 1)
+
+CRUM_ROOT_SENSES_SUM=$(tsv_nonempty \
+  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
+  "senses" \
+  | grep '[0-9]+' --only-matching --extended-regexp \
+  | wc --lines)
+echo -e "${BLUE}Total number of root senses: "\
+"${GREEN}${CRUM_ROOT_SENSES_SUM}${BLUE}."
+((CRUM_ROOT_SENSES_SUM >= 160 && CRUM_ROOT_SENSES_SUM <= 33570 )) || (echo -e "${PURPLE}${CRUM_ROOT_SENSES_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
+
+CRUM_LAST_PAGES=$(tsv_nonempty \
+  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
+  "crum-last-page" \
+  | wc --lines)
 echo -e "${BLUE}Number of Crum last pages overridden: "\
 "${GREEN}${CRUM_LAST_PAGES}${BLUE}."
-
 ((CRUM_LAST_PAGES >= 4 && CRUM_LAST_PAGES <= 3357 )) || (echo -e "${PURPLE}${CRUM_LAST_PAGES} ${RED}looks suspicious.${RESET}" && exit 1)
 
+CRUM_OVERRIDE_TYPES=$(tsv_nonempty \
+  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
+  "override-type" \
+  | wc --lines)
 echo -e "${BLUE}Number of types overridden: "\
 "${GREEN}${CRUM_OVERRIDE_TYPES}${BLUE}."
-
 ((CRUM_OVERRIDE_TYPES >= 0 && CRUM_OVERRIDE_TYPES <= 3357 )) || (echo -e "${PURPLE}${CRUM_OVERRIDE_TYPES} ${RED}looks suspicious.${RESET}" && exit 1)
 
+CRUM_SISTERS=$(tsv_nonempty \
+  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
+  "sisters" \
+  | wc --lines)
 echo -e "${BLUE}Number of words with sisters: "\
 "${GREEN}${CRUM_SISTERS}${BLUE}."
-
 ((CRUM_SISTERS >= 37 && CRUM_SISTERS <= 3357 )) || (echo -e "${PURPLE}${CRUM_SISTERS} ${RED}looks suspicious.${RESET}" && exit 1)
 
+CRUM_SISTERS_SUM=$(tsv_nonempty \
+  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
+  "sisters" \
+  | grep '[0-9]+' --only-matching --extended-regexp \
+  | wc --lines)
 echo -e "${BLUE}Total number of sisters: "\
 "${GREEN}${CRUM_SISTERS_SUM}${BLUE}."
-
 ((CRUM_SISTERS_SUM >= 58 && CRUM_SISTERS_SUM <= 33570 )) || (echo -e "${PURPLE}${CRUM_SISTERS_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
+CRUM_ANTONYMS=$(tsv_nonempty \
+  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
+  "antonyms" \
+  | wc --lines)
 echo -e "${BLUE}Number of words with antonyms: "\
 "${GREEN}${CRUM_ANTONYMS}${BLUE}."
-
 ((CRUM_ANTONYMS >= 2 && CRUM_ANTONYMS <= 3357 )) || (echo -e "${PURPLE}${CRUM_ANTONYMS} ${RED}looks suspicious.${RESET}" && exit 1)
 
+CRUM_ANTONYMS_SUM=$(tsv_nonempty \
+  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
+  "antonyms" \
+  | grep '[0-9]+' --only-matching --extended-regexp \
+  | wc --lines)
 echo -e "${BLUE}Total number of antonyms: "\
 "${GREEN}${CRUM_ANTONYMS_SUM}${BLUE}."
-
 ((CRUM_ANTONYMS_SUM >= 2 && CRUM_ANTONYMS_SUM <= 33570 )) || (echo -e "${PURPLE}${CRUM_ANTONYMS_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
+CRUM_HOMONYMS=$(tsv_nonempty \
+  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
+  "homonyms" \
+  | wc --lines)
 echo -e "${BLUE}Number of words with homonyms: "\
 "${GREEN}${CRUM_HOMONYMS}${BLUE}."
-
 ((CRUM_HOMONYMS >= 7 && CRUM_HOMONYMS <= 3357 )) || (echo -e "${PURPLE}${CRUM_HOMONYMS} ${RED}looks suspicious.${RESET}" && exit 1)
 
+CRUM_HOMONYMS_SUM=$(tsv_nonempty \
+  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
+  "homonyms" \
+  | grep '[0-9]+' --only-matching --extended-regexp \
+  | wc --lines)
 echo -e "${BLUE}Total number of homonyms: "\
 "${GREEN}${CRUM_HOMONYMS_SUM}${BLUE}."
-
 ((CRUM_HOMONYMS_SUM >= 7 && CRUM_HOMONYMS_SUM <= 33570 )) || (echo -e "${PURPLE}${CRUM_HOMONYMS_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
+CRUM_GREEK_SISTERS=$(tsv_nonempty \
+  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
+  "TLA-sisters" \
+  | wc --lines)
 echo -e "${BLUE}Number of words with Greek sisters: "\
 "${GREEN}${CRUM_GREEK_SISTERS}${BLUE}."
-
 ((CRUM_GREEK_SISTERS >= 1 && CRUM_GREEK_SISTERS <= 3357 )) || (echo -e "${PURPLE}${CRUM_GREEK_SISTERS} ${RED}looks suspicious.${RESET}" && exit 1)
 
+CRUM_GREEK_SISTERS_SUM=$(tsv_nonempty \
+  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
+  "TLA-sisters" \
+  | grep '[0-9]+' --only-matching --extended-regexp \
+  | wc --lines)
 echo -e "${BLUE}Total number of Greek sisters: "\
 "${GREEN}${CRUM_GREEK_SISTERS_SUM}${BLUE}."
-
 ((CRUM_GREEK_SISTERS_SUM >= 1 && CRUM_GREEK_SISTERS_SUM <= 3357 )) || (echo -e "${PURPLE}${CRUM_GREEK_SISTERS_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
+CRUM_CATEGORIES=$(tsv_nonempty \
+  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
+  "categories" \
+  | wc --lines)
 echo -e "${BLUE}Number of words with categories: "\
 "${GREEN}${CRUM_CATEGORIES}${BLUE}."
-
 ((CRUM_CATEGORIES >= 30 && CRUM_CATEGORIES <= 3357 )) || (echo -e "${PURPLE}${CRUM_CATEGORIES} ${RED}looks suspicious.${RESET}" && exit 1)
 
+CRUM_CATEGORIES_SUM=$(tsv_nonempty \
+  "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv" \
+  "categories" \
+  | grep '[^,]+' --only-matching --extended-regexp \
+  | wc --lines)
 echo -e "${BLUE}Total number of categories: "\
 "${GREEN}${CRUM_CATEGORIES_SUM}${BLUE}."
-
 ((CRUM_CATEGORIES_SUM >= 30 && CRUM_CATEGORIES_SUM <= 6714 )) || (echo -e "${PURPLE}${CRUM_CATEGORIES_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
+CRUM_WRD_TYPOS=$(crum_typos "coptwrd.tsv" | wc --lines)
 echo -e "${BLUE}Number of Crum WRD entries changed: "\
   "${GREEN}${CRUM_WRD_TYPOS}${BLUE}."
-
 ((CRUM_WRD_TYPOS >= 33 && CRUM_WRD_TYPOS <= 335 )) || (echo -e "${PURPLE}${CRUM_WRD_TYPOS} ${RED}looks suspicious.${RESET}" && exit 1)
 
+CRUM_DRV_TYPOS=$(crum_typos "coptdrv.tsv" | wc --lines)
 echo -e "${BLUE}Number of Crum DRV entries changed: "\
   "${GREEN}${CRUM_DRV_TYPOS}${BLUE}."
-
 ((CRUM_DRV_TYPOS >= 24 && CRUM_DRV_TYPOS <= 335 )) || (echo -e "${PURPLE}${CRUM_DRV_TYPOS} ${RED}looks suspicious.${RESET}" && exit 1)
 
+readonly CRUM_TYPOS=$(( CRUM_WRD_TYPOS + CRUM_DRV_TYPOS ))
 echo -e "${BLUE}Total number of Crum lins changed: "\
   "${GREEN}${CRUM_TYPOS}${BLUE}."
-
 ((CRUM_TYPOS >= 57 && CRUM_TYPOS <= 335 )) || (echo -e "${PURPLE}${CRUM_TYPOS} ${RED}looks suspicious.${RESET}" && exit 1)
 
+crum_root_keys_changed () {
+  crum_typos "coptwrd.tsv" | cut -f1
+  crum_typos "coptdrv.tsv" | cut -f2
+}
+CRUM_PAGES_CHANGED=$(crum_root_keys_changed | sort | uniq | wc --lines)
 echo -e "${BLUE}Number of Crum pages changed: "\
   "${GREEN}${CRUM_PAGES_CHANGED}${BLUE}."
-
 ((CRUM_PAGES_CHANGED >= 51 && CRUM_PAGES_CHANGED <= 335 )) || (echo -e "${PURPLE}${CRUM_PAGES_CHANGED} ${RED}looks suspicious.${RESET}" && exit 1)
 
 NUM_COMMITS="$(git rev-list --count --all)"
 echo -e "${BLUE}Number of commits: "\
   "${GREEN}${NUM_COMMITS}${BLUE}."
-
 ((NUM_COMMITS >= 1300 && NUM_COMMITS <= 10000 )) || (echo -e "${PURPLE}${NUM_COMMITS} ${RED}looks suspicious.${RESET}" && exit 1)
 
 NUM_CONTRIBUTORS="$(git shortlog --summary --number --email | wc --lines)"
 echo -e "${BLUE}Number of contributors: "\
   "${GREEN}${NUM_CONTRIBUTORS}${BLUE}."
-
 ((NUM_CONTRIBUTORS >= 1 && NUM_CONTRIBUTORS <= 10 )) || (echo -e "${PURPLE}${NUM_CONTRIBUTORS} ${RED}looks suspicious.${RESET}" && exit 1)
 
 NUM_OPEN_ISSUES=$(gh issue list --state open --json number --jq length --limit 10000)
-NUM_CLOSED_ISSUES=$(gh issue list --state closed --json number --jq length --limit 10000)
 echo -e "${BLUE}Number of open issues: "\
   "${GREEN}${NUM_OPEN_ISSUES}${BLUE}."
+((NUM_OPEN_ISSUES >= 1 && NUM_OPEN_ISSUES <= 300 )) || (echo -e "${PURPLE}${NUM_OPEN_ISSUES} ${RED}looks suspicious.${RESET}" && exit 1)
+
+NUM_CLOSED_ISSUES=$(gh issue list --state closed --json number --jq length --limit 10000)
 echo -e "${BLUE}Number of closed issues: "\
   "${GREEN}${NUM_CLOSED_ISSUES}${BLUE}."
-
-((NUM_OPEN_ISSUES >= 1 && NUM_OPEN_ISSUES <= 300 )) || (echo -e "${PURPLE}${NUM_OPEN_ISSUES} ${RED}looks suspicious.${RESET}" && exit 1)
 ((NUM_CLOSED_ISSUES >= 1 && NUM_CLOSED_ISSUES <= 300 )) || (echo -e "${PURPLE}${NUM_CLOSED_ISSUES} ${RED}looks suspicious.${RESET}" && exit 1)
-
-DELTA=$(( LOC - TOTAL ))
-if [ "${DELTA}" != "0" ]; then
-  echo -e "${PURPLE}The total doesn't equal the sum of the parts, delta is ${RED}${DELTA}${PURPLE}.${RESET}"
-  exit 1
-fi
-
-DELTA=$(( FOC - TOTAL_FOC ))
-if [ "${DELTA}" != "0" ]; then
-  echo -e "${PURPLE}The total doesn't equal the sum of the parts, delta is ${RED}${DELTA}${PURPLE}.${RESET}"
-  exit 1
-fi
-
-DELTA=$(( LOC - TOTAL_BY_LANG - LOC_ARCHIVE ))
-if [ "${DELTA}" != "0" ]; then
-  echo -e "${PURPLE}The total doesn't equal the sum of the parts, delta is ${RED}${DELTA}${PURPLE}.${RESET}"
-  exit 1
-fi
 
 if ${COMMIT}; then
   # We separate the fields by spaces in the string below, then we replace those
