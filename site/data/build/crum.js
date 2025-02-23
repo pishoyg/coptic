@@ -66,6 +66,80 @@ var DIALECT_ARTICLE;
     'https://ccdl.claremont.edu/digital/collection/cce/id/1984/rec/1';
 })(DIALECT_ARTICLE || (DIALECT_ARTICLE = {}));
 const DAWOUD_OFFSET = 16;
+const QWERTY_MAP = {
+  // Letters
+  KeyA: 'a',
+  KeyB: 'b',
+  KeyC: 'c',
+  KeyD: 'd',
+  KeyE: 'e',
+  KeyF: 'f',
+  KeyG: 'g',
+  KeyH: 'h',
+  KeyI: 'i',
+  KeyJ: 'j',
+  KeyK: 'k',
+  KeyL: 'l',
+  KeyM: 'm',
+  KeyN: 'n',
+  KeyO: 'o',
+  KeyP: 'p',
+  KeyQ: 'q',
+  KeyR: 'r',
+  KeyS: 's',
+  KeyT: 't',
+  KeyU: 'u',
+  KeyV: 'v',
+  KeyW: 'w',
+  KeyX: 'x',
+  KeyY: 'y',
+  KeyZ: 'z',
+  // Numbers
+  Digit1: '1',
+  Digit2: '2',
+  Digit3: '3',
+  Digit4: '4',
+  Digit5: '5',
+  Digit6: '6',
+  Digit7: '7',
+  Digit8: '8',
+  Digit9: '9',
+  Digit0: '0',
+  // Punctuation & Symbols
+  Minus: '-',
+  Equal: '=',
+  BracketLeft: '[',
+  BracketRight: ']',
+  Backslash: '\\',
+  Semicolon: ';',
+  Quote: "'",
+  Comma: ',',
+  Period: '.',
+  Slash: '/',
+};
+const SHIFT_MAP = {
+  // Special characters when Shift is pressed
+  Digit1: '!',
+  Digit2: '@',
+  Digit3: '#',
+  Digit4: '$',
+  Digit5: '%',
+  Digit6: '^',
+  Digit7: '&',
+  Digit8: '*',
+  Digit9: '(',
+  Digit0: ')',
+  Minus: '_',
+  Equal: '+',
+  BracketLeft: '{',
+  BracketRight: '}',
+  Backslash: '|',
+  Semicolon: ':',
+  Quote: '"',
+  Comma: '<',
+  Period: '>',
+  Slash: '?',
+};
 const DIALECTS = [
   // The following dialects are found in Crum.
   'S',
@@ -395,14 +469,11 @@ class Section {
     });
   }
   consume(event) {
-    if (!this.executable()) {
-      return false;
-    }
-    const shortcuts = this.shortcuts[event.key];
-    if (!shortcuts) {
-      return false;
-    }
-    return shortcuts.some((s) => s.consume(event));
+    return (
+      (this.executable() &&
+        this.shortcuts[event.key]?.some((s) => s.consume(event))) ??
+      false
+    );
   }
   canConsume(key) {
     if (!this.executable()) {
@@ -485,8 +556,25 @@ class HelpPanel {
     this.overlay = overlay;
     this.validate();
   }
-  consume(event) {
+  consumeAux(event) {
     return this.sections.some((s) => s.consume(event));
+  }
+  consume(event) {
+    if (this.consumeAux(event)) {
+      return true;
+    }
+    // If this event is not consumable by any of our sections, it may be
+    // possible that the user has switched the layout. In this case, we try
+    // to respond based on the key location on the keyboard.
+    let key = QWERTY_MAP[event.code];
+    if (!key) {
+      return false;
+    }
+    if (event.shiftKey) {
+      key = SHIFT_MAP[event.code] ?? key.toUpperCase();
+    }
+    Object.defineProperty(event, 'key', { value: key });
+    return this.consumeAux(event);
   }
   togglePanel(visible) {
     const target =
