@@ -26,12 +26,17 @@ function index_index() {
 }
 const HOME = 'http://remnqymi.com';
 function home() {
-  return anki() ? HOME : '..';
+  return `${anki() ? HOME : ''}/`;
 }
+// NOTE: The following assumes that the code is getting executed from a page
+// directly under `crum/`.
 function crum() {
-  return anki() ? `${HOME}/crum` : '.';
+  return anki() ? `${HOME}/crum/` : './';
 }
-const LOOKUP_URL_PREFIX = `${crum()}/?query=`;
+function dawoud() {
+  return `${home()}dawoud/`;
+}
+const LOOKUP_URL_PREFIX = `${crum()}?query=`;
 const EMAIL = 'remnqymi@gmail.com';
 const EMAIL_LINK = `mailto:${EMAIL}`;
 var DIALECT_ARTICLE;
@@ -1030,7 +1035,7 @@ function handleNonXooxleOnlyElements() {
       .map((s) => s.trim())
       .map(
         (s) =>
-          `<a class="hover-link" href="${crum()}/${s}.html" target="_blank">${s}</a>`
+          `<a class="hover-link" href="${crum()}${s}.html" target="_blank">${s}</a>`
       )
       .join(', ');
     elem.innerHTML = linked;
@@ -1042,7 +1047,7 @@ function handleNonXooxleOnlyElements() {
       console.error('Unable to infer the root type for element!', elem);
       return;
     }
-    const linked = `(<a class="hover-link" href="${crum()}/${type.replaceAll('/', '_')}.html" target="_blank">${type}</a>)`;
+    const linked = `(<a class="hover-link" href="${crum()}${type.replaceAll('/', '_')}.html" target="_blank">${type}</a>)`;
     elem.innerHTML = linked;
   });
   // Handle 'crum-page' class.
@@ -1065,7 +1070,7 @@ function handleNonXooxleOnlyElements() {
     el.classList.add('link');
     el.onclick = () => {
       window_open(
-        `${home()}/dawoud/${(+el.innerHTML + DAWOUD_OFFSET).toString()}.jpg`
+        `${dawoud()}${(+el.innerHTML + DAWOUD_OFFSET).toString()}.jpg`
       );
     };
   });
@@ -1076,7 +1081,7 @@ function handleNonXooxleOnlyElements() {
     el.classList.add('link');
     el.onclick = () => {
       window_open(
-        `${home()}/dawoud/${(+el.getAttribute('alt') + DAWOUD_OFFSET).toString()}.jpg`
+        `${dawoud()}${(+el.getAttribute('alt') + DAWOUD_OFFSET).toString()}.jpg`
       );
     };
   });
@@ -1170,7 +1175,6 @@ function handleNonXooxleOnlyElements() {
     };
   });
   if (anki()) {
-    const CRUM = crum();
     document.querySelectorAll('.navigate').forEach((e) => {
       if (e.tagName !== 'A' || !e.hasAttribute('href')) {
         console.error(
@@ -1179,7 +1183,7 @@ function handleNonXooxleOnlyElements() {
         );
         return;
       }
-      e.setAttribute('href', `${CRUM}/${e.getAttribute('href')}`);
+      e.setAttribute('href', `${crum()}${e.getAttribute('href')}`);
     });
   }
   // NOTE: The `reset` class is only used in the notes pages.
