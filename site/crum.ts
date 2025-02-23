@@ -50,13 +50,18 @@ function index_index(): boolean {
 
 const HOME = 'http://remnqymi.com';
 function home(): string {
-  return anki() ? HOME : '..';
+  return `${anki() ? HOME : ''}/`;
 }
+// NOTE: The following assumes that the code is getting executed from a page
+// directly under `crum/`.
 function crum(): string {
-  return anki() ? `${HOME}/crum` : '.';
+  return anki() ? `${HOME}/crum/` : './';
+}
+function dawoud(): string {
+  return `${home()}dawoud/`;
 }
 
-const LOOKUP_URL_PREFIX = `${crum()}/?query=`;
+const LOOKUP_URL_PREFIX = `${crum()}?query=`;
 
 const EMAIL = 'remnqymi@gmail.com';
 const EMAIL_LINK = `mailto:${EMAIL}`;
@@ -1163,7 +1168,7 @@ function handleNonXooxleOnlyElements() {
         .map((s) => s.trim())
         .map(
           (s) =>
-            `<a class="hover-link" href="${crum()}/${s}.html" target="_blank">${s}</a>`
+            `<a class="hover-link" href="${crum()}${s}.html" target="_blank">${s}</a>`
         )
         .join(', ');
       elem.innerHTML = linked;
@@ -1179,7 +1184,7 @@ function handleNonXooxleOnlyElements() {
         console.error('Unable to infer the root type for element!', elem);
         return;
       }
-      const linked = `(<a class="hover-link" href="${crum()}/${type.replaceAll('/', '_')}.html" target="_blank">${type}</a>)`;
+      const linked = `(<a class="hover-link" href="${crum()}${type.replaceAll('/', '_')}.html" target="_blank">${type}</a>)`;
       elem.innerHTML = linked;
     });
 
@@ -1211,7 +1216,7 @@ function handleNonXooxleOnlyElements() {
       el.classList.add('link');
       el.onclick = (): void => {
         window_open(
-          `${home()}/dawoud/${(+el.innerHTML + DAWOUD_OFFSET).toString()}.jpg`
+          `${dawoud()}${(+el.innerHTML + DAWOUD_OFFSET).toString()}.jpg`
         );
       };
     });
@@ -1225,7 +1230,7 @@ function handleNonXooxleOnlyElements() {
       el.classList.add('link');
       el.onclick = (): void => {
         window_open(
-          `${home()}/dawoud/${(+el.getAttribute('alt')! + DAWOUD_OFFSET).toString()}.jpg`
+          `${dawoud()}${(+el.getAttribute('alt')! + DAWOUD_OFFSET).toString()}.jpg`
         );
       };
     });
@@ -1357,7 +1362,6 @@ function handleNonXooxleOnlyElements() {
     });
 
   if (anki()) {
-    const CRUM = crum();
     document
       .querySelectorAll<HTMLElement>('.navigate')
       .forEach((e: HTMLElement) => {
@@ -1368,7 +1372,7 @@ function handleNonXooxleOnlyElements() {
           );
           return;
         }
-        e.setAttribute('href', `${CRUM}/${e.getAttribute('href')!}`);
+        e.setAttribute('href', `${crum()}${e.getAttribute('href')!}`);
       });
   }
 
