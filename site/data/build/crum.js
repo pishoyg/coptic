@@ -66,6 +66,8 @@ var DIALECT_ARTICLE;
     'https://ccdl.claremont.edu/digital/collection/cce/id/1984/rec/1';
 })(DIALECT_ARTICLE || (DIALECT_ARTICLE = {}));
 const DAWOUD_OFFSET = 16;
+// TODO: This is not just QWERTY. Rename the constant.
+// TODO: Abandon event keys. Rely solely on event codes.
 const QWERTY_MAP = {
   // Letters
   KeyA: 'a',
@@ -566,9 +568,6 @@ class HelpPanel {
     // If this event is not consumable by any of our sections, it may be
     // possible that the user has switched the layout. In this case, we try
     // to respond based on the key location on the keyboard.
-    //
-    // TODO: Investigate whether this works as expected with non-QWERTY
-    // keyboard!
     let key = QWERTY_MAP[event.code];
     if (!key) {
       return false;
