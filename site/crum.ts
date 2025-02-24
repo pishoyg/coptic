@@ -1309,7 +1309,7 @@ function handleNonXooxleOnlyElements() {
       el.classList.add('link');
       el.onclick = (): void => {
         window_open(
-          `${dawoud()}${(+el.innerHTML + DAWOUD_OFFSET).toString()}.jpg`
+          `${dawoud()}?page=${(+el.innerHTML + DAWOUD_OFFSET).toString()}`
         );
       };
     });
@@ -1323,7 +1323,7 @@ function handleNonXooxleOnlyElements() {
       el.classList.add('link');
       el.onclick = (): void => {
         window_open(
-          `${dawoud()}${(+el.getAttribute('alt')! + DAWOUD_OFFSET).toString()}.jpg`
+          `${dawoud()}?page=${(+el.getAttribute('alt')! + DAWOUD_OFFSET).toString()}`
         );
       };
     });
