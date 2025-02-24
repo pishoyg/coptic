@@ -80,7 +80,7 @@ class Scroller {
   }
 }
 
-class ZoomableImage {
+class ZoomerDragger {
   private scale = 1;
   private startX = 0;
   private startY = 0;
@@ -167,7 +167,7 @@ class ZoomableImage {
 
 function dawoudMain() {
   new Scroller();
-  new ZoomableImage();
+  new ZoomerDragger();
 }
 
 dawoudMain();
