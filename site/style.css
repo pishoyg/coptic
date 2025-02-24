@@ -232,6 +232,9 @@ table {
   text-align: center;
   table-layout: fixed;
   width: 100%;
+  position: relative;
+  z-index: 10;
+  background-color: rgb(255 255 255 / 70%);
 }
 
 .header td:not(:first-child) {
@@ -506,7 +509,7 @@ table {
 
 .dawoud-frame {
   text-align: center;
-  overflow: hidden;
+  z-index: 5;
 }
 
 .scroll-dawoud-image {
