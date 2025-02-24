@@ -506,5 +506,9 @@ table {
 
 .dawoud-frame {
   text-align: center;
-  place-content: center center;
+  overflow: hidden;
+}
+
+.scroll-dawoud-image {
+  cursor: grab;
 }
