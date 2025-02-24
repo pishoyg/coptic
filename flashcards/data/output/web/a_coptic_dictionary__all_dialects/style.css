@@ -499,3 +499,16 @@ table {
 .notes {
   font-size: small;
 }
+
+.disabled {
+  display: none;
+}
+
+.dawoud-frame {
+  text-align: center;
+  overflow: hidden;
+}
+
+.scroll-dawoud-image {
+  cursor: grab;
+}
