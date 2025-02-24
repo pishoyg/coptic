@@ -1,6 +1,6 @@
 {
   "extends": "../tsconfig.json",
-  "include": ["xooxle.ts", "crum.ts"],
+  "include": ["xooxle.ts", "crum.ts", "dawoud.ts"],
   "compilerOptions": {
     "outDir": "data/build/"
   }

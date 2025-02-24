@@ -499,3 +499,12 @@ table {
 .notes {
   font-size: small;
 }
+
+.disabled {
+  display: none;
+}
+
+.dawoud-frame {
+  text-align: center;
+  place-content: center center;
+}

@@ -122,6 +122,9 @@ build() {
   mkdir "${DAWOUD_DIR}"
   cp dictionary/copticocc.org/data/dawoud-D100-cropped/*.jpg \
     "${DAWOUD_DIR}"
+  cp "site/dawoud.html" "${DAWOUD_DIR}/index.html"
+  cp "site/style.css" "${DAWOUD_DIR}"
+  cp "site/data/build/dawoud.js" "${DAWOUD_DIR}/dawoud.js"
 
   # generic
   _html() {
