@@ -31,6 +31,7 @@ class Scroller {
     }
     this.updatePageParam(page);
     this.updateDisplay(page);
+    resetButton?.click();
   }
 
   updatePageParam(newPage: number): void {
