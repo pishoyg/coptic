@@ -26,6 +26,7 @@ class Scroller {
     }
     this.updatePageParam(page);
     this.updateDisplay(page);
+    resetButton?.click();
   }
   updatePageParam(newPage) {
     const url = new URL(window.location.href);
@@ -69,7 +70,7 @@ class Scroller {
     prevButton?.addEventListener('click', this.decrementPage.bind(this));
   }
 }
-class ZoomableImage {
+class ZoomerDragger {
   constructor() {
     this.scale = 1;
     this.startX = 0;
@@ -141,6 +142,6 @@ class ZoomableImage {
 }
 function dawoudMain() {
   new Scroller();
-  new ZoomableImage();
+  new ZoomerDragger();
 }
 dawoudMain();
