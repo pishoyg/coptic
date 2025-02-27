@@ -263,7 +263,9 @@ def crum(
                         ),
                         field.aon(
                             "<br/>",
-                            '<b><a href="#dawoud" class="dawoud hover-link">Dawoud: </a></b>',
+                            # Abd-El-Nour is Dawoud's actual last name! We continue
+                            # to refer to him as Dawoud throughout the repo.
+                            '<b><a href="#dawoud" class="dawoud hover-link">Abd-El-Nour: </a></b>',
                             field.apl(
                                 lambda pages: DICTIONARY_PAGE_RE.sub(
                                     r'<span class="dawoud-page">\1</span>',
@@ -438,7 +440,9 @@ def crum(
                     '<div id="dawoud" class="dawoud dictionary">',
                     '<span class="right">',
                     field.aon(
-                        '<b><a href="#dawoud" class="dawoud hover-link">Dawoud: </a></b>',
+                        # Abd-El-Nour is Dawoud's actual last name! We continue
+                        # to refer to him as Dawoud throughout the repo.
+                        '<b><a href="#dawoud" class="dawoud hover-link">Abd-El-Nour: </a></b>',
                         field.apl(
                             lambda pages: DICTIONARY_PAGE_RE.sub(
                                 r'<span class="dawoud-page">\1</span>',
