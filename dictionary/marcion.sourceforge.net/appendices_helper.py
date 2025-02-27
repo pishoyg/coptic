@@ -49,7 +49,7 @@ CAT_SEP: str = ", "  # Category separator.
 # As much as possible, aim to provide very precise definitions of each category,
 # to minimize uncertainty during the labeling process.
 
-# TODO: (#287): Make it possible for one category to link other related
+# TODO: (#330): Make it possible for one category to link other related
 # categories.
 # Perhaps wrap categories in <span class="category"> tags, which can then be
 # picked up by your JavaScript and have hyperlinks added to them.
@@ -241,7 +241,7 @@ def stringify(row: dict) -> dict[str, str]:
 
 class person:
     def __init__(self, raw: str) -> None:
-        # TODO: (#226) Validate that the fragment, if present, actually exists
+        # TODO: (#340) Validate that the fragment, if present, actually exists
         # in this person's page.
         # This can be done by caching a parsed HTML tree of every person there
         # is. Out of the tree, you only need to store all the anchors, and all
