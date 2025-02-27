@@ -199,7 +199,7 @@ The [project](https://github.com/users/pishoyg/projects/3) page offers
 alternative *views* of the issues, which can come in handy for planning
 purposes.
 
-### [Milestones](https://github.com/pishoyg/coptic/milestones/)
+### [Milestones](https://github.com/pishoyg/coptic/milestones?direction=asc&sort=due_date&state=open)
 
 - Milestones represent more complex pieces of work. Their size is undetermined.
   They could weeks or years, but they are not simple enough to span just a few
@@ -207,7 +207,7 @@ days. This is their main use case.
 
 - There is a second, somewhat unorthodox, use case for milestones as component
   backlogs backlogs, for miscellaneous issues related to some component that
-don't belong to a goal that we've already defined and crystalized into a
+don't belong to a goal that we've already defined and crystallized into a
 milestone.
 
 - Every issue must belong to a milestone.
