@@ -71,8 +71,11 @@ class node:
             return ""
         if len(pages) == 1:
             return pages[0].string()
-        ordered = sorted(pages)
+        ordered: list[parse.crum_page] = list(sorted(pages))
         first, last = ordered[0], ordered[-1]
+        if first == last:
+            assert all(p == first for p in ordered)
+            return first.string()
         return f"{first.string()}-{last.string()}"
 
     def parent(self, child, include_root: bool = False):
