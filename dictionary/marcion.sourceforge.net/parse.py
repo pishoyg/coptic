@@ -478,6 +478,7 @@ def parse_crum_cell(line: str) -> crum_page:
 
 def parse_greek_cell(line: str) -> str:
     line = _ascii_to_unicode_greek(line)
+    line = constants.FINAL_SIGMA_RE.sub("ς", line)
     return clean(line)
 
 

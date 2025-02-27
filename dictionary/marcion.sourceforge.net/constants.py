@@ -32,6 +32,7 @@ ENGLISH_WITHIN_COPTIC_RE = re.compile(r"\{[^\{\}]+\}")
 COPTIC_WITHIN_ENGLISH_RE = re.compile(r"\[[^\[\]]+\]")
 GREEK_WITHIN_ENGLISH_RE = re.compile(r"\[\[[^\]]+\]\]")
 PARSED_GREEK_WITHIN_ENGLISH_RE = re.compile(r"(\[[ ,()&c?;Α-Ωα-ω]+\])")
+FINAL_SIGMA_RE = re.compile(r"σ\b")
 
 CRUM_RE = re.compile(r"^(\d{1,3})(a|b)$")
 REFERENCE_RE = re.compile(r'\*\^<a href="([^"<>]+)">([^<>]+)</a>([^<>]*)\^\*')
