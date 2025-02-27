@@ -253,7 +253,7 @@ def crum(
                     '<span class="right">',
                     field.cat(
                         field.aon(
-                            '<b><a href="#crum" class="crum hover-link">Crum: </a></b>',
+                            '<b><a href="#crum" class="crum hover-link">Crum</a>: </b>',
                             field.fmt(
                                 '<span class="crum-page">{crum}</span>',
                                 {"crum": roots_col("crum", force=False)},
@@ -265,7 +265,7 @@ def crum(
                             "<br/>",
                             # Abd-El-Nour is Dawoud's actual last name! We continue
                             # to refer to him as Dawoud throughout the repo.
-                            '<b><a href="#dawoud" class="dawoud hover-link">Abd-El-Nour: </a></b>',
+                            '<b><a href="#dawoud" class="dawoud hover-link">Abd-El-Nour</a>: </b>',
                             field.apl(
                                 lambda pages: DICTIONARY_PAGE_RE.sub(
                                     r'<span class="dawoud-page">\1</span>',
@@ -390,7 +390,7 @@ def crum(
                     '<div id="crum" class="crum dictionary">',
                     '<span class="right">',
                     field.aon(
-                        '<b><a href="#crum" class="crum hover-link">Crum: </a></b>',
+                        '<b><a href="#crum" class="crum hover-link">Crum</a>: </b>',
                         field.apl(
                             lambda pages: DICTIONARY_PAGE_RE.sub(
                                 r'<span class="crum-page">\1</span>',
@@ -442,7 +442,7 @@ def crum(
                     field.aon(
                         # Abd-El-Nour is Dawoud's actual last name! We continue
                         # to refer to him as Dawoud throughout the repo.
-                        '<b><a href="#dawoud" class="dawoud hover-link">Abd-El-Nour: </a></b>',
+                        '<b><a href="#dawoud" class="dawoud hover-link">Abd-El-Nour</a>: </b>',
                         field.apl(
                             lambda pages: DICTIONARY_PAGE_RE.sub(
                                 r'<span class="dawoud-page">\1</span>',
