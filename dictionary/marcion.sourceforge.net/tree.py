@@ -1,5 +1,4 @@
 import itertools
-import typing
 
 import constants
 import pandas as pd
@@ -60,21 +59,21 @@ class node:
             [self] + self._descendants if include_root else self._descendants
         )
 
-    def crum_pages(self) -> list[str]:
+    def crum_page_range(self) -> str:
         assert self.is_root()
         assert self._preprocessed
-        cur: typing.Any = {
-            parse.crum_page(d.row()["crum"])
+        pages: list[parse.crum_page] = [
+            parse.parse_crum_cell(d.row()["crum"])
             for d in self.descendants(include_root=True)
-        }
-        cur = filter(None, cur)
-        cur = map(int, cur)
-        cur = list(cur)
-        assert all(cur)  # Verify that there is no zero page.
-        cur = sorted(cur)  # Sort numerically, not lexicographically.
-        cur = map(str, cur)  # Convert back to string.
-        cur = list(cur)
-        return cur
+        ]
+        pages = [p for p in pages if p.real()]
+        if not pages:
+            return ""
+        if len(pages) == 1:
+            return pages[0].string()
+        ordered = sorted(pages)
+        first, last = ordered[0], ordered[-1]
+        return f"{first.string()}-{last.string()}"
 
     def parent(self, child, include_root: bool = False):
         assert not include_root, "Not yet implemented!"

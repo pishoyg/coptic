@@ -225,7 +225,7 @@ def build_trees(roots: pd.DataFrame, derivations: pd.DataFrame) -> None:
         t.preprocess()
 
     # Add extra columns to the parents, using the derivations.
-    roots["crum-pages"] = [",".join(trees[key].crum_pages()) for key in keys]
+    roots["crum-page-range"] = [trees[key].crum_page_range() for key in keys]
     roots["derivations-table"] = [trees[key].html_table() for key in keys]
     roots["derivations-list"] = [trees[key].html_list() for key in keys]
 

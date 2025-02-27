@@ -50,6 +50,7 @@ Remarks about the parsing:
     whether the parentheses cover the entire word, or a subpart of it.
 """
 
+import functools
 import re
 
 import constants
@@ -436,19 +437,43 @@ def parse_english_cell(line: str) -> str:
     return clean(out)
 
 
-def parse_crum_cell(line: str) -> tuple[str, str]:
-    if not line:
-        return "", ""
-    match = constants.CRUM_RE.match(line)
-    assert match
-    assert len(match.groups()) == 2
-    page, column = match.groups()
-    assert int(page) >= 0 and int(page) <= constants.CRUM_LAST_PAGE_NUM, page
-    return page, column
+@functools.total_ordering
+class crum_page:
+    num: int
+    col: str
+
+    def __init__(self, raw: str):
+        if not raw:
+            self.num = 0
+            self.col = ""
+            return
+        match = constants.CRUM_RE.match(raw)
+        assert match
+        assert len(match.groups()) == 2
+        self.num = int(match.groups()[0])
+        self.col = match.groups()[1]
+        assert self.num >= 0 and self.num <= constants.CRUM_LAST_PAGE_NUM
+        assert self.col in {"a", "b"}
+
+    def parts(self) -> tuple[int, str]:
+        return self.num, self.col
+
+    def __eq__(self, other):
+        return self.parts() == other.parts()
+
+    def __lt__(self, other):
+        return self.parts() < other.parts()
+
+    def real(self) -> bool:
+        return any(self.parts())
+
+    def string(self) -> str:
+        assert all(self.parts())
+        return "".join(str(x) for x in self.parts())
 
 
-def crum_page(crum: str) -> str:
-    return parse_crum_cell(crum)[0]
+def parse_crum_cell(line: str) -> crum_page:
+    return crum_page(line)
 
 
 def parse_greek_cell(line: str) -> str:
