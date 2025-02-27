@@ -385,7 +385,6 @@ class deck:
             f.write(self.css)
         for path in self.media:
             shutil.copy(path, dir)
-        utils.wrote(dir)
 
         header_base_cells: list[header_cell] = []
         if self.home:
