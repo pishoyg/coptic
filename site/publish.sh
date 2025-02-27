@@ -16,7 +16,21 @@ readonly GOOGLE_TAG='
   </script>
 '
 
-readonly ICON_TAG='  <link rel="icon" type="image/x-icon" href="/img/icon/icon-circle.png">
+readonly ICON_TAG='
+<link rel="icon" type="image/x-icon" href="/img/icon/icon-circle.png">
+'
+
+readonly HIDE_COPTICSITE='
+  <style>
+    #copticsite, #copticsite-title {
+      display: none;
+    }
+  </style>
+'
+
+# See https://developers.google.com/search/docs/crawling-indexing/block-indexing.
+readonly NO_INDEX='
+<meta name="robots" content="noindex, nofollow" />
 '
 
 CLEAN=false
@@ -58,6 +72,19 @@ done
 clean() {
   echo -e "${GREEN}Cleaning.${RESET}"
   git -C "${SITE_DIR}" clean -d --force && git -C "${SITE_DIR}" reset --hard
+}
+
+_insert_in_head_and_tidy() {
+  FILE="${1}"
+  INSERTION="${2}"
+  LINE_NUM="$(grep "^<head>$" "${FILE}" --line-number --max-count=1 | cut -f1 -d:)"
+  if [ -z "${LINE_NUM}" ]; then
+    echo -e "${PURPLE}Can't find <head> in ${RED}${FILE}"
+    exit 1
+  fi
+  NEW="$(head -n "${LINE_NUM}" "${FILE}")${INSERTION}$(tail -n "+$((LINE_NUM + 1))" "${FILE}")"
+  echo "${NEW}" > "${FILE}"
+  tidy -config "tidy_config.txt" "${FILE}" || true  # Ignore Tidy failures.
 }
 
 build() {
@@ -104,6 +131,11 @@ build() {
         echo "  <a href=\"${BASENAME/ /%20}\">${BASENAME%.*}</a>"
       done)
   INDEX="${INDEX}" envsubst < site/crum.html > "${CRUM_DIR}/index.html"
+
+  # Create a copy of the Crum page without copticsite!
+  cp "${CRUM_DIR}/index.html" "${CRUM_DIR}/bashandy.html"
+  _insert_in_head_and_tidy "${CRUM_DIR}/bashandy.html" "${HIDE_COPTICSITE}${NO_INDEX}"
+
   cp -r \
     flashcards/data/output/web/a_coptic_dictionary__all_dialects/* \
     "${CRUM_DIR}"
@@ -126,23 +158,10 @@ build() {
   cp "site/style.css" "${DAWOUD_DIR}"
   cp "site/data/build/dawoud.js" "${DAWOUD_DIR}/dawoud.js"
 
-  # generic
-  _html() {
-    FILE="${1}"
-    LINE_NUM="$(grep "^<head>$" "${FILE}" --line-number --max-count=1 | cut -f1 -d:)"
-    if [ -z "${LINE_NUM}" ]; then
-      echo -e "${PURPLE}Can't find <head> in ${RED}${FILE}"
-      exit 1
-    fi
-    NEW="$(head -n "${LINE_NUM}" "${FILE}")${GOOGLE_TAG}${ICON_TAG}$(tail -n "+$((LINE_NUM + 1))" "${FILE}")"
-    echo "${NEW}" > "${FILE}"
-    tidy -config "tidy_config.txt" "${FILE}"
-  }
-
   COUNTER=0
   readonly PARALLEL=10
   find "${SITE_DIR}" -type f -name "*.html" | while read -r FILE; do
-    _html "${FILE}" &
+    _insert_in_head_and_tidy "${FILE}" "${GOOGLE_TAG}${ICON_TAG}" &
     if (( ++COUNTER % PARALLEL == 0 )); then
       wait
     fi
