@@ -300,6 +300,13 @@ def crum(
                     ),
                     "<br/>",
                 ),
+                # Editor's notes.
+                field.aon(
+                    '<div id="notes" class="notes">',
+                    "<i>Editor's Note: </i>",
+                    root_appendix("notes", line_br=True, force=False),
+                    "</div>",
+                ),
                 # Senses.
                 field.aon(
                     '<div id="senses" class="senses">',
@@ -307,13 +314,6 @@ def crum(
                         senses_json_to_html,
                         root_appendix("senses", force=False),
                     ),
-                    "</div>",
-                ),
-                # Editor's notes.
-                field.aon(
-                    '<div id="notes" class="notes">',
-                    "<i>Editor's Note: </i>",
-                    root_appendix("notes", line_br=True, force=False),
                     "</div>",
                 ),
                 # Horizontal line.
