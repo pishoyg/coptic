@@ -1,25 +1,28 @@
 #!/usr/bin/env python3
 import os
+import re
 
 import pandas as pd
 
 import utils
 
-INPUT_XLSX = "dictionary/copticsite.com/data/raw/coptic dictionary northern dialect unicode complete.xlsx"
-OUTPUT = "dictionary/copticsite.com/data/output/"
+INPUT_XLSX: str = (
+    "dictionary/copticsite.com/data/raw/coptic dictionary northern dialect unicode complete.xlsx"
+)
+OUTPUT: str = "dictionary/copticsite.com/data/output/"
 
-UNNAMED_PREFIX = "Unnamed: "
-MEANING_COL = "Meaning"
-ORIGIN_COL = "Origin"
-COPTIC_COL = "Coptic Unicode Alphabet"
-KIND_COL = "Word Kind"
-GENDER_COL = "Word Gender"
-SUFFIX_COL = "suffix"
-PRETTIFY_COL = "prettify"
+UNNAMED_PREFIX: str = "Unnamed: "
+MEANING_COL: str = "Meaning"
+ORIGIN_COL: str = "Origin"
+COPTIC_COL: str = "Coptic Unicode Alphabet"
+KIND_COL: str = "Word Kind"
+GENDER_COL: str = "Word Gender"
+SUFFIX_COL: str = "suffix"
+PRETTIFY_COL: str = "prettify"
 
 # SUFFIX maps the word kinds to a map of word genders to suffixes.
 # TODO: (#10) Revisit the suffixes. Make display more friendly.
-SUFFIX = {
+SUFFIX: dict[str, dict[str, str]] = {
     "": {
         "": "",
         "صيغة ضميرية يأتي بعدها ضمير مفعول": "",
@@ -272,19 +275,75 @@ SUFFIX = {
 }
 
 
+ENGLISH_WORD_RE: re.Pattern = re.compile("[A-Za-z]")
+COPTIC_WORD_RE: re.Pattern = re.compile("([Ⲁ-ⲱϢ-ϯⳈⳉ]+)")
+
+
+OTHER_ACCEPTED_CHARS = {
+    "…",
+    " ",
+    ".",
+    "/",
+    "=",
+    "+",
+    "-",
+    "(",
+    ")",
+    "?",
+    "6",
+    ",",
+    ":",
+    "̀",
+    "̅",
+}
+
+FIXES: dict[str, str] = {
+    "ὰ": "ⲁ̀",
+    "ὸ": "ⲟ̀",
+    "ή": "ⲏ̀",
+    "ὲ": "ⲉ̀",
+    "ὼ": "ⲱ̀",
+    "ὶ": "ⲓ̀",
+    "ὴ": "ⲏ̀",
+    "ː": ":",
+}
+
+MACRONED_LETTER: re.Pattern = re.compile("¯(.)")
+BACKTICKED_LETTER: re.Pattern = re.compile("`(.)")
+
+
+def known(w: str) -> bool:
+    assert len(w) == 1
+    return bool(
+        COPTIC_WORD_RE.fullmatch(w)
+        or ENGLISH_WORD_RE.fullmatch(w)
+        or w in OTHER_ACCEPTED_CHARS,
+    )
+
+
+def normalize(word: str) -> str:
+    word = "".join([FIXES.get(char, char) for char in word])
+    word = MACRONED_LETTER.sub(r"\1̅", word)
+    word = BACKTICKED_LETTER.sub(r"\1̀", word)
+    assert all(
+        known(w) for w in word
+    ), f"'{word}': {[w for w in word if not known(w)]}"
+    return word
+
+
 def main() -> None:
-    df = pd.read_excel(INPUT_XLSX, dtype=str).fillna("")
+    df: pd.DataFrame = pd.read_excel(INPUT_XLSX, dtype=str).fillna("")
     df.dropna(inplace=True)
     df = df.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
     df[ORIGIN_COL] = df[MEANING_COL]
-    meaning = []
-    prettify = []
-    suffix = []
+    meaning: list[str] = []
+    prettify: list[str] = []
+    suffix: list[str] = []
     for _, row in df.iterrows():
-        cur = {}
+        cur: dict[int, str] = {}
         for key in row.keys():
             if key.startswith(UNNAMED_PREFIX):
-                value = row[key]
+                value: str = str(row[key])
                 if not value:
                     continue
                 key = int(key[len(UNNAMED_PREFIX) :])
@@ -298,6 +357,7 @@ def main() -> None:
         suffix.append(sfx)
         if sfx:
             p = p + " " + sfx
+        p = normalize(p)
         prettify.append(p)
     df[MEANING_COL] = meaning
     df[PRETTIFY_COL] = prettify
