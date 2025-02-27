@@ -390,15 +390,15 @@ def crum(
                     field.aon(
                         '<b><a href="#crum" class="crum hover-link">Crum: </a></b>',
                         field.apl(
-                            lambda pages: ", ".join(
-                                f'<span class="crum-page">{p}</span>'
-                                for p in pages
+                            lambda pages: DICTIONARY_PAGE_RE.sub(
+                                r'<span class="crum-page">\1</span>',
+                                pages.replace(",", ", "),
                             ),
                             field.apl(
-                                _crum_page_numbers,
+                                _crum_page_range,
                                 root_appendix("crum-last-page", force=False),
                                 roots_col("crum", force=False),
-                                roots_col("crum-pages", force=False),
+                                roots_col("crum-page-range", force=False),
                             ),
                         ),
                     ),
@@ -408,7 +408,7 @@ def crum(
                             _crum_page_numbers,
                             root_appendix("crum-last-page", force=False),
                             roots_col("crum", force=False),
-                            roots_col("crum-pages", force=False),
+                            roots_col("crum-page-range", force=False),
                         ),
                         get_paths=lambda pages: utils.sort_semver(
                             [
@@ -454,7 +454,7 @@ def crum(
                             f"dictionary/copticocc.org/data/dawoud-D100-cropped/{
                                 k+16
                             }.jpg"
-                            for k in _page_numbers(page_ranges=page_ranges)
+                            for k in _page_numbers(column_ranges=page_ranges)
                         ],
                         fmt_args=lambda path: {
                             "caption": '<span class="dawoud-page-external">{page_num}</span>'.format(
@@ -650,51 +650,51 @@ def _dedup(arr: list[int], at_most_once: bool = False) -> list[int]:
     return out
 
 
-def col_number_to_page(col_number: str) -> int:
-    assert col_number[-1] in ["a", "b"]
-    return int(col_number[:-1])
+def _crum_page_numbers(*args) -> list[int]:
+    return _page_numbers(_crum_page_range(*args), single_range=True)
 
 
-def _crum_page_numbers(
+def _crum_page_range(
     last_page_override: str,
     first_page: str,
     page_ranges: str,
-) -> list[int]:
+) -> str:
     if not last_page_override:
-        return _page_numbers(page_ranges)
-    return list(
-        range(
-            col_number_to_page(first_page),
-            col_number_to_page(last_page_override) + 1,
-        ),
-    )
+        return page_ranges
+    return f"{first_page}-{last_page_override}"
 
 
-def _page_numbers(page_ranges: str) -> list[int]:
-    """page_ranges is a comma-separated list of integers or integer ranges,
-    just like what you type when you're using your printer.
+def _page_numbers(column_ranges: str, single_range: bool = False) -> list[int]:
+    """page_ranges is a comma-separated list of columns or columns ranges. The
+    column ranges resemble what you type when you're using your printer, except
+    that each page number must be followed by a letter, either "a" or b",
+    representing the column.
 
-    For example, "1,3-5,8-9" means [1, 3, 4, 5, 8, 9].
+    For example, "1a,3b-5b,8b-9a" means [1a, 3b, 4a, 4b, 5a, 5b, 9a].
     """
 
     def parse(page_number: str) -> int:
         page_number = page_number.strip()
-        if page_number[-1] in ["a", "b"]:
-            page_number = page_number[:-1]
+        assert page_number[-1] in ["a", "b"]
+        page_number = page_number[:-1]
         assert page_number.isdigit()
         return int(page_number)
 
     out = []
-    page_ranges = page_ranges.strip()
-    if not page_ranges:
+    column_ranges = column_ranges.strip()
+    if not column_ranges:
         return []
-    for page_or_page_range in page_ranges.split(","):
-        if "-" not in page_or_page_range:
-            # This is a single page.
-            out.append(parse(page_or_page_range))
+    ranges = column_ranges.split(",")
+    if single_range:
+        assert len(ranges) == 1, f"ranges={ranges}"
+    del column_ranges, single_range
+    for col_or_col_range in ranges:
+        if "-" not in col_or_col_range:
+            # This is a single column.
+            out.append(parse(col_or_col_range))
             continue
         # This is a page range.
-        start, end = map(parse, page_or_page_range.split("-"))
+        start, end = map(parse, col_or_col_range.split("-"))
         assert end >= start, f"start={start}, end={end}"
         for x in range(start, end + 1):
             out.append(x)
