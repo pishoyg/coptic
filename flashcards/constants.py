@@ -661,6 +661,7 @@ def _crum_page_range(
 ) -> str:
     if not last_page_override:
         return page_ranges
+    assert last_page_override != first_page
     return f"{first_page}-{last_page_override}"
 
 
@@ -673,12 +674,12 @@ def _page_numbers(column_ranges: str, single_range: bool = False) -> list[int]:
     For example, "1a,3b-5b,8b-9a" means [1a, 3b, 4a, 4b, 5a, 5b, 9a].
     """
 
-    def parse(page_number: str) -> int:
-        page_number = page_number.strip()
-        assert page_number[-1] in ["a", "b"]
-        page_number = page_number[:-1]
-        assert page_number.isdigit()
-        return int(page_number)
+    def col_to_page_num(col: str) -> int:
+        col = col.strip()
+        assert col[-1] in ["a", "b"]
+        col = col[:-1]
+        assert col.isdigit()
+        return int(col)
 
     out = []
     column_ranges = column_ranges.strip()
@@ -691,11 +692,16 @@ def _page_numbers(column_ranges: str, single_range: bool = False) -> list[int]:
     for col_or_col_range in ranges:
         if "-" not in col_or_col_range:
             # This is a single column.
-            out.append(parse(col_or_col_range))
+            out.append(col_to_page_num(col_or_col_range))
             continue
         # This is a page range.
-        start, end = map(parse, col_or_col_range.split("-"))
-        assert end >= start, f"start={start}, end={end}"
+        cols = col_or_col_range.split("-")
+        del col_or_col_range
+        assert len(cols) == 2
+        assert cols[0] != cols[1]
+        start, end = map(col_to_page_num, cols)
+        del cols
+        assert end >= start
         for x in range(start, end + 1):
             out.append(x)
     out = _dedup(out, at_most_once=True)
