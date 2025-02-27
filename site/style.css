@@ -234,7 +234,7 @@ table {
   width: 100%;
   position: relative;
   z-index: 10;
-  background-color: rgb(255 255 255 / 70%);
+  background-color: rgb(255 255 255 / 90%);
 }
 
 .header td:not(:first-child) {
