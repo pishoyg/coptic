@@ -54,46 +54,16 @@
 # containing a KEY field, make `data` a key-value object that maps keys to
 # key-value objects containing the other fields.
 
-import itertools
 import os
 import re
+from concurrent import futures
+from itertools import groupby
 from typing import Callable, Generator, Iterable, Iterator
 
 import bs4
 
 import utils
 
-TAG_RE = re.compile(r"^</?(\w+)")
-# The sets of tags used below is expected to produce excess newlines, which
-# will later get cleaned up.
-# NOTE: This method (initially) results in superfluous consecutive newlines,
-# which later get cleaned up.
-BLOCK_ELEMENTS_DEFAULT = {
-    # Each table row goes to a block.
-    "table",
-    "thead",
-    "tbody",
-    "tr",
-    # Each figure caption goes to a block.
-    "figure",
-    "figcaption",
-    "img",
-    # A division creates a new block.
-    "div",
-    # A horizontal line or line break create a block.
-    "hr",
-    "br",
-}
-
-RETAIN_TAGS_DEFAULT = {
-    "b",
-    "i",
-    "strong",
-    "em",
-}
-
-# EXTENSION is the extension of the files that we are building an index for.
-EXTENSION = ".html"
 # KEY is the name of the key field in the output. This must match the name
 # expected by the Xooxle search logic.
 KEY = "KEY"
@@ -103,6 +73,10 @@ KEY = "KEY"
 # instead of a delimiter-separated string.
 UNIT_DELIMITER = '<hr class="match-separator">'
 LINE_BREAK = "<br>"
+
+_TAG_RE = re.compile(r"^</?(\w+)")
+# EXTENSION is the extension of the files that we are building an index for.
+_EXTENSION = ".html"
 
 
 class selector:
@@ -144,10 +118,10 @@ class capture:
         self,
         name: str,
         _selector: selector,
-        retain_classes: set[str] = set(),
-        retain_tags: set[str] = RETAIN_TAGS_DEFAULT,
-        block_elements: set[str] = BLOCK_ELEMENTS_DEFAULT,
-        unit_tags: set[str] = set(),
+        retain_classes: set[str],
+        retain_tags: set[str],
+        block_elements: set[str],
+        unit_tags: set[str],
     ) -> None:
         # _name is name of the field.
         self._name: str = name
@@ -176,7 +150,9 @@ class capture:
 
     def get_simplified_html(self, tag: bs4.Tag) -> str:
         """Get the text from the given tag."""
-        return "".join(self._clean(self._get_children_simplified_html(tag)))
+        parts: Iterable[str] = self._get_children_simplified_html(tag)
+        parts = cleaner.clean(parts)
+        return "".join(parts)
 
     def _get_children_simplified_html(self, tag: bs4.Tag) -> Generator[str]:
         for child in tag.children:
@@ -235,48 +211,53 @@ class capture:
         if raw[-1].isspace():
             yield " "
 
-    def _clean(
-        self,
-        tokens: Iterable[str],
-    ) -> Generator[str]:
-        # Clean each unit, remove empty units and redundant unit delimiters.
-        units: Iterable[Iterable[str]] = self.split_iterable(
-            tokens,
-            UNIT_DELIMITER,
-        )
-        units = map(self._clean_unit, units)
-        yield from self.join_non_empty(units, [UNIT_DELIMITER])
 
-    def _clean_unit(self, unit: Iterable[str]) -> Generator[str]:
-        # Clean each line, remove empty lines and redundant line breaks.
-        lines: Iterable[Iterable[str]] = self.split_iterable(unit, LINE_BREAK)
-        lines = map(self._clean_line, lines)
-        yield from self.join_non_empty(lines, [LINE_BREAK])
+class cleaner:
+    IterOfIters = Iterable[Iterable[str]]
 
-    def _clean_line(self, line: Iterable[str]) -> Generator[str]:
-        # Delete excess whitespace and empty tags.
-        parts = self.split_iterable(
-            line,
-            lambda t: t == "" or t.isspace(),
-        )
-        line = self.join_non_empty(parts, " ")
+    @staticmethod
+    def clean(tokens: Iterable[str]) -> Generator[str]:
+        # _clean cleans each unit, remove empty units and redundant unit
+        # delimiters.
+        units: cleaner.IterOfIters
+        units = cleaner.split_iterable(tokens, cleaner._is_unit_delimiter)
+        units = map(cleaner._clean_unit, units)
+        yield from cleaner.join_non_empty(units, [UNIT_DELIMITER])
+
+    @staticmethod
+    def _clean_unit(unit: Iterable[str]) -> Generator[str]:
+        # _clean_unit cleans each line, remove empty lines and redundant line
+        # breaks.
+        lines: cleaner.IterOfIters
+        lines = cleaner.split_iterable(unit, cleaner._is_line_break)
+        lines = map(cleaner._clean_line, lines)
+        yield from cleaner.join_non_empty(lines, [LINE_BREAK])
+
+    @staticmethod
+    def _clean_line(line: Iterable[str]) -> Generator[str]:
+        # _clean_line deletes excess whitespace and empty tags.
+        parts: cleaner.IterOfIters
+        parts = cleaner.split_iterable(line, str.isspace)
+        line = cleaner.join_non_empty(parts, [" "])
         del parts
         # Perform additional tag-aware cleanup.
-        line = self._strip(line)
-        line = self._filter_empty_tags(line)
+        line = cleaner._strip(line)
+        line = cleaner._filter_empty_tags(line)
         yield from line
 
-    def _strip(self, line: Iterable[str]) -> Iterator[str]:
+    @staticmethod
+    def _strip(line: Iterable[str]) -> Iterator[str]:
         # Strip beginning of line.
-        line = self._strip_beginning_of_line(line)
+        line = cleaner._strip_beginning_of_line(line)
         # Strip end of line.
         line = reversed(list(line))
-        line = self._strip_beginning_of_line(line)
+        line = cleaner._strip_beginning_of_line(line)
         line = reversed(list(line))
         # Return.
         return line
 
-    def _strip_beginning_of_line(self, line: Iterable[str]) -> Generator[str]:
+    @staticmethod
+    def _strip_beginning_of_line(line: Iterable[str]) -> Generator[str]:
         found_non_space = False
         for token in line:
             if token.startswith("<"):
@@ -293,8 +274,13 @@ class capture:
                 # This is a space string, but we have already encountered a
                 # non-space string. Yield.
                 yield token
+                continue
+            # This is a space string, and we haven't encountered a non-space
+            # string yet. Do nothing.
+            assert token.isspace() and not found_non_space
 
-    def _filter_empty_tags(self, line: Iterable[str]) -> list[str]:
+    @staticmethod
+    def _filter_empty_tags(line: Iterable[str]) -> list[str]:
         stack: list[str] = []
         for token in line:
             if not token.startswith("</"):
@@ -307,10 +293,10 @@ class capture:
                 # The stack top doesn't have an opening tag.
                 stack.append(token)
                 continue
-            match = TAG_RE.match(token)
+            match = _TAG_RE.match(token)
             assert match
             cur = match.group(1)
-            match = TAG_RE.match(stack_top)
+            match = _TAG_RE.match(stack_top)
             assert match
             prev = match.group(1)
             del stack_top
@@ -320,39 +306,43 @@ class capture:
             stack.append(token)
         return stack
 
+    @staticmethod
+    def _is_unit_delimiter(token: str) -> bool:
+        return token == UNIT_DELIMITER
+
+    @staticmethod
+    def _is_line_break(token: str) -> bool:
+        return token == LINE_BREAK
+
+    @staticmethod
     def split_iterable(
-        self,
         iterable: Iterable[str],
-        is_delimiter: Callable[[str], bool] | str,
+        is_delimiter: Callable[[str], bool],
     ) -> Generator[Iterable[str]]:
-        if isinstance(is_delimiter, str):
-            _sep: str = is_delimiter
-            is_delimiter = lambda t: t == _sep  # noqa: E731
-        for is_delimiter_group, group in itertools.groupby(
-            iterable,
-            is_delimiter,
-        ):
+        for is_delimiter_group, group in groupby(iterable, is_delimiter):
             if is_delimiter_group:
                 continue
             yield group
 
+    @staticmethod
     def join_non_empty(
-        self,
-        iterables: Iterable[Iterable[str]],
+        iterables: IterOfIters,
         delimiter: Iterable[str],
     ) -> Generator[str]:
-        first = True
+        is_first_nonempty_iterable = True
         for iterable in iterables:
-            # We have to convert the iterable to a list, in order to be able to
-            # check the length.
-            iterable = list(iterable)
-            if not iterable:
+            iterator = iter(iterable)
+            del iterable
+            first_item = next(iterator, None)
+            if first_item is None:
+                # This iterable is empty.
                 continue
-            if first:
-                first = False
+            if is_first_nonempty_iterable:
+                is_first_nonempty_iterable = False
             else:
                 yield from delimiter
-            yield from iterable
+            yield first_item
+            yield from iterator
 
 
 class subindex:
@@ -382,50 +372,54 @@ class subindex:
         self._result_table_name: str = result_table_name
         self._href_fmt: str = href_fmt
 
-    def iter_input(self) -> Generator[tuple[str, bs4.BeautifulSoup]]:
+    def iter_input(self) -> Generator[str]:
         assert os.path.isdir(self._input)
 
         # Recursively search for all HTML files.
         for root, _, files in os.walk(self._input):
             for file in files:
-                if not file.endswith(EXTENSION):
+                if not file.endswith(_EXTENSION):
                     continue
                 if self._include and not self._include(file):
                     continue
                 path = os.path.join(root, file)
-                yield path, bs4.BeautifulSoup(utils.read(path), "html.parser")
+                yield path
+
+    def _is_comment(self, elem: bs4.PageElement) -> bool:
+        return isinstance(elem, bs4.element.Comment)
+
+    # Recursively search for all HTML files.
+    def process_file(self, path: str) -> dict[str, str]:
+        entry = bs4.BeautifulSoup(utils.read(path), "html.parser")
+        # Extract all comments.
+        for comment in entry.find_all(text=self._is_comment):
+            _ = comment.extract()
+        # Extract all unwanted content.
+        for selector in self._extract:
+            for element in selector.find_all(entry):
+                element.extract()
+
+        # Construct the entry for this file.
+        return {
+            KEY: os.path.relpath(path, self._input)[: -len(_EXTENSION)],
+        } | {
+            # NOTE: We no longer allow duplicate content in the output.
+            # If an element has been selected once, delete it!
+            # This implies that the order of captures matters!
+            cap._name: cap.excise(entry)
+            for cap in self._captures
+        }
 
     def build(self) -> dict:
-        data: list[dict[str, str]] = []
-
-        # Recursively search for all HTML files.
-        for path, entry in self.iter_input():
-            # Extract all comments.
-            comment: bs4.Comment
-            for comment in entry.find_all(
-                text=lambda text: isinstance(text, bs4.Comment),
-            ):
-                _ = comment.extract()
-            # Extract all unwanted content.
-            for selector in self._extract:
-                for element in selector.find_all(entry):
-                    element.extract()
-
-            # Construct the entry for this file.
-            datum = {
-                KEY: os.path.relpath(path, self._input)[: -len(EXTENSION)],
-            } | {
-                # NOTE: We no longer allow duplicate content in the output.
-                # If an element has been selected once, delete it!
-                # This implies that the order of captures matters!
-                cap._name: cap.excise(entry)
-                for cap in self._captures
-            }
-
-            data.append(datum)
-
+        # NOTE: ProcessPoolExecutor is not compatible with lambda or closures.
+        # ThreadPoolExecutor is, but it is extremely slow, as this process is
+        # CPU-bound not I/O-bound.
+        with futures.ProcessPoolExecutor() as executor:
+            data = executor.map(self.process_file, self.iter_input())
+        # TODO: (#230) The order of the data is not guaranteed to be the same
+        # between runs. Make it deterministic.
         return {
-            "data": data,
+            "data": list(data),
             "params": {
                 "result_table_name": self._result_table_name,
                 "href_fmt": self._href_fmt,
@@ -440,8 +434,19 @@ class subindex:
 class index:
     def __init__(self, output: str, *indexes: subindex) -> None:
         self._output: str = output
-        self._indexes = indexes
+        self._indexes: list[subindex] = list(indexes)
 
     def build(self) -> None:
-        json = [index.build() for index in self._indexes]
+        # NOTE: ProcessPoolExecutor is not compatible with lambda or closures.
+        # We avoid them throughout our implementation of the logic that we want
+        # to parallelize.
+        # NOTE: While ThreadPoolExecutor can handle lambda and closures, we
+        # don't use it because it is significantly slower than
+        # ProcessPoolExecutor (roughly 5 times slower in initial experiments).
+        # This is expected because the process is CPU-bound not I/O-bound, thus
+        # ProcessPoolExecutor is the right choice.
+        with futures.ProcessPoolExecutor() as executor:
+            json: list[dict] = list(
+                executor.map(subindex.build, self._indexes),
+            )
         utils.write(utils.json_dumps(json), self._output)

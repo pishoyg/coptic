@@ -55,11 +55,59 @@ _COPTICSITE_RETAIN_CLASSES = {
     "spelling",
 } | _DIALECTS
 
+
+_BLOCK_ELEMENTS_DEFAULT = {
+    # Each table row goes to a block.
+    "table",
+    "thead",
+    "tbody",
+    "tr",
+    # Each figure caption goes to a block.
+    "figure",
+    "figcaption",
+    "img",
+    # A division creates a new block.
+    "div",
+    # A horizontal line or line break create a block.
+    "hr",
+    "br",
+}
+
+_RETAIN_TAGS_DEFAULT = {
+    "b",
+    "i",
+    "strong",
+    "em",
+}
+
+
+def capture(
+    name: str,
+    _selector: xooxle.selector,
+    retain_classes: set[str] = set(),
+    retain_tags: set[str] = _RETAIN_TAGS_DEFAULT,
+    block_elements: set[str] = _BLOCK_ELEMENTS_DEFAULT,
+    unit_tags: set[str] = set(),
+) -> xooxle.capture:
+    return xooxle.capture(
+        name=name,
+        _selector=_selector,
+        retain_classes=retain_classes,
+        retain_tags=retain_tags,
+        block_elements=block_elements,
+        unit_tags=unit_tags,
+    )
+
+
+def _is_crum_word(path: str) -> bool:
+    return utils.stem(path).isdigit()
+
+
 _CRUM_INDEX = xooxle.index(
     "site/data/xooxle/crum.json",
     xooxle.subindex(
         input="flashcards/data/output/web/a_coptic_dictionary__all_dialects/",
-        include=lambda file: utils.stem(file).isdigit(),
+        include=_is_crum_word,
         extract=[
             xooxle.selector({"name": "title"}, force=False),
             xooxle.selector({"class_": "header"}, force=False),
@@ -81,26 +129,26 @@ _CRUM_INDEX = xooxle.index(
             xooxle.selector({"id": "categories"}, force=False),
         ],
         captures=[
-            xooxle.capture(
+            capture(
                 "marcion",
                 xooxle.selector({"id": "pretty"}),
                 # This is the list of classes needed for highlighting. If the
                 # highlighting rules change, you might have to add new classes!
                 retain_classes=_CRUM_RETAIN_CLASSES,
             ),
-            xooxle.capture(
+            capture(
                 "meaning",
                 xooxle.selector({"id": "root-type-meaning"}, force=False),
                 retain_classes=_CRUM_RETAIN_CLASSES,
             ),
-            xooxle.capture(
+            capture(
                 "appendix",
                 xooxle.selector(
                     {"name": "body"},
                 ),
                 retain_classes=_CRUM_RETAIN_CLASSES,
                 unit_tags={"tr", "div", "hr"},
-                block_elements=xooxle.BLOCK_ELEMENTS_DEFAULT | {"td"},
+                block_elements=_BLOCK_ELEMENTS_DEFAULT | {"td"},
             ),
         ],
         result_table_name="crum",
@@ -115,17 +163,17 @@ _CRUM_INDEX = xooxle.index(
             xooxle.selector({"class_": "ref"}, force=False),
         ],
         captures=[
-            xooxle.capture(
+            capture(
                 "orths",
                 xooxle.selector({"id": "orths"}),
                 retain_classes=_KELLIA_RETAIN_CLASSES,
             ),
-            xooxle.capture(
+            capture(
                 "senses",
                 xooxle.selector({"id": "senses"}),
                 retain_classes=_KELLIA_RETAIN_CLASSES,
             ),
-            xooxle.capture(
+            capture(
                 "text",
                 xooxle.selector(
                     {"name": "body"},
@@ -139,12 +187,12 @@ _CRUM_INDEX = xooxle.index(
         input="flashcards/data/output/web/copticsite.com/",
         extract=[],
         captures=[
-            xooxle.capture(
+            capture(
                 "front",
                 xooxle.selector({"id": "front"}),
                 retain_classes=_COPTICSITE_RETAIN_CLASSES,
             ),
-            xooxle.capture(
+            capture(
                 "back",
                 xooxle.selector({"id": "back"}),
             ),
@@ -154,6 +202,4 @@ _CRUM_INDEX = xooxle.index(
     ),
 )
 
-INDEXES = [
-    _CRUM_INDEX,
-]
+INDEXES = [_CRUM_INDEX]
