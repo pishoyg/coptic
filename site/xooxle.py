@@ -54,13 +54,16 @@
 # containing a KEY field, make `data` a key-value object that maps keys to
 # key-value objects containing the other fields.
 
+import itertools
 import os
-import typing
+import re
+from typing import Callable, Generator, Iterable, Iterator
 
 import bs4
 
 import utils
 
+TAG_RE = re.compile(r"^</?(\w+)")
 # The sets of tags used below is expected to produce excess newlines, which
 # will later get cleaned up.
 # NOTE: This method (initially) results in superfluous consecutive newlines,
@@ -94,11 +97,12 @@ EXTENSION = ".html"
 # KEY is the name of the key field in the output. This must match the name
 # expected by the Xooxle search logic.
 KEY = "KEY"
-# UNIT_DELIMITER is the separator used to separate the units of the output text, if
+# UNIT_DELIMITER is the delimiter used to separate the units of the output text, if
 # such separation is desired for a given field.
 # TODO: This is not a clean way to separate units. Use a list of strings,
 # instead of a delimiter-separated string.
 UNIT_DELIMITER = '<hr class="match-separator">'
+LINE_BREAK = "<br>"
 
 
 class selector:
@@ -143,7 +147,7 @@ class capture:
         retain_classes: set[str] = set(),
         retain_tags: set[str] = RETAIN_TAGS_DEFAULT,
         block_elements: set[str] = BLOCK_ELEMENTS_DEFAULT,
-        unit_tags: set[str] | None = None,
+        unit_tags: set[str] = set(),
     ) -> None:
         # _name is name of the field.
         self._name: str = name
@@ -156,10 +160,10 @@ class capture:
         # _block_elements is the list of HTML tags that result in newlines in
         # the output.
         self._block_elements: set[str] = block_elements
-        # _units is a list of HTML tags that produce `UNIT_DELIMITER` separators
-        # in the output. You can use this separator to separate the text into
+        # _units is a list of HTML tags that produce `UNIT_DELIMITER` delimiters
+        # in the output. You can use this delimiter to separate the text into
         # meaningful units.
-        self._unit_tags = unit_tags
+        self._unit_tags: set[str] = unit_tags
 
     def excise(self, soup: bs4.BeautifulSoup) -> str:
         """Find an element in the soup using the selector, extract it from the
@@ -172,73 +176,183 @@ class capture:
 
     def get_simplified_html(self, tag: bs4.Tag) -> str:
         """Get the text from the given tag."""
-        # TODO: (#230) Remove navigable strings that consist entirely of space,
-        # and are followed by newlines or unit separators.
-        return self._clean("".join(self._get_children_simplified_html(tag)))
+        return "".join(self._clean(self._get_children_simplified_html(tag)))
 
-    def _get_children_simplified_html(self, tag: bs4.Tag) -> typing.Generator:
+    def _get_children_simplified_html(self, tag: bs4.Tag) -> Generator[str]:
         for child in tag.children:
             if isinstance(child, bs4.NavigableString):
-                yield self._get_navigable_string_text(child)
+                yield from self._get_navigable_string_text(child)
             elif isinstance(child, bs4.Tag):
                 yield from self._get_tag_html(child)
 
-    def _get_tag_html(self, child: bs4.Tag) -> typing.Generator:
-        if child.name in self._block_elements:
-            yield "\n"
-        if self._unit_tags and child.name in self._unit_tags:
+    def _get_tag_html(self, child: bs4.Tag) -> Generator[str]:
+        if child.name in self._unit_tags:
             yield UNIT_DELIMITER
+        elif child.name in self._block_elements:
+            yield LINE_BREAK
 
         classes = self._retain_classes.intersection(
             child.get_attribute_list("class"),
         )
-        if child.name in self._retain_tags or classes:
+
+        if classes or child.name in self._retain_tags:
             # We need to retain the tag and/or some of its classes.
             # If we're only retaining the classes, we convert it to <span>.
             # If we're retaining the tag name, we keep it as-is.
             name = child.name if child.name in self._retain_tags else "span"
-            if classes:
-                yield f'<{name} class="{" ".join(sorted(classes))}">'
-            else:
-                yield f"<{name}>"
+
+            yield (
+                f'<{name} class="{" ".join(sorted(classes))}">'
+                if classes
+                else f"<{name}>"
+            )
             yield from self._get_children_simplified_html(child)
             yield f"</{name}>"
         else:
             # Neither the tag name nor any of its classes need retention, we
-            # simply produce the text.
+            # simply process the children.
             yield from self._get_children_simplified_html(child)
 
-        if self._unit_tags and child.name in self._unit_tags:
+        if child.name in self._unit_tags:
             yield UNIT_DELIMITER
-        if child.name in self._block_elements:
-            yield "\n"
+        elif child.name in self._block_elements:
+            yield LINE_BREAK
 
-    def _get_navigable_string_text(self, child: bs4.NavigableString) -> str:
+    def _get_navigable_string_text(
+        self,
+        child: bs4.NavigableString,
+    ) -> Generator[str]:
         raw: str = str(child)
-        # # Remove excess space, again just like you would expect a
-        # # browser to do.
-        s: str = " ".join(raw.split())
-        # Append spaces before and after, if they existed.
+        del child
+        if not raw:
+            return
+        if raw.isspace():
+            yield " "
+            return
         if raw[0].isspace():
-            s = " " + s
+            yield " "
+        yield " ".join(raw.split())
         if raw[-1].isspace():
-            s = s + " "
-        return s
+            yield " "
 
-    def _clean(self, text: str) -> str:
-        lines = text.split(UNIT_DELIMITER)
-        lines = [self._clean_excess_whitespace(ln) for ln in lines]
-        lines = list(filter(None, lines))
-        text = UNIT_DELIMITER.join(lines)
-        return text
+    def _clean(
+        self,
+        tokens: Iterable[str],
+    ) -> Generator[str]:
+        # Clean each unit, remove empty units and redundant unit delimiters.
+        units: Iterable[Iterable[str]] = self.split_iterable(
+            tokens,
+            UNIT_DELIMITER,
+        )
+        units = map(self._clean_unit, units)
+        yield from self.join_non_empty(units, [UNIT_DELIMITER])
 
-    def _clean_excess_whitespace(self, text: str) -> str:
-        lines: list[str] = text.split("\n")
-        lines = [ln.strip() for ln in lines]
-        lines = list(filter(None, lines))
-        lines = [" ".join(line.split()) for line in lines]
-        text = "<br>".join(lines)
-        return text
+    def _clean_unit(self, unit: Iterable[str]) -> Generator[str]:
+        # Clean each line, remove empty lines and redundant line breaks.
+        lines: Iterable[Iterable[str]] = self.split_iterable(unit, LINE_BREAK)
+        lines = map(self._clean_line, lines)
+        yield from self.join_non_empty(lines, [LINE_BREAK])
+
+    def _clean_line(self, line: Iterable[str]) -> Generator[str]:
+        # Delete excess whitespace and empty tags.
+        parts = self.split_iterable(
+            line,
+            lambda t: t == "" or t.isspace(),
+        )
+        line = self.join_non_empty(parts, " ")
+        del parts
+        # Perform additional tag-aware cleanup.
+        line = self._strip(line)
+        line = self._filter_empty_tags(line)
+        yield from line
+
+    def _strip(self, line: Iterable[str]) -> Iterator[str]:
+        # Strip beginning of line.
+        line = self._strip_beginning_of_line(line)
+        # Strip end of line.
+        line = reversed(list(line))
+        line = self._strip_beginning_of_line(line)
+        line = reversed(list(line))
+        # Return.
+        return line
+
+    def _strip_beginning_of_line(self, line: Iterable[str]) -> Generator[str]:
+        found_non_space = False
+        for token in line:
+            if token.startswith("<"):
+                # This is a tag. Yield as is.
+                yield token
+                continue
+            if not token.isspace():
+                # This is a non-space string. Yield, and flag that we have
+                # encountered a non-space string.
+                yield token
+                found_non_space = True
+                continue
+            if found_non_space:
+                # This is a space string, but we have already encountered a
+                # non-space string. Yield.
+                yield token
+
+    def _filter_empty_tags(self, line: Iterable[str]) -> list[str]:
+        stack: list[str] = []
+        for token in line:
+            if not token.startswith("</"):
+                stack.append(token)
+                continue
+            # This is a closing tag.
+            assert stack  # We must have an opening tag.
+            stack_top = stack[-1]
+            if not stack_top.startswith("<") or stack_top.startswith("</"):
+                # The stack top doesn't have an opening tag.
+                stack.append(token)
+                continue
+            match = TAG_RE.match(token)
+            assert match
+            cur = match.group(1)
+            match = TAG_RE.match(stack_top)
+            assert match
+            prev = match.group(1)
+            del stack_top
+            if cur == prev:
+                stack.pop()
+                continue
+            stack.append(token)
+        return stack
+
+    def split_iterable(
+        self,
+        iterable: Iterable[str],
+        is_delimiter: Callable[[str], bool] | str,
+    ) -> Generator[Iterable[str]]:
+        if isinstance(is_delimiter, str):
+            _sep: str = is_delimiter
+            is_delimiter = lambda t: t == _sep  # noqa: E731
+        for is_delimiter_group, group in itertools.groupby(
+            iterable,
+            is_delimiter,
+        ):
+            if is_delimiter_group:
+                continue
+            yield group
+
+    def join_non_empty(
+        self,
+        iterables: Iterable[Iterable[str]],
+        delimiter: Iterable[str],
+    ) -> Generator[str]:
+        first = True
+        for iterable in iterables:
+            # We have to convert the iterable to a list, in order to be able to
+            # check the length.
+            iterable = list(iterable)
+            if not iterable:
+                continue
+            if first:
+                first = False
+            else:
+                yield from delimiter
+            yield from iterable
 
 
 class subindex:
@@ -249,7 +363,7 @@ class subindex:
         captures: list[capture],
         result_table_name: str,
         href_fmt: str,
-        include: typing.Callable | None = None,
+        include: Callable | None = None,
     ) -> None:
         """
         Args:
@@ -262,19 +376,13 @@ class subindex:
         """
 
         self._input: str = input
-        self._include: typing.Callable | None = include
+        self._include: Callable | None = include
         self._extract: list[selector] = extract
         self._captures: list[capture] = captures
         self._result_table_name: str = result_table_name
         self._href_fmt: str = href_fmt
 
-    def iter_input(
-        self,
-    ) -> typing.Generator[
-        tuple[str, bs4.BeautifulSoup],
-        None,
-        None,
-    ]:
+    def iter_input(self) -> Generator[tuple[str, bs4.BeautifulSoup]]:
         assert os.path.isdir(self._input)
 
         # Recursively search for all HTML files.
