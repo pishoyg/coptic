@@ -77,13 +77,13 @@ _CRUM_INDEX = xooxle.index(
             xooxle.selector({"id": "images"}, force=False),
             xooxle.selector({"class_": "nag-hammadi"}, force=False),
             xooxle.selector({"class_": "sisters"}, force=False),
-            xooxle.selector({"id": "pretty"}),
+            xooxle.selector({"id": "marcion"}),
             xooxle.selector({"id": "categories"}, force=False),
         ],
         captures=[
             xooxle.capture(
                 "marcion",
-                xooxle.selector({"id": "marcion"}),
+                xooxle.selector({"id": "pretty"}),
                 # This is the list of classes needed for highlighting. If the
                 # highlighting rules change, you might have to add new classes!
                 retain_classes=_CRUM_RETAIN_CLASSES,
