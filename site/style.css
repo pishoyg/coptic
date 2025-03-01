@@ -351,6 +351,10 @@ table {
   border-bottom: 1px solid black;
 }
 
+.results .type {
+  opacity: 0.3;
+}
+
 /* stylelint-disable no-descending-specificity */
 
 .results td {
