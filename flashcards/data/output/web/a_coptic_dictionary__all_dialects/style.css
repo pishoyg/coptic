@@ -234,7 +234,7 @@ table {
   width: 100%;
   position: relative;
   z-index: 10;
-  background-color: rgb(255 255 255 / 70%);
+  background-color: rgb(255 255 255 / 90%);
 }
 
 .header td:not(:first-child) {
@@ -349,6 +349,10 @@ table {
 
 .results tbody tr:not(:last-child) {
   border-bottom: 1px solid black;
+}
+
+.results .type {
+  opacity: 0.3;
 }
 
 /* stylelint-disable no-descending-specificity */
