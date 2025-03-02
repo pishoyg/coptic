@@ -86,6 +86,7 @@ def capture(
     _selector: xooxle.selector,
     retain_classes: set[str] = set(),
     retain_tags: set[str] = _RETAIN_TAGS_DEFAULT,
+    retain_elements_for_classes: set[str] = set(),
     block_elements: set[str] = _BLOCK_ELEMENTS_DEFAULT,
     unit_tags: set[str] = set(),
 ) -> xooxle.capture:
@@ -94,6 +95,7 @@ def capture(
         _selector=_selector,
         retain_classes=retain_classes,
         retain_tags=retain_tags,
+        retain_elements_for_classes=retain_elements_for_classes,
         block_elements=block_elements,
         unit_tags=unit_tags,
     )

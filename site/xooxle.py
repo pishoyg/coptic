@@ -120,6 +120,7 @@ class capture:
         _selector: selector,
         retain_classes: set[str],
         retain_tags: set[str],
+        retain_elements_for_classes: set[str],
         block_elements: set[str],
         unit_tags: set[str],
     ) -> None:
@@ -131,6 +132,13 @@ class capture:
         self._retain_classes: set[str] = retain_classes
         # _retain_tags is the list of HTML tags to retain in the output.
         self._retain_tags: set[str] = retain_tags
+        # _retain_elements_for_classes is a list of HTML classes whose elements
+        # (tags) should be retained in the output, but we don't retain the
+        # classes themselves. Notice that the tags still get converted to spans,
+        # unless they are in _retain_tags.
+        self._retain_elements_for_classes: set[str] = (
+            retain_elements_for_classes
+        )
         # _block_elements is the list of HTML tags that result in newlines in
         # the output.
         self._block_elements: set[str] = block_elements
@@ -167,11 +175,16 @@ class capture:
         elif child.name in self._block_elements:
             yield LINE_BREAK
 
-        classes = self._retain_classes.intersection(
-            child.get_attribute_list("class"),
-        )
+        child_classes = child.get_attribute_list("class")
+        classes = self._retain_classes.intersection(child_classes)
 
-        if classes or child.name in self._retain_tags:
+        if (
+            child.name in self._retain_tags
+            or classes
+            or any(
+                c in child_classes for c in self._retain_elements_for_classes
+            )
+        ):
             # We need to retain the tag and/or some of its classes.
             # If we're only retaining the classes, we convert it to <span>.
             # If we're retaining the tag name, we keep it as-is.
