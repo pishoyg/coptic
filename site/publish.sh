@@ -150,9 +150,7 @@ build() {
   # Bible
   mkdir "${BIBLE_DIR}"
   cp -r \
-    bible/stshenouda.org/data/output/html/bohairic_english \
-    bible/stshenouda.org/data/output/html/bohairic \
-    bible/stshenouda.org/data/output/html/sahidic \
+    bible/stshenouda.org/data/output/html/* \
     "${BIBLE_DIR}"
 
   # Dawoud
