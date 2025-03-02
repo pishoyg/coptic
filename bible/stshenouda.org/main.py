@@ -3,6 +3,7 @@ import html
 import json
 import os
 import re
+import shutil
 import typing
 from concurrent import futures
 
@@ -24,7 +25,7 @@ LANGUAGES: list[str] = [
     "Lycopolitan",
 ]
 
-BOOK_TITLE: str = "Ⲡⲓϫⲱⲙ Ⲉⲑⲟⲩⲁⲃ"
+BOOK_TITLE: str = "ⲡⲓϪⲱⲙ ⲉⲑⲞⲩⲁⲃ"
 
 TOC_STEM = "index"
 
@@ -36,25 +37,20 @@ SOURCES_DIR: str = "bible/stshenouda.org/data/raw/Sources/"
 OUTPUT_DIR: str = "bible/stshenouda.org/data/output"
 COVER: str = "bible/stshenouda.org/data/img/stauros.jpeg"
 
-# TODO: Move styling to a CSS sheet.
+STYLE_SHEET = "site/style.css"
 HTML_HEAD_FMT = """<!DOCTYPE html>
 <head>
   <title>{title}</title>
-  <style>
-    .a {{
-      color: blue;
-    }}
-    .column {{
-        float: left;
-        width: 50%;
-    }}
-    .row:after {{
-        content: "";
-        display: table;
-        clear: both;
-    }}
-  </style>
+  <link href="./style.css" rel="stylesheet" type="text/css">
 </head>"""
+
+HTML_SUBDIR_HEAD_FMT = HTML_HEAD_FMT.replace('"./style.css"', '"../style.css"')
+
+EPUB_HEAD_FMT = """<!DOCTYPE html>
+<head>
+  <title>{title}</title>
+</head>"""
+
 TOC_TITLE_TAG = "h1"
 BOOK_TAG = "h2"
 CHAPTER_TAG = "h3"
@@ -383,15 +379,32 @@ class html_builder:
         self,
         title: str,
         body: typing.Iterable[str],
+        epub: bool,
+        in_subdir: bool = False,
     ) -> str:
-        return "".join(self._build_html_doc_aux(title, body))
+        return "".join(
+            self._build_html_doc_aux(
+                title,
+                body,
+                epub=epub,
+                in_subdir=in_subdir,
+            ),
+        )
 
     def _build_html_doc_aux(
         self,
         title: str,
         body: typing.Iterable[str],
+        epub: bool,
+        in_subdir: bool,
     ) -> typing.Generator[str]:
-        yield HTML_HEAD_FMT.format(title=title)
+        if epub:
+            head_fmt = EPUB_HEAD_FMT
+        elif in_subdir:
+            head_fmt = HTML_SUBDIR_HEAD_FMT
+        else:
+            head_fmt = HTML_HEAD_FMT
+        yield head_fmt.format(title=title)
         yield "<body>"
         yield from body
         yield "</body>"
@@ -438,9 +451,11 @@ class html_builder:
         toc = self._build_html_doc(
             BOOK_TITLE,
             self._build_toc_body(bible, epub=False),
+            epub=False,
         )
-        path: str = _writing_path("html", subdir, stem=TOC_STEM)
-        utils.write(toc, path)
+        index_path: str = _writing_path("html", subdir, stem=TOC_STEM)
+        utils.write(toc, index_path)
+        shutil.copy(STYLE_SHEET, os.path.dirname(index_path))
 
     def __write_html_chapter(
         self,
@@ -453,6 +468,8 @@ class html_builder:
         out: str = self._build_html_doc(
             book.name,
             self._build_chapter_body(book, chapter, langs),
+            epub=False,
+            in_subdir=True,
         )
         path: str = _writing_path(
             "html",
@@ -490,6 +507,7 @@ class html_builder:
             self._build_html_doc(
                 BOOK_TITLE,
                 self._build_toc_body(bible, epub=True),
+                epub=True,
             ),
         )
         kindle.add_item(toc)
@@ -505,6 +523,7 @@ class html_builder:
                 self._build_html_doc(
                     book.name,
                     self._build_book_body(book, langs, epub=True),
+                    epub=True,
                 ),
             )
             spine.append(c)
@@ -521,7 +540,7 @@ class html_builder:
 
 class sourcer:
     def _process_sources_aux(self, bible: Bible) -> typing.Generator[str]:
-        yield HTML_HEAD_FMT.format(title="Sources")
+        yield HTML_SUBDIR_HEAD_FMT.format(title="Sources")
         yield "<body>"
         for book in bible.books:
             try:
