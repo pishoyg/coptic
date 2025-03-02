@@ -3,8 +3,18 @@
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
 strong {
   color: #2c3e50;
+}
+
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 h1 {
@@ -17,6 +27,14 @@ a strong {
   color: #3498db;
   cursor: pointer;
   text-decoration: none;
+}
+
+.index-book-chapter-list {
+  font-size: small;
+}
+
+.index-book-chapter-list a {
+  margin-left: 5px;
 }
 
 .hover-link {
