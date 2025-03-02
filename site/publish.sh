@@ -105,12 +105,17 @@ build() {
   readonly BIBLE_DIR="${SITE_DIR}/bible"
   readonly DAWOUD_DIR="${SITE_DIR}/dawoud"
   readonly IMG_DIR="${SITE_DIR}/img"
+  readonly FONTS_DIR="${SITE_DIR}/fonts/"
 
   # CNAME and README
   cp \
     "site/data/CNAME" \
     "site/README.md" \
     "${SITE_DIR}/"
+
+  # Fonts
+  mkdir "${FONTS_DIR}"
+  cp -r site/data/fonts/* "${FONTS_DIR}"
 
   # Home
   cp "site/index.html" "site/style.css" "${SITE_DIR}"
