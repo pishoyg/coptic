@@ -53,10 +53,6 @@ EPUB_HEAD_FMT = """<!DOCTYPE html>
   <title>{title}</title>
 </head>"""
 
-TOC_TITLE_TAG = "h1"
-BOOK_TAG = "h2"
-CHAPTER_TAG = "h3"
-
 # The Jinkim is represented by the Combining Overline, not the Combining
 # Conjoining Msacron.
 # TODO: Reconsider the use of the Combining Conjoining Macron on a
@@ -298,7 +294,7 @@ class html_builder:
         langs: list[str],
     ) -> typing.Generator[str]:
         langs = [lang for lang in langs if chapter.has_lang(lang)]
-        yield self.__tag(book, chapter)
+        yield self.__IDed_header(book, chapter)
         if not langs:
             return
         yield self._chapter_beginner
@@ -318,7 +314,7 @@ class html_builder:
         # We only write a whole book in one file for EPUB.
         assert epub
         assert len(langs) > 0
-        yield self.__tag(book)
+        yield self.__IDed_header(book)
         first_chapter: bool = True
         for chapter in book.chapters:
             if first_chapter:
@@ -358,8 +354,8 @@ class html_builder:
 
         return f'<a href="{href}">{chapter.num if chapter else book.name}</a>'
 
-    def __tag(self, book: Book, chapter: Chapter | None = None) -> str:
-        tag = CHAPTER_TAG if chapter else BOOK_TAG
+    def __IDed_header(self, book: Book, chapter: Chapter | None = None) -> str:
+        tag = "h3" if chapter else "h2"
         return f'<{tag} id="{self.__id(book, chapter)}">{self.__html_title(book, chapter)}</{tag}>'
 
     def __html_title(self, book: Book, chapter: Chapter | None = None) -> str:
@@ -417,9 +413,9 @@ class html_builder:
         epub: bool = False,
     ) -> typing.Generator[str]:
         # Right now, we only support generating a table of contents for EPUB.
-        yield f"<{TOC_TITLE_TAG}>"
+        yield f"<h1>"
         yield BOOK_TITLE
-        yield f"</{TOC_TITLE_TAG}>"
+        yield f"</h1>"
         if epub:
             for book in bible.books:
                 yield "<p>"
@@ -427,10 +423,11 @@ class html_builder:
                 yield "</p>"
             return
         assert not epub
+        # This is the HTML index.
         for book in bible.books:
-            yield f'<{BOOK_TAG} class="collapse index-book-name">'
+            yield f'<h4 class="collapse index-book-name">'
             yield book.name
-            yield f"</{BOOK_TAG}>"
+            yield f"</h4>"
             yield '<div class="collapsible index-book-chapter-list">'
             first_chapter = True
             for chapter in book.chapters:
