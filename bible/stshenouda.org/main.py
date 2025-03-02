@@ -38,13 +38,15 @@ OUTPUT_DIR: str = "bible/stshenouda.org/data/output"
 COVER: str = "bible/stshenouda.org/data/img/stauros.jpeg"
 
 STYLE_SHEET = "site/style.css"
+SCRIPT = "site/data/build/bible.js"
 HTML_HEAD_FMT = """<!DOCTYPE html>
 <head>
   <title>{title}</title>
   <link href="./style.css" rel="stylesheet" type="text/css">
+  <script defer src="./bible.js" type="text/javascript"></script>
 </head>"""
 
-HTML_SUBDIR_HEAD_FMT = HTML_HEAD_FMT.replace('"./style.css"', '"../style.css"')
+HTML_SUBDIR_HEAD_FMT = HTML_HEAD_FMT.replace('"./', '"../')
 
 EPUB_HEAD_FMT = """<!DOCTYPE html>
 <head>
@@ -426,9 +428,10 @@ class html_builder:
             return
         assert not epub
         for book in bible.books:
-            yield f"<{BOOK_TAG}>"
+            yield f'<{BOOK_TAG} class="collapse index-book-name">'
             yield book.name
             yield f"</{BOOK_TAG}>"
+            yield '<div class="collapsible index-book-chapter-list">'
             first_chapter = True
             for chapter in book.chapters:
                 if first_chapter:
@@ -436,6 +439,7 @@ class html_builder:
                 else:
                     yield " "
                 yield self.__link(book, chapter, epub=False)
+            yield "</div>"
 
     def write_html(self, bible: Bible, langs: list[str], subdir: str) -> None:
         with futures.ThreadPoolExecutor() as executor:
@@ -456,6 +460,7 @@ class html_builder:
         index_path: str = _writing_path("html", subdir, stem=TOC_STEM)
         utils.write(toc, index_path)
         shutil.copy(STYLE_SHEET, os.path.dirname(index_path))
+        shutil.copy(SCRIPT, os.path.dirname(index_path))
 
     def __write_html_chapter(
         self,
