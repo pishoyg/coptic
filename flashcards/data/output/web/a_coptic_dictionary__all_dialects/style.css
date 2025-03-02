@@ -68,11 +68,15 @@ hr {
 }
 
 body {
-  font-family: Arial, sans-serif;
   line-height: 1.6;
   margin: 0 auto;
   max-width: 1000px;
   padding: 10px;
+}
+
+body,
+input {
+  font-family: 'Noto Sans Coptic', sans-serif;
 }
 
 a.download,
@@ -518,4 +522,27 @@ table {
 
 .scroll-dawoud-image {
   cursor: grab;
+}
+
+/*************** Fonts ***************/
+@font-face {
+  font-family: Antinoou;
+  src: url('/fonts/AntinoouFont-1.0.6/Antinoou.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Antinoou;
+  src: url('/fonts/AntinoouFont-1.0.6/AntinoouItalic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Noto Sans Coptic';
+  src: url('/fonts/Noto_Sans_Coptic/NotoSansCoptic-Regular.woff2')
+    format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
