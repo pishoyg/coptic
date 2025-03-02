@@ -39,19 +39,46 @@ COVER: str = "bible/stshenouda.org/data/img/stauros.jpeg"
 
 STYLE_SHEET = "site/style.css"
 SCRIPT = "site/data/build/bible.js"
-HTML_HEAD_FMT = """<!DOCTYPE html>
-<head>
-  <title>{title}</title>
-  <link href="./style.css" rel="stylesheet" type="text/css">
-  <script defer src="./bible.js" type="text/javascript"></script>
-</head>"""
 
-HTML_SUBDIR_HEAD_FMT = HTML_HEAD_FMT.replace('"./', '"../')
 
-EPUB_HEAD_FMT = """<!DOCTYPE html>
-<head>
-  <title>{title}</title>
-</head>"""
+class html_head:
+    def __init__(
+        self,
+        title: str,
+        epub: bool,
+        in_subdir: bool = False,
+        additional_elements: list[str] | None = None,
+    ) -> None:
+        if epub:
+            assert not in_subdir
+        if in_subdir:
+            # Additional elements are currently required for subdirectories.
+            # If they are unavailable, the parameter must be set to the empty
+            # list. It can not be None.
+            assert additional_elements is not None
+        self.title: str = title
+        self.epub = epub
+        self.in_sub_dir = in_subdir
+        self.additional_elements: list[str] = additional_elements or []
+
+    def __str(self) -> typing.Generator[str]:
+        yield "<!DOCTYPE html>"
+        yield "<head>"
+        yield f"<title>{self.title}</title>"
+        if not self.epub:
+            root = "../" if self.in_sub_dir else "./"
+            page_class = "BIBLE" if self.in_sub_dir else "BIBLE_INDEX"
+            yield f'<link href="{root}{os.path.basename(STYLE_SHEET)}" rel="stylesheet" type="text/css">'
+            yield f'<script defer src="{root}{os.path.basename(SCRIPT)}" type="text/javascript"></script>'
+            yield f'<link href="{root}" rel="search">'
+            yield f"<script>const {page_class} = true;</script>"
+        if self.additional_elements:
+            yield from self.additional_elements
+        yield "</head>"
+
+    def str(self) -> str:
+        return "\n".join(self.__str())
+
 
 # The Jinkim is represented by the Combining Overline, not the Combining
 # Conjoining Msacron.
@@ -194,15 +221,32 @@ class Verse:
 
 
 class Chapter:
-    def __init__(self, data: dict) -> None:
+    def __init__(self, data: dict, book) -> None:
         self.num = self._num(data)
         self.verses = [Verse(v) for v in data["data"]]
+        self._prev: typing.Any = None
+        self._next: typing.Any = None
+        self._is_first: typing.Any = None
+        self._is_last: typing.Any = None
+        self.book = book
 
     def _num(self, data: dict) -> str:
         return data["sectionNameEnglish"] or "1"
 
     def has_lang(self, lang: str) -> bool:
         return any(v.has_lang(lang) for v in self.verses)
+
+    def prev(self):
+        if self._is_first:
+            return None
+        assert self._prev
+        return self._prev
+
+    def next(self):
+        if self._is_last:
+            return None
+        assert self._next
+        return self._next
 
 
 class Book:
@@ -224,7 +268,7 @@ class Book:
 
         data: list = self.load(self.name)
         self.zfill_len: int = len(str(len(data)))
-        self.chapters = [Chapter(c) for c in data]
+        self.chapters = [Chapter(c, self) for c in data]
 
     def load(self, book_name: str) -> list:
         try:
@@ -243,10 +287,24 @@ class Bible:
     def __init__(self) -> None:
         with futures.ThreadPoolExecutor() as executor:
             self.books: list[Book] = list(
-                executor.map(self._build_book, self._iter_books()),
+                executor.map(self.__build_book, self.__iter_books()),
             )
+        self.__link_chapters()
 
-    def _iter_books(self) -> typing.Generator[dict]:
+    def __link_chapters(self) -> None:
+        iterator: typing.Iterator[Chapter] = iter(self.chain_chapters())
+        cur: Chapter = next(iterator)
+        cur._is_first = True
+        while True:
+            nxt: Chapter | None = next(iterator, None)
+            if nxt is None:
+                cur._is_last = True
+                break
+            cur._next = nxt
+            nxt._prev = cur
+            cur = nxt
+
+    def __iter_books(self) -> typing.Generator[dict]:
         with open(JSON) as j:
             bible = json.loads(j.read())
             testament_idx = 0
@@ -267,8 +325,12 @@ class Bible:
                             "section_idx": section_idx,
                         }
 
-    def _build_book(self, kwargs: dict) -> Book:
+    def __build_book(self, kwargs: dict) -> Book:
         return Book(**kwargs)
+
+    def chain_chapters(self) -> typing.Generator[Chapter]:
+        for book in self.books:
+            yield from book.chapters
 
 
 class html_builder:
@@ -289,12 +351,11 @@ class html_builder:
 
     def _build_chapter_body(
         self,
-        book: Book,
         chapter: Chapter,
         langs: list[str],
     ) -> typing.Generator[str]:
         langs = [lang for lang in langs if chapter.has_lang(lang)]
-        yield self.__IDed_header(book, chapter)
+        yield self.__IDed_header(chapter)
         if not langs:
             return
         yield self._chapter_beginner
@@ -321,56 +382,80 @@ class html_builder:
                 first_chapter = False
             else:
                 yield " "
-            yield self.__link(book, chapter, epub=epub)
+            yield self.__link(chapter, epub=epub)
 
         for chapter in book.chapters:
-            yield from self._build_chapter_body(book, chapter, langs)
+            yield from self._build_chapter_body(chapter, langs)
 
-    def __link(
+    def __href(
         self,
-        book: Book,
-        chapter: Chapter | None = None,
+        page: Book | Chapter,
         epub: bool = False,
+        from_subdir: bool = False,
     ) -> str:
-        id: str = self.__id(book, chapter)
-        is_book: bool = not chapter
+        id: str = self.__id(page)
+
+        is_book: bool = isinstance(page, Book)
+        is_chapter: bool = isinstance(page, Chapter)
+        assert is_book ^ is_chapter
         is_html: bool = not epub
+        assert is_html ^ epub
+
+        if from_subdir:
+            # Subdirectories don't make sense for EPUB.
+            assert not epub
 
         if epub and is_book:
             # An EPUB book is a separate ".xhtml" spine item.
-            href = f"{id}.xhtml"
-        elif epub and chapter:
+            return f"{id}.xhtml"
+        if epub and is_chapter:
             # An EPUB chapter is a section in the same file. We simply use an
             # anchor to the id.
-            href = f"#{id}"
-        elif is_html and is_book:
+            # NOTE: This can only be referenced from the same file!
+            return f"#{id}"
+
+        assert is_html and not epub  # Sanity check.
+
+        if is_book:
             # We don't have HTML books!
             raise ValueError("HTML books are not supported!")
-        elif is_html and chapter:
-            # An HTML chapter is a standalone file.
-            href = f"{_file_name(book.name)}/{chapter.num}.html"
-        else:
-            assert False  # Sanity check.
+        assert is_chapter and not is_book  # Sanity check.
+        assert isinstance(page, Chapter)
+        # An HTML chapter is a standalone file.
+        href = f"{_file_name(page.book.name)}/{page.num}.html"
+        if from_subdir:
+            # We want to link from a subdirectory.
+            href = "../" + href
+        return href
 
-        return f'<a href="{href}">{chapter.num if chapter else book.name}</a>'
+    def __link(
+        self,
+        page: Book | Chapter,
+        epub: bool = False,
+        from_subdir: bool = False,
+    ) -> str:
+        return f'<a href="{self.__href(page, epub, from_subdir)}">{page.num if isinstance(page, Chapter) else page.name}</a>'
 
-    def __IDed_header(self, book: Book, chapter: Chapter | None = None) -> str:
-        tag = "h3" if chapter else "h2"
-        return f'<{tag} id="{self.__id(book, chapter)}">{self.__html_title(book, chapter)}</{tag}>'
+    def __IDed_header(self, page: Book | Chapter) -> str:
+        tag = "h3" if isinstance(page, Chapter) else "h2"
+        return (
+            f'<{tag} id="{self.__id(page)}">{self.__html_title(page)}</{tag}>'
+        )
 
-    def __html_title(self, book: Book, chapter: Chapter | None = None) -> str:
-        if not chapter:
-            return book.name
-        return f"{book.name} {chapter.num}"
+    def __html_title(self, page: Book | Chapter) -> str:
+        if isinstance(page, Book):
+            return page.name
+        assert isinstance(page, Chapter)
+        return f"{page.book.name} {page.num}"
 
     def __id(
         self,
-        book: Book,
-        chapter: Chapter | None = None,
+        page: Book | Chapter,
     ) -> str:
+        book = page if isinstance(page, Book) else page.book
         id: str = book.name.lower().replace(" ", "_")
-        if chapter:
-            id += str(chapter.num)
+        if isinstance(page, Chapter):
+            id += str(page.num)
         return id
 
     def _build_html_doc(
@@ -379,13 +464,22 @@ class html_builder:
         body: typing.Iterable[str],
         epub: bool,
         in_subdir: bool = False,
+        links: list[str] | None = None,
     ) -> str:
+        # If you want to not use links in the subdirectory, pass an empty
+        # string. You're not allowed to omit the parameter.
+        if links is None:
+            assert (
+                not in_subdir
+            ), "The `links` parameter must be explicitly set in a subdirectory."
+            links = []
         return "".join(
             self._build_html_doc_aux(
                 title,
                 body,
                 epub=epub,
                 in_subdir=in_subdir,
+                links=links,
             ),
         )
 
@@ -395,14 +489,15 @@ class html_builder:
         body: typing.Iterable[str],
         epub: bool,
         in_subdir: bool,
+        links: list[str] | None,
     ) -> typing.Generator[str]:
-        if epub:
-            head_fmt = EPUB_HEAD_FMT
-        elif in_subdir:
-            head_fmt = HTML_SUBDIR_HEAD_FMT
-        else:
-            head_fmt = HTML_HEAD_FMT
-        yield head_fmt.format(title=title)
+        head = html_head(
+            title=title,
+            epub=epub,
+            in_subdir=in_subdir,
+            additional_elements=links,
+        )
+        yield head.str()
         yield "<body>"
         yield from body
         yield "</body>"
@@ -435,7 +530,7 @@ class html_builder:
                     first_chapter = False
                 else:
                     yield " "
-                yield self.__link(book, chapter, epub=False)
+                yield self.__link(chapter, epub=False)
             yield "</div>"
 
     def write_html(self, bible: Bible, langs: list[str], subdir: str) -> None:
@@ -467,11 +562,26 @@ class html_builder:
         subdir: str,
     ) -> None:
 
+        links: list[str] = []
+        next = chapter.next()
+        if next:
+            links.append(
+                f'<link href="{self.__href(next, epub=False, from_subdir=True)}" rel="next">',
+            )
+        del next
+        prev = chapter.prev()
+        if prev:
+            links.append(
+                f'<link href="{self.__href(prev, epub=False, from_subdir=True)}" rel="prev">',
+            )
+        del prev
+
         out: str = self._build_html_doc(
             book.name,
-            self._build_chapter_body(book, chapter, langs),
+            self._build_chapter_body(chapter, langs),
             epub=False,
             in_subdir=True,
+            links=links,
         )
         path: str = _writing_path(
             "html",
@@ -542,7 +652,12 @@ class html_builder:
 
 class sourcer:
     def _process_sources_aux(self, bible: Bible) -> typing.Generator[str]:
-        yield HTML_SUBDIR_HEAD_FMT.format(title="Sources")
+        yield html_head(
+            title="Sources",
+            epub=False,
+            in_subdir=True,
+            additional_elements=[],
+        ).str()
         yield "<body>"
         for book in bible.books:
             try:
