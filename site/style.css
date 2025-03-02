@@ -68,11 +68,15 @@ hr {
 }
 
 body {
-  font-family: Arial, sans-serif;
   line-height: 1.6;
   margin: 0 auto;
   max-width: 1000px;
   padding: 10px;
+}
+
+body,
+input {
+  font-family: 'Noto Sans Coptic', sans-serif;
 }
 
 a.download,
