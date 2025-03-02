@@ -27,7 +27,6 @@ _DIALECTS = {
     "V",
     "W",
     "U",
-    "K",
 }
 
 _CRUM_RETAIN_CLASSES = {
