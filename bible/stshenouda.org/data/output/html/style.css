@@ -1,0 +1,548 @@
+/********** Home Page, and Generic **********/
+
+h1,
+h2,
+h3,
+strong {
+  color: #2c3e50;
+}
+
+h1 {
+  text-align: center;
+}
+
+a,
+.link,
+a strong {
+  color: #3498db;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.hover-link {
+  color: inherit;
+  cursor: inherit;
+  text-decoration: inherit;
+}
+
+a:hover,
+.link:hover,
+.hover-link:hover,
+.collapse:hover {
+  color: #3498db;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+em {
+  color: #7f8c8d;
+}
+
+figure {
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+}
+
+.centerer {
+  text-align: center;
+  display: flex;
+  place-content: center center;
+}
+
+figure img {
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgb(0 0 0 / 10%);
+  margin: 0;
+}
+
+figcaption {
+  color: #7f8c8d;
+  font-size: 0.9em;
+}
+
+hr {
+  border: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+body {
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 10px;
+}
+
+body,
+input {
+  font-family: 'Noto Sans Coptic', sans-serif;
+}
+
+a.download,
+.download-list li a {
+  background-color: #3498db;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  margin: 2px 0;
+  padding: 2px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.inline-list {
+  padding: 20px;
+}
+
+.inline-list li {
+  display: block;
+  float: left;
+  margin: 0 20px;
+  padding: 0;
+}
+
+.small-screen-only {
+  display: none;
+}
+
+@media (width <= 500px) {
+  figure img:not(.logo) {
+    height: auto;
+    width: 100%;
+  }
+
+  hr {
+    margin: 10px 0;
+  }
+
+  .small-screen-only {
+    display: unset;
+  }
+
+  .big-screen-only {
+    display: none;
+  }
+}
+
+.logo {
+  height: 100px;
+}
+
+.inline-logo {
+  height: 20px;
+}
+
+.logo-list {
+  text-align: center;
+  table-layout: fixed;
+}
+
+/********** Crum's Notes **********/
+
+/* TODO: (#241) Use classes that represent types, rather than desired behaviour.
+*  Otherwise, this doesn't represent real decoupling of the style from the HTML.: */
+
+.card {
+  font-size: 18px;
+}
+
+.bordered {
+  border: 1px solid black;
+}
+
+/* stylelint-disable selector-class-pattern */
+
+.nightMode .bordered {
+  border: 1px solid white;
+}
+
+/* stylelint-enable selector-class-pattern */
+
+.front {
+  text-align: center;
+}
+
+.left {
+  float: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  float: right;
+}
+
+.light {
+  opacity: 0.7;
+}
+
+.heavy {
+  opacity: 1;
+}
+
+.lighter {
+  opacity: 0.7;
+}
+
+.very-light {
+  opacity: 0.3;
+}
+
+.nag-hammadi {
+  display: none;
+  opacity: 0.5;
+}
+
+.sister-index {
+  opacity: 0.5;
+}
+
+.index-index-list li::marker {
+  color: rgb(0 0 0 / 50%);
+}
+
+.index-count {
+  font-size: smaller;
+  opacity: 0.5;
+}
+
+.root-type {
+  font-weight: bold;
+}
+
+.categories {
+  display: none;
+  opacity: 0.5;
+}
+
+.dev {
+  display: none;
+}
+
+:target.explanatory,
+:target.sister,
+:target.drv .marcion,
+:target.drv .meaning {
+  background-color: #ffa;
+}
+
+.header {
+  text-align: center;
+  table-layout: fixed;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  background-color: rgb(255 255 255 / 90%);
+}
+
+.header td:not(:first-child) {
+  border-left: 1px solid #ddd;
+}
+
+.small {
+  font-size: small;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.sister:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+.sister td:not(:first-child) {
+  border-left: 1px solid black;
+  padding-left: 5px;
+  vertical-align: top;
+}
+
+.sister-view {
+  width: 10%;
+}
+
+.sister-title {
+  width: 40%;
+}
+
+.sister-meaning {
+  width: 50%;
+}
+
+/* stylelint-disable selector-class-pattern */
+
+.sister-meaning .bibl,
+.sister-meaning .ref_xr {
+  display: none;
+}
+
+/* stylelint-enable selector-class-pattern */
+
+.senses {
+  font-size: small;
+  font-style: italic;
+  color: #7f8c8d;
+  display: none;
+}
+
+.dialect-dictionaries {
+  font-size: small;
+  font-style: italic;
+  color: #7f8c8d;
+}
+
+.dialect-code {
+  width: 10%;
+}
+
+.dialect-name {
+  width: 60%;
+}
+
+/********** Xooxle **********/
+
+/* stylelint-disable selector-id-pattern */
+
+#searchBox {
+  width: 100%;
+}
+
+/* stylelint-enable selector-id-pattern */
+
+#xooxle thead * {
+  text-align: center;
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 120%;
+}
+
+#xooxle td {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.search-box {
+  width: 50%;
+}
+
+.match {
+  background-color: #f0d4fc;
+}
+
+.match-separator {
+  color: gray;
+  margin: 3px 0;
+}
+
+.view-for-more {
+  float: right;
+  font-size: small;
+}
+
+/* Style download links */
+
+.results thead tr {
+  border-bottom: 1px solid black;
+}
+
+.results tbody tr:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+.results .type {
+  opacity: 0.3;
+}
+
+/* stylelint-disable no-descending-specificity */
+
+.results td {
+  vertical-align: top;
+}
+
+.results td:not(:first-child) {
+  border-left: 1px solid black;
+  padding-left: 5px;
+}
+
+/* stylelint-enable no-descending-specificity */
+
+.use-chrome {
+  display: none;
+  font-size: small;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.error {
+  color: darkred;
+  font-style: italic;
+}
+
+.sisters-table {
+  margin-left: 20px;
+}
+
+@media (width <= 500px) {
+  .sisters-table {
+    margin-left: 0;
+  }
+}
+
+@media (width <= 500px) {
+  .checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .checkboxes label {
+    margin-right: 10px;
+  }
+}
+
+.collapsible {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+/********** KELLIA **********/
+
+.orth {
+  width: 50%;
+}
+
+.geo {
+  color: darkred;
+  width: 10%;
+  text-align: center;
+}
+
+/* stylelint-disable selector-class-pattern */
+
+.gram_grp {
+  color: gray;
+  font-style: italic;
+}
+
+/* stylelint-enable selector-class-pattern */
+
+/* stylelint-disable no-descending-specificity */
+
+.bibl {
+  color: gray;
+  width: 30%;
+  text-align: right;
+}
+
+.ref {
+  color: gray;
+}
+
+.meaning {
+  width: 70%;
+}
+
+/* stylelint-enable no-descending-specificity */
+
+.xr {
+  color: gray;
+}
+
+.lang {
+  color: gray;
+}
+
+/********** Xooxle and Crum's help panel **********/
+
+.overlay-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 50%);
+  z-index: 1;
+  display: none;
+}
+
+.info-panel {
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 600px;
+  height: 80%;
+  background-color: rgb(255 255 255 / 90%);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 20%);
+  z-index: 2;
+  text-align: center;
+  display: none;
+  position: fixed;
+  overflow-y: auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #f00;
+}
+
+.notes {
+  font-size: small;
+}
+
+.disabled {
+  display: none;
+}
+
+.dawoud-frame {
+  text-align: center;
+  z-index: 5;
+}
+
+.scroll-dawoud-image {
+  cursor: grab;
+}
+
+/*************** Fonts ***************/
+@font-face {
+  font-family: Antinoou;
+  src: url('/fonts/AntinoouFont-1.0.6/Antinoou.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Antinoou;
+  src: url('/fonts/AntinoouFont-1.0.6/AntinoouItalic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Noto Sans Coptic';
+  src: url('/fonts/Noto_Sans_Coptic/NotoSansCoptic-Regular.woff2')
+    format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
