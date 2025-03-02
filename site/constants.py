@@ -35,10 +35,13 @@ _CRUM_RETAIN_CLASSES = {
     "dialect",
     "spelling",
     "type",
+} | _DIALECTS
+
+_CRUM_RETAIN_ELEMENTS_FOR_CLASSES = {
     "dialect-comma",
     "spelling-comma",
     "dialect-parenthesis",
-} | _DIALECTS
+}
 
 _KELLIA_RETAIN_CLASSES = {
     "word",
@@ -137,11 +140,13 @@ _CRUM_INDEX = xooxle.index(
                 # This is the list of classes needed for highlighting. If the
                 # highlighting rules change, you might have to add new classes!
                 retain_classes=_CRUM_RETAIN_CLASSES,
+                retain_elements_for_classes=_CRUM_RETAIN_ELEMENTS_FOR_CLASSES,
             ),
             capture(
                 "meaning",
                 xooxle.selector({"id": "root-type-meaning"}, force=False),
                 retain_classes=_CRUM_RETAIN_CLASSES,
+                retain_elements_for_classes=_CRUM_RETAIN_ELEMENTS_FOR_CLASSES,
             ),
             capture(
                 "appendix",
@@ -149,6 +154,7 @@ _CRUM_INDEX = xooxle.index(
                     {"name": "body"},
                 ),
                 retain_classes=_CRUM_RETAIN_CLASSES,
+                retain_elements_for_classes=_CRUM_RETAIN_ELEMENTS_FOR_CLASSES,
                 unit_tags={"tr", "div", "hr"},
                 block_elements=_BLOCK_ELEMENTS_DEFAULT | {"td"},
             ),
