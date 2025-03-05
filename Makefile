@@ -137,6 +137,9 @@ xooxle: FORCE
 transpile: FORCE
 	npx tsc -p "site/tsconfig.json"
 
+bashandy: FORCE
+	bash site/bashandy.sh
+
 # BIBLE RULES
 bible: FORCE
 	python bible/stshenouda.org/main.py
