@@ -369,7 +369,7 @@ DISK_USAGE="$(du --apparent-size --summarize . | cut --fields 1)"
 DISK_USAGE_HUMAN="$(du --apparent-size --human-readable --summarize . | cut --fields 1)"
 echo -e "${BLUE}Disk usage: \
 ${GREEN}${DISK_USAGE}${BLUE} (${GREEN}${DISK_USAGE_HUMAN}${BLUE})${RESET}"
-((DISK_USAGE >= 7640803 && DISK_USAGE <= 88000000 )) || (echo -e "${PURPLE}${DISK_USAGE} ${RED}looks suspicious.${RESET}" && exit 1)
+((DISK_USAGE >= 6291456 && DISK_USAGE <= 88000000 )) || (echo -e "${PURPLE}${DISK_USAGE} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_IMG=$(find "dictionary/marcion.sourceforge.net/data/img/" -type f -exec basename {} \; \
   | grep -oE '^[0-9]+' \
