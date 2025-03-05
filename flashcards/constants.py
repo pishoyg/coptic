@@ -142,8 +142,8 @@ def crum(
         deck_name=deck_name,
         deck_id=deck_id,
         deck_description=DESCRIPTION,
-        css=utils.read("site/style.css"),
-        javascript=utils.read("site/data/build/crum.js"),
+        css=utils.read("docs/style.css"),
+        javascript_path="docs/crum/crum.js",
         # NOTE: The key is a protected field. Do not change unless you know what
         # you're doing.
         key=roots_col("key"),
@@ -455,9 +455,7 @@ def crum(
                     field.img(
                         root_appendix("dawoud-pages", force=False),
                         get_paths=lambda page_ranges: [
-                            f"dictionary/copticocc.org/data/dawoud-D100-cropped/{
-                                k+16
-                            }.jpg"
+                            f"docs/dawoud/{k+16}.jpg"
                             for k in _page_numbers(column_ranges=page_ranges)
                         ],
                         fmt_args=lambda path: {
@@ -546,8 +544,8 @@ def copticsite_com(deck_name: str, deck_id: int) -> deck.deck:
         deck_name=deck_name,
         deck_id=deck_id,
         deck_description=DESCRIPTION,
-        css=utils.read("site/style.css"),
-        javascript="",
+        css=utils.read("docs/style.css"),
+        javascript_path="",
         # NOTE: The key is a protected field. Do not change unless you know what
         # you're doing.
         key=field.seq(),
@@ -604,8 +602,8 @@ def kellia(deck_name: str, deck_id: int, tsv_basename: str) -> deck.deck:
         deck_name=deck_name,
         deck_id=deck_id,
         deck_description=DESCRIPTION,
-        css=utils.read("site/style.css"),
-        javascript="",
+        css=utils.read("docs/style.css"),
+        javascript_path="",
         # NOTE: The key is a protected field. Do not change unless you know what
         # you're doing.
         key=tsv_col("entry_xml_id"),

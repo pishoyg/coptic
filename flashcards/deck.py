@@ -1,28 +1,16 @@
 import os
-import pathlib
 import shutil
 import typing
+from concurrent import futures
 
 import field
 import genanki  # type: ignore[import-untyped]
 
 import utils
 
-JS_BASENAME = "script.js"
-CSS_BASENAME = "style.css"
-HTML_HEAD = f"""
-  <head>
-    <title>{{title}}</title>
-    <link rel="stylesheet" type="text/css" href="{CSS_BASENAME}">
-    <script>const {{page_class}} = true;</script>
-    <script type="text/javascript" src="{JS_BASENAME}" defer></script>
-    {{links}}
-  </head>
-"""
-
 HTML_FMT = f"""<!DOCTYPE html>
 <html>
-  {HTML_HEAD}
+  {{head}}
   <body>
     <div class="front" id="front">
         {{front}}
@@ -38,7 +26,7 @@ HTML_FMT = f"""<!DOCTYPE html>
 # The HTML FMT string for an index.
 HTML_INDEX_FMT = f"""<!DOCTYPE html>
 <html>
-  {HTML_HEAD}
+  {{head}}
   <body>
   {{body}}
   </body>
@@ -130,13 +118,20 @@ class index:
     def basename(self) -> str:
         return to_file_name(self.title) + ".html"
 
-    def write(self, dir: str, links: str, header: str) -> None:
+    def write(
+        self,
+        dir: str,
+        header: str,
+        **html_head_kwargs,
+    ) -> None:
         with open(os.path.join(dir, self.basename()), "w") as f:
             f.write(
                 HTML_INDEX_FMT.format(
-                    title=self.title,
-                    page_class="INDEX",
-                    links=links,
+                    head=utils.html_head(
+                        title=self.title,
+                        page_class="INDEX",
+                        **html_head_kwargs,
+                    ),
                     body=header + self.html_body,
                 ),
             )
@@ -153,8 +148,8 @@ class index_index:
     def write(
         self,
         dir: str,
-        links: str,
         header_base_cells: list[header_cell],
+        **html_head_kwargs,
     ):
         headerer = header_generator(header_base_cells)
         # A subindex header includes a link to the index that contains
@@ -163,7 +158,7 @@ class index_index:
             [header_cell(self.name, self.basename())],
         )
         for index in self.indexes:
-            index.write(dir=dir, links=links, header=subindex_header)
+            index.write(dir=dir, header=subindex_header, **html_head_kwargs)
         del subindex_header
 
         # Write the index index!
@@ -171,9 +166,11 @@ class index_index:
         with open(os.path.join(dir, self.basename()), "w") as f:
             f.write(
                 HTML_INDEX_FMT.format(
-                    title=self.name,
-                    page_class="INDEX_INDEX",
-                    links=links,
+                    head=utils.html_head(
+                        title=self.name,
+                        page_class="INDEX_INDEX",
+                        **html_head_kwargs,
+                    ),
                     body=body,
                 ),
             )
@@ -196,7 +193,7 @@ class deck:
         deck_id: int,
         deck_description: str,
         css: str,
-        javascript: str,
+        javascript_path: str,
         key: field.field,
         front: field.field,
         back: field.field,
@@ -263,7 +260,7 @@ class deck:
         self.deck_id: int = deck_id
         self.deck_description: str = deck_description
         self.css: str = css
-        self.javascript: str = javascript
+        self.javascript_path: str = javascript_path
         self.keys: list[str] = []
         self.raw_keys: list[str] = []
         self.fronts: list[str] = []
@@ -340,18 +337,19 @@ class deck:
         self.media = field.merge_media_files(key, front, back)
         self.index_indexes: list[index_index] = index_indexes
 
-    def clean_dir(self, dir: str) -> None:
-        if os.path.exists(dir):
-            assert os.path.isdir(dir)
-            shutil.rmtree(dir)
-        pathlib.Path(dir).mkdir(parents=True)
-
-    def search_link(self) -> str:
-        assert self.search
-        return f'<link rel="search" href="{self.search}">'
-
     def write_web(self, dir: str) -> None:
-        self.clean_dir(dir)
+        scripts: list[str] = []
+        if self.javascript_path:
+            # NOTE: Right now, we don't copy any JavaScript files. We assume
+            # that it already exists in the directory.
+            # This is an intentional design decision, as we expect the
+            # JavaScript to be produced by another pipeline.
+            assert self.javascript_path.startswith(dir)
+            scripts.append(os.path.basename(self.javascript_path))
+
+        with futures.ThreadPoolExecutor() as executor:
+            executor.map(lambda x: shutil.copy(x, dir), self.media)
+
         for rk, front, back, title, prev, next in zip(
             self.raw_keys,
             self.fronts,
@@ -361,30 +359,20 @@ class deck:
             self.nexts,
         ):
             with open(os.path.join(dir, rk + ".html"), "w") as f:
-                links: list[str] = []
-                if prev:
-                    links.append(f'<link rel="prev" href="{prev}">')
-                if next:
-                    links.append(f'<link rel="next" href="{next}">')
-                if self.search:
-                    links.append(self.search_link())
-
                 f.write(
                     HTML_FMT.format(
-                        title=title,
-                        page_class="NOTE",
+                        head=utils.html_head(
+                            title=title,
+                            page_class="NOTE",
+                            search=self.search,
+                            next=next,
+                            prev=prev,
+                            scripts=scripts,
+                        ),
                         front=front,
                         back=back,
-                        links="\n".join(links),
                     ),
                 )
-        if self.javascript:
-            with open(os.path.join(dir, JS_BASENAME), "w") as f:
-                f.write(self.javascript)
-        with open(os.path.join(dir, CSS_BASENAME), "w") as f:
-            f.write(self.css)
-        for path in self.media:
-            shutil.copy(path, dir)
 
         header_base_cells: list[header_cell] = []
         if self.home:
@@ -394,8 +382,9 @@ class deck:
         for idx_idx in self.index_indexes:
             idx_idx.write(
                 dir=dir,
-                links=self.search_link(),
                 header_base_cells=header_base_cells,
+                scripts=scripts,
+                search=self.search,
             )
 
         utils.wrote(dir)
@@ -408,7 +397,13 @@ class deck:
         return html
 
     def anki(self) -> tuple[genanki.Deck, list[str]]:
-        javascript = ANKI_JS_FMT.format(javascript=self.javascript)
+        javascript = (
+            ANKI_JS_FMT.format(
+                javascript=utils.read(self.javascript_path),
+            )
+            if self.javascript_path
+            else ""
+        )
         model = genanki.Model(
             model_id=self.deck_id,
             name=self.deck_name,

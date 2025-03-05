@@ -17,7 +17,7 @@ node_modules
 .ruff_cache
 
 # Flashcard decks are too big to host on GitHub.
-flashcards/data/output/anki/
+docs/crum/anki
 
 # EPUB files are large (though not too large for GitHub). We don't persist them
 # for the following reasons:

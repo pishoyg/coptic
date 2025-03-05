@@ -204,6 +204,14 @@ def assass(cond, *args):
         fatal(*args)
 
 
+def mkdir(path: str) -> None:
+    pathlib.Path(path).mkdir(parents=True, exist_ok=True)
+
+
+def mk_parent_dir(path: str) -> None:
+    pathlib.Path(path).parent.mkdir(parents=True, exist_ok=True)
+
+
 def write(
     content: str,
     path: str,
@@ -212,7 +220,7 @@ def write(
     mkdir: bool = False,
 ) -> None:
     if mkdir:
-        pathlib.Path(path).parent.mkdir(parents=True, exist_ok=True)
+        mk_parent_dir(path)
     if fix_newline and (not content or content[-1] != "\n"):
         content += "\n"
     with open(path, "w") as f:
