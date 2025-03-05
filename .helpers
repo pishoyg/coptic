@@ -97,9 +97,17 @@ findex () {
 }
 
 # Find, excluding "garbage", and data!
+# TODO: (#356) The `docs/` directory is excluded because it (mostly) contains
+# generated data, the exception (currently) being `docs/index.html`,
+# `docs/crum/index.html`, and `docs/dawoud/index.html`
+# (`docs/bible/index.html` is the only auto-generated `index.html`).
+# This check is not clean. Add a check to verify the content of the `docs/`
+# directory is well understood, and that this assumption continues to hold.
 findexx () {
   findex "${1}" \
     -not -path "*/data/*" \
+    -not \( -path "./docs/*" -not -name "index.html" \) \
+    -not -path "./docs/bible/index.html" \
     "${@:2}"
 }
 

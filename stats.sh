@@ -57,6 +57,12 @@ foc () {
   # This calculation is possible because we maintain strict requirements about
   # our repository structure, ensuring that all archived logic does live under
   # `archive/`, and that all data lives under a `data/` directory.
+  # TODO: (#356) The `docs/` directory is excluded because it (mostly) contains
+  # generated data, the exception (currently) being `docs/index.html`,
+  # `docs/crum/index.html`, and `docs/dawoud/index.html`
+  # (`docs/bible/index.html` is the only auto-generated `index.html`).
+  # This check is not clean. Add a check to verify the content of the `docs/`
+  # directory is well understood, and that this assumption continues to hold.
   find "${DIR}" \
     -type f \
     -not -path "./.git/*" \
@@ -72,6 +78,8 @@ foc () {
     -not -name "package.json" \
     -not -path "*/data/*" \
     -not -name "LICENSE" \
+    -not \( -path "./docs/*" -not -name "index.html" \) \
+    -not -path "./docs/bible/index.html" \
     -not -path "./archive/*" "${@:3}" -exec "${EXEC}" {} \;
 }
 
