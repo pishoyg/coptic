@@ -4,12 +4,41 @@ import os
 import pathlib
 import re
 import shutil
+import typing
 
 import bs4
 import colorama
 import gspread
 import pandas as pd
 from oauth2client import service_account  # type: ignore[import-untyped]
+
+SITE_DIR = "docs/"
+
+CHARSET_TAG = """
+  <meta charset="utf-8">
+"""
+
+# NOTE: As of now, the entire website uses a shared stylesheet.
+STYLE_TAG = """
+  <link href="/style.css" rel="stylesheet" type="text/css">
+"""
+assert os.path.isfile(os.path.join(SITE_DIR, "style.css"))
+
+GOOGLE_TAG = """
+  <script async src=
+  "https://www.googletagmanager.com/gtag/js?id=G-VCVZFDFZR3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-VCVZFDFZR3");
+  </script>
+"""
+
+ICON_TAG = """
+  <link rel="icon" type="image/x-icon" href="/img/icon/icon-circle.png">
+"""
+assert os.path.isfile(os.path.join(SITE_DIR, "img/icon/icon-circle.png"))
 
 INTEGER_RE = re.compile("[0-9]+")
 MAX_INTEGER_LENGTH = 10
@@ -22,6 +51,72 @@ GSPREAD_SCOPE = [
 ]
 
 JSON_KEYFILE_NAME = "google_cloud_keyfile.json"
+
+
+# html_head is used by our HTML generation logic to generated the <head>
+# elements for our pages.
+# Besides the generated HTML files, a number of singleton manually-written HTML
+# pages don't use this function. If the desired head structure changes, updating
+# this function should update all of the auto-generated pages. But the
+# manually-written ones will have to be updated manually. As of now, this
+# includes the following:
+# - docs/index.html
+# - docs/crum/index.html
+# - docs/dawoud/index.html
+# However, for the most up-to-date list, consult `pre-commit/docs_structure.py`.
+def html_head(
+    title: str,
+    page_class: str = "",
+    search: str = "",
+    next: str = "",
+    prev: str = "",
+    scripts: list[str] = [],
+    epub: bool = False,
+) -> str:
+    assert title
+    if epub:
+        assert not page_class
+        assert not search
+        assert not next
+        assert not prev
+        assert not scripts
+    return "".join(
+        html_head_aux(title, page_class, search, next, prev, scripts, epub),
+    )
+
+
+def html_head_aux(
+    title: str,
+    page_class: str,
+    search: str,
+    next: str,
+    prev: str,
+    scripts: list[str],
+    epub: bool = False,
+) -> typing.Generator[str]:
+    yield "<!DOCTYPE html>"
+    yield "<head>"
+    yield f"<title>{title}</title>"
+    if epub:
+        # None of what remains is relevant to EPUB.
+        yield "</head>"
+        return
+
+    yield CHARSET_TAG
+    yield STYLE_TAG
+    yield ICON_TAG
+    yield GOOGLE_TAG
+    if search:
+        yield f'<link href="{search}" rel="search">'
+    if next:
+        yield f'<link href="{next}" rel="next">'
+    if prev:
+        yield f'<link href="{prev}" rel="prev">'
+    if page_class:
+        yield f"<script>const {page_class} = true;</script>"
+    for script in scripts:
+        yield f'<script defer src="{script}" type="text/javascript"></script>'
+    yield "</head>"
 
 
 def _print(
