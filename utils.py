@@ -209,11 +209,29 @@ def write(
     path: str,
     log: bool = True,
     fix_newline: bool = True,
+    mkdir: bool = False,
 ) -> None:
+    if mkdir:
+        pathlib.Path(path).parent.mkdir(parents=True, exist_ok=True)
     if fix_newline and (not content or content[-1] != "\n"):
         content += "\n"
     with open(path, "w") as f:
         f.write(content)
+    if not log:
+        return
+    wrote(path)
+
+
+def writelines(
+    content: typing.Generator[str],
+    path: str,
+    log: bool = True,
+    mkdir: bool = False,
+) -> None:
+    if mkdir:
+        mk_parent_dir(path)
+    with open(path, "w") as f:
+        f.writelines(content)
     if not log:
         return
     wrote(path)

@@ -29,7 +29,7 @@ flashcards/data/output/anki/
 # "opaque" data that gets published. It's opaque in the sense that we can't run
 # `git diff` against it to inspect the impact that a given change has on the
 # output data. The Bible EPUB has a `diff`-able counterpart, namely the HTML.
-bible/stshenouda.org/data/output/epub/
+docs/bible/epub/
 
 # This contains secrets (authorization tokens for Drive, local file paths,
 # idiosyncratic flag values, ...).

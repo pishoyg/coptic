@@ -3,14 +3,20 @@ import html
 import json
 import os
 import re
-import shutil
 import typing
-from concurrent import futures
 
 import json5
 from ebooklib import epub  # type: ignore[import-untyped]
 
 import utils
+
+# Input parameters
+
+JSON: str = "bible/stshenouda.org/data/input/bible.json"
+INPUT_DIR: str = "bible/stshenouda.org/data/raw/"
+# TODO: Include the sources in the output.
+SOURCES_DIR: str = "bible/stshenouda.org/data/raw/Sources/"
+COVER: str = "bible/stshenouda.org/data/img/stauros.jpeg"
 
 LANGUAGES: list[str] = [
     "Bohairic",
@@ -25,91 +31,52 @@ LANGUAGES: list[str] = [
     "Lycopolitan",
 ]
 
-BOOK_TITLE: str = "ⲡⲓϪⲱⲙ ⲉⲑⲞⲩⲁⲃ"
-
-TOC_STEM = "index"
-
 VERSE_PREFIX: re.Pattern = re.compile(r"^\(([^)]+)\)")
 
-JSON: str = "bible/stshenouda.org/data/input/bible.json"
-INPUT_DIR: str = "bible/stshenouda.org/data/raw/"
-SOURCES_DIR: str = "bible/stshenouda.org/data/raw/Sources/"
-OUTPUT_DIR: str = "bible/stshenouda.org/data/output"
-COVER: str = "bible/stshenouda.org/data/img/stauros.jpeg"
+# Output parameters
 
-STYLE_SHEET = "site/style.css"
-SCRIPT = "site/data/build/bible.js"
+OUTPUT_DIR: str = os.path.join(utils.SITE_DIR, "bible/")
 
+# NOTE: The Bible directory structure is flat, so "index.html" is reachable from an
+# `href` to `./`, regardless of which file you're looking at.
+SEARCH = "./"
+# NOTE: We expect this JavaScript file to be in the same directory as the HTML.
+SCRIPT = "bible.js"
 
-class html_head:
-    def __init__(
-        self,
-        title: str,
-        epub: bool,
-        in_subdir: bool = False,
-        additional_elements: list[str] | None = None,
-    ) -> None:
-        if epub:
-            assert not in_subdir
-        if in_subdir:
-            # Additional elements are currently required for subdirectories.
-            # If they are unavailable, the parameter must be set to the empty
-            # list. It can not be None.
-            assert additional_elements is not None
-        self.title: str = title
-        self.epub = epub
-        self.in_sub_dir = in_subdir
-        self.additional_elements: list[str] = additional_elements or []
+INDEX = "index.html"
+CHAPTER_CLASS = "BIBLE"
+INDEX_CLASS = "BIBLE_INDEX"
 
-    def __str(self) -> typing.Generator[str]:
-        yield "<!DOCTYPE html>"
-        yield "<head>"
-        yield f"<title>{self.title}</title>"
-        if not self.epub:
-            root = "../" if self.in_sub_dir else "./"
-            page_class = "BIBLE" if self.in_sub_dir else "BIBLE_INDEX"
-            yield f'<link href="{root}{os.path.basename(STYLE_SHEET)}" rel="stylesheet" type="text/css">'
-            yield f'<script defer src="{root}{os.path.basename(SCRIPT)}" type="text/javascript"></script>'
-            yield f'<link href="{root}" rel="search">'
-            yield f"<script>const {page_class} = true;</script>"
-        if self.additional_elements:
-            yield from self.additional_elements
-        yield "</head>"
-
-    def str(self) -> str:
-        return "\n".join(self.__str())
+BOOK_TITLE: str = "ⲡⲓϪⲱⲙ ⲉⲑⲞⲩⲁⲃ | Coptic Bible"
+AUTHOR = "Saint Shenouda The Archimandrite Coptic Society"
+LANG = "cop"
 
 
 # The Jinkim is represented by the Combining Overline, not the Combining
 # Conjoining Msacron.
-# TODO: Reconsider the use of the Combining Conjoining Macron on a
-# per-dialect basis. While it's certain that the correct character to use
-# for Bohairic is the Combining Overline, this may not be the case for
-# Sahidic for example.
-NORMALIZATION = {
-    chr(0xFE26): chr(0x0305),
+NORMALIZATION: dict[str, dict[str, str]] = {
+    "Bohairic": {
+        chr(0xFE26): chr(  # Combining Conjoining Macron
+            0x0305,
+        ),  # Combining Overline
+    },
 }
 
+assert all(d in LANGUAGES for d in NORMALIZATION.keys())
 
-def normalize(txt: str) -> str:
-    return "".join(NORMALIZATION.get(c, c) for c in txt)
+
+def normalize(lang: str, text: str) -> str:
+    assert lang in LANGUAGES
+    substitutions: dict[str, str] = NORMALIZATION.get(lang, {})
+    if not substitutions:
+        return text
+    for key, value in substitutions.items():
+        text = text.replace(key, value)
+    return text
 
 
 def _file_name(book_name: str) -> str:
     return book_name.lower().replace(" ", "_").replace(".", "_")
-
-
-def _writing_path(output_format: str, *subdirs: str, stem: str) -> str:
-    assert output_format
-    assert stem
-    path: str = os.path.join(
-        OUTPUT_DIR,
-        output_format,
-        *map(_file_name, subdirs),
-        f"{_file_name(stem)}.{output_format}",
-    )
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    return path
 
 
 def json_loads(t: str) -> dict | list:
@@ -144,14 +111,17 @@ class RangeColor:
 
 
 class Verse:
-    def __init__(self, data: dict) -> None:
-        self.num = self._num(data)
-        self.raw = data
-        self.recolored = {
-            lang: self.recolor(data[lang], data) for lang in LANGUAGES
+    def __init__(self, data: dict[str, str]) -> None:
+        self._num: str = self.__num(data)
+        self._raw: dict[str, str] = data
+        # NOTE: Normalization must take place after recoloring, because
+        # recoloring uses the original text.
+        self.recolored: dict[str, str] = {
+            lang: normalize(lang, self.__recolor(data[lang], data))
+            for lang in LANGUAGES
         }
         self.unnumbered = {
-            lang: VERSE_PREFIX.sub("", data[lang]).strip()
+            lang: normalize(lang, VERSE_PREFIX.sub("", data[lang]).strip())
             for lang in LANGUAGES
         }
 
@@ -172,14 +142,14 @@ class Verse:
             ranges.extend(
                 [
                     RangeColor(idx, idx + len(word), color)
-                    for idx in self.find_all(v, word)
+                    for idx in self.__find_all(v, word)
                 ],
             )
-        ranges = sorted(ranges, key=self.compare_range_color)
+        ranges = sorted(ranges, key=self.__compare_range_color)
         if not ranges:
             yield v
             return
-        ranges = self.remove_overlap(ranges)
+        ranges = self.__remove_overlap(ranges)
         assert ranges
         last: int = 0
         for rc in ranges:
@@ -189,18 +159,18 @@ class Verse:
             last = rc.end
         yield v[last:]
 
-    def recolor(self, v: str, verse: dict) -> str:
+    def __recolor(self, v: str, verse: dict) -> str:
         return "".join(self._recolor_aux(v, verse))
 
-    def _num(self, verse: dict) -> str:
+    def __num(self, verse: dict[str, str]) -> str:
         t: str = verse["English"] or verse["Greek"]
         s: re.Match | None = VERSE_PREFIX.search(t)
         return s.groups()[0] if s else ""
 
-    def compare_range_color(self, rc: RangeColor) -> tuple[int, int]:
+    def __compare_range_color(self, rc: RangeColor) -> tuple[int, int]:
         return (rc.start, rc.end)
 
-    def remove_overlap(self, ranges: list[RangeColor]) -> list[RangeColor]:
+    def __remove_overlap(self, ranges: list[RangeColor]) -> list[RangeColor]:
         if not ranges:
             return []
         out: list[RangeColor] = [ranges[0]]
@@ -213,7 +183,7 @@ class Verse:
             out[-1] = cur.winner(prev)
         return out
 
-    def find_all(self, s: str, p: str):
+    def __find_all(self, s: str, p: str):
         i: int = s.find(p)
         while i != -1:
             yield i
@@ -273,19 +243,18 @@ class Book:
     def load(self, book_name: str) -> list:
         try:
             t: str = open(os.path.join(INPUT_DIR, book_name + ".json")).read()
+            utils.info("Loaded book:", book_name)
+            data = json_loads(t)
+            assert isinstance(data, list)
+            return data
         except FileNotFoundError:
             utils.warn("Book not found:", book_name)
             return []
 
-        utils.info("Loaded book:", book_name)
-        data = json_loads(normalize(t))
-        assert isinstance(data, list)
-        return data
-
 
 class Bible:
     def __init__(self) -> None:
-        with futures.ThreadPoolExecutor() as executor:
+        with utils.ThreadPoolExecutor() as executor:
             self.books: list[Book] = list(
                 executor.map(self.__build_book, self.__iter_books()),
             )
@@ -349,7 +318,7 @@ class html_builder:
         self._verse_end: str = verse_end
         self._chapter_end: str = chapter_end
 
-    def _build_chapter_body(
+    def _build_chapter_body_aux(
         self,
         chapter: Chapter,
         langs: list[str],
@@ -366,7 +335,7 @@ class html_builder:
             yield self._verse_end
         yield self._chapter_end
 
-    def _build_book_body(
+    def _build_book_body_aux(
         self,
         book: Book,
         langs: list[str],
@@ -385,13 +354,12 @@ class html_builder:
             yield self.__link(chapter, epub=epub)
 
         for chapter in book.chapters:
-            yield from self._build_chapter_body(chapter, langs)
+            yield from self._build_chapter_body_aux(chapter, langs)
 
     def __href(
         self,
         page: Book | Chapter,
         epub: bool = False,
-        from_subdir: bool = False,
     ) -> str:
         id: str = self.__id(page)
 
@@ -400,10 +368,6 @@ class html_builder:
         assert is_book ^ is_chapter
         is_html: bool = not epub
         assert is_html ^ epub
-
-        if from_subdir:
-            # Subdirectories don't make sense for EPUB.
-            assert not epub
 
         if epub and is_book:
             # An EPUB book is a separate ".xhtml" spine item.
@@ -422,19 +386,15 @@ class html_builder:
         assert is_chapter and not is_book  # Sanity check.
         assert isinstance(page, Chapter)
         # An HTML chapter is a standalone file.
-        href = f"{_file_name(page.book.name)}/{page.num}.html"
-        if from_subdir:
-            # We want to link from a subdirectory.
-            href = "../" + href
+        href = f"{_file_name(page.book.name)}_{page.num}.html"
         return href
 
     def __link(
         self,
         page: Book | Chapter,
         epub: bool = False,
-        from_subdir: bool = False,
     ) -> str:
-        return f'<a href="{self.__href(page, epub, from_subdir)}">{page.num if isinstance(page, Chapter) else page.name}</a>'
+        return f'<a href="{self.__href(page, epub)}">{page.num if isinstance(page, Chapter) else page.name}</a>'
 
     def __IDed_header(self, page: Book | Chapter) -> str:
         tag = "h3" if isinstance(page, Chapter) else "h2"
@@ -458,51 +418,29 @@ class html_builder:
             id += str(page.num)
         return id
 
-    def _build_html_doc(
+    def _html_aux(
         self,
-        title: str,
         body: typing.Iterable[str],
-        epub: bool,
-        in_subdir: bool = False,
-        links: list[str] | None = None,
-    ) -> str:
-        # If you want to not use links in the subdirectory, pass an empty
-        # string. You're not allowed to omit the parameter.
-        if links is None:
-            assert (
-                not in_subdir
-            ), "The `links` parameter must be explicitly set in a subdirectory."
-            links = []
-        return "".join(
-            self._build_html_doc_aux(
-                title,
-                body,
-                epub=epub,
-                in_subdir=in_subdir,
-                links=links,
-            ),
-        )
-
-    def _build_html_doc_aux(
-        self,
         title: str,
-        body: typing.Iterable[str],
-        epub: bool,
-        in_subdir: bool,
-        links: list[str] | None,
+        page_class: str = "",
+        next: str = "",
+        prev: str = "",
+        epub: bool = False,
     ) -> typing.Generator[str]:
-        head = html_head(
-            title=title,
-            epub=epub,
-            in_subdir=in_subdir,
-            additional_elements=links,
+        return utils.html_aux(
+            utils.html_head(
+                title=title,
+                page_class=page_class,
+                search="" if epub else SEARCH,
+                next=next,
+                prev=prev,
+                scripts=[] if epub else [SCRIPT],
+                epub=epub,
+            ),
+            *body,
         )
-        yield head.str()
-        yield "<body>"
-        yield from body
-        yield "</body>"
 
-    def _build_toc_body(
+    def _build_toc_body_aux(
         self,
         bible: Bible,
         epub: bool = False,
@@ -534,25 +472,28 @@ class html_builder:
             yield "</div>"
 
     def write_html(self, bible: Bible, langs: list[str], subdir: str) -> None:
-        with futures.ThreadPoolExecutor() as executor:
-            for book in bible.books:
-                for chapter in book.chapters:
-                    executor.submit(
-                        self.__write_html_chapter,
-                        book,
-                        chapter,
-                        langs,
-                        subdir,
-                    )
-        toc = self._build_html_doc(
-            BOOK_TITLE,
-            self._build_toc_body(bible, epub=False),
-            epub=False,
+        # NOTE: We assume that the JavaScript file exists. We don't generate it
+        # or copy it.
+        assert os.path.isfile(os.path.join(OUTPUT_DIR, subdir, SCRIPT))
+
+        with utils.ThreadPoolExecutor() as executor:
+            list(
+                executor.map(
+                    lambda args: self.__write_html_chapter(*args),
+                    [
+                        (book, chapter, langs, subdir)
+                        for book in bible.books
+                        for chapter in book.chapters
+                    ],
+                ),
+            )
+        toc = self._html_aux(
+            self._build_toc_body_aux(bible, epub=False),
+            title=BOOK_TITLE,
+            page_class=INDEX_CLASS,
         )
-        index_path: str = _writing_path("html", subdir, stem=TOC_STEM)
-        utils.write(toc, index_path)
-        shutil.copy(STYLE_SHEET, os.path.dirname(index_path))
-        shutil.copy(SCRIPT, os.path.dirname(index_path))
+        index_path: str = os.path.join(OUTPUT_DIR, subdir, INDEX)
+        utils.writelines(toc, index_path)
 
     def __write_html_chapter(
         self,
@@ -562,42 +503,30 @@ class html_builder:
         subdir: str,
     ) -> None:
 
-        links: list[str] = []
-        next = chapter.next()
-        if next:
-            links.append(
-                f'<link href="{self.__href(next, epub=False, from_subdir=True)}" rel="next">',
-            )
-        del next
-        prev = chapter.prev()
-        if prev:
-            links.append(
-                f'<link href="{self.__href(prev, epub=False, from_subdir=True)}" rel="prev">',
-            )
-        del prev
+        next: Chapter | None = chapter.next()
+        prev: Chapter | None = chapter.prev()
 
-        out: str = self._build_html_doc(
-            book.name,
-            self._build_chapter_body(chapter, langs),
-            epub=False,
-            in_subdir=True,
-            links=links,
+        out = self._html_aux(
+            self._build_chapter_body_aux(chapter, langs),
+            title=book.name,
+            page_class=CHAPTER_CLASS,
+            next=self.__href(next, epub=False) if next else "",
+            prev=self.__href(prev, epub=False) if prev else "",
         )
-        path: str = _writing_path(
-            "html",
+        path: str = os.path.join(
+            OUTPUT_DIR,
             subdir,
-            book.name,
-            stem=chapter.num,
+            f"{_file_name(book.name)}_{chapter.num}.html",
         )
-        utils.write(out, path)
+        utils.writelines(out, path, mkdir=True)
 
     def write_epub(self, bible: Bible, langs: list[str], subdir: str) -> None:
         kindle: epub.EpubBook = epub.EpubBook()
         identifier: str = " ".join(langs)
         kindle.set_identifier(identifier)
-        kindle.set_language("cop")
-        kindle.set_title("Ⲡⲓϫⲱⲙ Ⲉⲑⲟⲩⲁⲃ")
-        kindle.add_author("Saint Shenouda The Archimandrite Coptic Society")
+        kindle.set_language(LANG)
+        kindle.set_title(BOOK_TITLE)
+        kindle.add_author(AUTHOR)
         cover_file_name: str = os.path.basename(COVER)
         cover: epub.EpubCover = epub.EpubCover(file_name=cover_file_name)
         with open(COVER, "rb") as f:
@@ -616,10 +545,12 @@ class html_builder:
             file_name="toc.xhtml",
         )
         toc.set_content(
-            self._build_html_doc(
-                BOOK_TITLE,
-                self._build_toc_body(bible, epub=True),
-                epub=True,
+            "".join(
+                self._html_aux(
+                    self._build_toc_body_aux(bible, epub=True),
+                    title=BOOK_TITLE,
+                    epub=True,
+                ),
             ),
         )
         kindle.add_item(toc)
@@ -632,10 +563,12 @@ class html_builder:
                 file_name=self.__id(book) + ".xhtml",
             )
             c.set_content(
-                self._build_html_doc(
-                    book.name,
-                    self._build_book_body(book, langs, epub=True),
-                    epub=True,
+                "".join(
+                    self._html_aux(
+                        self._build_book_body_aux(book, langs, epub=True),
+                        title=book.name,
+                        epub=True,
+                    ),
                 ),
             )
             spine.append(c)
@@ -645,46 +578,27 @@ class html_builder:
         kindle.add_item(epub.EpubNcx())
         kindle.add_item(epub.EpubNav())
 
-        path: str = _writing_path("epub", subdir, stem=identifier)
+        path: str = os.path.join(
+            OUTPUT_DIR,
+            "epub",
+            subdir,
+            f"{identifier.lower()}.epub",
+        )
         epub.write_epub(path, kindle)
         utils.wrote(path)
 
-
-class sourcer:
-    def _process_sources_aux(self, bible: Bible) -> typing.Generator[str]:
-        yield html_head(
-            title="Sources",
-            epub=False,
-            in_subdir=True,
-            additional_elements=[],
-        ).str()
-        yield "<body>"
-        for book in bible.books:
-            try:
-                t: str = open(
-                    os.path.join(SOURCES_DIR, book.name + "_Sources.json"),
-                ).read()
-                yield "<h1>" + book.name + "</h1>"
-                json_loaded = json_loads(t)
-                del t
-                assert isinstance(json_loaded, dict)
-                data: dict = json_loaded
-                del json_loaded
-            except FileNotFoundError:
-                utils.warn("No sources found for", book.name)
-                continue
-
-            for lang in LANGUAGES:
-                yield f"<h2>{lang}</h2>"
-                yield "<br/>".join(
-                    f"  - {line}" for line in data[lang].split("\n") if line
-                )
-        yield "</body>"
-
-    def process_sources(self, bible: Bible) -> None:
-        html = "\n".join(self._process_sources_aux(bible))
-        path = _writing_path("html", "", stem="sources")
-        utils.write(html, path)
+    def write(
+        self,
+        format: typing.Literal["html", "epub"],
+        bible: Bible,
+        langs: list[str],
+        subdir: str,
+    ) -> None:
+        {"html": self.write_html, "epub": self.write_epub}[format](
+            bible,
+            langs,
+            subdir,
+        )
 
 
 def main():
@@ -702,22 +616,22 @@ def main():
         chapter_end="</table>",
     )
 
-    with futures.ProcessPoolExecutor() as executor:
-        executor.submit(
-            _flow_builder.write_epub,
-            bible,
-            ["Bohairic", "English"],
-            "1",
-        )
-        executor.submit(
-            _table_builder.write_epub,
-            bible,
-            ["Bohairic", "English"],
-            "2",
-        )
-        executor.submit(_table_builder.write_html, bible, LANGUAGES, "")
+    tasks: list[
+        tuple[
+            html_builder,
+            typing.Literal["html", "epub"],
+            Bible,
+            list[str],
+            str,
+        ]
+    ] = [
+        (_flow_builder, "epub", bible, ["Bohairic", "English"], "1"),
+        (_table_builder, "epub", bible, ["Bohairic", "English"], "2"),
+        (_table_builder, "html", bible, LANGUAGES, ""),
+    ]
 
-    sourcer().process_sources(bible)
+    with utils.ThreadPoolExecutor() as executor:
+        list(executor.map(lambda args: html_builder.write(*args), tasks))
 
 
 if __name__ == "__main__":
