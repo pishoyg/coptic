@@ -5,12 +5,15 @@
 set -o errexit  # Exit upon encountering a failure.
 set -o nounset  # Consider an undefined variable to be an error.
 
-source .helpers
+# We need to source `.env` because it contains some helpers that we use. Even if
+# it has been sourced in the shell where this script is invoked, this exports
+# the variables but not the functions.
+source .env
 
 # shellcheck disable=SC2016
 readonly COMMIT_MESSAGE='[Stats] Run `make stats`.'
 
-readonly KNOWN_EXTENSIONS="Makefile css env_INFO helpers gitignore yamlfmt yamllint json mjs js keylayout md plist py sh strings txt yaml toml ts html npmrc"
+readonly KNOWN_EXTENSIONS="Makefile css env gitignore yamlfmt yamllint json mjs js keylayout md plist py sh strings txt yaml toml ts html npmrc"
 readonly KNOWN_EXTENSIONS_ARCHIVE="gitignore java js md proto py sh sql vba"
 readonly KNOWN_ARCHIVE_SUBDIRS="bible dictionary ipa-transliteration unicode-converters"
 
@@ -57,30 +60,7 @@ foc () {
   # This calculation is possible because we maintain strict requirements about
   # our repository structure, ensuring that all archived logic does live under
   # `archive/`, and that all data lives under a `data/` directory.
-  # TODO: (#356) The `docs/` directory is excluded because it (mostly) contains
-  # generated data, the exception (currently) being `docs/index.html`,
-  # `docs/crum/index.html`, and `docs/dawoud/index.html`
-  # (`docs/bible/index.html` is the only auto-generated `index.html`).
-  # This check is not clean. Add a check to verify the content of the `docs/`
-  # directory is well understood, and that this assumption continues to hold.
-  find "${DIR}" \
-    -type f \
-    -not -path "./.git/*" \
-    -not -name ".DS_Store" \
-    -not -path "*/__pycache__/*" \
-    -not -path "./coptic.egg-info/*" \
-    -not -path "./build/*" \
-    -not -path "./.mypy_cache/*" \
-    -not -path "./.ruff_cache/*" \
-    -not -path "./node_modules/*" \
-    -not -name ".env" \
-    -not -name "package-lock.json" \
-    -not -name "package.json" \
-    -not -path "*/data/*" \
-    -not -name "LICENSE" \
-    -not \( -path "./docs/*" -not -name "index.html" \) \
-    -not -path "./docs/bible/index.html" \
-    -not -path "./archive/*" "${@:3}" -exec "${EXEC}" {} \;
+  findexx "${DIR}" -type f "${@:3}" -exec "${EXEC}" {} \;
 }
 
 loc () {
@@ -215,12 +195,13 @@ LOC=$(( $(loc .) + LOC_ARCHIVE))
 LOC_CRUM=$(loc "dictionary/marcion.sourceforge.net")
 LOC_COPTICSITE=$(loc "dictionary/copticsite.com")
 LOC_KELLIA=$(loc "dictionary/kellia.uni-goettingen.de")
+LOC_DAWOUD="$(loc "dictionary/copticocc.org")"
 LOC_BIBLE=$(loc "bible")
 LOC_FLASHCARDS=$(loc "flashcards")
 LOC_GRAMMAR=$(loc "grammar")
 LOC_KEYBOARD=$(loc "keyboard")
 LOC_MORPHOLOGY=$(loc "morphology")
-LOC_SITE=$(loc "site")
+LOC_SITE=$(( $(loc "web") + $(loc "docs") ))
 LOC_SHARED=$(loc_shared)
 
 readonly TOTAL="$((
@@ -228,6 +209,7 @@ readonly TOTAL="$((
   + LOC_CRUM
   + LOC_COPTICSITE
   + LOC_KELLIA
+  + LOC_DAWOUD
   + LOC_BIBLE
   + LOC_FLASHCARDS
   + LOC_GRAMMAR
@@ -246,6 +228,7 @@ echo -e "${BLUE}Number of lines of code (including archive): ${GREEN}${LOC}${BLU
 "\n  ${BLUE}Crum: ${GREEN}${LOC_CRUM}"\
 "\n  ${BLUE}copticsite: ${GREEN}${LOC_COPTICSITE}"\
 "\n  ${BLUE}KELLIA: ${GREEN}${LOC_KELLIA}"\
+"\n  ${BLUE}Dawoud: ${GREEN}${LOC_DAWOUD}"\
 "\n  ${BLUE}Bible: ${GREEN}${LOC_BIBLE}"\
 "\n  ${BLUE}Flashcards: ${GREEN}${LOC_FLASHCARDS}"\
 "\n  ${BLUE}Grammar: ${GREEN}${LOC_GRAMMAR}"\
@@ -259,7 +242,7 @@ echo -e "${BLUE}Number of lines of code (including archive): ${GREEN}${LOC}${BLU
 LOC_PYTHON=$(loc . -name "*.py")
 LOC_MAKE=$(loc . -name "Makefile")
 LOC_CSS=$(loc . -name "*.css")
-LOC_SH=$(loc . -a \( -name "*.sh" -o -name ".env_INFO" -o -name ".helpers" \))
+LOC_SH=$(loc . -a \( -name "*.sh" -o -name ".env" \))
 LOC_JS=$(loc . -a \( -name "*.mjs" -o -name "*.js" \) )
 LOC_MD=$(loc . -name "*.md")
 LOC_YAML=$(loc . -a \( -name "*.yaml" -o -name ".yamlfmt" -o -name ".yamllint" \) )
@@ -314,7 +297,7 @@ FOC=$(foc_count .)
 FOC_PYTHON=$(foc_count . -name "*.py")
 FOC_MAKE=$(foc_count . -name "Makefile")
 FOC_CSS=$(foc_count . -name "*.css")
-FOC_SH=$(foc_count . -a \( -name "*.sh" -o -name ".env" -o -name ".env_INFO" -o -name ".helpers" \))
+FOC_SH=$(foc_count . -a \( -name "*.sh" -o -name ".env" \))
 FOC_JS=$(foc_count . -a \( -name "*.mjs" -o -name "*.js" \) )
 FOC_MD=$(foc_count . -name "*.md")
 FOC_YAML=$(foc_count . -a \( -name "*.yaml" -o -name ".yamlfmt" -o -name ".yamllint" \) )
@@ -579,7 +562,7 @@ if ${COMMIT}; then
   # We have to exclude the first field (`data`) from this though, because it
   # has spaces within it that would be unintentionally replaced with tabs if we
   # were to include it.
-  echo "$(date)$(echo " $(date +%s) ${LOC} ${CRUM_IMG} ${CRUM_DAWOUD} ${LOC_CRUM} ${LOC_COPTICSITE} ${LOC_KELLIA} ${LOC_BIBLE} ${LOC_FLASHCARDS} ${LOC_GRAMMAR} ${LOC_KEYBOARD} ${LOC_MORPHOLOGY} ${LOC_SITE} ${LOC_SHARED} ${LOC_ARCHIVE} ${CRUM_TYPOS} ${CRUM_IMG_SUM} ${CRUM_DAWOUD_SUM} ${NUM_COMMITS} ${NUM_CONTRIBUTORS} ${CRUM_NOTES} ${LOC_PYTHON} ${LOC_MAKE} ${LOC_CSS} ${LOC_SH} ${LOC_JS} ${LOC_MD} ${LOC_YAML} ${LOC_DOT} ${LOC_KEYBOARD_LAYOUT} ${LOC_TXT} ${CRUM_WRD_TYPOS} ${CRUM_DRV_TYPOS} ${CRUM_PAGES_CHANGED} ${CRUM_ROOT_SENSES} ${CRUM_ROOT_SENSES_SUM} ${LOC_TS} ${LOC_JSON} ${DISK_USAGE} ${DISK_USAGE_HUMAN} ${LOC_TOML} ${FOC} ${FOC_PYTHON} ${FOC_MAKE} ${FOC_CSS} ${FOC_SH} ${FOC_JS} ${FOC_MD} ${FOC_YAML} ${FOC_TOML} ${FOC_DOT} ${FOC_KEYBOARD_LAYOUT} ${FOC_TXT} ${FOC_TS} ${FOC_JSON} ${LOC_HTML} ${FOC_HTML} ${CRUM_LAST_PAGES} ${CRUM_OVERRIDE_TYPES} ${CRUM_SISTERS} ${CRUM_SISTERS_SUM} ${CRUM_ANTONYMS} ${CRUM_ANTONYMS_SUM} ${CRUM_HOMONYMS} ${CRUM_HOMONYMS_SUM} ${CRUM_GREEK_SISTERS} ${CRUM_GREEK_SISTERS_SUM} ${NUM_OPEN_ISSUES} ${NUM_CLOSED_ISSUES} ${CRUM_CATEGORIES} ${CRUM_CATEGORIES_SUM}" | sed 's/ /\t/g')" \
+  echo "$(date)$(echo " $(date +%s) ${LOC} ${CRUM_IMG} ${CRUM_DAWOUD} ${LOC_CRUM} ${LOC_COPTICSITE} ${LOC_KELLIA} ${LOC_BIBLE} ${LOC_FLASHCARDS} ${LOC_GRAMMAR} ${LOC_KEYBOARD} ${LOC_MORPHOLOGY} ${LOC_SITE} ${LOC_SHARED} ${LOC_ARCHIVE} ${CRUM_TYPOS} ${CRUM_IMG_SUM} ${CRUM_DAWOUD_SUM} ${NUM_COMMITS} ${NUM_CONTRIBUTORS} ${CRUM_NOTES} ${LOC_PYTHON} ${LOC_MAKE} ${LOC_CSS} ${LOC_SH} ${LOC_JS} ${LOC_MD} ${LOC_YAML} ${LOC_DOT} ${LOC_KEYBOARD_LAYOUT} ${LOC_TXT} ${CRUM_WRD_TYPOS} ${CRUM_DRV_TYPOS} ${CRUM_PAGES_CHANGED} ${CRUM_ROOT_SENSES} ${CRUM_ROOT_SENSES_SUM} ${LOC_TS} ${LOC_JSON} ${DISK_USAGE} ${DISK_USAGE_HUMAN} ${LOC_TOML} ${FOC} ${FOC_PYTHON} ${FOC_MAKE} ${FOC_CSS} ${FOC_SH} ${FOC_JS} ${FOC_MD} ${FOC_YAML} ${FOC_TOML} ${FOC_DOT} ${FOC_KEYBOARD_LAYOUT} ${FOC_TXT} ${FOC_TS} ${FOC_JSON} ${LOC_HTML} ${FOC_HTML} ${CRUM_LAST_PAGES} ${CRUM_OVERRIDE_TYPES} ${CRUM_SISTERS} ${CRUM_SISTERS_SUM} ${CRUM_ANTONYMS} ${CRUM_ANTONYMS_SUM} ${CRUM_HOMONYMS} ${CRUM_HOMONYMS_SUM} ${CRUM_GREEK_SISTERS} ${CRUM_GREEK_SISTERS_SUM} ${NUM_OPEN_ISSUES} ${NUM_CLOSED_ISSUES} ${CRUM_CATEGORIES} ${CRUM_CATEGORIES_SUM} ${LOC_DAWOUD}" | sed 's/ /\t/g')" \
     >> "data/stats.tsv"
   git add "data/stats.tsv"
   git commit --message "${COMMIT_MESSAGE}"

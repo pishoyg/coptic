@@ -8,7 +8,7 @@
 set -o errexit  # Exit upon encountering a failure.
 set -o nounset  # Consider an undefined variable to be an error.
 
-source .helpers
+source .env
 
 _mypy() {
   # shellcheck disable=SC2046

@@ -19,7 +19,6 @@ that aims to make the Coptic language more **learnable**.
   - [Diagram](#diagram)
   - [Getting started](#getting-started)
   - [`data/` Subdirectories](#data-subdirectories)
-  - [`.env`](#env)
   - [Planning](#planning)
     - [Issues](#issues)
     - [Project](#project)
@@ -56,17 +55,17 @@ that aims to make the Coptic language more **learnable**.
 We use:
 
 - [GitHub](https://github.com/pishoyg/coptic/) for our code base.
-- [GitHub Pages](https://github.com/pishoyg/pishoyg.github.io/) for our
+- [GitHub Pages](https://github.com/pishoyg/coptic/settings/pages) for our
 [website](https://remnqymi.com/).
+- [AWS Route 53](https://us-east-1.console.aws.amazon.com/route53/v2/hostedzones)
+for domain registration and DNS.
 - [Google
 Drive](https://drive.google.com/drive/folders/17jI92CKumjYQTXghThaaejPeD8ZbifPm?usp=drive_link)
 to share large files.
-- [Squarespace](https://account.squarespace.com/domains/managed/remnqymi.com)
-for DNS registration.
 - [Google Analytics](https://analytics.google.com/analytics/web/#/p454349148)
 and [Google Search
 Console](https://search.google.com/search-console?resource_id=sc-domain%3Aremnqymi.com)
-to analyze traffic.
+for traffic tracking and analysis.
 
 ## Diagram
 
@@ -81,12 +80,62 @@ to analyze traffic.
 
 ## Getting started
 
-1. Running `make install` should take care of most of the python installations.
+1. Setting up the environment is necessary for a lot of pipelines to work.
+
+   In general, you should run this at the beginning of each development session:
+
+   ```sh
+   source .env
+   ```
+
+   Equivalently:
+
+   ```sh
+   . ./.env
+   ```
+
+   This sets up the Python virtual environment; and exports many environment
+   variables and helpers, some of which are used by the pipelines, and some are
+   simply intended for developer convenience.
+
+   Alternatively, you can define a hook that would source it automatically once
+   you `cd` into the directory. If you use ZSH, you can add the following to your
+   `.zshrc` (replacing `${PATH_TO_COPTIC_REPO}` with the path to this repo):
+
+   ```sh
+   coptic_source_hook() {
+     if [[ $PWD == "${PATH_TO_COPTIC_REPO}" ]]; then
+       source ./.env
+       chpwd_functions[(Ie)$0]=() # remove ourselves from the array
+     fi
+   }
+   chpwd_functions+=(coptic_source_hook)
+   ```
+
+   For Bash, add this to your `.bashrc` (replacing `${PATH_TO_COPTIC_REPO}`
+   appropriately):
+   ```sh
+   coptic_source_hook() {
+   if [[ "$PWD" == "$PATH_TO_COPTIC_REPO" ]]; then
+     source ./.env
+     PROMPT_COMMAND=${PROMPT_COMMAND//coptic_source_hook;}/
+   fi
+   }
+
+   PROMPT_COMMAND="coptic_source_hook; $PROMPT_COMMAND"
+   ```
+
+   Keep in mind that the Python `venv` will continue to be activated afterwards,
+   and the environment variables will still be set, as long as you're in the same
+   shell session. You can deactivate the environment by running `deactivate`.
+   Alternatively, you can just exit the shell window and start a new one.
+
+1. Running `make install` should take care of most of the installations.
+   Sourcing `.env` is necessary for this to work. Though `make install` only
+needs to be run once, while `.env` needs to be sourced for each session.
 
    If there are missing binaries that you need to download them, `make install`
    will let you know.
-
-1. You might also want to alias `python` to the latest version.
 
 1. Our pipelines are defined in [`Makefile`](Makefile), and they correspond to
 blue circles in the diagram. Other pipelines in [`Makefile`](Makefile) are only
@@ -109,13 +158,6 @@ Besides this file, docs can be found in:
 
    User-facing documentation shouldn't live on the repo, but should go on [the
    website](http://remnqymi.com/) instead.
-
-1. With the exception of [`archive/`](archive/), [`test/`](test/), and [
-`data/`](data/), and [`pre-commit/`](pre-commit/), each subdirectory of the
-root directory represents a major pipeline, or category of pipelines, along
-with their associated data. You will also notice that shared code is
-(intentionally) minimized, and restricted to the pre-commits and some helpers
-and utility functions.
 
 1. We use pre-commit hooks extensively, and they have helped us discover a lot
    of bugs and issues with our code, and also keep our repo organized. They are
@@ -154,27 +196,6 @@ the liberty to modify the copies that live under `input/`.
 - `output/`: This contains the data written by our pipelines,
 **one subdirectory per format**. If your pipeline writes both TSV and HTML,
 they should go respectively to `output/tsv/` and `output/html/`.
-
-## `.env`
-
-For now, run this once at the beginning of your coding session to export
-environment variables, which are necessary for some pipelines:
-
-```sh
-source .env_INFO
-```
-
-Equivalently:
-
-```sh
-. ./.env_INFO
-```
-
-Later on, you might need to create your own `.env` file. It is ignored by a
-rule in [`.gitignore`](.gitignore), so there is no shared version.
-
-It is documented in [`.env_INFO`](.env_INFO), so this section is intentionally
-brief.
 
 ## Planning
 

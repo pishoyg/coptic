@@ -1,9 +1,12 @@
-# NOTE: If you update .gitignore, make sure to update the `git_clean` rule in
-# Makefile, and the loc function in stats.sh, and the `findex` and `findexx`
-# functions in `.helpers`.
+# NOTE: If you update .gitignore, make sure to update:
+# 1. The `clean` rule in `Makefile`
+# 2. The `findex` functions in `.env`.
 
 # MacOS system files.
 .DS_Store
+
+# Python virtual environment.
+venv
 
 # Python artifacts.
 __pycache__
@@ -31,11 +34,17 @@ docs/crum/anki
 # output data. The Bible EPUB has a `diff`-able counterpart, namely the HTML.
 docs/bible/epub/
 
-# This contains secrets (authorization tokens for Drive, local file paths,
-# idiosyncratic flag values, ...).
-# You have to create your own version of this file in order to be able to
-# execute some of the pipelines. See .env_INFO.
-.env
+# Our environment variables and helpers are defined in `.env`. In case you want
+# to supplement them with your own, you can do so in `.myenv`.
+# If you do so, then the following should make things slightly easier for you:
+# 1. Add the following line to `.myenv`, so you only need to source one file:
+#    ```
+#    source .env
+#    ```
+# 2. Add a hook to your `.bashrc` or `.zshrc` that sources `.myenv` once you
+# `cd` into the repo directory. (Or do so with `.env` if you don't use a
+# `.myenv`.)
+.myenv
 
 # google_cloud_keyfile.json stores the credentials for access to to Google
 # Drive.

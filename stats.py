@@ -99,6 +99,7 @@ COLUMNS: dict[str | None, list[str]] = {
         "loc_morphology",
         "loc_shared",
         "loc_site",
+        "loc_dawoud",
     ],
     "Number of Commits": [
         "num_commits",

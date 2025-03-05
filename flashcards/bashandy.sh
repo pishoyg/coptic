@@ -5,8 +5,6 @@
 set -o errexit  # Exit upon encountering a failure.
 set -o nounset  # Consider an undefined variable to be an error.
 
-source .helpers
-
 readonly LEXICON="docs/crum/index.html"
 readonly BASHANDY="docs/crum/bashandy.html"
 
