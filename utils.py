@@ -4,13 +4,12 @@ import json
 import os
 import pathlib
 import re
-import shutil
 import typing
 from concurrent import futures
 
-import bs4
 import colorama
 import gspread
+import gspread_dataframe  # type: ignore[import-untyped]
 import pandas as pd
 from oauth2client import service_account  # type: ignore[import-untyped]
 
@@ -270,13 +269,6 @@ def read_tsv(path: str, sort_values_by=None) -> pd.DataFrame:
     return df
 
 
-def clean_dir(dir: str) -> None:
-    if os.path.exists(dir):
-        assert os.path.isdir(dir)
-        shutil.rmtree(dir)
-    pathlib.Path(dir).mkdir(parents=True)
-
-
 _gclient: gspread.Client | None = None
 
 
@@ -298,8 +290,7 @@ def read_gspread(
     gspread_name: str,
     worksheet: int = 0,
 ):
-    _gclient = get_gclient()
-    return _gclient.open(gspread_name).get_worksheet(worksheet)
+    return get_gclient().open(gspread_name).get_worksheet(worksheet)
 
 
 def get_column_index(worksheet, column: str) -> int:
@@ -310,25 +301,15 @@ def get_column_index(worksheet, column: str) -> int:
     return -1  # Appease the linter.
 
 
-def as_dataframe(worksheet) -> pd.DataFrame:
-    return pd.DataFrame(worksheet.get_all_records()).astype("string")
-
-
 def write_gspread(
     gspread_name: str,
     df: pd.DataFrame,
     worksheet: int = 0,
 ) -> None:
-    _gclient = get_gclient()
-    spreadsheet = _gclient.open(gspread_name)
-    spreadsheet.get_worksheet(worksheet).update(
-        [df.columns.values.tolist()] + df.values.tolist(),
+    gspread_dataframe.set_with_dataframe(
+        get_gclient().open(gspread_name).get_worksheet(worksheet),
+        df,
     )
-
-
-def html_text(html: str) -> str:
-    soup = bs4.BeautifulSoup(html, "html.parser")
-    return soup.get_text()
 
 
 def read(path: str) -> str:
