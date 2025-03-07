@@ -56,6 +56,16 @@ repos:
         verbose: true
         require_serial: true
 
+  - repo: local
+    hooks:
+      - id: docs-structure
+        name: docs-structure
+        # TODO: Enable the hook once `docs/` has been populated.
+        entry: pre-commit/docs_structure.py || true
+        language: system
+        files: ^docs/.*
+        pass_filenames: false
+
   # TypeScript and JavaScript
   - repo: local
     hooks:
