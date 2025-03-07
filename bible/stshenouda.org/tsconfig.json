@@ -1,0 +1,7 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["bible.ts"],
+  "compilerOptions": {
+    "outDir": "../../docs/bible/"
+  }
+}

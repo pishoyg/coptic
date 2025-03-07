@@ -1,0 +1,7 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["dawoud.ts"],
+  "compilerOptions": {
+    "outDir": "../../docs/dawoud/"
+  }
+}

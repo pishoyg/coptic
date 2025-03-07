@@ -1,0 +1,7 @@
+{
+  "extends": "../tsconfig.json",
+  "include": ["crum.ts"],
+  "compilerOptions": {
+    "outDir": "../docs/crum/"
+  }
+}
