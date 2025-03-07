@@ -358,6 +358,8 @@ class cleaner:
             yield from iterator
 
 
+# TODO: (#267) Support receiving input directly, instead of reading from a list
+# of files.
 class subindex:
     def __init__(
         self,

@@ -1,7 +1,5 @@
 import unittest
 
-import xooxle
-
 
 class Test(unittest.TestCase):
     def test(self):
