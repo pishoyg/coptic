@@ -552,11 +552,3 @@ table {
   font-weight: normal;
   font-style: italic;
 }
-
-@font-face {
-  font-family: 'Noto Sans Coptic';
-  src: url('/fonts/Noto_Sans_Coptic/NotoSansCoptic-Regular.woff2')
-    format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
