@@ -25,7 +25,7 @@ PREFER_MIN_RESIZE_HEIGHT = 200
 MAX_RESIZE_HEIGHT = 500  # Maximum allowed height of the resized image. (#240)
 PREFER_MAX_RESIZE_HEIGHT = 400
 IMG_DIR = "dictionary/marcion.sourceforge.net/data/img"
-IMG_300_DIR = "dictionary/marcion.sourceforge.net/data/img-300"
+IMG_300_DIR = "docs/crum/explanatory/"
 
 FILE_NAME_RE = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
 STEM_RE = re.compile("[0-9]+-[0-9]+-[0-9]+")
