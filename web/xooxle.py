@@ -101,6 +101,34 @@ _TAG_RE = re.compile(r"^</?(\w+)")
 # EXTENSION is the extension of the files that we are building an index for.
 _EXTENSION = ".html"
 
+BLOCK_ELEMENTS_DEFAULT = {
+    # Each table row goes to a block.
+    "table",
+    "thead",
+    "tbody",
+    "tr",
+    # Each figure caption goes to a block.
+    "figure",
+    "figcaption",
+    "img",
+    # A division creates a new block.
+    "div",
+    # A horizontal line or line break create a block.
+    "hr",
+    "br",
+}
+
+RETAIN_TAGS_DEFAULT = {
+    "b",
+    "i",
+    "strong",
+    "em",
+}
+
+SPACE_ELEMENTS_DEFAULT = {
+    "td",
+}
+
 
 class selector:
     def __init__(self, kwargs: dict, force: bool = True) -> None:
@@ -141,11 +169,12 @@ class capture:
         self,
         name: str,
         _selector: selector,
-        retain_classes: set[str],
-        retain_tags: set[str],
-        retain_elements_for_classes: set[str],
-        block_elements: set[str],
-        unit_tags: set[str],
+        retain_classes: set[str] = set(),
+        retain_tags: set[str] = RETAIN_TAGS_DEFAULT,
+        retain_elements_for_classes: set[str] = set(),
+        block_elements: set[str] = BLOCK_ELEMENTS_DEFAULT,
+        space_elements: set[str] = SPACE_ELEMENTS_DEFAULT,
+        unit_tags: set[str] = set(),
     ) -> None:
         # _name is name of the field.
         self._name: str = name
@@ -165,6 +194,9 @@ class capture:
         # _block_elements is the list of HTML tags that result in newlines in
         # the output.
         self._block_elements: set[str] = block_elements
+        # _space_elements is the list of HTML tags that result in spaces in
+        # the output.
+        self._space_elements: set[str] = space_elements
         # _units is a list of HTML tags that produce `UNIT_DELIMITER` delimiters
         # in the output. You can use this delimiter to separate the text into
         # meaningful units.
@@ -197,6 +229,8 @@ class capture:
             yield UNIT_DELIMITER
         elif child.name in self._block_elements:
             yield LINE_BREAK
+        elif child.name in self._space_elements:
+            yield " "
 
         child_classes = child.get_attribute_list("class")
         classes = self._retain_classes.intersection(child_classes)
@@ -229,6 +263,8 @@ class capture:
             yield UNIT_DELIMITER
         elif child.name in self._block_elements:
             yield LINE_BREAK
+        elif child.name in self._space_elements:
+            yield " "
 
     def _get_navigable_string_text(
         self,

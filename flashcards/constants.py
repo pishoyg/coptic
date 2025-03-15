@@ -1094,51 +1094,6 @@ _COPTICSITE_RETAIN_CLASSES = {
 } | _DIALECTS
 
 
-_BLOCK_ELEMENTS_DEFAULT = {
-    # Each table row goes to a block.
-    "table",
-    "thead",
-    "tbody",
-    "tr",
-    # Each figure caption goes to a block.
-    "figure",
-    "figcaption",
-    "img",
-    # A division creates a new block.
-    "div",
-    # A horizontal line or line break create a block.
-    "hr",
-    "br",
-}
-
-_RETAIN_TAGS_DEFAULT = {
-    "b",
-    "i",
-    "strong",
-    "em",
-}
-
-
-def capture(
-    name: str,
-    _selector: xooxle.selector,
-    retain_classes: set[str] = set(),
-    retain_tags: set[str] = _RETAIN_TAGS_DEFAULT,
-    retain_elements_for_classes: set[str] = set(),
-    block_elements: set[str] = _BLOCK_ELEMENTS_DEFAULT,
-    unit_tags: set[str] = set(),
-) -> xooxle.capture:
-    return xooxle.capture(
-        name=name,
-        _selector=_selector,
-        retain_classes=retain_classes,
-        retain_tags=retain_tags,
-        retain_elements_for_classes=retain_elements_for_classes,
-        block_elements=block_elements,
-        unit_tags=unit_tags,
-    )
-
-
 def _is_crum_word(path: str) -> bool:
     return utils.stem(path).isdigit()
 
@@ -1168,7 +1123,7 @@ CRUM_XOOXLE = xooxle.subindex(
         xooxle.selector({"id": "categories"}, force=False),
     ],
     captures=[
-        capture(
+        xooxle.capture(
             "marcion",
             xooxle.selector({"id": "pretty"}),
             # This is the list of classes needed for highlighting. If the
@@ -1176,13 +1131,13 @@ CRUM_XOOXLE = xooxle.subindex(
             retain_classes=_CRUM_RETAIN_CLASSES,
             retain_elements_for_classes=_CRUM_RETAIN_ELEMENTS_FOR_CLASSES,
         ),
-        capture(
+        xooxle.capture(
             "meaning",
             xooxle.selector({"id": "root-type-meaning"}, force=False),
             retain_classes=_CRUM_RETAIN_CLASSES,
             retain_elements_for_classes=_CRUM_RETAIN_ELEMENTS_FOR_CLASSES,
         ),
-        capture(
+        xooxle.capture(
             "appendix",
             xooxle.selector(
                 {"name": "body"},
@@ -1190,7 +1145,7 @@ CRUM_XOOXLE = xooxle.subindex(
             retain_classes=_CRUM_RETAIN_CLASSES,
             retain_elements_for_classes=_CRUM_RETAIN_ELEMENTS_FOR_CLASSES,
             unit_tags={"tr", "div", "hr"},
-            block_elements=_BLOCK_ELEMENTS_DEFAULT | {"td"},
+            block_elements=xooxle.BLOCK_ELEMENTS_DEFAULT | {"td"},
         ),
     ],
     result_table_name="crum",
@@ -1208,17 +1163,17 @@ KELLIA_XOOXLE = xooxle.subindex(
         xooxle.selector({"class_": "ref"}, force=False),
     ],
     captures=[
-        capture(
+        xooxle.capture(
             "orths",
             xooxle.selector({"id": "orths"}),
             retain_classes=_KELLIA_RETAIN_CLASSES,
         ),
-        capture(
+        xooxle.capture(
             "senses",
             xooxle.selector({"id": "senses"}),
             retain_classes=_KELLIA_RETAIN_CLASSES,
         ),
-        capture(
+        xooxle.capture(
             "text",
             xooxle.selector(
                 {"name": "body"},
@@ -1235,12 +1190,12 @@ COPTICSITE_XOOXLE = xooxle.subindex(
     input=NAME_TO_DECKER[COPTICSITE].notes_key_content_aux(),
     extract=[],
     captures=[
-        capture(
+        xooxle.capture(
             "front",
             xooxle.selector({"id": "front"}),
             retain_classes=_COPTICSITE_RETAIN_CLASSES,
         ),
-        capture(
+        xooxle.capture(
             "back",
             xooxle.selector({"id": "back"}),
         ),
