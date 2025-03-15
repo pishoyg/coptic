@@ -43,12 +43,36 @@
 
 # Rationale:
 #
-# 1. HTML reduction allows us to keep a small index search index, which speeds
-#    up index loading and search time.
+# 1. HTML reduction allows us to keep a small search index, which speeds up
+#    index loading and search time.
 # 2. Given that the searchable content shows as a list of search results,
 #    complex HTML structures can be overwhelming.
 # 3. Nevertheless, some (basic) styling is desirable in the search results
 #    page, which is why we retain some of the features.
+
+# Concurrency
+#
+# In our experimentation, ProcessPoolExecutor was initially found to be roughly
+# 5 times faster than ThreadPoolExecutor. At that point, users were required to
+# provide a directory of HTML files to index.
+# Later on, we started supporting a generator object, which allows us to receive
+# content dynamically, without it being persisted to files.
+# In our first use case with a generator object, ProcessPoolExecutor was found
+# to be around 20 times slower than ThreadPoolExecutor!
+# While we're not certain that this is the culprit, the user used a cache
+# implementation that wasn't process-friendly, and the generator object was
+# provided from a module that relied heavily on static-scope initialization,
+# which get duplicated to each process!
+# It was concluded that some generator implementation can be problematic with
+# ProcessPoolExecutor, and we opted for using ThreadPoolExecutor instead to make
+# our module more versatile, thus sacrificing performance in case where
+# ProcessPoolExecutor can be much faster!
+# ProcessPoolExecutor may indeed be optimal, not just when the input is provided
+# in the form of a directory of HTML files, but also when the input is a
+# "friendly" generator object, although we don't have a concrete definition of
+# that yet, as our understanding of concurrency primitives is still limited.
+# TODO: (#221) Understand concurrency primitives better, and optimize the
+# performance.
 
 # TODO: (#230) Instead of `data` being an array of key-value objects each
 # containing a KEY field, make `data` a key-value object that maps keys to
@@ -56,7 +80,6 @@
 
 import os
 import re
-from concurrent import futures
 from itertools import groupby
 from typing import Callable, Generator, Iterable, Iterator
 
@@ -69,7 +92,7 @@ import utils
 KEY = "KEY"
 # UNIT_DELIMITER is the delimiter used to separate the units of the output text, if
 # such separation is desired for a given field.
-# TODO: This is not a clean way to separate units. Use a list of strings,
+# TODO: (#230) This is not a clean way to separate units. Use a list of strings,
 # instead of a delimiter-separated string.
 UNIT_DELIMITER = '<hr class="match-separator">'
 LINE_BREAK = "<br>"
@@ -89,7 +112,7 @@ class selector:
         soup: bs4.Tag,
     ) -> list[bs4.Tag | bs4.NavigableString]:
         found = soup.find_all(**self._kwargs)
-        assert found or not self._force
+        assert found or not self._force, self._kwargs
         return found
 
     def find(
@@ -358,12 +381,11 @@ class cleaner:
             yield from iterator
 
 
-# TODO: (#267) Support receiving input directly, instead of reading from a list
-# of files.
 class subindex:
     def __init__(
         self,
-        input: str,
+        name: str,
+        input: str | Generator[tuple[str, str]],
         extract: list[selector],
         captures: list[capture],
         result_table_name: str,
@@ -380,16 +402,24 @@ class subindex:
                 `soup.find_all`. and capture from the tree.
         """
 
-        self._input: str = input
+        self.name: str = name
+        self._input: str | Generator[tuple[str, str]] = input
         self._include: Callable | None = include
         self._extract: list[selector] = extract
         self._captures: list[capture] = captures
         self._result_table_name: str = result_table_name
         self._href_fmt: str = href_fmt
 
-    def iter_input(self) -> Generator[str]:
-        assert os.path.isdir(self._input)
+    def iter_input(self) -> Generator[tuple[str, str]]:
+        if isinstance(self._input, Generator):
+            for key, content in self._input:
+                if self._include and not self._include(key):
+                    continue
+                yield key, content
+            return
 
+        assert isinstance(self._input, str)
+        assert os.path.isdir(self._input)
         # Recursively search for all HTML files.
         for root, _, files in os.walk(self._input):
             for file in files:
@@ -398,14 +428,15 @@ class subindex:
                 if self._include and not self._include(file):
                     continue
                 path = os.path.join(root, file)
-                yield path
+                yield path, utils.read(path)
 
     def _is_comment(self, elem: bs4.PageElement) -> bool:
         return isinstance(elem, bs4.element.Comment)
 
-    # Recursively search for all HTML files.
-    def process_file(self, path: str) -> dict[str, str]:
-        entry = bs4.BeautifulSoup(utils.read(path), "html.parser")
+    def process_file(self, _tuple: tuple[str, str]) -> dict[str, str]:
+        path, content = _tuple
+        del _tuple
+        entry = bs4.BeautifulSoup(content, "html.parser")
         # Extract all comments.
         for comment in entry.find_all(text=self._is_comment):
             _ = comment.extract()
@@ -415,9 +446,12 @@ class subindex:
                 element.extract()
 
         # Construct the entry for this file.
-        return {
-            KEY: os.path.relpath(path, self._input)[: -len(_EXTENSION)],
-        } | {
+        if isinstance(self._input, str):
+            key = os.path.relpath(path, self._input)[: -len(_EXTENSION)]
+        else:
+            key = path
+
+        return {KEY: key} | {
             # NOTE: We no longer allow duplicate content in the output.
             # If an element has been selected once, delete it!
             # This implies that the order of captures matters!
@@ -426,13 +460,11 @@ class subindex:
         }
 
     def build(self) -> dict:
-        # NOTE: ProcessPoolExecutor is not compatible with lambda or closures.
-        # ThreadPoolExecutor is, but it is extremely slow, as this process is
-        # CPU-bound not I/O-bound.
-        with futures.ProcessPoolExecutor() as executor:
-            data = executor.map(self.process_file, self.iter_input())
-        # TODO: (#230) The order of the data is not guaranteed to be the same
-        # between runs. Make it deterministic.
+        with utils.ThreadPoolExecutor() as executor:
+            data: Iterable[dict[str, str]] = executor.map(
+                self.process_file,
+                self.iter_input(),
+            )
         return {
             "data": list(data),
             "params": {
@@ -449,19 +481,12 @@ class subindex:
 class index:
     def __init__(self, output: str, *indexes: subindex) -> None:
         self._output: str = output
-        self._indexes: list[subindex] = list(indexes)
+        self._indexes: Iterable[subindex] = indexes
 
     def build(self) -> None:
-        # NOTE: ProcessPoolExecutor is not compatible with lambda or closures.
-        # We avoid them throughout our implementation of the logic that we want
-        # to parallelize.
-        # NOTE: While ThreadPoolExecutor can handle lambda and closures, we
-        # don't use it because it is significantly slower than
-        # ProcessPoolExecutor (roughly 5 times slower in initial experiments).
-        # This is expected because the process is CPU-bound not I/O-bound, thus
-        # ProcessPoolExecutor is the right choice.
-        with futures.ProcessPoolExecutor() as executor:
+        with utils.ThreadPoolExecutor() as executor:
             json: list[dict] = list(
                 executor.map(subindex.build, self._indexes),
             )
+        assert json
         utils.write(utils.json_dumps(json), self._output)

@@ -169,7 +169,10 @@ _flashcards_js: FORCE
 _web_js: FORCE
 	npx tsc -p "web/tsconfig.json"
 _flashcards:
-	./flashcards/main.py
+	./flashcards/main.py \
+		--html \
+		--anki \
+		--xooxle
 _bashandy:
 	./flashcards/bashandy.sh
 .PHONY: flashcards

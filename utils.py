@@ -95,7 +95,6 @@ def html_head_aux(
     scripts: list[str],
     epub: bool = False,
 ) -> typing.Generator[str]:
-    yield "<!DOCTYPE html>"
     yield "<head>"
     yield f"<title>{title}</title>"
     if epub:
@@ -118,6 +117,20 @@ def html_head_aux(
     for script in scripts:
         yield f'<script defer src="{script}" type="text/javascript"></script>'
     yield "</head>"
+
+
+def html_aux(head: str, *body: str) -> typing.Generator[str]:
+    yield "<!DOCTYPE html>"
+    yield "<html>"
+    yield head
+    yield "<body>"
+    yield from body
+    yield "</body>"
+    yield "</html>"
+
+
+def html(head: str, *body: str) -> str:
+    return "".join(html_aux(head, *body))
 
 
 def _print(
@@ -269,28 +282,41 @@ def read_tsv(path: str, sort_values_by=None) -> pd.DataFrame:
     return df
 
 
-_gclient: gspread.Client | None = None
+# TODO: This cache doesn't work with multiprocessing. It's shared by threads,
+# but not between processes.
+class TSV_CACHE:
+    _cache: dict[str, pd.DataFrame] = {}
+
+    @staticmethod
+    def read(path: str) -> pd.DataFrame:
+        if path in TSV_CACHE._cache:
+            return TSV_CACHE._cache[path]
+        df = read_tsv(path)
+        TSV_CACHE._cache[path] = df
+        return df
 
 
-def get_gclient() -> gspread.Client:
-    global _gclient
-    if _gclient:
-        return _gclient
-    credentials = (
-        service_account.ServiceAccountCredentials.from_json_keyfile_name(
-            JSON_KEYFILE_NAME,
-            GSPREAD_SCOPE,
+class GCP_CLIENT:
+    _client: gspread.Client | None = None
+
+    @staticmethod
+    def client() -> gspread.Client:
+        if GCP_CLIENT._client is not None:
+            return GCP_CLIENT._client
+        GCP_CLIENT._client = gspread.authorize(
+            service_account.ServiceAccountCredentials.from_json_keyfile_name(
+                JSON_KEYFILE_NAME,
+                GSPREAD_SCOPE,
+            ),
         )
-    )
-    _gclient = gspread.authorize(credentials)
-    return _gclient
+        return GCP_CLIENT._client
 
 
 def read_gspread(
     gspread_name: str,
     worksheet: int = 0,
 ):
-    return get_gclient().open(gspread_name).get_worksheet(worksheet)
+    return GCP_CLIENT.client().open(gspread_name).get_worksheet(worksheet)
 
 
 def get_column_index(worksheet, column: str) -> int:
@@ -307,7 +333,7 @@ def write_gspread(
     worksheet: int = 0,
 ) -> None:
     gspread_dataframe.set_with_dataframe(
-        get_gclient().open(gspread_name).get_worksheet(worksheet),
+        GCP_CLIENT.client().open(gspread_name).get_worksheet(worksheet),
         df,
     )
 
@@ -356,10 +382,6 @@ def ssplit(line: str, *args) -> list[str]:
     )
 
 
-def use_html_line_breaks(text: str) -> str:
-    return text.replace("\n", "<br/>")
-
-
 def _semver_sort_key(path: str) -> list[str]:
     path = os.path.basename(path)
     return [x.zfill(MAX_INTEGER_LENGTH) for x in INTEGER_RE.findall(path)] + [
@@ -401,8 +423,16 @@ def verify_equal_sets(s1, s2, message: str) -> None:
 # environment variable SEQUENTIAL is set to True.
 # This is useful in the following situations:
 # - Comparing the latencies of sequential and concurrent execution.
-# - Profiling to find the bottlenecks, as cProfile is unable to profile the
+# - Profiling to find the bottlenecks, as cProfile is unable to profile child
 #   tasks.
+# NOTE: When you set the SEQUENTIAL environment variable to force sequential
+# execution for the purpose of profiling, be careful as the analysis may not
+# misleading, and may deviate substantially from the behavior observed when
+# executing concurrently.
+# This was found to be the case when the use of ProcessPoolExecutor in Xooxle,
+# as opposed to ThreadPoolExecutor, resulted in a degradation in performance by
+# a factor of roughly 20! Profiling was misleading, as the bottleneck could only
+# be observed when executing concurrently, and when using ProcessPoolExecutor!
 # TODO: Prevent the use of futures.ProcessPoolExecutor and
 # futures.ThreadPoolExecutor directly in the code, in order for the SEQUENTIAL
 # environment variable to be respected everywhere.
@@ -417,6 +447,12 @@ def env_bool(name: str) -> bool:
 
 
 SEQUENTIAL = env_bool("SEQUENTIAL")
+if SEQUENTIAL:
+    info(
+        "Sequential execution forced by the",
+        "SEQUENTIAL",
+        "environment variable",
+    )
 
 
 # NOTE: To make sure any errors encountered during the execution of the child
@@ -441,6 +477,14 @@ class SequentialExecutor:
         pass
 
 
+# NOTE: `ProcessPoolExecutor` has a few caveats:
+# - It requires all the tasks to be picklable, thus it's problematic with
+#   lambdas and closures, and often complains about generators.
+# - Our static-scope variables are shared between threads, but not between
+#   processes! This can corrupt non-process-safe caches, for example.
+# - In our experimentation, processing time often soared when using
+#   `ProcessPoolExecutor` instead of `ThreadPoolExecutor`, possibly because of
+#   unexpected cache / static-scope behavior.
 def ProcessPoolExecutor() -> futures.ProcessPoolExecutor | SequentialExecutor:
     return (
         SequentialExecutor() if SEQUENTIAL else futures.ProcessPoolExecutor()

@@ -176,6 +176,15 @@ table {
 
 /* stylelint-enable selector-class-pattern */
 
+.explanatory-img {
+  width: auto;
+}
+
+.crum-page-img-img,
+.dawoud-page-img-img {
+  width: 1000px;
+}
+
 .front {
   text-align: center;
 }
@@ -539,16 +548,24 @@ table {
 }
 
 /*************** Fonts ***************/
+
+/* NOTE: The underscore in the basename is required for compatibility with
+ * Anki. See
+ * https://docs.ankiweb.net/templates/styling.html#installing-fonts. While we
+ * have the option of manipulating the rule and altering the font URL while
+ * processing the Anki decks, it's easier for us to just include an
+ * underscore at the source. */
+
 @font-face {
   font-family: Antinoou;
-  src: url('/fonts/AntinoouFont-1.0.6/Antinoou.woff2') format('woff2');
+  src: url('fonts/AntinoouFont-1.0.6/_Antinoou.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: Antinoou;
-  src: url('/fonts/AntinoouFont-1.0.6/AntinoouItalic.woff2') format('woff2');
+  src: url('fonts/AntinoouFont-1.0.6/_AntinoouItalic.woff2') format('woff2');
   font-weight: normal;
   font-style: italic;
 }

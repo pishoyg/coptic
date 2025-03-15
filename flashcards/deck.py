@@ -1,80 +1,45 @@
+# TODO: For text generation, it's likely more efficient to use generators
+# and avoid concatenating the strings, unless necessary.
+# You can also use `writelines` instead of `write` to write a file, thus
+# avoiding saving the data in memory at any point.
 import os
-import shutil
+import re
 import typing
-from concurrent import futures
 
-import field
 import genanki  # type: ignore[import-untyped]
 
 import utils
 
-HTML_FMT = f"""<!DOCTYPE html>
-<html>
-  {{head}}
-  <body>
-    <div class="front" id="front">
-        {{front}}
-    </div>
-    <hr/>
-    <div class="back" id="back">
-        {{back}}
-    </div>
-  </body>
-</html>
-"""
+NOTE_CLASS = "NOTE"
+ANKI_NOTE_CLASS = "ANKI"
+INDEX_CLASS = "INDEX"
+INDEX_INDEX_CLASS = "INDEX_INDEX"
 
-# The HTML FMT string for an index.
-HTML_INDEX_FMT = f"""<!DOCTYPE html>
-<html>
-  {{head}}
-  <body>
-  {{body}}
-  </body>
-</html>
-"""
-
-# NOTE: In the Anki version of JavaScript, everything is wrapped in a function,
-# because global variables have been problematic with Anki.
-# See https://github.com/pishoyg/coptic/issues/186.
-ANKI_JS_FMT = """(() => {{
-    const ANKI = true;
-    {javascript}
-}})();"""
+IMG_SRC_FMT = re.compile(r'<img src="([^"]+)"')
+FONT_SRC_RE = re.compile(r"src: url\('([^']*)'\)")
 
 
-class stats:
-    def __init__(self) -> None:
-        self._exported_notes = 0
-        self._no_key = 0
-        self._no_front = 0
-        self._no_back = 0
-        self._no_title = 0
-        self._duplicate_key = 0
+def _html_src_to_basename(match: re.Match) -> str:
+    return f'<img src="{os.path.basename(match.group(1))}"'
 
-    def problematic(self, count: int, message: str) -> None:
-        if count:
-            utils.warn("", count, message)
-            return
-        utils.info("", count, message)
 
-    def print(self) -> None:
-        utils.info("Exported", self._exported_notes, "notes.")
-        self.problematic(self._no_key, "notes are missing a key.")
-        self.problematic(self._no_front, "notes are missing a front.")
-        self.problematic(self._no_back, "notes are missing a back.")
-        self.problematic(self._no_title, "notes are missing a title.")
-        self.problematic(self._duplicate_key, "notes have duplicate keys.")
+def _css_src_to_basename(match: re.Match) -> str:
+    return f"src: url('{os.path.basename(match.group(1))}')"
 
 
 class Note(genanki.Note):
     @property
+    @typing.override
+    # TODO: Resolve this error:
+    #   "guid" incorrectly overrides property of same name in class "Note"
+    #   Property method "fset" is missing in override [reportIncompatibleMethodOverride]
     def guid(self):
         # Only use the key field to generate a GUID.
         assert self.fields
         return genanki.guid_for(self.fields[2])
 
 
-def to_file_name(name: str) -> str:
+def _to_file_name(name: str) -> str:
     return name.replace("/", "_").lower()
 
 
@@ -89,101 +54,184 @@ class header_cell:
         yield "</td>"
 
 
-class header_generator:
+class _headerer:
     def __init__(self, base_cells: list[header_cell]) -> None:
-        self.base_cells = base_cells
+        self.cells = base_cells
 
-    def generate_header(self, cells) -> str:
-        return "".join(self._generate_header_aux(cells))
+    def header(self) -> str:
+        return "".join(self.header_aux())
 
-    def _generate_header_aux(
-        self,
-        cells: list[header_cell] = [],
-    ) -> typing.Generator[str]:
-        cells = self.base_cells + cells
+    def header_aux(self) -> typing.Generator[str]:
         yield '<table id="header" class="header">'
         yield "<tr>"
-        for cell in cells:
+        for cell in self.cells:
             yield from cell.td()
         yield "</tr>"
         yield "</table>"
 
 
+# TODO: Rename index to subindex, and rename index_index to index.
 class index:
-    def __init__(self, title: str, count: int, html_body: str) -> None:
+    def __init__(
+        self,
+        title: str,
+        count: int,
+        body: typing.Generator[str],
+    ) -> None:
         self.title = title
         self.count = count
-        self.html_body = html_body
+        self.body = body
 
     def basename(self) -> str:
-        return to_file_name(self.title) + ".html"
+        return _to_file_name(self.title) + ".html"
 
-    def write(
-        self,
-        dir: str,
-        header: str,
-        **html_head_kwargs,
-    ) -> None:
-        with open(os.path.join(dir, self.basename()), "w") as f:
-            f.write(
-                HTML_INDEX_FMT.format(
-                    head=utils.html_head(
-                        title=self.title,
-                        page_class="INDEX",
-                        **html_head_kwargs,
-                    ),
-                    body=header + self.html_body,
-                ),
-            )
+    def write(self, dir: str, head: str, header: str) -> None:
+        content = utils.html_aux(head, header, *self.body)
+        path = os.path.join(dir, self.basename())
+        utils.writelines(content, path, log=False)
 
 
 class index_index:
-    def __init__(self, name: str, indexes: list[index]):
+    def __init__(
+        self,
+        name: str,
+        indexes: list[index],
+        home: str,
+        search: str,
+        scripts: list[str],
+    ):
         self.name = name
         self.indexes = indexes
+        self.home = home
+        self.search = search
+        self.scripts = scripts
 
-    def basename(self) -> str:
-        return to_file_name(self.name) + ".html"
+        cells: list[header_cell] = []
+        if home:
+            cells.append(header_cell("Home", home))
+        if search:
+            cells.append(header_cell("Search", search))
+        self.header: str = _headerer(cells).header()
+        # The subindex header is the same as the index header, with one extra
+        # cell pointing to the index that this subindex belongs to.
+        cells.append(header_cell(self.name, self.__basename()))
+        self.subindex_header: str = _headerer(cells).header()
+        del cells
 
-    def write(
-        self,
-        dir: str,
-        header_base_cells: list[header_cell],
-        **html_head_kwargs,
-    ):
-        headerer = header_generator(header_base_cells)
+    def __basename(self) -> str:
+        return _to_file_name(self.name) + ".html"
+
+    def __iter_subindex_heads(self) -> typing.Generator[str]:
+        for i, index in enumerate(self.indexes):
+            prev = self.indexes[i - 1].basename() if i > 0 else ""
+            next = (
+                self.indexes[i + 1].basename()
+                if i < len(self.indexes) - 1
+                else ""
+            )
+            yield utils.html_head(
+                title=index.title,
+                page_class=INDEX_CLASS,
+                search=self.search,
+                scripts=self.scripts,
+                prev=prev,
+                next=next,
+            )
+
+    def __write_subindex(self, args: tuple[index, str]) -> None:
+        subindex, head = args
+        subindex.write(self.dir, head, self.subindex_header)
+
+    def write(self, dir: str):
         # A subindex header includes a link to the index that contains
         # this subindex.
-        subindex_header = headerer.generate_header(
-            [header_cell(self.name, self.basename())],
-        )
-        for index in self.indexes:
-            index.write(dir=dir, header=subindex_header, **html_head_kwargs)
-        del subindex_header
-
-        # Write the index index!
-        body = headerer.generate_header([]) + "".join(self._generate_body())
-        with open(os.path.join(dir, self.basename()), "w") as f:
-            f.write(
-                HTML_INDEX_FMT.format(
-                    head=utils.html_head(
-                        title=self.name,
-                        page_class="INDEX_INDEX",
-                        **html_head_kwargs,
-                    ),
-                    body=body,
+        self.dir = dir
+        del dir
+        with utils.ThreadPoolExecutor() as executor:
+            list(
+                executor.map(
+                    self.__write_subindex,
+                    zip(self.indexes, self.__iter_subindex_heads()),
                 ),
             )
 
-    def _generate_body(self) -> typing.Generator[str]:
+        # Write the index index!
+        head = utils.html_head(
+            title=self.name,
+            page_class=INDEX_INDEX_CLASS,
+            search=self.search,
+            scripts=self.scripts,
+        )
+        html = utils.html_aux(
+            head,
+            *self.header,
+            *self.__body_aux(),
+        )
+        path = os.path.join(self.dir, self.__basename())
+        utils.writelines(html, path, log=False)
+
+    def __body_aux(self) -> typing.Generator[str]:
         yield f"<h1>{self.name}</h2>"
         yield '<ol class="index-index-list">'
         for index in self.indexes:
             yield '<li class="index-view">'
-            yield f'<a class="navigate" href="{to_file_name(index.title)}.html">{index.title}</a>'
+            yield f'<a class="navigate" href="{_to_file_name(index.title)}.html">{index.title}</a>'
             yield f' <span class="index-count">({index.count})</span>'
             yield "</li>"
         yield "</ol>"
+
+
+class note:
+    def __init__(
+        self,
+        key: str,
+        front: str,
+        back: str,
+        title: str,
+        prev: str = "",
+        next: str = "",
+        search: str = "",
+        js_path: str = "",
+        force_content: bool = True,
+    ) -> None:
+
+        assert key
+        assert title
+        if force_content:
+            assert front
+            assert back
+        else:
+            assert front or back
+
+        self.key: str = key
+        self.front: str = front
+        self.back: str = back
+        self.js_path: str = js_path
+        self.head = utils.html_head(
+            title=title,
+            page_class=NOTE_CLASS,
+            search=search,
+            next=next,
+            prev=prev,
+            scripts=[js_path] if js_path else [],
+        )
+        self.html: str = "".join(self.__html_aux())
+
+    def __html_aux(self) -> typing.Generator[str]:
+        return utils.html_aux(
+            self.head,
+            '<div class="front" id="front">',
+            self.front,
+            "</div>",
+            "<hr/>",
+            '<div class="back" id="back">',
+            self.back,
+            "</div>",
+        )
+
+    def write(self, dir: str) -> None:
+        path: str = os.path.join(dir, self.key + ".html")
+        utils.write(self.html, path, log=False)
 
 
 class deck:
@@ -192,218 +240,68 @@ class deck:
         deck_name: str,
         deck_id: int,
         deck_description: str,
-        css: str,
-        javascript_path: str,
-        key: field.field,
-        front: field.field,
-        back: field.field,
-        title: field.field,
-        prev: typing.Optional[field.field] = None,
-        next: typing.Optional[field.field] = None,
-        search: str = "",
-        home: str = "",
-        force_key: bool = True,
-        force_no_duplicate_keys: bool = True,
-        force_front: bool = True,
-        force_back: bool = True,
-        force_title: bool = True,
-        back_for_front: bool = False,
-        key_for_title: bool = False,
+        css_path: str,
+        # TODO: Use a generator instead of a list.
+        notes: list[note],
+        html_dir: str = "",
         index_indexes: list[index_index] = [],
+        write_html: bool = False,
     ) -> None:
-        """Generate an Anki package.
-
-        Args:
-            key:
-            This is a critical field. The note keys will be used as database
-            keys to enable synchronization. It is important for the keys to be (1)
-            unique, and (2) persistent. Use a different key for each note. And do
-            not change the keys liberally between different version of the code
-            and the generated package.
-            The note keys must also be unique across decks.,
-
-            front:
-            Format of the card fronts. See description for syntax.
-
-            back:
-            Format of the card backs. See description for syntax.
-
-            title:
-            The "title" field. If absent, the keys will be used as title.
-
-            css:
-            Global CSS. Please notice that the front will be given the id
-            "front" and the back will have the id "back". You can use these IDs if'
-            you want to make your CSS format side-specific."
-            Only TXT fields are allowed for this flag.,
-
-            deck_name:
-            Deck name in the generated Anki package.
-
-            deck_id:
-            Deck ID in the generated Anki package.,
-
-            deck_description:
-            Deck description in the generated Anki package. Only TXT fields are
-            allowed here.,
-
-            back_for_front:
-            If true, and the front is absent, use the back instead.
-
-            index_generate:
-            A function that can be used to provide indexes about the deck. Each
-            index should be a pair of strings representing the title and the
-            content of an index.
-        """
 
         self.deck_name: str = deck_name
         self.deck_id: int = deck_id
         self.deck_description: str = deck_description
-        self.css: str = css
-        self.javascript_path: str = javascript_path
-        self.keys: list[str] = []
-        self.raw_keys: list[str] = []
-        self.fronts: list[str] = []
-        self.backs: list[str] = []
-        self.titles: list[str] = []
-        self.prevs: list[str] = []
-        self.nexts: list[str] = []
-        self.search: str = search
-        self.home: str = home
-        self.length: int = field.num_entries(key, front, back)
-
-        assert self.length != field.NO_LENGTH
-        seen_keys = set()
-        ss = stats()
-        for _ in range(self.length):
-            k = key.next()
-            f = front.next()
-            b = back.next()
-            t = title.next()
-            p = prev.next() if prev else ""
-            n = next.next() if next else ""
-
-            assert k or not force_key
-            assert k not in seen_keys or not force_no_duplicate_keys
-            assert f or not force_front
-            assert b or not force_back
-            assert t or not force_title
-
-            if not k:
-                # No key! Skip!
-                ss._no_key += 1
-                continue
-            if k in seen_keys:
-                # Key already seen! Skip!
-                ss._duplicate_key += 1
-                continue
-            seen_keys.add(k)
-            if not f:
-                # No front!
-                ss._no_front += 1
-                if back_for_front:
-                    f = b
-                else:
-                    continue
-            if not b:
-                # No back! Do nothing!
-                ss._no_back += 1
-            if not t:
-                # No title!
-                ss._no_title += 1
-                if key_for_title:
-                    t = k
-                else:
-                    continue
-
-            assert isinstance(k, str)
-            assert isinstance(f, str)
-            assert isinstance(b, str)
-            assert isinstance(t, str)
-            assert isinstance(n, str)
-            assert isinstance(p, str)
-            self.keys.append(f"{deck_name} - {k}")
-            self.raw_keys.append(k)
-            self.fronts.append(f)
-            self.backs.append(b)
-            self.titles.append(t)
-            self.nexts.append(n)
-            self.prevs.append(p)
-            ss._exported_notes += 1
-
-        utils.info("Deck:", deck_name)
-        ss.print()
-        utils.info("____________________")
-        self.media = field.merge_media_files(key, front, back)
-        self.index_indexes: list[index_index] = index_indexes
-
-    def write_web(self, dir: str) -> None:
-        scripts: list[str] = []
-        if self.javascript_path:
-            # NOTE: Right now, we don't copy any JavaScript files. We assume
-            # that it already exists in the directory.
-            # This is an intentional design decision, as we expect the
-            # JavaScript to be produced by another pipeline.
-            assert self.javascript_path.startswith(dir)
-            scripts.append(os.path.basename(self.javascript_path))
-
-        with futures.ThreadPoolExecutor() as executor:
-            executor.map(lambda x: shutil.copy(x, dir), self.media)
-
-        for rk, front, back, title, prev, next in zip(
-            self.raw_keys,
-            self.fronts,
-            self.backs,
-            self.titles,
-            self.prevs,
-            self.nexts,
-        ):
-            with open(os.path.join(dir, rk + ".html"), "w") as f:
-                f.write(
-                    HTML_FMT.format(
-                        head=utils.html_head(
-                            title=title,
-                            page_class="NOTE",
-                            search=self.search,
-                            next=next,
-                            prev=prev,
-                            scripts=scripts,
-                        ),
-                        front=front,
-                        back=back,
-                    ),
-                )
-
-        header_base_cells: list[header_cell] = []
-        if self.home:
-            header_base_cells.append(header_cell("Home", self.home))
-        if self.search:
-            header_base_cells.append(header_cell("Search", self.search))
-        for idx_idx in self.index_indexes:
-            idx_idx.write(
-                dir=dir,
-                header_base_cells=header_base_cells,
-                scripts=scripts,
-                search=self.search,
-            )
-
-        utils.wrote(dir)
-
-    def html_to_anki(self, html: str) -> str:
-        # TODO: This won't work if the HTML gets formatted before making it to
-        # this step. Reimplement.
-        html = html.replace(field.AUDIO_FMT_L, "[sound:")
-        html = html.replace(field.AUDIO_FMT_R, "]")
-        return html
-
-    def anki(self) -> tuple[genanki.Deck, list[str]]:
-        javascript = (
-            ANKI_JS_FMT.format(
-                javascript=utils.read(self.javascript_path),
-            )
-            if self.javascript_path
-            else ""
+        self.css_dir: str = os.path.dirname(css_path)
+        self.css: str = utils.read(css_path)
+        self.notes: list[note] = notes
+        utils.verify_unique(
+            (note.key for note in self.notes),
+            "Note keys must be unique!",
         )
+        self.index_indexes: list[index_index] = index_indexes
+        self.html_dir: str = html_dir
+        self.write_html: bool = write_html
+
+    def __write_html(self, o: note | index_index) -> None:
+        o.write(self.html_dir)
+
+    def write_html_if_needed(self) -> None:
+        if not self.write_html:
+            return
+        assert self.html_dir
+        with utils.ThreadPoolExecutor() as executor:
+            list(executor.map(self.__write_html, self.notes))
+            list(executor.map(self.__write_html, self.index_indexes))
+        utils.wrote(self.html_dir)
+
+    def __anki_html(self, html: str) -> str:
+        return IMG_SRC_FMT.sub(_html_src_to_basename, html)
+
+    def __anki_css(self) -> str:
+        return FONT_SRC_RE.sub(_css_src_to_basename, self.css)
+
+    def __anki_js_aux(self) -> typing.Generator[str]:
+        js_path = self.notes[0].js_path
+        # We don't allow notes to have different JavaScript, because in our Anki
+        # package, we define the JavaScript in the template.
+        assert all(note.js_path == js_path for note in self.notes)
+        if not js_path:
+            return
+        # Like the media files, the JavaScript path is relative to the HTML
+        # write directory.
+        js_path = os.path.join(self.html_dir, js_path)
+        # We wrap everything in a function, because global variables have been
+        # problematic with Anki.
+        # See https://github.com/pishoyg/coptic/issues/186.
+        yield "(() => {"
+        yield f"const {ANKI_NOTE_CLASS} = true;"
+        yield utils.read(js_path)
+        yield "})();"
+
+    def anki(self) -> tuple[genanki.Deck, typing.Iterable[str]]:
+        # Anki can't pick up the JavaScript. It must be inserted into the
+        # template.
+        javascript = "".join(self.__anki_js_aux())
         model = genanki.Model(
             model_id=self.deck_id,
             name=self.deck_name,
@@ -421,7 +319,7 @@ class deck:
                     + f'<script type="text/javascript">{javascript}</script>',
                 },
             ],
-            css=self.css,
+            css=self.__anki_css(),
         )
 
         deck = genanki.Deck(
@@ -429,9 +327,33 @@ class deck:
             name=self.deck_name,
             description=self.deck_description,
         )
-        for k, f, b in zip(self.keys, self.fronts, self.backs):
-            # Notice that the field order is not uniform across our code.
-            b = self.html_to_anki(b)
-            note = Note(model=model, fields=[f, b, k])
-            deck.add_note(note)
-        return deck, self.media
+
+        for note in self.notes:
+            front = self.__anki_html(note.front)
+            back = self.__anki_html(note.back)
+            key = f"{self.deck_name} - {note.key}"
+            deck.add_note(Note(model=model, fields=[front, back, key]))
+
+        # Pick up the media.
+        font_paths = {
+            os.path.join(self.css_dir, path)
+            for path in FONT_SRC_RE.findall(self.css)
+        }
+        assert font_paths  # We know we have fonts in our CSS.
+        # Fonts must have an underscore prefix. See
+        # https://docs.ankiweb.net/templates/styling.html#installing-fonts.
+        assert all(
+            os.path.basename(path).startswith("_") for path in font_paths
+        )
+
+        image_paths = {
+            os.path.join(self.html_dir, path)
+            for note in self.notes
+            for path in IMG_SRC_FMT.findall(note.html)
+        }
+
+        media = font_paths | image_paths
+        del font_paths, image_paths
+        assert all(os.path.isfile(path) for path in media)
+
+        return deck, media
