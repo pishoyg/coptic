@@ -1,3 +1,4 @@
+# TODO: This file is too big. We should split it up into multiple files.
 import collections
 import json
 import os
@@ -5,6 +6,7 @@ import pathlib
 import re
 import shutil
 import typing
+from concurrent import futures
 
 import bs4
 import colorama
@@ -386,3 +388,57 @@ def verify_equal_sets(s1, s2, message: str) -> None:
     diff = s2.difference(s1)
     if diff:
         fatal(message, diff, "present in the latter but not the former")
+
+
+# The following types provide executors that execute sequentially if the
+# environment variable SEQUENTIAL is set to True.
+# This is useful in the following situations:
+# - Comparing the latencies of sequential and concurrent execution.
+# - Profiling to find the bottlenecks, as cProfile is unable to profile the
+#   tasks.
+# TODO: Prevent the use of futures.ProcessPoolExecutor and
+# futures.ThreadPoolExecutor directly in the code, in order for the SEQUENTIAL
+# environment variable to be respected everywhere.
+def env_bool(name: str) -> bool:
+    val = os.getenv(name, "0").lower()
+    if val in ["false", "0", ""]:
+        return False
+    if val in ["true", "1"]:
+        return True
+    warn(name, "has an unparsable value:", val, "we assume", True)
+    return True
+
+
+SEQUENTIAL = env_bool("SEQUENTIAL")
+
+
+# NOTE: To make sure any errors encountered during the execution of the child
+# tasks propagate to the parent task, make sure to loop over the generator
+# returned by the `map` method.
+#     with utils.ThreadPoolExecutor() as executor:
+#       # Code that uses `data`.
+# If the returned data doesn't need to be used, you can simply convert the
+# generator to a list:
+#     with utils.ThreadPoolExecutor() as executor:
+#       list(executor.map(fn, data))
+# Our types don't implement a `submit` method despite its convenient because
+# it's tricker to mimic, and error propagation with `submit` is also trickier.
+class SequentialExecutor:
+    def map(self, fn: typing.Callable, *iterables: typing.Iterable):
+        return map(fn, *iterables)
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        pass
+
+
+def ProcessPoolExecutor() -> futures.ProcessPoolExecutor | SequentialExecutor:
+    return (
+        SequentialExecutor() if SEQUENTIAL else futures.ProcessPoolExecutor()
+    )
+
+
+def ThreadPoolExecutor() -> futures.ThreadPoolExecutor | SequentialExecutor:
+    return SequentialExecutor() if SEQUENTIAL else futures.ThreadPoolExecutor()
