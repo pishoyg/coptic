@@ -41,6 +41,9 @@ _install() {
   if ! command -v gh &> /dev/null; then
     echo -e "${RED}Please install ${YELLOW}gh${RED} from ${YELLOW}https://cli.github.com/${RED}.${RESET}"
   fi
+  if ! command -v dot &> /dev/null; then
+    echo -e "${YELLOW}Consider installing ${CYAN}dot${YELLOW} from ${CYAN}https://graphviz.org/${YELLOW}.${RESET}";
+  fi
   if ! command -v say &> /dev/null; then
     echo -e "${YELLOW}Consider installing ${CYAN}say${YELLOW}. This should be possible with ${CYAN}sudo apt-get install gnustep-gui-runtime${YELLOW} on Ubuntu.${RESET}";
   fi
