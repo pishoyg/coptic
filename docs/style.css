@@ -88,8 +88,12 @@ body {
   padding: 10px;
 }
 
-body,
-input {
+/* Although we strongly prefer Antinoou, it causes display jitter on AnkiDroid,
+ * so we disable it. See
+ * https://forums.ankiweb.net/t/card-layout-became-jumpy-after-adding-custom-font/42937.
+ * It seems like a common problem that is not going to be resolved soon. */
+body:not(.android .card),
+input:not(.android .card) {
   font-family: Antinoou, sans-serif;
 }
 
