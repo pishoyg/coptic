@@ -296,13 +296,6 @@ Site).
    The `git --word-diff` command is helpful when our line-oriented `diff` is
    not readable. Keep this in mind when structuring your output data.
 
-1. We force the existence of unit tests, at least one for each Python file.
-   While these have so far been mere placeholders, the mere import of a package
-   sometimes catches syntax errors, and the placeholders will make it
-   convenient to write tests whenever desired. A big benefit of unit tests is
-   that they make us confident that a change is correct, so we can speed up the
-   development process.
-
 1. Do not let Python tempt you to use its built-in types instead of classes and
    objects. Don't forget about OOP!
 
@@ -313,15 +306,7 @@ can often infer the types without hints, and would throw an error whenever an
 explicit type annotation is needed), it's still encouraged to use type hints
 extensively.
 
-1. Collect and print stats.
-
 1. Color the outputs whenever you can. It keeps your programmers entertained!
-
-1. Keep your code `grep`-able, especially when it comes to the constants used
-   across directories.
-
-1. Privatize methods whenever possible. Use the name mangling feature in
-   Python.
 
 ### Languages
 

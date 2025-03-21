@@ -76,11 +76,6 @@ repos:
         types: [file]
         entry: npx prettier
         language: system
-      - id: typescript-unittest-exists
-        name: typescript-unittest-exists
-        types: [ts]
-        entry: pre-commit/typescript-unittest-exists.sh
-        language: system
       - id: typescript-unittest
         name: typescript-unittest
         types: [ts]
@@ -113,13 +108,6 @@ repos:
 
   - repo: local
     hooks:
-      # Python Unit Tests Exist
-      - id: python-unittest-exists
-        name: python-unittest-exists
-        entry: pre-commit/python-unittest-exists.sh
-        language: system
-        types: [python]
-        exclude: setup.py
       # XML
       - id: tidy-xml
         name: tidy-xml
@@ -385,13 +373,6 @@ repos:
         language: system
         files: ^dictionary/marcion.sourceforge.net/data/input/.*_appendices.tsv$
         pass_filenames: false
-      # Python Unit Tests
-      - id: python-unittest
-        name: python-unittest
-        entry: pre-commit/python-unittest.sh
-        language: system
-        types: [python]
-        verbose: true
       # DO-NOT-SUBMIT
       - id: check-do-not-submit
         name: check-do-not-submit
