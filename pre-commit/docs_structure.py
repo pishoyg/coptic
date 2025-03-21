@@ -29,6 +29,7 @@ PATTERNS: list[Pattern] = [
     Pattern("style.css"),
     Pattern("crum/index.html"),
     Pattern("dawoud/index.html"),
+    Pattern(".nojekyll"),
     # Data files:
     Pattern("img/**"),
     Pattern("fonts/**"),
