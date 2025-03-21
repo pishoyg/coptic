@@ -223,11 +223,6 @@ repos:
     hooks:
       - id: doc8
 
-  - repo: https://github.com/PyCQA/eradicate
-    rev: 2.3.0
-    hooks:
-      - id: eradicate
-
   # Language-agnostic
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
