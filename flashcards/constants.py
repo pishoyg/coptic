@@ -35,6 +35,7 @@ EXPLANATORY_DIR = "explanatory/"  # Relative to the HTML write directory.
 EMAIL = "remnqymi@gmail.com"
 DESCRIPTION = "https://remnqymi.com"
 KELLIA_PREFIX = "https://coptic-dictionary.org/entry.cgi?tla="
+DAWOUD_SURNAME = "Abdelnoor"
 
 DICTIONARY_PAGE_RE = re.compile("([0-9]+(a|b))")
 TLA_ID_RE = re.compile(r'\bid="[^"]+"')
@@ -555,9 +556,7 @@ class Crum(decker):
             )
             yield _aon(
                 LINE_BREAK,
-                # Abd-El-Nour is Dawoud's actual last name! We continue
-                # to refer to him as Dawoud throughout the repo.
-                '<b><a href="#dawoud" class="dawoud hover-link">Abd-El-Nour</a>: </b>',
+                f'<b><a href="#dawoud" class="dawoud hover-link">{DAWOUD_SURNAME}</a>: </b>',
                 DICTIONARY_PAGE_RE.sub(
                     r'<span class="dawoud-page">\1</span>',
                     dawoud.replace(",", ", "),
@@ -705,9 +704,7 @@ class Crum(decker):
             yield '<div id="dawoud" class="dawoud dictionary">'
             yield '<span class="right">'
             # Dawoud's pages.
-            # Abd-El-Nour is Dawoud's actual last name! We continue
-            # to refer to him as Dawoud throughout the repo.
-            yield '<b><a href="#dawoud" class="dawoud hover-link">Abd-El-Nour</a>: </b>'
+            yield f'<b><a href="#dawoud" class="dawoud hover-link">{DAWOUD_SURNAME}</a>: </b>'
             page_ranges = self.__cell(row, "dawoud-pages", force=False)
             yield DICTIONARY_PAGE_RE.sub(
                 r'<span class="dawoud-page">\1</span>',
