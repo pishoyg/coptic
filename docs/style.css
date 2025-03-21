@@ -144,6 +144,10 @@ table {
   .big-screen-only {
     display: none;
   }
+
+  body {
+    font-size: 18px;
+  }
 }
 
 .logo {
