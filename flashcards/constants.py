@@ -276,6 +276,9 @@ class _crum_indexer(_mother):
         ]
 
 
+# TODO: (#221) The produced HTML is identical between all versions of the Crum
+# decks. They only differ in the JavaScript, and the subset of the notes
+# included. Deduplicate the work to save a bit of time.
 class Crum(decker):
 
     key_sense_code_sense: dict[str, dict[str, str]] = {}
