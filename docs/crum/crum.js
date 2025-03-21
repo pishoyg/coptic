@@ -1119,6 +1119,94 @@ function click(id) {
 function focus(id) {
   document.getElementById(id).focus();
 }
+function linkifyText(
+  root,
+  regex,
+  url,
+  classes,
+  direct_parent_excluded_classes = []
+) {
+  const admit = (node) => {
+    if (!node.nodeValue) {
+      // The node has no text!
+      return false;
+    }
+    if (!regex.test(node.nodeValue)) {
+      // This text node doesn't match the regex.
+      return false;
+    }
+    const parent = node.parentElement;
+    if (!parent) {
+      // We can't examine the parent tag name or classes for exclusions.
+      // Accept the node.
+      return true;
+    }
+    if (parent.tagName == 'a') {
+      // The parent is already a link!
+      return false;
+    }
+    if (
+      direct_parent_excluded_classes.some((cls) =>
+        parent.classList.contains(cls)
+      )
+    ) {
+      // This parent is explicitly excluded.
+      return false;
+    }
+    return true;
+  };
+  const walker = document.createTreeWalker(
+    root,
+    NodeFilter.SHOW_TEXT,
+    (node) =>
+      admit(node) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT
+  );
+  // We must store the replacements in a list because we can't mutate the DOM
+  // while walking.
+  const replacements = [];
+  for (let node; (node = walker.nextNode()); ) {
+    if (!node.nodeValue) {
+      continue;
+    }
+    const fragment = document.createDocumentFragment();
+    let lastIndex = 0;
+    const text = node.nodeValue;
+    regex.lastIndex = 0;
+    for (let match; (match = regex.exec(text)) !== null; ) {
+      const query = match[0];
+      fragment.appendChild(
+        document.createTextNode(text.slice(lastIndex, match.index))
+      );
+      const link = document.createElement('span');
+      link.classList.add(...classes);
+      link.onclick = () => {
+        window_open(url + query);
+      };
+      link.textContent = query;
+      fragment.appendChild(link);
+      lastIndex = match.index + query.length;
+    }
+    if (lastIndex < text.length) {
+      fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
+    }
+    replacements.push([node, fragment]);
+  }
+  replacements.forEach(([node, fragment]) => {
+    node.replaceWith(fragment);
+  });
+}
+function handleCopticLookups(root = document.body) {
+  linkifyText(
+    root,
+    COPTIC_RE,
+    LOOKUP_URL_PREFIX,
+    ['hover-link'],
+    ['type', 'title']
+  );
+}
+function handleGreekLookups(root = document.body) {
+  linkifyText(root, GREEK_RE, GREEK_LOOKUP_URL_PREFIX, ['link', 'light']);
+}
 function handleNonXooxleOnlyElements() {
   // Handle 'categories' class.
   document.querySelectorAll('.categories').forEach((elem) => {
@@ -1272,6 +1360,8 @@ function handleNonXooxleOnlyElements() {
       reset(dialectCheckboxes, highlighter);
     };
   });
+  handleCopticLookups();
+  handleGreekLookups();
 }
 function initGoogleSearchBox() {
   const googleSearchBox = document.querySelector('#google input');
@@ -1306,9 +1396,9 @@ function handleXooxleOnlyElements() {
   });
   const active = activeDialects();
   dialectCheckboxes.forEach((checkbox) => {
-    // When we first load the page, 'd' dictates the set of active dialects and
-    // hence highlighting. We load 'd' from the local storage, and we update the
-    // boxes to match this set.
+    // When we first load the page, 'd' dictates the set of active dialects
+    // and hence highlighting. We load 'd' from the local storage, and we
+    // update the boxes to match this set.
     checkbox.checked = active?.includes(checkbox.name) ?? false;
     checkbox.addEventListener('click', () => {
       syncDialects(checkbox.name).forEach((d) => {
@@ -1330,76 +1420,6 @@ function handleXooxleOnlyElements() {
   // script. The correct way to do this is to wrap this in a `load` event
   // handler.
   window.addEventListener('load', initGoogleSearchBox);
-}
-function linkifyText(regex, url, classes, direct_parent_excluded_classes = []) {
-  const admit = (node) => {
-    if (!node.nodeValue) {
-      // The node has no text!
-      return false;
-    }
-    if (!regex.test(node.nodeValue)) {
-      // This text node doesn't match the regex.
-      return false;
-    }
-    const parent = node.parentElement;
-    if (!parent) {
-      // We can't examine the parent tag name or classes for exclusions.
-      // Accept the node.
-      return true;
-    }
-    if (parent.tagName == 'a') {
-      // The parent is already a link!
-      return false;
-    }
-    if (
-      direct_parent_excluded_classes.some((cls) =>
-        parent.classList.contains(cls)
-      )
-    ) {
-      // This parent is explicitly excluded.
-      return false;
-    }
-    return true;
-  };
-  const walker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_TEXT,
-    (node) =>
-      admit(node) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT
-  );
-  // We must store the replacements in a list because we can't mutate the DOM
-  // while walking.
-  const replacements = [];
-  for (let node; (node = walker.nextNode()); ) {
-    if (!node.nodeValue) {
-      continue;
-    }
-    const fragment = document.createDocumentFragment();
-    let lastIndex = 0;
-    const text = node.nodeValue;
-    regex.lastIndex = 0;
-    for (let match; (match = regex.exec(text)) !== null; ) {
-      const query = match[0];
-      fragment.appendChild(
-        document.createTextNode(text.slice(lastIndex, match.index))
-      );
-      const link = document.createElement('span');
-      link.classList.add(...classes);
-      link.onclick = () => {
-        window_open(url + query);
-      };
-      link.textContent = query;
-      fragment.appendChild(link);
-      lastIndex = match.index + query.length;
-    }
-    if (lastIndex < text.length) {
-      fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
-    }
-    replacements.push([node, fragment]);
-  }
-  replacements.forEach(([node, fragment]) => {
-    node.replaceWith(fragment);
-  });
 }
 function handleCommonElements() {
   highlighter.update();
@@ -1425,8 +1445,6 @@ function handleCommonElements() {
       e.stopPropagation();
     }
   });
-  linkifyText(COPTIC_RE, LOOKUP_URL_PREFIX, ['hover-link'], ['type', 'title']);
-  linkifyText(GREEK_RE, GREEK_LOOKUP_URL_PREFIX, ['link', 'light']);
 }
 function main() {
   if (xooxle()) {
