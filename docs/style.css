@@ -382,7 +382,7 @@ table {
   border-bottom: 1px solid black;
 }
 
-.results .type {
+.results#crum .type {
   opacity: 0.3;
 }
 
