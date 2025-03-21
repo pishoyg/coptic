@@ -1410,7 +1410,7 @@ function handleCommonElements() {
       e.stopPropagation();
     }
   });
-  linkifyText(COPTIC_RE, LOOKUP_URL_PREFIX, ['hover-link'], ['type']);
+  linkifyText(COPTIC_RE, LOOKUP_URL_PREFIX, ['hover-link'], ['type', 'title']);
   linkifyText(GREEK_RE, GREEK_LOOKUP_URL_PREFIX, ['link', 'light']);
 }
 function main() {
