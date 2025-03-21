@@ -1555,6 +1555,14 @@ function handleXooxleOnlyElements() {
 
 function handleCommonElements() {
   highlighter.update();
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') {
+      // If the user switches to a different tab and then back to the current
+      // tab, it's possible that they have changing the highlighting settings
+      // through the other tab. We therefore need to update the highlighting.
+      highlighter.update();
+    }
+  });
 
   // NOTE: We intentionally use the `keydown` event rather than the `keyup`
   // event, so that a long press would trigger a shortcut command repeatedly.
