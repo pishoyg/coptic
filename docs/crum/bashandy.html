@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    #copticsite, #copticsite-title {
+      display: none;
+    }
+  </style>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Viewport for mobile scaling -->
+  <link href="/style.css" rel="stylesheet" type="text/css">
+  <link href="/img/icon/icon-circle.png" rel="icon" type="image/x-icon">
+  <script async src=
+  "https://www.googletagmanager.com/gtag/js?id=G-VCVZFDFZR3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-VCVZFDFZR3");
+  </script>
+  <link href="./" rel="canonical">
+  <title>ⲡⲓⲖⲉⲝⲓⲕⲟⲛ | Coptic Dictionary</title>
+  <script>
+  const XOOXLE = true;
+  </script>
+  <script defer src="xooxle.js"></script>
+  <script defer src="crum.js"></script>
+  <script async defer src=
+  "https://cse.google.com/cse.js?cx=e350c6229ed584e08"></script>
+</head>
+<body>
+  <header id="header" class="header">
+    <a href="../">Home</a>
+  </header>
+
+  <form>
+    <div>
+      <table id="xooxle">
+        <thead>
+          <tr>
+            <td colspan="3">ⲡⲓⲖⲉⲝⲓⲕⲟⲛ | Coptic Dictionary</td>
+          </tr>
+        </thead>
+
+        <tr>
+          <td class="search-box"><input id="searchBox" autocapitalize="off"
+          autocorrect="off" placeholder="Search" type="text">
+          </td>
+          <td><input id="fullWordCheckbox" type="checkbox"> <label for=
+          "fullWordCheckbox"><span class="big-screen-only">Full-Word
+          Match</span> <span class=
+          "small-screen-only">Words</span></label></td>
+          <td><input id="regexCheckbox" type="checkbox"> <label for=
+          "regexCheckbox"><span class="big-screen-only">Use Regular Expressions
+          (<a href=
+          "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions"
+          rel="noopener noreferrer" style="color: black" target=
+          "_blank">syntax</a>)</span> <span class="small-screen-only"><a href=
+          "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions"
+          rel="noopener noreferrer" style="color: black" target=
+          "_blank">RegEx</a></span></label></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="checkboxes">
+      Highlight: <label><input id="checkbox-S" name="S" class=
+      "dialect-checkbox" type="checkbox" value="S"> S</label> <label><input id=
+      "checkbox-Sa" name="Sa" class="dialect-checkbox" type="checkbox" value=
+      "Sa"> Sa</label> <label><input id="checkbox-Sf" name="Sf" class=
+      "dialect-checkbox" type="checkbox" value="Sf"> Sf</label>
+      <label><input id="checkbox-A" name="A" class="dialect-checkbox" type=
+      "checkbox" value="A"> A</label> <label><input id="checkbox-sA" name="sA"
+      class="dialect-checkbox" type="checkbox" value="sA"> sA</label>
+      <label><input id="checkbox-B" name="B" class="dialect-checkbox" type=
+      "checkbox" value="B"> B</label> <label><input id="checkbox-F" name="F"
+      class="dialect-checkbox" type="checkbox" value="F"> F</label>
+      <label><input id="checkbox-Fb" name="Fb" class="dialect-checkbox" type=
+      "checkbox" value="Fb"> Fb</label> <label><input id="checkbox-O" name="O"
+      class="dialect-checkbox" type="checkbox" value="O"> O</label>
+      <label><input id="checkbox-NH" name="NH" class="dialect-checkbox" type=
+      "checkbox" value="NH"> NH</label> <label><input id="checkbox-Ak" name=
+      "Ak" class="dialect-checkbox" type="checkbox" value="Ak"> Ak</label>
+      <label><input id="checkbox-M" name="M" class="dialect-checkbox" type=
+      "checkbox" value="M"> M</label> <label><input id="checkbox-L" name="L"
+      class="dialect-checkbox" type="checkbox" value="L"> L</label>
+      <label><input id="checkbox-P" name="P" class="dialect-checkbox" type=
+      "checkbox" value="P"> P</label> <label><input id="checkbox-V" name="V"
+      class="dialect-checkbox" type="checkbox" value="V"> V</label>
+      <label><input id="checkbox-W" name="W" class="dialect-checkbox" type=
+      "checkbox" value="W"> W</label> <label><input id="checkbox-U" name="U"
+      class="dialect-checkbox" type="checkbox" value="U"> U</label> <button id=
+      "reset">Reset</button> &nbsp; <span id="help" class="link">Help</span>
+    </div>
+  </form>
+
+  <hr>
+
+  <p id="message"><!--Placeholder for warnings and messages.-->
+  </p>
+
+  <h3 id="crum-title" class="collapse">A Coptic Dictionary, Walter E. Crum</h3>
+
+  <div class="collapsible">
+    <table id="crum" class="results">
+      <thead>
+        <tr>
+          <td style="width: 10%;">
+          </td>
+          <td style="width: 30%;"><em><strong>Root</strong></em>
+          </td>
+          <td style="width: 30%;"><em><strong>Meaning</strong></em>
+          </td>
+          <td style="width: 30%;"><em><strong>Appendix</strong></em>
+          </td>
+        </tr>
+      </thead>
+
+      <tbody>
+        <!-- Search results will be appended here. -->
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="kellia-title" class="collapse">KELLIA</h3>
+
+  <div class="collapsible">
+    <table id="kellia" class="results">
+      <thead>
+        <tr>
+          <td style="width: 10%;">
+          </td>
+          <td style="width: 30%;"><em><strong>Word</strong></em>
+          </td>
+          <td style="width: 30%;"><em><strong>Meaning</strong></em>
+          </td>
+          <td style="width: 30%;"><em><strong>Notes</strong></em>
+          </td>
+        </tr>
+      </thead>
+
+      <tbody>
+        <!-- Search results will be appended here. -->
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="copticsite-title" class="collapse">copticsite</h3>
+
+  <div class="collapsible">
+    <table id="copticsite" class="results">
+      <thead>
+        <tr>
+          <td style="width: 10%;">
+          </td>
+          <td style="width: 45%;"><em><strong>Word</strong></em>
+          </td>
+          <td style="width: 45%;"><em><strong>Meaning</strong></em>
+          </td>
+        </tr>
+      </thead>
+
+      <tbody>
+        <!-- Search results will be appended here. -->
+      </tbody>
+    </table>
+  </div>
+
+  <hr>
+
+  <div id="google">
+    <div class="gcse-search">
+    </div>
+  </div>
+
+  <div id="index" hidden="">
+    <!--The index will go here. It's used to retain (hidden) references to all words
+from the search / index page, for the purposes of sitemap construction.-->
+    ${INDEX}
+  </div>
+
+  <hr>
+
+  <div>
+    <a href="https://marcion.sourceforge.net/" rel="noopener noreferrer"
+    target="_blank"><img class="logo" alt="Marcion" src=
+    "/img/logos/resized-marcion-logo.png"></a> <a href=
+    "http://www.stshenouda.org/coptic-Bible-app" rel="noopener noreferrer"
+    target="_blank"><img class="logo" alt=
+    "Saint Shenouda The Archimandrite – Coptic Society" src=
+    "/img/logos/resized-stshenouda-logo.jpg"></a> <a href=
+    "https://copticsite.com/" rel="noopener noreferrer" target=
+    "_blank"><img class="logo" alt="copticsite.com" src=
+    "/img/logos/resized-copticsite-logo.png"></a> <a href=
+    "https://copticscriptorium.org/" rel="noopener noreferrer" target=
+    "_blank"><img class="logo" alt="Coptic Scriptorium" src=
+    "/img/logos/resized-copticscriptorium-logo.png"></a> <a href=
+    "https://refubium.fu-berlin.de/handle/fub188/27813" rel=
+    "noopener noreferrer" target="_blank"><img class="logo" alt=
+    "Freie Universität Berlin" src="/img/logos/resized-fu-logo.png"></a>
+    <a href="https://aaew.bbaw.de/tla/" rel="noopener noreferrer" target=
+    "_blank"><img class="logo" alt="BBAW TLA" src=
+    "/img/logos/resized-bbaw-logo.png"></a> <a href=
+    "https://kellia.uni-goettingen.de/" rel="noopener noreferrer" target=
+    "_blank"><img class="logo" alt="KELLIA" src=
+    "/img/logos/resized-kellia-logo.png"></a>
+  </div>
+
+  <footer id="footer" class="footer">
+    <p id="use-chrome" class="use-chrome">Note: We recommend using <a href=
+    "https://www.google.com/chrome/" rel="noopener noreferrer" target=
+    "_blank">Google Chrome</a> for the best experience.</p>
+  </footer>
+</body>
+</html>
