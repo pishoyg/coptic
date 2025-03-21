@@ -83,12 +83,12 @@ PATTERNS: list[Pattern] = [
     Pattern(["**.css"]),
     Pattern(["crum/index.html"]),
     Pattern(["dawoud/index.html", "crum/crum/index.html"]),
-    Pattern([".nojekyll"]),
     Pattern(["**.ts"]),
     # Data files:
     Pattern(["dawoud/*.tsv"]),
     Pattern(["img/**"]),
     Pattern(["fonts/**"]),
+    Pattern([".nojekyll"]),
     Pattern(["CNAME"]),
     # Auto-generated (JavaScript):
     Pattern(["**.js"]),
