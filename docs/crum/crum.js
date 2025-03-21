@@ -6,6 +6,9 @@
 // TODO: (#202) Reduce the dependency on `innerHTML`. Use attributes when
 // possible. NOTE: The associated issue is closed. Judge whether it should be
 // reopened, or if we should create a new issue, or just delete this TODO.
+const COPTIC_RE = /[Ⲁ-ⲱϢ-ϯⳈⳉ]+/giu;
+const GREEK_RE = /[Α-Ωα-ω]+/giu;
+const GREEK_LOOKUP_URL_PREFIX = 'https://logeion.uchicago.edu/';
 const dialectCheckboxes = Array.from(
   document.querySelectorAll('.dialect-checkbox')
 );
@@ -1199,20 +1202,6 @@ function handleNonXooxleOnlyElements() {
       window_open(alt);
     };
   });
-  // Handle 'coptic' class.
-  document.querySelectorAll('.coptic').forEach((el) => {
-    el.classList.add('hover-link');
-    el.onclick = () => {
-      window_open(LOOKUP_URL_PREFIX + el.innerHTML);
-    };
-  });
-  // Handle 'greek' class.
-  document.querySelectorAll('.greek').forEach((el) => {
-    el.classList.add('link', 'light');
-    el.onclick = () => {
-      window_open(`https://logeion.uchicago.edu/${el.innerHTML}`);
-    };
-  });
   // Handle 'dawoud-page' class.
   document.querySelectorAll('.dawoud-page').forEach((el) => {
     el.classList.add('link');
@@ -1342,6 +1331,52 @@ function handleXooxleOnlyElements() {
   // handler.
   window.addEventListener('load', initGoogleSearchBox);
 }
+function linkifyText(regex, url, classes) {
+  const walker = document.createTreeWalker(
+    document.body,
+    NodeFilter.SHOW_TEXT,
+    {
+      acceptNode(node) {
+        return regex.test(node.nodeValue ?? '')
+          ? NodeFilter.FILTER_ACCEPT
+          : NodeFilter.FILTER_REJECT;
+      },
+    }
+  );
+  // We must store the replacements in a list because we can't mutate the DOM
+  // while walking.
+  const replacements = [];
+  for (let node; (node = walker.nextNode()); ) {
+    if (!node.nodeValue) {
+      continue;
+    }
+    const fragment = document.createDocumentFragment();
+    let lastIndex = 0;
+    const text = node.nodeValue;
+    regex.lastIndex = 0;
+    for (let match; (match = regex.exec(text)) !== null; ) {
+      const query = match[0];
+      fragment.appendChild(
+        document.createTextNode(text.slice(lastIndex, match.index))
+      );
+      const link = document.createElement('span');
+      link.classList.add(...classes);
+      link.onclick = () => {
+        window_open(url + query);
+      };
+      link.textContent = query;
+      fragment.appendChild(link);
+      lastIndex = match.index + query.length;
+    }
+    if (lastIndex < text.length) {
+      fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
+    }
+    replacements.push([node, fragment]);
+  }
+  replacements.forEach(([node, fragment]) => {
+    node.replaceWith(fragment);
+  });
+}
 function handleCommonElements() {
   highlighter.update();
   document.addEventListener('visibilitychange', () => {
@@ -1366,6 +1401,8 @@ function handleCommonElements() {
       e.stopPropagation();
     }
   });
+  linkifyText(COPTIC_RE, LOOKUP_URL_PREFIX, ['hover-link']);
+  linkifyText(GREEK_RE, GREEK_LOOKUP_URL_PREFIX, ['link', 'light']);
 }
 function main() {
   if (xooxle()) {
