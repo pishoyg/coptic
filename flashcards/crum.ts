@@ -1554,9 +1554,7 @@ function handleXooxleOnlyElements() {
 }
 
 function handleCommonElements() {
-  window.addEventListener('pageshow', () => {
-    highlighter.update();
-  });
+  highlighter.update();
 
   // NOTE: We intentionally use the `keydown` event rather than the `keyup`
   // event, so that a long press would trigger a shortcut command repeatedly.
@@ -1565,11 +1563,6 @@ function handleCommonElements() {
     if (e.metaKey || e.ctrlKey || e.altKey) {
       // If the user is holding down a modifier key, we don't want to do
       // anything.
-      return;
-    }
-
-    if (anki()) {
-      // The help panel and keyboard shortcuts are disabled on Anki!
       return;
     }
 

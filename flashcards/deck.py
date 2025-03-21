@@ -191,6 +191,7 @@ class note:
         prev: str = "",
         next: str = "",
         search: str = "",
+        js_start: str = "",
         js_path: str = "",
         force_content: bool = True,
     ) -> None:
@@ -216,6 +217,7 @@ class note:
             scripts=[js_path] if js_path else [],
         )
         self.html: str = "".join(self.__html_aux())
+        self.js_start: str = js_start
 
     def __html_aux(self) -> typing.Generator[str]:
         return utils.html_aux(
@@ -285,7 +287,10 @@ class deck:
         # We don't allow notes to have different JavaScript, because in our Anki
         # package, we define the JavaScript in the template.
         assert all(note.js_path == js_path for note in self.notes)
+        js_start = self.notes[0].js_start
+        assert all(note.js_start == js_start for note in self.notes)
         if not js_path:
+            yield js_start
             return
         # Like the media files, the JavaScript path is relative to the HTML
         # write directory.
@@ -294,6 +299,7 @@ class deck:
         # problematic with Anki.
         # See https://github.com/pishoyg/coptic/issues/186.
         yield "(() => {"
+        yield js_start
         yield f"const {ANKI_NOTE_CLASS} = true;"
         yield utils.read(js_path)
         yield "})();"

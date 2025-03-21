@@ -18,7 +18,6 @@ MAX_KEY = 3385
 
 # Output arguments.############################################################
 OUTPUT = "dictionary/marcion.sourceforge.net/data/output"
-FILTER_DIALECTS = constants.DIALECTS
 SORT_ROOTS = ["key"]
 SORT_DERIVATIONS = ["key_word", "pos"]
 # TODO: (#44) Generate the definitions and morphemes.
@@ -193,19 +192,8 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
             insert("crum-link", "")
         else:
             insert("crum-link", constants.CRUM_PAGE_FMT.format(key=crum))
-        for d in FILTER_DIALECTS:
-            subset = [
-                w for w in word if w.is_dialect(d, undialected_is_all=True)
-            ]
-            entry = "\n".join(
-                w.string(
-                    include_dialects=False,
-                    include_references=False,
-                    append_root_type=True,
-                )
-                for w in subset
-            )
-            insert(f"dialect-{d}", entry)
+        dialects: set[str] = _dialects(word, is_root=strict)
+        insert(f"dialects", ", ".join(dialects))
         if strict:
             insert("key-next", keysmith.next(int(row["key"])))
             insert("key-prev", keysmith.prev(int(row["key"])))
@@ -228,6 +216,23 @@ def build_trees(roots: pd.DataFrame, derivations: pd.DataFrame) -> None:
     roots["crum-page-range"] = [trees[key].crum_page_range() for key in keys]
     roots["derivations-table"] = [trees[key].html_table() for key in keys]
     roots["derivations-list"] = [trees[key].html_list() for key in keys]
+    roots["dialects"] = [", ".join(trees[key].dialects()) for key in keys]
+
+
+def _dialects(word: list[lexical.structured_word], is_root: bool) -> set[str]:
+    dialects: set[str] = set()
+    for w in word:
+        d = w.dialects()
+        if d is None:
+            if is_root:
+                # If one word is undialected, we treat it as belonging to all
+                # dialects.
+                return set(constants.DIALECTS)
+            else:
+                continue
+        dialects.update(d)
+    assert all(d in constants.DIALECTS for d in dialects)
+    return dialects
 
 
 if __name__ == "__main__":

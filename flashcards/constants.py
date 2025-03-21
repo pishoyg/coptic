@@ -16,11 +16,15 @@ ROOTS = "dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv"
 ROOT_APPENDICES = (
     "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv"
 )
+CRUM_DIALECTS = ["S", "Sa", "Sf", "A", "sA", "B", "F", "Fb", "O", "NH"]
 EXPLANATORY_SOURCES = "dictionary/marcion.sourceforge.net/data/img-sources"
 KELLIA_TSV_DIR = "dictionary/kellia.uni-goettingen.de/data/output/tsv/"
 COPTICSITE_TSV = "dictionary/copticsite.com/data/output/tsv/output.tsv"
 
 CRUM_JS = "crum.js"  # Relative to the HTML write directory.
+# DIALECTS_JS is a JavaScript line that can be used to set the default dialects.
+DIALECTS_JS = "if (localStorage.getItem('d') === null) localStorage.setItem('d', {DIALECT_ARR}.join(','));"
+
 CSS = os.path.join(utils.SITE_DIR, "style.css")  # Not a relative path!
 CRUM_SEARCH = "./"  # Relative to the HTML write directory.
 CRUM_HOME = "../"  # Relative to the HTML write directory.
@@ -379,11 +383,11 @@ class Crum(decker):
         self,
         deck_name: str,
         deck_id: int,
-        dialect_cols: list[str],
+        dialects: list[str] = [],
         write_html: bool = False,
     ):
         super().__init__(deck_name, deck_id, write_html)
-        self._dialect_cols: list[str] = dialect_cols
+        self.dialects: list[str] = dialects
 
     def index_indexes(self) -> list[deck.index_index]:
         # NOTE: Our indexer will produce indexes for all notes, even if
@@ -395,21 +399,32 @@ class Crum(decker):
     @typing.override
     def notes_aux(self) -> typing.Generator:
         for _, row in CRUM_ROOTS.roots.iterrows():
-            front = self.__add_lookup_classes(self.__front(row))
-            if not front:
+            if not self.__dialect_match(row):
                 continue
             yield deck.note(
                 # NOTE: The key is a protected field. Do not change unless you know what
                 # you're doing.
                 key=self.__key(row),
-                front=front,
+                front=self.__add_lookup_classes(self.__front(row)),
                 back=self.__add_lookup_classes(self.__back(row)),
                 title=self.__title(row),
                 next=self.__next(row),
                 prev=self.__prev(row),
                 search=CRUM_SEARCH,
+                js_start=(
+                    DIALECTS_JS.format(DIALECT_ARR=self.dialects)
+                    if self.dialects
+                    else ""
+                ),
                 js_path=CRUM_JS,
             )
+
+    def __dialect_match(self, row: pd.Series) -> bool:
+        if not self.dialects:
+            return True  # No dialect filter!
+        dialects = list(map(str.strip, row["dialects"].split(",")))
+        assert all(d in CRUM_DIALECTS for d in dialects)
+        return any(d in self.dialects for d in dialects)
 
     @staticmethod
     def __title(row: pd.Series) -> str:
@@ -428,35 +443,7 @@ class Crum(decker):
     def __front(self, row: pd.Series) -> str:
         return "".join(self.__front_aux(row))
 
-    def __dialected_front(self, row: pd.Series, col: str) -> str:
-        return _aon(
-            f'<span class="left">(<b>{col[col.find("-") + 1:]}</b>)</span>',
-            LINE_BREAK,
-            self.__cell(row, col, line_br=True, force=False),
-        )
-
     def __front_aux(self, row: pd.Series) -> typing.Generator[str]:
-        key = self.__key(row)
-        if len(self._dialect_cols) == 1:
-            word = self.__cell(
-                row,
-                self._dialect_cols[0],
-                line_br=True,
-                force=False,
-            )
-        else:
-            word = LINE_BREAK.join(
-                filter(
-                    None,
-                    [
-                        self.__dialected_front(row, col)
-                        for col in self._dialect_cols
-                    ],
-                ),
-            )
-
-        if not word:
-            return
         # Header.
         # Open the table.
         yield '<table id="header" class="header">'
@@ -478,7 +465,9 @@ class Crum(decker):
         yield "</td>"
         # Key.
         yield "<td>"
+        key = self.__key(row)
         yield f'<a class="navigate" href="{key}.html">{key}</a>'
+        del key
         yield "</td>"
         # Next
         yield "<td>"
@@ -502,7 +491,12 @@ class Crum(decker):
         yield HORIZONTAL_RULE
         # The word.
         yield '<div id="pretty" class="pretty">'
-        yield word
+        yield self.__cell(
+            row,
+            "word-parsed-prettify",
+            line_br=True,
+            force=False,
+        )
         yield "</div>"
 
     @staticmethod
@@ -998,23 +992,23 @@ DECKERS: list[decker] = [
     Crum(
         CRUM_ALL,
         1284010387,
-        ["word-parsed-prettify"],
+        [],
         write_html=True,
     ),
     Crum(
         CRUM_BOHAIRIC,
         1284010383,
-        ["dialect-B"],
+        ["B"],
     ),
     Crum(
         CRUM_SAHIDIC,
         1284010386,
-        ["dialect-S"],
+        ["S"],
     ),
     Crum(
         CRUM_BOHAIRIC_SAHIDIC,
         1284010390,
-        ["dialect-B", "dialect-S"],
+        ["B", "S"],
     ),
     copticsite(
         COPTICSITE,

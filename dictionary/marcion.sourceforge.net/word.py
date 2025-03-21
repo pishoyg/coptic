@@ -143,15 +143,6 @@ class structured_word:
             left + right,
         ) + self._normalize_optional_letters(left + middle + right)
 
-    def is_dialect(self, d: str, undialected_is_all: bool = False) -> bool:
-        """
-        undialected_is_all: If true, and the word is undialected, then it's
-        considered to be a word in all dialects. So we will always return true.
-        """
-        if undialected_is_all and not self._dialects:
-            return True
-        return d in self._dialects
-
     def __str__(self) -> str:
         raise ValueError(
             "Please use an explicitly string conversion method in"
@@ -254,8 +245,9 @@ class structured_word:
         word = _span(word, ["word"] + self._dialects)
         return word
 
-    def dialects(self) -> list[str]:
-        return self._dialects
+    def dialects(self) -> list[str] | None:
+        # Return None if there are no dialects.
+        return self._dialects or None
 
     def spellings(self, parenthesize_assumed: bool = True) -> list[str]:
         if not parenthesize_assumed and not self._is_normalized_assumed():

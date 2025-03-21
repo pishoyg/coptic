@@ -47,6 +47,16 @@ class node:
         }
         self._preprocessed = True
 
+    def dialects(self) -> set[str]:
+        dialects = {
+            dialect.strip()
+            for child in self.descendants(include_root=True)
+            for dialect in child.cell("dialects").split(",")
+            if dialect
+        }
+        assert all(d in constants.DIALECTS for d in dialects)
+        return dialects
+
     def child(self, key: str):
         assert self.is_root()
         assert self._preprocessed
