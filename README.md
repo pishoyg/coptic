@@ -60,8 +60,7 @@ We use:
 - [AWS Route 53](https://us-east-1.console.aws.amazon.com/route53/v2/hostedzones)
 for domain registration and DNS.
 - [Google
-Drive](https://drive.google.com/drive/folders/17jI92CKumjYQTXghThaaejPeD8ZbifPm?usp=drive_link)
-to share large files.
+Drive](https://drive.google.com/drive/folders/17jI92CKumjYQTXghThaaejPeD8ZbifPm?usp=drive_link) and [Google Cloud](https://console.cloud.google.com/welcome) to store data on the cloud.
 - [Google Analytics](https://analytics.google.com/analytics/web/#/p454349148)
 and [Google Search
 Console](https://search.google.com/search-console?resource_id=sc-domain%3Aremnqymi.com)
