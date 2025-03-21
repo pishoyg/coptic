@@ -1538,31 +1538,47 @@ function handleXooxleOnlyElements() {
   window.addEventListener('load', initGoogleSearchBox);
 }
 
-// NOTE: For `excluded_classes`, we only check the immediate parent element.
 function linkifyText(
   regex: RegExp,
   url: string,
   classes: string[],
-  excluded_classes: string[] = []
+  direct_parent_excluded_classes: string[] = []
 ): void {
+  const admit = (node: Node): boolean => {
+    if (!node.nodeValue) {
+      // The node has no text!
+      return false;
+    }
+    if (!regex.test(node.nodeValue)) {
+      // This text node doesn't match the regex.
+      return false;
+    }
+    const parent = node.parentElement;
+    if (!parent) {
+      // We can't examine the parent tag name or classes for exclusions.
+      // Accept the node.
+      return true;
+    }
+    if (parent.tagName == 'a') {
+      // The parent is already a link!
+      return false;
+    }
+    if (
+      direct_parent_excluded_classes.some((cls) =>
+        parent.classList.contains(cls)
+      )
+    ) {
+      // This parent is explicitly excluded.
+      return false;
+    }
+    return true;
+  };
+
   const walker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_TEXT,
-    {
-      acceptNode(node: Node) {
-        if (!regex.test(node.nodeValue ?? '')) {
-          return NodeFilter.FILTER_REJECT;
-        }
-        const parent = node.parentNode;
-        if (
-          parent instanceof HTMLElement &&
-          excluded_classes.some((cls) => parent.classList.contains(cls))
-        ) {
-          return NodeFilter.FILTER_REJECT;
-        }
-        return NodeFilter.FILTER_ACCEPT;
-      },
-    }
+    (node) =>
+      admit(node) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT
   );
 
   // We must store the replacements in a list because we can't mutate the DOM
