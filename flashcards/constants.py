@@ -37,8 +37,6 @@ DESCRIPTION = "https://remnqymi.com"
 KELLIA_PREFIX = "https://coptic-dictionary.org/entry.cgi?tla="
 
 DICTIONARY_PAGE_RE = re.compile("([0-9]+(a|b))")
-COPTIC_WORD_RE = re.compile("([Ⲁ-ⲱϢ-ϯⳈⳉ]+)")
-GREEK_WORD_RE = re.compile("([Α-Ωα-ω]+)")
 TLA_ID_RE = re.compile(r'\bid="[^"]+"')
 
 LINE_BREAK = "<br>"
@@ -408,8 +406,8 @@ class Crum(decker):
                 # NOTE: The key is a protected field. Do not change unless you know what
                 # you're doing.
                 key=self.__key(row),
-                front=self.__add_lookup_classes(self.__front(row)),
-                back=self.__add_lookup_classes(self.__back(row)),
+                front=self.__front(row),
+                back=self.__back(row),
                 title=self.__title(row),
                 next=self.__next(row),
                 prev=self.__prev(row),
@@ -501,32 +499,6 @@ class Crum(decker):
             force=False,
         )
         yield "</div>"
-
-    @staticmethod
-    def __add_lookup_classes(text: str) -> str:
-        return Crum.__greek(Crum.__cdo(text))
-
-    # TODO: Insert the tags in the Crum pipeline.
-    # This replaces all Coptic words, regardless of whether they
-    # represent plain text. Coptic text that occurs inside a tag (for example
-    # as a tag property) would still get wrapped inside this <span> tag.
-    @staticmethod
-    def __cdo(text: str) -> str:
-        return COPTIC_WORD_RE.sub(
-            r'<span class="coptic">\1</span>',
-            text,
-        )
-
-    # TODO: Insert tags in the Crum pipeline.
-    # This replaces all Greek words, regardless of whether they
-    # represent plain text. Greek text that occurs inside a tag (for example
-    # as a tag property) would still acquire this tag.
-    @staticmethod
-    def __greek(text: str) -> str:
-        return GREEK_WORD_RE.sub(
-            r'<span class="greek">\1</span>',
-            text,
-        )
 
     def __back(self, row: pd.Series) -> str:
         return "".join(self.__back_aux(row))
