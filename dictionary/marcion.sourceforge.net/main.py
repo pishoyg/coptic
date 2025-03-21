@@ -192,7 +192,7 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
             insert("crum-link", "")
         else:
             insert("crum-link", constants.CRUM_PAGE_FMT.format(key=crum))
-        dialects: set[str] = _dialects(word, is_root=strict)
+        dialects: list[str] = _dialects(word, is_root=strict)
         insert(f"dialects", ", ".join(dialects))
         if strict:
             insert("key-next", keysmith.next(int(row["key"])))
@@ -219,7 +219,7 @@ def build_trees(roots: pd.DataFrame, derivations: pd.DataFrame) -> None:
     roots["dialects"] = [", ".join(trees[key].dialects()) for key in keys]
 
 
-def _dialects(word: list[lexical.structured_word], is_root: bool) -> set[str]:
+def _dialects(word: list[lexical.structured_word], is_root: bool) -> list[str]:
     dialects: set[str] = set()
     for w in word:
         d = w.dialects()
@@ -227,12 +227,12 @@ def _dialects(word: list[lexical.structured_word], is_root: bool) -> set[str]:
             if is_root:
                 # If one word is undialected, we treat it as belonging to all
                 # dialects.
-                return set(constants.DIALECTS)
+                return sorted(constants.DIALECTS)
             else:
                 continue
         dialects.update(d)
     assert all(d in constants.DIALECTS for d in dialects)
-    return dialects
+    return sorted(dialects)
 
 
 if __name__ == "__main__":

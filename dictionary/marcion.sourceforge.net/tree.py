@@ -47,7 +47,7 @@ class node:
         }
         self._preprocessed = True
 
-    def dialects(self) -> set[str]:
+    def dialects(self) -> list[str]:
         dialects = {
             dialect.strip()
             for child in self.descendants(include_root=True)
@@ -55,7 +55,7 @@ class node:
             if dialect
         }
         assert all(d in constants.DIALECTS for d in dialects)
-        return dialects
+        return sorted(dialects)
 
     def child(self, key: str):
         assert self.is_root()
