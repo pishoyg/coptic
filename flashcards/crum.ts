@@ -1538,15 +1538,29 @@ function handleXooxleOnlyElements() {
   window.addEventListener('load', initGoogleSearchBox);
 }
 
-function linkifyText(regex: RegExp, url: string, classes: string[]): void {
+// NOTE: For `excluded_classes`, we only check the immediate parent element.
+function linkifyText(
+  regex: RegExp,
+  url: string,
+  classes: string[],
+  excluded_classes: string[] = []
+): void {
   const walker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_TEXT,
     {
-      acceptNode(node) {
-        return regex.test(node.nodeValue ?? '')
-          ? NodeFilter.FILTER_ACCEPT
-          : NodeFilter.FILTER_REJECT;
+      acceptNode(node: Node) {
+        if (!regex.test(node.nodeValue ?? '')) {
+          return NodeFilter.FILTER_REJECT;
+        }
+        const parent = node.parentNode;
+        if (
+          parent instanceof HTMLElement &&
+          excluded_classes.some((cls) => parent.classList.contains(cls))
+        ) {
+          return NodeFilter.FILTER_REJECT;
+        }
+        return NodeFilter.FILTER_ACCEPT;
       },
     }
   );
@@ -1626,7 +1640,7 @@ function handleCommonElements() {
     }
   });
 
-  linkifyText(COPTIC_RE, LOOKUP_URL_PREFIX, ['hover-link']);
+  linkifyText(COPTIC_RE, LOOKUP_URL_PREFIX, ['hover-link'], ['type']);
   linkifyText(GREEK_RE, GREEK_LOOKUP_URL_PREFIX, ['link', 'light']);
 }
 
