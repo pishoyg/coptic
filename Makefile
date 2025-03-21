@@ -13,8 +13,8 @@ FORCE:
 # if `.env` is sourced, because this variable is not defined in `.env`. This is
 # because requires additional setup that can not be contained within this repo.
 REQUIRE_DRIVE_DIR: FORCE
-	if [ -z "$${DRIVE_DIR}" ]; then
-		echo -e "$${YELLOW}DRIVE_DIR$${RED} is not set.$${RESET}"
+	if [ -z "$${DRIVE_DIR}" ]; then \
+		echo -e "$${YELLOW}DRIVE_DIR$${RED} is not set.$${RESET}"; \
 	fi
 
 ########## INSTALL ##########
