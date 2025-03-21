@@ -41,6 +41,10 @@ ICON_TAG = """
 """
 assert os.path.isfile(os.path.join(SITE_DIR, "img/icon/icon-circle.png"))
 
+VIEWPORT_TAG = """
+<meta name="viewport" content="width=device-width, initial-scale=1">
+"""
+
 INTEGER_RE = re.compile("[0-9]+")
 MAX_INTEGER_LENGTH = 10
 
@@ -103,6 +107,7 @@ def html_head_aux(
         return
 
     yield CHARSET_TAG
+    yield VIEWPORT_TAG
     yield STYLE_TAG
     yield ICON_TAG
     yield GOOGLE_TAG
