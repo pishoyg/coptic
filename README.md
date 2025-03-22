@@ -1,6 +1,6 @@
 <div align="center">
    <figure>
-      <a href="https://remnqymi.com/" target="_blank"><img src="site/data/img/icon/icon.png" alt="ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ"
+      <a href="https://remnqymi.com/" target="_blank"><img src="docs/data/img/icon/icon.png" alt="ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ"
       /></a>
    </figure>
 </div>
@@ -44,7 +44,7 @@ that aims to make the Coptic language more **learnable**.
     - [Anki Keys and Synchronization](#anki-keys-and-synchronization)
       - [See also](#see-also)
   - [`morphology/`](#morphology)
-  - [`site/`](#site)
+  - [`docs/`](#docs)
 - [License and Cited Works](#license-and-cited-works)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -594,10 +594,9 @@ Model IDs are hardcoded.
 This directory contains the data and logic for generating the morphological
 dictionaries (to support inflections).
 
-## [`site/`](site/)
+## [`docs/`](docs/)
 
-This directory contains the data and logic for creating and publishing [our
-website](http://remnqymi.com/).
+This directory contains the static data for [our website](http://remnqymi.com/).
 
 # License and Cited Works
 
@@ -605,16 +604,16 @@ Code is released under
 [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
 Lexicon data is released under [CC BY-SA
 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
-[![License: GPL v3](site/data/img/logos/resized-gplv3.png)](https://www.gnu.org/licenses/gpl-3.0)
-[![License: CC BY-SA 4.0](site/data/img/logos/resized-cc-by-sa.png)](https://creativecommons.org/licenses/by-sa/4.0/)
+[![License: GPL v3](docs/data/img/logos/resized-gplv3.png)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: CC BY-SA 4.0](docs/data/img/logos/resized-cc-by-sa.png)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-[![Marcion](site/data/img/logos/resized-marcion-logo.png)](https://marcion.sourceforge.net/)
-[![Saint Shenouda The Archimandrite – Coptic Society](site/data/img/logos/resized-stshenouda-logo.jpg)](http://www.stshenouda.org/coptic-Bible-app)
-[![copticsite.com](site/data/img/logos/resized-copticsite-logo.png)](https://copticsite.com/)
-[![Coptic Scriptorium](site/data/img/logos/resized-copticscriptorium-logo.png)](https://copticscriptorium.org/)
-[![Freie Universität Berlin](site/data/img/logos/resized-fu-logo.png)](https://refubium.fu-berlin.de/handle/fub188/27813)
-[![BBAW TLA](site/data/img/logos/resized-bbaw-logo.png)](https://aaew.bbaw.de/tla/)
-[![KELLIA](site/data/img/logos/resized-kellia-logo.png)](https://kellia.uni-goettingen.de/)
+[![Marcion](docs/data/img/logos/resized-marcion-logo.png)](https://marcion.sourceforge.net/)
+[![Saint Shenouda The Archimandrite – Coptic Society](docs/data/img/logos/resized-stshenouda-logo.jpg)](http://www.stshenouda.org/coptic-Bible-app)
+[![copticsite.com](docs/data/img/logos/resized-copticsite-logo.png)](https://copticsite.com/)
+[![Coptic Scriptorium](docs/data/img/logos/resized-copticscriptorium-logo.png)](https://copticscriptorium.org/)
+[![Freie Universität Berlin](docs/data/img/logos/resized-fu-logo.png)](https://refubium.fu-berlin.de/handle/fub188/27813)
+[![BBAW TLA](docs/data/img/logos/resized-bbaw-logo.png)](https://aaew.bbaw.de/tla/)
+[![KELLIA](docs/data/img/logos/resized-kellia-logo.png)](https://kellia.uni-goettingen.de/)
 
 ***
 Ⲉ̀ϣⲱⲡ ⲁⲓϣⲁⲛⲉⲣⲡⲉⲱⲃϣ Ⲓⲗ̅ⲏ̅ⲙ̅, ⲉⲓⲉ̀ⲉⲣⲡⲱⲃϣ ⲛ̀ⲧⲁⲟⲩⲓⲛⲁⲙ: Ⲡⲁⲗⲁⲥ ⲉϥⲉ̀ϫⲱⲗϫ ⲉ̀ⲧⲁϣ̀ⲃⲱⲃⲓ ⲉ̀ϣⲱⲡ
