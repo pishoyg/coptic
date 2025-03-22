@@ -1,6 +1,6 @@
 // See https://www.typescriptlang.org/tsconfig/ for documentation.
 {
-  "exclude": ["./node_modules"],
+  "include": ["./docs/**/*.ts"],
   "compilerOptions": {
     "target": "ES2021",
     "module": "ES6",

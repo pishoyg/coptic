@@ -40,7 +40,7 @@ all: generate_1 add generate_2 test report
 
 # generate_1 rules are prerequisites for generate_2 rules.
 .PHONY: generate_1
-generate_1: bible copticsite crum crum_appendices crum_img kellia dawoud dawoud_img
+generate_1: bible copticsite crum crum_appendices crum_img kellia dawoud_img transpile
 
 .PHONY: generate_2
 generate_2: flashcards kindle
@@ -84,13 +84,13 @@ diff: FORCE
 yo: FORCE
 	say yo
 
+########## TypeScript ##########
+transpile: FORCE
+	npx tsc -p "tsconfig.json"
+
 ########## BIBLE ##########
-_bible_js: FORCE
-	npx tsc -p "bible/stshenouda.org/tsconfig.json"
-_bible: FORCE
+bible: FORCE
 	./bible/stshenouda.org/main.py
-.PHONY: bible
-bible: _bible_js _bible
 
 epub_publish: REQUIRE_DRIVE_DIR FORCE
 	cp \
@@ -157,17 +157,10 @@ _kellia_analysis_clean: dictionary/kellia.uni-goettingen.de/data/output/analysis
 	git restore "dictionary/kellia.uni-goettingen.de/data/output/analysis.json"
 
 ########## DAWOUD ##########
-dawoud: FORCE
-	npx tsc -p "dictionary/copticocc.org/tsconfig.json"
-
 dawoud_img:
 	./dictionary/copticocc.org/crop.sh
 
 ########## LEXICON ##########
-_flashcards_js: FORCE
-	npx tsc -p "flashcards/tsconfig.json"
-_web_js: FORCE
-	npx tsc -p "web/tsconfig.json"
 _flashcards:
 	./flashcards/main.py \
 		--html \
@@ -176,7 +169,7 @@ _flashcards:
 _bashandy:
 	./flashcards/bashandy.sh
 .PHONY: flashcards
-flashcards: _flashcards_js _web_js _flashcards _bashandy
+flashcards: _flashcards _bashandy
 
 anki_publish: REQUIRE_DRIVE_DIR FORCE
 	cp \

@@ -30,28 +30,27 @@ PATTERNS: list[Pattern] = [
     Pattern("crum/index.html"),
     Pattern("dawoud/index.html"),
     Pattern(".nojekyll"),
+    Pattern("**.ts"),
     # Data files:
     Pattern("img/**"),
     Pattern("fonts/**"),
     Pattern("CNAME"),
+    # Auto-generated (JavaScript):
+    Pattern("**.js"),
     # Auto-generated (lexicon):
     Pattern("crum/*.html"),
     Pattern("crum/xooxle.json"),
-    Pattern("crum/crum.js"),
-    Pattern("crum/xooxle.js"),
     Pattern("crum/crum/*.png"),  # Crum scan.
     Pattern("crum/explanatory/*-*-*.*"),  # Explanatory images.
     Pattern("crum/anki/*", required=False),  # Anki is not tracked in Git.
     # Auto-generated (bible):
     Pattern("bible/index.html"),
     Pattern("bible/*.html"),
-    Pattern("bible/bible.js"),
     Pattern(
         "bible/epub/*",
         required=False,
     ),  # Epub files are not tracked in Git.
     # Auto-generated (dawoud):
-    Pattern("dawoud/dawoud.js"),
     Pattern("dawoud/*.jpg"),  # Dawoud scan is a JPG.
 ]
 
