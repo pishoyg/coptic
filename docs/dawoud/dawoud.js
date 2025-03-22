@@ -71,13 +71,13 @@ class Scroller {
   }
 }
 class ZoomerDragger {
+  scale = 1;
+  startX = 0;
+  startY = 0;
+  originX = 0;
+  originY = 0;
+  isDragging = false;
   constructor() {
-    this.scale = 1;
-    this.startX = 0;
-    this.startY = 0;
-    this.originX = 0;
-    this.originY = 0;
-    this.isDragging = false;
     this.initEventListeners();
   }
   initEventListeners() {

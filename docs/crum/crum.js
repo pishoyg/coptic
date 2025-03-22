@@ -188,6 +188,15 @@ function classQuery(classes) {
   return classes.map((c) => `.${c}`).join(', ');
 }
 class Highlighter {
+  // Sheets are problematic on Anki, for some reason! We update the elements
+  // individually instead!
+  anki;
+  sheet;
+  dialectRuleIndex;
+  devRuleIndex;
+  noDevRuleIndex;
+  static BRIGHT = '1.0';
+  static DIM = '0.3';
   constructor() {
     // NOTE: Reading CSS rules often fails locally due to CORS. This is why we
     // use the `try` block here. In case it fails, we fall back to Anki mode,
@@ -198,13 +207,16 @@ class Highlighter {
     try {
       this.anki = anki();
       this.sheet = this.anki ? null : window.document.styleSheets[0];
-      this.dialectRuleIndex = this.sheet?.cssRules.length ?? 0;
-      this.devRuleIndex = this.dialectRuleIndex + 1;
+      const length = this.sheet?.cssRules.length ?? 0;
+      this.dialectRuleIndex = length;
+      this.devRuleIndex = length + 1;
+      this.noDevRuleIndex = length + 2;
     } catch {
       this.anki = true;
       this.sheet = null;
       this.dialectRuleIndex = 0;
       this.devRuleIndex = 0;
+      this.noDevRuleIndex = 0;
     }
   }
   update() {
@@ -253,12 +265,21 @@ class Highlighter {
   }
   updateDev() {
     const display = localStorage.getItem('dev') === 'true' ? 'block' : 'none';
+    const noDisplay = display === 'block' ? 'none' : 'block';
     this.updateSheetOrElements(
       this.devRuleIndex,
       '.dev, .nag-hammadi, .senses, .categories',
       `display: ${display};`,
       (el) => {
         el.style.display = display;
+      }
+    );
+    this.updateSheetOrElements(
+      this.noDevRuleIndex,
+      '.no-dev',
+      `display: ${noDisplay};`,
+      (el) => {
+        el.style.display = noDisplay;
       }
     );
   }
@@ -293,8 +314,6 @@ class Highlighter {
     this.addOrReplaceRule(rule_index, `${query} { ${style} }`);
   }
 }
-Highlighter.BRIGHT = '1.0';
-Highlighter.DIM = '0.3';
 // TODO: This is a bad place to define a global variable.
 const highlighter = new Highlighter();
 function window_open(url, external = true) {
@@ -439,6 +458,8 @@ function scrollToNextElement(query, target) {
 }
 // Section represents a group of related shortcuts.
 class Section {
+  title;
+  shortcuts;
   constructor(title, shortcuts) {
     this.title = title;
     this.shortcuts = shortcuts;
@@ -503,6 +524,9 @@ function highlightFirstOccurrence(char, str) {
   return `${str.slice(0, index)}<strong>${str[index]}</strong>${str.slice(index + 1)}`;
 }
 class HelpPanel {
+  sections;
+  overlay;
+  panel;
   constructor(sections) {
     this.sections = sections.filter((s) => s.executable());
     // Create overlay background.
@@ -619,6 +643,10 @@ class HelpPanel {
   }
 }
 class Shortcut {
+  description;
+  available;
+  action;
+  show;
   constructor(description, available, action, show = true) {
     this.description = description;
     this.available = available;
