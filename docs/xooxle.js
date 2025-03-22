@@ -1,12 +1,12 @@
-// We use an empty module to force this file to be a module.
 import * as utils from './utils.js';
-const searchBox = document.getElementById('searchBox');
-const fullWordCheckbox = document.getElementById('fullWordCheckbox');
-const regexCheckbox = document.getElementById('regexCheckbox');
-const messageBox = document.getElementById('message');
-// Event listener for the search button.
-let currentAbortController = null;
-let debounceTimeout = null;
+// TODO: (#230): Document the HTML structure required in order for this to work.
+// Besides the below, we also expect search result tables and collapsibles with
+// a given structure.
+const SEARCH_BOX_ID = 'searchBox';
+const FULL_WORD_CHECKBOX_ID = 'fullWordCheckbox';
+const REGEX_CHECKBOX_ID = 'regexCheckbox';
+const MESSAGE_BOX_ID = 'message';
+const XOOXLE_JSON = 'xooxle.json';
 // KEY is the name of the field that bears the word key. The key can be used to
 // generate an HREF to open the word page.
 const KEY = 'KEY';
@@ -36,6 +36,77 @@ const LINE_BREAK = '<br>';
 const RESULTS_TO_UPDATE_DISPLAY = 5;
 const TAG_REGEX = /<\/?[^>]+>/g;
 const CHROME_WORD_CHARS = new Set(["'"]);
+class Form {
+  static searchBox = document.getElementById(SEARCH_BOX_ID);
+  static fullWordCheckbox = document.getElementById(FULL_WORD_CHECKBOX_ID);
+  static regexCheckbox = document.getElementById(REGEX_CHECKBOX_ID);
+  static messageBox = document.getElementById(MESSAGE_BOX_ID);
+  // Search parameter names.
+  static query = 'query';
+  static full = 'full';
+  static regex = 'regex';
+  queryExpression() {
+    let query = Form.searchBox.value;
+    if (!query) {
+      return '';
+    }
+    if (!Form.regexCheckbox.checked) {
+      // Escape all the special characters in the string, in order to search
+      // for raw matches.
+      query = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+    if (Form.fullWordCheckbox.checked) {
+      // Using Unicode-aware word boundaries: `\b` doesn't work for non-ASCII
+      // so we use `\p{L}` (letter) and `\p{N}` (number) to match words in any
+      // Unicode script.
+      query = `(?<=^|[^\\p{L}\\p{N}])(${query})(?=$|[^\\p{L}\\p{N}])`;
+    }
+    return query;
+  }
+  populateFromParams() {
+    // Populate form values using query parameters.
+    const url = new URL(window.location.href);
+    Form.searchBox.value = url.searchParams.get(Form.query) ?? '';
+    Form.fullWordCheckbox.checked = url.searchParams.get(Form.full) === 'true';
+    Form.regexCheckbox.checked = url.searchParams.get(Form.regex) === 'true';
+  }
+  populateParams() {
+    // Populate query parameters using form values.
+    const url = new URL(window.location.href);
+    if (Form.searchBox.value) {
+      url.searchParams.set(Form.query, Form.searchBox.value);
+    } else {
+      url.searchParams.delete(Form.query);
+    }
+    if (Form.fullWordCheckbox.checked) {
+      url.searchParams.set(Form.full, String(Form.fullWordCheckbox.checked));
+    } else {
+      url.searchParams.delete(Form.full);
+    }
+    if (Form.regexCheckbox.checked) {
+      url.searchParams.set(Form.regex, String(Form.regexCheckbox.checked));
+    } else {
+      url.searchParams.delete(Form.regex);
+    }
+    window.history.replaceState('', '', url.toString());
+  }
+  message(message) {
+    const el = document.createElement('div');
+    el.classList.add('error');
+    el.textContent = message;
+    Form.messageBox.replaceChildren(el);
+  }
+  clearMessage() {
+    Form.messageBox.replaceChildren();
+  }
+}
+class EmptyStringMatchError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = 'EmptyStringMatchError';
+    Object.setPrototypeOf(this, new.target.prototype);
+  }
+}
 function isWordChar(char) {
   // Unicode-aware boundary expansion
   return /\p{L}|\p{N}/u.test(char);
@@ -46,15 +117,17 @@ function isWordCharInChrome(char) {
   // See https://github.com/pishoyg/coptic/issues/286 for context.
   return isWordChar(char) || CHROME_WORD_CHARS.has(char);
 }
-function isBoundary(str, i, i_plus_1) {
+// TODO: (#230): This doesn't take HTML tags into account! An in-word tag would
+// result in a false positive!
+function isBoundary(html, i, i_plus_1) {
   // Return true if there is a boundary between `str[i]` and `str[i_plus_1]`.
   // This function assumes that i_plus_1 = i + 1.
   // The reason we still ask the user to pass the two indices is to make it
   // easier for them to decide where exactly they expect the boundary to be.
-  if (i - 1 < 0 || i_plus_1 >= str.length) {
+  if (i - 1 < 0 || i_plus_1 >= html.length) {
     return true;
   }
-  if (isWordChar(str[i]) && isWordChar(str[i_plus_1])) {
+  if (isWordChar(html[i]) && isWordChar(html[i_plus_1])) {
     return false;
   }
   return true;
@@ -68,16 +141,16 @@ function htmlToText(html) {
 function yieldToBrowser() {
   return new Promise((resolve) => setTimeout(resolve, 0));
 }
-class Xooxle {
+class Index {
   data;
   params;
   tbody;
   collapsible;
-  constructor(xooxle) {
-    this.data = xooxle.data.map(
-      (record) => new Candidate(record, xooxle.params.fields)
+  constructor(index) {
+    this.data = index.data.map(
+      (record) => new Candidate(record, index.params.fields)
     );
-    this.params = xooxle.params;
+    this.params = index.params;
     const table = document.getElementById(this.params.result_table_name);
     this.tbody = table.querySelector('tbody');
     // TODO: The dependency on the HTML structure is slightly risky.
@@ -118,7 +191,6 @@ class Xooxle {
       return tr;
     });
     for (const res of this.data) {
-      // field_searches is ordered based on the fields parameter.
       const result = res.search(regex);
       if (!result.match) {
         continue;
@@ -137,8 +209,10 @@ class Xooxle {
         this.collapsible.style.maxHeight =
           this.collapsible.scrollHeight.toString() + 'px';
       }
-      // If you're successfully retrieving results, clear the error message.
-      messageBox.innerHTML = '';
+      // TODO: The number of results to update the display should vary based on
+      // the total number of results, otherwise you might end up yielding too
+      // often. Consider using a heuristic based on the number of results, and
+      // the time since the last yield.
       if (count % RESULTS_TO_UPDATE_DISPLAY == 0) {
         await yieldToBrowser();
       }
@@ -177,7 +251,7 @@ class FieldSearchResult {
   get units() {
     return this.field.units;
   }
-  html() {
+  highlighted() {
     let results = this.results;
     if (!this.match) {
       // If there are no matches, we limit the number of units in the output.
@@ -190,7 +264,7 @@ class FieldSearchResult {
       //   their number exceeds the limit, because we need to show all matches.
       results = results.filter((result) => result.match);
     }
-    const output = results.map((r) => r.highlightAllMatches());
+    const output = results.map((r) => r.highlight());
     return (
       output.join(UNIT_DELIMITER) +
       (output.length < this.units.length ? LONG_UNITS_FIELD_MESSAGE : '')
@@ -246,7 +320,7 @@ class SearchResult {
     row.appendChild(this.viewCell(href_fmt));
     this.results.forEach((sr) => {
       const cell = document.createElement('td');
-      cell.innerHTML = sr.html();
+      cell.innerHTML = sr.highlighted();
       row.appendChild(cell);
     });
     return row;
@@ -266,7 +340,13 @@ class Unit {
     return new UnitSearchResult(this, regex);
   }
   matchingSubstrings(regex) {
-    return new Set([...this.text.matchAll(regex)].map((match) => match[0]));
+    const set = new Set(
+      [...this.text.matchAll(regex)].map((match) => match[0])
+    );
+    if (set.has('')) {
+      throw new EmptyStringMatchError("Can't work with that regex!");
+    }
+    return set;
   }
 }
 class UnitSearchResult {
@@ -321,9 +401,14 @@ class UnitSearchResult {
   // by character. There may be a smarter way to do this.
   // Suggestion: Memorize the text parts (opening tags, text, and closing tags)
   // to be able to loop over them more efficiently.
+  // TODO: (#230): Handle nested matches:
+  // - Ignore tags with the match class.
+  // - Make sure this gets called on longer matches first.
   static highlightSubstring(html, target) {
-    // TODO: This part of the code should be blind to the checkboxes.
-    const fullWord = fullWordCheckbox.checked;
+    // TODO: This class shouldn't access the form.
+    // I think the cleanest check is to save the value of this flag during the
+    // search phase.
+    const fullWord = Form.fullWordCheckbox.checked;
     /* Highlight all occurrences of `target` in `html`.
      * if `fullWord` is true, only highlight the full-word occurrences.
      * */
@@ -412,7 +497,7 @@ class UnitSearchResult {
     result.push(html.slice(i));
     return result.join('');
   }
-  highlightAllMatches() {
+  highlight() {
     if (!this.match) {
       return this.html;
     }
@@ -449,103 +534,59 @@ class Candidate {
     return new SearchResult(this, regex);
   }
 }
-function errorMessage() {
-  const message = regexCheckbox.checked
-    ? 'Invalid regular expression!'
-    : 'Internal error! Please send us an email!';
-  return `<span class="error">${message}</div>`;
-}
-function queryExpression() {
-  let query = searchBox.value;
-  if (!query) {
-    return '';
+class Xooxle {
+  indexes;
+  form;
+  debounceTimeout = null;
+  currentAbortController = null;
+  constructor(indexes, form) {
+    this.indexes = indexes;
+    this.form = form;
   }
-  if (!regexCheckbox.checked) {
-    // Escape all the special characters in the string, in order to search
-    // for raw matches.
-    query = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  }
-  if (fullWordCheckbox.checked) {
-    // Using Unicode-aware word boundaries: `\b` doesn't work for non-ASCII
-    // so we use `\p{L}` (letter) and `\p{N}` (number) to match words in any
-    // Unicode script.
-    query = `(?<=^|[^\\p{L}\\p{N}])(${query})(?=$|[^\\p{L}\\p{N}])`;
-  }
-  return query;
-}
-const xooxles = (
-  await fetch('xooxle.json').then(async (resp) => await resp.json())
-).map((xooxle) => new Xooxle(xooxle));
-async function search() {
-  utils.time('search');
-  if (currentAbortController) {
-    currentAbortController.abort();
-  }
-  const abortController = new AbortController();
-  currentAbortController = abortController;
-  xooxles.forEach((xooxle) => {
-    xooxle.clear();
-  });
-  const expression = queryExpression();
-  if (!expression) {
-    return;
-  }
-  try {
-    const regex = new RegExp(expression, 'iug'); // Case-insensitive and Unicode-aware.
-    await Promise.all(
-      xooxles.map(async (xooxle) => {
-        await xooxle.search(regex, abortController);
-      })
-    );
-    messageBox.innerHTML = '';
-  } catch {
-    messageBox.innerHTML = errorMessage();
-    return;
-  }
-  utils.timeEnd('search');
-}
-const queryParamHandler = {
-  query: 'query',
-  full: 'full',
-  regex: 'regex',
-  populateForm() {
-    // Populate form values using query parameters.
-    const url = new URL(window.location.href);
-    searchBox.value = url.searchParams.get(this.query) ?? '';
-    fullWordCheckbox.checked = url.searchParams.get(this.full) === 'true';
-    regexCheckbox.checked = url.searchParams.get(this.regex) === 'true';
-  },
-  populateParams() {
-    // Populate query parameters using form values.
-    const url = new URL(window.location.href);
-    if (searchBox.value) {
-      url.searchParams.set('query', searchBox.value);
-    } else {
-      url.searchParams.delete('query');
+  handleSearchQuery(timeout) {
+    if (this.debounceTimeout) {
+      clearTimeout(this.debounceTimeout);
     }
-    if (fullWordCheckbox.checked) {
-      url.searchParams.set('full', String(fullWordCheckbox.checked));
-    } else {
-      url.searchParams.delete('full');
-    }
-    if (regexCheckbox.checked) {
-      url.searchParams.set('regex', String(regexCheckbox.checked));
-    } else {
-      url.searchParams.delete('regex');
-    }
-    window.history.replaceState('', '', url.toString());
-  },
-};
-function handleSearchQuery(timeout) {
-  if (debounceTimeout) {
-    clearTimeout(debounceTimeout);
+    this.debounceTimeout = setTimeout(() => {
+      // Call the async function after the timeout.
+      // Use void to ignore the returned promise.
+      void this.search();
+      this.form.populateParams();
+    }, timeout);
   }
-  debounceTimeout = setTimeout(() => {
-    // Call the async function after the timeout.
-    // Use void to ignore the returned promise.
-    void search();
-    queryParamHandler.populateParams();
-  }, timeout);
+  async search() {
+    utils.time('search');
+    if (this.currentAbortController) {
+      this.currentAbortController.abort();
+    }
+    const abortController = new AbortController();
+    this.currentAbortController = abortController;
+    this.indexes.forEach((index) => {
+      index.clear();
+    });
+    this.form.clearMessage();
+    const expression = this.form.queryExpression();
+    if (!expression) {
+      return;
+    }
+    try {
+      const regex = new RegExp(expression, 'iug'); // Case-insensitive and Unicode-aware.
+      await Promise.all(
+        this.indexes.map(async (index) => {
+          await index.search(regex, abortController);
+        })
+      );
+    } catch (err) {
+      if (err instanceof SyntaxError) {
+        this.form.message('Invalid regular expression!');
+      } else if (err instanceof EmptyStringMatchError) {
+        this.form.message("Can't work with that regex!");
+      } else {
+        this.form.message('Internal error! Please send us an email!');
+      }
+    }
+    utils.timeEnd('search');
+  }
 }
 function maybeRecommendChrome() {
   if (navigator.userAgent.toLowerCase().includes('chrome')) {
@@ -561,36 +602,41 @@ function maybeRecommendChrome() {
   }
   elem.style.display = 'block';
 }
-function main() {
+async function main() {
   // We intentionally recommend Chrome first thing because, if we're on a
   // different browser, and we try to do something else first, the code might
   // break by the time we get to the recommendation.
   maybeRecommendChrome();
-  queryParamHandler.populateForm();
+  const form = new Form();
+  form.populateFromParams();
   // Prevent other elements in the page from picking up key events on the
   // search box.
-  searchBox.addEventListener('keyup', (event) => {
+  Form.searchBox.addEventListener('keyup', (event) => {
     event.stopPropagation();
   });
-  searchBox.addEventListener('keydown', (event) => {
+  Form.searchBox.addEventListener('keydown', (event) => {
     event.stopPropagation();
   });
-  searchBox.addEventListener('keypress', (event) => {
+  Form.searchBox.addEventListener('keypress', (event) => {
     event.stopPropagation();
   });
+  const indexes = (
+    await fetch(XOOXLE_JSON).then(async (resp) => await resp.json())
+  ).map((index) => new Index(index));
+  const xooxle = new Xooxle(indexes, form);
   // Make the page responsive to user input.
-  searchBox.addEventListener('input', () => {
-    handleSearchQuery(100);
+  Form.searchBox.addEventListener('input', () => {
+    xooxle.handleSearchQuery(100);
   });
-  fullWordCheckbox.addEventListener('click', () => {
-    handleSearchQuery(0);
+  Form.fullWordCheckbox.addEventListener('click', () => {
+    xooxle.handleSearchQuery(0);
   });
-  regexCheckbox.addEventListener('click', () => {
-    handleSearchQuery(0);
+  Form.regexCheckbox.addEventListener('click', () => {
+    xooxle.handleSearchQuery(0);
   });
   window.addEventListener('pageshow', () => {
-    handleSearchQuery(0);
-    searchBox.focus();
+    xooxle.handleSearchQuery(0);
+    Form.searchBox.focus();
   });
 }
-main();
+await main();
