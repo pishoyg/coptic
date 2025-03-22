@@ -2,8 +2,8 @@
 {
   "include": ["./docs/**/*.ts"],
   "compilerOptions": {
-    "target": "ES2021",
-    "module": "ES6",
+    "target": "ES2022",
+    "module": "ESNext",
     "noEmitOnError": true,
     "preserveConstEnums": true,
     "esModuleInterop": true,

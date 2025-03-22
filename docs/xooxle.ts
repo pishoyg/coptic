@@ -1,3 +1,6 @@
+// We use an empty module to force this file to be a module.
+import * as utils from './utils.js';
+
 const searchBox = document.getElementById('searchBox') as HTMLInputElement;
 const fullWordCheckbox = document.getElementById(
   'fullWordCheckbox'
@@ -6,30 +9,6 @@ const regexCheckbox = document.getElementById(
   'regexCheckbox'
 ) as HTMLInputElement;
 const messageBox = document.getElementById('message')!;
-
-// Load the JSON file as a Promise that will resolve once the data is fetched.
-const fileMap: Promise<Xooxle[]> = (async function (): Promise<Xooxle[]> {
-  interface xooxle {
-    readonly data: Record<string, string>[];
-    readonly params: Params;
-  }
-
-  // NOTE: Due to this `fetch`, trying to open the website as a local file in
-  // the browser may not work. You have to serve it through a server.
-  return (
-    await fetch('xooxle.json').then(
-      async (resp) => (await resp.json()) as xooxle[]
-    )
-  ).map(
-    (xooxle: xooxle) =>
-      ({
-        data: xooxle.data.map(
-          (record) => new Candidate(record, xooxle.params.fields)
-        ),
-        params: xooxle.params,
-      }) as Xooxle
-  );
-})();
 
 // Event listener for the search button.
 let currentAbortController: AbortController | null = null;
@@ -83,6 +62,20 @@ function isWordCharInChrome(char: string): boolean {
   return isWordChar(char) || CHROME_WORD_CHARS.has(char);
 }
 
+function isBoundary(str: string, i: number, i_plus_1: number): boolean {
+  // Return true if there is a boundary between `str[i]` and `str[i_plus_1]`.
+  // This function assumes that i_plus_1 = i + 1.
+  // The reason we still ask the user to pass the two indices is to make it
+  // easier for them to decide where exactly they expect the boundary to be.
+  if (i - 1 < 0 || i_plus_1 >= str.length) {
+    return true;
+  }
+  if (isWordChar(str[i]!) && isWordChar(str[i_plus_1]!)) {
+    return false;
+  }
+  return true;
+}
+
 function htmlToText(html: string): string {
   return html
     .replaceAll(LINE_BREAK, '\n')
@@ -90,12 +83,12 @@ function htmlToText(html: string): string {
     .replace(TAG_REGEX, '');
 }
 
-interface Field {
+interface _Field {
   readonly name: string;
   readonly units: boolean;
 }
 
-interface Params {
+interface _Params {
   // result_table_name is the ID of the table containing the results in the HTML
   // page. Xooxle will retrieve the element using this ID, and will populated
   // with the results encountered.
@@ -110,125 +103,317 @@ interface Params {
   // The first cell in the row will contain the index of the result, and
   // potentially the HREF to the result page. The following cells will contain
   // other fields from the result, in this order.
-  // TODO: Document the behavior about whether fields present in the input but
-  // absent from this list get searched or not. Consider ensuring that it's
-  // possible to search a field that doesn't necessarily show in the output.
-  // This may be a desirable use case.
-  readonly fields: Field[];
+  readonly fields: _Field[];
 }
 
-interface Xooxle {
-  // data contains our candidate search results.
-  readonly data: Candidate[];
-  // params bears the search parameters.
-  readonly params: Params;
+function yieldToBrowser(): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, 0));
 }
 
-interface SearchResult {
-  // field bears the field metadata.
-  readonly field: Field;
-  // match indicates whether a match has been found.
-  readonly match: boolean;
-  // html bears the HTML content of the field, with the matches highlighted.
-  readonly html: string;
-  // word bears a full matching word.
-  readonly word: string;
-}
+class Xooxle {
+  private readonly data: Candidate[];
+  private readonly params: _Params;
+  private readonly tbody: HTMLTableSectionElement;
+  private readonly collapsible: HTMLElement;
 
-interface SearchableField {
-  // field bears the field metadata.
-  readonly field: Field;
-  // html bears the HTML content of each searchable field.
-  readonly html: string;
-  // text bears the plain text content of each searchable field.
-  readonly text: string;
-}
-
-class Candidate {
-  // key bears the candidate key.
-  readonly key: string;
-  private readonly search_fields: SearchableField[];
-
-  public constructor(record: Record<string, string>, fields: Field[]) {
-    this.key = record[KEY]!;
-    this.search_fields = fields.map(
-      (field: Field) =>
-        ({
-          field: field,
-          html: record[field.name]!,
-          text: htmlToText(record[field.name]!),
-        }) as SearchableField
+  constructor(xooxle: _Xooxle) {
+    this.data = xooxle.data.map(
+      (record) => new Candidate(record, xooxle.params.fields)
     );
+    this.params = xooxle.params;
+    const table = document.getElementById(this.params.result_table_name)!;
+    this.tbody = table.querySelector('tbody')!;
+    // TODO: The dependency on the HTML structure is slightly risky.
+    this.collapsible = table.parentElement!;
   }
 
-  public search(regex: RegExp): SearchResult[] {
-    return this.search_fields.map((sf: SearchableField): SearchResult => {
-      const match = sf.text.match(regex);
-      if (match?.index === undefined) {
-        return {
-          match: false,
-          field: sf.field,
-          html: sf.field.units
-            ? Candidate.chopUnits(sf.html.split(UNIT_DELIMITER))
-            : sf.html,
-          word: '',
-        };
+  async search(regex: RegExp, abortController: AbortController) {
+    let count = 0;
+    // column_sentinels is a set of hidden table rows that represent sentinels
+    // (anchors / break points) in the results table.
+    //
+    // The sentinels are used to divide the table into sections.
+    // Matching results will be added right on top of the sentinels, so that
+    // each sentinel represents the (hidden) bottom row of a section.
+    // Results with a (first) match in their n^th column will be added on top of
+    // the n^th sentinel. (By first match, we mean that a result containing a
+    // match in the 1st and 2nd column, for example, will be added on top of the
+    // 1st, not the 2nd, sentinel.)
+    // We do so based on the assumption that the earlier columns contain more
+    // relevant data. So a result with a match in the 1st column is likely more
+    // interesting to the user than a result with a match in the 2nd column,
+    // so it should show first.
+    //
+    // This allows us to achieve some form of result sorting, without actually
+    // having to retrieve all results, sort them, and then render them. We can
+    // start showing results immediately after one match, thus maintaining
+    // Xooxle's high responsiveness and speed.
+    //
+    // We also insert rows in the table, without displacing or recreating the
+    // other rows, thus reducing jitter.
+    // We use the sentinels as bottoms for the sections, rather than tops,
+    // because we want results to expand downwards rather than upwards, to
+    // avoid jitter at the top of the table, which is the area that the user
+    // will be looking at.
+    const column_sentinels: Element[] = this.params.fields.map(() => {
+      const tr = document.createElement('tr');
+      tr.style.display = 'none';
+      this.tbody.appendChild(tr);
+      return tr;
+    });
+
+    for (const res of this.data) {
+      // field_searches is ordered based on the fields parameter.
+      const result: SearchResult = res.search(regex);
+
+      if (!result.match) {
+        continue;
       }
 
-      return {
-        match: true,
-        field: sf.field,
-        html: Candidate.highlightAllMatches(
-          sf.html,
-          sf.text,
-          regex,
-          sf.field.units
-        ),
-        word: Candidate.getMatchFullWordsForTextFragments(
-          sf.text,
-          match.index,
-          match[0]
-        ),
-      };
+      ++count;
+
+      // Create a new row for the table
+      const row = result.row(this.params.href_fmt);
+
+      if (abortController.signal.aborted) {
+        return;
+      }
+
+      column_sentinels[result.firstMatchField()]!.insertAdjacentElement(
+        'beforebegin',
+        row
+      );
+
+      if (this.collapsible.style.maxHeight) {
+        this.collapsible.style.maxHeight =
+          this.collapsible.scrollHeight.toString() + 'px';
+      }
+
+      // If you're successfully retrieving results, clear the error message.
+      messageBox.innerHTML = '';
+
+      if (count % RESULTS_TO_UPDATE_DISPLAY == 0) {
+        await yieldToBrowser();
+      }
+    }
+
+    let counter = 0;
+    this.tbody.childNodes.forEach((node: ChildNode) => {
+      const tr = node as HTMLTableRowElement;
+      if (tr.style.display === 'none') {
+        // This is one of the sentinel rows. Nothing to do here!
+        return;
+      }
+      const small = document.createElement('small');
+      small.classList.add('very-light');
+      small.innerHTML = `${(++counter).toString()} / ${count.toString()}`;
+      const td = tr.firstElementChild as HTMLTableCellElement;
+      td.append(' ');
+      td.append(small);
     });
   }
 
-  // TODO: (#230) This should be a method of the SearchableField type. Same
-  // below.
-  private static findAllMatchingSubstrings(
-    text: string,
+  clear(): void {
+    this.tbody.innerHTML = '';
+  }
+}
+
+class FieldSearchResult {
+  private readonly results: UnitSearchResult[];
+  readonly match: boolean;
+  constructor(
+    private readonly field: Field,
     regex: RegExp
-  ): Set<string> {
-    const matches = new Set<string>();
-    let match;
-
-    // Loop through all matches in the text.
-    while ((match = regex.exec(text)) !== null) {
-      if (!match[0]) {
-        // The regex matched the empty string! This would result in an infinite
-        // loop! Throw an exception!
-        throw new Error('Empty string matched by regex!');
-      }
-      matches.add(match[0]);
-      text = text.substring(match.index + match[0].length);
-    }
-    return matches;
+  ) {
+    this.results = field.units.map((unit) => unit.search(regex));
+    this.match = this.results.some((result) => result.match);
   }
 
-  private static isBoundary(str: string, i: number, i_plus_1: number): boolean {
-    // Return true if there is a boundary between `str[i]` and `str[i_plus_1]`.
-    // This function assumes that i_plus_1 = i + 1.
-    // The reason we still ask the user to pass the two indices is to make it
-    // easier for them to decide where exactly they expect the boundary to be.
-    if (i - 1 < 0 || i_plus_1 >= str.length) {
-      return true;
-    }
-    if (isWordChar(str[i]!) && isWordChar(str[i_plus_1]!)) {
-      return false;
-    }
-    return true;
+  get name(): string {
+    return this.field.name;
   }
 
+  private get units(): Unit[] {
+    return this.field.units;
+  }
+
+  html(): string {
+    let results = this.results;
+
+    if (!this.match) {
+      // If there are no matches, we limit the number of units in the output.
+      results = results.slice(0, UNITS_LIMIT);
+    } else if (this.units.length > UNITS_LIMIT) {
+      // If there are matches:
+      // - If there are only few units, we show all of them regardless of
+      //   whether they have matches or not.
+      // - If there are many units, we show those that have matches, even if
+      //   their number exceeds the limit, because we need to show all matches.
+      results = results.filter((result) => result.match);
+    }
+
+    const output = results.map((r) => r.highlightAllMatches());
+
+    return (
+      output.join(UNIT_DELIMITER) +
+      (output.length < this.units.length ? LONG_UNITS_FIELD_MESSAGE : '')
+    );
+  }
+
+  fragmentWord(): string | undefined {
+    return this.results.find((r) => r.match)?.fragmentWord();
+  }
+}
+
+class SearchResult {
+  private readonly results: FieldSearchResult[];
+  readonly match: boolean;
+  constructor(
+    private readonly candidate: Candidate,
+    regex: RegExp
+  ) {
+    this.results = this.candidate.fields.map(
+      (field) => new FieldSearchResult(field, regex)
+    );
+    this.match = this.results.some((result) => result.match);
+  }
+
+  get key(): string {
+    return this.candidate.key;
+  }
+
+  fragmentWord(): string | undefined {
+    return this.results.find((r) => r.fragmentWord())?.fragmentWord();
+  }
+
+  private viewCell(href_fmt: string): HTMLTableCellElement {
+    const viewCell = document.createElement('td');
+    viewCell.classList.add('view');
+
+    const dev = document.createElement('span');
+    dev.classList.add('dev');
+    dev.textContent = this.key;
+
+    if (!href_fmt) {
+      viewCell.appendChild(dev);
+      return viewCell;
+    }
+
+    // There is an href. We create a link, and add the 'view' text.
+    const a = document.createElement('a');
+    a.href =
+      href_fmt.replace(`{${KEY}}`, this.key) +
+      `#:~:text=${encodeURIComponent(this.fragmentWord()!)}`;
+    a.target = '_blank';
+
+    const noDev = document.createElement('span');
+    noDev.classList.add('no-dev');
+    noDev.textContent = 'view';
+
+    a.appendChild(noDev);
+    a.appendChild(dev);
+
+    viewCell.appendChild(a);
+
+    return viewCell;
+  }
+
+  row(href_fmt: string): HTMLTableRowElement {
+    const row = document.createElement('tr');
+
+    row.appendChild(this.viewCell(href_fmt));
+    this.results.forEach((sr: FieldSearchResult) => {
+      const cell = document.createElement('td');
+      cell.innerHTML = sr.html();
+      row.appendChild(cell);
+    });
+
+    return row;
+  }
+
+  firstMatchField(): number {
+    return this.results.findIndex((result) => result.match);
+  }
+}
+
+class Unit {
+  readonly text: string;
+  constructor(readonly html: string) {
+    this.text = htmlToText(html);
+  }
+
+  search(regex: RegExp): UnitSearchResult {
+    return new UnitSearchResult(this, regex);
+  }
+
+  matchingSubstrings(regex: RegExp): Set<string> {
+    return new Set([...this.text.matchAll(regex)].map((match) => match[0]));
+  }
+}
+
+class UnitSearchResult {
+  private readonly matches: Set<string>;
+  constructor(
+    private readonly unit: Unit,
+    regex: RegExp
+  ) {
+    this.matches = unit.matchingSubstrings(regex);
+  }
+
+  private get text(): string {
+    return this.unit.text;
+  }
+
+  private get html(): string {
+    return this.unit.html;
+  }
+
+  get match(): boolean {
+    return !!this.matches.size;
+  }
+
+  fragmentWord(): string {
+    /* Expand the match left and right such that it contains full words, for
+     * text fragment purposes.
+     * See
+     * https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments
+     * for information about text fragments.
+     * Notice that browsers don't treat them uniformly, and we try to obtain a
+     * match that will work on most browsers.
+     * */
+    const match = this.matches.values().next().value;
+    if (!match) {
+      console.error(
+        'Attempting to get a fragment word from a non-matching unit!'
+      );
+      return '';
+    }
+
+    const matchStart: number = this.text.indexOf(match);
+    let start = matchStart;
+    let end = matchStart + match.length;
+
+    const isWordChar = isWordCharInChrome;
+
+    // Expand left: Move the start index left until a word boundary is found.
+    while (start > 0 && isWordChar(this.text[start - 1]!)) {
+      start--;
+    }
+
+    // Expand right: Move the end index right until a word boundary is found.
+    while (end < this.text.length && isWordChar(this.text[end]!)) {
+      end++;
+    }
+
+    // Return the expanded substring.
+    return this.text.substring(start, end);
+  }
+
+  // TODO: This is probably the ugliest, and possibly the slowest, part of
+  // the code. We highlight matches by looping over the HTML string, character
+  // by character. There may be a smarter way to do this.
+  // Suggestion: Memorize the text parts (opening tags, text, and closing tags)
+  // to be able to loop over them more efficiently.
   private static highlightSubstring(html: string, target: string): string {
     // TODO: This part of the code should be blind to the checkboxes.
     const fullWord = fullWordCheckbox.checked;
@@ -236,17 +421,18 @@ class Candidate {
      * if `fullWord` is true, only highlight the full-word occurrences.
      * */
     if (!target) {
+      console.error('Attempting to highlight an empty target!');
       return html;
     }
 
-    let result = '';
+    const result: string[] = [];
     let i = 0;
 
     while (i <= html.length - target.length) {
       // If we stopped at a tag, add it to the output without searching it.
       while (i < html.length && html[i] === '<') {
         const k = html.indexOf('>', i) + 1;
-        result += html.slice(i, k);
+        result.push(html.slice(i, k));
         i = k;
       }
       if (i >= html.length) {
@@ -266,7 +452,7 @@ class Candidate {
       // last_push_end is the index of the end of the last pushed segment.
       let last_push_end = i;
 
-      if (fullWord && !Candidate.isBoundary(html, i - 1, i)) {
+      if (fullWord && !isBoundary(html, i - 1, i)) {
         // This is not a full-word occurrence.
         match = false;
       }
@@ -302,7 +488,7 @@ class Candidate {
         ++j;
       }
 
-      if (match && fullWord && !Candidate.isBoundary(html, j - 1, j)) {
+      if (match && fullWord && !isBoundary(html, j - 1, j)) {
         match = false;
       }
 
@@ -313,127 +499,67 @@ class Candidate {
         last_push_end = j;
         // Surround all the text (non-tag) segments with <span class="match">
         // tags.
-        result += segments
-          .map((s: string) =>
+        result.push(
+          ...segments.map((s: string) =>
             s.startsWith('<') ? s : `<span class="match">${s}</span>`
           )
-          .join('');
+        );
         i = j;
       } else {
-        result += html[i]!;
+        result.push(html[i]!);
         i++;
       }
     }
 
     // Append any remaining characters after the last match
-    result += html.slice(i);
+    result.push(html.slice(i));
 
-    return result;
+    return result.join('');
   }
 
-  private static chopUnits(units: string[]): string {
-    /* chopUnits joins at most UNITS_LIMIT units together. If we can't
-     * accommodate all units, appends a message indicating the fact that more
-     * content is available.
-     * */
-
-    if (!units.length) {
-      return '';
+  highlightAllMatches(): string {
+    if (!this.match) {
+      return this.html;
     }
-    if (units.length <= UNITS_LIMIT) {
-      return units.join(UNIT_DELIMITER);
-    }
-    return (
-      units.slice(0, UNITS_LIMIT).join(UNIT_DELIMITER) +
-      LONG_UNITS_FIELD_MESSAGE
-    );
-  }
-
-  private static highlightAllMatches(
-    html: string,
-    text: string,
-    regex: RegExp,
-    units_field: boolean
-  ): string {
-    /*
-     * Args:
-     *   units_field: If true, split the input into units, and:
-     *   - If the number of units is small (below a certain limit), output all
-     *     units, with the matches highlighted.
-     *   - If there are many units, output only the units with matches,
-     *     separated by a delimiter. (If we opt for this, then the output will
-     *     contain the units with matches, regardless of their number. They
-     *     could be fewer or more numerous than the limit.)
-     */
-
-    if (units_field) {
-      // TODO: Memorize the HTML and text of each unit, to speed up this
-      // computation. This method should probably be polymorphic depending on
-      // the field type (currently units or non-units).
-      // TODO: Read a list of strings, instead of a single delimiter
-      // separated string!
-      // TODO: We only retain the units that have matches, and we detect that
-      // by whether the unit has changed. Use a cleaner check to filter the
-      // units that have matches.
-      const units = html.split(UNIT_DELIMITER);
-      if (units.length <= UNITS_LIMIT) {
-        // The number of units is small enough to display them all.
-        return Candidate.highlightAllMatches(html, text, regex, false);
-      }
-
-      const units_with_matches: string[] = units
-        .map((unit) =>
-          Candidate.highlightAllMatches(unit, htmlToText(unit), regex, false)
-        )
-        .filter((h, idx) => units[idx] !== h);
-      if (units_with_matches.length) {
-        return (
-          units_with_matches.join(UNIT_DELIMITER) + LONG_UNITS_FIELD_MESSAGE
-        );
-      }
-
-      return Candidate.chopUnits(units);
-    }
-
-    // TODO: Use the regex directly for highlighting, instead of using raw
-    // strings.
-    const matches = Candidate.findAllMatchingSubstrings(text, regex);
-    matches.forEach((m: string) => {
-      html = Candidate.highlightSubstring(html, m);
+    let html = this.html;
+    Array.from(this.matches).forEach((target) => {
+      html = UnitSearchResult.highlightSubstring(html, target);
     });
     return html;
   }
+}
 
-  private static getMatchFullWordsForTextFragments(
-    text: string,
-    matchStart: number,
-    match: string
-  ): string {
-    /* Expand the match left and right such that it contains full words, for
-     * text fragment purposes.
-     * See
-     * https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments
-     * for information about text fragments.
-     * Notice that browsers don't treat them uniformly, and we try to obtain a
-     * match that will work on most browsers.
-     * */
-    let start = matchStart;
-    let end = matchStart + match.length;
+class Field {
+  readonly units: Unit[];
+  readonly name: string;
 
-    const isWordChar = isWordCharInChrome;
+  constructor(field: _Field, html: string) {
+    // TODO: Read a list of strings, instead of a single delimiter
+    // separated string!
+    this.name = field.name;
+    const arr = field.units ? html.split(UNIT_DELIMITER) : [html];
+    this.units = arr.map((html) => new Unit(html));
+  }
 
-    // Expand left: Move the start index left until a word boundary is found.
-    while (start > 0 && isWordChar(text[start - 1]!)) {
-      start--;
-    }
+  search(regex: RegExp): FieldSearchResult {
+    return new FieldSearchResult(this, regex);
+  }
+}
 
-    // Expand right: Move the end index right until a word boundary is found.
-    while (end < text.length && isWordChar(text[end]!)) {
-      end++;
-    }
+class Candidate {
+  // key bears the candidate key.
+  readonly key: string;
+  readonly fields: Field[];
 
-    // Return the expanded substring.
-    return text.substring(start, end);
+  public constructor(record: Record<string, string>, fields: _Field[]) {
+    this.key = record[KEY]!;
+    this.fields = fields.map(
+      (field: _Field) => new Field(field, record[field.name]!)
+    );
+  }
+
+  public search(regex: RegExp): SearchResult {
+    return new SearchResult(this, regex);
   }
 }
 
@@ -444,28 +570,10 @@ function errorMessage(): string {
   return `<span class="error">${message}</div>`;
 }
 
-async function search() {
-  if (currentAbortController) {
-    currentAbortController.abort();
-  }
-
-  const abortController = new AbortController();
-  currentAbortController = abortController;
-
-  const xooxles = await fileMap;
-
-  function clear() {
-    xooxles.forEach((xooxle) => {
-      document
-        .getElementById(xooxle.params.result_table_name)!
-        .querySelector('tbody')!.innerHTML = '';
-    });
-  }
-
+function queryExpression(): string {
   let query = searchBox.value;
   if (!query) {
-    clear();
-    return;
+    return '';
   }
 
   if (!regexCheckbox.checked) {
@@ -480,152 +588,87 @@ async function search() {
     query = `(?<=^|[^\\p{L}\\p{N}])(${query})(?=$|[^\\p{L}\\p{N}])`;
   }
 
-  let regex: RegExp;
-  try {
-    // NOTE: We can't use the `g` flag (for global) to retrieve all regex
-    // matches, because there are some limitations regarding supporting
-    // regular expressions using both `u` and `g` flags.
-    regex = new RegExp(query, 'iu'); // Case-insensitive and Unicode-aware.
-    messageBox.innerHTML = '';
-  } catch {
-    clear();
-    messageBox.innerHTML = errorMessage();
+  return query;
+}
+
+interface _Xooxle {
+  readonly data: Record<string, string>[];
+  readonly params: _Params;
+}
+
+const xooxles: Xooxle[] = (
+  await fetch('xooxle.json').then(
+    async (resp) => (await resp.json()) as _Xooxle[]
+  )
+).map((xooxle: _Xooxle) => new Xooxle(xooxle));
+
+async function search() {
+  utils.time('search');
+  if (currentAbortController) {
+    currentAbortController.abort();
+  }
+
+  const abortController: AbortController = new AbortController();
+  currentAbortController = abortController;
+
+  xooxles.forEach((xooxle) => {
+    xooxle.clear();
+  });
+
+  const expression: string = queryExpression();
+  if (!expression) {
     return;
   }
 
-  clear(); // Clear previous results.
-
-  xooxles.forEach((xooxle) => {
-    void searchOneDictionary(regex, xooxle, abortController);
-  });
-}
-
-async function searchOneDictionary(
-  regex: RegExp,
-  xooxle: Xooxle,
-  abortController: AbortController
-) {
-  let count = 0;
-  const resultTable = document
-    .getElementById(xooxle.params.result_table_name)!
-    .querySelector('tbody')!;
-
-  // column_sentinels is a set of hidden table rows that represent sentinels
-  // (anchors / break points) in the results table.
-  //
-  // The sentinels are used to divide the table into sections.
-  // Matching results will be added right on top of the sentinels, so that each
-  // sentinel represents the (hidden) bottom row of a section.
-  // Results with a (first) match in their n^th column will be added on top of
-  // the n^th sentinel. (By first match, we mean that a result containing a
-  // match in the 1st and 2nd column, for example, will be added on top of the
-  // 1st, not the 2nd, sentinel.)
-  // We do so based on the assumption that the earlier columns contain more
-  // relevant data. So a result with a match in the 1st column is likely more
-  // interesting to the user than a result with a match in the 2nd column, so it
-  // should show first.
-  //
-  // This allows us to achieve some form of result sorting, without actually
-  // having to retrieve all results, sort them, and then render them. We can
-  // start showing results immediately after one match, thus maintaining
-  // Xooxle's high responsiveness and speed.
-  //
-  // We also insert rows in the table, without displacing or recreating the
-  // other rows, thus reducing jitter.
-  // We use the sentinels as bottoms for the sections, rather than tops,
-  // because we want results to expand downwards rather than upwards, to
-  // avoid jitter at the top of the table, which is the area that the user
-  // will be looking at.
-  const column_sentinels: Element[] = xooxle.params.fields.map(() => {
-    const tr = document.createElement('tr');
-    tr.style.display = 'none';
-    resultTable.appendChild(tr);
-    return tr;
-  });
-
-  for (const res of xooxle.data) {
-    if (abortController.signal.aborted) {
-      return;
-    }
-
-    // field_searches is ordered based on the fields parameter.
-    const search_results: SearchResult[] | null = (() => {
-      try {
-        return res.search(regex);
-      } catch {
-        messageBox.innerHTML = errorMessage();
-        return null;
-      }
-    })();
-
-    if (search_results === null) {
-      // Searching the current candidate has failed. The same will likely happen
-      // with future candidates. Abort.
-      return;
-    }
-
-    if (!Object.values(search_results).some((sr: SearchResult) => sr.match)) {
-      continue;
-    }
-
-    ++count;
-
-    // Create a new row for the table
-    const row = document.createElement('tr');
-
-    const viewCell = document.createElement('td');
-    viewCell.classList.add('view');
-    if (xooxle.params.href_fmt) {
-      // Get the word of the first field that has a match.
-      const word: string = search_results.find(
-        (sr: SearchResult) => sr.match
-      )!.word;
-      const a = document.createElement('a');
-      a.href =
-        xooxle.params.href_fmt.replace(`{${KEY}}`, res.key) +
-        `#:~:text=${encodeURIComponent(word)}`;
-      a.target = '_blank';
-      a.textContent = localStorage.getItem('dev') === 'true' ? res.key : 'view';
-      viewCell.appendChild(a);
-    }
-    row.appendChild(viewCell);
-
-    search_results.forEach((sr: SearchResult) => {
-      const cell = document.createElement('td');
-      cell.innerHTML = sr.html;
-      row.appendChild(cell);
-    });
-
-    column_sentinels[
-      search_results.findIndex((sr) => sr.match)
-    ]!.insertAdjacentElement('beforebegin', row);
-
-    // TODO: Remove the dependency on the HTML structure.
-    const collapsible = resultTable.parentElement!.parentElement!;
-    if (collapsible.style.maxHeight) {
-      collapsible.style.maxHeight = collapsible.scrollHeight.toString() + 'px';
-    }
-
-    if (count % RESULTS_TO_UPDATE_DISPLAY == 0) {
-      await new Promise((resolve) => setTimeout(resolve, 0));
-    }
+  try {
+    const regex = new RegExp(expression, 'iug'); // Case-insensitive and Unicode-aware.
+    await Promise.all(
+      xooxles.map(async (xooxle) => {
+        await xooxle.search(regex, abortController);
+      })
+    );
+    messageBox.innerHTML = '';
+  } catch {
+    messageBox.innerHTML = errorMessage();
+    return;
   }
-
-  let counter = 0;
-  resultTable.childNodes.forEach((node: ChildNode) => {
-    const tr = node as HTMLTableRowElement;
-    if (tr.style.display === 'none') {
-      // This is one of the sentinel rows. Nothing to do here!
-      return;
-    }
-    const small = document.createElement('small');
-    small.classList.add('very-light');
-    small.innerHTML = `${(++counter).toString()} / ${count.toString()}`;
-    const td = tr.firstElementChild as HTMLTableCellElement;
-    td.append(' ');
-    td.append(small);
-  });
+  utils.timeEnd('search');
 }
+
+const queryParamHandler = {
+  query: 'query',
+  full: 'full',
+  regex: 'regex',
+
+  populateForm() {
+    // Populate form values using query parameters.
+    const url = new URL(window.location.href);
+    searchBox.value = url.searchParams.get(this.query) ?? '';
+    fullWordCheckbox.checked = url.searchParams.get(this.full) === 'true';
+    regexCheckbox.checked = url.searchParams.get(this.regex) === 'true';
+  },
+
+  populateParams() {
+    // Populate query parameters using form values.
+    const url = new URL(window.location.href);
+    if (searchBox.value) {
+      url.searchParams.set('query', searchBox.value);
+    } else {
+      url.searchParams.delete('query');
+    }
+    if (fullWordCheckbox.checked) {
+      url.searchParams.set('full', String(fullWordCheckbox.checked));
+    } else {
+      url.searchParams.delete('full');
+    }
+    if (regexCheckbox.checked) {
+      url.searchParams.set('regex', String(regexCheckbox.checked));
+    } else {
+      url.searchParams.delete('regex');
+    }
+    window.history.replaceState('', '', url.toString());
+  },
+};
 
 function handleSearchQuery(timeout: number) {
   if (debounceTimeout) {
@@ -634,54 +677,9 @@ function handleSearchQuery(timeout: number) {
   debounceTimeout = setTimeout(() => {
     // Call the async function after the timeout.
     // Use void to ignore the returned promise.
-    try {
-      void search();
-    } finally {
-      // Update the URL.
-      const url = new URL(window.location.href);
-      if (searchBox.value) {
-        url.searchParams.set('query', searchBox.value);
-      } else {
-        url.searchParams.delete('query');
-      }
-      if (fullWordCheckbox.checked) {
-        url.searchParams.set('full', String(fullWordCheckbox.checked));
-      } else {
-        url.searchParams.delete('full');
-      }
-      if (regexCheckbox.checked) {
-        url.searchParams.set('regex', String(regexCheckbox.checked));
-      } else {
-        url.searchParams.delete('regex');
-      }
-      window.history.replaceState('', '', url.toString());
-    }
+    void search();
+    queryParamHandler.populateParams();
   }, timeout);
-}
-// Check if a query is passed in the query parameters.
-function executeQueryParameters() {
-  let found = false;
-  const url = new URL(window.location.href);
-  const query = url.searchParams.get('query');
-  if (query) {
-    found = true;
-    searchBox.value = query;
-  }
-
-  const fullWord = url.searchParams.get('full');
-  if (fullWord !== null) {
-    found = true;
-    fullWordCheckbox.checked = fullWord === 'true';
-  }
-
-  const useRegex = url.searchParams.get('regex');
-  if (useRegex !== null) {
-    found = true;
-    regexCheckbox.checked = useRegex === 'true';
-  }
-  if (found) {
-    handleSearchQuery(0);
-  }
 }
 
 function maybeRecommendChrome() {
@@ -699,12 +697,13 @@ function maybeRecommendChrome() {
   elem.style.display = 'block';
 }
 
-function xooxleMain() {
+function main() {
   // We intentionally recommend Chrome first thing because, if we're on a
   // different browser, and we try to do something else first, the code might
   // break by the time we get to the recommendation.
   maybeRecommendChrome();
-  executeQueryParameters();
+
+  queryParamHandler.populateForm();
 
   // Prevent other elements in the page from picking up key events on the
   // search box.
@@ -735,4 +734,4 @@ function xooxleMain() {
   });
 }
 
-xooxleMain();
+main();

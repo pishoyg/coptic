@@ -221,6 +221,7 @@ class Highlighter {
   private readonly sheet: CSSStyleSheet | null;
   private readonly dialectRuleIndex: number;
   private readonly devRuleIndex: number;
+  private readonly noDevRuleIndex: number;
 
   private static readonly BRIGHT = '1.0';
   private static readonly DIM = '0.3';
@@ -235,13 +236,16 @@ class Highlighter {
     try {
       this.anki = anki();
       this.sheet = this.anki ? null : window.document.styleSheets[0]!;
-      this.dialectRuleIndex = this.sheet?.cssRules.length ?? 0;
-      this.devRuleIndex = this.dialectRuleIndex + 1;
+      const length = this.sheet?.cssRules.length ?? 0;
+      this.dialectRuleIndex = length;
+      this.devRuleIndex = length + 1;
+      this.noDevRuleIndex = length + 2;
     } catch {
       this.anki = true;
       this.sheet = null;
       this.dialectRuleIndex = 0;
       this.devRuleIndex = 0;
+      this.noDevRuleIndex = 0;
     }
   }
 
@@ -296,12 +300,21 @@ class Highlighter {
 
   updateDev(): void {
     const display = localStorage.getItem('dev') === 'true' ? 'block' : 'none';
+    const noDisplay = display === 'block' ? 'none' : 'block';
     this.updateSheetOrElements(
       this.devRuleIndex,
       '.dev, .nag-hammadi, .senses, .categories',
       `display: ${display};`,
       (el: HTMLElement) => {
         el.style.display = display;
+      }
+    );
+    this.updateSheetOrElements(
+      this.noDevRuleIndex,
+      '.no-dev',
+      `display: ${noDisplay};`,
+      (el: HTMLElement) => {
+        el.style.display = noDisplay;
       }
     );
   }
