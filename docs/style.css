@@ -10,6 +10,7 @@ strong {
   color: #2c3e50;
 }
 
+.collapse,
 h4,
 h5,
 h6 {
@@ -426,6 +427,10 @@ table {
 }
 
 @media (width <= 500px) {
+  .search-box {
+    width: 45%;
+  }
+
   .checkboxes {
     display: flex;
     flex-wrap: wrap;
