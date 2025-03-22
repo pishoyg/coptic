@@ -1,4 +1,5 @@
 import itertools
+import typing
 
 import constants
 import pandas as pd
@@ -124,7 +125,13 @@ class node:
         Args:
             explain: If true, include the meaning, type, and Crum page number.
         """
+        return "".join(self.html_table_aux(explain, include_root))
 
+    def html_table_aux(
+        self,
+        explain: bool = True,
+        include_root: bool = False,
+    ) -> typing.Generator[str]:
         assert (
             not include_root
         ), "An HTML tree with the root is not yet supported."
@@ -133,18 +140,14 @@ class node:
 
         descendants = self.descendants()
         if not descendants:
-            return ""
+            return
         crum_row_spans = build_crum_row_spans(descendants)
 
-        out = []
-        out.extend(
-            [
-                '<table class="derivations" id="derivations">',
-                "<colgroup>",
-            ],
-        )
-        out.extend([f'<col style="width: {100/NUM_COLS}%;">'] * NUM_COLS)
-        out.extend(["</colgroup>"])
+        yield '<table class="derivations" id="derivations">'
+        yield "<colgroup>"
+        for _ in range(NUM_COLS):
+            yield f'<col style="width: {100/NUM_COLS}%;">'
+        yield "</colgroup>"
 
         for d, crum_row_span in zip(descendants, crum_row_spans):
             crum, crum_span = crum_row_span
@@ -168,66 +171,45 @@ class node:
                 # Skip the English.
                 meaning_width = 0
             assert word_width or meaning_width
-            out.extend(
-                [
-                    # New row.
-                    f'<tr id="drv{key}" class="drv">',
-                    # Margin.
-                    f'<td colspan="{depth}"></td>' if depth else "",
-                    # Word.
-                    (
-                        "".join(
-                            [
-                                f'<td colspan="{word_width}" class="marcion bordered">',
-                                word,
-                                (
-                                    f'<span hidden="" class="drv-key dev right">{key}</span>'
-                                    if not meaning_width
-                                    else ""
-                                ),
-                                "</td>",
-                            ],
-                        )
-                        if word_width
-                        else ""
-                    ),
-                    # Meaning.
-                    (
-                        "".join(
-                            [
-                                f'<td colspan="{meaning_width}" class="meaning bordered">',
-                                (
-                                    f"<b>({type})</b><br/>"
-                                    if type not in ["-", "HEADER"]
-                                    else ""
-                                ),
-                                meaning,
-                                f'<span hidden="" class="drv-key dev right">{key}</span>'
-                                "</td>",
-                            ],
-                        )
-                        if meaning_width
-                        else ""
-                    ),
-                    (
-                        f'<td rowspan="{crum_span}" class="dictionary bordered">'
-                        "<b>Crum: </b>"
-                        f'<span class="crum-page">{crum}</span>'
-                        "</td>"
-                        if crum_span
-                        else ""
-                    ),
-                    # End row.
-                    "</tr>",
-                ],
+            hyperlink = (
+                f'<span hidden="" class="drv-key dev right">{key}</span>'
             )
-        out.append("</table>")
-        return " ".join(out)
+            # New row.
+            yield f'<tr id="drv{key}" class="drv">'
+            # Margin.
+            yield f'<td colspan="{depth}"></td>' if depth else ""
+            # Word.
+            if word_width:
+                yield f'<td colspan="{word_width}" class="marcion bordered">'
+                yield word
+                if not meaning_width:
+                    yield hyperlink
+                yield "</td>"
+            # Meaning.
+            if meaning_width:
+                yield f'<td colspan="{meaning_width}" class="meaning bordered">'
+                if type not in ["-", "HEADER"]:
+                    yield f"<b>({type})</b><br/>"
+                yield meaning
+                yield hyperlink
+                yield "</td>"
+            if crum_span:
+                yield f'<td rowspan="{crum_span}" class="dictionary bordered">'
+                yield "<b>Crum: </b>"
+                yield f'<span class="crum-page">{crum}</span>'
+                yield "</td>"
 
-    def html_list(
+            # End row.
+            yield "</tr>"
+        yield "</table>"
+
+    def html_list(self, include_root: bool = False) -> str:
+        return "".join(self.html_list_aux(include_root))
+
+    def html_list_aux(
         self,
         include_root: bool = False,
-    ) -> str:
+    ) -> typing.Generator[str]:
         assert (
             not include_root
         ), "An HTML tree with the root is not yet supported."
@@ -236,33 +218,20 @@ class node:
 
         descendants = self.descendants()
         if not descendants:
-            return ""
+            return
 
-        out = []
-        out.extend(
-            [
-                "<ul>",
-            ],
-        )
+        yield "<ul>"
 
         depth = 0
         for d in descendants:
             cur_depth = int(d.cell("depth"))
             while cur_depth > depth:
-                out.extend(
-                    [
-                        "<li>",
-                        "<ul>",
-                    ],
-                )
+                yield "<li>"
+                yield "<ul>"
                 depth += 1
             while cur_depth < depth:
-                out.extend(
-                    [
-                        "</ul>",
-                        "</li>",
-                    ],
-                )
+                yield "</ul>"
+                yield "</li>"
                 depth -= 1
             word = d.cell("word-parsed-prettify")
             type = d.cell("type-parsed")
@@ -271,30 +240,15 @@ class node:
             assert word or (type == "HEADER" and meaning)
             if type and type not in ["-", "HEADER"]:
                 meaning = f"({type}) {meaning}"
-            li = "<br/>".join(filter(None, [word, meaning]))
-            out.extend(
-                [
-                    "<li>",
-                    li,
-                    "</li>",
-                ],
-            )
+            yield "<li>"
+            yield "<br/>".join(filter(None, [word, meaning]))
+            yield "</li>"
 
         while depth > 0:
-            out.extend(
-                [
-                    "</ul>",
-                    "</li>",
-                ],
-            )
+            yield "</ul>"
+            yield "</li>"
             depth -= 1
-        out.extend(
-            [
-                "</ul>",
-            ],
-        )
-
-        return " ".join(out)
+            yield "</ul>"
 
 
 def depths(derivations: pd.DataFrame) -> list[int]:
