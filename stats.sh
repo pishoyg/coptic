@@ -237,7 +237,7 @@ echo -e "${BLUE}Number of lines of code (including archive): ${GREEN}${LOC}${BLU
 "\n  ${BLUE}Site: ${GREEN}${LOC_SITE}"\
 "\n  ${BLUE}Shared: ${GREEN}${LOC_SHARED}"\
 "\n  ${BLUE}Archive: ${GREEN}${LOC_ARCHIVE}"\
-"\n  ${BLUE}TOTAL: ${GREEN}${TOTAL}"
+"\n  ${BLUE}TOTAL: ${GREEN}${TOTAL}${RESET}"
 
 LOC_PYTHON=$(loc . -name "*.py")
 LOC_MAKE=$(loc . -name "Makefile")
@@ -291,7 +291,7 @@ echo -e "${BLUE}Live lines of code: ${GREEN}$((LOC - LOC_ARCHIVE))"\
 "\n  ${BLUE}TypeScript: ${GREEN}${LOC_TS}"\
 "\n  ${BLUE}JSON: ${GREEN}${LOC_JSON}"\
 "\n  ${BLUE}HTML: ${GREEN}${LOC_HTML}"\
-"\n  ${BLUE}TOTAL: ${GREEN}${TOTAL_BY_LANG}"
+"\n  ${BLUE}TOTAL: ${GREEN}${TOTAL_BY_LANG}${RESET}"
 
 FOC=$(foc_count .)
 FOC_PYTHON=$(foc_count . -name "*.py")
@@ -346,7 +346,7 @@ echo -e "${BLUE}Number of files of code: ${GREEN}${FOC}${BLUE}."\
 "\n  ${BLUE}TypeScript: ${GREEN}${FOC_TS}"\
 "\n  ${BLUE}JSON: ${GREEN}${FOC_JSON}"\
 "\n  ${BLUE}HTML: ${GREEN}${FOC_HTML}"\
-"\n  ${BLUE}TOTAL: ${GREEN}${TOTAL_FOC}"
+"\n  ${BLUE}TOTAL: ${GREEN}${TOTAL_FOC}${RESET}"
 
 DISK_USAGE="$(du --apparent-size --summarize . | cut --fields 1)"
 DISK_USAGE_HUMAN="$(du --apparent-size --human-readable --summarize . | cut --fields 1)"
@@ -360,13 +360,13 @@ CRUM_IMG=$(find "dictionary/marcion.sourceforge.net/data/img/" -type f -exec bas
   | uniq \
   | wc --lines)
 echo -e "${BLUE}Number of words possessing at least one image: "\
-"${GREEN}${CRUM_IMG}${BLUE}."
+"${GREEN}${CRUM_IMG}${BLUE}.${RESET}"
 ((CRUM_IMG >= 700 && CRUM_IMG <= 3357 )) || (echo -e "${PURPLE}${CRUM_IMG} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_IMG_SUM=$(find dictionary/marcion.sourceforge.net/data/img/ -type f \
   | wc --lines)
 echo -e "${BLUE}Total number of images: "\
-"${GREEN}${CRUM_IMG_SUM}${BLUE}."
+"${GREEN}${CRUM_IMG_SUM}${BLUE}.${RESET}"
 ((CRUM_IMG_SUM >= 1200 && CRUM_IMG_SUM <= 33570 )) || (echo -e "${PURPLE}${CRUM_IMG_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_DAWOUD=$(tsv_nonempty \
@@ -374,7 +374,7 @@ CRUM_DAWOUD=$(tsv_nonempty \
   "dawoud-pages" \
   | wc --lines)
 echo -e "${BLUE}Number of words that have at least one page from Dawoud: "\
-"${GREEN}${CRUM_DAWOUD}${BLUE}."
+"${GREEN}${CRUM_DAWOUD}${BLUE}.${RESET}"
 ((CRUM_DAWOUD >= 2600 && CRUM_DAWOUD <= 3357 )) || (echo -e "${PURPLE}${CRUM_DAWOUD} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_DAWOUD_SUM=$(tsv_nonempty \
@@ -383,7 +383,7 @@ CRUM_DAWOUD_SUM=$(tsv_nonempty \
   | grep '[0-9]+' --only-matching --extended-regexp \
   | wc --lines)
 echo -e "${BLUE}Number of Dawoud pages added: "\
-"${GREEN}${CRUM_DAWOUD_SUM}${BLUE}."
+"${GREEN}${CRUM_DAWOUD_SUM}${BLUE}.${RESET}"
 ((CRUM_DAWOUD_SUM >= 4300 && CRUM_DAWOUD_SUM <= 5000 )) || (echo -e "${PURPLE}${CRUM_DAWOUD_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_NOTES=$(tsv_nonempty \
@@ -391,7 +391,7 @@ CRUM_NOTES=$(tsv_nonempty \
   "notes" \
   | wc --lines)
 echo -e "${BLUE}Number of editor's note added to Crum: "\
-"${GREEN}${CRUM_NOTES}${BLUE}."
+"${GREEN}${CRUM_NOTES}${BLUE}.${RESET}"
 ((CRUM_NOTES >= 4 && CRUM_NOTES <= 3357 )) || (echo -e "${PURPLE}${CRUM_NOTES} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_ROOT_SENSES=$(tsv_nonempty \
@@ -399,7 +399,7 @@ CRUM_ROOT_SENSES=$(tsv_nonempty \
   "senses" \
   | wc --lines)
 echo -e "${BLUE}Number of roots with at least one sense: "\
-"${GREEN}${CRUM_ROOT_SENSES}${BLUE}."
+"${GREEN}${CRUM_ROOT_SENSES}${BLUE}.${RESET}"
 ((CRUM_ROOT_SENSES >= 70 && CRUM_ROOT_SENSES <= 3357 )) || (echo -e "${PURPLE}${CRUM_ROOT_SENSES} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_ROOT_SENSES_SUM=$(tsv_nonempty \
@@ -408,7 +408,7 @@ CRUM_ROOT_SENSES_SUM=$(tsv_nonempty \
   | grep '[0-9]+' --only-matching --extended-regexp \
   | wc --lines)
 echo -e "${BLUE}Total number of root senses: "\
-"${GREEN}${CRUM_ROOT_SENSES_SUM}${BLUE}."
+"${GREEN}${CRUM_ROOT_SENSES_SUM}${BLUE}.${RESET}"
 ((CRUM_ROOT_SENSES_SUM >= 160 && CRUM_ROOT_SENSES_SUM <= 33570 )) || (echo -e "${PURPLE}${CRUM_ROOT_SENSES_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_LAST_PAGES=$(tsv_nonempty \
@@ -416,7 +416,7 @@ CRUM_LAST_PAGES=$(tsv_nonempty \
   "crum-last-page" \
   | wc --lines)
 echo -e "${BLUE}Number of Crum last pages overridden: "\
-"${GREEN}${CRUM_LAST_PAGES}${BLUE}."
+"${GREEN}${CRUM_LAST_PAGES}${BLUE}.${RESET}"
 ((CRUM_LAST_PAGES >= 4 && CRUM_LAST_PAGES <= 3357 )) || (echo -e "${PURPLE}${CRUM_LAST_PAGES} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_OVERRIDE_TYPES=$(tsv_nonempty \
@@ -424,7 +424,7 @@ CRUM_OVERRIDE_TYPES=$(tsv_nonempty \
   "override-type" \
   | wc --lines)
 echo -e "${BLUE}Number of types overridden: "\
-"${GREEN}${CRUM_OVERRIDE_TYPES}${BLUE}."
+"${GREEN}${CRUM_OVERRIDE_TYPES}${BLUE}.${RESET}"
 ((CRUM_OVERRIDE_TYPES >= 0 && CRUM_OVERRIDE_TYPES <= 3357 )) || (echo -e "${PURPLE}${CRUM_OVERRIDE_TYPES} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_SISTERS=$(tsv_nonempty \
@@ -432,7 +432,7 @@ CRUM_SISTERS=$(tsv_nonempty \
   "sisters" \
   | wc --lines)
 echo -e "${BLUE}Number of words with sisters: "\
-"${GREEN}${CRUM_SISTERS}${BLUE}."
+"${GREEN}${CRUM_SISTERS}${BLUE}.${RESET}"
 ((CRUM_SISTERS >= 37 && CRUM_SISTERS <= 3357 )) || (echo -e "${PURPLE}${CRUM_SISTERS} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_SISTERS_SUM=$(tsv_nonempty \
@@ -441,7 +441,7 @@ CRUM_SISTERS_SUM=$(tsv_nonempty \
   | grep '[0-9]+' --only-matching --extended-regexp \
   | wc --lines)
 echo -e "${BLUE}Total number of sisters: "\
-"${GREEN}${CRUM_SISTERS_SUM}${BLUE}."
+"${GREEN}${CRUM_SISTERS_SUM}${BLUE}.${RESET}"
 ((CRUM_SISTERS_SUM >= 58 && CRUM_SISTERS_SUM <= 33570 )) || (echo -e "${PURPLE}${CRUM_SISTERS_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_ANTONYMS=$(tsv_nonempty \
@@ -449,7 +449,7 @@ CRUM_ANTONYMS=$(tsv_nonempty \
   "antonyms" \
   | wc --lines)
 echo -e "${BLUE}Number of words with antonyms: "\
-"${GREEN}${CRUM_ANTONYMS}${BLUE}."
+"${GREEN}${CRUM_ANTONYMS}${BLUE}.${RESET}"
 ((CRUM_ANTONYMS >= 2 && CRUM_ANTONYMS <= 3357 )) || (echo -e "${PURPLE}${CRUM_ANTONYMS} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_ANTONYMS_SUM=$(tsv_nonempty \
@@ -458,7 +458,7 @@ CRUM_ANTONYMS_SUM=$(tsv_nonempty \
   | grep '[0-9]+' --only-matching --extended-regexp \
   | wc --lines)
 echo -e "${BLUE}Total number of antonyms: "\
-"${GREEN}${CRUM_ANTONYMS_SUM}${BLUE}."
+"${GREEN}${CRUM_ANTONYMS_SUM}${BLUE}.${RESET}"
 ((CRUM_ANTONYMS_SUM >= 2 && CRUM_ANTONYMS_SUM <= 33570 )) || (echo -e "${PURPLE}${CRUM_ANTONYMS_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_HOMONYMS=$(tsv_nonempty \
@@ -466,7 +466,7 @@ CRUM_HOMONYMS=$(tsv_nonempty \
   "homonyms" \
   | wc --lines)
 echo -e "${BLUE}Number of words with homonyms: "\
-"${GREEN}${CRUM_HOMONYMS}${BLUE}."
+"${GREEN}${CRUM_HOMONYMS}${BLUE}.${RESET}"
 ((CRUM_HOMONYMS >= 7 && CRUM_HOMONYMS <= 3357 )) || (echo -e "${PURPLE}${CRUM_HOMONYMS} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_HOMONYMS_SUM=$(tsv_nonempty \
@@ -475,7 +475,7 @@ CRUM_HOMONYMS_SUM=$(tsv_nonempty \
   | grep '[0-9]+' --only-matching --extended-regexp \
   | wc --lines)
 echo -e "${BLUE}Total number of homonyms: "\
-"${GREEN}${CRUM_HOMONYMS_SUM}${BLUE}."
+"${GREEN}${CRUM_HOMONYMS_SUM}${BLUE}.${RESET}"
 ((CRUM_HOMONYMS_SUM >= 7 && CRUM_HOMONYMS_SUM <= 33570 )) || (echo -e "${PURPLE}${CRUM_HOMONYMS_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_GREEK_SISTERS=$(tsv_nonempty \
@@ -483,7 +483,7 @@ CRUM_GREEK_SISTERS=$(tsv_nonempty \
   "TLA-sisters" \
   | wc --lines)
 echo -e "${BLUE}Number of words with Greek sisters: "\
-"${GREEN}${CRUM_GREEK_SISTERS}${BLUE}."
+"${GREEN}${CRUM_GREEK_SISTERS}${BLUE}.${RESET}"
 ((CRUM_GREEK_SISTERS >= 1 && CRUM_GREEK_SISTERS <= 3357 )) || (echo -e "${PURPLE}${CRUM_GREEK_SISTERS} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_GREEK_SISTERS_SUM=$(tsv_nonempty \
@@ -492,7 +492,7 @@ CRUM_GREEK_SISTERS_SUM=$(tsv_nonempty \
   | grep '[0-9]+' --only-matching --extended-regexp \
   | wc --lines)
 echo -e "${BLUE}Total number of Greek sisters: "\
-"${GREEN}${CRUM_GREEK_SISTERS_SUM}${BLUE}."
+"${GREEN}${CRUM_GREEK_SISTERS_SUM}${BLUE}.${RESET}"
 ((CRUM_GREEK_SISTERS_SUM >= 1 && CRUM_GREEK_SISTERS_SUM <= 3357 )) || (echo -e "${PURPLE}${CRUM_GREEK_SISTERS_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_CATEGORIES=$(tsv_nonempty \
@@ -500,7 +500,7 @@ CRUM_CATEGORIES=$(tsv_nonempty \
   "categories" \
   | wc --lines)
 echo -e "${BLUE}Number of words with categories: "\
-"${GREEN}${CRUM_CATEGORIES}${BLUE}."
+"${GREEN}${CRUM_CATEGORIES}${BLUE}.${RESET}"
 ((CRUM_CATEGORIES >= 30 && CRUM_CATEGORIES <= 3357 )) || (echo -e "${PURPLE}${CRUM_CATEGORIES} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_CATEGORIES_SUM=$(tsv_nonempty \
@@ -509,22 +509,22 @@ CRUM_CATEGORIES_SUM=$(tsv_nonempty \
   | grep '[^,]+' --only-matching --extended-regexp \
   | wc --lines)
 echo -e "${BLUE}Total number of categories: "\
-"${GREEN}${CRUM_CATEGORIES_SUM}${BLUE}."
+"${GREEN}${CRUM_CATEGORIES_SUM}${BLUE}.${RESET}"
 ((CRUM_CATEGORIES_SUM >= 30 && CRUM_CATEGORIES_SUM <= 6714 )) || (echo -e "${PURPLE}${CRUM_CATEGORIES_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_WRD_TYPOS=$(crum_typos "coptwrd.tsv" | wc --lines)
 echo -e "${BLUE}Number of Crum WRD entries changed: "\
-  "${GREEN}${CRUM_WRD_TYPOS}${BLUE}."
+  "${GREEN}${CRUM_WRD_TYPOS}${BLUE}.${RESET}"
 ((CRUM_WRD_TYPOS >= 33 && CRUM_WRD_TYPOS <= 335 )) || (echo -e "${PURPLE}${CRUM_WRD_TYPOS} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_DRV_TYPOS=$(crum_typos "coptdrv.tsv" | wc --lines)
 echo -e "${BLUE}Number of Crum DRV entries changed: "\
-  "${GREEN}${CRUM_DRV_TYPOS}${BLUE}."
+  "${GREEN}${CRUM_DRV_TYPOS}${BLUE}.${RESET}"
 ((CRUM_DRV_TYPOS >= 24 && CRUM_DRV_TYPOS <= 335 )) || (echo -e "${PURPLE}${CRUM_DRV_TYPOS} ${RED}looks suspicious.${RESET}" && exit 1)
 
 readonly CRUM_TYPOS=$(( CRUM_WRD_TYPOS + CRUM_DRV_TYPOS ))
 echo -e "${BLUE}Total number of Crum lins changed: "\
-  "${GREEN}${CRUM_TYPOS}${BLUE}."
+  "${GREEN}${CRUM_TYPOS}${BLUE}.${RESET}"
 ((CRUM_TYPOS >= 57 && CRUM_TYPOS <= 335 )) || (echo -e "${PURPLE}${CRUM_TYPOS} ${RED}looks suspicious.${RESET}" && exit 1)
 
 crum_root_keys_changed () {
@@ -533,27 +533,27 @@ crum_root_keys_changed () {
 }
 CRUM_PAGES_CHANGED=$(crum_root_keys_changed | sort | uniq | wc --lines)
 echo -e "${BLUE}Number of Crum pages changed: "\
-  "${GREEN}${CRUM_PAGES_CHANGED}${BLUE}."
+  "${GREEN}${CRUM_PAGES_CHANGED}${BLUE}.${RESET}"
 ((CRUM_PAGES_CHANGED >= 51 && CRUM_PAGES_CHANGED <= 335 )) || (echo -e "${PURPLE}${CRUM_PAGES_CHANGED} ${RED}looks suspicious.${RESET}" && exit 1)
 
 NUM_COMMITS="$(git rev-list --count --all)"
 echo -e "${BLUE}Number of commits: "\
-  "${GREEN}${NUM_COMMITS}${BLUE}."
+  "${GREEN}${NUM_COMMITS}${BLUE}.${RESET}"
 ((NUM_COMMITS >= 1300 && NUM_COMMITS <= 10000 )) || (echo -e "${PURPLE}${NUM_COMMITS} ${RED}looks suspicious.${RESET}" && exit 1)
 
 NUM_CONTRIBUTORS="$(git shortlog --summary --number --email | wc --lines)"
 echo -e "${BLUE}Number of contributors: "\
-  "${GREEN}${NUM_CONTRIBUTORS}${BLUE}."
+  "${GREEN}${NUM_CONTRIBUTORS}${BLUE}.${RESET}"
 ((NUM_CONTRIBUTORS >= 1 && NUM_CONTRIBUTORS <= 10 )) || (echo -e "${PURPLE}${NUM_CONTRIBUTORS} ${RED}looks suspicious.${RESET}" && exit 1)
 
 NUM_OPEN_ISSUES=$(gh issue list --state open --json number --jq length --limit 10000)
 echo -e "${BLUE}Number of open issues: "\
-  "${GREEN}${NUM_OPEN_ISSUES}${BLUE}."
+  "${GREEN}${NUM_OPEN_ISSUES}${BLUE}.${RESET}"
 ((NUM_OPEN_ISSUES >= 1 && NUM_OPEN_ISSUES <= 300 )) || (echo -e "${PURPLE}${NUM_OPEN_ISSUES} ${RED}looks suspicious.${RESET}" && exit 1)
 
 NUM_CLOSED_ISSUES=$(gh issue list --state closed --json number --jq length --limit 10000)
 echo -e "${BLUE}Number of closed issues: "\
-  "${GREEN}${NUM_CLOSED_ISSUES}${BLUE}."
+  "${GREEN}${NUM_CLOSED_ISSUES}${BLUE}.${RESET}"
 ((NUM_CLOSED_ISSUES >= 1 && NUM_CLOSED_ISSUES <= 300 )) || (echo -e "${PURPLE}${NUM_CLOSED_ISSUES} ${RED}looks suspicious.${RESET}" && exit 1)
 
 if ${COMMIT}; then
