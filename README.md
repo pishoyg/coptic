@@ -1,6 +1,6 @@
 <div align="center">
    <figure>
-      <a href="https://remnqymi.com/" target="_blank"><img src="docs/data/img/icon/icon.png" alt="ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ"
+      <a href="https://remnqymi.com/" target="_blank"><img src="docs/img/icon/icon.png" alt="ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ"
       /></a>
    </figure>
 </div>
@@ -496,14 +496,8 @@ database from other sources:
 
 ### [`copticocc.org/`](dictionary/copticocc.org)
 
-[`dawoud-D100/`](dictionary/copticocc.org/data/dawoud-D100) contains scans of
-Moawad Dawoud's dictionary. They are obtained from [the
-PDF](https://drive.google.com/file/d/17kvk_X8IrK9VgaemwT9Y1MC2_3hByhDS/view?usp=sharing)
-using the [`imagemagick`](https://imagemagick.org/) command. (The density used
-is 100, hence the prefix `-D100`.)
-
-The PDF / image processing scripts can be found under
-[`archive/dictionary/copticocc.org`](archive/dictionary/copticocc.org)
+[`dawoud-D100/`](dictionary/copticocc.org/) contains a digital scan of
+Moawad Dawoud's dictionary.
 
 ### [`kellia.uni-goettingen.de/`](dictionary/kellia.uni-goettingen.de)
 
@@ -604,16 +598,16 @@ Code is released under
 [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
 Lexicon data is released under [CC BY-SA
 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
-[![License: GPL v3](docs/data/img/logos/resized-gplv3.png)](https://www.gnu.org/licenses/gpl-3.0)
-[![License: CC BY-SA 4.0](docs/data/img/logos/resized-cc-by-sa.png)](https://creativecommons.org/licenses/by-sa/4.0/)
+[![License: GPL v3](docs/img/logos/resized-gplv3.png)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: CC BY-SA 4.0](docs/img/logos/resized-cc-by-sa.png)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-[![Marcion](docs/data/img/logos/resized-marcion-logo.png)](https://marcion.sourceforge.net/)
-[![Saint Shenouda The Archimandrite – Coptic Society](docs/data/img/logos/resized-stshenouda-logo.jpg)](http://www.stshenouda.org/coptic-Bible-app)
-[![copticsite.com](docs/data/img/logos/resized-copticsite-logo.png)](https://copticsite.com/)
-[![Coptic Scriptorium](docs/data/img/logos/resized-copticscriptorium-logo.png)](https://copticscriptorium.org/)
-[![Freie Universität Berlin](docs/data/img/logos/resized-fu-logo.png)](https://refubium.fu-berlin.de/handle/fub188/27813)
-[![BBAW TLA](docs/data/img/logos/resized-bbaw-logo.png)](https://aaew.bbaw.de/tla/)
-[![KELLIA](docs/data/img/logos/resized-kellia-logo.png)](https://kellia.uni-goettingen.de/)
+[![Marcion](docs/img/logos/resized-marcion-logo.png)](https://marcion.sourceforge.net/)
+[![Saint Shenouda The Archimandrite – Coptic Society](docs/img/logos/resized-stshenouda-logo.jpg)](http://www.stshenouda.org/coptic-Bible-app)
+[![copticsite.com](docs/img/logos/resized-copticsite-logo.png)](https://copticsite.com/)
+[![Coptic Scriptorium](docs/img/logos/resized-copticscriptorium-logo.png)](https://copticscriptorium.org/)
+[![Freie Universität Berlin](docs/img/logos/resized-fu-logo.png)](https://refubium.fu-berlin.de/handle/fub188/27813)
+[![BBAW TLA](docs/img/logos/resized-bbaw-logo.png)](https://aaew.bbaw.de/tla/)
+[![KELLIA](docs/img/logos/resized-kellia-logo.png)](https://kellia.uni-goettingen.de/)
 
 ***
 Ⲉ̀ϣⲱⲡ ⲁⲓϣⲁⲛⲉⲣⲡⲉⲱⲃϣ Ⲓⲗ̅ⲏ̅ⲙ̅, ⲉⲓⲉ̀ⲉⲣⲡⲱⲃϣ ⲛ̀ⲧⲁⲟⲩⲓⲛⲁⲙ: Ⲡⲁⲗⲁⲥ ⲉϥⲉ̀ϫⲱⲗϫ ⲉ̀ⲧⲁϣ̀ⲃⲱⲃⲓ ⲉ̀ϣⲱⲡ
