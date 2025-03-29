@@ -45,7 +45,6 @@ that aims to make the Coptic language more **learnable**.
       - [See also](#see-also)
   - [`morphology/`](#morphology)
   - [`docs/`](#docs)
-- [License and Cited Works](#license-and-cited-works)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 # Technical Docs
@@ -591,23 +590,6 @@ dictionaries (to support inflections).
 ## [`docs/`](docs/)
 
 This directory contains the static data for [our website](http://remnqymi.com/).
-
-# License and Cited Works
-
-Code is released under
-[GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
-Lexicon data is released under [CC BY-SA
-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
-[![License: GPL v3](docs/img/logos/resized-gplv3.png)](https://www.gnu.org/licenses/gpl-3.0)
-[![License: CC BY-SA 4.0](docs/img/logos/resized-cc-by-sa.png)](https://creativecommons.org/licenses/by-sa/4.0/)
-
-[![Marcion](docs/img/logos/resized-marcion-logo.png)](https://marcion.sourceforge.net/)
-[![Saint Shenouda The Archimandrite – Coptic Society](docs/img/logos/resized-stshenouda-logo.jpg)](http://www.stshenouda.org/coptic-Bible-app)
-[![copticsite.com](docs/img/logos/resized-copticsite-logo.png)](https://copticsite.com/)
-[![Coptic Scriptorium](docs/img/logos/resized-copticscriptorium-logo.png)](https://copticscriptorium.org/)
-[![Freie Universität Berlin](docs/img/logos/resized-fu-logo.png)](https://refubium.fu-berlin.de/handle/fub188/27813)
-[![BBAW TLA](docs/img/logos/resized-bbaw-logo.png)](https://aaew.bbaw.de/tla/)
-[![KELLIA](docs/img/logos/resized-kellia-logo.png)](https://kellia.uni-goettingen.de/)
 
 ***
 Ⲉ̀ϣⲱⲡ ⲁⲓϣⲁⲛⲉⲣⲡⲉⲱⲃϣ Ⲓⲗ̅ⲏ̅ⲙ̅, ⲉⲓⲉ̀ⲉⲣⲡⲱⲃϣ ⲛ̀ⲧⲁⲟⲩⲓⲛⲁⲙ: Ⲡⲁⲗⲁⲥ ⲉϥⲉ̀ϫⲱⲗϫ ⲉ̀ⲧⲁϣ̀ⲃⲱⲃⲓ ⲉ̀ϣⲱⲡ
