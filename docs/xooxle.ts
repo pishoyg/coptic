@@ -1,4 +1,5 @@
 import * as utils from './utils.js';
+import * as collapse from './collapse.js';
 
 // TODO: (#230): Document the HTML structure required in order for this to work.
 // Besides the below, we also expect search result tables and collapsibles with
@@ -761,6 +762,8 @@ async function main() {
 
   xooxle.handleSearchQuery(0);
   Form.searchBox.focus();
+
+  collapse.addListeners(true);
 }
 
 await main();

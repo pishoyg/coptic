@@ -1,35 +1,18 @@
-function getRelHref(rel: string): string | null {
-  const linkElement = document.querySelector(`link[rel="${rel}"]`);
-  return linkElement instanceof HTMLLinkElement ? linkElement.href : null;
-}
+import * as collapse from '../collapse.js';
+import * as utils from '../utils.js';
 
-function openRelHref(rel: string): void {
-  const href = getRelHref(rel);
-  if (href) {
-    window.open(href, '_self');
-  }
-}
-
-function BibleMain() {
-  document
-    .querySelectorAll<HTMLElement>('.collapse')
-    .forEach((collapse: HTMLElement): void => {
-      collapse.addEventListener('click', function () {
-        // TODO: Remove the dependency on the HTML structure.
-        const collapsible = collapse.nextElementSibling! as HTMLElement;
-        collapsible.style.maxHeight = collapsible.style.maxHeight
-          ? ''
-          : collapsible.scrollHeight.toString() + 'px';
-      });
-    });
+function main() {
+  collapse.addListeners();
 
   document.addEventListener('keydown', (event: KeyboardEvent) => {
-    if (event.key === 'n') {
-      openRelHref('next');
+    if (event.code === 'n') {
+      utils.openNextLink();
     } else if (event.key === 'p') {
-      openRelHref('prev');
+      utils.openPrevLink();
+    } else if (event.key === 'X') {
+      utils.openSearchLink();
     }
   });
 }
 
-BibleMain();
+main();

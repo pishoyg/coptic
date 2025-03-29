@@ -1629,20 +1629,6 @@ function handleXooxleOnlyElements() {
       event.preventDefault();
     });
 
-  // Collapse logic.
-  document
-    .querySelectorAll<HTMLElement>('.collapse')
-    .forEach((collapse: HTMLElement): void => {
-      collapse.addEventListener('click', function () {
-        // TODO: Remove the dependency on the HTML structure.
-        const collapsible = collapse.nextElementSibling! as HTMLElement;
-        collapsible.style.maxHeight = collapsible.style.maxHeight
-          ? ''
-          : collapsible.scrollHeight.toString() + 'px';
-      });
-      collapse.click();
-    });
-
   dialectCheckboxes.forEach((checkbox) => {
     checkbox.addEventListener('click', () => {
       syncDialects(checkbox.name).forEach((d) => {
