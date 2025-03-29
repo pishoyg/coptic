@@ -161,6 +161,15 @@ dawoud_img:
 	./dictionary/copticocc.org/crop.sh
 
 ########## LEXICON ##########
+flashcards_xooxle:
+	./flashcards/main.py --xooxle
+
+flashcards_html:
+	./flashcards/main.py --html
+
+flashcards_anki:
+	./flashcards/main.py --anki
+
 _flashcards:
 	./flashcards/main.py \
 		--html \
