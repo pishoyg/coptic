@@ -118,13 +118,13 @@ crum_appendices: FORCE
 crum_img: FORCE
 	./dictionary/marcion.sourceforge.net/img_helper.py --batch
 
-_crum_img_plot: FORCE
+crum_img_plot: FORCE
 	./dictionary/marcion.sourceforge.net/img_helper.py --plot | less -R
 
 # TODO: (#258) This rule is broken. You used to mark camera images by a source
 # that doesn't start with 'http'. But you have been moving towards populating
 # a link pointing to the GPS location where they were taken.
-_camera_images: FORCE
+camera_images: FORCE
 	grep \
 		--invert \
 		-E "^http.*$$" \
@@ -146,10 +146,10 @@ _camera_images: FORCE
 kellia: FORCE
 	./dictionary/kellia.uni-goettingen.de/main.py
 
-_kellia_analysis: FORCE
+kellia_analysis: FORCE
 	./dictionary/kellia.uni-goettingen.de/analysis.py
 
-_kellia_analysis_clean: dictionary/kellia.uni-goettingen.de/data/output/analysis.json
+kellia_analysis_clean: dictionary/kellia.uni-goettingen.de/data/output/analysis.json
 	# Reset the KELLIA analysis JSON. Seemingly, it gets rewritten in a
 	# nondeterministic manner by the pipeline, introducing noisy changes in the
 	# repo, so we reset it to remove the noise.
@@ -157,28 +157,27 @@ _kellia_analysis_clean: dictionary/kellia.uni-goettingen.de/data/output/analysis
 	git restore "dictionary/kellia.uni-goettingen.de/data/output/analysis.json"
 
 ########## DAWOUD ##########
-dawoud_img:
+dawoud_img: FORCE
 	./dictionary/copticocc.org/crop.sh
 
 ########## LEXICON ##########
-flashcards_xooxle:
+flashcards_xooxle: FORCE
 	./flashcards/main.py --xooxle
 
-flashcards_html:
+flashcards_html: FORCE
 	./flashcards/main.py --html
 
-flashcards_anki:
+flashcards_anki: FORCE
 	./flashcards/main.py --anki
 
-_flashcards:
+flashcards: FORCE
 	./flashcards/main.py \
 		--html \
 		--anki \
 		--xooxle
-_bashandy:
+
+bashandy: FORCE
 	./flashcards/bashandy.sh
-.PHONY: flashcards
-flashcards: _flashcards _bashandy
 
 anki_publish: REQUIRE_DRIVE_DIR FORCE
 	cp \
