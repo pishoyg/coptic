@@ -120,7 +120,7 @@ def html_head_aux(
     if page_class:
         yield f"<script>const {page_class} = true;</script>"
     for script in scripts:
-        yield f'<script defer src="{script}" type="text/javascript"></script>'
+        yield f'<script src="{script}" type="module"></script>'
     yield "</head>"
 
 
