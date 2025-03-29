@@ -511,7 +511,10 @@ button:active {
   color: gray;
 }
 
-.meaning {
+/* This rule applies to the meaning column in the senses table in KELLIA's
+   * cards. Other files have a `meaning` class, but it shouldn't be impacted by
+   * this rule. */
+#senses .meaning {
   width: 70%;
 }
 
