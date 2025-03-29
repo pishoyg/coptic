@@ -108,7 +108,7 @@ a.download,
   padding: 2px;
 }
 
-table {
+table:not(.info) {
   border-collapse: collapse;
   width: 100%;
 }
