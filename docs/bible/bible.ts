@@ -5,12 +5,16 @@ function main() {
   collapse.addListeners();
 
   document.addEventListener('keydown', (event: KeyboardEvent) => {
-    if (event.code === 'n') {
-      utils.openNextLink();
-    } else if (event.key === 'p') {
-      utils.openPrevLink();
-    } else if (event.key === 'X') {
-      utils.openSearchLink();
+    switch (event.key) {
+      case 'n':
+        utils.openNextLink();
+        break;
+      case 'p':
+        utils.openPrevLink();
+        break;
+      case 'X':
+        utils.openSearchLink();
+        break;
     }
   });
 }
