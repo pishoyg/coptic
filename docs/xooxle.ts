@@ -763,10 +763,8 @@ async function main() {
     xooxle.handleSearchQuery(0);
   });
 
-  window.addEventListener('pageshow', (): void => {
-    xooxle.handleSearchQuery(0);
-    Form.searchBox.focus();
-  });
+  xooxle.handleSearchQuery(0);
+  Form.searchBox.focus();
 }
 
 await main();
