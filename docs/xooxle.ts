@@ -728,27 +728,7 @@ class Xooxle {
   }
 }
 
-function maybeRecommendChrome() {
-  if (navigator.userAgent.toLowerCase().includes('chrome')) {
-    // We are on Chrome already!
-    return;
-  }
-  if (Math.random() >= 0.5) {
-    return;
-  }
-  const elem = document.getElementById('use-chrome');
-  if (!elem) {
-    return;
-  }
-  elem.style.display = 'block';
-}
-
 async function main() {
-  // We intentionally recommend Chrome first thing because, if we're on a
-  // different browser, and we try to do something else first, the code might
-  // break by the time we get to the recommendation.
-  maybeRecommendChrome();
-
   const form = new Form();
   form.populateFromParams();
 
