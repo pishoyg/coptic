@@ -273,7 +273,13 @@ table:not(.info) {
   background-color: rgb(255 255 255 / 90%);
 }
 
-.header td:not(:first-child) {
+.sister td:not(:first-child) {
+  border-left: 1px solid black;
+  padding-left: 5px;
+  vertical-align: top;
+}
+
+body:not(.lexicon) .header td:not(:first-child) {
   border-left: 1px solid #ddd;
 }
 
@@ -287,12 +293,6 @@ table:not(.info) {
 
 .sister:not(:last-child) {
   border-bottom: 1px solid black;
-}
-
-.sister td:not(:first-child) {
-  border-left: 1px solid black;
-  padding-left: 5px;
-  vertical-align: top;
 }
 
 .sister-view {
@@ -357,6 +357,18 @@ table:not(.info) {
 #xooxle td {
   padding-right: 5px;
   padding-left: 5px;
+}
+
+button {
+  border: none; /* Remove default border */
+  padding: 5px;
+  border-radius: 5px; /* Slightly rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease-in-out; /* Smooth effects */
+}
+
+button:active {
+  transform: scale(0.95); /* Slightly shrink */
 }
 
 .search-box {
@@ -443,7 +455,17 @@ table:not(.info) {
   }
 
   .checkboxes label {
-    margin-right: 10px;
+    margin-right: 6px;
+  }
+
+  .lexicon-form-separator {
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  #message {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 

@@ -167,12 +167,14 @@ const DIALECTS = [
   'W',
   'U',
 ];
-// SYNC_DIALECTS is a list of lists of dialects that should be synchronized with
-// each other.
+// SYNC_DIALECTS stores dialects that should be synchronized with each other.
+// NOTE: The first item (key) should be the code we're looking to deprecate, and
+// the second item should (value) be the standard code.
 const SYNC_DIALECTS = [
-  ['O', 'Ak'], // Old Coptic is O in Crum, and Ak (for Altkoptisch) in KELLIA.
+  ['Ak', 'O'], // Old Coptic is O in Crum, and Ak (for Altkoptisch) in KELLIA.
   ['sA', 'L'], // Lycopolitan is sA (for subAkhmimic) in Crum, and L in KELLIA.
 ];
+const STANDARD_DIALECT_CODE = new Map(SYNC_DIALECTS);
 // DIALECT_SINGLE_CHAR is a mapping for the dialects that have shortcuts other
 // than their codes. If the shortcut to toggle a dialect is not the same as its
 // code, it should be included in this record.
@@ -732,7 +734,9 @@ function makeDialectShortcut(key, name, code, dictionaries, link) {
   return new Shortcut(description, availability, (e) => {
     const dialectCode = DIALECT_SINGLE_CHAR[e.key] ?? e.key;
     if (xooxle()) {
-      click(`checkbox-${dialectCode}`);
+      click(
+        `checkbox-${STANDARD_DIALECT_CODE.get(dialectCode) ?? dialectCode}`
+      );
     } else {
       toggleDialect(dialectCode);
       highlighter.updateDialects();
@@ -1395,13 +1399,6 @@ function handleNonXooxleOnlyElements() {
       e.setAttribute('href', `${crum()}${e.getAttribute('href')}`);
     });
   }
-  // NOTE: The `reset` class is only used in the notes pages.
-  document.querySelectorAll('.reset').forEach((el) => {
-    el.classList.add('link');
-    el.onclick = () => {
-      reset(dialectCheckboxes, highlighter);
-    };
-  });
   handleCopticLookups();
   handleGreekLookups();
 }
@@ -1417,20 +1414,8 @@ function initGoogleSearchBox() {
     'Search A Coptic Dictionary, W. E. Crum, using Ⲅⲟⲟⲅⲗⲉ';
 }
 function handleXooxleOnlyElements() {
-  // NOTE: The element with the ID `reset` is only present on the XOOXLE page.
-  document.getElementById('reset')?.addEventListener('click', (event) => {
-    reset(dialectCheckboxes, highlighter);
-    // On Xooxle, clicking the button would normally submit the form and
-    // reset everything (including the search box and the option checkboxes).
-    // So prevent the event from propagating further.
-    event.preventDefault();
-  });
   dialectCheckboxes.forEach((checkbox) => {
     checkbox.addEventListener('click', () => {
-      syncDialects(checkbox.name).forEach((d) => {
-        const checkboxToSync = document.getElementById(`checkbox-${d}`);
-        checkboxToSync.checked = checkbox.checked;
-      });
       localStorage.setItem(
         'd',
         dialectCheckboxes
@@ -1470,6 +1455,16 @@ function handleCommonElements() {
       e.preventDefault();
       e.stopPropagation();
     }
+  });
+  document.querySelectorAll('.reset').forEach((el) => {
+    el.classList.add('link');
+    el.onclick = (event) => {
+      reset(dialectCheckboxes, highlighter);
+      // On Xooxle, clicking the button would normally submit the form and
+      // reset everything (including the search box and the option
+      // checkboxes). So prevent the event from propagating further.
+      event.preventDefault();
+    };
   });
 }
 function main() {
