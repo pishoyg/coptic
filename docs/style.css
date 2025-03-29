@@ -265,6 +265,9 @@ table:not(.info) {
 }
 
 .header {
+  vertical-align: center;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   table-layout: fixed;
   width: 100%;
