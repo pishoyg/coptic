@@ -245,11 +245,13 @@ table:not(.info) {
 }
 
 .root-type {
+  display: inline-block;
   font-weight: bold;
 }
 
 .categories {
-  display: none;
+  display: inline-block;
+  float: right;
   opacity: 0.5;
 }
 

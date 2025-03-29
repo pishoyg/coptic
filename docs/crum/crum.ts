@@ -320,7 +320,7 @@ class Highlighter {
     const noDisplay = display === 'block' ? 'none' : 'block';
     this.updateSheetOrElements(
       this.devRuleIndex,
-      '.dev, .nag-hammadi, .senses, .categories',
+      '.dev, .nag-hammadi, .senses',
       `display: ${display};`,
       (el: HTMLElement) => {
         el.style.display = display;
