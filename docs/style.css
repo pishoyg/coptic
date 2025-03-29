@@ -402,6 +402,11 @@ table {
   padding-left: 5px;
 }
 
+.results .counter {
+  font-size: smaller;
+  opacity: 0.3;
+}
+
 /* stylelint-enable no-descending-specificity */
 
 .use-chrome {

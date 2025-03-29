@@ -286,19 +286,9 @@ class Index {
       }
     }
 
-    let counter = 0;
-    this.tbody.childNodes.forEach((node: ChildNode) => {
-      const tr = node as HTMLTableRowElement;
-      if (tr.style.display === 'none') {
-        // This is one of the sentinel rows. Nothing to do here!
-        return;
-      }
-      const small = document.createElement('small');
-      small.classList.add('very-light');
-      small.innerHTML = `${(++counter).toString()} / ${count.toString()}`;
-      const td = tr.firstElementChild as HTMLTableCellElement;
-      td.append(' ');
-      td.append(small);
+    let i = 0;
+    this.tbody.querySelectorAll('.counter').forEach((counter) => {
+      counter.innerHTML = `${(++i).toString()} / ${count.toString()}`;
     });
   }
 
@@ -379,12 +369,18 @@ class SearchResult {
     const viewCell = document.createElement('td');
     viewCell.classList.add('view');
 
+    const counter = document.createElement('span');
+    counter.classList.add('counter');
+    counter.innerHTML = '? / ?';
+    counter.append(' ');
+    viewCell.append(counter);
+
     const dev = document.createElement('span');
     dev.classList.add('dev');
     dev.textContent = this.key;
 
     if (!href_fmt) {
-      viewCell.appendChild(dev);
+      viewCell.prepend(dev);
       return viewCell;
     }
 
@@ -402,7 +398,7 @@ class SearchResult {
     a.appendChild(noDev);
     a.appendChild(dev);
 
-    viewCell.appendChild(a);
+    viewCell.prepend(a);
 
     return viewCell;
   }
