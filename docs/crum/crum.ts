@@ -255,6 +255,15 @@ class Highlighter {
   }
 
   updateDialects(): void {
+    // We have three sources of dialect highlighting:
+    // - Lexicon checkboxes
+    // - .dialect elements in the HTML
+    // - Keyboard shortcuts
+    // Two of them (the elements and the checkboxes) require styling updates,
+    // though the styling updates for the .dialect elements are included in the
+    // style sheet.
+    // This method should guarantee that, regardless of the source of the
+    // change, all elements update accordingly.
     const active = activeDialects();
 
     if (active === null) {
@@ -262,6 +271,7 @@ class Highlighter {
       this.updateSheetOrElements(this.dialectRuleIndex, '.word *', '', (el) => {
         el.style.opacity = Highlighter.BRIGHT;
       });
+      dialectCheckboxes.forEach((c) => (c.checked = false));
       return;
     }
 
@@ -275,6 +285,7 @@ class Highlighter {
           el.style.opacity = Highlighter.DIM;
         }
       );
+      dialectCheckboxes.forEach((c) => (c.checked = false));
       return;
     }
 
@@ -296,6 +307,10 @@ class Highlighter {
         el.style.opacity = Highlighter.BRIGHT;
       }
     );
+
+    dialectCheckboxes.forEach((checkbox) => {
+      checkbox.checked = active.includes(checkbox.name);
+    });
   }
 
   updateDev(): void {
@@ -352,6 +367,7 @@ class Highlighter {
     this.addOrReplaceRule(rule_index, `${query} { ${style} }`);
   }
 }
+
 // TODO: This is a bad place to define a global variable.
 const highlighter = new Highlighter();
 
@@ -1627,14 +1643,7 @@ function handleXooxleOnlyElements() {
       collapse.click();
     });
 
-  const active: string[] | null = activeDialects();
-
   dialectCheckboxes.forEach((checkbox) => {
-    // When we first load the page, 'd' dictates the set of active dialects
-    // and hence highlighting. We load 'd' from the local storage, and we
-    // update the boxes to match this set.
-    checkbox.checked = active?.includes(checkbox.name) ?? false;
-
     checkbox.addEventListener('click', () => {
       syncDialects(checkbox.name).forEach((d) => {
         const checkboxToSync = document.getElementById(
