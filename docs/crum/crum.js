@@ -224,12 +224,22 @@ class Highlighter {
     this.updateDev();
   }
   updateDialects() {
+    // We have three sources of dialect highlighting:
+    // - Lexicon checkboxes
+    // - .dialect elements in the HTML
+    // - Keyboard shortcuts
+    // Two of them (the elements and the checkboxes) require styling updates,
+    // though the styling updates for the .dialect elements are included in the
+    // style sheet.
+    // This method should guarantee that, regardless of the source of the
+    // change, all elements update accordingly.
     const active = activeDialects();
     if (active === null) {
       // No dialect highlighting whatsoever.
       this.updateSheetOrElements(this.dialectRuleIndex, '.word *', '', (el) => {
         el.style.opacity = Highlighter.BRIGHT;
       });
+      dialectCheckboxes.forEach((c) => (c.checked = false));
       return;
     }
     if (active.length === 0) {
@@ -242,6 +252,7 @@ class Highlighter {
           el.style.opacity = Highlighter.DIM;
         }
       );
+      dialectCheckboxes.forEach((c) => (c.checked = false));
       return;
     }
     // Some dialects are on, some are off.
@@ -262,6 +273,9 @@ class Highlighter {
         el.style.opacity = Highlighter.BRIGHT;
       }
     );
+    dialectCheckboxes.forEach((checkbox) => {
+      checkbox.checked = active.includes(checkbox.name);
+    });
   }
   updateDev() {
     const display = localStorage.getItem('dev') === 'true' ? 'block' : 'none';
@@ -1411,23 +1425,7 @@ function handleXooxleOnlyElements() {
     // So prevent the event from propagating further.
     event.preventDefault();
   });
-  // Collapse logic.
-  document.querySelectorAll('.collapse').forEach((collapse) => {
-    collapse.addEventListener('click', function () {
-      // TODO: Remove the dependency on the HTML structure.
-      const collapsible = collapse.nextElementSibling;
-      collapsible.style.maxHeight = collapsible.style.maxHeight
-        ? ''
-        : collapsible.scrollHeight.toString() + 'px';
-    });
-    collapse.click();
-  });
-  const active = activeDialects();
   dialectCheckboxes.forEach((checkbox) => {
-    // When we first load the page, 'd' dictates the set of active dialects
-    // and hence highlighting. We load 'd' from the local storage, and we
-    // update the boxes to match this set.
-    checkbox.checked = active?.includes(checkbox.name) ?? false;
     checkbox.addEventListener('click', () => {
       syncDialects(checkbox.name).forEach((d) => {
         const checkboxToSync = document.getElementById(`checkbox-${d}`);

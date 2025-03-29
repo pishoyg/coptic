@@ -1,4 +1,5 @@
 import * as utils from './utils.js';
+import * as collapse from './collapse.js';
 // TODO: (#230): Document the HTML structure required in order for this to work.
 // Besides the below, we also expect search result tables and collapsibles with
 // a given structure.
@@ -217,19 +218,9 @@ class Index {
         await yieldToBrowser();
       }
     }
-    let counter = 0;
-    this.tbody.childNodes.forEach((node) => {
-      const tr = node;
-      if (tr.style.display === 'none') {
-        // This is one of the sentinel rows. Nothing to do here!
-        return;
-      }
-      const small = document.createElement('small');
-      small.classList.add('very-light');
-      small.innerHTML = `${(++counter).toString()} / ${count.toString()}`;
-      const td = tr.firstElementChild;
-      td.append(' ');
-      td.append(small);
+    let i = 0;
+    this.tbody.querySelectorAll('.counter').forEach((counter) => {
+      counter.innerHTML = `${(++i).toString()} / ${count.toString()}`;
     });
   }
   clear() {
@@ -294,11 +285,16 @@ class SearchResult {
   viewCell(href_fmt) {
     const viewCell = document.createElement('td');
     viewCell.classList.add('view');
+    const counter = document.createElement('span');
+    counter.classList.add('counter');
+    counter.innerHTML = '? / ?';
+    counter.append(' ');
+    viewCell.append(counter);
     const dev = document.createElement('span');
     dev.classList.add('dev');
     dev.textContent = this.key;
     if (!href_fmt) {
-      viewCell.appendChild(dev);
+      viewCell.prepend(dev);
       return viewCell;
     }
     // There is an href. We create a link, and add the 'view' text.
@@ -312,7 +308,7 @@ class SearchResult {
     noDev.textContent = 'view';
     a.appendChild(noDev);
     a.appendChild(dev);
-    viewCell.appendChild(a);
+    viewCell.prepend(a);
     return viewCell;
   }
   row(href_fmt) {
@@ -588,25 +584,7 @@ class Xooxle {
     utils.timeEnd('search');
   }
 }
-function maybeRecommendChrome() {
-  if (navigator.userAgent.toLowerCase().includes('chrome')) {
-    // We are on Chrome already!
-    return;
-  }
-  if (Math.random() >= 0.5) {
-    return;
-  }
-  const elem = document.getElementById('use-chrome');
-  if (!elem) {
-    return;
-  }
-  elem.style.display = 'block';
-}
 async function main() {
-  // We intentionally recommend Chrome first thing because, if we're on a
-  // different browser, and we try to do something else first, the code might
-  // break by the time we get to the recommendation.
-  maybeRecommendChrome();
   const form = new Form();
   form.populateFromParams();
   // Prevent other elements in the page from picking up key events on the
@@ -634,9 +612,8 @@ async function main() {
   Form.regexCheckbox.addEventListener('click', () => {
     xooxle.handleSearchQuery(0);
   });
-  window.addEventListener('pageshow', () => {
-    xooxle.handleSearchQuery(0);
-    Form.searchBox.focus();
-  });
+  xooxle.handleSearchQuery(0);
+  Form.searchBox.focus();
+  collapse.addListeners(true);
 }
 await main();
