@@ -192,13 +192,10 @@ const DIALECTS = [
 ];
 
 // SYNC_DIALECTS stores dialects that should be synchronized with each other.
-// NOTE: The first item (key) should be the code we're looking to deprecate, and
-// the second item should (value) be the standard code.
 const SYNC_DIALECTS: [string, string][] = [
   ['Ak', 'O'], // Old Coptic is O in Crum, and Ak (for Altkoptisch) in KELLIA.
   ['sA', 'L'], // Lycopolitan is sA (for subAkhmimic) in Crum, and L in KELLIA.
 ];
-const STANDARD_DIALECT_CODE = new Map<string, string>(SYNC_DIALECTS);
 
 // DIALECT_SINGLE_CHAR is a mapping for the dialects that have shortcuts other
 // than their codes. If the shortcut to toggle a dialect is not the same as its
@@ -268,26 +265,14 @@ class Highlighter {
     // change, all elements update accordingly.
     const active = activeDialects();
 
-    if (active === null) {
+    if (!active) {
       // No dialect highlighting whatsoever.
       this.updateSheetOrElements(this.dialectRuleIndex, '.word *', '', (el) => {
         el.style.opacity = Highlighter.BRIGHT;
       });
-      dialectCheckboxes.forEach((c) => (c.checked = false));
-      return;
-    }
-
-    if (active.length === 0) {
-      // All dialects are off.
-      this.updateSheetOrElements(
-        this.dialectRuleIndex,
-        '.word *',
-        `opacity: ${Highlighter.DIM};`,
-        (el) => {
-          el.style.opacity = Highlighter.DIM;
-        }
-      );
-      dialectCheckboxes.forEach((c) => (c.checked = false));
+      dialectCheckboxes.forEach((c) => {
+        c.checked = false;
+      });
       return;
     }
 
@@ -423,23 +408,24 @@ function activeDialects(): string[] | null {
   return d === '' ? [] : (d?.split(',') ?? null);
 }
 
-// syncDialects returns the list of dialects that should be synced with the
-// given dialect. This includes the given dialect itself.
-function syncDialects(dialect: string): string[] {
-  return SYNC_DIALECTS.find((list) => list.includes(dialect)) ?? [dialect];
-}
-
 function toggleDialect(toggle: string): void {
   const active = new Set(activeDialects());
   const has = active.has(toggle);
-  for (const dialect of syncDialects(toggle)) {
+  const dialects: string[] = SYNC_DIALECTS.find((list) =>
+    list.includes(toggle)
+  ) ?? [toggle];
+  for (const dialect of dialects) {
     if (has) {
       active.delete(dialect);
     } else {
       active.add(dialect);
     }
   }
-  localStorage.setItem('d', Array.from(active).join(','));
+  if (active.size) {
+    localStorage.setItem('d', Array.from(active).join(','));
+  } else {
+    localStorage.removeItem('d');
+  }
 }
 
 // Handle 'developer' and 'dev' classes.
@@ -845,14 +831,8 @@ function makeDialectShortcut(
     : [xooxle];
   return new Shortcut(description, availability, (e: KeyboardEvent) => {
     const dialectCode = DIALECT_SINGLE_CHAR[e.key] ?? e.key;
-    if (xooxle()) {
-      click(
-        `checkbox-${STANDARD_DIALECT_CODE.get(dialectCode) ?? dialectCode}`
-      );
-    } else {
-      toggleDialect(dialectCode);
-      highlighter.updateDialects();
-    }
+    toggleDialect(dialectCode);
+    highlighter.updateDialects();
   });
 }
 
@@ -1614,13 +1594,7 @@ function initGoogleSearchBox(): void {
 function handleXooxleOnlyElements() {
   dialectCheckboxes.forEach((checkbox) => {
     checkbox.addEventListener('click', () => {
-      localStorage.setItem(
-        'd',
-        dialectCheckboxes
-          .filter((box) => box.checked)
-          .map((box) => box.name)
-          .join(',')
-      );
+      toggleDialect(checkbox.name);
       highlighter.updateDialects();
     });
   });
