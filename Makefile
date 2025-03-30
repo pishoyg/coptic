@@ -121,6 +121,9 @@ crum_img: FORCE
 crum_img_plot: FORCE
 	./dictionary/marcion.sourceforge.net/img_helper.py --plot | less -R
 
+crum_scan:
+	./dictionary/marcion.sourceforge.net/download_scan.sh
+
 # TODO: (#258) This rule is broken. You used to mark camera images by a source
 # that doesn't start with 'http'. But you have been moving towards populating
 # a link pointing to the GPS location where they were taken.
