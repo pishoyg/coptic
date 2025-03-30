@@ -13,6 +13,7 @@ readonly DEST="docs/crum/crum"
 
 # Working directory.
 readonly TMP_DIR="/tmp/crum"
+mkdir -p $TMP_DIR
 
 mkdir -p "${DEST}"
 
