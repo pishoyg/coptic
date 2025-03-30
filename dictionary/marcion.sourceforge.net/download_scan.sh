@@ -13,16 +13,16 @@ readonly DEST="docs/crum/crum"
 
 # Working directory.
 readonly TMP_DIR="/tmp/crum"
-mkdir -p $TMP_DIR
+mkdir -p "${TMP_DIR}"
 
 mkdir -p "${DEST}"
 
 # shellcheck disable=SC2016
 seq "${START}" "${END}" | xargs -P 10 -I{} bash -c '
   NUM="$1"
-  TMP="$2/${NUM}.jpg"
-  OUT="$3/$(( ${NUM} + 20 )).jpg"
-  curl --silent --fail "${4}$(printf "%03d" "${NUM}").jpg" -o "${TMP}"
+  TMP="$2/${NUM}.jpeg"
+  OUT="$3/$(( ${NUM} + 20 )).jpeg"
+  curl --silent --fail "${4}$(printf "%03d" "${NUM}").jpeg" -o "${TMP}"
   magick "${TMP}" -resize 50% -interlace JPEG -strip -quality 5 -crop "1830x2760+170+40" "${OUT}"
   rm -f "${TMP}"
   echo "Wrote ${OUT}!"
