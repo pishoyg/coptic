@@ -323,7 +323,7 @@ function window_open(url, external = true) {
     return;
   }
   if (external) {
-    window.open(url, '_blank', 'noopener,noreferrer').focus();
+    window.open(url, '_blank', 'noopener,noreferrer');
     return;
   }
   window.open(url, '_self');

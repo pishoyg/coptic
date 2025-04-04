@@ -363,7 +363,7 @@ function window_open(url: string | null, external = true): void {
     return;
   }
   if (external) {
-    window.open(url, '_blank', 'noopener,noreferrer')!.focus();
+    window.open(url, '_blank', 'noopener,noreferrer');
     return;
   }
   window.open(url, '_self');
