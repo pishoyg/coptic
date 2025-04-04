@@ -463,9 +463,6 @@ function reset(
   // 127.0.0.0 port! We avoid reloading on all Anki platforms!
   // NOTE: In Xooxle, there is no hash-based highlighting, so we don't need to
   // reload the page.
-  // Additionally, the presence of the Google Programmable Search Engine
-  // widget results in the presence of a pseudo-hash in the URL, which would
-  // cause the page to unnecessarily reload.
   if (xooxle()) {
     return;
   }
@@ -1112,11 +1109,6 @@ function makeHelpPanel(): HelpPanel {
         focus('searchBox');
       }),
     ],
-    ';': [
-      new Shortcut('Focus on the Crum Google search box', [xooxle], () => {
-        document.querySelector<HTMLElement>('#google input')!.focus();
-      }),
-    ],
   };
 
   const scrollTo = {
@@ -1577,20 +1569,6 @@ function handleNonXooxleOnlyElements() {
   handleGreekLookups();
 }
 
-function initGoogleSearchBox(): void {
-  const googleSearchBox =
-    document.querySelector<HTMLInputElement>('#google input')!;
-
-  // Prevent search query typing from triggering a shortcut command.
-  googleSearchBox.addEventListener('keydown', (e: KeyboardEvent) => {
-    e.stopPropagation();
-  });
-  googleSearchBox.placeholder =
-    'Search A Coptic Dictionary, W. E. Crum, using Ⲅⲟⲟⲅⲗⲉ';
-  googleSearchBox.ariaPlaceholder =
-    'Search A Coptic Dictionary, W. E. Crum, using Ⲅⲟⲟⲅⲗⲉ';
-}
-
 function handleXooxleOnlyElements() {
   dialectCheckboxes.forEach((checkbox) => {
     checkbox.addEventListener('click', () => {
@@ -1598,12 +1576,6 @@ function handleXooxleOnlyElements() {
       highlighter.updateDialects();
     });
   });
-
-  // NOTE: We have to do this when the page is fully loaded to guarantee that
-  // the Google search box has already been loaded by the Google-provided
-  // script. The correct way to do this is to wrap this in a `load` event
-  // handler.
-  window.addEventListener('load', initGoogleSearchBox);
 }
 
 function handleCommonElements() {
