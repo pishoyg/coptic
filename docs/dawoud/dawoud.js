@@ -31,7 +31,7 @@ class Scroller {
   updatePageParam(newPage) {
     const url = new URL(window.location.href);
     url.searchParams.set('page', newPage.toString());
-    window.history.pushState({}, '', url.toString());
+    window.history.replaceState({}, '', url.toString());
   }
   updateDisplay(page) {
     image.src = `${page.toString()}.jpg`;
