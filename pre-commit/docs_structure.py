@@ -3,6 +3,9 @@
 # a reminder for the developers to update `.env` accordingly, particularly the
 # `findex` / `findexx` helpers.
 
+# TODO: fnmatch is not strict enough! For example, it was found that `dir/*.txt`
+# can match the file path `dir/dir/file.txt`! Figure this out!
+
 import argparse
 import collections
 import fnmatch
@@ -62,7 +65,7 @@ PATTERNS: list[Pattern] = [
     Pattern(["index.html"]),
     Pattern(["style.css"]),
     Pattern(["crum/index.html", "crum/bashandy.html"]),
-    Pattern(["dawoud/index.html"]),
+    Pattern(["dawoud/index.html", "crum/crum/index.html"]),
     Pattern([".nojekyll"]),
     Pattern(["**.ts"]),
     # Data files:
