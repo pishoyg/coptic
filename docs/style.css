@@ -595,12 +595,12 @@ button:active {
   display: none;
 }
 
-.dawoud-frame {
+.scan-frame {
   text-align: center;
   z-index: 5;
 }
 
-.scroll-dawoud-image {
+.scan {
   cursor: grab;
 }
 
