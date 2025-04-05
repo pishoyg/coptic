@@ -24,7 +24,7 @@ export class Scroller {
   private getPageParam(): number {
     const urlParams = new URLSearchParams(window.location.search);
     const page = urlParams.get('page');
-    return page ? parseInt(page) : this.start + this.offset;
+    return page ? parseInt(page) : 1;
   }
 
   private update(page: number): void {
