@@ -1,3 +1,12 @@
+/* TODO: (#407): Split the CSS.
+ * NOTE: We have a CSS class usage analyzer that you can use to display the
+ * current usage. As of today, you can invoke it by:
+ *   ./pre-commit/docs_structure.py -c
+ *
+ * TODO: (#241): Document the class usage in the CSS. Add brief descriptions of
+ * each rule, including what the rule does, and where the classes are used.
+ */
+
 /********** Home Page, and Generic **********/
 
 h1,

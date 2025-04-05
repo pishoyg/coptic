@@ -60,8 +60,7 @@ repos:
     hooks:
       - id: docs-structure
         name: docs-structure
-        # TODO: Enable the hook once `docs/` has been populated.
-        entry: pre-commit/docs_structure.py || true
+        entry: pre-commit/docs_structure.py
         language: system
         files: ^docs/.*
         pass_filenames: false

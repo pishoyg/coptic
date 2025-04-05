@@ -7,6 +7,7 @@ import re
 import typing
 from concurrent import futures
 
+import bs4
 import colorama
 import gspread
 import gspread_dataframe  # type: ignore[import-untyped]
@@ -140,16 +141,15 @@ def html(head: str, *body: str) -> str:
 
 def _print(
     color,
-    severity,
     recolor,
     *args,
-    suppress: bool = False,
+    severity: typing.Literal["", "info", "warn", "error", "fatal"] = "",
     throw: bool = False,
 ):
     message: str = (
         colorama.Style.DIM
         + color
-        + ("" if suppress else severity.capitalize() + ": ")
+        + (severity.capitalize() + ": " if severity else "")
         + colorama.Style.NORMAL
         + " ".join(
             [
@@ -159,66 +159,87 @@ def _print(
         )
         + colorama.Style.RESET_ALL
     )
+
     if throw:
         raise Exception(message)
     else:
         print(message)
 
 
-def info(*args):
+def info(*args, level: bool = True):
     """Log an informational message."""
-    _print(colorama.Fore.GREEN, "info", colorama.Fore.BLUE, *args)
+    _print(
+        colorama.Fore.GREEN,
+        colorama.Fore.BLUE,
+        severity="info" if level else "",
+        *args,
+    )
 
 
-def warn(*args):
+def warn(*args, level: bool = True):
     """Log a warning."""
-    _print(colorama.Fore.YELLOW, "warn", colorama.Fore.CYAN, *args)
+    _print(
+        colorama.Fore.YELLOW,
+        colorama.Fore.CYAN,
+        severity="warn" if level else "",
+        *args,
+    )
 
 
-def error(*args):
+def error(*args, level: bool = True):
     """Log an error."""
-    _print(colorama.Fore.RED, "error", colorama.Fore.MAGENTA, *args)
+    _print(
+        colorama.Fore.RED,
+        colorama.Fore.MAGENTA,
+        severity="error" if level else "",
+        *args,
+    )
 
 
-def err(cond, *args):
+def err(cond, *args, level: bool = True):
     """If the condition is not satisfied, log an error."""
     if not cond:
-        error(*args)
+        error(*args, level=level)
 
 
-def throw(*args):
+def throw(*args, level: bool = True):
     """Throw an exception."""
     _print(
         colorama.Fore.RED,
-        "error",
         colorama.Fore.MAGENTA,
+        severity="error" if level else "",
         *args,
         throw=True,
     )
 
 
-def ass(cond, *args):
+def ass(cond, *args, level: bool = True):
     """Assert!
 
     If the condition is not satisfied, throw an error.
     """
     if not cond:
-        throw(*args)
+        throw(*args, level=level)
 
 
-def fatal(*args):
+def fatal(*args, level: bool = True):
     """Log an error and exit with a nonzero status!"""
-    _print(colorama.Fore.RED, "fatal", colorama.Fore.MAGENTA, *args)
+    _print(
+        colorama.Fore.RED,
+        colorama.Fore.MAGENTA,
+        severity="fatal" if level else "",
+        *args,
+    )
     exit(1)
 
 
-def assass(cond, *args):
+def assass(cond, *args, level: bool = True):
     """Assassinate.
 
     If a condition is not satisfied, exit with a nonzero status.
     """
     if not cond:
-        fatal(*args)
+        fatal(*args, level=level)
 
 
 def mkdir(path: str) -> None:
@@ -322,6 +343,10 @@ def read_gspread(
     worksheet: int = 0,
 ):
     return GCP_CLIENT.client().open(gspread_name).get_worksheet(worksheet)
+
+
+def read_html(path: str) -> bs4.BeautifulSoup:
+    return bs4.BeautifulSoup(read(path), "html.parser")
 
 
 def get_column_index(worksheet, column: str) -> int:
