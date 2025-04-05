@@ -431,7 +431,13 @@ function getLinkHrefByRel(rel) {
   return linkElement instanceof HTMLLinkElement ? linkElement.href : null;
 }
 function scroll(id) {
-  document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+}
+function yank(text) {
+  void navigator.clipboard.writeText(text);
+}
+function stem(path) {
+  return path.split('/').pop().replace('.html', '');
 }
 function height(elem) {
   return elem.getBoundingClientRect().top + window.scrollY;
@@ -961,6 +967,18 @@ function makeHelpPanel() {
         }
       ),
     ],
+    z: [
+      new Shortcut(
+        '(dev mode) Yank the key of the word currently being viewed',
+        [xooxle, note, index],
+        () => {
+          yank(
+            findNextElement('.view .dev, .sister-key, .drv-key', 'cur')
+              .innerHTML
+          );
+        }
+      ),
+    ],
     l: [
       new Shortcut('Go to next word', [note], () => {
         window_open(getLinkHrefByRel('next'), false);
@@ -973,9 +991,7 @@ function makeHelpPanel() {
     ],
     y: [
       new Shortcut('Yank (copy) the word key', [note], () => {
-        void navigator.clipboard.writeText(
-          window.location.pathname.split('/').pop().replace('.html', '')
-        );
+        yank(stem(window.location.pathname));
       }),
     ],
   };
