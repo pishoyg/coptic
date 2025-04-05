@@ -1083,7 +1083,7 @@ function makeHelpPanel(): HelpPanel {
     ],
     z: [
       new Shortcut(
-        '(dev mode) Yank the key of the word currently being viewed',
+        'Yank the key of the word currently being viewed <span class="dev-mode-note">(dev mode)</span>',
         [xooxle, note, index],
         () => {
           yank(

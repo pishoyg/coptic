@@ -337,6 +337,7 @@ body:not(.lexicon) .header td:not(:first-child) {
   display: none;
 }
 
+.dev-mode-note,
 .dialect-dictionaries {
   font-size: small;
   font-style: italic;
