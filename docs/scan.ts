@@ -5,13 +5,18 @@ const prevButton = document.getElementById('prev');
 const resetButton = document.getElementById('reset');
 
 export class Scroller {
+  private readonly start: number;
+  private readonly end: number;
   constructor(
-    private readonly start: number,
-    private readonly end: number,
+    start: number,
+    end: number,
+    private readonly offset = 0,
     // TODO: Clean this mess. There is point of making the extension a function
     // of the page number!
     private readonly ext: string | ((page: number) => string)
   ) {
+    this.start = start - this.offset;
+    this.end = end - this.offset;
     this.initEventListeners();
     this.update(this.getPageParam());
   }
@@ -19,7 +24,7 @@ export class Scroller {
   private getPageParam(): number {
     const urlParams = new URLSearchParams(window.location.search);
     const page = urlParams.get('page');
-    return page ? parseInt(page) : this.start;
+    return page ? parseInt(page) : this.start + this.offset;
   }
 
   private update(page: number): void {
@@ -41,7 +46,8 @@ export class Scroller {
   }
 
   private updateDisplay(page: number): void {
-    image.src = `${page.toString()}.${typeof this.ext === 'function' ? this.ext(page) : this.ext}`;
+    const stem = page + this.offset;
+    image.src = `${stem.toString()}.${typeof this.ext === 'function' ? this.ext(stem) : this.ext}`;
     image.alt = page.toString();
     if (page === this.start) {
       prevButton?.classList.add('disabled');

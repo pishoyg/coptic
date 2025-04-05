@@ -68,7 +68,6 @@ var DIALECT_ARTICLE;
   DIALECT_ARTICLE['ProtoTheban'] =
     'https://ccdl.claremont.edu/digital/collection/cce/id/1984/rec/1';
 })(DIALECT_ARTICLE || (DIALECT_ARTICLE = {}));
-const DAWOUD_OFFSET = 16;
 // TODO: This is not just QWERTY. Rename the constant.
 // TODO: Abandon event keys. Rely solely on event codes.
 const QWERTY_MAP = {
@@ -1286,9 +1285,7 @@ function handleNonXooxleOnlyElements() {
   document.querySelectorAll('.dawoud-page-external').forEach((el) => {
     el.classList.add('link');
     el.onclick = () => {
-      window_open(
-        `${dawoud()}?page=${(+el.innerHTML + DAWOUD_OFFSET).toString()}`
-      );
+      window_open(`${dawoud()}?page=${el.innerHTML}`);
     };
   });
   // Handle 'dawoud-page-img' class.
@@ -1297,9 +1294,7 @@ function handleNonXooxleOnlyElements() {
     el = el.children[0];
     el.classList.add('link');
     el.onclick = () => {
-      window_open(
-        `${dawoud()}?page=${(+el.getAttribute('alt') + DAWOUD_OFFSET).toString()}`
-      );
+      window_open(`${dawoud()}?page=${el.getAttribute('alt')}`);
     };
   });
   // Handle 'crum-page-img' class.

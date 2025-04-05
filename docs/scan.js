@@ -4,26 +4,29 @@ const nextButton = document.getElementById('next');
 const prevButton = document.getElementById('prev');
 const resetButton = document.getElementById('reset');
 export class Scroller {
+  offset;
+  ext;
   start;
   end;
-  ext;
   constructor(
     start,
     end,
+    offset = 0,
     // TODO: Clean this mess. There is point of making the extension a function
     // of the page number!
     ext
   ) {
-    this.start = start;
-    this.end = end;
+    this.offset = offset;
     this.ext = ext;
+    this.start = start - this.offset;
+    this.end = end - this.offset;
     this.initEventListeners();
     this.update(this.getPageParam());
   }
   getPageParam() {
     const urlParams = new URLSearchParams(window.location.search);
     const page = urlParams.get('page');
-    return page ? parseInt(page) : this.start;
+    return page ? parseInt(page) : this.start + this.offset;
   }
   update(page) {
     if (page < this.start) {
@@ -42,7 +45,8 @@ export class Scroller {
     window.history.replaceState({}, '', url.toString());
   }
   updateDisplay(page) {
-    image.src = `${page.toString()}.${typeof this.ext === 'function' ? this.ext(page) : this.ext}`;
+    const stem = page + this.offset;
+    image.src = `${stem.toString()}.${typeof this.ext === 'function' ? this.ext(stem) : this.ext}`;
     image.alt = page.toString();
     if (page === this.start) {
       prevButton?.classList.add('disabled');

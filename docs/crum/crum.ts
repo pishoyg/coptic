@@ -87,7 +87,6 @@ enum DIALECT_ARTICLE {
   ProtoTheban = 'https://ccdl.claremont.edu/digital/collection/cce/id/1984/rec/1',
 }
 
-const DAWOUD_OFFSET = 16;
 // TODO: This is not just QWERTY. Rename the constant.
 // TODO: Abandon event keys. Rely solely on event codes.
 const QWERTY_MAP: Record<string, string> = {
@@ -1442,9 +1441,7 @@ function handleNonXooxleOnlyElements() {
     .forEach((el: HTMLElement): void => {
       el.classList.add('link');
       el.onclick = (): void => {
-        window_open(
-          `${dawoud()}?page=${(+el.innerHTML + DAWOUD_OFFSET).toString()}`
-        );
+        window_open(`${dawoud()}?page=${el.innerHTML}`);
       };
     });
 
@@ -1456,9 +1453,7 @@ function handleNonXooxleOnlyElements() {
       el = el.children[0]! as HTMLElement;
       el.classList.add('link');
       el.onclick = (): void => {
-        window_open(
-          `${dawoud()}?page=${(+el.getAttribute('alt')! + DAWOUD_OFFSET).toString()}`
-        );
+        window_open(`${dawoud()}?page=${el.getAttribute('alt')!}`);
       };
     });
 
