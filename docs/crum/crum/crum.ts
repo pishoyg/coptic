@@ -3,7 +3,8 @@ const MIN_PAGE_NUM = 1;
 const MAX_PAGE_NUM = 973;
 const OFFSET = 20;
 const PNG_RANGES: [number, number][] = [
-  [1, 20],
+  [1, 6],
+  [11, 20],
   [865, 973],
 ];
 
