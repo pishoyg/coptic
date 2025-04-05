@@ -3,6 +3,7 @@ const image = document.getElementById('scan') as HTMLImageElement;
 const nextButton = document.getElementById('next');
 const prevButton = document.getElementById('prev');
 const resetButton = document.getElementById('reset');
+const DEFAULT_PAGE = 1; // Where to go if no page is specified!
 
 export class Scroller {
   private readonly start: number;
@@ -23,8 +24,18 @@ export class Scroller {
 
   private getPageParam(): number {
     const urlParams = new URLSearchParams(window.location.search);
-    const page = urlParams.get('page');
-    return page ? parseInt(page) : 1;
+    let page = urlParams.get('page');
+    if (!page) {
+      return DEFAULT_PAGE;
+    }
+    if (['a', 'b'].some((c) => page?.endsWith(c))) {
+      page = page.slice(0, page.length - 1);
+    }
+    try {
+      return parseInt(page);
+    } catch {
+      return DEFAULT_PAGE;
+    }
   }
 
   private update(page: number): void {
