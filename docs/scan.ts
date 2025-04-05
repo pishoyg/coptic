@@ -3,21 +3,33 @@ const image = document.getElementById('scan') as HTMLImageElement;
 const nextButton = document.getElementById('next');
 const prevButton = document.getElementById('prev');
 const resetButton = document.getElementById('reset');
-const DEFAULT_PAGE = 1; // Where to go if no page is specified!
 
 export class Scroller {
   private readonly start: number;
   private readonly end: number;
+  private readonly landingPage: number;
+  // TODO: The parameters are unnecessarily complicated. Consider getting rid of
+  // offsets and variable extensions altogether. They are complicating things.
   constructor(
+    // Integer basename of the first image file.
     start: number,
+    // Integer basename of the last image file.
     end: number,
+    // The offset mainly concerns itself with the behavior of the page
+    // parameter. It allows you to export a parameter value to your end users
+    // that doesn't necessarily match the file names on the server.
     private readonly offset = 0,
-    // TODO: Clean this mess. There is point of making the extension a function
-    // of the page number!
-    private readonly ext: string | ((page: number) => string)
+    // File extensions. If it's page-dependent, pass a function that returns the
+    // extension given the page number (the parameter passed being the basename,
+    // rather than the page parameter (which accounts for the offset)).
+    private readonly ext: string | ((page: number) => string),
+    // Default value for the page parameter (with the offset accounted for).
+    landingPage = 1
   ) {
     this.start = start - this.offset;
     this.end = end - this.offset;
+    this.landingPage = landingPage;
+
     this.initEventListeners();
     this.update(this.getPageParam());
   }
@@ -26,7 +38,7 @@ export class Scroller {
     const urlParams = new URLSearchParams(window.location.search);
     let page = urlParams.get('page');
     if (!page) {
-      return DEFAULT_PAGE;
+      return this.landingPage;
     }
     if (['a', 'b'].some((c) => page?.endsWith(c))) {
       page = page.slice(0, page.length - 1);
@@ -34,7 +46,7 @@ export class Scroller {
     try {
       return parseInt(page);
     } catch {
-      return DEFAULT_PAGE;
+      return this.landingPage;
     }
   }
 

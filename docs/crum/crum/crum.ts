@@ -2,6 +2,7 @@ import * as scan from '../../scan.js';
 const MIN_PAGE_NUM = 1;
 const MAX_PAGE_NUM = 973;
 const OFFSET = 20;
+const LANDING = -13; // List of Abbreviations is the default for Crum.
 const PNG_RANGES: [number, number][] = [
   [1, 6],
   [11, 20],
@@ -15,7 +16,7 @@ function ext(page: number): string {
 }
 
 function main() {
-  new scan.Scroller(MIN_PAGE_NUM, MAX_PAGE_NUM, OFFSET, ext);
+  new scan.Scroller(MIN_PAGE_NUM, MAX_PAGE_NUM, OFFSET, ext, LANDING);
   new scan.ZoomerDragger();
 }
 
