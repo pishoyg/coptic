@@ -372,6 +372,13 @@ repos:
         language: system
         files: ^dictionary/marcion.sourceforge.net/data/input/.*_appendices.tsv$
         pass_filenames: false
+      # Dawoud's scan sentinels.
+      - id: scan-sentinels
+        name: scan-sentinels
+        entry: dictionary/copticocc.org/main.py
+        language: system
+        files: ^docs/dawoud/.*\.tsv$
+        pass_filenames: false
       # DO-NOT-SUBMIT
       - id: check-do-not-submit
         name: check-do-not-submit
