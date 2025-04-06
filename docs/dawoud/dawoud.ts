@@ -39,6 +39,14 @@ async function main() {
       }
     }
   });
+  document.addEventListener('keydown', (event) => {
+    if (event.code === 'Slash') {
+      searchBox.focus();
+      event.preventDefault();
+      event.stopPropagation();
+    }
+  });
+  searchBox.focus();
 }
 
 await main();
