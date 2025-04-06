@@ -94,11 +94,11 @@ bible: FORCE
 
 epub_publish: REQUIRE_DRIVE_DIR FORCE
 	cp \
-	"docs/bible/epub/1/bohairic_english.epub" \
+	"docs/bible/epub/1/bohairic english.epub" \
 	"$${DRIVE_DIR}/bohairic_english - e-reader.epub"
 
 	cp \
-	"docs/bible/epub/2/bohairic_english.epub" \
+	"docs/bible/epub/2/bohairic english.epub" \
 	"$${DRIVE_DIR}/bohairic_english - desktop.epub"
 
 ########## COPTICSITE ##########
