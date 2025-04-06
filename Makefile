@@ -124,6 +124,14 @@ crum_img_plot: FORCE
 crum_scan:
 	./dictionary/marcion.sourceforge.net/download_scan.sh
 
+crum_sentinels: FORCE
+	PUB="https://docs.google.com/spreadsheets/d/e/2PACX-1vS0Btx-Vz3n5J_sn0dOueWpN_lk64AdV7RrKDp_VNqVfCHajdHoQs67Xeld94jwyRVkqaRxlaRFNH5F/pub?output=tsv"; \
+	DIR="docs/crum/crum"; \
+	curl -L "$${PUB}&gid=0" > "$${DIR}/coptic.tsv"; \
+	curl -L "$${PUB}&gid=2147273844" > "$${DIR}/english.tsv"; \
+	curl -L "$${PUB}&gid=1229285156" > "$${DIR}/greek.tsv"; \
+	curl -L "$${PUB}&gid=1297903664" > "$${DIR}/arabic.tsv"; \
+
 # TODO: (#258) This rule is broken. You used to mark camera images by a source
 # that doesn't start with 'http'. But you have been moving towards populating
 # a link pointing to the GPS location where they were taken.
