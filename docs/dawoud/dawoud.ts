@@ -1,6 +1,6 @@
 import * as scan from '../scan.js';
 const MIN_PAGE_NUM = 0;
-const MAX_PAGE_NUM = 1060;
+const MAX_PAGE_NUM = 1054;
 const OFFSET = 16;
 
 function main() {
