@@ -25,6 +25,12 @@ async function main() {
     if (!word) {
       return;
     }
+    const num = parseInt(word);
+    if (!isNaN(num)) {
+      // This is a page number.
+      scroller.update(num);
+      return;
+    }
     for (const entry of dictionaryIndex) {
       if (word >= entry.start && word <= entry.end) {
         scroller.update(parseInt(entry.page));
