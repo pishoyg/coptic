@@ -2,11 +2,11 @@ import * as scan from '../scan.js';
 const MIN_PAGE_NUM = 0;
 const MAX_PAGE_NUM = 1054;
 const OFFSET = 16;
+// NOTE: The TSV must start with three columns representing the page number,
+// start word, and end word, respectively.
 // TODO: If this were to be adapted to Crum, keep in mind that he sorts the
 // words in a peculiar way!
-// TODO: (#405): Use the local TSV once the index is fully populated.
-const COPTIC =
-  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-qCcmKVqniHVF6vtmzRoedIqgH96sDWMetp4HMSApUKNCZSqUDi3FnU_tW87yWBH2HPMbjJei9KIL/pub?gid=0&single=true&output=tsv';
+const COPTIC = 'coptic.tsv';
 // Coptic exists in the Unicode in two blocks:
 //   https://en.wikipedia.org/wiki/Coptic_(Unicode_block)
 //   https://en.wikipedia.org/wiki/Greek_and_Coptic
@@ -30,6 +30,8 @@ const SEARCH_BOX = 'searchBox';
 // smaller range have higher Unicode values!) We hack around it using this
 // wrapper, to allow you to conveniently compare words lexicographically.
 class Word {
+  // TODO: Map words to integers rather than strings, to speed up the
+  // comparison.
   static mapping = Word.buildMapping();
   mapped;
   word;
@@ -112,30 +114,21 @@ class Dictionary {
     this.searchBox.focus();
   }
   buildIndex(index) {
-    const arr = index
+    return index
       .trim()
       .split('\n')
+      .slice(1) // Skip the header.
       .map((row) => {
-        const [page, start, end] = row.split('\t').map((s) => s.trim());
+        const [page, start, end] = row
+          .split('\t')
+          .map((s) => s.trim())
+          .slice(0, 3);
         return {
           page: parseInt(page),
           start: new DawoudWord(start),
           end: new DawoudWord(end),
         };
       });
-    // TODO: Remove this block once the index is complete!
-    arr.forEach((entry, idx) => {
-      if (!idx) {
-        return;
-      }
-      if (!entry.start.word) {
-        entry.start = arr[idx - 1].end;
-      }
-      if (!entry.end.word) {
-        entry.end = entry.start;
-      }
-    });
-    return arr;
   }
   // Parse the query from the search box, and return a target page.
   getPage() {

@@ -1,26 +1,41 @@
 #!/usr/bin/env python3
 
+import os
 import typing
+
+import pandas as pd
 
 import utils
 
-COPTIC = "docs/dawoud/coptic.tsv"
-ARABIC = "docs/dawoud/arabic.tsv"
-GREEK = "docs/dawoud/greek.tsv"
+_DIR = "docs/dawoud"
+_COPTIC = "coptic.tsv"
+_ARABIC = "arabic.tsv"
+_GREEK = "greek.tsv"
+_ALL = [_COPTIC, _ARABIC, _GREEK]
 
+# Only the Coptic sheet is mature enough for validation.
+_VALIDATE = [_COPTIC]
 
-COPTIC_LETTERS: list[list[str]] = [
+_COPTIC_LETTERS: list[list[str]] = [
     ["Ⲁ", "ⲱ"],
     ["Ⳉ", "ⳉ"],
     ["Ϣ", "ϯ"],
 ]
+_COLUMNS = ["page", "start", "end"]
 
 
 class word:
+    # TODO: Map a word to an integer rather than a string, to speed up the
+    # comparison.
     _mapping: dict[str, str] = {}
 
     def __init__(self, word: str):
         self.word = word.lower()
+        del word
+        # Verify that the word consists purely of Coptic letters.
+        assert self.word
+        mapping = self._get_mapping()
+        assert all(c in mapping for c in self.word), self.word
         self.mapped = self._map(self.word)
 
     def leq(self, other: "word") -> bool:
@@ -45,7 +60,7 @@ class word:
     def _build_mapping(cls) -> dict[str, str]:
         letters = [
             char
-            for start, end in COPTIC_LETTERS
+            for start, end in _COPTIC_LETTERS
             for char in cls._between(start, end)
         ]
         return {char: chr(ord("a") + i) for i, char in enumerate(letters)}
@@ -82,52 +97,53 @@ class page:
         self.end: word = word(e)
 
 
-# TODO: Expect headers. Use pandas to read the TSV.
-def read_tsv(path: str) -> typing.Generator[page]:
-    with open(path) as f:
-        for line in f.readlines():
-            num, s, e = map(str.strip, line.split("\t"))
-            yield page(int(num), s, e)
+class validator:
+    @staticmethod
+    def read_tsv(path: str) -> typing.Generator[page]:
+        df: pd.DataFrame = utils.read_tsv(path)
+        assert list(df.columns[0:3]) == _COLUMNS, df.columns
+        for _, row in df.iterrows():
+            yield page(int(row["page"]), row["start"], row["end"])
 
-
-def valid(a: word, b: word) -> bool:
-    if not a.word or not b.word:
-        # Skip check, since we now allow empty entries.
-        return True
-    return a.leq(b)
-
-
-def validate(sheet: str):
-    pages: list[page] = list(read_tsv(sheet))
-    for idx, p in enumerate(pages):
-        if not valid(p.start, p.end):
-            utils.error(
-                "page",
-                p.num,
-                "has messed up columns",
-                p.start,
-                "and",
-                p.end,
-            )
-        if not idx:
-            continue
-        prev = pages[idx - 1]
-        if not valid(prev.end, p.start):
-            utils.error(
-                p.start,
-                "on page",
-                p.num,
-                "is smaller than",
-                prev.end,
-                "on page",
-                prev.num,
-            )
+    # TODO: (#405): Force the input to be sorted once you have figured out the few
+    # messed up entries.
+    @staticmethod
+    def validate(sheet: str):
+        pages: list[page] = list(validator.read_tsv(sheet))
+        for idx, p in enumerate(pages):
+            # Verify that the words are sorted lexicographically.
+            if not p.start.leq(p.end):
+                utils.error(
+                    "page",
+                    p.num,
+                    "has messed up columns",
+                    p.start,
+                    "and",
+                    p.end,
+                )
+            if not idx:
+                continue
+            prev = pages[idx - 1]
+            # Verify the page numbers are consecutive.
+            assert p.num == prev.num + 1, p.num
+            # Verify that the words are sorted lexicographically.
+            if not prev.end.leq(p.start):
+                utils.error(
+                    p.start,
+                    "on page",
+                    p.num,
+                    "is smaller than",
+                    prev.end,
+                    "on page",
+                    prev.num,
+                )
 
 
 def main():
-    validate(COPTIC)
-    validate(ARABIC)
-    validate(GREEK)
+    assert all(os.path.isfile(os.path.join(_DIR, sheet)) for sheet in _ALL)
+    assert _VALIDATE
+    for sheet in _VALIDATE:
+        validator.validate(os.path.join(_DIR, sheet))
 
 
 if __name__ == "__main__":
