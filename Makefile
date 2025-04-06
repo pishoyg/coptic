@@ -110,10 +110,10 @@ crum: FORCE
 	./dictionary/marcion.sourceforge.net/main.py
 
 crum_appendices: FORCE
-	curl -L "https://docs.google.com/spreadsheets/d/e/2PACX-1vTItxV4E4plQrzjWLSea85ZFQWcQ4ba-p2BBIDG9h5yI0i9URn9GD9zZhxEj8kVI7jhCoPWPEapd9D7/pub?gid=1409267664&single=true&output=tsv" \
-		> "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv"
-	curl -L "https://docs.google.com/spreadsheets/d/e/2PACX-1vTItxV4E4plQrzjWLSea85ZFQWcQ4ba-p2BBIDG9h5yI0i9URn9GD9zZhxEj8kVI7jhCoPWPEapd9D7/pub?gid=1491216210&single=true&output=tsv" \
-		> "dictionary/marcion.sourceforge.net/data/input/derivation_appendices.tsv"
+	PUB="https://docs.google.com/spreadsheets/d/e/2PACX-1vTItxV4E4plQrzjWLSea85ZFQWcQ4ba-p2BBIDG9h5yI0i9URn9GD9zZhxEj8kVI7jhCoPWPEapd9D7/pub?output=tsv"; \
+	DIR="dictionary/marcion.sourceforge.net/data/input"; \
+	curl -L "$${PUB}&gid=1409267664" > "$${DIR}/root_appendices.tsv"; \
+	curl -L "$${PUB}&gid=1491216210" > "$${DIR}/derivation_appendices.tsv";
 
 crum_img: FORCE
 	./dictionary/marcion.sourceforge.net/img_helper.py --batch
@@ -162,6 +162,13 @@ kellia_analysis_clean: dictionary/kellia.uni-goettingen.de/data/output/analysis.
 ########## DAWOUD ##########
 dawoud_img: FORCE
 	./dictionary/copticocc.org/crop.sh
+
+dawoud_sentinels: FORCE
+	PUB="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-qCcmKVqniHVF6vtmzRoedIqgH96sDWMetp4HMSApUKNCZSqUDi3FnU_tW87yWBH2HPMbjJei9KIL/pub?output=tsv"; \
+	DIR="docs/dawoud"; \
+	curl -L "$${PUB}&gid=0" > "$${DIR}/coptic.tsv"; \
+	curl -L "$${PUB}&gid=2057030060" > "$${DIR}/greek.tsv"; \
+	curl -L "$${PUB}&gid=1482232549" > "$${DIR}/arabic.tsv";
 
 ########## LEXICON ##########
 flashcards_xooxle: FORCE
