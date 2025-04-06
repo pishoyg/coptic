@@ -13,12 +13,15 @@ const COPTIC =
 //   https://en.wikipedia.org/wiki/Coptic_(Unicode_block)
 //   https://en.wikipedia.org/wiki/Greek_and_Coptic
 // Thus, to list the letters, we need to iterate over the two ranges separately.
+// There is also one letter, added later, that has its own range — the Akhmimic
+// Khei.
 const COPTIC_LETTERS: [string, string][] = [
   // Capital letters have a higher unicode value, and they immediately
   // precede their small counterpart.
   // Thus, to cover the full range of the alphabet, pair[0] should be a
   // capital letter, and pair[1] should be a small letter.
   ['Ⲁ', 'ⲱ'],
+  ['Ⳉ', 'ⳉ'],
   ['Ϣ', 'ϯ'],
 ];
 
