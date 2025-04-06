@@ -2,11 +2,14 @@ import * as scan from '../scan.js';
 const MIN_PAGE_NUM = 0;
 const MAX_PAGE_NUM = 1054;
 const OFFSET = 16;
+// TODO: (#405): Use the local TSV once the index is populated.
+const COPTIC =
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-qCcmKVqniHVF6vtmzRoedIqgH96sDWMetp4HMSApUKNCZSqUDi3FnU_tW87yWBH2HPMbjJei9KIL/pub?gid=0&single=true&output=tsv';
 async function main() {
   const scroller = new scan.Scroller(MIN_PAGE_NUM, MAX_PAGE_NUM, OFFSET, 'jpg');
   new scan.ZoomerDragger();
   const searchBox = document.getElementById('searchBox');
-  const dictionaryIndex = await fetch('coptic.tsv')
+  const dictionaryIndex = await fetch(COPTIC)
     .then((res) => res.text())
     .then((text) =>
       text
