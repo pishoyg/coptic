@@ -50,7 +50,7 @@ export class Scroller {
     }
   }
 
-  private update(page: number): void {
+  public update(page: number): void {
     if (page < this.start) {
       page = this.start;
     }

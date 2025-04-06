@@ -31,7 +31,7 @@ repos:
         entry: tidy -config "tidy_config.txt"
         language: system
         files: .*\.html
-        exclude: ^docs/crum/(index|bashandy).html$
+        exclude: ^docs/(crum/index|crum/bashandy|dawoud/index).html$
       # See https://github.com/pishoyg/coptic/issues/317 for why
       # `site/crum.html` needs the --warn-proprietary-attributes flag.
       - id: crum-tidy-html
@@ -39,7 +39,7 @@ repos:
         entry: tidy -config "tidy_config.txt" --warn-proprietary-attributes
           "no"
         language: system
-        files: ^docs/crum/(index|bashandy).html$
+        files: ^docs/(crum/index|crum/bashandy|dawoud/index).html$
 
   # Language-agnostic
   - repo: meta
