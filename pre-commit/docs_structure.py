@@ -69,6 +69,7 @@ PATTERNS: list[Pattern] = [
     Pattern([".nojekyll"]),
     Pattern(["**.ts"]),
     # Data files:
+    Pattern(["dawoud/*.tsv"]),
     Pattern(["img/**"]),
     Pattern(["fonts/**"]),
     Pattern(["CNAME"]),
