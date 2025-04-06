@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# NOTE: As a general convention, methods ending with _aux return generators,
+# rather than string literals.
 import html
 import json
 import os
@@ -73,10 +75,6 @@ def normalize(lang: str, text: str) -> str:
     for key, value in substitutions.items():
         text = text.replace(key, value)
     return text
-
-
-def _file_name(book_name: str) -> str:
-    return book_name.lower().replace(" ", "_").replace(".", "_")
 
 
 def json_loads(t: str) -> dict | list:
@@ -190,7 +188,38 @@ class Verse:
             i = s.find(p, i + 1)
 
 
-class Chapter:
+class Item:
+    def id(self) -> str:
+        raise NotImplementedError()
+
+    def title(self) -> str:
+        raise NotImplementedError()
+
+    # NOTE: The `href` method makes a lot of assumption about how the output is
+    # structured (for example, which objects are written as files, and which are
+    # sections within the same file). If the output structure were to change, it needs to be
+    # revisited.
+    def href(self, epub: bool) -> str:
+        raise NotImplementedError()
+
+    def short_title(self) -> str:
+        raise NotImplementedError()
+
+    def header(self) -> str:
+        raise NotImplementedError()
+
+    def path(self, epub: bool) -> str:
+        ext = "xhtml" if epub else "html"
+        return f"{self.id()}.{ext}"
+
+    def anchor(self, epub: bool) -> str:
+        return f'<a href="{self.href(epub)}">{self.short_title()}</a>'
+
+    def to_id(self, name: str) -> str:
+        return name.lower().replace(" ", "_").replace(".", "_")
+
+
+class Chapter(Item):
     def __init__(self, data: dict, book) -> None:
         self.num = self._num(data)
         self.verses = [Verse(v) for v in data["data"]]
@@ -218,8 +247,40 @@ class Chapter:
         assert self._next
         return self._next
 
+    @typing.override
+    def id(self) -> str:
+        return self.to_id(f"{self.book.name}_{self.num}")
 
-class Book:
+    @typing.override
+    def title(self) -> str:
+        return f"{self.book.name} {self.num}"
+
+    @typing.override
+    def short_title(self) -> str:
+        return self.num
+
+    @typing.override
+    def href(self, epub: bool) -> str:
+        id: str = self.id()
+        if epub:
+            # An EPUB chapter is a section in the same file. We simply use an
+            # anchor to the id.
+            return f"#{id}"
+        # An HTML chapter is a standalone file.
+        return self.path(epub)
+
+    @typing.override
+    def path(self, epub: bool) -> str:
+        if not epub:
+            return super().path(epub)
+        raise ValueError("We don't write EPUB chapters to files!")
+
+    @typing.override
+    def header(self) -> str:
+        return f'<h4 id="{self.id()}">{self.title()}</h4>'
+
+
+class Book(Item):
     def __init__(
         self,
         name: str,
@@ -250,6 +311,38 @@ class Book:
         except FileNotFoundError:
             utils.warn("Book not found:", book_name)
             return []
+
+    @typing.override
+    def id(self) -> str:
+        return self.to_id(self.name)
+
+    @typing.override
+    def title(self) -> str:
+        return self.name
+
+    @typing.override
+    def short_title(self) -> str:
+        # There is no short title for books.
+        return self.title()
+
+    @typing.override
+    def href(self, epub: bool) -> str:
+        if epub:
+            # An EPUB book is a separate ".xhtml" spine item.
+            return self.path(epub)
+        # We don't have HTML books!
+        raise ValueError("We don't have hyperlinks to books in HTML!")
+
+    @typing.override
+    def path(self, epub: bool) -> str:
+        if epub:
+            return super().path(epub)
+        # We don't have HTML books!
+        raise ValueError("We don't write HTML books to files!")
+
+    @typing.override
+    def header(self) -> str:
+        return f'<h3 id="{self.id()}">{self.title()}</h3>'
 
 
 class Bible:
@@ -302,6 +395,11 @@ class Bible:
             yield from book.chapters
 
 
+# TODO: The code needs to be structured in the following way:
+# - The format parameters need to go to a new class, called format, for example.
+# - The write and generate methods should move to their respective types, such
+#   as Bible and Chapter. Those methods should accept a format instance as
+#   input.
 class html_builder:
     def __init__(
         self,
@@ -318,13 +416,14 @@ class html_builder:
         self._verse_end: str = verse_end
         self._chapter_end: str = chapter_end
 
-    def _build_chapter_body_aux(
+    # __chapter_body_aux builds the contents of the <body> element of a chapter.
+    def __chapter_body_aux(
         self,
         chapter: Chapter,
         langs: list[str],
     ) -> typing.Generator[str]:
         langs = [lang for lang in langs if chapter.has_lang(lang)]
-        yield self.__IDed_header(chapter)
+        yield chapter.header()
         if not langs:
             return
         yield self._chapter_beginner
@@ -335,90 +434,31 @@ class html_builder:
             yield self._verse_end
         yield self._chapter_end
 
-    def _build_book_body_aux(
+    # __book_body_aux builds the contents of the <body> element of a book.
+    def __book_body_aux(
         self,
         book: Book,
         langs: list[str],
         epub: bool,
     ) -> typing.Generator[str]:
-        # We only write a whole book in one file for EPUB.
-        assert epub
-        assert len(langs) > 0
-        yield self.__IDed_header(book)
-        first_chapter: bool = True
-        for chapter in book.chapters:
-            if first_chapter:
-                first_chapter = False
-            else:
+        assert epub  # We only write a whole book in one file for EPUB.
+        assert len(langs) > 0  # We need at least one language.
+
+        # Yield the book header.
+        yield book.header()
+
+        # Yield anchors to the chapters.
+        for i, chapter in enumerate(book.chapters):
+            if i:
                 yield " "
-            yield self.__link(chapter, epub=epub)
+            yield chapter.anchor(epub)
 
+        # Yield the chapter contents.
         for chapter in book.chapters:
-            yield from self._build_chapter_body_aux(chapter, langs)
+            yield from self.__chapter_body_aux(chapter, langs)
 
-    def __href(
-        self,
-        page: Book | Chapter,
-        epub: bool = False,
-    ) -> str:
-        id: str = self.__id(page)
-
-        is_book: bool = isinstance(page, Book)
-        is_chapter: bool = isinstance(page, Chapter)
-        assert is_book ^ is_chapter
-        is_html: bool = not epub
-        assert is_html ^ epub
-
-        if epub and is_book:
-            # An EPUB book is a separate ".xhtml" spine item.
-            return f"{id}.xhtml"
-        if epub and is_chapter:
-            # An EPUB chapter is a section in the same file. We simply use an
-            # anchor to the id.
-            # NOTE: This can only be referenced from the same file!
-            return f"#{id}"
-
-        assert is_html and not epub  # Sanity check.
-
-        if is_book:
-            # We don't have HTML books!
-            raise ValueError("HTML books are not supported!")
-        assert is_chapter and not is_book  # Sanity check.
-        assert isinstance(page, Chapter)
-        # An HTML chapter is a standalone file.
-        href = f"{_file_name(page.book.name)}_{page.num}.html"
-        return href
-
-    def __link(
-        self,
-        page: Book | Chapter,
-        epub: bool = False,
-    ) -> str:
-        return f'<a href="{self.__href(page, epub)}">{page.num if isinstance(page, Chapter) else page.name}</a>'
-
-    def __IDed_header(self, page: Book | Chapter) -> str:
-        tag = "h3" if isinstance(page, Chapter) else "h2"
-        return (
-            f'<{tag} id="{self.__id(page)}">{self.__html_title(page)}</{tag}>'
-        )
-
-    def __html_title(self, page: Book | Chapter) -> str:
-        if isinstance(page, Book):
-            return page.name
-        assert isinstance(page, Chapter)
-        return f"{page.book.name} {page.num}"
-
-    def __id(
-        self,
-        page: Book | Chapter,
-    ) -> str:
-        book = page if isinstance(page, Book) else page.book
-        id: str = book.name.lower().replace(" ", "_")
-        if isinstance(page, Chapter):
-            id += str(page.num)
-        return id
-
-    def _html_aux(
+    # __html_aux builds the HTML file content as a generator.
+    def __html_aux(
         self,
         body: typing.Iterable[str],
         title: str,
@@ -440,35 +480,35 @@ class html_builder:
             *body,
         )
 
-    def _build_toc_body_aux(
+    # _build_toc_body_aux builds the contents of the <body> element for the
+    # table of contents.
+    def __toc_body_aux(
         self,
         bible: Bible,
-        epub: bool = False,
+        epub: bool,
     ) -> typing.Generator[str]:
-        # Right now, we only support generating a table of contents for EPUB.
+        # Yield the title.
         yield f"<h1>"
         yield BOOK_TITLE
         yield f"</h1>"
         if epub:
+            # For EPUB, we yield an anchor to each book, and we call it a day.
             for book in bible.books:
                 yield "<p>"
-                yield self.__link(book, epub=epub)
+                yield book.anchor(epub)
                 yield "</p>"
             return
         assert not epub
-        # This is the HTML index.
+        # For HTML, we list the books, and anchors to the chapters.
         for book in bible.books:
             yield f'<h4 class="collapse index-book-name">'
             yield book.name
             yield f"</h4>"
             yield '<div class="collapsible index-book-chapter-list">'
-            first_chapter = True
-            for chapter in book.chapters:
-                if first_chapter:
-                    first_chapter = False
-                else:
+            for i, chapter in enumerate(book.chapters):
+                if i:
                     yield " "
-                yield self.__link(chapter, epub=False)
+                yield chapter.anchor(epub)
             yield "</div>"
 
     def write_html(self, bible: Bible, langs: list[str], subdir: str) -> None:
@@ -476,19 +516,14 @@ class html_builder:
         # or copy it.
         assert os.path.isfile(os.path.join(OUTPUT_DIR, subdir, SCRIPT))
 
+        def write_chapter(chapter: Chapter) -> None:
+            self.__write_html_chapter(chapter, langs, subdir)
+
         with utils.ThreadPoolExecutor() as executor:
-            list(
-                executor.map(
-                    lambda args: self.__write_html_chapter(*args),
-                    [
-                        (book, chapter, langs, subdir)
-                        for book in bible.books
-                        for chapter in book.chapters
-                    ],
-                ),
-            )
-        toc = self._html_aux(
-            self._build_toc_body_aux(bible, epub=False),
+            list(executor.map(write_chapter, bible.chain_chapters()))
+
+        toc = self.__html_aux(
+            self.__toc_body_aux(bible, epub=False),
             title=BOOK_TITLE,
             page_class=INDEX_CLASS,
         )
@@ -497,7 +532,6 @@ class html_builder:
 
     def __write_html_chapter(
         self,
-        book: Book,
         chapter: Chapter,
         langs: list[str],
         subdir: str,
@@ -506,17 +540,17 @@ class html_builder:
         next: Chapter | None = chapter.next()
         prev: Chapter | None = chapter.prev()
 
-        out = self._html_aux(
-            self._build_chapter_body_aux(chapter, langs),
-            title=book.name,
+        out = self.__html_aux(
+            self.__chapter_body_aux(chapter, langs),
+            title=chapter.book.name,
             page_class=CHAPTER_CLASS,
-            next=self.__href(next, epub=False) if next else "",
-            prev=self.__href(prev, epub=False) if prev else "",
+            next=next.href(epub=False) if next else "",
+            prev=prev.href(epub=False) if prev else "",
         )
         path: str = os.path.join(
             OUTPUT_DIR,
             subdir,
-            f"{_file_name(book.name)}_{chapter.num}.html",
+            chapter.path(epub=False),
         )
         utils.writelines(out, path, mkdir=True)
 
@@ -546,8 +580,8 @@ class html_builder:
         )
         toc.set_content(
             "".join(
-                self._html_aux(
-                    self._build_toc_body_aux(bible, epub=True),
+                self.__html_aux(
+                    self.__toc_body_aux(bible, epub=True),
                     title=BOOK_TITLE,
                     epub=True,
                 ),
@@ -560,12 +594,12 @@ class html_builder:
         for book in bible.books:
             c: epub.EpubHtml = epub.EpubHtml(
                 title=book.name,
-                file_name=self.__id(book) + ".xhtml",
+                file_name=book.path(epub=True),
             )
             c.set_content(
                 "".join(
-                    self._html_aux(
-                        self._build_book_body_aux(book, langs, epub=True),
+                    self.__html_aux(
+                        self.__book_body_aux(book, langs, epub=True),
                         title=book.name,
                         epub=True,
                     ),
@@ -584,6 +618,12 @@ class html_builder:
             subdir,
             f"{identifier.lower()}.epub",
         )
+        utils.mk_parent_dir(path)
+        # TODO: The following method can fail silently. To verify that the
+        # content has actually been written, perhaps write to a temporary file,
+        # then verify its existence, then copy to the actual destination.
+        # Asserting that the file exists doesn't suffice because it might have
+        # been there already.
         epub.write_epub(path, kindle)
         utils.wrote(path)
 

@@ -283,7 +283,9 @@ def writelines(
     wrote(path)
 
 
-def wrote(path: str) -> None:
+def wrote(path: str, verify: bool = True) -> None:
+    if verify:
+        assert os.path.exists(path)
     info("Wrote", path)
 
 
