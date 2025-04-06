@@ -11,11 +11,10 @@ _DIR = "docs/dawoud"
 _COPTIC = "coptic.tsv"
 _ARABIC = "arabic.tsv"
 _GREEK = "greek.tsv"
+# TODO: Add validation for the Arabic index.
 _ALL = [_COPTIC, _ARABIC, _GREEK]
 
-# Only the Coptic sheet is mature enough for validation.
-_VALIDATE = [_COPTIC]
-
+# The Arabic sheet is not yet mature enough for validation.
 _COPTIC_LETTERS: list[list[str]] = [
     ["Ⲁ", "ⲱ"],
     ["Ⳉ", "ⳉ"],
@@ -25,8 +24,6 @@ _COLUMNS = ["page", "start", "end"]
 
 
 class word:
-    # TODO: Map a word to an integer rather than a string, to speed up the
-    # comparison.
     _mapping: dict[str, str] = {}
 
     def __init__(self, word: str):
@@ -91,25 +88,28 @@ class dawoud_word(word):
 
 
 class page:
-    def __init__(self, num: int, s: str, e: str) -> None:
+    def __init__(self, num: int, s: word, e: word) -> None:
         self.num: int = num
-        self.start: word = word(s)
-        self.end: word = word(e)
+        self.start: word = s
+        self.end: word = e
 
 
 class validator:
     @staticmethod
-    def read_tsv(path: str) -> typing.Generator[page]:
+    def read_tsv(
+        path: str,
+        w: typing.Callable[[str], word],
+    ) -> typing.Generator[page]:
         df: pd.DataFrame = utils.read_tsv(path)
         assert list(df.columns[0:3]) == _COLUMNS, df.columns
         for _, row in df.iterrows():
-            yield page(int(row["page"]), row["start"], row["end"])
+            yield page(int(row["page"]), w(row["start"]), w(row["end"]))
 
     # TODO: (#405): Force the input to be sorted once you have figured out the few
     # messed up entries.
     @staticmethod
-    def validate(sheet: str):
-        pages: list[page] = list(validator.read_tsv(sheet))
+    def validate(sheet: str, w: typing.Callable[[str], word]):
+        pages: list[page] = list(validator.read_tsv(sheet, w))
         for idx, p in enumerate(pages):
             # Verify that the words are sorted lexicographically.
             if not p.start.leq(p.end):
@@ -141,9 +141,8 @@ class validator:
 
 def main():
     assert all(os.path.isfile(os.path.join(_DIR, sheet)) for sheet in _ALL)
-    assert _VALIDATE
-    for sheet in _VALIDATE:
-        validator.validate(os.path.join(_DIR, sheet))
+    validator.validate(os.path.join(_DIR, _COPTIC), dawoud_word)
+    validator.validate(os.path.join(_DIR, _GREEK), word)
 
 
 if __name__ == "__main__":
