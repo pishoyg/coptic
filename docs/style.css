@@ -28,12 +28,19 @@ h6 {
 }
 
 h1 {
+  font-size: 48px;
   text-align: center;
+}
+
+figcaption {
+  color: #7f8c8d;
+  font-size: 0.9em;
 }
 
 a,
 .link,
-a strong {
+a strong,
+a figcaption {
   color: #3498db;
   cursor: pointer;
   text-decoration: none;
@@ -74,16 +81,16 @@ figure {
   place-content: center center;
 }
 
+.logos {
+  text-align: center;
+  place-content: center center;
+}
+
 figure img {
   border: 2px solid #ddd;
   border-radius: 5px;
   box-shadow: 2px 2px 10px rgb(0 0 0 / 10%);
   margin: 0;
-}
-
-figcaption {
-  color: #7f8c8d;
-  font-size: 0.9em;
 }
 
 hr {
@@ -162,6 +169,7 @@ table:not(.info) {
 
 .logo {
   height: 100px;
+  padding-right: 10px;
 }
 
 .inline-logo {
