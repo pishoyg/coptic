@@ -28,8 +28,12 @@ h6 {
 }
 
 h1 {
-  font-size: 48px;
   text-align: center;
+  font-size: 32px;
+}
+
+body.home h1 {
+  font-size: 48px;
 }
 
 figcaption {
