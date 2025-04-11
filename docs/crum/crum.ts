@@ -11,6 +11,7 @@
 
 const COPTIC_RE = /[Ⲁ-ⲱϢ-ϯⳈⳉ]+/giu;
 const GREEK_RE = /[Α-Ωα-ω]+/giu;
+const ENGLISH_RE = /[A-Za-z]+/giu;
 
 const GREEK_LOOKUP_URL_PREFIX = 'https://logeion.uchicago.edu/';
 
@@ -53,20 +54,14 @@ function index_index(): boolean {
   return typeof INDEX_INDEX !== 'undefined' && INDEX_INDEX;
 }
 
-const HOME = 'http://remnqymi.com';
-function home(): string {
-  return `${anki() ? HOME : ''}/`;
-}
+const HOME = anki() ? 'http://remnqymi.com' : '';
 // NOTE: The following assumes that the code is getting executed from a page
 // directly under `crum/`.
-function crum(): string {
-  return anki() ? `${HOME}/crum/` : './';
-}
-function dawoud(): string {
-  return `${home()}dawoud/`;
-}
+const LEXICON = anki() ? `${HOME}/crum` : '.';
+const SCAN = `${LEXICON}/crum`;
+const DAWOUD = `${HOME}/dawoud`;
 
-const LOOKUP_URL_PREFIX = `${crum()}?query=`;
+const LOOKUP_URL_PREFIX = `${LEXICON}?query=`;
 
 const EMAIL = 'remnqymi@gmail.com';
 const EMAIL_LINK = `mailto:${EMAIL}`;
@@ -1035,19 +1030,19 @@ function makeHelpPanel(): HelpPanel {
     ],
     H: [
       new Shortcut(
-        `Open <a href="${home()}" target="_blank"><strong>h</strong>omepage</a>`,
+        `Open <a href="${HOME}" target="_blank"><strong>h</strong>omepage</a>`,
         [xooxle, note, index, index_index],
         () => {
-          window_open(home());
+          window_open(HOME);
         }
       ),
     ],
     X: [
       new Shortcut(
-        `Open the <a href="${crum()}" target="_blank">dictionary search page</a>`,
+        `Open the <a href="${LEXICON}" target="_blank">dictionary search page</a>`,
         [xooxle, note, index, index_index],
         () => {
-          window_open(crum());
+          window_open(LEXICON);
         }
       ),
     ],
@@ -1383,6 +1378,10 @@ function handleGreekLookups(root: Node = document.body) {
   linkifyText(root, GREEK_RE, GREEK_LOOKUP_URL_PREFIX, ['link', 'light']);
 }
 
+function handleEnglishLookups(root: Node = document.body) {
+  linkifyText(root, ENGLISH_RE, LOOKUP_URL_PREFIX, ['hover-link']);
+}
+
 function handleNonXooxleOnlyElements() {
   // Handle 'categories' class.
   document
@@ -1394,7 +1393,7 @@ function handleNonXooxleOnlyElements() {
         .map((s) => s.trim())
         .map(
           (s) =>
-            `<a class="hover-link" href="${crum()}${s}.html" target="_blank">${s}</a>`
+            `<a class="hover-link" href="${LEXICON}/${s}.html" target="_blank">${s}</a>`
         )
         .join(', ');
       elem.innerHTML = linked;
@@ -1410,7 +1409,7 @@ function handleNonXooxleOnlyElements() {
         console.error('Unable to infer the root type for element!', elem);
         return;
       }
-      const linked = `(<a class="hover-link" href="${crum()}${type.replaceAll('/', '_')}.html" target="_blank">${type}</a>)`;
+      const linked = `(<a class="hover-link" href="${LEXICON}/${type.replaceAll('/', '_')}.html" target="_blank">${type}</a>)`;
       elem.innerHTML = linked;
     });
 
@@ -1441,7 +1440,7 @@ function handleNonXooxleOnlyElements() {
     .forEach((el: HTMLElement): void => {
       el.classList.add('link');
       el.onclick = (): void => {
-        window_open(`${dawoud()}?page=${el.innerHTML}`);
+        window_open(`${DAWOUD}?page=${el.innerHTML}`);
       };
     });
 
@@ -1453,7 +1452,7 @@ function handleNonXooxleOnlyElements() {
       el = el.children[0]! as HTMLElement;
       el.classList.add('link');
       el.onclick = (): void => {
-        window_open(`${dawoud()}?page=${el.getAttribute('alt')!}`);
+        window_open(`${DAWOUD}?page=${el.getAttribute('alt')!}`);
       };
     });
 
@@ -1563,6 +1562,17 @@ function handleNonXooxleOnlyElements() {
       };
     });
 
+  {
+    // Add a link to the Crum abbreviations.
+    const crumElement = document.getElementById('crum');
+    const anchor = document.createElement('a');
+    anchor.textContent = 'Abbreviations';
+    anchor.href = SCAN;
+    anchor.classList.add('abbreviations');
+    anchor.target = '_blank';
+    crumElement?.insertBefore(anchor, crumElement.firstChild);
+  }
+
   if (anki()) {
     document
       .querySelectorAll<HTMLElement>('.navigate')
@@ -1574,12 +1584,15 @@ function handleNonXooxleOnlyElements() {
           );
           return;
         }
-        e.setAttribute('href', `${crum()}${e.getAttribute('href')!}`);
+        e.setAttribute('href', `${LEXICON}/${e.getAttribute('href')!}`);
       });
   }
 
   handleCopticLookups();
   handleGreekLookups();
+  document.querySelectorAll('.meaning').forEach((elem) => {
+    handleEnglishLookups(elem);
+  });
 }
 
 function handleXooxleOnlyElements() {

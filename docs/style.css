@@ -369,6 +369,10 @@ body:not(.lexicon) .header td:not(:first-child) {
   width: 60%;
 }
 
+.abbreviations {
+  float: left;
+}
+
 /********** Xooxle **********/
 
 /* stylelint-disable selector-id-pattern */
