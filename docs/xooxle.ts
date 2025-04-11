@@ -1,4 +1,4 @@
-import * as utils from './utils.js';
+import * as logger from './logger.js';
 import * as collapse from './collapse.js';
 
 // TODO: (#230): Document the HTML structure required in order for this to work.
@@ -686,7 +686,7 @@ class Xooxle {
   }
 
   async search() {
-    utils.time('search');
+    logger.time('search');
     if (this.currentAbortController) {
       this.currentAbortController.abort();
     }
@@ -721,7 +721,7 @@ class Xooxle {
       }
     }
 
-    utils.timeEnd('search');
+    logger.timeEnd('search');
   }
 }
 

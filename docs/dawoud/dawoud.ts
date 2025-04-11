@@ -1,5 +1,6 @@
 import * as scan from '../scan.js';
-import * as utils from '../utils.js';
+import * as env from '../env.js';
+import * as logger from '../logger.js';
 
 const MIN_PAGE_NUM = 0;
 const MAX_PAGE_NUM = 1054;
@@ -83,12 +84,12 @@ async function nodeMain(): Promise<void> {
 }
 
 async function main(): Promise<void> {
-  if (utils.node()) {
+  if (env.node()) {
     await nodeMain();
-  } else if (utils.browser()) {
+  } else if (env.browser()) {
     await browserMain();
   } else {
-    utils.fatal('Neither Node nor browser!!');
+    logger.fatal('Neither Node nor browser!!');
   }
 }
 
