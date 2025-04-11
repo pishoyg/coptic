@@ -1,6 +1,6 @@
 // NOTE: This package is used in the browser, and also during validation. So we
 // allow it to assert correctness, instead of trying to fail recursively.
-import * as utils from './utils.js';
+import * as logger from './logger.js';
 // WANT_COLUMNS is the list of the first columns we expect to find in the TSV.
 const WANT_COLUMNS = ['page', 'start', 'end'];
 // Coptic exists in the Unicode in two blocks:
@@ -23,15 +23,16 @@ const COPTIC_LETTERS = [
 // The two unicode blocks for the language are swapped (the lexicographically
 // smaller range have higher Unicode values!) We hack around it using this
 // wrapper, to allow you to conveniently compare words lexicographically.
+// TODO: (#411) This currently only supports Coptic, but we will soon build
+// Greek and Arabic indexes as well. Make the class more versatile!
 export class Word {
   static mapping = Word.buildMapping();
   mapped;
   word;
   constructor(word) {
-    // I hope the word consists entirely of Coptic words.
     this.word = word.toLowerCase();
-    utils.assass(!!this.word, 'constructing a word with the empty string!');
-    utils.assass(
+    logger.assass(!!this.word, 'constructing a word with the empty string!');
+    logger.assass(
       [...this.word].every((c) => c in Word.mapping),
       word,
       'contains character that are not in the mapping!'
@@ -76,7 +77,7 @@ export class Index {
     this.WordType = WordType;
     const lines = index.trim().split('\n');
     const header = Index.toColumns(lines[0]);
-    utils.assass(
+    logger.assass(
       WANT_COLUMNS.every((col, idx) => header[idx] === col),
       header.slice(0, WANT_COLUMNS.length),
       'do not match the list of wanted columns',
@@ -101,7 +102,7 @@ export class Index {
   }
   static parseInt(str) {
     const num = parseInt(str);
-    utils.assass(!isNaN(num), 'unable to parse page number', num);
+    logger.assass(!isNaN(num), 'unable to parse page number', num);
     return num;
   }
   getPage(query) {
@@ -132,7 +133,7 @@ export class Index {
     return this.pages[right].page;
   }
   validate(strict = true) {
-    const error = strict ? utils.fatal : utils.error;
+    const error = strict ? logger.fatal : logger.error;
     for (let i = 0; i < this.pages.length; i++) {
       const p = this.pages[i];
       if (!p.start.leq(p.end)) {
@@ -148,7 +149,10 @@ export class Index {
       if (i === 0) continue;
       const prev = this.pages[i - 1];
       if (p.page !== prev.page + 1) {
-        throw new Error(
+        // While we can tolerate some errors in the word order, we can't allow
+        // page numbers to get mixed up, so we always use `fatal` regardless of
+        // strictness.
+        logger.fatal(
           `Non-consecutive page numbers: ${prev.page.toString()}, ${p.page.toString()}`
         );
       }

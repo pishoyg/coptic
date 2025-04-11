@@ -1,4 +1,4 @@
-import * as utils from './utils.js';
+import * as logger from './logger.js';
 import * as collapse from './collapse.js';
 // TODO: (#230): Document the HTML structure required in order for this to work.
 // Besides the below, we also expect search result tables and collapsibles with
@@ -551,7 +551,7 @@ class Xooxle {
     }, timeout);
   }
   async search() {
-    utils.time('search');
+    logger.time('search');
     if (this.currentAbortController) {
       this.currentAbortController.abort();
     }
@@ -581,7 +581,7 @@ class Xooxle {
         this.form.message('Internal error! Please send us an email!');
       }
     }
-    utils.timeEnd('search');
+    logger.timeEnd('search');
   }
 }
 async function main() {
