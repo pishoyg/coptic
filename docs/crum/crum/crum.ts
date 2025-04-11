@@ -16,8 +16,9 @@ function ext(page: number): string {
 }
 
 function main() {
-  new scan.Scroller(MIN_PAGE_NUM, MAX_PAGE_NUM, OFFSET, ext, LANDING);
-  new scan.ZoomerDragger();
+  const form: scan.Form = scan.Form.default();
+  new scan.Scroller(MIN_PAGE_NUM, MAX_PAGE_NUM, OFFSET, ext, form, LANDING);
+  new scan.ZoomerDragger(form);
 }
 
 main();

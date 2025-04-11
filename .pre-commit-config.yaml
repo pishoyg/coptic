@@ -375,9 +375,9 @@ repos:
       # Dawoud's scan sentinels.
       - id: scan-sentinels
         name: scan-sentinels
-        entry: dictionary/copticocc.org/main.py
+        entry: bun run docs/dawoud/dawoud.ts
         language: system
-        files: ^docs/dawoud/.*\.tsv$
+        files: ^docs/dawoud/
         pass_filenames: false
       # DO-NOT-SUBMIT
       - id: check-do-not-submit

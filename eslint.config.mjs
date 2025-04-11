@@ -39,7 +39,7 @@ export default tseslint.config(
     },
     languageOptions: {
       parserOptions: {
-        project: true,
+        project: ['tsconfig.json', 'tsconfig-node.json'],
       },
       globals: {
         ...globals.browser,
