@@ -32,7 +32,8 @@ const HOME = anki() ? 'http://remnqymi.com' : '';
 // NOTE: The following assumes that the code is getting executed from a page
 // directly under `crum/`.
 const LEXICON = anki() ? `${HOME}/crum` : '.';
-const SCAN = `${LEXICON}/crum`;
+const ABBREVIATIONS_PAGE =
+  'https://coptic.wiki/crum/?section=list_of_abbreviations';
 const DAWOUD = `${HOME}/dawoud`;
 const LOOKUP_URL_PREFIX = `${LEXICON}?query=`;
 const EMAIL = 'remnqymi@gmail.com';
@@ -1375,7 +1376,7 @@ function handleNonXooxleOnlyElements() {
     const crumElement = document.getElementById('crum');
     const anchor = document.createElement('a');
     anchor.textContent = 'Abbreviations';
-    anchor.href = SCAN;
+    anchor.href = ABBREVIATIONS_PAGE;
     anchor.classList.add('abbreviations');
     anchor.target = '_blank';
     crumElement?.insertBefore(anchor, crumElement.firstChild);
