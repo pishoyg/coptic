@@ -21,6 +21,9 @@ const COPTIC_LETTERS: [string, string][] = [
   ['Ϣ', 'ϯ'],
 ];
 
+// ZOOM_FACTOR controls how fast zooming happens in response to scroll events.
+const ZOOM_FACTOR = 0.015;
+
 // Word represents a Coptic word that is lexicographically comparable to
 // another.
 // The two unicode blocks for the language are swapped (the lexicographically
@@ -371,12 +374,11 @@ export class ZoomerDragger {
   private handleZoom(e: WheelEvent): void {
     e.preventDefault();
     e.stopPropagation();
-    const zoomFactor = 0.1;
 
     if (e.deltaY < 0) {
-      this.scale += zoomFactor;
+      this.scale += ZOOM_FACTOR;
     } else if (e.deltaY > 0 && this.scale > 0.2) {
-      this.scale -= zoomFactor;
+      this.scale -= ZOOM_FACTOR;
     }
 
     this.updateTransform();
