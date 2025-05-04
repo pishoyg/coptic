@@ -168,6 +168,9 @@ def parse_word_cell(
         # Undialected and Ⳉ, it's Akhmimic!
         if any("ⳉ" in spelling for spelling in s):
             d = ["A"]
+        # Undialected and ϧ, it's Bohairic!
+        if any("ϧ" in spelling for spelling in s):
+            d = ["B"]
         return [
             lexical.structured_word(
                 d,
