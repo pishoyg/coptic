@@ -1031,10 +1031,10 @@ function makeHelpPanel(): HelpPanel {
     ],
     H: [
       new Shortcut(
-        `Open <a href="${HOME}" target="_blank"><strong>h</strong>omepage</a>`,
+        `Open <a href="${HOME}/" target="_blank"><strong>h</strong>omepage</a>`,
         [xooxle, note, index, index_index],
         () => {
-          window_open(HOME);
+          window_open(`${HOME}/`);
         }
       ),
     ],
