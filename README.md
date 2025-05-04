@@ -434,52 +434,8 @@ entities from other cultures, or modern entities.
 
 #### Undialected Entries
 
-The following entries have no dialect specified in Crum, so they are treated as
-part of all dialects.
-
-1. https://remnqymi.com/crum/1274.html
-2. https://remnqymi.com/crum/1292.html
-3. https://remnqymi.com/crum/1367.html
-4. https://remnqymi.com/crum/1462.html
-5. https://remnqymi.com/crum/1553.html
-6. https://remnqymi.com/crum/1555.html
-7. https://remnqymi.com/crum/1557.html
-8. https://remnqymi.com/crum/1558.html
-9. https://remnqymi.com/crum/1657.html
-10. https://remnqymi.com/crum/1659.html
-11. https://remnqymi.com/crum/1712.html
-12. https://remnqymi.com/crum/1957.html
-13. https://remnqymi.com/crum/2074.html
-14. https://remnqymi.com/crum/2075.html
-15. https://remnqymi.com/crum/2076.html
-16. https://remnqymi.com/crum/2077.html
-17. https://remnqymi.com/crum/2078.html
-18. https://remnqymi.com/crum/2079.html
-19. https://remnqymi.com/crum/2081.html
-20. https://remnqymi.com/crum/2082.html
-21. https://remnqymi.com/crum/2084.html
-22. https://remnqymi.com/crum/2085.html
-23. https://remnqymi.com/crum/2086.html
-24. https://remnqymi.com/crum/2087.html
-25. https://remnqymi.com/crum/2088.html
-26. https://remnqymi.com/crum/2090.html
-27. https://remnqymi.com/crum/2091.html
-28. https://remnqymi.com/crum/2092.html
-29. https://remnqymi.com/crum/2093.html
-30. https://remnqymi.com/crum/2195.html
-31. https://remnqymi.com/crum/2205.html
-32. https://remnqymi.com/crum/2832.html
-33. https://remnqymi.com/crum/3117.html
-34. https://remnqymi.com/crum/3230.html
-35. https://remnqymi.com/crum/3231.html
-36. https://remnqymi.com/crum/3257.html
-37. https://remnqymi.com/crum/3302.html
-
-*NOTE:* Some undialected entries in this list have been removed because their
-dialect was inferred, e.g. all the entries under Ⳉ have been labeled as
-Akhmimic.
-
-We are rethinking the current handling of undialected entries. See
+Some entries have no dialect specified in Crum, so they get treated as belonging
+to all dialects. More information at
 [#237](https://github.com/pishoyg/coptic/issues/237).
 
 #### Entries that are Absent in Crum
