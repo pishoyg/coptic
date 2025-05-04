@@ -191,8 +191,9 @@ argparser.add_argument(
     "-r",
     "--rm",
     type=str,
-    default="",
-    help="If given, delete the artifacts for the given stem, and exit.",
+    default=[],
+    nargs="*",
+    help="If given, delete the artifacts for the given stem(s), and exit.",
 )
 
 argparser.add_argument(
@@ -219,8 +220,9 @@ argparser.add_argument(
     "-n",
     "--convert",
     type=str,
-    default="",
-    help="If given, (re)convert the images with the given stem, and exit.",
+    default=[],
+    nargs="*",
+    help="If given, (re)convert the image(s) with the given stem, and exit.",
 )
 
 argparser.add_argument(
@@ -404,7 +406,8 @@ def main():
         batch(args)
         exit()
     if args.rm:
-        rm(args.rm)
+        for stem in args.rm:
+            rm(stem)
         exit()
     if args.mv:
         mv(*args.mv)
@@ -413,7 +416,8 @@ def main():
         cp(*args.cp)
         exit()
     if args.convert:
-        convert(_stem_to_img_path(args.convert))
+        for stem in args.convert:
+            convert(_stem_to_img_path(stem))
         exit()
     prompter(args).prompt()
 
