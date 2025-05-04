@@ -487,11 +487,10 @@ We are rethinking the current handling of undialected entries. See
 The following entries are absent from Crum's dictionary. They were added to our
 database from other sources:
 
-1. https://remnqymi.com/crum/3379.html
-2. https://remnqymi.com/crum/3380.html
-3. https://remnqymi.com/crum/3381.html
-4. https://remnqymi.com/crum/3382.html
-5. https://remnqymi.com/crum/3385.html
+1. https://remnqymi.com/crum/3380.html
+2. https://remnqymi.com/crum/3381.html
+3. https://remnqymi.com/crum/3382.html
+4. https://remnqymi.com/crum/3385.html
 
 ### [`copticocc.org/`](dictionary/copticocc.org)
 
