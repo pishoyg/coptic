@@ -205,16 +205,16 @@ export class Index {
    * @param index: JSON index object.
    * @param tableID: ID of the <table> element that will be used to populate
    * the results.
+   * @param collapsibleID: ID of the element that, when clicked, hides the
+   * results table.
    */
-  constructor(index: _Index, tableID: string) {
+  constructor(index: _Index, tableID: string, collapsibleID: string) {
     this.data = index.data.map(
       (record) => new Candidate(record, index.params.fields)
     );
     this.params = index.params;
-    const table = document.getElementById(tableID)!;
-    this.tbody = table.querySelector('tbody')!;
-    // TODO: The dependency on the HTML structure is slightly risky.
-    this.collapsible = table.parentElement!;
+    this.tbody = document.getElementById(tableID)!.querySelector('tbody')!;
+    this.collapsible = document.getElementById(collapsibleID)!;
   }
 
   async search(regex: RegExp, abortController: AbortController) {
@@ -298,10 +298,14 @@ export class Index {
   }
 }
 
-export async function index(url: string, tableID: string): Promise<Index> {
+export async function index(
+  url: string,
+  tableID: string,
+  collapsibleID: string
+): Promise<Index> {
   const raw = await fetch(url);
   const json = (await raw.json()) as _Index;
-  return new Index(json, tableID);
+  return new Index(json, tableID, collapsibleID);
 }
 
 class FieldSearchResult {
