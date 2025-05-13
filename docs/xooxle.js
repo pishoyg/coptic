@@ -101,13 +101,6 @@ export class Form {
     Form.messageBox.replaceChildren();
   }
 }
-class EmptyStringMatchError extends Error {
-  constructor(message) {
-    super(message);
-    this.name = 'EmptyStringMatchError';
-    Object.setPrototypeOf(this, new.target.prototype);
-  }
-}
 function isWordChar(char) {
   // Unicode-aware boundary expansion
   return /\p{L}|\p{N}/u.test(char);
@@ -349,9 +342,8 @@ class Unit {
     const set = new Set(
       [...this.text.matchAll(regex)].map((match) => match[0])
     );
-    if (set.has('')) {
-      throw new EmptyStringMatchError("Can't work with that regex!");
-    }
+    // The empty string could cause problems during highlighting.
+    set.delete('');
     return set;
   }
 }
@@ -594,8 +586,6 @@ export class Xooxle {
     } catch (err) {
       if (err instanceof SyntaxError) {
         this.form.message('Invalid regular expression!');
-      } else if (err instanceof EmptyStringMatchError) {
-        this.form.message("Can't work with that regex!");
       } else {
         this.form.message('Internal error! Please send us an email!');
       }
