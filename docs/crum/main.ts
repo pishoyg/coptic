@@ -1,7 +1,7 @@
 import * as xooxle from '../xooxle.js';
 import * as collapse from '../collapse.js';
 
-const XOOXLE_JSON = 'xooxle.json';
+const XOOXLES = ['crum.json', 'kellia.json', 'copticsite.json'];
 
 function stopPropagation(event: KeyboardEvent) {
   event.stopPropagation();
@@ -17,13 +17,10 @@ async function main() {
   xooxle.Form.searchBox.addEventListener('keydown', stopPropagation);
   xooxle.Form.searchBox.addEventListener('keypress', stopPropagation);
 
-  const indexes: xooxle.Index[] = (
-    await fetch(XOOXLE_JSON).then(
-      async (resp) => (await resp.json()) as xooxle._Index[]
-    )
-  ).map((index: xooxle._Index) => new xooxle.Index(index));
+  await Promise.all(
+    XOOXLES.map(async (url) => new xooxle.Xooxle(await xooxle.index(url), form))
+  );
 
-  new xooxle.Xooxle(indexes, form);
   collapse.addListeners(true);
 }
 

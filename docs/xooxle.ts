@@ -52,6 +52,9 @@ export class Form {
   static readonly regexCheckbox = document.getElementById(
     REGEX_CHECKBOX_ID
   ) as HTMLInputElement;
+  // TODO: The message box gets written. Since multiple Xooxle instances are
+  // allowed to coexist on the same page, we should create several boxes,
+  // otherwise they could override each other!
   private static readonly messageBox = document.getElementById(MESSAGE_BOX_ID)!;
 
   // Search parameter names.
@@ -292,6 +295,12 @@ export class Index {
   clear(): void {
     this.tbody.innerHTML = '';
   }
+}
+
+export async function index(url: string): Promise<Index> {
+  const raw = await fetch(url);
+  const json = (await raw.json()) as _Index;
+  return new Index(json);
 }
 
 class FieldSearchResult {
@@ -665,9 +674,7 @@ export class Xooxle {
   private debounceTimeout: ReturnType<typeof setTimeout> | null = null;
   private currentAbortController: AbortController | null = null;
   constructor(
-    // TODO: Stop supporting multiple indexes. Use a single index per Xooxle
-    // instance. Users can simply instantiate multiple Xooxle objects.
-    private readonly indexes: Index[],
+    private readonly index: Index,
     private readonly form: Form
   ) {
     // Make the page responsive to user input.
@@ -709,9 +716,7 @@ export class Xooxle {
     const abortController: AbortController = new AbortController();
     this.currentAbortController = abortController;
 
-    this.indexes.forEach((index) => {
-      index.clear();
-    });
+    this.index.clear();
 
     this.form.clearMessage();
     const expression: string = this.form.queryExpression();
@@ -721,11 +726,7 @@ export class Xooxle {
 
     try {
       const regex = new RegExp(expression, 'iug'); // Case-insensitive and Unicode-aware.
-      await Promise.all(
-        this.indexes.map(async (index) => {
-          await index.search(regex, abortController);
-        })
-      );
+      await this.index.search(regex, abortController);
     } catch (err) {
       if (err instanceof SyntaxError) {
         this.form.message('Invalid regular expression!');
