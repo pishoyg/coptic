@@ -7,12 +7,20 @@ const REGEX_CHECKBOX_ID = 'regexCheckbox';
 // allowed to coexist on the same page, we should create several boxes,
 // otherwise they could override each other!
 const MESSAGE_BOX_ID = 'message';
+const CRUM_HREF_FMT = '{KEY}.html';
+const KELLIA_HREF_FMT = 'https://coptic-dictionary.org/entry.cgi?tla={KEY}';
 const XOOXLES = [
-  { indexURL: 'crum.json', tableID: 'crum', collapsibleID: 'crum-collapsible' },
+  {
+    indexURL: 'crum.json',
+    tableID: 'crum',
+    collapsibleID: 'crum-collapsible',
+    hrefFmt: CRUM_HREF_FMT,
+  },
   {
     indexURL: 'kellia.json',
     tableID: 'kellia',
     collapsibleID: 'kellia-collapsible',
+    hrefFmt: KELLIA_HREF_FMT,
   },
   {
     indexURL: 'copticsite.json',
@@ -37,7 +45,14 @@ async function main() {
   form.searchBox.addEventListener('keypress', stopPropagation);
   await Promise.all(
     XOOXLES.map(async (x) => {
-      const index = await xooxle.index(x.indexURL, x.tableID, x.collapsibleID);
+      const raw = await fetch(x.indexURL);
+      const json = await raw.json();
+      const index = new xooxle.Index(
+        json,
+        x.tableID,
+        x.collapsibleID,
+        x.hrefFmt
+      );
       return new xooxle.Xooxle(index, form);
     })
   );

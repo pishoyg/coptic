@@ -116,6 +116,7 @@ function yieldToBrowser() {
   return new Promise((resolve) => setTimeout(resolve, 0));
 }
 export class Index {
+  hrefFmt;
   data;
   params;
   tbody;
@@ -126,8 +127,13 @@ export class Index {
    * the results. NOTE: The table must have a <tbody> child.
    * @param collapsibleID: ID of the element that, when clicked, hides the
    * results table.
+   * @param hrefFmt: a format string for generating a URL to this result's
+   * page. The HREF will be generated based on the KEY field of the candidate
+   * by substituting the string `{KEY}`.
+   * If absent, no HREF will be generated.
    */
-  constructor(index, tableID, collapsibleID) {
+  constructor(index, tableID, collapsibleID, hrefFmt) {
+    this.hrefFmt = hrefFmt;
     this.data = index.data.map(
       (record) => new Candidate(record, index.params.fields)
     );
@@ -176,7 +182,7 @@ export class Index {
       }
       ++count;
       // Create a new row for the table
-      const row = result.row(this.params.href_fmt);
+      const row = result.row(this.hrefFmt);
       if (abortController.signal.aborted) {
         return;
       }
@@ -200,11 +206,6 @@ export class Index {
   clear() {
     this.tbody.innerHTML = '';
   }
-}
-export async function index(url, tableID, collapsibleID) {
-  const raw = await fetch(url);
-  const json = await raw.json();
-  return new Index(json, tableID, collapsibleID);
 }
 class Candidate {
   // key bears the candidate key.
@@ -235,7 +236,7 @@ class SearchResult {
   fragmentWord() {
     return this.results.find((r) => r.fragmentWord())?.fragmentWord();
   }
-  viewCell(href_fmt) {
+  viewCell(hrefFmt) {
     const viewCell = document.createElement('td');
     viewCell.classList.add('view');
     const counter = document.createElement('span');
@@ -246,14 +247,14 @@ class SearchResult {
     const dev = document.createElement('span');
     dev.classList.add('dev');
     dev.textContent = this.key;
-    if (!href_fmt) {
+    if (!hrefFmt) {
       viewCell.prepend(dev);
       return viewCell;
     }
     // There is an href. We create a link, and add the 'view' text.
     const a = document.createElement('a');
     a.href =
-      href_fmt.replace(`{${KEY}}`, this.key) +
+      hrefFmt.replace(`{${KEY}}`, this.key) +
       `#:~:text=${encodeURIComponent(this.fragmentWord())}`;
     a.target = '_blank';
     const noDev = document.createElement('span');
@@ -264,9 +265,9 @@ class SearchResult {
     viewCell.prepend(a);
     return viewCell;
   }
-  row(href_fmt) {
+  row(hrefFmt) {
     const row = document.createElement('tr');
-    row.appendChild(this.viewCell(href_fmt));
+    row.appendChild(this.viewCell(hrefFmt));
     this.results.forEach((sr) => {
       const cell = document.createElement('td');
       cell.innerHTML = sr.highlighted();
