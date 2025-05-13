@@ -418,7 +418,6 @@ class index:
         input: str | Generator[tuple[str, str]],
         extract: list[selector],
         captures: list[capture],
-        href_fmt: str,
         output: str,
         include: Callable[[str], bool] | None = None,
     ) -> None:
@@ -431,11 +430,6 @@ class index:
 
             include: an optional filter that takes the key as a parameter.
 
-            href_fmt: An optional format string, with `KEY` being the only
-                substituted variable (in other words, {KEY} is the only substring
-                that will get replaces), that can be used to compute the URL of a
-                search result from the given key.
-
             extract: List of kwargs queries that will be passed to
                 `soup.find_all` and extracted from the tree.
 
@@ -447,7 +441,6 @@ class index:
         self._include: Callable[[str], bool] | None = include
         self._extract: list[selector] = extract
         self._captures: list[capture] = captures
-        self._href_fmt: str = href_fmt
         self._output: str = output
 
     def iter_input(self) -> Generator[tuple[str, str]]:
@@ -508,7 +501,6 @@ class index:
         json = {
             "data": list(data),
             "params": {
-                "href_fmt": self._href_fmt,
                 "fields": [
                     {"name": c._name, "units": bool(c._unit_tags)}
                     for c in self._captures

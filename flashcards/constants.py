@@ -1116,7 +1116,6 @@ CRUM_XOOXLE = xooxle.index(
             block_elements=xooxle.BLOCK_ELEMENTS_DEFAULT | {"td"},
         ),
     ],
-    href_fmt="{KEY}.html",
     output=os.path.join(LEXICON_DIR, "crum.json"),
 )
 
@@ -1147,7 +1146,6 @@ KELLIA_XOOXLE = xooxle.index(
             ),
         ),
     ],
-    href_fmt=f"{KELLIA_PREFIX}{{KEY}}",
     output=os.path.join(LEXICON_DIR, "kellia.json"),
 )
 
@@ -1166,7 +1164,6 @@ COPTICSITE_XOOXLE = xooxle.index(
             xooxle.selector({"id": "back"}),
         ),
     ],
-    href_fmt="",
     output=os.path.join(LEXICON_DIR, "copticsite.json"),
 )
 

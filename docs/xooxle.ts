@@ -157,11 +157,6 @@ interface _Field {
 }
 
 interface _Params {
-  // href_fmt is a format string for generating a URL to this result's page.
-  // The HREF will be generated based on the KEY field of the candidate by
-  // substituting the string `{KEY}`.
-  // If href_fmt is zero (the empty string), no HREF will be generated.
-  readonly href_fmt: string;
   // fields is the list of fields in the output. For each
   // search result from the data, a row will be added to the table.
   // The first cell in the row will contain the index of the result, and
@@ -186,8 +181,17 @@ export class Index {
    * the results. NOTE: The table must have a <tbody> child.
    * @param collapsibleID: ID of the element that, when clicked, hides the
    * results table.
+   * @param hrefFmt: a format string for generating a URL to this result's
+   * page. The HREF will be generated based on the KEY field of the candidate
+   * by substituting the string `{KEY}`.
+   * If absent, no HREF will be generated.
    */
-  constructor(index: _Index, tableID: string, collapsibleID: string) {
+  constructor(
+    index: _Index,
+    tableID: string,
+    collapsibleID: string,
+    private readonly hrefFmt?: string
+  ) {
     this.data = index.data.map(
       (record) => new Candidate(record, index.params.fields)
     );
@@ -241,7 +245,7 @@ export class Index {
       ++count;
 
       // Create a new row for the table
-      const row = result.row(this.params.href_fmt);
+      const row = result.row(this.hrefFmt);
 
       if (abortController.signal.aborted) {
         return;
@@ -271,16 +275,6 @@ export class Index {
   clear(): void {
     this.tbody.innerHTML = '';
   }
-}
-
-export async function index(
-  url: string,
-  tableID: string,
-  collapsibleID: string
-): Promise<Index> {
-  const raw = await fetch(url);
-  const json = (await raw.json()) as _Index;
-  return new Index(json, tableID, collapsibleID);
 }
 
 class Candidate {
@@ -321,7 +315,7 @@ class SearchResult {
     return this.results.find((r) => r.fragmentWord())?.fragmentWord();
   }
 
-  private viewCell(href_fmt: string): HTMLTableCellElement {
+  private viewCell(hrefFmt?: string): HTMLTableCellElement {
     const viewCell = document.createElement('td');
     viewCell.classList.add('view');
 
@@ -335,7 +329,7 @@ class SearchResult {
     dev.classList.add('dev');
     dev.textContent = this.key;
 
-    if (!href_fmt) {
+    if (!hrefFmt) {
       viewCell.prepend(dev);
       return viewCell;
     }
@@ -343,7 +337,7 @@ class SearchResult {
     // There is an href. We create a link, and add the 'view' text.
     const a = document.createElement('a');
     a.href =
-      href_fmt.replace(`{${KEY}}`, this.key) +
+      hrefFmt.replace(`{${KEY}}`, this.key) +
       `#:~:text=${encodeURIComponent(this.fragmentWord()!)}`;
     a.target = '_blank';
 
@@ -359,10 +353,10 @@ class SearchResult {
     return viewCell;
   }
 
-  row(href_fmt: string): HTMLTableRowElement {
+  row(hrefFmt?: string): HTMLTableRowElement {
     const row = document.createElement('tr');
 
-    row.appendChild(this.viewCell(href_fmt));
+    row.appendChild(this.viewCell(hrefFmt));
     this.results.forEach((sr: FieldSearchResult) => {
       const cell = document.createElement('td');
       cell.innerHTML = sr.highlighted();
@@ -592,7 +586,7 @@ interface Match {
   readonly end: number;
 }
 
-interface _Index {
+export interface _Index {
   readonly data: Record<string, string>[];
   readonly params: _Params;
 }
