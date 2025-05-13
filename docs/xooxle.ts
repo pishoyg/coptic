@@ -1,12 +1,5 @@
 import * as logger from './logger.js';
 
-// TODO: (#230): The following IDs should be provided by the calling script,
-// instead of being hardcoded.
-const SEARCH_BOX_ID = 'searchBox';
-const FULL_WORD_CHECKBOX_ID = 'fullWordCheckbox';
-const REGEX_CHECKBOX_ID = 'regexCheckbox';
-const MESSAGE_BOX_ID = 'message';
-
 // KEY is the name of the field that bears the word key. The key can be used to
 // generate an HREF to open the word page.
 const KEY = 'KEY';
@@ -46,39 +39,52 @@ const RESULTS_TO_UPDATE_DISPLAY = 5;
 const TAG_REGEX = /<\/?[^>]+>/g;
 const CHROME_WORD_CHARS: Set<string> = new Set<string>(["'"]);
 
+export interface _Form {
+  searchBoxID: string;
+  fullWordCheckboxID: string;
+  regexCheckboxID: string;
+  messageBoxID: string;
+}
+
 export class Form {
-  static readonly searchBox = document.getElementById(
-    SEARCH_BOX_ID
-  ) as HTMLInputElement;
-  static readonly fullWordCheckbox = document.getElementById(
-    FULL_WORD_CHECKBOX_ID
-  ) as HTMLInputElement;
-  static readonly regexCheckbox = document.getElementById(
-    REGEX_CHECKBOX_ID
-  ) as HTMLInputElement;
-  // TODO: The message box gets written. Since multiple Xooxle instances are
-  // allowed to coexist on the same page, we should create several boxes,
-  // otherwise they could override each other!
-  private static readonly messageBox = document.getElementById(MESSAGE_BOX_ID)!;
+  readonly searchBox: HTMLInputElement;
+  readonly fullWordCheckbox: HTMLInputElement;
+  readonly regexCheckbox: HTMLInputElement;
+  private readonly messageBox: HTMLElement;
 
   // Search parameter names.
   private static readonly query = 'query';
   private static readonly full = 'full';
   private static readonly regex = 'regex';
 
+  constructor(form: _Form) {
+    this.searchBox = document.getElementById(
+      form.searchBoxID
+    ) as HTMLInputElement;
+    this.fullWordCheckbox = document.getElementById(
+      form.fullWordCheckboxID
+    ) as HTMLInputElement;
+    this.regexCheckbox = document.getElementById(
+      form.regexCheckboxID
+    ) as HTMLInputElement;
+    this.messageBox = document.getElementById(form.messageBoxID)!;
+
+    this.populateFromParams();
+  }
+
   queryExpression(): string {
-    let query: string = Form.searchBox.value;
+    let query: string = this.searchBox.value;
     if (!query) {
       return '';
     }
 
-    if (!Form.regexCheckbox.checked) {
+    if (!this.regexCheckbox.checked) {
       // Escape all the special characters in the string, in order to search
       // for raw matches.
       query = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     }
 
-    if (Form.fullWordCheckbox.checked) {
+    if (this.fullWordCheckbox.checked) {
       // Using Unicode-aware word boundaries: `\b` doesn't work for non-ASCII
       // so we use `\p{L}` (letter) and `\p{N}` (number) to match words in any
       // Unicode script.
@@ -88,32 +94,32 @@ export class Form {
     return query;
   }
 
-  populateFromParams() {
+  private populateFromParams() {
     // Populate form values using query parameters.
     const url = new URL(window.location.href);
-    Form.searchBox.value = url.searchParams.get(Form.query) ?? '';
-    Form.fullWordCheckbox.checked = url.searchParams.get(Form.full) === 'true';
-    Form.regexCheckbox.checked = url.searchParams.get(Form.regex) === 'true';
+    this.searchBox.value = url.searchParams.get(Form.query) ?? '';
+    this.fullWordCheckbox.checked = url.searchParams.get(Form.full) === 'true';
+    this.regexCheckbox.checked = url.searchParams.get(Form.regex) === 'true';
   }
 
   populateParams() {
     // Populate query parameters using form values.
     const url = new URL(window.location.href);
 
-    if (Form.searchBox.value) {
-      url.searchParams.set(Form.query, Form.searchBox.value);
+    if (this.searchBox.value) {
+      url.searchParams.set(Form.query, this.searchBox.value);
     } else {
       url.searchParams.delete(Form.query);
     }
 
-    if (Form.fullWordCheckbox.checked) {
-      url.searchParams.set(Form.full, String(Form.fullWordCheckbox.checked));
+    if (this.fullWordCheckbox.checked) {
+      url.searchParams.set(Form.full, String(this.fullWordCheckbox.checked));
     } else {
       url.searchParams.delete(Form.full);
     }
 
-    if (Form.regexCheckbox.checked) {
-      url.searchParams.set(Form.regex, String(Form.regexCheckbox.checked));
+    if (this.regexCheckbox.checked) {
+      url.searchParams.set(Form.regex, String(this.regexCheckbox.checked));
     } else {
       url.searchParams.delete(Form.regex);
     }
@@ -125,11 +131,11 @@ export class Form {
     const el = document.createElement('div');
     el.classList.add('error');
     el.textContent = message;
-    Form.messageBox.replaceChildren(el);
+    this.messageBox.replaceChildren(el);
   }
 
   clearMessage(): void {
-    Form.messageBox.replaceChildren();
+    this.messageBox.replaceChildren();
   }
 }
 
@@ -403,10 +409,6 @@ class FieldSearchResult {
     this.match = this.results.some((result) => result.match);
   }
 
-  get name(): string {
-    return this.field.name;
-  }
-
   private get units(): Unit[] {
     return this.field.units;
   }
@@ -596,7 +598,7 @@ interface Match {
   readonly end: number;
 }
 
-export interface _Index {
+interface _Index {
   readonly data: Record<string, string>[];
   readonly params: _Params;
 }
@@ -609,21 +611,21 @@ export class Xooxle {
     private readonly form: Form
   ) {
     // Make the page responsive to user input.
-    Form.searchBox.addEventListener(
+    this.form.searchBox.addEventListener(
       'input',
       this.handleSearchQuery.bind(this, 100)
     );
-    Form.fullWordCheckbox.addEventListener(
+    this.form.fullWordCheckbox.addEventListener(
       'click',
       this.handleSearchQuery.bind(this, 0)
     );
-    Form.regexCheckbox.addEventListener(
+    this.form.regexCheckbox.addEventListener(
       'click',
       this.handleSearchQuery.bind(this, 0)
     );
 
     this.handleSearchQuery(0);
-    Form.searchBox.focus();
+    this.form.searchBox.focus();
   }
 
   handleSearchQuery(timeout: number) {
