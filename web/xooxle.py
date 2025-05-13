@@ -426,10 +426,21 @@ class index:
     ) -> None:
         """
         Args:
-            input: Input path - a directory to search for HTML files.
+            input: Input path - a directory to search for HTML files, or a
+                generator of [key, content] pairs.
+
             output: Output JSON file.
+
+            include: an optional filter that takes the key as a parameter.
+
+            href_fmt: An optional format string, with `KEY` being the only
+                substituted variable (in other words, {KEY} is the only substring
+                that will get replaces), that can be used to compute the URL of a
+                search result from the given key.
+
             extract: List of kwargs queries that will be passed to
                 `soup.find_all` and extracted from the tree.
+
             capture: List of kwargs queries that will be passed to
                 `soup.find_all`. and capture from the tree.
         """

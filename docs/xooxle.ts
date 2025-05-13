@@ -183,7 +183,7 @@ export class Index {
   /*
    * @param index: JSON index object.
    * @param tableID: ID of the <table> element that will be used to populate
-   * the results.
+   * the results. NOTE: The table must have a <tbody> child.
    * @param collapsibleID: ID of the element that, when clicked, hides the
    * results table.
    */
