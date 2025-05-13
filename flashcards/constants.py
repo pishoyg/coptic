@@ -1067,7 +1067,7 @@ def _is_crum_word(path: str) -> bool:
     return utils.stem(path).isdigit()
 
 
-CRUM_XOOXLE = xooxle.subindex(
+CRUM_XOOXLE = xooxle.index(
     CRUM_ALL,
     input=NAME_TO_DECKER[CRUM_ALL].notes_key_content_aux(),
     include=_is_crum_word,
@@ -1119,10 +1119,11 @@ CRUM_XOOXLE = xooxle.subindex(
     ],
     result_table_name="crum",
     href_fmt="{KEY}.html",
+    output=os.path.join(LEXICON_DIR, "crum.json"),
 )
 
 
-KELLIA_XOOXLE = xooxle.subindex(
+KELLIA_XOOXLE = xooxle.index(
     KELLIA_COMPREHENSIVE,
     input=NAME_TO_DECKER[KELLIA_COMPREHENSIVE].notes_key_content_aux(),
     extract=[
@@ -1151,10 +1152,11 @@ KELLIA_XOOXLE = xooxle.subindex(
     ],
     result_table_name="kellia",
     href_fmt=f"{KELLIA_PREFIX}{{KEY}}",
+    output=os.path.join(LEXICON_DIR, "kellia.json"),
 )
 
 
-COPTICSITE_XOOXLE = xooxle.subindex(
+COPTICSITE_XOOXLE = xooxle.index(
     COPTICSITE,
     input=NAME_TO_DECKER[COPTICSITE].notes_key_content_aux(),
     extract=[],
@@ -1171,16 +1173,8 @@ COPTICSITE_XOOXLE = xooxle.subindex(
     ],
     result_table_name="copticsite",
     href_fmt="",
+    output=os.path.join(LEXICON_DIR, "copticsite.json"),
 )
 
 
-def XOOXLE(decks: list[str]) -> xooxle.index:
-    subindexes: list[xooxle.subindex] = [
-        subindex
-        for subindex in [CRUM_XOOXLE, KELLIA_XOOXLE, COPTICSITE_XOOXLE]
-        if subindex.name in decks
-    ]
-    return xooxle.index(
-        os.path.join(LEXICON_DIR, "xooxle.json"),
-        *subindexes,
-    )
+XOOXLE: list[xooxle.index] = [CRUM_XOOXLE, KELLIA_XOOXLE, COPTICSITE_XOOXLE]

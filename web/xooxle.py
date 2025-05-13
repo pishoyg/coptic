@@ -80,8 +80,9 @@
 
 import os
 import re
+from collections.abc import Generator, Iterable, Iterator
 from itertools import groupby
-from typing import Callable, Generator, Iterable, Iterator
+from typing import Callable
 
 import bs4
 
@@ -417,7 +418,7 @@ class cleaner:
             yield from iterator
 
 
-class subindex:
+class index:
     def __init__(
         self,
         name: str,
@@ -426,7 +427,8 @@ class subindex:
         captures: list[capture],
         result_table_name: str,
         href_fmt: str,
-        include: Callable | None = None,
+        output: str,
+        include: Callable[[str], bool] | None = None,
     ) -> None:
         """
         Args:
@@ -440,11 +442,12 @@ class subindex:
 
         self.name: str = name
         self._input: str | Generator[tuple[str, str]] = input
-        self._include: Callable | None = include
+        self._include: Callable[[str], bool] | None = include
         self._extract: list[selector] = extract
         self._captures: list[capture] = captures
         self._result_table_name: str = result_table_name
         self._href_fmt: str = href_fmt
+        self._output: str = output
 
     def iter_input(self) -> Generator[tuple[str, str]]:
         if isinstance(self._input, Generator):
@@ -495,13 +498,13 @@ class subindex:
             for cap in self._captures
         }
 
-    def build(self) -> dict:
+    def build(self) -> None:
         with utils.ThreadPoolExecutor() as executor:
             data: Iterable[dict[str, str]] = executor.map(
                 self.process_file,
                 self.iter_input(),
             )
-        return {
+        json = {
             "data": list(data),
             "params": {
                 "result_table_name": self._result_table_name,
@@ -513,16 +516,4 @@ class subindex:
             },
         }
 
-
-class index:
-    def __init__(self, output: str, *indexes: subindex) -> None:
-        self._output: str = output
-        self._indexes: Iterable[subindex] = indexes
-
-    def build(self) -> None:
-        with utils.ThreadPoolExecutor() as executor:
-            json: list[dict] = list(
-                executor.map(subindex.build, self._indexes),
-            )
-        assert json
         utils.write(utils.json_dumps(json), self._output)

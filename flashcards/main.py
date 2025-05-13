@@ -7,6 +7,7 @@ import deck
 import genanki  # type: ignore[import-untyped]
 
 import utils
+from web import xooxle
 
 ANKI_PATH = os.path.join(constants.LEXICON_DIR, "anki/coptic.apkg")
 
@@ -101,7 +102,9 @@ def main() -> None:
             write_anki(decks)
 
     if args.xooxle:
-        constants.XOOXLE(args.decks).build()
+        indexes = [idx for idx in constants.XOOXLE if idx.name in args.decks]
+        with utils.ThreadPoolExecutor() as executor:
+            list(executor.map(xooxle.index.build, indexes))
 
 
 if __name__ == "__main__":
