@@ -1,7 +1,16 @@
 import * as xooxle from '../xooxle.js';
 import * as collapse from '../collapse.js';
 
-const XOOXLES = ['crum.json', 'kellia.json', 'copticsite.json'];
+interface Xooxle {
+  indexURL: string;
+  tableID: string;
+}
+
+const XOOXLES: Xooxle[] = [
+  { indexURL: 'crum.json', tableID: 'crum' },
+  { indexURL: 'kellia.json', tableID: 'kellia' },
+  { indexURL: 'copticsite.json', tableID: 'copticsite' },
+];
 
 function stopPropagation(event: KeyboardEvent) {
   event.stopPropagation();
@@ -18,7 +27,10 @@ async function main() {
   xooxle.Form.searchBox.addEventListener('keypress', stopPropagation);
 
   await Promise.all(
-    XOOXLES.map(async (url) => new xooxle.Xooxle(await xooxle.index(url), form))
+    XOOXLES.map(
+      async (xoox) =>
+        new xooxle.Xooxle(await xooxle.index(xoox.indexURL, xoox.tableID), form)
+    )
   );
 
   collapse.addListeners(true);

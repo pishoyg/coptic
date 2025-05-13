@@ -178,10 +178,6 @@ interface _Field {
 }
 
 interface _Params {
-  // result_table_name is the ID of the table containing the results in the HTML
-  // page. Xooxle will retrieve the element using this ID, and will populated
-  // with the results encountered.
-  readonly result_table_name: string;
   // href_fmt is a format string for generating a URL to this result's page.
   // The HREF will be generated based on the KEY field of the candidate by
   // substituting the string `{KEY}`.
@@ -205,12 +201,17 @@ export class Index {
   private readonly tbody: HTMLTableSectionElement;
   private readonly collapsible: HTMLElement;
 
-  constructor(index: _Index) {
+  /*
+   * @param index: JSON index object.
+   * @param tableID: ID of the <table> element that will be used to populate
+   * the results.
+   */
+  constructor(index: _Index, tableID: string) {
     this.data = index.data.map(
       (record) => new Candidate(record, index.params.fields)
     );
     this.params = index.params;
-    const table = document.getElementById(this.params.result_table_name)!;
+    const table = document.getElementById(tableID)!;
     this.tbody = table.querySelector('tbody')!;
     // TODO: The dependency on the HTML structure is slightly risky.
     this.collapsible = table.parentElement!;
@@ -297,10 +298,10 @@ export class Index {
   }
 }
 
-export async function index(url: string): Promise<Index> {
+export async function index(url: string, tableID: string): Promise<Index> {
   const raw = await fetch(url);
   const json = (await raw.json()) as _Index;
-  return new Index(json);
+  return new Index(json, tableID);
 }
 
 class FieldSearchResult {

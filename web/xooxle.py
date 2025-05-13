@@ -425,7 +425,6 @@ class index:
         input: str | Generator[tuple[str, str]],
         extract: list[selector],
         captures: list[capture],
-        result_table_name: str,
         href_fmt: str,
         output: str,
         include: Callable[[str], bool] | None = None,
@@ -445,7 +444,6 @@ class index:
         self._include: Callable[[str], bool] | None = include
         self._extract: list[selector] = extract
         self._captures: list[capture] = captures
-        self._result_table_name: str = result_table_name
         self._href_fmt: str = href_fmt
         self._output: str = output
 
@@ -507,7 +505,6 @@ class index:
         json = {
             "data": list(data),
             "params": {
-                "result_table_name": self._result_table_name,
                 "href_fmt": self._href_fmt,
                 "fields": [
                     {"name": c._name, "units": bool(c._unit_tags)}
