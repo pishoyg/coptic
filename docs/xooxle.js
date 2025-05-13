@@ -22,6 +22,9 @@ const KEY = 'KEY';
 const UNITS_LIMIT = 5;
 // UNIT_DELIMITER is the string that separates a units field into units.
 const UNIT_DELIMITER = '<hr class="match-separator">';
+// Text matching a given text will be wrapped in `<span class="MATCH_CLASS">`
+// tags.
+const MATCH_CLASS = 'match';
 // LONG_UNITS_FIELD_MESSAGE is the message shown at the end of a units field,
 // if the field gets truncated.
 const LONG_UNITS_FIELD_MESSAGE =
@@ -110,27 +113,6 @@ function isWordCharInChrome(char) {
   // character in Chrome.
   // See https://github.com/pishoyg/coptic/issues/286 for context.
   return isWordChar(char) || CHROME_WORD_CHARS.has(char);
-}
-// TODO: (#230): This doesn't take HTML tags into account! An in-word tag would
-// result in a false positive!
-function isBoundary(html, i, i_plus_1) {
-  // Return true if there is a boundary between `str[i]` and `str[i_plus_1]`.
-  // This function assumes that i_plus_1 = i + 1.
-  // The reason we still ask the user to pass the two indices is to make it
-  // easier for them to decide where exactly they expect the boundary to be.
-  if (i - 1 < 0 || i_plus_1 >= html.length) {
-    return true;
-  }
-  if (isWordChar(html[i]) && isWordChar(html[i_plus_1])) {
-    return false;
-  }
-  return true;
-}
-function htmlToText(html) {
-  return html
-    .replaceAll(LINE_BREAK, '\n')
-    .replaceAll(UNIT_DELIMITER, '\n')
-    .replace(TAG_REGEX, '');
 }
 function yieldToBrowser() {
   return new Promise((resolve) => setTimeout(resolve, 0));
@@ -230,42 +212,16 @@ export async function index(url, tableID, collapsibleID) {
   const json = await raw.json();
   return new Index(json, tableID, collapsibleID);
 }
-class FieldSearchResult {
-  field;
-  results;
-  match;
-  constructor(field, regex) {
-    this.field = field;
-    this.results = field.units.map((unit) => unit.search(regex));
-    this.match = this.results.some((result) => result.match);
+class Candidate {
+  // key bears the candidate key.
+  key;
+  fields;
+  constructor(record, fields) {
+    this.key = record[KEY];
+    this.fields = fields.map((field) => new Field(field, record[field.name]));
   }
-  get name() {
-    return this.field.name;
-  }
-  get units() {
-    return this.field.units;
-  }
-  highlighted() {
-    let results = this.results;
-    if (!this.match) {
-      // If there are no matches, we limit the number of units in the output.
-      results = results.slice(0, UNITS_LIMIT);
-    } else if (this.units.length > UNITS_LIMIT) {
-      // If there are matches:
-      // - If there are only few units, we show all of them regardless of
-      //   whether they have matches or not.
-      // - If there are many units, we show those that have matches, even if
-      //   their number exceeds the limit, because we need to show all matches.
-      results = results.filter((result) => result.match);
-    }
-    const output = results.map((r) => r.highlight());
-    return (
-      output.join(UNIT_DELIMITER) +
-      (output.length < this.units.length ? LONG_UNITS_FIELD_MESSAGE : '')
-    );
-  }
-  fragmentWord() {
-    return this.results.find((r) => r.match)?.fragmentWord();
+  search(regex) {
+    return new SearchResult(this, regex);
   }
 }
 class SearchResult {
@@ -328,40 +284,123 @@ class SearchResult {
     return this.results.findIndex((result) => result.match);
   }
 }
+class Field {
+  units;
+  name;
+  constructor(field, html) {
+    // TODO: Read a list of strings, instead of a single delimiter
+    // separated string!
+    this.name = field.name;
+    const arr = field.units ? html.split(UNIT_DELIMITER) : [html];
+    this.units = arr.map((html) => new Unit(html));
+  }
+  search(regex) {
+    return new FieldSearchResult(this, regex);
+  }
+}
+class FieldSearchResult {
+  field;
+  results;
+  match;
+  constructor(field, regex) {
+    this.field = field;
+    this.results = field.units.map((unit) => unit.search(regex));
+    this.match = this.results.some((result) => result.match);
+  }
+  get name() {
+    return this.field.name;
+  }
+  get units() {
+    return this.field.units;
+  }
+  highlighted() {
+    let results = this.results;
+    if (!this.match) {
+      // If there are no matches, we limit the number of units in the output.
+      results = results.slice(0, UNITS_LIMIT);
+    } else if (this.units.length > UNITS_LIMIT) {
+      // If there are matches:
+      // - If there are only few units, we show all of them regardless of
+      //   whether they have matches or not.
+      // - If there are many units, we show those that have matches, even if
+      //   their number exceeds the limit, because we need to show all matches.
+      results = results.filter((result) => result.match);
+    }
+    const output = results.map((r) => r.highlight());
+    return (
+      output.join(UNIT_DELIMITER) +
+      (output.length < this.units.length ? LONG_UNITS_FIELD_MESSAGE : '')
+    );
+  }
+  fragmentWord() {
+    return this.results.find((r) => r.match)?.fragmentWord();
+  }
+}
 class Unit {
   html;
-  text;
+  lines;
   constructor(html) {
     this.html = html;
-    this.text = htmlToText(html);
+    this.lines = html.split(LINE_BREAK).map((l) => new Line(l));
   }
   search(regex) {
     return new UnitSearchResult(this, regex);
   }
-  matchingSubstrings(regex) {
-    const set = new Set(
-      [...this.text.matchAll(regex)].map((match) => match[0])
-    );
-    // The empty string could cause problems during highlighting.
-    set.delete('');
-    return set;
-  }
 }
 class UnitSearchResult {
   unit;
-  matches;
+  results;
+  match;
   constructor(unit, regex) {
     this.unit = unit;
-    this.matches = unit.matchingSubstrings(regex);
+    this.results = this.unit.lines.map((l) => l.search(regex));
+    this.match = this.results.some((r) => r.match);
+  }
+  highlight() {
+    return this.results.map((r) => r.highlight()).join(LINE_BREAK);
+  }
+  fragmentWord() {
+    return this.results.find((r) => r.match)?.fragmentWord();
+  }
+}
+class Line {
+  html;
+  text;
+  constructor(html) {
+    this.html = html;
+    this.text = html.replaceAll(TAG_REGEX, '');
+  }
+  search(regex) {
+    return new LineSearchResult(this, regex);
+  }
+  matches(regex) {
+    return (
+      [...this.text.matchAll(regex)]
+        // We need to filter out the empty string, because it could cause
+        // trouble during highlighting.
+        .filter((match) => match[0])
+        .map((match) => ({
+          start: match.index,
+          end: match.index + match[0].length,
+        }))
+    );
+  }
+}
+class LineSearchResult {
+  line;
+  matches;
+  constructor(line, regex) {
+    this.line = line;
+    this.matches = line.matches(regex);
   }
   get text() {
-    return this.unit.text;
+    return this.line.text;
   }
   get html() {
-    return this.unit.html;
+    return this.line.html;
   }
   get match() {
-    return !!this.matches.size;
+    return !!this.matches.length;
   }
   fragmentWord() {
     /* Expand the match left and right such that it contains full words, for
@@ -379,9 +418,8 @@ class UnitSearchResult {
       );
       return '';
     }
-    const matchStart = this.text.indexOf(match);
-    let start = matchStart;
-    let end = matchStart + match.length;
+    let start = match.start;
+    let end = match.end;
     const isWordChar = isWordCharInChrome;
     // Expand left: Move the start index left until a word boundary is found.
     while (start > 0 && isWordChar(this.text[start - 1])) {
@@ -394,142 +432,39 @@ class UnitSearchResult {
     // Return the expanded substring.
     return this.text.substring(start, end);
   }
-  // TODO: This is probably the ugliest, and possibly the slowest, part of
-  // the code. We highlight matches by looping over the HTML string, character
-  // by character. There may be a smarter way to do this.
-  // Suggestion: Memorize the text parts (opening tags, text, and closing tags)
-  // to be able to loop over them more efficiently.
-  // TODO: (#230): Handle nested matches:
-  // - Ignore tags with the match class.
-  // - Make sure this gets called on longer matches first.
-  static highlightSubstring(html, target) {
-    // TODO: This class shouldn't access the form.
-    // I think the cleanest check is to save the value of this flag during the
-    // search phase.
-    const fullWord = Form.fullWordCheckbox.checked;
-    /* Highlight all occurrences of `target` in `html`.
-     * if `fullWord` is true, only highlight the full-word occurrences.
-     * */
-    if (!target) {
-      console.error('Attempting to highlight an empty target!');
-      return html;
-    }
-    const result = [];
-    let i = 0;
-    while (i <= html.length - target.length) {
+  highlight() {
+    const builder = [];
+    // i represents the index in the HTML.
+    // j tracks the index in the text.
+    // idx tracks the match index.
+    // cur tracks the current match.
+    let i = 0,
+      j = 0,
+      idx = 0,
+      cur = this.matches[idx];
+    while (i <= this.html.length) {
       // If we stopped at a tag, add it to the output without searching it.
-      while (i < html.length && html[i] === '<') {
-        const k = html.indexOf('>', i) + 1;
-        result.push(html.slice(i, k));
+      while (this.html[i] === '<') {
+        const k = this.html.indexOf('>', i) + 1;
+        builder.push(this.html.slice(i, k));
         i = k;
       }
-      if (i >= html.length) {
-        break;
+      if (cur?.start === j) {
+        // A match starts at the given position. Yield an opening tag.
+        builder.push(`<span class="${MATCH_CLASS}">`);
+      } else if (cur?.end === j) {
+        // A match ends at the given position. Yield a closing tag.
+        builder.push('</span>');
+        idx += 1;
+        cur = this.matches[idx];
       }
-      // Search html at index i.
-      // We attempt to have j point at the end of the match.
-      let j = i;
-      let match = true;
-      // segments is the list of segments that we will push to the result (if we
-      // end up having a match). Each segment is either:
-      // - An HTML (closing or opening) tag.
-      // - A piece of text.
-      const segments = [];
-      // last_push_end is the index of the end of the last pushed segment.
-      let last_push_end = i;
-      if (fullWord && !isBoundary(html, i - 1, i)) {
-        // This is not a full-word occurrence.
-        match = false;
+      if (i < this.html.length) {
+        builder.push(this.html[i]);
       }
-      for (const c of target) {
-        while (j < html.length && html[j] === '<') {
-          // We have encountered a tag. Push the matching text first (if
-          // non-empty). Then push the tag segment.
-          if (j !== last_push_end) {
-            segments.push(html.slice(last_push_end, j));
-            last_push_end = j;
-          }
-          j = html.indexOf('>', j) + 1;
-          const tag = html.slice(last_push_end, j);
-          if (tag == LINE_BREAK) {
-            // We don't allow a match to span multiple lines.
-            match = false;
-            break;
-          }
-          segments.push(tag);
-          last_push_end = j;
-        }
-        if (j >= html.length) {
-          match = false;
-        }
-        if (html[j] !== c) {
-          match = false;
-        }
-        if (!match) {
-          break;
-        }
-        ++j;
-      }
-      if (match && fullWord && !isBoundary(html, j - 1, j)) {
-        match = false;
-      }
-      if (match) {
-        // Push the last piece of text. It's guaranteed to be non-empty, because
-        // our matching algorithm always stops within a text, not a tag.
-        segments.push(html.slice(last_push_end, j));
-        last_push_end = j;
-        // Surround all the text (non-tag) segments with <span class="match">
-        // tags.
-        result.push(
-          ...segments.map((s) =>
-            s.startsWith('<') ? s : `<span class="match">${s}</span>`
-          )
-        );
-        i = j;
-      } else {
-        result.push(html[i]);
-        i++;
-      }
+      j += 1;
+      i += 1;
     }
-    // Append any remaining characters after the last match
-    result.push(html.slice(i));
-    return result.join('');
-  }
-  highlight() {
-    if (!this.match) {
-      return this.html;
-    }
-    let html = this.html;
-    Array.from(this.matches).forEach((target) => {
-      html = UnitSearchResult.highlightSubstring(html, target);
-    });
-    return html;
-  }
-}
-class Field {
-  units;
-  name;
-  constructor(field, html) {
-    // TODO: Read a list of strings, instead of a single delimiter
-    // separated string!
-    this.name = field.name;
-    const arr = field.units ? html.split(UNIT_DELIMITER) : [html];
-    this.units = arr.map((html) => new Unit(html));
-  }
-  search(regex) {
-    return new FieldSearchResult(this, regex);
-  }
-}
-class Candidate {
-  // key bears the candidate key.
-  key;
-  fields;
-  constructor(record, fields) {
-    this.key = record[KEY];
-    this.fields = fields.map((field) => new Field(field, record[field.name]));
-  }
-  search(regex) {
-    return new SearchResult(this, regex);
+    return builder.join('');
   }
 }
 export class Xooxle {
