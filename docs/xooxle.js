@@ -188,10 +188,6 @@ export class Index {
         this.collapsible.style.maxHeight =
           this.collapsible.scrollHeight.toString() + 'px';
       }
-      // TODO: The number of results to update the display should vary based on
-      // the total number of results, otherwise you might end up yielding too
-      // often. Consider using a heuristic based on the number of results, and
-      // the time since the last yield.
       if (count % RESULTS_TO_UPDATE_DISPLAY == 0) {
         await yieldToBrowser();
       }
