@@ -181,20 +181,11 @@ dawoud_sentinels: FORCE
 	curl -L "$${PUB}&gid=1482232549" > "$${DIR}/arabic.tsv";
 
 ########## LEXICON ##########
-flashcards_xooxle: FORCE
-	./flashcards/main.py --xooxle
-
-flashcards_html: FORCE
-	./flashcards/main.py --html
-
-flashcards_anki: FORCE
-	./flashcards/main.py --anki
-
 flashcards: FORCE
-	./flashcards/main.py \
-		--html \
-		--anki \
-		--xooxle
+	./flashcards/main.py
+
+flashcards_all: FORCE
+	./flashcards/main.py --all
 
 bashandy: FORCE
 	./flashcards/bashandy.sh

@@ -2,7 +2,7 @@ import json
 import os
 import re
 import typing
-from collections import defaultdict
+from collections import abc, defaultdict
 
 import deck
 import pandas as pd
@@ -51,7 +51,7 @@ def _img_aux(
     alt: str,
     caption: str,
     line_br: bool = False,
-) -> typing.Generator[str]:
+) -> abc.Generator[str]:
     yield f'<figure id="{id}" class="{_class}">'
     # NOTE: Anki requires basenames. The string `src="{path}"` gets updated
     # while the Anki flashcards are being generated, using regular
@@ -90,13 +90,13 @@ class decker:
             return
         self.deck_().write_html_if_needed()
 
-    def notes_aux(self) -> typing.Generator[deck.note]:
+    def notes_aux(self) -> abc.Generator[deck.note]:
         raise NotImplementedError
 
     def index_indexes(self) -> list[deck.index_index]:
         raise NotImplementedError
 
-    def notes_key_content_aux(self) -> typing.Generator[tuple[str, str]]:
+    def notes_key_content_aux(self) -> abc.Generator[tuple[str, str]]:
         for note in self.notes_aux():
             yield note.key, note.html
 
@@ -145,7 +145,7 @@ class sister_with_frag:
             return self.fragment
         return f"#:~:text={self.fragment}"
 
-    def html_aux(self) -> typing.Generator[str]:
+    def html_aux(self) -> abc.Generator[str]:
         yield f'<tr id="sister{self.sister.key}" class="sister">'
         yield '<td class="sister-view">'
         href = self.HREF_FMT.format(key=self.sister.key) + self.frag()
@@ -195,7 +195,7 @@ class _mother:
             " ".join(split[1:]),
         )
 
-    def gather_aux(self, _sisters: str) -> typing.Generator[str]:
+    def gather_aux(self, _sisters: str) -> abc.Generator[str]:
         sisters = map(self.parse, utils.ssplit(_sisters, ";"))
         for s in sisters:
             yield from s.html_aux()
@@ -213,7 +213,7 @@ class _crum_indexer(_mother):
         self,
         index_name: str,
         keys: list[str],
-    ) -> typing.Generator[str]:
+    ) -> abc.Generator[str]:
         yield f"<h1>{index_name}</h2>"
         yield '<table class="index-table">'
         for key in keys:
@@ -399,7 +399,7 @@ class Crum(decker):
         return Crum.indexer.generate_indexes()
 
     @typing.override
-    def notes_aux(self) -> typing.Generator:
+    def notes_aux(self) -> abc.Generator:
         for _, row in CRUM_ROOTS.roots.iterrows():
             if not self.__dialect_match(row):
                 continue
@@ -445,7 +445,7 @@ class Crum(decker):
     def __front(self, row: pd.Series) -> str:
         return "".join(self.__front_aux(row))
 
-    def __front_aux(self, row: pd.Series) -> typing.Generator[str]:
+    def __front_aux(self, row: pd.Series) -> abc.Generator[str]:
         # Header.
         # Open the table.
         yield '<table id="header" class="header">'
@@ -514,7 +514,7 @@ class Crum(decker):
             for k in sorted(senses.keys(), key=int)
         )
 
-    def __back_aux(self, row: pd.Series) -> typing.Generator[str]:
+    def __back_aux(self, row: pd.Series) -> abc.Generator[str]:
         key = self.__key(row)
         # Meaning
         yield '<div id="root-type-meaning" class="root-type-meaning">'
@@ -807,7 +807,7 @@ class copticsite(decker):
         super().__init__(deck_name, deck_id, False)
 
     @typing.override
-    def notes_aux(self) -> typing.Generator[deck.note]:
+    def notes_aux(self) -> abc.Generator[deck.note]:
         # NOTE: The key is a protected field. Do not change unless you know what
         # you're doing.
         key = 1
@@ -882,7 +882,7 @@ class KELLIA(decker):
         return cell
 
     @typing.override
-    def notes_aux(self) -> typing.Generator[deck.note]:
+    def notes_aux(self) -> abc.Generator[deck.note]:
         for _, row in self._tsv.iterrows():
             # NOTE: The key is a protected field. Do not change unless you know what
             # you're doing.
@@ -1177,4 +1177,5 @@ COPTICSITE_XOOXLE = xooxle.index(
 )
 
 
-XOOXLE: list[xooxle.index] = [CRUM_XOOXLE, KELLIA_XOOXLE, COPTICSITE_XOOXLE]
+XOOXLE: list[xooxle.index] = [CRUM_XOOXLE]
+XOOXLE_ALL: list[xooxle.index] = XOOXLE + [KELLIA_XOOXLE, COPTICSITE_XOOXLE]

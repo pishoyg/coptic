@@ -15,30 +15,12 @@ argparser = argparse.ArgumentParser(
     description="Process Dictionary Data into HTML Pages, Anki Flashcards, and a JSON Index.",
 )
 
-argparser.add_argument(
-    "--decks",
-    type=str,
-    nargs="*",
-    default=[d.name() for d in constants.DECKERS],
-    help="The list of deck names to process.",
-)
-
-argparser.add_argument(
-    "--anki",
+_ = argparser.add_argument(
+    "--all",
     action="store_true",
-    help="If true, generate and write Anki output.",
-)
-
-argparser.add_argument(
-    "--html",
-    action="store_true",
-    help="If true, generate and write HTML output.",
-)
-
-argparser.add_argument(
-    "--xooxle",
-    action="store_true",
-    help="If true, generate and write the Xooxle index.",
+    default=False,
+    help="Some decks rarely change, so they are normally skipped to speed up"
+    " the pipeline. Set this flag to process all decks.",
 )
 
 
@@ -84,27 +66,19 @@ def _decker_deck(decker: constants.decker) -> deck.deck:
 
 def main() -> None:
     args = argparser.parse_args()
-    if not args.html and not args.anki and not args.xooxle:
-        argparser.print_help()
-        utils.throw("No commands specified!")
 
-    deckers: list[constants.decker] = [
-        d for d in constants.DECKERS if d.name() in args.decks
-    ]
+    with utils.ThreadPoolExecutor() as executor:
+        list(executor.map(constants.decker.html, constants.DECKERS))
 
-    if args.html:
-        with utils.ThreadPoolExecutor() as executor:
-            list(executor.map(constants.decker.html, deckers))
+    with utils.ThreadPoolExecutor() as executor:
+        decks = list(executor.map(_decker_deck, constants.DECKERS))
+        write_anki(decks)
 
-    if args.anki:
-        with utils.ThreadPoolExecutor() as executor:
-            decks = list(executor.map(_decker_deck, deckers))
-            write_anki(decks)
-
-    if args.xooxle:
-        indexes = [idx for idx in constants.XOOXLE if idx.name in args.decks]
-        with utils.ThreadPoolExecutor() as executor:
-            list(executor.map(xooxle.index.build, indexes))
+    indexes: list[xooxle.index] = (
+        constants.XOOXLE_ALL if args.all else constants.XOOXLE
+    )
+    with utils.ThreadPoolExecutor() as executor:
+        list(executor.map(xooxle.index.build, indexes))
 
 
 if __name__ == "__main__":
