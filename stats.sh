@@ -523,7 +523,7 @@ echo -e "${BLUE}Number of Crum DRV entries changed: "\
 ((CRUM_DRV_TYPOS >= 24 && CRUM_DRV_TYPOS <= 335 )) || (echo -e "${PURPLE}${CRUM_DRV_TYPOS} ${RED}looks suspicious.${RESET}" && exit 1)
 
 readonly CRUM_TYPOS=$(( CRUM_WRD_TYPOS + CRUM_DRV_TYPOS ))
-echo -e "${BLUE}Total number of Crum lins changed: "\
+echo -e "${BLUE}Total number of Crum lines changed: "\
   "${GREEN}${CRUM_TYPOS}${BLUE}.${RESET}"
 ((CRUM_TYPOS >= 57 && CRUM_TYPOS <= 335 )) || (echo -e "${PURPLE}${CRUM_TYPOS} ${RED}looks suspicious.${RESET}" && exit 1)
 
@@ -541,7 +541,7 @@ echo -e "${BLUE}Number of commits: "\
   "${GREEN}${NUM_COMMITS}${BLUE}.${RESET}"
 ((NUM_COMMITS >= 1300 && NUM_COMMITS <= 10000 )) || (echo -e "${PURPLE}${NUM_COMMITS} ${RED}looks suspicious.${RESET}" && exit 1)
 
-NUM_CONTRIBUTORS="$(git shortlog --summary --number --email | wc --lines)"
+NUM_CONTRIBUTORS="$(git shortlog --summary --group=author | wc --lines)"
 echo -e "${BLUE}Number of contributors: "\
   "${GREEN}${NUM_CONTRIBUTORS}${BLUE}.${RESET}"
 ((NUM_CONTRIBUTORS >= 1 && NUM_CONTRIBUTORS <= 10 )) || (echo -e "${PURPLE}${NUM_CONTRIBUTORS} ${RED}looks suspicious.${RESET}" && exit 1)
