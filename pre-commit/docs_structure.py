@@ -77,7 +77,7 @@ PATTERNS: list[Pattern] = [
     Pattern(["**.js"]),
     # Auto-generated (lexicon):
     Pattern(["crum/*.html"]),
-    Pattern(["crum/xooxle.json"]),
+    Pattern(["crum/crum.json", "crum/kellia.json", "crum/copticsite.json"]),
     Pattern(["crum/crum/*.png"]),  # Old Crum scan.
     Pattern(["crum/crum/*.jpeg"]),  # New Crum scan.
     Pattern(["crum/explanatory/*-*-*.*"]),  # Explanatory images.
