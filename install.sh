@@ -28,6 +28,7 @@ _install() {
   pip install -e .
   pre-commit install
   npm install
+  npm install --global bun
 
   if ! command -v npm &> /dev/null; then
     echo -e "${RED}Please install ${YELLOW}npm${RED}. See ${YELLOW}https://docs.npmjs.com/downloading-and-installing-node-js-and-npm${RED}.${RESET}"
