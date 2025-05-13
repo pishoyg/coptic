@@ -147,12 +147,17 @@ export class Index {
   params;
   tbody;
   collapsible;
-  constructor(index) {
+  /*
+   * @param index: JSON index object.
+   * @param tableID: ID of the <table> element that will be used to populate
+   * the results.
+   */
+  constructor(index, tableID) {
     this.data = index.data.map(
       (record) => new Candidate(record, index.params.fields)
     );
     this.params = index.params;
-    const table = document.getElementById(this.params.result_table_name);
+    const table = document.getElementById(tableID);
     this.tbody = table.querySelector('tbody');
     // TODO: The dependency on the HTML structure is slightly risky.
     this.collapsible = table.parentElement;
@@ -227,10 +232,10 @@ export class Index {
     this.tbody.innerHTML = '';
   }
 }
-export async function index(url) {
+export async function index(url, tableID) {
   const raw = await fetch(url);
   const json = await raw.json();
-  return new Index(json);
+  return new Index(json, tableID);
 }
 class FieldSearchResult {
   field;
