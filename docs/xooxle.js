@@ -282,8 +282,6 @@ class Field {
   units;
   name;
   constructor(field, html) {
-    // TODO: Read a list of strings, instead of a single delimiter
-    // separated string!
     this.name = field.name;
     const arr = field.units ? html.split(UNIT_DELIMITER) : [html];
     this.units = arr.map((html) => new Unit(html));

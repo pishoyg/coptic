@@ -89,8 +89,6 @@ import utils
 KEY = "KEY"
 # UNIT_DELIMITER is the delimiter used to separate the units of the output text, if
 # such separation is desired for a given field.
-# TODO: (#230) This is not a clean way to separate units. Use a list of strings,
-# instead of a delimiter-separated string.
 UNIT_DELIMITER = '<hr class="match-separator">'
 LINE_BREAK = "<br>"
 
