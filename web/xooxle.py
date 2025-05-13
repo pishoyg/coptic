@@ -74,10 +74,6 @@
 # TODO: (#221) Understand concurrency primitives better, and optimize the
 # performance.
 
-# TODO: (#230) Instead of `data` being an array of key-value objects each
-# containing a KEY field, make `data` a key-value object that maps keys to
-# key-value objects containing the other fields.
-
 import os
 import re
 from collections.abc import Generator, Iterable, Iterator
@@ -421,7 +417,6 @@ class cleaner:
 class index:
     def __init__(
         self,
-        name: str,
         input: str | Generator[tuple[str, str]],
         extract: list[selector],
         captures: list[capture],
@@ -439,7 +434,6 @@ class index:
                 `soup.find_all`. and capture from the tree.
         """
 
-        self.name: str = name
         self._input: str | Generator[tuple[str, str]] = input
         self._include: Callable[[str], bool] | None = include
         self._extract: list[selector] = extract

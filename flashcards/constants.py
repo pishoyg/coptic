@@ -1068,7 +1068,6 @@ def _is_crum_word(path: str) -> bool:
 
 
 CRUM_XOOXLE = xooxle.index(
-    CRUM_ALL,
     input=NAME_TO_DECKER[CRUM_ALL].notes_key_content_aux(),
     include=_is_crum_word,
     extract=[
@@ -1123,7 +1122,6 @@ CRUM_XOOXLE = xooxle.index(
 
 
 KELLIA_XOOXLE = xooxle.index(
-    KELLIA_COMPREHENSIVE,
     input=NAME_TO_DECKER[KELLIA_COMPREHENSIVE].notes_key_content_aux(),
     extract=[
         xooxle.selector({"name": "footer"}, force=False),
@@ -1155,7 +1153,6 @@ KELLIA_XOOXLE = xooxle.index(
 
 
 COPTICSITE_XOOXLE = xooxle.index(
-    COPTICSITE,
     input=NAME_TO_DECKER[COPTICSITE].notes_key_content_aux(),
     extract=[],
     captures=[
