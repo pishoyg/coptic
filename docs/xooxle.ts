@@ -1,15 +1,11 @@
 import * as logger from './logger.js';
-import * as collapse from './collapse.js';
 
-// TODO: (#230): Document the HTML structure required in order for this to work.
-// Besides the below, we also expect search result tables and collapsibles with
-// a given structure.
+// TODO: (#230): The following IDs should be provided by the calling script,
+// instead of being hardcoded.
 const SEARCH_BOX_ID = 'searchBox';
 const FULL_WORD_CHECKBOX_ID = 'fullWordCheckbox';
 const REGEX_CHECKBOX_ID = 'regexCheckbox';
 const MESSAGE_BOX_ID = 'message';
-
-const XOOXLE_JSON = 'xooxle.json';
 
 // KEY is the name of the field that bears the word key. The key can be used to
 // generate an HREF to open the word page.
@@ -46,7 +42,7 @@ const RESULTS_TO_UPDATE_DISPLAY = 5;
 const TAG_REGEX = /<\/?[^>]+>/g;
 const CHROME_WORD_CHARS: Set<string> = new Set<string>(["'"]);
 
-class Form {
+export class Form {
   static readonly searchBox = document.getElementById(
     SEARCH_BOX_ID
   ) as HTMLInputElement;
@@ -200,7 +196,7 @@ function yieldToBrowser(): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, 0));
 }
 
-class Index {
+export class Index {
   private readonly data: Candidate[];
   private readonly params: _Params;
   private readonly tbody: HTMLTableSectionElement;
@@ -660,18 +656,37 @@ class Candidate {
   }
 }
 
-interface _Index {
+export interface _Index {
   readonly data: Record<string, string>[];
   readonly params: _Params;
 }
 
-class Xooxle {
+export class Xooxle {
   private debounceTimeout: ReturnType<typeof setTimeout> | null = null;
   private currentAbortController: AbortController | null = null;
   constructor(
+    // TODO: Stop supporting multiple indexes. Use a single index per Xooxle
+    // instance. Users can simply instantiate multiple Xooxle objects.
     private readonly indexes: Index[],
     private readonly form: Form
-  ) {}
+  ) {
+    // Make the page responsive to user input.
+    Form.searchBox.addEventListener(
+      'input',
+      this.handleSearchQuery.bind(this, 100)
+    );
+    Form.fullWordCheckbox.addEventListener(
+      'click',
+      this.handleSearchQuery.bind(this, 0)
+    );
+    Form.regexCheckbox.addEventListener(
+      'click',
+      this.handleSearchQuery.bind(this, 0)
+    );
+
+    this.handleSearchQuery(0);
+    Form.searchBox.focus();
+  }
 
   handleSearchQuery(timeout: number) {
     if (this.debounceTimeout) {
@@ -724,46 +739,3 @@ class Xooxle {
     logger.timeEnd('search');
   }
 }
-
-async function main() {
-  const form = new Form();
-  form.populateFromParams();
-
-  // Prevent other elements in the page from picking up key events on the
-  // search box.
-  Form.searchBox.addEventListener('keyup', (event: KeyboardEvent) => {
-    event.stopPropagation();
-  });
-  Form.searchBox.addEventListener('keydown', (event: KeyboardEvent) => {
-    event.stopPropagation();
-  });
-  Form.searchBox.addEventListener('keypress', (event: KeyboardEvent) => {
-    event.stopPropagation();
-  });
-
-  const indexes: Index[] = (
-    await fetch(XOOXLE_JSON).then(
-      async (resp) => (await resp.json()) as _Index[]
-    )
-  ).map((index: _Index) => new Index(index));
-
-  const xooxle = new Xooxle(indexes, form);
-
-  // Make the page responsive to user input.
-  Form.searchBox.addEventListener('input', () => {
-    xooxle.handleSearchQuery(100);
-  });
-  Form.fullWordCheckbox.addEventListener('click', () => {
-    xooxle.handleSearchQuery(0);
-  });
-  Form.regexCheckbox.addEventListener('click', () => {
-    xooxle.handleSearchQuery(0);
-  });
-
-  xooxle.handleSearchQuery(0);
-  Form.searchBox.focus();
-
-  collapse.addListeners(true);
-}
-
-await main();
