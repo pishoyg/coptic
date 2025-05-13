@@ -109,11 +109,13 @@ copticsite: FORCE
 crum: FORCE
 	./dictionary/marcion.sourceforge.net/main.py
 
-crum_appendices: FORCE
+crum_download: FORCE
 	PUB="https://docs.google.com/spreadsheets/d/e/2PACX-1vTItxV4E4plQrzjWLSea85ZFQWcQ4ba-p2BBIDG9h5yI0i9URn9GD9zZhxEj8kVI7jhCoPWPEapd9D7/pub?output=tsv"; \
 	DIR="dictionary/marcion.sourceforge.net/data/input"; \
 	curl -L "$${PUB}&gid=1409267664" > "$${DIR}/root_appendices.tsv"; \
-	curl -L "$${PUB}&gid=1491216210" > "$${DIR}/derivation_appendices.tsv";
+	curl -L "$${PUB}&gid=1491216210" > "$${DIR}/derivation_appendices.tsv"; \
+	curl -L "$${PUB}&gid=1575616379" > "$${DIR}/coptwrd.tsv"; \
+	curl -L "$${PUB}&gid=698638592" > "$${DIR}/coptdrv.tsv";
 
 crum_img: FORCE
 	./dictionary/marcion.sourceforge.net/img_helper.py --batch
