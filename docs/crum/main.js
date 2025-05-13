@@ -1,5 +1,12 @@
 import * as xooxle from '../xooxle.js';
 import * as collapse from '../collapse.js';
+const SEARCH_BOX_ID = 'searchBox';
+const FULL_WORD_CHECKBOX_ID = 'fullWordCheckbox';
+const REGEX_CHECKBOX_ID = 'regexCheckbox';
+// TODO: The message box gets written. Since multiple Xooxle instances are
+// allowed to coexist on the same page, we should create several boxes,
+// otherwise they could override each other!
+const MESSAGE_BOX_ID = 'message';
 const XOOXLES = [
   { indexURL: 'crum.json', tableID: 'crum', collapsibleID: 'crum-collapsible' },
   {
@@ -17,13 +24,17 @@ function stopPropagation(event) {
   event.stopPropagation();
 }
 async function main() {
-  const form = new xooxle.Form();
-  form.populateFromParams();
+  const form = new xooxle.Form({
+    searchBoxID: SEARCH_BOX_ID,
+    fullWordCheckboxID: FULL_WORD_CHECKBOX_ID,
+    regexCheckboxID: REGEX_CHECKBOX_ID,
+    messageBoxID: MESSAGE_BOX_ID,
+  });
   // Prevent other elements in the page from picking up key events on the
   // search box.
-  xooxle.Form.searchBox.addEventListener('keyup', stopPropagation);
-  xooxle.Form.searchBox.addEventListener('keydown', stopPropagation);
-  xooxle.Form.searchBox.addEventListener('keypress', stopPropagation);
+  form.searchBox.addEventListener('keyup', stopPropagation);
+  form.searchBox.addEventListener('keydown', stopPropagation);
+  form.searchBox.addEventListener('keypress', stopPropagation);
   await Promise.all(
     XOOXLES.map(async (x) => {
       const index = await xooxle.index(x.indexURL, x.tableID, x.collapsibleID);
