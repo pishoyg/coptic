@@ -1067,47 +1067,47 @@ def _is_crum_word(path: str) -> bool:
     return utils.stem(path).isdigit()
 
 
-CRUM_XOOXLE = xooxle.index(
-    input=NAME_TO_DECKER[CRUM_ALL].notes_key_content_aux(),
+CRUM_XOOXLE = xooxle.Index(
+    input_dir=NAME_TO_DECKER[CRUM_ALL].notes_key_content_aux(),
     include=_is_crum_word,
     extract=[
-        xooxle.selector({"name": "title"}, force=False),
-        xooxle.selector({"class_": "header"}, force=False),
-        xooxle.selector({"class_": "dictionary"}, force=False),
-        xooxle.selector({"class_": "crum"}, force=False),
-        xooxle.selector({"class_": "crum-page"}, force=False),
-        xooxle.selector({"class_": "crum-page-external"}, force=False),
-        xooxle.selector({"class_": "dawoud"}, force=False),
-        xooxle.selector({"class_": "dawoud-page"}, force=False),
-        xooxle.selector(
+        xooxle.Selector({"name": "title"}, force=False),
+        xooxle.Selector({"class_": "header"}, force=False),
+        xooxle.Selector({"class_": "dictionary"}, force=False),
+        xooxle.Selector({"class_": "crum"}, force=False),
+        xooxle.Selector({"class_": "crum-page"}, force=False),
+        xooxle.Selector({"class_": "crum-page-external"}, force=False),
+        xooxle.Selector({"class_": "dawoud"}, force=False),
+        xooxle.Selector({"class_": "dawoud-page"}, force=False),
+        xooxle.Selector(
             {"class_": "dawoud-page-external"},
             force=False,
         ),
-        xooxle.selector({"class_": "drv-key"}, force=False),
-        xooxle.selector({"id": "images"}, force=False),
-        xooxle.selector({"class_": "nag-hammadi"}, force=False),
-        xooxle.selector({"class_": "sisters"}, force=False),
-        xooxle.selector({"id": "marcion"}),
-        xooxle.selector({"id": "categories"}, force=False),
+        xooxle.Selector({"class_": "drv-key"}, force=False),
+        xooxle.Selector({"id": "images"}, force=False),
+        xooxle.Selector({"class_": "nag-hammadi"}, force=False),
+        xooxle.Selector({"class_": "sisters"}, force=False),
+        xooxle.Selector({"id": "marcion"}),
+        xooxle.Selector({"id": "categories"}, force=False),
     ],
     captures=[
-        xooxle.capture(
+        xooxle.Capture(
             "marcion",
-            xooxle.selector({"id": "pretty"}),
+            xooxle.Selector({"id": "pretty"}),
             # This is the list of classes needed for highlighting. If the
             # highlighting rules change, you might have to add new classes!
             retain_classes=_CRUM_RETAIN_CLASSES,
             retain_elements_for_classes=_CRUM_RETAIN_ELEMENTS_FOR_CLASSES,
         ),
-        xooxle.capture(
+        xooxle.Capture(
             "meaning",
-            xooxle.selector({"id": "root-type-meaning"}, force=False),
+            xooxle.Selector({"id": "root-type-meaning"}, force=False),
             retain_classes=_CRUM_RETAIN_CLASSES,
             retain_elements_for_classes=_CRUM_RETAIN_ELEMENTS_FOR_CLASSES,
         ),
-        xooxle.capture(
+        xooxle.Capture(
             "appendix",
-            xooxle.selector(
+            xooxle.Selector(
                 {"name": "body"},
             ),
             retain_classes=_CRUM_RETAIN_CLASSES,
@@ -1120,28 +1120,28 @@ CRUM_XOOXLE = xooxle.index(
 )
 
 
-KELLIA_XOOXLE = xooxle.index(
-    input=NAME_TO_DECKER[KELLIA_COMPREHENSIVE].notes_key_content_aux(),
+KELLIA_XOOXLE = xooxle.Index(
+    input_dir=NAME_TO_DECKER[KELLIA_COMPREHENSIVE].notes_key_content_aux(),
     extract=[
-        xooxle.selector({"name": "footer"}, force=False),
-        xooxle.selector({"class_": "bibl"}, force=False),
-        xooxle.selector({"class_": "ref_xr"}, force=False),
-        xooxle.selector({"class_": "ref"}, force=False),
+        xooxle.Selector({"name": "footer"}, force=False),
+        xooxle.Selector({"class_": "bibl"}, force=False),
+        xooxle.Selector({"class_": "ref_xr"}, force=False),
+        xooxle.Selector({"class_": "ref"}, force=False),
     ],
     captures=[
-        xooxle.capture(
+        xooxle.Capture(
             "orths",
-            xooxle.selector({"id": "orths"}),
+            xooxle.Selector({"id": "orths"}),
             retain_classes=_KELLIA_RETAIN_CLASSES,
         ),
-        xooxle.capture(
+        xooxle.Capture(
             "senses",
-            xooxle.selector({"id": "senses"}),
+            xooxle.Selector({"id": "senses"}),
             retain_classes=_KELLIA_RETAIN_CLASSES,
         ),
-        xooxle.capture(
+        xooxle.Capture(
             "text",
-            xooxle.selector(
+            xooxle.Selector(
                 {"name": "body"},
             ),
         ),
@@ -1150,23 +1150,23 @@ KELLIA_XOOXLE = xooxle.index(
 )
 
 
-COPTICSITE_XOOXLE = xooxle.index(
-    input=NAME_TO_DECKER[COPTICSITE].notes_key_content_aux(),
+COPTICSITE_XOOXLE = xooxle.Index(
+    input_dir=NAME_TO_DECKER[COPTICSITE].notes_key_content_aux(),
     extract=[],
     captures=[
-        xooxle.capture(
+        xooxle.Capture(
             "front",
-            xooxle.selector({"id": "front"}),
+            xooxle.Selector({"id": "front"}),
             retain_classes=_COPTICSITE_RETAIN_CLASSES,
         ),
-        xooxle.capture(
+        xooxle.Capture(
             "back",
-            xooxle.selector({"id": "back"}),
+            xooxle.Selector({"id": "back"}),
         ),
     ],
     output=os.path.join(LEXICON_DIR, "copticsite.json"),
 )
 
 
-XOOXLE: list[xooxle.index] = [CRUM_XOOXLE]
-XOOXLE_ALL: list[xooxle.index] = XOOXLE + [KELLIA_XOOXLE, COPTICSITE_XOOXLE]
+XOOXLE: list[xooxle.Index] = [CRUM_XOOXLE]
+XOOXLE_ALL: list[xooxle.Index] = XOOXLE + [KELLIA_XOOXLE, COPTICSITE_XOOXLE]

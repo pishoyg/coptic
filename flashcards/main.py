@@ -74,11 +74,11 @@ def main() -> None:
         decks = list(executor.map(_decker_deck, constants.DECKERS))
         write_anki(decks)
 
-    indexes: list[xooxle.index] = (
+    indexes: list[xooxle.Index] = (
         constants.XOOXLE_ALL if args.all else constants.XOOXLE
     )
     with utils.ThreadPoolExecutor() as executor:
-        list(executor.map(xooxle.index.build, indexes))
+        list(executor.map(xooxle.Index.build, indexes))
 
 
 if __name__ == "__main__":
