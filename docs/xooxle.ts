@@ -1,5 +1,3 @@
-import * as logger from './logger.js';
-
 // KEY is the name of the field that bears the word key. The key can be used to
 // generate an HREF to open the word page.
 const KEY = 'KEY';
@@ -17,40 +15,67 @@ const KEY = 'KEY';
 //   available.
 const UNITS_LIMIT = 5;
 
-// UNIT_DELIMITER is the string that separates a units field into units.
-const UNIT_DELIMITER = '<hr class="match-separator">';
-
-// Text matching a given text will be wrapped in `<span class="MATCH_CLASS">`
-// tags.
-const MATCH_CLASS = 'match';
-
-// LONG_UNITS_FIELD_MESSAGE is the message shown at the end of a units field,
-// if the field gets truncated.
-const LONG_UNITS_FIELD_MESSAGE =
-  '<br><span class="view-for-more">... (<em>view</em> for full context)</span>';
-
 // Our currently index building algorithm results in HTML with a simplified
 // structure, with only <span> tags, styling tags, or <br> tags. Styling tags
 // don't affect the output text, and are simply ignored during text search.
 // Line breaks, however, require special handling.
 const LINE_BREAK = '<br>';
 
+// RESULTS_TO_UPDATE_DISPLAY specifies how often (every how many results) we
+// should yield to let the browser update the display during search.
 const RESULTS_TO_UPDATE_DISPLAY = 5;
+
 const TAG_REGEX = /<\/?[^>]+>/g;
+
+// CHROME_WORD_CHARS is a list of characters that are considered word characters
+// in Chrome.
+// See https://github.com/pishoyg/coptic/issues/286 for context.
 const CHROME_WORD_CHARS: Set<string> = new Set<string>(["'"]);
 
+const enum CLS {
+  // VIEW is the class of the view table cells.
+  VIEW = 'view',
+  // ERROR is the class of the error message.
+  ERROR = 'error',
+  // COUNTER is the class of the result counters in the view cells.
+  COUNTER = 'counter',
+  DEV = 'dev',
+  NO_DEV = 'no-dev',
+  // MATCH is the class of text matching a given search query.
+  MATCH = 'match',
+  // VIEW_FOR_MORE is the class of the message "view for more", displayed in
+  // large fields that have been cropped.
+  VIEW_FOR_MORE = 'view-for-more',
+}
+
+// UNIT_DELIMITER is the string that separates a units field into units.
+const UNIT_DELIMITER = '<hr class="match-separator">';
+
+// LONG_UNITS_FIELD_MESSAGE is the message shown at the end of a units field,
+// if the field gets truncated.
+const LONG_UNITS_FIELD_MESSAGE = `<br><span class="${CLS.VIEW_FOR_MORE}">... (<em>view</em> for full context)</span>`;
+
+// _Form stores Form parameters.
 export interface _Form {
   searchBoxID: string;
   fullWordCheckboxID: string;
   regexCheckboxID: string;
   messageBoxID: string;
+  resultsTableID: string;
+  collapsibleID: string;
 }
 
+// Form represents a search form containing the HTML elements that the user
+// interacts with to initiate and control search.
 export class Form {
+  // Input fields:
   readonly searchBox: HTMLInputElement;
   readonly fullWordCheckbox: HTMLInputElement;
   readonly regexCheckbox: HTMLInputElement;
+  // Output fields:
   private readonly messageBox: HTMLElement;
+  readonly tbody: HTMLTableSectionElement;
+  private readonly collapsible: HTMLElement;
 
   // Search parameter names.
   private static readonly query = 'query';
@@ -68,6 +93,10 @@ export class Form {
       form.regexCheckboxID
     ) as HTMLInputElement;
     this.messageBox = document.getElementById(form.messageBoxID)!;
+    this.tbody = document
+      .getElementById(form.resultsTableID)!
+      .querySelector('tbody')!;
+    this.collapsible = document.getElementById(form.collapsibleID)!;
 
     this.populateFromParams();
   }
@@ -127,166 +156,44 @@ export class Form {
     window.history.replaceState('', '', url.toString());
   }
 
+  result(row: HTMLTableRowElement): void {
+    this.tbody.appendChild(row);
+  }
+
+  expand(): void {
+    if (this.collapsible.style.maxHeight) {
+      this.collapsible.style.maxHeight =
+        this.collapsible.scrollHeight.toString() + 'px';
+    }
+  }
+
   message(message: string): void {
     const el = document.createElement('div');
-    el.classList.add('error');
+    el.classList.add(CLS.ERROR);
     el.textContent = message;
     this.messageBox.replaceChildren(el);
   }
 
-  clearMessage(): void {
+  clear(): void {
+    this.tbody.replaceChildren();
     this.messageBox.replaceChildren();
   }
 }
 
-function isWordChar(char: string): boolean {
-  // Unicode-aware boundary expansion
-  return /\p{L}|\p{N}/u.test(char);
-}
-
-function isWordCharInChrome(char: string): boolean {
-  // isWordCharInChrome returns whether this character is considered a word
-  // character in Chrome.
-  // See https://github.com/pishoyg/coptic/issues/286 for context.
-  return isWordChar(char) || CHROME_WORD_CHARS.has(char);
-}
-
-interface _Field {
-  readonly name: string;
-  readonly units: boolean;
-}
-
-interface _Params {
-  // fields is the list of fields in the output. For each
-  // search result from the data, a row will be added to the table.
-  // The first cell in the row will contain the index of the result, and
-  // potentially the HREF to the result page. The following cells will contain
-  // other fields from the result, in this order.
-  readonly fields: _Field[];
-}
-
-function yieldToBrowser(): Promise<void> {
+async function yieldToBrowser(): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, 0));
 }
 
-export class Index {
-  private readonly data: Candidate[];
-  private readonly params: _Params;
-  private readonly tbody: HTMLTableSectionElement;
-  private readonly collapsible: HTMLElement;
-
-  /*
-   * @param index: JSON index object.
-   * @param tableID: ID of the <table> element that will be used to populate
-   * the results. NOTE: The table must have a <tbody> child.
-   * @param collapsibleID: ID of the element that, when clicked, hides the
-   * results table.
-   * @param hrefFmt: a format string for generating a URL to this result's
-   * page. The HREF will be generated based on the KEY field of the candidate
-   * by substituting the string `{KEY}`.
-   * If absent, no HREF will be generated.
-   */
-  constructor(
-    index: _Index,
-    tableID: string,
-    collapsibleID: string,
-    private readonly hrefFmt?: string
-  ) {
-    this.data = index.data.map(
-      (record) => new Candidate(record, index.params.fields)
-    );
-    this.params = index.params;
-    this.tbody = document.getElementById(tableID)!.querySelector('tbody')!;
-    this.collapsible = document.getElementById(collapsibleID)!;
-  }
-
-  async search(regex: RegExp, abortController: AbortController) {
-    let count = 0;
-    // column_sentinels is a set of hidden table rows that represent sentinels
-    // (anchors / break points) in the results table.
-    //
-    // The sentinels are used to divide the table into sections.
-    // Matching results will be added right on top of the sentinels, so that
-    // each sentinel represents the (hidden) bottom row of a section.
-    // Results with a (first) match in their n^th column will be added on top of
-    // the n^th sentinel. (By first match, we mean that a result containing a
-    // match in the 1st and 2nd column, for example, will be added on top of the
-    // 1st, not the 2nd, sentinel.)
-    // We do so based on the assumption that the earlier columns contain more
-    // relevant data. So a result with a match in the 1st column is likely more
-    // interesting to the user than a result with a match in the 2nd column,
-    // so it should show first.
-    //
-    // This allows us to achieve some form of result sorting, without actually
-    // having to retrieve all results, sort them, and then render them. We can
-    // start showing results immediately after one match, thus maintaining
-    // Xooxle's high responsiveness and speed.
-    //
-    // We also insert rows in the table, without displacing or recreating the
-    // other rows, thus reducing jitter.
-    // We use the sentinels as bottoms for the sections, rather than tops,
-    // because we want results to expand downwards rather than upwards, to
-    // avoid jitter at the top of the table, which is the area that the user
-    // will be looking at.
-    const column_sentinels: Element[] = this.params.fields.map(() => {
-      const tr = document.createElement('tr');
-      tr.style.display = 'none';
-      this.tbody.appendChild(tr);
-      return tr;
-    });
-
-    for (const res of this.data) {
-      const result: SearchResult = res.search(regex);
-
-      if (!result.match) {
-        continue;
-      }
-
-      ++count;
-
-      // Create a new row for the table
-      const row = result.row(this.hrefFmt);
-
-      if (abortController.signal.aborted) {
-        return;
-      }
-
-      column_sentinels[result.firstMatchField()]!.insertAdjacentElement(
-        'beforebegin',
-        row
-      );
-
-      if (this.collapsible.style.maxHeight) {
-        this.collapsible.style.maxHeight =
-          this.collapsible.scrollHeight.toString() + 'px';
-      }
-
-      if (count % RESULTS_TO_UPDATE_DISPLAY == 0) {
-        await yieldToBrowser();
-      }
-    }
-
-    let i = 0;
-    this.tbody.querySelectorAll('.counter').forEach((counter) => {
-      counter.innerHTML = `${(++i).toString()} / ${count.toString()}`;
-    });
-  }
-
-  clear(): void {
-    this.tbody.innerHTML = '';
-  }
-}
-
+// Candidate represents one search candidate from the index. In the results
+// display, each candidate occupies its own row.
 class Candidate {
   // key bears the candidate key.
   readonly key: string;
   readonly fields: Field[];
 
-  public constructor(record: Record<string, string>, fields: _Field[]) {
+  public constructor(record: Record<string, string>, fields: string[]) {
     this.key = record[KEY]!;
-    this.fields = fields.map(
-      (field: _Field) => new Field(field, record[field.name]!)
-    );
+    this.fields = fields.map((name) => new Field(name, record[name]!));
   }
 
   public search(regex: RegExp): SearchResult {
@@ -294,9 +201,9 @@ class Candidate {
   }
 }
 
+// SearchResult represents the search result of one candidate from the index.
 class SearchResult {
   private readonly results: FieldSearchResult[];
-  readonly match: boolean;
   constructor(
     private readonly candidate: Candidate,
     regex: RegExp
@@ -304,29 +211,34 @@ class SearchResult {
     this.results = this.candidate.fields.map(
       (field) => new FieldSearchResult(field, regex)
     );
-    this.match = this.results.some((result) => result.match);
   }
 
   get key(): string {
     return this.candidate.key;
   }
 
+  get match(): boolean {
+    return this.results.some((result) => result.match);
+  }
+
   fragmentWord(): string | undefined {
     return this.results.find((r) => r.fragmentWord())?.fragmentWord();
   }
 
+  // viewCell constructs the first cell in the row for this result, bearing the
+  // anchor to the result (if available).
   private viewCell(hrefFmt?: string): HTMLTableCellElement {
     const viewCell = document.createElement('td');
-    viewCell.classList.add('view');
+    viewCell.classList.add(CLS.VIEW);
 
     const counter = document.createElement('span');
-    counter.classList.add('counter');
+    counter.classList.add(CLS.COUNTER);
     counter.innerHTML = '? / ?';
     counter.append(' ');
     viewCell.append(counter);
 
     const dev = document.createElement('span');
-    dev.classList.add('dev');
+    dev.classList.add(CLS.DEV);
     dev.textContent = this.key;
 
     if (!hrefFmt) {
@@ -342,7 +254,7 @@ class SearchResult {
     a.target = '_blank';
 
     const noDev = document.createElement('span');
-    noDev.classList.add('no-dev');
+    noDev.classList.add(CLS.NO_DEV);
     noDev.textContent = 'view';
 
     a.appendChild(noDev);
@@ -353,32 +265,38 @@ class SearchResult {
     return viewCell;
   }
 
+  // row constructs the row in the results table that corresponds to this
+  // result. This consists of the cell bearing the key and anchor, along with
+  // the other cells containing the highlighted search fields.
   row(hrefFmt?: string): HTMLTableRowElement {
     const row = document.createElement('tr');
 
     row.appendChild(this.viewCell(hrefFmt));
+
     this.results.forEach((sr: FieldSearchResult) => {
       const cell = document.createElement('td');
-      cell.innerHTML = sr.highlighted();
+      cell.innerHTML = sr.highlight();
       row.appendChild(cell);
     });
 
     return row;
   }
 
+  // firstMatchField returns the index of the first field containing a match.
   firstMatchField(): number {
     return this.results.findIndex((result) => result.match);
   }
 }
 
+// Field represents a search field within a candidate. In the display, while
+// candidate occupies a table row, each field occupies a cell within that row.
 class Field {
   readonly units: Unit[];
-  readonly name: string;
-
-  constructor(field: _Field, html: string) {
-    this.name = field.name;
-    const arr = field.units ? html.split(UNIT_DELIMITER) : [html];
-    this.units = arr.map((html) => new Unit(html));
+  constructor(
+    readonly name: string,
+    html: string
+  ) {
+    this.units = html.split(UNIT_DELIMITER).map((html) => new Unit(html));
   }
 
   search(regex: RegExp): FieldSearchResult {
@@ -386,22 +304,26 @@ class Field {
   }
 }
 
+// FieldSearchResult represents the search result of one field.
 class FieldSearchResult {
   private readonly results: UnitSearchResult[];
-  readonly match: boolean;
   constructor(
     private readonly field: Field,
     regex: RegExp
   ) {
     this.results = field.units.map((unit) => unit.search(regex));
-    this.match = this.results.some((result) => result.match);
   }
 
   private get units(): Unit[] {
     return this.field.units;
   }
 
-  highlighted(): string {
+  get match(): boolean {
+    return this.results.some((result) => result.match);
+  }
+
+  // highlight returns the field's HTML content, with matches highlighted.
+  highlight(): string {
     let results = this.results;
 
     if (!this.match) {
@@ -424,11 +346,17 @@ class FieldSearchResult {
     );
   }
 
+  // fragmentWord returns a word that can be used as a fragment in the URL to
+  // highlight the first matching word.
   fragmentWord(): string | undefined {
     return this.results.find((r) => r.match)?.fragmentWord();
   }
 }
 
+// Unit is a unit in a field. Fields usually consist of a single unit, but
+// humongous fields can be broken up into units. Units are searched separately;
+// and, if there are too many, won't all be included in the display during a
+// search.
 class Unit {
   readonly lines: Line[];
   constructor(readonly html: string) {
@@ -440,15 +368,18 @@ class Unit {
   }
 }
 
+// UnitSearchResult represents the search result of one unit.
 class UnitSearchResult {
   private readonly results: LineSearchResult[];
-  readonly match: boolean;
   constructor(
     private readonly unit: Unit,
     regex: RegExp
   ) {
     this.results = this.unit.lines.map((l) => l.search(regex));
-    this.match = this.results.some((r) => r.match);
+  }
+
+  get match(): boolean {
+    return this.results.some((r) => r.match);
   }
 
   highlight(): string {
@@ -458,6 +389,13 @@ class UnitSearchResult {
   fragmentWord(): string | undefined {
     return this.results.find((r) => r.match)?.fragmentWord();
   }
+}
+
+// Line represents a line in a unit. Units are broken into lines because we
+// don't want any search queries to spill over multiple lines.
+interface Match {
+  readonly start: number;
+  readonly end: number;
 }
 
 class Line {
@@ -485,7 +423,7 @@ class Line {
 }
 
 class LineSearchResult {
-  private static readonly opening = `<span class="${MATCH_CLASS}">`;
+  private static readonly opening = `<span class="${CLS.MATCH}">`;
   private static readonly closing = '</span>';
   private readonly matches: Match[];
   constructor(
@@ -505,6 +443,14 @@ class LineSearchResult {
 
   get match(): boolean {
     return !!this.matches.length;
+  }
+
+  static isWordChar(char?: string): boolean {
+    // Unicode-aware boundary expansion
+    if (!char) {
+      return false;
+    }
+    return /\p{L}|\p{N}/u.test(char) || CHROME_WORD_CHARS.has(char);
   }
 
   fragmentWord(): string {
@@ -527,15 +473,13 @@ class LineSearchResult {
     let start = match.start;
     let end = match.end;
 
-    const isWordChar = isWordCharInChrome;
-
     // Expand left: Move the start index left until a word boundary is found.
-    while (start > 0 && isWordChar(this.text[start - 1]!)) {
+    while (LineSearchResult.isWordChar(this.text[start - 1])) {
       start--;
     }
 
     // Expand right: Move the end index right until a word boundary is found.
-    while (end < this.text.length && isWordChar(this.text[end]!)) {
+    while (LineSearchResult.isWordChar(this.text[end])) {
       end++;
     }
 
@@ -594,55 +538,79 @@ class LineSearchResult {
   }
 }
 
-interface Match {
-  readonly start: number;
-  readonly end: number;
-}
-
 export interface _Index {
   readonly data: Record<string, string>[];
-  readonly params: _Params;
+  readonly metadata: _Metadata;
+}
+
+interface _Metadata {
+  // fields is the list of fields in the output. For each
+  // search result from the data, a row will be added to the table.
+  // The first cell in the row will contain the index of the result, and
+  // potentially the HREF to the result page. The following cells will contain
+  // other fields from the result, in this order.
+  readonly fields: string[];
 }
 
 export class Xooxle {
+  private readonly data: Candidate[];
+  private readonly metadata: _Metadata;
   private debounceTimeout: ReturnType<typeof setTimeout> | null = null;
   private currentAbortController: AbortController | null = null;
+
+  /**
+   * @param index: JSON index object.
+   * @param form: Form containing search elements.
+   * @param tableID: ID of the <table> element that will be used to populate
+   * the results. NOTE: The table must have a <tbody> child.
+   * @param collapsibleID: ID of the element that gets collapsed to hide the
+   * results table. Xooxle will adjust the height of the element as search
+   * results get generated.
+   * @param hrefFmt: a format string for generating a URL to this result's
+   * page. The HREF will be generated based on the KEY field of the candidate
+   * by substituting the string `{KEY}`.
+   * If absent, no HREF will be generated.
+   */
   constructor(
-    private readonly index: Index,
-    private readonly form: Form
+    index: _Index,
+    private readonly form: Form,
+    private readonly hrefFmt?: string
   ) {
-    // Make the page responsive to user input.
-    this.form.searchBox.addEventListener(
-      'input',
-      this.handleSearchQuery.bind(this, 100)
+    this.data = index.data.map(
+      (record) => new Candidate(record, index.metadata.fields)
     );
+    this.metadata = index.metadata;
+
+    // Make the page responsive to user input.
+    this.form.searchBox.addEventListener('input', this.search.bind(this, 100));
     this.form.fullWordCheckbox.addEventListener(
       'click',
-      this.handleSearchQuery.bind(this, 0)
+      this.search.bind(this, 0)
     );
     this.form.regexCheckbox.addEventListener(
       'click',
-      this.handleSearchQuery.bind(this, 0)
+      this.search.bind(this, 0)
     );
 
-    this.handleSearchQuery(0);
+    // Handle the search query once upon loading.
+    this.search(0);
+    // Finally, focus on the form, so the user can search right away.
     this.form.searchBox.focus();
   }
 
-  handleSearchQuery(timeout: number) {
+  search(timeout: number) {
     if (this.debounceTimeout) {
       clearTimeout(this.debounceTimeout);
     }
     this.debounceTimeout = setTimeout(() => {
       // Call the async function after the timeout.
       // Use void to ignore the returned promise.
-      void this.search();
+      void this.searchAux();
       this.form.populateParams();
     }, timeout);
   }
 
-  async search() {
-    logger.time('search');
+  async searchAux() {
     if (this.currentAbortController) {
       this.currentAbortController.abort();
     }
@@ -650,9 +618,8 @@ export class Xooxle {
     const abortController: AbortController = new AbortController();
     this.currentAbortController = abortController;
 
-    this.index.clear();
+    this.form.clear();
 
-    this.form.clearMessage();
     const expression: string = this.form.queryExpression();
     if (!expression) {
       return;
@@ -660,7 +627,7 @@ export class Xooxle {
 
     try {
       const regex = new RegExp(expression, 'iug'); // Case-insensitive and Unicode-aware.
-      await this.index.search(regex, abortController);
+      await this.searchAuxAux(regex, abortController);
     } catch (err) {
       if (err instanceof SyntaxError) {
         this.form.message('Invalid regular expression!');
@@ -668,7 +635,77 @@ export class Xooxle {
         this.form.message('Internal error! Please send us an email!');
       }
     }
+  }
 
-    logger.timeEnd('search');
+  async searchAuxAux(regex: RegExp, abortController: AbortController) {
+    let count = 0;
+    // columnSentinels is a set of hidden table rows that represent sentinels
+    // (anchors / break points) in the results table.
+    //
+    // The sentinels are used to divide the table into sections.
+    // Matching results will be added right on top of the sentinels, so that
+    // each sentinel represents the (hidden) bottom row of a section.
+    // Results with a (first) match in their n^th column will be added on top of
+    // the n^th sentinel. (By first match, we mean that a result containing a
+    // match in the 1st and 2nd column, for example, will be added on top of the
+    // 1st, not the 2nd, sentinel.)
+    // We do so based on the assumption that the earlier columns contain more
+    // relevant data. So a result with a match in the 1st column is likely more
+    // interesting to the user than a result with a match in the 2nd column,
+    // so it should show first.
+    //
+    // This allows us to achieve some form of result sorting, without actually
+    // having to retrieve all results, sort them, and then render them. We can
+    // start showing results immediately after one match, thus maintaining
+    // Xooxle's high responsiveness and speed.
+    //
+    // We also insert rows in the table, without displacing or recreating the
+    // other rows, thus reducing jitter.
+    // We use the sentinels as bottoms for the sections, rather than tops,
+    // because we want results to expand downwards rather than upwards, to
+    // avoid jitter at the top of the table, which is the area that the user
+    // will be looking at.
+    const columnSentinels: Element[] = this.metadata.fields.map(() => {
+      const tr = document.createElement('tr');
+      tr.style.display = 'none';
+      this.form.result(tr);
+      return tr;
+    });
+
+    for (const res of this.data) {
+      const result: SearchResult = res.search(regex);
+
+      if (!result.match) {
+        continue;
+      }
+
+      ++count;
+
+      // Create a new row for the table
+      const row = result.row(this.hrefFmt);
+
+      if (abortController.signal.aborted) {
+        return;
+      }
+
+      columnSentinels[result.firstMatchField()]!.insertAdjacentElement(
+        'beforebegin',
+        row
+      );
+
+      // Expand the results table to accommodate the recently added results.
+      this.form.expand();
+
+      if (count % RESULTS_TO_UPDATE_DISPLAY == 0) {
+        await yieldToBrowser();
+      }
+    }
+
+    let i = 0;
+    [...this.form.tbody.getElementsByClassName(CLS.COUNTER)].forEach(
+      (counter) => {
+        counter.innerHTML = `${(++i).toString()} / ${count.toString()}`;
+      }
+    );
   }
 }

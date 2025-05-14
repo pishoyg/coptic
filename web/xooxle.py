@@ -76,6 +76,7 @@
 
 import os
 import re
+import typing
 from collections.abc import Generator, Iterable, Iterator
 from itertools import groupby
 from typing import Callable
@@ -126,7 +127,11 @@ SPACE_ELEMENTS_DEFAULT = {
 
 
 class selector:
-    def __init__(self, kwargs: dict, force: bool = True) -> None:
+    def __init__(
+        self,
+        kwargs: dict[str, typing.Any],
+        force: bool = True,
+    ) -> None:
         self._kwargs = kwargs
         self._force = force
 
@@ -203,7 +208,7 @@ class capture:
         tag = self._selector.select(soup)
         if not tag:
             return ""
-        tag.extract()
+        _ = tag.extract()
         return self.get_simplified_html(tag)
 
     def get_simplified_html(self, tag: bs4.Tag) -> str:
@@ -368,7 +373,7 @@ class cleaner:
             prev = match.group(1)
             del stack_top
             if cur == prev:
-                stack.pop()
+                _ = stack.pop()
                 continue
             stack.append(token)
         return stack
@@ -476,7 +481,7 @@ class index:
         # Extract all unwanted content.
         for selector in self._extract:
             for element in selector.find_all(entry):
-                element.extract()
+                _ = element.extract()
 
         # Construct the entry for this file.
         if isinstance(self._input, str):
@@ -500,12 +505,14 @@ class index:
             )
         json = {
             "data": list(data),
-            "params": {
-                "fields": [
-                    {"name": c._name, "units": bool(c._unit_tags)}
-                    for c in self._captures
-                ],
+            "metadata": {
+                "fields": [c._name for c in self._captures],
             },
         }
 
+        self.validate(json)
         utils.write(utils.json_dumps(json), self._output)
+
+    def validate(self, json: dict[str, typing.Any]) -> None:
+        for entry in json["data"]:
+            assert set(entry.keys()) == {KEY} | set(json["metadata"]["fields"])

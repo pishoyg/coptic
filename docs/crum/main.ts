@@ -43,34 +43,32 @@ function stopPropagation(event: KeyboardEvent) {
   event.stopPropagation();
 }
 
-async function main() {
-  const form = new xooxle.Form({
-    searchBoxID: SEARCH_BOX_ID,
-    fullWordCheckboxID: FULL_WORD_CHECKBOX_ID,
-    regexCheckboxID: REGEX_CHECKBOX_ID,
-    messageBoxID: MESSAGE_BOX_ID,
-  });
-
+async function main(): Promise<void> {
   // Prevent other elements in the page from picking up key events on the
   // search box.
-  form.searchBox.addEventListener('keyup', stopPropagation);
-  form.searchBox.addEventListener('keydown', stopPropagation);
-  form.searchBox.addEventListener('keypress', stopPropagation);
+  const searchBox = document.getElementById(SEARCH_BOX_ID)!;
+  searchBox.addEventListener('keyup', stopPropagation);
+  searchBox.addEventListener('keydown', stopPropagation);
+  searchBox.addEventListener('keypress', stopPropagation);
 
+  // Initialize searchers.
   await Promise.all(
-    XOOXLES.map(async (x) => {
-      const raw = await fetch(x.indexURL);
+    XOOXLES.map(async (xoox) => {
+      const raw = await fetch(xoox.indexURL);
       const json = (await raw.json()) as xooxle._Index;
-      const index = new xooxle.Index(
-        json,
-        x.tableID,
-        x.collapsibleID,
-        x.hrefFmt
-      );
-      return new xooxle.Xooxle(index, form);
+      const form = new xooxle.Form({
+        searchBoxID: SEARCH_BOX_ID,
+        fullWordCheckboxID: FULL_WORD_CHECKBOX_ID,
+        regexCheckboxID: REGEX_CHECKBOX_ID,
+        messageBoxID: MESSAGE_BOX_ID,
+        resultsTableID: xoox.tableID,
+        collapsibleID: xoox.collapsibleID,
+      });
+      new xooxle.Xooxle(json, form, xoox.hrefFmt);
     })
   );
 
+  // Initialize collapsible elements.
   collapse.addListeners(true);
 }
 
