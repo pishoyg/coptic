@@ -1,5 +1,13 @@
 ---
 # See https://pre-commit.com for more information
+
+# NOTE: Some hooks, which are too difficult to appease, operate (hopefully
+# temporarily) in warning mode, producing warning messages, while still exiting
+# with a zero status code. For those, make sure the `verbose` flag is set, so
+# the messages will be actually printed.
+# You may as well choose to run them close to the bottom of the list, to
+# increase their visibility.
+
 # NOTE: pre-commit is unable to propagate environment variables on its own.
 # Generally, shell scripts invoked from pre-commit, and which depend on
 # environment variables, should source the.env file.
@@ -94,6 +102,7 @@ repos:
         files: \.(js|jsx|mjs|cjs|ts|tsx|mts|cts)$
         types: [file]
         entry: npx eslint
+        verbose: true
 
   # CSS
   - repo: local
