@@ -43,10 +43,11 @@ export default tseslint.config(
         },
       ],
       'prettier/prettier': 'error',
-      'jsdoc/check-alignment': 'warn',
-      'jsdoc/check-param-names': 'warn',
-      'jsdoc/check-tag-names': 'warn',
-      'jsdoc/require-param': 'warn',
+      'jsdoc/check-alignment': 'error',
+      'jsdoc/check-param-names': 'error',
+      'jsdoc/check-tag-names': 'error',
+      'jsdoc/require-param': 'error',
+      // TODO: Change to 'error' if appropriate.
       'jsdoc/require-returns': 'warn',
     },
     languageOptions: {
@@ -62,6 +63,22 @@ export default tseslint.config(
         INDEX: true,
         INDEX_INDEX: true,
       },
+    },
+  },
+  {
+    files: ['**/*.ts', '**/*.tsx', '**/*.cts', '**/*.mts'],
+    ...eslintPluginJsdoc.configs['flat/recommended-typescript'],
+    rules: {
+      'jsdoc/require-jsdoc': [
+        'error',
+        {
+          require: {
+            FunctionDeclaration: true,
+            MethodDefinition: true,
+            ClassDeclaration: true,
+          },
+        },
+      ],
     },
   },
   {
