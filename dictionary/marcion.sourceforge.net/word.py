@@ -126,6 +126,7 @@ class structured_word:
             return [spelling]
         assert cnt_l in [1, 2]  # In the vast majority of cases, it's 1.
         if spelling[0] == "(" and spelling[-1] == ")":
+            assert cnt_l == 1
             assert len(spelling) > 3
             # TODO: Handle this case as a detached type or an annotation, in
             # order to enable normalization.
