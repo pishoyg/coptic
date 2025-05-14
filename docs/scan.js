@@ -27,10 +27,17 @@ const ZOOM_FACTOR = 0.015;
 // wrapper, to allow you to conveniently compare words lexicographically.
 // TODO: (#411) This currently only supports Coptic, but we will soon build
 // Greek and Arabic indexes as well. Make the class more versatile!
+/**
+ *
+ */
 export class Word {
   static mapping = Word.buildMapping();
   mapped;
   word;
+  /**
+   *
+   * @param word
+   */
   constructor(word) {
     this.word = word.toLowerCase();
     logger.assass(!!this.word, 'constructing a word with the empty string!');
@@ -41,17 +48,32 @@ export class Word {
     );
     this.mapped = Word.map(this.word);
   }
+  /**
+   *
+   * @param word
+   */
   static isCopticWord(word) {
     return [...word].every((c) => c in Word.mapping);
   }
+  /**
+   *
+   * @param other
+   */
   leq(other) {
     return this.mapped <= other.mapped;
   }
+  /**
+   *
+   * @param word
+   */
   static map(word) {
     return Array.from(word)
       .map((a) => Word.mapping[a] ?? a)
       .join();
   }
+  /**
+   *
+   */
   static buildMapping() {
     return COPTIC_LETTERS.map((range) => Word.between(range[0], range[1]))
       .flat()
@@ -60,6 +82,11 @@ export class Word {
         return acc;
       }, {});
   }
+  /**
+   *
+   * @param a
+   * @param b
+   */
   static between(a, b) {
     const arr = [];
     for (
@@ -72,9 +99,17 @@ export class Word {
     return arr;
   }
 }
+/**
+ *
+ */
 export class Index {
   WordType;
   pages;
+  /**
+   *
+   * @param index
+   * @param WordType
+   */
   constructor(index, WordType) {
     this.WordType = WordType;
     const lines = index.trim().split('\n');
@@ -96,17 +131,29 @@ export class Index {
         };
       });
   }
+  /**
+   *
+   * @param str
+   */
   static toColumns(str) {
     return str
       .split('\t')
       .slice(0, WANT_COLUMNS.length)
       .map((l) => l.trim());
   }
+  /**
+   *
+   * @param str
+   */
   static parseInt(str) {
     const num = parseInt(str);
     logger.assass(!isNaN(num), 'unable to parse page number', num);
     return num;
   }
+  /**
+   *
+   * @param query
+   */
   getPage(query) {
     if (!query) {
       return undefined;
@@ -134,6 +181,10 @@ export class Index {
     }
     return this.pages[right].page;
   }
+  /**
+   *
+   * @param strict
+   */
   validate(strict = true) {
     const error = strict ? logger.fatal : logger.error;
     for (let i = 0; i < this.pages.length; i++) {
@@ -172,12 +223,23 @@ export class Index {
     }
   }
 }
+/**
+ *
+ */
 export class Form {
   image;
   nextButton;
   prevButton;
   resetButton;
   searchBox;
+  /**
+   *
+   * @param image
+   * @param nextButton
+   * @param prevButton
+   * @param resetButton
+   * @param searchBox
+   */
   constructor(image, nextButton, prevButton, resetButton, searchBox) {
     this.image = image;
     this.nextButton = nextButton;
@@ -185,6 +247,9 @@ export class Form {
     this.resetButton = resetButton;
     this.searchBox = searchBox;
   }
+  /**
+   *
+   */
   static default() {
     return new Form(
       document.getElementById('scan'),
@@ -195,6 +260,9 @@ export class Form {
     );
   }
 }
+/**
+ *
+ */
 export class Scroller {
   offset;
   ext;
@@ -204,6 +272,19 @@ export class Scroller {
   landingPage;
   // TODO: The parameters are unnecessarily complicated. Consider getting rid of
   // offsets and variable extensions altogether. They are complicating things.
+  /**
+   *
+   * @param start
+   * @param end
+   * @param offset
+   * @param ext
+   * @param form
+   * @param form.image
+   * @param form.nextButton
+   * @param form.prevButton
+   * @param form.resetButton
+   * @param landingPage
+   */
   constructor(
     // Integer basename of the first image file.
     start,
@@ -231,6 +312,9 @@ export class Scroller {
     this.initEventListeners();
     this.update(this.getPageParam());
   }
+  /**
+   *
+   */
   getPageParam() {
     const urlParams = new URLSearchParams(window.location.search);
     let page = urlParams.get('page');
@@ -246,6 +330,10 @@ export class Scroller {
       return this.landingPage;
     }
   }
+  /**
+   *
+   * @param page
+   */
   update(page) {
     if (page < this.start) {
       page = this.start;
@@ -257,11 +345,19 @@ export class Scroller {
     this.updateDisplay(page);
     this.form.resetButton.click();
   }
+  /**
+   *
+   * @param newPage
+   */
   updatePageParam(newPage) {
     const url = new URL(window.location.href);
     url.searchParams.set('page', newPage.toString());
     window.history.replaceState({}, '', url.toString());
   }
+  /**
+   *
+   * @param page
+   */
   updateDisplay(page) {
     const stem = page + this.offset;
     this.form.image.src = `${stem.toString()}.${typeof this.ext === 'function' ? this.ext(stem) : this.ext}`;
@@ -277,12 +373,22 @@ export class Scroller {
       this.form.nextButton.classList.remove('disabled');
     }
   }
+  /**
+   *
+   */
   incrementPage() {
     this.update(this.getPageParam() + 1);
   }
+  /**
+   *
+   */
   decrementPage() {
     this.update(this.getPageParam() - 1);
   }
+  /**
+   *
+   * @param event
+   */
   handleKeyDown(event) {
     if (event.code === 'KeyN') {
       this.incrementPage();
@@ -290,6 +396,9 @@ export class Scroller {
       this.decrementPage();
     }
   }
+  /**
+   *
+   */
   initEventListeners() {
     document.addEventListener('keydown', this.handleKeyDown.bind(this));
     this.form.nextButton.addEventListener(
@@ -302,6 +411,9 @@ export class Scroller {
     );
   }
 }
+/**
+ *
+ */
 export class ZoomerDragger {
   form;
   scale = 1;
@@ -310,10 +422,19 @@ export class ZoomerDragger {
   originX = 0;
   originY = 0;
   isDragging = false;
+  /**
+   *
+   * @param form
+   * @param form.image
+   * @param form.resetButton
+   */
   constructor(form) {
     this.form = form;
     this.initEventListeners();
   }
+  /**
+   *
+   */
   initEventListeners() {
     document.addEventListener('wheel', this.handleZoom.bind(this), {
       passive: false,
@@ -327,6 +448,10 @@ export class ZoomerDragger {
     this.form.resetButton.addEventListener('click', this.reset.bind(this));
     document.addEventListener('keydown', this.handleKeyDown.bind(this));
   }
+  /**
+   *
+   * @param e
+   */
   handleZoom(e) {
     e.preventDefault();
     e.stopPropagation();
@@ -337,6 +462,10 @@ export class ZoomerDragger {
     }
     this.updateTransform();
   }
+  /**
+   *
+   * @param e
+   */
   startDragging(e) {
     e.preventDefault();
     e.stopPropagation();
@@ -345,6 +474,10 @@ export class ZoomerDragger {
     this.startY = e.clientY - this.originY;
     this.form.image.style.cursor = 'grabbing';
   }
+  /**
+   *
+   * @param e
+   */
   dragImage(e) {
     e.preventDefault();
     e.stopPropagation();
@@ -355,31 +488,55 @@ export class ZoomerDragger {
     this.originY = e.clientY - this.startY;
     this.updateTransform();
   }
+  /**
+   *
+   * @param e
+   */
   stopDragging(e) {
     e.preventDefault();
     e.stopPropagation();
     this.isDragging = false;
     this.form.image.style.cursor = 'grab';
   }
+  /**
+   *
+   */
   reset() {
     this.scale = 1;
     this.originX = 0;
     this.originY = 0;
     this.updateTransform();
   }
+  /**
+   *
+   */
   updateTransform() {
     this.form.image.style.transform = `scale(${this.scale.toString()}) translate(${this.originX.toString()}px, ${this.originY.toString()}px)`;
   }
+  /**
+   *
+   * @param e
+   */
   handleKeyDown(e) {
     if (e.code === 'KeyR') {
       this.reset();
     }
   }
 }
+/**
+ *
+ */
 export class Dictionary {
   index;
   scroller;
   form;
+  /**
+   *
+   * @param index
+   * @param scroller
+   * @param form
+   * @param form.searchBox
+   */
   constructor(
     // index stores our dictionary index, and will be used to look up pages.
     index,
@@ -393,6 +550,9 @@ export class Dictionary {
     this.form.searchBox.focus();
     this.addListeners();
   }
+  /**
+   *
+   */
   search() {
     const query = this.form.searchBox.value.trim().toLowerCase();
     const page = this.index.getPage(query);
@@ -401,6 +561,9 @@ export class Dictionary {
     }
     this.scroller.update(page);
   }
+  /**
+   *
+   */
   addListeners() {
     // Input in the search box triggers a search.
     this.form.searchBox.addEventListener('input', this.search.bind(this));

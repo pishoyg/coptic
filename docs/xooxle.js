@@ -49,6 +49,9 @@ const UNIT_DELIMITER = '<hr class="match-separator">';
 const LONG_UNITS_FIELD_MESSAGE = `<br><span class="${'view-for-more' /* CLS.VIEW_FOR_MORE */}">... (<em>view</em> for full context)</span>`;
 // Form represents a search form containing the HTML elements that the user
 // interacts with to initiate and control search.
+/**
+ *
+ */
 export class Form {
   // Input fields:
   searchBox;
@@ -62,6 +65,10 @@ export class Form {
   static query = 'query';
   static full = 'full';
   static regex = 'regex';
+  /**
+   *
+   * @param form
+   */
   constructor(form) {
     this.searchBox = document.getElementById(form.searchBoxID);
     this.fullWordCheckbox = document.getElementById(form.fullWordCheckboxID);
@@ -73,6 +80,9 @@ export class Form {
     this.collapsible = document.getElementById(form.collapsibleID);
     this.populateFromParams();
   }
+  /**
+   *
+   */
   queryExpression() {
     let query = this.searchBox.value;
     if (!query) {
@@ -91,6 +101,9 @@ export class Form {
     }
     return query;
   }
+  /**
+   *
+   */
   populateFromParams() {
     // Populate form values using query parameters.
     const url = new URL(window.location.href);
@@ -98,6 +111,9 @@ export class Form {
     this.fullWordCheckbox.checked = url.searchParams.get(Form.full) === 'true';
     this.regexCheckbox.checked = url.searchParams.get(Form.regex) === 'true';
   }
+  /**
+   *
+   */
   populateParams() {
     // Populate query parameters using form values.
     const url = new URL(window.location.href);
@@ -118,64 +134,114 @@ export class Form {
     }
     window.history.replaceState('', '', url.toString());
   }
+  /**
+   *
+   * @param row
+   */
   result(row) {
     this.tbody.appendChild(row);
   }
+  /**
+   *
+   */
   expand() {
     if (this.collapsible.style.maxHeight) {
       this.collapsible.style.maxHeight =
         this.collapsible.scrollHeight.toString() + 'px';
     }
   }
+  /**
+   *
+   * @param message
+   */
   message(message) {
     const el = document.createElement('div');
     el.classList.add('error' /* CLS.ERROR */);
     el.textContent = message;
     this.messageBox.replaceChildren(el);
   }
+  /**
+   *
+   */
   clear() {
     this.tbody.replaceChildren();
     this.messageBox.replaceChildren();
   }
 }
+/**
+ *
+ */
 async function yieldToBrowser() {
   return new Promise((resolve) => setTimeout(resolve, 0));
 }
 // Candidate represents one search candidate from the index. In the results
 // display, each candidate occupies its own row.
+/**
+ *
+ */
 class Candidate {
   // key bears the candidate key.
   key;
   fields;
+  /**
+   *
+   * @param record
+   * @param fields
+   */
   constructor(record, fields) {
     this.key = record[KEY];
     this.fields = fields.map((name) => new Field(name, record[name]));
   }
+  /**
+   *
+   * @param regex
+   */
   search(regex) {
     return new SearchResult(this, regex);
   }
 }
 // SearchResult represents the search result of one candidate from the index.
+/**
+ *
+ */
 class SearchResult {
   candidate;
   results;
+  /**
+   *
+   * @param candidate
+   * @param regex
+   */
   constructor(candidate, regex) {
     this.candidate = candidate;
     this.results = this.candidate.fields.map(
       (field) => new FieldSearchResult(field, regex)
     );
   }
+  /**
+   *
+   */
   get key() {
     return this.candidate.key;
   }
+  /**
+   *
+   */
   get match() {
     return this.results.some((result) => result.match);
   }
+  /**
+   *
+   */
   fragmentWord() {
     return this.results.find((r) => r.fragmentWord())?.fragmentWord();
   }
   // viewCell constructs the first cell in the row for this result, bearing the
   // anchor to the result (if available).
+  /**
+   *
+   * @param hrefFmt
+   */
   viewCell(hrefFmt) {
     const viewCell = document.createElement('td');
     viewCell.classList.add('view' /* CLS.VIEW */);
@@ -208,6 +274,10 @@ class SearchResult {
   // row constructs the row in the results table that corresponds to this
   // result. This consists of the cell bearing the key and anchor, along with
   // the other cells containing the highlighted search fields.
+  /**
+   *
+   * @param hrefFmt
+   */
   row(hrefFmt) {
     const row = document.createElement('tr');
     row.appendChild(this.viewCell(hrefFmt));
@@ -219,38 +289,70 @@ class SearchResult {
     return row;
   }
   // firstMatchField returns the index of the first field containing a match.
+  /**
+   *
+   */
   firstMatchField() {
     return this.results.findIndex((result) => result.match);
   }
 }
 // Field represents a search field within a candidate. In the display, while
 // candidate occupies a table row, each field occupies a cell within that row.
+/**
+ *
+ */
 class Field {
   name;
   units;
+  /**
+   *
+   * @param name
+   * @param html
+   */
   constructor(name, html) {
     this.name = name;
     this.units = html.split(UNIT_DELIMITER).map((html) => new Unit(html));
   }
+  /**
+   *
+   * @param regex
+   */
   search(regex) {
     return new FieldSearchResult(this, regex);
   }
 }
 // FieldSearchResult represents the search result of one field.
+/**
+ *
+ */
 class FieldSearchResult {
   field;
   results;
+  /**
+   *
+   * @param field
+   * @param regex
+   */
   constructor(field, regex) {
     this.field = field;
     this.results = field.units.map((unit) => unit.search(regex));
   }
+  /**
+   *
+   */
   get units() {
     return this.field.units;
   }
+  /**
+   *
+   */
   get match() {
     return this.results.some((result) => result.match);
   }
   // highlight returns the field's HTML content, with matches highlighted.
+  /**
+   *
+   */
   highlight() {
     let results = this.results;
     if (!this.match) {
@@ -272,6 +374,9 @@ class FieldSearchResult {
   }
   // fragmentWord returns a word that can be used as a fragment in the URL to
   // highlight the first matching word.
+  /**
+   *
+   */
   fragmentWord() {
     return this.results.find((r) => r.match)?.fragmentWord();
   }
@@ -280,45 +385,88 @@ class FieldSearchResult {
 // humongous fields can be broken up into units. Units are searched separately;
 // and, if there are too many, won't all be included in the display during a
 // search.
+/**
+ *
+ */
 class Unit {
   html;
   lines;
+  /**
+   *
+   * @param html
+   */
   constructor(html) {
     this.html = html;
     this.lines = html.split(LINE_BREAK).map((l) => new Line(l));
   }
+  /**
+   *
+   * @param regex
+   */
   search(regex) {
     return new UnitSearchResult(this, regex);
   }
 }
 // UnitSearchResult represents the search result of one unit.
+/**
+ *
+ */
 class UnitSearchResult {
   unit;
   results;
+  /**
+   *
+   * @param unit
+   * @param regex
+   */
   constructor(unit, regex) {
     this.unit = unit;
     this.results = this.unit.lines.map((l) => l.search(regex));
   }
+  /**
+   *
+   */
   get match() {
     return this.results.some((r) => r.match);
   }
+  /**
+   *
+   */
   highlight() {
     return this.results.map((r) => r.highlight()).join(LINE_BREAK);
   }
+  /**
+   *
+   */
   fragmentWord() {
     return this.results.find((r) => r.match)?.fragmentWord();
   }
 }
+/**
+ *
+ */
 class Line {
   html;
   text;
+  /**
+   *
+   * @param html
+   */
   constructor(html) {
     this.html = html;
     this.text = html.replaceAll(TAG_REGEX, '');
   }
+  /**
+   *
+   * @param regex
+   */
   search(regex) {
     return new LineSearchResult(this, regex);
   }
+  /**
+   *
+   * @param regex
+   */
   matches(regex) {
     return (
       [...this.text.matchAll(regex)]
@@ -332,24 +480,45 @@ class Line {
     );
   }
 }
+/**
+ *
+ */
 class LineSearchResult {
   line;
   static opening = `<span class="${'match' /* CLS.MATCH */}">`;
   static closing = '</span>';
   matches;
+  /**
+   *
+   * @param line
+   * @param regex
+   */
   constructor(line, regex) {
     this.line = line;
     this.matches = line.matches(regex);
   }
+  /**
+   *
+   */
   get text() {
     return this.line.text;
   }
+  /**
+   *
+   */
   get html() {
     return this.line.html;
   }
+  /**
+   *
+   */
   get match() {
     return !!this.matches.length;
   }
+  /**
+   *
+   * @param char
+   */
   static isWordChar(char) {
     // Unicode-aware boundary expansion
     if (!char) {
@@ -357,6 +526,9 @@ class LineSearchResult {
     }
     return /\p{L}|\p{N}/u.test(char) || CHROME_WORD_CHARS.has(char);
   }
+  /**
+   *
+   */
   fragmentWord() {
     /* Expand the match left and right such that it contains full words, for
      * text fragment purposes.
@@ -386,6 +558,9 @@ class LineSearchResult {
     // Return the expanded substring.
     return this.text.substring(start, end);
   }
+  /**
+   *
+   */
   highlight() {
     const builder = [];
     // i represents the index in the HTML.
@@ -432,6 +607,9 @@ class LineSearchResult {
     return builder.join('');
   }
 }
+/**
+ *
+ */
 export class Xooxle {
   form;
   hrefFmt;
@@ -469,6 +647,10 @@ export class Xooxle {
     // Finally, focus on the form, so the user can search right away.
     this.form.searchBox.focus();
   }
+  /**
+   *
+   * @param timeout
+   */
   search(timeout) {
     if (this.debounceTimeout) {
       clearTimeout(this.debounceTimeout);
@@ -480,6 +662,9 @@ export class Xooxle {
       this.form.populateParams();
     }, timeout);
   }
+  /**
+   *
+   */
   async searchAux() {
     if (this.currentAbortController) {
       this.currentAbortController.abort();
@@ -502,6 +687,11 @@ export class Xooxle {
       }
     }
   }
+  /**
+   *
+   * @param regex
+   * @param abortController
+   */
   async searchAuxAux(regex, abortController) {
     let count = 0;
     // columnSentinels is a set of hidden table rows that represent sentinels

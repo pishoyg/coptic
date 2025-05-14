@@ -8,11 +8,18 @@ const PNG_RANGES = [
   [11, 20],
   [865, 973],
 ];
+/**
+ *
+ * @param page
+ */
 function ext(page) {
   return PNG_RANGES.some((range) => page >= range[0] && page <= range[1])
     ? 'png'
     : 'jpeg';
 }
+/**
+ *
+ */
 function main() {
   const form = scan.Form.default();
   new scan.Scroller(MIN_PAGE_NUM, MAX_PAGE_NUM, OFFSET, ext, form, LANDING);

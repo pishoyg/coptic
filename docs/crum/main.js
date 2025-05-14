@@ -28,9 +28,16 @@ const XOOXLES = [
     collapsibleID: 'copticsite-collapsible',
   },
 ];
+/**
+ *
+ * @param event
+ */
 function stopPropagation(event) {
   event.stopPropagation();
 }
+/**
+ *
+ */
 async function main() {
   // Prevent other elements in the page from picking up key events on the
   // search box.

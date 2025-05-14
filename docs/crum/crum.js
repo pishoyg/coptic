@@ -13,18 +13,33 @@ const GREEK_LOOKUP_URL_PREFIX = 'https://logeion.uchicago.edu/';
 const dialectCheckboxes = Array.from(
   document.querySelectorAll('.dialect-checkbox')
 );
+/**
+ *
+ */
 function xooxle() {
   return typeof XOOXLE !== 'undefined' && XOOXLE;
 }
+/**
+ *
+ */
 function note() {
   return typeof NOTE !== 'undefined' && NOTE;
 }
+/**
+ *
+ */
 function anki() {
   return typeof ANKI !== 'undefined' && ANKI;
 }
+/**
+ *
+ */
 function index() {
   return typeof INDEX !== 'undefined' && INDEX;
 }
+/**
+ *
+ */
 function index_index() {
   return typeof INDEX_INDEX !== 'undefined' && INDEX_INDEX;
 }
@@ -178,9 +193,16 @@ const DIALECT_SINGLE_CHAR = {
   b: 'Fb',
   k: 'Ak',
 };
+/**
+ *
+ * @param classes
+ */
 function classQuery(classes) {
   return classes.map((c) => `.${c}`).join(', ');
 }
+/**
+ *
+ */
 class Highlighter {
   // Sheets are problematic on Anki, for some reason! We update the elements
   // individually instead!
@@ -191,6 +213,9 @@ class Highlighter {
   noDevRuleIndex;
   static BRIGHT = '1.0';
   static DIM = '0.3';
+  /**
+   *
+   */
   constructor() {
     // NOTE: Reading CSS rules often fails locally due to CORS. This is why we
     // use the `try` block here. In case it fails, we fall back to Anki mode,
@@ -213,10 +238,16 @@ class Highlighter {
       this.noDevRuleIndex = 0;
     }
   }
+  /**
+   *
+   */
   update() {
     this.updateDialects();
     this.updateDev();
   }
+  /**
+   *
+   */
   updateDialects() {
     // We have three sources of dialect highlighting:
     // - Lexicon checkboxes
@@ -260,6 +291,9 @@ class Highlighter {
       checkbox.checked = active.includes(checkbox.name);
     });
   }
+  /**
+   *
+   */
   updateDev() {
     const display = localStorage.getItem('dev') === 'true' ? 'block' : 'none';
     const noDisplay = display === 'block' ? 'none' : 'block';
@@ -280,6 +314,11 @@ class Highlighter {
       }
     );
   }
+  /**
+   *
+   * @param index
+   * @param rule
+   */
   addOrReplaceRule(index, rule) {
     if (index < this.sheet.cssRules.length) {
       this.sheet.deleteRule(index);
@@ -293,6 +332,15 @@ class Highlighter {
   // However, if you're updating elements, that's not guaranteed. If this is the
   // case, you should pass a `reset_func` that resets the elements to the
   // default style.
+  /**
+   *
+   * @param rule_index
+   * @param query
+   * @param style
+   * @param func
+   * @param reset_query
+   * @param reset_func
+   */
   updateSheetOrElements(
     rule_index,
     query,
@@ -313,6 +361,11 @@ class Highlighter {
 }
 // TODO: This is a bad place to define a global variable.
 const highlighter = new Highlighter();
+/**
+ *
+ * @param url
+ * @param external
+ */
 function window_open(url, external = true) {
   if (!url) {
     return;
@@ -323,6 +376,12 @@ function window_open(url, external = true) {
   }
   window.open(url, '_self');
 }
+/**
+ *
+ * @param el
+ * @param tag
+ * @param attrs
+ */
 function moveElement(el, tag, attrs) {
   const copy = document.createElement(tag);
   copy.innerHTML = el.innerHTML;
@@ -334,12 +393,21 @@ function moveElement(el, tag, attrs) {
   });
   el.parentNode.replaceChild(copy, el);
 }
+/**
+ *
+ * @param el
+ * @param target
+ */
 function makeSpanLinkToAnchor(el, target) {
   if (el.tagName !== 'SPAN') {
     console.warn(`Converting ${el.tagName} tag to <a> tag!`);
   }
   moveElement(el, 'a', { href: target });
 }
+/**
+ *
+ * @param pageNumber
+ */
 function chopColumn(pageNumber) {
   const lastChar = pageNumber.slice(pageNumber.length - 1);
   if (lastChar === 'a' || lastChar === 'b') {
@@ -348,12 +416,19 @@ function chopColumn(pageNumber) {
   return pageNumber;
 }
 // Handle 'dialect' class.
+/**
+ *
+ */
 function activeDialects() {
   const d = localStorage.getItem('d');
   // NOTE: ''.split(',') returns [''], which is not what we want!
   // The empty string requires special handling.
   return d === '' ? [] : (d?.split(',') ?? null);
 }
+/**
+ *
+ * @param toggle
+ */
 function toggleDialect(toggle) {
   const active = new Set(activeDialects());
   const has = active.has(toggle);
@@ -374,6 +449,9 @@ function toggleDialect(toggle) {
   }
 }
 // Handle 'developer' and 'dev' classes.
+/**
+ *
+ */
 function toggleDev() {
   localStorage.setItem(
     'dev',
@@ -381,6 +459,11 @@ function toggleDev() {
   );
 }
 // Handle 'reset' class.
+/**
+ *
+ * @param dialectCheckboxes
+ * @param highlighter
+ */
 function reset(dialectCheckboxes, highlighter) {
   dialectCheckboxes.forEach((box) => {
     box.checked = false;
@@ -421,22 +504,47 @@ function reset(dialectCheckboxes, highlighter) {
   }
   window.location.reload();
 }
+/**
+ *
+ * @param rel
+ */
 function getLinkHrefByRel(rel) {
   const linkElement = document.querySelector(`link[rel="${rel}"]`);
   return linkElement instanceof HTMLLinkElement ? linkElement.href : null;
 }
+/**
+ *
+ * @param id
+ */
 function scroll(id) {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 }
+/**
+ *
+ * @param text
+ */
 function yank(text) {
   void navigator.clipboard.writeText(text);
 }
+/**
+ *
+ * @param path
+ */
 function stem(path) {
   return path.split('/').pop().replace('.html', '');
 }
+/**
+ *
+ * @param elem
+ */
 function height(elem) {
   return elem.getBoundingClientRect().top + window.scrollY;
 }
+/**
+ *
+ * @param query
+ * @param target
+ */
 function findNextElement(query, target) {
   const elements = Array.from(document.querySelectorAll(query));
   elements.sort((a, b) =>
@@ -451,6 +559,11 @@ function findNextElement(query, target) {
         : height(element) >= currentScrollY - 1
   );
 }
+/**
+ *
+ * @param query
+ * @param target
+ */
 function scrollToNextElement(query, target) {
   const elem = findNextElement(query, target);
   if (!elem) {
@@ -459,13 +572,24 @@ function scrollToNextElement(query, target) {
   elem.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 // Section represents a group of related shortcuts.
+/**
+ *
+ */
 class Section {
   title;
   shortcuts;
+  /**
+   *
+   * @param title
+   * @param shortcuts
+   */
   constructor(title, shortcuts) {
     this.title = title;
     this.shortcuts = shortcuts;
   }
+  /**
+   *
+   */
   createSection() {
     const div = document.createElement('div');
     const title = document.createElement('h3');
@@ -486,16 +610,26 @@ class Section {
     div.appendChild(table);
     return div;
   }
+  /**
+   *
+   */
   visible() {
     return Object.values(this.shortcuts).some((shortcuts) => {
       return shortcuts.some((s) => s.visible());
     });
   }
+  /**
+   *
+   */
   executable() {
     return Object.values(this.shortcuts).some((shortcuts) => {
       return shortcuts.some((s) => s.executable());
     });
   }
+  /**
+   *
+   * @param event
+   */
   consume(event) {
     return (
       (this.executable() &&
@@ -503,16 +637,28 @@ class Section {
       false
     );
   }
+  /**
+   *
+   * @param key
+   */
   canConsume(key) {
     if (!this.executable()) {
       return [];
     }
     return this.shortcuts[key]?.filter((s) => s.executable()) ?? [];
   }
+  /**
+   *
+   */
   shortcutsRecord() {
     return this.shortcuts;
   }
 }
+/**
+ *
+ * @param char
+ * @param str
+ */
 function highlightFirstOccurrence(char, str) {
   if (str.includes('<')) {
     // This might already have an HTML tag, so we don't risk highlighting it to
@@ -525,10 +671,17 @@ function highlightFirstOccurrence(char, str) {
   }
   return `${str.slice(0, index)}<strong>${str[index]}</strong>${str.slice(index + 1)}`;
 }
+/**
+ *
+ */
 class HelpPanel {
   sections;
   overlay;
   panel;
+  /**
+   *
+   * @param sections
+   */
   constructor(sections) {
     this.sections = sections.filter((s) => s.executable());
     // Create overlay background.
@@ -587,9 +740,17 @@ class HelpPanel {
     this.overlay = overlay;
     this.validate();
   }
+  /**
+   *
+   * @param event
+   */
   consumeAux(event) {
     return this.sections.some((s) => s.consume(event));
   }
+  /**
+   *
+   * @param event
+   */
   consume(event) {
     if (this.consumeAux(event)) {
       return true;
@@ -607,6 +768,10 @@ class HelpPanel {
     Object.defineProperty(event, 'key', { value: key });
     return this.consumeAux(event);
   }
+  /**
+   *
+   * @param visible
+   */
   togglePanel(visible) {
     const target =
       visible !== undefined
@@ -619,6 +784,10 @@ class HelpPanel {
     this.panel.style.display = target;
     this.overlay.style.display = target;
   }
+  /**
+   *
+   * @param event
+   */
   handleClick(event) {
     if (
       this.panel.style.display === 'block' &&
@@ -627,6 +796,9 @@ class HelpPanel {
       this.togglePanel(false);
     }
   }
+  /**
+   *
+   */
   validate() {
     // Validate that no key can trigger two shortcuts!
     const keys = this.sections
@@ -644,23 +816,43 @@ class HelpPanel {
     });
   }
 }
+/**
+ *
+ */
 class Shortcut {
   description;
   available;
   action;
   show;
+  /**
+   *
+   * @param description
+   * @param available
+   * @param action
+   * @param show
+   */
   constructor(description, available, action, show = true) {
     this.description = description;
     this.available = available;
     this.action = action;
     this.show = show;
   }
+  /**
+   *
+   */
   executable() {
     return this.available.some((f) => f());
   }
+  /**
+   *
+   */
   visible() {
     return this.executable() && this.show;
   }
+  /**
+   *
+   * @param event
+   */
   consume(event) {
     if (!this.executable()) {
       return false;
@@ -673,6 +865,10 @@ class Shortcut {
     }
     return true;
   }
+  /**
+   *
+   * @param key
+   */
   row(key) {
     // TODO: Move the styling to CSS.
     const row = document.createElement('tr');
@@ -694,10 +890,21 @@ class Shortcut {
     row.appendChild(valueCell);
     return row;
   }
+  /**
+   *
+   */
   textDescription() {
     return this.description.replace(/<[^>]*>/g, '');
   }
 }
+/**
+ *
+ * @param key
+ * @param name
+ * @param code
+ * @param dictionaries
+ * @param link
+ */
 function makeDialectShortcut(key, name, code, dictionaries, link) {
   code = highlightFirstOccurrence(key, code);
   name = highlightFirstOccurrence(key, name);
@@ -731,6 +938,9 @@ function makeDialectShortcut(key, name, code, dictionaries, link) {
 // - Elements created by the panel logic (such as the `help` footer) were
 //   found to be duplicated on some Anki platforms!
 const panel = anki() ? null : makeHelpPanel();
+/**
+ *
+ */
 function makeHelpPanel() {
   // NOTE: Some (minor) dialects are missing articles. If you find a reference
   // that explains what those dialects are, that would be great.
@@ -1144,12 +1354,28 @@ function makeHelpPanel() {
   ];
   return new HelpPanel(sections);
 }
+/**
+ *
+ * @param id
+ */
 function click(id) {
   document.getElementById(id).click();
 }
+/**
+ *
+ * @param id
+ */
 function focus(id) {
   document.getElementById(id).focus();
 }
+/**
+ *
+ * @param root
+ * @param regex
+ * @param url
+ * @param classes
+ * @param direct_parent_excluded_classes
+ */
 function linkifyText(
   root,
   regex,
@@ -1226,6 +1452,10 @@ function linkifyText(
     node.replaceWith(fragment);
   });
 }
+/**
+ *
+ * @param root
+ */
 function handleCopticLookups(root = document.body) {
   linkifyText(
     root,
@@ -1235,12 +1465,23 @@ function handleCopticLookups(root = document.body) {
     ['type', 'title']
   );
 }
+/**
+ *
+ * @param root
+ */
 function handleGreekLookups(root = document.body) {
   linkifyText(root, GREEK_RE, GREEK_LOOKUP_URL_PREFIX, ['link', 'light']);
 }
+/**
+ *
+ * @param root
+ */
 function handleEnglishLookups(root = document.body) {
   linkifyText(root, ENGLISH_RE, LOOKUP_URL_PREFIX, ['hover-link']);
 }
+/**
+ *
+ */
 function handleNonXooxleOnlyElements() {
   // Handle 'categories' class.
   document.querySelectorAll('.categories').forEach((elem) => {
@@ -1399,6 +1640,9 @@ function handleNonXooxleOnlyElements() {
     handleEnglishLookups(elem);
   });
 }
+/**
+ *
+ */
 function handleXooxleOnlyElements() {
   dialectCheckboxes.forEach((checkbox) => {
     checkbox.addEventListener('click', () => {
@@ -1407,6 +1651,9 @@ function handleXooxleOnlyElements() {
     });
   });
 }
+/**
+ *
+ */
 function handleCommonElements() {
   highlighter.update();
   document.addEventListener('visibilitychange', () => {
@@ -1442,6 +1689,9 @@ function handleCommonElements() {
     };
   });
 }
+/**
+ *
+ */
 function main() {
   if (xooxle()) {
     handleXooxleOnlyElements();

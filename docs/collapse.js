@@ -1,4 +1,8 @@
 // Handle .collapse elements.
+/**
+ *
+ * @param triggerUponLoad
+ */
 export function addListeners(triggerUponLoad = false) {
   document.querySelectorAll('.collapse').forEach((collapse) => {
     collapse.addEventListener('click', () => {

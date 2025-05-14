@@ -13,7 +13,14 @@ const ALL = [COPTIC, ARABIC, GREEK];
 // All words starting with ⲟⲩ are grouped together, under a section in the
 // dictionary between ⲟ and ⲡ.
 // We reimplement sorting for Dawoud!
+/**
+ *
+ */
 export class DawoudWord extends scan.Word {
+  /**
+   *
+   * @param other
+   */
   leq(other) {
     if (DawoudWord.ou(this) === DawoudWord.ou(other)) {
       // Either neither is an ⲟⲩ words, or both are.
@@ -29,13 +36,24 @@ export class DawoudWord extends scan.Word {
     // The ⲟⲩ word is lexicographically larger.
     return !DawoudWord.ou(this);
   }
+  /**
+   *
+   * @param w
+   */
   static o(w) {
     return w.word.startsWith('ⲟ');
   }
+  /**
+   *
+   * @param w
+   */
   static ou(w) {
     return w.word.startsWith('ⲟⲩ');
   }
 }
+/**
+ *
+ */
 async function browserMain() {
   const form = scan.Form.default();
   const scroller = new scan.Scroller(
@@ -52,6 +70,9 @@ async function browserMain() {
   new scan.ZoomerDragger(form);
   new scan.Dictionary(index, scroller, form);
 }
+/**
+ *
+ */
 async function nodeMain() {
   const fs = await import('fs');
   const path = await import('path');
@@ -72,6 +93,9 @@ async function nodeMain() {
     scan.Word
   ).validate(false);
 }
+/**
+ *
+ */
 async function main() {
   if (env.node()) {
     await nodeMain();
