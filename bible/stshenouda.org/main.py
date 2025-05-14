@@ -16,7 +16,7 @@ import utils
 
 JSON: str = "bible/stshenouda.org/data/input/bible.json"
 INPUT_DIR: str = "bible/stshenouda.org/data/raw/"
-# TODO: Include the sources in the output.
+# TODO: (#432) Include the sources in the output.
 SOURCES_DIR: str = "bible/stshenouda.org/data/raw/Sources/"
 COVER: str = "bible/stshenouda.org/data/img/stauros.jpeg"
 
@@ -395,7 +395,7 @@ class Bible:
             yield from book.chapters
 
 
-# TODO: The code needs to be structured in the following way:
+# TODO: (#360) The code needs to be structured in the following way:
 # - The format parameters need to go to a new class, called format, for example.
 # - The write and generate methods should move to their respective types, such
 #   as Bible and Chapter. Those methods should accept a format instance as
