@@ -39,6 +39,7 @@ export class Word {
     this.word = word.toLowerCase();
     logger.assass(!!this.word, 'constructing a word with the empty string!');
     logger.assass(
+      // eslint-disable-next-line @typescript-eslint/no-misused-spread
       [...this.word].every((c) => c in Word.mapping),
       word,
       'contains character that are not in the mapping!'
@@ -47,6 +48,7 @@ export class Word {
   }
 
   static isCopticWord(word: string) {
+    // eslint-disable-next-line @typescript-eslint/no-misused-spread
     return [...word].every((c) => c in Word.mapping);
   }
 

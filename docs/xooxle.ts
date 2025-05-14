@@ -559,14 +559,9 @@ export class Xooxle {
   private currentAbortController: AbortController | null = null;
 
   /**
-   * @param index: JSON index object.
-   * @param form: Form containing search elements.
-   * @param tableID: ID of the <table> element that will be used to populate
-   * the results. NOTE: The table must have a <tbody> child.
-   * @param collapsibleID: ID of the element that gets collapsed to hide the
-   * results table. Xooxle will adjust the height of the element as search
-   * results get generated.
-   * @param hrefFmt: a format string for generating a URL to this result's
+   * @param index - JSON index object.
+   * @param form - Form containing search elements.
+   * @param hrefFmt - a format string for generating a URL to this result's
    * page. The HREF will be generated based on the KEY field of the candidate
    * by substituting the string `{KEY}`.
    * If absent, no HREF will be generated.
