@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+"""Generate Lexicon data in HTML, Anki, and Xooxle formats."""
+
 import argparse
 import os
 
@@ -12,7 +14,7 @@ from web import xooxle
 ANKI_PATH = os.path.join(constants.LEXICON_DIR, "anki/coptic.apkg")
 
 argparser = argparse.ArgumentParser(
-    description="Process Dictionary Data into HTML Pages, Anki Flashcards, and a JSON Index.",
+    description="Generate Lexicon data in HTML, Anki, and Xooxle formats.",
 )
 
 _ = argparser.add_argument(
