@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Plot statistics."""
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -118,7 +119,10 @@ TARGET_ANNOTATIONS = 15
 def validate(df: pd.DataFrame) -> None:
     available: set[str] = set(df.columns)
     included: set[str] = set(
-        sum([COLUMNS[key] for key in COLUMNS if key is not None], []),
+        sum(
+            [COLUMNS[key] for key, _ in COLUMNS.items() if key is not None],
+            [],
+        ),
     )
     excluded: set[str] = set(COLUMNS[None])
     if available != (included | excluded):
@@ -131,7 +135,8 @@ def validate(df: pd.DataFrame) -> None:
     dupe = included & excluded
     if dupe:
         utils.fatal(
-            "The following elements are marked as excluded although they are used:",
+            "The following elements are marked as excluded although they are"
+            " used:",
             dupe,
         )
     del dupe
