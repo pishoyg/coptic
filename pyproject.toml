@@ -4,3 +4,7 @@ line-length = 79
 [tool.ruff.lint]
 # Ignore unused imports (`F401`).
 ignore = ["F401", "F541"]
+
+[tool.ruff.format]
+docstring-code-format = true
+docstring-code-line-length = 79

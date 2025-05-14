@@ -204,9 +204,18 @@ repos:
     rev: v3.3.7
     hooks:
       - id: pylint
-        # Ignore failures.
-        # TODO: Enable the hook, to force styling.
+        # TODO: (#423) Enable the hook, to force styling.
         args: [--exit-zero]
+        verbose: true
+
+  - repo: local
+    hooks:
+      - id: darglint
+        name: darglint
+        # TODO: (#423) Enable the hook, to force styling.
+        entry: pre-commit/darglint.sh
+        language: system
+        types: [python]
         verbose: true
 
   - repo: https://github.com/PyCQA/autoflake
