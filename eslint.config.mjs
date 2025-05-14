@@ -64,6 +64,11 @@ export default tseslint.config(
         INDEX_INDEX: true,
       },
     },
+    settings: {
+      jsdoc: {
+        mode: 'typescript',
+      },
+    },
   },
   {
     files: ['**/*.ts', '**/*.tsx', '**/*.cts', '**/*.mts'],
