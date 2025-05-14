@@ -278,19 +278,3 @@ def build_crum_row_spans(nodes: list[node]) -> list[tuple[str, int]]:
         for _ in range(repetitions - 1):
             out.append(("", 0))
     return out
-
-
-def build_has_cell(tree: node, cell_name: str) -> list[bool]:
-    assert tree.is_root()
-    has_cell = [False for _ in tree.descendants()]
-    for idx, d in enumerate(tree.descendants()):
-        if d.cell(cell_name):
-            has_cell[idx] = True
-            # Travel up the tree!
-            while True:
-                d = tree.parent(d)
-                if not d:
-                    break
-                has_cell[tree.index(d)] = True
-
-    return has_cell

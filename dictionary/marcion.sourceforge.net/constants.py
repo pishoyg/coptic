@@ -5,19 +5,18 @@ import word as lexical
 from morphology import inflect
 
 # Dialects.
-DIALECTS = ["S", "Sa", "Sf", "A", "sA", "B", "F", "Fb", "O", "NH"]
-DIALECT_TO_NAME = {  # dead: disable
-    "S": "Sahidic",
-    "Sa": "Akhmimic Sahidic",
-    "Sf": "Fayyumic Sahidic",
-    "A": "Akhmimic",
-    "sA": "subAkhmimic",
-    "B": "Bohairic",
-    "F": "Fayyumic",
-    "Fb": "Bohairic Fayyumic",
-    "O": "Old Coptic",
-    "NH": "Nag Hammadi",
-}
+DIALECTS = [
+    "S",  # Sahidic
+    "Sa",  # Sahidic with Akhmimic tendency
+    "Sf",  # Sahidic with Fayyumic tendency
+    "A",  # Akhmimic
+    "sA",  # Subakhmimic (Lycopolitan)
+    "B",  # Bohairic
+    "F",  # Fayyumic
+    "Fb",  # Fayyumic with Bohairic tendency
+    "O",  # Old Coptic
+    "NH",  # Nag Hammadi
+]
 
 MAX_DERIVATION_DEPTH = 4
 CRUM_LAST_PAGE_NUM = 953

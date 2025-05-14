@@ -7,10 +7,8 @@ import re
 import typing
 from concurrent import futures
 
-import bs4
 import colorama
 import gspread
-import gspread_dataframe  # type: ignore[import-untyped]
 import pandas as pd
 from oauth2client import service_account  # type: ignore[import-untyped]
 
@@ -344,11 +342,9 @@ def read_gspread(
     gspread_name: str,
     worksheet: int = 0,
 ):
-    return GCP_CLIENT.client().open(gspread_name).get_worksheet(worksheet)
-
-
-def read_html(path: str) -> bs4.BeautifulSoup:
-    return bs4.BeautifulSoup(read(path), "html.parser")
+    return (
+        GCP_CLIENT.client().open_by_url(gspread_name).get_worksheet(worksheet)
+    )
 
 
 def get_column_index(worksheet, column: str) -> int:
@@ -357,17 +353,6 @@ def get_column_index(worksheet, column: str) -> int:
             return idx + 1  # Google  Sheets uses 1-based indexing.
     fatal(column, "not found in sheet")
     return -1  # Appease the linter.
-
-
-def write_gspread(
-    gspread_name: str,
-    df: pd.DataFrame,
-    worksheet: int = 0,
-) -> None:
-    gspread_dataframe.set_with_dataframe(
-        GCP_CLIENT.client().open(gspread_name).get_worksheet(worksheet),
-        df,
-    )
 
 
 def read(path: str) -> str:

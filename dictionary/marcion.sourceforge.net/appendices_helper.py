@@ -19,7 +19,6 @@ ROOTS: str = (
 DERIVATIONS: str = (
     "dictionary/marcion.sourceforge.net/data/input/derivation_appendices.tsv"
 )
-GSPREAD_NAME: str = "Appendices"
 GSPREAD_URL: str = (
     "https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg"
 )
@@ -484,7 +483,7 @@ class validator:
 class _matriarch:
     def __init__(self) -> None:
         # Worksheet 0 has the roots.
-        self.sheet = utils.read_gspread(GSPREAD_NAME, worksheet=0)
+        self.sheet = utils.read_gspread(GSPREAD_URL, worksheet=0)
         self.keys: set[str] = {
             str(record[KEY_COL]) for record in self.sheet.get_all_records()
         }
