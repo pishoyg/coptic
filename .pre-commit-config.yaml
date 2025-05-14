@@ -177,8 +177,8 @@ repos:
     hooks:
       - id: dead
         # TODO: Restore the check on `morphology/` once we start using it again.
-        args: [--symbol-allowlist, "dead_allowlist.txt", --track-args, --exclude,
-          "^(archive|morphology)/"]
+        args: [--symbol-allowlist, "pre-commit/dead_allowlist.txt", --track-args,
+          --exclude, "^(archive|morphology)/"]
 
   - repo: https://github.com/asottile/yesqa
     rev: v1.5.0
