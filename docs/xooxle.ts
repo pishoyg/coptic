@@ -485,6 +485,8 @@ class Line {
 }
 
 class LineSearchResult {
+  private static readonly opening = `<span class="${MATCH_CLASS}">`;
+  private static readonly closing = '</span>';
   private readonly matches: Match[];
   constructor(
     private readonly line: Line,
@@ -547,27 +549,38 @@ class LineSearchResult {
     // j tracks the index in the text.
     // idx tracks the match index.
     // cur tracks the current match.
+    // match tracks whether we currently have a match.
     let i = 0,
       j = 0,
       idx = 0,
-      cur: Match | undefined = this.matches[idx];
+      cur: Match | undefined = this.matches[idx],
+      match = false;
 
     while (i <= this.html.length) {
-      // If we stopped at a tag, add it to the output without searching it.
-      while (this.html[i] === '<') {
-        const k = this.html.indexOf('>', i) + 1;
-        builder.push(this.html.slice(i, k));
-        i = k;
+      // If we encounter tags, add them to the output without searching them.
+      if (this.html[i] === '<') {
+        // If we encounter tags during a match, we need to close the
+        // highlighting tag and reopen it, otherwise it might overlap, and
+        // <span> elements might get arbitrarily closed and opened.
+        if (match) builder.push(LineSearchResult.closing);
+        while (this.html[i] === '<') {
+          const k = this.html.indexOf('>', i) + 1;
+          builder.push(this.html.slice(i, k));
+          i = k;
+        }
+        if (match) builder.push(LineSearchResult.opening);
       }
 
       if (cur?.start === j) {
         // A match starts at the given position. Yield an opening tag.
-        builder.push(`<span class="${MATCH_CLASS}">`);
+        match = true;
+        builder.push(LineSearchResult.opening);
       } else if (cur?.end === j) {
         // A match ends at the given position. Yield a closing tag.
-        builder.push('</span>');
+        builder.push(LineSearchResult.closing);
         idx += 1;
         cur = this.matches[idx];
+        match = false;
       }
 
       if (i < this.html.length) {
