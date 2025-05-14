@@ -200,6 +200,15 @@ repos:
     hooks:
       - id: docformatter
 
+  - repo: https://github.com/pylint-dev/pylint
+    rev: v3.3.7
+    hooks:
+      - id: pylint
+        # Ignore failures.
+        # TODO: Enable the hook, to force styling.
+        args: [--exit-zero]
+        verbose: true
+
   - repo: https://github.com/PyCQA/autoflake
     rev: v2.3.1
     hooks:
