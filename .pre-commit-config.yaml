@@ -209,23 +209,26 @@ repos:
     hooks:
       - id: docformatter
 
+  # NOTE: `pylint` was enabled, although our code doesn't currently conform to
+  # it, in order to remind us to gradually resolve the errors during
+  # development. If it's too annoying, feel free to temporarily exclude some
+  # files. Delete this note if all files are now conforming.
   - repo: https://github.com/pylint-dev/pylint
     rev: v3.3.7
     hooks:
       - id: pylint
-        # TODO: (#423) Enable the hook, to force styling.
-        args: [--exit-zero]
-        verbose: true
 
+  # NOTE: `darglint` was enabled, although our code doesn't currently conform to
+  # it, in order to remind us to gradually resolve the errors during
+  # development. If it's too annoying, feel free to temporarily exclude some
+  # files. Delete this note if all files are now conforming.
   - repo: local
     hooks:
       - id: darglint
         name: darglint
-        # TODO: (#423) Enable the hook, to force styling.
         entry: pre-commit/darglint.sh
         language: system
         types: [python]
-        verbose: true
 
   - repo: https://github.com/PyCQA/autoflake
     rev: v2.3.1

@@ -32,3 +32,7 @@ darglint "$@" | while IFS= read -r LINE; do
 
   echo -e "${PURPLE}${PATH_PART}${RESET}:${RED}${FUNC_NAME}${RESET}:${GREEN}${LINE_NO}${RESET}: ${ERROR_CODE}: - ${BLUE}${ERROR_SYMBOL}${RESET} - ${ERROR_MESSAGE}"
 done
+
+if [ -n "$(darglint "$@")" ]; then
+  exit 1
+fi
