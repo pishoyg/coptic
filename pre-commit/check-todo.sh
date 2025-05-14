@@ -11,10 +11,17 @@ fi
 
 # TODO: (#66) Once all existing TODO's have been assigned issues,
 # change the following to an error rather than simply a warning.
-TODO="$(_grep "TODO(:) (?!\(#[0-9]+\))" --perl-regexp --color=always "${@}")"
+TODO="$(_grep "TODO(:) (?!\(#?[0-9]+\))" --perl-regexp --color=always "${@}")"
 if [ -n "${TODO}" ]; then
-  echo -e "${YELLOW}Stray TODO markers found. Please add an issue"\
-    "number to each TODO:\n${RESET}${TODO}"
+  echo -e "${YELLOW}Stray TODO markers found."\
+    "Please add an issue number to each TODO:\n${RESET}${TODO}"
+fi
+
+TODO="$(_grep "TODO(:) \([0-9]+\)" --perl-regexp --color=always "${@}")"
+if [ -n "${TODO}" ]; then
+  echo -e "${RED}TODO's referencing an issue should use ${YELLOW}#${RED}:"\
+    "${RESET}\n${TODO}"
+  exit 1
 fi
 
 TODO="$(_grep "TODO(:) \(#[0-9]+\)" --only --extended-regexp "${@}" \
