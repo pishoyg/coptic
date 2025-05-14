@@ -10,22 +10,41 @@ enum Colors {
   WHITE = '\x1b[37m',
 }
 
+/**
+ *
+ */
 export function developerMode() {
   return localStorage.getItem('dev') == 'true';
 }
 
+/**
+ *
+ * @param name
+ */
 export function time(name: string) {
   if (developerMode()) {
     console.time(name);
   }
 }
 
+/**
+ *
+ * @param name
+ */
 export function timeEnd(name: string) {
   if (developerMode()) {
     console.timeEnd(name);
   }
 }
 
+/**
+ *
+ * @param color
+ * @param recolor
+ * @param severity
+ * @param throwException
+ * @param {...any} args
+ */
 function _print(
   color: string,
   recolor: string,
@@ -51,29 +70,54 @@ function _print(
   }
 }
 
+/**
+ *
+ * @param {...any} message
+ */
 export function info(...message: unknown[]): void {
   _print(Colors.GREEN, Colors.BLUE, 'info', false, ...message);
 }
 
+/**
+ *
+ * @param {...any} message
+ */
 export function warn(...message: unknown[]): void {
   _print(Colors.YELLOW, Colors.CYAN, 'warn', false, ...message);
 }
 
+/**
+ *
+ * @param {...any} message
+ */
 export function error(...message: unknown[]): void {
   _print(Colors.RED, Colors.PURPLE, 'error', false, ...message);
 }
 
 // Raise an exception.
+/**
+ *
+ * @param {...any} message
+ */
 export function raise(...message: unknown[]) {
   _print(Colors.RED, Colors.PURPLE, 'error', true, ...message);
 }
 
+/**
+ *
+ * @param {...any} message
+ */
 export function fatal(...message: unknown[]) {
   _print(Colors.RED, Colors.PURPLE, 'fatal', false, ...message);
   process.exit(1);
 }
 
 // Evaluate the condition. If it fails, log an error message!
+/**
+ *
+ * @param condition
+ * @param {...any} message
+ */
 export function err(condition: boolean, ...message: unknown[]) {
   if (condition) {
     return;
@@ -82,6 +126,11 @@ export function err(condition: boolean, ...message: unknown[]) {
 }
 
 // Evaluate the condition. If it fails, raise an exception.
+/**
+ *
+ * @param condition
+ * @param {...any} message
+ */
 export function ass(condition: boolean, ...message: unknown[]) {
   if (condition) {
     return;
@@ -90,6 +139,11 @@ export function ass(condition: boolean, ...message: unknown[]) {
 }
 
 // Evaluate the condition. If it fails, exit!
+/**
+ *
+ * @param condition
+ * @param {...any} message
+ */
 export function assass(condition: boolean, ...message: unknown[]) {
   if (condition) {
     return;

@@ -9,12 +9,19 @@ const PNG_RANGES: [number, number][] = [
   [865, 973],
 ];
 
+/**
+ *
+ * @param page
+ */
 function ext(page: number): string {
   return PNG_RANGES.some((range) => page >= range[0] && page <= range[1])
     ? 'png'
     : 'jpeg';
 }
 
+/**
+ *
+ */
 function main() {
   const form: scan.Form = scan.Form.default();
   new scan.Scroller(MIN_PAGE_NUM, MAX_PAGE_NUM, OFFSET, ext, form, LANDING);

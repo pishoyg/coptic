@@ -67,6 +67,9 @@ export interface _Form {
 
 // Form represents a search form containing the HTML elements that the user
 // interacts with to initiate and control search.
+/**
+ *
+ */
 export class Form {
   // Input fields:
   readonly searchBox: HTMLInputElement;
@@ -82,6 +85,10 @@ export class Form {
   private static readonly full = 'full';
   private static readonly regex = 'regex';
 
+  /**
+   *
+   * @param form
+   */
   constructor(form: _Form) {
     this.searchBox = document.getElementById(
       form.searchBoxID
@@ -101,6 +108,9 @@ export class Form {
     this.populateFromParams();
   }
 
+  /**
+   *
+   */
   queryExpression(): string {
     let query: string = this.searchBox.value;
     if (!query) {
@@ -123,6 +133,9 @@ export class Form {
     return query;
   }
 
+  /**
+   *
+   */
   private populateFromParams() {
     // Populate form values using query parameters.
     const url = new URL(window.location.href);
@@ -131,6 +144,9 @@ export class Form {
     this.regexCheckbox.checked = url.searchParams.get(Form.regex) === 'true';
   }
 
+  /**
+   *
+   */
   populateParams() {
     // Populate query parameters using form values.
     const url = new URL(window.location.href);
@@ -156,10 +172,17 @@ export class Form {
     window.history.replaceState('', '', url.toString());
   }
 
+  /**
+   *
+   * @param row
+   */
   result(row: HTMLTableRowElement): void {
     this.tbody.appendChild(row);
   }
 
+  /**
+   *
+   */
   expand(): void {
     if (this.collapsible.style.maxHeight) {
       this.collapsible.style.maxHeight =
@@ -167,6 +190,10 @@ export class Form {
     }
   }
 
+  /**
+   *
+   * @param message
+   */
   message(message: string): void {
     const el = document.createElement('div');
     el.classList.add(CLS.ERROR);
@@ -174,36 +201,62 @@ export class Form {
     this.messageBox.replaceChildren(el);
   }
 
+  /**
+   *
+   */
   clear(): void {
     this.tbody.replaceChildren();
     this.messageBox.replaceChildren();
   }
 }
 
+/**
+ *
+ */
 async function yieldToBrowser(): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, 0));
 }
 
 // Candidate represents one search candidate from the index. In the results
 // display, each candidate occupies its own row.
+/**
+ *
+ */
 class Candidate {
   // key bears the candidate key.
   readonly key: string;
   readonly fields: Field[];
 
+  /**
+   *
+   * @param record
+   * @param fields
+   */
   public constructor(record: Record<string, string>, fields: string[]) {
     this.key = record[KEY]!;
     this.fields = fields.map((name) => new Field(name, record[name]!));
   }
 
+  /**
+   *
+   * @param regex
+   */
   public search(regex: RegExp): SearchResult {
     return new SearchResult(this, regex);
   }
 }
 
 // SearchResult represents the search result of one candidate from the index.
+/**
+ *
+ */
 class SearchResult {
   private readonly results: FieldSearchResult[];
+  /**
+   *
+   * @param candidate
+   * @param regex
+   */
   constructor(
     private readonly candidate: Candidate,
     regex: RegExp
@@ -213,20 +266,33 @@ class SearchResult {
     );
   }
 
+  /**
+   *
+   */
   get key(): string {
     return this.candidate.key;
   }
 
+  /**
+   *
+   */
   get match(): boolean {
     return this.results.some((result) => result.match);
   }
 
+  /**
+   *
+   */
   fragmentWord(): string | undefined {
     return this.results.find((r) => r.fragmentWord())?.fragmentWord();
   }
 
   // viewCell constructs the first cell in the row for this result, bearing the
   // anchor to the result (if available).
+  /**
+   *
+   * @param hrefFmt
+   */
   private viewCell(hrefFmt?: string): HTMLTableCellElement {
     const viewCell = document.createElement('td');
     viewCell.classList.add(CLS.VIEW);
@@ -268,6 +334,10 @@ class SearchResult {
   // row constructs the row in the results table that corresponds to this
   // result. This consists of the cell bearing the key and anchor, along with
   // the other cells containing the highlighted search fields.
+  /**
+   *
+   * @param hrefFmt
+   */
   row(hrefFmt?: string): HTMLTableRowElement {
     const row = document.createElement('tr');
 
@@ -283,6 +353,9 @@ class SearchResult {
   }
 
   // firstMatchField returns the index of the first field containing a match.
+  /**
+   *
+   */
   firstMatchField(): number {
     return this.results.findIndex((result) => result.match);
   }
@@ -290,8 +363,16 @@ class SearchResult {
 
 // Field represents a search field within a candidate. In the display, while
 // candidate occupies a table row, each field occupies a cell within that row.
+/**
+ *
+ */
 class Field {
   readonly units: Unit[];
+  /**
+   *
+   * @param name
+   * @param html
+   */
   constructor(
     readonly name: string,
     html: string
@@ -299,14 +380,26 @@ class Field {
     this.units = html.split(UNIT_DELIMITER).map((html) => new Unit(html));
   }
 
+  /**
+   *
+   * @param regex
+   */
   search(regex: RegExp): FieldSearchResult {
     return new FieldSearchResult(this, regex);
   }
 }
 
 // FieldSearchResult represents the search result of one field.
+/**
+ *
+ */
 class FieldSearchResult {
   private readonly results: UnitSearchResult[];
+  /**
+   *
+   * @param field
+   * @param regex
+   */
   constructor(
     private readonly field: Field,
     regex: RegExp
@@ -314,15 +407,24 @@ class FieldSearchResult {
     this.results = field.units.map((unit) => unit.search(regex));
   }
 
+  /**
+   *
+   */
   private get units(): Unit[] {
     return this.field.units;
   }
 
+  /**
+   *
+   */
   get match(): boolean {
     return this.results.some((result) => result.match);
   }
 
   // highlight returns the field's HTML content, with matches highlighted.
+  /**
+   *
+   */
   highlight(): string {
     let results = this.results;
 
@@ -348,6 +450,9 @@ class FieldSearchResult {
 
   // fragmentWord returns a word that can be used as a fragment in the URL to
   // highlight the first matching word.
+  /**
+   *
+   */
   fragmentWord(): string | undefined {
     return this.results.find((r) => r.match)?.fragmentWord();
   }
@@ -357,20 +462,39 @@ class FieldSearchResult {
 // humongous fields can be broken up into units. Units are searched separately;
 // and, if there are too many, won't all be included in the display during a
 // search.
+/**
+ *
+ */
 class Unit {
   readonly lines: Line[];
+  /**
+   *
+   * @param html
+   */
   constructor(readonly html: string) {
     this.lines = html.split(LINE_BREAK).map((l: string) => new Line(l));
   }
 
+  /**
+   *
+   * @param regex
+   */
   search(regex: RegExp): UnitSearchResult {
     return new UnitSearchResult(this, regex);
   }
 }
 
 // UnitSearchResult represents the search result of one unit.
+/**
+ *
+ */
 class UnitSearchResult {
   private readonly results: LineSearchResult[];
+  /**
+   *
+   * @param unit
+   * @param regex
+   */
   constructor(
     private readonly unit: Unit,
     regex: RegExp
@@ -378,14 +502,23 @@ class UnitSearchResult {
     this.results = this.unit.lines.map((l) => l.search(regex));
   }
 
+  /**
+   *
+   */
   get match(): boolean {
     return this.results.some((r) => r.match);
   }
 
+  /**
+   *
+   */
   highlight(): string {
     return this.results.map((r) => r.highlight()).join(LINE_BREAK);
   }
 
+  /**
+   *
+   */
   fragmentWord(): string | undefined {
     return this.results.find((r) => r.match)?.fragmentWord();
   }
@@ -398,16 +531,31 @@ interface Match {
   readonly end: number;
 }
 
+/**
+ *
+ */
 class Line {
   readonly text: string;
+  /**
+   *
+   * @param html
+   */
   constructor(readonly html: string) {
     this.text = html.replaceAll(TAG_REGEX, '');
   }
 
+  /**
+   *
+   * @param regex
+   */
   search(regex: RegExp): LineSearchResult {
     return new LineSearchResult(this, regex);
   }
 
+  /**
+   *
+   * @param regex
+   */
   matches(regex: RegExp): Match[] {
     return (
       [...this.text.matchAll(regex)]
@@ -422,10 +570,18 @@ class Line {
   }
 }
 
+/**
+ *
+ */
 class LineSearchResult {
   private static readonly opening = `<span class="${CLS.MATCH}">`;
   private static readonly closing = '</span>';
   private readonly matches: Match[];
+  /**
+   *
+   * @param line
+   * @param regex
+   */
   constructor(
     private readonly line: Line,
     regex: RegExp
@@ -433,18 +589,31 @@ class LineSearchResult {
     this.matches = line.matches(regex);
   }
 
+  /**
+   *
+   */
   private get text(): string {
     return this.line.text;
   }
 
+  /**
+   *
+   */
   private get html(): string {
     return this.line.html;
   }
 
+  /**
+   *
+   */
   get match(): boolean {
     return !!this.matches.length;
   }
 
+  /**
+   *
+   * @param char
+   */
   static isWordChar(char?: string): boolean {
     // Unicode-aware boundary expansion
     if (!char) {
@@ -453,6 +622,9 @@ class LineSearchResult {
     return /\p{L}|\p{N}/u.test(char) || CHROME_WORD_CHARS.has(char);
   }
 
+  /**
+   *
+   */
   fragmentWord(): string {
     /* Expand the match left and right such that it contains full words, for
      * text fragment purposes.
@@ -487,6 +659,9 @@ class LineSearchResult {
     return this.text.substring(start, end);
   }
 
+  /**
+   *
+   */
   highlight(): string {
     const builder: string[] = [];
     // i represents the index in the HTML.
@@ -552,6 +727,9 @@ interface _Metadata {
   readonly fields: string[];
 }
 
+/**
+ *
+ */
 export class Xooxle {
   private readonly data: Candidate[];
   private readonly metadata: _Metadata;
@@ -593,6 +771,10 @@ export class Xooxle {
     this.form.searchBox.focus();
   }
 
+  /**
+   *
+   * @param timeout
+   */
   search(timeout: number) {
     if (this.debounceTimeout) {
       clearTimeout(this.debounceTimeout);
@@ -605,6 +787,9 @@ export class Xooxle {
     }, timeout);
   }
 
+  /**
+   *
+   */
   async searchAux() {
     if (this.currentAbortController) {
       this.currentAbortController.abort();
@@ -632,6 +817,11 @@ export class Xooxle {
     }
   }
 
+  /**
+   *
+   * @param regex
+   * @param abortController
+   */
   async searchAuxAux(regex: RegExp, abortController: AbortController) {
     let count = 0;
     // columnSentinels is a set of hidden table rows that represent sentinels

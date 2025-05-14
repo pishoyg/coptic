@@ -1,6 +1,9 @@
 import * as collapse from '../collapse.js';
 import * as utils from '../utils.js';
 
+/**
+ *
+ */
 function main() {
   collapse.addListeners();
 

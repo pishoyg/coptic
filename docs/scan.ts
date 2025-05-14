@@ -31,10 +31,17 @@ const ZOOM_FACTOR = 0.015;
 // wrapper, to allow you to conveniently compare words lexicographically.
 // TODO: (#411) This currently only supports Coptic, but we will soon build
 // Greek and Arabic indexes as well. Make the class more versatile!
+/**
+ *
+ */
 export class Word {
   private static readonly mapping: Record<string, string> = Word.buildMapping();
   private readonly mapped: string;
   readonly word: string;
+  /**
+   *
+   * @param word
+   */
   constructor(word: string) {
     this.word = word.toLowerCase();
     logger.assass(!!this.word, 'constructing a word with the empty string!');
@@ -47,21 +54,36 @@ export class Word {
     this.mapped = Word.map(this.word);
   }
 
+  /**
+   *
+   * @param word
+   */
   static isCopticWord(word: string) {
     // eslint-disable-next-line @typescript-eslint/no-misused-spread
     return [...word].every((c) => c in Word.mapping);
   }
 
+  /**
+   *
+   * @param other
+   */
   leq(other: Word): boolean {
     return this.mapped <= other.mapped;
   }
 
+  /**
+   *
+   * @param word
+   */
   private static map(word: string): string {
     return Array.from(word)
       .map((a) => Word.mapping[a] ?? a)
       .join();
   }
 
+  /**
+   *
+   */
   private static buildMapping(): Record<string, string> {
     return COPTIC_LETTERS.map((range) => Word.between(range[0], range[1]))
       .flat()
@@ -71,6 +93,11 @@ export class Word {
       }, {});
   }
 
+  /**
+   *
+   * @param a
+   * @param b
+   */
   private static between(a: string, b: string): string[] {
     const arr: string[] = [];
     for (
@@ -92,8 +119,16 @@ export interface Page {
   page: number;
 }
 
+/**
+ *
+ */
 export class Index {
   pages: Page[];
+  /**
+   *
+   * @param index
+   * @param WordType
+   */
   constructor(
     index: string,
     private readonly WordType: new (str: string) => Word
@@ -118,18 +153,30 @@ export class Index {
       });
   }
 
+  /**
+   *
+   * @param str
+   */
   static toColumns(str: string): string[] {
     return str
       .split('\t')
       .slice(0, WANT_COLUMNS.length)
       .map((l) => l.trim());
   }
+  /**
+   *
+   * @param str
+   */
   static parseInt(str: string): number {
     const num = parseInt(str);
     logger.assass(!isNaN(num), 'unable to parse page number', num);
     return num;
   }
 
+  /**
+   *
+   * @param query
+   */
   getPage(query: string): number | undefined {
     if (!query) {
       return undefined;
@@ -162,6 +209,10 @@ export class Index {
     return this.pages[right]!.page;
   }
 
+  /**
+   *
+   * @param strict
+   */
   validate(strict = true): void {
     const error = strict ? logger.fatal : logger.error;
     for (let i = 0; i < this.pages.length; i++) {
@@ -206,7 +257,18 @@ export class Index {
   }
 }
 
+/**
+ *
+ */
 export class Form {
+  /**
+   *
+   * @param image
+   * @param nextButton
+   * @param prevButton
+   * @param resetButton
+   * @param searchBox
+   */
   constructor(
     readonly image: HTMLImageElement,
     readonly nextButton: HTMLElement,
@@ -215,6 +277,9 @@ export class Form {
     readonly searchBox: HTMLInputElement
   ) {}
 
+  /**
+   *
+   */
   static default(): Form {
     return new Form(
       document.getElementById('scan') as HTMLImageElement,
@@ -226,12 +291,28 @@ export class Form {
   }
 }
 
+/**
+ *
+ */
 export class Scroller {
   private readonly start: number;
   private readonly end: number;
   private readonly landingPage: number;
   // TODO: The parameters are unnecessarily complicated. Consider getting rid of
   // offsets and variable extensions altogether. They are complicating things.
+  /**
+   *
+   * @param start
+   * @param end
+   * @param offset
+   * @param ext
+   * @param form
+   * @param form.image
+   * @param form.nextButton
+   * @param form.prevButton
+   * @param form.resetButton
+   * @param landingPage
+   */
   constructor(
     // Integer basename of the first image file.
     start: number,
@@ -263,6 +344,9 @@ export class Scroller {
     this.update(this.getPageParam());
   }
 
+  /**
+   *
+   */
   private getPageParam(): number {
     const urlParams = new URLSearchParams(window.location.search);
     let page = urlParams.get('page');
@@ -279,6 +363,10 @@ export class Scroller {
     }
   }
 
+  /**
+   *
+   * @param page
+   */
   public update(page: number): void {
     if (page < this.start) {
       page = this.start;
@@ -291,12 +379,20 @@ export class Scroller {
     this.form.resetButton.click();
   }
 
+  /**
+   *
+   * @param newPage
+   */
   private updatePageParam(newPage: number): void {
     const url = new URL(window.location.href);
     url.searchParams.set('page', newPage.toString());
     window.history.replaceState({}, '', url.toString());
   }
 
+  /**
+   *
+   * @param page
+   */
   private updateDisplay(page: number): void {
     const stem = page + this.offset;
     this.form.image.src = `${stem.toString()}.${typeof this.ext === 'function' ? this.ext(stem) : this.ext}`;
@@ -313,14 +409,24 @@ export class Scroller {
     }
   }
 
+  /**
+   *
+   */
   private incrementPage(): void {
     this.update(this.getPageParam() + 1);
   }
 
+  /**
+   *
+   */
   private decrementPage(): void {
     this.update(this.getPageParam() - 1);
   }
 
+  /**
+   *
+   * @param event
+   */
   private handleKeyDown(event: KeyboardEvent): void {
     if (event.code === 'KeyN') {
       this.incrementPage();
@@ -328,6 +434,9 @@ export class Scroller {
       this.decrementPage();
     }
   }
+  /**
+   *
+   */
   private initEventListeners(): void {
     document.addEventListener('keydown', this.handleKeyDown.bind(this));
     this.form.nextButton.addEventListener(
@@ -341,6 +450,9 @@ export class Scroller {
   }
 }
 
+/**
+ *
+ */
 export class ZoomerDragger {
   private scale = 1;
   private startX = 0;
@@ -349,6 +461,12 @@ export class ZoomerDragger {
   private originY = 0;
   private isDragging = false;
 
+  /**
+   *
+   * @param form
+   * @param form.image
+   * @param form.resetButton
+   */
   constructor(
     private readonly form: {
       image: HTMLImageElement;
@@ -358,6 +476,9 @@ export class ZoomerDragger {
     this.initEventListeners();
   }
 
+  /**
+   *
+   */
   private initEventListeners(): void {
     document.addEventListener('wheel', this.handleZoom.bind(this), {
       passive: false,
@@ -373,6 +494,10 @@ export class ZoomerDragger {
     document.addEventListener('keydown', this.handleKeyDown.bind(this));
   }
 
+  /**
+   *
+   * @param e
+   */
   private handleZoom(e: WheelEvent): void {
     e.preventDefault();
     e.stopPropagation();
@@ -386,6 +511,10 @@ export class ZoomerDragger {
     this.updateTransform();
   }
 
+  /**
+   *
+   * @param e
+   */
   private startDragging(e: MouseEvent): void {
     e.preventDefault();
     e.stopPropagation();
@@ -395,6 +524,10 @@ export class ZoomerDragger {
     this.form.image.style.cursor = 'grabbing';
   }
 
+  /**
+   *
+   * @param e
+   */
   private dragImage(e: MouseEvent): void {
     e.preventDefault();
     e.stopPropagation();
@@ -408,6 +541,10 @@ export class ZoomerDragger {
     this.updateTransform();
   }
 
+  /**
+   *
+   * @param e
+   */
   private stopDragging(e: MouseEvent): void {
     e.preventDefault();
     e.stopPropagation();
@@ -415,6 +552,9 @@ export class ZoomerDragger {
     this.form.image.style.cursor = 'grab';
   }
 
+  /**
+   *
+   */
   private reset(): void {
     this.scale = 1;
     this.originX = 0;
@@ -422,10 +562,17 @@ export class ZoomerDragger {
     this.updateTransform();
   }
 
+  /**
+   *
+   */
   private updateTransform(): void {
     this.form.image.style.transform = `scale(${this.scale.toString()}) translate(${this.originX.toString()}px, ${this.originY.toString()}px)`;
   }
 
+  /**
+   *
+   * @param e
+   */
   private handleKeyDown(e: KeyboardEvent): void {
     if (e.code === 'KeyR') {
       this.reset();
@@ -433,7 +580,17 @@ export class ZoomerDragger {
   }
 }
 
+/**
+ *
+ */
 export class Dictionary {
+  /**
+   *
+   * @param index
+   * @param scroller
+   * @param form
+   * @param form.searchBox
+   */
   constructor(
     // index stores our dictionary index, and will be used to look up pages.
     private readonly index: Index,
@@ -445,6 +602,9 @@ export class Dictionary {
     this.addListeners();
   }
 
+  /**
+   *
+   */
   private search() {
     const query = this.form.searchBox.value.trim().toLowerCase();
     const page = this.index.getPage(query);
@@ -454,6 +614,9 @@ export class Dictionary {
     this.scroller.update(page);
   }
 
+  /**
+   *
+   */
   private addListeners() {
     // Input in the search box triggers a search.
     this.form.searchBox.addEventListener('input', this.search.bind(this));

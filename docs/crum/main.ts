@@ -39,10 +39,17 @@ const XOOXLES: Xooxle[] = [
   },
 ];
 
+/**
+ *
+ * @param event
+ */
 function stopPropagation(event: KeyboardEvent) {
   event.stopPropagation();
 }
 
+/**
+ *
+ */
 async function main(): Promise<void> {
   // Prevent other elements in the page from picking up key events on the
   // search box.

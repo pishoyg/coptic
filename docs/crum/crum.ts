@@ -22,6 +22,9 @@ const dialectCheckboxes = Array.from(
 // XOOXLE (which should be defined externally) is used to distinguish whether we
 // are running on Xooxle or not.
 declare const XOOXLE: boolean;
+/**
+ *
+ */
 function xooxle(): boolean {
   return typeof XOOXLE !== 'undefined' && XOOXLE;
 }
@@ -29,6 +32,9 @@ function xooxle(): boolean {
 // NOTE (which should be defined externally) is used to distinguish whether we
 // are running on a note.
 declare const NOTE: boolean;
+/**
+ *
+ */
 function note(): boolean {
   return typeof NOTE !== 'undefined' && NOTE;
 }
@@ -36,6 +42,9 @@ function note(): boolean {
 // ANKI (which should be defined externally) is used to distinguish whether we
 // are running on Anki or not.
 declare const ANKI: boolean;
+/**
+ *
+ */
 function anki(): boolean {
   return typeof ANKI !== 'undefined' && ANKI;
 }
@@ -43,6 +52,9 @@ function anki(): boolean {
 // INDEX (which should be defined externally) is used to distinguish
 // whether we are running on an index page or not.
 declare const INDEX: boolean;
+/**
+ *
+ */
 function index(): boolean {
   return typeof INDEX !== 'undefined' && INDEX;
 }
@@ -50,6 +62,9 @@ function index(): boolean {
 // INDEX_INDEX (which should be defined externally) is used to distinguish
 // whether we are running on an index index page or not.
 declare const INDEX_INDEX: boolean;
+/**
+ *
+ */
 function index_index(): boolean {
   return typeof INDEX_INDEX !== 'undefined' && INDEX_INDEX;
 }
@@ -204,10 +219,17 @@ const DIALECT_SINGLE_CHAR: Record<string, string> = {
   k: 'Ak',
 };
 
+/**
+ *
+ * @param classes
+ */
 function classQuery(classes: string[]): string {
   return classes.map((c) => `.${c}`).join(', ');
 }
 
+/**
+ *
+ */
 class Highlighter {
   // Sheets are problematic on Anki, for some reason! We update the elements
   // individually instead!
@@ -220,6 +242,9 @@ class Highlighter {
   private static readonly BRIGHT = '1.0';
   private static readonly DIM = '0.3';
 
+  /**
+   *
+   */
   constructor() {
     // NOTE: Reading CSS rules often fails locally due to CORS. This is why we
     // use the `try` block here. In case it fails, we fall back to Anki mode,
@@ -243,11 +268,17 @@ class Highlighter {
     }
   }
 
+  /**
+   *
+   */
   update(): void {
     this.updateDialects();
     this.updateDev();
   }
 
+  /**
+   *
+   */
   updateDialects(): void {
     // We have three sources of dialect highlighting:
     // - Lexicon checkboxes
@@ -295,6 +326,9 @@ class Highlighter {
     });
   }
 
+  /**
+   *
+   */
   updateDev(): void {
     const display = localStorage.getItem('dev') === 'true' ? 'block' : 'none';
     const noDisplay = display === 'block' ? 'none' : 'block';
@@ -316,6 +350,11 @@ class Highlighter {
     );
   }
 
+  /**
+   *
+   * @param index
+   * @param rule
+   */
   private addOrReplaceRule(index: number, rule: string) {
     if (index < this.sheet!.cssRules.length) {
       this.sheet!.deleteRule(index);
@@ -330,6 +369,15 @@ class Highlighter {
   // However, if you're updating elements, that's not guaranteed. If this is the
   // case, you should pass a `reset_func` that resets the elements to the
   // default style.
+  /**
+   *
+   * @param rule_index
+   * @param query
+   * @param style
+   * @param func
+   * @param reset_query
+   * @param reset_func
+   */
   private updateSheetOrElements(
     rule_index: number,
     query: string,
@@ -353,6 +401,11 @@ class Highlighter {
 // TODO: This is a bad place to define a global variable.
 const highlighter = new Highlighter();
 
+/**
+ *
+ * @param url
+ * @param external
+ */
 function window_open(url: string | null, external = true): void {
   if (!url) {
     return;
@@ -364,6 +417,12 @@ function window_open(url: string | null, external = true): void {
   window.open(url, '_self');
 }
 
+/**
+ *
+ * @param el
+ * @param tag
+ * @param attrs
+ */
 function moveElement(
   el: Element,
   tag: string,
@@ -380,6 +439,11 @@ function moveElement(
   el.parentNode!.replaceChild(copy, el);
 }
 
+/**
+ *
+ * @param el
+ * @param target
+ */
 function makeSpanLinkToAnchor(el: Element, target: string): void {
   if (el.tagName !== 'SPAN') {
     console.warn(`Converting ${el.tagName} tag to <a> tag!`);
@@ -387,6 +451,10 @@ function makeSpanLinkToAnchor(el: Element, target: string): void {
   moveElement(el, 'a', { href: target });
 }
 
+/**
+ *
+ * @param pageNumber
+ */
 function chopColumn(pageNumber: string): string {
   const lastChar = pageNumber.slice(pageNumber.length - 1);
   if (lastChar === 'a' || lastChar === 'b') {
@@ -396,6 +464,9 @@ function chopColumn(pageNumber: string): string {
 }
 
 // Handle 'dialect' class.
+/**
+ *
+ */
 function activeDialects(): string[] | null {
   const d = localStorage.getItem('d');
   // NOTE: ''.split(',') returns [''], which is not what we want!
@@ -403,6 +474,10 @@ function activeDialects(): string[] | null {
   return d === '' ? [] : (d?.split(',') ?? null);
 }
 
+/**
+ *
+ * @param toggle
+ */
 function toggleDialect(toggle: string): void {
   const active = new Set(activeDialects());
   const has = active.has(toggle);
@@ -424,6 +499,9 @@ function toggleDialect(toggle: string): void {
 }
 
 // Handle 'developer' and 'dev' classes.
+/**
+ *
+ */
 function toggleDev(): void {
   localStorage.setItem(
     'dev',
@@ -432,6 +510,11 @@ function toggleDev(): void {
 }
 
 // Handle 'reset' class.
+/**
+ *
+ * @param dialectCheckboxes
+ * @param highlighter
+ */
 function reset(
   dialectCheckboxes: HTMLInputElement[],
   highlighter: Highlighter
@@ -479,27 +562,52 @@ function reset(
   window.location.reload();
 }
 
+/**
+ *
+ * @param rel
+ */
 function getLinkHrefByRel(rel: string): string | null {
   const linkElement = document.querySelector(`link[rel="${rel}"]`);
   return linkElement instanceof HTMLLinkElement ? linkElement.href : null;
 }
 
+/**
+ *
+ * @param id
+ */
 function scroll(id: string): void {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 }
 
+/**
+ *
+ * @param text
+ */
 function yank(text: string): void {
   void navigator.clipboard.writeText(text);
 }
 
+/**
+ *
+ * @param path
+ */
 function stem(path: string): string {
   return path.split('/').pop()!.replace('.html', '');
 }
 
+/**
+ *
+ * @param elem
+ */
 function height(elem: HTMLElement): number {
   return elem.getBoundingClientRect().top + window.scrollY;
 }
 
+/**
+ *
+ * @param query
+ * @param target
+ */
 function findNextElement(
   query: string,
   target: 'next' | 'prev' | 'cur'
@@ -518,6 +626,11 @@ function findNextElement(
   );
 }
 
+/**
+ *
+ * @param query
+ * @param target
+ */
 function scrollToNextElement(
   query: string,
   target: 'next' | 'prev' | 'cur'
@@ -530,12 +643,23 @@ function scrollToNextElement(
 }
 
 // Section represents a group of related shortcuts.
+/**
+ *
+ */
 class Section {
+  /**
+   *
+   * @param title
+   * @param shortcuts
+   */
   constructor(
     private readonly title: string,
     private readonly shortcuts: Record<string, Shortcut[]>
   ) {}
 
+  /**
+   *
+   */
   createSection(): HTMLDivElement {
     const div = document.createElement('div');
 
@@ -562,18 +686,28 @@ class Section {
     return div;
   }
 
+  /**
+   *
+   */
   visible(): boolean {
     return Object.values(this.shortcuts).some((shortcuts: Shortcut[]) => {
       return shortcuts.some((s: Shortcut) => s.visible());
     });
   }
 
+  /**
+   *
+   */
   executable(): boolean {
     return Object.values(this.shortcuts).some((shortcuts: Shortcut[]) => {
       return shortcuts.some((s: Shortcut) => s.executable());
     });
   }
 
+  /**
+   *
+   * @param event
+   */
   consume(event: KeyboardEvent): boolean {
     return (
       (this.executable() &&
@@ -582,6 +716,10 @@ class Section {
     );
   }
 
+  /**
+   *
+   * @param key
+   */
   canConsume(key: string): Shortcut[] {
     if (!this.executable()) {
       return [];
@@ -589,11 +727,19 @@ class Section {
     return this.shortcuts[key]?.filter((s) => s.executable()) ?? [];
   }
 
+  /**
+   *
+   */
   shortcutsRecord(): Record<string, Shortcut[]> {
     return this.shortcuts;
   }
 }
 
+/**
+ *
+ * @param char
+ * @param str
+ */
 function highlightFirstOccurrence(char: string, str: string): string {
   if (str.includes('<')) {
     // This might already have an HTML tag, so we don't risk highlighting it to
@@ -608,11 +754,18 @@ function highlightFirstOccurrence(char: string, str: string): string {
   return `${str.slice(0, index)}<strong>${str[index]!}</strong>${str.slice(index + 1)}`;
 }
 
+/**
+ *
+ */
 class HelpPanel {
   private readonly sections: Section[];
   private readonly overlay: HTMLDivElement;
   private readonly panel: HTMLDivElement;
 
+  /**
+   *
+   * @param sections
+   */
   constructor(sections: Section[]) {
     this.sections = sections.filter((s) => s.executable());
     // Create overlay background.
@@ -682,9 +835,17 @@ class HelpPanel {
     this.validate();
   }
 
+  /**
+   *
+   * @param event
+   */
   consumeAux(event: KeyboardEvent): boolean {
     return this.sections.some((s) => s.consume(event));
   }
+  /**
+   *
+   * @param event
+   */
   consume(event: KeyboardEvent): boolean {
     if (this.consumeAux(event)) {
       return true;
@@ -703,6 +864,10 @@ class HelpPanel {
     return this.consumeAux(event);
   }
 
+  /**
+   *
+   * @param visible
+   */
   togglePanel(visible?: boolean) {
     const target =
       visible !== undefined
@@ -716,6 +881,10 @@ class HelpPanel {
     this.overlay.style.display = target;
   }
 
+  /**
+   *
+   * @param event
+   */
   handleClick(event: MouseEvent) {
     if (
       this.panel.style.display === 'block' &&
@@ -725,6 +894,9 @@ class HelpPanel {
     }
   }
 
+  /**
+   *
+   */
   validate() {
     // Validate that no key can trigger two shortcuts!
     const keys = this.sections
@@ -743,7 +915,17 @@ class HelpPanel {
   }
 }
 
+/**
+ *
+ */
 class Shortcut {
+  /**
+   *
+   * @param description
+   * @param available
+   * @param action
+   * @param show
+   */
   constructor(
     private readonly description: string,
     private readonly available: (() => boolean)[],
@@ -751,14 +933,24 @@ class Shortcut {
     private readonly show = true
   ) {}
 
+  /**
+   *
+   */
   executable(): boolean {
     return this.available.some((f) => f());
   }
 
+  /**
+   *
+   */
   visible(): boolean {
     return this.executable() && this.show;
   }
 
+  /**
+   *
+   * @param event
+   */
   consume(event: KeyboardEvent): boolean {
     if (!this.executable()) {
       return false;
@@ -772,6 +964,10 @@ class Shortcut {
     return true;
   }
 
+  /**
+   *
+   * @param key
+   */
   row(key: string): HTMLTableRowElement {
     // TODO: Move the styling to CSS.
     const row = document.createElement('tr');
@@ -797,11 +993,22 @@ class Shortcut {
     return row;
   }
 
+  /**
+   *
+   */
   textDescription() {
     return this.description.replace(/<[^>]*>/g, '');
   }
 }
 
+/**
+ *
+ * @param key
+ * @param name
+ * @param code
+ * @param dictionaries
+ * @param link
+ */
 function makeDialectShortcut(
   key: string,
   name: string,
@@ -845,6 +1052,9 @@ function makeDialectShortcut(
 //   found to be duplicated on some Anki platforms!
 const panel: HelpPanel | null = anki() ? null : makeHelpPanel();
 
+/**
+ *
+ */
 function makeHelpPanel(): HelpPanel {
   // NOTE: Some (minor) dialects are missing articles. If you find a reference
   // that explains what those dialects are, that would be great.
@@ -1265,14 +1475,30 @@ function makeHelpPanel(): HelpPanel {
   return new HelpPanel(sections);
 }
 
+/**
+ *
+ * @param id
+ */
 function click(id: string): void {
   document.getElementById(id)!.click();
 }
 
+/**
+ *
+ * @param id
+ */
 function focus(id: string): void {
   document.getElementById(id)!.focus();
 }
 
+/**
+ *
+ * @param root
+ * @param regex
+ * @param url
+ * @param classes
+ * @param direct_parent_excluded_classes
+ */
 function linkifyText(
   root: Node,
   regex: RegExp,
@@ -1365,6 +1591,10 @@ function linkifyText(
   });
 }
 
+/**
+ *
+ * @param root
+ */
 function handleCopticLookups(root: Node = document.body) {
   linkifyText(
     root,
@@ -1375,14 +1605,25 @@ function handleCopticLookups(root: Node = document.body) {
   );
 }
 
+/**
+ *
+ * @param root
+ */
 function handleGreekLookups(root: Node = document.body) {
   linkifyText(root, GREEK_RE, GREEK_LOOKUP_URL_PREFIX, ['link', 'light']);
 }
 
+/**
+ *
+ * @param root
+ */
 function handleEnglishLookups(root: Node = document.body) {
   linkifyText(root, ENGLISH_RE, LOOKUP_URL_PREFIX, ['hover-link']);
 }
 
+/**
+ *
+ */
 function handleNonXooxleOnlyElements() {
   // Handle 'categories' class.
   document
@@ -1596,6 +1837,9 @@ function handleNonXooxleOnlyElements() {
   });
 }
 
+/**
+ *
+ */
 function handleXooxleOnlyElements() {
   dialectCheckboxes.forEach((checkbox) => {
     checkbox.addEventListener('click', () => {
@@ -1605,6 +1849,9 @@ function handleXooxleOnlyElements() {
   });
 }
 
+/**
+ *
+ */
 function handleCommonElements() {
   highlighter.update();
 
@@ -1647,6 +1894,9 @@ function handleCommonElements() {
     });
 }
 
+/**
+ *
+ */
 function main() {
   if (xooxle()) {
     handleXooxleOnlyElements();
