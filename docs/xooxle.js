@@ -1,4 +1,3 @@
-import * as logger from './logger.js';
 // KEY is the name of the field that bears the word key. The key can be used to
 // generate an HREF to open the word page.
 const KEY = 'KEY';
@@ -14,28 +13,51 @@ const KEY = 'KEY';
 // - In either case, a message will be shown indicating that more content is
 //   available.
 const UNITS_LIMIT = 5;
-// UNIT_DELIMITER is the string that separates a units field into units.
-const UNIT_DELIMITER = '<hr class="match-separator">';
-// Text matching a given text will be wrapped in `<span class="MATCH_CLASS">`
-// tags.
-const MATCH_CLASS = 'match';
-// LONG_UNITS_FIELD_MESSAGE is the message shown at the end of a units field,
-// if the field gets truncated.
-const LONG_UNITS_FIELD_MESSAGE =
-  '<br><span class="view-for-more">... (<em>view</em> for full context)</span>';
 // Our currently index building algorithm results in HTML with a simplified
 // structure, with only <span> tags, styling tags, or <br> tags. Styling tags
 // don't affect the output text, and are simply ignored during text search.
 // Line breaks, however, require special handling.
 const LINE_BREAK = '<br>';
+// RESULTS_TO_UPDATE_DISPLAY specifies how often (every how many results) we
+// should yield to let the browser update the display during search.
 const RESULTS_TO_UPDATE_DISPLAY = 5;
 const TAG_REGEX = /<\/?[^>]+>/g;
+// CHROME_WORD_CHARS is a list of characters that are considered word characters
+// in Chrome.
+// See https://github.com/pishoyg/coptic/issues/286 for context.
 const CHROME_WORD_CHARS = new Set(["'"]);
+var CLS;
+(function (CLS) {
+  // VIEW is the class of the view table cells.
+  CLS['VIEW'] = 'view';
+  // ERROR is the class of the error message.
+  CLS['ERROR'] = 'error';
+  // COUNTER is the class of the result counters in the view cells.
+  CLS['COUNTER'] = 'counter';
+  CLS['DEV'] = 'dev';
+  CLS['NO_DEV'] = 'no-dev';
+  // MATCH is the class of text matching a given search query.
+  CLS['MATCH'] = 'match';
+  // VIEW_FOR_MORE is the class of the message "view for more", displayed in
+  // large fields that have been cropped.
+  CLS['VIEW_FOR_MORE'] = 'view-for-more';
+})(CLS || (CLS = {}));
+// UNIT_DELIMITER is the string that separates a units field into units.
+const UNIT_DELIMITER = '<hr class="match-separator">';
+// LONG_UNITS_FIELD_MESSAGE is the message shown at the end of a units field,
+// if the field gets truncated.
+const LONG_UNITS_FIELD_MESSAGE = `<br><span class="${'view-for-more' /* CLS.VIEW_FOR_MORE */}">... (<em>view</em> for full context)</span>`;
+// Form represents a search form containing the HTML elements that the user
+// interacts with to initiate and control search.
 export class Form {
+  // Input fields:
   searchBox;
   fullWordCheckbox;
   regexCheckbox;
+  // Output fields:
   messageBox;
+  tbody;
+  collapsible;
   // Search parameter names.
   static query = 'query';
   static full = 'full';
@@ -45,6 +67,10 @@ export class Form {
     this.fullWordCheckbox = document.getElementById(form.fullWordCheckboxID);
     this.regexCheckbox = document.getElementById(form.regexCheckboxID);
     this.messageBox = document.getElementById(form.messageBoxID);
+    this.tbody = document
+      .getElementById(form.resultsTableID)
+      .querySelector('tbody');
+    this.collapsible = document.getElementById(form.collapsibleID);
     this.populateFromParams();
   }
   queryExpression() {
@@ -92,160 +118,74 @@ export class Form {
     }
     window.history.replaceState('', '', url.toString());
   }
+  result(row) {
+    this.tbody.appendChild(row);
+  }
+  expand() {
+    if (this.collapsible.style.maxHeight) {
+      this.collapsible.style.maxHeight =
+        this.collapsible.scrollHeight.toString() + 'px';
+    }
+  }
   message(message) {
     const el = document.createElement('div');
-    el.classList.add('error');
+    el.classList.add('error' /* CLS.ERROR */);
     el.textContent = message;
     this.messageBox.replaceChildren(el);
   }
-  clearMessage() {
+  clear() {
+    this.tbody.replaceChildren();
     this.messageBox.replaceChildren();
   }
 }
-function isWordChar(char) {
-  // Unicode-aware boundary expansion
-  return /\p{L}|\p{N}/u.test(char);
-}
-function isWordCharInChrome(char) {
-  // isWordCharInChrome returns whether this character is considered a word
-  // character in Chrome.
-  // See https://github.com/pishoyg/coptic/issues/286 for context.
-  return isWordChar(char) || CHROME_WORD_CHARS.has(char);
-}
-function yieldToBrowser() {
+async function yieldToBrowser() {
   return new Promise((resolve) => setTimeout(resolve, 0));
 }
-export class Index {
-  hrefFmt;
-  data;
-  params;
-  tbody;
-  collapsible;
-  /*
-   * @param index: JSON index object.
-   * @param tableID: ID of the <table> element that will be used to populate
-   * the results. NOTE: The table must have a <tbody> child.
-   * @param collapsibleID: ID of the element that, when clicked, hides the
-   * results table.
-   * @param hrefFmt: a format string for generating a URL to this result's
-   * page. The HREF will be generated based on the KEY field of the candidate
-   * by substituting the string `{KEY}`.
-   * If absent, no HREF will be generated.
-   */
-  constructor(index, tableID, collapsibleID, hrefFmt) {
-    this.hrefFmt = hrefFmt;
-    this.data = index.data.map(
-      (record) => new Candidate(record, index.params.fields)
-    );
-    this.params = index.params;
-    this.tbody = document.getElementById(tableID).querySelector('tbody');
-    this.collapsible = document.getElementById(collapsibleID);
-  }
-  async search(regex, abortController) {
-    let count = 0;
-    // column_sentinels is a set of hidden table rows that represent sentinels
-    // (anchors / break points) in the results table.
-    //
-    // The sentinels are used to divide the table into sections.
-    // Matching results will be added right on top of the sentinels, so that
-    // each sentinel represents the (hidden) bottom row of a section.
-    // Results with a (first) match in their n^th column will be added on top of
-    // the n^th sentinel. (By first match, we mean that a result containing a
-    // match in the 1st and 2nd column, for example, will be added on top of the
-    // 1st, not the 2nd, sentinel.)
-    // We do so based on the assumption that the earlier columns contain more
-    // relevant data. So a result with a match in the 1st column is likely more
-    // interesting to the user than a result with a match in the 2nd column,
-    // so it should show first.
-    //
-    // This allows us to achieve some form of result sorting, without actually
-    // having to retrieve all results, sort them, and then render them. We can
-    // start showing results immediately after one match, thus maintaining
-    // Xooxle's high responsiveness and speed.
-    //
-    // We also insert rows in the table, without displacing or recreating the
-    // other rows, thus reducing jitter.
-    // We use the sentinels as bottoms for the sections, rather than tops,
-    // because we want results to expand downwards rather than upwards, to
-    // avoid jitter at the top of the table, which is the area that the user
-    // will be looking at.
-    const column_sentinels = this.params.fields.map(() => {
-      const tr = document.createElement('tr');
-      tr.style.display = 'none';
-      this.tbody.appendChild(tr);
-      return tr;
-    });
-    for (const res of this.data) {
-      const result = res.search(regex);
-      if (!result.match) {
-        continue;
-      }
-      ++count;
-      // Create a new row for the table
-      const row = result.row(this.hrefFmt);
-      if (abortController.signal.aborted) {
-        return;
-      }
-      column_sentinels[result.firstMatchField()].insertAdjacentElement(
-        'beforebegin',
-        row
-      );
-      if (this.collapsible.style.maxHeight) {
-        this.collapsible.style.maxHeight =
-          this.collapsible.scrollHeight.toString() + 'px';
-      }
-      if (count % RESULTS_TO_UPDATE_DISPLAY == 0) {
-        await yieldToBrowser();
-      }
-    }
-    let i = 0;
-    this.tbody.querySelectorAll('.counter').forEach((counter) => {
-      counter.innerHTML = `${(++i).toString()} / ${count.toString()}`;
-    });
-  }
-  clear() {
-    this.tbody.innerHTML = '';
-  }
-}
+// Candidate represents one search candidate from the index. In the results
+// display, each candidate occupies its own row.
 class Candidate {
   // key bears the candidate key.
   key;
   fields;
   constructor(record, fields) {
     this.key = record[KEY];
-    this.fields = fields.map((field) => new Field(field, record[field.name]));
+    this.fields = fields.map((name) => new Field(name, record[name]));
   }
   search(regex) {
     return new SearchResult(this, regex);
   }
 }
+// SearchResult represents the search result of one candidate from the index.
 class SearchResult {
   candidate;
   results;
-  match;
   constructor(candidate, regex) {
     this.candidate = candidate;
     this.results = this.candidate.fields.map(
       (field) => new FieldSearchResult(field, regex)
     );
-    this.match = this.results.some((result) => result.match);
   }
   get key() {
     return this.candidate.key;
   }
+  get match() {
+    return this.results.some((result) => result.match);
+  }
   fragmentWord() {
     return this.results.find((r) => r.fragmentWord())?.fragmentWord();
   }
+  // viewCell constructs the first cell in the row for this result, bearing the
+  // anchor to the result (if available).
   viewCell(hrefFmt) {
     const viewCell = document.createElement('td');
-    viewCell.classList.add('view');
+    viewCell.classList.add('view' /* CLS.VIEW */);
     const counter = document.createElement('span');
-    counter.classList.add('counter');
+    counter.classList.add('counter' /* CLS.COUNTER */);
     counter.innerHTML = '? / ?';
     counter.append(' ');
     viewCell.append(counter);
     const dev = document.createElement('span');
-    dev.classList.add('dev');
+    dev.classList.add('dev' /* CLS.DEV */);
     dev.textContent = this.key;
     if (!hrefFmt) {
       viewCell.prepend(dev);
@@ -258,52 +198,60 @@ class SearchResult {
       `#:~:text=${encodeURIComponent(this.fragmentWord())}`;
     a.target = '_blank';
     const noDev = document.createElement('span');
-    noDev.classList.add('no-dev');
+    noDev.classList.add('no-dev' /* CLS.NO_DEV */);
     noDev.textContent = 'view';
     a.appendChild(noDev);
     a.appendChild(dev);
     viewCell.prepend(a);
     return viewCell;
   }
+  // row constructs the row in the results table that corresponds to this
+  // result. This consists of the cell bearing the key and anchor, along with
+  // the other cells containing the highlighted search fields.
   row(hrefFmt) {
     const row = document.createElement('tr');
     row.appendChild(this.viewCell(hrefFmt));
     this.results.forEach((sr) => {
       const cell = document.createElement('td');
-      cell.innerHTML = sr.highlighted();
+      cell.innerHTML = sr.highlight();
       row.appendChild(cell);
     });
     return row;
   }
+  // firstMatchField returns the index of the first field containing a match.
   firstMatchField() {
     return this.results.findIndex((result) => result.match);
   }
 }
+// Field represents a search field within a candidate. In the display, while
+// candidate occupies a table row, each field occupies a cell within that row.
 class Field {
-  units;
   name;
-  constructor(field, html) {
-    this.name = field.name;
-    const arr = field.units ? html.split(UNIT_DELIMITER) : [html];
-    this.units = arr.map((html) => new Unit(html));
+  units;
+  constructor(name, html) {
+    this.name = name;
+    this.units = html.split(UNIT_DELIMITER).map((html) => new Unit(html));
   }
   search(regex) {
     return new FieldSearchResult(this, regex);
   }
 }
+// FieldSearchResult represents the search result of one field.
 class FieldSearchResult {
   field;
   results;
-  match;
   constructor(field, regex) {
     this.field = field;
     this.results = field.units.map((unit) => unit.search(regex));
-    this.match = this.results.some((result) => result.match);
   }
   get units() {
     return this.field.units;
   }
-  highlighted() {
+  get match() {
+    return this.results.some((result) => result.match);
+  }
+  // highlight returns the field's HTML content, with matches highlighted.
+  highlight() {
     let results = this.results;
     if (!this.match) {
       // If there are no matches, we limit the number of units in the output.
@@ -322,10 +270,16 @@ class FieldSearchResult {
       (output.length < this.units.length ? LONG_UNITS_FIELD_MESSAGE : '')
     );
   }
+  // fragmentWord returns a word that can be used as a fragment in the URL to
+  // highlight the first matching word.
   fragmentWord() {
     return this.results.find((r) => r.match)?.fragmentWord();
   }
 }
+// Unit is a unit in a field. Fields usually consist of a single unit, but
+// humongous fields can be broken up into units. Units are searched separately;
+// and, if there are too many, won't all be included in the display during a
+// search.
 class Unit {
   html;
   lines;
@@ -337,14 +291,16 @@ class Unit {
     return new UnitSearchResult(this, regex);
   }
 }
+// UnitSearchResult represents the search result of one unit.
 class UnitSearchResult {
   unit;
   results;
-  match;
   constructor(unit, regex) {
     this.unit = unit;
     this.results = this.unit.lines.map((l) => l.search(regex));
-    this.match = this.results.some((r) => r.match);
+  }
+  get match() {
+    return this.results.some((r) => r.match);
   }
   highlight() {
     return this.results.map((r) => r.highlight()).join(LINE_BREAK);
@@ -378,7 +334,7 @@ class Line {
 }
 class LineSearchResult {
   line;
-  static opening = `<span class="${MATCH_CLASS}">`;
+  static opening = `<span class="${'match' /* CLS.MATCH */}">`;
   static closing = '</span>';
   matches;
   constructor(line, regex) {
@@ -393,6 +349,13 @@ class LineSearchResult {
   }
   get match() {
     return !!this.matches.length;
+  }
+  static isWordChar(char) {
+    // Unicode-aware boundary expansion
+    if (!char) {
+      return false;
+    }
+    return /\p{L}|\p{N}/u.test(char) || CHROME_WORD_CHARS.has(char);
   }
   fragmentWord() {
     /* Expand the match left and right such that it contains full words, for
@@ -412,13 +375,12 @@ class LineSearchResult {
     }
     let start = match.start;
     let end = match.end;
-    const isWordChar = isWordCharInChrome;
     // Expand left: Move the start index left until a word boundary is found.
-    while (start > 0 && isWordChar(this.text[start - 1])) {
+    while (LineSearchResult.isWordChar(this.text[start - 1])) {
       start--;
     }
     // Expand right: Move the end index right until a word boundary is found.
-    while (end < this.text.length && isWordChar(this.text[end])) {
+    while (LineSearchResult.isWordChar(this.text[end])) {
       end++;
     }
     // Return the expanded substring.
@@ -471,56 +433,72 @@ class LineSearchResult {
   }
 }
 export class Xooxle {
-  index;
   form;
+  hrefFmt;
+  data;
+  metadata;
   debounceTimeout = null;
   currentAbortController = null;
-  constructor(index, form) {
-    this.index = index;
+  /**
+   * @param index: JSON index object.
+   * @param form: Form containing search elements.
+   * @param tableID: ID of the <table> element that will be used to populate
+   * the results. NOTE: The table must have a <tbody> child.
+   * @param collapsibleID: ID of the element that gets collapsed to hide the
+   * results table. Xooxle will adjust the height of the element as search
+   * results get generated.
+   * @param hrefFmt: a format string for generating a URL to this result's
+   * page. The HREF will be generated based on the KEY field of the candidate
+   * by substituting the string `{KEY}`.
+   * If absent, no HREF will be generated.
+   */
+  constructor(index, form, hrefFmt) {
     this.form = form;
-    // Make the page responsive to user input.
-    this.form.searchBox.addEventListener(
-      'input',
-      this.handleSearchQuery.bind(this, 100)
+    this.hrefFmt = hrefFmt;
+    this.data = index.data.map(
+      (record) => new Candidate(record, index.metadata.fields)
     );
+    this.metadata = index.metadata;
+    // Make the page responsive to user input.
+    this.form.searchBox.addEventListener('input', this.search.bind(this, 100));
     this.form.fullWordCheckbox.addEventListener(
       'click',
-      this.handleSearchQuery.bind(this, 0)
+      this.search.bind(this, 0)
     );
     this.form.regexCheckbox.addEventListener(
       'click',
-      this.handleSearchQuery.bind(this, 0)
+      this.search.bind(this, 0)
     );
-    this.handleSearchQuery(0);
+    // Handle the search query once upon loading.
+    this.search(0);
+    // Finally, focus on the form, so the user can search right away.
     this.form.searchBox.focus();
   }
-  handleSearchQuery(timeout) {
+  search(timeout) {
     if (this.debounceTimeout) {
       clearTimeout(this.debounceTimeout);
     }
     this.debounceTimeout = setTimeout(() => {
       // Call the async function after the timeout.
       // Use void to ignore the returned promise.
-      void this.search();
+      void this.searchAux();
       this.form.populateParams();
     }, timeout);
   }
-  async search() {
-    logger.time('search');
+  async searchAux() {
     if (this.currentAbortController) {
       this.currentAbortController.abort();
     }
     const abortController = new AbortController();
     this.currentAbortController = abortController;
-    this.index.clear();
-    this.form.clearMessage();
+    this.form.clear();
     const expression = this.form.queryExpression();
     if (!expression) {
       return;
     }
     try {
       const regex = new RegExp(expression, 'iug'); // Case-insensitive and Unicode-aware.
-      await this.index.search(regex, abortController);
+      await this.searchAuxAux(regex, abortController);
     } catch (err) {
       if (err instanceof SyntaxError) {
         this.form.message('Invalid regular expression!');
@@ -528,6 +506,67 @@ export class Xooxle {
         this.form.message('Internal error! Please send us an email!');
       }
     }
-    logger.timeEnd('search');
+  }
+  async searchAuxAux(regex, abortController) {
+    let count = 0;
+    // columnSentinels is a set of hidden table rows that represent sentinels
+    // (anchors / break points) in the results table.
+    //
+    // The sentinels are used to divide the table into sections.
+    // Matching results will be added right on top of the sentinels, so that
+    // each sentinel represents the (hidden) bottom row of a section.
+    // Results with a (first) match in their n^th column will be added on top of
+    // the n^th sentinel. (By first match, we mean that a result containing a
+    // match in the 1st and 2nd column, for example, will be added on top of the
+    // 1st, not the 2nd, sentinel.)
+    // We do so based on the assumption that the earlier columns contain more
+    // relevant data. So a result with a match in the 1st column is likely more
+    // interesting to the user than a result with a match in the 2nd column,
+    // so it should show first.
+    //
+    // This allows us to achieve some form of result sorting, without actually
+    // having to retrieve all results, sort them, and then render them. We can
+    // start showing results immediately after one match, thus maintaining
+    // Xooxle's high responsiveness and speed.
+    //
+    // We also insert rows in the table, without displacing or recreating the
+    // other rows, thus reducing jitter.
+    // We use the sentinels as bottoms for the sections, rather than tops,
+    // because we want results to expand downwards rather than upwards, to
+    // avoid jitter at the top of the table, which is the area that the user
+    // will be looking at.
+    const columnSentinels = this.metadata.fields.map(() => {
+      const tr = document.createElement('tr');
+      tr.style.display = 'none';
+      this.form.result(tr);
+      return tr;
+    });
+    for (const res of this.data) {
+      const result = res.search(regex);
+      if (!result.match) {
+        continue;
+      }
+      ++count;
+      // Create a new row for the table
+      const row = result.row(this.hrefFmt);
+      if (abortController.signal.aborted) {
+        return;
+      }
+      columnSentinels[result.firstMatchField()].insertAdjacentElement(
+        'beforebegin',
+        row
+      );
+      // Expand the results table to accommodate the recently added results.
+      this.form.expand();
+      if (count % RESULTS_TO_UPDATE_DISPLAY == 0) {
+        await yieldToBrowser();
+      }
+    }
+    let i = 0;
+    [
+      ...this.form.tbody.getElementsByClassName('counter' /* CLS.COUNTER */),
+    ].forEach((counter) => {
+      counter.innerHTML = `${(++i).toString()} / ${count.toString()}`;
+    });
   }
 }
