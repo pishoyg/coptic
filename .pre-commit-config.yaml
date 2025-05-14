@@ -195,19 +195,20 @@ repos:
     hooks:
       - id: docformatter
 
-  # NOTE: `pylint` was enabled, although our code doesn't currently conform to
-  # it, in order to remind us to gradually resolve the errors during
-  # development. If it's too annoying, feel free to temporarily exclude some
-  # files. Delete this note if all files are now conforming.
+  # NOTE: `pylint` and `darglint` were enabled, although our code doesn't currently conform to
+  # their styles, in order to remind us to gradually resolve the errors during
+  # development. If it's too annoying, feel free to invoke your command as:
+  # ```
+  # SKIP=pylint,darglint git commit
+  # ```
+  # which should disable them.
+  #  Delete this note if all files are now conforming.
   - repo: https://github.com/pylint-dev/pylint
     rev: v3.3.7
     hooks:
       - id: pylint
 
-  # NOTE: `darglint` was enabled, although our code doesn't currently conform to
-  # it, in order to remind us to gradually resolve the errors during
-  # development. If it's too annoying, feel free to temporarily exclude some
-  # files. Delete this note if all files are now conforming.
+  # NOTE: See the remark on `pylint` above.
   - repo: local
     hooks:
       - id: darglint
