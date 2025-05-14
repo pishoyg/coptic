@@ -4,6 +4,9 @@ import globals from 'globals';
 import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import stylistic from '@stylistic/eslint-plugin';
+import eslintPluginPrettier from 'eslint-plugin-prettier';
+import eslintConfigPrettier from 'eslint-config-prettier';
+import eslintPluginJsdoc from 'eslint-plugin-jsdoc';
 
 export default tseslint.config(
   // Shared rules.
@@ -14,7 +17,10 @@ export default tseslint.config(
   {
     plugins: {
       '@stylistic': stylistic,
+      prettier: eslintPluginPrettier,
+      jsdoc: eslintPluginJsdoc,
     },
+    extends: [eslintConfigPrettier],
     rules: {
       semi: 'error',
       'prefer-const': 'error',
@@ -36,6 +42,12 @@ export default tseslint.config(
           avoidEscape: true,
         },
       ],
+      'prettier/prettier': 'error',
+      'jsdoc/check-alignment': 'warn',
+      'jsdoc/check-param-names': 'warn',
+      'jsdoc/check-tag-names': 'warn',
+      'jsdoc/require-param': 'warn',
+      'jsdoc/require-returns': 'warn',
     },
     languageOptions: {
       parserOptions: {
