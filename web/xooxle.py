@@ -125,6 +125,11 @@ SPACE_ELEMENTS_DEFAULT = {
     "td",
 }
 
+TAG_REGEX = re.compile(r"<\s*([a-zA-Z0-9]+)")
+# ADMISSIBLE is used to enforce the simplified HTML structure that Xooxle search
+# can support.
+ADMISSIBLE = RETAIN_TAGS_DEFAULT | {"span", "hr", "br"}
+
 
 class selector:
     def __init__(
@@ -516,3 +521,8 @@ class index:
     def validate(self, json: dict[str, typing.Any]) -> None:
         for entry in json["data"]:
             assert set(entry.keys()) == {KEY} | set(json["metadata"]["fields"])
+            for key, value in entry.items():
+                if key == KEY:
+                    continue
+                for tag in TAG_REGEX.findall(value):
+                    assert tag in ADMISSIBLE, tag
