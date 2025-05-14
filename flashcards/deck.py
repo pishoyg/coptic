@@ -134,8 +134,8 @@ class index_index:
                 page_class=INDEX_CLASS,
                 search=self.search,
                 scripts=self.scripts,
-                prev=prev,
-                next=next,
+                prev_href=prev,
+                next_href=next,
             )
 
     def __write_subindex(self, args: tuple[index, str]) -> None:
@@ -147,7 +147,7 @@ class index_index:
         # this subindex.
         self.dir = dir
         del dir
-        with utils.ThreadPoolExecutor() as executor:
+        with utils.thread_pool_executor() as executor:
             list(
                 executor.map(
                     self.__write_subindex,
@@ -212,8 +212,8 @@ class note:
             title=title,
             page_class=NOTE_CLASS,
             search=search,
-            next=next,
-            prev=prev,
+            next_href=next,
+            prev_href=prev,
             scripts=[js_path] if js_path else [],
         )
         self.html: str = "".join(self.__html_aux())
@@ -271,7 +271,7 @@ class deck:
         if not self.write_html:
             return
         assert self.html_dir
-        with utils.ThreadPoolExecutor() as executor:
+        with utils.thread_pool_executor() as executor:
             list(executor.map(self.__write_html, self.notes))
             list(executor.map(self.__write_html, self.index_indexes))
         utils.wrote(self.html_dir)

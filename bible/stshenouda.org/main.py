@@ -347,7 +347,7 @@ class Book(Item):
 
 class Bible:
     def __init__(self) -> None:
-        with utils.ThreadPoolExecutor() as executor:
+        with utils.thread_pool_executor() as executor:
             self.books: list[Book] = list(
                 executor.map(self.__build_book, self.__iter_books()),
             )
@@ -472,8 +472,8 @@ class html_builder:
                 title=title,
                 page_class=page_class,
                 search="" if epub else SEARCH,
-                next=next,
-                prev=prev,
+                next_href=next,
+                prev_href=prev,
                 scripts=[] if epub else [SCRIPT],
                 epub=epub,
             ),
@@ -519,7 +519,7 @@ class html_builder:
         def write_chapter(chapter: Chapter) -> None:
             self.__write_html_chapter(chapter, langs, subdir)
 
-        with utils.ThreadPoolExecutor() as executor:
+        with utils.thread_pool_executor() as executor:
             list(executor.map(write_chapter, bible.chain_chapters()))
 
         toc = self.__html_aux(
@@ -552,7 +552,7 @@ class html_builder:
             subdir,
             chapter.path(epub=False),
         )
-        utils.writelines(out, path, mkdir=True)
+        utils.writelines(out, path, make_dir=True)
 
     def write_epub(self, bible: Bible, langs: list[str], subdir: str) -> None:
         kindle: epub.EpubBook = epub.EpubBook()
@@ -670,7 +670,7 @@ def main():
         (_table_builder, "html", bible, LANGUAGES, ""),
     ]
 
-    with utils.ThreadPoolExecutor() as executor:
+    with utils.thread_pool_executor() as executor:
         list(executor.map(lambda args: html_builder.write(*args), tasks))
 
 

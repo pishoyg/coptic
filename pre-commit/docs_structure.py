@@ -142,7 +142,7 @@ def main():
             # Not HTML files.
             continue
 
-        with utils.ProcessPoolExecutor() as executor:
+        with utils.process_pool_executor() as executor:
             mapped = executor.map(
                 __classes_in_file,
                 [directory / f for f in matched],

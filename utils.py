@@ -1,3 +1,5 @@
+"""Generic utilities and helprs."""
+
 # TODO: This file is too big. We should split it up into multiple files.
 import collections
 import json
@@ -5,6 +7,7 @@ import os
 import pathlib
 import re
 import typing
+from collections import abc
 from concurrent import futures
 
 import colorama
@@ -45,7 +48,6 @@ VIEWPORT_TAG = """
 """
 
 INTEGER_RE = re.compile("[0-9]+")
-MAX_INTEGER_LENGTH = 10
 
 GSPREAD_SCOPE = [
     "https://spreadsheets.google.com/feeds",
@@ -72,20 +74,28 @@ def html_head(
     title: str,
     page_class: str = "",
     search: str = "",
-    next: str = "",
-    prev: str = "",
-    scripts: list[str] = [],
+    next_href: str = "",
+    prev_href: str = "",
+    scripts: list[str] | None = None,
     epub: bool = False,
 ) -> str:
     assert title
     if epub:
         assert not page_class
         assert not search
-        assert not next
-        assert not prev
+        assert not next_href
+        assert not prev_href
         assert not scripts
     return "".join(
-        html_head_aux(title, page_class, search, next, prev, scripts, epub),
+        html_head_aux(
+            title,
+            page_class,
+            search,
+            next_href,
+            prev_href,
+            scripts or [],
+            epub,
+        ),
     )
 
 
@@ -93,11 +103,11 @@ def html_head_aux(
     title: str,
     page_class: str,
     search: str,
-    next: str,
-    prev: str,
+    next_href: str,
+    prev_href: str,
     scripts: list[str],
     epub: bool = False,
-) -> typing.Generator[str]:
+) -> abc.Generator[str]:
     yield "<head>"
     yield f"<title>{title}</title>"
     if epub:
@@ -112,10 +122,10 @@ def html_head_aux(
     yield GOOGLE_TAG
     if search:
         yield f'<link href="{search}" rel="search">'
-    if next:
-        yield f'<link href="{next}" rel="next">'
-    if prev:
-        yield f'<link href="{prev}" rel="prev">'
+    if next_href:
+        yield f'<link href="{next_href}" rel="next">'
+    if prev_href:
+        yield f'<link href="{prev_href}" rel="prev">'
     if page_class:
         yield f"<script>const {page_class} = true;</script>"
     for script in scripts:
@@ -123,7 +133,7 @@ def html_head_aux(
     yield "</head>"
 
 
-def html_aux(head: str, *body: str) -> typing.Generator[str]:
+def html_aux(head: str, *body: str) -> abc.Generator[str]:
     yield "<!DOCTYPE html>"
     yield "<html>"
     yield head
@@ -142,7 +152,7 @@ def _print(
     recolor,
     *args,
     severity: typing.Literal["", "info", "warn", "error", "fatal"] = "",
-    throw: bool = False,
+    exception: bool = False,
 ):
     message: str = (
         colorama.Style.DIM
@@ -158,8 +168,8 @@ def _print(
         + colorama.Style.RESET_ALL
     )
 
-    if throw:
-        raise Exception(message)
+    if exception:
+        raise Exception(message)  # pylint: disable=broad-exception-raised
     else:
         print(message)
 
@@ -207,7 +217,7 @@ def throw(*args, level: bool = True):
         colorama.Fore.MAGENTA,
         severity="error" if level else "",
         *args,
-        throw=True,
+        exception=True,
     )
 
 
@@ -253,13 +263,13 @@ def write(
     path: str,
     log: bool = True,
     fix_newline: bool = True,
-    mkdir: bool = False,
+    make_dir: bool = False,
 ) -> None:
-    if mkdir:
+    if make_dir:
         mk_parent_dir(path)
     if fix_newline and (not content or content[-1] != "\n"):
         content += "\n"
-    with open(path, "w") as f:
+    with open(path, "w", encoding="utf-8") as f:
         f.write(content)
     if not log:
         return
@@ -267,14 +277,14 @@ def write(
 
 
 def writelines(
-    content: typing.Generator[str],
+    content: abc.Generator[str],
     path: str,
     log: bool = True,
-    mkdir: bool = False,
+    make_dir: bool = False,
 ) -> None:
-    if mkdir:
+    if make_dir:
         mk_parent_dir(path)
-    with open(path, "w") as f:
+    with open(path, "w", encoding="utf-8") as f:
         f.writelines(content)
     if not log:
         return
@@ -310,32 +320,34 @@ def read_tsv(path: str, sort_values_by=None) -> pd.DataFrame:
 
 # TODO: This cache doesn't work with multiprocessing. It's shared by threads,
 # but not between processes.
-class TSV_CACHE:
+class TSVCache:
     _cache: dict[str, pd.DataFrame] = {}
 
     @staticmethod
     def read(path: str) -> pd.DataFrame:
-        if path in TSV_CACHE._cache:
-            return TSV_CACHE._cache[path]
+        if path in TSVCache._cache:
+            return TSVCache._cache[path]
         df = read_tsv(path)
-        TSV_CACHE._cache[path] = df
+        TSVCache._cache[path] = df
         return df
 
 
-class GCP_CLIENT:
+class GCPClient:
+    """GCP client to interact with Google Sheets."""
+
     _client: gspread.Client | None = None
 
     @staticmethod
     def client() -> gspread.Client:
-        if GCP_CLIENT._client is not None:
-            return GCP_CLIENT._client
-        GCP_CLIENT._client = gspread.authorize(
+        if GCPClient._client is not None:
+            return GCPClient._client
+        GCPClient._client = gspread.authorize(
             service_account.ServiceAccountCredentials.from_json_keyfile_name(
                 JSON_KEYFILE_NAME,
                 GSPREAD_SCOPE,
             ),
         )
-        return GCP_CLIENT._client
+        return GCPClient._client
 
 
 def read_gspread(
@@ -343,7 +355,7 @@ def read_gspread(
     worksheet: int = 0,
 ):
     return (
-        GCP_CLIENT.client().open_by_url(gspread_name).get_worksheet(worksheet)
+        GCPClient.client().open_by_url(gspread_name).get_worksheet(worksheet)
     )
 
 
@@ -356,12 +368,12 @@ def get_column_index(worksheet, column: str) -> int:
 
 
 def read(path: str) -> str:
-    with open(path) as f:
+    with open(path, encoding="utf-8") as f:
         return f.read()
 
 
-def paths(dir: str) -> list[str]:
-    return [os.path.join(dir, f) for f in os.listdir(dir)]
+def paths(dir_path: str) -> list[str]:
+    return [os.path.join(dir_path, f) for f in os.listdir(dir_path)]
 
 
 def splitext(path: str) -> tuple[str, str]:
@@ -369,21 +381,19 @@ def splitext(path: str) -> tuple[str, str]:
 
 
 def stem(path: str) -> str:
-    stem, _ = splitext(path)
-    return stem
+    return splitext(path)[0]
 
 
-def stems(paths: list[str]) -> list[str]:
-    return list(map(stem, paths))
+def stems(file_paths: list[str]) -> list[str]:
+    return list(map(stem, file_paths))
 
 
 def ext(path: str) -> str:
-    _, ext = splitext(path)
-    return ext
+    return splitext(path)[1]
 
 
-def exts(paths: list[str]) -> list[str]:
-    return list(map(ext, paths))
+def exts(file_paths: list[str]) -> list[str]:
+    return list(map(ext, file_paths))
 
 
 def split(line: str, *args) -> list[str]:
@@ -399,15 +409,16 @@ def ssplit(line: str, *args) -> list[str]:
     )
 
 
-def _semver_sort_key(path: str) -> list[str]:
-    path = os.path.basename(path)
-    return [x.zfill(MAX_INTEGER_LENGTH) for x in INTEGER_RE.findall(path)] + [
-        path,
+def _semver_sort_key(file_path: str) -> list[str | int]:
+    """Construct a sort key for file path with a semantic version basename."""
+    file_path = os.path.basename(file_path)
+    return list(map(int, INTEGER_RE.findall(file_path))) + [
+        file_path,
     ]
 
 
-def sort_semver(paths: list[str]) -> list[str]:
-    return sorted(paths, key=_semver_sort_key)
+def sort_semver(file_paths: list[str]) -> list[str]:
+    return sorted(file_paths, key=_semver_sort_key)
 
 
 def verify_unique(arr, message: str) -> None:
@@ -484,7 +495,7 @@ if SEQUENTIAL:
 # Our types don't implement a `submit` method despite its convenient because
 # it's tricker to mimic, and error propagation with `submit` is also trickier.
 class SequentialExecutor:
-    def map(self, fn: typing.Callable, *iterables: typing.Iterable):
+    def map(self, fn: typing.Callable, *iterables: abc.Iterable):
         return map(fn, *iterables)
 
     def __enter__(self):
@@ -502,11 +513,13 @@ class SequentialExecutor:
 # - In our experimentation, processing time often soared when using
 #   `ProcessPoolExecutor` instead of `ThreadPoolExecutor`, possibly because of
 #   unexpected cache / static-scope behavior.
-def ProcessPoolExecutor() -> futures.ProcessPoolExecutor | SequentialExecutor:
+def process_pool_executor() -> (
+    futures.ProcessPoolExecutor | SequentialExecutor
+):
     return (
         SequentialExecutor() if SEQUENTIAL else futures.ProcessPoolExecutor()
     )
 
 
-def ThreadPoolExecutor() -> futures.ThreadPoolExecutor | SequentialExecutor:
+def thread_pool_executor() -> futures.ThreadPoolExecutor | SequentialExecutor:
     return SequentialExecutor() if SEQUENTIAL else futures.ThreadPoolExecutor()

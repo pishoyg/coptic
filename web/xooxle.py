@@ -523,7 +523,7 @@ class Index:
         }
 
     def build(self) -> None:
-        with utils.ThreadPoolExecutor() as executor:
+        with utils.thread_pool_executor() as executor:
             data: Iterable[dict[str, str]] = executor.map(
                 self.process_file,
                 self.iter_input(),

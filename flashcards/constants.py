@@ -102,8 +102,8 @@ class decker:
 
 
 class CRUM_ROOTS:
-    _roots: pd.DataFrame = utils.TSV_CACHE.read(ROOTS)
-    _appendices: pd.DataFrame = utils.TSV_CACHE.read(ROOT_APPENDICES)
+    _roots: pd.DataFrame = utils.TSVCache.read(ROOTS)
+    _appendices: pd.DataFrame = utils.TSVCache.read(ROOT_APPENDICES)
     assert list(_roots["key"]) == list(_appendices["key"])
     _appendices.drop("key", axis=1, inplace=True)
     roots: pd.DataFrame = pd.concat([_roots, _appendices], axis=1)
@@ -333,7 +333,7 @@ class Crum(decker):
         data = TLA_ID_RE.sub("", data)
         return data
 
-    for _, row in utils.TSV_CACHE.read(
+    for _, row in utils.TSVCache.read(
         os.path.join(KELLIA_TSV_DIR, "comprehensive.tsv"),
     ).iterrows():
         key = __tla_col(row, "entry_xml_id")
@@ -803,7 +803,7 @@ class copticsite(decker):
         return cell
 
     def __init__(self, deck_name: str, deck_id: int) -> None:
-        self.tsv = utils.TSV_CACHE.read(COPTICSITE_TSV)
+        self.tsv = utils.TSVCache.read(COPTICSITE_TSV)
         super().__init__(deck_name, deck_id, False)
 
     @typing.override
@@ -862,7 +862,7 @@ class KELLIA(decker):
         deck_id: int,
         tsv_basename: str,
     ) -> None:
-        self._tsv = utils.TSV_CACHE.read(
+        self._tsv = utils.TSVCache.read(
             os.path.join(KELLIA_TSV_DIR, f"{tsv_basename}.tsv"),
         )
         super().__init__(deck_name, deck_id, False)

@@ -67,17 +67,17 @@ def _decker_deck(decker: constants.decker) -> deck.deck:
 def main() -> None:
     args = argparser.parse_args()
 
-    with utils.ThreadPoolExecutor() as executor:
+    with utils.thread_pool_executor() as executor:
         list(executor.map(constants.decker.html, constants.DECKERS))
 
-    with utils.ThreadPoolExecutor() as executor:
+    with utils.thread_pool_executor() as executor:
         decks = list(executor.map(_decker_deck, constants.DECKERS))
         write_anki(decks)
 
     indexes: list[xooxle.Index] = (
         constants.XOOXLE_ALL if args.all else constants.XOOXLE
     )
-    with utils.ThreadPoolExecutor() as executor:
+    with utils.thread_pool_executor() as executor:
         list(executor.map(xooxle.Index.build, indexes))
 
 
