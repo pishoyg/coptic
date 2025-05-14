@@ -277,7 +277,7 @@ repos:
   # We pass `--diff` to make it report typos before fixing them.
   # Keep an eye for it.
   - repo: https://github.com/crate-ci/typos
-    rev: v1
+    rev: v1.32.0
     hooks:
       - id: typos
         exclude: ".*\\.(xml|html|xhtml|txt|tsv|csv|json|tab|msql|xsd)$|dictionary/kellia.uni-goettingen.de/main.py"
