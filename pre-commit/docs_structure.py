@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
-# In case the structure changes in in an unexpected way, this script will act as
-# a reminder for the developers to update `.env` accordingly, particularly the
-# `findex` / `findexx` helpers.
+"""Keep a close eye on the structure of `docs/`.
+
+In case the structure changes in in an unexpected way, this script will act as
+a reminder for the developers to update `.env` accordingly, particularly the
+`findex` / `findexx` helpers.
+"""
 
 # TODO: fnmatch is not strict enough! For example, it was found that `dir/*.txt`
 # can match the file path `dir/dir/file.txt`! Figure this out!
@@ -17,7 +20,8 @@ import bs4
 import utils
 
 parser = argparse.ArgumentParser(
-    description="Validate the structure of docs/. Or report on HTML class usage.",
+    description="Validate the structure of `docs/`."
+    " Or report on HTML class usage.",
 )
 parser.add_argument(
     "-c",
@@ -28,6 +32,8 @@ parser.add_argument(
 
 
 class Pattern:
+    """A file pattern."""
+
     def __init__(self, patterns: list[str], required: bool = True):
         self._patterns: list[str] = patterns
         assert self._patterns
@@ -94,20 +100,20 @@ PATTERNS: list[Pattern] = [
 ]
 
 
-def __classes_in_file(path: pathlib.Path) -> set[str]:
+def _classes_in_file(path: pathlib.Path) -> set[str]:
     soup = bs4.BeautifulSoup(path.read_text(), "html.parser")
     return {cls for tag in soup.find_all(class_=True) for cls in tag["class"]}
 
 
-def __join(items: typing.Iterable[str]) -> str:
+def _join(items: typing.Iterable[str]) -> str:
     assert not isinstance(items, str)
     return "".join("\n - " + cls for cls in sorted(items))
 
 
-def __print_classes(pattern_to_classes: dict[str, set[str]]):
+def _print_classes(pattern_to_classes: dict[str, set[str]]):
     assert pattern_to_classes
     for pattern, classes in pattern_to_classes.items():
-        utils.info(pattern, __join(classes), level=False)
+        utils.info(pattern, _join(classes), level=False)
 
     class_to_sets: collections.defaultdict[str, set[str]] = (
         collections.defaultdict(set)
@@ -118,7 +124,7 @@ def __print_classes(pattern_to_classes: dict[str, set[str]]):
 
     for cls, patterns in class_to_sets.items():
         if len(patterns) >= 2:
-            utils.warn(cls, __join(patterns), level=False)
+            utils.warn(cls, _join(patterns), level=False)
 
 
 def main():
@@ -144,7 +150,7 @@ def main():
 
         with utils.process_pool_executor() as executor:
             mapped = executor.map(
-                __classes_in_file,
+                _classes_in_file,
                 [directory / f for f in matched],
             )
             classes: set[str] = {cls for classes in mapped for cls in classes}
@@ -157,7 +163,7 @@ def main():
     )
 
     if args.html_classes:
-        __print_classes(pattern_to_classes)
+        _print_classes(pattern_to_classes)
 
 
 if __name__ == "__main__":
