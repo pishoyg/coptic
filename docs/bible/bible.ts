@@ -5,7 +5,7 @@ import * as utils from '../utils.js';
  *
  */
 function main() {
-  collapse.addListeners();
+  collapse.addListenersForSiblings();
 
   document.addEventListener('keydown', (event: KeyboardEvent) => {
     switch (event.key) {

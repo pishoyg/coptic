@@ -1,21 +1,67 @@
-// Handle .collapse elements.
 /**
- *
- * @param triggerUponLoad
+ * Collapsible represents an element that can collapse, becoming visible /
+ * invisible as needed.
+ * NOTE: This must be used with corresponding classes defined in the CSS. See
+ * below and see the CSS for more details.
  */
-export function addListeners(triggerUponLoad = false) {
+export class Collapsible {
+  /**
+   * @param element - The collapsible HTML element.
+   */
+  constructor(private readonly element: HTMLElement) {}
+
+  /**
+   * Toggle the display of the collapsible.
+   */
+  toggle() {
+    this.element.style.maxHeight = this.element.style.maxHeight
+      ? ''
+      : this.element.scrollHeight.toString() + 'px';
+  }
+
+  /**
+   * If currently visible, update the height to the height currently needed.
+   */
+  updateHeight() {
+    if (!this.element.style.maxHeight) {
+      // This element is currently collapsed, so we keep the height at zero.
+      return;
+    }
+    this.element.style.maxHeight = this.element.scrollHeight.toString() + 'px';
+  }
+
+  /**
+   * @param collapse - The element that should toggle the display of this
+   * element when clicked.
+   */
+  addListener(collapse: HTMLElement): void {
+    collapse.addEventListener('click', this.toggle.bind(this));
+  }
+}
+
+/**
+ * addListenersForSiblings initializes pairs of `collapse` and `collapsible`
+ * elements in the page, such that clicking a `collapse` element collapses the
+ * `collapsible`.
+ * NOTE:
+ * - Collapse (clickable) elements have the class `collapse`.
+ * - Collapsible elements have the class `collapsible`.
+ * - The `collapsible` elements are the siblings immediately following
+ *   collapse` elements.
+ * See the related CSS.
+ *
+ * @param toggleUponLoad - If true, toggle once after loading.
+ */
+export function addListenersForSiblings(toggleUponLoad = false) {
   document
     .querySelectorAll<HTMLElement>('.collapse')
     .forEach((collapse: HTMLElement): void => {
-      collapse.addEventListener('click', () => {
-        // TODO: Remove the dependency on the HTML structure.
-        const collapsible = collapse.nextElementSibling! as HTMLElement;
-        collapsible.style.maxHeight = collapsible.style.maxHeight
-          ? ''
-          : collapsible.scrollHeight.toString() + 'px';
-      });
-      if (triggerUponLoad) {
-        collapse.click();
+      const collapsible = new Collapsible(
+        collapse.nextElementSibling as HTMLElement
+      );
+      collapsible.addListener(collapse);
+      if (toggleUponLoad) {
+        collapsible.toggle();
       }
     });
 }

@@ -76,7 +76,7 @@ async function main(): Promise<void> {
   );
 
   // Initialize collapsible elements.
-  collapse.addListeners(true);
+  collapse.addListenersForSiblings(true);
 }
 
 await main();

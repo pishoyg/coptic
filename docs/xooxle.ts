@@ -1,3 +1,4 @@
+import * as collapse from './collapse.js';
 // KEY is the name of the field that bears the word key. The key can be used to
 // generate an HREF to open the word page.
 const KEY = 'KEY';
@@ -78,7 +79,7 @@ export class Form {
   // Output fields:
   private readonly messageBox: HTMLElement;
   readonly tbody: HTMLTableSectionElement;
-  private readonly collapsible: HTMLElement;
+  private readonly collapsible: collapse.Collapsible;
 
   // Search parameter names.
   private static readonly query = 'query';
@@ -103,7 +104,9 @@ export class Form {
     this.tbody = document
       .getElementById(form.resultsTableID)!
       .querySelector('tbody')!;
-    this.collapsible = document.getElementById(form.collapsibleID)!;
+    this.collapsible = new collapse.Collapsible(
+      document.getElementById(form.collapsibleID)!
+    );
 
     this.populateFromParams();
   }
@@ -184,10 +187,7 @@ export class Form {
    *
    */
   expand(): void {
-    if (this.collapsible.style.maxHeight) {
-      this.collapsible.style.maxHeight =
-        this.collapsible.scrollHeight.toString() + 'px';
-    }
+    this.collapsible.updateHeight();
   }
 
   /**
