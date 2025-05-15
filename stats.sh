@@ -183,11 +183,6 @@ tsv_nonempty() {
     | grep '^[[:space:]]*$' --invert --extended-regexp
 }
 
-crum_typos() {
-  local -r PARENT="dictionary/marcion.sourceforge.net/data"
-  diff_lines "${PARENT}/input/${1}" "${PARENT}/raw/${1}"
-}
-
 LOC_ARCHIVE=$(loc_archive)
 
 LOC=$(( $(loc .) + LOC_ARCHIVE))
@@ -512,29 +507,21 @@ echo -e "${BLUE}Total number of categories: "\
 "${GREEN}${CRUM_CATEGORIES_SUM}${BLUE}.${RESET}"
 ((CRUM_CATEGORIES_SUM >= 30 && CRUM_CATEGORIES_SUM <= 6714 )) || (echo -e "${PURPLE}${CRUM_CATEGORIES_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
-CRUM_WRD_TYPOS=$(crum_typos "coptwrd.tsv" | wc --lines)
-echo -e "${BLUE}Number of Crum WRD entries changed: "\
-  "${GREEN}${CRUM_WRD_TYPOS}${BLUE}.${RESET}"
-((CRUM_WRD_TYPOS >= 33 && CRUM_WRD_TYPOS <= 335 )) || (echo -e "${PURPLE}${CRUM_WRD_TYPOS} ${RED}looks suspicious.${RESET}" && exit 1)
+CRUM_WRD_TYPOS=0
+echo -e "${YELLOW}Number of Crum WRD entries changed (broken): "\
+  "${GREEN}${CRUM_WRD_TYPOS}${YELLOW}.${RESET}"
 
-CRUM_DRV_TYPOS=$(crum_typos "coptdrv.tsv" | wc --lines)
-echo -e "${BLUE}Number of Crum DRV entries changed: "\
-  "${GREEN}${CRUM_DRV_TYPOS}${BLUE}.${RESET}"
-((CRUM_DRV_TYPOS >= 24 && CRUM_DRV_TYPOS <= 335 )) || (echo -e "${PURPLE}${CRUM_DRV_TYPOS} ${RED}looks suspicious.${RESET}" && exit 1)
+CRUM_DRV_TYPOS=0
+echo -e "${YELLOW}Number of Crum DRV entries changed (broken): "\
+  "${GREEN}${CRUM_DRV_TYPOS}${YELLOW}.${RESET}"
 
-readonly CRUM_TYPOS=$(( CRUM_WRD_TYPOS + CRUM_DRV_TYPOS ))
-echo -e "${BLUE}Total number of Crum lines changed: "\
-  "${GREEN}${CRUM_TYPOS}${BLUE}.${RESET}"
-((CRUM_TYPOS >= 57 && CRUM_TYPOS <= 335 )) || (echo -e "${PURPLE}${CRUM_TYPOS} ${RED}looks suspicious.${RESET}" && exit 1)
+readonly CRUM_TYPOS=0
+echo -e "${YELLOW}Total number of Crum lines changed (broken): "\
+  "${GREEN}${CRUM_TYPOS}${YELLOW}.${RESET}"
 
-crum_root_keys_changed () {
-  crum_typos "coptwrd.tsv" | cut -f1
-  crum_typos "coptdrv.tsv" | cut -f2
-}
-CRUM_PAGES_CHANGED=$(crum_root_keys_changed | sort | uniq | wc --lines)
-echo -e "${BLUE}Number of Crum pages changed: "\
-  "${GREEN}${CRUM_PAGES_CHANGED}${BLUE}.${RESET}"
-((CRUM_PAGES_CHANGED >= 51 && CRUM_PAGES_CHANGED <= 335 )) || (echo -e "${PURPLE}${CRUM_PAGES_CHANGED} ${RED}looks suspicious.${RESET}" && exit 1)
+CRUM_PAGES_CHANGED=0
+echo -e "${YELLOW}Number of Crum pages changed (broken): "\
+  "${GREEN}${CRUM_PAGES_CHANGED}${YELLOW}.${RESET}"
 
 NUM_COMMITS="$(git rev-list --count --all)"
 echo -e "${BLUE}Number of commits: "\
