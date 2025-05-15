@@ -13,7 +13,7 @@ source .env
 # shellcheck disable=SC2016
 readonly COMMIT_MESSAGE='[Stats] Run `make stats`.'
 
-readonly KNOWN_EXTENSIONS="Makefile css env gitignore yamlfmt yamllint pylintrc json mjs js keylayout md plist py sh strings txt yaml toml ts html npmrc"
+readonly KNOWN_EXTENSIONS="Makefile css env gitignore yamlfmt yamllint pylintrc checkmake json mjs js keylayout md plist py sh strings txt yaml toml ts html npmrc"
 readonly KNOWN_EXTENSIONS_ARCHIVE="gitignore java js md proto py sh sql vba"
 readonly KNOWN_ARCHIVE_SUBDIRS="bible dictionary ipa-transliteration unicode-converters"
 
@@ -247,7 +247,7 @@ LOC_JS=$(loc . -a \( -name "*.mjs" -o -name "*.js" \) )
 LOC_MD=$(loc . -name "*.md")
 LOC_YAML=$(loc . -a \( -name "*.yaml" -o -name ".yamlfmt" -o -name ".yamllint" \) )
 LOC_TOML=$(loc . -name "*.toml")
-LOC_DOT=$(loc . -a \( -name ".gitignore" -o -name ".npmrc" -o -name "pylintrc" \)  )
+LOC_DOT=$(loc . -a \( -name ".gitignore" -o -name ".npmrc" -o -name "pylintrc" -o -name ".checkmake" \)  )
 LOC_KEYBOARD_LAYOUT=$(loc . -a \( -name "*.keylayout" -o -name "*.plist" -o -name "*.strings" \) )
 LOC_TXT=$(loc . -name "*.txt")
 LOC_TS=$(loc . -name "*.ts")
@@ -302,7 +302,7 @@ FOC_JS=$(foc_count . -a \( -name "*.mjs" -o -name "*.js" \) )
 FOC_MD=$(foc_count . -name "*.md")
 FOC_YAML=$(foc_count . -a \( -name "*.yaml" -o -name ".yamlfmt" -o -name ".yamllint" \) )
 FOC_TOML=$(foc_count . -name "*.toml")
-FOC_DOT=$(foc_count . -a \( -name ".gitignore" -o -name ".npmrc" -o -name "pylintrc" \) )
+FOC_DOT=$(foc_count . -a \( -name ".gitignore" -o -name ".npmrc" -o -name "pylintrc" -o -name ".checkmake" \) )
 FOC_KEYBOARD_LAYOUT=$(foc_count . -a \( -name "*.keylayout" -o -name "*.plist" -o -name "*.strings" \) )
 FOC_TXT=$(foc_count . -name "*.txt")
 FOC_TS=$(foc_count . -name "*.ts")
