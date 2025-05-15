@@ -62,6 +62,6 @@ async function main() {
     })
   );
   // Initialize collapsible elements.
-  collapse.addListeners(true);
+  collapse.addListenersForSiblings(true);
 }
 await main();
