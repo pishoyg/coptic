@@ -11,13 +11,12 @@ import pandas as pd
 
 import utils
 
+# TODO: Add validation for derivations once we start populating their
+# appendices.
 CRUM_FMT = "https://remnqymi.com/crum/{key}.html"
 ROOTS_MAIN = "dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv"
 ROOTS: str = (
     "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv"
-)
-DERIVATIONS: str = (
-    "dictionary/marcion.sourceforge.net/data/input/derivation_appendices.tsv"
 )
 GSPREAD_URL: str = (
     "https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg"
@@ -675,7 +674,6 @@ class runner:
     def validate(self) -> None:
         validatoor: validator = validator()
         validatoor.validate(ROOTS, roots=True)
-        validatoor.validate(DERIVATIONS)
 
     def categories(self) -> None:
         self.init()

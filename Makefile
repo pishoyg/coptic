@@ -107,32 +107,34 @@ copticsite: FORCE
 
 ########## CRUM ##########
 crum: FORCE
-	./dictionary/marcion.sourceforge.net/main.py
-
-crum_download: FORCE
+	# Download a new version of Crum's dictionary, and rerun the parser.
 	PUB="https://docs.google.com/spreadsheets/d/e/2PACX-1vTItxV4E4plQrzjWLSea85ZFQWcQ4ba-p2BBIDG9h5yI0i9URn9GD9zZhxEj8kVI7jhCoPWPEapd9D7/pub?output=tsv"; \
 	DIR="dictionary/marcion.sourceforge.net/data/input"; \
 	curl -L "$${PUB}&gid=1409267664" > "$${DIR}/root_appendices.tsv"; \
-	curl -L "$${PUB}&gid=1491216210" > "$${DIR}/derivation_appendices.tsv"; \
 	curl -L "$${PUB}&gid=1575616379" > "$${DIR}/coptwrd.tsv"; \
-	curl -L "$${PUB}&gid=698638592" > "$${DIR}/coptdrv.tsv";
+	curl -L "$${PUB}&gid=698638592" > "$${DIR}/coptdrv.tsv"; \
+	./dictionary/marcion.sourceforge.net/main.py
 
 crum_img: FORCE
+	# Reprocess Crum's images.
 	./dictionary/marcion.sourceforge.net/img_helper.py --batch
 
 crum_img_plot: FORCE
+	# Plot stats about image collection.
 	./dictionary/marcion.sourceforge.net/img_helper.py --plot | less -R
 
 crum_scan:
+	# Download Crum's scan.
 	./dictionary/marcion.sourceforge.net/download_scan.sh
 
 crum_sentinels: FORCE
+	# Download Crum's sentinels sheet.
 	PUB="https://docs.google.com/spreadsheets/d/e/2PACX-1vS0Btx-Vz3n5J_sn0dOueWpN_lk64AdV7RrKDp_VNqVfCHajdHoQs67Xeld94jwyRVkqaRxlaRFNH5F/pub?output=tsv"; \
 	DIR="docs/crum/crum"; \
 	curl -L "$${PUB}&gid=0" > "$${DIR}/coptic.tsv"; \
 	curl -L "$${PUB}&gid=2147273844" > "$${DIR}/english.tsv"; \
 	curl -L "$${PUB}&gid=1229285156" > "$${DIR}/greek.tsv"; \
-	curl -L "$${PUB}&gid=1297903664" > "$${DIR}/arabic.tsv"; \
+	curl -L "$${PUB}&gid=1297903664" > "$${DIR}/arabic.tsv";
 
 # TODO: (#258) This rule is broken. You used to mark camera images by a source
 # that doesn't start with 'http'. But you have been moving towards populating
