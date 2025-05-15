@@ -164,7 +164,6 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
                 parse.parse_quality_cell(row["quality"]),
             )
         insert("type-parsed", root_type.marcion())
-        insert("gr-parsed", parse.parse_greek_cell(row["gr"]))
         ep = parse.parse_english_cell(row["en"])
         insert("en-parsed", ep)
         crum = row["crum"]
