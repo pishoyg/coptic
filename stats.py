@@ -31,17 +31,18 @@ COLUMNS: dict[str | None, list[str]] = {
         "crum_img_sum",
         "crum_root_senses_sum",
         "crum_categories_sum",
+        # Typo statistics are currently broken.
+        "crum_drv_typos",
+        "crum_pages_changed",
+        "crum_typos",
+        "crum_wrd_typos",
     ],
     "Crum Fixes": [
         # The following Crum fields are not expected to be populated for every
         # entry.
-        "crum_drv_typos",
         "crum_last_page",
         "crum_notes",
-        "crum_pages_changed",
         "crum_type_override",
-        "crum_typos",
-        "crum_wrd_typos",
     ],
     "Crum Appendices": [
         # The following Crum fields are ones that we seek to populated for most
