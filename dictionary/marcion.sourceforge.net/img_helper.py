@@ -31,13 +31,11 @@ FILE_NAME_RE = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
 STEM_RE = re.compile("[0-9]+-[0-9]+-[0-9]+")
 NAME_RE = re.compile("[A-Z][a-zA-Z ]*")
 
+DOMAIN = "remnqymi.com"
+CRUM = f"{DOMAIN}/crum"
 
 INPUT_TSV: str = "dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv"
-APPENDICES_TSV: str = (
-    "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv"
-)
 KEY_COL: str = "key"
-LINK_COL: str = "key-link"
 SENSES_COL: str = "senses"
 SOURCES_DIR: str = "dictionary/marcion.sourceforge.net/data/img-sources/"
 
@@ -254,6 +252,10 @@ argparser.add_argument(
     help="If given, plot a YES or NO for whether each included picture has an"
     " image.",
 )
+
+
+def link(key: str) -> str:
+    return f"https://{CRUM}/{key}.html"
 
 
 def get_max_idx(g: list[str], key: str, sense: str) -> int:
@@ -597,10 +599,6 @@ class prompter:
         self.args = args
         self.plot_yes: int = 0
         self.plot_no: int = 0
-        self.key_to_senses: dict[str, dict[str, str]] = {
-            row[KEY_COL]: json.loads(row[SENSES_COL] or "{}")
-            for _, row in utils.read_tsv(APPENDICES_TSV, KEY_COL).iterrows()
-        }
         self.key_to_row: dict[str, pd.Series] = {
             row[KEY_COL]: row
             for _, row in utils.read_tsv(INPUT_TSV, KEY_COL).iterrows()
@@ -622,13 +620,13 @@ class prompter:
         print()
         utils.info("Data:")
         utils.info("- Key:", self.key)
-        utils.info("- Link:", self.row[LINK_COL])
+        utils.info("- Link:", link(self.row[KEY_COL]))
         utils.info("- Existing:")
         _pretty(existing(self.key))
         utils.info("- Downloads:")
         _pretty(get_downloads(self.args))
         utils.info("- Senses:")
-        _pretty(self.key_to_senses[self.key])
+        _pretty(json.loads(self.key_to_row[self.key][SENSES_COL]))
         utils.info("- Sources:")
         _pretty(self.sources)
         print()
@@ -764,7 +762,7 @@ class prompter:
             print(self.key, message + colorama.Fore.RESET)
             return True
 
-        os_open(*existing(self.key), self.row[LINK_COL])
+        os_open(*existing(self.key), link(self.row[KEY_COL]))
 
         while True:
             try:
@@ -828,7 +826,7 @@ class prompter:
             for key in params:
                 self.key = key
                 self.row = self.key_to_row[self.key]
-                os_open(*existing(self.key), self.row[LINK_COL])
+                os_open(*existing(self.key), link(self.row[KEY_COL]))
             return True
 
         if command == "convert":

@@ -13,9 +13,6 @@ import web.xooxle as xooxle
 # Data
 LEXICON_DIR = os.path.join(utils.SITE_DIR, "crum/")
 ROOTS = "dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv"
-ROOT_APPENDICES = (
-    "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv"
-)
 CRUM_DIALECTS = ["S", "Sa", "Sf", "A", "sA", "B", "F", "Fb", "O", "NH"]
 EXPLANATORY_SOURCES = "dictionary/marcion.sourceforge.net/data/img-sources"
 KELLIA_TSV_DIR = "dictionary/kellia.uni-goettingen.de/data/output/tsv/"
@@ -102,12 +99,7 @@ class decker:
 
 
 class CRUM_ROOTS:
-    _roots: pd.DataFrame = utils.TSVCache.read(ROOTS)
-    _appendices: pd.DataFrame = utils.TSVCache.read(ROOT_APPENDICES)
-    assert list(_roots["key"]) == list(_appendices["key"])
-    _appendices.drop("key", axis=1, inplace=True)
-    roots: pd.DataFrame = pd.concat([_roots, _appendices], axis=1)
-    del _roots, _appendices
+    roots: pd.DataFrame = utils.TSVCache.read(ROOTS)
 
 
 # All or nothing!

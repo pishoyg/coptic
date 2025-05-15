@@ -388,7 +388,7 @@ repos:
         name: crum-appendices-validate
         entry: dictionary/marcion.sourceforge.net/appendices_helper.py --validate
         language: system
-        files: ^dictionary/marcion.sourceforge.net/data/input/.*_appendices.tsv$
+        files: ^dictionary/marcion.sourceforge.net/data/input/.*.tsv$
         pass_filenames: false
       # Dawoud's scan sentinels.
       - id: scan-sentinels

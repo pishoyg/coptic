@@ -15,9 +15,7 @@ import utils
 # appendices.
 CRUM_FMT = "https://remnqymi.com/crum/{key}.html"
 ROOTS_MAIN = "dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv"
-ROOTS: str = (
-    "dictionary/marcion.sourceforge.net/data/input/root_appendices.tsv"
-)
+ROOTS: str = "dictionary/marcion.sourceforge.net/data/input/coptwrd.tsv"
 GSPREAD_URL: str = (
     "https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg"
 )
