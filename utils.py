@@ -321,20 +321,6 @@ def read_tsv(path: str | pathlib.Path, sort_values_by=None) -> pd.DataFrame:
     return df
 
 
-# TODO: This cache doesn't work with multiprocessing. It's shared by threads,
-# but not between processes.
-class TSVCache:
-    _cache: dict[str, pd.DataFrame] = {}
-
-    @staticmethod
-    def read(path: str) -> pd.DataFrame:
-        if path in TSVCache._cache:
-            return TSVCache._cache[path]
-        df = read_tsv(path)
-        TSVCache._cache[path] = df
-        return df
-
-
 class GCPClient:
     """GCP client to interact with Google Sheets."""
 
