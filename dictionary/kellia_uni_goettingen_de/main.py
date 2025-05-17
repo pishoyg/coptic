@@ -1244,6 +1244,8 @@ def build(basename: str) -> pd.DataFrame:
     # TODO: (#51) Add network graphs.
 
 
+# TODO: (#399): Export objects and methods, rather than TSVs!
+
 egyptian: pd.DataFrame = build("BBAW_Lexicon_of_Coptic_Egyptian-v4-2020.xml")
 greek: pd.DataFrame = build(
     "DDGLC_Lexicon_of_Greek_Loanwords_in_Coptic-v2-2020.xml",

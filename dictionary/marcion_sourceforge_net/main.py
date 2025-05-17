@@ -177,6 +177,10 @@ def _dialects(word: list[lexical.structured_word], is_root: bool) -> list[str]:
 app.runner().validate()
 img.validate()
 
+# TODO: (#399): Export objects and methods, rather than TSVs!
+# TODO: (#399): Export images as part of this interface, instead of relying on
+# users querying the image directory directly.
+
 # Process roots.
 roots: pd.DataFrame = tsv.roots()
 _process_data(roots, strict=True)

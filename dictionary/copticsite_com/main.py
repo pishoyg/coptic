@@ -369,4 +369,5 @@ def _main() -> pd.DataFrame:
     return df
 
 
+# TODO: (#399): Export objects and methods, rather than a TSV!
 copticsite = _main()
