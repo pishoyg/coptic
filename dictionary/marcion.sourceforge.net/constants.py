@@ -477,7 +477,3 @@ CLEAN = [
     ("{ ", "{"),
     (" }", "}"),
 ]
-
-# The following stats are used to verify the correctness of the script.
-ROOTS_REFERENCE_COUNT = 117
-DERIVATIONS_REFERENCE_COUNT = 52

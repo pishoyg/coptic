@@ -58,17 +58,6 @@ import word as lexical
 
 import utils
 
-_reference_count = 0
-
-
-def reset():
-    global _reference_count
-    _reference_count = 0
-
-
-def verify(want_reference_count):
-    assert _reference_count == want_reference_count
-
 
 def _apply_substitutions(
     line: str,
@@ -227,8 +216,6 @@ def _munch_and_parse_spellings_types_and_references(
         )
         if reference:
             rr.extend(_parse_reference(reference))
-            global _reference_count
-            _reference_count += 1
         if spelling_and_types:
             s, t = _parse_spellings_and_types(
                 spelling_and_types,

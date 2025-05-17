@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
 """Parse Crum's dictionary."""
-import os
-import pathlib
-
 import constants
 import pandas as pd
 import parse
@@ -10,53 +7,8 @@ import tree
 import tsv
 import word as lexical
 
-import utils
-
-_SCRIPT_DIR = pathlib.Path(__file__).parent
-
-MIN_KEY = 1
-MAX_KEY = 3385
-
-OUTPUT = _SCRIPT_DIR / "data" / "output"
-SORT_ROOTS = ["key"]
-SORT_DERIVATIONS = ["key_word", "pos"]
-
-
-def series_to_int(series: pd.Series) -> list[int]:
-    return [int(cell) for cell in series]
-
-
-def write(df: pd.DataFrame, name: str) -> None:
-    utils.to_tsv(df, os.path.join(OUTPUT, "tsv", name + ".tsv"))
-
-
-def main() -> None:
-    # Process roots.
-    roots: pd.DataFrame = tsv.roots()
-    process_data(roots, strict=True)
-    parse.verify(constants.ROOTS_REFERENCE_COUNT * 2)
-    parse.reset()
-
-    # Process derivations.
-    derivations: pd.DataFrame = tsv.derivations()
-    process_data(derivations, strict=False)
-    parse.verify(constants.DERIVATIONS_REFERENCE_COUNT * 2)
-    parse.reset()
-
-    # Gain tree insights.
-    build_trees(roots, derivations)
-
-    # Write the roots.
-    roots.sort_values(by=SORT_ROOTS, key=series_to_int, inplace=True)
-    write(roots, "roots")
-
-    # Write the derivations.
-    derivations.sort_values(
-        by=SORT_DERIVATIONS,
-        key=series_to_int,
-        inplace=True,
-    )
-    write(derivations, "derivations")
+_MIN_KEY = 1
+_MAX_KEY = 3385
 
 
 class _Keyer:
@@ -66,11 +18,11 @@ class _Keyer:
         self.keys = {str(row["key"]) for _, row in df.iterrows()}
 
     def assert_valid_key(self, key: int) -> None:
-        assert key >= MIN_KEY and key <= MAX_KEY
+        assert key >= _MIN_KEY and key <= _MAX_KEY
 
     def next(self, key: int) -> str:
         self.assert_valid_key(key)
-        if key == MAX_KEY:
+        if key == _MAX_KEY:
             return ""
         nxt = int(key) + 1
         while str(nxt) not in self.keys:
@@ -80,7 +32,7 @@ class _Keyer:
 
     def prev(self, key: int) -> str:
         self.assert_valid_key(key)
-        if key == MIN_KEY:
+        if key == _MIN_KEY:
             return ""
         prv = key - 1
         while str(prv) not in self.keys:
@@ -89,7 +41,7 @@ class _Keyer:
         return str(prv)
 
 
-def title(word: list[lexical.structured_word]) -> str:
+def _title(word: list[lexical.structured_word]) -> str:
     return ", ".join(
         w.string(
             include_dialects=False,
@@ -103,7 +55,7 @@ def title(word: list[lexical.structured_word]) -> str:
     )
 
 
-def process_data(df: pd.DataFrame, strict: bool) -> None:
+def _process_data(df: pd.DataFrame, strict: bool) -> None:
     extra_cols: dict[str, list[str]] = {}
 
     def insert(col: str, cell: str) -> None:
@@ -149,7 +101,7 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
             normalize_optional=True,
             normalize_assumed=True,
         )
-        insert("word-title", title(word))
+        insert("word-title", _title(word))
         insert(
             "word-parsed-prettify",
             "\n".join(
@@ -186,7 +138,7 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         df[col] = values
 
 
-def build_trees(roots: pd.DataFrame, derivations: pd.DataFrame) -> None:
+def _build_trees(roots: pd.DataFrame, derivations: pd.DataFrame) -> None:
     derivations["depth"] = tree.depths(derivations)
     # Build trees.
     keys = [row["key"] for _, row in roots.iterrows()]
@@ -219,5 +171,13 @@ def _dialects(word: list[lexical.structured_word], is_root: bool) -> list[str]:
     return sorted(dialects)
 
 
-if __name__ == "__main__":
-    main()
+# Process roots.
+roots: pd.DataFrame = tsv.roots()
+_process_data(roots, strict=True)
+
+# Process derivations.
+derivations: pd.DataFrame = tsv.derivations()
+_process_data(derivations, strict=False)
+
+# Gain tree insights.
+_build_trees(roots, derivations)
