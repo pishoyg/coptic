@@ -54,9 +54,8 @@ import functools
 import re
 
 import utils
-
-from . import constants
-from . import word as lexical
+from dictionary.marcion_sourceforge_net import constants
+from dictionary.marcion_sourceforge_net import word as lexical
 
 
 def _apply_substitutions(

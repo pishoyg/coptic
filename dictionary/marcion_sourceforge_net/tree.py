@@ -3,7 +3,7 @@ import typing
 
 import pandas as pd
 
-from . import constants, parse
+from dictionary.marcion_sourceforge_net import constants, parse
 
 NUM_COLS = 10
 assert not 100 % NUM_COLS

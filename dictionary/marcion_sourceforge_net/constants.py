@@ -1,8 +1,7 @@
 import re
 
+from dictionary.marcion_sourceforge_net import word as lexical
 from morphology import inflect
-
-from . import word as lexical
 
 # Dialects.
 DIALECTS = [

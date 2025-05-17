@@ -1,9 +1,8 @@
 import enum
 import typing
 
+from dictionary.marcion_sourceforge_net import constants
 from morphology import inflect
-
-from . import constants
 
 
 class Gender(enum.Enum):

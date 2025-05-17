@@ -2,10 +2,11 @@
 """Parse Crum's dictionary."""
 import pandas as pd
 
-from . import constants, parse, tree, tsv
-from . import word as lexical
-from . import appendices_helper as app
-from . import img_helper as img
+from dictionary.marcion_sourceforge_net import appendices_helper as app
+from dictionary.marcion_sourceforge_net import constants
+from dictionary.marcion_sourceforge_net import img_helper as img
+from dictionary.marcion_sourceforge_net import parse, tree, tsv
+from dictionary.marcion_sourceforge_net import word as lexical
 
 _MIN_KEY = 1
 _MAX_KEY = 3385
