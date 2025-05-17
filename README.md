@@ -430,9 +430,9 @@ database from other sources:
 3. https://remnqymi.com/crum/3382.html
 4. https://remnqymi.com/crum/3385.html
 
-### [`copticocc.org/`](dictionary/copticocc.org)
+### [`copticocc.org/`](dictionary/copticocc_org)
 
-[`dawoud-D100/`](dictionary/copticocc.org/) contains a digital scan of
+[`dawoud-D100/`](dictionary/copticocc_org/) contains a digital scan of
 Moawad Dawoud's dictionary.
 
 ### [`kellia.uni-goettingen.de/`](dictionary/kellia_uni_goettingen_de)

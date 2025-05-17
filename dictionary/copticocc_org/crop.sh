@@ -4,7 +4,8 @@
 set -o errexit  # Exit upon encountering a failure.
 set -o nounset  # Consider an undefined variable to be an error.
 
-readonly INPUT="dictionary/copticocc.org/data/dawoud-D100"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+readonly INPUT="${SCRIPT_DIR}/data/dawoud-D100"
 readonly OUTPUT="docs/dawoud/"
 
 export OUTPUT  # Make OUTPUT available to subprocesses.

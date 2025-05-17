@@ -157,7 +157,7 @@ kellia_analysis_clean: dictionary/kellia_uni_goettingen_de/data/output/analysis.
 
 ########## DAWOUD ##########
 dawoud_img: FORCE
-	./dictionary/copticocc.org/crop.sh
+	./dictionary/copticocc_org/crop.sh
 
 dawoud_sentinels: FORCE
 	PUB="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-qCcmKVqniHVF6vtmzRoedIqgH96sDWMetp4HMSApUKNCZSqUDi3FnU_tW87yWBH2HPMbjJei9KIL/pub?output=tsv"; \
