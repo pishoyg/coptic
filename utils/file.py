@@ -99,3 +99,7 @@ def read_tsv(path: str | pathlib.Path) -> pd.DataFrame:
         encoding="utf-8",
         keep_default_na=False,
     ).fillna("")
+
+
+def to_tsv(df: pd.DataFrame, path: str | pathlib.Path) -> None:
+    df.to_csv(path, sep="\t", index=False)

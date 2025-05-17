@@ -55,11 +55,10 @@ stats: FORCE
 	./stats.sh --commit
 stats_format: FORCE
 	# Reformat the stats file (useful if you recently added a column).
-	python -c $$'import utils\n\
-	utils.to_tsv(utils.read_tsv("data/stats.tsv"), "data/stats.tsv")'
+	./stats.py --format
 plot: FORCE
 	# Plot stats.
-	./stats.py
+	./stats.py --plot
 
 ########## SERVER ##########
 server: FORCE

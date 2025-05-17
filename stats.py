@@ -1,11 +1,33 @@
 #!/usr/bin/env python3
 """Plot statistics."""
 
+import argparse
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from utils import log
+from utils import file, log
+
+argparser: argparse.ArgumentParser = argparse.ArgumentParser(
+    description="Process Stats.",
+)
+
+_ = argparser.add_argument(
+    "-f",
+    "--format",
+    action="store_true",
+    default=False,
+    help="Reformat the stats file.",
+)
+
+_ = argparser.add_argument(
+    "-p",
+    "--plot",
+    action="store_true",
+    default=False,
+    help="Plot stats.",
+)
 
 TSV_FILE = "data/stats.tsv"
 COLUMNS: dict[str | None, list[str]] = {
@@ -147,7 +169,7 @@ def validate(df: pd.DataFrame) -> None:
             log.fatal(key, "is empty!")
 
 
-def main():
+def plot():
     # Read the TSV file.
     df = pd.read_csv(TSV_FILE, sep="\t")
     validate(df)
@@ -190,6 +212,18 @@ def main():
         plt.xticks(rotation=45)
         plt.tight_layout()
         plt.show()
+
+
+def reformat():
+    file.to_tsv(file.read_tsv(TSV_FILE), TSV_FILE)
+
+
+def main():
+    args = argparser.parse_args()
+    if args.format:
+        reformat()
+    if args.plot:
+        plot()
 
 
 if __name__ == "__main__":
