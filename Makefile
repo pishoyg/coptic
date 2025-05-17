@@ -40,7 +40,7 @@ all: generate_1 add generate_2 test report
 
 # generate_1 rules are prerequisites for generate_2 rules.
 .PHONY: generate_1
-generate_1: bible copticsite crum crum_appendices crum_img kellia dawoud_img transpile
+generate_1: bible copticsite crum crum_appendices crum_img dawoud_img transpile
 
 .PHONY: generate_2
 generate_2: flashcards kindle
@@ -157,18 +157,15 @@ camera_images: FORCE
 		| while read -r GLOB; do ls $${GLOB} | xargs open; done
 
 ########## KELLIA ##########
-kellia: FORCE
-	./dictionary/kellia.uni-goettingen.de/main.py
-
 kellia_analysis: FORCE
-	./dictionary/kellia.uni-goettingen.de/analysis.py
+	./dictionary/kellia_uni_goettingen_de/analysis.py
 
-kellia_analysis_clean: dictionary/kellia.uni-goettingen.de/data/output/analysis.json
+kellia_analysis_clean: dictionary/kellia_uni_goettingen_de/data/output/analysis.json
 	# Reset the KELLIA analysis JSON. Seemingly, it gets rewritten in a
 	# nondeterministic manner by the pipeline, introducing noisy changes in the
 	# repo, so we reset it to remove the noise.
 	# TODO: Make the pipeline deterministic, and remove this rule.
-	git restore "dictionary/kellia.uni-goettingen.de/data/output/analysis.json"
+	git restore "dictionary/kellia_uni_goettingen_de/data/output/analysis.json"
 
 ########## DAWOUD ##########
 dawoud_img: FORCE

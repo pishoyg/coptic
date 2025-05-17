@@ -7,6 +7,7 @@ from collections import abc, defaultdict
 import deck
 import pandas as pd
 
+import dictionary.kellia_uni_goettingen_de.main as kellia
 import dictionary.marcion_sourceforge_net.main as crum
 import utils
 import web.xooxle as xooxle
@@ -15,7 +16,6 @@ import web.xooxle as xooxle
 LEXICON_DIR = os.path.join(utils.SITE_DIR, "crum/")
 CRUM_DIALECTS = ["S", "Sa", "Sf", "A", "sA", "B", "F", "Fb", "O", "NH"]
 EXPLANATORY_SOURCES = "dictionary/marcion_sourceforge_net/data/img-sources"
-KELLIA_TSV_DIR = "dictionary/kellia.uni-goettingen.de/data/output/tsv/"
 COPTICSITE_TSV = "dictionary/copticsite.com/data/output/tsv/output.tsv"
 
 CRUM_JS = "crum.js"  # Relative to the HTML write directory.
@@ -321,9 +321,7 @@ class Crum(decker):
         data = TLA_ID_RE.sub("", data)
         return data
 
-    for _, row in utils.TSVCache.read(
-        os.path.join(KELLIA_TSV_DIR, "comprehensive.tsv"),
-    ).iterrows():
+    for _, row in kellia.comprehensive.iterrows():
         key = __tla_col(row, "entry_xml_id")
         title = (
             __tla_col(row, "orthstring-pishoy")
@@ -848,11 +846,9 @@ class KELLIA(decker):
         self,
         deck_name: str,
         deck_id: int,
-        tsv_basename: str,
+        tsv: pd.DataFrame,
     ) -> None:
-        self._tsv = utils.TSVCache.read(
-            os.path.join(KELLIA_TSV_DIR, f"{tsv_basename}.tsv"),
-        )
+        self._tsv: pd.DataFrame = tsv
         super().__init__(deck_name, deck_id, False)
 
     def __cell(
@@ -967,17 +963,17 @@ DECKERS: list[decker] = [
     KELLIA(
         KELLIA_COMPREHENSIVE,
         1284010391,
-        "comprehensive",
+        kellia.comprehensive,
     ),
     KELLIA(
         KELLIA_EGYPTIAN,
         1284010392,
-        "egyptian",
+        kellia.egyptian,
     ),
     KELLIA(
         KELLIA_GREEK,
         1284010393,
-        "greek",
+        kellia.greek,
     ),
 ]
 

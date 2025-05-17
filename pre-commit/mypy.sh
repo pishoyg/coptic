@@ -18,7 +18,7 @@ _mypy() {
 SUBPROJECTS=(
   "bible"
   "dictionary/copticsite.com"
-  "dictionary/kellia.uni-goettingen.de"
+  "dictionary/kellia_uni_goettingen_de"
   "dictionary/marcion_sourceforge_net"
   "flashcards"
   "morphology"

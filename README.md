@@ -448,7 +448,7 @@ database from other sources:
 [`dawoud-D100/`](dictionary/copticocc.org/) contains a digital scan of
 Moawad Dawoud's dictionary.
 
-### [`kellia.uni-goettingen.de/`](dictionary/kellia.uni-goettingen.de)
+### [`kellia.uni-goettingen.de/`](dictionary/kellia_uni_goettingen_de)
 
 We had some plans to combine the strength of KELLIA and Crum
 ([#53](https://github.com/pishoyg/coptic/issues/53),
