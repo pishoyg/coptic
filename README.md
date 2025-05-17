@@ -162,13 +162,18 @@ Besides this file, docs can be found in:
 not optional, and many of our pipelines assume that the pre-commits have done
 their job. Their installation should be covered by `make install`. They are
 defined in [`.pre-commit-config.yaml`](.pre-commit-config.yaml). They run
-automatically before a commit, but you can trigger them with Make recipes as
-well by typing `make add`, `make index`, or `make test` (the three are
-synonymous).
-Until [#120](https://github.com/pishoyg/coptic/issues/120) is resolved, you
-will need to pay some attention to when to trigger them manually. As a rule of
-thumb, run them once after each pipeline, and before starting another
-downstream pipeline.
+automatically before a commit. You can execute the following to appease them
+(keep running them and applying their changes until they all pass):
+
+```sh
+make test`
+```
+
+Our pipelines currently have minimal dependencies. For a pair of dependent
+pipelines (where one downstream pipeline consumes the output of another upstream
+pipeline), the downstream will fare well even if pre-commits haven't been
+executed on the output of the upstream pipeline.
+If this were to change, reopen [#120](https://github.com/pishoyg/coptic/issues/120).
 
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 

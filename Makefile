@@ -34,22 +34,12 @@ clean: FORCE
 		--exclude ".myenv" \
 		--exclude "google_cloud_keyfile.json" \
 
-########## CONTENT GENERATION, TESTS, and FORMATTING ##########
+########## CONTENT GENERATION, TESTS and FORMATTING ##########
 .PHONY: all
-all: generate_1 add generate_2 test report
+all: crum flashcards kindle bible transpile test report
 
-# generate_1 rules are prerequisites for generate_2 rules.
-.PHONY: generate_1
-generate_1: bible crum crum_appendices crum_img dawoud_img transpile
-
-.PHONY: generate_2
-generate_2: flashcards kindle
-
-# We have to duplicate the add / test rule, otherwise Make would
-# deduplicate a rule that is mentioned twice as a prerequisite of some rule,
-# therefore executing it only once!
 .PHONY: test
-add test: FORCE
+test: FORCE
 	until git add --all && pre-commit run; do : ; done
 
 ########## STATS ##########
