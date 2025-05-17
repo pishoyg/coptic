@@ -10,7 +10,7 @@ import dictionary.copticsite_com.main as copticsite
 import dictionary.kellia_uni_goettingen_de.main as kellia
 import dictionary.marcion_sourceforge_net.main as crum
 import utils
-import web.xooxle as xooxle
+import xooxle
 from flashcards import deck
 
 # Data
