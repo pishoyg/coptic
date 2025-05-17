@@ -174,9 +174,8 @@ downstream pipeline.
 
 ## `data/` Subdirectories
 
-Most of our projects have a `data` subdirectory. We have somewhat strict rules
-regarding its content. It usually (which, in our repo, means _almost always_)
-contains three subdirectories:
+Most of our projects have a `data` subdirectory. Pay attention to the following
+distinction:
 
 - `raw/`: Data that is **copied** from elsewhere. This would, for example,
 include the Marcion SQL tables copied as is, unmodified. The contents of this
@@ -185,10 +184,6 @@ directory remain true to the original source.
 - `input/`: Data that we either *modified* or *created*. If we want to fix
 typos to data that we copied, we don't touch the data under `raw/`, but we take
 the liberty to modify the copies that live under `input/`.
-
-- `output/`: This contains the data written by our pipelines,
-**one subdirectory per format**. If your pipeline writes both TSV and HTML,
-they should go respectively to `output/tsv/` and `output/html/`.
 
 ## Planning
 
