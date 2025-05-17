@@ -311,8 +311,15 @@ def to_tsv(df: pd.DataFrame, path: str, **kwargs):
     df.to_csv(path, sep="\t", index=False, **kwargs)
 
 
-def read_tsv(path: str, sort_values_by=None) -> pd.DataFrame:
-    df = pd.read_csv(path, sep="\t", dtype=str, encoding="utf-8").fillna("")
+def read_tsv(path: str | pathlib.Path, sort_values_by=None) -> pd.DataFrame:
+    path = str(path)
+    df = pd.read_csv(
+        path,
+        sep="\t",
+        dtype=str,
+        encoding="utf-8",
+        keep_default_na=False,
+    ).fillna("")
     if sort_values_by:
         df.sort_values(sort_values_by, inplace=True)
     return df

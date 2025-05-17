@@ -390,6 +390,11 @@ repos:
         language: system
         files: ^dictionary/marcion.sourceforge.net/data/input/.*.tsv$
         pass_filenames: false
+      - id: crum-tsv-validate
+        name: crum-tsv-validate
+        entry: dictionary/marcion.sourceforge.net/validate.py
+        language: system
+        files: ^dictionary/marcion.sourceforge.net/data/input/.*.tsv$
       # Dawoud's scan sentinels.
       - id: scan-sentinels
         name: scan-sentinels

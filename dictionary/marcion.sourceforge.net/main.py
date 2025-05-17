@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
+"""Parse Crum's dictionary."""
 import os
 
 import constants
 import pandas as pd
 import parse
 import tree
+import tsv
 import word as lexical
 
 import utils
-
-COPTWRD_TSV = "dictionary/marcion.sourceforge.net/data/input/coptwrd.tsv"
-COPTDRV_TSV = "dictionary/marcion.sourceforge.net/data/input/coptdrv.tsv"
 
 MIN_KEY = 1
 MAX_KEY = 3385
@@ -30,13 +29,13 @@ def write(df: pd.DataFrame, name: str) -> None:
 
 def main() -> None:
     # Process roots.
-    roots = utils.read_tsv(COPTWRD_TSV)
+    roots: pd.DataFrame = tsv.roots()
     process_data(roots, strict=True)
     parse.verify(constants.ROOTS_REFERENCE_COUNT * 2)
     parse.reset()
 
     # Process derivations.
-    derivations = utils.read_tsv(COPTDRV_TSV)
+    derivations: pd.DataFrame = tsv.derivations()
     process_data(derivations, strict=False)
     parse.verify(constants.DERIVATIONS_REFERENCE_COUNT * 2)
     parse.reset()
@@ -57,7 +56,9 @@ def main() -> None:
     write(derivations, "derivations")
 
 
-class keyer:
+class _Keyer:
+    """Store and track word keys."""
+
     def __init__(self, df: pd.DataFrame):
         self.keys = {str(row["key"]) for _, row in df.iterrows()}
 
@@ -68,21 +69,21 @@ class keyer:
         self.assert_valid_key(key)
         if key == MAX_KEY:
             return ""
-        next = int(key) + 1
-        while str(next) not in self.keys:
-            next += 1
-        self.assert_valid_key(next)
-        return str(next)
+        nxt = int(key) + 1
+        while str(nxt) not in self.keys:
+            nxt += 1
+        self.assert_valid_key(nxt)
+        return str(nxt)
 
     def prev(self, key: int) -> str:
         self.assert_valid_key(key)
         if key == MIN_KEY:
             return ""
-        prev = key - 1
-        while str(prev) not in self.keys:
-            prev -= 1
-        self.assert_valid_key(prev)
-        return str(prev)
+        prv = key - 1
+        while str(prv) not in self.keys:
+            prv -= 1
+        self.assert_valid_key(prv)
+        return str(prv)
 
 
 def title(word: list[lexical.structured_word]) -> str:
@@ -107,7 +108,7 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
             extra_cols[col] = []
         extra_cols[col].append(cell)
 
-    keysmith = keyer(df)
+    keysmith = _Keyer(df)
     for _, row in df.iterrows():
         if strict:
             insert(
@@ -173,7 +174,7 @@ def process_data(df: pd.DataFrame, strict: bool) -> None:
         else:
             insert("crum-link", constants.CRUM_PAGE_FMT.format(key=crum))
         dialects: list[str] = _dialects(word, is_root=strict)
-        insert(f"dialects", ", ".join(dialects))
+        insert("dialects", ", ".join(dialects))
         if strict:
             insert("key-next", keysmith.next(int(row["key"])))
             insert("key-prev", keysmith.prev(int(row["key"])))
