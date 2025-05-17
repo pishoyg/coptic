@@ -4,7 +4,6 @@ import re
 import typing
 from collections import abc, defaultdict
 
-import deck
 import pandas as pd
 
 import dictionary.copticsite_com.main as copticsite
@@ -12,6 +11,7 @@ import dictionary.kellia_uni_goettingen_de.main as kellia
 import dictionary.marcion_sourceforge_net.main as crum
 import utils
 import web.xooxle as xooxle
+from flashcards import deck
 
 # Data
 LEXICON_DIR = os.path.join(utils.SITE_DIR, "crum/")

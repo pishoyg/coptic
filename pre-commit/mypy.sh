@@ -22,7 +22,6 @@ SUBPROJECTS=(
   "dictionary/marcion_sourceforge_net"
   "flashcards"
   "morphology"
-  "site"
 )
 
 # Run `mypy` once against each of the prefixes above.

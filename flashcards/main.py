@@ -4,11 +4,10 @@
 import argparse
 import os
 
-import constants
-import deck
 import genanki  # type: ignore[import-untyped]
 
 import utils
+from flashcards import constants, deck
 from web import xooxle
 
 ANKI_PATH = os.path.join(constants.LEXICON_DIR, "anki/coptic.apkg")
