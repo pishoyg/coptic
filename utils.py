@@ -307,10 +307,6 @@ def json_dumps(j, **kwargs) -> str:
     )
 
 
-def to_tsv(df: pd.DataFrame, path: str, **kwargs):
-    df.to_csv(path, sep="\t", index=False, **kwargs)
-
-
 def read_tsv(path: str | pathlib.Path, sort_values_by=None) -> pd.DataFrame:
     path = str(path)
     df = pd.read_csv(

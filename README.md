@@ -341,7 +341,7 @@ primary targets of our statistics are:
 
 This directory contains the data and logic for processing our dictionaries.
 
-### [`marcion.sourceforge.net/`](dictionary/marcion.sourceforge.net)
+### [`marcion.sourceforge.net/`](dictionary/marcion_sourceforge_net)
 
 #### Image Collection
 
@@ -408,7 +408,7 @@ prefer the height to fall within a range of 200 to 400 pixels.
 
 1. Collecting sources is mandatory. We always record the URL that an image is
 retrieved from. Our [`img_helper`](
-dictionary/marcion.sourceforge.net/img_helper.py) script, which we use to
+dictionary/marcion_sourceforge_net/img_helper.py) script, which we use to
 process images, can be supplied by a URL, and it will download the image and
 store the source (and also resize the image to the final version). This
 simplifies the process.
@@ -455,7 +455,7 @@ We had some plans to combine the strength of KELLIA and Crum
 [#6](https://github.com/pishoyg/coptic/issues/6)), but they have been
 abandoned.
 
-### [`copticsite.com/`](dictionary/copticsite.com/)
+### [`copticsite.com/`](dictionary/copticsite_com/)
 
 ## [`bible/`](bible/)
 
