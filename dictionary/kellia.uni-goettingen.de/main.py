@@ -8,6 +8,7 @@
 
 import glob
 import os
+import pathlib
 import re
 import typing
 import xml.etree.ElementTree as ET
@@ -17,22 +18,23 @@ import pandas as pd
 
 import utils
 
+_SCRIPT_DIR = pathlib.Path(__file__).parent
 CLEAN = set("ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ ")
 CRUM_RE = re.compile(r"\b(CD ([0-9]+[ab]?)-?[0-9]*[ab]?)\b")
 SENSE_CHILDREN = ["quote", "definition", "bibl", "ref", "xr"]
 
-XML_PATH = [
-    "dictionary/kellia.uni-goettingen.de/data/raw/v1.2/BBAW_Lexicon_of_Coptic_Egyptian-v4-2020.xml",
-    "dictionary/kellia.uni-goettingen.de/data/raw/v1.2/DDGLC_Lexicon_of_Greek_Loanwords_in_Coptic-v2-2020.xml",
-    "dictionary/kellia.uni-goettingen.de/data/raw/v1.2/Comprehensive_Coptic_Lexicon-v1.2-2020.xml",
-]
+_PATHS = {
+    str(_SCRIPT_DIR / "data" / "raw" / "v1.2" / key): str(
+        _SCRIPT_DIR / "data" / "output" / "tsv" / value,
+    )
+    for key, value in {
+        "BBAW_Lexicon_of_Coptic_Egyptian-v4-2020.xml": "egyptian.tsv",
+        "DDGLC_Lexicon_of_Greek_Loanwords_in_Coptic-v2-2020.xml": "greek.tsv",
+        "Comprehensive_Coptic_Lexicon-v1.2-2020.xml": "comprehensive.tsv",
+    }.items()
+}
 # TODO: (#51) Support entity types.
 PUB_CORPORA = None
-OUTPUT = [
-    "dictionary/kellia.uni-goettingen.de/data/output/tsv/egyptian.tsv",
-    "dictionary/kellia.uni-goettingen.de/data/output/tsv/greek.tsv",
-    "dictionary/kellia.uni-goettingen.de/data/output/tsv/comprehensive.tsv",
-]
 
 entity_types: defaultdict[str, set[str]] = defaultdict(set)
 
@@ -1161,8 +1163,7 @@ def main():
     super_id = 1
     entry_id = 1
 
-    assert len(XML_PATH) == len(OUTPUT)
-    for xml_path, output in zip(XML_PATH, OUTPUT):
+    for xml_path, output in _PATHS.items():
         text = (
             ET.parse(xml_path)
             .getroot()

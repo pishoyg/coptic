@@ -1,15 +1,20 @@
 #!/usr/bin/env python3
 import os
+import pathlib
 import re
 
 import pandas as pd
 
 import utils
 
-INPUT_XLSX: str = (
-    "dictionary/copticsite.com/data/raw/coptic dictionary northern dialect unicode complete.xlsx"
+_SCRIPT_DIR = pathlib.Path(__file__).parent
+INPUT_XLSX: str = str(
+    _SCRIPT_DIR
+    / "data"
+    / "raw"
+    / "coptic dictionary northern dialect unicode complete.xlsx",
 )
-OUTPUT: str = "dictionary/copticsite.com/data/output/"
+OUTPUT: str = str(_SCRIPT_DIR / "data" / "output/")
 
 UNNAMED_PREFIX: str = "Unnamed: "
 MEANING_COL: str = "Meaning"

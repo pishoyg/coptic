@@ -4,6 +4,7 @@
 import html
 import json
 import os
+import pathlib
 import re
 import typing
 
@@ -14,11 +15,12 @@ import utils
 
 # Input parameters
 
-JSON: str = "bible/stshenouda.org/data/input/bible.json"
-INPUT_DIR: str = "bible/stshenouda.org/data/raw/"
+_SCRIPT_DIR = pathlib.Path(__file__).parent
+JSON: str = str(_SCRIPT_DIR / "data/input/bible.json")
+INPUT_DIR: str = str(_SCRIPT_DIR / "data/raw/")
 # TODO: (#432) Include the sources in the output.
-SOURCES_DIR: str = "bible/stshenouda.org/data/raw/Sources/"
-COVER: str = "bible/stshenouda.org/data/img/stauros.jpeg"
+SOURCES_DIR: str = str(_SCRIPT_DIR / "data/raw/Sources/")
+COVER: str = str(_SCRIPT_DIR / "data/img/stauros.jpeg")
 
 LANGUAGES: list[str] = [
     "Bohairic",

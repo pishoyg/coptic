@@ -24,7 +24,9 @@ MIN_RESIZE_HEIGHT = 100  # Minimum allowed height of the resized image. (#240)
 PREFER_MIN_RESIZE_HEIGHT = 200
 MAX_RESIZE_HEIGHT = 500  # Maximum allowed height of the resized image. (#240)
 PREFER_MAX_RESIZE_HEIGHT = 400
-IMG_DIR = "dictionary/marcion.sourceforge.net/data/img"
+
+_SCRIPT_DIR = pathlib.Path(__file__).parent
+IMG_DIR = str(_SCRIPT_DIR / "data/img")
 IMG_300_DIR = "docs/crum/explanatory/"
 
 FILE_NAME_RE = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")

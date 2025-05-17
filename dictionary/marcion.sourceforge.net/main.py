@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Parse Crum's dictionary."""
 import os
+import pathlib
 
 import constants
 import pandas as pd
@@ -11,10 +12,12 @@ import word as lexical
 
 import utils
 
+_SCRIPT_DIR = pathlib.Path(__file__).parent
+
 MIN_KEY = 1
 MAX_KEY = 3385
 
-OUTPUT = "dictionary/marcion.sourceforge.net/data/output"
+OUTPUT = _SCRIPT_DIR / "data" / "output"
 SORT_ROOTS = ["key"]
 SORT_DERIVATIONS = ["key_word", "pos"]
 

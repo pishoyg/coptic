@@ -3,14 +3,22 @@
 # https://github.com/KELLIA/dictionary/blob/master/utils/dictionary_reader.py.
 # TODO: There are some typos in the data. Fix at the origin.
 import collections
+import pathlib
 import re
 
 import bs4
 
 import utils
 
-INPUT_XML = "dictionary/kellia.uni-goettingen.de/data/raw/v1.2/Comprehensive_Coptic_Lexicon-v1.2-2020.xml"
-OUTPUT = "dictionary/kellia.uni-goettingen.de/data/output/analysis.json"
+_SCRIPT_DIR = pathlib.Path(__file__).parent
+INPUT_XML = (
+    _SCRIPT_DIR
+    / "data"
+    / "raw"
+    / "v1.2"
+    / "Comprehensive_Coptic_Lexicon-v1.2-2020.xml"
+)
+OUTPUT = _SCRIPT_DIR / "data" / "output" / "analysis.json"
 
 MAX_LIST_LEN = 10
 LIST_ELEMENT_CLOSING_QUOTE = re.compile(r'",\s+')

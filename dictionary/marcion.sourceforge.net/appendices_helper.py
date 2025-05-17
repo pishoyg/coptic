@@ -2,6 +2,7 @@
 import argparse
 import collections
 import json
+import pathlib
 import shlex
 import subprocess
 import threading
@@ -13,9 +14,10 @@ import utils
 
 # TODO: Add validation for derivations once we start populating their
 # appendices.
+_SCRIPT_DIR = pathlib.Path(__file__).parent
 CRUM_FMT = "https://remnqymi.com/crum/{key}.html"
-ROOTS_MAIN = "dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv"
-ROOTS: str = "dictionary/marcion.sourceforge.net/data/input/coptwrd.tsv"
+ROOTS_MAIN = _SCRIPT_DIR / "data/output/tsv/roots.tsv"
+ROOTS = _SCRIPT_DIR / "data/input/coptwrd.tsv"
 GSPREAD_URL: str = (
     "https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg"
 )
@@ -466,7 +468,7 @@ class validator:
             if cat not in KNOWN_CATEGORIES:
                 utils.throw(key, "has an unknown category:", cat)
 
-    def validate(self, path: str, roots: bool = False) -> None:
+    def validate(self, path: str | pathlib.Path, roots: bool = False) -> None:
         df: pd.DataFrame = utils.read_tsv(path)
         for _, row in df.iterrows():
             key: str = row[KEY_COL]
