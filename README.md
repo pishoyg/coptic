@@ -16,7 +16,6 @@ that aims to make the Coptic language more **learnable**.
 
 - [Technical Docs](#technical-docs)
   - [Hosting](#hosting)
-  - [Diagram](#diagram)
   - [Getting started](#getting-started)
   - [`data/` Subdirectories](#data-subdirectories)
   - [Planning](#planning)
@@ -64,17 +63,6 @@ Drive](https://drive.google.com/drive/folders/17jI92CKumjYQTXghThaaejPeD8ZbifPm?
 and [Google Search
 Console](https://search.google.com/search-console?resource_id=sc-domain%3Aremnqymi.com)
 for traffic tracking and analysis.
-
-## Diagram
-
-<div align="center">
-   <figure>
-      <img src="data/coptic.drawio.png" alt="diagram"/>
-   </figure>
-</div>
-
-*NOTE: You can update the diagram by uploading it to
-[draw.io](https://draw.io/).*
 
 ## Getting started
 
@@ -135,10 +123,9 @@ needs to be run once, while `.env` needs to be sourced for each session.
    If there are missing binaries that you need to download them, `make install`
    will let you know.
 
-1. Our pipelines are defined in [`Makefile`](Makefile), and they correspond to
-blue circles in the diagram. Other pipelines in [`Makefile`](Makefile) are only
-used during development and testing, and are not relevant for output
-(re)generation.
+1. Our pipelines are defined in [`Makefile`](Makefile). Though some pipelines in
+   [`Makefile`](Makefile) are only used during development and testing, and are
+not relevant for output (re)generation.
 
 1. Keep in mind that parameters are written with the assumption that they are
    being invoked from the repo's root directory, rather than from the directory
