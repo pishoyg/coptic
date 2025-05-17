@@ -80,7 +80,7 @@ transpile: FORCE
 
 ########## BIBLE ##########
 bible: FORCE
-	./bible/stshenouda.org/main.py
+	./bible/stshenouda_org/main.py
 
 epub_publish: REQUIRE_DRIVE_DIR FORCE
 	cp \

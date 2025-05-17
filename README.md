@@ -448,7 +448,7 @@ abandoned.
 
 This directory contains the data and logic for processing the Bible corpus.
 
-### [`stshenouda.org/`](bible/stshenouda.org/)
+### [`stshenouda.org/`](bible/stshenouda_org/)
 
 There are several published versions of the Coptic Bible. The most
 recent, and most complete, is that of [St. Shenouda the Archmandrite
