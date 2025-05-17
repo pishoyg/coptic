@@ -369,32 +369,11 @@ repos:
 
   - repo: local
     hooks:
-      # Crum Images
-      - id: crum-img-validate
-        name: crum-img-validate
-        entry: dictionary/marcion_sourceforge_net/img_helper.py --validate
+      - id: crum-validate
+        name: crum-validate
+        entry: dictionary/marcion_sourceforge_net/main.py
         language: system
-        # NOTE: This hook should also run when files are deleted. But
-        # pre-commits don't work that way! If a file is deleted, even if it
-        # matches the pattern below, the hook won't be triggered.
-        # We still use the pattern to run the hook selectively because it's
-        # too slow. For deletions, we rely on the developer's memory, as well
-        # as sporadic runs of the scripts triggered by other operations such as
-        # image modifications and additions, to ensure that the files that need
-        # to be deleted are deleted.
-        files: ^dictionary/marcion_sourceforge_net/data/img.*
-        pass_filenames: false
-      - id: crum-appendices-validate
-        name: crum-appendices-validate
-        entry: dictionary/marcion_sourceforge_net/appendices_helper.py --validate
-        language: system
-        files: ^dictionary/marcion_sourceforge_net/data/input/.*.tsv$
-        pass_filenames: false
-      - id: crum-tsv-validate
-        name: crum-tsv-validate
-        entry: dictionary/marcion_sourceforge_net/validate.py
-        language: system
-        files: ^dictionary/marcion_sourceforge_net/data/input/.*.tsv$
+        files: ^dictionary/marcion_sourceforge_net/
       # Dawoud's scan sentinels.
       - id: scan-sentinels
         name: scan-sentinels

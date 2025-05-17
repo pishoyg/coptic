@@ -4,6 +4,8 @@ import pandas as pd
 
 from . import constants, parse, tree, tsv
 from . import word as lexical
+from . import appendices_helper as app
+from . import img_helper as img
 
 _MIN_KEY = 1
 _MAX_KEY = 3385
@@ -168,6 +170,11 @@ def _dialects(word: list[lexical.structured_word], is_root: bool) -> list[str]:
     assert all(d in constants.DIALECTS for d in dialects)
     return sorted(dialects)
 
+
+# Run external validators. While this may not be needed to run the parser, it's
+# desirable to execute it in the same entry point as the parser.
+app.runner().validate()
+img.validate()
 
 # Process roots.
 roots: pd.DataFrame = tsv.roots()
