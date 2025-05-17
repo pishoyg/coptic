@@ -186,11 +186,6 @@ directory remain true to the original source.
 typos to data that we copied, we don't touch the data under `raw/`, but we take
 the liberty to modify the copies that live under `input/`.
 
-   This directory also includes the data that we created ourselves.
-
-   You can show the delta between raw and input data using `git diff
-   --no-index`. It's also good to be aware of the `--word-diff` flag.
-
 - `output/`: This contains the data written by our pipelines,
 **one subdirectory per format**. If your pipeline writes both TSV and HTML,
 they should go respectively to `output/tsv/` and `output/html/`.
