@@ -1,33 +1,29 @@
 #!/usr/bin/env python3
-import os
 import pathlib
 import re
 
 import pandas as pd
 
-import utils
-
 _SCRIPT_DIR = pathlib.Path(__file__).parent
-INPUT_XLSX: str = str(
+_INPUT_XLSX: str = str(
     _SCRIPT_DIR
     / "data"
     / "raw"
     / "coptic dictionary northern dialect unicode complete.xlsx",
 )
-OUTPUT: str = str(_SCRIPT_DIR / "data" / "output/")
 
-UNNAMED_PREFIX: str = "Unnamed: "
-MEANING_COL: str = "Meaning"
-ORIGIN_COL: str = "Origin"
-COPTIC_COL: str = "Coptic Unicode Alphabet"
-KIND_COL: str = "Word Kind"
-GENDER_COL: str = "Word Gender"
-SUFFIX_COL: str = "suffix"
-PRETTIFY_COL: str = "prettify"
+_UNNAMED_PREFIX: str = "Unnamed: "
+_MEANING_COL: str = "Meaning"
+_ORIGIN_COL: str = "Origin"
+_COPTIC_COL: str = "Coptic Unicode Alphabet"
+_KIND_COL: str = "Word Kind"
+_GENDER_COL: str = "Word Gender"
+_SUFFIX_COL: str = "suffix"
+_PRETTIFY_COL: str = "prettify"
 
 # SUFFIX maps the word kinds to a map of word genders to suffixes.
 # TODO: (#10) Revisit the suffixes. Make display more friendly.
-SUFFIX: dict[str, dict[str, str]] = {
+_SUFFIX: dict[str, dict[str, str]] = {
     "": {
         "": "",
         "صيغة ضميرية يأتي بعدها ضمير مفعول": "",
@@ -280,11 +276,11 @@ SUFFIX: dict[str, dict[str, str]] = {
 }
 
 
-ENGLISH_WORD_RE: re.Pattern = re.compile("[A-Za-z]")
-COPTIC_WORD_RE: re.Pattern = re.compile("([Ⲁ-ⲱϢ-ϯⳈⳉ]+)")
+_ENGLISH_WORD_RE: re.Pattern = re.compile("[A-Za-z]")
+_COPTIC_WORD_RE: re.Pattern = re.compile("([Ⲁ-ⲱϢ-ϯⳈⳉ]+)")
 
 
-OTHER_ACCEPTED_CHARS = {
+_OTHER_ACCEPTED_CHARS = {
     "…",
     " ",
     ".",
@@ -302,7 +298,7 @@ OTHER_ACCEPTED_CHARS = {
     "̅",
 }
 
-FIXES: dict[str, str] = {
+_FIXES: dict[str, str] = {
     "ὰ": "ⲁ̀",
     "ὸ": "ⲟ̀",
     "ή": "ⲏ̀",
@@ -313,66 +309,64 @@ FIXES: dict[str, str] = {
     "ː": ":",
 }
 
-MACRONED_LETTER: re.Pattern = re.compile("¯(.)")
-BACKTICKED_LETTER: re.Pattern = re.compile("`(.)")
+_MACRONED_LETTER: re.Pattern = re.compile("¯(.)")
+_BACKTICKED_LETTER: re.Pattern = re.compile("`(.)")
 
 
-def known(w: str) -> bool:
+def _known(w: str) -> bool:
     assert len(w) == 1
     return bool(
-        COPTIC_WORD_RE.fullmatch(w)
-        or ENGLISH_WORD_RE.fullmatch(w)
-        or w in OTHER_ACCEPTED_CHARS,
+        _COPTIC_WORD_RE.fullmatch(w)
+        or _ENGLISH_WORD_RE.fullmatch(w)
+        or w in _OTHER_ACCEPTED_CHARS,
     )
 
 
-def normalize(word: str) -> str:
-    word = "".join([FIXES.get(char, char) for char in word])
-    word = MACRONED_LETTER.sub(r"\1̅", word)
-    word = BACKTICKED_LETTER.sub(r"\1̀", word)
+def _normalize(word: str) -> str:
+    word = "".join([_FIXES.get(char, char) for char in word])
+    word = _MACRONED_LETTER.sub(r"\1̅", word)
+    word = _BACKTICKED_LETTER.sub(r"\1̀", word)
     assert all(
-        known(w) for w in word
-    ), f"'{word}': {[w for w in word if not known(w)]}"
+        _known(w) for w in word
+    ), f"'{word}': {[w for w in word if not _known(w)]}"
     return word
 
 
-def main() -> None:
-    df: pd.DataFrame = pd.read_excel(INPUT_XLSX, dtype=str).fillna("")
+def _main() -> pd.DataFrame:
+    df: pd.DataFrame = pd.read_excel(_INPUT_XLSX, dtype=str).fillna("")
     df.dropna(inplace=True)
     df = df.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
-    df[ORIGIN_COL] = df[MEANING_COL]
+    df[_ORIGIN_COL] = df[_MEANING_COL]
     meaning: list[str] = []
     prettify: list[str] = []
     suffix: list[str] = []
     for _, row in df.iterrows():
         cur: dict[int, str] = {}
         for key in row.keys():
-            if key.startswith(UNNAMED_PREFIX):
+            if key.startswith(_UNNAMED_PREFIX):
                 value: str = str(row[key])
                 if not value:
                     continue
-                key = int(key[len(UNNAMED_PREFIX) :])
+                key = int(key[len(_UNNAMED_PREFIX) :])
                 cur[key] = value
         meaning.append("\n".join(v for _, v in sorted(cur.items())))
         del cur
-        p = row[COPTIC_COL]
-        kind = row[KIND_COL]
-        gender = row[GENDER_COL]
-        sfx = SUFFIX[kind][gender]
+        p = row[_COPTIC_COL]
+        kind = row[_KIND_COL]
+        gender = row[_GENDER_COL]
+        sfx = _SUFFIX[kind][gender]
         suffix.append(sfx)
         if sfx:
             p = p + " " + sfx
-        p = normalize(p)
+        p = _normalize(p)
         prettify.append(p)
-    df[MEANING_COL] = meaning
-    df[PRETTIFY_COL] = prettify
-    df[SUFFIX_COL] = suffix
+    df[_MEANING_COL] = meaning
+    df[_PRETTIFY_COL] = prettify
+    df[_SUFFIX_COL] = suffix
     for key in df.keys():
-        if key.startswith(UNNAMED_PREFIX):
+        if key.startswith(_UNNAMED_PREFIX):
             df.drop(key, axis=1, inplace=True)
+    return df
 
-    utils.to_tsv(df, os.path.join(OUTPUT, "tsv", "output.tsv"))
 
-
-if __name__ == "__main__":
-    main()
+copticsite = _main()

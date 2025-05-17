@@ -188,7 +188,7 @@ LOC_ARCHIVE=$(loc_archive)
 LOC=$(( $(loc .) + LOC_ARCHIVE))
 
 LOC_CRUM=$(loc "dictionary/marcion_sourceforge_net")
-LOC_COPTICSITE=$(loc "dictionary/copticsite.com")
+LOC_COPTICSITE=$(loc "dictionary/copticsite_com")
 LOC_KELLIA=$(loc "dictionary/kellia_uni_goettingen_de")
 LOC_DAWOUD="$(loc "dictionary/copticocc.org")"
 LOC_BIBLE=$(loc "bible")

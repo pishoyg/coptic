@@ -7,6 +7,7 @@ from collections import abc, defaultdict
 import deck
 import pandas as pd
 
+import dictionary.copticsite_com.main as copticsite
 import dictionary.kellia_uni_goettingen_de.main as kellia
 import dictionary.marcion_sourceforge_net.main as crum
 import utils
@@ -16,7 +17,6 @@ import web.xooxle as xooxle
 LEXICON_DIR = os.path.join(utils.SITE_DIR, "crum/")
 CRUM_DIALECTS = ["S", "Sa", "Sf", "A", "sA", "B", "F", "Fb", "O", "NH"]
 EXPLANATORY_SOURCES = "dictionary/marcion_sourceforge_net/data/img-sources"
-COPTICSITE_TSV = "dictionary/copticsite.com/data/output/tsv/output.tsv"
 
 CRUM_JS = "crum.js"  # Relative to the HTML write directory.
 # DIALECTS_JS is a JavaScript line that can be used to set the default dialects.
@@ -779,7 +779,7 @@ class Crum(decker):
         return out
 
 
-class copticsite(decker):
+class Copticsite(decker):
 
     @staticmethod
     def __cell(row: pd.Series, col: str, line_br: bool = False) -> str:
@@ -789,7 +789,6 @@ class copticsite(decker):
         return cell
 
     def __init__(self, deck_name: str, deck_id: int) -> None:
-        self.tsv = utils.TSVCache.read(COPTICSITE_TSV)
         super().__init__(deck_name, deck_id, False)
 
     @typing.override
@@ -797,11 +796,11 @@ class copticsite(decker):
         # NOTE: The key is a protected field. Do not change unless you know what
         # you're doing.
         key = 1
-        for _, row in self.tsv.iterrows():
+        for _, row in copticsite.copticsite.iterrows():
             front = _aon(
                 '<span class="word B">',
                 '<span class="spelling B">',
-                copticsite.__cell(row, "prettify"),
+                Copticsite.__cell(row, "prettify"),
                 "</span>",
                 "</span>",
             )
@@ -813,9 +812,9 @@ class copticsite(decker):
                     filter(
                         None,
                         [
-                            copticsite.__cell(row, "Word Kind"),
-                            copticsite.__cell(row, "Word Gender"),
-                            copticsite.__cell(row, "Origin"),
+                            Copticsite.__cell(row, "Word Kind"),
+                            Copticsite.__cell(row, "Word Gender"),
+                            Copticsite.__cell(row, "Origin"),
                         ],
                     ),
                 ),
@@ -823,7 +822,7 @@ class copticsite(decker):
                 ")",
                 "</span>",
                 LINE_BREAK,
-            ) + copticsite.__cell(row, "Meaning", line_br=True)
+            ) + Copticsite.__cell(row, "Meaning", line_br=True)
 
             if not front and not back:
                 continue
@@ -956,7 +955,7 @@ DECKERS: list[decker] = [
         1284010390,
         ["B", "S"],
     ),
-    copticsite(
+    Copticsite(
         COPTICSITE,
         1284010385,
     ),

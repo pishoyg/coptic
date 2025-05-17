@@ -40,7 +40,7 @@ all: generate_1 add generate_2 test report
 
 # generate_1 rules are prerequisites for generate_2 rules.
 .PHONY: generate_1
-generate_1: bible copticsite crum crum_appendices crum_img dawoud_img transpile
+generate_1: bible crum crum_appendices crum_img dawoud_img transpile
 
 .PHONY: generate_2
 generate_2: flashcards kindle
@@ -102,8 +102,6 @@ epub_publish: REQUIRE_DRIVE_DIR FORCE
 	"$${DRIVE_DIR}/bohairic_english - desktop.epub"
 
 ########## COPTICSITE ##########
-copticsite: FORCE
-	./dictionary/copticsite.com/main.py
 
 ########## CRUM ##########
 crum: FORCE
