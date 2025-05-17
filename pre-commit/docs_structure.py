@@ -113,7 +113,7 @@ def _join(items: typing.Iterable[str]) -> str:
 def _print_classes(pattern_to_classes: dict[str, set[str]]):
     assert pattern_to_classes
     for pattern, classes in pattern_to_classes.items():
-        utils.info(pattern, _join(classes), level=False)
+        utils.info(f"{pattern}:", _join(classes), level=False)
 
     class_to_sets: collections.defaultdict[str, set[str]] = (
         collections.defaultdict(set)
@@ -122,9 +122,10 @@ def _print_classes(pattern_to_classes: dict[str, set[str]]):
         for cls in classes:
             class_to_sets[cls].add(pattern)
 
+    utils.error("Classes shared between different modules:", level=False)
     for cls, patterns in class_to_sets.items():
         if len(patterns) >= 2:
-            utils.warn(cls, _join(patterns), level=False)
+            utils.warn(f"{cls}:", _join(patterns), level=False)
 
 
 def main():
