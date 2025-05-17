@@ -475,7 +475,7 @@ echo -e "${BLUE}Total number of homonyms: "\
 
 CRUM_GREEK_SISTERS=$(tsv_nonempty \
   "dictionary/marcion.sourceforge.net/data/input/coptwrd.tsv" \
-  "TLA-sisters" \
+  "greek-sisters" \
   | wc --lines)
 echo -e "${BLUE}Number of words with Greek sisters: "\
 "${GREEN}${CRUM_GREEK_SISTERS}${BLUE}.${RESET}"
@@ -483,7 +483,7 @@ echo -e "${BLUE}Number of words with Greek sisters: "\
 
 CRUM_GREEK_SISTERS_SUM=$(tsv_nonempty \
   "dictionary/marcion.sourceforge.net/data/input/coptwrd.tsv" \
-  "TLA-sisters" \
+  "greek-sisters" \
   | grep '[0-9]+' --only-matching --extended-regexp \
   | wc --lines)
 echo -e "${BLUE}Total number of Greek sisters: "\

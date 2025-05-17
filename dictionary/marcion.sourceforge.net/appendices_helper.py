@@ -24,7 +24,7 @@ KEY_COL: str = "key"
 SISTERS_COL: str = "sisters"
 ANTONYMS_COL: str = "antonyms"
 HOMONYMS_COL: str = "homonyms"
-GREEK_SISTERS_COL: str = "TLA-sisters"
+GREEK_SISTERS_COL: str = "greek-sisters"
 TYPE_PARSED_COL: str = "type-parsed"
 
 SENSES_COL: str = "senses"

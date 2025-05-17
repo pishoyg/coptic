@@ -611,7 +611,7 @@ class Crum(decker):
 
         # Sisters.
         sisters = self.__cell(row, "sisters", force=False)
-        stepsisters = self.__cell(row, "TLA-sisters", force=False)
+        stepsisters = self.__cell(row, "greek-sisters", force=False)
         antonyms = self.__cell(row, "antonyms", force=False)
         homonyms = self.__cell(row, "homonyms", force=False)
 
