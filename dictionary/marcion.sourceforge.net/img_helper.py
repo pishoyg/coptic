@@ -17,6 +17,8 @@ from PIL import Image
 
 import utils
 
+_SCRIPT_DIR = pathlib.Path(__file__).parent
+
 TARGET_WIDTH = 300
 MIN_WIDTH = 200  # Minimum height of the input image.
 PREFER_MIN_WIDTH = 300
@@ -25,8 +27,7 @@ PREFER_MIN_RESIZE_HEIGHT = 200
 MAX_RESIZE_HEIGHT = 500  # Maximum allowed height of the resized image. (#240)
 PREFER_MAX_RESIZE_HEIGHT = 400
 
-_SCRIPT_DIR = pathlib.Path(__file__).parent
-IMG_DIR = str(_SCRIPT_DIR / "data/img")
+IMG_DIR = str(_SCRIPT_DIR / "data" / "img")
 IMG_300_DIR = "docs/crum/explanatory/"
 
 FILE_NAME_RE = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
@@ -36,10 +37,10 @@ NAME_RE = re.compile("[A-Z][a-zA-Z ]*")
 DOMAIN = "remnqymi.com"
 CRUM = f"{DOMAIN}/crum"
 
-INPUT_TSV: str = "dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv"
+INPUT_TSV: str = str(_SCRIPT_DIR / "data" / "output" / "tsv" / "roots.tsv")
 KEY_COL: str = "key"
 SENSES_COL: str = "senses"
-SOURCES_DIR: str = "dictionary/marcion.sourceforge.net/data/img-sources/"
+SOURCES_DIR: str = str(_SCRIPT_DIR / "data" / "img-sources")
 
 BANNED_TOP_LEVEL_DOMAINS = {
     "gstatic.com",
