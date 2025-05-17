@@ -53,10 +53,10 @@ Remarks about the parsing:
 import functools
 import re
 
-import constants
-import word as lexical
-
 import utils
+
+from . import constants
+from . import word as lexical
 
 
 def _apply_substitutions(

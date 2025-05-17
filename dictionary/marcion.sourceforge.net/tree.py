@@ -1,9 +1,9 @@
 import itertools
 import typing
 
-import constants
 import pandas as pd
-import parse
+
+from . import constants, parse
 
 NUM_COLS = 10
 assert not 100 % NUM_COLS

@@ -1,9 +1,9 @@
 import enum
 import typing
 
-import constants
-
 from morphology import inflect
+
+from . import constants
 
 
 class Gender(enum.Enum):

@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 """Parse Crum's dictionary."""
-import constants
 import pandas as pd
-import parse
-import tree
-import tsv
-import word as lexical
+
+from . import constants, parse, tree, tsv
+from . import word as lexical
 
 _MIN_KEY = 1
 _MAX_KEY = 3385

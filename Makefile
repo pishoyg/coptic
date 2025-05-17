@@ -109,22 +109,22 @@ copticsite: FORCE
 crum: FORCE
 	# Download a new version of Crum's dictionary, and rerun the parser.
 	PUB="https://docs.google.com/spreadsheets/d/e/2PACX-1vTItxV4E4plQrzjWLSea85ZFQWcQ4ba-p2BBIDG9h5yI0i9URn9GD9zZhxEj8kVI7jhCoPWPEapd9D7/pub?output=tsv"; \
-	DIR="dictionary/marcion.sourceforge.net/data/input"; \
+	DIR="dictionary/marcion_sourceforge_net/data/input"; \
 	curl -L "$${PUB}&gid=1575616379" > "$${DIR}/coptwrd.tsv"; \
 	curl -L "$${PUB}&gid=698638592" > "$${DIR}/coptdrv.tsv"; \
-	./dictionary/marcion.sourceforge.net/main.py
+	./dictionary/marcion_sourceforge_net/main.py
 
 crum_img: FORCE
 	# Reprocess Crum's images.
-	./dictionary/marcion.sourceforge.net/img_helper.py --batch
+	./dictionary/marcion_sourceforge_net/img_helper.py --batch
 
 crum_img_plot: FORCE
 	# Plot stats about image collection.
-	./dictionary/marcion.sourceforge.net/img_helper.py --plot | less -R
+	./dictionary/marcion_sourceforge_net/img_helper.py --plot | less -R
 
 crum_scan:
 	# Download Crum's scan.
-	./dictionary/marcion.sourceforge.net/download_scan.sh
+	./dictionary/marcion_sourceforge_net/download_scan.sh
 
 crum_sentinels: FORCE
 	# Download Crum's sentinels sheet.
@@ -142,7 +142,7 @@ camera_images: FORCE
 	grep \
 		--invert \
 		-E "^http.*$$" \
-		-R "dictionary/marcion.sourceforge.net/data/img-sources" \
+		-R "dictionary/marcion_sourceforge_net/data/img-sources" \
 		| grep -oE "[^/]+$$" \
 		| sed 's/\.txt:/ /' \
 		| awk '{ printf "\033[32m%-15s\t\033[31m%-15s\033[0;39m\n", $$1, $$2 }'
@@ -150,7 +150,7 @@ camera_images: FORCE
 	grep \
 		--invert \
 		-E "^http.*$$" \
-		-R "dictionary/marcion.sourceforge.net/data/img-sources" \
+		-R "dictionary/marcion_sourceforge_net/data/img-sources" \
 		--files-with-matches \
 		| sed 's/img-sources/img/' \
 		| sed "s/\.txt$$/\.*/" \
@@ -205,11 +205,11 @@ kindle: FORCE
 	-gen_ff_mobi7 \
 	-dont_append_source \
 	-c0 \
-	"dictionary/marcion.sourceforge.net/data/output/mobi/dialect-B/dialect-B.opf"
+	"dictionary/marcion_sourceforge_net/data/output/mobi/dialect-B/dialect-B.opf"
 
 mobi_publish: REQUIRE_DRIVE_DIR FORCE
 	cp \
-	"dictionary/marcion.sourceforge.net/data/output/mobi/dialect-B/dialect-B.mobi" \
+	"dictionary/marcion_sourceforge_net/data/output/mobi/dialect-B/dialect-B.mobi" \
 	"$${DRIVE_DIR}"
 else
 kindle: FORCE

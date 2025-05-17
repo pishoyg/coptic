@@ -4,7 +4,7 @@
 Our reader performs validation.
 """
 
-import tsv
+from . import tsv
 
 
 def main():

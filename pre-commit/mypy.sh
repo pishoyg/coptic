@@ -19,7 +19,7 @@ SUBPROJECTS=(
   "bible"
   "dictionary/copticsite.com"
   "dictionary/kellia.uni-goettingen.de"
-  "dictionary/marcion.sourceforge.net"
+  "dictionary/marcion_sourceforge_net"
   "flashcards"
   "morphology"
   "site"

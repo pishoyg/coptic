@@ -187,7 +187,7 @@ LOC_ARCHIVE=$(loc_archive)
 
 LOC=$(( $(loc .) + LOC_ARCHIVE))
 
-LOC_CRUM=$(loc "dictionary/marcion.sourceforge.net")
+LOC_CRUM=$(loc "dictionary/marcion_sourceforge_net")
 LOC_COPTICSITE=$(loc "dictionary/copticsite.com")
 LOC_KELLIA=$(loc "dictionary/kellia.uni-goettingen.de")
 LOC_DAWOUD="$(loc "dictionary/copticocc.org")"
@@ -349,7 +349,7 @@ echo -e "${BLUE}Disk usage: \
 ${GREEN}${DISK_USAGE}${BLUE} (${GREEN}${DISK_USAGE_HUMAN}${BLUE})${RESET}"
 ((DISK_USAGE >= 6291456 && DISK_USAGE <= 88000000 )) || (echo -e "${PURPLE}${DISK_USAGE} ${RED}looks suspicious.${RESET}" && exit 1)
 
-CRUM_IMG=$(find "dictionary/marcion.sourceforge.net/data/img/" -type f -exec basename {} \; \
+CRUM_IMG=$(find "dictionary/marcion_sourceforge_net/data/img/" -type f -exec basename {} \; \
   | grep -oE '^[0-9]+' \
   | sort \
   | uniq \
@@ -358,14 +358,14 @@ echo -e "${BLUE}Number of words possessing at least one image: "\
 "${GREEN}${CRUM_IMG}${BLUE}.${RESET}"
 ((CRUM_IMG >= 700 && CRUM_IMG <= 3357 )) || (echo -e "${PURPLE}${CRUM_IMG} ${RED}looks suspicious.${RESET}" && exit 1)
 
-CRUM_IMG_SUM=$(find dictionary/marcion.sourceforge.net/data/img/ -type f \
+CRUM_IMG_SUM=$(find dictionary/marcion_sourceforge_net/data/img/ -type f \
   | wc --lines)
 echo -e "${BLUE}Total number of images: "\
 "${GREEN}${CRUM_IMG_SUM}${BLUE}.${RESET}"
 ((CRUM_IMG_SUM >= 1200 && CRUM_IMG_SUM <= 33570 )) || (echo -e "${PURPLE}${CRUM_IMG_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_DAWOUD=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/coptwrd.tsv" \
+  "dictionary/marcion_sourceforge_net/data/input/coptwrd.tsv" \
   "dawoud-pages" \
   | wc --lines)
 echo -e "${BLUE}Number of words that have at least one page from Dawoud: "\
@@ -373,7 +373,7 @@ echo -e "${BLUE}Number of words that have at least one page from Dawoud: "\
 ((CRUM_DAWOUD >= 2600 && CRUM_DAWOUD <= 3357 )) || (echo -e "${PURPLE}${CRUM_DAWOUD} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_DAWOUD_SUM=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/coptwrd.tsv" \
+  "dictionary/marcion_sourceforge_net/data/input/coptwrd.tsv" \
   "dawoud-pages" \
   | grep '[0-9]+' --only-matching --extended-regexp \
   | wc --lines)
@@ -382,7 +382,7 @@ echo -e "${BLUE}Number of Dawoud pages added: "\
 ((CRUM_DAWOUD_SUM >= 4300 && CRUM_DAWOUD_SUM <= 5000 )) || (echo -e "${PURPLE}${CRUM_DAWOUD_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_NOTES=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/coptwrd.tsv" \
+  "dictionary/marcion_sourceforge_net/data/input/coptwrd.tsv" \
   "notes" \
   | wc --lines)
 echo -e "${BLUE}Number of editor's note added to Crum: "\
@@ -390,7 +390,7 @@ echo -e "${BLUE}Number of editor's note added to Crum: "\
 ((CRUM_NOTES >= 4 && CRUM_NOTES <= 3357 )) || (echo -e "${PURPLE}${CRUM_NOTES} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_ROOT_SENSES=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/coptwrd.tsv" \
+  "dictionary/marcion_sourceforge_net/data/input/coptwrd.tsv" \
   "senses" \
   | wc --lines)
 echo -e "${BLUE}Number of roots with at least one sense: "\
@@ -398,7 +398,7 @@ echo -e "${BLUE}Number of roots with at least one sense: "\
 ((CRUM_ROOT_SENSES >= 70 && CRUM_ROOT_SENSES <= 3357 )) || (echo -e "${PURPLE}${CRUM_ROOT_SENSES} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_ROOT_SENSES_SUM=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/coptwrd.tsv" \
+  "dictionary/marcion_sourceforge_net/data/input/coptwrd.tsv" \
   "senses" \
   | grep '[0-9]+' --only-matching --extended-regexp \
   | wc --lines)
@@ -407,7 +407,7 @@ echo -e "${BLUE}Total number of root senses: "\
 ((CRUM_ROOT_SENSES_SUM >= 160 && CRUM_ROOT_SENSES_SUM <= 33570 )) || (echo -e "${PURPLE}${CRUM_ROOT_SENSES_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_LAST_PAGES=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/coptwrd.tsv" \
+  "dictionary/marcion_sourceforge_net/data/input/coptwrd.tsv" \
   "crum-last-page" \
   | wc --lines)
 echo -e "${BLUE}Number of Crum last pages overridden: "\
@@ -415,7 +415,7 @@ echo -e "${BLUE}Number of Crum last pages overridden: "\
 ((CRUM_LAST_PAGES >= 4 && CRUM_LAST_PAGES <= 3357 )) || (echo -e "${PURPLE}${CRUM_LAST_PAGES} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_OVERRIDE_TYPES=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/coptwrd.tsv" \
+  "dictionary/marcion_sourceforge_net/data/input/coptwrd.tsv" \
   "override-type" \
   | wc --lines)
 echo -e "${BLUE}Number of types overridden: "\
@@ -423,7 +423,7 @@ echo -e "${BLUE}Number of types overridden: "\
 ((CRUM_OVERRIDE_TYPES >= 0 && CRUM_OVERRIDE_TYPES <= 3357 )) || (echo -e "${PURPLE}${CRUM_OVERRIDE_TYPES} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_SISTERS=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/coptwrd.tsv" \
+  "dictionary/marcion_sourceforge_net/data/input/coptwrd.tsv" \
   "sisters" \
   | wc --lines)
 echo -e "${BLUE}Number of words with sisters: "\
@@ -431,7 +431,7 @@ echo -e "${BLUE}Number of words with sisters: "\
 ((CRUM_SISTERS >= 37 && CRUM_SISTERS <= 3357 )) || (echo -e "${PURPLE}${CRUM_SISTERS} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_SISTERS_SUM=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/coptwrd.tsv" \
+  "dictionary/marcion_sourceforge_net/data/input/coptwrd.tsv" \
   "sisters" \
   | grep '[0-9]+' --only-matching --extended-regexp \
   | wc --lines)
@@ -440,7 +440,7 @@ echo -e "${BLUE}Total number of sisters: "\
 ((CRUM_SISTERS_SUM >= 58 && CRUM_SISTERS_SUM <= 33570 )) || (echo -e "${PURPLE}${CRUM_SISTERS_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_ANTONYMS=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/coptwrd.tsv" \
+  "dictionary/marcion_sourceforge_net/data/input/coptwrd.tsv" \
   "antonyms" \
   | wc --lines)
 echo -e "${BLUE}Number of words with antonyms: "\
@@ -448,7 +448,7 @@ echo -e "${BLUE}Number of words with antonyms: "\
 ((CRUM_ANTONYMS >= 2 && CRUM_ANTONYMS <= 3357 )) || (echo -e "${PURPLE}${CRUM_ANTONYMS} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_ANTONYMS_SUM=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/coptwrd.tsv" \
+  "dictionary/marcion_sourceforge_net/data/input/coptwrd.tsv" \
   "antonyms" \
   | grep '[0-9]+' --only-matching --extended-regexp \
   | wc --lines)
@@ -457,7 +457,7 @@ echo -e "${BLUE}Total number of antonyms: "\
 ((CRUM_ANTONYMS_SUM >= 2 && CRUM_ANTONYMS_SUM <= 33570 )) || (echo -e "${PURPLE}${CRUM_ANTONYMS_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_HOMONYMS=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/coptwrd.tsv" \
+  "dictionary/marcion_sourceforge_net/data/input/coptwrd.tsv" \
   "homonyms" \
   | wc --lines)
 echo -e "${BLUE}Number of words with homonyms: "\
@@ -465,7 +465,7 @@ echo -e "${BLUE}Number of words with homonyms: "\
 ((CRUM_HOMONYMS >= 7 && CRUM_HOMONYMS <= 3357 )) || (echo -e "${PURPLE}${CRUM_HOMONYMS} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_HOMONYMS_SUM=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/coptwrd.tsv" \
+  "dictionary/marcion_sourceforge_net/data/input/coptwrd.tsv" \
   "homonyms" \
   | grep '[0-9]+' --only-matching --extended-regexp \
   | wc --lines)
@@ -474,7 +474,7 @@ echo -e "${BLUE}Total number of homonyms: "\
 ((CRUM_HOMONYMS_SUM >= 7 && CRUM_HOMONYMS_SUM <= 33570 )) || (echo -e "${PURPLE}${CRUM_HOMONYMS_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_GREEK_SISTERS=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/coptwrd.tsv" \
+  "dictionary/marcion_sourceforge_net/data/input/coptwrd.tsv" \
   "greek-sisters" \
   | wc --lines)
 echo -e "${BLUE}Number of words with Greek sisters: "\
@@ -482,7 +482,7 @@ echo -e "${BLUE}Number of words with Greek sisters: "\
 ((CRUM_GREEK_SISTERS >= 1 && CRUM_GREEK_SISTERS <= 3357 )) || (echo -e "${PURPLE}${CRUM_GREEK_SISTERS} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_GREEK_SISTERS_SUM=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/coptwrd.tsv" \
+  "dictionary/marcion_sourceforge_net/data/input/coptwrd.tsv" \
   "greek-sisters" \
   | grep '[0-9]+' --only-matching --extended-regexp \
   | wc --lines)
@@ -491,7 +491,7 @@ echo -e "${BLUE}Total number of Greek sisters: "\
 ((CRUM_GREEK_SISTERS_SUM >= 1 && CRUM_GREEK_SISTERS_SUM <= 3357 )) || (echo -e "${PURPLE}${CRUM_GREEK_SISTERS_SUM} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_CATEGORIES=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/coptwrd.tsv" \
+  "dictionary/marcion_sourceforge_net/data/input/coptwrd.tsv" \
   "categories" \
   | wc --lines)
 echo -e "${BLUE}Number of words with categories: "\
@@ -499,7 +499,7 @@ echo -e "${BLUE}Number of words with categories: "\
 ((CRUM_CATEGORIES >= 30 && CRUM_CATEGORIES <= 3357 )) || (echo -e "${PURPLE}${CRUM_CATEGORIES} ${RED}looks suspicious.${RESET}" && exit 1)
 
 CRUM_CATEGORIES_SUM=$(tsv_nonempty \
-  "dictionary/marcion.sourceforge.net/data/input/coptwrd.tsv" \
+  "dictionary/marcion_sourceforge_net/data/input/coptwrd.tsv" \
   "categories" \
   | grep '[^,]+' --only-matching --extended-regexp \
   | wc --lines)

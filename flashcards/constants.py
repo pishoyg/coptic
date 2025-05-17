@@ -7,14 +7,14 @@ from collections import abc, defaultdict
 import deck
 import pandas as pd
 
+import dictionary.marcion_sourceforge_net.main as crum
 import utils
 import web.xooxle as xooxle
 
 # Data
 LEXICON_DIR = os.path.join(utils.SITE_DIR, "crum/")
-ROOTS = "dictionary/marcion.sourceforge.net/data/output/tsv/roots.tsv"
 CRUM_DIALECTS = ["S", "Sa", "Sf", "A", "sA", "B", "F", "Fb", "O", "NH"]
-EXPLANATORY_SOURCES = "dictionary/marcion.sourceforge.net/data/img-sources"
+EXPLANATORY_SOURCES = "dictionary/marcion_sourceforge_net/data/img-sources"
 KELLIA_TSV_DIR = "dictionary/kellia.uni-goettingen.de/data/output/tsv/"
 COPTICSITE_TSV = "dictionary/copticsite.com/data/output/tsv/output.tsv"
 
@@ -96,10 +96,6 @@ class decker:
     def notes_key_content_aux(self) -> abc.Generator[tuple[str, str]]:
         for note in self.notes_aux():
             yield note.key, note.html
-
-
-class CRUM_ROOTS:
-    roots: pd.DataFrame = utils.TSVCache.read(ROOTS)
 
 
 # All or nothing!
@@ -244,7 +240,7 @@ class _crum_indexer(_mother):
         keys: list[str] = []
         types: list[list[str]] = []
         categories: list[list[str]] = []
-        for _, row in CRUM_ROOTS.roots.iterrows():
+        for _, row in crum.roots.iterrows():
             keys.append(row["key"])
             types.append([row["type-parsed"]])
             categories.append(utils.ssplit(row["categories"], ","))
@@ -300,7 +296,7 @@ class Crum(decker):
         assert key and key.isdigit()
         return key
 
-    for _, row in CRUM_ROOTS.roots.iterrows():
+    for _, row in crum.roots.iterrows():
         key = __cell(row, "key")
         title = (
             __cell(row, "word-parsed-classify")
@@ -392,7 +388,7 @@ class Crum(decker):
 
     @typing.override
     def notes_aux(self) -> abc.Generator:
-        for _, row in CRUM_ROOTS.roots.iterrows():
+        for _, row in crum.roots.iterrows():
             if not self.__dialect_match(row):
                 continue
             yield deck.note(
