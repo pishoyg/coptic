@@ -14,6 +14,7 @@ import collections
 import fnmatch
 import pathlib
 import typing
+from collections import abc
 
 import bs4
 
@@ -34,17 +35,24 @@ parser.add_argument(
 class Pattern:
     """A file pattern."""
 
-    def __init__(self, patterns: list[str], required: bool = True):
+    def __init__(
+        self,
+        patterns: list[str],
+        required: bool = True,
+        print_: bool = True,
+    ):
         self._patterns: list[str] = patterns
         assert self._patterns
         self._required: bool = required
+        self.print: bool = print_
 
     def is_html(self) -> bool:
         arr = [pattern.endswith("html") for pattern in self._patterns]
         assert len(set(arr)) == 1
         return any(arr)
 
-    def string(self) -> str:
+    @typing.override
+    def __str__(self) -> str:
         return " | ".join(self._patterns)
 
     def match(self, paths: list[str]) -> tuple[list[str], list[str]]:
@@ -97,6 +105,8 @@ PATTERNS: list[Pattern] = [
     ),  # Epub files are not tracked in Git.
     # Auto-generated (dawoud):
     Pattern(["dawoud/*.jpg"]),  # Dawoud scan is a JPG.
+    # Garbage:
+    Pattern([".DS_Store"], required=False, print_=False),
 ]
 
 
@@ -105,25 +115,29 @@ def _classes_in_file(path: pathlib.Path) -> set[str]:
     return {cls for tag in soup.find_all(class_=True) for cls in tag["class"]}
 
 
-def _join(items: typing.Iterable[str]) -> str:
-    assert not isinstance(items, str)
-    return "".join("\n - " + cls for cls in sorted(items))
+def _join(items: abc.Iterable[Pattern | str]) -> str:
+    # TODO: Sort the entries before printing them.
+    return "".join("\n - " + str(cls) for cls in items)
 
 
-def _print_classes(pattern_to_classes: dict[str, set[str]]):
+def _print_classes(pattern_to_classes: dict[Pattern, set[str]]):
     assert pattern_to_classes
     for pattern, classes in pattern_to_classes.items():
+        if not pattern.print:
+            return
         utils.info(f"{pattern}:", _join(classes), level=False)
 
-    class_to_sets: collections.defaultdict[str, set[str]] = (
-        collections.defaultdict(set)
+    class_to_patterns: collections.defaultdict[str, list[Pattern]] = (
+        collections.defaultdict(list)
     )
     for pattern, classes in pattern_to_classes.items():
         for cls in classes:
-            class_to_sets[cls].add(pattern)
+            class_to_patterns[cls].append(pattern)
 
+    # TODO: Ideally, you should check whether any offending classes are present
+    # before deciding to print an error message.
     utils.error("Classes shared between different modules:", level=False)
-    for cls, patterns in class_to_sets.items():
+    for cls, patterns in class_to_patterns.items():
         if len(patterns) >= 2:
             utils.warn(f"{cls}:", _join(patterns), level=False)
 
@@ -138,7 +152,7 @@ def main():
         if f.is_file()
     ]
 
-    pattern_to_classes: dict[str, set[str]] = {}
+    pattern_to_classes: dict[Pattern, set[str]] = {}
     for pattern in PATTERNS:
         matched, files = pattern.match(files)
         # See if we need to print the classes.
@@ -155,7 +169,7 @@ def main():
                 [directory / f for f in matched],
             )
             classes: set[str] = {cls for classes in mapped for cls in classes}
-            pattern_to_classes[pattern.string()] = classes
+            pattern_to_classes[pattern] = classes
 
     utils.assass(
         not files,
