@@ -17,6 +17,9 @@ from PIL import Image
 
 import utils
 
+# TODO: Prevent users from updating an image without updating its source.
+# Somehow!
+
 _SCRIPT_DIR = pathlib.Path(__file__).parent
 
 TARGET_WIDTH = 300
@@ -1023,20 +1026,6 @@ def validate():
         if match:
             continue
         utils.fatal("Invalid stem:", stem)
-
-    # Check that the sources and converted images are more recent than the
-    # original ones.
-    offending: list[str] = []
-    for image, converted, source in zip(images, converted_images, sources):
-        # Sanity check!
-        assert utils.stem(image) == utils.stem(converted) == utils.stem(source)
-        mtime = os.stat(image).st_mtime
-        if mtime > os.stat(converted).st_mtime:
-            offending.append(converted)
-        if mtime > os.stat(source).st_mtime:
-            offending.append(source)
-    if offending:
-        utils.fatal("Artifacts may be obsolete:", " ".join(offending))
 
     # Validate content of the source files.
     for path in sources:
