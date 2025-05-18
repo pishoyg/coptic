@@ -42,7 +42,7 @@ def verify_unique_object_keys(decks: list[genanki.Deck]) -> None:
     )
 
 
-def write_anki(decks: list[deck.deck]) -> None:
+def write_anki(decks: list[deck.Deck]) -> None:
     utils.mk_parent_dir(ANKI_PATH)
     media_files: set[str] = set()
     anki_decks = []
@@ -61,7 +61,7 @@ def write_anki(decks: list[deck.deck]) -> None:
     utils.wrote(ANKI_PATH)
 
 
-def _decker_deck(decker: constants.decker) -> deck.deck:
+def _decker_deck(decker: constants.Decker) -> deck.Deck:
     return decker.deck_()
 
 
@@ -69,7 +69,7 @@ def main() -> None:
     args = argparser.parse_args()
 
     with utils.thread_pool_executor() as executor:
-        list(executor.map(constants.decker.html, constants.DECKERS))
+        list(executor.map(constants.Decker.html, constants.DECKERS))
 
     with utils.thread_pool_executor() as executor:
         decks = list(executor.map(_decker_deck, constants.DECKERS))

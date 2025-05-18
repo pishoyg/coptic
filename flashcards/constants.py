@@ -1,3 +1,5 @@
+"""This package hosts hardcoded definitions of our dictionary structure."""
+
 import json
 import os
 import re
@@ -16,11 +18,17 @@ from flashcards import deck
 # Data
 LEXICON_DIR = os.path.join(utils.SITE_DIR, "crum/")
 CRUM_DIALECTS = ["S", "Sa", "Sf", "A", "sA", "B", "F", "Fb", "O", "NH"]
+# TODO: (#399) Crum should export images through an interface, so you don't
+# have to look up the files directly.
 EXPLANATORY_SOURCES = "dictionary/marcion_sourceforge_net/data/img-sources"
 
 CRUM_JS = "crum.js"  # Relative to the HTML write directory.
 # DIALECTS_JS is a JavaScript line that can be used to set the default dialects.
-DIALECTS_JS = "if (localStorage.getItem('d') === null) localStorage.setItem('d', {DIALECT_ARR}.join(','));"
+DIALECTS_JS = """
+if (localStorage.getItem('d') === null) {{
+  localStorage.setItem('d', {DIALECT_ARR}.join(','));
+}}
+"""
 
 CSS = os.path.join(utils.SITE_DIR, "style.css")  # Not a relative path!
 CRUM_SEARCH = "./"  # Relative to the HTML write directory.
@@ -42,18 +50,18 @@ HORIZONTAL_RULE = "<hr>"
 
 
 def _img_aux(
-    id: str,
-    _class: str,
+    id_: str,
+    cls: str,
     path: str,
     alt: str,
     caption: str,
     line_br: bool = False,
 ) -> abc.Generator[str]:
-    yield f'<figure id="{id}" class="{_class}">'
+    yield f'<figure id="{id_}" class="{cls}">'
     # NOTE: Anki requires basenames. The string `src="{path}"` gets updated
     # while the Anki flashcards are being generated, using regular
     # expressions. So retaining the format `src="{path}"` is important.
-    yield f'<img src="{path}" alt="{alt}" class="{_class}-img">'
+    yield f'<img src="{path}" alt="{alt}" class="{cls}-img">'
     yield f"<figcaption>{caption}</figcaption>"
     yield "</figure>"
     if line_br:
@@ -61,14 +69,14 @@ def _img_aux(
 
 
 # TODO: The `decker` type is a thin wrapper around `deck`. Eliminate it.
-class decker:
+class Decker:
     def __init__(self, deck_name: str, deck_id: int, write_html: bool) -> None:
         self._deck_name: str = deck_name
         self._deck_id: int = deck_id
         self._write_html: bool = write_html
 
-    def deck_(self) -> deck.deck:
-        return deck.deck(
+    def deck_(self) -> deck.Deck:
+        return deck.Deck(
             deck_name=self._deck_name,
             deck_id=self._deck_id,
             deck_description=DESCRIPTION,
@@ -87,10 +95,10 @@ class decker:
             return
         self.deck_().write_html_if_needed()
 
-    def notes_aux(self) -> abc.Generator[deck.note]:
+    def notes_aux(self) -> abc.Generator[deck.Note]:
         raise NotImplementedError
 
-    def index_indexes(self) -> list[deck.index_index]:
+    def index_indexes(self) -> list[deck.IndexIndex]:
         raise NotImplementedError
 
     def notes_key_content_aux(self) -> abc.Generator[tuple[str, str]]:
@@ -111,20 +119,20 @@ def _use_html_line_breaks(text: str) -> str:
     return text.replace("\n", LINE_BREAK)
 
 
-class sister:
-    def __init__(self, key: str, title: str, meaning: str, _type: str) -> None:
-        self.key = key
-        self.title = title
-        self.meaning = meaning
-        self.type = _type
+class Sister:
+    def __init__(self, key: str, title: str, meaning: str, typ: str) -> None:
+        self.key: str = key
+        self.title: str = title
+        self.meaning: str = meaning
+        self.type: str = typ
 
 
-class sister_with_frag:
-    HREF_FMT = "{key}.html"
+class SisterWithFrag:
+    HREF_FMT: str = "{key}.html"
 
-    def __init__(self, sister: sister, fragment: str) -> None:
-        self.sister = sister
-        self.fragment = fragment
+    def __init__(self, sis: Sister, fragment: str) -> None:
+        self.sister: Sister = sis
+        self.fragment: str = fragment
 
     def frag(self) -> str:
         if not self.fragment:
@@ -150,30 +158,30 @@ class sister_with_frag:
             yield self.sister.type
             yield "</b>) "
         yield self.sister.meaning
-        yield f'<span hidden="" class="dev sister-key right">'
+        yield '<span hidden="" class="dev sister-key right">'
         yield self.sister.key
         yield "</span>"
         yield "</td>"
         yield "</tr>"
 
 
-class stepsister_with_frag(sister_with_frag):
-    HREF_FMT = KELLIA_PREFIX + "{key}"
+class StepsisterWithFrag(SisterWithFrag):
+    HREF_FMT: str = KELLIA_PREFIX + "{key}"
 
 
-class _mother:
+class Mother:
 
     def __init__(
         self,
-        key_to_sister: dict[str, sister],
-        with_frag: typing.Callable[[sister, str], sister_with_frag],
+        key_to_sister: dict[str, Sister],
+        with_frag: typing.Callable[[Sister, str], SisterWithFrag],
     ) -> None:
-        self.key_to_sister: dict[str, sister] = key_to_sister
-        self.with_frag: typing.Callable[[sister, str], sister_with_frag] = (
+        self.key_to_sister: dict[str, Sister] = key_to_sister
+        self.with_frag: typing.Callable[[Sister, str], SisterWithFrag] = (
             with_frag
         )
 
-    def parse(self, raw: str) -> sister_with_frag:
+    def parse(self, raw: str) -> SisterWithFrag:
         assert raw
         split = raw.split()
         return self.with_frag(
@@ -183,20 +191,12 @@ class _mother:
             " ".join(split[1:]),
         )
 
-    def gather_aux(self, _sisters: str) -> abc.Generator[str]:
-        sisters = map(self.parse, utils.ssplit(_sisters, ";"))
-        for s in sisters:
-            yield from s.html_aux()
+    def gather_aux(self, sisters: str) -> abc.Generator[str]:
+        for s in utils.ssplit(sisters, ";"):
+            yield from self.parse(s).html_aux()
 
 
-class _crum_indexer(_mother):
-    def __init__(
-        self,
-        key_to_sister: dict[str, sister],
-        with_frag: typing.Callable[[sister, str], sister_with_frag],
-    ):
-        super().__init__(key_to_sister, with_frag)
-
+class CrumIndexer(Mother):
     def __generate_index_body_aux(
         self,
         index_name: str,
@@ -213,19 +213,19 @@ class _crum_indexer(_mother):
         self,
         keys: list[str],
         indexes: list[list[str]],
-    ) -> list[deck.index]:
+    ) -> list[deck.Index]:
         """
         Args:
             indexes: A list such that indexes_i gives the indexes that word_i
             belongs to.
         """
-        index_to_keys: defaultdict = defaultdict(list)
+        index_to_keys: defaultdict[str, list[str]] = defaultdict(list)
         assert len(keys) == len(indexes)
         for word_key, word_indexes in zip(keys, indexes):
             for word_index in word_indexes:
                 index_to_keys[word_index].append(word_key)
         return [
-            deck.index(
+            deck.Index(
                 index_name,
                 len(keys),
                 self.__generate_index_body_aux(index_name, keys),
@@ -236,7 +236,7 @@ class _crum_indexer(_mother):
             )
         ]
 
-    def generate_indexes(self) -> list[deck.index_index]:
+    def generate_indexes(self) -> list[deck.IndexIndex]:
         keys: list[str] = []
         types: list[list[str]] = []
         categories: list[list[str]] = []
@@ -246,14 +246,14 @@ class _crum_indexer(_mother):
             categories.append(utils.ssplit(row["categories"], ","))
 
         return [
-            deck.index_index(
+            deck.IndexIndex(
                 "Categories",
                 self.__generate_indexes(keys, categories),
                 home=CRUM_HOME,
                 search=CRUM_SEARCH,
                 scripts=[CRUM_JS],
             ),
-            deck.index_index(
+            deck.IndexIndex(
                 "Types",
                 self.__generate_indexes(keys, types),
                 home=CRUM_HOME,
@@ -266,15 +266,15 @@ class _crum_indexer(_mother):
 # TODO: (#221) The produced HTML is identical between all versions of the Crum
 # decks. They only differ in the JavaScript, and the subset of the notes
 # included. Deduplicate the work to save a bit of time.
-class Crum(decker):
+class Crum(Decker):
 
     key_sense_code_sense: dict[str, dict[str, str]] = {}
     images_by_key: defaultdict[str, list[str]] = defaultdict(list)
-    key_to_sister: dict[str, sister] = {}
-    key_to_stepsister: dict[str, sister] = {}
-    mother: _mother
-    stepmother: _mother
-    indexer: _crum_indexer
+    key_to_sister: dict[str, Sister] = {}
+    key_to_stepsister: dict[str, Sister] = {}
+    mother: Mother
+    stepmother: Mother
+    indexer: CrumIndexer
 
     @staticmethod
     def __cell(
@@ -297,16 +297,16 @@ class Crum(decker):
         return key
 
     for _, row in crum.roots.iterrows():
-        key = __cell(row, "key")
-        title = (
+        key: str = __cell(row, "key")
+        title: str = (
             __cell(row, "word-parsed-classify")
             .replace("<br>", " ")
             .replace("<br/>", " ")
         )
-        meaning = __cell(row, "en-parsed", line_br=True, force=False)
-        _type = __cell(row, "type-parsed")
-        key_to_sister[key] = sister(key, title, meaning, _type)
-        senses = __cell(row, "senses", force=False)
+        meaning: str = __cell(row, "en-parsed", line_br=True, force=False)
+        typ: str = __cell(row, "type-parsed")
+        key_to_sister[key] = Sister(key, title, meaning, typ)
+        senses: str = __cell(row, "senses", force=False)
         key_sense_code_sense[__key(row)] = json.loads(senses) if senses else {}
 
     @staticmethod
@@ -329,11 +329,11 @@ class Crum(decker):
             .replace("</br>", " ")
         )
         meaning = __tla_col(row, "merged-pishoy")
-        key_to_stepsister[key] = sister(key, title, meaning, "")
+        key_to_stepsister[key] = Sister(key, title, meaning, "")
 
-    mother = _mother(key_to_sister, sister_with_frag)
-    stepmother = _mother(key_to_stepsister, stepsister_with_frag)
-    indexer = _crum_indexer(key_to_sister, sister_with_frag)
+    mother = Mother(key_to_sister, SisterWithFrag)
+    stepmother = Mother(key_to_stepsister, StepsisterWithFrag)
+    indexer = CrumIndexer(key_to_sister, SisterWithFrag)
 
     for basename in os.listdir(os.path.join(LEXICON_DIR, EXPLANATORY_DIR)):
         key = basename[: basename.find("-")]
@@ -371,13 +371,14 @@ class Crum(decker):
         self,
         deck_name: str,
         deck_id: int,
-        dialects: list[str] = [],
+        dialects: list[str] | None = None,
         write_html: bool = False,
     ):
         super().__init__(deck_name, deck_id, write_html)
-        self.dialects: list[str] = dialects
+        self.dialects: list[str] = dialects or []
 
-    def index_indexes(self) -> list[deck.index_index]:
+    @typing.override
+    def index_indexes(self) -> list[deck.IndexIndex]:
         # NOTE: Our indexer will produce indexes for all notes, even if
         # those notes end up being filtered out from the deck. While this is
         # a bug, we don't care, because we only write HTML for the full
@@ -385,19 +386,19 @@ class Crum(decker):
         return Crum.indexer.generate_indexes()
 
     @typing.override
-    def notes_aux(self) -> abc.Generator:
+    def notes_aux(self) -> abc.Generator[deck.Note]:
         for _, row in crum.roots.iterrows():
             if not self.__dialect_match(row):
                 continue
-            yield deck.note(
-                # NOTE: The key is a protected field. Do not change unless you know what
-                # you're doing.
+            yield deck.Note(
+                # NOTE: The key is a protected field. Do not change unless you
+                # know what you're doing.
                 key=self.__key(row),
                 front=self.__front(row),
                 back=self.__back(row),
                 title=self.__title(row),
-                next=self.__next(row),
-                prev=self.__prev(row),
+                nxt=self.__next(row),
+                prv=self.__prev(row),
                 search=CRUM_SEARCH,
                 js_start=(
                     DIALECTS_JS.format(DIALECT_ARR=self.dialects)
@@ -459,10 +460,10 @@ class Crum(decker):
         yield "</td>"
         # Next
         yield "<td>"
-        next = self.__next(row)
-        if next:
-            yield f'<a class="navigate" href="{next}">next</a>'
-        del next
+        nxt = self.__next(row)
+        if nxt:
+            yield f'<a class="navigate" href="{nxt}">next</a>'
+        del nxt
         yield "</td>"
         # Reset.
         yield "<td>"
@@ -528,24 +529,29 @@ class Crum(decker):
             yield "</div>"
         yield "</div>"
 
-        crum = self.__cell(row, "crum", force=False)
-        dawoud = self.__cell(row, "dawoud-pages", force=False)
-        if crum or dawoud:
+        crum_page = self.__cell(row, "crum", force=False)
+        dawoud_pages = self.__cell(row, "dawoud-pages", force=False)
+        if crum_page or dawoud_pages:
             # Dictionary pages.
             yield '<div id="dictionary" class="dictionary">'
             yield '<span class="right">'
             yield _aon(
                 '<b><a href="#crum" class="crum hover-link">Crum</a>: </b>',
                 '<span class="crum-page">',
-                crum,
+                crum_page,
                 "</span>",
             )
             yield _aon(
                 LINE_BREAK,
-                f'<b><a href="#dawoud" class="dawoud hover-link">{DAWOUD_SURNAME}</a>: </b>',
+                "<b>",
+                '<a href="#dawoud" class="dawoud hover-link">',
+                DAWOUD_SURNAME,
+                "</a>",
+                ": ",
+                "</b>",
                 DICTIONARY_PAGE_RE.sub(
                     r'<span class="dawoud-page">\1</span>',
-                    dawoud.replace(",", ", "),
+                    dawoud_pages.replace(",", ", "),
                 ),
             )
             yield "</span>"
@@ -561,8 +567,8 @@ class Crum(decker):
             yield '<div id="images" class="images">'
             for basename in basenames:
                 yield from _img_aux(
-                    id=f"explanatory{utils.stem(basename)}",
-                    _class="explanatory",
+                    id_=f"explanatory{utils.stem(basename)}",
+                    cls="explanatory",
                     alt=Crum.__explanatory_alt(basename),
                     path=os.path.join(EXPLANATORY_DIR, basename),
                     caption=self.__get_caption(basename),
@@ -648,15 +654,15 @@ class Crum(decker):
         del sisters, stepsisters, antonyms, homonyms
 
         # Crum's pages.
-        if crum:
+        if crum_page:
             last_page_override = Crum.__cell(
                 row,
                 "crum-last-page",
                 force=False,
             )
             if last_page_override:
-                assert last_page_override != crum
-                page_range = f"{crum}-{last_page_override}"
+                assert last_page_override != crum_page
+                page_range = f"{crum_page}-{last_page_override}"
             else:
                 page_range = Crum.__cell(row, "crum-page-range")
             del last_page_override
@@ -674,23 +680,28 @@ class Crum(decker):
             del page_range
             for num in page_numbers:
                 yield from _img_aux(
-                    id=f"crum{num}",
+                    id_=f"crum{num}",
                     path=os.path.join(SCAN_DIR, f"{num+20}.jpeg"),
-                    _class="crum-page-img",
+                    cls="crum-page-img",
                     alt=str(num),
                     caption=f'<span class="crum-page-external">{num}</span>',
                     line_br=True,
                 )
             del page_numbers
             yield "</div>"
-        del crum
+        del crum_page
 
-        if dawoud:
+        if dawoud_pages:
             yield HORIZONTAL_RULE
             yield '<div id="dawoud" class="dawoud dictionary">'
             yield '<span class="right">'
             # Dawoud's pages.
-            yield f'<b><a href="#dawoud" class="dawoud hover-link">{DAWOUD_SURNAME}</a>: </b>'
+            yield "<b>"
+            yield '<a href="#dawoud" class="dawoud hover-link">'
+            yield DAWOUD_SURNAME
+            yield "</a>"
+            yield ": "
+            yield "</b>"
             page_ranges = self.__cell(row, "dawoud-pages", force=False)
             yield DICTIONARY_PAGE_RE.sub(
                 r'<span class="dawoud-page">\1</span>',
@@ -702,13 +713,13 @@ class Crum(decker):
                 yield from _img_aux(
                     path=os.path.join(DAWOUD_DIR, f"{num+16}.jpg"),
                     caption=f'<span class="dawoud-page-external">{num}</span>',
-                    id=f"dawoud{num}",
-                    _class="dawoud-page-img",
+                    id_=f"dawoud{num}",
+                    cls="dawoud-page-img",
                     alt=str(num),
                     line_br=True,
                 )
             yield "</div>"
-        del dawoud
+        del dawoud_pages
 
     @staticmethod
     def _dedup(arr: list[int], at_most_once: bool = False) -> list[int]:
@@ -752,7 +763,7 @@ class Crum(decker):
             assert col.isdigit()
             return int(col)
 
-        out = []
+        out: list[int] = []
         column_ranges = column_ranges.strip()
         if not column_ranges:
             return []
@@ -779,7 +790,7 @@ class Crum(decker):
         return out
 
 
-class Copticsite(decker):
+class Copticsite(Decker):
 
     @staticmethod
     def __cell(row: pd.Series, col: str, line_br: bool = False) -> str:
@@ -792,7 +803,7 @@ class Copticsite(decker):
         super().__init__(deck_name, deck_id, False)
 
     @typing.override
-    def notes_aux(self) -> abc.Generator[deck.note]:
+    def notes_aux(self) -> abc.Generator[deck.Note]:
         # NOTE: The key is a protected field. Do not change unless you know what
         # you're doing.
         key = 1
@@ -826,7 +837,7 @@ class Copticsite(decker):
 
             if not front and not back:
                 continue
-            yield deck.note(
+            yield deck.Note(
                 key=str(key),
                 title=str(key),
                 front=front,
@@ -836,11 +847,11 @@ class Copticsite(decker):
             key += 1
 
     @typing.override
-    def index_indexes(self) -> list[deck.index_index]:
+    def index_indexes(self) -> list[deck.IndexIndex]:
         return []
 
 
-class KELLIA(decker):
+class KELLIA(Decker):
     def __init__(
         self,
         deck_name: str,
@@ -865,10 +876,10 @@ class KELLIA(decker):
         return cell
 
     @typing.override
-    def notes_aux(self) -> abc.Generator[deck.note]:
+    def notes_aux(self) -> abc.Generator[deck.Note]:
         for _, row in self._tsv.iterrows():
-            # NOTE: The key is a protected field. Do not change unless you know what
-            # you're doing.
+            # NOTE: The key is a protected field. Do not change unless you know
+            # what you're doing.
             key = self.__cell(row, "entry_xml_id")
             front = self.__cell(row, "orthstring-pishoy", line_br=True)
             back = _join(
@@ -889,7 +900,7 @@ class KELLIA(decker):
                 "</a>",
                 "</footer>",
             )
-            yield deck.note(
+            yield deck.Note(
                 key=str(key),
                 title=str(key),
                 front=front,
@@ -897,12 +908,12 @@ class KELLIA(decker):
             )
 
     @typing.override
-    def index_indexes(self) -> list[deck.index_index]:
+    def index_indexes(self) -> list[deck.IndexIndex]:
         return []
 
 
-# NOTE: The deck IDs are protected fields. They are used as database keys for the
-# decks. Do NOT change them!
+# NOTE: The deck IDs are protected fields. They are used as database keys for
+# the decks. Do NOT change them!
 #
 # The deck names are protected fields. Do NOT change them. They are used for:
 # 1. Display in the Anki UI, including nesting.
@@ -933,7 +944,7 @@ KELLIA_EGYPTIAN = "KELLIA::Egyptian"
 KELLIA_GREEK = "KELLIA::Greek"
 
 
-DECKERS: list[decker] = [
+DECKERS: list[Decker] = [
     Crum(
         CRUM_ALL,
         1284010387,
@@ -976,7 +987,7 @@ DECKERS: list[decker] = [
     ),
 ]
 
-NAME_TO_DECKER: dict[str, decker] = {
+NAME_TO_DECKER: dict[str, Decker] = {
     decker.name(): decker for decker in DECKERS
 }
 

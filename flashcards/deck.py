@@ -5,6 +5,7 @@
 import os
 import re
 import typing
+from collections import abc
 
 import genanki  # type: ignore[import-untyped]
 
@@ -15,24 +16,25 @@ ANKI_NOTE_CLASS = "ANKI"
 INDEX_CLASS = "INDEX"
 INDEX_INDEX_CLASS = "INDEX_INDEX"
 
-IMG_SRC_FMT = re.compile(r'<img src="([^"]+)"')
-FONT_SRC_RE = re.compile(r"src: url\('([^']*)'\)")
+IMG_SRC_FMT: re.Pattern[str] = re.compile(r'<img src="([^"]+)"')
+FONT_SRC_RE: re.Pattern[str] = re.compile(r"src: url\('([^']*)'\)")
 
 
-def _html_src_to_basename(match: re.Match) -> str:
+def _html_src_to_basename(match: re.Match[str]) -> str:
     return f'<img src="{os.path.basename(match.group(1))}"'
 
 
-def _css_src_to_basename(match: re.Match) -> str:
+def _css_src_to_basename(match: re.Match[str]) -> str:
     return f"src: url('{os.path.basename(match.group(1))}')"
 
 
-class Note(genanki.Note):
+class GenankiNote(genanki.Note):
     @property
     @typing.override
     # TODO: Resolve this error:
     #   "guid" incorrectly overrides property of same name in class "Note"
-    #   Property method "fset" is missing in override [reportIncompatibleMethodOverride]
+    #   Property method "fset" is missing in override
+    #   [reportIncompatibleMethodOverride]
     def guid(self):
         # Only use the key field to generate a GUID.
         assert self.fields
@@ -43,25 +45,25 @@ def _to_file_name(name: str) -> str:
     return name.replace("/", "_").lower()
 
 
-class header_cell:
+class HeaderCell:
     def __init__(self, title: str, link: str) -> None:
-        self.title = title
-        self.link = link
+        self.title: str = title
+        self.link: str = link
 
-    def td(self) -> typing.Generator[str]:
+    def td(self) -> abc.Generator[str]:
         yield "<td>"
         yield f'<a class="navigate" href="{self.link}">{self.title}</a>'
         yield "</td>"
 
 
-class _headerer:
-    def __init__(self, base_cells: list[header_cell]) -> None:
-        self.cells = base_cells
+class Headerer:
+    def __init__(self, base_cells: list[HeaderCell]) -> None:
+        self.cells: list[HeaderCell] = base_cells
 
     def header(self) -> str:
         return "".join(self.header_aux())
 
-    def header_aux(self) -> typing.Generator[str]:
+    def header_aux(self) -> abc.Generator[str]:
         yield '<table id="header" class="header">'
         yield "<tr>"
         for cell in self.cells:
@@ -71,60 +73,60 @@ class _headerer:
 
 
 # TODO: Rename index to subindex, and rename index_index to index.
-class index:
+class Index:
     def __init__(
         self,
         title: str,
         count: int,
-        body: typing.Generator[str],
+        body: abc.Generator[str],
     ) -> None:
-        self.title = title
-        self.count = count
-        self.body = body
+        self.title: str = title
+        self.count: int = count
+        self.body: abc.Generator[str] = body
 
     def basename(self) -> str:
         return _to_file_name(self.title) + ".html"
 
-    def write(self, dir: str, head: str, header: str) -> None:
+    def write(self, dir_: str, head: str, header: str) -> None:
         content = utils.html_aux(head, header, *self.body)
-        path = os.path.join(dir, self.basename())
+        path = os.path.join(dir_, self.basename())
         utils.writelines(content, path, log=False)
 
 
-class index_index:
+class IndexIndex:
     def __init__(
         self,
         name: str,
-        indexes: list[index],
+        indexes: list[Index],
         home: str,
         search: str,
         scripts: list[str],
     ):
-        self.name = name
-        self.indexes = indexes
-        self.home = home
-        self.search = search
-        self.scripts = scripts
+        self.name: str = name
+        self.indexes: list[Index] = indexes
+        self.home: str = home
+        self.search: str = search
+        self.scripts: list[str] = scripts
 
-        cells: list[header_cell] = []
+        cells: list[HeaderCell] = []
         if home:
-            cells.append(header_cell("Home", home))
+            cells.append(HeaderCell("Home", home))
         if search:
-            cells.append(header_cell("Search", search))
-        self.header: str = _headerer(cells).header()
+            cells.append(HeaderCell("Search", search))
+        self.header: str = Headerer(cells).header()
         # The subindex header is the same as the index header, with one extra
         # cell pointing to the index that this subindex belongs to.
-        cells.append(header_cell(self.name, self.__basename()))
-        self.subindex_header: str = _headerer(cells).header()
+        cells.append(HeaderCell(self.name, self.__basename()))
+        self.subindex_header: str = Headerer(cells).header()
         del cells
 
     def __basename(self) -> str:
         return _to_file_name(self.name) + ".html"
 
-    def __iter_subindex_heads(self) -> typing.Generator[str]:
+    def __iter_subindex_heads(self) -> abc.Generator[str]:
         for i, index in enumerate(self.indexes):
-            prev = self.indexes[i - 1].basename() if i > 0 else ""
-            next = (
+            prv = self.indexes[i - 1].basename() if i > 0 else ""
+            nxt = (
                 self.indexes[i + 1].basename()
                 if i < len(self.indexes) - 1
                 else ""
@@ -134,26 +136,27 @@ class index_index:
                 page_class=INDEX_CLASS,
                 search=self.search,
                 scripts=self.scripts,
-                prev_href=prev,
-                next_href=next,
+                prev_href=prv,
+                next_href=nxt,
             )
 
-    def __write_subindex(self, args: tuple[index, str]) -> None:
-        subindex, head = args
-        subindex.write(self.dir, head, self.subindex_header)
+    def __write_subindex(self, args: tuple[str, Index, str]) -> None:
+        dir_, subindex, head = args
+        subindex.write(dir_, head, self.subindex_header)
 
-    def write(self, dir: str):
+    def write(self, dir_: str):
         # A subindex header includes a link to the index that contains
         # this subindex.
-        self.dir = dir
-        del dir
         with utils.thread_pool_executor() as executor:
-            list(
-                executor.map(
-                    self.__write_subindex,
-                    zip(self.indexes, self.__iter_subindex_heads()),
+            m = executor.map(
+                self.__write_subindex,
+                zip(
+                    [dir_] * len(self.indexes),
+                    self.indexes,
+                    self.__iter_subindex_heads(),
                 ),
             )
+            list(m)
 
         # Write the index index!
         head = utils.html_head(
@@ -167,29 +170,32 @@ class index_index:
             *self.header,
             *self.__body_aux(),
         )
-        path = os.path.join(self.dir, self.__basename())
+        path = os.path.join(dir_, self.__basename())
         utils.writelines(html, path, log=False)
 
-    def __body_aux(self) -> typing.Generator[str]:
+    def __body_aux(self) -> abc.Generator[str]:
         yield f"<h1>{self.name}</h2>"
         yield '<ol class="index-index-list">'
         for index in self.indexes:
             yield '<li class="index-view">'
-            yield f'<a class="navigate" href="{_to_file_name(index.title)}.html">{index.title}</a>'
+            yield f'<a class="navigate" \
+                    href="{_to_file_name(index.title)}.html">'
+            yield index.title
+            yield "</a>"
             yield f' <span class="index-count">({index.count})</span>'
             yield "</li>"
         yield "</ol>"
 
 
-class note:
+class Note:
     def __init__(
         self,
         key: str,
         front: str,
         back: str,
         title: str,
-        prev: str = "",
-        next: str = "",
+        prv: str = "",
+        nxt: str = "",
         search: str = "",
         js_start: str = "",
         js_path: str = "",
@@ -208,18 +214,18 @@ class note:
         self.front: str = front
         self.back: str = back
         self.js_path: str = js_path
-        self.head = utils.html_head(
+        self.head: str = utils.html_head(
             title=title,
             page_class=NOTE_CLASS,
             search=search,
-            next_href=next,
-            prev_href=prev,
+            next_href=nxt,
+            prev_href=prv,
             scripts=[js_path] if js_path else [],
         )
         self.html: str = "".join(self.__html_aux())
         self.js_start: str = js_start
 
-    def __html_aux(self) -> typing.Generator[str]:
+    def __html_aux(self) -> abc.Generator[str]:
         return utils.html_aux(
             self.head,
             '<div class="front" id="front">',
@@ -231,12 +237,12 @@ class note:
             "</div>",
         )
 
-    def write(self, dir: str) -> None:
-        path: str = os.path.join(dir, self.key + ".html")
+    def write(self, dir_: str) -> None:
+        path: str = os.path.join(dir_, self.key + ".html")
         utils.write(self.html, path, log=False)
 
 
-class deck:
+class Deck:
     def __init__(
         self,
         deck_name: str,
@@ -244,9 +250,9 @@ class deck:
         deck_description: str,
         css_path: str,
         # TODO: Use a generator instead of a list.
-        notes: list[note],
+        notes: list[Note],
         html_dir: str = "",
-        index_indexes: list[index_index] = [],
+        index_indexes: list[IndexIndex] | None = None,
         write_html: bool = False,
     ) -> None:
 
@@ -255,16 +261,16 @@ class deck:
         self.deck_description: str = deck_description
         self.css_dir: str = os.path.dirname(css_path)
         self.css: str = utils.read(css_path)
-        self.notes: list[note] = notes
+        self.notes: list[Note] = notes
         utils.verify_unique(
             (note.key for note in self.notes),
             "Note keys must be unique!",
         )
-        self.index_indexes: list[index_index] = index_indexes
+        self.index_indexes: list[IndexIndex] = index_indexes or []
         self.html_dir: str = html_dir
         self.write_html: bool = write_html
 
-    def __write_html(self, o: note | index_index) -> None:
+    def __write_html(self, o: Note | IndexIndex) -> None:
         o.write(self.html_dir)
 
     def write_html_if_needed(self) -> None:
@@ -282,7 +288,7 @@ class deck:
     def __anki_css(self) -> str:
         return FONT_SRC_RE.sub(_css_src_to_basename, self.css)
 
-    def __anki_js_aux(self) -> typing.Generator[str]:
+    def __anki_js_aux(self) -> abc.Generator[str]:
         js_path = self.notes[0].js_path
         # We don't allow notes to have different JavaScript, because in our Anki
         # package, we define the JavaScript in the template.
@@ -304,7 +310,7 @@ class deck:
         yield utils.read(js_path)
         yield "})();"
 
-    def anki(self) -> tuple[genanki.Deck, typing.Iterable[str]]:
+    def anki(self) -> tuple[genanki.Deck, abc.Iterable[str]]:
         # Anki can't pick up the JavaScript. It must be inserted into the
         # template.
         javascript = "".join(self.__anki_js_aux())
@@ -321,7 +327,9 @@ class deck:
                     "name": "template 1",
                     "qfmt": '<div class="front"> {{Front}} </div>'
                     + f'<script type="text/javascript">{javascript}</script>',
-                    "afmt": '<div class="front"> {{Front}} </div> <hr/> <div class="back"> {{Back}} </div>'
+                    "afmt": '<div class="front"> {{Front}} </div>'
+                    + "<hr/>"
+                    + '<div class="back"> {{Back}} </div>'
                     + f'<script type="text/javascript">{javascript}</script>',
                 },
             ],
@@ -338,7 +346,7 @@ class deck:
             front = self.__anki_html(note.front)
             back = self.__anki_html(note.back)
             key = f"{self.deck_name} - {note.key}"
-            deck.add_note(Note(model=model, fields=[front, back, key]))
+            deck.add_note(GenankiNote(model=model, fields=[front, back, key]))
 
         # Pick up the media.
         font_paths = {
