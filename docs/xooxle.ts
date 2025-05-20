@@ -34,6 +34,29 @@ const RESULTS_TO_UPDATE_DISPLAY = 5;
 
 const TAG_REGEX = /<\/?[^>]+>/g;
 
+const DIACRITICS: Set<string> = new Set<string>([
+  '\u0300', // Combining grave accent
+  '\u0305', // Combining overline
+]);
+
+/**
+ * @param char
+ * @returns
+ */
+function isDiacritic(char?: string) {
+  return char && DIACRITICS.has(char);
+}
+
+/**
+ * @param text
+ * @returns
+ */
+function cleanDiacritics(text: string): string {
+  return Array.from(text)
+    .filter((c) => !isDiacritic(c))
+    .join('');
+}
+
 // CHROME_WORD_CHARS is a list of characters that are considered word characters
 // in Chrome.
 // See https://github.com/pishoyg/coptic/issues/286 for context.
@@ -140,7 +163,7 @@ export class Form {
    * @returns
    */
   queryExpression(): string {
-    let query: string = this.searchBox.value;
+    let query: string = cleanDiacritics(this.searchBox.value);
     if (!query) {
       return '';
     }
@@ -597,7 +620,7 @@ class Line {
    * @param html
    */
   constructor(readonly html: string) {
-    this.text = html.replaceAll(TAG_REGEX, '');
+    this.text = cleanDiacritics(html).replaceAll(TAG_REGEX, '');
     this.temp = document.createElement('template');
     this.temp.innerHTML = html;
   }
@@ -772,6 +795,11 @@ class LineSearchResult {
         }
         if (match) builder.push(LineSearchResult.opening);
       }
+      while (isDiacritic(this.html[i])) {
+        // This is a diacritic. It was ignored during search, and is not part of
+        // the match. Yield without accounting for it in the text.
+        builder.push(this.html[i++]!);
+      }
 
       if (cur?.start === j) {
         // A match starts at the given position. Yield an opening tag.
@@ -780,8 +808,7 @@ class LineSearchResult {
       } else if (cur?.end === j) {
         // A match ends at the given position. Yield a closing tag.
         builder.push(LineSearchResult.closing);
-        idx += 1;
-        cur = this.matches[idx];
+        cur = this.matches[++idx];
         match = false;
       }
 
