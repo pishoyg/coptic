@@ -1,7 +1,9 @@
 import * as collapse from './collapse.js';
 import * as logger from './logger.js';
 import * as utils from './utils.js';
+import * as orth from './orth.js';
 import * as coptic from './coptic.js';
+import * as greek from './greek.js';
 // KEY is the name of the field that bears the word key. The key can be used to
 // generate an HREF to open the word page.
 const KEY = 'KEY';
@@ -56,6 +58,9 @@ const UNIT_DELIMITER = '<hr class="match-separator">';
  * if the field gets truncated.
  */
 const LONG_UNITS_FIELD_MESSAGE = `<br><span class="${'view-for-more' /* CLS.VIEW_FOR_MORE */}">... (<em>view</em> for full context)</span>`;
+const orthographer = new orth.Orthographer(
+  new Set([...coptic.DIACRITICS, ...greek.DIACRITICS])
+);
 // Form represents a search form containing the HTML elements that the user
 // interacts with to initiate and control search.
 /**
@@ -95,7 +100,7 @@ export class Form {
    * @returns
    */
   queryExpression() {
-    let query = coptic.cleanDiacritics(this.searchBox.value);
+    let query = orthographer.cleanDiacritics(this.searchBox.value);
     if (!query) {
       return '';
     }
@@ -192,7 +197,11 @@ class Candidate {
    */
   constructor(record, fields) {
     this.key = record[KEY];
-    this.fields = fields.map((name) => new Field(name, record[name]));
+    // NFD splits characters into their base character and separate
+    // diacritical marks.
+    this.fields = fields.map(
+      (name) => new Field(name, orth.normalize(record[name]))
+    );
   }
   /**
    *
@@ -478,7 +487,7 @@ class Line {
    */
   constructor(html) {
     this.html = html;
-    this.text = coptic.cleanDiacritics(html).replaceAll(TAG_REGEX, '');
+    this.text = orthographer.cleanDiacritics(html).replaceAll(TAG_REGEX, '');
   }
   /**
    *
@@ -626,7 +635,7 @@ class LineSearchResult {
         }
         if (match) builder.push(LineSearchResult.opening);
       }
-      while (coptic.isDiacritic(this.html[i])) {
+      while (orthographer.isDiacritic(this.html[i])) {
         // This is a diacritic. It was ignored during search, and is not part of
         // the match. Yield without accounting for it in the text.
         builder.push(this.html[i++]);
