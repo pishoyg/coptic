@@ -16,28 +16,10 @@ const COPTIC_LETTERS: [string, string][] = [
   ['Ϣ', 'ϯ'],
 ];
 
-const DIACRITICS: Set<string> = new Set<string>([
+export const DIACRITICS: Set<string> = new Set<string>([
   '\u0300', // Combining grave accent
   '\u0305', // Combining overline
 ]);
-
-/**
- * @param char
- * @returns
- */
-export function isDiacritic(char?: string) {
-  return char && DIACRITICS.has(char);
-}
-
-/**
- * @param text
- * @returns
- */
-export function cleanDiacritics(text: string): string {
-  return Array.from(text)
-    .filter((c) => !isDiacritic(c))
-    .join('');
-}
 
 /**
  * Word represents a Coptic word that is lexicographically comparable to

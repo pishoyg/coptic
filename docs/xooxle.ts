@@ -1,7 +1,9 @@
 import * as collapse from './collapse.js';
 import * as logger from './logger.js';
 import * as utils from './utils.js';
+import * as orth from './orth.js';
 import * as coptic from './coptic.js';
+import * as greek from './greek.js';
 
 // KEY is the name of the field that bears the word key. The key can be used to
 // generate an HREF to open the word page.
@@ -65,6 +67,10 @@ const UNIT_DELIMITER = '<hr class="match-separator">';
  */
 const LONG_UNITS_FIELD_MESSAGE = `<br><span class="${CLS.VIEW_FOR_MORE}">... (<em>view</em> for full context)</span>`;
 
+const orthographer: orth.Orthographer = new orth.Orthographer(
+  new Set<string>([...coptic.DIACRITICS, ...greek.DIACRITICS])
+);
+
 // _Form stores Form parameters.
 export interface _Form {
   searchBoxID: string;
@@ -124,7 +130,7 @@ export class Form {
    * @returns
    */
   queryExpression(): string {
-    let query: string = coptic.cleanDiacritics(this.searchBox.value);
+    let query: string = orthographer.cleanDiacritics(this.searchBox.value);
     if (!query) {
       return '';
     }
@@ -236,7 +242,11 @@ class Candidate {
    */
   public constructor(record: Record<string, string>, fields: string[]) {
     this.key = record[KEY]!;
-    this.fields = fields.map((name) => new Field(name, record[name]!));
+    // NFD splits characters into their base character and separate
+    // diacritical marks.
+    this.fields = fields.map(
+      (name) => new Field(name, orth.normalize(record[name]!))
+    );
   }
 
   /**
@@ -563,7 +573,7 @@ class Line {
    * @param html
    */
   constructor(readonly html: string) {
-    this.text = coptic.cleanDiacritics(html).replaceAll(TAG_REGEX, '');
+    this.text = orthographer.cleanDiacritics(html).replaceAll(TAG_REGEX, '');
   }
 
   /**
@@ -726,7 +736,7 @@ class LineSearchResult {
         }
         if (match) builder.push(LineSearchResult.opening);
       }
-      while (coptic.isDiacritic(this.html[i])) {
+      while (orthographer.isDiacritic(this.html[i])) {
         // This is a diacritic. It was ignored during search, and is not part of
         // the match. Yield without accounting for it in the text.
         builder.push(this.html[i++]!);
