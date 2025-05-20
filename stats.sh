@@ -541,7 +541,7 @@ echo -e "${BLUE}Number of open issues: "\
 NUM_CLOSED_ISSUES=$(gh issue list --state closed --json number --jq length --limit 10000)
 echo -e "${BLUE}Number of closed issues: "\
   "${GREEN}${NUM_CLOSED_ISSUES}${BLUE}.${RESET}"
-((NUM_CLOSED_ISSUES >= 1 && NUM_CLOSED_ISSUES <= 300 )) || (echo -e "${PURPLE}${NUM_CLOSED_ISSUES} ${RED}looks suspicious.${RESET}" && exit 1)
+((NUM_CLOSED_ISSUES >= 300 && NUM_CLOSED_ISSUES <= 3000 )) || (echo -e "${PURPLE}${NUM_CLOSED_ISSUES} ${RED}looks suspicious.${RESET}" && exit 1)
 
 if ${COMMIT}; then
   # We separate the fields by spaces in the string below, then we replace those
