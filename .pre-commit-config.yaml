@@ -377,7 +377,7 @@ repos:
       # Dawoud's scan sentinels.
       - id: scan-sentinels
         name: scan-sentinels
-        entry: bun run docs/dawoud/dawoud.ts
+        entry: bun run docs/dawoud/main.ts
         language: system
         files: ^docs/dawoud/
         pass_filenames: false

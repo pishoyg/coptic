@@ -45,7 +45,7 @@ OUTPUT_DIR: str = os.path.join(utils.SITE_DIR, "bible/")
 # `href` to `./`, regardless of which file you're looking at.
 SEARCH = "./"
 # NOTE: We expect this JavaScript file to be in the same directory as the HTML.
-SCRIPT = "bible.js"
+SCRIPT = "main.js"
 
 INDEX = "index.html"
 CHAPTER_CLASS = "BIBLE"
