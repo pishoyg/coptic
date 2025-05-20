@@ -1,5 +1,8 @@
 import * as collapse from './collapse.js';
 import * as logger from './logger.js';
+import * as utils from './utils.js';
+import * as coptic from './coptic.js';
+
 // KEY is the name of the field that bears the word key. The key can be used to
 // generate an HREF to open the word page.
 const KEY = 'KEY';
@@ -29,29 +32,6 @@ const LINE_BREAK = '<br>';
 const RESULTS_TO_UPDATE_DISPLAY = 5;
 
 const TAG_REGEX = /<\/?[^>]+>/g;
-
-const DIACRITICS: Set<string> = new Set<string>([
-  '\u0300', // Combining grave accent
-  '\u0305', // Combining overline
-]);
-
-/**
- * @param char
- * @returns
- */
-function isDiacritic(char?: string) {
-  return char && DIACRITICS.has(char);
-}
-
-/**
- * @param text
- * @returns
- */
-function cleanDiacritics(text: string): string {
-  return Array.from(text)
-    .filter((c) => !isDiacritic(c))
-    .join('');
-}
 
 // CHROME_WORD_CHARS is a list of characters that are considered word characters
 // in Chrome.
@@ -144,7 +124,7 @@ export class Form {
    * @returns
    */
   queryExpression(): string {
-    let query: string = cleanDiacritics(this.searchBox.value);
+    let query: string = coptic.cleanDiacritics(this.searchBox.value);
     if (!query) {
       return '';
     }
@@ -237,13 +217,6 @@ export class Form {
     this.tbody.replaceChildren();
     this.messageBox.replaceChildren();
   }
-}
-
-/**
- * @returns
- */
-async function yieldToBrowser(): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, 0));
 }
 
 // Candidate represents one search candidate from the index. In the results
@@ -590,7 +563,7 @@ class Line {
    * @param html
    */
   constructor(readonly html: string) {
-    this.text = cleanDiacritics(html).replaceAll(TAG_REGEX, '');
+    this.text = coptic.cleanDiacritics(html).replaceAll(TAG_REGEX, '');
   }
 
   /**
@@ -753,7 +726,7 @@ class LineSearchResult {
         }
         if (match) builder.push(LineSearchResult.opening);
       }
-      while (isDiacritic(this.html[i])) {
+      while (coptic.isDiacritic(this.html[i])) {
         // This is a diacritic. It was ignored during search, and is not part of
         // the match. Yield without accounting for it in the text.
         builder.push(this.html[i++]!);
@@ -958,7 +931,7 @@ export class Xooxle {
       this.form.expand();
 
       if (count % RESULTS_TO_UPDATE_DISPLAY == 0) {
-        await yieldToBrowser();
+        await utils.yieldToBrowser();
       }
     }
 

@@ -59,6 +59,11 @@ async function main(): Promise<void> {
   searchBox.addEventListener('keypress', stopPropagation);
 
   // Initialize searchers.
+  // TODO: You initialize three different Form objects, and it looks like each
+  // one of them will end up populating the query parameters separately! They
+  // also populate the shared objects from the parameters repeatedly!
+  // While this is not currently a problem, it remains undesirable.
+  // Deduplicate these actions, somehow.
   await Promise.all(
     XOOXLES.map(async (xoox) => {
       const raw = await fetch(xoox.indexURL);
