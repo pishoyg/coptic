@@ -17,7 +17,7 @@ from flashcards import deck
 
 # Data
 LEXICON_DIR = os.path.join(utils.SITE_DIR, "crum/")
-CRUM_DIALECTS = ["S", "Sa", "Sf", "A", "sA", "B", "F", "Fb", "O", "NH"]
+CRUM_DIALECTS = ["S", "Sa", "Sf", "A", "L", "B", "F", "Fb", "O", "NH"]
 # TODO: (#399) Crum should export images through an interface, so you don't
 # have to look up the files directly.
 EXPLANATORY_SOURCES = "dictionary/marcion_sourceforge_net/data/img-sources"
@@ -1001,7 +1001,7 @@ _DIALECTS = {
     "Sa",
     "Sf",
     "A",
-    "sA",
+    "L",
     "B",
     "F",
     "Fb",
@@ -1009,9 +1009,8 @@ _DIALECTS = {
     # The following dialects are only found in Marcion.
     "NH",
     # The following dialects are only found in TLA / KELLIA.
-    "Ak",
+    "Ak",  # TODO: Ak and O are the same. Deduplicate.
     "M",
-    "L",
     "P",
     "V",
     "W",

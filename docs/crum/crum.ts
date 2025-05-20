@@ -89,7 +89,9 @@ enum DIALECT_ARTICLE {
   DIALECTS = 'https://ccdl.claremont.edu/digital/collection/cce/id/2015/rec/6',
   Sahidic = 'https://ccdl.claremont.edu/digital/collection/cce/id/2029/rec/2',
   Akhmimic = 'https://ccdl.claremont.edu/digital/collection/cce/id/1962/rec/1',
-  subAkhmimic_Lycopolitan = 'https://ccdl.claremont.edu/digital/collection/cce/id/2026/rec/1',
+  // Lycopolitan is called Subakhmimic in Crum, but Lycopolitan is the standard
+  // name in academia today.
+  Lycopolitan = 'https://ccdl.claremont.edu/digital/collection/cce/id/2026/rec/1',
   Bohairic = 'https://ccdl.claremont.edu/digital/collection/cce/id/2011/rec/2',
   Fayyumic = 'https://ccdl.claremont.edu/digital/collection/cce/id/1989/rec/2',
   OldCoptic = 'https://ccdl.claremont.edu/digital/collection/cce/id/2027/rec/2',
@@ -184,7 +186,7 @@ const DIALECTS = [
   'Sa',
   'Sf',
   'A',
-  'sA',
+  'L',
   'B',
   'F',
   'Fb',
@@ -192,9 +194,8 @@ const DIALECTS = [
   // The following dialects are only found in Marcion.
   'NH',
   // The following dialects are only found in TLA / KELLIA.
-  'Ak',
+  'Ak', // TODO: Ak and O are both "Old Coptic". Deduplicate.
   'M',
-  'L',
   'P',
   'V',
   'W',
@@ -204,7 +205,6 @@ const DIALECTS = [
 // SYNC_DIALECTS stores dialects that should be synchronized with each other.
 const SYNC_DIALECTS: [string, string][] = [
   ['Ak', 'O'], // Old Coptic is O in Crum, and Ak (for Altkoptisch) in KELLIA.
-  ['sA', 'L'], // Lycopolitan is sA (for subAkhmimic) in Crum, and L in KELLIA.
 ];
 
 // DIALECT_SINGLE_CHAR is a mapping for the dialects that have shortcuts other
@@ -214,7 +214,6 @@ const DIALECT_SINGLE_CHAR: Record<string, string> = {
   N: 'NH',
   a: 'Sa',
   f: 'Sf',
-  s: 'sA',
   b: 'Fb',
   k: 'Ak',
 };
@@ -1001,6 +1000,8 @@ class Shortcut {
   }
 }
 
+type DICTIONARY = 'KELLIA' | 'Crum' | 'copticsite';
+
 /**
  *
  * @param key
@@ -1008,12 +1009,14 @@ class Shortcut {
  * @param code
  * @param dictionaries
  * @param link
+ *
+ * @returns A shortcut object representing the toggle shortcut for this dialect.
  */
 function makeDialectShortcut(
   key: string,
   name: string,
   code: string,
-  dictionaries: string[],
+  dictionaries: DICTIONARY[],
   link: DIALECT_ARTICLE
 ): Shortcut {
   code = highlightFirstOccurrence(key, code);
@@ -1095,13 +1098,13 @@ function makeHelpPanel(): HelpPanel {
         DIALECT_ARTICLE.Akhmimic
       ),
     ],
-    s: [
+    L: [
       makeDialectShortcut(
-        's',
-        'subAkhmimic',
-        'sA',
-        ['Crum'],
-        DIALECT_ARTICLE.subAkhmimic_Lycopolitan
+        'L',
+        'Lycopolitan',
+        'L',
+        ['Crum', 'KELLIA'],
+        DIALECT_ARTICLE.Lycopolitan
       ),
     ],
     B: [
@@ -1145,7 +1148,8 @@ function makeHelpPanel(): HelpPanel {
         'N',
         'Nag Hammadi',
         'NH',
-        ['Crum (Marcion)'],
+        // TODO: This dialect was invented by Marcion, and it's not in Crum.
+        ['Crum'],
         DIALECT_ARTICLE.NagHammadi
       ),
     ],
@@ -1165,15 +1169,6 @@ function makeHelpPanel(): HelpPanel {
         'M',
         ['KELLIA'],
         DIALECT_ARTICLE.Mesokemic
-      ),
-    ],
-    L: [
-      makeDialectShortcut(
-        'L',
-        'Lycopolitan',
-        'L',
-        ['KELLIA'],
-        DIALECT_ARTICLE.subAkhmimic_Lycopolitan
       ),
     ],
     P: [

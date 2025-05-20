@@ -9,7 +9,7 @@ DIALECTS = [
     "Sa",  # Sahidic with Akhmimic tendency
     "Sf",  # Sahidic with Fayyumic tendency
     "A",  # Akhmimic
-    "sA",  # Subakhmimic (Lycopolitan)
+    "L",  # Lycopolitan (Subakhmimic)
     "B",  # Bohairic
     "F",  # Fayyumic
     "Fb",  # Fayyumic with Bohairic tendency
