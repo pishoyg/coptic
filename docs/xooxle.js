@@ -15,11 +15,16 @@ const KEY = 'KEY';
 // - In either case, a message will be shown indicating that more content is
 //   available.
 const UNITS_LIMIT = 5;
-// Our currently index building algorithm results in HTML with a simplified
-// structure, with only <span> tags, styling tags, or <br> tags. Styling tags
-// don't affect the output text, and are simply ignored during text search.
-// Line breaks, however, require special handling.
-const LINE_BREAK = '<br>';
+/** Our currently index building algorithm results in HTML with a simplified
+ * structure, with only <span> tags, styling tags, or <br> tags. Styling tags
+ * don't affect the output text, and are simply ignored during text search.
+ * Line breaks, however, require special handling.
+ * @returns A new <br> element.
+ */
+function LINE_BREAK() {
+  return document.createElement('br');
+}
+const LINE_BREAK_STR = '<br>';
 // RESULTS_TO_UPDATE_DISPLAY specifies how often (every how many results) we
 // should yield to let the browser update the display during search.
 const RESULTS_TO_UPDATE_DISPLAY = 5;
@@ -43,12 +48,31 @@ var CLS;
   // VIEW_FOR_MORE is the class of the message "view for more", displayed in
   // large fields that have been cropped.
   CLS['VIEW_FOR_MORE'] = 'view-for-more';
+  CLS['MATCH_SEPARATOR'] = 'match-separator';
 })(CLS || (CLS = {}));
-// UNIT_DELIMITER is the string that separates a units field into units.
-const UNIT_DELIMITER = '<hr class="match-separator">';
-// LONG_UNITS_FIELD_MESSAGE is the message shown at the end of a units field,
-// if the field gets truncated.
-const LONG_UNITS_FIELD_MESSAGE = `<br><span class="${'view-for-more' /* CLS.VIEW_FOR_MORE */}">... (<em>view</em> for full context)</span>`;
+/**
+ * @returns
+ */
+function UNIT_DELIMITER() {
+  const el = document.createElement('hr');
+  el.classList.add('match-separator' /* CLS.MATCH_SEPARATOR */);
+  return el;
+}
+// UNIT_DELIMITER_STR is the string that separates a units field into units.
+// TODO: This is not a clean way to separate units! Your index should be built
+// with units already separated.
+const UNIT_DELIMITER_STR = '<hr class="match-separator">';
+/** LONG_UNITS_FIELD_MESSAGE is the message shown at the end of a units field,
+ * if the field gets truncated.
+ * @returns
+ */
+function LONG_UNITS_FIELD_MESSAGE() {
+  const br = document.createElement('br');
+  const span = document.createElement('span');
+  span.className = 'view-for-more' /* CLS.VIEW_FOR_MORE */;
+  span.innerHTML = '... (<em>view</em> for full context)';
+  return [br, span];
+}
 // Form represents a search form containing the HTML elements that the user
 // interacts with to initiate and control search.
 /**
@@ -85,7 +109,7 @@ export class Form {
     this.populateFromParams();
   }
   /**
-   *
+   * @returns
    */
   queryExpression() {
     let query = this.searchBox.value;
@@ -170,7 +194,7 @@ export class Form {
   }
 }
 /**
- *
+ * @returns
  */
 async function yieldToBrowser() {
   return new Promise((resolve) => setTimeout(resolve, 0));
@@ -196,6 +220,7 @@ class Candidate {
   /**
    *
    * @param regex
+   * @returns
    */
   search(regex) {
     return new SearchResult(this, regex);
@@ -204,6 +229,7 @@ class Candidate {
 // SearchResult represents the search result of one candidate from the index.
 /**
  *
+ * @returns
  */
 class SearchResult {
   candidate;
@@ -221,18 +247,21 @@ class SearchResult {
   }
   /**
    *
+   * @returns
    */
   get key() {
     return this.candidate.key;
   }
   /**
    *
+   * @returns
    */
   get match() {
     return this.results.some((result) => result.match);
   }
   /**
    *
+   * @returns
    */
   fragmentWord() {
     return this.results.find((r) => r.fragmentWord())?.fragmentWord();
@@ -242,6 +271,7 @@ class SearchResult {
   /**
    *
    * @param hrefFmt
+   * @returns
    */
   viewCell(hrefFmt) {
     const viewCell = document.createElement('td');
@@ -272,19 +302,25 @@ class SearchResult {
     viewCell.prepend(a);
     return viewCell;
   }
-  // row constructs the row in the results table that corresponds to this
-  // result. This consists of the cell bearing the key and anchor, along with
-  // the other cells containing the highlighted search fields.
   /**
+   * row constructs the row in the results table that corresponds to this
+   * result. This consists of the cell bearing the key and anchor, along with
+   * the other cells containing the highlighted search fields.
+   *
+   * NOTE: Whatever elements are included in the output must be recreated /
+   * cloned each time we update the display, because we can't use the same node
+   * in DOM twice at the same time, and nodes get destroyed once removed from
+   * DOM. Due to this DOM limitation, we can NOT reuse any nodes.
    *
    * @param hrefFmt
+   * @returns
    */
   row(hrefFmt) {
     const row = document.createElement('tr');
     row.appendChild(this.viewCell(hrefFmt));
     this.results.forEach((sr) => {
       const cell = document.createElement('td');
-      cell.innerHTML = sr.highlight();
+      cell.append(...sr.highlight());
       row.appendChild(cell);
     });
     return row;
@@ -292,6 +328,7 @@ class SearchResult {
   // firstMatchField returns the index of the first field containing a match.
   /**
    *
+   * @returns
    */
   firstMatchField() {
     return this.results.findIndex((result) => result.match);
@@ -312,11 +349,12 @@ class Field {
    */
   constructor(name, html) {
     this.name = name;
-    this.units = html.split(UNIT_DELIMITER).map((html) => new Unit(html));
+    this.units = html.split(UNIT_DELIMITER_STR).map((html) => new Unit(html));
   }
   /**
    *
    * @param regex
+   * @returns
    */
   search(regex) {
     return new FieldSearchResult(this, regex);
@@ -340,12 +378,14 @@ class FieldSearchResult {
   }
   /**
    *
+   * @returns
    */
   get units() {
     return this.field.units;
   }
   /**
    *
+   * @returns
    */
   get match() {
     return this.results.some((result) => result.match);
@@ -353,30 +393,34 @@ class FieldSearchResult {
   // highlight returns the field's HTML content, with matches highlighted.
   /**
    *
+   * @returns
    */
   highlight() {
-    let results = this.results;
-    if (!this.match) {
-      // If there are no matches, we limit the number of units in the output.
-      results = results.slice(0, UNITS_LIMIT);
-    } else if (this.units.length > UNITS_LIMIT) {
-      // If there are matches:
-      // - If there are only few units, we show all of them regardless of
-      //   whether they have matches or not.
-      // - If there are many units, we show those that have matches, even if
-      //   their number exceeds the limit, because we need to show all matches.
-      results = results.filter((result) => result.match);
+    // If there are no matches, we limit the number of units in the output.
+    // If there are matches:
+    // - If there are only few units, we show all of them regardless of
+    //   whether they have matches or not.
+    // - If there are many units, we show those that have matches, even if
+    //   their number exceeds the limit, because we need to show all matches.
+    const results = !this.match
+      ? this.results.slice(0, UNITS_LIMIT)
+      : this.units.length > UNITS_LIMIT
+        ? this.results.filter((r) => r.match)
+        : this.results;
+    const truncated = results.length < this.results.length;
+    const output = results
+      .map((r) => r.highlight())
+      .flatMap((unit, i) => (i ? [UNIT_DELIMITER(), ...unit] : unit));
+    if (truncated) {
+      output.push(...LONG_UNITS_FIELD_MESSAGE());
     }
-    const output = results.map((r) => r.highlight());
-    return (
-      output.join(UNIT_DELIMITER) +
-      (output.length < this.units.length ? LONG_UNITS_FIELD_MESSAGE : '')
-    );
+    return output;
   }
   // fragmentWord returns a word that can be used as a fragment in the URL to
   // highlight the first matching word.
   /**
    *
+   * @returns
    */
   fragmentWord() {
     return this.results.find((r) => r.match)?.fragmentWord();
@@ -398,11 +442,12 @@ class Unit {
    */
   constructor(html) {
     this.html = html;
-    this.lines = html.split(LINE_BREAK).map((l) => new Line(l));
+    this.lines = html.split(LINE_BREAK_STR).map((l) => new Line(l));
   }
   /**
    *
    * @param regex
+   * @returns
    */
   search(regex) {
     return new UnitSearchResult(this, regex);
@@ -426,18 +471,23 @@ class UnitSearchResult {
   }
   /**
    *
+   * @returns
    */
   get match() {
     return this.results.some((r) => r.match);
   }
   /**
    *
+   * @returns
    */
   highlight() {
-    return this.results.map((r) => r.highlight()).join(LINE_BREAK);
+    return this.results
+      .map((r) => r.highlight())
+      .flatMap((el, i) => (i ? [LINE_BREAK(), ...el] : [...el]));
   }
   /**
    *
+   * @returns
    */
   fragmentWord() {
     return this.results.find((r) => r.match)?.fragmentWord();
@@ -449,6 +499,7 @@ class UnitSearchResult {
 class Line {
   html;
   text;
+  temp;
   /**
    *
    * @param html
@@ -456,10 +507,13 @@ class Line {
   constructor(html) {
     this.html = html;
     this.text = html.replaceAll(TAG_REGEX, '');
+    this.temp = document.createElement('template');
+    this.temp.innerHTML = html;
   }
   /**
    *
    * @param regex
+   * @returns
    */
   search(regex) {
     return new LineSearchResult(this, regex);
@@ -467,6 +521,7 @@ class Line {
   /**
    *
    * @param regex
+   * @returns
    */
   matches(regex) {
     return (
@@ -500,18 +555,28 @@ class LineSearchResult {
   }
   /**
    *
+   * @returns
    */
   get text() {
     return this.line.text;
   }
   /**
    *
+   * @returns
    */
   get html() {
     return this.line.html;
   }
   /**
    *
+   * @returns
+   */
+  get temp() {
+    return this.line.temp;
+  }
+  /**
+   *
+   * @returns
    */
   get match() {
     return !!this.matches.length;
@@ -519,6 +584,7 @@ class LineSearchResult {
   /**
    *
    * @param char
+   * @returns
    */
   static isWordChar(char) {
     // Unicode-aware boundary expansion
@@ -529,6 +595,7 @@ class LineSearchResult {
   }
   /**
    *
+   * @returns
    */
   fragmentWord() {
     /* Expand the match left and right such that it contains full words, for
@@ -561,8 +628,18 @@ class LineSearchResult {
   }
   /**
    *
+   * @returns
    */
   highlight() {
+    if (!this.match) {
+      // A DOM node can only exist in one place in the DOM at a time.
+      // Removing a node from the DOM detaches it, effectively "destroying" its
+      // placement. To preserve the original nodes for reuse, we clone them
+      // before appending.
+      return Array.from(this.temp.content.childNodes).map((e) =>
+        e.cloneNode(true)
+      );
+    }
     const builder = [];
     // i represents the index in the HTML.
     // j tracks the index in the text.
@@ -605,7 +682,9 @@ class LineSearchResult {
       j += 1;
       i += 1;
     }
-    return builder.join('');
+    const temp = document.createElement('template');
+    temp.innerHTML = builder.join('');
+    return Array.from(temp.content.childNodes);
   }
 }
 /**

@@ -17,11 +17,16 @@ const KEY = 'KEY';
 //   available.
 const UNITS_LIMIT = 5;
 
-// Our currently index building algorithm results in HTML with a simplified
-// structure, with only <span> tags, styling tags, or <br> tags. Styling tags
-// don't affect the output text, and are simply ignored during text search.
-// Line breaks, however, require special handling.
-const LINE_BREAK = '<br>';
+/** Our currently index building algorithm results in HTML with a simplified
+ * structure, with only <span> tags, styling tags, or <br> tags. Styling tags
+ * don't affect the output text, and are simply ignored during text search.
+ * Line breaks, however, require special handling.
+ * @returns A new <br> element.
+ */
+function LINE_BREAK(): HTMLBRElement {
+  return document.createElement('br');
+}
+const LINE_BREAK_STR = '<br>';
 
 // RESULTS_TO_UPDATE_DISPLAY specifies how often (every how many results) we
 // should yield to let the browser update the display during search.
@@ -48,14 +53,33 @@ const enum CLS {
   // VIEW_FOR_MORE is the class of the message "view for more", displayed in
   // large fields that have been cropped.
   VIEW_FOR_MORE = 'view-for-more',
+  MATCH_SEPARATOR = 'match-separator',
 }
 
-// UNIT_DELIMITER is the string that separates a units field into units.
-const UNIT_DELIMITER = '<hr class="match-separator">';
+/**
+ * @returns
+ */
+function UNIT_DELIMITER(): HTMLElement {
+  const el = document.createElement('hr');
+  el.classList.add(CLS.MATCH_SEPARATOR);
+  return el;
+}
+// UNIT_DELIMITER_STR is the string that separates a units field into units.
+// TODO: This is not a clean way to separate units! Your index should be built
+// with units already separated.
+const UNIT_DELIMITER_STR = '<hr class="match-separator">';
 
-// LONG_UNITS_FIELD_MESSAGE is the message shown at the end of a units field,
-// if the field gets truncated.
-const LONG_UNITS_FIELD_MESSAGE = `<br><span class="${CLS.VIEW_FOR_MORE}">... (<em>view</em> for full context)</span>`;
+/** LONG_UNITS_FIELD_MESSAGE is the message shown at the end of a units field,
+ * if the field gets truncated.
+ * @returns
+ */
+function LONG_UNITS_FIELD_MESSAGE(): HTMLElement[] {
+  const br = document.createElement('br');
+  const span = document.createElement('span');
+  span.className = CLS.VIEW_FOR_MORE;
+  span.innerHTML = '... (<em>view</em> for full context)';
+  return [br, span];
+}
 
 // _Form stores Form parameters.
 export interface _Form {
@@ -113,7 +137,7 @@ export class Form {
   }
 
   /**
-   *
+   * @returns
    */
   queryExpression(): string {
     let query: string = this.searchBox.value;
@@ -212,7 +236,7 @@ export class Form {
 }
 
 /**
- *
+ * @returns
  */
 async function yieldToBrowser(): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, 0));
@@ -241,6 +265,7 @@ class Candidate {
   /**
    *
    * @param regex
+   * @returns
    */
   public search(regex: RegExp): SearchResult {
     return new SearchResult(this, regex);
@@ -250,6 +275,7 @@ class Candidate {
 // SearchResult represents the search result of one candidate from the index.
 /**
  *
+ * @returns
  */
 class SearchResult {
   private readonly results: FieldSearchResult[];
@@ -269,6 +295,7 @@ class SearchResult {
 
   /**
    *
+   * @returns
    */
   get key(): string {
     return this.candidate.key;
@@ -276,6 +303,7 @@ class SearchResult {
 
   /**
    *
+   * @returns
    */
   get match(): boolean {
     return this.results.some((result) => result.match);
@@ -283,6 +311,7 @@ class SearchResult {
 
   /**
    *
+   * @returns
    */
   fragmentWord(): string | undefined {
     return this.results.find((r) => r.fragmentWord())?.fragmentWord();
@@ -293,6 +322,7 @@ class SearchResult {
   /**
    *
    * @param hrefFmt
+   * @returns
    */
   private viewCell(hrefFmt?: string): HTMLTableCellElement {
     const viewCell = document.createElement('td');
@@ -332,12 +362,18 @@ class SearchResult {
     return viewCell;
   }
 
-  // row constructs the row in the results table that corresponds to this
-  // result. This consists of the cell bearing the key and anchor, along with
-  // the other cells containing the highlighted search fields.
   /**
+   * row constructs the row in the results table that corresponds to this
+   * result. This consists of the cell bearing the key and anchor, along with
+   * the other cells containing the highlighted search fields.
+   *
+   * NOTE: Whatever elements are included in the output must be recreated /
+   * cloned each time we update the display, because we can't use the same node
+   * in DOM twice at the same time, and nodes get destroyed once removed from
+   * DOM. Due to this DOM limitation, we can NOT reuse any nodes.
    *
    * @param hrefFmt
+   * @returns
    */
   row(hrefFmt?: string): HTMLTableRowElement {
     const row = document.createElement('tr');
@@ -345,8 +381,8 @@ class SearchResult {
     row.appendChild(this.viewCell(hrefFmt));
 
     this.results.forEach((sr: FieldSearchResult) => {
-      const cell = document.createElement('td');
-      cell.innerHTML = sr.highlight();
+      const cell: HTMLTableCellElement = document.createElement('td');
+      cell.append(...sr.highlight());
       row.appendChild(cell);
     });
 
@@ -356,6 +392,7 @@ class SearchResult {
   // firstMatchField returns the index of the first field containing a match.
   /**
    *
+   * @returns
    */
   firstMatchField(): number {
     return this.results.findIndex((result) => result.match);
@@ -378,12 +415,13 @@ class Field {
     readonly name: string,
     html: string
   ) {
-    this.units = html.split(UNIT_DELIMITER).map((html) => new Unit(html));
+    this.units = html.split(UNIT_DELIMITER_STR).map((html) => new Unit(html));
   }
 
   /**
    *
    * @param regex
+   * @returns
    */
   search(regex: RegExp): FieldSearchResult {
     return new FieldSearchResult(this, regex);
@@ -410,6 +448,7 @@ class FieldSearchResult {
 
   /**
    *
+   * @returns
    */
   private get units(): Unit[] {
     return this.field.units;
@@ -417,6 +456,7 @@ class FieldSearchResult {
 
   /**
    *
+   * @returns
    */
   get match(): boolean {
     return this.results.some((result) => result.match);
@@ -425,34 +465,40 @@ class FieldSearchResult {
   // highlight returns the field's HTML content, with matches highlighted.
   /**
    *
+   * @returns
    */
-  highlight(): string {
-    let results = this.results;
+  highlight(): HTMLElement[] {
+    // If there are no matches, we limit the number of units in the output.
+    // If there are matches:
+    // - If there are only few units, we show all of them regardless of
+    //   whether they have matches or not.
+    // - If there are many units, we show those that have matches, even if
+    //   their number exceeds the limit, because we need to show all matches.
+    const results: UnitSearchResult[] = !this.match
+      ? this.results.slice(0, UNITS_LIMIT)
+      : this.units.length > UNITS_LIMIT
+        ? this.results.filter((r) => r.match)
+        : this.results;
 
-    if (!this.match) {
-      // If there are no matches, we limit the number of units in the output.
-      results = results.slice(0, UNITS_LIMIT);
-    } else if (this.units.length > UNITS_LIMIT) {
-      // If there are matches:
-      // - If there are only few units, we show all of them regardless of
-      //   whether they have matches or not.
-      // - If there are many units, we show those that have matches, even if
-      //   their number exceeds the limit, because we need to show all matches.
-      results = results.filter((result) => result.match);
+    const truncated: boolean = results.length < this.results.length;
+
+    const output: HTMLElement[] = results
+      .map((r: UnitSearchResult): HTMLElement[] => r.highlight())
+      .flatMap((unit: HTMLElement[], i: number) =>
+        i ? [UNIT_DELIMITER(), ...unit] : unit
+      );
+
+    if (truncated) {
+      output.push(...LONG_UNITS_FIELD_MESSAGE());
     }
-
-    const output = results.map((r) => r.highlight());
-
-    return (
-      output.join(UNIT_DELIMITER) +
-      (output.length < this.units.length ? LONG_UNITS_FIELD_MESSAGE : '')
-    );
+    return output;
   }
 
   // fragmentWord returns a word that can be used as a fragment in the URL to
   // highlight the first matching word.
   /**
    *
+   * @returns
    */
   fragmentWord(): string | undefined {
     return this.results.find((r) => r.match)?.fragmentWord();
@@ -473,12 +519,13 @@ class Unit {
    * @param html
    */
   constructor(readonly html: string) {
-    this.lines = html.split(LINE_BREAK).map((l: string) => new Line(l));
+    this.lines = html.split(LINE_BREAK_STR).map((l: string) => new Line(l));
   }
 
   /**
    *
    * @param regex
+   * @returns
    */
   search(regex: RegExp): UnitSearchResult {
     return new UnitSearchResult(this, regex);
@@ -505,6 +552,7 @@ class UnitSearchResult {
 
   /**
    *
+   * @returns
    */
   get match(): boolean {
     return this.results.some((r) => r.match);
@@ -512,13 +560,19 @@ class UnitSearchResult {
 
   /**
    *
+   * @returns
    */
-  highlight(): string {
-    return this.results.map((r) => r.highlight()).join(LINE_BREAK);
+  highlight(): HTMLElement[] {
+    return this.results
+      .map((r: LineSearchResult): HTMLElement[] => r.highlight())
+      .flatMap((el: HTMLElement[], i: number) =>
+        i ? [LINE_BREAK(), ...el] : [...el]
+      );
   }
 
   /**
    *
+   * @returns
    */
   fragmentWord(): string | undefined {
     return this.results.find((r) => r.match)?.fragmentWord();
@@ -537,17 +591,21 @@ interface Match {
  */
 class Line {
   readonly text: string;
+  readonly temp: HTMLTemplateElement;
   /**
    *
    * @param html
    */
   constructor(readonly html: string) {
     this.text = html.replaceAll(TAG_REGEX, '');
+    this.temp = document.createElement('template');
+    this.temp.innerHTML = html;
   }
 
   /**
    *
    * @param regex
+   * @returns
    */
   search(regex: RegExp): LineSearchResult {
     return new LineSearchResult(this, regex);
@@ -556,6 +614,7 @@ class Line {
   /**
    *
    * @param regex
+   * @returns
    */
   matches(regex: RegExp): Match[] {
     return (
@@ -592,6 +651,7 @@ class LineSearchResult {
 
   /**
    *
+   * @returns
    */
   private get text(): string {
     return this.line.text;
@@ -599,6 +659,7 @@ class LineSearchResult {
 
   /**
    *
+   * @returns
    */
   private get html(): string {
     return this.line.html;
@@ -606,6 +667,15 @@ class LineSearchResult {
 
   /**
    *
+   * @returns
+   */
+  private get temp(): HTMLTemplateElement {
+    return this.line.temp;
+  }
+
+  /**
+   *
+   * @returns
    */
   get match(): boolean {
     return !!this.matches.length;
@@ -614,6 +684,7 @@ class LineSearchResult {
   /**
    *
    * @param char
+   * @returns
    */
   static isWordChar(char?: string): boolean {
     // Unicode-aware boundary expansion
@@ -625,6 +696,7 @@ class LineSearchResult {
 
   /**
    *
+   * @returns
    */
   fragmentWord(): string {
     /* Expand the match left and right such that it contains full words, for
@@ -662,8 +734,18 @@ class LineSearchResult {
 
   /**
    *
+   * @returns
    */
-  highlight(): string {
+  highlight(): HTMLElement[] {
+    if (!this.match) {
+      // A DOM node can only exist in one place in the DOM at a time.
+      // Removing a node from the DOM detaches it, effectively "destroying" its
+      // placement. To preserve the original nodes for reuse, we clone them
+      // before appending.
+      return Array.from(this.temp.content.childNodes).map((e) =>
+        e.cloneNode(true)
+      ) as HTMLElement[];
+    }
     const builder: string[] = [];
     // i represents the index in the HTML.
     // j tracks the index in the text.
@@ -710,7 +792,9 @@ class LineSearchResult {
       i += 1;
     }
 
-    return builder.join('');
+    const temp: HTMLTemplateElement = document.createElement('template');
+    temp.innerHTML = builder.join('');
+    return Array.from(temp.content.childNodes) as HTMLElement[];
   }
 }
 
