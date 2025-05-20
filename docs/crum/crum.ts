@@ -194,17 +194,11 @@ const DIALECTS = [
   // The following dialects are only found in Marcion.
   'NH',
   // The following dialects are only found in TLA / KELLIA.
-  'Ak', // TODO: Ak and O are both "Old Coptic". Deduplicate.
   'M',
   'P',
   'V',
   'W',
   'U',
-];
-
-// SYNC_DIALECTS stores dialects that should be synchronized with each other.
-const SYNC_DIALECTS: [string, string][] = [
-  ['Ak', 'O'], // Old Coptic is O in Crum, and Ak (for Altkoptisch) in KELLIA.
 ];
 
 // DIALECT_SINGLE_CHAR is a mapping for the dialects that have shortcuts other
@@ -215,7 +209,6 @@ const DIALECT_SINGLE_CHAR: Record<string, string> = {
   a: 'Sa',
   f: 'Sf',
   b: 'Fb',
-  k: 'Ak',
 };
 
 /**
@@ -475,21 +468,17 @@ function activeDialects(): string[] | null {
 
 /**
  *
- * @param toggle
+ * @param dialect
  */
-function toggleDialect(toggle: string): void {
+function toggleDialect(dialect: string): void {
   const active = new Set(activeDialects());
-  const has = active.has(toggle);
-  const dialects: string[] = SYNC_DIALECTS.find((list) =>
-    list.includes(toggle)
-  ) ?? [toggle];
-  for (const dialect of dialects) {
-    if (has) {
-      active.delete(dialect);
-    } else {
-      active.add(dialect);
-    }
+
+  if (active.has(dialect)) {
+    active.delete(dialect);
+  } else {
+    active.add(dialect);
   }
+
   if (active.size) {
     localStorage.setItem('d', Array.from(active).join(','));
   } else {
@@ -1139,7 +1128,7 @@ function makeHelpPanel(): HelpPanel {
         'O',
         'Old Coptic',
         'O',
-        ['Crum'],
+        ['Crum', 'KELLIA'],
         DIALECT_ARTICLE.OldCoptic
       ),
     ],
@@ -1151,15 +1140,6 @@ function makeHelpPanel(): HelpPanel {
         // TODO: This dialect was invented by Marcion, and it's not in Crum.
         ['Crum'],
         DIALECT_ARTICLE.NagHammadi
-      ),
-    ],
-    k: [
-      makeDialectShortcut(
-        'k',
-        'Old Coptic',
-        'Ak',
-        ['KELLIA'],
-        DIALECT_ARTICLE.OldCoptic
       ),
     ],
     M: [

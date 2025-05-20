@@ -1009,7 +1009,6 @@ _DIALECTS = {
     # The following dialects are only found in Marcion.
     "NH",
     # The following dialects are only found in TLA / KELLIA.
-    "Ak",  # TODO: Ak and O are the same. Deduplicate.
     "M",
     "P",
     "V",

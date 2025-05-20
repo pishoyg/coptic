@@ -24,6 +24,11 @@ _CLEAN = set("ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭ
 _CRUM_RE = re.compile(r"\b(CD ([0-9]+[ab]?)-?[0-9]*[ab]?)\b")
 _SENSE_CHILDREN = ["quote", "definition", "bibl", "ref", "xr"]
 
+_GEO_MAPPING: dict[str, str] = {
+    "?": "U",
+    "Ak": "O",
+}
+
 # TODO: (#51) Support entity types.
 _PUB_CORPORA = None
 
@@ -66,7 +71,7 @@ class _Line:
     def __init__(self, gram_grp: str, orth: str, geo: str, form_id: str):
         self._gram_grp: str = gram_grp
         self._orth: str = orth
-        self._geo: str = "U" if geo == "?" else geo
+        self._geo: str = _GEO_MAPPING.get(geo, geo)
         self._form_id: str = form_id
 
     def pishoy_tr(self) -> str:
