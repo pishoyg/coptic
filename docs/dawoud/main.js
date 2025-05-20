@@ -1,6 +1,7 @@
 import * as scan from '../scan.js';
 import * as env from '../env.js';
 import * as logger from '../logger.js';
+import * as coptic from '../coptic.js';
 const MIN_PAGE_NUM = 0;
 const MAX_PAGE_NUM = 1054;
 const OFFSET = 16;
@@ -9,17 +10,17 @@ const ARABIC = 'arabic.tsv';
 const GREEK = 'greek.tsv';
 // TODO: Add validation for the Arabic index.
 const ALL = [COPTIC, ARABIC, GREEK];
-// Dawoud gives ⲟⲩ special handling!
-// All words starting with ⲟⲩ are grouped together, under a section in the
-// dictionary between ⲟ and ⲡ.
-// We reimplement sorting for Dawoud!
 /**
- *
+ * Dawoud gives ⲟⲩ special handling!
+ * All words starting with ⲟⲩ are grouped together, under a section in the
+ * dictionary between ⲟ and ⲡ.
+ * We reimplement sorting for Dawoud!
  */
-export class DawoudWord extends scan.Word {
+export class DawoudWord extends coptic.Word {
   /**
    *
    * @param other
+   * @returns
    */
   leq(other) {
     if (DawoudWord.ou(this) === DawoudWord.ou(other)) {
@@ -39,6 +40,7 @@ export class DawoudWord extends scan.Word {
   /**
    *
    * @param w
+   * @returns
    */
   static o(w) {
     return w.word.startsWith('ⲟ');
@@ -46,6 +48,7 @@ export class DawoudWord extends scan.Word {
   /**
    *
    * @param w
+   * @returns
    */
   static ou(w) {
     return w.word.startsWith('ⲟⲩ');
@@ -90,7 +93,7 @@ async function nodeMain() {
   ).validate(false);
   new scan.Index(
     fs.readFileSync(path.join(__dirname, GREEK), 'utf8'),
-    scan.Word
+    coptic.Word
   ).validate(false);
 }
 /**

@@ -36,3 +36,9 @@ export function openPrevLink() {
 export function openSearchLink() {
   openLinkHref('search', '_blank');
 }
+/**
+ * @returns
+ */
+export async function yieldToBrowser() {
+  return new Promise((resolve) => setTimeout(resolve, 0));
+}
