@@ -130,7 +130,9 @@ export class Form {
    * @returns
    */
   queryExpression(): string {
-    let query: string = orthographer.cleanDiacritics(this.searchBox.value);
+    let query: string = orthographer.cleanDiacritics(
+      orth.normalize(this.searchBox.value)
+    );
     if (!query) {
       return '';
     }
