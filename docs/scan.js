@@ -5,7 +5,7 @@ import * as coptic from './coptic.js';
 // WANT_COLUMNS is the list of the first columns we expect to find in the TSV.
 const WANT_COLUMNS = ['page', 'start', 'end'];
 // ZOOM_FACTOR controls how fast zooming happens in response to scroll events.
-const ZOOM_FACTOR = 0.015;
+const ZOOM_FACTOR = 0.05;
 /**
  *
  */
