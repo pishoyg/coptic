@@ -1,4 +1,5 @@
 import * as collapse from './collapse.js';
+import * as logger from './logger.js';
 // KEY is the name of the field that bears the word key. The key can be used to
 // generate an HREF to open the word page.
 const KEY = 'KEY';
@@ -791,6 +792,13 @@ export class Xooxle {
    *
    */
   async searchAux() {
+    // TODO: We append random characters in order to avoid having timers with
+    // identical names. This is not ideal. Let's supply an index name as part of
+    // the metadata, and use that for logging instead.
+    const name = `search-${Array.from({ length: 2 }, () =>
+      String.fromCharCode(97 + Math.floor(Math.random() * 26))
+    ).join('')}`;
+    logger.time(name);
     if (this.currentAbortController) {
       this.currentAbortController.abort();
     }
@@ -815,6 +823,7 @@ export class Xooxle {
         this.form.message('Internal error! Please send us an email!');
       }
     }
+    logger.timeEnd(name);
   }
 
   /**
