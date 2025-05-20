@@ -100,7 +100,9 @@ export class Form {
    * @returns
    */
   queryExpression() {
-    let query = orthographer.cleanDiacritics(this.searchBox.value);
+    let query = orthographer.cleanDiacritics(
+      orth.normalize(this.searchBox.value)
+    );
     if (!query) {
       return '';
     }
