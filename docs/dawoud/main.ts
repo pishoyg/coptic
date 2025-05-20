@@ -25,38 +25,36 @@ export class DawoudWord extends coptic.Word implements scan.Word {
    * @param other
    * @returns
    */
-  override leq(other: coptic.Word): boolean {
-    if (DawoudWord.ou(this) === DawoudWord.ou(other)) {
+  override leq(other: DawoudWord): boolean {
+    if (this.ou() === other.ou()) {
       // Either neither is an ⲟⲩ words, or both are.
       // Lexicographic comparison should work either way.
       return super.leq(other);
     }
-    if (!DawoudWord.o(this) || !DawoudWord.o(other)) {
+    if (!this.o() || !other.o()) {
       // One of them doesn't start with ⲟ. Again, lexicographic comparison
       // should work.
       return super.leq(other);
     }
     // Both words start with ⲟ, and only one of them starts with ⲟⲩ.
     // The ⲟⲩ word is lexicographically larger.
-    return !DawoudWord.ou(this);
+    return !this.ou();
   }
 
   /**
    *
-   * @param w
    * @returns
    */
-  private static o(w: scan.Word): boolean {
-    return w.word.startsWith('ⲟ');
+  private o(): boolean {
+    return this.word.startsWith('ⲟ');
   }
 
   /**
    *
-   * @param w
    * @returns
    */
-  private static ou(w: scan.Word): boolean {
-    return w.word.startsWith('ⲟⲩ');
+  private ou(): boolean {
+    return this.word.startsWith('ⲟⲩ');
   }
 }
 
