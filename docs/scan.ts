@@ -7,7 +7,7 @@ import * as coptic from './coptic.js';
 const WANT_COLUMNS = ['page', 'start', 'end'];
 
 // ZOOM_FACTOR controls how fast zooming happens in response to scroll events.
-const ZOOM_FACTOR = 0.015;
+const ZOOM_FACTOR = 0.05;
 
 /**
  * TODO: (#411) Implement Greek and Arabic word classes, as well as Coptic.
