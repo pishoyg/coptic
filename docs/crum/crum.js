@@ -64,7 +64,9 @@ var DIALECT_ARTICLE;
     'https://ccdl.claremont.edu/digital/collection/cce/id/2029/rec/2';
   DIALECT_ARTICLE['Akhmimic'] =
     'https://ccdl.claremont.edu/digital/collection/cce/id/1962/rec/1';
-  DIALECT_ARTICLE['subAkhmimic_Lycopolitan'] =
+  // Lycopolitan is called Subakhmimic in Crum, but Lycopolitan is the standard
+  // name in academia today.
+  DIALECT_ARTICLE['Lycopolitan'] =
     'https://ccdl.claremont.edu/digital/collection/cce/id/2026/rec/1';
   DIALECT_ARTICLE['Bohairic'] =
     'https://ccdl.claremont.edu/digital/collection/cce/id/2011/rec/2';
@@ -161,7 +163,7 @@ const DIALECTS = [
   'Sa',
   'Sf',
   'A',
-  'sA',
+  'L',
   'B',
   'F',
   'Fb',
@@ -169,18 +171,11 @@ const DIALECTS = [
   // The following dialects are only found in Marcion.
   'NH',
   // The following dialects are only found in TLA / KELLIA.
-  'Ak',
   'M',
-  'L',
   'P',
   'V',
   'W',
   'U',
-];
-// SYNC_DIALECTS stores dialects that should be synchronized with each other.
-const SYNC_DIALECTS = [
-  ['Ak', 'O'], // Old Coptic is O in Crum, and Ak (for Altkoptisch) in KELLIA.
-  ['sA', 'L'], // Lycopolitan is sA (for subAkhmimic) in Crum, and L in KELLIA.
 ];
 // DIALECT_SINGLE_CHAR is a mapping for the dialects that have shortcuts other
 // than their codes. If the shortcut to toggle a dialect is not the same as its
@@ -189,9 +184,7 @@ const DIALECT_SINGLE_CHAR = {
   N: 'NH',
   a: 'Sa',
   f: 'Sf',
-  s: 'sA',
   b: 'Fb',
-  k: 'Ak',
 };
 /**
  *
@@ -427,20 +420,14 @@ function activeDialects() {
 }
 /**
  *
- * @param toggle
+ * @param dialect
  */
-function toggleDialect(toggle) {
+function toggleDialect(dialect) {
   const active = new Set(activeDialects());
-  const has = active.has(toggle);
-  const dialects = SYNC_DIALECTS.find((list) => list.includes(toggle)) ?? [
-    toggle,
-  ];
-  for (const dialect of dialects) {
-    if (has) {
-      active.delete(dialect);
-    } else {
-      active.add(dialect);
-    }
+  if (active.has(dialect)) {
+    active.delete(dialect);
+  } else {
+    active.add(dialect);
   }
   if (active.size) {
     localStorage.setItem('d', Array.from(active).join(','));
@@ -904,6 +891,8 @@ class Shortcut {
  * @param code
  * @param dictionaries
  * @param link
+ *
+ * @returns A shortcut object representing the toggle shortcut for this dialect.
  */
 function makeDialectShortcut(key, name, code, dictionaries, link) {
   code = highlightFirstOccurrence(key, code);
@@ -981,13 +970,13 @@ function makeHelpPanel() {
         DIALECT_ARTICLE.Akhmimic
       ),
     ],
-    s: [
+    L: [
       makeDialectShortcut(
-        's',
-        'subAkhmimic',
-        'sA',
-        ['Crum'],
-        DIALECT_ARTICLE.subAkhmimic_Lycopolitan
+        'L',
+        'Lycopolitan',
+        'L',
+        ['Crum', 'KELLIA'],
+        DIALECT_ARTICLE.Lycopolitan
       ),
     ],
     B: [
@@ -1022,7 +1011,7 @@ function makeHelpPanel() {
         'O',
         'Old Coptic',
         'O',
-        ['Crum'],
+        ['Crum', 'KELLIA'],
         DIALECT_ARTICLE.OldCoptic
       ),
     ],
@@ -1031,17 +1020,9 @@ function makeHelpPanel() {
         'N',
         'Nag Hammadi',
         'NH',
-        ['Crum (Marcion)'],
+        // TODO: This dialect was invented by Marcion, and it's not in Crum.
+        ['Crum'],
         DIALECT_ARTICLE.NagHammadi
-      ),
-    ],
-    k: [
-      makeDialectShortcut(
-        'k',
-        'Old Coptic',
-        'Ak',
-        ['KELLIA'],
-        DIALECT_ARTICLE.OldCoptic
       ),
     ],
     M: [
@@ -1051,15 +1032,6 @@ function makeHelpPanel() {
         'M',
         ['KELLIA'],
         DIALECT_ARTICLE.Mesokemic
-      ),
-    ],
-    L: [
-      makeDialectShortcut(
-        'L',
-        'Lycopolitan',
-        'L',
-        ['KELLIA'],
-        DIALECT_ARTICLE.subAkhmimic_Lycopolitan
       ),
     ],
     P: [
