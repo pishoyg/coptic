@@ -21,12 +21,8 @@ const UNITS_LIMIT = 5;
  * structure, with only <span> tags, styling tags, or <br> tags. Styling tags
  * don't affect the output text, and are simply ignored during text search.
  * Line breaks, however, require special handling.
- * @returns A new <br> element.
  */
-function LINE_BREAK(): HTMLBRElement {
-  return document.createElement('br');
-}
-const LINE_BREAK_STR = '<br>';
+const LINE_BREAK = '<br>';
 
 // RESULTS_TO_UPDATE_DISPLAY specifies how often (every how many results) we
 // should yield to let the browser update the display during search.
@@ -79,30 +75,15 @@ const enum CLS {
   MATCH_SEPARATOR = 'match-separator',
 }
 
-/**
- * @returns
- */
-function UNIT_DELIMITER(): HTMLElement {
-  const el = document.createElement('hr');
-  el.classList.add(CLS.MATCH_SEPARATOR);
-  return el;
-}
-// UNIT_DELIMITER_STR is the string that separates a units field into units.
+// UNIT_DELIMITER is the string that separates a units field into units.
 // TODO: This is not a clean way to separate units! Your index should be built
 // with units already separated.
-const UNIT_DELIMITER_STR = '<hr class="match-separator">';
+const UNIT_DELIMITER = '<hr class="match-separator">';
 
 /** LONG_UNITS_FIELD_MESSAGE is the message shown at the end of a units field,
  * if the field gets truncated.
- * @returns
  */
-function LONG_UNITS_FIELD_MESSAGE(): HTMLElement[] {
-  const br = document.createElement('br');
-  const span = document.createElement('span');
-  span.className = CLS.VIEW_FOR_MORE;
-  span.innerHTML = '... (<em>view</em> for full context)';
-  return [br, span];
-}
+const LONG_UNITS_FIELD_MESSAGE = `<br><span class="${CLS.VIEW_FOR_MORE}">... (<em>view</em> for full context)</span>`;
 
 // _Form stores Form parameters.
 export interface _Form {
@@ -405,7 +386,7 @@ class SearchResult {
 
     this.results.forEach((sr: FieldSearchResult) => {
       const cell: HTMLTableCellElement = document.createElement('td');
-      cell.append(...sr.highlight());
+      cell.innerHTML = sr.highlight();
       row.appendChild(cell);
     });
 
@@ -438,7 +419,7 @@ class Field {
     readonly name: string,
     html: string
   ) {
-    this.units = html.split(UNIT_DELIMITER_STR).map((html) => new Unit(html));
+    this.units = html.split(UNIT_DELIMITER).map((html) => new Unit(html));
   }
 
   /**
@@ -490,7 +471,7 @@ class FieldSearchResult {
    *
    * @returns
    */
-  highlight(): HTMLElement[] {
+  highlight(): string {
     // If there are no matches, we limit the number of units in the output.
     // If there are matches:
     // - If there are only few units, we show all of them regardless of
@@ -505,16 +486,11 @@ class FieldSearchResult {
 
     const truncated: boolean = results.length < this.results.length;
 
-    const output: HTMLElement[] = results
-      .map((r: UnitSearchResult): HTMLElement[] => r.highlight())
-      .flatMap((unit: HTMLElement[], i: number) =>
-        i ? [UNIT_DELIMITER(), ...unit] : unit
-      );
-
-    if (truncated) {
-      output.push(...LONG_UNITS_FIELD_MESSAGE());
-    }
-    return output;
+    return (
+      results
+        .map((r: UnitSearchResult): string => r.highlight())
+        .join(UNIT_DELIMITER) + (truncated ? LONG_UNITS_FIELD_MESSAGE : '')
+    );
   }
 
   // fragmentWord returns a word that can be used as a fragment in the URL to
@@ -542,7 +518,7 @@ class Unit {
    * @param html
    */
   constructor(readonly html: string) {
-    this.lines = html.split(LINE_BREAK_STR).map((l: string) => new Line(l));
+    this.lines = html.split(LINE_BREAK).map((l: string) => new Line(l));
   }
 
   /**
@@ -585,12 +561,8 @@ class UnitSearchResult {
    *
    * @returns
    */
-  highlight(): HTMLElement[] {
-    return this.results
-      .map((r: LineSearchResult): HTMLElement[] => r.highlight())
-      .flatMap((el: HTMLElement[], i: number) =>
-        i ? [LINE_BREAK(), ...el] : [...el]
-      );
+  highlight(): string {
+    return this.results.map((r) => r.highlight()).join(LINE_BREAK);
   }
 
   /**
@@ -602,27 +574,23 @@ class UnitSearchResult {
   }
 }
 
-// Line represents a line in a unit. Units are broken into lines because we
-// don't want any search queries to spill over multiple lines.
 interface Match {
   readonly start: number;
   readonly end: number;
 }
 
 /**
- *
+ * Line represents a line in a unit. Units are broken into lines because we
+ * don't want any search queries to spill over multiple lines.
  */
 class Line {
   readonly text: string;
-  readonly temp: HTMLTemplateElement;
   /**
    *
    * @param html
    */
   constructor(readonly html: string) {
     this.text = cleanDiacritics(html).replaceAll(TAG_REGEX, '');
-    this.temp = document.createElement('template');
-    this.temp.innerHTML = html;
   }
 
   /**
@@ -692,14 +660,6 @@ class LineSearchResult {
    *
    * @returns
    */
-  private get temp(): HTMLTemplateElement {
-    return this.line.temp;
-  }
-
-  /**
-   *
-   * @returns
-   */
   get match(): boolean {
     return !!this.matches.length;
   }
@@ -759,15 +719,13 @@ class LineSearchResult {
    *
    * @returns
    */
-  highlight(): HTMLElement[] {
+  highlight(): string {
     if (!this.match) {
       // A DOM node can only exist in one place in the DOM at a time.
       // Removing a node from the DOM detaches it, effectively "destroying" its
       // placement. To preserve the original nodes for reuse, we clone them
       // before appending.
-      return Array.from(this.temp.content.childNodes).map((e) =>
-        e.cloneNode(true)
-      ) as HTMLElement[];
+      return this.html;
     }
     const builder: string[] = [];
     // i represents the index in the HTML.
@@ -819,9 +777,7 @@ class LineSearchResult {
       i += 1;
     }
 
-    const temp: HTMLTemplateElement = document.createElement('template');
-    temp.innerHTML = builder.join('');
-    return Array.from(temp.content.childNodes) as HTMLElement[];
+    return builder.join('');
   }
 }
 
