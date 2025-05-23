@@ -147,12 +147,14 @@ function main() {
       counter += 1;
     });
   });
+  // Handle 'dialect' class.
   document.querySelectorAll('.dialect').forEach((el) => {
     el.classList.add('hover-link');
     el.onclick = () => {
       highlighter.toggleDialect(el.innerHTML);
     };
   });
+  // Handle 'developer' class.
   document.querySelectorAll('.developer').forEach((el) => {
     el.classList.add('link');
     el.onclick = highlighter.toggleDev.bind(highlighter);
@@ -168,6 +170,10 @@ function main() {
     crumElement?.insertBefore(anchor, crumElement.firstChild);
   }
   if (iam.amI('anki')) {
+    // On web, we are capable of navigating the website using relative paths.
+    // That's not the case on Anki, so we prepend the full URL.
+    // Since Anki flashcards correspond to pages in our Lexicon directory, it's
+    // the Lexicon URL that we need to prepend.
     document.querySelectorAll('.navigate').forEach((e) => {
       if (e.tagName !== 'A' || !e.hasAttribute('href')) {
         console.error(

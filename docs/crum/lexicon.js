@@ -12,9 +12,6 @@ const REGEX_CHECKBOX_ID = 'regexCheckbox';
 const MESSAGE_BOX_ID = 'message';
 const CRUM_HREF_FMT = '{KEY}.html';
 const KELLIA_HREF_FMT = 'https://coptic-dictionary.org/entry.cgi?tla={KEY}';
-const dialectCheckboxes = Array.from(
-  document.querySelectorAll('.dialect-checkbox')
-);
 const XOOXLES = [
   {
     indexURL: 'crum.json',
@@ -67,6 +64,9 @@ async function main() {
   );
   // Initialize collapsible elements.
   collapse.addListenersForSiblings(true);
+  const dialectCheckboxes = Array.from(
+    document.querySelectorAll('.dialect-checkbox')
+  );
   const highlighter = new highlight.Highlighter(false, dialectCheckboxes);
   help.makeHelpPanel(highlighter);
   highlighter.update();
