@@ -6,6 +6,7 @@ import json
 import os
 import pathlib
 import re
+import types
 import typing
 from collections import abc
 from concurrent import futures
@@ -13,7 +14,7 @@ from concurrent import futures
 import colorama
 import gspread
 import pandas as pd
-from oauth2client import service_account  # type: ignore[import-untyped]
+from google.oauth2 import service_account
 
 SITE_DIR = "docs/"
 
@@ -148,9 +149,9 @@ def html(head: str, *body: str) -> str:
 
 
 def _print(
-    color,
-    recolor,
-    *args,
+    color: str,
+    recolor: str,
+    *args: object,
     severity: typing.Literal["", "info", "warn", "error", "fatal"] = "",
     exception: bool = False,
 ):
@@ -174,7 +175,7 @@ def _print(
         print(message)
 
 
-def info(*args, level: bool = True):
+def info(*args: object, level: bool = True):
     """Log an informational message."""
     _print(
         colorama.Fore.GREEN,
@@ -184,7 +185,7 @@ def info(*args, level: bool = True):
     )
 
 
-def warn(*args, level: bool = True):
+def warn(*args: object, level: bool = True):
     """Log a warning."""
     _print(
         colorama.Fore.YELLOW,
@@ -194,7 +195,7 @@ def warn(*args, level: bool = True):
     )
 
 
-def error(*args, level: bool = True):
+def error(*args: object, level: bool = True):
     """Log an error."""
     _print(
         colorama.Fore.RED,
@@ -204,13 +205,13 @@ def error(*args, level: bool = True):
     )
 
 
-def err(cond, *args, level: bool = True):
+def err(cond: object, *args: object, level: bool = True):
     """If the condition is not satisfied, log an error."""
     if not cond:
         error(*args, level=level)
 
 
-def throw(*args, level: bool = True):
+def throw(*args: object, level: bool = True):
     """Throw an exception."""
     _print(
         colorama.Fore.RED,
@@ -221,7 +222,7 @@ def throw(*args, level: bool = True):
     )
 
 
-def ass(cond, *args, level: bool = True):
+def ass(cond: object, *args: object, level: bool = True):
     """Assert!
 
     If the condition is not satisfied, throw an error.
@@ -230,7 +231,7 @@ def ass(cond, *args, level: bool = True):
         throw(*args, level=level)
 
 
-def fatal(*args, level: bool = True):
+def fatal(*args: object, level: bool = True):
     """Log an error and exit with a nonzero status!"""
     _print(
         colorama.Fore.RED,
@@ -241,7 +242,7 @@ def fatal(*args, level: bool = True):
     exit(1)
 
 
-def assass(cond, *args, level: bool = True):
+def assass(cond: object, *args: object, level: bool = True):
     """Assassinate.
 
     If a condition is not satisfied, exit with a nonzero status.
@@ -270,7 +271,7 @@ def write(
     if fix_newline and (not content or content[-1] != "\n"):
         content += "\n"
     with open(path, "w", encoding="utf-8") as f:
-        f.write(content)
+        _ = f.write(content)
     if not log:
         return
     wrote(path)
@@ -297,7 +298,7 @@ def wrote(path: str, verify: bool = True) -> None:
     info("Wrote", path)
 
 
-def json_dumps(j, **kwargs) -> str:
+def json_dumps(j: object, **kwargs: typing.Any) -> str:
     return json.dumps(
         j,
         indent=2,
@@ -307,48 +308,47 @@ def json_dumps(j, **kwargs) -> str:
     )
 
 
-def read_tsv(path: str | pathlib.Path, sort_values_by=None) -> pd.DataFrame:
-    path = str(path)
-    df = pd.read_csv(
-        path,
+def read_tsv(path: str | pathlib.Path) -> pd.DataFrame:
+    return pd.read_csv(
+        str(path),
         sep="\t",
         dtype=str,
         encoding="utf-8",
         keep_default_na=False,
     ).fillna("")
-    if sort_values_by:
-        df.sort_values(sort_values_by, inplace=True)
-    return df
 
 
 class GCPClient:
-    """GCP client to interact with Google Sheets."""
-
-    _client: gspread.Client | None = None
+    _client: gspread.client.Client | None = None
 
     @staticmethod
-    def client() -> gspread.Client:
+    def client() -> gspread.client.Client:
         if GCPClient._client is not None:
             return GCPClient._client
-        GCPClient._client = gspread.authorize(
-            service_account.ServiceAccountCredentials.from_json_keyfile_name(
+
+        creds: service_account.Credentials = (
+            service_account.Credentials.from_service_account_file(
                 JSON_KEYFILE_NAME,
-                GSPREAD_SCOPE,
-            ),
+                scopes=GSPREAD_SCOPE,
+            )
         )
+        GCPClient._client = gspread.auth.authorize(creds)
         return GCPClient._client
 
 
 def read_gspread(
     gspread_name: str,
     worksheet: int = 0,
-):
+) -> gspread.worksheet.Worksheet:
     return (
         GCPClient.client().open_by_url(gspread_name).get_worksheet(worksheet)
     )
 
 
-def get_column_index(worksheet, column: str) -> int:
+def get_column_index(
+    worksheet: gspread.worksheet.Worksheet,
+    column: str,
+) -> int:
     for idx, value in enumerate(worksheet.row_values(1)):
         if value == column:
             return idx + 1  # Google  Sheets uses 1-based indexing.
@@ -385,12 +385,12 @@ def exts(file_paths: list[str]) -> list[str]:
     return list(map(ext, file_paths))
 
 
-def split(line: str, *args) -> list[str]:
+def split(line: str, *args: typing.Any) -> list[str]:
     """Split a string, discarding empty entries."""
     return list(filter(None, line.split(*args)))
 
 
-def ssplit(line: str, *args) -> list[str]:
+def ssplit(line: str, *args: typing.Any) -> list[str]:
     """Split a string, stripping whitespace from each entry, and discarding
     empty entries."""
     return list(
@@ -410,7 +410,7 @@ def sort_semver(file_paths: list[str]) -> list[str]:
     return sorted(file_paths, key=_semver_sort_key)
 
 
-def verify_unique(arr, message: str) -> None:
+def verify_unique[T](arr: abc.Iterable[T], message: str) -> None:
     dupes = [
         item for item, count in collections.Counter(arr).items() if count > 1
     ]
@@ -418,14 +418,22 @@ def verify_unique(arr, message: str) -> None:
         fatal(message, "duplicate elements:", dupes)
 
 
-def verify_all_belong_to_set(arr, accepted: set | dict, message: str) -> None:
+def verify_all_belong_to_set[T](
+    arr: abc.Iterable[T],
+    accepted: set[T] | dict[T, typing.Any],
+    message: str,
+) -> None:
     for x in arr:
         if x in accepted:
             continue
         fatal(message, x, "does not belong to the set", accepted)
 
 
-def verify_equal_sets(s1, s2, message: str) -> None:
+def verify_equal_sets[T](
+    s1: abc.Iterable[T],
+    s2: abc.Iterable[T],
+    message: str,
+) -> None:
     s1, s2 = set(s1), set(s2)
     diff = s1.difference(s2)
     if diff:
@@ -489,13 +497,22 @@ if SEQUENTIAL:
 # Our types don't implement a `submit` method despite its convenient because
 # it's tricker to mimic, and error propagation with `submit` is also trickier.
 class SequentialExecutor:
-    def map(self, fn: typing.Callable, *iterables: abc.Iterable):
+    def map[T, R](
+        self,
+        fn: typing.Callable[[T], R],
+        *iterables: abc.Iterable[T],
+    ) -> abc.Iterator[R]:
         return map(fn, *iterables)
 
     def __enter__(self):
         return self
 
-    def __exit__(self, exc_type, exc_value, traceback):
+    def __exit__(
+        self,
+        exc_type: type[BaseException] | None,
+        exc_value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ):
         pass
 
 
