@@ -122,9 +122,10 @@ function classQuery(classes) {
  *
  */
 class Highlighter {
+  anki;
+  checkboxes;
   // Sheets are problematic on Anki, for some reason! We update the elements
   // individually instead!
-  anki;
   sheet;
   dialectRuleIndex;
   devRuleIndex;
@@ -133,28 +134,17 @@ class Highlighter {
   static DIM = '0.3';
   /**
    *
+   * @param anki
+   * @param checkboxes
    */
-  constructor() {
-    // NOTE: Reading CSS rules often fails locally due to CORS. This is why we
-    // use the `try` block here. In case it fails, we fall back to Anki mode,
-    // which doesn't need to read the CSS.
-    // This failure, however, is not expected to be encountered if you're
-    // reading locally through a server. It only fails when you open the HTML
-    // file in the browser directly.
-    try {
-      this.anki = anki();
-      this.sheet = this.anki ? null : window.document.styleSheets[0];
-      const length = this.sheet?.cssRules.length ?? 0;
-      this.dialectRuleIndex = length;
-      this.devRuleIndex = length + 1;
-      this.noDevRuleIndex = length + 2;
-    } catch {
-      this.anki = true;
-      this.sheet = null;
-      this.dialectRuleIndex = 0;
-      this.devRuleIndex = 0;
-      this.noDevRuleIndex = 0;
-    }
+  constructor(anki, checkboxes) {
+    this.anki = anki;
+    this.checkboxes = checkboxes;
+    this.sheet = this.anki ? null : window.document.styleSheets[0];
+    const length = this.sheet?.cssRules.length ?? 0;
+    this.dialectRuleIndex = length;
+    this.devRuleIndex = length + 1;
+    this.noDevRuleIndex = length + 2;
   }
   /**
    *
@@ -182,7 +172,7 @@ class Highlighter {
       this.updateSheetOrElements(this.dialectRuleIndex, '.word *', '', (el) => {
         el.style.opacity = Highlighter.BRIGHT;
       });
-      dialectCheckboxes.forEach((c) => {
+      this.checkboxes.forEach((c) => {
         c.checked = false;
       });
       return;
@@ -205,7 +195,7 @@ class Highlighter {
         el.style.opacity = Highlighter.BRIGHT;
       }
     );
-    dialectCheckboxes.forEach((checkbox) => {
+    this.checkboxes.forEach((checkbox) => {
       checkbox.checked = active.includes(checkbox.name);
     });
   }
@@ -284,7 +274,7 @@ class Highlighter {
   }
 }
 // TODO: This is a bad place to define a global variable.
-export const highlighter = new Highlighter();
+export const highlighter = new Highlighter(anki(), dialectCheckboxes);
 /**
  *
  * @param url
