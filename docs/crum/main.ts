@@ -202,6 +202,7 @@ function main(): void {
       );
     });
 
+  // Handle 'dialect' class.
   document
     .querySelectorAll<HTMLElement>('.dialect')
     .forEach((el: HTMLElement) => {
@@ -211,6 +212,7 @@ function main(): void {
       };
     });
 
+  // Handle 'developer' class.
   document
     .querySelectorAll<HTMLElement>('.developer')
     .forEach((el: HTMLElement): void => {
@@ -230,6 +232,10 @@ function main(): void {
   }
 
   if (iam.amI('anki')) {
+    // On web, we are capable of navigating the website using relative paths.
+    // That's not the case on Anki, so we prepend the full URL.
+    // Since Anki flashcards correspond to pages in our Lexicon directory, it's
+    // the Lexicon URL that we need to prepend.
     document
       .querySelectorAll<HTMLElement>('.navigate')
       .forEach((e: HTMLElement) => {

@@ -15,10 +15,6 @@ const MESSAGE_BOX_ID = 'message';
 const CRUM_HREF_FMT = '{KEY}.html';
 const KELLIA_HREF_FMT = 'https://coptic-dictionary.org/entry.cgi?tla={KEY}';
 
-const dialectCheckboxes: HTMLInputElement[] = Array.from(
-  document.querySelectorAll<HTMLInputElement>('.dialect-checkbox')
-);
-
 interface Xooxle {
   indexURL: string;
   tableID: string;
@@ -81,6 +77,10 @@ async function main(): Promise<void> {
 
   // Initialize collapsible elements.
   collapse.addListenersForSiblings(true);
+
+  const dialectCheckboxes: HTMLInputElement[] = Array.from(
+    document.querySelectorAll<HTMLInputElement>('.dialect-checkbox')
+  );
 
   const highlighter = new highlight.Highlighter(false, dialectCheckboxes);
   help.makeHelpPanel(highlighter);
