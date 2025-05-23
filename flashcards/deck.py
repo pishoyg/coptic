@@ -4,6 +4,7 @@
 # avoiding saving the data in memory at any point.
 import os
 import re
+import subprocess
 import typing
 from collections import abc
 
@@ -301,9 +302,17 @@ class Deck:
 
         if not js_path:
             return
+
         # Like the media files, the JavaScript path is relative to the HTML
         # write directory.
-        yield utils.read(os.path.join(self.html_dir, js_path))
+        js_path = os.path.join(self.html_dir, js_path)
+        result = subprocess.run(
+            ["npx", "esbuild", js_path, "--bundle"],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        yield result.stdout
 
     def anki(self) -> tuple[genanki.Deck, abc.Iterable[str]]:
         # Anki can't pick up the JavaScript. It must be inserted into the
