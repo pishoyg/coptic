@@ -1,3 +1,4 @@
+import * as iam from './iam.js';
 // TODO: This is not just QWERTY. Rename the constant.
 // TODO: Abandon event keys. Rely solely on event codes.
 const QWERTY_MAP = {
@@ -118,7 +119,7 @@ export class Shortcut {
    * @returns
    */
   executable() {
-    return this.available.some((f) => f());
+    return this.available.includes(iam.where());
   }
   /**
    *
