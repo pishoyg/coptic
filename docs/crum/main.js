@@ -1,5 +1,6 @@
 import * as xooxle from '../xooxle.js';
 import * as collapse from '../collapse.js';
+import * as crum from './crum.js';
 const SEARCH_BOX_ID = 'searchBox';
 const FULL_WORD_CHECKBOX_ID = 'fullWordCheckbox';
 const REGEX_CHECKBOX_ID = 'regexCheckbox';
@@ -68,5 +69,11 @@ async function main() {
   );
   // Initialize collapsible elements.
   collapse.addListenersForSiblings(true);
+  crum.dialectCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener('click', () => {
+      crum.toggleDialect(checkbox.name);
+      crum.highlighter.updateDialects();
+    });
+  });
 }
 await main();
