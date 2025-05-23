@@ -296,6 +296,7 @@ export class Help {
   private readonly sections: Section[];
   private readonly overlay: HTMLDivElement;
   private readonly panel: HTMLDivElement;
+  private readonly help: HTMLElement;
 
   /**
    *
@@ -304,19 +305,19 @@ export class Help {
   constructor(sections: Section[]) {
     this.sections = sections.filter((s) => s.executable());
     // Create overlay background.
-    const overlay = document.createElement('div');
-    overlay.className = 'overlay-background';
-    overlay.style.display = 'none'; // Hidden by default.
-    document.body.appendChild(overlay);
+    this.overlay = document.createElement('div');
+    this.overlay.className = 'overlay-background';
+    this.overlay.style.display = 'none'; // Hidden by default.
+    document.body.appendChild(this.overlay);
 
     // Create info panel.
-    const panel = document.createElement('div');
-    panel.className = 'info-panel';
-    panel.style.display = 'none'; // Hidden by default.
+    this.panel = document.createElement('div');
+    this.panel.className = 'info-panel';
+    this.panel.style.display = 'none'; // Hidden by default.
 
     const h2 = document.createElement('h2');
     h2.textContent = 'Keyboard Shortcuts';
-    panel.appendChild(h2);
+    this.panel.appendChild(h2);
 
     const closeButton = document.createElement('button');
     closeButton.className = 'close-btn';
@@ -324,18 +325,18 @@ export class Help {
     closeButton.onclick = () => {
       this.togglePanel();
     };
-    panel.appendChild(closeButton);
+    this.panel.appendChild(closeButton);
 
     this.sections
       .filter((s) => s.visible())
       .forEach((s) => {
-        panel.appendChild(s.createSection());
+        this.panel.appendChild(s.createSection());
       });
 
-    document.body.appendChild(panel);
+    document.body.appendChild(this.panel);
 
     // Create help button, if it doesn't already exist.
-    const help: HTMLElement =
+    this.help =
       document.getElementById('help') ??
       ((): HTMLElement => {
         const footer: HTMLElement =
@@ -354,20 +355,8 @@ export class Help {
         return help;
       })();
 
-    help.onclick = (event: MouseEvent) => {
-      this.togglePanel();
-      event.stopPropagation();
-    };
-
-    // A mouse click outside the panel closes it.
-    document.addEventListener('click', (event: MouseEvent) => {
-      this.handleClick(event);
-    });
-
-    this.panel = panel;
-    this.overlay = overlay;
-
     this.validate();
+    this.addListeners();
   }
 
   /**
@@ -378,6 +367,7 @@ export class Help {
   consumeAux(event: KeyboardEvent): boolean {
     return this.sections.some((s) => s.consume(event));
   }
+
   /**
    *
    * @param event
@@ -420,19 +410,6 @@ export class Help {
 
   /**
    *
-   * @param event
-   */
-  handleClick(event: MouseEvent) {
-    if (
-      this.panel.style.display === 'block' &&
-      !this.panel.contains(event.target as Node)
-    ) {
-      this.togglePanel(false);
-    }
-  }
-
-  /**
-   *
    */
   validate() {
     // Validate that no key can trigger two shortcuts!
@@ -448,6 +425,41 @@ export class Help {
       console.error(
         `${key} is consumable by multiple shortcuts: ${canConsume.map((s) => s.textDescription()).join(', ')}`
       );
+    });
+  }
+
+  /**
+   */
+  private addListeners() {
+    this.help.onclick = (event: MouseEvent) => {
+      this.togglePanel();
+      event.stopPropagation();
+    };
+
+    // A mouse click outside the panel closes it.
+    document.addEventListener('click', (event: MouseEvent) => {
+      if (
+        this.panel.style.display === 'block' &&
+        !this.panel.contains(event.target as Node)
+      ) {
+        this.togglePanel(false);
+      }
+    });
+
+    // NOTE: We intentionally use the `keydown` event rather than the `keyup`
+    // event, so that a long press would trigger a shortcut command repeatedly.
+    // This is helpful for some of the commands.
+    document.addEventListener('keydown', (e: KeyboardEvent) => {
+      if (e.metaKey || e.ctrlKey || e.altKey) {
+        // If the user is holding down a modifier key, we don't want to do
+        // anything.
+        return;
+      }
+
+      if (this.consume(e)) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
     });
   }
 }

@@ -1,6 +1,6 @@
 import * as xooxle from '../xooxle.js';
 import * as collapse from '../collapse.js';
-import * as crum from './crum.js';
+import * as utils from '../utils.js';
 
 const SEARCH_BOX_ID = 'searchBox';
 const FULL_WORD_CHECKBOX_ID = 'fullWordCheckbox';
@@ -42,22 +42,14 @@ const XOOXLES: Xooxle[] = [
 
 /**
  *
- * @param event
- */
-function stopPropagation(event: KeyboardEvent) {
-  event.stopPropagation();
-}
-
-/**
- *
  */
 async function main(): Promise<void> {
   // Prevent other elements in the page from picking up key events on the
   // search box.
   const searchBox = document.getElementById(SEARCH_BOX_ID)!;
-  searchBox.addEventListener('keyup', stopPropagation);
-  searchBox.addEventListener('keydown', stopPropagation);
-  searchBox.addEventListener('keypress', stopPropagation);
+  searchBox.addEventListener('keyup', utils.stopPropagation);
+  searchBox.addEventListener('keydown', utils.stopPropagation);
+  searchBox.addEventListener('keypress', utils.stopPropagation);
 
   // Initialize searchers.
   // TODO: You initialize three different Form objects, and it looks like each
@@ -83,13 +75,6 @@ async function main(): Promise<void> {
 
   // Initialize collapsible elements.
   collapse.addListenersForSiblings(true);
-
-  crum.dialectCheckboxes.forEach((checkbox) => {
-    checkbox.addEventListener('click', () => {
-      crum.toggleDialect(checkbox.name);
-      crum.highlighter.updateDialects();
-    });
-  });
 }
 
 await main();
