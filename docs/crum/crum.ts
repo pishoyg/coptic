@@ -1,5 +1,3 @@
-'use strict';
-
 // NOTE: While this file is used for both Crum and Xooxle, make sure that only
 // the Crum-specific Xooxle content lives here, and that any generic Xooxle
 // logic (applicable for other instances of Xooxle) live in the shared Xooxle
@@ -15,7 +13,7 @@ const ENGLISH_RE = /[A-Za-z]+/giu;
 
 const GREEK_LOOKUP_URL_PREFIX = 'https://logeion.uchicago.edu/';
 
-const dialectCheckboxes = Array.from(
+export const dialectCheckboxes = Array.from(
   document.querySelectorAll<HTMLInputElement>('.dialect-checkbox')
 );
 
@@ -391,7 +389,7 @@ class Highlighter {
 }
 
 // TODO: This is a bad place to define a global variable.
-const highlighter = new Highlighter();
+export const highlighter = new Highlighter();
 
 /**
  *
@@ -470,7 +468,7 @@ function activeDialects(): string[] | null {
  *
  * @param dialect
  */
-function toggleDialect(dialect: string): void {
+export function toggleDialect(dialect: string): void {
   const active = new Set(activeDialects());
 
   if (active.has(dialect)) {
@@ -1815,18 +1813,6 @@ function handleNonXooxleOnlyElements() {
 /**
  *
  */
-function handleXooxleOnlyElements() {
-  dialectCheckboxes.forEach((checkbox) => {
-    checkbox.addEventListener('click', () => {
-      toggleDialect(checkbox.name);
-      highlighter.updateDialects();
-    });
-  });
-}
-
-/**
- *
- */
 function handleCommonElements() {
   highlighter.update();
 
@@ -1873,9 +1859,7 @@ function handleCommonElements() {
  *
  */
 function main() {
-  if (xooxle()) {
-    handleXooxleOnlyElements();
-  } else {
+  if (!xooxle()) {
     handleNonXooxleOnlyElements();
   }
 
