@@ -2,6 +2,7 @@
 // allow it to assert correctness, instead of trying to fail recursively.
 import * as logger from './logger.js';
 import * as coptic from './coptic.js';
+import * as utils from './utils.js';
 // WANT_COLUMNS is the list of the first columns we expect to find in the TSV.
 const WANT_COLUMNS = ['page', 'start', 'end'];
 // ZOOM_FACTOR controls how fast zooming happens in response to scroll events.
@@ -229,18 +230,12 @@ export class Scroller {
    */
   getPageParam() {
     const urlParams = new URLSearchParams(window.location.search);
-    let page = urlParams.get('page');
+    const page = urlParams.get('page');
     if (!page) {
       return this.landingPage;
     }
-    if (['a', 'b'].some((c) => page?.endsWith(c))) {
-      page = page.slice(0, page.length - 1);
-    }
-    try {
-      return parseInt(page);
-    } catch {
-      return this.landingPage;
-    }
+    const num = parseInt(utils.chopColumn(page));
+    return isNaN(num) ? this.landingPage : num;
   }
   /**
    *
@@ -489,14 +484,8 @@ export class Dictionary {
     });
     // Prevent other elements in the page from picking up keyboard events on the
     // search box.
-    this.form.searchBox.addEventListener('keyup', (event) => {
-      event.stopPropagation();
-    });
-    this.form.searchBox.addEventListener('keydown', (event) => {
-      event.stopPropagation();
-    });
-    this.form.searchBox.addEventListener('keypress', (event) => {
-      event.stopPropagation();
-    });
+    this.form.searchBox.addEventListener('keyup', utils.stopPropagation);
+    this.form.searchBox.addEventListener('keydown', utils.stopPropagation);
+    this.form.searchBox.addEventListener('keypress', utils.stopPropagation);
   }
 }
