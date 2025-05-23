@@ -429,16 +429,9 @@ function toggleDev(): void {
 // Handle 'reset' class.
 /**
  *
- * @param dialectCheckboxes
  * @param highlighter
  */
-function reset(
-  dialectCheckboxes: HTMLInputElement[],
-  highlighter: Highlighter
-): void {
-  dialectCheckboxes.forEach((box) => {
-    box.checked = false;
-  });
+function reset(highlighter: Highlighter): void {
   // The local storage is the source of truth for some highlighting variables.
   // Clearing it results restores a pristine display.
   localStorage.clear();
@@ -770,7 +763,7 @@ function makeHelpPanel(): help.Help {
         'Reset highlighting',
         [xooxle, note, index, index_index],
         () => {
-          reset(dialectCheckboxes, highlighter);
+          reset(highlighter);
         }
       ),
     ],
@@ -1435,7 +1428,7 @@ function handleCommonElements(): void {
     .forEach((el: HTMLElement): void => {
       el.classList.add('link');
       el.onclick = (event) => {
-        reset(dialectCheckboxes, highlighter);
+        reset(highlighter);
         // On Xooxle, clicking the button would normally submit the form and
         // reset everything (including the search box and the option
         // checkboxes). So prevent the event from propagating further.
