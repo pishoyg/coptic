@@ -289,26 +289,21 @@ class Deck:
         return FONT_SRC_RE.sub(_css_src_to_basename, self.css)
 
     def __anki_js_aux(self) -> abc.Generator[str]:
-        js_path = self.notes[0].js_path
         # We don't allow notes to have different JavaScript, because in our Anki
         # package, we define the JavaScript in the template.
-        assert all(note.js_path == js_path for note in self.notes)
-        js_start = self.notes[0].js_start
-        assert all(note.js_start == js_start for note in self.notes)
+        js_path: str = utils.assert_one({note.js_path for note in self.notes})
+        js_start: str = utils.assert_one(
+            {note.js_start for note in self.notes},
+        )
+
+        yield js_start
+        yield f"const {ANKI_NOTE_CLASS} = true;"
+
         if not js_path:
-            yield js_start
             return
         # Like the media files, the JavaScript path is relative to the HTML
         # write directory.
-        js_path = os.path.join(self.html_dir, js_path)
-        # We wrap everything in a function, because global variables have been
-        # problematic with Anki.
-        # See https://github.com/pishoyg/coptic/issues/186.
-        yield "(() => {"
-        yield js_start
-        yield f"const {ANKI_NOTE_CLASS} = true;"
-        yield utils.read(js_path)
-        yield "})();"
+        yield utils.read(os.path.join(self.html_dir, js_path))
 
     def anki(self) -> tuple[genanki.Deck, abc.Iterable[str]]:
         # Anki can't pick up the JavaScript. It must be inserted into the
