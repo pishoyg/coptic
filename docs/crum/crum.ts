@@ -7,6 +7,8 @@
 // possible. NOTE: The associated issue is closed. Judge whether it should be
 // reopened, or if we should create a new issue, or just delete this TODO.
 
+import * as help from '../help.js';
+
 const COPTIC_RE = /[Ⲁ-ⲱϢ-ϯⳈⳉ]+/giu;
 const GREEK_RE = /[Α-Ωα-ω]+/giu;
 const ENGLISH_RE = /[A-Za-z]+/giu;
@@ -21,7 +23,7 @@ export const dialectCheckboxes = Array.from(
 // are running on Xooxle or not.
 declare const XOOXLE: boolean;
 /**
- *
+ * @returns
  */
 function xooxle(): boolean {
   return typeof XOOXLE !== 'undefined' && XOOXLE;
@@ -31,7 +33,7 @@ function xooxle(): boolean {
 // are running on a note.
 declare const NOTE: boolean;
 /**
- *
+ * @returns
  */
 function note(): boolean {
   return typeof NOTE !== 'undefined' && NOTE;
@@ -41,7 +43,7 @@ function note(): boolean {
 // are running on Anki or not.
 declare const ANKI: boolean;
 /**
- *
+ * @returns
  */
 function anki(): boolean {
   return typeof ANKI !== 'undefined' && ANKI;
@@ -51,7 +53,7 @@ function anki(): boolean {
 // whether we are running on an index page or not.
 declare const INDEX: boolean;
 /**
- *
+ * @returns
  */
 function index(): boolean {
   return typeof INDEX !== 'undefined' && INDEX;
@@ -61,7 +63,7 @@ function index(): boolean {
 // whether we are running on an index index page or not.
 declare const INDEX_INDEX: boolean;
 /**
- *
+ * @returns
  */
 function index_index(): boolean {
   return typeof INDEX_INDEX !== 'undefined' && INDEX_INDEX;
@@ -98,86 +100,6 @@ enum DIALECT_ARTICLE {
   ProtoTheban = 'https://ccdl.claremont.edu/digital/collection/cce/id/1984/rec/1',
 }
 
-// TODO: This is not just QWERTY. Rename the constant.
-// TODO: Abandon event keys. Rely solely on event codes.
-const QWERTY_MAP: Record<string, string> = {
-  // Letters
-  KeyA: 'a',
-  KeyB: 'b',
-  KeyC: 'c',
-  KeyD: 'd',
-  KeyE: 'e',
-  KeyF: 'f',
-  KeyG: 'g',
-  KeyH: 'h',
-  KeyI: 'i',
-  KeyJ: 'j',
-  KeyK: 'k',
-  KeyL: 'l',
-  KeyM: 'm',
-  KeyN: 'n',
-  KeyO: 'o',
-  KeyP: 'p',
-  KeyQ: 'q',
-  KeyR: 'r',
-  KeyS: 's',
-  KeyT: 't',
-  KeyU: 'u',
-  KeyV: 'v',
-  KeyW: 'w',
-  KeyX: 'x',
-  KeyY: 'y',
-  KeyZ: 'z',
-
-  // Numbers
-  Digit1: '1',
-  Digit2: '2',
-  Digit3: '3',
-  Digit4: '4',
-  Digit5: '5',
-  Digit6: '6',
-  Digit7: '7',
-  Digit8: '8',
-  Digit9: '9',
-  Digit0: '0',
-
-  // Punctuation & Symbols
-  Minus: '-',
-  Equal: '=',
-  BracketLeft: '[',
-  BracketRight: ']',
-  Backslash: '\\',
-  Semicolon: ';',
-  Quote: "'",
-  Comma: ',',
-  Period: '.',
-  Slash: '/',
-};
-
-const SHIFT_MAP: Record<string, string> = {
-  // Special characters when Shift is pressed
-  Digit1: '!',
-  Digit2: '@',
-  Digit3: '#',
-  Digit4: '$',
-  Digit5: '%',
-  Digit6: '^',
-  Digit7: '&',
-  Digit8: '*',
-  Digit9: '(',
-  Digit0: ')',
-  Minus: '_',
-  Equal: '+',
-  BracketLeft: '{',
-  BracketRight: '}',
-  Backslash: '|',
-  Semicolon: ':',
-  Quote: '"',
-  Comma: '<',
-  Period: '>',
-  Slash: '?',
-};
-
 const DIALECTS = [
   // The following dialects are found in Crum.
   'S',
@@ -212,6 +134,7 @@ const DIALECT_SINGLE_CHAR: Record<string, string> = {
 /**
  *
  * @param classes
+ * @returns
  */
 function classQuery(classes: string[]): string {
   return classes.map((c) => `.${c}`).join(', ');
@@ -346,10 +269,16 @@ class Highlighter {
    * @param rule
    */
   private addOrReplaceRule(index: number, rule: string) {
-    if (index < this.sheet!.cssRules.length) {
-      this.sheet!.deleteRule(index);
+    if (!this.sheet) {
+      console.error(
+        'Attempting to update sheet rules when the sheet is not set!'
+      );
+      return;
     }
-    this.sheet!.insertRule(rule, index);
+    if (index < this.sheet.cssRules.length) {
+      this.sheet.deleteRule(index);
+    }
+    this.sheet.insertRule(rule, index);
   }
 
   // If we're in Anki, we update the elements directly.
@@ -444,6 +373,7 @@ function makeSpanLinkToAnchor(el: Element, target: string): void {
 /**
  *
  * @param pageNumber
+ * @returns
  */
 function chopColumn(pageNumber: string): string {
   const lastChar = pageNumber.slice(pageNumber.length - 1);
@@ -456,6 +386,7 @@ function chopColumn(pageNumber: string): string {
 // Handle 'dialect' class.
 /**
  *
+ * @returns
  */
 function activeDialects(): string[] | null {
   const d = localStorage.getItem('d');
@@ -551,6 +482,7 @@ function reset(
 /**
  *
  * @param rel
+ * @returns
  */
 function getLinkHrefByRel(rel: string): string | null {
   const linkElement = document.querySelector(`link[rel="${rel}"]`);
@@ -576,6 +508,7 @@ function yank(text: string): void {
 /**
  *
  * @param path
+ * @returns
  */
 function stem(path: string): string {
   return path.split('/').pop()!.replace('.html', '');
@@ -584,6 +517,7 @@ function stem(path: string): string {
 /**
  *
  * @param elem
+ * @returns
  */
 function height(elem: HTMLElement): number {
   return elem.getBoundingClientRect().top + window.scrollY;
@@ -593,6 +527,7 @@ function height(elem: HTMLElement): number {
  *
  * @param query
  * @param target
+ * @returns
  */
 function findNextElement(
   query: string,
@@ -628,365 +563,6 @@ function scrollToNextElement(
   elem.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-// Section represents a group of related shortcuts.
-/**
- *
- */
-class Section {
-  /**
-   *
-   * @param title
-   * @param shortcuts
-   */
-  constructor(
-    private readonly title: string,
-    private readonly shortcuts: Record<string, Shortcut[]>
-  ) {}
-
-  /**
-   *
-   */
-  createSection(): HTMLDivElement {
-    const div = document.createElement('div');
-
-    const title = document.createElement('h3');
-    title.textContent = this.title;
-    div.appendChild(title);
-
-    const table = document.createElement('table');
-
-    // Add styles to ensure the left column is 10% of the width
-    table.style.width = '100%'; // Make the table take 100% of the container width
-    table.style.borderCollapse = 'collapse'; // Optional: to collapse the borders
-
-    // Iterate over the entries in the record
-    Object.entries(this.shortcuts).forEach(([key, shortcuts]) => {
-      shortcuts
-        .filter((s) => s.visible())
-        .forEach((s) => {
-          table.appendChild(s.row(key));
-        });
-    });
-
-    div.appendChild(table);
-    return div;
-  }
-
-  /**
-   *
-   */
-  visible(): boolean {
-    return Object.values(this.shortcuts).some((shortcuts: Shortcut[]) => {
-      return shortcuts.some((s: Shortcut) => s.visible());
-    });
-  }
-
-  /**
-   *
-   */
-  executable(): boolean {
-    return Object.values(this.shortcuts).some((shortcuts: Shortcut[]) => {
-      return shortcuts.some((s: Shortcut) => s.executable());
-    });
-  }
-
-  /**
-   *
-   * @param event
-   */
-  consume(event: KeyboardEvent): boolean {
-    return (
-      (this.executable() &&
-        this.shortcuts[event.key]?.some((s) => s.consume(event))) ??
-      false
-    );
-  }
-
-  /**
-   *
-   * @param key
-   */
-  canConsume(key: string): Shortcut[] {
-    if (!this.executable()) {
-      return [];
-    }
-    return this.shortcuts[key]?.filter((s) => s.executable()) ?? [];
-  }
-
-  /**
-   *
-   */
-  shortcutsRecord(): Record<string, Shortcut[]> {
-    return this.shortcuts;
-  }
-}
-
-/**
- *
- * @param char
- * @param str
- */
-function highlightFirstOccurrence(char: string, str: string): string {
-  if (str.includes('<')) {
-    // This might already have an HTML tag, so we don't risk highlighting it to
-    // avoid breaking something.
-    return str;
-  }
-  const index = str.toLowerCase().indexOf(char.toLowerCase());
-  if (index === -1) {
-    return str;
-  }
-
-  return `${str.slice(0, index)}<strong>${str[index]!}</strong>${str.slice(index + 1)}`;
-}
-
-/**
- *
- */
-class HelpPanel {
-  private readonly sections: Section[];
-  private readonly overlay: HTMLDivElement;
-  private readonly panel: HTMLDivElement;
-
-  /**
-   *
-   * @param sections
-   */
-  constructor(sections: Section[]) {
-    this.sections = sections.filter((s) => s.executable());
-    // Create overlay background.
-    const overlay = document.createElement('div');
-    overlay.className = 'overlay-background';
-    overlay.style.display = 'none'; // Hidden by default.
-    document.body.appendChild(overlay);
-
-    // Create info panel.
-    const panel = document.createElement('div');
-    panel.className = 'info-panel';
-    panel.style.display = 'none'; // Hidden by default.
-
-    const h2 = document.createElement('h2');
-    h2.textContent = 'Keyboard Shortcuts';
-    panel.appendChild(h2);
-
-    const closeButton = document.createElement('button');
-    closeButton.className = 'close-btn';
-    closeButton.innerHTML = '&times;'; // HTML entity for '×'.
-    closeButton.onclick = () => {
-      this.togglePanel();
-    };
-    panel.appendChild(closeButton);
-
-    this.sections
-      .filter((s) => s.visible())
-      .forEach((s) => {
-        panel.appendChild(s.createSection());
-      });
-
-    document.body.appendChild(panel);
-
-    // Create help button, if it doesn't already exist.
-    const help: HTMLElement =
-      document.getElementById('help') ??
-      ((): HTMLElement => {
-        const footer: HTMLElement =
-          document.getElementsByTagName('footer')[0] ??
-          (() => {
-            const footer = document.createElement('footer');
-            footer.id = 'footer';
-            footer.classList.add('footer');
-            return footer;
-          })();
-        const help = document.createElement('span');
-        help.classList.add('link');
-        help.innerHTML = '<center>help</center>';
-        footer.appendChild(help);
-        document.body.appendChild(footer);
-        return help;
-      })();
-
-    help.onclick = (event: MouseEvent) => {
-      this.togglePanel();
-      event.stopPropagation();
-    };
-
-    // A mouse click outside the panel closes it.
-    document.addEventListener('click', (event: MouseEvent) => {
-      this.handleClick(event);
-    });
-
-    this.panel = panel;
-    this.overlay = overlay;
-
-    this.validate();
-  }
-
-  /**
-   *
-   * @param event
-   */
-  consumeAux(event: KeyboardEvent): boolean {
-    return this.sections.some((s) => s.consume(event));
-  }
-  /**
-   *
-   * @param event
-   */
-  consume(event: KeyboardEvent): boolean {
-    if (this.consumeAux(event)) {
-      return true;
-    }
-    // If this event is not consumable by any of our sections, it may be
-    // possible that the user has switched the layout. In this case, we try
-    // to respond based on the key location on the keyboard.
-    let key = QWERTY_MAP[event.code];
-    if (!key) {
-      return false;
-    }
-    if (event.shiftKey) {
-      key = SHIFT_MAP[event.code] ?? key.toUpperCase();
-    }
-    Object.defineProperty(event, 'key', { value: key });
-    return this.consumeAux(event);
-  }
-
-  /**
-   *
-   * @param visible
-   */
-  togglePanel(visible?: boolean) {
-    const target =
-      visible !== undefined
-        ? visible
-          ? 'block'
-          : 'none'
-        : this.panel.style.display === 'block'
-          ? 'none'
-          : 'block';
-    this.panel.style.display = target;
-    this.overlay.style.display = target;
-  }
-
-  /**
-   *
-   * @param event
-   */
-  handleClick(event: MouseEvent) {
-    if (
-      this.panel.style.display === 'block' &&
-      !this.panel.contains(event.target as Node)
-    ) {
-      this.togglePanel(false);
-    }
-  }
-
-  /**
-   *
-   */
-  validate() {
-    // Validate that no key can trigger two shortcuts!
-    const keys = this.sections
-      .map((s) => s.shortcutsRecord())
-      .map((record) => Object.keys(record))
-      .flat();
-    keys.forEach((key) => {
-      const canConsume = this.sections.map((s) => s.canConsume(key)).flat();
-      if (canConsume.length <= 1) {
-        return;
-      }
-      console.error(
-        `${key} is consumable by multiple shortcuts: ${canConsume.map((s) => s.textDescription()).join(', ')}`
-      );
-    });
-  }
-}
-
-/**
- *
- */
-class Shortcut {
-  /**
-   *
-   * @param description
-   * @param available
-   * @param action
-   * @param show
-   */
-  constructor(
-    private readonly description: string,
-    private readonly available: (() => boolean)[],
-    private readonly action: (event: KeyboardEvent) => void,
-    private readonly show = true
-  ) {}
-
-  /**
-   *
-   */
-  executable(): boolean {
-    return this.available.some((f) => f());
-  }
-
-  /**
-   *
-   */
-  visible(): boolean {
-    return this.executable() && this.show;
-  }
-
-  /**
-   *
-   * @param event
-   */
-  consume(event: KeyboardEvent): boolean {
-    if (!this.executable()) {
-      return false;
-    }
-    // Actions throw an exception if they cannot consume the event.
-    try {
-      this.action(event);
-    } catch {
-      return false;
-    }
-    return true;
-  }
-
-  /**
-   *
-   * @param key
-   */
-  row(key: string): HTMLTableRowElement {
-    // TODO: Move the styling to CSS.
-    const row = document.createElement('tr');
-    const keyCell = document.createElement('td');
-    const code = document.createElement('code');
-    code.textContent = key;
-    keyCell.appendChild(code);
-    keyCell.style.width = '10%';
-    keyCell.style.border = '1px solid black';
-    keyCell.style.padding = '8px';
-
-    // Create a cell for the value (right column)
-    const valueCell = document.createElement('td');
-    valueCell.innerHTML = highlightFirstOccurrence(key, this.description);
-    valueCell.style.width = '90%';
-    valueCell.style.border = '1px solid black';
-    valueCell.style.padding = '8px';
-
-    // Append cells to the row
-    row.appendChild(keyCell);
-    row.appendChild(valueCell);
-
-    return row;
-  }
-
-  /**
-   *
-   */
-  textDescription() {
-    return this.description.replace(/<[^>]*>/g, '');
-  }
-}
-
 type DICTIONARY = 'KELLIA' | 'Crum' | 'copticsite';
 
 /**
@@ -1005,9 +581,9 @@ function makeDialectShortcut(
   code: string,
   dictionaries: DICTIONARY[],
   link: DIALECT_ARTICLE
-): Shortcut {
-  code = highlightFirstOccurrence(key, code);
-  name = highlightFirstOccurrence(key, name);
+): help.Shortcut {
+  code = help.highlightFirstOccurrence(key, code);
+  name = help.highlightFirstOccurrence(key, name);
   if (link != DIALECT_ARTICLE.NO_ARTICLE) {
     name = `<a href="${link}" target="_blank" rel="noopener,noreferrer">${name}</a>`;
   }
@@ -1026,7 +602,7 @@ function makeDialectShortcut(
   const availability = dictionaries.includes('Crum')
     ? [xooxle, note, index]
     : [xooxle];
-  return new Shortcut(description, availability, (e: KeyboardEvent) => {
+  return new help.Shortcut(description, availability, (e: KeyboardEvent) => {
     const dialectCode = DIALECT_SINGLE_CHAR[e.key] ?? e.key;
     toggleDialect(dialectCode);
     highlighter.updateDialects();
@@ -1040,12 +616,13 @@ function makeDialectShortcut(
 //   which conflict with ours!
 // - Elements created by the panel logic (such as the `help` footer) were
 //   found to be duplicated on some Anki platforms!
-const panel: HelpPanel | null = anki() ? null : makeHelpPanel();
+const panel: help.Help | null = anki() ? null : makeHelpPanel();
 
 /**
  *
+ * @returns
  */
-function makeHelpPanel(): HelpPanel {
+function makeHelpPanel(): help.Help {
   // NOTE: Some (minor) dialects are missing articles. If you find a reference
   // that explains what those dialects are, that would be great.
   const dialectHighlighting = {
@@ -1189,7 +766,7 @@ function makeHelpPanel(): HelpPanel {
 
   const control = {
     r: [
-      new Shortcut(
+      new help.Shortcut(
         'Reset highlighting',
         [xooxle, note, index, index_index],
         () => {
@@ -1198,13 +775,17 @@ function makeHelpPanel(): HelpPanel {
       ),
     ],
     d: [
-      new Shortcut('Developer mode', [xooxle, note, index, index_index], () => {
-        toggleDev();
-        highlighter.updateDev();
-      }),
+      new help.Shortcut(
+        'Developer mode',
+        [xooxle, note, index, index_index],
+        () => {
+          toggleDev();
+          highlighter.updateDev();
+        }
+      ),
     ],
     R: [
-      new Shortcut(
+      new help.Shortcut(
         `<strong>R</strong>eports / Contact <a class="contact" href="${EMAIL_LINK}">${EMAIL}</a>`,
         [xooxle, note, index, index_index],
         () => {
@@ -1213,7 +794,7 @@ function makeHelpPanel(): HelpPanel {
       ),
     ],
     H: [
-      new Shortcut(
+      new help.Shortcut(
         `Open <a href="${HOME}/" target="_blank"><strong>h</strong>omepage</a>`,
         [xooxle, note, index, index_index],
         () => {
@@ -1222,7 +803,7 @@ function makeHelpPanel(): HelpPanel {
       ),
     ],
     X: [
-      new Shortcut(
+      new help.Shortcut(
         `Open the <a href="${LEXICON}" target="_blank">dictionary search page</a>`,
         [xooxle, note, index, index_index],
         () => {
@@ -1231,7 +812,7 @@ function makeHelpPanel(): HelpPanel {
       ),
     ],
     '?': [
-      new Shortcut(
+      new help.Shortcut(
         'Toggle help panel',
         [xooxle, note, index, index_index],
         () => {
@@ -1240,7 +821,7 @@ function makeHelpPanel(): HelpPanel {
       ),
     ],
     Escape: [
-      new Shortcut(
+      new help.Shortcut(
         'Toggle help panel',
         [xooxle, note, index, index_index],
         () => {
@@ -1250,7 +831,7 @@ function makeHelpPanel(): HelpPanel {
       ),
     ],
     o: [
-      new Shortcut(
+      new help.Shortcut(
         'Open the word currently being viewed',
         [xooxle, note, index],
         () => {
@@ -1261,7 +842,7 @@ function makeHelpPanel(): HelpPanel {
       ),
     ],
     z: [
-      new Shortcut(
+      new help.Shortcut(
         'Yank the key of the word currently being viewed <span class="dev-mode-note">(dev mode)</span>',
         [xooxle, note, index],
         () => {
@@ -1273,17 +854,17 @@ function makeHelpPanel(): HelpPanel {
       ),
     ],
     l: [
-      new Shortcut('Go to next word', [note], () => {
+      new help.Shortcut('Go to next word', [note], () => {
         window_open(getLinkHrefByRel('next'), false);
       }),
     ],
     h: [
-      new Shortcut('Go to previous word', [note], () => {
+      new help.Shortcut('Go to previous word', [note], () => {
         window_open(getLinkHrefByRel('prev'), false);
       }),
     ],
     y: [
-      new Shortcut('Yank (copy) the word key', [note], () => {
+      new help.Shortcut('Yank (copy) the word key', [note], () => {
         yank(stem(window.location.pathname));
       }),
     ],
@@ -1291,17 +872,17 @@ function makeHelpPanel(): HelpPanel {
 
   const search = {
     w: [
-      new Shortcut('Toggle full-word search', [xooxle], () => {
+      new help.Shortcut('Toggle full-word search', [xooxle], () => {
         click('fullWordCheckbox');
       }),
     ],
     x: [
-      new Shortcut('Toggle regex search', [xooxle], () => {
+      new help.Shortcut('Toggle regex search', [xooxle], () => {
         click('regexCheckbox');
       }),
     ],
     '/': [
-      new Shortcut('Focus on the search box', [xooxle], () => {
+      new help.Shortcut('Focus on the search box', [xooxle], () => {
         focus('searchBox');
       }),
     ],
@@ -1309,25 +890,29 @@ function makeHelpPanel(): HelpPanel {
 
   const scrollTo = {
     n: [
-      new Shortcut('Next word in the list', [xooxle, note, index], () => {
+      new help.Shortcut('Next word in the list', [xooxle, note, index], () => {
         scrollToNextElement('.view, .sister-view', 'next');
       }),
     ],
     p: [
-      new Shortcut('Previous word in the list', [xooxle, note, index], () => {
-        scrollToNextElement('.view, .sister-view', 'prev');
-      }),
+      new help.Shortcut(
+        'Previous word in the list',
+        [xooxle, note, index],
+        () => {
+          scrollToNextElement('.view, .sister-view', 'prev');
+        }
+      ),
     ],
     C: [
-      new Shortcut('Crum', [xooxle], () => {
+      new help.Shortcut('Crum', [xooxle], () => {
         scroll('crum-title');
       }),
-      new Shortcut('Crum pages', [note], () => {
+      new help.Shortcut('Crum pages', [note], () => {
         scroll('crum');
       }),
     ],
     E: [
-      new Shortcut(
+      new help.Shortcut(
         '<a href="https://kellia.uni-goettingen.de/" target="_blank" rel="noopener,noreferrer">K<strong>E</strong>LLIA</a>',
         [xooxle],
         () => {
@@ -1336,7 +921,7 @@ function makeHelpPanel(): HelpPanel {
       ),
     ],
     T: [
-      new Shortcut(
+      new help.Shortcut(
         '<a href="http://copticsite.com/" target="_blank" rel="noopener,noreferrer">copticsi<strong>t</strong>e</a>',
         [xooxle],
         () => {
@@ -1345,67 +930,71 @@ function makeHelpPanel(): HelpPanel {
       ),
     ],
     D: [
-      new Shortcut('Dawoud pages', [note], () => {
+      new help.Shortcut('Dawoud pages', [note], () => {
         scroll('dawoud');
       }),
     ],
     w: [
-      new Shortcut('Related words', [note], () => {
+      new help.Shortcut('Related words', [note], () => {
         scroll('sisters');
       }),
     ],
     m: [
-      new Shortcut('Meaning', [note], () => {
+      new help.Shortcut('Meaning', [note], () => {
         scroll('meaning');
       }),
     ],
     e: [
-      new Shortcut('S<strong>e</strong>ns<strong>e</strong>s', [note], () => {
-        scroll('senses');
-      }),
+      new help.Shortcut(
+        'S<strong>e</strong>ns<strong>e</strong>s',
+        [note],
+        () => {
+          scroll('senses');
+        }
+      ),
     ],
     t: [
-      new Shortcut('Type', [note], () => {
+      new help.Shortcut('Type', [note], () => {
         scroll('root-type');
       }),
     ],
     j: [
-      new Shortcut('Categories', [note], () => {
+      new help.Shortcut('Categories', [note], () => {
         scroll('categories');
       }),
     ],
     i: [
-      new Shortcut('Images', [note], () => {
+      new help.Shortcut('Images', [note], () => {
         scroll('images');
       }),
     ],
     q: [
-      new Shortcut('Words', [note], () => {
+      new help.Shortcut('Words', [note], () => {
         scroll('pretty');
       }),
     ],
     Q: [
-      new Shortcut('Words', [note], () => {
+      new help.Shortcut('Words', [note], () => {
         scroll('marcion');
       }),
     ],
     v: [
-      new Shortcut('Derivations table', [note], () => {
+      new help.Shortcut('Derivations table', [note], () => {
         scroll('derivations');
       }),
     ],
     c: [
-      new Shortcut('Dictionary page list', [note], () => {
+      new help.Shortcut('Dictionary page list', [note], () => {
         scroll('dictionary');
       }),
     ],
     g: [
-      new Shortcut('Header', [xooxle, note, index, index_index], () => {
+      new help.Shortcut('Header', [xooxle, note, index, index_index], () => {
         scroll('header');
       }),
     ],
     G: [
-      new Shortcut('Footer', [xooxle, note, index, index_index], () => {
+      new help.Shortcut('Footer', [xooxle, note, index, index_index], () => {
         scroll('footer');
       }),
     ],
@@ -1413,12 +1002,12 @@ function makeHelpPanel(): HelpPanel {
 
   const collapse = {
     c: [
-      new Shortcut('Crum', [xooxle], () => {
+      new help.Shortcut('Crum', [xooxle], () => {
         click('crum-title');
       }),
     ],
     e: [
-      new Shortcut(
+      new help.Shortcut(
         '<a href="https://kellia.uni-goettingen.de/" target="_blank" rel="noopener,noreferrer">K<strong>E</strong>LLIA</a>',
         [xooxle],
         () => {
@@ -1427,7 +1016,7 @@ function makeHelpPanel(): HelpPanel {
       ),
     ],
     t: [
-      new Shortcut(
+      new help.Shortcut(
         '<a href="http://copticsite.com/" target="_blank" rel="noopener,noreferrer">copticsi<strong>t</strong>e</a>',
         [xooxle],
         () => {
@@ -1437,15 +1026,15 @@ function makeHelpPanel(): HelpPanel {
     ],
   };
 
-  const sections: Section[] = [
-    new Section('Dialect Highlighting', dialectHighlighting),
-    new Section('Control', control),
-    new Section('Search', search),
-    new Section('Scroll To', scrollTo),
-    new Section('Collapse', collapse),
+  const sections: help.Section[] = [
+    new help.Section('Dialect Highlighting', dialectHighlighting),
+    new help.Section('Control', control),
+    new help.Section('Search', search),
+    new help.Section('Scroll To', scrollTo),
+    new help.Section('Collapse', collapse),
   ];
 
-  return new HelpPanel(sections);
+  return new help.Help(sections);
 }
 
 /**
@@ -1597,7 +1186,7 @@ function handleEnglishLookups(root: Node = document.body) {
 /**
  *
  */
-function handleNonXooxleOnlyElements() {
+function handleNonXooxleOnlyElements(): void {
   // Handle 'categories' class.
   document
     .querySelectorAll<HTMLElement>('.categories')
@@ -1813,7 +1402,7 @@ function handleNonXooxleOnlyElements() {
 /**
  *
  */
-function handleCommonElements() {
+function handleCommonElements(): void {
   highlighter.update();
 
   document.addEventListener('visibilitychange', () => {
@@ -1858,7 +1447,7 @@ function handleCommonElements() {
 /**
  *
  */
-function main() {
+function main(): void {
   if (!xooxle()) {
     handleNonXooxleOnlyElements();
   }
