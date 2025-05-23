@@ -1,3 +1,5 @@
+import * as iam from './iam.js';
+
 // TODO: This is not just QWERTY. Rename the constant.
 // TODO: Abandon event keys. Rely solely on event codes.
 const QWERTY_MAP: Record<string, string> = {
@@ -111,7 +113,7 @@ export class Shortcut {
    */
   constructor(
     private readonly description: string,
-    private readonly available: (() => boolean)[],
+    private readonly available: iam.Where[],
     private readonly action: (event: KeyboardEvent) => void,
     private readonly show = true
   ) {}
@@ -121,7 +123,7 @@ export class Shortcut {
    * @returns
    */
   executable(): boolean {
-    return this.available.some((f) => f());
+    return this.available.includes(iam.where());
   }
 
   /**

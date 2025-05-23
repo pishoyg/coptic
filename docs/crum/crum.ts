@@ -8,6 +8,7 @@
 // reopened, or if we should create a new issue, or just delete this TODO.
 
 import * as help from '../help.js';
+import * as iam from '../iam.js';
 
 const COPTIC_RE = /[Ⲁ-ⲱϢ-ϯⳈⳉ]+/giu;
 const GREEK_RE = /[Α-Ωα-ω]+/giu;
@@ -19,60 +20,10 @@ export const dialectCheckboxes: HTMLInputElement[] = Array.from(
   document.querySelectorAll<HTMLInputElement>('.dialect-checkbox')
 );
 
-// XOOXLE (which should be defined externally) is used to distinguish whether we
-// are running on Xooxle or not.
-declare const XOOXLE: boolean;
-/**
- * @returns
- */
-function xooxle(): boolean {
-  return typeof XOOXLE !== 'undefined' && XOOXLE;
-}
-
-// NOTE (which should be defined externally) is used to distinguish whether we
-// are running on a note.
-declare const NOTE: boolean;
-/**
- * @returns
- */
-function note(): boolean {
-  return typeof NOTE !== 'undefined' && NOTE;
-}
-
-// ANKI (which should be defined externally) is used to distinguish whether we
-// are running on Anki or not.
-declare const ANKI: boolean;
-/**
- * @returns
- */
-function anki(): boolean {
-  return typeof ANKI !== 'undefined' && ANKI;
-}
-
-// INDEX (which should be defined externally) is used to distinguish
-// whether we are running on an index page or not.
-declare const INDEX: boolean;
-/**
- * @returns
- */
-function index(): boolean {
-  return typeof INDEX !== 'undefined' && INDEX;
-}
-
-// INDEX_INDEX (which should be defined externally) is used to distinguish
-// whether we are running on an index index page or not.
-declare const INDEX_INDEX: boolean;
-/**
- * @returns
- */
-function index_index(): boolean {
-  return typeof INDEX_INDEX !== 'undefined' && INDEX_INDEX;
-}
-
-const HOME = anki() ? 'http://remnqymi.com' : '';
+const HOME = iam.amI('anki') ? 'http://remnqymi.com' : '';
 // NOTE: The following assumes that the code is getting executed from a page
 // directly under `crum/`.
-const LEXICON = anki() ? `${HOME}/crum` : '.';
+const LEXICON = iam.amI('anki') ? `${HOME}/crum` : '.';
 const ABBREVIATIONS_PAGE =
   'https://coptic.wiki/crum/?section=list_of_abbreviations';
 const DAWOUD = `${HOME}/dawoud`;
@@ -307,7 +258,7 @@ class Highlighter {
 }
 
 // TODO: This is a bad place to define a global variable.
-export const highlighter = new Highlighter(anki(), dialectCheckboxes);
+export const highlighter = new Highlighter(iam.amI('anki'), dialectCheckboxes);
 
 /**
  *
@@ -440,7 +391,7 @@ function reset(highlighter: Highlighter): void {
   // 127.0.0.0 port! We avoid reloading on all Anki platforms!
   // NOTE: In Xooxle, there is no hash-based highlighting, so we don't need to
   // reload the page.
-  if (xooxle()) {
+  if (iam.amI('lexicon')) {
     return;
   }
 
@@ -455,7 +406,7 @@ function reset(highlighter: Highlighter): void {
   window.history.replaceState('', '', url.toString());
   // Reload to get rid of the highlighting caused by the hash / fragment,
   // if any.
-  if (anki()) {
+  if (iam.amI('anki')) {
     return;
   }
   window.location.reload();
@@ -575,15 +526,15 @@ function makeDialectShortcut(
 <tr>
   <td class="dialect-code">(${code})</td>
   <td class="dialect-name">${name}</td>
-  ${xooxle() ? `<td class="dialect-dictionaries">(${dictionaries.join(', ')})</td>` : ''}
+  ${iam.amI('lexicon') ? `<td class="dialect-dictionaries">(${dictionaries.join(', ')})</td>` : ''}
 </tr>
 </table>`;
 
   // All dialects are available in Xooxle. Only Crum dialects area available on
   // notes.
-  const availability = dictionaries.includes('Crum')
-    ? [xooxle, note, index]
-    : [xooxle];
+  const availability: iam.Where[] = dictionaries.includes('Crum')
+    ? ['lexicon', 'note', 'index']
+    : ['lexicon'];
   return new help.Shortcut(description, availability, (e: KeyboardEvent) => {
     const dialectCode = DIALECT_SINGLE_CHAR[e.key] ?? e.key;
     toggleDialect(dialectCode);
@@ -598,7 +549,7 @@ function makeDialectShortcut(
 //   which conflict with ours!
 // - Elements created by the panel logic (such as the `help` footer) were
 //   found to be duplicated on some Anki platforms!
-const panel: help.Help | null = anki() ? null : makeHelpPanel();
+const panel: help.Help | null = iam.amI('anki') ? null : makeHelpPanel();
 
 /**
  *
@@ -750,7 +701,7 @@ function makeHelpPanel(): help.Help {
     r: [
       new help.Shortcut(
         'Reset highlighting',
-        [xooxle, note, index, index_index],
+        ['lexicon', 'note', 'index', 'index_index'],
         () => {
           reset(highlighter);
         }
@@ -759,7 +710,7 @@ function makeHelpPanel(): help.Help {
     d: [
       new help.Shortcut(
         'Developer mode',
-        [xooxle, note, index, index_index],
+        ['lexicon', 'note', 'index', 'index_index'],
         () => {
           toggleDev();
           highlighter.updateDev();
@@ -769,7 +720,7 @@ function makeHelpPanel(): help.Help {
     R: [
       new help.Shortcut(
         `<strong>R</strong>eports / Contact <a class="contact" href="${EMAIL_LINK}">${EMAIL}</a>`,
-        [xooxle, note, index, index_index],
+        ['lexicon', 'note', 'index', 'index_index'],
         () => {
           window_open(EMAIL_LINK);
         }
@@ -778,7 +729,7 @@ function makeHelpPanel(): help.Help {
     H: [
       new help.Shortcut(
         `Open <a href="${HOME}/" target="_blank"><strong>h</strong>omepage</a>`,
-        [xooxle, note, index, index_index],
+        ['lexicon', 'note', 'index', 'index_index'],
         () => {
           window_open(`${HOME}/`);
         }
@@ -787,7 +738,7 @@ function makeHelpPanel(): help.Help {
     X: [
       new help.Shortcut(
         `Open the <a href="${LEXICON}" target="_blank">dictionary search page</a>`,
-        [xooxle, note, index, index_index],
+        ['lexicon', 'note', 'index', 'index_index'],
         () => {
           window_open(LEXICON);
         }
@@ -796,7 +747,7 @@ function makeHelpPanel(): help.Help {
     '?': [
       new help.Shortcut(
         'Toggle help panel',
-        [xooxle, note, index, index_index],
+        ['lexicon', 'note', 'index', 'index_index'],
         () => {
           panel!.togglePanel();
         }
@@ -805,7 +756,7 @@ function makeHelpPanel(): help.Help {
     Escape: [
       new help.Shortcut(
         'Toggle help panel',
-        [xooxle, note, index, index_index],
+        ['lexicon', 'note', 'index', 'index_index'],
         () => {
           panel!.togglePanel(false);
         },
@@ -815,7 +766,7 @@ function makeHelpPanel(): help.Help {
     o: [
       new help.Shortcut(
         'Open the word currently being viewed',
-        [xooxle, note, index],
+        ['lexicon', 'note', 'index'],
         () => {
           findNextElement('.view, .sister-view', 'cur')
             ?.querySelector('a')
@@ -826,7 +777,7 @@ function makeHelpPanel(): help.Help {
     z: [
       new help.Shortcut(
         'Yank the key of the word currently being viewed <span class="dev-mode-note">(dev mode)</span>',
-        [xooxle, note, index],
+        ['lexicon', 'note', 'index'],
         () => {
           yank(
             findNextElement('.view .dev, .sister-key, .drv-key', 'cur')!
@@ -836,17 +787,17 @@ function makeHelpPanel(): help.Help {
       ),
     ],
     l: [
-      new help.Shortcut('Go to next word', [note], () => {
+      new help.Shortcut('Go to next word', ['note'], () => {
         window_open(getLinkHrefByRel('next'), false);
       }),
     ],
     h: [
-      new help.Shortcut('Go to previous word', [note], () => {
+      new help.Shortcut('Go to previous word', ['note'], () => {
         window_open(getLinkHrefByRel('prev'), false);
       }),
     ],
     y: [
-      new help.Shortcut('Yank (copy) the word key', [note], () => {
+      new help.Shortcut('Yank (copy) the word key', ['note'], () => {
         yank(stem(window.location.pathname));
       }),
     ],
@@ -854,17 +805,17 @@ function makeHelpPanel(): help.Help {
 
   const search = {
     w: [
-      new help.Shortcut('Toggle full-word search', [xooxle], () => {
+      new help.Shortcut('Toggle full-word search', ['lexicon'], () => {
         click('fullWordCheckbox');
       }),
     ],
     x: [
-      new help.Shortcut('Toggle regex search', [xooxle], () => {
+      new help.Shortcut('Toggle regex search', ['lexicon'], () => {
         click('regexCheckbox');
       }),
     ],
     '/': [
-      new help.Shortcut('Focus on the search box', [xooxle], () => {
+      new help.Shortcut('Focus on the search box', ['lexicon'], () => {
         focus('searchBox');
       }),
     ],
@@ -872,31 +823,35 @@ function makeHelpPanel(): help.Help {
 
   const scrollTo = {
     n: [
-      new help.Shortcut('Next word in the list', [xooxle, note, index], () => {
-        scrollToNextElement('.view, .sister-view', 'next');
-      }),
+      new help.Shortcut(
+        'Next word in the list',
+        ['lexicon', 'note', 'index'],
+        () => {
+          scrollToNextElement('.view, .sister-view', 'next');
+        }
+      ),
     ],
     p: [
       new help.Shortcut(
         'Previous word in the list',
-        [xooxle, note, index],
+        ['lexicon', 'note', 'index'],
         () => {
           scrollToNextElement('.view, .sister-view', 'prev');
         }
       ),
     ],
     C: [
-      new help.Shortcut('Crum', [xooxle], () => {
+      new help.Shortcut('Crum', ['lexicon'], () => {
         scroll('crum-title');
       }),
-      new help.Shortcut('Crum pages', [note], () => {
+      new help.Shortcut('Crum pages', ['note'], () => {
         scroll('crum');
       }),
     ],
     E: [
       new help.Shortcut(
         '<a href="https://kellia.uni-goettingen.de/" target="_blank" rel="noopener,noreferrer">K<strong>E</strong>LLIA</a>',
-        [xooxle],
+        ['lexicon'],
         () => {
           scroll('kellia-title');
         }
@@ -905,93 +860,101 @@ function makeHelpPanel(): help.Help {
     T: [
       new help.Shortcut(
         '<a href="http://copticsite.com/" target="_blank" rel="noopener,noreferrer">copticsi<strong>t</strong>e</a>',
-        [xooxle],
+        ['lexicon'],
         () => {
           scroll('copticsite-title');
         }
       ),
     ],
     D: [
-      new help.Shortcut('Dawoud pages', [note], () => {
+      new help.Shortcut('Dawoud pages', ['note'], () => {
         scroll('dawoud');
       }),
     ],
     w: [
-      new help.Shortcut('Related words', [note], () => {
+      new help.Shortcut('Related words', ['note'], () => {
         scroll('sisters');
       }),
     ],
     m: [
-      new help.Shortcut('Meaning', [note], () => {
+      new help.Shortcut('Meaning', ['note'], () => {
         scroll('meaning');
       }),
     ],
     e: [
       new help.Shortcut(
         'S<strong>e</strong>ns<strong>e</strong>s',
-        [note],
+        ['note'],
         () => {
           scroll('senses');
         }
       ),
     ],
     t: [
-      new help.Shortcut('Type', [note], () => {
+      new help.Shortcut('Type', ['note'], () => {
         scroll('root-type');
       }),
     ],
     j: [
-      new help.Shortcut('Categories', [note], () => {
+      new help.Shortcut('Categories', ['note'], () => {
         scroll('categories');
       }),
     ],
     i: [
-      new help.Shortcut('Images', [note], () => {
+      new help.Shortcut('Images', ['note'], () => {
         scroll('images');
       }),
     ],
     q: [
-      new help.Shortcut('Words', [note], () => {
+      new help.Shortcut('Words', ['note'], () => {
         scroll('pretty');
       }),
     ],
     Q: [
-      new help.Shortcut('Words', [note], () => {
+      new help.Shortcut('Words', ['note'], () => {
         scroll('marcion');
       }),
     ],
     v: [
-      new help.Shortcut('Derivations table', [note], () => {
+      new help.Shortcut('Derivations table', ['note'], () => {
         scroll('derivations');
       }),
     ],
     c: [
-      new help.Shortcut('Dictionary page list', [note], () => {
+      new help.Shortcut('Dictionary page list', ['note'], () => {
         scroll('dictionary');
       }),
     ],
     g: [
-      new help.Shortcut('Header', [xooxle, note, index, index_index], () => {
-        scroll('header');
-      }),
+      new help.Shortcut(
+        'Header',
+        ['lexicon', 'note', 'index', 'index_index'],
+        () => {
+          scroll('header');
+        }
+      ),
     ],
     G: [
-      new help.Shortcut('Footer', [xooxle, note, index, index_index], () => {
-        scroll('footer');
-      }),
+      new help.Shortcut(
+        'Footer',
+        ['lexicon', 'note', 'index', 'index_index'],
+        () => {
+          scroll('footer');
+        }
+      ),
     ],
   };
 
   const collapse = {
     c: [
-      new help.Shortcut('Crum', [xooxle], () => {
+      new help.Shortcut('Crum', ['lexicon'], () => {
         click('crum-title');
       }),
     ],
     e: [
       new help.Shortcut(
         '<a href="https://kellia.uni-goettingen.de/" target="_blank" rel="noopener,noreferrer">K<strong>E</strong>LLIA</a>',
-        [xooxle],
+        ['lexicon'],
         () => {
           click('kellia-title');
         }
@@ -1000,7 +963,7 @@ function makeHelpPanel(): help.Help {
     t: [
       new help.Shortcut(
         '<a href="http://copticsite.com/" target="_blank" rel="noopener,noreferrer">copticsi<strong>t</strong>e</a>',
-        [xooxle],
+        ['lexicon'],
         () => {
           click('copticsite-title');
         }
@@ -1168,7 +1131,7 @@ function handleEnglishLookups(root: Node = document.body) {
 /**
  *
  */
-function handleNonXooxleOnlyElements(): void {
+function handleNoteOnlyElements(): void {
   // Handle 'categories' class.
   document
     .querySelectorAll<HTMLElement>('.categories')
@@ -1359,7 +1322,7 @@ function handleNonXooxleOnlyElements(): void {
     crumElement?.insertBefore(anchor, crumElement.firstChild);
   }
 
-  if (anki()) {
+  if (iam.amI('anki')) {
     document
       .querySelectorAll<HTMLElement>('.navigate')
       .forEach((e: HTMLElement) => {
@@ -1384,7 +1347,7 @@ function handleNonXooxleOnlyElements(): void {
 /**
  *
  */
-function handleCommonElements(): void {
+function handleNoteAndLexiconCommonElements(): void {
   highlighter.update();
 
   document.addEventListener('visibilitychange', () => {
@@ -1430,11 +1393,11 @@ function handleCommonElements(): void {
  *
  */
 function main(): void {
-  if (!xooxle()) {
-    handleNonXooxleOnlyElements();
+  if (iam.amI('note')) {
+    handleNoteOnlyElements();
   }
 
-  handleCommonElements();
+  handleNoteAndLexiconCommonElements();
 }
 
 main();
