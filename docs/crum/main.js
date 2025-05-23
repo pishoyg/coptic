@@ -198,6 +198,7 @@ function main() {
     'link',
     'light',
   ]);
+  // Handle 'meaning' class.
   // Add English word lookups.
   document.querySelectorAll('.meaning').forEach((elem) => {
     utils.linkifyText(elem, ENGLISH_RE, paths.LOOKUP_URL_PREFIX, [
