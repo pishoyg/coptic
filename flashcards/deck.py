@@ -298,7 +298,12 @@ class Deck:
         )
 
         yield js_start
-        yield f"const {ANKI_NOTE_CLASS} = true;"
+        # We use this JavaScript twice in our card template, once in the front,
+        # and once in the back. It may be due to this that global variables are
+        # problematic.
+        # We use `var` instead of `const` in order to avoid issues with
+        # redefining a variable twice.
+        yield f"var {ANKI_NOTE_CLASS} = true;"
 
         if not js_path:
             return
