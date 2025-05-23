@@ -436,6 +436,11 @@ def verify_equal_sets(s1, s2, message: str) -> None:
         fatal(message, diff, "present in the latter but not the former")
 
 
+def assert_one[T](s: set[T]) -> T:
+    assert len(s) == 1
+    return next(iter(s))
+
+
 # The following types provide executors that execute sequentially if the
 # environment variable SEQUENTIAL is set to True.
 # This is useful in the following situations:
