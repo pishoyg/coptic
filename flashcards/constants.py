@@ -22,7 +22,7 @@ CRUM_DIALECTS = ["S", "Sa", "Sf", "A", "L", "B", "F", "Fb", "O", "NH"]
 # have to look up the files directly.
 EXPLANATORY_SOURCES = "dictionary/marcion_sourceforge_net/data/img-sources"
 
-CRUM_JS = "crum.js"  # Relative to the HTML write directory.
+CRUM_JS = "main.js"  # Relative to the HTML write directory.
 # DIALECTS_JS is a JavaScript line that can be used to set the default dialects.
 DIALECTS_JS = """
 if (localStorage.getItem('d') === null) {{
