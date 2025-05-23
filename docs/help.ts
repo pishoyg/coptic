@@ -299,11 +299,9 @@ export class Help {
   private readonly help: HTMLElement;
 
   /**
-   *
-   * @param sections
    */
-  constructor(sections: Section[]) {
-    this.sections = sections.filter((s) => s.executable());
+  constructor() {
+    this.sections = [];
     // Create overlay background.
     this.overlay = document.createElement('div');
     this.overlay.className = 'overlay-background';
@@ -326,12 +324,6 @@ export class Help {
       this.togglePanel();
     };
     this.panel.appendChild(closeButton);
-
-    this.sections
-      .filter((s) => s.visible())
-      .forEach((s) => {
-        this.panel.appendChild(s.createSection());
-      });
 
     document.body.appendChild(this.panel);
 
@@ -357,6 +349,20 @@ export class Help {
 
     this.validate();
     this.addListeners();
+  }
+
+  /**
+   * @param s
+   */
+  addSection(s: Section) {
+    if (!s.executable()) {
+      return;
+    }
+    this.sections.push(s);
+    if (!s.visible()) {
+      return;
+    }
+    this.panel.appendChild(s.createSection());
   }
 
   /**

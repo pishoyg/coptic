@@ -1,5 +1,39 @@
+// TODO: We desire to implement highlighting for the Bible as well. Move shared
+// functionality to an external package, and keep Lexicon-specific logic in this
+// file.
 import * as utils from '../utils.js';
 import * as iam from '../iam.js';
+
+const DIALECTS = [
+  // The following dialects are found in Crum (and potentially others).
+  'S',
+  'Sa',
+  'Sf',
+  'A',
+  'L',
+  'B',
+  'F',
+  'Fb',
+  'O',
+  // The following dialects are only found in Marcion (part of Crum).
+  'NH',
+  // The following dialects are only found in TLA / KELLIA.
+  'M',
+  'P',
+  'V',
+  'W',
+  'U',
+];
+
+// DIALECT_SINGLE_CHAR is a mapping for the dialects that have shortcuts other
+// than their codes. If the shortcut to toggle a dialect is not the same as its
+// code, it should be included in this record.
+export const DIALECT_SINGLE_CHAR: Record<string, string> = {
+  N: 'NH',
+  a: 'Sa',
+  f: 'Sf',
+  b: 'Fb',
+};
 
 /**
  *
@@ -7,6 +41,13 @@ import * as iam from '../iam.js';
 export class Highlighter {
   // Sheets are problematic on Anki, for some reason! We update the elements
   // individually instead!
+  // d is the name of the local-storage variable storing the list of active
+  // dialects.
+  private readonly d = 'd';
+  // dev is the name of the local-storage variable storing the developer-mode
+  // status.
+  private readonly dev = 'dev';
+
   private readonly sheet: CSSStyleSheet | null;
   private readonly dialectRuleIndex: number;
   private readonly devRuleIndex: number;
@@ -16,12 +57,10 @@ export class Highlighter {
   private static readonly DIM = '0.3';
   /**
    *
-   * @param dialects
    * @param anki
    * @param checkboxes
    */
   constructor(
-    private readonly dialects: string[],
     private readonly anki: boolean,
     private readonly checkboxes: HTMLInputElement[]
   ) {
@@ -72,7 +111,7 @@ export class Highlighter {
     // Dim all children of `word` elements, with the exception of:
     // - Active dialects.
     // - Undialected spellings.
-    const query = `.word > :not(${utils.classQuery(active)},.spelling:not(${utils.classQuery(this.dialects)}))`;
+    const query = `.word > :not(${utils.classQuery(active)},.spelling:not(${utils.classQuery(DIALECTS)}))`;
     const style = `opacity: ${Highlighter.DIM};`;
     this.updateSheetOrElements(
       this.dialectRuleIndex,
@@ -96,7 +135,8 @@ export class Highlighter {
    *
    */
   updateDev(): void {
-    const display = localStorage.getItem('dev') === 'true' ? 'block' : 'none';
+    const display =
+      localStorage.getItem(this.dev) === 'true' ? 'block' : 'none';
     const noDisplay = display === 'block' ? 'none' : 'block';
     this.updateSheetOrElements(
       this.devRuleIndex,
@@ -175,7 +215,6 @@ export class Highlighter {
     this.checkboxes.forEach((checkbox) => {
       checkbox.addEventListener('click', () => {
         this.toggleDialect(checkbox.name);
-        this.updateDialects();
       });
     });
 
@@ -187,6 +226,19 @@ export class Highlighter {
         this.update();
       }
     });
+
+    document
+      .querySelectorAll<HTMLElement>('.reset')
+      .forEach((el: HTMLElement): void => {
+        el.classList.add('link');
+        el.onclick = (event) => {
+          this.reset();
+          // On Xooxle, clicking the button would normally submit the form and
+          // reset everything (including the search box and the option
+          // checkboxes). So prevent the event from propagating further.
+          event.preventDefault();
+        };
+      });
   }
 
   /**
@@ -236,8 +288,8 @@ export class Highlighter {
    *
    * @returns
    */
-  activeDialects(): string[] | null {
-    const d = localStorage.getItem('d');
+  private activeDialects(): string[] | null {
+    const d = localStorage.getItem(this.d);
     // NOTE: ''.split(',') returns [''], which is not what we want!
     // The empty string requires special handling.
     return d === '' ? [] : (d?.split(',') ?? null);
@@ -257,10 +309,12 @@ export class Highlighter {
     }
 
     if (active.size) {
-      localStorage.setItem('d', Array.from(active).join(','));
+      localStorage.setItem(this.d, Array.from(active).join(','));
     } else {
-      localStorage.removeItem('d');
+      localStorage.removeItem(this.d);
     }
+
+    this.updateDialects();
   }
 
   /**
@@ -268,8 +322,10 @@ export class Highlighter {
    */
   toggleDev(): void {
     localStorage.setItem(
-      'dev',
-      localStorage.getItem('dev') === 'true' ? 'false' : 'true'
+      this.dev,
+      localStorage.getItem(this.dev) === 'true' ? 'false' : 'true'
     );
+
+    this.updateDev();
   }
 }
