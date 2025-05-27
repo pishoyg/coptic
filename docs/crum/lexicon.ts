@@ -15,33 +15,6 @@ const MESSAGE_BOX_ID = 'message';
 const CRUM_HREF_FMT = '{KEY}.html';
 const KELLIA_HREF_FMT = 'https://coptic-dictionary.org/entry.cgi?tla={KEY}';
 
-interface Xooxle {
-  indexURL: string;
-  tableID: string;
-  collapsibleID: string;
-  hrefFmt?: string;
-}
-
-const XOOXLES: Xooxle[] = [
-  {
-    indexURL: 'crum.json',
-    tableID: 'crum',
-    collapsibleID: 'crum-collapsible',
-    hrefFmt: CRUM_HREF_FMT,
-  },
-  {
-    indexURL: 'kellia.json',
-    tableID: 'kellia',
-    collapsibleID: 'kellia-collapsible',
-    hrefFmt: KELLIA_HREF_FMT,
-  },
-  {
-    indexURL: 'copticsite.json',
-    tableID: 'copticsite',
-    collapsibleID: 'copticsite-collapsible',
-  },
-];
-
 enum DialectMatch {
   // The candidate has at least one of the highlighted dialects, and the match
   // occurs in one of the pieces of text market with that dialect.
@@ -60,20 +33,22 @@ enum DialectMatch {
   OTHER_DIALECT_MATCH_WITH_NO_HIGHLIGHTED_DIALECT = 4,
 }
 
-const NUM_BUCKETS =
-  1 +
-  Math.max(
-    ...Object.values(DialectMatch).filter((value) => typeof value === 'number')
-  );
-
 /**
  */
-class DialectSorter extends xooxle.BucketSorter {
+class CrumDialectSorter extends xooxle.BucketSorter {
+  private static readonly NUM_BUCKETS =
+    1 +
+    Math.max(
+      ...Object.values(DialectMatch).filter(
+        (value) => typeof value === 'number'
+      )
+    );
+
   /**
    * @param highlighter
    */
   constructor(private readonly highlighter: highlight.Highlighter) {
-    super(NUM_BUCKETS);
+    super(CrumDialectSorter.NUM_BUCKETS);
   }
 
   /**
@@ -87,8 +62,7 @@ class DialectSorter extends xooxle.BucketSorter {
   ): DialectMatch {
     const active = this.highlighter.activeDialects();
     if (!active?.length) {
-      // There is no dialect highlighting. All dialects fall in the first
-      // bucket.
+      // There is no dialect highlighting. All results fall in the first bucket.
       return 0;
     }
 
@@ -116,6 +90,74 @@ class DialectSorter extends xooxle.BucketSorter {
     return DialectMatch.OTHER_DIALECT_MATCH_WITH_NO_HIGHLIGHTED_DIALECT;
   }
 }
+
+/**
+ * kelliaDialectSorter implements a dialect-based sorter for the KELLIA
+ * dictionary.
+ * Undialected entries are less significant in KELLIA, so we don't give them any
+ * special treatment. Our sorting is simply based on whether we have a match in
+ * a dialect of interest.
+ */
+class kelliaDialectSorter extends xooxle.BucketSorter {
+  private static readonly NUM_BUCKETS = 2;
+
+  /**
+   * @param highlighter
+   */
+  constructor(private readonly highlighter: highlight.Highlighter) {
+    super(kelliaDialectSorter.NUM_BUCKETS);
+  }
+
+  /**
+   * @param _res
+   * @param row - Table row.
+   * @returns Bucket number.
+   */
+  override bucket(_res: xooxle.SearchResult, row: HTMLTableRowElement): number {
+    const active = this.highlighter.activeDialects();
+    if (!active?.length) {
+      // There is no dialect highlighting. All results fall in the first bucket.
+      return 0;
+    }
+
+    const highlightedDialectQuery: string = active
+      .map((d) => `.${d} .${xooxle.CLS.MATCH}`)
+      .join(', ');
+    return row.querySelector(highlightedDialectQuery) ? 0 : 1;
+  }
+}
+
+interface Xooxle {
+  indexURL: string;
+  tableID: string;
+  collapsibleID: string;
+  hrefFmt?: string;
+  bucketSorter?: new (
+    highlighter: highlight.Highlighter
+  ) => xooxle.BucketSorter;
+}
+
+const XOOXLES: Xooxle[] = [
+  {
+    indexURL: 'crum.json',
+    tableID: 'crum',
+    collapsibleID: 'crum-collapsible',
+    hrefFmt: CRUM_HREF_FMT,
+    bucketSorter: CrumDialectSorter,
+  },
+  {
+    indexURL: 'kellia.json',
+    tableID: 'kellia',
+    collapsibleID: 'kellia-collapsible',
+    hrefFmt: KELLIA_HREF_FMT,
+    bucketSorter: kelliaDialectSorter,
+  },
+  {
+    indexURL: 'copticsite.json',
+    tableID: 'copticsite',
+    collapsibleID: 'copticsite-collapsible',
+  },
+];
 
 /**
  *
@@ -156,7 +198,7 @@ async function main(): Promise<void> {
         json,
         form,
         xoox.hrefFmt,
-        new DialectSorter(highlighter)
+        xoox.bucketSorter ? new xoox.bucketSorter(highlighter) : undefined
       );
     })
   );
