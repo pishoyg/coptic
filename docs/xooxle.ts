@@ -35,11 +35,6 @@ const RESULTS_TO_UPDATE_DISPLAY = 5;
 
 const TAG_REGEX = /<\/?[^>]+>/g;
 
-// CHROME_WORD_CHARS is a list of characters that are considered word characters
-// in Chrome.
-// See https://github.com/pishoyg/coptic/issues/286 for context.
-const CHROME_WORD_CHARS: Set<string> = new Set<string>(["'"]);
-
 const enum CLS {
   // VIEW is the class of the view table cells.
   VIEW = 'view',
@@ -81,10 +76,9 @@ export interface _Form {
   collapsibleID: string;
 }
 
-// Form represents a search form containing the HTML elements that the user
-// interacts with to initiate and control search.
 /**
- *
+ * Form represents a search form containing the HTML elements that the user
+ * interacts with to initiate and control search.
  */
 export class Form {
   // Input fields:
@@ -311,15 +305,21 @@ class SearchResult {
   /**
    *
    * @param hrefFmt
+   * @param index - Index of the current result.
+   * @param total - Total number of results.
    * @returns
    */
-  private viewCell(hrefFmt?: string): HTMLTableCellElement {
+  private viewCell(
+    hrefFmt: string | undefined,
+    index: number,
+    total: number
+  ): HTMLTableCellElement {
     const viewCell = document.createElement('td');
     viewCell.classList.add(CLS.VIEW);
 
     const counter = document.createElement('span');
     counter.classList.add(CLS.COUNTER);
-    counter.innerHTML = '? / ?';
+    counter.innerHTML = `${index.toString()} / ${total.toString()}`;
     counter.append(' ');
     viewCell.append(counter);
 
@@ -362,12 +362,18 @@ class SearchResult {
    * DOM. Due to this DOM limitation, we can NOT reuse any nodes.
    *
    * @param hrefFmt
+   * @param index - Index of the current result.
+   * @param total - Total number of results.
    * @returns
    */
-  row(hrefFmt?: string): HTMLTableRowElement {
+  row(
+    hrefFmt: string | undefined,
+    index: number,
+    total: number
+  ): HTMLTableRowElement {
     const row = document.createElement('tr');
 
-    row.appendChild(this.viewCell(hrefFmt));
+    row.appendChild(this.viewCell(hrefFmt, index, total));
 
     this.results.forEach((sr: FieldSearchResult) => {
       const cell: HTMLTableCellElement = document.createElement('td');
@@ -378,20 +384,50 @@ class SearchResult {
     return row;
   }
 
-  // firstMatchField returns the index of the first field containing a match.
   /**
-   *
-   * @returns
+   * @returns the comparison key.
    */
-  firstMatchField(): number {
-    return this.results.findIndex((result) => result.match);
+  compareKey(): number[] {
+    return [
+      // Results are sorted based on the boundary type. Full-word matches should
+      // come first, followed by prefix matches, then suffix matches, then
+      // within-word matches.
+      Math.min(...this.results.map((result) => result.boundaryType())),
+      // Results are sorted based on the first column that has a match.
+      // We do so based on the assumption that the earlier columns contain more
+      // relevant data. So a result with a match in the 1st column is likely
+      // more interesting to the user than a result with a match in the 2nd
+      // column, so it should show first.
+      this.results.findIndex((result) => result.match),
+    ];
   }
 }
 
-// Field represents a search field within a candidate. In the display, while
-// candidate occupies a table row, each field occupies a cell within that row.
 /**
- *
+ * @param a
+ * @param b
+ * @returns
+ */
+function searchResultCompare(a: SearchResult, b: SearchResult): number {
+  const aKey = a.compareKey();
+  const bKey = b.compareKey();
+
+  // The two arrays are guaranteed to be of equal length, but we use the minimum
+  // for protectionism.
+  const len: number = Math.min(aKey.length, bKey.length);
+  for (let i = 0; i < len; ++i) {
+    const diff = aKey[i]! - bKey[i]!;
+    if (diff !== 0) {
+      return Math.sign(diff);
+    }
+  }
+
+  return 0;
+}
+
+/**
+ * Field represents a search field within a candidate. In the display, while
+ * candidate occupies a table row, each field occupies a cell within that row.
  */
 class Field {
   readonly units: Unit[];
@@ -417,9 +453,8 @@ class Field {
   }
 }
 
-// FieldSearchResult represents the search result of one field.
 /**
- *
+ * FieldSearchResult represents the search result of one field.
  */
 class FieldSearchResult {
   private readonly results: UnitSearchResult[];
@@ -486,6 +521,13 @@ class FieldSearchResult {
    */
   fragmentWord(): string | undefined {
     return this.results.find((r) => r.match)?.fragmentWord();
+  }
+
+  /**
+   *
+   */
+  boundaryType(): BoundaryType {
+    return Math.min(...this.results.map((res) => res.boundaryType()));
   }
 }
 
@@ -557,11 +599,26 @@ class UnitSearchResult {
   fragmentWord(): string | undefined {
     return this.results.find((r) => r.match)?.fragmentWord();
   }
+
+  /**
+   *
+   */
+  boundaryType(): BoundaryType {
+    return Math.min(...this.results.map((res) => res.boundaryType()));
+  }
+}
+
+enum BoundaryType {
+  FULL_WORD = 0,
+  PREFIX = 1,
+  SUFFIX = 2,
+  WITHIN = 3,
 }
 
 interface Match {
   readonly start: number;
   readonly end: number;
+  readonly boundaryType: BoundaryType;
 }
 
 /**
@@ -598,11 +655,39 @@ class Line {
         // We need to filter out the empty string, because it could cause
         // trouble during highlighting.
         .filter((match) => match[0])
-        .map((match) => ({
-          start: match.index,
-          end: match.index + match[0].length,
-        }))
+        .map(this.getMatch.bind(this))
     );
+  }
+
+  /**
+   *
+   * @param match
+   * @returns
+   */
+  private getMatch(match: RegExpMatchArray): Match {
+    const start: number = match.index!;
+    const end: number = match.index! + match[0].length;
+    return { start, end, boundaryType: this.boundaryType(start, end) };
+  }
+
+  /**
+   * @param start
+   * @param end
+   * @returns
+   */
+  private boundaryType(start: number, end: number): BoundaryType {
+    const before = !orth.isWordChar(this.text[start - 1]);
+    const after = !orth.isWordChar(this.text[end]);
+    if (before && after) {
+      return BoundaryType.FULL_WORD;
+    }
+    if (before) {
+      return BoundaryType.PREFIX;
+    }
+    if (after) {
+      return BoundaryType.SUFFIX;
+    }
+    return BoundaryType.WITHIN;
   }
 }
 
@@ -651,19 +736,6 @@ class LineSearchResult {
 
   /**
    *
-   * @param char
-   * @returns
-   */
-  static isWordChar(char?: string): boolean {
-    // Unicode-aware boundary expansion
-    if (!char) {
-      return false;
-    }
-    return /\p{L}|\p{N}/u.test(char) || CHROME_WORD_CHARS.has(char);
-  }
-
-  /**
-   *
    * @returns
    */
   fragmentWord(): string {
@@ -687,12 +759,12 @@ class LineSearchResult {
     let end = match.end;
 
     // Expand left: Move the start index left until a word boundary is found.
-    while (LineSearchResult.isWordChar(this.text[start - 1])) {
+    while (orth.isWordCharInChrome(this.text[start - 1])) {
       start--;
     }
 
     // Expand right: Move the end index right until a word boundary is found.
-    while (LineSearchResult.isWordChar(this.text[end])) {
+    while (orth.isWordCharInChrome(this.text[end])) {
       end++;
     }
 
@@ -764,6 +836,13 @@ class LineSearchResult {
 
     return builder.join('');
   }
+
+  /**
+   *
+   */
+  boundaryType(): BoundaryType {
+    return Math.min(...this.matches.map((m) => m.boundaryType));
+  }
 }
 
 export interface _Index {
@@ -781,13 +860,61 @@ interface _Metadata {
 }
 
 /**
+ * BucketSort allows search results to be sorted into buckets.
+ */
+class BucketSorter {
+  readonly numBuckets: number;
+  /**
+   * @param numBuckets - Total number of buckets. The default is one bucket
+   * that contains all results, thus there is no sorting.
+   */
+  constructor(numBuckets = 1) {
+    this.numBuckets = Math.max(1, Math.round(numBuckets));
+  }
+
+  /**
+   * bucket returns the bucket that a given search result belongs to. This
+   * should fall in the range [0, numBuckets-1].
+   * Results will be sorted in the output based on the bucket that they belong
+   * to.
+   *
+   * @param _ - Search result.
+   * @returns Bucket number.
+   */
+  bucket(_: SearchResult): number {
+    // The default is to put all results in the first bucket.
+    return 0;
+  }
+
+  /**
+   * validBucket wraps bucket, and ensures results are valid.
+   * It is implemented as an arrow function rather than a method in order to
+   * prevent child classes from overriding it.
+   * @param res
+   * @returns
+   */
+  validBucket = (res: SearchResult): number => {
+    const b = Math.round(this.bucket(res));
+    if (b < 0) {
+      console.error('Invalid bucket', b);
+      return 0;
+    }
+    if (b >= this.numBuckets) {
+      console.error('Invalid bucket', b);
+      return this.numBuckets - 1;
+    }
+    return b;
+  };
+}
+
+/**
  *
  */
 export class Xooxle {
   private readonly data: Candidate[];
-  private readonly metadata: _Metadata;
   private debounceTimeout: ReturnType<typeof setTimeout> | null = null;
   private currentAbortController: AbortController | null = null;
+  private readonly bucketSorter: BucketSorter;
 
   /**
    * @param index - JSON index object.
@@ -796,16 +923,18 @@ export class Xooxle {
    * page. The HREF will be generated based on the KEY field of the candidate
    * by substituting the string `{KEY}`.
    * If absent, no HREF will be generated.
+   * @param bucketer - A bucket sort.
    */
   constructor(
     index: _Index,
     private readonly form: Form,
-    private readonly hrefFmt?: string
+    private readonly hrefFmt?: string,
+    bucketer?: BucketSorter
   ) {
     this.data = index.data.map(
       (record) => new Candidate(record, index.metadata.fields)
     );
-    this.metadata = index.metadata;
+    this.bucketSorter = bucketer ?? new BucketSorter();
 
     // Make the page responsive to user input.
     this.form.searchBox.addEventListener('input', this.search.bind(this, 100));
@@ -884,21 +1013,12 @@ export class Xooxle {
    * @param abortController
    */
   async searchAuxAux(regex: RegExp, abortController: AbortController) {
-    let count = 0;
-    // columnSentinels is a set of hidden table rows that represent sentinels
+    // bucketSentinels is a set of hidden table rows that represent sentinels
     // (anchors / break points) in the results table.
     //
-    // The sentinels are used to divide the table into sections.
+    // The sentinels are used to divide the table into buckets.
     // Matching results will be added right on top of the sentinels, so that
     // each sentinel represents the (hidden) bottom row of a section.
-    // Results with a (first) match in their n^th column will be added on top of
-    // the n^th sentinel. (By first match, we mean that a result containing a
-    // match in the 1st and 2nd column, for example, will be added on top of the
-    // 1st, not the 2nd, sentinel.)
-    // We do so based on the assumption that the earlier columns contain more
-    // relevant data. So a result with a match in the 1st column is likely more
-    // interesting to the user than a result with a match in the 2nd column,
-    // so it should show first.
     //
     // This allows us to achieve some form of result sorting, without actually
     // having to retrieve all results, sort them, and then render them. We can
@@ -911,33 +1031,38 @@ export class Xooxle {
     // because we want results to expand downwards rather than upwards, to
     // avoid jitter at the top of the table, which is the area that the user
     // will be looking at.
-    const columnSentinels: Element[] = this.metadata.fields.map(() => {
-      const tr = document.createElement('tr');
-      tr.style.display = 'none';
-      this.form.result(tr);
-      return tr;
-    });
-
-    for (const res of this.data) {
-      const result: SearchResult = res.search(regex);
-
-      if (!result.match) {
-        continue;
+    const bucketSentinels: Element[] = Array.from(
+      { length: this.bucketSorter.numBuckets },
+      () => {
+        const tr = document.createElement('tr');
+        tr.style.display = 'none';
+        this.form.result(tr);
+        return tr;
       }
+    );
 
+    const results: SearchResult[] = this.data
+      .map((can) => can.search(regex))
+      .filter((res) => res.match)
+      .sort(searchResultCompare);
+
+    let count = 0;
+    for (const result of results) {
       ++count;
-
-      // Create a new row for the table
-      const row = result.row(this.hrefFmt);
 
       if (abortController.signal.aborted) {
         return;
       }
 
-      columnSentinels[result.firstMatchField()]!.insertAdjacentElement(
-        'beforebegin',
-        row
-      );
+      // Create a new row for the table
+      const row = result.row(this.hrefFmt, count, results.length);
+
+      // TODO: Use column sentinels. Define a sentinel provider class that,
+      // given a search result, supplies the index of the sentinel that this
+      // result should go under.
+      bucketSentinels[
+        this.bucketSorter.validBucket(result)
+      ]!.insertAdjacentElement('beforebegin', row);
 
       // Expand the results table to accommodate the recently added results.
       this.form.expand();
@@ -946,12 +1071,5 @@ export class Xooxle {
         await utils.yieldToBrowser();
       }
     }
-
-    let i = 0;
-    [...this.form.tbody.getElementsByClassName(CLS.COUNTER)].forEach(
-      (counter) => {
-        counter.innerHTML = `${(++i).toString()} / ${count.toString()}`;
-      }
-    );
   }
 }

@@ -32,3 +32,26 @@ export class Orthographer {
       .join('');
   }
 }
+
+// CHROME_WORD_CHARS is a list of characters that are considered word characters
+// in Chrome.
+// See https://github.com/pishoyg/coptic/issues/286 for context.
+const CHROME_WORD_CHARS: Set<string> = new Set<string>(["'"]);
+
+/**
+ *
+ * @param char
+ * @returns
+ */
+export function isWordChar(char?: string): boolean {
+  return !!char && /\p{L}|\p{N}/u.test(char);
+}
+
+/**
+ *
+ * @param char
+ * @returns
+ */
+export function isWordCharInChrome(char?: string): boolean {
+  return isWordChar(char) || (!!char && CHROME_WORD_CHARS.has(char));
+}
