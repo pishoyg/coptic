@@ -42,6 +42,81 @@ const XOOXLES: Xooxle[] = [
   },
 ];
 
+enum DialectMatch {
+  // The candidate has at least one of the highlighted dialects, and the match
+  // occurs in one of the pieces of text market with that dialect.
+  HIGHLIGHTED_DIALECT_MATCH = 0,
+  // The candidate has at least one dialect of interest, but the match occurs in
+  // an undialected piece of text.
+  UNDIALECTED_MATCH_WITH_HIGHLIGHTED_DIALECT = 1,
+  // The candidate doesn't have any dialects of interest in the first place. The
+  // match occurs in an undialected piece of text.
+  UNDIALECTED_MATCH_WITH_NO_HIGHLIGHTED_DIALECT = 2,
+  // Matches only occur in dialects of no interest for the current query. The
+  // candidate does however have a dialect of interest.
+  OTHER_DIALECT_MATCH_WITH_HIGHLIGHTED_DIALECT = 3,
+  // Matches only occur in dialects of no interest for the current query. The
+  // dialect has no dialects of interest to start with!
+  OTHER_DIALECT_MATCH_WITH_NO_HIGHLIGHTED_DIALECT = 4,
+}
+
+const NUM_BUCKETS =
+  1 +
+  Math.max(
+    ...Object.values(DialectMatch).filter((value) => typeof value === 'number')
+  );
+
+/**
+ */
+class DialectSorter extends xooxle.BucketSorter {
+  /**
+   * @param highlighter
+   */
+  constructor(private readonly highlighter: highlight.Highlighter) {
+    super(NUM_BUCKETS);
+  }
+
+  /**
+   * @param _res
+   * @param row - Table row.
+   * @returns Bucket number.
+   */
+  override bucket(
+    _res: xooxle.SearchResult,
+    row: HTMLTableRowElement
+  ): DialectMatch {
+    const active = this.highlighter.activeDialects();
+    if (!active?.length) {
+      // There is no dialect highlighting. All dialects fall in the first
+      // bucket.
+      return 0;
+    }
+
+    const highlightedDialectQuery: string = active
+      .map((d) => `.${d} .${xooxle.CLS.MATCH}`)
+      .join(', ');
+    if (row.querySelector(highlightedDialectQuery)) {
+      // We have a match in a highlighted dialect.
+      return DialectMatch.HIGHLIGHTED_DIALECT_MATCH;
+    }
+
+    const undialected: boolean = Array.from(
+      row.querySelectorAll(`.${xooxle.CLS.MATCH}`)
+    ).some((el) => !el.closest(highlight.ANY_DIALECT_QUERY));
+    const ofInterest = !!row.querySelector(utils.classQuery(active));
+    if (undialected) {
+      if (ofInterest) {
+        return DialectMatch.UNDIALECTED_MATCH_WITH_HIGHLIGHTED_DIALECT;
+      }
+      return DialectMatch.UNDIALECTED_MATCH_WITH_NO_HIGHLIGHTED_DIALECT;
+    }
+    if (ofInterest) {
+      return DialectMatch.OTHER_DIALECT_MATCH_WITH_HIGHLIGHTED_DIALECT;
+    }
+    return DialectMatch.OTHER_DIALECT_MATCH_WITH_NO_HIGHLIGHTED_DIALECT;
+  }
+}
+
 /**
  *
  */
@@ -53,13 +128,19 @@ async function main(): Promise<void> {
   searchBox.addEventListener('keydown', utils.stopPropagation);
   searchBox.addEventListener('keypress', utils.stopPropagation);
 
+  const dialectCheckboxes: HTMLInputElement[] = Array.from(
+    document.querySelectorAll<HTMLInputElement>('.dialect-checkbox')
+  );
+
+  const highlighter = new highlight.Highlighter(false, dialectCheckboxes);
+
   // Initialize searchers.
   // TODO: You initialize three different Form objects, and it looks like each
   // one of them will end up populating the query parameters separately! They
   // also populate the shared objects from the parameters repeatedly!
   // While this is not currently a problem, it remains undesirable.
   // Deduplicate these actions, somehow.
-  await Promise.all(
+  const xooxles: xooxle.Xooxle[] = await Promise.all(
     XOOXLES.map(async (xoox) => {
       const raw = await fetch(xoox.indexURL);
       const json = (await raw.json()) as xooxle._Index;
@@ -71,18 +152,26 @@ async function main(): Promise<void> {
         resultsTableID: xoox.tableID,
         collapsibleID: xoox.collapsibleID,
       });
-      new xooxle.Xooxle(json, form, xoox.hrefFmt);
+      return new xooxle.Xooxle(
+        json,
+        form,
+        xoox.hrefFmt,
+        new DialectSorter(highlighter)
+      );
     })
   );
+
+  // A dialect update triggers search, since search result ranking depends on
+  // the list of currently-highlighted dialects.
+  document.addEventListener(highlight.DIALECT_UPDATE.type, () => {
+    xooxles.forEach((x) => {
+      x.search(0);
+    });
+  });
 
   // Initialize collapsible elements.
   collapse.addListenersForSiblings(true);
 
-  const dialectCheckboxes: HTMLInputElement[] = Array.from(
-    document.querySelectorAll<HTMLInputElement>('.dialect-checkbox')
-  );
-
-  const highlighter = new highlight.Highlighter(false, dialectCheckboxes);
   help.makeHelpPanel(highlighter);
 
   highlighter.update();
