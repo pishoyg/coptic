@@ -22,6 +22,14 @@ export default tseslint.config(
     },
     extends: [eslintConfigPrettier],
     rules: {
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '_',
+          varsIgnorePattern: '_',
+          caughtErrorsIgnorePattern: '_',
+        },
+      ],
       semi: 'error',
       'prefer-const': 'error',
       indent: ['error', 2, { SwitchCase: 1 }],
