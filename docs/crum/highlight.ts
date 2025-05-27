@@ -3,6 +3,8 @@
 // file.
 import * as utils from '../utils.js';
 import * as iam from '../iam.js';
+export const DIALECT_UPDATE = new CustomEvent('d');
+export const DEV_UPDATE = new CustomEvent('dev');
 
 const DIALECTS = [
   // The following dialects are found in Crum (and potentially others).
@@ -60,11 +62,11 @@ export class Highlighter {
   /**
    *
    * @param anki
-   * @param checkboxes
+   * @param dialectCheckboxes
    */
   constructor(
     private readonly anki: boolean,
-    private readonly checkboxes: HTMLInputElement[]
+    private readonly dialectCheckboxes: HTMLInputElement[]
   ) {
     this.sheet = this.anki ? null : window.document.styleSheets[0]!;
     const length = this.sheet?.cssRules.length ?? 0;
@@ -103,7 +105,7 @@ export class Highlighter {
       this.updateSheetOrElements(this.dialectRuleIndex, '.word *', '', (el) => {
         el.style.opacity = Highlighter.BRIGHT;
       });
-      this.checkboxes.forEach((c) => {
+      this.dialectCheckboxes.forEach((c) => {
         c.checked = false;
       });
       return;
@@ -128,9 +130,11 @@ export class Highlighter {
       }
     );
 
-    this.checkboxes.forEach((checkbox) => {
+    this.dialectCheckboxes.forEach((checkbox) => {
       checkbox.checked = active.includes(checkbox.name);
     });
+
+    document.dispatchEvent(DIALECT_UPDATE);
   }
 
   /**
@@ -156,6 +160,8 @@ export class Highlighter {
         el.style.display = noDisplay;
       }
     );
+
+    document.dispatchEvent(DEV_UPDATE);
   }
 
   /**
@@ -214,7 +220,7 @@ export class Highlighter {
   /**
    */
   private addListeners() {
-    this.checkboxes.forEach((checkbox) => {
+    this.dialectCheckboxes.forEach((checkbox) => {
       checkbox.addEventListener('click', () => {
         this.toggleDialect(checkbox.name);
       });
