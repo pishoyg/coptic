@@ -12,25 +12,6 @@ const REGEX_CHECKBOX_ID = 'regexCheckbox';
 const MESSAGE_BOX_ID = 'message';
 const CRUM_HREF_FMT = '{KEY}.html';
 const KELLIA_HREF_FMT = 'https://coptic-dictionary.org/entry.cgi?tla={KEY}';
-const XOOXLES = [
-  {
-    indexURL: 'crum.json',
-    tableID: 'crum',
-    collapsibleID: 'crum-collapsible',
-    hrefFmt: CRUM_HREF_FMT,
-  },
-  {
-    indexURL: 'kellia.json',
-    tableID: 'kellia',
-    collapsibleID: 'kellia-collapsible',
-    hrefFmt: KELLIA_HREF_FMT,
-  },
-  {
-    indexURL: 'copticsite.json',
-    tableID: 'copticsite',
-    collapsibleID: 'copticsite-collapsible',
-  },
-];
 var DialectMatch;
 (function (DialectMatch) {
   // The candidate has at least one of the highlighted dialects, and the match
@@ -58,20 +39,22 @@ var DialectMatch;
     (DialectMatch['OTHER_DIALECT_MATCH_WITH_NO_HIGHLIGHTED_DIALECT'] = 4)
   ] = 'OTHER_DIALECT_MATCH_WITH_NO_HIGHLIGHTED_DIALECT';
 })(DialectMatch || (DialectMatch = {}));
-const NUM_BUCKETS =
-  1 +
-  Math.max(
-    ...Object.values(DialectMatch).filter((value) => typeof value === 'number')
-  );
 /**
  */
-class DialectSorter extends xooxle.BucketSorter {
+class CrumDialectSorter extends xooxle.BucketSorter {
   highlighter;
+  static NUM_BUCKETS =
+    1 +
+    Math.max(
+      ...Object.values(DialectMatch).filter(
+        (value) => typeof value === 'number'
+      )
+    );
   /**
    * @param highlighter
    */
   constructor(highlighter) {
-    super(NUM_BUCKETS);
+    super(CrumDialectSorter.NUM_BUCKETS);
     this.highlighter = highlighter;
   }
   /**
@@ -82,8 +65,7 @@ class DialectSorter extends xooxle.BucketSorter {
   bucket(_res, row) {
     const active = this.highlighter.activeDialects();
     if (!active?.length) {
-      // There is no dialect highlighting. All dialects fall in the first
-      // bucket.
+      // There is no dialect highlighting. All results fall in the first bucket.
       return 0;
     }
     const highlightedDialectQuery = active
@@ -109,6 +91,61 @@ class DialectSorter extends xooxle.BucketSorter {
     return DialectMatch.OTHER_DIALECT_MATCH_WITH_NO_HIGHLIGHTED_DIALECT;
   }
 }
+/**
+ * kelliaDialectSorter implements a dialect-based sorter for the KELLIA
+ * dictionary.
+ * Undialected entries are less significant in KELLIA, so we don't give them any
+ * special treatment. Our sorting is simply based on whether we have a match in
+ * a dialect of interest.
+ */
+class kelliaDialectSorter extends xooxle.BucketSorter {
+  highlighter;
+  static NUM_BUCKETS = 2;
+  /**
+   * @param highlighter
+   */
+  constructor(highlighter) {
+    super(kelliaDialectSorter.NUM_BUCKETS);
+    this.highlighter = highlighter;
+  }
+  /**
+   * @param _res
+   * @param row - Table row.
+   * @returns Bucket number.
+   */
+  bucket(_res, row) {
+    const active = this.highlighter.activeDialects();
+    if (!active?.length) {
+      // There is no dialect highlighting. All results fall in the first bucket.
+      return 0;
+    }
+    const highlightedDialectQuery = active
+      .map((d) => `.${d} .${'match' /* xooxle.CLS.MATCH */}`)
+      .join(', ');
+    return row.querySelector(highlightedDialectQuery) ? 0 : 1;
+  }
+}
+const XOOXLES = [
+  {
+    indexURL: 'crum.json',
+    tableID: 'crum',
+    collapsibleID: 'crum-collapsible',
+    hrefFmt: CRUM_HREF_FMT,
+    bucketSorter: CrumDialectSorter,
+  },
+  {
+    indexURL: 'kellia.json',
+    tableID: 'kellia',
+    collapsibleID: 'kellia-collapsible',
+    hrefFmt: KELLIA_HREF_FMT,
+    bucketSorter: kelliaDialectSorter,
+  },
+  {
+    indexURL: 'copticsite.json',
+    tableID: 'copticsite',
+    collapsibleID: 'copticsite-collapsible',
+  },
+];
 /**
  *
  */
@@ -145,7 +182,7 @@ async function main() {
         json,
         form,
         xoox.hrefFmt,
-        new DialectSorter(highlighter)
+        xoox.bucketSorter ? new xoox.bucketSorter(highlighter) : undefined
       );
     })
   );
