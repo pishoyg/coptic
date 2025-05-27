@@ -3,6 +3,8 @@
 // file.
 import * as utils from '../utils.js';
 import * as iam from '../iam.js';
+export const DIALECT_UPDATE = new CustomEvent('d');
+export const DEV_UPDATE = new CustomEvent('dev');
 const DIALECTS = [
   // The following dialects are found in Crum (and potentially others).
   'S',
@@ -23,6 +25,7 @@ const DIALECTS = [
   'W',
   'U',
 ];
+export const ANY_DIALECT_QUERY = utils.classQuery(DIALECTS);
 // DIALECT_SINGLE_CHAR is a mapping for the dialects that have shortcuts other
 // than their codes. If the shortcut to toggle a dialect is not the same as its
 // code, it should be included in this record.
@@ -37,7 +40,7 @@ export const DIALECT_SINGLE_CHAR = {
  */
 export class Highlighter {
   anki;
-  checkboxes;
+  dialectCheckboxes;
   // Sheets are problematic on Anki, for some reason! We update the elements
   // individually instead!
   // d is the name of the local-storage variable storing the list of active
@@ -55,11 +58,11 @@ export class Highlighter {
   /**
    *
    * @param anki
-   * @param checkboxes
+   * @param dialectCheckboxes
    */
-  constructor(anki, checkboxes) {
+  constructor(anki, dialectCheckboxes) {
     this.anki = anki;
-    this.checkboxes = checkboxes;
+    this.dialectCheckboxes = dialectCheckboxes;
     this.sheet = this.anki ? null : window.document.styleSheets[0];
     const length = this.sheet?.cssRules.length ?? 0;
     this.dialectRuleIndex = length;
@@ -93,7 +96,7 @@ export class Highlighter {
       this.updateSheetOrElements(this.dialectRuleIndex, '.word *', '', (el) => {
         el.style.opacity = Highlighter.BRIGHT;
       });
-      this.checkboxes.forEach((c) => {
+      this.dialectCheckboxes.forEach((c) => {
         c.checked = false;
       });
       return;
@@ -102,7 +105,7 @@ export class Highlighter {
     // Dim all children of `word` elements, with the exception of:
     // - Active dialects.
     // - Undialected spellings.
-    const query = `.word > :not(${utils.classQuery(active)},.spelling:not(${utils.classQuery(DIALECTS)}))`;
+    const query = `.word > :not(${utils.classQuery(active)},.spelling:not(${ANY_DIALECT_QUERY}))`;
     const style = `opacity: ${Highlighter.DIM};`;
     this.updateSheetOrElements(
       this.dialectRuleIndex,
@@ -116,9 +119,10 @@ export class Highlighter {
         el.style.opacity = Highlighter.BRIGHT;
       }
     );
-    this.checkboxes.forEach((checkbox) => {
+    this.dialectCheckboxes.forEach((checkbox) => {
       checkbox.checked = active.includes(checkbox.name);
     });
+    document.dispatchEvent(DIALECT_UPDATE);
   }
   /**
    *
@@ -143,6 +147,7 @@ export class Highlighter {
         el.style.display = noDisplay;
       }
     );
+    document.dispatchEvent(DEV_UPDATE);
   }
   /**
    *
@@ -197,7 +202,7 @@ export class Highlighter {
   /**
    */
   addListeners() {
-    this.checkboxes.forEach((checkbox) => {
+    this.dialectCheckboxes.forEach((checkbox) => {
       checkbox.addEventListener('click', () => {
         this.toggleDialect(checkbox.name);
       });
@@ -267,8 +272,7 @@ export class Highlighter {
   activeDialects() {
     const d = localStorage.getItem(this.d);
     // NOTE: ''.split(',') returns [''], which is not what we want!
-    // The empty string requires special handling.
-    return d === '' ? [] : (d?.split(',') ?? null);
+    return d ? d.split(',') : null;
   }
   /**
    *

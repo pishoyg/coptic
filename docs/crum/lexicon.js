@@ -31,6 +31,84 @@ const XOOXLES = [
     collapsibleID: 'copticsite-collapsible',
   },
 ];
+var DialectMatch;
+(function (DialectMatch) {
+  // The candidate has at least one of the highlighted dialects, and the match
+  // occurs in one of the pieces of text market with that dialect.
+  DialectMatch[(DialectMatch['HIGHLIGHTED_DIALECT_MATCH'] = 0)] =
+    'HIGHLIGHTED_DIALECT_MATCH';
+  // The candidate has at least one dialect of interest, but the match occurs in
+  // an undialected piece of text.
+  DialectMatch[
+    (DialectMatch['UNDIALECTED_MATCH_WITH_HIGHLIGHTED_DIALECT'] = 1)
+  ] = 'UNDIALECTED_MATCH_WITH_HIGHLIGHTED_DIALECT';
+  // The candidate doesn't have any dialects of interest in the first place. The
+  // match occurs in an undialected piece of text.
+  DialectMatch[
+    (DialectMatch['UNDIALECTED_MATCH_WITH_NO_HIGHLIGHTED_DIALECT'] = 2)
+  ] = 'UNDIALECTED_MATCH_WITH_NO_HIGHLIGHTED_DIALECT';
+  // Matches only occur in dialects of no interest for the current query. The
+  // candidate does however have a dialect of interest.
+  DialectMatch[
+    (DialectMatch['OTHER_DIALECT_MATCH_WITH_HIGHLIGHTED_DIALECT'] = 3)
+  ] = 'OTHER_DIALECT_MATCH_WITH_HIGHLIGHTED_DIALECT';
+  // Matches only occur in dialects of no interest for the current query. The
+  // dialect has no dialects of interest to start with!
+  DialectMatch[
+    (DialectMatch['OTHER_DIALECT_MATCH_WITH_NO_HIGHLIGHTED_DIALECT'] = 4)
+  ] = 'OTHER_DIALECT_MATCH_WITH_NO_HIGHLIGHTED_DIALECT';
+})(DialectMatch || (DialectMatch = {}));
+const NUM_BUCKETS =
+  1 +
+  Math.max(
+    ...Object.values(DialectMatch).filter((value) => typeof value === 'number')
+  );
+/**
+ */
+class DialectSorter extends xooxle.BucketSorter {
+  highlighter;
+  /**
+   * @param highlighter
+   */
+  constructor(highlighter) {
+    super(NUM_BUCKETS);
+    this.highlighter = highlighter;
+  }
+  /**
+   * @param _res
+   * @param row - Table row.
+   * @returns Bucket number.
+   */
+  bucket(_res, row) {
+    const active = this.highlighter.activeDialects();
+    if (!active?.length) {
+      // There is no dialect highlighting. All dialects fall in the first
+      // bucket.
+      return 0;
+    }
+    const highlightedDialectQuery = active
+      .map((d) => `.${d} .${'match' /* xooxle.CLS.MATCH */}`)
+      .join(', ');
+    if (row.querySelector(highlightedDialectQuery)) {
+      // We have a match in a highlighted dialect.
+      return DialectMatch.HIGHLIGHTED_DIALECT_MATCH;
+    }
+    const undialected = Array.from(
+      row.querySelectorAll(`.${'match' /* xooxle.CLS.MATCH */}`)
+    ).some((el) => !el.closest(highlight.ANY_DIALECT_QUERY));
+    const ofInterest = !!row.querySelector(utils.classQuery(active));
+    if (undialected) {
+      if (ofInterest) {
+        return DialectMatch.UNDIALECTED_MATCH_WITH_HIGHLIGHTED_DIALECT;
+      }
+      return DialectMatch.UNDIALECTED_MATCH_WITH_NO_HIGHLIGHTED_DIALECT;
+    }
+    if (ofInterest) {
+      return DialectMatch.OTHER_DIALECT_MATCH_WITH_HIGHLIGHTED_DIALECT;
+    }
+    return DialectMatch.OTHER_DIALECT_MATCH_WITH_NO_HIGHLIGHTED_DIALECT;
+  }
+}
 /**
  *
  */
@@ -41,13 +119,17 @@ async function main() {
   searchBox.addEventListener('keyup', utils.stopPropagation);
   searchBox.addEventListener('keydown', utils.stopPropagation);
   searchBox.addEventListener('keypress', utils.stopPropagation);
+  const dialectCheckboxes = Array.from(
+    document.querySelectorAll('.dialect-checkbox')
+  );
+  const highlighter = new highlight.Highlighter(false, dialectCheckboxes);
   // Initialize searchers.
   // TODO: You initialize three different Form objects, and it looks like each
   // one of them will end up populating the query parameters separately! They
   // also populate the shared objects from the parameters repeatedly!
   // While this is not currently a problem, it remains undesirable.
   // Deduplicate these actions, somehow.
-  await Promise.all(
+  const xooxles = await Promise.all(
     XOOXLES.map(async (xoox) => {
       const raw = await fetch(xoox.indexURL);
       const json = await raw.json();
@@ -59,15 +141,23 @@ async function main() {
         resultsTableID: xoox.tableID,
         collapsibleID: xoox.collapsibleID,
       });
-      new xooxle.Xooxle(json, form, xoox.hrefFmt);
+      return new xooxle.Xooxle(
+        json,
+        form,
+        xoox.hrefFmt,
+        new DialectSorter(highlighter)
+      );
     })
   );
+  // A dialect update triggers search, since search result ranking depends on
+  // the list of currently-highlighted dialects.
+  document.addEventListener(highlight.DIALECT_UPDATE.type, () => {
+    xooxles.forEach((x) => {
+      x.search(0);
+    });
+  });
   // Initialize collapsible elements.
   collapse.addListenersForSiblings(true);
-  const dialectCheckboxes = Array.from(
-    document.querySelectorAll('.dialect-checkbox')
-  );
-  const highlighter = new highlight.Highlighter(false, dialectCheckboxes);
   help.makeHelpPanel(highlighter);
   highlighter.update();
 }

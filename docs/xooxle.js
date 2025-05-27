@@ -29,7 +29,7 @@ const LINE_BREAK = '<br>';
 // should yield to let the browser update the display during search.
 const RESULTS_TO_UPDATE_DISPLAY = 5;
 const TAG_REGEX = /<\/?[^>]+>/g;
-var CLS;
+export var CLS;
 (function (CLS) {
   // VIEW is the class of the view table cells.
   CLS['VIEW'] = 'view';
@@ -243,7 +243,7 @@ class Candidate {
  *
  * @returns
  */
-class SearchResult extends ResultAggregator {
+export class SearchResult extends ResultAggregator {
   candidate;
   results;
   /**
@@ -270,16 +270,15 @@ class SearchResult extends ResultAggregator {
   /**
    *
    * @param hrefFmt
-   * @param index - Index of the current result.
    * @param total - Total number of results.
    * @returns
    */
-  viewCell(hrefFmt, index, total) {
+  viewCell(hrefFmt, total) {
     const viewCell = document.createElement('td');
     viewCell.classList.add('view' /* CLS.VIEW */);
     const counter = document.createElement('span');
     counter.classList.add('counter' /* CLS.COUNTER */);
-    counter.innerHTML = `${index.toString()} / ${total.toString()}`;
+    counter.innerHTML = `? / ${total.toString()}`;
     counter.append(' ');
     viewCell.append(counter);
     const dev = document.createElement('span');
@@ -314,13 +313,12 @@ class SearchResult extends ResultAggregator {
    * DOM. Due to this DOM limitation, we can NOT reuse any nodes.
    *
    * @param hrefFmt
-   * @param index - Index of the current result.
    * @param total - Total number of results.
    * @returns
    */
-  row(hrefFmt, index, total) {
+  row(hrefFmt, total) {
     const row = document.createElement('tr');
-    row.appendChild(this.viewCell(hrefFmt, index, total));
+    row.appendChild(this.viewCell(hrefFmt, total));
     this.results.forEach((sr) => {
       const cell = document.createElement('td');
       cell.innerHTML = sr.highlight();
@@ -704,7 +702,7 @@ class LineSearchResult {
 /**
  * BucketSorter allows search results to be sorted into buckets.
  */
-class BucketSorter {
+export class BucketSorter {
   numBuckets;
   /**
    * @param numBuckets - Total number of buckets. The default is one bucket
@@ -719,10 +717,11 @@ class BucketSorter {
    * Results will be sorted in the output based on the bucket that they belong
    * to.
    *
-   * @param _ - Search result.
+   * @param _res - Search result.
+   * @param _row - Table row.
    * @returns Bucket number.
    */
-  bucket(_) {
+  bucket(_res, _row) {
     // The default is to put all results in the first bucket.
     return 0;
   }
@@ -731,10 +730,11 @@ class BucketSorter {
    * It is implemented as an arrow function rather than a method in order to
    * prevent child classes from overriding it.
    * @param res
+   * @param row
    * @returns
    */
-  validBucket = (res) => {
-    const b = Math.round(this.bucket(res));
+  validBucket = (res, row) => {
+    const b = Math.round(this.bucket(res, row));
     if (b < 0) {
       console.error('Invalid bucket', b);
       return 0;
@@ -870,22 +870,26 @@ export class Xooxle {
       .map((can) => can.search(regex))
       .filter((res) => res.match)
       .sort(searchResultCompare);
-    let count = 0;
-    for (const result of results) {
-      ++count;
+    for (const [count, result] of results.entries()) {
       if (abortController.signal.aborted) {
         return;
       }
       // Create a new row for the table
-      const row = result.row(this.hrefFmt, count, results.length);
+      const row = result.row(this.hrefFmt, results.length);
       bucketSentinels[
-        this.bucketSorter.validBucket(result)
+        this.bucketSorter.validBucket(result, row)
       ].insertAdjacentElement('beforebegin', row);
       // Expand the results table to accommodate the recently added results.
       this.form.expand();
-      if (count % RESULTS_TO_UPDATE_DISPLAY == 0) {
+      if (count % RESULTS_TO_UPDATE_DISPLAY == RESULTS_TO_UPDATE_DISPLAY - 1) {
         await utils.yieldToBrowser();
       }
     }
+    let i = 0;
+    [
+      ...this.form.tbody.getElementsByClassName('counter' /* CLS.COUNTER */),
+    ].forEach((counter) => {
+      counter.innerHTML = `${(++i).toString()} / ${results.length.toString()}`;
+    });
   }
 }
