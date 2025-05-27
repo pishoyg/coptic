@@ -178,6 +178,35 @@ export class Form {
     this.messageBox.replaceChildren();
   }
 }
+/**
+ */
+class ResultAggregator {
+  /**
+   * @returns
+   */
+  boundaryType() {
+    // The BoundaryType enum is implemented in such a way that the boundary type
+    // of an aggregated result is the minimum of the boundary types of all
+    // results.
+    return Math.min(...this.results.map((r) => r.boundaryType()));
+  }
+  /**
+   * @returns
+   */
+  fragmentWord() {
+    // We simply return the fragment of the first result that possesses one.
+    return this.results
+      .find((r) => r.match && r.fragmentWord())
+      ?.fragmentWord();
+  }
+  /**
+   * @returns
+   */
+  get match() {
+    // We have a match if any of the results has a match.
+    return this.results.some((r) => r.match);
+  }
+}
 // Candidate represents one search candidate from the index. In the results
 // display, each candidate occupies its own row.
 /**
@@ -214,7 +243,7 @@ class Candidate {
  *
  * @returns
  */
-class SearchResult {
+class SearchResult extends ResultAggregator {
   candidate;
   results;
   /**
@@ -223,6 +252,7 @@ class SearchResult {
    * @param regex
    */
   constructor(candidate, regex) {
+    super();
     this.candidate = candidate;
     this.results = this.candidate.fields.map(
       (field) => new FieldSearchResult(field, regex)
@@ -234,20 +264,6 @@ class SearchResult {
    */
   get key() {
     return this.candidate.key;
-  }
-  /**
-   *
-   * @returns
-   */
-  get match() {
-    return this.results.some((result) => result.match);
-  }
-  /**
-   *
-   * @returns
-   */
-  fragmentWord() {
-    return this.results.find((r) => r.fragmentWord())?.fragmentWord();
   }
   // viewCell constructs the first cell in the row for this result, bearing the
   // anchor to the result (if available).
@@ -320,7 +336,7 @@ class SearchResult {
       // Results are sorted based on the boundary type. Full-word matches should
       // come first, followed by prefix matches, then suffix matches, then
       // within-word matches.
-      Math.min(...this.results.map((result) => result.boundaryType())),
+      this.boundaryType(),
       // Results are sorted based on the first column that has a match.
       // We do so based on the assumption that the earlier columns contain more
       // relevant data. So a result with a match in the 1st column is likely
@@ -377,7 +393,7 @@ class Field {
 /**
  * FieldSearchResult represents the search result of one field.
  */
-class FieldSearchResult {
+class FieldSearchResult extends ResultAggregator {
   field;
   results;
   /**
@@ -386,6 +402,7 @@ class FieldSearchResult {
    * @param regex
    */
   constructor(field, regex) {
+    super();
     this.field = field;
     this.results = field.units.map((unit) => unit.search(regex));
   }
@@ -395,13 +412,6 @@ class FieldSearchResult {
    */
   get units() {
     return this.field.units;
-  }
-  /**
-   *
-   * @returns
-   */
-  get match() {
-    return this.results.some((result) => result.match);
   }
   // highlight returns the field's HTML content, with matches highlighted.
   /**
@@ -425,21 +435,6 @@ class FieldSearchResult {
       results.map((r) => r.highlight()).join(UNIT_DELIMITER) +
       (truncated ? LONG_UNITS_FIELD_MESSAGE : '')
     );
-  }
-  // fragmentWord returns a word that can be used as a fragment in the URL to
-  // highlight the first matching word.
-  /**
-   *
-   * @returns
-   */
-  fragmentWord() {
-    return this.results.find((r) => r.match)?.fragmentWord();
-  }
-  /**
-   *
-   */
-  boundaryType() {
-    return Math.min(...this.results.map((res) => res.boundaryType()));
   }
 }
 // Unit is a unit in a field. Fields usually consist of a single unit, but
@@ -473,7 +468,7 @@ class Unit {
 /**
  *
  */
-class UnitSearchResult {
+class UnitSearchResult extends ResultAggregator {
   unit;
   results;
   /**
@@ -482,6 +477,7 @@ class UnitSearchResult {
    * @param regex
    */
   constructor(unit, regex) {
+    super();
     this.unit = unit;
     this.results = this.unit.lines.map((l) => l.search(regex));
   }
@@ -489,28 +485,8 @@ class UnitSearchResult {
    *
    * @returns
    */
-  get match() {
-    return this.results.some((r) => r.match);
-  }
-  /**
-   *
-   * @returns
-   */
   highlight() {
     return this.results.map((r) => r.highlight()).join(LINE_BREAK);
-  }
-  /**
-   *
-   * @returns
-   */
-  fragmentWord() {
-    return this.results.find((r) => r.match)?.fragmentWord();
-  }
-  /**
-   *
-   */
-  boundaryType() {
-    return Math.min(...this.results.map((res) => res.boundaryType()));
   }
 }
 var BoundaryType;
@@ -726,7 +702,7 @@ class LineSearchResult {
   }
 }
 /**
- * BucketSort allows search results to be sorted into buckets.
+ * BucketSorter allows search results to be sorted into buckets.
  */
 class BucketSorter {
   numBuckets;
