@@ -881,10 +881,11 @@ export class BucketSorter {
  *
  */
 export class Xooxle {
-  private readonly data: Candidate[];
+  private readonly candidates: Candidate[];
   private debounceTimeout: ReturnType<typeof setTimeout> | null = null;
   private currentAbortController: AbortController | null = null;
   private readonly bucketSorter: BucketSorter;
+  private readonly admit: (res: SearchResult) => boolean;
 
   /**
    * @param index - JSON index object.
@@ -894,17 +895,20 @@ export class Xooxle {
    * by substituting the string `{KEY}`.
    * If absent, no HREF will be generated.
    * @param bucketer - A bucket sort.
+   * @param admit - A search result filter.
    */
   constructor(
     index: _Index,
     private readonly form: Form,
     private readonly hrefFmt?: string,
-    bucketer?: BucketSorter
+    bucketer?: BucketSorter,
+    admit?: (res: SearchResult) => boolean
   ) {
-    this.data = index.data.map(
+    this.candidates = index.data.map(
       (record) => new Candidate(record, index.metadata.fields)
     );
     this.bucketSorter = bucketer ?? new BucketSorter();
+    this.admit = admit ?? (() => true);
 
     // Make the page responsive to user input.
     this.form.searchBox.addEventListener('input', this.search.bind(this, 100));
@@ -1011,9 +1015,9 @@ export class Xooxle {
       }
     );
 
-    const results: SearchResult[] = this.data
+    const results: SearchResult[] = this.candidates
       .map((can) => can.search(regex))
-      .filter((res) => res.match)
+      .filter((res) => res.match && this.admit(res))
       .sort(searchResultCompare);
 
     for (const [count, result] of results.entries()) {
