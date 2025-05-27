@@ -3,8 +3,6 @@
 // file.
 import * as utils from '../utils.js';
 import * as iam from '../iam.js';
-export const DIALECT_UPDATE = new CustomEvent('d');
-export const DEV_UPDATE = new CustomEvent('dev');
 const DIALECTS = [
   // The following dialects are found in Crum (and potentially others).
   'S',
@@ -122,7 +120,6 @@ export class Highlighter {
     this.dialectCheckboxes.forEach((checkbox) => {
       checkbox.checked = active.includes(checkbox.name);
     });
-    document.dispatchEvent(DIALECT_UPDATE);
   }
   /**
    *
@@ -147,7 +144,6 @@ export class Highlighter {
         el.style.display = noDisplay;
       }
     );
-    document.dispatchEvent(DEV_UPDATE);
   }
   /**
    *

@@ -129,7 +129,7 @@ async function main() {
   // also populate the shared objects from the parameters repeatedly!
   // While this is not currently a problem, it remains undesirable.
   // Deduplicate these actions, somehow.
-  const xooxles = await Promise.all(
+  await Promise.all(
     XOOXLES.map(async (xoox) => {
       const raw = await fetch(xoox.indexURL);
       const json = await raw.json();
@@ -141,7 +141,7 @@ async function main() {
         resultsTableID: xoox.tableID,
         collapsibleID: xoox.collapsibleID,
       });
-      return new xooxle.Xooxle(
+      new xooxle.Xooxle(
         json,
         form,
         xoox.hrefFmt,
@@ -149,13 +149,6 @@ async function main() {
       );
     })
   );
-  // A dialect update triggers search, since search result ranking depends on
-  // the list of currently-highlighted dialects.
-  document.addEventListener(highlight.DIALECT_UPDATE.type, () => {
-    xooxles.forEach((x) => {
-      x.search(0);
-    });
-  });
   // Initialize collapsible elements.
   collapse.addListenersForSiblings(true);
   help.makeHelpPanel(highlighter);
