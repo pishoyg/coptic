@@ -902,9 +902,6 @@ export class Xooxle {
       }
       // Create a new row for the table
       const row = result.row(this.hrefFmt, count, results.length);
-      // TODO: Use column sentinels. Define a sentinel provider class that,
-      // given a search result, supplies the index of the sentinel that this
-      // result should go under.
       bucketSentinels[
         this.bucketSorter.validBucket(result)
       ].insertAdjacentElement('beforebegin', row);
