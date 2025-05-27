@@ -752,11 +752,11 @@ export class BucketSorter {
 export class Xooxle {
   form;
   hrefFmt;
+  bucketSorter;
+  admit;
   candidates;
   debounceTimeout = null;
   currentAbortController = null;
-  bucketSorter;
-  admit;
   /**
    * @param index - JSON index object.
    * @param form - Form containing search elements.
@@ -764,17 +764,23 @@ export class Xooxle {
    * page. The HREF will be generated based on the KEY field of the candidate
    * by substituting the string `{KEY}`.
    * If absent, no HREF will be generated.
-   * @param bucketer - A bucket sort.
+   * @param bucketSorter - A bucket sorter.
    * @param admit - A search result filter.
    */
-  constructor(index, form, hrefFmt, bucketer, admit) {
+  constructor(
+    index,
+    form,
+    hrefFmt,
+    bucketSorter = new BucketSorter(),
+    admit = () => true
+  ) {
     this.form = form;
     this.hrefFmt = hrefFmt;
+    this.bucketSorter = bucketSorter;
+    this.admit = admit;
     this.candidates = index.data.map(
       (record) => new Candidate(record, index.metadata.fields)
     );
-    this.bucketSorter = bucketer ?? new BucketSorter();
-    this.admit = admit ?? (() => true);
     // Make the page responsive to user input.
     this.form.searchBox.addEventListener('input', this.search.bind(this, 100));
     this.form.fullWordCheckbox.addEventListener(
