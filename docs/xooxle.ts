@@ -328,13 +328,11 @@ export class SearchResult extends ResultAggregator {
   /**
    *
    * @param hrefFmt
-   * @param index - Index of the current result.
    * @param total - Total number of results.
    * @returns
    */
   private viewCell(
     hrefFmt: string | undefined,
-    index: number,
     total: number
   ): HTMLTableCellElement {
     const viewCell = document.createElement('td');
@@ -342,7 +340,7 @@ export class SearchResult extends ResultAggregator {
 
     const counter = document.createElement('span');
     counter.classList.add(CLS.COUNTER);
-    counter.innerHTML = `${index.toString()} / ${total.toString()}`;
+    counter.innerHTML = `? / ${total.toString()}`;
     counter.append(' ');
     viewCell.append(counter);
 
@@ -385,18 +383,13 @@ export class SearchResult extends ResultAggregator {
    * DOM. Due to this DOM limitation, we can NOT reuse any nodes.
    *
    * @param hrefFmt
-   * @param index - Index of the current result.
    * @param total - Total number of results.
    * @returns
    */
-  row(
-    hrefFmt: string | undefined,
-    index: number,
-    total: number
-  ): HTMLTableRowElement {
+  row(hrefFmt: string | undefined, total: number): HTMLTableRowElement {
     const row = document.createElement('tr');
 
-    row.appendChild(this.viewCell(hrefFmt, index, total));
+    row.appendChild(this.viewCell(hrefFmt, total));
 
     this.results.forEach((sr: FieldSearchResult) => {
       const cell: HTMLTableCellElement = document.createElement('td');
@@ -1023,16 +1016,13 @@ export class Xooxle {
       .filter((res) => res.match)
       .sort(searchResultCompare);
 
-    let count = 0;
-    for (const result of results) {
-      ++count;
-
+    for (const [count, result] of results.entries()) {
       if (abortController.signal.aborted) {
         return;
       }
 
       // Create a new row for the table
-      const row = result.row(this.hrefFmt, count, results.length);
+      const row = result.row(this.hrefFmt, results.length);
 
       bucketSentinels[
         this.bucketSorter.validBucket(result, row)
@@ -1041,9 +1031,16 @@ export class Xooxle {
       // Expand the results table to accommodate the recently added results.
       this.form.expand();
 
-      if (count % RESULTS_TO_UPDATE_DISPLAY == 0) {
+      if (count % RESULTS_TO_UPDATE_DISPLAY == RESULTS_TO_UPDATE_DISPLAY - 1) {
         await utils.yieldToBrowser();
       }
     }
+
+    let i = 0;
+    [...this.form.tbody.getElementsByClassName(CLS.COUNTER)].forEach(
+      (counter) => {
+        counter.innerHTML = `${(++i).toString()} / ${results.length.toString()}`;
+      }
+    );
   }
 }
