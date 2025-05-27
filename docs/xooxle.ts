@@ -221,6 +221,44 @@ export class Form {
   }
 }
 
+/**
+ */
+abstract class ResultAggregator {
+  protected abstract readonly results: {
+    match: boolean;
+    fragmentWord(): string | undefined;
+    boundaryType(): BoundaryType;
+  }[];
+
+  /**
+   * @returns
+   */
+  boundaryType(): BoundaryType {
+    // The BoundaryType enum is implemented in such a way that the boundary type
+    // of an aggregated result is the minimum of the boundary types of all
+    // results.
+    return Math.min(...this.results.map((r) => r.boundaryType()));
+  }
+
+  /**
+   * @returns
+   */
+  fragmentWord(): string | undefined {
+    // We simply return the fragment of the first result that possesses one.
+    return this.results
+      .find((r) => r.match && r.fragmentWord())
+      ?.fragmentWord();
+  }
+
+  /**
+   * @returns
+   */
+  get match(): boolean {
+    // We have a match if any of the results has a match.
+    return this.results.some((r) => r.match);
+  }
+}
+
 // Candidate represents one search candidate from the index. In the results
 // display, each candidate occupies its own row.
 /**
@@ -260,8 +298,8 @@ class Candidate {
  *
  * @returns
  */
-class SearchResult {
-  private readonly results: FieldSearchResult[];
+class SearchResult extends ResultAggregator {
+  protected readonly results: FieldSearchResult[];
   /**
    *
    * @param candidate
@@ -271,6 +309,7 @@ class SearchResult {
     private readonly candidate: Candidate,
     regex: RegExp
   ) {
+    super();
     this.results = this.candidate.fields.map(
       (field) => new FieldSearchResult(field, regex)
     );
@@ -282,22 +321,6 @@ class SearchResult {
    */
   get key(): string {
     return this.candidate.key;
-  }
-
-  /**
-   *
-   * @returns
-   */
-  get match(): boolean {
-    return this.results.some((result) => result.match);
-  }
-
-  /**
-   *
-   * @returns
-   */
-  fragmentWord(): string | undefined {
-    return this.results.find((r) => r.fragmentWord())?.fragmentWord();
   }
 
   // viewCell constructs the first cell in the row for this result, bearing the
@@ -392,7 +415,7 @@ class SearchResult {
       // Results are sorted based on the boundary type. Full-word matches should
       // come first, followed by prefix matches, then suffix matches, then
       // within-word matches.
-      Math.min(...this.results.map((result) => result.boundaryType())),
+      this.boundaryType(),
       // Results are sorted based on the first column that has a match.
       // We do so based on the assumption that the earlier columns contain more
       // relevant data. So a result with a match in the 1st column is likely
@@ -456,8 +479,8 @@ class Field {
 /**
  * FieldSearchResult represents the search result of one field.
  */
-class FieldSearchResult {
-  private readonly results: UnitSearchResult[];
+class FieldSearchResult extends ResultAggregator {
+  protected readonly results: UnitSearchResult[];
   /**
    *
    * @param field
@@ -467,6 +490,7 @@ class FieldSearchResult {
     private readonly field: Field,
     regex: RegExp
   ) {
+    super();
     this.results = field.units.map((unit) => unit.search(regex));
   }
 
@@ -476,14 +500,6 @@ class FieldSearchResult {
    */
   private get units(): Unit[] {
     return this.field.units;
-  }
-
-  /**
-   *
-   * @returns
-   */
-  get match(): boolean {
-    return this.results.some((result) => result.match);
   }
 
   // highlight returns the field's HTML content, with matches highlighted.
@@ -511,23 +527,6 @@ class FieldSearchResult {
         .map((r: UnitSearchResult): string => r.highlight())
         .join(UNIT_DELIMITER) + (truncated ? LONG_UNITS_FIELD_MESSAGE : '')
     );
-  }
-
-  // fragmentWord returns a word that can be used as a fragment in the URL to
-  // highlight the first matching word.
-  /**
-   *
-   * @returns
-   */
-  fragmentWord(): string | undefined {
-    return this.results.find((r) => r.match)?.fragmentWord();
-  }
-
-  /**
-   *
-   */
-  boundaryType(): BoundaryType {
-    return Math.min(...this.results.map((res) => res.boundaryType()));
   }
 }
 
@@ -562,8 +561,8 @@ class Unit {
 /**
  *
  */
-class UnitSearchResult {
-  private readonly results: LineSearchResult[];
+class UnitSearchResult extends ResultAggregator {
+  protected readonly results: LineSearchResult[];
   /**
    *
    * @param unit
@@ -573,15 +572,8 @@ class UnitSearchResult {
     private readonly unit: Unit,
     regex: RegExp
   ) {
+    super();
     this.results = this.unit.lines.map((l) => l.search(regex));
-  }
-
-  /**
-   *
-   * @returns
-   */
-  get match(): boolean {
-    return this.results.some((r) => r.match);
   }
 
   /**
@@ -590,21 +582,6 @@ class UnitSearchResult {
    */
   highlight(): string {
     return this.results.map((r) => r.highlight()).join(LINE_BREAK);
-  }
-
-  /**
-   *
-   * @returns
-   */
-  fragmentWord(): string | undefined {
-    return this.results.find((r) => r.match)?.fragmentWord();
-  }
-
-  /**
-   *
-   */
-  boundaryType(): BoundaryType {
-    return Math.min(...this.results.map((res) => res.boundaryType()));
   }
 }
 
@@ -847,20 +824,18 @@ class LineSearchResult {
 
 export interface _Index {
   readonly data: Record<string, string>[];
-  readonly metadata: _Metadata;
-}
-
-interface _Metadata {
-  // fields is the list of fields in the output. For each
-  // search result from the data, a row will be added to the table.
-  // The first cell in the row will contain the index of the result, and
-  // potentially the HREF to the result page. The following cells will contain
-  // other fields from the result, in this order.
-  readonly fields: string[];
+  readonly metadata: {
+    // fields is the list of fields in the output. For each
+    // search result from the data, a row will be added to the table.
+    // The first cell in the row will contain the index of the result, and
+    // potentially the HREF to the result page. The following cells will contain
+    // other fields from the result, in this order.
+    readonly fields: string[];
+  };
 }
 
 /**
- * BucketSort allows search results to be sorted into buckets.
+ * BucketSorter allows search results to be sorted into buckets.
  */
 class BucketSorter {
   readonly numBuckets: number;
