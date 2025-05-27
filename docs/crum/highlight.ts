@@ -25,6 +25,8 @@ const DIALECTS = [
   'U',
 ];
 
+export const ANY_DIALECT_QUERY = utils.classQuery(DIALECTS);
+
 // DIALECT_SINGLE_CHAR is a mapping for the dialects that have shortcuts other
 // than their codes. If the shortcut to toggle a dialect is not the same as its
 // code, it should be included in this record.
@@ -111,7 +113,7 @@ export class Highlighter {
     // Dim all children of `word` elements, with the exception of:
     // - Active dialects.
     // - Undialected spellings.
-    const query = `.word > :not(${utils.classQuery(active)},.spelling:not(${utils.classQuery(DIALECTS)}))`;
+    const query = `.word > :not(${utils.classQuery(active)},.spelling:not(${ANY_DIALECT_QUERY}))`;
     const style = `opacity: ${Highlighter.DIM};`;
     this.updateSheetOrElements(
       this.dialectRuleIndex,
@@ -288,11 +290,10 @@ export class Highlighter {
    *
    * @returns
    */
-  private activeDialects(): string[] | null {
+  activeDialects(): string[] | null {
     const d = localStorage.getItem(this.d);
     // NOTE: ''.split(',') returns [''], which is not what we want!
-    // The empty string requires special handling.
-    return d === '' ? [] : (d?.split(',') ?? null);
+    return d ? d.split(',') : null;
   }
 
   /**

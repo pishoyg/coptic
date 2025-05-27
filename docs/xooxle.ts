@@ -35,7 +35,7 @@ const RESULTS_TO_UPDATE_DISPLAY = 5;
 
 const TAG_REGEX = /<\/?[^>]+>/g;
 
-const enum CLS {
+export const enum CLS {
   // VIEW is the class of the view table cells.
   VIEW = 'view',
   // ERROR is the class of the error message.
@@ -298,7 +298,7 @@ class Candidate {
  *
  * @returns
  */
-class SearchResult extends ResultAggregator {
+export class SearchResult extends ResultAggregator {
   protected readonly results: FieldSearchResult[];
   /**
    *
@@ -837,7 +837,7 @@ export interface _Index {
 /**
  * BucketSorter allows search results to be sorted into buckets.
  */
-class BucketSorter {
+export class BucketSorter {
   readonly numBuckets: number;
   /**
    * @param numBuckets - Total number of buckets. The default is one bucket
@@ -853,10 +853,11 @@ class BucketSorter {
    * Results will be sorted in the output based on the bucket that they belong
    * to.
    *
-   * @param _ - Search result.
+   * @param _res - Search result.
+   * @param _row - Table row.
    * @returns Bucket number.
    */
-  bucket(_: SearchResult): number {
+  bucket(_res: SearchResult, _row: HTMLTableRowElement): number {
     // The default is to put all results in the first bucket.
     return 0;
   }
@@ -866,10 +867,11 @@ class BucketSorter {
    * It is implemented as an arrow function rather than a method in order to
    * prevent child classes from overriding it.
    * @param res
+   * @param row
    * @returns
    */
-  validBucket = (res: SearchResult): number => {
-    const b = Math.round(this.bucket(res));
+  validBucket = (res: SearchResult, row: HTMLTableRowElement): number => {
+    const b = Math.round(this.bucket(res, row));
     if (b < 0) {
       console.error('Invalid bucket', b);
       return 0;
@@ -1033,7 +1035,7 @@ export class Xooxle {
       const row = result.row(this.hrefFmt, count, results.length);
 
       bucketSentinels[
-        this.bucketSorter.validBucket(result)
+        this.bucketSorter.validBucket(result, row)
       ]!.insertAdjacentElement('beforebegin', row);
 
       // Expand the results table to accommodate the recently added results.
