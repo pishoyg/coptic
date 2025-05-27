@@ -927,7 +927,7 @@ export class Xooxle {
    *
    * @param timeout
    */
-  search(timeout: number) {
+  private search(timeout: number) {
     if (this.debounceTimeout) {
       clearTimeout(this.debounceTimeout);
     }
@@ -942,7 +942,7 @@ export class Xooxle {
   /**
    *
    */
-  async searchAux() {
+  private async searchAux() {
     // TODO: We append random characters in order to avoid having timers with
     // identical names. This is not ideal. Let's supply an index name as part of
     // the metadata, and use that for logging instead.
@@ -982,7 +982,7 @@ export class Xooxle {
    * @param regex
    * @param abortController
    */
-  async searchAuxAux(regex: RegExp, abortController: AbortController) {
+  private async searchAuxAux(regex: RegExp, abortController: AbortController) {
     // bucketSentinels is a set of hidden table rows that represent sentinels
     // (anchors / break points) in the results table.
     //
