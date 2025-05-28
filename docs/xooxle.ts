@@ -31,6 +31,16 @@ const LINE_BREAK = '<br>';
 
 // RESULTS_TO_UPDATE_DISPLAY specifies how often (every how many results) we
 // should yield to let the browser update the display during search.
+// A higher value implies:
+// - A less responsive UI, because our JavaScript will yield less often.
+// A lower value implies:
+// - A higher likelihood of jittery bucket sorting becoming visible to the user.
+//   If we rush to update display after sorting a small number of candidates,
+//   there is a higher chance our next batch of candidates will contain a
+//   candidate that needs to go on top (which is the area of the results table
+//   that is visible to the user), which introduces jitter. But if we sort a
+//   higher number of candidates in the first round, then upcoming batches are
+//   less likely to contain a candidate that needs to go in the first bucket.
 const RESULTS_TO_UPDATE_DISPLAY = 10;
 
 const TAG_REGEX = /<\/?[^>]+>/g;
@@ -911,7 +921,6 @@ export class Xooxle {
       // Call the async function after the timeout.
       // Use void to ignore the returned promise.
       void this.searchAux();
-      this.form.populateParams();
     }, timeout);
   }
 
@@ -919,22 +928,28 @@ export class Xooxle {
    *
    */
   private async searchAux() {
-    if (this.currentAbortController) {
-      this.currentAbortController.abort();
-    }
-
+    // If there is an ongoing search, abort it.
+    this.currentAbortController?.abort();
     const abortController: AbortController = new AbortController();
     this.currentAbortController = abortController;
 
+    // Populate query parameters from the form.
+    this.form.populateParams();
+
+    // Clear output fields in the form, since we're starting a new search.
     this.form.clear();
 
+    // Construct the query expression.
     const expression: string = this.form.queryExpression();
     if (!expression) {
       return;
     }
 
     try {
-      const regex = new RegExp(expression, 'iug'); // Case-insensitive and Unicode-aware.
+      const regex = new RegExp(
+        expression,
+        'iug' // Case-insensitive, Unicode-aware, and global.
+      );
       await this.searchAuxAux(regex, abortController);
     } catch (err) {
       if (err instanceof SyntaxError) {
@@ -987,6 +1002,8 @@ export class Xooxle {
       }
     );
 
+    // Search is a cheap operation that we can afford to do on all candidates in
+    // the beginning.
     const results: SearchResult[] = this.candidates
       .map((can) => can.search(regex))
       .filter((res) => res.match && this.admit(res))
@@ -1004,13 +1021,12 @@ export class Xooxle {
         this.bucketSorter.validBucket(result, row)
       ]!.insertAdjacentElement('beforebegin', row);
 
-      // Expand the results table to accommodate the recently added results.
-      this.form.expand();
-
       if (count % RESULTS_TO_UPDATE_DISPLAY == RESULTS_TO_UPDATE_DISPLAY - 1) {
         if (count <= RESULTS_TO_UPDATE_DISPLAY) {
           logger.timeEnd(name);
         }
+        // Expand the results table to accommodate the recently added results.
+        this.form.expand();
         await utils.yieldToBrowser();
       }
     }
@@ -1021,5 +1037,7 @@ export class Xooxle {
         counter.innerHTML = `${(++i).toString()} / ${results.length.toString()}`;
       }
     );
+
+    this.form.expand();
   }
 }
