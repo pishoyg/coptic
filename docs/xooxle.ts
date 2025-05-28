@@ -899,29 +899,23 @@ export class Xooxle {
    *
    */
   private search() {
-    // Abort the previous search. Create a new abort controller for this
-    // trigger.
-    this.currentAbortController?.abort();
-    const abortController: AbortController = new AbortController();
-    this.currentAbortController = abortController;
-
-    // Clear the output fields in the form, since we're starting a new search.
-    this.form.clear();
-
-    // Populate query parameters.
-    this.form.populateParams();
-
     // Use void to ignore the returned promise.
-    void this.searchAux(abortController);
+    void this.searchAux();
+    this.form.populateParams();
   }
 
   /**
-   * @param abortController
+   *
    */
-  private async searchAux(abortController: AbortController) {
-    if (abortController.signal.aborted) {
-      return;
+  private async searchAux() {
+    if (this.currentAbortController) {
+      this.currentAbortController.abort();
     }
+
+    const abortController: AbortController = new AbortController();
+    this.currentAbortController = abortController;
+
+    this.form.clear();
 
     const expression: string = this.form.queryExpression();
     if (!expression) {
