@@ -856,7 +856,9 @@ export class Xooxle {
       // Expand the results table to accommodate the recently added results.
       this.form.expand();
       if (count % RESULTS_TO_UPDATE_DISPLAY == RESULTS_TO_UPDATE_DISPLAY - 1) {
-        logger.timeEnd(name);
+        if (count <= RESULTS_TO_UPDATE_DISPLAY) {
+          logger.timeEnd(name);
+        }
         await utils.yieldToBrowser();
       }
     }

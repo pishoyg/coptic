@@ -998,7 +998,9 @@ export class Xooxle {
       this.form.expand();
 
       if (count % RESULTS_TO_UPDATE_DISPLAY == RESULTS_TO_UPDATE_DISPLAY - 1) {
-        logger.timeEnd(name);
+        if (count <= RESULTS_TO_UPDATE_DISPLAY) {
+          logger.timeEnd(name);
+        }
         await utils.yieldToBrowser();
       }
     }
