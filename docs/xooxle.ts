@@ -53,6 +53,11 @@ const LINE_BREAK = '<br>';
  */
 const RESULTS_TO_UPDATE_DISPLAY = 20;
 
+/**
+ * INPUT_DEBOUNCE_TIMEOUT is the timeout we use to debounce input events.
+ */
+const INPUT_DEBOUNCE_TIMEOUT = 100;
+
 const TAG_REGEX = /<\/?[^>]+>/g;
 
 /**
@@ -1021,7 +1026,9 @@ export class Xooxle {
     // type several letters consecutively.
     // We don't need to do the same for checkbox events, because those events
     // typically trigger as singletons.
-    this.form.addSearchBoxInputListener(this.search.bind(this, 100));
+    this.form.addSearchBoxInputListener(
+      this.search.bind(this, INPUT_DEBOUNCE_TIMEOUT)
+    );
     this.form.addCheckboxClickListener(this.search.bind(this, 0));
 
     // Handle the search query once upon loading, in case the form picked up a
