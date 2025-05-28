@@ -41,7 +41,7 @@ const LINE_BREAK = '<br>';
 //   that is visible to the user), which introduces jitter. But if we sort a
 //   higher number of candidates in the first round, then upcoming batches are
 //   less likely to contain a candidate that needs to go in the first bucket.
-const RESULTS_TO_UPDATE_DISPLAY = 10;
+const RESULTS_TO_UPDATE_DISPLAY = 20;
 
 const TAG_REGEX = /<\/?[^>]+>/g;
 
