@@ -1,5 +1,4 @@
 import * as collapse from './collapse.js';
-import * as logger from './logger.js';
 import * as utils from './utils.js';
 import * as orth from './orth.js';
 import * as coptic from './coptic.js';
@@ -254,9 +253,7 @@ export class SearchResult extends ResultAggregator {
   constructor(candidate, regex) {
     super();
     this.candidate = candidate;
-    this.results = this.candidate.fields.map(
-      (field) => new FieldSearchResult(field, regex)
-    );
+    this.results = this.candidate.fields.map((f) => f.search(regex));
   }
   /**
    *
@@ -306,11 +303,6 @@ export class SearchResult extends ResultAggregator {
    * row constructs the row in the results table that corresponds to this
    * result. This consists of the cell bearing the key and anchor, along with
    * the other cells containing the highlighted search fields.
-   *
-   * NOTE: Whatever elements are included in the output must be recreated /
-   * cloned each time we update the display, because we can't use the same node
-   * in DOM twice at the same time, and nodes get destroyed once removed from
-   * DOM. Due to this DOM limitation, we can NOT reuse any nodes.
    *
    * @param hrefFmt
    * @param total - Total number of results.
@@ -392,7 +384,6 @@ class Field {
  * FieldSearchResult represents the search result of one field.
  */
 class FieldSearchResult extends ResultAggregator {
-  field;
   results;
   /**
    *
@@ -401,15 +392,7 @@ class FieldSearchResult extends ResultAggregator {
    */
   constructor(field, regex) {
     super();
-    this.field = field;
     this.results = field.units.map((unit) => unit.search(regex));
-  }
-  /**
-   *
-   * @returns
-   */
-  get units() {
-    return this.field.units;
   }
   // highlight returns the field's HTML content, with matches highlighted.
   /**
@@ -425,7 +408,7 @@ class FieldSearchResult extends ResultAggregator {
     //   their number exceeds the limit, because we need to show all matches.
     const results = !this.match
       ? this.results.slice(0, UNITS_LIMIT)
-      : this.units.length > UNITS_LIMIT
+      : this.results.length > UNITS_LIMIT
         ? this.results.filter((r) => r.match)
         : this.results;
     const truncated = results.length < this.results.length;
@@ -443,14 +426,12 @@ class FieldSearchResult extends ResultAggregator {
  *
  */
 class Unit {
-  html;
   lines;
   /**
    *
    * @param html
    */
   constructor(html) {
-    this.html = html;
     this.lines = html.split(LINE_BREAK).map((l) => new Line(l));
   }
   /**
@@ -467,7 +448,6 @@ class Unit {
  *
  */
 class UnitSearchResult extends ResultAggregator {
-  unit;
   results;
   /**
    *
@@ -476,8 +456,7 @@ class UnitSearchResult extends ResultAggregator {
    */
   constructor(unit, regex) {
     super();
-    this.unit = unit;
-    this.results = this.unit.lines.map((l) => l.search(regex));
+    this.results = unit.lines.map((l) => l.search(regex));
   }
   /**
    *
@@ -638,10 +617,6 @@ class LineSearchResult {
    */
   highlight() {
     if (!this.match) {
-      // A DOM node can only exist in one place in the DOM at a time.
-      // Removing a node from the DOM detaches it, effectively "destroying" its
-      // placement. To preserve the original nodes for reuse, we clone them
-      // before appending.
       return this.html;
     }
     const builder = [];
@@ -816,11 +791,6 @@ export class Xooxle {
    *
    */
   async searchAux() {
-    // TODO: We append random characters in order to avoid having timers with
-    // identical names. This is not ideal. Let's supply an index name as part of
-    // the metadata, and use that for logging instead.
-    const name = `search-${Array.from({ length: 2 }, () => String.fromCharCode(97 + Math.floor(Math.random() * 26))).join('')}`;
-    logger.time(name);
     if (this.currentAbortController) {
       this.currentAbortController.abort();
     }
@@ -841,7 +811,6 @@ export class Xooxle {
         this.form.message('Internal error! Please send us an email!');
       }
     }
-    logger.timeEnd(name);
   }
   /**
    *
