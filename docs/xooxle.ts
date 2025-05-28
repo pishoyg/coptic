@@ -205,7 +205,8 @@ export class Form {
   }
 
   /**
-   *
+   * NOTE: This is an expensive operation. Don't perform it repeatedly in
+   * time-sensitive applications.
    */
   expand(): void {
     this.collapsible.updateHeight();
@@ -232,13 +233,12 @@ export class Form {
 }
 
 /**
+ * TODO: Calculating the aggregation results seems a bit expensive, especially
+ * for operations that need to be queried repeatedly (such as `match` and
+ * `boundaryType`). Consider memorizing them.
  */
 abstract class ResultAggregator {
-  protected abstract readonly results: {
-    match: boolean;
-    fragmentWord(): string | undefined;
-    boundaryType(): BoundaryType;
-  }[];
+  protected abstract readonly results: ResultAggregator[];
 
   /**
    * @returns
@@ -1015,6 +1015,11 @@ export class Xooxle {
       }
 
       // Create a new row for the table
+      // NOTE: Creating the row DOM (which involves parsing plain HTML) is a
+      // somewhat expensive operation, so we can't afford to do it for all
+      // candidates before updating display.
+      // Instead, we create a number of rows, and then yield to the browser to
+      // allow display update.
       const row = result.row(this.hrefFmt, results.length);
 
       bucketSentinels[
@@ -1023,10 +1028,12 @@ export class Xooxle {
 
       if (count % RESULTS_TO_UPDATE_DISPLAY == RESULTS_TO_UPDATE_DISPLAY - 1) {
         if (count <= RESULTS_TO_UPDATE_DISPLAY) {
+          // This is the first display update. Log time.
           logger.timeEnd(name);
         }
         // Expand the results table to accommodate the recently added results.
         this.form.expand();
+        // Allow the browser to update the display, receive user input, ...
         await utils.yieldToBrowser();
       }
     }

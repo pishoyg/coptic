@@ -22,6 +22,9 @@ export class Collapsible {
   }
   /**
    * If currently visible, update the height to the height currently needed.
+   * NOTE: Expanding the element involves calculating the current scroll height,
+   * which is a very expensive operation. Don't perform it repeatedly in
+   * performance-sensitive applications.
    */
   updateHeight() {
     if (!this.element.style.maxHeight) {
