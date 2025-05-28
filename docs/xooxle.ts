@@ -9,42 +9,57 @@ import * as greek from './greek.js';
 // generate an HREF to open the word page.
 const KEY = 'KEY';
 
-// UNIT_LIMIT determines the behavior of the fields that should be split into
-// units.
-// If the number of units in a field is at most UNIT_LIMIT, the field will
-// always be produced whole.
-// Otherwise:
-// - If there are units with matches, matching units will be produced
-//   (regardless of their number).
-// - If there are no units with matches, the first UNIT_LIMIT units will be
-//   produced.
-// - In either case, a message will be shown indicating that more content is
-//   available.
+/**
+ * UNIT_LIMIT determines the behavior of the fields that should be split into
+ * units.
+ * If the number of units in a field is at most UNIT_LIMIT, the field will
+ * always be produced whole.
+ * Otherwise:
+ * - If there are units with matches, matching units will be produced
+ *   (regardless of their number).
+ * - If there are no units with matches, the first UNIT_LIMIT units will be
+ *   produced.
+ * - If some units end up not showing, a message will be shown indicating that
+ *   more content is available.
+ */
 const UNITS_LIMIT = 5;
 
-/** Our currently index building algorithm results in HTML with a simplified
- * structure, with only <span> tags, styling tags, or <br> tags. Styling tags
- * don't affect the output text, and are simply ignored during text search.
- * Line breaks, however, require special handling.
+/**
+ * LINE_BREAK is used to separate the unit into lines that get searched
+ * separately. We do this in order to prevent a match from spanning several
+ * lines.
+ * Our HTML content should be minimal. As of the time of writing, it only
+ * contains styling tags (<i> and <b>), <span> tags, <br> tags, and unit
+ * separators.
+ *
+ * We also know that line-break tags in our index are always in the form <br>,
+ * and never <br/> (although the latter is more preferred).
  */
 const LINE_BREAK = '<br>';
 
-// RESULTS_TO_UPDATE_DISPLAY specifies how often (every how many results) we
-// should yield to let the browser update the display during search.
-// A higher value implies:
-// - A less responsive UI, because our JavaScript will yield less often.
-// A lower value implies:
-// - A higher likelihood of jittery bucket sorting becoming visible to the user.
-//   If we rush to update display after sorting a small number of candidates,
-//   there is a higher chance our next batch of candidates will contain a
-//   candidate that needs to go on top (which is the area of the results table
-//   that is visible to the user), which introduces jitter. But if we sort a
-//   higher number of candidates in the first round, then upcoming batches are
-//   less likely to contain a candidate that needs to go in the first bucket.
+/**
+ * RESULTS_TO_UPDATE_DISPLAY specifies how often (every how many results) we
+ * should yield to let the browser update the display during search.
+ * A higher value implies:
+ * - A less responsive UI, because our JavaScript will yield less often.
+ * A lower value implies:
+ * - A higher likelihood of jittery bucket sorting becoming visible to the user.
+ *   If we rush to update display after sorting a small number of candidates,
+ *   there is a higher chance our next batch of candidates will contain a
+ *   candidate that needs to go on top (which is the area of the results table
+ *   that is visible to the user), which introduces jitter. But if we sort a
+ *   higher number of candidates in the first round, then upcoming batches are
+ *   less likely to contain a candidate that needs to go in the first bucket.
+ */
 const RESULTS_TO_UPDATE_DISPLAY = 20;
 
 const TAG_REGEX = /<\/?[^>]+>/g;
 
+/**
+ * CLS is a name space for classes used in the file. It helps pinpoint them and
+ * group them in one place, in case this information is needed when writing CSS
+ * or other modules.
+ */
 export const enum CLS {
   // VIEW is the class of the view table cells.
   VIEW = 'view',
@@ -62,12 +77,15 @@ export const enum CLS {
   MATCH_SEPARATOR = 'match-separator',
 }
 
-// UNIT_DELIMITER is the string that separates a units field into units.
-// TODO: This is not a clean way to separate units! Your index should be built
-// with units already separated.
-const UNIT_DELIMITER = '<hr class="match-separator">';
+/**
+ * UNIT_DELIMITER is the string that separates a units field into units.
+ * TODO: This is not a clean way to separate units! Your index should be built
+ * with units already separated.
+ */
+const UNIT_DELIMITER = `<hr class="${CLS.MATCH_SEPARATOR}">`;
 
-/** LONG_UNITS_FIELD_MESSAGE is the message shown at the end of a units field,
+/**
+ * LONG_UNITS_FIELD_MESSAGE is the message shown at the end of a units field,
  * if the field gets truncated.
  */
 const LONG_UNITS_FIELD_MESSAGE = `<br><span class="${CLS.VIEW_FOR_MORE}">... (<em>view</em> for full context)</span>`;
@@ -76,7 +94,9 @@ const orthographer: orth.Orthographer = new orth.Orthographer(
   new Set<string>([...coptic.DIACRITICS, ...greek.DIACRITICS])
 );
 
-// _Form stores Form parameters.
+/**
+ * _Form stores Form parameters.
+ */
 export interface _Form {
   searchBoxID: string;
   fullWordCheckboxID: string;
@@ -87,23 +107,27 @@ export interface _Form {
 }
 
 /**
+ * _Param defines the form query parameters.
+ */
+enum _Param {
+  QUERY = 'query',
+  FULL = 'full',
+  REGEX = 'regex',
+}
+
+/**
  * Form represents a search form containing the HTML elements that the user
  * interacts with to initiate and control search.
  */
 export class Form {
   // Input fields:
-  readonly searchBox: HTMLInputElement;
-  readonly fullWordCheckbox: HTMLInputElement;
-  readonly regexCheckbox: HTMLInputElement;
+  private readonly searchBox: HTMLInputElement;
+  private readonly fullWordCheckbox: HTMLInputElement;
+  private readonly regexCheckbox: HTMLInputElement;
   // Output fields:
   private readonly messageBox: HTMLElement;
-  readonly tbody: HTMLTableSectionElement;
+  private readonly tbody: HTMLTableSectionElement;
   private readonly collapsible: collapse.Collapsible;
-
-  // Search parameter names.
-  private static readonly query = 'query';
-  private static readonly full = 'full';
-  private static readonly regex = 'regex';
 
   /**
    *
@@ -113,25 +137,102 @@ export class Form {
     this.searchBox = document.getElementById(
       form.searchBoxID
     ) as HTMLInputElement;
+
     this.fullWordCheckbox = document.getElementById(
       form.fullWordCheckboxID
     ) as HTMLInputElement;
+
     this.regexCheckbox = document.getElementById(
       form.regexCheckboxID
     ) as HTMLInputElement;
+
     this.messageBox = document.getElementById(form.messageBoxID)!;
+
     this.tbody = document
       .getElementById(form.resultsTableID)!
       .querySelector('tbody')!;
+
     this.collapsible = new collapse.Collapsible(
       document.getElementById(form.collapsibleID)!
     );
 
+    // Populate the form once from the query parameters.
     this.populateFromParams();
+
+    // Add event listeners to update query parameters from the form fields.
+    this.searchBox.addEventListener('input', () => {
+      this.populateParams(_Param.QUERY, this.searchBox.value);
+    });
+
+    this.fullWordCheckbox.addEventListener('click', () => {
+      this.populateParams(_Param.FULL, this.fullWordCheckbox.checked);
+    });
+
+    this.regexCheckbox.addEventListener('click', () => {
+      this.populateParams(_Param.REGEX, this.regexCheckbox.checked);
+    });
   }
 
   /**
-   * @returns
+   * Populate form fields from query parameters in the URL.
+   */
+  private populateFromParams() {
+    // Populate form values using query parameters.
+    const url = new URL(window.location.href);
+    this.searchBox.value = url.searchParams.get(_Param.QUERY) ?? '';
+    this.fullWordCheckbox.checked =
+      url.searchParams.get(_Param.FULL) === 'true';
+    this.regexCheckbox.checked = url.searchParams.get(_Param.REGEX) === 'true';
+  }
+
+  /**
+   * Update the given URL parameter.
+   *
+   * @param name
+   * @param value
+   */
+  private populateParams(name: _Param, value: string | boolean) {
+    const url = new URL(window.location.href);
+    if (!value) {
+      url.searchParams.delete(name);
+    } else {
+      url.searchParams.set(name, String(value));
+    }
+    window.history.replaceState('', '', url.toString());
+  }
+
+  /**
+   * @returns The <tbody> element holding the results.
+   */
+  get resultsTBody() {
+    return this.tbody;
+  }
+
+  /**
+   * Focus on the search box.
+   */
+  focus() {
+    this.searchBox.focus();
+  }
+
+  /**
+   * Add a search box input listener.
+   * @param listener
+   */
+  addSearchBoxInputListener(listener: () => void) {
+    this.searchBox.addEventListener('input', listener);
+  }
+
+  /**
+   * @param listener
+   */
+  addCheckboxClickListener(listener: () => void) {
+    this.fullWordCheckbox.addEventListener('click', listener);
+    this.regexCheckbox.addEventListener('click', listener);
+  }
+
+  /**
+   * @returns The query expression, constructed from the input fields.
    */
   queryExpression(): string {
     let query: string = orthographer.cleanDiacritics(
@@ -158,50 +259,12 @@ export class Form {
   }
 
   /**
+   * Append a row to the results table.
    *
-   */
-  private populateFromParams() {
-    // Populate form values using query parameters.
-    const url = new URL(window.location.href);
-    this.searchBox.value = url.searchParams.get(Form.query) ?? '';
-    this.fullWordCheckbox.checked = url.searchParams.get(Form.full) === 'true';
-    this.regexCheckbox.checked = url.searchParams.get(Form.regex) === 'true';
-  }
-
-  /**
-   *
-   */
-  populateParams() {
-    // Populate query parameters using form values.
-    const url = new URL(window.location.href);
-
-    if (this.searchBox.value) {
-      url.searchParams.set(Form.query, this.searchBox.value);
-    } else {
-      url.searchParams.delete(Form.query);
-    }
-
-    if (this.fullWordCheckbox.checked) {
-      url.searchParams.set(Form.full, String(this.fullWordCheckbox.checked));
-    } else {
-      url.searchParams.delete(Form.full);
-    }
-
-    if (this.regexCheckbox.checked) {
-      url.searchParams.set(Form.regex, String(this.regexCheckbox.checked));
-    } else {
-      url.searchParams.delete(Form.regex);
-    }
-
-    window.history.replaceState('', '', url.toString());
-  }
-
-  /**
-   *
-   * @param row
+   * @param row - The row to append.
    */
   result(row: HTMLTableRowElement): void {
-    this.tbody.appendChild(row);
+    this.tbody.append(row);
   }
 
   /**
@@ -213,6 +276,7 @@ export class Form {
   }
 
   /**
+   * Show the given message in the form's message field.
    *
    * @param message
    */
@@ -224,9 +288,9 @@ export class Form {
   }
 
   /**
-   *
+   * Clear output fields.
    */
-  clear(): void {
+  clearOutputFields(): void {
     this.tbody.replaceChildren();
     this.messageBox.replaceChildren();
   }
@@ -255,9 +319,11 @@ abstract class ResultAggregator {
    */
   fragmentWord(): string | undefined {
     // We simply return the fragment of the first result that possesses one.
-    return this.results
-      .find((r) => r.match && r.fragmentWord())
-      ?.fragmentWord();
+    for (const res of this.results) {
+      const word = res.fragmentWord();
+      if (word) return word;
+    }
+    return undefined;
   }
 
   /**
@@ -269,9 +335,9 @@ abstract class ResultAggregator {
   }
 }
 
-// Candidate represents one search candidate from the index. In the results
-// display, each candidate occupies its own row.
 /**
+ * Candidate represents one search candidate from the index. In the results
+ * display, each candidate occupies its own row.
  *
  */
 class Candidate {
@@ -281,8 +347,8 @@ class Candidate {
 
   /**
    *
-   * @param record
-   * @param fields
+   * @param record - The candidate data.
+   * @param fields - The fields metadata.
    */
   public constructor(record: Record<string, string>, fields: string[]) {
     this.key = record[KEY]!;
@@ -295,23 +361,21 @@ class Candidate {
 
   /**
    *
-   * @param regex
-   * @returns
+   * @param regex - Regular expression to search.
+   * @returns The search result.
    */
   public search(regex: RegExp): SearchResult {
     return new SearchResult(this, regex);
   }
 }
 
-// SearchResult represents the search result of one candidate from the index.
 /**
- *
+ * SearchResult represents the search result of one candidate from the index.
  * @returns
  */
 export class SearchResult extends ResultAggregator {
   protected readonly results: FieldSearchResult[];
   /**
-   *
    * @param candidate
    * @param regex
    */
@@ -331,10 +395,9 @@ export class SearchResult extends ResultAggregator {
     return this.candidate.key;
   }
 
-  // viewCell constructs the first cell in the row for this result, bearing the
-  // anchor to the result (if available).
   /**
-   *
+   * viewCell constructs the first cell in the row for this result, bearing the
+   * anchor to the result (if available).
    * @param hrefFmt
    * @param total - Total number of results.
    * @returns
@@ -372,8 +435,7 @@ export class SearchResult extends ResultAggregator {
     noDev.classList.add(CLS.NO_DEV);
     noDev.textContent = 'view';
 
-    a.appendChild(noDev);
-    a.appendChild(dev);
+    a.append(noDev, dev);
 
     viewCell.prepend(a);
 
@@ -385,20 +447,31 @@ export class SearchResult extends ResultAggregator {
    * result. This consists of the cell bearing the key and anchor, along with
    * the other cells containing the highlighted search fields.
    *
-   * @param hrefFmt
-   * @param total - Total number of results.
+   * @param hrefFmt - A string that can be used to construct the HREF pointing
+   * to this result by replacing the substring "{KEY}" with the candidate key.
+   *
+   * For example:
+   *   hrefFmt = "https://remnqymi.com/{KEY}.html"
+   *   key = "1"
+   * will result in the constructed HREF being:
+   *   https://remnqymi.com/1.html
+   *
+   * @param total - Total number of results - used to display the index of the
+   * current result.
+   *
    * @returns
    */
   row(hrefFmt: string | undefined, total: number): HTMLTableRowElement {
     const row = document.createElement('tr');
 
-    row.appendChild(this.viewCell(hrefFmt, total));
-
-    this.results.forEach((sr: FieldSearchResult) => {
-      const cell: HTMLTableCellElement = document.createElement('td');
-      cell.innerHTML = sr.highlight();
-      row.appendChild(cell);
-    });
+    row.append(
+      this.viewCell(hrefFmt, total),
+      ...this.results.map((sr: FieldSearchResult) => {
+        const cell: HTMLTableCellElement = document.createElement('td');
+        cell.innerHTML = sr.highlight();
+        return cell;
+      })
+    );
 
     return row;
   }
@@ -428,8 +501,8 @@ export class SearchResult extends ResultAggregator {
  * @returns
  */
 function searchResultCompare(a: SearchResult, b: SearchResult): number {
-  const aKey = a.compareKey();
-  const bKey = b.compareKey();
+  const aKey: number[] = a.compareKey();
+  const bKey: number[] = b.compareKey();
 
   // The two arrays are guaranteed to be of equal length, but we use the minimum
   // for protectionism.
@@ -452,8 +525,8 @@ class Field {
   readonly units: Unit[];
   /**
    *
-   * @param name
-   * @param html
+   * @param name - The name of the field.
+   * @param html - The HTML content of the field.
    */
   constructor(
     readonly name: string,
@@ -464,8 +537,8 @@ class Field {
 
   /**
    *
-   * @param regex
-   * @returns
+   * @param regex - Regex to search.
+   * @returns Search result.
    */
   search(regex: RegExp): FieldSearchResult {
     return new FieldSearchResult(this, regex);
@@ -487,10 +560,9 @@ class FieldSearchResult extends ResultAggregator {
     this.results = field.units.map((unit) => unit.search(regex));
   }
 
-  // highlight returns the field's HTML content, with matches highlighted.
   /**
    *
-   * @returns
+   * @returns The field's HTML content, with matches highlighted.
    */
   highlight(): string {
     // If there are no matches, we limit the number of units in the output.
@@ -501,9 +573,9 @@ class FieldSearchResult extends ResultAggregator {
     //   their number exceeds the limit, because we need to show all matches.
     const results: UnitSearchResult[] = !this.match
       ? this.results.slice(0, UNITS_LIMIT)
-      : this.results.length > UNITS_LIMIT
-        ? this.results.filter((r) => r.match)
-        : this.results;
+      : this.results.length <= UNITS_LIMIT
+        ? this.results
+        : this.results.filter((r) => r.match);
 
     const truncated: boolean = results.length < this.results.length;
 
@@ -515,18 +587,18 @@ class FieldSearchResult extends ResultAggregator {
   }
 }
 
-// Unit is a unit in a field. Fields usually consist of a single unit, but
-// humongous fields can be broken up into units. Units are searched separately;
-// and, if there are too many, won't all be included in the display during a
-// search.
 /**
- *
+ * Unit is a unit in a field. Fields usually consist of a single unit, but
+ * humongous fields can be broken up into units. Units are searched separately;
+ * and, if there are too many, won't all be included in the display during a
+ * search.
  */
 class Unit {
   readonly lines: Line[];
+
   /**
    *
-   * @param html
+   * @param html - The HTML content of the unit.
    */
   constructor(html: string) {
     this.lines = html.split(LINE_BREAK).map((l: string) => new Line(l));
@@ -534,24 +606,22 @@ class Unit {
 
   /**
    *
-   * @param regex
-   * @returns
+   * @param regex - The regular expression to search.
+   * @returns Search result.
    */
   search(regex: RegExp): UnitSearchResult {
     return new UnitSearchResult(this, regex);
   }
 }
 
-// UnitSearchResult represents the search result of one unit.
 /**
- *
+ * UnitSearchResult represents the search result of one unit.
  */
 class UnitSearchResult extends ResultAggregator {
   protected readonly results: LineSearchResult[];
   /**
-   *
-   * @param unit
-   * @param regex
+   * @param unit - The unit to search.
+   * @param regex - The regex to search.
    */
   constructor(unit: Unit, regex: RegExp) {
     super();
@@ -559,14 +629,18 @@ class UnitSearchResult extends ResultAggregator {
   }
 
   /**
-   *
-   * @returns
+   * @returns The HTML content of the unit, with matches highlighted.
    */
   highlight(): string {
+    // The unit was split into lines using LINE_BREAK as a delimiter, so we
+    // rebuild it using LINE_BREAK.
     return this.results.map((r) => r.highlight()).join(LINE_BREAK);
   }
 }
 
+/**
+ * BoundaryType represents the boundary type of a match.
+ */
 enum BoundaryType {
   FULL_WORD = 0,
   PREFIX = 1,
@@ -575,8 +649,17 @@ enum BoundaryType {
 }
 
 interface Match {
+  /**
+   * The start index of the match.
+   */
   readonly start: number;
+  /**
+   * The end index of the match.
+   */
   readonly end: number;
+  /**
+   * The match type.
+   */
   readonly boundaryType: BoundaryType;
 }
 
@@ -586,67 +669,64 @@ interface Match {
  */
 class Line {
   readonly text: string;
+
   /**
    *
-   * @param html
+   * @param html - The HTML content of the line.
    */
   constructor(readonly html: string) {
-    this.text = orthographer.cleanDiacritics(html).replaceAll(TAG_REGEX, '');
+    // We obtain the text by deleting all tags.
+    // We also get rid of diacritics because we want to ignore them during
+    // search.
+    // We search the text for matches. When we get back to searching the HTML
+    // for the matches, we ignore the diacritics in that step as well.
+    this.text = orthographer.cleanDiacritics(html.replaceAll(TAG_REGEX, ''));
   }
 
   /**
    *
-   * @param regex
-   * @returns
+   * @param regex - The regex to search.
+   * @returns The search result.
    */
   search(regex: RegExp): LineSearchResult {
     return new LineSearchResult(this, regex);
   }
 
   /**
+   * Search the text of this line for this regex.
+   * NOTE: As of the time of writing, this is (unsurprisingly) one of Xooxle's
+   * most expensive operations. Much of the search time is spent performing
+   * regex search.
    *
-   * @param regex
-   * @returns
+   * @param regex - The regex to search.
+   * @returns A list of matches.
    */
   matches(regex: RegExp): Match[] {
-    return (
-      [...this.text.matchAll(regex)]
-        // We need to filter out the empty string, because it could cause
+    return Array.from(this.text.matchAll(regex))
+      .map((match: RegExpMatchArray): Match | undefined => {
+        // NOTE: We need to filter out the empty string, because it could cause
         // trouble during highlighting.
-        .filter((match) => match[0])
-        .map(this.getMatch.bind(this))
-    );
-  }
+        if (match.index === undefined || !match[0]) {
+          return undefined;
+        }
 
-  /**
-   *
-   * @param match
-   * @returns
-   */
-  private getMatch(match: RegExpMatchArray): Match {
-    const start: number = match.index!;
-    const end: number = match.index! + match[0].length;
-    return { start, end, boundaryType: this.boundaryType(start, end) };
-  }
+        const start: number = match.index;
+        const end: number = match.index + match[0].length;
 
-  /**
-   * @param start
-   * @param end
-   * @returns
-   */
-  private boundaryType(start: number, end: number): BoundaryType {
-    const before = !orth.isWordChar(this.text[start - 1]);
-    const after = !orth.isWordChar(this.text[end]);
-    if (before && after) {
-      return BoundaryType.FULL_WORD;
-    }
-    if (before) {
-      return BoundaryType.PREFIX;
-    }
-    if (after) {
-      return BoundaryType.SUFFIX;
-    }
-    return BoundaryType.WITHIN;
+        const before = !orth.isWordChar(this.text[start - 1]);
+        const after = !orth.isWordChar(this.text[end]);
+        const boundaryType: BoundaryType =
+          before && after
+            ? BoundaryType.FULL_WORD
+            : before
+              ? BoundaryType.PREFIX
+              : after
+                ? BoundaryType.SUFFIX
+                : BoundaryType.WITHIN;
+
+        return { start, end, boundaryType };
+      })
+      .filter((m) => m !== undefined);
   }
 }
 
@@ -654,13 +734,29 @@ class Line {
  *
  */
 class LineSearchResult {
+  /**
+   * A match opening tag.
+   *
+   * Each of the (potentially several) pieces of text making up a match will be
+   * surrounded by an opening and a closing tag. Those match tags are guaranteed
+   * not to contain any HTML tags within them. Just text!
+   */
   private static readonly opening = `<span class="${CLS.MATCH}">`;
+
+  /**
+   * A match closing tag.
+   *
+   * Each of the (potentially several) pieces of text making up a match will be
+   * surrounded by an opening and a closing tag. Those match tags are guaranteed
+   * not to contain any HTML tags within them. Just text!
+   */
   private static readonly closing = '</span>';
   private readonly matches: Match[];
+
   /**
    *
-   * @param line
-   * @param regex
+   * @param line - The line to search.
+   * @param regex - The regex to search.
    */
   constructor(
     private readonly line: Line,
@@ -671,7 +767,7 @@ class LineSearchResult {
 
   /**
    *
-   * @returns
+   * @returns The text content of the line.
    */
   private get text(): string {
     return this.line.text;
@@ -679,7 +775,7 @@ class LineSearchResult {
 
   /**
    *
-   * @returns
+   * @returns The HTML content of the line.
    */
   private get html(): string {
     return this.line.html;
@@ -687,7 +783,7 @@ class LineSearchResult {
 
   /**
    *
-   * @returns
+   * @returns Whether this search result has a match.
    */
   get match(): boolean {
     return !!this.matches.length;
@@ -695,9 +791,9 @@ class LineSearchResult {
 
   /**
    *
-   * @returns
+   * @returns A word that can be used as a URL fragment.
    */
-  fragmentWord(): string {
+  fragmentWord(): string | undefined {
     /* Expand the match left and right such that it contains full words, for
      * text fragment purposes.
      * See
@@ -708,10 +804,8 @@ class LineSearchResult {
      * */
     const match = this.matches.values().next().value;
     if (!match) {
-      console.error(
-        'Attempting to get a fragment word from a non-matching unit!'
-      );
-      return '';
+      // This line doesn't have a match.
+      return undefined;
     }
 
     let start = match.start;
@@ -733,12 +827,13 @@ class LineSearchResult {
 
   /**
    *
-   * @returns
+   * @returns The HTML content of the line, with matches highlighted.
    */
   highlight(): string {
     if (!this.match) {
       return this.html;
     }
+
     const builder: string[] = [];
     // i represents the index in the HTML.
     // j tracks the index in the text.
@@ -794,21 +889,25 @@ class LineSearchResult {
   }
 
   /**
-   *
+   * @returns The boundary type of this match.
    */
   boundaryType(): BoundaryType {
     return Math.min(...this.matches.map((m) => m.boundaryType));
   }
 }
 
+/**
+ * _Index represents the JSON structure of a Xooxle index.
+ */
 export interface _Index {
   readonly data: Record<string, string>[];
   readonly metadata: {
-    // fields is the list of fields in the output. For each
-    // search result from the data, a row will be added to the table.
-    // The first cell in the row will contain the index of the result, and
-    // potentially the HREF to the result page. The following cells will contain
-    // other fields from the result, in this order.
+    /** fields is the list of fields in the output. For each
+     * search result from the data, a row will be added to the table.
+     * The first cell in the row will contain the index of the result, and
+     * potentially the HREF to the result page. The following cells will contain
+     * other fields from the result, in this order.
+     */
     readonly fields: string[];
   };
 }
@@ -845,8 +944,9 @@ export class BucketSorter {
    * validBucket wraps bucket, and ensures results are valid.
    * It is implemented as an arrow function rather than a method in order to
    * prevent child classes from overriding it.
-   * @param res
-   * @param row
+   *
+   * @param res - The search result.
+   * @param row - The HTML row representing this result.
    * @returns
    */
   validBucket = (res: SearchResult, row: HTMLTableRowElement): number => {
@@ -867,19 +967,31 @@ export class BucketSorter {
  *
  */
 export class Xooxle {
+  /**
+   * The list of searchable candidates in this Xooxle index.
+   */
   private readonly candidates: Candidate[];
+
+  /**
+   * A setTimeout object, used to debounce search triggers.
+   */
   private debounceTimeout: ReturnType<typeof setTimeout> | null = null;
+
+  /**
+   * An abort controller, used to abort ongoing searches whenever a new search
+   * starts.
+   */
   private currentAbortController: AbortController | null = null;
 
   /**
    * @param index - JSON index object.
-   * @param form - Form containing search elements.
-   * @param hrefFmt - a format string for generating a URL to this result's
-   * page. The HREF will be generated based on the KEY field of the candidate
-   * by substituting the string `{KEY}`.
+   * @param form - Form containing HTML input and output elements.
+   * @param hrefFmt - An optional format string for generating a URL to this
+   * result's page. The HREF will be generated based on the KEY field of the
+   * candidate by substituting the string `{KEY}`.
    * If absent, no HREF will be generated.
-   * @param bucketSorter - A bucket sorter.
-   * @param admit - A search result filter.
+   * @param bucketSorter - An optional bucket sorter.
+   * @param admit - An optional search result filter.
    */
   constructor(
     index: _Index,
@@ -893,20 +1005,19 @@ export class Xooxle {
     );
 
     // Make the page responsive to user input.
-    this.form.searchBox.addEventListener('input', this.search.bind(this, 100));
-    this.form.fullWordCheckbox.addEventListener(
-      'click',
-      this.search.bind(this, 0)
-    );
-    this.form.regexCheckbox.addEventListener(
-      'click',
-      this.search.bind(this, 0)
-    );
+    // We need debounce timeout for search box input, because users typically
+    // type several letters consecutively.
+    // We don't need to do the same for checkbox events, because those events
+    // typically trigger as singletons.
+    this.form.addSearchBoxInputListener(this.search.bind(this, 100));
+    this.form.addCheckboxClickListener(this.search.bind(this, 0));
 
-    // Handle the search query once upon loading.
+    // Handle the search query once upon loading, in case the form picked up a
+    // query from the URL parameters.
     this.search(0);
-    // Finally, focus on the form, so the user can search right away.
-    this.form.searchBox.focus();
+
+    // Focus on the form, so the user can search right away.
+    this.form.focus();
   }
 
   /**
@@ -933,11 +1044,8 @@ export class Xooxle {
     const abortController: AbortController = new AbortController();
     this.currentAbortController = abortController;
 
-    // Populate query parameters from the form.
-    this.form.populateParams();
-
     // Clear output fields in the form, since we're starting a new search.
-    this.form.clear();
+    this.form.clearOutputFields();
 
     // Construct the query expression.
     const expression: string = this.form.queryExpression();
@@ -1039,7 +1147,7 @@ export class Xooxle {
     }
 
     let i = 0;
-    [...this.form.tbody.getElementsByClassName(CLS.COUNTER)].forEach(
+    [...this.form.resultsTBody.getElementsByClassName(CLS.COUNTER)].forEach(
       (counter) => {
         counter.innerHTML = `${(++i).toString()} / ${results.length.toString()}`;
       }
