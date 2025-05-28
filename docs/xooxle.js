@@ -1,4 +1,5 @@
 import * as collapse from './collapse.js';
+import * as logger from './logger.js';
 import * as utils from './utils.js';
 import * as orth from './orth.js';
 import * as coptic from './coptic.js';
@@ -731,7 +732,6 @@ export class Xooxle {
   bucketSorter;
   admit;
   candidates;
-  debounceTimeout = null;
   currentAbortController = null;
   /**
    * @param index - JSON index object.
@@ -758,34 +758,24 @@ export class Xooxle {
       (record) => new Candidate(record, index.metadata.fields)
     );
     // Make the page responsive to user input.
-    this.form.searchBox.addEventListener('input', this.search.bind(this, 100));
+    this.form.searchBox.addEventListener('input', this.search.bind(this));
     this.form.fullWordCheckbox.addEventListener(
       'click',
-      this.search.bind(this, 0)
+      this.search.bind(this)
     );
-    this.form.regexCheckbox.addEventListener(
-      'click',
-      this.search.bind(this, 0)
-    );
+    this.form.regexCheckbox.addEventListener('click', this.search.bind(this));
     // Handle the search query once upon loading.
-    this.search(0);
+    this.search();
     // Finally, focus on the form, so the user can search right away.
     this.form.searchBox.focus();
   }
   /**
    *
-   * @param timeout
    */
-  search(timeout) {
-    if (this.debounceTimeout) {
-      clearTimeout(this.debounceTimeout);
-    }
-    this.debounceTimeout = setTimeout(() => {
-      // Call the async function after the timeout.
-      // Use void to ignore the returned promise.
-      void this.searchAux();
-      this.form.populateParams();
-    }, timeout);
+  search() {
+    // Use void to ignore the returned promise.
+    void this.searchAux();
+    this.form.populateParams();
   }
   /**
    *
@@ -836,6 +826,11 @@ export class Xooxle {
     // because we want results to expand downwards rather than upwards, to
     // avoid jitter at the top of the table, which is the area that the user
     // will be looking at.
+    // TODO: We append random characters in order to avoid having timers with
+    // identical names. This is not ideal. Let's supply an index name as part of
+    // the metadata, and use that for logging instead.
+    const name = `time-to-first-yield-${Array.from({ length: 2 }, () => String.fromCharCode(97 + Math.floor(Math.random() * 26))).join('')}`;
+    logger.time(name);
     const bucketSentinels = Array.from(
       { length: this.bucketSorter.numBuckets },
       () => {
@@ -861,6 +856,7 @@ export class Xooxle {
       // Expand the results table to accommodate the recently added results.
       this.form.expand();
       if (count % RESULTS_TO_UPDATE_DISPLAY == RESULTS_TO_UPDATE_DISPLAY - 1) {
+        logger.timeEnd(name);
         await utils.yieldToBrowser();
       }
     }
