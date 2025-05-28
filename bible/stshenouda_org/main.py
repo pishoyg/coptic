@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+"""Process the Bible data."""
+
 # NOTE: As a general convention, methods ending with _aux return generators,
 # rather than string literals.
 import html
@@ -7,6 +9,7 @@ import os
 import pathlib
 import re
 import typing
+from collections import abc
 
 import json5
 from ebooklib import epub  # type: ignore[import-untyped]
@@ -41,8 +44,8 @@ VERSE_PREFIX: re.Pattern = re.compile(r"^\(([^)]+)\)")
 
 OUTPUT_DIR: str = os.path.join(utils.SITE_DIR, "bible/")
 
-# NOTE: The Bible directory structure is flat, so "index.html" is reachable from an
-# `href` to `./`, regardless of which file you're looking at.
+# NOTE: The Bible directory structure is flat, so "index.html" is reachable
+# from an `href` to `./`, regardless of which file you're looking at.
 SEARCH = "./"
 # NOTE: We expect this JavaScript file to be in the same directory as the HTML.
 SCRIPT = "main.js"
@@ -66,7 +69,7 @@ NORMALIZATION: dict[str, dict[str, str]] = {
     },
 }
 
-assert all(d in LANGUAGES for d in NORMALIZATION.keys())
+assert all(d in LANGUAGES for d in NORMALIZATION)
 
 
 def normalize(lang: str, text: str) -> str:
@@ -87,6 +90,8 @@ def json_loads(t: str) -> dict | list:
 
 
 class RangeColor:
+    """A colored range in a verse."""
+
     def __init__(self, start: int, end: int, color: str) -> None:
         self.start: int = start
         self.end: int = end
@@ -111,6 +116,8 @@ class RangeColor:
 
 
 class Verse:
+    """A Bible verse."""
+
     def __init__(self, data: dict[str, str]) -> None:
         self._num: str = self.__num(data)
         self._raw: dict[str, str] = data
@@ -128,7 +135,7 @@ class Verse:
     def has_lang(self, lang: str) -> bool:
         return bool(self.unnumbered[lang])
 
-    def _recolor_aux(self, v: str, verse: dict) -> typing.Generator[str]:
+    def _recolor_aux(self, v: str, verse: dict) -> abc.Generator[str]:
         v = html.escape(v)
         if "coloredWords" not in verse:
             yield v
@@ -191,6 +198,8 @@ class Verse:
 
 
 class Item:
+    """A Bible item (such as a chapter or a book)."""
+
     def id(self) -> str:
         raise NotImplementedError()
 
@@ -199,9 +208,9 @@ class Item:
 
     # NOTE: The `href` method makes a lot of assumption about how the output is
     # structured (for example, which objects are written as files, and which are
-    # sections within the same file). If the output structure were to change, it needs to be
-    # revisited.
-    def href(self, epub: bool) -> str:
+    # sections within the same file). If the output structure were to change, it
+    # needs to be revisited.
+    def href(self, is_epub: bool) -> str:
         raise NotImplementedError()
 
     def short_title(self) -> str:
@@ -210,25 +219,27 @@ class Item:
     def header(self) -> str:
         raise NotImplementedError()
 
-    def path(self, epub: bool) -> str:
-        ext = "xhtml" if epub else "html"
+    def path(self, is_epub: bool) -> str:
+        ext = "xhtml" if is_epub else "html"
         return f"{self.id()}.{ext}"
 
-    def anchor(self, epub: bool) -> str:
-        return f'<a href="{self.href(epub)}">{self.short_title()}</a>'
+    def anchor(self, is_epub: bool) -> str:
+        return f'<a href="{self.href(is_epub)}">{self.short_title()}</a>'
 
     def to_id(self, name: str) -> str:
         return name.lower().replace(" ", "_").replace(".", "_")
 
 
 class Chapter(Item):
+    """A Bible chapter."""
+
     def __init__(self, data: dict, book) -> None:
         self.num = self._num(data)
         self.verses = [Verse(v) for v in data["data"]]
         self._prev: typing.Any = None
         self._next: typing.Any = None
-        self._is_first: typing.Any = None
-        self._is_last: typing.Any = None
+        self._is_first: bool = False
+        self._is_last: bool = False
         self.book = book
 
     def _num(self, data: dict) -> str:
@@ -249,6 +260,18 @@ class Chapter(Item):
         assert self._next
         return self._next
 
+    def set_prev(self, prv):
+        self._prev = prv
+
+    def set_next(self, nxt):
+        self._next = nxt
+
+    def set_first(self):
+        self._is_first = True
+
+    def set_last(self):
+        self._is_last = True
+
     @typing.override
     def id(self) -> str:
         return self.to_id(f"{self.book.name}_{self.num}")
@@ -262,19 +285,18 @@ class Chapter(Item):
         return self.num
 
     @typing.override
-    def href(self, epub: bool) -> str:
-        id: str = self.id()
-        if epub:
+    def href(self, is_epub: bool) -> str:
+        if is_epub:
             # An EPUB chapter is a section in the same file. We simply use an
             # anchor to the id.
-            return f"#{id}"
+            return f"#{self.id()}"
         # An HTML chapter is a standalone file.
-        return self.path(epub)
+        return self.path(is_epub)
 
     @typing.override
-    def path(self, epub: bool) -> str:
-        if not epub:
-            return super().path(epub)
+    def path(self, is_epub: bool) -> str:
+        if not is_epub:
+            return super().path(is_epub)
         raise ValueError("We don't write EPUB chapters to files!")
 
     @typing.override
@@ -283,6 +305,8 @@ class Chapter(Item):
 
 
 class Book(Item):
+    """A Bible book."""
+
     def __init__(
         self,
         name: str,
@@ -305,7 +329,10 @@ class Book(Item):
 
     def load(self, book_name: str) -> list:
         try:
-            t: str = open(os.path.join(INPUT_DIR, book_name + ".json")).read()
+            t: str = open(
+                os.path.join(INPUT_DIR, book_name + ".json"),
+                encoding="utf-8",
+            ).read()
             utils.info("Loaded book:", book_name)
             data = json_loads(t)
             assert isinstance(data, list)
@@ -328,17 +355,17 @@ class Book(Item):
         return self.title()
 
     @typing.override
-    def href(self, epub: bool) -> str:
-        if epub:
+    def href(self, is_epub: bool) -> str:
+        if is_epub:
             # An EPUB book is a separate ".xhtml" spine item.
-            return self.path(epub)
+            return self.path(is_epub)
         # We don't have HTML books!
         raise ValueError("We don't have hyperlinks to books in HTML!")
 
     @typing.override
-    def path(self, epub: bool) -> str:
-        if epub:
-            return super().path(epub)
+    def path(self, is_epub: bool) -> str:
+        if is_epub:
+            return super().path(is_epub)
         # We don't have HTML books!
         raise ValueError("We don't write HTML books to files!")
 
@@ -348,6 +375,8 @@ class Book(Item):
 
 
 class Bible:
+    """The Bible."""
+
     def __init__(self) -> None:
         with utils.thread_pool_executor() as executor:
             self.books: list[Book] = list(
@@ -356,20 +385,20 @@ class Bible:
         self.__link_chapters()
 
     def __link_chapters(self) -> None:
-        iterator: typing.Iterator[Chapter] = iter(self.chain_chapters())
+        iterator: abc.Iterator[Chapter] = iter(self.chain_chapters())
         cur: Chapter = next(iterator)
-        cur._is_first = True
+        cur.set_first()
         while True:
             nxt: Chapter | None = next(iterator, None)
             if nxt is None:
-                cur._is_last = True
+                cur.set_last()
                 break
-            cur._next = nxt
-            nxt._prev = cur
+            cur.set_next(nxt)
+            nxt.set_prev(cur)
             cur = nxt
 
-    def __iter_books(self) -> typing.Generator[dict]:
-        with open(JSON) as j:
+    def __iter_books(self) -> abc.Generator[dict]:
+        with open(JSON, encoding="utf-8") as j:
             bible = json.loads(j.read())
             testament_idx = 0
             for testament_name, testament in bible.items():
@@ -392,7 +421,7 @@ class Bible:
     def __build_book(self, kwargs: dict) -> Book:
         return Book(**kwargs)
 
-    def chain_chapters(self) -> typing.Generator[Chapter]:
+    def chain_chapters(self) -> abc.Generator[Chapter]:
         for book in self.books:
             yield from book.chapters
 
@@ -402,7 +431,9 @@ class Bible:
 # - The write and generate methods should move to their respective types, such
 #   as Bible and Chapter. Those methods should accept a format instance as
 #   input.
-class html_builder:
+class HTMLBuilder:
+    """An Bible HTML formatter and builder."""
+
     def __init__(
         self,
         chapter_beginner: str = "",
@@ -423,7 +454,7 @@ class html_builder:
         self,
         chapter: Chapter,
         langs: list[str],
-    ) -> typing.Generator[str]:
+    ) -> abc.Generator[str]:
         langs = [lang for lang in langs if chapter.has_lang(lang)]
         yield chapter.header()
         if not langs:
@@ -441,9 +472,9 @@ class html_builder:
         self,
         book: Book,
         langs: list[str],
-        epub: bool,
-    ) -> typing.Generator[str]:
-        assert epub  # We only write a whole book in one file for EPUB.
+        is_epub: bool,
+    ) -> abc.Generator[str]:
+        assert is_epub  # We only write a whole book in one file for EPUB.
         assert len(langs) > 0  # We need at least one language.
 
         # Yield the book header.
@@ -453,7 +484,7 @@ class html_builder:
         for i, chapter in enumerate(book.chapters):
             if i:
                 yield " "
-            yield chapter.anchor(epub)
+            yield chapter.anchor(is_epub)
 
         # Yield the chapter contents.
         for chapter in book.chapters:
@@ -462,22 +493,22 @@ class html_builder:
     # __html_aux builds the HTML file content as a generator.
     def __html_aux(
         self,
-        body: typing.Iterable[str],
+        body: abc.Iterable[str],
         title: str,
         page_class: str = "",
-        next: str = "",
-        prev: str = "",
-        epub: bool = False,
-    ) -> typing.Generator[str]:
+        nxt: str = "",
+        prv: str = "",
+        is_epub: bool = False,
+    ) -> abc.Generator[str]:
         return utils.html_aux(
             utils.html_head(
                 title=title,
                 page_class=page_class,
-                search="" if epub else SEARCH,
-                next_href=next,
-                prev_href=prev,
-                scripts=[] if epub else [SCRIPT],
-                epub=epub,
+                search="" if is_epub else SEARCH,
+                next_href=nxt,
+                prev_href=prv,
+                scripts=[] if is_epub else [SCRIPT],
+                epub=is_epub,
             ),
             *body,
         )
@@ -487,30 +518,30 @@ class html_builder:
     def __toc_body_aux(
         self,
         bible: Bible,
-        epub: bool,
-    ) -> typing.Generator[str]:
+        is_epub: bool,
+    ) -> abc.Generator[str]:
         # Yield the title.
-        yield f"<h1>"
+        yield "<h1>"
         yield BOOK_TITLE
-        yield f"</h1>"
-        if epub:
+        yield "</h1>"
+        if is_epub:
             # For EPUB, we yield an anchor to each book, and we call it a day.
             for book in bible.books:
                 yield "<p>"
-                yield book.anchor(epub)
+                yield book.anchor(is_epub)
                 yield "</p>"
             return
-        assert not epub
+        assert not is_epub
         # For HTML, we list the books, and anchors to the chapters.
         for book in bible.books:
-            yield f'<h4 class="collapse index-book-name">'
+            yield '<h4 class="collapse index-book-name">'
             yield book.name
-            yield f"</h4>"
+            yield "</h4>"
             yield '<div class="collapsible index-book-chapter-list">'
             for i, chapter in enumerate(book.chapters):
                 if i:
                     yield " "
-                yield chapter.anchor(epub)
+                yield chapter.anchor(is_epub)
             yield "</div>"
 
     def write_html(self, bible: Bible, langs: list[str], subdir: str) -> None:
@@ -525,7 +556,7 @@ class html_builder:
             list(executor.map(write_chapter, bible.chain_chapters()))
 
         toc = self.__html_aux(
-            self.__toc_body_aux(bible, epub=False),
+            self.__toc_body_aux(bible, is_epub=False),
             title=BOOK_TITLE,
             page_class=INDEX_CLASS,
         )
@@ -539,20 +570,20 @@ class html_builder:
         subdir: str,
     ) -> None:
 
-        next: Chapter | None = chapter.next()
-        prev: Chapter | None = chapter.prev()
+        nxt: Chapter | None = chapter.next()
+        prv: Chapter | None = chapter.prev()
 
         out = self.__html_aux(
             self.__chapter_body_aux(chapter, langs),
             title=chapter.book.name,
             page_class=CHAPTER_CLASS,
-            next=next.href(epub=False) if next else "",
-            prev=prev.href(epub=False) if prev else "",
+            nxt=nxt.href(is_epub=False) if nxt else "",
+            prv=prv.href(is_epub=False) if prv else "",
         )
         path: str = os.path.join(
             OUTPUT_DIR,
             subdir,
-            chapter.path(epub=False),
+            chapter.path(is_epub=False),
         )
         utils.writelines(out, path, make_dir=True)
 
@@ -583,9 +614,9 @@ class html_builder:
         toc.set_content(
             "".join(
                 self.__html_aux(
-                    self.__toc_body_aux(bible, epub=True),
+                    self.__toc_body_aux(bible, is_epub=True),
                     title=BOOK_TITLE,
-                    epub=True,
+                    is_epub=True,
                 ),
             ),
         )
@@ -596,14 +627,14 @@ class html_builder:
         for book in bible.books:
             c: epub.EpubHtml = epub.EpubHtml(
                 title=book.name,
-                file_name=book.path(epub=True),
+                file_name=book.path(is_epub=True),
             )
             c.set_content(
                 "".join(
                     self.__html_aux(
-                        self.__book_body_aux(book, langs, epub=True),
+                        self.__book_body_aux(book, langs, is_epub=True),
                         title=book.name,
-                        epub=True,
+                        is_epub=True,
                     ),
                 ),
             )
@@ -631,12 +662,12 @@ class html_builder:
 
     def write(
         self,
-        format: typing.Literal["html", "epub"],
+        fmt: typing.Literal["html", "epub"],
         bible: Bible,
         langs: list[str],
         subdir: str,
     ) -> None:
-        {"html": self.write_html, "epub": self.write_epub}[format](
+        {"html": self.write_html, "epub": self.write_epub}[fmt](
             bible,
             langs,
             subdir,
@@ -645,12 +676,12 @@ class html_builder:
 
 def main():
     bible = Bible()
-    _flow_builder = html_builder(
+    flow_builder = HTMLBuilder(
         verse_format="{}<br>",
         verse_end="<br>",
     )
 
-    _table_builder = html_builder(
+    table_builder = HTMLBuilder(
         chapter_beginner="<table>",
         verse_beginner="<tr>",
         verse_format="<td>{}</td>",
@@ -660,20 +691,20 @@ def main():
 
     tasks: list[
         tuple[
-            html_builder,
+            HTMLBuilder,
             typing.Literal["html", "epub"],
             Bible,
             list[str],
             str,
         ]
     ] = [
-        (_flow_builder, "epub", bible, ["Bohairic", "English"], "1"),
-        (_table_builder, "epub", bible, ["Bohairic", "English"], "2"),
-        (_table_builder, "html", bible, LANGUAGES, ""),
+        (flow_builder, "epub", bible, ["Bohairic", "English"], "1"),
+        (table_builder, "epub", bible, ["Bohairic", "English"], "2"),
+        (table_builder, "html", bible, LANGUAGES, ""),
     ]
 
     with utils.thread_pool_executor() as executor:
-        list(executor.map(lambda args: html_builder.write(*args), tasks))
+        list(executor.map(lambda args: HTMLBuilder.write(*args), tasks))
 
 
 if __name__ == "__main__":
