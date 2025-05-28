@@ -1,6 +1,6 @@
 import * as collapse from './collapse.js';
-import * as logger from './logger.js';
 import * as utils from './utils.js';
+import * as logger from './logger.js';
 import * as orth from './orth.js';
 import * as coptic from './coptic.js';
 import * as greek from './greek.js';
@@ -27,7 +27,17 @@ const UNITS_LIMIT = 5;
 const LINE_BREAK = '<br>';
 // RESULTS_TO_UPDATE_DISPLAY specifies how often (every how many results) we
 // should yield to let the browser update the display during search.
-const RESULTS_TO_UPDATE_DISPLAY = 10;
+// A higher value implies:
+// - A less responsive UI, because our JavaScript will yield less often.
+// A lower value implies:
+// - A higher likelihood of jittery bucket sorting becoming visible to the user.
+//   If we rush to update display after sorting a small number of candidates,
+//   there is a higher chance our next batch of candidates will contain a
+//   candidate that needs to go on top (which is the area of the results table
+//   that is visible to the user), which introduces jitter. But if we sort a
+//   higher number of candidates in the first round, then upcoming batches are
+//   less likely to contain a candidate that needs to go in the first bucket.
+const RESULTS_TO_UPDATE_DISPLAY = 20;
 const TAG_REGEX = /<\/?[^>]+>/g;
 export var CLS;
 (function (CLS) {
@@ -732,6 +742,7 @@ export class Xooxle {
   bucketSorter;
   admit;
   candidates;
+  debounceTimeout = null;
   currentAbortController = null;
   /**
    * @param index - JSON index object.
@@ -758,46 +769,56 @@ export class Xooxle {
       (record) => new Candidate(record, index.metadata.fields)
     );
     // Make the page responsive to user input.
-    this.form.searchBox.addEventListener('input', this.search.bind(this));
+    this.form.searchBox.addEventListener('input', this.search.bind(this, 100));
     this.form.fullWordCheckbox.addEventListener(
       'click',
-      this.search.bind(this)
+      this.search.bind(this, 0)
     );
-    this.form.regexCheckbox.addEventListener('click', this.search.bind(this));
+    this.form.regexCheckbox.addEventListener(
+      'click',
+      this.search.bind(this, 0)
+    );
     // Handle the search query once upon loading.
-    this.search();
+    this.search(0);
     // Finally, focus on the form, so the user can search right away.
     this.form.searchBox.focus();
   }
   /**
    *
+   * @param timeout
    */
-  search() {
-    // Abort the previous search. Create a new abort controller for this
-    // trigger.
+  search(timeout) {
+    if (this.debounceTimeout) {
+      clearTimeout(this.debounceTimeout);
+    }
+    this.debounceTimeout = setTimeout(() => {
+      // Call the async function after the timeout.
+      // Use void to ignore the returned promise.
+      void this.searchAux();
+    }, timeout);
+  }
+  /**
+   *
+   */
+  async searchAux() {
+    // If there is an ongoing search, abort it.
     this.currentAbortController?.abort();
     const abortController = new AbortController();
     this.currentAbortController = abortController;
-    // Clear the output fields in the form, since we're starting a new search.
-    this.form.clear();
-    // Populate query parameters.
+    // Populate query parameters from the form.
     this.form.populateParams();
-    // Use void to ignore the returned promise.
-    void this.searchAux(abortController);
-  }
-  /**
-   * @param abortController
-   */
-  async searchAux(abortController) {
-    if (abortController.signal.aborted) {
-      return;
-    }
+    // Clear output fields in the form, since we're starting a new search.
+    this.form.clear();
+    // Construct the query expression.
     const expression = this.form.queryExpression();
     if (!expression) {
       return;
     }
     try {
-      const regex = new RegExp(expression, 'iug'); // Case-insensitive and Unicode-aware.
+      const regex = new RegExp(
+        expression,
+        'iug' // Case-insensitive, Unicode-aware, and global.
+      );
       await this.searchAuxAux(regex, abortController);
     } catch (err) {
       if (err instanceof SyntaxError) {
@@ -813,6 +834,11 @@ export class Xooxle {
    * @param abortController
    */
   async searchAuxAux(regex, abortController) {
+    // TODO: We append random characters in order to avoid having timers with
+    // identical names. This is not ideal. Let's supply an index name as part of
+    // the metadata, and use that for logging instead.
+    const name = `time-to-first-yield-${Array.from({ length: 2 }, () => String.fromCharCode(97 + Math.floor(Math.random() * 26))).join('')}`;
+    logger.time(name);
     // bucketSentinels is a set of hidden table rows that represent sentinels
     // (anchors / break points) in the results table.
     //
@@ -831,11 +857,6 @@ export class Xooxle {
     // because we want results to expand downwards rather than upwards, to
     // avoid jitter at the top of the table, which is the area that the user
     // will be looking at.
-    // TODO: We append random characters in order to avoid having timers with
-    // identical names. This is not ideal. Let's supply an index name as part of
-    // the metadata, and use that for logging instead.
-    const name = `time-to-first-yield-${Array.from({ length: 2 }, () => String.fromCharCode(97 + Math.floor(Math.random() * 26))).join('')}`;
-    logger.time(name);
     const bucketSentinels = Array.from(
       { length: this.bucketSorter.numBuckets },
       () => {
@@ -845,6 +866,8 @@ export class Xooxle {
         return tr;
       }
     );
+    // Search is a cheap operation that we can afford to do on all candidates in
+    // the beginning.
     const results = this.candidates
       .map((can) => can.search(regex))
       .filter((res) => res.match && this.admit(res))
@@ -858,12 +881,12 @@ export class Xooxle {
       bucketSentinels[
         this.bucketSorter.validBucket(result, row)
       ].insertAdjacentElement('beforebegin', row);
-      // Expand the results table to accommodate the recently added results.
-      this.form.expand();
       if (count % RESULTS_TO_UPDATE_DISPLAY == RESULTS_TO_UPDATE_DISPLAY - 1) {
         if (count <= RESULTS_TO_UPDATE_DISPLAY) {
           logger.timeEnd(name);
         }
+        // Expand the results table to accommodate the recently added results.
+        this.form.expand();
         await utils.yieldToBrowser();
       }
     }
@@ -873,5 +896,6 @@ export class Xooxle {
     ].forEach((counter) => {
       counter.innerHTML = `${(++i).toString()} / ${results.length.toString()}`;
     });
+    this.form.expand();
   }
 }
