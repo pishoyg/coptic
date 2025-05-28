@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Analyze the structure of the KELLIA dataset."""
 # TODO: (#51) Read this file for inspiration:
 # https://github.com/KELLIA/dictionary/blob/master/utils/dictionary_reader.py.
 # TODO: There are some typos in the data. Fix at the origin.
@@ -112,12 +113,12 @@ def analyze(soup: bs4.BeautifulSoup | bs4.Tag) -> str:
 
 
 def main():
-    with open(INPUT_XML) as f:
+    with open(INPUT_XML, encoding="utf-8") as f:
         soup = bs4.BeautifulSoup(f, "lxml-xml")
     # We only care about the body.
     assert soup.body
     analysis = analyze(soup.body)
-    with open(OUTPUT, "w") as f:
+    with open(OUTPUT, "w", encoding="utf-8") as f:
         f.write(analysis)
 
 

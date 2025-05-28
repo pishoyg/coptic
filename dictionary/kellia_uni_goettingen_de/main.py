@@ -1,10 +1,16 @@
 #!/usr/bin/env python3
-# This was forked from:
-# https://github.com/KELLIA/dictionary/blob/master/utils/dictionary_reader.py
-# The original file was snapshotted on 2024.06.01.
-# Edits made to the original file beyond that data should be incorporated.
-# View history at:
-# https://github.com/KELLIA/dictionary/commits/master/utils/dictionary_reader.py
+"""Process KELLIA's dictionary.
+
+The data is retrieved from:
+    https://refubium.fu-berlin.de/handle/fub188/27813
+
+This file was forked from:
+    https://github.com/KELLIA/dictionary/blob/master/utils/dictionary_reader.py
+The original file was snapshotted on 2024.06.01.
+Edits made to the original file beyond that data should be incorporated.
+View history at:
+    https://github.com/KELLIA/dictionary/commits/master/utils/dictionary_reader.py
+"""
 
 import glob
 import os
@@ -12,7 +18,7 @@ import pathlib
 import re
 import typing
 import xml.etree.ElementTree as ET
-from collections import OrderedDict, defaultdict
+from collections import OrderedDict, abc, defaultdict
 
 import pandas as pd
 
@@ -22,6 +28,7 @@ _SCRIPT_DIR = pathlib.Path(__file__).parent
 _V_1_2_DIR = _SCRIPT_DIR / "data" / "raw" / "v1.2"
 _CLEAN = set("ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ ")
 _CRUM_RE = re.compile(r"\b(CD ([0-9]+[ab]?)-?[0-9]*[ab]?)\b")
+_CRUM_PAGE = "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID="
 _SENSE_CHILDREN = ["quote", "definition", "bibl", "ref", "xr"]
 
 _GEO_MAPPING: dict[str, str] = {
@@ -36,10 +43,7 @@ _entity_types: defaultdict[str, set[str]] = defaultdict(set)
 
 
 def _add_crum_links(ref_bibl: str) -> str:
-    return _CRUM_RE.sub(
-        r'<a href="https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=\2">\1</a>',
-        ref_bibl,
-    )
+    return _CRUM_RE.sub(rf'<a href="{_CRUM_PAGE}\2">\1</a>', ref_bibl)
 
 
 def _compress(text: str | None) -> str:
@@ -57,17 +61,18 @@ def _cdo(entry_xml_id: str) -> str:
 
 
 class _Reformat:
-    def __init__(self):
-        self._amir: str = ""
+    """_Reformat represents an object that offers alternative formats."""
 
-    def amir(self) -> str:
-        return self._amir
+    def __init__(self):
+        self.amir: str = ""
 
     def pishoy(self) -> str | list[str]:
         raise ValueError("Not implemented!")
 
 
 class _Line:
+    """Line represents a single word spelling."""
+
     def __init__(self, gram_grp: str, orth: str, geo: str, form_id: str):
         self._gram_grp: str = gram_grp
         self._orth: str = orth
@@ -88,16 +93,18 @@ class _Line:
 
 
 class _OrthString(_Reformat):
+    """A word, having a grammatical group, and several spellings."""
+
     def __init__(self):
         super().__init__()
         self._pishoy: list[_Line] = []
         self._last_gram_grp: str = ""
 
     # For each entry, you add one grammar group, then several orth's per form.
-    def add_gram_grp(self, gramGrp: ET.Element) -> None:
-        gram_string = " ".join(_compress(child.text) for child in gramGrp)
+    def add_gram_grp(self, gram_grp: ET.Element) -> None:
+        gram_string = " ".join(_compress(child.text) for child in gram_grp)
         self._last_gram_grp = gram_string
-        self._amir += gram_string + "\n"
+        self.amir += gram_string + "\n"
 
     def add_orth_geo_id(
         self,
@@ -113,7 +120,7 @@ class _OrthString(_Reformat):
             )
         geos = [g + "^^" + form_id for g in geos]
         for g in geos:
-            self._amir += orth_text + "~" + g + "\n"
+            self.amir += orth_text + "~" + g + "\n"
 
     @typing.override
     def pishoy(self):
@@ -126,6 +133,8 @@ class _OrthString(_Reformat):
 
 
 class EtymString(_Reformat):
+    """EtymString represents the etymology string of a word."""
+
     def __init__(self, etym: ET.Element | None, xrs: list[ET.Element]) -> None:
         super().__init__()
         self._greek_id: str = ""
@@ -133,12 +142,12 @@ class EtymString(_Reformat):
             greek_dict: OrderedDict[str, str | None] = OrderedDict()
             for child in etym:
                 if child.tag == "{http://www.tei-c.org/ns/1.0}note":
-                    self._amir += _compress(child.text)
+                    self.amir += _compress(child.text)
                 elif child.tag == "{http://www.tei-c.org/ns/1.0}ref":
                     if "type" in child.attrib and "target" in child.attrib:
                         assert child.attrib["type"]
                         assert child.attrib["target"]
-                        self._amir += (
+                        self.amir += (
                             child.attrib["type"]
                             + ": "
                             + child.attrib["target"]
@@ -147,7 +156,7 @@ class EtymString(_Reformat):
                     elif "targetLang" in child.attrib:
                         assert child.attrib["targetLang"]
                         assert child.text
-                        self._amir += (
+                        self.amir += (
                             child.attrib["targetLang"]
                             + ": "
                             + child.text
@@ -161,7 +170,7 @@ class EtymString(_Reformat):
                         assert child.attrib["type"]
                         assert ref.attrib["target"]
                         assert ref.text
-                        self._amir += (
+                        self.amir += (
                             child.attrib["type"]
                             + ". "
                             + ref.attrib["target"]
@@ -194,7 +203,7 @@ class EtymString(_Reformat):
                         greek_parts.append(
                             '<span style="color:grey">(' + val + ")</span>",
                         )
-                self._amir += " ".join(greek_parts)
+                self.amir += " ".join(greek_parts)
 
         for xr in xrs:
             for ref in xr:
@@ -202,7 +211,7 @@ class EtymString(_Reformat):
                 assert xr.attrib["type"]
                 assert ref_target
                 assert ref.text
-                self._amir += (
+                self.amir += (
                     xr.attrib["type"]
                     + ". "
                     + "#"
@@ -216,7 +225,7 @@ class EtymString(_Reformat):
         return self._greek_id
 
     def process(self):
-        etym = self.amir()
+        etym = self.amir
         xrs: list[str] = re.findall(r" #(.*?)#", etym)
         for xr in xrs:
             word = xr
@@ -240,6 +249,8 @@ class EtymString(_Reformat):
 
 
 class _Sense:
+    """_Sense represents a meaning of a word."""
+
     def __init__(self, sense_n: int, sense_id: str) -> None:
         self._sense_n: int = sense_n
         self._sense_id: str = sense_id
@@ -282,41 +293,30 @@ class _Sense:
         return (self._sense_n, self._sense_id)
 
     def pishoy(self) -> str:
-        content: list[str] = []
-        content.extend(
-            [
-                f"<!--sense_number:{self._sense_n}, sense_id:{self._sense_id}-->",
-                "<tr>",
-                '<td class="meaning">',
-                "\n".join(
-                    self.format(*pair)
-                    for pair in self.subset("quote", "definition")
-                ),
-                "</td>",
-                '<td class="bibl">',
-                "\n".join(self.format(*pair) for pair in self.subset("bibl")),
-                "</td>",
-                "</tr>",
-            ],
+        out = "".join(self._pishoy_aux())
+        while "\n\n\n" in out:
+            out = out.replace("\n\n\n", "\n\n")
+        return out
+
+    def _pishoy_aux(self) -> abc.Generator[str]:
+        yield f"<!--sense_number:{self._sense_n}, sense_id:{self._sense_id}-->"
+        yield "<tr>"
+        yield '<td class="meaning">'
+        yield "\n".join(
+            self.format(*pair) for pair in self.subset("quote", "definition")
         )
+        yield "</td>"
+        yield '<td class="bibl">'
+        yield "\n".join(self.format(*pair) for pair in self.subset("bibl"))
+        yield "</td>"
+        yield "</tr>"
         ref_xr = self.subset("ref", "xr")
         if ref_xr:
-            content.extend(
-                [
-                    "<tr>",
-                    '<td class="ref_xr" colspan="2">',
-                    "\n".join(self.format(*pair) for pair in ref_xr),
-                    "</td>",
-                    "</tr>",
-                ],
-            )
-        out = "".join(content)
-        while True:
-            new_out = out.replace("\n\n\n", "\n\n")
-            if new_out == out:
-                break
-            out = new_out
-        return out
+            yield "<tr>"
+            yield '<td class="ref_xr" colspan="2">'
+            yield "\n".join(self.format(*pair) for pair in ref_xr)
+            yield "</td>"
+            yield "</tr>"
 
     def subset(self, *names: str) -> list[tuple[str, str]]:
         assert all(n in _SENSE_CHILDREN for n in names), names
@@ -335,6 +335,8 @@ class _Sense:
 
 
 class _Quote(_Reformat):
+    """_Quote represents a quote."""
+
     def __init__(self):
         super().__init__()
         self.reset()
@@ -342,18 +344,18 @@ class _Quote(_Reformat):
 
     def add_quote(self, quote: ET.Element) -> None:
         text: str = _compress(quote.text)
-        self._amir += text
+        self.amir += text
         self._pishoy.append(text)
 
     def reset(self) -> None:
-        self._amir: str = "~~~"
+        self.amir: str = "~~~"
         self._pishoy = []
 
     def no_definitions(self) -> None:
-        self._amir += ";;;"
+        self.amir += ";;;"
 
     def yes_definitions(self) -> None:
-        self._amir += "; "
+        self.amir += "; "
 
     @typing.override
     def pishoy(self) -> list[str]:
@@ -361,6 +363,8 @@ class _Quote(_Reformat):
 
 
 class _Lang(_Reformat):
+    """_Lang represents the definition in one language."""
+
     def __init__(self, name: str):
         super().__init__()
         assert name in ["de", "en", "fr", "MERGED"]
@@ -368,45 +372,45 @@ class _Lang(_Reformat):
         self._pishoy: list[_Sense] = []
 
     def add_sense(self, sense_n: int, sense_id: str):
-        self._amir += str(sense_n) + "@" + sense_id + "|"
+        self.amir += str(sense_n) + "@" + sense_id + "|"
         self._pishoy.append(_Sense(sense_n, sense_id))
 
     def _last_sense(self) -> _Sense:
         return self._pishoy[-1]
 
     def add_quote(self, quote: _Quote) -> None:
-        self._amir += quote.amir()
+        self.amir += quote.amir
         self._last_sense().extend_quotes(quote.pishoy())
 
     def add_definition(self, definition: ET.Element) -> None:
         self._last_sense().add_definition(_compress(definition.text))
-        if self._amir.endswith("|"):
-            self._amir += "~~~"
+        if self.amir.endswith("|"):
+            self.amir += "~~~"
         definition_text = _compress(definition.text) + ";;;"
-        self._amir += definition_text
+        self.amir += definition_text
 
     def add_bibl(self, bibl: ET.Element | None) -> None:
         if bibl is None:
             return
         if not bibl.text:
             return
-        self._amir += bibl.text + " "
+        self.amir += bibl.text + " "
         self._last_sense().add_bibl(bibl.text)
 
     def add_ref(self, ref: ET.Element):
         assert ref.text
         self._last_sense().add_ref(ref.text)
-        self._amir += "ref: " + ref.text + " "
+        self.amir += "ref: " + ref.text + " "
 
     def add_xr(self, xr: ET.Element):
         for ref in xr:
             assert ref.text
             text = xr.tag[29:] + ". " + ref.attrib["target"] + "# " + ref.text
-            self._amir += text + " "
+            self.amir += text + " "
             self._last_sense().add_xr(text)
 
     def finalize(self):
-        self._amir: str = _compress(self._amir)
+        self.amir: str = _compress(self.amir)
 
     def add(self, name: str, value: str):
         self._last_sense().add(name, value)
@@ -455,6 +459,7 @@ def _gloss_bibl(ref_bibl: str) -> str:
     """Adds tooltips to lexical resource names."""
 
     page_expression = r"(?: §)? ?[0-9A-Za-z:]+(, ?[0-9A-Za-z:]+)*"
+    # pylint: disable=line-too-long
     sources = [
         (
             r"(Kasser )?CDC",
@@ -566,6 +571,7 @@ def _gloss_bibl(ref_bibl: str) -> str:
             r"L. Berkowitz, K.A. Squitier, Thesaurus Linguae Graecae (Canon of Greek Authors and Works), New York/Oxford: University Press, 1990",
         ),
     ]
+    # pylint: enable=line-too-long
     template = '<a class="hint" data-tooltip="**src**">?</a>'
 
     for find, rep in sources:
@@ -584,15 +590,12 @@ def _link_greek(etym: str):
     m = re.search(r"cf\. Gr\.[^<>]+</span>([^<>]+)<i>", etym)
     if m is None:
         return etym
-    greek = m.group(1).strip()
-    href = (
-        "https://www.billmounce.com/search/node/{key}%20type%3Alexicon".format(
-            key=greek,
-        )
-    )
+    word = m.group(1).strip()
+    href = "https://www.billmounce.com/search/node/{greek}%20type%3Alexicon"
 
-    # Convert polytonic Greek to beta-code using perseids-tools/beta-code-py conversion table
-    link = ' <a href="{href}">'.format(href=href) + greek + ";</a>"
+    # Convert polytonic Greek to beta-code using perseids-tools/beta-code-py
+    # conversion table.
+    link = f' <a href="{href}">{word};</a>'
     linked = re.sub(
         r"(cf\. Gr\.[^<>]*</span>)[^<>]+(<i>)",
         r"\1" + link + r"\2",
@@ -664,15 +667,16 @@ def _get_entity_types(pub_corpora_dir: str) -> defaultdict[str, set[str]]:
 
 
 def _process_entry(
-    id: int,
+    entry_id: int,
     super_id: int,
     entry: ET.Element,
     entry_xml_id: str,
 ) -> dict[str, int | str] | None:
     """
-    :param id: int, id of the entry
+    :param entry_id: int, id of the entry
     :param super_id: int, id of the superentry
     :param entry: Element representing the entry
+    :param entry_xml_id:
     :return: tuple representing new row to add to the db
     """
 
@@ -686,13 +690,15 @@ def _process_entry(
     forms = entry.findall("{http://www.tei-c.org/ns/1.0}form")
 
     # ORTHSTRING -- "name" column in the db
-    # Includes morphological info, followed by orthographic forms and corresponding dialect (geo) info
+    # Includes morphological info, followed by orthographic forms and
+    # corresponding dialect (geo) info.
     # ||| separates forms
     # \n separates orth-geo pairs
     # ~ separates orth from geo
 
     # SEARCHSTRING -- "search" column in db
-    # similar to orthstring but forms are stripped of anything but coptic letters and spaces
+    # similar to orthstring but forms are stripped of anything but Coptic
+    # letters and spaces.
     # morphological info not included
     orthstring = _OrthString()
     oref_string = ""
@@ -760,11 +766,11 @@ def _process_entry(
 
         orefs = form.findall("{http://www.tei-c.org/ns/1.0}oRef")
 
-        gramGrp = form.find("{http://www.tei-c.org/ns/1.0}gramGrp")
-        if gramGrp is None:
-            gramGrp = entry.find("{http://www.tei-c.org/ns/1.0}gramGrp")
-        if gramGrp is not None:
-            orthstring.add_gram_grp(gramGrp)
+        gram_grp = form.find("{http://www.tei-c.org/ns/1.0}gramGrp")
+        if gram_grp is None:
+            gram_grp = entry.find("{http://www.tei-c.org/ns/1.0}gramGrp")
+        if gram_grp is not None:
+            orthstring.add_gram_grp(gram_grp)
 
         all_geos = form.find("{http://www.tei-c.org/ns/1.0}usg")
         if all_geos is not None:
@@ -805,11 +811,11 @@ def _process_entry(
 
         oref_string += oref_text
         oref_string += "|||"
-        orthstring._amir += "|||"
-    orthstring._amir = re.sub(r"\|\|\|$", "", orthstring._amir)
+        orthstring.amir += "|||"
+    orthstring.amir = re.sub(r"\|\|\|$", "", orthstring.amir)
     oref_string = re.sub(r"\|\|\|$", "", oref_string)
 
-    first_orth_re = re.search(r"\n(.*?)~", orthstring._amir)
+    first_orth_re = re.search(r"\n(.*?)~", orthstring.amir)
     if first_orth_re is not None:
         ascii_orth = ""
         mapping = {
@@ -856,7 +862,8 @@ def _process_entry(
 
     # SENSES -- 3 different columns for the 3 languages: de, en, fr
     # each string contains definitions as well as corresponding bibl/ref/xr info
-    # definition part, which may come from 'quote' or 'def' in the xml or both, is preceded by ~~~ and followed by ;;;
+    # definition part, which may come from 'quote' or 'def' in the xml or both,
+    # is preceded by ~~~ and followed by ;;;
     # different senses separated by |||
     de = _Lang("de")
     en = _Lang("en")
@@ -924,14 +931,14 @@ def _process_entry(
                 en.add_xr(sense_child)
                 fr.add_xr(sense_child)
 
-        de._amir += "|||"
-        en._amir += "|||"
-        fr._amir += "|||"
+        de.amir += "|||"
+        en.amir += "|||"
+        fr.amir += "|||"
         sense_n += 1
 
-    de._amir = re.sub(r"\|\|\|$", r"", de._amir)
-    en._amir = re.sub(r"\|\|\|$", r"", en._amir)
-    fr._amir = re.sub(r"\|\|\|$", r"", fr._amir)
+    de.amir = re.sub(r"\|\|\|$", r"", de.amir)
+    en.amir = re.sub(r"\|\|\|$", r"", en.amir)
+    fr.amir = re.sub(r"\|\|\|$", r"", fr.amir)
     de.finalize()
     en.finalize()
     fr.finalize()
@@ -951,7 +958,7 @@ def _process_entry(
             subc_text = subc.text
         else:
             subc_text = "None"
-        new_pos: str = _pos_map(pos_text, subc_text, orthstring._amir)
+        new_pos: str = _pos_map(pos_text, subc_text, orthstring.amir)
         if new_pos not in pos_list:
             pos_list.append(new_pos)
     if len(list(pos_list)) > 1:
@@ -963,16 +970,15 @@ def _process_entry(
         )
     if len(pos_list) == 0:
         pos_list.append("NULL")
-    pos_string = pos_list[
-        0
-    ]  # on the rare occasion pos_list has len > 1 at this point, the first one is the most valid
+    # On the rare occasion pos_list has len > 1 at this point, the first one is
+    # the most valid.
+    pos_string = pos_list[0]
 
     # ETYM
     etym = entry.find("{http://www.tei-c.org/ns/1.0}etym")
     xrs = entry.findall("{http://www.tei-c.org/ns/1.0}xr")
     etym_string = EtymString(etym, xrs)
     ents = ""
-    global _entity_types
     if "~" in search_string:
         row_lemma = search_string.strip().split("~")[0]
         if row_lemma == "ⲉⲓⲱⲧ":  # Hardwired behavior for barley vs. father
@@ -991,18 +997,18 @@ def _process_entry(
             ents = ";".join(sorted(list(_entity_types[row_lemma])))
 
     return {
-        "id": id,
+        "id": entry_id,
         "super_id": super_id,
-        "orthstring": orthstring.amir(),
+        "orthstring": orthstring.amir,
         "pos_string": pos_string,
-        "de": de.amir(),
+        "de": de.amir,
         "de-pishoy": de.pishoy(),
-        "en": en.amir(),
+        "en": en.amir,
         "en-pishoy": en.pishoy(),
-        "fr": fr.amir(),
+        "fr": fr.amir,
         "fr-pishoy": fr.pishoy(),
         "merged-pishoy": _merge_langs(de, en, fr).pishoy(),
-        "etym_string": etym_string.amir(),
+        "etym_string": etym_string.amir,
         "etym_string-processed": etym_string.process(),
         "ascii_orth": ascii_orth,
         "search_string": search_string,
