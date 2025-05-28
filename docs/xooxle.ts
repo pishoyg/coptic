@@ -297,12 +297,12 @@ export class Form {
 }
 
 /**
- * TODO: Calculating the aggregation results seems a bit expensive, especially
- * for operations that need to be queried repeatedly (such as `match` and
- * `boundaryType`). Consider memorizing them.
  */
 abstract class ResultAggregator {
   protected abstract readonly results: ResultAggregator[];
+  private matchMemo: boolean | null = null;
+  private boundaryTypeMemo: BoundaryType | null = null;
+  private fragmentWordMemo: string | undefined | null = null;
 
   /**
    * @returns
@@ -311,7 +311,13 @@ abstract class ResultAggregator {
     // The BoundaryType enum is implemented in such a way that the boundary type
     // of an aggregated result is the minimum of the boundary types of all
     // results.
-    return Math.min(...this.results.map((r) => r.boundaryType()));
+    if (this.boundaryTypeMemo !== null) {
+      return this.boundaryTypeMemo;
+    }
+    this.boundaryTypeMemo = Math.min(
+      ...this.results.map((r) => r.boundaryType())
+    );
+    return this.boundaryTypeMemo;
   }
 
   /**
@@ -319,11 +325,13 @@ abstract class ResultAggregator {
    */
   fragmentWord(): string | undefined {
     // We simply return the fragment of the first result that possesses one.
-    for (const res of this.results) {
-      const word = res.fragmentWord();
-      if (word) return word;
+    if (this.fragmentWordMemo !== null) {
+      return this.fragmentWordMemo;
     }
-    return undefined;
+    this.fragmentWordMemo = this.results
+      .find((r) => r.fragmentWord())
+      ?.fragmentWord();
+    return this.fragmentWordMemo;
   }
 
   /**
@@ -331,7 +339,11 @@ abstract class ResultAggregator {
    */
   get match(): boolean {
     // We have a match if any of the results has a match.
-    return this.results.some((r) => r.match);
+    if (this.matchMemo !== null) {
+      return this.matchMemo;
+    }
+    this.matchMemo = this.results.some((r) => r.match);
+    return this.matchMemo;
   }
 }
 
