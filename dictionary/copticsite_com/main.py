@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Process the copticsite dictionary."""
 import pathlib
 import re
 
