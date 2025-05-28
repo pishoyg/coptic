@@ -669,10 +669,11 @@ class LineSearchResult {
         }
         if (match) builder.push(LineSearchResult.opening);
       }
-      while (orthographer.isDiacritic(this.html[i])) {
+      if (orthographer.isDiacritic(this.html[i])) {
         // This is a diacritic. It was ignored during search, and is not part of
         // the match. Yield without accounting for it in the text.
         builder.push(this.html[i++]);
+        continue;
       }
       if (cur?.start === j) {
         // A match starts at the given position. Yield an opening tag.
