@@ -27,7 +27,7 @@ const UNITS_LIMIT = 5;
 const LINE_BREAK = '<br>';
 // RESULTS_TO_UPDATE_DISPLAY specifies how often (every how many results) we
 // should yield to let the browser update the display during search.
-const RESULTS_TO_UPDATE_DISPLAY = 5;
+const RESULTS_TO_UPDATE_DISPLAY = 50;
 const TAG_REGEX = /<\/?[^>]+>/g;
 export var CLS;
 (function (CLS) {
