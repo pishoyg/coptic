@@ -319,6 +319,8 @@ def read_tsv(path: str | pathlib.Path) -> pd.DataFrame:
 
 
 class GCPClient:
+    """GCPClient caches a GCP client."""
+
     _client: gspread.client.Client | None = None
 
     @staticmethod
@@ -485,18 +487,22 @@ if SEQUENTIAL:
     )
 
 
-# NOTE: To make sure any errors encountered during the execution of the child
-# tasks propagate to the parent task, make sure to loop over the generator
-# returned by the `map` method.
-#     with utils.ThreadPoolExecutor() as executor:
-#       # Code that uses `data`.
-# If the returned data doesn't need to be used, you can simply convert the
-# generator to a list:
-#     with utils.ThreadPoolExecutor() as executor:
-#       list(executor.map(fn, data))
-# Our types don't implement a `submit` method despite its convenient because
-# it's tricker to mimic, and error propagation with `submit` is also trickier.
 class SequentialExecutor:
+    """SequentialExecutor is an executor that executes tasks sequentially.
+
+    NOTE: To make sure any errors encountered during the execution of the child
+    tasks propagate to the parent task, make sure to loop over the generator
+    returned by the `map` method.
+        with utils.ThreadPoolExecutor() as executor:
+          # Code that uses `data`.
+    If the returned data doesn't need to be used, you can simply convert the
+    generator to a list:
+        with utils.ThreadPoolExecutor() as executor:
+          list(executor.map(fn, data))
+    Our types don't implement a `submit` method despite its convenient because
+    it's tricker to mimic, and error propagation with `submit` is also trickier.
+    """
+
     def map[T, R](
         self,
         fn: typing.Callable[[T], R],
@@ -516,17 +522,19 @@ class SequentialExecutor:
         pass
 
 
-# NOTE: `ProcessPoolExecutor` has a few caveats:
-# - It requires all the tasks to be picklable, thus it's problematic with
-#   lambdas and closures, and often complains about generators.
-# - Our static-scope variables are shared between threads, but not between
-#   processes! This can corrupt non-process-safe caches, for example.
-# - In our experimentation, processing time often soared when using
-#   `ProcessPoolExecutor` instead of `ThreadPoolExecutor`, possibly because of
-#   unexpected cache / static-scope behavior.
 def process_pool_executor() -> (
     futures.ProcessPoolExecutor | SequentialExecutor
 ):
+    """
+    NOTE: `ProcessPoolExecutor` has a few caveats:
+    - It requires all the tasks to be picklable, thus it's problematic with
+      lambdas and closures, and often complains about generators.
+    - Our static-scope variables are shared between threads, but not between
+      processes! This can corrupt non-process-safe caches, for example.
+    - In our experimentation, processing time often soared when using
+      `ProcessPoolExecutor` instead of `ThreadPoolExecutor`, possibly because of
+      unexpected cache / static-scope behavior.
+    """
     return (
         SequentialExecutor() if SEQUENTIAL else futures.ProcessPoolExecutor()
     )

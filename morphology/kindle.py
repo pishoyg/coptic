@@ -1,4 +1,8 @@
-# TODO: (#39) Learn more about the spell attribute and wildcard search. See ENTRY.
+"""Generate a Kindle dictionary."""
+
+# TODO: (#39) Learn more about the spell attribute and wildcard search.
+# See ENTRY below.
+
 import os
 import pathlib
 import shutil
@@ -10,9 +14,9 @@ import utils
 CREATOR = "remnqymi@gmail.com"
 # "cop" is not supported.
 # See https://kdp.amazon.com/en_US/help/topic/G200673300.
-# TODO: (#39) Choose a default obscure language. Otherwise, a reader who has another
-# dictionary for "en-us" will keep switching between the two in order to
-# translate.
+# TODO: (#39) Choose a default obscure language. Otherwise, a reader who has
+# another dictionary for "en-us" will keep switching between the two in order
+# to translate.
 IN_LANG = "en-us"
 OUT_LANG = "en-us"
 INDEX = "index"
@@ -20,6 +24,8 @@ INDEX = "index"
 TYPE_ENFORCED = True
 STEP = 100
 
+# pylint: disable=f-string-without-interpolation
+# pylint: disable=line-too-long
 OPF_FILENAME_FMT = f"{{identifier}}.opf"
 
 OPF_MANIFEST_ITEM_FMT = f"""\
@@ -98,6 +104,8 @@ ENTRY_XHTML_FMT = f"""\
 INFL_XHTML_FMT = f"""\
 <idx:iform value="{{form}}"/>\
 """
+# pylint: enable=line-too-long
+# pylint: enable=f-string-without-interpolation
 
 
 def _nothing_to_escape(text: str) -> bool:
@@ -118,16 +126,18 @@ def _escape_amp(text: str) -> str:
     return text.replace("&", "&amp;")
 
 
-class entry:
+class Entry:
+    """Entry is an entry in the dictionary."""
+
     def __init__(
         self,
-        id: str,
+        entry_id: str,
         orth: str,
         orth_display: str,
         definition: str,
         inflections: list[str],
     ) -> None:
-        assert _nothing_to_escape(id)
+        assert _nothing_to_escape(entry_id)
         assert orth
         assert _no_tags(orth)
         orth = _escape_amp(orth)
@@ -138,11 +148,11 @@ class entry:
         assert all(inflections)
         assert all(_nothing_to_escape(i) for i in inflections), inflections
 
-        self._id = id
-        self._orth = orth
-        self._orth_display = orth_display
-        self._definition = definition
-        self._inflections = inflections
+        self._id: str = entry_id
+        self._orth: str = orth
+        self._orth_display: str = orth_display
+        self._definition: str = definition
+        self._inflections: list[str] = inflections
 
     def xhtml(self) -> str:
         inflections: str = "\n".join(
@@ -158,9 +168,9 @@ class entry:
         return xhtml
 
 
-class volume:
-    def __init__(self, entries: list[entry]) -> None:
-        self._entries = entries
+class Volume:
+    def __init__(self, entries: list[Entry]) -> None:
+        self._entries: list[Entry] = entries
 
     def xhtml(self) -> str:
         xhtml = "\n".join(e.xhtml() for e in self._entries)
@@ -168,7 +178,9 @@ class volume:
         return xhtml
 
 
-class dictionary:
+class Dictionary:
+    """Dictionary represents a Kindle dictionary."""
+
     def __init__(
         self,
         title: str,
@@ -192,17 +204,17 @@ class dictionary:
         self._identifier: str = identifier
         self._cover_path: str = cover_path
         self._cover_basename: str = os.path.basename(self._cover_path)
-        self._entries: list[entry] = []
+        self._entries: list[Entry] = []
         self._zfill = zfill
 
-    def add_entry(self, e: entry) -> None:
+    def add_entry(self, e: Entry) -> None:
         self._entries.append(e)
 
     def xhtml(self) -> str:
-        return volume(self._entries).xhtml()
+        return Volume(self._entries).xhtml()
 
     def write_xhtml(self, path: str) -> None:
-        with open(path, "w") as f:
+        with open(path, "w", encoding="utf-8") as f:
             f.write(self.xhtml())
 
     def xhtmls(self) -> list[tuple[str, str]]:
@@ -213,7 +225,7 @@ class dictionary:
             start = str(i + 1).zfill(self._zfill)
             end = str(i + len(entries)).zfill(self._zfill)
             file_name = f"{start}_{end}.xhtml"
-            content = volume(entries).xhtml()
+            content = Volume(entries).xhtml()
             filenames_contents.append((file_name, content))
         return filenames_contents
 
@@ -262,11 +274,11 @@ class dictionary:
         manifest_parts = []
         spine_parts = []
         for name in content_filenames:
-            id = self.basename_to_id(name)
+            file_id = self.basename_to_id(name)
             manifest_parts.append(
-                OPF_MANIFEST_ITEM_FMT.format(id=id, href=name),
+                OPF_MANIFEST_ITEM_FMT.format(id=file_id, href=name),
             )
-            spine_parts.append(OPF_SPINE_ITEM_FMT.format(idref=id))
+            spine_parts.append(OPF_SPINE_ITEM_FMT.format(idref=file_id))
 
         manifest = "\n".join(manifest_parts)
         spine = "\n".join(spine_parts)
@@ -287,15 +299,15 @@ class dictionary:
         assert ext
         return stem
 
-    def write_pre_mobi(self, dir: str) -> None:
+    def write_pre_mobi(self, directory: str) -> None:
         """I don't really know what this format is called, so I am calling it
         "pre-mobi"."""
-        pathlib.Path(dir).mkdir(exist_ok=True)
+        pathlib.Path(directory).mkdir(exist_ok=True)
 
         # Copy the cover image.
-        shutil.copyfile(
+        _ = shutil.copyfile(
             self._cover_path,
-            os.path.join(dir, self._cover_basename),
+            os.path.join(directory, self._cover_basename),
         )
 
         # Add the dictionary files.
@@ -308,6 +320,10 @@ class dictionary:
 
         # Write the files.
         for filename, content in filename_to_content.items():
-            with open(os.path.join(dir, filename), "w") as f:
-                f.write(content)
-        utils.wrote(dir)
+            with open(
+                os.path.join(directory, filename),
+                "w",
+                encoding="utf-8",
+            ) as f:
+                _ = f.write(content)
+        utils.wrote(directory)

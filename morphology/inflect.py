@@ -1,3 +1,5 @@
+"""Generate inflections of Coptic words."""
+
 import enum
 import re
 
@@ -7,6 +9,8 @@ COPTIC_ONLY_BLOCK = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
 
 
 class Type(enum.Enum):
+    """Type represents the type of a Coptic word."""
+
     NOUN_MASCULINE = 11
     NOUN_FEMININE = 12
     NOUN_PLURAL = 13
@@ -55,9 +59,9 @@ _TYPE_TO_PREFIX_LIST = {
 }
 
 
-def inflect(morpheme: str, type: Type) -> list[str]:
+def inflect(morpheme: str, typ: Type) -> list[str]:
     """Given a word, return a list of inflected forms."""
-    prefixes: list[str] = sum(_TYPE_TO_PREFIX_LIST[type], [])
+    prefixes: list[str] = sum(_TYPE_TO_PREFIX_LIST[typ], [])
     assert COPTIC_ONLY_BLOCK.fullmatch(morpheme)
     assert morpheme
     return [p + morpheme for p in prefixes]

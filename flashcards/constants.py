@@ -68,8 +68,11 @@ def _img_aux(
         yield LINE_BREAK
 
 
-# TODO: The `decker` type is a thin wrapper around `deck`. Eliminate it.
 class Decker:
+    """Decker is a wrapper that materializes the Deck upon request."""
+
+    # TODO: The `decker` type is a thin wrapper around `deck`. Eliminate it.
+
     def __init__(self, deck_name: str, deck_id: int, write_html: bool) -> None:
         self._deck_name: str = deck_name
         self._deck_id: int = deck_id
@@ -120,6 +123,8 @@ def _use_html_line_breaks(text: str) -> str:
 
 
 class Sister:
+    """Sister represents a sister of a Crum word."""
+
     def __init__(self, key: str, title: str, meaning: str, typ: str) -> None:
         self.key: str = key
         self.title: str = title
@@ -128,6 +133,8 @@ class Sister:
 
 
 class SisterWithFrag:
+    """SisterWithFrag represents a Sister, and an associated fragment."""
+
     HREF_FMT: str = "{key}.html"
 
     def __init__(self, sis: Sister, fragment: str) -> None:
@@ -166,10 +173,13 @@ class SisterWithFrag:
 
 
 class StepsisterWithFrag(SisterWithFrag):
+    """StepsisterWithFrag is a Greek Crum sister, with a fragment."""
+
     HREF_FMT: str = KELLIA_PREFIX + "{key}"
 
 
 class Mother:
+    """Mother holds the sisters of a Crum word."""
 
     def __init__(
         self,
@@ -197,6 +207,9 @@ class Mother:
 
 
 class CrumIndexer(Mother):
+    """CrumIndexer generates indexes and index indexes for Crum's
+    dictionary."""
+
     def __generate_index_body_aux(
         self,
         index_name: str,
@@ -267,6 +280,7 @@ class CrumIndexer(Mother):
 # decks. They only differ in the JavaScript, and the subset of the notes
 # included. Deduplicate the work to save a bit of time.
 class Crum(Decker):
+    """Crum represents a Crum deck."""
 
     key_sense_code_sense: dict[str, dict[str, str]] = {}
     images_by_key: defaultdict[str, list[str]] = defaultdict(list)
@@ -791,6 +805,7 @@ class Crum(Decker):
 
 
 class Copticsite(Decker):
+    """Copticsite represents a copticsite deck."""
 
     @staticmethod
     def __cell(row: pd.Series, col: str, line_br: bool = False) -> str:
@@ -852,6 +867,8 @@ class Copticsite(Decker):
 
 
 class KELLIA(Decker):
+    """KELLIA represents a KELLIA deck."""
+
     def __init__(
         self,
         deck_name: str,

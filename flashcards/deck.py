@@ -1,7 +1,10 @@
+"""A dictionary deck."""
+
 # TODO: For text generation, it's likely more efficient to use generators
 # and avoid concatenating the strings, unless necessary.
 # You can also use `writelines` instead of `write` to write a file, thus
 # avoiding saving the data in memory at any point.
+
 import os
 import re
 import subprocess
@@ -30,6 +33,12 @@ def _css_src_to_basename(match: re.Match[str]) -> str:
 
 
 class GenankiNote(genanki.Note):
+    """GenankiNote represents an Anki Note.
+
+    As of the time of writing, this is merely a wrapper used to override
+    a method.
+    """
+
     @property
     @typing.override
     # TODO: Resolve this error:
@@ -47,6 +56,8 @@ def _to_file_name(name: str) -> str:
 
 
 class HeaderCell:
+    """HeaderCell represents a cell in the header table."""
+
     def __init__(self, title: str, link: str) -> None:
         self.title: str = title
         self.link: str = link
@@ -58,6 +69,8 @@ class HeaderCell:
 
 
 class Headerer:
+    """Headerer can be used to generate a header."""
+
     def __init__(self, base_cells: list[HeaderCell]) -> None:
         self.cells: list[HeaderCell] = base_cells
 
@@ -73,8 +86,9 @@ class Headerer:
         yield "</table>"
 
 
-# TODO: Rename index to subindex, and rename index_index to index.
 class Index:
+    """Index is a single Deck index."""
+
     def __init__(
         self,
         title: str,
@@ -95,6 +109,8 @@ class Index:
 
 
 class IndexIndex:
+    """IndexIndex is an index of deck indexes."""
+
     def __init__(
         self,
         name: str,
@@ -157,7 +173,7 @@ class IndexIndex:
                     self.__iter_subindex_heads(),
                 ),
             )
-            list(m)
+            _ = list(m)
 
         # Write the index index!
         head = utils.html_head(
@@ -189,6 +205,8 @@ class IndexIndex:
 
 
 class Note:
+    """Note is a single note in a deck."""
+
     def __init__(
         self,
         key: str,
@@ -244,6 +262,8 @@ class Note:
 
 
 class Deck:
+    """Deck represents a dictionary deck."""
+
     def __init__(
         self,
         deck_name: str,
@@ -279,8 +299,8 @@ class Deck:
             return
         assert self.html_dir
         with utils.thread_pool_executor() as executor:
-            list(executor.map(self.__write_html, self.notes))
-            list(executor.map(self.__write_html, self.index_indexes))
+            _ = list(executor.map(self.__write_html, self.notes))
+            _ = list(executor.map(self.__write_html, self.index_indexes))
         utils.wrote(self.html_dir)
 
     def __anki_html(self, html: str) -> str:
