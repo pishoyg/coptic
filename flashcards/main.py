@@ -17,11 +17,31 @@ argparser = argparse.ArgumentParser(
 )
 
 _ = argparser.add_argument(
-    "--all",
+    "--crum",
     action="store_true",
     default=False,
-    help="Some decks rarely change, so they are normally skipped to speed up"
-    " the pipeline. Set this flag to process all decks.",
+    help="Generate the Crum HTML and Xooxle index.",
+)
+
+_ = argparser.add_argument(
+    "--kellia",
+    action="store_true",
+    default=False,
+    help="Generate the KELLIA Xooxle index.",
+)
+
+_ = argparser.add_argument(
+    "--copticsite",
+    action="store_true",
+    default=False,
+    help="Generate the copticsite Xooxle index.",
+)
+
+_ = argparser.add_argument(
+    "--anki",
+    action="store_true",
+    default=False,
+    help="Generate the combined Anki package.",
 )
 
 
@@ -68,18 +88,26 @@ def _decker_deck(decker: constants.Decker) -> deck.Deck:
 def main() -> None:
     args = argparser.parse_args()
 
-    with utils.thread_pool_executor() as executor:
-        list(executor.map(constants.Decker.html, constants.DECKERS))
+    # Write HTML output.
+    if args.crum:
+        constants.NAME_TO_DECKER[constants.CRUM_ALL].html()
 
-    with utils.thread_pool_executor() as executor:
-        decks = list(executor.map(_decker_deck, constants.DECKERS))
-        write_anki(decks)
+    # Write Anki output.
+    if args.anki:
+        with utils.thread_pool_executor() as executor:
+            decks = list(executor.map(_decker_deck, constants.DECKERS))
+            write_anki(decks)
 
-    indexes: list[xooxle.Index] = (
-        constants.XOOXLE_ALL if args.all else constants.XOOXLE
-    )
+    # Write Xooxle output.
+    indexes: list[xooxle.Index] = []
+    if args.crum:
+        indexes.append(constants.CRUM_XOOXLE)
+    if args.kellia:
+        indexes.append(constants.KELLIA_XOOXLE)
+    if args.copticsite:
+        indexes.append(constants.COPTICSITE_XOOXLE)
     with utils.thread_pool_executor() as executor:
-        list(executor.map(xooxle.Index.build, indexes))
+        _ = list(executor.map(xooxle.Index.build, indexes))
 
 
 if __name__ == "__main__":

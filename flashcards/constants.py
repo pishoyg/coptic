@@ -73,10 +73,9 @@ class Decker:
 
     # TODO: The `decker` type is a thin wrapper around `deck`. Eliminate it.
 
-    def __init__(self, deck_name: str, deck_id: int, write_html: bool) -> None:
+    def __init__(self, deck_name: str, deck_id: int) -> None:
         self._deck_name: str = deck_name
         self._deck_id: int = deck_id
-        self._write_html: bool = write_html
 
     def deck_(self) -> deck.Deck:
         return deck.Deck(
@@ -87,16 +86,13 @@ class Decker:
             notes=list(self.notes_aux()),
             html_dir=LEXICON_DIR,
             index_indexes=self.index_indexes(),
-            write_html=self._write_html,
         )
 
     def name(self) -> str:
         return self._deck_name
 
     def html(self) -> None:
-        if not self._write_html:
-            return
-        self.deck_().write_html_if_needed()
+        self.deck_().write_html()
 
     def notes_aux(self) -> abc.Generator[deck.Note]:
         raise NotImplementedError
@@ -386,9 +382,8 @@ class Crum(Decker):
         deck_name: str,
         deck_id: int,
         dialects: list[str] | None = None,
-        write_html: bool = False,
     ):
-        super().__init__(deck_name, deck_id, write_html)
+        super().__init__(deck_name, deck_id)
         self.dialects: list[str] = dialects or []
 
     @typing.override
@@ -814,9 +809,6 @@ class Copticsite(Decker):
             cell = _use_html_line_breaks(cell)
         return cell
 
-    def __init__(self, deck_name: str, deck_id: int) -> None:
-        super().__init__(deck_name, deck_id, False)
-
     @typing.override
     def notes_aux(self) -> abc.Generator[deck.Note]:
         # NOTE: The key is a protected field. Do not change unless you know what
@@ -876,7 +868,7 @@ class KELLIA(Decker):
         tsv: pd.DataFrame,
     ) -> None:
         self._tsv: pd.DataFrame = tsv
-        super().__init__(deck_name, deck_id, False)
+        super().__init__(deck_name, deck_id)
 
     def __cell(
         self,
@@ -966,7 +958,6 @@ DECKERS: list[Decker] = [
         CRUM_ALL,
         1284010387,
         [],
-        write_html=True,
     ),
     Crum(
         CRUM_BOHAIRIC,
@@ -1165,7 +1156,3 @@ COPTICSITE_XOOXLE = xooxle.Index(
     ],
     output=os.path.join(LEXICON_DIR, "copticsite.json"),
 )
-
-
-XOOXLE: list[xooxle.Index] = [CRUM_XOOXLE]
-XOOXLE_ALL: list[xooxle.Index] = XOOXLE + [KELLIA_XOOXLE, COPTICSITE_XOOXLE]

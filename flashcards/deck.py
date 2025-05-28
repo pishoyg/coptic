@@ -274,7 +274,6 @@ class Deck:
         notes: list[Note],
         html_dir: str = "",
         index_indexes: list[IndexIndex] | None = None,
-        write_html: bool = False,
     ) -> None:
 
         self.deck_name: str = deck_name
@@ -289,14 +288,11 @@ class Deck:
         )
         self.index_indexes: list[IndexIndex] = index_indexes or []
         self.html_dir: str = html_dir
-        self.write_html: bool = write_html
 
     def __write_html(self, o: Note | IndexIndex) -> None:
         o.write(self.html_dir)
 
-    def write_html_if_needed(self) -> None:
-        if not self.write_html:
-            return
+    def write_html(self) -> None:
         assert self.html_dir
         with utils.thread_pool_executor() as executor:
             _ = list(executor.map(self.__write_html, self.notes))
