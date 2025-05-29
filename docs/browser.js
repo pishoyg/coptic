@@ -98,23 +98,31 @@ export function height(elem) {
   return elem.getBoundingClientRect().top + window.scrollY;
 }
 /**
+ * Find the next, previous, or current element in the page, that matches the
+ * given query.
  *
- * @param query
- * @param target
- * @returns
+ * @param query - The query to filter elements.
+ * @param target - The target.
+ * @returns The requested element. If none matches the query, returns undefined.
  */
 export function findNextElement(query, target) {
-  const elements = Array.from(document.querySelectorAll(query));
-  elements.sort((a, b) =>
-    target == 'prev' ? height(b) - height(a) : height(a) - height(b)
-  );
-  const currentScrollY = window.scrollY;
-  return elements.find((element) =>
-    target === 'prev'
-      ? height(element) < currentScrollY - 10
-      : target === 'next'
-        ? height(element) > currentScrollY + 10
-        : height(element) >= currentScrollY - 1
+  const MIN_DELTA = 10;
+  const currentHeight = window.scrollY;
+  const delta = (el) => {
+    const elementHeight = height(el);
+    if (target === 'cur') {
+      return Math.abs(currentHeight - elementHeight);
+    }
+    if (target === 'next' && elementHeight > currentHeight + MIN_DELTA) {
+      return elementHeight - currentHeight;
+    }
+    if (target === 'prev' && elementHeight < currentHeight - MIN_DELTA) {
+      return currentHeight - elementHeight;
+    }
+    return Infinity;
+  };
+  return Array.from(document.querySelectorAll(query)).reduce((best, el) =>
+    delta(el) < delta(best) ? el : best
   );
 }
 /**
@@ -124,22 +132,19 @@ export function findNextElement(query, target) {
  */
 export function scrollToNextElement(query, target) {
   const elem = findNextElement(query, target);
-  if (!elem) {
-    return;
-  }
-  elem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  elem?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 /**
  *
  * @param id
  */
 export function click(id) {
-  document.getElementById(id).click();
+  document.getElementById(id)?.click();
 }
 /**
  *
  * @param id
  */
 export function focus(id) {
-  document.getElementById(id).focus();
+  document.getElementById(id)?.focus();
 }
