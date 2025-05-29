@@ -497,18 +497,26 @@ export class SearchResult extends ResultAggregator {
    * @returns the comparison key.
    */
   compareKey(): number[] {
-    return [
-      // Results are sorted based on the boundary type. Full-word matches should
-      // come first, followed by prefix matches, then suffix matches, then
-      // within-word matches.
-      this.boundaryType(),
-      // Results are sorted based on the first column that has a match.
-      // We do so based on the assumption that the earlier columns contain more
-      // relevant data. So a result with a match in the 1st column is likely
-      // more interesting to the user than a result with a match in the 2nd
-      // column, so it should show first.
-      this.results.findIndex((result) => result.match),
-    ];
+    // Results are sorted based on the boundary type.
+    // See the BoundaryType enum for the order.
+    const boundary: BoundaryType = this.boundaryType();
+    // Within all the candidates having a match with a given boundary type, we
+    // sort based on the index of the first field possessing a match with that
+    // boundary type.
+    // A candidate with a full-word match in the first field should rank higher
+    // than a candidate with a full-word match in the second field.
+    const boundaryIndex: number = this.results.findIndex(
+      (res) => res.boundaryType() === boundary
+    );
+    // Lastly, we sort based on the index of the first match, regardless of the
+    // boundary type of that match.
+    // Results are sorted based on the first column that has a match.
+    // We do so based on the assumption that the earlier columns contain more
+    // relevant data. So a result with a match in the 1st column is likely
+    // more interesting to the user than a result with a match in the 2nd
+    // column, so it should show first.
+    const firstMatchIndex: number = this.results.findIndex((res) => res.match);
+    return [boundary, boundaryIndex, firstMatchIndex];
   }
 }
 
@@ -657,12 +665,16 @@ class UnitSearchResult extends ResultAggregator {
 
 /**
  * BoundaryType represents the boundary type of a match.
+ * NOTE: The enum values are sorted such that the more significant matches have
+ * lower values, to aid in sorting by priority.
+ * Full-word matches come first, followed by prefix matches, then suffix
+ * matches, then mid-word matches.
  */
 enum BoundaryType {
   FULL_WORD = 0,
   PREFIX = 1,
   SUFFIX = 2,
-  WITHIN = 3,
+  MID_WORD = 3,
 }
 
 interface Match {
@@ -739,7 +751,7 @@ class Line {
               ? BoundaryType.PREFIX
               : after
                 ? BoundaryType.SUFFIX
-                : BoundaryType.WITHIN;
+                : BoundaryType.MID_WORD;
 
         return { start, end, boundaryType };
       })
