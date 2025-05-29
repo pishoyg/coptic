@@ -1,4 +1,12 @@
 #!/usr/bin/env python3
+"""Crum appendices helper."""
+# TODO: (#204) This module was intended as a generic helper for all appendices,
+# back when the appendices lived in a separate sheet from the main dictionary
+# data (see #325). At the moment, we no longer have a strong notiif9eeff39f
+# fixupon of appendiif9eeff39f fixupces, and we should probably group the logic
+# differently. This should be part of the more generic redesign of Crum's
+# dictionary.
+
 import argparse
 import collections
 import json
@@ -19,6 +27,7 @@ CRUM_FMT = "https://remnqymi.com/crum/{key}.html"
 ROOTS_MAIN = _SCRIPT_DIR / "data/output/tsv/roots.tsv"
 ROOTS = _SCRIPT_DIR / "data/input/coptwrd.tsv"
 GSPREAD_URL: str = (
+    # pylint: disable-next=line-too-long
     "https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg"
 )
 
@@ -51,6 +60,7 @@ CAT_SEP: str = ", "  # Category separator.
 # categories.
 # Perhaps wrap categories in <span class="category"> tags, which can then be
 # picked up by your JavaScript and have hyperlinks added to them.
+# pylint: disable=line-too-long
 KNOWN_CATEGORIES: dict[str, str] = (
     {
         # Biology
@@ -98,6 +108,7 @@ KNOWN_CATEGORIES: dict[str, str] = (
         "doubtful": "Represents words with an unknown or uncertain meaning.",
     }
 )
+# pylint: enable=line-too-long
 
 argparser: argparse.ArgumentParser = argparse.ArgumentParser(
     description="""Find and process appendices.""",
@@ -237,7 +248,9 @@ def stringify(row: dict) -> dict[str, str]:
     return {key: str(value) for key, value in row.items()}
 
 
-class person:
+class Person:
+    """A member of a house."""
+
     def __init__(self, raw: str) -> None:
         # TODO: (#340) Validate that the fragment, if present, actually exists
         # in this person's page.
@@ -254,7 +267,7 @@ class person:
         return " ".join(filter(None, [self.key, self.fragment]))
 
 
-class house:
+class House:
     """A house represents a branch of the family."""
 
     delete_empty_fragment: bool = False
@@ -266,7 +279,7 @@ class house:
         # has new joiners, they won't show here.
         self.ancestors_raw: str = cell
         # member is the current list of house members.
-        self.members: list[person] = [person(raw) for raw in ssplit(cell)]
+        self.members: list[Person] = [Person(raw) for raw in ssplit(cell)]
         # ancestors_formatted is a formatted representation of the list of the
         # original members.
         self.ancestors_formatted: str = self.string()
@@ -274,9 +287,9 @@ class house:
     def string(self) -> str:
         return SENSE_SEP.join(m.string() for m in self.members)
 
-    def has(self, p: person | str) -> bool:
+    def has(self, p: Person | str) -> bool:
         key: str = ""
-        if isinstance(p, person):
+        if isinstance(p, Person):
             key = p.key
         else:
             assert isinstance(p, str)
@@ -286,8 +299,8 @@ class house:
 
     def marry(
         self,
-        spouses: list[person],
-    ) -> tuple[list[person], list[person]]:
+        spouses: list[Person],
+    ) -> tuple[list[Person], list[Person]]:
         """Marry the given spouses into your house.
 
         Return:
@@ -299,12 +312,12 @@ class house:
             if spouse.key == self.key:
                 # Nothing to be done here! Even if this spouse (representing
                 # us).
-                # has a fragment, we never update ourselves, we only update our relations.
-                # It's our relations that need to have the fragments in their
-                # contact books.
+                # has a fragment, we never update ourselves, we only update our
+                # relations. It's our relations that need to have the fragments
+                # in their contact books.
                 continue
             # Check if the spouse is already a member.
-            existing_member: person | None = next(
+            existing_member: Person | None = next(
                 (m for m in self.members if m.key == spouse.key),
                 None,
             )
@@ -315,7 +328,7 @@ class house:
                 continue
             # Update the fragment if it has changed.
             if existing_member.fragment != spouse.fragment:
-                if not spouse.fragment and not house.delete_empty_fragment:
+                if not spouse.fragment and not House.delete_empty_fragment:
                     # The new spouse doesn't have a fragment. We still retain
                     # this member's fragment! It's likely that the deletion is
                     # not intended.
@@ -326,17 +339,17 @@ class house:
         return added, updated
 
 
-class family:
+class Family:
     """A family is made up of several houses, currently four."""
 
     def __init__(self, row: pd.Series | dict) -> None:
         self.key: str = row[KEY_COL]
-        self.sisters: house = house(row[KEY_COL], row[SISTERS_COL])
-        self.antonyms: house = house(row[KEY_COL], row[ANTONYMS_COL])
-        self.homonyms: house = house(row[KEY_COL], row[HOMONYMS_COL])
-        self.greek_sisters: house = house(row[KEY_COL], row[GREEK_SISTERS_COL])
+        self.sisters: House = House(row[KEY_COL], row[SISTERS_COL])
+        self.antonyms: House = House(row[KEY_COL], row[ANTONYMS_COL])
+        self.homonyms: House = House(row[KEY_COL], row[HOMONYMS_COL])
+        self.greek_sisters: House = House(row[KEY_COL], row[GREEK_SISTERS_COL])
 
-    def all_except_you(self) -> list[person]:
+    def all_except_you(self) -> list[Person]:
         return sum(
             [
                 house.members
@@ -350,7 +363,7 @@ class family:
             [],
         )
 
-    def natives_except_you(self) -> list[person]:
+    def natives_except_you(self) -> list[Person]:
         return sum(
             [
                 house.members
@@ -414,7 +427,9 @@ class family:
         )
 
 
-class validator:
+class Validator:
+    """Validator validates data."""
+
     def __init__(self) -> None:
         self.decoder: json.JSONDecoder = json.JSONDecoder(
             object_pairs_hook=self.dupe_checking_hook,
@@ -456,8 +471,8 @@ class validator:
             log.throw(key, "has a gap in the senses!")
 
     def validate_sisters(self, df: pd.DataFrame) -> None:
-        key_to_family: dict[str, family] = {
-            row[KEY_COL]: family(row) for _, row in df.iterrows()
+        key_to_family: dict[str, Family] = {
+            row[KEY_COL]: Family(row) for _, row in df.iterrows()
         }
         for fam in key_to_family.values():
             fam.validate(key_to_family)
@@ -479,7 +494,9 @@ class validator:
         self.validate_sisters(df)
 
 
-class _matriarch:
+class Matriarch:
+    """Matriarch controls family relations."""
+
     def __init__(self) -> None:
         # Worksheet 0 has the roots.
         self.sheet = gcloud.read_gspread(GSPREAD_URL, worksheet=0)
@@ -501,7 +518,7 @@ class _matriarch:
             ),
         }
 
-    def marry_house(self, row: dict, col: str, spouses: list[person]) -> house:
+    def marry_house(self, row: dict, col: str, spouses: list[Person]) -> House:
         """Given a row and its index, and a column name, and a list of values
         to add, update the call with the new values.
 
@@ -510,7 +527,7 @@ class _matriarch:
 
         Return the new house.
         """
-        huis: house = house(row[KEY_COL], row[col])
+        huis: House = House(row[KEY_COL], row[col])
         added, updated = huis.marry(spouses)
         if added or updated:
             args: list[str] = []
@@ -535,22 +552,25 @@ class _matriarch:
 
     def marry_family(
         self,
-        sisters: list[person] = [],
-        antonyms: list[person] = [],
-        homonyms: list[person] = [],
+        sisters: list[Person] | None = None,
+        antonyms: list[Person] | None = None,
+        homonyms: list[Person] | None = None,
     ) -> None:
+        sisters = sisters or []
+        antonyms = antonyms or []
+        homonyms = homonyms or []
         assert bool(homonyms) != bool(sisters or antonyms)
         assert not antonyms or sisters
 
-        def has(members: list[person], key: str) -> bool:
+        def has(members: list[Person], key: str) -> bool:
             return any(m.key == key for m in members)
 
         # Googls Sheets uses 1-based indexing.
         # We also add 1 to account for the header row.
         all_records: list[dict] = self.sheet.get_all_records()
         all_records = list(map(stringify, all_records))
-        key_to_family: dict[str, family] = {
-            row[KEY_COL]: family(row) for row in all_records
+        key_to_family: dict[str, Family] = {
+            row[KEY_COL]: Family(row) for row in all_records
         }
         row_idx: int = 1
         for row in all_records:
@@ -566,13 +586,13 @@ class _matriarch:
             elif has(homonyms, key):
                 h = homonyms
 
-            houses: dict[str, house] = {
+            houses: dict[str, House] = {
                 SISTERS_COL: self.marry_house(row, SISTERS_COL, s),
                 ANTONYMS_COL: self.marry_house(row, ANTONYMS_COL, a),
                 HOMONYMS_COL: self.marry_house(row, HOMONYMS_COL, h),
             }
             # Validate the proposed marriages.
-            family(
+            Family(
                 {
                     KEY_COL: key,
                     GREEK_SISTERS_COL: str(row[GREEK_SISTERS_COL]),
@@ -586,9 +606,10 @@ class _matriarch:
                     self.sheet.update_cell(row_idx, self.col_idx[col], new)
 
 
-class runner:
+class Runner:
+    """Program runner."""
 
-    mother: _matriarch | None = None
+    mother: Matriarch | None = None
 
     def preprocess_args(self, args: list[str] | None = None) -> bool:
         """
@@ -597,7 +618,7 @@ class runner:
             provided. *Option* argument don't affect this return value.
         """
         self.args: argparse.Namespace = argparser.parse_args(args)
-        house.delete_empty_fragment = self.args.delete_empty_fragment
+        House.delete_empty_fragment = self.args.delete_empty_fragment
 
         self.args.cat = sorted(self.args.cat)
         sane.verify_unique(self.args.cat, "Duplicate categories!")
@@ -605,7 +626,7 @@ class runner:
             if c not in KNOWN_CATEGORIES:
                 log.throw(c, "is not a known category!")
 
-        def url_to_person(url_or_raw: str) -> person:
+        def url_to_person(url_or_raw: str) -> Person:
             """Given a URL, return a string representing an encoded person
             initializer.
 
@@ -616,12 +637,12 @@ class runner:
                 - Input: "https://remnqymi.com/crum/26.html#:~:text=calf"
                 - Output: "26 calf"
             """
-            # NOTE: The following replacement of back slashes might be problematic.
-            # It was introduced to appease an idiosyncratic shell!
+            # NOTE: The following replacement of back slashes might be
+            # problematic. It was introduced to appease an idiosyncratic shell!
             url_or_raw = url_or_raw.replace("\\", "")
             if not url_or_raw.startswith("http"):
                 # This is not a URL, this is already a key.
-                return person(url_or_raw)
+                return Person(url_or_raw)
             url: str = url_or_raw
             del url_or_raw
             url = urllib.parse.unquote(url)
@@ -640,7 +661,7 @@ class runner:
             else:
                 # No fragment!
                 raw = key
-            return person(raw)
+            return Person(raw)
 
         self.args.sisters = list(map(url_to_person, self.args.sisters))
         self.args.antonyms = list(map(url_to_person, self.args.antonyms))
@@ -649,12 +670,16 @@ class runner:
         if self.args.keys:
             log.ass(
                 self.args.cat or self.args.override_cat,
-                "--keys must be used in combination with either --cat or --override_cat.",
+                "--keys must be used in combination with either",
+                "--cat",
+                "or",
+                "--override_cat.",
             )
         if self.args.delete_empty_fragment:
             log.ass(
                 self.args.sisters or self.args.antonyms or self.args.homonyms,
-                "--delete_empty_fragment used without any sisterhood arguments!",
+                "--delete_empty_fragment",
+                "used without any sisterhood arguments!",
             )
         # NOTE: The --delete_empty_fragment flag is not accounted for below!
         num_actions: int = sum(
@@ -675,7 +700,7 @@ class runner:
         return bool(num_actions)
 
     def validate(self) -> None:
-        validatoor: validator = validator()
+        validatoor: Validator = Validator()
         validatoor.validate(ROOTS, roots=True)
 
     def categories(self) -> None:
@@ -744,7 +769,7 @@ class runner:
                 # This type is of little interest at the moment.
                 continue
             cats: list[str] = []
-            subprocess.run(["open", CRUM_FMT.format(key=key)])
+            _ = subprocess.run(["open", CRUM_FMT.format(key=key)], check=True)
             while True:
                 cats = text.ssplit(
                     input(f"Key = {key}. Categories (empty to skip): "),
@@ -794,7 +819,7 @@ class runner:
         if self.mother:
             return
         log.info("Initializing...")
-        self.mother = _matriarch()
+        self.mother = Matriarch()
 
     def run(self) -> None:
         oneoff: bool = self.preprocess_args()
@@ -810,12 +835,12 @@ class runner:
             try:
                 self.preprocess_args(shlex.split(input("Command: ")))
                 self.once()
-            except Exception as e:
+            except Exception as e:  # pylint: disable=broad-exception-caught
                 log.error(e)
 
 
 def main() -> None:
-    r: runner = runner()
+    r: Runner = Runner()
     r.run()
 
 

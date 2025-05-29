@@ -11,8 +11,8 @@ consists of:
 
 For example, the following line is Marcion's representation of the word `ⲛⲁⲓ`
 from page 216b from Crum's dictionary:
-
-(S) na,naa (S,A,sA) nae (S,B) nai (S) naeih (F) nei,neei (S,A,B,F) ^na- *^[naHht, naht]^*
+    (S) na,naa (S,A,sA) nae (S,B) nai (S) naeih \
+    (F) nei,neei (S,A,B,F) ^na- *^[naHht, naht]^*
 
 This line has several words, namely:
   - (S) na,naa                        # 1 dialect, 2 spellings
@@ -57,6 +57,8 @@ from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import word as lexical
 from utils import log
 
+HREF_START = "*^<a href="
+
 
 def _apply_substitutions(
     line: str,
@@ -66,7 +68,7 @@ def _apply_substitutions(
     for pair in subs:
         p0 = pair[0]
         p1 = pair[1]
-        if isinstance(p1, lexical.type):
+        if isinstance(p1, lexical.Type):
             p1 = p1.coptic_symbol() if use_coptic_symbol else p1.marcion()
         assert isinstance(p1, str)
         if isinstance(p0, re.Pattern):
@@ -116,26 +118,25 @@ def parse_quality_cell(q: str) -> str:
     return constants.QUALITY_ENCODING[int(q)]
 
 
-def parse_type_cell(t: str) -> lexical.type:
+def parse_type_cell(t: str) -> lexical.Type:
     return constants.TYPE_ENCODING[int(t)]
 
 
 def parse_word_cell(
     line: str,
-    root_type: lexical.type,
+    root_type: lexical.Type,
     strict: bool,
     detach_types: bool,
     use_coptic_symbol: bool,
     normalize_optional: bool,
     normalize_assumed: bool,
-) -> list[lexical.structured_word]:
+) -> list[lexical.Word]:
     line = line.strip()
     # Replace the non-breaking space with a unicode space.
     line = line.replace("\xa0", " ")
     # TODO: Fix the quotation mark issue at the origin.
     # Right now, lines with references have misplaced double quotes, which we
     # fix manually below.
-    HREF_START = "*^<a href="
     if HREF_START in line:
         assert line.endswith('"')
         line = line[:-1]
@@ -160,7 +161,7 @@ def parse_word_cell(
         if any("ϧ" in spelling for spelling in s):
             d = ["B"]
         return [
-            lexical.structured_word(
+            lexical.Word(
                 d,
                 s,
                 t,
@@ -182,7 +183,7 @@ def parse_word_cell(
             use_coptic_symbol,
         )
         words.append(
-            lexical.structured_word(
+            lexical.Word(
                 d,
                 s,
                 t,
@@ -320,8 +321,8 @@ def _analyze_no_english(line_no_english: str) -> None:
 
 def _pick_up_detached_types(
     line: str,
-    detached_types: list[tuple[str, lexical.type]],
-) -> tuple[list[lexical.type], str]:
+    detached_types: list[tuple[str, lexical.Type]],
+) -> tuple[list[lexical.Type], str]:
     t = []
     for p in detached_types:
         if p[0] in line:
@@ -378,7 +379,7 @@ def _parse_english(line: str) -> str:
             assert not t
             # TODO: (#63) Stop using words for Coptic within English!
             out.append(
-                lexical.structured_word(
+                lexical.Word(
                     [],
                     s,
                     t,
@@ -427,7 +428,9 @@ def parse_english_cell(line: str) -> str:
 
 
 @functools.total_ordering
-class crum_page:
+class CrumPage:
+    """A page number in Crum's dictionary."""
+
     num: int
     col: str
 
@@ -461,8 +464,8 @@ class crum_page:
         return "".join(str(x) for x in self.parts())
 
 
-def parse_crum_cell(line: str) -> crum_page:
-    return crum_page(line)
+def parse_crum_cell(line: str) -> CrumPage:
+    return CrumPage(line)
 
 
 def parse_greek_cell(line: str) -> str:
@@ -471,9 +474,9 @@ def parse_greek_cell(line: str) -> str:
     return clean(line)
 
 
-def _ascii_to_unicode(ascii: str) -> str:
+def _ascii_to_unicode(txt: str) -> str:
     uni = ""
-    for c in ascii:
+    for c in txt:
         if c in constants.LETTER_ENCODING:
             uni = uni + constants.LETTER_ENCODING[c]
         else:
@@ -482,8 +485,8 @@ def _ascii_to_unicode(ascii: str) -> str:
     return clean(uni)
 
 
-def _ascii_to_unicode_greek(ascii: str) -> str:
-    uni = "".join(constants.GREEK_LETTER_ENCODING.get(c, c) for c in ascii)
+def _ascii_to_unicode_greek(txt: str) -> str:
+    uni = "".join(constants.GREEK_LETTER_ENCODING.get(c, c) for c in txt)
     return clean(uni)
 
 

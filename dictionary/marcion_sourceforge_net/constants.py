@@ -1,3 +1,5 @@
+"""Crum dictionary and parsing constants."""
+
 import re
 
 from dictionary.marcion_sourceforge_net import word as lexical
@@ -22,7 +24,11 @@ CRUM_LAST_PAGE_NUM = 953
 
 # Regular expressions used for parsing.
 DIALECTS_RE = re.compile(
-    r"\({d}(,{d})*\)".format(d="({})".format("|".join(DIALECTS))),
+    r"\({d}(,{d})*\)".format(
+        d="({})".format(  # pylint: disable=consider-using-f-string
+            "|".join(DIALECTS),
+        ),
+    ),
 )
 SPELLINGS_TYPES_REFERENCES_RE = re.compile(r"[^()]+")
 
@@ -151,101 +157,101 @@ QUALITY_ENCODING = {
 
 # TYPE_ENCODING is used to parse the "type" column.
 TYPE_ENCODING = {
-    0: lexical.type("-", "(-)", "-", None, append=False),
-    3: lexical.type(
+    0: lexical.Type("-", "(-)", "-", None, append=False),
+    3: lexical.Type(
         "noun",
         "(noun)",
         "noun",
         inflect.Type.NOUN_UNKNOWN_GENDER,
     ),  # (ⲟⲩ)
-    1: lexical.type(
+    1: lexical.Type(
         "noun male",
         "(ⲡ)",
         "noun male",
         inflect.Type.NOUN_MASCULINE,
     ),
-    4: lexical.type(
+    4: lexical.Type(
         "noun female",
         "(ⲧ)",
         "noun female",
         inflect.Type.NOUN_FEMININE,
     ),
-    22: lexical.type(
+    22: lexical.Type(
         "noun male/female",
         "(ⲡ/ⲧ)",
         "noun male/female",
         inflect.Type.NOUN_MASCULINE_OR_FEMININE,
     ),
-    8: lexical.type("plural", "(ⲛ)", "plural", inflect.Type.NOUN_PLURAL),
-    5: lexical.type("pronoun", "(pron.)", "pronoun", None),
-    23: lexical.type(
+    8: lexical.Type("plural", "(ⲛ)", "plural", inflect.Type.NOUN_PLURAL),
+    5: lexical.Type("pronoun", "(pron.)", "pronoun", None),
+    23: lexical.Type(
         "interrogative particle",
         "(interr. part.)",
         "interrogative particle",
         None,
     ),
-    14: lexical.type(
+    14: lexical.Type(
         "interrogative pronoun",
         "(interr. pron.)",
         "interrogative pronoun",
         None,
     ),
-    15: lexical.type(
+    15: lexical.Type(
         "interrogative adverb",
         "(interr. adv.)",
         "interrogative adverb",
         None,
     ),
-    2: lexical.type(
+    2: lexical.Type(
         "verb",
         "(v.)",
         "verb",
         inflect.Type.VERB_INFINITIVE,
         append=False,
     ),
-    21: lexical.type("verbal prefix", "(v. prefix)", "verbal prefix", None),
-    6: lexical.type(
+    21: lexical.Type("verbal prefix", "(v. prefix)", "verbal prefix", None),
+    6: lexical.Type(
         "adjective",
         "(adj.)",
         "adjective",
         inflect.Type.NOUN_MASCULINE_OR_FEMININE,
     ),
-    16: lexical.type("conjunction", "(conj.)", "conjunction", None),
-    7: lexical.type("adverb", "(adv.)", "adverb", None),
-    9: lexical.type("preposition", "(prep.)", "preposition", None),
-    13: lexical.type(
+    16: lexical.Type("conjunction", "(conj.)", "conjunction", None),
+    7: lexical.Type("adverb", "(adv.)", "adverb", None),
+    9: lexical.Type("preposition", "(prep.)", "preposition", None),
+    13: lexical.Type(
         "numeral",
         "(num.)",
         "numeral",
         inflect.Type.NOUN_UNKNOWN_GENDER,
     ),
-    10: lexical.type(
+    10: lexical.Type(
         "numeral male",
         "(num. ⲡ)",
         "numeral male",
         inflect.Type.NOUN_MASCULINE,
     ),
-    11: lexical.type(
+    11: lexical.Type(
         "numeral female",
         "(num. ⲧ)",
         "numeral female",
         inflect.Type.NOUN_FEMININE,
     ),
-    24: lexical.type(
+    24: lexical.Type(
         "numeral male/female",
         "(num. ⲡ/ⲧ)",
         "numeral male/female",
         inflect.Type.NOUN_MASCULINE_OR_FEMININE,
     ),
-    17: lexical.type("particle", "(part.)", "particle", None),
-    18: lexical.type("interjection", "(interjection)", "interjection", None),
-    20: lexical.type(
+    17: lexical.Type("particle", "(part.)", "particle", None),
+    18: lexical.Type("interjection", "(interjection)", "interjection", None),
+    20: lexical.Type(
         "personal pronoun",
         "(pers. pron.)",
         "personal pronoun",
         None,
     ),
-    99: lexical.type("HEADER", "(HEADER)", "HEADER", None, append=False),
+    99: lexical.Type("HEADER", "(HEADER)", "HEADER", None, append=False),
 }
 
 # PREPROCESSING, SPELLING_ANNOTATIONS, and DETACHED_TYPES, and POSTPROCESSING
@@ -273,7 +279,7 @@ SPELLING_ANNOTATIONS_1 = [
     # Prenominal form.
     (
         "-",
-        lexical.type(
+        lexical.Type(
             "-",
             "-",
             "prenominal form (likely)",
@@ -284,7 +290,7 @@ SPELLING_ANNOTATIONS_1 = [
     # Prenominal form. (This is a dash, not a hyphen.)
     (
         "–",
-        lexical.type(
+        lexical.Type(
             "-",
             "-",
             "prenominal form (likely)",
@@ -293,7 +299,7 @@ SPELLING_ANNOTATIONS_1 = [
     ),
     (
         "=",
-        lexical.type(
+        lexical.Type(
             "=",
             "=",
             "pronominal form",
@@ -302,7 +308,7 @@ SPELLING_ANNOTATIONS_1 = [
     ),  # Pronominal form. # ⸗
     (
         "+",
-        lexical.type(
+        lexical.Type(
             "+",
             "+",
             "qualitative form",
@@ -314,20 +320,20 @@ SPELLING_ANNOTATIONS_1 = [
 DETACHED_TYPES_1 = [
     # TODO: (#115) The question mark is not a detached type, and it might be
     # spelling-specific. Investigate.
-    ("$$", lexical.type("<i>(?)</i>", "(?)", "probably", None)),  # Probably.
+    ("$$", lexical.Type("<i>(?)</i>", "(?)", "probably", None)),  # Probably.
     (
         "***$",
-        lexical.type(
+        lexical.Type(
             "<i>noun male/female: </i>",
             "(ⲡ, ⲧ)",
             "noun male/female",
             inflect.Type.NOUN_MASCULINE_OR_FEMININE,
         ),
     ),
-    ("$**", lexical.type("<i>neg </i>", "(neg.)", "neg", None)),
+    ("$**", lexical.Type("<i>neg </i>", "(neg.)", "neg", None)),
     (
         "$*",
-        lexical.type(
+        lexical.Type(
             "<i>(nn)</i>",
             "(nn)",
             "(nn)",
@@ -336,7 +342,7 @@ DETACHED_TYPES_1 = [
     ),
     (
         "**$",
-        lexical.type(
+        lexical.Type(
             "<i>noun female: </i>",
             "(ⲧ)",
             "noun female",
@@ -345,7 +351,7 @@ DETACHED_TYPES_1 = [
     ),
     (
         "*$",
-        lexical.type(
+        lexical.Type(
             "<i>noun male: </i>",
             "(ⲡ)",
             "noun male",
@@ -354,7 +360,7 @@ DETACHED_TYPES_1 = [
     ),
     (
         "*****",
-        lexical.type(
+        lexical.Type(
             "<i>noun: </i>",
             "(noun)",
             "noun",
@@ -365,7 +371,7 @@ DETACHED_TYPES_1 = [
     # occurring after the type, not the whole line.
     (
         "****",
-        lexical.type(
+        lexical.Type(
             "<i>female: </i>",
             "(ⲧ)",
             "female",
@@ -374,11 +380,11 @@ DETACHED_TYPES_1 = [
     ),
     (
         "***",
-        lexical.type("<i>male: </i>", "(ⲡ)", "male", lexical.Gender.MASCULINE),
+        lexical.Type("<i>male: </i>", "(ⲡ)", "male", lexical.Gender.MASCULINE),
     ),
     (
         "**",
-        lexical.type(
+        lexical.Type(
             "<i>imperative: </i>",
             "(imp.)",
             "imperative",
@@ -387,17 +393,17 @@ DETACHED_TYPES_1 = [
     ),
     (
         "*",
-        lexical.type(
+        lexical.Type(
             "<i>plural: </i>",
             "(ⲛ)",
             "plural",
             lexical.Gender.PLURAL,
         ),
     ),
-    ("$", lexical.type("<i> &c</i>", "(&c)", "constructed with", None)),
+    ("$", lexical.Type("<i> &c</i>", "(&c)", "constructed with", None)),
     (
         "^^^",
-        lexical.type(
+        lexical.Type(
             "<i><b>c</b></i>",
             "(c)",
             "Not sure what this means!",
@@ -409,18 +415,18 @@ DETACHED_TYPES_1 = [
     # Fix!
     (
         "{nic}",
-        lexical.type("{nic}", "{nic}", "{nic}", None, append=False),
+        lexical.Type("{nic}", "{nic}", "{nic}", None, append=False),
     ),  # No idea!
 ]
 
 SPELLING_ANNOTATIONS_2 = [
-    ("^^", lexical.type("―", "―", "same spelling as above.", None)),
+    ("^^", lexical.Type("―", "―", "same spelling as above.", None)),
 ]
 
 DETACHED_TYPES_2 = [
     (
         "^",
-        lexical.type("<i>p c </i>", "(p.c.)", "conjunctive participle", None),
+        lexical.Type("<i>p c </i>", "(p.c.)", "conjunctive participle", None),
     ),
 ]
 

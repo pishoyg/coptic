@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Crum images helper."""
 import argparse
 import glob
 import json
@@ -21,6 +22,7 @@ from utils import file, log, sane, semver, text
 # Somehow!
 
 _SCRIPT_DIR = pathlib.Path(__file__).parent
+_TIMEOUT_S = 5
 
 TARGET_WIDTH = 300
 MIN_WIDTH = 200  # Minimum height of the input image.
@@ -97,6 +99,7 @@ QUERIERS_FMT: dict[str, list[str]] = {
         "https://www.google.com/search?q=site:wikipedia.org {query}&tbm=isch",
     ],
     "gicon": [
+        # pylint: disable-next=line-too-long
         "https://www.google.com/search?q=(site:freepik.com OR site:flaticon.com OR site:uxwing.com OR site:vecteezy.com) {query} icon&tbm=isch",
     ],
     # Search Bing, restricting the results to a given site.
@@ -112,6 +115,7 @@ QUERIERS_FMT: dict[str, list[str]] = {
         "https://www.bing.com/images/search?q=site:wikipedia.org {query}",
     ],
     "bicon": [
+        # pylint: disable-next=line-too-long
         "https://www.bing.com/images/search?q=(site:freepik.com OR site:flaticon.com OR site:uxwing.com OR site:vecteezy.com) {query} icon",
     ],
 }
@@ -279,7 +283,7 @@ def get_max_idx(g: list[str], key: str, sense: str) -> int:
 def os_open(*args: str):
     if not args:
         return
-    subprocess.run(["open"] + list(args))
+    _ = subprocess.run(["open"] + list(args), check=True)
 
 
 def get_downloads(args) -> list[str]:
@@ -427,7 +431,7 @@ def main():
         for stem in args.convert:
             convert(_stem_to_img_path(stem))
         exit()
-    prompter(args).prompt()
+    Prompter(args).prompt()
 
 
 def basename(url: str) -> str:
@@ -447,7 +451,7 @@ def retrieve(
     if is_wiki(url):
         headers = WIKI_HEADERS
     filename = filename or basename(url)
-    download = requests.get(url, headers=headers)
+    download = requests.get(url, headers=headers, timeout=_TIMEOUT_S)
     if not download.ok:
         log.throw(download.text)
     filename = os.path.join(args.downloads, filename)
@@ -502,15 +506,15 @@ def cp(a_stem: str, b_stem: str) -> None:
         shutil.copyfile(a, b)
 
 
-def _pretty(json: dict[str, str] | dict[str, list[str]] | list[str]):
-    if isinstance(json, list):
-        for x in json:
+def _pretty(j: dict[str, str] | dict[str, list[str]] | list[str]):
+    if isinstance(j, list):
+        for x in j:
             print(colorama.Fore.CYAN + x + colorama.Fore.RESET)
         return
 
-    assert isinstance(json, dict)
-    if all(isinstance(v, str) for v in json.values()):
-        for key, value in json.items():
+    assert isinstance(j, dict)
+    if all(isinstance(v, str) for v in j.values()):
+        for key, value in j.items():
             assert isinstance(value, str)
             print(
                 colorama.Fore.CYAN
@@ -523,8 +527,8 @@ def _pretty(json: dict[str, str] | dict[str, list[str]] | list[str]):
             )
         return
 
-    assert all(isinstance(v, list) for v in json.values())
-    for key, value in json.items():
+    assert all(isinstance(v, list) for v in j.values())
+    for key, value in j.items():
         assert isinstance(value, list)
         print(
             colorama.Fore.CYAN
@@ -600,7 +604,9 @@ def clear(key: str) -> None:
         log.info("cleared", stem)
 
 
-class prompter:
+class Prompter:
+    """Prompt user for commands."""
+
     def __init__(self, args):
         self.args = args
         self.plot_yes: int = 0
@@ -701,7 +707,7 @@ class prompter:
             "-",
             "[g|b|free|flat|wing|vec|wiki] ${QUERY}",
             "to search",
-            "Google / Bing / Freepik / UXWing / Flaticon / Vecteezy / Wikipedia",
+            "Google, Bing, Freepik, UXWing, Flaticon, Vecteezy, Wikipedia",
             "for the given query.",
         )
         log.info(
@@ -723,12 +729,13 @@ class prompter:
             "[gicon|bicon] ${QUERY}",
             "to search",
             "Google/Bing",
-            "for the given query, restricting results to known icon-providing sites.",
+            "for the given query, restricting results to known icon-providing "
+            "sites.",
         )
         print()
 
     def prompt(self):
-        for key in sorted(self.key_to_row.keys(), key=lambda k: int(k)):
+        for key in sorted(self.key_to_row.keys(), key=int):
             self.key = key
             self.row = self.key_to_row[self.key]
             if not self.prompt_for_word():
@@ -786,7 +793,7 @@ class prompter:
             # that have meaningful error messages.
             except AssertionError as e:
                 raise e
-            except Exception as e:
+            except Exception as e:  # pylint: disable=broad-exception-caught
                 log.error(e)
 
     def prompt_for_command(self) -> bool:
@@ -977,8 +984,8 @@ def batch(args):
             os.remove(src)
 
 
-def listdir_sorted(dir: str) -> list[str]:
-    return semver.sort_semver(file.paths(dir))
+def listdir_sorted(directory: str) -> list[str]:
+    return semver.sort_semver(file.paths(directory))
 
 
 def validate():

@@ -42,7 +42,7 @@ class _Keyer:
         return str(prv)
 
 
-def _title(word: list[lexical.structured_word]) -> str:
+def _title(word: list[lexical.Word]) -> str:
     return ", ".join(
         w.string(
             include_dialects=False,
@@ -139,13 +139,13 @@ def _process_data(df: pd.DataFrame, strict: bool) -> None:
         df[col] = values
 
 
-def _build_trees(roots: pd.DataFrame, derivations: pd.DataFrame) -> None:
+def _build_trees() -> None:
     derivations["depth"] = tree.depths(derivations)
     # Build trees.
     keys = [row["key"] for _, row in roots.iterrows()]
-    trees = {row["key"]: tree.node(row) for _, row in roots.iterrows()}
+    trees = {row["key"]: tree.Node(row) for _, row in roots.iterrows()}
     for _, row in derivations.iterrows():
-        trees[row["key_word"]].add_descendant(tree.node(row))
+        trees[row["key_word"]].add_descendant(tree.Node(row))
     for _, t in trees.items():
         t.preprocess()
 
@@ -156,7 +156,7 @@ def _build_trees(roots: pd.DataFrame, derivations: pd.DataFrame) -> None:
     roots["dialects"] = [", ".join(trees[key].dialects()) for key in keys]
 
 
-def _dialects(word: list[lexical.structured_word], is_root: bool) -> list[str]:
+def _dialects(word: list[lexical.Word], is_root: bool) -> list[str]:
     dialects: set[str] = set()
     for w in word:
         d = w.dialects()
@@ -174,7 +174,7 @@ def _dialects(word: list[lexical.structured_word], is_root: bool) -> list[str]:
 
 # Run external validators. While this may not be needed to run the parser, it's
 # desirable to execute it in the same entry point as the parser.
-app.runner().validate()
+app.Runner().validate()
 img.validate()
 
 # TODO: (#399): Export objects and methods, rather than TSVs!
@@ -190,4 +190,4 @@ derivations: pd.DataFrame = tsv.derivations()
 _process_data(derivations, strict=False)
 
 # Gain tree insights.
-_build_trees(roots, derivations)
+_build_trees()

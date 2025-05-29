@@ -1,5 +1,6 @@
+"""A word in Crum's dictionary."""
+
 import enum
-import typing
 
 from dictionary.marcion_sourceforge_net import constants
 from morphology import inflect
@@ -11,7 +12,9 @@ class Gender(enum.Enum):
     PLURAL = 3
 
 
-class type:
+class Type:
+    """A word type."""
+
     def __init__(
         self,
         marcion: str,
@@ -50,23 +53,38 @@ class type:
         return self._append
 
 
-class structured_word:
+class Word:
+    """A line in Crum's dictionary.
+
+    This represents a number of spellings (usually one, less commonly
+    two or more) and their associated dialects. All dialects in the line
+    apply to all the spellings in the line.
+
+    Oftentimes, that comprises everything in the line. Though other
+    entities may exist, such as a type override, a reference, or a
+    comment (in plain English).
+
+    As of the time of writing, we don't do a great job at extracting
+    those extra entities, and precisely pinpointing the spelling. Lots
+    of work needs to be done on improving line parsing.
+    """
+
     def __init__(
         self,
         dialects: list[str],
         spellings: list[str],
-        types: list[type],
+        types: list[Type],
         references: list[str],
-        root_type: typing.Optional[type],
+        root_type: Type | None,
         normalize_optional: bool = False,
         normalize_assumed: bool = False,
     ) -> None:
         assert all(d in constants.DIALECTS for d in dialects)
         self._dialects: list[str] = dialects
         self._spellings: list[str] = spellings
-        self._types: list[type] = types
+        self._types: list[Type] = types
         self._references: list[str] = references
-        self._root_type: typing.Optional[type] = root_type
+        self._root_type: Type | None = root_type
         self._assumed: list[bool] = []
 
         if normalize_optional:
@@ -252,7 +270,8 @@ class structured_word:
     def spellings(self, parenthesize_assumed: bool = True) -> list[str]:
         if not parenthesize_assumed and not self._is_normalized_assumed():
             raise ValueError(
-                "Can not remove assumed-spelling parentheses from unnormalized words!",
+                "Can not remove assumed-spelling parentheses from unnormalized"
+                " words!",
             )
         if not self._is_normalized_assumed():
             # The assumed-spelling parentheses are already there.
@@ -276,7 +295,7 @@ class structured_word:
         self,
         rt: inflect.Type | None,
         it: Gender,
-    ) -> typing.Optional[inflect.Type]:
+    ) -> inflect.Type | None:
         if rt is None:
             return None
         if rt.is_verb():
@@ -289,7 +308,7 @@ class structured_word:
             }[it]
         return None
 
-    def inflect_type(self) -> typing.Optional[inflect.Type]:
+    def inflect_type(self) -> inflect.Type | None:
         rt = self._root_type.inflect_type() if self._root_type else None
         # NOTE: The following if statement was introduced to appease `mypy`.
         # Reassess.
