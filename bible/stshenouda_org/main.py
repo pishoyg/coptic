@@ -14,7 +14,7 @@ from collections import abc
 import json5
 from ebooklib import epub  # type: ignore[import-untyped]
 
-import utils
+from utils import concur, file, log, page, paths
 
 # Input parameters
 
@@ -42,7 +42,7 @@ VERSE_PREFIX: re.Pattern = re.compile(r"^\(([^)]+)\)")
 
 # Output parameters
 
-OUTPUT_DIR: str = os.path.join(utils.SITE_DIR, "bible/")
+OUTPUT_DIR: str = os.path.join(paths.SITE_DIR, "bible/")
 
 # NOTE: The Bible directory structure is flat, so "index.html" is reachable
 # from an `href` to `./`, regardless of which file you're looking at.
@@ -127,7 +127,7 @@ class Verse:
             lang: normalize(lang, self.__recolor(data[lang], data))
             for lang in LANGUAGES
         }
-        self.unnumbered = {
+        self.unnumbered: dict[str, str] = {
             lang: normalize(lang, VERSE_PREFIX.sub("", data[lang]).strip())
             for lang in LANGUAGES
         }
@@ -333,12 +333,12 @@ class Book(Item):
                 os.path.join(INPUT_DIR, book_name + ".json"),
                 encoding="utf-8",
             ).read()
-            utils.info("Loaded book:", book_name)
+            log.info("Loaded book:", book_name)
             data = json_loads(t)
             assert isinstance(data, list)
             return data
         except FileNotFoundError:
-            utils.warn("Book not found:", book_name)
+            log.warn("Book not found:", book_name)
             return []
 
     @typing.override
@@ -378,7 +378,7 @@ class Bible:
     """The Bible."""
 
     def __init__(self) -> None:
-        with utils.thread_pool_executor() as executor:
+        with concur.thread_pool_executor() as executor:
             self.books: list[Book] = list(
                 executor.map(self.__build_book, self.__iter_books()),
             )
@@ -500,8 +500,8 @@ class HTMLBuilder:
         prv: str = "",
         is_epub: bool = False,
     ) -> abc.Generator[str]:
-        return utils.html_aux(
-            utils.html_head(
+        return page.html_aux(
+            page.html_head(
                 title=title,
                 page_class=page_class,
                 search="" if is_epub else SEARCH,
@@ -552,7 +552,7 @@ class HTMLBuilder:
         def write_chapter(chapter: Chapter) -> None:
             self.__write_html_chapter(chapter, langs, subdir)
 
-        with utils.thread_pool_executor() as executor:
+        with concur.thread_pool_executor() as executor:
             list(executor.map(write_chapter, bible.chain_chapters()))
 
         toc = self.__html_aux(
@@ -561,7 +561,7 @@ class HTMLBuilder:
             page_class=INDEX_CLASS,
         )
         index_path: str = os.path.join(OUTPUT_DIR, subdir, INDEX)
-        utils.writelines(toc, index_path)
+        file.writelines(toc, index_path)
 
     def __write_html_chapter(
         self,
@@ -585,7 +585,7 @@ class HTMLBuilder:
             subdir,
             chapter.path(is_epub=False),
         )
-        utils.writelines(out, path, make_dir=True)
+        file.writelines(out, path, make_dir=True)
 
     def write_epub(self, bible: Bible, langs: list[str], subdir: str) -> None:
         kindle: epub.EpubBook = epub.EpubBook()
@@ -651,14 +651,14 @@ class HTMLBuilder:
             subdir,
             f"{identifier.lower()}.epub",
         )
-        utils.mk_parent_dir(path)
+        file.mk_parent_dir(path)
         # TODO: The following method can fail silently. To verify that the
         # content has actually been written, perhaps write to a temporary file,
         # then verify its existence, then copy to the actual destination.
         # Asserting that the file exists doesn't suffice because it might have
         # been there already.
         epub.write_epub(path, kindle)
-        utils.wrote(path)
+        log.wrote(path)
 
     def write(
         self,
@@ -703,7 +703,7 @@ def main():
         (table_builder, "html", bible, LANGUAGES, ""),
     ]
 
-    with utils.thread_pool_executor() as executor:
+    with concur.thread_pool_executor() as executor:
         list(executor.map(lambda args: HTMLBuilder.write(*args), tasks))
 
 

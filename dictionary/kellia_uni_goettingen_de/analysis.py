@@ -9,7 +9,7 @@ import re
 
 import bs4
 
-import utils
+from utils import file
 
 _SCRIPT_DIR = pathlib.Path(__file__).parent
 INPUT_XML = (
@@ -71,7 +71,7 @@ def prettify(d: dict) -> str:
         od[k] = d[k]
     assert set(d.keys()) == set(od.keys())
     del d
-    out = utils.json_dumps(od)
+    out = file.json_dumps(od)
     out = LIST_ELEMENT_CLOSING_QUOTE.sub('", ', out)
     return out
 

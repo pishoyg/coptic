@@ -13,7 +13,7 @@ from collections import abc
 
 import genanki  # type: ignore[import-untyped]
 
-import utils
+from utils import concur, file, log, page, sane
 
 NOTE_CLASS = "NOTE"
 ANKI_NOTE_CLASS = "ANKI"
@@ -103,9 +103,9 @@ class Index:
         return _to_file_name(self.title) + ".html"
 
     def write(self, dir_: str, head: str, header: str) -> None:
-        content = utils.html_aux(head, header, *self.body)
+        content = page.html_aux(head, header, *self.body)
         path = os.path.join(dir_, self.basename())
-        utils.writelines(content, path, log=False)
+        file.writelines(content, path, report=False)
 
 
 class IndexIndex:
@@ -148,7 +148,7 @@ class IndexIndex:
                 if i < len(self.indexes) - 1
                 else ""
             )
-            yield utils.html_head(
+            yield page.html_head(
                 title=index.title,
                 page_class=INDEX_CLASS,
                 search=self.search,
@@ -164,7 +164,7 @@ class IndexIndex:
     def write(self, dir_: str):
         # A subindex header includes a link to the index that contains
         # this subindex.
-        with utils.thread_pool_executor() as executor:
+        with concur.thread_pool_executor() as executor:
             m = executor.map(
                 self.__write_subindex,
                 zip(
@@ -176,19 +176,19 @@ class IndexIndex:
             _ = list(m)
 
         # Write the index index!
-        head = utils.html_head(
+        head = page.html_head(
             title=self.name,
             page_class=INDEX_INDEX_CLASS,
             search=self.search,
             scripts=self.scripts,
         )
-        html = utils.html_aux(
+        html = page.html_aux(
             head,
             *self.header,
             *self.__body_aux(),
         )
         path = os.path.join(dir_, self.__basename())
-        utils.writelines(html, path, log=False)
+        file.writelines(html, path, report=False)
 
     def __body_aux(self) -> abc.Generator[str]:
         yield f"<h1>{self.name}</h2>"
@@ -233,7 +233,7 @@ class Note:
         self.front: str = front
         self.back: str = back
         self.js_path: str = js_path
-        self.head: str = utils.html_head(
+        self.head: str = page.html_head(
             title=title,
             page_class=NOTE_CLASS,
             search=search,
@@ -245,7 +245,7 @@ class Note:
         self.js_start: str = js_start
 
     def __html_aux(self) -> abc.Generator[str]:
-        return utils.html_aux(
+        return page.html_aux(
             self.head,
             '<div class="front" id="front">',
             self.front,
@@ -258,7 +258,7 @@ class Note:
 
     def write(self, dir_: str) -> None:
         path: str = os.path.join(dir_, self.key + ".html")
-        utils.write(self.html, path, log=False)
+        file.write(self.html, path, report=False)
 
 
 class Deck:
@@ -280,9 +280,9 @@ class Deck:
         self.deck_id: int = deck_id
         self.deck_description: str = deck_description
         self.css_dir: str = os.path.dirname(css_path)
-        self.css: str = utils.read(css_path)
+        self.css: str = file.read(css_path)
         self.notes: list[Note] = notes
-        utils.verify_unique(
+        sane.verify_unique(
             (note.key for note in self.notes),
             "Note keys must be unique!",
         )
@@ -294,10 +294,10 @@ class Deck:
 
     def write_html(self) -> None:
         assert self.html_dir
-        with utils.thread_pool_executor() as executor:
+        with concur.thread_pool_executor() as executor:
             _ = list(executor.map(self.__write_html, self.notes))
             _ = list(executor.map(self.__write_html, self.index_indexes))
-        utils.wrote(self.html_dir)
+        log.wrote(self.html_dir)
 
     def __anki_html(self, html: str) -> str:
         return IMG_SRC_FMT.sub(_html_src_to_basename, html)
@@ -308,8 +308,8 @@ class Deck:
     def __anki_js_aux(self) -> abc.Generator[str]:
         # We don't allow notes to have different JavaScript, because in our Anki
         # package, we define the JavaScript in the template.
-        js_path: str = utils.assert_one({note.js_path for note in self.notes})
-        js_start: str = utils.assert_one(
+        js_path: str = sane.assert_one({note.js_path for note in self.notes})
+        js_start: str = sane.assert_one(
             {note.js_start for note in self.notes},
         )
 

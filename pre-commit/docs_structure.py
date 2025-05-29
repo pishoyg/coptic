@@ -18,7 +18,7 @@ from collections import abc
 
 import bs4
 
-import utils
+from utils import concur, log, paths
 
 parser = argparse.ArgumentParser(
     description="Validate the structure of `docs/`."
@@ -55,22 +55,22 @@ class Pattern:
     def __str__(self) -> str:
         return " | ".join(self._patterns)
 
-    def match(self, paths: list[str]) -> tuple[list[str], list[str]]:
+    def match(self, file_paths: list[str]) -> tuple[list[str], list[str]]:
         results: dict[bool, list[str]] = {True: [], False: []}
         # hit stores whether any of our patterns achieved a hit at least once.
         hit = [False for _ in self._patterns]
-        for path in paths:
+        for path in file_paths:
             match = [
                 fnmatch.fnmatch(path, pattern) for pattern in self._patterns
             ]
             hit = [h or m for h, m in zip(hit, match)]
             results[any(match)].append(path)
 
-        assert len(results[True]) + len(results[False]) == len(paths)
+        assert len(results[True]) + len(results[False]) == len(file_paths)
         if self._required:
             assert len(hit) == len(self._patterns)
             for p, h in zip(self._patterns, hit):
-                utils.assass(h, p, "did not match any files!")
+                log.assass(h, p, "did not match any files!")
         return results[True], results[False]
 
 
@@ -125,7 +125,7 @@ def _print_classes(pattern_to_classes: dict[Pattern, set[str]]):
     for pattern, classes in pattern_to_classes.items():
         if not pattern.print:
             return
-        utils.info(f"{pattern}:", _join(classes), level=False)
+        log.info(f"{pattern}:", _join(classes), level=False)
 
     class_to_patterns: collections.defaultdict[str, list[Pattern]] = (
         collections.defaultdict(list)
@@ -136,15 +136,15 @@ def _print_classes(pattern_to_classes: dict[Pattern, set[str]]):
 
     # TODO: Ideally, you should check whether any offending classes are present
     # before deciding to print an error message.
-    utils.error("Classes shared between different modules:", level=False)
+    log.error("Classes shared between different modules:", level=False)
     for cls, patterns in class_to_patterns.items():
         if len(patterns) >= 2:
-            utils.warn(f"{cls}:", _join(patterns), level=False)
+            log.warn(f"{cls}:", _join(patterns), level=False)
 
 
 def main():
     args = parser.parse_args()
-    directory: pathlib.Path = pathlib.Path(utils.SITE_DIR).resolve()
+    directory: pathlib.Path = pathlib.Path(paths.SITE_DIR).resolve()
 
     files: list[str] = [
         str(f.relative_to(directory))
@@ -163,7 +163,7 @@ def main():
             # Not HTML files.
             continue
 
-        with utils.process_pool_executor() as executor:
+        with concur.process_pool_executor() as executor:
             mapped = executor.map(
                 _classes_in_file,
                 [directory / f for f in matched],
@@ -171,7 +171,7 @@ def main():
             classes: set[str] = {cls for classes in mapped for cls in classes}
             pattern_to_classes[pattern] = classes
 
-    utils.assass(
+    log.assass(
         not files,
         "The following files were not matched by any pattern:",
         files,

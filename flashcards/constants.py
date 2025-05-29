@@ -11,12 +11,12 @@ import pandas as pd
 import dictionary.copticsite_com.main as copticsite
 import dictionary.kellia_uni_goettingen_de.main as kellia
 import dictionary.marcion_sourceforge_net.main as crum
-import utils
 import xooxle
 from flashcards import deck
+from utils import file, paths, semver, text
 
 # Data
-LEXICON_DIR = os.path.join(utils.SITE_DIR, "crum/")
+LEXICON_DIR = os.path.join(paths.SITE_DIR, "crum/")
 CRUM_DIALECTS = ["S", "Sa", "Sf", "A", "L", "B", "F", "Fb", "O", "NH"]
 # TODO: (#399) Crum should export images through an interface, so you don't
 # have to look up the files directly.
@@ -30,7 +30,7 @@ if (localStorage.getItem('d') === null) {{
 }}
 """
 
-CSS = os.path.join(utils.SITE_DIR, "style.css")  # Not a relative path!
+CSS = os.path.join(paths.SITE_DIR, "style.css")  # Not a relative path!
 CRUM_SEARCH = "./"  # Relative to the HTML write directory.
 CRUM_HOME = "../"  # Relative to the HTML write directory.
 DAWOUD_DIR = "../dawoud/"  # Relative to the HTML write directory.
@@ -114,8 +114,8 @@ def _join(*parts: str) -> str:
     return "".join(parts)
 
 
-def _use_html_line_breaks(text: str) -> str:
-    return text.replace("\n", LINE_BREAK)
+def _use_html_line_breaks(txt: str) -> str:
+    return txt.replace("\n", LINE_BREAK)
 
 
 class Sister:
@@ -198,7 +198,7 @@ class Mother:
         )
 
     def gather_aux(self, sisters: str) -> abc.Generator[str]:
-        for s in utils.ssplit(sisters, ";"):
+        for s in text.ssplit(sisters, ";"):
             yield from self.parse(s).html_aux()
 
 
@@ -252,7 +252,7 @@ class CrumIndexer(Mother):
         for _, row in crum.roots.iterrows():
             keys.append(row["key"])
             types.append([row["type-parsed"]])
-            categories.append(utils.ssplit(row["categories"], ","))
+            categories.append(text.ssplit(row["categories"], ","))
 
         return [
             deck.IndexIndex(
@@ -351,7 +351,7 @@ class Crum(Decker):
 
     @staticmethod
     def __get_caption(path: str) -> str:
-        stem = utils.stem(path)
+        stem = file.stem(path)
         key, sense, _ = stem.split("-")
         assert key.isdigit()
         assert sense.isdigit()
@@ -369,10 +369,10 @@ class Crum(Decker):
 
     @staticmethod
     def __explanatory_alt(path: str) -> str:
-        stem = utils.stem(path)
+        stem = file.stem(path)
         source_path = os.path.join(EXPLANATORY_SOURCES, f"{stem}.txt")
         sources: list[str] = [
-            line.strip() for line in utils.read(source_path).split("\n")
+            line.strip() for line in file.read(source_path).split("\n")
         ]
         sources = [line for line in sources if line.startswith("http")]
         return sources[0] if sources else stem
@@ -569,14 +569,14 @@ class Crum(Decker):
 
         # Images.
         basenames: list[str] = self.images_by_key.get(key, [])
-        basenames = utils.sort_semver(basenames)
+        basenames = semver.sort_semver(basenames)
         if not basenames:
             yield LINE_BREAK
         else:
             yield '<div id="images" class="images">'
             for basename in basenames:
                 yield from _img_aux(
-                    id_=f"explanatory{utils.stem(basename)}",
+                    id_=f"explanatory{file.stem(basename)}",
                     cls="explanatory",
                     alt=Crum.__explanatory_alt(basename),
                     path=os.path.join(EXPLANATORY_DIR, basename),
@@ -1054,7 +1054,7 @@ _COPTICSITE_RETAIN_CLASSES = {
 
 
 def _is_crum_word(path: str) -> bool:
-    return utils.stem(path).isdigit()
+    return file.stem(path).isdigit()
 
 
 CRUM_XOOXLE = xooxle.Index(

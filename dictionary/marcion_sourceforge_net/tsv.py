@@ -4,7 +4,7 @@ import pathlib
 
 import pandas as pd
 
-import utils
+from utils import file, log
 
 _SCRIPT_DIR = pathlib.Path(__file__).parent
 _WRD = _SCRIPT_DIR / "data" / "input" / "coptwrd.tsv"
@@ -29,8 +29,8 @@ def is_sorted(tsv: pd.DataFrame, column_names: list[str]):
 
 
 def roots() -> pd.DataFrame:
-    tsv: pd.DataFrame = utils.read_tsv(_WRD)
-    utils.assass(
+    tsv: pd.DataFrame = file.read_tsv(_WRD)
+    log.assass(
         is_sorted(tsv, _WRD_SORT_COLS),
         "Roots",
         "TSV is not sorted by",
@@ -41,14 +41,14 @@ def roots() -> pd.DataFrame:
 
 def _valid_drv_row(row: pd.Series) -> bool:
     key = row["key"]
-    utils.assass(
+    log.assass(
         not row[_DRV_ALL_COLS].eq("").any(),
         "Row",
         key,
         "doesn't populate all the columns",
         _DRV_ALL_COLS,
     )
-    utils.assass(
+    log.assass(
         not row[_DRV_ANY_COLS].eq("").all(),
         "Row",
         key,
@@ -59,13 +59,13 @@ def _valid_drv_row(row: pd.Series) -> bool:
 
 
 def derivations() -> pd.DataFrame:
-    tsv = utils.read_tsv(_DRV)
+    tsv = file.read_tsv(_DRV)
 
     # Validate empty rows are inserted.
     prev_key_word = ""
     for _, row in tsv.iterrows():
         cur: str = row[_KEY_WORD_COL]
-        utils.assass(
+        log.assass(
             cur == prev_key_word or not cur or not prev_key_word,
             "Empty rows are broken at",
             cur,
@@ -81,7 +81,7 @@ def derivations() -> pd.DataFrame:
     tsv.apply(_valid_drv_row, axis=1)
 
     # Validate sorting.
-    utils.assass(
+    log.assass(
         is_sorted(tsv, _DRV_SORT_COLS),
         "Derivations",
         "TSV is not sorted by",

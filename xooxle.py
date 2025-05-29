@@ -84,7 +84,7 @@ from typing import Callable
 
 import bs4
 
-import utils
+from utils import concur, file
 
 # KEY is the name of the key field in the output. This must match the name
 # expected by the Xooxle search logic.
@@ -485,13 +485,13 @@ class Index:
         assert os.path.isdir(self._input)
         # Recursively search for all HTML files.
         for root, _, files in os.walk(self._input):
-            for file in files:
-                if not file.endswith(_EXTENSION):
+            for f in files:
+                if not f.endswith(_EXTENSION):
                     continue
-                if self._include and not self._include(file):
+                if self._include and not self._include(f):
                     continue
-                path = os.path.join(root, file)
-                yield path, utils.read(path)
+                path = os.path.join(root, f)
+                yield path, file.read(path)
 
     def _is_comment(self, elem: bs4.PageElement) -> bool:
         return isinstance(elem, bs4.element.Comment)
@@ -523,7 +523,7 @@ class Index:
         }
 
     def build(self) -> None:
-        with utils.thread_pool_executor() as executor:
+        with concur.thread_pool_executor() as executor:
             data: Iterable[dict[str, str]] = executor.map(
                 self.process_file,
                 self.iter_input(),
@@ -536,7 +536,7 @@ class Index:
         }
 
         self.validate(json)
-        utils.write(utils.json_dumps(json), self._output)
+        file.write(file.json_dumps(json), self._output)
 
     def validate(self, json: dict[str, typing.Any]) -> None:
         for entry in json["data"]:

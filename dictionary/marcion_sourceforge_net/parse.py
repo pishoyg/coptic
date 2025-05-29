@@ -53,9 +53,9 @@ Remarks about the parsing:
 import functools
 import re
 
-import utils
 from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import word as lexical
+from utils import log
 
 
 def _apply_substitutions(
@@ -315,7 +315,7 @@ def _analyze_no_english(line_no_english: str) -> None:
                 or c in constants.ACCEPTED_UNKNOWN_CHARS_2
             )
             if not valid:
-                utils.error(s)
+                log.error(s)
 
 
 def _pick_up_detached_types(

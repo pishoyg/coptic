@@ -1,9 +1,7 @@
-"""Set up."""
+"""Set up Python dependencies."""
 
-from setuptools import find_packages, setup  # type: ignore[import-untyped]
+import setuptools
 
-setup(
-    name="coptic",
-    py_modules=["utils"],
-    packages=find_packages(),
-)
+NAME = "coptic"
+
+_ = setuptools.setup(name=NAME, packages=setuptools.find_packages())

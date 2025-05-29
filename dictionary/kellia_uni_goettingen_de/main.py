@@ -22,7 +22,7 @@ from collections import OrderedDict, abc, defaultdict
 
 import pandas as pd
 
-import utils
+from utils import log
 
 _SCRIPT_DIR = pathlib.Path(__file__).parent
 _V_1_2_DIR = _SCRIPT_DIR / "data" / "raw" / "v1.2"
@@ -726,7 +726,7 @@ def _process_entry(
             if is_lemma:
                 lemma = first_orth
     if lemma is None:
-        utils.error("No lemma type for entry of", orths[0].text)
+        log.error("No lemma type for entry of", orths[0].text)
 
     first: list[ET.Element] = []
     last: list[ET.Element] = []

@@ -6,9 +6,9 @@ import os
 
 import genanki  # type: ignore[import-untyped]
 
-import utils
 import xooxle
 from flashcards import constants, deck
+from utils import concur, file, log, sane
 
 ANKI_PATH = os.path.join(constants.LEXICON_DIR, "anki/coptic.apkg")
 
@@ -46,24 +46,24 @@ _ = argparser.add_argument(
 
 
 def verify_unique_object_keys(decks: list[genanki.Deck]) -> None:
-    utils.verify_unique([d.deck_id for d in decks], "Deck ids")
-    utils.verify_unique([d.name for d in decks], "Deck names")
-    utils.verify_unique(
+    sane.verify_unique([d.deck_id for d in decks], "Deck ids")
+    sane.verify_unique([d.name for d in decks], "Deck names")
+    sane.verify_unique(
         [model.name for d in decks for model in d.models],
         "Model names",
     )
-    utils.verify_unique(
+    sane.verify_unique(
         [model.id for d in decks for model in d.models],
         "Model ids",
     )
-    utils.verify_unique(
+    sane.verify_unique(
         [node.guid for d in decks for node in d.notes],
         "Node GUIDs.",
     )
 
 
 def write_anki(decks: list[deck.Deck]) -> None:
-    utils.mk_parent_dir(ANKI_PATH)
+    file.mk_parent_dir(ANKI_PATH)
     media_files: set[str] = set()
     anki_decks = []
 
@@ -78,7 +78,7 @@ def write_anki(decks: list[deck.Deck]) -> None:
 
     package = genanki.Package(anki_decks, media_files=media_files)
     package.write_to_file(ANKI_PATH)
-    utils.wrote(ANKI_PATH)
+    log.wrote(ANKI_PATH)
 
 
 def _decker_deck(decker: constants.Decker) -> deck.Deck:
@@ -94,7 +94,7 @@ def main() -> None:
 
     # Write Anki output.
     if args.anki:
-        with utils.thread_pool_executor() as executor:
+        with concur.thread_pool_executor() as executor:
             decks = list(executor.map(_decker_deck, constants.DECKERS))
             write_anki(decks)
 
@@ -106,7 +106,7 @@ def main() -> None:
         indexes.append(constants.KELLIA_XOOXLE)
     if args.copticsite:
         indexes.append(constants.COPTICSITE_XOOXLE)
-    with utils.thread_pool_executor() as executor:
+    with concur.thread_pool_executor() as executor:
         _ = list(executor.map(xooxle.Index.build, indexes))
 
 

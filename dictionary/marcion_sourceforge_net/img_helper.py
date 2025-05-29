@@ -15,7 +15,7 @@ import pandas as pd
 import requests
 from PIL import Image
 
-import utils
+from utils import file, log, sane, semver, text
 
 # TODO: Prevent users from updating an image without updating its source.
 # Somehow!
@@ -297,7 +297,7 @@ def invalid_size(files: list[str]) -> list[str]:
         image = Image.open(f)  # type: ignore[attr-defined]
         width, height = image.size
         if width < MIN_WIDTH:
-            utils.warn(
+            log.warn(
                 f,
                 "has a width of",
                 width,
@@ -308,7 +308,7 @@ def invalid_size(files: list[str]) -> list[str]:
             invalid.append(f)
             continue
         if width < PREFER_MIN_WIDTH:
-            utils.warn(
+            log.warn(
                 f,
                 "has a width of",
                 width,
@@ -318,7 +318,7 @@ def invalid_size(files: list[str]) -> list[str]:
             )
         height = int(height * 300 / width)
         if height < MIN_RESIZE_HEIGHT or height > MAX_RESIZE_HEIGHT:
-            utils.warn(
+            log.warn(
                 f,
                 "will have a resized height of",
                 height,
@@ -333,7 +333,7 @@ def invalid_size(files: list[str]) -> list[str]:
             height < PREFER_MIN_RESIZE_HEIGHT
             or height > PREFER_MAX_RESIZE_HEIGHT
         ):
-            utils.warn(
+            log.warn(
                 f,
                 "will have a resized height of",
                 height,
@@ -352,15 +352,15 @@ def is_wiki(url: str) -> bool:
 
 def get_target(path: str) -> str:
     assert path.startswith(IMG_DIR)
-    stem, ext = utils.splitext(path)
+    stem, ext = file.splitext(path)
     assert STEM_RE.fullmatch(stem)
-    utils.ass(ext in VALID_EXTENSIONS, ext, "is not a valid extension")
+    log.ass(ext in VALID_EXTENSIONS, ext, "is not a valid extension")
     return os.path.join(IMG_300_DIR, stem + EXT_MAP.get(ext, ext))
 
 
 def get_source(path: str) -> str:
     assert path.startswith(IMG_DIR)
-    return os.path.join(SOURCES_DIR, utils.stem(path) + ".txt")
+    return os.path.join(SOURCES_DIR, file.stem(path) + ".txt")
 
 
 def convert(path: str, skip_existing: bool = False) -> None:
@@ -384,7 +384,7 @@ def convert(path: str, skip_existing: bool = False) -> None:
             target,
         ],
     )
-    utils.wrote(target)
+    log.wrote(target)
 
 
 def main():
@@ -405,7 +405,7 @@ def main():
         ),
     )
     if len(actions) >= 2:
-        utils.fatal("Up to one action argument can be given at a time.")
+        log.fatal("Up to one action argument can be given at a time.")
 
     if args.validate:
         validate()
@@ -449,11 +449,11 @@ def retrieve(
     filename = filename or basename(url)
     download = requests.get(url, headers=headers)
     if not download.ok:
-        utils.throw(download.text)
+        log.throw(download.text)
     filename = os.path.join(args.downloads, filename)
     with open(filename, "wb") as f:
         f.write(download.content)
-        utils.wrote(filename)
+        log.wrote(filename)
     return filename
 
 
@@ -473,7 +473,7 @@ def _get_artifacts(stem: str, img_ext: str = "") -> list[str]:
 
 def rm(stem: str) -> None:
     if not exists(stem):
-        utils.throw(stem, "doesn't exist!")
+        log.throw(stem, "doesn't exist!")
     for art in _get_artifacts(stem):
         os.remove(art)
 
@@ -484,9 +484,9 @@ def exists(stem: str) -> bool:
 
 def mv(a_stem: str, b_stem: str) -> None:
     if exists(b_stem):
-        utils.throw(b_stem, "already exists!")
+        log.throw(b_stem, "already exists!")
     a_arts = _get_artifacts(a_stem)
-    img_ext = utils.ext(a_arts[0])
+    img_ext = file.ext(a_arts[0])
     b_arts = _get_artifacts(b_stem, img_ext)
     for a, b in zip(a_arts, b_arts):
         pathlib.Path(a).rename(b)
@@ -494,9 +494,9 @@ def mv(a_stem: str, b_stem: str) -> None:
 
 def cp(a_stem: str, b_stem: str) -> None:
     if exists(b_stem):
-        utils.throw(b_stem, "already exists!")
+        log.throw(b_stem, "already exists!")
     a_arts = _get_artifacts(a_stem)
-    img_ext = utils.ext(a_arts[0])
+    img_ext = file.ext(a_arts[0])
     b_arts = _get_artifacts(b_stem, img_ext)
     for a, b in zip(a_arts, b_arts):
         shutil.copyfile(a, b)
@@ -560,21 +560,21 @@ def infer_urls(*urls: str) -> tuple[list[str], list[str]]:
     for url in urls:
         err = is_invalid_url(url)
         if err:
-            utils.throw(*err)
+            log.throw(*err)
     for url in urls:
         (reference, download)[is_image_url(url)].append(url)
     while not reference or not download:
-        utils.warn(
+        log.warn(
             "We encourage you to provide both reference and download URLs.",
         )
-        extras = utils.ssplit(input("URLs: (s to skip)").lower())
+        extras = text.ssplit(input("URLs: (s to skip)").lower())
         if extras == ["s"]:
             break
         valid = True
         for ext in extras:
             err = is_invalid_url(ext)
             if err:
-                utils.error(*err)
+                log.error(*err)
                 valid = False
                 break
         if not valid:
@@ -593,11 +593,11 @@ def existing(key: str) -> list[str]:
 
 def clear(key: str) -> None:
     if not key.isdigit():
-        utils.throw(key, "is not a valid word key.")
+        log.throw(key, "is not a valid word key.")
     for path in existing(key):
-        stem = utils.stem(path)
+        stem = file.stem(path)
         rm(stem)
-        utils.info("cleared", stem)
+        log.info("cleared", stem)
 
 
 class prompter:
@@ -606,8 +606,7 @@ class prompter:
         self.plot_yes: int = 0
         self.plot_no: int = 0
         self.key_to_row: dict[str, pd.Series] = {
-            row[KEY_COL]: row
-            for _, row in utils.read_tsv(INPUT_TSV, KEY_COL).iterrows()
+            row[KEY_COL]: row for _, row in file.read_tsv(INPUT_TSV).iterrows()
         }
 
         self.sources: dict[str, list[str]] = {}
@@ -624,20 +623,20 @@ class prompter:
 
     def print_info(self):
         print()
-        utils.info("Data:")
-        utils.info("- Key:", self.key)
-        utils.info("- Link:", link(self.row[KEY_COL]))
-        utils.info("- Existing:")
+        log.info("Data:")
+        log.info("- Key:", self.key)
+        log.info("- Link:", link(self.row[KEY_COL]))
+        log.info("- Existing:")
         _pretty(existing(self.key))
-        utils.info("- Downloads:")
+        log.info("- Downloads:")
         _pretty(get_downloads(self.args))
-        utils.info("- Senses:")
+        log.info("- Senses:")
         _pretty(json.loads(self.key_to_row[self.key][SENSES_COL]))
-        utils.info("- Sources:")
+        log.info("- Sources:")
         _pretty(self.sources)
         print()
-        utils.info("Commands:")
-        utils.info(
+        log.info("Commands:")
+        log.info(
             "-",
             "${URL}*",
             "to download an image and store the URL as the source."
@@ -645,35 +644,35 @@ class prompter:
             " URLs. The former will be retrieved, and the latter will"
             " simply be stored as sources.",
         )
-        utils.info("-", "key ${KEY}", "to point to a different key.")
-        utils.info(
+        log.info("-", "key ${KEY}", "to point to a different key.")
+        log.info(
             "-",
             "rm ${KEY}",
             "to delete an image and its artifacts.",
         )
-        utils.info(
+        log.info(
             "-",
             "mv ${KEY_1} ${KEY_2}",
             "to move an image and its artefacts.",
         )
-        utils.info(
+        log.info(
             "-",
             "cp ${KEY_1} ${KEY_2}",
             "to copy an image and its artefacts.",
         )
-        utils.info(
+        log.info(
             "-",
             "clear [${KEY}]",
             "to delete all images and artifacts belonging to the given"
             " key, or the current key if none is specified.",
         )
 
-        utils.info(
+        log.info(
             "-",
             "convert ${KEY}",
             "to (re)convert one image.",
         )
-        utils.info(
+        log.info(
             "-",
             "source ${SOURCE}",
             "to populate the source for the only image in",
@@ -681,45 +680,45 @@ class prompter:
             "that is missing a source. Multiple URLs are allowed, in which"
             " case all are recorded as sources for the said image.",
         )
-        utils.info(
+        log.info(
             "-",
             "source ${PATH} ${SOURCE}",
             "to populate the source for a given image. Multiple URLs are"
             " allowed, in which case all are recorded as sources for the"
             " said image.",
         )
-        utils.info("-", "s", "to skip.")
-        utils.info("-", "ss", "to force-skip.")
-        utils.info("-", "cs", "to clear sources.")
-        utils.info(
+        log.info("-", "s", "to skip.")
+        log.info("-", "ss", "to force-skip.")
+        log.info("-", "cs", "to clear sources.")
+        log.info(
             "-",
             "${SENSE}",
             "to assign a sense ID and initiate transfer.",
         )
         print()
-        utils.info("Queries:")
-        utils.info(
+        log.info("Queries:")
+        log.info(
             "-",
             "[g|b|free|flat|wing|vec|wiki] ${QUERY}",
             "to search",
             "Google / Bing / Freepik / UXWing / Flaticon / Vecteezy / Wikipedia",
             "for the given query.",
         )
-        utils.info(
+        log.info(
             "-",
             "[gfree|gflat|gwing|gvec|gwiki] ${QUERY}",
             "to search",
             "Google",
             "for the given query, restricting results to the given site.",
         )
-        utils.info(
+        log.info(
             "-",
             "[bfree|bflat|bwing|bvec|bwiki] ${QUERY}",
             "to search",
             "Bing",
             "for the given query, restricting results to the given site.",
         )
-        utils.info(
+        log.info(
             "-",
             "[gicon|bicon] ${QUERY}",
             "to search",
@@ -788,7 +787,7 @@ class prompter:
             except AssertionError as e:
                 raise e
             except Exception as e:
-                utils.error(e)
+                log.error(e)
 
     def prompt_for_command(self) -> bool:
         """
@@ -801,7 +800,7 @@ class prompter:
         command = command.strip()
         if not command:
             return True
-        split = utils.split(command)
+        split = text.split(command)
         command, params = split[0].lower(), split[1:]
         del split
 
@@ -809,14 +808,14 @@ class prompter:
             # S for skip!
             files = get_downloads(self.args)
             if files:
-                utils.throw(
+                log.throw(
                     "You can't skip with a dirty downloads directory:",
                     files,
                 )
             # We clear the sources!
             # It's guaranteed that the downloads directory is clean.
             self.sources.clear()
-            utils.info("Sources cleared!")
+            log.info("Sources cleared!")
             return False
 
         if command == "ss":
@@ -825,7 +824,7 @@ class prompter:
 
         if command == "cs":
             self.sources.clear()
-            utils.info("Sources cleared!")
+            log.info("Sources cleared!")
             return True
 
         if command == "key":
@@ -845,13 +844,13 @@ class prompter:
                 f for f in get_downloads(self.args) if f not in self.sources
             ]
             if len(files) != 1:
-                utils.throw(
+                log.throw(
                     "We can only assign sources to 1 file, got:",
                     files,
                 )
             params = [p for p in params if p.startswith("http")]
             if not params:
-                utils.throw("No source given!")
+                log.throw("No source given!")
             self.sources[files[0]] = sum(infer_urls(*params), [])
             return True
 
@@ -891,20 +890,20 @@ class prompter:
             return True
 
         if not command.isdigit():
-            utils.throw("Can't make sense of", command)
+            log.throw("Can't make sense of", command)
 
         sense = int(command)
         if sense <= 0:
-            utils.throw("Sense must be a positive integer, got:", sense)
+            log.throw("Sense must be a positive integer, got:", sense)
 
         files = get_downloads(self.args)
 
         # Force valid extension.
         invalid = [
-            e for e in map(utils.ext, files) if e not in VALID_EXTENSIONS
+            e for e in map(file.ext, files) if e not in VALID_EXTENSIONS
         ]
         if invalid:
-            utils.throw(
+            log.throw(
                 "Invalid extensions:",
                 invalid,
                 "Add them to the list if you're sure your script can"
@@ -914,18 +913,18 @@ class prompter:
         # Force size.
         invalid = invalid_size(files)
         if invalid:
-            utils.throw("Images have an invalid size:", invalid)
+            log.throw("Images have an invalid size:", invalid)
 
         # Force sources.
-        for file in files:
-            if file not in self.sources:
-                utils.throw("Please populate the source for:", file)
+        for f in files:
+            if f not in self.sources:
+                log.throw("Please populate the source for:", f)
 
         # If there are no files, we assume that the user doesn't want to
         # add pictures for this word. (Unless they typed a sense, in which
         # case it would be weird!)
         if not files:
-            utils.throw(
+            log.throw(
                 "You typed a sense, but there are no pictures! This"
                 " doesn't make sense!",
             )
@@ -949,37 +948,37 @@ class prompter:
 
         # Move the files.
         idx = get_max_idx(existing(self.key), str(self.key), str(sense))
-        for file in files:
+        for f in files:
             idx += 1
-            ext = utils.ext(file)
+            ext = file.ext(f)
             new_file = os.path.join(IMG_DIR, f"{self.key}-{sense}-{idx}{ext}")
-            pathlib.Path(file).rename(new_file)
+            pathlib.Path(f).rename(new_file)
             convert(new_file)
-            utils.write("\n".join(self.sources[file]), get_source(new_file))
+            file.write("\n".join(self.sources[f]), get_source(new_file))
 
         return True
 
 
 def batch(args):
     def key(path):
-        return int(utils.stem(path).split("-")[0])
+        return int(file.stem(path).split("-")[0])
 
-    images = utils.paths(IMG_DIR)
+    images = file.paths(IMG_DIR)
     images = sorted(images, key=key)
     for path in images:
         convert(path, args.skip_existing)
     targets = {get_target(p) for p in images}
-    for converted in utils.paths(IMG_300_DIR):
+    for converted in file.paths(IMG_300_DIR):
         if converted not in targets:
             os.remove(converted)
     sources = {get_source(path) for path in images}
-    for src in utils.paths(SOURCES_DIR):
+    for src in file.paths(SOURCES_DIR):
         if src not in sources:
             os.remove(src)
 
 
 def listdir_sorted(dir: str) -> list[str]:
-    return utils.sort_semver(utils.paths(dir))
+    return semver.sort_semver(file.paths(dir))
 
 
 def validate():
@@ -987,63 +986,63 @@ def validate():
     converted_images = listdir_sorted(IMG_300_DIR)
     sources = listdir_sorted(SOURCES_DIR)
 
-    utils.verify_unique(utils.stems(images), "images:")
-    utils.verify_unique(utils.stems(converted_images), "converted images:")
-    utils.verify_unique(utils.stems(sources), "sources:")
+    sane.verify_unique(file.stems(images), "images:")
+    sane.verify_unique(file.stems(converted_images), "converted images:")
+    sane.verify_unique(file.stems(sources), "sources:")
 
     # Checking that extensions are valid.
-    utils.verify_all_belong_to_set(
-        utils.exts(images),
+    sane.verify_all_belong_to_set(
+        file.exts(images),
         VALID_EXTENSIONS,
         "Images: Unknown extension:",
     )
-    utils.verify_all_belong_to_set(
-        utils.exts(converted_images),
+    sane.verify_all_belong_to_set(
+        file.exts(converted_images),
         VALID_EXTENSIONS_300,
         "Converted Images: Unknown extension:",
     )
-    utils.verify_all_belong_to_set(
-        utils.exts(sources),
+    sane.verify_all_belong_to_set(
+        file.exts(sources),
         {".txt"},
         "Sources: Unknown extension:",
     )
 
     # Verify that all three directories have the same set of IDs.
-    utils.verify_equal_sets(
-        utils.stems(images),
-        utils.stems(converted_images),
+    sane.verify_equal_sets(
+        file.stems(images),
+        file.stems(converted_images),
         "Images and converted images:",
     )
-    utils.verify_equal_sets(
-        utils.stems(images),
-        utils.stems(sources),
+    sane.verify_equal_sets(
+        file.stems(images),
+        file.stems(sources),
         "Images and sources:",
     )
 
     # Check that all images have valid IDs.
-    for stem in utils.stems(images):
+    for stem in file.stems(images):
         match = STEM_RE.fullmatch(stem)
         if match:
             continue
-        utils.fatal("Invalid stem:", stem)
+        log.fatal("Invalid stem:", stem)
 
     # Validate content of the source files.
     for path in sources:
-        content: str = utils.read(path)
+        content: str = file.read(path)
         if not content:
             # TODO: (#258) Ban empty sources.
             continue
-        lines: list[str] = utils.split(content, "\n")
+        lines: list[str] = text.split(content, "\n")
         del content
         if not lines:
-            utils.fatal("Source file is not empty, but has empty lines:", path)
+            log.fatal("Source file is not empty, but has empty lines:", path)
         for line in lines:
             if line.startswith("http"):
                 continue
             # TODO: (#258) Stop using city names. Always have a URL.
             if NAME_RE.fullmatch(line):
                 continue
-            utils.fatal(
+            log.fatal(
                 "Can't make sense of this source:",
                 line,
                 "in file",

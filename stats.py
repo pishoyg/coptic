@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-import utils
+from utils import log
 
 TSV_FILE = "data/stats.tsv"
 COLUMNS: dict[str | None, list[str]] = {
@@ -127,7 +127,7 @@ def validate(df: pd.DataFrame) -> None:
     )
     excluded: set[str] = set(COLUMNS[None])
     if available != (included | excluded):
-        utils.fatal(
+        log.fatal(
             "Absent columns:",
             available - (included | excluded),
             "Extra columns",
@@ -135,7 +135,7 @@ def validate(df: pd.DataFrame) -> None:
         )
     dupe = included & excluded
     if dupe:
-        utils.fatal(
+        log.fatal(
             "The following elements are marked as excluded although they are"
             " used:",
             dupe,
@@ -143,7 +143,7 @@ def validate(df: pd.DataFrame) -> None:
     del dupe
     for key, columns in COLUMNS.items():
         if not columns:
-            utils.fatal(key, "is empty!")
+            log.fatal(key, "is empty!")
 
 
 def main():

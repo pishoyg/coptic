@@ -10,7 +10,7 @@ import urllib
 
 import pandas as pd
 
-import utils
+from utils import file, gcloud, log, sane, text
 
 # TODO: Add validation for derivations once we start populating their
 # appendices.
@@ -226,11 +226,11 @@ argparser.add_argument(
 
 
 def csplit(cell: str) -> list[str]:
-    return utils.ssplit(cell, CAT_SEP.strip())
+    return text.ssplit(cell, CAT_SEP.strip())
 
 
 def ssplit(cell: str) -> list[str]:
-    return utils.ssplit(cell, SENSE_SEP.strip())
+    return text.ssplit(cell, SENSE_SEP.strip())
 
 
 def stringify(row: dict) -> dict[str, str]:
@@ -372,11 +372,11 @@ class family:
         relatives: list[str] = [r.key for r in self.all_except_you()]
         # Verify no relative is recorded twice.
         if len(relatives) != len(set(relatives)):
-            utils.throw("Duplicate sisters found at", self.key)
+            log.throw("Duplicate sisters found at", self.key)
         # Verify that you haven't been mistakenly counted as a relative of
         # yourself.
         if self.key in relatives:
-            utils.throw("Circular sisterhood at", self.key)
+            log.throw("Circular sisterhood at", self.key)
         # Restrict the checks from here on to the native relatives.
         relatives = [r.key for r in self.natives_except_you()]
         for house, name in [
@@ -385,12 +385,12 @@ class family:
             (self.homonyms, "homonyms"),
         ]:
             if house.string() != house.ancestors_raw:
-                utils.throw("House", self.key, "/", name, "needs formatting!")
+                log.throw("House", self.key, "/", name, "needs formatting!")
         if not key_to_family:
             # We can't perform further validation.
             return
         # Verify that all relatives are documented.
-        utils.verify_all_belong_to_set(
+        sane.verify_all_belong_to_set(
             relatives,
             key_to_family,
             "Nonexisting sister",
@@ -427,7 +427,7 @@ class validator:
                 map(lambda p: p[0], pairs),
             ).items()
         ):
-            utils.throw("duplicate elements in JSON:", pairs)
+            log.throw("duplicate elements in JSON:", pairs)
         return {key: value for key, value in pairs}
 
     def parse_senses(self, senses: str) -> dict[str, str]:
@@ -445,7 +445,7 @@ class validator:
         for sense_id in parsed:
             if sense_id.isdigit():
                 continue
-            utils.throw(
+            log.throw(
                 key,
                 "has a sense with an invalid key",
                 sense_id,
@@ -453,7 +453,7 @@ class validator:
             )
         largest: int = max(map(int, parsed.keys()))
         if largest != len(parsed):
-            utils.throw(key, "has a gap in the senses!")
+            log.throw(key, "has a gap in the senses!")
 
     def validate_sisters(self, df: pd.DataFrame) -> None:
         key_to_family: dict[str, family] = {
@@ -466,10 +466,10 @@ class validator:
         categories = csplit(raw_categories)
         for cat in categories:
             if cat not in KNOWN_CATEGORIES:
-                utils.throw(key, "has an unknown category:", cat)
+                log.throw(key, "has an unknown category:", cat)
 
     def validate(self, path: str | pathlib.Path, roots: bool = False) -> None:
-        df: pd.DataFrame = utils.read_tsv(path)
+        df: pd.DataFrame = file.read_tsv(path)
         for _, row in df.iterrows():
             key: str = row[KEY_COL]
             self.validate_senses(key, row[SENSES_COL])
@@ -482,20 +482,23 @@ class validator:
 class _matriarch:
     def __init__(self) -> None:
         # Worksheet 0 has the roots.
-        self.sheet = utils.read_gspread(GSPREAD_URL, worksheet=0)
+        self.sheet = gcloud.read_gspread(GSPREAD_URL, worksheet=0)
         self.keys: set[str] = {
             str(record[KEY_COL]) for record in self.sheet.get_all_records()
         }
 
         self.col_idx: dict[str, int] = {
-            SISTERS_COL: utils.get_column_index(self.sheet, SISTERS_COL),
-            ANTONYMS_COL: utils.get_column_index(self.sheet, ANTONYMS_COL),
-            HOMONYMS_COL: utils.get_column_index(self.sheet, HOMONYMS_COL),
-            GREEK_SISTERS_COL: utils.get_column_index(
+            SISTERS_COL: gcloud.get_column_index(self.sheet, SISTERS_COL),
+            ANTONYMS_COL: gcloud.get_column_index(self.sheet, ANTONYMS_COL),
+            HOMONYMS_COL: gcloud.get_column_index(self.sheet, HOMONYMS_COL),
+            GREEK_SISTERS_COL: gcloud.get_column_index(
                 self.sheet,
                 GREEK_SISTERS_COL,
             ),
-            CATEGORIES_COL: utils.get_column_index(self.sheet, CATEGORIES_COL),
+            CATEGORIES_COL: gcloud.get_column_index(
+                self.sheet,
+                CATEGORIES_COL,
+            ),
         }
 
     def marry_house(self, row: dict, col: str, spouses: list[person]) -> house:
@@ -520,14 +523,14 @@ class _matriarch:
                     ["Updating", SENSE_SEP.join(m.string() for m in updated)],
                 )
             args.extend(["in", huis.key, "/", col])
-            utils.info(*args)
+            log.info(*args)
         elif huis.string() != huis.ancestors_raw:
-            utils.info("Reformatting", huis.key, "/", col)
+            log.info("Reformatting", huis.key, "/", col)
         else:
             if spouses:
                 # We only log this line when verbosity is warranted.
                 # Verbosity is warranted if we have an actual update request.
-                utils.warn("No changes to", huis.key, "/", col)
+                log.warn("No changes to", huis.key, "/", col)
         return huis
 
     def marry_family(
@@ -597,10 +600,10 @@ class runner:
         house.delete_empty_fragment = self.args.delete_empty_fragment
 
         self.args.cat = sorted(self.args.cat)
-        utils.verify_unique(self.args.cat, "Duplicate categories!")
+        sane.verify_unique(self.args.cat, "Duplicate categories!")
         for c in self.args.cat:
             if c not in KNOWN_CATEGORIES:
-                utils.throw(c, "is not a known category!")
+                log.throw(c, "is not a known category!")
 
         def url_to_person(url_or_raw: str) -> person:
             """Given a URL, return a string representing an encoded person
@@ -644,12 +647,12 @@ class runner:
         self.args.homonyms = list(map(url_to_person, self.args.homonyms))
 
         if self.args.keys:
-            utils.ass(
+            log.ass(
                 self.args.cat or self.args.override_cat,
                 "--keys must be used in combination with either --cat or --override_cat.",
             )
         if self.args.delete_empty_fragment:
-            utils.ass(
+            log.ass(
                 self.args.sisters or self.args.antonyms or self.args.homonyms,
                 "--delete_empty_fragment used without any sisterhood arguments!",
             )
@@ -668,7 +671,7 @@ class runner:
         )
 
         if num_actions > 1:
-            utils.throw("At most one command is required.")
+            log.throw("At most one command is required.")
         return bool(num_actions)
 
     def validate(self) -> None:
@@ -682,7 +685,7 @@ class runner:
             for row in self.mother.sheet.get_all_records():
                 cat = row[CATEGORIES_COL]
                 assert isinstance(cat, str)
-                if any(c in self.args.cat for c in utils.ssplit(cat)):
+                if any(c in self.args.cat for c in text.ssplit(cat)):
                     print(row[KEY_COL])
             return
         for key in self.args.keys:
@@ -703,7 +706,7 @@ class runner:
                 new_cat = CAT_SEP.join(
                     sorted(current_cats | set(self.args.cat)),
                 )
-            utils.info("Updating categories of", key, "to", new_cat)
+            log.info("Updating categories of", key, "to", new_cat)
             self.mother.sheet.update_cell(row_idx, col_idx, new_cat)
 
     def categories_prompt(self) -> None:
@@ -713,7 +716,7 @@ class runner:
         col_idx = self.mother.col_idx[CATEGORIES_COL]
         key_to_main_record = {
             row[KEY_COL]: row
-            for _, row in utils.read_tsv(ROOTS_MAIN).iterrows()
+            for _, row in file.read_tsv(ROOTS_MAIN).iterrows()
         }
         for record in self.mother.sheet.get_all_records():
             row_idx += 1
@@ -743,19 +746,19 @@ class runner:
             cats: list[str] = []
             subprocess.run(["open", CRUM_FMT.format(key=key)])
             while True:
-                cats = utils.ssplit(
+                cats = text.ssplit(
                     input(f"Key = {key}. Categories (empty to skip): "),
                 )
                 unknown = [c for c in cats if c not in KNOWN_CATEGORIES]
                 if unknown:
-                    utils.error("Unknown categories:", unknown)
+                    log.error("Unknown categories:", unknown)
                     continue
                 break
             if not cats:
                 # The user didn't input anything!
                 continue
             new_cat = CAT_SEP.join(cats)
-            utils.info("Updating categories to", new_cat)
+            log.info("Updating categories to", new_cat)
             threading.Thread(
                 target=self.mother.sheet.update_cell,
                 args=(row_idx, col_idx, new_cat),
@@ -790,7 +793,7 @@ class runner:
     def init(self) -> None:
         if self.mother:
             return
-        utils.info("Initializing...")
+        log.info("Initializing...")
         self.mother = _matriarch()
 
     def run(self) -> None:
@@ -808,7 +811,7 @@ class runner:
                 self.preprocess_args(shlex.split(input("Command: ")))
                 self.once()
             except Exception as e:
-                utils.error(e)
+                log.error(e)
 
 
 def main() -> None:
