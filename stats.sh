@@ -73,7 +73,7 @@ foc_count () {
 }
 
 loc_shared () {
-  echo $(( $(loc . -depth 1) + $(loc test) + $(loc pre-commit) + $(loc .github) ))
+  echo $(( $(loc . -depth 1) + $(loc utils) + $(loc pre-commit) + $(loc .github) ))
 }
 
 extensions () {
@@ -196,7 +196,7 @@ LOC_FLASHCARDS=$(loc "flashcards")
 LOC_GRAMMAR=$(loc "grammar")
 LOC_KEYBOARD=$(loc "keyboard")
 LOC_MORPHOLOGY=$(loc "morphology")
-LOC_SITE=$(( $(loc "web") + $(loc "docs") ))
+LOC_SITE=$(( $(loc "docs") ))
 LOC_SHARED=$(loc_shared)
 
 readonly TOTAL="$((
