@@ -1,6 +1,7 @@
 import * as xooxle from '../xooxle.js';
 import * as collapse from '../collapse.js';
-import * as utils from '../utils.js';
+import * as css from '../css.js';
+import * as browser from '../browser.js';
 import * as highlight from './highlight.js';
 import * as help from './help.js';
 const SEARCH_BOX_ID = 'searchBox';
@@ -78,7 +79,7 @@ class CrumDialectSorter extends xooxle.BucketSorter {
     const undialected = Array.from(
       row.querySelectorAll(`.${'match' /* xooxle.CLS.MATCH */}`)
     ).some((el) => !el.closest(highlight.ANY_DIALECT_QUERY));
-    const ofInterest = !!row.querySelector(utils.classQuery(active));
+    const ofInterest = !!row.querySelector(css.classQuery(active));
     if (undialected) {
       if (ofInterest) {
         return DialectMatch.UNDIALECTED_MATCH_WITH_HIGHLIGHTED_DIALECT;
@@ -153,9 +154,9 @@ async function main() {
   // Prevent other elements in the page from picking up key events on the
   // search box.
   const searchBox = document.getElementById(SEARCH_BOX_ID);
-  searchBox.addEventListener('keyup', utils.stopPropagation);
-  searchBox.addEventListener('keydown', utils.stopPropagation);
-  searchBox.addEventListener('keypress', utils.stopPropagation);
+  searchBox.addEventListener('keyup', browser.stopPropagation);
+  searchBox.addEventListener('keydown', browser.stopPropagation);
+  searchBox.addEventListener('keypress', browser.stopPropagation);
   const dialectCheckboxes = Array.from(
     document.querySelectorAll('.dialect-checkbox')
   );

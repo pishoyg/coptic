@@ -7,7 +7,9 @@
 // reopened, or if we should create a new issue, or just delete this TODO.
 import * as help from './help.js';
 import * as iam from '../iam.js';
-import * as utils from '../utils.js';
+import * as browser from '../browser.js';
+import * as html from '../html.js';
+import * as scan from '../scan.js';
 import * as paths from '../paths.js';
 import * as highlight from './highlight.js';
 const COPTIC_RE = /[Ⲁ-ⲱϢ-ϯⳈⳉ]+/giu;
@@ -59,13 +61,13 @@ function main() {
   document.querySelectorAll('.crum-page').forEach((el) => {
     const pageNumber = el.innerHTML;
     el.classList.add('link');
-    utils.makeSpanLinkToAnchor(el, `#crum${utils.chopColumn(pageNumber)}`);
+    html.makeSpanLinkToAnchor(el, `#crum${scan.chopColumn(pageNumber)}`);
   });
   // Handle 'crum-page-external' class.
   document.querySelectorAll('.crum-page-external').forEach((el) => {
     el.classList.add('link');
     el.onclick = () => {
-      utils.window_open(
+      browser.open(
         `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.innerHTML}`
       );
     };
@@ -74,7 +76,7 @@ function main() {
   document.querySelectorAll('.dawoud-page-external').forEach((el) => {
     el.classList.add('link');
     el.onclick = () => {
-      utils.window_open(`${paths.DAWOUD}?page=${el.innerHTML}`);
+      browser.open(`${paths.DAWOUD}?page=${el.innerHTML}`);
     };
   });
   // Handle 'dawoud-page-img' class.
@@ -83,7 +85,7 @@ function main() {
     el = el.children[0];
     el.classList.add('link');
     el.onclick = () => {
-      utils.window_open(`${paths.DAWOUD}?page=${el.getAttribute('alt')}`);
+      browser.open(`${paths.DAWOUD}?page=${el.getAttribute('alt')}`);
     };
   });
   // Handle 'crum-page-img' class.
@@ -92,7 +94,7 @@ function main() {
     el = el.children[0];
     el.classList.add('link');
     el.onclick = () => {
-      utils.window_open(
+      browser.open(
         `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.getAttribute('alt')}`
       );
     };
@@ -107,28 +109,28 @@ function main() {
     }
     img.classList.add('link');
     img.onclick = () => {
-      utils.window_open(alt);
+      browser.open(alt);
     };
   });
   // Handle 'dawoud-page' class.
   document.querySelectorAll('.dawoud-page').forEach((el) => {
     el.classList.add('link');
-    utils.makeSpanLinkToAnchor(el, `#dawoud${utils.chopColumn(el.innerHTML)}`);
+    html.makeSpanLinkToAnchor(el, `#dawoud${scan.chopColumn(el.innerHTML)}`);
   });
   // Handle 'drv-key' class.
   document.querySelectorAll('.drv-key').forEach((el) => {
     el.classList.add('small', 'light', 'italic', 'hover-link');
-    utils.makeSpanLinkToAnchor(el, `#drv${el.innerHTML}`);
+    html.makeSpanLinkToAnchor(el, `#drv${el.innerHTML}`);
   });
   // Handle 'explanatory-key' class.
   document.querySelectorAll('.explanatory-key').forEach((el) => {
     el.classList.add('hover-link');
-    utils.makeSpanLinkToAnchor(el, `#explanatory${el.innerHTML}`);
+    html.makeSpanLinkToAnchor(el, `#explanatory${el.innerHTML}`);
   });
   // Handle 'sister-key' class.
   document.querySelectorAll('.sister-key').forEach((el) => {
     el.classList.add('hover-link');
-    utils.makeSpanLinkToAnchor(el, `#sister${el.innerHTML}`);
+    html.makeSpanLinkToAnchor(el, `#sister${el.innerHTML}`);
   });
   // Handle 'sister-view' class.
   document.querySelectorAll('.sisters-table, .index-table').forEach((table) => {
@@ -186,7 +188,7 @@ function main() {
     });
   }
   // Add Coptic word lookups.
-  utils.linkifyText(
+  html.linkifyText(
     document.body,
     COPTIC_RE,
     paths.LOOKUP_URL_PREFIX,
@@ -194,16 +196,14 @@ function main() {
     ['type', 'title']
   );
   // Add Greek word lookups.
-  utils.linkifyText(document.body, GREEK_RE, GREEK_LOOKUP_URL_PREFIX, [
+  html.linkifyText(document.body, GREEK_RE, GREEK_LOOKUP_URL_PREFIX, [
     'link',
     'light',
   ]);
   // Handle 'meaning' class.
   // Add English word lookups.
   document.querySelectorAll('.meaning').forEach((elem) => {
-    utils.linkifyText(elem, ENGLISH_RE, paths.LOOKUP_URL_PREFIX, [
-      'hover-link',
-    ]);
+    html.linkifyText(elem, ENGLISH_RE, paths.LOOKUP_URL_PREFIX, ['hover-link']);
   });
 }
 main();

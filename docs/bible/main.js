@@ -1,5 +1,5 @@
 import * as collapse from '../collapse.js';
-import * as utils from '../utils.js';
+import * as browser from '../browser.js';
 /**
  *
  */
@@ -8,13 +8,13 @@ function main() {
   document.addEventListener('keydown', (event) => {
     switch (event.key) {
       case 'n':
-        utils.openNextLink();
+        browser.openNextLink();
         break;
       case 'p':
-        utils.openPrevLink();
+        browser.openPrevLink();
         break;
       case 'X':
-        utils.openSearchLink();
+        browser.openSearchLink();
         break;
     }
   });

@@ -1,5 +1,5 @@
 import * as collapse from './collapse.js';
-import * as utils from './utils.js';
+import * as browser from './browser.js';
 import * as logger from './logger.js';
 import * as orth from './orth.js';
 import * as coptic from './coptic.js';
@@ -995,7 +995,7 @@ export class Xooxle {
         // Expand the results table to accommodate the recently added results.
         this.form.expand();
         // Allow the browser to update the display, receive user input, ...
-        await utils.yieldToBrowser();
+        await browser.yieldToBrowser();
       }
     }
     let i = 0;

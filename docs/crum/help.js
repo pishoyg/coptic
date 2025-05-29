@@ -1,5 +1,5 @@
 import * as help from '../help.js';
-import * as utils from '../utils.js';
+import * as browser from '../browser.js';
 import * as iam from '../iam.js';
 import * as highlight from './highlight.js';
 import * as paths from '../paths.js';
@@ -250,7 +250,7 @@ export function makeHelpPanel(highlighter) {
         `<strong>R</strong>eports / Contact <a class="contact" href="${EMAIL_LINK}">${EMAIL}</a>`,
         ['lexicon', 'note', 'index', 'index_index'],
         () => {
-          utils.window_open(EMAIL_LINK);
+          browser.open(EMAIL_LINK);
         }
       ),
     ],
@@ -259,7 +259,7 @@ export function makeHelpPanel(highlighter) {
         `Open <a href="${paths.HOME}/" target="_blank"><strong>h</strong>omepage</a>`,
         ['lexicon', 'note', 'index', 'index_index'],
         () => {
-          utils.window_open(`${paths.HOME}/`);
+          browser.open(`${paths.HOME}/`);
         }
       ),
     ],
@@ -268,7 +268,7 @@ export function makeHelpPanel(highlighter) {
         `Open the <a href="${paths.LEXICON}" target="_blank">dictionary search page</a>`,
         ['lexicon', 'note', 'index', 'index_index'],
         () => {
-          utils.window_open(paths.LEXICON);
+          browser.open(paths.LEXICON);
         }
       ),
     ],
@@ -296,7 +296,7 @@ export function makeHelpPanel(highlighter) {
         'Open the word currently being viewed',
         ['lexicon', 'note', 'index'],
         () => {
-          utils
+          browser
             .findNextElement('.view, .sister-view', 'cur')
             ?.querySelector('a')
             ?.click();
@@ -308,35 +308,37 @@ export function makeHelpPanel(highlighter) {
         'Yank the key of the word currently being viewed <span class="dev-mode-note">(dev mode)</span>',
         ['lexicon', 'note', 'index'],
         () => {
-          utils.yank(
-            utils.findNextElement('.view .dev, .sister-key, .drv-key', 'cur')
+          browser.yank(
+            browser.findNextElement('.view .dev, .sister-key, .drv-key', 'cur')
               .innerHTML
           );
         }
       ),
     ],
-    l: [new help.Shortcut('Go to next word', ['note'], utils.openNextLink)],
-    h: [new help.Shortcut('Go to previous word', ['note'], utils.openPrevLink)],
+    l: [new help.Shortcut('Go to next word', ['note'], browser.openNextLink)],
+    h: [
+      new help.Shortcut('Go to previous word', ['note'], browser.openPrevLink),
+    ],
     y: [
       new help.Shortcut('Yank (copy) the word key', ['note'], () => {
-        utils.yank(utils.stem(window.location.pathname));
+        browser.yank(browser.stem(window.location.pathname));
       }),
     ],
   };
   const search = {
     w: [
       new help.Shortcut('Toggle full-word search', ['lexicon'], () => {
-        utils.click('fullWordCheckbox');
+        browser.click('fullWordCheckbox');
       }),
     ],
     x: [
       new help.Shortcut('Toggle regex search', ['lexicon'], () => {
-        utils.click('regexCheckbox');
+        browser.click('regexCheckbox');
       }),
     ],
     '/': [
       new help.Shortcut('Focus on the search box', ['lexicon'], () => {
-        utils.focus('searchBox');
+        browser.focus('searchBox');
       }),
     ],
   };
@@ -346,7 +348,7 @@ export function makeHelpPanel(highlighter) {
         'Next word in the list',
         ['lexicon', 'note', 'index'],
         () => {
-          utils.scrollToNextElement('.view, .sister-view', 'next');
+          browser.scrollToNextElement('.view, .sister-view', 'next');
         }
       ),
     ],
@@ -355,16 +357,16 @@ export function makeHelpPanel(highlighter) {
         'Previous word in the list',
         ['lexicon', 'note', 'index'],
         () => {
-          utils.scrollToNextElement('.view, .sister-view', 'prev');
+          browser.scrollToNextElement('.view, .sister-view', 'prev');
         }
       ),
     ],
     C: [
       new help.Shortcut('Crum', ['lexicon'], () => {
-        utils.scroll('crum-title');
+        browser.scroll('crum-title');
       }),
       new help.Shortcut('Crum pages', ['note'], () => {
-        utils.scroll('crum');
+        browser.scroll('crum');
       }),
     ],
     E: [
@@ -372,7 +374,7 @@ export function makeHelpPanel(highlighter) {
         '<a href="https://kellia.uni-goettingen.de/" target="_blank" rel="noopener,noreferrer">K<strong>E</strong>LLIA</a>',
         ['lexicon'],
         () => {
-          utils.scroll('kellia-title');
+          browser.scroll('kellia-title');
         }
       ),
     ],
@@ -381,23 +383,23 @@ export function makeHelpPanel(highlighter) {
         '<a href="http://copticsite.com/" target="_blank" rel="noopener,noreferrer">copticsi<strong>t</strong>e</a>',
         ['lexicon'],
         () => {
-          utils.scroll('copticsite-title');
+          browser.scroll('copticsite-title');
         }
       ),
     ],
     D: [
       new help.Shortcut('Dawoud pages', ['note'], () => {
-        utils.scroll('dawoud');
+        browser.scroll('dawoud');
       }),
     ],
     w: [
       new help.Shortcut('Related words', ['note'], () => {
-        utils.scroll('sisters');
+        browser.scroll('sisters');
       }),
     ],
     m: [
       new help.Shortcut('Meaning', ['note'], () => {
-        utils.scroll('meaning');
+        browser.scroll('meaning');
       }),
     ],
     e: [
@@ -405,43 +407,43 @@ export function makeHelpPanel(highlighter) {
         'S<strong>e</strong>ns<strong>e</strong>s',
         ['note'],
         () => {
-          utils.scroll('senses');
+          browser.scroll('senses');
         }
       ),
     ],
     t: [
       new help.Shortcut('Type', ['note'], () => {
-        utils.scroll('root-type');
+        browser.scroll('root-type');
       }),
     ],
     j: [
       new help.Shortcut('Categories', ['note'], () => {
-        utils.scroll('categories');
+        browser.scroll('categories');
       }),
     ],
     i: [
       new help.Shortcut('Images', ['note'], () => {
-        utils.scroll('images');
+        browser.scroll('images');
       }),
     ],
     q: [
       new help.Shortcut('Words', ['note'], () => {
-        utils.scroll('pretty');
+        browser.scroll('pretty');
       }),
     ],
     Q: [
       new help.Shortcut('Words', ['note'], () => {
-        utils.scroll('marcion');
+        browser.scroll('marcion');
       }),
     ],
     v: [
       new help.Shortcut('Derivations table', ['note'], () => {
-        utils.scroll('derivations');
+        browser.scroll('derivations');
       }),
     ],
     c: [
       new help.Shortcut('Dictionary page list', ['note'], () => {
-        utils.scroll('dictionary');
+        browser.scroll('dictionary');
       }),
     ],
     g: [
@@ -449,7 +451,7 @@ export function makeHelpPanel(highlighter) {
         'Header',
         ['lexicon', 'note', 'index', 'index_index'],
         () => {
-          utils.scroll('header');
+          browser.scroll('header');
         }
       ),
     ],
@@ -458,7 +460,7 @@ export function makeHelpPanel(highlighter) {
         'Footer',
         ['lexicon', 'note', 'index', 'index_index'],
         () => {
-          utils.scroll('footer');
+          browser.scroll('footer');
         }
       ),
     ],
@@ -466,7 +468,7 @@ export function makeHelpPanel(highlighter) {
   const collapse = {
     c: [
       new help.Shortcut('Crum', ['lexicon'], () => {
-        utils.click('crum-title');
+        browser.click('crum-title');
       }),
     ],
     e: [
@@ -474,7 +476,7 @@ export function makeHelpPanel(highlighter) {
         '<a href="https://kellia.uni-goettingen.de/" target="_blank" rel="noopener,noreferrer">K<strong>E</strong>LLIA</a>',
         ['lexicon'],
         () => {
-          utils.click('kellia-title');
+          browser.click('kellia-title');
         }
       ),
     ],
@@ -483,7 +485,7 @@ export function makeHelpPanel(highlighter) {
         '<a href="http://copticsite.com/" target="_blank" rel="noopener,noreferrer">copticsi<strong>t</strong>e</a>',
         ['lexicon'],
         () => {
-          utils.click('copticsite-title');
+          browser.click('copticsite-title');
         }
       ),
     ],

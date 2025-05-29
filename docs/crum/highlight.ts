@@ -1,7 +1,7 @@
 // TODO: We desire to implement highlighting for the Bible as well. Move shared
 // functionality to an external package, and keep Lexicon-specific logic in this
 // file.
-import * as utils from '../utils.js';
+import * as css from '../css.js';
 import * as iam from '../iam.js';
 
 const DIALECTS = [
@@ -25,7 +25,7 @@ const DIALECTS = [
   'U',
 ];
 
-export const ANY_DIALECT_QUERY = utils.classQuery(DIALECTS);
+export const ANY_DIALECT_QUERY = css.classQuery(DIALECTS);
 
 // DIALECT_SINGLE_CHAR is a mapping for the dialects that have shortcuts other
 // than their codes. If the shortcut to toggle a dialect is not the same as its
@@ -113,7 +113,7 @@ export class Highlighter {
     // Dim all children of `word` elements, with the exception of:
     // - Active dialects.
     // - Undialected spellings.
-    const query = `.word > :not(${utils.classQuery(active)},.spelling:not(${ANY_DIALECT_QUERY}))`;
+    const query = `.word > :not(${css.classQuery(active)},.spelling:not(${ANY_DIALECT_QUERY}))`;
     const style = `opacity: ${Highlighter.DIM};`;
     this.updateSheetOrElements(
       this.dialectRuleIndex,
