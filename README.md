@@ -266,28 +266,22 @@ Site).
 
 ## Guidelines
 
-1. Minimize dependence on HTML, and implement behaviours in TypeScript when
-   possible.
-
-1. Add in-code assertions and checks. This is our first line of defense, and
-   has been the champion when it comes to ensuring correctness and catching
-   bugs.
-
-1. We rely heavily on manual inspection of the output to verify correctness.
-   The `git --word-diff` command is helpful when our line-oriented `diff` is
-   not readable. Keep this in mind when structuring your output data.
-
-1. Do not let Python tempt you to use its built-in types instead of classes and
-   objects. Don't forget about OOP!
+1. Add excessive in-code assertions, and validate your assumptions whenever
+   possible. This is our first line of defense, and has been the champion when
+it comes to ensuring correctness and catching bugs.
 
 1. Document the code.
 
-1. We use `mypy` for static typing checks. While not required by `mypy` (which
-can often infer the types without hints, and would throw an error whenever an
-explicit type annotation is needed), it's still encouraged to use type hints
-extensively.
+1. Use type hints extensively.
+
+1. Minimize dependence on HTML, and implement behaviours in TypeScript when
+   possible.
 
 1. Color the outputs whenever you can. It keeps your programmers entertained!
+
+1. Avoid using a generic `utils` package. It can easily become a catch-all for
+unrelated logic, grow excessively large, and lose clear purpose. Instead,
+organize utilities into purpose-specific packages based on functionality.
 
 ### Languages
 
