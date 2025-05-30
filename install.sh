@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Install required dependencies. Notify the user if certain dependencies need to
+# be manually installed.
+
 set -o errexit  # Exit upon encountering a failure.
 set -o nounset  # Consider an undefined variable to be an error.
 

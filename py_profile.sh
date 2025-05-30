@@ -1,5 +1,7 @@
 #!/bin/bash
 #
+# Profile a Python execution.
+#
 # Usage:
 #   ./profile.sh <name> <script.py> [script_args...]
 #
