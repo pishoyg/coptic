@@ -193,7 +193,7 @@ LOC_KELLIA=$(loc "dictionary/kellia_uni_goettingen_de")
 LOC_DAWOUD="$(loc "dictionary/copticocc_org")"
 LOC_BIBLE=$(loc "bible")
 LOC_FLASHCARDS=$(loc "flashcards")
-LOC_GRAMMAR=$(loc "grammar")
+LOC_GRAMMAR=0
 LOC_KEYBOARD=$(loc "keyboard")
 LOC_MORPHOLOGY=$(loc "morphology")
 LOC_SITE=$(( $(loc "docs") ))
@@ -226,7 +226,7 @@ echo -e "${BLUE}Number of lines of code (including archive): ${GREEN}${LOC}${BLU
 "\n  ${BLUE}Dawoud: ${GREEN}${LOC_DAWOUD}"\
 "\n  ${BLUE}Bible: ${GREEN}${LOC_BIBLE}"\
 "\n  ${BLUE}Flashcards: ${GREEN}${LOC_FLASHCARDS}"\
-"\n  ${BLUE}Grammar: ${GREEN}${LOC_GRAMMAR}"\
+"\n  ${YELLOW}Grammar (broken): ${GREEN}${LOC_GRAMMAR}"\
 "\n  ${BLUE}Keyboard: ${GREEN}${LOC_KEYBOARD}"\
 "\n  ${BLUE}Morphology: ${GREEN}${LOC_MORPHOLOGY}"\
 "\n  ${BLUE}Site: ${GREEN}${LOC_SITE}"\
