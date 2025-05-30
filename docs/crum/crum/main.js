@@ -11,6 +11,7 @@ const PNG_RANGES = [
 /**
  *
  * @param page
+ * @returns
  */
 function ext(page) {
   return PNG_RANGES.some((range) => page >= range[0] && page <= range[1])

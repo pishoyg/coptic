@@ -8,7 +8,7 @@ const OFFSET = 16;
 const COPTIC = 'coptic.tsv';
 const ARABIC = 'arabic.tsv';
 const GREEK = 'greek.tsv';
-// TODO: Add validation for the Arabic index.
+// TODO: (#405) Add validation for the Arabic index.
 const ALL = [COPTIC, ARABIC, GREEK];
 /**
  * Dawoud gives ⲟⲩ special handling!
