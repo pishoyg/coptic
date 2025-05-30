@@ -200,14 +200,6 @@ repos:
     hooks:
       - id: pylint
 
-  # NOTE: `darglint` is enabled, although our code doesn't currently conform to
-  # its style, in order to remind us to gradually resolve the errors during
-  # development. If it's too annoying, feel free to invoke your command as:
-  # ```
-  # SKIP=darglint git commit
-  # ```
-  # which should disable the hook.
-  # Delete this note if all files are now conforming.
   - repo: local
     hooks:
       - id: darglint
