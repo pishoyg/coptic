@@ -22,7 +22,7 @@ from utils import env, log
 # a factor of roughly 20! Profiling was misleading, as the bottleneck could
 # only be observed when executing concurrently, and when using
 # ProcessPoolExecutor!
-# TODO: Prevent the use of futures.ProcessPoolExecutor and
+# TODO: (#0) Prevent the use of futures.ProcessPoolExecutor and
 # futures.ThreadPoolExecutor directly in the code, in order for the SEQUENTIAL
 # environment variable to be respected everywhere.
 

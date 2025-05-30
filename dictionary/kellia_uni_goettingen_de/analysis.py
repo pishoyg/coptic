@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
 """Analyze the structure of the KELLIA dataset."""
-# TODO: (#51) Read this file for inspiration:
-# https://github.com/KELLIA/dictionary/blob/master/utils/dictionary_reader.py.
-# TODO: There are some typos in the data. Fix at the origin.
 import collections
 import pathlib
 import re
@@ -76,8 +73,8 @@ def prettify(d: dict) -> str:
     return out
 
 
-# TODO: Add statistics. Count the tags, attributes, children, attribute values,
-# ... etc.
+# TODO: (#0) Add statistics. Count the tags, attributes, children, attribute
+# values, ... etc.
 def analyze(soup: bs4.BeautifulSoup | bs4.Tag) -> str:
     all_tag_names = {
         tag.name for tag in soup.descendants if isinstance(tag, bs4.Tag)

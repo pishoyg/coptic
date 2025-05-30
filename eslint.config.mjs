@@ -55,8 +55,7 @@ export default tseslint.config(
       'jsdoc/check-param-names': 'error',
       'jsdoc/check-tag-names': 'error',
       'jsdoc/require-param': 'error',
-      // TODO: Change to 'error' if appropriate.
-      'jsdoc/require-returns': 'warn',
+      'jsdoc/require-returns': 'error',
     },
     languageOptions: {
       parserOptions: {

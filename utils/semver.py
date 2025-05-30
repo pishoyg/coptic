@@ -1,6 +1,6 @@
 """Semantic versioning helpers."""
 
-# TODO: Get rid of this file!
+# TODO: (#448) Move this file to the Crum scope once it's only used there.
 
 import os
 import re

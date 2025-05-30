@@ -224,48 +224,46 @@ export class Form {
 export class Scroller {
   private readonly start: number;
   private readonly end: number;
-  private readonly landingPage: number;
-  // TODO: The parameters are unnecessarily complicated. Consider getting rid of
-  // offsets and variable extensions altogether. They are complicating things.
+  // TODO: (#0) The parameters are unnecessarily complicated. Consider getting
+  // rid of offsets and variable extensions altogether. They are complicating
+  // things.
   /**
    *
-   * @param start
-   * @param end
-   * @param offset
-   * @param ext
-   * @param form
+   * @param start - Integer basename of the first image.
+   * @param end - Integer basename of the first image.
+   * @param offset - Offset of the first interesting page in the book (skipping
+   * the intro and such).
+   * The offset mainly concerns itself with the behavior of the page
+   * parameter. It allows you to export a parameter value to your end users
+   * that doesn't necessarily match the file names on the server.
+   * For example: If the pages are numbered 1.jpg to 100.jpg, with 1-20
+   * representing the introduction, 21.jpg being the page 1, then the offset is
+   * 20. Thus, `?page=1` will open file 21.jpg.
+   * @param ext - File extensions. If it's page-dependent, pass a function that
+   * returns the extension given the page number (the parameter passed being the
+   * basename, rather than the page parameter (which accounts for the offset)).
+   * @param form - Input and output elements.
    * @param form.image
    * @param form.nextButton
    * @param form.prevButton
    * @param form.resetButton
-   * @param landingPage
+   * @param landingPage - Default value for the page parameter.
    */
   constructor(
-    // Integer basename of the first image file.
     start: number,
-    // Integer basename of the last image file.
     end: number,
-    // The offset mainly concerns itself with the behavior of the page
-    // parameter. It allows you to export a parameter value to your end users
-    // that doesn't necessarily match the file names on the server.
     private readonly offset = 0,
-    // File extensions. If it's page-dependent, pass a function that returns the
-    // extension given the page number (the parameter passed being the basename,
-    // rather than the page parameter (which accounts for the offset)).
     private readonly ext: string | ((page: number) => string),
-    // Document bears our HTML objects.
     private readonly form: {
       image: HTMLImageElement;
       nextButton: HTMLElement;
       prevButton: HTMLElement;
       resetButton: HTMLElement;
     },
-    // Default value for the page parameter (with the offset accounted for).
-    landingPage = 1
+    private readonly landingPage = 1
   ) {
     this.start = start - this.offset;
     this.end = end - this.offset;
-    this.landingPage = landingPage;
 
     this.initEventListeners();
     this.update(this.getPageParam());

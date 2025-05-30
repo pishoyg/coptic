@@ -1,8 +1,7 @@
 import * as iam from './iam.js';
 
-// TODO: This is not just QWERTY. Rename the constant.
-// TODO: Abandon event keys. Rely solely on event codes.
-const QWERTY_MAP: Record<string, string> = {
+// TODO: (#0) Abandon event keys. Rely solely on event codes.
+const CODE_TO_KEY: Record<string, string> = {
   // Letters
   KeyA: 'a',
   KeyB: 'b',
@@ -158,7 +157,7 @@ export class Shortcut {
    * @returns
    */
   row(key: string): HTMLTableRowElement {
-    // TODO: Move the styling to CSS.
+    // TODO: (#241) Move the styling to CSS.
     const row = document.createElement('tr');
     const keyCell = document.createElement('td');
     const code = document.createElement('code');
@@ -386,7 +385,7 @@ export class Help {
     // If this event is not consumable by any of our sections, it may be
     // possible that the user has switched the layout. In this case, we try
     // to respond based on the key location on the keyboard.
-    let key = QWERTY_MAP[event.code];
+    let key = CODE_TO_KEY[event.code];
     if (!key) {
       return false;
     }

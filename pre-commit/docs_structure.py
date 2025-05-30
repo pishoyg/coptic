@@ -6,8 +6,8 @@ a reminder for the developers to update `.env` accordingly, particularly the
 `findex` / `findexx` helpers.
 """
 
-# TODO: fnmatch is not strict enough! For example, it was found that `dir/*.txt`
-# can match the file path `dir/dir/file.txt`! Figure this out!
+# TODO: (#0) fnmatch is not strict enough! For example, it was found that
+# `dir/*.txt` can match the file path `dir/dir/file.txt`! Figure this out!
 
 import argparse
 import collections
@@ -24,7 +24,7 @@ parser = argparse.ArgumentParser(
     description="Validate the structure of `docs/`."
     " Or report on HTML class usage.",
 )
-parser.add_argument(
+_ = parser.add_argument(
     "-c",
     "--html_classes",
     action="store_true",
@@ -73,6 +73,9 @@ class Pattern:
                 log.assass(h, p, "did not match any files!")
         return results[True], results[False]
 
+    def __lt__(self, other: typing.Self) -> bool:
+        return self._patterns < other._patterns
+
 
 PATTERNS: list[Pattern] = [
     # Manually-written code files:
@@ -116,8 +119,7 @@ def _classes_in_file(path: pathlib.Path) -> set[str]:
 
 
 def _join(items: abc.Iterable[Pattern | str]) -> str:
-    # TODO: Sort the entries before printing them.
-    return "".join("\n - " + str(cls) for cls in items)
+    return "".join("\n - " + str(cls) for cls in sorted(items))
 
 
 def _print_classes(pattern_to_classes: dict[Pattern, set[str]]):
@@ -134,8 +136,8 @@ def _print_classes(pattern_to_classes: dict[Pattern, set[str]]):
         for cls in classes:
             class_to_patterns[cls].append(pattern)
 
-    # TODO: Ideally, you should check whether any offending classes are present
-    # before deciding to print an error message.
+    if all(len(patterns) <= 1 for patterns in class_to_patterns.values()):
+        return
     log.error("Classes shared between different modules:", level=False)
     for cls, patterns in class_to_patterns.items():
         if len(patterns) >= 2:

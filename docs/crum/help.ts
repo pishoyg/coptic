@@ -178,7 +178,8 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
         'N',
         'Nag Hammadi',
         'NH',
-        // TODO: This dialect was invented by Marcion, and it's not in Crum.
+        // TODO: (#0) This dialect was invented by Marcion, and it's not in
+        // Crum. Update the description accordingly.
         ['Crum'],
         DIALECT_ARTICLE.NagHammadi
       ),

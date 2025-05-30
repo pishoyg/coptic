@@ -11,6 +11,7 @@ Edits made to the original file beyond that data should be incorporated.
 View history at:
     https://github.com/KELLIA/dictionary/commits/master/utils/dictionary_reader.py
 """
+# TODO: (#305) There are some typos in the data. Fix at the origin.
 
 import glob
 import os

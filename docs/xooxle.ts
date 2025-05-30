@@ -84,8 +84,9 @@ export const enum CLS {
 
 /**
  * UNIT_DELIMITER is the string that separates a units field into units.
- * TODO: This is not a clean way to separate units! Your index should be built
- * with units already separated.
+ * TODO: (#0) This is not a clean way to separate units! The index building
+ * pipeline should export an index with the units already separated, and the
+ * Xooxle engine should read it as such.
  */
 const UNIT_DELIMITER = `<hr class="${CLS.MATCH_SEPARATOR}">`;
 
@@ -1105,9 +1106,9 @@ export class Xooxle {
    * @param abortController
    */
   private async searchAuxAux(regex: RegExp, abortController: AbortController) {
-    // TODO: We append random characters in order to avoid having timers with
-    // identical names. This is not ideal. Let's supply an index name as part of
-    // the metadata, and use that for logging instead.
+    // TODO: (#0) We append random characters in order to avoid having timers
+    // with identical names. This is not ideal. Let's supply an index name as
+    // part of the metadata, and use that for logging instead.
     const name = `time-to-first-yield-${Array.from({ length: 2 }, () =>
       String.fromCharCode(97 + Math.floor(Math.random() * 26))
     ).join('')}`;

@@ -71,7 +71,8 @@ def _img_aux(
 class Decker:
     """Decker is a wrapper that materializes the Deck upon request."""
 
-    # TODO: The `decker` type is a thin wrapper around `deck`. Eliminate it.
+    # TODO: (#0) The `decker` type is a thin wrapper around `deck`. Eliminate
+    # it.
 
     def __init__(self, deck_name: str, deck_id: int) -> None:
         self._deck_name: str = deck_name

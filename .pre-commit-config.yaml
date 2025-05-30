@@ -176,7 +176,7 @@ repos:
     rev: v2.1.0
     hooks:
       - id: dead
-        # TODO: Restore the check on `morphology/` once we start using it again.
+        # TODO: (#44) Restore the check on `morphology/` once we start using it again.
         args: [--symbol-allowlist, "pre-commit/dead_allowlist.txt", --track-args,
           --exclude, "^(archive|morphology)/"]
 

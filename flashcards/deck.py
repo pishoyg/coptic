@@ -1,6 +1,6 @@
 """A dictionary deck."""
 
-# TODO: For text generation, it's likely more efficient to use generators
+# TODO: (#0) For text generation, it's likely more efficient to use generators
 # and avoid concatenating the strings, unless necessary.
 # You can also use `writelines` instead of `write` to write a file, thus
 # avoiding saving the data in memory at any point.
@@ -41,7 +41,7 @@ class GenankiNote(genanki.Note):
 
     @property
     @typing.override
-    # TODO: Resolve this error:
+    # TODO: (#0) Resolve this error:
     #   "guid" incorrectly overrides property of same name in class "Note"
     #   Property method "fset" is missing in override
     #   [reportIncompatibleMethodOverride]
@@ -270,7 +270,7 @@ class Deck:
         deck_id: int,
         deck_description: str,
         css_path: str,
-        # TODO: Use a generator instead of a list.
+        # TODO: (#0) Use a generator instead of a list.
         notes: list[Note],
         html_dir: str = "",
         index_indexes: list[IndexIndex] | None = None,

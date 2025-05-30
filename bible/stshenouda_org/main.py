@@ -661,7 +661,7 @@ class HTMLBuilder:
             f"{identifier.lower()}.epub",
         )
         file.mk_parent_dir(path)
-        # TODO: The following method can fail silently. To verify that the
+        # TODO: (#0) The following method can fail silently. To verify that the
         # content has actually been written, perhaps write to a temporary file,
         # then verify its existence, then copy to the actual destination.
         # Asserting that the file exists doesn't suffice because it might have

@@ -152,7 +152,7 @@ kellia_analysis_clean: dictionary/kellia_uni_goettingen_de/data/output/analysis.
 	# Reset the KELLIA analysis JSON. Seemingly, it gets rewritten in a
 	# nondeterministic manner by the pipeline, introducing noisy changes in the
 	# repo, so we reset it to remove the noise.
-	# TODO: Make the pipeline deterministic, and remove this rule.
+	# TODO: (#0) Make the pipeline deterministic, and remove this rule.
 	git restore "dictionary/kellia_uni_goettingen_de/data/output/analysis.json"
 
 ########## DAWOUD ##########
