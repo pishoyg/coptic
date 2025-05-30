@@ -107,8 +107,16 @@ class Word:
 
     def _is_assumed(self, spelling: str) -> bool:
         """
-        NOTE: Spellings passed are expected to have already been normalized from
-        the presence of other types of parentheses.
+        Args:
+            spelling: The word spelling in plain text. NOTE: It has to have
+                already been normalized from the presence of other types of
+                parentheses.
+
+        Returns:
+            Whether the given word is assumed.
+
+        Raises:
+            ValueError: If other parentheses are present in the spelling.
         """
         # TODO: Remove the special case.
         if spelling == "ⲧⲣⲉ- (ⲉⲧⲣⲉ-, ⲡⲧⲣⲉ-)":
@@ -220,6 +228,9 @@ class Word:
                 Categories could be a dialect code, a spelling, or a type. They
                 could also be as simple as commas and parentheses.
                 See below for which classes get populated for which elements.
+
+        Returns:
+            String representation of the word, potentially containing HTML tags.
         """
 
         def _span(content: str, classes: list[str]) -> str:

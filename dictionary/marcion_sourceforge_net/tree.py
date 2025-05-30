@@ -115,19 +115,14 @@ class Node:
         explain: bool = True,
         include_root: bool = False,
     ) -> str:
-        """
-        We use the following fields from each child:
-        - depth
-        - word-parsed-classify
-        - type-parsed
-        - en-parsed
-        - crum
-        - key
-        They are expected to be pre-sorted, and to belong to a single word.
-        The per-dialected columns are used, but not included in the output.
+        """Construct the derivations HTML table.
 
         Args:
             explain: If true, include the meaning, type, and Crum page number.
+            include_root: Whether to include the root word in the output.
+
+        Returns:
+            A plain HTML table for the derivations.
         """
         return "".join(self.html_table_aux(explain, include_root))
 

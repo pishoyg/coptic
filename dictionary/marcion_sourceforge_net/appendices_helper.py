@@ -111,12 +111,12 @@ KNOWN_CATEGORIES: dict[str, str] = (
 # pylint: enable=line-too-long
 
 argparser: argparse.ArgumentParser = argparse.ArgumentParser(
-    description="""Find and process appendices.""",
+    description="Find and process appendices.",
     formatter_class=argparse.RawTextHelpFormatter,
     exit_on_error=False,
 )
 
-argparser.add_argument(
+_ = argparser.add_argument(
     "-v",
     "--validate",
     action="store_true",
@@ -124,7 +124,7 @@ argparser.add_argument(
     help="Validate the appendices.",
 )
 
-argparser.add_argument(
+_ = argparser.add_argument(
     "-c",
     "--cat",
     type=str,
@@ -135,7 +135,7 @@ argparser.add_argument(
     "\nthe given categories.",
 )
 
-argparser.add_argument(
+_ = argparser.add_argument(
     "-k",
     "--keys",
     type=str,
@@ -149,7 +149,7 @@ argparser.add_argument(
     " --override_cat.",
 )
 
-argparser.add_argument(
+_ = argparser.add_argument(
     "-r",
     "--override_cat",
     action="store_true",
@@ -158,7 +158,7 @@ argparser.add_argument(
     "we will delete the existing categories before replacing them.",
 )
 
-argparser.add_argument(
+_ = argparser.add_argument(
     "-s",
     "--sisters",
     type=str,
@@ -186,7 +186,7 @@ argparser.add_argument(
     "\n${KEY_3} and ${KEY_4} as antonyms of one another.",
 )
 
-argparser.add_argument(
+_ = argparser.add_argument(
     "-a",
     "--antonyms",
     type=str,
@@ -196,7 +196,7 @@ argparser.add_argument(
     " See --sisters for usage.",
 )
 
-argparser.add_argument(
+_ = argparser.add_argument(
     "-o",
     "--homonyms",
     type=str,
@@ -206,7 +206,7 @@ argparser.add_argument(
     " This flag can only be used alone.",
 )
 
-argparser.add_argument(
+_ = argparser.add_argument(
     "-d",
     "--delete_empty_fragment",
     action="store_true",
@@ -219,7 +219,7 @@ argparser.add_argument(
     " fragment if requested.",
 )
 
-argparser.add_argument(
+_ = argparser.add_argument(
     "-p",
     "--cat_prompt",
     action="store_true",
@@ -227,7 +227,7 @@ argparser.add_argument(
     help="Prompt for manually entering categories.",
 )
 
-argparser.add_argument(
+_ = argparser.add_argument(
     "-f",
     "--first",
     type=int,
@@ -303,7 +303,10 @@ class House:
     ) -> tuple[list[Person], list[Person]]:
         """Marry the given spouses into your house.
 
-        Return:
+        Args:
+            spouses: List of people to marry.
+
+        Returns:
             A boolean indicating whether any changes were made.
         """
         added, updated = [], []
@@ -379,6 +382,7 @@ class Family:
     def validate(self, key_to_family: dict, symmetry: bool = True) -> None:
         """
         Args:
+            key_to_family: A dictionary mapping a key to a family.
             symmetry: If true, validate symmetric relations as well.
         """
         # TODO: (#271) Add validation for Greek sisters as well.
@@ -519,16 +523,19 @@ class Matriarch:
         }
 
     def marry_house(self, row: dict, col: str, spouses: list[Person]) -> House:
-        """Given a row and its index, and a column name, and a list of values
-        to add, update the call with the new values.
+        """Marry the given spouses to the given house.
 
-        Given a house (cell) in the family (row), marry new members to
-        the house.
+        Args:
+            row: A row representing a family.
+            col: The name of the column indicating which house in the family the
+                spouses are marrying into.
+            spouses: Persons marrying into this house.
 
-        Return the new house.
+        Returns:
+            New house.
         """
-        huis: House = House(row[KEY_COL], row[col])
-        added, updated = huis.marry(spouses)
+        house: House = House(row[KEY_COL], row[col])
+        added, updated = house.marry(spouses)
         if added or updated:
             args: list[str] = []
             if added:
@@ -539,16 +546,16 @@ class Matriarch:
                 args.extend(
                     ["Updating", SENSE_SEP.join(m.string() for m in updated)],
                 )
-            args.extend(["in", huis.key, "/", col])
+            args.extend(["in", house.key, "/", col])
             log.info(*args)
-        elif huis.string() != huis.ancestors_raw:
-            log.info("Reformatting", huis.key, "/", col)
+        elif house.string() != house.ancestors_raw:
+            log.info("Reformatting", house.key, "/", col)
         else:
             if spouses:
                 # We only log this line when verbosity is warranted.
                 # Verbosity is warranted if we have an actual update request.
-                log.warn("No changes to", huis.key, "/", col)
-        return huis
+                log.warn("No changes to", house.key, "/", col)
+        return house
 
     def marry_family(
         self,
@@ -613,7 +620,10 @@ class Runner:
 
     def preprocess_args(self, args: list[str] | None = None) -> bool:
         """
-        Return:
+        Args:
+            args: Raw commandline arguments.
+
+        Returns:
             A boolean indicating whether any *action* arguments have been
             provided. *Option* argument don't affect this return value.
         """
@@ -627,8 +637,13 @@ class Runner:
                 log.throw(c, "is not a known category!")
 
         def url_to_person(url_or_raw: str) -> Person:
-            """Given a URL, return a string representing an encoded person
-            initializer.
+            """Convert a URL to a person initializer.
+
+            Args:
+                url_or_raw: Either the URL of the person, or the person key.
+
+            Returns:
+                The person key, potentially with a fragment.
 
             Examples:
                 - Input: "https://remnqymi.com/crum/26.html#drv895"

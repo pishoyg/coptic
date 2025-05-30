@@ -52,6 +52,8 @@ Remarks about the parsing:
 
 import functools
 import re
+import typing
+from collections import abc
 
 from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import word as lexical
@@ -62,7 +64,11 @@ HREF_START = "*^<a href="
 
 def _apply_substitutions(
     line: str,
-    subs: list,
+    subs: (
+        list[tuple[re.Pattern[str], str]]
+        | list[tuple[str, str]]
+        | list[tuple[str, lexical.Type]]
+    ),
     use_coptic_symbol: bool,
 ) -> str:
     for pair in subs:
@@ -79,7 +85,7 @@ def _apply_substitutions(
     return line
 
 
-def _munch(text: str, regex: re.Pattern, strict: bool) -> tuple[str, str]:
+def _munch(text: str, regex: re.Pattern[str], strict: bool) -> tuple[str, str]:
     # Munch the prefix of `text` which matches `regex`, and return both parts.
     m = regex.match(text)
     if strict:
@@ -94,7 +100,7 @@ def _munch(text: str, regex: re.Pattern, strict: bool) -> tuple[str, str]:
 
 def _chop(
     text: str,
-    regex: re.Pattern,
+    regex: re.Pattern[str],
     strict: bool,
     strip_ends: bool,
 ) -> tuple[str, str, str]:
@@ -143,7 +149,7 @@ def parse_word_cell(
         line = line.replace(HREF_START, HREF_START + '"')
         line = line.replace(HREF_START + '""', HREF_START + '"')
 
-    words = []
+    words: list[lexical.Word] = []
     if strict and not constants.DIALECTS_RE.search(line):
         d = []
         s, t, r, line = _munch_and_parse_spellings_types_and_references(
@@ -202,10 +208,12 @@ def _munch_and_parse_spellings_types_and_references(
     strict: bool,
     detach_types: bool,
     use_coptic_symbol: bool,
-):  # -> tuple[list[str], list[lexical.type], list[str], str]:
+) -> tuple[list[str], list[lexical.Type], list[str], str]:
     match, line = _munch(line, constants.SPELLINGS_TYPES_REFERENCES_RE, strict)
 
-    ss, tt, rr = [], [], []
+    ss: list[str] = []
+    tt: list[lexical.Type] = []
+    rr: list[str] = []
 
     while match:
         spelling_and_types, reference, match = _chop(
@@ -232,9 +240,9 @@ def _parse_spellings_and_types(
     line: str,
     detach_types: bool,
     use_coptic_symbol: bool,
-):  # ) -> tuple[list[str], list[lexical.type]]:
+) -> tuple[list[str], list[lexical.Type]]:
     # This makes the assumption that references have been removed.
-    types = []
+    types: list[lexical.Type] = []
 
     line = _apply_substitutions(
         line,
@@ -277,7 +285,9 @@ def _parse_spellings_and_types(
             use_coptic_symbol,
         )
 
-    spellings = constants.COMMA_NOT_BETWEEN_PARENTHESES_RE.split(line)
+    spellings: list[str] = constants.COMMA_NOT_BETWEEN_PARENTHESES_RE.split(
+        line,
+    )
     spellings = list(map(clean, spellings))
 
     return spellings, types
@@ -323,7 +333,7 @@ def _pick_up_detached_types(
     line: str,
     detached_types: list[tuple[str, lexical.Type]],
 ) -> tuple[list[lexical.Type], str]:
-    t = []
+    t: list[lexical.Type] = []
     for p in detached_types:
         if p[0] in line:
             line = line.replace(p[0], "")
@@ -332,13 +342,20 @@ def _pick_up_detached_types(
 
 
 def _parse_coptic(line: str) -> tuple[str, str]:
-    """_parse_coptic parses one line of ASCII-encoded Coptic.
+    """Parse one line of ASCII-encoded Coptic.
 
-    It is possible for the text to contain English text within it, and
-    for the English text to contain Coptic text within.
+    Args:
+        line: ASCII-encoded Coptic. It is possible for the text to contain
+            English text within it, and for the English text to contain Coptic
+            text within.
+
+    Returns:
+        A tuple, one representing the parsed Coptic (with the English comments
+        included), and one representing the parsed Coptic (with the English
+        removed).
     """
-    out = []
-    out_no_english = []
+    out: list[str] = []
+    out_no_english: list[str] = []
     while line:
         copt, eng, line = _chop(
             line,
@@ -357,7 +374,7 @@ def _parse_coptic(line: str) -> tuple[str, str]:
 
 
 def _parse_english(line: str) -> str:
-    out = []
+    out: list[str] = []
     while line:
         eng, copt, line = _chop(
             line,
@@ -397,7 +414,7 @@ def _parse_english(line: str) -> str:
 
 
 def parse_english_cell(line: str) -> str:
-    out_parts = []
+    out_parts: list[str] = []
     while line:
         eng, greek, line = _chop(
             line,
@@ -450,10 +467,13 @@ class CrumPage:
     def parts(self) -> tuple[int, str]:
         return self.num, self.col
 
-    def __eq__(self, other):
-        return self.parts() == other.parts()
+    @typing.override
+    def __eq__(self, other: object) -> bool:
+        if isinstance(other, CrumPage):
+            return self.parts() == other.parts()
+        return NotImplemented
 
-    def __lt__(self, other):
+    def __lt__(self, other: typing.Self) -> bool:
         return self.parts() < other.parts()
 
     def real(self) -> bool:
@@ -490,15 +510,21 @@ def _ascii_to_unicode_greek(txt: str) -> str:
     return clean(uni)
 
 
-def _parse_reference(line: str):  # -> typing.Generator[str, None, None]:
-    """This method makes the assumption that the input is a single (not nested
-    nor concatenated) reference, whose boundaries have been removed.
+def _parse_reference(line: str) -> abc.Generator[str]:
+    """Parse a reference.
 
-    A reference is an <a></a> HTML tag with some text as the body, and
-    an 'href' property that has the following format:     "ext
-    name;id;chapter;verse;text" The 'href' contains most of the
-    information. The body can contain something, and the tag could
-    optionally be followed by some text.
+    Args:
+        line: A string representing a single (not nested nor concatenated)
+            reference, whose boundaries have been removed.
+            A reference is an <a></a> HTML tag with some text as the body, and
+            an 'href' property that has (one or more) of the following format:
+                "ext <name>;<id>;<chapter>;<verse>;<text>"
+            The 'href' contains most of the information. The body can contain
+            something, and the tag could optionally be followed by some text.
+
+    Yields:
+        Strings, each representing an encoded representation of the one of the
+        references.
     """
 
     line = line.strip()

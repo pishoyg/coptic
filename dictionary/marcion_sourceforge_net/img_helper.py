@@ -126,10 +126,10 @@ WIKI_HEADERS = {
 }
 
 argparser = argparse.ArgumentParser(
-    description="""Find and process images for the dictionary words.""",
+    description="Find and process images for the dictionary words.",
 )
 
-argparser.add_argument(
+_ = argparser.add_argument(
     "-s",
     "--start",
     type=int,
@@ -137,7 +137,7 @@ argparser.add_argument(
     help="Skips keys lower than this value.",
 )
 
-argparser.add_argument(
+_ = argparser.add_argument(
     "-e",
     "--end",
     type=int,
@@ -145,7 +145,7 @@ argparser.add_argument(
     help="Terminate after reaching this key.",
 )
 
-argparser.add_argument(
+_ = argparser.add_argument(
     "-x",
     "--exclude",
     type=str,
@@ -154,7 +154,7 @@ argparser.add_argument(
     help="A list of types to exclude.",
 )
 
-argparser.add_argument(
+_ = argparser.add_argument(
     "-d",
     "--downloads",
     type=str,
@@ -162,7 +162,7 @@ argparser.add_argument(
     help="Path to the downloads directory.",
 )
 
-argparser.add_argument(
+_ = argparser.add_argument(
     "-i",
     "--ignore",
     type=str,
@@ -171,7 +171,7 @@ argparser.add_argument(
     help="List of files in the downloads directory to ignore.",
 )
 
-argparser.add_argument(
+_ = argparser.add_argument(
     "-k",
     "--skip_existing",
     type=bool,
@@ -195,7 +195,7 @@ argparser.add_argument(
     " order for this script to generate replacements.",
 )
 
-argparser.add_argument(
+_ = argparser.add_argument(
     "-r",
     "--rm",
     type=str,
@@ -204,7 +204,7 @@ argparser.add_argument(
     help="If given, delete the artifacts for the given stem(s), and exit.",
 )
 
-argparser.add_argument(
+_ = argparser.add_argument(
     "-z",
     "--mv",
     type=str,
@@ -214,7 +214,7 @@ argparser.add_argument(
     " two arguments must be given, the source and destination stems.",
 )
 
-argparser.add_argument(
+_ = argparser.add_argument(
     "-c",
     "--cp",
     type=str,
@@ -224,7 +224,7 @@ argparser.add_argument(
     " two arguments must be given, the source and destination stems.",
 )
 
-argparser.add_argument(
+_ = argparser.add_argument(
     "-n",
     "--convert",
     type=str,
@@ -233,7 +233,7 @@ argparser.add_argument(
     help="If given, (re)convert the image(s) with the given stem, and exit.",
 )
 
-argparser.add_argument(
+_ = argparser.add_argument(
     "-v",
     "--validate",
     default=False,
@@ -241,7 +241,7 @@ argparser.add_argument(
     help="If true, just validate the directories and exit.",
 )
 
-argparser.add_argument(
+_ = argparser.add_argument(
     "-b",
     "--batch",
     default=False,
@@ -254,7 +254,7 @@ argparser.add_argument(
     " sources.",
 )
 
-argparser.add_argument(
+_ = argparser.add_argument(
     "-p",
     "--plot",
     default=False,
@@ -547,7 +547,15 @@ def is_image_url(url: str) -> bool:
 
 
 def is_invalid_url(url: str) -> list[str]:
-    """Return an empty list if valid, or an error message if invalid."""
+    """Test URL validity.
+
+    Args:
+        url: The URL to test.
+
+    Returns:
+        A list representing the error message if the URL is invalid; the empty
+        list if valid.
+    """
     if not url.startswith("http"):
         return ["Invalid URL!"]
     top_level_domain = ".".join(
@@ -748,8 +756,11 @@ class Prompter:
 
     def prompt_for_word(self) -> bool:
         """
-        Ret:
+        Returns:
             True if you should continue, False if you should stop.
+
+        Raises:
+            AssertionError: If an invariant is broken.
         """
         if int(self.key) < self.args.start:
             return True
@@ -798,7 +809,7 @@ class Prompter:
 
     def prompt_for_command(self) -> bool:
         """
-        Ret:
+        Returns:
             True if you should continue, False if you should stop.
         """
         self.print_info()
