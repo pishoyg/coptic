@@ -73,7 +73,7 @@ foc_count () {
 }
 
 loc_shared () {
-  echo $(( $(loc . -depth 1) + $(loc utils) + $(loc pre-commit) + $(loc .github) ))
+  echo $(( $(loc . -depth 1) + $(loc env) + $(loc xooxle) + $(loc utils) + $(loc pre-commit) + $(loc .github) ))
 }
 
 extensions () {
