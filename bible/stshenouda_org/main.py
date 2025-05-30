@@ -89,7 +89,7 @@ def json_loads(t: str) -> dict | list:
         return json5.loads(t)
 
 
-class RangeColor:
+class ColorRange:
     """A colored range in a verse."""
 
     def __init__(self, start: int, end: int, color: str) -> None:
@@ -107,12 +107,21 @@ class RangeColor:
         """Given two ranges, return whichever one contains the other.
 
         If neither contains the other, crash!
+
+        Args:
+            other: The other color range to compare to this.
+
+        Returns:
+            The larger range.
         """
         if self.within(other):
             return other
         if other.within(self):
             return self
-        assert False
+        log.fatal(
+            "Neither of the two ranges is within the other!",
+            [self, other],
+        )
 
 
 class Verse:
@@ -140,7 +149,7 @@ class Verse:
         if "coloredWords" not in verse:
             yield v
             return
-        ranges: list[RangeColor] = []
+        ranges: list[ColorRange] = []
         for d in verse["coloredWords"]:
             word: str = d["word"]
             color: str = d["light"]
@@ -148,7 +157,7 @@ class Verse:
                 continue
             ranges.extend(
                 [
-                    RangeColor(idx, idx + len(word), color)
+                    ColorRange(idx, idx + len(word), color)
                     for idx in self.__find_all(v, word)
                 ],
             )
@@ -174,15 +183,15 @@ class Verse:
         s: re.Match | None = VERSE_PREFIX.search(t)
         return s.groups()[0] if s else ""
 
-    def __compare_range_color(self, rc: RangeColor) -> tuple[int, int]:
+    def __compare_range_color(self, rc: ColorRange) -> tuple[int, int]:
         return (rc.start, rc.end)
 
-    def __remove_overlap(self, ranges: list[RangeColor]) -> list[RangeColor]:
+    def __remove_overlap(self, ranges: list[ColorRange]) -> list[ColorRange]:
         if not ranges:
             return []
-        out: list[RangeColor] = [ranges[0]]
+        out: list[ColorRange] = [ranges[0]]
         for cur in ranges[1:]:
-            prev: RangeColor = out[-1]
+            prev: ColorRange = out[-1]
             if not cur.overlap(prev):
                 # No overlap.
                 out.append(cur)
