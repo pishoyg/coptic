@@ -414,11 +414,8 @@ echo -e "${BLUE}Number of Crum last pages overridden: "\
 "${GREEN}${CRUM_LAST_PAGES}${BLUE}.${RESET}"
 ((CRUM_LAST_PAGES >= 4 && CRUM_LAST_PAGES <= 3357 )) || (echo -e "${PURPLE}${CRUM_LAST_PAGES} ${RED}looks suspicious.${RESET}" && exit 1)
 
-CRUM_OVERRIDE_TYPES=$(tsv_nonempty \
-  "dictionary/marcion_sourceforge_net/data/input/coptwrd.tsv" \
-  "override-type" \
-  | wc --lines)
-echo -e "${BLUE}Number of types overridden: "\
+CRUM_OVERRIDE_TYPES=0
+echo -e "${YELLOW}Number of types overridden (broken): "\
 "${GREEN}${CRUM_OVERRIDE_TYPES}${BLUE}.${RESET}"
 ((CRUM_OVERRIDE_TYPES >= 0 && CRUM_OVERRIDE_TYPES <= 3357 )) || (echo -e "${PURPLE}${CRUM_OVERRIDE_TYPES} ${RED}looks suspicious.${RESET}" && exit 1)
 
