@@ -60,7 +60,15 @@ _TYPE_TO_PREFIX_LIST = {
 
 
 def inflect(morpheme: str, typ: Type) -> list[str]:
-    """Given a word, return a list of inflected forms."""
+    """Given a word, return a list of inflected forms.
+
+    Args:
+        morpheme: The word.
+        typ: The word type.
+
+    Returns:
+        A list of inflected forms of the given word.
+    """
     prefixes: list[str] = sum(_TYPE_TO_PREFIX_LIST[typ], [])
     assert COPTIC_ONLY_BLOCK.fullmatch(morpheme)
     assert morpheme

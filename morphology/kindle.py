@@ -121,7 +121,15 @@ def _no_tags(text: str) -> bool:
 
 
 def _escape_amp(text: str) -> str:
-    """Escape the special characters inside this string."""
+    """Produce valid HTML by escape special characters.
+
+    Args:
+        text: Plain text, potentially containing characters that should be
+            escaped in an HTML.
+
+    Returns:
+        The string, with HTML special characters escaped.
+    """
     assert _not_escaped(text)
     return text.replace("&", "&amp;")
 
@@ -191,13 +199,17 @@ class Dictionary:
     ) -> None:
         """
         Args:
+            title: Book title.
+            author: Book author.
+            identifier: A unique identifier for the ebook.
+            cover_path: Path to the cover image.
             zfill: The zfill to use while assigning the output file names. If
-            set to zero, defaults to `len(str(len(self._entries))) + 1`. The
-            extra 1 is added to allow the dictionaries to grow. If a dictionary
-            grows to a new order of magnitude, thus making the default go yet
-            one character longer (unnecessarily), then it would be a good time
-            to set this argument explicitly to the old value, thus retaining
-            the same zfill.
+                set to zero, defaults to `len(str(len(self._entries))) + 1`. The
+                extra 1 is added to allow the dictionaries to grow. If a
+                dictionary grows to a new order of magnitude, thus making the
+                default go yet one character longer (unnecessarily), then it
+                would be a good time to set this argument explicitly to the old
+                value, thus retaining the same zfill.
         """
         self._title: str = title
         self._author: str = author
@@ -300,8 +312,11 @@ class Dictionary:
         return stem
 
     def write_pre_mobi(self, directory: str) -> None:
-        """I don't really know what this format is called, so I am calling it
-        "pre-mobi"."""
+        """Write a pre-mobi format dictionary to the given directory.
+
+        Args:
+            directory: Output directory.
+        """
         pathlib.Path(directory).mkdir(exist_ok=True)
 
         # Copy the cover image.
