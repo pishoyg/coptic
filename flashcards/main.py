@@ -6,9 +6,9 @@ import os
 
 import genanki  # type: ignore[import-untyped]
 
-import xooxle
 from flashcards import constants, deck
 from utils import concur, file, log, sane
+from xooxle import xooxle
 
 ANKI_PATH = os.path.join(constants.LEXICON_DIR, "anki/coptic.apkg")
 

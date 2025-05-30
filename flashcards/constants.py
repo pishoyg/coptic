@@ -11,9 +11,9 @@ import pandas as pd
 import dictionary.copticsite_com.main as copticsite
 import dictionary.kellia_uni_goettingen_de.main as kellia
 import dictionary.marcion_sourceforge_net.main as crum
-import xooxle
 from flashcards import deck
 from utils import file, paths, semver, text
+from xooxle import xooxle
 
 # Data
 LEXICON_DIR = os.path.join(paths.SITE_DIR, "crum/")
