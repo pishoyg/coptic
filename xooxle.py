@@ -156,8 +156,14 @@ class Selector:
         self,
         soup: bs4.Tag,
     ) -> bs4.Tag | bs4.NavigableString | None:
-        """Unlike BeautifulSoup.find, this method forces exactly one element
-        matching the query to be present."""
+        """Find an element, forcing exactly one element to match the query.
+
+        Args:
+            soup: The soup to search.
+
+        Returns:
+            The matching element.
+        """
         found = soup.find_all(**self._kwargs)
         assert len(found) <= 1
         assert found or not self._force
@@ -218,8 +224,21 @@ class Capture:
         return self._name
 
     def excise(self, soup: bs4.BeautifulSoup) -> str:
-        """Find an element in the soup using the selector, extract it from the
-        soup, then return its text."""
+        """Find an element using the selector, extract it, and return its HTML.
+
+        Use the selector to find an element matching the query, extract it
+        (remove it from the original soup), and return its simplified HTML.
+
+        If the selector doesn't provide an element, return the empty string. To
+        force a matching element to be found, configure the selector
+        accordingly.
+
+        Args:
+            soup: The soup to search.
+
+        Returns:
+            The simplified HTML version of the found tag.
+        """
         tag = self._selector.select(soup)
         if not tag:
             return ""
@@ -227,7 +246,14 @@ class Capture:
         return self._get_simplified_html(tag)
 
     def _get_simplified_html(self, tag: bs4.Tag) -> str:
-        """Get the text from the given tag."""
+        """Get a simplified version of a tag in plain HTML.
+
+        Args:
+            tag: The tag to extract HTML from.
+
+        Returns:
+            HTML representing a simplified version of the tag.
+        """
         parts: Iterable[str] = self._get_children_simplified_html(tag)
         parts = Cleaner.clean(parts)
         return "".join(parts)
@@ -302,8 +328,8 @@ class Capture:
 class Cleaner:
     """Clean extracted HTML.
 
-    NOTE: Input and output are iterable of strings, each representing a piece
-    of the HTML, rather than the entire HTML combined in a single strings.
+    NOTE: Input and output are iterable of strings - each representing a piece
+    of the HTML - rather than the entire HTML combined in a single string.
     Some assumptions are made about the structure of the iterable (for example,
     we assume that a tag is always a standalone string).
     """
@@ -312,8 +338,16 @@ class Cleaner:
 
     @staticmethod
     def clean(tokens: Iterable[str]) -> Generator[str]:
-        """Clean each unit, remove empty units and redundant unit
-        delimiters."""
+        """Clean each unit, remove empty units and redundant unit delimiters.
+
+        Args:
+            tokens: A list of units. A unit could be a tag, a piece of text, or
+                a unit delimiter.
+
+        Yields:
+            A cleaned subsequence of the input tokens, after eliminating
+            superfluous tokens.
+        """
         units: Cleaner.IterOfIters
         units = Cleaner.split_iterable(tokens, Cleaner._is_unit_delimiter)
         units = map(Cleaner._clean_unit, units)
@@ -455,16 +489,12 @@ class Index:
         Args:
             input_dir: Input path - a directory to search for HTML files, or a
                 generator of [key, content] pairs.
-
-            output: Output JSON file.
-
-            include: an optional filter that takes the key as a parameter.
-
-            extract: List of kwargs queries that will be passed to
-                `soup.find_all` and extracted from the tree.
-
-            capture: List of kwargs queries that will be passed to
-                `soup.find_all`. and capture from the tree.
+            extract: List of selectors of elements to remove from the soup
+                during preprocessing.
+            captures: List of selectors of elements to capture in the output.
+            output: Path to the output JSON file.
+            include: An optional filter that takes a file key as a parameter,
+                and decides whether to include it in the index.
         """
 
         self._input: str | Generator[tuple[str, str]] = input_dir
