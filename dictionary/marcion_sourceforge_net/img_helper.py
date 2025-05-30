@@ -18,7 +18,7 @@ from PIL import Image
 
 from utils import file, log, sane, semver, text
 
-# TODO: Prevent users from updating an image without updating its source.
+# TODO: (#5) Prevent users from updating an image without updating its source.
 # Somehow!
 
 _SCRIPT_DIR = pathlib.Path(__file__).parent

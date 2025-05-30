@@ -20,8 +20,6 @@ import pandas as pd
 
 from utils import file, gcloud, log, sane, text
 
-# TODO: Add validation for derivations once we start populating their
-# appendices.
 _SCRIPT_DIR = pathlib.Path(__file__).parent
 CRUM_FMT = "https://remnqymi.com/crum/{key}.html"
 ROOTS_MAIN = _SCRIPT_DIR / "data/output/tsv/roots.tsv"

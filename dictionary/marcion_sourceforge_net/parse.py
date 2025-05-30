@@ -140,7 +140,7 @@ def parse_word_cell(
     line = line.strip()
     # Replace the non-breaking space with a unicode space.
     line = line.replace("\xa0", " ")
-    # TODO: Fix the quotation mark issue at the origin.
+    # TODO: (#204) Fix the quotation mark issue at the origin.
     # Right now, lines with references have misplaced double quotes, which we
     # fix manually below.
     if HREF_START in line:
@@ -315,7 +315,10 @@ def _analyze_no_english(line_no_english: str) -> None:
         line_no_english,
         constants.DETACHED_TYPES_2,
     )
-    line_no_english = line_no_english.replace("(?)", "")  # TODO: Ugly! :/
+    line_no_english = line_no_english.replace(
+        "(?)",
+        "",
+    )  # TODO: (#338) Ugly! :/
     spellings = constants.COMMA_NOT_BETWEEN_PARENTHESES_RE.split(
         line_no_english,
     )

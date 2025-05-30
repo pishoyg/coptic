@@ -31,7 +31,7 @@ class Type:
         self._append: bool = append
         if is_root:
             # Genders are not allowed as root types.
-            # TODO: Add some root-specific checks for extra rigor.
+            # TODO: (#43) Add some root-specific checks for extra rigor.
             assert inflect_type is None or isinstance(
                 inflect_type,
                 inflect.Type,
@@ -100,7 +100,7 @@ class Word:
                 for s, a in zip(self._spellings, self._assumed)
             ]
             for s in self._spellings:
-                # TODO: Remove the special case.
+                # TODO: (#338) Remove the special case.
                 if s == "ⲧⲣⲉ- (ⲉⲧⲣⲉ-, ⲡⲧⲣⲉ-)":
                     continue
                 assert "(" not in s and ")" not in s
@@ -118,7 +118,7 @@ class Word:
         Raises:
             ValueError: If other parentheses are present in the spelling.
         """
-        # TODO: Remove the special case.
+        # TODO: (#338) Remove the special case.
         if spelling == "ⲧⲣⲉ- (ⲉⲧⲣⲉ-, ⲡⲧⲣⲉ-)":
             return False
         if "(" not in spelling and ")" not in spelling:
@@ -128,9 +128,9 @@ class Word:
         raise ValueError(f"Unexpected parentheses in {spelling}")
 
     def _normalize_optional_letters(self, spelling: str) -> list[str]:
-        # TODO: This is ugly! And it's not even a structured word, but a piece
-        # of English-within-Coptic text! The logic shouldn't come here in the
-        # first place.
+        # TODO: (#338) This is ugly! And it's not even a structured word, but a
+        # piece of English-within-Coptic text! The logic shouldn't come here in
+        # the first place.
         # We handle it be returning it verbatim because we don't care about
         # this case!
         if spelling == "ⲧⲣⲉ- (ⲉⲧⲣⲉ-, ⲡⲧⲣⲉ-)":
@@ -140,8 +140,8 @@ class Word:
         # that is what the "ⲛ" means ("ⲛ" in this case is the prenominal form
         # of "ⲉⲓⲛⲉ"). Normalization therefore happens by simply removing the
         # interjection.
-        # TODO: Surface for visibility! This shouldn't be buried so deep in the
-        # code.
+        # TODO: (#338) Surface for visibility! This shouldn't be buried so deep
+        # in the code.
         if spelling == "ⲛ (ⲉⲓⲛⲉ) ⲣ.":
             return ["ⲛ ⲣ."]
 
@@ -153,8 +153,8 @@ class Word:
         if spelling[0] == "(" and spelling[-1] == ")":
             assert cnt_l == 1
             assert len(spelling) > 3
-            # TODO: Handle this case as a detached type or an annotation, in
-            # order to enable normalization.
+            # TODO: (#338) Handle this case as a detached type or an annotation,
+            # in order to enable normalization.
             return [spelling]
         i = spelling.find("(")
         j = spelling.find(")")
@@ -296,9 +296,21 @@ class Word:
         ]
 
     def _is_normalized_assumed(self) -> bool:
+        """
+        Returns:
+            Whether this word was constructed with normalization for assumed
+            spellings.
+        """
         if not self._spellings:
-            # This word has no spellings to be normalized!
-            # TODO: Not a clean check! Revisit!
+            # Right now, we check for whether a word had its assumed-spelling
+            # notation normalized by looking at whether the _assumed field is
+            # populated. This field has a length equal to the length of the
+            # spellings array.
+            # If there are no spellings in the first place, the array would be
+            # empty, which would mistakenly respond with False. We give this
+            # case a special handling, and always return True if we have no
+            # spellings.
+            # TODO: (#338) This is not a clean way to handle it. Revisit!
             return True
         return bool(self._assumed)
 

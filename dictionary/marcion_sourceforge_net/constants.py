@@ -258,7 +258,15 @@ TYPE_ENCODING = {
 # are essential for parsing the word column.
 PARENTHESES_AND_BRACKETS = [
     ("*+", "+"),
-    ("..", ""),  # TODO: Investigate the meaning of the two dots.
+    # NOTE: The two consecutive dots are used in the derivations table, to
+    # separate between a prefix and the letter representing the start of the
+    # word.
+    # For example, for ⲟⲩⲱⲓⲛⲓ (ⲟⲩⲟⲉⲓⲛ), Crum has "ⲁⲑⲟⲩ." as a derivation, "ⲁⲑ"
+    # is the prefix, and "ⲟⲩ." stands for the omitted word.
+    # This is represented in our database as "ⲁⲑ..ⲟⲩ." instead of simply
+    # "ⲁⲑⲟⲩ.", which could be handy (though it doesn't have an apparent usage
+    # today).
+    ("..", ""),
     ("*^", "{"),  # English-within-Coptic left bracket.
     ("^*", "}"),  # English-within-Coptic right bracket.
     ("$^", "("),  # Left parenthesis.
@@ -286,7 +294,7 @@ SPELLING_ANNOTATIONS_1 = [
             inflect.Type.VERB_PRENOMINAL,
         ),
     ),
-    # TODO: The dash is a typo. Fix at the origin. It should be a hyphen.
+    # TODO: (#0) The dash is a typo. Fix at the origin. It should be a hyphen.
     # Prenominal form. (This is a dash, not a hyphen.)
     (
         "–",
