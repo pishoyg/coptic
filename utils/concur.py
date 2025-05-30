@@ -19,8 +19,9 @@ from utils import env, log
 # executing concurrently.
 # This was found to be the case when the use of ProcessPoolExecutor in Xooxle,
 # as opposed to ThreadPoolExecutor, resulted in a degradation in performance by
-# a factor of roughly 20! Profiling was misleading, as the bottleneck could only
-# be observed when executing concurrently, and when using ProcessPoolExecutor!
+# a factor of roughly 20! Profiling was misleading, as the bottleneck could
+# only be observed when executing concurrently, and when using
+# ProcessPoolExecutor!
 # TODO: Prevent the use of futures.ProcessPoolExecutor and
 # futures.ThreadPoolExecutor directly in the code, in order for the SEQUENTIAL
 # environment variable to be respected everywhere.
@@ -81,6 +82,9 @@ def process_pool_executor() -> (
     - In our experimentation, processing time often soared when using
       `ProcessPoolExecutor` instead of `ThreadPoolExecutor`, possibly because of
       unexpected cache / static-scope behavior.
+
+    Returns:
+        A concurrent or sequential executor.
     """
     return (
         SequentialExecutor() if SEQUENTIAL else futures.ProcessPoolExecutor()

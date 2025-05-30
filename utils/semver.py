@@ -9,7 +9,14 @@ _INTEGER_RE = re.compile("[0-9]+")
 
 
 def _semver_sort_key(file_path: str) -> list[str | int]:
-    """Construct a sort key for file path with a semantic version basename."""
+    """Construct a sort key for file path with a semantic version basename.
+
+    Args:
+        file_path: A file path.
+
+    Returns:
+        The semantic versioning sort key.
+    """
     file_path = os.path.basename(file_path)
     return list(map(int, _INTEGER_RE.findall(file_path))) + [
         file_path,
