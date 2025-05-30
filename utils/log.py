@@ -38,7 +38,12 @@ def _print(
 
 
 def info(*args: object, level: bool = True):
-    """Log an informational message."""
+    """Log an informational message.
+
+    Args:
+        *args: Arguments to print.
+        level: Whether to prepend the level to the message.
+    """
     _print(
         colorama.Fore.GREEN,
         colorama.Fore.BLUE,
@@ -48,7 +53,12 @@ def info(*args: object, level: bool = True):
 
 
 def warn(*args: object, level: bool = True):
-    """Log a warning."""
+    """Log a warning.
+
+    Args:
+        *args: Arguments to print.
+        level: Whether to prepend the level to the message.
+    """
     _print(
         colorama.Fore.YELLOW,
         colorama.Fore.CYAN,
@@ -58,7 +68,12 @@ def warn(*args: object, level: bool = True):
 
 
 def error(*args: object, level: bool = True):
-    """Log an error."""
+    """Log an error.
+
+    Args:
+        *args: Arguments to print.
+        level: Whether to prepend the level to the message.
+    """
     _print(
         colorama.Fore.RED,
         colorama.Fore.MAGENTA,
@@ -68,13 +83,24 @@ def error(*args: object, level: bool = True):
 
 
 def err(cond: object, *args: object, level: bool = True):
-    """If the condition is not satisfied, log an error."""
+    """If the condition is not satisfied, log an error.
+
+    Args:
+        cond: The condition to evaluate. If true, do nothing.
+        *args: Arguments to print.
+        level: Whether to prepend the level to the message.
+    """
     if not cond:
         error(*args, level=level)
 
 
 def throw(*args: object, level: bool = True):
-    """Throw an exception."""
+    """Throw an exception.
+
+    Args:
+        *args: Arguments to print.
+        level: Whether to prepend the level to the message.
+    """
     _print(
         colorama.Fore.RED,
         colorama.Fore.MAGENTA,
@@ -85,16 +111,24 @@ def throw(*args: object, level: bool = True):
 
 
 def ass(cond: object, *args: object, level: bool = True):
-    """Assert!
+    """Assert! If the condition is not satisfied, throw an error.
 
-    If the condition is not satisfied, throw an error.
+    Args:
+        cond: The condition to evaluate. If true, do nothing.
+        *args: Arguments to print.
+        level: Whether to prepend the level to the message.
     """
     if not cond:
         throw(*args, level=level)
 
 
 def fatal(*args: object, level: bool = True):
-    """Log an error and exit with a nonzero status!"""
+    """Log an error and exit with a nonzero status.
+
+    Args:
+        *args: Arguments to print.
+        level: Whether to prepend the level to the message.
+    """
     _print(
         colorama.Fore.RED,
         colorama.Fore.MAGENTA,
@@ -105,9 +139,12 @@ def fatal(*args: object, level: bool = True):
 
 
 def assass(cond: object, *args: object, level: bool = True):
-    """Assassinate.
+    """Assassinate. If a condition is not met, exit with a nonzero status.
 
-    If a condition is not satisfied, exit with a nonzero status.
+    Args:
+        cond: The condition to evaluate. If true, do nothing.
+        *args: Arguments to print.
+        level: Whether to prepend the level to the message.
     """
     if not cond:
         fatal(*args, level=level)
