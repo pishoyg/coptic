@@ -223,10 +223,15 @@ class CrumIndexer(Mother):
         keys: list[str],
         indexes: list[list[str]],
     ) -> list[deck.Index]:
-        """
+        """Generate indexes.
+
         Args:
+            keys: A list of word keys.
             indexes: A list such that indexes_i gives the indexes that word_i
-            belongs to.
+                belongs to.
+
+        Returns:
+            A list of deck indexes.
         """
         index_to_keys: defaultdict[str, list[str]] = defaultdict(list)
         assert len(keys) == len(indexes)
@@ -732,15 +737,20 @@ class Crum(Decker):
 
     @staticmethod
     def _dedup(arr: list[int], at_most_once: bool = False) -> list[int]:
-        """
+        """Squash identical consecutive elements.
+
         Args:
+            arr: An array of elements to deduplicate.
             at_most_once: If true, deduplicate across the whole list.
-            If false, only deduplicate consecutive occurrences.
-            For example, given the list 1,1,2,1.
-            If deduped with `at_most_once`, it will return 1,2, with each page
-            occurring at most once.
-            If deduped with `at_most_once=False`, it will return 1,2,1, only
-            removing the consecutive entries.
+                If false, only deduplicate consecutive occurrences.
+                For example, given the list 1,1,2,1.
+                If deduped with `at_most_once`, it will return 1,2, with each
+                page occurring at most once.
+                If deduped with `at_most_once=False`, it will return 1,2,1, only
+                removing the consecutive entries.
+
+        Returns:
+            A list of integers, with duplicate elements eliminated.
         """
         if at_most_once:
             return list(dict.fromkeys(arr))
@@ -756,13 +766,18 @@ class Crum(Decker):
         column_ranges: str,
         single_range: bool = False,
     ) -> list[int]:
-        """page_ranges is a comma-separated list of columns or columns ranges.
-        The column ranges resemble what you type when you're using your
-        printer, except that each page number must be followed by a letter,
-        either "a" or b", representing the column.
+        """
+        Args:
+            column_ranges: a comma-separated list of columns or columns ranges.
+                The column ranges resemble what you type when you're using your
+                printer, except that each page number must be followed by a
+                letter - either "a" or b" - representing the column.
+                For example, "1a,3b-5b,8b-9a" means [1a, 3b, 4a, 4b, 5a, 5b,
+                9a].
+            single_range: If true, force a single range (no commas allowed).
 
-        For example, "1a,3b-5b,8b-9a" means [1a, 3b, 4a, 4b, 5a, 5b,
-        9a].
+        Returns:
+            The list of page numbers.
         """
 
         def col_to_page_num(col: str) -> int:
