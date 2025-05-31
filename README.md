@@ -42,6 +42,7 @@ that aims to make the Coptic language more **learnable**.
   - [`flashcards/`](#flashcards)
   - [`morphology/`](#morphology)
   - [`docs/`](#docs)
+- [Data Collection](#data-collection)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 # Technical Docs
@@ -474,6 +475,50 @@ dictionaries (to support inflections).
 ## [`docs/`](docs/)
 
 This directory contains the static data for [our website](http://remnqymi.com/).
+
+# Data Collection
+
+We need data collectors. Data collection tasks bear the [`labor`
+label](https://github.com/pishoyg/coptic/labels/labor). The [`data`
+label](https://github.com/pishoyg/coptic/labels/data) is related, but is more
+generic.
+
+As of today, we need collectors for the following:
+
+- Crum ([#303](https://github.com/pishoyg/coptic/issues/303)):
+  - Review our [Crum dataset](https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg) ([#9](https://github.com/pishoyg/coptic/issues/9), [#320](https://github.com/pishoyg/coptic/issues/320)).
+  - Populate [appendices](https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg):
+    - Categories ([#321](https://github.com/pishoyg/coptic/issues/321))
+    - Sisters ([#227](https://github.com/pishoyg/coptic/issues/227))
+    - Last pages ([#255](https://github.com/pishoyg/coptic/issues/255))
+    - Senses ([#189](https://github.com/pishoyg/coptic/issues/189))
+    - Override types ([#126](https://github.com/pishoyg/coptic/issues/126))[^1]
+  - Collect explanatory images
+  ([#5](https://github.com/pishoyg/coptic/issues/5),
+  [#263](https://github.com/pishoyg/coptic/issues/263), [#258](https://github.com/pishoyg/coptic/issues/258)).
+- Lexicon:
+  - Populate
+  [sentinels](https://drive.google.com/drive/u/0/folders/1Wlz6RXzozyypXtYV1Hq58uQAfJQV97Oo)
+- Bible:
+  - Rewrite the text ([#131](https://github.com/pishoyg/coptic/issues/131))
+  - Review morphological analysis[^2].
+- Dawoud (Future):
+  - [#117](https://github.com/pishoyg/coptic/issues/117)
+  - [#2](https://github.com/pishoyg/coptic/issues/2)
+  - [#3](https://github.com/pishoyg/coptic/issues/3)
+- Pronunciations (Future):
+  - [#216](https://github.com/pishoyg/coptic/issues/216)
+
+Other labor tasks may be less relevant as of the time of writing, and are not
+included.
+
+[^1]: *pending [#196](https://github.com/pishoyg/coptic/issues/196)*
+
+[^2]: *No issue! Pending
+  [#159](https://github.com/pishoyg/coptic/issues/159); or, more likely, a
+  new Sheets-based Bible pipeline
+  ([38](https://github.com/pishoyg/coptic/milestone/38), maybe
+[#193](http://github.com/pishoyg/coptic/issues/193))!*
 
 ***
 Ⲉ̀ϣⲱⲡ ⲁⲓϣⲁⲛⲉⲣⲡⲉⲱⲃϣ Ⲓⲗ̅ⲏ̅ⲙ̅, ⲉⲓⲉ̀ⲉⲣⲡⲱⲃϣ ⲛ̀ⲧⲁⲟⲩⲓⲛⲁⲙ: Ⲡⲁⲗⲁⲥ ⲉϥⲉ̀ϫⲱⲗϫ ⲉ̀ⲧⲁϣ̀ⲃⲱⲃⲓ ⲉ̀ϣⲱⲡ
