@@ -23,6 +23,7 @@ that aims to make the Coptic language more **learnable**.
     - [Issues](#issues)
     - [Labels](#labels)
     - [Project](#project)
+    - [Commits](#commits)
   - [Guidelines](#guidelines)
     - [Languages](#languages)
   - [`stats`](#stats)
@@ -221,7 +222,8 @@ _component_.
 
 ### [Issues](https://github.com/pishoyg/coptic/issues/)
 
-- Every issue must belong to a given milestone.
+- Every issue [must belong to a
+milestone](https://github.com/pishoyg/coptic/issues/?q=is%3Aissue%20state%3Aopen%20no%3Amilestone).
 
 - Issues need to be as specific and isolated as possible. Most of the time, they
 span a single component and involve a local change or set of local changes,
@@ -279,6 +281,19 @@ definitions, but they should belong to the following categories:
 The [project](https://github.com/users/pishoyg/projects/3) page offers
 alternative *views* of the issues, which can come in handy for planning
 purposes.
+
+### [Commits](https://github.com/pishoyg/coptic/commits/)
+
+- Use the following format for the first line of the commit message:
+   ```
+   [#${ISSUE}][${COMPONENT}/${SUBCOMPONENT}] ${DESCRIPTION}
+   ```
+
+- Use proper punctuation and capitalization.
+- The subcomponent is optional.
+- Use `fix #${ISSUE}` to automatically close an issue with the commit.
+- Besides the description line, include more details in the body of the commit
+message, though make sure that the more important docs live in the code.
 
 ## Guidelines
 
