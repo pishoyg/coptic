@@ -17,12 +17,12 @@ that aims to make the Coptic language more **learnable**.
 - [Technical Docs](#technical-docs)
   - [Hosting](#hosting)
   - [Getting started](#getting-started)
-  - [`data/` Subdirectories](#data-subdirectories)
   - [Planning](#planning)
-    - [Issues](#issues)
-    - [Project](#project)
+    - [Components](#components)
     - [Milestones](#milestones)
+    - [Issues](#issues)
     - [Labels](#labels)
+    - [Project](#project)
   - [Guidelines](#guidelines)
     - [Languages](#languages)
   - [`stats`](#stats)
@@ -40,8 +40,6 @@ that aims to make the Coptic language more **learnable**.
   - [`bible/`](#bible)
     - [`stshenouda.org/`](#stshenoudaorg)
   - [`flashcards/`](#flashcards)
-    - [Anki Keys and Synchronization](#anki-keys-and-synchronization)
-      - [See also](#see-also)
   - [`morphology/`](#morphology)
   - [`docs/`](#docs)
 
@@ -153,117 +151,133 @@ defined in [`.pre-commit-config.yaml`](.pre-commit-config.yaml). They run
 automatically before a commit. You can execute the following to appease them
 (keep running them and applying their changes until they all pass):
 
-```sh
-make test`
-```
+   ```sh
+   make test`
+   ```
 
-Our pipelines currently have minimal dependencies. For a pair of dependent
-pipelines (where one downstream pipeline consumes the output of another upstream
-pipeline), the downstream will fare well even if pre-commits haven't been
-executed on the output of the upstream pipeline.
-If this were to change, reopen [#120](https://github.com/pishoyg/coptic/issues/120).
+   Our pipelines currently have minimal dependencies. For a pair of dependent
+   pipelines (where one downstream pipeline consumes the output of another upstream
+   pipeline), the downstream will fare well even if pre-commits haven't been
+   executed on the output of the upstream pipeline.
+   If this were to change, reopen [#120](https://github.com/pishoyg/coptic/issues/120).
 
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+   [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 
-## `data/` Subdirectories
 
-Most of our projects have a `data` subdirectory. Pay attention to the following
+1. Some of our projects have a `data` subdirectory. Pay attention to the following
 distinction:
 
-- `raw/`: Data that is **copied** from elsewhere. This would, for example,
-include the Marcion SQL tables copied as is, unmodified. The contents of this
-directory remain true to the original source.
+   - `raw/`: Data that is **copied** from elsewhere. This would, for example,
+   include the Marcion SQL tables copied as is, unmodified. The contents of this
+   directory remain true to the original source.
 
-- `input/`: Data that we either *modified* or *created*. If we want to fix
-typos to data that we copied, we don't touch the data under `raw/`, but we take
-the liberty to modify the copies that live under `input/`.
+   - `input/`: Data that we either *modified* or *created*. If we want to fix
+   typos to data that we copied, we don't touch the data under `raw/`, but we take
+   the liberty to modify the copies that live under `input/`.
 
 ## Planning
 
 We use GitHub to track our plans and TODO's.
 
-### [Issues](https://github.com/pishoyg/coptic/issues/)
+### Components
 
-Issues need to be as specific and isolated as possible. Most of the time, they
-span a single component, although they can often work mainly in one component
-and spill to others, and sometimes they're generic and span one aspect of
-multiple components (such as the conventions set for the whole repo). Issues
-mostly have exactly one *How*, and usually one *Why* (see [labels](#labels)
-below). Issues should involve a local change or set of local changes.
+This list of components helps us group our work into a number of well-defined
+focus areas. Milestones usually concern themselves with one of the components,
+and issues and commit messages should be prefixed with a component name between
+square brackets.
 
-High-priority issues are defined in two ways:
-- Assignment to a developer
-- Belonging to a component version that we are working to release.
-
-### [Project](https://github.com/users/pishoyg/projects/3)
-
-The [project](https://github.com/users/pishoyg/projects/3) page offers
-alternative *views* of the issues, which can come in handy for planning
-purposes.
+1. Crum: Crum's dictionary
+1. KELLIA: KELLIA's dictionary
+1. copticsite: copticsite's dictionary
+1. Dawoud: Dawoud's dictionary
+1. Bible: The Coptic Bible
+1. Lexicon: [ⲡⲓⲖⲉⲝⲓⲕⲟⲛ](http://remnqymi.com/crum/)
+1. Site: [Our website](http://remnqymi.com/)
+1. Morphology: Our morphological analysis pipelines
+1. platform: The development platform and tooling.
+1. Community: Community of contributors and users.
 
 ### [Milestones](https://github.com/pishoyg/coptic/milestones?direction=asc&sort=due_date&state=open)
 
-- Milestones represent more complex pieces of work. Their size is undetermined.
-  They could weeks or years, but they are not simple enough to span just a few
-days. This is their main use case.
+- Milestones represent long-term, complex goals or deliverables. They help us
+draw our project path, and what it is that we're trying to achieve in the long
+run. Milestones are a translation of the project's mission.
 
-- There is a second, somewhat unorthodox, use case for milestones as component
-  backlogs backlogs, for miscellaneous issues related to some component that
-don't belong to a goal that we've already defined and crystallized into a
-milestone.
+- Besides the more specific milestones that represent concrete goals, we have
+  `(Backlog)` milestones, that represent miscellaneous pending improvements,
+technical debt, optimizations, or desired changes; but which don't block the
+achievement of one of the project's main goals.
 
-- Every issue must belong to a milestone.
+- Milestone priorities are assigned using **due dates**.
 
-- Milestone priorities are assigned using **due dates**. Milestones help make
-long-term plans.
-
-- The number of milestones should remain "under control".
-
-- The *platform* component milestone refers to the development platform and
-tooling. Issues under this milestone are mainly developer-facing rather than
-user-facing, and their purpose is to improve the framework that developers use
-to drive the project forward. This component is about sharpening our saw so we
-can cut wood faster.
+- The number of milestones should remain _under control_.
 
 - When work on a milestone is good enough, it's closed, the achievement is
-celebrated, and its remaining issues move to the corresponding component
-backlog milestone.
+celebrated, and its remaining issues move to an appropriate backlog milestone.
 
-- Component-specific milestones are often named as component versions. (For
-example, *Site v1.0* is a milestone referring to the first release of the
-Site).
+- As much as possible, each milestone should be concerned with a given
+_component_.
 
-- Backlog milestone are often named after the component, but without a version,
-  and often with the prefix *Pipeline:*.
+### [Issues](https://github.com/pishoyg/coptic/issues/)
+
+- Every issue must belong to a given milestone.
+
+- Issues need to be as specific and isolated as possible. Most of the time, they
+span a single component and involve a local change or set of local changes,
+although they can sometimes work mainly in one component and spill to others,
+and sometimes they're generic and span one aspect of multiple components (such
+as the conventions set for the whole repo).
+
+- High-priority issues are marked in a number of ways:
+   - The [`favorable` label](https://github.com/pishoyg/coptic/labels/favorable).
+   - Assignment to a developer
+   - Belonging to a high-priority milestone.
+
+- Add `TODO`s to the code whenever appropriate, always following `TODO` with a
+colon, a space, and an issue number (with the pound sign) surrounded by
+parenthesis. This format is enforced by a pre-commit hook, though the hook only
+picks up a `TODO` if it's immediately followed by `:`. If the `TODO` is
+low-priority, and isn't worth an associated issue, you can assign it to the
+pseud-issue `#0`.
 
 ### [Labels](https://github.com/pishoyg/coptic/labels)
 
-- All issues should be labeled.
+Wherever possible, use labels to help track and organize issues. Issues mostly
+have exactly one *How*, and usually one *Why*.
 
-- We assign the following categories of labels to issues:
-
+Refer to [labels](https://github.com/pishoyg/coptic/labels/) for the most recent
+definitions, but they should belong to the following categories:
    - `How`
      - How can the task be achieved?
-       - `architect`: Architecture and design.
+       - `architect`: Planning and design.
        - `diplomacy`: Diplomacy, connections, and reachout.
        - `documentation`: Writing documentation.
        - `labor`: Manual data collection.
-       - `freelance`: Hiring a freelancer.
-     - We don't assign a coding label, because that includes most tasks. A task
-       that doesn't have a nature label should be a coding task.
+       - `code`: There is no `code` label, because that includes most tasks. A task
+         that doesn't have another `How` label is probably a `code` task.
    - `Who`
      - Is the issue user-facing or developer-oriented?
        - `user`: A user-oriented improvement.
        - `dev`: A developer-oriented, not user-visible, improvement.
    - `Why`
      - What is the purpose of this issue?
-       - `data collection`: Expand the data that we own.
-       - `maintenance`: Maintain existing territories, rather than expand into
-         new ones.
-       - `rigor`: Improve the rigor (particularly parsing, or inflection
-       generation).
+       - `data`: Expand the data that we own.
+       - `rigor`: Improve the rigor (particularly when it comes to such issues
+       parsing, or inflection generation).
        - `UI`: Improve the user interface.
        - `bug`: Fix a bug.
+       - `community`: Grow the ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ community.
+   - `What`:
+       A generic set of labels:
+       - `favorable`: Nice to do soon.
+       - `backlog`: Low-impact / low-priority.
+       - `reports`: User reports.
+
+### [Project](https://github.com/users/pishoyg/projects/3)
+
+The [project](https://github.com/users/pishoyg/projects/3) page offers
+alternative *views* of the issues, which can come in handy for planning
+purposes.
 
 ## Guidelines
 
@@ -427,15 +441,10 @@ database from other sources:
 
 ### [`copticocc.org/`](dictionary/copticocc_org)
 
-[`dawoud-D100/`](dictionary/copticocc_org/) contains a digital scan of
+[`copticocc_org/`](dictionary/copticocc_org/) contains a digital scan of
 Moawad Dawoud's dictionary.
 
 ### [`kellia.uni-goettingen.de/`](dictionary/kellia_uni_goettingen_de)
-
-We had some plans to combine the strength of KELLIA and Crum
-([#53](https://github.com/pishoyg/coptic/issues/53),
-[#6](https://github.com/pishoyg/coptic/issues/6)), but they have been
-abandoned.
 
 ### [`copticsite.com/`](dictionary/copticsite_com/)
 
@@ -453,66 +462,9 @@ most worthy of investment at the moment.
 ## [`flashcards/`](flashcards/)
 
 This directory contains the data and logic for processing dictionaries into
-*flashcards*. It is named as such because our first use case was a flashcard
-app, although our use of the dictionaries has since become more versatile.
-
-### Anki Keys and Synchronization
-
-When you import a package into your (personal) Anki database, Anki uses the
-IDs to eliminate duplicates.
-
-Uniqueness is therefore important. But what is trickier, and perhaps more
-important, is persistence. If we export new versions of a certain deck
-regularly, we should maintain persistent IDs to ensure correct
-synchronization. Otherwise, identical pieces of data that have distinct IDs
-will result in duplicates.
-
-There are three types of IDs in the generated package:
-
-1. Note ID
-
-`genanki`
-[suggests](https://github.com/kerrickstaley/genanki?tab=readme-ov-file#note-guids)
-defining the GUID as a hash of a subset of fields that uniquely identify a
-note.
-
-**The GUID must be unique across decks.** Therefore, this subset of field
-values must be unique, including across decks. You can solve this by
-prefixing the keys with the name of the deck.
-
-In our script, we ask the user to provide a list of keys as part of their
-input, along the list of fronts, backs, deck names, ... etc.
-The users of the package must assign the keys properly, ensuring uniqueness,
-and refraining from changing / reassigning them afterwards.
-
-This is somewhat straightforward for Marcion's words. Use of Marcion's IDs
-for synchronization should suffice.
-
-For the Bible, we could use the verse reference as a note ID, and ensure
-that the book names, chapter numbers, and verse numbers don't change in a
-following version.
-
-For other data creators without programming expertise, a sequence number
-works as long as nobody inserts a new row in the middle of the CSV, which
-would mess up the keys. **Discuss keying with those creators.** *As of today,
-only copticsite.com's data has this problem.*
-
-1. Deck ID
-
-Whenever possible, we use a hardcoded deck ID. This is not possible for
-decks that are autogenerated, such as the Bible decks which are separated
-for nesting (as opposed to being grouped in a single deck). In such cases,
-we use a hash of the deck name, and **the deck name becomes a protected
-field.**
-
-1. Model ID
-
-Model IDs are hardcoded.
-
-#### See also
-
-1. [#36](https://github.com/pishoyg/coptic/issues/36)
-1. [#37](https://github.com/pishoyg/coptic/issues/37)
+*flashcards* and Lexicon. It is named as such because our first use case was a
+flashcard app, although our use of the dictionaries has since become more
+versatile.
 
 ## [`morphology/`](morphology/)
 

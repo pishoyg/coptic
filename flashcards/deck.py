@@ -1,4 +1,51 @@
-"""A dictionary deck."""
+"""A dictionary deck.
+
+### Anki Keys and Synchronization
+
+When you import a package into your (personal) Anki database, Anki uses the
+IDs to eliminate duplicates.
+
+Uniqueness is therefore important. But what is trickier, and perhaps more
+important, is persistence. If we export new versions of a certain deck
+regularly, we should maintain persistent IDs to ensure correct
+synchronization. Otherwise, identical pieces of data that have distinct IDs
+will result in duplicates.
+
+There are three types of IDs in the generated package:
+
+1. Note ID
+
+`genanki` suggests[1] defining the GUID as a hash of a subset of fields that
+uniquely identify a note.
+
+*The GUID must be unique across decks.* Therefore, this subset of field
+values must be unique, including across decks. You can solve this by
+prefixing the keys with the name of the deck.
+
+In our script, we ask the user to provide a list of keys as part of their
+input, along the list of fronts, backs, deck names, ... etc.
+The users of the package must assign the keys properly, ensuring uniqueness,
+and refraining from changing / reassigning them afterwards.
+
+This is somewhat straightforward for Crum's dictionary, as the use of the
+Marcion keys for synchronization should suffice. It is also straightforward for
+the KELLIA dictionary.
+
+For other data creators without programming expertise, a sequence number
+works as long as nobody inserts a new row in the middle of their data, which
+would mess up the keys. Discuss keying with those creators. As of today,
+only copticsite.com's data has this problem.
+
+2. Deck ID
+
+Deck IDs are hardcoded.
+
+3. Model ID
+
+Model IDs are hardcoded.
+
+[1] https://github.com/kerrickstaley/genanki?tab=readme-ov-file#note-guids
+"""
 
 # TODO: (#0) For text generation, it's likely more efficient to use generators
 # and avoid concatenating the strings, unless necessary.
