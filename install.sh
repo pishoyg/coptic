@@ -30,26 +30,44 @@ _install() {
   pip install -r requirements.txt
   pip install -e .
   pre-commit install
-  npm install
-  npm install --global bun
+
+  EXIT_CODE=0
 
   if ! command -v npm &> /dev/null; then
     echo -e "${RED}Please install ${YELLOW}npm${RED}. See ${YELLOW}https://docs.npmjs.com/downloading-and-installing-node-js-and-npm${RED}.${RESET}"
+    EXIT_CODE=1
   fi
+
+  if command -v npm &> /dev/null; then
+    npm install
+    npm install --global bun
+  fi
+
   if ! command -v tidy &> /dev/null; then
     echo -e "${RED}Please install ${YELLOW}tidy${RED} from ${YELLOW}https://www.html-tidy.org/${RED}.${RESET}"
+    EXIT_CODE=1
   fi
+
   if ! command -v magick &> /dev/null; then
     echo -e "${RED}Please install ${YELLOW}magick${RED} from ${YELLOW}https://imagemagick.org/${RED}.${RESET}"
+    EXIT_CODE=1
   fi
+
   if ! command -v gh &> /dev/null; then
     echo -e "${RED}Please install ${YELLOW}gh${RED} from ${YELLOW}https://cli.github.com/${RED}.${RESET}"
+    EXIT_CODE=1
   fi
+
   if ! command -v dot &> /dev/null; then
-    echo -e "${YELLOW}Consider installing ${CYAN}dot${YELLOW} from ${CYAN}https://graphviz.org/${YELLOW}.${RESET}";
+    echo -e "${YELLOW}Consider installing ${CYAN}dot${YELLOW} from ${CYAN}https://graphviz.org/${YELLOW}.${RESET}"
   fi
+
   if ! command -v say &> /dev/null; then
-    echo -e "${YELLOW}Consider installing ${CYAN}say${YELLOW}. This should be possible with ${CYAN}sudo apt-get install gnustep-gui-runtime${YELLOW} on Ubuntu.${RESET}";
+    echo -e "${YELLOW}Consider installing ${CYAN}say${YELLOW}. This should be possible with ${CYAN}sudo apt-get install gnustep-gui-runtime${YELLOW} on Ubuntu.${RESET}"
+  fi
+
+  if [ "${EXIT_CODE}" -ne 0 ]; then
+    exit "${EXIT_CODE}"
   fi
 }
 
