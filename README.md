@@ -58,7 +58,7 @@ We use:
 - [AWS Route 53](https://us-east-1.console.aws.amazon.com/route53/v2/hostedzones)
 for domain registration and DNS.
 - [Google
-Drive](https://drive.google.com/drive/folders/17jI92CKumjYQTXghThaaejPeD8ZbifPm?usp=drive_link) and [Google Cloud](https://console.cloud.google.com/welcome) to store data on the cloud.
+Drive](https://drive.google.com/drive/folders/17jI92CKumjYQTXghThaaejPeD8ZbifPm?usp=drive_link) and [Google Cloud](https://console.cloud.google.com/welcome) for cloud storage.
 - [Google Analytics](https://analytics.google.com/analytics/web/#/p454349148)
 and [Google Search
 Console](https://search.google.com/search-console?resource_id=sc-domain%3Aremnqymi.com)
@@ -121,7 +121,8 @@ for traffic tracking and analysis.
 needs to be run once, while `.env` needs to be sourced for each session.
 
    If there are missing binaries that you need to download them, `make install`
-   will let you know.
+   will let you know. You *may* also need to log in with
+   [`gh`](https://cli.github.com/).
 
 1. Our pipelines are defined in [`Makefile`](Makefile). Though some pipelines in
    [`Makefile`](Makefile) are only used during development and testing, and are
