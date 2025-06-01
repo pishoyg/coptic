@@ -136,8 +136,12 @@ export class Form {
   private readonly collapsible: collapse.Collapsible;
 
   /**
+   * Construct the form object.
+   * Populate form elements from query parameters.
+   * Add listeners to populate query parameters whenever form elements are
+   * updated.
    *
-   * @param form
+   * @param form - Form parameters.
    */
   constructor(form: _Form) {
     this.searchBox = document.getElementById(
@@ -274,6 +278,10 @@ export class Form {
   }
 
   /**
+   * Update the height of the collapsible element.
+   * The collapsible element is height-restricted. We need to regularly update
+   * its height whenever new content is added.
+   *
    * NOTE: This is an expensive operation. Don't perform it repeatedly in
    * time-sensitive applications.
    */
@@ -303,68 +311,58 @@ export class Form {
 }
 
 /**
+ * Aggregate search results.
  */
-abstract class ResultAggregator {
-  protected abstract readonly results: ResultAggregator[];
+abstract class AggregateResult {
+  protected abstract readonly results: AggregateResult[];
+  // Memos are used to memorize previously computed values, so we can avoid
+  // computing them repeatedly.
   private matchMemo: boolean | null = null;
   private boundaryTypeMemo: BoundaryType | null = null;
   private fragmentWordMemo: string | undefined | null = null;
 
   /**
-   * @returns
+   * @returns The boundary type.
    */
   boundaryType(): BoundaryType {
     // The BoundaryType enum is implemented in such a way that the boundary type
     // of an aggregated result is the minimum of the boundary types of all
     // results.
-    if (this.boundaryTypeMemo !== null) {
-      return this.boundaryTypeMemo;
-    }
-    this.boundaryTypeMemo = Math.min(
+    return (this.boundaryTypeMemo ??= Math.min(
       ...this.results.map((r) => r.boundaryType())
-    );
-    return this.boundaryTypeMemo;
+    ));
   }
 
   /**
-   * @returns
+   * @returns The fragment word.
    */
   fragmentWord(): string | undefined {
     // We simply return the fragment of the first result that possesses one.
-    if (this.fragmentWordMemo !== null) {
-      return this.fragmentWordMemo;
-    }
-    this.fragmentWordMemo = this.results
+    return (this.fragmentWordMemo ??= this.results
       .find((r) => r.fragmentWord())
-      ?.fragmentWord();
-    return this.fragmentWordMemo;
+      ?.fragmentWord());
   }
 
   /**
-   * @returns
+   * @returns Whether this result has a match.
    */
   get match(): boolean {
     // We have a match if any of the results has a match.
-    if (this.matchMemo !== null) {
-      return this.matchMemo;
-    }
-    this.matchMemo = this.results.some((r) => r.match);
-    return this.matchMemo;
+    return (this.matchMemo ??= this.results.some((r) => r.match));
   }
 }
 
 /**
  * Candidate represents one search candidate from the index. In the results
  * display, each candidate occupies its own row.
- *
  */
 class Candidate {
   // key bears the candidate key.
   readonly key: string;
+  // fields bears the candidate's searchable fields.
   readonly fields: Field[];
 
   /**
-   *
    * @param record - The candidate data.
    * @param fields - The fields metadata.
    */
@@ -389,9 +387,8 @@ class Candidate {
 
 /**
  * SearchResult represents the search result of one candidate from the index.
- * @returns
  */
-export class SearchResult extends ResultAggregator {
+export class SearchResult extends AggregateResult {
   protected readonly results: FieldSearchResult[];
   /**
    * @param candidate
@@ -416,9 +413,10 @@ export class SearchResult extends ResultAggregator {
   /**
    * viewCell constructs the first cell in the row for this result, bearing the
    * anchor to the result (if available).
-   * @param hrefFmt
+   *
+   * @param hrefFmt - Format string of the HREF pointing to the result page.
    * @param total - Total number of results.
-   * @returns
+   * @returns The view table cell element.
    */
   private viewCell(
     hrefFmt: string | undefined,
@@ -495,6 +493,8 @@ export class SearchResult extends ResultAggregator {
   }
 
   /**
+   * Construct a key used to compare search results.
+   *
    * @returns the comparison key.
    */
   compareKey(): number[] {
@@ -522,9 +522,14 @@ export class SearchResult extends ResultAggregator {
 }
 
 /**
- * @param a
- * @param b
+ * Compare two search results for priority.
+ *
+ * @param a - First result.
+ * @param b - Second result.
  * @returns
+ *   -1 if a < b
+ *   0 if a == b
+ *   1 if a > b
  */
 function searchResultCompare(a: SearchResult, b: SearchResult): number {
   const aKey: number[] = a.compareKey();
@@ -550,8 +555,10 @@ function searchResultCompare(a: SearchResult, b: SearchResult): number {
 class Field {
   readonly units: Unit[];
   /**
-   *
    * @param name - The name of the field.
+   * The name is currently unused, but it may become used as part of #445,
+   * because we intend to use it to filter out search results, using Xooxle's
+   * 'admit' parameter.
    * @param html - The HTML content of the field.
    */
   constructor(
@@ -562,7 +569,6 @@ class Field {
   }
 
   /**
-   *
    * @param regex - Regex to search.
    * @returns Search result.
    */
@@ -574,10 +580,9 @@ class Field {
 /**
  * FieldSearchResult represents the search result of one field.
  */
-class FieldSearchResult extends ResultAggregator {
+class FieldSearchResult extends AggregateResult {
   protected readonly results: UnitSearchResult[];
   /**
-   *
    * @param field
    * @param regex
    */
@@ -587,7 +592,6 @@ class FieldSearchResult extends ResultAggregator {
   }
 
   /**
-   *
    * @returns The field's HTML content, with matches highlighted.
    */
   highlight(): string {
@@ -623,7 +627,6 @@ class Unit {
   readonly lines: Line[];
 
   /**
-   *
    * @param html - The HTML content of the unit.
    */
   constructor(html: string) {
@@ -631,7 +634,6 @@ class Unit {
   }
 
   /**
-   *
    * @param regex - The regular expression to search.
    * @returns Search result.
    */
@@ -643,7 +645,7 @@ class Unit {
 /**
  * UnitSearchResult represents the search result of one unit.
  */
-class UnitSearchResult extends ResultAggregator {
+class UnitSearchResult extends AggregateResult {
   protected readonly results: LineSearchResult[];
   /**
    * @param unit - The unit to search.
@@ -701,7 +703,6 @@ class Line {
   readonly text: string;
 
   /**
-   *
    * @param html - The HTML content of the line.
    */
   constructor(readonly html: string) {
@@ -714,7 +715,6 @@ class Line {
   }
 
   /**
-   *
    * @param regex - The regex to search.
    * @returns The search result.
    */
@@ -761,7 +761,7 @@ class Line {
 }
 
 /**
- *
+ * LineSearchResult represents the search result of one line.
  */
 class LineSearchResult {
   /**
@@ -781,6 +781,7 @@ class LineSearchResult {
    * not to contain any HTML tags within them. Just text!
    */
   private static readonly closing = '</span>';
+
   private readonly matches: Match[];
 
   /**
@@ -820,7 +821,6 @@ class LineSearchResult {
   }
 
   /**
-   *
    * @returns A word that can be used as a URL fragment.
    */
   fragmentWord(): string | undefined {
@@ -856,11 +856,11 @@ class LineSearchResult {
   }
 
   /**
-   *
    * @returns The HTML content of the line, with matches highlighted.
    */
   highlight(): string {
     if (!this.match) {
+      // No highlighting needed.
       return this.html;
     }
 
@@ -894,6 +894,9 @@ class LineSearchResult {
         // This is a diacritic. It was ignored during search, and is not part of
         // the match. Yield without accounting for it in the text.
         builder.push(this.html[i++]!);
+        // Do NOT remove this `continue` statement, even if you replace the `if`
+        // with a `while`, as this would break highlighting in cases where a
+        // diacritic is immediately followed by a tag.
         continue;
       }
 
@@ -911,6 +914,7 @@ class LineSearchResult {
       if (i < this.html.length) {
         builder.push(this.html[i]!);
       }
+
       j += 1;
       i += 1;
     }
@@ -947,6 +951,7 @@ export interface _Index {
  */
 export class BucketSorter {
   readonly numBuckets: number;
+
   /**
    * @param numBuckets - Total number of buckets. The default is one bucket
    * that contains all results, thus there is no sorting.
@@ -994,7 +999,7 @@ export class BucketSorter {
 }
 
 /**
- *
+ * Xooxle search engine
  */
 export class Xooxle {
   /**
@@ -1053,8 +1058,9 @@ export class Xooxle {
   }
 
   /**
+   * Handle the search query, debouncing with the given timeout.
    *
-   * @param timeout
+   * @param timeout - How long to wait before starting search.
    */
   private search(timeout: number) {
     if (this.debounceTimeout) {
@@ -1068,7 +1074,7 @@ export class Xooxle {
   }
 
   /**
-   *
+   * Handle the search query, aborting any ongoing search.
    */
   private async searchAux() {
     // If there is an ongoing search, abort it.
@@ -1101,9 +1107,11 @@ export class Xooxle {
   }
 
   /**
+   * Search candidates for the given regex, adding results to display, and
+   * aborting if an abort signal is received.
    *
-   * @param regex
-   * @param abortController
+   * @param regex - Regex to search.
+   * @param abortController - Abort controller for this search.
    */
   private async searchAuxAux(regex: RegExp, abortController: AbortController) {
     // TODO: (#0) We append random characters in order to avoid having timers
@@ -1178,6 +1186,10 @@ export class Xooxle {
       }
     }
 
+    // Update the numbers in the view cell.
+    // We couldn't have put the numbers there in the beginning, because, due to
+    // bucket sorting, we couldn't know for sure where each result is going to
+    // end up.
     let i = 0;
     [...this.form.resultsTBody.getElementsByClassName(CLS.COUNTER)].forEach(
       (counter) => {
@@ -1185,6 +1197,7 @@ export class Xooxle {
       }
     );
 
+    // Expand the results table to accommodate the last batch of results.
     this.form.expand();
   }
 }
