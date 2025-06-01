@@ -3,10 +3,13 @@ import * as env from '../env.js';
 import * as logger from '../logger.js';
 import * as coptic from '../coptic.js';
 
+// Our dictionary pages are '0.jpg' to '1054.jpg', with '17.jpg' holding page 1.
 const MIN_PAGE_NUM = 0;
 const MAX_PAGE_NUM = 1054;
+const EXT = 'jpg';
 const OFFSET = 16;
 
+// Paths to our indexes.
 const COPTIC = 'coptic.tsv';
 const ARABIC = 'arabic.tsv';
 const GREEK = 'greek.tsv';
@@ -14,21 +17,21 @@ const GREEK = 'greek.tsv';
 const ALL = [COPTIC, ARABIC, GREEK];
 
 /**
- * Dawoud gives ⲟⲩ special handling!
+ * Dawoud gives ⲟⲩ special handling in his dictionary.
  * All words starting with ⲟⲩ are grouped together, under a section in the
  * dictionary between ⲟ and ⲡ.
  * We reimplement sorting for Dawoud!
  */
 export class DawoudWord extends coptic.Word implements scan.Word {
   /**
-   *
-   * @param other
-   * @returns
+   * Lexicographically compare two words in Dawoud's dictionary.
+   * @param other - Word to compare.
+   * @returns The truth value of `this <= other`, based on Dawoud's ordering.
    */
   override leq(other: DawoudWord): boolean {
     if (this.ou() === other.ou()) {
-      // Either neither is an ⲟⲩ words, or both are.
-      // Lexicographic comparison should work either way.
+      // Either both words start with ⲟⲩ, or neither does.
+      // Either way, lexicographic comparison should work.
       return super.leq(other);
     }
     if (!this.o() || !other.o()) {
@@ -42,16 +45,14 @@ export class DawoudWord extends coptic.Word implements scan.Word {
   }
 
   /**
-   *
-   * @returns
+   * @returns Whether the word starts with an omicron.
    */
   private o(): boolean {
     return this.word.startsWith('ⲟ');
   }
 
   /**
-   *
-   * @returns
+   * @returns Whether the words starts with an omicron ua.
    */
   private ou(): boolean {
     return this.word.startsWith('ⲟⲩ');
@@ -59,7 +60,8 @@ export class DawoudWord extends coptic.Word implements scan.Word {
 }
 
 /**
- *
+ * Main function to run in the browser.
+ * Build the index, add event listeners, ...
  */
 async function browserMain(): Promise<void> {
   const form: scan.Form = scan.Form.default();
@@ -67,7 +69,7 @@ async function browserMain(): Promise<void> {
     MIN_PAGE_NUM,
     MAX_PAGE_NUM,
     OFFSET,
-    'jpg',
+    EXT,
     form
   );
   const index = new scan.Index(
@@ -79,7 +81,8 @@ async function browserMain(): Promise<void> {
 }
 
 /**
- *
+ * Main function to run when the script is invoked in a Node.js environment.
+ * Validate the indexes.
  */
 async function nodeMain(): Promise<void> {
   const fs = await import('fs');
@@ -106,7 +109,8 @@ async function nodeMain(): Promise<void> {
 }
 
 /**
- *
+ * Run the browser's main function in the browser, or Node's main function in
+ * Node.js.
  */
 async function main(): Promise<void> {
   if (env.node()) {

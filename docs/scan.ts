@@ -1,5 +1,5 @@
 // NOTE: This package is used in the browser, and also during validation. So we
-// allow it to assert correctness, instead of trying to fail recursively.
+// allow it to assert correctness, instead of trying to always fail gracefully.
 import * as logger from './logger.js';
 import * as coptic from './coptic.js';
 import * as browser from './browser.js';
@@ -11,19 +11,25 @@ const WANT_COLUMNS = ['page', 'start', 'end'];
 const ZOOM_FACTOR = 0.05;
 
 /**
+ * Word represents a word that can be used in the book scan context.
  * TODO: (#411) Implement Greek and Arabic word classes, as well as Coptic.
  */
 export interface Word {
   /**
-   *
-   * @param other
+   * Lexicographically compare two words.
+   * @param other - The word we're comparing to.
+   * @returns The truth value of `this <= other`.
    */
   leq(other: Word): boolean;
+  /**
+   * @returns The string representation of the word.
+   */
   get word(): string;
 }
 
-// Entry represents a dictionary page, where each page has a defined range,
-// specified by the so-called *guide words*.
+/** Entry represents a dictionary page, where each page has a defined range,
+ * specified by the so-called *guide words*.
+ */
 export interface Page {
   start: Word;
   end: Word;
@@ -31,9 +37,13 @@ export interface Page {
 }
 
 /**
+ * We often use the notation "${NUM}${COL}" to refer to a given column in a
+ * page. For example, "1a" refers to the left column of page 1.
+ * chopColumn removes the column from the page, if present, returning the page
+ * number.
  *
- * @param page
- * @returns
+ * @param page - A page number, potentially containing a column.
+ * @returns - The page number without the column.
  */
 export function chopColumn(page: string): string {
   if (['a', 'b'].some((c) => page.endsWith(c))) {
@@ -43,14 +53,20 @@ export function chopColumn(page: string): string {
 }
 
 /**
- *
+ * A dictionary index.
  */
 export class Index {
-  pages: Page[];
+  private pages: Page[];
   /**
+   * @param index - The content of the index, in plain TSV format,with the first
+   * three column being:
+   * 1. Page number
+   * 2. Page start word
+   * 3. Page end word
    *
-   * @param index
-   * @param WordType
+   * @param WordType - The type of words in this dictionary. This should be a
+   * constructor type that takes as input the string representation of the word,
+   * which is retrieved from the index columns.
    */
   constructor(
     index: string,
@@ -58,18 +74,20 @@ export class Index {
   ) {
     const lines = index.trim().split('\n');
     const header: string[] = Index.toColumns(lines[0]!);
+    // Verify that the header has the expected column names.
     logger.assass(
       WANT_COLUMNS.every((col: string, idx: number) => header[idx] === col),
       header.slice(0, WANT_COLUMNS.length),
       'do not match the list of wanted columns',
       WANT_COLUMNS
     );
+
     this.pages = lines
       .slice(1) // Skip the header.
       .map((row) => {
         const [page, start, end] = Index.toColumns(row);
         return {
-          page: Index.parseInt(page!),
+          page: Index.forceParseInt(page!),
           start: new WordType(start!),
           end: new WordType(end!),
         };
@@ -77,33 +95,35 @@ export class Index {
   }
 
   /**
-   *
-   * @param str
-   * @returns
+   * @param str - String representation of a TSV row.
+   * @returns The content of the columns of interest in the given row.
    */
   static toColumns(str: string): string[] {
     return str
       .split('\t')
       .slice(0, WANT_COLUMNS.length)
-      .map((l) => l.trim());
+      .map((l: string): string => l.trim());
   }
+
   /**
-   *
-   * @param str
-   * @returns
+   * Parse an integer, throwing an error if it's not parsable.
+   * @param str - A string representation of an integer.
+   * @returns - The parsed integer.
    */
-  static parseInt(str: string): number {
+  static forceParseInt(str: string): number {
     const num = parseInt(str);
     logger.assass(!isNaN(num), 'unable to parse page number', num);
     return num;
   }
 
   /**
-   *
-   * @param query
-   * @returns
+   * Given a search query, return the dictionary page number.
+   * @param query - Search query.
+   * @returns - Page number, or undefined if the number can't be inferred from
+   * the query.
    */
   getPage(query: string): number | undefined {
+    query = query.trim();
     if (!query) {
       return undefined;
     }
@@ -116,9 +136,17 @@ export class Index {
 
     // Check if this is a Coptic word.
     if (!coptic.isCoptic(query)) {
+      // Neither a number nor a Coptic word! Nothing we can do!
+      // TODO: (#411) This should support other classes of words as well, not
+      // just Coptic words.
+      // We should perhaps introduce another class method:
+      //   searchable(query: string): boolean
+      // and allow different children of this class to override this method,
+      // and use that method instead.
       return undefined;
     }
 
+    // Binary search the word in the dictionary.
     const target = new this.WordType(query);
     let left = 0;
     let right = this.pages.length - 1;
@@ -136,14 +164,17 @@ export class Index {
   }
 
   /**
+   * Build the index, and validate that its words are indeed lexicographically
+   * sorted, as should be the case with a dictionary index.
    *
-   * @param strict
+   * @param strict - If true, exit when encountering a sorting error. If false,
+   * simply log an error message.
    */
   validate(strict = true): void {
-    const error = strict ? logger.fatal : logger.error;
-    for (let i = 0; i < this.pages.length; i++) {
-      const p = this.pages[i]!;
-
+    const error: (...message: unknown[]) => void = strict
+      ? logger.fatal
+      : logger.error;
+    for (const [i, p] of this.pages.entries()) {
       if (!p.start.leq(p.end)) {
         error(
           'page',
@@ -184,16 +215,16 @@ export class Index {
 }
 
 /**
- *
+ * A holder of the HTML elements used to interact with the dictionary.
  */
 export class Form {
   /**
    *
-   * @param image
-   * @param nextButton
-   * @param prevButton
-   * @param resetButton
-   * @param searchBox
+   * @param image - <img> element holding the book page.
+   * @param nextButton - Button to navigate to the next page when clicked.
+   * @param prevButton - Button to navigate to the previous page when clicked.
+   * @param resetButton - Button to reset display.
+   * @param searchBox - Search box, providing search queries.
    */
   constructor(
     readonly image: HTMLImageElement,
@@ -204,7 +235,8 @@ export class Form {
   ) {}
 
   /**
-   *
+   * If you use a standard set of element IDs to mark your HTML elements,
+   * default() can construct the Form object for you from the HTML document.
    * @returns
    */
   static default(): Form {
@@ -354,6 +386,7 @@ export class Scroller {
       this.decrementPage();
     }
   }
+
   /**
    *
    */
