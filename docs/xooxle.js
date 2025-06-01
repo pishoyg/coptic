@@ -113,8 +113,12 @@ export class Form {
   tbody;
   collapsible;
   /**
+   * Construct the form object.
+   * Populate form elements from query parameters.
+   * Add listeners to populate query parameters whenever form elements are
+   * updated.
    *
-   * @param form
+   * @param form - Form parameters.
    */
   constructor(form) {
     this.searchBox = document.getElementById(form.searchBoxID);
@@ -224,6 +228,10 @@ export class Form {
     this.tbody.append(row);
   }
   /**
+   * Update the height of the collapsible element.
+   * The collapsible element is height-restricted. We need to regularly update
+   * its height whenever new content is added.
+   *
    * NOTE: This is an expensive operation. Don't perform it repeatedly in
    * time-sensitive applications.
    */
@@ -250,62 +258,52 @@ export class Form {
   }
 }
 /**
+ * Aggregate search results.
  */
-class ResultAggregator {
+class AggregateResult {
+  // Memos are used to memorize previously computed values, so we can avoid
+  // computing them repeatedly.
   matchMemo = null;
   boundaryTypeMemo = null;
   fragmentWordMemo = null;
   /**
-   * @returns
+   * @returns The boundary type.
    */
   boundaryType() {
     // The BoundaryType enum is implemented in such a way that the boundary type
     // of an aggregated result is the minimum of the boundary types of all
     // results.
-    if (this.boundaryTypeMemo !== null) {
-      return this.boundaryTypeMemo;
-    }
-    this.boundaryTypeMemo = Math.min(
+    return (this.boundaryTypeMemo ??= Math.min(
       ...this.results.map((r) => r.boundaryType())
-    );
-    return this.boundaryTypeMemo;
+    ));
   }
   /**
-   * @returns
+   * @returns The fragment word.
    */
   fragmentWord() {
     // We simply return the fragment of the first result that possesses one.
-    if (this.fragmentWordMemo !== null) {
-      return this.fragmentWordMemo;
-    }
-    this.fragmentWordMemo = this.results
+    return (this.fragmentWordMemo ??= this.results
       .find((r) => r.fragmentWord())
-      ?.fragmentWord();
-    return this.fragmentWordMemo;
+      ?.fragmentWord());
   }
   /**
-   * @returns
+   * @returns Whether this result has a match.
    */
   get match() {
     // We have a match if any of the results has a match.
-    if (this.matchMemo !== null) {
-      return this.matchMemo;
-    }
-    this.matchMemo = this.results.some((r) => r.match);
-    return this.matchMemo;
+    return (this.matchMemo ??= this.results.some((r) => r.match));
   }
 }
 /**
  * Candidate represents one search candidate from the index. In the results
  * display, each candidate occupies its own row.
- *
  */
 class Candidate {
   // key bears the candidate key.
   key;
+  // fields bears the candidate's searchable fields.
   fields;
   /**
-   *
    * @param record - The candidate data.
    * @param fields - The fields metadata.
    */
@@ -328,9 +326,8 @@ class Candidate {
 }
 /**
  * SearchResult represents the search result of one candidate from the index.
- * @returns
  */
-export class SearchResult extends ResultAggregator {
+export class SearchResult extends AggregateResult {
   candidate;
   results;
   /**
@@ -352,9 +349,10 @@ export class SearchResult extends ResultAggregator {
   /**
    * viewCell constructs the first cell in the row for this result, bearing the
    * anchor to the result (if available).
-   * @param hrefFmt
+   *
+   * @param hrefFmt - Format string of the HREF pointing to the result page.
    * @param total - Total number of results.
-   * @returns
+   * @returns The view table cell element.
    */
   viewCell(hrefFmt, total) {
     const viewCell = document.createElement('td');
@@ -416,6 +414,8 @@ export class SearchResult extends ResultAggregator {
     return row;
   }
   /**
+   * Construct a key used to compare search results.
+   *
    * @returns the comparison key.
    */
   compareKey() {
@@ -442,9 +442,14 @@ export class SearchResult extends ResultAggregator {
   }
 }
 /**
- * @param a
- * @param b
+ * Compare two search results for priority.
+ *
+ * @param a - First result.
+ * @param b - Second result.
  * @returns
+ *   -1 if a < b
+ *   0 if a == b
+ *   1 if a > b
  */
 function searchResultCompare(a, b) {
   const aKey = a.compareKey();
@@ -468,8 +473,10 @@ class Field {
   name;
   units;
   /**
-   *
    * @param name - The name of the field.
+   * The name is currently unused, but it may become used as part of #445,
+   * because we intend to use it to filter out search results, using Xooxle's
+   * 'admit' parameter.
    * @param html - The HTML content of the field.
    */
   constructor(name, html) {
@@ -477,7 +484,6 @@ class Field {
     this.units = html.split(UNIT_DELIMITER).map((html) => new Unit(html));
   }
   /**
-   *
    * @param regex - Regex to search.
    * @returns Search result.
    */
@@ -488,10 +494,9 @@ class Field {
 /**
  * FieldSearchResult represents the search result of one field.
  */
-class FieldSearchResult extends ResultAggregator {
+class FieldSearchResult extends AggregateResult {
   results;
   /**
-   *
    * @param field
    * @param regex
    */
@@ -500,7 +505,6 @@ class FieldSearchResult extends ResultAggregator {
     this.results = field.units.map((unit) => unit.search(regex));
   }
   /**
-   *
    * @returns The field's HTML content, with matches highlighted.
    */
   highlight() {
@@ -531,14 +535,12 @@ class FieldSearchResult extends ResultAggregator {
 class Unit {
   lines;
   /**
-   *
    * @param html - The HTML content of the unit.
    */
   constructor(html) {
     this.lines = html.split(LINE_BREAK).map((l) => new Line(l));
   }
   /**
-   *
    * @param regex - The regular expression to search.
    * @returns Search result.
    */
@@ -549,7 +551,7 @@ class Unit {
 /**
  * UnitSearchResult represents the search result of one unit.
  */
-class UnitSearchResult extends ResultAggregator {
+class UnitSearchResult extends AggregateResult {
   results;
   /**
    * @param unit - The unit to search.
@@ -590,7 +592,6 @@ class Line {
   html;
   text;
   /**
-   *
    * @param html - The HTML content of the line.
    */
   constructor(html) {
@@ -603,7 +604,6 @@ class Line {
     this.text = orthographer.cleanDiacritics(html.replaceAll(TAG_REGEX, ''));
   }
   /**
-   *
    * @param regex - The regex to search.
    * @returns The search result.
    */
@@ -645,7 +645,7 @@ class Line {
   }
 }
 /**
- *
+ * LineSearchResult represents the search result of one line.
  */
 class LineSearchResult {
   line;
@@ -697,7 +697,6 @@ class LineSearchResult {
     return !!this.matches.length;
   }
   /**
-   *
    * @returns A word that can be used as a URL fragment.
    */
   fragmentWord() {
@@ -728,11 +727,11 @@ class LineSearchResult {
     return this.text.substring(start, end);
   }
   /**
-   *
    * @returns The HTML content of the line, with matches highlighted.
    */
   highlight() {
     if (!this.match) {
+      // No highlighting needed.
       return this.html;
     }
     const builder = [];
@@ -764,6 +763,9 @@ class LineSearchResult {
         // This is a diacritic. It was ignored during search, and is not part of
         // the match. Yield without accounting for it in the text.
         builder.push(this.html[i++]);
+        // Do NOT remove this `continue` statement, even if you replace the `if`
+        // with a `while`, as this would break highlighting in cases where a
+        // diacritic is immediately followed by a tag.
         continue;
       }
       if (cur?.start === j) {
@@ -840,7 +842,7 @@ export class BucketSorter {
   };
 }
 /**
- *
+ * Xooxle search engine
  */
 export class Xooxle {
   form;
@@ -900,8 +902,9 @@ export class Xooxle {
     this.form.focus();
   }
   /**
+   * Handle the search query, debouncing with the given timeout.
    *
-   * @param timeout
+   * @param timeout - How long to wait before starting search.
    */
   search(timeout) {
     if (this.debounceTimeout) {
@@ -914,7 +917,7 @@ export class Xooxle {
     }, timeout);
   }
   /**
-   *
+   * Handle the search query, aborting any ongoing search.
    */
   async searchAux() {
     // If there is an ongoing search, abort it.
@@ -943,9 +946,11 @@ export class Xooxle {
     }
   }
   /**
+   * Search candidates for the given regex, adding results to display, and
+   * aborting if an abort signal is received.
    *
-   * @param regex
-   * @param abortController
+   * @param regex - Regex to search.
+   * @param abortController - Abort controller for this search.
    */
   async searchAuxAux(regex, abortController) {
     // TODO: (#0) We append random characters in order to avoid having timers
@@ -1011,6 +1016,10 @@ export class Xooxle {
         await browser.yieldToBrowser();
       }
     }
+    // Update the numbers in the view cell.
+    // We couldn't have put the numbers there in the beginning, because, due to
+    // bucket sorting, we couldn't know for sure where each result is going to
+    // end up.
     let i = 0;
     [
       ...this.form.resultsTBody.getElementsByClassName(
@@ -1019,6 +1028,7 @@ export class Xooxle {
     ].forEach((counter) => {
       counter.innerHTML = `${(++i).toString()} / ${results.length.toString()}`;
     });
+    // Expand the results table to accommodate the last batch of results.
     this.form.expand();
   }
 }
