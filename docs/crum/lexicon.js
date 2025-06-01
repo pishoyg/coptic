@@ -3,6 +3,7 @@ import * as collapse from '../collapse.js';
 import * as css from '../css.js';
 import * as browser from '../browser.js';
 import * as highlight from './highlight.js';
+import * as d from './dialect.js';
 import * as help from './help.js';
 const SEARCH_BOX_ID = 'searchBox';
 const FULL_WORD_CHECKBOX_ID = 'fullWordCheckbox';
@@ -43,7 +44,6 @@ var DialectMatch;
 /**
  */
 class CrumDialectSorter extends xooxle.BucketSorter {
-  highlighter;
   static NUM_BUCKETS =
     1 +
     Math.max(
@@ -52,11 +52,9 @@ class CrumDialectSorter extends xooxle.BucketSorter {
       )
     );
   /**
-   * @param highlighter
    */
-  constructor(highlighter) {
+  constructor() {
     super(CrumDialectSorter.NUM_BUCKETS);
-    this.highlighter = highlighter;
   }
   /**
    * @param _res
@@ -64,7 +62,7 @@ class CrumDialectSorter extends xooxle.BucketSorter {
    * @returns Bucket number.
    */
   bucket(_res, row) {
-    const active = this.highlighter.activeDialects();
+    const active = d.active();
     if (!active?.length) {
       // There is no dialect highlighting. All results fall in the first bucket.
       return 0;
@@ -78,7 +76,7 @@ class CrumDialectSorter extends xooxle.BucketSorter {
     }
     const undialected = Array.from(
       row.querySelectorAll(`.${'match' /* xooxle.CLS.MATCH */}`)
-    ).some((el) => !el.closest(highlight.ANY_DIALECT_QUERY));
+    ).some((el) => !el.closest(d.ANY_DIALECT_QUERY));
     const ofInterest = !!row.querySelector(css.classQuery(active));
     if (undialected) {
       if (ofInterest) {
@@ -100,14 +98,11 @@ class CrumDialectSorter extends xooxle.BucketSorter {
  * a dialect of interest.
  */
 class kelliaDialectSorter extends xooxle.BucketSorter {
-  highlighter;
   static NUM_BUCKETS = 2;
   /**
-   * @param highlighter
    */
-  constructor(highlighter) {
+  constructor() {
     super(kelliaDialectSorter.NUM_BUCKETS);
-    this.highlighter = highlighter;
   }
   /**
    * @param _res
@@ -115,7 +110,7 @@ class kelliaDialectSorter extends xooxle.BucketSorter {
    * @returns Bucket number.
    */
   bucket(_res, row) {
-    const active = this.highlighter.activeDialects();
+    const active = d.active();
     if (!active?.length) {
       // There is no dialect highlighting. All results fall in the first bucket.
       return 0;
@@ -132,14 +127,14 @@ const XOOXLES = [
     tableID: 'crum',
     collapsibleID: 'crum-collapsible',
     hrefFmt: CRUM_HREF_FMT,
-    bucketSorter: CrumDialectSorter,
+    bucketSorter: new CrumDialectSorter(),
   },
   {
     indexURL: 'kellia.json',
     tableID: 'kellia',
     collapsibleID: 'kellia-collapsible',
     hrefFmt: KELLIA_HREF_FMT,
-    bucketSorter: kelliaDialectSorter,
+    bucketSorter: new kelliaDialectSorter(),
   },
   {
     indexURL: 'copticsite.json',
@@ -179,12 +174,7 @@ async function main() {
         resultsTableID: xoox.tableID,
         collapsibleID: xoox.collapsibleID,
       });
-      new xooxle.Xooxle(
-        json,
-        form,
-        xoox.hrefFmt,
-        xoox.bucketSorter ? new xoox.bucketSorter(highlighter) : undefined
-      );
+      new xooxle.Xooxle(json, form, xoox.hrefFmt, xoox.bucketSorter);
     })
   );
   // Initialize collapsible elements.

@@ -4,68 +4,43 @@
 import * as help from '../help.js';
 import * as browser from '../browser.js';
 import * as iam from '../iam.js';
-import * as highlight from './highlight.js';
+import * as d from './dialect.js';
 import * as paths from '../paths.js';
 const EMAIL_LINK = `mailto:${paths.EMAIL}`;
-var DIALECT_ARTICLE;
-(function (DIALECT_ARTICLE) {
-  // NO_ARTICLE indicates the absence of an article.
-  DIALECT_ARTICLE['NO_ARTICLE'] = '';
-  // DIALECTS is a generic article about dialects.
-  DIALECT_ARTICLE['DIALECTS'] =
-    'https://ccdl.claremont.edu/digital/collection/cce/id/2015/rec/6';
-  DIALECT_ARTICLE['Sahidic'] =
-    'https://ccdl.claremont.edu/digital/collection/cce/id/2029/rec/2';
-  DIALECT_ARTICLE['Akhmimic'] =
-    'https://ccdl.claremont.edu/digital/collection/cce/id/1962/rec/1';
-  DIALECT_ARTICLE['Lycopolitan'] =
-    'https://ccdl.claremont.edu/digital/collection/cce/id/2026/rec/1';
-  DIALECT_ARTICLE['Bohairic'] =
-    'https://ccdl.claremont.edu/digital/collection/cce/id/2011/rec/2';
-  DIALECT_ARTICLE['Fayyumic'] =
-    'https://ccdl.claremont.edu/digital/collection/cce/id/1989/rec/2';
-  DIALECT_ARTICLE['OldCoptic'] =
-    'https://ccdl.claremont.edu/digital/collection/cce/id/2027/rec/2';
-  DIALECT_ARTICLE['NagHammadi'] =
-    'https://ccdl.claremont.edu/digital/collection/cce/id/1418/rec/2';
-  DIALECT_ARTICLE['Mesokemic'] =
-    'https://ccdl.claremont.edu/digital/collection/cce/id/1996/rec/2';
-  DIALECT_ARTICLE['ProtoTheban'] =
-    'https://ccdl.claremont.edu/digital/collection/cce/id/1984/rec/1';
-})(DIALECT_ARTICLE || (DIALECT_ARTICLE = {}));
 /**
  * Create a shortcut to toggle a dialect.
  *
  * @param highlighter - A Crum highlighter.
  * @param key - The keyboard key that toggles this dialect.
- * @param name - The name of the dialect.
- * @param code - The dialect code / abbreviation.
- * @param dictionaries - The list of dictionaries where this dialect is present.
- * @param link - A link to an article about the dialect.
  *
  * @returns A shortcut object representing the toggle shortcut for this dialect.
  */
-function makeDialectShortcut(highlighter, key, name, code, dictionaries, link) {
-  name = help.highlightFirstOccurrence(key, name);
-  if (link != DIALECT_ARTICLE.NO_ARTICLE) {
-    name = `<a href="${link}" target="_blank" rel="noopener,noreferrer">${name}</a>`;
+function makeDialectShortcut(highlighter, key) {
+  const dialect = d.byKey(key);
+  const code = d.code(key);
+  const highlightedCode = help.highlightFirstOccurrence(key, code);
+  let highlightedName = dialect.name;
+  if (dialect.article) {
+    highlightedName = `<a href="${dialect.article}" target="_blank" rel="noopener,noreferrer">${highlightedName}</a>`;
   }
   const description = `
 <table>
 <tr>
-  <td class="dialect-code">(${help.highlightFirstOccurrence(key, code)})</td>
-  <td class="dialect-name">${name}</td>
-  ${iam.amI('lexicon') ? `<td class="dialect-dictionaries">(${dictionaries.join(', ')})</td>` : ''}
+  <td class="dialect-code">(${highlightedCode})</td>
+  <td class="dialect-name">${highlightedName}</td>
+  ${iam.amI('lexicon') ? `<td class="dialect-dictionaries">(${dialect.dictionaries.join(', ')})</td>` : ''}
 </tr>
 </table>`;
   // All dialects are available in Xooxle. Only Crum dialects area available on
   // notes.
-  const availability = dictionaries.includes('Crum')
+  const availability = dialect.dictionaries.includes('Crum')
     ? ['lexicon', 'note', 'index']
     : ['lexicon'];
-  return new help.Shortcut(description, availability, (e) => {
-    highlighter.toggleDialectSingleChar(e.key);
-  });
+  return new help.Shortcut(
+    description,
+    availability,
+    highlighter.toggleDialect.bind(highlighter, code)
+  );
 }
 /**
  *
@@ -77,158 +52,21 @@ export function makeHelpPanel(highlighter) {
   // NOTE: Some (minor) dialects are missing articles. If you find a reference
   // that explains what those dialects are, that would be great.
   const dialectHighlighting = {
-    S: [
-      makeDialectShortcut(
-        highlighter,
-        highlight.DIALECT.S,
-        'Sahidic',
-        highlight.DIALECT.S,
-        ['Crum', 'KELLIA'],
-        DIALECT_ARTICLE.Sahidic
-      ),
-    ],
-    a: [
-      makeDialectShortcut(
-        highlighter,
-        highlight.DIALECT_ABBREV.a,
-        'Sahidic with <strong>A</strong>khmimic tendency',
-        highlight.DIALECT.Sa,
-        ['Crum'],
-        DIALECT_ARTICLE.NO_ARTICLE
-      ),
-    ],
-    f: [
-      makeDialectShortcut(
-        highlighter,
-        highlight.DIALECT_ABBREV.f,
-        'Sahidic with <strong>F</strong>ayyumic tendency',
-        highlight.DIALECT.Sf,
-        ['Crum'],
-        DIALECT_ARTICLE.NO_ARTICLE
-      ),
-    ],
-    A: [
-      makeDialectShortcut(
-        highlighter,
-        highlight.DIALECT.A,
-        'Akhmimic',
-        highlight.DIALECT.A,
-        ['Crum', 'KELLIA'],
-        DIALECT_ARTICLE.Akhmimic
-      ),
-    ],
-    L: [
-      makeDialectShortcut(
-        highlighter,
-        highlight.DIALECT.L,
-        'Lycopolitan',
-        highlight.DIALECT.L,
-        ['Crum', 'KELLIA'],
-        DIALECT_ARTICLE.Lycopolitan
-      ),
-    ],
-    B: [
-      makeDialectShortcut(
-        highlighter,
-        highlight.DIALECT.B,
-        'Bohairic',
-        highlight.DIALECT.B,
-        ['Crum', 'KELLIA', 'copticsite'],
-        DIALECT_ARTICLE.Bohairic
-      ),
-    ],
-    F: [
-      makeDialectShortcut(
-        highlighter,
-        highlight.DIALECT.F,
-        'Fayyumic',
-        highlight.DIALECT.F,
-        ['Crum', 'KELLIA'],
-        DIALECT_ARTICLE.Fayyumic
-      ),
-    ],
-    b: [
-      makeDialectShortcut(
-        highlighter,
-        highlight.DIALECT_ABBREV.b,
-        'Fayyumic with <strong>B</strong>ohairic tendency',
-        highlight.DIALECT.Fb,
-        ['Crum'],
-        DIALECT_ARTICLE.NO_ARTICLE
-      ),
-    ],
-    O: [
-      makeDialectShortcut(
-        highlighter,
-        highlight.DIALECT.O,
-        'Old Coptic',
-        highlight.DIALECT.O,
-        ['Crum', 'KELLIA'],
-        DIALECT_ARTICLE.OldCoptic
-      ),
-    ],
-    N: [
-      makeDialectShortcut(
-        highlighter,
-        highlight.DIALECT_ABBREV.N,
-        'Nag Hammadi',
-        highlight.DIALECT.NH,
-        // TODO: (#0) This dialect was invented by Marcion, and it's not in
-        // Crum. Update the description accordingly.
-        ['Crum'],
-        DIALECT_ARTICLE.NagHammadi
-      ),
-    ],
-    M: [
-      makeDialectShortcut(
-        highlighter,
-        highlight.DIALECT.M,
-        'Mesokemic',
-        highlight.DIALECT.M,
-        ['KELLIA'],
-        DIALECT_ARTICLE.Mesokemic
-      ),
-    ],
-    P: [
-      makeDialectShortcut(
-        highlighter,
-        highlight.DIALECT.P,
-        'Proto-Theban',
-        highlight.DIALECT.P,
-        ['KELLIA'],
-        DIALECT_ARTICLE.ProtoTheban
-      ),
-    ],
-    V: [
-      makeDialectShortcut(
-        highlighter,
-        highlight.DIALECT.V,
-        'South Fayyumic Greek',
-        highlight.DIALECT.V,
-        ['KELLIA'],
-        DIALECT_ARTICLE.DIALECTS
-      ),
-    ],
-    W: [
-      makeDialectShortcut(
-        highlighter,
-        highlight.DIALECT.W,
-        'Crypto-Mesokemic Greek',
-        highlight.DIALECT.W,
-        ['KELLIA'],
-        DIALECT_ARTICLE.DIALECTS
-      ),
-    ],
-    U: [
-      makeDialectShortcut(
-        highlighter,
-        highlight.DIALECT.U,
-        'Greek (usage <strong>u</strong>nclear)',
-        highlight.DIALECT.U,
-        ['KELLIA'],
-        DIALECT_ARTICLE.NO_ARTICLE
-      ),
-    ],
+    S: [makeDialectShortcut(highlighter, 'S')],
+    a: [makeDialectShortcut(highlighter, 'a')],
+    f: [makeDialectShortcut(highlighter, 'f')],
+    A: [makeDialectShortcut(highlighter, 'A')],
+    L: [makeDialectShortcut(highlighter, 'L')],
+    B: [makeDialectShortcut(highlighter, 'B')],
+    F: [makeDialectShortcut(highlighter, 'F')],
+    b: [makeDialectShortcut(highlighter, 'b')],
+    O: [makeDialectShortcut(highlighter, 'O')],
+    N: [makeDialectShortcut(highlighter, 'N')],
+    M: [makeDialectShortcut(highlighter, 'M')],
+    P: [makeDialectShortcut(highlighter, 'P')],
+    V: [makeDialectShortcut(highlighter, 'V')],
+    W: [makeDialectShortcut(highlighter, 'W')],
+    U: [makeDialectShortcut(highlighter, 'U')],
   };
   const control = {
     r: [

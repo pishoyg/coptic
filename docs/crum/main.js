@@ -152,9 +152,7 @@ function main() {
   // Handle 'dialect' class.
   document.querySelectorAll('.dialect').forEach((el) => {
     el.classList.add('hover-link');
-    el.onclick = () => {
-      highlighter.toggleDialect(el.innerHTML);
-    };
+    el.onclick = highlighter.toggleDialect.bind(highlighter, el.innerHTML);
   });
   // Handle 'developer' class.
   document.querySelectorAll('.developer').forEach((el) => {
