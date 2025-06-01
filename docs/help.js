@@ -1,5 +1,19 @@
 import * as iam from './iam.js';
-// TODO: (#0) Abandon event keys. Rely solely on event codes.
+/**
+ * CODE_TO_KEY maps a keyboard event code to the event key.
+ *
+ * Our event listeners rely on event keys rather than codes. If the user
+ * switches the layout from English to Coptic or some other language, the event
+ * keys won't be understood by our listeners. However, the event codes are the
+ * same across languages.
+ *
+ * The map allows us to infer the equivalent English key of a given keyboard
+ * event, thus allowing us to translate the keyboard event (in a foreign
+ * language) to an event that our listeners can actually consume.
+ *
+ * TODO: (#0) If listeners were to rely on event codes rather than keys, this
+ * conversion won't be necessary. Consider abandoning keys in favor of codes.
+ */
 const CODE_TO_KEY = {
   // Letters
   KeyA: 'a',
@@ -51,6 +65,11 @@ const CODE_TO_KEY = {
   Period: '.',
   Slash: '/',
 };
+/**
+ * SHIFT_MAP gives the key of a given keyboard event code, when the shift key is
+ * pressed. For codes absent from this map, the key may simply be retrievable by
+ * uppercasing the key from CODE_TO_KEY.
+ */
 const SHIFT_MAP = {
   // Special characters when Shift is pressed
   Digit1: '!',
@@ -241,11 +260,7 @@ export class Section {
    * @returns
    */
   consume(event) {
-    return (
-      (this.executable() &&
-        this.shortcuts[event.key]?.some((s) => s.consume(event))) ??
-      false
-    );
+    return this.shortcuts[event.key]?.some((s) => s.consume(event)) ?? false;
   }
   /**
    *
@@ -253,9 +268,6 @@ export class Section {
    * @returns
    */
   canConsume(key) {
-    if (!this.executable()) {
-      return [];
-    }
     return this.shortcuts[key]?.filter((s) => s.executable()) ?? [];
   }
   /**
@@ -342,11 +354,11 @@ export class Help {
     return this.sections.some((s) => s.consume(event));
   }
   /**
-   *
    * @param event
-   * @returns
+   * @returns Whether the event has been consumed by any of our listeners.
    */
   consume(event) {
+    // Attempt to consume the event with the key as is.
     if (this.consumeAux(event)) {
       return true;
     }
@@ -360,47 +372,55 @@ export class Help {
     if (event.shiftKey) {
       key = SHIFT_MAP[event.code] ?? key.toUpperCase();
     }
+    // Override the event's key property.
     Object.defineProperty(event, 'key', { value: key });
     return this.consumeAux(event);
   }
   /**
-   *
-   * @param visible
+   * @param visible - An optional visibility. If not provided, will toggle the
+   * current visibility.
    */
   togglePanel(visible) {
-    const target =
-      visible !== undefined
-        ? visible
-          ? 'block'
-          : 'none'
-        : this.panel.style.display === 'block'
-          ? 'none'
-          : 'block';
+    let target;
+    if (visible !== undefined) {
+      // Use the visibility provided in the parameters.
+      target = visible ? 'block' : 'none';
+    } else {
+      // Toggle the current visibility.
+      target = this.panel.style.display === 'block' ? 'none' : 'block';
+    }
     this.panel.style.display = target;
     this.overlay.style.display = target;
   }
   /**
+   * Log an error if a key can trigger multiple shortcuts!
    *
+   * TODO: (#0) This error would get logged to the browser console. It could be
+   * seen by chance, if you happen to run the code in the browser with developer
+   * tools enabled.
+   * We should perhaps run a Node.js job in a pre-commit hook that fails if this
+   * error occurs, so we can detect it before launch.
    */
   validate() {
-    // Validate that no key can trigger two shortcuts!
+    // Get all keys that have events registered to them.
     const keys = this.sections
       .map((s) => s.shortcutsRecord())
       .map((record) => Object.keys(record))
       .flat();
     keys.forEach((key) => {
       const canConsume = this.sections.map((s) => s.canConsume(key)).flat();
-      if (canConsume.length <= 1) {
-        return;
+      if (canConsume.length > 1) {
+        console.error(
+          `${key} is consumable by multiple shortcuts: ${canConsume.map((s) => s.textDescription()).join(', ')}`
+        );
       }
-      console.error(
-        `${key} is consumable by multiple shortcuts: ${canConsume.map((s) => s.textDescription()).join(', ')}`
-      );
     });
   }
   /**
+   * Add event listeners for the help panel.
    */
   addListeners() {
+    // Clicking the help button toggles the panel display.
     this.help.onclick = (event) => {
       this.togglePanel();
       event.stopPropagation();
@@ -414,6 +434,7 @@ export class Help {
         this.togglePanel(false);
       }
     });
+    // Clicking a keyboard shortcut triggers the associated action.
     // NOTE: We intentionally use the `keydown` event rather than the `keyup`
     // event, so that a long press would trigger a shortcut command repeatedly.
     // This is helpful for some of the commands.

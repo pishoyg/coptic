@@ -1,5 +1,5 @@
 // NOTE: This package is used in the browser, and also during validation. So we
-// allow it to assert correctness, instead of trying to fail recursively.
+// allow it to assert correctness, instead of trying to always fail gracefully.
 import * as logger from './logger.js';
 import * as coptic from './coptic.js';
 import * as browser from './browser.js';
@@ -8,9 +8,13 @@ const WANT_COLUMNS = ['page', 'start', 'end'];
 // ZOOM_FACTOR controls how fast zooming happens in response to scroll events.
 const ZOOM_FACTOR = 0.05;
 /**
+ * We often use the notation "${NUM}${COL}" to refer to a given column in a
+ * page. For example, "1a" refers to the left column of page 1.
+ * chopColumn removes the column from the page, if present, returning the page
+ * number.
  *
- * @param page
- * @returns
+ * @param page - A page number, potentially containing a column.
+ * @returns - The page number without the column.
  */
 export function chopColumn(page) {
   if (['a', 'b'].some((c) => page.endsWith(c))) {
@@ -19,20 +23,27 @@ export function chopColumn(page) {
   return page;
 }
 /**
- *
+ * A dictionary index.
  */
 export class Index {
   WordType;
   pages;
   /**
+   * @param index - The content of the index, in plain TSV format,with the first
+   * three column being:
+   * 1. Page number
+   * 2. Page start word
+   * 3. Page end word
    *
-   * @param index
-   * @param WordType
+   * @param WordType - The type of words in this dictionary. This should be a
+   * constructor type that takes as input the string representation of the word,
+   * which is retrieved from the index columns.
    */
   constructor(index, WordType) {
     this.WordType = WordType;
     const lines = index.trim().split('\n');
     const header = Index.toColumns(lines[0]);
+    // Verify that the header has the expected column names.
     logger.assass(
       WANT_COLUMNS.every((col, idx) => header[idx] === col),
       header.slice(0, WANT_COLUMNS.length),
@@ -44,16 +55,15 @@ export class Index {
       .map((row) => {
         const [page, start, end] = Index.toColumns(row);
         return {
-          page: Index.parseInt(page),
+          page: Index.forceParseInt(page),
           start: new WordType(start),
           end: new WordType(end),
         };
       });
   }
   /**
-   *
-   * @param str
-   * @returns
+   * @param str - String representation of a TSV row.
+   * @returns The content of the columns of interest in the given row.
    */
   static toColumns(str) {
     return str
@@ -62,21 +72,23 @@ export class Index {
       .map((l) => l.trim());
   }
   /**
-   *
-   * @param str
-   * @returns
+   * Parse an integer, throwing an error if it's not parsable.
+   * @param str - A string representation of an integer.
+   * @returns - The parsed integer.
    */
-  static parseInt(str) {
+  static forceParseInt(str) {
     const num = parseInt(str);
     logger.assass(!isNaN(num), 'unable to parse page number', num);
     return num;
   }
   /**
-   *
-   * @param query
-   * @returns
+   * Given a search query, return the dictionary page number.
+   * @param query - Search query.
+   * @returns - Page number, or undefined if the number can't be inferred from
+   * the query.
    */
   getPage(query) {
+    query = query.trim();
     if (!query) {
       return undefined;
     }
@@ -87,8 +99,16 @@ export class Index {
     }
     // Check if this is a Coptic word.
     if (!coptic.isCoptic(query)) {
+      // Neither a number nor a Coptic word! Nothing we can do!
+      // TODO: (#411) This should support other classes of words as well, not
+      // just Coptic words.
+      // We should perhaps introduce another class method:
+      //   searchable(query: string): boolean
+      // and allow different children of this class to override this method,
+      // and use that method instead.
       return undefined;
     }
+    // Binary search the word in the dictionary.
     const target = new this.WordType(query);
     let left = 0;
     let right = this.pages.length - 1;
@@ -104,13 +124,15 @@ export class Index {
     return this.pages[right].page;
   }
   /**
+   * Build the index, and validate that its words are indeed lexicographically
+   * sorted, as should be the case with a dictionary index.
    *
-   * @param strict
+   * @param strict - If true, exit when encountering a sorting error. If false,
+   * simply log an error message.
    */
   validate(strict = true) {
     const error = strict ? logger.fatal : logger.error;
-    for (let i = 0; i < this.pages.length; i++) {
-      const p = this.pages[i];
+    for (const [i, p] of this.pages.entries()) {
       if (!p.start.leq(p.end)) {
         error(
           'page',
@@ -146,7 +168,7 @@ export class Index {
   }
 }
 /**
- *
+ * A holder of the HTML elements used to interact with the dictionary.
  */
 export class Form {
   image;
@@ -156,11 +178,11 @@ export class Form {
   searchBox;
   /**
    *
-   * @param image
-   * @param nextButton
-   * @param prevButton
-   * @param resetButton
-   * @param searchBox
+   * @param image - <img> element holding the book page.
+   * @param nextButton - Button to navigate to the next page when clicked.
+   * @param prevButton - Button to navigate to the previous page when clicked.
+   * @param resetButton - Button to reset display.
+   * @param searchBox - Search box, providing search queries.
    */
   constructor(image, nextButton, prevButton, resetButton, searchBox) {
     this.image = image;
@@ -170,7 +192,8 @@ export class Form {
     this.searchBox = searchBox;
   }
   /**
-   *
+   * If you use a standard set of element IDs to mark your HTML elements,
+   * default() can construct the Form object for you from the HTML document.
    * @returns
    */
   static default() {
