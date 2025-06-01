@@ -1,11 +1,12 @@
 import * as iam from './iam.js';
 
-// NOTE: You should append '/' when using a path.
+export const URL = iam.amI('anki') ? 'http://remnqymi.com' : '';
 
-export const HOME = iam.amI('anki') ? 'http://remnqymi.com' : '';
+export const EMAIL = 'remnqymi@gmail.com';
 
-export const LEXICON = `${HOME}/crum`;
-export const DAWOUD = `${HOME}/dawoud`;
-export const BIBLE = `${HOME}/bible`;
+export const HOME = `${URL}/`;
+export const LEXICON = `${URL}/crum`;
+export const DAWOUD = `${URL}/dawoud`;
+export const BIBLE = `${URL}/bible`;
 
 export const LOOKUP_URL_PREFIX = `${LEXICON}?query=`;

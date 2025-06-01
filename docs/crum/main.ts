@@ -207,7 +207,7 @@ function main(): void {
     .forEach((el: HTMLElement) => {
       el.classList.add('hover-link');
       el.onclick = () => {
-        highlighter.toggleDialect(el.innerHTML);
+        highlighter.toggleDialect(el.innerHTML as highlight.DIALECT);
       };
     });
 

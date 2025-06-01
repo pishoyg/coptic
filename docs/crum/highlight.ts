@@ -3,39 +3,90 @@
 // in this file.
 import * as css from '../css.js';
 import * as iam from '../iam.js';
+import * as dev from '../dev.js';
 
-const DIALECTS = [
-  // The following dialects are found in Crum (and potentially others).
-  'S',
-  'Sa',
-  'Sf',
-  'A',
-  'L',
-  'B',
-  'F',
-  'Fb',
-  'O',
+/**
+ * DIALECT defines the list of dialects known to our Lexicon.
+ * NOTE: While not part of the CLS enum, dialects are also used as
+ * HTML classes.
+ */
+export enum DIALECT {
+  // The following dialects are found in Crum.
+  S = 'S',
+  Sa = 'Sa',
+  Sf = 'Sf',
+  A = 'A',
+  L = 'L',
+  B = 'B',
+  F = 'F',
+  Fb = 'Fb',
+  O = 'O',
+
   // The following dialects are only found in Marcion (part of Crum).
-  'NH',
-  // The following dialects are only found in TLA / KELLIA.
-  'M',
-  'P',
-  'V',
-  'W',
-  'U',
-];
+  NH = 'NH',
 
-export const ANY_DIALECT_QUERY = css.classQuery(DIALECTS);
+  // The following dialects are only found in KELLIA (TLA).
+  M = 'M',
+  P = 'P',
+  V = 'V',
+  W = 'W',
+  U = 'U',
+}
 
-// DIALECT_SINGLE_CHAR is a mapping for the dialects that have shortcuts other
-// than their codes. If the shortcut to toggle a dialect is not the same as its
-// code, it should be included in this record.
-export const DIALECT_SINGLE_CHAR: Record<string, string> = {
-  N: 'NH',
-  a: 'Sa',
-  f: 'Sf',
-  b: 'Fb',
+/**
+ * For dialects that have a single-character code, we use the code as a keyboard
+ * shortcut key. For the double-character dialect codes, we use a different
+ * shortcut key, which we store in this map.
+ */
+export enum DIALECT_ABBREV {
+  N = 'N',
+  a = 'a',
+  f = 'f',
+  b = 'b',
+}
+
+/**
+ * DIALECT_KEY is a single-character string dialect code.
+ * Notice that the type is slightly generous, as DIALECT includes some
+ * double-character string codes, but they should not be used where DIALECT_KEY
+ * is expected.
+ */
+export type DIALECT_KEY = DIALECT | DIALECT_ABBREV;
+
+export const ANY_DIALECT_QUERY = css.classQuery(Object.values(DIALECT));
+
+const ABBREV_TO_DIALECT: Record<DIALECT_ABBREV, DIALECT> = {
+  [DIALECT_ABBREV.N]: DIALECT.NH,
+  [DIALECT_ABBREV.a]: DIALECT.Sa,
+  [DIALECT_ABBREV.f]: DIALECT.Sf,
+  [DIALECT_ABBREV.b]: DIALECT.Fb,
 };
+
+/**
+ * @param key
+ * @returns
+ */
+function isDialectAbbrev(key: DIALECT_KEY): key is DIALECT_ABBREV {
+  return key in ABBREV_TO_DIALECT;
+}
+
+/**
+ * @param key
+ * @returns
+ */
+export function dialectFromKey(key: DIALECT_KEY): DIALECT {
+  return isDialectAbbrev(key) ? ABBREV_TO_DIALECT[key] : key;
+}
+
+enum CLS {
+  reset = 'reset',
+  word = 'word',
+  spelling = 'spelling',
+  dev = 'dev',
+  nag_hammadi = 'nag-hammadi',
+  senses = 'senses',
+  no_dev = 'no-dev',
+}
 
 /**
  *
@@ -43,14 +94,13 @@ export const DIALECT_SINGLE_CHAR: Record<string, string> = {
 export class Highlighter {
   // Sheets are problematic on Anki, for some reason! We update the elements
   // individually instead!
-  // d is the name of the local-storage variable storing the list of active
-  // dialects.
-  private readonly d = 'd';
-  // dev is the name of the local-storage variable storing the developer-mode
-  // status.
-  private readonly dev = 'dev';
 
-  private readonly sheet: CSSStyleSheet | null;
+  // d is the name of the local-storage variable storing the list of active
+  // dialects. This is the source of truth for dialect highlighting. Updating
+  // dialect highlighting should happen by updating this local storage variable.
+  private readonly d = 'd';
+
+  private readonly sheet: CSSStyleSheet | undefined;
   private readonly dialectRuleIndex: number;
   private readonly devRuleIndex: number;
   private readonly noDevRuleIndex: number;
@@ -59,14 +109,19 @@ export class Highlighter {
   private static readonly DIM = '0.3';
   /**
    *
-   * @param anki
-   * @param dialectCheckboxes
+   * @param anki - Whether we are running on Anki.
+   * @param dialectCheckboxes - List of checkboxes that control dialect
+   * highlighting. Each box must bear a name equal to the dialect code that it
+   * represents.
+   * Checking a checkbox should update the dialect highlighting. Updating
+   * dialect highlighting in some other way should also update the checking of
+   * the checkboxes.
    */
   constructor(
     private readonly anki: boolean,
     private readonly dialectCheckboxes: HTMLInputElement[]
   ) {
-    this.sheet = this.anki ? null : window.document.styleSheets[0]!;
+    this.sheet = this.anki ? undefined : window.document.styleSheets[0];
     const length = this.sheet?.cssRules.length ?? 0;
     this.dialectRuleIndex = length;
     this.devRuleIndex = length + 1;
@@ -76,7 +131,7 @@ export class Highlighter {
   }
 
   /**
-   *
+   * Update dialects and developer-mode display.
    */
   update(): void {
     this.updateDialects();
@@ -84,25 +139,29 @@ export class Highlighter {
   }
 
   /**
-   *
+   * Update dialect display.
    */
   updateDialects(): void {
     // We have three sources of dialect highlighting:
-    // - Lexicon checkboxes
-    // - .dialect elements in the HTML
-    // - Keyboard shortcuts
-    // Two of them (the elements and the checkboxes) require styling updates,
-    // though the styling updates for the .dialect elements are included in the
-    // style sheet.
-    // This method should guarantee that, regardless of the source of the
-    // change, all elements update accordingly.
+    // 1. Lexicon checkboxes
+    // 2. .dialect elements in the HTML
+    // 3. Keyboard shortcuts
+    // NOTE: Make sure that checkboxes are updated whenever dialect highlighting
+    // changes, regardless of the source of the change.
     const active = this.activeDialects();
 
     if (!active) {
       // No dialect highlighting whatsoever.
-      this.updateSheetOrElements(this.dialectRuleIndex, '.word *', '', (el) => {
-        el.style.opacity = Highlighter.BRIGHT;
-      });
+      // All dialects are visible.
+      this.updateSheetOrElements(
+        this.dialectRuleIndex,
+        `.${CLS.word} *`,
+        '',
+        (el) => {
+          el.style.opacity = Highlighter.BRIGHT;
+        }
+      );
+      // None of the checkboxes should be checked.
       this.dialectCheckboxes.forEach((c) => {
         c.checked = false;
       });
@@ -113,7 +172,7 @@ export class Highlighter {
     // Dim all children of `word` elements, with the exception of:
     // - Active dialects.
     // - Undialected spellings.
-    const query = `.word > :not(${css.classQuery(active)},.spelling:not(${ANY_DIALECT_QUERY}))`;
+    const query = `.${CLS.word} > :not(${css.classQuery(active)}, .${CLS.spelling}:not(${ANY_DIALECT_QUERY}))`;
     const style = `opacity: ${Highlighter.DIM};`;
     this.updateSheetOrElements(
       this.dialectRuleIndex,
@@ -122,27 +181,30 @@ export class Highlighter {
       (el) => {
         el.style.opacity = Highlighter.DIM;
       },
-      '.word *',
+      `.${CLS.word} *`,
       (el) => {
         el.style.opacity = Highlighter.BRIGHT;
       }
     );
 
+    // Active dialects should have their checkboxes checked.
     this.dialectCheckboxes.forEach((checkbox) => {
-      checkbox.checked = active.includes(checkbox.name);
+      checkbox.checked = active.includes(checkbox.name as DIALECT);
     });
   }
 
   /**
-   *
+   * Update developer-mode display.
    */
   updateDev(): void {
-    const display =
-      localStorage.getItem(this.dev) === 'true' ? 'block' : 'none';
-    const noDisplay = display === 'block' ? 'none' : 'block';
+    type visibility = 'block' | 'none';
+
+    const display: visibility = dev.get() ? 'block' : 'none';
+    const noDisplay: visibility = display === 'block' ? 'none' : 'block';
+
     this.updateSheetOrElements(
       this.devRuleIndex,
-      '.dev, .nag-hammadi, .senses',
+      `.${CLS.dev}, .${CLS.nag_hammadi}, .${CLS.senses}`,
       `display: ${display};`,
       (el: HTMLElement) => {
         el.style.display = display;
@@ -150,7 +212,7 @@ export class Highlighter {
     );
     this.updateSheetOrElements(
       this.noDevRuleIndex,
-      '.no-dev',
+      `.${CLS.no_dev}`,
       `display: ${noDisplay};`,
       (el: HTMLElement) => {
         el.style.display = noDisplay;
@@ -159,11 +221,11 @@ export class Highlighter {
   }
 
   /**
-   *
-   * @param index
-   * @param rule
+   * Add or update the CSS rule at the given index.
+   * @param index - Index of the rule.
+   * @param rule - New rule.
    */
-  private addOrReplaceRule(index: number, rule: string) {
+  private upsertRule(index: number, rule: string) {
     if (!this.sheet) {
       console.error(
         'Attempting to update sheet rules when the sheet is not set!'
@@ -176,21 +238,32 @@ export class Highlighter {
     this.sheet.insertRule(rule, index);
   }
 
-  // If we're in Anki, we update the elements directly.
-  // Otherwise, we update the CSS rules.
-  // NOTE: If you're updating the sheet, then it's guaranteed that the update
-  // will erase the effects of previous calls to this function.
-  // However, if you're updating elements, that's not guaranteed. If this is the
-  // case, you should pass a `reset_func` that resets the elements to the
-  // default style.
   /**
+   * If possible, we update the CSS rule and call it a day.
+   * If we're in Anki, we can't do that, and we have to resort to updating
+   * elements individually. We therefore ask for more parameters to make this
+   * possible.
    *
-   * @param rule_index
-   * @param query
-   * @param style
-   * @param func
-   * @param reset_query
-   * @param reset_func
+   * NOTE: If you're updating the sheet, then it's guaranteed that the update
+   * will erase the effects of all previous updates, simply because the old CSS
+   * rule gets deleted, and a new rule is created in its stead.
+   * However, if you're updating elements, it's not guaranteed that the new
+   * update will erase the effects of previous updates. If this is the case, you
+   * should pass a `reset_func` that resets the elements to the default style.
+   *
+   * @param rule_index - Index of the CSS rule to replace, if we were to update
+   * a CSS rule.
+   * @param query - Query that returns all affected elements.
+   * @param style - CSS style that should be applied to the set of elements
+   * returned by the query.
+   *
+   * @param func - A function that updates the style of the affected elements.
+   * This is an alternative to the 'style' parameter, used only if we can't
+   * update CSS rules.
+   * @param reset_query - A query that returns all elements potentially affected
+   * by previous display updates.
+   * @param reset_func - A function that resets the display of all elements
+   * potentially affected by previous display updates.
    */
   private updateSheetOrElements(
     rule_index: number,
@@ -208,18 +281,24 @@ export class Highlighter {
       return;
     }
 
-    this.addOrReplaceRule(rule_index, `${query} { ${style} }`);
+    this.upsertRule(rule_index, `${query} { ${style} }`);
   }
 
   /**
+   * Register event listeners.
    */
   private addListeners() {
+    // A click on a checkbox triggers a dialect display update.
     this.dialectCheckboxes.forEach((checkbox) => {
       checkbox.addEventListener('click', () => {
-        this.toggleDialect(checkbox.name);
+        this.toggleDialect(checkbox.name as DIALECT);
       });
     });
 
+    // Switching tabs triggers a display update. This is because it's possible
+    // that, while we were on the second tab, we updated the display. This
+    // listener ensures that, when we are back to the first tab, the display
+    // changes applied in the second tab will also be made here.
     document.addEventListener('visibilitychange', () => {
       if (document.visibilityState === 'visible') {
         // If the user switches to a different tab and then back to the current
@@ -229,8 +308,9 @@ export class Highlighter {
       }
     });
 
+    // A click on the reset element resets all display.
     document
-      .querySelectorAll<HTMLElement>('.reset')
+      .querySelectorAll<HTMLElement>(`.${CLS.reset}`)
       .forEach((el: HTMLElement): void => {
         el.classList.add('link');
         el.onclick = (event) => {
@@ -244,14 +324,15 @@ export class Highlighter {
   }
 
   /**
+   * Reset display, and remove the URL fragment if present.
    */
   reset(): void {
-    // The local storage is the source of truth for some highlighting variables.
+    // The local storage is the source of truth for all highlighting variables.
     // Clearing it results restores a pristine display.
     localStorage.clear();
     this.update();
 
-    const url = new URL(window.location.href);
+    // Remove the URL fragment.
     // NOTE: We only reload when we actually detect an anchor (hash) or text
     // fragment in order to minimize disruption. Reloading the page causes a
     // small jitter.
@@ -269,6 +350,7 @@ export class Highlighter {
       return;
     }
 
+    const url = new URL(window.location.href);
     if (
       !url.hash &&
       !performance.getEntriesByType('navigation')[0]?.name.includes('#')
@@ -287,21 +369,22 @@ export class Highlighter {
   }
 
   /**
-   *
-   * @returns
+   * @returns The list of active dialects, undefined if dialect highlighting
+   * is currently unused.
    */
-  activeDialects(): string[] | null {
+  activeDialects(): DIALECT[] | undefined {
     const d = localStorage.getItem(this.d);
     // NOTE: ''.split(',') returns [''], which is not what we want!
-    return d ? d.split(',') : null;
+    return d ? (d.split(',') as DIALECT[]) : undefined;
   }
 
   /**
+   * Toggle the highlighting of the given dialect.
    *
-   * @param dialect
+   * @param dialect - A dialect code.
    */
-  toggleDialect(dialect: string): void {
-    const active = new Set(this.activeDialects());
+  toggleDialect(dialect: DIALECT): void {
+    const active: Set<DIALECT> = new Set<DIALECT>(this.activeDialects());
 
     if (active.has(dialect)) {
       active.delete(dialect);
@@ -319,14 +402,19 @@ export class Highlighter {
   }
 
   /**
-   *
+   * @param key - The dialect toggle key. This is the dialect code for
+   * dialects with a single-character code, or another key for dialects with a
+   * double-character code.
+   */
+  toggleDialectSingleChar(key: DIALECT_KEY): void {
+    this.toggleDialect(dialectFromKey(key));
+  }
+
+  /**
+   * Toggle developer mode, and update display.
    */
   toggleDev(): void {
-    localStorage.setItem(
-      this.dev,
-      localStorage.getItem(this.dev) === 'true' ? 'false' : 'true'
-    );
-
+    dev.toggle();
     this.updateDev();
   }
 }

@@ -1,3 +1,5 @@
+import * as dev from './dev.js';
+
 enum Colors {
   RESET = '\x1b[0m',
   BLACK = '\x1b[30m',
@@ -11,39 +13,34 @@ enum Colors {
 }
 
 /**
- *
- */
-export function developerMode() {
-  return localStorage.getItem('dev') == 'true';
-}
-
-/**
- *
- * @param name
+ * Start a timer (only if developer mode is active).
+ * @param name - Timer name.
  */
 export function time(name: string) {
-  if (developerMode()) {
+  if (dev.get()) {
     console.time(name);
   }
 }
 
 /**
- *
+ * End a timer (only if developer mode is active).
  * @param name
  */
 export function timeEnd(name: string) {
-  if (developerMode()) {
+  if (dev.get()) {
     console.timeEnd(name);
   }
 }
 
 /**
+ * Log the given message to the console, alternative the colors of the arguments
+ * using the two given colors.
  *
- * @param color
- * @param recolor
- * @param severity
- * @param throwException
- * @param {...any} args
+ * @param color - First color.
+ * @param recolor - Second color.
+ * @param severity - Severity.
+ * @param throwException - Whether to throw an exception.
+ * @param {...any} args - Printable arguments.
  */
 function _print(
   color: string,
@@ -71,52 +68,54 @@ function _print(
 }
 
 /**
- *
- * @param {...any} message
+ * Log an info message to the console.
+ * @param {...any} message - Message to log.
  */
 export function info(...message: unknown[]): void {
   _print(Colors.GREEN, Colors.BLUE, 'info', false, ...message);
 }
 
 /**
- *
- * @param {...any} message
+ * Log a warning message to the console.
+ * @param {...any} message - Message to log.
  */
 export function warn(...message: unknown[]): void {
   _print(Colors.YELLOW, Colors.CYAN, 'warn', false, ...message);
 }
 
 /**
- *
- * @param {...any} message
+ * Log an error message to the console.
+ * @param {...any} message - Message to log.
  */
 export function error(...message: unknown[]): void {
   _print(Colors.RED, Colors.PURPLE, 'error', false, ...message);
 }
 
-// Raise an exception.
 /**
+ * Raise an exception, and log an error message to the console.
  *
- * @param {...any} message
+ * @param {...any} message - Message to log.
  */
 export function raise(...message: unknown[]) {
   _print(Colors.RED, Colors.PURPLE, 'error', true, ...message);
 }
 
 /**
+ * Exit with a non-zero error code, and log an error message to the console.
+ * NOTE: This is only available in Node.js, not in the browser.
  *
- * @param {...any} message
+ * @param {...any} message - Message to log.
  */
 export function fatal(...message: unknown[]) {
   _print(Colors.RED, Colors.PURPLE, 'fatal', false, ...message);
   process.exit(1);
 }
 
-// Evaluate the condition. If it fails, log an error message!
 /**
+ * Evaluate the condition. If it fails, log an error message!
  *
- * @param condition
- * @param {...any} message
+ * @param condition - Condition to evaluate.
+ * @param {...any} message - Message to log (if the condition is not satisfied).
  */
 export function err(condition: boolean, ...message: unknown[]) {
   if (condition) {
@@ -125,11 +124,12 @@ export function err(condition: boolean, ...message: unknown[]) {
   error(...message);
 }
 
-// Evaluate the condition. If it fails, raise an exception.
 /**
+ * Evaluate the condition. If it fails, raise an exception, and log an error
+ * message to the console.
  *
- * @param condition
- * @param {...any} message
+ * @param condition - Condition to evaluate.
+ * @param {...any} message - Message to log (if the condition is not satisfied).
  */
 export function ass(condition: boolean, ...message: unknown[]) {
   if (condition) {
@@ -138,11 +138,13 @@ export function ass(condition: boolean, ...message: unknown[]) {
   raise(...message);
 }
 
-// Evaluate the condition. If it fails, exit!
 /**
+ * Evaluate the condition. If it fails, exit with a non-zero status, and log an
+ * error message to the console.
+ * NOTE: This is only available in Node.js.
  *
- * @param condition
- * @param {...any} message
+ * @param condition - Condition to evaluate.
+ * @param {...any} message - Message to log (if the condition is not satisfied).
  */
 export function assass(condition: boolean, ...message: unknown[]) {
   if (condition) {

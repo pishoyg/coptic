@@ -1,11 +1,14 @@
+/**
+ * Package help defines Crum's Help Panel.
+ */
+
 import * as help from '../help.js';
 import * as browser from '../browser.js';
 import * as iam from '../iam.js';
 import * as highlight from './highlight.js';
 import * as paths from '../paths.js';
 
-const EMAIL = 'remnqymi@gmail.com';
-const EMAIL_LINK = `mailto:${EMAIL}`;
+const EMAIL_LINK = `mailto:${paths.EMAIL}`;
 
 type DICTIONARY = 'KELLIA' | 'Crum' | 'copticsite';
 
@@ -16,8 +19,6 @@ enum DIALECT_ARTICLE {
   DIALECTS = 'https://ccdl.claremont.edu/digital/collection/cce/id/2015/rec/6',
   Sahidic = 'https://ccdl.claremont.edu/digital/collection/cce/id/2029/rec/2',
   Akhmimic = 'https://ccdl.claremont.edu/digital/collection/cce/id/1962/rec/1',
-  // Lycopolitan is called Subakhmimic in Crum, but Lycopolitan is the standard
-  // name in academia today.
   Lycopolitan = 'https://ccdl.claremont.edu/digital/collection/cce/id/2026/rec/1',
   Bohairic = 'https://ccdl.claremont.edu/digital/collection/cce/id/2011/rec/2',
   Fayyumic = 'https://ccdl.claremont.edu/digital/collection/cce/id/1989/rec/2',
@@ -28,25 +29,25 @@ enum DIALECT_ARTICLE {
 }
 
 /**
+ * Create a shortcut to toggle a dialect.
  *
- * @param highlighter
- * @param key
- * @param name
- * @param code
- * @param dictionaries
- * @param link
+ * @param highlighter - A Crum highlighter.
+ * @param key - The keyboard key that toggles this dialect.
+ * @param name - The name of the dialect.
+ * @param code - The dialect code / abbreviation.
+ * @param dictionaries - The list of dictionaries where this dialect is present.
+ * @param link - A link to an article about the dialect.
  *
  * @returns A shortcut object representing the toggle shortcut for this dialect.
  */
 function makeDialectShortcut(
   highlighter: highlight.Highlighter,
-  key: string,
+  key: highlight.DIALECT_KEY,
   name: string,
-  code: string,
+  code: highlight.DIALECT,
   dictionaries: DICTIONARY[],
   link: DIALECT_ARTICLE
 ): help.Shortcut {
-  code = help.highlightFirstOccurrence(key, code);
   name = help.highlightFirstOccurrence(key, name);
   if (link != DIALECT_ARTICLE.NO_ARTICLE) {
     name = `<a href="${link}" target="_blank" rel="noopener,noreferrer">${name}</a>`;
@@ -55,7 +56,7 @@ function makeDialectShortcut(
   const description = `
 <table>
 <tr>
-  <td class="dialect-code">(${code})</td>
+  <td class="dialect-code">(${help.highlightFirstOccurrence(key, code)})</td>
   <td class="dialect-name">${name}</td>
   ${iam.amI('lexicon') ? `<td class="dialect-dictionaries">(${dictionaries.join(', ')})</td>` : ''}
 </tr>
@@ -67,8 +68,7 @@ function makeDialectShortcut(
     ? ['lexicon', 'note', 'index']
     : ['lexicon'];
   return new help.Shortcut(description, availability, (e: KeyboardEvent) => {
-    const dialectCode = highlight.DIALECT_SINGLE_CHAR[e.key] ?? e.key;
-    highlighter.toggleDialect(dialectCode);
+    highlighter.toggleDialectSingleChar(e.key as highlight.DIALECT_KEY);
   });
 }
 
@@ -85,9 +85,9 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
     S: [
       makeDialectShortcut(
         highlighter,
-        'S',
+        highlight.DIALECT.S,
         'Sahidic',
-        'S',
+        highlight.DIALECT.S,
         ['Crum', 'KELLIA'],
         DIALECT_ARTICLE.Sahidic
       ),
@@ -95,9 +95,9 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
     a: [
       makeDialectShortcut(
         highlighter,
-        'a',
+        highlight.DIALECT_ABBREV.a,
         'Sahidic with <strong>A</strong>khmimic tendency',
-        'Sa',
+        highlight.DIALECT.Sa,
         ['Crum'],
         DIALECT_ARTICLE.NO_ARTICLE
       ),
@@ -105,9 +105,9 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
     f: [
       makeDialectShortcut(
         highlighter,
-        'f',
+        highlight.DIALECT_ABBREV.f,
         'Sahidic with <strong>F</strong>ayyumic tendency',
-        'Sf',
+        highlight.DIALECT.Sf,
         ['Crum'],
         DIALECT_ARTICLE.NO_ARTICLE
       ),
@@ -115,9 +115,9 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
     A: [
       makeDialectShortcut(
         highlighter,
-        'A',
+        highlight.DIALECT.A,
         'Akhmimic',
-        'A',
+        highlight.DIALECT.A,
         ['Crum', 'KELLIA'],
         DIALECT_ARTICLE.Akhmimic
       ),
@@ -125,9 +125,9 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
     L: [
       makeDialectShortcut(
         highlighter,
-        'L',
+        highlight.DIALECT.L,
         'Lycopolitan',
-        'L',
+        highlight.DIALECT.L,
         ['Crum', 'KELLIA'],
         DIALECT_ARTICLE.Lycopolitan
       ),
@@ -135,9 +135,9 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
     B: [
       makeDialectShortcut(
         highlighter,
-        'B',
+        highlight.DIALECT.B,
         'Bohairic',
-        'B',
+        highlight.DIALECT.B,
         ['Crum', 'KELLIA', 'copticsite'],
         DIALECT_ARTICLE.Bohairic
       ),
@@ -145,9 +145,9 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
     F: [
       makeDialectShortcut(
         highlighter,
-        'F',
+        highlight.DIALECT.F,
         'Fayyumic',
-        'F',
+        highlight.DIALECT.F,
         ['Crum', 'KELLIA'],
         DIALECT_ARTICLE.Fayyumic
       ),
@@ -155,9 +155,9 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
     b: [
       makeDialectShortcut(
         highlighter,
-        'b',
+        highlight.DIALECT_ABBREV.b,
         'Fayyumic with <strong>B</strong>ohairic tendency',
-        'Fb',
+        highlight.DIALECT.Fb,
         ['Crum'],
         DIALECT_ARTICLE.NO_ARTICLE
       ),
@@ -165,9 +165,9 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
     O: [
       makeDialectShortcut(
         highlighter,
-        'O',
+        highlight.DIALECT.O,
         'Old Coptic',
-        'O',
+        highlight.DIALECT.O,
         ['Crum', 'KELLIA'],
         DIALECT_ARTICLE.OldCoptic
       ),
@@ -175,9 +175,9 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
     N: [
       makeDialectShortcut(
         highlighter,
-        'N',
+        highlight.DIALECT_ABBREV.N,
         'Nag Hammadi',
-        'NH',
+        highlight.DIALECT.NH,
         // TODO: (#0) This dialect was invented by Marcion, and it's not in
         // Crum. Update the description accordingly.
         ['Crum'],
@@ -187,9 +187,9 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
     M: [
       makeDialectShortcut(
         highlighter,
-        'M',
+        highlight.DIALECT.M,
         'Mesokemic',
-        'M',
+        highlight.DIALECT.M,
         ['KELLIA'],
         DIALECT_ARTICLE.Mesokemic
       ),
@@ -197,9 +197,9 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
     P: [
       makeDialectShortcut(
         highlighter,
-        'P',
+        highlight.DIALECT.P,
         'Proto-Theban',
-        'P',
+        highlight.DIALECT.P,
         ['KELLIA'],
         DIALECT_ARTICLE.ProtoTheban
       ),
@@ -207,9 +207,9 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
     V: [
       makeDialectShortcut(
         highlighter,
-        'V',
+        highlight.DIALECT.V,
         'South Fayyumic Greek',
-        'V',
+        highlight.DIALECT.V,
         ['KELLIA'],
         DIALECT_ARTICLE.DIALECTS
       ),
@@ -217,9 +217,9 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
     W: [
       makeDialectShortcut(
         highlighter,
-        'W',
+        highlight.DIALECT.W,
         'Crypto-Mesokemic Greek',
-        'W',
+        highlight.DIALECT.W,
         ['KELLIA'],
         DIALECT_ARTICLE.DIALECTS
       ),
@@ -227,9 +227,9 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
     U: [
       makeDialectShortcut(
         highlighter,
-        'U',
+        highlight.DIALECT.U,
         'Greek (usage <strong>u</strong>nclear)',
-        'U',
+        highlight.DIALECT.U,
         ['KELLIA'],
         DIALECT_ARTICLE.NO_ARTICLE
       ),
@@ -253,7 +253,7 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
     ],
     R: [
       new help.Shortcut(
-        `<strong>R</strong>eports / Contact <a class="contact" href="${EMAIL_LINK}">${EMAIL}</a>`,
+        `<strong>R</strong>eports / Contact <a class="contact" href="${EMAIL_LINK}">${paths.EMAIL}</a>`,
         ['lexicon', 'note', 'index', 'index_index'],
         () => {
           browser.open(EMAIL_LINK);
@@ -262,10 +262,10 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
     ],
     H: [
       new help.Shortcut(
-        `Open <a href="${paths.HOME}/" target="_blank"><strong>h</strong>omepage</a>`,
+        `Open <a href="${paths.HOME}" target="_blank"><strong>h</strong>omepage</a>`,
         ['lexicon', 'note', 'index', 'index_index'],
         () => {
-          browser.open(`${paths.HOME}/`);
+          browser.open(paths.HOME);
         }
       ),
     ],
