@@ -57,15 +57,6 @@ repos:
 
   - repo: local
     hooks:
-      - id: commit-file-sizes
-        name: commit-file-sizes
-        entry: pre-commit/commit-file-size.sh
-        language: system
-        verbose: true
-        require_serial: true
-
-  - repo: local
-    hooks:
       - id: docs-structure
         name: docs-structure
         entry: pre-commit/docs_structure.py
