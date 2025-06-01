@@ -1,5 +1,10 @@
 /**
- * @returns
+ * Package iam defines page identities.
+ *
+ * You can use iam to determine where the code is running.
+ */
+/**
+ * @returns The identity of the page where the code is executed.
  */
 export function where() {
   if (typeof ANKI !== 'undefined') {
@@ -20,8 +25,8 @@ export function where() {
   return 'UNKNOWN';
 }
 /**
- * @param w
- * @returns
+ * @param w - An identity.
+ * @returns Whether the code is running in a page with this identity.
  */
 export function amI(w) {
   return where() === w;
