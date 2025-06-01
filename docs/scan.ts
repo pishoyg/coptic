@@ -10,6 +10,11 @@ const WANT_COLUMNS = ['page', 'start', 'end'];
 // ZOOM_FACTOR controls how fast zooming happens in response to scroll events.
 const ZOOM_FACTOR = 0.05;
 
+enum CLS {
+  // DISABLED conceals an element from the display.
+  DISABLED = 'disabled',
+}
+
 /**
  * Word represents a word that can be used in the book scan context.
  * TODO: (#411) Implement Greek and Arabic word classes, as well as Coptic.
@@ -57,6 +62,7 @@ export function chopColumn(page: string): string {
  */
 export class Index {
   private pages: Page[];
+
   /**
    * @param index - The content of the index, in plain TSV format,with the first
    * three column being:
@@ -251,35 +257,57 @@ export class Form {
 }
 
 /**
- *
+ * Scroller scrolls through the pages of a book.
  */
 export class Scroller {
   private readonly start: number;
   private readonly end: number;
-  // TODO: (#0) The parameters are unnecessarily complicated. Consider getting
-  // rid of offsets and variable extensions altogether. They are complicating
-  // things.
+
   /**
+   * Construct a scroller.
    *
    * @param start - Integer basename of the first image.
+   *
    * @param end - Integer basename of the first image.
+   *
    * @param offset - Offset of the first interesting page in the book (skipping
    * the intro and such).
-   * The offset mainly concerns itself with the behavior of the page
-   * parameter. It allows you to export a parameter value to your end users
-   * that doesn't necessarily match the file names on the server.
+   * The offset mainly concerns itself with the behavior of the 'page'
+   * parameter. It allows you to set a parameter value that doesn't necessarily
+   * match the basenames of the files.
    * For example: If the pages are numbered 1.jpg to 100.jpg, with 1-20
-   * representing the introduction, 21.jpg being the page 1, then the offset is
-   * 20. Thus, `?page=1` will open file 21.jpg.
+   * representing the introduction, 21.jpg being the actual page number 1, then
+   * the offset is 20. Thus, the parameter `?page=1` will open file 21.jpg. This
+   * is a better user experience than having `?page=1` open the cover page or
+   * some page in the intro, and `?page=21` open page 1 in the book.
+   *
    * @param ext - File extensions. If it's page-dependent, pass a function that
-   * returns the extension given the page number (the parameter passed being the
-   * basename, rather than the page parameter (which accounts for the offset)).
+   * returns the extension given the file basename.
+   *
    * @param form - Input and output elements.
-   * @param form.image
-   * @param form.nextButton
-   * @param form.prevButton
-   * @param form.resetButton
-   * @param landingPage - Default value for the page parameter.
+   *
+   * @param form.image - <img> element holding the scan. The scroller will
+   * update the image source to open new pages.
+   *
+   * @param form.nextButton - Button to navigate to the next page. The scroller
+   * will respond to clicks on this button, and will disable the button if it's
+   * not possible to scroll to a next page (if we're already at the very last
+   * page).
+   *
+   * @param form.prevButton - Button to navigate to the previous page. The
+   * scroller will respond to clicks on this button, and will disable the button
+   * if it's not possible to scroll to a previous page (if we're already at the
+   * very first page).
+   *
+   * @param form.resetButton - Button to reset the display. The scroller will
+   * trigger a reset whenever a scroll takes place.
+   *
+   * @param landingPage - Which page to navigate to if we don't have a page
+   * number otherwise.
+   *
+   * TODO: (#0) The parameters are unnecessarily complicated. Consider getting
+   * rid of offsets and variable extensions altogether. They are complicating
+   * things.
    */
   constructor(
     start: number,
@@ -297,13 +325,13 @@ export class Scroller {
     this.start = start - this.offset;
     this.end = end - this.offset;
 
-    this.initEventListeners();
+    this.addEventListeners();
     this.update(this.getPageParam());
   }
 
   /**
-   *
-   * @returns
+   * @returns The value of the page parameter, or the landing page if the
+   * parameter if absent or has an invalid value.
    */
   private getPageParam(): number {
     const urlParams = new URLSearchParams(window.location.search);
@@ -316,10 +344,15 @@ export class Scroller {
   }
 
   /**
+   * Update the display and page parameter to the given page number.
    *
-   * @param page
+   * @param page - Page number to open. This will be modified if it falls
+   * outside our page range.
    */
-  public update(page: number): void {
+  update(page: number): void {
+    if (isNaN(page)) {
+      page = this.landingPage;
+    }
     if (page < this.start) {
       page = this.start;
     }
@@ -332,52 +365,60 @@ export class Scroller {
   }
 
   /**
+   * Set the page parameter to the given value.
    *
-   * @param newPage
+   * @param page - parameter value. The value is NOT verified.
    */
-  private updatePageParam(newPage: number): void {
+  private updatePageParam(page: number): void {
     const url = new URL(window.location.href);
-    url.searchParams.set('page', newPage.toString());
+    url.searchParams.set('page', page.toString());
     window.history.replaceState({}, '', url.toString());
   }
 
   /**
+   * Update the image to the given page number.
    *
-   * @param page
+   * @param page - Page number. The value is NOT verified.
    */
   private updateDisplay(page: number): void {
-    const stem = page + this.offset;
-    this.form.image.src = `${stem.toString()}.${typeof this.ext === 'function' ? this.ext(stem) : this.ext}`;
+    const stem: number = page + this.offset;
+    const ext: string =
+      typeof this.ext === 'function' ? this.ext(stem) : this.ext;
+
+    this.form.image.src = `${stem.toString()}.${ext}`;
     this.form.image.alt = page.toString();
+
     if (page === this.start) {
-      this.form.prevButton.classList.add('disabled');
+      this.form.prevButton.classList.add(CLS.DISABLED);
     } else {
-      this.form.prevButton.classList.remove('disabled');
+      this.form.prevButton.classList.remove(CLS.DISABLED);
     }
+
     if (page === this.end) {
-      this.form.nextButton.classList.add('disabled');
+      this.form.nextButton.classList.add(CLS.DISABLED);
     } else {
-      this.form.nextButton.classList.remove('disabled');
+      this.form.nextButton.classList.remove(CLS.DISABLED);
     }
   }
 
   /**
-   *
+   * Navigate to the next page.
    */
   private incrementPage(): void {
     this.update(this.getPageParam() + 1);
   }
 
   /**
-   *
+   * Navigate to the previous page.
    */
   private decrementPage(): void {
     this.update(this.getPageParam() - 1);
   }
 
   /**
+   * Handle 'keydown' event, if they're deemed relevant to the scroller.
    *
-   * @param event
+   * @param event - Keyboard event.
    */
   private handleKeyDown(event: KeyboardEvent): void {
     if (event.code === 'KeyN') {
@@ -388,23 +429,31 @@ export class Scroller {
   }
 
   /**
-   *
+   * Register the scroller's event listeners.
    */
-  private initEventListeners(): void {
-    document.addEventListener('keydown', this.handleKeyDown.bind(this));
+  private addEventListeners(): void {
+    // The next button scrolls to the next page.
     this.form.nextButton.addEventListener(
       'click',
       this.incrementPage.bind(this)
     );
+
+    // The prev button scrolls to the previous page.
     this.form.prevButton.addEventListener(
       'click',
       this.decrementPage.bind(this)
     );
+
+    // Respond to some keyboard shortcuts.
+    document.addEventListener('keydown', this.handleKeyDown.bind(this));
   }
 }
 
 /**
+ * Control position and zoom of an image.
  *
+ * NOTE: This class was mostly written by GenAI, and I don't fully understand
+ * it!
  */
 export class ZoomerDragger {
   private scale = 1;
@@ -415,7 +464,6 @@ export class ZoomerDragger {
   private isDragging = false;
 
   /**
-   *
    * @param form
    * @param form.image
    * @param form.resetButton
@@ -426,30 +474,41 @@ export class ZoomerDragger {
       resetButton: HTMLElement;
     }
   ) {
-    this.initEventListeners();
+    this.addEventListeners();
   }
 
   /**
-   *
+   * Register event listeners.
    */
-  private initEventListeners(): void {
+  private addEventListeners(): void {
+    // Mouse wheel updates the image zoom.
     document.addEventListener('wheel', this.handleZoom.bind(this), {
       passive: false,
     });
 
+    // A mouse click starts dragging the image.
     this.form.image.addEventListener(
       'mousedown',
       this.startDragging.bind(this)
     );
+
+    // Moving the mouse drags the image around.
     document.addEventListener('mousemove', this.dragImage.bind(this));
+
+    // Lifting the mouse click stops dragging.
     document.addEventListener('mouseup', this.stopDragging.bind(this));
+
+    // Clicking the reset button resets the image position.
     this.form.resetButton.addEventListener('click', this.reset.bind(this));
+
+    // Some keyboard events trigger actions.
     document.addEventListener('keydown', this.handleKeyDown.bind(this));
   }
 
   /**
+   * Handle the mouse wheel event.
    *
-   * @param e
+   * @param e - Mouse wheel event.
    */
   private handleZoom(e: WheelEvent): void {
     e.preventDefault();
@@ -465,8 +524,9 @@ export class ZoomerDragger {
   }
 
   /**
+   * Start dragging the image.
    *
-   * @param e
+   * @param e - Mouse event.
    */
   private startDragging(e: MouseEvent): void {
     e.preventDefault();
@@ -478,8 +538,9 @@ export class ZoomerDragger {
   }
 
   /**
+   * Move the image.
    *
-   * @param e
+   * @param e - Mouse event.
    */
   private dragImage(e: MouseEvent): void {
     e.preventDefault();
@@ -495,8 +556,9 @@ export class ZoomerDragger {
   }
 
   /**
+   * Stop dragging the image.
    *
-   * @param e
+   * @param e - Mouse event.
    */
   private stopDragging(e: MouseEvent): void {
     e.preventDefault();
@@ -506,7 +568,7 @@ export class ZoomerDragger {
   }
 
   /**
-   *
+   * Reset the image position.
    */
   private reset(): void {
     this.scale = 1;
@@ -516,15 +578,16 @@ export class ZoomerDragger {
   }
 
   /**
-   *
+   * Update the style transform value.
    */
   private updateTransform(): void {
     this.form.image.style.transform = `scale(${this.scale.toString()}) translate(${this.originX.toString()}px, ${this.originY.toString()}px)`;
   }
 
   /**
+   * Handle a 'keydown' event.
    *
-   * @param e
+   * @param e - Keyboard event.
    */
   private handleKeyDown(e: KeyboardEvent): void {
     if (e.code === 'KeyR') {
@@ -534,15 +597,23 @@ export class ZoomerDragger {
 }
 
 /**
- *
+ * Dictionary represents a searchable dictionary scan.
  */
 export class Dictionary {
   /**
+   * Construct a Dictionary.
    *
-   * @param index
-   * @param scroller
-   * @param form
-   * @param form.searchBox
+   * @param index - The dictionary index. Given a (well-formed) search query,
+   * the index should supply us with the number of the page containing the
+   * definition of the word in the query.
+   *
+   * @param scroller - The scrollers can update the dictionary display given a
+   * page number.
+   *
+   * @param form - The form holds HTML elements used to interact with the
+   * dictionary.
+   *
+   * @param form.searchBox - The search box provides search queries.
    */
   constructor(
     // index stores our dictionary index, and will be used to look up pages.
@@ -551,12 +622,13 @@ export class Dictionary {
     private readonly scroller: Scroller,
     private readonly form: { searchBox: HTMLInputElement }
   ) {
-    this.form.searchBox.focus();
     this.addListeners();
+    // Focus on the search box, to the user can start searching right away.
+    this.form.searchBox.focus();
   }
 
   /**
-   *
+   * Execute a search for a query.
    */
   private search() {
     const query = this.form.searchBox.value.trim().toLowerCase();
@@ -568,7 +640,7 @@ export class Dictionary {
   }
 
   /**
-   *
+   * Register event listeners.
    */
   private addListeners() {
     // Input in the search box triggers a search.

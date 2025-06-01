@@ -241,7 +241,7 @@ colon, a space, and an issue number (with the pound sign) surrounded by
 parenthesis. This format is enforced by a pre-commit hook, though the hook only
 picks up a `TODO` if it's immediately followed by `:`. If the `TODO` is
 low-priority, and isn't worth an associated issue, you can assign it to the
-pseud-issue `#0`.
+pseudo-issue `#0`.
 
 ### [Labels](https://github.com/pishoyg/coptic/labels)
 
@@ -313,6 +313,15 @@ it comes to ensuring correctness and catching bugs.
 1. Avoid using a generic `utils` package. It can easily become a catch-all for
 unrelated logic, grow excessively large, and lose clear purpose. Instead,
 organize utilities into purpose-specific packages based on functionality.
+
+1. It has been helpful to be able to know, from a quick glance at a TypeScript
+   file:
+   1. What the classes used are.
+   1. What listeners are registered.
+
+   Therefore, whenever possible, try to group
+      all classes in a `CLS` enum. And classes should group all event listener
+   registrations to one `addEventListeners` method.
 
 ### Languages
 
