@@ -4,79 +4,7 @@
 import * as css from '../css.js';
 import * as iam from '../iam.js';
 import * as dev from '../dev.js';
-
-/**
- * DIALECT defines the list of dialects known to our Lexicon.
- * NOTE: While not part of the CLS enum, dialects are also used as
- * HTML classes.
- */
-export enum DIALECT {
-  // The following dialects are found in Crum.
-  S = 'S',
-  Sa = 'Sa',
-  Sf = 'Sf',
-  A = 'A',
-  L = 'L',
-  B = 'B',
-  F = 'F',
-  Fb = 'Fb',
-  O = 'O',
-
-  // The following dialects are only found in Marcion (part of Crum).
-  NH = 'NH',
-
-  // The following dialects are only found in KELLIA (TLA).
-  M = 'M',
-  P = 'P',
-  V = 'V',
-  W = 'W',
-  U = 'U',
-}
-
-/**
- * For dialects that have a single-character code, we use the code as a keyboard
- * shortcut key. For the double-character dialect codes, we use a different
- * shortcut key, which we store in this map.
- */
-export enum DIALECT_ABBREV {
-  N = 'N',
-  a = 'a',
-  f = 'f',
-  b = 'b',
-}
-
-/**
- * DIALECT_KEY is a single-character string dialect code.
- * Notice that the type is slightly generous, as DIALECT includes some
- * double-character string codes, but they should not be used where DIALECT_KEY
- * is expected.
- */
-export type DIALECT_KEY = DIALECT | DIALECT_ABBREV;
-
-export const ANY_DIALECT_QUERY = css.classQuery(Object.values(DIALECT));
-
-const ABBREV_TO_DIALECT: Record<DIALECT_ABBREV, DIALECT> = {
-  [DIALECT_ABBREV.N]: DIALECT.NH,
-  [DIALECT_ABBREV.a]: DIALECT.Sa,
-  [DIALECT_ABBREV.f]: DIALECT.Sf,
-  [DIALECT_ABBREV.b]: DIALECT.Fb,
-};
-
-/**
- * @param key
- * @returns
- */
-function isDialectAbbrev(key: DIALECT_KEY): key is DIALECT_ABBREV {
-  return key in ABBREV_TO_DIALECT;
-}
-
-/**
- * @param key
- * @returns
- */
-export function dialectFromKey(key: DIALECT_KEY): DIALECT {
-  return isDialectAbbrev(key) ? ABBREV_TO_DIALECT[key] : key;
-}
+import * as d from './dialect.js';
 
 enum CLS {
   reset = 'reset',
@@ -94,11 +22,6 @@ enum CLS {
 export class Highlighter {
   // Sheets are problematic on Anki, for some reason! We update the elements
   // individually instead!
-
-  // d is the name of the local-storage variable storing the list of active
-  // dialects. This is the source of truth for dialect highlighting. Updating
-  // dialect highlighting should happen by updating this local storage variable.
-  private readonly d = 'd';
 
   private readonly sheet: CSSStyleSheet | undefined;
   private readonly dialectRuleIndex: number;
@@ -148,7 +71,7 @@ export class Highlighter {
     // 3. Keyboard shortcuts
     // NOTE: Make sure that checkboxes are updated whenever dialect highlighting
     // changes, regardless of the source of the change.
-    const active = this.activeDialects();
+    const active = d.active();
 
     if (!active) {
       // No dialect highlighting whatsoever.
@@ -172,7 +95,7 @@ export class Highlighter {
     // Dim all children of `word` elements, with the exception of:
     // - Active dialects.
     // - Undialected spellings.
-    const query = `.${CLS.word} > :not(${css.classQuery(active)}, .${CLS.spelling}:not(${ANY_DIALECT_QUERY}))`;
+    const query = `.${CLS.word} > :not(${css.classQuery(active)}, .${CLS.spelling}:not(${d.ANY_DIALECT_QUERY}))`;
     const style = `opacity: ${Highlighter.DIM};`;
     this.updateSheetOrElements(
       this.dialectRuleIndex,
@@ -189,7 +112,7 @@ export class Highlighter {
 
     // Active dialects should have their checkboxes checked.
     this.dialectCheckboxes.forEach((checkbox) => {
-      checkbox.checked = active.includes(checkbox.name as DIALECT);
+      checkbox.checked = active.includes(checkbox.name as d.DIALECT);
     });
   }
 
@@ -291,7 +214,7 @@ export class Highlighter {
     // A click on a checkbox triggers a dialect display update.
     this.dialectCheckboxes.forEach((checkbox) => {
       checkbox.addEventListener('click', () => {
-        this.toggleDialect(checkbox.name as DIALECT);
+        this.toggleDialect(checkbox.name as d.DIALECT);
       });
     });
 
@@ -369,45 +292,13 @@ export class Highlighter {
   }
 
   /**
-   * @returns The list of active dialects, undefined if dialect highlighting
-   * is currently unused.
-   */
-  activeDialects(): DIALECT[] | undefined {
-    const d = localStorage.getItem(this.d);
-    // NOTE: ''.split(',') returns [''], which is not what we want!
-    return d ? (d.split(',') as DIALECT[]) : undefined;
-  }
-
-  /**
    * Toggle the highlighting of the given dialect.
    *
    * @param dialect - A dialect code.
    */
-  toggleDialect(dialect: DIALECT): void {
-    const active: Set<DIALECT> = new Set<DIALECT>(this.activeDialects());
-
-    if (active.has(dialect)) {
-      active.delete(dialect);
-    } else {
-      active.add(dialect);
-    }
-
-    if (active.size) {
-      localStorage.setItem(this.d, Array.from(active).join(','));
-    } else {
-      localStorage.removeItem(this.d);
-    }
-
+  toggleDialect(dialect: d.DIALECT): void {
+    d.toggle(dialect);
     this.updateDialects();
-  }
-
-  /**
-   * @param key - The dialect toggle key. This is the dialect code for
-   * dialects with a single-character code, or another key for dialects with a
-   * double-character code.
-   */
-  toggleDialectSingleChar(key: DIALECT_KEY): void {
-    this.toggleDialect(dialectFromKey(key));
   }
 
   /**

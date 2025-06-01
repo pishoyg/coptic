@@ -14,6 +14,7 @@ import * as html from '../html.js';
 import * as scan from '../scan.js';
 import * as paths from '../paths.js';
 import * as highlight from './highlight.js';
+import * as d from './dialect.js';
 
 const COPTIC_RE = /[Ⲁ-ⲱϢ-ϯⳈⳉ]+/giu;
 const GREEK_RE = /[Α-Ωα-ω]+/giu;
@@ -206,9 +207,10 @@ function main(): void {
     .querySelectorAll<HTMLElement>('.dialect')
     .forEach((el: HTMLElement) => {
       el.classList.add('hover-link');
-      el.onclick = () => {
-        highlighter.toggleDialect(el.innerHTML as highlight.DIALECT);
-      };
+      el.onclick = highlighter.toggleDialect.bind(
+        highlighter,
+        el.innerHTML as d.DIALECT
+      );
     });
 
   // Handle 'developer' class.

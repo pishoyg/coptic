@@ -3,6 +3,7 @@ import * as collapse from '../collapse.js';
 import * as css from '../css.js';
 import * as browser from '../browser.js';
 import * as highlight from './highlight.js';
+import * as d from './dialect.js';
 import * as help from './help.js';
 
 const SEARCH_BOX_ID = 'searchBox';
@@ -46,9 +47,8 @@ class CrumDialectSorter extends xooxle.BucketSorter {
     );
 
   /**
-   * @param highlighter
    */
-  constructor(private readonly highlighter: highlight.Highlighter) {
+  constructor() {
     super(CrumDialectSorter.NUM_BUCKETS);
   }
 
@@ -61,7 +61,7 @@ class CrumDialectSorter extends xooxle.BucketSorter {
     _res: xooxle.SearchResult,
     row: HTMLTableRowElement
   ): DialectMatch {
-    const active = this.highlighter.activeDialects();
+    const active = d.active();
     if (!active?.length) {
       // There is no dialect highlighting. All results fall in the first bucket.
       return 0;
@@ -77,7 +77,7 @@ class CrumDialectSorter extends xooxle.BucketSorter {
 
     const undialected: boolean = Array.from(
       row.querySelectorAll(`.${xooxle.CLS.MATCH}`)
-    ).some((el) => !el.closest(highlight.ANY_DIALECT_QUERY));
+    ).some((el) => !el.closest(d.ANY_DIALECT_QUERY));
     const ofInterest = !!row.querySelector(css.classQuery(active));
     if (undialected) {
       if (ofInterest) {
@@ -103,9 +103,8 @@ class kelliaDialectSorter extends xooxle.BucketSorter {
   private static readonly NUM_BUCKETS = 2;
 
   /**
-   * @param highlighter
    */
-  constructor(private readonly highlighter: highlight.Highlighter) {
+  constructor() {
     super(kelliaDialectSorter.NUM_BUCKETS);
   }
 
@@ -115,7 +114,7 @@ class kelliaDialectSorter extends xooxle.BucketSorter {
    * @returns Bucket number.
    */
   override bucket(_res: xooxle.SearchResult, row: HTMLTableRowElement): number {
-    const active = this.highlighter.activeDialects();
+    const active = d.active();
     if (!active?.length) {
       // There is no dialect highlighting. All results fall in the first bucket.
       return 0;
@@ -133,9 +132,7 @@ interface Xooxle {
   tableID: string;
   collapsibleID: string;
   hrefFmt?: string;
-  bucketSorter?: new (
-    highlighter: highlight.Highlighter
-  ) => xooxle.BucketSorter;
+  bucketSorter?: xooxle.BucketSorter;
 }
 
 const XOOXLES: Xooxle[] = [
@@ -144,14 +141,14 @@ const XOOXLES: Xooxle[] = [
     tableID: 'crum',
     collapsibleID: 'crum-collapsible',
     hrefFmt: CRUM_HREF_FMT,
-    bucketSorter: CrumDialectSorter,
+    bucketSorter: new CrumDialectSorter(),
   },
   {
     indexURL: 'kellia.json',
     tableID: 'kellia',
     collapsibleID: 'kellia-collapsible',
     hrefFmt: KELLIA_HREF_FMT,
-    bucketSorter: kelliaDialectSorter,
+    bucketSorter: new kelliaDialectSorter(),
   },
   {
     indexURL: 'copticsite.json',
@@ -195,12 +192,7 @@ async function main(): Promise<void> {
         resultsTableID: xoox.tableID,
         collapsibleID: xoox.collapsibleID,
       });
-      new xooxle.Xooxle(
-        json,
-        form,
-        xoox.hrefFmt,
-        xoox.bucketSorter ? new xoox.bucketSorter(highlighter) : undefined
-      );
+      new xooxle.Xooxle(json, form, xoox.hrefFmt, xoox.bucketSorter);
     })
   );
 
