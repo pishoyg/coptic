@@ -1,47 +1,14 @@
 /**
  * Package help defines Crum's Help Panel.
+ *
+ * TODO: (#203) Many of the shortcuts defined here may be relevant for other
+ * modules, and should be moved to a shared package.
  */
 import * as help from '../help.js';
 import * as browser from '../browser.js';
-import * as iam from '../iam.js';
 import * as d from './dialect.js';
 import * as paths from '../paths.js';
 const EMAIL_LINK = `mailto:${paths.EMAIL}`;
-/**
- * Create a shortcut to toggle a dialect.
- *
- * @param highlighter - A Crum highlighter.
- * @param key - The keyboard key that toggles this dialect.
- *
- * @returns A shortcut object representing the toggle shortcut for this dialect.
- */
-function makeDialectShortcut(highlighter, key) {
-  const dialect = d.byKey(key);
-  const code = d.code(key);
-  const highlightedCode = help.highlightFirstOccurrence(key, code);
-  let highlightedName = dialect.name;
-  if (dialect.article) {
-    highlightedName = `<a href="${dialect.article}" target="_blank" rel="noopener,noreferrer">${highlightedName}</a>`;
-  }
-  const description = `
-<table>
-<tr>
-  <td class="dialect-code">(${highlightedCode})</td>
-  <td class="dialect-name">${highlightedName}</td>
-  ${iam.amI('lexicon') ? `<td class="dialect-dictionaries">(${dialect.dictionaries.join(', ')})</td>` : ''}
-</tr>
-</table>`;
-  // All dialects are available in Xooxle. Only Crum dialects area available on
-  // notes.
-  const availability = dialect.dictionaries.includes('Crum')
-    ? ['lexicon', 'note', 'index']
-    : ['lexicon'];
-  return new help.Shortcut(
-    description,
-    availability,
-    highlighter.toggleDialect.bind(highlighter, code)
-  );
-}
 /**
  *
  * @param highlighter
@@ -49,25 +16,13 @@ function makeDialectShortcut(highlighter, key) {
  */
 export function makeHelpPanel(highlighter) {
   const panel = new help.Help();
-  // NOTE: Some (minor) dialects are missing articles. If you find a reference
-  // that explains what those dialects are, that would be great.
-  const dialectHighlighting = {
-    S: [makeDialectShortcut(highlighter, 'S')],
-    a: [makeDialectShortcut(highlighter, 'a')],
-    f: [makeDialectShortcut(highlighter, 'f')],
-    A: [makeDialectShortcut(highlighter, 'A')],
-    L: [makeDialectShortcut(highlighter, 'L')],
-    B: [makeDialectShortcut(highlighter, 'B')],
-    F: [makeDialectShortcut(highlighter, 'F')],
-    b: [makeDialectShortcut(highlighter, 'b')],
-    O: [makeDialectShortcut(highlighter, 'O')],
-    N: [makeDialectShortcut(highlighter, 'N')],
-    M: [makeDialectShortcut(highlighter, 'M')],
-    P: [makeDialectShortcut(highlighter, 'P')],
-    V: [makeDialectShortcut(highlighter, 'V')],
-    W: [makeDialectShortcut(highlighter, 'W')],
-    U: [makeDialectShortcut(highlighter, 'U')],
-  };
+  const dialectHighlighting = Object.values(d.DIALECTS).reduce(
+    (acc, dialect) => {
+      acc[dialect.key] = [dialect.shortcut(highlighter)];
+      return acc;
+    },
+    {}
+  );
   const control = {
     r: [
       new help.Shortcut(
