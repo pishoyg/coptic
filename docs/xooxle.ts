@@ -680,7 +680,7 @@ enum BoundaryType {
   MID_WORD = 3,
 }
 
-interface Match {
+interface Range {
   /**
    * The start index of the match.
    */
@@ -689,6 +689,9 @@ interface Match {
    * The end index of the match.
    */
   readonly end: number;
+}
+
+interface Match extends Range {
   /**
    * The match type.
    */
@@ -856,6 +859,40 @@ class LineSearchResult {
   }
 
   /**
+   * Given an array of matches, return an array of [number, number] pairs,
+   * such that contiguous matches are concatenated.
+   *
+   * Contiguity is determined by overlapping or touching ranges based on start
+   * and end indices.
+   *
+   * @param matches An array of Match objects.
+   * @returns An array of [start, end] pairs representing the concatenated
+   * ranges.
+   */
+  concatenateMatches(matches: Match[]): { start: number; end: number }[] {
+    if (matches.length === 0) {
+      return [];
+    }
+
+    const ranges: { start: number; end: number }[] = [];
+    let start = matches[0]!.start;
+    let end = matches[0]!.end;
+
+    for (const match of matches) {
+      if (match.start <= end) {
+        end = Math.max(end, match.end);
+      } else {
+        ranges.push({ start, end });
+        start = match.start;
+        end = match.end;
+      }
+    }
+
+    ranges.push({ start, end });
+    return ranges;
+  }
+
+  /**
    * @returns The HTML content of the line, with matches highlighted.
    */
   highlight(): string {
@@ -864,16 +901,22 @@ class LineSearchResult {
       return this.html;
     }
 
+    // NOTE: The display update was found to be buggy if contiguous matches are
+    // not eliminated, although it's not understood why.
+    // You can easily reproduce contiguous matches by searching for '.' with
+    // regex enabled.
+    const ranges = this.concatenateMatches(this.matches);
+
     const builder: string[] = [];
     // i represents the index in the HTML.
     // j tracks the index in the text.
     // idx tracks the match index.
-    // cur tracks the current match.
+    // range tracks the current match.
     // match tracks whether we currently have a match.
     let i = 0,
       j = 0,
       idx = 0,
-      cur: Match | undefined = this.matches[idx],
+      range: Range | undefined = ranges[idx],
       match = false;
 
     while (i <= this.html.length) {
@@ -900,14 +943,14 @@ class LineSearchResult {
         continue;
       }
 
-      if (cur?.start === j) {
+      if (range?.start === j) {
         // A match starts at the given position. Yield an opening tag.
         match = true;
         builder.push(LineSearchResult.opening);
-      } else if (cur?.end === j) {
+      } else if (range?.end === j) {
         // A match ends at the given position. Yield a closing tag.
         builder.push(LineSearchResult.closing);
-        cur = this.matches[++idx];
+        range = ranges[++idx];
         match = false;
       }
 
