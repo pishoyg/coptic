@@ -904,7 +904,7 @@ class LineSearchResult {
         // A match starts at the given position. Yield an opening tag.
         match = true;
         builder.push(LineSearchResult.opening);
-      } else if (cur?.end === j && this.matches[idx + 1]?.start !== j) {
+      } else if (cur?.end === j) {
         // A match ends at the given position. Yield a closing tag.
         //
         // Notice that we only actually close the match tag if we don't have
@@ -912,9 +912,11 @@ class LineSearchResult {
         // case by inserting a closing tag, immediately followed by an opening
         // tag, but that's unnecessary. We simply refrain from closing the tag,
         // as if we concatenated the two matches.)
-        builder.push(LineSearchResult.closing);
         cur = this.matches[++idx];
-        match = false;
+        if (cur?.start !== j) {
+          builder.push(LineSearchResult.closing);
+          match = false;
+        }
       }
 
       if (i < this.html.length) {
