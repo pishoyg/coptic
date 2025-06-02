@@ -200,8 +200,6 @@ async function main(): Promise<void> {
   collapse.addListenersForSiblings(true);
 
   help.makeHelpPanel(highlighter);
-
-  highlighter.update();
 }
 
 await main();

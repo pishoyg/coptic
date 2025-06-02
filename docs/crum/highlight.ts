@@ -51,6 +51,9 @@ export class Highlighter {
     this.noDevRuleIndex = length + 2;
 
     this.addListeners();
+
+    // Update display once upon loading.
+    this.update();
   }
 
   /**

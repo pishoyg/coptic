@@ -30,7 +30,6 @@ const ABBREVIATIONS_PAGE =
  */
 function main(): void {
   const highlighter = new highlight.Highlighter(iam.amI('anki'), []);
-  highlighter.update();
 
   // We disable the help panel on Anki for the following reasons:
   // - There is no keyboard on mobile.
