@@ -48,6 +48,8 @@ export class Highlighter {
     this.devRuleIndex = length + 1;
     this.noDevRuleIndex = length + 2;
     this.addListeners();
+    // Update display once upon loading.
+    this.update();
   }
   /**
    * Update dialects and developer-mode display.

@@ -180,6 +180,5 @@ async function main() {
   // Initialize collapsible elements.
   collapse.addListenersForSiblings(true);
   help.makeHelpPanel(highlighter);
-  highlighter.update();
 }
 await main();
