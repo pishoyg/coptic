@@ -727,6 +727,36 @@ class LineSearchResult {
     return this.text.substring(start, end);
   }
   /**
+   * Given an array of matches, return an array of [number, number] pairs,
+   * such that contiguous matches are concatenated.
+   *
+   * Contiguity is determined by overlapping or touching ranges based on start
+   * and end indices.
+   *
+   * @param matches An array of Match objects.
+   * @returns An array of [start, end] pairs representing the concatenated
+   * ranges.
+   */
+  concatenateMatches(matches) {
+    if (matches.length === 0) {
+      return [];
+    }
+    const ranges = [];
+    let start = matches[0].start;
+    let end = matches[0].end;
+    for (const match of matches) {
+      if (match.start <= end) {
+        end = Math.max(end, match.end);
+      } else {
+        ranges.push({ start, end });
+        start = match.start;
+        end = match.end;
+      }
+    }
+    ranges.push({ start, end });
+    return ranges;
+  }
+  /**
    * @returns The HTML content of the line, with matches highlighted.
    */
   highlight() {
@@ -734,16 +764,21 @@ class LineSearchResult {
       // No highlighting needed.
       return this.html;
     }
+    // NOTE: The display update was found to be buggy if contiguous matches are
+    // not eliminated, although it's not understood why.
+    // You can easily reproduce contiguous matches by searching for '.' with
+    // regex enabled.
+    const ranges = this.concatenateMatches(this.matches);
     const builder = [];
     // i represents the index in the HTML.
     // j tracks the index in the text.
     // idx tracks the match index.
-    // cur tracks the current match.
+    // range tracks the current match.
     // match tracks whether we currently have a match.
     let i = 0,
       j = 0,
       idx = 0,
-      cur = this.matches[idx],
+      range = ranges[idx],
       match = false;
     while (i <= this.html.length) {
       // If we encounter tags, add them to the output without searching them.
@@ -768,14 +803,14 @@ class LineSearchResult {
         // diacritic is immediately followed by a tag.
         continue;
       }
-      if (cur?.start === j) {
+      if (range?.start === j) {
         // A match starts at the given position. Yield an opening tag.
         match = true;
         builder.push(LineSearchResult.opening);
-      } else if (cur?.end === j) {
+      } else if (range?.end === j) {
         // A match ends at the given position. Yield a closing tag.
         builder.push(LineSearchResult.closing);
-        cur = this.matches[++idx];
+        range = ranges[++idx];
         match = false;
       }
       if (i < this.html.length) {
