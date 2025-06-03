@@ -857,6 +857,7 @@ export class Xooxle {
   hrefFmt;
   bucketSorter;
   admit;
+  prepublish;
   /**
    * The list of searchable candidates in this Xooxle index.
    */
@@ -879,18 +880,22 @@ export class Xooxle {
    * If absent, no HREF will be generated.
    * @param bucketSorter - An optional bucket sorter.
    * @param admit - An optional search result filter.
+   * @param prepublish - An optional lambda to apply to HTML rows before
+   * insertion in the table.
    */
   constructor(
     index,
     form,
     hrefFmt,
     bucketSorter = new BucketSorter(),
-    admit = () => true
+    admit = () => true,
+    prepublish
   ) {
     this.form = form;
     this.hrefFmt = hrefFmt;
     this.bucketSorter = bucketSorter;
     this.admit = admit;
+    this.prepublish = prepublish;
     this.candidates = index.data.map(
       (record) => new Candidate(record, index.metadata.fields)
     );
@@ -1010,6 +1015,7 @@ export class Xooxle {
       // Instead, we create a number of rows, and then yield to the browser to
       // allow display update.
       const row = result.row(this.hrefFmt, results.length);
+      this.prepublish?.(row);
       bucketSentinels[
         this.bucketSorter.validBucket(result, row)
       ].insertAdjacentElement('beforebegin', row);

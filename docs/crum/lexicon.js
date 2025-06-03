@@ -5,6 +5,7 @@ import * as browser from '../browser.js';
 import * as highlight from './highlight.js';
 import * as d from './dialect.js';
 import * as help from './help.js';
+import * as crum from './crum.js';
 const SEARCH_BOX_ID = 'searchBox';
 const FULL_WORD_CHECKBOX_ID = 'fullWordCheckbox';
 const REGEX_CHECKBOX_ID = 'regexCheckbox';
@@ -128,6 +129,7 @@ const XOOXLES = [
     collapsibleID: 'crum-collapsible',
     hrefFmt: CRUM_HREF_FMT,
     bucketSorter: new CrumDialectSorter(),
+    prepublish: crum.addGreekLookups,
   },
   {
     indexURL: 'kellia.json',
@@ -174,7 +176,14 @@ async function main() {
         resultsTableID: xoox.tableID,
         collapsibleID: xoox.collapsibleID,
       });
-      new xooxle.Xooxle(json, form, xoox.hrefFmt, xoox.bucketSorter);
+      new xooxle.Xooxle(
+        json,
+        form,
+        xoox.hrefFmt,
+        xoox.bucketSorter,
+        () => true,
+        xoox.prepublish
+      );
     })
   );
   // Initialize collapsible elements.
