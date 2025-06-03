@@ -1035,13 +1035,16 @@ export class Xooxle {
    * If absent, no HREF will be generated.
    * @param bucketSorter - An optional bucket sorter.
    * @param admit - An optional search result filter.
+   * @param prepublish - An optional lambda to apply to HTML rows before
+   * insertion in the table.
    */
   constructor(
     index: _Index,
     private readonly form: Form,
     private readonly hrefFmt?: string,
     private readonly bucketSorter: BucketSorter = new BucketSorter(),
-    private readonly admit: (res: SearchResult) => boolean = () => true
+    private readonly admit: (res: SearchResult) => boolean = () => true,
+    private readonly prepublish?: (row: HTMLTableRowElement) => void
   ) {
     this.candidates = index.data.map(
       (record) => new Candidate(record, index.metadata.fields)
@@ -1177,6 +1180,7 @@ export class Xooxle {
       // Instead, we create a number of rows, and then yield to the browser to
       // allow display update.
       const row = result.row(this.hrefFmt, results.length);
+      this.prepublish?.(row);
 
       bucketSentinels[
         this.bucketSorter.validBucket(result, row)
