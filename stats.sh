@@ -14,8 +14,6 @@ source .env
 readonly COMMIT_MESSAGE='[Stats] Run `make stats`.'
 
 readonly KNOWN_EXTENSIONS="Makefile css env gitignore yamlfmt yamllint pylintrc checkmake json mjs js keylayout md plist py sh strings txt yaml toml ts html npmrc"
-readonly KNOWN_EXTENSIONS_ARCHIVE="gitignore java js md proto py sh sql vba"
-readonly KNOWN_ARCHIVE_SUBDIRS="bible dictionary ipa-transliteration unicode-converters"
 
 COMMIT=false
 while [ $# -gt 0 ]; do
@@ -82,42 +80,6 @@ extensions () {
   done | sort | uniq
 }
 
-foc_archive() {
-  local -r DIR="./archive"
-  local -r EXEC="${1}"
-
-  find "${DIR}" \
-    -type f \
-    -not -name "*.txt" \
-    -not -name "*.DOC" \
-    -not -name "*.docx" \
-    -not -name "*.xml" \
-    -not -name "*.html" \
-    -not -name "*.TTF" \
-    -not -name "*.doc" \
-    -not -name "*.tsv" \
-    -not -name "*.jar" \
-    -not -name "*.db" \
-    -not -name "*.csv" \
-    -not -name "*.msql" \
-    -not -name "*.pdf" \
-    -not -name "*.tab" \
-    -not -name "*.json" \
-    -not -name ".DS_Store" \
-    -not -path "./archive/com.xpproductions.copticLiterature/*" \
-    -not -path "./archive/copticbible.apk/*" \
-    -not -path "./archive/moheb.de/*" \
-    -not -path "./archive/copticagpeya.apk/*" \
-    -not -path "./archive/kindlegen/*" \
-    -not -path "./archive/marcion-1.8.3-src/*" \
-    -not -path "./archive/fonts/*" \
-    "${@:2}" -exec "${EXEC}" {} \;
-}
-
-loc_archive () {
-  foc_archive cat | wc --lines
-}
-
 EXTENSIONS="$(extensions .)"
 DIFF=$(comm -23 <(echo "${EXTENSIONS}") <(echo "${KNOWN_EXTENSIONS}" | tr ' ' '\n' | sort) | tr '\n' ' ')
 if [ -n "${DIFF}" ]; then
@@ -128,32 +90,6 @@ if [ -n "${DIFF}" ]; then
   echo -e "from the stat.${RESET}"
   exit 1
 fi
-
-EXTENSIONS_ARCHIVE=$(foc_archive basename | while read -r BASENAME; do echo "${BASENAME##*.}"; done | sort | uniq)
-DIFF=$(comm -23 <(echo "${EXTENSIONS_ARCHIVE}") <(echo "${KNOWN_EXTENSIONS_ARCHIVE}" | tr ' ' '\n') | tr '\n' ' ')
-if [ -n "${DIFF}" ]; then
-  echo -e "${PURPLE}Unknown extensions in the archive:"
-  echo -e "${RED}  ${DIFF}"
-  echo -e "${PURPLE}Lines of code statistics may become inaccurate. Add them to"
-  echo -e "list of known archive extension if they represent code, otherwise"
-  echo -e "exclude them from the stat.${RESET}"
-  exit 1
-fi
-
-ARCHIVE_SUBDIRS=$(foc_archive echo | grep -oE '\./archive/[^/]+/' | sort | uniq | while read -r LINE; do basename "${LINE}"; done)
-DIFF=$(comm -23 <(echo "${ARCHIVE_SUBDIRS}") <(echo "${KNOWN_ARCHIVE_SUBDIRS}" | tr ' ' '\n') | tr '\n' ' ')
-if [ -n "${DIFF}" ]; then
-  echo -e "${PURPLE}Unknown subdirectories in the archive:"
-  echo -e "${RED}  ${DIFF}"
-  echo -e "${PURPLE}Lines of code statistics may become inaccurate. Add them to"
-  echo -e "list of known archive subdirectories if they represent code,"
-  echo -e "otherwise exclude them from the stat.${RESET}"
-  exit 1
-fi
-
-diff_lines() {
-  diff --suppress-common-lines --speed-large-files --side-by-side "${1}" "${2}"
-}
 
 # NOTE: This function, for some reason, is unable to find the last (rightmost)
 # in the sheet, so we added a dummy EMPTY column to make it work for the last
@@ -183,9 +119,9 @@ tsv_nonempty() {
     | grep '^[[:space:]]*$' --invert --extended-regexp
 }
 
-LOC_ARCHIVE=$(loc_archive)
+LOC_ARCHIVE=0
 
-LOC=$(( $(loc .) + LOC_ARCHIVE))
+LOC=$(loc .)
 
 LOC_CRUM=$(loc "dictionary/marcion_sourceforge_net")
 LOC_MACARIUS=$(loc "dictionary/stmacariusmonastery_org")
@@ -201,8 +137,7 @@ LOC_SITE=$(( $(loc "docs") ))
 LOC_SHARED=$(loc_shared)
 
 readonly TOTAL="$((
-  LOC_ARCHIVE
-  + LOC_CRUM
+  LOC_CRUM
   + LOC_MACARIUS
   + LOC_COPTICSITE
   + LOC_KELLIA
@@ -221,7 +156,7 @@ if [ "${DELTA}" != "0" ]; then
   exit 1
 fi
 
-echo -e "${BLUE}Number of lines of code (including archive): ${GREEN}${LOC}${BLUE}."\
+echo -e "${BLUE}Number of lines of code: ${GREEN}${LOC}${BLUE}."\
 "\n  ${BLUE}Crum: ${GREEN}${LOC_CRUM}"\
 "\n  ${BLUE}Macarius: ${GREEN}${LOC_MACARIUS}"\
 "\n  ${BLUE}copticsite: ${GREEN}${LOC_COPTICSITE}"\
@@ -234,7 +169,7 @@ echo -e "${BLUE}Number of lines of code (including archive): ${GREEN}${LOC}${BLU
 "\n  ${BLUE}Morphology: ${GREEN}${LOC_MORPHOLOGY}"\
 "\n  ${BLUE}Site: ${GREEN}${LOC_SITE}"\
 "\n  ${BLUE}Shared: ${GREEN}${LOC_SHARED}"\
-"\n  ${BLUE}Archive: ${GREEN}${LOC_ARCHIVE}"\
+"\n  ${YELLOW}Archive (broken): ${GREEN}${LOC_ARCHIVE}"\
 "\n  ${BLUE}TOTAL: ${GREEN}${TOTAL}${RESET}"
 
 LOC_PYTHON=$(loc . -name "*.py")
@@ -268,13 +203,13 @@ readonly TOTAL_BY_LANG="$((
   + LOC_JSON
   + LOC_HTML))"
 
-DELTA=$(( LOC - TOTAL_BY_LANG - LOC_ARCHIVE ))
+DELTA=$(( LOC - TOTAL_BY_LANG ))
 if [ "${DELTA}" != "0" ]; then
   echo -e "${PURPLE}The total doesn't equal the sum of the parts, delta is ${RED}${DELTA}${PURPLE}.${RESET}"
   exit 1
 fi
 
-echo -e "${BLUE}Live lines of code: ${GREEN}$((LOC - LOC_ARCHIVE))"\
+echo -e "${BLUE}Number of lines of code: ${GREEN}${LOC}"\
 "\n  ${BLUE}Python: ${GREEN}${LOC_PYTHON}"\
 "\n  ${BLUE}Make: ${GREEN}${LOC_MAKE}"\
 "\n  ${BLUE}CSS: ${GREEN}${LOC_CSS}"\
