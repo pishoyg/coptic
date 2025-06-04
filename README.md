@@ -190,6 +190,7 @@ square brackets.
 
 1. Crum: Crum's dictionary
 1. KELLIA: KELLIA's dictionary
+1. Andreas: Andreas's dictionary
 1. copticsite: copticsite's dictionary
 1. Dawoud: Dawoud's dictionary
 1. Bible: The Coptic Bible

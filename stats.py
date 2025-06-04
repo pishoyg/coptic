@@ -116,7 +116,7 @@ COLUMNS: dict[str | None, list[str]] = {
         "loc_bible",
         "loc_copticsite",
         "loc_crum",
-        "loc_macarius",
+        "loc_andreas",
         "loc_flashcards",
         "loc_grammar",
         "loc_kellia",
