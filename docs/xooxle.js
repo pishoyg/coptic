@@ -645,26 +645,64 @@ class Line {
   }
 }
 /**
- * LineSearchResult represents the search result of one line.
  */
-class LineSearchResult {
-  line;
+class HighlightBuilder {
+  builder = [];
   /**
    * A match opening tag.
    *
    * Each of the (potentially several) pieces of text making up a match will be
-   * surrounded by an opening and a closing tag. Those match tags are guaranteed
-   * not to contain any HTML tags within them. Just text!
+   * surrounded by an opening and a closing tag.
    */
   static opening = `<span class="${'match' /* CLS.MATCH */}">`;
   /**
    * A match closing tag.
    *
    * Each of the (potentially several) pieces of text making up a match will be
-   * surrounded by an opening and a closing tag. Those match tags are guaranteed
-   * not to contain any HTML tags within them. Just text!
+   * surrounded by an opening and a closing tag.
    */
   static closing = '</span>';
+  /**
+   * Start a match.
+   */
+  openMatch() {
+    // We can not attempt to simplify the output (as we do when closing a match)
+    // by checking if the last element in the builder is a closing tag that we
+    // can simply pop instead of inserting a new opening tag, because we can not
+    // be sure that such a closing tag indeed closes our match opening tag or is
+    // intended to close some other tag.
+    this.builder.push(HighlightBuilder.opening);
+  }
+  /**
+   * End a match.
+   */
+  closeMatch() {
+    if (this.builder[this.builder.length - 1] === HighlightBuilder.opening) {
+      // Close the match by popping the opening tag. This is an empty match.
+      this.builder.pop();
+    } else {
+      // Close a match by pushing a closing tag.
+      this.builder.push(HighlightBuilder.closing);
+    }
+  }
+  /**
+   * @param s
+   */
+  push(s) {
+    this.builder.push(s);
+  }
+  /**
+   * @returns
+   */
+  build() {
+    return this.builder.join('');
+  }
+}
+/**
+ * LineSearchResult represents the search result of one line.
+ */
+class LineSearchResult {
+  line;
   matches;
   /**
    *
@@ -734,7 +772,7 @@ class LineSearchResult {
       // No highlighting needed.
       return this.html;
     }
-    const builder = [];
+    const builder = new HighlightBuilder();
     // i represents the index in the HTML.
     // j tracks the index in the text.
     // idx tracks the match index.
@@ -751,17 +789,13 @@ class LineSearchResult {
         // If we encounter tags during a match, we need to close the
         // highlighting tag and reopen it, otherwise it might overlap, and
         // <span> elements might get arbitrarily closed and opened.
-        if (match) builder.push(LineSearchResult.closing);
+        if (match) builder.closeMatch();
         while (this.html[i] === '<') {
           const k = this.html.indexOf('>', i) + 1;
           builder.push(this.html.slice(i, k));
           i = k;
         }
-        // If we've closed the match tag, open a new one.
-        // NOTE: This could result in an opening match tag immediately followed
-        // by a closing tag, in the case where the match ends at the current
-        // index.
-        if (match) builder.push(LineSearchResult.opening);
+        if (match) builder.openMatch();
       }
       if (orthographer.isDiacritic(this.html[i])) {
         // This is a diacritic. It was ignored during search, and is not part of
@@ -775,7 +809,7 @@ class LineSearchResult {
       if (cur?.start === j) {
         // A match starts at the given position. Yield an opening tag.
         match = true;
-        builder.push(LineSearchResult.opening);
+        builder.openMatch();
       } else if (cur?.end === j) {
         // A match ends at the given position. Yield a closing tag.
         //
@@ -786,7 +820,7 @@ class LineSearchResult {
         // as if we concatenated the two matches.)
         cur = this.matches[++idx];
         if (cur?.start !== j) {
-          builder.push(LineSearchResult.closing);
+          builder.closeMatch();
           match = false;
         }
       }
@@ -796,7 +830,7 @@ class LineSearchResult {
       j += 1;
       i += 1;
     }
-    return builder.join('');
+    return builder.build();
   }
   /**
    * @returns The boundary type of this match.
@@ -1019,13 +1053,6 @@ export class Xooxle {
       // Instead, we create a number of rows, and then yield to the browser to
       // allow display update.
       const row = result.row(this.hrefFmt, results.length);
-      // Because our highlighter can produce empty match tags, we delete them
-      // below.
-      Array.from(row.querySelectorAll(`.${'match' /* CLS.MATCH */}`))
-        .filter((el) => !el.hasChildNodes())
-        .forEach((el) => {
-          el.remove();
-        });
       this.prepublish?.(row);
       bucketSentinels[
         this.bucketSorter.validBucket(result, row)
