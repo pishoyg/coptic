@@ -1,5 +1,6 @@
 import * as css from '../css.js';
 import * as iam from '../iam.js';
+import * as where from '../where.js';
 import * as help from '../help.js';
 import * as highlight from './highlight.js';
 
@@ -22,6 +23,8 @@ type DIALECT_SINGLE_CHAR =
   | 'U';
 type DIALECT_DOUBLE_CHAR = 'Sa' | 'Sf' | 'Fb' | 'NH';
 export type DIALECT = DIALECT_SINGLE_CHAR | DIALECT_DOUBLE_CHAR;
+
+const DEFAULT_IN_EGYPT: DIALECT[] = ['B'];
 
 /**
  * For dialects that have a single-character code, we use the code as a keyboard
@@ -196,7 +199,7 @@ export const ANY_DIALECT_QUERY: string = css.classQuery(Object.keys(DIALECTS));
  * is currently unused.
  */
 export function active(): DIALECT[] | undefined {
-  const d = localStorage.getItem(D);
+  const d: string | null = localStorage.getItem(D);
   // NOTE: ''.split(',') returns [''], which is not what we want!
   return d ? (d.split(',') as DIALECT[]) : undefined;
 }
@@ -205,11 +208,7 @@ export function active(): DIALECT[] | undefined {
  * @param dialects
  */
 export function setActive(dialects: DIALECT[]) {
-  if (dialects.length) {
-    localStorage.setItem(D, Array.from(dialects).join(','));
-  } else {
-    localStorage.removeItem(D);
-  }
+  localStorage.setItem(D, Array.from(dialects).join(','));
 }
 
 /**
@@ -226,3 +225,29 @@ export function toggle(dialect: DIALECT) {
 
   setActive(Array.from(a));
 }
+
+/**
+ * Set the list of active dialects to a given default, if:
+ * - Dialects are not already configured.
+ * - The user logs in from Egypt, or from an unknown location.
+ * NOTE: The local storage variable distinguishes between the two following
+ * values:
+ * - null: Dialect highlighting have never been configured.
+ * - the empty string: Dialect highlighting was previously configured, and is
+ *   now disabled (so all dialects are on).
+ * We only use the default value in the former case.
+ */
+async function setDefaultInEgypt(): Promise<void> {
+  if (localStorage.getItem(D) !== null) {
+    // Dialects have already been configured.
+    return;
+  }
+  await where.country().then((country: where.Country | undefined) => {
+    if (country && country !== where.Country.EGYPT) {
+      return;
+    }
+    setActive(DEFAULT_IN_EGYPT);
+  });
+}
+
+await setDefaultInEgypt();
