@@ -761,13 +761,31 @@ class Line {
 }
 
 /**
+ * HTMLBuilder generates HTML for search results, highlighting matches as
+ * dictated.
+ *
+ * Matches are not allowed to be nested, but are allowed to be contiguous.
+ * Nested matches will produce unpredictable behaviour!
+ * The builder will attempt simplify the output by removing superfluous opening
+ * and closing tags whenever possible.
  */
-class HighlightBuilder {
+class HTMLBuilder {
   private readonly builder: string[] = [];
 
   /**
+   * open stores whether a match is currently open.
+   */
+  private open = false;
+
+  /**
+   * @returns Whether the match is currently closed.
+   */
+  private get closed(): boolean {
+    return !this.open;
+  }
+
+  /**
    * A match opening tag.
-   *
    * Each of the (potentially several) pieces of text making up a match will be
    * surrounded by an opening and a closing tag.
    */
@@ -775,49 +793,85 @@ class HighlightBuilder {
 
   /**
    * A match closing tag.
-   *
    * Each of the (potentially several) pieces of text making up a match will be
    * surrounded by an opening and a closing tag.
    */
   private static readonly closing = '</span>';
 
   /**
+   * The closing tag is not distinguishable enough, so we use this placeholder
+   * first, substituting it for the actual closing tag later on.
+   */
+  private static readonly closingPlaceholder = 'CLOSING_TAG';
+
+  /**
    * Start a match.
    */
   openMatch(): void {
-    // We can not attempt to simplify the output (as we do when closing a match)
-    // by checking if the last element in the builder is a closing tag that we
-    // can simply pop instead of inserting a new opening tag, because we can not
-    // be sure that such a closing tag indeed closes our match opening tag or is
-    // intended to close some other tag.
-    this.builder.push(HighlightBuilder.opening);
+    if (this.open) {
+      console.error('Warning: The match is already open!');
+    }
+    this.open = true;
+    if (
+      this.builder[this.builder.length - 1] === HTMLBuilder.closingPlaceholder
+    ) {
+      // Open a match by un-closing the previous match.
+      this.builder.pop();
+    } else {
+      // Open a match by pushing an opening tag.
+      this.builder.push(HTMLBuilder.opening);
+    }
   }
 
   /**
    * End a match.
    */
   closeMatch(): void {
-    if (this.builder[this.builder.length - 1] === HighlightBuilder.opening) {
+    if (this.closed) {
+      console.error('Warning: The match is already closed!');
+    }
+    this.open = false;
+    if (this.builder[this.builder.length - 1] === HTMLBuilder.opening) {
       // Close the match by popping the opening tag. This is an empty match.
       this.builder.pop();
     } else {
       // Close a match by pushing a closing tag.
-      this.builder.push(HighlightBuilder.closing);
+      this.builder.push(HTMLBuilder.closingPlaceholder);
     }
   }
 
   /**
-   * @param s
+   * @param t
    */
-  push(s: string): void {
-    this.builder.push(s);
+  pushText(t: string | undefined): void {
+    if (!t) {
+      return;
+    }
+    this.builder.push(t);
+  }
+
+  /**
+   * @param t
+   */
+  pushTag(t: string): void {
+    if (this.open) {
+      this.closeMatch();
+      this.builder.push(t);
+      this.openMatch();
+    } else {
+      this.builder.push(t);
+    }
   }
 
   /**
    * @returns
    */
   build(): string {
-    return this.builder.join('');
+    return this.builder
+      .map((s) =>
+        s === HTMLBuilder.closingPlaceholder ? HTMLBuilder.closing : s
+      )
+      .join('');
   }
 }
 
@@ -875,7 +929,7 @@ class LineSearchResult {
      * Notice that browsers don't treat them uniformly, and we try to obtain a
      * match that will work on most browsers.
      * */
-    const match = this.matches.values().next().value;
+    const match = this.matches[0];
     if (!match) {
       // This line doesn't have a match.
       return undefined;
@@ -907,68 +961,52 @@ class LineSearchResult {
       return this.html;
     }
 
-    const builder: HighlightBuilder = new HighlightBuilder();
+    const builder: HTMLBuilder = new HTMLBuilder();
 
-    // i represents the index in the HTML.
-    // j tracks the index in the text.
-    // idx tracks the match index.
-    // cur tracks the current match.
-    // match tracks whether we currently have a match.
-    let i = 0,
-      j = 0,
-      idx = 0,
-      cur: Match | undefined = this.matches[idx],
-      match = false;
+    let htmlPos = 0,
+      textPos = 0,
+      matchIdx = 0,
+      match: Match | undefined = this.matches[matchIdx];
 
-    while (i <= this.html.length) {
-      // If we encounter tags, add them to the output without searching them.
-      if (this.html[i] === '<') {
-        // If we encounter tags during a match, we need to close the
-        // highlighting tag and reopen it, otherwise it might overlap, and
-        // <span> elements might get arbitrarily closed and opened.
-        if (match) builder.closeMatch();
-        while (this.html[i] === '<') {
-          const k = this.html.indexOf('>', i) + 1;
-          builder.push(this.html.slice(i, k));
-          i = k;
-        }
-        if (match) builder.openMatch();
-      }
-      if (orthographer.isDiacritic(this.html[i])) {
-        // This is a diacritic. It was ignored during search, and is not part of
-        // the match. Yield without accounting for it in the text.
-        builder.push(this.html[i++]!);
-        // Do NOT remove this `continue` statement, even if you replace the `if`
-        // with a `while`, as this would break highlighting in cases where a
-        // diacritic is immediately followed by a tag.
+    const nextMatch = (): void => {
+      match = this.matches[++matchIdx];
+    };
+
+    while (htmlPos <= this.html.length) {
+      if (this.html[htmlPos] === '<') {
+        // If we encounter a tag, add them to the output without accounting for
+        // it in the search.
+        const end = this.html.indexOf('>', htmlPos) + 1;
+        builder.pushTag(this.html.slice(htmlPos, end));
+        htmlPos = end;
         continue;
       }
 
-      if (cur?.start === j) {
-        // A match starts at the given position. Yield an opening tag.
-        match = true;
+      if (orthographer.isDiacritic(this.html[htmlPos])) {
+        // This is a diacritic. It was ignored during search, and is not part of
+        // the match. Yield without accounting for it in the text.
+        builder.pushText(this.html[htmlPos++]);
+        continue;
+      }
+
+      // This index in the HTML corresponds to a text character.
+      if (textPos === match?.start) {
+        // A match starts at the given position. Open the match.
         builder.openMatch();
-      } else if (cur?.end === j) {
-        // A match ends at the given position. Yield a closing tag.
-        //
-        // Notice that we only actually close the match tag if we don't have
-        // another match starting immediately after. (We could also handle this
-        // case by inserting a closing tag, immediately followed by an opening
-        // tag, but that's unnecessary. We simply refrain from closing the tag,
-        // as if we concatenated the two matches.)
-        cur = this.matches[++idx];
-        if (cur?.start !== j) {
-          builder.closeMatch();
-          match = false;
+      } else if (textPos === match?.end) {
+        // A match ends at the given position. Close the match.
+        builder.closeMatch();
+        nextMatch();
+        // Check if the new match starts at the same position.
+        // We need to do this during this iteration, as this is the only time we
+        // process this text position.
+        // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+        if (textPos === match?.start) {
+          builder.openMatch();
         }
       }
-
-      if (i < this.html.length) {
-        builder.push(this.html[i]!);
-      }
-
-      j += 1;
-      i += 1;
+      ++textPos;
+      builder.pushText(this.html[htmlPos++]);
     }
 
     return builder.build();
