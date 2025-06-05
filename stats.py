@@ -43,6 +43,7 @@ COLUMNS: dict[str | None, list[str]] = {
         # Noisy code statistics.
         "foc",
         "loc",
+        "loc_inc_archive",
         "loc_archive",
         # Noise Crum statistics.
         "crum_sisters_sum",
