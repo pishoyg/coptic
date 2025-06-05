@@ -2,12 +2,17 @@
 """Plot statistics."""
 
 import argparse
+import time
+import typing
 
+import colorama
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
 from utils import file, log
+
+_ONE_DAY: int = 24 * 60 * 60
 
 argparser: argparse.ArgumentParser = argparse.ArgumentParser(
     description="Process Stats.",
@@ -27,6 +32,15 @@ _ = argparser.add_argument(
     action="store_true",
     default=False,
     help="Plot stats.",
+)
+
+_ = argparser.add_argument(
+    "-r",
+    "--reminder",
+    action="store_true",
+    default=False,
+    help="Print a reminder if it has been a while since the stats were last"
+    " collected.",
 )
 
 TSV_FILE = "data/stats.tsv"
@@ -219,12 +233,38 @@ def reformat():
     file.to_tsv(file.read_tsv(TSV_FILE), TSV_FILE)
 
 
+def check_reminder():
+    df = file.read_tsv(TSV_FILE)
+    if time.time() - int(df["timestamp"].iloc[-1]) >= _ONE_DAY:
+        print(
+            colorama.Fore.RED
+            + "Reminder: Run "
+            + colorama.Fore.YELLOW
+            + "make stats"
+            + colorama.Style.RESET_ALL,
+        )
+
+
+class Action:
+    def __init__(self):
+        self.acted: bool = False
+
+    def act(self, f: typing.Callable[[], None]):
+        f()
+        self.acted = True
+
+
 def main():
     args = argparser.parse_args()
+    act = Action()
     if args.format:
-        reformat()
+        act.act(reformat)
     if args.plot:
-        plot()
+        act.act(plot)
+    if args.reminder:
+        act.act(check_reminder)
+    if not act.acted:
+        log.fatal("Script invoked without any parameters!")
 
 
 if __name__ == "__main__":

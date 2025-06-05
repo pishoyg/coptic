@@ -379,7 +379,7 @@ repos:
       # Daily Statistics
       - id: stats
         name: stats
-        entry: pre-commit/stats.sh
+        entry: ./stats.py --reminder
         language: system
         pass_filenames: false
         verbose: true
