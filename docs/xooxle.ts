@@ -761,15 +761,15 @@ class Line {
 }
 
 /**
- * LineSearchResult represents the search result of one line.
  */
-class LineSearchResult {
+class HighlightBuilder {
+  private readonly builder: string[] = [];
+
   /**
    * A match opening tag.
    *
    * Each of the (potentially several) pieces of text making up a match will be
-   * surrounded by an opening and a closing tag. Those match tags are guaranteed
-   * not to contain any HTML tags within them. Just text!
+   * surrounded by an opening and a closing tag.
    */
   private static readonly opening = `<span class="${CLS.MATCH}">`;
 
@@ -777,11 +777,54 @@ class LineSearchResult {
    * A match closing tag.
    *
    * Each of the (potentially several) pieces of text making up a match will be
-   * surrounded by an opening and a closing tag. Those match tags are guaranteed
-   * not to contain any HTML tags within them. Just text!
+   * surrounded by an opening and a closing tag.
    */
   private static readonly closing = '</span>';
 
+  /**
+   * Start a match.
+   */
+  openMatch(): void {
+    // We can not attempt to simplify the output (as we do when closing a match)
+    // by checking if the last element in the builder is a closing tag that we
+    // can simply pop instead of inserting a new opening tag, because we can not
+    // be sure that such a closing tag indeed closes our match opening tag or is
+    // intended to close some other tag.
+    this.builder.push(HighlightBuilder.opening);
+  }
+
+  /**
+   * End a match.
+   */
+  closeMatch(): void {
+    if (this.builder[this.builder.length - 1] === HighlightBuilder.opening) {
+      // Close the match by popping the opening tag. This is an empty match.
+      this.builder.pop();
+    } else {
+      // Close a match by pushing a closing tag.
+      this.builder.push(HighlightBuilder.closing);
+    }
+  }
+
+  /**
+   * @param s
+   */
+  push(s: string): void {
+    this.builder.push(s);
+  }
+
+  /**
+   * @returns
+   */
+  build(): string {
+    return this.builder.join('');
+  }
+}
+
+/**
+ * LineSearchResult represents the search result of one line.
+ */
+class LineSearchResult {
   private readonly matches: Match[];
 
   /**
@@ -864,7 +907,8 @@ class LineSearchResult {
       return this.html;
     }
 
-    const builder: string[] = [];
+    const builder: HighlightBuilder = new HighlightBuilder();
+
     // i represents the index in the HTML.
     // j tracks the index in the text.
     // idx tracks the match index.
@@ -882,13 +926,13 @@ class LineSearchResult {
         // If we encounter tags during a match, we need to close the
         // highlighting tag and reopen it, otherwise it might overlap, and
         // <span> elements might get arbitrarily closed and opened.
-        if (match) builder.push(LineSearchResult.closing);
+        if (match) builder.closeMatch();
         while (this.html[i] === '<') {
           const k = this.html.indexOf('>', i) + 1;
           builder.push(this.html.slice(i, k));
           i = k;
         }
-        if (match) builder.push(LineSearchResult.opening);
+        if (match) builder.openMatch();
       }
       if (orthographer.isDiacritic(this.html[i])) {
         // This is a diacritic. It was ignored during search, and is not part of
@@ -903,7 +947,7 @@ class LineSearchResult {
       if (cur?.start === j) {
         // A match starts at the given position. Yield an opening tag.
         match = true;
-        builder.push(LineSearchResult.opening);
+        builder.openMatch();
       } else if (cur?.end === j) {
         // A match ends at the given position. Yield a closing tag.
         //
@@ -914,7 +958,7 @@ class LineSearchResult {
         // as if we concatenated the two matches.)
         cur = this.matches[++idx];
         if (cur?.start !== j) {
-          builder.push(LineSearchResult.closing);
+          builder.closeMatch();
           match = false;
         }
       }
@@ -927,7 +971,7 @@ class LineSearchResult {
       i += 1;
     }
 
-    return builder.join('');
+    return builder.build();
   }
 
   /**
