@@ -757,6 +757,10 @@ class LineSearchResult {
           builder.push(this.html.slice(i, k));
           i = k;
         }
+        // If we've closed the match tag, open a new one.
+        // NOTE: This could result in an opening match tag immediately followed
+        // by a closing tag, in the case where the match ends at the current
+        // index.
         if (match) builder.push(LineSearchResult.opening);
       }
       if (orthographer.isDiacritic(this.html[i])) {
@@ -1015,6 +1019,13 @@ export class Xooxle {
       // Instead, we create a number of rows, and then yield to the browser to
       // allow display update.
       const row = result.row(this.hrefFmt, results.length);
+      // Because our highlighter can produce empty match tags, we delete them
+      // below.
+      Array.from(row.querySelectorAll(`.${'match' /* CLS.MATCH */}`))
+        .filter((el) => !el.hasChildNodes())
+        .forEach((el) => {
+          el.remove();
+        });
       this.prepublish?.(row);
       bucketSentinels[
         this.bucketSorter.validBucket(result, row)
