@@ -5,6 +5,7 @@ import * as help from '../help.js';
 // dialects. This is the source of truth for dialect highlighting. Updating
 // dialect highlighting should happen by updating this local storage variable.
 const D = 'd';
+const SEPARATOR = ',';
 const DEFAULT = ['B'];
 /**
  */
@@ -146,52 +147,71 @@ export const DIALECTS = {
 };
 export const ANY_DIALECT_QUERY = css.classQuery(Object.keys(DIALECTS));
 /**
- * @returns The list of active dialects, undefined if dialect highlighting
- * is currently unused.
+ * @returns The list of active dialects.
+ * If dialect highlighting has never been configured, return undefined.
+ * If previously selected dialects have been deselected, return the empty array.
+ *
+ * NOTE: The local storage variable distinguishes between the two following
+ * values:
+ * - null: Dialect highlighting has never been configured. This results in
+ *   a response of `undefined`.
+ * - the empty string: Dialect highlighting was previously configured, and now
+ *   all dialects are disabled. This results in a response of an empty array.
+ * We only use the default value in the former case.
  */
 export function active() {
   const d = localStorage.getItem(D);
-  // NOTE: ''.split(',') returns [''], which is not what we want!
-  return d ? d.split(',') : undefined;
+  if (d === null) {
+    // Dialect highlighting has never been configured.
+    return undefined;
+  }
+  if (d === '') {
+    // Dialect highlighting was previously configured, and now all dialects are
+    // disabled.
+    // NOTE: We return the empty array directly, instead of attempting to split
+    // the empty string, because ''.split(SEPARATOR) = [''].
+    return [];
+  }
+  return d.split(SEPARATOR);
 }
 /**
- * @param dialects
+ * @param dialects - Set current list of active dialects.
  */
 export function setActive(dialects) {
-  localStorage.setItem(D, Array.from(dialects).join(','));
+  localStorage.setItem(D, dialects.join(SEPARATOR));
 }
 /**
+ * Set the list of active dialects to [].
+ * NOTE: We intentionally use the empty list, instead of deleting the local
+ * storage variable, in order to distinguish between the cases when:
+ * 1. Dialect highlighting was previously used and then reset.
+ * 2. Dialect highlighting was never used.
  */
 export function reset() {
   setActive([]);
 }
 /**
- * @param dialect
+ * @param dialect - Dialect to toggle.
  */
 export function toggle(dialect) {
-  const a = new Set(active());
-  if (a.has(dialect)) {
-    a.delete(dialect);
+  const act = new Set(active());
+  if (act.has(dialect)) {
+    act.delete(dialect);
   } else {
-    a.add(dialect);
+    act.add(dialect);
   }
-  setActive(Array.from(a));
+  setActive(Array.from(act));
 }
 /**
  * Set the list of active dialects to a given default, if dialects are not
  * already configured.
- * NOTE: The local storage variable distinguishes between the two following
- * values:
- * - null: Dialect highlighting have never been configured.
- * - the empty string: Dialect highlighting was previously configured, and is
- *   now disabled (so all dialects are on).
- * We only use the default value in the former case.
  */
-function setDefault() {
+function setToDefaultIfUnset() {
   if (localStorage.getItem(D) !== null) {
     // Dialects have already been configured.
     return;
   }
   setActive(DEFAULT);
 }
-setDefault();
+// Use default in all pages where this package is imported.
+setToDefaultIfUnset();
