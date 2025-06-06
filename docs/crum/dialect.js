@@ -1,12 +1,11 @@
 import * as css from '../css.js';
 import * as iam from '../iam.js';
-import * as where from '../where.js';
 import * as help from '../help.js';
 // D is the name of the local-storage variable storing the list of active
 // dialects. This is the source of truth for dialect highlighting. Updating
 // dialect highlighting should happen by updating this local storage variable.
 const D = 'd';
-const DEFAULT_IN_EGYPT = ['B'];
+const DEFAULT = ['B'];
 /**
  */
 export class Dialect {
@@ -162,6 +161,11 @@ export function setActive(dialects) {
   localStorage.setItem(D, Array.from(dialects).join(','));
 }
 /**
+ */
+export function reset() {
+  setActive([]);
+}
+/**
  * @param dialect
  */
 export function toggle(dialect) {
@@ -174,9 +178,8 @@ export function toggle(dialect) {
   setActive(Array.from(a));
 }
 /**
- * Set the list of active dialects to a given default, if:
- * - Dialects are not already configured.
- * - The user logs in from Egypt, or from an unknown location.
+ * Set the list of active dialects to a given default, if dialects are not
+ * already configured.
  * NOTE: The local storage variable distinguishes between the two following
  * values:
  * - null: Dialect highlighting have never been configured.
@@ -184,16 +187,11 @@ export function toggle(dialect) {
  *   now disabled (so all dialects are on).
  * We only use the default value in the former case.
  */
-async function setDefaultInEgypt() {
+function setDefault() {
   if (localStorage.getItem(D) !== null) {
     // Dialects have already been configured.
     return;
   }
-  await where.country().then((country) => {
-    if (country && country !== where.Country.EGYPT) {
-      return;
-    }
-    setActive(DEFAULT_IN_EGYPT);
-  });
+  setActive(DEFAULT);
 }
-await setDefaultInEgypt();
+setDefault();

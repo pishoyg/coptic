@@ -231,9 +231,8 @@ export class Highlighter {
    * Reset display, and remove the URL fragment if present.
    */
   reset() {
-    // The local storage is the source of truth for all highlighting variables.
-    // Clearing it results restores a pristine display.
-    localStorage.clear();
+    dev.reset();
+    d.reset();
     this.update();
     // Remove the URL fragment.
     // NOTE: We only reload when we actually detect an anchor (hash) or text
