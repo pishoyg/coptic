@@ -195,7 +195,7 @@ export function handleDawoudPage(elem: HTMLElement) {
  */
 export function handleDrvKey(elem: HTMLElement) {
   elem.querySelectorAll<HTMLElement>(`.${cls.DRV_KEY}`).forEach((el) => {
-    el.classList.add(ccls.SMALL, ccls.LIGHT, ccls.ITALIC, ccls.HOVER_LINK);
+    el.classList.add(cls.SMALL, cls.LIGHT, cls.ITALIC, ccls.HOVER_LINK);
     html.makeSpanLinkToAnchor(el, `#drv${el.innerHTML}`);
   });
 }
@@ -334,7 +334,7 @@ export function addCopticLookups(elem: HTMLElement) {
 export function addGreekLookups(elem: HTMLElement) {
   html.linkifyText(elem, GREEK_RE, GREEK_LOOKUP_URL_PREFIX, [
     ccls.LINK,
-    ccls.LIGHT,
+    cls.LIGHT,
   ]);
 }
 
