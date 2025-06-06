@@ -9,15 +9,10 @@ import * as browser from '../browser.js';
 import * as d from './dialect.js';
 import * as paths from '../paths.js';
 import * as css from '../css.js';
+import * as dev from '../dev.js';
+import * as cls from './cls.js';
+import * as ccls from '../cls.js';
 const EMAIL_LINK = `mailto:${paths.EMAIL}`;
-var CLS;
-(function (CLS) {
-  CLS['VIEW'] = 'view';
-  CLS['SISTER_VIEW'] = 'sister-view';
-  CLS['DEV'] = 'dev,';
-  CLS['SISTER_KEY'] = 'sister-key';
-  CLS['DRV_KEY'] = 'drv-key';
-})(CLS || (CLS = {}));
 /**
  *
  * @param highlighter
@@ -49,7 +44,7 @@ export function makeHelpPanel(highlighter) {
     ],
     R: [
       new help.Shortcut(
-        `<strong>R</strong>eports / Contact <a class="contact" href="${EMAIL_LINK}">${paths.EMAIL}</a>`,
+        `<strong>R</strong>eports / Contact <a class="${ccls.CONTACT}" href="${EMAIL_LINK}">${paths.EMAIL}</a>`,
         ['lexicon', 'note', 'index', 'index_index'],
         () => {
           browser.open(EMAIL_LINK);
@@ -99,7 +94,10 @@ export function makeHelpPanel(highlighter) {
         ['lexicon', 'note', 'index'],
         () => {
           browser
-            .findNextElement(css.classQuery(CLS.VIEW, CLS.SISTER_VIEW), 'cur')
+            .findNextElement(
+              css.classQuery('view' /* xooxle.CLS.VIEW */, cls.SISTER_VIEW),
+              'cur'
+            )
             ?.querySelector('a')
             ?.click();
         }
@@ -107,12 +105,12 @@ export function makeHelpPanel(highlighter) {
     ],
     z: [
       new help.Shortcut(
-        'Yank the key of the word currently being viewed <span class="dev-mode-note">(dev mode)</span>',
+        `Yank the key of the word currently being viewed <span class="${dev.CLS.DEV_MODE_NOTE}">(dev mode)</span>`,
         ['lexicon', 'note', 'index'],
         () => {
           browser.yank(
             browser.findNextElement(
-              css.classQuery(CLS.VIEW, CLS.DEV, CLS.SISTER_KEY, CLS.DRV_KEY),
+              `.${'view' /* xooxle.CLS.VIEW */} ${dev.CLS.DEV}, .${cls.SISTER_KEY}, .${cls.DRV_KEY}`,
               'cur'
             ).innerHTML
           );
@@ -153,7 +151,7 @@ export function makeHelpPanel(highlighter) {
         ['lexicon', 'note', 'index'],
         () => {
           browser.scrollToNextElement(
-            css.classQuery(CLS.VIEW, CLS.SISTER_VIEW),
+            css.classQuery('view' /* xooxle.CLS.VIEW */, cls.SISTER_VIEW),
             'next'
           );
         }
@@ -165,7 +163,7 @@ export function makeHelpPanel(highlighter) {
         ['lexicon', 'note', 'index'],
         () => {
           browser.scrollToNextElement(
-            css.classQuery(CLS.VIEW, CLS.SISTER_VIEW),
+            css.classQuery('view' /* xooxle.CLS.VIEW */, cls.SISTER_VIEW),
             'prev'
           );
         }

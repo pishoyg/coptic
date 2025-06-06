@@ -3,15 +3,11 @@
 import * as logger from './logger.js';
 import * as coptic from './coptic.js';
 import * as browser from './browser.js';
+import * as cls from './cls.js';
 // WANT_COLUMNS is the list of the first columns we expect to find in the TSV.
 const WANT_COLUMNS = ['page', 'start', 'end'];
 // ZOOM_FACTOR controls how fast zooming happens in response to scroll events.
 const ZOOM_FACTOR = 0.05;
-var CLS;
-(function (CLS) {
-  // DISABLED conceals an element from the display.
-  CLS['DISABLED'] = 'disabled';
-})(CLS || (CLS = {}));
 /**
  * We often use the notation "${NUM}${COL}" to refer to a given column in a
  * page. For example, "1a" refers to the left column of page 1.
@@ -331,14 +327,14 @@ export class Scroller {
     this.form.image.src = `${stem.toString()}.${ext}`;
     this.form.image.alt = page.toString();
     if (page === this.start) {
-      this.form.prevButton.classList.add(CLS.DISABLED);
+      this.form.prevButton.classList.add(cls.DISABLED);
     } else {
-      this.form.prevButton.classList.remove(CLS.DISABLED);
+      this.form.prevButton.classList.remove(cls.DISABLED);
     }
     if (page === this.end) {
-      this.form.nextButton.classList.add(CLS.DISABLED);
+      this.form.nextButton.classList.add(cls.DISABLED);
     } else {
-      this.form.nextButton.classList.remove(CLS.DISABLED);
+      this.form.nextButton.classList.remove(cls.DISABLED);
     }
   }
   /**

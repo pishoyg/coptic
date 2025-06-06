@@ -5,6 +5,7 @@
  */
 var CLS;
 (function (CLS) {
+  // LEXICON is a class of the <body> tag of the Lexicon page.
   CLS['LEXICON'] = 'lexicon';
 })(CLS || (CLS = {}));
 /**

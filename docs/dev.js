@@ -13,6 +13,19 @@ const DEV = 'dev';
  */
 const ON = 'ON';
 const OFF = 'OFF';
+export var CLS;
+(function (CLS) {
+  // DEV is the class of developer-mode elements, which should only show in
+  // developer mode.
+  CLS['DEV'] = 'dev';
+  // NO_DEV is the class of elements that are hidden in developer mode.
+  CLS['NO_DEV'] = 'no-dev';
+  // DEV_MODE_NOTE is the class of a note about developer mode in the help
+  // panel.
+  CLS['DEV_MODE_NOTE'] = 'dev-mode-note';
+  // DEVELOPER is the key of elements that toggle developer mode when clicked.
+  CLS['DEVELOPER'] = 'developer';
+})(CLS || (CLS = {}));
 /**
  * @returns Whether developer mode is active.
  */

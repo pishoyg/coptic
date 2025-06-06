@@ -1,5 +1,7 @@
 var CLS;
 (function (CLS) {
+  // COLLAPSE is the class of elements that, when clicked, trigger a collapse
+  // effect in their next element sibling.
   CLS['COLLAPSE'] = 'collapse';
 })(CLS || (CLS = {}));
 /**
