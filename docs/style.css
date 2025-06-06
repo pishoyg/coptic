@@ -375,6 +375,12 @@ body:not(.lexicon) .header td:not(:first-child) {
 
 /********** Xooxle **********/
 
+#highlight-dialects,
+#full-word-checkbox-label,
+#regex-checkbox-label {
+  font-style: italic;
+}
+
 /* stylelint-disable selector-id-pattern */
 
 #searchBox {
@@ -491,7 +497,7 @@ button:active {
   }
 
   .checkboxes label {
-    margin-right: 10px;
+    margin-right: 5px;
   }
 
   .lexicon-form-separator {

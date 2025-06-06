@@ -12,7 +12,8 @@ const DEV = 'dev';
  * ON holds the value that the local storage variable should be set to when
  * developer mode is on.
  */
-const ON = 'true';
+const ON = 'ON';
+const OFF = 'OFF';
 
 /**
  * @returns Whether developer mode is active.
@@ -25,11 +26,13 @@ export function get(): boolean {
  * @param value - New value for developer mode.
  */
 export function set(value: boolean) {
-  if (value) {
-    localStorage.setItem(DEV, ON);
-  } else {
-    localStorage.removeItem(DEV);
-  }
+  localStorage.setItem(DEV, value ? ON : OFF);
+}
+
+/**
+ */
+export function reset(): void {
+  set(false);
 }
 
 /**
