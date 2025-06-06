@@ -216,10 +216,6 @@ flashcards: FORCE
 		--copticsite \
 		--anki
 
-bashandy: FORCE
-	# Generate the Bashandy version of the Lexicon page.
-	./flashcards/bashandy.sh
-
 anki_publish: REQUIRE_DRIVE_DIR FORCE
 	# Publish the Anki package to Drive.
 	cp \

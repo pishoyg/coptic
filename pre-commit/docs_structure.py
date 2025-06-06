@@ -81,7 +81,7 @@ PATTERNS: list[Pattern] = [
     # Manually-written code files:
     Pattern(["index.html"]),
     Pattern(["style.css"]),
-    Pattern(["crum/index.html", "crum/bashandy.html"]),
+    Pattern(["crum/index.html"]),
     Pattern(["dawoud/index.html", "crum/crum/index.html"]),
     Pattern([".nojekyll"]),
     Pattern(["**.ts"]),
