@@ -235,21 +235,6 @@ export class Form {
     readonly resetButton: HTMLElement,
     readonly searchBox: HTMLInputElement
   ) {}
-
-  /**
-   * If you use a standard set of element IDs to mark your HTML elements,
-   * default() can construct the Form object for you from the HTML document.
-   * @returns
-   */
-  static default(): Form {
-    return new Form(
-      document.getElementById('scan') as HTMLImageElement,
-      document.getElementById('next')!,
-      document.getElementById('prev')!,
-      document.getElementById('reset')!,
-      document.getElementById('searchBox') as HTMLInputElement
-    );
-  }
 }
 
 /**

@@ -24,7 +24,15 @@ function ext(page: number): string {
  *
  */
 function main() {
-  const form: scan.Form = scan.Form.default();
+  const form: scan.Form = new scan.Form(
+    document.getElementById('scan') as HTMLImageElement,
+    document.getElementById('next')!,
+    document.getElementById('prev')!,
+    document.getElementById('reset')!,
+    // TODO: (#415) The page doesn't currently have a search box! This is OK at
+    // the moment because the field isn't used.
+    document.getElementById('search-box') as HTMLInputElement
+  );
   new scan.Scroller(MIN_PAGE_NUM, MAX_PAGE_NUM, OFFSET, ext, form, LANDING);
   new scan.ZoomerDragger(form);
 }

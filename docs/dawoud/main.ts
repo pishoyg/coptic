@@ -64,7 +64,13 @@ export class DawoudWord extends coptic.Word implements scan.Word {
  * Build the index, add event listeners, ...
  */
 async function browserMain(): Promise<void> {
-  const form: scan.Form = scan.Form.default();
+  const form: scan.Form = new scan.Form(
+    document.getElementById('scan') as HTMLImageElement,
+    document.getElementById('next')!,
+    document.getElementById('prev')!,
+    document.getElementById('reset')!,
+    document.getElementById('search-box') as HTMLInputElement
+  );
   const scroller = new scan.Scroller(
     MIN_PAGE_NUM,
     MAX_PAGE_NUM,
