@@ -1,9 +1,15 @@
 #!/usr/bin/env python3
-"""Keep a close eye on the structure of `docs/`.
+"""Enforce a known structure of `docs/`.
 
-In case the structure changes in in an unexpected way, this script will act as
-a reminder for the developers to update `.env` accordingly, particularly the
-`findex` / `findexx` helpers.
+This script has two purposes:
+    - Help developers track the structure of the `docs/` subdirectory.
+    - Maintain the integrity of the `findexx` env helper.
+The former is achieved by maintaining the structure defined in the list of
+patterns below. Developers can refer to this list for the contents of the
+subdirectory, which is otherwise hard to analyze using `ls` or `tree`.
+
+The latter is achieved by having the script remind users to update the helper
+whenever the content of the subdirectory changes.
 """
 
 # TODO: (#0) fnmatch is not strict enough! For example, it was found that
@@ -78,6 +84,8 @@ class Pattern:
 
 
 PATTERNS: list[Pattern] = [
+    # NOTE: If you change this list, see if the `findexx` helper needs updating
+    # as well.
     # Manually-written code files:
     Pattern(["index.html"]),
     Pattern(["**.css"]),

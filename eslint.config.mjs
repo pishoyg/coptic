@@ -96,8 +96,9 @@ export default tseslint.config(
       },
       globals: {
         ...globals.browser,
+        // TODO: (#457) Delete the Node.js globals once it's no longer used for
+        // testing.
         ...globals.node,
-        XOOXLE: true,
         ANKI: true,
         NOTE: true,
         INDEX: true,

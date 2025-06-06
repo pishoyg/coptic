@@ -176,6 +176,7 @@ export class Index {
     const error: (...message: unknown[]) => void = strict
       ? logger.fatal
       : logger.error;
+
     for (const [i, p] of this.pages.entries()) {
       if (!p.start.leq(p.end)) {
         error(
