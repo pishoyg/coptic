@@ -14,6 +14,9 @@ export const RESET = 'reset';
 /** HEADER is the class of the header element. */
 export const HEADER = 'header';
 
+/** FOOTER is the class of the footer element. */
+export const FOOTER = 'footer';
+
 // Styling classes:
 
 /** DISABLED hides elements. */
