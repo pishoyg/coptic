@@ -118,7 +118,7 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
         () => {
           browser.yank(
             browser.findNextElement(
-              `.${xooxle.CLS.VIEW} ${dev.CLS.DEV}, .${cls.SISTER_KEY}, .${cls.DRV_KEY}`,
+              `.${xooxle.CLS.VIEW} .${dev.CLS.DEV}, .${cls.SISTER_KEY}, .${cls.DRV_KEY}`,
               'cur'
             )!.innerHTML
           );
@@ -161,7 +161,7 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
         ['lexicon', 'note', 'index'],
         () => {
           browser.scrollToNextElement(
-            css.classQuery(xooxle.CLS.VIEW, cls.SISTER_VIEW),
+            css.classQuery(xooxle.CLS.VIEW, cls.SISTER_VIEW, cls.DRV_KEY),
             'next'
           );
         }
@@ -173,7 +173,7 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
         ['lexicon', 'note', 'index'],
         () => {
           browser.scrollToNextElement(
-            css.classQuery(xooxle.CLS.VIEW, cls.SISTER_VIEW),
+            css.classQuery(xooxle.CLS.VIEW, cls.SISTER_VIEW, cls.DRV_KEY),
             'prev'
           );
         }

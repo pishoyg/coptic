@@ -26,6 +26,12 @@ export type DIALECT = DIALECT_SINGLE_CHAR | DIALECT_DOUBLE_CHAR;
 
 const DEFAULT: DIALECT[] = ['B'];
 
+enum CLS {
+  DIALECT_CODE = 'dialect-code',
+  DIALECT_NAME = 'dialect-name',
+  DIALECT_DICTIONARIES = 'dialect-dictionaries',
+}
+
 /**
  * For dialects that have a single-character code, we use the code as a keyboard
  * shortcut key. For the double-character dialect codes, we use an abbreviation,
@@ -87,9 +93,9 @@ export class Dialect {
     const description = `
     <table>
     <tr>
-      <td class="dialect-code">(${highlightedCode})</td>
-      <td class="dialect-name">${highlightedName}</td>
-      ${iam.amI('lexicon') ? `<td class="dialect-dictionaries">(${this.dictionaries.join(', ')})</td>` : ''}
+      <td class="${CLS.DIALECT_CODE}">(${highlightedCode})</td>
+      <td class="${CLS.DIALECT_NAME}">${highlightedName}</td>
+      ${iam.amI('lexicon') ? `<td class="${CLS.DIALECT_DICTIONARIES}">(${this.dictionaries.join(', ')})</td>` : ''}
     </tr>
     </table>`;
 
