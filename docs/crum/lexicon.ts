@@ -62,7 +62,7 @@ class CrumDialectSorter extends xooxle.BucketSorter {
     _res: xooxle.SearchResult,
     row: HTMLTableRowElement
   ): DialectMatch {
-    const active = d.active();
+    const active: d.DIALECT[] | undefined = d.active();
     if (!active?.length) {
       // There is no dialect highlighting. All results fall in the first bucket.
       return 0;
@@ -115,7 +115,7 @@ class kelliaDialectSorter extends xooxle.BucketSorter {
    * @returns Bucket number.
    */
   override bucket(_res: xooxle.SearchResult, row: HTMLTableRowElement): number {
-    const active = d.active();
+    const active: d.DIALECT[] | undefined = d.active();
     if (!active?.length) {
       // There is no dialect highlighting. All results fall in the first bucket.
       return 0;

@@ -74,9 +74,9 @@ export class Highlighter {
     // 3. Keyboard shortcuts
     // NOTE: Make sure that checkboxes are updated whenever dialect highlighting
     // changes, regardless of the source of the change.
-    const active = d.active();
+    const active: d.DIALECT[] | undefined = d.active();
 
-    if (!active) {
+    if (!active?.length) {
       // No dialect highlighting whatsoever.
       // All dialects are visible.
       this.updateSheetOrElements(
