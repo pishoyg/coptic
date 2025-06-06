@@ -567,17 +567,6 @@ button:active {
   display: none;
 }
 
-.scan-frame {
-  text-align: center;
-  z-index: 5;
-}
-
-.scan {
-  width: 900px;
-  height: auto;
-  cursor: grab;
-}
-
 /*************** Bible ***************/
 .index-book-chapter-list a {
   margin-left: 5px;
