@@ -319,19 +319,24 @@ organize utilities into purpose-specific packages based on functionality.
    file:
    1. What the classes used are.
    1. What listeners are registered.
+   1. What elements are retrieved from the document.
 
-   Therefore, whenever possible, try to group
-      all classes in a `CLS` enum. And classes should group all event listener
-   registrations to one `addEventListeners` function (or a use function name
+   Therefore, whenever possible, try to abide by the following:
+   1. Group all classes in a `CLS` enum.
+   2. Group event listener registrations to one `addEventListeners` function (or a use function name
    that starts with this prefix, so it's easy to find in search).
-   Also prefer the following syntax:
-   ```ts
-   element.addEventListeners('click', () => {});
-   ```
-   over this:
-   ```ts
-   element.onclick = () => {};
-   ```
+   3. Also prefer the following syntax:
+      ```ts
+      element.addEventListeners('click', () => {});
+      ```
+      over this:
+      ```ts
+      element.onclick = () => {};
+      ```
+   4. Use `querySelector` or `querySelectorAll` instead of such methods as
+      `getElementsByClassName` or `getElementsByTagName`. The only exception is
+      when retrieving an element by ID, in which case we enforce
+   `getElementById`.
 
 ### Languages
 

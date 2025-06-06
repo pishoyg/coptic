@@ -56,6 +56,39 @@ export default tseslint.config(
       'jsdoc/check-tag-names': 'error',
       'jsdoc/require-param': 'error',
       'jsdoc/require-returns': 'error',
+      'no-restricted-syntax': [
+        // Enforce uniform use of `querySelector` or `querySelectorAll` to make
+        // the code easier to search.
+        'error',
+        {
+          selector:
+            "CallExpression[callee.property.name='getElementsByTagName']",
+          message:
+            'Avoid getElementsByTagName; use querySelector or querySelectorAll instead.',
+        },
+        {
+          selector: "CallExpression[callee.property.name='getElementsByName']",
+          message:
+            'Avoid getElementsByName; use querySelector or querySelectorAll instead.',
+        },
+        {
+          selector:
+            "CallExpression[callee.property.name='getElementsByClassName']",
+          message:
+            'Avoid getElementsByClassName; use querySelectorAll instead.',
+        },
+        {
+          selector: 'MemberExpression[property.name=/^on\\w+/]',
+          message:
+            'Avoid using DOM event handler properties like `onclick`. Use `addEventListener` instead.',
+        },
+        {
+          selector:
+            "CallExpression[callee.property.name='querySelector'] Literal[value=/^#/]",
+          message:
+            'Use getElementById instead of querySelector with an ID selector.',
+        },
+      ],
     },
     languageOptions: {
       parserOptions: {
