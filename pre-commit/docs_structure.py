@@ -80,7 +80,7 @@ class Pattern:
 PATTERNS: list[Pattern] = [
     # Manually-written code files:
     Pattern(["index.html"]),
-    Pattern(["style.css"]),
+    Pattern(["**.css"]),
     Pattern(["crum/index.html"]),
     Pattern(["dawoud/index.html", "crum/crum/index.html"]),
     Pattern([".nojekyll"]),

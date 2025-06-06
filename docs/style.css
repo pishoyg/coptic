@@ -32,10 +32,6 @@ h1 {
   font-size: 32px;
 }
 
-body.home h1 {
-  font-size: 48px;
-}
-
 figcaption {
   color: #7f8c8d;
   font-size: 0.9em;
@@ -48,10 +44,6 @@ a figcaption {
   color: #3498db;
   cursor: pointer;
   text-decoration: none;
-}
-
-.index-book-chapter-list a {
-  margin-left: 5px;
 }
 
 .hover-link {
@@ -77,12 +69,6 @@ figure {
   display: inline-block;
   margin: 0;
   text-align: center;
-}
-
-.centerer {
-  text-align: center;
-  display: flex;
-  place-content: center center;
 }
 
 .logos {
@@ -118,30 +104,9 @@ input:not(.android .card) {
   font-family: Antinoou, sans-serif;
 }
 
-a.download,
-.download-list li a {
-  background-color: #3498db;
-  border-radius: 4px;
-  color: #fff;
-  display: inline-block;
-  margin: 2px 0;
-  padding: 2px;
-}
-
 table:not(.info) {
   border-collapse: collapse;
   width: 100%;
-}
-
-.inline-list {
-  padding: 20px;
-}
-
-.inline-list li {
-  display: block;
-  float: left;
-  margin: 0 20px;
-  padding: 0;
 }
 
 .small-screen-only {
@@ -149,16 +114,6 @@ table:not(.info) {
 }
 
 @media (width <= 500px) {
-  figure.flashcards-screenshots img {
-    height: auto;
-    width: 47%;
-  }
-
-  figure:not(.flashcards-screenshots) img:not(.logo) {
-    height: auto;
-    width: 100%;
-  }
-
   hr {
     margin: 10px 0;
   }
@@ -226,10 +181,6 @@ table:not(.info) {
 
 .left {
   float: left;
-}
-
-.center {
-  text-align: center;
 }
 
 .right {
@@ -463,13 +414,6 @@ button:active {
 
 /* stylelint-enable no-descending-specificity */
 
-.use-chrome {
-  display: none;
-  font-size: small;
-  color: #7f8c8d;
-  font-style: italic;
-}
-
 .error {
   color: darkred;
   font-style: italic;
@@ -632,6 +576,11 @@ button:active {
   width: 900px;
   height: auto;
   cursor: grab;
+}
+
+/*************** Bible ***************/
+.index-book-chapter-list a {
+  margin-left: 5px;
 }
 
 /*************** Fonts ***************/

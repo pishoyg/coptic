@@ -1,0 +1,46 @@
+h1 {
+  font-size: 48px;
+}
+
+.center {
+  text-align: center;
+}
+
+.centerer {
+  text-align: center;
+  display: flex;
+  place-content: center center;
+}
+
+a.download,
+.download-list li a {
+  background-color: #3498db;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  margin: 2px 0;
+  padding: 2px;
+}
+
+.inline-list {
+  padding: 20px;
+}
+
+.inline-list li {
+  display: block;
+  float: left;
+  margin: 0 20px;
+  padding: 0;
+}
+
+@media (width <= 500px) {
+  figure.flashcards-screenshots img {
+    height: auto;
+    width: 47%;
+  }
+
+  figure:not(.flashcards-screenshots) img:not(.logo) {
+    height: auto;
+    width: 100%;
+  }
+}
