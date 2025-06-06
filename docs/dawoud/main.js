@@ -58,7 +58,13 @@ export class DawoudWord extends coptic.Word {
  * Build the index, add event listeners, ...
  */
 async function browserMain() {
-  const form = scan.Form.default();
+  const form = new scan.Form(
+    document.getElementById('scan'),
+    document.getElementById('next'),
+    document.getElementById('prev'),
+    document.getElementById('reset'),
+    document.getElementById('search-box')
+  );
   const scroller = new scan.Scroller(
     MIN_PAGE_NUM,
     MAX_PAGE_NUM,

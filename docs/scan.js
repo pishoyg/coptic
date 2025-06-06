@@ -192,20 +192,6 @@ export class Form {
     this.resetButton = resetButton;
     this.searchBox = searchBox;
   }
-  /**
-   * If you use a standard set of element IDs to mark your HTML elements,
-   * default() can construct the Form object for you from the HTML document.
-   * @returns
-   */
-  static default() {
-    return new Form(
-      document.getElementById('scan'),
-      document.getElementById('next'),
-      document.getElementById('prev'),
-      document.getElementById('reset'),
-      document.getElementById('searchBox')
-    );
-  }
 }
 /**
  * Scroller scrolls through the pages of a book.
