@@ -1296,11 +1296,11 @@ export class Xooxle {
     // bucket sorting, we couldn't know for sure where each result is going to
     // end up.
     let i = 0;
-    [...this.form.resultsTBody.getElementsByClassName(CLS.COUNTER)].forEach(
-      (counter) => {
+    this.form.resultsTBody
+      .querySelectorAll(`.${CLS.COUNTER}`)
+      .forEach((counter: Element) => {
         counter.innerHTML = `${(++i).toString()} / ${results.length.toString()}`;
-      }
-    );
+      });
 
     // Expand the results table to accommodate the last batch of results.
     this.form.expand();

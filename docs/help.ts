@@ -343,7 +343,7 @@ export class Help {
       document.getElementById('help') ??
       ((): HTMLElement => {
         const footer: HTMLElement =
-          document.getElementsByTagName('footer')[0] ??
+          document.querySelector('footer') ??
           (() => {
             const footer = document.createElement('footer');
             footer.id = 'footer';

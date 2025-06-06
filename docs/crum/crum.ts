@@ -74,7 +74,7 @@ export function handleCategories(elem: HTMLElement) {
  */
 export function handleRootType(elem: HTMLElement) {
   elem.querySelectorAll<HTMLElement>('.root-type').forEach((el) => {
-    const type = el.getElementsByTagName('b')[0]?.innerHTML;
+    const type: string | undefined = el.querySelector('b')?.innerHTML;
     if (!type) {
       console.error('Unable to infer the root type for element!', el);
       return;
@@ -218,11 +218,11 @@ export function handleSisterKey(elem: HTMLElement) {
  */
 export function handleSisterView(elem: HTMLElement) {
   elem
-    .querySelectorAll<HTMLElement>('.sisters-table, .index-table')
-    .forEach((table) => {
+    .querySelectorAll('.sisters-table, .index-table')
+    .forEach((table: Element) => {
       let counter = 1;
-      Array.from(table.getElementsByTagName('tr')).forEach((el) => {
-        const td = el.querySelector('.sister-view');
+      table.querySelectorAll('tr').forEach((el: HTMLTableRowElement) => {
+        const td: Element | null = el.querySelector('.sister-view');
         if (!td) {
           console.error(
             'A row in the sisters table does not have a "sister-view" element!'
