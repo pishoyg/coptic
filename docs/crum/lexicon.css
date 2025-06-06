@@ -1,0 +1,43 @@
+#highlight-dialects,
+#full-word-checkbox-label,
+#regex-checkbox-label {
+  font-style: italic;
+}
+
+.search-box {
+  width: 50%;
+}
+
+.search-box input {
+  width: 100%;
+}
+
+.results#crum .type {
+  opacity: 0.3;
+}
+
+@media (width <= 500px) {
+  .search-box {
+    width: 45%;
+  }
+
+  .checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .checkboxes label {
+    margin-right: 5px;
+  }
+
+  .lexicon-form-separator {
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  #message {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

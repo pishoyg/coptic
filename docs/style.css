@@ -324,34 +324,6 @@ body:not(.lexicon) .header td:not(:first-child) {
   float: left;
 }
 
-/********** Xooxle **********/
-
-#highlight-dialects,
-#full-word-checkbox-label,
-#regex-checkbox-label {
-  font-style: italic;
-}
-
-/* stylelint-disable selector-id-pattern */
-
-#searchBox {
-  width: 100%;
-}
-
-/* stylelint-enable selector-id-pattern */
-
-#xooxle thead * {
-  text-align: center;
-  font-weight: bold;
-  color: #2c3e50;
-  font-size: 120%;
-}
-
-#xooxle td {
-  padding-right: 5px;
-  padding-left: 5px;
-}
-
 button {
   border: none; /* Remove default border */
   padding: 5px;
@@ -364,61 +336,6 @@ button:active {
   transform: scale(0.95); /* Slightly shrink */
 }
 
-.search-box {
-  width: 50%;
-}
-
-.match {
-  background-color: #f0d4fc;
-}
-
-.match-separator {
-  color: gray;
-  margin: 3px 0;
-}
-
-.view-for-more {
-  float: right;
-  font-size: small;
-}
-
-/* Style download links */
-
-.results thead tr {
-  border-bottom: 1px solid black;
-}
-
-.results tbody tr:not(:last-child) {
-  border-bottom: 1px solid black;
-}
-
-.results#crum .type {
-  opacity: 0.3;
-}
-
-/* stylelint-disable no-descending-specificity */
-
-.results td {
-  vertical-align: top;
-}
-
-.results td:not(:first-child) {
-  border-left: 1px solid black;
-  padding-left: 5px;
-}
-
-.results .counter {
-  font-size: smaller;
-  opacity: 0.3;
-}
-
-/* stylelint-enable no-descending-specificity */
-
-.error {
-  color: darkred;
-  font-style: italic;
-}
-
 .sisters-table {
   margin-left: 20px;
 }
@@ -426,32 +343,6 @@ button:active {
 @media (width <= 500px) {
   .sisters-table {
     margin-left: 0;
-  }
-}
-
-@media (width <= 500px) {
-  .search-box {
-    width: 45%;
-  }
-
-  .checkboxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .checkboxes label {
-    margin-right: 5px;
-  }
-
-  .lexicon-form-separator {
-    margin-top: 5px;
-    margin-bottom: 0;
-  }
-
-  #message {
-    margin-top: 0;
-    margin-bottom: 0;
   }
 }
 

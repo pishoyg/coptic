@@ -1,0 +1,52 @@
+#xooxle thead * {
+  text-align: center;
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 120%;
+}
+
+.results td {
+  vertical-align: top;
+}
+
+.results td:not(:first-child) {
+  border-left: 1px solid black;
+  padding-left: 5px;
+}
+
+#xooxle td {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.match {
+  background-color: #f0d4fc;
+}
+
+.match-separator {
+  color: gray;
+  margin: 3px 0;
+}
+
+.view-for-more {
+  float: right;
+  font-size: small;
+}
+
+.results thead tr {
+  border-bottom: 1px solid black;
+}
+
+.results tbody tr:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+.results .counter {
+  font-size: smaller;
+  opacity: 0.3;
+}
+
+.error {
+  color: darkred;
+  font-style: italic;
+}
