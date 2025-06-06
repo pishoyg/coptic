@@ -7,6 +7,12 @@ import * as help from '../help.js';
 const D = 'd';
 const SEPARATOR = ',';
 const DEFAULT = ['B'];
+var CLS;
+(function (CLS) {
+  CLS['DIALECT_CODE'] = 'dialect-code';
+  CLS['DIALECT_NAME'] = 'dialect-name';
+  CLS['DIALECT_DICTIONARIES'] = 'dialect-dictionaries';
+})(CLS || (CLS = {}));
 /**
  */
 export class Dialect {
@@ -47,9 +53,9 @@ export class Dialect {
     const description = `
     <table>
     <tr>
-      <td class="dialect-code">(${highlightedCode})</td>
-      <td class="dialect-name">${highlightedName}</td>
-      ${iam.amI('lexicon') ? `<td class="dialect-dictionaries">(${this.dictionaries.join(', ')})</td>` : ''}
+      <td class="${CLS.DIALECT_CODE}">(${highlightedCode})</td>
+      <td class="${CLS.DIALECT_NAME}">${highlightedName}</td>
+      ${iam.amI('lexicon') ? `<td class="${CLS.DIALECT_DICTIONARIES}">(${this.dictionaries.join(', ')})</td>` : ''}
     </tr>
     </table>`;
     // Crum dialects are available on several Crum page identities.

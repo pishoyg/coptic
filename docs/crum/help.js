@@ -110,7 +110,7 @@ export function makeHelpPanel(highlighter) {
         () => {
           browser.yank(
             browser.findNextElement(
-              `.${'view' /* xooxle.CLS.VIEW */} ${dev.CLS.DEV}, .${cls.SISTER_KEY}, .${cls.DRV_KEY}`,
+              `.${'view' /* xooxle.CLS.VIEW */} .${dev.CLS.DEV}, .${cls.SISTER_KEY}, .${cls.DRV_KEY}`,
               'cur'
             ).innerHTML
           );
@@ -151,7 +151,11 @@ export function makeHelpPanel(highlighter) {
         ['lexicon', 'note', 'index'],
         () => {
           browser.scrollToNextElement(
-            css.classQuery('view' /* xooxle.CLS.VIEW */, cls.SISTER_VIEW),
+            css.classQuery(
+              'view' /* xooxle.CLS.VIEW */,
+              cls.SISTER_VIEW,
+              cls.DRV_KEY
+            ),
             'next'
           );
         }
@@ -163,7 +167,11 @@ export function makeHelpPanel(highlighter) {
         ['lexicon', 'note', 'index'],
         () => {
           browser.scrollToNextElement(
-            css.classQuery('view' /* xooxle.CLS.VIEW */, cls.SISTER_VIEW),
+            css.classQuery(
+              'view' /* xooxle.CLS.VIEW */,
+              cls.SISTER_VIEW,
+              cls.DRV_KEY
+            ),
             'prev'
           );
         }
