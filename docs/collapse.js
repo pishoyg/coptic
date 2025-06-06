@@ -37,7 +37,7 @@ export class Collapsible {
    * @param collapse - The element that should toggle the display of this
    * element when clicked.
    */
-  addListener(collapse) {
+  addEventListener(collapse) {
     collapse.addEventListener('click', this.toggle.bind(this));
   }
 }
@@ -54,10 +54,10 @@ export class Collapsible {
  *
  * @param toggleUponLoad - If true, toggle once after loading.
  */
-export function addListenersForSiblings(toggleUponLoad = false) {
+export function addEventListenersForSiblings(toggleUponLoad = false) {
   document.querySelectorAll('.collapse').forEach((collapse) => {
     const collapsible = new Collapsible(collapse.nextElementSibling);
-    collapsible.addListener(collapse);
+    collapsible.addEventListener(collapse);
     if (toggleUponLoad) {
       collapsible.toggle();
     }

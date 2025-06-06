@@ -540,7 +540,7 @@ export class Dictionary {
     this.index = index;
     this.scroller = scroller;
     this.form = form;
-    this.addListeners();
+    this.addEventListeners();
     // Focus on the search box, to the user can start searching right away.
     this.form.searchBox.focus();
   }
@@ -558,7 +558,7 @@ export class Dictionary {
   /**
    * Register event listeners.
    */
-  addListeners() {
+  addEventListeners() {
     // Input in the search box triggers a search.
     this.form.searchBox.addEventListener('input', this.search.bind(this));
     // The slash key focuses on the search box.

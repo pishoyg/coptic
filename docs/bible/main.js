@@ -1,10 +1,9 @@
 import * as collapse from '../collapse.js';
 import * as browser from '../browser.js';
 /**
- *
+ * Add Bible event listeners.
  */
-function main() {
-  collapse.addListenersForSiblings();
+function addEventListeners() {
   document.addEventListener('keydown', (event) => {
     switch (event.key) {
       case 'n':
@@ -18,5 +17,12 @@ function main() {
         break;
     }
   });
+}
+/**
+ *
+ */
+function main() {
+  collapse.addEventListenersForSiblings();
+  addEventListeners();
 }
 main();

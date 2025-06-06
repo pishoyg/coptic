@@ -98,9 +98,9 @@ export function linkifyText(
       );
       const link = document.createElement('span');
       link.classList.add(...classes);
-      link.onclick = () => {
+      link.addEventListener('click', () => {
         browser.open(url + query);
-      };
+      });
       link.textContent = query;
       fragment.appendChild(link);
       lastIndex = match.index + query.length;

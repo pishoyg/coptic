@@ -187,7 +187,7 @@ async function main() {
     })
   );
   // Initialize collapsible elements.
-  collapse.addListenersForSiblings(true);
+  collapse.addEventListenersForSiblings(true);
   help.makeHelpPanel(highlighter);
 }
 await main();
