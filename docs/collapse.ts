@@ -1,3 +1,6 @@
+enum CLS {
+  COLLAPSE = 'collapse',
+}
 /**
  * Collapsible represents an element that can collapse, becoming visible /
  * invisible as needed.
@@ -57,7 +60,7 @@ export class Collapsible {
  */
 export function addEventListenersForSiblings(toggleUponLoad = false) {
   document
-    .querySelectorAll<HTMLElement>('.collapse')
+    .querySelectorAll<HTMLElement>(`.${CLS.COLLAPSE}`)
     .forEach((collapse: HTMLElement): void => {
       const collapsible = new Collapsible(
         collapse.nextElementSibling as HTMLElement

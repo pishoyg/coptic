@@ -12,6 +12,10 @@ export type Where =
   | 'index' // A Crum index page.
   | 'index_index'; // A Crum index index page.
 
+enum CLS {
+  LEXICON = 'lexicon',
+}
+
 declare const NOTE: boolean;
 declare const ANKI: boolean;
 declare const INDEX: boolean;
@@ -24,7 +28,7 @@ export function where(): Where {
   if (typeof ANKI !== 'undefined') {
     return 'anki';
   }
-  if (document.body.classList.contains('lexicon')) {
+  if (document.body.classList.contains(CLS.LEXICON)) {
     return 'lexicon';
   }
   if (typeof NOTE !== 'undefined') {

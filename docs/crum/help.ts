@@ -10,8 +10,17 @@ import * as browser from '../browser.js';
 import * as highlight from './highlight.js';
 import * as d from './dialect.js';
 import * as paths from '../paths.js';
+import * as css from '../css.js';
 
 const EMAIL_LINK = `mailto:${paths.EMAIL}`;
+
+enum CLS {
+  VIEW = 'view',
+  SISTER_VIEW = 'sister-view',
+  DEV = 'dev,',
+  SISTER_KEY = 'sister-key',
+  DRV_KEY = 'drv-key',
+}
 
 /**
  *
@@ -97,7 +106,7 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
         ['lexicon', 'note', 'index'],
         () => {
           browser
-            .findNextElement('.view, .sister-view', 'cur')
+            .findNextElement(css.classQuery(CLS.VIEW, CLS.SISTER_VIEW), 'cur')
             ?.querySelector('a')
             ?.click();
         }
@@ -109,8 +118,10 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
         ['lexicon', 'note', 'index'],
         () => {
           browser.yank(
-            browser.findNextElement('.view .dev, .sister-key, .drv-key', 'cur')!
-              .innerHTML
+            browser.findNextElement(
+              css.classQuery(CLS.VIEW, CLS.DEV, CLS.SISTER_KEY, CLS.DRV_KEY),
+              'cur'
+            )!.innerHTML
           );
         }
       ),
@@ -150,7 +161,10 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
         'Next word in the list',
         ['lexicon', 'note', 'index'],
         () => {
-          browser.scrollToNextElement('.view, .sister-view', 'next');
+          browser.scrollToNextElement(
+            css.classQuery(CLS.VIEW, CLS.SISTER_VIEW),
+            'next'
+          );
         }
       ),
     ],
@@ -159,7 +173,10 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
         'Previous word in the list',
         ['lexicon', 'note', 'index'],
         () => {
-          browser.scrollToNextElement('.view, .sister-view', 'prev');
+          browser.scrollToNextElement(
+            css.classQuery(CLS.VIEW, CLS.SISTER_VIEW),
+            'prev'
+          );
         }
       ),
     ],

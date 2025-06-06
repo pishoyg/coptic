@@ -192,7 +192,9 @@ export const DIALECTS: Record<DIALECT, Dialect> = {
   ),
 } as const;
 
-export const ANY_DIALECT_QUERY: string = css.classQuery(Object.keys(DIALECTS));
+export const ANY_DIALECT_QUERY: string = css.classQuery(
+  ...Object.keys(DIALECTS)
+);
 
 /**
  * @returns The list of active dialects.

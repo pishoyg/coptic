@@ -7,6 +7,6 @@
  * @returns A query that matches all elements belonging to ANY of the given
  * classes.
  */
-export function classQuery(classes: string[]): string {
+export function classQuery(...classes: string[]): string {
   return classes.map((c) => `.${c}`).join(', ');
 }

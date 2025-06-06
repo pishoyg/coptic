@@ -7,13 +7,14 @@ import * as dev from '../dev.js';
 import * as d from './dialect.js';
 
 enum CLS {
-  reset = 'reset',
-  word = 'word',
-  spelling = 'spelling',
-  dev = 'dev',
-  nag_hammadi = 'nag-hammadi',
-  senses = 'senses',
-  no_dev = 'no-dev',
+  RESET = 'reset',
+  WORD = 'word',
+  SPELLING = 'spelling',
+  DEV = 'dev',
+  NAG_HAMMADI = 'nag-hammadi',
+  SENSES = 'senses',
+  NO_DEV = 'no-dev',
+  LINK = 'link',
 }
 
 /**
@@ -81,7 +82,7 @@ export class Highlighter {
       // All dialects are visible.
       this.updateSheetOrElements(
         this.dialectRuleIndex,
-        `.${CLS.word} *`,
+        `.${CLS.WORD} *`,
         '',
         (el) => {
           el.style.opacity = Highlighter.BRIGHT;
@@ -98,7 +99,7 @@ export class Highlighter {
     // Dim all children of `word` elements, with the exception of:
     // - Active dialects.
     // - Undialected spellings.
-    const query = `.${CLS.word} > :not(${css.classQuery(active)}, .${CLS.spelling}:not(${d.ANY_DIALECT_QUERY}))`;
+    const query = `.${CLS.WORD} > :not(${css.classQuery(...active)}, .${CLS.SPELLING}:not(${d.ANY_DIALECT_QUERY}))`;
     const style = `opacity: ${Highlighter.DIM};`;
     this.updateSheetOrElements(
       this.dialectRuleIndex,
@@ -107,7 +108,7 @@ export class Highlighter {
       (el) => {
         el.style.opacity = Highlighter.DIM;
       },
-      `.${CLS.word} *`,
+      `.${CLS.WORD} *`,
       (el) => {
         el.style.opacity = Highlighter.BRIGHT;
       }
@@ -130,7 +131,7 @@ export class Highlighter {
 
     this.updateSheetOrElements(
       this.devRuleIndex,
-      `.${CLS.dev}, .${CLS.nag_hammadi}, .${CLS.senses}`,
+      `.${CLS.DEV}, .${CLS.NAG_HAMMADI}, .${CLS.SENSES}`,
       `display: ${display};`,
       (el: HTMLElement) => {
         el.style.display = display;
@@ -138,7 +139,7 @@ export class Highlighter {
     );
     this.updateSheetOrElements(
       this.noDevRuleIndex,
-      `.${CLS.no_dev}`,
+      `.${CLS.NO_DEV}`,
       `display: ${noDisplay};`,
       (el: HTMLElement) => {
         el.style.display = noDisplay;
@@ -236,9 +237,9 @@ export class Highlighter {
 
     // A click on the reset element resets all display.
     document
-      .querySelectorAll<HTMLElement>(`.${CLS.reset}`)
+      .querySelectorAll<HTMLElement>(`.${CLS.RESET}`)
       .forEach((el: HTMLElement): void => {
-        el.classList.add('link');
+        el.classList.add(CLS.LINK);
         el.addEventListener('click', (event) => {
           this.reset();
           // On Xooxle, clicking the button would normally submit the form and
