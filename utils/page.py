@@ -9,7 +9,7 @@ _CHARSET_TAG = """
   <meta charset="utf-8">
 """
 
-# NOTE: As of now, the entire website uses a shared stylesheet.
+# TODO: (#407) Parameterize CSS Files in Generated HTML.
 _STYLE_TAG = """
   <link href="/style.css" rel="stylesheet" type="text/css">
 """
