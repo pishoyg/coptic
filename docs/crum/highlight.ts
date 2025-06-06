@@ -50,7 +50,7 @@ export class Highlighter {
     this.devRuleIndex = length + 1;
     this.noDevRuleIndex = length + 2;
 
-    this.addListeners();
+    this.addEventListeners();
 
     // Update display once upon loading.
     this.update();
@@ -213,7 +213,7 @@ export class Highlighter {
   /**
    * Register event listeners.
    */
-  private addListeners() {
+  private addEventListeners() {
     // A click on a checkbox triggers a dialect display update.
     this.dialectCheckboxes.forEach((checkbox) => {
       checkbox.addEventListener('click', () => {
@@ -239,13 +239,13 @@ export class Highlighter {
       .querySelectorAll<HTMLElement>(`.${CLS.reset}`)
       .forEach((el: HTMLElement): void => {
         el.classList.add('link');
-        el.onclick = (event) => {
+        el.addEventListener('click', (event) => {
           this.reset();
           // On Xooxle, clicking the button would normally submit the form and
           // reset everything (including the search box and the option
           // checkboxes). So prevent the event from propagating further.
           event.preventDefault();
-        };
+        });
       });
   }
 

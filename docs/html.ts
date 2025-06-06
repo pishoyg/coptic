@@ -116,9 +116,9 @@ export function linkifyText(
 
       const link = document.createElement('span');
       link.classList.add(...classes);
-      link.onclick = (): void => {
+      link.addEventListener('click', (): void => {
         browser.open(url + query);
-      };
+      });
       link.textContent = query;
       fragment.appendChild(link);
 

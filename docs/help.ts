@@ -331,9 +331,9 @@ export class Help {
     const closeButton = document.createElement('button');
     closeButton.className = 'close-btn';
     closeButton.innerHTML = '&times;'; // HTML entity for '×'.
-    closeButton.onclick = () => {
+    closeButton.addEventListener('click', () => {
       this.togglePanel();
-    };
+    });
     this.panel.appendChild(closeButton);
 
     document.body.appendChild(this.panel);
@@ -457,10 +457,10 @@ export class Help {
    */
   private addListeners() {
     // Clicking the help button toggles the panel display.
-    this.help.onclick = (event: MouseEvent) => {
+    this.help.addEventListener('click', (event: MouseEvent) => {
       this.togglePanel();
       event.stopPropagation();
-    };
+    });
 
     // A mouse click outside the panel closes it.
     document.addEventListener('click', (event: MouseEvent) => {

@@ -207,7 +207,7 @@ async function main(): Promise<void> {
   );
 
   // Initialize collapsible elements.
-  collapse.addListenersForSiblings(true);
+  collapse.addEventListenersForSiblings(true);
 
   help.makeHelpPanel(highlighter);
 }

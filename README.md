@@ -322,7 +322,16 @@ organize utilities into purpose-specific packages based on functionality.
 
    Therefore, whenever possible, try to group
       all classes in a `CLS` enum. And classes should group all event listener
-   registrations to one `addEventListeners` method.
+   registrations to one `addEventListeners` function (or a use function name
+   that starts with this prefix, so it's easy to find in search).
+   Also prefer the following syntax:
+   ```ts
+   element.addEventListeners('click', () => {});
+   ```
+   over this:
+   ```ts
+   element.onclick = () => {};
+   ```
 
 ### Languages
 

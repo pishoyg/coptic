@@ -622,7 +622,7 @@ export class Dictionary {
     private readonly scroller: Scroller,
     private readonly form: { searchBox: HTMLInputElement }
   ) {
-    this.addListeners();
+    this.addEventListeners();
     // Focus on the search box, to the user can start searching right away.
     this.form.searchBox.focus();
   }
@@ -642,7 +642,7 @@ export class Dictionary {
   /**
    * Register event listeners.
    */
-  private addListeners() {
+  private addEventListeners() {
     // Input in the search box triggers a search.
     this.form.searchBox.addEventListener('input', this.search.bind(this));
 

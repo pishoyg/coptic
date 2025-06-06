@@ -101,11 +101,11 @@ export function handleCrumPage(elem: HTMLElement) {
 export function handleCrumPageExternal(elem: HTMLElement) {
   elem.querySelectorAll<HTMLElement>('.crum-page-external').forEach((el) => {
     el.classList.add('link');
-    el.onclick = () => {
+    el.addEventListener('click', () => {
       browser.open(
         `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.innerHTML}`
       );
-    };
+    });
   });
 }
 
@@ -116,9 +116,9 @@ export function handleCrumPageExternal(elem: HTMLElement) {
 export function handleDawoudPageExternal(elem: HTMLElement) {
   elem.querySelectorAll<HTMLElement>('.dawoud-page-external').forEach((el) => {
     el.classList.add('link');
-    el.onclick = () => {
+    el.addEventListener('click', () => {
       browser.open(`${paths.DAWOUD}?page=${el.innerHTML}`);
-    };
+    });
   });
 }
 
@@ -130,9 +130,9 @@ export function handleDawoudPageImg(elem: HTMLElement) {
   elem.querySelectorAll<HTMLElement>('.dawoud-page-img').forEach((el) => {
     const img = el.children[0] as HTMLElement;
     img.classList.add('link');
-    img.onclick = () => {
+    img.addEventListener('click', () => {
       browser.open(`${paths.DAWOUD}?page=${img.getAttribute('alt')!}`);
-    };
+    });
   });
 }
 
@@ -144,11 +144,11 @@ export function handleCrumPageImg(elem: HTMLElement) {
   elem.querySelectorAll<HTMLElement>('.crum-page-img').forEach((el) => {
     const img = el.children[0] as HTMLElement;
     img.classList.add('link');
-    img.onclick = () => {
+    img.addEventListener('click', () => {
       browser.open(
         `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${img.getAttribute('alt')!}`
       );
-    };
+    });
   });
 }
 
@@ -162,9 +162,9 @@ export function handleExplanatory(elem: HTMLElement) {
     const alt = img.getAttribute('alt')!;
     if (!alt.startsWith('http')) return;
     img.classList.add('link');
-    img.onclick = () => {
+    img.addEventListener('click', () => {
       browser.open(alt);
-    };
+    });
   });
 }
 
@@ -248,9 +248,9 @@ export function handleDialect(
 ) {
   elem.querySelectorAll<HTMLElement>('.dialect').forEach((el) => {
     el.classList.add('hover-link');
-    el.onclick = highlighter.toggleDialect.bind(
-      highlighter,
-      el.innerHTML as d.DIALECT
+    el.addEventListener(
+      'click',
+      highlighter.toggleDialect.bind(highlighter, el.innerHTML as d.DIALECT)
     );
   });
 }
@@ -266,7 +266,7 @@ export function handleDeveloper(
 ) {
   elem.querySelectorAll<HTMLElement>('.developer').forEach((el) => {
     el.classList.add('link');
-    el.onclick = highlighter.toggleDev.bind(highlighter);
+    el.addEventListener('click', highlighter.toggleDev.bind(highlighter));
   });
 }
 

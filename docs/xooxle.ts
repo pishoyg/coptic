@@ -169,7 +169,13 @@ export class Form {
     // Populate the form once from the query parameters.
     this.populateFromParams();
 
-    // Add event listeners to update query parameters from the form fields.
+    this.addEventListeners();
+  }
+
+  /**
+   * Add event listeners to update query parameters from the form fields.
+   */
+  private addEventListeners(): void {
     this.searchBox.addEventListener('input', () => {
       this.populateParams(_Param.QUERY, this.searchBox.value);
     });
@@ -1131,7 +1137,19 @@ export class Xooxle {
     this.candidates = index.data.map(
       (record) => new Candidate(record, index.metadata.fields)
     );
+    this.addEventListeners();
 
+    // Handle the search query once upon loading, in case the form picked up a
+    // query from the URL parameters.
+    this.search(0);
+
+    // Focus on the form, so the user can search right away.
+    this.form.focus();
+  }
+
+  /**
+   */
+  private addEventListeners(): void {
     // Make the page responsive to user input.
     // We need debounce timeout for search box input, because users typically
     // type several letters consecutively.
@@ -1141,13 +1159,6 @@ export class Xooxle {
       this.search.bind(this, INPUT_DEBOUNCE_TIMEOUT)
     );
     this.form.addCheckboxClickListener(this.search.bind(this, 0));
-
-    // Handle the search query once upon loading, in case the form picked up a
-    // query from the URL parameters.
-    this.search(0);
-
-    // Focus on the form, so the user can search right away.
-    this.form.focus();
   }
 
   /**
