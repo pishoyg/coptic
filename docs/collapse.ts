@@ -1,6 +1,9 @@
 enum CLS {
+  // COLLAPSE is the class of elements that, when clicked, trigger a collapse
+  // effect in their next element sibling.
   COLLAPSE = 'collapse',
 }
+
 /**
  * Collapsible represents an element that can collapse, becoming visible /
  * invisible as needed.

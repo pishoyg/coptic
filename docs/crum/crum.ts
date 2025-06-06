@@ -10,6 +10,9 @@ import * as paths from '../paths.js';
 import * as css from '../css.js';
 import * as highlight from './highlight.js';
 import * as d from './dialect.js';
+import * as cls from './cls.js';
+import * as dev from '../dev.js';
+import * as ccls from '../cls.js';
 
 const COPTIC_RE = /[Ⲁ-ⲱϢ-ϯⳈⳉ]+/giu;
 const GREEK_RE = /[Α-Ωα-ω]+/giu;
@@ -19,37 +22,6 @@ const GREEK_LOOKUP_URL_PREFIX = 'https://logeion.uchicago.edu/';
 
 const ABBREVIATIONS_PAGE =
   'https://coptic.wiki/crum/?section=list_of_abbreviations';
-
-enum CLS {
-  ABBREVIATIONS = 'abbreviations',
-  CATEGORIES = 'categories',
-  CRUM_PAGE = 'crum-page',
-  CRUM_PAGE_EXTERNAL = 'crum-page-external',
-  CRUM_PAGE_IMG = 'crum-page-img',
-  DAWOUD_PAGE = 'dawoud-page',
-  DAWOUD_PAGE_EXTERNAL = 'dawoud-page-external',
-  DAWOUD_PAGE_IMG = 'dawoud-page-img',
-  DEVELOPER = 'developer',
-  DIALECT = 'dialect',
-  DRV_KEY = 'drv-key',
-  EXPLANATORY = 'explanatory',
-  EXPLANATORY_KEY = 'explanatory-key',
-  HOVER_LINK = 'hover-link',
-  INDEX_TABLE = 'index-table',
-  ITALIC = 'italic',
-  LIGHT = 'light',
-  LINK = 'link',
-  MEANING = 'meaning',
-  NAVIGATE = 'navigate',
-  ROOT_TYPE = 'root-type',
-  SISTERS_TABLE = 'sisters-table',
-  SISTER_INDEX = 'sister-index',
-  SISTER_KEY = 'sister-key',
-  SISTER_VIEW = 'sister-view',
-  SMALL = 'small',
-  TITLE = 'title',
-  TYPE = 'type',
-}
 
 /**
  *
@@ -87,14 +59,14 @@ export function handleAll(
  * @param elem
  */
 export function handleCategories(elem: HTMLElement) {
-  elem.querySelectorAll<HTMLElement>(`.${CLS.CATEGORIES}`).forEach((el) => {
+  elem.querySelectorAll<HTMLElement>(`.${cls.CATEGORIES}`).forEach((el) => {
     el.innerHTML = el.innerHTML
       .trim()
       .split(',')
       .map((s) => s.trim())
       .map(
         (s) =>
-          `<a class="${CLS.HOVER_LINK}" href="${paths.LEXICON}/${s}.html" target="_blank">${s}</a>`
+          `<a class="${ccls.HOVER_LINK}" href="${paths.LEXICON}/${s}.html" target="_blank">${s}</a>`
       )
       .join(', ');
   });
@@ -105,13 +77,13 @@ export function handleCategories(elem: HTMLElement) {
  * @param elem
  */
 export function handleRootType(elem: HTMLElement) {
-  elem.querySelectorAll<HTMLElement>(`.${CLS.ROOT_TYPE}`).forEach((el) => {
+  elem.querySelectorAll<HTMLElement>(`.${cls.ROOT_TYPE}`).forEach((el) => {
     const type: string | undefined = el.querySelector('b')?.innerHTML;
     if (!type) {
       console.error('Unable to infer the root type for element!', el);
       return;
     }
-    el.innerHTML = `(<a class="${CLS.HOVER_LINK}" href="${paths.LEXICON}/${type.replaceAll('/', '_')}.html" target="_blank">${type}</a>)`;
+    el.innerHTML = `(<a class="${ccls.HOVER_LINK}" href="${paths.LEXICON}/${type.replaceAll('/', '_')}.html" target="_blank">${type}</a>)`;
   });
 }
 
@@ -120,8 +92,8 @@ export function handleRootType(elem: HTMLElement) {
  * @param elem
  */
 export function handleCrumPage(elem: HTMLElement) {
-  elem.querySelectorAll<HTMLElement>(`.${CLS.CRUM_PAGE}`).forEach((el) => {
-    el.classList.add(CLS.LINK);
+  elem.querySelectorAll<HTMLElement>(`.${cls.CRUM_PAGE}`).forEach((el) => {
+    el.classList.add(ccls.LINK);
     html.makeSpanLinkToAnchor(el, `#crum${scan.chopColumn(el.innerHTML)}`);
   });
 }
@@ -132,9 +104,9 @@ export function handleCrumPage(elem: HTMLElement) {
  */
 export function handleCrumPageExternal(elem: HTMLElement) {
   elem
-    .querySelectorAll<HTMLElement>(`.${CLS.CRUM_PAGE_EXTERNAL}`)
+    .querySelectorAll<HTMLElement>(`.${cls.CRUM_PAGE_EXTERNAL}`)
     .forEach((el) => {
-      el.classList.add(CLS.LINK);
+      el.classList.add(ccls.LINK);
       el.addEventListener('click', () => {
         browser.open(
           `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.innerHTML}`
@@ -149,9 +121,9 @@ export function handleCrumPageExternal(elem: HTMLElement) {
  */
 export function handleDawoudPageExternal(elem: HTMLElement) {
   elem
-    .querySelectorAll<HTMLElement>(`.${CLS.DAWOUD_PAGE_EXTERNAL}`)
+    .querySelectorAll<HTMLElement>(`.${cls.DAWOUD_PAGE_EXTERNAL}`)
     .forEach((el) => {
-      el.classList.add(CLS.LINK);
+      el.classList.add(ccls.LINK);
       el.addEventListener('click', () => {
         browser.open(`${paths.DAWOUD}?page=${el.innerHTML}`);
       });
@@ -164,10 +136,10 @@ export function handleDawoudPageExternal(elem: HTMLElement) {
  */
 export function handleDawoudPageImg(elem: HTMLElement) {
   elem
-    .querySelectorAll<HTMLElement>(`.${CLS.DAWOUD_PAGE_IMG}`)
+    .querySelectorAll<HTMLElement>(`.${cls.DAWOUD_PAGE_IMG}`)
     .forEach((el) => {
       const img = el.children[0] as HTMLElement;
-      img.classList.add(CLS.LINK);
+      img.classList.add(ccls.LINK);
       img.addEventListener('click', () => {
         browser.open(`${paths.DAWOUD}?page=${img.getAttribute('alt')!}`);
       });
@@ -179,9 +151,9 @@ export function handleDawoudPageImg(elem: HTMLElement) {
  * @param elem
  */
 export function handleCrumPageImg(elem: HTMLElement) {
-  elem.querySelectorAll<HTMLElement>(`.${CLS.CRUM_PAGE_IMG}`).forEach((el) => {
+  elem.querySelectorAll<HTMLElement>(`.${cls.CRUM_PAGE_IMG}`).forEach((el) => {
     const img = el.children[0] as HTMLElement;
-    img.classList.add(CLS.LINK);
+    img.classList.add(ccls.LINK);
     img.addEventListener('click', () => {
       browser.open(
         `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${img.getAttribute('alt')!}`
@@ -195,11 +167,11 @@ export function handleCrumPageImg(elem: HTMLElement) {
  * @param elem
  */
 export function handleExplanatory(elem: HTMLElement) {
-  elem.querySelectorAll<HTMLElement>(`.${CLS.EXPLANATORY}`).forEach((el) => {
+  elem.querySelectorAll<HTMLElement>(`.${cls.EXPLANATORY}`).forEach((el) => {
     const img = el.children[0] as HTMLElement;
     const alt = img.getAttribute('alt')!;
     if (!alt.startsWith('http')) return;
-    img.classList.add(CLS.LINK);
+    img.classList.add(ccls.LINK);
     img.addEventListener('click', () => {
       browser.open(alt);
     });
@@ -211,8 +183,8 @@ export function handleExplanatory(elem: HTMLElement) {
  * @param elem
  */
 export function handleDawoudPage(elem: HTMLElement) {
-  elem.querySelectorAll<HTMLElement>(`.${CLS.DAWOUD_PAGE}`).forEach((el) => {
-    el.classList.add(CLS.LINK);
+  elem.querySelectorAll<HTMLElement>(`.${cls.DAWOUD_PAGE}`).forEach((el) => {
+    el.classList.add(ccls.LINK);
     html.makeSpanLinkToAnchor(el, `#dawoud${scan.chopColumn(el.innerHTML)}`);
   });
 }
@@ -222,8 +194,8 @@ export function handleDawoudPage(elem: HTMLElement) {
  * @param elem
  */
 export function handleDrvKey(elem: HTMLElement) {
-  elem.querySelectorAll<HTMLElement>(`.${CLS.DRV_KEY}`).forEach((el) => {
-    el.classList.add(CLS.SMALL, CLS.LIGHT, CLS.ITALIC, CLS.HOVER_LINK);
+  elem.querySelectorAll<HTMLElement>(`.${cls.DRV_KEY}`).forEach((el) => {
+    el.classList.add(ccls.SMALL, ccls.LIGHT, ccls.ITALIC, ccls.HOVER_LINK);
     html.makeSpanLinkToAnchor(el, `#drv${el.innerHTML}`);
   });
 }
@@ -234,9 +206,9 @@ export function handleDrvKey(elem: HTMLElement) {
  */
 export function handleExplanatoryKey(elem: HTMLElement) {
   elem
-    .querySelectorAll<HTMLElement>(`.${CLS.EXPLANATORY_KEY}`)
+    .querySelectorAll<HTMLElement>(`.${cls.EXPLANATORY_KEY}`)
     .forEach((el) => {
-      el.classList.add(CLS.HOVER_LINK);
+      el.classList.add(ccls.HOVER_LINK);
       html.makeSpanLinkToAnchor(el, `#explanatory${el.innerHTML}`);
     });
 }
@@ -246,8 +218,8 @@ export function handleExplanatoryKey(elem: HTMLElement) {
  * @param elem
  */
 export function handleSisterKey(elem: HTMLElement) {
-  elem.querySelectorAll<HTMLElement>(`.${CLS.SISTER_KEY}`).forEach((el) => {
-    el.classList.add(CLS.HOVER_LINK);
+  elem.querySelectorAll<HTMLElement>(`.${cls.SISTER_KEY}`).forEach((el) => {
+    el.classList.add(ccls.HOVER_LINK);
     html.makeSpanLinkToAnchor(el, `#sister${el.innerHTML}`);
   });
 }
@@ -258,11 +230,11 @@ export function handleSisterKey(elem: HTMLElement) {
  */
 export function handleSisterView(elem: HTMLElement) {
   elem
-    .querySelectorAll(css.classQuery(CLS.SISTERS_TABLE, CLS.INDEX_TABLE))
+    .querySelectorAll(css.classQuery(cls.SISTERS_TABLE, cls.INDEX_TABLE))
     .forEach((table: Element) => {
       let counter = 1;
       table.querySelectorAll('tr').forEach((el: HTMLTableRowElement) => {
-        const td: Element | null = el.querySelector(`.${CLS.SISTER_VIEW}`);
+        const td: Element | null = el.querySelector(`.${cls.SISTER_VIEW}`);
         if (!td) {
           console.error(
             'A row in the sisters table does not have a "sister-view" element!'
@@ -270,7 +242,7 @@ export function handleSisterView(elem: HTMLElement) {
           return;
         }
         td.innerHTML =
-          `<span class="${CLS.SISTER_INDEX}">${counter.toString()}. </span>` +
+          `<span class="${cls.SISTER_INDEX}">${counter.toString()}. </span>` +
           td.innerHTML;
         counter++;
       });
@@ -286,8 +258,8 @@ export function handleDialect(
   elem: HTMLElement,
   highlighter: highlight.Highlighter
 ) {
-  elem.querySelectorAll<HTMLElement>(`.${CLS.DIALECT}`).forEach((el) => {
-    el.classList.add(CLS.HOVER_LINK);
+  elem.querySelectorAll<HTMLElement>(`.${cls.DIALECT}`).forEach((el) => {
+    el.classList.add(ccls.HOVER_LINK);
     el.addEventListener(
       'click',
       highlighter.toggleDialect.bind(highlighter, el.innerHTML as d.DIALECT)
@@ -304,8 +276,8 @@ export function handleDeveloper(
   elem: HTMLElement,
   highlighter: highlight.Highlighter
 ) {
-  elem.querySelectorAll<HTMLElement>(`.${CLS.DEVELOPER}`).forEach((el) => {
-    el.classList.add(CLS.LINK);
+  elem.querySelectorAll<HTMLElement>(`.${dev.CLS.DEVELOPER}`).forEach((el) => {
+    el.classList.add(ccls.LINK);
     el.addEventListener('click', highlighter.toggleDev.bind(highlighter));
   });
 }
@@ -318,7 +290,7 @@ export function insertCrumAbbreviationsLink() {
   const anchor = document.createElement('a');
   anchor.textContent = 'Abbreviations';
   anchor.href = ABBREVIATIONS_PAGE;
-  anchor.classList.add(CLS.ABBREVIATIONS);
+  anchor.classList.add(cls.ABBREVIATIONS);
   anchor.target = '_blank';
   crumElement?.insertBefore(anchor, crumElement.firstChild);
 }
@@ -329,7 +301,7 @@ export function insertCrumAbbreviationsLink() {
  */
 export function handleAnkiNavigation(elem: HTMLElement) {
   if (!iam.amI('anki')) return;
-  elem.querySelectorAll<HTMLElement>(`.${CLS.NAVIGATE}`).forEach((e) => {
+  elem.querySelectorAll<HTMLElement>(`.${cls.NAVIGATE}`).forEach((e) => {
     if (e.tagName !== 'A' || !e.hasAttribute('href')) {
       console.error(
         'This "navigate" element is not an <a> tag with an "href" property!',
@@ -350,8 +322,8 @@ export function addCopticLookups(elem: HTMLElement) {
     elem,
     COPTIC_RE,
     paths.LOOKUP_URL_PREFIX,
-    [CLS.HOVER_LINK],
-    [CLS.TYPE, CLS.TYPE]
+    [ccls.HOVER_LINK],
+    [cls.TYPE]
   );
 }
 
@@ -361,8 +333,8 @@ export function addCopticLookups(elem: HTMLElement) {
  */
 export function addGreekLookups(elem: HTMLElement) {
   html.linkifyText(elem, GREEK_RE, GREEK_LOOKUP_URL_PREFIX, [
-    CLS.LINK,
-    CLS.LIGHT,
+    ccls.LINK,
+    ccls.LIGHT,
   ]);
 }
 
@@ -371,7 +343,9 @@ export function addGreekLookups(elem: HTMLElement) {
  * @param elem
  */
 export function addEnglishLookups(elem: HTMLElement) {
-  elem.querySelectorAll(`.${CLS.MEANING}`).forEach((el) => {
-    html.linkifyText(el, ENGLISH_RE, paths.LOOKUP_URL_PREFIX, [CLS.HOVER_LINK]);
+  elem.querySelectorAll(`.${cls.MEANING}`).forEach((el) => {
+    html.linkifyText(el, ENGLISH_RE, paths.LOOKUP_URL_PREFIX, [
+      ccls.HOVER_LINK,
+    ]);
   });
 }

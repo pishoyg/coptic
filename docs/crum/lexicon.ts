@@ -6,6 +6,7 @@ import * as highlight from './highlight.js';
 import * as d from './dialect.js';
 import * as help from './help.js';
 import * as crum from './crum.js';
+import * as cls from './cls.js';
 
 const SEARCH_BOX_ID = 'searchBox';
 const FULL_WORD_CHECKBOX_ID = 'fullWordCheckbox';
@@ -17,10 +18,6 @@ const MESSAGE_BOX_ID = 'message';
 
 const CRUM_HREF_FMT = '{KEY}.html';
 const KELLIA_HREF_FMT = 'https://coptic-dictionary.org/entry.cgi?tla={KEY}';
-
-enum CLS {
-  DIALECT_CHECKBOX = 'dialect-checkbox',
-}
 
 enum DialectMatch {
   // The candidate has at least one of the highlighted dialects, and the match
@@ -176,7 +173,7 @@ async function main(): Promise<void> {
   searchBox.addEventListener('keypress', browser.stopPropagation);
 
   const dialectCheckboxes: HTMLInputElement[] = Array.from(
-    document.querySelectorAll<HTMLInputElement>(`.${CLS.DIALECT_CHECKBOX}`)
+    document.querySelectorAll<HTMLInputElement>(`.${cls.DIALECT_CHECKBOX}`)
   );
 
   const highlighter = new highlight.Highlighter(false, dialectCheckboxes);

@@ -3,17 +3,13 @@
 import * as logger from './logger.js';
 import * as coptic from './coptic.js';
 import * as browser from './browser.js';
+import * as cls from './cls.js';
 
 // WANT_COLUMNS is the list of the first columns we expect to find in the TSV.
 const WANT_COLUMNS = ['page', 'start', 'end'];
 
 // ZOOM_FACTOR controls how fast zooming happens in response to scroll events.
 const ZOOM_FACTOR = 0.05;
-
-enum CLS {
-  // DISABLED conceals an element from the display.
-  DISABLED = 'disabled',
-}
 
 /**
  * Word represents a word that can be used in the book scan context.
@@ -389,15 +385,15 @@ export class Scroller {
     this.form.image.alt = page.toString();
 
     if (page === this.start) {
-      this.form.prevButton.classList.add(CLS.DISABLED);
+      this.form.prevButton.classList.add(cls.DISABLED);
     } else {
-      this.form.prevButton.classList.remove(CLS.DISABLED);
+      this.form.prevButton.classList.remove(cls.DISABLED);
     }
 
     if (page === this.end) {
-      this.form.nextButton.classList.add(CLS.DISABLED);
+      this.form.nextButton.classList.add(cls.DISABLED);
     } else {
-      this.form.nextButton.classList.remove(CLS.DISABLED);
+      this.form.nextButton.classList.remove(cls.DISABLED);
     }
   }
 

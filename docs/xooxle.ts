@@ -4,6 +4,7 @@ import * as logger from './logger.js';
 import * as orth from './orth.js';
 import * as coptic from './coptic.js';
 import * as greek from './greek.js';
+import * as dev from './dev.js';
 
 // KEY is the name of the field that bears the word key. The key can be used to
 // generate an HREF to open the word page.
@@ -72,13 +73,12 @@ export const enum CLS {
   ERROR = 'error',
   // COUNTER is the class of the result counters in the view cells.
   COUNTER = 'counter',
-  DEV = 'dev',
-  NO_DEV = 'no-dev',
   // MATCH is the class of text matching a given search query.
   MATCH = 'match',
   // VIEW_FOR_MORE is the class of the message "view for more", displayed in
   // large fields that have been cropped.
   VIEW_FOR_MORE = 'view-for-more',
+  // MATCH_SEPARATOR is the class of unit separators.
   MATCH_SEPARATOR = 'match-separator',
 }
 
@@ -437,12 +437,12 @@ export class SearchResult extends AggregateResult {
     counter.append(' ');
     viewCell.append(counter);
 
-    const dev = document.createElement('span');
-    dev.classList.add(CLS.DEV);
-    dev.textContent = this.key;
+    const devSpan = document.createElement('span');
+    devSpan.classList.add(dev.CLS.DEV);
+    devSpan.textContent = this.key;
 
     if (!hrefFmt) {
-      viewCell.prepend(dev);
+      viewCell.prepend(devSpan);
       return viewCell;
     }
 
@@ -453,11 +453,11 @@ export class SearchResult extends AggregateResult {
       `#:~:text=${encodeURIComponent(this.fragmentWord()!)}`;
     a.target = '_blank';
 
-    const noDev = document.createElement('span');
-    noDev.classList.add(CLS.NO_DEV);
-    noDev.textContent = 'view';
+    const noDevSpan = document.createElement('span');
+    noDevSpan.classList.add(dev.CLS.NO_DEV);
+    noDevSpan.textContent = 'view';
 
-    a.append(noDev, dev);
+    a.append(noDevSpan, devSpan);
 
     viewCell.prepend(a);
 

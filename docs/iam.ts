@@ -13,6 +13,7 @@ export type Where =
   | 'index_index'; // A Crum index index page.
 
 enum CLS {
+  // LEXICON is a class of the <body> tag of the Lexicon page.
   LEXICON = 'lexicon',
 }
 

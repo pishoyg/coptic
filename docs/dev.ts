@@ -15,6 +15,19 @@ const DEV = 'dev';
 const ON = 'ON';
 const OFF = 'OFF';
 
+export enum CLS {
+  // DEV is the class of developer-mode elements, which should only show in
+  // developer mode.
+  DEV = 'dev',
+  // NO_DEV is the class of elements that are hidden in developer mode.
+  NO_DEV = 'no-dev',
+  // DEV_MODE_NOTE is the class of a note about developer mode in the help
+  // panel.
+  DEV_MODE_NOTE = 'dev-mode-note',
+  // DEVELOPER is the key of elements that toggle developer mode when clicked.
+  DEVELOPER = 'developer',
+}
+
 /**
  * @returns Whether developer mode is active.
  */

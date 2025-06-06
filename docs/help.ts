@@ -1,9 +1,5 @@
 import * as iam from './iam.js';
-
-enum CLS {
-  FOOTER = 'footer',
-  LINK = 'link',
-}
+import * as cls from './cls.js';
 
 /**
  * CODE_TO_KEY maps a keyboard event code to the event key.
@@ -352,11 +348,11 @@ export class Help {
           (() => {
             const footer = document.createElement('footer');
             footer.id = 'footer';
-            footer.classList.add(CLS.FOOTER);
+            footer.classList.add(cls.FOOTER);
             return footer;
           })();
         const help = document.createElement('span');
-        help.classList.add(CLS.LINK);
+        help.classList.add(cls.LINK);
         help.innerHTML = '<center>help</center>';
         footer.appendChild(help);
         document.body.appendChild(footer);
