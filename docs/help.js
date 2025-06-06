@@ -320,7 +320,6 @@ export class Help {
           (() => {
             const footer = document.createElement('footer');
             footer.id = 'footer';
-            footer.classList.add(cls.FOOTER);
             return footer;
           })();
         const help = document.createElement('span');
