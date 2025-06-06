@@ -145,7 +145,7 @@ export const DIALECTS = {
     'N'
   ),
 };
-export const ANY_DIALECT_QUERY = css.classQuery(Object.keys(DIALECTS));
+export const ANY_DIALECT_QUERY = css.classQuery(...Object.keys(DIALECTS));
 /**
  * @returns The list of active dialects.
  * If dialect highlighting has never been configured, return undefined.

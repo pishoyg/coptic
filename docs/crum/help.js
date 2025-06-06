@@ -8,7 +8,16 @@ import * as help from '../help.js';
 import * as browser from '../browser.js';
 import * as d from './dialect.js';
 import * as paths from '../paths.js';
+import * as css from '../css.js';
 const EMAIL_LINK = `mailto:${paths.EMAIL}`;
+var CLS;
+(function (CLS) {
+  CLS['VIEW'] = 'view';
+  CLS['SISTER_VIEW'] = 'sister-view';
+  CLS['DEV'] = 'dev,';
+  CLS['SISTER_KEY'] = 'sister-key';
+  CLS['DRV_KEY'] = 'drv-key';
+})(CLS || (CLS = {}));
 /**
  *
  * @param highlighter
@@ -90,7 +99,7 @@ export function makeHelpPanel(highlighter) {
         ['lexicon', 'note', 'index'],
         () => {
           browser
-            .findNextElement('.view, .sister-view', 'cur')
+            .findNextElement(css.classQuery(CLS.VIEW, CLS.SISTER_VIEW), 'cur')
             ?.querySelector('a')
             ?.click();
         }
@@ -102,8 +111,10 @@ export function makeHelpPanel(highlighter) {
         ['lexicon', 'note', 'index'],
         () => {
           browser.yank(
-            browser.findNextElement('.view .dev, .sister-key, .drv-key', 'cur')
-              .innerHTML
+            browser.findNextElement(
+              css.classQuery(CLS.VIEW, CLS.DEV, CLS.SISTER_KEY, CLS.DRV_KEY),
+              'cur'
+            ).innerHTML
           );
         }
       ),
@@ -141,7 +152,10 @@ export function makeHelpPanel(highlighter) {
         'Next word in the list',
         ['lexicon', 'note', 'index'],
         () => {
-          browser.scrollToNextElement('.view, .sister-view', 'next');
+          browser.scrollToNextElement(
+            css.classQuery(CLS.VIEW, CLS.SISTER_VIEW),
+            'next'
+          );
         }
       ),
     ],
@@ -150,7 +164,10 @@ export function makeHelpPanel(highlighter) {
         'Previous word in the list',
         ['lexicon', 'note', 'index'],
         () => {
-          browser.scrollToNextElement('.view, .sister-view', 'prev');
+          browser.scrollToNextElement(
+            css.classQuery(CLS.VIEW, CLS.SISTER_VIEW),
+            'prev'
+          );
         }
       ),
     ],

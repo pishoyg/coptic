@@ -15,6 +15,10 @@ const REGEX_CHECKBOX_ID = 'regexCheckbox';
 const MESSAGE_BOX_ID = 'message';
 const CRUM_HREF_FMT = '{KEY}.html';
 const KELLIA_HREF_FMT = 'https://coptic-dictionary.org/entry.cgi?tla={KEY}';
+var CLS;
+(function (CLS) {
+  CLS['DIALECT_CHECKBOX'] = 'dialect-checkbox';
+})(CLS || (CLS = {}));
 var DialectMatch;
 (function (DialectMatch) {
   // The candidate has at least one of the highlighted dialects, and the match
@@ -78,7 +82,7 @@ class CrumDialectSorter extends xooxle.BucketSorter {
     const undialected = Array.from(
       row.querySelectorAll(`.${'match' /* xooxle.CLS.MATCH */}`)
     ).some((el) => !el.closest(d.ANY_DIALECT_QUERY));
-    const ofInterest = !!row.querySelector(css.classQuery(active));
+    const ofInterest = !!row.querySelector(css.classQuery(...active));
     if (undialected) {
       if (ofInterest) {
         return DialectMatch.UNDIALECTED_MATCH_WITH_HIGHLIGHTED_DIALECT;
@@ -155,7 +159,7 @@ async function main() {
   searchBox.addEventListener('keydown', browser.stopPropagation);
   searchBox.addEventListener('keypress', browser.stopPropagation);
   const dialectCheckboxes = Array.from(
-    document.querySelectorAll('.dialect-checkbox')
+    document.querySelectorAll(`.${CLS.DIALECT_CHECKBOX}`)
   );
   const highlighter = new highlight.Highlighter(false, dialectCheckboxes);
   // Initialize searchers.

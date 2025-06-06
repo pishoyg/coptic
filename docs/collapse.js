@@ -1,3 +1,7 @@
+var CLS;
+(function (CLS) {
+  CLS['COLLAPSE'] = 'collapse';
+})(CLS || (CLS = {}));
 /**
  * Collapsible represents an element that can collapse, becoming visible /
  * invisible as needed.
@@ -55,7 +59,7 @@ export class Collapsible {
  * @param toggleUponLoad - If true, toggle once after loading.
  */
 export function addEventListenersForSiblings(toggleUponLoad = false) {
-  document.querySelectorAll('.collapse').forEach((collapse) => {
+  document.querySelectorAll(`.${CLS.COLLAPSE}`).forEach((collapse) => {
     const collapsible = new Collapsible(collapse.nextElementSibling);
     collapsible.addEventListener(collapse);
     if (toggleUponLoad) {

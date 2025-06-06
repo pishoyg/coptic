@@ -1,4 +1,9 @@
 import * as iam from './iam.js';
+var CLS;
+(function (CLS) {
+  CLS['FOOTER'] = 'footer';
+  CLS['LINK'] = 'link';
+})(CLS || (CLS = {}));
 /**
  * CODE_TO_KEY maps a keyboard event code to the event key.
  *
@@ -315,15 +320,15 @@ export class Help {
       document.getElementById('help') ??
       (() => {
         const footer =
-          document.getElementsByTagName('footer')[0] ??
+          document.querySelector('footer') ??
           (() => {
             const footer = document.createElement('footer');
             footer.id = 'footer';
-            footer.classList.add('footer');
+            footer.classList.add(CLS.FOOTER);
             return footer;
           })();
         const help = document.createElement('span');
-        help.classList.add('link');
+        help.classList.add(CLS.LINK);
         help.innerHTML = '<center>help</center>';
         footer.appendChild(help);
         document.body.appendChild(footer);

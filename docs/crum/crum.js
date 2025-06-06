@@ -6,12 +6,44 @@ import * as browser from '../browser.js';
 import * as html from '../html.js';
 import * as scan from '../scan.js';
 import * as paths from '../paths.js';
+import * as css from '../css.js';
 const COPTIC_RE = /[Ⲁ-ⲱϢ-ϯⳈⳉ]+/giu;
 const GREEK_RE = /[Α-Ωα-ω]+/giu;
 const ENGLISH_RE = /[A-Za-z]+/giu;
 const GREEK_LOOKUP_URL_PREFIX = 'https://logeion.uchicago.edu/';
 const ABBREVIATIONS_PAGE =
   'https://coptic.wiki/crum/?section=list_of_abbreviations';
+var CLS;
+(function (CLS) {
+  CLS['ABBREVIATIONS'] = 'abbreviations';
+  CLS['CATEGORIES'] = 'categories';
+  CLS['CRUM_PAGE'] = 'crum-page';
+  CLS['CRUM_PAGE_EXTERNAL'] = 'crum-page-external';
+  CLS['CRUM_PAGE_IMG'] = 'crum-page-img';
+  CLS['DAWOUD_PAGE'] = 'dawoud-page';
+  CLS['DAWOUD_PAGE_EXTERNAL'] = 'dawoud-page-external';
+  CLS['DAWOUD_PAGE_IMG'] = 'dawoud-page-img';
+  CLS['DEVELOPER'] = 'developer';
+  CLS['DIALECT'] = 'dialect';
+  CLS['DRV_KEY'] = 'drv-key';
+  CLS['EXPLANATORY'] = 'explanatory';
+  CLS['EXPLANATORY_KEY'] = 'explanatory-key';
+  CLS['HOVER_LINK'] = 'hover-link';
+  CLS['INDEX_TABLE'] = 'index-table';
+  CLS['ITALIC'] = 'italic';
+  CLS['LIGHT'] = 'light';
+  CLS['LINK'] = 'link';
+  CLS['MEANING'] = 'meaning';
+  CLS['NAVIGATE'] = 'navigate';
+  CLS['ROOT_TYPE'] = 'root-type';
+  CLS['SISTERS_TABLE'] = 'sisters-table';
+  CLS['SISTER_INDEX'] = 'sister-index';
+  CLS['SISTER_KEY'] = 'sister-key';
+  CLS['SISTER_VIEW'] = 'sister-view';
+  CLS['SMALL'] = 'small';
+  CLS['TITLE'] = 'title';
+  CLS['TYPE'] = 'type';
+})(CLS || (CLS = {}));
 /**
  *
  * @param elem
@@ -44,14 +76,14 @@ export function handleAll(elem, highlighter) {
  * @param elem
  */
 export function handleCategories(elem) {
-  elem.querySelectorAll('.categories').forEach((el) => {
+  elem.querySelectorAll(`.${CLS.CATEGORIES}`).forEach((el) => {
     el.innerHTML = el.innerHTML
       .trim()
       .split(',')
       .map((s) => s.trim())
       .map(
         (s) =>
-          `<a class="hover-link" href="${paths.LEXICON}/${s}.html" target="_blank">${s}</a>`
+          `<a class="${CLS.HOVER_LINK}" href="${paths.LEXICON}/${s}.html" target="_blank">${s}</a>`
       )
       .join(', ');
   });
@@ -61,13 +93,13 @@ export function handleCategories(elem) {
  * @param elem
  */
 export function handleRootType(elem) {
-  elem.querySelectorAll('.root-type').forEach((el) => {
-    const type = el.getElementsByTagName('b')[0]?.innerHTML;
+  elem.querySelectorAll(`.${CLS.ROOT_TYPE}`).forEach((el) => {
+    const type = el.querySelector('b')?.innerHTML;
     if (!type) {
       console.error('Unable to infer the root type for element!', el);
       return;
     }
-    el.innerHTML = `(<a class="hover-link" href="${paths.LEXICON}/${type.replaceAll('/', '_')}.html" target="_blank">${type}</a>)`;
+    el.innerHTML = `(<a class="${CLS.HOVER_LINK}" href="${paths.LEXICON}/${type.replaceAll('/', '_')}.html" target="_blank">${type}</a>)`;
   });
 }
 /**
@@ -75,8 +107,8 @@ export function handleRootType(elem) {
  * @param elem
  */
 export function handleCrumPage(elem) {
-  elem.querySelectorAll('.crum-page').forEach((el) => {
-    el.classList.add('link');
+  elem.querySelectorAll(`.${CLS.CRUM_PAGE}`).forEach((el) => {
+    el.classList.add(CLS.LINK);
     html.makeSpanLinkToAnchor(el, `#crum${scan.chopColumn(el.innerHTML)}`);
   });
 }
@@ -85,8 +117,8 @@ export function handleCrumPage(elem) {
  * @param elem
  */
 export function handleCrumPageExternal(elem) {
-  elem.querySelectorAll('.crum-page-external').forEach((el) => {
-    el.classList.add('link');
+  elem.querySelectorAll(`.${CLS.CRUM_PAGE_EXTERNAL}`).forEach((el) => {
+    el.classList.add(CLS.LINK);
     el.addEventListener('click', () => {
       browser.open(
         `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.innerHTML}`
@@ -99,8 +131,8 @@ export function handleCrumPageExternal(elem) {
  * @param elem
  */
 export function handleDawoudPageExternal(elem) {
-  elem.querySelectorAll('.dawoud-page-external').forEach((el) => {
-    el.classList.add('link');
+  elem.querySelectorAll(`.${CLS.DAWOUD_PAGE_EXTERNAL}`).forEach((el) => {
+    el.classList.add(CLS.LINK);
     el.addEventListener('click', () => {
       browser.open(`${paths.DAWOUD}?page=${el.innerHTML}`);
     });
@@ -111,9 +143,9 @@ export function handleDawoudPageExternal(elem) {
  * @param elem
  */
 export function handleDawoudPageImg(elem) {
-  elem.querySelectorAll('.dawoud-page-img').forEach((el) => {
+  elem.querySelectorAll(`.${CLS.DAWOUD_PAGE_IMG}`).forEach((el) => {
     const img = el.children[0];
-    img.classList.add('link');
+    img.classList.add(CLS.LINK);
     img.addEventListener('click', () => {
       browser.open(`${paths.DAWOUD}?page=${img.getAttribute('alt')}`);
     });
@@ -124,9 +156,9 @@ export function handleDawoudPageImg(elem) {
  * @param elem
  */
 export function handleCrumPageImg(elem) {
-  elem.querySelectorAll('.crum-page-img').forEach((el) => {
+  elem.querySelectorAll(`.${CLS.CRUM_PAGE_IMG}`).forEach((el) => {
     const img = el.children[0];
-    img.classList.add('link');
+    img.classList.add(CLS.LINK);
     img.addEventListener('click', () => {
       browser.open(
         `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${img.getAttribute('alt')}`
@@ -139,11 +171,11 @@ export function handleCrumPageImg(elem) {
  * @param elem
  */
 export function handleExplanatory(elem) {
-  elem.querySelectorAll('.explanatory').forEach((el) => {
+  elem.querySelectorAll(`.${CLS.EXPLANATORY}`).forEach((el) => {
     const img = el.children[0];
     const alt = img.getAttribute('alt');
     if (!alt.startsWith('http')) return;
-    img.classList.add('link');
+    img.classList.add(CLS.LINK);
     img.addEventListener('click', () => {
       browser.open(alt);
     });
@@ -154,8 +186,8 @@ export function handleExplanatory(elem) {
  * @param elem
  */
 export function handleDawoudPage(elem) {
-  elem.querySelectorAll('.dawoud-page').forEach((el) => {
-    el.classList.add('link');
+  elem.querySelectorAll(`.${CLS.DAWOUD_PAGE}`).forEach((el) => {
+    el.classList.add(CLS.LINK);
     html.makeSpanLinkToAnchor(el, `#dawoud${scan.chopColumn(el.innerHTML)}`);
   });
 }
@@ -164,8 +196,8 @@ export function handleDawoudPage(elem) {
  * @param elem
  */
 export function handleDrvKey(elem) {
-  elem.querySelectorAll('.drv-key').forEach((el) => {
-    el.classList.add('small', 'light', 'italic', 'hover-link');
+  elem.querySelectorAll(`.${CLS.DRV_KEY}`).forEach((el) => {
+    el.classList.add(CLS.SMALL, CLS.LIGHT, CLS.ITALIC, CLS.HOVER_LINK);
     html.makeSpanLinkToAnchor(el, `#drv${el.innerHTML}`);
   });
 }
@@ -174,8 +206,8 @@ export function handleDrvKey(elem) {
  * @param elem
  */
 export function handleExplanatoryKey(elem) {
-  elem.querySelectorAll('.explanatory-key').forEach((el) => {
-    el.classList.add('hover-link');
+  elem.querySelectorAll(`.${CLS.EXPLANATORY_KEY}`).forEach((el) => {
+    el.classList.add(CLS.HOVER_LINK);
     html.makeSpanLinkToAnchor(el, `#explanatory${el.innerHTML}`);
   });
 }
@@ -184,8 +216,8 @@ export function handleExplanatoryKey(elem) {
  * @param elem
  */
 export function handleSisterKey(elem) {
-  elem.querySelectorAll('.sister-key').forEach((el) => {
-    el.classList.add('hover-link');
+  elem.querySelectorAll(`.${CLS.SISTER_KEY}`).forEach((el) => {
+    el.classList.add(CLS.HOVER_LINK);
     html.makeSpanLinkToAnchor(el, `#sister${el.innerHTML}`);
   });
 }
@@ -194,22 +226,24 @@ export function handleSisterKey(elem) {
  * @param elem
  */
 export function handleSisterView(elem) {
-  elem.querySelectorAll('.sisters-table, .index-table').forEach((table) => {
-    let counter = 1;
-    Array.from(table.getElementsByTagName('tr')).forEach((el) => {
-      const td = el.querySelector('.sister-view');
-      if (!td) {
-        console.error(
-          'A row in the sisters table does not have a "sister-view" element!'
-        );
-        return;
-      }
-      td.innerHTML =
-        `<span class="sister-index">${counter.toString()}. </span>` +
-        td.innerHTML;
-      counter++;
+  elem
+    .querySelectorAll(css.classQuery(CLS.SISTERS_TABLE, CLS.INDEX_TABLE))
+    .forEach((table) => {
+      let counter = 1;
+      table.querySelectorAll('tr').forEach((el) => {
+        const td = el.querySelector(`.${CLS.SISTER_VIEW}`);
+        if (!td) {
+          console.error(
+            'A row in the sisters table does not have a "sister-view" element!'
+          );
+          return;
+        }
+        td.innerHTML =
+          `<span class="${CLS.SISTER_INDEX}">${counter.toString()}. </span>` +
+          td.innerHTML;
+        counter++;
+      });
     });
-  });
 }
 /**
  *
@@ -217,8 +251,8 @@ export function handleSisterView(elem) {
  * @param highlighter
  */
 export function handleDialect(elem, highlighter) {
-  elem.querySelectorAll('.dialect').forEach((el) => {
-    el.classList.add('hover-link');
+  elem.querySelectorAll(`.${CLS.DIALECT}`).forEach((el) => {
+    el.classList.add(CLS.HOVER_LINK);
     el.addEventListener(
       'click',
       highlighter.toggleDialect.bind(highlighter, el.innerHTML)
@@ -231,8 +265,8 @@ export function handleDialect(elem, highlighter) {
  * @param highlighter
  */
 export function handleDeveloper(elem, highlighter) {
-  elem.querySelectorAll('.developer').forEach((el) => {
-    el.classList.add('link');
+  elem.querySelectorAll(`.${CLS.DEVELOPER}`).forEach((el) => {
+    el.classList.add(CLS.LINK);
     el.addEventListener('click', highlighter.toggleDev.bind(highlighter));
   });
 }
@@ -244,7 +278,7 @@ export function insertCrumAbbreviationsLink() {
   const anchor = document.createElement('a');
   anchor.textContent = 'Abbreviations';
   anchor.href = ABBREVIATIONS_PAGE;
-  anchor.classList.add('abbreviations');
+  anchor.classList.add(CLS.ABBREVIATIONS);
   anchor.target = '_blank';
   crumElement?.insertBefore(anchor, crumElement.firstChild);
 }
@@ -254,7 +288,7 @@ export function insertCrumAbbreviationsLink() {
  */
 export function handleAnkiNavigation(elem) {
   if (!iam.amI('anki')) return;
-  elem.querySelectorAll('.navigate').forEach((e) => {
+  elem.querySelectorAll(`.${CLS.NAVIGATE}`).forEach((e) => {
     if (e.tagName !== 'A' || !e.hasAttribute('href')) {
       console.error(
         'This "navigate" element is not an <a> tag with an "href" property!',
@@ -274,8 +308,8 @@ export function addCopticLookups(elem) {
     elem,
     COPTIC_RE,
     paths.LOOKUP_URL_PREFIX,
-    ['hover-link'],
-    ['type', 'title']
+    [CLS.HOVER_LINK],
+    [CLS.TYPE, CLS.TYPE]
   );
 }
 /**
@@ -283,14 +317,17 @@ export function addCopticLookups(elem) {
  * @param elem
  */
 export function addGreekLookups(elem) {
-  html.linkifyText(elem, GREEK_RE, GREEK_LOOKUP_URL_PREFIX, ['link', 'light']);
+  html.linkifyText(elem, GREEK_RE, GREEK_LOOKUP_URL_PREFIX, [
+    CLS.LINK,
+    CLS.LIGHT,
+  ]);
 }
 /**
  *
  * @param elem
  */
 export function addEnglishLookups(elem) {
-  elem.querySelectorAll('.meaning').forEach((el) => {
-    html.linkifyText(el, ENGLISH_RE, paths.LOOKUP_URL_PREFIX, ['hover-link']);
+  elem.querySelectorAll(`.${CLS.MEANING}`).forEach((el) => {
+    html.linkifyText(el, ENGLISH_RE, paths.LOOKUP_URL_PREFIX, [CLS.HOVER_LINK]);
   });
 }

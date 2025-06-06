@@ -3,6 +3,10 @@
  *
  * You can use iam to determine where the code is running.
  */
+var CLS;
+(function (CLS) {
+  CLS['LEXICON'] = 'lexicon';
+})(CLS || (CLS = {}));
 /**
  * @returns The identity of the page where the code is executed.
  */
@@ -10,7 +14,7 @@ export function where() {
   if (typeof ANKI !== 'undefined') {
     return 'anki';
   }
-  if (document.body.classList.contains('lexicon')) {
+  if (document.body.classList.contains(CLS.LEXICON)) {
     return 'lexicon';
   }
   if (typeof NOTE !== 'undefined') {
