@@ -38,9 +38,4 @@ a.download,
     height: auto;
     width: 47%;
   }
-
-  figure:not(.flashcards-screenshots) img:not(.logo) {
-    height: auto;
-    width: 100%;
-  }
 }

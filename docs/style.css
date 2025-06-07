@@ -129,6 +129,11 @@ table:not(.info) {
   body {
     font-size: 18px;
   }
+
+  figure:not(.flashcards-screenshots) img:not(.logo) {
+    height: auto;
+    width: 100%;
+  }
 }
 
 .logo {
