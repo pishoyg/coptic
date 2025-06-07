@@ -1,3 +1,4 @@
+/** Main function for the lexicon. */
 import * as xooxle from '../xooxle.js';
 import * as collapse from '../collapse.js';
 import * as css from '../css.js';

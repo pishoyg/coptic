@@ -1,3 +1,4 @@
+/** Package xooxle defines the Xooxle engine core logic. */
 import * as collapse from './collapse.js';
 import * as browser from './browser.js';
 import * as logger from './logger.js';

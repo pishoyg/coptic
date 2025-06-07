@@ -1,3 +1,5 @@
+/** Package collapse defines logic to control collapsible elements. */
+
 enum CLS {
   // COLLAPSE is the class of elements that, when clicked, trigger a collapse
   // effect in their next element sibling.

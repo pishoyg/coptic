@@ -1,3 +1,5 @@
+/** Main function for a Bible chapter. */
+
 import * as collapse from '../collapse.js';
 import * as browser from '../browser.js';
 

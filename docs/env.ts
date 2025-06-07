@@ -1,3 +1,5 @@
+/** Package env defines environment helpers. */
+
 /**
  * @returns Whether the code is running in the Browser.
  */

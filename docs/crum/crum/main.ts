@@ -1,3 +1,4 @@
+/** Main function for the Crum scan. */
 import * as scan from '../../scan.js';
 const MIN_PAGE_NUM = 1;
 const MAX_PAGE_NUM = 973;

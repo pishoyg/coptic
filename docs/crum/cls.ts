@@ -1,6 +1,10 @@
-// TODO: (#241) Avoid use of styling classes in HTML, as those force us to
-// update the HTML whenever we want to update the style of an element, instead
-// of being able to keep the HTML as is and update the style through the CSS.
+/**
+ * Package cls defines Crum class constants.
+ *
+ * TODO: (#241) Avoid use of styling classes in HTML, as those force us to
+ * update the HTML whenever we want to update the style of an element, instead
+ * of being able to keep the HTML as is and update the style through the CSS.
+ */
 
 export const ABBREVIATIONS = 'abbreviations';
 export const CATEGORIES = 'categories';

@@ -1,3 +1,4 @@
+/** Package logger defines logging helpers. */
 import * as dev from './dev.js';
 
 enum Colors {
@@ -103,6 +104,7 @@ export function raise(...message: unknown[]) {
 /**
  * Exit with a non-zero error code, and log an error message to the console.
  * NOTE: This is only available in Node.js, not in the browser.
+ * TODO: (#457) Abandon Node.js validation.
  *
  * @param {...any} message - Message to log.
  */

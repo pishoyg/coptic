@@ -1,3 +1,5 @@
+/** Package orth defines orthography logic. */
+
 /**
  * @param text
  * @returns

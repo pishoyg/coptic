@@ -1,3 +1,5 @@
+/** Package greek defines Greek linguistic entities. */
+
 export const DIACRITICS: Set<string> = new Set<string>([
   // Core Polytonic Accents and Breathings
   '\u0301', // COMBINING ACUTE ACCENT (tonos, oxia): ά

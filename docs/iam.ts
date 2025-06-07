@@ -1,7 +1,7 @@
 /**
  * Package iam defines page identities.
  *
- * You can use iam to determine where the code is running.
+ * You can use iam to find out where in the website your code is running.
  */
 
 export type Where =
