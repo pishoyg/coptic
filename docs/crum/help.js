@@ -105,7 +105,7 @@ export function makeHelpPanel(highlighter) {
     ],
     z: [
       new help.Shortcut(
-        `Yank the key of the word currently being viewed <span class="${dev.CLS.DEV_MODE_NOTE}">(dev mode)</span>`,
+        `Yank the key of the word currently being viewed <span class="${cls.DEV_MODE_NOTE}">(dev mode)</span>`,
         ['lexicon', 'note', 'index'],
         () => {
           browser.yank(
