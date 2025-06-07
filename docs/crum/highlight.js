@@ -1,6 +1,10 @@
-// TODO: (#179) We desire to implement highlighting for the Bible as well. Move
-// shared functionality to an external package, and keep Lexicon-specific logic
-// in this file.
+/**
+ * Package highlight defines the Crum dialect and developer-mode highlighting.
+ *
+ * TODO: (#179) We desire to implement highlighting for the Bible as well. Move
+ * shared functionality to an external package, and keep Lexicon-specific logic
+ * in this file.
+ */
 import * as css from '../css.js';
 import * as iam from '../iam.js';
 import * as dev from '../dev.js';

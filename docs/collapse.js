@@ -1,3 +1,4 @@
+/** Package collapse defines logic to control collapsible elements. */
 var CLS;
 (function (CLS) {
   // COLLAPSE is the class of elements that, when clicked, trigger a collapse

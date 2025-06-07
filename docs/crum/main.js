@@ -1,3 +1,4 @@
+/** Main function for a Crum word page (a Crum note). */
 import * as help from './help.js';
 import * as iam from '../iam.js';
 import * as highlight from './highlight.js';

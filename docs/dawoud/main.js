@@ -1,3 +1,4 @@
+/** Main function for the Dawoud scan. */
 import * as scan from '../scan.js';
 import * as env from '../env.js';
 import * as logger from '../logger.js';

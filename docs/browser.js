@@ -1,7 +1,4 @@
-/**
- * This package defines generic utilities for browser and UI actions and
- * navigation.
- */
+/** Package browser defines generic browser and UI helpers. */
 /**
  *
  * @param url

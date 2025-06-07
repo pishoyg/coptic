@@ -1,3 +1,4 @@
+/** Package dialect defines Crum dialects. */
 import * as css from '../css.js';
 import * as iam from '../iam.js';
 import * as help from '../help.js';

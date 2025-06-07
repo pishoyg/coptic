@@ -1,3 +1,4 @@
+/** Package paths defines path constants. */
 import * as iam from './iam.js';
 export const URL = iam.amI('anki') ? 'http://remnqymi.com' : '';
 export const EMAIL = 'remnqymi@gmail.com';

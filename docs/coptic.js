@@ -1,3 +1,4 @@
+/** Package coptic defines Coptic linguistic entities. */
 import * as logger from './logger.js';
 // Coptic exists in the Unicode in two blocks:
 //   https://en.wikipedia.org/wiki/Coptic_(Unicode_block)

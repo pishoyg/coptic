@@ -1,6 +1,4 @@
-/**
- * This package defines generic DOM manipulation utilities.
- */
+/** Package html defines DOM manipulation helpers. */
 import * as browser from './browser.js';
 /**
  *

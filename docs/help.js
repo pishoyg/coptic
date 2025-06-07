@@ -1,3 +1,4 @@
+/** Package help defines logic for a help panel. */
 import * as iam from './iam.js';
 import * as cls from './cls.js';
 /**

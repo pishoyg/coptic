@@ -1,5 +1,8 @@
+/** Package scan defines the logic for a dictionary scan. */
 // NOTE: This package is used in the browser, and also during validation. So we
 // allow it to assert correctness, instead of trying to always fail gracefully.
+// TODO: (#457) Abandon Node.js Validation. Use a Browser Environment for
+// stronger, simpler validation.
 import * as logger from './logger.js';
 import * as coptic from './coptic.js';
 import * as browser from './browser.js';

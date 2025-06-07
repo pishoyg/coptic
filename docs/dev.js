@@ -1,3 +1,4 @@
+/** Package dev defines developer-mode logic. */
 /**
  * VAR is the name of the local storage variable holding the status of the
  * developer mode.

@@ -1,6 +1,4 @@
-/**
- * This package defines generics CSS helpers.
- */
+/** Package css defines generic CSS helpers. */
 /**
  * @param classes - A list of HTML classes.
  * @returns A query that matches all elements belonging to ANY of the given
