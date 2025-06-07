@@ -329,15 +329,22 @@ body:not(.lexicon) .header td:not(:first-child) {
   float: left;
 }
 
-button {
-  border: none; /* Remove default border */
-  padding: 5px;
-  border-radius: 5px; /* Slightly rounded corners */
+.button {
+  padding: 2px 6px; /* Smaller padding for a more compact button */
+  font-size: medium; /* Smaller text size */
+  border-radius: 4px;
   cursor: pointer; /* Pointer cursor on hover */
   transition: all 0.3s ease-in-out; /* Smooth effects */
+  background-color: #f0f0f0; /* Light gray */
+  color: #3498db; /* Link blue */
+  text-decoration: none; /* Remove underline in case it's an anchor. */
 }
 
-button:active {
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
   transform: scale(0.95); /* Slightly shrink */
 }
 

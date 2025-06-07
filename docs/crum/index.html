@@ -23,18 +23,16 @@
   <table id="header" class="header">
     <tr>
       <td>
-        <a href="../">Home</a>
+        <a class="button" href="../">Home</a>
       </td>
       <td>
-        <a href=
+        <a class="button" href=
         "https://github.com/pishoyg/coptic/issues/new?template=reports.md"
         target="_blank">Reports</a>
       </td>
-      <td class="small-screen-only"><strong>ⲡⲓⲖⲉⲝⲓⲕⲟⲛ</strong>
+      <td><span id="help" class="button">Help</span>
       </td>
-      <td><span id="help" class="link">Help</span>
-      </td>
-      <td class="small-screen-only"><button class="reset">Reset</button>
+      <td><span id="reset" class="button reset">Reset</span>
       </td>
     </tr>
   </table>
@@ -44,30 +42,31 @@
       <table id="xooxle">
         <thead>
           <tr>
-            <td class="title big-screen-only" colspan="3">ⲡⲓⲖⲉⲝⲓⲕⲟⲛ | Coptic
-            Dictionary</td>
+            <td id="title" colspan="3">ⲡⲓⲖⲉⲝⲓⲕⲟⲛ | Coptic Dictionary</td>
           </tr>
         </thead>
 
-        <tr>
-          <td class="search-box"><input id="searchBox" autocapitalize="off"
-          autocomplete="off" autocorrect="off" placeholder="Search" spellcheck=
-          "false" type="text">
-          </td>
-          <td><input id="fullWordCheckbox" type="checkbox"> <label id=
-          "full-word-checkbox-label" for="fullWordCheckbox"><span class=
-          "big-screen-only">Full-Word Match</span> <span class=
-          "small-screen-only">Full-Word</span></label></td>
-          <td><input id="regexCheckbox" type="checkbox"> <label id=
-          "regex-checkbox-label" for="regexCheckbox"><span class=
-          "big-screen-only">Use Regular Expressions (<a href=
-          "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions"
-          rel="noopener noreferrer" style="opacity: 0.7" target=
-          "_blank">syntax</a>)</span> <span class="small-screen-only"><a href=
-          "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions"
-          rel="noopener noreferrer" style="color: black" target=
-          "_blank">RegEx</a></span></label></td>
-        </tr>
+        <tbody>
+          <tr>
+            <td class="search-box"><input id="searchBox" autocapitalize="off"
+            autocomplete="off" autocorrect="off" placeholder="Search"
+            spellcheck="false" type="text">
+            </td>
+            <td><input id="fullWordCheckbox" type="checkbox"> <label id=
+            "full-word-checkbox-label" for="fullWordCheckbox"><span class=
+            "big-screen-only">Full-Word Match</span> <span class=
+            "small-screen-only">Full-Word</span></label></td>
+            <td><input id="regexCheckbox" type="checkbox"> <label id=
+            "regex-checkbox-label" for="regexCheckbox"><span class=
+            "big-screen-only">Use Regular Expressions (<a href=
+            "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions"
+            rel="noopener noreferrer" style="opacity: 0.7" target=
+            "_blank">syntax</a>)</span> <span class=
+            "small-screen-only"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions"
+            rel="noopener noreferrer" style="color: black" target=
+            "_blank">RegEx</a></span></label></td>
+          </tr>
+        </tbody>
       </table>
     </div>
 
@@ -96,8 +95,7 @@
       "checkbox" value="V">V</label> <label><input id="checkbox-W" name="W"
       class="dialect-checkbox" type="checkbox" value="W">W</label>
       <label><input id="checkbox-U" name="U" class="dialect-checkbox" type=
-      "checkbox" value="U">U</label><span class="big-screen-only">&nbsp;&nbsp;
-      <button class="reset">Reset</button></span>
+      "checkbox" value="U">U</label>
     </div>
   </form>
 

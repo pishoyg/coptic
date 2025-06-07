@@ -3,6 +3,7 @@
 /* Header classes:
  *
  * TODO: (#203) These classes may belong with the header logic.
+ * TODO: (#203) Header cells should perhaps have IDs and not classes.
  */
 
 /** CONTACT is the class of our contact link. */
