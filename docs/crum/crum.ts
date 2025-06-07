@@ -11,7 +11,6 @@ import * as css from '../css.js';
 import * as highlight from './highlight.js';
 import * as d from './dialect.js';
 import * as cls from './cls.js';
-import * as dev from '../dev.js';
 import * as ccls from '../cls.js';
 
 const COPTIC_RE = /[Ⲁ-ⲱϢ-ϯⳈⳉ]+/giu;
@@ -276,7 +275,7 @@ export function handleDeveloper(
   elem: HTMLElement,
   highlighter: highlight.Highlighter
 ) {
-  elem.querySelectorAll<HTMLElement>(`.${dev.CLS.DEVELOPER}`).forEach((el) => {
+  elem.querySelectorAll<HTMLElement>(`.${ccls.DEVELOPER}`).forEach((el) => {
     el.classList.add(ccls.LINK);
     el.addEventListener('click', highlighter.toggleDev.bind(highlighter));
   });

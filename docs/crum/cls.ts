@@ -10,6 +10,7 @@ export const CRUM_PAGE_IMG = 'crum-page-img';
 export const DAWOUD_PAGE = 'dawoud-page';
 export const DAWOUD_PAGE_EXTERNAL = 'dawoud-page-external';
 export const DAWOUD_PAGE_IMG = 'dawoud-page-img';
+export const DEV_MODE_NOTE = 'dev-mode-note';
 export const DIALECT = 'dialect';
 export const DIALECT_CHECKBOX = 'dialect-checkbox';
 export const DRV_KEY = 'drv-key';

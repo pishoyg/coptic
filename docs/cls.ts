@@ -1,9 +1,9 @@
-/**
- * This package stores common classes.
- */
+/** This package stores common classes. */
 
-// Header classes:
-// TODO: (#203) These classes may belong with the header logic.
+/* Header classes:
+ *
+ * TODO: (#203) These classes may belong with the header logic.
+ */
 
 /** CONTACT is the class of our contact link. */
 export const CONTACT = 'contact';
@@ -11,13 +11,18 @@ export const CONTACT = 'contact';
 /** RESET is the class of our reset buttons. */
 export const RESET = 'reset';
 
+/** DEVELOPER is the key of elements that toggle developer mode when clicked. */
+export const DEVELOPER = 'developer';
+
 /** HEADER is the class of the header element. */
 export const HEADER = 'header';
 
 /** FOOTER is the class of the footer element. */
 export const FOOTER = 'footer';
 
-// Styling classes:
+/* Styling classes:
+ *
+ */
 
 /** DISABLED hides elements. */
 export const DISABLED = 'disabled';
