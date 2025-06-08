@@ -1,6 +1,10 @@
 /** Package help defines logic for a help panel. */
 import * as iam from './iam.js';
+import * as browser from './browser.js';
 import * as cls from './cls.js';
+const REPORTS =
+  'https://docs.google.com/forms/d/e/1FAIpQLSeNVAjxtJcAR7i6AwBI3SFlzRWC5DQ09G6LfbySbZGvZCdpIg/viewform?usp=pp_url';
+const PAGE_PARAM = 'entry.1382006920';
 /**
  * CODE_TO_KEY maps a keyboard event code to the event key.
  *
@@ -452,4 +456,12 @@ export class Help {
       }
     });
   }
+}
+/**
+ *
+ */
+export function reports() {
+  const url = new URL(REPORTS);
+  url.searchParams.set(PAGE_PARAM, window.location.href);
+  browser.open(url.toString(), true);
 }
