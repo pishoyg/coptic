@@ -7,6 +7,7 @@ import * as highlight from './highlight.js';
 import * as d from './dialect.js';
 import * as help from './help.js';
 import * as header from '../header.js';
+import * as paths from '../paths.js';
 import * as crum from './crum.js';
 import * as cls from './cls.js';
 
@@ -19,9 +20,6 @@ const REGEX_CHECKBOX_ID = 'regexCheckbox';
 const MESSAGE_BOX_ID = 'message';
 
 const REPORTS_ID = 'reports';
-
-const CRUM_HREF_FMT = '{KEY}.html';
-const KELLIA_HREF_FMT = 'https://coptic-dictionary.org/entry.cgi?tla={KEY}';
 
 enum DialectMatch {
   // The candidate has at least one of the highlighted dialects, and the match
@@ -147,7 +145,7 @@ const XOOXLES: Xooxle[] = [
     indexURL: 'crum.json',
     tableID: 'crum',
     collapsibleID: 'crum-collapsible',
-    hrefFmt: CRUM_HREF_FMT,
+    hrefFmt: paths.CRUM_PAGE_KEY_FMT,
     bucketSorter: new CrumDialectSorter(),
     prepublish: crum.addGreekLookups,
   },
@@ -155,7 +153,7 @@ const XOOXLES: Xooxle[] = [
     indexURL: 'kellia.json',
     tableID: 'kellia',
     collapsibleID: 'kellia-collapsible',
-    hrefFmt: KELLIA_HREF_FMT,
+    hrefFmt: paths.CDO_LOOKUP_KEY_FMT,
     bucketSorter: new kelliaDialectSorter(),
   },
   {
