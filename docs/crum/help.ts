@@ -14,9 +14,7 @@ import * as css from '../css.js';
 import * as xooxle from '../xooxle.js';
 import * as dev from '../dev.js';
 import * as cls from './cls.js';
-import * as ccls from '../cls.js';
-
-const EMAIL_LINK = `mailto:${paths.EMAIL}`;
+import * as header from '../header.js';
 
 /**
  *
@@ -51,12 +49,14 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
       ),
     ],
     R: [
+      // TODO: (#203) This shortcut seems to reload the page without actually
+      // opening the reports page!!
+      // Clicking the button works, though. So it's likely about the R, rather
+      // than the URL.
       new help.Shortcut(
-        `<strong>R</strong>eports / Contact <a class="${ccls.CONTACT}" href="${EMAIL_LINK}">${paths.EMAIL}</a>`,
+        'File a Report',
         ['lexicon', 'note', 'index', 'index_index'],
-        () => {
-          browser.open(EMAIL_LINK);
-        }
+        header.reports
       ),
     ],
     H: [
