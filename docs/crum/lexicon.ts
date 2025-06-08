@@ -6,6 +6,7 @@ import * as browser from '../browser.js';
 import * as highlight from './highlight.js';
 import * as d from './dialect.js';
 import * as help from './help.js';
+import * as chelp from '../help.js';
 import * as crum from './crum.js';
 import * as cls from './cls.js';
 
@@ -16,6 +17,8 @@ const REGEX_CHECKBOX_ID = 'regexCheckbox';
 // allowed to coexist on the same page, we should create several boxes,
 // otherwise they could override each other!
 const MESSAGE_BOX_ID = 'message';
+
+const REPORTS_ID = 'reports';
 
 const CRUM_HREF_FMT = '{KEY}.html';
 const KELLIA_HREF_FMT = 'https://coptic-dictionary.org/entry.cgi?tla={KEY}';
@@ -212,6 +215,8 @@ async function main(): Promise<void> {
   collapse.addEventListenersForSiblings(true);
 
   help.makeHelpPanel(highlighter);
+
+  document.getElementById(REPORTS_ID)!.addEventListener('click', chelp.reports);
 }
 
 await main();
