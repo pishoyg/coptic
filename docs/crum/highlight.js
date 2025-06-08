@@ -10,6 +10,7 @@ import * as iam from '../iam.js';
 import * as dev from '../dev.js';
 import * as cls from './cls.js';
 import * as ccls from '../cls.js';
+import * as header from '../header.js';
 import * as d from './dialect.js';
 /**
  *
@@ -212,7 +213,7 @@ export class Highlighter {
       }
     });
     // A click on the reset element resets all display.
-    document.querySelectorAll(`.${ccls.RESET}`).forEach((el) => {
+    document.querySelectorAll(`.${header.CLS.RESET}`).forEach((el) => {
       el.classList.add(ccls.LINK);
       el.addEventListener('click', (event) => {
         this.reset();

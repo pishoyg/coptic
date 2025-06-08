@@ -13,6 +13,7 @@ import * as paths from '../paths.js';
 import * as css from '../css.js';
 import * as cls from './cls.js';
 import * as ccls from '../cls.js';
+import * as header from '../header.js';
 const COPTIC_RE = /[Ⲁ-ⲱϢ-ϯⳈⳉ]+/giu;
 const GREEK_RE = /[Α-Ωα-ω]+/giu;
 const ENGLISH_RE = /[A-Za-z]+/giu;
@@ -240,7 +241,7 @@ export function handleDialect(elem, highlighter) {
  * @param highlighter
  */
 export function handleDeveloper(elem, highlighter) {
-  elem.querySelectorAll(`.${ccls.DEVELOPER}`).forEach((el) => {
+  elem.querySelectorAll(`.${header.CLS.DEVELOPER}`).forEach((el) => {
     el.classList.add(ccls.LINK);
     el.addEventListener('click', highlighter.toggleDev.bind(highlighter));
   });

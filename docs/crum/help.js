@@ -11,8 +11,7 @@ import * as paths from '../paths.js';
 import * as css from '../css.js';
 import * as dev from '../dev.js';
 import * as cls from './cls.js';
-import * as ccls from '../cls.js';
-const EMAIL_LINK = `mailto:${paths.EMAIL}`;
+import * as header from '../header.js';
 /**
  *
  * @param highlighter
@@ -43,12 +42,12 @@ export function makeHelpPanel(highlighter) {
       ),
     ],
     R: [
+      // TODO: (#203) This shortcut seems to reload the page without actually
+      // opening the reports page!!
       new help.Shortcut(
-        `<strong>R</strong>eports / Contact <a class="${ccls.CONTACT}" href="${EMAIL_LINK}">${paths.EMAIL}</a>`,
+        'File a Report',
         ['lexicon', 'note', 'index', 'index_index'],
-        () => {
-          browser.open(EMAIL_LINK);
-        }
+        header.reports
       ),
     ],
     H: [

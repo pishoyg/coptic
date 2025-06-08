@@ -6,7 +6,7 @@ import * as browser from '../browser.js';
 import * as highlight from './highlight.js';
 import * as d from './dialect.js';
 import * as help from './help.js';
-import * as chelp from '../help.js';
+import * as header from '../header.js';
 import * as crum from './crum.js';
 import * as cls from './cls.js';
 const SEARCH_BOX_ID = 'searchBox';
@@ -193,6 +193,6 @@ async function main() {
   // Initialize collapsible elements.
   collapse.addEventListenersForSiblings(true);
   help.makeHelpPanel(highlighter);
-  document.getElementById(REPORTS_ID).addEventListener('click', chelp.reports);
+  document.getElementById(REPORTS_ID).addEventListener('click', header.reports);
 }
 await main();
