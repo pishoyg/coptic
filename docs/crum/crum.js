@@ -17,9 +17,6 @@ import * as header from '../header.js';
 const COPTIC_RE = /[Ⲁ-ⲱϢ-ϯⳈⳉ]+/giu;
 const GREEK_RE = /[Α-Ωα-ω]+/giu;
 const ENGLISH_RE = /[A-Za-z]+/giu;
-const GREEK_LOOKUP_URL_PREFIX = 'https://logeion.uchicago.edu/';
-const ABBREVIATIONS_PAGE =
-  'https://coptic.wiki/crum/?section=list_of_abbreviations';
 /**
  *
  * @param elem
@@ -96,9 +93,7 @@ export function handleCrumPageExternal(elem) {
   elem.querySelectorAll(`.${cls.CRUM_PAGE_EXTERNAL}`).forEach((el) => {
     el.classList.add(ccls.LINK);
     el.addEventListener('click', () => {
-      browser.open(
-        `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${el.innerHTML}`
-      );
+      browser.open(`${paths.CRUM_SCAN_PREFIX}${el.innerHTML}`);
     });
   });
 }
@@ -136,9 +131,7 @@ export function handleCrumPageImg(elem) {
     const img = el.children[0];
     img.classList.add(ccls.LINK);
     img.addEventListener('click', () => {
-      browser.open(
-        `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${img.getAttribute('alt')}`
-      );
+      browser.open(`${paths.CRUM_SCAN_PREFIX}${img.getAttribute('alt')}`);
     });
   });
 }
@@ -253,7 +246,7 @@ export function insertCrumAbbreviationsLink() {
   const crumElement = document.getElementById('crum');
   const anchor = document.createElement('a');
   anchor.textContent = 'Abbreviations';
-  anchor.href = ABBREVIATIONS_PAGE;
+  anchor.href = paths.CRUM_ABBREVIATIONS;
   anchor.classList.add(cls.ABBREVIATIONS);
   anchor.target = '_blank';
   crumElement?.insertBefore(anchor, crumElement.firstChild);
@@ -293,7 +286,7 @@ export function addCopticLookups(elem) {
  * @param elem
  */
 export function addGreekLookups(elem) {
-  html.linkifyText(elem, GREEK_RE, GREEK_LOOKUP_URL_PREFIX, [
+  html.linkifyText(elem, GREEK_RE, paths.GREEK_DICT_PREFIX, [
     ccls.LINK,
     cls.LIGHT,
   ]);

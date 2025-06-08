@@ -44,6 +44,8 @@ export function makeHelpPanel(highlighter) {
     R: [
       // TODO: (#203) This shortcut seems to reload the page without actually
       // opening the reports page!!
+      // Clicking the button works, though. So it's likely about the R, rather
+      // than the URL.
       new help.Shortcut(
         'File a Report',
         ['lexicon', 'note', 'index', 'index_index'],
@@ -186,7 +188,7 @@ export function makeHelpPanel(highlighter) {
     ],
     E: [
       new help.Shortcut(
-        '<a href="https://kellia.uni-goettingen.de/" target="_blank" rel="noopener,noreferrer">K<strong>E</strong>LLIA</a>',
+        `<a href="${paths.KELLIA}" target="_blank" rel="noopener,noreferrer">K<strong>E</strong>LLIA</a>`,
         ['lexicon'],
         () => {
           browser.scroll('kellia-title');
@@ -195,7 +197,7 @@ export function makeHelpPanel(highlighter) {
     ],
     T: [
       new help.Shortcut(
-        '<a href="http://copticsite.com/" target="_blank" rel="noopener,noreferrer">copticsi<strong>t</strong>e</a>',
+        `<a href="${paths.COPTICSITE}" target="_blank" rel="noopener,noreferrer">copticsi<strong>t</strong>e</a>`,
         ['lexicon'],
         () => {
           browser.scroll('copticsite-title');
@@ -288,7 +290,7 @@ export function makeHelpPanel(highlighter) {
     ],
     e: [
       new help.Shortcut(
-        '<a href="https://kellia.uni-goettingen.de/" target="_blank" rel="noopener,noreferrer">K<strong>E</strong>LLIA</a>',
+        `<a href="${paths.KELLIA}" target="_blank" rel="noopener,noreferrer">K<strong>E</strong>LLIA</a>`,
         ['lexicon'],
         () => {
           browser.click('kellia-title');
@@ -297,7 +299,7 @@ export function makeHelpPanel(highlighter) {
     ],
     t: [
       new help.Shortcut(
-        '<a href="http://copticsite.com/" target="_blank" rel="noopener,noreferrer">copticsi<strong>t</strong>e</a>',
+        `<a href="${paths.COPTICSITE}" target="_blank" rel="noopener,noreferrer">copticsi<strong>t</strong>e</a>`,
         ['lexicon'],
         () => {
           browser.click('copticsite-title');
