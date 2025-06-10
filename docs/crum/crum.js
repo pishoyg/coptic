@@ -165,9 +165,23 @@ export function handleDawoudPage(elem) {
  * @param elem
  */
 export function handleDrvKey(elem) {
-  elem.querySelectorAll(`.${cls.DRV_KEY}`).forEach((el) => {
-    el.classList.add(cls.SMALL, cls.LIGHT, cls.ITALIC, ccls.HOVER_LINK);
-    html.makeSpanLinkToAnchor(el, `#drv${el.innerHTML}`);
+  elem.querySelectorAll(`.${cls.DRV_KEY}`).forEach((key) => {
+    const frag = `#drv${key.innerHTML}`;
+    const a = document.createElement('a');
+    a.href = frag;
+    a.classList.add(cls.DRV_LINK, ccls.HOVER_LINK);
+    a.appendChild(document.createTextNode('🔗'));
+    key.parentNode.insertBefore(a, key);
+    a.appendChild(key);
+    if (iam.amI('anki')) {
+      // Yanking is not straightforward on Anki, for what it seems!
+      return;
+    }
+    a.addEventListener('click', () => {
+      const url = new URL(window.location.href);
+      url.hash = frag;
+      browser.yank(url.toString());
+    });
   });
 }
 /**
