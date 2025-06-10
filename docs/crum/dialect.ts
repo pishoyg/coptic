@@ -235,7 +235,7 @@ export function active(): DIALECT[] | undefined {
 /**
  * @param dialects - Set current list of active dialects.
  */
-export function setActive(dialects: DIALECT[]) {
+export function setActive(dialects: DIALECT[]): void {
   localStorage.setItem(D, dialects.join(SEPARATOR));
 }
 
@@ -253,7 +253,7 @@ export function reset(): void {
 /**
  * @param dialect - Dialect to toggle.
  */
-export function toggle(dialect: DIALECT) {
+export function toggle(dialect: DIALECT): void {
   const act: Set<DIALECT> = new Set<DIALECT>(active());
 
   if (act.has(dialect)) {

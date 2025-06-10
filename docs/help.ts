@@ -134,7 +134,7 @@ export class Shortcut {
    */
   constructor(
     private readonly description: string,
-    private readonly available: iam.WHERE[],
+    private readonly available: iam.Where[],
     private readonly action: (event: KeyboardEvent) => void,
     private readonly show = true
   ) {}
@@ -207,7 +207,7 @@ export class Shortcut {
    *
    * @returns
    */
-  textDescription() {
+  textDescription(): string {
     return this.description.replace(/<[^>]*>/g, '');
   }
 }
@@ -367,7 +367,7 @@ export class Help {
   /**
    * @param s
    */
-  addSection(s: Section) {
+  addSection(s: Section): void {
     if (!s.executable()) {
       return;
     }
@@ -415,7 +415,7 @@ export class Help {
    * @param visible - An optional visibility. If not provided, will toggle the
    * current visibility.
    */
-  togglePanel(visible?: boolean) {
+  togglePanel(visible?: boolean): void {
     let target: 'block' | 'none';
     if (visible !== undefined) {
       // Use the visibility provided in the parameters.
@@ -437,7 +437,7 @@ export class Help {
    * We should perhaps run a Node.js job in a pre-commit hook that fails if this
    * error occurs, so we can detect it before launch.
    */
-  private validate() {
+  private validate(): void {
     // Get all keys that have events registered to them.
     const keys: string[] = this.sections
       .map((s: Section): Record<string, Shortcut[]> => s.shortcutsRecord())
@@ -457,7 +457,7 @@ export class Help {
   /**
    * Add event listeners for the help panel.
    */
-  private addListeners() {
+  private addListeners(): void {
     // Clicking the help button toggles the panel display.
     this.help.addEventListener('click', (event: MouseEvent) => {
       this.togglePanel();

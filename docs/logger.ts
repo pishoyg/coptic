@@ -17,7 +17,7 @@ enum Colors {
  * Start a timer (only if developer mode is active).
  * @param name - Timer name.
  */
-export function time(name: string) {
+export function time(name: string): void {
   if (dev.get()) {
     console.time(name);
   }
@@ -27,7 +27,7 @@ export function time(name: string) {
  * End a timer (only if developer mode is active).
  * @param name
  */
-export function timeEnd(name: string) {
+export function timeEnd(name: string): void {
   if (dev.get()) {
     console.timeEnd(name);
   }
@@ -97,7 +97,7 @@ export function error(...message: unknown[]): void {
  *
  * @param {...any} message - Message to log.
  */
-export function raise(...message: unknown[]) {
+export function raise(...message: unknown[]): void {
   print(Colors.RED, Colors.PURPLE, 'error', true, ...message);
 }
 
@@ -108,7 +108,7 @@ export function raise(...message: unknown[]) {
  *
  * @param {...any} message - Message to log.
  */
-export function fatal(...message: unknown[]) {
+export function fatal(...message: unknown[]): void {
   print(Colors.RED, Colors.PURPLE, 'fatal', false, ...message);
   process.exit(1);
 }
@@ -119,7 +119,7 @@ export function fatal(...message: unknown[]) {
  * @param condition - Condition to evaluate.
  * @param {...any} message - Message to log (if the condition is not satisfied).
  */
-export function err(condition: boolean, ...message: unknown[]) {
+export function err(condition: boolean, ...message: unknown[]): void {
   if (condition) {
     return;
   }
@@ -133,7 +133,7 @@ export function err(condition: boolean, ...message: unknown[]) {
  * @param condition - Condition to evaluate.
  * @param {...any} message - Message to log (if the condition is not satisfied).
  */
-export function ass(condition: boolean, ...message: unknown[]) {
+export function ass(condition: boolean, ...message: unknown[]): void {
   if (condition) {
     return;
   }
@@ -148,7 +148,7 @@ export function ass(condition: boolean, ...message: unknown[]) {
  * @param condition - Condition to evaluate.
  * @param {...any} message - Message to log (if the condition is not satisfied).
  */
-export function assass(condition: boolean, ...message: unknown[]) {
+export function assass(condition: boolean, ...message: unknown[]): void {
   if (condition) {
     return;
   }

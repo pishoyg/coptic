@@ -148,7 +148,7 @@ export class Highlighter {
    * @param index - Index of the rule.
    * @param rule - New rule.
    */
-  private upsertRule(index: number, rule: string) {
+  private upsertRule(index: number, rule: string): void {
     if (!this.sheet) {
       console.error(
         'Attempting to update sheet rules when the sheet is not set!'
@@ -210,7 +210,7 @@ export class Highlighter {
   /**
    * Register event listeners.
    */
-  private addEventListeners() {
+  private addEventListeners(): void {
     // A click on a checkbox triggers a dialect display update.
     this.dialectCheckboxes.forEach((checkbox) => {
       checkbox.addEventListener('click', () => {

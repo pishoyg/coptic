@@ -133,6 +133,6 @@ export class Word {
  * @param word
  * @returns
  */
-export function isCoptic(word: string) {
+export function isCoptic(word: string): boolean {
   return Word.isCoptic(word);
 }

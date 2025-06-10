@@ -25,7 +25,7 @@ function addEventListeners(): void {
 /**
  *
  */
-function main() {
+function main(): void {
   collapse.addEventListenersForSiblings();
   addEventListeners();
 }

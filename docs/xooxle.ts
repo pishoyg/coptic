@@ -193,7 +193,7 @@ export class Form {
   /**
    * Populate form fields from query parameters in the URL.
    */
-  private populateFromParams() {
+  private populateFromParams(): void {
     // Populate form values using query parameters.
     const url = new URL(window.location.href);
     this.searchBox.value = url.searchParams.get(Param.QUERY) ?? '';
@@ -207,7 +207,7 @@ export class Form {
    * @param name
    * @param value
    */
-  private populateParams(name: Param, value: string | boolean) {
+  private populateParams(name: Param, value: string | boolean): void {
     const url = new URL(window.location.href);
     if (!value) {
       url.searchParams.delete(name);
@@ -220,14 +220,14 @@ export class Form {
   /**
    * @returns The <tbody> element holding the results.
    */
-  get resultsTBody() {
+  get resultsTBody(): HTMLTableSectionElement {
     return this.tbody;
   }
 
   /**
    * Focus on the search box.
    */
-  focus() {
+  focus(): void {
     this.searchBox.focus();
   }
 
@@ -235,14 +235,14 @@ export class Form {
    * Add a search box input listener.
    * @param listener
    */
-  addSearchBoxInputListener(listener: () => void) {
+  addSearchBoxInputListener(listener: () => void): void {
     this.searchBox.addEventListener('input', listener);
   }
 
   /**
    * @param listener
    */
-  addCheckboxClickListener(listener: () => void) {
+  addCheckboxClickListener(listener: () => void): void {
     this.fullWordCheckbox.addEventListener('click', listener);
     this.regexCheckbox.addEventListener('click', listener);
   }
@@ -1158,7 +1158,7 @@ export class Xooxle {
    *
    * @param timeout - How long to wait before starting search.
    */
-  private search(timeout: number) {
+  private search(timeout: number): void {
     if (this.debounceTimeout) {
       clearTimeout(this.debounceTimeout);
     }
@@ -1172,7 +1172,7 @@ export class Xooxle {
   /**
    * Handle the search query, aborting any ongoing search.
    */
-  private async searchAux() {
+  private async searchAux(): Promise<void> {
     // If there is an ongoing search, abort it.
     this.currentAbortController?.abort();
     const abortController: AbortController = new AbortController();
@@ -1209,7 +1209,10 @@ export class Xooxle {
    * @param regex - Regex to search.
    * @param abortController - Abort controller for this search.
    */
-  private async searchAuxAux(regex: RegExp, abortController: AbortController) {
+  private async searchAuxAux(
+    regex: RegExp,
+    abortController: AbortController
+  ): Promise<void> {
     // TODO: (#0) We append random characters in order to avoid having timers
     // with identical names. This is not ideal. Let's supply an index name as
     // part of the metadata, and use that for logging instead.

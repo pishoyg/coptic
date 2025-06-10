@@ -449,6 +449,8 @@ export class ZoomerDragger {
   private originY = 0;
   private isDragging = false;
 
+  private static readonly MIN_SCALE = 0.2;
+
   /**
    * @param form
    * @param form.image
@@ -502,7 +504,7 @@ export class ZoomerDragger {
 
     if (e.deltaY < 0) {
       this.scale += ZOOM_FACTOR;
-    } else if (e.deltaY > 0 && this.scale > 0.2) {
+    } else if (e.deltaY > 0 && this.scale > ZoomerDragger.MIN_SCALE) {
       this.scale -= ZOOM_FACTOR;
     }
 
@@ -616,7 +618,7 @@ export class Dictionary {
   /**
    * Execute a search for a query.
    */
-  private search() {
+  private search(): void {
     const query = this.form.searchBox.value.trim().toLowerCase();
     const page = this.index.getPage(query);
     if (page === undefined) {
@@ -628,7 +630,7 @@ export class Dictionary {
   /**
    * Register event listeners.
    */
-  private addEventListeners() {
+  private addEventListeners(): void {
     // Input in the search box triggers a search.
     this.form.searchBox.addEventListener('input', this.search.bind(this));
 

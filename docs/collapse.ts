@@ -21,7 +21,7 @@ export class Collapsible {
   /**
    * Toggle the display of the collapsible.
    */
-  toggle() {
+  toggle(): void {
     this.element.style.maxHeight = this.element.style.maxHeight
       ? ''
       : this.element.scrollHeight.toString() + 'px';
@@ -33,7 +33,7 @@ export class Collapsible {
    * which is a very expensive operation. Don't perform it repeatedly in
    * performance-sensitive applications.
    */
-  updateHeight() {
+  updateHeight(): void {
     if (!this.element.style.maxHeight) {
       // This element is currently collapsed, so we keep the height at zero.
       return;
@@ -63,7 +63,7 @@ export class Collapsible {
  *
  * @param toggleUponLoad - If true, toggle once after loading.
  */
-export function addEventListenersForSiblings(toggleUponLoad = false) {
+export function addEventListenersForSiblings(toggleUponLoad = false): void {
   document
     .querySelectorAll<HTMLElement>(`.${CLS.COLLAPSE}`)
     .forEach((collapse: HTMLElement): void => {

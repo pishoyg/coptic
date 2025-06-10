@@ -40,7 +40,7 @@ export function get(): boolean {
 /**
  * @param value - New value for developer mode.
  */
-export function set(value: boolean) {
+export function set(value: boolean): void {
   localStorage.setItem(DEV, value ? ON : OFF);
 }
 
@@ -53,6 +53,6 @@ export function reset(): void {
 /**
  * Toggle developer mode.
  */
-export function toggle() {
+export function toggle(): void {
   set(!get());
 }

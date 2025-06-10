@@ -24,7 +24,7 @@ function ext(page: number): string {
 /**
  *
  */
-function main() {
+function main(): void {
   const form: scan.Form = new scan.Form(
     document.getElementById('scan') as HTMLImageElement,
     document.getElementById('next')!,

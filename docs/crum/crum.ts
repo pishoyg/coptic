@@ -57,7 +57,7 @@ export function handleAll(
  *
  * @param elem
  */
-export function handleCategories(elem: HTMLElement) {
+export function handleCategories(elem: HTMLElement): void {
   elem.querySelectorAll<HTMLElement>(`.${cls.CATEGORIES}`).forEach((el) => {
     el.innerHTML = el.innerHTML
       .trim()
@@ -75,7 +75,7 @@ export function handleCategories(elem: HTMLElement) {
  *
  * @param elem
  */
-export function handleRootType(elem: HTMLElement) {
+export function handleRootType(elem: HTMLElement): void {
   elem.querySelectorAll<HTMLElement>(`.${cls.ROOT_TYPE}`).forEach((el) => {
     const type: string | undefined = el.querySelector('b')?.innerHTML;
     if (!type) {
@@ -90,7 +90,7 @@ export function handleRootType(elem: HTMLElement) {
  *
  * @param elem
  */
-export function handleCrumPage(elem: HTMLElement) {
+export function handleCrumPage(elem: HTMLElement): void {
   elem.querySelectorAll<HTMLElement>(`.${cls.CRUM_PAGE}`).forEach((el) => {
     el.classList.add(ccls.LINK);
     html.makeSpanLinkToAnchor(el, `#crum${scan.chopColumn(el.innerHTML)}`);
@@ -101,7 +101,7 @@ export function handleCrumPage(elem: HTMLElement) {
  *
  * @param elem
  */
-export function handleCrumPageExternal(elem: HTMLElement) {
+export function handleCrumPageExternal(elem: HTMLElement): void {
   elem
     .querySelectorAll<HTMLElement>(`.${cls.CRUM_PAGE_EXTERNAL}`)
     .forEach((el) => {
@@ -116,7 +116,7 @@ export function handleCrumPageExternal(elem: HTMLElement) {
  *
  * @param elem
  */
-export function handleDawoudPageExternal(elem: HTMLElement) {
+export function handleDawoudPageExternal(elem: HTMLElement): void {
   elem
     .querySelectorAll<HTMLElement>(`.${cls.DAWOUD_PAGE_EXTERNAL}`)
     .forEach((el) => {
@@ -131,7 +131,7 @@ export function handleDawoudPageExternal(elem: HTMLElement) {
  *
  * @param elem
  */
-export function handleDawoudPageImg(elem: HTMLElement) {
+export function handleDawoudPageImg(elem: HTMLElement): void {
   elem
     .querySelectorAll<HTMLElement>(`.${cls.DAWOUD_PAGE_IMG}`)
     .forEach((el) => {
@@ -147,7 +147,7 @@ export function handleDawoudPageImg(elem: HTMLElement) {
  *
  * @param elem
  */
-export function handleCrumPageImg(elem: HTMLElement) {
+export function handleCrumPageImg(elem: HTMLElement): void {
   elem.querySelectorAll<HTMLElement>(`.${cls.CRUM_PAGE_IMG}`).forEach((el) => {
     const img = el.children[0] as HTMLElement;
     img.classList.add(ccls.LINK);
@@ -161,7 +161,7 @@ export function handleCrumPageImg(elem: HTMLElement) {
  *
  * @param elem
  */
-export function handleExplanatory(elem: HTMLElement) {
+export function handleExplanatory(elem: HTMLElement): void {
   elem.querySelectorAll<HTMLElement>(`.${cls.EXPLANATORY}`).forEach((el) => {
     const img = el.children[0] as HTMLElement;
     const alt = img.getAttribute('alt')!;
@@ -177,7 +177,7 @@ export function handleExplanatory(elem: HTMLElement) {
  *
  * @param elem
  */
-export function handleDawoudPage(elem: HTMLElement) {
+export function handleDawoudPage(elem: HTMLElement): void {
   elem.querySelectorAll<HTMLElement>(`.${cls.DAWOUD_PAGE}`).forEach((el) => {
     el.classList.add(ccls.LINK);
     html.makeSpanLinkToAnchor(el, `#dawoud${scan.chopColumn(el.innerHTML)}`);
@@ -188,7 +188,7 @@ export function handleDawoudPage(elem: HTMLElement) {
  *
  * @param elem
  */
-export function handleDrvKey(elem: HTMLElement) {
+export function handleDrvKey(elem: HTMLElement): void {
   elem
     .querySelectorAll<HTMLElement>(`.${cls.DRV_KEY}`)
     .forEach((key: HTMLElement) => {
@@ -218,7 +218,7 @@ export function handleDrvKey(elem: HTMLElement) {
  *
  * @param elem
  */
-export function handleExplanatoryKey(elem: HTMLElement) {
+export function handleExplanatoryKey(elem: HTMLElement): void {
   elem
     .querySelectorAll<HTMLElement>(`.${cls.EXPLANATORY_KEY}`)
     .forEach((el) => {
@@ -231,7 +231,7 @@ export function handleExplanatoryKey(elem: HTMLElement) {
  *
  * @param elem
  */
-export function handleSisterKey(elem: HTMLElement) {
+export function handleSisterKey(elem: HTMLElement): void {
   elem.querySelectorAll<HTMLElement>(`.${cls.SISTER_KEY}`).forEach((el) => {
     el.classList.add(ccls.HOVER_LINK);
     html.makeSpanLinkToAnchor(el, `#sister${el.innerHTML}`);
@@ -242,7 +242,7 @@ export function handleSisterKey(elem: HTMLElement) {
  *
  * @param elem
  */
-export function handleSisterView(elem: HTMLElement) {
+export function handleSisterView(elem: HTMLElement): void {
   elem
     .querySelectorAll(css.classQuery(cls.SISTERS_TABLE, cls.INDEX_TABLE))
     .forEach((table: Element) => {
@@ -271,7 +271,7 @@ export function handleSisterView(elem: HTMLElement) {
 export function handleDialect(
   elem: HTMLElement,
   highlighter: highlight.Highlighter
-) {
+): void {
   elem.querySelectorAll<HTMLElement>(`.${cls.DIALECT}`).forEach((el) => {
     el.classList.add(ccls.HOVER_LINK);
     el.addEventListener(
@@ -289,7 +289,7 @@ export function handleDialect(
 export function handleDeveloper(
   elem: HTMLElement,
   highlighter: highlight.Highlighter
-) {
+): void {
   elem
     .querySelectorAll<HTMLElement>(`.${header.CLS.DEVELOPER}`)
     .forEach((el) => {
@@ -301,7 +301,7 @@ export function handleDeveloper(
 /**
  *
  */
-export function insertCrumAbbreviationsLink() {
+export function insertCrumAbbreviationsLink(): void {
   const crumElement = document.getElementById('crum');
   const anchor = document.createElement('a');
   anchor.textContent = 'Abbreviations';
@@ -315,7 +315,7 @@ export function insertCrumAbbreviationsLink() {
  *
  * @param elem
  */
-export function handleAnkiNavigation(elem: HTMLElement) {
+export function handleAnkiNavigation(elem: HTMLElement): void {
   if (!iam.amI('anki')) return;
   elem.querySelectorAll<HTMLElement>(`.${cls.NAVIGATE}`).forEach((e) => {
     if (e.tagName !== 'A' || !e.hasAttribute('href')) {
@@ -333,7 +333,7 @@ export function handleAnkiNavigation(elem: HTMLElement) {
  *
  * @param elem
  */
-export function addCopticLookups(elem: HTMLElement) {
+export function addCopticLookups(elem: HTMLElement): void {
   html.linkifyText(
     elem,
     COPTIC_RE,
@@ -347,7 +347,7 @@ export function addCopticLookups(elem: HTMLElement) {
  *
  * @param elem
  */
-export function addGreekLookups(elem: HTMLElement) {
+export function addGreekLookups(elem: HTMLElement): void {
   html.linkifyText(elem, GREEK_RE, paths.GREEK_DICT_PREFIX, [
     ccls.LINK,
     cls.LIGHT,
@@ -358,7 +358,7 @@ export function addGreekLookups(elem: HTMLElement) {
  *
  * @param elem
  */
-export function addEnglishLookups(elem: HTMLElement) {
+export function addEnglishLookups(elem: HTMLElement): void {
   elem.querySelectorAll(`.${cls.MEANING}`).forEach((el) => {
     html.linkifyText(el, ENGLISH_RE, paths.LOOKUP_URL_PREFIX, [
       ccls.HOVER_LINK,
