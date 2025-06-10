@@ -1,0 +1,23 @@
+#keyboard-list {
+  width: 100%;
+  margin: 2rem auto;
+  text-align: left;
+}
+
+#keyboard-list td {
+  border-bottom: 1px solid #ccc;
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+#keyboard-list img.logo {
+  display: block;
+  margin: 0 auto;
+  max-height: 80px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
