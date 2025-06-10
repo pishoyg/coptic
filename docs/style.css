@@ -248,6 +248,13 @@ table:not(.info) {
   background-color: #ffa;
 }
 
+.drv-link {
+  font-size: x-small;
+  font-style: italic;
+  opacity: 0.7;
+  float: right;
+}
+
 .header {
   vertical-align: center;
   align-items: center;
