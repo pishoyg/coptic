@@ -8,6 +8,7 @@ import eslintPluginPrettier from 'eslint-plugin-prettier';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import eslintPluginJsdoc from 'eslint-plugin-jsdoc';
 
+/* eslint-disable no-magic-numbers */
 export default tseslint.config(
   // Shared rules.
   eslint.configs.recommended,
@@ -142,15 +143,41 @@ export default tseslint.config(
       ],
       '@typescript-eslint/no-explicit-any': 'error',
       '@typescript-eslint/switch-exhaustiveness-check': 'error',
-      'no-console': ['warn'],
+      'no-console': ['error'],
       '@typescript-eslint/no-floating-promises': 'error',
-      complexity: ['warn', 10],
-      'max-lines-per-function': ['warn', 50],
+      complexity: ['error', 12],
+      'max-lines-per-function': [
+        'error',
+        { max: 50, skipBlankLines: true, skipComments: true },
+      ],
       'no-magic-numbers': [
-        'warn',
-        { ignore: [0, 1, -1], ignoreArrayIndexes: true, enforceConst: true },
+        'error',
+        { ignore: [0, 1, -1, 2], ignoreArrayIndexes: true, enforceConst: true },
       ],
       'max-depth': ['error', 3],
+      'no-shadow': 'off',
+      'default-case': 'error',
+      'default-case-last': 'error',
+      eqeqeq: ['error', 'always'],
+      'no-debugger': 'error',
+      'no-alert': 'error',
+      'no-duplicate-imports': 'error',
+      'no-restricted-globals': ['error', 'event', 'fdescribe'],
+      'prefer-template': 'error',
+      'prefer-arrow-callback': 'error',
+      '@typescript-eslint/restrict-template-expressions': [
+        'error',
+        {
+          allowNumber: true,
+          allowBoolean: true,
+          allowNullish: false,
+        },
+      ],
+      'max-lines': [
+        'error',
+        { max: 500, skipBlankLines: true, skipComments: true },
+      ],
+      'max-nested-callbacks': ['error', 3],
     },
     languageOptions: {
       parserOptions: {
@@ -177,6 +204,8 @@ export default tseslint.config(
     files: ['**/*.ts', '**/*.tsx', '**/*.cts', '**/*.mts'],
     ...eslintPluginJsdoc.configs['flat/recommended-typescript'],
     rules: {
+      '@typescript-eslint/explicit-module-boundary-types': 'error',
+      '@typescript-eslint/no-shadow': ['error'],
       '@typescript-eslint/explicit-function-return-type': [
         'error',
         {
