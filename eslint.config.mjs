@@ -140,6 +140,17 @@ export default tseslint.config(
           format: ['UPPER_CASE'],
         },
       ],
+      '@typescript-eslint/no-explicit-any': 'error',
+      '@typescript-eslint/switch-exhaustiveness-check': 'error',
+      'no-console': ['warn'],
+      '@typescript-eslint/no-floating-promises': 'error',
+      complexity: ['warn', 10],
+      'max-lines-per-function': ['warn', 50],
+      'no-magic-numbers': [
+        'warn',
+        { ignore: [0, 1, -1], ignoreArrayIndexes: true, enforceConst: true },
+      ],
+      'max-depth': ['error', 3],
     },
     languageOptions: {
       parserOptions: {
@@ -166,6 +177,13 @@ export default tseslint.config(
     files: ['**/*.ts', '**/*.tsx', '**/*.cts', '**/*.mts'],
     ...eslintPluginJsdoc.configs['flat/recommended-typescript'],
     rules: {
+      '@typescript-eslint/explicit-function-return-type': [
+        'error',
+        {
+          allowExpressions: true,
+          allowTypedFunctionExpressions: true,
+        },
+      ],
       'jsdoc/require-jsdoc': [
         'error',
         {
