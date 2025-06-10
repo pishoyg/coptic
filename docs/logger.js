@@ -40,7 +40,7 @@ export function timeEnd(name) {
  * @param throwException - Whether to throw an exception.
  * @param {...any} args - Printable arguments.
  */
-function _print(color, recolor, severity, throwException = false, ...args) {
+function print(color, recolor, severity, throwException = false, ...args) {
   const message =
     `\x1b[2m${color}` +
     (severity
@@ -62,21 +62,21 @@ function _print(color, recolor, severity, throwException = false, ...args) {
  * @param {...any} message - Message to log.
  */
 export function info(...message) {
-  _print(Colors.GREEN, Colors.BLUE, 'info', false, ...message);
+  print(Colors.GREEN, Colors.BLUE, 'info', false, ...message);
 }
 /**
  * Log a warning message to the console.
  * @param {...any} message - Message to log.
  */
 export function warn(...message) {
-  _print(Colors.YELLOW, Colors.CYAN, 'warn', false, ...message);
+  print(Colors.YELLOW, Colors.CYAN, 'warn', false, ...message);
 }
 /**
  * Log an error message to the console.
  * @param {...any} message - Message to log.
  */
 export function error(...message) {
-  _print(Colors.RED, Colors.PURPLE, 'error', false, ...message);
+  print(Colors.RED, Colors.PURPLE, 'error', false, ...message);
 }
 /**
  * Raise an exception, and log an error message to the console.
@@ -84,7 +84,7 @@ export function error(...message) {
  * @param {...any} message - Message to log.
  */
 export function raise(...message) {
-  _print(Colors.RED, Colors.PURPLE, 'error', true, ...message);
+  print(Colors.RED, Colors.PURPLE, 'error', true, ...message);
 }
 /**
  * Exit with a non-zero error code, and log an error message to the console.
@@ -94,7 +94,7 @@ export function raise(...message) {
  * @param {...any} message - Message to log.
  */
 export function fatal(...message) {
-  _print(Colors.RED, Colors.PURPLE, 'fatal', false, ...message);
+  print(Colors.RED, Colors.PURPLE, 'fatal', false, ...message);
   process.exit(1);
 }
 /**

@@ -34,14 +34,14 @@ export function makeSpanLinkToAnchor(el, target) {
  * @param regex
  * @param url
  * @param classes
- * @param direct_parent_excluded_classes
+ * @param directParentExcludedClasses
  */
 export function linkifyText(
   root,
   regex,
   url,
   classes,
-  direct_parent_excluded_classes = []
+  directParentExcludedClasses = []
 ) {
   const admit = (node) => {
     if (!node.nodeValue) {
@@ -63,9 +63,7 @@ export function linkifyText(
       return false;
     }
     if (
-      direct_parent_excluded_classes.some((cls) =>
-        parent.classList.contains(cls)
-      )
+      directParentExcludedClasses.some((cls) => parent.classList.contains(cls))
     ) {
       // This parent is explicitly excluded.
       return false;

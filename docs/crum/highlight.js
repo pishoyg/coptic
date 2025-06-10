@@ -159,7 +159,7 @@ export class Highlighter {
    * update will erase the effects of previous updates. If this is the case, you
    * should pass a `reset_func` that resets the elements to the default style.
    *
-   * @param rule_index - Index of the CSS rule to replace, if we were to update
+   * @param ruleIndex - Index of the CSS rule to replace, if we were to update
    * a CSS rule.
    * @param query - Query that returns all affected elements.
    * @param style - CSS style that should be applied to the set of elements
@@ -168,27 +168,20 @@ export class Highlighter {
    * @param func - A function that updates the style of the affected elements.
    * This is an alternative to the 'style' parameter, used only if we can't
    * update CSS rules.
-   * @param reset_query - A query that returns all elements potentially affected
+   * @param resetQuery - A query that returns all elements potentially affected
    * by previous display updates.
-   * @param reset_func - A function that resets the display of all elements
+   * @param resetFunc - A function that resets the display of all elements
    * potentially affected by previous display updates.
    */
-  updateSheetOrElements(
-    rule_index,
-    query,
-    style,
-    func,
-    reset_query,
-    reset_func
-  ) {
+  updateSheetOrElements(ruleIndex, query, style, func, resetQuery, resetFunc) {
     if (this.anki) {
-      if (reset_query && reset_func) {
-        document.querySelectorAll(reset_query).forEach(reset_func);
+      if (resetQuery && resetFunc) {
+        document.querySelectorAll(resetQuery).forEach(resetFunc);
       }
       document.querySelectorAll(query).forEach(func);
       return;
     }
-    this.upsertRule(rule_index, `${query} { ${style} }`);
+    this.upsertRule(ruleIndex, `${query} { ${style} }`);
   }
   /**
    * Register event listeners.

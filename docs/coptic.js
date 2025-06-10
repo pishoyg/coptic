@@ -45,7 +45,7 @@ export const DIACRITICS = new Set([
  * wrapper, to allow you to conveniently compare words lexicographically.
  */
 export class Word {
-  static mapping = Word.buildMapping();
+  static MAPPING = Word.buildMapping();
   mapped;
   word;
   /**
@@ -56,7 +56,7 @@ export class Word {
     this.word = word.toLowerCase();
     logger.assass(!!this.word, 'constructing a word with the empty string!');
     logger.assass(
-      Array.from(word).every((c) => c in Word.mapping),
+      Array.from(word).every((c) => c in Word.MAPPING),
       word,
       'contains character that are not in the mapping!'
     );
@@ -69,7 +69,7 @@ export class Word {
    * empty string, return true.
    */
   static isCoptic(word) {
-    return Array.from(word).every((c) => c in Word.mapping);
+    return Array.from(word).every((c) => c in Word.MAPPING);
   }
   /**
    *
@@ -86,7 +86,7 @@ export class Word {
    */
   static map(word) {
     return Array.from(word)
-      .map((a) => Word.mapping[a] ?? a)
+      .map((a) => Word.MAPPING[a] ?? a)
       .join();
   }
   /**

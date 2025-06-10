@@ -16,6 +16,5 @@ export var CLS;
 export function reports() {
   const url = new URL(paths.REPORTS);
   url.searchParams.set(paths.REPORTS_PAGE_PARAM, window.location.href);
-  console.log(url.toString());
   browser.open(url.toString(), true);
 }

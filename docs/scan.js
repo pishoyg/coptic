@@ -30,7 +30,7 @@ export function chopColumn(page) {
  * A dictionary index.
  */
 export class Index {
-  WordType;
+  wordType;
   pages;
   /**
    * @param index - The content of the index, in plain TSV format,with the first
@@ -39,12 +39,12 @@ export class Index {
    * 2. Page start word
    * 3. Page end word
    *
-   * @param WordType - The type of words in this dictionary. This should be a
+   * @param wordType - The type of words in this dictionary. This should be a
    * constructor type that takes as input the string representation of the word,
    * which is retrieved from the index columns.
    */
-  constructor(index, WordType) {
-    this.WordType = WordType;
+  constructor(index, wordType) {
+    this.wordType = wordType;
     const lines = index.trim().split('\n');
     const header = Index.toColumns(lines[0]);
     // Verify that the header has the expected column names.
@@ -60,8 +60,8 @@ export class Index {
         const [page, start, end] = Index.toColumns(row);
         return {
           page: Index.forceParseInt(page),
-          start: new WordType(start),
-          end: new WordType(end),
+          start: new wordType(start),
+          end: new wordType(end),
         };
       });
   }
@@ -113,7 +113,7 @@ export class Index {
       return undefined;
     }
     // Binary search the word in the dictionary.
-    const target = new this.WordType(query);
+    const target = new this.wordType(query);
     let left = 0;
     let right = this.pages.length - 1;
     while (left < right) {
@@ -382,6 +382,7 @@ export class ZoomerDragger {
   originX = 0;
   originY = 0;
   isDragging = false;
+  static MIN_SCALE = 0.2;
   /**
    * @param form
    * @param form.image
@@ -423,7 +424,7 @@ export class ZoomerDragger {
     e.stopPropagation();
     if (e.deltaY < 0) {
       this.scale += ZOOM_FACTOR;
-    } else if (e.deltaY > 0 && this.scale > 0.2) {
+    } else if (e.deltaY > 0 && this.scale > ZoomerDragger.MIN_SCALE) {
       this.scale -= ZOOM_FACTOR;
     }
     this.updateTransform();

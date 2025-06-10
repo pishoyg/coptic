@@ -94,12 +94,12 @@ const orthographer = new orth.Orthographer(
 /**
  * _Param defines the form query parameters.
  */
-var _Param;
-(function (_Param) {
-  _Param['QUERY'] = 'query';
-  _Param['FULL'] = 'full';
-  _Param['REGEX'] = 'regex';
-})(_Param || (_Param = {}));
+var Param;
+(function (Param) {
+  Param['QUERY'] = 'query';
+  Param['FULL'] = 'full';
+  Param['REGEX'] = 'regex';
+})(Param || (Param = {}));
 /**
  * Form represents a search form containing the HTML elements that the user
  * interacts with to initiate and control search.
@@ -141,13 +141,13 @@ export class Form {
    */
   addEventListeners() {
     this.searchBox.addEventListener('input', () => {
-      this.populateParams(_Param.QUERY, this.searchBox.value);
+      this.populateParams(Param.QUERY, this.searchBox.value);
     });
     this.fullWordCheckbox.addEventListener('click', () => {
-      this.populateParams(_Param.FULL, this.fullWordCheckbox.checked);
+      this.populateParams(Param.FULL, this.fullWordCheckbox.checked);
     });
     this.regexCheckbox.addEventListener('click', () => {
-      this.populateParams(_Param.REGEX, this.regexCheckbox.checked);
+      this.populateParams(Param.REGEX, this.regexCheckbox.checked);
     });
   }
   /**
@@ -156,10 +156,9 @@ export class Form {
   populateFromParams() {
     // Populate form values using query parameters.
     const url = new URL(window.location.href);
-    this.searchBox.value = url.searchParams.get(_Param.QUERY) ?? '';
-    this.fullWordCheckbox.checked =
-      url.searchParams.get(_Param.FULL) === 'true';
-    this.regexCheckbox.checked = url.searchParams.get(_Param.REGEX) === 'true';
+    this.searchBox.value = url.searchParams.get(Param.QUERY) ?? '';
+    this.fullWordCheckbox.checked = url.searchParams.get(Param.FULL) === 'true';
+    this.regexCheckbox.checked = url.searchParams.get(Param.REGEX) === 'true';
   }
   /**
    * Update the given URL parameter.
@@ -676,18 +675,18 @@ class HTMLBuilder {
    * Each of the (potentially several) pieces of text making up a match will be
    * surrounded by an opening and a closing tag.
    */
-  static opening = `<span class="${'match' /* CLS.MATCH */}">`;
+  static OPENING = `<span class="${'match' /* CLS.MATCH */}">`;
   /**
    * A match closing tag.
    * Each of the (potentially several) pieces of text making up a match will be
    * surrounded by an opening and a closing tag.
    */
-  static closing = '</span>';
+  static CLOSING = '</span>';
   /**
    * The closing tag is not distinguishable enough, so we use this placeholder
    * first, substituting it for the actual closing tag later on.
    */
-  static closingPlaceholder = 'CLOSING_TAG';
+  static CLOSING_PLACEHOLDER = 'CLOSING_TAG';
   /**
    * Start a match.
    */
@@ -697,13 +696,13 @@ class HTMLBuilder {
     }
     this.open = true;
     if (
-      this.builder[this.builder.length - 1] === HTMLBuilder.closingPlaceholder
+      this.builder[this.builder.length - 1] === HTMLBuilder.CLOSING_PLACEHOLDER
     ) {
       // Open a match by un-closing the previous match.
       this.builder.pop();
     } else {
       // Open a match by pushing an opening tag.
-      this.builder.push(HTMLBuilder.opening);
+      this.builder.push(HTMLBuilder.OPENING);
     }
   }
   /**
@@ -714,12 +713,12 @@ class HTMLBuilder {
       console.error('Warning: The match is already closed!');
     }
     this.open = false;
-    if (this.builder[this.builder.length - 1] === HTMLBuilder.opening) {
+    if (this.builder[this.builder.length - 1] === HTMLBuilder.OPENING) {
       // Close the match by popping the opening tag. This is an empty match.
       this.builder.pop();
     } else {
       // Close a match by pushing a closing tag.
-      this.builder.push(HTMLBuilder.closingPlaceholder);
+      this.builder.push(HTMLBuilder.CLOSING_PLACEHOLDER);
     }
   }
   /**
@@ -749,7 +748,7 @@ class HTMLBuilder {
   build() {
     return this.builder
       .map((s) =>
-        s === HTMLBuilder.closingPlaceholder ? HTMLBuilder.closing : s
+        s === HTMLBuilder.CLOSING_PLACEHOLDER ? HTMLBuilder.CLOSING : s
       )
       .join('');
   }
@@ -885,25 +884,10 @@ class LineSearchResult {
 export class BucketSorter {
   numBuckets;
   /**
-   * @param numBuckets - Total number of buckets. The default is one bucket
-   * that contains all results, thus there is no sorting.
+   * @param numBuckets - Total number of buckets.
    */
-  constructor(numBuckets = 1) {
-    this.numBuckets = Math.max(1, Math.round(numBuckets));
-  }
-  /**
-   * bucket returns the bucket that a given search result belongs to. This
-   * should fall in the range [0, numBuckets-1].
-   * Results will be sorted in the output based on the bucket that they belong
-   * to.
-   *
-   * @param _res - Search result.
-   * @param _row - Table row.
-   * @returns Bucket number.
-   */
-  bucket(_res, _row) {
-    // The default is to put all results in the first bucket.
-    return 0;
+  constructor(numBuckets) {
+    this.numBuckets = numBuckets;
   }
   /**
    * validBucket wraps bucket, and ensures results are valid.
@@ -965,7 +949,7 @@ export class Xooxle {
     index,
     form,
     hrefFmt,
-    bucketSorter = new BucketSorter(),
+    bucketSorter,
     admit = () => true,
     prepublish
   ) {
@@ -1073,7 +1057,7 @@ export class Xooxle {
     // avoid jitter at the top of the table, which is the area that the user
     // will be looking at.
     const bucketSentinels = Array.from(
-      { length: this.bucketSorter.numBuckets },
+      { length: this.bucketSorter?.numBuckets ?? 1 },
       () => {
         const tr = document.createElement('tr');
         tr.style.display = 'none';
@@ -1100,7 +1084,7 @@ export class Xooxle {
       const row = result.row(this.hrefFmt, results.length);
       this.prepublish?.(row);
       bucketSentinels[
-        this.bucketSorter.validBucket(result, row)
+        this.bucketSorter?.validBucket(result, row) ?? 0
       ].insertAdjacentElement('beforebegin', row);
       if (count % RESULTS_TO_UPDATE_DISPLAY == RESULTS_TO_UPDATE_DISPLAY - 1) {
         if (count <= RESULTS_TO_UPDATE_DISPLAY) {
