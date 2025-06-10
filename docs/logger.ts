@@ -43,7 +43,7 @@ export function timeEnd(name: string) {
  * @param throwException - Whether to throw an exception.
  * @param {...any} args - Printable arguments.
  */
-function _print(
+function print(
   color: string,
   recolor: string,
   severity: '' | 'info' | 'warn' | 'error' | 'fatal',
@@ -73,7 +73,7 @@ function _print(
  * @param {...any} message - Message to log.
  */
 export function info(...message: unknown[]): void {
-  _print(Colors.GREEN, Colors.BLUE, 'info', false, ...message);
+  print(Colors.GREEN, Colors.BLUE, 'info', false, ...message);
 }
 
 /**
@@ -81,7 +81,7 @@ export function info(...message: unknown[]): void {
  * @param {...any} message - Message to log.
  */
 export function warn(...message: unknown[]): void {
-  _print(Colors.YELLOW, Colors.CYAN, 'warn', false, ...message);
+  print(Colors.YELLOW, Colors.CYAN, 'warn', false, ...message);
 }
 
 /**
@@ -89,7 +89,7 @@ export function warn(...message: unknown[]): void {
  * @param {...any} message - Message to log.
  */
 export function error(...message: unknown[]): void {
-  _print(Colors.RED, Colors.PURPLE, 'error', false, ...message);
+  print(Colors.RED, Colors.PURPLE, 'error', false, ...message);
 }
 
 /**
@@ -98,7 +98,7 @@ export function error(...message: unknown[]): void {
  * @param {...any} message - Message to log.
  */
 export function raise(...message: unknown[]) {
-  _print(Colors.RED, Colors.PURPLE, 'error', true, ...message);
+  print(Colors.RED, Colors.PURPLE, 'error', true, ...message);
 }
 
 /**
@@ -109,7 +109,7 @@ export function raise(...message: unknown[]) {
  * @param {...any} message - Message to log.
  */
 export function fatal(...message: unknown[]) {
-  _print(Colors.RED, Colors.PURPLE, 'fatal', false, ...message);
+  print(Colors.RED, Colors.PURPLE, 'fatal', false, ...message);
   process.exit(1);
 }
 

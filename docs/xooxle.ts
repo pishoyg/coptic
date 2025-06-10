@@ -102,9 +102,9 @@ const orthographer: orth.Orthographer = new orth.Orthographer(
 );
 
 /**
- * _Form stores Form parameters.
+ * FormParams stores Form parameters.
  */
-export interface _Form {
+export interface FormParams {
   searchBoxID: string;
   fullWordCheckboxID: string;
   regexCheckboxID: string;
@@ -116,7 +116,7 @@ export interface _Form {
 /**
  * _Param defines the form query parameters.
  */
-enum _Param {
+enum Param {
   QUERY = 'query',
   FULL = 'full',
   REGEX = 'regex',
@@ -144,7 +144,7 @@ export class Form {
    *
    * @param form - Form parameters.
    */
-  constructor(form: _Form) {
+  constructor(form: FormParams) {
     this.searchBox = document.getElementById(
       form.searchBoxID
     ) as HTMLInputElement;
@@ -178,15 +178,15 @@ export class Form {
    */
   private addEventListeners(): void {
     this.searchBox.addEventListener('input', () => {
-      this.populateParams(_Param.QUERY, this.searchBox.value);
+      this.populateParams(Param.QUERY, this.searchBox.value);
     });
 
     this.fullWordCheckbox.addEventListener('click', () => {
-      this.populateParams(_Param.FULL, this.fullWordCheckbox.checked);
+      this.populateParams(Param.FULL, this.fullWordCheckbox.checked);
     });
 
     this.regexCheckbox.addEventListener('click', () => {
-      this.populateParams(_Param.REGEX, this.regexCheckbox.checked);
+      this.populateParams(Param.REGEX, this.regexCheckbox.checked);
     });
   }
 
@@ -196,10 +196,9 @@ export class Form {
   private populateFromParams() {
     // Populate form values using query parameters.
     const url = new URL(window.location.href);
-    this.searchBox.value = url.searchParams.get(_Param.QUERY) ?? '';
-    this.fullWordCheckbox.checked =
-      url.searchParams.get(_Param.FULL) === 'true';
-    this.regexCheckbox.checked = url.searchParams.get(_Param.REGEX) === 'true';
+    this.searchBox.value = url.searchParams.get(Param.QUERY) ?? '';
+    this.fullWordCheckbox.checked = url.searchParams.get(Param.FULL) === 'true';
+    this.regexCheckbox.checked = url.searchParams.get(Param.REGEX) === 'true';
   }
 
   /**
@@ -208,7 +207,7 @@ export class Form {
    * @param name
    * @param value
    */
-  private populateParams(name: _Param, value: string | boolean) {
+  private populateParams(name: Param, value: string | boolean) {
     const url = new URL(window.location.href);
     if (!value) {
       url.searchParams.delete(name);
@@ -796,20 +795,20 @@ class HTMLBuilder {
    * Each of the (potentially several) pieces of text making up a match will be
    * surrounded by an opening and a closing tag.
    */
-  private static readonly opening = `<span class="${CLS.MATCH}">`;
+  private static readonly OPENING = `<span class="${CLS.MATCH}">`;
 
   /**
    * A match closing tag.
    * Each of the (potentially several) pieces of text making up a match will be
    * surrounded by an opening and a closing tag.
    */
-  private static readonly closing = '</span>';
+  private static readonly CLOSING = '</span>';
 
   /**
    * The closing tag is not distinguishable enough, so we use this placeholder
    * first, substituting it for the actual closing tag later on.
    */
-  private static readonly closingPlaceholder = 'CLOSING_TAG';
+  private static readonly CLOSING_PLACEHOLDER = 'CLOSING_TAG';
 
   /**
    * Start a match.
@@ -820,13 +819,13 @@ class HTMLBuilder {
     }
     this.open = true;
     if (
-      this.builder[this.builder.length - 1] === HTMLBuilder.closingPlaceholder
+      this.builder[this.builder.length - 1] === HTMLBuilder.CLOSING_PLACEHOLDER
     ) {
       // Open a match by un-closing the previous match.
       this.builder.pop();
     } else {
       // Open a match by pushing an opening tag.
-      this.builder.push(HTMLBuilder.opening);
+      this.builder.push(HTMLBuilder.OPENING);
     }
   }
 
@@ -838,12 +837,12 @@ class HTMLBuilder {
       console.error('Warning: The match is already closed!');
     }
     this.open = false;
-    if (this.builder[this.builder.length - 1] === HTMLBuilder.opening) {
+    if (this.builder[this.builder.length - 1] === HTMLBuilder.OPENING) {
       // Close the match by popping the opening tag. This is an empty match.
       this.builder.pop();
     } else {
       // Close a match by pushing a closing tag.
-      this.builder.push(HTMLBuilder.closingPlaceholder);
+      this.builder.push(HTMLBuilder.CLOSING_PLACEHOLDER);
     }
   }
 
@@ -876,7 +875,7 @@ class HTMLBuilder {
   build(): string {
     return this.builder
       .map((s) =>
-        s === HTMLBuilder.closingPlaceholder ? HTMLBuilder.closing : s
+        s === HTMLBuilder.CLOSING_PLACEHOLDER ? HTMLBuilder.CLOSING : s
       )
       .join('');
   }
@@ -1030,7 +1029,7 @@ class LineSearchResult {
 /**
  * _Index represents the JSON structure of a Xooxle index.
  */
-export interface _Index {
+export interface Index {
   readonly data: Record<string, string>[];
   readonly metadata: {
     /** fields is the list of fields in the output. For each
@@ -1046,16 +1045,11 @@ export interface _Index {
 /**
  * BucketSorter allows search results to be sorted into buckets.
  */
-export class BucketSorter {
-  readonly numBuckets: number;
-
+export abstract class BucketSorter {
   /**
-   * @param numBuckets - Total number of buckets. The default is one bucket
-   * that contains all results, thus there is no sorting.
+   * @param numBuckets - Total number of buckets.
    */
-  constructor(numBuckets = 1) {
-    this.numBuckets = Math.max(1, Math.round(numBuckets));
-  }
+  constructor(readonly numBuckets: number) {}
 
   /**
    * bucket returns the bucket that a given search result belongs to. This
@@ -1063,14 +1057,11 @@ export class BucketSorter {
    * Results will be sorted in the output based on the bucket that they belong
    * to.
    *
-   * @param _res - Search result.
-   * @param _row - Table row.
+   * @param res - Search result.
+   * @param row - Table row.
    * @returns Bucket number.
    */
-  bucket(_res: SearchResult, _row: HTMLTableRowElement): number {
-    // The default is to put all results in the first bucket.
-    return 0;
-  }
+  abstract bucket(res: SearchResult, row: HTMLTableRowElement): number;
 
   /**
    * validBucket wraps bucket, and ensures results are valid.
@@ -1128,10 +1119,10 @@ export class Xooxle {
    * insertion in the table.
    */
   constructor(
-    index: _Index,
+    index: Index,
     private readonly form: Form,
     private readonly hrefFmt?: string,
-    private readonly bucketSorter: BucketSorter = new BucketSorter(),
+    private readonly bucketSorter?: BucketSorter,
     private readonly admit: (res: SearchResult) => boolean = () => true,
     private readonly prepublish?: (row: HTMLTableRowElement) => void
   ) {
@@ -1246,7 +1237,7 @@ export class Xooxle {
     // avoid jitter at the top of the table, which is the area that the user
     // will be looking at.
     const bucketSentinels: Element[] = Array.from(
-      { length: this.bucketSorter.numBuckets },
+      { length: this.bucketSorter?.numBuckets ?? 1 },
       () => {
         const tr = document.createElement('tr');
         tr.style.display = 'none';
@@ -1277,7 +1268,7 @@ export class Xooxle {
       this.prepublish?.(row);
 
       bucketSentinels[
-        this.bucketSorter.validBucket(result, row)
+        this.bucketSorter?.validBucket(result, row) ?? 0
       ]!.insertAdjacentElement('beforebegin', row);
 
       if (count % RESULTS_TO_UPDATE_DISPLAY == RESULTS_TO_UPDATE_DISPLAY - 1) {

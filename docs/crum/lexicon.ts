@@ -103,13 +103,13 @@ class CrumDialectSorter extends xooxle.BucketSorter {
  * special treatment. Our sorting is simply based on whether we have a match in
  * a dialect of interest.
  */
-class kelliaDialectSorter extends xooxle.BucketSorter {
+class KELLIADialectSorter extends xooxle.BucketSorter {
   private static readonly NUM_BUCKETS = 2;
 
   /**
    */
   constructor() {
-    super(kelliaDialectSorter.NUM_BUCKETS);
+    super(KELLIADialectSorter.NUM_BUCKETS);
   }
 
   /**
@@ -154,7 +154,7 @@ const XOOXLES: Xooxle[] = [
     tableID: 'kellia',
     collapsibleID: 'kellia-collapsible',
     hrefFmt: paths.CDO_LOOKUP_KEY_FMT,
-    bucketSorter: new kelliaDialectSorter(),
+    bucketSorter: new KELLIADialectSorter(),
   },
   {
     indexURL: 'copticsite.json',
@@ -189,7 +189,7 @@ async function main(): Promise<void> {
   await Promise.all(
     XOOXLES.map(async (xoox) => {
       const raw = await fetch(xoox.indexURL);
-      const json = (await raw.json()) as xooxle._Index;
+      const json = (await raw.json()) as xooxle.Index;
       const form = new xooxle.Form({
         searchBoxID: SEARCH_BOX_ID,
         fullWordCheckboxID: FULL_WORD_CHECKBOX_ID,

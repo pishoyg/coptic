@@ -134,7 +134,7 @@ export class Shortcut {
    */
   constructor(
     private readonly description: string,
-    private readonly available: iam.Where[],
+    private readonly available: iam.WHERE[],
     private readonly action: (event: KeyboardEvent) => void,
     private readonly show = true
   ) {}

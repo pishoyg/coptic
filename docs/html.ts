@@ -41,14 +41,14 @@ export function makeSpanLinkToAnchor(el: Element, target: string): void {
  * @param regex
  * @param url
  * @param classes
- * @param direct_parent_excluded_classes
+ * @param directParentExcludedClasses
  */
 export function linkifyText(
   root: Node,
   regex: RegExp,
   url: string,
   classes: string[],
-  direct_parent_excluded_classes: string[] = []
+  directParentExcludedClasses: string[] = []
 ): void {
   const admit = (node: Node): boolean => {
     if (!node.nodeValue) {
@@ -70,9 +70,7 @@ export function linkifyText(
       return false;
     }
     if (
-      direct_parent_excluded_classes.some((cls) =>
-        parent.classList.contains(cls)
-      )
+      directParentExcludedClasses.some((cls) => parent.classList.contains(cls))
     ) {
       // This parent is explicitly excluded.
       return false;

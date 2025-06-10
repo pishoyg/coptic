@@ -97,21 +97,21 @@ async function nodeMain(): Promise<void> {
   const path = await import('path');
   const url = await import('url');
 
-  const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
+  const dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
   ALL.forEach((sheet) => {
-    const filePath = path.join(__dirname, sheet);
+    const filePath = path.join(dirname, sheet);
     if (!fs.existsSync(filePath)) {
       throw new Error(`Missing file: ${filePath}`);
     }
   });
 
   new scan.Index(
-    fs.readFileSync(path.join(__dirname, COPTIC), 'utf8'),
+    fs.readFileSync(path.join(dirname, COPTIC), 'utf8'),
     DawoudWord
   ).validate(false);
   new scan.Index(
-    fs.readFileSync(path.join(__dirname, GREEK), 'utf8'),
+    fs.readFileSync(path.join(dirname, GREEK), 'utf8'),
     coptic.Word
   ).validate(false);
 }

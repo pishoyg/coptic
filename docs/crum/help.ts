@@ -24,13 +24,13 @@ import * as header from '../header.js';
 export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
   const panel = new help.Help();
 
-  const dialectHighlighting: Record<d.DIALECT_KEY, help.Shortcut[]> =
+  const dialectHighlighting: Record<d.DialectKey, help.Shortcut[]> =
     Object.values(d.DIALECTS).reduce(
       (acc, dialect: d.Dialect) => {
         acc[dialect.key] = [dialect.shortcut(highlighter)];
         return acc;
       },
-      {} as Record<d.DIALECT_KEY, help.Shortcut[]>
+      {} as Record<d.DialectKey, help.Shortcut[]>
     );
 
   const control = {

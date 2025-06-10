@@ -10,7 +10,7 @@ import * as highlight from './highlight.js';
 const D = 'd';
 const SEPARATOR = ',';
 
-type DIALECT_SINGLE_CHAR =
+type SingleCharDialect =
   | 'S'
   | 'A'
   | 'L'
@@ -22,8 +22,8 @@ type DIALECT_SINGLE_CHAR =
   | 'V'
   | 'W'
   | 'U';
-type DIALECT_DOUBLE_CHAR = 'Sa' | 'Sf' | 'Fb' | 'NH';
-export type DIALECT = DIALECT_SINGLE_CHAR | DIALECT_DOUBLE_CHAR;
+type DoubleCharDialect = 'Sa' | 'Sf' | 'Fb' | 'NH';
+export type DIALECT = SingleCharDialect | DoubleCharDialect;
 
 const DEFAULT: DIALECT[] = ['B'];
 
@@ -38,21 +38,21 @@ enum CLS {
  * shortcut key. For the double-character dialect codes, we use an abbreviation,
  * which we define below.
  */
-type DIALECT_ABBREV = 'N' | 'a' | 'f' | 'b';
+type DoubleCharDialectAbbrev = 'N' | 'a' | 'f' | 'b';
 
 /**
  * DIALECT_KEY is a single-character dialect key. They are less recognizable and
  * less suited for use in UI, but useful in situations where you must have a
  * single-character dialect encoding.
  */
-export type DIALECT_KEY = DIALECT_SINGLE_CHAR | DIALECT_ABBREV;
+export type DialectKey = SingleCharDialect | DoubleCharDialectAbbrev;
 
 type DICTIONARY = 'KELLIA' | 'Crum' | 'copticsite';
 
 /**
  */
 export class Dialect {
-  readonly key: DIALECT_KEY;
+  readonly key: DialectKey;
 
   /**
    * @param code - Recognizable, UI-friendly, dialect code.
@@ -69,9 +69,9 @@ export class Dialect {
     readonly name: string,
     readonly article = '',
     readonly dictionaries: DICTIONARY[],
-    key?: DIALECT_ABBREV
+    key?: DoubleCharDialectAbbrev
   ) {
-    this.key = key ?? (code as DIALECT_SINGLE_CHAR);
+    this.key = key ?? (code as SingleCharDialect);
   }
 
   /**

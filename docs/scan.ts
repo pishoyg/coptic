@@ -70,13 +70,13 @@ export class Index {
    * 2. Page start word
    * 3. Page end word
    *
-   * @param WordType - The type of words in this dictionary. This should be a
+   * @param wordType - The type of words in this dictionary. This should be a
    * constructor type that takes as input the string representation of the word,
    * which is retrieved from the index columns.
    */
   constructor(
     index: string,
-    private readonly WordType: new (str: string) => Word
+    private readonly wordType: new (str: string) => Word
   ) {
     const lines = index.trim().split('\n');
     const header: string[] = Index.toColumns(lines[0]!);
@@ -94,8 +94,8 @@ export class Index {
         const [page, start, end] = Index.toColumns(row);
         return {
           page: Index.forceParseInt(page!),
-          start: new WordType(start!),
-          end: new WordType(end!),
+          start: new wordType(start!),
+          end: new wordType(end!),
         };
       });
   }
@@ -153,7 +153,7 @@ export class Index {
     }
 
     // Binary search the word in the dictionary.
-    const target = new this.WordType(query);
+    const target = new this.wordType(query);
     let left = 0;
     let right = this.pages.length - 1;
     while (left < right) {
