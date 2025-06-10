@@ -89,6 +89,57 @@ export default tseslint.config(
             'Use getElementById instead of querySelector with an ID selector.',
         },
       ],
+      '@typescript-eslint/naming-convention': [
+        'error',
+        // camelCase for variables and functions
+        {
+          selector: 'default',
+          format: ['camelCase'],
+        },
+        // PascalCase for classes and types
+        {
+          selector: 'typeLike',
+          format: ['PascalCase'],
+        },
+        // UPPER_CASE for constants
+        {
+          selector: 'variable',
+          modifiers: ['const'],
+          format: ['UPPER_CASE'],
+          filter: {
+            regex: '^[A-Z0-9_]+$',
+            match: true,
+          },
+        },
+        // camelCase for function parameters
+        {
+          selector: 'parameter',
+          format: ['camelCase'],
+          leadingUnderscore: 'allow',
+        },
+        // PascalCase for enums
+        {
+          selector: 'enum',
+          format: ['PascalCase'],
+        },
+        // camelCase for enum members
+        {
+          selector: 'enumMember',
+          format: ['UPPER_CASE'],
+        },
+        // No convention for object properties.
+        {
+          selector: 'objectLiteralProperty',
+          format: null,
+        },
+        // UPPER_CASE for static readonly class properties (they're like
+        // constants).
+        {
+          selector: 'classProperty',
+          modifiers: ['static', 'readonly'],
+          format: ['UPPER_CASE'],
+        },
+      ],
     },
     languageOptions: {
       parserOptions: {
