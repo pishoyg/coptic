@@ -11,6 +11,7 @@ import * as cls from './cls.js';
 const WANT_COLUMNS = ['page', 'start', 'end'];
 // ZOOM_FACTOR controls how fast zooming happens in response to scroll events.
 const ZOOM_FACTOR = 0.05;
+const MIN_SCALE = 0.2;
 /**
  * We often use the notation "${NUM}${COL}" to refer to a given column in a
  * page. For example, "1a" refers to the left column of page 1.
@@ -382,7 +383,6 @@ export class ZoomerDragger {
   originX = 0;
   originY = 0;
   isDragging = false;
-  static MIN_SCALE = 0.2;
   /**
    * @param form
    * @param form.image
@@ -424,7 +424,7 @@ export class ZoomerDragger {
     e.stopPropagation();
     if (e.deltaY < 0) {
       this.scale += ZOOM_FACTOR;
-    } else if (e.deltaY > 0 && this.scale > ZoomerDragger.MIN_SCALE) {
+    } else if (e.deltaY > 0 && this.scale > MIN_SCALE) {
       this.scale -= ZOOM_FACTOR;
     }
     this.updateTransform();

@@ -17,6 +17,7 @@ import * as header from '../header.js';
  * @param highlighter
  * @returns
  */
+// eslint-disable-next-line max-lines-per-function
 export function makeHelpPanel(highlighter) {
   const panel = new help.Help();
   const dialectHighlighting = Object.values(d.DIALECTS).reduce(

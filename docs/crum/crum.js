@@ -14,6 +14,7 @@ import * as css from '../css.js';
 import * as cls from './cls.js';
 import * as ccls from '../cls.js';
 import * as header from '../header.js';
+import * as logger from '../logger.js';
 const COPTIC_RE = /[Ⲁ-ⲱϢ-ϯⳈⳉ]+/giu;
 const GREEK_RE = /[Α-Ωα-ω]+/giu;
 const ENGLISH_RE = /[A-Za-z]+/giu;
@@ -69,7 +70,7 @@ export function handleRootType(elem) {
   elem.querySelectorAll(`.${cls.ROOT_TYPE}`).forEach((el) => {
     const type = el.querySelector('b')?.innerHTML;
     if (!type) {
-      console.error('Unable to infer the root type for element!', el);
+      logger.error('Unable to infer the root type for element!', el);
       return;
     }
     el.innerHTML = `(<a class="${ccls.HOVER_LINK}" href="${paths.LEXICON}/${type.replaceAll('/', '_')}.html" target="_blank">${type}</a>)`;
@@ -216,14 +217,12 @@ export function handleSisterView(elem) {
       table.querySelectorAll('tr').forEach((el) => {
         const td = el.querySelector(`.${cls.SISTER_VIEW}`);
         if (!td) {
-          console.error(
+          logger.error(
             'A row in the sisters table does not have a "sister-view" element!'
           );
           return;
         }
-        td.innerHTML =
-          `<span class="${cls.SISTER_INDEX}">${counter.toString()}. </span>` +
-          td.innerHTML;
+        td.innerHTML = `<span class="${cls.SISTER_INDEX}">${counter.toString()}. </span>${td.innerHTML}`;
         counter++;
       });
     });
@@ -273,7 +272,7 @@ export function handleAnkiNavigation(elem) {
   if (!iam.amI('anki')) return;
   elem.querySelectorAll(`.${cls.NAVIGATE}`).forEach((e) => {
     if (e.tagName !== 'A' || !e.hasAttribute('href')) {
-      console.error(
+      logger.error(
         'This "navigate" element is not an <a> tag with an "href" property!',
         e
       );

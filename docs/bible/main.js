@@ -16,6 +16,8 @@ function addEventListeners() {
       case 'X':
         browser.openSearchLink();
         break;
+      default:
+      // For any other key, do nothing.
     }
   });
 }

@@ -25,7 +25,7 @@ export class Collapsible {
   toggle() {
     this.element.style.maxHeight = this.element.style.maxHeight
       ? ''
-      : this.element.scrollHeight.toString() + 'px';
+      : `${this.element.scrollHeight.toString()}px`;
   }
   /**
    * If currently visible, update the height to the height currently needed.
@@ -38,7 +38,7 @@ export class Collapsible {
       // This element is currently collapsed, so we keep the height at zero.
       return;
     }
-    this.element.style.maxHeight = this.element.scrollHeight.toString() + 'px';
+    this.element.style.maxHeight = `${this.element.scrollHeight.toString()}px`;
   }
   /**
    * @param collapse - The element that should toggle the display of this

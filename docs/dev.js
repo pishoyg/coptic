@@ -22,6 +22,7 @@ export var CLS;
   // and off for given elements through the TypeScript.
   // DEV is the class of developer-mode elements, which should only show in
   // developer mode.
+
   CLS['DEV'] = 'dev';
   // NO_DEV is the class of elements that are hidden in developer mode.
   CLS['NO_DEV'] = 'no-dev';

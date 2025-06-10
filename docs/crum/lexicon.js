@@ -72,7 +72,7 @@ class CrumDialectSorter extends xooxle.BucketSorter {
       return 0;
     }
     const highlightedDialectQuery = active
-      .map((d) => `.${d} .${'match' /* xooxle.CLS.MATCH */}`)
+      .map((dialect) => `.${dialect} .${'match' /* xooxle.CLS.MATCH */}`)
       .join(', ');
     if (row.querySelector(highlightedDialectQuery)) {
       // We have a match in a highlighted dialect.
@@ -120,7 +120,7 @@ class KELLIADialectSorter extends xooxle.BucketSorter {
       return 0;
     }
     const highlightedDialectQuery = active
-      .map((d) => `.${d} .${'match' /* xooxle.CLS.MATCH */}`)
+      .map((dialect) => `.${dialect} .${'match' /* xooxle.CLS.MATCH */}`)
       .join(', ');
     return row.querySelector(highlightedDialectQuery) ? 0 : 1;
   }
