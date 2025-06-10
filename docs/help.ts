@@ -2,6 +2,7 @@
 
 import * as iam from './iam.js';
 import * as cls from './cls.js';
+import * as logger from './logger.js';
 
 /**
  * CODE_TO_KEY maps a keyboard event code to the event key.
@@ -348,9 +349,9 @@ export class Help {
         const footer: HTMLElement =
           document.querySelector('footer') ??
           (() => {
-            const footer = document.createElement('footer');
-            footer.id = 'footer';
-            return footer;
+            const f = document.createElement('footer');
+            f.id = 'footer';
+            return f;
           })();
         const help = document.createElement('span');
         help.classList.add(cls.LINK);
@@ -434,8 +435,7 @@ export class Help {
    * TODO: (#0) This error would get logged to the browser console. It could be
    * seen by chance, if you happen to run the code in the browser with developer
    * tools enabled.
-   * We should perhaps run a Node.js job in a pre-commit hook that fails if this
-   * error occurs, so we can detect it before launch.
+   * Validate before deployment once #457 is resolved.
    */
   private validate(): void {
     // Get all keys that have events registered to them.
@@ -447,7 +447,7 @@ export class Help {
     keys.forEach((key: string) => {
       const canConsume = this.sections.map((s) => s.canConsume(key)).flat();
       if (canConsume.length > 1) {
-        console.error(
+        logger.error(
           `${key} is consumable by multiple shortcuts: ${canConsume.map((s) => s.textDescription()).join(', ')}`
         );
       }

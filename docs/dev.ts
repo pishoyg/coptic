@@ -25,6 +25,7 @@ export enum CLS {
 
   // DEV is the class of developer-mode elements, which should only show in
   // developer mode.
+  // eslint-disable-next-line @typescript-eslint/no-shadow
   DEV = 'dev',
   // NO_DEV is the class of elements that are hidden in developer mode.
   NO_DEV = 'no-dev',

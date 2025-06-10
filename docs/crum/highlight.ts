@@ -11,6 +11,7 @@ import * as dev from '../dev.js';
 import * as cls from './cls.js';
 import * as ccls from '../cls.js';
 import * as header from '../header.js';
+import * as logger from '../logger.js';
 import * as d from './dialect.js';
 
 /**
@@ -42,10 +43,10 @@ export class Highlighter {
     private readonly dialectCheckboxes: HTMLInputElement[]
   ) {
     this.sheet = this.anki ? undefined : window.document.styleSheets[0];
-    const length = this.sheet?.cssRules.length ?? 0;
-    this.dialectRuleIndex = length;
-    this.devRuleIndex = length + 1;
-    this.noDevRuleIndex = length + 2;
+    let length: number = this.sheet?.cssRules.length ?? 0;
+    this.dialectRuleIndex = length++;
+    this.devRuleIndex = length++;
+    this.noDevRuleIndex = length++;
 
     this.addEventListeners();
 
@@ -150,7 +151,7 @@ export class Highlighter {
    */
   private upsertRule(index: number, rule: string): void {
     if (!this.sheet) {
-      console.error(
+      logger.error(
         'Attempting to update sheet rules when the sheet is not set!'
       );
       return;

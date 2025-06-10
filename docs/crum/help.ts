@@ -21,6 +21,7 @@ import * as header from '../header.js';
  * @param highlighter
  * @returns
  */
+// eslint-disable-next-line max-lines-per-function
 export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
   const panel = new help.Help();
 

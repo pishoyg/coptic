@@ -15,6 +15,8 @@ const WANT_COLUMNS = ['page', 'start', 'end'];
 // ZOOM_FACTOR controls how fast zooming happens in response to scroll events.
 const ZOOM_FACTOR = 0.05;
 
+const MIN_SCALE = 0.2;
+
 /**
  * Word represents a word that can be used in the book scan context.
  * TODO: (#411) Implement Greek and Arabic word classes, as well as Coptic.
@@ -449,8 +451,6 @@ export class ZoomerDragger {
   private originY = 0;
   private isDragging = false;
 
-  private static readonly MIN_SCALE = 0.2;
-
   /**
    * @param form
    * @param form.image
@@ -504,7 +504,7 @@ export class ZoomerDragger {
 
     if (e.deltaY < 0) {
       this.scale += ZOOM_FACTOR;
-    } else if (e.deltaY > 0 && this.scale > ZoomerDragger.MIN_SCALE) {
+    } else if (e.deltaY > 0 && this.scale > MIN_SCALE) {
       this.scale -= ZOOM_FACTOR;
     }
 

@@ -1,5 +1,6 @@
 /** Package html defines DOM manipulation helpers. */
 import * as browser from './browser.js';
+import * as logger from './logger.js';
 
 /**
  *
@@ -30,9 +31,47 @@ export function moveElement(
  */
 export function makeSpanLinkToAnchor(el: Element, target: string): void {
   if (el.tagName !== 'SPAN') {
-    console.warn(`Converting ${el.tagName} tag to <a> tag!`);
+    logger.warn(`Converting ${el.tagName} tag to <a> tag!`);
   }
   moveElement(el, 'a', { href: target });
+}
+
+/**
+ * @param node
+ * @param regex
+ * @param directParentExcludedClasses
+ * @returns
+ */
+function shouldLinkify(
+  node: Node,
+  regex: RegExp,
+  directParentExcludedClasses: string[]
+): boolean {
+  if (!node.nodeValue) {
+    // The node has no text!
+    return false;
+  }
+  if (!regex.test(node.nodeValue)) {
+    // This text node doesn't match the regex.
+    return false;
+  }
+  const parent = node.parentElement;
+  if (!parent) {
+    // We can't examine the parent tag name or classes for exclusions.
+    // Accept the node.
+    return true;
+  }
+  if (parent.tagName === 'A') {
+    // The parent is already a link!
+    return false;
+  }
+  if (
+    directParentExcludedClasses.some((cls) => parent.classList.contains(cls))
+  ) {
+    // This parent is explicitly excluded.
+    return false;
+  }
+  return true;
 }
 
 /**
@@ -50,39 +89,13 @@ export function linkifyText(
   classes: string[],
   directParentExcludedClasses: string[] = []
 ): void {
-  const admit = (node: Node): boolean => {
-    if (!node.nodeValue) {
-      // The node has no text!
-      return false;
-    }
-    if (!regex.test(node.nodeValue)) {
-      // This text node doesn't match the regex.
-      return false;
-    }
-    const parent = node.parentElement;
-    if (!parent) {
-      // We can't examine the parent tag name or classes for exclusions.
-      // Accept the node.
-      return true;
-    }
-    if (parent.tagName == 'a') {
-      // The parent is already a link!
-      return false;
-    }
-    if (
-      directParentExcludedClasses.some((cls) => parent.classList.contains(cls))
-    ) {
-      // This parent is explicitly excluded.
-      return false;
-    }
-    return true;
-  };
-
   const walker = document.createTreeWalker(
     root,
     NodeFilter.SHOW_TEXT,
     (node) =>
-      admit(node) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT
+      shouldLinkify(node, regex, directParentExcludedClasses)
+        ? NodeFilter.FILTER_ACCEPT
+        : NodeFilter.FILTER_REJECT
   );
 
   // We must store the replacements in a list because we can't mutate the DOM

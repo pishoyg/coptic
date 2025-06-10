@@ -1,4 +1,5 @@
 /** Package logger defines logging helpers. */
+/* eslint-disable no-console */
 import * as dev from './dev.js';
 
 enum Colors {
@@ -50,16 +51,14 @@ function print(
   throwException = false,
   ...args: unknown[]
 ): void {
-  const message =
-    `\x1b[2m${color}` +
-    (severity
-      ? `${severity.charAt(0).toUpperCase() + severity.slice(1)}: `
-      : '') +
-    '\x1b[0m' +
-    args
-      .map((arg, idx) => (idx % 2 === 0 ? color : recolor) + String(arg))
-      .join(' ') +
-    Colors.RESET;
+  const message = `\x1b[2m${color}${
+    severity ? `${severity.charAt(0).toUpperCase() + severity.slice(1)}: ` : ''
+  }\x1b[0m${args
+    .map(
+      (arg: unknown, idx: number): string =>
+        (idx & 1 ? recolor : color) + String(arg)
+    )
+    .join(' ')}${Colors.RESET} `;
 
   if (throwException) {
     throw new Error(message);

@@ -1,4 +1,5 @@
 /** Package xooxle defines the Xooxle engine core logic. */
+/* eslint-disable max-lines */
 import * as collapse from './collapse.js';
 import * as browser from './browser.js';
 import * as logger from './logger.js';
@@ -448,9 +449,10 @@ export class SearchResult extends AggregateResult {
 
     // There is an href. We create a link, and add the 'view' text.
     const a = document.createElement('a');
-    a.href =
-      hrefFmt.replace(`{${KEY}}`, this.key) +
-      `#:~:text=${encodeURIComponent(this.fragmentWord()!)}`;
+    a.href = `${hrefFmt.replace(
+      `{${KEY}}`,
+      this.key
+    )}#:~:text=${encodeURIComponent(this.fragmentWord()!)}`;
     a.target = '_blank';
 
     const noDevSpan = document.createElement('span');
@@ -571,7 +573,9 @@ class Field {
     readonly name: string,
     html: string
   ) {
-    this.units = html.split(UNIT_DELIMITER).map((html) => new Unit(html));
+    this.units = html
+      .split(UNIT_DELIMITER)
+      .map((unitHTML: string): Unit => new Unit(unitHTML));
   }
 
   /**
@@ -680,10 +684,10 @@ class UnitSearchResult extends AggregateResult {
  * matches, then mid-word matches.
  */
 enum BoundaryType {
-  FULL_WORD = 0,
-  PREFIX = 1,
-  SUFFIX = 2,
-  MID_WORD = 3,
+  FULL_WORD,
+  PREFIX,
+  SUFFIX,
+  MID_WORD,
 }
 
 interface Match {
@@ -815,7 +819,7 @@ class HTMLBuilder {
    */
   openMatch(): void {
     if (this.open) {
-      console.error('Warning: The match is already open!');
+      logger.error('Warning: The match is already open!');
     }
     this.open = true;
     if (
@@ -834,7 +838,7 @@ class HTMLBuilder {
    */
   closeMatch(): void {
     if (this.closed) {
-      console.error('Warning: The match is already closed!');
+      logger.error('Warning: The match is already closed!');
     }
     this.open = false;
     if (this.builder[this.builder.length - 1] === HTMLBuilder.OPENING) {
@@ -1075,11 +1079,11 @@ export abstract class BucketSorter {
   validBucket = (res: SearchResult, row: HTMLTableRowElement): number => {
     const b = Math.round(this.bucket(res, row));
     if (b < 0) {
-      console.error('Invalid bucket', b);
+      logger.error('Invalid bucket', b);
       return 0;
     }
     if (b >= this.numBuckets) {
-      console.error('Invalid bucket', b);
+      logger.error('Invalid bucket', b);
       return this.numBuckets - 1;
     }
     return b;
@@ -1217,6 +1221,7 @@ export class Xooxle {
     // with identical names. This is not ideal. Let's supply an index name as
     // part of the metadata, and use that for logging instead.
     const name = `time-to-first-yield-${Array.from({ length: 2 }, () =>
+      // eslint-disable-next-line no-magic-numbers
       String.fromCharCode(97 + Math.floor(Math.random() * 26))
     ).join('')}`;
     logger.time(name);
@@ -1274,7 +1279,7 @@ export class Xooxle {
         this.bucketSorter?.validBucket(result, row) ?? 0
       ]!.insertAdjacentElement('beforebegin', row);
 
-      if (count % RESULTS_TO_UPDATE_DISPLAY == RESULTS_TO_UPDATE_DISPLAY - 1) {
+      if (count % RESULTS_TO_UPDATE_DISPLAY === RESULTS_TO_UPDATE_DISPLAY - 1) {
         if (count <= RESULTS_TO_UPDATE_DISPLAY) {
           // This is the first display update. Log time.
           logger.timeEnd(name);

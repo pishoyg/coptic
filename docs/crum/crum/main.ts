@@ -4,11 +4,13 @@ const MIN_PAGE_NUM = 1;
 const MAX_PAGE_NUM = 973;
 const OFFSET = 20;
 const LANDING = -13; // List of Abbreviations is the default for Crum.
+/* eslint-disable no-magic-numbers */
 const PNG_RANGES: [number, number][] = [
   [1, 6],
   [11, 20],
   [865, 973],
 ];
+/* eslint-enable no-magic-numbers */
 
 /**
  *

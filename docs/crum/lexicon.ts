@@ -24,19 +24,19 @@ const REPORTS_ID = 'reports';
 enum DialectMatch {
   // The candidate has at least one of the highlighted dialects, and the match
   // occurs in one of the pieces of text market with that dialect.
-  HIGHLIGHTED_DIALECT_MATCH = 0,
+  HIGHLIGHTED_DIALECT_MATCH,
   // The candidate has at least one dialect of interest, but the match occurs in
   // an undialected piece of text.
-  UNDIALECTED_MATCH_WITH_HIGHLIGHTED_DIALECT = 1,
+  UNDIALECTED_MATCH_WITH_HIGHLIGHTED_DIALECT,
   // The candidate doesn't have any dialects of interest in the first place. The
   // match occurs in an undialected piece of text.
-  UNDIALECTED_MATCH_WITH_NO_HIGHLIGHTED_DIALECT = 2,
+  UNDIALECTED_MATCH_WITH_NO_HIGHLIGHTED_DIALECT,
   // Matches only occur in dialects of no interest for the current query. The
   // candidate does however have a dialect of interest.
-  OTHER_DIALECT_MATCH_WITH_HIGHLIGHTED_DIALECT = 3,
+  OTHER_DIALECT_MATCH_WITH_HIGHLIGHTED_DIALECT,
   // Matches only occur in dialects of no interest for the current query. The
   // dialect has no dialects of interest to start with!
-  OTHER_DIALECT_MATCH_WITH_NO_HIGHLIGHTED_DIALECT = 4,
+  OTHER_DIALECT_MATCH_WITH_NO_HIGHLIGHTED_DIALECT,
 }
 
 /**
@@ -72,7 +72,7 @@ class CrumDialectSorter extends xooxle.BucketSorter {
     }
 
     const highlightedDialectQuery: string = active
-      .map((d) => `.${d} .${xooxle.CLS.MATCH}`)
+      .map((dialect: d.DIALECT) => `.${dialect} .${xooxle.CLS.MATCH}`)
       .join(', ');
     if (row.querySelector(highlightedDialectQuery)) {
       // We have a match in a highlighted dialect.
@@ -125,7 +125,7 @@ class KELLIADialectSorter extends xooxle.BucketSorter {
     }
 
     const highlightedDialectQuery: string = active
-      .map((d) => `.${d} .${xooxle.CLS.MATCH}`)
+      .map((dialect: d.DIALECT) => `.${dialect} .${xooxle.CLS.MATCH}`)
       .join(', ');
     return row.querySelector(highlightedDialectQuery) ? 0 : 1;
   }
