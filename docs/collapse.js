@@ -7,6 +7,7 @@ var CLS;
   CLS['COLLAPSE_ARROW'] = 'collapse-arrow';
 })(CLS || (CLS = {}));
 const COLLAPSISBLE_TRANSITION_MS = 500;
+const COLLAPSISBLE_TRANSITION_WAIT = 0.65;
 /**
  * Collapsible represents an element that can collapse, becoming visible /
  * invisible as needed.
@@ -64,9 +65,12 @@ export class Collapsible {
     const visible = !!this.get();
     this.set(visible ? '' : this.scrollHeight());
     if (visible) {
-      // The element is visible and about to get hidden. Wait for the transition
-      // to occur before updating the arrow.
-      setTimeout(this.updateArrow.bind(this), COLLAPSISBLE_TRANSITION_MS);
+      // The element is visible and about to get hidden. Update the arrow during
+      // the transition.
+      setTimeout(
+        this.updateArrow.bind(this),
+        COLLAPSISBLE_TRANSITION_MS * COLLAPSISBLE_TRANSITION_WAIT
+      );
     } else {
       // The element is hidden and about to become visible. Update the arrow
       // immediately.
