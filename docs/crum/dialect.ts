@@ -81,24 +81,31 @@ export class Dialect {
    * @returns
    */
   shortcut(highlighter: highlight.Highlighter): help.Shortcut {
-    const highlightedCode: string = help.highlightFirstOccurrence(
-      this.key,
-      this.code
-    );
+    const table = document.createElement('table');
+    const tr = document.createElement('tr');
 
-    let highlightedName: string = this.name;
-    if (this.article) {
-      highlightedName = `<a href="${this.article}" target="_blank" rel="noopener,noreferrer">${highlightedName}</a>`;
+    // Create the first <td> (dialect code)
+    const tdCode = document.createElement('td');
+    tdCode.classList.add(CLS.DIALECT_CODE);
+    tdCode.textContent = `(${this.code})`;
+    tr.appendChild(tdCode);
+
+    // Create the second <td> (dialect name)
+    const tdName = document.createElement('td');
+    tdName.classList.add(CLS.DIALECT_NAME);
+    tdName.replaceChildren(this.anchor());
+    tr.appendChild(tdName);
+
+    // Conditionally add the third <td> (dictionaries)
+    if (iam.amI('lexicon')) {
+      const tdDictionaries = document.createElement('td');
+      tdDictionaries.classList.add(CLS.DIALECT_DICTIONARIES);
+      tdDictionaries.textContent = `(${this.dictionaries.join(', ')})`;
+      tr.appendChild(tdDictionaries);
     }
 
-    const description = `
-    <table>
-    <tr>
-      <td class="${CLS.DIALECT_CODE}">(${highlightedCode})</td>
-      <td class="${CLS.DIALECT_NAME}">${highlightedName}</td>
-      ${iam.amI('lexicon') ? `<td class="${CLS.DIALECT_DICTIONARIES}">(${this.dictionaries.join(', ')})</td>` : ''}
-    </tr>
-    </table>`;
+    // Append the <tr> to the <table>
+    table.appendChild(tr);
 
     // Crum dialects are available on several Crum page identities.
     // Non-Crum dialects are only used in Lexicon.
@@ -106,7 +113,7 @@ export class Dialect {
       ? ['lexicon', 'note', 'index']
       : ['lexicon'];
     return new help.Shortcut(
-      description,
+      table,
       availability,
       highlighter.toggleDialect.bind(highlighter, this.code)
     );
@@ -118,7 +125,6 @@ export class Dialect {
   anchor(): HTMLAnchorElement | HTMLSpanElement {
     if (this.article) {
       const name: HTMLElement = document.createElement('span');
-      name.classList.add(CLS.DIALECT_NAME);
       name.textContent = this.name;
       const a = document.createElement('a');
       a.href = this.article;
@@ -148,7 +154,6 @@ export class Dialect {
    */
   title(): HTMLSpanElement {
     const code: HTMLSpanElement = document.createElement('span');
-    code.classList.add(CLS.DIALECT_CODE);
     code.textContent = this.code;
 
     const description: HTMLSpanElement = document.createElement('span');
