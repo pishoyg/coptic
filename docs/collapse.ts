@@ -7,6 +7,8 @@ enum CLS {
   COLLAPSE_ARROW = 'collapse-arrow',
 }
 
+const COLLAPSISBLE_TRANSITION_MS = 500;
+
 /**
  * Collapsible represents an element that can collapse, becoming visible /
  * invisible as needed.
@@ -70,9 +72,17 @@ export class Collapsible {
    * Toggle the display of the collapsible.
    */
   toggle(): void {
-    const expanded = !!this.get();
-    this.set(expanded ? '' : this.scrollHeight());
-    this.updateArrow();
+    const visible = !!this.get();
+    this.set(visible ? '' : this.scrollHeight());
+    if (visible) {
+      // The element is visible and about to get hidden. Wait for the transition
+      // to occur before updating the arrow.
+      setTimeout(this.updateArrow.bind(this), COLLAPSISBLE_TRANSITION_MS);
+    } else {
+      // The element is hidden and about to become visible. Update the arrow
+      // immediately.
+      this.updateArrow();
+    }
   }
 
   /**
