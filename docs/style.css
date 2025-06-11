@@ -53,13 +53,15 @@ a figcaption {
   text-decoration: inherit;
 }
 
-a:hover,
-.link:hover,
-.hover-link:hover,
-.collapse:hover {
-  color: #3498db;
-  cursor: pointer;
-  text-decoration: underline;
+@media (hover: hover) {
+  a:hover,
+  .link:hover,
+  .hover-link:hover,
+  .collapse:hover {
+    color: #3498db;
+    cursor: pointer;
+    text-decoration: underline;
+  }
 }
 
 em {
@@ -348,8 +350,10 @@ body:not(.lexicon) .header td:not(:first-child) {
   text-decoration: none; /* Remove underline in case it's an anchor. */
 }
 
-.button:hover {
-  text-decoration: underline;
+@media (hover: hover) {
+  .button:hover {
+    text-decoration: underline;
+  }
 }
 
 .button:active {
@@ -466,8 +470,10 @@ body:not(.lexicon) .header td:not(:first-child) {
   transition: color 0.3s ease;
 }
 
-.close-btn:hover {
-  color: #f00;
+@media (hover: hover) {
+  .close-btn:hover {
+    color: #f00;
+  }
 }
 
 .notes {
