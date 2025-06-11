@@ -115,17 +115,44 @@ export class Dialect {
   /**
    * @returns
    */
+  anchor(): HTMLAnchorElement | HTMLSpanElement {
+    if (this.article) {
+      const name: HTMLElement = document.createElement('span');
+      name.classList.add(CLS.DIALECT_NAME);
+      name.textContent = this.name;
+      const a = document.createElement('a');
+      a.href = this.article;
+      a.target = '_blank';
+      a.replaceChildren(name);
+      return a;
+    }
+
+    const span: HTMLSpanElement = document.createElement('span');
+    const name: (string | HTMLElement)[] = this.name.split(' ').map(
+      (word: string): string | HTMLElement =>
+        Object.values(DIALECTS)
+          .find((d: Dialect): boolean => d.name === word)
+          ?.anchor() ?? word
+    );
+
+    span.replaceChildren(
+      ...name.flatMap((item, index) =>
+        index < name.length - 1 ? [item, ' '] : [item]
+      )
+    );
+    return span;
+  }
+
+  /**
+   * @returns
+   */
   title(): HTMLSpanElement {
     const code: HTMLSpanElement = document.createElement('span');
     code.classList.add(CLS.DIALECT_CODE);
     code.textContent = this.code;
 
-    const name: HTMLSpanElement = document.createElement('span');
-    name.classList.add(CLS.DIALECT_NAME);
-    name.textContent = this.name;
-
     const description: HTMLSpanElement = document.createElement('span');
-    description.replaceChildren('(', code, ') ', name);
+    description.replaceChildren('(', code, ')', ' ', this.anchor());
     return description;
   }
 }
