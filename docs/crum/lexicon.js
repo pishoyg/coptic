@@ -152,8 +152,21 @@ const XOOXLES = [
 /**
  *
  */
+function spellOutDialectsInDropdown() {
+  document
+    .querySelectorAll(`#${DIALECTS_ID} .${dropdown.CLS.DROPPABLE} input`)
+    .forEach((el) => {
+      const next = el.nextSibling;
+      logger.ass(next?.nodeType === Node.TEXT_NODE);
+      const dialect = d.DIALECTS[el.name];
+      next?.parentNode?.replaceChild(dialect.title(), next);
+    });
+}
+/**
+ *
+ */
 async function main() {
-  const dropdownDialects = dropdown.addEventListeners();
+  const dropdownDialects = dropdown.addEventListenersForSiblings();
   logger.ass(dropdownDialects.length === 1);
   if (d.setToDefaultIfUnset()) {
     // In order to alert the user to the fact that dialect selection has
@@ -202,8 +215,9 @@ async function main() {
     })
   );
   // Initialize collapsible elements.
-  collapse.addEventListenersForSiblings(true, true);
+  collapse.addEventListenersForSiblings(true);
   help.makeHelpPanel(highlighter);
   document.getElementById(REPORTS_ID).addEventListener('click', header.reports);
+  spellOutDialectsInDropdown();
 }
 await main();

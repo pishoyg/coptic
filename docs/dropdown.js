@@ -1,38 +1,37 @@
 /** Package dropdown defines logic to control drop-down elements. */
 import * as browser from './browser.js';
-var CLS;
+import * as logger from './logger.js';
+export var CLS;
 (function (CLS) {
-  CLS['DROPDOWN'] = 'dropdown';
-  CLS['DROPDOWN_CONTENT'] = 'dropdown-content';
+  CLS['DROP'] = 'drop';
+  CLS['DROPPABLE'] = 'droppable';
 })(CLS || (CLS = {}));
 /**
  *
  */
-export class Dropdown {
-  dropdown;
-  /** dropdownContent gets shown or hidden by clicking the button. */
-  dropdownContent;
+export class Droppable {
+  droppable;
+  drop;
   /**
-   * @param dropdown - An element that contains both our drop-down button and
-   * our drop-down content.
+   * @param droppable - The element holding our drop-down content.
+   * @param drop
    */
-  constructor(dropdown) {
-    this.dropdown = dropdown;
-    // The content element is expected to be found inside the drop-down element,
-    // and to bear the dropdown-content class.
-    this.dropdownContent = this.dropdown.querySelector(
-      `.${CLS.DROPDOWN_CONTENT}`
-    );
-    // A click on the drop-down element shows the content.
-    this.dropdown.addEventListener('click', this.toggle.bind(this));
+  constructor(droppable, drop) {
+    this.droppable = droppable;
+    this.drop = drop;
     // Prevent clicks on the content from hiding it.
-    this.dropdownContent.addEventListener(
+    this.droppable.addEventListener(
       'click',
       browser.stopPropagation.bind(browser)
     );
-    // A click anywhere outside the element hides the content.
+    // A click on the .drop element hides the content.
+    drop?.addEventListener('click', (e) => {
+      this.toggle();
+      e.stopPropagation();
+    });
+    // A click anywhere outside the element hides it.
     document.addEventListener('click', (event) => {
-      if (!dropdown.contains(event.target)) {
+      if (!this.droppable.contains(event.target)) {
         this.hide();
       }
     });
@@ -41,13 +40,13 @@ export class Dropdown {
    * @returns
    */
   get() {
-    return this.dropdownContent.style.display;
+    return this.droppable.style.display;
   }
   /**
    * @param visibility
    */
   set(visibility) {
-    this.dropdownContent.style.display = visibility;
+    this.droppable.style.display = visibility;
   }
   /**
    *
@@ -71,8 +70,13 @@ export class Dropdown {
  * The HTML must define elements with the correct classes and correct structure.
  * @returns
  */
-export function addEventListeners() {
-  return Array.from(document.querySelectorAll(`.${CLS.DROPDOWN}`)).map(
-    (dropdown) => new Dropdown(dropdown)
-  );
+export function addEventListenersForSiblings() {
+  return Array.from(document.querySelectorAll(`.${CLS.DROP}`)).map((drop) => {
+    const droppable = drop.nextElementSibling;
+    logger.err(
+      droppable.classList.contains(CLS.DROPPABLE),
+      'A .drop must be immediately followed by a .droppable!'
+    );
+    return new Droppable(droppable, drop);
+  });
 }

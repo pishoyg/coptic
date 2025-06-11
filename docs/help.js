@@ -183,7 +183,11 @@ export class Shortcut {
     keyCell.style.padding = '8px';
     // Create a cell for the value (right column)
     const valueCell = document.createElement('td');
-    valueCell.innerHTML = highlightFirstOccurrence(key, this.description);
+    if (typeof this.description === 'string') {
+      valueCell.innerHTML = highlightFirstOccurrence(key, this.description);
+    } else {
+      valueCell.replaceChildren(this.description);
+    }
     valueCell.style.width = '90%';
     valueCell.style.border = '1px solid black';
     valueCell.style.padding = '8px';
@@ -197,7 +201,9 @@ export class Shortcut {
    * @returns
    */
   textDescription() {
-    return this.description.replace(/<[^>]*>/g, '');
+    return typeof this.description === 'string'
+      ? this.description.replace(/<[^>]*>/g, '')
+      : this.description.textContent;
   }
 }
 /**

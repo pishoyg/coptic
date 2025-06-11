@@ -1,9 +1,13 @@
 /** Package collapse defines logic to control collapsible elements. */
+import * as logger from './logger.js';
 var CLS;
 (function (CLS) {
   // COLLAPSE is the class of elements that, when clicked, trigger a collapse
   // effect in their next element sibling.
   CLS['COLLAPSE'] = 'collapse';
+  // COLLAPSIBLE is the class of elements that collapse and expand.
+  CLS['COLLAPSIBLE'] = 'collapsible';
+  // COLLAPSE_ARROW is the class of the optional arrow in the collapse element.
   CLS['COLLAPSE_ARROW'] = 'collapse-arrow';
 })(CLS || (CLS = {}));
 const COLLAPSISBLE_TRANSITION_MS = 500;
@@ -20,23 +24,14 @@ export class Collapsible {
   /**
    * @param collapsible - The collapsible HTML element.
    * @param collapse
-   * @param arrows
    */
-  constructor(collapsible, collapse, arrows = false) {
+  constructor(collapsible, collapse) {
     this.collapsible = collapsible;
-    if (!collapse) {
-      return;
-    }
-    collapse.addEventListener('click', this.toggle.bind(this));
-    if (!arrows) {
-      return;
-    }
-    // Create and prepend arrow element.
-    this.arrow =
-      collapse.querySelector(`.${CLS.COLLAPSE_ARROW}`) ??
-      document.createElement('span');
-    collapse.prepend(this.arrow);
-    this.updateArrow(); // Set initial arrow.
+    // A click on the collapse element toggles the collapsible.
+    collapse?.addEventListener('click', this.toggle.bind(this));
+    this.arrow = collapse?.querySelector(`.${CLS.COLLAPSE_ARROW}`) ?? undefined;
+    // Update arrow once upon load.
+    this.updateArrow();
   }
   /**
    * @returns The current visible height. This should return the empty string if
@@ -112,20 +107,17 @@ export class Collapsible {
  * See the related CSS.
  *
  * @param toggleUponLoad - If true, toggle once after loading.
- * @param arrows
  */
-export function addEventListenersForSiblings(
-  toggleUponLoad = false,
-  arrows = false
-) {
+export function addEventListenersForSiblings(toggleUponLoad = false) {
   document.querySelectorAll(`.${CLS.COLLAPSE}`).forEach((collapse) => {
-    const collapsible = new Collapsible(
-      collapse.nextElementSibling,
-      collapse,
-      arrows
+    const collapsible = collapse.nextElementSibling;
+    logger.err(
+      collapsible.classList.contains(CLS.COLLAPSIBLE),
+      'A .collapse must be followed by a .collapsible!'
     );
+    const col = new Collapsible(collapsible, collapse);
     if (toggleUponLoad) {
-      collapsible.toggle();
+      col.toggle();
     }
   });
 }

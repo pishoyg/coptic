@@ -46,29 +46,78 @@ export class Dialect {
    * @returns
    */
   shortcut(highlighter) {
-    const highlightedCode = help.highlightFirstOccurrence(this.key, this.code);
-    let highlightedName = this.name;
-    if (this.article) {
-      highlightedName = `<a href="${this.article}" target="_blank" rel="noopener,noreferrer">${highlightedName}</a>`;
+    const table = document.createElement('table');
+    const tr = document.createElement('tr');
+    // Create the first <td> (dialect code)
+    const tdCode = document.createElement('td');
+    tdCode.classList.add(CLS.DIALECT_CODE);
+    tdCode.textContent = `(${this.code})`;
+    tr.appendChild(tdCode);
+    // Create the second <td> (dialect name)
+    const tdName = document.createElement('td');
+    tdName.classList.add(CLS.DIALECT_NAME);
+    tdName.replaceChildren(...this.anchoredName());
+    tr.appendChild(tdName);
+    // Conditionally add the third <td> (dictionaries)
+    if (iam.amI('lexicon')) {
+      const tdDictionaries = document.createElement('td');
+      tdDictionaries.classList.add(CLS.DIALECT_DICTIONARIES);
+      tdDictionaries.textContent = `(${this.dictionaries.join(', ')})`;
+      tr.appendChild(tdDictionaries);
     }
-    const description = `
-    <table>
-    <tr>
-      <td class="${CLS.DIALECT_CODE}">(${highlightedCode})</td>
-      <td class="${CLS.DIALECT_NAME}">${highlightedName}</td>
-      ${iam.amI('lexicon') ? `<td class="${CLS.DIALECT_DICTIONARIES}">(${this.dictionaries.join(', ')})</td>` : ''}
-    </tr>
-    </table>`;
+    // Append the <tr> to the <table>
+    table.appendChild(tr);
     // Crum dialects are available on several Crum page identities.
     // Non-Crum dialects are only used in Lexicon.
     const availability = this.dictionaries.includes('Crum')
       ? ['lexicon', 'note', 'index']
       : ['lexicon'];
     return new help.Shortcut(
-      description,
+      table,
       availability,
       highlighter.toggleDialect.bind(highlighter, this.code)
     );
+  }
+  /**
+   * @returns - The name of the dialect, potentially containing anchors to
+   * articles about the dialect.
+   * - If an article is available for this dialect, we link it directly.
+   * - Otherwise, this may be a composite dialect name (containing one or more
+   *   dialect names within it), in which case we try to retrieve dialect
+   *   articles from other dialects and link them.
+   */
+  anchoredName() {
+    if (this.article) {
+      const a = document.createElement('a');
+      a.href = this.article;
+      a.target = '_blank';
+      a.textContent = this.name;
+      return [a];
+    }
+    const words = this.name.split(' ');
+    return words
+      .map(
+        (word) =>
+          // If this word is the name of a dialect, return its anchored name.
+          // Otherwise, return the word as plain text.
+          Object.values(DIALECTS)
+            .find((d) => d.name === word)
+            ?.anchoredName() ?? [word]
+      )
+      .flatMap(
+        // Re-insert spaces between words.
+        (item, index) => (index < words.length - 1 ? [...item, ' '] : item)
+      );
+  }
+  /**
+   * @returns An HTML element, whose text content has the following format:
+   *   (code) Dialect Name
+   * The name bears anchors, if present.
+   */
+  title() {
+    const title = document.createElement('span');
+    title.replaceChildren('(', this.code, ')', ' ', ...this.anchoredName());
+    return title;
   }
 }
 export const DIALECTS = {
