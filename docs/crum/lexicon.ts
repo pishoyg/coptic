@@ -9,8 +9,8 @@ import * as help from './help.js';
 import * as header from '../header.js';
 import * as paths from '../paths.js';
 import * as crum from './crum.js';
-import * as cls from './cls.js';
 import * as dropdown from '../dropdown.js';
+import * as logger from '../logger.js';
 
 const SEARCH_BOX_ID = 'searchBox';
 const FULL_WORD_CHECKBOX_ID = 'fullWordCheckbox';
@@ -169,17 +169,15 @@ const XOOXLES: Xooxle[] = [
  *
  */
 async function main(): Promise<void> {
-  const dropdownDialects = new dropdown.Dropdown(
-    document.querySelector(`.${cls.DROPDOWN}`)!,
-    document.querySelector(`.${cls.DROPDOWN_CONTENT}`)!
-  );
+  const dropdownDialects: dropdown.Dropdown[] = dropdown.addEventListeners();
+  logger.ass(dropdownDialects.length === 1);
   if (d.setToDefaultIfUnset()) {
     // In order to alert the user to the fact that dialect selection has
     // changed, we make sure the dialect list is visible.
     // NOTE: This step should precede the construction of the highlighter, so
     // that the selected dialects will be visible to the highlighter during its
     // initialization.
-    dropdownDialects.show();
+    dropdownDialects[0]!.show();
   }
 
   // Prevent other elements in the page from picking up key events on the
