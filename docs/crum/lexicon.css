@@ -10,6 +10,11 @@
   width: 80%;
 }
 
+/* On a wide screen, hide the drop-down menu. */
+.dropdown {
+  display: none;
+}
+
 /* Narrow screen rules: */
 @media (width <= 500px) {
   /* Increase the width of the search box. */
@@ -20,6 +25,11 @@
   /* Hide the spelled-out checkboxes. */
   #checkboxes {
     display: none;
+  }
+
+  /* Show the drop-down checkboxes. */
+  .dropdown {
+    display: inline;
   }
 
   /* Shrink the space between the form and the results. */

@@ -1,16 +1,3 @@
-/* On a wide screen, hide the drop-down menu. */
-.dropdown {
-  display: none;
-}
-
-/* Narrow screen rules: */
-@media (width <= 500px) {
-  /* Show the drop-down checkboxes. */
-  .dropdown {
-    display: inline;
-  }
-}
-
 .dropdown-btn {
   padding: 0;
   cursor: pointer;
