@@ -293,7 +293,7 @@ export class Form {
    * time-sensitive applications.
    */
   expand(): void {
-    this.collapsible.updateHeight();
+    this.collapsible.adjustHeightIfVisible();
   }
 
   /**
