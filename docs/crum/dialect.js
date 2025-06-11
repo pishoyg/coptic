@@ -212,13 +212,14 @@ export function toggle(dialect) {
 /**
  * Set the list of active dialects to a given default, if dialects are not
  * already configured.
+ *
+ * @returns Whether defaults have been set.
  */
-function setToDefaultIfUnset() {
+export function setToDefaultIfUnset() {
   if (localStorage.getItem(D) !== null) {
     // Dialects have already been configured.
-    return;
+    return false;
   }
   setActive(DEFAULT);
+  return true;
 }
-// Use default in all pages where this package is imported.
-setToDefaultIfUnset();
