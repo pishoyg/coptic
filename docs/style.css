@@ -112,21 +112,9 @@ table:not(.info) {
   width: 100%;
 }
 
-.small-screen-only {
-  display: none;
-}
-
 @media (width <= 500px) {
   hr {
     margin: 10px 0;
-  }
-
-  .small-screen-only {
-    display: unset;
-  }
-
-  .big-screen-only {
-    display: none;
   }
 
   body {

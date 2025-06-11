@@ -10,8 +10,12 @@
   width: 80%;
 }
 
-/* On a wide screen, hide the drop-down menu. */
-.dropdown {
+/* On a wide screen, hide the drop-down menu, and the keyboard.
+ * TODO: (#453) Show the keyboard on desktop once you have instructions for how
+ * to install a keyboard on desktop.
+ * */
+.dropdown,
+#keyboard {
   display: none;
 }
 
@@ -27,8 +31,9 @@
     display: none;
   }
 
-  /* Show the drop-down checkboxes. */
-  .dropdown {
+  /* Show the drop-down checkboxes and the keyboard. */
+  .dropdown,
+  #keyboard {
     display: inline;
   }
 
