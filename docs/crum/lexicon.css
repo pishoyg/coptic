@@ -1,48 +1,47 @@
+/* Use italic for the form labels. */
 #highlight-dialects,
 #full-word-checkbox-label,
 #regex-checkbox-label {
   font-style: italic;
 }
 
-.search-box {
-  width: 50%;
-}
-
+/* On a wide screen, use 80% of the width. */
 .search-box input {
-  width: 100%;
+  width: 80%;
 }
 
-.results#crum .type {
-  opacity: 0.3;
-}
-
+/* Narrow screen rules: */
 @media (width <= 500px) {
-  .search-box {
-    width: 45%;
+  /* Increase the width of the search box. */
+  .search-box input {
+    width: 95%;
   }
 
-  .checkboxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  /* Hide the spelled-out checkboxes. */
+  #checkboxes {
+    display: none;
   }
 
-  .checkboxes label {
-    margin-right: 5px;
-  }
-
+  /* Shrink the space between the form and the results. */
   .lexicon-form-separator {
     margin-top: 5px;
     margin-bottom: 0;
   }
 
+  /* Shrink the space around the error message. */
   #message {
     margin-top: 0;
     margin-bottom: 0;
   }
 
+  /* Slightly reduce the height of the title. */
   #title {
     height: 90%;
     line-height: 1;
   }
+}
+
+/* Dim Crum's types. */
+.results#crum .type {
+  opacity: 0.3;
 }

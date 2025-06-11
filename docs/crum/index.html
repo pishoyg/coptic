@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/style.css" rel="stylesheet" type="text/css">
   <link href="/xooxle.css" rel="stylesheet" type="text/css">
+  <link href="/dropdown.css" rel="stylesheet" type="text/css">
   <link href="./lexicon.css" rel="stylesheet" type="text/css">
   <link href="/img/icon/icon-circle.png" rel="icon" type="image/x-icon">
   <script async src=
@@ -35,65 +36,82 @@
   </table>
 
   <form>
-    <div>
-      <table id="xooxle">
-        <thead>
-          <tr>
-            <td id="title" colspan="3">ⲡⲓⲖⲉⲝⲓⲕⲟⲛ | Coptic Dictionary</td>
-          </tr>
-        </thead>
+    <table id="xooxle">
+      <thead>
+        <tr>
+          <td id="title" colspan="3">ⲡⲓⲖⲉⲝⲓⲕⲟⲛ | Coptic Dictionary</td>
+        </tr>
+      </thead>
 
-        <tbody>
-          <tr>
-            <td class="search-box"><input id="searchBox" autocapitalize="off"
-            autocomplete="off" autocorrect="off" placeholder="Search"
-            spellcheck="false" type="text">
-            </td>
-            <td><input id="fullWordCheckbox" type="checkbox"> <label id=
-            "full-word-checkbox-label" for="fullWordCheckbox"><span class=
-            "big-screen-only">Full-Word Match</span> <span class=
-            "small-screen-only">Full-Word</span></label></td>
-            <td><input id="regexCheckbox" type="checkbox"> <label id=
-            "regex-checkbox-label" for="regexCheckbox"><span class=
-            "big-screen-only">Use Regular Expressions (<a href=
-            "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions"
-            rel="noopener noreferrer" style="opacity: 0.7" target=
-            "_blank">syntax</a>)</span> <span class=
-            "small-screen-only"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions"
-            rel="noopener noreferrer" style="color: black" target=
-            "_blank">RegEx</a></span></label></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      <tbody>
+        <tr id="search">
+          <td class="search-box" colspan="2"><input id="searchBox"
+          autocapitalize="off" autocomplete="off" autocorrect="off"
+          placeholder="Search" spellcheck="false" type="text">
+          </td>
+          <td>
+            <a class="small-screen-only" href="/keyboard.html" target=
+            "_blank">⌨️ Keyboard</a>
+          </td>
+        </tr>
 
-    <div class="checkboxes">
-      <span id="highlight-dialects"><span class=
-      "big-screen-only">Highlight</span> Dialects:&nbsp;</span>
-      <label><input id="checkbox-S" name="S" class="dialect-checkbox" type=
-      "checkbox" value="S">S</label> <label><input id="checkbox-Sa" name="Sa"
-      class="dialect-checkbox" type="checkbox" value="Sa">Sa</label>
-      <label><input id="checkbox-Sf" name="Sf" class="dialect-checkbox" type=
-      "checkbox" value="Sf">Sf</label> <label><input id="checkbox-A" name="A"
-      class="dialect-checkbox" type="checkbox" value="A">A</label>
-      <label><input id="checkbox-L" name="L" class="dialect-checkbox" type=
-      "checkbox" value="L">L</label> <label><input id="checkbox-B" name="B"
-      class="dialect-checkbox" type="checkbox" value="B">B</label>
-      <label><input id="checkbox-F" name="F" class="dialect-checkbox" type=
-      "checkbox" value="F">F</label> <label><input id="checkbox-Fb" name="Fb"
-      class="dialect-checkbox" type="checkbox" value="Fb">Fb</label>
-      <label><input id="checkbox-O" name="O" class="dialect-checkbox" type=
-      "checkbox" value="O">O</label> <label><input id="checkbox-NH" name="NH"
-      class="dialect-checkbox" type="checkbox" value="NH">NH</label>
-      <label><input id="checkbox-M" name="M" class="dialect-checkbox" type=
-      "checkbox" value="M">M</label> <label><input id="checkbox-P" name="P"
-      class="dialect-checkbox" type="checkbox" value="P">P</label>
-      <label><input id="checkbox-V" name="V" class="dialect-checkbox" type=
-      "checkbox" value="V">V</label> <label><input id="checkbox-W" name="W"
-      class="dialect-checkbox" type="checkbox" value="W">W</label>
-      <label><input id="checkbox-U" name="U" class="dialect-checkbox" type=
-      "checkbox" value="U">U</label>
-    </div>
+        <tr>
+          <td id="dialects">
+            <div class="dropdown">
+              <div class="dropdown-btn">
+                <span class="dropdown">Dialects ▼</span>
+              </div>
+
+              <div class="dropdown-content">
+                <span class="dropdown"><label><input name="S" type=
+                "checkbox">S</label> <label><input name="Sa" type=
+                "checkbox">Sa</label> <label><input name="Sf" type=
+                "checkbox">Sf</label> <label><input name="A" type=
+                "checkbox">A</label> <label><input name="L" type=
+                "checkbox">L</label> <label><input name="B" type=
+                "checkbox">B</label> <label><input name="F" type=
+                "checkbox">F</label> <label><input name="Fb" type=
+                "checkbox">Fb</label> <label><input name="O" type=
+                "checkbox">O</label> <label><input name="NH" type=
+                "checkbox">NH</label> <label><input name="M" type=
+                "checkbox">M</label> <label><input name="P" type=
+                "checkbox">P</label> <label><input name="V" type=
+                "checkbox">V</label> <label><input name="W" type=
+                "checkbox">W</label> <label><input name="U" type=
+                "checkbox">U</label></span>
+              </div>
+            </div>
+            <span id="checkboxes"><span id="highlight-dialects"><span class=
+            "big-screen-only">Highlight</span> Dialects:&nbsp;</span>
+            <label><input name="S" type="checkbox">S</label>
+            <label><input name="Sa" type="checkbox">Sa</label>
+            <label><input name="Sf" type="checkbox">Sf</label>
+            <label><input name="A" type="checkbox">A</label>
+            <label><input name="L" type="checkbox">L</label>
+            <label><input name="B" type="checkbox">B</label>
+            <label><input name="F" type="checkbox">F</label>
+            <label><input name="Fb" type="checkbox">Fb</label>
+            <label><input name="O" type="checkbox">O</label>
+            <label><input name="NH" type="checkbox">NH</label>
+            <label><input name="M" type="checkbox">M</label>
+            <label><input name="P" type="checkbox">P</label>
+            <label><input name="V" type="checkbox">V</label>
+            <label><input name="W" type="checkbox">W</label>
+            <label><input name="U" type="checkbox">U</label></span>
+          </td>
+          <td><label id="full-word-checkbox-label" for=
+          "fullWordCheckbox"><input id="fullWordCheckbox" type="checkbox">
+          Full-Word</label>
+          </td>
+          <td><label id="regex-checkbox-label" for="regexCheckbox"><input id=
+          "regexCheckbox" type="checkbox"> <a href=
+          "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions"
+          rel="noopener noreferrer" style="color: black" target=
+          "_blank">RegEx</a></label>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </form>
 
   <hr class="lexicon-form-separator">
