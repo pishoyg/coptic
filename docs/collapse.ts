@@ -4,6 +4,7 @@ enum CLS {
   // COLLAPSE is the class of elements that, when clicked, trigger a collapse
   // effect in their next element sibling.
   COLLAPSE = 'collapse',
+  COLLAPSE_ARROW = 'collapse-arrow',
 }
 
 /**
@@ -13,18 +14,65 @@ enum CLS {
  * below and see the CSS for more details.
  */
 export class Collapsible {
+  private arrow?: HTMLSpanElement;
+
   /**
-   * @param element - The collapsible HTML element.
+   * @param collapsible - The collapsible HTML element.
+   * @param collapse
+   * @param arrows
    */
-  constructor(private readonly element: HTMLElement) {}
+  constructor(
+    private readonly collapsible: HTMLElement,
+    collapse?: HTMLElement,
+    arrows = false
+  ) {
+    if (!collapse) {
+      return;
+    }
+
+    collapse.addEventListener('click', this.toggle.bind(this));
+
+    if (!arrows) {
+      return;
+    }
+    // Create and prepend arrow element.
+    this.arrow =
+      collapse.querySelector(`.${CLS.COLLAPSE_ARROW}`) ??
+      document.createElement('span');
+    collapse.prepend(this.arrow);
+    this.updateArrow(); // Set initial arrow.
+  }
+
+  /**
+   * @returns The current visible height. This should return the empty string if
+   * the element is currently hidden, thus you can use `!!this.get()` to test
+   * whether the element is visible.
+   */
+  private get(): string {
+    return this.collapsible.style.maxHeight;
+  }
+
+  /**
+   * @param maxHeight
+   */
+  private set(maxHeight: string): void {
+    this.collapsible.style.maxHeight = maxHeight;
+  }
+
+  /**
+   * @returns
+   */
+  private scrollHeight(): string {
+    return `${this.collapsible.scrollHeight.toString()}px`;
+  }
 
   /**
    * Toggle the display of the collapsible.
    */
   toggle(): void {
-    this.element.style.maxHeight = this.element.style.maxHeight
-      ? ''
-      : `${this.element.scrollHeight.toString()}px`;
+    const expanded = !!this.get();
+    this.set(expanded ? '' : this.scrollHeight());
+    this.updateArrow();
   }
 
   /**
@@ -33,20 +81,22 @@ export class Collapsible {
    * which is a very expensive operation. Don't perform it repeatedly in
    * performance-sensitive applications.
    */
-  updateHeight(): void {
-    if (!this.element.style.maxHeight) {
+  adjustHeightIfVisible(): void {
+    if (!this.get()) {
       // This element is currently collapsed, so we keep the height at zero.
       return;
     }
-    this.element.style.maxHeight = `${this.element.scrollHeight.toString()}px`;
+    this.set(this.scrollHeight());
   }
 
   /**
-   * @param collapse - The element that should toggle the display of this
-   * element when clicked.
+   * Updates the arrow indicator element if available.
    */
-  addEventListener(collapse: HTMLElement): void {
-    collapse.addEventListener('click', this.toggle.bind(this));
+  private updateArrow(): void {
+    if (!this.arrow) {
+      return;
+    }
+    this.arrow.textContent = `${this.get() ? '▾' : '▸'} `;
   }
 }
 
@@ -62,15 +112,20 @@ export class Collapsible {
  * See the related CSS.
  *
  * @param toggleUponLoad - If true, toggle once after loading.
+ * @param arrows
  */
-export function addEventListenersForSiblings(toggleUponLoad = false): void {
+export function addEventListenersForSiblings(
+  toggleUponLoad = false,
+  arrows = false
+): void {
   document
     .querySelectorAll<HTMLElement>(`.${CLS.COLLAPSE}`)
     .forEach((collapse: HTMLElement): void => {
       const collapsible = new Collapsible(
-        collapse.nextElementSibling as HTMLElement
+        collapse.nextElementSibling as HTMLElement,
+        collapse,
+        arrows
       );
-      collapsible.addEventListener(collapse);
       if (toggleUponLoad) {
         collapsible.toggle();
       }
