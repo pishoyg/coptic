@@ -168,6 +168,22 @@ const XOOXLES: Xooxle[] = [
 /**
  *
  */
+function spellOutDialectsInDropdown(): void {
+  document
+    .querySelectorAll<HTMLInputElement>(
+      `.${dropdown.CLS.DROPDOWN_CONTENT} input`
+    )
+    .forEach((el: HTMLInputElement): void => {
+      const next: ChildNode | null = el.nextSibling;
+      logger.ass(next?.nodeType === Node.TEXT_NODE);
+      const dialect: d.Dialect = d.DIALECTS[el.name as d.DIALECT];
+      next?.parentNode?.replaceChild(dialect.title(), next);
+    });
+}
+
+/**
+ *
+ */
 async function main(): Promise<void> {
   const dropdownDialects: dropdown.Dropdown[] = dropdown.addEventListeners();
   logger.ass(dropdownDialects.length === 1);
@@ -230,6 +246,8 @@ async function main(): Promise<void> {
   document
     .getElementById(REPORTS_ID)!
     .addEventListener('click', header.reports);
+
+  spellOutDialectsInDropdown();
 }
 
 await main();

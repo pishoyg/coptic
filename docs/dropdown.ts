@@ -3,7 +3,7 @@ import * as browser from './browser.js';
 
 type Visibility = 'block' | 'none';
 
-enum CLS {
+export enum CLS {
   DROPDOWN = 'dropdown',
   DROPDOWN_CONTENT = 'dropdown-content',
 }

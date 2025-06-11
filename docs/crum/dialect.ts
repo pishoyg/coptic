@@ -111,6 +111,23 @@ export class Dialect {
       highlighter.toggleDialect.bind(highlighter, this.code)
     );
   }
+
+  /**
+   * @returns
+   */
+  title(): HTMLSpanElement {
+    const code: HTMLSpanElement = document.createElement('span');
+    code.classList.add(CLS.DIALECT_CODE);
+    code.textContent = this.code;
+
+    const name: HTMLSpanElement = document.createElement('span');
+    name.classList.add(CLS.DIALECT_NAME);
+    name.textContent = this.name;
+
+    const description: HTMLSpanElement = document.createElement('span');
+    description.replaceChildren('(', code, ') ', name);
+    return description;
+  }
 }
 
 export const DIALECTS: Record<DIALECT, Dialect> = {
