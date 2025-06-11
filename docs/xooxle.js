@@ -242,7 +242,7 @@ export class Form {
    * time-sensitive applications.
    */
   expand() {
-    this.collapsible.updateHeight();
+    this.collapsible.adjustHeightIfVisible();
   }
   /**
    * Show the given message in the form's message field.

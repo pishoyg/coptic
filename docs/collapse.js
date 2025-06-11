@@ -4,7 +4,9 @@ var CLS;
   // COLLAPSE is the class of elements that, when clicked, trigger a collapse
   // effect in their next element sibling.
   CLS['COLLAPSE'] = 'collapse';
+  CLS['COLLAPSE_ARROW'] = 'collapse-arrow';
 })(CLS || (CLS = {}));
+const COLLAPSISBLE_TRANSITION_MS = 500;
 /**
  * Collapsible represents an element that can collapse, becoming visible /
  * invisible as needed.
@@ -12,20 +14,64 @@ var CLS;
  * below and see the CSS for more details.
  */
 export class Collapsible {
-  element;
+  collapsible;
+  arrow;
   /**
-   * @param element - The collapsible HTML element.
+   * @param collapsible - The collapsible HTML element.
+   * @param collapse
+   * @param arrows
    */
-  constructor(element) {
-    this.element = element;
+  constructor(collapsible, collapse, arrows = false) {
+    this.collapsible = collapsible;
+    if (!collapse) {
+      return;
+    }
+    collapse.addEventListener('click', this.toggle.bind(this));
+    if (!arrows) {
+      return;
+    }
+    // Create and prepend arrow element.
+    this.arrow =
+      collapse.querySelector(`.${CLS.COLLAPSE_ARROW}`) ??
+      document.createElement('span');
+    collapse.prepend(this.arrow);
+    this.updateArrow(); // Set initial arrow.
+  }
+  /**
+   * @returns The current visible height. This should return the empty string if
+   * the element is currently hidden, thus you can use `!!this.get()` to test
+   * whether the element is visible.
+   */
+  get() {
+    return this.collapsible.style.maxHeight;
+  }
+  /**
+   * @param maxHeight
+   */
+  set(maxHeight) {
+    this.collapsible.style.maxHeight = maxHeight;
+  }
+  /**
+   * @returns
+   */
+  scrollHeight() {
+    return `${this.collapsible.scrollHeight.toString()}px`;
   }
   /**
    * Toggle the display of the collapsible.
    */
   toggle() {
-    this.element.style.maxHeight = this.element.style.maxHeight
-      ? ''
-      : `${this.element.scrollHeight.toString()}px`;
+    const visible = !!this.get();
+    this.set(visible ? '' : this.scrollHeight());
+    if (visible) {
+      // The element is visible and about to get hidden. Wait for the transition
+      // to occur before updating the arrow.
+      setTimeout(this.updateArrow.bind(this), COLLAPSISBLE_TRANSITION_MS);
+    } else {
+      // The element is hidden and about to become visible. Update the arrow
+      // immediately.
+      this.updateArrow();
+    }
   }
   /**
    * If currently visible, update the height to the height currently needed.
@@ -33,19 +79,21 @@ export class Collapsible {
    * which is a very expensive operation. Don't perform it repeatedly in
    * performance-sensitive applications.
    */
-  updateHeight() {
-    if (!this.element.style.maxHeight) {
+  adjustHeightIfVisible() {
+    if (!this.get()) {
       // This element is currently collapsed, so we keep the height at zero.
       return;
     }
-    this.element.style.maxHeight = `${this.element.scrollHeight.toString()}px`;
+    this.set(this.scrollHeight());
   }
   /**
-   * @param collapse - The element that should toggle the display of this
-   * element when clicked.
+   * Updates the arrow indicator element if available.
    */
-  addEventListener(collapse) {
-    collapse.addEventListener('click', this.toggle.bind(this));
+  updateArrow() {
+    if (!this.arrow) {
+      return;
+    }
+    this.arrow.textContent = `${this.get() ? '▾' : '▸'} `;
   }
 }
 /**
@@ -60,11 +108,18 @@ export class Collapsible {
  * See the related CSS.
  *
  * @param toggleUponLoad - If true, toggle once after loading.
+ * @param arrows
  */
-export function addEventListenersForSiblings(toggleUponLoad = false) {
+export function addEventListenersForSiblings(
+  toggleUponLoad = false,
+  arrows = false
+) {
   document.querySelectorAll(`.${CLS.COLLAPSE}`).forEach((collapse) => {
-    const collapsible = new Collapsible(collapse.nextElementSibling);
-    collapsible.addEventListener(collapse);
+    const collapsible = new Collapsible(
+      collapse.nextElementSibling,
+      collapse,
+      arrows
+    );
     if (toggleUponLoad) {
       collapsible.toggle();
     }
