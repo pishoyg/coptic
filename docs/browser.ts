@@ -72,7 +72,7 @@ export async function yieldToBrowser(): Promise<void> {
 /**
  * @param event
  */
-export function stopPropagation(event: KeyboardEvent): void {
+export function stopPropagation(event: Event): void {
   event.stopPropagation();
 }
 
