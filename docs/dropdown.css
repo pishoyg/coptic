@@ -1,0 +1,53 @@
+/* On a wide screen, hide the drop-down menu. */
+.dropdown {
+  display: none;
+}
+
+/* Narrow screen rules: */
+@media (width <= 500px) {
+  /* Show the drop-down checkboxes. */
+  .dropdown {
+    display: inline;
+  }
+}
+
+.dropdown-btn {
+  padding: 0;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  /* The drop-down list is hidden, unless shown by the user. */
+  display: none;
+
+  /* The drop-down list shows right below the button. */
+  position: absolute;
+
+  /* Hide the content behind the list by giving it an opaque background. */
+  background-color: white;
+
+  /* Show a vertical scrollbar, only if needed. */
+  overflow-y: auto;
+
+  /* Give the list some shadow to make it prettier. */
+  box-shadow: 0 8px 16px rgb(0 0 0 / 20%);
+
+  /* The list is given priority in display over the other elements. */
+  z-index: 1;
+}
+
+.dropdown-content label {
+  display: block; /* Each label on its own line. */
+
+  /* Pad the labels, so they won't hit the drop-down list's border. */
+  padding-left: 2px;
+  padding-right: 2px;
+
+  /* Each label is clickable. */
+  cursor: pointer;
+}
+
+.dropdown-content input {
+  /* Put a small margin between the checkbox box and the checkbox label. */
+  margin-right: 5px;
+}
