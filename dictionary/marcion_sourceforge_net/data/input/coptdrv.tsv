@@ -6587,7 +6587,7 @@ key	key_word	key_deriv	pos	word	type	en	crum
 5012	982	5011	13	(S,B) ^^^ ebol	0	{intr:} (B), be scared away | {tr:} (S,B), scare away	236b
 5013	982	5011	14	(B) ^^^ epaHou	0	{intr:} be scared back	236b
 1234	982	0	15	(B) ^^	1	fright /$gk: [[ptohsis]]$/	236b
-5014	982	0	16	(B,F) naSphri	1	(for [naSn phri] nn m), scare-quail, (scare-crow) /$gk: [[probaskanion]]$/	236b
+5014	982	0	16	(B,F) naSphri	1	(for [naSp phri] nn m), scare-quail, (scare-crow) /$gk: [[probaskanion]]$/	236b
 							
 7615	985	0	1	(B) laFwi	0	hairy	623b
 7616	985	0	2	(S) ratFw	0	(sim)	623b
@@ -7347,9 +7347,9 @@ key	key_word	key_deriv	pos	word	type	en	crum
 1671	1364	0	1	(B) ebol sa-	0	from the side, from /$gk: [[apo]]$/	313b
 1672	1364	0	2	(S,B) kesa	0	other part, apart, elsewhere	313b
 1673	1364	0	3	(S,L,B,F,O) nsa- (L,B) sa- (F) esa- (A) nse- (A,F) se- (S,A,L,B,F) nsw= (S) *nswtn,nsathutn	9	behind, after (lit or figur S, independent of vb) |$ against |$ (rarely) from | except, beyond (S,A,B,F) /$gk: [[ei mh, h, alla h, alla kai, plhn, pleion h]]$/ | (with impers [es-]), it is /*incubent, depends*/ upon	314a
-1674	1364	1673	4	(S) psasa nim,sasa nim (B) sasa niben (F) psase niben	0	on every side	314a
+1674	1364	1673	4	(S) nsasa nim,sasa nim (B) sasa niben (F) nsase n.	0	on every side	314a
 1675	1364	1673	5	(S,F) nsaousa (S) nsausa *^<a href=ext Mark;2;4;34;aJnparabolh de meFSaJe nmmau nsausa de SaFbolou throu eneFmaqhths;Mark;2;6;31;peJe ihsous de nau Je amhin ntwtn nsausa euma nJaie">Ext</a>^* (S,B) saousa (B) sapsa"	0	on a side, apart /$gk: [[en merei, kat idian]]$/	314a
-1676	1364	1673	6	(S) nsalaau psa,salaau psa (B) nsaHli psa	0	on any /*no*/ side	314b
+1676	1364	1673	6	(S) nsalaau nsa,salaau nsa (B) nsaHli nsa	0	on any /*no*/ side	314b
 1677	1364	0	7	(S,L,F,O) mnnsa- (S) nmnsa- (B,F) menensa- (F) men$^n^$esa- (NH) mnnse- *^<a href=ext codex II - The Apocryphon of John;106;26;14;aJnts gar mn Gom ntelaau aHe eratF mnnse touJpoou">Ext</a>^* (S,A,B,F) menesw="	0	after (of time) |$ (with nn or pron) /$gk: [[meta, opisw, epekeina, epeita, usteron]]$/ |$$ ([m. ... ebol] S, meaning same) |$ (with [tre- /*etre-, ptre-*/] S, [nte-] A, [te-] L, [qre-] B, [etre-] F + vb) /$gk: [[meta to, dia to]]$/	314b
 1678	1364	1677	8	(S,A,L) mnnsws (B,F) menensws (F) mn$^n^$sos	0	afterward /$gk: [[meta touto, eita, epeita]]$/	315a
 							
@@ -9605,7 +9605,7 @@ key	key_word	key_deriv	pos	word	type	en	crum
 8320	2407	8318	3	^^^ n-	0	with, in	769b
 8321	2407	8318	4	^^^ Ken-	0		769b
 3849	2407	0	5	JinJ.	0	clothing, vestments /$gk: [[stolismos]]$/	769b
-3850	2407	0	6	JolHF	1	gratting, lattice	769b
+3850	2407	0	6	JolHF	1	grating, lattice	769b
 							
 3851	2409	0	1	(S) J$^e^$lHes,JlHs,Jellhs	2	be exhausted, pant /$gk: [[asqmainein, fusan]]$/ | (as nn m), exhausting, panting	769b
 3852	2409	0	2	(B) elHhs	3	(same ?)	770a
@@ -10035,11 +10035,12 @@ key	key_word	key_deriv	pos	word	type	en	crum
 105	2700	0	1	(B) met^^	4	greed of shameful gain	23b
 							
 117	2707	0	1	ata.	6	(privative adj), stainless /$gk: [[amwmos]]$/	26b
-118	2707	0	2	metata.	4	stainlessness	26b
-119	2707	0	3	er a.	0	be stainless /$gk: [[amwmos]]$/	26b
-120	2707	0	4	Hi a.	0	cast a stain /$gk: [[spiloun, mwmasqai]]$/	26b
-5484	2707	120	5	^^^ nsa-	0		26b
-5485	2707	120	6	^^^ e-	0		26b
+118	2707	117	2	metata.	4	stainlessness	26b
+119	2707	117	3	er ata.	0	be stainless /$gk: [[amwmos]]$/	26b
+9033	2707	0	4	er a.	0	be stained	26b
+120	2707	0	5	Hi a.	0	cast a stain /$gk: [[spiloun, mwmasqai]]$/	26b
+5484	2707	120	6	^^^ nsa-	0		26b
+5485	2707	120	7	^^^ e-	0		26b
 							
 8977	2709	0	1	^^	3	(nn) |$ |$ (of sun) |$ (of stars)	29a
 							
@@ -10054,6 +10055,8 @@ key	key_word	key_deriv	pos	word	type	en	crum
 							
 210	2723	0	1	(B) er ..ou.	0	/$gk: [[kiqarizein]]$/	40a
 211	2723	0	2	(B) reFer ..ou.	0	/$gk: [[kiqarwdos]]$/	40a
+							
+9032	2741	0	1	(S) bwHn,baHn	1	canopy, awning /$gk: [[kalupthra, skeph]]$/	48a
 							
 243	2744	0	1	(B) ^^	1	bending, twisting	48b
 244	2744	0	2	(B) eFJi	3	wrinkle	48b
