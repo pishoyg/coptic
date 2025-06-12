@@ -31,8 +31,8 @@
 
 /* Hover-invoked .droppable: */
 .dropdown .droppable {
-  top: 8px;
-  left: 100%;
+  top: 100%; /* .droppable renders right beneath the previous sibling */
+  left: 0; /* Align with the left edge of the sibling */
 
   /* Show hover-invoked .droppable on one line: */
   white-space: nowrap; /* Prevent line breaks. */
