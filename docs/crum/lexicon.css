@@ -1,22 +1,35 @@
 /* Use italic for the form labels. */
 #highlight-dialects,
-#full-word-checkbox-label,
-#regex-checkbox-label {
+#full-word-checkbox,
+#regex-checkbox {
   font-style: italic;
 }
 
-/* On a wide screen, use 80% of the width. */
-.search-box input {
-  width: 80%;
+/* Dim Crum's types. */
+.results#crum .type {
+  opacity: 0.3;
 }
 
-/* On a wide screen, hide the drop-down menu, and the keyboard.
- * TODO: (#453) Show the keyboard on desktop once you have instructions for how
- * to install a keyboard on desktop.
- * */
-.drop,
-#keyboard {
-  display: none;
+/* Wide screen rules: */
+@media (width > 500px) {
+  /* Use 80% of the width. */
+  .search-box input {
+    width: 80%;
+  }
+
+  /* Hide the drop-down menu, and the keyboard.
+   * TODO: (#453) Show the keyboard on desktop once you have instructions for how
+   * to install a keyboard on desktop. */
+  .drop,
+  #keyboard {
+    display: none;
+  }
+
+  #full-word-checkbox,
+  #regex-checkbox {
+    width: 15%;
+    text-align: center;
+  }
 }
 
 /* Narrow screen rules: */
@@ -29,12 +42,6 @@
   /* Hide the spelled-out checkboxes. */
   #checkboxes {
     display: none;
-  }
-
-  /* Show the drop-down checkboxes and the keyboard. */
-  .drop,
-  #keyboard {
-    display: inline;
   }
 
   /* Shrink the space between the form and the results. */
@@ -52,9 +59,4 @@
 
 .droppable label {
   display: block; /* Each label on its own line. */
-}
-
-/* Dim Crum's types. */
-.results#crum .type {
-  opacity: 0.3;
 }
