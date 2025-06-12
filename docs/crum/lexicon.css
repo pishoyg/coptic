@@ -14,7 +14,7 @@
  * TODO: (#453) Show the keyboard on desktop once you have instructions for how
  * to install a keyboard on desktop.
  * */
-.dropdown,
+.drop,
 #keyboard {
   display: none;
 }
@@ -32,7 +32,7 @@
   }
 
   /* Show the drop-down checkboxes and the keyboard. */
-  .dropdown,
+  .drop,
   #keyboard {
     display: inline;
   }

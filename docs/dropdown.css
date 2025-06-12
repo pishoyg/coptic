@@ -1,9 +1,9 @@
-.dropdown-btn {
+.drop {
   padding: 0;
   cursor: pointer;
 }
 
-.dropdown-content {
+.droppable {
   /* The drop-down list is hidden, unless shown by the user. */
   display: none;
 
@@ -23,7 +23,7 @@
   z-index: 1;
 }
 
-.dropdown-content label {
+.droppable label {
   display: block; /* Each label on its own line. */
 
   /* Pad the labels, so they won't hit the drop-down list's border. */
@@ -34,7 +34,7 @@
   cursor: pointer;
 }
 
-.dropdown-content input {
+.droppable input {
   /* Put a small margin between the checkbox box and the checkbox label. */
   margin-right: 5px;
 }

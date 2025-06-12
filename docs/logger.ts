@@ -86,6 +86,8 @@ export function warn(...message: unknown[]): void {
 /**
  * Log an error message to the console.
  * @param {...any} message - Message to log.
+ *
+ * TODO: (#457) Abandon mere error message. Always use exceptions.
  */
 export function error(...message: unknown[]): void {
   print(Colors.RED, Colors.PURPLE, 'error', false, ...message);
@@ -117,6 +119,10 @@ export function fatal(...message: unknown[]): void {
  *
  * @param condition - Condition to evaluate.
  * @param {...any} message - Message to log (if the condition is not satisfied).
+ *
+ * TODO: (#457): What is the point of an error message that we may or may not
+ * see in the console? We should probably rely on exceptions to catch errors in
+ * the pre-publish step.
  */
 export function err(condition: boolean, ...message: unknown[]): void {
   if (condition) {

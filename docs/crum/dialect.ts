@@ -93,7 +93,7 @@ export class Dialect {
     // Create the second <td> (dialect name)
     const tdName = document.createElement('td');
     tdName.classList.add(CLS.DIALECT_NAME);
-    tdName.replaceChildren(this.anchor());
+    tdName.replaceChildren(...this.anchoredName());
     tr.appendChild(tdName);
 
     // Conditionally add the third <td> (dictionaries)
@@ -120,45 +120,51 @@ export class Dialect {
   }
 
   /**
-   * @returns
+   * @returns - The name of the dialect, potentially containing anchors to
+   * articles about the dialect.
+   * - If an article is available for this dialect, we link it directly.
+   * - Otherwise, this may be a composite dialect name (containing one or more
+   *   dialect names within it), in which case we try to retrieve dialect
+   *   articles from other dialects and link them.
    */
-  anchor(): HTMLAnchorElement | HTMLSpanElement {
+  anchoredName(): (string | HTMLElement)[] {
     if (this.article) {
-      const name: HTMLElement = document.createElement('span');
-      name.textContent = this.name;
       const a = document.createElement('a');
       a.href = this.article;
       a.target = '_blank';
-      a.replaceChildren(name);
-      return a;
+      a.textContent = this.name;
+      return [a];
     }
 
-    const span: HTMLSpanElement = document.createElement('span');
-    const name: (string | HTMLElement)[] = this.name.split(' ').map(
-      (word: string): string | HTMLElement =>
-        Object.values(DIALECTS)
-          .find((d: Dialect): boolean => d.name === word)
-          ?.anchor() ?? word
-    );
-
-    span.replaceChildren(
-      ...name.flatMap((item, index) =>
-        index < name.length - 1 ? [item, ' '] : [item]
+    const words: string[] = this.name.split(' ');
+    return words
+      .map(
+        (word: string): (string | HTMLElement)[] =>
+          // If this word is the name of a dialect, return its anchored name.
+          // Otherwise, return the word as plain text.
+          Object.values(DIALECTS)
+            .find((d: Dialect): boolean => d.name === word)
+            ?.anchoredName() ?? [word]
       )
-    );
-    return span;
+      .flatMap(
+        // Re-insert spaces between words.
+        (
+          item: (string | HTMLElement)[],
+          index: number
+        ): (string | HTMLElement)[] =>
+          index < words.length - 1 ? [...item, ' '] : item
+      );
   }
 
   /**
-   * @returns
+   * @returns An HTML element, whose text content has the following format:
+   *   (code) Dialect Name
+   * The name bears anchors, if present.
    */
   title(): HTMLSpanElement {
-    const code: HTMLSpanElement = document.createElement('span');
-    code.textContent = this.code;
-
-    const description: HTMLSpanElement = document.createElement('span');
-    description.replaceChildren('(', code, ')', ' ', this.anchor());
-    return description;
+    const title: HTMLSpanElement = document.createElement('span');
+    title.replaceChildren('(', this.code, ')', ' ', ...this.anchoredName());
+    return title;
   }
 }
 

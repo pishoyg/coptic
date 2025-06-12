@@ -171,7 +171,7 @@ const XOOXLES: Xooxle[] = [
 function spellOutDialectsInDropdown(): void {
   document
     .querySelectorAll<HTMLInputElement>(
-      `.${dropdown.CLS.DROPDOWN_CONTENT} input`
+      `#${DIALECTS_ID} .${dropdown.CLS.DROPPABLE} input`
     )
     .forEach((el: HTMLInputElement): void => {
       const next: ChildNode | null = el.nextSibling;
@@ -185,7 +185,8 @@ function spellOutDialectsInDropdown(): void {
  *
  */
 async function main(): Promise<void> {
-  const dropdownDialects: dropdown.Dropdown[] = dropdown.addEventListeners();
+  const dropdownDialects: dropdown.Droppable[] =
+    dropdown.addEventListenersForSiblings();
   logger.ass(dropdownDialects.length === 1);
   if (d.setToDefaultIfUnset()) {
     // In order to alert the user to the fact that dialect selection has
@@ -239,7 +240,7 @@ async function main(): Promise<void> {
   );
 
   // Initialize collapsible elements.
-  collapse.addEventListenersForSiblings(true, true);
+  collapse.addEventListenersForSiblings(true);
 
   help.makeHelpPanel(highlighter);
 
