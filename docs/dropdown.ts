@@ -1,12 +1,21 @@
-/** Package dropdown defines logic to control drop-down elements. */
+/** Package dropdown defines logic for click-invoked droppables. */
 import * as browser from './browser.js';
 import * as logger from './logger.js';
 
 type Visibility = 'block' | 'none';
 
 export enum CLS {
-  DROP = 'drop',
+  /* DROPPABLE is the class of drop-down content. */
   DROPPABLE = 'droppable',
+  /* DROP is the class of elements that, when clicked, toggle the display of
+   * their associated droppable. */
+  DROP = 'drop',
+  /* DROPDOWN is the class of elements that, when hovered over, show their
+   * associated droppable.
+   * NOTE: This package only concerns itself with click-invoked, not
+   * hover-invoked, drop-downs. But we include the class for completion in case
+   * it's needed externally. */
+  DROPDOWN = 'dropdown',
 }
 
 /**
@@ -19,7 +28,7 @@ export class Droppable {
    */
   constructor(
     private readonly droppable: HTMLElement,
-    readonly drop?: HTMLElement
+    drop: HTMLElement
   ) {
     // Prevent clicks on the content from hiding it.
     this.droppable.addEventListener(
@@ -27,11 +36,14 @@ export class Droppable {
       browser.stopPropagation.bind(browser)
     );
     // A click on the .drop element hides the content.
-    drop?.addEventListener('click', (e: MouseEvent) => {
+    drop.addEventListener('click', (e: MouseEvent) => {
       this.toggle();
       e.stopPropagation();
     });
-    // A click anywhere outside the element hides it.
+    // A click anywhere outside the .droppable element hides it.
+    // We should also exclude clicks on the .drop element, since those toggle
+    // rather than hide. But we already stop propagation of events on the .drop
+    // element, so we don't need to check for it.
     document.addEventListener('click', (event: MouseEvent) => {
       if (!this.droppable.contains(event.target as Node)) {
         this.hide();
@@ -42,14 +54,14 @@ export class Droppable {
   /**
    * @returns
    */
-  get(): Visibility {
+  private get(): Visibility {
     return this.droppable.style.display as Visibility;
   }
 
   /**
    * @param visibility
    */
-  set(visibility: Visibility): void {
+  private set(visibility: Visibility): void {
     this.droppable.style.display = visibility;
   }
 

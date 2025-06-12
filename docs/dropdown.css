@@ -1,8 +1,6 @@
-.drop {
-  padding: 0;
-  cursor: pointer;
-}
+/* CSS for both hover-invoked and click-invoked drop-downs. */
 
+/* .droppable is shared by both click-invoked and hover-invoked drop-downs. */
 .droppable {
   /* The drop-down list is hidden, unless shown by the user. */
   display: none;
@@ -21,20 +19,39 @@
 
   /* The list is given priority in display over the other elements. */
   z-index: 1;
-}
-
-.droppable label {
-  display: block; /* Each label on its own line. */
-
-  /* Pad the labels, so they won't hit the drop-down list's border. */
   padding-left: 2px;
   padding-right: 2px;
-
-  /* Each label is clickable. */
-  cursor: pointer;
 }
 
-.droppable input {
-  /* Put a small margin between the checkbox box and the checkbox label. */
-  margin-right: 5px;
+/* .dropdown is specific to hover-invoked elements. */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Hover-invoked .droppable: */
+.dropdown .droppable {
+  top: 8px;
+  left: 100%;
+
+  /* Show hover-invoked .droppable on one line: */
+  white-space: nowrap; /* Prevent line breaks. */
+  width: auto; /* Shrinks to fit content. */
+  max-width: none; /* Prevents it from wrapping due to max width. */
+  overflow-x: auto; /* Hide overflow if it becomes too long. */
+  text-overflow: ellipsis; /* Hide overflow if it becomes too long. */
+}
+
+/* Hovering a .dropdown element causes its child .droppable to show.
+ * A hover-invoked droppable must be a child of its driving .dropdown! */
+.dropdown:hover .droppable {
+  display: block;
+}
+
+/* .drop is specific to click-invoked elements. Clicking a .drop element toggles
+ * the display of its associated .droppable.
+ * This is controlled in JavaScript. */
+.drop {
+  padding: 0;
+  cursor: pointer;
 }

@@ -20,6 +20,11 @@ const REGEX_CHECKBOX_ID = 'regexCheckbox';
 // otherwise they could override each other!
 const MESSAGE_BOX_ID = 'message';
 const DIALECTS_ID = 'dialects';
+// While we have two groups of checkboxes, confusingly enough, the unqualified
+// 'checkboxes' ID refers to the ones that show on a list, rather than the ones
+// that show in the drop-down menu. The reason this ID was used for those boxes
+// is that they preceded the more recent drop-down version.
+const CHECKBOXES_ID = 'checkboxes';
 
 const REPORTS_ID = 'reports';
 
@@ -184,6 +189,27 @@ function spellOutDialectsInDropdown(): void {
 /**
  *
  */
+function spellOutDialectsInList(): void {
+  document
+    .querySelectorAll<HTMLLabelElement>(`#${CHECKBOXES_ID} label`)
+    .forEach((drop: HTMLLabelElement): void => {
+      // Make the label a .dropdown element.
+      drop.classList.add(dropdown.CLS.DROPDOWN);
+      // Create a hover-invoked droppable.
+      const droppable = document.createElement('span');
+      droppable.classList.add(dropdown.CLS.DROPPABLE);
+      droppable.replaceChildren(
+        ...d.DIALECTS[drop.textContent as d.DIALECT].anchoredName()
+      );
+      // A hover-invoked .droppable must be a child of its associated .dropdown
+      // element.
+      drop.appendChild(droppable);
+    });
+}
+
+/**
+ *
+ */
 async function main(): Promise<void> {
   const dropdownDialects: dropdown.Droppable[] =
     dropdown.addEventListenersForSiblings();
@@ -249,6 +275,7 @@ async function main(): Promise<void> {
     .addEventListener('click', header.reports);
 
   spellOutDialectsInDropdown();
+  spellOutDialectsInList();
 }
 
 await main();

@@ -50,6 +50,10 @@
   }
 }
 
+.droppable label {
+  display: block; /* Each label on its own line. */
+}
+
 /* Dim Crum's types. */
 .results#crum .type {
   opacity: 0.3;
