@@ -432,27 +432,31 @@ export class SearchResult extends AggregateResult {
    * @returns the comparison key.
    */
   compareKey() {
-    // Results are sorted based on the boundary type.
-    // See the BoundaryType enum for the order.
     const boundary = this.boundaryType();
-    // Within all the candidates having a match with a given boundary type, we
-    // sort based on the index of the first field possessing a match with that
-    // boundary type.
-    // A candidate with a full-word match in the first field should rank higher
-    // than a candidate with a full-word match in the second field.
     const boundaryIndex = this.results.findIndex(
       (res) => res.boundaryType() === boundary
     );
-    // Afterwards, we sort based on the index of the first match, regardless of
-    // the boundary type of that match.
-    // Results are sorted based on the first column that has a match.
-    // We do so based on the assumption that the earlier columns contain more
-    // relevant data. So a result with a match in the 1st column is likely
-    // more interesting to the user than a result with a match in the 2nd
-    // column, so it should show first.
-    const firstMatchIndex = this.results.findIndex((res) => res.match);
-    // Lastly, we rank based on the number of matches in the text.
-    return [boundary, boundaryIndex, firstMatchIndex, this.numMatches];
+    return [
+      // Results are sorted based on the boundary type.
+      // See the BoundaryType enum for the order.
+      boundary,
+      // Within all the candidates having a match with a given boundary type, we
+      // sort based on the index of the first field possessing a match with that
+      // boundary type.
+      // A candidate with a full-word match in the first field should rank
+      // higher than a candidate with a full-word match in the second field.
+      boundaryIndex,
+      // Afterwards, we rank based on the number of matches in the text.
+      this.numMatches,
+      // Lastly, we sort based on the index of the first match, regardless
+      // the boundary type of that match.
+      // Results are sorted based on the first column that has a match.
+      // We do so based on the assumption that the earlier columns contain more
+      // relevant data. So a result with a match in the 1st column is likely
+      // more interesting to the user than a result with a match in the 2nd
+      // column, so it should show first.
+      this.results.findIndex((res) => res.match),
+    ];
   }
 }
 /**
