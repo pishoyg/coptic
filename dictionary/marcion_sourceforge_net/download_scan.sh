@@ -1,31 +1,43 @@
 #!/bin/bash
+
 set -o errexit  # Exit upon encountering a failure.
 set -o nounset  # Consider an undefined variable to be an error.
-set -o pipefail  # Exit if any subcommand fails.
 
-# Input parameters.
-readonly PREFIX="https://coptot.manuscriptroom.com/images/webfriendly/800000/crum_"
-readonly START=1
-readonly END=844
+# Base URL for the images
+BASE_URL="https://coptot.manuscriptroom.com/images/webfriendly/800000"
 
-# Output parameters.
-readonly DEST="docs/crum/crum"
+# Output directory
+OUTPUT_DIR="${1}"
 
-# Working directory.
-readonly TMP_DIR="/tmp/crum"
-mkdir -p "${TMP_DIR}"
+# Create the directory if it doesn't exist, and clear its content.
+mkdir -p "${OUTPUT_DIR}"
 
-mkdir -p "${DEST}"
+# Counter for the output file names
+COUNTER=1
 
-# shellcheck disable=SC2016
-seq "${START}" "${END}" | xargs -P 10 -I{} bash -c '
-  NUM="$1"
-  TMP="$2/${NUM}.jpeg"
-  OUT="$3/$(( ${NUM} + 20 )).jpeg"
-  curl --silent --fail "${4}$(printf "%03d" "${NUM}").jpeg" -o "${TMP}"
-  magick "${TMP}" -resize 50% -interlace JPEG -strip -quality 5 -crop "1830x2760+170+40" "${OUT}"
-  rm -f "${TMP}"
-  echo "Wrote ${OUT}!"
-' _ {} "${TMP_DIR}" "${DEST}" "${PREFIX}"
+# Download crum_fm_[000-021].jpg.
+for i in $(seq 0 21); do
+    URL="${BASE_URL}/crum_fm_$(printf "%03d" "$i").jpg"
+    FILENAME="${COUNTER}.jpeg"
+    echo "Downloading ${URL} to ${OUTPUT_DIR}/${FILENAME}"
+    curl "${URL}" -o "${OUTPUT_DIR}/${FILENAME}"
+    ((COUNTER++))
+done
 
-rm -rf "${TMP_DIR}"
+# Download crum_[001-844].jpg.
+for i in $(seq 1 844); do
+    URL="${BASE_URL}/crum_$(printf "%03d" "$i").jpg"
+    FILENAME="${COUNTER}.jpeg"
+    echo "Downloading ${URL} to ${OUTPUT_DIR}/${FILENAME}"
+    curl "${URL}" -o "${OUTPUT_DIR}/${FILENAME}"
+    ((COUNTER++))
+done
+
+# Download crum_bm_[001-109].jpg.
+for i in $(seq 1 109); do
+    URL="${BASE_URL}/crum_bm_$(printf "%03d" "$i").jpg"
+    FILENAME="${COUNTER}.jpeg"
+    echo "Downloading ${URL} to ${OUTPUT_DIR}/${FILENAME}"
+    curl "${URL}" -o "${OUTPUT_DIR}/${FILENAME}"
+    ((COUNTER++))
+done
