@@ -187,6 +187,8 @@ function spellOutDialectsInList() {
  *
  */
 async function main() {
+  spellOutDialectsInDropdown();
+  spellOutDialectsInList();
   const dropdownDialects = dropdown.addEventListenersForSiblings();
   logger.ass(dropdownDialects.length === 1);
   if (d.setToDefaultIfUnset()) {
@@ -239,7 +241,5 @@ async function main() {
   collapse.addEventListenersForSiblings(true);
   help.makeHelpPanel(highlighter);
   document.getElementById(REPORTS_ID).addEventListener('click', header.reports);
-  spellOutDialectsInDropdown();
-  spellOutDialectsInList();
 }
 await main();
