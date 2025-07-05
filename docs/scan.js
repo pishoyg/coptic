@@ -225,8 +225,7 @@ export class Scroller {
    * is a better user experience than having `?page=1` open the cover page or
    * some page in the intro, and `?page=21` open page 1 in the book.
    *
-   * @param ext - File extensions. If it's page-dependent, pass a function that
-   * returns the extension given the file basename.
+   * @param ext - File extension.
    *
    * @param form - Input and output elements.
    *
@@ -313,8 +312,7 @@ export class Scroller {
    */
   updateDisplay(page) {
     const stem = page + this.offset;
-    const ext = typeof this.ext === 'function' ? this.ext(stem) : this.ext;
-    this.form.image.src = `${stem.toString()}.${ext}`;
+    this.form.image.src = `${stem.toString()}.${this.ext}`;
     this.form.image.alt = page.toString();
     if (page === this.start) {
       this.form.prevButton.classList.add(cls.DISABLED);

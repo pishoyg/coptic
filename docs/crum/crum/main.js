@@ -1,26 +1,9 @@
 /** Main function for the Crum scan. */
 import * as scan from '../../scan.js';
 const MIN_PAGE_NUM = 1;
-const MAX_PAGE_NUM = 973;
-const OFFSET = 20;
+const MAX_PAGE_NUM = 975;
+const OFFSET = 22;
 const LANDING = -13; // List of Abbreviations is the default for Crum.
-/* eslint-disable no-magic-numbers */
-const PNG_RANGES = [
-  [1, 6],
-  [11, 20],
-  [865, 973],
-];
-/* eslint-enable no-magic-numbers */
-/**
- *
- * @param page
- * @returns
- */
-function ext(page) {
-  return PNG_RANGES.some((range) => page >= range[0] && page <= range[1])
-    ? 'png'
-    : 'jpeg';
-}
 /**
  *
  */
@@ -34,7 +17,7 @@ function main() {
     // the moment because the field isn't used.
     document.getElementById('search-box')
   );
-  new scan.Scroller(MIN_PAGE_NUM, MAX_PAGE_NUM, OFFSET, ext, form, LANDING);
+  new scan.Scroller(MIN_PAGE_NUM, MAX_PAGE_NUM, OFFSET, 'png', form, LANDING);
   new scan.ZoomerDragger(form);
 }
 main();
