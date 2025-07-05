@@ -211,6 +211,9 @@ function spellOutDialectsInList(): void {
  *
  */
 async function main(): Promise<void> {
+  spellOutDialectsInDropdown();
+  spellOutDialectsInList();
+
   const dropdownDialects: dropdown.Droppable[] =
     dropdown.addEventListenersForSiblings();
   logger.ass(dropdownDialects.length === 1);
@@ -273,9 +276,6 @@ async function main(): Promise<void> {
   document
     .getElementById(REPORTS_ID)!
     .addEventListener('click', header.reports);
-
-  spellOutDialectsInDropdown();
-  spellOutDialectsInList();
 }
 
 await main();
