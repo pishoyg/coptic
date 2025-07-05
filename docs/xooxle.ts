@@ -327,6 +327,7 @@ abstract class AggregateResult {
   private matchMemo: boolean | null = null;
   private boundaryTypeMemo: BoundaryType | null = null;
   private fragmentWordMemo: string | undefined | null = null;
+  private numMatchesMemo: number | undefined | null = null;
 
   /**
    * @returns The boundary type.
@@ -356,6 +357,15 @@ abstract class AggregateResult {
   get match(): boolean {
     // We have a match if any of the results has a match.
     return (this.matchMemo ??= this.results.some((r) => r.match));
+  }
+
+  /**
+   * @returns Number of matches.
+   */
+  get numMatches(): number {
+    return (this.numMatchesMemo ??= this.results
+      .map((r) => r.numMatches)
+      .reduce((a, b) => a + b, 0));
   }
 }
 
@@ -517,15 +527,16 @@ export class SearchResult extends AggregateResult {
     const boundaryIndex: number = this.results.findIndex(
       (res) => res.boundaryType() === boundary
     );
-    // Lastly, we sort based on the index of the first match, regardless of the
-    // boundary type of that match.
+    // Afterwards, we sort based on the index of the first match, regardless of
+    // the boundary type of that match.
     // Results are sorted based on the first column that has a match.
     // We do so based on the assumption that the earlier columns contain more
     // relevant data. So a result with a match in the 1st column is likely
     // more interesting to the user than a result with a match in the 2nd
     // column, so it should show first.
     const firstMatchIndex: number = this.results.findIndex((res) => res.match);
-    return [boundary, boundaryIndex, firstMatchIndex];
+    // Lastly, we rank based on the number of matches in the text.
+    return [boundary, boundaryIndex, firstMatchIndex, this.numMatches];
   }
 }
 
@@ -1027,6 +1038,13 @@ class LineSearchResult {
    */
   boundaryType(): BoundaryType {
     return Math.min(...this.matches.map((m) => m.boundaryType));
+  }
+
+  /**
+   * @returns The number of matches in this line.
+   */
+  numMatches(): number {
+    return this.matches.length;
   }
 }
 
