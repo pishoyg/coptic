@@ -696,7 +696,7 @@ class Crum(Decker):
             for num in page_numbers:
                 yield from _img_aux(
                     id_=f"crum{num}",
-                    path=os.path.join(SCAN_DIR, f"{num+20}.jpeg"),
+                    path=os.path.join(SCAN_DIR, f"{num+22}.png"),
                     cls="crum-page-img",
                     alt=str(num),
                     caption=f'<span class="crum-page-external">{num}</span>',
