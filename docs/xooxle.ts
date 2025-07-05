@@ -531,7 +531,9 @@ export class SearchResult extends AggregateResult {
       // higher than a candidate with a full-word match in the second field.
       boundaryIndex,
       // Afterwards, we rank based on the number of matches in the text.
-      this.numMatches,
+      // Notice that we revert the sign, so the larger numbers will appear
+      // first.
+      -this.numMatches,
       // Lastly, we sort based on the index of the first match, regardless
       // the boundary type of that match.
       // Results are sorted based on the first column that has a match.
@@ -1047,7 +1049,7 @@ class LineSearchResult {
   /**
    * @returns The number of matches in this line.
    */
-  numMatches(): number {
+  get numMatches(): number {
     return this.matches.length;
   }
 }
