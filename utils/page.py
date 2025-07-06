@@ -9,10 +9,7 @@ _CHARSET_TAG = """
   <meta charset="utf-8">
 """
 
-# TODO: (#407) Parameterize CSS Files in Generated HTML.
-_STYLE_TAG = """
-  <link href="/style.css" rel="stylesheet" type="text/css">
-"""
+_STYLE_TAG_FMT = '<link href="{}" rel="stylesheet" type="text/css">'
 assert os.path.isfile(os.path.join(paths.SITE_DIR, "style.css"))
 
 _GOOGLE_TAG = """
@@ -54,6 +51,7 @@ def html_head(
     next_href: str = "",
     prev_href: str = "",
     scripts: list[str] | None = None,
+    css: list[str] | None = None,
     epub: bool = False,
 ) -> str:
     assert title
@@ -63,6 +61,7 @@ def html_head(
         assert not next_href
         assert not prev_href
         assert not scripts
+        assert not css
     return "".join(
         html_head_aux(
             title,
@@ -71,6 +70,7 @@ def html_head(
             next_href,
             prev_href,
             scripts or [],
+            css or [],
             epub,
         ),
     )
@@ -83,8 +83,30 @@ def html_head_aux(
     next_href: str,
     prev_href: str,
     scripts: list[str],
+    css: list[str],
     epub: bool = False,
 ) -> abc.Generator[str]:
+    """
+    Args:
+        title: Page title.
+        page_class: Classes to add to the <body> tag.
+        search: Link to the search page. See
+            https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel#search.
+        next_href: Link to the next page. See
+            https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel#next.
+        prev_href: Link to the previous page. See
+            https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel#prev.
+        scripts: List of JavaScript files to import.
+        css: List of CSS file paths to import in the HTML.
+            NOTE: The shared CSS file is included by default.
+        epub: Whether the output will be used in an EPUB.
+            NOTE: If true, the following arguments must be empty, as they are
+            irrelevant in an EPUB: page_class, search, next_href, prev_href,
+            scripts, css.
+
+    Yields:
+        The HTML pieces, to be concatenated into the full HTML file.
+    """
     yield "<head>"
     yield f"<title>{title}</title>"
     if epub:
@@ -94,7 +116,8 @@ def html_head_aux(
 
     yield _CHARSET_TAG
     yield _VIEWPORT_TAG
-    yield _STYLE_TAG
+    for path in css + [paths.SHARED_CSS]:
+        yield _STYLE_TAG_FMT.format(path)
     yield _ICON_TAG
     yield _GOOGLE_TAG
     if search:
