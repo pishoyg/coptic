@@ -79,9 +79,8 @@ _update() {
   pre-commit autoupdate
 
   # Update npm packages.
-  jq -r "(.dependencies // {}) + (.devDependencies // {}) | keys[]" \
-    "package.json" \
-    | xargs npm add
+  jq -r "(.dependencies // {}) | keys[]" "package.json" | xargs npm add
+  jq -r "(.devDependencies // {}) | keys[]" "package.json" | xargs npm add --dev
 }
 
 if ${UPDATE}; then
