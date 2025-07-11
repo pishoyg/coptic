@@ -1,23 +1,21 @@
 {
   "type": "module",
   "devDependencies": {
-    "@eslint/js": "^9.26.0",
+    "@eslint/js": "^9.30.1",
     "@stylistic/eslint-plugin": "^2.13.0",
-    "@typescript-eslint/eslint-plugin": "^8.32.1",
-    "@typescript-eslint/utils": "^8.32.1",
     "clean-css": "^5.3.3",
-    "esbuild": "^0.25.4",
-    "eslint": "^9.26.0",
+    "esbuild": "^0.25.6",
+    "eslint": "^9.30.1",
     "eslint-config-prettier": "^10.1.5",
-    "eslint-plugin-jsdoc": "^50.6.14",
-    "eslint-plugin-prettier": "^5.4.0",
+    "eslint-plugin-jsdoc": "^50.8.0",
+    "eslint-plugin-prettier": "^5.5.1",
     "globals": "^15.15.0",
-    "prettier": "^3.5.3",
-    "stylelint": "^16.19.1",
+    "prettier": "^3.6.2",
+    "stylelint": "^16.21.1",
     "stylelint-config-standard-scss": "^13.1.0",
     "typescript": "^5.8.3",
-    "typescript-eslint": "^8.32.1",
-    "webpack": "^5.99.8"
+    "typescript-eslint": "^8.36.0",
+    "webpack": "^5.100.1"
   },
   "prettier": {
     "trailingComma": "es5",
