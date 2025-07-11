@@ -131,11 +131,6 @@ crum_img_plot: FORCE
 	# Plot stats about image collection.
 	./dictionary/marcion_sourceforge_net/img_helper.py --plot | less -R
 
-crum_scan:
-	# Download Crum's scan.
-	./dictionary/marcion_sourceforge_net/download_scan.sh "/tmp/crum"
-	./convert.sh "/tmp/crum" "docs/crum/crum" "-crop" "3768x5584+270+60" "+repage"
-
 crum_sentinels: FORCE
 	# Download a new version of Crum's sentinels sheet.
 	PUB="https://docs.google.com/spreadsheets/d/e/2PACX-1vS0Btx-Vz3n5J_sn0dOueWpN_lk64AdV7RrKDp_VNqVfCHajdHoQs67Xeld94jwyRVkqaRxlaRFNH5F/pub?output=tsv"; \
