@@ -175,10 +175,6 @@ kellia_analysis_clean: dictionary/kellia_uni_goettingen_de/data/output/analysis.
 	git restore "dictionary/kellia_uni_goettingen_de/data/output/analysis.json"
 
 ########## DAWOUD ##########
-dawoud_img: FORCE
-	# Reprocess Dawoud's scan.s
-	./dictionary/copticocc_org/crop.sh
-
 dawoud_sentinels: FORCE
 	# Download a new version of Dawoud's sentinels sheet.
 	PUB="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-qCcmKVqniHVF6vtmzRoedIqgH96sDWMetp4HMSApUKNCZSqUDi3FnU_tW87yWBH2HPMbjJei9KIL/pub?output=tsv"; \
