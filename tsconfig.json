@@ -1,7 +1,7 @@
 // See https://www.typescriptlang.org/tsconfig/ for documentation.
 {
   "include": ["./docs/**/*.ts"],
-  "exclude": ["./docs/**/validate.ts"],
+  "exclude": ["./docs/**/validate.ts", "docs/test/**"],
   "compilerOptions": {
     "target": "ES2022",
     "module": "ESNext",

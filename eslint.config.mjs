@@ -181,7 +181,7 @@ export default tseslint.config(
     },
     languageOptions: {
       parserOptions: {
-        project: true,
+        project: ['./tsconfig.json', './tsconfig_test.json'],
       },
       globals: {
         ...globals.browser,
