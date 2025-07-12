@@ -11,6 +11,7 @@ import * as html from '../html.js';
 import * as scan from '../scan.js';
 import * as paths from '../paths.js';
 import * as css from '../css.js';
+import * as d from './dialect.js';
 import * as cls from './cls.js';
 import * as ccls from '../cls.js';
 import * as header from '../header.js';
@@ -235,9 +236,11 @@ export function handleSisterView(elem) {
 export function handleDialect(elem, highlighter) {
   elem.querySelectorAll(`.${cls.DIALECT}`).forEach((el) => {
     el.classList.add(ccls.HOVER_LINK);
+    const code = el.innerHTML;
+    el.replaceChildren(...d.DIALECTS[code].prettyCode());
     el.addEventListener(
       'click',
-      highlighter.toggleDialect.bind(highlighter, el.innerHTML)
+      highlighter.toggleDialect.bind(highlighter, code)
     );
   });
 }

@@ -2,6 +2,7 @@
 import * as css from '../css.js';
 import * as iam from '../iam.js';
 import * as help from '../help.js';
+import * as str from '../str.js';
 // D is the name of the local-storage variable storing the list of active
 // dialects. This is the source of truth for dialect highlighting. Updating
 // dialect highlighting should happen by updating this local storage variable.
@@ -51,7 +52,7 @@ export class Dialect {
     // Create the first <td> (dialect code)
     const tdCode = document.createElement('td');
     tdCode.classList.add(CLS.DIALECT_CODE);
-    tdCode.textContent = `(${this.code})`;
+    tdCode.replaceChildren(...this.prettyCode());
     tr.appendChild(tdCode);
     // Create the second <td> (dialect name)
     const tdName = document.createElement('td');
@@ -116,8 +117,41 @@ export class Dialect {
    */
   title() {
     const title = document.createElement('span');
-    title.replaceChildren('(', this.code, ')', ' ', ...this.anchoredName());
+    title.replaceChildren(
+      ...this.prettyCode(true),
+      ' ',
+      ...this.anchoredName()
+    );
     return title;
+  }
+  /**
+   * @param parenthesize - Whether to parenthesize the output.
+   * @returns A prettified code.
+   */
+  prettyCode(parenthesize) {
+    const first = this.code[0],
+      second = this.code[1];
+    const out = [];
+    if (parenthesize) {
+      out.push('(');
+    }
+    if (
+      this.code.length === 2 &&
+      typeof first === 'string' &&
+      typeof second === 'string' &&
+      str.isUpper(first) &&
+      str.isLower(second)
+    ) {
+      const sup = document.createElement('sup');
+      sup.textContent = second;
+      out.push(first, sup);
+    } else {
+      out.push(this.code);
+    }
+    if (parenthesize) {
+      out.push(')');
+    }
+    return out;
   }
 }
 export const DIALECTS = {
