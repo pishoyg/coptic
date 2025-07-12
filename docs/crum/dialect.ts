@@ -3,6 +3,7 @@ import * as css from '../css.js';
 import * as iam from '../iam.js';
 import * as help from '../help.js';
 import * as highlight from './highlight.js';
+import * as str from '../str.js';
 
 // D is the name of the local-storage variable storing the list of active
 // dialects. This is the source of truth for dialect highlighting. Updating
@@ -87,7 +88,7 @@ export class Dialect {
     // Create the first <td> (dialect code)
     const tdCode = document.createElement('td');
     tdCode.classList.add(CLS.DIALECT_CODE);
-    tdCode.textContent = `(${this.code})`;
+    tdCode.replaceChildren(...this.prettyCode());
     tr.appendChild(tdCode);
 
     // Create the second <td> (dialect name)
@@ -163,8 +164,42 @@ export class Dialect {
    */
   title(): HTMLSpanElement {
     const title: HTMLSpanElement = document.createElement('span');
-    title.replaceChildren('(', this.code, ')', ' ', ...this.anchoredName());
+    title.replaceChildren(
+      ...this.prettyCode(true),
+      ' ',
+      ...this.anchoredName()
+    );
     return title;
+  }
+
+  /**
+   * @param parenthesize - Whether to parenthesize the output.
+   * @returns A prettified code.
+   */
+  prettyCode(parenthesize?: boolean): (Node | string)[] {
+    const first: string | undefined = this.code[0],
+      second: string | undefined = this.code[1];
+    const out: (Node | string)[] = [];
+    if (parenthesize) {
+      out.push('(');
+    }
+    if (
+      this.code.length === 2 &&
+      typeof first === 'string' &&
+      typeof second === 'string' &&
+      str.isUpper(first) &&
+      str.isLower(second)
+    ) {
+      const sup = document.createElement('sup');
+      sup.textContent = second;
+      out.push(first, sup);
+    } else {
+      out.push(this.code);
+    }
+    if (parenthesize) {
+      out.push(')');
+    }
+    return out;
   }
 }
 

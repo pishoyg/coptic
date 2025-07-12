@@ -275,9 +275,11 @@ export function handleDialect(
 ): void {
   elem.querySelectorAll<HTMLElement>(`.${cls.DIALECT}`).forEach((el) => {
     el.classList.add(ccls.HOVER_LINK);
+    const code: d.DIALECT = el.innerHTML as d.DIALECT;
+    el.replaceChildren(...d.DIALECTS[code].prettyCode());
     el.addEventListener(
       'click',
-      highlighter.toggleDialect.bind(highlighter, el.innerHTML as d.DIALECT)
+      highlighter.toggleDialect.bind(highlighter, code)
     );
   });
 }
