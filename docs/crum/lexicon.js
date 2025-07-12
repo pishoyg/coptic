@@ -132,6 +132,10 @@ class KELLIADialectSorter extends xooxle.BucketSorter {
     return row.querySelector(highlightedDialectQuery) ? 0 : 1;
   }
 }
+const dialectCheckboxes = Array.from(
+  document.querySelectorAll(`#${DIALECTS_ID} input`)
+);
+const highlighter = new highlight.Highlighter(false, dialectCheckboxes);
 const XOOXLES = [
   {
     indexURL: 'crum.json',
@@ -139,7 +143,10 @@ const XOOXLES = [
     collapsibleID: 'crum-collapsible',
     hrefFmt: paths.CRUM_PAGE_KEY_FMT,
     bucketSorter: new CrumDialectSorter(),
-    prepublish: crum.addGreekLookups,
+    prepublish: (row) => {
+      crum.addGreekLookups(row);
+      crum.handleDialect(row, highlighter);
+    },
   },
   {
     indexURL: 'kellia.json',
@@ -147,6 +154,11 @@ const XOOXLES = [
     collapsibleID: 'kellia-collapsible',
     hrefFmt: paths.CDO_LOOKUP_KEY_FMT,
     bucketSorter: new KELLIADialectSorter(),
+    prepublish: (row) => {
+      // TODO: (#0) Add Greek lookups after making your linkifier smart enough
+      // to recognize diacritics.
+      crum.handleDialect(row, highlighter);
+    },
   },
   {
     indexURL: 'copticsite.json',
@@ -172,15 +184,24 @@ function spellOutDialectsInDropdown() {
  */
 function spellOutDialectsInList() {
   document.querySelectorAll(`#${CHECKBOXES_ID} label`).forEach((drop) => {
+    const dialect = d.DIALECTS[drop.textContent];
     // Make the label a .dropdown element.
     drop.classList.add(dropdown.CLS.DROPDOWN);
     // Create a hover-invoked droppable.
     const droppable = document.createElement('span');
     droppable.classList.add(dropdown.CLS.DROPPABLE);
-    droppable.replaceChildren(...d.DIALECTS[drop.textContent].anchoredName());
+    droppable.append(...dialect.anchoredName());
     // A hover-invoked .droppable must be a child of its associated .dropdown
     // element.
     drop.appendChild(droppable);
+    // Replace the code with a prettified version.
+    Array.from(drop.childNodes)
+      .find(
+        (child) =>
+          child.nodeType === Node.TEXT_NODE &&
+          child.textContent === dialect.code
+      )
+      .replaceWith(...dialect.prettyCode());
   });
 }
 /**
@@ -205,10 +226,6 @@ async function main() {
   searchBox.addEventListener('keyup', browser.stopPropagation);
   searchBox.addEventListener('keydown', browser.stopPropagation);
   searchBox.addEventListener('keypress', browser.stopPropagation);
-  const dialectCheckboxes = Array.from(
-    document.querySelectorAll(`#${DIALECTS_ID} input`)
-  );
-  const highlighter = new highlight.Highlighter(false, dialectCheckboxes);
   // Initialize searchers.
   // TODO: (#0) You initialize three different Form objects, and it looks like
   // each one of them will end up populating the query parameters separately!
