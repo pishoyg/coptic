@@ -147,6 +147,12 @@ interface Xooxle {
   prepublish?: (row: HTMLTableRowElement) => void;
 }
 
+const dialectCheckboxes: HTMLInputElement[] = Array.from(
+  document.querySelectorAll<HTMLInputElement>(`#${DIALECTS_ID} input`)
+);
+
+const highlighter = new highlight.Highlighter(false, dialectCheckboxes);
+
 const XOOXLES: Xooxle[] = [
   {
     indexURL: 'crum.json',
@@ -154,7 +160,10 @@ const XOOXLES: Xooxle[] = [
     collapsibleID: 'crum-collapsible',
     hrefFmt: paths.CRUM_PAGE_KEY_FMT,
     bucketSorter: new CrumDialectSorter(),
-    prepublish: crum.addGreekLookups,
+    prepublish: (row: HTMLTableRowElement): void => {
+      crum.addGreekLookups(row);
+      crum.handleDialect(row, highlighter);
+    },
   },
   {
     indexURL: 'kellia.json',
@@ -162,6 +171,11 @@ const XOOXLES: Xooxle[] = [
     collapsibleID: 'kellia-collapsible',
     hrefFmt: paths.CDO_LOOKUP_KEY_FMT,
     bucketSorter: new KELLIADialectSorter(),
+    prepublish: (row: HTMLTableRowElement): void => {
+      // TODO: (#0) Add Greek lookups after making your linkifier smart enough
+      // to recognize diacritics.
+      crum.handleDialect(row, highlighter);
+    },
   },
   {
     indexURL: 'copticsite.json',
@@ -240,12 +254,6 @@ async function main(): Promise<void> {
   searchBox.addEventListener('keyup', browser.stopPropagation);
   searchBox.addEventListener('keydown', browser.stopPropagation);
   searchBox.addEventListener('keypress', browser.stopPropagation);
-
-  const dialectCheckboxes: HTMLInputElement[] = Array.from(
-    document.querySelectorAll<HTMLInputElement>(`#${DIALECTS_ID} input`)
-  );
-
-  const highlighter = new highlight.Highlighter(false, dialectCheckboxes);
 
   // Initialize searchers.
   // TODO: (#0) You initialize three different Form objects, and it looks like
