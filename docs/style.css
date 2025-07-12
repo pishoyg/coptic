@@ -315,6 +315,10 @@ body:not(.lexicon) .header td:not(:first-child) {
   color: #7f8c8d;
 }
 
+.border-dialect-letter {
+  font-style: italic;
+}
+
 .dialect-code {
   width: 10%;
 }

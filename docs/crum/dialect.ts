@@ -32,6 +32,7 @@ enum CLS {
   DIALECT_CODE = 'dialect-code',
   DIALECT_NAME = 'dialect-name',
   DIALECT_DICTIONARIES = 'dialect-dictionaries',
+  BORDER_DIALECT_LETTER = 'border-dialect-letter',
 }
 
 /**
@@ -88,13 +89,13 @@ export class Dialect {
     // Create the first <td> (dialect code)
     const tdCode = document.createElement('td');
     tdCode.classList.add(CLS.DIALECT_CODE);
-    tdCode.replaceChildren(...this.prettyCode());
+    tdCode.append(...this.prettyCode());
     tr.appendChild(tdCode);
 
     // Create the second <td> (dialect name)
     const tdName = document.createElement('td');
     tdName.classList.add(CLS.DIALECT_NAME);
-    tdName.replaceChildren(...this.anchoredName());
+    tdName.append(...this.anchoredName());
     tr.appendChild(tdName);
 
     // Conditionally add the third <td> (dictionaries)
@@ -164,11 +165,7 @@ export class Dialect {
    */
   title(): HTMLSpanElement {
     const title: HTMLSpanElement = document.createElement('span');
-    title.replaceChildren(
-      ...this.prettyCode(true),
-      ' ',
-      ...this.anchoredName()
-    );
+    title.append(...this.prettyCode(true), ' ', ...this.anchoredName());
     return title;
   }
 
@@ -191,6 +188,7 @@ export class Dialect {
       str.isLower(second)
     ) {
       const sup = document.createElement('sup');
+      sup.classList.add(CLS.BORDER_DIALECT_LETTER);
       sup.textContent = second;
       out.push(first, sup);
     } else {

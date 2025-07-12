@@ -195,7 +195,7 @@ export class Shortcut {
     if (typeof this.description === 'string') {
       valueCell.innerHTML = highlightFirstOccurrence(key, this.description);
     } else {
-      valueCell.replaceChildren(this.description);
+      valueCell.append(this.description);
     }
     valueCell.style.width = '90%';
     valueCell.style.border = '1px solid black';

@@ -193,17 +193,25 @@ function spellOutDialectsInList(): void {
   document
     .querySelectorAll<HTMLLabelElement>(`#${CHECKBOXES_ID} label`)
     .forEach((drop: HTMLLabelElement): void => {
+      const dialect: d.Dialect = d.DIALECTS[drop.textContent as d.DIALECT];
+
       // Make the label a .dropdown element.
       drop.classList.add(dropdown.CLS.DROPDOWN);
       // Create a hover-invoked droppable.
       const droppable = document.createElement('span');
       droppable.classList.add(dropdown.CLS.DROPPABLE);
-      droppable.replaceChildren(
-        ...d.DIALECTS[drop.textContent as d.DIALECT].anchoredName()
-      );
+      droppable.append(...dialect.anchoredName());
       // A hover-invoked .droppable must be a child of its associated .dropdown
       // element.
       drop.appendChild(droppable);
+      // Replace the code with a prettified version.
+      Array.from(drop.childNodes)
+        .find(
+          (child: ChildNode) =>
+            child.nodeType === Node.TEXT_NODE &&
+            child.textContent === dialect.code
+        )!
+        .replaceWith(...dialect.prettyCode());
     });
 }
 
