@@ -52,7 +52,7 @@ export function handleAll(elem, highlighter) {
  */
 export function handleCategories(elem) {
   elem.querySelectorAll(`.${cls.CATEGORIES}`).forEach((el) => {
-    el.innerHTML = el.innerHTML
+    el.innerHTML = el.innerText
       .trim()
       .split(',')
       .map((s) => s.trim())
@@ -69,7 +69,7 @@ export function handleCategories(elem) {
  */
 export function handleRootType(elem) {
   elem.querySelectorAll(`.${cls.ROOT_TYPE}`).forEach((el) => {
-    const type = el.querySelector('b')?.innerHTML;
+    const type = el.querySelector('b')?.innerText;
     if (!type) {
       logger.error('Unable to infer the root type for element!', el);
       return;
@@ -84,7 +84,7 @@ export function handleRootType(elem) {
 export function handleCrumPage(elem) {
   elem.querySelectorAll(`.${cls.CRUM_PAGE}`).forEach((el) => {
     el.classList.add(ccls.LINK);
-    html.makeSpanLinkToAnchor(el, `#crum${scan.chopColumn(el.innerHTML)}`);
+    html.makeSpanLinkToAnchor(el, `#crum${scan.chopColumn(el.innerText)}`);
   });
 }
 /**
@@ -95,7 +95,7 @@ export function handleCrumPageExternal(elem) {
   elem.querySelectorAll(`.${cls.CRUM_PAGE_EXTERNAL}`).forEach((el) => {
     el.classList.add(ccls.LINK);
     el.addEventListener('click', () => {
-      browser.open(`${paths.CRUM_SCAN_PREFIX}${el.innerHTML}`);
+      browser.open(`${paths.CRUM_SCAN_PREFIX}${el.innerText}`);
     });
   });
 }
@@ -107,7 +107,7 @@ export function handleDawoudPageExternal(elem) {
   elem.querySelectorAll(`.${cls.DAWOUD_PAGE_EXTERNAL}`).forEach((el) => {
     el.classList.add(ccls.LINK);
     el.addEventListener('click', () => {
-      browser.open(`${paths.DAWOUD}?page=${el.innerHTML}`);
+      browser.open(`${paths.DAWOUD}?page=${el.innerText}`);
     });
   });
 }
@@ -159,7 +159,7 @@ export function handleExplanatory(elem) {
 export function handleDawoudPage(elem) {
   elem.querySelectorAll(`.${cls.DAWOUD_PAGE}`).forEach((el) => {
     el.classList.add(ccls.LINK);
-    html.makeSpanLinkToAnchor(el, `#dawoud${scan.chopColumn(el.innerHTML)}`);
+    html.makeSpanLinkToAnchor(el, `#dawoud${scan.chopColumn(el.innerText)}`);
   });
 }
 /**
@@ -168,7 +168,7 @@ export function handleDawoudPage(elem) {
  */
 export function handleDrvKey(elem) {
   elem.querySelectorAll(`.${cls.DRV_KEY}`).forEach((key) => {
-    const frag = `#drv${key.innerHTML}`;
+    const frag = `#drv${key.innerText}`;
     const a = document.createElement('a');
     a.href = frag;
     a.classList.add(cls.DRV_LINK, ccls.HOVER_LINK);
@@ -193,7 +193,7 @@ export function handleDrvKey(elem) {
 export function handleExplanatoryKey(elem) {
   elem.querySelectorAll(`.${cls.EXPLANATORY_KEY}`).forEach((el) => {
     el.classList.add(ccls.HOVER_LINK);
-    html.makeSpanLinkToAnchor(el, `#explanatory${el.innerHTML}`);
+    html.makeSpanLinkToAnchor(el, `#explanatory${el.innerText}`);
   });
 }
 /**
@@ -203,7 +203,7 @@ export function handleExplanatoryKey(elem) {
 export function handleSisterKey(elem) {
   elem.querySelectorAll(`.${cls.SISTER_KEY}`).forEach((el) => {
     el.classList.add(ccls.HOVER_LINK);
-    html.makeSpanLinkToAnchor(el, `#sister${el.innerHTML}`);
+    html.makeSpanLinkToAnchor(el, `#sister${el.innerText}`);
   });
 }
 /**
@@ -236,7 +236,7 @@ export function handleSisterView(elem) {
 export function handleDialect(elem, highlighter) {
   elem.querySelectorAll(`.${cls.DIALECT}`).forEach((el) => {
     el.classList.add(ccls.HOVER_LINK);
-    const code = el.innerHTML;
+    const code = el.innerText;
     el.replaceChildren(...d.DIALECTS[code].prettyCode());
     el.addEventListener(
       'click',

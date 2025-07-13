@@ -114,7 +114,7 @@ export function makeHelpPanel(highlighter) {
             browser.findNextElement(
               `.${'view' /* xooxle.CLS.VIEW */} .${dev.CLS.DEV}, .${cls.SISTER_KEY}, .${cls.DRV_KEY}`,
               'cur'
-            ).innerHTML
+            ).innerText
           );
         }
       ),
