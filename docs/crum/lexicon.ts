@@ -147,13 +147,7 @@ interface Xooxle {
   prepublish?: (row: HTMLTableRowElement) => void;
 }
 
-const dialectCheckboxes: HTMLInputElement[] = Array.from(
-  document.querySelectorAll<HTMLInputElement>(`#${DIALECTS_ID} input`)
-);
-
-const highlighter = new highlight.Highlighter(false, dialectCheckboxes);
-
-const XOOXLES: Xooxle[] = [
+const XOOXLES = (highlighter: highlight.Highlighter): Xooxle[] => [
   {
     indexURL: 'crum.json',
     tableID: 'crum',
@@ -255,6 +249,12 @@ async function main(): Promise<void> {
   searchBox.addEventListener('keydown', browser.stopPropagation);
   searchBox.addEventListener('keypress', browser.stopPropagation);
 
+  const dialectCheckboxes: HTMLInputElement[] = Array.from(
+    document.querySelectorAll<HTMLInputElement>(`#${DIALECTS_ID} input`)
+  );
+
+  const highlighter = new highlight.Highlighter(false, dialectCheckboxes);
+
   // Initialize searchers.
   // TODO: (#0) You initialize three different Form objects, and it looks like
   // each one of them will end up populating the query parameters separately!
@@ -262,7 +262,7 @@ async function main(): Promise<void> {
   // While this is not currently a problem, it remains undesirable.
   // Deduplicate these actions, somehow.
   await Promise.all(
-    XOOXLES.map(async (xoox) => {
+    XOOXLES(highlighter).map(async (xoox) => {
       const raw = await fetch(xoox.indexURL);
       const json = (await raw.json()) as xooxle.Index;
       const form = new xooxle.Form({
