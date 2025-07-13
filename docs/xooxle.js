@@ -114,6 +114,7 @@ export class Form {
   messageBox;
   tbody;
   collapsible;
+  form;
   /**
    * Construct the form object.
    * Populate form elements from query parameters.
@@ -133,6 +134,9 @@ export class Form {
     this.collapsible = new collapse.Collapsible(
       document.getElementById(form.collapsibleID)
     );
+    if (form.formID) {
+      this.form = document.getElementById(form.formID);
+    }
     // Populate the form once from the query parameters.
     this.populateFromParams();
     this.addEventListeners();
@@ -150,6 +154,9 @@ export class Form {
     this.regexCheckbox.addEventListener('click', () => {
       this.populateParams(Param.REGEX, this.regexCheckbox.checked);
     });
+    // Prevent form submission. Otherwise, pressing Enter while the search box
+    // is focused could clear all input fields!
+    this.form?.addEventListener('submit', browser.preventDefault);
   }
   /**
    * Populate form fields from query parameters in the URL.

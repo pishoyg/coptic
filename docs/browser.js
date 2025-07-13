@@ -65,6 +65,12 @@ export function stopPropagation(event) {
   event.stopPropagation();
 }
 /**
+ * @param event
+ */
+export function preventDefault(event) {
+  event.preventDefault();
+}
+/**
  *
  * @param id
  */

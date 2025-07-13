@@ -209,13 +209,7 @@ export class Highlighter {
     // A click on the reset element resets all display.
     document.querySelectorAll(`.${header.CLS.RESET}`).forEach((el) => {
       el.classList.add(ccls.LINK);
-      el.addEventListener('click', (event) => {
-        this.reset();
-        // On Xooxle, clicking the button would normally submit the form and
-        // reset everything (including the search box and the option
-        // checkboxes). So prevent the event from propagating further.
-        event.preventDefault();
-      });
+      el.addEventListener('click', this.reset.bind(this));
     });
   }
   /**
