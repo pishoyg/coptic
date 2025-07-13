@@ -41,7 +41,15 @@
   border-bottom: 1px solid black;
 }
 
-.results .counter {
+.view:hover {
+  cursor: pointer;
+}
+
+.view:hover .link {
+  text-decoration: underline;
+}
+
+.counter {
   font-size: smaller;
   opacity: 0.3;
 }

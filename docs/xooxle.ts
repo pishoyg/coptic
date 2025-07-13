@@ -7,6 +7,7 @@ import * as orth from './orth.js';
 import * as coptic from './coptic.js';
 import * as greek from './greek.js';
 import * as dev from './dev.js';
+import * as cls from './cls.js';
 
 // KEY is the name of the field that bears the word key. The key can be used to
 // generate an HREF to open the word page.
@@ -458,41 +459,38 @@ export class SearchResult extends AggregateResult {
     hrefFmt: string | undefined,
     total: number
   ): HTMLTableCellElement {
-    const viewCell = document.createElement('td');
-    viewCell.classList.add(CLS.VIEW);
+    const td = document.createElement('td');
+    td.classList.add(CLS.VIEW);
 
     const counter = document.createElement('span');
     counter.classList.add(CLS.COUNTER);
-    counter.innerHTML = `? / ${total.toString()}`;
-    counter.append(' ');
-    viewCell.append(counter);
+    counter.textContent = `? / ${total.toString()}`;
+    td.append(counter);
 
     const devSpan = document.createElement('span');
-    devSpan.classList.add(dev.CLS.DEV);
+    devSpan.classList.add(dev.CLS.DEV, cls.LINK);
     devSpan.textContent = this.key;
+    td.prepend(devSpan);
 
     if (!hrefFmt) {
-      viewCell.prepend(devSpan);
-      return viewCell;
+      return td;
     }
 
     // There is an href. We create a link, and add the 'view' text.
-    const a = document.createElement('a');
-    a.href = `${hrefFmt.replace(
+    const href = `${hrefFmt.replace(
       `{${KEY}}`,
       this.key
     )}#:~:text=${encodeURIComponent(this.fragmentWord()!)}`;
-    a.target = '_blank';
+
+    td.addEventListener('click', browser.open.bind(browser, href, true));
 
     const noDevSpan = document.createElement('span');
-    noDevSpan.classList.add(dev.CLS.NO_DEV);
+    noDevSpan.classList.add(dev.CLS.NO_DEV, cls.LINK);
     noDevSpan.textContent = 'view';
 
-    a.append(noDevSpan, devSpan);
+    td.prepend(noDevSpan);
 
-    viewCell.prepend(a);
-
-    return viewCell;
+    return td;
   }
 
   /**
@@ -1345,7 +1343,7 @@ export class Xooxle {
     this.form.resultsTBody
       .querySelectorAll(`.${CLS.COUNTER}`)
       .forEach((counter: Element) => {
-        counter.innerHTML = `${(++i).toString()} / ${results.length.toString()}`;
+        counter.textContent = `${(++i).toString()} / ${results.length.toString()}`;
       });
 
     // Expand the results table to accommodate the last batch of results.
