@@ -85,11 +85,6 @@ export var CLS;
  * Xooxle engine should read it as such.
  */
 const UNIT_DELIMITER = `<hr class="${'match-separator' /* CLS.MATCH_SEPARATOR */}">`;
-/**
- * LONG_UNITS_FIELD_MESSAGE is the message shown at the end of a units field,
- * if the field gets truncated.
- */
-const LONG_UNITS_FIELD_MESSAGE = `<br><span class="${'view-for-more' /* CLS.VIEW_FOR_MORE */}">... (<em>view</em> for full context)</span>`;
 const orthographer = new orth.Orthographer(
   new Set([...coptic.DIACRITICS, ...greek.DIACRITICS])
 );
@@ -381,11 +376,11 @@ export class SearchResult extends AggregateResult {
    * viewCell constructs the first cell in the row for this result, bearing the
    * anchor to the result (if available).
    *
-   * @param hrefFmt - Format string of the HREF pointing to the result page.
+   * @param href - A link to the detailed result page.
    * @param total - Total number of results.
    * @returns The view table cell element.
    */
-  viewCell(hrefFmt, total) {
+  viewCell(href, total) {
     const td = document.createElement('td');
     td.classList.add('view' /* CLS.VIEW */);
     const counter = document.createElement('span');
@@ -396,11 +391,9 @@ export class SearchResult extends AggregateResult {
     devSpan.classList.add(dev.CLS.DEV, cls.LINK);
     devSpan.textContent = this.key;
     td.prepend(devSpan);
-    if (!hrefFmt) {
+    if (!href) {
       return td;
     }
-    // There is an href. We create a link, and add the 'view' text.
-    const href = `${hrefFmt.replace(`{${KEY}}`, this.key)}#:~:text=${encodeURIComponent(this.fragmentWord())}`;
     td.addEventListener('click', browser.open.bind(browser, href, true));
     const noDevSpan = document.createElement('span');
     noDevSpan.classList.add(dev.CLS.NO_DEV, cls.LINK);
@@ -429,15 +422,26 @@ export class SearchResult extends AggregateResult {
    */
   row(hrefFmt, total) {
     const row = document.createElement('tr');
+    const href = this.href(hrefFmt);
     row.append(
-      this.viewCell(hrefFmt, total),
+      this.viewCell(href, total),
       ...this.results.map((sr) => {
         const cell = document.createElement('td');
-        cell.innerHTML = sr.highlight();
+        cell.append(...sr.highlight(href));
         return cell;
       })
     );
     return row;
+  }
+  /**
+   * @param hrefFmt
+   * @returns
+   */
+  href(hrefFmt) {
+    if (!hrefFmt) {
+      return undefined;
+    }
+    return `${hrefFmt.replace(`{${KEY}}`, this.key)}#:~:text=${encodeURIComponent(this.fragmentWord())}`;
   }
   /**
    * Construct a key used to compare search results.
@@ -540,9 +544,29 @@ class FieldSearchResult extends AggregateResult {
     this.results = field.units.map((unit) => unit.search(regex));
   }
   /**
-   * @returns The field's HTML content, with matches highlighted.
+   * @param href
    */
-  highlight() {
+  *viewForMore(href) {
+    yield document.createElement('br');
+    const span = document.createElement('span');
+    span.classList.add('view-for-more' /* CLS.VIEW_FOR_MORE */);
+    span.append('...');
+    if (!href) {
+      yield span;
+      return;
+    }
+    const a = document.createElement('a');
+    a.textContent = 'view for full context';
+    a.href = href;
+    a.target = '_blank';
+    span.append(a);
+    yield span;
+  }
+  /**
+   * @param href
+   * @returns The field's HTML structure, with matches highlighted.
+   */
+  *highlight(href) {
     // If there are no matches, we limit the number of units in the output.
     // If there are matches:
     // - If there are only few units, we show all of them regardless of
@@ -554,11 +578,12 @@ class FieldSearchResult extends AggregateResult {
       : this.results.length <= UNITS_LIMIT
         ? this.results
         : this.results.filter((r) => r.match);
-    const truncated = results.length < this.results.length;
-    return (
-      results.map((r) => r.highlight()).join(UNIT_DELIMITER) +
-      (truncated ? LONG_UNITS_FIELD_MESSAGE : '')
-    );
+    const content = document.createElement('div');
+    content.innerHTML = results.map((r) => r.highlight()).join(UNIT_DELIMITER);
+    yield content;
+    if (results.length < this.results.length) {
+      yield* this.viewForMore(href);
+    }
   }
 }
 /**
