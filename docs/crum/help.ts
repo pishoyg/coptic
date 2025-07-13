@@ -121,7 +121,7 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
             browser.findNextElement(
               `.${xooxle.CLS.VIEW} .${dev.CLS.DEV}, .${cls.SISTER_KEY}, .${cls.DRV_KEY}`,
               'cur'
-            )!.innerHTML
+            )!.innerText
           );
         }
       ),

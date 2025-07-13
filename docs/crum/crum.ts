@@ -60,7 +60,7 @@ export function handleAll(
  */
 export function handleCategories(elem: HTMLElement): void {
   elem.querySelectorAll<HTMLElement>(`.${cls.CATEGORIES}`).forEach((el) => {
-    el.innerHTML = el.innerHTML
+    el.innerHTML = el.innerText
       .trim()
       .split(',')
       .map((s) => s.trim())
@@ -78,7 +78,7 @@ export function handleCategories(elem: HTMLElement): void {
  */
 export function handleRootType(elem: HTMLElement): void {
   elem.querySelectorAll<HTMLElement>(`.${cls.ROOT_TYPE}`).forEach((el) => {
-    const type: string | undefined = el.querySelector('b')?.innerHTML;
+    const type: string | undefined = el.querySelector('b')?.innerText;
     if (!type) {
       logger.error('Unable to infer the root type for element!', el);
       return;
@@ -94,7 +94,7 @@ export function handleRootType(elem: HTMLElement): void {
 export function handleCrumPage(elem: HTMLElement): void {
   elem.querySelectorAll<HTMLElement>(`.${cls.CRUM_PAGE}`).forEach((el) => {
     el.classList.add(ccls.LINK);
-    html.makeSpanLinkToAnchor(el, `#crum${scan.chopColumn(el.innerHTML)}`);
+    html.makeSpanLinkToAnchor(el, `#crum${scan.chopColumn(el.innerText)}`);
   });
 }
 
@@ -108,7 +108,7 @@ export function handleCrumPageExternal(elem: HTMLElement): void {
     .forEach((el) => {
       el.classList.add(ccls.LINK);
       el.addEventListener('click', () => {
-        browser.open(`${paths.CRUM_SCAN_PREFIX}${el.innerHTML}`);
+        browser.open(`${paths.CRUM_SCAN_PREFIX}${el.innerText}`);
       });
     });
 }
@@ -123,7 +123,7 @@ export function handleDawoudPageExternal(elem: HTMLElement): void {
     .forEach((el) => {
       el.classList.add(ccls.LINK);
       el.addEventListener('click', () => {
-        browser.open(`${paths.DAWOUD}?page=${el.innerHTML}`);
+        browser.open(`${paths.DAWOUD}?page=${el.innerText}`);
       });
     });
 }
@@ -181,7 +181,7 @@ export function handleExplanatory(elem: HTMLElement): void {
 export function handleDawoudPage(elem: HTMLElement): void {
   elem.querySelectorAll<HTMLElement>(`.${cls.DAWOUD_PAGE}`).forEach((el) => {
     el.classList.add(ccls.LINK);
-    html.makeSpanLinkToAnchor(el, `#dawoud${scan.chopColumn(el.innerHTML)}`);
+    html.makeSpanLinkToAnchor(el, `#dawoud${scan.chopColumn(el.innerText)}`);
   });
 }
 
@@ -193,7 +193,7 @@ export function handleDrvKey(elem: HTMLElement): void {
   elem
     .querySelectorAll<HTMLElement>(`.${cls.DRV_KEY}`)
     .forEach((key: HTMLElement) => {
-      const frag = `#drv${key.innerHTML}`;
+      const frag = `#drv${key.innerText}`;
 
       const a: HTMLAnchorElement = document.createElement('a');
       a.href = frag;
@@ -224,7 +224,7 @@ export function handleExplanatoryKey(elem: HTMLElement): void {
     .querySelectorAll<HTMLElement>(`.${cls.EXPLANATORY_KEY}`)
     .forEach((el) => {
       el.classList.add(ccls.HOVER_LINK);
-      html.makeSpanLinkToAnchor(el, `#explanatory${el.innerHTML}`);
+      html.makeSpanLinkToAnchor(el, `#explanatory${el.innerText}`);
     });
 }
 
@@ -235,7 +235,7 @@ export function handleExplanatoryKey(elem: HTMLElement): void {
 export function handleSisterKey(elem: HTMLElement): void {
   elem.querySelectorAll<HTMLElement>(`.${cls.SISTER_KEY}`).forEach((el) => {
     el.classList.add(ccls.HOVER_LINK);
-    html.makeSpanLinkToAnchor(el, `#sister${el.innerHTML}`);
+    html.makeSpanLinkToAnchor(el, `#sister${el.innerText}`);
   });
 }
 
@@ -275,7 +275,7 @@ export function handleDialect(
 ): void {
   elem.querySelectorAll<HTMLElement>(`.${cls.DIALECT}`).forEach((el) => {
     el.classList.add(ccls.HOVER_LINK);
-    const code: d.DIALECT = el.innerHTML as d.DIALECT;
+    const code: d.DIALECT = el.innerText as d.DIALECT;
     el.replaceChildren(...d.DIALECTS[code].prettyCode());
     el.addEventListener(
       'click',
