@@ -7,6 +7,7 @@ import * as orth from './orth.js';
 import * as coptic from './coptic.js';
 import * as greek from './greek.js';
 import * as dev from './dev.js';
+import * as cls from './cls.js';
 // KEY is the name of the field that bears the word key. The key can be used to
 // generate an HREF to open the word page.
 const KEY = 'KEY';
@@ -385,30 +386,27 @@ export class SearchResult extends AggregateResult {
    * @returns The view table cell element.
    */
   viewCell(hrefFmt, total) {
-    const viewCell = document.createElement('td');
-    viewCell.classList.add('view' /* CLS.VIEW */);
+    const td = document.createElement('td');
+    td.classList.add('view' /* CLS.VIEW */);
     const counter = document.createElement('span');
     counter.classList.add('counter' /* CLS.COUNTER */);
-    counter.innerHTML = `? / ${total.toString()}`;
-    counter.append(' ');
-    viewCell.append(counter);
+    counter.textContent = `? / ${total.toString()}`;
+    td.append(counter);
     const devSpan = document.createElement('span');
-    devSpan.classList.add(dev.CLS.DEV);
+    devSpan.classList.add(dev.CLS.DEV, cls.LINK);
     devSpan.textContent = this.key;
+    td.prepend(devSpan);
     if (!hrefFmt) {
-      viewCell.prepend(devSpan);
-      return viewCell;
+      return td;
     }
     // There is an href. We create a link, and add the 'view' text.
-    const a = document.createElement('a');
-    a.href = `${hrefFmt.replace(`{${KEY}}`, this.key)}#:~:text=${encodeURIComponent(this.fragmentWord())}`;
-    a.target = '_blank';
+    const href = `${hrefFmt.replace(`{${KEY}}`, this.key)}#:~:text=${encodeURIComponent(this.fragmentWord())}`;
+    td.addEventListener('click', browser.open.bind(browser, href, true));
     const noDevSpan = document.createElement('span');
-    noDevSpan.classList.add(dev.CLS.NO_DEV);
+    noDevSpan.classList.add(dev.CLS.NO_DEV, cls.LINK);
     noDevSpan.textContent = 'view';
-    a.append(noDevSpan, devSpan);
-    viewCell.prepend(a);
-    return viewCell;
+    td.prepend(noDevSpan);
+    return td;
   }
   /**
    * row constructs the row in the results table that corresponds to this
@@ -1149,7 +1147,7 @@ export class Xooxle {
     this.form.resultsTBody
       .querySelectorAll(`.${'counter' /* CLS.COUNTER */}`)
       .forEach((counter) => {
-        counter.innerHTML = `${(++i).toString()} / ${results.length.toString()}`;
+        counter.textContent = `${(++i).toString()} / ${results.length.toString()}`;
       });
     // Expand the results table to accommodate the last batch of results.
     this.form.expand();
