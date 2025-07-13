@@ -2,7 +2,6 @@
 import * as xooxle from '../xooxle.js';
 import * as collapse from '../collapse.js';
 import * as css from '../css.js';
-import * as browser from '../browser.js';
 import * as highlight from './highlight.js';
 import * as d from './dialect.js';
 import * as help from './help.js';
@@ -243,13 +242,6 @@ async function main(): Promise<void> {
     dropdownDialects[0]!.show();
   }
 
-  // Prevent other elements in the page from picking up key events on the
-  // search box.
-  const searchBox = document.getElementById(SEARCH_BOX_ID)!;
-  searchBox.addEventListener('keyup', browser.stopPropagation);
-  searchBox.addEventListener('keydown', browser.stopPropagation);
-  searchBox.addEventListener('keypress', browser.stopPropagation);
-
   const dialectCheckboxes: HTMLInputElement[] = Array.from(
     document.querySelectorAll<HTMLInputElement>(`#${DIALECTS_ID} input`)
   );
@@ -257,16 +249,22 @@ async function main(): Promise<void> {
   const highlighter = new highlight.Highlighter(false, dialectCheckboxes);
 
   // Initialize searchers.
-  // TODO: (#0) You initialize three different Form objects, and it looks like
-  // each one of them will end up populating the query parameters separately!
-  // They also populate the shared objects from the parameters repeatedly!
+  // TODO: (#0) You initialize three different Form and Xooxle objects, and many
+  // of elements are shared, which implies that some of the listeners will be
+  // registered multiple times. As of the time of writing, the following
+  // listeners (and potentially others) are registered redundantly:
+  // - Populating query parameters from form elements.
+  // - Populating form elements from query parameters.
+  // - Preventing form submission.
+  // - Stopping propagation of search box key events.
   // While this is not currently a problem, it remains undesirable.
   // Deduplicate these actions, somehow.
   await Promise.all(
-    XOOXLES(highlighter).map(async (xoox) => {
-      const raw = await fetch(xoox.indexURL);
-      const json = (await raw.json()) as xooxle.Index;
-      const form = new xooxle.Form({
+    XOOXLES(highlighter).map(async (xoox: Xooxle) => {
+      const json: xooxle.Index = (await fetch(xoox.indexURL).then(
+        (raw: Response) => raw.json()
+      )) as xooxle.Index;
+      const form: xooxle.Form = new xooxle.Form({
         searchBoxID: SEARCH_BOX_ID,
         fullWordCheckboxID: FULL_WORD_CHECKBOX_ID,
         regexCheckboxID: REGEX_CHECKBOX_ID,
