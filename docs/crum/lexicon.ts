@@ -27,6 +27,7 @@ const DIALECTS_ID = 'dialects';
 const CHECKBOXES_ID = 'checkboxes';
 
 const REPORTS_ID = 'reports';
+const FORM_ID = 'form';
 
 enum DialectMatch {
   // The candidate has at least one of the highlighted dialects, and the match
@@ -272,6 +273,7 @@ async function main(): Promise<void> {
         messageBoxID: MESSAGE_BOX_ID,
         resultsTableID: xoox.tableID,
         collapsibleID: xoox.collapsibleID,
+        formID: FORM_ID,
       });
       new xooxle.Xooxle(
         json,
