@@ -77,6 +77,13 @@ export function stopPropagation(event: Event): void {
 }
 
 /**
+ * @param event
+ */
+export function preventDefault(event: Event): void {
+  event.preventDefault();
+}
+
+/**
  *
  * @param id
  */

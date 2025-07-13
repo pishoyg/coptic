@@ -112,6 +112,7 @@ export interface FormParams {
   messageBoxID: string;
   resultsTableID: string;
   collapsibleID: string;
+  formID?: string;
 }
 
 /**
@@ -136,6 +137,7 @@ export class Form {
   private readonly messageBox: HTMLElement;
   private readonly tbody: HTMLTableSectionElement;
   private readonly collapsible: collapse.Collapsible;
+  private readonly form?: HTMLFormElement;
 
   /**
    * Construct the form object.
@@ -168,6 +170,10 @@ export class Form {
       document.getElementById(form.collapsibleID)!
     );
 
+    if (form.formID) {
+      this.form = document.getElementById(form.formID) as HTMLFormElement;
+    }
+
     // Populate the form once from the query parameters.
     this.populateFromParams();
 
@@ -189,6 +195,10 @@ export class Form {
     this.regexCheckbox.addEventListener('click', () => {
       this.populateParams(Param.REGEX, this.regexCheckbox.checked);
     });
+
+    // Prevent form submission. Otherwise, pressing Enter while the search box
+    // is focused could clear all input fields!
+    this.form?.addEventListener('submit', browser.preventDefault);
   }
 
   /**
