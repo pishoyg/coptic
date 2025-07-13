@@ -132,11 +132,7 @@ class KELLIADialectSorter extends xooxle.BucketSorter {
     return row.querySelector(highlightedDialectQuery) ? 0 : 1;
   }
 }
-const dialectCheckboxes = Array.from(
-  document.querySelectorAll(`#${DIALECTS_ID} input`)
-);
-const highlighter = new highlight.Highlighter(false, dialectCheckboxes);
-const XOOXLES = [
+const XOOXLES = (highlighter) => [
   {
     indexURL: 'crum.json',
     tableID: 'crum',
@@ -226,6 +222,10 @@ async function main() {
   searchBox.addEventListener('keyup', browser.stopPropagation);
   searchBox.addEventListener('keydown', browser.stopPropagation);
   searchBox.addEventListener('keypress', browser.stopPropagation);
+  const dialectCheckboxes = Array.from(
+    document.querySelectorAll(`#${DIALECTS_ID} input`)
+  );
+  const highlighter = new highlight.Highlighter(false, dialectCheckboxes);
   // Initialize searchers.
   // TODO: (#0) You initialize three different Form objects, and it looks like
   // each one of them will end up populating the query parameters separately!
@@ -233,7 +233,7 @@ async function main() {
   // While this is not currently a problem, it remains undesirable.
   // Deduplicate these actions, somehow.
   await Promise.all(
-    XOOXLES.map(async (xoox) => {
+    XOOXLES(highlighter).map(async (xoox) => {
       const raw = await fetch(xoox.indexURL);
       const json = await raw.json();
       const form = new xooxle.Form({
