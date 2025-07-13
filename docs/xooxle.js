@@ -210,6 +210,14 @@ export class Form {
     this.regexCheckbox.addEventListener('click', listener);
   }
   /**
+   * @param listener
+   */
+  addCheckboxKeyListener(listener) {
+    this.searchBox.addEventListener('keyup', listener);
+    this.searchBox.addEventListener('keydown', listener);
+    this.searchBox.addEventListener('keypress', listener);
+  }
+  /**
    * @returns The query expression, constructed from the input fields.
    */
   queryExpression() {
@@ -1010,6 +1018,9 @@ export class Xooxle {
       this.search.bind(this, INPUT_DEBOUNCE_TIMEOUT)
     );
     this.form.addCheckboxClickListener(this.search.bind(this, 0));
+    // Prevent other elements in the page from picking up key events on the
+    // search box.
+    this.form.addCheckboxKeyListener(browser.stopPropagation);
   }
   /**
    * Handle the search query, debouncing with the given timeout.
