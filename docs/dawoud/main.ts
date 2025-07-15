@@ -5,11 +5,11 @@ import * as env from '../env.js';
 import * as logger from '../logger.js';
 import * as coptic from '../coptic.js';
 
-// Our dictionary pages are '0.jpg' to '1054.jpg', with '17.jpg' holding page 1.
+// Our dictionary pages are '0.png' to '1055.png', with '18.jpg' holding page 1.
 const MIN_PAGE_NUM = 0;
-const MAX_PAGE_NUM = 1054;
-const EXT = 'jpg';
-const OFFSET = 16;
+const MAX_PAGE_NUM = 1055;
+const EXT = 'png';
+const OFFSET = 17;
 
 // Paths to our indexes.
 const COPTIC = 'coptic.tsv';
