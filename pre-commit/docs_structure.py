@@ -115,7 +115,7 @@ PATTERNS: list[Pattern] = [
         required=False,
     ),  # Epub files are not tracked in Git.
     # Auto-generated (dawoud):
-    Pattern(["dawoud/*.jpg"]),  # Dawoud scan is a JPG.
+    Pattern(["dawoud/*.png"]),  # Dawoud scan is a PNG.
     # Garbage:
     Pattern([".DS_Store"], required=False, print_=False),
 ]
