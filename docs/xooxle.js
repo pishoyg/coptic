@@ -387,18 +387,20 @@ export class SearchResult extends AggregateResult {
     counter.classList.add('counter' /* CLS.COUNTER */);
     counter.textContent = `? / ${total.toString()}`;
     td.append(counter);
-    const devSpan = document.createElement('span');
-    devSpan.classList.add(dev.CLS.DEV, cls.LINK);
-    devSpan.textContent = this.key;
-    td.prepend(devSpan);
+    const key = document.createElement('span');
+    key.classList.add(dev.CLS.DEV, cls.LINK);
+    key.textContent = this.key;
+    td.prepend(key);
     if (!href) {
       return td;
     }
     td.addEventListener('click', browser.open.bind(browser, href, true));
-    const noDevSpan = document.createElement('span');
-    noDevSpan.classList.add(dev.CLS.NO_DEV, cls.LINK);
-    noDevSpan.textContent = 'view';
-    td.prepend(noDevSpan);
+    const view = document.createElement('a');
+    view.classList.add(dev.CLS.NO_DEV);
+    view.textContent = 'view';
+    view.href = href;
+    view.target = '_blank';
+    td.prepend(view);
     return td;
   }
   /**
