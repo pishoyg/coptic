@@ -40,7 +40,7 @@ EXPLANATORY_DIR = "explanatory/"  # Relative to the HTML write directory.
 EMAIL = "remnqymi@gmail.com"
 DESCRIPTION = "https://remnqymi.com"
 KELLIA_PREFIX = "https://coptic-dictionary.org/entry.cgi?tla="
-DAWOUD_SURNAME = "Abdelnoor"
+DAWOUD_SURNAME = "Dawoud"
 
 DICTIONARY_PAGE_RE = re.compile("([0-9]+(a|b))")
 TLA_ID_RE = re.compile(r'\bid="[^"]+"')
