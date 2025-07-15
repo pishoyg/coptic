@@ -726,7 +726,7 @@ class Crum(Decker):
             page_numbers = Crum._page_numbers(page_ranges)
             for num in page_numbers:
                 yield from _img_aux(
-                    path=os.path.join(DAWOUD_DIR, f"{num+16}.jpg"),
+                    path=os.path.join(DAWOUD_DIR, f"{num+17}.png"),
                     caption=f'<span class="dawoud-page-external">{num}</span>',
                     id_=f"dawoud{num}",
                     cls="dawoud-page-img",
