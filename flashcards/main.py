@@ -64,21 +64,26 @@ def verify_unique_object_keys(decks: list[genanki.Deck]) -> None:
 
 def write_anki(decks: list[deck.Deck]) -> None:
     file.mk_parent_dir(ANKI_PATH)
-    media_files: set[str] = set()
-    anki_decks = []
+    media_files: set[deck.MediaFile] = set()
+    anki_decks: list[genanki.Deck] = []
 
     for d in decks:
         anki_deck, anki_media = d.anki()
         anki_decks.append(anki_deck)
         media_files.update(anki_media)
 
-    # Anki doesn't allow duplicate basename.
-    assert len(set(map(os.path.basename, media_files))) == len(media_files)
     verify_unique_object_keys(anki_decks)
 
-    package = genanki.Package(anki_decks, media_files=media_files)
+    with concur.thread_pool_executor() as executor:
+        _ = list(executor.map(deck.MediaFile.materialize, media_files))
+
+    package = genanki.Package(
+        anki_decks,
+        media_files=[f.path() for f in media_files],
+    )
     package.write_to_file(ANKI_PATH)
     log.wrote(ANKI_PATH)
+    deck.MediaFile.clean()
 
 
 def _decker_deck(decker: constants.Decker) -> deck.Deck:

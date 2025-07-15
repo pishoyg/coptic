@@ -54,7 +54,9 @@ Model IDs are hardcoded.
 
 import os
 import re
+import shutil
 import subprocess
+import tempfile
 import typing
 from collections import abc
 
@@ -69,14 +71,6 @@ INDEX_INDEX_CLASS = "INDEX_INDEX"
 
 IMG_SRC_FMT: re.Pattern[str] = re.compile(r'<img src="([^"]+)"')
 FONT_SRC_RE: re.Pattern[str] = re.compile(r"src: url\('([^']*)'\)")
-
-
-def _html_src_to_basename(match: re.Match[str]) -> str:
-    return f'<img src="{os.path.basename(match.group(1))}"'
-
-
-def _css_src_to_basename(match: re.Match[str]) -> str:
-    return f"src: url('{os.path.basename(match.group(1))}')"
 
 
 class GenankiNote(genanki.Note):
@@ -308,6 +302,53 @@ class Note:
         file.write(self.html, path, report=False)
 
 
+class MediaFile:
+    """MediaFile represents a media file.
+
+    Anki doesn't allow duplicate basenames in the media, so we must make
+    sure each media file has a unique basename.
+    """
+
+    temp_dir: str = tempfile.mkdtemp()
+
+    def __init__(self, parent: str, path: str) -> None:
+        self._path: str = os.path.join(parent, path)
+
+    def basename(self) -> str:
+        """Get the basename of the file in the destination directory.
+
+        Returns:
+            The basename of the file in the destination directory.
+        """
+        return self._path.replace(os.sep, "_")
+
+    def path(self) -> str:
+        """Get the full path of the file in the destination directory.
+
+        Returns:
+            The full path of the file in the destination directory.
+        """
+        return os.path.join(MediaFile.temp_dir, self.basename())
+
+    def materialize(self) -> None:
+        """Copy the file to the destination directory."""
+        _ = shutil.copy2(self._path, self.path())
+
+    @staticmethod
+    def clean() -> None:
+        shutil.rmtree(MediaFile.temp_dir)
+
+    @typing.override
+    def __eq__(self, other: object) -> bool:
+        if not isinstance(other, MediaFile):
+            return NotImplemented
+        return self._path == other._path
+
+    @typing.override
+    def __hash__(self) -> int:
+        return hash(self._path)
+
+
 class Deck:
     """Deck represents a dictionary deck."""
 
@@ -336,6 +377,8 @@ class Deck:
         self.index_indexes: list[IndexIndex] = index_indexes or []
         self.html_dir: str = html_dir
 
+        self.media_files: set[MediaFile] = set()
+
     def __write_html(self, o: Note | IndexIndex) -> None:
         o.write(self.html_dir)
 
@@ -347,10 +390,25 @@ class Deck:
         log.wrote(self.html_dir)
 
     def __anki_html(self, html: str) -> str:
-        return IMG_SRC_FMT.sub(_html_src_to_basename, html)
+        def src_to_basename(match: re.Match[str]) -> str:
+            f: MediaFile = MediaFile(self.html_dir, match.group(1))
+            self.media_files.add(f)
+            return f'<img src="{f.basename()}"'
+
+        html = IMG_SRC_FMT.sub(src_to_basename, html)
+        return html
 
     def __anki_css(self) -> str:
-        return FONT_SRC_RE.sub(_css_src_to_basename, self.css)
+        def src_to_basename(match: re.Match[str]) -> str:
+            path: str = match.group(1)
+            # Fonts must have an underscore prefix. See
+            # https://docs.ankiweb.net/templates/styling.html#installing-fonts.
+            assert os.path.basename(path).startswith("_")
+            f: MediaFile = MediaFile(self.css_dir, path)
+            self.media_files.add(f)
+            return f"src: url('{f.basename()}')"
+
+        return FONT_SRC_RE.sub(src_to_basename, self.css)
 
     def __anki_js_aux(self) -> abc.Generator[str]:
         # We don't allow notes to have different JavaScript, because in our Anki
@@ -382,7 +440,7 @@ class Deck:
         )
         yield result.stdout
 
-    def anki(self) -> tuple[genanki.Deck, abc.Iterable[str]]:
+    def anki(self) -> tuple[genanki.Deck, abc.Iterable[MediaFile]]:
         # Anki can't pick up the JavaScript. It must be inserted into the
         # template.
         javascript = "".join(self.__anki_js_aux())
@@ -420,26 +478,4 @@ class Deck:
             key = f"{self.deck_name} - {note.key}"
             deck.add_note(GenankiNote(model=model, fields=[front, back, key]))
 
-        # Pick up the media.
-        font_paths = {
-            os.path.join(self.css_dir, path)
-            for path in FONT_SRC_RE.findall(self.css)
-        }
-        assert font_paths  # We know we have fonts in our CSS.
-        # Fonts must have an underscore prefix. See
-        # https://docs.ankiweb.net/templates/styling.html#installing-fonts.
-        assert all(
-            os.path.basename(path).startswith("_") for path in font_paths
-        )
-
-        image_paths = {
-            os.path.join(self.html_dir, path)
-            for note in self.notes
-            for path in IMG_SRC_FMT.findall(note.html)
-        }
-
-        media = font_paths | image_paths
-        del font_paths, image_paths
-        assert all(os.path.isfile(path) for path in media)
-
-        return deck, media
+        return deck, self.media_files
