@@ -248,7 +248,7 @@ async function main() {
         form,
         xoox.hrefFmt,
         xoox.bucketSorter,
-        () => true,
+        undefined,
         xoox.prepublish
       );
     })

@@ -981,7 +981,7 @@ export class Xooxle {
   form;
   hrefFmt;
   bucketSorter;
-  admit;
+  filterFactory;
   prepublish;
   /**
    * The list of searchable candidates in this Xooxle index.
@@ -1004,22 +1004,33 @@ export class Xooxle {
    * candidate by substituting the string `{KEY}`.
    * If absent, no HREF will be generated.
    * @param bucketSorter - An optional bucket sorter.
-   * @param admit - An optional search result filter.
+   * @param filterFactory - An optional function that constructs a search result
+   * filter. The reason this is a factory, as opposed to a direct filter, is to
+   * allow you to construct a different filter each time the search starts;
+   * rather than have one filter that never changes.
    * @param prepublish - An optional lambda to apply to HTML rows before
    * insertion in the table.
    */
   constructor(
     index,
     form,
+    // TODO: (#0) The four fields below can be replaced by methods on the
+    // SearchResult type. You can do the following:
+    // - Allow users of Xooxle to pass a SearchResult type (a SearchResult
+    //   constructor) to the Xooxle constructor. Xooxle can then use this
+    //   constructor to construct instances of a class that inherits from
+    //   SearchResult.
+    // - Retrieve the information below (result href, bucket number, ...) from
+    //   the SearchResult methods.
     hrefFmt,
     bucketSorter,
-    admit = () => true,
+    filterFactory,
     prepublish
   ) {
     this.form = form;
     this.hrefFmt = hrefFmt;
     this.bucketSorter = bucketSorter;
-    this.admit = admit;
+    this.filterFactory = filterFactory;
     this.prepublish = prepublish;
     this.candidates = index.data.map(
       (record) => new Candidate(record, index.metadata.fields)
@@ -1136,9 +1147,10 @@ export class Xooxle {
     );
     // Search is a cheap operation that we can afford to do on all candidates in
     // the beginning.
+    const filter = this.filterFactory?.() ?? (() => true);
     const results = this.candidates
       .map((can) => can.search(regex))
-      .filter((res) => res.match && this.admit(res))
+      .filter((res) => res.match && filter(res))
       .sort(searchResultCompare);
     for (const [count, result] of results.entries()) {
       if (abortController.signal.aborted) {
