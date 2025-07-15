@@ -278,7 +278,7 @@ async function main(): Promise<void> {
         form,
         xoox.hrefFmt,
         xoox.bucketSorter,
-        () => true,
+        undefined,
         xoox.prepublish
       );
     })

@@ -1183,16 +1183,27 @@ export class Xooxle {
    * candidate by substituting the string `{KEY}`.
    * If absent, no HREF will be generated.
    * @param bucketSorter - An optional bucket sorter.
-   * @param admit - An optional search result filter.
+   * @param filterFactory - An optional function that constructs a search result
+   * filter. The reason this is a factory, as opposed to a direct filter, is to
+   * allow you to construct a different filter each time the search starts;
+   * rather than have one filter that never changes.
    * @param prepublish - An optional lambda to apply to HTML rows before
    * insertion in the table.
    */
   constructor(
     index: Index,
     private readonly form: Form,
+    // TODO: (#0) The four fields below can be replaced by methods on the
+    // SearchResult type. You can do the following:
+    // - Allow users of Xooxle to pass a SearchResult type (a SearchResult
+    //   constructor) to the Xooxle constructor. Xooxle can then use this
+    //   constructor to construct instances of a class that inherits from
+    //   SearchResult.
+    // - Retrieve the information below (result href, bucket number, ...) from
+    //   the SearchResult methods.
     private readonly hrefFmt?: string,
     private readonly bucketSorter?: BucketSorter,
-    private readonly admit: (res: SearchResult) => boolean = () => true,
+    private readonly filterFactory?: () => (res: SearchResult) => boolean,
     private readonly prepublish?: (row: HTMLTableRowElement) => void
   ) {
     this.candidates = index.data.map(
@@ -1324,9 +1335,11 @@ export class Xooxle {
 
     // Search is a cheap operation that we can afford to do on all candidates in
     // the beginning.
+    const filter: (res: SearchResult) => boolean =
+      this.filterFactory?.() ?? (() => true);
     const results: SearchResult[] = this.candidates
       .map((can) => can.search(regex))
-      .filter((res) => res.match && this.admit(res))
+      .filter((res) => res.match && filter(res))
       .sort(searchResultCompare);
 
     for (const [count, result] of results.entries()) {
