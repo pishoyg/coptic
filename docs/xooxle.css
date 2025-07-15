@@ -44,7 +44,8 @@
   cursor: pointer;
 }
 
-.view:hover .link {
+.view:hover .link,
+.view:hover a {
   text-decoration: underline;
 }
 

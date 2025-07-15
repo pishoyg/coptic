@@ -453,18 +453,18 @@ export class SearchResult extends AggregateResult {
     href: string | undefined,
     total: number
   ): HTMLTableCellElement {
-    const td = document.createElement('td');
+    const td: HTMLTableCellElement = document.createElement('td');
     td.classList.add(CLS.VIEW);
 
-    const counter = document.createElement('span');
+    const counter: HTMLSpanElement = document.createElement('span');
     counter.classList.add(CLS.COUNTER);
     counter.textContent = `? / ${total.toString()}`;
     td.append(counter);
 
-    const devSpan = document.createElement('span');
-    devSpan.classList.add(dev.CLS.DEV, cls.LINK);
-    devSpan.textContent = this.key;
-    td.prepend(devSpan);
+    const key: HTMLSpanElement = document.createElement('span');
+    key.classList.add(dev.CLS.DEV, cls.LINK);
+    key.textContent = this.key;
+    td.prepend(key);
 
     if (!href) {
       return td;
@@ -472,10 +472,12 @@ export class SearchResult extends AggregateResult {
 
     td.addEventListener('click', browser.open.bind(browser, href, true));
 
-    const noDevSpan = document.createElement('span');
-    noDevSpan.classList.add(dev.CLS.NO_DEV, cls.LINK);
-    noDevSpan.textContent = 'view';
-    td.prepend(noDevSpan);
+    const view: HTMLAnchorElement = document.createElement('a');
+    view.classList.add(dev.CLS.NO_DEV);
+    view.textContent = 'view';
+    view.href = href;
+    view.target = '_blank';
+    td.prepend(view);
 
     return td;
   }
