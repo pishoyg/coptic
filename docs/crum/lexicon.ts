@@ -48,7 +48,17 @@ enum DialectMatch {
 
 /**
  */
-class CrumDialectSorter extends xooxle.BucketSorter {
+class CrumSearchResult extends xooxle.SearchResult {
+  private static highlighter: highlight.Highlighter;
+
+  /**
+   *
+   * @param highlighter
+   */
+  static init(highlighter: highlight.Highlighter): void {
+    CrumSearchResult.highlighter = highlighter;
+  }
+
   private static readonly NUM_BUCKETS =
     1 +
     Math.max(
@@ -58,20 +68,36 @@ class CrumDialectSorter extends xooxle.BucketSorter {
     );
 
   /**
+   *
+   * @param total
+   * @returns
    */
-  constructor() {
-    super(CrumDialectSorter.NUM_BUCKETS);
+  override row(total: number): HTMLTableRowElement {
+    const row: HTMLTableRowElement = super.row(total);
+    crum.addGreekLookups(row);
+    crum.handleDialect(row, CrumSearchResult.highlighter);
+    return row;
   }
 
   /**
-   * @param _res
+   * @returns
+   */
+  override link(): string {
+    return `${paths.LEXICON}/${this.key}.html`;
+  }
+
+  /**
+   * @returns
+   */
+  static override numBuckets(): number {
+    return CrumSearchResult.NUM_BUCKETS;
+  }
+
+  /**
    * @param row - Table row.
    * @returns Bucket number.
    */
-  override bucket(
-    _res: xooxle.SearchResult,
-    row: HTMLTableRowElement
-  ): DialectMatch {
+  override bucket(row: HTMLTableRowElement): DialectMatch {
     const active: d.DIALECT[] | undefined = d.active();
     if (!active?.length) {
       // There is no dialect highlighting. All results fall in the first bucket.
@@ -110,21 +136,49 @@ class CrumDialectSorter extends xooxle.BucketSorter {
  * special treatment. Our sorting is simply based on whether we have a match in
  * a dialect of interest.
  */
-class KELLIADialectSorter extends xooxle.BucketSorter {
-  private static readonly NUM_BUCKETS = 2;
+class KELLIASearchResult extends xooxle.SearchResult {
+  private static highlighter: highlight.Highlighter;
 
   /**
+   *
+   * @param highlighter
    */
-  constructor() {
-    super(KELLIADialectSorter.NUM_BUCKETS);
+  static init(highlighter: highlight.Highlighter): void {
+    KELLIASearchResult.highlighter = highlighter;
   }
 
   /**
-   * @param _res
+   * @returns
+   */
+  override link(): string {
+    return paths.CDO_LOOKUP_BY_KEY_PREFIX + this.key.toString();
+  }
+
+  /**
+   *
+   * @param total
+   * @returns
+   */
+  override row(total: number): HTMLTableRowElement {
+    const row: HTMLTableRowElement = super.row(total);
+    // TODO: (#0) Add Greek lookups after making your linkifier smart enough
+    // to recognize diacritics.
+    crum.handleDialect(row, KELLIASearchResult.highlighter);
+    return row;
+  }
+
+  /**
+   * @returns
+   */
+  static override numBuckets(): number {
+    return 2;
+  }
+
+  /**
    * @param row - Table row.
    * @returns Bucket number.
    */
-  override bucket(_res: xooxle.SearchResult, row: HTMLTableRowElement): number {
+  override bucket(row: HTMLTableRowElement): number {
     const active: d.DIALECT[] | undefined = d.active();
     if (!active?.length) {
       // There is no dialect highlighting. All results fall in the first bucket.
@@ -142,34 +196,21 @@ interface Xooxle {
   indexURL: string;
   tableID: string;
   collapsibleID: string;
-  hrefFmt?: string;
-  bucketSorter?: xooxle.BucketSorter;
-  prepublish?: (row: HTMLTableRowElement) => void;
+  searchResultType?: typeof xooxle.SearchResult;
 }
 
-const XOOXLES = (highlighter: highlight.Highlighter): Xooxle[] => [
+const XOOXLES: Xooxle[] = [
   {
     indexURL: 'crum.json',
     tableID: 'crum',
     collapsibleID: 'crum-collapsible',
-    hrefFmt: paths.CRUM_PAGE_KEY_FMT,
-    bucketSorter: new CrumDialectSorter(),
-    prepublish: (row: HTMLTableRowElement): void => {
-      crum.addGreekLookups(row);
-      crum.handleDialect(row, highlighter);
-    },
+    searchResultType: CrumSearchResult,
   },
   {
     indexURL: 'kellia.json',
     tableID: 'kellia',
     collapsibleID: 'kellia-collapsible',
-    hrefFmt: paths.CDO_LOOKUP_KEY_FMT,
-    bucketSorter: new KELLIADialectSorter(),
-    prepublish: (row: HTMLTableRowElement): void => {
-      // TODO: (#0) Add Greek lookups after making your linkifier smart enough
-      // to recognize diacritics.
-      crum.handleDialect(row, highlighter);
-    },
+    searchResultType: KELLIASearchResult,
   },
   {
     indexURL: 'copticsite.json',
@@ -246,7 +287,12 @@ async function main(): Promise<void> {
     document.querySelectorAll<HTMLInputElement>(`#${DIALECTS_ID} input`)
   );
 
-  const highlighter = new highlight.Highlighter(false, dialectCheckboxes);
+  const highlighter: highlight.Highlighter = new highlight.Highlighter(
+    false,
+    dialectCheckboxes
+  );
+  CrumSearchResult.init(highlighter);
+  KELLIASearchResult.init(highlighter);
 
   // Initialize searchers.
   // TODO: (#0) You initialize three different Form and Xooxle objects, and many
@@ -260,7 +306,7 @@ async function main(): Promise<void> {
   // While this is not currently a problem, it remains undesirable.
   // Deduplicate these actions, somehow.
   await Promise.all(
-    XOOXLES(highlighter).map(async (xoox: Xooxle) => {
+    XOOXLES.map(async (xoox: Xooxle) => {
       const json: xooxle.Index = (await fetch(xoox.indexURL).then(
         (raw: Response) => raw.json()
       )) as xooxle.Index;
@@ -273,14 +319,7 @@ async function main(): Promise<void> {
         collapsibleID: xoox.collapsibleID,
         formID: FORM_ID,
       });
-      new xooxle.Xooxle(
-        json,
-        form,
-        xoox.hrefFmt,
-        xoox.bucketSorter,
-        undefined,
-        xoox.prepublish
-      );
+      new xooxle.Xooxle(json, form, xoox.searchResultType);
     })
   );
 
