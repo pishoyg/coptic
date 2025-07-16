@@ -436,14 +436,10 @@ export class SearchResult extends AggregateResult {
    * viewCell constructs the first cell in the row for this result, bearing the
    * anchor to the result (if available).
    *
-   * @param href - A link to the detailed result page.
    * @param total - Total number of results.
    * @returns The view table cell element.
    */
-  private viewCell(
-    href: string | undefined,
-    total: number
-  ): HTMLTableCellElement {
+  private viewCell(total: number): HTMLTableCellElement {
     const td: HTMLTableCellElement = document.createElement('td');
     td.classList.add(CLS.VIEW);
 
@@ -457,17 +453,17 @@ export class SearchResult extends AggregateResult {
     key.textContent = this.key;
     td.prepend(key);
 
+    const href: string | undefined = this.href();
     if (!href) {
       return td;
     }
 
+    // Clicking anywhere on the cell opens the page.
     td.addEventListener('click', browser.open.bind(browser, href, true));
 
     const view: HTMLAnchorElement = document.createElement('a');
-    view.classList.add(dev.CLS.NO_DEV);
+    view.classList.add(dev.CLS.NO_DEV, cls.LINK);
     view.textContent = 'view';
-    view.href = href;
-    view.target = '_blank';
     td.prepend(view);
 
     return td;
@@ -486,15 +482,15 @@ export class SearchResult extends AggregateResult {
   row(total: number): HTMLTableRowElement {
     const row: HTMLTableRowElement = document.createElement('tr');
 
-    const href: string | undefined = this.href();
     row.append(
-      this.viewCell(href, total),
-      ...this.results.map((sr: FieldSearchResult): HTMLTableCellElement => {
+      this.viewCell(total),
+      ...this.results.map((fsr: FieldSearchResult): HTMLTableCellElement => {
         const cell: HTMLTableCellElement = document.createElement('td');
-        cell.append(...sr.highlight(href));
+        cell.append(...fsr.highlight(this.href()));
         return cell;
       })
     );
+
     return row;
   }
 
