@@ -95,13 +95,15 @@ export function makeHelpPanel(highlighter) {
         'Open the word currently being viewed',
         ['lexicon', 'note', 'index'],
         () => {
-          browser
-            .findNextElement(
-              css.classQuery('view' /* xooxle.CLS.VIEW */, cls.SISTER_VIEW),
-              'cur'
-            )
-            ?.querySelector('a')
-            ?.click();
+          let el = browser.findNextElement(
+            css.classQuery('view' /* xooxle.CLS.VIEW */, cls.SISTER_VIEW),
+            'cur'
+          );
+          // If the element has an anchor, click that. Otherwise, the element
+          // itself may hold an event listener that responds to clicks, so we
+          // just try clicking the element directly.
+          el = el?.querySelector('a') ?? el;
+          el?.click();
         }
       ),
     ],

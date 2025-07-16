@@ -54,7 +54,15 @@ var DialectMatch;
 })(DialectMatch || (DialectMatch = {}));
 /**
  */
-class CrumDialectSorter extends xooxle.BucketSorter {
+class CrumSearchResult extends xooxle.SearchResult {
+  static highlighter;
+  /**
+   *
+   * @param highlighter
+   */
+  static init(highlighter) {
+    CrumSearchResult.highlighter = highlighter;
+  }
   static NUM_BUCKETS =
     1 +
     Math.max(
@@ -63,16 +71,33 @@ class CrumDialectSorter extends xooxle.BucketSorter {
       )
     );
   /**
+   *
+   * @param total
+   * @returns
    */
-  constructor() {
-    super(CrumDialectSorter.NUM_BUCKETS);
+  row(total) {
+    const row = super.row(total);
+    crum.addGreekLookups(row);
+    crum.handleDialect(row, CrumSearchResult.highlighter);
+    return row;
   }
   /**
-   * @param _res
+   * @returns
+   */
+  link() {
+    return `${paths.LEXICON}/${this.key}.html`;
+  }
+  /**
+   * @returns
+   */
+  static numBuckets() {
+    return CrumSearchResult.NUM_BUCKETS;
+  }
+  /**
    * @param row - Table row.
    * @returns Bucket number.
    */
-  bucket(_res, row) {
+  bucket(row) {
     const active = d.active();
     if (!active?.length) {
       // There is no dialect highlighting. All results fall in the first bucket.
@@ -108,19 +133,44 @@ class CrumDialectSorter extends xooxle.BucketSorter {
  * special treatment. Our sorting is simply based on whether we have a match in
  * a dialect of interest.
  */
-class KELLIADialectSorter extends xooxle.BucketSorter {
-  static NUM_BUCKETS = 2;
+class KELLIASearchResult extends xooxle.SearchResult {
+  static highlighter;
   /**
+   *
+   * @param highlighter
    */
-  constructor() {
-    super(KELLIADialectSorter.NUM_BUCKETS);
+  static init(highlighter) {
+    KELLIASearchResult.highlighter = highlighter;
   }
   /**
-   * @param _res
+   * @returns
+   */
+  link() {
+    return paths.CDO_LOOKUP_BY_KEY_PREFIX + this.key.toString();
+  }
+  /**
+   *
+   * @param total
+   * @returns
+   */
+  row(total) {
+    const row = super.row(total);
+    // TODO: (#0) Add Greek lookups after making your linkifier smart enough
+    // to recognize diacritics.
+    crum.handleDialect(row, KELLIASearchResult.highlighter);
+    return row;
+  }
+  /**
+   * @returns
+   */
+  static numBuckets() {
+    return 2;
+  }
+  /**
    * @param row - Table row.
    * @returns Bucket number.
    */
-  bucket(_res, row) {
+  bucket(row) {
     const active = d.active();
     if (!active?.length) {
       // There is no dialect highlighting. All results fall in the first bucket.
@@ -132,29 +182,18 @@ class KELLIADialectSorter extends xooxle.BucketSorter {
     return row.querySelector(highlightedDialectQuery) ? 0 : 1;
   }
 }
-const XOOXLES = (highlighter) => [
+const XOOXLES = [
   {
     indexURL: 'crum.json',
     tableID: 'crum',
     collapsibleID: 'crum-collapsible',
-    hrefFmt: paths.CRUM_PAGE_KEY_FMT,
-    bucketSorter: new CrumDialectSorter(),
-    prepublish: (row) => {
-      crum.addGreekLookups(row);
-      crum.handleDialect(row, highlighter);
-    },
+    searchResultType: CrumSearchResult,
   },
   {
     indexURL: 'kellia.json',
     tableID: 'kellia',
     collapsibleID: 'kellia-collapsible',
-    hrefFmt: paths.CDO_LOOKUP_KEY_FMT,
-    bucketSorter: new KELLIADialectSorter(),
-    prepublish: (row) => {
-      // TODO: (#0) Add Greek lookups after making your linkifier smart enough
-      // to recognize diacritics.
-      crum.handleDialect(row, highlighter);
-    },
+    searchResultType: KELLIASearchResult,
   },
   {
     indexURL: 'copticsite.json',
@@ -220,6 +259,8 @@ async function main() {
     document.querySelectorAll(`#${DIALECTS_ID} input`)
   );
   const highlighter = new highlight.Highlighter(false, dialectCheckboxes);
+  CrumSearchResult.init(highlighter);
+  KELLIASearchResult.init(highlighter);
   // Initialize searchers.
   // TODO: (#0) You initialize three different Form and Xooxle objects, and many
   // of elements are shared, which implies that some of the listeners will be
@@ -232,7 +273,7 @@ async function main() {
   // While this is not currently a problem, it remains undesirable.
   // Deduplicate these actions, somehow.
   await Promise.all(
-    XOOXLES(highlighter).map(async (xoox) => {
+    XOOXLES.map(async (xoox) => {
       const json = await fetch(xoox.indexURL).then((raw) => raw.json());
       const form = new xooxle.Form({
         searchBoxID: SEARCH_BOX_ID,
@@ -243,14 +284,7 @@ async function main() {
         collapsibleID: xoox.collapsibleID,
         formID: FORM_ID,
       });
-      new xooxle.Xooxle(
-        json,
-        form,
-        xoox.hrefFmt,
-        xoox.bucketSorter,
-        undefined,
-        xoox.prepublish
-      );
+      new xooxle.Xooxle(json, form, xoox.searchResultType);
     })
   );
   // Initialize collapsible elements.

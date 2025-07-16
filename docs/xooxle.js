@@ -324,7 +324,7 @@ class AggregateResult {
  * Candidate represents one search candidate from the index. In the results
  * display, each candidate occupies its own row.
  */
-class Candidate {
+export class Candidate {
   // key bears the candidate key.
   key;
   // fields bears the candidate's searchable fields.
@@ -340,14 +340,6 @@ class Candidate {
     this.fields = fields.map(
       (name) => new Field(name, orth.normalize(record[name]))
     );
-  }
-  /**
-   *
-   * @param regex - Regular expression to search.
-   * @returns The search result.
-   */
-  search(regex) {
-    return new SearchResult(this, regex);
   }
 }
 /**
@@ -376,11 +368,10 @@ export class SearchResult extends AggregateResult {
    * viewCell constructs the first cell in the row for this result, bearing the
    * anchor to the result (if available).
    *
-   * @param href - A link to the detailed result page.
    * @param total - Total number of results.
    * @returns The view table cell element.
    */
-  viewCell(href, total) {
+  viewCell(total) {
     const td = document.createElement('td');
     td.classList.add('view' /* CLS.VIEW */);
     const counter = document.createElement('span');
@@ -391,15 +382,15 @@ export class SearchResult extends AggregateResult {
     key.classList.add(dev.CLS.DEV, cls.LINK);
     key.textContent = this.key;
     td.prepend(key);
+    const href = this.href();
     if (!href) {
       return td;
     }
+    // Clicking anywhere on the cell opens the page.
     td.addEventListener('click', browser.open.bind(browser, href, true));
     const view = document.createElement('a');
-    view.classList.add(dev.CLS.NO_DEV);
+    view.classList.add(dev.CLS.NO_DEV, cls.LINK);
     view.textContent = 'view';
-    view.href = href;
-    view.target = '_blank';
     td.prepend(view);
     return td;
   }
@@ -408,42 +399,22 @@ export class SearchResult extends AggregateResult {
    * result. This consists of the cell bearing the key and anchor, along with
    * the other cells containing the highlighted search fields.
    *
-   * @param hrefFmt - A string that can be used to construct the HREF pointing
-   * to this result by replacing the substring "{KEY}" with the candidate key.
-   *
-   * For example:
-   *   hrefFmt = "https://remnqymi.com/{KEY}.html"
-   *   key = "1"
-   * will result in the constructed HREF being:
-   *   https://remnqymi.com/1.html
-   *
    * @param total - Total number of results - used to display the index of the
    * current result.
    *
    * @returns
    */
-  row(hrefFmt, total) {
+  row(total) {
     const row = document.createElement('tr');
-    const href = this.href(hrefFmt);
     row.append(
-      this.viewCell(href, total),
-      ...this.results.map((sr) => {
+      this.viewCell(total),
+      ...this.results.map((fsr) => {
         const cell = document.createElement('td');
-        cell.append(...sr.highlight(href));
+        cell.append(...fsr.highlight(this.href()));
         return cell;
       })
     );
     return row;
-  }
-  /**
-   * @param hrefFmt
-   * @returns
-   */
-  href(hrefFmt) {
-    if (!hrefFmt) {
-      return undefined;
-    }
-    return `${hrefFmt.replace(`{${KEY}}`, this.key)}#:~:text=${encodeURIComponent(this.fragmentWord())}`;
   }
   /**
    * Construct a key used to compare search results.
@@ -478,6 +449,61 @@ export class SearchResult extends AggregateResult {
       // column, so it should show first.
       this.results.findIndex((res) => res.match),
     ];
+  }
+  /**
+   * Build a link to a page that gives more information about this search
+   * result. By default, no page is provided. Override this method in order to
+   * provide pages.
+   *
+   * @returns
+   */
+  link() {
+    return undefined;
+  }
+  /**
+   *
+   * @returns
+   */
+  href() {
+    const link = this.link();
+    if (!link) {
+      return undefined;
+    }
+    return `${link}#:~:text=${encodeURIComponent(this.fragmentWord())}`;
+  }
+  /**
+   * Filter the result. By default, all results are admitted. Override this
+   * method to implement a custom filter.
+   *
+   * @returns True if the result should be included in the output, false
+   * otherwise.
+   */
+  filter() {
+    return true;
+  }
+  /**
+   * bucket returns the bucket that a given search result belongs to. This
+   * should fall in the range [0, numBuckets-1].
+   * Results will be sorted in the output based on the bucket that they belong
+   * to.
+   * By default, all results belong to one bucket. Override this method, along
+   * with numBuckets, in order to provide a custom bucket sorter.
+   *
+   * @param _row - Table row.
+   * @returns Bucket number.
+   */
+  bucket(_row) {
+    return 0;
+  }
+  /**
+   * Total number of buckets for bucket sorting. By default, we have one bucket
+   * that all results belong to (in other words, there is no bucket sorting).
+   * Override this method in order to implement custom sorting.
+   *
+   * @returns Total number of buckets.
+   */
+  static numBuckets() {
+    return 1;
   }
 }
 /**
@@ -942,47 +968,11 @@ class LineSearchResult {
   }
 }
 /**
- * BucketSorter allows search results to be sorted into buckets.
- */
-export class BucketSorter {
-  numBuckets;
-  /**
-   * @param numBuckets - Total number of buckets.
-   */
-  constructor(numBuckets) {
-    this.numBuckets = numBuckets;
-  }
-  /**
-   * validBucket wraps bucket, and ensures results are valid.
-   * It is implemented as an arrow function rather than a method in order to
-   * prevent child classes from overriding it.
-   *
-   * @param res - The search result.
-   * @param row - The HTML row representing this result.
-   * @returns
-   */
-  validBucket = (res, row) => {
-    const b = Math.round(this.bucket(res, row));
-    if (b < 0) {
-      logger.error('Invalid bucket', b);
-      return 0;
-    }
-    if (b >= this.numBuckets) {
-      logger.error('Invalid bucket', b);
-      return this.numBuckets - 1;
-    }
-    return b;
-  };
-}
-/**
  * Xooxle search engine
  */
 export class Xooxle {
   form;
-  hrefFmt;
-  bucketSorter;
-  filterFactory;
-  prepublish;
+  searchResultType;
   /**
    * The list of searchable candidates in this Xooxle index.
    */
@@ -999,39 +989,11 @@ export class Xooxle {
   /**
    * @param index - JSON index object.
    * @param form - Form containing HTML input and output elements.
-   * @param hrefFmt - An optional format string for generating a URL to this
-   * result's page. The HREF will be generated based on the KEY field of the
-   * candidate by substituting the string `{KEY}`.
-   * If absent, no HREF will be generated.
-   * @param bucketSorter - An optional bucket sorter.
-   * @param filterFactory - An optional function that constructs a search result
-   * filter. The reason this is a factory, as opposed to a direct filter, is to
-   * allow you to construct a different filter each time the search starts;
-   * rather than have one filter that never changes.
-   * @param prepublish - An optional lambda to apply to HTML rows before
-   * insertion in the table.
+   * @param searchResultType
    */
-  constructor(
-    index,
-    form,
-    // TODO: (#0) The four fields below can be replaced by methods on the
-    // SearchResult type. You can do the following:
-    // - Allow users of Xooxle to pass a SearchResult type (a SearchResult
-    //   constructor) to the Xooxle constructor. Xooxle can then use this
-    //   constructor to construct instances of a class that inherits from
-    //   SearchResult.
-    // - Retrieve the information below (result href, bucket number, ...) from
-    //   the SearchResult methods.
-    hrefFmt,
-    bucketSorter,
-    filterFactory,
-    prepublish
-  ) {
+  constructor(index, form, searchResultType = SearchResult) {
     this.form = form;
-    this.hrefFmt = hrefFmt;
-    this.bucketSorter = bucketSorter;
-    this.filterFactory = filterFactory;
-    this.prepublish = prepublish;
+    this.searchResultType = searchResultType;
     this.candidates = index.data.map(
       (record) => new Candidate(record, index.metadata.fields)
     );
@@ -1136,21 +1098,18 @@ export class Xooxle {
     // because we want results to expand downwards rather than upwards, to
     // avoid jitter at the top of the table, which is the area that the user
     // will be looking at.
-    const bucketSentinels = Array.from(
-      { length: this.bucketSorter?.numBuckets ?? 1 },
-      () => {
-        const tr = document.createElement('tr');
-        tr.style.display = 'none';
-        this.form.result(tr);
-        return tr;
-      }
-    );
+    const numBuckets = this.searchResultType.numBuckets();
+    const bucketSentinels = Array.from({ length: numBuckets }, () => {
+      const tr = document.createElement('tr');
+      tr.style.display = 'none';
+      this.form.result(tr);
+      return tr;
+    });
     // Search is a cheap operation that we can afford to do on all candidates in
     // the beginning.
-    const filter = this.filterFactory?.() ?? (() => true);
     const results = this.candidates
-      .map((can) => can.search(regex))
-      .filter((res) => res.match && filter(res))
+      .map((can) => new this.searchResultType(can, regex))
+      .filter((res) => res.match && res.filter())
       .sort(searchResultCompare);
     for (const [count, result] of results.entries()) {
       if (abortController.signal.aborted) {
@@ -1162,10 +1121,9 @@ export class Xooxle {
       // candidates before updating display.
       // Instead, we create a number of rows, and then yield to the browser to
       // allow display update.
-      const row = result.row(this.hrefFmt, results.length);
-      this.prepublish?.(row);
+      const row = result.row(results.length);
       bucketSentinels[
-        this.bucketSorter?.validBucket(result, row) ?? 0
+        Math.min(result.bucket(row), numBuckets - 1)
       ].insertAdjacentElement('beforebegin', row);
       if (count % RESULTS_TO_UPDATE_DISPLAY === RESULTS_TO_UPDATE_DISPLAY - 1) {
         if (count <= RESULTS_TO_UPDATE_DISPLAY) {
