@@ -41,6 +41,7 @@ _install() {
   if command -v npm &> /dev/null; then
     npm install
     npm install --global bun
+    npx playwright install
   fi
 
   if ! command -v tidy &> /dev/null; then
