@@ -181,7 +181,11 @@ export default tseslint.config(
     },
     languageOptions: {
       parserOptions: {
-        project: ['./tsconfig.json', './tsconfig_test.json'],
+        project: [
+          './tsconfig.json', // For the site logic.
+          './tsconfig_test.json', // For unit tests.
+          './tsconfig_playwright.json', // For Playwright tests and artifacts.
+        ],
       },
       globals: {
         ...globals.browser,

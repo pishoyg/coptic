@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["./test/**/*.ts", "playwright.config.ts"],
+  "compilerOptions": {
+    // Do not transpile Playwright files to JavaScript.
+    "noEmit": true,
+    // Playwright is a Node.js library.
+    "module": "NodeNext"
+  }
+}
