@@ -80,6 +80,13 @@ repos:
         entry: bun test
         language: system
         pass_filenames: false
+      - id: playwright
+        name: playwright
+        entry: npx playwright test
+        language: system
+        types: [file]
+        files: ^docs/.*
+        pass_filenames: false
   - repo: https://github.com/pre-commit/mirrors-eslint
     rev: v9.31.0
     hooks:
