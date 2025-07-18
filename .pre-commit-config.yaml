@@ -80,13 +80,6 @@ repos:
         entry: bun test
         language: system
         pass_filenames: false
-      - id: playwright
-        name: playwright
-        entry: npx playwright test
-        language: system
-        types: [file]
-        files: ^docs/.*
-        pass_filenames: false
   - repo: https://github.com/pre-commit/mirrors-eslint
     rev: v9.31.0
     hooks:
@@ -400,3 +393,14 @@ repos:
         verbose: true
         types: [text]
         require_serial: true
+      # Site tests
+      # These are intentionally left to the very end because they're heavy.
+      # Given that we enabled fail-fast, having them last prevents them from
+      # running several times.
+      - id: playwright
+        name: playwright
+        entry: npx playwright test
+        language: system
+        types: [file]
+        files: ^docs/.*
+        pass_filenames: false
