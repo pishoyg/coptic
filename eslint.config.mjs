@@ -201,6 +201,7 @@ export default tseslint.config(
     },
   },
   {
+    // TypeScript-only rules.
     files: ['**/*.ts', '**/*.tsx', '**/*.cts', '**/*.mts'],
     ...eslintPluginJsdoc.configs['flat/recommended-typescript'],
     rules: {
@@ -226,10 +227,12 @@ export default tseslint.config(
     },
   },
   {
+    // JavaScript-only rules.
     files: ['**/*.js', '**/*.jsx', '**/*.cjs', '**/*.mjs'],
     ...tseslint.configs.disableTypeChecked,
   },
   {
+    // JavaScript-only rules.
     files: ['**/*.js', '**/*.jsx', '**/*.cjs', '**/*.mjs'],
     rules: {
       'max-len': ['warn'],
