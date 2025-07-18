@@ -19,6 +19,10 @@ node_modules
 .mypy_cache
 .ruff_cache
 
+# Playwright artifacts
+test-results/
+playwright-report/
+
 # Flashcard decks are too big to host on GitHub.
 docs/crum/anki
 
