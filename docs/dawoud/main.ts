@@ -91,6 +91,7 @@ async function browserMain(): Promise<void> {
 /**
  * Main function to run when the script is invoked in a Node.js environment.
  * Validate the indexes.
+ * TODO: (#457) Deprecate this method. Perform validation in browser code.
  */
 async function nodeMain(): Promise<void> {
   const fs = await import('fs');

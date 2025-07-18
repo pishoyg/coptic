@@ -2,14 +2,14 @@
 """Enforce a known structure of `docs/`.
 
 This script has two purposes:
-    - Help developers track the structure of the `docs/` subdirectory.
-    - Maintain the integrity of the `findexx` env helper.
-The former is achieved by maintaining the structure defined in the list of
-patterns below. Developers can refer to this list for the contents of the
-subdirectory, which is otherwise hard to analyze using `ls` or `tree`.
-
-The latter is achieved by having the script remind users to update the helper
-whenever the content of the subdirectory changes.
+  - Maintain a reference for developers to return to whenever they need to
+    examine the structure of the `docs/` subdirectory (which is the root
+    directory of our website).
+  - Maintain the integrity of pieces of code that depend on the structure of
+    `docs/`, such as the `findexx` env helper and the Playwright tests.
+    Whenever the content of `docs/` changes in such a way that an update needs
+    to be done to `findexx` or Playwright tests, this test will act as a
+    reminder.
 """
 
 # TODO: (#0) fnmatch is not strict enough! For example, it was found that
@@ -83,9 +83,24 @@ class Pattern:
         return self._patterns < other._patterns
 
 
+# NOTE: If you change this list, the following may need to change:
+# - The `findexx` helper
+# - The list of HTML files included in Playwright tests (currently living at
+# `test/test.ts`)
+
+# I have a idea. How about, instead of reminding users to manually update the
+# Playwright tests, we simply have the Playwright tests import this list of
+# patterns? This way, the tests get updated automatically whenever this list
+# changes.
+# This is currently not possible because Playwright tests are written in
+# TypeScript, while this is Python. I considered migrating this file to
+# TypeScript, but it seemed that a TypeScript version of the code would be much
+# larger.
+# I also considered defining the Pattern class as a Protocol Buffer, and storing
+# the list of patterns in a prototext file. But this is way too much work!
+# As of now, this solution seems optimal.
+# See https://github.com/pishoyg/coptic/issues/183.
 PATTERNS: list[Pattern] = [
-    # NOTE: If you change this list, see if the `findexx` helper needs updating
-    # as well.
     # Manually-written code files:
     Pattern(["index.html"]),
     Pattern(["keyboard.html"]),
