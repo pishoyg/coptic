@@ -74,11 +74,6 @@ figure {
   text-align: center;
 }
 
-.logos {
-  text-align: center;
-  place-content: center center;
-}
-
 figure img {
   border: 2px solid #ddd;
   border-radius: 5px;
@@ -107,12 +102,12 @@ input:not(.android .card) {
   font-family: Antinoou, sans-serif;
 }
 
-table:not(.info) {
+table {
   border-collapse: collapse;
   width: 100%;
 }
 
-@media (width <= 500px) {
+@media (width <= 700px) {
   hr {
     margin: 10px 0;
   }
@@ -127,6 +122,11 @@ table:not(.info) {
   }
 }
 
+#logos {
+  text-align: center;
+}
+
+#logos img,
 .logo {
   height: 100px;
   margin-right: 10px;
@@ -134,11 +134,6 @@ table:not(.info) {
 
 .inline-logo {
   height: 20px;
-}
-
-.logo-list {
-  text-align: center;
-  table-layout: fixed;
 }
 
 /********** Crum's Notes **********/

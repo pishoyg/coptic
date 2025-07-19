@@ -2,14 +2,8 @@ h1 {
   font-size: 48px;
 }
 
-.center {
+div {
   text-align: center;
-}
-
-.centerer {
-  text-align: center;
-  display: flex;
-  place-content: center center;
 }
 
 a.download,
@@ -33,9 +27,15 @@ a.download,
   padding: 0;
 }
 
-@media (width <= 500px) {
+@media (width <= 700px) {
   figure.flashcards-screenshots img {
     height: auto;
     width: 47%;
+  }
+}
+
+@media (width > 700px) {
+  table.info {
+    width: 60%;
   }
 }
