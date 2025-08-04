@@ -190,9 +190,9 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
         browser.scroll('crum');
       }),
     ],
-    E: [
+    K: [
       new help.Shortcut(
-        `<a href="${paths.KELLIA}" target="_blank" rel="noopener,noreferrer">K<strong>E</strong>LLIA</a>`,
+        `<a href="${paths.KELLIA}" target="_blank" rel="noopener,noreferrer"><strong>K</strong>ELLIA</a>`,
         ['lexicon'],
         () => {
           browser.scroll('kellia-title');
@@ -293,9 +293,9 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
         browser.click('crum-title');
       }),
     ],
-    e: [
+    k: [
       new help.Shortcut(
-        `<a href="${paths.KELLIA}" target="_blank" rel="noopener,noreferrer">K<strong>E</strong>LLIA</a>`,
+        `<a href="${paths.KELLIA}" target="_blank" rel="noopener,noreferrer"><strong>K</strong>ELLIA</a>`,
         ['lexicon'],
         () => {
           browser.click('kellia-title');
