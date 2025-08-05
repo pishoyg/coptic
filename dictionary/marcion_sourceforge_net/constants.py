@@ -308,21 +308,21 @@ SPELLING_ANNOTATIONS_1 = [
     (
         "=",
         lexical.Type(
-            "=",
-            "=",
+            "⸗",
+            "⸗",
             "pronominal form",
             inflect.Type.VERB_PRONOMINAL,
         ),
-    ),  # Pronominal form. # ⸗
+    ),  # Pronominal form.
     (
         "+",
         lexical.Type(
-            "+",
-            "+",
+            "†",
+            "†",
             "qualitative form",
             inflect.Type.VERB_QUALITATIVE,
         ),
-    ),  # (ⲉϥ)
+    ),  # Qualitative (stative) form.
 ]
 
 DETACHED_TYPES_1 = [
@@ -452,13 +452,13 @@ ACCEPTED_UNKNOWN_CHARS = ",. []()-=+$*^"
 # ― means "same as above".
 # () represent optional letters.
 # - represents the prenominal form.
-# = represents the pronominal form.
-# + represents the qualitative form.
+# ⸗ represents the pronominal form.
+# † represents the qualitative form.
 #   can be used inside a word.
 # [] are sometimes used in place of (). Rare, and should be fixable at the
 #    source.
 # , occurred only once, should be fixable at the source.
-ACCEPTED_UNKNOWN_CHARS_2 = ".()-=+― [],"
+ACCEPTED_UNKNOWN_CHARS_2 = ".()-⸗†― [],"
 
 # The following is used to parse the English meaning column.
 ENGLISH_POSTPROCESSING = [
