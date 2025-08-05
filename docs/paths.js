@@ -18,7 +18,7 @@ export const CDO_LOOKUP_BY_KEY_PREFIX =
 // TODO: (#50) Revisit the Greek dictionary used.
 export const GREEK_DICT_PREFIX = 'https://logeion.uchicago.edu/';
 export const CRUM_ABBREVIATIONS =
-  'https://coptic.wiki/crum/?section=list_of_abbreviations';
+  'https://www.coptist.com/2025/07/30/digitised-bibliography-crum/';
 // TODO: (#460): Delete the following constant once no longer used.
 export const CRUM_SCAN_PREFIX =
   'https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=';
