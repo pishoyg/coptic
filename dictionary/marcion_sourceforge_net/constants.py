@@ -34,9 +34,7 @@ SPELLINGS_TYPES_REFERENCES_RE = re.compile(r"[^()]+")
 
 ENGLISH_WITHIN_COPTIC_RE = re.compile(r"\{[^\{\}]+\}")
 COPTIC_WITHIN_ENGLISH_RE = re.compile(r"\[[^\[\]]+\]")
-GREEK_WITHIN_ENGLISH_RE = re.compile(r"\[\[[^\]]+\]\]")
 PARSED_GREEK_WITHIN_ENGLISH_RE = re.compile(r"(\[[ ,()&c?;Α-Ωα-ω]+\])")
-FINAL_SIGMA_RE = re.compile(r"σ\b")
 
 CRUM_RE = re.compile(r"^(\d{1,3})(a|b)$")
 REFERENCE_RE = re.compile(r'\*\^<a href="([^"<>]+)">([^<>]+)</a>([^<>]*)\^\*')
@@ -87,59 +85,6 @@ LETTER_ENCODING = {
     "Q": "ⳉ",
 }
 LETTERS = set(LETTER_ENCODING.values())
-
-GREEK_LETTER_ENCODING = {
-    "A": "Α",
-    "B": "Β",
-    "C": "Ξ",
-    "D": "Δ",
-    "E": "Ε",
-    "F": "Φ",
-    "G": "Γ",
-    "H": "Η",
-    "I": "Ι",
-    "J": "Ξ",
-    "K": "Κ",
-    "L": "Λ",
-    "M": "Μ",
-    "N": "Ν",
-    "O": "Ο",
-    "P": "Π",
-    "Q": "Θ",
-    "R": "Ρ",
-    "S": "Σ",
-    "T": "Τ",
-    "U": "Υ",
-    "W": "Ω",
-    "X": "Χ",
-    "Y": "Ψ",
-    "Z": "Ζ",
-    "a": "α",
-    "b": "β",
-    "c": "ξ",
-    "d": "δ",
-    "e": "ε",
-    "f": "φ",
-    "g": "γ",
-    "h": "η",
-    "i": "ι",
-    "j": "ξ",
-    "k": "κ",
-    "l": "λ",
-    "m": "μ",
-    "n": "ν",
-    "o": "ο",
-    "p": "π",
-    "q": "θ",
-    "r": "ρ",
-    "s": "σ",
-    "t": "τ",
-    "u": "υ",
-    "w": "ω",
-    "x": "χ",
-    "y": "ψ",
-    "z": "ζ",
-}
 
 # QUALITY_ENCODING is used to parse the "quality" column.
 QUALITY_ENCODING = {

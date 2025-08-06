@@ -409,33 +409,20 @@ def _parse_english_aux(line: str) -> abc.Generator[str]:
 
 
 def parse_english_cell(line: str) -> str:
-    out_parts: list[str] = []
-    while line:
-        eng, greek, line = _chop(
-            line,
-            constants.GREEK_WITHIN_ENGLISH_RE,
-            strict=False,
-        )
-        if eng:
-            out_parts.append(_parse_english(eng))
-        if greek:
-            assert greek.startswith("[[") and greek.endswith("]]")
-            greek = greek[2:-2]
-            out_parts.append(parse_greek_cell(greek))
-    out = "".join(out_parts)
+    line = _parse_english(line)
     # TODO: (#63) English post-processing likely shouldn't apply to Coptic
     # within English.
-    out = _apply_substitutions(
-        out,
+    line = _apply_substitutions(
+        line,
         constants.ENGLISH_POSTPROCESSING,
         use_coptic_symbol=False,
     )
-    out = _apply_substitutions(
-        out,
+    line = _apply_substitutions(
+        line,
         constants.ENGLISH_PRETTIFYING,
         use_coptic_symbol=False,
     )
-    return out
+    return line
 
 
 @functools.total_ordering
@@ -482,11 +469,6 @@ def parse_crum_cell(line: str) -> CrumPage:
     return CrumPage(line)
 
 
-def parse_greek_cell(line: str) -> str:
-    line = _ascii_to_unicode_greek(line)
-    return constants.FINAL_SIGMA_RE.sub("ς", line)
-
-
 def _ascii_to_unicode(txt: str) -> str:
     uni: list[str] = []
     for c in txt:
@@ -496,10 +478,6 @@ def _ascii_to_unicode(txt: str) -> str:
             assert c in constants.ACCEPTED_UNKNOWN_CHARS
             uni.append(c)
     return "".join(uni)
-
-
-def _ascii_to_unicode_greek(txt: str) -> str:
-    return "".join(constants.GREEK_LETTER_ENCODING.get(c, c) for c in txt)
 
 
 def _parse_reference(line: str) -> abc.Generator[str]:
