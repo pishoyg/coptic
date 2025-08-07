@@ -98,18 +98,12 @@ def _munch(text: str, regex: re.Pattern[str], strict: bool) -> tuple[str, str]:
     return text[:j], text[j:]
 
 
-def _chop(
-    text: str,
-    regex: re.Pattern[str],
-    strict: bool = True,
-) -> tuple[str, str, str]:
+def _chop(text: str, regex: re.Pattern[str]) -> tuple[str, str, str]:
     # Extract a substring matching the given regex from the given text. Return
     # all three parts.
     # The substring does NOT have to be a prefix.
     # Return all three parts.
     s = regex.search(text)
-    if strict:
-        assert s
     if not s:
         return text, "", ""
     i, j = s.span()
@@ -210,7 +204,6 @@ def _munch_and_parse_spellings_types_and_references(
         spelling_and_types, reference, match = _chop(
             match,
             constants.REFERENCE_RE,
-            strict=False,
         )
         if reference:
             rr.extend(_parse_reference(reference))
@@ -352,32 +345,24 @@ def _parse_coptic(line: str) -> tuple[str, str]:
     out: list[str] = []
     out_no_english: list[str] = []
     while line:
-        copt, eng, line = _chop(
-            line,
-            constants.ENGLISH_WITHIN_COPTIC_RE,
-            strict=False,
-        )
+        copt, eng, line = _chop(line, constants.ENGLISH_WITHIN_COPTIC_RE)
         if copt:
             copt = _ascii_to_unicode(copt)
             out.append(copt)
             out_no_english.append(copt)
         if eng:
-            eng = _parse_english(eng)
+            eng = _convert_coptic_within_english(eng)
             out.append(eng)
     return "".join(out), "".join(out_no_english)
 
 
-def _parse_english(line: str) -> str:
-    return "".join(_parse_english_aux(line))
+def _convert_coptic_within_english(line: str) -> str:
+    return "".join(_convert_coptic_within_english_aux(line))
 
 
-def _parse_english_aux(line: str) -> abc.Generator[str]:
+def _convert_coptic_within_english_aux(line: str) -> abc.Generator[str]:
     while line:
-        eng, copt, line = _chop(
-            line,
-            constants.COPTIC_WITHIN_ENGLISH_RE,
-            strict=False,
-        )
+        eng, copt, line = _chop(line, constants.COPTIC_WITHIN_ENGLISH_RE)
         yield eng
         if not copt:
             assert not line
@@ -394,7 +379,7 @@ def _parse_english_aux(line: str) -> abc.Generator[str]:
 
 
 def parse_english_cell(line: str) -> str:
-    line = _parse_english(line)
+    line = _convert_coptic_within_english(line)
     line = _apply_substitutions(line, constants.ENGLISH_POSTPROCESSING)
     line = _apply_substitutions(line, constants.ENGLISH_PRETTIFYING)
     return line
@@ -479,8 +464,8 @@ def _parse_reference(line: str) -> abc.Generator[str]:
     assert match, line
     assert len(match.groups()) == 3, line
     line = match.group(1)
-    body = _parse_english(match.group(2))
-    note = _parse_english(match.group(3))
+    body = _convert_coptic_within_english(match.group(2))
+    note = _convert_coptic_within_english(match.group(3))
     parts = line.split(";")
     assert not (len(parts) % 5), parts
     for i in range(0, len(parts), 5):
