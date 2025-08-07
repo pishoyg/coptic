@@ -41,11 +41,6 @@ class Node:
     def preprocess(self) -> None:
         assert self.is_root()
         assert not self._preprocessed
-        # Sort.
-        self._descendants = sorted(
-            self._descendants,
-            key=lambda n: int(n.cell("pos")),
-        )
         # Populate the field needed for retrieving children by key.
         self._key_to_idx = {
             d.cell("key"): idx for idx, d in enumerate(self._descendants)

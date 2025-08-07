@@ -18,12 +18,12 @@ WRD: pathlib.Path = _SCRIPT_DIR / "data" / "input" / "coptwrd.tsv"
 # DRV is the path to the local derivations TSV.
 DRV: pathlib.Path = _SCRIPT_DIR / "data" / "input" / "coptdrv.tsv"
 # Each derivation row must contain the following cells.
-_DRV_ALL_COLS: list[str] = ["key", "key_word", "key_deriv", "type", "pos"]
+_DRV_ALL_COLS: list[str] = ["key", "key_word", "key_deriv", "type"]
 # Each derivation row must contain at least of the following cell.s
 _DRV_ANY_COLS: list[str] = ["word", "en"]
 
 _WRD_SORT_COLS: list[str] = ["key"]
-_DRV_SORT_COLS: list[str] = ["key_word", "pos"]
+_DRV_SORT_COLS: list[str] = ["key_word"]
 
 _KEY_WORD_COL: str = "key_word"
 
