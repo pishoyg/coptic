@@ -1,9 +1,12 @@
 """Google Cloud helpers."""
 
+import pathlib
+
 import gspread
+import pandas as pd
 from google.oauth2 import service_account
 
-from utils import log, paths
+from utils import file, log, paths
 
 _GSPREAD_SCOPE = [
     "https://spreadsheets.google.com/feeds",
@@ -49,3 +52,14 @@ def get_column_index(
             return idx + 1  # Google  Sheets uses 1-based indexing.
     log.fatal(column, "not found in sheet")
     return -1  # Appease the linter.
+
+
+def to_df(worksheet: gspread.worksheet.Worksheet) -> pd.DataFrame:
+    return pd.DataFrame(worksheet.get_all_records())
+
+
+def to_tsv(
+    worksheet: gspread.worksheet.Worksheet,
+    path: str | pathlib.Path,
+) -> None:
+    file.to_tsv(to_df(worksheet), path)
