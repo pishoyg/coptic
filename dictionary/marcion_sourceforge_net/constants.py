@@ -385,10 +385,6 @@ ENGLISH_PROCESSING: list[tuple[re.Pattern[str] | str, str]] = [
     # Curly brackets are used to indicate italics.
     ("{", "<i>"),
     ("}", "</i>"),
-    # A vertical bar indicates a new line.
-    # TODO: (#204) Store new lines in the origin and delete this conversion.
-    (" | ", "\n"),
-    (" |", "\n"),
     # Bolden markers in the English column.
     # TODO: (#0) This list is likely not comprehensive, and it's expected to
     # grow.
