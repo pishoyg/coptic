@@ -8,15 +8,15 @@ from dictionary.marcion_sourceforge_net import img_helper as img
 from dictionary.marcion_sourceforge_net import parse, tree, tsv
 from dictionary.marcion_sourceforge_net import word as lexical
 
-_MIN_KEY = 1
-_MAX_KEY = 3385
+_MIN_KEY: int = 1
+_MAX_KEY: int = 3385
 
 
 class _Keyer:
     """Store and track word keys."""
 
     def __init__(self, df: pd.DataFrame):
-        self.keys = {str(row["key"]) for _, row in df.iterrows()}
+        self.keys: set[str] = {str(row["key"]) for _, row in df.iterrows()}
 
     def assert_valid_key(self, key: int) -> None:
         assert key >= _MIN_KEY and key <= _MAX_KEY

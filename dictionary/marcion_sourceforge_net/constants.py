@@ -6,7 +6,7 @@ from dictionary.marcion_sourceforge_net import word as lexical
 from morphology import inflect
 
 # Dialects.
-DIALECTS = [
+DIALECTS: list[str] = [
     "S",  # Sahidic
     "Sa",  # Sahidic with Akhmimic tendency
     "Sf",  # Sahidic with Fayyumic tendency
@@ -19,11 +19,11 @@ DIALECTS = [
     "NH",  # Nag Hammadi
 ]
 
-MAX_DERIVATION_DEPTH = 4
-CRUM_LAST_PAGE_NUM = 953
+MAX_DERIVATION_DEPTH: int = 4
+CRUM_LAST_PAGE_NUM: int = 953
 
 # Regular expressions used for parsing.
-DIALECTS_RE = re.compile(
+DIALECTS_RE: re.Pattern[str] = re.compile(
     r"\({d}(,{d})*\)".format(
         d="({})".format(  # pylint: disable=consider-using-f-string
             "|".join(DIALECTS),
@@ -31,18 +31,22 @@ DIALECTS_RE = re.compile(
     ),
 )
 
-ENGLISH_WITHIN_COPTIC_RE = re.compile(r"\{[^\{\}]+\}")
-PARSED_GREEK_WITHIN_ENGLISH_RE = re.compile(r"(\[[ ,()&c?;Α-Ωα-ω]+\])")
+ENGLISH_WITHIN_COPTIC_RE: re.Pattern[str] = re.compile(r"\{[^\{\}]+\}")
+PARSED_GREEK_WITHIN_ENGLISH_RE: re.Pattern[str] = re.compile(
+    r"(\[[ ,()&c?;Α-Ωα-ω]+\])",
+)
 
-CRUM_RE = re.compile(r"^(\d{1,3})(a|b)$")
-REFERENCE_RE = re.compile(r'{<a href="([^"<>]+)">([^<>]+)</a>([^<>]*)}')
-COMMA_NOT_BETWEEN_PARENTHESES_RE = re.compile(
+CRUM_RE: re.Pattern[str] = re.compile(r"^(\d{1,3})(a|b)$")
+REFERENCE_RE: re.Pattern[str] = re.compile(
+    r'{<a href="([^"<>]+)">([^<>]+)</a>([^<>]*)}',
+)
+COMMA_NOT_BETWEEN_PARENTHESES_RE: re.Pattern[str] = re.compile(
     r",(?![^()]*\)|[^{}]*\}|[^\[\]]*\])",
 )
-PURE_COPTIC_RE = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
+PURE_COPTIC_RE: re.Pattern[str] = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
 
 # TYPES is used to parse the "type" column.
-TYPES = [
+TYPES: list[lexical.Type] = [
     lexical.Type("-", "(-)", "-", None, append=False),
     lexical.Type("noun", "(noun)", "noun", inflect.Type.NOUN_UNKNOWN_GENDER),
     lexical.Type("noun male", "(ⲡ)", "noun male", inflect.Type.NOUN_MASCULINE),
@@ -133,7 +137,7 @@ TYPE_ENCODING: dict[str, lexical.Type] = {t.marcion(): t for t in TYPES}
 
 # PREPROCESSING, SPELLING_ANNOTATIONS, and DETACHED_TYPES, and POSTPROCESSING
 # are essential for parsing the word column.
-PREPROCESSING = [
+PREPROCESSING: list[tuple[str, str]] = [
     # NOTE: The two consecutive dots are used in the derivations table, to
     # separate between a prefix and the letter representing the start of the
     # word.
@@ -145,7 +149,7 @@ PREPROCESSING = [
     ("..", ""),
 ]
 
-DETACHED_TYPES_1 = [
+DETACHED_TYPES_1: list[tuple[str, lexical.Type]] = [
     # TODO: (#115) The question mark is not a detached type, and it might be
     # spelling-specific. Investigate.
     ("$$", lexical.Type("<i>(?)</i>", "(?)", "probably", None)),  # Probably.
@@ -247,11 +251,11 @@ DETACHED_TYPES_1 = [
     ),  # No idea!
 ]
 
-SPELLING_ANNOTATIONS = [
+SPELLING_ANNOTATIONS: list[tuple[str, lexical.Type]] = [
     ("^^", lexical.Type("―", "―", "same spelling as above.", None)),
 ]
 
-DETACHED_TYPES_2 = [
+DETACHED_TYPES_2: list[tuple[str, lexical.Type]] = [
     (
         "^",
         lexical.Type("<i>p c </i>", "(p.c.)", "conjunctive participle", None),
@@ -269,7 +273,7 @@ DETACHED_TYPES_2 = [
 # [] are sometimes used in place of (). Rare, and should be fixable at the
 #    source.
 # , occurred only once, should be fixable at the source.
-ACCEPTED_UNKNOWN_CHARS_2 = ".()-⸗†― [],"
+ACCEPTED_UNKNOWN_CHARS_2: str = ".()-⸗†― [],"
 
 # The following is used to parse the English meaning column.
 ENGLISH_PROCESSING: list[tuple[re.Pattern[str] | str, str]] = [

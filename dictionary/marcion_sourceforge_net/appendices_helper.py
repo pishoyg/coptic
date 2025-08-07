@@ -341,7 +341,7 @@ class House:
 class Family:
     """A family is made up of several houses, currently four."""
 
-    def __init__(self, row: pd.Series | dict) -> None:
+    def __init__(self, row: pd.Series | dict[str, str]) -> None:
         self.key: str = row[KEY_COL]
         self.sisters: House = House(row[KEY_COL], row[SISTERS_COL])
         self.antonyms: House = House(row[KEY_COL], row[ANTONYMS_COL])

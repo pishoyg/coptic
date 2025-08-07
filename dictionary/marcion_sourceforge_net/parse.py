@@ -1,54 +1,4 @@
-"""
-Nomenclature:
-
-A line in Marcion's dictionary database consists of words.
-A word, represented by the class `lexical.structured_word` defined below,
-consists of:
-  - Dialects that this word belongs to.
-  - Spellings that this word can take (usually 1).
-  - Types that this word is (usually none).
-  - References for the word (usually none).
-
-For example, the following line is Marcion's representation of the word `ⲛⲁⲓ`
-from page 216b from Crum's dictionary:
-    (S) na,naa (S,A,sA) nae (S,B) nai (S) naeih \
-    (F) nei,neei (S,A,B,F) ^na- *^[naHht, naht]^*
-
-This line has several words, namely:
-  - (S) na,naa                        # 1 dialect, 2 spellings
-  - (S,A,sA) nae                      # 3 dialects, 1 spelling
-  - (S,B) nai                         # 2 dialects, 1 spelling
-  - (S) naeih                         # 1 dialect, 1 spelling
-  - (F) nei,neei                      # 1 dialect, 2 spellings
-  - (S,A,B,F) ^na- *^[naHht, naht]^*  # 4 dialects, 1 spelling, 1 type
-    The type is "^", which means "conjunctive participle".
-
-Grammar:
-  - The parser assumes the following grammar:
-    NOTE: Please take this with a grain of salt. The parser wasn't implemented
-    strictly to parse entries that match this grammar. A lot of flexibility was
-    allowed.
-  <word> = <dialected_word>+ | <undialected_word>
-  <dialected_word> = <dialect_list> <undialected_word>
-  <dialect_list> = (<dialect> [, <dialect>]*)
-  <undialected_word> = <spelling> [, <spelling>]*
-  <spelling> = [<coptic> | <english> | <type>]+ [<reference>]*
-
-Remarks about the parsing:
-  The strings "$^" and "^$" are used to represent the parentheses "(" and ")"
-  in Marcion's encoding of Crum.
-  In Crum, the parentheses had the roles in Coptic forms:
-    - To represent optional letters.
-      For example, the word "horses" in Bohairic can be written as either
-      "ⲉϩⲑⲱⲣ", "ϩⲑⲱⲣ", or "ϩⲑⲟⲣ". This is represented by "(ⲉ)ϩⲑⲱⲣ,ϩⲑⲟⲣ".
-    - To represent "deduced" word forms (fewer use cases).
-      For example, the word "ⲗⲟⲕⲉⲙ" (qualitative form) occurs in Coptic
-      literature, with the meaning "be moist, sodden", but the root form never
-      does. Crum assumes that it's like "ⲗⲱⲕⲉⲙ" and represents that by wriring
-      "(ⲗⲱⲕⲉⲙ), ⲗⲟⲕⲉⲙ".
-    The differentiation between the two use cases can be done by checking
-    whether the parentheses cover the entire word, or a subpart of it.
-"""
+"""Parse Crum's dictionary."""
 
 import functools
 import re
@@ -368,6 +318,7 @@ def _parse_reference(line: str) -> abc.Generator[str]:
     assert len(match.groups()) == 3, line
     line = match.group(1)
     body = match.group(2)
+    assert body in ["Ext", "compare", "ref"], body
     note = match.group(3)
     parts = line.split(";")
     assert not (len(parts) % 5), parts
