@@ -2,9 +2,15 @@
 
 import pathlib
 
+import gspread
 import pandas as pd
 
-from utils import file, log
+from utils import file, gcloud, log
+
+GSPREAD_URL: str = (
+    # pylint: disable-next=line-too-long
+    "https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg"
+)
 
 _SCRIPT_DIR = pathlib.Path(__file__).parent
 # WRD is the path to the local roots TSV.
@@ -91,3 +97,11 @@ def derivations() -> pd.DataFrame:
     )
 
     return tsv
+
+
+def roots_sheet() -> gspread.worksheet.Worksheet:
+    return gcloud.read_gspread(GSPREAD_URL, worksheet=0)
+
+
+def derivations_sheet() -> gspread.worksheet.Worksheet:
+    return gcloud.read_gspread(GSPREAD_URL, worksheet=1)
