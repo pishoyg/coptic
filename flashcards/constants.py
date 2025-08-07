@@ -257,7 +257,7 @@ class CrumIndexer(Mother):
         categories: list[list[str]] = []
         for _, row in crum.roots.iterrows():
             keys.append(row["key"])
-            types.append([row["type-parsed"]])
+            types.append([row["type"]])
             categories.append(text.ssplit(row["categories"], ","))
 
         return [
@@ -320,7 +320,7 @@ class Crum(Decker):
             .replace("<br/>", " ")
         )
         meaning: str = __cell(row, "en-parsed", line_br=True, force=False)
-        typ: str = __cell(row, "type-parsed")
+        typ: str = __cell(row, "type")
         key_to_sister[key] = Sister(key, title, meaning, typ)
         senses: str = __cell(row, "senses", force=False)
         key_sense_code_sense[__key(row)] = json.loads(senses) if senses else {}
@@ -527,7 +527,7 @@ class Crum(Decker):
         # name to refer to elements that relate to the root.
         yield '<div id="root-type" class="root-type">'
         yield "(<b>"
-        yield self.__cell(row, "type-parsed")
+        yield self.__cell(row, "type")
         yield "</b>)"
         yield "</div>"
 

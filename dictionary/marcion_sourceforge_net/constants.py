@@ -86,104 +86,95 @@ LETTER_ENCODING = {
 }
 LETTERS = set(LETTER_ENCODING.values())
 
-# TYPE_ENCODING is used to parse the "type" column.
-TYPE_ENCODING = {
-    0: lexical.Type("-", "(-)", "-", None, append=False),
-    3: lexical.Type(
-        "noun",
-        "(noun)",
-        "noun",
-        inflect.Type.NOUN_UNKNOWN_GENDER,
-    ),  # (ⲟⲩ)
-    1: lexical.Type(
-        "noun male",
-        "(ⲡ)",
-        "noun male",
-        inflect.Type.NOUN_MASCULINE,
-    ),
-    4: lexical.Type(
+# TYPES is used to parse the "type" column.
+TYPES = [
+    lexical.Type("-", "(-)", "-", None, append=False),
+    lexical.Type("noun", "(noun)", "noun", inflect.Type.NOUN_UNKNOWN_GENDER),
+    lexical.Type("noun male", "(ⲡ)", "noun male", inflect.Type.NOUN_MASCULINE),
+    lexical.Type(
         "noun female",
         "(ⲧ)",
         "noun female",
         inflect.Type.NOUN_FEMININE,
     ),
-    22: lexical.Type(
+    lexical.Type(
         "noun male/female",
         "(ⲡ/ⲧ)",
         "noun male/female",
         inflect.Type.NOUN_MASCULINE_OR_FEMININE,
     ),
-    8: lexical.Type("plural", "(ⲛ)", "plural", inflect.Type.NOUN_PLURAL),
-    5: lexical.Type("pronoun", "(pron.)", "pronoun", None),
-    23: lexical.Type(
+    lexical.Type("plural", "(ⲛ)", "plural", inflect.Type.NOUN_PLURAL),
+    lexical.Type("pronoun", "(pron.)", "pronoun", None),
+    lexical.Type(
         "interrogative particle",
         "(interr. part.)",
         "interrogative particle",
         None,
     ),
-    14: lexical.Type(
+    lexical.Type(
         "interrogative pronoun",
         "(interr. pron.)",
         "interrogative pronoun",
         None,
     ),
-    15: lexical.Type(
+    lexical.Type(
         "interrogative adverb",
         "(interr. adv.)",
         "interrogative adverb",
         None,
     ),
-    2: lexical.Type(
+    lexical.Type(
         "verb",
         "(v.)",
         "verb",
         inflect.Type.VERB_INFINITIVE,
         append=False,
     ),
-    21: lexical.Type("verbal prefix", "(v. prefix)", "verbal prefix", None),
-    6: lexical.Type(
+    lexical.Type("verbal prefix", "(v. prefix)", "verbal prefix", None),
+    lexical.Type(
         "adjective",
         "(adj.)",
         "adjective",
         inflect.Type.NOUN_MASCULINE_OR_FEMININE,
     ),
-    16: lexical.Type("conjunction", "(conj.)", "conjunction", None),
-    7: lexical.Type("adverb", "(adv.)", "adverb", None),
-    9: lexical.Type("preposition", "(prep.)", "preposition", None),
-    13: lexical.Type(
+    lexical.Type("conjunction", "(conj.)", "conjunction", None),
+    lexical.Type("adverb", "(adv.)", "adverb", None),
+    lexical.Type("preposition", "(prep.)", "preposition", None),
+    lexical.Type(
         "numeral",
         "(num.)",
         "numeral",
         inflect.Type.NOUN_UNKNOWN_GENDER,
     ),
-    10: lexical.Type(
+    lexical.Type(
         "numeral male",
         "(num. ⲡ)",
         "numeral male",
         inflect.Type.NOUN_MASCULINE,
     ),
-    11: lexical.Type(
+    lexical.Type(
         "numeral female",
         "(num. ⲧ)",
         "numeral female",
         inflect.Type.NOUN_FEMININE,
     ),
-    24: lexical.Type(
+    lexical.Type(
         "numeral male/female",
         "(num. ⲡ/ⲧ)",
         "numeral male/female",
         inflect.Type.NOUN_MASCULINE_OR_FEMININE,
     ),
-    17: lexical.Type("particle", "(part.)", "particle", None),
-    18: lexical.Type("interjection", "(interjection)", "interjection", None),
-    20: lexical.Type(
+    lexical.Type("particle", "(part.)", "particle", None),
+    lexical.Type("interjection", "(interjection)", "interjection", None),
+    lexical.Type(
         "personal pronoun",
         "(pers. pron.)",
         "personal pronoun",
         None,
     ),
-    99: lexical.Type("HEADER", "(HEADER)", "HEADER", None, append=False),
-}
+    lexical.Type("HEADER", "(HEADER)", "HEADER", None, append=False),
+]
+TYPE_ENCODING: dict[str, lexical.Type] = {t.marcion(): t for t in TYPES}
 
 # PREPROCESSING, SPELLING_ANNOTATIONS, and DETACHED_TYPES, and POSTPROCESSING
 # are essential for parsing the word column.

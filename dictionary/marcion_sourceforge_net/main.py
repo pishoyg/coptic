@@ -115,7 +115,6 @@ def _process_data(df: pd.DataFrame, strict: bool) -> None:
             ),
         )
 
-        insert("type-parsed", root_type.marcion())
         ep = parse.parse_english_cell(row["en"])
         insert("en-parsed", ep)
         crum = row["crum"]

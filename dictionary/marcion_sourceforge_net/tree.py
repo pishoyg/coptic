@@ -158,7 +158,7 @@ class Node:
                 crum, crum_span = "", 0
             depth = int(d.cell("depth"))
             word = d.cell("word-parsed-classify")
-            typ = d.cell("type-parsed")
+            typ = d.cell("type")
             meaning = d.cell("en-parsed")
             key = d.cell("key")
             word_width = int((NUM_COLS - depth) / 2) if word else 0
@@ -233,7 +233,7 @@ class Node:
                 yield "</li>"
                 depth -= 1
             word = d.cell("word-parsed-prettify")
-            typ = d.cell("type-parsed")
+            typ = d.cell("type")
             # Calling the parser in tree? A little unorthodox, eh?!
             meaning = parse.lighten_greek(d.cell("en-parsed"))
             assert word or (typ == "HEADER" and meaning)

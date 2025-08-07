@@ -34,7 +34,7 @@ SISTERS_COL: str = "sisters"
 ANTONYMS_COL: str = "antonyms"
 HOMONYMS_COL: str = "homonyms"
 GREEK_SISTERS_COL: str = "greek-sisters"
-TYPE_PARSED_COL: str = "type-parsed"
+TYPE_COL: str = "type"
 
 SENSES_COL: str = "senses"
 
@@ -764,7 +764,7 @@ class Runner:
             if record[CATEGORIES_COL]:
                 # This record already has a category.
                 continue
-            if key_to_main_record[str(key)][TYPE_PARSED_COL] in {
+            if key_to_main_record[str(key)][TYPE_COL] in {
                 "-",
                 "adjective",
                 "conjunction",

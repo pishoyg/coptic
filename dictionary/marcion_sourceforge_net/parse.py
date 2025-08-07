@@ -117,7 +117,7 @@ def _chop(
 
 
 def parse_type_cell(t: str) -> lexical.Type:
-    return constants.TYPE_ENCODING[int(t)]
+    return constants.TYPE_ENCODING[t]
 
 
 def parse_word_cell(
