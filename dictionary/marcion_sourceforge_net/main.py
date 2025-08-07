@@ -78,7 +78,7 @@ def _process_data(df: pd.DataFrame, strict: bool) -> None:
                 + "#drv"
                 + row["key"],
             )
-        root_type = parse.parse_type_cell(row["type"])
+        root_type: lexical.Type = constants.TYPE_ENCODING[row["type"]]
         word = parse.parse_word_cell(
             row["word"],
             root_type,

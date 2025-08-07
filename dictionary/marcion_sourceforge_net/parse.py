@@ -111,10 +111,6 @@ def _chop(text: str, regex: re.Pattern[str]) -> tuple[str, str, str]:
     return text[:i], text[i:j], text[j:]
 
 
-def parse_type_cell(t: str) -> lexical.Type:
-    return constants.TYPE_ENCODING[t]
-
-
 def parse_word_cell(
     line: str,
     root_type: lexical.Type,
@@ -421,10 +417,6 @@ class CrumPage:
     def string(self) -> str:
         assert all(self.parts())
         return "".join(str(x) for x in self.parts())
-
-
-def parse_crum_cell(line: str) -> CrumPage:
-    return CrumPage(line)
 
 
 def _ascii_to_unicode(txt: str, strict: bool = True) -> str:

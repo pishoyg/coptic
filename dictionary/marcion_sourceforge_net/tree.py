@@ -78,7 +78,7 @@ class Node:
         assert self.is_root()
         assert self._preprocessed
         pages: list[parse.CrumPage] = [
-            parse.parse_crum_cell(d.row()["crum"])
+            parse.CrumPage(d.row()["crum"])
             for d in self.descendants(include_root=True)
         ]
         pages = [p for p in pages if p.real()]
