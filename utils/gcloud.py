@@ -1,6 +1,7 @@
-"""Google Cloud helpers."""
+"""Google Cloud and Google Sheets helpers."""
 
 import pathlib
+import typing
 
 import gspread
 import pandas as pd
@@ -63,3 +64,35 @@ def to_tsv(
     path: str | pathlib.Path,
 ) -> None:
     file.to_tsv(to_df(worksheet), path)
+
+
+def apply(
+    worksheet: gspread.worksheet.Worksheet,
+    src: str,
+    dst: str,
+    f: typing.Callable[[str], str],
+) -> None:
+    """Apply the given lambda to the src column, storing the result in dst.
+
+    Args:
+        worksheet: Google sheet.
+        src: Name of the source column.
+        dst: Name of the destination column.
+        f: Function to apply.
+    """
+    # For the purpose of writing everything on one column, we generate a list of
+    # lists, where each sublist has a single item.
+    values: list[list[str]] = [
+        [f(str(row[src]))] for row in worksheet.get_all_records()
+    ]
+    # Get the name of the destination column.
+    col_idx: int = get_column_index(worksheet, dst)
+    log.ass(
+        col_idx <= 26,
+        "I am still not smart enough to infer the names of columns > 26!",
+    )
+    col: str = chr(ord("A") + col_idx - 1)
+    # Calculate the range.
+    range_name: str = f"{col}2:{col}{len(values)+1}"
+    # Write the column.
+    _ = worksheet.update(values, range_name)
