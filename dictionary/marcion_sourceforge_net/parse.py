@@ -69,7 +69,7 @@ def _apply_substitutions(
         | list[tuple[str, str]]
         | list[tuple[str, lexical.Type]]
     ),
-    use_coptic_symbol: bool,
+    use_coptic_symbol: bool = False,
 ) -> str:
     for pair in subs:
         p0 = pair[0]
@@ -242,6 +242,7 @@ def _parse_spellings_and_types(
 
     line, line_no_english = _parse_coptic(line)
     _analyze_no_english(line_no_english)
+    del line_no_english
 
     line = _apply_substitutions(
         line,
@@ -377,47 +378,25 @@ def _parse_english_aux(line: str) -> abc.Generator[str]:
             constants.COPTIC_WITHIN_ENGLISH_RE,
             strict=False,
         )
-        if eng:
-            yield eng
-        if copt:
-            assert copt.startswith("[") and copt.endswith("]")
-            copt = copt[1:-1]
-            assert copt
-            s, t = _parse_spellings_and_types(
-                copt,
-                detach_types=True,
-                use_coptic_symbol=True,
-            )
-            assert not t
-            # TODO: (#63) Stop using words for Coptic within English!
-            yield lexical.Word(
-                [],
-                s,
-                t,
-                [],
-                None,
-                normalize_optional=True,
-                normalize_assumed=True,
-            ).string(
-                include_references=True,
-                parenthesize_assumed=True,
-            )
+        yield eng
+        if not copt:
+            assert not line
+            return
+        assert copt.startswith("[") and copt.endswith("]")
+        copt = copt[1:-1]
+        assert copt
+        copt = _ascii_to_unicode(copt, strict=False)
+        copt = _apply_substitutions(
+            copt,
+            constants.COPTIC_WITHIN_ENGLISH_POSTPROCESSING,
+        )
+        yield copt
 
 
 def parse_english_cell(line: str) -> str:
     line = _parse_english(line)
-    # TODO: (#63) English post-processing likely shouldn't apply to Coptic
-    # within English.
-    line = _apply_substitutions(
-        line,
-        constants.ENGLISH_POSTPROCESSING,
-        use_coptic_symbol=False,
-    )
-    line = _apply_substitutions(
-        line,
-        constants.ENGLISH_PRETTIFYING,
-        use_coptic_symbol=False,
-    )
+    line = _apply_substitutions(line, constants.ENGLISH_POSTPROCESSING)
+    line = _apply_substitutions(line, constants.ENGLISH_PRETTIFYING)
     return line
 
 
@@ -465,15 +444,18 @@ def parse_crum_cell(line: str) -> CrumPage:
     return CrumPage(line)
 
 
-def _ascii_to_unicode(txt: str) -> str:
-    uni: list[str] = []
+def _ascii_to_unicode(txt: str, strict: bool = True) -> str:
+    return "".join(_ascii_to_unicode_aux(txt, strict))
+
+
+def _ascii_to_unicode_aux(txt: str, verify: bool = True) -> abc.Generator[str]:
     for c in txt:
-        if c in constants.LETTER_ENCODING:
-            uni.append(constants.LETTER_ENCODING[c])
-        else:
-            assert c in constants.ACCEPTED_UNKNOWN_CHARS
-            uni.append(c)
-    return "".join(uni)
+        if verify:
+            assert (
+                c in constants.LETTER_ENCODING
+                or c in constants.ACCEPTED_UNKNOWN_CHARS
+            )
+        yield constants.LETTER_ENCODING.get(c, c)
 
 
 def _parse_reference(line: str) -> abc.Generator[str]:

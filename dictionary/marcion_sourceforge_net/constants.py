@@ -195,12 +195,10 @@ PARENTHESES_AND_BRACKETS = [
     ("^$", ")"),  # Right parenthesis.
     ("[", "["),  # Coptic-within-English left bracket.
     ("]", "]"),  # Coptic-within-English right bracket.
-    # The following are only relevant for Coptic-within-English in the English
-    # meaning column.
-    ("/*", "("),
-    ("*/", ")"),
-    ("/$", "["),
-    ("$/", "]"),
+]
+
+COPTIC_WITHIN_ENGLISH_POSTPROCESSING = [
+    ("=", "⸗"),
 ]
 
 SPELLING_ANNOTATIONS_1 = [
@@ -384,7 +382,6 @@ ACCEPTED_UNKNOWN_CHARS_2 = ".()-⸗†― [],"
 
 # The following is used to parse the English meaning column.
 ENGLISH_POSTPROCESSING = [
-    ("^+", "✠"),
     ("{", "<b>"),
     ("}", "</b>"),
     ("(", "<i>"),
@@ -394,6 +391,7 @@ ENGLISH_POSTPROCESSING = [
     ("/*", "("),
     ("*/", ")"),
     ("/$gk: ", "["),
+    ("/$", "["),
     ("$/", "]"),
     ("$", "―"),
 ]
