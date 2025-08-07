@@ -95,14 +95,13 @@ def _munch(text: str, regex: re.Pattern[str], strict: bool) -> tuple[str, str]:
 
     i, j = m.span()
     assert i == 0
-    return text[:j], text[j:].strip()
+    return text[:j], text[j:]
 
 
 def _chop(
     text: str,
     regex: re.Pattern[str],
-    strict: bool,
-    strip_ends: bool,
+    strict: bool = True,
 ) -> tuple[str, str, str]:
     # Extract a substring matching the given regex from the given text. Return
     # all three parts.
@@ -111,13 +110,10 @@ def _chop(
     s = regex.search(text)
     if strict:
         assert s
-    elif not s:
+    if not s:
         return text, "", ""
     i, j = s.span()
-    left, mid, right = text[:i], text[i:j], text[j:]
-    if strip_ends:
-        left, right = left.strip(), right.strip()
-    return left, mid, right
+    return text[:i], text[i:j], text[j:]
 
 
 def parse_quality_cell(q: str) -> str:
@@ -137,7 +133,6 @@ def parse_word_cell(
     normalize_optional: bool,
     normalize_assumed: bool,
 ) -> list[lexical.Word]:
-    line = line.strip()
     # Replace the non-breaking space with a unicode space.
     line = line.replace("\xa0", " ")
     # TODO: (#204) Fix the quotation mark issue at the origin.
@@ -220,7 +215,6 @@ def _munch_and_parse_spellings_types_and_references(
             match,
             constants.REFERENCE_RE,
             strict=False,
-            strip_ends=True,
         )
         if reference:
             rr.extend(_parse_reference(reference))
@@ -288,7 +282,8 @@ def _parse_spellings_and_types(
     spellings: list[str] = constants.COMMA_NOT_BETWEEN_PARENTHESES_RE.split(
         line,
     )
-    spellings = list(map(clean, spellings))
+    # TODO: (#0) Ideally, you should never strip the text.
+    spellings = list(filter(None, map(str.strip, spellings)))
 
     return spellings, types
 
@@ -341,7 +336,7 @@ def _pick_up_detached_types(
         if p[0] in line:
             line = line.replace(p[0], "")
             t.append(p[1])
-    return t, line.strip()
+    return t, line
 
 
 def _parse_coptic(line: str) -> tuple[str, str]:
@@ -364,7 +359,6 @@ def _parse_coptic(line: str) -> tuple[str, str]:
             line,
             constants.ENGLISH_WITHIN_COPTIC_RE,
             strict=False,
-            strip_ends=True,
         )
         if copt:
             copt = _ascii_to_unicode(copt)
@@ -373,20 +367,22 @@ def _parse_coptic(line: str) -> tuple[str, str]:
         if eng:
             eng = _parse_english(eng)
             out.append(eng)
-    return clean(" ".join(out)), clean(" ".join(out_no_english))
+    return "".join(out), "".join(out_no_english)
 
 
 def _parse_english(line: str) -> str:
-    out: list[str] = []
+    return "".join(_parse_english_aux(line))
+
+
+def _parse_english_aux(line: str) -> abc.Generator[str]:
     while line:
         eng, copt, line = _chop(
             line,
             constants.COPTIC_WITHIN_ENGLISH_RE,
             strict=False,
-            strip_ends=True,
         )
         if eng:
-            out.append(eng)
+            yield eng
         if copt:
             assert copt.startswith("[") and copt.endswith("]")
             copt = copt[1:-1]
@@ -398,22 +394,18 @@ def _parse_english(line: str) -> str:
             )
             assert not t
             # TODO: (#63) Stop using words for Coptic within English!
-            out.append(
-                lexical.Word(
-                    [],
-                    s,
-                    t,
-                    [],
-                    None,
-                    normalize_optional=True,
-                    normalize_assumed=True,
-                ).string(
-                    include_references=True,
-                    parenthesize_assumed=True,
-                ),
+            yield lexical.Word(
+                [],
+                s,
+                t,
+                [],
+                None,
+                normalize_optional=True,
+                normalize_assumed=True,
+            ).string(
+                include_references=True,
+                parenthesize_assumed=True,
             )
-
-    return clean(" ".join(out))
 
 
 def parse_english_cell(line: str) -> str:
@@ -423,7 +415,6 @@ def parse_english_cell(line: str) -> str:
             line,
             constants.GREEK_WITHIN_ENGLISH_RE,
             strict=False,
-            strip_ends=True,
         )
         if eng:
             out_parts.append(_parse_english(eng))
@@ -431,7 +422,7 @@ def parse_english_cell(line: str) -> str:
             assert greek.startswith("[[") and greek.endswith("]]")
             greek = greek[2:-2]
             out_parts.append(parse_greek_cell(greek))
-    out = " ".join(out_parts)
+    out = "".join(out_parts)
     # TODO: (#63) English post-processing likely shouldn't apply to Coptic
     # within English.
     out = _apply_substitutions(
@@ -444,7 +435,7 @@ def parse_english_cell(line: str) -> str:
         constants.ENGLISH_PRETTIFYING,
         use_coptic_symbol=False,
     )
-    return clean(out)
+    return out
 
 
 @functools.total_ordering
@@ -493,24 +484,22 @@ def parse_crum_cell(line: str) -> CrumPage:
 
 def parse_greek_cell(line: str) -> str:
     line = _ascii_to_unicode_greek(line)
-    line = constants.FINAL_SIGMA_RE.sub("ς", line)
-    return clean(line)
+    return constants.FINAL_SIGMA_RE.sub("ς", line)
 
 
 def _ascii_to_unicode(txt: str) -> str:
-    uni = ""
+    uni: list[str] = []
     for c in txt:
         if c in constants.LETTER_ENCODING:
-            uni = uni + constants.LETTER_ENCODING[c]
+            uni.append(constants.LETTER_ENCODING[c])
         else:
-            uni = uni + c
             assert c in constants.ACCEPTED_UNKNOWN_CHARS
-    return clean(uni)
+            uni.append(c)
+    return "".join(uni)
 
 
 def _ascii_to_unicode_greek(txt: str) -> str:
-    uni = "".join(constants.GREEK_LETTER_ENCODING.get(c, c) for c in txt)
-    return clean(uni)
+    return "".join(constants.GREEK_LETTER_ENCODING.get(c, c) for c in txt)
 
 
 def _parse_reference(line: str) -> abc.Generator[str]:
@@ -530,7 +519,6 @@ def _parse_reference(line: str) -> abc.Generator[str]:
         references.
     """
 
-    line = line.strip()
     match = constants.REFERENCE_RE.match(line)
     assert match, line
     assert len(match.groups()) == 3, line
@@ -556,15 +544,8 @@ def _munch_and_parse_dialects(
     return match[1:-1].split(","), line
 
 
-def clean(line: str) -> str:
-    for _ in range(2):
-        line = _apply_substitutions(line, constants.CLEAN, False)
-    return line.strip()
-
-
 def lighten_greek(line: str) -> str:
-    line = constants.PARSED_GREEK_WITHIN_ENGLISH_RE.sub(lighten(r"\1"), line)
-    return clean(line)
+    return constants.PARSED_GREEK_WITHIN_ENGLISH_RE.sub(lighten(r"\1"), line)
 
 
 def lighten(line: str) -> str:

@@ -471,22 +471,11 @@ ENGLISH_POSTPROCESSING = [
     (" |", "\n"),
     ("/*", "("),
     ("*/", ")"),
-    ("/$gk:", "["),
+    ("/$gk: ", "["),
     ("$/", "]"),
     ("$", "―"),
 ]
 
 ENGLISH_PRETTIFYING = [
     (re.compile(r"\bp c\b"), "p.c."),
-]
-
-# CLEAN is used to prettify the output.
-CLEAN = [
-    ("  ", " "),
-    ("[ ", "["),
-    (" ]", "]"),
-    ("( ", "("),
-    (" )", ")"),
-    ("{ ", "{"),
-    (" }", "}"),
 ]
