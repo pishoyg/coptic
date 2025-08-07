@@ -113,12 +113,12 @@ epub_publish: REQUIRE_DRIVE_DIR FORCE
 ########## COPTICSITE ##########
 
 ########## CRUM ##########
+# NOTE: We used to use curl to download a copy of the sheet from the web.
+# However, this format doesn't support newline characters inside cells, so we
+# use the GCP client to download the sheets instead.
 crum: FORCE
 	# Download a new version of Crum's data, and trigger the parser to validate it.
-	PUB="https://docs.google.com/spreadsheets/d/e/2PACX-1vTItxV4E4plQrzjWLSea85ZFQWcQ4ba-p2BBIDG9h5yI0i9URn9GD9zZhxEj8kVI7jhCoPWPEapd9D7/pub?output=tsv"; \
-	DIR="dictionary/marcion_sourceforge_net/data/input"; \
-	curl -L "$${PUB}&gid=1575616379" > "$${DIR}/coptwrd.tsv"; \
-	curl -L "$${PUB}&gid=698638592" > "$${DIR}/coptdrv.tsv"; \
+	./dictionary/marcion_sourceforge_net/download.py
 	./dictionary/marcion_sourceforge_net/main.py
 
 # TODO: (#421) Delete this rule. We will no longer retain the original images,
