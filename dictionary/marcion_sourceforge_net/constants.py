@@ -134,7 +134,6 @@ TYPE_ENCODING: dict[str, lexical.Type] = {t.marcion(): t for t in TYPES}
 # PREPROCESSING, SPELLING_ANNOTATIONS, and DETACHED_TYPES, and POSTPROCESSING
 # are essential for parsing the word column.
 PREPROCESSING = [
-    ("*+", "+"),
     # NOTE: The two consecutive dots are used in the derivations table, to
     # separate between a prefix and the letter representing the start of the
     # word.
@@ -144,39 +143,6 @@ PREPROCESSING = [
     # "ⲁⲑⲟⲩ.", which could be handy (though it doesn't have an apparent usage
     # today).
     ("..", ""),
-]
-
-SPELLING_ANNOTATIONS_1 = [
-    # These are always spelling-specific, and are (for the time being) left as
-    # part of the spellings!
-    # Prenominal form.
-    (
-        "-",
-        lexical.Type(
-            "-",
-            "-",
-            "prenominal form (likely)",
-            inflect.Type.VERB_PRENOMINAL,
-        ),
-    ),
-    (
-        "=",
-        lexical.Type(
-            "⸗",
-            "⸗",
-            "pronominal form",
-            inflect.Type.VERB_PRONOMINAL,
-        ),
-    ),  # Pronominal form.
-    (
-        "+",
-        lexical.Type(
-            "†",
-            "†",
-            "qualitative form",
-            inflect.Type.VERB_QUALITATIVE,
-        ),
-    ),  # Qualitative (stative) form.
 ]
 
 DETACHED_TYPES_1 = [
@@ -281,7 +247,7 @@ DETACHED_TYPES_1 = [
     ),  # No idea!
 ]
 
-SPELLING_ANNOTATIONS_2 = [
+SPELLING_ANNOTATIONS = [
     ("^^", lexical.Type("―", "―", "same spelling as above.", None)),
 ]
 

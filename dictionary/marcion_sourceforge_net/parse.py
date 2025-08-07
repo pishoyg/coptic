@@ -223,12 +223,6 @@ def _parse_spellings_and_types(
 
     _analyze_no_english(constants.ENGLISH_WITHIN_COPTIC_RE.sub("", line))
 
-    line = _apply_substitutions(
-        line,
-        constants.SPELLING_ANNOTATIONS_1,
-        use_coptic_symbol,
-    )
-
     if detach_types:
         cur, line = _pick_up_detached_types(line, constants.DETACHED_TYPES_1)
         types.extend(cur)
@@ -241,7 +235,7 @@ def _parse_spellings_and_types(
 
     line = _apply_substitutions(
         line,
-        constants.SPELLING_ANNOTATIONS_2,
+        constants.SPELLING_ANNOTATIONS,
         use_coptic_symbol,
     )
 
@@ -268,18 +262,13 @@ def _analyze_no_english(line_no_english: str) -> None:
     # NOTE: The body of this method is largely similar to
     # _parse_spellings_and_types.
     # For the sake of rigor, investigate the content of the no-English subset.
-    line_no_english = _apply_substitutions(
-        line_no_english,
-        constants.SPELLING_ANNOTATIONS_1,
-        use_coptic_symbol=True,
-    )
     _, line_no_english = _pick_up_detached_types(
         line_no_english,
         constants.DETACHED_TYPES_1,
     )
     line_no_english = _apply_substitutions(
         line_no_english,
-        constants.SPELLING_ANNOTATIONS_2,
+        constants.SPELLING_ANNOTATIONS,
         use_coptic_symbol=True,
     )
     _, line_no_english = _pick_up_detached_types(
