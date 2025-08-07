@@ -16,6 +16,7 @@ import pandas as pd
 import requests
 from PIL import Image
 
+from dictionary.marcion_sourceforge_net import tsv
 from utils import file, log, sane, semver, text
 
 # TODO: (#5) Prevent users from updating an image without updating its source.
@@ -42,7 +43,6 @@ NAME_RE = re.compile("[A-Z][a-zA-Z ]*")
 DOMAIN = "remnqymi.com"
 CRUM = f"{DOMAIN}/crum"
 
-INPUT_TSV: str = str(_SCRIPT_DIR / "data" / "output" / "tsv" / "roots.tsv")
 KEY_COL: str = "key"
 SENSES_COL: str = "senses"
 SOURCES_DIR: str = str(_SCRIPT_DIR / "data" / "img-sources")
@@ -620,7 +620,7 @@ class Prompter:
         self.plot_yes: int = 0
         self.plot_no: int = 0
         self.key_to_row: dict[str, pd.Series] = {
-            row[KEY_COL]: row for _, row in file.read_tsv(INPUT_TSV).iterrows()
+            row[KEY_COL]: row for _, row in tsv.roots().iterrows()
         }
 
         self.sources: dict[str, list[str]] = {}

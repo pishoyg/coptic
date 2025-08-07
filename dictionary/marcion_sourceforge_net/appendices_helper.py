@@ -10,20 +10,18 @@
 import argparse
 import collections
 import json
-import pathlib
 import shlex
 import subprocess
 import threading
 import urllib
 
+import gspread
 import pandas as pd
 
-from utils import file, gcloud, log, sane, text
+from dictionary.marcion_sourceforge_net import tsv
+from utils import gcloud, log, sane, text
 
-_SCRIPT_DIR = pathlib.Path(__file__).parent
 CRUM_FMT = "https://remnqymi.com/crum/{key}.html"
-ROOTS_MAIN = _SCRIPT_DIR / "data/output/tsv/roots.tsv"
-ROOTS = _SCRIPT_DIR / "data/input/coptwrd.tsv"
 GSPREAD_URL: str = (
     # pylint: disable-next=line-too-long
     "https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg"
@@ -485,14 +483,11 @@ class Validator:
             if cat not in KNOWN_CATEGORIES:
                 log.throw(key, "has an unknown category:", cat)
 
-    def validate(self, path: str | pathlib.Path, roots: bool = False) -> None:
-        df: pd.DataFrame = file.read_tsv(path)
+    def validate(self, df: pd.DataFrame) -> None:
         for _, row in df.iterrows():
             key: str = row[KEY_COL]
             self.validate_senses(key, row[SENSES_COL])
             self.validate_categories(key, row[CATEGORIES_COL])
-        if not roots:
-            return
         self.validate_sisters(df)
 
 
@@ -501,7 +496,7 @@ class Matriarch:
 
     def __init__(self) -> None:
         # Worksheet 0 has the roots.
-        self.sheet = gcloud.read_gspread(GSPREAD_URL, worksheet=0)
+        self.sheet: gspread.worksheet.Worksheet = tsv.roots_sheet()
         self.keys: set[str] = {
             str(record[KEY_COL]) for record in self.sheet.get_all_records()
         }
@@ -714,7 +709,10 @@ class Runner:
 
     def validate(self) -> None:
         validatoor: Validator = Validator()
-        validatoor.validate(ROOTS, roots=True)
+        # TODO: (#0) As of now, only roots have appendices (sisters, categories,
+        # ...). This may expand to derivations in the future, in which case they
+        # should also be validated.
+        validatoor.validate(tsv.roots())
 
     def categories(self) -> None:
         self.init()
@@ -752,10 +750,6 @@ class Runner:
         assert self.mother
         row_idx = 1
         col_idx = self.mother.col_idx[CATEGORIES_COL]
-        key_to_main_record = {
-            row[KEY_COL]: row
-            for _, row in file.read_tsv(ROOTS_MAIN).iterrows()
-        }
         for record in self.mother.sheet.get_all_records():
             row_idx += 1
             key = int(record[KEY_COL])
@@ -764,7 +758,7 @@ class Runner:
             if record[CATEGORIES_COL]:
                 # This record already has a category.
                 continue
-            if key_to_main_record[str(key)][TYPE_COL] in {
+            if record[TYPE_COL] in {
                 "-",
                 "adjective",
                 "conjunction",
