@@ -381,17 +381,23 @@ ACCEPTED_UNKNOWN_CHARS = ",. []()-=+$*^"
 ACCEPTED_UNKNOWN_CHARS_2 = ".()-⸗†― [],"
 
 # The following is used to parse the English meaning column.
-ENGLISH_POSTPROCESSING = [
+ENGLISH_PROCESSING: list[tuple[re.Pattern[str] | str, str]] = [
+    # Curly brackets are used to indicate italics.
     ("{", "<i>"),
     ("}", "</i>"),
+    # A vertical bar indicates a new line.
+    # TODO: (#204) Store new lines in the origin and delete this conversion.
     (" | ", "\n"),
     (" |", "\n"),
-]
-
-ENGLISH_PRETTIFYING = [
+    # Bolden markers in the English column.
+    # TODO: (#0) This list is likely not comprehensive, and it's expected to
+    # grow.
+    (
+        re.compile(
+            r"(\b(intr|intr & tr|tr|tr & intr|tr & refl|qual|refl|noun|noun male)( \([a-zA-Z? ]+\))?:)",  # pylint: disable=line-too-long
+        ),
+        r"<b>\1</b>",
+    ),
+    # Slightly prettify the notation for the conjunctive participle.
     (re.compile(r"\bp c\b"), "p.c."),
 ]
-
-BOLD = re.compile(
-    r"(\b(intr|intr & tr|tr|tr & intr|tr & refl|qual|refl|noun|noun male)( \([a-zA-Z? ]+\))?:)",  # pylint: disable=line-too-long
-)
