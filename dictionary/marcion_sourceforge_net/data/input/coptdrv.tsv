@@ -260,7 +260,7 @@ purchase [αγορασμος, κτησις]"	576a
 (F) ϣⲁⲡⲥ"	noun female	reception, entertainment [δοχη]	576a
 3036	9	0	20	(S) ϣⲱⲡⲥ	noun	seizing, impressing	576b
 							
-2884	10	0	1	(S,B,F) ⲛⲉϣ- {*+ suff ⲧⲁ-, ⲧⲉⲕ-, ⲧⲉⲃ- &c}	-		541b
+2884	10	0	1	(S,B,F) ⲛⲉϣ- {+ suff ⲧⲁ-, ⲧⲉⲕ-, ⲧⲉⲃ- &c}	-		541b
 							
 4127	11	0	1	^^ ⲉϫⲛ-,^^ ⲉϩⲣⲁⲓ ⲉϫⲛ-	-	rule, have power over [συλλαμβανεσθαι, κρατειν]	10a
 4128	11	0	2	^^ ⲙⲛ-,^^ ⲛⲉⲙ-	-	hold with, support	10a
@@ -453,7 +453,7 @@ in"	789a
 8029	19	3634	23	^^^ ⲉⲃⲟⲗ	-	loosen heart, relax, be careless	715b
 3635	19	3634	24	ⲙⲉⲧ..ⲕⲁ ϩ.	-	reason, sense (?)	715b
 3636	19	3634	25	ϭⲓⲛ..ⲕⲁ ϩ.	-	reliance	715b
-8030	19	3634	26	(L) ⲕⲁϩⲧⲁⲓⲧ+	-		715b
+8030	19	3634	26	(L) ⲕⲁϩⲧⲁⲓⲧ†	-		715b
 3637	19	0	27	(S,A,L,B,F) ⲣ ϩ.,ⲉⲓⲣⲉ ⲛϩ.	-	"reflect, criticize (?)
 repent, regret [πλημμελειν, μετανοειν]
 {as nn m} [πλημμελια]"	715b
@@ -863,7 +863,7 @@ in"	613a
 3201	36	0	36	(S,L,B) ϭⲓⲛϣ.,ϫⲓⲛⲥ.	-	speech, saying, tale [λαλια, διαλογη]	614b
 							
 7914	37	0	1		HEADER	qual :	695a
-7915	37	7914	2	ⲡⲉⲧϩ.+,ⲛⲉⲧϩ.+	-	what is hidden	695a
+7915	37	7914	2	ⲡⲉⲧϩ.†,ⲛⲉⲧϩ.†	-	what is hidden	695a
 5265	37	0	3		HEADER	With following preposition:	695b
 5266	37	5265	4	^^ ⲉ-	-	from	695b
 5267	37	5265	5	(S) ^^ ⲉϫⲛ-	-	upon {as acc}	695b
@@ -1535,7 +1535,7 @@ be young"	94a
 8835	71	3323	8	ⲁⲧ..ϫⲓ ϩⲟ.,ⲁⲧ..ϭⲓ ϩⲟ.	-	{sim}	647b
 8836	71	3323	9	ⲣⲉϥ..ϫⲓ ϩⲟ.,ⲣⲉϥ..ϭⲓ ϩⲟ.	-	who shows favour [προσωποληπτης]	647b
 3324	71	3318	10	"(S,A,B) ϫⲓ ϩⲣⲁ⸗,ϭⲓ ϩⲣⲁ⸗,ϫⲓ ⲛϩⲣⲁ⸗,ϭⲓ ⲛϩⲣⲁ⸗
-(S,L) ϫⲓ ϩⲣⲁⲉⲓⲧ+"	-	disport, amuse, occupy self, converse [αδολεσχειν]	648a
+(S,L) ϫⲓ ϩⲣⲁⲉⲓⲧ†"	-	disport, amuse, occupy self, converse [αδολεσχειν]	648a
 8837	71	3324	11	^^^ ⲛ- {acc}	-		648a
 8838	71	3324	12	^^^ ⲉ-	-	attend to	648a
 8839	71	3324	13	^^^ ⲙⲛ-	-	sport, converse with	648a
@@ -3142,7 +3142,7 @@ touch, refer to"	282a
 2361	167	0	10	"(S) ⲥⲃⲟ,ⲥⲃⲱ
 (S,B) ⲥⲁⲃⲟ
 (Sf,F) ⲥⲉⲃ-
-(B) ⲥⲁⲃⲟ⸗,ⲥⲁⲃⲏⲟⲩⲧ+"	verb	"{mostly} learn
+(B) ⲥⲁⲃⲟ⸗,ⲥⲁⲃⲏⲟⲩⲧ†"	verb	"{mostly} learn
 ― intr: [μανθανειν, εξαγορευειν]
 ― tr:"	435a
 6665	167	2361	11		HEADER	tr :	435a
@@ -3303,10 +3303,10 @@ flow {(?)}
 3897	187	0	14	"(S,A) ϫⲱⲱⲣⲉ {as nn only}
 (A,L) ϫⲱⲣⲉ {as nn only}
 (B,F) ϫⲱⲣⲓ {as nn only}
-(S) ϫⲉⲣ-,ϫⲟⲟⲣ+
-(A) ϫⲟⲟⲣⲉ+,ϫⲱ(ⲱ)ⲣⲉ+
-(B) ϫⲟⲣ+,ϫⲟⲣⲓ+
-(F) ϫⲁ(ⲁ)ⲣ+
+(S) ϫⲉⲣ-,ϫⲟⲟⲣ†
+(A) ϫⲟⲟⲣⲉ†,ϫⲱ(ⲱ)ⲣⲉ†
+(B) ϫⲟⲣ†,ϫⲟⲣⲓ†
+(F) ϫⲁ(ⲁ)ⲣ†
 (S,B,F) ^ϫⲁⲣ-"	verb	"intr (qual): be strong, hard, bold [ισχυειν, ισχυος, στερεος, κραταιος, δυνατος]
 tr: {S}"	784a
 8425	187	3897	15		HEADER	With following preposition:	784a
@@ -3473,7 +3473,7 @@ intr: be plucked out, start out"	268b
 1518	201	0	1		HEADER	mouth	288a
 1519	201	1518	2	ⲁⲧⲣⲱϥ,ⲁⲑⲣⲱϥ	-	mouthless, {not speaking the language}	288a
 1520	201	1518	3	"(S,A,B,F) ⲕⲱ ⲛⲣⲱ⸗,ⲭⲱ ⲛⲣⲱ⸗,ⲕⲁ ⲣⲱ⸗,ⲭⲁ ⲣⲱ⸗
-(S) ⲕⲁⲣⲁⲉⲓⲧ+"	-	place, leave mouth, be silent [σιωπαν]	288b
+(S) ⲕⲁⲣⲁⲉⲓⲧ†"	-	place, leave mouth, be silent [σιωπαν]	288b
 5957	201	1520	4	^^^ ⲉ-	-	be silent toward, about	288b
 5958	201	1520	5	^^^ ⲉϫⲛ-	-	{sim}	288b
 5959	201	1520	6	^^^ ⲉⲧⲃⲉ-	-	{sim}	288b
@@ -3482,7 +3482,7 @@ intr: be plucked out, start out"	268b
 1521	201	1518	9	ⲕⲁ ⲣⲱϥ,ⲭⲁ ⲣⲱϥ	noun	silence [σιγη]	288b
 1522	201	1518	10	(S,B) ⲁⲧⲕⲁ ⲣⲱ⸗,ⲁⲧⲭⲁ ⲣⲱ⸗	-	without leaving mout {shut}, never silent	288b
 1523	201	1518	11	(S) ⲙⲛⲧⲣⲉϥⲕⲁ ⲣⲱϥ	-	silence [σιωπη]	288b
-1524	201	1518	12	(S,L) ⲕⲁⲣⲁⲉⲓⲧ+	-	be silent	288b
+1524	201	1518	12	(S,L) ⲕⲁⲣⲁⲉⲓⲧ†	-	be silent	288b
 1525	201	1518	13	(B) ϯ ⲣⲱ⸗	-	give mouth, word, promise	288b
 1526	201	1518	14	"(S,B) ⲟⲩⲱⲛ ⲛⲣⲱ⸗
 (S) ⲟⲩⲟⲛ ⲣⲟ"	-	open mouth	288b
@@ -4276,9 +4276,9 @@ testicles {B}"	726b
 (Sa) ϣⲃⲓⲱ
 (B) ϣⲉⲃⲓⲱ
 (B) ϣⲉⲃⲓⲉ-,ϣⲉⲃⲓⲏⲧ⸗,ϣⲃⲃⲓⲱ⸗
-(S) ϣⲉⲃⲓⲏⲩ+,ϣⲃⲃⲓⲏⲩ+,ϣⲃⲉⲓⲁⲉⲓⲧ+,ϣⲃⲃⲓⲁⲉⲓⲧ+
-(L) ϣⲃⲓⲁⲓⲧ+
-(B,F) ϣⲉⲃⲓⲏⲟⲩⲧ+"	verb	"tr: change [αλλοιουν, αλλασσειν]
+(S) ϣⲉⲃⲓⲏⲩ†,ϣⲃⲃⲓⲏⲩ†,ϣⲃⲉⲓⲁⲉⲓⲧ†,ϣⲃⲃⲓⲁⲉⲓⲧ†
+(L) ϣⲃⲓⲁⲓⲧ†
+(B,F) ϣⲉⲃⲓⲏⲟⲩⲧ†"	verb	"tr: change [αλλοιουν, αλλασσειν]
 qual: [διαφορος]"	552a
 8766	254	2928	16	(B) ..ϣⲉⲃⲓⲉ.- {+ nn}	-		552b
 8767	254	2928	17	^^^ ⲉ-	-	different from [διαφερειν]	552b
@@ -4422,7 +4422,7 @@ invite in, summon"	192b
 629	264	0	7	(B) ϩⲓ ⲭ.	-	upbraid	132b
 630	264	0	8	(S) ⲕⲟⲓϩⲉ	noun female	rival {woman}	132b
 631	264	0	9	"(B) ⲭⲟϩⲭⲉϩ
-(B) ⲭⲉϩⲭⲟϩ+"	-	tr: make zealous	132b
+(B) ⲭⲉϩⲭⲟϩ†"	-	tr: make zealous	132b
 							
 7314	265	0	1		HEADER	With adverb:	555b
 7315	265	7314	2	^^^ ⲉⲃⲟⲗ	-		555b
@@ -5324,10 +5324,10 @@ tr: mislead
 (B) ϣⲉϣϥ-
 (S) ⲥⲟϣϥ⸗
 (B) ϣⲟϣϥ⸗
-(S) ⲥⲟϣϥ+
-(A) ⳉⲁⲥϥ+
-(B) ϣⲟϣϥ+
-(Sf,F) ⲥⲁϣϥ+"	verb	"intr: {meaning as ⲥⲱϣ with which varies} [εξουδενουσθαι, ατιμαζεσθαι, αδοξειν]
+(S) ⲥⲟϣϥ†
+(A) ⳉⲁⲥϥ†
+(B) ϣⲟϣϥ†
+(Sf,F) ⲥⲁϣϥ†"	verb	"intr: {meaning as ⲥⲱϣ with which varies} [εξουδενουσθαι, ατιμαζεσθαι, αδοξειν]
 tr:"	376a
 2073	346	2072	12	(S,A,L,B) ^^	noun male	[εξουδενημα]	376a
 							
@@ -6093,8 +6093,8 @@ from
 8385	408	8381	5	^^^ ϩⲓⲧⲛ-	-	{(passive)}	778b
 8386	408	8381	6	^^^ ⲉⲃⲟⲗ ϩⲓⲧⲛ-	-		778b
 3879	408	0	7	^^	noun male	blame [ελεγχος, ελεγμος, ελεγξις, εντροπη]	778b
-3880	408	0	8	ⲙⲛⲧϫ.+,ⲙⲉⲧϫ.+	-	shamefacedness, modesty	778b
-3881	408	0	9	(B) ϫⲓⲛϫ.+	-	modesty {or sim}	778b
+3880	408	0	8	ⲙⲛⲧϫ.†,ⲙⲉⲧϫ.†	-	shamefacedness, modesty	778b
+3881	408	0	9	(B) ϫⲓⲛϫ.†	-	modesty {or sim}	778b
 							
 4897	409	0	1		HEADER	With following preposition:	449a
 4898	409	4897	2	(S,B) ^^ ⲉ-	verb	"save from
@@ -6152,7 +6152,7 @@ from
 1328	411	0	19	(B) ϣⲟⲩⲛ.	-	worthy of belief	246b
 							
 7491	412	0	1		HEADER	qual :	601b
-7490	412	7491	2	ⲡⲉⲧϣ.+	-	what is dry [ξηρος]	601b
+7490	412	7491	2	ⲡⲉⲧϣ.†	-	what is dry [ξηρος]	601b
 7492	412	0	3		HEADER	With following preposition or adverb:	601b
 7493	412	7492	4	^^^ ⲉⲃⲟⲗ ⲛ-	-		601b
 7494	412	7492	5	^^^ ⲉϫⲛ-	-		601b
@@ -7035,7 +7035,7 @@ tr:
 2642	697	0	4	"(S,B) ⲟⲩⲟⲧⲟⲩⲉⲧ
 (A) ⲟⲩⲁⲧⲟⲩⲉⲧ
 (B) ⲃⲟⲧⲃⲉⲧ
-(S,Sf,B) ⲟⲩⲉⲧⲟⲩⲱⲧ+"	verb	"intr: {S}, become, be green, pallid
+(S,Sf,B) ⲟⲩⲉⲧⲟⲩⲱⲧ†"	verb	"intr: {S}, become, be green, pallid
 qual: {(oftenest)} [χλωρος]
 {as nn m S,Sf,A,B}, greenness, herbs, pallor [χλωρος, χλωροτης, χλοη]"	493b
 							
@@ -8029,7 +8029,7 @@ in, with"	348b
 ― camelherd [καμηλιτης]
 ― whore-monger [πορνοβοσκος]"	173b
 826	933	0	5	"(B) ⲁⲙⲟⲛⲓ
-(S) ⲙⲉⲛⲉ-,ⲙⲁⲛⲉ-,ⲙⲁⲛⲟⲩ-,ⲙⲁⲛⲟⲟⲩⲧ+"	verb	"intr: be made fast, {so} come to land, into part {(of ship)} [προσορμιζεσθαι]
+(S) ⲙⲉⲛⲉ-,ⲙⲁⲛⲉ-,ⲙⲁⲛⲟⲩ-,ⲙⲁⲛⲟⲟⲩⲧ†"	verb	"intr: be made fast, {so} come to land, into part {(of ship)} [προσορμιζεσθαι]
 tr: bring to land, into port [καταγειν, επικελλειν]"	173b
 827	933	826	6	(S,B) ⲙ. ⲉϩⲟⲩⲛ,ⲙ. ⲉϧⲟⲩⲛ	verb	"intr: come in to shore, lie in port
 tr: bring into shore, port"	174a
@@ -8075,9 +8075,9 @@ tr: bring into shore, port"	174a
 633	941	0	5	"(S,A,B,F) ⲕⲁϩⲕϩ
 (S) ⲕⲉϩⲕⲉϩ-
 (Sf) ⲕⲉϩⲕⲱϩ⸗
-(S) ⲕⲉϩⲕⲱϩ+
-(A) ⲕⲁϩⲕⲁϩⲧ+
-(B) ⲭⲉϩⲭⲟϩⲧ+"	verb	"tr:
+(S) ⲕⲉϩⲕⲱϩ†
+(A) ⲕⲁϩⲕⲁϩⲧ†
+(B) ⲭⲉϩⲭⲟϩⲧ†"	verb	"tr:
 ― hew out, smooth [λαξευειν, λατομειν]
 ― make smooth, cause to heal up, {of wound}
 {also intr}"	133a
@@ -8114,7 +8114,7 @@ fervour"	137b
 661	950	0	3	"(S) ⲗⲟⲕⲗⲕ
 (Sf) ⲗⲁϭⲗⲉϭ
 (S) ⲗⲉⲕⲗⲱⲕ⸗
-(S,B) ⲗⲉⲕⲗⲱⲕ+"	verb	"intr: become soft
+(S,B) ⲗⲉⲕⲗⲱⲕ†"	verb	"intr: become soft
 tr:
 ― {S}, soften
 ― {as nn m S,B}, softness"	138b
@@ -8154,7 +8154,7 @@ tr:
 							
 8736	975	0	1	ⲉⲃⲟⲗ ^^,ⲥⲁⲃⲟⲗ ^^	-	from, from out	216a
 							
-1103	976	0	1	(S) ⲛⲁ⸗,ⲛⲏ⸗ {*+ obj suff}	-		216b
+1103	976	0	1	(S) ⲛⲁ⸗,ⲛⲏ⸗ {+ obj suff}	-		216b
 							
 3244	980	0	1	(S,B) ⲉⲃⲟⲗ ϩⲁ-,ⲉⲃⲟⲗ ϧⲁ-	-	{(mostly doubtful if ⲉⲃⲟⲗ belong to vb or prep)}, away, from [εκ]	633b
 3245	980	0	2	(S,B) ⲉϩⲟⲩⲛ ϩⲁ-,ⲉϧⲟⲩⲛ ϧⲁ-	-	in beneath [υπο]	634a
@@ -8232,7 +8232,7 @@ tr: destroy"	148b
 696	1012	0	3	"(S) ⲗⲉϥⲗⲓϥⲉ
 (B) ⲗⲉϥⲗⲓϥⲓ"	noun female	what drops off, {fragment, crumb}	149a
 							
-699	1017	0	1	ⲗ.+ ⲉⲃⲟⲗ	-	{meaning same}	149b
+699	1017	0	1	ⲗ.† ⲉⲃⲟⲗ	-	{meaning same}	149b
 700	1017	0	2	ⲗⲁϩⲗⲉϩ	noun male	height, {pride}	149b
 							
 698	1018	0	1	(S) ⲗⲁϩⲙⲉⲥ	noun	boiled food (?)	150a
@@ -8540,12 +8540,12 @@ appoint ({without} time)"	219a
 5684	1171	0	1		HEADER	intr :	219a
 5685	1171	5684	2	^^^ ⲉ-,^^^ ⲁ-	-	[μελλειν]	219a
 5686	1171	5684	3	^^^ ⲛ-	-	[μελλειν]	219b
-1130	1171	0	4	"(S,L,F) ⲛⲏⲩ+
-(S,A,B,F,O) ⲛⲏⲟⲩ+
-(S) ⲛⲏⲩⲉ+
-(S,L,F) ⲛⲛⲏⲩ+
-(A,F) ⲛⲛⲏⲟⲩ+
-(S) ⲛⲁⲩ+"	verb	"be (in act of) coming, about to come, {as qual of ⲉⲓ, mostly with fut sense}
+1130	1171	0	4	"(S,L,F) ⲛⲏⲩ†
+(S,A,B,F,O) ⲛⲏⲟⲩ†
+(S) ⲛⲏⲩⲉ†
+(S,L,F) ⲛⲛⲏⲩ†
+(A,F) ⲛⲛⲏⲟⲩ†
+(S) ⲛⲁⲩ†"	verb	"be (in act of) coming, about to come, {as qual of ⲉⲓ, mostly with fut sense}
 {with 2d vb (continued or future action)}
 ― {without prep}
 ― {with ⲉ-}, increase of doing
@@ -9731,7 +9731,7 @@ upon {(?)}"	398a
 							
 2281	1608	0	1	ⲥⲉ ⲧ.	-	yea verily	419a
 							
-2282	1609	0	1	(S) ⲑⲛⲟ,ⲑⲛⲟ-,ⲑⲛⲟ⸗,ⲑⲛⲱ⸗,ⲑⲉⲛⲟ⸗,ⲑⲁⲛⲟ⸗,ⲑⲛⲏⲩ+,ⲑⲉⲛⲏⲩ+	verb	tr: pound, crush	419a
+2282	1609	0	1	(S) ⲑⲛⲟ,ⲑⲛⲟ-,ⲑⲛⲟ⸗,ⲑⲛⲱ⸗,ⲑⲉⲛⲟ⸗,ⲑⲁⲛⲟ⸗,ⲑⲛⲏⲩ†,ⲑⲉⲛⲏⲩ†	verb	tr: pound, crush	419a
 							
 2288	1610	0	1	ⲧⲉⲛϣⲓ	noun	blow	421a
 2289	1610	2288	2	ϯ ⲧ.	-	threaten, give blow [απειλειν, επιπλησσειν]	421a
@@ -9771,8 +9771,8 @@ upon {(?)}"	398a
 6658	1635	6656	3	^^^ ϩⲛ-,^^^ ϧⲉⲛ-	-		432a
 							
 2348	1638	0	1	"(S) ⲧⲣⲟϣ
-(S,B) ⲧⲟⲣϣ+
-(Sf,F) ⲧⲁⲣϣ+"	verb	intr: {as last}	432a
+(S,B) ⲧⲟⲣϣ†
+(Sf,F) ⲧⲁⲣϣ†"	verb	intr: {as last}	432a
 							
 4870	1647	0	1	(S,B) ^^ ⲉⲃⲟⲗ	-	stretch out, stiffen	433b
 4871	1647	0	2	(B) ^^ ⲉⲡϣⲱⲓ	-	stand up stiffly	433b
@@ -10632,7 +10632,7 @@ demon [δαιμονιον]"	583b
 (B) ϣⲑⲁⲙ
 (S) ϣⲧⲁⲙ-
 (F) ϣⲧⲉⲙ-
-(B) ϣⲑⲁⲙⲏⲟⲩⲧ+"	verb	"intr: shut [κλειειν, επικαλυπτειν]
+(B) ϣⲑⲁⲙⲏⲟⲩⲧ†"	verb	"intr: shut [κλειειν, επικαλυπτειν]
 qual: {B}
 tr: [κλειειν, καμμυειν]"	596a
 7455	1989	3124	5		HEADER	tr :	596a
@@ -10792,7 +10792,7 @@ from off"	626a
 3236	2065	5211	28	(S) ϥⲟϭϥ	noun	seizer, robber	627b
 3237	2065	5211	29	"(S) ϥⲱϭⲥ
 (S,L) ⲃⲱϭⲥ
-(L) ⲃⲁϭⲥ+"	verb	intr: {meanings as ϥⲱⲅⲉ leap, move hastily}	627b
+(L) ⲃⲁϭⲥ†"	verb	intr: {meanings as ϥⲱⲅⲉ leap, move hastily}	627b
 3238	2065	5211	30	"(S) ϥⲟϭⲥ,ⲃⲟϭⲥ
 (A) ϥⲁⲕⲥ
 (B) ϥⲟϫⲥ
@@ -10876,7 +10876,7 @@ upon"	645b
 							
 3344	2121	0	1	(S,A,L,B,F) ⲣ ϩ.,ⲉⲣ ϩ.	-	grieve, mourn [πενθειν]	655a
 							
-3345	2122	0	1	(S) ϩⲃⲃⲉ,ϩⲃⲱⲟⲩ+	verb	intr: {sim}	655b
+3345	2122	0	1	(S) ϩⲃⲃⲉ,ϩⲃⲱⲟⲩ†	verb	intr: {sim}	655b
 3348	2122	3345	2	..ϩⲃⲃⲉ	noun male	low part, place	655b
 3346	2122	0	3	(S) ϩⲃⲁⲓ	noun	shortness	655b
 3347	2122	0	4	(S) ϩⲁⲓⲃⲉ	noun female		655b
@@ -11531,7 +11531,7 @@ qual: {B}
 8213	2358	8207	7	(S) ^^^ ⲉϩⲣⲁⲓ	-		752b
 3783	2358	0	8	(S,A,L,B,F) ^^	noun male	sowing, planting [σπερμα, φυτευμα]	752b
 3784	2358	0	9	ⲙⲁ ⲛϫⲟ	-	place of sowing, planting	752b
-8214	2358	0	10	ⲙⲁ ⲉⲧϫ.+	-	[σποριμος]	752b
+8214	2358	0	10	ⲙⲁ ⲉⲧϫ.†	-	[σποριμος]	752b
 3785	2358	0	11	ⲣⲉϥϫⲟ	-	sower	752b
 							
 3786	2362	0	1	(S) ⲙⲁ ⲛϫⲟ	-	piece of wall	753b
@@ -11945,9 +11945,9 @@ furniture, plenishing"	808a
 (Sa) ϭⲉⲗⲱ⸗,ⲕⲁⲗⲟ⸗
 (B) ϫⲁⲗⲱ⸗,ϭⲁⲗⲱ⸗
 (F) ϭⲗⲱ⸗,ⲕⲗⲱ⸗
-(S) ϭⲁⲗⲱⲟⲩ+,ϭⲁⲗⲏⲩ+,ϭⲁⲗⲏⲩⲧ+,ⲕⲉⲗⲟⲓⲧ+
-(L) ϭⲉⲗⲓⲧ+
-(B) ϭⲁⲗⲏⲟⲩⲧ+,ϫⲁⲗⲏⲟⲩⲧ+"	verb	"tr: deposit, assign, entrust
+(S) ϭⲁⲗⲱⲟⲩ†,ϭⲁⲗⲏⲩ†,ϭⲁⲗⲏⲩⲧ†,ⲕⲉⲗⲟⲓⲧ†
+(L) ϭⲉⲗⲓⲧ†
+(B) ϭⲁⲗⲏⲟⲩⲧ†,ϫⲁⲗⲏⲟⲩⲧ†"	verb	"tr: deposit, assign, entrust
 intr: {S}"	808b
 8558	2523	3971	13	^^^ ⲉ-	-	to	808b
 8559	2523	3971	14	^^^ ⲉⲃⲟⲗ	-		809a
@@ -12166,7 +12166,7 @@ pursuer, dispeller"	841a
 4098	2653	0	9	"(S,L) ϭⲱϫⲉ
 (S) ϭⲱⲱϫⲉ,ϫⲟϫⲉ
 (B) ϫⲱϫⲓ
-(S) ϭⲉϫ-,ϭⲏϫ+"	verb	"dig
+(S) ϭⲉϫ-,ϭⲏϫ†"	verb	"dig
 ― intr: [σκαπτειν, ορυσσειν]
 tr:"	841b
 4099	2653	4098	10	(L) ^^	noun	what is dug, spadeful	841b
