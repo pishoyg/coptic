@@ -382,20 +382,16 @@ ACCEPTED_UNKNOWN_CHARS_2 = ".()-⸗†― [],"
 
 # The following is used to parse the English meaning column.
 ENGLISH_POSTPROCESSING = [
-    ("{", "<b>"),
-    ("}", "</b>"),
-    ("(", "<i>"),
-    (")", "</i>"),
+    ("{", "<i>"),
+    ("}", "</i>"),
     (" | ", "\n"),
     (" |", "\n"),
-    ("/*", "("),
-    ("*/", ")"),
-    ("/$gk: ", "["),
-    ("/$", "["),
-    ("$/", "]"),
-    ("$", "―"),
 ]
 
 ENGLISH_PRETTIFYING = [
     (re.compile(r"\bp c\b"), "p.c."),
 ]
+
+BOLD = re.compile(
+    r"(\b(intr|intr & tr|tr|tr & intr|tr & refl|qual|refl|noun|noun male)( \([a-zA-Z? ]+\))?:)",  # pylint: disable=line-too-long
+)
