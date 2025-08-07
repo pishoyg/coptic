@@ -86,12 +86,10 @@ def _apply_substitutions(
     return line
 
 
-def _munch(text: str, regex: re.Pattern[str], strict: bool) -> tuple[str, str]:
+def _munch(text: str, regex: re.Pattern[str]) -> tuple[str, str]:
     # Munch the prefix of `text` which matches `regex`, and return both parts.
     m = regex.match(text)
-    if strict:
-        assert m
-    elif not m:
+    if not m:
         return "", text
 
     i, j = m.span()
@@ -112,7 +110,7 @@ def _chop(text: str, regex: re.Pattern[str]) -> tuple[str, str, str]:
 
 
 def parse_word_cell(
-    line: str,
+    entry: str,
     root_type: lexical.Type,
     strict: bool,
     detach_types: bool,
@@ -120,86 +118,93 @@ def parse_word_cell(
     normalize_optional: bool,
     normalize_assumed: bool,
 ) -> list[lexical.Word]:
-    # Replace the non-breaking space with a unicode space.
-    line = line.replace("\xa0", " ")
-    # TODO: (#204) Fix the quotation mark issue at the origin.
-    # Right now, lines with references have misplaced double quotes, which we
-    # fix manually below.
-    if HREF_START in line:
-        assert line.endswith('"')
-        line = line[:-1]
-        line = line.replace(HREF_START, HREF_START + '"')
-        line = line.replace(HREF_START + '""', HREF_START + '"')
-
-    words: list[lexical.Word] = []
-    if strict and not constants.DIALECTS_RE.search(line):
-        d = []
-        s, t, r, line = _munch_and_parse_spellings_types_and_references(
-            line,
+    words: list[lexical.Word] = list(
+        parse_word_cell_aux(
+            entry,
+            root_type,
             strict,
             detach_types,
             use_coptic_symbol,
-        )
-        # In strict mode, an undialected entry exists on its own.
-        assert not line
-        # Undialected and Ⳉ, it's Akhmimic!
-        if any("ⳉ" in spelling for spelling in s):
-            d = ["A"]
-        # Undialected and ϧ, it's Bohairic!
-        if any("ϧ" in spelling for spelling in s):
-            d = ["B"]
-        return [
-            lexical.Word(
-                d,
-                s,
-                t,
-                r,
-                root_type,
-                normalize_optional=normalize_optional,
-                normalize_assumed=normalize_assumed,
-            ),
-        ]
-
-    while line:
-        # Parse the dialects.
-        d, line = _munch_and_parse_dialects(line, strict)
-        # Parse the spellings, types, and references.
-        s, t, r, line = _munch_and_parse_spellings_types_and_references(
-            line,
-            strict,
-            detach_types,
-            use_coptic_symbol,
-        )
-        words.append(
-            lexical.Word(
-                d,
-                s,
-                t,
-                r,
-                root_type,
-                normalize_optional=normalize_optional,
-                normalize_assumed=normalize_assumed,
-            ),
-        )
+            normalize_optional,
+            normalize_assumed,
+        ),
+    )
+    # Any entry that has multiple lines must be dialected.
+    if len(words) > 1:
+        assert all(w.dialects for w in words)
 
     return words
 
 
-def _munch_and_parse_spellings_types_and_references(
-    line: str,
+def parse_word_cell_aux(
+    entry: str,
+    root_type: lexical.Type,
     strict: bool,
     detach_types: bool,
     use_coptic_symbol: bool,
-) -> tuple[list[str], list[lexical.Type], list[str], str]:
-    match, line = _munch(line, constants.SPELLINGS_TYPES_REFERENCES_RE, strict)
+    normalize_optional: bool,
+    normalize_assumed: bool,
+) -> abc.Generator[lexical.Word]:
+    if not entry:
+        return
+
+    # TODO: (#204) Fix the quotation mark issue at the origin.
+    # Right now, lines with references have misplaced double quotes, which we
+    # fix manually below.
+    if HREF_START in entry:
+        assert entry.endswith('"')
+        entry = entry[:-1]
+        entry = entry.replace(HREF_START, HREF_START + '"')
+        entry = entry.replace(HREF_START + '""', HREF_START + '"')
+
+    lines: list[str] = entry.split("\n")
+    del entry
+
+    for line in lines:
+        # Parse the dialects.
+        d, line = _munch_dialects(line)
+        # Parse the spellings, types, and references.
+        s, t, r = _parse_spellings_types_and_references(
+            line,
+            detach_types,
+            use_coptic_symbol,
+        )
+        # If this entry is undialected, try to infer the dialects from the
+        # spellings. We only do this for roots, but not derivations – hence the
+        # check for `strict`.
+        if not d and strict:
+            # Undialected and Ⳉ, it's Akhmimic!
+            if all("ⳉ" in spelling for spelling in s):
+                d = ["A"]
+            # Undialected and ϧ, it's Bohairic!
+            if all("ϧ" in spelling for spelling in s):
+                d = ["B"]
+
+        yield lexical.Word(
+            d,
+            s,
+            t,
+            r,
+            root_type,
+            normalize_optional=normalize_optional,
+            normalize_assumed=normalize_assumed,
+        )
+
+
+def _parse_spellings_types_and_references(
+    line: str,
+    detach_types: bool,
+    use_coptic_symbol: bool,
+) -> tuple[list[str], list[lexical.Type], list[str]]:
+    assert constants.SPELLINGS_TYPES_REFERENCES_RE.fullmatch(line)
 
     ss: list[str] = []
     tt: list[lexical.Type] = []
     rr: list[str] = []
 
-    while match:
-        spelling_and_types, reference, match = _chop(
-            match,
+    while line:
+        spelling_and_types, reference, line = _chop(
+            line,
             constants.REFERENCE_RE,
         )
         if reference:
@@ -213,7 +218,7 @@ def _munch_and_parse_spellings_types_and_references(
             ss.extend(s)
             tt.extend(t)
 
-    return ss, tt, rr, line
+    return ss, tt, rr
 
 
 def _parse_spellings_and_types(
@@ -463,12 +468,11 @@ def _parse_reference(line: str) -> abc.Generator[str]:
         yield "; ".join(filter(None, parts[i : i + 5] + [body, note]))
 
 
-def _munch_and_parse_dialects(
+def _munch_dialects(
     line: str,
-    strict: bool,
 ) -> tuple[list[str], str]:
-    match, line = _munch(line, constants.DIALECTS_RE, strict)
-    if not strict and not match:
+    match, line = _munch(line, constants.DIALECTS_RE)
+    if not match:
         return [], line
     assert match, line
     assert match[0] == "(" and match[-1] == ")"
