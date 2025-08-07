@@ -30,7 +30,6 @@ DIALECTS_RE = re.compile(
         ),
     ),
 )
-SPELLINGS_TYPES_REFERENCES_RE = re.compile(r"[^()]+")
 
 ENGLISH_WITHIN_COPTIC_RE = re.compile(r"\{[^\{\}]+\}")
 COPTIC_WITHIN_ENGLISH_RE = re.compile(r"\[[^\[\]]+\]")
@@ -42,11 +41,6 @@ COMMA_NOT_BETWEEN_PARENTHESES_RE = re.compile(
     r",(?![^()]*\)|[^{}]*\}|[^\[\]]*\])",
 )
 PURE_COPTIC_RE = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
-
-CRUM_PAGE_FMT = (
-    "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID={key}"
-)
-CARD_LINK_FMT = "https://remnqymi.com/crum/{key}.html"
 
 # LETTER_ENCODING is used to convert ASCII-encoded Coptic text to unicode.
 LETTER_ENCODING = {
@@ -191,8 +185,6 @@ PARENTHESES_AND_BRACKETS = [
     ("..", ""),
     ("*^", "{"),  # English-within-Coptic left bracket.
     ("^*", "}"),  # English-within-Coptic right bracket.
-    ("$^", "("),  # Left parenthesis.
-    ("^$", ")"),  # Right parenthesis.
     ("[", "["),  # Coptic-within-English left bracket.
     ("]", "]"),  # Coptic-within-English right bracket.
 ]

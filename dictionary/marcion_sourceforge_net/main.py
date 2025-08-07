@@ -66,18 +66,6 @@ def _process_data(df: pd.DataFrame, strict: bool) -> None:
 
     keysmith = _Keyer(df)
     for _, row in df.iterrows():
-        if strict:
-            insert(
-                "key-link",
-                constants.CARD_LINK_FMT.format(key=row["key"]),
-            )
-        else:
-            insert(
-                "key-link",
-                constants.CARD_LINK_FMT.format(key=row["key_word"])
-                + "#drv"
-                + row["key"],
-            )
         root_type: lexical.Type = constants.TYPE_ENCODING[row["type"]]
         word = parse.parse_word_cell(
             row["word"],
@@ -117,12 +105,6 @@ def _process_data(df: pd.DataFrame, strict: bool) -> None:
 
         ep = parse.parse_english_cell(row["en"])
         insert("en-parsed", ep)
-        crum = row["crum"]
-        if crum == "0a":
-            row["crum"] = ""
-            insert("crum-link", "")
-        else:
-            insert("crum-link", constants.CRUM_PAGE_FMT.format(key=crum))
         dialects: list[str] = _dialects(word, is_root=strict)
         insert("dialects", ", ".join(dialects))
         if strict:

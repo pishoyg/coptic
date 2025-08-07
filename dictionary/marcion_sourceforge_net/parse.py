@@ -196,8 +196,6 @@ def _parse_spellings_types_and_references(
     detach_types: bool,
     use_coptic_symbol: bool,
 ) -> tuple[list[str], list[lexical.Type], list[str]]:
-    assert constants.SPELLINGS_TYPES_REFERENCES_RE.fullmatch(line)
-
     ss: list[str] = []
     tt: list[lexical.Type] = []
     rr: list[str] = []
