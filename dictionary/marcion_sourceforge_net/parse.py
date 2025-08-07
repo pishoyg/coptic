@@ -379,7 +379,6 @@ def _convert_coptic_within_english_aux(line: str) -> abc.Generator[str]:
 
 
 def parse_english_cell(line: str) -> str:
-    line = _convert_coptic_within_english(line)
     line = _apply_substitutions(line, constants.ENGLISH_POSTPROCESSING)
     line = _apply_substitutions(line, constants.ENGLISH_PRETTIFYING)
     return line
