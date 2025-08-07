@@ -57,9 +57,6 @@ from collections import abc
 
 from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import word as lexical
-from utils import log
-
-HREF_START = "*^<a href="
 
 
 def _apply_substitutions(
@@ -148,15 +145,6 @@ def parse_word_cell_aux(
     if not entry:
         return
 
-    # TODO: (#204) Fix the quotation mark issue at the origin.
-    # Right now, lines with references have misplaced double quotes, which we
-    # fix manually below.
-    if HREF_START in entry:
-        assert entry.endswith('"')
-        entry = entry[:-1]
-        entry = entry.replace(HREF_START, HREF_START + '"')
-        entry = entry.replace(HREF_START + '""', HREF_START + '"')
-
     lines: list[str] = entry.split("\n")
     del entry
 
@@ -229,13 +217,11 @@ def _parse_spellings_and_types(
 
     line = _apply_substitutions(
         line,
-        constants.PARENTHESES_AND_BRACKETS,
+        constants.PREPROCESSING,
         use_coptic_symbol,
     )
 
-    line, line_no_english = _parse_coptic(line)
-    _analyze_no_english(line_no_english)
-    del line_no_english
+    _analyze_no_english(constants.ENGLISH_WITHIN_COPTIC_RE.sub("", line))
 
     line = _apply_substitutions(
         line,
@@ -307,14 +293,12 @@ def _analyze_no_english(line_no_english: str) -> None:
     spellings = constants.COMMA_NOT_BETWEEN_PARENTHESES_RE.split(
         line_no_english,
     )
-    for s in spellings:
-        for c in s:
-            valid = (
-                c in constants.LETTERS
-                or c in constants.ACCEPTED_UNKNOWN_CHARS_2
-            )
-            if not valid:
-                log.error(s)
+    assert all(
+        constants.PURE_COPTIC_RE.match(c)
+        or c in constants.ACCEPTED_UNKNOWN_CHARS_2
+        for s in spellings
+        for c in s
+    )
 
 
 def _pick_up_detached_types(
@@ -327,55 +311,6 @@ def _pick_up_detached_types(
             line = line.replace(p[0], "")
             t.append(p[1])
     return t, line
-
-
-def _parse_coptic(line: str) -> tuple[str, str]:
-    """Parse one line of ASCII-encoded Coptic.
-
-    Args:
-        line: ASCII-encoded Coptic. It is possible for the text to contain
-            English text within it, and for the English text to contain Coptic
-            text within.
-
-    Returns:
-        A tuple, one representing the parsed Coptic (with the English comments
-        included), and one representing the parsed Coptic (with the English
-        removed).
-    """
-    out: list[str] = []
-    out_no_english: list[str] = []
-    while line:
-        copt, eng, line = _chop(line, constants.ENGLISH_WITHIN_COPTIC_RE)
-        if copt:
-            copt = _ascii_to_unicode(copt)
-            out.append(copt)
-            out_no_english.append(copt)
-        if eng:
-            eng = _convert_coptic_within_english(eng)
-            out.append(eng)
-    return "".join(out), "".join(out_no_english)
-
-
-def _convert_coptic_within_english(line: str) -> str:
-    return "".join(_convert_coptic_within_english_aux(line))
-
-
-def _convert_coptic_within_english_aux(line: str) -> abc.Generator[str]:
-    while line:
-        eng, copt, line = _chop(line, constants.COPTIC_WITHIN_ENGLISH_RE)
-        yield eng
-        if not copt:
-            assert not line
-            return
-        assert copt.startswith("[") and copt.endswith("]")
-        copt = copt[1:-1]
-        assert copt
-        copt = _ascii_to_unicode(copt, strict=False)
-        copt = _apply_substitutions(
-            copt,
-            constants.COPTIC_WITHIN_ENGLISH_POSTPROCESSING,
-        )
-        yield copt
 
 
 def parse_english_cell(line: str) -> str:
@@ -422,20 +357,6 @@ class CrumPage:
         return "".join(str(x) for x in self.parts())
 
 
-def _ascii_to_unicode(txt: str, strict: bool = True) -> str:
-    return "".join(_ascii_to_unicode_aux(txt, strict))
-
-
-def _ascii_to_unicode_aux(txt: str, verify: bool = True) -> abc.Generator[str]:
-    for c in txt:
-        if verify:
-            assert (
-                c in constants.LETTER_ENCODING
-                or c in constants.ACCEPTED_UNKNOWN_CHARS
-            )
-        yield constants.LETTER_ENCODING.get(c, c)
-
-
 def _parse_reference(line: str) -> abc.Generator[str]:
     """Parse a reference.
 
@@ -462,7 +383,6 @@ def _parse_reference(line: str) -> abc.Generator[str]:
     parts = line.split(";")
     assert not (len(parts) % 5), parts
     for i in range(0, len(parts), 5):
-        parts[i + 4], _ = _parse_coptic(parts[i + 4])
         yield "; ".join(filter(None, parts[i : i + 5] + [body, note]))
 
 

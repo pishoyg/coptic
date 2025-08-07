@@ -32,53 +32,14 @@ DIALECTS_RE = re.compile(
 )
 
 ENGLISH_WITHIN_COPTIC_RE = re.compile(r"\{[^\{\}]+\}")
-COPTIC_WITHIN_ENGLISH_RE = re.compile(r"\[[^\[\]]+\]")
 PARSED_GREEK_WITHIN_ENGLISH_RE = re.compile(r"(\[[ ,()&c?;Α-Ωα-ω]+\])")
 
 CRUM_RE = re.compile(r"^(\d{1,3})(a|b)$")
-REFERENCE_RE = re.compile(r'\*\^<a href="([^"<>]+)">([^<>]+)</a>([^<>]*)\^\*')
+REFERENCE_RE = re.compile(r'{<a href="([^"<>]+)">([^<>]+)</a>([^<>]*)}')
 COMMA_NOT_BETWEEN_PARENTHESES_RE = re.compile(
     r",(?![^()]*\)|[^{}]*\}|[^\[\]]*\])",
 )
 PURE_COPTIC_RE = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
-
-# LETTER_ENCODING is used to convert ASCII-encoded Coptic text to unicode.
-LETTER_ENCODING = {
-    "a": "ⲁ",
-    "b": "ⲃ",
-    "g": "ⲅ",
-    "d": "ⲇ",
-    "e": "ⲉ",
-    "V": "ⲋ",
-    "z": "ⲍ",
-    "h": "ⲏ",
-    "q": "ⲑ",
-    "i": "ⲓ",
-    "k": "ⲕ",
-    "l": "ⲗ",
-    "m": "ⲙ",
-    "n": "ⲛ",
-    "j": "ⲝ",
-    "o": "ⲟ",
-    "p": "ⲡ",
-    "r": "ⲣ",
-    "s": "ⲥ",
-    "t": "ⲧ",
-    "u": "ⲩ",
-    "f": "ⲫ",
-    "x": "ⲭ",
-    "c": "ⲯ",
-    "w": "ⲱ",
-    "S": "ϣ",
-    "F": "ϥ",
-    "K": "ϧ",
-    "H": "ϩ",
-    "J": "ϫ",
-    "G": "ϭ",
-    "T": "ϯ",
-    "Q": "ⳉ",
-}
-LETTERS = set(LETTER_ENCODING.values())
 
 # TYPES is used to parse the "type" column.
 TYPES = [
@@ -172,7 +133,7 @@ TYPE_ENCODING: dict[str, lexical.Type] = {t.marcion(): t for t in TYPES}
 
 # PREPROCESSING, SPELLING_ANNOTATIONS, and DETACHED_TYPES, and POSTPROCESSING
 # are essential for parsing the word column.
-PARENTHESES_AND_BRACKETS = [
+PREPROCESSING = [
     ("*+", "+"),
     # NOTE: The two consecutive dots are used in the derivations table, to
     # separate between a prefix and the letter representing the start of the
@@ -183,14 +144,6 @@ PARENTHESES_AND_BRACKETS = [
     # "ⲁⲑⲟⲩ.", which could be handy (though it doesn't have an apparent usage
     # today).
     ("..", ""),
-    ("*^", "{"),  # English-within-Coptic left bracket.
-    ("^*", "}"),  # English-within-Coptic right bracket.
-    ("[", "["),  # Coptic-within-English left bracket.
-    ("]", "]"),  # Coptic-within-English right bracket.
-]
-
-COPTIC_WITHIN_ENGLISH_POSTPROCESSING = [
-    ("=", "⸗"),
 ]
 
 SPELLING_ANNOTATIONS_1 = [
@@ -199,17 +152,6 @@ SPELLING_ANNOTATIONS_1 = [
     # Prenominal form.
     (
         "-",
-        lexical.Type(
-            "-",
-            "-",
-            "prenominal form (likely)",
-            inflect.Type.VERB_PRENOMINAL,
-        ),
-    ),
-    # TODO: (#0) The dash is a typo. Fix at the origin. It should be a hyphen.
-    # Prenominal form. (This is a dash, not a hyphen.)
-    (
-        "–",
         lexical.Type(
             "-",
             "-",
@@ -349,15 +291,6 @@ DETACHED_TYPES_2 = [
         lexical.Type("<i>p c </i>", "(p.c.)", "conjunctive participle", None),
     ),
 ]
-
-# ACCEPTED_UNKNOWN_CHARS are characters that shouldn't cause confusion when
-# encountered in the Coptic text.
-# A comma separates different spellings.
-# A period indicates a substitution. (For example, under the entry for ⲉⲃⲣⲏϫ,
-# ⲥⲉⲧⲉ. is understood to mean ⲥⲉⲧⲉⲃⲣⲏϫ.)
-# A space is a space.
-# Parentheses and square brackets are also used sometimes.
-ACCEPTED_UNKNOWN_CHARS = ",. []()-=+$*^"
 
 # The no-English, no-type, spelling-split, no-"probably" version of the above.
 # . signifies an abbreviation.
