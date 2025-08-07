@@ -86,20 +86,6 @@ LETTER_ENCODING = {
 }
 LETTERS = set(LETTER_ENCODING.values())
 
-# QUALITY_ENCODING is used to parse the "quality" column.
-QUALITY_ENCODING = {
-    0: "weak",
-    1: "full",
-    2: "word and derivations",
-    3: "word",
-    4: "word alone",
-    5: "advanced",
-    6: "complete",
-    7: "complete+",
-    8: "complete++",
-    9: "complete+cz",
-}
-
 # TYPE_ENCODING is used to parse the "type" column.
 TYPE_ENCODING = {
     0: lexical.Type("-", "(-)", "-", None, append=False),

@@ -116,10 +116,6 @@ def _chop(
     return text[:i], text[i:j], text[j:]
 
 
-def parse_quality_cell(q: str) -> str:
-    return constants.QUALITY_ENCODING[int(q)]
-
-
 def parse_type_cell(t: str) -> lexical.Type:
     return constants.TYPE_ENCODING[int(t)]
 

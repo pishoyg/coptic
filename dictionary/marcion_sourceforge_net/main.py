@@ -115,11 +115,6 @@ def _process_data(df: pd.DataFrame, strict: bool) -> None:
             ),
         )
 
-        if strict:
-            insert(
-                "quality-parsed",
-                parse.parse_quality_cell(row["quality"]),
-            )
         insert("type-parsed", root_type.marcion())
         ep = parse.parse_english_cell(row["en"])
         insert("en-parsed", ep)
