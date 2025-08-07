@@ -463,8 +463,8 @@ def _parse_reference(line: str) -> abc.Generator[str]:
     assert match, line
     assert len(match.groups()) == 3, line
     line = match.group(1)
-    body = _convert_coptic_within_english(match.group(2))
-    note = _convert_coptic_within_english(match.group(3))
+    body = match.group(2)
+    note = match.group(3)
     parts = line.split(";")
     assert not (len(parts) % 5), parts
     for i in range(0, len(parts), 5):
