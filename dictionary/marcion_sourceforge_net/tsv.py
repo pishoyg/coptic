@@ -7,17 +7,19 @@ import pandas as pd
 from utils import file, log
 
 _SCRIPT_DIR = pathlib.Path(__file__).parent
-_WRD = _SCRIPT_DIR / "data" / "input" / "coptwrd.tsv"
-_DRV = _SCRIPT_DIR / "data" / "input" / "coptdrv.tsv"
+# WRD is the path to the local roots TSV.
+WRD: pathlib.Path = _SCRIPT_DIR / "data" / "input" / "coptwrd.tsv"
+# DRV is the path to the local derivations TSV.
+DRV: pathlib.Path = _SCRIPT_DIR / "data" / "input" / "coptdrv.tsv"
 # Each derivation row must contain the following cells.
-_DRV_ALL_COLS = ["key", "key_word", "key_deriv", "type", "pos"]
+_DRV_ALL_COLS: list[str] = ["key", "key_word", "key_deriv", "type", "pos"]
 # Each derivation row must contain at least of the following cell.s
-_DRV_ANY_COLS = ["word", "en"]
+_DRV_ANY_COLS: list[str] = ["word", "en"]
 
-_WRD_SORT_COLS = ["key"]
-_DRV_SORT_COLS = ["key_word", "pos"]
+_WRD_SORT_COLS: list[str] = ["key"]
+_DRV_SORT_COLS: list[str] = ["key_word", "pos"]
 
-_KEY_WORD_COL = "key_word"
+_KEY_WORD_COL: str = "key_word"
 
 
 def is_sorted(tsv: pd.DataFrame, column_names: list[str]):
@@ -29,7 +31,7 @@ def is_sorted(tsv: pd.DataFrame, column_names: list[str]):
 
 
 def roots() -> pd.DataFrame:
-    tsv: pd.DataFrame = file.read_tsv(_WRD)
+    tsv: pd.DataFrame = file.read_tsv(WRD)
     log.assass(
         is_sorted(tsv, _WRD_SORT_COLS),
         "Roots",
@@ -59,7 +61,7 @@ def _valid_drv_row(row: pd.Series) -> bool:
 
 
 def derivations() -> pd.DataFrame:
-    tsv = file.read_tsv(_DRV)
+    tsv = file.read_tsv(DRV)
 
     # Validate empty rows are inserted.
     prev_key_word = ""
