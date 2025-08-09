@@ -171,7 +171,7 @@ def _parse_spellings_and_types(
         use_coptic_symbol,
     )
 
-    _analyze_no_english(constants.ENGLISH_WITHIN_COPTIC_RE.sub("", line))
+    _validate_morphemes(constants.ENGLISH_WITHIN_COPTIC_RE.sub("", line))
 
     if detach_types:
         cur, line = _pick_up_detached_types(line, constants.DETACHED_TYPES_1)
@@ -208,10 +208,10 @@ def _parse_spellings_and_types(
     return spellings, types
 
 
-def _analyze_no_english(line_no_english: str) -> None:
+def _validate_morphemes(line_no_english: str) -> None:
+    # For the sake of rigor, investigate the content of the no-English subset.
     # NOTE: The body of this method is largely similar to
     # _parse_spellings_and_types.
-    # For the sake of rigor, investigate the content of the no-English subset.
     _, line_no_english = _pick_up_detached_types(
         line_no_english,
         constants.DETACHED_TYPES_1,
@@ -229,15 +229,29 @@ def _analyze_no_english(line_no_english: str) -> None:
         "(?)",
         "",
     )  # TODO: (#338) Ugly! :/
-    spellings = constants.COMMA_NOT_BETWEEN_PARENTHESES_RE.split(
+
+    # Our use of the terms ‘lexeme’ and ‘morpheme’ in this context is likely
+    # inaccurate.
+    lexemes = constants.COMMA_NOT_BETWEEN_PARENTHESES_RE.split(
         line_no_english,
     )
+
+    morphemes: list[str] = sum([lex.split() for lex in lexemes], [])
+
+    def attest(s: str) -> str:
+        # Remove surrounding parentheses if present.
+        if not s:
+            return s
+        if s[0] == "(" and s[-1] == ")":
+            return s[1:-1]
+        return s
+
+    # Get rid of the parentheses marking unattested forms, as they aren't
+    # matched by our regex.
+    morphemes = list(map(attest, morphemes))
     assert all(
-        constants.PURE_COPTIC_RE.match(c)
-        or c in constants.ACCEPTED_UNKNOWN_CHARS_2
-        for s in spellings
-        for c in s
-    )
+        constants.MORPHEME_RE.fullmatch(m) for m in morphemes
+    ), morphemes
 
 
 def _pick_up_detached_types(

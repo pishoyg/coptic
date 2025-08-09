@@ -262,18 +262,29 @@ DETACHED_TYPES_2: list[tuple[str, lexical.Type]] = [
     ),
 ]
 
-# The no-English, no-type, spelling-split, no-"probably" version of the above.
-# . signifies an abbreviation.
-# ― means "same as above".
-# () represent optional letters.
-# - represents the prenominal form.
-# ⸗ represents the pronominal form.
-# † represents the qualitative form.
-#   can be used inside a word.
-# [] are sometimes used in place of (). Rare, and should be fixable at the
-#    source.
-# , occurred only once, should be fixable at the source.
-ACCEPTED_UNKNOWN_CHARS_2: str = ".()-⸗†― [],"
+# What characters are allowed to be present in a Coptic morpheme?
+# - In Crum's dictionary, an em dash (—) means ‘same as the above’. This occurs
+#   on its own.
+# - Some morphemes represent suffixes, in which case the morpheme starts with a
+#   hyphen. Example: -ⲡⲉ.
+# - A word consists of Coptic letters. These occur in three ranges in the
+#   Unicode:
+#   1. ⲁ-ⲱ
+#   2. ϣ-ϯ
+#   3. ⳉ
+# - Parentheses mark optional letters. Example: ⲟⲩⲁ(ⲉ)ⲓⲛⲉ (Akhmimic for light)
+#   indicates that the ⲉ is sometimes omitted.
+# - Parentheses also mark assumed (unattested) spellings, in which case they
+#   wrap the whole morpheme. (As of today, this case isn't represented in the
+#   regex below.)
+# - A period indicates an abbreviation. This usually occur at the end.
+# - Special verbal forms end with markers:
+#   - A hyphen marks a prenominal form. Example: ⲁⲓ-.
+#   - A double oblique hyphen marks pronominal forms. Example: ⲁⲓ⸗.
+#   - The upper dagger marks a qualitative (stative) form. Example: ⲟⲓ†.
+MORPHEME_RE: re.Pattern[str] = re.compile(
+    r"―|-[Ⲁ-ⲱϢ-ϯⳈⳉ]+|[Ⲁ-ⲱϢ-ϯⳈⳉ()]+\.?[-⸗†]?",
+)
 
 # The following is used to parse the English meaning column.
 ENGLISH_PROCESSING: list[tuple[re.Pattern[str] | str, str]] = [
