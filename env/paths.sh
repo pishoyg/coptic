@@ -3,12 +3,10 @@
 export SITE_DIR="docs/"
 
 export DOMAIN="remnqymi.com"
-export PORT="8000"
-
+export EMAIL="remnqymi@gmail.com"
 export GITHUB="https://github.com/pishoyg/coptic"
 
 CRUM="https://${DOMAIN}/crum"
-LOC_CRUM="http://localhost:${PORT}/crum"
 
 # crum opens a Crum page on ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ.
 crum () {
@@ -19,6 +17,10 @@ crum () {
     open "${CRUM}/${KEY}.html"
   done
 }
+
+# PORT is used by the local server.
+export PORT="8000"
+LOC_CRUM="http://localhost:${PORT}/crum"
 
 # loc opens a Crum page on the local server.
 loc () {

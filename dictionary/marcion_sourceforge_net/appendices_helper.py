@@ -19,13 +19,7 @@ import gspread
 import pandas as pd
 
 from dictionary.marcion_sourceforge_net import tsv
-from utils import gcloud, log, sane, text
-
-CRUM_FMT = "https://remnqymi.com/crum/{key}.html"
-GSPREAD_URL: str = (
-    # pylint: disable-next=line-too-long
-    "https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg"
-)
+from utils import gcloud, log, paths, sane, text
 
 KEY_COL: str = "key"
 SISTERS_COL: str = "sisters"
@@ -776,7 +770,7 @@ class Runner:
                 # This type is of little interest at the moment.
                 continue
             cats: list[str] = []
-            _ = subprocess.run(["open", CRUM_FMT.format(key=key)], check=True)
+            _ = subprocess.run(["open", paths.crum(key)], check=True)
             while True:
                 cats = text.ssplit(
                     input(f"Key = {key}. Categories (empty to skip): "),

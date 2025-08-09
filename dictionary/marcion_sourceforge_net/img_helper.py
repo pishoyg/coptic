@@ -17,7 +17,7 @@ import requests
 from PIL import Image
 
 from dictionary.marcion_sourceforge_net import tsv
-from utils import file, log, sane, semver, text
+from utils import file, log, paths, sane, semver, text
 
 # TODO: (#5) Prevent users from updating an image without updating its source.
 # Somehow!
@@ -39,9 +39,6 @@ IMG_300_DIR = "docs/crum/explanatory/"
 FILE_NAME_RE = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
 STEM_RE = re.compile("[0-9]+-[0-9]+-[0-9]+")
 NAME_RE = re.compile("[A-Z][a-zA-Z ]*")
-
-DOMAIN = "remnqymi.com"
-CRUM = f"{DOMAIN}/crum"
 
 KEY_COL: str = "key"
 SENSES_COL: str = "senses"
@@ -121,8 +118,8 @@ QUERIERS_FMT: dict[str, list[str]] = {
 }
 
 WIKI_HEADERS = {
-    "Api-User-Agent": "Coptic/1.0 (https://remnqymi.com; remnqymi@gmail.com)",
-    "User-Agent": "Coptic/1.0 (https://remnqymi.com; remnqymi@gmail.com)",
+    "Api-User-Agent": f"Coptic/1.0 ({paths.URL}; {paths.EMAIL})",
+    "User-Agent": f"Coptic/1.0 ({paths.URL}; {paths.EMAIL})",
 }
 
 argparser = argparse.ArgumentParser(
@@ -262,10 +259,6 @@ _ = argparser.add_argument(
     help="If given, plot a YES or NO for whether each included picture has an"
     " image.",
 )
-
-
-def link(key: str) -> str:
-    return f"https://{CRUM}/{key}.html"
 
 
 def get_max_idx(g: list[str], key: str, sense: str) -> int:
@@ -639,7 +632,7 @@ class Prompter:
         print()
         log.info("Data:")
         log.info("- Key:", self.key)
-        log.info("- Link:", link(self.row[KEY_COL]))
+        log.info("- Link:", paths.crum(self.row[KEY_COL]))
         log.info("- Existing:")
         _pretty(existing(self.key))
         log.info("- Downloads:")
@@ -785,7 +778,7 @@ class Prompter:
             print(self.key, message + colorama.Fore.RESET)
             return True
 
-        os_open(*existing(self.key), link(self.row[KEY_COL]))
+        os_open(*existing(self.key), paths.crum(self.row[KEY_COL]))
 
         while True:
             try:
@@ -849,7 +842,7 @@ class Prompter:
             for key in params:
                 self.key = key
                 self.row = self.key_to_row[self.key]
-                os_open(*existing(self.key), link(self.row[KEY_COL]))
+                os_open(*existing(self.key), paths.crum(self.row[KEY_COL]))
             return True
 
         if command == "convert":
