@@ -32,7 +32,7 @@ DAWOUD_DIR = "../dawoud/"  # Relative to the HTML write directory.
 SCAN_DIR = "crum/"  # Relative to the HTML write directory.
 EXPLANATORY_DIR = "explanatory/"  # Relative to the HTML write directory.
 
-DESCRIPTION = f"https://${paths.DOMAIN}"
+DESCRIPTION = f"https://{paths.DOMAIN}"
 KELLIA_PREFIX = "https://coptic-dictionary.org/entry.cgi?tla="
 DAWOUD_SURNAME = "Dawoud"
 
