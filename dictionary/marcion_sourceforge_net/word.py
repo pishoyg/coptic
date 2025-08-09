@@ -136,15 +136,6 @@ class Word:
         if spelling == "ⲧⲣⲉ- (ⲉⲧⲣⲉ-, ⲡⲧⲣⲉ-)":
             return [spelling]
 
-        # A special case! Crum slipped in "(ⲉⲓⲛⲉ)" in order to make us aware
-        # that is what the "ⲛ" means ("ⲛ" in this case is the prenominal form
-        # of "ⲉⲓⲛⲉ"). Normalization therefore happens by simply removing the
-        # interjection.
-        # TODO: (#338) Surface for visibility! This shouldn't be buried so deep
-        # in the code.
-        if spelling == "ⲛ (ⲉⲓⲛⲉ) ⲣ.":
-            return ["ⲛ ⲣ."]
-
         cnt_l, cnt_r = spelling.count("("), spelling.count(")")
         assert cnt_l == cnt_r
         if not cnt_l:
