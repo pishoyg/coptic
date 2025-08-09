@@ -63,7 +63,6 @@ plot: FORCE
 ########## SERVER ##########
 server: FORCE
 	# Start a server for the local copy of the website.
-	PORT="8000"; \
 	echo -e "$${BLUE}Serving at $${GREEN}http://localhost:$${PORT}/$${BLUE}.$${RESET}"; \
 	python -m http.server "$${PORT}" --bind "127.0.0.1" --directory "$${SITE_DIR}"
 

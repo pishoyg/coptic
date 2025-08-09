@@ -3,13 +3,30 @@
 export SITE_DIR="docs/"
 
 export DOMAIN="remnqymi.com"
+export PORT="8000"
 
 export GITHUB="https://github.com/pishoyg/coptic"
 
+CRUM="https://${DOMAIN}/crum"
+LOC_CRUM="http://localhost:${PORT}/crum"
+
 # crum opens a Crum page on ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ.
 crum () {
+  if [ $# -eq 0 ]; then
+    open "${CRUM}"
+  fi
   for KEY in "${@}"; do
-    open "https://${DOMAIN}/crum/${KEY}.html"
+    open "${CRUM}/${KEY}.html"
+  done
+}
+
+# loc opens a Crum page on the local server.
+loc () {
+  if [ $# = 0 ]; then
+    open "${LOC_CRUM}"
+  fi
+  for KEY in "${@}"; do
+    open "${LOC_CRUM}/${KEY}.html"
   done
 }
 
@@ -23,7 +40,7 @@ dawoud () {
 # See https://cli.github.com/.
 
 # issues opens issue pages in GitHub.
-issues () {
+issue () {
   for ISSUE in "${@}"; do
     open "${GITHUB}/issues/${ISSUE}"
   done
@@ -35,8 +52,8 @@ github () {
 }
 
 # commits opens the commits in GitHub.
-commits () {
-  for ISSUE in "${@}"; do
-    open "${GITHUB}/commit/$(git rev-parse "${ISSUE}")"
+commit () {
+  for COMMIT in "${@}"; do
+    open "${GITHUB}/commit/$(git rev-parse "${COMMIT}")"
   done
 }
