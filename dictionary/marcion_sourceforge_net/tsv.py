@@ -7,7 +7,7 @@ import pandas as pd
 
 from utils import file, gcloud, log
 
-GSPREAD_URL: str = (
+_GSPREAD_URL: str = (
     # pylint: disable-next=line-too-long
     "https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg"
 )
@@ -31,7 +31,7 @@ _bracket_map: dict[str, str] = {")": "(", "]": "[", "}": "{", ">": "<"}
 _opening_brackets: set[str] = set(_bracket_map.values())
 
 
-def are_brackets_balanced(s: str) -> bool:
+def _are_brackets_balanced(s: str) -> bool:
     stack = []
     for char in s:
         if char in _opening_brackets:
@@ -48,7 +48,7 @@ def _verify_balanced_brackets(df: pd.DataFrame) -> None:
     for r, row in df.iterrows():
         for c, value in row.items():
             log.ass(
-                are_brackets_balanced(value),
+                _are_brackets_balanced(value),
                 "row",
                 r,
                 "column",
@@ -58,7 +58,7 @@ def _verify_balanced_brackets(df: pd.DataFrame) -> None:
             )
 
 
-def is_sorted(tsv: pd.DataFrame, column_names: list[str]):
+def _is_sorted(tsv: pd.DataFrame, column_names: list[str]):
     def as_int(row: pd.Series):
         return tuple(int(row[col]) for col in column_names)
 
@@ -70,7 +70,7 @@ def roots() -> pd.DataFrame:
     tsv: pd.DataFrame = file.read_tsv(WRD)
     _verify_balanced_brackets(tsv)
     log.assass(
-        is_sorted(tsv, _WRD_SORT_COLS),
+        _is_sorted(tsv, _WRD_SORT_COLS),
         "Roots",
         "TSV is not sorted by",
         _WRD_SORT_COLS,
@@ -122,7 +122,7 @@ def derivations() -> pd.DataFrame:
 
     # Validate sorting.
     log.assass(
-        is_sorted(tsv, _DRV_SORT_COLS),
+        _is_sorted(tsv, _DRV_SORT_COLS),
         "Derivations",
         "TSV is not sorted by",
         _DRV_SORT_COLS,
@@ -132,8 +132,8 @@ def derivations() -> pd.DataFrame:
 
 
 def roots_sheet() -> gspread.worksheet.Worksheet:
-    return gcloud.read_gspread(GSPREAD_URL, worksheet=0)
+    return gcloud.read_gspread(_GSPREAD_URL, worksheet=0)
 
 
 def derivations_sheet() -> gspread.worksheet.Worksheet:
-    return gcloud.read_gspread(GSPREAD_URL, worksheet=1)
+    return gcloud.read_gspread(_GSPREAD_URL, worksheet=1)

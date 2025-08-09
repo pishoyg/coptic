@@ -19,13 +19,13 @@ from utils import concur, file, log, page, paths
 # Input parameters
 
 _SCRIPT_DIR = pathlib.Path(__file__).parent
-JSON: str = str(_SCRIPT_DIR / "data/input/bible.json")
-INPUT_DIR: str = str(_SCRIPT_DIR / "data/raw/")
+_JSON: str = str(_SCRIPT_DIR / "data/input/bible.json")
+_INPUT_DIR: str = str(_SCRIPT_DIR / "data/raw/")
 # TODO: (#432) Include the sources in the output.
-SOURCES_DIR: str = str(_SCRIPT_DIR / "data/raw/Sources/")
-COVER: str = str(_SCRIPT_DIR / "data/img/stauros.jpeg")
+_SOURCES_DIR: str = str(_SCRIPT_DIR / "data/raw/Sources/")
+_COVER: str = str(_SCRIPT_DIR / "data/img/stauros.jpeg")
 
-LANGUAGES: list[str] = [
+_LANGUAGES: list[str] = [
     "Bohairic",
     "Sahidic",
     "English",
@@ -38,30 +38,30 @@ LANGUAGES: list[str] = [
     "Lycopolitan",
 ]
 
-VERSE_PREFIX: re.Pattern = re.compile(r"^\(([^)]+)\)")
+_VERSE_PREFIX: re.Pattern[str] = re.compile(r"^\(([^)]+)\)")
 
 # Output parameters
 
-OUTPUT_DIR: str = os.path.join(paths.SITE_DIR, "bible/")
+_OUTPUT_DIR: str = os.path.join(paths.SITE_DIR, "bible/")
 
 # NOTE: The Bible directory structure is flat, so "index.html" is reachable
 # from an `href` to `./`, regardless of which file you're looking at.
-SEARCH = "./"
+_SEARCH = "./"
 # NOTE: We expect this JavaScript file to be in the same directory as the HTML.
-SCRIPT = "main.js"
+_SCRIPT = "main.js"
 
-INDEX = "index.html"
-CHAPTER_CLASS = "BIBLE"
-INDEX_CLASS = "BIBLE_INDEX"
+_INDEX = "index.html"
+_CHAPTER_CLASS = "BIBLE"
+_INDEX_CLASS = "BIBLE_INDEX"
 
-BOOK_TITLE: str = "ⲡⲓϪⲱⲙ ⲉⲑⲞⲩⲁⲃ | Coptic Bible"
-AUTHOR = "Saint Shenouda The Archimandrite Coptic Society"
-LANG = "cop"
+_BOOK_TITLE: str = "ⲡⲓϪⲱⲙ ⲉⲑⲞⲩⲁⲃ | Coptic Bible"
+_AUTHOR = "Saint Shenouda The Archimandrite Coptic Society"
+_LANG = "cop"
 
 
 # The Jinkim is represented by the Combining Overline, not the Combining
 # Conjoining Msacron.
-NORMALIZATION: dict[str, dict[str, str]] = {
+_NORMALIZATION: dict[str, dict[str, str]] = {
     "Bohairic": {
         chr(0xFE26): chr(  # Combining Conjoining Macron
             0x0305,
@@ -69,12 +69,12 @@ NORMALIZATION: dict[str, dict[str, str]] = {
     },
 }
 
-assert all(d in LANGUAGES for d in NORMALIZATION)
+assert all(d in _LANGUAGES for d in _NORMALIZATION)
 
 
-def normalize(lang: str, text: str) -> str:
-    assert lang in LANGUAGES
-    substitutions: dict[str, str] = NORMALIZATION.get(lang, {})
+def _normalize(lang: str, text: str) -> str:
+    assert lang in _LANGUAGES
+    substitutions: dict[str, str] = _NORMALIZATION.get(lang, {})
     if not substitutions:
         return text
     for key, value in substitutions.items():
@@ -82,7 +82,7 @@ def normalize(lang: str, text: str) -> str:
     return text
 
 
-def json_loads(t: str) -> dict | list:
+def _json_loads(t: str) -> dict | list:
     try:
         return json.loads(t)
     except json.JSONDecodeError:
@@ -133,12 +133,12 @@ class Verse:
         # NOTE: Normalization must take place after recoloring, because
         # recoloring uses the original text.
         self.recolored: dict[str, str] = {
-            lang: normalize(lang, self.__recolor(data[lang], data))
-            for lang in LANGUAGES
+            lang: _normalize(lang, self.__recolor(data[lang], data))
+            for lang in _LANGUAGES
         }
         self.unnumbered: dict[str, str] = {
-            lang: normalize(lang, VERSE_PREFIX.sub("", data[lang]).strip())
-            for lang in LANGUAGES
+            lang: _normalize(lang, _VERSE_PREFIX.sub("", data[lang]).strip())
+            for lang in _LANGUAGES
         }
 
     def has_lang(self, lang: str) -> bool:
@@ -180,7 +180,7 @@ class Verse:
 
     def __num(self, verse: dict[str, str]) -> str:
         t: str = verse["English"] or verse["Greek"]
-        s: re.Match | None = VERSE_PREFIX.search(t)
+        s: re.Match | None = _VERSE_PREFIX.search(t)
         return s.groups()[0] if s else ""
 
     def __compare_range_color(self, rc: ColorRange) -> tuple[int, int]:
@@ -339,11 +339,11 @@ class Book(Item):
     def load(self, book_name: str) -> list:
         try:
             t: str = open(
-                os.path.join(INPUT_DIR, book_name + ".json"),
+                os.path.join(_INPUT_DIR, book_name + ".json"),
                 encoding="utf-8",
             ).read()
             log.info("Loaded book:", book_name)
-            data = json_loads(t)
+            data = _json_loads(t)
             assert isinstance(data, list)
             return data
         except FileNotFoundError:
@@ -407,7 +407,7 @@ class Bible:
             cur = nxt
 
     def __iter_books(self) -> abc.Generator[dict]:
-        with open(JSON, encoding="utf-8") as j:
+        with open(_JSON, encoding="utf-8") as j:
             bible = json.loads(j.read())
             testament_idx = 0
             for testament_name, testament in bible.items():
@@ -513,10 +513,10 @@ class HTMLBuilder:
             page.html_head(
                 title=title,
                 page_class=page_class,
-                search="" if is_epub else SEARCH,
+                search="" if is_epub else _SEARCH,
                 next_href=nxt,
                 prev_href=prv,
-                scripts=[] if is_epub else [SCRIPT],
+                scripts=[] if is_epub else [_SCRIPT],
                 epub=is_epub,
             ),
             *body,
@@ -531,7 +531,7 @@ class HTMLBuilder:
     ) -> abc.Generator[str]:
         # Yield the title.
         yield "<h1>"
-        yield BOOK_TITLE
+        yield _BOOK_TITLE
         yield "</h1>"
         if is_epub:
             # For EPUB, we yield an anchor to each book, and we call it a day.
@@ -556,7 +556,7 @@ class HTMLBuilder:
     def write_html(self, bible: Bible, langs: list[str], subdir: str) -> None:
         # NOTE: We assume that the JavaScript file exists. We don't generate it
         # or copy it.
-        assert os.path.isfile(os.path.join(OUTPUT_DIR, subdir, SCRIPT))
+        assert os.path.isfile(os.path.join(_OUTPUT_DIR, subdir, _SCRIPT))
 
         def write_chapter(chapter: Chapter) -> None:
             self.__write_html_chapter(chapter, langs, subdir)
@@ -566,10 +566,10 @@ class HTMLBuilder:
 
         toc = self.__html_aux(
             self.__toc_body_aux(bible, is_epub=False),
-            title=BOOK_TITLE,
-            page_class=INDEX_CLASS,
+            title=_BOOK_TITLE,
+            page_class=_INDEX_CLASS,
         )
-        index_path: str = os.path.join(OUTPUT_DIR, subdir, INDEX)
+        index_path: str = os.path.join(_OUTPUT_DIR, subdir, _INDEX)
         file.writelines(toc, index_path)
 
     def __write_html_chapter(
@@ -585,12 +585,12 @@ class HTMLBuilder:
         out = self.__html_aux(
             self.__chapter_body_aux(chapter, langs),
             title=chapter.book.name,
-            page_class=CHAPTER_CLASS,
+            page_class=_CHAPTER_CLASS,
             nxt=nxt.href(is_epub=False) if nxt else "",
             prv=prv.href(is_epub=False) if prv else "",
         )
         path: str = os.path.join(
-            OUTPUT_DIR,
+            _OUTPUT_DIR,
             subdir,
             chapter.path(is_epub=False),
         )
@@ -600,12 +600,12 @@ class HTMLBuilder:
         kindle: epub.EpubBook = epub.EpubBook()
         identifier: str = " ".join(langs)
         kindle.set_identifier(identifier)
-        kindle.set_language(LANG)
-        kindle.set_title(BOOK_TITLE)
-        kindle.add_author(AUTHOR)
-        cover_file_name: str = os.path.basename(COVER)
+        kindle.set_language(_LANG)
+        kindle.set_title(_BOOK_TITLE)
+        kindle.add_author(_AUTHOR)
+        cover_file_name: str = os.path.basename(_COVER)
         cover: epub.EpubCover = epub.EpubCover(file_name=cover_file_name)
-        with open(COVER, "rb") as f:
+        with open(_COVER, "rb") as f:
             cover.content = f.read()
         kindle.add_item(cover)
         kindle.add_item(epub.EpubCoverHtml(image_name=cover_file_name))
@@ -624,7 +624,7 @@ class HTMLBuilder:
             "".join(
                 self.__html_aux(
                     self.__toc_body_aux(bible, is_epub=True),
-                    title=BOOK_TITLE,
+                    title=_BOOK_TITLE,
                     is_epub=True,
                 ),
             ),
@@ -655,7 +655,7 @@ class HTMLBuilder:
         kindle.add_item(epub.EpubNav())
 
         path: str = os.path.join(
-            OUTPUT_DIR,
+            _OUTPUT_DIR,
             "epub",
             subdir,
             f"{identifier.lower()}.epub",
@@ -709,7 +709,7 @@ def main():
     ] = [
         (flow_builder, "epub", bible, ["Bohairic", "English"], "1"),
         (table_builder, "epub", bible, ["Bohairic", "English"], "2"),
-        (table_builder, "html", bible, LANGUAGES, ""),
+        (table_builder, "html", bible, _LANGUAGES, ""),
     ]
 
     with concur.thread_pool_executor() as executor:

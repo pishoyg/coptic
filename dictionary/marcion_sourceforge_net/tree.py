@@ -7,8 +7,8 @@ import pandas as pd
 
 from dictionary.marcion_sourceforge_net import constants, parse
 
-NUM_COLS = 10
-assert not 100 % NUM_COLS
+_NUM_COLS = 10
+assert not 100 % _NUM_COLS
 
 
 class Node:
@@ -135,12 +135,12 @@ class Node:
         descendants = self.descendants()
         if not descendants:
             return
-        crum_row_spans = build_crum_row_spans(descendants)
+        crum_row_spans = _build_crum_row_spans(descendants)
 
         yield '<table class="derivations" id="derivations">'
         yield "<colgroup>"
-        for _ in range(NUM_COLS):
-            yield f'<col style="width: {100/NUM_COLS}%;">'
+        for _ in range(_NUM_COLS):
+            yield f'<col style="width: {100/_NUM_COLS}%;">'
         yield "</colgroup>"
 
         for d, crum_row_span in zip(descendants, crum_row_spans):
@@ -156,11 +156,11 @@ class Node:
             typ = d.cell("type")
             meaning = d.cell("en-parsed")
             key = d.cell("key")
-            word_width = int((NUM_COLS - depth) / 2) if word else 0
+            word_width = int((_NUM_COLS - depth) / 2) if word else 0
             # We keep the meaning column regardless of whether a meaning is
             # actually present. However, if the whole table is to be generated
             # without a meaning, we remove it.
-            meaning_width = NUM_COLS - word_width - depth - 1
+            meaning_width = _NUM_COLS - word_width - depth - 1
             if not explain and typ != "HEADER":
                 # Skip the English.
                 meaning_width = 0
@@ -261,7 +261,7 @@ def depths(derivations: pd.DataFrame) -> list[int]:
     return deps
 
 
-def build_crum_row_spans(nodes: list[Node]) -> list[tuple[str, int]]:
+def _build_crum_row_spans(nodes: list[Node]) -> list[tuple[str, int]]:
     crum_column = [d.row()["crum"] for d in nodes]
     out = []
     for group in itertools.groupby(crum_column):

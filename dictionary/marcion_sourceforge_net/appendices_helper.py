@@ -21,21 +21,21 @@ import pandas as pd
 from dictionary.marcion_sourceforge_net import tsv
 from utils import gcloud, log, paths, sane, text
 
-KEY_COL: str = "key"
-SISTERS_COL: str = "sisters"
-ANTONYMS_COL: str = "antonyms"
-HOMONYMS_COL: str = "homonyms"
-GREEK_SISTERS_COL: str = "greek-sisters"
-TYPE_COL: str = "type"
+_KEY_COL: str = "key"
+_SISTERS_COL: str = "sisters"
+_ANTONYMS_COL: str = "antonyms"
+_HOMONYMS_COL: str = "homonyms"
+_GREEK_SISTERS_COL: str = "greek-sisters"
+_TYPE_COL: str = "type"
 
-SENSES_COL: str = "senses"
+_SENSES_COL: str = "senses"
 
-CATEGORIES_COL: str = "categories"
+_CATEGORIES_COL: str = "categories"
 
-TEXT_FRAG_PREFIX: str = ":~:text="
+_TEXT_FRAG_PREFIX: str = ":~:text="
 
-SENSE_SEP: str = "; "  # Sense separator.
-CAT_SEP: str = ", "  # Category separator.
+_SISTER_SEP: str = "; "  # Sister separator.
+_CAT_SEP: str = ", "  # Category separator.
 
 # The list of word categories is likely to evolve as we work on categorizing
 # more and more words.
@@ -51,7 +51,7 @@ CAT_SEP: str = ", "  # Category separator.
 # Perhaps wrap categories in <span class="category"> tags, which can then be
 # picked up by your JavaScript and have hyperlinks added to them.
 # pylint: disable=line-too-long
-KNOWN_CATEGORIES: dict[str, str] = (
+_KNOWN_CATEGORIES: dict[str, str] = (
     {
         # Biology
         "species": "Includes not only species but also genera, families, orders, and overlaps of such populations and ranks.",
@@ -100,13 +100,13 @@ KNOWN_CATEGORIES: dict[str, str] = (
 )
 # pylint: enable=line-too-long
 
-argparser: argparse.ArgumentParser = argparse.ArgumentParser(
+_argparser: argparse.ArgumentParser = argparse.ArgumentParser(
     description="Find and process appendices.",
     formatter_class=argparse.RawTextHelpFormatter,
     exit_on_error=False,
 )
 
-_ = argparser.add_argument(
+_ = _argparser.add_argument(
     "-v",
     "--validate",
     action="store_true",
@@ -114,7 +114,7 @@ _ = argparser.add_argument(
     help="Validate the appendices.",
 )
 
-_ = argparser.add_argument(
+_ = _argparser.add_argument(
     "-c",
     "--cat",
     type=str,
@@ -125,7 +125,7 @@ _ = argparser.add_argument(
     "\nthe given categories.",
 )
 
-_ = argparser.add_argument(
+_ = _argparser.add_argument(
     "-k",
     "--keys",
     type=str,
@@ -139,7 +139,7 @@ _ = argparser.add_argument(
     " --override_cat.",
 )
 
-_ = argparser.add_argument(
+_ = _argparser.add_argument(
     "-r",
     "--override_cat",
     action="store_true",
@@ -148,7 +148,7 @@ _ = argparser.add_argument(
     "we will delete the existing categories before replacing them.",
 )
 
-_ = argparser.add_argument(
+_ = _argparser.add_argument(
     "-s",
     "--sisters",
     type=str,
@@ -176,7 +176,7 @@ _ = argparser.add_argument(
     "\n${KEY_3} and ${KEY_4} as antonyms of one another.",
 )
 
-_ = argparser.add_argument(
+_ = _argparser.add_argument(
     "-a",
     "--antonyms",
     type=str,
@@ -186,7 +186,7 @@ _ = argparser.add_argument(
     " See --sisters for usage.",
 )
 
-_ = argparser.add_argument(
+_ = _argparser.add_argument(
     "-o",
     "--homonyms",
     type=str,
@@ -196,7 +196,7 @@ _ = argparser.add_argument(
     " This flag can only be used alone.",
 )
 
-_ = argparser.add_argument(
+_ = _argparser.add_argument(
     "-d",
     "--delete_empty_fragment",
     action="store_true",
@@ -209,7 +209,7 @@ _ = argparser.add_argument(
     " fragment if requested.",
 )
 
-_ = argparser.add_argument(
+_ = _argparser.add_argument(
     "-p",
     "--cat_prompt",
     action="store_true",
@@ -217,7 +217,7 @@ _ = argparser.add_argument(
     help="Prompt for manually entering categories.",
 )
 
-_ = argparser.add_argument(
+_ = _argparser.add_argument(
     "-f",
     "--first",
     type=int,
@@ -226,19 +226,19 @@ _ = argparser.add_argument(
 )
 
 
-def csplit(cell: str) -> list[str]:
-    return text.ssplit(cell, CAT_SEP.strip())
+def _csplit(cell: str) -> list[str]:
+    return text.ssplit(cell, _CAT_SEP.strip())
 
 
-def ssplit(cell: str) -> list[str]:
-    return text.ssplit(cell, SENSE_SEP.strip())
+def _ssplit(cell: str) -> list[str]:
+    return text.ssplit(cell, _SISTER_SEP.strip())
 
 
-def stringify(row: dict) -> dict[str, str]:
+def _stringify(row: dict) -> dict[str, str]:
     return {key: str(value) for key, value in row.items()}
 
 
-class Person:
+class _Person:
     """A member of a house."""
 
     def __init__(self, raw: str) -> None:
@@ -257,7 +257,7 @@ class Person:
         return " ".join(filter(None, [self.key, self.fragment]))
 
 
-class House:
+class _House:
     """A house represents a branch of the family."""
 
     delete_empty_fragment: bool = False
@@ -269,17 +269,17 @@ class House:
         # has new joiners, they won't show here.
         self.ancestors_raw: str = cell
         # member is the current list of house members.
-        self.members: list[Person] = [Person(raw) for raw in ssplit(cell)]
+        self.members: list[_Person] = [_Person(raw) for raw in _ssplit(cell)]
         # ancestors_formatted is a formatted representation of the list of the
         # original members.
         self.ancestors_formatted: str = self.string()
 
     def string(self) -> str:
-        return SENSE_SEP.join(m.string() for m in self.members)
+        return _SISTER_SEP.join(m.string() for m in self.members)
 
-    def has(self, p: Person | str) -> bool:
+    def has(self, p: _Person | str) -> bool:
         key: str = ""
-        if isinstance(p, Person):
+        if isinstance(p, _Person):
             key = p.key
         else:
             assert isinstance(p, str)
@@ -289,8 +289,8 @@ class House:
 
     def marry(
         self,
-        spouses: list[Person],
-    ) -> tuple[list[Person], list[Person]]:
+        spouses: list[_Person],
+    ) -> tuple[list[_Person], list[_Person]]:
         """Marry the given spouses into your house.
 
         Args:
@@ -310,7 +310,7 @@ class House:
                 # in their contact books.
                 continue
             # Check if the spouse is already a member.
-            existing_member: Person | None = next(
+            existing_member: _Person | None = next(
                 (m for m in self.members if m.key == spouse.key),
                 None,
             )
@@ -321,7 +321,7 @@ class House:
                 continue
             # Update the fragment if it has changed.
             if existing_member.fragment != spouse.fragment:
-                if not spouse.fragment and not House.delete_empty_fragment:
+                if not spouse.fragment and not _House.delete_empty_fragment:
                     # The new spouse doesn't have a fragment. We still retain
                     # this member's fragment! It's likely that the deletion is
                     # not intended.
@@ -332,17 +332,20 @@ class House:
         return added, updated
 
 
-class Family:
+class _Family:
     """A family is made up of several houses, currently four."""
 
     def __init__(self, row: pd.Series | dict[str, str]) -> None:
-        self.key: str = row[KEY_COL]
-        self.sisters: House = House(row[KEY_COL], row[SISTERS_COL])
-        self.antonyms: House = House(row[KEY_COL], row[ANTONYMS_COL])
-        self.homonyms: House = House(row[KEY_COL], row[HOMONYMS_COL])
-        self.greek_sisters: House = House(row[KEY_COL], row[GREEK_SISTERS_COL])
+        self.key: str = row[_KEY_COL]
+        self.sisters: _House = _House(row[_KEY_COL], row[_SISTERS_COL])
+        self.antonyms: _House = _House(row[_KEY_COL], row[_ANTONYMS_COL])
+        self.homonyms: _House = _House(row[_KEY_COL], row[_HOMONYMS_COL])
+        self.greek_sisters: _House = _House(
+            row[_KEY_COL],
+            row[_GREEK_SISTERS_COL],
+        )
 
-    def all_except_you(self) -> list[Person]:
+    def all_except_you(self) -> list[_Person]:
         return sum(
             [
                 house.members
@@ -356,7 +359,7 @@ class Family:
             [],
         )
 
-    def natives_except_you(self) -> list[Person]:
+    def natives_except_you(self) -> list[_Person]:
         return sum(
             [
                 house.members
@@ -421,7 +424,7 @@ class Family:
         )
 
 
-class Validator:
+class _Validator:
     """Validator validates data."""
 
     def __init__(self) -> None:
@@ -465,51 +468,56 @@ class Validator:
             log.throw(key, "has a gap in the senses!")
 
     def validate_sisters(self, df: pd.DataFrame) -> None:
-        key_to_family: dict[str, Family] = {
-            row[KEY_COL]: Family(row) for _, row in df.iterrows()
+        key_to_family: dict[str, _Family] = {
+            row[_KEY_COL]: _Family(row) for _, row in df.iterrows()
         }
         for fam in key_to_family.values():
             fam.validate(key_to_family)
 
     def validate_categories(self, key: str, raw_categories: str) -> None:
-        categories = csplit(raw_categories)
+        categories = _csplit(raw_categories)
         for cat in categories:
-            if cat not in KNOWN_CATEGORIES:
+            if cat not in _KNOWN_CATEGORIES:
                 log.throw(key, "has an unknown category:", cat)
 
     def validate(self, df: pd.DataFrame) -> None:
         for _, row in df.iterrows():
-            key: str = row[KEY_COL]
-            self.validate_senses(key, row[SENSES_COL])
-            self.validate_categories(key, row[CATEGORIES_COL])
+            key: str = row[_KEY_COL]
+            self.validate_senses(key, row[_SENSES_COL])
+            self.validate_categories(key, row[_CATEGORIES_COL])
         self.validate_sisters(df)
 
 
-class Matriarch:
+class _Matriarch:
     """Matriarch controls family relations."""
 
     def __init__(self) -> None:
         # Worksheet 0 has the roots.
         self.sheet: gspread.worksheet.Worksheet = tsv.roots_sheet()
         self.keys: set[str] = {
-            str(record[KEY_COL]) for record in self.sheet.get_all_records()
+            str(record[_KEY_COL]) for record in self.sheet.get_all_records()
         }
 
         self.col_idx: dict[str, int] = {
-            SISTERS_COL: gcloud.get_column_index(self.sheet, SISTERS_COL),
-            ANTONYMS_COL: gcloud.get_column_index(self.sheet, ANTONYMS_COL),
-            HOMONYMS_COL: gcloud.get_column_index(self.sheet, HOMONYMS_COL),
-            GREEK_SISTERS_COL: gcloud.get_column_index(
+            _SISTERS_COL: gcloud.get_column_index(self.sheet, _SISTERS_COL),
+            _ANTONYMS_COL: gcloud.get_column_index(self.sheet, _ANTONYMS_COL),
+            _HOMONYMS_COL: gcloud.get_column_index(self.sheet, _HOMONYMS_COL),
+            _GREEK_SISTERS_COL: gcloud.get_column_index(
                 self.sheet,
-                GREEK_SISTERS_COL,
+                _GREEK_SISTERS_COL,
             ),
-            CATEGORIES_COL: gcloud.get_column_index(
+            _CATEGORIES_COL: gcloud.get_column_index(
                 self.sheet,
-                CATEGORIES_COL,
+                _CATEGORIES_COL,
             ),
         }
 
-    def marry_house(self, row: dict, col: str, spouses: list[Person]) -> House:
+    def marry_house(
+        self,
+        row: dict,
+        col: str,
+        spouses: list[_Person],
+    ) -> _House:
         """Marry the given spouses to the given house.
 
         Args:
@@ -521,17 +529,20 @@ class Matriarch:
         Returns:
             New house.
         """
-        house: House = House(row[KEY_COL], row[col])
+        house: _House = _House(row[_KEY_COL], row[col])
         added, updated = house.marry(spouses)
         if added or updated:
             args: list[str] = []
             if added:
                 args.extend(
-                    ["Adding", SENSE_SEP.join(m.string() for m in added)],
+                    ["Adding", _SISTER_SEP.join(m.string() for m in added)],
                 )
             if updated:
                 args.extend(
-                    ["Updating", SENSE_SEP.join(m.string() for m in updated)],
+                    [
+                        "Updating",
+                        _SISTER_SEP.join(m.string() for m in updated),
+                    ],
                 )
             args.extend(["in", house.key, "/", col])
             log.info(*args)
@@ -546,9 +557,9 @@ class Matriarch:
 
     def marry_family(
         self,
-        sisters: list[Person] | None = None,
-        antonyms: list[Person] | None = None,
-        homonyms: list[Person] | None = None,
+        sisters: list[_Person] | None = None,
+        antonyms: list[_Person] | None = None,
+        homonyms: list[_Person] | None = None,
     ) -> None:
         sisters = sisters or []
         antonyms = antonyms or []
@@ -556,20 +567,20 @@ class Matriarch:
         assert bool(homonyms) != bool(sisters or antonyms)
         assert not antonyms or sisters
 
-        def has(members: list[Person], key: str) -> bool:
+        def has(members: list[_Person], key: str) -> bool:
             return any(m.key == key for m in members)
 
         # Googls Sheets uses 1-based indexing.
         # We also add 1 to account for the header row.
         all_records: list[dict] = self.sheet.get_all_records()
-        all_records = list(map(stringify, all_records))
-        key_to_family: dict[str, Family] = {
-            row[KEY_COL]: Family(row) for row in all_records
+        all_records = list(map(_stringify, all_records))
+        key_to_family: dict[str, _Family] = {
+            row[_KEY_COL]: _Family(row) for row in all_records
         }
         row_idx: int = 1
         for row in all_records:
             row_idx += 1
-            key: str = row[KEY_COL]
+            key: str = row[_KEY_COL]
             s, a, h = [], [], []
             if has(sisters, key):
                 assert not has(antonyms, key)
@@ -580,16 +591,16 @@ class Matriarch:
             elif has(homonyms, key):
                 h = homonyms
 
-            houses: dict[str, House] = {
-                SISTERS_COL: self.marry_house(row, SISTERS_COL, s),
-                ANTONYMS_COL: self.marry_house(row, ANTONYMS_COL, a),
-                HOMONYMS_COL: self.marry_house(row, HOMONYMS_COL, h),
+            houses: dict[str, _House] = {
+                _SISTERS_COL: self.marry_house(row, _SISTERS_COL, s),
+                _ANTONYMS_COL: self.marry_house(row, _ANTONYMS_COL, a),
+                _HOMONYMS_COL: self.marry_house(row, _HOMONYMS_COL, h),
             }
             # Validate the proposed marriages.
-            Family(
+            _Family(
                 {
-                    KEY_COL: key,
-                    GREEK_SISTERS_COL: str(row[GREEK_SISTERS_COL]),
+                    _KEY_COL: key,
+                    _GREEK_SISTERS_COL: str(row[_GREEK_SISTERS_COL]),
                 }
                 | {col: huis.string() for col, huis in houses.items()},
             ).validate(key_to_family, symmetry=False)
@@ -603,7 +614,7 @@ class Matriarch:
 class Runner:
     """Program runner."""
 
-    mother: Matriarch | None = None
+    mother: _Matriarch | None = None
 
     def preprocess_args(self, args: list[str] | None = None) -> bool:
         """
@@ -614,16 +625,16 @@ class Runner:
             A boolean indicating whether any *action* arguments have been
             provided. *Option* argument don't affect this return value.
         """
-        self.args: argparse.Namespace = argparser.parse_args(args)
-        House.delete_empty_fragment = self.args.delete_empty_fragment
+        self.args: argparse.Namespace = _argparser.parse_args(args)
+        _House.delete_empty_fragment = self.args.delete_empty_fragment
 
         self.args.cat = sorted(self.args.cat)
         sane.verify_unique(self.args.cat, "Duplicate categories!")
         for c in self.args.cat:
-            if c not in KNOWN_CATEGORIES:
+            if c not in _KNOWN_CATEGORIES:
                 log.throw(c, "is not a known category!")
 
-        def url_to_person(url_or_raw: str) -> Person:
+        def url_to_person(url_or_raw: str) -> _Person:
             """Convert a URL to a person initializer.
 
             Args:
@@ -644,7 +655,7 @@ class Runner:
             url_or_raw = url_or_raw.replace("\\", "")
             if not url_or_raw.startswith("http"):
                 # This is not a URL, this is already a key.
-                return Person(url_or_raw)
+                return _Person(url_or_raw)
             url: str = url_or_raw
             del url_or_raw
             url = urllib.parse.unquote(url)
@@ -655,15 +666,15 @@ class Runner:
             del basename
             assert key.isdigit()
             raw: str = ""
-            if parsed.fragment.startswith(TEXT_FRAG_PREFIX):
-                raw = key + " " + parsed.fragment[len(TEXT_FRAG_PREFIX) :]
+            if parsed.fragment.startswith(_TEXT_FRAG_PREFIX):
+                raw = key + " " + parsed.fragment[len(_TEXT_FRAG_PREFIX) :]
             elif parsed.fragment:
                 # This is not a text fragment, but a regular fragment.
                 raw = f"{key} #{parsed.fragment}"
             else:
                 # No fragment!
                 raw = key
-            return Person(raw)
+            return _Person(raw)
 
         self.args.sisters = list(map(url_to_person, self.args.sisters))
         self.args.antonyms = list(map(url_to_person, self.args.antonyms))
@@ -702,7 +713,7 @@ class Runner:
         return bool(num_actions)
 
     def validate(self) -> None:
-        validatoor: Validator = Validator()
+        validatoor: _Validator = _Validator()
         # TODO: (#0) As of now, only roots have appendices (sisters, categories,
         # ...). This may expand to derivations in the future, in which case they
         # should also be validated.
@@ -713,27 +724,27 @@ class Runner:
         assert self.mother
         if not self.args.keys:
             for row in self.mother.sheet.get_all_records():
-                cat = row[CATEGORIES_COL]
+                cat = row[_CATEGORIES_COL]
                 assert isinstance(cat, str)
                 if any(c in self.args.cat for c in text.ssplit(cat)):
-                    print(row[KEY_COL])
+                    print(row[_KEY_COL])
             return
         for key in self.args.keys:
             assert key in self.mother.keys
         row_idx = 1
-        col_idx = self.mother.col_idx[CATEGORIES_COL]
+        col_idx = self.mother.col_idx[_CATEGORIES_COL]
         for record in self.mother.sheet.get_all_records():
             row_idx += 1
-            key = str(record[KEY_COL])
+            key = str(record[_KEY_COL])
             if key not in self.args.keys:
                 continue
             if self.args.override_cat:
-                new_cat = CAT_SEP.join(self.args.cat)
+                new_cat = _CAT_SEP.join(self.args.cat)
             else:
                 current_cats = set(
-                    csplit(str(record[CATEGORIES_COL])),
+                    _csplit(str(record[_CATEGORIES_COL])),
                 )
-                new_cat = CAT_SEP.join(
+                new_cat = _CAT_SEP.join(
                     sorted(current_cats | set(self.args.cat)),
                 )
             log.info("Updating categories of", key, "to", new_cat)
@@ -743,16 +754,16 @@ class Runner:
         self.init()
         assert self.mother
         row_idx = 1
-        col_idx = self.mother.col_idx[CATEGORIES_COL]
+        col_idx = self.mother.col_idx[_CATEGORIES_COL]
         for record in self.mother.sheet.get_all_records():
             row_idx += 1
-            key = int(record[KEY_COL])
+            key = int(record[_KEY_COL])
             if key < self.args.first:
                 continue
-            if record[CATEGORIES_COL]:
+            if record[_CATEGORIES_COL]:
                 # This record already has a category.
                 continue
-            if record[TYPE_COL] in {
+            if record[_TYPE_COL] in {
                 "-",
                 "adjective",
                 "conjunction",
@@ -775,7 +786,7 @@ class Runner:
                 cats = text.ssplit(
                     input(f"Key = {key}. Categories (empty to skip): "),
                 )
-                unknown = [c for c in cats if c not in KNOWN_CATEGORIES]
+                unknown = [c for c in cats if c not in _KNOWN_CATEGORIES]
                 if unknown:
                     log.error("Unknown categories:", unknown)
                     continue
@@ -783,7 +794,7 @@ class Runner:
             if not cats:
                 # The user didn't input anything!
                 continue
-            new_cat = CAT_SEP.join(cats)
+            new_cat = _CAT_SEP.join(cats)
             log.info("Updating categories to", new_cat)
             threading.Thread(
                 target=self.mother.sheet.update_cell,
@@ -820,7 +831,7 @@ class Runner:
         if self.mother:
             return
         log.info("Initializing...")
-        self.mother = Matriarch()
+        self.mother = _Matriarch()
 
     def run(self) -> None:
         oneoff: bool = self.preprocess_args()

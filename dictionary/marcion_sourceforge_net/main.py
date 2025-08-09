@@ -157,6 +157,7 @@ img.validate()
 # users querying the image directory directly.
 
 # Process roots.
+# TODO: (#448) Stop exporting roots and derivations objects.
 roots: pd.DataFrame = tsv.roots()
 _process_data(roots, strict=True)
 
