@@ -202,8 +202,7 @@ def _parse_spellings_and_types(
     spellings: list[str] = constants.COMMA_NOT_BETWEEN_PARENTHESES_RE.split(
         line,
     )
-    # TODO: (#0) Ideally, you should never strip the text.
-    spellings = list(filter(None, map(str.strip, spellings)))
+    spellings = list(map(str.strip, spellings))
 
     return spellings, types
 
