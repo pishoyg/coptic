@@ -91,32 +91,8 @@ if [ -n "${DIFF}" ]; then
   exit 1
 fi
 
-# NOTE: This function, for some reason, is unable to find the last (rightmost)
-# in the sheet, so we added a dummy EMPTY column to make it work for the last
-# column as well!
-col_num() {
-  local -r FILE="${1}"
-  local -r TARGET="${2}"
-  local COL=1
-  for NAME in $(head "${FILE}" -n 1); do
-    if [ "${NAME}" == "${TARGET}" ]; then
-      echo "${COL}"
-      return
-    else
-      COL=$(( COL + 1 ))
-    fi
-  done
-  echo -e "${RED}Unable to find column ${PURPLE}${TARGET} in ${PURPLE}${FILE}${RED}!${RESET}"
-  exit 1
-}
-
 tsv_nonempty() {
-  local -r FILE="${1}"
-  local -r FIELD="$(col_num "${FILE}" "${2}")"
-  tail -n +2 \
-    "${FILE}" \
-    | cut --fields="${FIELD}" \
-    | grep '^[[:space:]]*$' --invert --extended-regexp
+  ./tsv_nonempty.py "$1" "$2"
 }
 
 LOC_ARCHIVE=0
