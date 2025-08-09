@@ -5,8 +5,7 @@ import re
 import typing
 from collections import abc
 
-from dictionary.marcion_sourceforge_net import constants
-from dictionary.marcion_sourceforge_net import word as lexical
+from dictionary.marcion_sourceforge_net import constants, lexical
 
 
 def _apply_substitutions(
@@ -44,18 +43,6 @@ def _munch(text: str, regex: re.Pattern[str]) -> tuple[str, str]:
     return text[:j], text[j:]
 
 
-def _chop(text: str, regex: re.Pattern[str]) -> tuple[str, str, str]:
-    # Extract a substring matching the given regex from the given text. Return
-    # all three parts.
-    # The substring does NOT have to be a prefix.
-    # Return all three parts.
-    s = regex.search(text)
-    if not s:
-        return text, "", ""
-    i, j = s.span()
-    return text[:i], text[i:j], text[j:]
-
-
 def parse_word_cell(
     entry: str,
     root_type: lexical.Type,
@@ -64,8 +51,8 @@ def parse_word_cell(
     use_coptic_symbol: bool,
     normalize_optional: bool,
     normalize_assumed: bool,
-) -> list[lexical.Word]:
-    words: list[lexical.Word] = list(
+) -> list[lexical.Line]:
+    lines: list[lexical.Line] = list(
         parse_word_cell_aux(
             entry,
             root_type,
@@ -77,10 +64,10 @@ def parse_word_cell(
         ),
     )
     # Any entry that has multiple lines must be dialected.
-    if len(words) > 1:
-        assert all(w.dialects for w in words)
+    if len(lines) > 1:
+        assert all(w.dialects for w in lines)
 
-    return words
+    return lines
 
 
 def parse_word_cell_aux(
@@ -91,7 +78,7 @@ def parse_word_cell_aux(
     use_coptic_symbol: bool,
     normalize_optional: bool,
     normalize_assumed: bool,
-) -> abc.Generator[lexical.Word]:
+) -> abc.Generator[lexical.Line]:
     if not entry:
         return
 
@@ -101,26 +88,26 @@ def parse_word_cell_aux(
     for line in lines:
         # Parse the dialects.
         d, line = _munch_dialects(line)
-        # Parse the spellings, types, and references.
-        s, t, r = _parse_spellings_types_and_references(
+        # Parse the forms, types, and references.
+        f, t, r = _parse_forms_types_and_references(
             line,
             detach_types,
             use_coptic_symbol,
         )
         # If this entry is undialected, try to infer the dialects from the
-        # spellings. We only do this for roots, but not derivations – hence the
+        # forms. We only do this for roots, but not derivations – hence the
         # check for `strict`.
         if not d and strict:
             # Undialected and Ⳉ, it's Akhmimic!
-            if all("ⳉ" in spelling for spelling in s):
+            if all("ⳉ" in form for form in f):
                 d = ["A"]
             # Undialected and ϧ, it's Bohairic!
-            if all("ϧ" in spelling for spelling in s):
+            if all("ϧ" in form for form in f):
                 d = ["B"]
 
-        yield lexical.Word(
+        yield lexical.Line(
             d,
-            s,
+            f,
             t,
             r,
             root_type,
@@ -129,7 +116,7 @@ def parse_word_cell_aux(
         )
 
 
-def _parse_spellings_types_and_references(
+def _parse_forms_types_and_references(
     line: str,
     detach_types: bool,
     use_coptic_symbol: bool,
@@ -138,30 +125,30 @@ def _parse_spellings_types_and_references(
     tt: list[lexical.Type] = []
     rr: list[str] = []
 
-    while line:
-        spelling_and_types, reference, line = _chop(
-            line,
-            constants.REFERENCE_RE,
-        )
-        if reference:
-            rr.extend(_parse_reference(reference))
-        if spelling_and_types:
-            s, t = _parse_spellings_and_types(
-                spelling_and_types,
-                detach_types,
-                use_coptic_symbol,
-            )
-            ss.extend(s)
-            tt.extend(t)
+    def sub_ref(match: re.Match[str]) -> str:
+        rr.extend(_parse_reference(match.group(0)))
+        return ""
+
+    forms: list[str] = constants.COMMA_NOT_BETWEEN_PARENTHESES_RE.split(line)
+    del line
+
+    f: str
+    t: list[lexical.Type]
+
+    for form in forms:
+        form = constants.REFERENCE_RE.sub(sub_ref, form)
+        f, t = _parse_form_and_types(form, detach_types, use_coptic_symbol)
+        ss.append(f)
+        tt.extend(t)
 
     return ss, tt, rr
 
 
-def _parse_spellings_and_types(
+def _parse_form_and_types(
     line: str,
     detach_types: bool,
     use_coptic_symbol: bool,
-) -> tuple[list[str], list[lexical.Type]]:
+) -> tuple[str, list[lexical.Type]]:
     # This makes the assumption that references have been removed.
     types: list[lexical.Type] = []
 
@@ -171,7 +158,7 @@ def _parse_spellings_and_types(
         use_coptic_symbol,
     )
 
-    _validate_morphemes(constants.ENGLISH_WITHIN_COPTIC_RE.sub("", line))
+    _validate_words(constants.ENGLISH_WITHIN_COPTIC_RE.sub("", line))
 
     if detach_types:
         cur, line = _pick_up_detached_types(line, constants.DETACHED_TYPES_1)
@@ -185,7 +172,7 @@ def _parse_spellings_and_types(
 
     line = _apply_substitutions(
         line,
-        constants.SPELLING_ANNOTATIONS,
+        constants.FORM_ANNOTATIONS,
         use_coptic_symbol,
     )
 
@@ -199,58 +186,35 @@ def _parse_spellings_and_types(
             use_coptic_symbol,
         )
 
-    spellings: list[str] = constants.COMMA_NOT_BETWEEN_PARENTHESES_RE.split(
-        line,
-    )
-    spellings = list(map(str.strip, spellings))
-
-    return spellings, types
+    return line.strip(), types
 
 
-def _validate_morphemes(line_no_english: str) -> None:
+def _remove_assumed_form_parentheses(f: str) -> str:
+    # Remove surrounding parentheses if present.
+    if not f:
+        return f
+    if f[0] == "(" and f[-1] == ")":
+        return f[1:-1]
+    return f
+
+
+def _validate_words(line: str) -> None:
     # For the sake of rigor, investigate the content of the no-English subset.
     # NOTE: The body of this method is largely similar to
-    # _parse_spellings_and_types.
-    _, line_no_english = _pick_up_detached_types(
-        line_no_english,
-        constants.DETACHED_TYPES_1,
-    )
-    line_no_english = _apply_substitutions(
-        line_no_english,
-        constants.SPELLING_ANNOTATIONS,
-        use_coptic_symbol=True,
-    )
-    _, line_no_english = _pick_up_detached_types(
-        line_no_english,
-        constants.DETACHED_TYPES_2,
-    )
-    line_no_english = line_no_english.replace(
-        "(?)",
-        "",
-    )  # TODO: (#338) Ugly! :/
+    # _parse_forms_and_types.
+    _, line = _pick_up_detached_types(line, constants.DETACHED_TYPES_1)
+    line = _apply_substitutions(line, constants.FORM_ANNOTATIONS)
+    _, line = _pick_up_detached_types(line, constants.DETACHED_TYPES_2)
+    line = line.replace("(?)", "")  # TODO: (#338) Ugly! :/
 
-    # Our use of the terms ‘lexeme’ and ‘morpheme’ in this context is likely
-    # inaccurate.
-    lexemes = constants.COMMA_NOT_BETWEEN_PARENTHESES_RE.split(
-        line_no_english,
-    )
-
-    morphemes: list[str] = sum([lex.split() for lex in lexemes], [])
-
-    def attest(s: str) -> str:
-        # Remove surrounding parentheses if present.
-        if not s:
-            return s
-        if s[0] == "(" and s[-1] == ")":
-            return s[1:-1]
-        return s
+    assert line
+    words: list[str] = line.split()
+    del line
 
     # Get rid of the parentheses marking unattested forms, as they aren't
     # matched by our regex.
-    morphemes = list(map(attest, morphemes))
-    assert all(
-        constants.MORPHEME_RE.fullmatch(m) for m in morphemes
-    ), morphemes
+    words = list(map(_remove_assumed_form_parentheses, words))
+    assert all(constants.WORD_RE.fullmatch(w) for w in words), words
 
 
 def _pick_up_detached_types(

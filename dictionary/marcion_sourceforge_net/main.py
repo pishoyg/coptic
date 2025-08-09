@@ -5,8 +5,7 @@ import pandas as pd
 from dictionary.marcion_sourceforge_net import appendices_helper as app
 from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import img_helper as img
-from dictionary.marcion_sourceforge_net import parse, tree, tsv
-from dictionary.marcion_sourceforge_net import word as lexical
+from dictionary.marcion_sourceforge_net import lexical, parse, tree, tsv
 
 _MIN_KEY: int = 1
 _MAX_KEY: int = 3385
@@ -42,7 +41,7 @@ class _Keyer:
         return str(prv)
 
 
-def _title(word: list[lexical.Word]) -> str:
+def _title(word: list[lexical.Line]) -> str:
     return ", ".join(
         w.string(
             include_dialects=False,
@@ -132,7 +131,7 @@ def _build_trees() -> None:
     roots["dialects"] = [", ".join(trees[key].dialects()) for key in keys]
 
 
-def _dialects(word: list[lexical.Word], is_root: bool) -> list[str]:
+def _dialects(word: list[lexical.Line], is_root: bool) -> list[str]:
     dialects: set[str] = set()
     for w in word:
         d = w.dialects()

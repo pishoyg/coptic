@@ -2,7 +2,7 @@
 
 import re
 
-from dictionary.marcion_sourceforge_net import word as lexical
+from dictionary.marcion_sourceforge_net import lexical
 from morphology import inflect
 
 # Dialects.
@@ -24,11 +24,7 @@ CRUM_LAST_PAGE_NUM: int = 953
 
 # Regular expressions used for parsing.
 DIALECTS_RE: re.Pattern[str] = re.compile(
-    r"\({d}(,{d})*\)".format(
-        d="({})".format(  # pylint: disable=consider-using-f-string
-            "|".join(DIALECTS),
-        ),
-    ),
+    r"\({d}(,{d})*\)".format(d=f"({"|".join(DIALECTS)})"),
 )
 
 ENGLISH_WITHIN_COPTIC_RE: re.Pattern[str] = re.compile(r"\{[^\{\}]+\}")
@@ -135,8 +131,8 @@ TYPES: list[lexical.Type] = [
 ]
 TYPE_ENCODING: dict[str, lexical.Type] = {t.marcion(): t for t in TYPES}
 
-# PREPROCESSING, SPELLING_ANNOTATIONS, and DETACHED_TYPES, and POSTPROCESSING
-# are essential for parsing the word column.
+# PREPROCESSING, FORM_ANNOTATIONS, and DETACHED_TYPES are essential for parsing
+# the word column.
 PREPROCESSING: list[tuple[str, str]] = [
     # NOTE: The two consecutive dots are used in the derivations table, to
     # separate between a prefix and the letter representing the start of the
@@ -151,7 +147,7 @@ PREPROCESSING: list[tuple[str, str]] = [
 
 DETACHED_TYPES_1: list[tuple[str, lexical.Type]] = [
     # TODO: (#115) The question mark is not a detached type, and it might be
-    # spelling-specific. Investigate.
+    # form-specific. Investigate.
     ("$$", lexical.Type("<i>(?)</i>", "(?)", "probably", None)),  # Probably.
     (
         "***$",
@@ -199,7 +195,7 @@ DETACHED_TYPES_1: list[tuple[str, lexical.Type]] = [
             inflect.Type.NOUN_UNKNOWN_GENDER,
         ),
     ),  # (ⲟⲩ)
-    # TODO: (#115) The following types likely apply to the subset of spellings
+    # TODO: (#115) The following types likely apply to the subset of forms
     # occurring after the type, not the whole line.
     (
         "****",
@@ -242,8 +238,8 @@ DETACHED_TYPES_1: list[tuple[str, lexical.Type]] = [
             None,
         ),
     ),
-    # TODO: (#115) {nic} is definitely spelling-specific! Its presence here
-    # means it's currently interpreted as applying to all spellings in a word!
+    # TODO: (#115) {nic} is definitely form-specific! Its presence here
+    # means it's currently interpreted as applying to all forms in a word!
     # Fix!
     (
         "{nic}",
@@ -251,8 +247,8 @@ DETACHED_TYPES_1: list[tuple[str, lexical.Type]] = [
     ),  # No idea!
 ]
 
-SPELLING_ANNOTATIONS: list[tuple[str, lexical.Type]] = [
-    ("^^", lexical.Type("―", "―", "same spelling as above.", None)),
+FORM_ANNOTATIONS: list[tuple[str, lexical.Type]] = [
+    ("^^", lexical.Type("―", "―", "same as above.", None)),
 ]
 
 DETACHED_TYPES_2: list[tuple[str, lexical.Type]] = [
@@ -274,7 +270,7 @@ DETACHED_TYPES_2: list[tuple[str, lexical.Type]] = [
 #   3. ⳉ
 # - Parentheses mark optional letters. Example: ⲟⲩⲁ(ⲉ)ⲓⲛⲉ (Akhmimic for light)
 #   indicates that the ⲉ is sometimes omitted.
-# - Parentheses also mark assumed (unattested) spellings, in which case they
+# - Parentheses also mark assumed (unattested) forms, in which case they
 #   wrap the whole morpheme. (As of today, this case isn't represented in the
 #   regex below.)
 # - A period indicates an abbreviation. This usually occur at the end.
@@ -282,7 +278,7 @@ DETACHED_TYPES_2: list[tuple[str, lexical.Type]] = [
 #   - A hyphen marks a prenominal form. Example: ⲁⲓ-.
 #   - A double oblique hyphen marks pronominal forms. Example: ⲁⲓ⸗.
 #   - The upper dagger marks a qualitative (stative) form. Example: ⲟⲓ†.
-MORPHEME_RE: re.Pattern[str] = re.compile(
+WORD_RE: re.Pattern[str] = re.compile(
     r"―|-[Ⲁ-ⲱϢ-ϯⳈⳉ]+|[Ⲁ-ⲱϢ-ϯⳈⳉ()]+\.?[-⸗†]?",
 )
 
