@@ -27,6 +27,36 @@ _DRV_SORT_COLS: list[str] = ["key_word"]
 
 _KEY_WORD_COL: str = "key_word"
 
+_bracket_map: dict[str, str] = {")": "(", "]": "[", "}": "{", ">": "<"}
+_opening_brackets: set[str] = set(_bracket_map.values())
+
+
+def are_brackets_balanced(s: str) -> bool:
+    stack = []
+    for char in s:
+        if char in _opening_brackets:
+            stack.append(char)
+            continue
+        if char in _bracket_map:
+            if not stack or _bracket_map[char] != stack.pop():
+                return False
+
+    return not stack
+
+
+def _verify_balanced_brackets(df: pd.DataFrame) -> None:
+    for r, row in df.iterrows():
+        for c, value in row.items():
+            log.ass(
+                are_brackets_balanced(value),
+                "row",
+                r,
+                "column",
+                c,
+                "has unbalanced brackets:",
+                value,
+            )
+
 
 def is_sorted(tsv: pd.DataFrame, column_names: list[str]):
     def as_int(row: pd.Series):
@@ -38,6 +68,7 @@ def is_sorted(tsv: pd.DataFrame, column_names: list[str]):
 
 def roots() -> pd.DataFrame:
     tsv: pd.DataFrame = file.read_tsv(WRD)
+    _verify_balanced_brackets(tsv)
     log.assass(
         is_sorted(tsv, _WRD_SORT_COLS),
         "Roots",
@@ -68,6 +99,7 @@ def _valid_drv_row(row: pd.Series) -> bool:
 
 def derivations() -> pd.DataFrame:
     tsv = file.read_tsv(DRV)
+    _verify_balanced_brackets(tsv)
 
     # Validate empty rows are inserted.
     prev_key_word = ""
