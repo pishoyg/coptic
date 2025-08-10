@@ -109,12 +109,10 @@ epub_publish: REQUIRE_DRIVE_DIR FORCE
 	"docs/bible/epub/2/bohairic english.epub" \
 	"$${DRIVE_DIR}/bohairic_english - desktop.epub"
 
-########## COPTICSITE ##########
-
 ########## CRUM ##########
 crum: FORCE
-	# Trigger the parser to validate it the Crum data.
-	./dictionary/marcion_sourceforge_net/main.py
+	# Generate the Crum lexicon artefacts.
+	./flashcards/main.py --crum
 
 # TODO: (#421) Delete this rule. We will no longer retain the original images,
 # and this won't be even possible.
@@ -122,6 +120,8 @@ crum_img: FORCE
 	# Reprocess Crum's images.
 	./dictionary/marcion_sourceforge_net/img_helper.py --batch
 
+# TODO: (#0) This rule is somewhat pointless.
+# We may also be able to visualize the presence of images through #488.
 crum_img_plot: FORCE
 	# Plot stats about image collection.
 	./dictionary/marcion_sourceforge_net/img_helper.py --plot | less -R
@@ -157,6 +157,10 @@ camera_images: FORCE
 		| while read -r GLOB; do ls $${GLOB} | xargs open; done
 
 ########## KELLIA ##########
+kellia: FORCE
+	# Generate the KELLIA lexicon artefacts.
+	./flashcards/main.py --kellia
+
 kellia_analysis: FORCE
 	# Generate an analysis of the structure of the TLA (KELLIA) dataset.
 	./dictionary/kellia_uni_goettingen_de/analysis.py
@@ -178,30 +182,15 @@ dawoud_sentinels: FORCE
 	curl -L "$${PUB}&gid=2057030060" > "$${DIR}/greek.tsv"; \
 	curl -L "$${PUB}&gid=1482232549" > "$${DIR}/arabic.tsv";
 
-########## LEXICON ##########
-flashcards_crum: FORCE
-	# Generate the Crum lexicon artefacts.
-	./flashcards/main.py --crum
-
-flashcards_kellia: FORCE
-	# Generate the KELLIA lexicon artefacts.
-	./flashcards/main.py --kellia
-
-flashcards_copticsite: FORCE
+########## COPTICSITE ##########
+copticsite: FORCE
 	# Generate the copticsite lexicon artefacts.
 	./flashcards/main.py --copticsite
 
-flashcards_anki: FORCE
+########## FLASHCARDS ##########
+anki: FORCE
 	# Generate the Anki package.
 	./flashcards/main.py --anki
-
-flashcards: FORCE
-	# Generate all Lexicon artefacts.
-	./flashcards/main.py \
-		--crum \
-		--kellia \
-		--copticsite \
-		--anki
 
 anki_publish: REQUIRE_DRIVE_DIR FORCE
 	# Publish the Anki package to Drive.
