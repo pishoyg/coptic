@@ -68,22 +68,30 @@ def to_tsv(
 
 def apply(
     worksheet: gspread.worksheet.Worksheet,
-    src: str,
+    src: list[str],
     dst: str,
-    f: typing.Callable[[str], str],
+    f: typing.Callable[..., str],
+    **args,
 ) -> None:
-    """Apply the given lambda to the src column, storing the result in dst.
+    """Apply the given function to the src columns, storing the result in dst.
+
+    For each row in the sheet, pass the data from the given list of columns to
+    the given function, storing the result in the destination column.
 
     Args:
         worksheet: Google sheet.
-        src: Name of the source column.
+        src: List of names of the source columns.
         dst: Name of the destination column.
-        f: Function to apply.
+        f: Function to apply to the data in the source columns.
+        args: optional keyword parameters to pass to worksheet.update.
+            See
+            https://docs.gspread.org/en/latest/api/models/worksheet.html#gspread.worksheet.Worksheet.update.
     """
     # For the purpose of writing everything on one column, we generate a list of
     # lists, where each sublist has a single item.
     values: list[list[str]] = [
-        [f(str(row[src]))] for row in worksheet.get_all_records()
+        [f(*map(str, map(row.get, src)))]
+        for row in worksheet.get_all_records()
     ]
     # Get the name of the destination column.
     col_idx: int = get_column_index(worksheet, dst)
@@ -95,4 +103,4 @@ def apply(
     # Calculate the range.
     range_name: str = f"{col}2:{col}{len(values)+1}"
     # Write the column.
-    _ = worksheet.update(values, range_name)
+    _ = worksheet.update(values, range_name, **args)
