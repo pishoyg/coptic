@@ -5,7 +5,7 @@ import pathlib
 import gspread
 import pandas as pd
 
-from utils import file, gcloud, log
+from utils import gcloud, log
 
 _GSPREAD_URL: str = (
     # pylint: disable-next=line-too-long
@@ -13,10 +13,6 @@ _GSPREAD_URL: str = (
 )
 
 _SCRIPT_DIR = pathlib.Path(__file__).parent
-# WRD is the path to the local roots TSV.
-WRD: pathlib.Path = _SCRIPT_DIR / "data" / "input" / "coptwrd.tsv"
-# DRV is the path to the local derivations TSV.
-DRV: pathlib.Path = _SCRIPT_DIR / "data" / "input" / "coptdrv.tsv"
 # Each derivation row must contain the following cells.
 _DRV_ALL_COLS: list[str] = ["key", "key_word", "key_deriv", "type"]
 # Each derivation row must contain at least of the following cell.s
@@ -66,8 +62,16 @@ def _is_sorted(tsv: pd.DataFrame, column_names: list[str]):
     return int_tuples == sorted(int_tuples)
 
 
+_roots_sheet = gcloud.read_gspread(_GSPREAD_URL, worksheet=0)
+
+
+def roots_sheet() -> gspread.worksheet.Worksheet:
+    return _roots_sheet
+
+
+# TODO: (#399) Abandon intermediate TSV.
 def roots() -> pd.DataFrame:
-    tsv: pd.DataFrame = file.read_tsv(WRD)
+    tsv: pd.DataFrame = gcloud.to_df(roots_sheet())
     _verify_balanced_brackets(tsv)
     log.assass(
         _is_sorted(tsv, _WRD_SORT_COLS),
@@ -97,8 +101,16 @@ def _valid_drv_row(row: pd.Series) -> bool:
     return True
 
 
+_derivations_sheet = gcloud.read_gspread(_GSPREAD_URL, worksheet=1)
+
+
+def derivations_sheet() -> gspread.worksheet.Worksheet:
+    return _derivations_sheet
+
+
+# TODO: (#399) Abandon intermediate TSV.
 def derivations() -> pd.DataFrame:
-    tsv = file.read_tsv(DRV)
+    tsv: pd.DataFrame = gcloud.to_df(derivations_sheet())
     _verify_balanced_brackets(tsv)
 
     # Validate empty rows are inserted.
@@ -129,11 +141,3 @@ def derivations() -> pd.DataFrame:
     )
 
     return tsv
-
-
-def roots_sheet() -> gspread.worksheet.Worksheet:
-    return gcloud.read_gspread(_GSPREAD_URL, worksheet=0)
-
-
-def derivations_sheet() -> gspread.worksheet.Worksheet:
-    return gcloud.read_gspread(_GSPREAD_URL, worksheet=1)

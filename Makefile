@@ -112,12 +112,8 @@ epub_publish: REQUIRE_DRIVE_DIR FORCE
 ########## COPTICSITE ##########
 
 ########## CRUM ##########
-# NOTE: We used to use curl to download a copy of the sheet from the web.
-# However, this format doesn't support newline characters inside cells, so we
-# use the GCP client to download the sheets instead.
 crum: FORCE
-	# Download a new version of Crum's data, and trigger the parser to validate it.
-	./dictionary/marcion_sourceforge_net/download.py
+	# Trigger the parser to validate it the Crum data.
 	./dictionary/marcion_sourceforge_net/main.py
 
 # TODO: (#421) Delete this rule. We will no longer retain the original images,

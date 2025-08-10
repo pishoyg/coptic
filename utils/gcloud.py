@@ -1,13 +1,12 @@
 """Google Cloud and Google Sheets helpers."""
 
-import pathlib
 import typing
 
 import gspread
 import pandas as pd
 from google.oauth2 import service_account
 
-from utils import file, log, paths
+from utils import log, paths
 
 _GSPREAD_SCOPE = [
     "https://spreadsheets.google.com/feeds",
@@ -56,14 +55,7 @@ def get_column_index(
 
 
 def to_df(worksheet: gspread.worksheet.Worksheet) -> pd.DataFrame:
-    return pd.DataFrame(worksheet.get_all_records())
-
-
-def to_tsv(
-    worksheet: gspread.worksheet.Worksheet,
-    path: str | pathlib.Path,
-) -> None:
-    file.to_tsv(to_df(worksheet), path)
+    return pd.DataFrame(worksheet.get_all_records()).astype(str)
 
 
 def apply(
