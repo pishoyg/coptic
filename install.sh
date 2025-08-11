@@ -74,7 +74,8 @@ _install() {
 
 _update() {
   # Update pip packages.
-  pip-review --local --auto
+  pip-compile --upgrade
+  pip-sync
 
   # Update pre-commit hooks.
   pre-commit autoupdate
