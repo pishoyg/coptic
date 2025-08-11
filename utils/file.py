@@ -57,6 +57,15 @@ def read(path: str) -> str:
         return f.read()
 
 
+def readlines(path: str) -> list[str]:
+    try:
+        with open(path, encoding="utf-8") as f:
+            return f.readlines()
+    except UnicodeDecodeError:
+        with open(path, encoding="utf-16") as f:
+            return f.readlines()
+
+
 def paths(dir_path: str) -> list[str]:
     return [os.path.join(dir_path, f) for f in os.listdir(dir_path)]
 

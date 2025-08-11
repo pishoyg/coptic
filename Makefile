@@ -47,18 +47,9 @@ test: FORCE
 	until git add --all && pre-commit run; do : ; done
 
 ########## STATS ##########
-report: FORCE
-	# Print statistics.
-	./stats.sh
 stats: FORCE
-	# Print statistics, saving them to the stats, and committing changes.
-	./stats.sh --commit
-stats_format: FORCE
-	# Reformat the stats file (useful if you recently added a column).
-	./stats.py --format
-plot: FORCE
-	# Plot stats.
-	./stats.py --plot
+	# Collect statistics, saving them to the stats file, and committing changes.
+	./stats.py --commit
 
 ########## SERVER ##########
 server: FORCE
