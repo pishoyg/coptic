@@ -26,7 +26,7 @@ repos:
 
   # Language-agnostic
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: trailing-whitespace
         exclude: .*\.(tsv|csv|xml|html|xhtml)$
@@ -81,7 +81,7 @@ repos:
         language: system
         pass_filenames: false
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v9.31.0
+    rev: v9.33.0
     hooks:
       - id: eslint
         additional_dependencies:
@@ -159,7 +159,7 @@ repos:
       - id: pyupgrade
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.12.3
+    rev: v0.12.8
     hooks:
       - id: ruff
         args: [--fix]
@@ -183,12 +183,12 @@ repos:
       - id: setup-cfg-fmt
 
   - repo: https://github.com/PyCQA/docformatter
-    rev: v1.7.7
+    rev: v1.7.8-rc1
     hooks:
       - id: docformatter
 
   - repo: https://github.com/pylint-dev/pylint
-    rev: v3.3.7
+    rev: v3.3.8
     hooks:
       - id: pylint
 
@@ -212,7 +212,7 @@ repos:
 
   # Language-agnostic
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: end-of-file-fixer
         exclude: .*\.css$
@@ -254,7 +254,7 @@ repos:
         # Other types of files are data files, not code files. We don't take
         # data updates lightly.
         exclude: ".*\\.(xml|html|xhtml|txt|tsv|csv|json|tab|msql|xsd)$|dictionary/kellia_uni_goettingen_de/main.py"
-        args: [-L, "afterAll"]
+        args: [-L, "afterAll,astroid"]
 
   # NOTE: This hook was problematic in the past. It was found to change code
   # variable names, assuming that they are typos!
@@ -275,18 +275,18 @@ repos:
 
   # Security
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.27.2
+    rev: v8.28.0
     hooks:
       - id: gitleaks
 
   - repo: https://github.com/trufflesecurity/truffleHog
-    rev: v3.89.2
+    rev: v3.90.3
     hooks:
       - id: trufflehog
 
   # Shell
   - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: v0.10.0.1
+    rev: v0.11.0.1
     hooks:
       - id: shellcheck
         args: [-x]
@@ -298,7 +298,7 @@ repos:
         args: [-i, E003]
 
   - repo: https://github.com/scop/pre-commit-shfmt
-    rev: v3.12.0-1
+    rev: v3.12.0-2
     hooks:
       - id: shfmt
         args: [-indent, '2']
@@ -329,7 +329,7 @@ repos:
 
   # Protobuf
   - repo: https://github.com/bufbuild/buf
-    rev: v1.55.1
+    rev: v1.56.0
     hooks:
       - id: buf-dep-prune
       - id: buf-dep-update
