@@ -122,6 +122,9 @@ def ass(cond: object, *args: object, level: bool = True):
         throw(*args, level=level)
 
 
+# TODO: (#0) `fatal` doesn't provide a stack trace! And it's somewhat pointless.
+# Let's use `throw`.
+# Same for `assess`! We can replace it with `ass`.
 def fatal(*args: object, level: bool = True):
     """Log an error and exit with a nonzero status.
 
@@ -139,7 +142,9 @@ def fatal(*args: object, level: bool = True):
 
 
 def assass(cond: object, *args: object, level: bool = True):
-    """Assassinate. If a condition is not met, exit with a nonzero status.
+    """Assassinate.
+
+    If a condition is not met, exit with a nonzero status.
 
     Args:
         cond: The condition to evaluate. If true, do nothing.

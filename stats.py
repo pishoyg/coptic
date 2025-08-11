@@ -6,16 +6,19 @@
 # should be deduplicated.
 
 import argparse
+import itertools
 import os
 import re
 import subprocess
 import time
+import typing
+from collections import abc
 
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from dictionary.marcion_sourceforge_net import tsv as crum
+from dictionary.marcion_sourceforge_net import tsv
 from utils import file, log, sane
 
 _ONE_DAY: int = 24 * 60 * 60
@@ -176,43 +179,134 @@ def _run(*command: str) -> str:
         raise e
 
 
-def _validate(df: pd.DataFrame) -> None:
-    available: set[str] = set(df.columns)
-    included: set[str] = set(
-        sum(
-            [
-                _PLOT_COLUMNS[key]
-                for key, _ in _PLOT_COLUMNS.items()
-                if key is not None
-            ],
-            [],
-        ),
-    )
-    excluded: set[str] = set(_PLOT_COLUMNS[None])
-    if available != (included | excluded):
-        log.fatal(
-            "Absent columns:",
-            available - (included | excluded),
-            "Extra columns",
-            (included | excluded) - available,
+class Stat:
+    """A single statistic."""
+
+    def __init__(
+        self,
+        name: str,
+        description: str,
+        val: int | str | typing.Callable[[], int | str],
+        minimum: int | None = None,
+        maximum: int | None = None,
+        broken: bool = False,
+    ) -> None:
+        self.name: str = name
+        self.description: str = description
+        self._val: int | str | typing.Callable[[], int | str] = val
+        self._min: int | None = minimum
+        self._max: int | None = maximum
+        self._broken: bool = broken
+
+    def val(self) -> int | str:
+        # Notice that we memorize the value once we've computed it once.
+        self._val = (
+            self._val if isinstance(self._val, int | str) else self._val()
         )
-    dupe = included & excluded
-    if dupe:
-        log.fatal(
-            "The following elements are marked as excluded although they are"
-            " used:",
-            dupe,
+        if isinstance(self._min, int):
+            self._val = int(self._val)
+            log.ass(
+                self._val >= self._min,
+                "value:",
+                self._val,
+                "minimum",
+                self._min,
+            )
+        if isinstance(self._max, int):
+            self._val = int(self._val)
+            log.ass(
+                self._val <= self._max,
+                "value:",
+                self._val,
+                "maximum",
+                self._max,
+            )
+        return self._val
+
+    def log(self, indent: bool = False) -> None:
+        if self._broken:
+            log.warn(
+                f"{"\t" if indent else ""}{self.description} (broken):",
+                self.val(),
+            )
+            return
+        log.info(f"{"\t" if indent else ""}{self.description}:", self.val())
+
+
+class FilesOfCode:
+    """A files-of-code statistic."""
+
+    def __init__(
+        self,
+        foc: list[str],
+        name: str,
+        description: str,
+        suffixes: list[str] | None = None,
+        prefixes: list[str] | None = None,
+        basenames: list[str] | None = None,
+        dirnames: list[str] | None = None,
+        broken: bool = False,
+    ) -> None:
+        self.name: str = name
+        self.description: str = description
+        self.files: list[str] = [
+            f
+            for f in foc
+            if any(map(f.endswith, suffixes or []))
+            or any(map(f.startswith, prefixes or []))
+            or os.path.basename(f) in (basenames or [])
+            or os.path.dirname(f) in (dirnames or [])
+        ]
+        self._broken: bool = broken
+
+    def foc_stat(self) -> Stat:
+        return Stat(
+            f"foc_{self.name}",
+            self.description,
+            len(self.files),
+            broken=self._broken,
         )
-    del dupe
-    for key, columns in _PLOT_COLUMNS.items():
-        if not columns:
-            log.fatal(key, "is empty!")
+
+    def loc_stat(self) -> Stat:
+        val: int = sum(len(file.readlines(path)) for path in self.files)
+        return Stat(
+            f"loc_{self.name}",
+            self.description,
+            val,
+            broken=self._broken,
+        )
+
+
+def _crum_stat(
+    sheet: list[dict[str, int | str | float]],
+    name: str,
+    field: str,
+    description: str,
+    regex: str | None,
+    minimum: int,
+    maximum: int,
+) -> Stat:
+    val: int
+    if regex:
+        pattern: re.Pattern[str] = re.compile(regex)
+        val = sum(len(pattern.findall(str(row[field]))) for row in sheet)
+    else:
+        val = sum(bool(row[field]) for row in sheet)
+
+    return Stat(f"crum_{name}", description, val, minimum, maximum)
 
 
 def _plot():
     # Read the TSV file.
     df = pd.read_csv(_TSV_FILE, sep="\t")
-    _validate(df)
+    # Perform basic validation on _PLOT_COLUMNS.
+    sane.verify_equal_sets(
+        df.columns,
+        itertools.chain(*_PLOT_COLUMNS.values()),
+        "Fields included and excluded from plotting don't add up!",
+    )
+    for key, columns in _PLOT_COLUMNS.items():
+        log.ass(columns, key, "is empty!")
 
     # Convert the Unix epoch timestamp to a datetime object.
     df["timestamp"] = pd.to_datetime(df["timestamp"], unit="s")
@@ -268,33 +362,10 @@ def _loc(paths: list[str]) -> int:
     return sum(len(file.readlines(path)) for path in paths)
 
 
-def _loc_prefix(foc: list[str], prefix: str) -> int:
-    prefix = _normalize(prefix)
-    foc = [f for f in foc if f.startswith(prefix)]
-    log.ass(foc, "No files of code start with the prefix", prefix)
-    return _loc(foc)
-
-
-def _sheet_nonempty(
-    sheet: list[dict[str, str | int | float]],
-    col: str,
-) -> int:
-    return sum(bool(row[col]) for row in sheet)
-
-
-def _sheet_sum_regex_matches(
-    sheet: list[dict[str, str | int | float]],
-    col: str,
-    regex: str,
-) -> int:
-    pattern: re.Pattern[str] = re.compile(regex)
-    return sum(len(pattern.findall(str(row[col]))) for row in sheet)
-
-
 def _report(commit: bool) -> None:
     if commit:
         log.assass(
-            not _run("git", "status", "--short"),
+            not _run("git status --short"),
             "The repo is dirty. Collecting stats should be done on a clean"
             + " worktree."
             + " Please stash your changes."
@@ -302,571 +373,445 @@ def _report(commit: bool) -> None:
             + " been pushed to the origin.",
         )
 
-    foc: list[str] = _run(
-        "source",
-        ".env",
-        "&&",
-        "findexx",
-        ".",
-        "-type",
-        "f",
-    ).splitlines()
-    foc = list(map(_normalize, foc))
-
-    foc_python = [f for f in foc if f.endswith(".py")]
-    foc_make = [f for f in foc if f == "Makefile"]
-    foc_css = [f for f in foc if f.endswith(".css")]
-    foc_sh = [f for f in foc if f.endswith(".sh") or f == ".env"]
-    foc_js = [f for f in foc if file.ext(f) in [".mjs"]]
-    foc_md = [f for f in foc if f.endswith(".md")]
-    foc_yaml = [
-        f for f in foc if f.endswith(".yaml") or f in [".yamlfmt", ".yamllint"]
-    ]
-    foc_toml = [f for f in foc if f.endswith(".toml")]
-    foc_dot = [
-        f
-        for f in foc
-        if f in [".gitignore", ".npmrc", "pylintrc", ".checkmake"]
-    ]
-    foc_keyboard_layout = [
-        f for f in foc if file.ext(f) in [".keylayout", ".plist", ".strings"]
-    ]
-    foc_txt = [f for f in foc if file.ext(f) in [".txt", ".in"]]
-    foc_ts = [f for f in foc if f.endswith(".ts")]
-    foc_json = [f for f in foc if f.endswith(".json")]
-    foc_html = [f for f in foc if f.endswith(".html")]
-
+    df: pd.DataFrame = file.read_tsv(_TSV_FILE)
+    record: dict[str, str | int] = {s.name: s.val() for s in _report_aux()}
     sane.verify_equal_sets(
-        foc,
-        (
-            foc_python
-            + foc_make
-            + foc_css
-            + foc_sh
-            + foc_js
-            + foc_md
-            + foc_yaml
-            + foc_toml
-            + foc_dot
-            + foc_keyboard_layout
-            + foc_txt
-            + foc_ts
-            + foc_json
-            + foc_html
-        ),
-        "The total doesn't equal the some of the parts!",
-    )
-
-    log.info("Number of files of code:", len(foc))
-    log.info("Python", len(foc_python))
-    log.info("Makefile", len(foc_make))
-    log.info("CSS", len(foc_css))
-    log.info("Shell", len(foc_sh))
-    log.info("JavaScript", len(foc_js))
-    log.info("Markdown", len(foc_md))
-    log.info("YAML", len(foc_yaml))
-    log.info("TOML", len(foc_toml))
-    log.info("Dotfiles", len(foc_dot))
-    log.info("Keyboard Layout", len(foc_keyboard_layout))
-    log.info("Text", len(foc_txt))
-    log.info("TypeScript", len(foc_ts))
-    log.info("JSON", len(foc_json))
-    log.info("HTML", len(foc_html))
-
-    loc_python = _loc(foc_python)
-    loc_make = _loc(foc_make)
-    loc_css = _loc(foc_css)
-    loc_sh = _loc(foc_sh)
-    loc_js = _loc(foc_js)
-    loc_md = _loc(foc_md)
-    loc_yaml = _loc(foc_yaml)
-    loc_toml = _loc(foc_toml)
-    loc_dot = _loc(foc_dot)
-    loc_keyboard_layout = _loc(foc_keyboard_layout)
-    loc_txt = _loc(foc_txt)
-    loc_ts = _loc(foc_ts)
-    loc_json = _loc(foc_json)
-    loc_html = _loc(foc_html)
-
-    loc: int = (
-        loc_python
-        + loc_make
-        + loc_css
-        + loc_sh
-        + loc_js
-        + loc_md
-        + loc_yaml
-        + loc_toml
-        + loc_dot
-        + loc_keyboard_layout
-        + loc_txt
-        + loc_ts
-        + loc_json
-        + loc_html
-    )
-    assert loc == _loc(foc)
-
-    log.info("Number of lines of code:", loc)
-    log.info("Python", loc_python)
-    log.info("Makefile", loc_make)
-    log.info("CSS", loc_css)
-    log.info("Shell", loc_sh)
-    log.info("JavaScript", loc_js)
-    log.info("Markdown", loc_md)
-    log.info("YAML", loc_yaml)
-    log.info("TOML", loc_toml)
-    log.info("Dotfiles", loc_dot)
-    log.info("Keyboard Layout", loc_keyboard_layout)
-    log.info("Text", loc_txt)
-    log.info("TypeScript", loc_ts)
-    log.info("JSON", loc_json)
-    log.info("HTML", loc_html)
-
-    loc_archive: int = (
-        0  # We're currently unable to track archived code files.
-    )
-    loc_inc_archive: int = loc + loc_archive
-    loc_crum: int = _loc_prefix(foc, "dictionary/marcion_sourceforge_net/")
-    loc_andreas: int = _loc_prefix(foc, "dictionary/stmacariusmonastery_org/")
-    loc_copticsite: int = _loc_prefix(foc, "dictionary/copticsite_com/")
-    loc_kellia: int = _loc_prefix(foc, "dictionary/kellia_uni_goettingen_de/")
-    loc_dawoud: int = 0  # Component files have been deleted.
-    loc_bible: int = _loc_prefix(foc, "bible/")
-    loc_flashcards: int = _loc_prefix(foc, "flashcards/")
-    loc_grammar: int = 0  # The component is inactive.
-    loc_keyboard: int = _loc_prefix(foc, "keyboard/")
-    loc_morphology: int = _loc_prefix(foc, "morphology/")
-    loc_site: int = _loc_prefix(foc, "docs/")
-    loc_shared = _loc([f for f in foc if not os.path.dirname(f)]) + sum(
-        _loc_prefix(foc, prefix)
-        for prefix in [
-            "env/",
-            "xooxle/",
-            "utils/",
-            "pre-commit/",
-            "test/",
-        ]
-    )
-
-    # Verify the count.
-    loc_sum: int = (
-        loc_crum
-        + loc_andreas
-        + loc_copticsite
-        + loc_kellia
-        + loc_dawoud
-        + loc_bible
-        + loc_flashcards
-        + loc_grammar
-        + loc_keyboard
-        + loc_morphology
-        + loc_site
-        + loc_shared
-    )
-    log.assass(
-        loc == loc_sum,
-        "The total doesn't equal the sum of the parts!",
-        "Number of lines of code:",
-        loc,
-        "Broken by project:",
-        loc_sum,
-    )
-    del loc_sum
-
-    log.info("Number of lines of code:", loc)
-    log.info("Crum:", loc_crum)
-    log.info("Andreas:", loc_andreas)
-    log.info("copticsite:", loc_copticsite)
-    log.info("KELLIA:", loc_kellia)
-    log.info("Dawoud:", loc_dawoud)
-    log.info("Bible:", loc_bible)
-    log.info("Flashcards:", loc_flashcards)
-    log.info("Grammar:", loc_grammar)
-    log.info("Keyboard:", loc_keyboard)
-    log.info("Morphology:", loc_morphology)
-    log.info("Site:", loc_site)
-    log.info("Shared:", loc_shared)
-    log.warn("Archive (broken):", loc_archive)
-    log.warn("Total including archive (broken):", loc_inc_archive)
-
-    crum_roots: list[dict[str, str | int | float]] = (
-        crum.roots_sheet().get_all_records()
-    )
-    disk_usage: int = int(
-        _run(
-            "du",
-            "--apparent-size",
-            "--summarize",
-            ".",
-        ).split(
-            "\t",
-        )[0],
-    )
-    disk_usage_human: str = _run(
-        "du",
-        "--apparent-size",
-        "--human-readable",
-        "--summarize",
-        ".",
-    ).split("\t")[0]
-    log.info("Desk usage:", disk_usage_human)
-    log.assass(
-        disk_usage >= 6291456 and disk_usage <= 88000000,
-        disk_usage,
-        "looks suspicious!",
-    )
-    crum_img: int = len(
-        {
-            basename.split("-")[0]
-            for basename in os.listdir(
-                "dictionary/marcion_sourceforge_net/data/img/",
-            )
-        },
-    )
-    log.info("Number of words possessing at least one image:", crum_img)
-    log.assass(
-        crum_img >= 700 and crum_img <= 3357,
-        crum_img,
-        "looks suspicious!",
-    )
-
-    crum_img_sum: int = len(
-        os.listdir("dictionary/marcion_sourceforge_net/data/img/"),
-    )
-    log.info("Total number of images:", crum_img_sum)
-    log.assass(
-        crum_img_sum >= 1200 and crum_img_sum <= 33570,
-        crum_img_sum,
-        "looks suspicious!",
-    )
-
-    crum_dawoud: int = _sheet_nonempty(crum_roots, "dawoud-pages")
-    log.info(
-        "Number of words that have at least one page from Dawoud:",
-        crum_dawoud,
-    )
-    log.assass(
-        crum_dawoud >= 2600 and crum_dawoud <= 3357,
-        crum_dawoud,
-        "looks suspicious!",
-    )
-
-    crum_dawoud_sum: int = _sheet_sum_regex_matches(
-        crum_roots,
-        "dawoud-pages",
-        r"[0-9]+",
-    )
-    log.info("Number of Dawoud pages added:", crum_dawoud_sum)
-    log.assass(
-        4300 <= crum_dawoud_sum <= 5000,
-        crum_dawoud_sum,
-        "looks suspicious!",
-    )
-
-    crum_notes: int = _sheet_nonempty(crum_roots, "notes")
-    log.info("Number of editor's note added to Crum:", crum_notes)
-    log.assass(4 <= crum_notes <= 3357, crum_notes, "looks suspicious!")
-
-    crum_root_senses: int = _sheet_nonempty(crum_roots, "senses")
-    log.info("Number of roots with at least one sense:", crum_root_senses)
-    log.assass(
-        70 <= crum_root_senses <= 3357,
-        crum_root_senses,
-        "looks suspicious!",
-    )
-
-    crum_root_senses_sum: int = _sheet_sum_regex_matches(
-        crum_roots,
-        "senses",
-        r"[0-9]+",
-    )
-    log.info("Total number of root senses:", crum_root_senses_sum)
-    log.assass(
-        160 <= crum_root_senses_sum <= 33570,
-        crum_root_senses_sum,
-        "looks suspicious!",
-    )
-
-    crum_last_page: int = _sheet_nonempty(crum_roots, "crum-last-page")
-    log.info("Number of Crum last pages overridden:", crum_last_page)
-    log.assass(
-        4 <= crum_last_page <= 3357,
-        crum_last_page,
-        "looks suspicious!",
-    )
-
-    crum_type_override: int = (
-        0  # We haven't started populating them. See #196.
-    )
-    log.info("Number of types overridden:", crum_type_override)
-    log.assass(
-        0 <= crum_type_override <= 3357,
-        crum_type_override,
-        "looks suspicious!",
-    )
-
-    crum_sisters: int = _sheet_nonempty(crum_roots, "sisters")
-    log.info("Number of words with sisters:", crum_sisters)
-    log.assass(37 <= crum_sisters <= 3357, crum_sisters, "looks suspicious!")
-
-    crum_sisters_sum: int = _sheet_sum_regex_matches(
-        crum_roots,
-        "sisters",
-        r"[0-9]+",
-    )
-    log.info("Total number of sisters:", crum_sisters_sum)
-    log.assass(
-        58 <= crum_sisters_sum <= 33570,
-        crum_sisters_sum,
-        "looks suspicious!",
-    )
-
-    crum_antonyms: int = _sheet_nonempty(crum_roots, "antonyms")
-    log.info("Number of words with antonyms:", crum_antonyms)
-    log.assass(2 <= crum_antonyms <= 3357, crum_antonyms, "looks suspicious!")
-
-    crum_antonyms_sum: int = _sheet_sum_regex_matches(
-        crum_roots,
-        "antonyms",
-        r"[0-9]+",
-    )
-    log.info("Total number of antonyms:", crum_antonyms_sum)
-    log.assass(
-        2 <= crum_antonyms_sum <= 33570,
-        crum_antonyms_sum,
-        "looks suspicious!",
-    )
-
-    crum_homonyms: int = _sheet_nonempty(crum_roots, "homonyms")
-    log.info("Number of words with homonyms:", crum_homonyms)
-    log.assass(7 <= crum_homonyms <= 3357, crum_homonyms, "looks suspicious!")
-
-    crum_homonyms_sum: int = _sheet_sum_regex_matches(
-        crum_roots,
-        "homonyms",
-        r"[0-9]+",
-    )
-    log.info("Total number of homonyms:", crum_homonyms_sum)
-    log.assass(
-        7 <= crum_homonyms_sum <= 33570,
-        crum_homonyms_sum,
-        "looks suspicious!",
-    )
-
-    crum_greek_sisters: int = _sheet_nonempty(crum_roots, "greek-sisters")
-    log.info("Number of words with Greek sisters:", crum_greek_sisters)
-    log.assass(
-        1 <= crum_greek_sisters <= 3357,
-        crum_greek_sisters,
-        "looks suspicious!",
-    )
-
-    crum_greek_sisters_sum: int = _sheet_sum_regex_matches(
-        crum_roots,
-        "greek-sisters",
-        r"[0-9]+",
-    )
-    log.info("Total number of Greek sisters:", crum_greek_sisters_sum)
-    log.assass(
-        1 <= crum_greek_sisters_sum <= 3357,
-        crum_greek_sisters_sum,
-        "looks suspicious!",
-    )
-
-    crum_categories: int = _sheet_nonempty(crum_roots, "categories")
-    log.info("Number of words with categories:", crum_categories)
-    log.assass(
-        30 <= crum_categories <= 3357,
-        crum_categories,
-        "looks suspicious!",
-    )
-
-    # The regex '[^,]+' counts comma-separated items.
-    crum_categories_sum: int = _sheet_sum_regex_matches(
-        crum_roots,
-        "categories",
-        r"[^,]+",
-    )
-    log.info("Total number of categories:", crum_categories_sum)
-    log.assass(
-        30 <= crum_categories_sum <= 6714,
-        crum_categories_sum,
-        "looks suspicious!",
-    )
-
-    # Since our Crum data source diverged from Marcion, we have no way to track
-    # number of typos. In a way, it's irrelevant.
-    crum_wrd_typos: int = 0
-    log.warn("Number of Crum WRD entries changed (broken):", crum_wrd_typos)
-
-    crum_drv_typos: int = 0
-    log.warn("Number of Crum DRV entries changed (broken):", crum_drv_typos)
-
-    crum_typos: int = 0
-    log.warn("Total number of Crum lines changed (broken):", crum_typos)
-
-    crum_pages_changed: int = 0
-    log.warn("Number of Crum pages changed (broken):", crum_pages_changed)
-
-    num_commits: int = int(_run("git", "rev-list", "--count", "--all"))
-    log.info("Number of commits:", num_commits)
-    log.assass(
-        num_commits >= 1300 and num_commits <= 10000,
-        num_commits,
-        "looks suspicious!",
-    )
-
-    num_contributors: int = len(
-        _run("git", "shortlog", "--summary", "--group=author").splitlines(),
-    )
-    log.info("Number of contributors:", num_contributors)
-    log.assass(
-        num_contributors >= 1 and num_contributors <= 10,
-        num_contributors,
-        "looks suspicious!",
-    )
-
-    open_issues: int = int(
-        _run(
-            "gh",
-            "issue",
-            "list",
-            "--state",
-            "open",
-            "--json",
-            "number",
-            "--jq",
-            "length",
-            "--limit",
-            "10000",
-        ),
-    )
-    log.info("Number of open issues:", open_issues)
-    log.assass(
-        open_issues >= 1 and open_issues <= 300,
-        open_issues,
-        "looks suspicious!",
-    )
-
-    closed_issues: int = int(
-        _run(
-            "gh",
-            "issue",
-            "list",
-            "--state",
-            "closed",
-            "--json",
-            "number",
-            "--jq",
-            "length",
-            "--limit",
-            "10000",
-        ),
-    )
-    log.info("Number of closed issues:", closed_issues)
-    log.assass(
-        closed_issues >= 300 and closed_issues <= 3000,
-        closed_issues,
-        "looks suspicious!",
-    )
-
-    stats: pd.DataFrame = file.read_tsv(_TSV_FILE)
-    record: dict[str, str | int] = {
-        "date": _run("date").strip(),
-        "timestamp": _run("date", "+%s").strip(),
-        "loc": loc,
-        "loc_inc_archive": loc_inc_archive,
-        "crum_img": crum_img,
-        "crum_dawoud": crum_dawoud,
-        "loc_crum": loc_crum,
-        "loc_copticsite": loc_copticsite,
-        "loc_kellia": loc_kellia,
-        "loc_bible": loc_bible,
-        "loc_flashcards": loc_flashcards,
-        "loc_grammar": loc_grammar,
-        "loc_keyboard": loc_keyboard,
-        "loc_morphology": loc_morphology,
-        "loc_site": loc_site,
-        "loc_shared": loc_shared,
-        "loc_archive": loc_archive,
-        "crum_typos": crum_typos,
-        "crum_img_sum": crum_img_sum,
-        "crum_dawoud_sum": crum_dawoud_sum,
-        "num_commits": num_commits,
-        "num_contributors": num_contributors,
-        "crum_notes": crum_notes,
-        "loc_python": loc_python,
-        "loc_make": loc_make,
-        "loc_css": loc_css,
-        "loc_sh": loc_sh,
-        "loc_js": loc_js,
-        "loc_md": loc_md,
-        "loc_yaml": loc_yaml,
-        "loc_dot": loc_dot,
-        "loc_keyboard_layout": loc_keyboard_layout,
-        "loc_txt": loc_txt,
-        "crum_wrd_typos": crum_wrd_typos,
-        "crum_drv_typos": crum_drv_typos,
-        "crum_pages_changed": crum_pages_changed,
-        "crum_root_senses": crum_root_senses,
-        "crum_root_senses_sum": crum_root_senses_sum,
-        "loc_ts": loc_ts,
-        "loc_json": loc_json,
-        "disk_usage": disk_usage,
-        "disk_usage_human": disk_usage_human,
-        "loc_toml": loc_toml,
-        "foc": len(foc),
-        "foc_python": len(foc_python),
-        "foc_make": len(foc_make),
-        "foc_css": len(foc_css),
-        "foc_sh": len(foc_sh),
-        "foc_js": len(foc_js),
-        "foc_md": len(foc_md),
-        "foc_yaml": len(foc_yaml),
-        "foc_toml": len(foc_toml),
-        "foc_dot": len(foc_dot),
-        "foc_keyboard_layout": len(foc_keyboard_layout),
-        "foc_txt": len(foc_txt),
-        "foc_ts": len(foc_ts),
-        "foc_json": len(foc_json),
-        "loc_html": loc_html,
-        "foc_html": len(foc_html),
-        "crum_last_page": crum_last_page,
-        "crum_type_override": crum_type_override,
-        "crum_sisters": crum_sisters,
-        "crum_sisters_sum": crum_sisters_sum,
-        "crum_antonyms": crum_antonyms,
-        "crum_antonyms_sum": crum_antonyms_sum,
-        "crum_homonyms": crum_homonyms,
-        "crum_homonyms_sum": crum_homonyms_sum,
-        "crum_greek_sisters": crum_greek_sisters,
-        "crum_greek_sisters_sum": crum_greek_sisters_sum,
-        "open_issues": open_issues,
-        "closed_issues": closed_issues,
-        "crum_categories": crum_categories,
-        "crum_categories_sum": crum_categories_sum,
-        "loc_dawoud": loc_dawoud,
-        "loc_andreas": loc_andreas,
-    }
-    sane.verify_equal_sets(
-        set(stats.columns),
+        set(df.columns),
         set(record.keys()),
         "Collected columns don't match the stats file!",
     )
     if not commit:
         return
-    stats = pd.concat([stats, pd.DataFrame([record])], ignore_index=True)
-    file.to_tsv(stats, _TSV_FILE)
-    _ = _run("git", "add", _TSV_FILE)
+    df = pd.concat([df, pd.DataFrame([record])], ignore_index=True)
+    file.to_tsv(df, _TSV_FILE)
+    _ = _run("git add", _TSV_FILE)
     # We wrap the commit message with single quotes in order to pass it as a
     # message parameter. For this to work, it must not contain any single quotes
     # itself.
     assert "'" not in _COMMIT_MESSAGE
-    _ = _run("git", "commit", "--message", f"'{_COMMIT_MESSAGE}'")
+    _ = _run(f"git commit --message '{_COMMIT_MESSAGE}'")
+
+
+def _report_aux() -> abc.Generator[Stat]:
+    yield from _code_stats()
+    yield from _crum_stats()
+    yield from _misc_stats()
+
+
+def _code_stats() -> abc.Generator[Stat]:
+    # All files of code.
+    foc: list[str] = _run("source .env && findexx . -type f").splitlines()
+    foc = list(map(_normalize, foc))
+
+    # Total number of lines of code.
+    loc: int = _loc(foc)
+
+    foc_stat: Stat = Stat("foc", "Number of files of code", len(foc))
+    loc_stat: Stat = Stat("loc", "Number of lines of code", loc)
+
+    yield foc_stat
+    yield loc_stat
+    yield Stat(
+        "loc_inc_archive",
+        "Number of lines of code (including Archive)",
+        loc,
+        broken=True,
+    )
+
+    foc_by_lang: list[FilesOfCode] = [
+        FilesOfCode(foc, "python", "Python", [".py"]),
+        FilesOfCode(foc, "make", "Make", basenames=["Makefile"]),
+        FilesOfCode(foc, "css", "CSS", [".css"]),
+        FilesOfCode(foc, "sh", "Shell", [".sh"], basenames=[".env"]),
+        FilesOfCode(foc, "js", "JavaScript", [".mjs"]),
+        FilesOfCode(foc, "md", "Markdown", [".md"]),
+        FilesOfCode(
+            foc,
+            "yaml",
+            "YAML",
+            [".yaml"],
+            basenames=[".yamlfmt", ".yamllint"],
+        ),
+        FilesOfCode(foc, "toml", "TOML", [".toml"]),
+        FilesOfCode(
+            foc,
+            "dot",
+            "dotfiles",
+            basenames=[".gitignore", ".npmrc", "pylintrc", ".checkmake"],
+        ),
+        FilesOfCode(
+            foc,
+            "keyboard_layout",
+            "Keyboard",
+            [
+                ".keylayout",
+                ".plist",
+                ".strings",
+            ],
+        ),
+        FilesOfCode(foc, "txt", "TXT", [".txt", ".in"]),
+        FilesOfCode(foc, "ts", "TypeScript", [".ts"]),
+        FilesOfCode(foc, "json", "JSON", [".json"]),
+        FilesOfCode(foc, "html", "HTML", [".html"]),
+    ]
+
+    # Verify that the breakdown represents a partitioning.
+    sane.verify_equal_sets(
+        foc,
+        sum([lang.files for lang in foc_by_lang], []),
+        "The total doesn't equal the some of the parts!",
+    )
+
+    foc_stats: list[Stat] = [lang.foc_stat() for lang in foc_by_lang]
+    assert sum(int(stat.val()) for stat in foc_stats) == foc_stat.val()
+    foc_stat.log()
+    for s in foc_stats:
+        s.log(True)
+    yield from foc_stats
+    del foc_stats
+
+    del foc_stat
+
+    loc_stats: list[Stat] = [lang.loc_stat() for lang in foc_by_lang]
+    assert sum(int(stat.val()) for stat in loc_stats) == loc_stat.val()
+    loc_stat.log()
+    for s in loc_stats:
+        s.log(True)
+    yield from loc_stats
+    del loc_stats
+
+    del foc_by_lang
+
+    foc_by_component: list[FilesOfCode] = [
+        FilesOfCode(foc, "archive", "Archive", broken=True),
+        FilesOfCode(
+            foc,
+            "crum",
+            "Crum",
+            prefixes=["dictionary/marcion_sourceforge_net/"],
+        ),
+        FilesOfCode(
+            foc,
+            "andreas",
+            "Andreas",
+            prefixes=["dictionary/stmacariusmonastery_org/"],
+        ),
+        FilesOfCode(
+            foc,
+            "copticsite",
+            "Copticsite",
+            prefixes=["dictionary/copticsite_com/"],
+        ),
+        FilesOfCode(
+            foc,
+            "kellia",
+            "Kellia",
+            prefixes=["dictionary/kellia_uni_goettingen_de/"],
+        ),
+        FilesOfCode(foc, "dawoud", "Dawoud"),  # All files deleted!
+        FilesOfCode(foc, "bible", "Bible", prefixes=["bible/"]),
+        FilesOfCode(foc, "flashcards", "Flashcards", prefixes=["flashcards/"]),
+        FilesOfCode(foc, "grammar", "Grammar"),  # No files yet (if ever)!
+        FilesOfCode(foc, "keyboard", "Keyboard", prefixes=["keyboard/"]),
+        FilesOfCode(foc, "morphology", "Morphology", prefixes=["morphology/"]),
+        FilesOfCode(foc, "site", "Site", prefixes=["docs/"]),
+        FilesOfCode(
+            foc,
+            "shared",
+            "shared",
+            prefixes=["env/", "xooxle/", "utils/", "pre-commit/", "test/"],
+            dirnames=[""],
+        ),
+    ]
+    comp_stats: list[Stat] = [comp.loc_stat() for comp in foc_by_component]
+    assert sum(int(comp.val()) for comp in comp_stats) == loc
+    loc_stat.log()
+    for s in comp_stats:
+        s.log(True)
+    yield from comp_stats
+    del foc_by_component, comp_stats, loc_stat
+    del foc, loc
+
+
+def _crum_stats() -> abc.Generator[Stat]:
+    crum: list[dict[str, str | int | float]] = (
+        tsv.roots_sheet().get_all_records()
+    )
+    crum_stats: list[Stat] = [
+        Stat(
+            "crum_img",
+            "Number of words with images",
+            lambda: len(
+                {
+                    basename.split("-")[0]
+                    for basename in os.listdir(
+                        "dictionary/marcion_sourceforge_net/data/img/",
+                    )
+                },
+            ),
+            700,
+            3357,
+        ),
+        Stat(
+            "crum_img_sum",
+            "Total number of images",
+            lambda: len(
+                os.listdir("dictionary/marcion_sourceforge_net/data/img/"),
+            ),
+            1200,
+            33570,
+        ),
+        _crum_stat(
+            crum,
+            "dawoud",
+            "dawoud-pages",
+            "Number of words with Dawoud pages",
+            None,
+            2600,
+            3357,
+        ),
+        _crum_stat(
+            crum,
+            "dawoud_sum",
+            "dawoud-pages",
+            "Total number of Dawoud pages",
+            r"[0-9]+",
+            4300,
+            5000,
+        ),
+        _crum_stat(
+            crum,
+            "notes",
+            "notes",
+            "Number of editor's notes",
+            None,
+            4,
+            3357,
+        ),
+        _crum_stat(
+            crum,
+            "root_senses",
+            "senses",
+            "Number of roots with senses",
+            None,
+            70,
+            3357,
+        ),
+        _crum_stat(
+            crum,
+            "root_senses_sum",
+            "senses",
+            "Total number of root senses",
+            r"[0-9]+",
+            160,
+            33570,
+        ),
+        _crum_stat(
+            crum,
+            "last_page",
+            "crum-last-page",
+            "Number of Crum last pages overridden",
+            None,
+            4,
+            3357,
+        ),
+        _crum_stat(
+            crum,
+            "sisters",
+            "sisters",
+            "Number of words with sisters",
+            None,
+            37,
+            3357,
+        ),
+        _crum_stat(
+            crum,
+            "sisters_sum",
+            "sisters",
+            "Total number of sisters",
+            r"[0-9]+",
+            58,
+            33570,
+        ),
+        _crum_stat(
+            crum,
+            "antonyms",
+            "antonyms",
+            "Number of words with antonyms",
+            None,
+            2,
+            3357,
+        ),
+        _crum_stat(
+            crum,
+            "antonyms_sum",
+            "antonyms",
+            "Total number of antonyms",
+            r"[0-9]+",
+            2,
+            33570,
+        ),
+        _crum_stat(
+            crum,
+            "homonyms",
+            "homonyms",
+            "Number of words with homonyms",
+            None,
+            7,
+            3357,
+        ),
+        _crum_stat(
+            crum,
+            "homonyms_sum",
+            "homonyms",
+            "Total number of homonyms",
+            r"[0-9]+",
+            7,
+            33570,
+        ),
+        _crum_stat(
+            crum,
+            "greek_sisters",
+            "greek-sisters",
+            "Number of words with Greek sisters",
+            None,
+            1,
+            3357,
+        ),
+        _crum_stat(
+            crum,
+            "greek_sisters_sum",
+            "greek-sisters",
+            "Total number of Greek sisters",
+            r"[0-9]+",
+            1,
+            3357,
+        ),
+        _crum_stat(
+            crum,
+            "categories",
+            "categories",
+            "Number of words with categories",
+            None,
+            30,
+            3357,
+        ),
+        _crum_stat(
+            crum,
+            "categories_sum",
+            "categories",
+            "Total number of categories",
+            r"[^,]+",
+            30,
+            6714,
+        ),
+        # Since our Crum data source diverged from Marcion, we have no way to
+        # track number of typos. In a way, it's irrelevant.
+        Stat(
+            "crum_type_override",
+            "Number of Crum entries with an overridden type",
+            0,
+            broken=True,
+        ),
+        Stat(
+            "crum_wrd_typos",
+            "Number of Crum WRD entries changed (broken)",
+            0,
+            broken=True,
+        ),
+        Stat(
+            "crum_drv_typos",
+            "Number of Crum DRV entries changed (broken)",
+            0,
+            broken=True,
+        ),
+        Stat(
+            "crum_typos",
+            "Total number of Crum lines changed (broken)",
+            0,
+            broken=True,
+        ),
+        Stat(
+            "crum_pages_changed",
+            "Number of Crum pages changed (broken)",
+            0,
+            broken=True,
+        ),
+    ]
+    log.info("Crum:")
+    for s in crum_stats:
+        s.log(True)
+    yield from crum_stats
+
+
+def _misc_stats() -> abc.Generator[Stat]:
+    misc_stats: list[Stat] = [
+        Stat(
+            "disk_usage",
+            "Disk usage",
+            lambda: _run("du --apparent-size --summarize .").split("\t")[0],
+            6291456,
+            88000000,
+        ),
+        Stat(
+            "disk_usage_human",
+            "Disk usage",
+            lambda: _run(
+                "du --apparent-size --human-readable --summarize .",
+            ).split("\t")[0],
+        ),
+        Stat("date", "Date and Time", lambda: _run("date").strip()),
+        Stat(
+            "num_commits",
+            "Number of commits",
+            lambda: _run("git rev-list --count --all"),
+            1300,
+            10000,
+        ),
+        Stat(
+            "num_contributors",
+            "Number of contributors",
+            lambda: len(
+                _run("git shortlog --summary --group=author").splitlines(),
+            ),
+            1,
+            10,
+        ),
+        Stat(
+            "open_issues",
+            "Number of open issues",
+            lambda: _run(
+                "gh issue list",
+                "--state open",
+                "--json number",
+                "--jq length",
+                "--limit 10000",
+            ),
+            1,
+            300,
+        ),
+        Stat(
+            "closed_issues",
+            "Number of closed issues",
+            lambda: _run(
+                "gh issue list",
+                "--state closed",
+                "--json number",
+                "--jq length",
+                "--limit 10000",
+            ),
+            300,
+            3000,
+        ),
+        Stat("timestamp", "Timestamp", lambda: _run("date +%s").strip()),
+    ]
+    for s in misc_stats:
+        s.log()
+    yield from misc_stats
 
 
 def main():
-    args = _argparser.parse_args()
+    args: typing.Any = _argparser.parse_args()
     if args.reminder:
         _check_reminder()
     elif args.commit or args.print:

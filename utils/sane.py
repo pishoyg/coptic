@@ -31,14 +31,17 @@ def verify_equal_sets[T](
     s2: abc.Iterable[T],
     message: str,
 ) -> None:
+    s1, s2 = list(s1), list(s2)
+    verify_unique(s1, "Not a set!")
+    verify_unique(s2, "Not a set!")
     s1, s2 = set(s1), set(s2)
     diff = s1.difference(s2)
     if diff:
-        log.fatal(message, diff, "present in the former but not the latter")
+        log.throw(message, diff, "present in the former but not the latter")
 
     diff = s2.difference(s1)
     if diff:
-        log.fatal(message, diff, "present in the latter but not the former")
+        log.throw(message, diff, "present in the latter but not the former")
 
 
 def assert_one[T](s: set[T]) -> T:
