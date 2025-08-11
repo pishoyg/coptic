@@ -23,7 +23,6 @@ install: FORCE
 	# Install dependencies.
 	./install.sh
 
-# TODO: (#0) Rename to `upgrade`.
 update: FORCE
 	# Upgrade dependencies.
 	./install.sh --update
