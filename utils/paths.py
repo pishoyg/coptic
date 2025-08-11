@@ -2,12 +2,13 @@
 
 import os
 
-SITE_DIR = os.environ["SITE_DIR"]
-DOMAIN = os.environ["DOMAIN"]
-URL = f"https://{DOMAIN}"
-CRUM = f"{URL}/crum"
-EMAIL = os.environ["EMAIL"]
-JSON_KEYFILE_NAME = "google_cloud_keyfile.json"
+SITE_DIR: str = "docs"
+DOMAIN: str = "remnqymi.com"
+URL: str = f"https://{DOMAIN}"
+CRUM: str = f"{URL}/crum"
+# TODO: (#298) Stop using email.
+EMAIL: str = "remnqymi@gmail.com"
+JSON_KEYFILE_NAME: str = "google_cloud_keyfile.json"
 
 
 def crum(key: str | int) -> str:

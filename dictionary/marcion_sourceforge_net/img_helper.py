@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Crum images helper."""
+
 import argparse
 import glob
 import json
@@ -118,8 +119,8 @@ _QUERIERS_FMT: dict[str, list[str]] = {
 }
 
 _WIKI_HEADERS = {
-    "Api-User-Agent": f"Coptic/1.0 ({paths.URL}; {paths.EMAIL})",
-    "User-Agent": f"Coptic/1.0 ({paths.URL}; {paths.EMAIL})",
+    "Api-User-Agent": f"Coptic/1.0 ({paths.URL})",
+    "User-Agent": f"Coptic/1.0 ({paths.URL})",
 }
 
 _argparser = argparse.ArgumentParser(
