@@ -172,7 +172,7 @@ _ = _argparser.add_argument(
 _ = _argparser.add_argument(
     "-k",
     "--skip_existing",
-    type=bool,
+    action="store_true",
     default=False,
     help="If true, skip word with existing images."
     " If --batch is given, this flag has a different interpretation."
@@ -636,7 +636,7 @@ class _Prompter:
         log.info("- Downloads:")
         _pretty(_get_downloads(self.args))
         log.info("- Senses:")
-        _pretty(json.loads(self.key_to_row[self.key][_SENSES_COL]))
+        _pretty(json.loads(self.key_to_row[self.key][_SENSES_COL] or "{}"))
         log.info("- Sources:")
         _pretty(self.sources)
         print()
@@ -805,11 +805,10 @@ class _Prompter:
         """
         self.print_info()
 
-        command = input()
-        command = command.strip()
+        command: str = input().strip()
         if not command:
             return True
-        split = text.split(command)
+        split: list[str] = command.split()
         command, params = split[0].lower(), split[1:]
         del split
 
@@ -1041,7 +1040,7 @@ def validate():
         if not content:
             # TODO: (#258) Ban empty sources.
             continue
-        lines: list[str] = text.split(content, "\n")
+        lines: list[str] = content.splitlines()
         del content
         if not lines:
             log.fatal("Source file is not empty, but has empty lines:", path)
