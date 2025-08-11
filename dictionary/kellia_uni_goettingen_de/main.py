@@ -658,7 +658,7 @@ def _get_entity_types(pub_corpora_dir: str) -> defaultdict[str, set[str]]:
         sgml = open(file_, encoding="utf8").read()
         if ' entities="gold"' not in sgml:
             continue  # Only use gold entities
-        lines = sgml.split("\n")
+        lines: list[str] = sgml.splitlines()
         # Pass 1 - get head lemmas
         id2lemma: dict[str, str] = {}
         for line in lines:

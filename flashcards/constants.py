@@ -376,9 +376,9 @@ class Crum(Decker):
     def __explanatory_alt(path: str) -> str:
         stem = file.stem(path)
         source_path = os.path.join(EXPLANATORY_SOURCES, f"{stem}.txt")
-        sources: list[str] = [
-            line.strip() for line in file.read(source_path).split("\n")
-        ]
+        sources: list[str] = list(
+            map(str.strip, file.read(source_path).splitlines()),
+        )
         sources = [line for line in sources if line.startswith("http")]
         return sources[0] if sources else stem
 

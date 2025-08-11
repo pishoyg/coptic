@@ -79,13 +79,7 @@ def parse_word_cell_aux(
     normalize_optional: bool,
     normalize_assumed: bool,
 ) -> abc.Generator[lexical.Line]:
-    if not entry:
-        return
-
-    lines: list[str] = entry.split("\n")
-    del entry
-
-    for line in lines:
+    for line in entry.splitlines():
         # Parse the dialects.
         d, line = _munch_dialects(line)
         # Parse the forms, types, and references.
