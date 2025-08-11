@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Plot statistics."""
+
 # TODO: (#183) This script was copied from a Bash script, hence its has no OOP.
 # It should be redesigned with good OOP practices. There is a lot of code that
 # should be deduplicated.
@@ -330,7 +331,7 @@ def _report(commit: bool) -> None:
     foc_keyboard_layout = [
         f for f in foc if file.ext(f) in [".keylayout", ".plist", ".strings"]
     ]
-    foc_txt = [f for f in foc if f.endswith(".txt")]
+    foc_txt = [f for f in foc if file.ext(f) in [".txt", ".in"]]
     foc_ts = [f for f in foc if f.endswith(".ts")]
     foc_json = [f for f in foc if f.endswith(".json")]
     foc_html = [f for f in foc if f.endswith(".html")]
