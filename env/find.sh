@@ -59,14 +59,17 @@ findex () {
 # This calculation is possible because we maintain strict requirements about
 # our repository structure, ensuring that all archived logic does live under
 # `archive/`, and that all data lives under a `data/` directory.
-# findex already ignores ignored and archived items.
-# findexx also ignores data.
+#
+# * findex already filters out ignored and archived items.
+# * findexx also filters out data files.
+#
 # NOTE: It's important to notice that any additional arguments get appended to a
 # long list of exclusion arguments below. Thus, be careful when you use an OR
 # clause, as it could render some of the exclusion clauses idempotent. Most of
 # the time, you will need to wrap your OR clauses inside parentheses.
 findexx () {
   findex "${1}" \
+    -not -name "requirements.txt" \
     -not -path "*/data/*" \
     -not \( -path "docs/*" -not -name "*.ts" -not -name "*.css" \( -path "docs/bible/index.html" -or -not -name "index.html" \) \) \
     -not \( -path "./docs/*" -not -name "*.ts" -not -name "*.css" \( -path "./docs/bible/index.html" -or -not -name "index.html" \) \) \
