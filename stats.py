@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Plot statistics."""
+"""Collect and process statistics."""
 
 import abc
 import argparse
@@ -23,23 +23,6 @@ _ONE_DAY: int = 24 * 60 * 60
 _COMMIT_MESSAGE = "[Stats] Run `make stats`."
 _TSV_FILE = "data/stats.tsv"
 _TARGET_ANNOTATIONS = 15
-
-
-class Dash(enum.Enum):
-    """Dash is used to group metrics into dashboards to graph together."""
-
-    # Crum fixes are fields that are not expected to be populated for every
-    # entry.
-    CRUM_FIXES = "Crum Fixes"
-    # Crum appendices represent fields that we seek to populated for most
-    # entries.
-    CRUM_APPENDICES = "Crum Appendices"
-    LOC_BY_LANG = "Lines of Code by Language"
-    FOC_BY_LANG = "Files of Code by Language"
-    LOC_BY_COMP = "Lines of Code by Component"
-    NUM_COMMITS = "Number of Commits"
-    NUM_ISSUES = "Number of GitHub Issues"
-    NUM_CONTRIBUTORS = "Number of Contributors"
 
 
 _argparser: argparse.ArgumentParser = argparse.ArgumentParser(
@@ -80,19 +63,21 @@ _ = _argparser.add_argument(
 )
 
 
-def _run(*command: str) -> str:
-    try:
-        result = subprocess.run(
-            " ".join(command),
-            check=True,
-            capture_output=True,
-            text=True,
-            shell=True,
-        )
-        return result.stdout
-    except subprocess.CalledProcessError as e:
-        log.error("stderr:", e.stderr, "stdout:", e.stdout)
-        raise e
+class Dash(enum.Enum):
+    """Dash is used to group metrics into dashboards to graph together."""
+
+    # Crum fixes are fields that are not expected to be populated for every
+    # entry.
+    CRUM_FIXES = "Crum Fixes"
+    # Crum appendices represent fields that we seek to populated for most
+    # entries.
+    CRUM_APPENDICES = "Crum Appendices"
+    LOC_BY_LANG = "Lines of Code by Language"
+    FOC_BY_LANG = "Files of Code by Language"
+    LOC_BY_COMP = "Lines of Code by Component"
+    NUM_COMMITS = "Number of Commits"
+    NUM_ISSUES = "Number of GitHub Issues"
+    NUM_CONTRIBUTORS = "Number of Contributors"
 
 
 class Stat:
@@ -182,6 +167,21 @@ class Stat:
             )
             return
         log.info(f"{prefix}{self._description}:", self.val())
+
+
+def _run(*command: str) -> str:
+    try:
+        result = subprocess.run(
+            " ".join(command),
+            check=True,
+            capture_output=True,
+            text=True,
+            shell=True,
+        )
+        return result.stdout
+    except subprocess.CalledProcessError as e:
+        log.error("stderr:", e.stderr, "stdout:", e.stdout)
+        raise e
 
 
 def _loc(paths: list[str]) -> int:
@@ -417,13 +417,12 @@ def _report(commit: bool) -> list[Stat]:
 
 
 def _stats() -> Generator[Stat]:
-    # Statistic for the total number of files of code.
-    foc_stat: Stat = Stat("foc", "Number of files of code", len(Code.all_foc))
-    # Statistic for the total number of lines of code.
-    loc_stat: Stat = Stat("loc", "Number of lines of code", _loc(Code.all_foc))
-
-    yield foc_stat
-    yield loc_stat
+    yield Code.all_foc_stat
+    yield Code.all_loc_stat
+    yield from _code_stats_by_lang()
+    yield from _code_stats_by_comp()
+    yield from _crum_stats()
+    yield from _misc_stats()
 
     # Our archived-code tracking is currently broken! It's unlikely to be fixed,
     # because it's not important!
@@ -431,14 +430,9 @@ def _stats() -> Generator[Stat]:
     yield Stat(
         "loc_inc_archive",
         "Number of lines of code (including Archive)",
-        loc_stat.val(),
+        Code.all_loc_stat.val(),
         broken=True,
     )
-
-    yield from _code_stats_by_lang()
-    yield from _code_stats_by_comp()
-    yield from _crum_stats()
-    yield from _misc_stats()
 
 
 def _code_stats_by_lang() -> Generator[Stat]:
