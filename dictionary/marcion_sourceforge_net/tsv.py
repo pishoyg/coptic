@@ -5,12 +5,16 @@ import pathlib
 import gspread
 import pandas as pd
 
-from utils import gcloud, log
+from utils import gcloud, log, text
 
 _GSPREAD_URL: str = (
     # pylint: disable-next=line-too-long
     "https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg"
 )
+_sheet: gspread.spreadsheet.Spreadsheet = gcloud.spreadsheet(_GSPREAD_URL)
+_roots_sheet = _sheet.get_worksheet(0)
+_derivations_sheet = _sheet.get_worksheet(1)
+
 
 _SCRIPT_DIR = pathlib.Path(__file__).parent
 # Each derivation row must contain the following cells.
@@ -23,28 +27,12 @@ _DRV_SORT_COLS: list[str] = ["key_word"]
 
 _KEY_WORD_COL: str = "key_word"
 
-_bracket_map: dict[str, str] = {")": "(", "]": "[", "}": "{", ">": "<"}
-_opening_brackets: set[str] = set(_bracket_map.values())
-
-
-def _are_brackets_balanced(s: str) -> bool:
-    stack = []
-    for char in s:
-        if char in _opening_brackets:
-            stack.append(char)
-            continue
-        if char in _bracket_map:
-            if not stack or _bracket_map[char] != stack.pop():
-                return False
-
-    return not stack
-
 
 def _verify_balanced_brackets(df: pd.DataFrame) -> None:
     for r, row in df.iterrows():
         for c, value in row.items():
             log.ass(
-                _are_brackets_balanced(value),
+                text.are_brackets_balanced(value),
                 "row",
                 r,
                 "column",
@@ -60,9 +48,6 @@ def _is_sorted(tsv: pd.DataFrame, column_names: list[str]):
 
     int_tuples = tsv.apply(as_int, axis=1).tolist()
     return int_tuples == sorted(int_tuples)
-
-
-_roots_sheet = gcloud.read_gspread(_GSPREAD_URL, worksheet=0)
 
 
 def roots_sheet() -> gspread.worksheet.Worksheet:
@@ -99,9 +84,6 @@ def _valid_drv_row(row: pd.Series) -> bool:
         _DRV_ANY_COLS,
     )
     return True
-
-
-_derivations_sheet = gcloud.read_gspread(_GSPREAD_URL, worksheet=1)
 
 
 def derivations_sheet() -> gspread.worksheet.Worksheet:

@@ -36,11 +36,8 @@ class GCPClient:
         return GCPClient._client
 
 
-def read_gspread(
-    gspread_url: str,
-    worksheet: int = 0,
-) -> gspread.worksheet.Worksheet:
-    return GCPClient.client().open_by_url(gspread_url).get_worksheet(worksheet)
+def spreadsheet(gspread_url: str) -> gspread.spreadsheet.Spreadsheet:
+    return GCPClient.client().open_by_url(gspread_url)
 
 
 def get_column_index(
