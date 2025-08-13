@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Crum appendices helper."""
+
 # TODO: (#204) This module was intended as a generic helper for all appendices,
 # back when the appendices lived in a separate sheet from the main dictionary
 # data (see #325). At the moment, we no longer have a strong notiif9eeff39f
@@ -493,7 +494,7 @@ class _Matriarch:
 
     def __init__(self) -> None:
         # Worksheet 0 has the roots.
-        self.sheet: gspread.worksheet.Worksheet = tsv.roots_sheet()
+        self.sheet: gspread.worksheet.Worksheet = tsv.Sheet.roots_sheet
         self.keys: set[str] = {
             str(record[_KEY_COL]) for record in self.sheet.get_all_records()
         }

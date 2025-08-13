@@ -5,15 +5,39 @@ import pathlib
 import gspread
 import pandas as pd
 
-from utils import gcloud, log, text
+from utils import gcloud, lazy, log, text
 
 _GSPREAD_URL: str = (
     # pylint: disable-next=line-too-long
     "https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg"
 )
-_sheet: gspread.spreadsheet.Spreadsheet = gcloud.spreadsheet(_GSPREAD_URL)
-_roots_sheet = _sheet.get_worksheet(0)
-_derivations_sheet = _sheet.get_worksheet(1)
+
+
+class Sheet:
+    """Sheet store the Crum sheet."""
+
+    # NOTE:
+    # - The class functions are defined as lazy static properties. See the
+    # lazy module for documentation about the implications.
+    # - The @staticmethod decorator is required, merely to appease some static
+    # type checkers!
+    # - We resort to static class properties, rather than globals, because our
+    # lazy module doesn't support lazy global properties (yet?).
+
+    @lazy.StaticProperty
+    @staticmethod
+    def sheet() -> gspread.spreadsheet.Spreadsheet:
+        return gcloud.spreadsheet(_GSPREAD_URL)
+
+    @lazy.StaticProperty
+    @staticmethod
+    def roots_sheet() -> gspread.worksheet.Worksheet:
+        return Sheet.sheet.get_worksheet(0)
+
+    @lazy.StaticProperty
+    @staticmethod
+    def derivations_sheet() -> gspread.worksheet.Worksheet:
+        return Sheet.sheet.get_worksheet(1)
 
 
 _SCRIPT_DIR = pathlib.Path(__file__).parent
@@ -50,13 +74,9 @@ def _is_sorted(tsv: pd.DataFrame, column_names: list[str]):
     return int_tuples == sorted(int_tuples)
 
 
-def roots_sheet() -> gspread.worksheet.Worksheet:
-    return _roots_sheet
-
-
 # TODO: (#399) Abandon intermediate TSV.
 def roots() -> pd.DataFrame:
-    tsv: pd.DataFrame = gcloud.to_df(roots_sheet())
+    tsv: pd.DataFrame = gcloud.to_df(Sheet.roots_sheet)
     _verify_balanced_brackets(tsv)
     log.assass(
         _is_sorted(tsv, _WRD_SORT_COLS),
@@ -86,13 +106,9 @@ def _valid_drv_row(row: pd.Series) -> bool:
     return True
 
 
-def derivations_sheet() -> gspread.worksheet.Worksheet:
-    return _derivations_sheet
-
-
 # TODO: (#399) Abandon intermediate TSV.
 def derivations() -> pd.DataFrame:
-    tsv: pd.DataFrame = gcloud.to_df(derivations_sheet())
+    tsv: pd.DataFrame = gcloud.to_df(Sheet.derivations_sheet)
     _verify_balanced_brackets(tsv)
 
     # Validate empty rows are inserted.

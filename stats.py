@@ -322,7 +322,7 @@ class Crum:
     @lazy.StaticProperty
     @staticmethod
     def _sheet() -> list[dict[str, str | int | float]]:
-        return tsv.roots_sheet().get_all_records()
+        return tsv.Sheet.roots_sheet.get_all_records()
 
     def __init__(
         self,
