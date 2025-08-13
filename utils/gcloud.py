@@ -6,7 +6,7 @@ import gspread
 import pandas as pd
 from google.oauth2 import service_account
 
-from utils import lazy, log, paths
+from utils import cache, log, paths
 
 _GSPREAD_SCOPE = [
     "https://spreadsheets.google.com/feeds",
@@ -19,7 +19,7 @@ _GSPREAD_SCOPE = [
 class GCPClient:
     """GCPClient caches a GCP client."""
 
-    @lazy.StaticProperty
+    @cache.StaticProperty
     @staticmethod
     def client() -> gspread.client.Client:
         creds: service_account.Credentials = (

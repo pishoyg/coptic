@@ -5,7 +5,7 @@ import pathlib
 import gspread
 import pandas as pd
 
-from utils import gcloud, lazy, log, text
+from utils import cache, gcloud, log, text
 
 _GSPREAD_URL: str = (
     # pylint: disable-next=line-too-long
@@ -24,17 +24,17 @@ class Sheet:
     # - We resort to static class properties, rather than globals, because our
     # lazy module doesn't support lazy global properties (yet?).
 
-    @lazy.StaticProperty
+    @cache.StaticProperty
     @staticmethod
     def sheet() -> gspread.spreadsheet.Spreadsheet:
         return gcloud.spreadsheet(_GSPREAD_URL)
 
-    @lazy.StaticProperty
+    @cache.StaticProperty
     @staticmethod
     def roots_sheet() -> gspread.worksheet.Worksheet:
         return Sheet.sheet.get_worksheet(0)
 
-    @lazy.StaticProperty
+    @cache.StaticProperty
     @staticmethod
     def derivations_sheet() -> gspread.worksheet.Worksheet:
         return Sheet.sheet.get_worksheet(1)

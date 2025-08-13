@@ -1,8 +1,15 @@
-"""Lazy evaluation!"""
+"""Primitives for caching function output!
 
-# TODO: (#221) The StaticProperty could be used elsewhere. Adopt it more widely.
-# TODO: (#221) Define a lazy DynamicProperty decorator as well.
-# TODO: (#221) Define a lazy GlobalProperty decorator as well.
+1. For a non-static class method, you can use the functools.cached_property
+   decorator to cache its output.
+2. For a static class method, you can use the StaticProperty decorator defined
+   below. (We could use functools.lru_cache for caching, but we tend to prefer
+   this syntax.)
+3. For a function (non-class method), you have two options:
+   a. Use functools.lru_cache for caching.
+   b. Implement it as a class method, and use the StaticProperty decorator.
+"""
+
 import typing
 
 T = typing.TypeVar("T")

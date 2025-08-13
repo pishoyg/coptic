@@ -17,7 +17,7 @@ import numpy as np
 import pandas as pd
 
 from dictionary.marcion_sourceforge_net import tsv
-from utils import file, lazy, log, paths, sane
+from utils import cache, file, log, paths, sane
 
 _ONE_DAY: int = 24 * 60 * 60
 _COMMIT_MESSAGE = "[Stats] Run `make stats`."
@@ -194,7 +194,7 @@ class Code(abc.ABC):
     """Code tracks a subset of the files of code for statistics purposes."""
 
     # We store all files of code in a static property.
-    @lazy.StaticProperty
+    @cache.StaticProperty
     @staticmethod
     def all_foc() -> list[str]:
         # See our shell environment for the definition of the findexx command.
@@ -206,13 +206,13 @@ class Code(abc.ABC):
         return files
 
     # Statistic for the total number of files of code.
-    @lazy.StaticProperty
+    @cache.StaticProperty
     @staticmethod
     def all_foc_stat() -> Stat:
         return Stat("foc", "Files of code", lambda: len(Code.all_foc))
 
     # Statistic for the total number of lines of code.
-    @lazy.StaticProperty
+    @cache.StaticProperty
     @staticmethod
     def all_loc_stat() -> Stat:
         return Stat("loc", "Lines of code", lambda: Code._loc(Code.all_foc))
@@ -315,7 +315,7 @@ class Comp(Code):
 class Crum:
     """Crum sheet statistics."""
 
-    @lazy.StaticProperty
+    @cache.StaticProperty
     @staticmethod
     def _sheet() -> list[dict[str, str | int | float]]:
         return tsv.Sheet.roots_sheet.get_all_records()
