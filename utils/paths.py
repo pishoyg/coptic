@@ -2,17 +2,37 @@
 
 import os
 
-SITE_DIR: str = "docs"
 DOMAIN: str = "remnqymi.com"
 URL: str = f"https://{DOMAIN}"
-CRUM: str = f"{URL}/crum"
+CRUM_URL: str = f"{URL}/crum"
 # TODO: (#298) Stop using email.
 EMAIL: str = "remnqymi@gmail.com"
 JSON_KEYFILE_NAME: str = "google_cloud_keyfile.json"
 
 
-def crum(key: str | int) -> str:
-    return f"{CRUM}/{key}.html"
+def crum_url(key: str | int) -> str:
+    return f"{CRUM_URL}/{key}.html"
+
+
+SITE_DIR: str = "docs"
+assert os.path.exists(SITE_DIR)
+
+CRUM = "dictionary/marcion_sourceforge_net/"
+assert os.path.exists(CRUM)
+ANDREAS = "dictionary/stmacariusmonastery_org/"
+assert os.path.exists(ANDREAS)
+COPTICSITE = "dictionary/copticsite_com/"
+assert os.path.exists(COPTICSITE)
+KELLIA = "dictionary/kellia_uni_goettingen_de/"
+assert os.path.exists(KELLIA)
+BIBLE = "bible/"
+assert os.path.exists(BIBLE)
+FLASHCARDS = "flashcards/"
+assert os.path.exists(FLASHCARDS)
+KEYBOARD = "keyboard/"
+assert os.path.exists(KEYBOARD)
+MORPHOLOGY = "morphology/"
+assert os.path.exists(MORPHOLOGY)
 
 
 # Define the shared CSS, and verify its existence in the site directory.

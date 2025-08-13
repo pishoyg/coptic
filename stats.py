@@ -17,7 +17,7 @@ import numpy as np
 import pandas as pd
 
 from dictionary.marcion_sourceforge_net import tsv
-from utils import file, lazy, log, sane
+from utils import file, lazy, log, paths, sane
 
 _ONE_DAY: int = 24 * 60 * 60
 _COMMIT_MESSAGE = "[Stats] Run `make stats`."
@@ -75,9 +75,9 @@ class Dash(enum.Enum):
     LOC_BY_LANG = "Lines of Code by Language"
     FOC_BY_LANG = "Files of Code by Language"
     LOC_BY_COMP = "Lines of Code by Component"
-    NUM_COMMITS = "Number of Commits"
-    NUM_ISSUES = "Number of GitHub Issues"
-    NUM_CONTRIBUTORS = "Number of Contributors"
+    NUM_COMMITS = "Commits"
+    NUM_ISSUES = "GitHub Issues"
+    NUM_CONTRIBUTORS = "Contributors"
 
 
 class Stat:
@@ -198,32 +198,24 @@ class Code(abc.ABC):
     @staticmethod
     def all_foc() -> list[str]:
         # See our shell environment for the definition of the findexx command.
-        paths: list[str] = _run(
+        files: list[str] = _run(
             "source .env && findexx . -type f",
         ).splitlines()
         # Make sure the paths are normalized.
-        paths = list(map(os.path.normpath, paths))
-        return paths
+        files = list(map(os.path.normpath, files))
+        return files
 
     # Statistic for the total number of files of code.
     @lazy.StaticProperty
     @staticmethod
     def all_foc_stat() -> Stat:
-        return Stat(
-            "foc",
-            "Number of files of code",
-            lambda: len(Code.all_foc),
-        )
+        return Stat("foc", "Files of code", lambda: len(Code.all_foc))
 
     # Statistic for the total number of lines of code.
     @lazy.StaticProperty
     @staticmethod
     def all_loc_stat() -> Stat:
-        return Stat(
-            "loc",
-            "Number of lines of code",
-            lambda: Code._loc(Code.all_foc),
-        )
+        return Stat("loc", "Lines of code", lambda: Code._loc(Code.all_foc))
 
     def __init__(
         self,
@@ -235,6 +227,10 @@ class Code(abc.ABC):
         dirnames: list[str] | None = None,
         broken: bool = False,
     ) -> None:
+        # TODO: (#0) Consider adding validation that all the suffixes, prefixes,
+        # basenames, and dirnames passed, actually have corresponding files.
+        # Otherwise, some arguments may become superfluous (which is OK, but
+        # still slightly undesirable).
         self.files: list[str] = [
             f
             for f in Code.all_foc
@@ -270,16 +266,16 @@ class Code(abc.ABC):
         )
 
     @staticmethod
-    def _loc(paths: list[str]) -> int:
+    def _loc(files: list[str]) -> int:
         """Count the number of lines in the given list of files.
 
         Args:
-            paths: List of file paths.
+            files: List of file paths.
 
         Returns:
             Number of lines in the given list of files.
         """
-        return sum(map(len, map(file.readlines, paths)))
+        return sum(map(len, map(file.readlines, files)))
 
 
 class Lang(Code):
@@ -374,7 +370,7 @@ class Crum:
 _CRUM_STATS: list[Stat] = [
     Stat(
         "crum_img",
-        "Number of words with images",
+        "Words with images",
         lambda: len(
             {
                 basename.split("-")[0]
@@ -399,7 +395,7 @@ _CRUM_STATS: list[Stat] = [
     Crum(
         "dawoud",
         "dawoud-pages",
-        "Number of words with Dawoud pages",
+        "Words with Dawoud pages",
         None,
         2600,
         3357,
@@ -416,7 +412,7 @@ _CRUM_STATS: list[Stat] = [
     Crum(
         "notes",
         "notes",
-        "Number of editor's notes",
+        "Editor's notes",
         None,
         4,
         3357,
@@ -425,7 +421,7 @@ _CRUM_STATS: list[Stat] = [
     Crum(
         "root_senses",
         "senses",
-        "Number of roots with senses",
+        "Roots with senses",
         None,
         70,
         3357,
@@ -442,7 +438,7 @@ _CRUM_STATS: list[Stat] = [
     Crum(
         "last_page",
         "crum-last-page",
-        "Number of last pages overridden",
+        "Last pages overridden",
         None,
         4,
         3357,
@@ -451,7 +447,7 @@ _CRUM_STATS: list[Stat] = [
     Crum(
         "sisters",
         "sisters",
-        "Number of words with sisters",
+        "Words with sisters",
         None,
         37,
         3357,
@@ -468,7 +464,7 @@ _CRUM_STATS: list[Stat] = [
     Crum(
         "antonyms",
         "antonyms",
-        "Number of words with antonyms",
+        "Words with antonyms",
         None,
         2,
         3357,
@@ -485,7 +481,7 @@ _CRUM_STATS: list[Stat] = [
     Crum(
         "homonyms",
         "homonyms",
-        "Number of words with homonyms",
+        "Words with homonyms",
         None,
         7,
         3357,
@@ -502,7 +498,7 @@ _CRUM_STATS: list[Stat] = [
     Crum(
         "greek_sisters",
         "greek-sisters",
-        "Number of words with Greek sisters",
+        "Words with Greek sisters",
         None,
         1,
         3357,
@@ -519,7 +515,7 @@ _CRUM_STATS: list[Stat] = [
     Crum(
         "categories",
         "categories",
-        "Number of words with categories",
+        "Words with categories",
         None,
         30,
         3357,
@@ -537,35 +533,20 @@ _CRUM_STATS: list[Stat] = [
     # track number of typos. In a way, it's irrelevant.
     Stat(
         "crum_type_override",
-        "Number of entries with an overridden type",
+        "Entries with an overridden type",
         _zero,
         dash=Dash.CRUM_FIXES,
         broken=True,
     ),
-    Stat(
-        "crum_wrd_typos",
-        "Number of WRD entries changed (broken)",
-        _zero,
-        broken=True,
-    ),
-    Stat(
-        "crum_drv_typos",
-        "Number of DRV entries changed (broken)",
-        _zero,
-        broken=True,
-    ),
+    Stat("crum_wrd_typos", "WRD entries changed (broken)", _zero, broken=True),
+    Stat("crum_drv_typos", "DRV entries changed (broken)", _zero, broken=True),
     Stat(
         "crum_typos",
         "Total number of lines changed (broken)",
         _zero,
         broken=True,
     ),
-    Stat(
-        "crum_pages_changed",
-        "Number of pages changed (broken)",
-        _zero,
-        broken=True,
-    ),
+    Stat("crum_pages_changed", "Pages changed (broken)", _zero, broken=True),
 ]
 
 _MISC_STATS: list[Stat] = [
@@ -586,7 +567,7 @@ _MISC_STATS: list[Stat] = [
     Stat("date", "Date and Time", lambda: _run("date").strip()),
     Stat(
         "num_commits",
-        "Number of commits",
+        "Commits",
         lambda: _run("git rev-list --count --all"),
         1300,
         10000,
@@ -594,7 +575,7 @@ _MISC_STATS: list[Stat] = [
     ),
     Stat(
         "num_contributors",
-        "Number of contributors",
+        "Contributors",
         lambda: len(
             _run("git shortlog --summary --group=author").splitlines(),
         ),
@@ -604,7 +585,7 @@ _MISC_STATS: list[Stat] = [
     ),
     Stat(
         "open_issues",
-        "Number of open issues",
+        "Open issues",
         lambda: _run(
             "gh issue list",
             "--state open",
@@ -618,7 +599,7 @@ _MISC_STATS: list[Stat] = [
     ),
     Stat(
         "closed_issues",
-        "Number of closed issues",
+        "Closed issues",
         lambda: _run(
             "gh issue list",
             "--state closed",
@@ -647,15 +628,7 @@ _CODE_BY_LANG: list[Lang] = [
         "dotfiles",
         basenames=[".gitignore", ".npmrc", "pylintrc", ".checkmake"],
     ),
-    Lang(
-        "keyboard_layout",
-        "Keyboard",
-        [
-            ".keylayout",
-            ".plist",
-            ".strings",
-        ],
-    ),
+    Lang("keyboard_layout", "Keyboard", [".keylayout", ".plist", ".strings"]),
     Lang("txt", "TXT", [".txt", ".in"]),
     Lang("ts", "TypeScript", [".ts"]),
     Lang("json", "JSON", [".json"]),
@@ -663,29 +636,17 @@ _CODE_BY_LANG: list[Lang] = [
 ]
 
 _CODE_BY_COMPONENT: list[Comp] = [
-    Comp("crum", "Crum", prefixes=["dictionary/marcion_sourceforge_net/"]),
-    Comp(
-        "andreas",
-        "Andreas",
-        prefixes=["dictionary/stmacariusmonastery_org/"],
-    ),
-    Comp(
-        "copticsite",
-        "Copticsite",
-        prefixes=["dictionary/copticsite_com/"],
-    ),
-    Comp(
-        "kellia",
-        "Kellia",
-        prefixes=["dictionary/kellia_uni_goettingen_de/"],
-    ),
+    Comp("crum", "Crum", prefixes=[paths.CRUM]),
+    Comp("andreas", "Andreas", prefixes=[paths.ANDREAS]),
+    Comp("copticsite", "Copticsite", prefixes=[paths.COPTICSITE]),
+    Comp("kellia", "Kellia", prefixes=[paths.KELLIA]),
     Comp("dawoud", "Dawoud"),  # All files deleted!
-    Comp("bible", "Bible", prefixes=["bible/"]),
-    Comp("flashcards", "Flashcards", prefixes=["flashcards/"]),
+    Comp("bible", "Bible", prefixes=[paths.BIBLE]),
+    Comp("flashcards", "Flashcards", prefixes=[paths.FLASHCARDS]),
     Comp("grammar", "Grammar"),  # No files yet (if ever)!
-    Comp("keyboard", "Keyboard", prefixes=["keyboard/"]),
-    Comp("morphology", "Morphology", prefixes=["morphology/"]),
-    Comp("site", "Site", prefixes=["docs/"]),
+    Comp("keyboard", "Keyboard", prefixes=[paths.KEYBOARD]),
+    Comp("morphology", "Morphology", prefixes=[paths.MORPHOLOGY]),
+    Comp("site", "Site", prefixes=[paths.SITE_DIR]),
     Comp(
         "shared",
         "shared",
@@ -839,7 +800,7 @@ def _stats(verbose: bool = False) -> Generator[Stat]:
     yield Stat("loc_archive", "Archived Lines of Code", _zero, broken=True)
     yield Stat(
         "loc_inc_archive",
-        "Number of lines of code (including Archive)",
+        "Lines of code (including Archive)",
         Code.all_loc_stat.val,
         broken=True,
     )

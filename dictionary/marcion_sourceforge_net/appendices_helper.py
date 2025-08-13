@@ -782,7 +782,7 @@ class Runner:
                 # This type is of little interest at the moment.
                 continue
             cats: list[str] = []
-            _ = subprocess.run(["open", paths.crum(key)], check=True)
+            _ = subprocess.run(["open", paths.crum_url(key)], check=True)
             while True:
                 cats = text.ssplit(
                     input(f"Key = {key}. Categories (empty to skip): "),

@@ -630,7 +630,7 @@ class _Prompter:
         print()
         log.info("Data:")
         log.info("- Key:", self.key)
-        log.info("- Link:", paths.crum(self.row[_KEY_COL]))
+        log.info("- Link:", paths.crum_url(self.row[_KEY_COL]))
         log.info("- Existing:")
         _pretty(_existing(self.key))
         log.info("- Downloads:")
@@ -776,7 +776,7 @@ class _Prompter:
             print(self.key, message + colorama.Fore.RESET)
             return True
 
-        _os_open(*_existing(self.key), paths.crum(self.row[_KEY_COL]))
+        _os_open(*_existing(self.key), paths.crum_url(self.row[_KEY_COL]))
 
         while True:
             try:
@@ -839,7 +839,10 @@ class _Prompter:
             for key in params:
                 self.key = key
                 self.row = self.key_to_row[self.key]
-                _os_open(*_existing(self.key), paths.crum(self.row[_KEY_COL]))
+                _os_open(
+                    *_existing(self.key),
+                    paths.crum_url(self.row[_KEY_COL]),
+                )
             return True
 
         if command == "convert":
