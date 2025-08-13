@@ -38,7 +38,7 @@ clean: FORCE
 
 ########## CONTENT GENERATION, TESTS and FORMATTING ##########
 .PHONY: all
-all: crum flashcards kindle bible transpile test report
+all: crum kellia copticsite anki kindle bible transpile test
 
 .PHONY: test
 test: FORCE
