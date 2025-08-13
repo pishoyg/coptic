@@ -194,7 +194,7 @@ class Code(abc.ABC):
     """Code tracks a subset of the files of code for statistics purposes."""
 
     # We store all files of code in a static property.
-    @lazy.LazyStaticProperty
+    @lazy.StaticProperty
     @staticmethod
     def all_foc() -> list[str]:
         # See our shell environment for the definition of the findexx command.
@@ -206,7 +206,7 @@ class Code(abc.ABC):
         return paths
 
     # Statistic for the total number of files of code.
-    @lazy.LazyStaticProperty
+    @lazy.StaticProperty
     @staticmethod
     def all_foc_stat() -> Stat:
         return Stat(
@@ -216,7 +216,7 @@ class Code(abc.ABC):
         )
 
     # Statistic for the total number of lines of code.
-    @lazy.LazyStaticProperty
+    @lazy.StaticProperty
     @staticmethod
     def all_loc_stat() -> Stat:
         return Stat(
@@ -319,7 +319,7 @@ class Comp(Code):
 class Crum:
     """Crum sheet statistics."""
 
-    @lazy.LazyStaticProperty
+    @lazy.StaticProperty
     @staticmethod
     def _sheet() -> list[dict[str, str | int | float]]:
         return tsv.roots_sheet().get_all_records()

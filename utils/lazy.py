@@ -1,14 +1,14 @@
 """Lazy evaluation!"""
 
-# TODO: (#221) The LazyStaticProperty could be used elsewhere. Adopt it more
-# widely.
-# TODO: (#221) Define a LazyDynamicProperty decorator as well.
+# TODO: (#221) The StaticProperty could be used elsewhere. Adopt it more widely.
+# TODO: (#221) Define a lazy DynamicProperty decorator as well.
+# TODO: (#221) Define a lazy GlobalProperty decorator as well.
 import typing
 
 T = typing.TypeVar("T")
 
 
-class LazyStaticProperty(typing.Generic[T]):
+class StaticProperty(typing.Generic[T]):
     """A descriptor for creating lazy-loaded, cached static properties.
 
     The decorated function is executed only on the first access.
