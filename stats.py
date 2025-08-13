@@ -199,6 +199,10 @@ def _loc(paths: list[str]) -> int:
 class Code(abc.ABC):
     """Code tracks a subset of the files of code for statistics purposes."""
 
+    # TODO: (#0) the static fields below will be evaluated whenever the code
+    # is imported, even if they end up being unused. Don't evaluate the
+    # fields unless explicitly needed.
+
     # We store all files of code in a static field.
     # See our shell environment for the definition of the findexx command.
     all_foc: list[str] = _run("source .env && findexx . -type f").splitlines()
@@ -287,6 +291,8 @@ class Comp(Code):
 class Crum:
     """Crum sheet statistics."""
 
+    # TODO: (#0) Don't evaluate static fields by default. Evaluate only if
+    # needed.
     _sheet: list[dict[str, str | int | float]] = (
         tsv.roots_sheet().get_all_records()
     )
@@ -416,6 +422,12 @@ def _report(commit: bool) -> list[Stat]:
     return stats
 
 
+# TODO: (#0) This method evaluates the values of the stats and logs them,
+# instead of simply returning the Stat objects. For some purposes, such as
+# graphing the saved stats or reminding users of stat collection, the values are
+# not needed, and evaluating them only slows down the script.
+# Let's have the function instead return mostly-unevaluated Stat objects. Let's
+# also parameterize logging.
 def _stats() -> Generator[Stat]:
     yield Code.all_foc_stat
     yield Code.all_loc_stat
