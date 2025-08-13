@@ -62,7 +62,7 @@ from collections import abc
 
 import genanki  # type: ignore[import-untyped]
 
-from utils import concur, file, log, page, sane
+from utils import concur, file, lazy, log, page, sane
 
 NOTE_CLASS = "NOTE"
 ANKI_NOTE_CLASS = "ANKI"
@@ -309,7 +309,10 @@ class MediaFile:
     sure each media file has a unique basename.
     """
 
-    temp_dir: str = tempfile.mkdtemp()
+    @lazy.StaticProperty
+    @staticmethod
+    def temp_dir() -> str:
+        return tempfile.mkdtemp()
 
     def __init__(self, parent: str, path: str) -> None:
         self._path: str = os.path.join(parent, path)
