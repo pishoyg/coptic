@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 """Parse Crum's dictionary."""
+
+
 import pandas as pd
 
 from dictionary.marcion_sourceforge_net import appendices_helper as app

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Process the Bible data."""
 
+
 # NOTE: As a general convention, methods ending with _aux return generators,
 # rather than string literals.
 import html
@@ -113,6 +114,7 @@ class ColorRange:
 
         Returns:
             The larger range.
+
         """
         if self.within(other):
             return other

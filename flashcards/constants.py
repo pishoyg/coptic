@@ -232,6 +232,7 @@ class CrumIndexer(Mother):
 
         Returns:
             A list of deck indexes.
+
         """
         index_to_keys: defaultdict[str, list[str]] = defaultdict(list)
         assert len(keys) == len(indexes)
@@ -751,6 +752,7 @@ class Crum(Decker):
 
         Returns:
             A list of integers, with duplicate elements eliminated.
+
         """
         if at_most_once:
             return list(dict.fromkeys(arr))

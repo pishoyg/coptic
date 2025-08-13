@@ -68,6 +68,7 @@ def inflect(morpheme: str, typ: Type) -> list[str]:
 
     Returns:
         A list of inflected forms of the given word.
+
     """
     prefixes: list[str] = sum(_TYPE_TO_PREFIX_LIST[typ], [])
     assert COPTIC_ONLY_BLOCK.fullmatch(morpheme)

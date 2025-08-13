@@ -12,6 +12,7 @@ def ssplit(line: str, *args: typing.Any) -> list[str]:
 
     Returns:
         The string parts.
+
     """
     return list(
         filter(None, map(lambda word: word.strip(), line.split(*args))),

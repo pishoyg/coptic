@@ -151,7 +151,7 @@ class KELLIASearchResult extends xooxle.SearchResult {
    * @returns
    */
   override link(): string {
-    return paths.CDO_LOOKUP_BY_KEY_PREFIX + this.key.toString();
+    return paths.CDO_LOOKUP_BY_KEY_PREFIX + this.key;
   }
 
   /**

@@ -10,7 +10,9 @@ This script has two purposes:
     Whenever the content of `docs/` changes in such a way that an update needs
     to be done to `findexx` or Playwright tests, this test will act as a
     reminder.
+
 """
+
 
 # TODO: (#0) fnmatch is not strict enough! For example, it was found that
 # `dir/*.txt` can match the file path `dir/dir/file.txt`! Figure this out!

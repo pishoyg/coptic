@@ -16,6 +16,7 @@ def _semver_sort_key(file_path: str) -> list[str | int]:
 
     Returns:
         The semantic versioning sort key.
+
     """
     file_path = os.path.basename(file_path)
     return list(map(int, _INTEGER_RE.findall(file_path))) + [

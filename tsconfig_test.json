@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "include": ["./docs/test/**/*.ts"],
+  "exclude": [],
   "compilerOptions": {
     // Do not transpile unit tests to JavaScript.
     "noEmit": true

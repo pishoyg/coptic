@@ -70,6 +70,7 @@ def apply(
         args: optional keyword parameters to pass to worksheet.update.
             See
             https://docs.gspread.org/en/latest/api/models/worksheet.html#gspread.worksheet.Worksheet.update.
+
     """
     # For the purpose of writing everything on one column, we generate a list of
     # lists, where each sublist has a single item.

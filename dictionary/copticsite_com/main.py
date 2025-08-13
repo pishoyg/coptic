@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 """Process the copticsite dictionary."""
+
+
 import pathlib
 import re
 
@@ -23,7 +25,6 @@ _SUFFIX_COL: str = "suffix"
 _PRETTIFY_COL: str = "prettify"
 
 # SUFFIX maps the word kinds to a map of word genders to suffixes.
-# TODO: (#10) Revisit the suffixes. Make display more friendly.
 _SUFFIX: dict[str, dict[str, str]] = {
     "": {
         "": "",

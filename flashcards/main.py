@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Generate Lexicon data in HTML, Anki, and Xooxle formats."""
 
+
 import argparse
 import os
 

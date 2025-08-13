@@ -215,7 +215,7 @@ export class Shortcut {
   textDescription(): string {
     return typeof this.description === 'string'
       ? this.description.replace(/<[^>]*>/g, '')
-      : this.description.textContent!;
+      : this.description.textContent;
   }
 }
 

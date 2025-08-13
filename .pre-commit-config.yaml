@@ -181,11 +181,6 @@ repos:
     hooks:
       - id: setup-cfg-fmt
 
-  - repo: https://github.com/PyCQA/docformatter
-    rev: v1.7.8-rc1
-    hooks:
-      - id: docformatter
-
   - repo: https://github.com/pylint-dev/pylint
     rev: v3.3.8
     hooks:
@@ -357,6 +352,7 @@ repos:
         entry: dictionary/marcion_sourceforge_net/main.py
         language: system
         files: ^dictionary/marcion_sourceforge_net/
+        pass_filenames: false
       # Dawoud's scan sentinels.
       - id: scan-sentinels
         name: scan-sentinels

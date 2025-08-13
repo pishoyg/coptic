@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Collect and process statistics."""
 
+
 import abc
 import argparse
 import enum
@@ -115,6 +116,7 @@ class Stat:
 
         Returns:
             A key that can be used to sort / group stats by dashboard.
+
         """
         if not self._dash:
             return ""
@@ -152,6 +154,7 @@ class Stat:
 
         Returns:
             Value of the statistic, guaranteed as an integer.
+
         """
         val: int | str = self.val()
         assert isinstance(val, int)
@@ -256,6 +259,7 @@ class Code(abc.ABC):
         Returns:
             A lines-of-code statistic based on the subset of files of code
             tracked by this object.
+
         """
         return Stat(
             f"loc_{self._name}",
@@ -274,6 +278,7 @@ class Code(abc.ABC):
 
         Returns:
             Number of lines in the given list of files.
+
         """
         return sum(map(len, map(file.readlines, files)))
 
@@ -296,6 +301,7 @@ class Lang(Code):
         Returns:
             A lines-of-code statistic based on the subset of files of code
             tracked by this object.
+
         """
         return Stat(
             f"foc_{self._name}",
@@ -344,6 +350,7 @@ class Crum:
             minimum: Minimum valid statistic value.
             maximum: Maximum valid statistic value.
             dash: The dashboard that this statistic belongs to.
+
         """
         self._field: str = field
         self._regex: str | None = regex

@@ -43,6 +43,7 @@ def info(*args: object, level: bool = True):
     Args:
         *args: Arguments to print.
         level: Whether to prepend the level to the message.
+
     """
     _print(
         colorama.Fore.GREEN,
@@ -58,6 +59,7 @@ def warn(*args: object, level: bool = True):
     Args:
         *args: Arguments to print.
         level: Whether to prepend the level to the message.
+
     """
     _print(
         colorama.Fore.YELLOW,
@@ -73,6 +75,7 @@ def error(*args: object, level: bool = True):
     Args:
         *args: Arguments to print.
         level: Whether to prepend the level to the message.
+
     """
     _print(
         colorama.Fore.RED,
@@ -89,6 +92,7 @@ def err(cond: object, *args: object, level: bool = True):
         cond: The condition to evaluate. If true, do nothing.
         *args: Arguments to print.
         level: Whether to prepend the level to the message.
+
     """
     if not cond:
         error(*args, level=level)
@@ -100,6 +104,7 @@ def throw(*args: object, level: bool = True):
     Args:
         *args: Arguments to print.
         level: Whether to prepend the level to the message.
+
     """
     _print(
         colorama.Fore.RED,
@@ -117,6 +122,7 @@ def ass(cond: object, *args: object, level: bool = True):
         cond: The condition to evaluate. If true, do nothing.
         *args: Arguments to print.
         level: Whether to prepend the level to the message.
+
     """
     if not cond:
         throw(*args, level=level)
@@ -131,6 +137,7 @@ def fatal(*args: object, level: bool = True):
     Args:
         *args: Arguments to print.
         level: Whether to prepend the level to the message.
+
     """
     _print(
         colorama.Fore.RED,
@@ -150,6 +157,7 @@ def assass(cond: object, *args: object, level: bool = True):
         cond: The condition to evaluate. If true, do nothing.
         *args: Arguments to print.
         level: Whether to prepend the level to the message.
+
     """
     if not cond:
         fatal(*args, level=level)

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Convert Saint Macarius's Dictionary Data to Unicode."""
 
+
 import pathlib
 from collections import Counter
 
@@ -102,6 +103,7 @@ def _known(ch: str) -> bool:
 
     Returns:
         Whether the given character is known to our parser.
+
     """
     return (
         ch in _ENCODING

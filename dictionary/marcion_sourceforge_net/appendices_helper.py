@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Crum appendices helper."""
 
+
 # TODO: (#204) This module was intended as a generic helper for all appendices,
 # back when the appendices lived in a separate sheet from the main dictionary
 # data (see #325). At the moment, we no longer have a strong notiif9eeff39f
@@ -299,6 +300,7 @@ class _House:
 
         Returns:
             A boolean indicating whether any changes were made.
+
         """
         added, updated = [], []
 
@@ -529,6 +531,7 @@ class _Matriarch:
 
         Returns:
             New house.
+
         """
         house: _House = _House(row[_KEY_COL], row[col])
         added, updated = house.marry(spouses)
@@ -650,6 +653,7 @@ class Runner:
 
                 - Input: "https://remnqymi.com/crum/26.html#:~:text=calf"
                 - Output: "26 calf"
+
             """
             # NOTE: The following replacement of back slashes might be
             # problematic. It was introduced to appease an idiosyncratic shell!

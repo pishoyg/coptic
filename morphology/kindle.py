@@ -129,6 +129,7 @@ def _escape_amp(text: str) -> str:
 
     Returns:
         The string, with HTML special characters escaped.
+
     """
     assert _not_escaped(text)
     return text.replace("&", "&amp;")
@@ -316,6 +317,7 @@ class Dictionary:
 
         Args:
             directory: Output directory.
+
         """
         pathlib.Path(directory).mkdir(exist_ok=True)
 

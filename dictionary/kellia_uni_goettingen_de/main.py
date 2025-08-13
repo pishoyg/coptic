@@ -10,7 +10,10 @@ The original file was snapshotted on 2024.06.01.
 Edits made to the original file beyond that data should be incorporated.
 View history at:
     https://github.com/KELLIA/dictionary/commits/master/utils/dictionary_reader.py
+
 """
+
+
 # TODO: (#305) There are some typos in the data. Fix at the origin.
 
 import glob
@@ -579,8 +582,8 @@ def _gloss_bibl(ref_bibl: str) -> str:
 
     Returns:
         The HTML of the bibliography, with hints added.
-    """
 
+    """
     page_expression = r"(?: §)? ?[0-9A-Za-z:]+(, ?[0-9A-Za-z:]+)*"
     template = '<a class="hint" data-tooltip="**src**">?</a>'
 
@@ -692,7 +695,6 @@ def _process_entry(
     Returns:
         A tuple representing new row to add to the db.
     """
-
     if "status" in entry.attrib:
         if entry.attrib["status"] == "deprecated":
             return None  # Entire entry is deprecated, used by DDGLC entries

@@ -45,6 +45,7 @@ Deck IDs are hardcoded.
 Model IDs are hardcoded.
 
 [1] https://github.com/kerrickstaley/genanki?tab=readme-ov-file#note-guids
+
 """
 
 # TODO: (#0) For text generation, it's likely more efficient to use generators
@@ -76,8 +77,9 @@ FONT_SRC_RE: re.Pattern[str] = re.compile(r"src: url\('([^']*)'\)")
 class GenankiNote(genanki.Note):
     """GenankiNote represents an Anki Note.
 
-    As of the time of writing, this is merely a wrapper used to override
-    a method.
+    As of the time of writing, this is merely a wrapper used to override a
+    method.
+
     """
 
     @property
@@ -305,8 +307,9 @@ class Note:
 class MediaFile:
     """MediaFile represents a media file.
 
-    Anki doesn't allow duplicate basenames in the media, so we must make
-    sure each media file has a unique basename.
+    Anki doesn't allow duplicate basenames in the media, so we must make sure
+    each media file has a unique basename.
+
     """
 
     @cache.StaticProperty
@@ -322,6 +325,7 @@ class MediaFile:
 
         Returns:
             The basename of the file in the destination directory.
+
         """
         return self._path.replace(os.sep, "_")
 
@@ -330,6 +334,7 @@ class MediaFile:
 
         Returns:
             The full path of the file in the destination directory.
+
         """
         return os.path.join(MediaFile.temp_dir, self.basename())
 

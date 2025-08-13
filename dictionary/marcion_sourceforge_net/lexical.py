@@ -59,13 +59,14 @@ class Line:
     This represents a number of forms and their associated dialects. All
     dialects in the line apply to all the forms in the line.
 
-    Oftentimes, that comprises everything in the line. Though other
-    entities may exist, such as a type override, a reference, or a
-    comment (in plain English).
+    Oftentimes, that comprises everything in the line. Though other entities
+    may exist, such as a type override, a reference, or a comment (in plain
+    English).
 
-    As of the time of writing, we don't do a great job at extracting
-    those extra entities and precisely pinpointing the form. Lots of
-    work needs to be done on improving line parsing.
+    As of the time of writing, we don't do a great job at extracting those
+    extra entities and precisely pinpointing the form. Lots of work needs to be
+    done on improving line parsing.
+
     """
 
     def __init__(

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Crum images helper."""
 
+
 import argparse
 import glob
 import json
@@ -546,6 +547,7 @@ def _is_invalid_url(url: str) -> list[str]:
     Returns:
         A list representing the error message if the URL is invalid; the empty
         list if valid.
+
     """
     if not url.startswith("http"):
         return ["Invalid URL!"]

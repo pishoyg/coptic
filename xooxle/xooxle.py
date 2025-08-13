@@ -73,6 +73,7 @@ in the form of a directory of HTML files, but also when the input is a
 that yet, as our understanding of concurrency primitives is still limited.
 TODO: (#221) Understand concurrency primitives better, and optimize the
 performance.
+
 """
 
 import os
@@ -163,6 +164,7 @@ class Selector:
 
         Returns:
             The matching element.
+
         """
         found = soup.find_all(**self._kwargs)
         assert len(found) <= 1
@@ -238,6 +240,7 @@ class Capture:
 
         Returns:
             The simplified HTML version of the found tag.
+
         """
         tag = self._selector.select(soup)
         if not tag:
@@ -253,6 +256,7 @@ class Capture:
 
         Returns:
             HTML representing a simplified version of the tag.
+
         """
         parts: Iterable[str] = self._get_children_simplified_html(tag)
         parts = Cleaner.clean(parts)
@@ -332,6 +336,7 @@ class Cleaner:
     of the HTML - rather than the entire HTML combined in a single string.
     Some assumptions are made about the structure of the iterable (for example,
     we assume that a tag is always a standalone string).
+
     """
 
     IterOfIters = Iterable[Iterable[str]]  # pylint: disable=invalid-name
@@ -347,6 +352,7 @@ class Cleaner:
         Yields:
             A cleaned subsequence of the input tokens, after eliminating
             superfluous tokens.
+
         """
         units: Cleaner.IterOfIters
         units = Cleaner.split_iterable(tokens, Cleaner._is_unit_delimiter)
@@ -496,7 +502,6 @@ class Index:
             include: An optional filter that takes a file key as a parameter,
                 and decides whether to include it in the index.
         """
-
         self._input: str | Generator[tuple[str, str]] = input_dir
         self._include: Callable[[str], bool] | None = include
         self._extract: list[Selector] = extract

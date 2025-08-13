@@ -49,6 +49,7 @@ class SequentialExecutor:
           list(executor.map(fn, data))
     Our types don't implement a `submit` method despite its convenient because
     it's tricker to mimic, and error propagation with `submit` is also trickier.
+
     """
 
     def map[T, R](

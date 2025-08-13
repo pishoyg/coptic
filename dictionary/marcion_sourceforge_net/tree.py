@@ -118,6 +118,7 @@ class Node:
 
         Returns:
             A plain HTML table for the derivations.
+
         """
         return "".join(self.html_table_aux(explain, include_root))
 

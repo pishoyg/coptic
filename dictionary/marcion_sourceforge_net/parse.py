@@ -282,8 +282,8 @@ def _parse_reference(line: str) -> abc.Generator[str]:
     Yields:
         Strings, each representing an encoded representation of the one of the
         references.
-    """
 
+    """
     match = constants.REFERENCE_RE.match(line)
     assert match, line
     assert len(match.groups()) == 3, line
