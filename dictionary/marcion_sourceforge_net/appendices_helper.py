@@ -4,10 +4,9 @@
 
 # TODO: (#204) This module was intended as a generic helper for all appendices,
 # back when the appendices lived in a separate sheet from the main dictionary
-# data (see #325). At the moment, we no longer have a strong notiif9eeff39f
-# fixupon of appendiif9eeff39f fixupces, and we should probably group the logic
-# differently. This should be part of the more generic redesign of Crum's
-# dictionary.
+# data (see #325). At the moment, we no longer have such a separation, and we
+# should probably group the logic differently. This should be part of the more
+# generic redesign of Crum's dictionary.
 
 import argparse
 import collections
