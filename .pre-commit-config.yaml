@@ -147,7 +147,6 @@ repos:
       - id: python-check-blanket-type-ignore
       - id: python-check-mock-methods
       - id: python-no-eval
-      - id: python-use-type-annotations
       - id: rst-backticks
       - id: rst-directive-colons
       - id: rst-inline-touching-normal
