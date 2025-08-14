@@ -765,7 +765,7 @@ def _stats(verbose: bool = False) -> Generator[Stat]:
     Code.all_foc_stat.log(verbose)
     acc: int = 0
     for stat in map(Lang.foc_stat, _CODE_BY_LANG):
-        stat.log(verbose, True)
+        stat.log(verbose, indent=True)
         acc += stat.num()
         yield stat
     assert acc == Code.all_foc_stat.val()
@@ -775,7 +775,7 @@ def _stats(verbose: bool = False) -> Generator[Stat]:
     Code.all_loc_stat.log(verbose)
     acc = 0
     for stat in map(Lang.loc_stat, _CODE_BY_LANG):
-        stat.log(verbose, True)
+        stat.log(verbose, indent=True)
         acc += stat.num()
         yield stat
     assert acc == Code.all_loc_stat.val()
@@ -785,16 +785,17 @@ def _stats(verbose: bool = False) -> Generator[Stat]:
     acc = 0
     Code.all_loc_stat.log(verbose)
     for stat in map(Comp.loc_stat, _CODE_BY_COMPONENT):
-        stat.log(verbose, True)
+        stat.log(verbose, indent=True)
         acc += stat.num()
         yield stat
     assert acc == Code.all_loc_stat.val()
     del acc
 
     # Crum statistics.
-    log.info("Crum:")
+    if verbose:
+        log.info("Crum:")
     for stat in _CRUM_STATS:
-        stat.log(verbose, True)
+        stat.log(verbose, indent=True)
         yield stat
 
     # Miscellaneous statistics.
