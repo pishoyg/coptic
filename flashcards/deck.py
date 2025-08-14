@@ -63,7 +63,7 @@ from collections import abc
 
 import genanki  # type: ignore[import-untyped]
 
-from utils import cache, concur, ensure, file, log, page
+from utils import concur, ensure, file, log, page
 
 NOTE_CLASS = "NOTE"
 ANKI_NOTE_CLASS = "ANKI"
@@ -314,10 +314,7 @@ class MediaFile:
 
     """
 
-    @cache.StaticProperty
-    @staticmethod
-    def temp_dir() -> str:
-        return tempfile.mkdtemp()
+    _temp_dir: str = tempfile.mkdtemp()
 
     def __init__(self, parent: str, path: str) -> None:
         self._path: str = os.path.join(parent, path)
@@ -338,7 +335,7 @@ class MediaFile:
             The full path of the file in the destination directory.
 
         """
-        return os.path.join(MediaFile.temp_dir, self.basename())
+        return os.path.join(MediaFile._temp_dir, self.basename())
 
     def materialize(self) -> None:
         """Copy the file to the destination directory."""
@@ -346,7 +343,7 @@ class MediaFile:
 
     @staticmethod
     def clean() -> None:
-        shutil.rmtree(MediaFile.temp_dir)
+        shutil.rmtree(MediaFile._temp_dir)
 
     @typing.override
     def __eq__(self, other: object) -> bool:

@@ -20,7 +20,7 @@ class StaticProperty(typing.Generic[T]):
     """A descriptor for creating lazy-loaded, cached static properties.
 
     The decorated function is executed only on the first access.
-
+    NOTE: This is NOT thread- or process-safe!
     """
 
     def __init__(self, func: typing.Callable[[], T]):
