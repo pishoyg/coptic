@@ -85,54 +85,8 @@ def error(*args: object, level: bool = True):
     )
 
 
-def err(cond: object, *args: object, level: bool = True):
-    """If the condition is not satisfied, log an error.
-
-    Args:
-        cond: The condition to evaluate. If true, do nothing.
-        *args: Arguments to print.
-        level: Whether to prepend the level to the message.
-
-    """
-    if not cond:
-        error(*args, level=level)
-
-
-def throw(*args: object, level: bool = True):
-    """Throw an exception.
-
-    Args:
-        *args: Arguments to print.
-        level: Whether to prepend the level to the message.
-
-    """
-    _print(
-        colorama.Fore.RED,
-        colorama.Fore.MAGENTA,
-        severity="error" if level else "",
-        *args,
-        exception=True,
-    )
-
-
-def ass(cond: object, *args: object, level: bool = True):
-    """Assert! If the condition is not satisfied, throw an error.
-
-    Args:
-        cond: The condition to evaluate. If true, do nothing.
-        *args: Arguments to print.
-        level: Whether to prepend the level to the message.
-
-    """
-    if not cond:
-        throw(*args, level=level)
-
-
-# TODO: (#0) `fatal` doesn't provide a stack trace! And it's somewhat pointless.
-# Let's use `throw`.
-# Same for `assess`! We can replace it with `ass`.
 def fatal(*args: object, level: bool = True):
-    """Log an error and exit with a nonzero status.
+    """Log an error and throw an exception.
 
     Args:
         *args: Arguments to print.
@@ -148,22 +102,6 @@ def fatal(*args: object, level: bool = True):
     exit(1)
 
 
-def assass(cond: object, *args: object, level: bool = True):
-    """Assassinate.
-
-    If a condition is not met, exit with a nonzero status.
-
-    Args:
-        cond: The condition to evaluate. If true, do nothing.
-        *args: Arguments to print.
-        level: Whether to prepend the level to the message.
-
-    """
-    if not cond:
-        fatal(*args, level=level)
-
-
-def wrote(path: str, verify: bool = True) -> None:
-    if verify:
-        assert os.path.exists(path)
+def wrote(path: str) -> None:
+    assert os.path.exists(path)
     info("Wrote", path)

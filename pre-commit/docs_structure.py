@@ -26,7 +26,7 @@ from collections import abc
 
 import bs4
 
-from utils import concur, log, paths
+from utils import concur, ensure, log, paths
 
 parser = argparse.ArgumentParser(
     description="Validate the structure of `docs/`."
@@ -78,7 +78,7 @@ class Pattern:
         if self._required:
             assert len(hit) == len(self._patterns)
             for p, h in zip(self._patterns, hit):
-                log.assass(h, p, "did not match any files!")
+                ensure.ensure(h, p, "did not match any files!")
         return results[True], results[False]
 
     def __lt__(self, other: typing.Self) -> bool:
@@ -198,11 +198,7 @@ def main():
             classes: set[str] = {cls for classes in mapped for cls in classes}
             pattern_to_classes[pattern] = classes
 
-    log.assass(
-        not files,
-        "The following files were not matched by any pattern:",
-        files,
-    )
+    ensure.ensure(not files, files, "did not match any patterns!")
 
     if args.html_classes:
         _print_classes(pattern_to_classes)

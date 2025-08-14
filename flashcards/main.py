@@ -8,7 +8,7 @@ import os
 import genanki  # type: ignore[import-untyped]
 
 from flashcards import constants, deck
-from utils import concur, file, log, sane
+from utils import concur, ensure, file, log
 from xooxle import xooxle
 
 ANKI_PATH = os.path.join(constants.LEXICON_DIR, "anki/coptic.apkg")
@@ -47,17 +47,14 @@ _ = argparser.add_argument(
 
 
 def verify_unique_object_keys(decks: list[genanki.Deck]) -> None:
-    sane.verify_unique([d.deck_id for d in decks], "Deck ids")
-    sane.verify_unique([d.name for d in decks], "Deck names")
-    sane.verify_unique(
+    ensure.unique([d.deck_id for d in decks], "Deck ids")
+    ensure.unique([d.name for d in decks], "Deck names")
+    ensure.unique(
         [model.name for d in decks for model in d.models],
         "Model names",
     )
-    sane.verify_unique(
-        [model.id for d in decks for model in d.models],
-        "Model ids",
-    )
-    sane.verify_unique(
+    ensure.unique([model.id for d in decks for model in d.models], "Model ids")
+    ensure.unique(
         [node.guid for d in decks for node in d.notes],
         "Node GUIDs.",
     )

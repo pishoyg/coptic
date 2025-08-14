@@ -63,7 +63,7 @@ from collections import abc
 
 import genanki  # type: ignore[import-untyped]
 
-from utils import cache, concur, file, log, page, sane
+from utils import cache, concur, ensure, file, log, page
 
 NOTE_CLASS = "NOTE"
 ANKI_NOTE_CLASS = "ANKI"
@@ -378,7 +378,7 @@ class Deck:
         self.css_dir: str = os.path.dirname(css_path)
         self.css: str = file.read(css_path)
         self.notes: list[Note] = notes
-        sane.verify_unique(
+        ensure.unique(
             (note.key for note in self.notes),
             "Note keys must be unique!",
         )
@@ -421,8 +421,8 @@ class Deck:
     def __anki_js_aux(self) -> abc.Generator[str]:
         # We don't allow notes to have different JavaScript, because in our Anki
         # package, we define the JavaScript in the template.
-        js_path: str = sane.assert_one({note.js_path for note in self.notes})
-        js_start: str = sane.assert_one(
+        js_path: str = ensure.singleton({note.js_path for note in self.notes})
+        js_start: str = ensure.singleton(
             {note.js_start for note in self.notes},
         )
 

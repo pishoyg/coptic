@@ -6,7 +6,7 @@ import gspread
 import pandas as pd
 from google.oauth2 import service_account
 
-from utils import cache, log, paths
+from utils import cache, ensure, log, paths
 
 _GSPREAD_SCOPE = [
     "https://spreadsheets.google.com/feeds",
@@ -80,7 +80,7 @@ def apply(
     ]
     # Get the name of the destination column.
     col_idx: int = get_column_index(worksheet, dst)
-    log.ass(
+    ensure.ensure(
         col_idx <= 26,
         "I am still not smart enough to infer the names of columns > 26!",
     )

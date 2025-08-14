@@ -5,7 +5,7 @@ import pathlib
 import gspread
 import pandas as pd
 
-from utils import cache, gcloud, log, text
+from utils import cache, ensure, gcloud, text
 
 _GSPREAD_URL: str = (
     # pylint: disable-next=line-too-long
@@ -55,7 +55,7 @@ _KEY_WORD_COL: str = "key_word"
 def _verify_balanced_brackets(df: pd.DataFrame) -> None:
     for r, row in df.iterrows():
         for c, value in row.items():
-            log.ass(
+            ensure.ensure(
                 text.are_brackets_balanced(value),
                 "row",
                 r,
@@ -78,7 +78,7 @@ def _is_sorted(tsv: pd.DataFrame, column_names: list[str]):
 def roots() -> pd.DataFrame:
     tsv: pd.DataFrame = gcloud.to_df(Sheet.roots_sheet)
     _verify_balanced_brackets(tsv)
-    log.assass(
+    ensure.ensure(
         _is_sorted(tsv, _WRD_SORT_COLS),
         "Roots",
         "TSV is not sorted by",
@@ -89,14 +89,14 @@ def roots() -> pd.DataFrame:
 
 def _valid_drv_row(row: pd.Series) -> bool:
     key = row["key"]
-    log.assass(
+    ensure.ensure(
         not row[_DRV_ALL_COLS].eq("").any(),
         "Row",
         key,
         "doesn't populate all the columns",
         _DRV_ALL_COLS,
     )
-    log.assass(
+    ensure.ensure(
         not row[_DRV_ANY_COLS].eq("").all(),
         "Row",
         key,
@@ -115,7 +115,7 @@ def derivations() -> pd.DataFrame:
     prev_key_word = ""
     for _, row in tsv.iterrows():
         cur: str = row[_KEY_WORD_COL]
-        log.assass(
+        ensure.ensure(
             cur == prev_key_word or not cur or not prev_key_word,
             "Empty rows are broken at",
             cur,
@@ -131,7 +131,7 @@ def derivations() -> pd.DataFrame:
     tsv.apply(_valid_drv_row, axis=1)
 
     # Validate sorting.
-    log.assass(
+    ensure.ensure(
         _is_sorted(tsv, _DRV_SORT_COLS),
         "Derivations",
         "TSV is not sorted by",

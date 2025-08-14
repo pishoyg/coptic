@@ -18,7 +18,7 @@ import requests
 from PIL import Image
 
 from dictionary.marcion_sourceforge_net import tsv
-from utils import file, log, paths, sane, semver, text
+from utils import ensure, file, log, paths, semver, text
 
 # TODO: (#5) Prevent users from updating an image without updating its source.
 # Somehow!
@@ -354,7 +354,7 @@ def _get_target(path: str) -> str:
     assert path.startswith(_IMG_DIR)
     stem, ext = file.splitext(path)
     assert _STEM_RE.fullmatch(stem)
-    log.ass(ext in _VALID_EXTENSIONS, ext, "is not a valid extension")
+    ensure.ensure(ext in _VALID_EXTENSIONS, ext, "is not a valid extension")
     return os.path.join(_IMG_300_DIR, stem + _EXT_MAP.get(ext, ext))
 
 
@@ -445,7 +445,7 @@ def _retrieve(args, url: str, filename: str | None = None) -> str:
     filename = filename or _basename(url)
     download = requests.get(url, headers=headers, timeout=_TIMEOUT_S)
     if not download.ok:
-        log.throw(download.text)
+        log.fatal(download.text)
     filename = os.path.join(args.downloads, filename)
     with open(filename, "wb") as f:
         f.write(download.content)
@@ -469,7 +469,7 @@ def _get_artifacts(stem: str, img_ext: str = "") -> list[str]:
 
 def _rm(stem: str) -> None:
     if not _exists(stem):
-        log.throw(stem, "doesn't exist!")
+        log.fatal(stem, "doesn't exist!")
     for art in _get_artifacts(stem):
         os.remove(art)
 
@@ -480,7 +480,7 @@ def _exists(stem: str) -> bool:
 
 def _mv(a_stem: str, b_stem: str) -> None:
     if _exists(b_stem):
-        log.throw(b_stem, "already exists!")
+        log.fatal(b_stem, "already exists!")
     a_arts = _get_artifacts(a_stem)
     img_ext = file.ext(a_arts[0])
     b_arts = _get_artifacts(b_stem, img_ext)
@@ -490,7 +490,7 @@ def _mv(a_stem: str, b_stem: str) -> None:
 
 def _cp(a_stem: str, b_stem: str) -> None:
     if _exists(b_stem):
-        log.throw(b_stem, "already exists!")
+        log.fatal(b_stem, "already exists!")
     a_arts = _get_artifacts(a_stem)
     img_ext = file.ext(a_arts[0])
     b_arts = _get_artifacts(b_stem, img_ext)
@@ -565,7 +565,7 @@ def _infer_urls(*urls: str) -> tuple[list[str], list[str]]:
     for url in urls:
         err = _is_invalid_url(url)
         if err:
-            log.throw(*err)
+            log.fatal(*err)
     for url in urls:
         (reference, download)[_is_image_url(url)].append(url)
     while not reference or not download:
@@ -598,7 +598,7 @@ def _existing(key: str) -> list[str]:
 
 def _clear(key: str) -> None:
     if not key.isdigit():
-        log.throw(key, "is not a valid word key.")
+        log.fatal(key, "is not a valid word key.")
     for path in _existing(key):
         stem = file.stem(path)
         _rm(stem)
@@ -818,7 +818,7 @@ class _Prompter:
             # S for skip!
             files = _get_downloads(self.args)
             if files:
-                log.throw(
+                log.fatal(
                     "You can't skip with a dirty downloads directory:",
                     files,
                 )
@@ -857,13 +857,13 @@ class _Prompter:
                 f for f in _get_downloads(self.args) if f not in self.sources
             ]
             if len(files) != 1:
-                log.throw(
+                log.fatal(
                     "We can only assign sources to 1 file, got:",
                     files,
                 )
             params = [p for p in params if p.startswith("http")]
             if not params:
-                log.throw("No source given!")
+                log.fatal("No source given!")
             self.sources[files[0]] = sum(_infer_urls(*params), [])
             return True
 
@@ -903,11 +903,11 @@ class _Prompter:
             return True
 
         if not command.isdigit():
-            log.throw("Can't make sense of", command)
+            log.fatal("Can't make sense of", command)
 
         sense = int(command)
         if sense <= 0:
-            log.throw("Sense must be a positive integer, got:", sense)
+            log.fatal("Sense must be a positive integer, got:", sense)
 
         files = _get_downloads(self.args)
 
@@ -916,7 +916,7 @@ class _Prompter:
             e for e in map(file.ext, files) if e not in _VALID_EXTENSIONS
         ]
         if invalid:
-            log.throw(
+            log.fatal(
                 "Invalid extensions:",
                 invalid,
                 "Add them to the list if you're sure your script can"
@@ -926,18 +926,18 @@ class _Prompter:
         # Force size.
         invalid = _invalid_size(files)
         if invalid:
-            log.throw("Images have an invalid size:", invalid)
+            log.fatal("Images have an invalid size:", invalid)
 
         # Force sources.
         for f in files:
             if f not in self.sources:
-                log.throw("Please populate the source for:", f)
+                log.fatal("Please populate the source for:", f)
 
         # If there are no files, we assume that the user doesn't want to
         # add pictures for this word. (Unless they typed a sense, in which
         # case it would be weird!)
         if not files:
-            log.throw(
+            log.fatal(
                 "You typed a sense, but there are no pictures! This"
                 " doesn't make sense!",
             )
@@ -999,34 +999,30 @@ def validate():
     converted_images = _listdir_sorted(_IMG_300_DIR)
     sources = _listdir_sorted(_SOURCES_DIR)
 
-    sane.verify_unique(file.stems(images), "images:")
-    sane.verify_unique(file.stems(converted_images), "converted images:")
-    sane.verify_unique(file.stems(sources), "sources:")
+    ensure.unique(file.stems(images), "images:")
+    ensure.unique(file.stems(converted_images), "converted images:")
+    ensure.unique(file.stems(sources), "sources:")
 
     # Checking that extensions are valid.
-    sane.verify_all_belong_to_set(
+    ensure.members(
         file.exts(images),
         _VALID_EXTENSIONS,
         "Images: Unknown extension:",
     )
-    sane.verify_all_belong_to_set(
+    ensure.members(
         file.exts(converted_images),
         _VALID_EXTENSIONS_300,
         "Converted Images: Unknown extension:",
     )
-    sane.verify_all_belong_to_set(
-        file.exts(sources),
-        {".txt"},
-        "Sources: Unknown extension:",
-    )
+    ensure.members(file.exts(sources), {".txt"}, "Sources: Unknown extension:")
 
     # Verify that all three directories have the same set of IDs.
-    sane.verify_equal_sets(
+    ensure.equal_sets(
         file.stems(images),
         file.stems(converted_images),
         "Images and converted images:",
     )
-    sane.verify_equal_sets(
+    ensure.equal_sets(
         file.stems(images),
         file.stems(sources),
         "Images and sources:",

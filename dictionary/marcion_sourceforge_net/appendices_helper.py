@@ -20,7 +20,7 @@ import gspread
 import pandas as pd
 
 from dictionary.marcion_sourceforge_net import tsv
-from utils import gcloud, log, paths, sane, text
+from utils import ensure, gcloud, log, paths, text
 
 _KEY_COL: str = "key"
 _SISTERS_COL: str = "sisters"
@@ -384,11 +384,11 @@ class _Family:
         relatives: list[str] = [r.key for r in self.all_except_you()]
         # Verify no relative is recorded twice.
         if len(relatives) != len(set(relatives)):
-            log.throw("Duplicate sisters found at", self.key)
+            log.fatal("Duplicate sisters found at", self.key)
         # Verify that you haven't been mistakenly counted as a relative of
         # yourself.
         if self.key in relatives:
-            log.throw("Circular sisterhood at", self.key)
+            log.fatal("Circular sisterhood at", self.key)
         # Restrict the checks from here on to the native relatives.
         relatives = [r.key for r in self.natives_except_you()]
         for house, name in [
@@ -397,16 +397,12 @@ class _Family:
             (self.homonyms, "homonyms"),
         ]:
             if house.string() != house.ancestors_raw:
-                log.throw("House", self.key, "/", name, "needs formatting!")
+                log.fatal("House", self.key, "/", name, "needs formatting!")
         if not key_to_family:
             # We can't perform further validation.
             return
         # Verify that all relatives are documented.
-        sane.verify_all_belong_to_set(
-            relatives,
-            key_to_family,
-            "Nonexisting sister",
-        )
+        ensure.members(relatives, key_to_family, "Nonexisting sister")
         if not symmetry:
             return
         # If a is sister to b, then b is sister to a.
@@ -441,7 +437,7 @@ class _Validator:
                 map(lambda p: p[0], pairs),
             ).items()
         ):
-            log.throw("duplicate elements in JSON:", pairs)
+            log.fatal("duplicate elements in JSON:", pairs)
         return {key: value for key, value in pairs}
 
     def parse_senses(self, senses: str) -> dict[str, str]:
@@ -459,7 +455,7 @@ class _Validator:
         for sense_id in parsed:
             if sense_id.isdigit():
                 continue
-            log.throw(
+            log.fatal(
                 key,
                 "has a sense with an invalid key",
                 sense_id,
@@ -467,7 +463,7 @@ class _Validator:
             )
         largest: int = max(map(int, parsed.keys()))
         if largest != len(parsed):
-            log.throw(key, "has a gap in the senses!")
+            log.fatal(key, "has a gap in the senses!")
 
     def validate_sisters(self, df: pd.DataFrame) -> None:
         key_to_family: dict[str, _Family] = {
@@ -480,7 +476,7 @@ class _Validator:
         categories = _csplit(raw_categories)
         for cat in categories:
             if cat not in _KNOWN_CATEGORIES:
-                log.throw(key, "has an unknown category:", cat)
+                log.fatal(key, "has an unknown category:", cat)
 
     def validate(self, df: pd.DataFrame) -> None:
         for _, row in df.iterrows():
@@ -632,10 +628,10 @@ class Runner:
         _House.delete_empty_fragment = self.args.delete_empty_fragment
 
         self.args.cat = sorted(self.args.cat)
-        sane.verify_unique(self.args.cat, "Duplicate categories!")
+        ensure.unique(self.args.cat, "Duplicate categories!")
         for c in self.args.cat:
             if c not in _KNOWN_CATEGORIES:
-                log.throw(c, "is not a known category!")
+                log.fatal(c, "is not a known category!")
 
         def url_to_person(url_or_raw: str) -> _Person:
             """Convert a URL to a person initializer.
@@ -685,7 +681,7 @@ class Runner:
         self.args.homonyms = list(map(url_to_person, self.args.homonyms))
 
         if self.args.keys:
-            log.ass(
+            ensure.ensure(
                 self.args.cat or self.args.override_cat,
                 "--keys must be used in combination with either",
                 "--cat",
@@ -693,7 +689,7 @@ class Runner:
                 "--override_cat.",
             )
         if self.args.delete_empty_fragment:
-            log.ass(
+            ensure.ensure(
                 self.args.sisters or self.args.antonyms or self.args.homonyms,
                 "--delete_empty_fragment",
                 "used without any sisterhood arguments!",
@@ -713,7 +709,7 @@ class Runner:
         )
 
         if num_actions > 1:
-            log.throw("At most one command is required.")
+            log.fatal("At most one command is required.")
         return bool(num_actions)
 
     def validate(self) -> None:

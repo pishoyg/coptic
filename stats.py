@@ -18,7 +18,7 @@ import numpy as np
 import pandas as pd
 
 from dictionary.marcion_sourceforge_net import tsv
-from utils import cache, file, log, paths, sane
+from utils import cache, ensure, file, log, paths
 
 _ONE_DAY: int = 24 * 60 * 60
 _COMMIT_MESSAGE = "[Stats] Run `make stats`."
@@ -129,7 +129,7 @@ class Stat:
         )
         if isinstance(self._min, int):
             self._val = int(self._val)
-            log.ass(
+            ensure.ensure(
                 self._val >= self._min,
                 "value:",
                 self._val,
@@ -138,7 +138,7 @@ class Stat:
             )
         if isinstance(self._max, int):
             self._val = int(self._val)
-            log.ass(
+            ensure.ensure(
                 self._val <= self._max,
                 "value:",
                 self._val,
@@ -719,7 +719,7 @@ def _check_reminder():
 
 def _report(commit: bool, verbose: bool) -> list[Stat]:
     if commit:
-        log.assass(
+        ensure.ensure(
             not _run("git status --short"),
             "The repo is dirty. Collecting stats should be done on a clean"
             + " worktree."
@@ -731,7 +731,7 @@ def _report(commit: bool, verbose: bool) -> list[Stat]:
     df: pd.DataFrame = file.read_tsv(_TSV_FILE)
     stats: list[Stat] = list(_stats(verbose))
     record: dict[str, str | int] = {stat.name(): stat.val() for stat in stats}
-    sane.verify_equal_sets(
+    ensure.equal_sets(
         set(df.columns),
         set(record.keys()),
         "Collected columns don't match the stats file!",
@@ -755,7 +755,7 @@ def _stats(verbose: bool = False) -> Generator[Stat]:
     yield Code.all_loc_stat
 
     # Verify that the files-of-code breakdown represents a partitioning.
-    sane.verify_equal_sets(
+    ensure.equal_sets(
         Code.all_foc,
         sum([lang.files for lang in _CODE_BY_LANG], []),
         "The total doesn't equal the some of the parts!",
