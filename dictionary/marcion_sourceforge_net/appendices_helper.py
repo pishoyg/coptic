@@ -9,7 +9,6 @@
 # generic redesign of Crum's dictionary.
 
 import argparse
-import collections
 import json
 import shlex
 import subprocess
@@ -20,7 +19,7 @@ import gspread
 import pandas as pd
 
 from dictionary.marcion_sourceforge_net import tsv
-from utils import ensure, gcloud, log, paths, text
+from utils import ensure, gcp, log, paths, text
 
 _KEY_COL: str = "key"
 _SISTERS_COL: str = "sisters"
@@ -383,12 +382,14 @@ class _Family:
         # TODO: (#271) Add validation for Greek sisters as well.
         relatives: list[str] = [r.key for r in self.all_except_you()]
         # Verify no relative is recorded twice.
-        if len(relatives) != len(set(relatives)):
-            log.fatal("Duplicate sisters found at", self.key)
+        ensure.unique(relatives, "duplicate sisters found at", self.key)
         # Verify that you haven't been mistakenly counted as a relative of
         # yourself.
-        if self.key in relatives:
-            log.fatal("Circular sisterhood at", self.key)
+        ensure.ensure(
+            self.key not in relatives,
+            "circular sisterhood at",
+            self.key,
+        )
         # Restrict the checks from here on to the native relatives.
         relatives = [r.key for r in self.natives_except_you()]
         for house, name in [
@@ -396,8 +397,14 @@ class _Family:
             (self.antonyms, "antonyms"),
             (self.homonyms, "homonyms"),
         ]:
-            if house.string() != house.ancestors_raw:
-                log.fatal("House", self.key, "/", name, "needs formatting!")
+            ensure.ensure(
+                house.string() == house.ancestors_raw,
+                "House",
+                self.key,
+                "/",
+                name,
+                "needs formatting!",
+            )
         if not key_to_family:
             # We can't perform further validation.
             return
@@ -425,45 +432,32 @@ class _Family:
 class _Validator:
     """Validator validates data."""
 
-    def __init__(self) -> None:
-        self.decoder: json.JSONDecoder = json.JSONDecoder(
-            object_pairs_hook=self.dupe_checking_hook,
-        )
-
-    def dupe_checking_hook(self, pairs: list) -> dict[str, str]:
-        if any(
-            count > 1
-            for _, count in collections.Counter(
-                map(lambda p: p[0], pairs),
-            ).items()
-        ):
-            log.fatal("duplicate elements in JSON:", pairs)
-        return {key: value for key, value in pairs}
-
     def parse_senses(self, senses: str) -> dict[str, str]:
         # TODO: (#189) Once all senses are present, don't allow the field to be
         # absent.
         if not senses:
             return {}
 
-        return self.decoder.decode(senses)
+        parsed: dict[str, str] = json.loads(senses)
+        del senses
+        ensure.unique(parsed.keys())
+        ensure.unique(parsed.values())
+        return parsed
 
     def validate_senses(self, key: str, senses: str) -> None:
         parsed: dict[str, str] = self.parse_senses(senses)
         if not parsed:
             return
         for sense_id in parsed:
-            if sense_id.isdigit():
-                continue
-            log.fatal(
+            ensure.ensure(
+                sense_id.isdigit(),
                 key,
                 "has a sense with an invalid key",
                 sense_id,
                 "sense keys must be integers.",
             )
         largest: int = max(map(int, parsed.keys()))
-        if largest != len(parsed):
-            log.fatal(key, "has a gap in the senses!")
+        ensure.ensure(largest == len(parsed), key, "has a gap in the senses!")
 
     def validate_sisters(self, df: pd.DataFrame) -> None:
         key_to_family: dict[str, _Family] = {
@@ -473,10 +467,12 @@ class _Validator:
             fam.validate(key_to_family)
 
     def validate_categories(self, key: str, raw_categories: str) -> None:
-        categories = _csplit(raw_categories)
-        for cat in categories:
-            if cat not in _KNOWN_CATEGORIES:
-                log.fatal(key, "has an unknown category:", cat)
+        ensure.members(
+            _csplit(raw_categories),
+            _KNOWN_CATEGORIES,
+            key,
+            "has unknown categories",
+        )
 
     def validate(self, df: pd.DataFrame) -> None:
         for _, row in df.iterrows():
@@ -497,14 +493,14 @@ class _Matriarch:
         }
 
         self.col_idx: dict[str, int] = {
-            _SISTERS_COL: gcloud.get_column_index(self.sheet, _SISTERS_COL),
-            _ANTONYMS_COL: gcloud.get_column_index(self.sheet, _ANTONYMS_COL),
-            _HOMONYMS_COL: gcloud.get_column_index(self.sheet, _HOMONYMS_COL),
-            _GREEK_SISTERS_COL: gcloud.get_column_index(
+            _SISTERS_COL: gcp.column_num(self.sheet, _SISTERS_COL),
+            _ANTONYMS_COL: gcp.column_num(self.sheet, _ANTONYMS_COL),
+            _HOMONYMS_COL: gcp.column_num(self.sheet, _HOMONYMS_COL),
+            _GREEK_SISTERS_COL: gcp.column_num(
                 self.sheet,
                 _GREEK_SISTERS_COL,
             ),
-            _CATEGORIES_COL: gcloud.get_column_index(
+            _CATEGORIES_COL: gcp.column_num(
                 self.sheet,
                 _CATEGORIES_COL,
             ),
@@ -526,7 +522,6 @@ class _Matriarch:
 
         Returns:
             New house.
-
         """
         house: _House = _House(row[_KEY_COL], row[col])
         added, updated = house.marry(spouses)
@@ -629,9 +624,7 @@ class Runner:
 
         self.args.cat = sorted(self.args.cat)
         ensure.unique(self.args.cat, "Duplicate categories!")
-        for c in self.args.cat:
-            if c not in _KNOWN_CATEGORIES:
-                log.fatal(c, "is not a known category!")
+        ensure.members(self.args.cat, _KNOWN_CATEGORIES)
 
         def url_to_person(url_or_raw: str) -> _Person:
             """Convert a URL to a person initializer.
@@ -648,7 +641,6 @@ class Runner:
 
                 - Input: "https://remnqymi.com/crum/26.html#:~:text=calf"
                 - Output: "26 calf"
-
             """
             # NOTE: The following replacement of back slashes might be
             # problematic. It was introduced to appease an idiosyncratic shell!
@@ -708,8 +700,7 @@ class Runner:
             ),
         )
 
-        if num_actions > 1:
-            log.fatal("At most one command is required.")
+        ensure.ensure(num_actions <= 1, "At most one command is allowed!")
         return bool(num_actions)
 
     def validate(self) -> None:

@@ -5,7 +5,7 @@ import pathlib
 import gspread
 import pandas as pd
 
-from utils import cache, ensure, gcloud, text
+from utils import cache, ensure, gcp, text
 
 _GSPREAD_URL: str = (
     # pylint: disable-next=line-too-long
@@ -27,7 +27,7 @@ class Sheet:
     @cache.StaticProperty
     @staticmethod
     def sheet() -> gspread.spreadsheet.Spreadsheet:
-        return gcloud.spreadsheet(_GSPREAD_URL)
+        return gcp.spreadsheet(_GSPREAD_URL)
 
     @cache.StaticProperty
     @staticmethod
@@ -76,7 +76,7 @@ def _is_sorted(tsv: pd.DataFrame, column_names: list[str]):
 
 # TODO: (#399) Abandon intermediate TSV.
 def roots() -> pd.DataFrame:
-    tsv: pd.DataFrame = gcloud.to_df(Sheet.roots_sheet)
+    tsv: pd.DataFrame = gcp.to_df(Sheet.roots_sheet)
     _verify_balanced_brackets(tsv)
     ensure.ensure(
         _is_sorted(tsv, _WRD_SORT_COLS),
@@ -108,7 +108,7 @@ def _valid_drv_row(row: pd.Series) -> bool:
 
 # TODO: (#399) Abandon intermediate TSV.
 def derivations() -> pd.DataFrame:
-    tsv: pd.DataFrame = gcloud.to_df(Sheet.derivations_sheet)
+    tsv: pd.DataFrame = gcp.to_df(Sheet.derivations_sheet)
     _verify_balanced_brackets(tsv)
 
     # Validate empty rows are inserted.

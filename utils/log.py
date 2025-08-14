@@ -81,7 +81,7 @@ def error(*args: object, level: bool = True):
     )
 
 
-def fatal(*args: object, level: bool = True):
+def fatal(*args: object, level: bool = True) -> typing.NoReturn:
     """Log an error and throw an exception.
 
     Args:
@@ -93,9 +93,10 @@ def fatal(*args: object, level: bool = True):
         colorama.Fore.RED,
         colorama.Fore.MAGENTA,
         severity="fatal" if level else "",
+        exception=True,
         *args,
     )
-    exit(1)
+    assert False  # This should never execute.
 
 
 def wrote(path: str) -> None:

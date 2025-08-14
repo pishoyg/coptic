@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Crum images helper."""
 
-
 import argparse
 import glob
 import json
@@ -11,6 +10,7 @@ import re
 import shutil
 import subprocess
 import urllib
+from collections import abc
 
 import colorama
 import pandas as pd
@@ -290,9 +290,8 @@ def _get_downloads(args) -> list[str]:
     return files
 
 
-def _invalid_size(files: list[str]) -> list[str]:
+def _invalid_size(files: list[str]) -> abc.Generator[str]:
     assert _MIN_WIDTH > 0
-    invalid = []
     for f in files:
         image = Image.open(f)  # type: ignore[attr-defined]
         width, height = image.size
@@ -305,7 +304,7 @@ def _invalid_size(files: list[str]) -> list[str]:
                 _MIN_WIDTH,
                 "-",
             )
-            invalid.append(f)
+            yield f
             continue
         if width < _PREFER_MIN_WIDTH:
             log.warn(
@@ -327,7 +326,7 @@ def _invalid_size(files: list[str]) -> list[str]:
                 "-",
                 _MAX_RESIZE_HEIGHT,
             )
-            invalid.append(f)
+            yield f
             continue
         if (
             height < _PREFER_MIN_RESIZE_HEIGHT
@@ -343,7 +342,6 @@ def _invalid_size(files: list[str]) -> list[str]:
                 _PREFER_MAX_RESIZE_HEIGHT,
                 "; we prefer images with close-to-square dimensions.",
             )
-    return invalid
 
 
 def _is_wiki(url: str) -> bool:
@@ -404,8 +402,10 @@ def main():
             ],
         ),
     )
-    if len(actions) >= 2:
-        log.fatal("Up to one action argument can be given at a time.")
+    ensure.ensure(
+        len(actions) <= 1,
+        "Up to one action argument can be given at a time.",
+    )
 
     if args.validate:
         validate()
@@ -444,8 +444,7 @@ def _retrieve(args, url: str, filename: str | None = None) -> str:
         headers = _WIKI_HEADERS
     filename = filename or _basename(url)
     download = requests.get(url, headers=headers, timeout=_TIMEOUT_S)
-    if not download.ok:
-        log.fatal(download.text)
+    ensure.ensure(download.ok, download.text)
     filename = os.path.join(args.downloads, filename)
     with open(filename, "wb") as f:
         f.write(download.content)
@@ -468,8 +467,7 @@ def _get_artifacts(stem: str, img_ext: str = "") -> list[str]:
 
 
 def _rm(stem: str) -> None:
-    if not _exists(stem):
-        log.fatal(stem, "doesn't exist!")
+    ensure.ensure(_exists(stem), stem, "doesn't exist!")
     for art in _get_artifacts(stem):
         os.remove(art)
 
@@ -479,8 +477,7 @@ def _exists(stem: str) -> bool:
 
 
 def _mv(a_stem: str, b_stem: str) -> None:
-    if _exists(b_stem):
-        log.fatal(b_stem, "already exists!")
+    ensure.ensure(not _exists(b_stem), b_stem, "already exists!")
     a_arts = _get_artifacts(a_stem)
     img_ext = file.ext(a_arts[0])
     b_arts = _get_artifacts(b_stem, img_ext)
@@ -489,8 +486,7 @@ def _mv(a_stem: str, b_stem: str) -> None:
 
 
 def _cp(a_stem: str, b_stem: str) -> None:
-    if _exists(b_stem):
-        log.fatal(b_stem, "already exists!")
+    ensure.ensure(not _exists(b_stem), b_stem, "already exists!")
     a_arts = _get_artifacts(a_stem)
     img_ext = file.ext(a_arts[0])
     b_arts = _get_artifacts(b_stem, img_ext)
@@ -564,8 +560,7 @@ def _infer_urls(*urls: str) -> tuple[list[str], list[str]]:
     download: list[str] = []
     for url in urls:
         err = _is_invalid_url(url)
-        if err:
-            log.fatal(*err)
+        ensure.ensure(not err, *err)
     for url in urls:
         (reference, download)[_is_image_url(url)].append(url)
     while not reference or not download:
@@ -597,8 +592,7 @@ def _existing(key: str) -> list[str]:
 
 
 def _clear(key: str) -> None:
-    if not key.isdigit():
-        log.fatal(key, "is not a valid word key.")
+    ensure.ensure(key.isdigit(), key, "is not a valid word key.")
     for path in _existing(key):
         stem = file.stem(path)
         _rm(stem)
@@ -817,11 +811,11 @@ class _Prompter:
         if command == "s":
             # S for skip!
             files = _get_downloads(self.args)
-            if files:
-                log.fatal(
-                    "You can't skip with a dirty downloads directory:",
-                    files,
-                )
+            ensure.ensure(
+                not files,
+                "You can't skip with a dirty downloads directory:",
+                files,
+            )
             # We clear the sources!
             # It's guaranteed that the downloads directory is clean.
             self.sources.clear()
@@ -856,14 +850,13 @@ class _Prompter:
             files = [p for p in params if not p.startswith("http")] or [
                 f for f in _get_downloads(self.args) if f not in self.sources
             ]
-            if len(files) != 1:
-                log.fatal(
-                    "We can only assign sources to 1 file, got:",
-                    files,
-                )
+            ensure.ensure(
+                len(files) == 1,
+                "We can only assign sources to 1 file, got:",
+                files,
+            )
             params = [p for p in params if p.startswith("http")]
-            if not params:
-                log.fatal("No source given!")
+            ensure.ensure(params, "No source given!")
             self.sources[files[0]] = sum(_infer_urls(*params), [])
             return True
 
@@ -902,45 +895,37 @@ class _Prompter:
                 self.sources[path] = reference + [url]
             return True
 
-        if not command.isdigit():
-            log.fatal("Can't make sense of", command)
-
-        sense = int(command)
-        if sense <= 0:
-            log.fatal("Sense must be a positive integer, got:", sense)
+        ensure.ensure(command.isdigit(), "can't make sense of", command)
+        sense: int = int(command)
+        ensure.ensure(sense >= 1, "sense must be a positive integer")
 
         files = _get_downloads(self.args)
 
         # Force valid extension.
-        invalid = [
-            e for e in map(file.ext, files) if e not in _VALID_EXTENSIONS
-        ]
-        if invalid:
-            log.fatal(
-                "Invalid extensions:",
-                invalid,
-                "Add them to the list if you're sure your script can"
-                " process them.",
-            )
+        ensure.members(
+            map(file.ext, files),
+            _VALID_EXTENSIONS,
+            "Invalid file extensions! Remove the images, or add the"
+            + " extensions to the list if you're sure your script can"
+            + " process them.",
+        )
 
         # Force size.
-        invalid = _invalid_size(files)
-        if invalid:
-            log.fatal("Images have an invalid size:", invalid)
+        invalid = list(_invalid_size(files))
+        ensure.ensure(not invalid, "Images have an invalid size:", invalid)
+        del invalid
 
         # Force sources.
-        for f in files:
-            if f not in self.sources:
-                log.fatal("Please populate the source for:", f)
+        ensure.members(files, self.sources, "some sources are missing")
 
         # If there are no files, we assume that the user doesn't want to
         # add pictures for this word. (Unless they typed a sense, in which
         # case it would be weird!)
-        if not files:
-            log.fatal(
-                "You typed a sense, but there are no pictures! This"
-                " doesn't make sense!",
-            )
+        ensure.ensure(
+            files,
+            "You typed a sense, but there are no pictures! This"
+            " doesn't make sense!",
+        )
 
         # Verify the images.
         i = ""
@@ -1030,10 +1015,7 @@ def validate():
 
     # Check that all images have valid IDs.
     for stem in file.stems(images):
-        match = _STEM_RE.fullmatch(stem)
-        if match:
-            continue
-        log.fatal("Invalid stem:", stem)
+        ensure.ensure(_STEM_RE.fullmatch(stem), "invalid stem:", stem)
 
     # Validate content of the source files.
     for path in sources:
@@ -1043,8 +1025,11 @@ def validate():
             continue
         lines: list[str] = content.splitlines()
         del content
-        if not lines:
-            log.fatal("Source file is not empty, but has empty lines:", path)
+        ensure.ensure(
+            lines,
+            "Source file is not empty, but has empty lines:",
+            path,
+        )
         for line in lines:
             if line.startswith("http"):
                 continue

@@ -16,8 +16,8 @@ _GSPREAD_SCOPE = [
 ]
 
 
-class GCPClient:
-    """GCPClient caches a GCP client."""
+class Client:
+    """Client caches a GCP client."""
 
     @cache.StaticProperty
     @staticmethod
@@ -32,18 +32,14 @@ class GCPClient:
 
 
 def spreadsheet(gspread_url: str) -> gspread.spreadsheet.Spreadsheet:
-    return GCPClient.client.open_by_url(gspread_url)
+    return Client.client.open_by_url(gspread_url)
 
 
-def get_column_index(
-    worksheet: gspread.worksheet.Worksheet,
-    column: str,
-) -> int:
+def column_num(worksheet: gspread.worksheet.Worksheet, column: str) -> int:
     for idx, value in enumerate(worksheet.row_values(1)):
         if value == column:
             return idx + 1  # Google  Sheets uses 1-based indexing.
     log.fatal(column, "not found in sheet")
-    return -1  # Appease the linter.
 
 
 def to_df(worksheet: gspread.worksheet.Worksheet) -> pd.DataFrame:
@@ -79,7 +75,7 @@ def apply(
         for row in worksheet.get_all_records()
     ]
     # Get the name of the destination column.
-    col_idx: int = get_column_index(worksheet, dst)
+    col_idx: int = column_num(worksheet, dst)
     ensure.ensure(
         col_idx <= 26,
         "I am still not smart enough to infer the names of columns > 26!",
