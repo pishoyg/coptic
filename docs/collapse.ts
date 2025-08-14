@@ -128,7 +128,7 @@ export function addEventListenersForSiblings(toggleUponLoad = false): void {
     .forEach((collapse: HTMLElement): void => {
       const collapsible: HTMLElement =
         collapse.nextElementSibling as HTMLElement;
-      logger.err(
+      logger.ensure(
         collapsible.classList.contains(CLS.COLLAPSIBLE),
         'A .collapse must be followed by a .collapsible!'
       );

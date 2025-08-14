@@ -83,7 +83,7 @@ export class Index {
     const lines = index.trim().split('\n');
     const header: string[] = Index.toColumns(lines[0]!);
     // Verify that the header has the expected column names.
-    logger.assass(
+    logger.ensure(
       WANT_COLUMNS.every((col: string, idx: number) => header[idx] === col),
       header.slice(0, WANT_COLUMNS.length),
       'do not match the list of wanted columns',
@@ -120,7 +120,7 @@ export class Index {
    */
   static forceParseInt(str: string): number {
     const num = parseInt(str);
-    logger.assass(!isNaN(num), 'unable to parse page number', num);
+    logger.ensure(!isNaN(num), 'unable to parse page number', num);
     return num;
   }
 

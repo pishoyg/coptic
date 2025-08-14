@@ -229,7 +229,7 @@ function spellOutDialectsInDropdown(): void {
     )
     .forEach((el: HTMLInputElement): void => {
       const next: ChildNode | null = el.nextSibling;
-      logger.ass(next?.nodeType === Node.TEXT_NODE);
+      logger.ensure(next?.nodeType === Node.TEXT_NODE);
       const dialect: d.Dialect = d.DIALECTS[el.name as d.DIALECT];
       next?.parentNode?.replaceChild(dialect.title(), next);
     });
@@ -273,7 +273,7 @@ async function main(): Promise<void> {
 
   const dropdownDialects: dropdown.Droppable[] =
     dropdown.addEventListenersForSiblings();
-  logger.ass(dropdownDialects.length === 1);
+  logger.ensure(dropdownDialects.length === 1);
   if (d.setToDefaultIfUnset()) {
     // In order to alert the user to the fact that dialect selection has
     // changed, we make sure the dialect list is visible.

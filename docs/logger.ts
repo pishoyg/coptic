@@ -98,37 +98,8 @@ export function error(...message: unknown[]): void {
  *
  * @param {...any} message - Message to log.
  */
-export function raise(...message: unknown[]): void {
-  print(Colors.RED, Colors.PURPLE, 'error', true, ...message);
-}
-
-/**
- * Exit with a non-zero error code, and log an error message to the console.
- * NOTE: This is only available in Node.js, not in the browser.
- * TODO: (#457) Abandon Node.js validation.
- *
- * @param {...any} message - Message to log.
- */
 export function fatal(...message: unknown[]): void {
-  print(Colors.RED, Colors.PURPLE, 'fatal', false, ...message);
-  process.exit(1);
-}
-
-/**
- * Evaluate the condition. If it fails, log an error message!
- *
- * @param condition - Condition to evaluate.
- * @param {...any} message - Message to log (if the condition is not satisfied).
- *
- * TODO: (#457): What is the point of an error message that we may or may not
- * see in the console? We should probably rely on exceptions to catch errors in
- * the pre-publish step.
- */
-export function err(condition: boolean, ...message: unknown[]): void {
-  if (condition) {
-    return;
-  }
-  error(...message);
+  print(Colors.RED, Colors.PURPLE, 'error', true, ...message);
 }
 
 /**
@@ -138,24 +109,8 @@ export function err(condition: boolean, ...message: unknown[]): void {
  * @param condition - Condition to evaluate.
  * @param {...any} message - Message to log (if the condition is not satisfied).
  */
-export function ass(condition: boolean, ...message: unknown[]): void {
-  if (condition) {
-    return;
+export function ensure(condition: boolean, ...message: unknown[]): void {
+  if (!condition) {
+    fatal(...message);
   }
-  raise(...message);
-}
-
-/**
- * Evaluate the condition. If it fails, exit with a non-zero status, and log an
- * error message to the console.
- * NOTE: This is only available in Node.js.
- *
- * @param condition - Condition to evaluate.
- * @param {...any} message - Message to log (if the condition is not satisfied).
- */
-export function assass(condition: boolean, ...message: unknown[]): void {
-  if (condition) {
-    return;
-  }
-  fatal(...message);
 }

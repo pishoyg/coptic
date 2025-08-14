@@ -94,7 +94,7 @@ export function addEventListenersForSiblings(): Droppable[] {
   return Array.from(document.querySelectorAll<HTMLElement>(`.${CLS.DROP}`)).map(
     (drop: HTMLElement): Droppable => {
       const droppable = drop.nextElementSibling as HTMLElement;
-      logger.err(
+      logger.ensure(
         droppable.classList.contains(CLS.DROPPABLE),
         'A .drop must be immediately followed by a .droppable!'
       );
