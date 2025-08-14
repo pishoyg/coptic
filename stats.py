@@ -128,22 +128,18 @@ class Stat:
             self._val if isinstance(self._val, int | str) else self._val()
         )
         if isinstance(self._min, int):
-            self._val = int(self._val)
-            ensure.ensure(
-                self._val >= self._min,
-                "value:",
-                self._val,
-                "minimum",
+            ensure.greater(
+                int(self._val),
                 self._min,
+                self.name(),
+                "has an invalid value:",
             )
         if isinstance(self._max, int):
-            self._val = int(self._val)
-            ensure.ensure(
-                self._val <= self._max,
-                "value:",
-                self._val,
-                "maximum",
+            ensure.smaller(
+                int(self._val),
                 self._max,
+                self.name(),
+                "has an invalid value:",
             )
         return self._val
 

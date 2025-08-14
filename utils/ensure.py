@@ -1,6 +1,11 @@
 """Validation and error checking helpers."""
 
+# NOTE: Sanity checkers tend to have a user-provided `*message` parameter.
+# We always log that first, followed by the violating objects, followed by an
+# explanation of the violation that is enforced by that checker.
+
 import collections
+import typing
 from collections import abc
 
 from utils import log
@@ -56,6 +61,17 @@ def equal_sets[T](
         diff,
         "present in the latter but not the former",
     )
+
+
+Num = typing.TypeVar("Num", bound=float)
+
+
+def smaller(value: Num, maximum: Num, *message: str) -> None:
+    ensure(value <= maximum, *message, value, "exceeds the maximum", maximum)
+
+
+def greater(value: Num, minimum: Num, *message: str) -> None:
+    ensure(value >= minimum, *message, value, "is below the minimum", minimum)
 
 
 def singleton[T](s: set[T]) -> T:
