@@ -41,7 +41,7 @@ _FILE_NAME_RE = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
 _STEM_RE = re.compile("[0-9]+-[0-9]+-[0-9]+")
 _NAME_RE = re.compile("[A-Z][a-zA-Z ]*")
 
-# TODO: (#0) Move the TSV constants to tsv.py.
+# TODO: (#399) Move the TSV constants to tsv.py.
 _KEY_COL: str = "key"
 _SENSES_COL: str = "senses"
 _SOURCES_DIR: str = str(_SCRIPT_DIR / "data" / "img-sources")

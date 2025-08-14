@@ -84,14 +84,16 @@ class GenankiNote(genanki.Note):
 
     @property
     @typing.override
-    # TODO: (#0) Resolve this error:
-    #   "guid" incorrectly overrides property of same name in class "Note"
-    #   Property method "fset" is missing in override
-    #   [reportIncompatibleMethodOverride]
     def guid(self):
         # Only use the key field to generate a GUID.
         assert self.fields
         return genanki.guid_for(self.fields[2])
+
+    @guid.setter
+    def guid(self, val):  # dead: disable
+        del val
+        # We should never directly use the setter.
+        raise AttributeError
 
 
 def _to_file_name(name: str) -> str:

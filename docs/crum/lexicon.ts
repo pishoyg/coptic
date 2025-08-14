@@ -161,7 +161,7 @@ class KELLIASearchResult extends xooxle.SearchResult {
    */
   override row(total: number): HTMLTableRowElement {
     const row: HTMLTableRowElement = super.row(total);
-    // TODO: (#0) Add Greek lookups after making your linkifier smart enough
+    // TODO: (#489) Add Greek lookups after making your linkifier smart enough
     // to recognize diacritics.
     crum.handleDialect(row, KELLIASearchResult.highlighter);
     return row;

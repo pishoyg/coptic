@@ -438,10 +438,9 @@ export class Help {
   /**
    * Log an error if a key can trigger multiple shortcuts!
    *
-   * TODO: (#0) This error would get logged to the browser console. It could be
-   * seen by chance, if you happen to run the code in the browser with developer
-   * tools enabled.
-   * Validate before deployment once #457 is resolved.
+   * TODO: (#457) This error would get logged to the browser console. It could
+   * be seen by chance, if you happen to run the code in the browser with
+   * developer tools enabled. Validate before deployment.
    */
   private validate(): void {
     // Get all keys that have events registered to them.

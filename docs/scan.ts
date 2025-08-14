@@ -291,10 +291,6 @@ export class Scroller {
    *
    * @param landingPage - Which page to navigate to if we don't have a page
    * number otherwise.
-   *
-   * TODO: (#0) The parameters are unnecessarily complicated. Consider getting
-   * rid of offsets and variable extensions altogether. They are complicating
-   * things.
    */
   constructor(
     start: number,

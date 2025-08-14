@@ -1,9 +1,5 @@
 """Logging and error checking / reporting helpers."""
 
-# TODO: (#0) The use of variadic args makes function calls span multiple lines
-# in due to Black style, and may be less readable. Consider changing the
-# signatures to pass all the printable content in a single function argument.
-
 import os
 import typing
 
