@@ -54,8 +54,8 @@ export class Word {
    */
   constructor(word) {
     this.word = word.toLowerCase();
-    logger.assass(!!this.word, 'constructing a word with the empty string!');
-    logger.assass(
+    logger.ensure(!!this.word, 'constructing a word with the empty string!');
+    logger.ensure(
       Array.from(word).every((c) => c in Word.MAPPING),
       word,
       'contains character that are not in the mapping!'

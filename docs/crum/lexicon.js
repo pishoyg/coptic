@@ -146,7 +146,7 @@ class KELLIASearchResult extends xooxle.SearchResult {
    * @returns
    */
   link() {
-    return paths.CDO_LOOKUP_BY_KEY_PREFIX + this.key.toString();
+    return paths.CDO_LOOKUP_BY_KEY_PREFIX + this.key;
   }
   /**
    *
@@ -209,7 +209,7 @@ function spellOutDialectsInDropdown() {
     .querySelectorAll(`#${DIALECTS_ID} .${dropdown.CLS.DROPPABLE} input`)
     .forEach((el) => {
       const next = el.nextSibling;
-      logger.ass(next?.nodeType === Node.TEXT_NODE);
+      logger.ensure(next?.nodeType === Node.TEXT_NODE);
       const dialect = d.DIALECTS[el.name];
       next?.parentNode?.replaceChild(dialect.title(), next);
     });
@@ -246,7 +246,7 @@ async function main() {
   spellOutDialectsInDropdown();
   spellOutDialectsInList();
   const dropdownDialects = dropdown.addEventListenersForSiblings();
-  logger.ass(dropdownDialects.length === 1);
+  logger.ensure(dropdownDialects.length === 1);
   if (d.setToDefaultIfUnset()) {
     // In order to alert the user to the fact that dialect selection has
     // changed, we make sure the dialect list is visible.

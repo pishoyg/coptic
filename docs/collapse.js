@@ -111,7 +111,7 @@ export class Collapsible {
 export function addEventListenersForSiblings(toggleUponLoad = false) {
   document.querySelectorAll(`.${CLS.COLLAPSE}`).forEach((collapse) => {
     const collapsible = collapse.nextElementSibling;
-    logger.err(
+    logger.ensure(
       collapsible.classList.contains(CLS.COLLAPSIBLE),
       'A .collapse must be followed by a .collapsible!'
     );

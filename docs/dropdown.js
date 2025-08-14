@@ -83,7 +83,7 @@ export class Droppable {
 export function addEventListenersForSiblings() {
   return Array.from(document.querySelectorAll(`.${CLS.DROP}`)).map((drop) => {
     const droppable = drop.nextElementSibling;
-    logger.err(
+    logger.ensure(
       droppable.classList.contains(CLS.DROPPABLE),
       'A .drop must be immediately followed by a .droppable!'
     );
