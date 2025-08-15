@@ -58,6 +58,6 @@ def equal_sets[T](
     )
 
 
-def singleton[T](s: set[T]) -> T:
+def singleton[T](s: abc.Collection[T]) -> T:
     assert len(s) == 1
     return next(iter(s))

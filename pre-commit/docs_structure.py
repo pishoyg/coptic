@@ -55,9 +55,9 @@ class Pattern:
         self.print: bool = print_
 
     def is_html(self) -> bool:
-        arr = [pattern.endswith("html") for pattern in self._patterns]
-        assert len(set(arr)) == 1
-        return any(arr)
+        return ensure.singleton(
+            [pattern.endswith("html") for pattern in self._patterns],
+        )
 
     @typing.override
     def __str__(self) -> str:
