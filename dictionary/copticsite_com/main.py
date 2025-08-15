@@ -7,6 +7,8 @@ import re
 
 import pandas as pd
 
+from utils import ensure
+
 _SCRIPT_DIR = pathlib.Path(__file__).parent
 _INPUT_XLSX: str = str(
     _SCRIPT_DIR
@@ -328,9 +330,8 @@ def _normalize(word: str) -> str:
     word = "".join([_FIXES.get(char, char) for char in word])
     word = _MACRONED_LETTER.sub(r"\1̅", word)
     word = _BACKTICKED_LETTER.sub(r"\1̀", word)
-    assert all(
-        _known(w) for w in word
-    ), f"'{word}': {[w for w in word if not _known(w)]}"
+    unknown: list[str] = [w for w in word if not _known(w)]
+    ensure.ensure(not unknown, "invalid:", unknown)
     return word
 
 

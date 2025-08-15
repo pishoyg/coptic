@@ -8,7 +8,7 @@ import re
 
 import bs4
 
-from utils import file, log
+from utils import ensure, file, log
 
 _SCRIPT_DIR = pathlib.Path(__file__).parent
 INPUT_XML = (
@@ -68,7 +68,7 @@ def prettify(d: dict) -> str:
     od = collections.OrderedDict()
     for k in ORDER:
         od[k] = d[k]
-    assert set(d.keys()) == set(od.keys())
+    ensure.equal_sets(d.keys(), od.keys())
     del d
     out = file.json_dumps(od)
     out = LIST_ELEMENT_CLOSING_QUOTE.sub('", ', out)

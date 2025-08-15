@@ -768,7 +768,10 @@ def _stats(verbose: bool = False) -> Generator[Stat]:
         stat.log(verbose, indent=True)
         acc += stat.num()
         yield stat
-    assert acc == Code.all_foc_stat.val()
+    ensure.ensure(
+        acc == Code.all_foc_stat.val(),
+        "The total doesn't equal the sum of the parts!",
+    )
     del acc
 
     # LOC statistics, by language.
@@ -778,7 +781,10 @@ def _stats(verbose: bool = False) -> Generator[Stat]:
         stat.log(verbose, indent=True)
         acc += stat.num()
         yield stat
-    assert acc == Code.all_loc_stat.val()
+    ensure.ensure(
+        acc == Code.all_loc_stat.val(),
+        "The total doesn't equal the sum of the parts!",
+    )
     del acc
 
     # LOC statistics, by component.
@@ -788,7 +794,10 @@ def _stats(verbose: bool = False) -> Generator[Stat]:
         stat.log(verbose, indent=True)
         acc += stat.num()
         yield stat
-    assert acc == Code.all_loc_stat.val()
+    ensure.ensure(
+        acc == Code.all_loc_stat.val(),
+        "The total doesn't equal the sum of the parts!",
+    )
     del acc
 
     # Crum statistics.

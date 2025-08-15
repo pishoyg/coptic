@@ -4,8 +4,9 @@ import enum
 import re
 
 from morphology import constants
+from utils import ensure
 
-COPTIC_ONLY_BLOCK = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
+COPTIC_MORPHEME = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
 
 
 class Type(enum.Enum):
@@ -71,6 +72,9 @@ def inflect(morpheme: str, typ: Type) -> list[str]:
 
     """
     prefixes: list[str] = sum(_TYPE_TO_PREFIX_LIST[typ], [])
-    assert COPTIC_ONLY_BLOCK.fullmatch(morpheme)
-    assert morpheme
+    ensure.ensure(
+        COPTIC_MORPHEME.fullmatch(morpheme),
+        "invalid morpheme:",
+        morpheme,
+    )
     return [p + morpheme for p in prefixes]

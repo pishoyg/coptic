@@ -34,6 +34,7 @@ _CLEAN = set("ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭ
 _CRUM_RE = re.compile(r"\b(CD ([0-9]+[ab]?)-?[0-9]*[ab]?)\b")
 _CRUM_PAGE = "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID="
 _SENSE_CHILDREN = ["quote", "definition", "bibl", "ref", "xr"]
+_LANGS = ["de", "en", "fr", "MERGED"]
 
 _GEO_MAPPING: dict[str, str] = {
     "?": "U",
@@ -485,7 +486,7 @@ class _Lang(_Reformat):
 
     def __init__(self, name: str):
         super().__init__()
-        assert name in ["de", "en", "fr", "MERGED"]
+        assert name in _LANGS
         self._name: str = name
         self._pishoy: list[_Sense] = []
 
@@ -1194,12 +1195,12 @@ def build(basename: str) -> pd.DataFrame:
             "{http://www.tei-c.org/ns/1.0}text",
         )
     )
-    assert text is not None
+    assert text
     body: ET.Element | None = text.find(
         "{http://www.tei-c.org/ns/1.0}body",
     )
     del text
-    assert body is not None
+    assert body
 
     rows: list[dict[str, str | int]] = []
     for child in body:

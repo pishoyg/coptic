@@ -302,14 +302,26 @@ message, though make sure that the more important docs live in the code.
    possible. This is our first line of defense, and has been the champion when
 it comes to ensuring correctness and catching bugs.
 
-1. Document the code.
+1. When it comes to error checking:
+   - Employ assertions for sanity checks, such as catching logic errors, or
+   situations that are impossible if your code is correct.
+   - Employ exceptions for errors that _may_ occur – such as potential typos in
+   the input data.
+
+   Exceptions tend to have error messages, which may be helpful. Assertions tend
+   to simply crash without context. Use exceptions when the presence of an error
+   message may be helpful.
+
+1. Use our utils packages where appropriate:
+   - [Python](./utils/)
+   - [TypeScript](./docs/)
+
+1. Document the code extensively.
 
 1. Use type hints extensively.
 
 1. Minimize dependence on HTML, and implement behaviours in TypeScript when
    possible.
-
-1. Color the outputs whenever you can. It keeps your programmers entertained!
 
 1. Avoid using a generic `utils` package. It can easily become a catch-all for
 unrelated logic, grow excessively large, and lose clear purpose. Instead,
