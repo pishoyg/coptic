@@ -41,7 +41,9 @@ REFERENCE_RE: re.Pattern[str] = re.compile(
 COMMA_NOT_BETWEEN_PARENTHESES_RE: re.Pattern[str] = re.compile(
     r",(?![^()]*\)|[^{}]*\}|[^\[\]]*\])",
 )
-PURE_COPTIC_RE: re.Pattern[str] = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
+# \u0305: Combining overline (ⲁ̅)
+# \u0300: Combining grave accent (ⲁ̀)
+PURE_COPTIC_RE: re.Pattern[str] = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ\u0305\u0300]+")
 
 # TYPES is used to parse the "type" column.
 TYPES: list[lexical.Type] = [
@@ -272,7 +274,7 @@ DETACHED_TYPES_2: list[tuple[str, lexical.Type]] = [
 #   - A double oblique hyphen marks pronominal forms. Example: ⲁⲓ⸗.
 #   - The upper dagger marks a qualitative (stative) form. Example: ⲟⲓ†.
 WORD_RE: re.Pattern[str] = re.compile(
-    r"―|-[Ⲁ-ⲱϢ-ϯⳈⳉ]+|[Ⲁ-ⲱϢ-ϯⳈⳉ()]+\.?[-⸗†]?",
+    "―|-[Ⲁ-ⲱϢ-ϯⳈⳉ\u0305\u0300]+|[Ⲁ-ⲱϢ-ϯⳈⳉ()\u0305\u0300]+\\.?[-⸗†]?",
 )
 
 # The following is used to parse the English meaning column.
