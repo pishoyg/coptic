@@ -13,10 +13,8 @@
 
 import typing
 
-T = typing.TypeVar("T")
 
-
-class StaticProperty(typing.Generic[T]):
+class StaticProperty[T]:
     """A descriptor for creating lazy-loaded, cached static properties.
 
     The decorated function is executed only on the first access.
