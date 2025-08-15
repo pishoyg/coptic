@@ -185,7 +185,7 @@ class _Reformat:
         self.amir: str = ""
 
     def pishoy(self) -> str | list[str]:
-        raise ValueError("Not implemented!")
+        raise NotImplementedError()
 
 
 class _Line:

@@ -308,7 +308,7 @@ class Chapter(Item):
     def path(self, is_epub: bool) -> str:
         if not is_epub:
             return super().path(is_epub)
-        raise ValueError("We don't write EPUB chapters to files!")
+        log.fatal("We don't write EPUB chapters to files!")
 
     @typing.override
     def header(self) -> str:
@@ -371,14 +371,14 @@ class Book(Item):
             # An EPUB book is a separate ".xhtml" spine item.
             return self.path(is_epub)
         # We don't have HTML books!
-        raise ValueError("We don't have hyperlinks to books in HTML!")
+        log.fatal("We don't have hyperlinks to books in HTML!")
 
     @typing.override
     def path(self, is_epub: bool) -> str:
         if is_epub:
             return super().path(is_epub)
         # We don't have HTML books!
-        raise ValueError("We don't write HTML books to files!")
+        log.fatal("We don't write HTML books to files!")
 
     @typing.override
     def header(self) -> str:

@@ -4,6 +4,7 @@ import enum
 
 from dictionary.marcion_sourceforge_net import constants
 from morphology import inflect
+from utils import log
 
 
 class Gender(enum.Enum):
@@ -112,9 +113,6 @@ class Line:
 
         Returns:
             Whether the given word is assumed.
-
-        Raises:
-            ValueError: If other parentheses are present in the form.
         """
         # TODO: (#338) Remove the special case.
         if form == "ⲧⲣⲉ- (ⲉⲧⲣⲉ-, ⲡⲧⲣⲉ-)":
@@ -123,7 +121,7 @@ class Line:
             return False
         if form[0] == "(" and form[-1] == ")":
             return True
-        raise ValueError(f"Unexpected parentheses in {form}")
+        log.fatal(f"Unexpected parentheses in {form}")
 
     def _normalize_optional_letters(self, form: str) -> list[str]:
         # TODO: (#338) This is ugly! And it's not even a structured word, but a
@@ -157,18 +155,6 @@ class Line:
         return self._normalize_optional_letters(
             left + right,
         ) + self._normalize_optional_letters(left + middle + right)
-
-    def __str__(self) -> str:
-        raise ValueError(
-            "Please use an explicitly string conversion method in"
-            " order to provide the necessary arguments.",
-        )
-
-    def __repr__(self) -> str:
-        raise ValueError(
-            "Please use an explicitly string conversion method in"
-            " order to provide the necessary arguments.",
-        )
 
     def string(
         self,
@@ -272,7 +258,7 @@ class Line:
 
     def forms(self, parenthesize_assumed: bool = True) -> list[str]:
         if not parenthesize_assumed and not self._is_normalized_assumed():
-            raise ValueError(
+            log.fatal(
                 "Can not remove assumed-form parentheses from unnormalized "
                 "forms!",
             )

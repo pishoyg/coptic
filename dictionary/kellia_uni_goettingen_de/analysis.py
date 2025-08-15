@@ -8,7 +8,7 @@ import re
 
 import bs4
 
-from utils import file
+from utils import file, log
 
 _SCRIPT_DIR = pathlib.Path(__file__).parent
 INPUT_XML = (
@@ -95,12 +95,13 @@ def analyze(soup: bs4.BeautifulSoup | bs4.Tag) -> str:
             for c in tag.children:
                 if isinstance(c, bs4.Tag):
                     children.add(c.name)
-                elif isinstance(c, bs4.NavigableString):
+                    continue
+                if isinstance(c, bs4.NavigableString):
                     c = str(c).strip()
                     if c:
                         strings.add(c)
-                else:
-                    raise ValueError(f"Unknown child type: {c}")
+                    continue
+                log.fatal("Unknown child type:", c)
         tree[name] = {}
         if attrs:
             tree[name] = {k: format_set(v) for k, v in attrs.items()}
