@@ -19,6 +19,8 @@ DIALECTS: list[str] = [
     "NH",  # Nag Hammadi
 ]
 
+# NOTE: Our derivations table layout can accommodate a maximum depth of 4. If
+# this were to change, the table layout needs to be redesigned. See `tree.py`.
 MAX_DERIVATION_DEPTH: int = 4
 CRUM_LAST_PAGE_NUM: int = 953
 
@@ -27,7 +29,7 @@ DIALECTS_RE: re.Pattern[str] = re.compile(
     r"\({d}(,{d})*\)".format(d=f"({"|".join(DIALECTS)})"),
 )
 
-ENGLISH_WITHIN_COPTIC_RE: re.Pattern[str] = re.compile(r"\{[^\{\}]+\}")
+ENGLISH_WITHIN_COPTIC_RE: re.Pattern[str] = re.compile(r"\{[^\}]+\}")
 PARSED_GREEK_WITHIN_ENGLISH_RE: re.Pattern[str] = re.compile(
     r"(\[[ ,()&c?;Α-Ωα-ω]+\])",
 )
@@ -186,15 +188,6 @@ DETACHED_TYPES_1: list[tuple[str, lexical.Type]] = [
             inflect.Type.NOUN_MASCULINE,
         ),
     ),
-    (
-        "*****",
-        lexical.Type(
-            "<i>noun: </i>",
-            "(noun)",
-            "noun",
-            inflect.Type.NOUN_UNKNOWN_GENDER,
-        ),
-    ),  # (ⲟⲩ)
     # TODO: (#115) The following types likely apply to the subset of forms
     # occurring after the type, not the whole line.
     (
