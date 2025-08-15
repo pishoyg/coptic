@@ -100,5 +100,6 @@ def fatal(*args: object, level: bool = True) -> typing.NoReturn:
 
 
 def wrote(path: str) -> None:
-    assert os.path.exists(path)
+    if not os.path.exists(path):
+        fatal(path, "doesn't exist!")
     info("Wrote", path)

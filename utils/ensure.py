@@ -59,5 +59,5 @@ def equal_sets[T](
 
 
 def singleton[T](s: abc.Collection[T]) -> T:
-    assert len(s) == 1
+    ensure(len(s) == 1, s, "is not a singleton!")
     return next(iter(s))

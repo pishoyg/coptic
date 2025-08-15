@@ -85,7 +85,7 @@ from typing import Callable
 
 import bs4
 
-from utils import concur, file
+from utils import concur, ensure, file
 
 # KEY is the name of the key field in the output. This must match the name
 # expected by the Xooxle search logic.
@@ -150,7 +150,8 @@ class Selector:
         soup: bs4.Tag,
     ) -> list[bs4.Tag | bs4.NavigableString]:
         found = soup.find_all(**self._kwargs)
-        assert found or not self._force, self._kwargs
+        if self._force:
+            ensure.ensure(found, "no elements found for:", self._kwargs)
         return found
 
     def find(
@@ -166,15 +167,19 @@ class Selector:
             The matching element.
 
         """
-        found = soup.find_all(**self._kwargs)
-        assert len(found) <= 1
-        assert found or not self._force
+        found: list[bs4.Tag | bs4.NavigableString] = soup.find_all(
+            **self._kwargs,
+        )
+        ensure.ensure(len(found) <= 1, "found multiple elements:", found)
+        if self._force:
+            ensure.ensure(found, "no elements found for:", self._kwargs)
         return found[0] if found else None
 
     def select(self, soup: bs4.BeautifulSoup) -> bs4.Tag | None:
         assert isinstance(soup, bs4.Tag)
         elem = self.find(soup)
-        assert elem or not self._force
+        if self._force:
+            assert elem
         if elem is None:
             return None
         assert isinstance(elem, bs4.Tag)
@@ -574,10 +579,10 @@ class Index:
         file.write(file.json_dumps(json), self._output)
 
     def validate(self, json: dict[str, typing.Any]) -> None:
+        keys: list[str] = json["metadata"]["fields"] + [KEY]
         for entry in json["data"]:
-            assert set(entry.keys()) == {KEY} | set(json["metadata"]["fields"])
+            ensure.equal_sets(entry.keys(), keys)
             for key, value in entry.items():
                 if key == KEY:
                     continue
-                for tag in TAG_REGEX.findall(value):
-                    assert tag in ADMISSIBLE, tag
+                ensure.members(TAG_REGEX.findall(value), ADMISSIBLE)

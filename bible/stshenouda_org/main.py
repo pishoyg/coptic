@@ -83,7 +83,7 @@ def _normalize(lang: str, text: str) -> str:
     return text
 
 
-def _json_loads(t: str) -> dict | list:
+def _json_loads(t: str) -> dict[str, typing.Any] | list[typing.Any]:
     try:
         return json.loads(t)
     except json.JSONDecodeError:
@@ -338,14 +338,14 @@ class Book(Item):
         self.zfill_len: int = len(str(len(data)))
         self.chapters = [Chapter(c, self) for c in data]
 
-    def load(self, book_name: str) -> list:
+    def load(self, book_name: str) -> list[typing.Any]:
         try:
             t: str = open(
                 os.path.join(_INPUT_DIR, book_name + ".json"),
                 encoding="utf-8",
             ).read()
             log.info("Loaded book:", book_name)
-            data = _json_loads(t)
+            data: list[typing.Any] | dict[str, typing.Any] = _json_loads(t)
             assert isinstance(data, list)
             return data
         except FileNotFoundError:
