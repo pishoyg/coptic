@@ -556,22 +556,7 @@ _CRUM_STATS: list[Stat] = [
     Stat("crum_pages_changed", "Pages changed (broken)", _zero, broken=True),
 ]
 
-_MISC_STATS: list[Stat] = [
-    Stat(
-        "disk_usage",
-        "Disk usage",
-        lambda: _run("du --apparent-size --summarize .").split("\t")[0],
-        6291456,
-        88000000,
-    ),
-    Stat(
-        "disk_usage_human",
-        "Disk usage",
-        lambda: _run(
-            "du --apparent-size --human-readable --summarize .",
-        ).split("\t")[0],
-    ),
-    Stat("date", "Date and Time", lambda: _run("date").strip()),
+_GIT_STATS: list[Stat] = [
     Stat(
         "num_commits",
         "Commits",
@@ -618,6 +603,27 @@ _MISC_STATS: list[Stat] = [
         3000,
         Dash.NUM_ISSUES,
     ),
+]
+
+_DISK_STATS: list[Stat] = [
+    Stat(
+        "disk_usage",
+        "Usage (KB)",
+        lambda: _run("du --apparent-size --summarize .").split("\t")[0],
+        6291456,
+        88000000,
+    ),
+    Stat(
+        "disk_usage_human",
+        "Usage",
+        lambda: _run(
+            "du --apparent-size --human-readable --summarize .",
+        ).split("\t")[0],
+    ),
+]
+
+_TIME_STATS: list[Stat] = [
+    Stat("date", "Date and Time", lambda: _run("date").strip()),
     Stat("timestamp", "Timestamp", lambda: _run("date +%s").strip()),
 ]
 
@@ -750,6 +756,9 @@ def _report(commit: bool, verbose: bool) -> list[Stat]:
     return stats
 
 
+# TODO: (#0) We have been using lists of stats to partition statistics into
+# groups, for logging and error checking purposes. It makes sense to introduce
+# an object to implement this grouping.
 def _stats(verbose: bool = False) -> Generator[Stat]:
     yield Code.all_foc_stat
     yield Code.all_loc_stat
@@ -807,9 +816,25 @@ def _stats(verbose: bool = False) -> Generator[Stat]:
         stat.log(verbose, indent=True)
         yield stat
 
-    # Miscellaneous statistics.
-    for stat in _MISC_STATS:
-        stat.log(verbose)
+    # Git statistics.
+    if verbose:
+        log.info("Git:")
+    for stat in _GIT_STATS:
+        stat.log(verbose, indent=True)
+        yield stat
+
+    # Disk statistics.
+    if verbose:
+        log.info("Disk:")
+    for stat in _DISK_STATS:
+        stat.log(verbose, indent=True)
+        yield stat
+
+    # Time statistics.
+    if verbose:
+        log.info("Timestamp:")
+    for stat in _TIME_STATS:
+        stat.log(verbose, indent=True)
         yield stat
 
     # Our archived-code tracking is currently broken! It's unlikely to be fixed,
