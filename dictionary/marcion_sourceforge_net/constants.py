@@ -173,15 +173,6 @@ DETACHED_TYPES_1: list[tuple[str, lexical.Type]] = [
         ),
     ),
     (
-        "**$",
-        lexical.Type(
-            "<i>noun female: </i>",
-            "(ⲧ)",
-            "noun female",
-            inflect.Type.NOUN_FEMININE,
-        ),
-    ),
-    (
         "*$",
         lexical.Type(
             "<i>noun male: </i>",
