@@ -48,7 +48,7 @@ test: FORCE
 ########## STATS ##########
 stats: FORCE
 	# Collect statistics, saving them to the stats file, and committing changes.
-	./stats.py --commit
+	./stats.py --commit --print
 
 ########## SERVER ##########
 server: FORCE
