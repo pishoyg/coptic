@@ -1,6 +1,7 @@
 """Logging and error checking / reporting helpers."""
 
 import os
+import pathlib
 import typing
 
 import colorama
@@ -99,7 +100,7 @@ def fatal(*args: object, level: bool = True) -> typing.NoReturn:
     assert False  # This should never execute.
 
 
-def wrote(path: str) -> None:
+def wrote(path: str | pathlib.Path) -> None:
     if not os.path.exists(path):
         fatal(path, "doesn't exist!")
     info("Wrote", path)

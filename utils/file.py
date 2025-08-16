@@ -16,13 +16,13 @@ def mkdir(path: str) -> None:
     pathlib.Path(path).mkdir(parents=True, exist_ok=True)
 
 
-def mk_parent_dir(path: str) -> None:
+def mk_parent_dir(path: str | pathlib.Path) -> None:
     pathlib.Path(path).parent.mkdir(parents=True, exist_ok=True)
 
 
 def write(
     content: str,
-    path: str,
+    path: str | pathlib.Path,
     report: bool = True,
     fix_newline: bool = True,
     make_dir: bool = False,
@@ -53,7 +53,7 @@ def writelines(
     log.wrote(path)
 
 
-def read(path: str) -> str:
+def read(path: str | pathlib.Path) -> str:
     with open(path, encoding="utf-8") as f:
         return f.read()
 

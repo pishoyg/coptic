@@ -6,6 +6,7 @@ import enum
 import pathlib
 import re
 import typing
+from collections import abc
 
 import bs4
 
@@ -17,8 +18,14 @@ _INPUT: list[pathlib.Path] = [
     _INPUT_DIR / "data_1.html",
     _INPUT_DIR / "data_2.html",
 ]
-_OUTPUT = _SCRIPT_DIR / "data" / "output" / "stmacariusmonastery_org.json"
+_OUTPUT: pathlib.Path = (
+    _SCRIPT_DIR / "data" / "output" / "stmacariusmonastery_org.json"
+)
 
+_FONT_FAMILY_RE: re.Pattern[str] = re.compile(
+    r"font-family:\s*([^;]+)",
+    re.IGNORECASE,
+)
 
 _COPTIC_ENCODING: dict[str, str] = {
     # Capital letters.
@@ -262,48 +269,51 @@ class Language(enum.Enum):
     UNKNOWN = "Unknown"
 
 
-encodingDict: dict[Language, dict[str, str]] = {
-    Language.COPTIC: _COPTIC_ENCODING,
-    Language.GREEK: _GREEK_ENCODING,
-    Language.HEBREW: _HEBREW_ENCODING,
-    Language.UNKNOWN: _UNKNOWN_ENCODING,
+_LANG_ENCODING: dict[Language, dict[int, str]] = {
+    Language.COPTIC: str.maketrans(_COPTIC_ENCODING),
+    Language.GREEK: str.maketrans(_GREEK_ENCODING),
+    Language.HEBREW: str.maketrans(_HEBREW_ENCODING),
+    Language.UNKNOWN: str.maketrans(_UNKNOWN_ENCODING),
 }
 
 
 @typing.final
 class Span:
-    """Class representing a span of text with its content and language."""
+    """Span represents a piece of text in the dictionary."""
 
     def __init__(self, content: str, language: Language):
-        self.content = content
-        self.language = language
+        """Initialize a Span.
+
+        Args:
+            content: ASCII-encoded data.
+            language: Text language, which will determine the encoding and
+                conversion.
+        """
+        self.content: str = content
+        self.language: Language = language
 
 
 @typing.final
 class DictionaryEntry:
-    coptic = ""
-    arabic = ""  # dead: disable
-    greek = ""
-    hebrew = ""  # dead: disable
+    coptic: str = ""
+    arabic: str = ""
+    greek: str = ""
+    hebrew: str = ""
 
 
-def determine_language(text: str, style: str) -> Language:
+def determine_language(text: str, style: str | None) -> Language:
     if any(map(lang.is_arabic_char, text)):
         return Language.ARABIC
     if not style:
         return Language.UNKNOWN
 
     # Extract font properties from inline styles
-    font_match: re.Match[str] | None = re.search(
-        r"font-family:\s*([^;]+)",
-        str(style),
-        re.IGNORECASE,
-    )
+    font_match: re.Match[str] | None = _FONT_FAMILY_RE.search(style)
 
     if not font_match:
         return Language.GREEK
 
-    font = font_match.group(1).strip().lower()
+    font: str = font_match.group(1).strip().lower()
     if "athanasius" in font:
         return Language.COPTIC
     if "rhebrew" in font:
@@ -328,71 +338,61 @@ def parse_html_spans(file_path: pathlib.Path) -> list[Span]:
     Returns:
         list: List of dictionaries containing span content and font info.
     """
-    html_content: str = file.read(str(file_path))
+
+    soup: bs4.BeautifulSoup = bs4.BeautifulSoup(
+        file.read(file_path),
+        "html.parser",
+    )
 
     results: list[Span] = []
-    spans = bs4.BeautifulSoup(
-        html_content,
-        "html.parser",
-    ).find_all("span")
-    for span in spans:
-        content = str(span.get_text(strip=True)).replace("\n", " ")
+    tag: bs4.Tag
+    for tag in soup.find_all("span"):
+        content: str = tag.get_text(strip=True).replace("\n", " ")
 
         if not content:
             continue
 
-        language = determine_language(
-            content,
-            span.get("style", ""),
-        )
-
-        span_data = Span(content, language)
+        style: str | list[str] | None = tag.get("style")
+        assert style is None or isinstance(style, str)
+        language: Language = determine_language(content, style)
 
         # Outer and inner spans cause some text to be repeated twice.
         if results and results[-1].content == content:
             # If the first occurrence of the text has no language, use the
             # second occurrence
             if results[-1].language == Language.UNKNOWN:
-                results[-1] = span_data
-        else:
-            results.append(span_data)
+                results[-1].language = language
+            continue
+
+        results.append(Span(content, language))
 
     return results
 
 
-unknown: dict[Language, collections.Counter[str]] = {
-    lang: collections.Counter() for lang in Language
-}
+# TODO: (#452) Once the Hebrew encoding is populated, this won't be needed
+# anymore.
+hebrew_freq: collections.Counter[str] = collections.Counter()
 
 
 def convert_to_unicode(text: str, language: Language) -> str:
-    match language:
-        case (
-            Language.COPTIC
-            | Language.GREEK
-            | Language.HEBREW
-            | Language.UNKNOWN
-        ):
-            encoding = encodingDict[language]
-        case Language.RIGHT_ARROW:
-            return "→"
-        case Language.ARABIC:
-            return text
-        case _:
-            unknown[language].update(text)
-            return text
+    if language == Language.RIGHT_ARROW:
+        assert len(text) == 1
+        return "→"
 
-    for char in text:
-        if char not in encoding:
-            unknown[language].update([char])
+    if language == Language.ARABIC:
+        # Arabic is not encoded.
+        return text
 
-    out = "".join([encoding.get(char, char) for char in text])
-
-    # In the original text, hebrew is written in reverse.
+    # TODO: (#452) Stop giving Hebrew special treatment.
     if language == Language.HEBREW:
-        out = out[::-1]
+        # We don't have the Hebrew encoding yet.
+        # Add text to the Hebrew letter frequency tracker.
+        hebrew_freq.update(text)
+        # In the original text, Hebrew is written in reverse.
+        return text[::-1]
 
-    return out
+    # This is an encoded language.
+    return text.translate(_LANG_ENCODING[language])
 
 
 def squash(dictionary: list[Span]) -> list[Span]:
@@ -412,8 +412,8 @@ def squash(dictionary: list[Span]) -> list[Span]:
     for span in dictionary:
         if result and span.language in [Language.UNKNOWN, result[-1].language]:
             result[-1].content += span.content
-        else:
-            result.append(span)
+            continue
+        result.append(span)
 
     return result
 
@@ -427,14 +427,16 @@ def get_next_letter(letter: str) -> str:
 
 
 def get_capital_letter(letter: str) -> str:
-    return chr(ord(letter) - 1)
+    code: int = ord(letter)
+    assert code % 2
+    return chr(code - 1)
 
 
 def make_section_name(letter: str) -> str:
     return f"{get_capital_letter(letter)},{letter}"
 
 
-def make_dictionary(spans: list[Span]) -> list[DictionaryEntry]:
+def make_dictionary(spans: list[Span]) -> abc.Generator[DictionaryEntry]:
     """This method merges entries in the original dictionary to form the new
     dictionary.
 
@@ -443,19 +445,16 @@ def make_dictionary(spans: list[Span]) -> list[DictionaryEntry]:
 
     Args:
         spans: A list of Span objects containing text content and language
-               information.
+            information.
 
-    Returns:
-        A list of DictionaryEntry objects with merged content grouped by
-        entries.
+    Yields:
+        DictionaryEntry objects with merged content grouped by entries.
     """
-    dictionary: list[DictionaryEntry] = []
-
     # used to remove a prefix later on
-    letter = "ⲁ"
-    section_name = make_section_name(letter)
+    letter: str = "ⲁ"
+    section_name: str = make_section_name(letter)
 
-    entry = DictionaryEntry()
+    entry: DictionaryEntry = DictionaryEntry()
     for i in range(len(spans)):
         spans[i].content += " "
         match spans[i].language:
@@ -470,8 +469,8 @@ def make_dictionary(spans: list[Span]) -> list[DictionaryEntry]:
             case Language.HEBREW:
                 entry.hebrew += spans[i].content
 
-        entry_language = spans[i].language
-        next_entry_language = (
+        entry_language: Language = spans[i].language
+        next_entry_language: Language | None = (
             spans[i + 1].language if i < len(spans) - 1 else None
         )
 
@@ -484,10 +483,8 @@ def make_dictionary(spans: list[Span]) -> list[DictionaryEntry]:
                 entry.coptic = entry.coptic.removeprefix(section_name)
                 letter = get_next_letter(letter)
                 section_name = make_section_name(letter)
-            dictionary.append(entry)
+            yield entry
             entry = DictionaryEntry()
-
-    return dictionary
 
 
 def main() -> None:
@@ -504,15 +501,12 @@ def main() -> None:
 
     file.write(
         file.json_dumps([obj.__dict__ for obj in dictionary]),
-        str(_OUTPUT),
+        _OUTPUT,
     )
 
-    for unknown_lang, chars in unknown.items():
-        log.info(f"Unknown characters in {unknown_lang.value}:")
-        for char, count in chars.most_common():
-            log.info(f"{char}\t", count, level=False)
-        log.info("Total number of unknown characters:", len(chars))
-        print("-" * 79)
+    log.info("Unknown Hebrew characters:", len(hebrew_freq))
+    for char, count in hebrew_freq.most_common():
+        log.info(f"{char}\t", count, level=False)
 
 
 if __name__ == "__main__":
