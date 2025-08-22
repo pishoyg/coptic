@@ -245,27 +245,48 @@ DETACHED_TYPES_2: list[tuple[str, lexical.Type]] = [
 ]
 
 # What characters are allowed to be present in a Coptic morpheme?
-# - In Crum's dictionary, an em dash (—) means ‘same as the above’. This occurs
-#   on its own.
-# - Some morphemes represent suffixes, in which case the morpheme starts with a
-#   hyphen. Example: -ⲡⲉ.
-# - A word consists of Coptic letters. These occur in three ranges in the
-#   Unicode:
-#   1. ⲁ-ⲱ
-#   2. ϣ-ϯ
-#   3. ⳉ
-# - Parentheses mark optional letters. Example: ⲟⲩⲁ(ⲉ)ⲓⲛⲉ (Akhmimic for light)
-#   indicates that the ⲉ is sometimes omitted.
-# - Parentheses also mark assumed (unattested) forms, in which case they
-#   wrap the whole morpheme. (As of today, this case isn't represented in the
-#   regex below.)
-# - A period indicates an abbreviation. This usually occur at the end.
-# - Special verbal forms end with markers:
-#   - A hyphen marks a prenominal form. Example: ⲁⲓ-.
-#   - A double oblique hyphen marks pronominal forms. Example: ⲁⲓ⸗.
-#   - The upper dagger marks a qualitative (stative) form. Example: ⲟⲓ†.
 WORD_RE: re.Pattern[str] = re.compile(
-    "―|-[Ⲁ-ⲱϢ-ϯⳈⳉ\u0305\u0300]+|[Ⲁ-ⲱϢ-ϯⳈⳉ()\u0305\u0300]+\\.?[-⸗†]?",
+    "|".join(
+        [
+            # In Crum's dictionary, an em dash (—) means ‘same as the above’.
+            "―",
+            # A Coptic morpheme could also be an abbreviation:
+            "ⳤ",
+            "⳥",
+            "⳦",
+            "⳧",
+            "⳨",
+            "⳩",
+            "⳪\u0305?",
+            # Some morphemes represent suffixes, in which case the morpheme
+            # starts with a hyphen.
+            "-[Ⲁ-ⲱϢ-ϯⳈⳉ]+",
+            # A "normal" Coptic word contains Coptic letters, and sometimes
+            # parentheses, and diacritics.
+            # _ Coptic letters occur in three ranges in the Unicode:
+            #   1. ⲁ-ⲱ
+            #   2. ϣ-ϯ
+            #   3. ⳉ
+            # - We have the following diacritics:
+            #   1. \u0305 (combining overline)
+            #   2. \u0300 (combining grave accent)
+            #   N.B. A diacritic must be preceded by a letter.
+            # - Parentheses mark optional letters. Example: ⲟⲩⲁ(ⲉ)ⲓⲛⲉ (Akhmimic
+            #   for light) indicates that the ⲉ is sometimes omitted.
+            # - At the very end, we may have a period indicating an
+            #   abbreviation.
+            # - Special verbal forms end with markers:
+            #   1. A hyphen marks a prenominal form. Example: ⲁⲓ-.
+            #   2. A double oblique hyphen marks pronominal forms. Example: ⲁⲓ⸗.
+            #   3. The upper dagger marks a qualitative (stative) form.
+            #      Example: ⲟⲓ†.
+            # NOTE: Parentheses also mark assumed (unattested) forms, in which
+            # case they wrap the whole morpheme. This case isn't represented in
+            # the regex below, as this class of parentheses gets normalized
+            # before the morpheme is passed.
+            "([Ⲁ-ⲱϢ-ϯⳈⳉ][\u0305\u0300]?|[()])+\\.?[-⸗†]?",
+        ],
+    ),
 )
 
 # The following is used to parse the English meaning column.
