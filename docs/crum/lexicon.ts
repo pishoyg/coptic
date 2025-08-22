@@ -48,7 +48,7 @@ enum DialectMatch {
 
 /**
  */
-class CrumSearchResult extends xooxle.SearchResult {
+class SearchResult extends xooxle.SearchResult {
   private static highlighter: highlight.Highlighter;
 
   /**
@@ -56,16 +56,8 @@ class CrumSearchResult extends xooxle.SearchResult {
    * @param highlighter
    */
   static init(highlighter: highlight.Highlighter): void {
-    CrumSearchResult.highlighter = highlighter;
+    SearchResult.highlighter = highlighter;
   }
-
-  private static readonly NUM_BUCKETS =
-    1 +
-    Math.max(
-      ...Object.values(DialectMatch).filter(
-        (value) => typeof value === 'number'
-      )
-    );
 
   /**
    *
@@ -78,6 +70,18 @@ class CrumSearchResult extends xooxle.SearchResult {
     crum.handleDialect(row, CrumSearchResult.highlighter);
     return row;
   }
+}
+
+/**
+ */
+class CrumSearchResult extends SearchResult {
+  private static readonly NUM_BUCKETS =
+    1 +
+    Math.max(
+      ...Object.values(DialectMatch).filter(
+        (value) => typeof value === 'number'
+      )
+    );
 
   /**
    * @returns
@@ -136,35 +140,12 @@ class CrumSearchResult extends xooxle.SearchResult {
  * special treatment. Our sorting is simply based on whether we have a match in
  * a dialect of interest.
  */
-class KELLIASearchResult extends xooxle.SearchResult {
-  private static highlighter: highlight.Highlighter;
-
-  /**
-   *
-   * @param highlighter
-   */
-  static init(highlighter: highlight.Highlighter): void {
-    KELLIASearchResult.highlighter = highlighter;
-  }
-
+class KELLIASearchResult extends SearchResult {
   /**
    * @returns
    */
   override link(): string {
     return paths.CDO_LOOKUP_BY_KEY_PREFIX + this.key;
-  }
-
-  /**
-   *
-   * @param total
-   * @returns
-   */
-  override row(total: number): HTMLTableRowElement {
-    const row: HTMLTableRowElement = super.row(total);
-    // TODO: (#489) Add Greek lookups after making your linkifier smart enough
-    // to recognize diacritics.
-    crum.handleDialect(row, KELLIASearchResult.highlighter);
-    return row;
   }
 
   /**
@@ -291,8 +272,7 @@ async function main(): Promise<void> {
     false,
     dialectCheckboxes
   );
-  CrumSearchResult.init(highlighter);
-  KELLIASearchResult.init(highlighter);
+  SearchResult.init(highlighter);
 
   // Initialize searchers.
   // TODO: (#0) You initialize three different Form and Xooxle objects, and many

@@ -4,8 +4,6 @@ import * as collapse from './collapse.js';
 import * as browser from './browser.js';
 import * as logger from './logger.js';
 import * as orth from './orth.js';
-import * as coptic from './coptic.js';
-import * as greek from './greek.js';
 import * as dev from './dev.js';
 import * as cls from './cls.js';
 
@@ -92,10 +90,6 @@ export const enum CLS {
  * Xooxle engine should read it as such.
  */
 const UNIT_DELIMITER = `<hr class="${CLS.MATCH_SEPARATOR}">`;
-
-const orthographer: orth.Orthographer = new orth.Orthographer(
-  new Set<string>([...coptic.DIACRITICS, ...greek.DIACRITICS])
-);
 
 /**
  * FormParams stores Form parameters.
@@ -266,9 +260,7 @@ export class Form {
    * @returns The query expression, constructed from the input fields.
    */
   queryExpression(): string {
-    let query: string = orthographer.cleanDiacritics(
-      orth.normalize(this.searchBox.value)
-    );
+    let query: string = orth.cleanDiacritics(this.searchBox.value);
     if (!query) {
       return '';
     }
@@ -399,8 +391,6 @@ export class Candidate {
    */
   public constructor(record: Record<string, string>, fields: string[]) {
     this.key = record[KEY]!;
-    // NFD splits characters into their base character and separate
-    // diacritical marks.
     this.fields = fields.map(
       (name) => new Field(name, orth.normalize(record[name]!))
     );
@@ -806,7 +796,7 @@ class Line {
     // search.
     // We search the text for matches. When we get back to searching the HTML
     // for the matches, we ignore the diacritics in that step as well.
-    this.text = orthographer.cleanDiacritics(html.replaceAll(TAG_REGEX, ''));
+    this.text = orth.cleanDiacritics(html.replaceAll(TAG_REGEX, ''));
   }
 
   /**
@@ -1077,7 +1067,7 @@ class LineSearchResult {
         continue;
       }
 
-      if (orthographer.isDiacritic(this.html[htmlPos])) {
+      if (orth.isOneDiacritic(this.html[htmlPos])) {
         // This is a diacritic. It was ignored during search, and is not part of
         // the match. Yield without accounting for it in the text.
         builder.pushText(this.html[htmlPos++]);

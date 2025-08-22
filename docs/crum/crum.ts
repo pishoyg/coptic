@@ -19,9 +19,9 @@ import * as ccls from '../cls.js';
 import * as header from '../header.js';
 import * as logger from '../logger.js';
 
-const COPTIC_RE = /[Ⲁ-ⲱϢ-ϯⳈⳉ]+/giu;
-const GREEK_RE = /[Α-Ωα-ω]+/giu;
-const ENGLISH_RE = /[A-Za-z]+/giu;
+const COPTIC_RE = /[\p{Script=Coptic}\p{Mark}]+/gu;
+const GREEK_RE = /[\p{Script=Greek}\p{Mark}]+/gu;
+const ENGLISH_RE = /[\p{Script=Latin}\p{Mark}]+/gu;
 
 /**
  *

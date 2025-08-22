@@ -81,8 +81,6 @@ function shouldLinkify(
  * @param url
  * @param classes
  * @param directParentExcludedClasses
- *
- * TODO: (#489) Make this method smart enough to handle diacritics.
  */
 export function linkifyText(
   root: Node,
