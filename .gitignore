@@ -39,16 +39,16 @@ docs/crum/anki
 docs/bible/epub/
 
 # Our environment variables and helpers are defined in `.env`. In case you want
-# to supplement them with your own, you can do so in `.myenv`.
+# to supplement them with your own, you can do so in `.envrc`.
 # If you do so, then the following should make things slightly easier for you:
-# 1. Add the following line to `.myenv`, so you only need to source one file:
+# 1. Add the following line to `.envrc`, so you only need to source one file:
 #    ```
 #    source .env
 #    ```
-# 2. Add a hook to your `.bashrc` or `.zshrc` that sources `.myenv` once you
-# `cd` into the repo directory. (Or do so with `.env` if you don't use a
-# `.myenv`.)
-.myenv
+# 2. Enable direnv to automatically source .envrc once you cd into the repo
+# directory. Alternatively, add a hook to your `.bashrc` or `.zshrc` that does
+# the same thing. (Or do so with `.env` if you don't use a `.envrc`.)
+.envrc
 
 # google_cloud_keyfile.json stores the credentials for access to to Google
 # Drive.

@@ -33,7 +33,7 @@ update: FORCE
 clean: FORCE
 	# Clean up all untracked files and directories.
 	git clean -x -d --force \
-		--exclude ".myenv" \
+		--exclude ".envrc" \
 		--exclude "google_cloud_keyfile.json" \
 
 ########## CONTENT GENERATION, TESTS and FORMATTING ##########

@@ -42,7 +42,7 @@ findex () {
     -not -path "./docs/crum/anki/" \
     -not -path "./docs/bible/epub/*" \
     -not -path "./docs/bible/epub" \
-    -not -name ".myenv" \
+    -not -name ".envrc" \
     -not -name "google_cloud_keyfile.json" \
     -not -path "./archive/*" \
     -not -path "./archive" \
