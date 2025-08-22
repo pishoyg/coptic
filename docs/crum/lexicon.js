@@ -54,22 +54,15 @@ var DialectMatch;
 })(DialectMatch || (DialectMatch = {}));
 /**
  */
-class CrumSearchResult extends xooxle.SearchResult {
+class SearchResult extends xooxle.SearchResult {
   static highlighter;
   /**
    *
    * @param highlighter
    */
   static init(highlighter) {
-    CrumSearchResult.highlighter = highlighter;
+    SearchResult.highlighter = highlighter;
   }
-  static NUM_BUCKETS =
-    1 +
-    Math.max(
-      ...Object.values(DialectMatch).filter(
-        (value) => typeof value === 'number'
-      )
-    );
   /**
    *
    * @param total
@@ -81,6 +74,17 @@ class CrumSearchResult extends xooxle.SearchResult {
     crum.handleDialect(row, CrumSearchResult.highlighter);
     return row;
   }
+}
+/**
+ */
+class CrumSearchResult extends SearchResult {
+  static NUM_BUCKETS =
+    1 +
+    Math.max(
+      ...Object.values(DialectMatch).filter(
+        (value) => typeof value === 'number'
+      )
+    );
   /**
    * @returns
    */
@@ -133,32 +137,12 @@ class CrumSearchResult extends xooxle.SearchResult {
  * special treatment. Our sorting is simply based on whether we have a match in
  * a dialect of interest.
  */
-class KELLIASearchResult extends xooxle.SearchResult {
-  static highlighter;
-  /**
-   *
-   * @param highlighter
-   */
-  static init(highlighter) {
-    KELLIASearchResult.highlighter = highlighter;
-  }
+class KELLIASearchResult extends SearchResult {
   /**
    * @returns
    */
   link() {
     return paths.CDO_LOOKUP_BY_KEY_PREFIX + this.key;
-  }
-  /**
-   *
-   * @param total
-   * @returns
-   */
-  row(total) {
-    const row = super.row(total);
-    // TODO: (#0) Add Greek lookups after making your linkifier smart enough
-    // to recognize diacritics.
-    crum.handleDialect(row, KELLIASearchResult.highlighter);
-    return row;
   }
   /**
    * @returns
@@ -259,8 +243,7 @@ async function main() {
     document.querySelectorAll(`#${DIALECTS_ID} input`)
   );
   const highlighter = new highlight.Highlighter(false, dialectCheckboxes);
-  CrumSearchResult.init(highlighter);
-  KELLIASearchResult.init(highlighter);
+  SearchResult.init(highlighter);
   // Initialize searchers.
   // TODO: (#0) You initialize three different Form and Xooxle objects, and many
   // of elements are shared, which implies that some of the listeners will be
