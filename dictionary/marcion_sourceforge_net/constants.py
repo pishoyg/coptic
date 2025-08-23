@@ -155,9 +155,9 @@ DETACHED_TYPES: list[tuple[str, lexical.Type]] = [
     (
         "***$",
         lexical.Type(
-            "<i>noun male/female: </i>",
+            "<i>male/female: </i>",
             "(ⲡ, ⲧ)",
-            "noun male/female",
+            "male/female",
             inflect.Type.NOUN_MASCULINE_OR_FEMININE,
         ),
     ),
@@ -169,15 +169,6 @@ DETACHED_TYPES: list[tuple[str, lexical.Type]] = [
             "(nn)",
             "(nn)",
             inflect.Type.NOUN_UNKNOWN_GENDER,
-        ),
-    ),
-    (
-        "*$",
-        lexical.Type(
-            "<i>noun male: </i>",
-            "(ⲡ)",
-            "noun male",
-            inflect.Type.NOUN_MASCULINE,
         ),
     ),
     # TODO: (#115) The following types likely apply to the subset of forms
