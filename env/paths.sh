@@ -1,5 +1,6 @@
 #!/bin/bash
 
+export SITE_DIR="docs"
 export DOMAIN="remnqymi.com"
 export GITHUB="https://github.com/pishoyg/coptic"
 

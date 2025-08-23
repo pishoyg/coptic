@@ -14,7 +14,7 @@ def crum_url(key: str | int) -> str:
     return f"{CRUM_URL}/{key}.html"
 
 
-SITE_DIR: str = "docs"
+SITE_DIR: str = os.environ["SITE_DIR"]
 assert os.path.exists(SITE_DIR)
 
 CRUM = "dictionary/marcion_sourceforge_net/"
