@@ -231,7 +231,8 @@ DETACHED_TYPES: list[tuple[str, lexical.Type]] = [
 WORD_RE: re.Pattern[str] = re.compile(
     "|".join(
         [
-            # In Crum's dictionary, an em dash (—) means ‘same as the above’.
+            # In Crum's dictionary, a horizontal bar (U+2015) means ‘same as
+            # above’.
             "―",
             # A Coptic morpheme could also be an abbreviation:
             "ⳤ",
