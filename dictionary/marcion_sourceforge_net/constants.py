@@ -46,7 +46,7 @@ COMMA_NOT_BETWEEN_PARENTHESES_RE: re.Pattern[str] = re.compile(
 PURE_COPTIC_RE: re.Pattern[str] = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ\u0305\u0300]+")
 
 # TYPES is used to parse the "type" column.
-TYPES: list[lexical.Type] = [
+_TYPES: list[lexical.Type] = [
     lexical.Type("-", "(-)", "-", None, append=False),
     lexical.Type("noun", "(noun)", "noun", inflect.Type.NOUN_UNKNOWN_GENDER),
     lexical.Type("noun male", "(ⲡ)", "noun male", inflect.Type.NOUN_MASCULINE),
@@ -133,10 +133,9 @@ TYPES: list[lexical.Type] = [
     ),
     lexical.Type("HEADER", "(HEADER)", "HEADER", None, append=False),
 ]
-TYPE_ENCODING: dict[str, lexical.Type] = {t.marcion(): t for t in TYPES}
+TYPE_ENCODING: dict[str, lexical.Type] = {t.marcion(): t for t in _TYPES}
 
-# PREPROCESSING, FORM_ANNOTATIONS, and DETACHED_TYPES are essential for parsing
-# the word column.
+# PREPROCESSING and DETACHED_TYPES are used for parsing the word column.
 PREPROCESSING: list[tuple[str, str]] = [
     # NOTE: The two consecutive dots are used in the derivations table, to
     # separate between a prefix and the letter representing the start of the
@@ -149,7 +148,7 @@ PREPROCESSING: list[tuple[str, str]] = [
     ("..", ""),
 ]
 
-DETACHED_TYPES_1: list[tuple[str, lexical.Type]] = [
+DETACHED_TYPES: list[tuple[str, lexical.Type]] = [
     # TODO: (#115) The question mark is not a detached type, and it might be
     # form-specific. Investigate.
     ("$$", lexical.Type("<i>(?)</i>", "(?)", "probably", None)),  # Probably.
@@ -231,13 +230,6 @@ DETACHED_TYPES_1: list[tuple[str, lexical.Type]] = [
         "{nic}",
         lexical.Type("{nic}", "{nic}", "{nic}", None, append=False),
     ),  # No idea!
-]
-
-FORM_ANNOTATIONS: list[tuple[str, lexical.Type]] = [
-    ("^^", lexical.Type("―", "―", "same as above.", None)),
-]
-
-DETACHED_TYPES_2: list[tuple[str, lexical.Type]] = [
     (
         "^",
         lexical.Type("<i>p c </i>", "(p.c.)", "conjunctive participle", None),

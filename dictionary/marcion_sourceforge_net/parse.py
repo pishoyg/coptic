@@ -143,8 +143,7 @@ def _parse_form_and_types(
     detach_types: bool,
     use_coptic_symbol: bool,
 ) -> tuple[str, list[lexical.Type]]:
-    # This makes the assumption that references have been removed.
-    types: list[lexical.Type] = []
+    # This method makes the assumption that references have been removed.
 
     line = _apply_substitutions(
         line,
@@ -155,32 +154,14 @@ def _parse_form_and_types(
     _validate_words(constants.ENGLISH_WITHIN_COPTIC_RE.sub("", line))
 
     if detach_types:
-        cur, line = _pick_up_detached_types(line, constants.DETACHED_TYPES_1)
-        types.extend(cur)
-    else:
-        line = _apply_substitutions(
-            line,
-            constants.DETACHED_TYPES_1,
-            use_coptic_symbol,
-        )
+        return _pick_up_detached_types(line, constants.DETACHED_TYPES)
 
     line = _apply_substitutions(
         line,
-        constants.FORM_ANNOTATIONS,
+        constants.DETACHED_TYPES,
         use_coptic_symbol,
     )
-
-    if detach_types:
-        cur, line = _pick_up_detached_types(line, constants.DETACHED_TYPES_2)
-        types.extend(cur)
-    else:
-        line = _apply_substitutions(
-            line,
-            constants.DETACHED_TYPES_2,
-            use_coptic_symbol,
-        )
-
-    return line.strip(), types
+    return line.strip(), []
 
 
 def _remove_assumed_form_parentheses(f: str) -> str:
@@ -196,9 +177,7 @@ def _validate_words(line: str) -> None:
     # For the sake of rigor, investigate the content of the no-English subset.
     # NOTE: The body of this method is largely similar to
     # _parse_forms_and_types.
-    _, line = _pick_up_detached_types(line, constants.DETACHED_TYPES_1)
-    line = _apply_substitutions(line, constants.FORM_ANNOTATIONS)
-    _, line = _pick_up_detached_types(line, constants.DETACHED_TYPES_2)
+    line, _ = _pick_up_detached_types(line, constants.DETACHED_TYPES)
     line = line.replace("(?)", "")  # TODO: (#338) Ugly! :/
 
     assert line
@@ -214,13 +193,13 @@ def _validate_words(line: str) -> None:
 def _pick_up_detached_types(
     line: str,
     detached_types: list[tuple[str, lexical.Type]],
-) -> tuple[list[lexical.Type], str]:
+) -> tuple[str, list[lexical.Type]]:
     t: list[lexical.Type] = []
     for p in detached_types:
         if p[0] in line:
             line = line.replace(p[0], "")
             t.append(p[1])
-    return t, line
+    return line.strip(), t
 
 
 def parse_english_cell(line: str) -> str:
