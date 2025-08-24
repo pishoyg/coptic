@@ -608,13 +608,8 @@ class Crum(Decker):
             yield "</div>"
         del senses
 
-        # Horizontal line.
-        yield HORIZONTAL_RULE
-
-        # Full entry.
-        yield '<div id="marcion" class="marcion">'
-        yield self.__cell(row, "word-parsed-classify", line_br=True)
-        yield "</div>"
+        # Line break.
+        yield LINE_BREAK
 
         # Derivations.
         yield self.__cell(
@@ -1094,7 +1089,6 @@ CRUM_XOOXLE = xooxle.Index(
         xooxle.Selector({"id": "images"}, force=False),
         xooxle.Selector({"class_": "nag-hammadi"}, force=False),
         xooxle.Selector({"class_": "sisters"}, force=False),
-        xooxle.Selector({"id": "marcion"}),
         xooxle.Selector({"id": "categories"}, force=False),
     ],
     captures=[

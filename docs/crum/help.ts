@@ -252,11 +252,6 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
         browser.scroll('pretty');
       }),
     ],
-    Q: [
-      new help.Shortcut('Words', ['note'], () => {
-        browser.scroll('marcion');
-      }),
-    ],
     v: [
       new help.Shortcut('Derivations table', ['note'], () => {
         browser.scroll('derivations');
