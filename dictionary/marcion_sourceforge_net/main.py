@@ -95,12 +95,7 @@ def _process_data(df: pd.DataFrame, strict: bool) -> None:
         insert(
             "word-parsed-prettify",
             "\n".join(
-                w.string(
-                    include_references=False,
-                    append_root_type=True,
-                    classify=True,
-                )
-                for w in word
+                w.string(append_root_type=True, classify=True) for w in word
             ),
         )
 
