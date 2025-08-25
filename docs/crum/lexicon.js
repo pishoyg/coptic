@@ -71,6 +71,17 @@ class SearchResult extends xooxle.SearchResult {
   row(total) {
     const row = super.row(total);
     crum.addGreekLookups(row);
+    // NOTE: Handling of dialects causes a (minor) bug: Dialect codes don't get
+    // highlighted!
+    // This is because the content of dialect spans gets completely overridden
+    // in the call below. If this content had a match span, it would be removed
+    // and replaced with new content that doesn't have the match span.
+    // This bug is left intentionally. We're not going to handle it because it's
+    // very low-priority.
+    // Although the following fix was considered: Your dialect handler should,
+    // instead of replacing the entire HTML tree in dialect spans, replace the
+    // text nodes only.
+    // See https://github.com/pishoyg/coptic/issues/499.
     crum.handleDialect(row, CrumSearchResult.highlighter);
     return row;
   }
