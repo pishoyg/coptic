@@ -68,7 +68,7 @@ def _parse_line(
     forms: list[str] = []
     types: list[lex.Type] = []
     references: list[lex.Reference] = []
-    for rich_form in constants.COMMA_NOT_BETWEEN_BRACKETS_RE.split(line):
+    for rich_form in constants.COMMA_OUTSIDE_BRACKETS_RE.split(line):
         form, form_types, form_refs = _parse_rich_form(
             rich_form,
             detach_types,
@@ -109,14 +109,14 @@ def _parse_rich_form(
 
     parts: list[lex.Word | lex.Annotation | lex.Remark] = []
     references: list[lex.Reference] = []
-    for part in constants.SPACE_NOT_BETWEEN_BRACKETS_RE.split(line):
+    for part in constants.SPACE_OUTSIDE_BRACKETS_RE.split(line):
         if not part:
             continue
         part = _apply_substitutions(part, constants.PREPROCESSING)
         if constants.REFERENCE_RE.fullmatch(part):
             references.extend(_parse_reference(part))
             continue
-        if constants.ENGLISH_WITHIN_COPTIC_RE.match(part):
+        if constants.ENGLISH_WITHIN_COPTIC_RE.fullmatch(part):
             parts.append(lex.Remark(part))
             continue
         if part in constants.DETACHED_TYPES:
@@ -155,34 +155,15 @@ def parse_english_cell(line: str) -> str:
 
 
 def _parse_reference(line: str) -> abc.Generator[lex.Reference]:
-    """Parse a reference.
-
-    Args:
-        line: A string representing a single (not nested nor concatenated)
-            reference, whose boundaries have been removed.
-            A reference is an <a></a> HTML tag with some text as the body, and
-            an 'href' property that has (one or more) of the following format:
-                "ext <name>;<id>;<chapter>;<verse>;<text>"
-            The 'href' contains most of the information. The body can contain
-            something, and the tag could optionally be followed by some text.
-
-    Yields:
-        Strings, each representing an encoded representation of the one of the
-        references.
-
-    """
-    match = constants.REFERENCE_RE.match(line)
-    assert match, line
-    assert len(match.groups()) == 3, line
-    line = match.group(1)
-    body = match.group(2)
-    assert body in ["Ext", "compare", "ref"], body
-    note = match.group(3)
-    parts = line.split(";")
-    assert not (len(parts) % 5), parts
-    for i in range(0, len(parts), 5):
-        ref: str = "; ".join(filter(None, parts[i : i + 5] + [body, note]))
-        yield lex.Reference(ref)
+    assert line.startswith("[") and line.endswith("]")
+    line = line[1:-1]
+    for reference in constants.SEMICOLON_OUTSIDE_BRACKETS_RE.split(line):
+        reference = reference.strip()
+        assert reference[0] == "(" and reference[-1] == ")", reference
+        reference = reference[1:-1]
+        parts: list[str] = list(map(str.strip, reference.split(";")))
+        assert 6 <= len(parts) <= 7
+        yield lex.Reference(parts)
 
 
 def _munch_dialects(line: str) -> tuple[list[str], str]:

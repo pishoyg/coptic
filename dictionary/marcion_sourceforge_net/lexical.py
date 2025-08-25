@@ -2,6 +2,7 @@
 
 import enum
 import functools
+import re
 import typing
 
 from dictionary.marcion_sourceforge_net import constants
@@ -148,7 +149,7 @@ class Line:
         i = form.find("(")
         j = form.find(")")
         assert j - i - 1 in [1, 2, 4]  # In the vast majority of cases, it's 1.
-        assert constants.PURE_COPTIC_RE.match(form[i + 1])
+        assert constants.PURE_COPTIC_RE.fullmatch(form[i + 1])
         left = form[:i]
         middle = form[i + 1 : j]
         right = form[j + 1 :]
@@ -369,13 +370,13 @@ class Word(Part):
 
 
 class Reference(Part):
-    def __init__(self, ref: str) -> None:
-        self.ref: str = ref
+    def __init__(self, parts: list[str]) -> None:
+        self.parts: list[str] = parts
 
     @typing.override
     def string(self, use_coptic_symbol: bool) -> str:  # dead: disable
         del use_coptic_symbol
-        return self.ref
+        return "; ".join(self.parts)
 
 
 @functools.total_ordering
@@ -390,7 +391,7 @@ class CrumPage:
             self.num = 0
             self.col = ""
             return
-        match = constants.CRUM_RE.match(raw)
+        match: re.Match[str] | None = constants.CRUM_RE.fullmatch(raw)
         assert match
         assert len(match.groups()) == 2
         self.num = int(match.groups()[0])
@@ -398,21 +399,21 @@ class CrumPage:
         assert self.num >= 0 and self.num <= constants.CRUM_LAST_PAGE_NUM
         assert self.col in {"a", "b"}
 
-    def parts(self) -> tuple[int, str]:
+    def _parts(self) -> tuple[int, str]:
         return self.num, self.col
 
     @typing.override
     def __eq__(self, other: object) -> bool:
         if isinstance(other, CrumPage):
-            return self.parts() == other.parts()
+            return self._parts() == other._parts()
         return NotImplemented
 
     def __lt__(self, other: typing.Self) -> bool:
-        return self.parts() < other.parts()
+        return self._parts() < other._parts()
 
     def real(self) -> bool:
-        return any(self.parts())
+        return any(self._parts())
 
     def string(self) -> str:
-        assert all(self.parts())
-        return "".join(str(x) for x in self.parts())
+        assert all(self._parts())
+        return "".join(str(x) for x in self._parts())

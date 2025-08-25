@@ -34,15 +34,17 @@ PARSED_GREEK_WITHIN_ENGLISH_RE: re.Pattern[str] = re.compile(
 )
 
 CRUM_RE: re.Pattern[str] = re.compile(r"^(\d{1,3})(a|b)$")
-COMMA_NOT_BETWEEN_BRACKETS_RE: re.Pattern[str] = re.compile(
-    r",(?![^()]*\)|[^{}]*\}|[^\[\]]*\])",
+_OUTSIDE_BRACKETS: str = r"(?![^()]*\)|[^{}]*\}|[^\[\]]*\])"
+COMMA_OUTSIDE_BRACKETS_RE: re.Pattern[str] = re.compile(
+    "," + _OUTSIDE_BRACKETS,
 )
-SPACE_NOT_BETWEEN_BRACKETS_RE: re.Pattern[str] = re.compile(
-    r"\s+(?![^()]*\)|[^{}]*\}|[^\[\]]*\])",
+SPACE_OUTSIDE_BRACKETS_RE: re.Pattern[str] = re.compile(
+    r"\s+" + _OUTSIDE_BRACKETS,
 )
-REFERENCE_RE: re.Pattern[str] = re.compile(
-    r'{<a href="([^"<>]+)">([^<>]+)</a>([^<>]*)}',
+SEMICOLON_OUTSIDE_BRACKETS_RE: re.Pattern[str] = re.compile(
+    ";" + _OUTSIDE_BRACKETS,
 )
+REFERENCE_RE: re.Pattern[str] = re.compile(r"\[[^\]]*\]")
 ENGLISH_WITHIN_COPTIC_RE: re.Pattern[str] = re.compile(r"\{[^\}]+\}")
 
 # \u0305: Combining overline (ⲁ̅)
@@ -263,6 +265,17 @@ WORD_RE: re.Pattern[str] = re.compile(
 )
 
 # The following is used to parse the English meaning column.
+_BOLDEN: list[str] = [
+    "intr",
+    "intr & tr",
+    "tr",
+    "tr & intr",
+    "tr & refl",
+    "qual",
+    "refl",
+    "noun",
+    "noun male",
+]
 ENGLISH_PROCESSING: list[tuple[re.Pattern[str] | str, str]] = [
     # Curly brackets are used to indicate italics.
     ("{", "<i>"),
@@ -271,11 +284,7 @@ ENGLISH_PROCESSING: list[tuple[re.Pattern[str] | str, str]] = [
     # TODO: (#0) This list is likely not comprehensive, and it's expected to
     # grow.
     (
-        re.compile(
-            r"(\b(intr|intr & tr|tr|tr & intr|tr & refl|qual|refl|noun|noun male)( \([a-zA-Z? ]+\))?:)",  # pylint: disable=line-too-long
-        ),
+        re.compile(rf"(\b({"|".join(_BOLDEN)})( \([a-zA-Z? ]+\))?:)"),
         r"<b>\1</b>",
     ),
-    # Slightly prettify the notation for the conjunctive participle.
-    (re.compile(r"\bp c\b"), "p.c."),
 ]
