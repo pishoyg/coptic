@@ -266,7 +266,9 @@ _ = _argparser.add_argument(
 def _get_max_idx(g: list[str], key: str, sense: str) -> int:
     highest = 0
     for path in g:
-        match = _FILE_NAME_RE.match(os.path.basename(path))
+        match: re.Match[str] | None = _FILE_NAME_RE.fullmatch(
+            os.path.basename(path),
+        )
         assert match
         assert match.group(1) == key
         if match.group(2) != sense:

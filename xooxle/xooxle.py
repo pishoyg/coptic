@@ -95,7 +95,7 @@ KEY = "KEY"
 UNIT_DELIMITER = '<hr class="match-separator">'
 LINE_BREAK = "<br>"
 
-_TAG_RE = re.compile(r"^</?(\w+)")
+_TAG_RE = re.compile(r"^</?(\w+)>")
 # EXTENSION is the extension of the files that we are building an index for.
 _EXTENSION = ".html"
 
@@ -433,10 +433,10 @@ class Cleaner:
                 # The stack top doesn't have an opening tag.
                 stack.append(token)
                 continue
-            match = _TAG_RE.match(token)
+            match = _TAG_RE.fullmatch(token)
             assert match
             cur = match.group(1)
-            match = _TAG_RE.match(stack_top)
+            match = _TAG_RE.fullmatch(stack_top)
             assert match
             prev = match.group(1)
             del stack_top
