@@ -1,6 +1,8 @@
 """A word in Crum's dictionary."""
 
 import enum
+import functools
+import typing
 
 from dictionary.marcion_sourceforge_net import constants
 from morphology import inflect
@@ -133,7 +135,7 @@ class Line:
             return [form]
 
         cnt_l, cnt_r = form.count("("), form.count(")")
-        assert cnt_l == cnt_r
+        assert cnt_l == cnt_r, form
         if not cnt_l:
             return [form]
         assert cnt_l in [1, 2]  # In the vast majority of cases, it's 1.
@@ -326,3 +328,91 @@ class Line:
                 return inferred
 
         return rt
+
+
+class Part:
+    def string(self, use_coptic_symbol: bool) -> str:
+        raise NotImplementedError
+
+
+class Remark(Part):
+    def __init__(self, text: str) -> None:
+        self.text: str = text
+
+    @typing.override
+    def string(self, use_coptic_symbol: bool) -> str:  # dead: disable
+        del use_coptic_symbol
+        return self.text
+
+
+class Annotation(Part):
+    def __init__(self, t: Type) -> None:
+        self.type: Type = t
+
+    @typing.override
+    def string(self, use_coptic_symbol: bool) -> str:
+        return (
+            self.type.coptic_symbol()
+            if use_coptic_symbol
+            else self.type.marcion()
+        )
+
+
+class Word(Part):
+    def __init__(self, form: str) -> None:
+        self.form: str = form
+
+    @typing.override
+    def string(self, use_coptic_symbol: bool) -> str:  # dead: disable
+        del use_coptic_symbol
+        return self.form
+
+
+class Reference(Part):
+    def __init__(self, ref: str) -> None:
+        self.ref: str = ref
+
+    @typing.override
+    def string(self, use_coptic_symbol: bool) -> str:  # dead: disable
+        del use_coptic_symbol
+        return self.ref
+
+
+@functools.total_ordering
+class CrumPage:
+    """A page number in Crum's dictionary."""
+
+    num: int
+    col: str
+
+    def __init__(self, raw: str):
+        if not raw:
+            self.num = 0
+            self.col = ""
+            return
+        match = constants.CRUM_RE.match(raw)
+        assert match
+        assert len(match.groups()) == 2
+        self.num = int(match.groups()[0])
+        self.col = match.groups()[1]
+        assert self.num >= 0 and self.num <= constants.CRUM_LAST_PAGE_NUM
+        assert self.col in {"a", "b"}
+
+    def parts(self) -> tuple[int, str]:
+        return self.num, self.col
+
+    @typing.override
+    def __eq__(self, other: object) -> bool:
+        if isinstance(other, CrumPage):
+            return self.parts() == other.parts()
+        return NotImplemented
+
+    def __lt__(self, other: typing.Self) -> bool:
+        return self.parts() < other.parts()
+
+    def real(self) -> bool:
+        return any(self.parts())
+
+    def string(self) -> str:
+        assert all(self.parts())
+        return "".join(str(x) for x in self.parts())

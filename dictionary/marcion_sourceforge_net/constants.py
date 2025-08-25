@@ -26,21 +26,25 @@ CRUM_LAST_PAGE_NUM: int = 953
 
 # Regular expressions used for parsing.
 DIALECTS_RE: re.Pattern[str] = re.compile(
-    r"\({d}(,{d})*\)".format(d=f"({"|".join(DIALECTS)})"),
+    r"\(({d}(,{d})*)\)".format(d=f"({"|".join(DIALECTS)})"),
 )
 
-ENGLISH_WITHIN_COPTIC_RE: re.Pattern[str] = re.compile(r"\{[^\}]+\}")
 PARSED_GREEK_WITHIN_ENGLISH_RE: re.Pattern[str] = re.compile(
     r"(\[[ ,()&c?;Α-Ωα-ω]+\])",
 )
 
 CRUM_RE: re.Pattern[str] = re.compile(r"^(\d{1,3})(a|b)$")
+COMMA_NOT_BETWEEN_BRACKETS_RE: re.Pattern[str] = re.compile(
+    r",(?![^()]*\)|[^{}]*\}|[^\[\]]*\])",
+)
+SPACE_NOT_BETWEEN_BRACKETS_RE: re.Pattern[str] = re.compile(
+    r"\s+(?![^()]*\)|[^{}]*\}|[^\[\]]*\])",
+)
 REFERENCE_RE: re.Pattern[str] = re.compile(
     r'{<a href="([^"<>]+)">([^<>]+)</a>([^<>]*)}',
 )
-COMMA_NOT_BETWEEN_PARENTHESES_RE: re.Pattern[str] = re.compile(
-    r",(?![^()]*\)|[^{}]*\}|[^\[\]]*\])",
-)
+ENGLISH_WITHIN_COPTIC_RE: re.Pattern[str] = re.compile(r"\{[^\}]+\}")
+
 # \u0305: Combining overline (ⲁ̅)
 # \u0300: Combining grave accent (ⲁ̀)
 PURE_COPTIC_RE: re.Pattern[str] = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ\u0305\u0300]+")
@@ -148,84 +152,69 @@ PREPROCESSING: list[tuple[str, str]] = [
     ("..", ""),
 ]
 
-DETACHED_TYPES: list[tuple[str, lexical.Type]] = [
+# NOTE: As of the time of writing, some of these annotations occur only once in
+# the corpus.
+DETACHED_TYPES: dict[str, lexical.Type] = {
     # TODO: (#115) The question mark is not a detached type, and it might be
     # form-specific. Investigate.
-    ("$$", lexical.Type("<i>(?)</i>", "(?)", "probably", None)),  # Probably.
-    (
-        "***$",
-        lexical.Type(
-            "<i>male/female: </i>",
-            "(ⲡ, ⲧ)",
-            "male/female",
-            inflect.Type.NOUN_MASCULINE_OR_FEMININE,
-        ),
+    "?": lexical.Type("<i>(?)</i>", "(?)", "probably", None),  # Probably.
+    "m/f:": lexical.Type(
+        "<i>male/female:</i>",
+        "(ⲡ, ⲧ)",
+        "male/female",
+        inflect.Type.NOUN_MASCULINE_OR_FEMININE,
     ),
-    ("$**", lexical.Type("<i>neg </i>", "(neg.)", "neg", None)),
-    (
-        "$*",
-        lexical.Type(
-            "<i>(nn)</i>",
-            "(nn)",
-            "(nn)",
-            inflect.Type.NOUN_UNKNOWN_GENDER,
-        ),
+    "neg": lexical.Type("<i>neg</i>", "(neg.)", "neg", None),
+    "nn": lexical.Type(
+        "<i>(nn)</i>",
+        "(nn)",
+        "(nn)",
+        inflect.Type.NOUN_UNKNOWN_GENDER,
     ),
     # TODO: (#115) The following types likely apply to the subset of forms
     # occurring after the type, not the whole line.
-    (
-        "****",
-        lexical.Type(
-            "<i>female: </i>",
-            "(ⲧ)",
-            "female",
-            lexical.Gender.FEMININE,
-        ),
+    "f:": lexical.Type(
+        "<i>female:</i>",
+        "(ⲧ)",
+        "female",
+        lexical.Gender.FEMININE,
     ),
-    (
-        "***",
-        lexical.Type("<i>male: </i>", "(ⲡ)", "male", lexical.Gender.MASCULINE),
+    "m:": lexical.Type(
+        "<i>male:</i>",
+        "(ⲡ)",
+        "male",
+        lexical.Gender.MASCULINE,
     ),
-    (
-        "**",
-        lexical.Type(
-            "<i>imperative: </i>",
-            "(imp.)",
-            "imperative",
-            inflect.Type.VERB_IMPERATIVE,
-        ),
+    "imp:": lexical.Type(
+        "<i>imperative:</i>",
+        "(imp.)",
+        "imperative",
+        inflect.Type.VERB_IMPERATIVE,
     ),
-    (
-        "*",
-        lexical.Type(
-            "<i>plural: </i>",
-            "(ⲛ)",
-            "plural",
-            lexical.Gender.PLURAL,
-        ),
+    "pl:": lexical.Type(
+        "<i>plural:</i>",
+        "(ⲛ)",
+        "plural",
+        lexical.Gender.PLURAL,
     ),
-    ("$", lexical.Type("<i> &c</i>", "(&c)", "constructed with", None)),
-    (
-        "^^^",
-        lexical.Type(
-            "<i><b>c</b></i>",
-            "(c)",
-            "Not sure what this means!",
-            None,
-        ),
+    "&c": lexical.Type("<i>&c</i>", "(&c)", "constructed with", None),
+    "c": lexical.Type(
+        "<i><b>c</b></i>",
+        "(c)",
+        "Not sure what this means!",
+        None,
     ),
     # TODO: (#115) {nic} is definitely form-specific! Its presence here
     # means it's currently interpreted as applying to all forms in a word!
     # Fix!
-    (
-        "{nic}",
-        lexical.Type("{nic}", "{nic}", "{nic}", None, append=False),
-    ),  # No idea!
-    (
-        "^",
-        lexical.Type("<i>p c </i>", "(p.c.)", "conjunctive participle", None),
+    "{nic}": lexical.Type("{nic}", "{nic}", "{nic}", None, append=False),
+    "p.c.": lexical.Type(
+        "<i>p c</i>",
+        "(p.c.)",
+        "conjunctive participle",
+        None,
     ),
-]
+}
 
 # What characters are allowed to be present in a Coptic morpheme?
 WORD_RE: re.Pattern[str] = re.compile(
@@ -268,7 +257,7 @@ WORD_RE: re.Pattern[str] = re.compile(
             # case they wrap the whole morpheme. This case isn't represented in
             # the regex below, as this class of parentheses gets normalized
             # before the morpheme is passed.
-            "([Ⲁ-ⲱϢ-ϯⳈⳉ][\u0305\u0300]?|[()])+\\.?[-⸗†]?",
+            r"([Ⲁ-ⲱϢ-ϯⳈⳉ][\u0305\u0300]?|[()])+\.?[\-⸗†]?",
         ],
     ),
 )

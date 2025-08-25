@@ -1,68 +1,50 @@
 """Parse Crum's dictionary."""
 
-import functools
 import re
-import typing
 from collections import abc
 
-from dictionary.marcion_sourceforge_net import constants, lexical
+from dictionary.marcion_sourceforge_net import constants
+from dictionary.marcion_sourceforge_net import lexical as lex
+from utils import log
 
 
 def _apply_substitutions(
     line: str,
-    subs: (
-        list[tuple[re.Pattern[str], str]]
-        | list[tuple[str, str]]
-        | list[tuple[str, lexical.Type]]
-        | list[tuple[re.Pattern[str] | str, str]]
-    ),
-    use_coptic_symbol: bool = False,
+    subs: abc.Iterable[tuple[str | re.Pattern[str], str]],
 ) -> str:
-    for pair in subs:
-        p0 = pair[0]
-        p1 = pair[1]
-        if isinstance(p1, lexical.Type):
-            p1 = p1.coptic_symbol() if use_coptic_symbol else p1.marcion()
-        assert isinstance(p1, str)
-        if isinstance(p0, re.Pattern):
-            line = p0.sub(p1, line)
+    for pattern, replacement in subs:
+        if isinstance(pattern, re.Pattern):
+            line = pattern.sub(replacement, line)
         else:
-            assert isinstance(p0, str)
-            line = line.replace(p0, p1)
+            line = line.replace(pattern, replacement)
     return line
-
-
-def _munch(text: str, regex: re.Pattern[str]) -> tuple[str, str]:
-    # Munch the prefix of `text` which matches `regex`, and return both parts.
-    m = regex.match(text)
-    if not m:
-        return "", text
-
-    i, j = m.span()
-    assert i == 0
-    return text[:j], text[j:]
 
 
 def parse_word_cell(
     entry: str,
-    root_type: lexical.Type,
+    root_type: lex.Type,
     strict: bool,
     detach_types: bool,
     use_coptic_symbol: bool,
     normalize_optional: bool,
     normalize_assumed: bool,
-) -> list[lexical.Line]:
-    lines: list[lexical.Line] = list(
-        parse_word_cell_aux(
-            entry,
-            root_type,
-            strict,
-            detach_types,
-            use_coptic_symbol,
-            normalize_optional,
-            normalize_assumed,
-        ),
-    )
+) -> list[lex.Line]:
+    if not entry:
+        return []
+    lines: list[lex.Line] = []
+    for line in entry.split("\n"):
+        lines.append(
+            _parse_line(
+                line,
+                root_type,
+                strict,
+                detach_types,
+                use_coptic_symbol,
+                normalize_optional,
+                normalize_assumed,
+            ),
+        )
+
     # Any entry that has multiple lines must be dialected.
     if len(lines) > 1:
         assert all(w.dialects for w in lines)
@@ -70,183 +52,109 @@ def parse_word_cell(
     return lines
 
 
-def parse_word_cell_aux(
-    entry: str,
-    root_type: lexical.Type,
+def _parse_line(
+    line: str,
+    root_type: lex.Type,
     strict: bool,
     detach_types: bool,
     use_coptic_symbol: bool,
     normalize_optional: bool,
     normalize_assumed: bool,
-) -> abc.Generator[lexical.Line]:
-    for line in entry.splitlines():
-        # Parse the dialects.
-        d, line = _munch_dialects(line)
-        # Parse the forms, types, and references.
-        f, t, r = _parse_forms_types_and_references(
-            line,
+) -> lex.Line:
+    # Parse the dialects.
+    dialects, line = _munch_dialects(line)
+
+    # Parse the forms, types, and references.
+    forms: list[str] = []
+    types: list[lex.Type] = []
+    references: list[lex.Reference] = []
+    for rich_form in constants.COMMA_NOT_BETWEEN_BRACKETS_RE.split(line):
+        form, form_types, form_refs = _parse_rich_form(
+            rich_form,
             detach_types,
             use_coptic_symbol,
         )
-        # If this entry is undialected, try to infer the dialects from the
-        # forms. We only do this for roots, but not derivations – hence the
-        # check for `strict`.
-        if not d and strict:
-            # Undialected and Ⳉ, it's Akhmimic!
-            if all("ⳉ" in form for form in f):
-                d = ["A"]
-            # Undialected and ϧ, it's Bohairic!
-            if all("ϧ" in form for form in f):
-                d = ["B"]
-
-        yield lexical.Line(
-            d,
-            f,
-            t,
-            r,
-            root_type,
-            normalize_optional=normalize_optional,
-            normalize_assumed=normalize_assumed,
-        )
-
-
-def _parse_forms_types_and_references(
-    line: str,
-    detach_types: bool,
-    use_coptic_symbol: bool,
-) -> tuple[list[str], list[lexical.Type], list[str]]:
-    ss: list[str] = []
-    tt: list[lexical.Type] = []
-    rr: list[str] = []
-
-    def sub_ref(match: re.Match[str]) -> str:
-        rr.extend(_parse_reference(match.group(0)))
-        return ""
-
-    forms: list[str] = constants.COMMA_NOT_BETWEEN_PARENTHESES_RE.split(line)
+        forms.append(form)
+        types.extend(form_types)
+        references.extend(form_refs)
     del line
 
-    f: str
-    t: list[lexical.Type]
+    # If this entry is undialected, try to infer the dialects from the
+    # forms. We only do this for roots, but not derivations – hence the
+    # check for `strict`.
+    if not dialects and strict:
+        # Undialected and Ⳉ, it's Akhmimic!
+        if all("ⳉ" in form for form in forms):
+            dialects = ["A"]
+        # Undialected and ϧ, it's Bohairic!
+        if all("ϧ" in form for form in forms):
+            dialects = ["B"]
 
-    for form in forms:
-        form = constants.REFERENCE_RE.sub(sub_ref, form)
-        f, t = _parse_form_and_types(form, detach_types, use_coptic_symbol)
-        ss.append(f)
-        tt.extend(t)
+    return lex.Line(
+        dialects,
+        forms,
+        types,
+        [r.string(use_coptic_symbol) for r in references],
+        root_type,
+        normalize_optional=normalize_optional,
+        normalize_assumed=normalize_assumed,
+    )
 
-    return ss, tt, rr
 
-
-def _parse_form_and_types(
+def _parse_rich_form(
     line: str,
     detach_types: bool,
     use_coptic_symbol: bool,
-) -> tuple[str, list[lexical.Type]]:
-    # This method makes the assumption that references have been removed.
+) -> tuple[str, list[lex.Type], list[lex.Reference]]:
 
-    line = _apply_substitutions(
-        line,
-        constants.PREPROCESSING,
-        use_coptic_symbol,
-    )
-
-    _validate_words(constants.ENGLISH_WITHIN_COPTIC_RE.sub("", line))
+    parts: list[lex.Word | lex.Annotation | lex.Remark] = []
+    references: list[lex.Reference] = []
+    for part in constants.SPACE_NOT_BETWEEN_BRACKETS_RE.split(line):
+        if not part:
+            continue
+        part = _apply_substitutions(part, constants.PREPROCESSING)
+        if constants.REFERENCE_RE.fullmatch(part):
+            references.extend(_parse_reference(part))
+            continue
+        if constants.ENGLISH_WITHIN_COPTIC_RE.match(part):
+            parts.append(lex.Remark(part))
+            continue
+        if part in constants.DETACHED_TYPES:
+            parts.append(lex.Annotation(constants.DETACHED_TYPES[part]))
+            continue
+        if constants.WORD_RE.match(part):
+            parts.append(lex.Word(part))
+            continue
+        log.fatal("Unable to make sense of", part, "in", line)
 
     if detach_types:
-        return _pick_up_detached_types(line, constants.DETACHED_TYPES)
+        words_and_remarks: list[lex.Word | lex.Remark] = []
+        types: list[lex.Annotation] = []
+        for p in parts:
+            if isinstance(p, lex.Annotation):
+                types.append(p)
+            else:
+                words_and_remarks.append(p)
+        assert len(types) + len(words_and_remarks) == len(parts)
+        del parts
+        return (
+            " ".join([s.string(use_coptic_symbol) for s in words_and_remarks]),
+            [t.type for t in types],
+            references,
+        )
 
-    line = _apply_substitutions(
-        line,
-        constants.DETACHED_TYPES,
-        use_coptic_symbol,
+    return (
+        " ".join(p.string(use_coptic_symbol) for p in parts),
+        [],
+        references,
     )
-    return line.strip(), []
-
-
-def _remove_assumed_form_parentheses(f: str) -> str:
-    # Remove surrounding parentheses if present.
-    if not f:
-        return f
-    if f[0] == "(" and f[-1] == ")":
-        return f[1:-1]
-    return f
-
-
-def _validate_words(line: str) -> None:
-    # For the sake of rigor, investigate the content of the no-English subset.
-    # NOTE: The body of this method is largely similar to
-    # _parse_forms_and_types.
-    line, _ = _pick_up_detached_types(line, constants.DETACHED_TYPES)
-    line = line.replace("(?)", "")  # TODO: (#338) Ugly! :/
-
-    assert line
-    words: list[str] = line.split()
-    del line
-
-    # Get rid of the parentheses marking unattested forms, as they aren't
-    # matched by our regex.
-    words = list(map(_remove_assumed_form_parentheses, words))
-    assert all(constants.WORD_RE.fullmatch(w) for w in words), words
-
-
-def _pick_up_detached_types(
-    line: str,
-    detached_types: list[tuple[str, lexical.Type]],
-) -> tuple[str, list[lexical.Type]]:
-    t: list[lexical.Type] = []
-    for p in detached_types:
-        if p[0] in line:
-            line = line.replace(p[0], "")
-            t.append(p[1])
-    return line.strip(), t
 
 
 def parse_english_cell(line: str) -> str:
     return _apply_substitutions(line, constants.ENGLISH_PROCESSING)
 
 
-@functools.total_ordering
-class CrumPage:
-    """A page number in Crum's dictionary."""
-
-    num: int
-    col: str
-
-    def __init__(self, raw: str):
-        if not raw:
-            self.num = 0
-            self.col = ""
-            return
-        match = constants.CRUM_RE.match(raw)
-        assert match
-        assert len(match.groups()) == 2
-        self.num = int(match.groups()[0])
-        self.col = match.groups()[1]
-        assert self.num >= 0 and self.num <= constants.CRUM_LAST_PAGE_NUM
-        assert self.col in {"a", "b"}
-
-    def parts(self) -> tuple[int, str]:
-        return self.num, self.col
-
-    @typing.override
-    def __eq__(self, other: object) -> bool:
-        if isinstance(other, CrumPage):
-            return self.parts() == other.parts()
-        return NotImplemented
-
-    def __lt__(self, other: typing.Self) -> bool:
-        return self.parts() < other.parts()
-
-    def real(self) -> bool:
-        return any(self.parts())
-
-    def string(self) -> str:
-        assert all(self.parts())
-        return "".join(str(x) for x in self.parts())
-
-
-def _parse_reference(line: str) -> abc.Generator[str]:
+def _parse_reference(line: str) -> abc.Generator[lex.Reference]:
     """Parse a reference.
 
     Args:
@@ -273,18 +181,16 @@ def _parse_reference(line: str) -> abc.Generator[str]:
     parts = line.split(";")
     assert not (len(parts) % 5), parts
     for i in range(0, len(parts), 5):
-        yield "; ".join(filter(None, parts[i : i + 5] + [body, note]))
+        ref: str = "; ".join(filter(None, parts[i : i + 5] + [body, note]))
+        yield lex.Reference(ref)
 
 
-def _munch_dialects(
-    line: str,
-) -> tuple[list[str], str]:
-    match, line = _munch(line, constants.DIALECTS_RE)
+def _munch_dialects(line: str) -> tuple[list[str], str]:
+    match = constants.DIALECTS_RE.match(line)
     if not match:
         return [], line
-    assert match, line
-    assert match[0] == "(" and match[-1] == ")"
-    return match[1:-1].split(","), line
+    assert match.start() == 0
+    return match.group(1).split(","), line[match.end() :].strip()
 
 
 def lighten_greek(line: str) -> str:

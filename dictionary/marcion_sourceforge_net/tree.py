@@ -5,7 +5,9 @@ import typing
 
 import pandas as pd
 
-from dictionary.marcion_sourceforge_net import constants, parse
+from dictionary.marcion_sourceforge_net import constants
+from dictionary.marcion_sourceforge_net import lexical as lex
+from dictionary.marcion_sourceforge_net import parse
 
 _NUM_COLS = 10
 assert not 100 % _NUM_COLS
@@ -72,8 +74,8 @@ class Node:
     def crum_page_range(self) -> str:
         assert self.is_root()
         assert self._preprocessed
-        pages: list[parse.CrumPage] = [
-            parse.CrumPage(d.row()["crum"])
+        pages: list[lex.CrumPage] = [
+            lex.CrumPage(d.row()["crum"])
             for d in self.descendants(include_root=True)
         ]
         pages = [p for p in pages if p.real()]
@@ -81,7 +83,7 @@ class Node:
             return ""
         if len(pages) == 1:
             return pages[0].string()
-        ordered: list[parse.CrumPage] = list(sorted(pages))
+        ordered: list[lex.CrumPage] = list(sorted(pages))
         first, last = ordered[0], ordered[-1]
         if first == last:
             assert all(p == first for p in ordered)
