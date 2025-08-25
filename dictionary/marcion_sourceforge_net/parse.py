@@ -122,6 +122,11 @@ def _parse_rich_form(
         if part in constants.DETACHED_TYPES:
             parts.append(lex.Annotation(constants.DETACHED_TYPES[part]))
             continue
+        # NOTE: We're using `match` instead of `fullmatch` in the following
+        # check, because the regex doesn't account for attestation appendices.
+        # This isn't ideal. The regex should account for the parentheses, and we
+        # should use `fullmatch` for extra rigor. (Though the rigor is achieved
+        # elsewhere.)
         if constants.WORD_RE.match(part):
             parts.append(lex.Word(part))
             continue
