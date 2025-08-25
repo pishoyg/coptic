@@ -25,6 +25,7 @@ export const LIGHT = 'light'; // TODO: (#241) A styling class!
 export const MEANING = 'meaning';
 export const NAG_HAMMADI = 'nag-hammadi';
 export const NAVIGATE = 'navigate'; // TODO: (#203) Although this class's primary use is Anki, it might actually belong in the header.
+export const QUALITY = 'quality';
 export const ROOT_TYPE = 'root-type';
 export const SENSES = 'senses';
 export const SISTERS_TABLE = 'sisters-table';

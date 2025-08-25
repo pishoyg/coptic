@@ -608,6 +608,11 @@ class Crum(Decker):
             yield "</div>"
         del senses
 
+        # Quality.
+        yield '<div id="quality" class="quality">'
+        yield self.__cell(row, "quality")
+        yield "</div>"
+
         # Line break.
         yield LINE_BREAK
 
@@ -1090,6 +1095,7 @@ CRUM_XOOXLE = xooxle.Index(
         xooxle.Selector({"class_": "nag-hammadi"}, force=False),
         xooxle.Selector({"class_": "sisters"}, force=False),
         xooxle.Selector({"id": "categories"}, force=False),
+        xooxle.Selector({"id": "quality"}),
     ],
     captures=[
         xooxle.Capture(

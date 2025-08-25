@@ -296,7 +296,8 @@ body:not(.lexicon) .header td:not(:first-child) {
 
 /* stylelint-enable selector-class-pattern */
 
-.senses {
+.senses,
+.quality {
   font-size: small;
   font-style: italic;
   color: #7f8c8d;

@@ -128,7 +128,7 @@ export class Highlighter {
 
     this.updateSheetOrElements(
       this.devRuleIndex,
-      `.${dev.CLS.DEV}, .${cls.NAG_HAMMADI}, .${cls.SENSES}`,
+      `.${dev.CLS.DEV}, .${cls.NAG_HAMMADI}, .${cls.SENSES}, .${cls.QUALITY}`,
       `display: ${display};`,
       (el: HTMLElement) => {
         el.style.display = display;
