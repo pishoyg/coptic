@@ -335,7 +335,7 @@ class Crum(Decker):
         data = TLA_ID_RE.sub("", data)
         return data
 
-    for word in kellia.KELLIA.comprehensive:  # pylint: disable=not-an-iterable
+    for word in kellia.KELLIA.comprehensive:
         key = __tla_col(word.entry_xml_id)
         title = (
             __tla_col(word.orthstring.pishoy())
@@ -822,9 +822,7 @@ class Copticsite(Decker):
         # NOTE: The key is a protected field. Do not change unless you know what
         # you're doing.
         key = 1
-        for (
-            word
-        ) in copticsite.Copticsite.words:  # pylint: disable=not-an-iterable
+        for word in copticsite.Copticsite.words:
             front = _aon(
                 '<span class="word B">',
                 '<span class="spelling B">',

@@ -143,6 +143,7 @@ disable=R,
         wrong-import-order,
         xrange-builtin,
         zip-builtin-not-iterating,
+        not-an-iterable
 
 
 [REPORTS]

@@ -368,9 +368,8 @@ class Crum:
             pattern: re.Pattern[str] = re.compile(self._regex)
             return sum(
                 len(pattern.findall(str(row[self._field])))
-                for row in Crum._sheet  # pylint: disable=not-an-iterable
+                for row in Crum._sheet
             )
-        # pylint: disable-next=not-an-iterable
         return sum(bool(row[self._field]) for row in Crum._sheet)
 
 
