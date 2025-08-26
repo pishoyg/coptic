@@ -326,9 +326,7 @@ class Crum(Decker):
         key_sense_code_sense[__key(row)] = json.loads(senses) if senses else {}
 
     @staticmethod
-    def __tla_col(row: pd.Series, col: str) -> str:
-        data = str(row[col])
-        assert data
+    def __tla_col(data: str) -> str:
         data = _use_html_line_breaks(data)
         # NOTE: TLA sister elements possess IDs that are often identical, which
         # we remove here in order to avoid having HTML element ID conflicts,
@@ -337,14 +335,14 @@ class Crum(Decker):
         data = TLA_ID_RE.sub("", data)
         return data
 
-    for _, row in kellia.comprehensive.iterrows():
-        key = __tla_col(row, "entry_xml_id")
+    for word in kellia.KELLIA.comprehensive:  # pylint: disable=not-an-iterable
+        key = __tla_col(word.entry_xml_id)
         title = (
-            __tla_col(row, "orthstring-pishoy")
+            __tla_col(word.orthstring.pishoy())
             .replace("<br>", " ")
             .replace("</br>", " ")
         )
-        meaning = __tla_col(row, "merged-pishoy")
+        meaning = __tla_col(word.merge_langs().pishoy())
         key_to_stepsister[key] = Sister(key, title, meaning, "")
 
     mother = Mother(key_to_sister, SisterWithFrag)
@@ -870,47 +868,28 @@ class KELLIA(Decker):
         self,
         deck_name: str,
         deck_id: int,
-        tsv: pd.DataFrame,
+        words: list[kellia.Word],
     ) -> None:
-        self._tsv: pd.DataFrame = tsv
+        self.words: list[kellia.Word] = words
         super().__init__(deck_name, deck_id)
-
-    def __cell(
-        self,
-        row: pd.Series,
-        col: str,
-        force: bool = True,
-        line_br: bool = False,
-    ) -> str:
-        cell: str = str(row[col])
-        if force:
-            assert cell
-        if line_br:
-            cell = _use_html_line_breaks(cell)
-        return cell
 
     @typing.override
     def notes_aux(self) -> abc.Generator[deck.Note]:
-        for _, row in self._tsv.iterrows():
+        for word in self.words:
             # NOTE: The key is a protected field. Do not change unless you know
             # what you're doing.
-            key = self.__cell(row, "entry_xml_id")
-            front = self.__cell(row, "orthstring-pishoy", line_br=True)
-            back = _join(
-                self.__cell(row, "merged-pishoy", line_br=True),
-                self.__cell(
-                    row,
-                    "etym_string-processed",
-                    line_br=True,
-                    force=False,
-                ),
+            key: str = word.entry_xml_id
+            front: str = _use_html_line_breaks(word.orthstring.pishoy())
+            back: str = _join(
+                _use_html_line_breaks(word.merge_langs().pishoy()),
+                _use_html_line_breaks(word.etym_string.process()),
                 HORIZONTAL_RULE,
                 "<footer>",
                 "Coptic Dictionary Online: ",
                 '<a href="',
-                self.__cell(row, "cdo"),
+                word.cdo(),
                 '">',
-                self.__cell(row, "entry_xml_id"),
+                word.entry_xml_id,
                 "</a>",
                 "</footer>",
             )
@@ -986,17 +965,17 @@ DECKERS: list[Decker] = [
     KELLIA(
         KELLIA_COMPREHENSIVE,
         1284010391,
-        kellia.comprehensive,
+        kellia.KELLIA.comprehensive,
     ),
     KELLIA(
         KELLIA_EGYPTIAN,
         1284010392,
-        kellia.egyptian,
+        kellia.KELLIA.egyptian,
     ),
     KELLIA(
         KELLIA_GREEK,
         1284010393,
-        kellia.greek,
+        kellia.KELLIA.greek,
     ),
 ]
 

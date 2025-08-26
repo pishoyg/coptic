@@ -16,17 +16,13 @@ View history at:
 
 # TODO: (#305) There are some typos in the data. Fix at the origin.
 
-import glob
-import os
 import pathlib
 import re
 import typing
 import xml.etree.ElementTree as ET
-from collections import OrderedDict, abc, defaultdict
+from collections import OrderedDict, abc
 
-import pandas as pd
-
-from utils import log
+from utils import cache, log
 
 _SCRIPT_DIR = pathlib.Path(__file__).parent
 _V_1_2_DIR = _SCRIPT_DIR / "data" / "raw" / "v1.2"
@@ -39,6 +35,42 @@ _LANGS = ["de", "en", "fr", "MERGED"]
 _GEO_MAPPING: dict[str, str] = {
     "?": "U",
     "Ak": "O",
+}
+
+_ASCII_MAPPING = {
+    "ⲁ": "A",
+    "ⲃ": "B",
+    "ⲅ": "C",
+    "ⲇ": "D",
+    "ⲉ": "E",
+    "ⲍ": "F",
+    "ⲏ": "G",
+    "ⲑ": "H",
+    "ⲓ": "I",
+    "ⲕ": "J",
+    "ⲗ": "K",
+    "ⲙ": "L",
+    "ⲛ": "M",
+    "ⲝ": "N",
+    "ⲟ": "O",
+    "ⲡ": "P",
+    "ⲣ": "Q",
+    "ⲥ": "R",
+    "ⲧ": "S",
+    "ⲩ": "T",
+    "ⲫ": "U",
+    "ⲭ": "V",
+    "ⲯ": "W",
+    "ⲱ": "X",
+    "ϣ": "Y",
+    "ϥ": "Z",
+    "ⳉ": "a",
+    "ϧ": "b",
+    "ϩ": "c",
+    "ϫ": "d",
+    "ϭ": "e",
+    "ϯ": "SI",
+    " ": " ",
 }
 
 # pylint: disable=line-too-long
@@ -155,11 +187,6 @@ _SOURCES: list[tuple[str, str]] = [
 ]
 # pylint: enable=line-too-long
 
-# TODO: (#51) Support entity types.
-_PUB_CORPORA = None
-
-_entity_types: defaultdict[str, set[str]] = defaultdict(set)
-
 
 def _add_crum_links(ref_bibl: str) -> str:
     return _CRUM_RE.sub(rf'<a href="{_CRUM_PAGE}\2">\1</a>', ref_bibl)
@@ -173,10 +200,6 @@ def _compress(text: str | None) -> str:
 def _clean(text: str) -> str:
     text = "".join(c for c in text if c in _CLEAN)
     return _compress(text)
-
-
-def _cdo(entry_xml_id: str) -> str:
-    return f"https://coptic-dictionary.org/entry.cgi?tla={entry_xml_id}"
 
 
 class _Reformat:
@@ -340,7 +363,7 @@ class EtymString(_Reformat):
                     + " "
                 )
 
-    def greek_id(self):
+    def greek_id(self):  # dead: disable
         return self._greek_id
 
     def process(self):
@@ -554,26 +577,6 @@ class _Lang(_Reformat):
         return self._pishoy
 
 
-def _merge_langs(de: _Lang, en: _Lang, fr: _Lang):
-    merged = _Lang("MERGED")
-    assert len(de.senses()) == len(en.senses()) == len(fr.senses())
-    for de_s, en_s, fr_s in zip(de.senses(), en.senses(), fr.senses()):
-        assert de_s.identify() == en_s.identify() == fr_s.identify()
-        merged.add_sense(*de_s.identify())
-        for row in en_s.explain('<span class="lang">(En.) </span>'):
-            merged.add(*row)
-        merged.add("", "")
-        for row in de_s.explain('<span class="lang">(De.) </span>'):
-            merged.add(*row)
-        merged.add("", "")
-        for row in fr_s.explain('<span class="lang">(Fr.) </span>'):
-            merged.add(*row)
-        merged.add("", "")
-        for row in de_s.give_references():
-            merged.add(*row)
-    return merged
-
-
 def _gloss_bibl(ref_bibl: str) -> str:
     """Adds tooltips to lexical resource names.
 
@@ -644,40 +647,70 @@ def _order_forms(formlist: list[ET.Element]) -> list[ET.Element]:
     return output
 
 
-def _get(attr: str, line: str) -> str:
-    s = re.search(" " + attr + r'="([^"]*)"', line)
-    assert s
-    return s.group(1)
+class Word:
+    """Word represents a word in the KELLIA dictionary."""
 
+    def __init__(
+        self,
+        entry_id: int,
+        super_id: int,
+        entry_xml_id: str,
+        lemma_form_id: str,
+        orthstring: _OrthString,
+        pos_string: str,
+        de: _Lang,
+        en: _Lang,
+        fr: _Lang,
+        etym_string: EtymString,
+        ascii_orth: str,
+        search_string: str,
+        oref_string: str,
+    ):
+        self.entry_id: int = entry_id
+        self.super_id: int = super_id
+        self.entry_xml_id: str = entry_xml_id
+        self.lemma_form_id: str = lemma_form_id
+        self.orthstring: _OrthString = orthstring
+        self.pos_string: str = pos_string
+        self.de: _Lang = de
+        self.en: _Lang = en
+        self.fr: _Lang = fr
+        self.etym_string: EtymString = etym_string
+        self.ascii_orth: str = ascii_orth
+        self.search_string: str = search_string
+        self.oref_string: str = oref_string
 
-def _get_entity_types(pub_corpora_dir: str) -> defaultdict[str, set[str]]:
-    if not pub_corpora_dir.endswith(os.sep):
-        pub_corpora_dir += os.sep
-    tt_files = glob.glob(
-        pub_corpora_dir + "**" + os.sep + "*.tt",
-        recursive=True,
-    )
-    entity_types: defaultdict[str, set[str]] = defaultdict(set)
-    for file_ in tt_files:
-        sgml = open(file_, encoding="utf8").read()
-        if ' entities="gold"' not in sgml:
-            continue  # Only use gold entities
-        lines: list[str] = sgml.splitlines()
-        # Pass 1 - get head lemmas
-        id2lemma: dict[str, str] = {}
-        for line in lines:
-            if "norm" in line and "xml:id" in line:
-                xml_id = _get("xml:id", line)
-                lemma = _get("lemma", line)
-                id2lemma[xml_id] = lemma
-        # Pass 2 - get entity types for each lemma
-        for line in lines:
-            if ' entity="' in line:
-                ent_type = _get("entity", line)
-                head_id = _get("head_tok", line).replace("#", "")
-                lemma = id2lemma[head_id]
-                entity_types[lemma].add(ent_type)
-    return entity_types
+    def merge_langs(self):
+        merged = _Lang("MERGED")
+        assert (
+            len(self.de.senses())
+            == len(self.en.senses())
+            == len(self.fr.senses())
+        )
+        for de, en, fr in zip(
+            self.de.senses(),
+            self.en.senses(),
+            self.fr.senses(),
+        ):
+            assert de.identify() == en.identify() == fr.identify()
+            merged.add_sense(*de.identify())
+            for row in en.explain('<span class="lang">(En.) </span>'):
+                merged.add(*row)
+            merged.add("", "")
+            for row in de.explain('<span class="lang">(De.) </span>'):
+                merged.add(*row)
+            merged.add("", "")
+            for row in fr.explain('<span class="lang">(Fr.) </span>'):
+                merged.add(*row)
+            merged.add("", "")
+            for row in de.give_references():
+                merged.add(*row)
+        return merged
+
+    def cdo(self) -> str:
+        return (
+            f"https://coptic-dictionary.org/entry.cgi?tla={self.entry_xml_id}"
+        )
 
 
 def _process_entry(
@@ -685,13 +718,15 @@ def _process_entry(
     super_id: int,
     entry: ET.Element,
     entry_xml_id: str,
-) -> dict[str, int | str] | None:
+    lemma_form_id: str,
+) -> Word | None:
     """
     Args:
         entry_id: id of the entry
         super_id: id of the superentry
         entry: Element representing the entry
         entry_xml_id: The entry XML ID.
+        lemma_form_id: The ID of the lemma form.
 
     Returns:
         A tuple representing new row to add to the db.
@@ -834,45 +869,10 @@ def _process_entry(
     first_orth_re = re.search(r"\n(.*?)~", orthstring.amir)
     if first_orth_re is not None:
         ascii_orth = ""
-        mapping = {
-            "ⲁ": "A",
-            "ⲃ": "B",
-            "ⲅ": "C",
-            "ⲇ": "D",
-            "ⲉ": "E",
-            "ⲍ": "F",
-            "ⲏ": "G",
-            "ⲑ": "H",
-            "ⲓ": "I",
-            "ⲕ": "J",
-            "ⲗ": "K",
-            "ⲙ": "L",
-            "ⲛ": "M",
-            "ⲝ": "N",
-            "ⲟ": "O",
-            "ⲡ": "P",
-            "ⲣ": "Q",
-            "ⲥ": "R",
-            "ⲧ": "S",
-            "ⲩ": "T",
-            "ⲫ": "U",
-            "ⲭ": "V",
-            "ⲯ": "W",
-            "ⲱ": "X",
-            "ϣ": "Y",
-            "ϥ": "Z",
-            "ⳉ": "a",
-            "ϧ": "b",
-            "ϩ": "c",
-            "ϫ": "d",
-            "ϭ": "e",
-            "ϯ": "SI",
-            " ": " ",
-        }
         # Extract the first orth.
         for char in first_orth_re.group(1):
-            if char in mapping:
-                ascii_orth += mapping[char]
+            if char in _ASCII_MAPPING:
+                ascii_orth += _ASCII_MAPPING[char]
     else:
         ascii_orth = ""
 
@@ -993,54 +993,29 @@ def _process_entry(
     # ETYM
     etym = entry.find("{http://www.tei-c.org/ns/1.0}etym")
     xrs = entry.findall("{http://www.tei-c.org/ns/1.0}xr")
-    etym_string = EtymString(etym, xrs)
-    ents = ""
-    if "~" in search_string:
-        row_lemma = search_string.strip().split("~")[0]
-        if row_lemma == "ⲉⲓⲱⲧ":  # Hardwired behavior for barley vs. father
-            if entry_xml_id == "C998":
-                ents = "plant"
-            else:
-                ents = "person"
-        elif row_lemma in _entity_types and pos_string in [
-            "ART",
-            "PDEM",
-            "PPOS",
-            "N",
-            "NUM",
-            "PINT",
-        ]:
-            ents = ";".join(sorted(list(_entity_types[row_lemma])))
 
-    return {
-        "id": entry_id,
-        "super_id": super_id,
-        "orthstring": orthstring.amir,
-        "pos_string": pos_string,
-        "de": de.amir,
-        "de-pishoy": de.pishoy(),
-        "en": en.amir,
-        "en-pishoy": en.pishoy(),
-        "fr": fr.amir,
-        "fr-pishoy": fr.pishoy(),
-        "merged-pishoy": _merge_langs(de, en, fr).pishoy(),
-        "etym_string": etym_string.amir,
-        "etym_string-processed": etym_string.process(),
-        "ascii_orth": ascii_orth,
-        "search_string": search_string,
-        "oref_string": oref_string,
-        "greek_id": etym_string.greek_id(),
-        "ents": ents,
-        "orthstring-pishoy": orthstring.pishoy(),
-    }
+    return Word(
+        entry_id,
+        super_id,
+        entry_xml_id,
+        lemma_form_id,
+        orthstring,
+        pos_string,
+        de,
+        en,
+        fr,
+        EtymString(etym, xrs),
+        ascii_orth,
+        search_string,
+        oref_string,
+    )
 
 
 def _process_super_entry(
     entry_id: int,
     super_id: int,
     super_entry: ET.Element,
-) -> list[dict[str, str | int]]:
-    row_list: list[dict[str, str | int]] = []
+) -> abc.Generator[Word]:
     for entry in super_entry:
         entry_xml_id = (
             entry.attrib["{http://www.w3.org/XML/1998/namespace}id"]
@@ -1055,22 +1030,23 @@ def _process_super_entry(
             if "type" in f.attrib
         ]
         lemma = [f for f in forms if f.attrib["type"] == "lemma"]
-        if len(lemma) > 0:
-            lemma_form_id = lemma[0].attrib[
-                "{http://www.w3.org/XML/1998/namespace}id"
-            ]
-        else:
-            lemma_form_id = ""
+        lemma_form_id = (
+            lemma[0].attrib["{http://www.w3.org/XML/1998/namespace}id"]
+            if lemma
+            else ""
+        )
 
-        cur = _process_entry(entry_id, super_id, entry, entry_xml_id)
+        cur: Word | None = _process_entry(
+            entry_id,
+            super_id,
+            entry,
+            entry_xml_id,
+            lemma_form_id,
+        )
         if cur is None:
             continue
-        cur["lemma_form_id"] = lemma_form_id
-        cur["entry_xml_id"] = entry_xml_id
-        row_list.append(cur)
+        yield cur
         entry_id += 1
-
-    return row_list
 
 
 def _pos_map(pos: str, subc: str, orthstring: str) -> str:
@@ -1177,32 +1153,22 @@ def _pos_map(pos: str, subc: str, orthstring: str) -> str:
     return "?"
 
 
-# Gather entity data
-if _PUB_CORPORA is not None:
-    _entity_types = _get_entity_types(_PUB_CORPORA)
-
-
-def build(basename: str) -> pd.DataFrame:
-    xml_path = _V_1_2_DIR / basename
+def build(basename: str) -> abc.Generator[Word]:
+    xml_path: pathlib.Path = _V_1_2_DIR / basename
     del basename
-    super_id = 1
-    entry_id = 1
+    super_id: int = 1
+    entry_id: int = 1
 
-    text = (
-        ET.parse(xml_path)
-        .getroot()
-        .find(
-            "{http://www.tei-c.org/ns/1.0}text",
-        )
+    text: ET.Element[str] | None = (
+        ET.parse(xml_path).getroot().find("{http://www.tei-c.org/ns/1.0}text")
     )
     assert text
-    body: ET.Element | None = text.find(
+    body: ET.Element[str] | None = text.find(
         "{http://www.tei-c.org/ns/1.0}body",
     )
     del text
     assert body
 
-    rows: list[dict[str, str | int]] = []
     for child in body:
         if child.tag == "{http://www.tei-c.org/ns/1.0}entry":
             entry_xml_id = (
@@ -1218,70 +1184,47 @@ def build(basename: str) -> pd.DataFrame:
                 if "type" in f.attrib
             ]
             lemma = [f for f in forms if f.attrib["type"] == "lemma"]
-            if len(lemma) > 0:
-                lemma_form_id = lemma[0].attrib[
-                    "{http://www.w3.org/XML/1998/namespace}id"
-                ]
-            else:
-                lemma_form_id = ""
+            lemma_form_id = (
+                lemma[0].attrib["{http://www.w3.org/XML/1998/namespace}id"]
+                if lemma
+                else ""
+            )
 
-            cur = _process_entry(entry_id, super_id, child, entry_xml_id)
+            cur: Word | None = _process_entry(
+                entry_id,
+                super_id,
+                child,
+                entry_xml_id,
+                lemma_form_id,
+            )
             if cur is None:
                 continue
-            cur["lemma_form_id"] = lemma_form_id
-            cur["entry_xml_id"] = entry_xml_id
-            rows.append(cur)
+            yield cur
             super_id += 1
             entry_id += 1
         elif child.tag == "{http://www.tei-c.org/ns/1.0}superEntry":
-            cur_rows = _process_super_entry(entry_id, super_id, child)
-            rows.extend(cur_rows)
             super_id += 1
-            entry_id += len(cur_rows)
-
-    df = pd.DataFrame(rows)
-    df["cdo"] = [_cdo(entry) for entry in df["entry_xml_id"]]
-
-    columns = [
-        "entry_xml_id",
-        "orthstring-pishoy",
-        "merged-pishoy",
-        "de-pishoy",
-        "en-pishoy",
-        "fr-pishoy",
-        "cdo",
-        "lemma_form_id",
-        "id",
-        "super_id",
-        "orthstring",
-        "pos_string",
-        "de",
-        "en",
-        "fr",
-        "etym_string",
-        "ascii_orth",
-        "search_string",
-        "oref_string",
-        "greek_id",
-        "ents",
-    ]
-
-    col_to_idx = {col_name: idx for idx, col_name in enumerate(columns)}
-    columns = sorted(
-        df.columns,
-        key=lambda col_name: col_to_idx.get(col_name, 1000),
-    )
-    df = df[columns]
-    return df
-    # TODO: (#51) Add network graphs.
+            for word in _process_super_entry(entry_id, super_id, child):
+                yield word
+                entry_id += 1
 
 
-# TODO: (#399): Export objects and methods, rather than TSVs!
+class KELLIA:
+    """KELLIA represents the list of KELLIA dictionaries."""
 
-egyptian: pd.DataFrame = build("BBAW_Lexicon_of_Coptic_Egyptian-v4-2020.xml")
-greek: pd.DataFrame = build(
-    "DDGLC_Lexicon_of_Greek_Loanwords_in_Coptic-v2-2020.xml",
-)
-comprehensive: pd.DataFrame = build(
-    "Comprehensive_Coptic_Lexicon-v1.2-2020.xml",
-)
+    @cache.StaticProperty
+    @staticmethod
+    def egyptian() -> list[Word]:
+        return list(build("BBAW_Lexicon_of_Coptic_Egyptian-v4-2020.xml"))
+
+    @cache.StaticProperty
+    @staticmethod
+    def greek() -> list[Word]:
+        return list(
+            build("DDGLC_Lexicon_of_Greek_Loanwords_in_Coptic-v2-2020.xml"),
+        )
+
+    @cache.StaticProperty
+    @staticmethod
+    def comprehensive() -> list[Word]:
+        return list(build("Comprehensive_Coptic_Lexicon-v1.2-2020.xml"))
