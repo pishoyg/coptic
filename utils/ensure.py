@@ -17,7 +17,7 @@ def ensure(cond: object, *args: object):
         log.fatal(*args)
 
 
-def unique[T](arr: abc.Iterable[T], *message: str) -> None:
+def unique[T](arr: abc.Iterable[T], *message: object) -> None:
     dupes = [
         item for item, count in collections.Counter(arr).items() if count > 1
     ]
@@ -27,7 +27,7 @@ def unique[T](arr: abc.Iterable[T], *message: str) -> None:
 def members[T](
     arr: abc.Iterable[T],
     known: abc.Container[T],
-    *message: str,
+    *message: object,
 ) -> None:
     unknown: list[T] = [x for x in arr if x not in known]
     ensure(not unknown, *message, unknown, "are not members of", known)
@@ -36,7 +36,7 @@ def members[T](
 def equal_sets[T](
     s1: abc.Iterable[T],
     s2: abc.Iterable[T],
-    *message: str,
+    *message: object,
 ) -> None:
     s1, s2 = list(s1), list(s2)
     unique(s1, "not a set!")
@@ -58,6 +58,24 @@ def equal_sets[T](
     )
 
 
-def singleton[T](s: abc.Collection[T]) -> T:
+def singleton[T](arr: abc.Iterable[T]) -> T:
+    s: set[T] = set(arr)
     ensure(len(s) == 1, s, "is not a singleton!")
     return next(iter(s))
+
+
+_bracket_map: dict[str, str] = {")": "(", "]": "[", "}": "{", ">": "<"}
+_opening_brackets: set[str] = set(_bracket_map.values())
+
+
+def brackets_balanced(s: str, *message: object):
+    stack: list[str] = []
+    for char in s:
+        if char in _opening_brackets:
+            stack.append(char)
+            continue
+        if char in _bracket_map:
+            if not stack or _bracket_map[char] != stack.pop():
+                log.fatal(*message, "unbalanced bracket", char, "in", s)
+
+    ensure(not stack, *message, "unbalanced brackets", stack, "in", s)

@@ -56,7 +56,7 @@ class Pattern:
 
     def is_html(self) -> bool:
         return ensure.singleton(
-            [pattern.endswith("html") for pattern in self._patterns],
+            pattern.endswith("html") for pattern in self._patterns
         )
 
     @typing.override

@@ -420,10 +420,8 @@ class Deck:
     def __anki_js_aux(self) -> abc.Generator[str]:
         # We don't allow notes to have different JavaScript, because in our Anki
         # package, we define the JavaScript in the template.
-        js_path: str = ensure.singleton({note.js_path for note in self.notes})
-        js_start: str = ensure.singleton(
-            {note.js_start for note in self.notes},
-        )
+        js_path: str = ensure.singleton(note.js_path for note in self.notes)
+        js_start: str = ensure.singleton(note.js_start for note in self.notes)
 
         yield js_start
         # We use this JavaScript twice in our card template, once in the front,

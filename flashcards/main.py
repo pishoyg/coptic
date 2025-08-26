@@ -3,15 +3,12 @@
 
 
 import argparse
-import os
 
 import genanki  # type: ignore[import-untyped]
 
 from flashcards import constants, deck
-from utils import concur, ensure, file, log
+from utils import concur, ensure, file, log, paths
 from xooxle import xooxle
-
-ANKI_PATH = os.path.join(constants.LEXICON_DIR, "anki/coptic.apkg")
 
 argparser = argparse.ArgumentParser(
     description="Generate Lexicon data in HTML, Anki, and Xooxle formats.",
@@ -61,7 +58,7 @@ def verify_unique_object_keys(decks: list[genanki.Deck]) -> None:
 
 
 def write_anki(decks: list[deck.Deck]) -> None:
-    file.mk_parent_dir(ANKI_PATH)
+    file.mk_parent_dir(paths.ANKI_DIR)
     media_files: set[deck.MediaFile] = set()
     anki_decks: list[genanki.Deck] = []
 
@@ -79,8 +76,8 @@ def write_anki(decks: list[deck.Deck]) -> None:
         anki_decks,
         media_files=[f.path() for f in media_files],
     )
-    package.write_to_file(ANKI_PATH)
-    log.wrote(ANKI_PATH)
+    package.write_to_file(paths.ANKI_DIR)
+    log.wrote(paths.ANKI_DIR)
     deck.MediaFile.clean()
 
 

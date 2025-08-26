@@ -17,6 +17,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+# TODO: (#399) Use the Crum interface, instead of the raw sheet.
 from dictionary.marcion_sourceforge_net import tsv
 from utils import cache, ensure, file, log, paths
 
@@ -321,11 +322,6 @@ class Comp(Code):
 class Crum:
     """Crum sheet statistics."""
 
-    @cache.StaticProperty
-    @staticmethod
-    def _sheet() -> list[dict[str, str | int | float]]:
-        return tsv.Sheet.roots_sheet.get_all_records()
-
     def __init__(
         self,
         name: str,
@@ -368,9 +364,9 @@ class Crum:
             pattern: re.Pattern[str] = re.compile(self._regex)
             return sum(
                 len(pattern.findall(str(row[self._field])))
-                for row in Crum._sheet
+                for row in tsv.Sheet.roots_snapshot
             )
-        return sum(bool(row[self._field]) for row in Crum._sheet)
+        return sum(bool(row[self._field]) for row in tsv.Sheet.roots_snapshot)
 
 
 _CRUM_STATS: list[Stat] = [

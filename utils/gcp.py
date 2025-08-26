@@ -3,7 +3,6 @@
 import typing
 
 import gspread
-import pandas as pd
 from google.oauth2 import service_account
 
 from utils import cache, ensure, log, paths
@@ -40,10 +39,6 @@ def column_num(worksheet: gspread.worksheet.Worksheet, column: str) -> int:
         if value == column:
             return idx + 1  # Google  Sheets uses 1-based indexing.
     log.fatal(column, "not found in sheet")
-
-
-def to_df(worksheet: gspread.worksheet.Worksheet) -> pd.DataFrame:
-    return pd.DataFrame(worksheet.get_all_records()).astype(str)
 
 
 def apply(

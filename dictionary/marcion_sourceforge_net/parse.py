@@ -116,6 +116,7 @@ def _parse_rich_form(
         if constants.REFERENCE_RE.fullmatch(part):
             references.extend(_parse_reference(part))
             continue
+        # TODO: (#500) Allow italicized text in remarks.
         if constants.ENGLISH_WITHIN_COPTIC_RE.fullmatch(part):
             parts.append(lex.Remark(part))
             continue

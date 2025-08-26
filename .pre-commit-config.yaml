@@ -348,13 +348,16 @@ repos:
 
   - repo: local
     hooks:
-      - id: crum-validate
-        name: crum-validate
-        entry: dictionary/marcion_sourceforge_net/main.py
+      # TODO: (#399) Perform image validate during retrieval, as part of the
+      # Crum interface, and delete this hook.
+      - id: crum-img-validate
+        name: crum-img-validate
+        entry: ./dictionary/marcion_sourceforge_net/img_helper.py --validate
         language: system
-        files: ^dictionary/marcion_sourceforge_net/
+        files: ^dictionary/marcion_sourceforge_net/data/img.*$
         pass_filenames: false
       # Dawoud's scan sentinels.
+      # TODO: (#457) Perform sentinel validation using Playwright.
       - id: scan-sentinels
         name: scan-sentinels
         entry: bun run docs/dawoud/main.ts

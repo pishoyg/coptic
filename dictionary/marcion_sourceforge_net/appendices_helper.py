@@ -2,33 +2,38 @@
 """Crum appendices helper."""
 
 
-# TODO: (#204) This module was intended as a generic helper for all appendices,
+# TODO: (#399) This module was intended as a generic helper for all appendices,
 # back when the appendices lived in a separate sheet from the main dictionary
 # data (see #325). At the moment, we no longer have such a separation, and we
 # should probably group the logic differently. This should be part of the more
 # generic redesign of Crum's dictionary.
 
+# TODO: (#399) Use the new Crum interface, instead of reading raw sheet data.
+
 import argparse
-import json
 import shlex
 import subprocess
 import threading
 import urllib
 
 import gspread
-import pandas as pd
 
+from dictionary.marcion_sourceforge_net import categories as cat
 from dictionary.marcion_sourceforge_net import tsv
 from utils import ensure, gcp, log, paths, text
 
+# TODO: (#399) There should be a central location for storing column names, so
+# they don't get duplicated all over the place.
+# Define a `Record` object in the `tsv` module. The module should export raw
+# data through methods, so users don't need to know the column names.
+# For writing, column names should be an enum, but should never be spelled out
+# by users of the interface.
 _KEY_COL: str = "key"
 _SISTERS_COL: str = "sisters"
 _ANTONYMS_COL: str = "antonyms"
 _HOMONYMS_COL: str = "homonyms"
 _GREEK_SISTERS_COL: str = "greek-sisters"
 _TYPE_COL: str = "type"
-
-_SENSES_COL: str = "senses"
 
 _CATEGORIES_COL: str = "categories"
 
@@ -37,81 +42,10 @@ _TEXT_FRAG_PREFIX: str = ":~:text="
 _SISTER_SEP: str = "; "  # Sister separator.
 _CAT_SEP: str = ", "  # Category separator.
 
-# The list of word categories is likely to evolve as we work on categorizing
-# more and more words.
-# For the time being, we have paid more attention to categorizing nouns in
-# particular.
-# It is generally acceptable for some words to belong to several categories,
-# though our categories should be selected such that such cases are uncommon.
-# As much as possible, aim to provide very precise definitions of each category,
-# to minimize uncertainty during the labeling process.
-
-# TODO: (#330): Make it possible for one category to link other related
-# categories.
-# Perhaps wrap categories in <span class="category"> tags, which can then be
-# picked up by your JavaScript and have hyperlinks added to them.
-# pylint: disable=line-too-long
-_KNOWN_CATEGORIES: dict[str, str] = (
-    {
-        # Biology
-        "species": "Includes not only species but also genera, families, orders, and overlaps of such populations and ranks.",
-        "anatomy": "Includes both animal and plant anatomy. Secretions (e.g., saliva, milk, urine) also belong here.",
-        "person": "Includes categories of people (man, woman), jobs and roles (fisher, farmer), family members (father, mother), and epithets (blind, bald, wise).",
-        "food": "Includes edibles that don’t fit into anatomy or species, such as bread, gruel, and ingredients.",
-        "biology": "Covers general biology-related terms not fitting into more precise categories. Includes diseases and life functions (breathe, eat).",
-    }
-    | {
-        # Physics & Chemistry
-        # Food substances (milk, wine, oil, flesh, honey, ...) should be marked as "food" (and/or "anatomy" where appropriate).
-        "substance": "Includes elements and compounds, as well as more generic substances like stone, water, and dirt.",
-        "proper nouns": "Proper nouns, such as place names, ethnicities, ...",
-        "earth": "Describes natural earthly phenomena that are not man-made and are not simply substances.",
-        "astronomy": "Astronomy.",
-        "colors": "Colors.",
-        "shapes": "Shapes (e.g. ball, corner, fragment, piece, ...).",
-        "physics": "Covers physics-related terms not fitting into more specific categories, including astronomical terms and physical phenomena (e.g., energy, light, heat).",
-    }
-    | {
-        # Man-made
-        # Some nouns (such as canal) can be either natural or man-made. In this
-        # case, it can be included in both the "geography" and "construction" categories.
-        "construction": "Includes man-made objects fixed at a given location, such as cities and constructed structures.",
-        # Non-movable storage objects (such as cistern or treasure house) belong
-        # to the "construction" category.
-        "container": "Includes storage objects like pots, jars, dishes, boxes, chests, and baskets. Any movable storage object belongs in this category.",
-        "tool": "Represents tools or utilities that don’t fit in 'container' or 'construction'. Can include natural non-living objects used as tools.",
-        "clothes": "Clothes and fabrics.",
-        "vehicle": "Includes various forms of transportation.",
-    }
-    | {
-        # Conceptual
-        "time": "Represents time-related concepts.",
-        "number": "Represents numerical concepts.",
-        # Notice that entities representing specific points rather than quantities (e.g. Monday vs. 24 hours, or here vs. 10 meters) do NOT belong in this category.
-        "unit": "Represents quantities, measures, or units of length, time, weight, currency, and volume.",
-        "direction": "Represents directional concepts.",
-        "emotion": "Covers words related to emotions.",
-        "concept": "Represents abstract concepts.",
-    }
-    | {
-        # Miscellaneous
-        "doubtful": "Represents words with an unknown or uncertain meaning.",
-    }
-)
-# pylint: enable=line-too-long
-
 _argparser: argparse.ArgumentParser = argparse.ArgumentParser(
     description="Find and process appendices.",
     formatter_class=argparse.RawTextHelpFormatter,
     exit_on_error=False,
-)
-
-_ = _argparser.add_argument(
-    "-v",
-    "--validate",
-    action="store_true",
-    default=False,
-    help="Validate the appendices.",
 )
 
 _ = _argparser.add_argument(
@@ -234,10 +168,6 @@ def _ssplit(cell: str) -> list[str]:
     return text.ssplit(cell, _SISTER_SEP.strip())
 
 
-def _stringify(row: dict) -> dict[str, str]:
-    return {key: str(value) for key, value in row.items()}
-
-
 class _Person:
     """A member of a house."""
 
@@ -300,7 +230,8 @@ class _House:
             A boolean indicating whether any changes were made.
 
         """
-        added, updated = [], []
+        added: list[_Person] = []
+        updated: list[_Person] = []
 
         for spouse in spouses:
             if spouse.key == self.key:
@@ -336,7 +267,7 @@ class _House:
 class _Family:
     """A family is made up of several houses, currently four."""
 
-    def __init__(self, row: pd.Series | dict[str, str]) -> None:
+    def __init__(self, row: dict[str, str]) -> None:
         self.key: str = row[_KEY_COL]
         self.sisters: _House = _House(row[_KEY_COL], row[_SISTERS_COL])
         self.antonyms: _House = _House(row[_KEY_COL], row[_ANTONYMS_COL])
@@ -373,6 +304,8 @@ class _Family:
             [],
         )
 
+    # TODO: (#399) Move the Family type to `main.py`, and perform validation
+    # during retrieval as well.
     def validate(self, key_to_family: dict, symmetry: bool = True) -> None:
         """
         Args:
@@ -429,68 +362,14 @@ class _Family:
         )
 
 
-class _Validator:
-    """Validator validates data."""
-
-    def parse_senses(self, senses: str) -> dict[str, str]:
-        # TODO: (#189) Once all senses are present, don't allow the field to be
-        # absent.
-        if not senses:
-            return {}
-
-        parsed: dict[str, str] = json.loads(senses)
-        del senses
-        ensure.unique(parsed.keys())
-        ensure.unique(parsed.values())
-        return parsed
-
-    def validate_senses(self, key: str, senses: str) -> None:
-        parsed: dict[str, str] = self.parse_senses(senses)
-        if not parsed:
-            return
-        for sense_id in parsed:
-            ensure.ensure(
-                sense_id.isdigit(),
-                key,
-                "has a sense with an invalid key",
-                sense_id,
-                "sense keys must be integers.",
-            )
-        largest: int = max(map(int, parsed.keys()))
-        ensure.ensure(largest == len(parsed), key, "has a gap in the senses!")
-
-    def validate_sisters(self, df: pd.DataFrame) -> None:
-        key_to_family: dict[str, _Family] = {
-            row[_KEY_COL]: _Family(row) for _, row in df.iterrows()
-        }
-        for fam in key_to_family.values():
-            fam.validate(key_to_family)
-
-    def validate_categories(self, key: str, raw_categories: str) -> None:
-        ensure.members(
-            _csplit(raw_categories),
-            _KNOWN_CATEGORIES,
-            key,
-            "has unknown categories",
-        )
-
-    def validate(self, df: pd.DataFrame) -> None:
-        for _, row in df.iterrows():
-            key: str = row[_KEY_COL]
-            self.validate_senses(key, row[_SENSES_COL])
-            self.validate_categories(key, row[_CATEGORIES_COL])
-        self.validate_sisters(df)
-
-
 class _Matriarch:
     """Matriarch controls family relations."""
 
     def __init__(self) -> None:
         # Worksheet 0 has the roots.
+        # TODO: (#399): Define the sheet and record writing interface, instead
+        # of having your pipelines directly use the Google Sheets API.
         self.sheet: gspread.worksheet.Worksheet = tsv.Sheet.roots_sheet
-        self.keys: set[str] = {
-            str(record[_KEY_COL]) for record in self.sheet.get_all_records()
-        }
 
         self.col_idx: dict[str, int] = {
             _SISTERS_COL: gcp.column_num(self.sheet, _SISTERS_COL),
@@ -508,7 +387,7 @@ class _Matriarch:
 
     def marry_house(
         self,
-        row: dict,
+        row: dict[str, str],
         col: str,
         spouses: list[_Person],
     ) -> _House:
@@ -566,8 +445,7 @@ class _Matriarch:
 
         # Googls Sheets uses 1-based indexing.
         # We also add 1 to account for the header row.
-        all_records: list[dict] = self.sheet.get_all_records()
-        all_records = list(map(_stringify, all_records))
+        all_records: tsv.Records = tsv.Sheet.snapshot_roots()
         key_to_family: dict[str, _Family] = {
             row[_KEY_COL]: _Family(row) for row in all_records
         }
@@ -594,7 +472,7 @@ class _Matriarch:
             _Family(
                 {
                     _KEY_COL: key,
-                    _GREEK_SISTERS_COL: str(row[_GREEK_SISTERS_COL]),
+                    _GREEK_SISTERS_COL: row[_GREEK_SISTERS_COL],
                 }
                 | {col: huis.string() for col, huis in houses.items()},
             ).validate(key_to_family, symmetry=False)
@@ -624,7 +502,7 @@ class Runner:
 
         self.args.cat = sorted(self.args.cat)
         ensure.unique(self.args.cat, "Duplicate categories!")
-        ensure.members(self.args.cat, _KNOWN_CATEGORIES)
+        ensure.members(self.args.cat, cat.KNOWN_CATEGORIES)
 
         def url_to_person(url_or_raw: str) -> _Person:
             """Convert a URL to a person initializer.
@@ -691,7 +569,6 @@ class Runner:
             map(
                 bool,
                 [
-                    self.args.validate,
                     self.args.cat or self.args.keys or self.args.override_cat,
                     self.args.sisters or self.args.antonyms,
                     self.args.homonyms,
@@ -703,37 +580,32 @@ class Runner:
         ensure.ensure(num_actions <= 1, "At most one command is allowed!")
         return bool(num_actions)
 
-    def validate(self) -> None:
-        validatoor: _Validator = _Validator()
-        # TODO: (#0) As of now, only roots have appendices (sisters, categories,
-        # ...). This may expand to derivations in the future, in which case they
-        # should also be validated.
-        validatoor.validate(tsv.roots())
-
     def categories(self) -> None:
         self.init()
         assert self.mother
         if not self.args.keys:
-            for row in self.mother.sheet.get_all_records():
-                cat = row[_CATEGORIES_COL]
-                assert isinstance(cat, str)
-                if any(c in self.args.cat for c in text.ssplit(cat)):
+            # If no keys are given, the ask is to print keys of words belonging
+            # to a given category.
+            for row in tsv.Sheet.snapshot_roots():
+                cats = str(row[_CATEGORIES_COL])
+                if any(c in self.args.cat for c in text.ssplit(cats)):
                     print(row[_KEY_COL])
             return
-        for key in self.args.keys:
-            assert key in self.mother.keys
+        # Assign the given categories to the given words.
+        roots: tsv.Records = tsv.Sheet.snapshot_roots()
+        ensure.members(self.args.keys, roots)
         row_idx = 1
         col_idx = self.mother.col_idx[_CATEGORIES_COL]
-        for record in self.mother.sheet.get_all_records():
+        for record in roots:
             row_idx += 1
-            key = str(record[_KEY_COL])
+            key = record[_KEY_COL]
             if key not in self.args.keys:
                 continue
             if self.args.override_cat:
                 new_cat = _CAT_SEP.join(self.args.cat)
             else:
                 current_cats = set(
-                    _csplit(str(record[_CATEGORIES_COL])),
+                    _csplit(record[_CATEGORIES_COL]),
                 )
                 new_cat = _CAT_SEP.join(
                     sorted(current_cats | set(self.args.cat)),
@@ -746,7 +618,7 @@ class Runner:
         assert self.mother
         row_idx = 1
         col_idx = self.mother.col_idx[_CATEGORIES_COL]
-        for record in self.mother.sheet.get_all_records():
+        for record in tsv.Sheet.snapshot_roots():
             row_idx += 1
             key = int(record[_KEY_COL])
             if key < self.args.first:
@@ -777,7 +649,7 @@ class Runner:
                 cats = text.ssplit(
                     input(f"Key = {key}. Categories (empty to skip): "),
                 )
-                unknown = [c for c in cats if c not in _KNOWN_CATEGORIES]
+                unknown = [c for c in cats if c not in cat.KNOWN_CATEGORIES]
                 if unknown:
                     log.error("Unknown categories:", unknown)
                     continue
@@ -793,11 +665,6 @@ class Runner:
             ).start()
 
     def once(self) -> None:
-        # NOTE: We perform validation before initialization to speed it up, as
-        # we don't need to initialize if we just need a one-off validation.
-        if self.args.validate:
-            self.validate()
-
         # If --keys is present but --cat is absent, we still
         if self.args.cat or self.args.keys:
             self.categories()

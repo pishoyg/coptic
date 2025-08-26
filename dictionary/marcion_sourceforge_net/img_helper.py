@@ -3,7 +3,6 @@
 
 import argparse
 import glob
-import json
 import os
 import pathlib
 import re
@@ -13,16 +12,16 @@ import urllib
 from collections import abc
 
 import colorama
-import pandas as pd
 import requests
 from PIL import Image
 
-from dictionary.marcion_sourceforge_net import tsv
+from dictionary.marcion_sourceforge_net import main as crum
 from utils import ensure, file, log, paths, semver, text
 
 # TODO: (#5) Prevent users from updating an image without updating its source.
 # Somehow!
 
+# TODO: (#399) Move relevant logic to the Crum interface in `main.py`.
 _SCRIPT_DIR = pathlib.Path(__file__).parent
 _TIMEOUT_S = 5
 
@@ -41,9 +40,6 @@ _FILE_NAME_RE = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
 _STEM_RE = re.compile("[0-9]+-[0-9]+-[0-9]+")
 _NAME_RE = re.compile("[A-Z][a-zA-Z ]*")
 
-# TODO: (#399) Move the TSV constants to tsv.py.
-_KEY_COL: str = "key"
-_SENSES_COL: str = "senses"
 _SOURCES_DIR: str = str(_SCRIPT_DIR / "data" / "img-sources")
 
 _BANNED_TOP_LEVEL_DOMAINS = {
@@ -284,8 +280,8 @@ def _os_open(*args: str):
     _ = subprocess.run(["open"] + list(args), check=True)
 
 
-def _get_downloads(args) -> list[str]:
-    files = os.listdir(args.downloads)
+def _get_downloads(args: argparse.Namespace) -> list[str]:
+    files: list[str] = os.listdir(args.downloads)
     files = [f for f in files if f not in args.ignore]
     files = [os.path.join(args.downloads, f) for f in files]
     files = [f for f in files if os.path.isfile(f)]
@@ -369,7 +365,7 @@ def _convert(path: str, skip_existing: bool = False) -> None:
     if os.path.exists(target) and skip_existing:
         return
     # Write the converted image.
-    subprocess.call(
+    _ = subprocess.call(
         [
             "magick",
             path,
@@ -390,7 +386,7 @@ def _convert(path: str, skip_existing: bool = False) -> None:
 def main():
     args = _argparser.parse_args()
     # Preprocess arguments.
-    actions: list = list(
+    actions: list[object] = list(
         filter(
             None,
             [
@@ -408,6 +404,7 @@ def main():
         len(actions) <= 1,
         "Up to one action argument can be given at a time.",
     )
+    del actions
 
     if args.validate:
         validate()
@@ -440,7 +437,11 @@ def _basename(url: str) -> str:
     return filename
 
 
-def _retrieve(args, url: str, filename: str | None = None) -> str:
+def _retrieve(
+    args: argparse.Namespace,
+    url: str,
+    filename: str | None = None,
+) -> str:
     headers = {}
     if _is_wiki(url):
         headers = _WIKI_HEADERS
@@ -449,7 +450,7 @@ def _retrieve(args, url: str, filename: str | None = None) -> str:
     ensure.ensure(download.ok, download.text)
     filename = os.path.join(args.downloads, filename)
     with open(filename, "wb") as f:
-        f.write(download.content)
+        _ = f.write(download.content)
         log.wrote(filename)
     return filename
 
@@ -484,7 +485,7 @@ def _mv(a_stem: str, b_stem: str) -> None:
     img_ext = file.ext(a_arts[0])
     b_arts = _get_artifacts(b_stem, img_ext)
     for a, b in zip(a_arts, b_arts):
-        pathlib.Path(a).rename(b)
+        _ = pathlib.Path(a).rename(b)
 
 
 def _cp(a_stem: str, b_stem: str) -> None:
@@ -493,7 +494,7 @@ def _cp(a_stem: str, b_stem: str) -> None:
     img_ext = file.ext(a_arts[0])
     b_arts = _get_artifacts(b_stem, img_ext)
     for a, b in zip(a_arts, b_arts):
-        shutil.copyfile(a, b)
+        _ = shutil.copyfile(a, b)
 
 
 def _pretty(j: dict[str, str] | dict[str, list[str]] | list[str]):
@@ -604,13 +605,10 @@ def _clear(key: str) -> None:
 class _Prompter:
     """Prompt user for commands."""
 
-    def __init__(self, args):
-        self.args = args
+    def __init__(self, args: argparse.Namespace):
+        self.args: argparse.Namespace = args
         self.plot_yes: int = 0
         self.plot_no: int = 0
-        self.key_to_row: dict[str, pd.Series] = {
-            row[_KEY_COL]: row for _, row in tsv.roots().iterrows()
-        }
 
         self.sources: dict[str, list[str]] = {}
 
@@ -621,20 +619,24 @@ class _Prompter:
             assert k not in self.exclude
             self.exclude[k] = v
 
-        self.key: str = ""
-        self.row: pd.Series = pd.Series()
+        self.row: crum.Root
 
     def print_info(self):
         print()
         log.info("Data:")
-        log.info("- Key:", self.key)
-        log.info("- Link:", paths.crum_url(self.row[_KEY_COL]))
+        log.info("- Key:", self.row.key)
+        log.info("- Link:", paths.crum_url(self.row.key))
         log.info("- Existing:")
-        _pretty(_existing(self.key))
+        _pretty(_existing(self.row.key))
         log.info("- Downloads:")
         _pretty(_get_downloads(self.args))
         log.info("- Senses:")
-        _pretty(json.loads(self.key_to_row[self.key][_SENSES_COL] or "{}"))
+        _pretty(
+            {
+                str(k): v
+                for k, v in crum.Crum.roots[self.row.key].senses.items()
+            },
+        )
         log.info("- Sources:")
         _pretty(self.sources)
         print()
@@ -732,9 +734,8 @@ class _Prompter:
         print()
 
     def prompt(self):
-        for key in sorted(self.key_to_row.keys(), key=int):
-            self.key = key
-            self.row = self.key_to_row[self.key]
+        for key in sorted(crum.Crum.roots.keys(), key=int):
+            self.row = crum.Crum.roots[key]
             if not self.prompt_for_word():
                 break
         if self.args.plot:
@@ -751,30 +752,30 @@ class _Prompter:
         Raises:
             AssertionError: If an invariant is broken.
         """
-        if int(self.key) < self.args.start:
+        if int(self.row.key) < self.args.start:
             return True
-        if int(self.key) > self.args.end:
+        if int(self.row.key) > self.args.end:
             return False
-        if any(self.row[k] == v for k, v in self.exclude.items()):
+        if any(self.row.row[k] == v for k, v in self.exclude.items()):
             return True
-        if self.args.skip_existing and _existing(self.key):
+        if self.args.skip_existing and _existing(self.row.key):
             return True
 
         if self.args.plot:
-            if int(self.key) < int(self.args.start):
+            if int(self.row.key) < int(self.args.start):
                 return True
-            if int(self.key) > int(self.args.end):
+            if int(self.row.key) > int(self.args.end):
                 return False
-            if _existing(self.key):
+            if _existing(self.row.key):
                 self.plot_yes += 1
                 message = colorama.Fore.GREEN + "YES"
             else:
                 self.plot_no += 1
                 message = colorama.Fore.RED + "NO"
-            print(self.key, message + colorama.Fore.RESET)
+            print(self.row.key, message + colorama.Fore.RESET)
             return True
 
-        _os_open(*_existing(self.key), paths.crum_url(self.row[_KEY_COL]))
+        _os_open(*_existing(self.row.key), paths.crum_url(self.row.key))
 
         while True:
             try:
@@ -835,12 +836,8 @@ class _Prompter:
 
         if command == "key":
             for key in params:
-                self.key = key
-                self.row = self.key_to_row[self.key]
-                _os_open(
-                    *_existing(self.key),
-                    paths.crum_url(self.row[_KEY_COL]),
-                )
+                self.row = crum.Crum.roots[key]
+                _os_open(*_existing(key), paths.crum_url(key))
             return True
 
         if command == "convert":
@@ -885,7 +882,7 @@ class _Prompter:
                 for p in params:
                     _clear(p)
             else:
-                _clear(self.key)
+                _clear(self.row.key)
             return True
 
         if command.startswith("http"):
@@ -947,20 +944,23 @@ class _Prompter:
             return True
 
         # Move the files.
-        idx = _get_max_idx(_existing(self.key), str(self.key), str(sense))
+        idx = _get_max_idx(_existing(self.row.key), self.row.key, str(sense))
         for f in files:
             idx += 1
             ext = file.ext(f)
-            new_file = os.path.join(_IMG_DIR, f"{self.key}-{sense}-{idx}{ext}")
-            pathlib.Path(f).rename(new_file)
+            new_file = os.path.join(
+                _IMG_DIR,
+                f"{self.row.key}-{sense}-{idx}{ext}",
+            )
+            _ = pathlib.Path(f).rename(new_file)
             _convert(new_file)
             file.write("\n".join(self.sources[f]), _get_source(new_file))
 
         return True
 
 
-def _batch(args):
-    def key(path):
+def _batch(args: argparse.Namespace):
+    def key(path: str):
         return int(file.stem(path).split("-")[0])
 
     images = file.paths(_IMG_DIR)
@@ -981,6 +981,8 @@ def _listdir_sorted(directory: str) -> list[str]:
     return semver.sort_semver(file.paths(directory))
 
 
+# TODO: (#399) Perform validation during image retrieval as part of the Crum
+# interface in `main.py`.
 def validate():
     images = _listdir_sorted(_IMG_DIR)
     converted_images = _listdir_sorted(_IMG_300_DIR)

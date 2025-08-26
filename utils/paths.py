@@ -17,6 +17,13 @@ def crum_url(key: str | int) -> str:
 SITE_DIR: str = os.environ["SITE_DIR"]
 assert os.path.exists(SITE_DIR)
 
+LEXICON_DIR: str = os.path.join(SITE_DIR, "crum")
+assert os.path.exists(LEXICON_DIR)
+
+# Anki is not persisted to source control (and unlikely to ever be), so the
+# directory is not guaranteed to exist.
+ANKI_DIR = os.path.join(LEXICON_DIR, "anki/coptic.apkg")
+
 CRUM = "dictionary/marcion_sourceforge_net/"
 assert os.path.exists(CRUM)
 ANDREAS = "dictionary/stmacariusmonastery_org/"

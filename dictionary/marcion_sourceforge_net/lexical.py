@@ -7,7 +7,7 @@ import typing
 
 from dictionary.marcion_sourceforge_net import constants
 from morphology import inflect
-from utils import log
+from utils import ensure, log
 
 
 class Gender(enum.Enum):
@@ -83,7 +83,7 @@ class Line:
         normalize_optional: bool = False,
         normalize_assumed: bool = False,
     ) -> None:
-        assert all(d in constants.DIALECTS for d in dialects)
+        ensure.members(dialects, constants.DIALECTS)
         self._dialects: list[str] = dialects
         self._forms: list[str] = forms
         self._types: list[Type] = types
@@ -411,9 +411,18 @@ class CrumPage:
     def __lt__(self, other: typing.Self) -> bool:
         return self._parts() < other._parts()
 
-    def real(self) -> bool:
+    def __bool__(self) -> bool:
         return any(self._parts())
 
-    def string(self) -> str:
+    @typing.override
+    def __hash__(self):
+        return hash(self._parts())
+
+    @typing.override
+    def __str__(self) -> str:
         assert all(self._parts())
         return "".join(str(x) for x in self._parts())
+
+    @typing.override
+    def __repr__(self) -> str:
+        return self.__str__()

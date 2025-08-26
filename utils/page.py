@@ -32,6 +32,26 @@ _VIEWPORT_TAG = """
 <meta name="viewport" content="width=device-width, initial-scale=1">
 """
 
+LINE_BREAK: str = "<br>"
+HORIZONTAL_RULE = "<hr>"
+_SELF_CLOSING_LINE_BREAK: str = "<br/>"
+
+
+def html_line_breaks(txt: str) -> str:
+    """Substitute newline characters with HTML line breaks.
+
+    Args:
+        txt: Text to fix.
+
+    Returns:
+        Text with newlines replaced with HTML line breaks.
+    """
+    return txt.replace("\n", LINE_BREAK)
+
+
+def one_line(htm: str) -> str:
+    return htm.replace(LINE_BREAK, " ").replace(_SELF_CLOSING_LINE_BREAK, " ")
+
 
 # html_head is used by our HTML generation logic to generated the <head>
 # elements for our pages.

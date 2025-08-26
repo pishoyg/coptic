@@ -1,23 +1,18 @@
 """This package hosts hardcoded definitions of our dictionary structure."""
 
-import json
 import os
 import re
 import typing
 from collections import abc, defaultdict
 
-import pandas as pd
-
-import dictionary.copticsite_com.main as copticsite
-import dictionary.kellia_uni_goettingen_de.main as kellia
-import dictionary.marcion_sourceforge_net.main as crum
+from dictionary.copticsite_com import main as copticsite
+from dictionary.kellia_uni_goettingen_de import main as kellia
+from dictionary.marcion_sourceforge_net import constants as crum_const
+from dictionary.marcion_sourceforge_net import main as crum
 from flashcards import deck
-from utils import file, paths, semver, text
+from utils import ensure, file, page, paths, semver
 from xooxle import xooxle
 
-# Data
-LEXICON_DIR = os.path.join(paths.SITE_DIR, "crum/")
-CRUM_DIALECTS = ["S", "Sa", "Sf", "A", "L", "B", "F", "Fb", "O", "NH"]
 # TODO: (#399) Crum should export images through an interface, so you don't
 # have to look up the files directly.
 EXPLANATORY_SOURCES = "dictionary/marcion_sourceforge_net/data/img-sources"
@@ -44,9 +39,6 @@ DAWOUD_SURNAME = "Dawoud"
 DICTIONARY_PAGE_RE = re.compile("([0-9]+(a|b))")
 TLA_ID_RE = re.compile(r'\bid="[^"]+"')
 
-LINE_BREAK = "<br>"
-HORIZONTAL_RULE = "<hr>"
-
 
 def _img_aux(
     id_: str,
@@ -64,7 +56,7 @@ def _img_aux(
     yield f"<figcaption>{caption}</figcaption>"
     yield "</figure>"
     if line_br:
-        yield LINE_BREAK
+        yield page.LINE_BREAK
 
 
 class Decker:
@@ -84,7 +76,7 @@ class Decker:
             deck_description=DESCRIPTION,
             css_path=CSS,
             notes=list(self.notes_aux()),
-            html_dir=LEXICON_DIR,
+            html_dir=paths.LEXICON_DIR,
             index_indexes=self.index_indexes(),
         )
 
@@ -114,10 +106,8 @@ def _join(*parts: str) -> str:
     return "".join(parts)
 
 
-def _use_html_line_breaks(txt: str) -> str:
-    return txt.replace("\n", LINE_BREAK)
-
-
+# TODO: (#399) Crum and KELLIA words should implement a sister interface. You
+# shouldn't construct objects in the Flashcards pipeline.
 class Sister:
     """Sister represents a sister of a Crum word."""
 
@@ -187,19 +177,12 @@ class Mother:
             with_frag
         )
 
-    def parse(self, raw: str) -> SisterWithFrag:
-        assert raw
-        split = raw.split()
-        return self.with_frag(
-            # The first part of the split is the key.
-            self.key_to_sister[split[0]],
-            # The rest is the fragment.
-            " ".join(split[1:]),
-        )
-
-    def gather_aux(self, sisters: str) -> abc.Generator[str]:
-        for s in text.ssplit(sisters, ";"):
-            yield from self.parse(s).html_aux()
+    def gather_aux(self, relations: crum.House) -> abc.Generator[str]:
+        for r in relations:
+            yield from self.with_frag(
+                self.key_to_sister[r.key],
+                r.fragment,
+            ).html_aux()
 
 
 class CrumIndexer(Mother):
@@ -255,10 +238,10 @@ class CrumIndexer(Mother):
         keys: list[str] = []
         types: list[list[str]] = []
         categories: list[list[str]] = []
-        for _, row in crum.roots.iterrows():
-            keys.append(row["key"])
-            types.append([row["type"]])
-            categories.append(text.ssplit(row["categories"], ","))
+        for _, root in crum.Crum.roots.items():
+            keys.append(root.key)
+            types.append([root.row["type"]])
+            categories.append(root.categories)
 
         return [
             deck.IndexIndex(
@@ -284,7 +267,7 @@ class CrumIndexer(Mother):
 class Crum(Decker):
     """Crum represents a Crum deck."""
 
-    key_sense_code_sense: dict[str, dict[str, str]] = {}
+    key_sense_code_sense: dict[str, dict[int, str]] = {}
     images_by_key: defaultdict[str, list[str]] = defaultdict(list)
     key_to_sister: dict[str, Sister] = {}
     key_to_stepsister: dict[str, Sister] = {}
@@ -292,42 +275,19 @@ class Crum(Decker):
     stepmother: Mother
     indexer: CrumIndexer
 
-    @staticmethod
-    def __cell(
-        row: pd.Series,
-        col: str,
-        line_br: bool = False,
-        force: bool = True,
-    ) -> str:
-        cell: str = str(row[col])
-        if force:
-            assert cell
-        if line_br:
-            cell = _use_html_line_breaks(cell)
-        return cell
-
-    @staticmethod
-    def __key(row: pd.Series) -> str:
-        key = str(row["key"])
-        assert key and key.isdigit()
-        return key
-
-    for _, row in crum.roots.iterrows():
-        key: str = __cell(row, "key")
-        title: str = (
-            __cell(row, "word-parsed-classify")
-            .replace("<br>", " ")
-            .replace("<br/>", " ")
+    for _, root in crum.Crum.roots.items():
+        title: str = page.one_line(root.word_parsed_classify())
+        key_to_sister[root.key] = Sister(
+            root.key,
+            title,
+            root.meaning,
+            root.type_name,
         )
-        meaning: str = __cell(row, "en-parsed", line_br=True, force=False)
-        typ: str = __cell(row, "type")
-        key_to_sister[key] = Sister(key, title, meaning, typ)
-        senses: str = __cell(row, "senses", force=False)
-        key_sense_code_sense[__key(row)] = json.loads(senses) if senses else {}
+        key_sense_code_sense[root.key] = root.senses
 
     @staticmethod
     def __tla_col(data: str) -> str:
-        data = _use_html_line_breaks(data)
+        data = page.html_line_breaks(data)
         # NOTE: TLA sister elements possess IDs that are often identical, which
         # we remove here in order to avoid having HTML element ID conflicts,
         # given that, in this view, we can include several TLA entries in the
@@ -336,20 +296,22 @@ class Crum(Decker):
         return data
 
     for word in kellia.KELLIA.comprehensive:
-        key = __tla_col(word.entry_xml_id)
+        key: str = __tla_col(word.entry_xml_id)
         title = (
             __tla_col(word.orthstring.pishoy())
             .replace("<br>", " ")
             .replace("</br>", " ")
         )
-        meaning = __tla_col(word.merge_langs().pishoy())
+        meaning: str = __tla_col(word.merge_langs().pishoy())
         key_to_stepsister[key] = Sister(key, title, meaning, "")
 
     mother = Mother(key_to_sister, SisterWithFrag)
     stepmother = Mother(key_to_stepsister, StepsisterWithFrag)
     indexer = CrumIndexer(key_to_sister, SisterWithFrag)
 
-    for basename in os.listdir(os.path.join(LEXICON_DIR, EXPLANATORY_DIR)):
+    for basename in os.listdir(
+        os.path.join(paths.LEXICON_DIR, EXPLANATORY_DIR),
+    ):
         key = basename[: basename.find("-")]
         images_by_key[key].append(basename)
 
@@ -367,7 +329,7 @@ class Crum(Decker):
             '<span class="italic lighter small">',
             # TODO: (#189) Require the presence of a sense once the sense
             # data has been fully populated.
-            Crum.key_sense_code_sense[key].get(sense, ""),
+            Crum.key_sense_code_sense[key].get(int(sense), ""),
             "</span>",
         )
 
@@ -388,7 +350,8 @@ class Crum(Decker):
         dialects: list[str] | None = None,
     ):
         super().__init__(deck_name, deck_id)
-        self.dialects: list[str] = dialects or []
+        self.dialects: set[str] = set(dialects or [])
+        ensure.members(self.dialects, crum_const.DIALECTS)
 
     @typing.override
     def index_indexes(self) -> list[deck.IndexIndex]:
@@ -400,18 +363,22 @@ class Crum(Decker):
 
     @typing.override
     def notes_aux(self) -> abc.Generator[deck.Note]:
-        for _, row in crum.roots.iterrows():
-            if not self.__dialect_match(row):
+        for _, root in crum.Crum.roots.items():
+
+            if self.dialects and not self.dialects.intersection(
+                root.all_dialects,
+            ):
                 continue
+
             yield deck.Note(
                 # NOTE: The key is a protected field. Do not change unless you
                 # know what you're doing.
-                key=self.__key(row),
-                front=self.__front(row),
-                back=self.__back(row),
-                title=self.__title(row),
-                nxt=self.__next(row),
-                prv=self.__prev(row),
+                key=root.key,
+                front=self.__front(root),
+                back=self.__back(root),
+                title=root.title(),
+                nxt=self.__path(crum.Crum.next_key(root)),
+                prv=self.__path(crum.Crum.prev_key(root)),
                 search=CRUM_SEARCH,
                 js_start=(
                     DIALECTS_JS.format(DIALECT_ARR=self.dialects)
@@ -421,31 +388,13 @@ class Crum(Decker):
                 js_path=CRUM_JS,
             )
 
-    def __dialect_match(self, row: pd.Series) -> bool:
-        if not self.dialects:
-            return True  # No dialect filter!
-        dialects = list(map(str.strip, row["dialects"].split(",")))
-        assert all(d in CRUM_DIALECTS for d in dialects)
-        return any(d in self.dialects for d in dialects)
+    def __path(self, key: str | None) -> str:
+        return "" if not key else f"{key}.html"
 
-    @staticmethod
-    def __title(row: pd.Series) -> str:
-        return Crum.__cell(row, "word-title")
+    def __front(self, root: crum.Root) -> str:
+        return "".join(self.__front_aux(root))
 
-    @staticmethod
-    def __next(row: pd.Series) -> str:
-        key = Crum.__cell(row, "key-next", force=False)
-        return f"{key}.html" if key else ""
-
-    @staticmethod
-    def __prev(row: pd.Series) -> str:
-        key = Crum.__cell(row, "key-prev", force=False)
-        return f"{key}.html" if key else ""
-
-    def __front(self, row: pd.Series) -> str:
-        return "".join(self.__front_aux(row))
-
-    def __front_aux(self, row: pd.Series) -> abc.Generator[str]:
+    def __front_aux(self, root: crum.Root) -> abc.Generator[str]:
         # Header.
         # Open the table.
         yield '<table id="header" class="header">'
@@ -460,22 +409,20 @@ class Crum(Decker):
         yield "</td>"
         # Prev
         yield "<td>"
-        prev = self.__prev(row)
+        prev = crum.Crum.prev_key(root)
         if prev:
-            yield f'<a class="navigate" href="{prev}">prev</a>'
+            yield f'<a class="navigate" href="{prev}.html">prev</a>'
         del prev
         yield "</td>"
         # Key.
         yield "<td>"
-        key = self.__key(row)
-        yield f'<a class="navigate" href="{key}.html">{key}</a>'
-        del key
+        yield f'<a class="navigate" href="{root.key}.html">{root.key}</a>'
         yield "</td>"
         # Next
         yield "<td>"
-        nxt = self.__next(row)
+        nxt = crum.Crum.next_key(root)
         if nxt:
-            yield f'<a class="navigate" href="{nxt}">next</a>'
+            yield f'<a class="navigate" href="{nxt}.html">next</a>'
         del nxt
         yield "</td>"
         # Reset.
@@ -490,32 +437,26 @@ class Crum(Decker):
         yield "</tr>"
         yield "</table>"
         # Horizontal line.
-        yield HORIZONTAL_RULE
+        yield page.HORIZONTAL_RULE
         # The word.
         yield '<div id="pretty" class="pretty">'
-        yield self.__cell(
-            row,
-            "word-parsed-prettify",
-            line_br=True,
-            force=False,
-        )
+        yield root.word_parsed_prettify()
         yield "</div>"
 
-    def __back(self, row: pd.Series) -> str:
-        return "".join(self.__back_aux(row))
+    def __back(self, root: crum.Root) -> str:
+        return "".join(self.__back_aux(root))
 
+    # TODO: (#399) This should be a method of Crum's Crum interface, rather than
+    # Flashcards's.
+    # Same for other objects.
     @staticmethod
-    def __senses_json_to_html(senses_dump: str) -> str:
-        if not senses_dump:
-            return ""
-        senses: dict[str, str] = json.loads(senses_dump)
+    def __senses(senses: dict[int, str]) -> str:
         return "; ".join(
             f'<span class="sense" id="sense{k}">{senses[k]}</span>'
             for k in sorted(senses.keys(), key=int)
         )
 
-    def __back_aux(self, row: pd.Series) -> abc.Generator[str]:
-        key = self.__key(row)
+    def __back_aux(self, root: crum.Root) -> abc.Generator[str]:
         # Meaning
         yield '<div id="root-type-meaning" class="root-type-meaning">'
         # TODO: (#233) For consistency, this should be renamed to
@@ -525,57 +466,55 @@ class Crum(Decker):
         # name to refer to elements that relate to the root.
         yield '<div id="root-type" class="root-type">'
         yield "(<b>"
-        yield self.__cell(row, "type")
+        yield root.type_name
         yield "</b>)"
         yield "</div>"
 
-        cat = self.__cell(row, "categories", force=False)
-        if cat:
+        if root.categories:
             yield '<div id="categories" class="categories">'
-            yield cat
+            yield ", ".join(root.categories)
             yield "</div>"
-        del cat
-        meaning = self.__cell(row, "en-parsed", line_br=True, force=False)
-        if meaning:
+        if root.meaning:
             yield '<div id="meaning" class="meaning">'
-            yield meaning
+            yield root.meaning
             yield "</div>"
         yield "</div>"
 
-        crum_page = self.__cell(row, "crum", force=False)
-        dawoud_pages = self.__cell(row, "dawoud-pages", force=False)
-        if crum_page or dawoud_pages:
+        if root.crum or root.dawoud_pages:
             # Dictionary pages.
             yield '<div id="dictionary" class="dictionary">'
             yield '<span class="right">'
-            yield _aon(
-                '<b><a href="#crum" class="crum hover-link">Crum</a>: </b>',
-                '<span class="crum-page">',
-                crum_page,
-                "</span>",
-            )
-            yield _aon(
-                LINE_BREAK,
-                "<b>",
-                '<a href="#dawoud" class="dawoud hover-link">',
-                DAWOUD_SURNAME,
-                "</a>",
-                ": ",
-                "</b>",
-                DICTIONARY_PAGE_RE.sub(
+
+            if root.crum:
+                yield "<b>"
+                yield '<a href="#crum" class="crum hover-link">Crum</a>: '
+                yield "</b>"
+                yield '<span class="crum-page">'
+                yield str(root.crum)
+                yield "</span>"
+
+            if root.dawoud_pages:
+                yield page.LINE_BREAK
+                yield "<b>"
+                yield '<a href="#dawoud" class="dawoud hover-link">'
+                yield DAWOUD_SURNAME
+                yield "</a>"
+                yield ": "
+                yield "</b>"
+                yield DICTIONARY_PAGE_RE.sub(
                     r'<span class="dawoud-page">\1</span>',
-                    dawoud_pages.replace(",", ", "),
-                ),
-            )
+                    root.dawoud_pages.replace(",", ", "),
+                )
+
             yield "</span>"
             yield "</div>"
-            yield LINE_BREAK
+            yield page.LINE_BREAK
 
         # Images.
-        basenames: list[str] = self.images_by_key.get(key, [])
+        basenames: list[str] = self.images_by_key.get(root.key, [])
         basenames = semver.sort_semver(basenames)
         if not basenames:
-            yield LINE_BREAK
+            yield page.LINE_BREAK
         else:
             yield '<div id="images" class="images">'
             for basename in basenames:
@@ -590,108 +529,84 @@ class Crum(Decker):
         del basenames
 
         # Editor's notes.
-        editor = self.__cell(row, "notes", line_br=True, force=False)
-        if editor:
+        if root.notes:
             yield '<div id="notes" class="notes">'
             yield "<i>Editor's Note: </i>"
-            yield editor
+            yield root.notes
             yield "</div>"
-        del editor
 
         # Senses.
-        senses = self.__cell(row, "senses", force=False)
-        if senses:
+        if root.senses:
             yield '<div id="senses" class="senses">'
-            yield Crum.__senses_json_to_html(senses)
+            yield Crum.__senses(root.senses)
             yield "</div>"
-        del senses
 
         # Quality.
         yield '<div id="quality" class="quality">'
-        yield self.__cell(row, "quality")
+        yield root.quality
         yield "</div>"
 
         # Line break.
-        yield LINE_BREAK
+        yield page.LINE_BREAK
 
         # Derivations.
-        yield self.__cell(
-            row,
-            "derivations-table",
-            line_br=True,
-            force=False,
-        )
+        yield root.drv_html_table()
 
         # Sisters.
-        sisters = self.__cell(row, "sisters", force=False)
-        stepsisters = self.__cell(row, "greek-sisters", force=False)
-        antonyms = self.__cell(row, "antonyms", force=False)
-        homonyms = self.__cell(row, "homonyms", force=False)
-
-        if sisters or stepsisters or antonyms or homonyms:
-            yield HORIZONTAL_RULE
+        if (
+            root.sisters
+            or root.greek_sisters
+            or root.antonyms
+            or root.homonyms
+        ):
+            yield page.HORIZONTAL_RULE
             yield '<div id="sisters" class="sisters">'
             before: bool = False
-            if sisters:
+            if root.sisters:
                 yield "<i>See also: </i>"
                 yield '<table class="sisters-table">'
-                yield from Crum.mother.gather_aux(sisters)
+                yield from Crum.mother.gather_aux(root.sisters)
                 yield "</table>"
                 before = True
-            if stepsisters:
+            if root.greek_sisters:
                 if before:
-                    yield LINE_BREAK
+                    yield page.LINE_BREAK
                 yield "<i>Greek: </i>"
                 yield '<table class="sisters-table">'
-                yield from Crum.stepmother.gather_aux(stepsisters)
+                yield from Crum.stepmother.gather_aux(root.greek_sisters)
                 yield "</table>"
                 before = True
-            if antonyms:
+            if root.antonyms:
                 if before:
-                    yield LINE_BREAK
+                    yield page.LINE_BREAK
                 yield "<i>Opposite: </i>"
                 yield '<table class="sisters-table">'
-                yield from Crum.mother.gather_aux(antonyms)
+                yield from Crum.mother.gather_aux(root.antonyms)
                 yield "</table>"
                 before = True
-            if homonyms:
+            if root.homonyms:
                 if before:
-                    yield LINE_BREAK
+                    yield page.LINE_BREAK
                 yield "<i>Homonyms: </i>"
                 yield '<table class="sisters-table">'
-                yield from Crum.mother.gather_aux(homonyms)
+                yield from Crum.mother.gather_aux(root.homonyms)
                 yield "</table>"
                 before = True
             yield "</div>"
             del before
-        del sisters, stepsisters, antonyms, homonyms
 
         # Crum's pages.
-        if crum_page:
-            last_page_override = Crum.__cell(
-                row,
-                "crum-last-page",
-                force=False,
-            )
-            if last_page_override:
-                assert last_page_override != crum_page
-                page_range = f"{crum_page}-{last_page_override}"
-            else:
-                page_range = Crum.__cell(row, "crum-page-range")
-            del last_page_override
-
-            yield HORIZONTAL_RULE
+        if root.crum:
+            yield page.HORIZONTAL_RULE
             yield '<div id="crum" class="crum dictionary">'
             yield '<span class="right">'
             yield '<b><a href="#crum" class="crum hover-link">Crum</a>: </b>'
             yield DICTIONARY_PAGE_RE.sub(
                 r'<span class="crum-page">\1</span>',
-                page_range.replace(",", ", "),
+                root.crum_page_range.replace(",", ", "),
             )
             yield "</span>"
-            page_numbers: list[int] = Crum._page_numbers(page_range)
-            del page_range
-            for num in page_numbers:
+            for num in Crum._page_numbers(root.crum_page_range):
                 yield from _img_aux(
                     id_=f"crum{num}",
                     path=os.path.join(SCAN_DIR, f"{num+22}.png"),
@@ -700,12 +615,10 @@ class Crum(Decker):
                     caption=f'<span class="crum-page-external">{num}</span>',
                     line_br=True,
                 )
-            del page_numbers
             yield "</div>"
-        del crum_page
 
-        if dawoud_pages:
-            yield HORIZONTAL_RULE
+        if root.dawoud_pages:
+            yield page.HORIZONTAL_RULE
             yield '<div id="dawoud" class="dawoud dictionary">'
             yield '<span class="right">'
             # Dawoud's pages.
@@ -715,13 +628,12 @@ class Crum(Decker):
             yield "</a>"
             yield ": "
             yield "</b>"
-            page_ranges = self.__cell(row, "dawoud-pages", force=False)
             yield DICTIONARY_PAGE_RE.sub(
                 r'<span class="dawoud-page">\1</span>',
-                page_ranges.replace(",", ", "),
+                root.dawoud_pages.replace(",", ", "),
             )
             yield "</span>"
-            page_numbers = Crum._page_numbers(page_ranges)
+            page_numbers = Crum._page_numbers(root.dawoud_pages)
             for num in page_numbers:
                 yield from _img_aux(
                     path=os.path.join(DAWOUD_DIR, f"{num+17}.png"),
@@ -732,7 +644,6 @@ class Crum(Decker):
                     line_br=True,
                 )
             yield "</div>"
-        del dawoud_pages
 
     @staticmethod
     def _dedup(arr: list[int], at_most_once: bool = False) -> list[int]:
@@ -840,8 +751,8 @@ class Copticsite(Decker):
                 "</b>",
                 ")",
                 "</span>",
-                LINE_BREAK,
-            ) + _use_html_line_breaks(word.meaning)
+                page.LINE_BREAK,
+            ) + page.html_line_breaks(word.meaning)
 
             if not front and not back:
                 continue
@@ -877,11 +788,11 @@ class KELLIA(Decker):
             # NOTE: The key is a protected field. Do not change unless you know
             # what you're doing.
             key: str = word.entry_xml_id
-            front: str = _use_html_line_breaks(word.orthstring.pishoy())
+            front: str = page.html_line_breaks(word.orthstring.pishoy())
             back: str = _join(
-                _use_html_line_breaks(word.merge_langs().pishoy()),
-                _use_html_line_breaks(word.etym_string.process()),
-                HORIZONTAL_RULE,
+                page.html_line_breaks(word.merge_langs().pishoy()),
+                page.html_line_breaks(word.etym_string.process()),
+                page.HORIZONTAL_RULE,
                 "<footer>",
                 "Coptic Dictionary Online: ",
                 '<a href="',
@@ -1088,7 +999,7 @@ CRUM_XOOXLE = xooxle.Index(
             block_elements=xooxle.BLOCK_ELEMENTS_DEFAULT | {"td"},
         ),
     ],
-    output=os.path.join(LEXICON_DIR, "crum.json"),
+    output=os.path.join(paths.LEXICON_DIR, "crum.json"),
 )
 
 
@@ -1118,7 +1029,7 @@ KELLIA_XOOXLE = xooxle.Index(
             ),
         ),
     ],
-    output=os.path.join(LEXICON_DIR, "kellia.json"),
+    output=os.path.join(paths.LEXICON_DIR, "kellia.json"),
 )
 
 
@@ -1136,5 +1047,5 @@ COPTICSITE_XOOXLE = xooxle.Index(
             xooxle.Selector({"id": "back"}),
         ),
     ],
-    output=os.path.join(LEXICON_DIR, "copticsite.json"),
+    output=os.path.join(paths.LEXICON_DIR, "copticsite.json"),
 )

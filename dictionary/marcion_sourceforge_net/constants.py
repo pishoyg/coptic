@@ -19,6 +19,9 @@ DIALECTS: list[str] = [
     "NH",  # Nag Hammadi
 ]
 
+MIN_KEY: int = 1
+MAX_KEY: int = 3385
+
 # NOTE: Our derivations table layout can accommodate a maximum depth of 4. If
 # this were to change, the table layout needs to be redesigned. See `tree.py`.
 MAX_DERIVATION_DEPTH: int = 4
@@ -287,4 +290,11 @@ ENGLISH_PROCESSING: list[tuple[re.Pattern[str] | str, str]] = [
         re.compile(rf"(\b({"|".join(_BOLDEN)})( \([a-zA-Z? ]+\))?:)"),
         r"<b>\1</b>",
     ),
+]
+
+QUALITY: list[str] = [
+    "complete",
+    "complete+",
+    "complete++",
+    "complete+cz",
 ]
