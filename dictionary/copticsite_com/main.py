@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """Process the copticsite dictionary."""
 
-
 import pathlib
 import re
 
 import pandas as pd
 
-from utils import ensure
+from utils import cache, ensure
 
 _SCRIPT_DIR = pathlib.Path(__file__).parent
 _INPUT_XLSX: str = str(
@@ -17,14 +16,11 @@ _INPUT_XLSX: str = str(
     / "coptic dictionary northern dialect unicode complete.xlsx",
 )
 
-_UNNAMED_PREFIX: str = "Unnamed: "
-_MEANING_COL: str = "Meaning"
-_ORIGIN_COL: str = "Origin"
+_ORIGIN_COL: str = "Meaning"
 _COPTIC_COL: str = "Coptic Unicode Alphabet"
 _KIND_COL: str = "Word Kind"
 _GENDER_COL: str = "Word Gender"
-_SUFFIX_COL: str = "suffix"
-_PRETTIFY_COL: str = "prettify"
+_UNNAMED_PREFIX: str = "Unnamed: "
 
 # SUFFIX maps the word kinds to a map of word genders to suffixes.
 _SUFFIX: dict[str, dict[str, str]] = {
@@ -280,11 +276,11 @@ _SUFFIX: dict[str, dict[str, str]] = {
 }
 
 
-_ENGLISH_WORD_RE: re.Pattern = re.compile("[A-Za-z]")
-_COPTIC_WORD_RE: re.Pattern = re.compile("([Ⲁ-ⲱϢ-ϯⳈⳉ]+)")
+_ENGLISH_WORD_RE: re.Pattern[str] = re.compile("[A-Za-z]")
+_COPTIC_WORD_RE: re.Pattern[str] = re.compile("([Ⲁ-ⲱϢ-ϯⳈⳉ]+)")
 
 
-_OTHER_ACCEPTED_CHARS = {
+_OTHER_ACCEPTED_CHARS: set[str] = {
     "…",
     " ",
     ".",
@@ -298,8 +294,8 @@ _OTHER_ACCEPTED_CHARS = {
     "6",
     ",",
     ":",
-    "̀",
-    "̅",
+    "\u0300",  # Combining grave accent.
+    "\u0305",  # Combining overline.
 }
 
 _FIXES: dict[str, str] = {
@@ -313,8 +309,8 @@ _FIXES: dict[str, str] = {
     "ː": ":",
 }
 
-_MACRONED_LETTER: re.Pattern = re.compile("¯(.)")
-_BACKTICKED_LETTER: re.Pattern = re.compile("`(.)")
+_MACRONED_LETTER: re.Pattern[str] = re.compile("¯(.)")
+_BACKTICKED_LETTER: re.Pattern[str] = re.compile("`(.)")
 
 
 def _known(w: str) -> bool:
@@ -335,42 +331,62 @@ def _normalize(word: str) -> str:
     return word
 
 
-def _main() -> pd.DataFrame:
-    df: pd.DataFrame = pd.read_excel(_INPUT_XLSX, dtype=str).fillna("")
-    df.dropna(inplace=True)
-    df = df.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
-    df[_ORIGIN_COL] = df[_MEANING_COL]
-    meaning: list[str] = []
-    prettify: list[str] = []
-    suffix: list[str] = []
-    for _, row in df.iterrows():
-        cur: dict[int, str] = {}
-        for key in row.keys():
-            if key.startswith(_UNNAMED_PREFIX):
-                value: str = str(row[key])
-                if not value:
-                    continue
-                key = int(key[len(_UNNAMED_PREFIX) :])
-                cur[key] = value
-        meaning.append("\n".join(v for _, v in sorted(cur.items())))
-        del cur
-        p = row[_COPTIC_COL]
-        kind = row[_KIND_COL]
-        gender = row[_GENDER_COL]
-        sfx = _SUFFIX[kind][gender]
-        suffix.append(sfx)
-        if sfx:
-            p = p + " " + sfx
-        p = _normalize(p)
-        prettify.append(p)
-    df[_MEANING_COL] = meaning
-    df[_PRETTIFY_COL] = prettify
-    df[_SUFFIX_COL] = suffix
-    for key in df.keys():
-        if key.startswith(_UNNAMED_PREFIX):
-            df.drop(key, axis=1, inplace=True)
-    return df
+class Word:
+    """Word represents a word in the copticsite dictionary."""
+
+    def __init__(self, row: pd.Series) -> None:
+        self.row: pd.Series = row
+
+    @property
+    def origin(self) -> str:
+        return self.row[_ORIGIN_COL]
+
+    @property
+    def coptic(self) -> str:
+        return self.row[_COPTIC_COL]
+
+    @property
+    def kind(self) -> str:
+        return self.row[_KIND_COL]
+
+    @property
+    def gender(self) -> str:
+        return self.row[_GENDER_COL]
+
+    @property
+    def suffix(self) -> str:
+        return _SUFFIX.get(self.kind, {}).get(self.gender, "")
+
+    @property
+    def pretty(self) -> str:
+        pretty: str = self.coptic
+        if self.suffix:
+            pretty = f"{pretty} {self.suffix}"
+        return _normalize(pretty)
+
+    @property
+    def meaning(self) -> str:
+        parts: dict[int, str] = {}
+        for key, value in self.row.items():
+            assert isinstance(key, str)
+            assert isinstance(value, str)
+            value = value.strip()
+            if not key.startswith(_UNNAMED_PREFIX):
+                continue
+            if not value:
+                continue
+            idx: int = int(key[len(_UNNAMED_PREFIX) :])
+            parts[idx] = value
+        return "\n".join(v for _, v in sorted(parts.items()))
 
 
-# TODO: (#399): Export objects and methods, rather than a TSV!
-copticsite = _main()
+class Copticsite:
+    """Copticsite defines the copticsite dictionary."""
+
+    @cache.StaticProperty
+    @staticmethod
+    def words() -> list[Word]:
+        df: pd.DataFrame = pd.read_excel(_INPUT_XLSX, dtype=str).fillna("")
+        df.dropna(inplace=True)
+        df = df.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
+        return [Word(row) for _, row in df.iterrows()]

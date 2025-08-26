@@ -819,23 +819,18 @@ class Crum(Decker):
 class Copticsite(Decker):
     """Copticsite represents a copticsite deck."""
 
-    @staticmethod
-    def __cell(row: pd.Series, col: str, line_br: bool = False) -> str:
-        cell: str = str(row[col])
-        if line_br:
-            cell = _use_html_line_breaks(cell)
-        return cell
-
     @typing.override
     def notes_aux(self) -> abc.Generator[deck.Note]:
         # NOTE: The key is a protected field. Do not change unless you know what
         # you're doing.
         key = 1
-        for _, row in copticsite.copticsite.iterrows():
+        for (
+            word
+        ) in copticsite.Copticsite.words:  # pylint: disable=not-an-iterable
             front = _aon(
                 '<span class="word B">',
                 '<span class="spelling B">',
-                Copticsite.__cell(row, "prettify"),
+                word.pretty,
                 "</span>",
                 "</span>",
             )
@@ -844,20 +839,13 @@ class Copticsite(Decker):
                 "(",
                 "<b>",
                 " - ".join(
-                    filter(
-                        None,
-                        [
-                            Copticsite.__cell(row, "Word Kind"),
-                            Copticsite.__cell(row, "Word Gender"),
-                            Copticsite.__cell(row, "Origin"),
-                        ],
-                    ),
+                    filter(None, [word.kind, word.gender, word.origin]),
                 ),
                 "</b>",
                 ")",
                 "</span>",
                 LINE_BREAK,
-            ) + Copticsite.__cell(row, "Meaning", line_br=True)
+            ) + _use_html_line_breaks(word.meaning)
 
             if not front and not back:
                 continue
