@@ -7,6 +7,7 @@ import * as logger from './logger.js';
 import * as coptic from './coptic.js';
 import * as browser from './browser.js';
 import * as cls from './cls.js';
+import * as orth from './orth.js';
 // WANT_COLUMNS is the list of the first columns we expect to find in the TSV.
 const WANT_COLUMNS = ['page', 'start', 'end'];
 // ZOOM_FACTOR controls how fast zooming happens in response to scroll events.
@@ -93,7 +94,7 @@ export class Index {
    * the query.
    */
   getPage(query) {
-    query = query.trim();
+    query = orth.cleanDiacritics(query.trim());
     if (!query) {
       return undefined;
     }

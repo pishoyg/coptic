@@ -15,28 +15,6 @@ const COPTIC_LETTERS = [
   ['Ⳉ', 'ⳉ'],
   ['Ϣ', 'ϯ'],
 ];
-export const DIACRITICS = new Set([
-  '\u0300', // COMBINING GRAVE ACCENT — Rare; used in editorial contexts or to mark intonation. ⲁ̀
-  '\u0301', // COMBINING ACUTE ACCENT — Rare; sometimes used in scholarly editions for emphasis or stress. ⲁ́
-  '\u0302', // COMBINING CIRCUMFLEX ACCENT — Used in Sahidic Coptic over vowels for certain pronunciations or editorial marks. ⲁ̂
-  '\u0304', // COMBINING MACRON — General horizontal bar above; may appear in modern editorial texts, for single letters or short lines. ⲁ̄
-  '\u0305', // COMBINING OVERLINE — Essential in Coptic; used to mark nomina sacra, abbreviations, and numerals. Often preferred for this over conjoining macrons. ⲁ̅
-  '\u0306', // COMBINING BREVE — Occasionally used in phonetic or editorial transcriptions. ⲁ̆
-  '\u0307', // COMBINING DOT ABOVE — Rare; editorial/phonetic use. ⲁ̇
-  '\u0308', // COMBINING DIAERESIS — Occasionally used to disambiguate vowel combinations. ⲁ̈
-  '\u0311', // COMBINING INVERTED BREVE — Can appear as a curved circumflex or alternative joining mark. ⲁ̑
-  '\u0323', // COMBINING DOT BELOW — Rare; editorial/phonetic use. ⲁ̣
-  '\u032E', // COMBINING BREVE BELOW — Rare; editorial/phonetic use. ⲁ̮
-  '\u0331', // COMBINING MACRON BELOW — Rarely used; seen in phonetic or editorial annotations. ⲁ̱
-  '\u0342', // COMBINING GREEK PERISPOMENI — Found in Greek-influenced Coptic manuscripts; indicates pitch/accent. ⲁ͂
-  '\u0345', // COMBINING GREEK YPOGEGRAMMENI — Rare; may appear in Greek-derived texts in mixed manuscripts. ⲁͅ
-  '\u035E', // COMBINING CHARACTER-JOINING OVERSTROKE — Used for a character-joining overstroke. ⲁ͡
-  '\u0361', // COMBINING DOUBLE INVERTED BREVE — Can be used for joining two letters with a wide inverted breve. ⲁ͡
-  '\uFE24', // COMBINING MACRON LEFT HALF — Editorial use; not standard in Coptic but may appear in digital editions for joining strokes. ⲁ︤
-  '\uFE25', // COMBINING MACRON RIGHT HALF — Editorial use; not standard in Coptic but may appear in digital editions for joining strokes. ⲁ︥
-  '\uFE26', // COMBINING CONJOINING MACRON — Used in specialized digital transcription to span multiple letters. ⲁ︦
-  '\u2CEF', // COPTIC COMBINING NI ABOVE — Essential Coptic-specific combining mark for abbreviations. ⲁ⳯
-]);
 /**
  * Word represents a Coptic word that is lexicographically comparable to
  * another.
