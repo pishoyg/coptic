@@ -8,6 +8,7 @@ import * as logger from './logger.js';
 import * as coptic from './coptic.js';
 import * as browser from './browser.js';
 import * as cls from './cls.js';
+import * as orth from './orth.js';
 
 // WANT_COLUMNS is the list of the first columns we expect to find in the TSV.
 const WANT_COLUMNS = ['page', 'start', 'end'];
@@ -131,7 +132,7 @@ export class Index {
    * the query.
    */
   getPage(query: string): number | undefined {
-    query = query.trim();
+    query = orth.cleanDiacritics(query.trim());
     if (!query) {
       return undefined;
     }
