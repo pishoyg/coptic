@@ -113,25 +113,25 @@ for traffic tracking and analysis.
 
    Keep in mind that the Python `venv` will continue to be activated afterwards,
    and the environment variables will still be set, as long as you're in the same
-   shell session. You can deactivate the environment by running `deactivate`.
+   shell session. You can deactivate the Python `venv` by running `deactivate`.
    Alternatively, you can just exit the shell window and start a new one.
 
 1. Running `make install` should take care of most of the installations.
    Sourcing `.env` is necessary for this to work. Though `make install` only
 needs to be run once, while `.env` needs to be sourced for each session.
 
-   If there are missing binaries that you need to download them, `make install`
-   will let you know. You *may* also need to log in with
+   If there are missing binaries that you need to download, `make install` will
+   let you know. You *may* also need to log in with
    [`gh`](https://cli.github.com/).
 
 1. Our pipelines are defined in [`Makefile`](Makefile). Though some pipelines in
    [`Makefile`](Makefile) are only used during development and testing, and are
-not relevant for output (re)generation.
+not relevant for output regeneration.
 
-1. Keep in mind that parameters are written with the assumption that they are
+1. Keep in mind that parameters are written with the assumption that scripts are
    being invoked from the repo's root directory, rather than from the directory
-where the script lives. You should do most of your development from within the
-root directory.
+where the script lives. You should do most of your development in the root
+directory.
 
 1. This file is the only `README.md` in the repo (and this is enforced by a
    pre-commit hook). Technical documentation is intentionally centralized.
@@ -147,14 +147,14 @@ Besides this file, docs can be found in:
 
 1. We use pre-commit hooks extensively, and they have helped us discover a lot
    of bugs and issues with our code, and also keep our repo organized. They are
-not optional, and many of our pipelines assume that the pre-commits have done
-their job. Their installation should be covered by `make install`. They are
+not optional. Their installation should be covered by `make install`. They are
 defined in [`.pre-commit-config.yaml`](.pre-commit-config.yaml). They run
 automatically before a commit. You can execute the following to appease them
-(keep running them and applying their changes until they all pass):
+(keep running them and applying their changes until they all pass), though keep
+in mind that `make test` runs `git add --all`:
 
    ```sh
-   make test`
+   make test
    ```
 
    Our pipelines currently have minimal dependencies. For a pair of dependent
