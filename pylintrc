@@ -143,7 +143,9 @@ disable=R,
         wrong-import-order,
         xrange-builtin,
         zip-builtin-not-iterating,
-        not-an-iterable
+        not-an-iterable,
+        unsupported-membership-test,
+        unsubscriptable-object
 
 
 [REPORTS]
