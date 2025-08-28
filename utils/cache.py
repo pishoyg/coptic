@@ -11,6 +11,7 @@
 
 """
 
+import functools
 import typing
 
 
@@ -32,3 +33,54 @@ class StaticProperty[T]:
         result = self.func()
         setattr(owner, self.name, result)
         return result
+
+
+# A TypeVar is used to represent a generic function type.
+# This allows us to preserve the signature of the decorated function.
+F = typing.TypeVar("F", bound=typing.Callable[..., typing.Any])
+
+
+def run_once(f: F) -> F:
+    """A decorator that ensures a function or method runs only once.
+
+    For methods, it ensures it runs only once *per instance*.
+    Subsequent calls will do nothing and return None.
+
+    The function executes only once, even if:
+    - The first execution fails.
+    - The first execution hasn't returned (in a recursive function).
+
+    Args:
+        f: Function or method to be executed only once.
+
+    Returns:
+        Wrapped function.
+    """
+
+    @functools.wraps(f)
+    def wrapper(*args: typing.Any, **kwargs: typing.Any) -> typing.Any:
+        # The first argument of a method is the instance 'self'.
+        # For a regular function, there are no instances.
+        # We use the function object itself as the storage target for functions.
+        # We use the instance as the storage target for methods.
+
+        # Determine the target object to store the 'has_run' flag on.
+        # If 'args' is not empty, it's likely a method, and args[0] is 'self'.
+        # We check if it has a __dict__ to be sure it's an object instance.
+        if args and hasattr(args[0], "__dict__"):
+            target = args[0]
+        else:
+            target = f
+
+        # Create a unique attribute name to avoid collisions.
+        attr_name = "_has_run_" + f.__name__
+
+        # Check if the attribute exists and is True.
+        if not getattr(target, attr_name, False):
+            # If it hasn't run, set the flag to True.
+            setattr(target, attr_name, True)
+            # Execute the original function and return its result.
+            return f(*args, **kwargs)
+        # If it has already run, do nothing and return immediately.
+
+    return wrapper  # type: ignore[return-value]
