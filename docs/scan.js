@@ -1,13 +1,12 @@
 /** Package scan defines the logic for a dictionary scan. */
 // NOTE: This package is used in the browser, and also during validation. So we
 // allow it to assert correctness, instead of trying to always fail gracefully.
-// TODO: (#457) Abandon Node.js Validation. Use a Browser Environment for
-// stronger, simpler validation.
 import * as logger from './logger.js';
 import * as coptic from './coptic.js';
 import * as browser from './browser.js';
 import * as cls from './cls.js';
 import * as orth from './orth.js';
+import * as dev from './dev.js';
 // WANT_COLUMNS is the list of the first columns we expect to find in the TSV.
 const WANT_COLUMNS = ['page', 'start', 'end'];
 // ZOOM_FACTOR controls how fast zooming happens in response to scroll events.
@@ -66,6 +65,19 @@ export class Index {
           end: new wordType(end),
         };
       });
+    for (let i = 1; i < this.pages.length; i++) {
+      const cur = this.pages[i];
+      const prev = this.pages[i - 1];
+      if (cur.page !== prev.page + 1) {
+        logger.fatal(
+          'Non-consecutive page numbers:',
+          `${prev.page}, ${cur.page}`
+        );
+      }
+    }
+    if (dev.get()) {
+      this.verifyWordOrder(false);
+    }
   }
   /**
    * @param str - String representation of a TSV row.
@@ -130,13 +142,13 @@ export class Index {
     return this.pages[right].page;
   }
   /**
-   * Build the index, and validate that its words are indeed lexicographically
-   * sorted, as should be the case with a dictionary index.
+   * Verify that its words are indeed lexicographically sorted, as should be the
+   * case with a dictionary index.
    *
    * @param strict - If true, exit when encountering a sorting error. If false,
    * simply log an error message.
    */
-  validate(strict = true) {
+  verifyWordOrder(strict = true) {
     const error = strict ? logger.fatal : logger.error;
     for (const [i, p] of this.pages.entries()) {
       if (!p.start.leq(p.end)) {
@@ -149,16 +161,10 @@ export class Index {
           p.end.word
         );
       }
-      if (i === 0) continue;
-      const prev = this.pages[i - 1];
-      if (p.page !== prev.page + 1) {
-        // While we can tolerate some errors in the word order, we can't allow
-        // page numbers to get mixed up, so we always use `fatal` regardless of
-        // strictness.
-        logger.fatal(
-          `Non-consecutive page numbers: ${prev.page.toString()}, ${p.page.toString()}`
-        );
+      if (i === 0) {
+        continue;
       }
+      const prev = this.pages[i - 1];
       if (!prev.end.leq(p.start)) {
         error(
           p.start.word,

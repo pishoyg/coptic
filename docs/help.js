@@ -337,7 +337,7 @@ export class Help {
         document.body.appendChild(footer);
         return help;
       })();
-    this.validate();
+    this.verifyNoDuplicates();
     this.addListeners();
   }
   /**
@@ -401,13 +401,9 @@ export class Help {
     this.overlay.style.display = target;
   }
   /**
-   * Log an error if a key can trigger multiple shortcuts!
-   *
-   * TODO: (#457) This error would get logged to the browser console. It could
-   * be seen by chance, if you happen to run the code in the browser with
-   * developer tools enabled. Validate before deployment.
+   * Verify that each key triggers a single shortcut!
    */
-  validate() {
+  verifyNoDuplicates() {
     // Get all keys that have events registered to them.
     const keys = this.sections
       .map((s) => s.shortcutsRecord())
@@ -416,7 +412,7 @@ export class Help {
     keys.forEach((key) => {
       const canConsume = this.sections.map((s) => s.canConsume(key)).flat();
       if (canConsume.length > 1) {
-        logger.error(
+        logger.fatal(
           `${key} is consumable by multiple shortcuts: ${canConsume.map((s) => s.textDescription()).join(', ')}`
         );
       }
