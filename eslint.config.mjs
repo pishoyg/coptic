@@ -189,9 +189,8 @@ export default tseslint.config(
       },
       globals: {
         ...globals.browser,
-        // TODO: (#457) Delete the Node.js globals once it's no longer used for
-        // testing.
-        ...globals.node,
+        // TODO: (#372) Delete this set of constants once classes are defined in
+        // the HTML not JavaScript.
         ANKI: true,
         NOTE: true,
         INDEX: true,

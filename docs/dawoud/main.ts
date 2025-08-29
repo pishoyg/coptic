@@ -1,8 +1,6 @@
 /** Main function for the Dawoud scan. */
 
 import * as scan from '../scan.js';
-import * as env from '../env.js';
-import * as logger from '../logger.js';
 import * as coptic from '../coptic.js';
 
 // Our dictionary pages are '0.png' to '1055.png', with '18.jpg' holding page 1.
@@ -12,11 +10,8 @@ const EXT = 'png';
 const OFFSET = 17;
 
 // Paths to our indexes.
+// TODO: (#405) Support looking up the Greek and Arabic indexes.
 const COPTIC = 'coptic.tsv';
-const ARABIC = 'arabic.tsv';
-const GREEK = 'greek.tsv';
-// TODO: (#405) Add validation for the Arabic index.
-const ALL = [COPTIC, ARABIC, GREEK];
 
 /**
  * Dawoud gives ⲟⲩ special handling in his dictionary.
@@ -65,7 +60,7 @@ export class DawoudWord extends coptic.Word implements scan.Word {
  * Main function to run in the browser.
  * Build the index, add event listeners, ...
  */
-async function browserMain(): Promise<void> {
+async function main(): Promise<void> {
   const form: scan.Form = new scan.Form(
     document.getElementById('scan') as HTMLImageElement,
     document.getElementById('next')!,
@@ -86,49 +81,6 @@ async function browserMain(): Promise<void> {
   );
   new scan.ZoomerDragger(form);
   new scan.Dictionary(index, scroller, form);
-}
-
-/**
- * Main function to run when the script is invoked in a Node.js environment.
- * Validate the indexes.
- * TODO: (#457) Deprecate this method. Perform validation in browser code.
- */
-async function nodeMain(): Promise<void> {
-  const fs = await import('fs');
-  const path = await import('path');
-  const url = await import('url');
-
-  const dirname = path.dirname(url.fileURLToPath(import.meta.url));
-
-  ALL.forEach((sheet) => {
-    const filePath = path.join(dirname, sheet);
-    if (!fs.existsSync(filePath)) {
-      throw new Error(`Missing file: ${filePath}`);
-    }
-  });
-
-  new scan.Index(
-    fs.readFileSync(path.join(dirname, COPTIC), 'utf8'),
-    DawoudWord
-  ).validate(false);
-  new scan.Index(
-    fs.readFileSync(path.join(dirname, GREEK), 'utf8'),
-    coptic.Word
-  ).validate(false);
-}
-
-/**
- * Run the browser's main function in the browser, or Node's main function in
- * Node.js.
- */
-async function main(): Promise<void> {
-  if (env.node()) {
-    await nodeMain();
-  } else if (env.browser()) {
-    await browserMain();
-  } else {
-    logger.fatal('Neither Node nor browser!!');
-  }
 }
 
 await main();

@@ -356,14 +356,6 @@ repos:
         language: system
         files: ^dictionary/marcion_sourceforge_net/data/img.*$
         pass_filenames: false
-      # Dawoud's scan sentinels.
-      # TODO: (#457) Perform sentinel validation using Playwright.
-      - id: scan-sentinels
-        name: scan-sentinels
-        entry: bun run docs/dawoud/main.ts
-        language: system
-        files: ^docs/dawoud/
-        pass_filenames: false
       # DO-NOT-SUBMIT
       - id: check-do-not-submit
         name: check-do-not-submit
