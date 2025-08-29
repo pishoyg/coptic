@@ -68,8 +68,6 @@ export function warn(...message) {
 /**
  * Log an error message to the console.
  * @param {...any} message - Message to log.
- *
- * TODO: (#457) Abandon mere error message. Always use exceptions.
  */
 export function error(...message) {
   print(Colors.RED, Colors.PURPLE, 'error', false, ...message);
