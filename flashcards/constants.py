@@ -7,10 +7,9 @@ from collections import abc, defaultdict
 
 from dictionary.copticsite_com import main as copticsite
 from dictionary.kellia_uni_goettingen_de import main as kellia
-from dictionary.marcion_sourceforge_net import constants as crum_const
 from dictionary.marcion_sourceforge_net import main as crum
 from flashcards import deck
-from utils import ensure, file, page, paths, semver
+from utils import file, page, paths, semver
 from xooxle import xooxle
 
 # TODO: (#399) Crum should export images through an interface, so you don't
@@ -24,6 +23,13 @@ if (localStorage.getItem('d') === null) {{
   localStorage.setItem('d', {DIALECT_ARR}.join(','));
 }}
 """
+
+
+def dialects_js(dialects: abc.Iterable[str]) -> str:
+    if not dialects:
+        return ""
+    return DIALECTS_JS.format(DIALECT_ARR=list(dialects))
+
 
 CSS = os.path.join(paths.SITE_DIR, "style.css")  # Not a relative path!
 CRUM_SEARCH = "./"  # Relative to the HTML write directory.
@@ -351,7 +357,6 @@ class Crum(Decker):
     ):
         super().__init__(deck_name, deck_id)
         self.dialects: set[str] = set(dialects or [])
-        ensure.members(self.dialects, crum_const.DIALECTS)
 
     @typing.override
     def index_indexes(self) -> list[deck.IndexIndex]:
@@ -380,11 +385,7 @@ class Crum(Decker):
                 nxt=self.__path(crum.Crum.next_key(root)),
                 prv=self.__path(crum.Crum.prev_key(root)),
                 search=CRUM_SEARCH,
-                js_start=(
-                    DIALECTS_JS.format(DIALECT_ARR=self.dialects)
-                    if self.dialects
-                    else ""
-                ),
+                js_start=dialects_js(self.dialects),
                 js_path=CRUM_JS,
             )
 
