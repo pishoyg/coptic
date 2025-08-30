@@ -241,13 +241,15 @@ export class Form {
    * @param prevButton - Button to navigate to the previous page when clicked.
    * @param resetButton - Button to reset display.
    * @param searchBox - Search box, providing search queries.
+   * @param form - Form element.
    */
   constructor(
     readonly image: HTMLImageElement,
     readonly nextButton: HTMLElement,
     readonly prevButton: HTMLElement,
     readonly resetButton: HTMLElement,
-    readonly searchBox: HTMLInputElement
+    readonly searchBox: HTMLInputElement,
+    readonly form: HTMLElement
   ) {}
 }
 
@@ -602,13 +604,14 @@ export class Dictionary {
    * dictionary.
    *
    * @param form.searchBox - The search box provides search queries.
+   * @param form.form
    */
   constructor(
     // index stores our dictionary index, and will be used to look up pages.
     private readonly index: Index,
     // scroller will be used to update the scan image for each query.
     private readonly scroller: Scroller,
-    private readonly form: { searchBox: HTMLInputElement }
+    private readonly form: { searchBox: HTMLInputElement; form: HTMLElement }
   ) {
     this.addEventListeners();
     // Focus on the search box, to the user can start searching right away.
@@ -633,6 +636,9 @@ export class Dictionary {
   private addEventListeners(): void {
     // Input in the search box triggers a search.
     this.form.searchBox.addEventListener('input', this.search.bind(this));
+
+    // Prevent form submission.
+    this.form.form.addEventListener('submit', browser.preventDefault);
 
     // The slash key focuses on the search box.
     document.addEventListener('keydown', (event) => {

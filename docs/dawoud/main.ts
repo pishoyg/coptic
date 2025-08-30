@@ -66,7 +66,8 @@ async function main(): Promise<void> {
     document.getElementById('next')!,
     document.getElementById('prev')!,
     document.getElementById('reset')!,
-    document.getElementById('search-box') as HTMLInputElement
+    document.getElementById('search-box') as HTMLInputElement,
+    document.getElementById('form')!
   );
   const scroller = new scan.Scroller(
     MIN_PAGE_NUM,
