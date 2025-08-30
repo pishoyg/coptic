@@ -141,6 +141,7 @@ class Derivation(Row):
         return self.row["key_deriv"]
 
     def set_depth(self, depth: int) -> None:
+        assert not self.depth, "Depth already set!"
         self.depth = depth
 
 
@@ -319,6 +320,7 @@ class Root(Row):
         yield from self.greek_sisters
 
     def set_derivations(self, derivations: abc.Iterable[Derivation]) -> None:
+        assert not self._derivations, "Derivations already set!"
         derivations = list(derivations)
         assert all(d.key_word == self.key for d in derivations)
         self._derivations = derivations
@@ -483,13 +485,9 @@ class Crum:
             assert d <= constants.MAX_DERIVATION_DEPTH
             return d
 
-        # TODO: (#0) Pass the depth to the constructor, instead of using a
-        # setter.
         for d in derivations.values():
             d.set_depth(depth(d))
 
-        # TODO: (#0) Pass the derivation list to the constructor, instead of
-        # using a setter.
         for key_word, group in itertools.groupby(
             derivations.values(),
             lambda d: d.key_word,
