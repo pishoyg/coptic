@@ -96,8 +96,10 @@ class Row:
         line_dialects: list[list[str] | None] = [
             w.dialects() for w in self.parsing_2
         ]
-        # NOTE: There are only two cases: either all lines have dialects, or
-        # none does.
+        # NOTE: For roots, we have two cases:
+        # - either all lines have dialects, or
+        # - none does.
+        # For derivations, the presence or absence of dialects is more flexible.
         if not any(line_dialects):
             # None of the lines has a dialect. This is an undialected entry.
             # If this is a root, and it's undialected, we treat it as belonging
@@ -108,7 +110,10 @@ class Row:
         # All lines must have dialects.
         combined: set[str] = set()
         for group in line_dialects:
-            assert group
+            if self.root:
+                assert group
+            elif not group:
+                continue
             combined.update(group)
         return sorted(combined)
 
