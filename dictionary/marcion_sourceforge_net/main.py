@@ -141,7 +141,6 @@ class Derivation(Row):
         return self.row["key_deriv"]
 
     def set_depth(self, depth: int) -> None:
-        assert not self.depth, "Depth already set!"
         self.depth = depth
 
 
