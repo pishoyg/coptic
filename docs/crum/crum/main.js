@@ -13,9 +13,10 @@ function main() {
     document.getElementById('next'),
     document.getElementById('prev'),
     document.getElementById('reset'),
-    // TODO: (#415) The page doesn't currently have a search box! This is OK at
-    // the moment because the field isn't used.
-    document.getElementById('search-box')
+    // TODO: (#415) The page doesn't currently have a search box or a form!
+    // This is OK at the moment because the field isn't used.
+    document.getElementById('search-box'),
+    document.getElementById('form')
   );
   new scan.Scroller(MIN_PAGE_NUM, MAX_PAGE_NUM, OFFSET, 'png', form, LANDING);
   new scan.ZoomerDragger(form);

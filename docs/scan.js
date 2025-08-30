@@ -188,6 +188,7 @@ export class Form {
   prevButton;
   resetButton;
   searchBox;
+  form;
   /**
    *
    * @param image - <img> element holding the book page.
@@ -195,13 +196,15 @@ export class Form {
    * @param prevButton - Button to navigate to the previous page when clicked.
    * @param resetButton - Button to reset display.
    * @param searchBox - Search box, providing search queries.
+   * @param form - Form element.
    */
-  constructor(image, nextButton, prevButton, resetButton, searchBox) {
+  constructor(image, nextButton, prevButton, resetButton, searchBox, form) {
     this.image = image;
     this.nextButton = nextButton;
     this.prevButton = prevButton;
     this.resetButton = resetButton;
     this.searchBox = searchBox;
+    this.form = form;
   }
 }
 /**
@@ -516,6 +519,7 @@ export class Dictionary {
    * dictionary.
    *
    * @param form.searchBox - The search box provides search queries.
+   * @param form.form
    */
   constructor(
     // index stores our dictionary index, and will be used to look up pages.
@@ -548,6 +552,8 @@ export class Dictionary {
   addEventListeners() {
     // Input in the search box triggers a search.
     this.form.searchBox.addEventListener('input', this.search.bind(this));
+    // Prevent form submission.
+    this.form.form.addEventListener('submit', browser.preventDefault);
     // The slash key focuses on the search box.
     document.addEventListener('keydown', (event) => {
       if (event.code === 'Slash') {

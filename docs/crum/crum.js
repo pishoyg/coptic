@@ -69,7 +69,11 @@ export function handleCategories(elem) {
  */
 export function handleRootType(elem) {
   elem.querySelectorAll(`.${cls.ROOT_TYPE}`).forEach((el) => {
-    const type = el.innerText;
+    const type = el.querySelector('b')?.innerText;
+    if (!type) {
+      logger.error('Unable to infer the root type for element!', el);
+      return;
+    }
     el.innerHTML = `(<a class="${ccls.HOVER_LINK}" href="${paths.LEXICON}/${type.replaceAll('/', '_')}.html" target="_blank">${type}</a>)`;
   });
 }
@@ -214,7 +218,7 @@ export function handleSisterView(elem) {
       table.querySelectorAll('tr').forEach((el) => {
         const td = el.querySelector(`.${cls.SISTER_VIEW}`);
         if (!td) {
-          logger.fatal(
+          logger.error(
             'A row in the sisters table does not have a "sister-view" element!'
           );
           return;

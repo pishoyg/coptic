@@ -59,7 +59,8 @@ async function main() {
     document.getElementById('next'),
     document.getElementById('prev'),
     document.getElementById('reset'),
-    document.getElementById('search-box')
+    document.getElementById('search-box'),
+    document.getElementById('form')
   );
   const scroller = new scan.Scroller(
     MIN_PAGE_NUM,
