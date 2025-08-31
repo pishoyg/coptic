@@ -418,10 +418,10 @@ class Bible:
                 for section_name, section in testament.items():
                     section_idx += 1
                     book_idx = 0
-                    for book_name in section:
+                    for book in section:
                         book_idx += 1
                         yield {
-                            "name": book_name,
+                            "name": book["title"],
                             "idx": book_idx,
                             "testament_name": testament_name,
                             "testament_idx": testament_idx,
