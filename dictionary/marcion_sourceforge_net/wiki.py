@@ -144,8 +144,10 @@ def main():
             log.error("key", key, "not found in Crum!")
             continue
         # Copy the value to our sheet.
-        crum.Crum.roots[key].update("wiki", entry)
-        crum.Crum.roots[key].update("wiki-wip", wip)
+        if crum.Crum.roots[key].update("wiki", entry):
+            log.info("Updated", "wiki", "under", key)
+        if crum.Crum.roots[key].update("wiki-wip", wip):
+            log.info("Updated", "wiki-wip", "under", key)
 
 
 if __name__ == "__main__":
