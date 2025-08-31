@@ -21,50 +21,41 @@ _DRV_ALL_COLS: list[str] = ["key", "key_word", "key_deriv", "type"]
 # Each derivation row must contain at least of the following cell.s
 _DRV_ANY_COLS: list[str] = ["word", "en"]
 
-type Record = dict[str, str]
-type Records = list[Record]
 
-
-def to_str(d: dict[str, str | int | float]) -> dict[str, str]:
-    return {k: str(v) for k, v in d.items()}
-
-
-def _verify_balanced_brackets(records: Records) -> None:
+def _verify_balanced_brackets(records: list[gcp.Record]) -> None:
     for record in records:
-        for key, value in record.items():
-            ensure.brackets_balanced(
-                value,
-                "record",
-                record,
-                "key",
-                key,
-                # We don't own the source of truth for the Wiki, so we can't
-                # always fix unbalanced brackets. We simply log an error
-                # message, until the problem is solved.
-                # TODO: (#438) Fix bracket typos in the Crum Wiki.
-                strict=key not in ["wiki"],
-            )
+        for key, value in record.row.items():
+            # We don't own the source of truth for the Wiki, so we can't
+            # always fix unbalanced brackets. We simply log an error
+            # message, until the problem is solved.
+            # TODO: (#438) Fix bracket typos in the Crum Wiki.
+            if key in ["wiki"]:
+                continue
+            ensure.brackets_balanced(value, "record", record.row, "key", key)
 
 
-def _is_sorted_by_int_columns(records: Records, column_names: list[str]):
-    def _sort_key(record: Record) -> list[int]:
-        return [int(record[col]) for col in column_names]
+def _is_sorted_by_int_columns(
+    records: list[gcp.Record],
+    column_names: list[str],
+):
+    def _sort_key(record: gcp.Record) -> list[int]:
+        return [int(record.row[col]) for col in column_names]
 
     int_tuples: list[list[int]] = list(map(_sort_key, records))
     return int_tuples == sorted(int_tuples)
 
 
-def _valid_drv_row(row: Record) -> None:
-    key = row["key"]
+def _valid_drv_record(record: gcp.Record) -> None:
+    key = record.row["key"]
     ensure.ensure(
-        all(row[col] for col in _DRV_ALL_COLS),
+        all(record.row[col] for col in _DRV_ALL_COLS),
         "Row",
         key,
         "doesn't populate all the columns",
         _DRV_ALL_COLS,
     )
     ensure.ensure(
-        any(row[col] for col in _DRV_ANY_COLS),
+        any(record.row[col] for col in _DRV_ANY_COLS),
         "Row",
         key,
         "populates none of the following columns:",
@@ -100,7 +91,7 @@ class Sheet:
 
     @cache.StaticProperty
     @staticmethod
-    def roots_snapshot() -> Records:
+    def roots_snapshot() -> list[gcp.Record]:
         """Retrieve a shared, static snapshot of the roots.
 
         Returns:
@@ -109,15 +100,16 @@ class Sheet:
         return Sheet.snapshot_roots()
 
     @staticmethod
-    def snapshot_roots() -> Records:
+    def snapshot_roots() -> list[gcp.Record]:
         """Retrieve a fresh snapshot of the roots.
 
         Returns:
             A fresh snapshot of the roots.
         """
-        records: Records = list(
-            map(to_str, Sheet.roots_sheet.get_all_records()),
-        )
+        records: list[gcp.Record] = [
+            gcp.Record(idx + 2, record)
+            for idx, record in enumerate(Sheet.roots_sheet.get_all_records())
+        ]
         _verify_balanced_brackets(records)
         ensure.ensure(
             _is_sorted_by_int_columns(records, _WRD_SORT_COLS),
@@ -129,7 +121,7 @@ class Sheet:
 
     @cache.StaticProperty
     @staticmethod
-    def derivations_snapshot() -> Records:
+    def derivations_snapshot() -> list[gcp.Record]:
         """Retrieve a shared, static snapshot of the derivations.
 
         Returns:
@@ -138,21 +130,24 @@ class Sheet:
         return Sheet.snapshot_derivations()
 
     @staticmethod
-    def snapshot_derivations() -> Records:
+    def snapshot_derivations() -> list[gcp.Record]:
         """Retrieve a fresh snapshot of the derivations.
 
         Returns:
             A fresh snapshot of the derivations.
         """
-        records: Records = list(
-            map(to_str, Sheet.derivations_sheet.get_all_records()),
-        )
+        records: list[gcp.Record] = [
+            gcp.Record(idx + 2, record)
+            for idx, record in enumerate(
+                Sheet.derivations_sheet.get_all_records(),
+            )
+        ]
         _verify_balanced_brackets(records)
 
         # Validate empty rows are inserted.
         prev_key_word = ""
-        for row in records:
-            cur: str = row[_KEY_WORD_COL]
+        for record in records:
+            cur: str = record.row[_KEY_WORD_COL]
             ensure.ensure(
                 cur == prev_key_word or not cur or not prev_key_word,
                 "Empty rows are broken at",
@@ -163,11 +158,11 @@ class Sheet:
             prev_key_word = cur
 
         # Drop empty rows.
-        records = list(filter(lambda r: any(r.values()), records))
+        records = list(filter(lambda r: any(r.row.values()), records))
 
         # Validate content.
         for r in records:
-            _valid_drv_row(r)
+            _valid_drv_record(r)
 
         # Validate sorting.
         ensure.ensure(

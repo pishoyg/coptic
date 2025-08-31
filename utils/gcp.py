@@ -1,11 +1,13 @@
 """Google Cloud and Google Sheets helpers."""
 
+import functools
 import typing
+from collections import abc
 
 import gspread
 from google.oauth2 import service_account
 
-from utils import cache, ensure, log, paths
+from utils import cache, ensure, paths
 
 _GSPREAD_SCOPE = [
     "https://spreadsheets.google.com/feeds",
@@ -13,6 +15,58 @@ _GSPREAD_SCOPE = [
     "https://www.googleapis.com/auth/drive.file",
     "https://www.googleapis.com/auth/drive",
 ]
+
+
+class Record:
+    """Record represents a record in a sheet."""
+
+    def __init__(
+        self,
+        row_num: int,
+        row: abc.Mapping[str, str | int | float],
+    ) -> None:
+        self.row_num: int = row_num
+        self.row: dict[str, str] = to_str(row)
+
+    @classmethod
+    def sheet(cls) -> gspread.worksheet.Worksheet:
+        """Retrieve the sheet that this record belongs to.
+
+        Raises:
+            NotImplementedError: This method must be overridden.
+        """
+        raise NotImplementedError
+
+    @classmethod
+    @functools.cache
+    def col_num(cls) -> dict[str, int]:
+        return column_nums(cls.sheet())
+
+    def update(self, col_name: str, value: str) -> bool:
+        """Update the value of the given column.
+
+        Args:
+            col_name: Name of the column to update.
+            value: New value.
+
+        Returns:
+            True if a value has been updated, False if the cached value is
+            already equal to the new one.
+
+        NOTE: If the value in the snapshot matches the given value, do nothing.
+        """
+        if self.row[col_name] == value:
+            return False
+        _ = self.sheet().update_cell(
+            self.row_num,
+            self.col_num()[col_name],
+            value,
+        )
+        return True
+
+
+def to_str(d: abc.Mapping[str, str | int | float]) -> dict[str, str]:
+    return {k: str(v) for k, v in d.items()}
 
 
 class Client:
@@ -34,11 +88,13 @@ def spreadsheet(gspread_url: str) -> gspread.spreadsheet.Spreadsheet:
     return Client.client.open_by_url(gspread_url)
 
 
-def column_num(worksheet: gspread.worksheet.Worksheet, column: str) -> int:
-    for idx, value in enumerate(worksheet.row_values(1)):
-        if value == column:
-            return idx + 1  # Google  Sheets uses 1-based indexing.
-    log.fatal(column, "not found in sheet")
+def column_nums(worksheet: gspread.worksheet.Worksheet) -> dict[str, int]:
+    # Row 1 in the sheet represents the header. It contains the column names.
+    # Build a mapping from column names to column numbers.
+    # Notice that Google Sheets uses 1-based indexing.
+    return {
+        value: idx + 1 for idx, value in enumerate(worksheet.row_values(1))
+    }
 
 
 def apply(
@@ -70,7 +126,7 @@ def apply(
         for row in worksheet.get_all_records()
     ]
     # Get the name of the destination column.
-    col_idx: int = column_num(worksheet, dst)
+    col_idx: int = column_nums(worksheet)[dst]
     ensure.ensure(
         col_idx <= 26,
         "I am still not smart enough to infer the names of columns > 26!",

@@ -1,35 +1,45 @@
 """Parse Crum's dictionary."""
 
+import collections
 import functools
 import itertools
 import json
 import typing
 from collections import abc
 
+import gspread
+
 from dictionary.marcion_sourceforge_net import categories as cat
 from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import lexical as lex
 from dictionary.marcion_sourceforge_net import parse, tsv
-from utils import cache, ensure, page, text
+from utils import cache, ensure, gcp, page, text
 
 _NUM_DRV_COLS: int = 10
 _HUNDRED: int = 100
 assert not _HUNDRED % _NUM_DRV_COLS
 
+_KEY_COL = "key"
+
 
 # TODO: (#399): Export images as part of this interface, instead of relying on
 # users querying the image directory directly.
 # TODO: (#399) Move image validation from the images helper to this file.
-class Row:
+class Row(gcp.Record):
     """Row represents a row in the Crum sheet."""
 
-    def __init__(self, record: tsv.Record, root: bool) -> None:
-        self.row: dict[str, str] = {k: str(v) for k, v in record.items()}
+    def __init__(
+        self,
+        row_num: int,
+        row: abc.Mapping[str, str | int | float],
+        root: bool,
+    ) -> None:
+        super().__init__(row_num, row)
         self.root: bool = root
 
     @functools.cached_property
     def key(self) -> str:
-        key: str = self.row["key"]
+        key: str = self.row[_KEY_COL]
         return key
 
     @functools.cached_property
@@ -128,20 +138,23 @@ class Row:
 class Derivation(Row):
     """Derivation represents a derivation row."""
 
-    def __init__(self, record: tsv.Record) -> None:
-        super().__init__(record, root=False)
-        self.depth: int
+    def __init__(
+        self,
+        row_num: int,
+        row: abc.Mapping[str, str | int | float],
+        depth: int,
+    ) -> None:
+        super().__init__(row_num, row, root=False)
+        self.depth: int = depth
+
+    @typing.override
+    @classmethod
+    def sheet(cls) -> gspread.worksheet.Worksheet:
+        return tsv.Sheet.derivations_sheet
 
     @functools.cached_property
     def key_word(self) -> str:
         return self.row["key_word"]
-
-    @functools.cached_property
-    def key_deriv(self) -> str:
-        return self.row["key_deriv"]
-
-    def set_depth(self, depth: int) -> None:
-        self.depth = depth
 
 
 class Relation:
@@ -182,9 +195,24 @@ class House:
 class Root(Row):
     """Root represents a root row."""
 
-    def __init__(self, record: tsv.Record) -> None:
-        super().__init__(record, root=True)
-        self._derivations: list[Derivation] = []
+    @typing.override
+    @classmethod
+    def sheet(cls) -> gspread.worksheet.Worksheet:
+        return tsv.Sheet.roots_sheet
+
+    def __init__(
+        self,
+        row_num: int,
+        row: abc.Mapping[str, str | int | float],
+        derivations: abc.Iterable[Derivation],
+    ) -> None:
+        super().__init__(row_num, row, root=True)
+        self._derivations: list[Derivation] = list(derivations)
+        assert all(d.key_word == self.key for d in self._derivations)
+
+    @functools.cached_property
+    def wiki(self) -> str:
+        return self.row["wiki"]
 
     def title(self) -> str:
         return ", ".join(
@@ -317,12 +345,6 @@ class Root(Row):
         yield from self.antonyms
         yield from self.homonyms
         yield from self.greek_sisters
-
-    def set_derivations(self, derivations: abc.Iterable[Derivation]) -> None:
-        assert not self._derivations, "Derivations already set!"
-        derivations = list(derivations)
-        assert all(d.key_word == self.key for d in derivations)
-        self._derivations = derivations
 
     @property
     def derivations(self) -> list[Derivation]:
@@ -470,28 +492,38 @@ class Crum:
     @cache.StaticProperty
     @staticmethod
     def roots() -> dict[str, Root]:
-        roots: dict[str, Root] = {
-            r.key: r for r in map(Root, tsv.Sheet.roots_snapshot)
-        }
-        derivations: dict[str, Derivation] = {
-            r.key: r for r in map(Derivation, tsv.Sheet.derivations_snapshot)
-        }
+        derivations: dict[str, Derivation] = {}
 
-        def depth(derivation: Derivation) -> int:
-            if derivation.key_deriv == "0":
+        # NOTE: In order for this method to work properly, derivations must be
+        # provided in sorted order—a parent derivation must always precede its
+        # children.
+        def depth(derivation: gcp.Record) -> int:
+            key_deriv: str = derivation.row["key_deriv"]
+            if key_deriv == "0":
+                # This derivation has no parents.
                 return 0
-            d: int = 1 + derivations[derivation.key_deriv].depth
+            d: int = 1 + derivations[key_deriv].depth
             assert d <= constants.MAX_DERIVATION_DEPTH
             return d
 
-        for d in derivations.values():
-            d.set_depth(depth(d))
+        for record in tsv.Sheet.derivations_snapshot:
+            d: Derivation = Derivation(
+                record.row_num,
+                record.row,
+                depth(record),
+            )
+            derivations[d.key] = d
 
-        for key_word, group in itertools.groupby(
-            derivations.values(),
-            lambda d: d.key_word,
-        ):
-            roots[key_word].set_derivations(group)
+        by_key_word: collections.defaultdict[str, list[Derivation]] = (
+            collections.defaultdict(list)
+        )
+        for d in derivations.values():
+            by_key_word[d.key_word].append(d)
+
+        roots: dict[str, Root] = {}
+        for record in tsv.Sheet.roots_snapshot:
+            key: str = record.row[_KEY_COL]
+            roots[key] = Root(record.row_num, record.row, by_key_word[key])
 
         return roots
 

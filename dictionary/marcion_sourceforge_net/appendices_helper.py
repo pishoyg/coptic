@@ -371,19 +371,7 @@ class _Matriarch:
         # of having your pipelines directly use the Google Sheets API.
         self.sheet: gspread.worksheet.Worksheet = tsv.Sheet.roots_sheet
 
-        self.col_idx: dict[str, int] = {
-            _SISTERS_COL: gcp.column_num(self.sheet, _SISTERS_COL),
-            _ANTONYMS_COL: gcp.column_num(self.sheet, _ANTONYMS_COL),
-            _HOMONYMS_COL: gcp.column_num(self.sheet, _HOMONYMS_COL),
-            _GREEK_SISTERS_COL: gcp.column_num(
-                self.sheet,
-                _GREEK_SISTERS_COL,
-            ),
-            _CATEGORIES_COL: gcp.column_num(
-                self.sheet,
-                _CATEGORIES_COL,
-            ),
-        }
+        self.col_idx: dict[str, int] = gcp.column_nums(self.sheet)
 
     def marry_house(
         self,
@@ -445,14 +433,14 @@ class _Matriarch:
 
         # Googls Sheets uses 1-based indexing.
         # We also add 1 to account for the header row.
-        all_records: tsv.Records = tsv.Sheet.snapshot_roots()
+        all_records: list[gcp.Record] = tsv.Sheet.snapshot_roots()
         key_to_family: dict[str, _Family] = {
-            row[_KEY_COL]: _Family(row) for row in all_records
+            record.row[_KEY_COL]: _Family(record.row) for record in all_records
         }
         row_idx: int = 1
-        for row in all_records:
+        for record in all_records:
             row_idx += 1
-            key: str = row[_KEY_COL]
+            key: str = record.row[_KEY_COL]
             s, a, h = [], [], []
             if has(sisters, key):
                 assert not has(antonyms, key)
@@ -464,15 +452,15 @@ class _Matriarch:
                 h = homonyms
 
             houses: dict[str, _House] = {
-                _SISTERS_COL: self.marry_house(row, _SISTERS_COL, s),
-                _ANTONYMS_COL: self.marry_house(row, _ANTONYMS_COL, a),
-                _HOMONYMS_COL: self.marry_house(row, _HOMONYMS_COL, h),
+                _SISTERS_COL: self.marry_house(record.row, _SISTERS_COL, s),
+                _ANTONYMS_COL: self.marry_house(record.row, _ANTONYMS_COL, a),
+                _HOMONYMS_COL: self.marry_house(record.row, _HOMONYMS_COL, h),
             }
             # Validate the proposed marriages.
             _Family(
                 {
                     _KEY_COL: key,
-                    _GREEK_SISTERS_COL: row[_GREEK_SISTERS_COL],
+                    _GREEK_SISTERS_COL: record.row[_GREEK_SISTERS_COL],
                 }
                 | {col: huis.string() for col, huis in houses.items()},
             ).validate(key_to_family, symmetry=False)
@@ -480,7 +468,7 @@ class _Matriarch:
             for col, huis in houses.items():
                 new: str = huis.string()
                 if new != huis.ancestors_raw:
-                    self.sheet.update_cell(row_idx, self.col_idx[col], new)
+                    _ = self.sheet.update_cell(row_idx, self.col_idx[col], new)
 
 
 class Runner:
@@ -586,26 +574,26 @@ class Runner:
         if not self.args.keys:
             # If no keys are given, the ask is to print keys of words belonging
             # to a given category.
-            for row in tsv.Sheet.snapshot_roots():
-                cats = str(row[_CATEGORIES_COL])
+            for record in tsv.Sheet.snapshot_roots():
+                cats = str(record.row[_CATEGORIES_COL])
                 if any(c in self.args.cat for c in text.ssplit(cats)):
-                    print(row[_KEY_COL])
+                    print(record.row[_KEY_COL])
             return
         # Assign the given categories to the given words.
-        roots: tsv.Records = tsv.Sheet.snapshot_roots()
+        roots: list[gcp.Record] = tsv.Sheet.snapshot_roots()
         ensure.members(self.args.keys, roots)
         row_idx = 1
         col_idx = self.mother.col_idx[_CATEGORIES_COL]
         for record in roots:
             row_idx += 1
-            key = record[_KEY_COL]
+            key = record.row[_KEY_COL]
             if key not in self.args.keys:
                 continue
             if self.args.override_cat:
                 new_cat = _CAT_SEP.join(self.args.cat)
             else:
                 current_cats = set(
-                    _csplit(record[_CATEGORIES_COL]),
+                    _csplit(record.row[_CATEGORIES_COL]),
                 )
                 new_cat = _CAT_SEP.join(
                     sorted(current_cats | set(self.args.cat)),
@@ -620,13 +608,13 @@ class Runner:
         col_idx = self.mother.col_idx[_CATEGORIES_COL]
         for record in tsv.Sheet.snapshot_roots():
             row_idx += 1
-            key = int(record[_KEY_COL])
+            key = int(record.row[_KEY_COL])
             if key < self.args.first:
                 continue
-            if record[_CATEGORIES_COL]:
+            if record.row[_CATEGORIES_COL]:
                 # This record already has a category.
                 continue
-            if record[_TYPE_COL] in {
+            if record.row[_TYPE_COL] in {
                 "-",
                 "adjective",
                 "conjunction",
