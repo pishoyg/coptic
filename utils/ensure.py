@@ -6,37 +6,55 @@ from collections import abc
 from utils import log
 
 
-def ensure(cond: object, *args: object):
-    """Assert! If the condition is not satisfied, throw an error.
+def ensure(cond: object, *args: object, strict: bool = True) -> None:
+    """Assert! If the condition is not satisfied, report an error.
 
     Args:
         cond: The condition to evaluate. If true, do nothing.
         *args: Arguments to print.
+        strict: If true, throw an error if the condition is not met. Otherwise,
+            simply log an error message.
     """
     if not cond:
-        log.fatal(*args)
+        if strict:
+            log.fatal(*args)
+        else:
+            log.error(*args)
 
 
-def unique[T](arr: abc.Iterable[T], *message: object) -> None:
+def unique[T](
+    arr: abc.Iterable[T],
+    *message: object,
+    strict: bool = True,
+) -> None:
     dupes = [
         item for item, count in collections.Counter(arr).items() if count > 1
     ]
-    ensure(not dupes, *message, dupes, "are duplicates!")
+    ensure(not dupes, *message, dupes, "are duplicates!", strict=strict)
 
 
 def members[T](
     arr: abc.Iterable[T],
     known: abc.Container[T],
     *message: object,
+    strict: bool = True,
 ) -> None:
     unknown: list[T] = [x for x in arr if x not in known]
-    ensure(not unknown, *message, unknown, "are not members of", known)
+    ensure(
+        not unknown,
+        *message,
+        unknown,
+        "are not members of",
+        known,
+        strict=strict,
+    )
 
 
 def equal_sets[T](
     s1: abc.Iterable[T],
     s2: abc.Iterable[T],
     *message: object,
+    strict: bool = True,
 ) -> None:
     s1, s2 = list(s1), list(s2)
     unique(s1, "not a set!")
@@ -48,6 +66,7 @@ def equal_sets[T](
         *message,
         diff,
         "present in the former but not the latter",
+        strict=strict,
     )
     diff = s2.difference(s1)
     ensure(
@@ -55,6 +74,7 @@ def equal_sets[T](
         *message,
         diff,
         "present in the latter but not the former",
+        strict=strict,
     )
 
 
@@ -68,7 +88,7 @@ _bracket_map: dict[str, str] = {")": "(", "]": "[", "}": "{", ">": "<"}
 _opening_brackets: set[str] = set(_bracket_map.values())
 
 
-def brackets_balanced(s: str, *message: object):
+def brackets_balanced(s: str, *message: object, strict: bool = True) -> None:
     stack: list[str] = []
     for idx, char in enumerate(s):
         if char in _opening_brackets:
@@ -83,6 +103,15 @@ def brackets_balanced(s: str, *message: object):
                 s[:idx],
                 char,
                 s[idx + 1 :],
+                strict=strict,
             )
 
-    ensure(not stack, *message, "unclosed brackets:", stack, "in", s)
+    ensure(
+        not stack,
+        *message,
+        "unclosed brackets:",
+        stack,
+        "in",
+        s,
+        strict=strict,
+    )

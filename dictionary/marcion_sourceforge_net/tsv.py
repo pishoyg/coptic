@@ -32,7 +32,18 @@ def to_str(d: dict[str, str | int | float]) -> dict[str, str]:
 def _verify_balanced_brackets(records: Records) -> None:
     for record in records:
         for key, value in record.items():
-            ensure.brackets_balanced(value, "record", record, "key", key)
+            ensure.brackets_balanced(
+                value,
+                "record",
+                record,
+                "key",
+                key,
+                # We don't own the source of truth for the Wiki, so we can't
+                # always fix unbalanced brackets. We simply log an error
+                # message, until the problem is solved.
+                # TODO: (#438) Fix bracket typos in the Crum Wiki.
+                strict=key not in ["wiki"],
+            )
 
 
 def _is_sorted_by_int_columns(records: Records, column_names: list[str]):
