@@ -555,7 +555,7 @@ class Crum(Decker):
         yield root.drv_html_table()
 
         # Wiki.
-        if root.wiki:
+        if root.wiki and not root.wiki_wip:
             yield '<div class="wiki" id="wiki">'
             yield from wiki.html(root.wiki)
             yield "</div>"

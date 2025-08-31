@@ -137,6 +137,7 @@ def main():
     for record in gcp.raw_spreadsheet(SHEET_URL).to_dict(orient="records"):
         key: str = record["Marcion"]
         entry: str = record["Entry"]
+        wip: str = record["WIP"]
         if not key or not entry:
             continue
         if key not in crum.Crum.roots:
@@ -144,6 +145,7 @@ def main():
             continue
         # Copy the value to our sheet.
         crum.Crum.roots[key].update("wiki", entry)
+        crum.Crum.roots[key].update("wiki-wip", wip)
 
 
 if __name__ == "__main__":
