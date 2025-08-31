@@ -70,12 +70,19 @@ _opening_brackets: set[str] = set(_bracket_map.values())
 
 def brackets_balanced(s: str, *message: object):
     stack: list[str] = []
-    for char in s:
+    for idx, char in enumerate(s):
         if char in _opening_brackets:
             stack.append(char)
             continue
         if char in _bracket_map:
-            if not stack or _bracket_map[char] != stack.pop():
-                log.fatal(*message, "unbalanced bracket", char, "in", s)
+            ensure(
+                stack and _bracket_map[char] == stack.pop(),
+                *message,
+                "unbalanced bracket at position",
+                idx,
+                s[:idx],
+                char,
+                s[idx + 1 :],
+            )
 
-    ensure(not stack, *message, "unbalanced brackets", stack, "in", s)
+    ensure(not stack, *message, "unclosed brackets:", stack, "in", s)
