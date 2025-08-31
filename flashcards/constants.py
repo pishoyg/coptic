@@ -980,6 +980,7 @@ CRUM_XOOXLE = xooxle.Index(
         xooxle.Selector({"class_": "sisters"}, force=False),
         xooxle.Selector({"id": "categories"}, force=False),
         xooxle.Selector({"id": "quality"}),
+        xooxle.Selector({"id": "wiki"}, force=False),
     ],
     captures=[
         xooxle.Capture(
