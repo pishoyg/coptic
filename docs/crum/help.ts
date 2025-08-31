@@ -213,6 +213,11 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
         browser.scroll('dawoud');
       }),
     ],
+    k: [
+      new help.Shortcut('Crum text', ['note'], () => {
+        browser.scroll('wiki');
+      }),
+    ],
     w: [
       new help.Shortcut('Related words', ['note'], () => {
         browser.scroll('sisters');
