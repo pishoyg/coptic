@@ -7,6 +7,7 @@
  */
 
 import * as iam from '../iam.js';
+
 import * as browser from '../browser.js';
 import * as html from '../html.js';
 import * as scan from '../scan.js';
@@ -19,9 +20,41 @@ import * as ccls from '../cls.js';
 import * as header from '../header.js';
 import * as logger from '../logger.js';
 
+const REFERENCE_RE = /(\b[a-zA-Z]+)\s+(\d+)\s+(\d+)\b/g;
+
 const COPTIC_RE = /[\p{Script=Coptic}\p{Mark}]+/gu;
 const GREEK_RE = /[\p{Script=Greek}\p{Mark}]+/gu;
 const ENGLISH_RE = /[\p{Script=Latin}\p{Mark}]+/gu;
+
+/**
+ * Map book abbreviation to path.
+ * TODO: (#419) Omit hyperlinks for nonexistent chapters.
+ */
+const bibleBookPath: Record<string, string> = await (async () => {
+  const mapping: Record<string, string> = {};
+  const bibleData: unknown = await (
+    await fetch(`${paths.BIBLE}/index.json`)
+  ).json();
+  const data = bibleData as Record<
+    string,
+    Record<string, { title: string; crum: string | null }[]>
+  >;
+
+  Object.values(data)
+    .flatMap((testament) => Object.values(testament))
+    .flatMap((section) => Object.values(section))
+    .forEach((book: { title: string; crum: string | null }) => {
+      if (!book.crum) {
+        return;
+      }
+      mapping[book.crum] = book.title
+        .toLowerCase()
+        .replace(/ /g, '_')
+        .replace(/\./g, '_');
+    });
+
+  return mapping;
+})();
 
 /**
  *
@@ -52,6 +85,7 @@ export function handleAll(
   addCopticLookups(elem);
   addGreekLookups(elem);
   addEnglishLookups(elem);
+  handleWikiReferences(elem);
 }
 
 /**
@@ -340,7 +374,7 @@ export function addCopticLookups(elem: HTMLElement): void {
   html.linkifyText(
     elem,
     COPTIC_RE,
-    paths.LOOKUP_URL_PREFIX,
+    (match: RegExpExecArray) => paths.LOOKUP_URL_PREFIX + match[0],
     [ccls.HOVER_LINK],
     [cls.TYPE]
   );
@@ -351,10 +385,12 @@ export function addCopticLookups(elem: HTMLElement): void {
  * @param elem
  */
 export function addGreekLookups(elem: HTMLElement): void {
-  html.linkifyText(elem, GREEK_RE, paths.GREEK_DICT_PREFIX, [
-    ccls.LINK,
-    cls.LIGHT,
-  ]);
+  html.linkifyText(
+    elem,
+    GREEK_RE,
+    (match: RegExpExecArray) => paths.GREEK_DICT_PREFIX + match[0],
+    [ccls.LINK, cls.LIGHT]
+  );
 }
 
 /**
@@ -363,8 +399,39 @@ export function addGreekLookups(elem: HTMLElement): void {
  */
 export function addEnglishLookups(elem: HTMLElement): void {
   elem.querySelectorAll(`.${cls.MEANING}`).forEach((el) => {
-    html.linkifyText(el, ENGLISH_RE, paths.LOOKUP_URL_PREFIX, [
-      ccls.HOVER_LINK,
-    ]);
+    html.linkifyText(
+      el,
+      ENGLISH_RE,
+      (match: RegExpExecArray) => paths.LOOKUP_URL_PREFIX + match[0],
+      [ccls.HOVER_LINK]
+    );
+  });
+}
+
+/**
+ *
+ * @param elem
+ */
+export function handleWikiReferences(elem: HTMLElement): void {
+  elem.querySelectorAll(`.${cls.WIKI}`).forEach((el) => {
+    html.linkifyText(
+      el,
+      REFERENCE_RE,
+      (match: RegExpExecArray): string | null => {
+        // TODO: (#0) Why is `_` not ignored by the linter?
+        // eslint-disable-next-line @typescript-eslint/naming-convention
+        const [_, bookAbbreviation, chapter, verse] = match;
+        if (!bookAbbreviation || !chapter || !verse) {
+          return null;
+        }
+        const bookPath = bibleBookPath[bookAbbreviation];
+        if (!bookPath) {
+          return null;
+        }
+        const basename = `${paths.BIBLE}/${bookPath}_${chapter}.html`;
+        return `${basename}#v${verse}`;
+      },
+      [ccls.HOVER_LINK]
+    );
   });
 }
