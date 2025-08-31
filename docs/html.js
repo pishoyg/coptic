@@ -62,6 +62,8 @@ function shouldLinkify(node, regex, directParentExcludedClasses) {
   }
   return true;
 }
+/* eslint-disable max-lines-per-function */
+// TODO: (#0) Shorten this function.
 /**
  *
  * @param root
@@ -101,10 +103,14 @@ export function linkifyText(
       fragment.appendChild(
         document.createTextNode(text.slice(lastIndex, match.index))
       );
+      const targetUrl = url(match);
+      if (!targetUrl) {
+        continue;
+      }
       const link = document.createElement('span');
       link.classList.add(...classes);
       link.addEventListener('click', () => {
-        browser.open(url + query);
+        browser.open(targetUrl);
       });
       link.textContent = query;
       fragment.appendChild(link);
@@ -119,3 +125,4 @@ export function linkifyText(
     node.replaceWith(fragment);
   });
 }
+/* eslint-enable max-lines-per-function */

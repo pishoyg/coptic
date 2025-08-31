@@ -16,9 +16,32 @@ import * as cls from './cls.js';
 import * as ccls from '../cls.js';
 import * as header from '../header.js';
 import * as logger from '../logger.js';
+const REFERENCE_RE = /(\b[a-zA-Z]+)\s+(\d+)\s+(\d+)\b/g;
 const COPTIC_RE = /[\p{Script=Coptic}\p{Mark}]+/gu;
 const GREEK_RE = /[\p{Script=Greek}\p{Mark}]+/gu;
 const ENGLISH_RE = /[\p{Script=Latin}\p{Mark}]+/gu;
+/**
+ * Map book abbreviation to path.
+ * TODO: (#419) Omit hyperlinks for nonexistent chapters.
+ */
+const bibleBookPath = await (async () => {
+  const mapping = {};
+  const bibleData = await (await fetch(`${paths.BIBLE}/index.json`)).json();
+  const data = bibleData;
+  Object.values(data)
+    .flatMap((testament) => Object.values(testament))
+    .flatMap((section) => Object.values(section))
+    .forEach((book) => {
+      if (!book.crum) {
+        return;
+      }
+      mapping[book.crum] = book.title
+        .toLowerCase()
+        .replace(/ /g, '_')
+        .replace(/\./g, '_');
+    });
+  return mapping;
+})();
 /**
  *
  * @param elem
@@ -45,6 +68,7 @@ export function handleAll(elem, highlighter) {
   addCopticLookups(elem);
   addGreekLookups(elem);
   addEnglishLookups(elem);
+  handleWikiReferences(elem);
 }
 /**
  *
@@ -292,7 +316,7 @@ export function addCopticLookups(elem) {
   html.linkifyText(
     elem,
     COPTIC_RE,
-    paths.LOOKUP_URL_PREFIX,
+    (match) => paths.LOOKUP_URL_PREFIX + match[0],
     [ccls.HOVER_LINK],
     [cls.TYPE]
   );
@@ -302,10 +326,12 @@ export function addCopticLookups(elem) {
  * @param elem
  */
 export function addGreekLookups(elem) {
-  html.linkifyText(elem, GREEK_RE, paths.GREEK_DICT_PREFIX, [
-    ccls.LINK,
-    cls.LIGHT,
-  ]);
+  html.linkifyText(
+    elem,
+    GREEK_RE,
+    (match) => paths.GREEK_DICT_PREFIX + match[0],
+    [ccls.LINK, cls.LIGHT]
+  );
 }
 /**
  *
@@ -313,8 +339,38 @@ export function addGreekLookups(elem) {
  */
 export function addEnglishLookups(elem) {
   elem.querySelectorAll(`.${cls.MEANING}`).forEach((el) => {
-    html.linkifyText(el, ENGLISH_RE, paths.LOOKUP_URL_PREFIX, [
-      ccls.HOVER_LINK,
-    ]);
+    html.linkifyText(
+      el,
+      ENGLISH_RE,
+      (match) => paths.LOOKUP_URL_PREFIX + match[0],
+      [ccls.HOVER_LINK]
+    );
+  });
+}
+/**
+ *
+ * @param elem
+ */
+export function handleWikiReferences(elem) {
+  elem.querySelectorAll(`.${cls.WIKI}`).forEach((el) => {
+    html.linkifyText(
+      el,
+      REFERENCE_RE,
+      (match) => {
+        // TODO: (#0) Why is `_` not ignored by the linter?
+
+        const [_, bookAbbreviation, chapter, verse] = match;
+        if (!bookAbbreviation || !chapter || !verse) {
+          return null;
+        }
+        const bookPath = bibleBookPath[bookAbbreviation];
+        if (!bookPath) {
+          return null;
+        }
+        const basename = `${paths.BIBLE}/${bookPath}_${chapter}.html`;
+        return `${basename}#v${verse}`;
+      },
+      [ccls.HOVER_LINK]
+    );
   });
 }

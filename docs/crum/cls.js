@@ -33,4 +33,5 @@ export const SISTER_KEY = 'sister-key';
 export const SISTER_VIEW = 'sister-view';
 export const SPELLING = 'spelling';
 export const TYPE = 'type';
+export const WIKI = 'wiki';
 export const WORD = 'word';
