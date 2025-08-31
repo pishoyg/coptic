@@ -1,90 +1,322 @@
 {
   "OT": {
-    "Pentateuch": ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy"],
+    "Pentateuch": [
+      {
+        "title": "Genesis",
+        "crum": "Ge"
+      },
+      {
+        "title": "Exodus",
+        "crum": "Ex"
+      },
+      {
+        "title": "Leviticus",
+        "crum": "Lev"
+      },
+      {
+        "title": "Numbers",
+        "crum": "Nu"
+      },
+      {
+        "title": "Deuteronomy",
+        "crum": "Deu"
+      }
+    ],
     "Historical Books": [
-      "Joshua",
-      "Judges",
-      "Ruth",
-      "First Samuel",
-      "Second Samuel",
-      "First Kings",
-      "Second Kings",
-      "First Chronicles",
-      "Second Chronicles",
-      "Ezra",
-      "Nehemiah",
-      "Esther",
-      "Judith",
-      "Tobit",
-      "First Maccabees",
-      "Second Maccabees"
+      {
+        "title": "Joshua",
+        "crum": "Jos"
+      },
+      {
+        "title": "Judges",
+        "crum": "Jud"
+      },
+      {
+        "title": "Ruth",
+        "crum": "Ru"
+      },
+      {
+        "title": "First Samuel",
+        "crum": "Kg"
+      },
+      {
+        "title": "Second Samuel",
+        "crum": "Kg"
+      },
+      {
+        "title": "First Kings",
+        "crum": "Kg"
+      },
+      {
+        "title": "Second Kings",
+        "crum": "Kg"
+      },
+      {
+        "title": "First Chronicles",
+        "crum": "Chr."
+      },
+      {
+        "title": "Second Chronicles",
+        "crum": "Chr."
+      },
+      {
+        "title": "Ezra",
+        "crum": null
+      },
+      {
+        "title": "Nehemiah",
+        "crum": null
+      },
+      {
+        "title": "Esther",
+        "crum": "Est"
+      },
+      {
+        "title": "Judith",
+        "crum": "Jth"
+      },
+      {
+        "title": "Tobit",
+        "crum": "Tob"
+      },
+      {
+        "title": "First Maccabees",
+        "crum": "Mac"
+      },
+      {
+        "title": "Second Maccabees",
+        "crum": "Mac"
+      }
     ],
     "Poetic Books": [
-      "Psalms",
-      "Job",
-      "Proverbs",
-      "Ecclesiastes",
-      "Song of Songs",
-      "Wisdom of Solomon",
-      "Wisdom of Jesus son of Sirach"
+      {
+        "title": "Psalms",
+        "crum": "Ps"
+      },
+      {
+        "title": "Job",
+        "crum": null
+      },
+      {
+        "title": "Proverbs",
+        "crum": "Pro"
+      },
+      {
+        "title": "Ecclesiastes",
+        "crum": "Eccl"
+      },
+      {
+        "title": "Song of Songs",
+        "crum": "Cant"
+      },
+      {
+        "title": "Wisdom of Solomon",
+        "crum": "Sa"
+      },
+      {
+        "title": "Wisdom of Jesus son of Sirach",
+        "crum": "Si"
+      }
     ],
     "Major Prophets": [
-      "Isaiah",
-      "Jeremiah",
-      "Lamentations of Jeremiah",
-      "Baruch",
-      "Epistle of Jeremiah",
-      "Ezekiel",
-      "Daniel"
+      {
+        "title": "Isaiah",
+        "crum": "Is"
+      },
+      {
+        "title": "Jeremiah",
+        "crum": "Jer"
+      },
+      {
+        "title": "Lamentations of Jeremiah",
+        "crum": "Lam"
+      },
+      {
+        "title": "Baruch",
+        "crum": "Bar"
+      },
+      {
+        "title": "Epistle of Jeremiah",
+        "crum": "EpJer"
+      },
+      {
+        "title": "Ezekiel",
+        "crum": "Ez"
+      },
+      {
+        "title": "Daniel",
+        "crum": "Dan"
+      }
     ],
     "Minor Prophets": [
-      "Hosea",
-      "Amos",
-      "Micah",
-      "Joel",
-      "Obadiah",
-      "Jonah",
-      "Nahum",
-      "Habakkuk",
-      "Zephaniah",
-      "Haggai",
-      "Zechariah",
-      "Malachi"
+      {
+        "title": "Hosea",
+        "crum": "Hos"
+      },
+      {
+        "title": "Amos",
+        "crum": "Am"
+      },
+      {
+        "title": "Micah",
+        "crum": "Mic"
+      },
+      {
+        "title": "Joel",
+        "crum": null
+      },
+      {
+        "title": "Obadiah",
+        "crum": "Ob"
+      },
+      {
+        "title": "Jonah",
+        "crum": "Jon"
+      },
+      {
+        "title": "Nahum",
+        "crum": "Nah"
+      },
+      {
+        "title": "Habakkuk",
+        "crum": "Hab"
+      },
+      {
+        "title": "Zephaniah",
+        "crum": "Zeph"
+      },
+      {
+        "title": "Haggai",
+        "crum": "Hag"
+      },
+      {
+        "title": "Zechariah",
+        "crum": "Zech"
+      },
+      {
+        "title": "Malachi",
+        "crum": "Mal"
+      }
     ]
   },
   "NT": {
     "Gospels": [
-      "Gospel of St. Matthew",
-      "Gospel of St. Mark",
-      "Gospel of St. Luke",
-      "Gospel of St. John"
+      {
+        "title": "Gospel of St. Matthew",
+        "crum": "Mt"
+      },
+      {
+        "title": "Gospel of St. Mark",
+        "crum": "Mk"
+      },
+      {
+        "title": "Gospel of St. Luke",
+        "crum": "Lu"
+      },
+      {
+        "title": "Gospel of St. John",
+        "crum": "Jo"
+      }
     ],
-    "Acts of the Apostles": ["Acts of the Apostles"],
+    "Acts of the Apostles": [
+      {
+        "title": "Acts of the Apostles",
+        "crum": "Ac"
+      }
+    ],
     "Pauline Epistles": [
-      "Epistle to the Romans",
-      "First Epistle to the Corinthians",
-      "Second Epistle to the Corinthians",
-      "Epistle to the Galatians",
-      "Epistle to the Ephesians",
-      "Epistle to the Philippians",
-      "Epistle to the Colossians",
-      "First Epistle to the Thessalonians",
-      "Second Epistle to the Thessalonians",
-      "Epistle to the Hebrews",
-      "First Epistle to Timothy",
-      "Second Epistle to Timothy",
-      "Epistle to Titus",
-      "Epistle to Philemon"
+      {
+        "title": "Epistle to the Romans",
+        "crum": "Ro"
+      },
+      {
+        "title": "First Epistle to the Corinthians",
+        "crum": "Cor"
+      },
+      {
+        "title": "Second Epistle to the Corinthians",
+        "crum": "Cor"
+      },
+      {
+        "title": "Epistle to the Galatians",
+        "crum": "Gal"
+      },
+      {
+        "title": "Epistle to the Ephesians",
+        "crum": "Eph"
+      },
+      {
+        "title": "Epistle to the Philippians",
+        "crum": "Phil"
+      },
+      {
+        "title": "Epistle to the Colossians",
+        "crum": "Col"
+      },
+      {
+        "title": "First Epistle to the Thessalonians",
+        "crum": "Thes"
+      },
+      {
+        "title": "Second Epistle to the Thessalonians",
+        "crum": "Thes"
+      },
+      {
+        "title": "Epistle to the Hebrews",
+        "crum": "He"
+      },
+      {
+        "title": "First Epistle to Timothy",
+        "crum": "Tim"
+      },
+      {
+        "title": "Second Epistle to Timothy",
+        "crum": "Tim"
+      },
+      {
+        "title": "Epistle to Titus",
+        "crum": "Ti"
+      },
+      {
+        "title": "Epistle to Philemon",
+        "crum": null
+      }
     ],
     "Catholic Epistles": [
-      "Epistle of St. James",
-      "First Epistle of St. Peter",
-      "Second Epistle of St. Peter",
-      "First Epistle of St. John",
-      "Second Epistle of St. John",
-      "Third Epistle of St. John",
-      "Epistle of St. Jude"
+      {
+        "title": "Epistle of St. James",
+        "crum": "Ja"
+      },
+      {
+        "title": "First Epistle of St. Peter",
+        "crum": "Pet"
+      },
+      {
+        "title": "Second Epistle of St. Peter",
+        "crum": "Pet"
+      },
+      {
+        "title": "First Epistle of St. John",
+        "crum": null
+      },
+      {
+        "title": "Second Epistle of St. John",
+        "crum": null
+      },
+      {
+        "title": "Third Epistle of St. John",
+        "crum": null
+      },
+      {
+        "title": "Epistle of St. Jude",
+        "crum": null
+      }
     ],
-    "Apocalypse": ["Apocalypse"]
+    "Apocalypse": [
+      {
+        "title": "Apocalypse",
+        "crum": "Ap"
+      }
+    ]
   }
 }
