@@ -199,6 +199,12 @@ table {
   opacity: 0.5;
 }
 
+.wiki p {
+  text-indent: 2em;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
 .sister-index {
   opacity: 0.5;
 }
