@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """Process the Bible data."""
-
-
 # NOTE: As a general convention, methods ending with _aux return generators,
 # rather than string literals.
+import collections
 import html
 import json
 import os
@@ -269,6 +268,26 @@ class Chapter(Item):
         self._is_first: bool = False
         self._is_last: bool = False
         self.book: Book = book
+
+        dupes: list[str] = [
+            item
+            for item, count in collections.Counter(
+                v.num for v in self.verses
+            ).items()
+            if count > 1
+        ]
+        if dupes:
+            log.warn(
+                "Chapter",
+                self.num,
+                "in Book",
+                self.book.name,
+                "has verses with duplicate IDs",
+                dupes,
+            )
+            for v in self.verses:
+                if v.num and v.num in dupes:
+                    v.num = ""
 
     def _num(self, data: dict) -> str:
         return data["sectionNameEnglish"] or "1"
