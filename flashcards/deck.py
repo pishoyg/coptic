@@ -437,12 +437,24 @@ class Deck:
         # Like the media files, the JavaScript path is relative to the HTML
         # write directory.
         js_path = os.path.join(self.html_dir, js_path)
-        result = subprocess.run(
-            ["npx", "esbuild", js_path, "--bundle"],
-            check=True,
-            capture_output=True,
-            text=True,
-        )
+        try:
+            result = subprocess.run(
+                ["npx", "esbuild", js_path, "--bundle"],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+        except subprocess.CalledProcessError as e:
+            log.fatal(
+                "Subprocess exited with status",
+                e.returncode,
+                "cmd:",
+                e.cmd,
+                "stdout:",
+                e.stdout,
+                "stderr:",
+                e.stderr,
+            )
         yield result.stdout
 
     def anki(self) -> tuple[genanki.Deck, abc.Iterable[MediaFile]]:
