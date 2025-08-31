@@ -19,7 +19,7 @@ from utils import concur, file, log, page, paths
 # Input parameters
 
 _SCRIPT_DIR = pathlib.Path(__file__).parent
-_JSON: str = str(_SCRIPT_DIR / "data/input/bible.json")
+_JSON: str = os.path.join(paths.BIBLE_DIR, "index.json")
 _INPUT_DIR: str = str(_SCRIPT_DIR / "data/raw/")
 # TODO: (#432) Include the sources in the output.
 _SOURCES_DIR: str = str(_SCRIPT_DIR / "data/raw/Sources/")
