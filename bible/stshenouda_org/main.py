@@ -98,13 +98,15 @@ class ColorRange:
         self.end: int = end
         self.color: str = color
 
-    def within(self, other) -> bool:
+    def within(self, other: object) -> bool:
+        assert isinstance(other, ColorRange)
         return self.start >= other.start and self.end <= other.end
 
-    def overlap(self, other) -> bool:
+    def overlap(self, other: object) -> bool:
+        assert isinstance(other, ColorRange)
         return self.start < other.end and self.end > other.start
 
-    def winner(self, other):
+    def winner(self, other: object):
         """Given two ranges, return whichever one contains the other.
 
         If neither contains the other, crash!
@@ -116,6 +118,7 @@ class ColorRange:
             The larger range.
 
         """
+        assert isinstance(other, ColorRange)
         if self.within(other):
             return other
         if other.within(self):
@@ -182,7 +185,7 @@ class Verse:
 
     def __num(self, verse: dict[str, str]) -> str:
         t: str = verse["English"] or verse["Greek"]
-        s: re.Match | None = _VERSE_PREFIX.search(t)
+        s: re.Match[str] | None = _VERSE_PREFIX.search(t)
         return s.groups()[0] if s else ""
 
     def __compare_range_color(self, rc: ColorRange) -> tuple[int, int]:
@@ -245,13 +248,13 @@ class Chapter(Item):
     """A Bible chapter."""
 
     def __init__(self, data: dict, book) -> None:
-        self.num = self._num(data)
-        self.verses = [Verse(v) for v in data["data"]]
-        self._prev: typing.Any = None
-        self._next: typing.Any = None
+        self.num: str = self._num(data)
+        self.verses: list[Verse] = [Verse(v) for v in data["data"]]
+        self._prev: Chapter | None = None
+        self._next: Chapter | None = None
         self._is_first: bool = False
         self._is_last: bool = False
-        self.book = book
+        self.book: Book = book
 
     def _num(self, data: dict) -> str:
         return data["sectionNameEnglish"] or "1"
@@ -336,7 +339,7 @@ class Book(Item):
 
         data: list = self.load(self.name)
         self.zfill_len: int = len(str(len(data)))
-        self.chapters = [Chapter(c, self) for c in data]
+        self.chapters: list[Chapter] = [Chapter(c, self) for c in data]
 
     def load(self, book_name: str) -> list[typing.Any]:
         try:
@@ -437,28 +440,26 @@ class Bible:
             yield from book.chapters
 
 
-# TODO: (#360) The code needs to be structured in the following way:
-# - The format parameters need to go to a new class, called format, for example.
-# - The write and generate methods should move to their respective types, such
-#   as Bible and Chapter. Those methods should accept a format instance as
-#   input.
 class HTMLBuilder:
     """An Bible HTML formatter and builder."""
 
-    def __init__(
-        self,
-        chapter_beginner: str = "",
-        verse_beginner: str = "",
-        verse_format: str = "",
-        verse_end: str = "",
-        chapter_end: str = "",
-    ) -> None:
-        # Format.
-        self._chapter_beginner: str = chapter_beginner
-        self._verse_beginner: str = verse_beginner
-        self._verse_format: str = verse_format
-        self._verse_end: str = verse_end
-        self._chapter_end: str = chapter_end
+    def chapter_begin(self, chapter: Chapter) -> abc.Generator[str]:
+        raise NotImplementedError
+
+    def chapter_end(self, chapter: Chapter) -> abc.Generator[str]:
+        raise NotImplementedError
+
+    def verse_begin(self, verse: Verse) -> abc.Generator[str]:
+        raise NotImplementedError
+
+    def verse_end(self, verse: Verse) -> abc.Generator[str]:
+        raise NotImplementedError
+
+    def lang_begin(self) -> abc.Generator[str]:
+        raise NotImplementedError
+
+    def lang_end(self) -> abc.Generator[str]:
+        raise NotImplementedError
 
     # __chapter_body_aux builds the contents of the <body> element of a chapter.
     def __chapter_body_aux(
@@ -470,13 +471,15 @@ class HTMLBuilder:
         yield chapter.header()
         if not langs:
             return
-        yield self._chapter_beginner
+        yield from self.chapter_begin(chapter)
         for verse in chapter.verses:
-            yield self._verse_beginner
+            yield from self.verse_begin(verse)
             for lang in langs:
-                yield self._verse_format.format(verse.recolored[lang])
-            yield self._verse_end
-        yield self._chapter_end
+                yield from self.lang_begin()
+                yield from verse.recolored[lang]
+                yield from self.lang_end()
+            yield from self.verse_end(verse)
+        yield from self.chapter_end(chapter)
 
     # __book_body_aux builds the contents of the <body> element of a book.
     def __book_body_aux(
@@ -685,20 +688,87 @@ class HTMLBuilder:
         )
 
 
+class FlowBuilder(HTMLBuilder):
+    """FlowBuilder provides a flow format for the Bible."""
+
+    @typing.override
+    def chapter_begin(
+        self,
+        chapter: Chapter,  # dead: disable
+    ) -> abc.Generator[str]:
+        del chapter
+        yield from []
+
+    @typing.override
+    def chapter_end(
+        self,
+        chapter: Chapter,  # dead: disable
+    ) -> abc.Generator[str]:
+        del chapter
+        yield from []
+
+    @typing.override
+    def verse_begin(self, verse: Verse) -> abc.Generator[str]:  # dead: disable
+        del verse
+        yield from []
+
+    @typing.override
+    def verse_end(self, verse: Verse) -> abc.Generator[str]:  # dead: disable
+        del verse
+        yield page.LINE_BREAK
+
+    @typing.override
+    def lang_begin(self) -> abc.Generator[str]:  # dead: disable
+        yield from []
+
+    @typing.override
+    def lang_end(self) -> abc.Generator[str]:  # dead: disable
+        yield page.LINE_BREAK
+
+
+class TableBuilder(HTMLBuilder):
+    """TableBuilder provides a table format for the Bible."""
+
+    @typing.override
+    def chapter_begin(
+        self,
+        chapter: Chapter,  # dead: disable
+    ) -> abc.Generator[str]:
+        del chapter
+        yield "<table>"
+
+    @typing.override
+    def chapter_end(
+        self,
+        chapter: Chapter,  # dead: disable
+    ) -> abc.Generator[str]:
+        del chapter
+        yield "</table>"
+
+    @typing.override
+    def verse_begin(self, verse: Verse) -> abc.Generator[str]:  # dead: disable
+        del verse
+        yield "<tr>"
+
+    @typing.override
+    def verse_end(self, verse: Verse) -> abc.Generator[str]:  # dead: disable
+        del verse
+        yield "</tr>"
+
+    @typing.override
+    def lang_begin(self) -> abc.Generator[str]:  # dead: disable
+        yield "<td>"
+
+    @typing.override
+    def lang_end(self) -> abc.Generator[str]:  # dead: disable
+        yield "</td>"
+
+
 def main():
     bible = Bible()
-    flow_builder = HTMLBuilder(
-        verse_format="{}<br>",
-        verse_end="<br>",
-    )
+    flow_builder = FlowBuilder()
 
-    table_builder = HTMLBuilder(
-        chapter_beginner="<table>",
-        verse_beginner="<tr>",
-        verse_format="<td>{}</td>",
-        verse_end="</tr>",
-        chapter_end="</table>",
-    )
+    table_builder = TableBuilder()
 
     tasks: list[
         tuple[
