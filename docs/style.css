@@ -233,6 +233,7 @@ table {
   display: none;
 }
 
+:target.verse,
 :target.explanatory,
 :target.sister,
 :target.drv .marcion,
