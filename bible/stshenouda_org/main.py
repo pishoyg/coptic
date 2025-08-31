@@ -133,8 +133,10 @@ class Verse:
     """A Bible verse."""
 
     def __init__(self, data: dict[str, str]) -> None:
-        self._num: str = self.__num(data)
         self._raw: dict[str, str] = data
+        self.num: str = self.__num(data)
+        if not self.num:
+            log.warn("Unable to infer number for verse:", self)
         # NOTE: Normalization must take place after recoloring, because
         # recoloring uses the original text.
         self.recolored: dict[str, str] = {
@@ -186,7 +188,11 @@ class Verse:
     def __num(self, verse: dict[str, str]) -> str:
         t: str = verse["English"] or verse["Greek"]
         s: re.Match[str] | None = _VERSE_PREFIX.search(t)
-        return s.groups()[0] if s else ""
+        num: str = s.groups()[0] if s else ""
+        if not num.isdigit():
+            log.warn("Inferred a non-numerical verse number from", t)
+            num = ""
+        return num
 
     def __compare_range_color(self, rc: ColorRange) -> tuple[int, int]:
         return (rc.start, rc.end)
@@ -209,6 +215,14 @@ class Verse:
         while i != -1:
             yield i
             i = s.find(p, i + 1)
+
+    @typing.override
+    def __str__(self) -> str:
+        return str(self._raw)
+
+    @typing.override
+    def __repr__(self) -> str:
+        return self.__str__()
 
 
 class Item:
@@ -455,10 +469,10 @@ class HTMLBuilder:
     def verse_end(self, verse: Verse) -> abc.Generator[str]:
         raise NotImplementedError
 
-    def lang_begin(self) -> abc.Generator[str]:
+    def lang_begin(self, lang: str) -> abc.Generator[str]:
         raise NotImplementedError
 
-    def lang_end(self) -> abc.Generator[str]:
+    def lang_end(self, lang: str) -> abc.Generator[str]:
         raise NotImplementedError
 
     # __chapter_body_aux builds the contents of the <body> element of a chapter.
@@ -475,9 +489,9 @@ class HTMLBuilder:
         for verse in chapter.verses:
             yield from self.verse_begin(verse)
             for lang in langs:
-                yield from self.lang_begin()
+                yield from self.lang_begin(lang)
                 yield from verse.recolored[lang]
-                yield from self.lang_end()
+                yield from self.lang_end(lang)
             yield from self.verse_end(verse)
         yield from self.chapter_end(chapter)
 
@@ -718,11 +732,11 @@ class FlowBuilder(HTMLBuilder):
         yield page.LINE_BREAK
 
     @typing.override
-    def lang_begin(self) -> abc.Generator[str]:  # dead: disable
+    def lang_begin(self, lang: str) -> abc.Generator[str]:  # dead: disable
         yield from []
 
     @typing.override
-    def lang_end(self) -> abc.Generator[str]:  # dead: disable
+    def lang_end(self, lang: str) -> abc.Generator[str]:  # dead: disable
         yield page.LINE_BREAK
 
 
@@ -735,7 +749,7 @@ class TableBuilder(HTMLBuilder):
         chapter: Chapter,  # dead: disable
     ) -> abc.Generator[str]:
         del chapter
-        yield "<table>"
+        yield '<table class="chapter">'
 
     @typing.override
     def chapter_end(
@@ -746,9 +760,15 @@ class TableBuilder(HTMLBuilder):
         yield "</table>"
 
     @typing.override
-    def verse_begin(self, verse: Verse) -> abc.Generator[str]:  # dead: disable
-        del verse
-        yield "<tr>"
+    def verse_begin(self, verse: Verse) -> abc.Generator[str]:
+        if not verse.num:
+            yield '<tr class="verse">'
+            return
+        # TODO: (#0) If several chapters were to be placed in the same document
+        # (as is the case with the generated EPUBs), this would result in verses
+        # from different chapters having the same ID! Verse ID should either be
+        # distinct across chapters, or should be omitted in the EPUB!
+        yield f'<tr class="verse" id="v{verse.num}">'
 
     @typing.override
     def verse_end(self, verse: Verse) -> abc.Generator[str]:  # dead: disable
@@ -756,11 +776,11 @@ class TableBuilder(HTMLBuilder):
         yield "</tr>"
 
     @typing.override
-    def lang_begin(self) -> abc.Generator[str]:  # dead: disable
-        yield "<td>"
+    def lang_begin(self, lang: str) -> abc.Generator[str]:  # dead: disable
+        yield f'<td class="language {lang}">'
 
     @typing.override
-    def lang_end(self) -> abc.Generator[str]:  # dead: disable
+    def lang_end(self, lang: str) -> abc.Generator[str]:  # dead: disable
         yield "</td>"
 
 
