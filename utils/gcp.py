@@ -1,13 +1,16 @@
 """Google Cloud and Google Sheets helpers."""
 
 import functools
+import io
 import typing
 from collections import abc
 
 import gspread
+import pandas as pd
+import requests
 from google.oauth2 import service_account
 
-from utils import cache, ensure, paths
+from utils import cache, ensure, file, paths
 
 _GSPREAD_SCOPE = [
     "https://spreadsheets.google.com/feeds",
@@ -95,6 +98,13 @@ def column_nums(worksheet: gspread.worksheet.Worksheet) -> dict[str, int]:
     return {
         value: idx + 1 for idx, value in enumerate(worksheet.row_values(1))
     }
+
+
+def raw_spreadsheet(export_url: str) -> pd.DataFrame:
+    response = requests.get(export_url)
+    response.raise_for_status()
+    response.encoding = "UTF-8"
+    return file.read_tsv(io.StringIO(response.text))
 
 
 def apply(

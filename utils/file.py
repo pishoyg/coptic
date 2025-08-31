@@ -1,5 +1,6 @@
 """Directory, file, and path helpers."""
 
+import io
 import json
 import os
 import pathlib
@@ -100,9 +101,9 @@ def json_dumps(j: object, **kwargs: typing.Any) -> str:
     )
 
 
-def read_tsv(path: str | pathlib.Path) -> pd.DataFrame:
+def read_tsv(tsv: str | io.StringIO) -> pd.DataFrame:
     return pd.read_csv(
-        str(path),
+        tsv,
         sep="\t",
         dtype=str,
         encoding="utf-8",

@@ -13,7 +13,7 @@ from dictionary.marcion_sourceforge_net import categories as cat
 from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import lexical as lex
 from dictionary.marcion_sourceforge_net import parse, tsv
-from utils import cache, ensure, gcp, page, text
+from utils import cache, ensure, gcp, log, page, text
 
 _NUM_DRV_COLS: int = 10
 _HUNDRED: int = 100
