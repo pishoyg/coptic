@@ -20,6 +20,10 @@ import * as ccls from '../cls.js';
 import * as header from '../header.js';
 import * as logger from '../logger.js';
 
+// TODO: (#419) Include numbered books in Biblical references. The following may
+// be comprehensive: Samuel, Kings, Chronicles, Maccabees, Corinthians,
+// Thessalonians, Timothy, and Peter. (There are several epistles of St. John,
+// but we're not sure if they're ever cited in Crum!)
 const REFERENCE_RE = /(\b[a-zA-Z]+)\s+(\d+)\s+(\d+)\b/g;
 
 const COPTIC_RE = /[\p{Script=Coptic}\p{Mark}]+/gu;
@@ -46,6 +50,13 @@ const bibleBookPath: Record<string, string> = await (async () => {
     .forEach((book: { title: string; crum: string | null }) => {
       if (!book.crum) {
         return;
+      }
+      if (book.crum in mapping) {
+        logger.fatal(
+          'Book abbreviation',
+          book.crum,
+          'appears several times in the index!'
+        );
       }
       mapping[book.crum] = book.title
         .toLowerCase()
@@ -308,9 +319,14 @@ export function handleDialect(
   highlighter: highlight.Highlighter
 ): void {
   elem.querySelectorAll<HTMLElement>(`.${cls.DIALECT}`).forEach((el) => {
-    el.classList.add(ccls.HOVER_LINK);
     const code: d.DIALECT = el.innerText as d.DIALECT;
     el.replaceChildren(...d.DIALECTS[code].prettyCode());
+    if (el.closest(`.${cls.WIKI}`)) {
+      // Dialect highlighting doesn't really work under Wiki, so we disable it
+      // here!
+      return;
+    }
+    el.classList.add(ccls.HOVER_LINK);
     el.addEventListener(
       'click',
       highlighter.toggleDialect.bind(highlighter, code)
