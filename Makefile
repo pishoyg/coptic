@@ -100,6 +100,9 @@ epub_publish: REQUIRE_DRIVE_DIR FORCE
 	"$${DRIVE_DIR}/bohairic_english - desktop.epub"
 
 ########## CRUM ##########
+wiki: FORCE
+	# Copy fresh data from the Wiki.
+	./dictionary/marcion_sourceforge_net/wiki.py
 crum: FORCE
 	# Generate the Crum lexicon artefacts.
 	./flashcards/main.py --crum
