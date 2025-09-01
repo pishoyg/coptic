@@ -363,10 +363,13 @@ class Crum:
         if self._regex:
             pattern: re.Pattern[str] = re.compile(self._regex)
             return sum(
-                len(pattern.findall(str(row[self._field])))
-                for row in tsv.Sheet.roots_snapshot
+                len(pattern.findall(str(record.row[self._field])))
+                for record in tsv.Sheet.roots_snapshot
             )
-        return sum(bool(row[self._field]) for row in tsv.Sheet.roots_snapshot)
+        return sum(
+            bool(record.row[self._field])
+            for record in tsv.Sheet.roots_snapshot
+        )
 
 
 _CRUM_STATS: list[Stat] = [
@@ -393,6 +396,17 @@ _CRUM_STATS: list[Stat] = [
         ),
         1200,
         33570,
+    ),
+    Stat(
+        "crum_wiki",
+        "Number of complete Wiki entries",
+        lambda: sum(
+            bool(record.row["wiki"] and not record.row["wiki-wip"])
+            for record in tsv.Sheet.roots_snapshot
+        ),
+        1700,
+        3357,
+        Dash.CRUM_APPENDICES,
     ),
     Crum(
         "dawoud",
