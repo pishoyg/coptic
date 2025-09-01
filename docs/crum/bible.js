@@ -54,7 +54,7 @@ export const MAPPING = {
   '2 Cor': 'second_epistle_to_the_corinthians',
   Gal: 'epistle_to_the_galatians',
   Eph: 'epistle_to_the_ephesians',
-  Phil: 'epistle_to_the_philippians',
+  Phil: 'epistle_to_philemon',
   Col: 'epistle_to_the_colossians',
   '1 Thes': 'first_epistle_to_the_thessalonians',
   '2 Thes': 'second_epistle_to_the_thessalonians',
@@ -65,5 +65,9 @@ export const MAPPING = {
   Ja: 'epistle_of_st__james',
   '1 Pet': 'first_epistle_of_st__peter',
   '2 Pet': 'second_epistle_of_st__peter',
+  '1 Jo': 'first_epistle_of_st__john',
+  '2 Jo': 'second_epistle_of_st__john',
+  '3 Jo': 'third_epistle_of_st__john',
+  Jude: 'epistle_of_st__jude',
   Ap: 'apocalypse',
 };
