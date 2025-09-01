@@ -218,6 +218,9 @@ class Root(Row):
     def wiki_wip(self) -> str:
         return self.row["wiki-wip"]
 
+    def has_complete_wiki(self) -> bool:
+        return bool(self.wiki and not self.wiki_wip)
+
     def title(self) -> str:
         return ", ".join(
             w.string(

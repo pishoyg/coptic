@@ -554,12 +554,6 @@ class Crum(Decker):
         # Derivations.
         yield root.drv_html_table()
 
-        # Wiki.
-        if root.wiki and not root.wiki_wip:
-            yield '<div class="wiki" id="wiki">'
-            yield from wiki.html(root.wiki)
-            yield "</div>"
-
         # Sisters.
         if (
             root.sisters
@@ -603,9 +597,17 @@ class Crum(Decker):
             yield "</div>"
             del before
 
+        if root.has_complete_wiki() or root.crum:
+            yield page.HORIZONTAL_RULE
+
+        # Wiki.
+        if root.has_complete_wiki():
+            yield '<div class="wiki" id="wiki">'
+            yield from wiki.html(root.wiki)
+            yield "</div>"
+
         # Crum's pages.
         if root.crum:
-            yield page.HORIZONTAL_RULE
             yield '<div id="crum" class="crum dictionary">'
             yield '<span class="right">'
             yield '<b><a href="#crum" class="crum hover-link">Crum</a>: </b>'
