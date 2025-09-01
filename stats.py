@@ -746,6 +746,10 @@ def _report(commit: bool, verbose: bool) -> list[Stat]:
     df: pd.DataFrame = file.read_tsv(_TSV_FILE)
     stats: list[Stat] = list(_stats(verbose))
     record: dict[str, str | int] = {stat.name(): stat.val() for stat in stats}
+    # TODO: (#0) To add another column, we're forced to manually add the column
+    # name in the TSV header in order for this check to pass. Is this the best
+    # way? Maybe allow the generated stat names to be a superset of the saved
+    # stats, so we can conveniently incorporate new stats?
     ensure.equal_sets(
         set(df.columns),
         set(record.keys()),
