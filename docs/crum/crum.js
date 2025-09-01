@@ -21,6 +21,17 @@ import * as bible from './bible.js';
 // ⲁⲃⲁϭⲏⲉⲓⲛ[1] cites "Ap 4" without a verse number.) Those should bear a
 // hyperlink to the chapter file.
 // [1]https://remnqymi.com/crum/97.html
+//
+// TODO: (#419) It appears that, for one-chapter books, Crum might have
+// omitted the chapter number! (Example: ⲛⲟϭ[1] cites "Philem 9".)
+// Handle this corner case!
+// [1] https://remnqymi.com/crum/88.html
+//
+// TODO: (#419) Omit hyperlinks for nonexistent chapters.
+//
+// NOTE: The three issues above should likely be worked on together! If you see
+// a book abbreviation followed by just one number, how do you know if it's a
+// chapter or a verse number?
 const REFERENCE_RE = /(\b(?:[123]\s)?[a-zA-Z]+)\s+(\d+)\s+(\d+)\b/g;
 const COPTIC_RE = /[\p{Script=Coptic}\p{Mark}]+/gu;
 const GREEK_RE = /[\p{Script=Greek}\p{Mark}]+/gu;
@@ -338,8 +349,6 @@ export function addEnglishLookups(elem) {
 /**
  *
  * @param elem
- * TODO: (#419) Omit hyperlinks for nonexistent chapters.
- *
  * NOTE: For the Bible abbreviation-to-id mapping, we opted for generating a
  * code file that defines the mapping. We used to populate the mapping in a
  * JSON, but this had to be retrieved with an async fetch, which complicated
@@ -373,8 +382,6 @@ export function handleWikiReferences(elem) {
         // - Philemon is not mentioned, though he seems to have used "Philem".
         // - Ezra and Nehemiah likely don't have any surviving Coptic text, so
         //   they are not mentioned.
-        // TODO: (#419) It appears that, for one-chapter books, Crum might have
-        // omitted the chapter number! Handle this corner case!
         const bookID = bible.MAPPING[bookAbbreviation];
         if (!bookID) {
           return null;
