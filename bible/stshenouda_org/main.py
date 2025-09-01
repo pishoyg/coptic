@@ -130,11 +130,17 @@ class ColorRange:
 class Verse:
     """A Bible verse."""
 
-    def __init__(self, data: dict[str, str]) -> None:
+    def __init__(self, data: dict[str, str], first: bool) -> None:
         self._raw: dict[str, str] = data
         self.num: str = self.__num(data)
         if not self.num:
-            log.warn("Unable to infer number for verse:", self)
+            # It's often the case that a chapter contains a title
+            # at the very beginning. In such cases, there is no verse number.
+            # TODO: (#360) Handle invalid verse IDs!
+            (log.warn if first else log.error)(
+                "Unable to infer number for verse:",
+                self,
+            )
         # NOTE: Normalization must take place after recoloring, because
         # recoloring uses the original text.
         self.recolored: dict[str, str] = {
@@ -188,7 +194,8 @@ class Verse:
         s: re.Match[str] | None = _VERSE_PREFIX.search(t)
         num: str = s.groups()[0] if s else ""
         if not num.isdigit():
-            log.warn("Inferred a non-numerical verse number from", t)
+            # TODO: (#360) Handle invalid verse IDs!
+            log.error("Inferred a non-numerical verse number from", t)
             num = ""
         return num
 
@@ -261,7 +268,9 @@ class Chapter(Item):
 
     def __init__(self, data: dict, book) -> None:
         self.num: str = self._num(data)
-        self.verses: list[Verse] = [Verse(v) for v in data["data"]]
+        self.verses: list[Verse] = [
+            Verse(v, i == 0) for i, v in enumerate(data["data"])
+        ]
         self._prev: Chapter | None = None
         self._next: Chapter | None = None
         self._is_first: bool = False
@@ -276,7 +285,8 @@ class Chapter(Item):
             if count > 1
         ]
         if dupes:
-            log.warn(
+            # TODO: (#360) Handle duplicate verse IDs!
+            log.error(
                 "Chapter",
                 self.num,
                 "in Book",
