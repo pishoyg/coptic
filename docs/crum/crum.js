@@ -17,15 +17,11 @@ import * as ccls from '../cls.js';
 import * as header from '../header.js';
 import * as logger from '../logger.js';
 import * as bible from './bible.js';
-// TODO: (#419) Include numbered books in Biblical references. The following may
-// be comprehensive: Samuel, Kings, Chronicles, Maccabees, Corinthians,
-// Thessalonians, Timothy, and Peter. (There are several epistles of St. John,
-// but we're not sure if they're ever cited in Crum!)
 // TODO: (#419) Some references do not have a verse number. (Example:
 // ⲁⲃⲁϭⲏⲉⲓⲛ[1] cites "Ap 4" without a verse number.) Those should bear a
 // hyperlink to the chapter file.
 // [1]https://remnqymi.com/crum/97.html
-const REFERENCE_RE = /(\b[a-zA-Z]+)\s+(\d+)\s+(\d+)\b/g;
+const REFERENCE_RE = /(\b(?:[123]\s)?[a-zA-Z]+)\s+(\d+)\s+(\d+)\b/g;
 const COPTIC_RE = /[\p{Script=Coptic}\p{Mark}]+/gu;
 const GREEK_RE = /[\p{Script=Greek}\p{Mark}]+/gu;
 const ENGLISH_RE = /[\p{Script=Latin}\p{Mark}]+/gu;
@@ -359,6 +355,7 @@ export function addEnglishLookups(elem) {
  */
 export function handleWikiReferences(elem) {
   elem.querySelectorAll(`.${cls.WIKI}`).forEach((el) => {
+    let counter = 0;
     html.linkifyText(
       el,
       REFERENCE_RE,
@@ -383,7 +380,9 @@ export function handleWikiReferences(elem) {
           return null;
         }
         const basename = `${paths.BIBLE}/${bookID}_${chapter}.html`;
-        return `${basename}#v${verse}`;
+        const url = `${basename}#v${verse}`;
+        logger.info(`${++counter}:`, match[0], 'has a hyperlink to', url);
+        return url;
       },
       [ccls.HOVER_LINK]
     );
