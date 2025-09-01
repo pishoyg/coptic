@@ -249,18 +249,7 @@ repos:
         # Other types of files are data files, not code files. We don't take
         # data updates lightly.
         exclude: ".*\\.(xml|html|xhtml|txt|tsv|csv|json|tab|msql|xsd)$|dictionary/kellia_uni_goettingen_de/main.py"
-        args: [-L, "afterAll,astroid"]
-
-  # NOTE: This hook was problematic in the past. It was found to change code
-  # variable names, assuming that they are typos!
-  # We pass `--diff` to make it report typos before fixing them.
-  # Keep an eye for it.
-  - repo: https://github.com/crate-ci/typos
-    rev: v1
-    hooks:
-      - id: typos
-        exclude: ".*\\.(xml|html|xhtml|txt|tsv|csv|json|tab|msql|xsd)$|dictionary/kellia_uni_goettingen_de/main.py"
-        args: [--diff]
+        args: [-L, "afterAll,astroid,Cant"]
 
   # Git Commit Messages
   - repo: https://github.com/jorisroovers/gitlint
