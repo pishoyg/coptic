@@ -674,13 +674,13 @@ class Line {
    * @param html - The HTML content of the line.
    */
   constructor(html) {
-    this.html = html;
     // We obtain the text by deleting all tags.
     // We also get rid of diacritics because we want to ignore them during
     // search.
     // We search the text for matches. When we get back to searching the HTML
     // for the matches, we ignore the diacritics in that step as well.
-    this.text = orth.cleanDiacritics(html.replaceAll(TAG_REGEX, ''));
+    this.html = orth.cleanDiacritics(html);
+    this.text = this.html.replaceAll(TAG_REGEX, '');
   }
   /**
    * @param regex - The regex to search.
