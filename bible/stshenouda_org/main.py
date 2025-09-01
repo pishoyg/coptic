@@ -14,7 +14,7 @@ from collections import abc
 import json5
 from ebooklib import epub  # type: ignore[import-untyped]
 
-from utils import concur, file, log, page, paths
+from utils import concur, ensure, file, log, page, paths
 
 # Input parameters
 
@@ -444,6 +444,7 @@ class Bible:
         self.__write_crum_map()
 
     def __write_crum_map(self) -> None:
+        ensure.unique(book.crum for book in self.books if book.crum)
         mapping: dict[str, str] = {
             book.crum: book.id() for book in self.books if book.crum
         }
