@@ -16,6 +16,7 @@ import * as cls from './cls.js';
 import * as ccls from '../cls.js';
 import * as header from '../header.js';
 import * as logger from '../logger.js';
+import * as bible from './bible.js';
 // TODO: (#419) Include numbered books in Biblical references. The following may
 // be comprehensive: Samuel, Kings, Chronicles, Maccabees, Corinthians,
 // Thessalonians, Timothy, and Peter. (There are several epistles of St. John,
@@ -24,35 +25,6 @@ const REFERENCE_RE = /(\b[a-zA-Z]+)\s+(\d+)\s+(\d+)\b/g;
 const COPTIC_RE = /[\p{Script=Coptic}\p{Mark}]+/gu;
 const GREEK_RE = /[\p{Script=Greek}\p{Mark}]+/gu;
 const ENGLISH_RE = /[\p{Script=Latin}\p{Mark}]+/gu;
-/**
- * Map book abbreviation to path.
- * TODO: (#419) Omit hyperlinks for nonexistent chapters.
- */
-const bibleBookPath = await (async () => {
-  const mapping = {};
-  const bibleData = await (await fetch(`${paths.BIBLE}/index.json`)).json();
-  const data = bibleData;
-  Object.values(data)
-    .flatMap((testament) => Object.values(testament))
-    .flatMap((section) => Object.values(section))
-    .forEach((book) => {
-      if (!book.crum) {
-        return;
-      }
-      if (book.crum in mapping) {
-        logger.fatal(
-          'Book abbreviation',
-          book.crum,
-          'appears several times in the index!'
-        );
-      }
-      mapping[book.crum] = book.title
-        .toLowerCase()
-        .replace(/ /g, '_')
-        .replace(/\./g, '_');
-    });
-  return mapping;
-})();
 /**
  *
  * @param elem
@@ -366,6 +338,20 @@ export function addEnglishLookups(elem) {
 /**
  *
  * @param elem
+ * TODO: (#419) Omit hyperlinks for nonexistent chapters.
+ *
+ * NOTE: For the Bible abbreviation-to-id mapping, we opted for generating a
+ * code file that defines the mapping. We used to populate the mapping in a
+ * JSON, but this had to be retrieved with an async fetch, which complicated
+ * things:
+ * - Many dependent functions would've had to be made async in order to support
+ *   an `await` operator.
+ * - Our Anki bundler didn't support a top-level await for the IIFE[1] target,
+ *   and this would've added a further complication.
+ * Use of a code file makes things simpler, and it's not particularly painful to
+ * maintain.
+ *
+ * [1] https://developer.mozilla.org/en-US/docs/Glossary/IIFE
  */
 export function handleWikiReferences(elem) {
   elem.querySelectorAll(`.${cls.WIKI}`).forEach((el) => {
@@ -379,11 +365,11 @@ export function handleWikiReferences(elem) {
         if (!bookAbbreviation || !chapter || !verse) {
           return null;
         }
-        const bookPath = bibleBookPath[bookAbbreviation];
-        if (!bookPath) {
+        const bookID = bible.MAPPING[bookAbbreviation];
+        if (!bookID) {
           return null;
         }
-        const basename = `${paths.BIBLE}/${bookPath}_${chapter}.html`;
+        const basename = `${paths.BIBLE}/${bookID}_${chapter}.html`;
         return `${basename}#v${verse}`;
       },
       [ccls.HOVER_LINK]
