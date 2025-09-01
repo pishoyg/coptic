@@ -369,17 +369,15 @@ export function handleWikiReferences(elem) {
         if (!bookAbbreviation || !chapter || !verse) {
           return null;
         }
-        // TODO: (#419) Crum didn't explicitly list all Biblical book
-        // abbreviations. Particularly:
-        // - Joel and Jude are not listed. (Perhaps because he uses a full form,
-        //   rather than an abbreviation.)
-        // - Philemon is not mentioned. He seems to have sometimes used "Phil"
-        //   or "Philem", so it may not be consistent!
+        // NOTE: Crum didn't explicitly list all Biblical book abbreviations.
+        // Particularly:
+        // - Joel and Jude are not listed, perhaps because he uses their full
+        //   form.
+        // - Philemon is not mentioned, though he seems to have used "Philem".
         // - Ezra and Nehemiah likely don't have any surviving Coptic text, so
         //   they are not mentioned.
-        // Try to figure out whether the abbreviation for Philemon is correct,
-        // and whether any other books have inconsistent abbreviations. If it's
-        // indeed inconsistent, our lookup logic should support all forms.
+        // TODO: (#419) It appears that, for one-chapter books, Crum might have
+        // omitted the chapter number! Handle this corner case!
         const bookID = bible.MAPPING[bookAbbreviation];
         if (!bookID) {
           return null;
