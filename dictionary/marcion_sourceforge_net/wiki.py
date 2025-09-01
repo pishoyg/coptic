@@ -52,6 +52,8 @@ class Substitution:
 # If the file were to be updated, this mapping should be updated accordingly.
 SUBSTITUTIONS: list[Substitution] = [
     Substitution("ampersand", r"&amp;", "&", enabled=False),  # Unnecessary!
+    # NOTE: The "verbose" rule was recently disabled in Wiki[1], but we retain it!
+    # [1] https://github.com/randykomforty/coptic/commit/1ff7978769170894bbdfac4dbc235436dae5276b#diff-d3d577075e1db71a8761e18ffac346b9d45741275b1a1807d025007c7139f19c
     Substitution("verbose", r"@(.+?)@", r'<span class="verbose">\1</span>'),
     Substitution("asterisk", r"\*", "&ast;", enabled=False),  # Unnecessary!
     Substitution("tab", r"\n", "</p><p>", enabled=False),  # Doesn't work!
@@ -66,7 +68,12 @@ SUBSTITUTIONS: list[Substitution] = [
     ),
     Substitution(
         "subdialect",
-        r"\[\[(S|F)\^(a|f|b)\]\]",
+        # While not explicitly mentioned in Crum's intro, there are apparently
+        # some occurrences of B^f (Bohairic with Fayyumic tendency), e.g. in
+        # ϫⲟⲗ[1].
+        #
+        # [1] https://remnqymi.com/crum/2391.html#wiki.
+        r"\[\[(S|F|B)\^(a|f|b)\]\]",
         r'<i class="dialect">\1<sup>\2</sup></i>',
         override=r'<span class="dialect \1\2">\1\2</span>',
     ),
