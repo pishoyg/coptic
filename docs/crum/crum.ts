@@ -25,6 +25,10 @@ import * as bible from './bible.js';
 // be comprehensive: Samuel, Kings, Chronicles, Maccabees, Corinthians,
 // Thessalonians, Timothy, and Peter. (There are several epistles of St. John,
 // but we're not sure if they're ever cited in Crum!)
+// TODO: (#419) Some references do not have a verse number. (Example:
+// ⲁⲃⲁϭⲏⲉⲓⲛ[1] cites "Ap 4" without a verse number.) Those should bear a
+// hyperlink to the chapter file.
+// [1]https://remnqymi.com/crum/97.html
 const REFERENCE_RE = /(\b[a-zA-Z]+)\s+(\d+)\s+(\d+)\b/g;
 
 const COPTIC_RE = /[\p{Script=Coptic}\p{Mark}]+/gu;
