@@ -11,27 +11,34 @@ _GSPREAD_URL: str = (
     "https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg"
 )
 
-_WRD_SORT_COLS: list[str] = ["key"]
+KEY_COL = "key"
+_WRD_SORT_COLS: list[str] = [KEY_COL]
 _DRV_SORT_COLS: list[str] = ["key_word"]
 
 _KEY_WORD_COL: str = "key_word"
 
 # Each derivation row must contain the following cells.
-_DRV_ALL_COLS: list[str] = ["key", "key_word", "key_deriv", "type"]
+_DRV_ALL_COLS: list[str] = [KEY_COL, "key_word", "key_deriv", "type"]
 # Each derivation row must contain at least of the following cell.s
 _DRV_ANY_COLS: list[str] = ["word", "en"]
 
 
 def _verify_balanced_brackets(records: list[gcp.Record]) -> None:
     for record in records:
-        for key, value in record.row.items():
-            # We don't own the source of truth for the Wiki, so we can't
-            # always fix unbalanced brackets. We simply log an error
-            # message, until the problem is solved.
-            # TODO: (#438) Fix bracket typos in the Crum Wiki.
-            if key in ["wiki"]:
+        for col, value in record.row.items():
+            # We can't enforce balanced brackets in Wiki, for two reasons:
+            # - We don't own its source of truth, so sometimes we can't fix
+            #   errors immediately. Those should be fixed.
+            # - Crum's text has unbalanced brackets sometimes!
+            if col == "wiki":
                 continue
-            ensure.brackets_balanced(value, "record", record.row, "key", key)
+            ensure.brackets_balanced(
+                value,
+                "row",
+                record.row[KEY_COL],
+                "column",
+                col,
+            )
 
 
 def _is_sorted_by_int_columns(
@@ -46,7 +53,7 @@ def _is_sorted_by_int_columns(
 
 
 def _valid_drv_record(record: gcp.Record) -> None:
-    key = record.row["key"]
+    key = record.row[KEY_COL]
     ensure.ensure(
         all(record.row[col] for col in _DRV_ALL_COLS),
         "Row",
