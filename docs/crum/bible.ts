@@ -35,6 +35,7 @@ export const MAPPING: Record<string, string> = {
   Hos: 'hosea',
   Am: 'amos',
   Mic: 'micah',
+  Joel: 'joel',
   Ob: 'obadiah',
   Jon: 'jonah',
   Nah: 'nahum',
