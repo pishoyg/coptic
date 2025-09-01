@@ -19,7 +19,7 @@ from utils import concur, file, log, page, paths
 # Input parameters
 
 _SCRIPT_DIR = pathlib.Path(__file__).parent
-_JSON: str = os.path.join(paths.BIBLE_DIR, "index.json")
+_JSON: str = str(_SCRIPT_DIR / "data/input/bible.json")
 _INPUT_DIR: str = str(_SCRIPT_DIR / "data/raw/")
 # TODO: (#432) Include the sources in the output.
 _SOURCES_DIR: str = str(_SCRIPT_DIR / "data/raw/Sources/")
@@ -57,7 +57,6 @@ _INDEX_CLASS = "BIBLE_INDEX"
 _BOOK_TITLE: str = "ⲡⲓϪⲱⲙ ⲉⲑⲞⲩⲁⲃ | Coptic Bible"
 _AUTHOR = "Saint Shenouda The Archimandrite Coptic Society"
 _LANG = "cop"
-
 
 # The Jinkim is represented by the Combining Overline, not the Combining
 # Conjoining Msacron.
@@ -362,6 +361,7 @@ class Book(Item):
         testament_idx: int,
         section_name: str,
         section_idx: int,
+        crum: str | None,
     ) -> None:
         self.name: str = name
         self.idx: int = idx
@@ -369,6 +369,7 @@ class Book(Item):
         self.testament_idx: int = testament_idx
         self.section_name: str = section_name
         self.section_idx: int = section_idx
+        self.crum: str | None = crum
 
         data: list = self.load(self.name)
         self.zfill_len: int = len(str(len(data)))
@@ -430,6 +431,18 @@ class Bible:
                 executor.map(self.__build_book, self.__iter_books()),
             )
         self.__link_chapters()
+        self.__write_crum_map()
+
+    def __write_crum_map(self) -> None:
+        mapping: dict[str, str] = {
+            book.crum: book.id() for book in self.books if book.crum
+        }
+        # This TypeScript code is needed by our website due to some limitations
+        # on reading JSON.
+        file.write(
+            f"export const MAPPING: Record<string, string> = {mapping};",
+            os.path.join(paths.LEXICON_DIR, "bible.ts"),
+        )
 
     def __link_chapters(self) -> None:
         iterator: abc.Iterator[Chapter] = iter(self.chain_chapters())
@@ -458,6 +471,7 @@ class Bible:
                         book_idx += 1
                         yield {
                             "name": book["title"],
+                            "crum": book["crum"],
                             "idx": book_idx,
                             "testament_name": testament_name,
                             "testament_idx": testament_idx,

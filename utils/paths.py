@@ -21,7 +21,7 @@ LEXICON_DIR: str = os.path.join(SITE_DIR, "crum")
 assert os.path.exists(LEXICON_DIR)
 
 BIBLE_DIR: str = os.path.join(SITE_DIR, "bible")
-assert os.path.exists(LEXICON_DIR)
+assert os.path.exists(BIBLE_DIR)
 
 # Anki is not persisted to source control (and unlikely to ever be), so the
 # directory is not guaranteed to exist.

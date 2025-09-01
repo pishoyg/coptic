@@ -111,7 +111,6 @@ PATTERNS: list[Pattern] = [
     Pattern(["dawoud/index.html", "crum/crum/index.html"]),
     Pattern(["**.ts"]),
     # Data files:
-    Pattern(["bible/index.json"]),
     Pattern(["dawoud/*.tsv"]),
     Pattern(["img/**"]),
     Pattern(["fonts/**"]),
