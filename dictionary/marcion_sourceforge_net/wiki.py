@@ -8,7 +8,7 @@ from dictionary.marcion_sourceforge_net import main as crum
 from utils import gcp, log
 
 # pylint: disable=line-too-long
-SHEET_URL: str = (
+SHEET_TSV_URL: str = (
     "https://docs.google.com/spreadsheets/d/1lhjcnkHS-pA3p5Vys-6ohKu7Y4ZCJ5NO/export?format=tsv"
 )
 
@@ -134,7 +134,7 @@ def main():
     NOTE: We intentionally update one row at a time, although this consumes the
     API quota.
     """
-    for record in gcp.raw_spreadsheet(SHEET_URL).to_dict(orient="records"):
+    for record in gcp.tsv_spreadsheet(SHEET_TSV_URL).to_dict(orient="records"):
         key: str = record["Marcion"]
         entry: str = record["Entry"]
         wip: str = record["WIP"]

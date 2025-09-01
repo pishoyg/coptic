@@ -88,6 +88,14 @@ class Client:
 
 
 def spreadsheet(gspread_url: str) -> gspread.spreadsheet.Spreadsheet:
+    """Retrieve a spreadsheet from URL.
+
+    Args:
+        gspread_url: Spreadsheet URL.
+
+    Returns:
+        Spreadsheet object.
+    """
     return Client.client.open_by_url(gspread_url)
 
 
@@ -100,7 +108,20 @@ def column_nums(worksheet: gspread.worksheet.Worksheet) -> dict[str, int]:
     }
 
 
-def raw_spreadsheet(export_url: str) -> pd.DataFrame:
+def tsv_spreadsheet(export_url: str) -> pd.DataFrame:
+    """Retrieve spreadsheet data from a TSV export URL.
+
+    This is useful when a spreadsheet has been exported or published to the
+    internet, but our GCP client doesn't have access to the sheet object. In
+    this case, we're capable of retrieving the sheet's raw data, but not the
+    sheet object. And we can read the sheet but not write to it.
+
+    Args:
+        export_url: Sheet TSV export URL.
+
+    Returns:
+        Sheet data as a dataframe.
+    """
     response = requests.get(export_url)
     response.raise_for_status()
     response.encoding = "UTF-8"
