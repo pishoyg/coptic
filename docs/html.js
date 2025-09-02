@@ -105,6 +105,7 @@ export function linkifyText(
       );
       const targetUrl = url(match);
       if (!targetUrl) {
+        lastIndex = match.index;
         continue;
       }
       const link = document.createElement('span');
