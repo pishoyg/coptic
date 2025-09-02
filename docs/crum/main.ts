@@ -17,7 +17,7 @@ function main(): void {
     dialect.setToDefaultIfUnset();
   }
 
-  const highlighter = new highlight.Highlighter(iam.amI('anki'), []);
+  const highlighter = new highlight.Highlighter([]);
 
   // We disable the help panel on Anki for the following reasons:
   // - There is no keyboard on mobile.

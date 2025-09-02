@@ -229,8 +229,13 @@ table {
   opacity: 0.5;
 }
 
+/* TODO: (#498) Parameterize dev and no-dev display. */
 .dev {
   display: none;
+}
+
+.no-dev {
+  display: block;
 }
 
 :target.verse,
