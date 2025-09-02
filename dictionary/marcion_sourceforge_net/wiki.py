@@ -56,7 +56,7 @@ SUBSTITUTIONS: list[Substitution] = [
     # [1] https://github.com/randykomforty/coptic/commit/1ff7978769170894bbdfac4dbc235436dae5276b#diff-d3d577075e1db71a8761e18ffac346b9d45741275b1a1807d025007c7139f19c
     Substitution("verbose", r"@(.+?)@", r'<span class="verbose">\1</span>'),
     Substitution("asterisk", r"\*", "&ast;", enabled=False),  # Unnecessary!
-    Substitution("tab", r"\n", "</p><p>", enabled=False),  # Doesn't work!
+    Substitution("tab", r"\n", "</p><p>", enabled=False),  # Unused!
     Substitution("em", r"__(.+?)__", r"<em>\1</em>"),
     Substitution("bold", r"\*(.+?)\*", r"<b>\1</b>"),
     Substitution("italic", r"_(.+?)_", r"<i>\1</i>"),
@@ -121,7 +121,6 @@ SUBSTITUTIONS: list[Substitution] = [
     ),
     # The following is unnecessary, especially given #476.
     Substitution("qualitative", r"†", r"<sup>†</sup>", enabled=False),
-    # The following appears unused.
     Substitution("lineBreaks", r"\\n", "</p><p>"),
 ]
 # pylint: enable=line-too-long
