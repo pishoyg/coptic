@@ -60,3 +60,15 @@
 .droppable label {
   display: block; /* Each label on its own line. */
 }
+
+#wiki-title,
+#wiki-collapsible {
+  display: none;
+}
+
+#wiki-incomplete {
+  color: #7f8c8d;
+  font-style: italic;
+  margin-left: 2em;
+  font-size: small;
+}

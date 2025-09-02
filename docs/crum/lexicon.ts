@@ -10,6 +10,7 @@ import * as paths from '../paths.js';
 import * as crum from './crum.js';
 import * as dropdown from '../dropdown.js';
 import * as logger from '../logger.js';
+import * as id from './id.js';
 
 const SEARCH_BOX_ID = 'searchBox';
 const FULL_WORD_CHECKBOX_ID = 'fullWordCheckbox';
@@ -184,6 +185,30 @@ class KELLIASearchResult extends SearchResult {
   }
 }
 
+/**
+ *
+ */
+class WikiSearchResult extends xooxle.SearchResult {
+  /**
+   *
+   * @param total
+   * @returns
+   */
+  override row(total: number): HTMLTableRowElement {
+    const row: HTMLTableRowElement = super.row(total);
+    crum.addGreekLookups(row);
+    crum.handleWikiReferences(row);
+    return row;
+  }
+
+  /**
+   * @returns
+   */
+  override link(): string {
+    return `${paths.LEXICON}/${this.key}.html#wiki`;
+  }
+}
+
 interface Xooxle {
   indexURL: string;
   tableID: string;
@@ -208,6 +233,12 @@ const XOOXLES: Xooxle[] = [
     indexURL: 'copticsite.json',
     tableID: 'copticsite',
     collapsibleID: 'copticsite-collapsible',
+  },
+  {
+    indexURL: 'wiki.json',
+    tableID: 'wiki',
+    collapsibleID: 'wiki-collapsible',
+    searchResultType: WikiSearchResult,
   },
 ];
 
@@ -259,7 +290,21 @@ function spellOutDialectsInList(): void {
 /**
  *
  */
+function maybeShowWiki(): void {
+  const url: URL = new URL(window.location.href);
+  if (!url.searchParams.get('wiki')) {
+    return;
+  }
+  for (const elementID of [id.WIKI_TITLE, id.WIKI_COLLAPSIBLE]) {
+    document.getElementById(elementID)!.style.display = 'block';
+  }
+}
+
+/**
+ *
+ */
 async function main(): Promise<void> {
+  maybeShowWiki();
   spellOutDialectsInDropdown();
   spellOutDialectsInList();
 

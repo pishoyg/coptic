@@ -11,6 +11,8 @@ const PAGES_TO_TEST: string[] = [
   '/', // Home
   '/keyboard.html', // Keyboard Instructions
   '/crum', // Lexicon
+  '/crum?wiki=true', // Lexicon with Wiki
+  '/crum?query=light&full=true&regex=true', // Lexicon with a query
   '/crum/1.html', // A Crum note (sample)
   '/bible', // Bible
   '/bible/genesis_1.html', // A Bible chapter (sample)
