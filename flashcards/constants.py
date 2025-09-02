@@ -1060,3 +1060,18 @@ COPTICSITE_XOOXLE = xooxle.Index(
     ],
     output=os.path.join(paths.LEXICON_DIR, "copticsite.json"),
 )
+
+CRUM_WIKI_XOOXLE: xooxle.Index = xooxle.Index(
+    input_dir=NAME_TO_DECKER[CRUM_ALL].notes_key_content_aux(),
+    include=_is_crum_word,
+    extract=[],
+    captures=[
+        xooxle.Capture(
+            "wiki",
+            xooxle.Selector({"id": "wiki"}, force=False),
+            retain_classes={"dialect", "wiki"},
+            retain_tags=xooxle.RETAIN_TAGS_DEFAULT | {"p"},
+        ),
+    ],
+    output=os.path.join(paths.LEXICON_DIR, "wiki.json"),
+)

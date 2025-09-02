@@ -101,7 +101,7 @@ def main() -> None:
     # Write Xooxle output.
     indexes: list[xooxle.Index] = []
     if args.crum:
-        indexes.append(constants.CRUM_XOOXLE)
+        indexes.extend([constants.CRUM_XOOXLE, constants.CRUM_WIKI_XOOXLE])
     if args.kellia:
         indexes.append(constants.KELLIA_XOOXLE)
     if args.copticsite:
