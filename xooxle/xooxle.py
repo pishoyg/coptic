@@ -263,16 +263,9 @@ class Capture:
             HTML representing a simplified version of the tag.
 
         """
-        parts: Iterable[str] = self._get_children_simplified_html(tag)
+        parts: Iterable[str] = self._get_tag_html(tag)
         parts = Cleaner.clean(parts)
         return "".join(parts)
-
-    def _get_children_simplified_html(self, tag: bs4.Tag) -> Generator[str]:
-        for child in tag.children:
-            if isinstance(child, bs4.NavigableString):
-                yield from self._get_navigable_string_text(child)
-            elif isinstance(child, bs4.Tag):
-                yield from self._get_tag_html(child)
 
     def _get_tag_html(self, child: bs4.Tag) -> Generator[str]:
         if child.name in self._unit_tags:
@@ -315,6 +308,13 @@ class Capture:
             yield LINE_BREAK
         elif child.name in self._space_elements:
             yield " "
+
+    def _get_children_simplified_html(self, tag: bs4.Tag) -> Generator[str]:
+        for child in tag.children:
+            if isinstance(child, bs4.NavigableString):
+                yield from self._get_navigable_string_text(child)
+            elif isinstance(child, bs4.Tag):
+                yield from self._get_tag_html(child)
 
     def _get_navigable_string_text(
         self,
