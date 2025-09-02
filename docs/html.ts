@@ -127,6 +127,7 @@ export function linkifyText(
 
       const targetUrl: string | null = url(match);
       if (!targetUrl) {
+        lastIndex = match.index;
         continue;
       }
       const link = document.createElement('span');
