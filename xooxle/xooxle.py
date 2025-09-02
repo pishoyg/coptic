@@ -130,7 +130,7 @@ SPACE_ELEMENTS_DEFAULT = {
 TAG_REGEX = re.compile(r"<\s*([a-zA-Z0-9]+)")
 # ADMISSIBLE is used to enforce the simplified HTML structure that Xooxle search
 # can support.
-ADMISSIBLE = RETAIN_TAGS_DEFAULT | {"span", "hr", "br"}
+ADMISSIBLE = RETAIN_TAGS_DEFAULT | {"span", "hr", "br", "p"}
 
 
 class Selector:
