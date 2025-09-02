@@ -120,7 +120,14 @@ PATTERNS: list[Pattern] = [
     Pattern(["**.js"]),
     # Auto-generated (lexicon):
     Pattern(["crum/*.html"]),
-    Pattern(["crum/crum.json", "crum/kellia.json", "crum/copticsite.json"]),
+    Pattern(
+        [
+            "crum/crum.json",
+            "crum/wiki.json",
+            "crum/kellia.json",
+            "crum/copticsite.json",
+        ],
+    ),
     Pattern(["crum/crum/*.png"]),  # Crum scan.
     Pattern(["crum/explanatory/*-*-*.*"]),  # Explanatory images.
     Pattern(["crum/anki/*"], required=False),  # Anki is not tracked in Git.
