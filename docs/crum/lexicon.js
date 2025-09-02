@@ -10,6 +10,7 @@ import * as paths from '../paths.js';
 import * as crum from './crum.js';
 import * as dropdown from '../dropdown.js';
 import * as logger from '../logger.js';
+import * as id from './id.js';
 const SEARCH_BOX_ID = 'searchBox';
 const FULL_WORD_CHECKBOX_ID = 'fullWordCheckbox';
 const REGEX_CHECKBOX_ID = 'regexCheckbox';
@@ -177,6 +178,28 @@ class KELLIASearchResult extends SearchResult {
     return row.querySelector(highlightedDialectQuery) ? 0 : 1;
   }
 }
+/**
+ *
+ */
+class WikiSearchResult extends xooxle.SearchResult {
+  /**
+   *
+   * @param total
+   * @returns
+   */
+  row(total) {
+    const row = super.row(total);
+    crum.addGreekLookups(row);
+    crum.handleWikiReferences(row);
+    return row;
+  }
+  /**
+   * @returns
+   */
+  link() {
+    return `${paths.LEXICON}/${this.key}.html#wiki`;
+  }
+}
 const XOOXLES = [
   {
     indexURL: 'crum.json',
@@ -194,6 +217,12 @@ const XOOXLES = [
     indexURL: 'copticsite.json',
     tableID: 'copticsite',
     collapsibleID: 'copticsite-collapsible',
+  },
+  {
+    indexURL: 'wiki.json',
+    tableID: 'wiki',
+    collapsibleID: 'wiki-collapsible',
+    searchResultType: WikiSearchResult,
   },
 ];
 /**
@@ -237,7 +266,20 @@ function spellOutDialectsInList() {
 /**
  *
  */
+function maybeShowWiki() {
+  const url = new URL(window.location.href);
+  if (!url.searchParams.get('wiki')) {
+    return;
+  }
+  for (const elementID of [id.WIKI_TITLE, id.WIKI_COLLAPSIBLE]) {
+    document.getElementById(elementID).style.display = 'block';
+  }
+}
+/**
+ *
+ */
 async function main() {
+  maybeShowWiki();
   spellOutDialectsInDropdown();
   spellOutDialectsInList();
   const dropdownDialects = dropdown.addEventListenersForSiblings();
@@ -253,7 +295,7 @@ async function main() {
   const dialectCheckboxes = Array.from(
     document.querySelectorAll(`#${DIALECTS_ID} input`)
   );
-  const highlighter = new highlight.Highlighter(false, dialectCheckboxes);
+  const highlighter = new highlight.Highlighter(dialectCheckboxes);
   SearchResult.init(highlighter);
   // Initialize searchers.
   // TODO: (#0) You initialize three different Form and Xooxle objects, and many

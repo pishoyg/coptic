@@ -207,6 +207,11 @@ export function makeHelpPanel(highlighter) {
         }
       ),
     ],
+    I: [
+      new help.Shortcut('Wiki', ['lexicon'], () => {
+        browser.scroll('wiki-title');
+      }),
+    ],
     D: [
       new help.Shortcut('Dawoud pages', ['note'], () => {
         browser.scroll('dawoud');
@@ -308,6 +313,11 @@ export function makeHelpPanel(highlighter) {
           browser.click('copticsite-title');
         }
       ),
+    ],
+    i: [
+      new help.Shortcut('Wiki', ['lexicon'], () => {
+        browser.click('wiki-title');
+      }),
     ],
   };
   const sections = [
