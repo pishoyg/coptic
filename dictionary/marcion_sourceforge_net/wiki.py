@@ -47,14 +47,12 @@ class Substitution:
 
 
 # Coptic Wiki substitutions:
-# This is based on a snapshot of the following file, taken on August 31, 2025:
+# NOTE: This is based on a snapshot of the following file, taken on September 2,
+# 2025:
 # - https://github.com/randykomforty/coptic/blob/main/scripts/dictionary_regexes.js
 # If the file were to be updated, this mapping should be updated accordingly.
 SUBSTITUTIONS: list[Substitution] = [
     Substitution("ampersand", r"&amp;", "&", enabled=False),  # Unnecessary!
-    # NOTE: The "verbose" rule was recently disabled in Wiki[1], but we retain it!
-    # [1] https://github.com/randykomforty/coptic/commit/1ff7978769170894bbdfac4dbc235436dae5276b#diff-d3d577075e1db71a8761e18ffac346b9d45741275b1a1807d025007c7139f19c
-    Substitution("verbose", r"@(.+?)@", r'<span class="verbose">\1</span>'),
     Substitution("asterisk", r"\*", "&ast;", enabled=False),  # Unnecessary!
     Substitution("tab", r"\n", "</p><p>", enabled=False),  # Unused!
     Substitution("em", r"__(.+?)__", r"<em>\1</em>"),
