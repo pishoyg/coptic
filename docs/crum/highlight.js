@@ -11,25 +11,25 @@ import * as dev from '../dev.js';
 import * as cls from './cls.js';
 import * as ccls from '../cls.js';
 import * as header from '../header.js';
+import * as logger from '../logger.js';
 import * as d from './dialect.js';
 /**
- * NOTE: We used to implement highlighting by updating CSS rules. This didn't
- * work on Anki, so we maintained two separate highlighting control methods:
- * 1. Updating CSS rules on web.
- * 2. Updating elements directly on Anki.
- * We have recently opted for maintaining the latter only, for the following
- * reasons:
- * - To simplify the logic.
- * - To avoid browser CSS rule conflicts. (When two CSS rules are conflicting,
- *   browsers get to choose which one to respect. But when we update element
- *   display directly, we guarantee that our updates will be reflected.)
+ *
  */
 export class Highlighter {
+  anki;
   dialectCheckboxes;
+  // Sheets are problematic on Anki, for some reason! We update the elements
+  // individually instead!
+  sheet;
+  dialectRuleIndex;
+  devRuleIndex;
+  noDevRuleIndex;
   static BRIGHT = '1.0';
   static DIM = '0.3';
   /**
    *
+   * @param anki - Whether we are running on Anki.
    * @param dialectCheckboxes - List of checkboxes that control dialect
    * highlighting. Each box must bear a name equal to the dialect code that it
    * represents.
@@ -37,8 +37,14 @@ export class Highlighter {
    * dialect highlighting in some other way should also update the checking of
    * the checkboxes.
    */
-  constructor(dialectCheckboxes) {
+  constructor(anki, dialectCheckboxes) {
+    this.anki = anki;
     this.dialectCheckboxes = dialectCheckboxes;
+    this.sheet = this.anki ? undefined : window.document.styleSheets[0];
+    let length = this.sheet?.cssRules.length ?? 0;
+    this.dialectRuleIndex = length++;
+    this.devRuleIndex = length++;
+    this.noDevRuleIndex = length++;
     this.addEventListeners();
     // Update display once upon loading.
     this.update();
@@ -54,19 +60,49 @@ export class Highlighter {
    * Update dialect display.
    */
   updateDialects() {
+    // We have three sources of dialect highlighting:
+    // 1. Lexicon checkboxes
+    // 2. .dialect elements in the HTML
+    // 3. Keyboard shortcuts
+    // NOTE: Make sure that checkboxes are updated whenever dialect highlighting
+    // changes, regardless of the source of the change.
     const active = d.active();
     if (!active?.length) {
-      css.setOpacity(`.${cls.WORD} *`, Highlighter.BRIGHT);
+      // No dialect highlighting whatsoever.
+      // All dialects are visible.
+      this.updateSheetOrElements(
+        this.dialectRuleIndex,
+        `.${cls.WORD} *`,
+        '',
+        (el) => {
+          el.style.opacity = Highlighter.BRIGHT;
+        }
+      );
+      // None of the checkboxes should be checked.
       this.dialectCheckboxes.forEach((c) => {
         c.checked = false;
       });
       return;
     }
-    css.setOpacity(`.${cls.WORD} *`, Highlighter.BRIGHT);
-    css.setOpacity(
-      `.${cls.WORD} > :not(${css.classQuery(...active)}, .${cls.SPELLING}:not(${d.ANY_DIALECT_QUERY}))`,
-      Highlighter.DIM
+    // Some dialects are on, some are off.
+    // Dim all children of `word` elements, with the exception of:
+    // - Active dialects.
+    // - Undialected spellings.
+    const query = `.${cls.WORD} > :not(${css.classQuery(...active)}, .${cls.SPELLING}:not(${d.ANY_DIALECT_QUERY}))`;
+    const style = `opacity: ${Highlighter.DIM};`;
+    this.updateSheetOrElements(
+      this.dialectRuleIndex,
+      query,
+      style,
+      (el) => {
+        el.style.opacity = Highlighter.DIM;
+      },
+      `.${cls.WORD} *`,
+      (el) => {
+        el.style.opacity = Highlighter.BRIGHT;
+      }
     );
+    // Active dialects should have their checkboxes checked.
     this.dialectCheckboxes.forEach((checkbox) => {
       checkbox.checked = active.includes(checkbox.name);
     });
@@ -77,11 +113,76 @@ export class Highlighter {
   updateDev() {
     const display = dev.get() ? 'block' : 'none';
     const noDisplay = display === 'block' ? 'none' : 'block';
-    css.setDisplay(
+    this.updateSheetOrElements(
+      this.devRuleIndex,
       `.${dev.CLS.DEV}, .${cls.NAG_HAMMADI}, .${cls.SENSES}, .${cls.QUALITY}`,
-      display
+      `display: ${display};`,
+      (el) => {
+        el.style.display = display;
+      }
     );
-    css.setDisplay(`.${dev.CLS.NO_DEV}`, noDisplay);
+    this.updateSheetOrElements(
+      this.noDevRuleIndex,
+      `.${dev.CLS.NO_DEV}`,
+      `display: ${noDisplay};`,
+      (el) => {
+        el.style.display = noDisplay;
+      }
+    );
+  }
+  /**
+   * Add or update the CSS rule at the given index.
+   * @param index - Index of the rule.
+   * @param rule - New rule.
+   */
+  upsertRule(index, rule) {
+    if (!this.sheet) {
+      logger.error(
+        'Attempting to update sheet rules when the sheet is not set!'
+      );
+      return;
+    }
+    if (index < this.sheet.cssRules.length) {
+      this.sheet.deleteRule(index);
+    }
+    this.sheet.insertRule(rule, index);
+  }
+  /**
+   * If possible, we update the CSS rule and call it a day.
+   * If we're in Anki, we can't do that, and we have to resort to updating
+   * elements individually. We therefore ask for more parameters to make this
+   * possible.
+   *
+   * NOTE: If you're updating the sheet, then it's guaranteed that the update
+   * will erase the effects of all previous updates, simply because the old CSS
+   * rule gets deleted, and a new rule is created in its stead.
+   * However, if you're updating elements, it's not guaranteed that the new
+   * update will erase the effects of previous updates. If this is the case, you
+   * should pass a `reset_func` that resets the elements to the default style.
+   *
+   * @param ruleIndex - Index of the CSS rule to replace, if we were to update
+   * a CSS rule.
+   * @param query - Query that returns all affected elements.
+   * @param style - CSS style that should be applied to the set of elements
+   * returned by the query.
+   *
+   * @param func - A function that updates the style of the affected elements.
+   * This is an alternative to the 'style' parameter, used only if we can't
+   * update CSS rules.
+   * @param resetQuery - A query that returns all elements potentially affected
+   * by previous display updates.
+   * @param resetFunc - A function that resets the display of all elements
+   * potentially affected by previous display updates.
+   */
+  updateSheetOrElements(ruleIndex, query, style, func, resetQuery, resetFunc) {
+    if (this.anki) {
+      if (resetQuery && resetFunc) {
+        document.querySelectorAll(resetQuery).forEach(resetFunc);
+      }
+      document.querySelectorAll(query).forEach(func);
+      return;
+    }
+    this.upsertRule(ruleIndex, `${query} { ${style} }`);
   }
   /**
    * Register event listeners.

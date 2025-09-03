@@ -7,23 +7,3 @@
 export function classQuery(...classes) {
   return classes.map((c) => `.${c}`).join(', ');
 }
-/**
- *
- * @param selector
- * @param opacity
- */
-export function setOpacity(selector, opacity) {
-  document.querySelectorAll(selector).forEach((el) => {
-    el.style.opacity = opacity;
-  });
-}
-/**
- *
- * @param selector
- * @param display
- */
-export function setDisplay(selector, display) {
-  document.querySelectorAll(selector).forEach((el) => {
-    el.style.display = display;
-  });
-}
