@@ -132,6 +132,8 @@ def html(text: str) -> abc.Generator[str]:
     yield "</p>"
 
 
+# TODO: (#0) Verify the correctness of the mapping, for example by comparing
+# headwords.
 def main():
     """Copy updated Wiki data to our Crum sheet.
 
