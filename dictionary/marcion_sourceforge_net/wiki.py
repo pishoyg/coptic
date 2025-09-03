@@ -173,7 +173,7 @@ def main():
 
     ensure.equal_sets(
         wikis.keys(),
-        set(crum.Crum.roots.keys()) - _FROM_MARCION - _TO_MERGE,
+        crum.Crum.roots.keys() - _FROM_MARCION - _TO_MERGE,
     )
 
     for w in wikis.values():
