@@ -2,10 +2,11 @@
 """Process coptic.wiki's Digital Version of Crum."""
 
 import re
+import typing
 from collections import abc
 
 from dictionary.marcion_sourceforge_net import main as crum
-from utils import gcp, log
+from utils import ensure, gcp, log
 
 # pylint: disable=line-too-long
 SHEET_TSV_URL: str = (
@@ -132,7 +133,26 @@ def html(text: str) -> abc.Generator[str]:
     yield "</p>"
 
 
-# TODO: (#0) Verify the correctness of the mapping, for example by comparing
+@typing.final
+class Wiki:
+    def __init__(self, record: dict[typing.Hashable, typing.Any]) -> None:
+        self.key: str = record["Marcion"]
+        self.entry: str = record["Entry"]
+        self.wip: str = record["WIP"]
+
+
+# _FROM_MARCION is a set of entries that have been added to Crum by Marcion.
+# They don't exist in the original text, and therefore are not expected to be
+# found in Wiki!
+_FROM_MARCION: set[str] = {"3380", "3381", "3382", "3385"}
+# _TO_MERGE is a set of entries that were mistakenly marked as standalone
+# entries. They should be merged into other entries, and therefore are not
+# expected to be found in Crum!
+# TODO: (#508) Merge those entries, and remove this check.
+_TO_MERGE: set[str] = {"386", "2837"}
+
+
+# TODO: (#508) Verify the correctness of the mapping, for example by comparing
 # headwords.
 def main():
     """Copy updated Wiki data to our Crum sheet.
@@ -140,20 +160,32 @@ def main():
     NOTE: We intentionally update one row at a time, although this consumes the
     API quota.
     """
-    for record in gcp.tsv_spreadsheet(SHEET_TSV_URL).to_dict(orient="records"):
-        key: str = record["Marcion"]
-        entry: str = record["Entry"]
-        wip: str = record["WIP"]
-        if not key or not entry:
+    wikis: dict[str, Wiki] = {}
+    for w in map(
+        Wiki,
+        gcp.tsv_spreadsheet(SHEET_TSV_URL).to_dict(orient="records"),
+    ):
+        if not w.key:
+            # This entry doesn't have a key. It's likely a vide entry.
             continue
-        if key not in crum.Crum.roots:
-            log.error("key", key, "not found in Crum!")
+        assert w.key not in wikis
+        wikis[w.key] = w
+
+    ensure.equal_sets(
+        wikis.keys(),
+        set(crum.Crum.roots.keys()) - _FROM_MARCION - _TO_MERGE,
+    )
+
+    for w in wikis.values():
+        if not w.entry:
+            # This entry isn't populated yet!
             continue
+        root: crum.Root = crum.Crum.roots[w.key]
         # Copy the value to our sheet.
-        if crum.Crum.roots[key].update("wiki", entry):
-            log.info("Updated", "wiki", "under", key)
-        if crum.Crum.roots[key].update("wiki-wip", wip):
-            log.info("Updated", "wiki-wip", "under", key)
+        if root.update("wiki", w.entry):
+            log.info("Updated", "wiki", "under", w.key)
+        if root.update("wiki-wip", w.wip):
+            log.info("Updated", "wiki-wip", "under", w.key)
 
 
 if __name__ == "__main__":
