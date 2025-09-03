@@ -13,7 +13,7 @@ from dictionary.marcion_sourceforge_net import categories as cat
 from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import lexical as lex
 from dictionary.marcion_sourceforge_net import parse, tsv
-from utils import cache, ensure, gcp, page, text
+from utils import cache, ensure, gcp, log, page, text
 
 _NUM_DRV_COLS: int = 10
 _HUNDRED: int = 100
@@ -217,6 +217,13 @@ class Root(Row):
     @functools.cached_property
     def wiki_wip(self) -> str:
         return self.row["wiki-wip"]
+
+    @typing.override
+    def update(self, col_name: str, value: str) -> bool:
+        if super().update(col_name, value):
+            log.info("Updated", col_name, "under", self.key)
+            return True
+        return False
 
     def has_complete_wiki(self) -> bool:
         return bool(self.wiki and not self.wiki_wip)

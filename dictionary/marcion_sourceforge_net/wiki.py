@@ -6,7 +6,7 @@ import typing
 from collections import abc
 
 from dictionary.marcion_sourceforge_net import main as crum
-from utils import ensure, gcp, log
+from utils import ensure, gcp
 
 # pylint: disable=line-too-long
 SHEET_TSV_URL: str = (
@@ -182,10 +182,8 @@ def main():
             continue
         root: crum.Root = crum.Crum.roots[w.key]
         # Copy the value to our sheet.
-        if root.update("wiki", w.entry):
-            log.info("Updated", "wiki", "under", w.key)
-        if root.update("wiki-wip", w.wip):
-            log.info("Updated", "wiki-wip", "under", w.key)
+        _ = root.update("wiki", w.entry)
+        _ = root.update("wiki-wip", w.wip)
 
 
 if __name__ == "__main__":
