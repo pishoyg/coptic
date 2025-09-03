@@ -325,6 +325,7 @@ async function main(): Promise<void> {
   );
 
   const highlighter: highlight.Highlighter = new highlight.Highlighter(
+    false,
     dialectCheckboxes
   );
   SearchResult.init(highlighter);
