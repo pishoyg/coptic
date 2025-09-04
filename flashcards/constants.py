@@ -1005,6 +1005,8 @@ CRUM_XOOXLE = xooxle.Index(
                 {"name": "body"},
             ),
             retain_classes=_CRUM_RETAIN_CLASSES,
+            retain_attributes={"href", "target"},
+            retain_tags=xooxle.RETAIN_TAGS_DEFAULT | {"a"},
             retain_elements_for_classes=_CRUM_RETAIN_ELEMENTS_FOR_CLASSES,
             unit_tags={"tr", "div", "hr"},
             block_elements=xooxle.BLOCK_ELEMENTS_DEFAULT | {"td"},
