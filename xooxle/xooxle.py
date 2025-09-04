@@ -130,7 +130,7 @@ SPACE_ELEMENTS_DEFAULT = {
 TAG_REGEX = re.compile(r"<\s*([a-zA-Z0-9]+)")
 # ADMISSIBLE is used to enforce the simplified HTML structure that Xooxle search
 # can support.
-ADMISSIBLE = RETAIN_TAGS_DEFAULT | {"span", "hr", "br", "p"}
+ADMISSIBLE = RETAIN_TAGS_DEFAULT | {"span", "hr", "br", "p", "a"}
 
 
 class Selector:
@@ -142,8 +142,8 @@ class Selector:
         kwargs: dict[str, typing.Any],
         force: bool = True,
     ) -> None:
-        self._kwargs = kwargs
-        self._force = force
+        self._kwargs: dict[str, typing.Any] = kwargs
+        self._force: bool = force
 
     def find_all(
         self,
@@ -196,6 +196,7 @@ class Capture:
         retain_classes: set[str] | None = None,
         retain_tags: set[str] = RETAIN_TAGS_DEFAULT,
         retain_elements_for_classes: set[str] | None = None,
+        retain_attributes: set[str] | None = None,
         block_elements: set[str] = BLOCK_ELEMENTS_DEFAULT,
         space_elements: set[str] = SPACE_ELEMENTS_DEFAULT,
         unit_tags: set[str] | None = None,
@@ -208,6 +209,12 @@ class Capture:
         self._retain_classes: set[str] = retain_classes or set()
         # _retain_tags is the list of HTML tags to retain in the output.
         self._retain_tags: set[str] = retain_tags
+        # _retain_attributes is the list of HTML tag attributes to retain.
+        self._retain_attributes: set[str] = retain_attributes or set()
+        ensure.ensure(
+            "class" not in self._retain_attributes,
+            "Classes get special treatment!",
+        )
         # _retain_elements_for_classes is a list of HTML classes whose elements
         # (tags) should be retained in the output, but we don't retain the
         # classes themselves. Notice that the tags still get converted to spans,
@@ -275,26 +282,36 @@ class Capture:
         elif child.name in self._space_elements:
             yield " "
 
-        child_classes = child.get_attribute_list("class")
-        classes = self._retain_classes.intersection(child_classes)
+        classes: list[str | None] = child.get_attribute_list("class")
+
+        # Gather attributes to retain
+        attrs: dict[str, str] = {}
+        for key in self._retain_attributes:
+            val: str | list[str] | None = child.get(key)
+            if not val:
+                continue
+            if isinstance(val, list):
+                val = " ".join(val)
+            attrs[key] = val
+        retained_classes: set[str] = self._retain_classes.intersection(classes)
+        if retained_classes:
+            attrs["class"] = " ".join(sorted(retained_classes))
+        del retained_classes
 
         if (
             child.name in self._retain_tags
-            or classes
-            or any(
-                c in child_classes for c in self._retain_elements_for_classes
-            )
+            or attrs
+            or any(c in classes for c in self._retain_elements_for_classes)
         ):
             # We need to retain the tag and/or some of its classes.
             # If we're only retaining the classes, we convert it to <span>.
             # If we're retaining the tag name, we keep it as-is.
-            name = child.name if child.name in self._retain_tags else "span"
-
-            yield (
-                f'<{name} class="{" ".join(sorted(classes))}">'
-                if classes
-                else f"<{name}>"
+            del classes
+            name: str = (
+                child.name if child.name in self._retain_tags else "span"
             )
+            yield f'<{name}{"".join(f' {k}="{v}"' for k, v in attrs.items())}>'
+            del attrs
             yield from self._get_children_simplified_html(child)
             yield f"</{name}>"
         else:
@@ -434,7 +451,7 @@ class Cleaner:
                 stack.append(token)
                 continue
             match = _TAG_RE.fullmatch(token)
-            assert match
+            assert match, token
             cur = match.group(1)
             match = _TAG_RE.fullmatch(stack_top)
             assert match
@@ -541,6 +558,7 @@ class Index:
         del pair
         entry = bs4.BeautifulSoup(content, "html.parser")
         # Extract all comments.
+        comment: bs4.Comment
         for comment in entry.find_all(text=self._is_comment):
             _ = comment.extract()
         # Extract all unwanted content.
@@ -580,6 +598,7 @@ class Index:
 
     def validate(self, json: dict[str, typing.Any]) -> None:
         keys: list[str] = json["metadata"]["fields"] + [KEY]
+        entry: dict[str, str]
         for entry in json["data"]:
             ensure.equal_sets(entry.keys(), keys)
             for key, value in entry.items():
