@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-# TODO: (#399) Use the Crum interface, instead of the raw sheet.
+from dictionary.marcion_sourceforge_net import main as crum
 from dictionary.marcion_sourceforge_net import tsv
 from utils import cache, ensure, file, log, paths
 
@@ -325,7 +325,7 @@ class Crum:
     def __init__(
         self,
         name: str,
-        field: str,
+        field: tsv.COL,
         description: str,
         regex: str | None,
         minimum: int,
@@ -348,8 +348,10 @@ class Crum:
             dash: The dashboard that this statistic belongs to.
 
         """
-        self._field: str = field
-        self._regex: str | None = regex
+        self._field: tsv.COL = field
+        self._regex: re.Pattern[str] | None = (
+            re.compile(regex) if regex else None
+        )
         self.stat: Stat = Stat(
             f"crum_{name}",
             description,
@@ -361,14 +363,12 @@ class Crum:
 
     def val(self) -> int:
         if self._regex:
-            pattern: re.Pattern[str] = re.compile(self._regex)
             return sum(
-                len(pattern.findall(str(record.row[self._field])))
-                for record in tsv.Sheet.roots_snapshot
+                len(self._regex.findall(root.get(self._field)))
+                for root in crum.Crum.roots.values()
             )
         return sum(
-            bool(record.row[self._field])
-            for record in tsv.Sheet.roots_snapshot
+            bool(root.get(self._field)) for root in crum.Crum.roots.values()
         )
 
 
@@ -401,8 +401,7 @@ _CRUM_STATS: list[Stat] = [
         "crum_wiki",
         "Number of complete Wiki entries",
         lambda: sum(
-            bool(record.row["wiki"] and not record.row["wiki-wip"])
-            for record in tsv.Sheet.roots_snapshot
+            root.has_complete_wiki() for root in crum.Crum.roots.values()
         ),
         1700,
         3357,
@@ -410,7 +409,7 @@ _CRUM_STATS: list[Stat] = [
     ),
     Crum(
         "dawoud",
-        "dawoud-pages",
+        tsv.COL.DAWOUD_PAGES,
         "Words with Dawoud pages",
         None,
         2600,
@@ -419,7 +418,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "dawoud_sum",
-        "dawoud-pages",
+        tsv.COL.DAWOUD_PAGES,
         "Total number of Dawoud pages",
         r"[0-9]+",
         4300,
@@ -427,7 +426,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "notes",
-        "notes",
+        tsv.COL.NOTES,
         "Editor's notes",
         None,
         4,
@@ -436,7 +435,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "root_senses",
-        "senses",
+        tsv.COL.SENSES,
         "Roots with senses",
         None,
         70,
@@ -445,7 +444,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "root_senses_sum",
-        "senses",
+        tsv.COL.SENSES,
         "Total number of root senses",
         r"[0-9]+",
         160,
@@ -453,7 +452,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "last_page",
-        "crum-last-page",
+        tsv.COL.CRUM_LAST_PAGE,
         "Last pages overridden",
         None,
         4,
@@ -462,7 +461,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "sisters",
-        "sisters",
+        tsv.COL.SISTERS,
         "Words with sisters",
         None,
         37,
@@ -471,7 +470,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "sisters_sum",
-        "sisters",
+        tsv.COL.SISTERS,
         "Total number of sisters",
         r"[0-9]+",
         58,
@@ -479,7 +478,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "antonyms",
-        "antonyms",
+        tsv.COL.ANTONYMS,
         "Words with antonyms",
         None,
         2,
@@ -488,7 +487,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "antonyms_sum",
-        "antonyms",
+        tsv.COL.ANTONYMS,
         "Total number of antonyms",
         r"[0-9]+",
         2,
@@ -496,7 +495,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "homonyms",
-        "homonyms",
+        tsv.COL.HOMONYMS,
         "Words with homonyms",
         None,
         7,
@@ -505,7 +504,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "homonyms_sum",
-        "homonyms",
+        tsv.COL.HOMONYMS,
         "Total number of homonyms",
         r"[0-9]+",
         7,
@@ -513,7 +512,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "greek_sisters",
-        "greek-sisters",
+        tsv.COL.GREEK_SISTERS,
         "Words with Greek sisters",
         None,
         1,
@@ -522,7 +521,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "greek_sisters_sum",
-        "greek-sisters",
+        tsv.COL.GREEK_SISTERS,
         "Total number of Greek sisters",
         r"[0-9]+",
         1,
@@ -530,7 +529,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "categories",
-        "categories",
+        tsv.COL.CATEGORIES,
         "Words with categories",
         None,
         30,
@@ -539,7 +538,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "categories_sum",
-        "categories",
+        tsv.COL.CATEGORIES,
         "Total number of categories",
         r"[^,]+",
         30,

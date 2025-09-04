@@ -2,6 +2,8 @@
 
 # TODO: (#399) Rename module from `tsv` to `sheet`.
 
+import enum
+
 import gspread
 
 from utils import cache, ensure, gcp
@@ -11,16 +13,42 @@ _GSPREAD_URL: str = (
     "https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg"
 )
 
-KEY_COL = "key"
-_WRD_SORT_COLS: list[str] = [KEY_COL]
-_DRV_SORT_COLS: list[str] = ["key_word"]
 
-_KEY_WORD_COL: str = "key_word"
+class COL(enum.Enum):
+    """COL stores the column names of the Crum sheet."""
+
+    # The following columns are common.
+    KEY = "key"
+    WORD = "word"
+    TYPE = "type"
+    EN = "en"
+    CRUM = "crum"
+    # The following columns are, as of the time of writing, only available in
+    # the roots sheet.
+    CRUM_LAST_PAGE = "crum-last-page"
+    DAWOUD_PAGES = "dawoud-pages"
+    CATEGORIES = "categories"
+    NOTES = "notes"
+    SENSES = "senses"
+    SISTERS = "sisters"
+    ANTONYMS = "antonyms"
+    HOMONYMS = "homonyms"
+    GREEK_SISTERS = "greek-sisters"
+    QUALITY = "quality"
+    WIKI = "wiki"
+    WIKI_WIP = "wiki-wip"
+    # The following columns are only found in the derivations sheet.
+    KEY_WORD = "key_word"
+    KEY_DERIV = "key_deriv"
+
+
+_WRD_SORT_COLS: list[COL] = [COL.KEY]
+_DRV_SORT_COLS: list[COL] = [COL.KEY_WORD]
 
 # Each derivation row must contain the following cells.
-_DRV_ALL_COLS: list[str] = [KEY_COL, "key_word", "key_deriv", "type"]
+_DRV_ALL_COLS: list[COL] = [COL.KEY, COL.KEY_WORD, COL.KEY_DERIV, COL.TYPE]
 # Each derivation row must contain at least of the following cell.s
-_DRV_ANY_COLS: list[str] = ["word", "en"]
+_DRV_ANY_COLS: list[COL] = [COL.WORD, COL.EN]
 
 
 def _verify_balanced_brackets(records: list[gcp.Record]) -> None:
@@ -35,7 +63,7 @@ def _verify_balanced_brackets(records: list[gcp.Record]) -> None:
             ensure.brackets_balanced(
                 value,
                 "row",
-                record.row[KEY_COL],
+                record.row[COL.KEY.value],
                 "column",
                 col,
             )
@@ -43,26 +71,26 @@ def _verify_balanced_brackets(records: list[gcp.Record]) -> None:
 
 def _is_sorted_by_int_columns(
     records: list[gcp.Record],
-    column_names: list[str],
+    column_names: list[COL],
 ):
     def _sort_key(record: gcp.Record) -> list[int]:
-        return [int(record.row[col]) for col in column_names]
+        return [int(record.row[col.value]) for col in column_names]
 
     int_tuples: list[list[int]] = list(map(_sort_key, records))
     return int_tuples == sorted(int_tuples)
 
 
 def _valid_drv_record(record: gcp.Record) -> None:
-    key = record.row[KEY_COL]
+    key = record.row[COL.KEY.value]
     ensure.ensure(
-        all(record.row[col] for col in _DRV_ALL_COLS),
+        all(record.row[col.value] for col in _DRV_ALL_COLS),
         "Row",
         key,
         "doesn't populate all the columns",
         _DRV_ALL_COLS,
     )
     ensure.ensure(
-        any(record.row[col] for col in _DRV_ANY_COLS),
+        any(record.row[col.value] for col in _DRV_ANY_COLS),
         "Row",
         key,
         "populates none of the following columns:",
@@ -154,7 +182,7 @@ class Sheet:
         # Validate empty rows are inserted.
         prev_key_word = ""
         for record in records:
-            cur: str = record.row[_KEY_WORD_COL]
+            cur: str = record.row[COL.KEY_WORD.value]
             ensure.ensure(
                 cur == prev_key_word or not cur or not prev_key_word,
                 "Empty rows are broken at",

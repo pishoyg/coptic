@@ -247,7 +247,7 @@ class CrumIndexer(Mother):
         categories: list[list[str]] = []
         for _, root in crum.Crum.roots.items():
             keys.append(root.key)
-            types.append([root.row["type"]])
+            types.append([root.type_name])
             categories.append(root.categories)
 
         return [
