@@ -166,17 +166,6 @@ in mind that `make test` runs `git add --all`:
    [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 
 
-1. Some of our projects have a `data` subdirectory. Pay attention to the following
-distinction:
-
-   - `raw/`: Data that is **copied** from elsewhere. This would, for example,
-   include the Marcion SQL tables copied as is, unmodified. The contents of this
-   directory remain true to the original source.
-
-   - `input/`: Data that we either *modified* or *created*. If we want to fix
-   typos to data that we copied, we don't touch the data under `raw/`, but we take
-   the liberty to modify the copies that live under `input/`.
-
 ## Planning
 
 We use GitHub to track our plans and TODO's.
@@ -312,9 +301,14 @@ it comes to ensuring correctness and catching bugs.
    to simply crash without context. Use exceptions when the presence of an error
    message may be helpful.
 
-1. Use our utils packages where appropriate:
+1. Use our `utils` packages where appropriate:
    - [Python](./utils/)
    - [TypeScript](./docs/)
+
+1. Use our `paths` packages to store (1) the project's internal structure,
+   including subdirectories to other components, and (2) external dependencies:
+   - [Python](utils/paths.py)
+   - [TypeScript](docs/paths.ts)
 
 1. Document the code extensively.
 
@@ -326,6 +320,17 @@ it comes to ensuring correctness and catching bugs.
 1. Avoid using a generic `utils` package. It can easily become a catch-all for
 unrelated logic, grow excessively large, and lose clear purpose. Instead,
 organize utilities into purpose-specific packages based on functionality.
+
+1. Some of our projects have a `data` subdirectory. Pay attention to the following
+distinction:
+
+   - `raw/`: Data that is **copied** from elsewhere. This would, for example,
+   include the Marcion SQL tables copied as is, unmodified. The contents of this
+   directory remain true to the original source.
+
+   - `input/`: Data that we either *modified* or *created*. If we want to fix
+   typos to data that we copied, we don't touch the data under `raw/`, but we take
+   the liberty to modify the copies that live under `input/`.
 
 1. It has been helpful to be able to know, from a quick glance at a TypeScript
    file:
