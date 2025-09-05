@@ -1,7 +1,7 @@
 bs4
 colorama
 darglint
-EbookLib
+ebooklib
 genanki
 google-auth
 google-auth-stubs
@@ -15,9 +15,11 @@ pandas
 pandas-stubs
 pip-tools
 pre-commit
+pyyaml
 requests
 types-beautifulsoup4
 types-colorama
+types-pyyaml
 types-requests
 types-setuptools
 urllib3
