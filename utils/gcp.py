@@ -10,7 +10,7 @@ import pandas as pd
 import requests
 from google.oauth2 import service_account
 
-from utils import cache, ensure, file, paths
+from utils import ensure, file, paths
 
 _GSPREAD_SCOPE = [
     "https://spreadsheets.google.com/feeds",
@@ -72,19 +72,15 @@ def to_str(d: abc.Mapping[str, str | int | float]) -> dict[str, str]:
     return {k: str(v) for k, v in d.items()}
 
 
-class Client:
-    """Client caches a GCP client."""
-
-    @cache.StaticProperty
-    @staticmethod
-    def client() -> gspread.client.Client:
-        creds: service_account.Credentials = (
-            service_account.Credentials.from_service_account_file(
-                paths.JSON_KEYFILE_NAME,
-                scopes=_GSPREAD_SCOPE,
-            )
+@functools.cache
+def client() -> gspread.client.Client:
+    creds: service_account.Credentials = (
+        service_account.Credentials.from_service_account_file(
+            paths.JSON_KEYFILE_NAME,
+            scopes=_GSPREAD_SCOPE,
         )
-        return gspread.auth.authorize(creds)
+    )
+    return gspread.auth.authorize(creds)
 
 
 def spreadsheet(gspread_url: str) -> gspread.spreadsheet.Spreadsheet:
@@ -96,7 +92,7 @@ def spreadsheet(gspread_url: str) -> gspread.spreadsheet.Spreadsheet:
     Returns:
         Spreadsheet object.
     """
-    return Client.client.open_by_url(gspread_url)
+    return client().open_by_url(gspread_url)
 
 
 def column_nums(worksheet: gspread.worksheet.Worksheet) -> dict[str, int]:
