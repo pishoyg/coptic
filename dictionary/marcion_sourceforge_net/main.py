@@ -13,7 +13,7 @@ from dictionary.marcion_sourceforge_net import categories as cat
 from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import lexical as lex
 from dictionary.marcion_sourceforge_net import parse, sheet
-from utils import cache, ensure, gcp, log, page, text
+from utils import cache, ensure, gcp, log, page, paths, text
 
 _NUM_DRV_COLS: int = 10
 _HUNDRED: int = 100
@@ -141,6 +141,10 @@ class Row(gcp.Record):
 class Derivation(Row):
     """Derivation represents a derivation row."""
 
+    @functools.cached_property
+    def url(self) -> str:
+        return paths.crum_url(self.key_word, self.key)
+
     def __init__(
         self,
         row_num: int,
@@ -203,6 +207,10 @@ class Root(Row):
     def worksheet(cls) -> gspread.worksheet.Worksheet:
         return sheet.ROOTS
 
+    @functools.cached_property
+    def url(self) -> str:
+        return paths.crum_url(self.key)
+
     def __init__(
         self,
         row_num: int,
@@ -221,12 +229,9 @@ class Root(Row):
     def wiki_wip(self) -> str:
         return self.get(sheet.COL.WIKI_WIP)
 
-    @typing.override
-    def update(self, col_name: str, value: str) -> bool:
-        if super().update(col_name, value):
-            log.info("Updated", col_name, "under", self.key)
-            return True
-        return False
+    def update_cell(self, col: sheet.COL, value: str) -> None:
+        if super().update(col.value, value):
+            log.info("Updated", col, "under", self.key)
 
     def has_complete_wiki(self) -> bool:
         return bool(self.wiki and not self.wiki_wip)

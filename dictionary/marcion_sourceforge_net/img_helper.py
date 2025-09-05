@@ -619,22 +619,22 @@ class _Prompter:
             assert k not in self.exclude
             self.exclude[k] = v
 
-        self.row: crum.Root
+        self.root: crum.Root
 
     def print_info(self):
         print()
         log.info("Data:")
-        log.info("- Key:", self.row.key)
-        log.info("- Link:", paths.crum_url(self.row.key))
+        log.info("- Key:", self.root.key)
+        log.info("- Link:", self.root.url)
         log.info("- Existing:")
-        _pretty(_existing(self.row.key))
+        _pretty(_existing(self.root.key))
         log.info("- Downloads:")
         _pretty(_get_downloads(self.args))
         log.info("- Senses:")
         _pretty(
             {
                 str(k): v
-                for k, v in crum.Crum.roots[self.row.key].senses.items()
+                for k, v in crum.Crum.roots[self.root.key].senses.items()
             },
         )
         log.info("- Sources:")
@@ -735,7 +735,7 @@ class _Prompter:
 
     def prompt(self):
         for key in sorted(crum.Crum.roots.keys(), key=int):
-            self.row = crum.Crum.roots[key]
+            self.root = crum.Crum.roots[key]
             if not self.prompt_for_word():
                 break
         if self.args.plot:
@@ -752,30 +752,30 @@ class _Prompter:
         Raises:
             AssertionError: If an invariant is broken.
         """
-        if int(self.row.key) < self.args.start:
+        if int(self.root.key) < self.args.start:
             return True
-        if int(self.row.key) > self.args.end:
+        if int(self.root.key) > self.args.end:
             return False
-        if any(self.row.row[k] == v for k, v in self.exclude.items()):
+        if any(self.root.row[k] == v for k, v in self.exclude.items()):
             return True
-        if self.args.skip_existing and _existing(self.row.key):
+        if self.args.skip_existing and _existing(self.root.key):
             return True
 
         if self.args.plot:
-            if int(self.row.key) < int(self.args.start):
+            if int(self.root.key) < int(self.args.start):
                 return True
-            if int(self.row.key) > int(self.args.end):
+            if int(self.root.key) > int(self.args.end):
                 return False
-            if _existing(self.row.key):
+            if _existing(self.root.key):
                 self.plot_yes += 1
                 message = colorama.Fore.GREEN + "YES"
             else:
                 self.plot_no += 1
                 message = colorama.Fore.RED + "NO"
-            print(self.row.key, message + colorama.Fore.RESET)
+            print(self.root.key, message + colorama.Fore.RESET)
             return True
 
-        _os_open(*_existing(self.row.key), paths.crum_url(self.row.key))
+        _os_open(*_existing(self.root.key), self.root.url)
 
         while True:
             try:
@@ -836,8 +836,8 @@ class _Prompter:
 
         if command == "key":
             for key in params:
-                self.row = crum.Crum.roots[key]
-                _os_open(*_existing(key), paths.crum_url(key))
+                self.root = crum.Crum.roots[key]
+                _os_open(*_existing(key), self.root.url)
             return True
 
         if command == "convert":
@@ -882,7 +882,7 @@ class _Prompter:
                 for p in params:
                     _clear(p)
             else:
-                _clear(self.row.key)
+                _clear(self.root.key)
             return True
 
         if command.startswith("http"):
@@ -944,13 +944,13 @@ class _Prompter:
             return True
 
         # Move the files.
-        idx = _get_max_idx(_existing(self.row.key), self.row.key, str(sense))
+        idx = _get_max_idx(_existing(self.root.key), self.root.key, str(sense))
         for f in files:
             idx += 1
             ext = file.ext(f)
             new_file = os.path.join(
                 _IMG_DIR,
-                f"{self.row.key}-{sense}-{idx}{ext}",
+                f"{self.root.key}-{sense}-{idx}{ext}",
             )
             _ = pathlib.Path(f).rename(new_file)
             _convert(new_file)

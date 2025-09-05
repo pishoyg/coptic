@@ -10,8 +10,11 @@ EMAIL: str = "remnqymi@gmail.com"
 JSON_KEYFILE_NAME: str = "google_cloud_keyfile.json"
 
 
-def crum_url(key: str | int) -> str:
-    return f"{CRUM_URL}/{key}.html"
+def crum_url(key: str | int, deriv_key: str | int | None = None) -> str:
+    root_url: str = f"{CRUM_URL}/{key}.html"
+    if not deriv_key:
+        return root_url
+    return f"{root_url}#drv{deriv_key}"
 
 
 SITE_DIR: str = os.environ["SITE_DIR"]

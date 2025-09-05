@@ -21,7 +21,7 @@ import gspread
 from dictionary.marcion_sourceforge_net import categories as cat
 from dictionary.marcion_sourceforge_net import main as crum
 from dictionary.marcion_sourceforge_net import sheet
-from utils import ensure, gcp, log, paths, text
+from utils import ensure, gcp, log, text
 
 # TODO: (#399) There should be a central location for storing column names, so
 # they don't get duplicated all over the place.
@@ -34,9 +34,6 @@ _SISTERS_COL: str = "sisters"
 _ANTONYMS_COL: str = "antonyms"
 _HOMONYMS_COL: str = "homonyms"
 _GREEK_SISTERS_COL: str = "greek-sisters"
-_TYPE_COL: str = "type"
-
-_CATEGORIES_COL: str = "categories"
 
 _TEXT_FRAG_PREFIX: str = ":~:text="
 
@@ -161,10 +158,6 @@ _ = _argparser.add_argument(
 )
 
 
-def _csplit(cell: str) -> list[str]:
-    return text.ssplit(cell, _CAT_SEP.strip())
-
-
 def _ssplit(cell: str) -> list[str]:
     return text.ssplit(cell, _SISTER_SEP.strip())
 
@@ -201,9 +194,6 @@ class _House:
         self.ancestors_raw: str = cell
         # member is the current list of house members.
         self.members: list[_Person] = [_Person(raw) for raw in _ssplit(cell)]
-        # ancestors_formatted is a formatted representation of the list of the
-        # original members.
-        self.ancestors_formatted: str = self.string()
 
     def string(self) -> str:
         return _SISTER_SEP.join(m.string() for m in self.members)
@@ -434,42 +424,39 @@ class _Matriarch:
 
         # Googls Sheets uses 1-based indexing.
         # We also add 1 to account for the header row.
-        all_records: list[gcp.Record] = sheet.roots()
+        roots: dict[str, crum.Root] = crum.Crum.roots_live()
         key_to_family: dict[str, _Family] = {
-            record.row[_KEY_COL]: _Family(record.row) for record in all_records
+            root.key: _Family(root.row) for root in roots.values()
         }
-        row_idx: int = 1
-        for record in all_records:
-            row_idx += 1
-            key: str = record.row[_KEY_COL]
+        for root in roots.values():
             s, a, h = [], [], []
-            if has(sisters, key):
-                assert not has(antonyms, key)
+            if has(sisters, root.key):
+                assert not has(antonyms, root.key)
                 s, a = sisters, antonyms
-            elif has(antonyms, key):
-                assert not has(sisters, key)
+            elif has(antonyms, root.key):
+                assert not has(sisters, root.key)
                 a, s = sisters, antonyms
-            elif has(homonyms, key):
+            elif has(homonyms, root.key):
                 h = homonyms
 
             houses: dict[str, _House] = {
-                _SISTERS_COL: self.marry_house(record.row, _SISTERS_COL, s),
-                _ANTONYMS_COL: self.marry_house(record.row, _ANTONYMS_COL, a),
-                _HOMONYMS_COL: self.marry_house(record.row, _HOMONYMS_COL, h),
+                _SISTERS_COL: self.marry_house(root.row, _SISTERS_COL, s),
+                _ANTONYMS_COL: self.marry_house(root.row, _ANTONYMS_COL, a),
+                _HOMONYMS_COL: self.marry_house(root.row, _HOMONYMS_COL, h),
             }
+
             # Validate the proposed marriages.
             _Family(
                 {
-                    _KEY_COL: key,
-                    _GREEK_SISTERS_COL: record.row[_GREEK_SISTERS_COL],
+                    _KEY_COL: root.key,
+                    _GREEK_SISTERS_COL: root.row[_GREEK_SISTERS_COL],
                 }
                 | {col: huis.string() for col, huis in houses.items()},
             ).validate(key_to_family, symmetry=False)
 
             for col, huis in houses.items():
-                new: str = huis.string()
-                if new != huis.ancestors_raw:
-                    _ = self.sheet.update_cell(row_idx, self.col_idx[col], new)
+                if root.update(col, huis.string()):
+                    log.info("Updated", col, "under", root.key)
 
 
 class Runner:
@@ -575,47 +562,31 @@ class Runner:
         if not self.args.keys:
             # If no keys are given, the ask is to print keys of words belonging
             # to a given category.
-            for record in sheet.roots():
-                root: crum.Root = crum.Root(record.row_num, record.row, [])
+            for root in crum.Crum.roots.values():
                 if any(c in self.args.cat for c in root.categories):
                     print(root.key)
             return
         # Assign the given categories to the given words.
-        roots: list[gcp.Record] = sheet.roots()
+        roots: dict[str, crum.Root] = crum.Crum.roots_live()
         ensure.members(self.args.keys, roots)
-        row_idx = 1
-        col_idx = self.mother.col_idx[_CATEGORIES_COL]
-        for record in roots:
-            row_idx += 1
-            key = record.row[_KEY_COL]
-            if key not in self.args.keys:
-                continue
+        for key in self.args.keys:
+            root = roots[key]
             if self.args.override_cat:
                 new_cat = _CAT_SEP.join(self.args.cat)
             else:
-                current_cats = set(
-                    _csplit(record.row[_CATEGORIES_COL]),
-                )
                 new_cat = _CAT_SEP.join(
-                    sorted(current_cats | set(self.args.cat)),
+                    sorted(set(root.categories) | set(self.args.cat)),
                 )
-            log.info("Updating categories of", key, "to", new_cat)
-            self.mother.sheet.update_cell(row_idx, col_idx, new_cat)
+            root.update_cell(sheet.COL.CATEGORIES, new_cat)
 
     def categories_prompt(self) -> None:
-        self.init()
-        assert self.mother
-        row_idx = 1
-        col_idx = self.mother.col_idx[_CATEGORIES_COL]
-        for record in sheet.roots():
-            row_idx += 1
-            key = int(record.row[_KEY_COL])
-            if key < self.args.first:
+        for root in crum.Crum.roots_live().values():
+            if root.num < self.args.first:
                 continue
-            if record.row[_CATEGORIES_COL]:
+            if root.categories:
                 # This record already has a category.
                 continue
-            if record.row[_TYPE_COL] in {
+            if root.type_name in {
                 "-",
                 "adjective",
                 "conjunction",
@@ -633,12 +604,14 @@ class Runner:
                 # This type is of little interest at the moment.
                 continue
             cats: list[str] = []
-            _ = subprocess.run(["open", paths.crum_url(key)], check=True)
+            _ = subprocess.run(["open", root.url], check=True)
             while True:
                 cats = text.ssplit(
-                    input(f"Key = {key}. Categories (empty to skip): "),
+                    input(f"Key = {root.key}. Categories (empty to skip): "),
                 )
-                unknown = [c for c in cats if c not in cat.KNOWN_CATEGORIES]
+                unknown: list[str] = [
+                    c for c in cats if c not in cat.KNOWN_CATEGORIES
+                ]
                 if unknown:
                     log.error("Unknown categories:", unknown)
                     continue
@@ -646,11 +619,9 @@ class Runner:
             if not cats:
                 # The user didn't input anything!
                 continue
-            new_cat = _CAT_SEP.join(cats)
-            log.info("Updating categories to", new_cat)
             threading.Thread(
-                target=self.mother.sheet.update_cell,
-                args=(row_idx, col_idx, new_cat),
+                target=root.update_cell,
+                args=(sheet.COL.CATEGORIES, _CAT_SEP.join(cats)),
             ).start()
 
     def once(self) -> None:

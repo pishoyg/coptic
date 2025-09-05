@@ -6,6 +6,7 @@ import typing
 from collections import abc
 
 from dictionary.marcion_sourceforge_net import main as crum
+from dictionary.marcion_sourceforge_net import sheet
 from utils import ensure, gcp
 
 # pylint: disable=line-too-long
@@ -182,8 +183,8 @@ def main():
             continue
         root: crum.Root = crum.Crum.roots[w.key]
         # Copy the value to our sheet.
-        _ = root.update("wiki", w.entry)
-        _ = root.update("wiki-wip", w.wip)
+        root.update_cell(sheet.COL.WIKI, w.entry)
+        root.update_cell(sheet.COL.WIKI_WIP, w.wip)
 
 
 if __name__ == "__main__":
