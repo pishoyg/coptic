@@ -19,6 +19,7 @@ import urllib
 import gspread
 
 from dictionary.marcion_sourceforge_net import categories as cat
+from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import main as crum
 from dictionary.marcion_sourceforge_net import sheet
 from utils import ensure, gcp, log, text
@@ -38,7 +39,23 @@ _GREEK_SISTERS_COL: str = "greek-sisters"
 _TEXT_FRAG_PREFIX: str = ":~:text="
 
 _SISTER_SEP: str = "; "  # Sister separator.
-_CAT_SEP: str = ", "  # Category separator.
+
+SKIP_CAT_FOR_TYPES: set[str] = {
+    "-",
+    "adjective",
+    "conjunction",
+    "interjection",
+    "interrogative adverb",
+    "interrogative particle",
+    "interrogative pronoun",
+    "particle",
+    "personal pronoun",
+    "preposition",
+    "pronoun",
+    "verb",
+    "verbal prefix",
+}
+ensure.members(SKIP_CAT_FOR_TYPES, constants.TYPE_ENCODING)
 
 _argparser: argparse.ArgumentParser = argparse.ArgumentParser(
     description="Find and process appendices.",
@@ -527,6 +544,7 @@ class Runner:
         self.args.homonyms = list(map(url_to_person, self.args.homonyms))
 
         if self.args.keys:
+            ensure.members(self.args.keys, crum.Crum.roots)
             ensure.ensure(
                 self.args.cat or self.args.override_cat,
                 "--keys must be used in combination with either",
@@ -557,27 +575,21 @@ class Runner:
         return bool(num_actions)
 
     def categories(self) -> None:
-        self.init()
-        assert self.mother
         if not self.args.keys:
             # If no keys are given, the ask is to print keys of words belonging
             # to a given category.
-            for root in crum.Crum.roots.values():
+            for root in crum.Crum.roots_live().values():
                 if any(c in self.args.cat for c in root.categories):
                     print(root.key)
             return
         # Assign the given categories to the given words.
         roots: dict[str, crum.Root] = crum.Crum.roots_live()
-        ensure.members(self.args.keys, roots)
         for key in self.args.keys:
             root = roots[key]
             if self.args.override_cat:
-                new_cat = _CAT_SEP.join(self.args.cat)
+                root.set_categories(self.args.cat)
             else:
-                new_cat = _CAT_SEP.join(
-                    sorted(set(root.categories) | set(self.args.cat)),
-                )
-            root.update_cell(sheet.COL.CATEGORIES, new_cat)
+                root.add_categories(self.args.cat)
 
     def categories_prompt(self) -> None:
         for root in crum.Crum.roots_live().values():
@@ -586,21 +598,7 @@ class Runner:
             if root.categories:
                 # This record already has a category.
                 continue
-            if root.type_name in {
-                "-",
-                "adjective",
-                "conjunction",
-                "interjection",
-                "interrogative adverb",
-                "interrogative particle",
-                "interrogative pronoun",
-                "particle",
-                "personal pronoun",
-                "preposition",
-                "pronoun",
-                "verb",
-                "verbal prefix",
-            }:
+            if root.type_name in SKIP_CAT_FOR_TYPES:
                 # This type is of little interest at the moment.
                 continue
             cats: list[str] = []
@@ -609,9 +607,7 @@ class Runner:
                 cats = text.ssplit(
                     input(f"Key = {root.key}. Categories (empty to skip): "),
                 )
-                unknown: list[str] = [
-                    c for c in cats if c not in cat.KNOWN_CATEGORIES
-                ]
+                unknown: set[str] = set(cats) - set(cat.KNOWN_CATEGORIES)
                 if unknown:
                     log.error("Unknown categories:", unknown)
                     continue
@@ -619,10 +615,7 @@ class Runner:
             if not cats:
                 # The user didn't input anything!
                 continue
-            threading.Thread(
-                target=root.update_cell,
-                args=(sheet.COL.CATEGORIES, _CAT_SEP.join(cats)),
-            ).start()
+            threading.Thread(target=root.set_categories, args=[cats]).start()
 
     def once(self) -> None:
         # If --keys is present but --cat is absent, we still

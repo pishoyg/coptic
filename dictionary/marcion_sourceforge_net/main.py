@@ -312,6 +312,15 @@ class Root(Row):
         )
         return cats
 
+    def set_categories(self, cats: abc.Iterable[str]) -> None:
+        cats = sorted(cats)
+        ensure.members(cats, cat.KNOWN_CATEGORIES)
+        self.update_cell(sheet.COL.CATEGORIES, ", ".join(cats))
+        self.categories = cats
+
+    def add_categories(self, cats: abc.Iterable[str]) -> None:
+        self.set_categories(set(cats) | set(self.categories))
+
     @functools.cached_property
     def notes(self) -> str:
         return self.get(sheet.COL.NOTES)
