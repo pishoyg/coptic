@@ -515,6 +515,20 @@ class Crum:
     @cache.StaticProperty
     @staticmethod
     def roots() -> dict[str, Root]:
+        """Retrieve a shared, static snapshot of the roots.
+
+        Returns:
+            A shared, static snapshot of the roots.
+        """
+        return Crum.roots_live()
+
+    @staticmethod
+    def roots_live() -> dict[str, Root]:
+        """Retrieve a fresh snapshot of the roots.
+
+        Returns:
+            A fresh snapshot of the roots.
+        """
         derivations: dict[str, Derivation] = {}
 
         # NOTE: In order for this method to work properly, derivations must be
