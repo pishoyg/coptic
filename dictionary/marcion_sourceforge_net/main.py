@@ -12,7 +12,7 @@ import gspread
 from dictionary.marcion_sourceforge_net import categories as cat
 from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import lexical as lex
-from dictionary.marcion_sourceforge_net import parse, tsv
+from dictionary.marcion_sourceforge_net import parse, sheet
 from utils import cache, ensure, gcp, log, page, text
 
 _NUM_DRV_COLS: int = 10
@@ -35,12 +35,12 @@ class Row(gcp.Record):
         super().__init__(row_num, row)
         self.root: bool = root
 
-    def get(self, col: tsv.COL) -> str:
+    def get(self, col: sheet.COL) -> str:
         return self.row[col.value]
 
     @functools.cached_property
     def key(self) -> str:
-        key: str = self.get(tsv.COL.KEY)
+        key: str = self.get(sheet.COL.KEY)
         return key
 
     @functools.cached_property
@@ -51,7 +51,7 @@ class Row(gcp.Record):
 
     @functools.cached_property
     def type_name(self) -> str:
-        return self.get(tsv.COL.TYPE)
+        return self.get(sheet.COL.TYPE)
 
     # TODO: (#331) Split the type field into type and gender.
     @functools.cached_property
@@ -64,7 +64,7 @@ class Row(gcp.Record):
     @functools.cached_property
     def parsing_1(self) -> list[lex.Line]:
         return parse.parse_word_cell(
-            self.get(tsv.COL.WORD),
+            self.get(sheet.COL.WORD),
             self.grammatical_type,
             self.root,
             detach_types=False,
@@ -81,7 +81,7 @@ class Row(gcp.Record):
     @functools.cached_property
     def parsing_2(self) -> list[lex.Line]:
         return parse.parse_word_cell(
-            self.get(tsv.COL.WORD),
+            self.get(sheet.COL.WORD),
             self.grammatical_type,
             self.root,
             detach_types=True,
@@ -101,7 +101,7 @@ class Row(gcp.Record):
     @functools.cached_property
     def meaning(self) -> str:
         return page.html_line_breaks(
-            parse.parse_english_cell(self.get(tsv.COL.EN)),
+            parse.parse_english_cell(self.get(sheet.COL.EN)),
         )
 
     @functools.cached_property
@@ -132,7 +132,7 @@ class Row(gcp.Record):
 
     @functools.cached_property
     def crum(self) -> lex.CrumPage:
-        return lex.CrumPage(self.get(tsv.COL.CRUM))
+        return lex.CrumPage(self.get(sheet.COL.CRUM))
 
 
 # NOTE: As of now, derivations are somewhat of second-class citizens in our
@@ -152,12 +152,12 @@ class Derivation(Row):
 
     @typing.override
     @classmethod
-    def sheet(cls) -> gspread.worksheet.Worksheet:
-        return tsv.Sheet.derivations_sheet
+    def worksheet(cls) -> gspread.worksheet.Worksheet:
+        return sheet.DERIVATIONS
 
     @functools.cached_property
     def key_word(self) -> str:
-        return self.get(tsv.COL.KEY_WORD)
+        return self.get(sheet.COL.KEY_WORD)
 
 
 class Relation:
@@ -200,8 +200,8 @@ class Root(Row):
 
     @typing.override
     @classmethod
-    def sheet(cls) -> gspread.worksheet.Worksheet:
-        return tsv.Sheet.roots_sheet
+    def worksheet(cls) -> gspread.worksheet.Worksheet:
+        return sheet.ROOTS
 
     def __init__(
         self,
@@ -215,11 +215,11 @@ class Root(Row):
 
     @functools.cached_property
     def wiki(self) -> str:
-        return self.get(tsv.COL.WIKI)
+        return self.get(sheet.COL.WIKI)
 
     @functools.cached_property
     def wiki_wip(self) -> str:
-        return self.get(tsv.COL.WIKI_WIP)
+        return self.get(sheet.COL.WIKI_WIP)
 
     @typing.override
     def update(self, col_name: str, value: str) -> bool:
@@ -267,7 +267,7 @@ class Root(Row):
     def senses(self) -> dict[int, str]:
         # TODO: (#189) Once all senses are present, don't allow the field to be
         # absent.
-        raw: str = self.get(tsv.COL.SENSES)
+        raw: str = self.get(sheet.COL.SENSES)
         if not raw:
             return {}
         parsed: dict[str, str] = json.loads(raw)
@@ -285,22 +285,22 @@ class Root(Row):
 
     @functools.cached_property
     def quality(self) -> str:
-        quality: str = self.get(tsv.COL.QUALITY)
+        quality: str = self.get(sheet.COL.QUALITY)
         assert quality in constants.QUALITY
         return quality
 
     @functools.cached_property
     def crum_last_page(self) -> lex.CrumPage:
-        return lex.CrumPage(self.get(tsv.COL.CRUM_LAST_PAGE))
+        return lex.CrumPage(self.get(sheet.COL.CRUM_LAST_PAGE))
 
     @functools.cached_property
     def dawoud_pages(self) -> str:
         # TODO: (#399) Validate Dawoud pages.
-        return self.get(tsv.COL.DAWOUD_PAGES)
+        return self.get(sheet.COL.DAWOUD_PAGES)
 
     @functools.cached_property
     def categories(self) -> list[str]:
-        cats: list[str] = text.ssplit(self.get(tsv.COL.CATEGORIES), ",")
+        cats: list[str] = text.ssplit(self.get(sheet.COL.CATEGORIES), ",")
         ensure.members(
             cats,
             cat.KNOWN_CATEGORIES,
@@ -311,7 +311,7 @@ class Root(Row):
 
     @functools.cached_property
     def notes(self) -> str:
-        return self.get(tsv.COL.NOTES)
+        return self.get(sheet.COL.NOTES)
 
     @cache.run_once
     def _validate_unique_relations(self) -> None:
@@ -324,7 +324,7 @@ class Root(Row):
 
     def _house(
         self,
-        col: tsv.COL,
+        col: sheet.COL,
         container: abc.Container[str] | None,
     ) -> House:
         self._validate_unique_relations()
@@ -346,20 +346,20 @@ class Root(Row):
 
     @functools.cached_property
     def sisters(self) -> House:
-        return self._house(tsv.COL.SISTERS, Crum.roots)
+        return self._house(sheet.COL.SISTERS, Crum.roots)
 
     @functools.cached_property
     def antonyms(self) -> House:
-        return self._house(tsv.COL.ANTONYMS, Crum.roots)
+        return self._house(sheet.COL.ANTONYMS, Crum.roots)
 
     @functools.cached_property
     def homonyms(self) -> House:
-        return self._house(tsv.COL.HOMONYMS, Crum.roots)
+        return self._house(sheet.COL.HOMONYMS, Crum.roots)
 
     @functools.cached_property
     def greek_sisters(self) -> House:
         # TODO: (#271): Add validation for Greek sisters as well.
-        return self._house(tsv.COL.GREEK_SISTERS, None)
+        return self._house(sheet.COL.GREEK_SISTERS, None)
 
     def relations(self) -> abc.Generator[Relation]:
         yield from self.sisters
@@ -489,7 +489,7 @@ class Root(Row):
 
     def _crum_row_spans(self) -> abc.Generator[tuple[str, int]]:
         crum_column: list[str] = [
-            d.get(tsv.COL.CRUM) for d in self.derivations
+            d.get(sheet.COL.CRUM) for d in self.derivations
         ]
         for group in itertools.groupby(crum_column):
             crum = group[0]
@@ -521,7 +521,7 @@ class Crum:
         # provided in sorted order—a parent derivation must always precede its
         # children.
         def depth(derivation: gcp.Record) -> int:
-            key_deriv: str = derivation.row[tsv.COL.KEY_DERIV.value]
+            key_deriv: str = derivation.row[sheet.COL.KEY_DERIV.value]
             if key_deriv == "0":
                 # This derivation has no parents.
                 return 0
@@ -529,7 +529,7 @@ class Crum:
             assert d <= constants.MAX_DERIVATION_DEPTH
             return d
 
-        for record in tsv.Sheet.derivations_snapshot:
+        for record in sheet.derivations():
             d: Derivation = Derivation(
                 record.row_num,
                 record.row,
@@ -544,8 +544,8 @@ class Crum:
             by_key_word[d.key_word].append(d)
 
         roots: dict[str, Root] = {}
-        for record in tsv.Sheet.roots_snapshot:
-            key: str = record.row[tsv.COL.KEY.value]
+        for record in sheet.roots():
+            key: str = record.row[sheet.COL.KEY.value]
             roots[key] = Root(record.row_num, record.row, by_key_word[key])
 
         return roots

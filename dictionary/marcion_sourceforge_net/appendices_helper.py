@@ -19,7 +19,8 @@ import urllib
 import gspread
 
 from dictionary.marcion_sourceforge_net import categories as cat
-from dictionary.marcion_sourceforge_net import tsv
+from dictionary.marcion_sourceforge_net import main as crum
+from dictionary.marcion_sourceforge_net import sheet
 from utils import ensure, gcp, log, paths, text
 
 # TODO: (#399) There should be a central location for storing column names, so
@@ -369,7 +370,7 @@ class _Matriarch:
         # Worksheet 0 has the roots.
         # TODO: (#399): Define the sheet and record writing interface, instead
         # of having your pipelines directly use the Google Sheets API.
-        self.sheet: gspread.worksheet.Worksheet = tsv.Sheet.roots_sheet
+        self.sheet: gspread.worksheet.Worksheet = sheet.ROOTS
 
         self.col_idx: dict[str, int] = gcp.column_nums(self.sheet)
 
@@ -433,7 +434,7 @@ class _Matriarch:
 
         # Googls Sheets uses 1-based indexing.
         # We also add 1 to account for the header row.
-        all_records: list[gcp.Record] = tsv.Sheet.snapshot_roots()
+        all_records: list[gcp.Record] = sheet.roots()
         key_to_family: dict[str, _Family] = {
             record.row[_KEY_COL]: _Family(record.row) for record in all_records
         }
@@ -574,13 +575,13 @@ class Runner:
         if not self.args.keys:
             # If no keys are given, the ask is to print keys of words belonging
             # to a given category.
-            for record in tsv.Sheet.snapshot_roots():
-                cats = str(record.row[_CATEGORIES_COL])
-                if any(c in self.args.cat for c in text.ssplit(cats)):
-                    print(record.row[_KEY_COL])
+            for record in sheet.roots():
+                root: crum.Root = crum.Root(record.row_num, record.row, [])
+                if any(c in self.args.cat for c in root.categories):
+                    print(root.key)
             return
         # Assign the given categories to the given words.
-        roots: list[gcp.Record] = tsv.Sheet.snapshot_roots()
+        roots: list[gcp.Record] = sheet.roots()
         ensure.members(self.args.keys, roots)
         row_idx = 1
         col_idx = self.mother.col_idx[_CATEGORIES_COL]
@@ -606,7 +607,7 @@ class Runner:
         assert self.mother
         row_idx = 1
         col_idx = self.mother.col_idx[_CATEGORIES_COL]
-        for record in tsv.Sheet.snapshot_roots():
+        for record in sheet.roots():
             row_idx += 1
             key = int(record.row[_KEY_COL])
             if key < self.args.first:

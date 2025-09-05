@@ -32,7 +32,7 @@ class Record:
         self.row: dict[str, str] = to_str(row)
 
     @classmethod
-    def sheet(cls) -> gspread.worksheet.Worksheet:
+    def worksheet(cls) -> gspread.worksheet.Worksheet:
         """Retrieve the sheet that this record belongs to.
 
         Raises:
@@ -43,7 +43,7 @@ class Record:
     @classmethod
     @functools.cache
     def col_num(cls) -> dict[str, int]:
-        return column_nums(cls.sheet())
+        return column_nums(cls.worksheet())
 
     def update(self, col_name: str, value: str) -> bool:
         """Update the value of the given column.
@@ -60,7 +60,7 @@ class Record:
         """
         if self.row[col_name] == value:
             return False
-        _ = self.sheet().update_cell(
+        _ = self.worksheet().update_cell(
             self.row_num,
             self.col_num()[col_name],
             value,

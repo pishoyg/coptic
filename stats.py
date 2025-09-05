@@ -18,7 +18,7 @@ import numpy as np
 import pandas as pd
 
 from dictionary.marcion_sourceforge_net import main as crum
-from dictionary.marcion_sourceforge_net import tsv
+from dictionary.marcion_sourceforge_net import sheet
 from utils import cache, ensure, file, log, paths
 
 _ONE_DAY: int = 24 * 60 * 60
@@ -325,7 +325,7 @@ class Crum:
     def __init__(
         self,
         name: str,
-        field: tsv.COL,
+        field: sheet.COL,
         description: str,
         regex: str | None,
         minimum: int,
@@ -348,7 +348,7 @@ class Crum:
             dash: The dashboard that this statistic belongs to.
 
         """
-        self._field: tsv.COL = field
+        self._field: sheet.COL = field
         self._regex: re.Pattern[str] | None = (
             re.compile(regex) if regex else None
         )
@@ -409,7 +409,7 @@ _CRUM_STATS: list[Stat] = [
     ),
     Crum(
         "dawoud",
-        tsv.COL.DAWOUD_PAGES,
+        sheet.COL.DAWOUD_PAGES,
         "Words with Dawoud pages",
         None,
         2600,
@@ -418,7 +418,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "dawoud_sum",
-        tsv.COL.DAWOUD_PAGES,
+        sheet.COL.DAWOUD_PAGES,
         "Total number of Dawoud pages",
         r"[0-9]+",
         4300,
@@ -426,7 +426,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "notes",
-        tsv.COL.NOTES,
+        sheet.COL.NOTES,
         "Editor's notes",
         None,
         4,
@@ -435,7 +435,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "root_senses",
-        tsv.COL.SENSES,
+        sheet.COL.SENSES,
         "Roots with senses",
         None,
         70,
@@ -444,7 +444,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "root_senses_sum",
-        tsv.COL.SENSES,
+        sheet.COL.SENSES,
         "Total number of root senses",
         r"[0-9]+",
         160,
@@ -452,7 +452,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "last_page",
-        tsv.COL.CRUM_LAST_PAGE,
+        sheet.COL.CRUM_LAST_PAGE,
         "Last pages overridden",
         None,
         4,
@@ -461,7 +461,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "sisters",
-        tsv.COL.SISTERS,
+        sheet.COL.SISTERS,
         "Words with sisters",
         None,
         37,
@@ -470,7 +470,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "sisters_sum",
-        tsv.COL.SISTERS,
+        sheet.COL.SISTERS,
         "Total number of sisters",
         r"[0-9]+",
         58,
@@ -478,7 +478,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "antonyms",
-        tsv.COL.ANTONYMS,
+        sheet.COL.ANTONYMS,
         "Words with antonyms",
         None,
         2,
@@ -487,7 +487,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "antonyms_sum",
-        tsv.COL.ANTONYMS,
+        sheet.COL.ANTONYMS,
         "Total number of antonyms",
         r"[0-9]+",
         2,
@@ -495,7 +495,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "homonyms",
-        tsv.COL.HOMONYMS,
+        sheet.COL.HOMONYMS,
         "Words with homonyms",
         None,
         7,
@@ -504,7 +504,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "homonyms_sum",
-        tsv.COL.HOMONYMS,
+        sheet.COL.HOMONYMS,
         "Total number of homonyms",
         r"[0-9]+",
         7,
@@ -512,7 +512,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "greek_sisters",
-        tsv.COL.GREEK_SISTERS,
+        sheet.COL.GREEK_SISTERS,
         "Words with Greek sisters",
         None,
         1,
@@ -521,7 +521,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "greek_sisters_sum",
-        tsv.COL.GREEK_SISTERS,
+        sheet.COL.GREEK_SISTERS,
         "Total number of Greek sisters",
         r"[0-9]+",
         1,
@@ -529,7 +529,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "categories",
-        tsv.COL.CATEGORIES,
+        sheet.COL.CATEGORIES,
         "Words with categories",
         None,
         30,
@@ -538,7 +538,7 @@ _CRUM_STATS: list[Stat] = [
     ).stat,
     Crum(
         "categories_sum",
-        tsv.COL.CATEGORIES,
+        sheet.COL.CATEGORIES,
         "Total number of categories",
         r"[^,]+",
         30,
