@@ -3,11 +3,11 @@
 import collections
 import functools
 import itertools
-import json
 import typing
 from collections import abc
 
 import gspread
+import yaml
 
 from dictionary.marcion_sourceforge_net import categories as cat
 from dictionary.marcion_sourceforge_net import constants
@@ -275,10 +275,8 @@ class Root(Row):
         raw: str = self.get(sheet.COL.SENSES)
         if not raw:
             return {}
-        parsed: dict[str, str] = json.loads(raw)
+        senses: dict[int, str] = yaml.safe_load(raw)
         del raw
-        senses: dict[int, str] = {int(k): v for k, v in parsed.items()}
-        del parsed
         ensure.unique(senses.keys())
         ensure.unique(senses.values())
         ensure.ensure(
