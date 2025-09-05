@@ -310,7 +310,11 @@ class Capture:
             name: str = (
                 child.name if child.name in self._retain_tags else "span"
             )
-            yield f'<{name}{"".join(f' {k}="{v}"' for k, v in attrs.items())}>'
+            yield f'<{name}{
+                "".join(
+                f' {k}="{v}"' for k, v in sorted(attrs.items())
+                )
+            }>'
             del attrs
             yield from self._get_children_simplified_html(child)
             yield f"</{name}>"
