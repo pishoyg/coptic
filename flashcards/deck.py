@@ -316,24 +316,32 @@ class MediaFile:
 
     _temp_dir: str = tempfile.mkdtemp()
 
-    def __init__(self, parent: str, path: str) -> None:
-        self._path: str = os.path.join(parent, path)
+    def __init__(self, path: str, underscore: bool = False) -> None:
+        """Construct a MediaFile object.
+
+        Args:
+            path: Path to the file on the system.
+            underscore: Whether this file should be prefixed with an underscore
+                in Anki. Some media files, such as fonts must have an underscore
+                prefix. See
+                https://docs.ankiweb.net/templates/styling.html#installing-fonts.
+        """
+        self._path: str = path
+        self._prefix: str = "_" if underscore else ""
 
     def basename(self) -> str:
         """Get the basename of the file in the destination directory.
 
         Returns:
             The basename of the file in the destination directory.
-
         """
-        return self._path.replace(os.sep, "_")
+        return self._prefix + self._path.replace(os.sep, "_")
 
     def path(self) -> str:
         """Get the full path of the file in the destination directory.
 
         Returns:
             The full path of the file in the destination directory.
-
         """
         return os.path.join(MediaFile._temp_dir, self.basename())
 
@@ -398,7 +406,8 @@ class Deck:
 
     def __anki_html(self, html: str) -> str:
         def src_to_basename(match: re.Match[str]) -> str:
-            f: MediaFile = MediaFile(self.html_dir, match.group(1))
+            path: str = os.path.join(self.html_dir, match.group(1))
+            f: MediaFile = MediaFile(path)
             self.media_files.add(f)
             return f'<img src="{f.basename()}"'
 
@@ -407,11 +416,8 @@ class Deck:
 
     def __anki_css(self) -> str:
         def src_to_basename(match: re.Match[str]) -> str:
-            path: str = match.group(1)
-            # Fonts must have an underscore prefix. See
-            # https://docs.ankiweb.net/templates/styling.html#installing-fonts.
-            assert os.path.basename(path).startswith("_")
-            f: MediaFile = MediaFile(self.css_dir, path)
+            path: str = os.path.join(self.css_dir, match.group(1))
+            f: MediaFile = MediaFile(path, underscore=True)
             self.media_files.add(f)
             return f"src: url('{f.basename()}')"
 
