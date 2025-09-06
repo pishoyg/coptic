@@ -56,14 +56,13 @@ Model IDs are hardcoded.
 import os
 import re
 import shutil
-import subprocess
 import tempfile
 import typing
 from collections import abc
 
 import genanki  # type: ignore[import-untyped]
 
-from utils import concur, ensure, file, log, page
+from utils import concur, ensure, file, log, page, system
 
 NOTE_CLASS = "NOTE"
 ANKI_NOTE_CLASS = "ANKI"
@@ -443,25 +442,7 @@ class Deck:
         # Like the media files, the JavaScript path is relative to the HTML
         # write directory.
         js_path = os.path.join(self.html_dir, js_path)
-        try:
-            result = subprocess.run(
-                ["npx", "esbuild", js_path, "--bundle"],
-                check=True,
-                capture_output=True,
-                text=True,
-            )
-        except subprocess.CalledProcessError as e:
-            log.fatal(
-                "Subprocess exited with status",
-                e.returncode,
-                "cmd:",
-                e.cmd,
-                "stdout:",
-                e.stdout,
-                "stderr:",
-                e.stderr,
-            )
-        yield result.stdout
+        yield system.run("npx", "esbuild", js_path, "--bundle")
 
     def anki(self) -> tuple[genanki.Deck, abc.Iterable[MediaFile]]:
         # Anki can't pick up the JavaScript. It must be inserted into the

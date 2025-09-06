@@ -8,7 +8,6 @@ import enum
 import itertools
 import os
 import re
-import subprocess
 import time
 import typing
 from collections.abc import Generator
@@ -19,7 +18,7 @@ import pandas as pd
 
 from dictionary.marcion_sourceforge_net import main as crum
 from dictionary.marcion_sourceforge_net import sheet
-from utils import cache, ensure, file, log, paths
+from utils import cache, ensure, file, log, paths, system
 
 _ONE_DAY: int = 24 * 60 * 60
 _COMMIT_MESSAGE = "[Stats] Run `make stats`."
@@ -179,21 +178,6 @@ def _zero() -> int:
     return 0
 
 
-def _run(*command: str) -> str:
-    try:
-        result = subprocess.run(
-            " ".join(command),
-            check=True,
-            capture_output=True,
-            text=True,
-            shell=True,
-        )
-        return result.stdout
-    except subprocess.CalledProcessError as e:
-        log.error("stderr:", e.stderr, "stdout:", e.stdout)
-        raise e
-
-
 class Code(abc.ABC):
     """Code tracks a subset of the files of code for statistics purposes."""
 
@@ -202,7 +186,7 @@ class Code(abc.ABC):
     @staticmethod
     def all_foc() -> list[str]:
         # See our shell environment for the definition of the findexx command.
-        files: list[str] = _run(
+        files: list[str] = system.run(
             "source .env && findexx . -type f",
         ).splitlines()
         # Make sure the paths are normalized.
@@ -568,7 +552,7 @@ _GIT_STATS: list[Stat] = [
     Stat(
         "num_commits",
         "Commits",
-        lambda: _run("git rev-list --count --all"),
+        lambda: system.run("git rev-list --count --all"),
         1300,
         10000,
         Dash.NUM_COMMITS,
@@ -577,7 +561,7 @@ _GIT_STATS: list[Stat] = [
         "num_contributors",
         "Contributors",
         lambda: len(
-            _run("git shortlog --summary --group=author").splitlines(),
+            system.run("git shortlog --summary --group=author").splitlines(),
         ),
         1,
         10,
@@ -586,7 +570,7 @@ _GIT_STATS: list[Stat] = [
     Stat(
         "open_issues",
         "Open issues",
-        lambda: _run(
+        lambda: system.run(
             "gh issue list",
             "--state open",
             "--json number",
@@ -600,7 +584,7 @@ _GIT_STATS: list[Stat] = [
     Stat(
         "closed_issues",
         "Closed issues",
-        lambda: _run(
+        lambda: system.run(
             "gh issue list",
             "--state closed",
             "--json number",
@@ -617,22 +601,22 @@ _DISK_STATS: list[Stat] = [
     Stat(
         "disk_usage",
         "Usage (KB)",
-        lambda: _run("du --apparent-size --summarize .").split("\t")[0],
+        lambda: system.run("du --apparent-size --summarize .").split("\t")[0],
         6291456,
         88000000,
     ),
     Stat(
         "disk_usage_human",
         "Usage",
-        lambda: _run(
+        lambda: system.run(
             "du --apparent-size --human-readable --summarize .",
         ).split("\t")[0],
     ),
 ]
 
 _TIME_STATS: list[Stat] = [
-    Stat("date", "Date and Time", lambda: _run("date").strip()),
-    Stat("timestamp", "Timestamp", lambda: _run("date +%s").strip()),
+    Stat("date", "Date and Time", lambda: system.run("date").strip()),
+    Stat("timestamp", "Timestamp", lambda: system.run("date +%s").strip()),
 ]
 
 _CODE_BY_LANG: list[Lang] = [
@@ -734,7 +718,7 @@ def _check_reminder():
 def _report(commit: bool, verbose: bool) -> list[Stat]:
     if commit:
         ensure.ensure(
-            not _run("git status --short"),
+            not system.run("git status --short"),
             "The repo is dirty. Collecting stats should be done on a clean"
             + " worktree."
             + " Please stash your changes."
@@ -759,12 +743,12 @@ def _report(commit: bool, verbose: bool) -> list[Stat]:
     df = pd.concat([df, pd.DataFrame([record])], ignore_index=True)
     del record
     file.to_tsv(df, _TSV_FILE)
-    _ = _run("git add", _TSV_FILE)
+    _ = system.run("git add", _TSV_FILE)
     # We wrap the commit message with single quotes in order to pass it as a
     # message parameter. For this to work, it must not contain any single quotes
     # itself.
     assert "'" not in _COMMIT_MESSAGE
-    _ = _run(f"git commit --message '{_COMMIT_MESSAGE}'")
+    _ = system.run(f"git commit --message '{_COMMIT_MESSAGE}'")
     return stats
 
 

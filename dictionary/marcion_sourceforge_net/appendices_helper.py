@@ -12,7 +12,6 @@
 
 import argparse
 import shlex
-import subprocess
 import threading
 import urllib
 
@@ -22,7 +21,7 @@ from dictionary.marcion_sourceforge_net import categories as cat
 from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import main as crum
 from dictionary.marcion_sourceforge_net import sheet
-from utils import ensure, gcp, log, text
+from utils import ensure, gcp, log, system, text
 
 # TODO: (#399) There should be a central location for storing column names, so
 # they don't get duplicated all over the place.
@@ -602,7 +601,7 @@ class Runner:
                 # This type is of little interest at the moment.
                 continue
             cats: list[str] = []
-            _ = subprocess.run(["open", root.url], check=True)
+            _ = system.run("open", root.url)
             while True:
                 cats = text.ssplit(
                     input(f"Key = {root.key}. Categories (empty to skip): "),

@@ -7,7 +7,6 @@ import os
 import pathlib
 import re
 import shutil
-import subprocess
 import urllib
 from collections import abc
 
@@ -16,7 +15,7 @@ import requests
 from PIL import Image
 
 from dictionary.marcion_sourceforge_net import main as crum
-from utils import ensure, file, log, paths, semver, text
+from utils import ensure, file, log, paths, semver, system, text
 
 # TODO: (#5) Prevent users from updating an image without updating its source.
 # Somehow!
@@ -273,13 +272,6 @@ def _get_max_idx(g: list[str], key: str, sense: str) -> int:
     return highest
 
 
-# TODO: (#0) This helper doesn't belong here.
-def _os_open(*args: str):
-    if not args:
-        return
-    _ = subprocess.run(["open"] + list(args), check=True)
-
-
 def _get_downloads(args: argparse.Namespace) -> list[str]:
     files: list[str] = os.listdir(args.downloads)
     files = [f for f in files if f not in args.ignore]
@@ -365,20 +357,18 @@ def _convert(path: str, skip_existing: bool = False) -> None:
     if os.path.exists(target) and skip_existing:
         return
     # Write the converted image.
-    _ = subprocess.call(
-        [
-            "magick",
-            path,
-            "-alpha",
-            "remove",
-            "-alpha",
-            "off",
-            "-background",
-            "white",
-            "-resize",
-            f"{_TARGET_WIDTH}x",
-            target,
-        ],
+    _ = system.run(
+        "magick",
+        path,
+        "-alpha",
+        "remove",
+        "-alpha",
+        "off",
+        "-background",
+        "white",
+        "-resize",
+        f"{_TARGET_WIDTH}x",
+        target,
     )
     log.wrote(target)
 
@@ -775,7 +765,7 @@ class _Prompter:
             print(self.root.key, message + colorama.Fore.RESET)
             return True
 
-        _os_open(*_existing(self.root.key), self.root.url)
+        system.open_files(*_existing(self.root.key), self.root.url)
 
         while True:
             try:
@@ -837,7 +827,7 @@ class _Prompter:
         if command == "key":
             for key in params:
                 self.root = crum.Crum.roots[key]
-                _os_open(*_existing(key), self.root.url)
+                system.open_files(*_existing(key), self.root.url)
             return True
 
         if command == "convert":
@@ -862,7 +852,7 @@ class _Prompter:
         if command in _QUERIERS_FMT:
             query = " ".join(params)
             for fmt in _QUERIERS_FMT[command]:
-                _os_open(fmt.format(query=query))
+                system.open_files(fmt.format(query=query))
             return True
 
         if command == "rm":
@@ -930,7 +920,7 @@ class _Prompter:
         i = ""
         move = False
         while True:
-            _os_open(*files)
+            system.open_files(*files)
             i = input("Looks good? (y/n)").lower()
             files = _get_downloads(self.args)
             if i in ["y", "yes"]:
