@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
 """Crum images helper."""
 
+# TODO: (#399) Operations in this file update the directories without updating
+# the shared `Crum.roots` object. This implies that future queries using
+# `Crum.roots` may have obsolete data.
+# Update both, so your source of truth will be up-to-date throughout the program
+# execution.
+
 import argparse
 import glob
 import os
 import pathlib
-import re
 import shutil
 import urllib
 from collections import abc
@@ -21,8 +26,6 @@ from utils import ensure, file, log, paths, system, text
 # TODO: (#5) Prevent users from updating an image without updating its source.
 # Somehow!
 
-# TODO: (#399) Move relevant logic to the Crum interface in `main.py`.
-_SCRIPT_DIR = pathlib.Path(__file__).parent
 _TIMEOUT_S = 5
 
 _TARGET_WIDTH = 300
@@ -32,11 +35,6 @@ _MIN_RESIZE_HEIGHT = 100  # Minimum allowed height of the resized image. (#240)
 _PREFER_MIN_RESIZE_HEIGHT = 200
 _MAX_RESIZE_HEIGHT = 500  # Maximum allowed height of the resized image. (#240)
 _PREFER_MAX_RESIZE_HEIGHT = 400
-
-_FILE_NAME_RE = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
-_STEM_RE = re.compile("[0-9]+-[0-9]+-[0-9]+")
-
-_SOURCES_DIR: str = str(_SCRIPT_DIR / "data" / "img-sources")
 
 _BANNED_TOP_LEVEL_DOMAINS = {
     "gstatic.com",
@@ -216,29 +214,6 @@ _ = _argparser.add_argument(
     " sources.",
 )
 
-_ = _argparser.add_argument(
-    "-p",
-    "--plot",
-    default=False,
-    action="store_true",
-    help="If given, plot a YES or NO for whether each included picture has an"
-    " image.",
-)
-
-
-def _get_max_idx(g: list[str], key: str, sense: str) -> int:
-    highest = 0
-    for path in g:
-        match: re.Match[str] | None = _FILE_NAME_RE.fullmatch(
-            os.path.basename(path),
-        )
-        assert match
-        assert match.group(1) == key
-        if match.group(2) != sense:
-            continue
-        highest = max(highest, int(match.group(3)))
-    return highest
-
 
 def _get_downloads(args: argparse.Namespace) -> list[str]:
     files: list[str] = os.listdir(args.downloads)
@@ -306,32 +281,13 @@ def _is_wiki(url: str) -> bool:
     return url.startswith("https://upload.wikimedia.org/")
 
 
-def _get_target(path: str) -> str:
-    stem, ext = file.splitext(path)
-    assert _STEM_RE.fullmatch(stem)
-    ensure.ensure(
-        ext in constants.VALID_SRC_EXTENSIONS,
-        ext,
-        "is not a valid extension",
-    )
-    return os.path.join(
-        constants.IMG_DST_DIR,
-        stem + constants.EXT_MAP.get(ext, ext),
-    )
-
-
-def _get_source(path: str) -> str:
-    return os.path.join(_SOURCES_DIR, file.stem(path) + ".txt")
-
-
-def _convert(path: str, skip_existing: bool = False) -> None:
-    target = _get_target(path)
-    if os.path.exists(target) and skip_existing:
+def _convert(img: crum.Image, skip_existing: bool = False) -> None:
+    if os.path.exists(img.dst_path) and skip_existing:
         return
     # Write the converted image.
     _ = system.run(
         "magick",
-        path,
+        str(img.src_path),
         "-alpha",
         "remove",
         "-alpha",
@@ -340,19 +296,18 @@ def _convert(path: str, skip_existing: bool = False) -> None:
         "white",
         "-resize",
         f"{_TARGET_WIDTH}x",
-        target,
+        str(img.dst_path),
     )
-    log.wrote(target)
+    log.wrote(img.dst_path)
 
 
 def main():
-    args = _argparser.parse_args()
+    args: argparse.Namespace = _argparser.parse_args()
     # Preprocess arguments.
     actions: list[object] = list(
         filter(
             None,
             [
-                args.plot,
                 args.batch,
                 args.rm,
                 args.mv,
@@ -370,20 +325,25 @@ def main():
     if args.batch:
         _batch(args)
         exit()
+
     if args.rm:
         for stem in args.rm:
             _rm(stem)
         exit()
+
     if args.mv:
         _mv(*args.mv)
         exit()
+
     if args.cp:
         _cp(*args.cp)
         exit()
+
     if args.convert:
         for stem in args.convert:
-            _convert(_stem_to_img_path(stem))
+            _convert(_stem_to_img(stem))
         exit()
+
     _Prompter(args).prompt()
 
 
@@ -413,46 +373,49 @@ def _retrieve(
     return filename
 
 
-def _stem_to_img_path(stem: str, ext: str = "") -> str:
+def _stem_to_img(stem: str, ext: str = "") -> crum.Image:
+    basename: str
     if ext:
-        return os.path.join(constants.IMG_SRC_DIR, stem + ext)
-    path = glob.glob(os.path.join(constants.IMG_SRC_DIR, stem + ".*"))
-    assert len(path) == 1
-    return path[0]
-
-
-def _get_artifacts(stem: str, img_ext: str = "") -> list[str]:
-    assert _STEM_RE.fullmatch(stem)
-    path = _stem_to_img_path(stem, img_ext)
-    return [path, _get_target(path), _get_source(path)]
+        basename = stem + ext
+    else:
+        files: list[str] = glob.glob(
+            os.path.join(constants.IMG_SRC_DIR, stem + ".*"),
+        )
+        if not files:
+            raise FileNotFoundError
+        assert len(files) == 1, files
+        basename = os.path.basename(files[0])
+    return crum.Image(basename)
 
 
 def _rm(stem: str) -> None:
     ensure.ensure(_exists(stem), stem, "doesn't exist!")
-    for art in _get_artifacts(stem):
+    for art in _stem_to_img(stem).artifacts:
         os.remove(art)
 
 
 def _exists(stem: str) -> bool:
-    return bool(glob.glob(os.path.join(constants.IMG_SRC_DIR, stem + ".*")))
+    try:
+        assert all(map(os.path.isfile, _stem_to_img(stem).artifacts))
+        return True
+    except FileNotFoundError:
+        return False
 
 
 def _mv(a_stem: str, b_stem: str) -> None:
     ensure.ensure(not _exists(b_stem), b_stem, "already exists!")
-    a_arts = _get_artifacts(a_stem)
-    img_ext = file.ext(a_arts[0])
-    b_arts = _get_artifacts(b_stem, img_ext)
-    for a, b in zip(a_arts, b_arts):
-        _ = pathlib.Path(a).rename(b)
+    a: crum.Image = _stem_to_img(a_stem)
+    b: crum.Image = _stem_to_img(b_stem, a.src_ext)
+    for aa, bb in zip(a.artifacts, b.artifacts):
+        _ = pathlib.Path(aa).rename(bb)
 
 
 def _cp(a_stem: str, b_stem: str) -> None:
     ensure.ensure(not _exists(b_stem), b_stem, "already exists!")
-    a_arts = _get_artifacts(a_stem)
-    img_ext = file.ext(a_arts[0])
-    b_arts = _get_artifacts(b_stem, img_ext)
-    for a, b in zip(a_arts, b_arts):
-        _ = shutil.copyfile(a, b)
+    a: crum.Image = _stem_to_img(a_stem)
+    b: crum.Image = _stem_to_img(b_stem, a.src_ext)
+    for aa, bb in zip(a.artifacts, b.artifacts):
+        _ = shutil.copyfile(aa, bb)
 
 
 def _pretty(j: dict[str, str] | dict[str, list[str]] | list[str]):
@@ -549,17 +512,10 @@ def _infer_urls(*urls: str) -> tuple[list[str], list[str]]:
     return reference, download
 
 
-def _existing(key: str) -> list[str]:
-    assert key.isdigit()
-    return glob.glob(os.path.join(constants.IMG_SRC_DIR, f"{key}-*"))
-
-
 def _clear(key: str) -> None:
-    ensure.ensure(key.isdigit(), key, "is not a valid word key.")
-    for path in _existing(key):
-        stem = file.stem(path)
-        _rm(stem)
-        log.info("cleared", stem)
+    for img in crum.Crum.roots[key].images:
+        _rm(img.stem)
+        log.info("cleared", img.stem)
 
 
 class _Prompter:
@@ -567,8 +523,6 @@ class _Prompter:
 
     def __init__(self, args: argparse.Namespace):
         self.args: argparse.Namespace = args
-        self.plot_yes: int = 0
-        self.plot_no: int = 0
 
         self.sources: dict[str, list[str]] = {}
 
@@ -587,7 +541,7 @@ class _Prompter:
         log.info("- Key:", self.root.key)
         log.info("- Link:", self.root.url)
         log.info("- Existing:")
-        _pretty(_existing(self.root.key))
+        _pretty([str(img.src_path) for img in self.root.images])
         log.info("- Downloads:")
         _pretty(_get_downloads(self.args))
         log.info("- Senses:")
@@ -632,11 +586,6 @@ class _Prompter:
             " key, or the current key if none is specified.",
         )
 
-        log.info(
-            "-",
-            "convert ${KEY}",
-            "to (re)convert one image.",
-        )
         log.info(
             "-",
             "source ${SOURCE}",
@@ -698,11 +647,6 @@ class _Prompter:
             self.root = crum.Crum.roots[key]
             if not self.prompt_for_word():
                 break
-        if self.args.plot:
-            print(
-                colorama.Fore.GREEN + str(self.plot_yes) + colorama.Fore.RESET,
-                colorama.Fore.RED + str(self.plot_no) + colorama.Fore.RESET,
-            )
 
     def prompt_for_word(self) -> bool:
         """
@@ -718,24 +662,13 @@ class _Prompter:
             return False
         if any(self.root.row[k] == v for k, v in self.exclude.items()):
             return True
-        if self.args.skip_existing and _existing(self.root.key):
+        if self.args.skip_existing and self.root.images:
             return True
 
-        if self.args.plot:
-            if int(self.root.key) < int(self.args.start):
-                return True
-            if int(self.root.key) > int(self.args.end):
-                return False
-            if _existing(self.root.key):
-                self.plot_yes += 1
-                message = colorama.Fore.GREEN + "YES"
-            else:
-                self.plot_no += 1
-                message = colorama.Fore.RED + "NO"
-            print(self.root.key, message + colorama.Fore.RESET)
-            return True
-
-        system.open_files(*_existing(self.root.key), self.root.url)
+        system.open_files(
+            *[img.src_path for img in self.root.images],
+            self.root.url,
+        )
 
         while True:
             try:
@@ -797,12 +730,10 @@ class _Prompter:
         if command == "key":
             for key in params:
                 self.root = crum.Crum.roots[key]
-                system.open_files(*_existing(key), self.root.url)
-            return True
-
-        if command == "convert":
-            for stem in params:
-                _convert(_stem_to_img_path(stem))
+                system.open_files(
+                    *[img.src_path for img in self.root.images],
+                    self.root.url,
+                )
             return True
 
         if command == "source":
@@ -904,37 +835,22 @@ class _Prompter:
             return True
 
         # Move the files.
-        idx = _get_max_idx(_existing(self.root.key), self.root.key, str(sense))
+        idx: int = self.root.max_img_idx(sense)
         for f in files:
             idx += 1
-            ext = file.ext(f)
-            new_file = os.path.join(
-                constants.IMG_SRC_DIR,
-                f"{self.root.key}-{sense}-{idx}{ext}",
-            )
-            _ = pathlib.Path(f).rename(new_file)
-            _convert(new_file)
-            file.write("\n".join(self.sources[f]), _get_source(new_file))
+            basename: str = f"{self.root.key}-{sense}-{idx}{file.ext(f)}"
+            img: crum.Image = crum.Image(basename)
+            _ = pathlib.Path(f).rename(img.src_path)
+            _convert(img)
+            file.write("\n".join(self.sources[f]), img.sources_path)
 
         return True
 
 
 def _batch(args: argparse.Namespace):
-    def key(path: str):
-        return int(file.stem(path).split("-")[0])
-
-    images = file.paths(constants.IMG_SRC_DIR)
-    images = sorted(images, key=key)
-    for path in images:
-        _convert(path, args.skip_existing)
-    targets = {_get_target(p) for p in images}
-    for converted in file.paths(constants.IMG_DST_DIR):
-        if converted not in targets:
-            os.remove(converted)
-    sources = {_get_source(path) for path in images}
-    for src in file.paths(_SOURCES_DIR):
-        if src not in sources:
-            os.remove(src)
+    for root in crum.Crum.roots.values():
+        for img in root.images:
+            _convert(img, args.skip_existing)
 
 
 if __name__ == "__main__":

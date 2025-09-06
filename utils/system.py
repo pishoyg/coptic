@@ -1,5 +1,6 @@
 """System utilities."""
 
+import pathlib
 import subprocess
 
 from utils import log
@@ -28,7 +29,7 @@ def run(*command: str) -> str:
         )
 
 
-def open_files(*args: str):
+def open_files(*args: str | pathlib.Path):
     if not args:
         return
-    _ = run("open", *args)
+    _ = run("open", *map(str, args))

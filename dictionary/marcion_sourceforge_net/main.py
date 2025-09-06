@@ -1,5 +1,10 @@
 """Parse Crum's dictionary."""
 
+# TODO: (#399) Define add_image and rm_image methods on `Root`, and update the
+# object every time the content of the directories changes. This way, you can
+# maintain an up-to-date view throughout the program execution.
+# TODO: (#399) Same as above, for sisters.
+
 import collections
 import functools
 import itertools
@@ -23,9 +28,6 @@ _HUNDRED: int = 100
 assert not _HUNDRED % _NUM_DRV_COLS
 
 
-# TODO: (#399): Export images as part of this interface, instead of relying on
-# users querying the image directory directly.
-# TODO: (#399) Move image validation from the images helper to this file.
 class Row(gcp.Record):
     """Row represents a row in the Crum sheet."""
 
@@ -211,6 +213,7 @@ class Image:
         assert match
         self.key_word: str = match.group(1)
         self.sense_num: int = int(match.group(2))
+        self.idx: int = int(match.group(3))
         self.src_ext: str = match.group(4)
         ensure.ensure(
             self.src_ext in constants.VALID_SRC_EXTENSIONS,
@@ -274,6 +277,10 @@ class Image:
     def __lt__(self, other: object) -> bool:
         assert isinstance(other, Image)
         return semver.lt(self.stem, other.stem)
+
+    @functools.cached_property
+    def artifacts(self) -> list[pathlib.Path]:
+        return [self.src_path, self.dst_path, self.sources_path]
 
 
 class Root(Row):
@@ -366,6 +373,9 @@ class Root(Row):
             "has a gap in senses!",
         )
         return senses
+
+    def max_img_idx(self, sense: int) -> int:
+        return max(img.idx for img in self.images if img.sense_num == sense)
 
     # TODO: (#189) Require the presence of a sense once the sense data has been
     # fully populated.

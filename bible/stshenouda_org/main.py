@@ -22,7 +22,7 @@ _SCRIPT_DIR = pathlib.Path(__file__).parent
 _JSON: str = str(_SCRIPT_DIR / "data/input/bible.json")
 _INPUT_DIR: str = str(_SCRIPT_DIR / "data/raw/")
 # TODO: (#432) Include the sources in the output.
-_SOURCES_DIR: str = str(_SCRIPT_DIR / "data/raw/Sources/")
+_SOURCES_DIR: str = str(_SCRIPT_DIR / "data/raw/Sources/")  # dead: disable
 _COVER: str = str(_SCRIPT_DIR / "data/img/stauros.jpeg")
 
 _LANGUAGES: list[str] = [
