@@ -651,11 +651,11 @@ _CODE_BY_COMPONENT: list[Comp] = [
     Comp("grammar", "Grammar"),  # No files yet (if ever)!
     Comp("keyboard", "Keyboard", prefixes=[paths.KEYBOARD]),
     Comp("morphology", "Morphology", prefixes=[paths.MORPHOLOGY]),
-    Comp("site", "Site", prefixes=[paths.SITE_DIR]),
+    Comp("site", "Site", prefixes=[paths.SITE_DIR, "xooxle/", "test/"]),
     Comp(
         "shared",
         "shared",
-        prefixes=["env/", "xooxle/", "utils/", "pre-commit/", "test/"],
+        prefixes=["env/", "utils/", "pre-commit/"],
         dirnames=[""],
     ),
 ]
