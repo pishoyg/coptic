@@ -136,7 +136,7 @@ def html_head_aux(
 
     yield _CHARSET_TAG
     yield _VIEWPORT_TAG
-    for path in css + [paths.SHARED_CSS]:
+    for path in css + [paths.CSS_REL]:
         yield _STYLE_TAG_FMT.format(path)
     yield _ICON_TAG
     yield _GOOGLE_TAG

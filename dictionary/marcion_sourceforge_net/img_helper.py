@@ -968,7 +968,7 @@ def _batch(args: argparse.Namespace):
 
 
 def _listdir_sorted(directory: str) -> list[str]:
-    return semver.sort_semver(file.paths(directory))
+    return semver.sort(file.paths(directory))
 
 
 # TODO: (#399) Perform validation during image retrieval as part of the Crum

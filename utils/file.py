@@ -58,7 +58,7 @@ def read(path: str | pathlib.Path) -> str:
         return f.read()
 
 
-def readlines(path: str) -> list[str]:
+def readlines(path: str | pathlib.Path) -> list[str]:
     try:
         with open(path, encoding="utf-8") as f:
             return f.readlines()

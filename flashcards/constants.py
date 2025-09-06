@@ -10,12 +10,8 @@ from dictionary.kellia_uni_goettingen_de import main as kellia
 from dictionary.marcion_sourceforge_net import main as crum
 from dictionary.marcion_sourceforge_net import wiki
 from flashcards import deck
-from utils import file, page, paths, semver
+from utils import file, page, paths
 from xooxle import xooxle
-
-# TODO: (#399) Crum should export images through an interface, so you don't
-# have to look up the files directly.
-EXPLANATORY_SOURCES = "dictionary/marcion_sourceforge_net/data/img-sources"
 
 CRUM_JS = "main.js"  # Relative to the HTML write directory.
 # DIALECTS_JS is a JavaScript line that can be used to set the default dialects.
@@ -32,12 +28,26 @@ def dialects_js(dialects: abc.Iterable[str]) -> str:
     return DIALECTS_JS.format(DIALECT_ARR=list(dialects))
 
 
-CSS = os.path.join(paths.SITE_DIR, "style.css")  # Not a relative path!
-CRUM_SEARCH = "./"  # Relative to the HTML write directory.
-CRUM_HOME = "../"  # Relative to the HTML write directory.
-DAWOUD_DIR = "../dawoud/"  # Relative to the HTML write directory.
-SCAN_DIR = "crum/"  # Relative to the HTML write directory.
-EXPLANATORY_DIR = "explanatory/"  # Relative to the HTML write directory.
+def relpath(dst: str) -> str:
+    """Get the path to the destination relative to the lexicon directory.
+
+    This can be used to construct a short path to navigate to a given
+    destination from the Lexicon directory.
+
+    Args:
+        dst: Destination.
+
+    Returns:
+        Path from the Lexicon directory.
+    """
+    return os.path.relpath(dst, paths.LEXICON_DIR)
+
+
+CRUM_SEARCH: str = relpath(paths.LEXICON_DIR)
+CRUM_HOME: str = relpath(paths.SITE_DIR)
+DAWOUD_DIR: str = relpath(paths.DAWOUD_DIR)
+SCAN_DIR: str = relpath(paths.CRUM_SCAN_DIR)
+EXPLANATORY_DIR: str = relpath(paths.CRUM_EXPLANATORY_DIR)
 
 DESCRIPTION = f"https://{paths.DOMAIN}"
 KELLIA_PREFIX = "https://coptic-dictionary.org/entry.cgi?tla="
@@ -81,7 +91,7 @@ class Decker:
             deck_name=self._deck_name,
             deck_id=self._deck_id,
             deck_description=DESCRIPTION,
-            css_path=CSS,
+            css_path=paths.CSS,
             notes=list(self.notes_aux()),
             html_dir=paths.LEXICON_DIR,
             index_indexes=self.index_indexes(),
@@ -274,8 +284,6 @@ class CrumIndexer(Mother):
 class Crum(Decker):
     """Crum represents a Crum deck."""
 
-    key_sense_code_sense: dict[str, dict[int, str]] = {}
-    images_by_key: defaultdict[str, list[str]] = defaultdict(list)
     key_to_sister: dict[str, Sister] = {}
     key_to_stepsister: dict[str, Sister] = {}
     mother: Mother
@@ -290,7 +298,6 @@ class Crum(Decker):
             root.meaning,
             root.type_name,
         )
-        key_sense_code_sense[root.key] = root.senses
 
     @staticmethod
     def __tla_col(data: str) -> str:
@@ -315,40 +322,6 @@ class Crum(Decker):
     mother = Mother(key_to_sister, SisterWithFrag)
     stepmother = Mother(key_to_stepsister, StepsisterWithFrag)
     indexer = CrumIndexer(key_to_sister, SisterWithFrag)
-
-    for basename in os.listdir(
-        os.path.join(paths.LEXICON_DIR, EXPLANATORY_DIR),
-    ):
-        key = basename[: basename.find("-")]
-        images_by_key[key].append(basename)
-
-    @staticmethod
-    def __get_caption(path: str) -> str:
-        stem = file.stem(path)
-        key, sense, _ = stem.split("-")
-        assert key.isdigit()
-        assert sense.isdigit()
-        return _join(
-            '<span hidden="" class="dev explanatory-key">',
-            stem,
-            " ",
-            "</span>",
-            '<span class="italic lighter small">',
-            # TODO: (#189) Require the presence of a sense once the sense
-            # data has been fully populated.
-            Crum.key_sense_code_sense[key].get(int(sense), ""),
-            "</span>",
-        )
-
-    @staticmethod
-    def __explanatory_alt(path: str) -> str:
-        stem = file.stem(path)
-        source_path = os.path.join(EXPLANATORY_SOURCES, f"{stem}.txt")
-        sources: list[str] = list(
-            map(str.strip, file.read(source_path).splitlines()),
-        )
-        sources = [line for line in sources if line.startswith("http")]
-        return sources[0] if sources else stem
 
     def __init__(
         self,
@@ -448,9 +421,6 @@ class Crum(Decker):
     def __back(self, root: crum.Root) -> str:
         return "".join(self.__back_aux(root))
 
-    # TODO: (#399) This should be a method of Crum's Crum interface, rather than
-    # Flashcards's.
-    # Same for other objects.
     @staticmethod
     def __senses(senses: dict[int, str]) -> str:
         return "; ".join(
@@ -461,11 +431,10 @@ class Crum(Decker):
     def __back_aux(self, root: crum.Root) -> abc.Generator[str]:
         # Meaning
         yield '<div id="root-type-meaning" class="root-type-meaning">'
-        # TODO: (#233) For consistency, this should be renamed to
-        # "type", and the existing "type" class that is used
-        # elsewhere should be renamed to something else.
-        # We have had the convention to use an unqualified class
-        # name to refer to elements that relate to the root.
+        # TODO: (#233) For consistency, the class used for the root type should
+        # be renamed to "type", and the existing "type" class that is used
+        # elsewhere should be renamed to something else. We have had the
+        # convention of assigning unqualified class names to root elements.
         yield '<div id="root-type" class="root-type">'
         yield "(<b>"
         yield root.type_name
@@ -513,22 +482,27 @@ class Crum(Decker):
             yield page.LINE_BREAK
 
         # Images.
-        basenames: list[str] = self.images_by_key.get(root.key, [])
-        basenames = semver.sort_semver(basenames)
-        if not basenames:
+        if not root.images:
             yield page.LINE_BREAK
         else:
             yield '<div id="images" class="images">'
-            for basename in basenames:
+            for img in root.images:
                 yield from _img_aux(
-                    id_=f"explanatory{file.stem(basename)}",
+                    id_=f"explanatory{img.stem}",
                     cls="explanatory",
-                    alt=Crum.__explanatory_alt(basename),
-                    path=os.path.join(EXPLANATORY_DIR, basename),
-                    caption=self.__get_caption(basename),
+                    alt=img.alt,
+                    path=os.path.join(EXPLANATORY_DIR, img.dst_basename),
+                    caption=_join(
+                        '<span hidden="" class="dev explanatory-key">',
+                        img.stem,
+                        " ",
+                        "</span>",
+                        '<span class="italic lighter small">',
+                        root.sense(img) or "",
+                        "</span>",
+                    ),
                 )
             yield "</div>"
-        del basenames
 
         # Editor's notes.
         if root.notes:

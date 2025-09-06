@@ -3,6 +3,9 @@
 import collections
 import functools
 import itertools
+import os
+import pathlib
+import re
 import typing
 from collections import abc
 
@@ -13,11 +16,16 @@ from dictionary.marcion_sourceforge_net import categories as cat
 from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import lexical as lex
 from dictionary.marcion_sourceforge_net import parse, sheet
-from utils import cache, ensure, gcp, log, page, paths, text
+from utils import cache, ensure, file, gcp, log, page, paths, semver, text
 
 _NUM_DRV_COLS: int = 10
 _HUNDRED: int = 100
 assert not _HUNDRED % _NUM_DRV_COLS
+
+_SCRIPT_DIR: pathlib.Path = pathlib.Path(__file__).parent
+_IMG_DIR: pathlib.Path = _SCRIPT_DIR / "data" / "img"
+_SOURCES_DIR: pathlib.Path = _SCRIPT_DIR / "data" / "img-sources"
+_BASENAME_RE: re.Pattern[str] = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
 
 
 # TODO: (#399): Export images as part of this interface, instead of relying on
@@ -199,6 +207,56 @@ class House:
         return bool(self.relations)
 
 
+class Image:
+    """Image represents a Crum explanatory image."""
+
+    _EXT_MAP: dict[str, str] = {
+        ".png": ".jpg",
+    }
+
+    def __init__(self, basename: str) -> None:
+        self.src_basename: str = basename
+        match: re.Match[str] | None = _BASENAME_RE.fullmatch(basename)
+        assert match
+        self.key_word: str = match.group(1)
+        self.sense_num: int = int(match.group(2))
+
+    @functools.cached_property
+    def dst_basename(self) -> str:
+        ext: str = file.ext(self.src_basename)
+        return f"{self.stem}{Image._EXT_MAP.get(ext, ext)}"
+
+    @functools.cached_property
+    def path(self) -> pathlib.Path:
+        return _IMG_DIR / self.src_basename
+
+    @functools.cached_property
+    def stem(self) -> str:
+        return file.stem(self.src_basename)
+
+    @functools.cached_property
+    def sources_path(self) -> pathlib.Path:
+        return _SOURCES_DIR / f"{self.stem}.txt"
+
+    @functools.cached_property
+    def sources(self) -> list[str]:
+        # TODO: (#0) Sources should be stripped at the source.
+        return list(map(str.strip, file.readlines(self.sources_path)))
+
+    @functools.cached_property
+    def http_sources(self) -> list[str]:
+        return [s for s in self.sources if s.startswith("http")]
+
+    @functools.cached_property
+    def alt(self) -> str:
+        # TODO: (#258) An HTTP source should always be present.
+        return self.http_sources[0] if self.http_sources else self.stem
+
+    def __lt__(self, other: object) -> bool:
+        assert isinstance(other, Image)
+        return semver.lt(self.stem, other.stem)
+
+
 class Root(Row):
     """Root represents a root row."""
 
@@ -228,6 +286,10 @@ class Root(Row):
     @functools.cached_property
     def wiki_wip(self) -> str:
         return self.get(sheet.COL.WIKI_WIP)
+
+    @functools.cached_property
+    def images(self) -> list[Image]:
+        return Crum.images_by_key.get(self.key, [])
 
     def update_cell(self, col: sheet.COL, value: str) -> None:
         if super().update(col.value, value):
@@ -285,6 +347,12 @@ class Root(Row):
             "has a gap in senses!",
         )
         return senses
+
+    # TODO: (#189) Require the presence of a sense once the sense data has been
+    # fully populated.
+    def sense(self, img: Image) -> str | None:
+        assert img.key_word == self.key
+        return self.senses.get(img.sense_num, None)
 
     @functools.cached_property
     def quality(self) -> str:
@@ -533,6 +601,21 @@ class Crum:
             A shared, static snapshot of the roots.
         """
         return Crum.roots_live()
+
+    @cache.StaticProperty
+    @staticmethod
+    def images_by_key() -> dict[str, list[Image]]:
+        ensure.equal_sets(
+            file.stems(os.listdir(_IMG_DIR)),
+            file.stems(os.listdir(_SOURCES_DIR)),
+        )
+        return {
+            key: list(group)
+            for key, group in itertools.groupby(
+                sorted(map(Image, os.listdir(_IMG_DIR))),
+                lambda img: img.key_word,
+            )
+        }
 
     @staticmethod
     def roots_live() -> dict[str, Root]:
