@@ -20,9 +20,5 @@ def _sort_key(s: str) -> list[str | int]:
     return list(map(int, _INTEGER_RE.findall(s)))
 
 
-def sort(file_paths: list[str]) -> list[str]:
-    return sorted(file_paths, key=_sort_key)
-
-
 def lt(a: str, b: str) -> bool:
     return _sort_key(a) < _sort_key(b)

@@ -14,8 +14,9 @@ import colorama
 import requests
 from PIL import Image
 
+from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import main as crum
-from utils import ensure, file, log, paths, semver, system, text
+from utils import ensure, file, log, paths, system, text
 
 # TODO: (#5) Prevent users from updating an image without updating its source.
 # Somehow!
@@ -32,39 +33,14 @@ _PREFER_MIN_RESIZE_HEIGHT = 200
 _MAX_RESIZE_HEIGHT = 500  # Maximum allowed height of the resized image. (#240)
 _PREFER_MAX_RESIZE_HEIGHT = 400
 
-_IMG_DIR = str(_SCRIPT_DIR / "data" / "img")
-_IMG_300_DIR = "docs/crum/explanatory/"
-
 _FILE_NAME_RE = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
 _STEM_RE = re.compile("[0-9]+-[0-9]+-[0-9]+")
-_NAME_RE = re.compile("[A-Z][a-zA-Z ]*")
 
 _SOURCES_DIR: str = str(_SCRIPT_DIR / "data" / "img-sources")
 
 _BANNED_TOP_LEVEL_DOMAINS = {
     "gstatic.com",
 }
-
-# NOTE: SVG conversion is nondeterministic, which is badly disruptive to our
-# pipelines, so we ban it.
-# PNG conversion is deterministic as long as it's converted to JPG, so we
-# accept it but convert it.
-_EXT_MAP = {
-    ".png": ".jpg",
-}
-_IMAGE_EXTENSIONS = {
-    ".avif",
-    ".gif",
-    ".jpeg",
-    ".jpg",
-    ".JPG",
-    ".png",
-    ".webp",
-    ".svg",
-}
-_VALID_EXTENSIONS = _IMAGE_EXTENSIONS.difference({".svg"})
-_VALID_EXTENSIONS_300 = _VALID_EXTENSIONS.difference({".png"})
-
 
 _QUERIERS_FMT: dict[str, list[str]] = {
     "g": ["https://www.google.com/search?q={query}&tbm=isch"],
@@ -174,10 +150,10 @@ _ = _argparser.add_argument(
     " If --batch is given, this flag has a different interpretation."
     " It means don't convert already converted files."
     "You should only use this"
-    f" flag if there are no obsolete images in {_IMG_300_DIR}/."
+    f" flag if there are no obsolete images in {constants.IMG_DST_DIR}/."
     " Images can be obsolete if, for example, an image was modified"
-    f" in {_IMG_DIR}/, and the generated version of the old image is"
-    f" still present in ${_IMG_300_DIR}/."
+    f" in {constants.IMG_SRC_DIR}/, and the generated version of the old image"
+    f" is still present in ${constants.IMG_DST_DIR}/."
     " If run with --skip_existing, this script (as the flag name suggests)"
     " will generate only the absent images, but (unlike other scripts in"
     " this repo) won't look at the file modification timestamps."
@@ -228,19 +204,11 @@ _ = _argparser.add_argument(
 )
 
 _ = _argparser.add_argument(
-    "-v",
-    "--validate",
-    default=False,
-    action="store_true",
-    help="If true, just validate the directories and exit.",
-)
-
-_ = _argparser.add_argument(
     "-b",
     "--batch",
     default=False,
     action="store_true",
-    help=f"If true, batch-process images in {_IMG_DIR} and exit."
+    help=f"If true, batch-process images in {constants.IMG_SRC_DIR} and exit."
     "Batch-processing includes converting images, and deleting obsolete images"
     " and sources."
     " NOTE: We intentionally refrain from populating absent sources with a"
@@ -339,20 +307,24 @@ def _is_wiki(url: str) -> bool:
 
 
 def _get_target(path: str) -> str:
-    assert path.startswith(_IMG_DIR)
     stem, ext = file.splitext(path)
     assert _STEM_RE.fullmatch(stem)
-    ensure.ensure(ext in _VALID_EXTENSIONS, ext, "is not a valid extension")
-    return os.path.join(_IMG_300_DIR, stem + _EXT_MAP.get(ext, ext))
+    ensure.ensure(
+        ext in constants.VALID_SRC_EXTENSIONS,
+        ext,
+        "is not a valid extension",
+    )
+    return os.path.join(
+        constants.IMG_DST_DIR,
+        stem + constants.EXT_MAP.get(ext, ext),
+    )
 
 
 def _get_source(path: str) -> str:
-    assert path.startswith(_IMG_DIR)
     return os.path.join(_SOURCES_DIR, file.stem(path) + ".txt")
 
 
 def _convert(path: str, skip_existing: bool = False) -> None:
-    assert path.startswith(_IMG_DIR)
     target = _get_target(path)
     if os.path.exists(target) and skip_existing:
         return
@@ -381,7 +353,6 @@ def main():
             None,
             [
                 args.plot,
-                args.validate,
                 args.batch,
                 args.rm,
                 args.mv,
@@ -396,9 +367,6 @@ def main():
     )
     del actions
 
-    if args.validate:
-        validate()
-        exit()
     if args.batch:
         _batch(args)
         exit()
@@ -447,8 +415,8 @@ def _retrieve(
 
 def _stem_to_img_path(stem: str, ext: str = "") -> str:
     if ext:
-        return os.path.join(_IMG_DIR, stem + ext)
-    path = glob.glob(os.path.join(_IMG_DIR, stem + ".*"))
+        return os.path.join(constants.IMG_SRC_DIR, stem + ext)
+    path = glob.glob(os.path.join(constants.IMG_SRC_DIR, stem + ".*"))
     assert len(path) == 1
     return path[0]
 
@@ -466,7 +434,7 @@ def _rm(stem: str) -> None:
 
 
 def _exists(stem: str) -> bool:
-    return bool(glob.glob(os.path.join(_IMG_DIR, stem + ".*")))
+    return bool(glob.glob(os.path.join(constants.IMG_SRC_DIR, stem + ".*")))
 
 
 def _mv(a_stem: str, b_stem: str) -> None:
@@ -524,7 +492,9 @@ def _pretty(j: dict[str, str] | dict[str, list[str]] | list[str]):
 
 
 def _is_image_url(url: str) -> bool:
-    return any(_basename(url).endswith(ext) for ext in _IMAGE_EXTENSIONS)
+    return any(
+        _basename(url).endswith(ext) for ext in constants.IMAGE_EXTENSIONS
+    )
 
 
 def _is_invalid_url(url: str) -> list[str]:
@@ -581,7 +551,7 @@ def _infer_urls(*urls: str) -> tuple[list[str], list[str]]:
 
 def _existing(key: str) -> list[str]:
     assert key.isdigit()
-    return glob.glob(os.path.join(_IMG_DIR, f"{key}-*"))
+    return glob.glob(os.path.join(constants.IMG_SRC_DIR, f"{key}-*"))
 
 
 def _clear(key: str) -> None:
@@ -893,7 +863,7 @@ class _Prompter:
         # Force valid extension.
         ensure.members(
             map(file.ext, files),
-            _VALID_EXTENSIONS,
+            constants.VALID_SRC_EXTENSIONS,
             "Invalid file extensions! Remove the images, or add the"
             + " extensions to the list if you're sure your script can"
             + " process them.",
@@ -939,7 +909,7 @@ class _Prompter:
             idx += 1
             ext = file.ext(f)
             new_file = os.path.join(
-                _IMG_DIR,
+                constants.IMG_SRC_DIR,
                 f"{self.root.key}-{sense}-{idx}{ext}",
             )
             _ = pathlib.Path(f).rename(new_file)
@@ -953,89 +923,18 @@ def _batch(args: argparse.Namespace):
     def key(path: str):
         return int(file.stem(path).split("-")[0])
 
-    images = file.paths(_IMG_DIR)
+    images = file.paths(constants.IMG_SRC_DIR)
     images = sorted(images, key=key)
     for path in images:
         _convert(path, args.skip_existing)
     targets = {_get_target(p) for p in images}
-    for converted in file.paths(_IMG_300_DIR):
+    for converted in file.paths(constants.IMG_DST_DIR):
         if converted not in targets:
             os.remove(converted)
     sources = {_get_source(path) for path in images}
     for src in file.paths(_SOURCES_DIR):
         if src not in sources:
             os.remove(src)
-
-
-def _listdir_sorted(directory: str) -> list[str]:
-    return semver.sort(file.paths(directory))
-
-
-# TODO: (#399) Perform validation during image retrieval as part of the Crum
-# interface in `main.py`.
-def validate():
-    images = _listdir_sorted(_IMG_DIR)
-    converted_images = _listdir_sorted(_IMG_300_DIR)
-    sources = _listdir_sorted(_SOURCES_DIR)
-
-    ensure.unique(file.stems(images), "images:")
-    ensure.unique(file.stems(converted_images), "converted images:")
-    ensure.unique(file.stems(sources), "sources:")
-
-    # Checking that extensions are valid.
-    ensure.members(
-        file.exts(images),
-        _VALID_EXTENSIONS,
-        "Images: Unknown extension:",
-    )
-    ensure.members(
-        file.exts(converted_images),
-        _VALID_EXTENSIONS_300,
-        "Converted Images: Unknown extension:",
-    )
-    ensure.members(file.exts(sources), {".txt"}, "Sources: Unknown extension:")
-
-    # Verify that all three directories have the same set of IDs.
-    ensure.equal_sets(
-        file.stems(images),
-        file.stems(converted_images),
-        "Images and converted images:",
-    )
-    ensure.equal_sets(
-        file.stems(images),
-        file.stems(sources),
-        "Images and sources:",
-    )
-
-    # Check that all images have valid IDs.
-    for stem in file.stems(images):
-        ensure.ensure(_STEM_RE.fullmatch(stem), "invalid stem:", stem)
-
-    # Validate content of the source files.
-    for path in sources:
-        content: str = file.read(path)
-        if not content:
-            # TODO: (#258) Ban empty sources.
-            continue
-        lines: list[str] = content.splitlines()
-        del content
-        ensure.ensure(
-            lines,
-            "Source file is not empty, but has empty lines:",
-            path,
-        )
-        for line in lines:
-            if line.startswith("http"):
-                continue
-            # TODO: (#258) Stop using city names. Always have a URL.
-            if _NAME_RE.fullmatch(line):
-                continue
-            log.fatal(
-                "Can't make sense of this source:",
-                line,
-                "in file",
-                path,
-            )
 
 
 if __name__ == "__main__":

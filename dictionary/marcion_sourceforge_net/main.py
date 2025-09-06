@@ -22,11 +22,6 @@ _NUM_DRV_COLS: int = 10
 _HUNDRED: int = 100
 assert not _HUNDRED % _NUM_DRV_COLS
 
-_SCRIPT_DIR: pathlib.Path = pathlib.Path(__file__).parent
-_IMG_DIR: pathlib.Path = _SCRIPT_DIR / "data" / "img"
-_SOURCES_DIR: pathlib.Path = _SCRIPT_DIR / "data" / "img-sources"
-_BASENAME_RE: re.Pattern[str] = re.compile(r"(\d+)-(\d+)-(\d+)\.[^\d]+")
-
 
 # TODO: (#399): Export images as part of this interface, instead of relying on
 # users querying the image directory directly.
@@ -210,25 +205,33 @@ class House:
 class Image:
     """Image represents a Crum explanatory image."""
 
-    _EXT_MAP: dict[str, str] = {
-        ".png": ".jpg",
-    }
-
     def __init__(self, basename: str) -> None:
         self.src_basename: str = basename
-        match: re.Match[str] | None = _BASENAME_RE.fullmatch(basename)
+        match: re.Match[str] | None = constants.BASENAME_RE.fullmatch(basename)
         assert match
         self.key_word: str = match.group(1)
         self.sense_num: int = int(match.group(2))
+        self.src_ext: str = match.group(4)
+        ensure.ensure(
+            self.src_ext in constants.VALID_SRC_EXTENSIONS,
+            self.src_path,
+            "has an invalid extension",
+            self.src_ext,
+        )
 
     @functools.cached_property
     def dst_basename(self) -> str:
-        ext: str = file.ext(self.src_basename)
-        return f"{self.stem}{Image._EXT_MAP.get(ext, ext)}"
+        dst_ext: str = constants.EXT_MAP.get(self.src_ext, self.src_ext)
+        assert dst_ext in constants.VALID_DST_EXTENSIONS
+        return f"{self.stem}{dst_ext}"
 
     @functools.cached_property
-    def path(self) -> pathlib.Path:
-        return _IMG_DIR / self.src_basename
+    def src_path(self) -> pathlib.Path:
+        return constants.IMG_SRC_DIR / self.src_basename
+
+    @functools.cached_property
+    def dst_path(self) -> pathlib.Path:
+        return constants.IMG_DST_DIR / self.dst_basename
 
     @functools.cached_property
     def stem(self) -> str:
@@ -236,12 +239,28 @@ class Image:
 
     @functools.cached_property
     def sources_path(self) -> pathlib.Path:
-        return _SOURCES_DIR / f"{self.stem}.txt"
+        return constants.SOURCES_DIR / f"{self.stem}.txt"
 
     @functools.cached_property
     def sources(self) -> list[str]:
         # TODO: (#0) Sources should be stripped at the source.
-        return list(map(str.strip, file.readlines(self.sources_path)))
+        sources: list[str] = list(
+            map(str.strip, file.readlines(self.sources_path)),
+        )
+        ensure.ensure(
+            all(sources),
+            "source file",
+            self.sources_path,
+            "appears to have empty lines!",
+        )
+        for s in sources:
+            ensure.ensure(
+                s.startswith("http") or constants.NAME_RE.fullmatch(s),
+                self.sources_path,
+                "has an invalid source",
+                s,
+            )
+        return sources
 
     @functools.cached_property
     def http_sources(self) -> list[str]:
@@ -605,14 +624,22 @@ class Crum:
     @cache.StaticProperty
     @staticmethod
     def images_by_key() -> dict[str, list[Image]]:
+        stems: list[str] = list(
+            map(file.stem, os.listdir(constants.IMG_SRC_DIR)),
+        )
+        ensure.unique(stems)
         ensure.equal_sets(
-            file.stems(os.listdir(_IMG_DIR)),
-            file.stems(os.listdir(_SOURCES_DIR)),
+            stems,
+            map(file.stem, os.listdir(constants.SOURCES_DIR)),
+        )
+        ensure.equal_sets(
+            stems,
+            map(file.stem, os.listdir(paths.CRUM_EXPLANATORY_DIR)),
         )
         return {
             key: list(group)
             for key, group in itertools.groupby(
-                sorted(map(Image, os.listdir(_IMG_DIR))),
+                sorted(map(Image, os.listdir(constants.IMG_SRC_DIR))),
                 lambda img: img.key_word,
             )
         }

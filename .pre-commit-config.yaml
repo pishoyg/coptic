@@ -337,14 +337,6 @@ repos:
 
   - repo: local
     hooks:
-      # TODO: (#399) Perform image validate during retrieval, as part of the
-      # Crum interface, and delete this hook.
-      - id: crum-img-validate
-        name: crum-img-validate
-        entry: ./dictionary/marcion_sourceforge_net/img_helper.py --validate
-        language: system
-        files: ^dictionary/marcion_sourceforge_net/data/img.*$
-        pass_filenames: false
       # DO-NOT-SUBMIT
       - id: check-do-not-submit
         name: check-do-not-submit

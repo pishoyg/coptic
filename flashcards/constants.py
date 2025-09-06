@@ -1,6 +1,7 @@
 """This package hosts hardcoded definitions of our dictionary structure."""
 
 import os
+import pathlib
 import re
 import typing
 from collections import abc, defaultdict
@@ -28,7 +29,7 @@ def dialects_js(dialects: abc.Iterable[str]) -> str:
     return DIALECTS_JS.format(DIALECT_ARR=list(dialects))
 
 
-def relpath(dst: str) -> str:
+def relpath(dst: str | pathlib.Path) -> str:
     """Get the path to the destination relative to the lexicon directory.
 
     This can be used to construct a short path to navigate to a given
@@ -47,7 +48,6 @@ CRUM_SEARCH: str = relpath(paths.LEXICON_DIR)
 CRUM_HOME: str = relpath(paths.SITE_DIR)
 DAWOUD_DIR: str = relpath(paths.DAWOUD_DIR)
 SCAN_DIR: str = relpath(paths.CRUM_SCAN_DIR)
-EXPLANATORY_DIR: str = relpath(paths.CRUM_EXPLANATORY_DIR)
 
 DESCRIPTION = f"https://{paths.DOMAIN}"
 KELLIA_PREFIX = "https://coptic-dictionary.org/entry.cgi?tla="
@@ -491,7 +491,7 @@ class Crum(Decker):
                     id_=f"explanatory{img.stem}",
                     cls="explanatory",
                     alt=img.alt,
-                    path=os.path.join(EXPLANATORY_DIR, img.dst_basename),
+                    path=relpath(img.dst_path),
                     caption=_join(
                         '<span hidden="" class="dev explanatory-key">',
                         img.stem,

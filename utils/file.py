@@ -12,7 +12,7 @@ import pandas as pd
 from utils import log
 
 
-def mkdir(path: str) -> None:
+def mkdir(path: str | pathlib.Path) -> None:
     pathlib.Path(path).mkdir(parents=True, exist_ok=True)
 
 
@@ -40,7 +40,7 @@ def write(
 
 def writelines(
     content: abc.Generator[str],
-    path: str,
+    path: str | pathlib.Path,
     report: bool = True,
     make_dir: bool = False,
 ) -> None:
@@ -67,28 +67,20 @@ def readlines(path: str | pathlib.Path) -> list[str]:
             return f.readlines()
 
 
-def paths(dir_path: str) -> list[str]:
+def paths(dir_path: str | pathlib.Path) -> list[str]:
     return [os.path.join(dir_path, f) for f in os.listdir(dir_path)]
 
 
-def splitext(path: str) -> tuple[str, str]:
+def splitext(path: str | pathlib.Path) -> tuple[str, str]:
     return os.path.splitext(os.path.basename(path))
 
 
-def stem(path: str) -> str:
+def stem(path: str | pathlib.Path) -> str:
     return splitext(path)[0]
 
 
-def stems(file_paths: list[str]) -> list[str]:
-    return list(map(stem, file_paths))
-
-
-def ext(path: str) -> str:
+def ext(path: str | pathlib.Path) -> str:
     return splitext(path)[1]
-
-
-def exts(file_paths: list[str]) -> list[str]:
-    return list(map(ext, file_paths))
 
 
 def json_dumps(j: object, **kwargs: typing.Any) -> str:
@@ -101,7 +93,7 @@ def json_dumps(j: object, **kwargs: typing.Any) -> str:
     )
 
 
-def read_tsv(tsv: str | io.StringIO) -> pd.DataFrame:
+def read_tsv(tsv: str | io.StringIO | pathlib.Path) -> pd.DataFrame:
     return pd.read_csv(
         tsv,
         sep="\t",

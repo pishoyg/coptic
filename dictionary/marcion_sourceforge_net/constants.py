@@ -1,9 +1,11 @@
 """Crum dictionary and parsing constants."""
 
+import pathlib
 import re
 
 from dictionary.marcion_sourceforge_net import lexical
 from morphology import inflect
+from utils import paths
 
 # Dialects.
 DIALECTS: list[str] = [
@@ -298,3 +300,32 @@ QUALITY: list[str] = [
     "complete++",
     "complete+cz",
 ]
+
+# Image constants:
+_SCRIPT_DIR: pathlib.Path = pathlib.Path(__file__).parent
+IMG_SRC_DIR: pathlib.Path = _SCRIPT_DIR / "data" / "img"
+IMG_DST_DIR: pathlib.Path = pathlib.Path(paths.CRUM_EXPLANATORY_DIR)
+SOURCES_DIR: pathlib.Path = _SCRIPT_DIR / "data" / "img-sources"
+BASENAME_RE: re.Pattern[str] = re.compile(r"(\d+)-(\d+)-(\d+)(\.[^\d]+)")
+NAME_RE: re.Pattern[str] = re.compile("[A-Z][a-zA-Z ]*")
+
+# NOTE: SVG conversion is nondeterministic, which is badly disruptive to our
+# pipelines, so we ban it.
+# PNG conversion is deterministic as long as it's converted to JPG, so we
+# accept it but convert it.
+EXT_MAP: dict[str, str] = {
+    ".png": ".jpg",
+}
+
+IMAGE_EXTENSIONS: set[str] = {
+    ".avif",
+    ".gif",
+    ".jpeg",
+    ".jpg",
+    ".JPG",
+    ".png",
+    ".webp",
+    ".svg",
+}
+VALID_SRC_EXTENSIONS: set[str] = IMAGE_EXTENSIONS.difference({".svg"})
+VALID_DST_EXTENSIONS: set[str] = VALID_SRC_EXTENSIONS.difference({".png"})
