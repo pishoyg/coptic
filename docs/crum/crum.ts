@@ -460,7 +460,7 @@ export function handleWikiReferences(elem: HTMLElement): void {
         const url = `${basename}#v${verse}`;
         return url;
       },
-      [ccls.HOVER_LINK]
+      [ccls.HOVER_LINK, cls.REFERENCE]
     );
   });
 }
