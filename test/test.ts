@@ -3,7 +3,8 @@
  */
 
 import * as play from '@playwright/test';
-import * as logger from '../docs/logger.ts';
+import * as logger from '../docs/logger.js';
+import * as cls from '../docs/crum/cls.js';
 
 /**
  * PAGES_TO_TEST defines the list of site pages to test.
@@ -74,7 +75,7 @@ play.test(
     // expected to increase as we cover more sources.
     const wantWikiRefs = 111;
     await page.goto(path, { waitUntil: 'networkidle' });
-    const got: number = await page.locator('.reference').count();
+    const got: number = await page.locator(`.${cls.REFERENCE}`).count();
     logger.ensure(got === wantWikiRefs, 'want', wantWikiRefs, 'got', got);
   }
 );
