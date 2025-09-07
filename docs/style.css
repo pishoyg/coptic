@@ -206,7 +206,7 @@ table {
 }
 
 .wiki .reference {
-  color: dodgerblue;
+  color: #1873cc; /* dark blue */
 }
 
 .wiki .arabic,
@@ -225,11 +225,15 @@ table {
 }
 
 .wiki .dialect {
-  color: darkgoldenrod;
+  color: #835f08; /* dark gold */
 }
 
 .wiki .coptic {
   font-weight: bold;
+}
+
+.wiki b {
+  color: indigo;
 }
 
 .sister-index {
