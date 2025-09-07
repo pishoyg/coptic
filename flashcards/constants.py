@@ -1052,7 +1052,7 @@ CRUM_WIKI_XOOXLE: xooxle.Index = xooxle.Index(
             # the HTML, this approach is simpler, because it's inherited from
             # Wiki.
             # For Arabic, Amharic, Hebrew, and Aramaic, this only increases the
-            # size of the index by ~3%.
+            # size of the index by ~8%.
             # If we were to need the classes for Coptic or Greek, this would
             # increase the size of the index more significantly, so we shouldn't
             # do it.
@@ -1060,6 +1060,7 @@ CRUM_WIKI_XOOXLE: xooxle.Index = xooxle.Index(
             # them below.
             retain_classes={
                 "dialect",
+                "headword",
                 "wiki",
                 "arabic",
                 "amharic",
