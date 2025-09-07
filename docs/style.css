@@ -217,7 +217,15 @@ table {
 }
 
 .wiki .headword {
-  color: forestgreen;
+  font-size: large;
+}
+
+.dialect {
+  font-style: italic;
+}
+
+.wiki .dialect {
+  color: darkgoldenrod;
 }
 
 .wiki .coptic {
