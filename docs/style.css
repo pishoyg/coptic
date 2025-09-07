@@ -205,6 +205,25 @@ table {
   margin-bottom: 0.5em;
 }
 
+.wiki .reference {
+  color: dodgerblue;
+}
+
+.wiki .arabic,
+.wiki .aramaic,
+.wiki .hebrew,
+.wiki .amharic {
+  color: mediumseagreen;
+}
+
+.wiki .headword {
+  color: forestgreen;
+}
+
+.wiki .coptic {
+  font-weight: bold;
+}
+
 .sister-index {
   opacity: 0.5;
 }
