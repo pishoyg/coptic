@@ -383,7 +383,7 @@ export function addCopticLookups(elem: HTMLElement): void {
     COPTIC_RE,
     (match: RegExpExecArray) => paths.LOOKUP_URL_PREFIX + match[0],
     [ccls.HOVER_LINK],
-    [cls.TYPE]
+    [cls.TYPE, cls.WIKI]
   );
 }
 
