@@ -377,7 +377,6 @@ export function addEnglishLookups(elem) {
  */
 export function handleWikiReferences(elem) {
   elem.querySelectorAll(`.${cls.WIKI}`).forEach((el) => {
-    let counter = 0;
     html.linkifyText(
       el,
       REFERENCE_RE,
@@ -401,7 +400,6 @@ export function handleWikiReferences(elem) {
         }
         const basename = `${paths.BIBLE}/${bookID}_${chapter}.html`;
         const url = `${basename}#v${verse}`;
-        logger.info(`${++counter}:`, match[0], 'has a hyperlink to', url);
         return url;
       },
       [ccls.HOVER_LINK]
