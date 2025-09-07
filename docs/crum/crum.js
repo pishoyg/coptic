@@ -330,7 +330,7 @@ export function addCopticLookups(elem) {
     COPTIC_RE,
     (match) => paths.LOOKUP_URL_PREFIX + match[0],
     [ccls.HOVER_LINK],
-    [cls.TYPE]
+    [cls.TYPE, cls.WIKI]
   );
 }
 /**

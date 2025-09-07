@@ -1,6 +1,7 @@
 /** Package html defines DOM manipulation helpers. */
 import * as browser from './browser.js';
 import * as logger from './logger.js';
+import * as css from './css.js';
 /**
  *
  * @param el
@@ -30,100 +31,84 @@ export function makeSpanLinkToAnchor(el, target) {
   moveElement(el, 'a', { href: target });
 }
 /**
- * @param node
- * @param regex
- * @param directParentExcludedClasses
- * @returns
- */
-function shouldLinkify(node, regex, directParentExcludedClasses) {
-  if (!node.nodeValue) {
-    // The node has no text!
-    return false;
-  }
-  if (!regex.test(node.nodeValue)) {
-    // This text node doesn't match the regex.
-    return false;
-  }
-  const parent = node.parentElement;
-  if (!parent) {
-    // We can't examine the parent tag name or classes for exclusions.
-    // Accept the node.
-    return true;
-  }
-  if (parent.tagName === 'A') {
-    // The parent is already a link!
-    return false;
-  }
-  if (
-    directParentExcludedClasses.some((cls) => parent.classList.contains(cls))
-  ) {
-    // This parent is explicitly excluded.
-    return false;
-  }
-  return true;
-}
-/* eslint-disable max-lines-per-function */
-// TODO: (#0) Shorten this function.
-/**
  *
  * @param root
  * @param regex
  * @param url
  * @param classes
- * @param directParentExcludedClasses
+ * @param excludedClasses
  */
-export function linkifyText(
-  root,
-  regex,
-  url,
-  classes,
-  directParentExcludedClasses = []
-) {
+export function linkifyText(root, regex, url, classes, excludedClasses = []) {
   const walker = document.createTreeWalker(
     root,
     NodeFilter.SHOW_TEXT,
-    (node) =>
-      shouldLinkify(node, regex, directParentExcludedClasses)
-        ? NodeFilter.FILTER_ACCEPT
-        : NodeFilter.FILTER_REJECT
-  );
-  // We must store the replacements in a list because we can't mutate the DOM
-  // while walking.
-  const replacements = [];
-  for (let node; (node = walker.nextNode()); ) {
-    if (!node.nodeValue) {
-      continue;
+    (node) => {
+      if (!node.nodeValue || !regex.test(node.nodeValue)) {
+        // This node doesn't contain a matching text.
+        return NodeFilter.FILTER_REJECT;
+      }
+      if (
+        excludedClasses.length &&
+        node.parentElement?.closest(css.classQuery(...excludedClasses))
+      ) {
+        // This node is excluded.
+        return NodeFilter.FILTER_REJECT;
+      }
+      if (node.parentElement?.closest('a')) {
+        // This node is already a link.
+        return NodeFilter.FILTER_REJECT;
+      }
+      return NodeFilter.FILTER_ACCEPT;
     }
-    const fragment = document.createDocumentFragment();
-    let lastIndex = 0;
-    const text = node.nodeValue;
-    regex.lastIndex = 0;
-    for (let match; (match = regex.exec(text)) !== null; ) {
-      const query = match[0];
+  );
+  // We can't replace nodes on the fly, as this could corrupt the walker.
+  // Instead, we store all nodes that need replacement, and then process them
+  // afterwards.
+  const nodes = [];
+  while (walker.nextNode()) {
+    nodes.push(walker.currentNode);
+  }
+  nodes.forEach((node) => {
+    linkifyTextAux(node, regex, url, classes);
+  });
+}
+/**
+ *
+ * @param node
+ * @param regex
+ * @param url
+ * @param classes
+ */
+function linkifyTextAux(node, regex, url, classes) {
+  const text = node.nodeValue;
+  regex.lastIndex = 0;
+  let lastIndex = 0;
+  const fragment = document.createDocumentFragment();
+  for (let match; (match = regex.exec(text)); ) {
+    const query = match[0];
+    // preceding plain text
+    if (match.index > lastIndex) {
       fragment.appendChild(
         document.createTextNode(text.slice(lastIndex, match.index))
       );
-      const targetUrl = url(match);
-      if (!targetUrl) {
-        lastIndex = match.index;
-        continue;
-      }
+    }
+    const targetUrl = url(match);
+    if (targetUrl) {
       const link = document.createElement('span');
       link.classList.add(...classes);
+      link.textContent = query;
       link.addEventListener('click', () => {
         browser.open(targetUrl);
       });
-      link.textContent = query;
       fragment.appendChild(link);
-      lastIndex = match.index + query.length;
+    } else {
+      // keep unmatched text as-is
+      fragment.appendChild(document.createTextNode(query));
     }
-    if (lastIndex < text.length) {
-      fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
-    }
-    replacements.push([node, fragment]);
+    lastIndex = match.index + query.length;
   }
-  replacements.forEach(([node, fragment]) => {
-    node.replaceWith(fragment);
-  });
+  if (lastIndex < text.length) {
+    fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
+  }
+  node.replaceWith(fragment);
 }
-/* eslint-enable max-lines-per-function */
