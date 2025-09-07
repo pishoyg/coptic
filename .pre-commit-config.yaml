@@ -374,5 +374,5 @@ repos:
         entry: npx playwright test
         language: system
         types: [file]
-        files: ^docs/.*
+        files: ^(docs|test)/.*
         pass_filenames: false
