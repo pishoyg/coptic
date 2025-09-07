@@ -662,6 +662,13 @@ class Crum:
             )
         }
 
+    # TODO: (#399) Retrieving a fresh version of the sheet will become
+    # unnecessary if your interface is capable of updating the local copy
+    # whenever the origin is updated.
+    # In general, any update method in your interface should both update the
+    # sheet (a.k.a. origin or source of truth), as well as the local snapshot.
+    # This way, retrieving a new copy is unnecessary, and you can remove this
+    # method.
     @staticmethod
     def roots_live() -> dict[str, Root]:
         """Retrieve a fresh snapshot of the roots.
