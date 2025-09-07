@@ -25,6 +25,10 @@ export const MEANING = 'meaning';
 export const NAG_HAMMADI = 'nag-hammadi';
 export const NAVIGATE = 'navigate'; // TODO: (#203) Although this class's primary use is Anki, it might actually belong in the header.
 export const QUALITY = 'quality';
+/**
+ * REFERENCE represents a Crum Wiki reference, such as a biblical verse.
+ */
+export const REFERENCE = 'reference';
 export const ROOT_TYPE = 'root-type';
 export const SENSES = 'senses';
 export const SISTERS_TABLE = 'sisters-table';

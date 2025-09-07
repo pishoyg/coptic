@@ -402,7 +402,7 @@ export function handleWikiReferences(elem) {
         const url = `${basename}#v${verse}`;
         return url;
       },
-      [ccls.HOVER_LINK]
+      [ccls.HOVER_LINK, cls.REFERENCE]
     );
   });
 }
