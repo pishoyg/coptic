@@ -162,7 +162,7 @@ class Derivation(Row):
     @typing.override
     @classmethod
     def worksheet(cls) -> gspread.worksheet.Worksheet:
-        return sheet.DERIVATIONS
+        return sheet.derivations_sheet()
 
     @typing.override
     @classmethod
@@ -294,7 +294,7 @@ class Root(Row):
     @typing.override
     @classmethod
     def worksheet(cls) -> gspread.worksheet.Worksheet:
-        return sheet.ROOTS
+        return sheet.roots_sheet()
 
     @typing.override
     @classmethod

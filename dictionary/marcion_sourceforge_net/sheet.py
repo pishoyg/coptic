@@ -1,6 +1,7 @@
 """Basic helpers to interact with the Crum sheet through Google Sheets API."""
 
 import enum
+import functools
 
 import gspread
 
@@ -13,9 +14,20 @@ GSPREAD_URL: str = (
 ROOTS_URL: str = f"{GSPREAD_URL}/edit?gid=1575616379"
 DERIVATIONS_URL: str = f"{GSPREAD_URL}/edit?gid=698638592"
 
-_SHEET: gspread.spreadsheet.Spreadsheet = gcp.spreadsheet(GSPREAD_URL)
-ROOTS: gspread.worksheet.Worksheet = _SHEET.get_worksheet(0)
-DERIVATIONS: gspread.worksheet.Worksheet = _SHEET.get_worksheet(1)
+
+@functools.cache
+def _sheet() -> gspread.spreadsheet.Spreadsheet:
+    return gcp.spreadsheet(GSPREAD_URL)
+
+
+@functools.cache
+def roots_sheet() -> gspread.worksheet.Worksheet:
+    return _sheet().get_worksheet(0)
+
+
+@functools.cache
+def derivations_sheet() -> gspread.worksheet.Worksheet:
+    return _sheet().get_worksheet(1)
 
 
 class COL(enum.Enum):
@@ -105,7 +117,7 @@ def _valid_drv_record(record: gcp.Record) -> None:
 def roots() -> list[gcp.Record]:
     records: list[gcp.Record] = [
         gcp.Record(idx + 2, record)
-        for idx, record in enumerate(ROOTS.get_all_records())
+        for idx, record in enumerate(roots_sheet().get_all_records())
     ]
     _verify_balanced_brackets(records)
     ensure.ensure(
@@ -121,7 +133,7 @@ def derivations() -> list[gcp.Record]:
     records: list[gcp.Record] = [
         gcp.Record(idx + 2, record)
         for idx, record in enumerate(
-            DERIVATIONS.get_all_records(),
+            derivations_sheet().get_all_records(),
         )
     ]
     _verify_balanced_brackets(records)

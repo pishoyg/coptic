@@ -376,7 +376,7 @@ class _Matriarch:
         # Worksheet 0 has the roots.
         # TODO: (#399): Define the sheet and record writing interface, instead
         # of having your pipelines directly use the Google Sheets API.
-        self.sheet: gspread.worksheet.Worksheet = sheet.ROOTS
+        self.sheet: gspread.worksheet.Worksheet = sheet.roots_sheet()
 
         self.col_idx: dict[str, int] = gcp.column_nums(self.sheet)
 
