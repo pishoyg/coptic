@@ -155,9 +155,17 @@ export class Form {
   populateFromParams() {
     // Populate form values using query parameters.
     const url = new URL(window.location.href);
-    this.searchBox.value = url.searchParams.get(Param.QUERY) ?? '';
-    this.fullWordCheckbox.checked = url.searchParams.get(Param.FULL) === 'true';
-    this.regexCheckbox.checked = url.searchParams.get(Param.REGEX) === 'true';
+    const query = url.searchParams.get(Param.QUERY);
+    if (query) {
+      this.searchBox.value = query;
+    }
+    // Boolean parameters are either true, or absent from the URL.
+    if (url.searchParams.get(Param.FULL)) {
+      this.fullWordCheckbox.checked = true;
+    }
+    if (url.searchParams.get(Param.REGEX)) {
+      this.regexCheckbox.checked = true;
+    }
   }
   /**
    * Update the given URL parameter.
