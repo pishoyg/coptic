@@ -211,22 +211,38 @@ export function handleDawoudPage(elem: HTMLElement): void {
  */
 export function handleDrvKey(elem: HTMLElement): void {
   elem
-    .querySelectorAll<HTMLElement>(`.${cls.DRV_KEY}`)
-    .forEach((key: HTMLElement) => {
-      const frag = `#drv${key.innerText}`;
+    .querySelectorAll<HTMLAnchorElement>(`.${cls.DRV_KEY}`)
+    .forEach((key: HTMLAnchorElement) => {
+      // The key should have the link to the row containing the derivation
+      // definition in our source-of-truth sheet.
+      // Make the target _blank so it will open in a separate page.
+      key.target = '_blank';
 
+      // Create a second anchor pointing to this row in the HTML. This is useful
+      // for users to share links to specific derivations.
+      const frag = `#drv${key.innerText}`;
       const a: HTMLAnchorElement = document.createElement('a');
       a.href = frag;
-      a.classList.add(cls.DRV_LINK, ccls.HOVER_LINK);
-      a.appendChild(document.createTextNode('🔗'));
+      a.classList.add(ccls.HOVER_LINK);
+      a.innerText = '🔗';
 
-      key.parentNode!.insertBefore(a, key);
-      a.appendChild(key);
+      // Store the key parent.
+      const parent: ParentNode = key.parentNode!;
+
+      // Create a span bearing the two anchors, with a space in between.
+      const span: HTMLSpanElement = document.createElement('span');
+      span.classList.add(cls.DRV_LINK);
+      span.replaceChildren(a, ' ', key);
+
+      // Add the new span as a child to the original parent.
+      parent.appendChild(span);
 
       if (iam.amI('anki')) {
         // Yanking is not straightforward on Anki, for what it seems!
         return;
       }
+
+      // Clicking on the anchor also copies the URL.
       a.addEventListener('click', () => {
         const url: URL = new URL(window.location.href);
         url.hash = frag;

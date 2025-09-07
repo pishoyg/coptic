@@ -241,6 +241,10 @@ table {
   background-color: #ffa;
 }
 
+.drv-key {
+  display: none;
+}
+
 .drv-link {
   font-size: x-small;
   font-style: italic;

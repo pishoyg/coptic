@@ -540,9 +540,7 @@ class Root(Row):
                 # Skip the English.
                 meaning_width = 0
             assert word_width or meaning_width
-            hyperlink = (
-                f'<span hidden="" class="drv-key dev right">{d.key}</span>'
-            )
+            key: str = f'<a class="drv-key" href="{d.row_url}">{d.key}</a>'
             # New row.
             yield f'<tr id="drv{d.key}" class="drv">'
             # Margin.
@@ -552,7 +550,7 @@ class Root(Row):
                 yield f'<td colspan="{word_width}" class="marcion bordered">'
                 yield word
                 if not meaning_width:
-                    yield hyperlink
+                    yield key
                 yield "</td>"
             # Meaning.
             if meaning_width:
@@ -560,7 +558,7 @@ class Root(Row):
                 if d.type_name not in ["-", "HEADER"]:
                     yield f"<b>({d.type_name})</b><br/>"
                 yield d.meaning
-                yield hyperlink
+                yield key
                 yield "</td>"
             if crum_span:
                 yield f'<td rowspan="{crum_span}" class="dictionary bordered">'
