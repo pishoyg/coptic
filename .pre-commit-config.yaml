@@ -234,6 +234,14 @@ repos:
       - id: forbid-submodules
       - id: mixed-line-ending
       - id: check-xml
+      - id: check-json
+        # tsconfig files have comments, which are not compatible with some hooks!
+        exclude: ^tsconfig.*$
+      - id: pretty-format-json
+        args: [--autofix, --no-ensure-ascii, --no-sort-keys]
+        exclude: ^tsconfig.*$
+      - id: file-contents-sorter
+        args: [requirements.in]
 
   - repo: https://github.com/mxr/sync-pre-commit-deps
     rev: v0.0.3

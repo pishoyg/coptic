@@ -21,6 +21,16 @@
     "webpack": "^5.101.0"
   },
   "prettier": {
+    "overrides": [
+      {
+        "files": [
+          "*.json"
+        ],
+        "options": {
+          "printWidth": 1
+        }
+      }
+    ],
     "trailingComma": "es5",
     "tabWidth": 2,
     "semi": true,
