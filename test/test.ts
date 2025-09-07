@@ -3,9 +3,13 @@
  */
 
 import * as play from '@playwright/test';
+import * as logger from '../docs/logger.ts';
 
 /**
  * PAGES_TO_TEST defines the list of site pages to test.
+ *
+ * TODO: (#0) Figure out a way to retrieve the paths from `paths.ts`, instead of
+ * duplicating them below!
  */
 const PAGES_TO_TEST: string[] = [
   '/', // Home
@@ -52,8 +56,8 @@ PAGES_TO_TEST.forEach((path: string): void => {
       // Add a listener to fail the test if any of our requests fails. This is
       // necessary in order to catch failures to retrieve any resources (such as
       // CSS files, JavaScript files, images, ...).
-      page.on('requestfailed', (request: Request): void => {
-        throw new Error(`Request Failed: ${request.url}`);
+      page.on('requestfailed', (request: play.Request): void => {
+        throw new Error(`Request Failed: ${request.url()}`);
       });
 
       // Load the page.
@@ -61,3 +65,16 @@ PAGES_TO_TEST.forEach((path: string): void => {
     }
   );
 });
+
+play.test(
+  'Inserts hyperlinks for Wiki References',
+  async ({ page }: { page: play.Page }): Promise<void> => {
+    const path = '/crum/88.html';
+    // TODO: (#419) The number of Wiki references inserted in page 88 is
+    // expected to increase as we cover more sources.
+    const wantWikiRefs = 111;
+    await page.goto(path, { waitUntil: 'networkidle' });
+    const got: number = await page.locator('.reference').count();
+    logger.ensure(got === wantWikiRefs, 'want', wantWikiRefs, 'got', got);
+  }
+);
