@@ -41,6 +41,19 @@ class Record:
         raise NotImplementedError
 
     @classmethod
+    def worksheet_url(cls) -> str:
+        """Retrieve a URL to the worksheet that this record belongs to.
+
+        Raises:
+            NotImplementedError: This method must be overridden.
+        """
+        raise NotImplementedError
+
+    @functools.cached_property
+    def row_url(self) -> str:
+        return f"{self.worksheet_url()}?range={self.row_num}:{self.row_num}"
+
+    @classmethod
     @functools.cache
     def col_num(cls) -> dict[str, int]:
         return column_nums(cls.worksheet())

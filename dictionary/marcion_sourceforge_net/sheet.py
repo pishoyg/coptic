@@ -6,12 +6,14 @@ import gspread
 
 from utils import ensure, gcp
 
-_GSPREAD_URL: str = (
+GSPREAD_URL: str = (
     # pylint: disable-next=line-too-long
     "https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg"
 )
+ROOTS_URL: str = f"{GSPREAD_URL}/edit?gid=1575616379"
+DERIVATIONS_URL: str = f"{GSPREAD_URL}/edit?gid=698638592"
 
-_SHEET: gspread.spreadsheet.Spreadsheet = gcp.spreadsheet(_GSPREAD_URL)
+_SHEET: gspread.spreadsheet.Spreadsheet = gcp.spreadsheet(GSPREAD_URL)
 ROOTS: gspread.worksheet.Worksheet = _SHEET.get_worksheet(0)
 DERIVATIONS: gspread.worksheet.Worksheet = _SHEET.get_worksheet(1)
 

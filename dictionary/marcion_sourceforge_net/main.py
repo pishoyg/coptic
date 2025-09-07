@@ -164,6 +164,11 @@ class Derivation(Row):
     def worksheet(cls) -> gspread.worksheet.Worksheet:
         return sheet.DERIVATIONS
 
+    @typing.override
+    @classmethod
+    def worksheet_url(cls) -> str:
+        return sheet.DERIVATIONS_URL
+
     @functools.cached_property
     def key_word(self) -> str:
         return self.get(sheet.COL.KEY_WORD)
@@ -290,6 +295,11 @@ class Root(Row):
     @classmethod
     def worksheet(cls) -> gspread.worksheet.Worksheet:
         return sheet.ROOTS
+
+    @typing.override
+    @classmethod
+    def worksheet_url(cls) -> str:
+        return sheet.ROOTS_URL
 
     @functools.cached_property
     def url(self) -> str:

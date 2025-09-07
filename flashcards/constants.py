@@ -517,9 +517,11 @@ class Crum(Decker):
             yield Crum.__senses(root.senses)
             yield "</div>"
 
-        # Quality.
+        # Quality, and URL link.
         yield '<div id="quality" class="quality">'
+        yield f'<a href="{root.row_url}" target="_blank">'
         yield root.quality
+        yield "</a>"
         yield "</div>"
 
         # Line break.
