@@ -12,6 +12,10 @@
 .results td:not(:first-child) {
   border-left: 1px solid black;
   padding-left: 5px;
+  word-wrap: break-word; /* legacy support */
+  overflow-wrap: break-word; /* modern standard */
+  word-break: break-word; /* fallback for older browsers */
+  white-space: normal; /* allow wrapping */
 }
 
 #xooxle td {
