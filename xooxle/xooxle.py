@@ -130,7 +130,18 @@ SPACE_ELEMENTS_DEFAULT = {
 TAG_REGEX = re.compile(r"<\s*([a-zA-Z0-9]+)")
 # ADMISSIBLE is used to enforce the simplified HTML structure that Xooxle search
 # can support.
-ADMISSIBLE = RETAIN_TAGS_DEFAULT | {"span", "hr", "br", "p", "a"}
+# TODO: (#0) Document the criteria used to decide whether a tag is admissible.
+# We proposed a solution for #499 and #515 that requires the text content of a
+# given piece of Xooxle HTML to be perfectly predictable, and easy to infer from
+# the HTML.
+# Thus, block-level elements, or elements that are capable of producing extra
+# space in the output, should be banned.
+# UNIT_DELIMITER and LINE_BREAK are special because Xooxle splits the HTML using
+# these delimiters. Thus, they don't really end up in the searchable segments of
+# the HTML.
+# TODO: (#439) Given the above, and given how large some Crum entries are, you
+# might want to treat <p> as a unit tag, rather than a retained tag.
+ADMISSIBLE = RETAIN_TAGS_DEFAULT | {"hr", "br"} | {"span", "a"} | {"p"}
 
 
 class Selector:
