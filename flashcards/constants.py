@@ -1047,7 +1047,25 @@ CRUM_WIKI_XOOXLE: xooxle.Index = xooxle.Index(
         xooxle.Capture(
             "wiki",
             xooxle.Selector({"id": "wiki"}, force=False),
-            retain_classes={"dialect", "wiki"},
+            # The following classes are used for styling. While we may be able
+            # to style the languages in JavaScript without retaining classes in
+            # the HTML, this approach is simpler, because it's inherited from
+            # Wiki.
+            # For Arabic, Amharic, Hebrew, and Aramaic, this only increases the
+            # size of the index by ~3%.
+            # If we were to need the classes for Coptic or Greek, this would
+            # increase the size of the index more significantly, so we shouldn't
+            # do it.
+            # TODO: (#0) Import class names from Wiki, instead of duplicating
+            # them below.
+            retain_classes={
+                "dialect",
+                "wiki",
+                "arabic",
+                "amharic",
+                "hebrew",
+                "aramaic",
+            },
             retain_tags=xooxle.RETAIN_TAGS_DEFAULT | {"p"},
         ),
     ],
