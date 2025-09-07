@@ -1,6 +1,9 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["./test/**/*.ts", "playwright.config.ts"],
+  "include": [
+    "./test/**/*.ts",
+    "playwright.config.ts"
+  ],
   "compilerOptions": {
     // Do not transpile Playwright files to JavaScript.
     "noEmit": true,

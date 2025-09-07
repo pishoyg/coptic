@@ -1,8 +1,12 @@
 // See https://www.typescriptlang.org/tsconfig/ for documentation.
 {
-  "include": ["./docs/**/*.ts"],
+  "include": [
+    "./docs/**/*.ts"
+  ],
   // Unit tests have their own TSConfig, so they are excluded from this config.
-  "exclude": ["./docs/test/**/*.ts"],
+  "exclude": [
+    "./docs/test/**/*.ts"
+  ],
   "compilerOptions": {
     "target": "ES2022",
     "module": "ESNext",
