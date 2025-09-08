@@ -452,11 +452,12 @@ export function handleWikiReferences(elem: HTMLElement): void {
         // - Ezra and Nehemiah likely don't have any surviving Coptic text, so
         //   they are not mentioned.
 
-        const bookID: string | undefined = bible.MAPPING[bookAbbreviation];
-        if (!bookID) {
+        const book: { name: string; path: string } | undefined =
+          bible.MAPPING[bookAbbreviation];
+        if (!book) {
           return null;
         }
-        const basename = `${paths.BIBLE}/${bookID}_${chapter}.html`;
+        const basename = `${paths.BIBLE}/${book.path}_${chapter}.html`;
         const url = `${basename}#v${verse}`;
         return url;
       },
