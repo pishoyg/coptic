@@ -1,5 +1,10 @@
 """This package hosts hardcoded definitions of our dictionary structure."""
 
+# TODO: (#399) Crum HTML should all live in one place, and should be
+# deduplicated. Currently:
+# - It lives in both this file and dictionary/marcion_sourceforge_net/main.py.
+# - Much of the logic is duplicated, which causes such issues as #398.
+
 import os
 import pathlib
 import re
