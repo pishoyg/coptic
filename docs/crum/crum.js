@@ -394,11 +394,11 @@ export function handleWikiReferences(elem) {
         // - Philemon is not mentioned, though he seems to have used "Philem".
         // - Ezra and Nehemiah likely don't have any surviving Coptic text, so
         //   they are not mentioned.
-        const bookID = bible.MAPPING[bookAbbreviation];
-        if (!bookID) {
+        const book = bible.MAPPING[bookAbbreviation];
+        if (!book) {
           return null;
         }
-        const basename = `${paths.BIBLE}/${bookID}_${chapter}.html`;
+        const basename = `${paths.BIBLE}/${book.path}_${chapter}.html`;
         const url = `${basename}#v${verse}`;
         return url;
       },
