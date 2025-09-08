@@ -381,8 +381,6 @@ export function handleWikiReferences(elem) {
       el,
       REFERENCE_RE,
       (match) => {
-        // TODO: (#0) Why is `_` not ignored by the linter?
-
         const [_, bookAbbreviation, chapter, verse] = match;
         if (!bookAbbreviation || !chapter || !verse) {
           return null;
