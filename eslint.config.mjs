@@ -92,6 +92,15 @@ export default tseslint.config(
       ],
       '@typescript-eslint/naming-convention': [
         'error',
+        // Ignore all variables called '_'.
+        {
+          selector: ['variable', 'parameter'],
+          format: null, // No restrictions whatsoever.
+          filter: {
+            regex: '^_$',
+            match: true,
+          },
+        },
         // camelCase for variables and functions
         {
           selector: 'default',
@@ -108,7 +117,7 @@ export default tseslint.config(
           modifiers: ['const'],
           format: ['UPPER_CASE'],
           filter: {
-            regex: '^[A-Z0-9_]+$',
+            regex: '^[A-Z0-9][A-Z0-9_]*$',
             match: true,
           },
         },

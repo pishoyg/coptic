@@ -437,8 +437,6 @@ export function handleWikiReferences(elem: HTMLElement): void {
       el,
       REFERENCE_RE,
       (match: RegExpExecArray): string | null => {
-        // TODO: (#0) Why is `_` not ignored by the linter?
-        // eslint-disable-next-line @typescript-eslint/naming-convention
         const [_, bookAbbreviation, chapter, verse] = match;
         if (!bookAbbreviation || !chapter || !verse) {
           return null;
