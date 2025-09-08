@@ -445,13 +445,20 @@ class Bible:
 
     def __write_crum_map(self) -> None:
         ensure.unique(book.crum for book in self.books if book.crum)
-        mapping: dict[str, str] = {
-            book.crum: book.id() for book in self.books if book.crum
+        mapping: dict[str, dict[str, str]] = {
+            book.crum: {
+                "name": book.name,
+                "path": book.id(),
+            }
+            for book in self.books
+            if book.crum
         }
         # This TypeScript code is needed by our website due to some limitations
         # on reading JSON.
         file.write(
-            f"export const MAPPING: Record<string, string> = {mapping};",
+            f"""export const MAPPING:
+                        Record<string, {{name: string, path: string}}> =
+                        {mapping};""",
             os.path.join(paths.LEXICON_DIR, "bible.ts"),
         )
 
