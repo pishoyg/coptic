@@ -90,3 +90,16 @@ export function addEventListenersForSiblings() {
     return new Droppable(droppable, drop);
   });
 }
+/**
+ * Add the given content as a hover-droppable child of the given drop.
+ * @param drop - An element that, when hovered, should display the content.
+ * @param content - The content that shows when the drop element is hovered.
+ */
+export function addHoverDroppable(drop, ...content) {
+  drop.classList.add(CLS.DROPDOWN);
+  const droppable = document.createElement('span');
+  droppable.classList.add(CLS.DROPPABLE);
+  droppable.append(...content);
+  // A hover-invoked droppable must be a child of its associated drop element.
+  drop.appendChild(droppable);
+}
