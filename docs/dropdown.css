@@ -26,7 +26,6 @@
 /* .dropdown is specific to hover-invoked elements. */
 .dropdown {
   position: relative;
-  display: inline-block;
 }
 
 /* Hover-invoked .droppable: */
