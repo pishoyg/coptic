@@ -21,22 +21,7 @@ import * as header from '../header.js';
 import * as logger from '../logger.js';
 import * as bible from './bible.js';
 
-// TODO: (#419) Some references do not have a verse number. (Example:
-// ⲁⲃⲁϭⲏⲉⲓⲛ[1] cites "Ap 4" without a verse number.) Those should bear a
-// hyperlink to the chapter file.
-// [1]https://remnqymi.com/crum/97.html
-//
-// TODO: (#419) It appears that, for one-chapter books, Crum might have
-// omitted the chapter number! (Example: ⲛⲟϭ[1] cites "Philem 9".)
-// Handle this corner case!
-// [1] https://remnqymi.com/crum/88.html
-//
-// TODO: (#419) Omit hyperlinks for nonexistent chapters.
-//
-// NOTE: The three issues above should likely be worked on together! If you see
-// a book abbreviation followed by just one number, how do you know if it's a
-// chapter or a verse number?
-const REFERENCE_RE = /(\b(?:[123]\s)?[a-zA-Z]+)\s+(\d+)\s+(\d+)\b/g;
+const REFERENCE_RE = /(\b(?:[123]\s)?[a-zA-Z]+)(?:\s+(\d+))(?:\s+(\d+))?\b/g;
 
 const COPTIC_RE = /[\p{Script=Coptic}\p{Mark}]+/gu;
 const GREEK_RE = /[\p{Script=Greek}\p{Mark}]+/gu;
@@ -417,11 +402,27 @@ export function addEnglishLookups(elem: HTMLElement): void {
 
 /**
  *
- * @param elem
+ * TODO: (#419) Some references do not have a verse number. (Example:
+ * ⲁⲃⲁϭⲏⲉⲓⲛ[1] cites "Ap 4" without a verse number.) Those should bear a
+ * hyperlink to the chapter file.
+ * [1]https://remnqymi.com/crum/97.html
+ *
+ * TODO: (#419) It appears that, for one-chapter books, Crum might have
+ * omitted the chapter number! (Example: ⲛⲟϭ[1] cites "Philem 9".)
+ * Handle this corner case!
+ * [1] https://remnqymi.com/crum/88.html
+ *
+ * TODO: (#419) Omit hyperlinks for nonexistent chapters.
+ *
+ * NOTE: The three issues above should likely be worked on together! If you see
+ * a book abbreviation followed by just one number, how do you know if it's a
+ * chapter or a verse number?
+ *
  * NOTE: For the Bible abbreviation-to-id mapping, we opted for generating a
  * code file that defines the mapping. We used to populate the mapping in a
- * JSON, but this had to be retrieved with an async fetch, which complicated
- * things:
+ * JSON, but this had to be retrieved with an async fetch. We prefer to `await`
+ * (rather than `void`) promises as much as possible, and this would've
+ * complicated things:
  * - Many dependent functions would've had to be made async in order to support
  *   an `await` operator.
  * - Our Anki bundler didn't support a top-level await for the IIFE[1] target,
@@ -430,36 +431,44 @@ export function addEnglishLookups(elem: HTMLElement): void {
  * maintain.
  *
  * [1] https://developer.mozilla.org/en-US/docs/Glossary/IIFE
+ *
+ * @param elem
+ *
  */
 export function handleWikiReferences(elem: HTMLElement): void {
   elem.querySelectorAll(`.${cls.WIKI}`).forEach((el) => {
-    html.linkifyText(
+    html.replaceText(
       el,
       REFERENCE_RE,
-      (match: RegExpExecArray): string | null => {
-        const [_, bookAbbreviation, chapter, verse] = match;
-        if (!bookAbbreviation || !chapter || !verse) {
-          return null;
+      (match: RegExpExecArray): (Node | string)[] => {
+        const fullText: string = match[0];
+        let [bookAbbreviation, chapter, verse] = [match[1], match[2], match[3]];
+        if (bookAbbreviation === 'Su') {
+          // The Book of Susanna needs special handling. This is because it's
+          // treated as a separate book by Crum, but it's just a chapter in
+          // Daniel in the Bible index.
+          // Given that it only contains one chapter, the book abbreviation
+          // is followed by the verse number only (there is no chapter number).
+          bookAbbreviation = 'Dan';
+          verse = chapter;
+          chapter = 'a';
         }
-
-        // NOTE: Crum didn't explicitly list all Biblical book abbreviations.
-        // Particularly:
-        // - Joel and Jude are not listed, perhaps because he uses their full
-        //   form.
-        // - Philemon is not mentioned, though he seems to have used "Philem".
-        // - Ezra and Nehemiah likely don't have any surviving Coptic text, so
-        //   they are not mentioned.
-
+        if (!bookAbbreviation || !chapter || !verse) {
+          return [fullText];
+        }
         const book: { name: string; path: string } | undefined =
           bible.MAPPING[bookAbbreviation];
         if (!book) {
-          return null;
+          return [fullText];
         }
         const basename = `${paths.BIBLE}/${book.path}_${chapter}.html`;
         const url = `${basename}#v${verse}`;
-        return url;
-      },
-      [ccls.HOVER_LINK, cls.REFERENCE]
+        const link = document.createElement('a');
+        link.href = url;
+        link.classList.add(ccls.HOVER_LINK, cls.REFERENCE);
+        link.textContent = fullText;
+        return [link];
+      }
     );
   });
 }
