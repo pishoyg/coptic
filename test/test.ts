@@ -73,7 +73,7 @@ play.test(
     const path = '/crum/88.html';
     // TODO: (#419) The number of Wiki references inserted in page 88 is
     // expected to increase as we cover more sources.
-    const wantWikiRefs = 111;
+    const wantWikiRefs = 112;
     await page.goto(path, { waitUntil: 'networkidle' });
     const got: number = await page.locator(`.${cls.REFERENCE}`).count();
     logger.ensure(got === wantWikiRefs, 'want', wantWikiRefs, 'got', got);
