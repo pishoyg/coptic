@@ -444,6 +444,15 @@ class Bible:
         self.__write_crum_map()
 
     def __write_crum_map(self) -> None:
+        # NOTE: Crum didn't explicitly list all Biblical book abbreviations.
+        # Particularly:
+        # - Joel and Jude are not listed, perhaps because he uses their full
+        #   form.
+        # - Philemon is not mentioned, though he seems to have used "Philem".
+        # - Ezra and Nehemiah likely don't have any surviving Coptic text, so
+        #   they are not mentioned.
+        # Crum also uses 'Su' to refer to the story of Susanna, while in our
+        # case it's a chapter in Daniel.
         ensure.unique(book.crum for book in self.books if book.crum)
         mapping: dict[str, dict[str, str]] = {
             book.crum: {
