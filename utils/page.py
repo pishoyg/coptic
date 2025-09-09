@@ -3,14 +3,19 @@
 import os
 from collections import abc
 
-from utils import paths
+from utils import ensure, paths
 
 _CHARSET_TAG = """
   <meta charset="utf-8">
 """
 
-_STYLE_TAG_FMT = '<link href="{}" rel="stylesheet" type="text/css">'
-assert os.path.isfile(os.path.join(paths.SITE_DIR, "style.css"))
+_VIEWPORT_TAG = """
+<meta name="viewport" content="width=device-width, initial-scale=1">
+"""
+
+_ICON_TAG = f"""
+  <link rel="icon" type="image/x-icon" href="{paths.server(paths.ICON)}">
+"""
 
 _GOOGLE_TAG = """
   <script async src=
@@ -21,15 +26,6 @@ _GOOGLE_TAG = """
     gtag("js", new Date());
     gtag("config", "G-VCVZFDFZR3");
   </script>
-"""
-
-_ICON_TAG = """
-  <link rel="icon" type="image/x-icon" href="/img/icon/icon-circle.png">
-"""
-assert os.path.isfile(os.path.join(paths.SITE_DIR, "img/icon/icon-circle.png"))
-
-_VIEWPORT_TAG = """
-<meta name="viewport" content="width=device-width, initial-scale=1">
 """
 
 LINE_BREAK: str = "<br>"
@@ -49,21 +45,24 @@ def html_line_breaks(txt: str) -> str:
     return txt.replace("\n", LINE_BREAK)
 
 
-def one_line(htm: str) -> str:
+def no_line_breaks(htm: str) -> str:
     return htm.replace(LINE_BREAK, " ").replace(_SELF_CLOSING_LINE_BREAK, " ")
 
 
-# html_head is used by our HTML generation logic to generated the <head>
+# NOTE: html_head is used by our HTML generation logic to generated the <head>
 # elements for our pages.
 # Besides the generated HTML files, a number of singleton manually-written HTML
 # pages don't use this function. If the desired head structure changes, updating
 # this function should update all of the auto-generated pages. But the
-# manually-written ones will have to be updated manually. As of now, this
-# includes the following:
-# - docs/index.html
-# - docs/crum/index.html
-# - docs/dawoud/index.html
-# However, for the most up-to-date list, consult `pre-commit/docs_structure.py`.
+# manually-written ones will have to be updated manually.
+# For the list of manually-written files, consult
+# `pre-commit/docs_structure.py`.
+# TODO: (#0) Currently, all your pipelines are forced to pass relative paths to
+# the following helpers. This is inconvenient.
+# It may be simpler to pass absolute path, and have the helpers construct
+# relative or server paths as appropriate.
+# This applies to paths to CSS and JavaScript files, and also to next, prev, and
+# search links.
 def html_head(
     title: str,
     page_class: str = "",
@@ -82,6 +81,7 @@ def html_head(
         assert not prev_href
         assert not scripts
         assert not css
+
     return "".join(
         html_head_aux(
             title,
@@ -106,7 +106,8 @@ def html_head_aux(
     css: list[str],
     epub: bool = False,
 ) -> abc.Generator[str]:
-    """
+    """Construct content of an HTML <head> tag.
+
     Args:
         title: Page title.
         page_class: Classes to add to the <body> tag.
@@ -127,6 +128,19 @@ def html_head_aux(
     Yields:
         The HTML pieces, to be concatenated into the full HTML file.
     """
+
+    scripts = list(map(os.path.normpath, scripts))
+    ensure.unique(scripts)
+
+    css = list(map(os.path.normpath, css))
+    ensure.unique(css)
+
+    # The shared CSS is always included.
+    # We can't include it in the check for duplicates because we don't have a
+    # normalized, uniform (all-relative or all-absolute) list of paths for all
+    # the CSS files.
+    css.append(paths.server(paths.SHARED_CSS))
+
     yield "<head>"
     yield f"<title>{title}</title>"
     if epub:
@@ -136,8 +150,8 @@ def html_head_aux(
 
     yield _CHARSET_TAG
     yield _VIEWPORT_TAG
-    for path in css + [paths.CSS_REL]:
-        yield _STYLE_TAG_FMT.format(path)
+    for path in css:
+        yield f'<link href="{path}" rel="stylesheet" type="text/css">'
     yield _ICON_TAG
     yield _GOOGLE_TAG
     if search:

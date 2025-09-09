@@ -1,6 +1,7 @@
 """Validation and error checking helpers."""
 
 import collections
+import pathlib
 from collections import abc
 
 from utils import log
@@ -115,3 +116,12 @@ def brackets_balanced(s: str, *message: object, strict: bool = True) -> None:
         s,
         strict=strict,
     )
+
+
+def child_path(child: str | pathlib.Path, parent: str | pathlib.Path) -> None:
+    child = pathlib.Path(child).resolve()
+    parent = pathlib.Path(parent).resolve()
+    try:
+        _ = child.relative_to(parent)
+    except ValueError:
+        log.fatal(child, "doesn't seem to be a child of", parent)

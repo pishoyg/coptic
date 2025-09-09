@@ -62,7 +62,7 @@ from collections import abc
 
 import genanki  # type: ignore[import-untyped]
 
-from utils import concur, ensure, file, log, page, system
+from utils import concur, ensure, file, log, page, paths, system
 
 NOTE_CLASS = "NOTE"
 ANKI_NOTE_CLASS = "ANKI"
@@ -162,12 +162,14 @@ class IndexIndex:
         home: str,
         search: str,
         scripts: list[str],
+        css: list[str],
     ):
         self.name: str = name
         self.indexes: list[Index] = indexes
         self.home: str = home
         self.search: str = search
         self.scripts: list[str] = scripts
+        self.css: list[str] = css
 
         cells: list[HeaderCell] = []
         if home:
@@ -225,6 +227,7 @@ class IndexIndex:
             page_class=INDEX_INDEX_CLASS,
             search=self.search,
             scripts=self.scripts,
+            css=self.css,
         )
         html = page.html_aux(
             head,
@@ -262,6 +265,7 @@ class Note:
         search: str = "",
         js_start: str = "",
         js_path: str = "",
+        css: list[str] | None = None,
         force_content: bool = True,
     ) -> None:
 
@@ -277,6 +281,7 @@ class Note:
         self.front: str = front
         self.back: str = back
         self.js_path: str = js_path
+        self.css: list[str] = css or []
         self.head: str = page.html_head(
             title=title,
             page_class=NOTE_CLASS,
@@ -284,6 +289,7 @@ class Note:
             next_href=nxt,
             prev_href=prv,
             scripts=[js_path] if js_path else [],
+            css=css,
         )
         self.html: str = "".join(self.__html_aux())
         self.js_start: str = js_start
@@ -321,8 +327,8 @@ class MediaFile:
         Args:
             path: Path to the file on the system.
             underscore: Whether this file should be prefixed with an underscore
-                in Anki. Some media files, such as fonts must have an underscore
-                prefix. See
+                in Anki. Some media files, such as fonts, must have an
+                underscore prefix. See
                 https://docs.ankiweb.net/templates/styling.html#installing-fonts.
         """
         self._path: str = path
@@ -371,7 +377,6 @@ class Deck:
         deck_name: str,
         deck_id: int,
         deck_description: str,
-        css_path: str,
         # TODO: (#0) Use a generator instead of a list.
         notes: list[Note],
         html_dir: str = "",
@@ -381,8 +386,6 @@ class Deck:
         self.deck_name: str = deck_name
         self.deck_id: int = deck_id
         self.deck_description: str = deck_description
-        self.css_dir: str = os.path.dirname(css_path)
-        self.css: str = file.read(css_path)
         self.notes: list[Note] = notes
         ensure.unique(
             (note.key for note in self.notes),
@@ -399,8 +402,10 @@ class Deck:
     def write_html(self) -> None:
         assert self.html_dir
         with concur.thread_pool_executor() as executor:
-            _ = list(executor.map(self.__write_html, self.notes))
-            _ = list(executor.map(self.__write_html, self.index_indexes))
+            _ = [
+                *executor.map(self.__write_html, self.notes),
+                *executor.map(self.__write_html, self.index_indexes),
+            ]
         log.wrote(self.html_dir)
 
     def __anki_html(self, html: str) -> str:
@@ -413,14 +418,51 @@ class Deck:
         html = IMG_SRC_FMT.sub(src_to_basename, html)
         return html
 
-    def __anki_css(self) -> str:
-        def src_to_basename(match: re.Match[str]) -> str:
-            path: str = os.path.join(self.css_dir, match.group(1))
+    def src_to_basename(
+        self,
+        directory: str,
+    ) -> typing.Callable[[re.Match[str]], str]:
+        """Construct a function that reformats font references in a CSS file.
+
+        NOTE: Font paths in the CSS must be relative.
+
+        Args:
+            directory: The directory containing the CSS file.
+
+        Returns:
+            A function that can be used to substitute font rules in the CSS
+            file. The relative path to a font file will be replaced with the
+            path inside Anki.
+        """
+
+        def f(match: re.Match[str]) -> str:
+            path: str = os.path.join(directory, match.group(1))
+            path = os.path.normpath(path)
+            ensure.ensure(
+                os.path.isfile(path),
+                "font file",
+                path,
+                "not found!",
+            )
             f: MediaFile = MediaFile(path, underscore=True)
             self.media_files.add(f)
             return f"src: url('{f.basename()}')"
 
-        return FONT_SRC_RE.sub(src_to_basename, self.css)
+        return f
+
+    def __anki_css(self) -> abc.Generator[str]:
+        files: list[str] = ensure.singleton(note.css for note in self.notes)
+        # Get absolute paths, so you can read them.
+        files = [os.path.join(self.html_dir, f) for f in files]
+        # There is a shared CSS that is always included.
+        files.append(paths.SHARED_CSS)
+        files = list(map(os.path.normpath, files))
+        ensure.unique(files)
+        for path in files:
+            yield FONT_SRC_RE.sub(
+                self.src_to_basename(os.path.dirname(path)),
+                file.read(path),
+            )
 
     def __anki_js_aux(self) -> abc.Generator[str]:
         # We don't allow notes to have different JavaScript, because in our Anki
@@ -434,6 +476,7 @@ class Deck:
         # problematic.
         # We use `var` instead of `const` in order to avoid issues with
         # redefining a variable twice.
+        # TODO: (#372) Define page classes in HTML, not JavaScript!
         yield f"var {ANKI_NOTE_CLASS} = true;"
 
         if not js_path:
@@ -467,7 +510,7 @@ class Deck:
                     + f'<script type="text/javascript">{javascript}</script>',
                 },
             ],
-            css=self.__anki_css(),
+            css="".join(self.__anki_css()),
         )
 
         deck = genanki.Deck(

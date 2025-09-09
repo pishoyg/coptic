@@ -641,12 +641,12 @@ _CODE_BY_LANG: list[Lang] = [
 ]
 
 _CODE_BY_COMPONENT: list[Comp] = [
-    Comp("crum", "Crum", prefixes=[paths.CRUM]),
+    Comp("crum", "Crum", prefixes=[paths.MARCION]),
     Comp("andreas", "Andreas", prefixes=[paths.ANDREAS]),
     Comp("copticsite", "Copticsite", prefixes=[paths.COPTICSITE]),
     Comp("kellia", "Kellia", prefixes=[paths.KELLIA]),
     Comp("dawoud", "Dawoud"),  # All files deleted!
-    Comp("bible", "Bible", prefixes=[paths.BIBLE]),
+    Comp("bible", "Bible", prefixes=[paths.STSHENOUDA]),
     Comp("flashcards", "Flashcards", prefixes=[paths.FLASHCARDS]),
     Comp("grammar", "Grammar"),  # No files yet (if ever)!
     Comp("keyboard", "Keyboard", prefixes=[paths.KEYBOARD]),

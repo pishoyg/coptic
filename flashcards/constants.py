@@ -19,7 +19,6 @@ from flashcards import deck
 from utils import file, page, paths
 from xooxle import xooxle
 
-CRUM_JS = "main.js"  # Relative to the HTML write directory.
 # DIALECTS_JS is a JavaScript line that can be used to set the default dialects.
 DIALECTS_JS = """
 if (localStorage.getItem('d') === null) {{
@@ -96,7 +95,6 @@ class Decker:
             deck_name=self._deck_name,
             deck_id=self._deck_id,
             deck_description=DESCRIPTION,
-            css_path=paths.CSS,
             notes=list(self.notes_aux()),
             html_dir=paths.LEXICON_DIR,
             index_indexes=self.index_indexes(),
@@ -271,14 +269,16 @@ class CrumIndexer(Mother):
                 self.__generate_indexes(keys, categories),
                 home=CRUM_HOME,
                 search=CRUM_SEARCH,
-                scripts=[CRUM_JS],
+                scripts=[relpath(paths.CRUM_JS)],
+                css=[],
             ),
             deck.IndexIndex(
                 "Types",
                 self.__generate_indexes(keys, types),
                 home=CRUM_HOME,
                 search=CRUM_SEARCH,
-                scripts=[CRUM_JS],
+                scripts=[relpath(paths.CRUM_JS)],
+                css=[],
             ),
         ]
 
@@ -296,7 +296,7 @@ class Crum(Decker):
     indexer: CrumIndexer
 
     for _, root in crum.Crum.roots.items():
-        title: str = page.one_line(root.word_parsed_classify())
+        title: str = page.no_line_breaks(root.word_parsed_classify())
         key_to_sister[root.key] = Sister(
             root.key,
             title,
@@ -365,7 +365,8 @@ class Crum(Decker):
                 prv=self.__path(crum.Crum.prev_key(root)),
                 search=CRUM_SEARCH,
                 js_start=dialects_js(self.dialects),
-                js_path=CRUM_JS,
+                js_path=relpath(paths.CRUM_JS),
+                css=[],
             )
 
     def __path(self, key: str | None) -> str:
