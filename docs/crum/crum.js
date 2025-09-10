@@ -433,6 +433,7 @@ export function handleWikiBible(elem) {
     html.replaceText(el, REFERENCE_RE, (match) => {
       const fullText = match[0];
       let [bookAbbreviation, chapter, verse] = [match[1], match[2], match[3]];
+      let nameOverride = undefined;
       if (bookAbbreviation === 'Su') {
         // The Book of Susanna needs special handling. This is because it's
         // treated as a separate book by Crum, but it's just a chapter in
@@ -442,6 +443,7 @@ export function handleWikiBible(elem) {
         bookAbbreviation = 'Dan';
         verse = chapter;
         chapter = 'a';
+        nameOverride = 'Susanna';
       }
       if (!bookAbbreviation || !chapter || !verse) {
         return null;
@@ -456,7 +458,7 @@ export function handleWikiBible(elem) {
       link.href = url;
       link.classList.add(ccls.HOVER_LINK, cls.REFERENCE);
       link.textContent = fullText;
-      drop.addHoverDroppable(link, book.name);
+      drop.addHoverDroppable(link, nameOverride ?? book.name);
       return [link];
     });
   });
