@@ -60,8 +60,8 @@ export function handleAll(
   addCopticLookups(elem);
   addGreekLookups(elem);
   addEnglishLookups(elem);
-  handleWikiBible(elem);
   handleWikiDialects(elem);
+  handleWikiBible(elem);
   handleWikiAnnotations(elem);
 }
 
@@ -417,6 +417,7 @@ export function handleWikiDialects(elem: HTMLElement): void {
       drop.addHoverDroppable(el, d.DIALECTS[el.textContent as d.DIALECT].name);
     });
 }
+
 /**
  *
  * @param elem
@@ -445,8 +446,19 @@ export function handleWikiAnnotations(elem: HTMLElement): void {
           //
           // Additionally, if an element is already an annotation, we don't do
           // anything. This allows us to process two-word annotations in the
-          // first iteration, and one-word annotations in the second iteration.
-          `b, .${cls.ANNOTATION}`
+          // first iteration, and one-word annotations in the second iteration,
+          // without worrying about annotations that are substrings of others.
+          // For example, ‘c’ is a substring of ‘p c’. In order to prevent
+          // conflict, we process the longer annotation (‘p c’) first, and mark
+          // it using the ANNOTATION class. In the following iteration, when
+          // we're searching for occurrences of ‘c’, we're sure we're gonna skip
+          // the marked instances of ‘p c’.
+          //
+          // Finally, for mere defensiveness, we avoid processing all elements
+          // containing Crum abbreviations (dialects, or biblical or
+          // non-biblical references), in order to prevent any potential
+          // overlap (although this is unexpected).
+          `b, ${css.classQuery(cls.ANNOTATION, cls.DIALECT, cls.REFERENCE, cls.BIBLE)}`
         );
       }
     );
@@ -524,7 +536,10 @@ export function handleWikiBible(elem: HTMLElement): void {
         link.textContent = fullText;
         drop.addHoverDroppable(link, nameOverride ?? book.name);
         return [link];
-      }
+      },
+      // Exclude all Wiki abbreviations to avoid overlap.
+      // This is not expected to occur, but we add this check for defensiveness.
+      css.classQuery(cls.ANNOTATION, cls.DIALECT, cls.REFERENCE, cls.BIBLE)
     );
   });
 }

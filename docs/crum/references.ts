@@ -66,6 +66,13 @@ export interface Source {
  * automatically search for both the stored form, and a generated space-free
  * counterpart. There is no need to store the one-word (space-free) form as a
  * variant, as this will be handled automatically.
+ *
+ * NOTE: Some abbreviations are substrings of others. Example:
+ * - ‘C’ is a substring of ‘J & C’.
+ * - ‘Till’ is a substring of ‘Till Bau’.
+ * Keep that in mind when implementing the search logic.
+ * P.S. Perhaps process the abbreviations in reverse order by length? This
+ * should ensure that you capture and mark superstrings before substring!
  */
 export const MAPPING: Record<string, Source> = {
   ShA: {
