@@ -121,6 +121,7 @@ RETAIN_TAGS_DEFAULT = {
     "i",
     "strong",
     "em",
+    "sup",
 }
 
 SPACE_ELEMENTS_DEFAULT = {
