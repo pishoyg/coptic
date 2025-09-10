@@ -24,8 +24,8 @@ import * as abb from './abbreviations.js';
 import * as drop from '../dropdown.js';
 
 const REFERENCE_RE = /(\b(?:[123]\s)?[a-zA-Z]+)(?:\s+(\d+))(?:\s+(\d+))?\b/gu;
-const TWO_WORD_ABBREVIATION_RE = /[a-zA-Z]+\s+[a-zA-Z]+/gu;
-const ONE_WORD_ABBREVIATION_RE = /[a-zA-Z]+/gu;
+const TWO_WORD_ABBREVIATION_RE = /\b[a-zA-Z]+\s+[a-zA-Z]+\b/gu;
+const ONE_WORD_ABBREVIATION_RE = /\b[a-zA-Z]+\b/gu;
 
 const COPTIC_RE = /[\p{Script=Coptic}\p{Mark}]+/gu;
 const GREEK_RE = /[\p{Script=Greek}\p{Mark}]+/gu;
