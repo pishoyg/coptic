@@ -48,16 +48,14 @@ export function makeSpanLinkToAnchor(el: Element, target: string): void {
  * @param root - Root of the tree to process.
  * @param regex - Regex to search for in the text nodes of the tree.
  * @param replace - A method to construct a fragment from a regex match
- * obtained with the regex above.
+ * obtained with the regex above. Return null if no replacement is required.
  * @param excludeClosestQuery - An optional query specifying if any subtrees of
  * the given root should be excluded.
  */
 export function replaceText(
   root: Node,
   regex: RegExp,
-  // TODO: (#419) Allow the replace method to return a null or undefined if a
-  // replacement is not desirable.
-  replace: (match: RegExpExecArray) => (Node | string)[],
+  replace: (match: RegExpExecArray) => (Node | string)[] | null,
   excludeClosestQuery?: string
 ): void {
   const walker: TreeWalker = document.createTreeWalker(
@@ -97,12 +95,15 @@ export function replaceText(
     for (let match: RegExpExecArray | null; (match = regex.exec(text)); ) {
       // preceding plain text
       if (match.index > lastIndex) {
-        fragment.appendChild(
-          document.createTextNode(text.slice(lastIndex, match.index))
-        );
+        fragment.append(text.slice(lastIndex, match.index));
       }
 
-      fragment.append(...replace(match));
+      const replacement: (Node | string)[] | null = replace(match);
+      if (replacement) {
+        fragment.append(...replacement);
+      } else {
+        fragment.append(match[0]);
+      }
       lastIndex = match.index + match[0].length;
     }
 
@@ -138,11 +139,11 @@ export function linkifyText(
   replaceText(
     root,
     regex,
-    (match: RegExpExecArray): (Node | string)[] => {
+    (match: RegExpExecArray): (Node | string)[] | null => {
       const targetUrl = url(match);
       if (!targetUrl) {
         // This text doesn't have a URL. Return the original text.
-        return [match[0]];
+        return null;
       }
 
       // Create a link.

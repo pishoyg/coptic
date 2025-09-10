@@ -428,11 +428,11 @@ export function handleWikiAbbreviations(elem: HTMLElement): void {
         html.replaceText(
           el,
           regex,
-          (match: RegExpExecArray): (Node | string)[] => {
+          (match: RegExpExecArray): (Node | string)[] | null => {
             const form: string = match[0];
             const abbrev: abb.Abbreviation | undefined = abb.MAPPING[form];
             if (!abbrev) {
-              return [form];
+              return null;
             }
             const span: HTMLSpanElement = document.createElement('span');
             span.textContent = form;
@@ -494,7 +494,7 @@ export function handleWikiReferences(elem: HTMLElement): void {
     html.replaceText(
       el,
       REFERENCE_RE,
-      (match: RegExpExecArray): (Node | string)[] => {
+      (match: RegExpExecArray): (Node | string)[] | null => {
         const fullText: string = match[0];
         let [bookAbbreviation, chapter, verse] = [match[1], match[2], match[3]];
         if (bookAbbreviation === 'Su') {
@@ -508,12 +508,12 @@ export function handleWikiReferences(elem: HTMLElement): void {
           chapter = 'a';
         }
         if (!bookAbbreviation || !chapter || !verse) {
-          return [fullText];
+          return null;
         }
         const book: { name: string; path: string } | undefined =
           bible.MAPPING[bookAbbreviation];
         if (!book) {
-          return [fullText];
+          return null;
         }
         const basename = `${paths.BIBLE}/${book.path}_${chapter}.html`;
         const url = `${basename}#v${verse}`;
