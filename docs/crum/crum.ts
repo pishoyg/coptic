@@ -20,8 +20,12 @@ import * as ccls from '../cls.js';
 import * as header from '../header.js';
 import * as logger from '../logger.js';
 import * as bible from './bible.js';
+import * as abb from './abbreviations.js';
+import * as drop from '../dropdown.js';
 
-const REFERENCE_RE = /(\b(?:[123]\s)?[a-zA-Z]+)(?:\s+(\d+))(?:\s+(\d+))?\b/g;
+const REFERENCE_RE = /(\b(?:[123]\s)?[a-zA-Z]+)(?:\s+(\d+))(?:\s+(\d+))?\b/gu;
+const TWO_WORD_ABBREVIATION_RE = /[a-zA-Z]+\s+[a-zA-Z]+/gu;
+const ONE_WORD_ABBREVIATION_RE = /[a-zA-Z]+/gu;
 
 const COPTIC_RE = /[\p{Script=Coptic}\p{Mark}]+/gu;
 const GREEK_RE = /[\p{Script=Greek}\p{Mark}]+/gu;
@@ -57,6 +61,7 @@ export function handleAll(
   addGreekLookups(elem);
   addEnglishLookups(elem);
   handleWikiReferences(elem);
+  handleWikiAbbreviations(elem);
 }
 
 /**
@@ -396,6 +401,43 @@ export function addEnglishLookups(elem: HTMLElement): void {
       ENGLISH_RE,
       (match: RegExpExecArray) => paths.LOOKUP_URL_PREFIX + match[0],
       [ccls.HOVER_LINK]
+    );
+  });
+}
+
+/**
+ *
+ * @param elem
+ */
+export function handleWikiAbbreviations(elem: HTMLElement): void {
+  elem.querySelectorAll(`.${cls.WIKI}`).forEach((el: Element): void => {
+    [TWO_WORD_ABBREVIATION_RE, ONE_WORD_ABBREVIATION_RE].forEach(
+      (regex: RegExp): void => {
+        html.replaceText(
+          el,
+          regex,
+          (match: RegExpExecArray): (Node | string)[] => {
+            const form: string = match[0];
+            const abbrev: abb.Abbreviation | undefined = abb.MAPPING[form];
+            if (!abbrev) {
+              return [form];
+            }
+            const span: HTMLSpanElement = document.createElement('span');
+            span.textContent = form;
+            drop.addHoverDroppable(span, abbrev.fullForm);
+            span.classList.add(cls.ABBREVIATION);
+            return [span];
+          },
+          // <b> tags are used for iterator bullet (a., b., c., ...; I, II, II,
+          // ...). We want to skip those.
+          //
+          // Additionally, if an element is already an abbreviation, we don't do
+          // anything. This allows us to process two-word abbreviations in the
+          // first iteration, and one-word abbreviations in the second
+          // iteration.
+          `b, .${cls.ABBREVIATION}`
+        );
+      }
     );
   });
 }

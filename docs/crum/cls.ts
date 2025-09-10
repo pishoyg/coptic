@@ -6,7 +6,15 @@
  * of being able to keep the HTML as is and update the style through the CSS.
  */
 
+/**
+ * ABBREVIATIONS is the class of the link to Crum's list of abbreviations
+ * (a.k.a. digital bibliography).
+ */
 export const ABBREVIATIONS = 'abbreviations';
+/**
+ * ABBREVIATION is the class of a Crum Wiki abbreviation.
+ */
+export const ABBREVIATION = 'abbreviation';
 export const CATEGORIES = 'categories';
 export const CRUM_PAGE = 'crum-page';
 export const CRUM_PAGE_EXTERNAL = 'crum-page-external';

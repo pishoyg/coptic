@@ -55,6 +55,8 @@ export function makeSpanLinkToAnchor(el: Element, target: string): void {
 export function replaceText(
   root: Node,
   regex: RegExp,
+  // TODO: (#419) Allow the replace method to return a null or undefined if a
+  // replacement is not desirable.
   replace: (match: RegExpExecArray) => (Node | string)[],
   excludeClosestQuery?: string
 ): void {
