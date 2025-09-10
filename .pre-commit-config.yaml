@@ -256,7 +256,7 @@ repos:
         # The KELLIA driver contains non-English text.
         # Other types of files are data files, not code files. We don't take
         # data updates lightly.
-        exclude: ".*\\.(xml|html|xhtml|txt|tsv|csv|json|tab|msql|xsd)$|dictionary/kellia_uni_goettingen_de/main.py"
+        exclude: ".*\\.(xml|html|xhtml|txt|tsv|csv|json|tab|msql|xsd)$|dictionary/kellia_uni_goettingen_de/main.py|docs/crum/references.ts"
         args: [-L, "afterAll,astroid,Cant,pres"]
 
   # Git Commit Messages
