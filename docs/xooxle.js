@@ -682,13 +682,19 @@ class Line {
    * @param html - The HTML content of the line.
    */
   constructor(html) {
+    // Normalize diacritics in the HTML. This is important for the highlighting
+    // step to be able to locate diacritics and ignore them.
+    this.html = orth.normalize(html);
     // We obtain the text by deleting all tags.
-    // We also get rid of diacritics because we want to ignore them during
-    // search.
-    // We search the text for matches. When we get back to searching the HTML
-    // for the matches, we ignore the diacritics in that step as well.
-    this.html = orth.cleanDiacritics(html);
-    this.text = this.html.replaceAll(TAG_REGEX, '');
+    // We also get rid of diacritics. When it comes to search, we search a
+    // diacritic-free query against the diacritic-free text created here. This
+    // ensures that diacritics have no effect on search results, which is
+    // currently desirable (#253).
+    // When it comes to highlighting, if the search step indicated that the
+    // text[i:j] contains a match and needs to be highlighted, the highlighter
+    // accounts for the fact that the HTML may contain diacritics that were not
+    // taken into consideration when that i and j were calculated.
+    this.text = orth.cleanDiacritics(this.html.replaceAll(TAG_REGEX, ''));
   }
   /**
    * @param regex - The regex to search.
