@@ -17,11 +17,11 @@ import * as ccls from '../cls.js';
 import * as header from '../header.js';
 import * as logger from '../logger.js';
 import * as bible from './bible.js';
-import * as abb from './abbreviations.js';
+import * as ann from './annotations.js';
 import * as drop from '../dropdown.js';
-const REFERENCE_RE = /(\b(?:[123]\s)?[a-zA-Z]+)(?:\s+(\d+))(?:\s+(\d+))?\b/gu;
-const TWO_WORD_ABBREVIATION_RE = /\b[a-zA-Z]+\s+[a-zA-Z]+\b/gu;
-const ONE_WORD_ABBREVIATION_RE = /\b[a-zA-Z]+\b/gu;
+const BIBLE_RE = /(\b(?:[123]\s)?[a-zA-Z]+)(?:\s+(\d+))(?:\s+(\d+))?\b/gu;
+const TWO_WORD_ANNOTATION_RE = /\b[a-zA-Z]+\s+[a-zA-Z]+\b/gu;
+const ONE_WORD_ANNOTATION_RE = /\b[a-zA-Z]+\b/gu;
 const COPTIC_RE = /[\p{Script=Coptic}\p{Mark}]+/gu;
 const GREEK_RE = /[\p{Script=Greek}\p{Mark}]+/gu;
 const ENGLISH_RE = /[\p{Script=Latin}\p{Mark}]+/gu;
@@ -53,7 +53,7 @@ export function handleAll(elem, highlighter) {
   addEnglishLookups(elem);
   handleWikiBible(elem);
   handleWikiDialects(elem);
-  handleWikiAbbreviations(elem);
+  handleWikiAnnotations(elem);
 }
 /**
  *
@@ -363,39 +363,38 @@ export function handleWikiDialects(elem) {
  *
  * @param elem
  */
-export function handleWikiAbbreviations(elem) {
+export function handleWikiAnnotations(elem) {
   elem.querySelectorAll(`.${cls.WIKI}`).forEach((el) => {
-    [TWO_WORD_ABBREVIATION_RE, ONE_WORD_ABBREVIATION_RE].forEach((regex) => {
+    [TWO_WORD_ANNOTATION_RE, ONE_WORD_ANNOTATION_RE].forEach((regex) => {
       html.replaceText(
         el,
         regex,
         (match) => {
           const form = match[0];
-          const abbrev = abb.MAPPING[form];
-          if (!abbrev) {
+          const annot = ann.MAPPING[form];
+          if (!annot) {
             return null;
           }
           const span = document.createElement('span');
           span.textContent = form;
-          drop.addHoverDroppable(span, abbrev.fullForm);
-          span.classList.add(cls.ABBREVIATION);
+          drop.addHoverDroppable(span, annot.fullForm);
+          span.classList.add(cls.ANNOTATION);
           return [span];
         },
         // <b> tags are used for iterator bullet (a., b., c., ...; I, II, II,
         // ...). We want to skip those.
         //
-        // Additionally, if an element is already an abbreviation, we don't do
-        // anything. This allows us to process two-word abbreviations in the
-        // first iteration, and one-word abbreviations in the second
-        // iteration.
-        `b, .${cls.ABBREVIATION}`
+        // Additionally, if an element is already an annotation, we don't do
+        // anything. This allows us to process two-word annotations in the
+        // first iteration, and one-word annotations in the second iteration.
+        `b, .${cls.ANNOTATION}`
       );
     });
   });
 }
 /**
  *
- * TODO: (#419) Some references do not have a verse number. (Example:
+ * TODO: (#419) Some biblical references do not have a verse number. (Example:
  * ⲁⲃⲁϭⲏⲉⲓⲛ[1] cites "Ap 4" without a verse number.) Those should bear a
  * hyperlink to the chapter file.
  * [1]https://remnqymi.com/crum/97.html
@@ -430,7 +429,7 @@ export function handleWikiAbbreviations(elem) {
  */
 export function handleWikiBible(elem) {
   elem.querySelectorAll(`.${cls.WIKI}`).forEach((el) => {
-    html.replaceText(el, REFERENCE_RE, (match) => {
+    html.replaceText(el, BIBLE_RE, (match) => {
       const fullText = match[0];
       let [bookAbbreviation, chapter, verse] = [match[1], match[2], match[3]];
       let nameOverride = undefined;
@@ -456,7 +455,7 @@ export function handleWikiBible(elem) {
       const url = `${basename}#v${verse}`;
       const link = document.createElement('a');
       link.href = url;
-      link.classList.add(ccls.HOVER_LINK, cls.REFERENCE);
+      link.classList.add(ccls.HOVER_LINK, cls.BIBLE);
       link.textContent = fullText;
       drop.addHoverDroppable(link, nameOverride ?? book.name);
       return [link];
