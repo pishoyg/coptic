@@ -51,7 +51,7 @@ export function handleAll(elem, highlighter) {
   addCopticLookups(elem);
   addGreekLookups(elem);
   addEnglishLookups(elem);
-  handleWikiReferences(elem);
+  handleWikiBible(elem);
   handleWikiDialects(elem);
   handleWikiAbbreviations(elem);
 }
@@ -428,7 +428,7 @@ export function handleWikiAbbreviations(elem) {
  * @param elem
  *
  */
-export function handleWikiReferences(elem) {
+export function handleWikiBible(elem) {
   elem.querySelectorAll(`.${cls.WIKI}`).forEach((el) => {
     html.replaceText(el, REFERENCE_RE, (match) => {
       const fullText = match[0];
@@ -456,6 +456,7 @@ export function handleWikiReferences(elem) {
       link.href = url;
       link.classList.add(ccls.HOVER_LINK, cls.REFERENCE);
       link.textContent = fullText;
+      drop.addHoverDroppable(link, book.name);
       return [link];
     });
   });

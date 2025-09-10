@@ -190,7 +190,7 @@ class WikiSearchResult extends xooxle.SearchResult {
   row(total) {
     const row = super.row(total);
     crum.addGreekLookups(row);
-    crum.handleWikiReferences(row);
+    crum.handleWikiBible(row);
     return row;
   }
   /**
