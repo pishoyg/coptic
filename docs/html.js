@@ -41,7 +41,7 @@ export function makeSpanLinkToAnchor(el, target) {
  * @param root - Root of the tree to process.
  * @param regex - Regex to search for in the text nodes of the tree.
  * @param replace - A method to construct a fragment from a regex match
- * obtained with the regex above.
+ * obtained with the regex above. Return null if no replacement is required.
  * @param excludeClosestQuery - An optional query specifying if any subtrees of
  * the given root should be excluded.
  */
@@ -50,7 +50,7 @@ export function replaceText(root, regex, replace, excludeClosestQuery) {
     root,
     NodeFilter.SHOW_TEXT,
     (node) => {
-      if (!node.nodeValue || !regex.test(node.nodeValue)) {
+      if (!node.nodeValue?.match(regex)) {
         // This node doesn't contain a matching text.
         return NodeFilter.FILTER_REJECT;
       }
@@ -79,11 +79,14 @@ export function replaceText(root, regex, replace, excludeClosestQuery) {
     for (let match; (match = regex.exec(text)); ) {
       // preceding plain text
       if (match.index > lastIndex) {
-        fragment.appendChild(
-          document.createTextNode(text.slice(lastIndex, match.index))
-        );
+        fragment.append(text.slice(lastIndex, match.index));
       }
-      fragment.append(...replace(match));
+      const replacement = replace(match);
+      if (replacement) {
+        fragment.append(...replacement);
+      } else {
+        fragment.append(match[0]);
+      }
       lastIndex = match.index + match[0].length;
     }
     if (lastIndex < text.length) {
@@ -115,7 +118,7 @@ export function linkifyText(root, regex, url, classes, excludedClasses = []) {
       const targetUrl = url(match);
       if (!targetUrl) {
         // This text doesn't have a URL. Return the original text.
-        return [match[0]];
+        return null;
       }
       // Create a link.
       const link = document.createElement('span');

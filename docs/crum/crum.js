@@ -17,7 +17,11 @@ import * as ccls from '../cls.js';
 import * as header from '../header.js';
 import * as logger from '../logger.js';
 import * as bible from './bible.js';
-const REFERENCE_RE = /(\b(?:[123]\s)?[a-zA-Z]+)(?:\s+(\d+))(?:\s+(\d+))?\b/g;
+import * as abb from './abbreviations.js';
+import * as drop from '../dropdown.js';
+const REFERENCE_RE = /(\b(?:[123]\s)?[a-zA-Z]+)(?:\s+(\d+))(?:\s+(\d+))?\b/gu;
+const TWO_WORD_ABBREVIATION_RE = /[a-zA-Z]+\s+[a-zA-Z]+/gu;
+const ONE_WORD_ABBREVIATION_RE = /[a-zA-Z]+/gu;
 const COPTIC_RE = /[\p{Script=Coptic}\p{Mark}]+/gu;
 const GREEK_RE = /[\p{Script=Greek}\p{Mark}]+/gu;
 const ENGLISH_RE = /[\p{Script=Latin}\p{Mark}]+/gu;
@@ -48,6 +52,8 @@ export function handleAll(elem, highlighter) {
   addGreekLookups(elem);
   addEnglishLookups(elem);
   handleWikiReferences(elem);
+  handleWikiDialects(elem);
+  handleWikiAbbreviations(elem);
 }
 /**
  *
@@ -346,6 +352,49 @@ export function addEnglishLookups(elem) {
 }
 /**
  *
+ * @param elem
+ */
+export function handleWikiDialects(elem) {
+  elem.querySelectorAll(`.${cls.WIKI} .${cls.DIALECT}`).forEach((el) => {
+    drop.addHoverDroppable(el, d.DIALECTS[el.textContent].name);
+  });
+}
+/**
+ *
+ * @param elem
+ */
+export function handleWikiAbbreviations(elem) {
+  elem.querySelectorAll(`.${cls.WIKI}`).forEach((el) => {
+    [TWO_WORD_ABBREVIATION_RE, ONE_WORD_ABBREVIATION_RE].forEach((regex) => {
+      html.replaceText(
+        el,
+        regex,
+        (match) => {
+          const form = match[0];
+          const abbrev = abb.MAPPING[form];
+          if (!abbrev) {
+            return null;
+          }
+          const span = document.createElement('span');
+          span.textContent = form;
+          drop.addHoverDroppable(span, abbrev.fullForm);
+          span.classList.add(cls.ABBREVIATION);
+          return [span];
+        },
+        // <b> tags are used for iterator bullet (a., b., c., ...; I, II, II,
+        // ...). We want to skip those.
+        //
+        // Additionally, if an element is already an abbreviation, we don't do
+        // anything. This allows us to process two-word abbreviations in the
+        // first iteration, and one-word abbreviations in the second
+        // iteration.
+        `b, .${cls.ABBREVIATION}`
+      );
+    });
+  });
+}
+/**
+ *
  * TODO: (#419) Some references do not have a verse number. (Example:
  * ⲁⲃⲁϭⲏⲉⲓⲛ[1] cites "Ap 4" without a verse number.) Those should bear a
  * hyperlink to the chapter file.
@@ -395,11 +444,11 @@ export function handleWikiReferences(elem) {
         chapter = 'a';
       }
       if (!bookAbbreviation || !chapter || !verse) {
-        return [fullText];
+        return null;
       }
       const book = bible.MAPPING[bookAbbreviation];
       if (!book) {
-        return [fullText];
+        return null;
       }
       const basename = `${paths.BIBLE}/${book.path}_${chapter}.html`;
       const url = `${basename}#v${verse}`;

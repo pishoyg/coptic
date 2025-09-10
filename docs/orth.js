@@ -19,13 +19,14 @@ const DIACRITIC_RE = /\p{M}/gu;
  * character is a diacritic. False otherwise.
  */
 export function isOneDiacritic(char) {
-  return !!char && char.length === 1 && DIACRITIC_RE.test(char);
+  return !!char && char.length === 1 && !!char.match(DIACRITIC_RE);
 }
 /**
  * @param text - Text to be cleaned.
  * @returns - The text, with diacritics removed.
  */
 export function cleanDiacritics(text) {
+  DIACRITIC_RE.lastIndex = 0;
   return normalize(text).replaceAll(DIACRITIC_RE, '');
 }
 // CHROME_WORD_CHARS is a list of characters that are considered word characters
