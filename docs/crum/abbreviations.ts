@@ -1,6 +1,7 @@
+type Category = 'Grammatical' | 'Instructional' | 'Linguistic' | 'Latin';
 export interface Abbreviation {
   fullForm: string;
-  category: string;
+  category: Category;
 }
 
 export const MAPPING: Record<string, Abbreviation> = {
@@ -77,3 +78,12 @@ export const MAPPING: Record<string, Abbreviation> = {
   var: { fullForm: 'variant, in same dialect', category: 'Instructional' },
   vb: { fullForm: 'verb', category: 'Grammatical' },
 };
+// The following abbreviations are not found in Crum, but they are nice to have.
+// TODO: (#194) This list is likely incomplete. Add all Latin abbreviations.
+MAPPING['cf'] = MAPPING['Cf'] = { fullForm: 'confer', category: 'Latin' };
+MAPPING['v'] = MAPPING['V']!;
+MAPPING['q v'] = { fullForm: 'quod vide', category: 'Latin' };
+MAPPING['sc'] = { fullForm: 'scilicet', category: 'Latin' };
+
+// TODO: (#511) Reconsider whether you want to retain this tip.
+MAPPING['ib'] = { fullForm: 'ibidem', category: 'Latin' };
