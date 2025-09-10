@@ -12,9 +12,9 @@
  */
 export const ABBREVIATIONS = 'abbreviations';
 /**
- * ABBREVIATION is the class of a Crum Wiki abbreviation.
+ * ANNOTATION is the class of a Crum Wiki annotation.
  */
-export const ABBREVIATION = 'abbreviation';
+export const ANNOTATION = 'annotation';
 export const CATEGORIES = 'categories';
 export const CRUM_PAGE = 'crum-page';
 export const CRUM_PAGE_EXTERNAL = 'crum-page-external';
@@ -35,9 +35,9 @@ export const NAG_HAMMADI = 'nag-hammadi';
 export const NAVIGATE = 'navigate'; // TODO: (#203) Although this class's primary use is Anki, it might actually belong in the header.
 export const QUALITY = 'quality';
 /**
- * REFERENCE represents a Crum Wiki reference, such as a biblical verse.
+ * BIBLE represents a Biblical reference in the Crum Wiki.
  */
-export const REFERENCE = 'reference';
+export const BIBLE = 'bible';
 export const ROOT_TYPE = 'root-type';
 export const SENSES = 'senses';
 export const SISTERS_TABLE = 'sisters-table';

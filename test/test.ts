@@ -73,15 +73,15 @@ play.test(
   async ({ page }: { page: play.Page }): Promise<void> => {
     const path = '/crum/88.html';
     await page.goto(path, { waitUntil: 'networkidle' });
-    // TODO: (#419) The number of Wiki references inserted in page 88 is
-    // expected to increase as we cover more sources.
+    // TODO: (#419) Add a test case for the number of non-biblical references in
+    // the Wiki.
     for (const testCase of [
-      { query: `.${ccls.WIKI} .${ccls.REFERENCE}`, want: 112 },
+      { query: `.${ccls.WIKI} .${ccls.BIBLE}`, want: 112 },
       {
         query: `.${ccls.WIKI} .${ccls.DIALECT} .${dcls.CLS.DROPPABLE}`,
         want: 383,
       },
-      { query: `.${ccls.WIKI} .${ccls.ABBREVIATION}`, want: 74 },
+      { query: `.${ccls.WIKI} .${ccls.ANNOTATION}`, want: 74 },
     ]) {
       const got: number = await page.locator(testCase.query).count();
       logger.ensure(

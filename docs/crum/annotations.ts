@@ -1,10 +1,10 @@
 type Category = 'Grammatical' | 'Instructional' | 'Linguistic' | 'Latin';
-export interface Abbreviation {
+export interface Annotation {
   fullForm: string;
   category: Category;
 }
 
-export const MAPPING: Record<string, Abbreviation> = {
+export const MAPPING: Record<string, Annotation> = {
   acc: { fullForm: 'accusative', category: 'Grammatical' },
   adj: { fullForm: 'adjective', category: 'Grammatical' },
   Ar: { fullForm: 'Arabic', category: 'Linguistic' },
@@ -78,7 +78,8 @@ export const MAPPING: Record<string, Abbreviation> = {
   var: { fullForm: 'variant, in same dialect', category: 'Instructional' },
   vb: { fullForm: 'verb', category: 'Grammatical' },
 };
-// The following abbreviations are not found in Crum, but they are nice to have.
+// The following abbreviations are not listed in Crum's List of Abbreviations,
+// but they are nice to have.
 // TODO: (#194) This list is likely incomplete. Add all Latin abbreviations.
 MAPPING['cf'] = MAPPING['Cf'] = { fullForm: 'confer', category: 'Latin' };
 MAPPING['v'] = MAPPING['V']!;
