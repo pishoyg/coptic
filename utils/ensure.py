@@ -80,9 +80,23 @@ def equal_sets[T](
 
 
 def singleton[T](arr: abc.Iterable[T]) -> T:
-    s: set[T] = set(arr)
-    ensure(len(s) == 1, s, "is not a singleton!")
-    return next(iter(s))
+    ensure(arr, "iterable is empty!")
+    it: abc.Iterator[T] = iter(arr)
+    first: T = next(it)
+    while True:
+        try:
+            cur: T = next(it)
+            ensure(
+                first == cur,
+                arr,
+                "is not a singleton! Found several elements:",
+                first,
+                ",",
+                cur,
+            )
+        except StopIteration:
+            break
+    return first
 
 
 _bracket_map: dict[str, str] = {")": "(", "]": "[", "}": "{", ">": "<"}
