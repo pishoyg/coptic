@@ -22,7 +22,7 @@ const DIACRITIC_RE = /\p{M}/gu;
  * character is a diacritic. False otherwise.
  */
 export function isOneDiacritic(char?: string): boolean {
-  return !!char && char.length === 1 && DIACRITIC_RE.test(char);
+  return !!char && char.length === 1 && !!char.match(DIACRITIC_RE);
 }
 
 /**
@@ -30,6 +30,7 @@ export function isOneDiacritic(char?: string): boolean {
  * @returns - The text, with diacritics removed.
  */
 export function cleanDiacritics(text: string): string {
+  DIACRITIC_RE.lastIndex = 0;
   return normalize(text).replaceAll(DIACRITIC_RE, '');
 }
 

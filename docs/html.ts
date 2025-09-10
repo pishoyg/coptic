@@ -64,7 +64,7 @@ export function replaceText(
     root,
     NodeFilter.SHOW_TEXT,
     (node: Node): number => {
-      if (!node.nodeValue || !regex.test(node.nodeValue)) {
+      if (!node.nodeValue?.match(regex)) {
         // This node doesn't contain a matching text.
         return NodeFilter.FILTER_REJECT;
       }
