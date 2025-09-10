@@ -205,6 +205,16 @@ table {
   margin-bottom: 0.5em;
 }
 
+.wiki p .droppable {
+  font-size: small;
+
+  /* In our Crum Wiki, we show .droppable tips inside <p> elements. This results in the
+   * rule above indenting droppable content, which is undesirable. Ideally, a droppable
+   * shouldn't live inside a <p> tag. Since this is a bit challenging to achieve,
+   * we work around the problem by overriding the style for droppables. */
+  text-indent: 0;
+}
+
 .wiki .reference {
   color: #1873cc; /* dark blue */
 }
