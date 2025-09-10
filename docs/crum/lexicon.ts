@@ -197,7 +197,7 @@ class WikiSearchResult extends xooxle.SearchResult {
   override row(total: number): HTMLTableRowElement {
     const row: HTMLTableRowElement = super.row(total);
     crum.addGreekLookups(row);
-    crum.handleWikiReferences(row);
+    crum.handleWikiBible(row);
     return row;
   }
 

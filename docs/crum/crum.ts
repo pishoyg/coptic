@@ -60,7 +60,7 @@ export function handleAll(
   addCopticLookups(elem);
   addGreekLookups(elem);
   addEnglishLookups(elem);
-  handleWikiReferences(elem);
+  handleWikiBible(elem);
   handleWikiDialects(elem);
   handleWikiAbbreviations(elem);
 }
@@ -489,7 +489,7 @@ export function handleWikiAbbreviations(elem: HTMLElement): void {
  * @param elem
  *
  */
-export function handleWikiReferences(elem: HTMLElement): void {
+export function handleWikiBible(elem: HTMLElement): void {
   elem.querySelectorAll(`.${cls.WIKI}`).forEach((el) => {
     html.replaceText(
       el,
@@ -521,6 +521,7 @@ export function handleWikiReferences(elem: HTMLElement): void {
         link.href = url;
         link.classList.add(ccls.HOVER_LINK, cls.REFERENCE);
         link.textContent = fullText;
+        drop.addHoverDroppable(link, book.name);
         return [link];
       }
     );
