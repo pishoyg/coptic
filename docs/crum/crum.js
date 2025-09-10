@@ -51,8 +51,8 @@ export function handleAll(elem, highlighter) {
   addCopticLookups(elem);
   addGreekLookups(elem);
   addEnglishLookups(elem);
-  handleWikiBible(elem);
   handleWikiDialects(elem);
+  handleWikiBible(elem);
   handleWikiAnnotations(elem);
 }
 /**
@@ -386,8 +386,19 @@ export function handleWikiAnnotations(elem) {
         //
         // Additionally, if an element is already an annotation, we don't do
         // anything. This allows us to process two-word annotations in the
-        // first iteration, and one-word annotations in the second iteration.
-        `b, .${cls.ANNOTATION}`
+        // first iteration, and one-word annotations in the second iteration,
+        // without worrying about annotations that are substrings of others.
+        // For example, ‘c’ is a substring of ‘p c’. In order to prevent
+        // conflict, we process the longer annotation (‘p c’) first, and mark
+        // it using the ANNOTATION class. In the following iteration, when
+        // we're searching for occurrences of ‘c’, we're sure we're gonna skip
+        // the marked instances of ‘p c’.
+        //
+        // Finally, for mere defensiveness, we avoid processing all elements
+        // containing Crum abbreviations (dialects, or biblical or
+        // non-biblical references), in order to prevent any potential
+        // overlap (although this is unexpected).
+        `b, ${css.classQuery(cls.ANNOTATION, cls.DIALECT, cls.REFERENCE, cls.BIBLE)}`
       );
     });
   });
@@ -429,36 +440,43 @@ export function handleWikiAnnotations(elem) {
  */
 export function handleWikiBible(elem) {
   elem.querySelectorAll(`.${cls.WIKI}`).forEach((el) => {
-    html.replaceText(el, BIBLE_RE, (match) => {
-      const fullText = match[0];
-      let [bookAbbreviation, chapter, verse] = [match[1], match[2], match[3]];
-      let nameOverride = undefined;
-      if (bookAbbreviation === 'Su') {
-        // The Book of Susanna needs special handling. This is because it's
-        // treated as a separate book by Crum, but it's just a chapter in
-        // Daniel in the Bible index.
-        // Given that it only contains one chapter, the book abbreviation
-        // is followed by the verse number only (there is no chapter number).
-        bookAbbreviation = 'Dan';
-        verse = chapter;
-        chapter = 'a';
-        nameOverride = 'Susanna';
-      }
-      if (!bookAbbreviation || !chapter || !verse) {
-        return null;
-      }
-      const book = bible.MAPPING[bookAbbreviation];
-      if (!book) {
-        return null;
-      }
-      const basename = `${paths.BIBLE}/${book.path}_${chapter}.html`;
-      const url = `${basename}#v${verse}`;
-      const link = document.createElement('a');
-      link.href = url;
-      link.classList.add(ccls.HOVER_LINK, cls.BIBLE);
-      link.textContent = fullText;
-      drop.addHoverDroppable(link, nameOverride ?? book.name);
-      return [link];
-    });
+    html.replaceText(
+      el,
+      BIBLE_RE,
+      (match) => {
+        const fullText = match[0];
+        let [bookAbbreviation, chapter, verse] = [match[1], match[2], match[3]];
+        let nameOverride = undefined;
+        if (bookAbbreviation === 'Su') {
+          // The Book of Susanna needs special handling. This is because it's
+          // treated as a separate book by Crum, but it's just a chapter in
+          // Daniel in the Bible index.
+          // Given that it only contains one chapter, the book abbreviation
+          // is followed by the verse number only (there is no chapter number).
+          bookAbbreviation = 'Dan';
+          verse = chapter;
+          chapter = 'a';
+          nameOverride = 'Susanna';
+        }
+        if (!bookAbbreviation || !chapter || !verse) {
+          return null;
+        }
+        const book = bible.MAPPING[bookAbbreviation];
+        if (!book) {
+          return null;
+        }
+        const basename = `${paths.BIBLE}/${book.path}_${chapter}.html`;
+        const url = `${basename}#v${verse}`;
+        const link = document.createElement('a');
+        link.href = url;
+        link.classList.add(ccls.HOVER_LINK, cls.BIBLE);
+        link.textContent = fullText;
+        drop.addHoverDroppable(link, nameOverride ?? book.name);
+        return [link];
+      },
+      // Exclude all Wiki abbreviations to avoid overlap.
+      // This is not expected to occur, but we add this check for defensiveness.
+      css.classQuery(cls.ANNOTATION, cls.DIALECT, cls.REFERENCE, cls.BIBLE)
+    );
   });
 }
