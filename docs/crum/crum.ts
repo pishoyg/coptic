@@ -61,6 +61,7 @@ export function handleAll(
   addGreekLookups(elem);
   addEnglishLookups(elem);
   handleWikiReferences(elem);
+  handleWikiDialects(elem);
   handleWikiAbbreviations(elem);
 }
 
@@ -405,6 +406,17 @@ export function addEnglishLookups(elem: HTMLElement): void {
   });
 }
 
+/**
+ *
+ * @param elem
+ */
+export function handleWikiDialects(elem: HTMLElement): void {
+  elem
+    .querySelectorAll(`.${cls.WIKI} .${cls.DIALECT}`)
+    .forEach((el: Element): void => {
+      drop.addHoverDroppable(el, d.DIALECTS[el.textContent as d.DIALECT].name);
+    });
+}
 /**
  *
  * @param elem
