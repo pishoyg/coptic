@@ -270,7 +270,7 @@ class CrumIndexer(Mother):
                 home=CRUM_HOME,
                 search=CRUM_SEARCH,
                 scripts=[relpath(paths.CRUM_JS)],
-                css=[],
+                css=[relpath(paths.DROPDOWN_CSS)],
             ),
             deck.IndexIndex(
                 "Types",
@@ -278,7 +278,7 @@ class CrumIndexer(Mother):
                 home=CRUM_HOME,
                 search=CRUM_SEARCH,
                 scripts=[relpath(paths.CRUM_JS)],
-                css=[],
+                css=[relpath(paths.DROPDOWN_CSS)],
             ),
         ]
 
@@ -366,7 +366,7 @@ class Crum(Decker):
                 search=CRUM_SEARCH,
                 js_start=dialects_js(self.dialects),
                 js_path=relpath(paths.CRUM_JS),
-                css=[],
+                css=[relpath(paths.DROPDOWN_CSS)],
             )
 
     def __path(self, key: str | None) -> str:

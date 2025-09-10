@@ -37,6 +37,7 @@ ANKI_DIR: str = os.path.join(LEXICON_DIR, "anki/coptic.apkg")
 
 ICON: str = file(SITE_DIR, "img/icon/icon-circle.png")
 
+DROPDOWN_CSS: str = file(SITE_DIR, "dropdown.css")
 SHARED_CSS: str = file(SITE_DIR, "style.css")
 
 
