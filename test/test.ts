@@ -4,7 +4,8 @@
 
 import * as play from '@playwright/test';
 import * as logger from '../docs/logger.js';
-import * as cls from '../docs/crum/cls.js';
+import * as ccls from '../docs/crum/cls.js';
+import * as dcls from '../docs/dropdown.js';
 
 /**
  * PAGES_TO_TEST defines the list of site pages to test.
@@ -71,11 +72,27 @@ play.test(
   'Inserts hyperlinks for Wiki References',
   async ({ page }: { page: play.Page }): Promise<void> => {
     const path = '/crum/88.html';
+    await page.goto(path, { waitUntil: 'networkidle' });
     // TODO: (#419) The number of Wiki references inserted in page 88 is
     // expected to increase as we cover more sources.
-    const wantWikiRefs = 112;
-    await page.goto(path, { waitUntil: 'networkidle' });
-    const got: number = await page.locator(`.${cls.REFERENCE}`).count();
-    logger.ensure(got === wantWikiRefs, 'want', wantWikiRefs, 'got', got);
+    for (const testCase of [
+      { query: `.${ccls.WIKI} .${ccls.REFERENCE}`, want: 112 },
+      {
+        query: `.${ccls.WIKI} .${ccls.DIALECT} .${dcls.CLS.DROPPABLE}`,
+        want: 383,
+      },
+      { query: `.${ccls.WIKI} .${ccls.ABBREVIATION}`, want: 74 },
+    ]) {
+      const got: number = await page.locator(testCase.query).count();
+      logger.ensure(
+        got === testCase.want,
+        'want',
+        testCase.want,
+        'for query',
+        testCase.query,
+        'got',
+        got
+      );
+    }
   }
 );
