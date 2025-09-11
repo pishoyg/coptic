@@ -381,8 +381,8 @@ export function handleWikiAnnotations(elem) {
           span.classList.add(cls.ANNOTATION);
           return [span];
         },
-        // <b> tags are used for iterator bullet (a., b., c., ...; I, II, II,
-        // ...). We want to skip those.
+        // We want to skip bullet point bullets from processing (a., b., c.,
+        // ...; I, II, II, ...).
         //
         // Additionally, if an element is already an annotation, we don't do
         // anything. This allows us to process two-word annotations in the
@@ -398,7 +398,13 @@ export function handleWikiAnnotations(elem) {
         // containing Crum abbreviations (dialects, or biblical or
         // non-biblical references), in order to prevent any potential
         // overlap (although this is unexpected).
-        `b, ${css.classQuery(cls.ANNOTATION, cls.DIALECT, cls.REFERENCE, cls.BIBLE)}`
+        css.classQuery(
+          cls.BULLET,
+          cls.ANNOTATION,
+          cls.DIALECT,
+          cls.REFERENCE,
+          cls.BIBLE
+        )
       );
     });
   });
