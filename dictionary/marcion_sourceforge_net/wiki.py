@@ -58,7 +58,12 @@ SUBSTITUTIONS: list[Substitution] = [
     Substitution("asterisk", r"\*", "&ast;", enabled=False),  # Unnecessary!
     Substitution("tab", r"\n", "</p><p>", enabled=False),  # Unused!
     Substitution("em", r"__(.+?)__", r"<em>\1</em>"),
-    Substitution("bold", r"\*(.+?)\*", r"<b>\1</b>"),
+    Substitution(
+        "bold",
+        r"\*(.+?)\*",
+        r"<b>\1</b>",
+        override=r'<span class="bullet">\1</span>',
+    ),
     Substitution("italic", r"_(.+?)_", r"<i>\1</i>"),
     Substitution(
         "dialect",

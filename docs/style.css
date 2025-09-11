@@ -242,7 +242,8 @@ table {
   font-weight: bold;
 }
 
-.wiki b {
+.wiki .bullet {
+  font-weight: bold;
   color: indigo;
 }
 

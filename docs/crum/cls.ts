@@ -21,6 +21,10 @@ export const ANNOTATION = 'annotation';
  * BIBLE represents a Biblical reference in the Crum Wiki.
  */
 export const BIBLE = 'bible';
+/**
+ * BULLET is the class of a bullet point bullet in the Crum Wiki.
+ */
+export const BULLET = 'bullet';
 export const CATEGORIES = 'categories';
 export const CRUM_PAGE = 'crum-page';
 export const CRUM_PAGE_EXTERNAL = 'crum-page-external';

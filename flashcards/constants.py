@@ -1065,9 +1065,10 @@ CRUM_WIKI_XOOXLE: xooxle.Index = xooxle.Index(
             # TODO: (#0) Import class names from Wiki, instead of duplicating
             # them below.
             retain_classes={
+                "wiki",
                 "dialect",
                 "headword",
-                "wiki",
+                "bullet",
                 "arabic",
                 "amharic",
                 "hebrew",
