@@ -18,25 +18,30 @@ import * as orth from '../orth.js';
  *
  * NOTE: Crum often used abbreviated form inconsistently, which complicates our
  * parsing. In cases where there is inconsistency with spacing, the stored
- * abbreviated form should contain spaces. Our algorithm should then
+ * abbreviated form should contain the spaces. Our algorithm should then
  * automatically search for both the stored form, and a generated space-free
- * counterpart. There is no need to store the one-word (space-free) form as a
- * variant, as this will be handled automatically. It should, never the less, be
- * stored as the form-in-the-list.
+ * form. There is no need to store the space-free form as a variant, as this
+ * will be handled automatically. The form that Crum used in his list (generally
+ * speaking, that's the space-free form) should, nevertheless, be stored in the
+ * form-in-the-list field.
+ * Example:
+ * ‘MainH’ appears as both ‘Mani H’ and ‘ManiH’. We store ‘Mani H’ as the form,
+ * so we can detect both. We also store ‘ManiH’ in the form-in-the-list field.
  *
- * TODO: (#419) Revisit two-part abbreviations may sometimes appear with spaces.
- * You can conveniently search for those in this file the following regex:
+ * TODO: (#419) Revisit two-part abbreviations, and insert spaces where
+ * appropriate. We have attempted to insert spaces for all abbreviations that
+ * ever occurred with a space, but some may have evaded our detection.
+ * You can conveniently search this file for candidates using this regex:
  * ```
  * [A-Z][a-z][a-z]*[A-Z][a-zA-Z]*: {
  * ```
  *
- * NOTE: Some abbreviations are substrings of others. Example:
- * - ‘C’ is a substring of ‘J & C’.
- * - ‘Till’ is a substring of ‘Till Bau’.
- * Keep that in mind when implementing the search logic.
- * P.S. Perhaps process the abbreviations in reverse order by length? This
- * should ensure that you capture and mark superstrings before substring!
- *
+ * TODO: (#419) Some abbreviations are substrings of others. Example:
+ * - ‘C’ is a substring of ‘J&C’ / ‘J & C’ (both forms have occurred).
+ * - ‘Till’ is a substring of ‘Till Oster’ / ‘TillOster’ (again, both forms have
+ *   occurred).
+ * Those are handled correctly, as far as I can tell. But you should explicitly
+ * document the behavior, and how these nuances are taken care of.
  */
 export const MAPPING = {
   ShA: {
