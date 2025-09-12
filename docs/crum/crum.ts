@@ -21,11 +21,24 @@ import * as header from '../header.js';
 import * as logger from '../logger.js';
 import * as bible from './bible.js';
 import * as ann from './annotations.js';
+import * as ref from './references.js';
 import * as drop from '../dropdown.js';
+import * as orth from '../orth.js';
 
 const BIBLE_RE = /(\b(?:[123]\s)?[a-zA-Z]+)(?:\s+(\d+))(?:\s+(\d+))?\b/gu;
 const TWO_WORD_ANNOTATION_RE = /\b[a-zA-Z]+\s+[a-zA-Z]+\b/gu;
 const ONE_WORD_ANNOTATION_RE = /\b[a-zA-Z]+\b/gu;
+
+// Some reference abbreviations have diacritics. We normalize the keys and the
+// search text, so we can correctly detect them.
+// Additionally, as of the time of writing, one abbreviation contains an
+// apostrophe: ‘O'Leary H’, and two contain an ampersand: ‘J & C’, ‘N & E’.
+// We presume that the inclusion of the apostrophe and the ampersand doesn't
+// otherwise compromise our search logic.
+const THREE_WORD_REFERENCE_RE =
+  /[a-zA-Z\p{M}'&]+\s+[a-zA-Z\p{M}'&]+\s+[a-zA-Z\p{M}'&]+/gu;
+const TWO_WORD_REFERENCE_RE = /[a-zA-Z\p{M}'&]+\s+[a-zA-Z\p{M}'&]+/gu;
+const ONE_WORD_REFERENCE_RE = /[a-zA-Z\p{M}'&]+/gu;
 
 const COPTIC_RE = /[\p{Script=Coptic}][\p{Script=Coptic}\p{Mark}]*/gu;
 const GREEK_RE = /[\p{Script=Greek}][\p{Script=Greek}\p{Mark}]*/gu;
@@ -63,6 +76,7 @@ export function handleAll(
   handleWikiDialects(root);
   handleWikiBible(root);
   handleWikiAnnotations(root);
+  handleWikiReferences(root);
 }
 
 /**
@@ -547,5 +561,44 @@ export function handleWikiBible(root: HTMLElement): void {
       // This is not expected to occur, but we add this check for defensiveness.
       css.classQuery(cls.ANNOTATION, cls.DIALECT, cls.REFERENCE, cls.BIBLE)
     );
+  });
+}
+
+/**
+ *
+ * @param root
+ */
+export function handleWikiReferences(root: HTMLElement): void {
+  root.querySelectorAll(`.${cls.WIKI}`).forEach((el: Element): void => {
+    [
+      THREE_WORD_REFERENCE_RE,
+      TWO_WORD_REFERENCE_RE,
+      ONE_WORD_REFERENCE_RE,
+    ].forEach((regex: RegExp): void => {
+      html.replaceText(
+        el,
+        regex,
+        (match: RegExpExecArray): (Node | string)[] | null => {
+          const form: string = orth.normalize(match[0]);
+          const source: ref.Source | undefined = ref.MAPPING[form];
+          if (!source) {
+            return null;
+          }
+          const span: HTMLSpanElement = document.createElement('span');
+          span.textContent = form;
+          drop.addHoverDroppable(span, source.name);
+          span.classList.add(cls.REFERENCE);
+          return [span];
+        },
+        // Exclude all Wiki abbreviations to avoid overlap.
+        css.classQuery(
+          cls.BULLET,
+          cls.ANNOTATION,
+          cls.DIALECT,
+          cls.REFERENCE,
+          cls.BIBLE
+        )
+      );
+    });
   });
 }
