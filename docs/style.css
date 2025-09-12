@@ -219,11 +219,15 @@ table {
   color: #1873cc; /* dark blue */
 }
 
+.wiki .reference {
+  color: green;
+}
+
 .wiki .arabic,
 .wiki .aramaic,
 .wiki .hebrew,
 .wiki .amharic {
-  color: mediumseagreen;
+  color: firebrick;
 }
 
 .wiki .headword {
