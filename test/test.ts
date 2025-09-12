@@ -76,7 +76,7 @@ play.test(
     // TODO: (#419) Add a test case for the number of non-biblical references in
     // the Wiki.
     for (const testCase of [
-      { query: `.${ccls.WIKI} .${ccls.BIBLE}`, want: 114 },
+      { query: `.${ccls.WIKI} .${ccls.BIBLE}`, want: 115 },
       {
         query: `.${ccls.WIKI} .${ccls.DIALECT} .${dcls.CLS.DROPPABLE}`,
         want: 383,
