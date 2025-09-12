@@ -73,9 +73,10 @@ play.test(
   async ({ page }: { page: play.Page }): Promise<void> => {
     const path = '/crum/88.html';
     await page.goto(path, { waitUntil: 'networkidle' });
-    // TODO: (#419) Add a test case for the number of non-biblical references in
-    // the Wiki.
+    // TODO: (#419) The numbers below are expected to grow as our parsers
+    // develop to handle more edge cases.
     for (const testCase of [
+      { query: `.${ccls.WIKI} .${ccls.REFERENCE}`, want: 134 },
       { query: `.${ccls.WIKI} .${ccls.BIBLE}`, want: 115 },
       {
         query: `.${ccls.WIKI} .${ccls.DIALECT} .${dcls.CLS.DROPPABLE}`,
