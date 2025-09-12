@@ -10,6 +10,7 @@ from dictionary.marcion_sourceforge_net import sheet
 from utils import ensure, gcp
 
 # pylint: disable=line-too-long
+# TODO: (#0) Move to `utils/paths.py`.
 SHEET_TSV_URL: str = (
     "https://docs.google.com/spreadsheets/d/1lhjcnkHS-pA3p5Vys-6ohKu7Y4ZCJ5NO/export?format=tsv"
 )

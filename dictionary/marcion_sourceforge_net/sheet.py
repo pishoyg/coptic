@@ -7,6 +7,7 @@ import gspread
 
 from utils import ensure, gcp
 
+# TODO: (#0) Move to `utils/paths.py`.
 GSPREAD_URL: str = (
     # pylint: disable-next=line-too-long
     "https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg"
