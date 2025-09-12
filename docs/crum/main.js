@@ -8,6 +8,9 @@ import * as crum from './crum.js';
  *
  */
 function main() {
+  // Normalizing the tree is necessary for some of our text search logic to work
+  // correctly.
+  document.body.normalize();
   const anki = iam.amI('anki');
   if (!anki) {
     // Set to defaults.

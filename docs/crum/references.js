@@ -1,4 +1,5 @@
 /* eslint-disable max-lines */
+import * as orth from '../orth.js';
 /** MAPPING maps an abbreviation to a Source object.
  *
  * The key of the mapping is the primary form used to cite this source in
@@ -1138,4 +1139,22 @@ export const MAPPING = {
   },
   '?': { name: 'perhaps, possibly', broken: 'Symbol' },
 };
+// Add all the variants to the map.
+Object.values(MAPPING).forEach((value) => {
+  if (!value.variant) {
+    return;
+  }
+  MAPPING[value.variant] = value;
+});
+// Add keys with spaces removed.
+Object.entries(MAPPING).forEach(([key, value]) => {
+  MAPPING[key.replaceAll(' ', '')] = value;
+});
+// Normalize all keys.
+Object.assign(
+  MAPPING,
+  Object.fromEntries(
+    Object.entries(MAPPING).map(([k, v]) => [orth.normalize(k), v])
+  )
+);
 /* eslint-enable max-lines */

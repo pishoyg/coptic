@@ -2,6 +2,7 @@
 import * as browser from './browser.js';
 import * as logger from './logger.js';
 import * as css from './css.js';
+import * as orth from './orth.js';
 /**
  *
  * @param el
@@ -31,12 +32,19 @@ export function makeSpanLinkToAnchor(el, target) {
   moveElement(el, 'a', { href: target });
 }
 /**
- * Search the text of all nodes under the given root. For each substring
- * matching the given regex, use the replace method to construct a replacement,
- * and insert it into the tree.
+ * Normalize and search the text of all nodes under the given root. For each
+ * substring (of the normalized text) matching the given regex, use the replace
+ * method to construct a replacement, and insert it into the tree.
  *
  * NOTE: We search one node at a time. A string that matches the regex, but
  * lives over two neighboring nodes, won't yield a match!
+ * We normalize the following:
+ * - The text (adopting a standard notation for diacritics, and removing
+ *   superfluous space that doesn't render in the HTML).
+ * - The return trees (even if the replace method yields an unnormalized tree,
+ *   we will normalize it).
+ * However, we do NOT normalize the input tree. Consider calling
+ * `root.normalize()` prior to invoking this method.
  *
  * @param root - Root of the tree to process.
  * @param regex - Regex to search for in the text nodes of the tree.
@@ -50,7 +58,10 @@ export function replaceText(root, regex, replace, excludeClosestQuery) {
     root,
     NodeFilter.SHOW_TEXT,
     (node) => {
-      if (!node.nodeValue?.match(regex)) {
+      node.nodeValue = orth
+        .normalize(node.nodeValue ?? '')
+        .replace(/\s+/g, ' ');
+      if (!node.nodeValue.match(regex)) {
         // This node doesn't contain a matching text.
         return NodeFilter.FILTER_REJECT;
       }
@@ -73,25 +84,23 @@ export function replaceText(root, regex, replace, excludeClosestQuery) {
   }
   nodes.forEach((node) => {
     const text = node.nodeValue;
-    regex.lastIndex = 0;
     let lastIndex = 0;
     const fragment = document.createDocumentFragment();
+    regex.lastIndex = 0;
     for (let match; (match = regex.exec(text)); ) {
-      // preceding plain text
+      // Add preceding plain text.
       if (match.index > lastIndex) {
         fragment.append(text.slice(lastIndex, match.index));
       }
-      const replacement = replace(match);
-      if (replacement) {
-        fragment.append(...replacement);
-      } else {
-        fragment.append(match[0]);
-      }
+      fragment.append(...(replace(match) ?? [match[0]]));
       lastIndex = match.index + match[0].length;
     }
     if (lastIndex < text.length) {
       fragment.append(text.slice(lastIndex));
     }
+    // Normalize the fragment. Get rid of empty text node, and merge consecutive
+    // text nodes.
+    fragment.normalize();
     node.replaceWith(fragment);
   });
 }
@@ -123,7 +132,7 @@ export function linkifyText(root, regex, url, classes, excludedClasses = []) {
       // Create a link.
       const link = document.createElement('span');
       link.classList.add(...classes);
-      link.textContent = match[0];
+      link.innerText = match[0];
       link.addEventListener('click', () => {
         browser.open(targetUrl);
       });

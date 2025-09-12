@@ -18,49 +18,63 @@ import * as header from '../header.js';
 import * as logger from '../logger.js';
 import * as bible from './bible.js';
 import * as ann from './annotations.js';
+import * as ref from './references.js';
 import * as drop from '../dropdown.js';
+import * as orth from '../orth.js';
 const BIBLE_RE = /(\b(?:[123]\s)?[a-zA-Z]+)(?:\s+(\d+))(?:\s+(\d+))?\b/gu;
 const TWO_WORD_ANNOTATION_RE = /\b[a-zA-Z]+\s+[a-zA-Z]+\b/gu;
 const ONE_WORD_ANNOTATION_RE = /\b[a-zA-Z]+\b/gu;
-const COPTIC_RE = /[\p{Script=Coptic}\p{Mark}]+/gu;
-const GREEK_RE = /[\p{Script=Greek}\p{Mark}]+/gu;
-const ENGLISH_RE = /[\p{Script=Latin}\p{Mark}]+/gu;
+// Some reference abbreviations have diacritics. We normalize the keys and the
+// search text, so we can correctly detect them.
+// Additionally, as of the time of writing, one abbreviation contains an
+// apostrophe: ‘O'Leary H’, and two contain an ampersand: ‘J & C’, ‘N & E’.
+// We presume that the inclusion of the apostrophe and the ampersand doesn't
+// otherwise compromise our search logic.
+const THREE_WORD_REFERENCE_RE =
+  /[a-zA-Z\p{M}'&]+\s+[a-zA-Z\p{M}'&]+\s+[a-zA-Z\p{M}'&]+/gu;
+const TWO_WORD_REFERENCE_RE = /[a-zA-Z\p{M}'&]+\s+[a-zA-Z\p{M}'&]+/gu;
+const ONE_WORD_REFERENCE_RE = /[a-zA-Z\p{M}'&]+/gu;
+const COPTIC_RE = /[\p{Script=Coptic}][\p{Script=Coptic}\p{Mark}]*/gu;
+const GREEK_RE = /[\p{Script=Greek}][\p{Script=Greek}\p{Mark}]*/gu;
+const ENGLISH_RE = /[\p{Script=Latin}][\p{Script=Latin}\p{Mark}]*/gu;
 /**
  *
- * @param elem
+ * @param root
  * @param highlighter
  */
-export function handleAll(elem, highlighter) {
-  handleCategories(elem);
-  handleRootType(elem);
-  handleCrumPage(elem);
-  handleCrumPageExternal(elem);
-  handleDawoudPageExternal(elem);
-  handleDawoudPageImg(elem);
-  handleCrumPageImg(elem);
-  handleExplanatory(elem);
-  handleDawoudPage(elem);
-  handleDrvKey(elem);
-  handleExplanatoryKey(elem);
-  handleSisterKey(elem);
-  handleSisterView(elem);
-  handleDialect(elem, highlighter);
-  handleDeveloper(elem, highlighter);
+export function handleAll(root, highlighter) {
+  handleCategories(root);
+  handleRootType(root);
+  handleCrumPage(root);
+  handleCrumPageExternal(root);
+  handleDawoudPageExternal(root);
+  handleDawoudPageImg(root);
+  handleCrumPageImg(root);
+  handleExplanatory(root);
+  handleDawoudPage(root);
+  handleDrvKey(root);
+  handleExplanatoryKey(root);
+  handleSisterKey(root);
+  handleSisterView(root);
+  handleDialect(root, highlighter);
+  handleDeveloper(root, highlighter);
   insertCrumAbbreviationsLink();
-  handleAnkiNavigation(elem);
-  addCopticLookups(elem);
-  addGreekLookups(elem);
-  addEnglishLookups(elem);
-  handleWikiDialects(elem);
-  handleWikiBible(elem);
-  handleWikiAnnotations(elem);
+  handleAnkiNavigation(root);
+  addCopticLookups(root);
+  addGreekLookups(root);
+  addEnglishLookups(root);
+  handleWikiDialects(root);
+  handleWikiBible(root);
+  handleWikiAnnotations(root);
+  handleWikiReferences(root);
+  warnPotentiallyMissingReferences(root);
 }
 /**
  *
- * @param elem
+ * @param root
  */
-export function handleCategories(elem) {
-  elem.querySelectorAll(`.${cls.CATEGORIES}`).forEach((el) => {
+export function handleCategories(root) {
+  root.querySelectorAll(`.${cls.CATEGORIES}`).forEach((el) => {
     el.innerHTML = el.innerText
       .trim()
       .split(',')
@@ -74,10 +88,10 @@ export function handleCategories(elem) {
 }
 /**
  *
- * @param elem
+ * @param root
  */
-export function handleRootType(elem) {
-  elem.querySelectorAll(`.${cls.ROOT_TYPE}`).forEach((el) => {
+export function handleRootType(root) {
+  root.querySelectorAll(`.${cls.ROOT_TYPE}`).forEach((el) => {
     const type = el.querySelector('b')?.innerText;
     if (!type) {
       logger.error('Unable to infer the root type for element!', el);
@@ -88,20 +102,20 @@ export function handleRootType(elem) {
 }
 /**
  *
- * @param elem
+ * @param root
  */
-export function handleCrumPage(elem) {
-  elem.querySelectorAll(`.${cls.CRUM_PAGE}`).forEach((el) => {
+export function handleCrumPage(root) {
+  root.querySelectorAll(`.${cls.CRUM_PAGE}`).forEach((el) => {
     el.classList.add(ccls.LINK);
     html.makeSpanLinkToAnchor(el, `#crum${scan.chopColumn(el.innerText)}`);
   });
 }
 /**
  *
- * @param elem
+ * @param root
  */
-export function handleCrumPageExternal(elem) {
-  elem.querySelectorAll(`.${cls.CRUM_PAGE_EXTERNAL}`).forEach((el) => {
+export function handleCrumPageExternal(root) {
+  root.querySelectorAll(`.${cls.CRUM_PAGE_EXTERNAL}`).forEach((el) => {
     el.classList.add(ccls.LINK);
     el.addEventListener('click', () => {
       browser.open(`${paths.CRUM_SCAN_PREFIX}${el.innerText}`);
@@ -110,10 +124,10 @@ export function handleCrumPageExternal(elem) {
 }
 /**
  *
- * @param elem
+ * @param root
  */
-export function handleDawoudPageExternal(elem) {
-  elem.querySelectorAll(`.${cls.DAWOUD_PAGE_EXTERNAL}`).forEach((el) => {
+export function handleDawoudPageExternal(root) {
+  root.querySelectorAll(`.${cls.DAWOUD_PAGE_EXTERNAL}`).forEach((el) => {
     el.classList.add(ccls.LINK);
     el.addEventListener('click', () => {
       browser.open(`${paths.DAWOUD}?page=${el.innerText}`);
@@ -122,10 +136,10 @@ export function handleDawoudPageExternal(elem) {
 }
 /**
  *
- * @param elem
+ * @param root
  */
-export function handleDawoudPageImg(elem) {
-  elem.querySelectorAll(`.${cls.DAWOUD_PAGE_IMG}`).forEach((el) => {
+export function handleDawoudPageImg(root) {
+  root.querySelectorAll(`.${cls.DAWOUD_PAGE_IMG}`).forEach((el) => {
     const img = el.children[0];
     img.classList.add(ccls.LINK);
     img.addEventListener('click', () => {
@@ -135,10 +149,10 @@ export function handleDawoudPageImg(elem) {
 }
 /**
  *
- * @param elem
+ * @param root
  */
-export function handleCrumPageImg(elem) {
-  elem.querySelectorAll(`.${cls.CRUM_PAGE_IMG}`).forEach((el) => {
+export function handleCrumPageImg(root) {
+  root.querySelectorAll(`.${cls.CRUM_PAGE_IMG}`).forEach((el) => {
     const img = el.children[0];
     img.classList.add(ccls.LINK);
     img.addEventListener('click', () => {
@@ -148,10 +162,10 @@ export function handleCrumPageImg(elem) {
 }
 /**
  *
- * @param elem
+ * @param root
  */
-export function handleExplanatory(elem) {
-  elem.querySelectorAll(`.${cls.EXPLANATORY}`).forEach((el) => {
+export function handleExplanatory(root) {
+  root.querySelectorAll(`.${cls.EXPLANATORY}`).forEach((el) => {
     const img = el.children[0];
     const alt = img.getAttribute('alt');
     if (!alt.startsWith('http')) return;
@@ -163,20 +177,20 @@ export function handleExplanatory(elem) {
 }
 /**
  *
- * @param elem
+ * @param root
  */
-export function handleDawoudPage(elem) {
-  elem.querySelectorAll(`.${cls.DAWOUD_PAGE}`).forEach((el) => {
+export function handleDawoudPage(root) {
+  root.querySelectorAll(`.${cls.DAWOUD_PAGE}`).forEach((el) => {
     el.classList.add(ccls.LINK);
     html.makeSpanLinkToAnchor(el, `#dawoud${scan.chopColumn(el.innerText)}`);
   });
 }
 /**
  *
- * @param elem
+ * @param root
  */
-export function handleDrvKey(elem) {
-  elem.querySelectorAll(`.${cls.DRV_KEY}`).forEach((key) => {
+export function handleDrvKey(root) {
+  root.querySelectorAll(`.${cls.DRV_KEY}`).forEach((key) => {
     // The key should have the link to the row containing the derivation
     // definition in our source-of-truth sheet.
     // Make the target _blank so it will open in a separate page.
@@ -210,30 +224,30 @@ export function handleDrvKey(elem) {
 }
 /**
  *
- * @param elem
+ * @param root
  */
-export function handleExplanatoryKey(elem) {
-  elem.querySelectorAll(`.${cls.EXPLANATORY_KEY}`).forEach((el) => {
+export function handleExplanatoryKey(root) {
+  root.querySelectorAll(`.${cls.EXPLANATORY_KEY}`).forEach((el) => {
     el.classList.add(ccls.HOVER_LINK);
     html.makeSpanLinkToAnchor(el, `#explanatory${el.innerText}`);
   });
 }
 /**
  *
- * @param elem
+ * @param root
  */
-export function handleSisterKey(elem) {
-  elem.querySelectorAll(`.${cls.SISTER_KEY}`).forEach((el) => {
+export function handleSisterKey(root) {
+  root.querySelectorAll(`.${cls.SISTER_KEY}`).forEach((el) => {
     el.classList.add(ccls.HOVER_LINK);
     html.makeSpanLinkToAnchor(el, `#sister${el.innerText}`);
   });
 }
 /**
  *
- * @param elem
+ * @param root
  */
-export function handleSisterView(elem) {
-  elem
+export function handleSisterView(root) {
+  root
     .querySelectorAll(css.classQuery(cls.SISTERS_TABLE, cls.INDEX_TABLE))
     .forEach((table) => {
       let counter = 1;
@@ -252,11 +266,11 @@ export function handleSisterView(elem) {
 }
 /**
  *
- * @param elem
+ * @param root
  * @param highlighter
  */
-export function handleDialect(elem, highlighter) {
-  elem.querySelectorAll(`.${cls.DIALECT}`).forEach((el) => {
+export function handleDialect(root, highlighter) {
+  root.querySelectorAll(`.${cls.DIALECT}`).forEach((el) => {
     const code = el.innerText;
     el.replaceChildren(...d.DIALECTS[code].prettyCode());
     if (el.closest(`.${cls.WIKI}`)) {
@@ -273,11 +287,11 @@ export function handleDialect(elem, highlighter) {
 }
 /**
  *
- * @param elem
+ * @param root
  * @param highlighter
  */
-export function handleDeveloper(elem, highlighter) {
-  elem.querySelectorAll(`.${header.CLS.DEVELOPER}`).forEach((el) => {
+export function handleDeveloper(root, highlighter) {
+  root.querySelectorAll(`.${header.CLS.DEVELOPER}`).forEach((el) => {
     el.classList.add(ccls.LINK);
     el.addEventListener('click', highlighter.toggleDev.bind(highlighter));
   });
@@ -296,11 +310,11 @@ export function insertCrumAbbreviationsLink() {
 }
 /**
  *
- * @param elem
+ * @param root
  */
-export function handleAnkiNavigation(elem) {
+export function handleAnkiNavigation(root) {
   if (!iam.amI('anki')) return;
-  elem.querySelectorAll(`.${cls.NAVIGATE}`).forEach((e) => {
+  root.querySelectorAll(`.${cls.NAVIGATE}`).forEach((e) => {
     if (e.tagName !== 'A' || !e.hasAttribute('href')) {
       logger.error(
         'This "navigate" element is not an <a> tag with an "href" property!',
@@ -313,11 +327,11 @@ export function handleAnkiNavigation(elem) {
 }
 /**
  *
- * @param elem
+ * @param root
  */
-export function addCopticLookups(elem) {
+export function addCopticLookups(root) {
   html.linkifyText(
-    elem,
+    root,
     COPTIC_RE,
     (match) => paths.LOOKUP_URL_PREFIX + match[0],
     [ccls.HOVER_LINK],
@@ -326,11 +340,11 @@ export function addCopticLookups(elem) {
 }
 /**
  *
- * @param elem
+ * @param root
  */
-export function addGreekLookups(elem) {
+export function addGreekLookups(root) {
   html.linkifyText(
-    elem,
+    root,
     GREEK_RE,
     (match) => paths.GREEK_DICT_PREFIX + match[0],
     [ccls.LINK, cls.LIGHT]
@@ -338,10 +352,10 @@ export function addGreekLookups(elem) {
 }
 /**
  *
- * @param elem
+ * @param root
  */
-export function addEnglishLookups(elem) {
-  elem.querySelectorAll(`.${cls.MEANING}`).forEach((el) => {
+export function addEnglishLookups(root) {
+  root.querySelectorAll(`.${cls.MEANING}`).forEach((el) => {
     html.linkifyText(
       el,
       ENGLISH_RE,
@@ -352,19 +366,19 @@ export function addEnglishLookups(elem) {
 }
 /**
  *
- * @param elem
+ * @param root
  */
-export function handleWikiDialects(elem) {
-  elem.querySelectorAll(`.${cls.WIKI} .${cls.DIALECT}`).forEach((el) => {
+export function handleWikiDialects(root) {
+  root.querySelectorAll(`.${cls.WIKI} .${cls.DIALECT}`).forEach((el) => {
     drop.addHoverDroppable(el, d.DIALECTS[el.textContent].name);
   });
 }
 /**
  *
- * @param elem
+ * @param root
  */
-export function handleWikiAnnotations(elem) {
-  elem.querySelectorAll(`.${cls.WIKI}`).forEach((el) => {
+export function handleWikiAnnotations(root) {
+  root.querySelectorAll(`.${cls.WIKI}`).forEach((el) => {
     [TWO_WORD_ANNOTATION_RE, ONE_WORD_ANNOTATION_RE].forEach((regex) => {
       html.replaceText(
         el,
@@ -441,11 +455,11 @@ export function handleWikiAnnotations(elem) {
  *
  * [1] https://developer.mozilla.org/en-US/docs/Glossary/IIFE
  *
- * @param elem
+ * @param root
  *
  */
-export function handleWikiBible(elem) {
-  elem.querySelectorAll(`.${cls.WIKI}`).forEach((el) => {
+export function handleWikiBible(root) {
+  root.querySelectorAll(`.${cls.WIKI}`).forEach((el) => {
     html.replaceText(
       el,
       BIBLE_RE,
@@ -484,5 +498,101 @@ export function handleWikiBible(elem) {
       // This is not expected to occur, but we add this check for defensiveness.
       css.classQuery(cls.ANNOTATION, cls.DIALECT, cls.REFERENCE, cls.BIBLE)
     );
+  });
+}
+/**
+ *
+ * @param root
+ */
+export function handleWikiReferences(root) {
+  root.querySelectorAll(`.${cls.WIKI}`).forEach((el) => {
+    [
+      THREE_WORD_REFERENCE_RE,
+      TWO_WORD_REFERENCE_RE,
+      ONE_WORD_REFERENCE_RE,
+    ].forEach((regex) => {
+      html.replaceText(
+        el,
+        regex,
+        (match) => {
+          const form = orth.normalize(match[0]);
+          const source = ref.MAPPING[form];
+          if (!source) {
+            return null;
+          }
+          const span = document.createElement('span');
+          span.textContent = form;
+          drop.addHoverDroppable(span, source.name);
+          span.classList.add(cls.REFERENCE);
+          return [span];
+        },
+        // Exclude all Wiki abbreviations to avoid overlap.
+        css.classQuery(
+          cls.BULLET,
+          cls.ANNOTATION,
+          cls.DIALECT,
+          cls.REFERENCE,
+          cls.BIBLE
+        )
+      );
+    });
+  });
+}
+/**
+ * Log warnings for all capital letters in the Wiki text that haven't been
+ * marked.
+ * In Crum's text, Capital letters are mainly used for abbreviations of
+ * dialects, and biblical and non-biblical references—all of which we try to
+ * detect. An unmarked text containing a capital letter may therefore be an
+ * abbreviation that we failed to parse.
+ * This method yields a lot of false positives, but we retain it in the meantime
+ * while we sharpen our parser.
+ *
+ * TODO: (#419) Delete this function once your logic is more mature.
+ *
+ * @param root
+ */
+export function warnPotentiallyMissingReferences(root) {
+  const query = css.classQuery(
+    cls.BULLET,
+    cls.ANNOTATION,
+    cls.DIALECT,
+    cls.REFERENCE,
+    cls.BIBLE
+  );
+  root.querySelectorAll(`.${cls.WIKI}`).forEach((elem) => {
+    const walker = document.createTreeWalker(
+      elem,
+      NodeFilter.SHOW_TEXT,
+      (node) => {
+        if (!node.nodeValue) {
+          return NodeFilter.FILTER_REJECT;
+        }
+        if (node.parentElement?.closest(query)) {
+          // This node is excluded.
+          return NodeFilter.FILTER_REJECT;
+        }
+        if (!/[A-Z]/gu.test(node.nodeValue)) {
+          return NodeFilter.FILTER_REJECT;
+        }
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    );
+    while (walker.nextNode()) {
+      const text = walker.currentNode;
+      // Find all words containing an upper-case letter.
+      const words =
+        text.nodeValue?.match(/(?=\p{L}*\p{Lu})[\p{L}\p{M}]+/gu) ?? [];
+      logger.warn(
+        'Possibly unmarked abbreviations:',
+        ...words
+          // Insert a comma after each word.
+          .flatMap((entry, index) =>
+            index < words.length - 1 ? [entry, ','] : [entry]
+          ),
+        'in',
+        text.nodeValue
+      );
+    }
   });
 }

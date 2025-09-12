@@ -25,6 +25,9 @@ function addEventListeners() {
  *
  */
 function main() {
+  // Normalizing the tree is necessary for some of our text search logic to work
+  // correctly.
+  document.body.normalize();
   collapse.addEventListenersForSiblings();
   addEventListeners();
 }
