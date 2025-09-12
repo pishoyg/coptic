@@ -110,6 +110,9 @@ export function replaceText(
     if (lastIndex < text.length) {
       fragment.append(text.slice(lastIndex));
     }
+    // Normalize the fragment. Get rid of empty text node, and merge consecutive
+    // text nodes.
+    fragment.normalize();
     node.replaceWith(fragment);
   });
 }
