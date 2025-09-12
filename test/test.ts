@@ -82,7 +82,7 @@ play.test(
         query: `.${ccls.WIKI} .${ccls.DIALECT} .${dcls.CLS.DROPPABLE}`,
         want: 383,
       },
-      { query: `.${ccls.WIKI} .${ccls.ANNOTATION}`, want: 74 },
+      { query: `.${ccls.WIKI} .${ccls.ANNOTATION}`, want: 75 },
     ]) {
       const got: number = await page.locator(testCase.query).count();
       logger.ensure(
