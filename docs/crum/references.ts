@@ -766,7 +766,6 @@ export const MAPPING: Record<string, Source> = {
     formInTheList: "O'LearyH",
     hyperlink:
       'https://archive.org/details/fragmentarycopti0000olea/page/n3/mode/2up',
-    broken: 'The name has an apostrophe!',
   },
   "O'Leary Th": {
     name: 'De Lacy O’Leary: The Coptic Theotokia, 1923',
