@@ -21,7 +21,14 @@ import * as orth from '../orth.js';
  * abbreviated form should contain spaces. Our algorithm should then
  * automatically search for both the stored form, and a generated space-free
  * counterpart. There is no need to store the one-word (space-free) form as a
- * variant, as this will be handled automatically.
+ * variant, as this will be handled automatically. It should, never the less, be
+ * stored as the form-in-the-list.
+ *
+ * TODO: (#419) Revisit two-part abbreviations may sometimes appear with spaces.
+ * You can conveniently search for those in this file the following regex:
+ * ```
+ * [A-Z][a-z][a-z]*[A-Z][a-zA-Z]*: {
+ * ```
  *
  * NOTE: Some abbreviations are substrings of others. Example:
  * - ‘C’ is a substring of ‘J & C’.
@@ -29,6 +36,7 @@ import * as orth from '../orth.js';
  * Keep that in mind when implementing the search logic.
  * P.S. Perhaps process the abbreviations in reverse order by length? This
  * should ensure that you capture and mark superstrings before substring!
+ *
  */
 export const MAPPING = {
   ShA: {
@@ -317,8 +325,10 @@ export const MAPPING = {
     hyperlink:
       'https://www.google.co.uk/books/edition/%C3%89tudes_arch%C3%A9ologiques/ByowAAAAYAAJ?hl=en&gbpv=1',
   },
+  // NOTE: This was two separate entries (with an identical abbreviations)
+  // in Crum's list.
   EW: {
-    name: 'do., his copies of MSS from Nitria (in Coptic Museum, Cairo)',
+    name: 'New Texts from the Monastery of St. Macarius, ed. H. G. Evelyn White, 1926; his copies of MSS from Nitria (in Coptic Museum, Cairo)',
   },
   Faras: {
     name: 'Griffith, Oxford Excavations in Nubia, in Liverpool Annals of Archaeol. & Anthropol. (1) xiii 17, (2) ib. 49, (3) xiv 57',
@@ -351,7 +361,8 @@ export const MAPPING = {
       'https://www.biodiversitylibrary.org/bibliography/51047<br>https://catalog.hathitrust.org/Record/008602924',
   },
   GöttN: {
-    name: 'do. Nachrichten',
+    // NOTE: In Crum's list, this appears as ‘do. Nachrichten’.
+    name: 'Göttinger Nachrichten',
     hyperlink:
       'https://onlinebooks.library.upenn.edu/webbin/serial?id=nachkongesgotph<br>https://catalog.hathitrust.org/Record/000517694',
   },
@@ -420,8 +431,11 @@ export const MAPPING = {
     hyperlink:
       'https://archive.org/details/bub_gb_IWhHswE1yv0C/page/n3/mode/2up',
   },
-  ImpRussArS: {
+  // TODO: (#419) This abbreviation has 4 spaces! Your algorithm can only handle
+  // up to 3 at the moment!
+  'Imp Russ Ar S': {
     name: 'Imperial Russian Archaeolog. Soc. xviii, 1907 (Turaief)',
+    formInTheList: 'ImpRussArS',
     hyperlink:
       'https://archive.org/details/Notes-Imperial-Russian-Archaeological-Society/ZVORAO_18_1908/page/n55/mode/2up',
   },
@@ -566,8 +580,9 @@ export const MAPPING = {
     hyperlink:
       'https://archive.org/details/manuscrits-coptes-du-musee-d-antiquite/page/n1/mode/2up',
   },
-  LeydAC: {
+  'Leyd AC': {
     name: 'Antiquités Coptes (Catal. du Musée), 1900, acc. to pp',
+    formInTheList: 'LeydAC',
     hyperlink: 'https://catalog.hathitrust.org/Record/008693139',
   },
   LIb: {
@@ -608,23 +623,31 @@ export const MAPPING = {
     name: 'copies of sim. papyri at Berlin by Polotsky',
     broken: 'Followed by a number',
   },
-  ManiH: {
+  'Mani H': {
     name: 'Manichäische Homelien, ed. Polotsky, 1934',
+    formInTheList: 'ManiH',
     hyperlink:
       'https://archive.org/details/manichaischehomi0000polo/page/n5/mode/2up',
   },
-  ManiK: {
+  'Mani K': {
     name: 'Kephalaia, edd. Polotsky & A. Böhlig, 1934 ff',
+    formInTheList: 'ManiK',
     hyperlink:
       'https://archive.org/details/kephalaia0000mani/page/n1/mode/2up<br>https://archive.org/details/kephalaia0001staa/page/n5/mode/2up',
   },
-  ManiP: {
+  // NOTE: While cases of ‘Mani P’ (with a space) in Crum's text remain
+  // unconfirmed, we insert a space to maintain consistency with ‘Mani H’ and
+  // ‘Mani K’, cases of which appearing with a space in Crum's text have been
+  // confirmed.
+  'Mani P': {
     name: 'A Manichaean Psalm-book, Pt. ii, ed. C. R. C. Allberry, 1938',
+    formInTheList: 'ManiP',
     hyperlink:
       'https://archive.org/details/manichaeanpsalmb0000allb/page/n5/mode/2up',
   },
-  MartIgn: {
+  'Mart Ign': {
     name: 'Lightfoot, Ignatius¹, ii 1 865 ff',
+    formInTheList: 'MartIgn',
     hyperlink: 'https://babel.hathitrust.org/cgi/pt?id=uc1.l0051084895&seq=289',
   },
   MélOr: {
@@ -717,8 +740,9 @@ export const MAPPING = {
     name: 'Orientalia (periodical), Rome',
     hyperlink: 'https://www.jstor.org/journal/orientalia',
   },
-  OratCyp: {
+  'Orat Cyp': {
     name: 'Oratio Cypriani in Veröffentl. a. d. badischen Papyrussamml., Heft 5, 1934, p. 305 ff',
+    formInTheList: 'OratCyp',
     // NOTE: PBad occurs as a standalone abbreviation in Crum, but we treat it
     // as a variant to simplify the pipeline.
     variant: 'PBad',
@@ -790,8 +814,9 @@ export const MAPPING = {
     hyperlink:
       'https://archive.org/details/faijumischefragm0000agat/page/n1/mode/2up',
   },
-  PcodMor: {
+  'Pcod Mor': {
     name: 'Mr. Pierpont Morgan’s papyrus volume of Psalms &c. (H. Thompson’s copy)',
+    formInTheList: 'PcodMor',
   },
   PCol: {
     name: 'Papyri at Columbia University, New York (A. Schiller’s copies)',
@@ -1007,7 +1032,9 @@ export const MAPPING = {
       'https://digitale-sammlungen.ulb.uni-bonn.de/content/titleinfo/244155',
   },
   TEuch: {
-    name: 'do., Pontificale et Euchologium, 1761',
+    // NOTE: In Crum's list, this appears as ‘do., Pontificale et Euchologium,
+    // 1761’.
+    name: 'Tuki, Pontificale et Euchologium, 1761',
     hyperlink:
       'https://digitale-sammlungen.ulb.uni-bonn.de/content/titleinfo/121458',
   },
