@@ -1,4 +1,5 @@
 /* eslint-disable max-lines */
+import * as orth from '../orth.js';
 
 export interface Source {
   /** name is the full name of the source.
@@ -1183,5 +1184,26 @@ export const MAPPING: Record<string, Source> = {
   },
   '?': { name: 'perhaps, possibly', broken: 'Symbol' },
 };
+
+// Add all the variants to the map.
+Object.values(MAPPING).forEach((value: Source): void => {
+  if (!value.variant) {
+    return;
+  }
+  MAPPING[value.variant] = value;
+});
+
+// Add keys with spaces removed.
+Object.entries(MAPPING).forEach(([key, value]: [string, Source]): void => {
+  MAPPING[key.replaceAll(' ', '')] = value;
+});
+
+// Normalize all keys.
+Object.assign(
+  MAPPING,
+  Object.fromEntries(
+    Object.entries(MAPPING).map(([k, v]) => [orth.normalize(k), v])
+  )
+);
 
 /* eslint-enable max-lines */
