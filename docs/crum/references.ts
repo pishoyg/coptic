@@ -1,6 +1,7 @@
 /* eslint-disable max-lines */
 import * as orth from '../orth.js';
 
+// TODO: (#419) Convert to an object.
 export interface Source {
   /** name is the full name of the source.
    */
@@ -35,12 +36,14 @@ export interface Source {
    * inaccurate. It's only here for documentation purposes.
    * If the form that we use is the same as the one in the list (which is the
    * case for most abbreviations), then this field should be empty.
+   * TODO: (#419) Consider getting rid of the `formInTheList` field. It's
+   * somewhat pointless. We could use a `NOTE` comment.
    */
   formInTheList?: string;
   /** broken indicates whether lookups for this source are currently broken. If
    * so, the field should bear an explanation for why this is the case.
    * Otherwise, it should be empty.
-   * TODO: (#419) Handle corner cases.
+   * TODO: (#419) Handle corner cases, and get rid of the `broken` field.
    */
   broken?: string;
 }
@@ -63,25 +66,30 @@ export interface Source {
  *
  * NOTE: Crum often used abbreviated form inconsistently, which complicates our
  * parsing. In cases where there is inconsistency with spacing, the stored
- * abbreviated form should contain spaces. Our algorithm should then
+ * abbreviated form should contain the spaces. Our algorithm should then
  * automatically search for both the stored form, and a generated space-free
- * counterpart. There is no need to store the one-word (space-free) form as a
- * variant, as this will be handled automatically. It should, never the less, be
- * stored as the form-in-the-list.
+ * form. There is no need to store the space-free form as a variant, as this
+ * will be handled automatically. The form that Crum used in his list (generally
+ * speaking, that's the space-free form) should, nevertheless, be stored in the
+ * form-in-the-list field.
+ * Example:
+ * ‘MainH’ appears as both ‘Mani H’ and ‘ManiH’. We store ‘Mani H’ as the form,
+ * so we can detect both. We also store ‘ManiH’ in the form-in-the-list field.
  *
- * TODO: (#419) Revisit two-part abbreviations may sometimes appear with spaces.
- * You can conveniently search for those in this file the following regex:
+ * TODO: (#419) Revisit two-part abbreviations, and insert spaces where
+ * appropriate. We have attempted to insert spaces for all abbreviations that
+ * ever occurred with a space, but some may have evaded our detection.
+ * You can conveniently search this file for candidates using this regex:
  * ```
  * [A-Z][a-z][a-z]*[A-Z][a-zA-Z]*: {
  * ```
  *
- * NOTE: Some abbreviations are substrings of others. Example:
- * - ‘C’ is a substring of ‘J & C’.
- * - ‘Till’ is a substring of ‘Till Bau’.
- * Keep that in mind when implementing the search logic.
- * P.S. Perhaps process the abbreviations in reverse order by length? This
- * should ensure that you capture and mark superstrings before substring!
- *
+ * TODO: (#419) Some abbreviations are substrings of others. Example:
+ * - ‘C’ is a substring of ‘J&C’ / ‘J & C’ (both forms have occurred).
+ * - ‘Till’ is a substring of ‘Till Oster’ / ‘TillOster’ (again, both forms have
+ *   occurred).
+ * Those are handled correctly, as far as I can tell. But you should explicitly
+ * document the behavior, and how these nuances are taken care of.
  */
 export const MAPPING: Record<string, Source> = {
   ShA: {
