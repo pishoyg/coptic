@@ -476,13 +476,12 @@ export const MAPPING: Record<string, Source> = {
     hyperlink:
       'https://archive.org/details/bub_gb_IWhHswE1yv0C/page/n3/mode/2up',
   },
-  // TODO: (#419) This abbreviation has 4 spaces! Your algorithm can only handle
-  // up to 3 at the moment!
   'Imp Russ Ar S': {
     name: 'Imperial Russian Archaeolog. Soc. xviii, 1907 (Turaief)',
     formInTheList: 'ImpRussArS',
     hyperlink:
       'https://archive.org/details/Notes-Imperial-Russian-Archaeological-Society/ZVORAO_18_1908/page/n55/mode/2up',
+    broken: 'too many spaces',
   },
   J: {
     name: 'Crum & Steindorff, Kopt. Rechtsurkunden… aus Djême, acc. to no. & line',
