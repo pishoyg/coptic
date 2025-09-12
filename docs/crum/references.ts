@@ -801,11 +801,6 @@ export const MAPPING: Record<string, Source> = {
     hyperlink:
       'https://archive.org/details/osireionatabydos00murr/page/n3/mode/2up',
   },
-  Ostr: {
-    name: 'ostracon',
-    variant: 'ostr',
-    broken: 'substring of other abbreviations',
-  },
   'Ostr Chicago': {
     name: 'Till’s copies of ostraca from Chicago Expedition, 1931',
     formInTheList: 'Ostr.Chicago',
