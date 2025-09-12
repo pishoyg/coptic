@@ -41,6 +41,7 @@ export const MAPPING = {
     fullForm: 'as opposed to, contrasted with',
     category: 'Instructional',
   },
+  Ostr: { fullForm: 'ostracon', category: 'Instructional' },
   paral: { fullForm: 'parallel word or phrase', category: 'Instructional' },
   pass: { fullForm: 'passim', category: 'Instructional' },
   'p c': { fullForm: 'conjunctive participle', category: 'Grammatical' },
@@ -74,10 +75,15 @@ export const MAPPING = {
 };
 // The following abbreviations are not listed in Crum's List of Abbreviations,
 // but they are nice to have.
-// TODO: (#194) This list is likely incomplete. Add all Latin abbreviations.
-MAPPING['cf'] = MAPPING['Cf'] = { fullForm: 'confer', category: 'Latin' };
+// This list may grow as we discover more abbreviations that are worth tooltips.
+MAPPING['MS'] = { fullForm: 'manuscript', category: 'Instructional' };
+MAPPING['MSS'] = { fullForm: 'manuscripts', category: 'Instructional' };
+MAPPING['Cf'] = { fullForm: 'confer', category: 'Instructional' };
+MAPPING['q v'] = { fullForm: 'quod vide', category: 'Instructional' };
+MAPPING['sc'] = { fullForm: 'scilicet', category: 'Instructional' };
+// Handle inconsistent casing:
+MAPPING['ostr'] = MAPPING['Ostr'];
 MAPPING['v'] = MAPPING['V'];
-MAPPING['q v'] = { fullForm: 'quod vide', category: 'Latin' };
-MAPPING['sc'] = { fullForm: 'scilicet', category: 'Latin' };
+MAPPING['cf'] = MAPPING['Cf'];
 // TODO: (#511) Reconsider whether you want to retain this tip.
-MAPPING['ib'] = { fullForm: 'ibidem', category: 'Latin' };
+MAPPING['ib'] = { fullForm: 'ibidem', category: 'Instructional' };

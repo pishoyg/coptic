@@ -65,8 +65,11 @@ export function handleAll(root, highlighter) {
   addEnglishLookups(root);
   handleWikiDialects(root);
   handleWikiBible(root);
-  handleWikiAnnotations(root);
   handleWikiReferences(root);
+  // NOTE: Some annotations (such as MS for manuscript, MSS for manuscripts,
+  // and ostr for ostracon) are substrings of some reference abbreviations. So
+  // annotations must be added AFTER references.
+  handleWikiAnnotations(root);
   warnPotentiallyMissingReferences(root);
 }
 /**
