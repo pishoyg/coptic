@@ -27,9 +27,9 @@ const BIBLE_RE = /(\b(?:[123]\s)?[a-zA-Z]+)(?:\s+(\d+))(?:\s+(\d+))?\b/gu;
 const TWO_WORD_ANNOTATION_RE = /\b[a-zA-Z]+\s+[a-zA-Z]+\b/gu;
 const ONE_WORD_ANNOTATION_RE = /\b[a-zA-Z]+\b/gu;
 
-const COPTIC_RE = /[\p{Script=Coptic}\p{Mark}]+/gu;
-const GREEK_RE = /[\p{Script=Greek}\p{Mark}]+/gu;
-const ENGLISH_RE = /[\p{Script=Latin}\p{Mark}]+/gu;
+const COPTIC_RE = /[\p{Script=Coptic}][\p{Script=Coptic}\p{Mark}]*/gu;
+const GREEK_RE = /[\p{Script=Greek}][\p{Script=Greek}\p{Mark}]*/gu;
+const ENGLISH_RE = /[\p{Script=Latin}][\p{Script=Latin}\p{Mark}]*/gu;
 
 /**
  *
