@@ -610,7 +610,10 @@ export const MAPPING: Record<string, Source> = {
       'I: https://www.orientalstudies.ru/rus/images/pdf/journals/Melanges_Asiatiques_10_1890_02_lemm.pdf<br>II: https://www.orientalstudies.ru/rus/images/pdf/journals/Melanges_Asiatiques_10_1890_04_lemm.pdf<br>III: https://www.orientalstudies.ru/rus/images/pdf/journals/Melanges_Asiatiques_12_1902-1906_08_lemm.pdf',
   },
   LCypr: {
+    // NOTE: This occurs as LCypr in the list, but has been found to be cited
+    // as LCyp in the text.
     name: 'Lemm, Cyprian v. Antiochien',
+    variant: 'LCyp',
     hyperlink:
       'https://www.biodiversitylibrary.org/item/212311#page/559/mode/1up',
   },
