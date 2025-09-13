@@ -501,23 +501,6 @@ const DAN_OVERRIDE: Record<string, { chapter: string; name: string }> = {
 };
 
 /**
- *
- * TODO: (#419) Some biblical references do not have a verse number. (Example:
- * ⲁⲃⲁϭⲏⲉⲓⲛ[1] cites "Ap 4" without a verse number.) Those should bear a
- * hyperlink to the chapter file.
- * [1]https://remnqymi.com/crum/97.html
- *
- * TODO: (#419) It appears that, for one-chapter books, Crum might have
- * omitted the chapter number! (Example: ⲛⲟϭ[1] cites "Philem 9".)
- * Handle this corner case!
- * [1] https://remnqymi.com/crum/88.html
- *
- * TODO: (#419) Omit hyperlinks for nonexistent chapters.
- *
- * NOTE: The three issues above should likely be worked on together! If you see
- * a book abbreviation followed by just one number, how do you know if it's a
- * chapter or a verse number?
- *
  * NOTE: For the Bible abbreviation-to-id mapping, we opted for generating a
  * code file that defines the mapping. We used to populate the mapping in a
  * JSON, but this had to be retrieved with an async fetch. We prefer to `await`

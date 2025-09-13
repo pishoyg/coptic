@@ -13,7 +13,7 @@ export interface Source {
    * In some cases, there are several hyperlinks, which are all stored in the
    * field.
    *
-   * TODO: (#419) Do not store several hyperlinks in a string, as this can't be
+   * TODO: (#529) Do not store several hyperlinks in a string, as this can't be
    * used by our pipeline. Implement handling for cases where an abbreviation
    * has several hyperlinks.
    */
