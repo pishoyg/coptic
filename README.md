@@ -551,7 +551,10 @@ As of today, we need collectors for the following:
     - Override types ([#126](https://github.com/pishoyg/coptic/issues/126))[^1]
   - Collect explanatory images
   ([#5](https://github.com/pishoyg/coptic/issues/5),
-  [#263](https://github.com/pishoyg/coptic/issues/263), [#258](https://github.com/pishoyg/coptic/issues/258)).
+  [#263](https://github.com/pishoyg/coptic/issues/263),
+  [#258](https://github.com/pishoyg/coptic/issues/258)).
+  - Populate the full-text (Wiki) version
+  ([#503](https://github.com/pishoyg/coptic/issues/503)).
 - Lexicon:
   - Populate
   [sentinels](https://drive.google.com/drive/u/0/folders/1Wlz6RXzozyypXtYV1Hq58uQAfJQV97Oo)
