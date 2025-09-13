@@ -22,11 +22,8 @@ import * as orth from '../orth.js';
  * automatically search for both the stored form, and a generated space-free
  * form. There is no need to store the space-free form as a variant, as this
  * will be handled automatically. The form that Crum used in his list (generally
- * speaking, that's the space-free form) should, nevertheless, be stored in the
- * form-in-the-list field.
- * Example:
- * ‘MainH’ appears as both ‘Mani H’ and ‘ManiH’. We store ‘Mani H’ as the form,
- * so we can detect both. We also store ‘ManiH’ in the form-in-the-list field.
+ * speaking, that's the space-free form) should, nevertheless, be mentioned in a
+ * comment, to aid manual verification.
  *
  * TODO: (#419) Revisit two-part abbreviations, and insert spaces where
  * appropriate. We have attempted to insert spaces for all abbreviations that
@@ -146,12 +143,12 @@ export const MAPPING = {
       'https://archive.org/details/copticapocryphai00budguoft/page/n5/mode/2up',
   },
   'Berl Or': {
+    // NOTE: Listed as 'Berl.Or', but seemingly never cited as such!
     name: 'MSS. in the Staats(olim Kgl.)bibliothek, Berlin (Crum’s copies)',
-    formInTheList: 'Berl.Or',
   },
   'Berl Wörterb': {
+    // NOTE: Listed as 'Berl. Wörterb', but seemingly never cited as such!
     name: 'Erman & Grapow, Wörterbuch d. Aeg. Sprache, 1926-31',
-    formInTheList: 'Berl. Wörterb',
     hyperlink:
       'https://www.ancientegyptfoundation.org/worterbuch_der_aegyptischen_sprache.shtml<br>https://tla.digital/home',
   },
@@ -234,9 +231,9 @@ export const MAPPING = {
     name: 'MSS. &c. in the Egyptian Museum, Cairo',
   },
   'Cai Copt Mus': {
+    // NOTE: Listed as '(Cai)CoptMus'!
     name: 'MSS. &c. in Coptic Museum, Cairo',
     variant: 'Copt Mus',
-    formInTheList: '(Cai)CoptMus',
   },
   CA: {
     name: 'Canons of Athanasius ed. Riedel & Crum (Text & Transl. Soc.), 1904',
@@ -330,9 +327,9 @@ export const MAPPING = {
     hyperlink:
       'https://www.google.co.uk/books/edition/%C3%89tudes_arch%C3%A9ologiques/ByowAAAAYAAJ?hl=en&gbpv=1',
   },
-  // NOTE: This was two separate entries (with an identical abbreviations)
-  // in Crum's list.
   EW: {
+    // NOTE: This was two separate entries (with an identical abbreviations)
+    // in Crum's list.
     name: 'New Texts from the Monastery of St. Macarius, ed. H. G. Evelyn White, 1926; his copies of MSS from Nitria (in Coptic Museum, Cairo)',
   },
   Faras: {
@@ -437,8 +434,8 @@ export const MAPPING = {
       'https://archive.org/details/bub_gb_IWhHswE1yv0C/page/n3/mode/2up',
   },
   'Imp Russ Ar S': {
+    // NOTE: Listed as 'ImpRussArS'!
     name: 'Imperial Russian Archaeolog. Soc. xviii, 1907 (Turaief)',
-    formInTheList: 'ImpRussArS',
     hyperlink:
       'https://archive.org/details/Notes-Imperial-Russian-Archaeological-Society/ZVORAO_18_1908/page/n55/mode/2up',
     broken: 'too many spaces',
@@ -456,8 +453,8 @@ export const MAPPING = {
     hyperlink: 'https://gallica.bnf.fr/ark:/12148/cb34348774p/date',
   },
   'J & C': {
+    // NOTE: Listed as 'J&C'!
     name: 'H. I. Bell, Jews & Christians, 1924, acc. to pp',
-    formInTheList: 'J&C',
     hyperlink:
       'https://archive.org/details/jewschristiansin0000bell/page/n3/mode/2up',
   },
@@ -546,8 +543,8 @@ export const MAPPING = {
       'https://www.coptist.com/contact-%e2%b2%a7%e2%b2%81%e2%b2%99%e2%b2%9f%e2%b2%93/',
   },
   Lant: {
+    // NOTE: Listed as 'Lant.' (with a period)!
     name: 'A. van Lantschoot, Recueil de Colophons… sahidiques, 1929, acc. to numbers; also copies by',
-    formInTheList: 'Lant.',
     hyperlink:
       'https://archive.org/details/recueildescoloph0000lans/page/n5/mode/2up',
   },
@@ -562,7 +559,10 @@ export const MAPPING = {
       'I: https://www.orientalstudies.ru/rus/images/pdf/journals/Melanges_Asiatiques_10_1890_02_lemm.pdf<br>II: https://www.orientalstudies.ru/rus/images/pdf/journals/Melanges_Asiatiques_10_1890_04_lemm.pdf<br>III: https://www.orientalstudies.ru/rus/images/pdf/journals/Melanges_Asiatiques_12_1902-1906_08_lemm.pdf',
   },
   LCypr: {
+    // NOTE: This occurs as LCypr in the list, but has been found to be cited
+    // as LCyp in the text.
     name: 'Lemm, Cyprian v. Antiochien',
+    variant: 'LCyp',
     hyperlink:
       'https://www.biodiversitylibrary.org/item/212311#page/559/mode/1up',
   },
@@ -586,7 +586,7 @@ export const MAPPING = {
   },
   'Leyd AC': {
     name: 'Antiquités Coptes (Catal. du Musée), 1900, acc. to pp',
-    formInTheList: 'LeydAC',
+    // NOTE: Listed as 'LeydAC'!
     hyperlink: 'https://catalog.hathitrust.org/Record/008693139',
   },
   LIb: {
@@ -628,30 +628,29 @@ export const MAPPING = {
     broken: 'Followed by a number',
   },
   'Mani H': {
+    // NOTE: Listed as 'ManiH'!
     name: 'Manichäische Homelien, ed. Polotsky, 1934',
-    formInTheList: 'ManiH',
     hyperlink:
       'https://archive.org/details/manichaischehomi0000polo/page/n5/mode/2up',
   },
   'Mani K': {
+    // NOTE: Listed as 'ManiK'!
     name: 'Kephalaia, edd. Polotsky & A. Böhlig, 1934 ff',
-    formInTheList: 'ManiK',
     hyperlink:
       'https://archive.org/details/kephalaia0000mani/page/n1/mode/2up<br>https://archive.org/details/kephalaia0001staa/page/n5/mode/2up',
   },
-  // NOTE: While cases of ‘Mani P’ (with a space) in Crum's text remain
-  // unconfirmed, we insert a space to maintain consistency with ‘Mani H’ and
-  // ‘Mani K’, cases of which appearing with a space in Crum's text have been
-  // confirmed.
   'Mani P': {
+    // NOTE: While cases of ‘Mani P’ (with a space) in Crum's text remain
+    // unconfirmed, we insert a space to maintain consistency with ‘Mani H’ and
+    // ‘Mani K’, cases of which appearing with a space in Crum's text have been
+    // confirmed.
     name: 'A Manichaean Psalm-book, Pt. ii, ed. C. R. C. Allberry, 1938',
-    formInTheList: 'ManiP',
     hyperlink:
       'https://archive.org/details/manichaeanpsalmb0000allb/page/n5/mode/2up',
   },
   'Mart Ign': {
+    // NOTE: Listed as 'MartIgn'!
     name: 'Lightfoot, Ignatius¹, ii 1 865 ff',
-    formInTheList: 'MartIgn',
     hyperlink: 'https://babel.hathitrust.org/cgi/pt?id=uc1.l0051084895&seq=289',
   },
   MélOr: {
@@ -716,21 +715,21 @@ export const MAPPING = {
       'https://archive.org/details/lemuson19soci/page/n11/mode/2up<br>https://archive.org/details/lemuson20soci/page/n11/mode/2up',
   },
   'N & E': {
+    // NOTE: Listed as 'N&E'!
     name: 'Notices et Extraits des MSS. de la Bibliothèque Nationale, Paris',
-    formInTheList: 'N&E',
     hyperlink: 'https://gallica.bnf.fr/ark:/12148/cb345335088/date',
   },
   ⲛ︦ⲉ︦: { name: 'ⲛⲟⲩⲧⲉ', broken: 'Coptic' },
   "O'Leary H": {
+    // NOTE: Listed as ‘O'LearyH’!
     name: 'De Lacy O’Leary: Fragmentary Coptic Hymns, 1924',
-    formInTheList: "O'LearyH",
     hyperlink:
       'https://archive.org/details/fragmentarycopti0000olea/page/n3/mode/2up',
   },
   "O'Leary Th": {
     name: 'De Lacy O’Leary: The Coptic Theotokia, 1923',
+    // NOTE: Listed as '—The'!
     variant: "O'Leary The",
-    formInTheList: '—The',
     hyperlink:
       'https://archive.org/details/coptictheotokia0000copt/page/n3/mode/2up',
   },
@@ -744,8 +743,8 @@ export const MAPPING = {
     hyperlink: 'https://www.jstor.org/journal/orientalia',
   },
   'Orat Cyp': {
+    // NOTE: Listed as 'OratCyp'!
     name: 'Oratio Cypriani in Veröffentl. a. d. badischen Papyrussamml., Heft 5, 1934, p. 305 ff',
-    formInTheList: 'OratCyp',
     // NOTE: PBad occurs as a standalone abbreviation in Crum, but we treat it
     // as a variant to simplify the pipeline.
     variant: 'PBad',
@@ -762,8 +761,8 @@ export const MAPPING = {
       'https://archive.org/details/osireionatabydos00murr/page/n3/mode/2up',
   },
   'Ostr Chicago': {
+    // NOTE: Listed as 'Ostr.Chicago', but seemingly never cited as such!
     name: 'Till’s copies of ostraca from Chicago Expedition, 1931',
-    formInTheList: 'Ostr.Chicago',
   },
   P: {
     name: 'MSS. in the Bibliothèque Nationale, Paris (Crum’s copies)',
@@ -788,8 +787,8 @@ export const MAPPING = {
       'https://coptic-treasures.com/book/%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%A8%D8%B5%D8%AE%D8%A9-%D8%A3%D9%85%D8%B1-%D8%A8%D8%B7%D8%A8%D8%B9%D8%A9-%D8%A7%D9%84%D8%A8%D8%A7%D8%A8%D8%A7-%D8%B4%D9%86%D9%88%D8%AF%D8%A9/',
   },
   'P Beatty': {
+    // NOTE: Listed as 'P. Beatty', but seemingly never cited as such!
     name: 'Papyri in collection of Mr. Chester Beatty, London (Crum’s copies)',
-    formInTheList: 'P. Beatty',
   },
   PBu: {
     name: 'Coptic legal papyrus olim penes Sir E. A. W. Budge (Crum’s copy), now at Columbia University',
@@ -813,8 +812,8 @@ export const MAPPING = {
       'https://archive.org/details/faijumischefragm0000agat/page/n1/mode/2up',
   },
   'Pcod Mor': {
+    // NOTE: Listed as 'PcodMor'!
     name: 'Mr. Pierpont Morgan’s papyrus volume of Psalms &c. (H. Thompson’s copy)',
-    formInTheList: 'PcodMor',
   },
   PCol: {
     name: 'Papyri at Columbia University, New York (A. Schiller’s copies)',
@@ -1042,14 +1041,14 @@ export const MAPPING = {
       'https://archive.org/details/achmmischkoptisc0000till/page/n5/mode/2up',
   },
   'Till Bau': {
+    // NOTE: Listed as '— Bau'!
     name: 'Eine Kopt. Bauernpraktik (Mitt. d. deut. Inst. Kairo, vi, 1936)',
-    formInTheList: '— Bau',
     hyperlink:
       'https://archive.org/details/egyptology-archive-vol.-6-1935/page/108/mode/2up',
   },
   'Till Oster': {
+    // NOTE: Listed as '— Oster'!
     name: 'Osterbrief u. Predigt in achm. Dialekt, Vienna, 1931 (at first as Vi 10157)',
-    formInTheList: '— Oster',
     hyperlink: 'https://hdl.handle.net/2027/nyp.33433096174176',
   },
   Tor: {
