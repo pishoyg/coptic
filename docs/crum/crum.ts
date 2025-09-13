@@ -25,7 +25,15 @@ import * as ref from './references.js';
 import * as drop from '../dropdown.js';
 import * as orth from '../orth.js';
 
-const BIBLE_RE = /(\b(?:[1-4]\s)?[a-zA-Z]+)(?:\s+(\d+))(?:\s+(\d+))?\b/gu;
+/**
+ * BIBLE_RE defines the regex used to catch Bible references.
+ * Some books, such as the Book of Esther, have special chapters called A, C, D,
+ * and F. This is why we allow the chapter number to be one of those characters.
+ * In some cases, only one number follows the book name, so we allow one of the
+ * two numbers to be omitted.
+ */
+const BIBLE_RE =
+  /(\b(?:[1-4]\s)?[a-zA-Z]+)(?:\s+(\d+|A|C|D|F))(?:\s+(\d+))?\b/gu;
 const TWO_WORD_ANNOTATION_RE = /\b[a-zA-Z]+\s+[a-zA-Z]+\b/gu;
 const ONE_WORD_ANNOTATION_RE = /\b[a-zA-Z]+\b/gu;
 

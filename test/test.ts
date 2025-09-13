@@ -77,7 +77,7 @@ play.test(
     // develop to handle more edge cases.
     for (const testCase of [
       { query: `.${ccls.WIKI} .${ccls.REFERENCE}`, want: 134 },
-      { query: `.${ccls.WIKI} .${ccls.BIBLE}`, want: 116 },
+      { query: `.${ccls.WIKI} .${ccls.BIBLE}`, want: 117 },
       {
         query: `.${ccls.WIKI} .${ccls.DIALECT} .${dcls.CLS.DROPPABLE}`,
         want: 383,
