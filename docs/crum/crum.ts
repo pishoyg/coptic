@@ -490,6 +490,17 @@ export function handleWikiAnnotations(root: HTMLElement): void {
 }
 
 /**
+ * DAN_OVERRIDE defines special Book names used by Crum to refer to chapters in
+ * the Book of Daniel.
+ * - 'Su' refers to the chapter that St. Shenouda refers to as A.
+ * - 'Bel' refers to the chapter that St. Shenouda refers to as C.
+ */
+const DAN_OVERRIDE: Record<string, { chapter: string; name: string }> = {
+  Su: { chapter: 'a', name: 'Susanna' },
+  Bel: { chapter: 'c', name: 'Bel' },
+};
+
+/**
  *
  * TODO: (#419) Some biblical references do not have a verse number. (Example:
  * ⲁⲃⲁϭⲏⲉⲓⲛ[1] cites "Ap 4" without a verse number.) Those should bear a
@@ -532,17 +543,19 @@ export function handleWikiBible(root: HTMLElement): void {
       (match: RegExpExecArray): (Node | string)[] | null => {
         const fullText: string = match[0];
         let [bookAbbreviation, chapter, verse] = [match[1], match[2], match[3]];
-        let nameOverride: string | undefined = undefined;
-        if (bookAbbreviation === 'Su') {
-          // The Book of Susanna needs special handling. This is because it's
-          // treated as a separate book by Crum, but it's just a chapter in
-          // Daniel in the Bible index.
-          // Given that it only contains one chapter, the book abbreviation
-          // is followed by the verse number only (there is no chapter number).
+        if (!bookAbbreviation) {
+          // NOTE: This is not expected, because the book abbreviation is a
+          // non-optional piece of the regex.
+          return null;
+        }
+        const danOverride = DAN_OVERRIDE[bookAbbreviation];
+        if (danOverride) {
+          // Given that this special book contains one chapter, the book
+          // abbreviation is followed by the verse number only (there is no
+          // chapter number).
           bookAbbreviation = 'Dan';
           verse = chapter;
-          chapter = 'a';
-          nameOverride = 'Susanna';
+          chapter = danOverride.chapter;
         }
         if (!bookAbbreviation || !chapter || !verse) {
           return null;
@@ -559,7 +572,7 @@ export function handleWikiBible(root: HTMLElement): void {
         link.target = '_blank';
         link.classList.add(ccls.HOVER_LINK, cls.BIBLE);
         link.textContent = fullText;
-        drop.addHoverDroppable(link, nameOverride ?? book.name);
+        drop.addHoverDroppable(link, danOverride?.name ?? book.name);
         return [link];
       },
       // Exclude all Wiki abbreviations to avoid overlap.
