@@ -25,7 +25,7 @@ import * as ref from './references.js';
 import * as drop from '../dropdown.js';
 import * as orth from '../orth.js';
 
-const BIBLE_RE = /(\b(?:[123]\s)?[a-zA-Z]+)(?:\s+(\d+))(?:\s+(\d+))?\b/gu;
+const BIBLE_RE = /(\b(?:[1-4]\s)?[a-zA-Z]+)(?:\s+(\d+))(?:\s+(\d+))?\b/gu;
 const TWO_WORD_ANNOTATION_RE = /\b[a-zA-Z]+\s+[a-zA-Z]+\b/gu;
 const ONE_WORD_ANNOTATION_RE = /\b[a-zA-Z]+\b/gu;
 
