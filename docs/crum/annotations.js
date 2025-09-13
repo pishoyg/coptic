@@ -82,6 +82,7 @@ MAPPING['Cf'] = { fullForm: 'confer', category: 'Instructional' };
 MAPPING['q v'] = { fullForm: 'quod vide', category: 'Instructional' };
 MAPPING['s v'] = { fullForm: 'sub verbo', category: 'Instructional' };
 MAPPING['sc'] = { fullForm: 'scilicet', category: 'Instructional' };
+MAPPING['Heb'] = { fullForm: 'Hebrew', category: 'Linguistic' };
 // Handle inconsistent casing:
 MAPPING['ostr'] = MAPPING['Ostr'];
 MAPPING['v'] = MAPPING['V'];
