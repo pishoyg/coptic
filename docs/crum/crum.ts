@@ -556,6 +556,7 @@ export function handleWikiBible(root: HTMLElement): void {
         const url = `${basename}#v${verse}`;
         const link: HTMLAnchorElement = document.createElement('a');
         link.href = url;
+        link.target = '_blank';
         link.classList.add(ccls.HOVER_LINK, cls.BIBLE);
         link.textContent = fullText;
         drop.addHoverDroppable(link, nameOverride ?? book.name);
