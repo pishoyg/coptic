@@ -371,7 +371,7 @@ class Book(Item):
         testament_idx: int,
         section_name: str,
         section_idx: int,
-        crum: str | None,
+        crum: list[str],
     ) -> None:
         self.name: str = name
         self.idx: int = idx
@@ -379,7 +379,7 @@ class Book(Item):
         self.testament_idx: int = testament_idx
         self.section_name: str = section_name
         self.section_idx: int = section_idx
-        self.crum: str | None = crum
+        self.crum: list[str] = crum
 
         data: list = self.load(self.name)
         self.zfill_len: int = len(str(len(data)))
@@ -453,15 +453,18 @@ class Bible:
         #   they are not mentioned.
         # Crum also uses 'Su' to refer to the story of Susanna, while in our
         # case it's a chapter in Daniel.
-        ensure.unique(book.crum for book in self.books if book.crum)
+        # There are also non-standard citations found throughout the book.
+        # Thus, the data in the input file is a super set of the data in Crum's
+        # List of Abbreviation.
+        ensure.unique(key for book in self.books for key in book.crum)
         mapping: dict[str, dict[str, str | int]] = {
-            book.crum: {
+            key: {
                 "name": book.name,
                 "path": book.id(),
                 "numChapters": len(book.chapters),
             }
             for book in self.books
-            if book.crum
+            for key in book.crum
         }
         # This TypeScript code is needed by our website due to some limitations
         # on reading JSON.
