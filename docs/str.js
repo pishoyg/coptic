@@ -18,3 +18,12 @@ export function isUpper(s) {
 export function isLower(s) {
   return s.toLowerCase() === s;
 }
+/**
+ * @param text
+ * @returns
+ */
+export function toggleCase(text) {
+  return Array.from(text)
+    .map((ch) => (isUpper(ch) ? ch.toLowerCase() : ch.toUpperCase()))
+    .join('');
+}

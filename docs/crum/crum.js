@@ -21,28 +21,137 @@ import * as ann from './annotations.js';
 import * as ref from './references.js';
 import * as drop from '../dropdown.js';
 import * as orth from '../orth.js';
-const BIBLE_RE = /(\b(?:[1-4]\s)?[a-zA-Z]+)(?:\s+(\d+))(?:\s+(\d+))?\b/gu;
-const TWO_WORD_ANNOTATION_RE = /\b[a-zA-Z]+\s+[a-zA-Z]+\b/gu;
-const ONE_WORD_ANNOTATION_RE = /\b[a-zA-Z]+\b/gu;
-// Some reference abbreviations have diacritics. We normalize the keys and the
-// search text, so we can correctly detect them.
-// Additionally, as of the time of writing, one abbreviation contains an
-// apostrophe: ‘O'Leary H’, and two contain an ampersand: ‘J & C’, ‘N & E’.
-// We presume that the inclusion of the apostrophe and the ampersand doesn't
-// otherwise compromise our search logic.
-const THREE_WORD_REFERENCE_RE =
-  /[a-zA-Z\p{M}'&]+\s+[a-zA-Z\p{M}'&]+\s+[a-zA-Z\p{M}'&]+/gu;
-const TWO_WORD_REFERENCE_RE = /[a-zA-Z\p{M}'&]+\s+[a-zA-Z\p{M}'&]+/gu;
-const ONE_WORD_REFERENCE_RE = /[a-zA-Z\p{M}'&]+/gu;
+/**
+ * NOTE: All of the regexes below assume the following normalizations:
+ * - HTML tree normalization[1], which allows us to use `\s` instead of `\s+`.
+ * - NFD normalization[2], which allows us to use `\p{M}`.
+ * [1] https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize
+ * [2] https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize */ // eslint-disable-line max-len
+/**
+ * ABBREVIATION_EXCLUDE is used to avoid overlap between detected abbreviations,
+ * and is crucial to the operation of our logic.
+ *
+ * It also allows us to correctly handle abbreviations that contain others.
+ * For example, ‘p c’ contains ‘c’. Our logic words as follows:
+ * - Search for two-word annotations during the first round. This would detect
+ *   ‘p c’ and mark it as an annotation.
+ * - In the next round, the ‘c’ inside ‘p c’ won't be detected, because it's
+ *   contained within a span that is marked by an excluded class.
+ *
+ * The same is true for three-and two-word references, and for references that
+ * contain annotations.
+ *
+ * Given the above, it is paramount to perform searches in the correct order.
+ */
+const ABBREVIATION_EXCLUDE = css.classQuery(
+  // BULLET is not an abbreviation class, but it could collide with some
+  // abbreviation, so we exclude it.
+  cls.BULLET,
+  cls.BIBLE,
+  cls.REFERENCE,
+  cls.DIALECT,
+  cls.ANNOTATION
+);
+/**
+ * BIBLE_RE defines the regex used to catch Bible references.
+ * A Bible book abbreviation starts with a capital letter followed by one
+ * or more small letters. Optionally, the abbreviation may contain a book
+ * number, with 4 being the maximum.
+ * Some books, such as the Book of Esther, have special chapters called A, C, D,
+ * and F. This is why we allow the chapter number to be one of those characters.
+ * In some cases, only one number follows the book name, so we allow one of the
+ * two numbers to be omitted.
+ */
+const BIBLE_RE =
+  /(\b(?:[1-4]\s)?[A-Z][a-z]+)(?:\s(\d+|A|C|D|F))(?:\s(\d+))?\b/gu;
+const ANNOTATION_RES = [
+  /\b[a-zA-Z]+\s[a-zA-Z]+\b/gu, // Two-word annotation.
+  /\b[a-zA-Z]+\b/gu, // One-word annotation.
+];
+// Pay attention to the following:
+// - Diacritics:
+//     Some reference abbreviations have diacritics. In order for the logic to
+//     work correctly, both the pattern and the searchable text should be
+//     normalized.
+//     The references package should take care of normalizing the keys.
+//     On our side, our logic below should normalize the text. Thus, our regex
+//     can be constructed with that assumption in mind.
+//     Additionally, our search logic should normalize the text that is to be
+//     searched, so it can function correctly.
+// - Four-word abbreviation:
+//     We have a single four-word abbreviation:
+//     - Imp Russ Ar S
+//     We add it as a special case, instead of introducing another matching
+//     step.
+// - Apostrophe:
+//     Two abbreviations have an apostrophe:
+//     - O'Leary H
+//     - O'Leary Th(e)
+//     We give those special handling.
+//     We can not simply allow an apostrophe as a valid abbreviation word
+//     character, because it could corrupt matches in some cases where an
+//     apostrophe that is not part of the abbreviation happens to immediately
+//     follow the abbreviation.
+//     Consider the following example from 512:
+//     ```
+//       Pliny's atramentum sutorium
+//     ```
+//     If apostrophes were allowed, our regex would match the word ‘Pliny's’ and
+//     try to search for that, instead of simply matching ’Pliny’.
+//
+//     P.S. We could also solve the problem by adding more stages to the
+//     matching process—with and without apostrophes. We could consider that if
+//     apostrophes turn out to be more common (#522). For the time being, this
+//     is simpler, and does the job.
+// - Ampersand:
+//     As of the time of writing, two abbreviations have an ampersand:
+//     - ‘N&E’
+//     - ‘J&C’
+//     We therefore allow an ampersand as a valid abbreviation character. We
+//     don't run the same risk of corrupting matches that we run with
+//     apostrophes, so we adopt this simpler approach.
+const REFERENCE_RES = [
+  /\bImp Russ Ar S|O'Leary\s?H|O'Leary\s?The?|[a-zA-Z\p{M}&]+\s[a-zA-Z\p{M}&]+\s[a-zA-Z\p{M}&]+\b/gu,
+  /\b[a-zA-Z\p{M}&]+\s[a-zA-Z\p{M}&]+\b/gu,
+  /\b[a-zA-Z\p{M}&]+\b/gu,
+];
 const COPTIC_RE = /[\p{Script=Coptic}][\p{Script=Coptic}\p{Mark}]*/gu;
 const GREEK_RE = /[\p{Script=Greek}][\p{Script=Greek}\p{Mark}]*/gu;
 const ENGLISH_RE = /[\p{Script=Latin}][\p{Script=Latin}\p{Mark}]*/gu;
 /**
- *
+ * Ensure that all the given keys are matched by at least one of the regexes.
+ * @param keys
+ * @param regexes
+ * @param strict
+ */
+function ensureKeysCovered(keys, regexes, strict = true) {
+  const undetectable = keys.filter(
+    (key) =>
+      !regexes.some(
+        // We need to ensure, not just that there is a match, but that the match
+        // covers the entire key.
+        (regex) => key.match(regex)?.[0].length === key.length
+      )
+  );
+  if (undetectable.length) {
+    (strict ? logger.fatal : logger.warn)(
+      undetectable,
+      'are not detected by our regexes!'
+    );
+  }
+}
+ensureKeysCovered(Object.keys(ann.MAPPING), ANNOTATION_RES);
+// TODO: (#419) Once all corner cases are handled, make reference verification
+// strict.
+ensureKeysCovered(Object.keys(ref.MAPPING), REFERENCE_RES, false);
+// TODO: (#524) Build a regex that only matches book names (without a chapter or
+// verse number), and add verification for your Bible regex.
+/**
+ * Handle all Crum elements.
  * @param root
  * @param highlighter
  */
-export function handleAll(root, highlighter) {
+export function handle(root, highlighter) {
   handleCategories(root);
   handleRootType(root);
   handleCrumPage(root);
@@ -63,12 +172,17 @@ export function handleAll(root, highlighter) {
   addCopticLookups(root);
   addGreekLookups(root);
   addEnglishLookups(root);
+  // Dialects are explicitly marked with a `dialect` class. There is no risk of
+  // collision or overlap.
   handleWikiDialects(root);
+  // Bible abbreviations are not expected to collide with other abbreviations.
+  // We do them early to move them out of the way.
   handleWikiBible(root);
+  // Some annotation abbreviations (e.g. MS for manuscript, MSS for manuscripts,
+  // and ostr for ostracon) are parts of some reference abbreviations. So
+  // references must be processed prior to annotations, and annotations must
+  // exclude pieces of text that have been marked as references.
   handleWikiReferences(root);
-  // NOTE: Some annotations (such as MS for manuscript, MSS for manuscripts,
-  // and ostr for ostracon) are substrings of some reference abbreviations. So
-  // annotations must be added AFTER references.
   handleWikiAnnotations(root);
   warnPotentiallyMissingReferences(root);
 }
@@ -382,7 +496,7 @@ export function handleWikiDialects(root) {
  */
 export function handleWikiAnnotations(root) {
   root.querySelectorAll(`.${cls.WIKI}`).forEach((el) => {
-    [TWO_WORD_ANNOTATION_RE, ONE_WORD_ANNOTATION_RE].forEach((regex) => {
+    ANNOTATION_RES.forEach((regex) => {
       html.replaceText(
         el,
         regex,
@@ -398,52 +512,23 @@ export function handleWikiAnnotations(root) {
           span.classList.add(cls.ANNOTATION);
           return [span];
         },
-        // We want to skip bullet point bullets from processing (a., b., c.,
-        // ...; I, II, II, ...).
-        //
-        // Additionally, if an element is already an annotation, we don't do
-        // anything. This allows us to process two-word annotations in the
-        // first iteration, and one-word annotations in the second iteration,
-        // without worrying about annotations that are substrings of others.
-        // For example, ‘c’ is a substring of ‘p c’. In order to prevent
-        // conflict, we process the longer annotation (‘p c’) first, and mark
-        // it using the ANNOTATION class. In the following iteration, when
-        // we're searching for occurrences of ‘c’, we're sure we're gonna skip
-        // the marked instances of ‘p c’.
-        //
-        // Finally, for mere defensiveness, we avoid processing all elements
-        // containing Crum abbreviations (dialects, or biblical or
-        // non-biblical references), in order to prevent any potential
-        // overlap (although this is unexpected).
-        css.classQuery(
-          cls.BULLET,
-          cls.ANNOTATION,
-          cls.DIALECT,
-          cls.REFERENCE,
-          cls.BIBLE
-        )
+        // Exclude all Wiki abbreviations to avoid overlap.
+        ABBREVIATION_EXCLUDE
       );
     });
   });
 }
 /**
- *
- * TODO: (#419) Some biblical references do not have a verse number. (Example:
- * ⲁⲃⲁϭⲏⲉⲓⲛ[1] cites "Ap 4" without a verse number.) Those should bear a
- * hyperlink to the chapter file.
- * [1]https://remnqymi.com/crum/97.html
- *
- * TODO: (#419) It appears that, for one-chapter books, Crum might have
- * omitted the chapter number! (Example: ⲛⲟϭ[1] cites "Philem 9".)
- * Handle this corner case!
- * [1] https://remnqymi.com/crum/88.html
- *
- * TODO: (#419) Omit hyperlinks for nonexistent chapters.
- *
- * NOTE: The three issues above should likely be worked on together! If you see
- * a book abbreviation followed by just one number, how do you know if it's a
- * chapter or a verse number?
- *
+ * DAN_OVERRIDE defines special Book names used by Crum to refer to chapters in
+ * the Book of Daniel.
+ * - 'Su' refers to the chapter that St. Shenouda refers to as A.
+ * - 'Bel' refers to the chapter that St. Shenouda refers to as C.
+ */
+const DAN_OVERRIDE = {
+  Su: { chapter: 'a', name: 'Susanna' },
+  Bel: { chapter: 'c', name: 'Bel' },
+};
+/**
  * NOTE: For the Bible abbreviation-to-id mapping, we opted for generating a
  * code file that defines the mapping. We used to populate the mapping in a
  * JSON, but this had to be retrieved with an async fetch. We prefer to `await`
@@ -469,17 +554,19 @@ export function handleWikiBible(root) {
       (match) => {
         const fullText = match[0];
         let [bookAbbreviation, chapter, verse] = [match[1], match[2], match[3]];
-        let nameOverride = undefined;
-        if (bookAbbreviation === 'Su') {
-          // The Book of Susanna needs special handling. This is because it's
-          // treated as a separate book by Crum, but it's just a chapter in
-          // Daniel in the Bible index.
-          // Given that it only contains one chapter, the book abbreviation
-          // is followed by the verse number only (there is no chapter number).
+        if (!bookAbbreviation) {
+          // NOTE: This is not expected, because the book abbreviation is a
+          // non-optional piece of the regex.
+          return null;
+        }
+        const danOverride = DAN_OVERRIDE[bookAbbreviation];
+        if (danOverride) {
+          // Given that this special book contains one chapter, the book
+          // abbreviation is followed by the verse number only (there is no
+          // chapter number).
           bookAbbreviation = 'Dan';
           verse = chapter;
-          chapter = 'a';
-          nameOverride = 'Susanna';
+          chapter = danOverride.chapter;
         }
         if (!bookAbbreviation || !chapter || !verse) {
           return null;
@@ -495,12 +582,20 @@ export function handleWikiBible(root) {
         link.target = '_blank';
         link.classList.add(ccls.HOVER_LINK, cls.BIBLE);
         link.textContent = fullText;
-        drop.addHoverDroppable(link, nameOverride ?? book.name);
+        drop.addHoverDroppable(link, danOverride?.name ?? book.name);
         return [link];
       },
       // Exclude all Wiki abbreviations to avoid overlap.
-      // This is not expected to occur, but we add this check for defensiveness.
-      css.classQuery(cls.ANNOTATION, cls.DIALECT, cls.REFERENCE, cls.BIBLE)
+      // This is not expected to occur, especially for Biblical references,
+      // which have unique names and format that can not be conflated with
+      // something else.
+      // Also, it may be particularly useless for Biblical references because
+      // they tend to be searched early on in the process, thus none of the
+      // other abbreviation classes would be present at that stage anyway.
+      // It makes sense for the following stages to exclude abbreviations added
+      // in earlier stages, not the other way around.
+      // But we add the check anyway for consistency.
+      ABBREVIATION_EXCLUDE
     );
   });
 }
@@ -510,11 +605,7 @@ export function handleWikiBible(root) {
  */
 export function handleWikiReferences(root) {
   root.querySelectorAll(`.${cls.WIKI}`).forEach((el) => {
-    [
-      THREE_WORD_REFERENCE_RE,
-      TWO_WORD_REFERENCE_RE,
-      ONE_WORD_REFERENCE_RE,
-    ].forEach((regex) => {
+    REFERENCE_RES.forEach((regex) => {
       html.replaceText(
         el,
         regex,
@@ -530,14 +621,8 @@ export function handleWikiReferences(root) {
           span.classList.add(cls.REFERENCE);
           return [span];
         },
-        // Exclude all Wiki abbreviations to avoid overlap.
-        css.classQuery(
-          cls.BULLET,
-          cls.ANNOTATION,
-          cls.DIALECT,
-          cls.REFERENCE,
-          cls.BIBLE
-        )
+        // Exclude all Wiki abbreviations to avoid any overlap.
+        ABBREVIATION_EXCLUDE
       );
     });
   });

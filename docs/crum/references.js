@@ -1,5 +1,6 @@
 /* eslint-disable max-lines */
 import * as orth from '../orth.js';
+import * as logger from '../logger.js';
 /** MAPPING maps an abbreviation to a Source object.
  *
  * The key of the mapping is the primary form used to cite this source in
@@ -25,20 +26,11 @@ import * as orth from '../orth.js';
  * speaking, that's the space-free form) should, nevertheless, be mentioned in a
  * comment, to aid manual verification.
  *
- * TODO: (#419) Revisit two-part abbreviations, and insert spaces where
+ * TODO: (#419) Revisit multi-part abbreviations, and insert spaces where
  * appropriate. We have attempted to insert spaces for all abbreviations that
  * ever occurred with a space, but some may have evaded our detection.
- * You can conveniently search this file for candidates using this regex:
- * ```
- * [A-Z][a-z][a-z]*[A-Z][a-zA-Z]*: {
- * ```
- *
- * TODO: (#419) Some abbreviations are substrings of others. Example:
- * - ‘C’ is a substring of ‘J&C’ / ‘J & C’ (both forms have occurred).
- * - ‘Till’ is a substring of ‘Till Oster’ / ‘TillOster’ (again, both forms have
- *   occurred).
- * Those are handled correctly, as far as I can tell. But you should explicitly
- * document the behavior, and how these nuances are taken care of.
+ * How about we just write all abbreviations as several parts, so we can catch
+ * all cases? There is no risk from that, eh?
  */
 export const MAPPING = {
   ShA: {
@@ -146,7 +138,7 @@ export const MAPPING = {
     // NOTE: Listed as 'Berl.Or', but seemingly never cited as such!
     name: 'MSS. in the Staats(olim Kgl.)bibliothek, Berlin (Crum’s copies)',
   },
-  'Berl Wörterb': {
+  'Berl Wörterb': {
     // NOTE: Listed as 'Berl. Wörterb', but seemingly never cited as such!
     name: 'Erman & Grapow, Wörterbuch d. Aeg. Sprache, 1926-31',
     hyperlink:
@@ -260,7 +252,7 @@ export const MAPPING = {
     hyperlink:
       'https://archive.org/details/VieDanielLeScetiote/page/n7/mode/2up',
   },
-  Chaîne: {
+  Chaîne: {
     name: 'M. Chaîne, Eléments de gram. dialectale copte, 1933',
     hyperlink: 'https://catalog.hathitrust.org/Record/001231946',
   },
@@ -357,12 +349,12 @@ export const MAPPING = {
     hyperlink:
       'https://archive.org/details/bub_gb_FLw7D7xionYC/page/n1/mode/2up',
   },
-  GöttA: {
+  GöttA: {
     name: 'Göttinger Abhandlungen',
     hyperlink:
       'https://www.biodiversitylibrary.org/bibliography/51047<br>https://catalog.hathitrust.org/Record/008602924',
   },
-  GöttN: {
+  GöttN: {
     // NOTE: In Crum's list, this appears as ‘do. Nachrichten’.
     name: 'Göttinger Nachrichten',
     hyperlink:
@@ -594,7 +586,7 @@ export const MAPPING = {
     hyperlink:
       'https://www.biodiversitylibrary.org/item/212314#page/653/mode/1up',
   },
-  LMär: {
+  LMär: {
     name: 'Lemm, Bruchstücke Kopt. Märtyrerakten',
     hyperlink:
       'https://www.biodiversitylibrary.org/item/212319#page/10/mode/1up',
@@ -604,12 +596,12 @@ export const MAPPING = {
     hyperlink:
       'https://ancientworldonline.blogspot.com/2012/05/digitized-coptic-publications-of-oscar.html',
   },
-  Löw: {
+  Löw: {
     name: 'Im. Löw, Aramäische Pflanzennamen, 1881, acc. to pp',
     hyperlink:
       'https://archive.org/details/AramaeischePflanzennamen/page/n7/mode/2up',
   },
-  LöwF: {
+  LöwF: {
     name: 'Flora der Juden, 1926 ff',
     hyperlink:
       'https://sammlungen.ub.uni-frankfurt.de/freimann/content/titleinfo/781127',
@@ -653,7 +645,7 @@ export const MAPPING = {
     name: 'Lightfoot, Ignatius¹, ii 1 865 ff',
     hyperlink: 'https://babel.hathitrust.org/cgi/pt?id=uc1.l0051084895&seq=289',
   },
-  MélOr: {
+  MélOr: {
     name: 'Mélanges de la Faculté Orientale, Université de Beyrouth',
     hyperlink: 'https://www.persee.fr/collection/mefao',
   },
@@ -839,7 +831,7 @@ export const MAPPING = {
   PGol: {
     name: 'Papyri formerly in W. Golenischeff’s collection, from photographs sent by O. von Lemm',
   },
-  PJkôw: {
+  PJkôw: {
     name: 'Papyri (6th c.) thence, Cairo Mus. (Lacau’s copies)',
   },
   PLich: {
@@ -850,7 +842,7 @@ export const MAPPING = {
     hyperlink:
       'https://archive.org/details/greekpapyriinbri01brit (Vol I)<br>https://archive.org/details/greekpapyriinbri04brit (Vol IV, Coptic Papyri Appendix)',
   },
-  PMéd: {
+  PMéd: {
     name: 'Un Papyrus Medical Copte, ed. E. Chassinat (= MIF. 32), 1921, acc. to pp',
     hyperlink: 'https://archive.org/details/MIFAO32/mode/2up',
   },
@@ -941,7 +933,7 @@ export const MAPPING = {
     hyperlink:
       'https://ancientworldonline.blogspot.com/2012/10/opean-access-journal-revue-de-lorient.html',
   },
-  Rösch: {
+  Rösch: {
     name: 'F. Rösch, Vorbemerkungen zu e. Gramm. d. achmîmischen Mundart, 1909, acc. to pp',
     hyperlink: 'https://catalog.hathitrust.org/Record/001854607',
   },
@@ -954,7 +946,7 @@ export const MAPPING = {
     hyperlink:
       'https://luna.manchester.ac.uk/luna/servlet/detail/Manchester~25~25~702~196480:New-Coptic-manuscripts-in-the-John-',
   },
-  Salîb: {
+  Salîb: {
     name: 'Kitâb aṣ-Ṣalîb, Cairo, 1921',
     hyperlink:
       'https://digitale-sammlungen.ulb.uni-bonn.de/content/titleinfo/3198124',
@@ -1174,11 +1166,11 @@ Object.values(MAPPING).forEach((value) => {
 Object.entries(MAPPING).forEach(([key, value]) => {
   MAPPING[key.replaceAll(' ', '')] = value;
 });
-// Normalize all keys.
-Object.assign(
-  MAPPING,
-  Object.fromEntries(
-    Object.entries(MAPPING).map(([k, v]) => [orth.normalize(k), v])
-  )
+// Ensure that all keys are normalized.
+const unnormalized = Object.keys(MAPPING).filter(
+  (key) => orth.normalize(key) !== key
 );
+if (unnormalized.length) {
+  logger.fatal(unnormalized, 'are not normalized!');
+}
 /* eslint-enable max-lines */
