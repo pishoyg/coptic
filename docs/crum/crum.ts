@@ -33,6 +33,32 @@ import * as orth from '../orth.js';
  * [2] https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize */ // eslint-disable-line max-len
 
 /**
+ * ABBREVIATION_EXCLUDE is used to avoid overlap between detected abbreviations,
+ * and is crucial to the operation of our logic.
+ *
+ * It also allows us to correctly handle abbreviations that contain others.
+ * For example, ‘p c’ contains ‘c’. Our logic words as follows:
+ * - Search for two-word annotations during the first round. This would detect
+ *   ‘p c’ and mark it as an annotation.
+ * - In the next round, the ‘c’ inside ‘p c’ won't be detected, because it's
+ *   contained within a span that is marked by an excluded class.
+ *
+ * The same is true for three-and two-word references, and for references that
+ * contain annotations.
+ *
+ * Given the above, it is paramount to perform searches in the correct order.
+ */
+const ABBREVIATION_EXCLUDE: string = css.classQuery(
+  // BULLET is not an abbreviation class, but it could collide with some
+  // abbreviation, so we exclude it.
+  cls.BULLET,
+  cls.BIBLE,
+  cls.REFERENCE,
+  cls.DIALECT,
+  cls.ANNOTATION
+);
+
+/**
  * BIBLE_RE defines the regex used to catch Bible references.
  * A Bible book abbreviation starts with a capital letter followed by one
  * or more small letters. Optionally, the abbreviation may contain a book
@@ -137,11 +163,11 @@ ensureKeysCovered(Object.keys(ref.MAPPING), REFERENCE_RES, false);
 // verse number), and add verification for your Bible regex.
 
 /**
- *
+ * Handle all Crum elements.
  * @param root
  * @param highlighter
  */
-export function handleAll(
+export function handle(
   root: HTMLElement,
   highlighter: highlight.Highlighter
 ): void {
@@ -165,12 +191,18 @@ export function handleAll(
   addCopticLookups(root);
   addGreekLookups(root);
   addEnglishLookups(root);
+
+  // Dialects are explicitly marked with a `dialect` class. There is no risk of
+  // collision or overlap.
   handleWikiDialects(root);
+  // Bible abbreviations are not expected to collide with other abbreviations.
+  // We do them early to move them out of the way.
   handleWikiBible(root);
+  // Some annotation abbreviations (e.g. MS for manuscript, MSS for manuscripts,
+  // and ostr for ostracon) are parts of some reference abbreviations. So
+  // references must be processed prior to annotations, and annotations must
+  // exclude pieces of text that have been marked as references.
   handleWikiReferences(root);
-  // NOTE: Some annotations (such as MS for manuscript, MSS for manuscripts,
-  // and ostr for ostracon) are substrings of some reference abbreviations. So
-  // annotations must be added AFTER references.
   handleWikiAnnotations(root);
   warnPotentiallyMissingReferences(root);
 }
@@ -550,30 +582,8 @@ export function handleWikiAnnotations(root: HTMLElement): void {
           span.classList.add(cls.ANNOTATION);
           return [span];
         },
-        // We want to skip bullet point bullets from processing (a., b., c.,
-        // ...; I, II, II, ...).
-        //
-        // Additionally, if an element is already an annotation, we don't do
-        // anything. This allows us to process two-word annotations in the
-        // first iteration, and one-word annotations in the second iteration,
-        // without worrying about annotations that are substrings of others.
-        // For example, ‘c’ is a substring of ‘p c’. In order to prevent
-        // conflict, we process the longer annotation (‘p c’) first, and mark
-        // it using the ANNOTATION class. In the following iteration, when
-        // we're searching for occurrences of ‘c’, we're sure we're gonna skip
-        // the marked instances of ‘p c’.
-        //
-        // Finally, for mere defensiveness, we avoid processing all elements
-        // containing Crum abbreviations (dialects, or biblical or
-        // non-biblical references), in order to prevent any potential
-        // overlap (although this is unexpected).
-        css.classQuery(
-          cls.BULLET,
-          cls.ANNOTATION,
-          cls.DIALECT,
-          cls.REFERENCE,
-          cls.BIBLE
-        )
+        // Exclude all Wiki abbreviations to avoid overlap.
+        ABBREVIATION_EXCLUDE
       );
     });
   });
@@ -649,8 +659,16 @@ export function handleWikiBible(root: HTMLElement): void {
         return [link];
       },
       // Exclude all Wiki abbreviations to avoid overlap.
-      // This is not expected to occur, but we add this check for defensiveness.
-      css.classQuery(cls.ANNOTATION, cls.DIALECT, cls.REFERENCE, cls.BIBLE)
+      // This is not expected to occur, especially for Biblical references,
+      // which have unique names and format that can not be conflated with
+      // something else.
+      // Also, it may be particularly useless for Biblical references because
+      // they tend to be searched early on in the process, thus none of the
+      // other abbreviation classes would be present at that stage anyway.
+      // It makes sense for the following stages to exclude abbreviations added
+      // in earlier stages, not the other way around.
+      // But we add the check anyway for consistency.
+      ABBREVIATION_EXCLUDE
     );
   });
 }
@@ -677,14 +695,8 @@ export function handleWikiReferences(root: HTMLElement): void {
           span.classList.add(cls.REFERENCE);
           return [span];
         },
-        // Exclude all Wiki abbreviations to avoid overlap.
-        css.classQuery(
-          cls.BULLET,
-          cls.ANNOTATION,
-          cls.DIALECT,
-          cls.REFERENCE,
-          cls.BIBLE
-        )
+        // Exclude all Wiki abbreviations to avoid any overlap.
+        ABBREVIATION_EXCLUDE
       );
     });
   });

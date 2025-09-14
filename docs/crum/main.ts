@@ -33,7 +33,7 @@ function main(): void {
     help.makeHelpPanel(highlighter);
   }
 
-  crum.handleAll(document.body, highlighter);
+  crum.handle(document.body, highlighter);
 }
 
 main();

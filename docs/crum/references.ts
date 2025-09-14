@@ -61,20 +61,11 @@ export interface Source {
  * speaking, that's the space-free form) should, nevertheless, be mentioned in a
  * comment, to aid manual verification.
  *
- * TODO: (#419) Revisit two-part abbreviations, and insert spaces where
+ * TODO: (#419) Revisit multi-part abbreviations, and insert spaces where
  * appropriate. We have attempted to insert spaces for all abbreviations that
  * ever occurred with a space, but some may have evaded our detection.
- * You can conveniently search this file for candidates using this regex:
- * ```
- * [A-Z][a-z][a-z]*[A-Z][a-zA-Z]*: {
- * ```
- *
- * TODO: (#419) Some abbreviations are substrings of others. Example:
- * - ‘C’ is a substring of ‘J&C’ / ‘J & C’ (both forms have occurred).
- * - ‘Till’ is a substring of ‘Till Oster’ / ‘TillOster’ (again, both forms have
- *   occurred).
- * Those are handled correctly, as far as I can tell. But you should explicitly
- * document the behavior, and how these nuances are taken care of.
+ * How about we just write all abbreviations as several parts, so we can catch
+ * all cases? There is no risk from that, eh?
  */
 export const MAPPING: Record<string, Source> = {
   ShA: {
