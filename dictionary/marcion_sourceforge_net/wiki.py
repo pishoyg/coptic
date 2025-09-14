@@ -7,7 +7,7 @@ from collections import abc
 
 from dictionary.marcion_sourceforge_net import main as crum
 from dictionary.marcion_sourceforge_net import sheet
-from utils import ensure, gcp
+from utils import ensure, gcp, log
 
 # pylint: disable=line-too-long
 # TODO: (#0) Move to `utils/paths.py`.
@@ -142,10 +142,14 @@ def html(text: str) -> abc.Generator[str]:
 
 @typing.final
 class Wiki:
+    """Wiki represents an entry in the Wiki sheet."""
+
     def __init__(self, record: dict[typing.Hashable, typing.Any]) -> None:
         self.key: str = record["Marcion"]
         self.entry: str = record["Entry"]
         self.wip: str = record["WIP"]
+        self.vide: str = record["_v_"]
+        self.headword: str = record["Headword"]
 
 
 # _FROM_MARCION is a set of entries that have been added to Crum by Marcion.
@@ -173,8 +177,12 @@ def main():
         gcp.tsv_spreadsheet(SHEET_TSV_URL).to_dict(orient="records"),
     ):
         if not w.key:
-            # This entry doesn't have a key. It's likely a vide entry.
+            # This entry doesn't have a Marcion key. It's likely a vide entry.
+            if not w.vide:
+                log.error("Non-vide entry lacks a Marcion key:", w.entry)
             continue
+        if w.vide:
+            log.warn("Key", w.key, "points to a vide entry:", w.entry)
         assert w.key not in wikis
         wikis[w.key] = w
 
