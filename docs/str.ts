@@ -19,3 +19,15 @@ export function isUpper(s: string): boolean {
 export function isLower(s: string): boolean {
   return s.toLowerCase() === s;
 }
+
+/**
+ * @param text
+ * @returns
+ */
+export function toggleCase(text: string): string {
+  return Array.from(text)
+    .map((ch: string): string =>
+      isUpper(ch) ? ch.toLowerCase() : ch.toUpperCase()
+    )
+    .join('');
+}
