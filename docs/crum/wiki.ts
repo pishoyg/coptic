@@ -158,17 +158,17 @@ export function handle(root: HTMLElement): void {
     .forEach((elem: HTMLElement): void => {
       // Dialects are explicitly marked with a `dialect` class. There is no
       // risk of collision or overlap.
-      handleWikiDialects(elem);
+      handleDialects(elem);
       // Bible abbreviations are not expected to collide with other
       // abbreviations. We do them early to move them out of the way.
-      handleWikiBible(elem);
+      handleBible(elem);
       // Some annotation abbreviations (e.g. MS for manuscript, MSS for
       // manuscripts, and ostr for ostracon) are parts of some reference
       // abbreviations. So references must be processed prior to annotations,
       // and annotations must exclude pieces of text that have been marked as
       // references.
-      handleWikiReferences(elem);
-      handleWikiAnnotations(elem);
+      handleReferences(elem);
+      handleAnnotations(elem);
       warnPotentiallyMissingReferences(elem);
     });
 }
@@ -177,7 +177,7 @@ export function handle(root: HTMLElement): void {
  *
  * @param root
  */
-export function handleWikiDialects(root: HTMLElement): void {
+export function handleDialects(root: HTMLElement): void {
   root.querySelectorAll(`.${cls.DIALECT}`).forEach((el: Element): void => {
     drop.addHoverDroppable(el, d.DIALECTS[el.textContent as d.DIALECT].name);
   });
@@ -187,7 +187,7 @@ export function handleWikiDialects(root: HTMLElement): void {
  *
  * @param root
  */
-export function handleWikiAnnotations(root: HTMLElement): void {
+export function handleAnnotations(root: HTMLElement): void {
   ANNOTATION_RES.forEach((regex: RegExp): void => {
     html.replaceText(
       root,
@@ -290,7 +290,7 @@ function parseBibleCitation(
  * @param root
  *
  */
-export function handleWikiBible(root: HTMLElement): void {
+export function handleBible(root: HTMLElement): void {
   html.replaceText(
     root,
     BIBLE_RE,
@@ -326,7 +326,7 @@ export function handleWikiBible(root: HTMLElement): void {
  *
  * @param root
  */
-export function handleWikiReferences(root: HTMLElement): void {
+export function handleReferences(root: HTMLElement): void {
   REFERENCE_RES.forEach((regex: RegExp): void => {
     html.replaceText(
       root,
