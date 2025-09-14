@@ -47,6 +47,7 @@ export const MAPPING: Record<
   Ps: { name: 'Psalms', path: 'psalms', numChapters: 152 },
   Job: { name: 'Job', path: 'job', numChapters: 42 },
   Pro: { name: 'Proverbs', path: 'proverbs', numChapters: 29 },
+  Ecc: { name: 'Ecclesiastes', path: 'ecclesiastes', numChapters: 12 },
   Eccl: { name: 'Ecclesiastes', path: 'ecclesiastes', numChapters: 12 },
   Cant: { name: 'Song of Songs', path: 'song_of_songs', numChapters: 8 },
   Sa: { name: 'Wisdom of Solomon', path: 'wisdom_of_solomon', numChapters: 19 },
@@ -80,6 +81,7 @@ export const MAPPING: Record<
   Hab: { name: 'Habakkuk', path: 'habakkuk', numChapters: 3 },
   Zeph: { name: 'Zephaniah', path: 'zephaniah', numChapters: 3 },
   Hag: { name: 'Haggai', path: 'haggai', numChapters: 2 },
+  Zach: { name: 'Zechariah', path: 'zechariah', numChapters: 14 },
   Zech: { name: 'Zechariah', path: 'zechariah', numChapters: 14 },
   Mal: { name: 'Malachi', path: 'malachi', numChapters: 4 },
   Mt: {
