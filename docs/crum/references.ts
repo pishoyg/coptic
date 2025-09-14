@@ -1022,6 +1022,7 @@ export const MAPPING: Record<string, Source> = {
   },
   ST: {
     name: 'Crum, Short Texts from Coptic Ostraca & Papyri, 1921',
+    variant: 'St',
     hyperlink:
       'https://archive.org/details/shorttextsfromco00crum/page/n5/mode/2up',
   },
