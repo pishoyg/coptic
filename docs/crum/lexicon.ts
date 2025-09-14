@@ -8,6 +8,7 @@ import * as help from './help.js';
 import * as header from '../header.js';
 import * as paths from '../paths.js';
 import * as crum from './crum.js';
+import * as wiki from './wiki.js';
 import * as dropdown from '../dropdown.js';
 import * as logger from '../logger.js';
 import * as id from './id.js';
@@ -197,7 +198,8 @@ class WikiSearchResult extends xooxle.SearchResult {
   override row(total: number): HTMLTableRowElement {
     const row: HTMLTableRowElement = super.row(total);
     crum.addGreekLookups(row);
-    crum.handleWikiBible(row);
+    // TODO: (#541) Add other handlers once the post-processing bug is fixed.
+    wiki.handleWikiBible(row);
     return row;
   }
 
