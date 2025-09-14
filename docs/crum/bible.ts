@@ -16,6 +16,7 @@ export const MAPPING: Record<
   Ex: { name: 'Exodus', path: 'exodus', numChapters: 40 },
   Lev: { name: 'Leviticus', path: 'leviticus', numChapters: 27 },
   Nu: { name: 'Numbers', path: 'numbers', numChapters: 36 },
+  Num: { name: 'Numbers', path: 'numbers', numChapters: 36 },
   Deu: { name: 'Deuteronomy', path: 'deuteronomy', numChapters: 34 },
   Jos: { name: 'Joshua', path: 'joshua', numChapters: 24 },
   Jud: { name: 'Judges', path: 'judges', numChapters: 21 },
@@ -167,6 +168,7 @@ export const MAPPING: Record<
     numChapters: 4,
   },
   Ti: { name: 'Epistle to Titus', path: 'epistle_to_titus', numChapters: 3 },
+  Tit: { name: 'Epistle to Titus', path: 'epistle_to_titus', numChapters: 3 },
   Philem: {
     name: 'Epistle to Philemon',
     path: 'epistle_to_philemon',
