@@ -26,16 +26,29 @@ import * as drop from '../dropdown.js';
 import * as orth from '../orth.js';
 
 /**
+ * NOTE: All of the regexes below assume the following normalizations:
+ * - HTML tree normalization[1], which allows us to use `\s` instead of `\s+`.
+ * - NFD normalization[2], which allows us to use `\p{M}`.
+ * [1] https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize
+ * [2] https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize */ // eslint-disable-line max-len
+
+/**
  * BIBLE_RE defines the regex used to catch Bible references.
+ * A Bible book abbreviation starts with a capital letter followed by one
+ * or more small letters. Optionally, the abbreviation may contain a book
+ * number, with 4 being the maximum.
  * Some books, such as the Book of Esther, have special chapters called A, C, D,
  * and F. This is why we allow the chapter number to be one of those characters.
  * In some cases, only one number follows the book name, so we allow one of the
  * two numbers to be omitted.
  */
 const BIBLE_RE =
-  /(\b(?:[1-4]\s)?[a-zA-Z]+)(?:\s+(\d+|A|C|D|F))(?:\s+(\d+))?\b/gu;
-const TWO_WORD_ANNOTATION_RE = /\b[a-zA-Z]+\s+[a-zA-Z]+\b/gu;
-const ONE_WORD_ANNOTATION_RE = /\b[a-zA-Z]+\b/gu;
+  /(\b(?:[1-4]\s)?[A-Z][a-z]+)(?:\s(\d+|A|C|D|F))(?:\s(\d+))?\b/gu;
+
+const ANNOTATION_RES: RegExp[] = [
+  /\b[a-zA-Z]+\s[a-zA-Z]+\b/gu, // Two-word annotation.
+  /\b[a-zA-Z]+\b/gu, // One-word annotation.
+];
 
 // Some reference abbreviations have diacritics. We normalize the keys and the
 // search text, so we can correctly detect them.
@@ -43,14 +56,41 @@ const ONE_WORD_ANNOTATION_RE = /\b[a-zA-Z]+\b/gu;
 // apostrophe: ‘O'Leary H’, and two contain an ampersand: ‘J & C’, ‘N & E’.
 // We presume that the inclusion of the apostrophe and the ampersand doesn't
 // otherwise compromise our search logic.
-const THREE_WORD_REFERENCE_RE =
-  /[a-zA-Z\p{M}'&]+\s+[a-zA-Z\p{M}'&]+\s+[a-zA-Z\p{M}'&]+/gu;
-const TWO_WORD_REFERENCE_RE = /[a-zA-Z\p{M}'&]+\s+[a-zA-Z\p{M}'&]+/gu;
-const ONE_WORD_REFERENCE_RE = /[a-zA-Z\p{M}'&]+/gu;
+const REFERENCE_RES: RegExp[] = [
+  /[a-zA-Z\p{M}'&]+\s[a-zA-Z\p{M}'&]+\s[a-zA-Z\p{M}'&]+/gu,
+  /[a-zA-Z\p{M}'&]+\s[a-zA-Z\p{M}'&]+/gu,
+  /[a-zA-Z\p{M}'&]+/gu,
+];
+
+// TODO: (#0) Add a check to verify that all reference abbreviations are caught
+// by the regex above.
 
 const COPTIC_RE = /[\p{Script=Coptic}][\p{Script=Coptic}\p{Mark}]*/gu;
 const GREEK_RE = /[\p{Script=Greek}][\p{Script=Greek}\p{Mark}]*/gu;
 const ENGLISH_RE = /[\p{Script=Latin}][\p{Script=Latin}\p{Mark}]*/gu;
+
+/**
+ * Ensure that all the given keys are matched by at least one of the regexes.
+ * @param keys
+ * @param regexes
+ */
+function ensureKeysCovered(keys: string[], regexes: RegExp[]): void {
+  const undetectable: string[] = keys.filter(
+    (key: string): boolean =>
+      !regexes.some(
+        // We need to ensure, not just that there is a match, but that the match
+        // covers the entire key.
+        (regex: RegExp): boolean => key.match(regex)?.[0].length === key.length
+      )
+  );
+  if (undetectable.length) {
+    logger.fatal(undetectable, 'are not detected by our regexes!');
+  }
+}
+
+// TODO: (#419) Once all corner cases are handled, add verification for
+// references.
+ensureKeysCovered(Object.keys(ann.MAPPING), ANNOTATION_RES);
 
 /**
  *
@@ -450,50 +490,48 @@ export function handleWikiDialects(root: HTMLElement): void {
  */
 export function handleWikiAnnotations(root: HTMLElement): void {
   root.querySelectorAll(`.${cls.WIKI}`).forEach((el: Element): void => {
-    [TWO_WORD_ANNOTATION_RE, ONE_WORD_ANNOTATION_RE].forEach(
-      (regex: RegExp): void => {
-        html.replaceText(
-          el,
-          regex,
-          (match: RegExpExecArray): (Node | string)[] | null => {
-            const form: string = match[0];
-            const annot: ann.Annotation | undefined = ann.MAPPING[form];
-            if (!annot) {
-              return null;
-            }
-            const span: HTMLSpanElement = document.createElement('span');
-            span.textContent = form;
-            drop.addHoverDroppable(span, annot.fullForm);
-            span.classList.add(cls.ANNOTATION);
-            return [span];
-          },
-          // We want to skip bullet point bullets from processing (a., b., c.,
-          // ...; I, II, II, ...).
-          //
-          // Additionally, if an element is already an annotation, we don't do
-          // anything. This allows us to process two-word annotations in the
-          // first iteration, and one-word annotations in the second iteration,
-          // without worrying about annotations that are substrings of others.
-          // For example, ‘c’ is a substring of ‘p c’. In order to prevent
-          // conflict, we process the longer annotation (‘p c’) first, and mark
-          // it using the ANNOTATION class. In the following iteration, when
-          // we're searching for occurrences of ‘c’, we're sure we're gonna skip
-          // the marked instances of ‘p c’.
-          //
-          // Finally, for mere defensiveness, we avoid processing all elements
-          // containing Crum abbreviations (dialects, or biblical or
-          // non-biblical references), in order to prevent any potential
-          // overlap (although this is unexpected).
-          css.classQuery(
-            cls.BULLET,
-            cls.ANNOTATION,
-            cls.DIALECT,
-            cls.REFERENCE,
-            cls.BIBLE
-          )
-        );
-      }
-    );
+    ANNOTATION_RES.forEach((regex: RegExp): void => {
+      html.replaceText(
+        el,
+        regex,
+        (match: RegExpExecArray): (Node | string)[] | null => {
+          const form: string = match[0];
+          const annot: ann.Annotation | undefined = ann.MAPPING[form];
+          if (!annot) {
+            return null;
+          }
+          const span: HTMLSpanElement = document.createElement('span');
+          span.textContent = form;
+          drop.addHoverDroppable(span, annot.fullForm);
+          span.classList.add(cls.ANNOTATION);
+          return [span];
+        },
+        // We want to skip bullet point bullets from processing (a., b., c.,
+        // ...; I, II, II, ...).
+        //
+        // Additionally, if an element is already an annotation, we don't do
+        // anything. This allows us to process two-word annotations in the
+        // first iteration, and one-word annotations in the second iteration,
+        // without worrying about annotations that are substrings of others.
+        // For example, ‘c’ is a substring of ‘p c’. In order to prevent
+        // conflict, we process the longer annotation (‘p c’) first, and mark
+        // it using the ANNOTATION class. In the following iteration, when
+        // we're searching for occurrences of ‘c’, we're sure we're gonna skip
+        // the marked instances of ‘p c’.
+        //
+        // Finally, for mere defensiveness, we avoid processing all elements
+        // containing Crum abbreviations (dialects, or biblical or
+        // non-biblical references), in order to prevent any potential
+        // overlap (although this is unexpected).
+        css.classQuery(
+          cls.BULLET,
+          cls.ANNOTATION,
+          cls.DIALECT,
+          cls.REFERENCE,
+          cls.BIBLE
+        )
+      );
+    });
   });
 }
 
@@ -579,11 +617,7 @@ export function handleWikiBible(root: HTMLElement): void {
  */
 export function handleWikiReferences(root: HTMLElement): void {
   root.querySelectorAll(`.${cls.WIKI}`).forEach((el: Element): void => {
-    [
-      THREE_WORD_REFERENCE_RE,
-      TWO_WORD_REFERENCE_RE,
-      ONE_WORD_REFERENCE_RE,
-    ].forEach((regex: RegExp): void => {
+    REFERENCE_RES.forEach((regex: RegExp): void => {
       html.replaceText(
         el,
         regex,
