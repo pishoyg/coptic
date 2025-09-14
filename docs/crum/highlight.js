@@ -13,15 +13,18 @@ import * as ccls from '../cls.js';
 import * as header from '../header.js';
 import * as logger from '../logger.js';
 import * as d from './dialect.js';
+// On Anki, style sheets are problematic, for some reason! So we resort to
+// updating individual elements in the page instead!
+const ANKI = iam.amI('anki');
+const STYLE = ANKI ? null : document.createElement('style');
+if (STYLE) {
+  document.head.appendChild(STYLE);
+}
 /**
- *
+ * TODO: (#0) Use global methods and get rid of the class.
  */
 export class Highlighter {
-  anki;
   dialectCheckboxes;
-  // Sheets are problematic on Anki, for some reason! We update the elements
-  // individually instead!
-  sheet;
   dialectRuleIndex;
   devRuleIndex;
   noDevRuleIndex;
@@ -29,7 +32,6 @@ export class Highlighter {
   static DIM = '0.3';
   /**
    *
-   * @param anki - Whether we are running on Anki.
    * @param dialectCheckboxes - List of checkboxes that control dialect
    * highlighting. Each box must bear a name equal to the dialect code that it
    * represents.
@@ -37,11 +39,9 @@ export class Highlighter {
    * dialect highlighting in some other way should also update the checking of
    * the checkboxes.
    */
-  constructor(anki, dialectCheckboxes) {
-    this.anki = anki;
+  constructor(dialectCheckboxes) {
     this.dialectCheckboxes = dialectCheckboxes;
-    this.sheet = this.anki ? undefined : window.document.styleSheets[0];
-    let length = this.sheet?.cssRules.length ?? 0;
+    let length = STYLE?.sheet?.cssRules.length ?? 0;
     this.dialectRuleIndex = length++;
     this.devRuleIndex = length++;
     this.noDevRuleIndex = length++;
@@ -136,16 +136,16 @@ export class Highlighter {
    * @param rule - New rule.
    */
   upsertRule(index, rule) {
-    if (!this.sheet) {
+    if (!STYLE?.sheet) {
       logger.error(
         'Attempting to update sheet rules when the sheet is not set!'
       );
       return;
     }
-    if (index < this.sheet.cssRules.length) {
-      this.sheet.deleteRule(index);
+    if (index < STYLE.sheet.cssRules.length) {
+      STYLE.sheet.deleteRule(index);
     }
-    this.sheet.insertRule(rule, index);
+    STYLE.sheet.insertRule(rule, index);
   }
   /**
    * If possible, we update the CSS rule and call it a day.
@@ -175,7 +175,7 @@ export class Highlighter {
    * potentially affected by previous display updates.
    */
   updateSheetOrElements(ruleIndex, query, style, func, resetQuery, resetFunc) {
-    if (this.anki) {
+    if (ANKI) {
       if (resetQuery && resetFunc) {
         document.querySelectorAll(resetQuery).forEach(resetFunc);
       }
@@ -247,7 +247,7 @@ export class Highlighter {
     window.history.replaceState('', '', url.toString());
     // Reload to get rid of the highlighting caused by the hash / fragment,
     // if any.
-    if (iam.amI('anki')) {
+    if (ANKI) {
       return;
     }
     window.location.reload();

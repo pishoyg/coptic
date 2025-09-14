@@ -294,10 +294,9 @@ async function main() {
     // initialization.
     dropdownDialects[0].show();
   }
-  const dialectCheckboxes = Array.from(
-    document.querySelectorAll(`#${DIALECTS_ID} input`)
+  const highlighter = new highlight.Highlighter(
+    Array.from(document.querySelectorAll(`#${DIALECTS_ID} input`))
   );
-  const highlighter = new highlight.Highlighter(false, dialectCheckboxes);
   SearchResult.init(highlighter);
   // Initialize searchers.
   // TODO: (#0) You initialize three different Form and Xooxle objects, and many
