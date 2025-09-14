@@ -322,13 +322,10 @@ async function main(): Promise<void> {
     dropdownDialects[0]!.show();
   }
 
-  const dialectCheckboxes: HTMLInputElement[] = Array.from(
-    document.querySelectorAll<HTMLInputElement>(`#${DIALECTS_ID} input`)
-  );
-
   const highlighter: highlight.Highlighter = new highlight.Highlighter(
-    false,
-    dialectCheckboxes
+    Array.from(
+      document.querySelectorAll<HTMLInputElement>(`#${DIALECTS_ID} input`)
+    )
   );
   SearchResult.init(highlighter);
 
