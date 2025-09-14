@@ -208,4 +208,5 @@ export const MAPPING: Record<
     numChapters: 1,
   },
   Ap: { name: 'Apocalypse', path: 'apocalypse', numChapters: 22 },
+  Apoc: { name: 'Apocalypse', path: 'apocalypse', numChapters: 22 },
 };
