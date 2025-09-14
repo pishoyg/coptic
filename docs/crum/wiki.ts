@@ -59,7 +59,7 @@ const ABBREVIATION_EXCLUDE: string = css.classQuery(
  * two numbers to be omitted.
  */
 const BIBLE_RE =
-  /(\b(?:[1-4]\s)?[A-Z][a-z]+)(?:\s(\d+|A|C|D|F))(?:\s(\d+))?\b/gu;
+  /(\b(?:[1-4]\s)?[A-Z][a-z]+)(?:\s(\d+|A|C|D|F)(?:\s(\d+))?)?\b/gu;
 
 const ANNOTATION_RES: RegExp[] = [
   /\b[a-zA-Z]+\s[a-zA-Z]+\b/gu, // Two-word annotation.
@@ -222,6 +222,57 @@ const DAN_OVERRIDE: Record<string, { chapter: string; name: string }> = {
 };
 
 /**
+ *
+ * @param match
+ * @returns
+ */
+function parseBibleCitation(
+  match: RegExpExecArray
+): { url: string; name: string } | null {
+  let [bookAbbreviation, chapter, verse] = [match[1], match[2], match[3]];
+  if (!bookAbbreviation) {
+    // NOTE: This is not expected, because the book abbreviation is a
+    // non-optional piece of the regex. We have this check just to appease the
+    // linter.
+    return null;
+  }
+  const danOverride = DAN_OVERRIDE[bookAbbreviation];
+  if (danOverride) {
+    // Given that this special book contains one chapter, the book
+    // abbreviation is followed by the verse number only (there is no
+    // chapter number).
+    bookAbbreviation = 'Dan';
+    verse = chapter;
+    chapter = danOverride.chapter;
+  }
+  const book: { name: string; path: string; numChapters: number } | undefined =
+    bible.MAPPING[bookAbbreviation];
+  if (!book) {
+    return null;
+  }
+  const name: string = danOverride?.name ?? book.name;
+  if (!chapter) {
+    logger.ensure(
+      !verse,
+      'Given the regex, if there is no chapter, there is definitely no verse!'
+    );
+    // This points to the whole book.
+    return { url: paths.bibleBookURL(book.path), name };
+  }
+  if (!verse && book.numChapters === 1) {
+    // This is a one-chapter book. The chapter number is always 1. The given
+    // number is actually the verse number.d
+    verse = chapter;
+    chapter = '1';
+  }
+  let url = `${paths.BIBLE}/${book.path}_${chapter}.html`;
+  if (verse) {
+    url = `${url}#v${verse}`;
+  }
+  return { url, name };
+}
+
+/**
  * NOTE: For the Bible abbreviation-to-id mapping, we opted for generating a
  * code file that defines the mapping. We used to populate the mapping in a
  * JSON, but this had to be retrieved with an async fetch. We prefer to `await`
@@ -244,38 +295,17 @@ export function handleWikiBible(root: HTMLElement): void {
     root,
     BIBLE_RE,
     (match: RegExpExecArray): (Node | string)[] | null => {
-      const fullText: string = match[0];
-      let [bookAbbreviation, chapter, verse] = [match[1], match[2], match[3]];
-      if (!bookAbbreviation) {
-        // NOTE: This is not expected, because the book abbreviation is a
-        // non-optional piece of the regex.
+      const result: { url: string; name: string } | null =
+        parseBibleCitation(match);
+      if (!result) {
         return null;
       }
-      const danOverride = DAN_OVERRIDE[bookAbbreviation];
-      if (danOverride) {
-        // Given that this special book contains one chapter, the book
-        // abbreviation is followed by the verse number only (there is no
-        // chapter number).
-        bookAbbreviation = 'Dan';
-        verse = chapter;
-        chapter = danOverride.chapter;
-      }
-      if (!bookAbbreviation || !chapter || !verse) {
-        return null;
-      }
-      const book: { name: string; path: string } | undefined =
-        bible.MAPPING[bookAbbreviation];
-      if (!book) {
-        return null;
-      }
-      const basename = `${paths.BIBLE}/${book.path}_${chapter}.html`;
-      const url = `${basename}#v${verse}`;
       const link: HTMLAnchorElement = document.createElement('a');
-      link.href = url;
+      link.href = result.url;
       link.target = '_blank';
       link.classList.add(ccls.HOVER_LINK, cls.BIBLE);
-      link.textContent = fullText;
-      drop.addHoverDroppable(link, danOverride?.name ?? book.name);
+      link.textContent = match[0];
+      drop.addHoverDroppable(link, result.name);
       return [link];
     },
     // Exclude all Wiki abbreviations to avoid overlap.
