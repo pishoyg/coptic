@@ -52,14 +52,15 @@ const ABBREVIATION_EXCLUDE: string = css.classQuery(
  * BIBLE_RE defines the regex used to catch Bible references.
  * A Bible book abbreviation starts with a capital letter followed by one
  * or more small letters. Optionally, the abbreviation may contain a book
- * number, with 4 being the maximum.
+ * number, with 4 being the maximum. Epistle of Jeremiah is an exception, so we
+ * give it special handling.
  * Some books, such as the Book of Esther, have special chapters called A, C, D,
  * and F. This is why we allow the chapter number to be one of those characters.
  * In some cases, only one number follows the book name, so we allow one of the
  * two numbers to be omitted.
  */
 const BIBLE_RE =
-  /(\b(?:[1-4]\s)?[A-Z][a-z]+)(?:\s(\d+|A|C|D|F)(?:\s(\d+))?)?\b/gu;
+  /(\b(?:[1-4]\s)?[A-Z][a-z]+|EpJer)(?:\s(\d+|A|C|D|F)(?:\s(\d+))?)?\b/gu;
 
 const ANNOTATION_RES: RegExp[] = [
   /\b[a-zA-Z]+\s[a-zA-Z]+\b/gu, // Two-word annotation.
@@ -145,8 +146,7 @@ ensureKeysCovered(Object.keys(ann.MAPPING), ANNOTATION_RES);
 // TODO: (#419) Once all corner cases are handled, make reference verification
 // strict.
 ensureKeysCovered(Object.keys(ref.MAPPING), REFERENCE_RES, false);
-// TODO: (#524) Build a regex that only matches book names (without a chapter or
-// verse number), and add verification for your Bible regex.
+ensureKeysCovered(Object.keys(bible.MAPPING), [BIBLE_RE]);
 
 /**
  * Handle all Crum elements.
