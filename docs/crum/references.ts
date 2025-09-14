@@ -1190,6 +1190,13 @@ export const MAPPING: Record<string, Source> = {
     broken: 'Symbol',
   },
   '?': { name: 'perhaps, possibly', broken: 'Symbol' },
+  // NOTE: The abbreviations below are not found in Crum's list, but they occur
+  // in the text.
+  ViK: {
+    name: 'Vienna, ÖNB',
+    hyperlink:
+      'https://www.onb.ac.at/<br>https://coptot.manuscriptroom.com/documents/10231/23535/LCBM_1.0_2021.pdf/dec4f073-dbfa-4af6-9971-3b2bace5b3eb',
+  },
 };
 
 // Add all the variants to the map.
