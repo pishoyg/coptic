@@ -50,20 +50,53 @@ const ANNOTATION_RES: RegExp[] = [
   /\b[a-zA-Z]+\b/gu, // One-word annotation.
 ];
 
-// Some reference abbreviations have diacritics. We normalize the keys and the
-// search text, so we can correctly detect them.
-// Additionally, as of the time of writing, one abbreviation contains an
-// apostrophe: ‘O'Leary H’, and two contain an ampersand: ‘J & C’, ‘N & E’.
-// We presume that the inclusion of the apostrophe and the ampersand doesn't
-// otherwise compromise our search logic.
+// Pay attention to the following:
+// - Diacritics:
+//     Some reference abbreviations have diacritics. In order for the logic to
+//     work correctly, both the pattern and the searchable text should be
+//     normalized.
+//     The references package should take care of normalizing the keys.
+//     On our side, our logic below should normalize the text. Thus, our regex
+//     can be constructed with that assumption in mind.
+//     Additionally, our search logic should normalize the text that is to be
+//     searched, so it can function correctly.
+// - Four-word abbreviation:
+//     We have a single four-word abbreviation:
+//     - Imp Russ Ar S
+//     We add it as a special case, instead of introducing another matching
+//     step.
+// - Apostrophe:
+//     Two abbreviations have an apostrophe:
+//     - O'Leary H
+//     - O'Leary Th(e)
+//     We give those special handling.
+//     We can not simply allow an apostrophe as a valid abbreviation word
+//     character, because it could corrupt matches in some cases where an
+//     apostrophe that is not part of the abbreviation happens to immediately
+//     follow the abbreviation.
+//     Consider the following example from 512:
+//     ```
+//       Pliny's atramentum sutorium
+//     ```
+//     If apostrophes were allowed, our regex would match the word ‘Pliny's’ and
+//     try to search for that, instead of simply matching ’Pliny’.
+//
+//     P.S. We could also solve the problem by adding more stages to the
+//     matching process—with and without apostrophes. We could consider that if
+//     apostrophes turn out to be more common (#522). For the time being, this
+//     is simpler, and does the job.
+// - Ampersand:
+//     As of the time of writing, two abbreviations have an ampersand:
+//     - ‘N&E’
+//     - ‘J&C’
+//     We therefore allow an ampersand as a valid abbreviation character. We
+//     don't run the same risk of corrupting matches that we run with
+//     apostrophes, so we adopt this simpler approach.
 const REFERENCE_RES: RegExp[] = [
-  /[a-zA-Z\p{M}'&]+\s[a-zA-Z\p{M}'&]+\s[a-zA-Z\p{M}'&]+/gu,
-  /[a-zA-Z\p{M}'&]+\s[a-zA-Z\p{M}'&]+/gu,
-  /[a-zA-Z\p{M}'&]+/gu,
+  /\bImp Russ Ar S|O'Leary\s?H|O'Leary\s?The?|[a-zA-Z\p{M}&]+\s[a-zA-Z\p{M}&]+\s[a-zA-Z\p{M}&]+\b/gu,
+  /\b[a-zA-Z\p{M}&]+\s[a-zA-Z\p{M}&]+\b/gu,
+  /\b[a-zA-Z\p{M}&]+\b/gu,
 ];
-
-// TODO: (#0) Add a check to verify that all reference abbreviations are caught
-// by the regex above.
 
 const COPTIC_RE = /[\p{Script=Coptic}][\p{Script=Coptic}\p{Mark}]*/gu;
 const GREEK_RE = /[\p{Script=Greek}][\p{Script=Greek}\p{Mark}]*/gu;
@@ -73,8 +106,13 @@ const ENGLISH_RE = /[\p{Script=Latin}][\p{Script=Latin}\p{Mark}]*/gu;
  * Ensure that all the given keys are matched by at least one of the regexes.
  * @param keys
  * @param regexes
+ * @param strict
  */
-function ensureKeysCovered(keys: string[], regexes: RegExp[]): void {
+function ensureKeysCovered(
+  keys: string[],
+  regexes: RegExp[],
+  strict = true
+): void {
   const undetectable: string[] = keys.filter(
     (key: string): boolean =>
       !regexes.some(
@@ -84,13 +122,19 @@ function ensureKeysCovered(keys: string[], regexes: RegExp[]): void {
       )
   );
   if (undetectable.length) {
-    logger.fatal(undetectable, 'are not detected by our regexes!');
+    (strict ? logger.fatal : logger.warn)(
+      undetectable,
+      'are not detected by our regexes!'
+    );
   }
 }
 
-// TODO: (#419) Once all corner cases are handled, add verification for
-// references.
 ensureKeysCovered(Object.keys(ann.MAPPING), ANNOTATION_RES);
+// TODO: (#419) Once all corner cases are handled, make reference verification
+// strict.
+ensureKeysCovered(Object.keys(ref.MAPPING), REFERENCE_RES, false);
+// TODO: (#524) Build a regex that only matches book names (without a chapter or
+// verse number), and add verification for your Bible regex.
 
 /**
  *
