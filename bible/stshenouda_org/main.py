@@ -454,10 +454,11 @@ class Bible:
         # Crum also uses 'Su' to refer to the story of Susanna, while in our
         # case it's a chapter in Daniel.
         ensure.unique(book.crum for book in self.books if book.crum)
-        mapping: dict[str, dict[str, str]] = {
+        mapping: dict[str, dict[str, str | int]] = {
             book.crum: {
                 "name": book.name,
                 "path": book.id(),
+                "numChapters": len(book.chapters),
             }
             for book in self.books
             if book.crum
@@ -470,12 +471,14 @@ class Bible:
              * modify it manually!
              */
 
-            /** MAPPING maps a Crum Bible book abbreviation to the book name and
-             * path.
+            /** MAPPING maps a Crum Bible book abbreviation to book information.
              */
             export const MAPPING:
-                        Record<string, {{name: string, path: string}}> =
-                        {mapping};""",
+                Record<string, {{
+                    name: string,
+                    path: string,
+                    numChapters: number,
+                }}> = {mapping};""",
             os.path.join(paths.LEXICON_DIR, "bible.ts"),
         )
 
@@ -630,7 +633,7 @@ class HTMLBuilder:
         assert not is_epub
         # For HTML, we list the books, and anchors to the chapters.
         for book in bible.books:
-            yield '<h4 class="collapse index-book-name">'
+            yield f'<h4 class="collapse index-book-name" id="{book.id()}">'
             yield book.name
             yield "</h4>"
             yield '<div class="collapsible index-book-chapter-list">'
