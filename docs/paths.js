@@ -7,6 +7,15 @@ export const LEXICON = `${URL}/crum`;
 export const DAWOUD = `${URL}/dawoud`;
 export const BIBLE = `${URL}/bible`;
 export const LOOKUP_URL_PREFIX = `${LEXICON}?query=`;
+/**
+ * Construct a Bible book URL.
+ *
+ * @param bookID
+ * @returns Bible book URL.
+ */
+export function bibleBookURL(bookID) {
+  return `${BIBLE}?book=${bookID}`;
+}
 // Other pages that we own:
 export const REPORTS =
   'https://docs.google.com/forms/d/e/1FAIpQLSeNVAjxtJcAR7i6AwBI3SFlzRWC5DQ09G6LfbySbZGvZCdpIg/viewform?usp=pp_url';

@@ -192,7 +192,7 @@ class WikiSearchResult extends xooxle.SearchResult {
     const row = super.row(total);
     crum.addGreekLookups(row);
     // TODO: (#541) Add other handlers once the post-processing bug is fixed.
-    wiki.handleWikiBible(row);
+    wiki.handleBible(row);
     return row;
   }
   /**

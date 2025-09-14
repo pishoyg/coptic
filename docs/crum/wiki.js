@@ -55,7 +55,7 @@ const ABBREVIATION_EXCLUDE = css.classQuery(
  * two numbers to be omitted.
  */
 const BIBLE_RE =
-  /(\b(?:[1-4]\s)?[A-Z][a-z]+)(?:\s(\d+|A|C|D|F))(?:\s(\d+))?\b/gu;
+  /(\b(?:[1-4]\s)?[A-Z][a-z]+)(?:\s(\d+|A|C|D|F)(?:\s(\d+))?)?\b/gu;
 const ANNOTATION_RES = [
   /\b[a-zA-Z]+\s[a-zA-Z]+\b/gu, // Two-word annotation.
   /\b[a-zA-Z]+\b/gu, // One-word annotation.
@@ -143,17 +143,17 @@ export function handle(root) {
   root.querySelectorAll(`.${cls.WIKI}`).forEach((elem) => {
     // Dialects are explicitly marked with a `dialect` class. There is no
     // risk of collision or overlap.
-    handleWikiDialects(elem);
+    handleDialects(elem);
     // Bible abbreviations are not expected to collide with other
     // abbreviations. We do them early to move them out of the way.
-    handleWikiBible(elem);
+    handleBible(elem);
     // Some annotation abbreviations (e.g. MS for manuscript, MSS for
     // manuscripts, and ostr for ostracon) are parts of some reference
     // abbreviations. So references must be processed prior to annotations,
     // and annotations must exclude pieces of text that have been marked as
     // references.
-    handleWikiReferences(elem);
-    handleWikiAnnotations(elem);
+    handleReferences(elem);
+    handleAnnotations(elem);
     warnPotentiallyMissingReferences(elem);
   });
 }
@@ -161,7 +161,7 @@ export function handle(root) {
  *
  * @param root
  */
-export function handleWikiDialects(root) {
+export function handleDialects(root) {
   root.querySelectorAll(`.${cls.DIALECT}`).forEach((el) => {
     drop.addHoverDroppable(el, d.DIALECTS[el.textContent].name);
   });
@@ -170,7 +170,7 @@ export function handleWikiDialects(root) {
  *
  * @param root
  */
-export function handleWikiAnnotations(root) {
+export function handleAnnotations(root) {
   ANNOTATION_RES.forEach((regex) => {
     html.replaceText(
       root,
@@ -203,6 +203,53 @@ const DAN_OVERRIDE = {
   Bel: { chapter: 'c', name: 'Bel' },
 };
 /**
+ *
+ * @param match
+ * @returns
+ */
+function parseBibleCitation(match) {
+  let [bookAbbreviation, chapter, verse] = [match[1], match[2], match[3]];
+  if (!bookAbbreviation) {
+    // NOTE: This is not expected, because the book abbreviation is a
+    // non-optional piece of the regex. We have this check just to appease the
+    // linter.
+    return null;
+  }
+  const danOverride = DAN_OVERRIDE[bookAbbreviation];
+  if (danOverride) {
+    // Given that this special book contains one chapter, the book
+    // abbreviation is followed by the verse number only (there is no
+    // chapter number).
+    bookAbbreviation = 'Dan';
+    verse = chapter;
+    chapter = danOverride.chapter;
+  }
+  const book = bible.MAPPING[bookAbbreviation];
+  if (!book) {
+    return null;
+  }
+  const name = danOverride?.name ?? book.name;
+  if (!chapter) {
+    logger.ensure(
+      !verse,
+      'Given the regex, if there is no chapter, there is definitely no verse!'
+    );
+    // This points to the whole book.
+    return { url: paths.bibleBookURL(book.path), name };
+  }
+  if (!verse && book.numChapters === 1) {
+    // This is a one-chapter book. The chapter number is always 1. The given
+    // number is actually the verse number.d
+    verse = chapter;
+    chapter = '1';
+  }
+  let url = `${paths.BIBLE}/${book.path}_${chapter}.html`;
+  if (verse) {
+    url = `${url}#v${verse}`;
+  }
+  return { url, name };
+}
+/**
  * NOTE: For the Bible abbreviation-to-id mapping, we opted for generating a
  * code file that defines the mapping. We used to populate the mapping in a
  * JSON, but this had to be retrieved with an async fetch. We prefer to `await`
@@ -220,42 +267,21 @@ const DAN_OVERRIDE = {
  * @param root
  *
  */
-export function handleWikiBible(root) {
+export function handleBible(root) {
   html.replaceText(
     root,
     BIBLE_RE,
     (match) => {
-      const fullText = match[0];
-      let [bookAbbreviation, chapter, verse] = [match[1], match[2], match[3]];
-      if (!bookAbbreviation) {
-        // NOTE: This is not expected, because the book abbreviation is a
-        // non-optional piece of the regex.
+      const result = parseBibleCitation(match);
+      if (!result) {
         return null;
       }
-      const danOverride = DAN_OVERRIDE[bookAbbreviation];
-      if (danOverride) {
-        // Given that this special book contains one chapter, the book
-        // abbreviation is followed by the verse number only (there is no
-        // chapter number).
-        bookAbbreviation = 'Dan';
-        verse = chapter;
-        chapter = danOverride.chapter;
-      }
-      if (!bookAbbreviation || !chapter || !verse) {
-        return null;
-      }
-      const book = bible.MAPPING[bookAbbreviation];
-      if (!book) {
-        return null;
-      }
-      const basename = `${paths.BIBLE}/${book.path}_${chapter}.html`;
-      const url = `${basename}#v${verse}`;
       const link = document.createElement('a');
-      link.href = url;
+      link.href = result.url;
       link.target = '_blank';
       link.classList.add(ccls.HOVER_LINK, cls.BIBLE);
-      link.textContent = fullText;
-      drop.addHoverDroppable(link, danOverride?.name ?? book.name);
+      link.textContent = match[0];
+      drop.addHoverDroppable(link, result.name);
       return [link];
     },
     // Exclude all Wiki abbreviations to avoid overlap.
@@ -275,7 +301,7 @@ export function handleWikiBible(root) {
  *
  * @param root
  */
-export function handleWikiReferences(root) {
+export function handleReferences(root) {
   REFERENCE_RES.forEach((regex) => {
     html.replaceText(
       root,
