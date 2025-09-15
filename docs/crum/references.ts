@@ -2,7 +2,6 @@
 import * as orth from '../orth.js';
 import * as logger from '../logger.js';
 
-// TODO: (#419) Convert to an object.
 export interface Source {
   /** name is the full name of the source.
    */
@@ -28,15 +27,6 @@ export interface Source {
    * maximum of one variant needed.
    */
   variant?: string;
-  /** broken indicates whether lookups for this source are currently broken. If
-   * so, the field should bear an explanation for why this is the case.
-   * Otherwise, it should be empty.
-   * As of now, we only have one reason for entries to be broken, and that is if
-   * they are followed by a number.
-   * TODO: (#419) Handle corner cases, and get rid of the `broken` field.
-   * (Maybe reassign the TODO to #528?)
-   */
-  broken?: 'Followed by a number';
 }
 
 /** MAPPING maps an abbreviation to a Source object.
@@ -114,13 +104,12 @@ export const MAPPING: Record<string, Source> = {
     name: 'H. Almkvist, Kleine Beitr. z. Lexikographie d. vulg. Arabischen, 8th Or. Congr., 1891',
     hyperlink:
       'https://www.google.co.uk/books/edition/Kleine_Beiträge_zur_Lexikographie_des_V/KiYUAAAAYAAJ?hl=en&gbpv=1',
-    broken: 'Followed by a number',
   },
   'Almk 2': {
+    // TODO: (#545) Name doesn't make sense when it appears on its own!
     name: 'continuation of the above, ed. K. V. Zetterstéen, in Le Monde Oriental, 1925',
     hyperlink:
       'https://www.google.co.uk/books/edition/Le_Monde_oriental/r9IbAAAAMAAJ?hl=en&gbpv=1&pg=PA293&printsec=frontcover',
-    broken: 'Followed by a number',
   },
   ALR: {
     name: 'Accademia dei Lincei, Rendiconti',
@@ -475,6 +464,7 @@ export const MAPPING: Record<string, Source> = {
       'https://archive.org/details/koptischerechtsu00crum/page/n3/mode/2up',
   },
   JLeip: {
+    // TODO: (#545) Name doesn't make sense when it appears on its own!
     name: 'two such papyri in Leipzig University, Aegyptologisches Institut (cf below)',
   },
   JA: {
@@ -650,11 +640,10 @@ export const MAPPING: Record<string, Source> = {
   },
   'Mani 1': {
     name: 'copies of Chester Beatty’s unpublished Manichaean papyri by H. J. Polotsky & H. Thompson',
-    broken: 'Followed by a number',
   },
   'Mani 2': {
+    // TODO: (#545) Name doesn't make sense when it appears on its own!
     name: 'copies of sim. papyri at Berlin by Polotsky',
-    broken: 'Followed by a number',
   },
   'Mani H': {
     // NOTE: Listed as 'ManiH'!
@@ -693,7 +682,6 @@ export const MAPPING: Record<string, Source> = {
   },
   'Mich 550': {
     name: 'a series of vellum leaves at Michigan University, independently numbered thus (but cf note in Preface)',
-    broken: 'Followed by a number',
   },
   MIE: {
     name: 'Mémoires de l’Instit. Égyptien, Cairo',
@@ -835,6 +823,7 @@ export const MAPPING: Record<string, Source> = {
       'https://archive.org/details/derpapyruscodexs00crum/page/n7/mode/2up',
   },
   PcodF: {
+    // TODO: (#545) Name doesn't make sense when it appears on its own!
     name: 'fayyûmic text of same, ed. W. Erichsen (Danish Acad., 1932)',
     hyperlink:
       'https://archive.org/details/faijumischefragm0000agat/page/n1/mode/2up',
@@ -978,6 +967,7 @@ export const MAPPING: Record<string, Source> = {
     hyperlink: 'https://archive.org/details/cu31924099175329/page/n11/mode/2up',
   },
   RylSuppl: {
+    // TODO: (#545) Name doesn't make sense when it appears on its own!
     name: 'MSS. acquired since publication of catalogue (cf Ryl Bull. 5)',
     hyperlink:
       'https://luna.manchester.ac.uk/luna/servlet/detail/Manchester~25~25~702~196480:New-Coptic-manuscripts-in-the-John-',
@@ -1128,6 +1118,7 @@ export const MAPPING: Record<string, Source> = {
     hyperlink: 'https://babel.hathitrust.org/cgi/pt?id=chi.102555010&seq=389',
   },
   TurO: {
+    // TODO: (#545) Name doesn't make sense when it appears on its own!
     name: 'do., Koptskia Ostraka… Golenishtshef (= Bull. Acad. Imp. x, no. 5, 1899), acc. to numbers',
     hyperlink:
       'https://www.biodiversitylibrary.org/item/94351#page/503/mode/1up',
@@ -1201,6 +1192,11 @@ Object.values(MAPPING).forEach((value: Source): void => {
 
 // Add keys with spaces removed.
 Object.entries(MAPPING).forEach(([key, value]: [string, Source]): void => {
+  if (/^[a-zA-Z]+ [0-9]+$/.test(key)) {
+    // Abbreviations that have a number as the second part never occur without
+    // that space in the middle.
+    return;
+  }
   MAPPING[key.replaceAll(' ', '')] = value;
 });
 

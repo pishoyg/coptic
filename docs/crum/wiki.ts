@@ -128,7 +128,7 @@ const ANNOTATION_RES: RegExp[] = [
 //     likely a suffix.
 const REFERENCE_RES: RegExp[] = [
   // Special cases, and three-word reference abbreviations:
-  /\b(Imp Russ Ar S|O'Leary\s?H|O'Leary\s?The?|[A-Z][a-zA-Z\p{M}&]*\s[a-zA-Z\p{M}&]+\s[a-zA-Z\p{M}&]+)((?:\s(?:'?[0-9]+|[a-z]))*)\b/gu,
+  /\b(lgR|Imp Russ Ar S|O'Leary\s?(?:H|The?)|[A-Z][a-zA-Z\p{M}&]*\s[a-zA-Z\p{M}&]+\s[a-zA-Z\p{M}&]+)((?:\s(?:'?[0-9]+|[a-z]))*)\b/gu,
   // Two-word reference abbreviations:
   /\b([A-Z][a-zA-Z\p{M}&]*\s[a-zA-Z\p{M}&]+)((?:\s(?:'?[0-9]+|[a-z]))*)\b/gu,
   // One-word reference abbreviations:
@@ -139,13 +139,8 @@ const REFERENCE_RES: RegExp[] = [
  * Ensure that all the given keys are matched by at least one of the regexes.
  * @param keys
  * @param regexes
- * @param strict
  */
-function ensureKeysCovered(
-  keys: string[],
-  regexes: RegExp[],
-  strict = true
-): void {
+function ensureKeysCovered(keys: string[], regexes: RegExp[]): void {
   const undetectable: string[] = keys.filter(
     (key: string): boolean =>
       !regexes.some(
@@ -154,18 +149,15 @@ function ensureKeysCovered(
         (regex: RegExp): boolean => key.match(regex)?.[0].length === key.length
       )
   );
-  if (undetectable.length) {
-    (strict ? logger.fatal : logger.warn)(
-      undetectable,
-      'are not detected by our regexes!'
-    );
-  }
+  logger.ensure(
+    !undetectable.length,
+    undetectable,
+    'are not detected by our regexes!'
+  );
 }
 
 ensureKeysCovered(Object.keys(ann.MAPPING), ANNOTATION_RES);
-// TODO: (#419) Once all corner cases are handled, make reference verification
-// strict.
-ensureKeysCovered(Object.keys(ref.MAPPING), REFERENCE_RES, false);
+ensureKeysCovered(Object.keys(ref.MAPPING), REFERENCE_RES);
 ensureKeysCovered(Object.keys(bible.MAPPING), [BIBLE_RE]);
 
 /**
@@ -352,13 +344,26 @@ export function handleReferences(root: HTMLElement): void {
       root,
       regex,
       (match: RegExpExecArray): (Node | string)[] | null => {
-        const abbrev: string | undefined = match[1];
+        let abbrev: string | undefined = match[1];
+        let suffix: string | undefined = match[2];
         if (!abbrev) {
           // This is impossible given the regex, but we account for it to
           // appease the linter.
           return null;
         }
-        const source: ref.Source | undefined = ref.MAPPING[abbrev];
+
+        let source: ref.Source | undefined = ref.MAPPING[abbrev];
+        if (!source && suffix) {
+          // Sometimes, the first word in the suffix is part of the
+          // abbreviation. Try moving it from the suffix to the abbreviation,
+          // and search for that in the reference mapping.
+          const parts: RegExpExecArray | null = /^\s(\S+)(.*)/.exec(suffix);
+          if (parts?.[1]) {
+            abbrev = `${abbrev} ${parts[1]}`;
+            suffix = parts[2];
+          }
+          source = ref.MAPPING[abbrev];
+        }
         if (!source) {
           return null;
         }
@@ -368,7 +373,6 @@ export function handleReferences(root: HTMLElement): void {
         span.textContent = abbrev;
         drop.addHoverDroppable(span, source.name);
 
-        const suffix: string | undefined = match[2];
         if (!suffix) {
           return [span];
         }
