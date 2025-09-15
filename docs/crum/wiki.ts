@@ -13,7 +13,6 @@ import * as bible from './bible.js';
 import * as ann from './annotations.js';
 import * as ref from './references.js';
 import * as drop from '../dropdown.js';
-import * as orth from '../orth.js';
 
 /**
  * NOTE: All of the regexes below assume the following normalizations:
@@ -30,13 +29,15 @@ import * as orth from '../orth.js';
  * For example, ‘p c’ contains ‘c’. Our logic words as follows:
  * - Search for two-word annotations during the first round. This would detect
  *   ‘p c’ and mark it as an annotation.
- * - In the next round, the ‘c’ inside ‘p c’ won't be detected, because it's
- *   contained within a span that is marked by an excluded class.
+ * - In the next round, the ‘c’ inside ‘p c’ won't be searched because it lives
+ *   inside a node that is marked as an annotation, which is one of the excluded
+ *   classes.
  *
- * The same is true for three-and two-word references, and for references that
+ * The same is true for three- and two-word references, and for references that
  * contain annotations.
  *
- * Given the above, it is paramount to perform searches in the correct order.
+ * Given the above, it is paramount to perform searches in the correct order in
+ * order to ensure correctness.
  */
 const ABBREVIATION_EXCLUDE: string = css.classQuery(
   // BULLET is not an abbreviation class, but it could collide with some
@@ -68,6 +69,8 @@ const ANNOTATION_RES: RegExp[] = [
 ];
 
 // Pay attention to the following:
+// - Reference abbreviations always start with a capital letter. This must be
+//   enforced, in order to avoid errors.
 // - Diacritics:
 //     Some reference abbreviations have diacritics. In order for the logic to
 //     work correctly, both the pattern and the searchable text should be
@@ -109,10 +112,27 @@ const ANNOTATION_RES: RegExp[] = [
 //     We therefore allow an ampersand as a valid abbreviation character. We
 //     don't run the same risk of corrupting matches that we run with
 //     apostrophes, so we adopt this simpler approach.
+// - Suffixes:
+//     A suffix (which indicates a manuscript number, a shelf number, page
+//     number, ...etc.) is the second capture group, and is common among all
+//     regexes below.
+//     It consists of any number of occurrences of a space character followed by
+//     a "number". The "number", on the other hand, could be:
+//     - A sequence of digits, optionally preceded by an apostrophe.
+//     - A single Latin letter.
+//     This was constructed based on manual observation, and could change in the
+//     future.
+//     This implies that references and suffixes could look similar. A single
+//     uppercase Latin letter could be a reference abbreviation or a suffix. We
+//     assume that, if it occurs after a reference abbreviation, then it's
+//     likely a suffix.
 const REFERENCE_RES: RegExp[] = [
-  /\bImp Russ Ar S|O'Leary\s?H|O'Leary\s?The?|[a-zA-Z\p{M}&]+\s[a-zA-Z\p{M}&]+\s[a-zA-Z\p{M}&]+\b/gu,
-  /\b[a-zA-Z\p{M}&]+\s[a-zA-Z\p{M}&]+\b/gu,
-  /\b[a-zA-Z\p{M}&]+\b/gu,
+  // Special cases, and three-word reference abbreviations:
+  /\b(Imp Russ Ar S|O'Leary\s?H|O'Leary\s?The?|[A-Z][a-zA-Z\p{M}&]*\s[a-zA-Z\p{M}&]+\s[a-zA-Z\p{M}&]+)((?:\s(?:'?[0-9]+|[a-z]))*)\b/gu,
+  // Two-word reference abbreviations:
+  /\b([A-Z][a-zA-Z\p{M}&]*\s[a-zA-Z\p{M}&]+)((?:\s(?:'?[0-9]+|[a-z]))*)\b/gu,
+  // One-word reference abbreviations:
+  /\b([A-Z][a-zA-Z\p{M}&]*)((?:\s(?:'?[0-9]+|[a-z]))*)\b/gu,
 ];
 
 /**
@@ -332,15 +352,30 @@ export function handleReferences(root: HTMLElement): void {
       root,
       regex,
       (match: RegExpExecArray): (Node | string)[] | null => {
-        const form: string = orth.normalize(match[0]);
-        const source: ref.Source | undefined = ref.MAPPING[form];
+        const abbrev: string | undefined = match[1];
+        if (!abbrev) {
+          // This is impossible given the regex, but we account for it to
+          // appease the linter.
+          return null;
+        }
+        const source: ref.Source | undefined = ref.MAPPING[abbrev];
         if (!source) {
           return null;
         }
+
         const span: HTMLSpanElement = document.createElement('span');
-        span.textContent = form;
-        drop.addHoverDroppable(span, source.name);
         span.classList.add(cls.REFERENCE);
+        span.textContent = abbrev;
+        drop.addHoverDroppable(span, source.name);
+
+        const suffix: string | undefined = match[2];
+        if (!suffix) {
+          return [span];
+        }
+        const child: HTMLSpanElement = document.createElement('span');
+        child.classList.add(cls.SUFFIX);
+        child.textContent = suffix;
+        span.append(' ', child);
         return [span];
       },
       // Exclude all Wiki abbreviations to avoid any overlap.
