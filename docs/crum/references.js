@@ -430,7 +430,6 @@ export const MAPPING = {
     name: 'Imperial Russian Archaeolog. Soc. xviii, 1907 (Turaief)',
     hyperlink:
       'https://archive.org/details/Notes-Imperial-Russian-Archaeological-Society/ZVORAO_18_1908/page/n55/mode/2up',
-    broken: 'too many spaces',
   },
   J: {
     name: 'Crum & Steindorff, Kopt. Rechtsurkunden… aus Djême, acc. to no. & line',
@@ -711,7 +710,6 @@ export const MAPPING = {
     name: 'Notices et Extraits des MSS. de la Bibliothèque Nationale, Paris',
     hyperlink: 'https://gallica.bnf.fr/ark:/12148/cb345335088/date',
   },
-  ⲛ︦ⲉ︦: { name: 'ⲛⲟⲩⲧⲉ', broken: 'Coptic' },
   "O'Leary H": {
     // NOTE: Listed as ‘O'LearyH’!
     name: 'De Lacy O’Leary: Fragmentary Coptic Hymns, 1924',
@@ -1146,15 +1144,6 @@ export const MAPPING = {
     hyperlink:
       'https://de.wikisource.org/wiki/Zeitschriften_(Theologie)#Z<br>https://catalog.hathitrust.org/Record/000494825',
   },
-  '†': {
-    name: '(after verbal forms) qualitative',
-    broken: 'Symbol',
-  },
-  '( )': {
-    name: 'Coptic letter inserted by editor, except in headings, where they indicate variants or hypothetical forms',
-    broken: 'Symbol',
-  },
-  '?': { name: 'perhaps, possibly', broken: 'Symbol' },
   // NOTE: The abbreviations below are not found in Crum's list, but they occur
   // in the text.
   ViK: {

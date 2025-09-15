@@ -1,4 +1,7 @@
 import * as str from '../str.js';
+// NOTE: We exclude parentheses, although Crum had them in his list. They have
+// different meaning based on whether they occur in the headings or elsewhere in
+// the text, which is hard to discern by the parser.
 export const MAPPING = {
   acc: { fullForm: 'accusative', category: 'Grammatical' },
   adj: { fullForm: 'adjective', category: 'Grammatical' },
@@ -80,6 +83,11 @@ export const MAPPING = {
   V: { fullForm: 'vide', category: 'Instructional' },
   var: { fullForm: 'variant, in same dialect', category: 'Instructional' },
   vb: { fullForm: 'verb', category: 'Grammatical' },
+  '†': { fullForm: 'qualitative', category: 'Instructional' },
+  '?': { fullForm: 'perhaps, possibly', category: 'Instructional' },
+  // The following is somewhat unnecessary, but we include it for completion.
+  // Crum had it in his list!
+  ⲛ̅ⲉ̅: { fullForm: 'ⲛⲟⲩⲧⲉ', category: 'Coptic', noCaseVariant: true },
 };
 // The following abbreviations are not listed in Crum's List of Abbreviations,
 // but they are nice to have.

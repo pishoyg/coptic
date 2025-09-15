@@ -59,7 +59,7 @@ const BIBLE_RE =
   /(\b(?:[1-4]\s)?[A-Z][a-z]+|EpJer)(?:\s(\d+|A|C|D|F)(?:\s(\d+))?)?\b/gu;
 const ANNOTATION_RES = [
   /\b[a-zA-Z]+\s[a-zA-Z]+\b/gu, // Two-word annotation.
-  /\b[a-zA-Z]+\b/gu, // One-word annotation.
+  /\?|†|ⲛ̅ⲉ̅|\b[a-zA-Z]+\b/gu, // One-word annotation.
 ];
 // Pay attention to the following:
 // - Diacritics:
