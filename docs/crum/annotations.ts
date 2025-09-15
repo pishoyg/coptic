@@ -2,7 +2,8 @@ import * as str from '../str.js';
 type Category =
   | 'Linguistic' // A language abbreviation.
   | 'Grammatical' // A grammatical abbreviation.
-  | 'Instructional'; // A general instructional abbreviation.
+  | 'Instructional' // A general instructional abbreviation.
+  | 'Coptic'; // A Coptic abbreviation.
 
 export interface Annotation {
   // fullForm defines the full-form of the abbreviation, which is to be
@@ -38,6 +39,9 @@ export interface Annotation {
   noCaseVariant?: boolean;
 }
 
+// NOTE: We exclude parentheses, although Crum had them in his list. They have
+// different meaning based on whether they occur in the headings or elsewhere in
+// the text, which is hard to discern by the parser.
 export const MAPPING: Record<string, Annotation> = {
   acc: { fullForm: 'accusative', category: 'Grammatical' },
   adj: { fullForm: 'adjective', category: 'Grammatical' },
@@ -119,6 +123,11 @@ export const MAPPING: Record<string, Annotation> = {
   V: { fullForm: 'vide', category: 'Instructional' },
   var: { fullForm: 'variant, in same dialect', category: 'Instructional' },
   vb: { fullForm: 'verb', category: 'Grammatical' },
+  '†': { fullForm: 'qualitative', category: 'Instructional' },
+  '?': { fullForm: 'perhaps, possibly', category: 'Instructional' },
+  // The following is somewhat unnecessary, but we include it for completion.
+  // Crum had it in his list!
+  ⲛ̅ⲉ̅: { fullForm: 'ⲛⲟⲩⲧⲉ', category: 'Coptic', noCaseVariant: true },
 };
 
 // The following abbreviations are not listed in Crum's List of Abbreviations,

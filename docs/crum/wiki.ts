@@ -64,7 +64,7 @@ const BIBLE_RE =
 
 const ANNOTATION_RES: RegExp[] = [
   /\b[a-zA-Z]+\s[a-zA-Z]+\b/gu, // Two-word annotation.
-  /\b[a-zA-Z]+\b/gu, // One-word annotation.
+  /\?|†|ⲛ̅ⲉ̅|\b[a-zA-Z]+\b/gu, // One-word annotation.
 ];
 
 // Pay attention to the following:
