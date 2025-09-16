@@ -60,6 +60,11 @@ export const SISTER_INDEX = 'sister-index';
 export const SISTER_KEY = 'sister-key';
 export const SISTER_VIEW = 'sister-view';
 export const SPELLING = 'spelling';
+/**
+ * SUFFIX is the class of a non-biblical reference suffix (usually a page number
+ * or a manuscript number).
+ */
+export const SUFFIX = 'suffix';
 export const TYPE = 'type';
 export const WIKI = 'wiki';
 export const WORD = 'word';

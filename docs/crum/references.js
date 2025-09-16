@@ -76,13 +76,12 @@ export const MAPPING = {
     name: 'H. Almkvist, Kleine Beitr. z. Lexikographie d. vulg. Arabischen, 8th Or. Congr., 1891',
     hyperlink:
       'https://www.google.co.uk/books/edition/Kleine_Beiträge_zur_Lexikographie_des_V/KiYUAAAAYAAJ?hl=en&gbpv=1',
-    broken: 'Followed by a number',
   },
   'Almk 2': {
+    // TODO: (#545) Name doesn't make sense when it appears on its own!
     name: 'continuation of the above, ed. K. V. Zetterstéen, in Le Monde Oriental, 1925',
     hyperlink:
       'https://www.google.co.uk/books/edition/Le_Monde_oriental/r9IbAAAAMAAJ?hl=en&gbpv=1&pg=PA293&printsec=frontcover',
-    broken: 'Followed by a number',
   },
   ALR: {
     name: 'Accademia dei Lincei, Rendiconti',
@@ -437,6 +436,7 @@ export const MAPPING = {
       'https://archive.org/details/koptischerechtsu00crum/page/n3/mode/2up',
   },
   JLeip: {
+    // TODO: (#545) Name doesn't make sense when it appears on its own!
     name: 'two such papyri in Leipzig University, Aegyptologisches Institut (cf below)',
   },
   JA: {
@@ -612,11 +612,10 @@ export const MAPPING = {
   },
   'Mani 1': {
     name: 'copies of Chester Beatty’s unpublished Manichaean papyri by H. J. Polotsky & H. Thompson',
-    broken: 'Followed by a number',
   },
   'Mani 2': {
+    // TODO: (#545) Name doesn't make sense when it appears on its own!
     name: 'copies of sim. papyri at Berlin by Polotsky',
-    broken: 'Followed by a number',
   },
   'Mani H': {
     // NOTE: Listed as 'ManiH'!
@@ -655,7 +654,6 @@ export const MAPPING = {
   },
   'Mich 550': {
     name: 'a series of vellum leaves at Michigan University, independently numbered thus (but cf note in Preface)',
-    broken: 'Followed by a number',
   },
   MIE: {
     name: 'Mémoires de l’Instit. Égyptien, Cairo',
@@ -797,6 +795,7 @@ export const MAPPING = {
       'https://archive.org/details/derpapyruscodexs00crum/page/n7/mode/2up',
   },
   PcodF: {
+    // TODO: (#545) Name doesn't make sense when it appears on its own!
     name: 'fayyûmic text of same, ed. W. Erichsen (Danish Acad., 1932)',
     hyperlink:
       'https://archive.org/details/faijumischefragm0000agat/page/n1/mode/2up',
@@ -940,6 +939,7 @@ export const MAPPING = {
     hyperlink: 'https://archive.org/details/cu31924099175329/page/n11/mode/2up',
   },
   RylSuppl: {
+    // TODO: (#545) Name doesn't make sense when it appears on its own!
     name: 'MSS. acquired since publication of catalogue (cf Ryl Bull. 5)',
     hyperlink:
       'https://luna.manchester.ac.uk/luna/servlet/detail/Manchester~25~25~702~196480:New-Coptic-manuscripts-in-the-John-',
@@ -1090,6 +1090,7 @@ export const MAPPING = {
     hyperlink: 'https://babel.hathitrust.org/cgi/pt?id=chi.102555010&seq=389',
   },
   TurO: {
+    // TODO: (#545) Name doesn't make sense when it appears on its own!
     name: 'do., Koptskia Ostraka… Golenishtshef (= Bull. Acad. Imp. x, no. 5, 1899), acc. to numbers',
     hyperlink:
       'https://www.biodiversitylibrary.org/item/94351#page/503/mode/1up',
@@ -1161,6 +1162,11 @@ Object.values(MAPPING).forEach((value) => {
 });
 // Add keys with spaces removed.
 Object.entries(MAPPING).forEach(([key, value]) => {
+  if (/^[a-zA-Z]+ [0-9]+$/.test(key)) {
+    // Abbreviations that have a number as the second part never occur without
+    // that space in the middle.
+    return;
+  }
   MAPPING[key.replaceAll(' ', '')] = value;
 });
 // Ensure that all keys are normalized.

@@ -54,6 +54,46 @@ export function makeSpanLinkToAnchor(el, target) {
  * the given root should be excluded.
  */
 export function replaceText(root, regex, replace, excludeClosestQuery) {
+  // We can't replace nodes on the fly, as this could corrupt the walker.
+  // Instead, we store all nodes that need replacement, and then process them
+  // afterwards.
+  const nodes = captureNodes(root, regex, excludeClosestQuery);
+  nodes.forEach((node) => {
+    const text = node.nodeValue;
+    let lastIndex = 0;
+    const fragment = document.createDocumentFragment();
+    regex.lastIndex = 0;
+    for (let match; (match = regex.exec(text)); ) {
+      // Add preceding plain text.
+      if (match.index > lastIndex) {
+        fragment.append(text.slice(lastIndex, match.index));
+      }
+      lastIndex = match.index + match[0].length;
+      fragment.append(
+        ...(replace(match, text.slice(lastIndex), node.nextSibling) ?? [
+          match[0],
+        ])
+      );
+    }
+    if (lastIndex < text.length) {
+      fragment.append(text.slice(lastIndex));
+    }
+    // Normalize the fragment. Get rid of empty text node, and merge consecutive
+    // text nodes.
+    fragment.normalize();
+    node.replaceWith(fragment);
+  });
+}
+/**
+ *
+ * @param root
+ * @param regex
+ * @param excludeClosestQuery
+ * @returns
+ * TODO: (#0) Normalize all text in the very beginning, so you don't have to
+ * normalize and re-normalize each time this function is called.
+ */
+function captureNodes(root, regex, excludeClosestQuery) {
   const walker = document.createTreeWalker(
     root,
     NodeFilter.SHOW_TEXT,
@@ -75,34 +115,11 @@ export function replaceText(root, regex, replace, excludeClosestQuery) {
       return NodeFilter.FILTER_ACCEPT;
     }
   );
-  // We can't replace nodes on the fly, as this could corrupt the walker.
-  // Instead, we store all nodes that need replacement, and then process them
-  // afterwards.
   const nodes = [];
   while (walker.nextNode()) {
     nodes.push(walker.currentNode);
   }
-  nodes.forEach((node) => {
-    const text = node.nodeValue;
-    let lastIndex = 0;
-    const fragment = document.createDocumentFragment();
-    regex.lastIndex = 0;
-    for (let match; (match = regex.exec(text)); ) {
-      // Add preceding plain text.
-      if (match.index > lastIndex) {
-        fragment.append(text.slice(lastIndex, match.index));
-      }
-      fragment.append(...(replace(match) ?? [match[0]]));
-      lastIndex = match.index + match[0].length;
-    }
-    if (lastIndex < text.length) {
-      fragment.append(text.slice(lastIndex));
-    }
-    // Normalize the fragment. Get rid of empty text node, and merge consecutive
-    // text nodes.
-    fragment.normalize();
-    node.replaceWith(fragment);
-  });
+  return nodes;
 }
 /**
  * Search for all pieces of text under the given root that match the given

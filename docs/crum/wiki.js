@@ -12,7 +12,6 @@ import * as bible from './bible.js';
 import * as ann from './annotations.js';
 import * as ref from './references.js';
 import * as drop from '../dropdown.js';
-import * as orth from '../orth.js';
 /**
  * NOTE: All of the regexes below assume the following normalizations:
  * - HTML tree normalization[1], which allows us to use `\s` instead of `\s+`.
@@ -27,13 +26,15 @@ import * as orth from '../orth.js';
  * For example, ‘p c’ contains ‘c’. Our logic words as follows:
  * - Search for two-word annotations during the first round. This would detect
  *   ‘p c’ and mark it as an annotation.
- * - In the next round, the ‘c’ inside ‘p c’ won't be detected, because it's
- *   contained within a span that is marked by an excluded class.
+ * - In the next round, the ‘c’ inside ‘p c’ won't be searched because it lives
+ *   inside a node that is marked as an annotation, which is one of the excluded
+ *   classes.
  *
- * The same is true for three-and two-word references, and for references that
+ * The same is true for three- and two-word references, and for references that
  * contain annotations.
  *
- * Given the above, it is paramount to perform searches in the correct order.
+ * Given the above, it is paramount to perform searches in the correct order in
+ * order to ensure correctness.
  */
 const ABBREVIATION_EXCLUDE = css.classQuery(
   // BULLET is not an abbreviation class, but it could collide with some
@@ -62,6 +63,8 @@ const ANNOTATION_RES = [
   /\?|†|ⲛ̅ⲉ̅|\b[a-zA-Z]+\b/gu, // One-word annotation.
 ];
 // Pay attention to the following:
+// - Reference abbreviations always start with a capital letter. This must be
+//   enforced, in order to avoid errors.
 // - Diacritics:
 //     Some reference abbreviations have diacritics. In order for the logic to
 //     work correctly, both the pattern and the searchable text should be
@@ -103,18 +106,47 @@ const ANNOTATION_RES = [
 //     We therefore allow an ampersand as a valid abbreviation character. We
 //     don't run the same risk of corrupting matches that we run with
 //     apostrophes, so we adopt this simpler approach.
+// - Suffixes:
+//     A suffix (which indicates a manuscript number, a shelf number, page
+//     number, ...etc.) is the second capture group, and is common among all
+//     regexes below.
+//     It consists of any number of occurrences of a space character followed by
+//     a "number". The "number", on the other hand, could be:
+//     - A sequence of digits, optionally preceded by an apostrophe.
+//     - A single Latin letter.
+//     This was constructed based on manual observation, and could change in the
+//     future.
+//     This implies that references and suffixes could look similar. A single
+//     uppercase Latin letter could be a reference abbreviation or a suffix. We
+//     assume that, if it occurs after a reference abbreviation, then it's
+//     likely a suffix.
+const SUFFIX = /((?:\s(?:'?[0-9]+|[a-z]))*)/u;
+const LETTER = /[a-zA-Z\p{M}&]/u;
+const SPECIAL_CASES = [
+  'lgR', // This starts with a small letter.
+  'Imp Russ Ar S', // This consists of 4 words!
+  "O'Leary\\s?(?:H|The?)", // This has an apostrophe.
+];
 const REFERENCE_RES = [
-  /\bImp Russ Ar S|O'Leary\s?H|O'Leary\s?The?|[a-zA-Z\p{M}&]+\s[a-zA-Z\p{M}&]+\s[a-zA-Z\p{M}&]+\b/gu,
-  /\b[a-zA-Z\p{M}&]+\s[a-zA-Z\p{M}&]+\b/gu,
-  /\b[a-zA-Z\p{M}&]+\b/gu,
+  // Special cases, and three-word reference abbreviations:
+  new RegExp(
+    `\\b(${SPECIAL_CASES.join('|')}|[A-Z]${LETTER.source}*\\s${LETTER.source}+\\s${LETTER.source}+)${SUFFIX.source}\\b`,
+    'gu'
+  ),
+  // Two-word reference abbreviations:
+  new RegExp(
+    `\\b([A-Z]${LETTER.source}*\\s${LETTER.source}+)${SUFFIX.source}\\b`,
+    'gu'
+  ),
+  // One-word reference abbreviations:
+  new RegExp(`\\b([A-Z]${LETTER.source}*)${SUFFIX.source}\\b`, 'gu'),
 ];
 /**
  * Ensure that all the given keys are matched by at least one of the regexes.
  * @param keys
  * @param regexes
- * @param strict
  */
-function ensureKeysCovered(keys, regexes, strict = true) {
+function ensureKeysCovered(keys, regexes) {
   const undetectable = keys.filter(
     (key) =>
       !regexes.some(
@@ -123,17 +155,14 @@ function ensureKeysCovered(keys, regexes, strict = true) {
         (regex) => key.match(regex)?.[0].length === key.length
       )
   );
-  if (undetectable.length) {
-    (strict ? logger.fatal : logger.warn)(
-      undetectable,
-      'are not detected by our regexes!'
-    );
-  }
+  logger.ensure(
+    !undetectable.length,
+    undetectable,
+    'are not detected by our regexes!'
+  );
 }
 ensureKeysCovered(Object.keys(ann.MAPPING), ANNOTATION_RES);
-// TODO: (#419) Once all corner cases are handled, make reference verification
-// strict.
-ensureKeysCovered(Object.keys(ref.MAPPING), REFERENCE_RES, false);
+ensureKeysCovered(Object.keys(ref.MAPPING), REFERENCE_RES);
 ensureKeysCovered(Object.keys(bible.MAPPING), [BIBLE_RE]);
 /**
  * Handle all Crum elements.
@@ -299,6 +328,85 @@ export function handleBible(root) {
 }
 /**
  *
+ * @param suffix
+ * @param remainder
+ * @param nextSibling
+ * @returns
+ */
+function parseSuffix(suffix, remainder, nextSibling) {
+  const span = document.createElement('span');
+  span.classList.add(cls.SUFFIX);
+  span.textContent = suffix;
+  // Sometimes, the suffix has a superscript.
+  if (remainder) {
+    // The original string that had this suffix had a remainder. Thus, we can't
+    // have a superscript, because the remainder would show between the suffix
+    // and the superscript.
+    // Return.
+    return span;
+  }
+  if (nextSibling?.nodeName !== 'SUP') {
+    // The next sibling is not a superscript.
+    return span;
+  }
+  // We need to capture our sibling's sibling before we move our sibling,
+  // otherwise our sibling will no longer be able to access its sibling.
+  const nextNext = nextSibling.nextSibling;
+  span.append(nextSibling);
+  if (!nextNext) {
+    return span;
+  }
+  // Sometimes, there are even more numbers following the superscript.
+  const prefix = nextNext.textContent?.match(SUFFIX);
+  if (prefix?.index === 0) {
+    span.append(prefix[0]);
+    nextNext.nodeValue = nextNext.nodeValue?.slice(prefix[0].length) ?? null;
+  }
+  return span;
+}
+/**
+ *
+ * @param match
+ * @param remainder
+ * @param nextSibling
+ * @returns
+ */
+function replaceReference(match, remainder, nextSibling) {
+  let abbrev = match[1];
+  let suffix = match[2];
+  if (!abbrev) {
+    // This is impossible given the regex, but we account for it to appease the
+    // linter.
+    return null;
+  }
+  let source = ref.MAPPING[abbrev];
+  if (!source && suffix) {
+    // Sometimes, the first word in the suffix is part of the
+    // abbreviation. Try moving it from the suffix to the abbreviation,
+    // and search for that in the reference mapping.
+    const parts = /^\s(\S+)(.*)/u.exec(suffix);
+    if (parts?.[1]) {
+      abbrev = `${abbrev} ${parts[1]}`;
+      suffix = parts[2];
+    }
+    source = ref.MAPPING[abbrev];
+  }
+  if (!source) {
+    return null;
+  }
+  const span = document.createElement('span');
+  span.classList.add(cls.REFERENCE);
+  span.textContent = abbrev;
+  drop.addHoverDroppable(span, source.name);
+  if (!suffix) {
+    return [span];
+  }
+  // Add the suffix as a child.
+  span.append(' ', parseSuffix(suffix, remainder, nextSibling));
+  return [span];
+}
+/**
+ *
  * @param root
  */
 export function handleReferences(root) {
@@ -306,18 +414,7 @@ export function handleReferences(root) {
     html.replaceText(
       root,
       regex,
-      (match) => {
-        const form = orth.normalize(match[0]);
-        const source = ref.MAPPING[form];
-        if (!source) {
-          return null;
-        }
-        const span = document.createElement('span');
-        span.textContent = form;
-        drop.addHoverDroppable(span, source.name);
-        span.classList.add(cls.REFERENCE);
-        return [span];
-      },
+      replaceReference,
       // Exclude all Wiki abbreviations to avoid any overlap.
       ABBREVIATION_EXCLUDE
     );
