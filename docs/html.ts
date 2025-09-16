@@ -63,9 +63,62 @@ export function makeSpanLinkToAnchor(el: Element, target: string): void {
 export function replaceText(
   root: Node,
   regex: RegExp,
-  replace: (match: RegExpExecArray) => (Node | string)[] | null,
+  replace: (
+    match: RegExpExecArray,
+    remainder: string,
+    nextSibling: ChildNode | null
+  ) => (Node | string)[] | null,
   excludeClosestQuery?: string
 ): void {
+  // We can't replace nodes on the fly, as this could corrupt the walker.
+  // Instead, we store all nodes that need replacement, and then process them
+  // afterwards.
+  const nodes: Text[] = captureNodes(root, regex, excludeClosestQuery);
+
+  nodes.forEach((node: Text): void => {
+    const text: string = node.nodeValue!;
+    let lastIndex = 0;
+    const fragment: DocumentFragment = document.createDocumentFragment();
+
+    regex.lastIndex = 0;
+    for (let match: RegExpExecArray | null; (match = regex.exec(text)); ) {
+      // Add preceding plain text.
+      if (match.index > lastIndex) {
+        fragment.append(text.slice(lastIndex, match.index));
+      }
+
+      lastIndex = match.index + match[0].length;
+      fragment.append(
+        ...(replace(match, text.slice(lastIndex), node.nextSibling) ?? [
+          match[0],
+        ])
+      );
+    }
+
+    if (lastIndex < text.length) {
+      fragment.append(text.slice(lastIndex));
+    }
+    // Normalize the fragment. Get rid of empty text node, and merge consecutive
+    // text nodes.
+    fragment.normalize();
+    node.replaceWith(fragment);
+  });
+}
+
+/**
+ *
+ * @param root
+ * @param regex
+ * @param excludeClosestQuery
+ * @returns
+ * TODO: (#0) Normalize all text in the very beginning, so you don't have to
+ * normalize and re-normalize each time this function is called.
+ */
+function captureNodes(
+  root: Node,
+  regex: RegExp,
+  excludeClosestQuery?: string
+): Text[] {
   const walker: TreeWalker = document.createTreeWalker(
     root,
     NodeFilter.SHOW_TEXT,
@@ -88,38 +141,11 @@ export function replaceText(
     }
   );
 
-  // We can't replace nodes on the fly, as this could corrupt the walker.
-  // Instead, we store all nodes that need replacement, and then process them
-  // afterwards.
   const nodes: Text[] = [];
   while (walker.nextNode()) {
     nodes.push(walker.currentNode as Text);
   }
-
-  nodes.forEach((node: Text): void => {
-    const text: string = node.nodeValue!;
-    let lastIndex = 0;
-    const fragment: DocumentFragment = document.createDocumentFragment();
-
-    regex.lastIndex = 0;
-    for (let match: RegExpExecArray | null; (match = regex.exec(text)); ) {
-      // Add preceding plain text.
-      if (match.index > lastIndex) {
-        fragment.append(text.slice(lastIndex, match.index));
-      }
-
-      fragment.append(...(replace(match) ?? [match[0]]));
-      lastIndex = match.index + match[0].length;
-    }
-
-    if (lastIndex < text.length) {
-      fragment.append(text.slice(lastIndex));
-    }
-    // Normalize the fragment. Get rid of empty text node, and merge consecutive
-    // text nodes.
-    fragment.normalize();
-    node.replaceWith(fragment);
-  });
+  return nodes;
 }
 
 /**

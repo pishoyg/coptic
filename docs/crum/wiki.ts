@@ -126,13 +126,27 @@ const ANNOTATION_RES: RegExp[] = [
 //     uppercase Latin letter could be a reference abbreviation or a suffix. We
 //     assume that, if it occurs after a reference abbreviation, then it's
 //     likely a suffix.
+const SUFFIX = /((?:\s(?:'?[0-9]+|[a-z]))*)/u;
+const LETTER = /[a-zA-Z\p{M}&]/u;
+const SPECIAL_CASES: string[] = [
+  'lgR', // This starts with a small letter.
+  'Imp Russ Ar S', // This consists of 4 words!
+  "O'Leary\\s?(?:H|The?)", // This has an apostrophe.
+];
+
 const REFERENCE_RES: RegExp[] = [
   // Special cases, and three-word reference abbreviations:
-  /\b(lgR|Imp Russ Ar S|O'Leary\s?(?:H|The?)|[A-Z][a-zA-Z\p{M}&]*\s[a-zA-Z\p{M}&]+\s[a-zA-Z\p{M}&]+)((?:\s(?:'?[0-9]+|[a-z]))*)\b/gu,
+  new RegExp(
+    `\\b(${SPECIAL_CASES.join('|')}|[A-Z]${LETTER.source}*\\s${LETTER.source}+\\s${LETTER.source}+)${SUFFIX.source}\\b`,
+    'gu'
+  ),
   // Two-word reference abbreviations:
-  /\b([A-Z][a-zA-Z\p{M}&]*\s[a-zA-Z\p{M}&]+)((?:\s(?:'?[0-9]+|[a-z]))*)\b/gu,
+  new RegExp(
+    `\\b([A-Z]${LETTER.source}*\\s${LETTER.source}+)${SUFFIX.source}\\b`,
+    'gu'
+  ),
   // One-word reference abbreviations:
-  /\b([A-Z][a-zA-Z\p{M}&]*)((?:\s(?:'?[0-9]+|[a-z]))*)\b/gu,
+  new RegExp(`\\b([A-Z]${LETTER.source}*)${SUFFIX.source}\\b`, 'gu'),
 ];
 
 /**
@@ -336,6 +350,103 @@ export function handleBible(root: HTMLElement): void {
 
 /**
  *
+ * @param suffix
+ * @param remainder
+ * @param nextSibling
+ * @returns
+ */
+function parseSuffix(
+  suffix: string,
+  remainder: string,
+  nextSibling: ChildNode | null
+): HTMLSpanElement {
+  const span: HTMLSpanElement = document.createElement('span');
+  span.classList.add(cls.SUFFIX);
+  span.textContent = suffix;
+  // Sometimes, the suffix has a superscript.
+  if (remainder) {
+    // The original string that had this suffix had a remainder. Thus, we can't
+    // have a superscript, because the remainder would show between the suffix
+    // and the superscript.
+    // Return.
+    return span;
+  }
+
+  if (nextSibling?.nodeName !== 'SUP') {
+    // The next sibling is not a superscript.
+    return span;
+  }
+
+  // We need to capture our sibling's sibling before we move our sibling,
+  // otherwise our sibling will no longer be able to access its sibling.
+  const nextNext: ChildNode | null = nextSibling.nextSibling;
+  span.append(nextSibling);
+  if (!nextNext) {
+    return span;
+  }
+
+  // Sometimes, there are even more numbers following the superscript.
+  const prefix = nextNext.textContent?.match(SUFFIX);
+  if (prefix?.index === 0) {
+    span.append(prefix[0]);
+    nextNext.nodeValue = nextNext.nodeValue?.slice(prefix[0].length) ?? null;
+  }
+  return span;
+}
+
+/**
+ *
+ * @param match
+ * @param remainder
+ * @param nextSibling
+ * @returns
+ */
+function replaceReference(
+  match: RegExpExecArray,
+  remainder: string,
+  nextSibling: ChildNode | null
+): (Node | string)[] | null {
+  let abbrev: string | undefined = match[1];
+  let suffix: string | undefined = match[2];
+  if (!abbrev) {
+    // This is impossible given the regex, but we account for it to appease the
+    // linter.
+    return null;
+  }
+
+  let source: ref.Source | undefined = ref.MAPPING[abbrev];
+  if (!source && suffix) {
+    // Sometimes, the first word in the suffix is part of the
+    // abbreviation. Try moving it from the suffix to the abbreviation,
+    // and search for that in the reference mapping.
+    const parts: RegExpExecArray | null = /^\s(\S+)(.*)/u.exec(suffix);
+    if (parts?.[1]) {
+      abbrev = `${abbrev} ${parts[1]}`;
+      suffix = parts[2];
+    }
+    source = ref.MAPPING[abbrev];
+  }
+
+  if (!source) {
+    return null;
+  }
+
+  const span: HTMLSpanElement = document.createElement('span');
+  span.classList.add(cls.REFERENCE);
+  span.textContent = abbrev;
+  drop.addHoverDroppable(span, source.name);
+
+  if (!suffix) {
+    return [span];
+  }
+
+  // Add the suffix as a child.
+  span.append(' ', parseSuffix(suffix, remainder, nextSibling));
+  return [span];
+}
+
+/**
+ *
  * @param root
  */
 export function handleReferences(root: HTMLElement): void {
@@ -343,45 +454,7 @@ export function handleReferences(root: HTMLElement): void {
     html.replaceText(
       root,
       regex,
-      (match: RegExpExecArray): (Node | string)[] | null => {
-        let abbrev: string | undefined = match[1];
-        let suffix: string | undefined = match[2];
-        if (!abbrev) {
-          // This is impossible given the regex, but we account for it to
-          // appease the linter.
-          return null;
-        }
-
-        let source: ref.Source | undefined = ref.MAPPING[abbrev];
-        if (!source && suffix) {
-          // Sometimes, the first word in the suffix is part of the
-          // abbreviation. Try moving it from the suffix to the abbreviation,
-          // and search for that in the reference mapping.
-          const parts: RegExpExecArray | null = /^\s(\S+)(.*)/.exec(suffix);
-          if (parts?.[1]) {
-            abbrev = `${abbrev} ${parts[1]}`;
-            suffix = parts[2];
-          }
-          source = ref.MAPPING[abbrev];
-        }
-        if (!source) {
-          return null;
-        }
-
-        const span: HTMLSpanElement = document.createElement('span');
-        span.classList.add(cls.REFERENCE);
-        span.textContent = abbrev;
-        drop.addHoverDroppable(span, source.name);
-
-        if (!suffix) {
-          return [span];
-        }
-        const child: HTMLSpanElement = document.createElement('span');
-        child.classList.add(cls.SUFFIX);
-        child.textContent = suffix;
-        span.append(' ', child);
-        return [span];
-      },
+      replaceReference,
       // Exclude all Wiki abbreviations to avoid any overlap.
       ABBREVIATION_EXCLUDE
     );
