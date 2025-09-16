@@ -42,6 +42,9 @@ const ABBREVIATION_EXCLUDE = css.classQuery(
   cls.BULLET,
   cls.BIBLE,
   cls.REFERENCE,
+  // Suffixes are, as of the time of writing, always included within references.
+  // But we add them to the list for completion.
+  cls.SUFFIX,
   cls.DIALECT,
   cls.ANNOTATION
 );
