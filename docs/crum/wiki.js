@@ -167,6 +167,9 @@ ensureKeysCovered(Object.keys(bible.MAPPING), [BIBLE_RE]);
 /**
  * Handle all Crum elements.
  * @param root
+ * TODO: (#419) This function does a lot of dexterous tree manipulations. It's
+ * worth adding a text to verify that the text content of the tree (minus the
+ * droppables, tooltips, ...) doesn't change after the function execution.
  */
 export function handle(root) {
   root.querySelectorAll(`.${cls.WIKI}`).forEach((elem) => {

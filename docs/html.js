@@ -50,15 +50,22 @@ export function makeSpanLinkToAnchor(el, target) {
  * @param regex - Regex to search for in the text nodes of the tree.
  * @param replace - A method to construct a fragment from a regex match
  * obtained with the regex above. Return null if no replacement is required.
- * @param excludeClosestQuery - An optional query specifying if any subtrees of
+ * @param exclude - An optional query specifying if any subtrees of
  * the given root should be excluded.
  */
-export function replaceText(root, regex, replace, excludeClosestQuery) {
+export function replaceText(root, regex, replace, exclude) {
   // We can't replace nodes on the fly, as this could corrupt the walker.
   // Instead, we store all nodes that need replacement, and then process them
   // afterwards.
-  const nodes = captureNodes(root, regex, excludeClosestQuery);
+  const nodes = captureNodes(root, regex, exclude);
   nodes.forEach((node) => {
+    if (exclude && node.parentElement?.closest(exclude)) {
+      // Skip this node.
+      // While we already accounted for the exclusions when we captured the node
+      // array, it's possible that the tree structure has since changed, and
+      // that the node should be excluded now.
+      return;
+    }
     const text = node.nodeValue;
     let lastIndex = 0;
     const fragment = document.createDocumentFragment();
@@ -69,11 +76,12 @@ export function replaceText(root, regex, replace, excludeClosestQuery) {
         fragment.append(text.slice(lastIndex, match.index));
       }
       lastIndex = match.index + match[0].length;
-      fragment.append(
-        ...(replace(match, text.slice(lastIndex), node.nextSibling) ?? [
-          match[0],
-        ])
-      );
+      const replacement = replace(
+        match,
+        text.slice(lastIndex),
+        node.nextSibling
+      ) ?? [match[0]];
+      fragment.append(...replacement);
     }
     if (lastIndex < text.length) {
       fragment.append(text.slice(lastIndex));
@@ -88,12 +96,12 @@ export function replaceText(root, regex, replace, excludeClosestQuery) {
  *
  * @param root
  * @param regex
- * @param excludeClosestQuery
+ * @param exclude
  * @returns
  * TODO: (#0) Normalize all text in the very beginning, so you don't have to
  * normalize and re-normalize each time this function is called.
  */
-function captureNodes(root, regex, excludeClosestQuery) {
+function captureNodes(root, regex, exclude) {
   const walker = document.createTreeWalker(
     root,
     NodeFilter.SHOW_TEXT,
@@ -105,10 +113,7 @@ function captureNodes(root, regex, excludeClosestQuery) {
         // This node doesn't contain a matching text.
         return NodeFilter.FILTER_REJECT;
       }
-      if (
-        excludeClosestQuery &&
-        node.parentElement?.closest(excludeClosestQuery)
-      ) {
+      if (exclude && node.parentElement?.closest(exclude)) {
         // This node is excluded.
         return NodeFilter.FILTER_REJECT;
       }
