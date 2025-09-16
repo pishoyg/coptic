@@ -120,7 +120,7 @@ const ANNOTATION_RES = [
 //     uppercase Latin letter could be a reference abbreviation or a suffix. We
 //     assume that, if it occurs after a reference abbreviation, then it's
 //     likely a suffix.
-const SUFFIX = /((?:\s(?:'?[0-9]+|[a-z]))*)/u;
+const SUFFIX = /((?:\s(?:'?[0-9]+|[a-zA-Z]))*)/u;
 const LETTER = /[a-zA-Z\p{M}&]/u;
 const SPECIAL_CASES = [
   'lgR', // This starts with a small letter.
