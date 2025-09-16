@@ -394,6 +394,9 @@ function parseSuffix(
   return span;
 }
 
+// TODO: (#0) Simplify this method.
+/* eslint-disable complexity */
+
 /**
  *
  * @param match
@@ -406,34 +409,65 @@ function replaceReference(
   remainder: string,
   nextSibling: ChildNode | null
 ): (Node | string)[] | null {
-  let abbrev: string | undefined = match[1];
+  // Given the regex, the first capture group must be present.
+  let abbrev: string = match[1]!;
   let suffix: string | undefined = match[2];
-  if (!abbrev) {
-    // This is impossible given the regex, but we account for it to appease the
-    // linter.
-    return null;
-  }
 
+  // Try to find a source.
   let source: ref.Source | undefined = ref.MAPPING[abbrev];
+
   if (!source && suffix) {
     // Sometimes, the first word in the suffix is part of the
     // abbreviation. Try moving it from the suffix to the abbreviation,
     // and search for that in the reference mapping.
-    const parts: RegExpExecArray | null = /^\s(\S+)(.*)/u.exec(suffix);
-    if (parts?.[1]) {
-      abbrev = `${abbrev} ${parts[1]}`;
-      suffix = parts[2];
+    const m: RegExpExecArray | null = /^\s(\S+)(.*)/u.exec(suffix);
+    if (m?.[1]) {
+      abbrev = `${abbrev} ${m[1]}`;
+      suffix = m[2];
+      source = ref.MAPPING[abbrev];
     }
-    source = ref.MAPPING[abbrev];
   }
 
-  if (!source) {
-    return null;
-  }
-
+  // Construct a tentative span.
   const span: HTMLSpanElement = document.createElement('span');
   span.classList.add(cls.REFERENCE);
   span.textContent = abbrev;
+
+  // Sometimes, part of the abbreviation lives inside the next sibling.
+  if (
+    !source && // We still haven't succeeded in parsing the source.
+    !suffix && // There is no suffix text following the abbreviation.
+    remainder === ' ' && // The remaining part in the text node is just a space.
+    nextSibling?.textContent && // The next node also has text.
+    // The text obtained from combining this node and the text represents a
+    // source abbreviation.
+    (source = ref.MAPPING[(abbrev = `${abbrev} ${nextSibling.textContent}`)])
+  ) {
+    // Success! The next sibling is actually part of the abbreviation.
+    // We will also parse a suffix out of the sibling's sibling.
+    // Save a reference to the sibling's sibling, before we move the sibling and
+    // we can no longer access its sibling.
+    const cur: ChildNode | null = nextSibling.nextSibling;
+    // Move the sibling to the reference span that you're constructing.
+    span.append(' ', nextSibling);
+    nextSibling = cur?.nextSibling ?? null;
+    if (cur?.nodeType === Node.TEXT_NODE && cur.nodeValue) {
+      remainder = cur.nodeValue;
+      const m = SUFFIX.exec(cur.nodeValue);
+      if (m?.index === 0) {
+        // We can successfully retrieve a suffix from the node.
+        suffix = m[0];
+        remainder = cur.nodeValue = cur.nodeValue.slice(suffix.length);
+      }
+    }
+  }
+
+  if (!source) {
+    // Still no source found! Return!
+    return null;
+  }
+
+  // Add the full name of the source.
   drop.addHoverDroppable(span, source.name);
 
   if (!suffix) {
@@ -444,6 +478,8 @@ function replaceReference(
   span.append(' ', parseSuffix(suffix, remainder, nextSibling));
   return [span];
 }
+
+/* eslint-enable complexity */
 
 /**
  *
