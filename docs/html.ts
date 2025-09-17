@@ -39,19 +39,20 @@ export function makeSpanLinkToAnchor(el: Element, target: string): void {
 }
 
 /**
- * Normalize and search the text of all nodes under the given root. For each
- * substring (of the normalized text) matching the given regex, use the replace
- * method to construct a replacement, and insert it into the tree.
+ * For each text node in the given subtree, for each substring matching the
+ * given regex, use the replace method to construct a replacement, and insert it
+ * into the tree.
  *
- * NOTE: We search one node at a time. A string that matches the regex, but
- * lives over two neighboring nodes, won't yield a match!
- * We normalize the following:
- * - The text (adopting a standard notation for diacritics, and removing
- *   superfluous space that doesn't render in the HTML).
- * - The return trees (even if the replace method yields an unnormalized tree,
- *   we will normalize it).
- * However, we do NOT normalize the input tree. Consider calling
- * `root.normalize()` prior to invoking this method.
+ * NOTE: Regarding normalization:
+ * - We search one node at a time. A string that matches the regex, but
+ *   lives over two neighboring nodes, won't yield a match!
+ * - We do not normalize the input in any way. This should be done by the
+ *   caller.
+ * - We will always normalize the output tree[1], even
+ *   if the replacer produces an unnormalized tree. We do NOT, however,
+ *   normalize the text. The replacer should therefore produce normalized text.
+ *
+ * [1] https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize
  *
  * @param root - Root of the tree to process.
  * @param regex - Regex to search for in the text nodes of the tree.
@@ -119,18 +120,13 @@ export function replaceText(
  * @param regex
  * @param exclude
  * @returns
- * TODO: (#0) Normalize all text in the very beginning, so you don't have to
- * normalize and re-normalize each time this function is called.
  */
 function captureNodes(root: Node, regex: RegExp, exclude?: string): Text[] {
   const walker: TreeWalker = document.createTreeWalker(
     root,
     NodeFilter.SHOW_TEXT,
     (node: Node): number => {
-      node.nodeValue = orth
-        .normalize(node.nodeValue ?? '')
-        .replace(/\s+/g, ' ');
-      if (!node.nodeValue.match(regex)) {
+      if (!node.nodeValue?.match(regex)) {
         // This node doesn't contain a matching text.
         return NodeFilter.FILTER_REJECT;
       }
@@ -192,4 +188,28 @@ export function linkifyText(
     },
     css.classQuery(...excludedClasses)
   );
+}
+
+/**
+ * 1. Normalize the tree[1].
+ * 2. Normalize diacritics into NFD [2].
+ * 3. Get rid of all superfluous space.
+ * Such normalization is often necessary for text search logic to work
+ * correctly.
+ *
+ * @param root
+ * [1] https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize
+ * [2] https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize */ // eslint-disable-line max-len
+export function normalize(root: HTMLElement = document.body): void {
+  const walker: TreeWalker = document.createTreeWalker(
+    root,
+    NodeFilter.SHOW_TEXT
+  );
+  while (walker.nextNode()) {
+    const node: Node = walker.currentNode;
+    if (!node.nodeValue) {
+      continue;
+    }
+    node.nodeValue = orth.normalize(node.nodeValue).replace(/\s+/g, ' ');
+  }
 }

@@ -400,7 +400,16 @@ export class Candidate {
   public constructor(record: Record<string, string>, fields: string[]) {
     this.key = record[KEY]!;
     this.fields = fields.map(
-      (name) => new Field(name, orth.normalize(record[name]!))
+      // NOTE: Our Xooxle index builder is guaranteed to produce a
+      // normalized tree.[1] The text content is also guaranteed to be free of
+      // any superfluous space.
+      // The text is, however, not guaranteed to be NFD-normalized, so
+      // we do the NFD normalization below.
+      // [1] https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize
+      //
+      // TODO: (#0): The Xooxle index builder should produce NFD-normalized
+      // text.
+      (name: string): Field => new Field(name, orth.normalize(record[name]!))
     );
   }
 }
@@ -793,16 +802,12 @@ interface Match {
  * don't want any search queries to spill over multiple lines.
  */
 class Line {
-  readonly html: string;
   readonly text: string;
 
   /**
    * @param html - The HTML content of the line.
    */
-  constructor(html: string) {
-    // Normalize diacritics in the HTML. This is important for the highlighting
-    // step to be able to locate diacritics and ignore them.
-    this.html = orth.normalize(html);
+  constructor(readonly html: string) {
     // We obtain the text by deleting all tags.
     // We also get rid of diacritics. When it comes to search, we search a
     // diacritic-free query against the diacritic-free text created here. This
