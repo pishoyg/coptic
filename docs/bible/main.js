@@ -6,6 +6,7 @@
 import * as collapse from '../collapse.js';
 import * as browser from '../browser.js';
 import * as logger from '../logger.js';
+import * as html from '../html.js';
 const BOOK_PARAM = 'book';
 /**
  * Add Bible event listeners.
@@ -51,7 +52,7 @@ function maybeGoToBook() {
 function main() {
   // Normalizing the tree is necessary for some of our text search logic to work
   // correctly.
-  document.body.normalize();
+  html.normalize();
   collapse.addEventListenersForSiblings();
   addEventListeners();
   maybeGoToBook();

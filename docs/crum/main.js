@@ -2,15 +2,16 @@
 import * as help from './help.js';
 import * as dialect from './dialect.js';
 import * as iam from '../iam.js';
+import * as html from '../html.js';
 import * as highlight from './highlight.js';
 import * as crum from './crum.js';
 /**
  *
  */
 function main() {
-  // Normalizing the tree is necessary for some of our text search logic to work
-  // correctly.
-  document.body.normalize();
+  // Normalizing the tree and text content is necessary for some of our text
+  // search logic to work correctly.
+  html.normalize();
   const anki = iam.amI('anki');
   if (!anki) {
     // Set to defaults.
