@@ -50,7 +50,7 @@ class Substitution:
 
 
 # Coptic Wiki substitutions:
-# NOTE: This is based on a snapshot of the following file, taken on September 2,
+# NOTE: This is based on a snapshot of the following file, taken on September 17,
 # 2025:
 # - https://github.com/randykomforty/coptic/blob/main/scripts/dictionary_regexes.js
 # If the file were to be updated, this mapping should be updated accordingly.
@@ -97,7 +97,7 @@ SUBSTITUTIONS: list[Substitution] = [
     ),
     Substitution(
         "coptic",
-        r"\[\[(\(?\)?\[?\]?\.?,?\…?-?·?\s?[\u2c80-\u2cff\u03e2-\u03ef].*?\]?)\]\]",
+        r"\[\[(\(?\)?\[?\.?\.?\]?\.?,?\…?-?·?\s?[\u2c80-\u2cff\u03e2-\u03ef].*?\]?)\]\]",
         r'<span class="coptic">\1</span>',
     ),
     Substitution(
