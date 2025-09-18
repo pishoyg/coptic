@@ -27,10 +27,8 @@ export const BIBLE = 'bible';
 export const BULLET = 'bullet';
 export const CATEGORIES = 'categories';
 export const CRUM_PAGE = 'crum-page';
-export const CRUM_PAGE_EXTERNAL = 'crum-page-external';
 export const CRUM_PAGE_IMG = 'crum-page-img';
 export const DAWOUD_PAGE = 'dawoud-page';
-export const DAWOUD_PAGE_EXTERNAL = 'dawoud-page-external';
 export const DAWOUD_PAGE_IMG = 'dawoud-page-img';
 export const DEV_MODE_NOTE = 'dev-mode-note';
 /**

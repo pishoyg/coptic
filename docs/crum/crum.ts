@@ -33,8 +33,6 @@ export function handle(
   handleCategories(root);
   handleRootType(root);
   handleCrumPage(root);
-  handleCrumPageExternal(root);
-  handleDawoudPageExternal(root);
   handleDawoudPageImg(root);
   handleCrumPageImg(root);
   handleExplanatory(root);
@@ -101,36 +99,6 @@ export function handleCrumPage(root: HTMLElement): void {
     el.classList.add(ccls.LINK);
     html.makeSpanLinkToAnchor(el, `#crum${scan.chopColumn(el.textContent)}`);
   });
-}
-
-/**
- *
- * @param root
- */
-export function handleCrumPageExternal(root: HTMLElement): void {
-  root
-    .querySelectorAll<HTMLElement>(`.${cls.CRUM_PAGE_EXTERNAL}`)
-    .forEach((el) => {
-      el.classList.add(ccls.LINK);
-      el.addEventListener('click', (): void => {
-        browser.open(`${paths.CRUM_SCAN_PREFIX}${el.textContent}`);
-      });
-    });
-}
-
-/**
- *
- * @param root
- */
-export function handleDawoudPageExternal(root: HTMLElement): void {
-  root
-    .querySelectorAll<HTMLElement>(`.${cls.DAWOUD_PAGE_EXTERNAL}`)
-    .forEach((el) => {
-      el.classList.add(ccls.LINK);
-      el.addEventListener('click', (): void => {
-        browser.open(`${paths.DAWOUD}?page=${el.textContent}`);
-      });
-    });
 }
 
 /**

@@ -66,7 +66,7 @@ def _img_aux(
     cls: str,
     path: str,
     alt: str,
-    caption: str,
+    caption: str | None = None,
     line_br: bool = False,
 ) -> abc.Generator[str]:
     yield f'<figure id="{id_}" class="{cls}">'
@@ -74,7 +74,8 @@ def _img_aux(
     # while the Anki flashcards are being generated, using regular
     # expressions. So retaining the format `src="{path}"` is important.
     yield f'<img src="{path}" alt="{alt}" class="{cls}-img">'
-    yield f"<figcaption>{caption}</figcaption>"
+    if caption:
+        yield f"<figcaption>{caption}</figcaption>"
     yield "</figure>"
     if line_br:
         yield page.LINE_BREAK
@@ -604,7 +605,6 @@ class Crum(Decker):
                     path=os.path.join(SCAN_DIR, f"{num+22}.png"),
                     cls="crum-page-img",
                     alt=str(num),
-                    caption=f'<span class="crum-page-external">{num}</span>',
                     line_br=True,
                 )
             yield "</div>"
@@ -629,7 +629,6 @@ class Crum(Decker):
             for num in page_numbers:
                 yield from _img_aux(
                     path=os.path.join(DAWOUD_DIR, f"{num+17}.png"),
-                    caption=f'<span class="dawoud-page-external">{num}</span>',
                     id_=f"dawoud{num}",
                     cls="dawoud-page-img",
                     alt=str(num),
@@ -951,13 +950,8 @@ CRUM_XOOXLE = xooxle.Index(
         xooxle.Selector({"class_": "dictionary"}, force=False),
         xooxle.Selector({"class_": "crum"}, force=False),
         xooxle.Selector({"class_": "crum-page"}, force=False),
-        xooxle.Selector({"class_": "crum-page-external"}, force=False),
         xooxle.Selector({"class_": "dawoud"}, force=False),
         xooxle.Selector({"class_": "dawoud-page"}, force=False),
-        xooxle.Selector(
-            {"class_": "dawoud-page-external"},
-            force=False,
-        ),
         xooxle.Selector({"class_": "drv-key"}, force=False),
         xooxle.Selector({"id": "images"}, force=False),
         xooxle.Selector({"class_": "nag-hammadi"}, force=False),
