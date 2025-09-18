@@ -340,8 +340,8 @@ export class Help {
 
     const closeButton = document.createElement('button');
     closeButton.className = 'close-btn';
-    closeButton.innerHTML = '&times;'; // HTML entity for '×'.
-    closeButton.addEventListener('click', () => {
+    closeButton.textContent = '×';
+    closeButton.addEventListener('click', (): void => {
       this.togglePanel();
     });
     this.panel.appendChild(closeButton);
@@ -354,14 +354,14 @@ export class Help {
       ((): HTMLElement => {
         const footer: HTMLElement =
           document.querySelector('footer') ??
-          (() => {
+          ((): HTMLElement => {
             const f = document.createElement('footer');
             f.id = 'footer';
             return f;
           })();
         const help = document.createElement('span');
         help.classList.add(cls.LINK);
-        help.innerHTML = '<center>help</center>';
+        help.textContent = 'help';
         footer.appendChild(help);
         document.body.appendChild(footer);
         return help;

@@ -180,7 +180,7 @@ export function linkifyText(
       // Create a link.
       const link = document.createElement('span');
       link.classList.add(...classes);
-      link.innerText = match[0];
+      link.textContent = match[0];
       link.addEventListener('click', () => {
         browser.open(targetUrl);
       });

@@ -477,6 +477,10 @@ body:not(.lexicon) .header td:not(:first-child) {
 
 /********** Xooxle and Crum's help panel **********/
 
+footer {
+  text-align: center;
+}
+
 .overlay-background {
   position: fixed;
   top: 0;
