@@ -313,7 +313,7 @@ export class Help {
     this.panel.appendChild(h2);
     const closeButton = document.createElement('button');
     closeButton.className = 'close-btn';
-    closeButton.innerHTML = '&times;'; // HTML entity for '×'.
+    closeButton.textContent = '×';
     closeButton.addEventListener('click', () => {
       this.togglePanel();
     });
@@ -332,7 +332,7 @@ export class Help {
           })();
         const help = document.createElement('span');
         help.classList.add(cls.LINK);
-        help.innerHTML = '<center>help</center>';
+        help.textContent = 'help';
         footer.appendChild(help);
         document.body.appendChild(footer);
         return help;

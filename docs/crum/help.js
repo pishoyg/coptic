@@ -112,12 +112,14 @@ export function makeHelpPanel(highlighter) {
         `Yank the key of the word currently being viewed <span class="${cls.DEV_MODE_NOTE}">(dev mode)</span>`,
         ['lexicon', 'note', 'index'],
         () => {
-          browser.yank(
-            browser.findNextElement(
-              `.${'view' /* xooxle.CLS.VIEW */} .${dev.CLS.DEV}, .${cls.SISTER_KEY}, .${cls.DRV_KEY}`,
-              'cur'
-            ).innerText
-          );
+          const text = browser.findNextElement(
+            `.${'view' /* xooxle.CLS.VIEW */} .${dev.CLS.DEV}, .${cls.SISTER_KEY}, .${cls.DRV_KEY}`,
+            'cur'
+          )?.textContent;
+          if (!text) {
+            return;
+          }
+          browser.yank(text);
         }
       ),
     ],

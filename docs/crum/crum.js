@@ -1,9 +1,5 @@
 /**
  * Package crum defines Crum note handlers.
- *
- * TODO: (#202) Reduce the dependency on `innerHTML`. Use attributes when
- * possible. NOTE: The associated issue is closed. Judge whether it should be
- * reopened, or if we should create a new issue, or just delete this TODO.
  */
 import * as iam from '../iam.js';
 import * as browser from '../browser.js';
@@ -54,15 +50,20 @@ export function handle(root, highlighter) {
  */
 export function handleCategories(root) {
   root.querySelectorAll(`.${cls.CATEGORIES}`).forEach((el) => {
-    el.innerHTML = el.innerText
+    const cats = el.textContent
       .trim()
       .split(',')
-      .map((s) => s.trim())
-      .map(
-        (s) =>
-          `<a class="${ccls.HOVER_LINK}" href="${paths.LEXICON}/${s}.html" target="_blank">${s}</a>`
-      )
-      .join(', ');
+      .map((cat) => cat.trim());
+    el.replaceChildren(
+      ...cats.flatMap((cat, index) => {
+        const a = document.createElement('a');
+        a.classList.add(ccls.HOVER_LINK);
+        a.target = '_blank';
+        a.textContent = cat;
+        a.href = `${paths.LEXICON}/${cat}.html`;
+        return index === cats.length - 1 ? [a] : [a, ', '];
+      })
+    );
   });
 }
 /**
@@ -70,13 +71,14 @@ export function handleCategories(root) {
  * @param root
  */
 export function handleRootType(root) {
-  root.querySelectorAll(`.${cls.ROOT_TYPE}`).forEach((el) => {
-    const type = el.querySelector('b')?.innerText;
-    if (!type) {
-      logger.error('Unable to infer the root type for element!', el);
-      return;
-    }
-    el.innerHTML = `(<a class="${ccls.HOVER_LINK}" href="${paths.LEXICON}/${type.replaceAll('/', '_')}.html" target="_blank">${type}</a>)`;
+  root.querySelectorAll(`.${cls.ROOT_TYPE} b`).forEach((el) => {
+    const type = el.textContent;
+    const link = document.createElement('a');
+    link.classList.add(ccls.HOVER_LINK);
+    link.href = `${paths.LEXICON}/${type.replaceAll('/', '_')}.html`;
+    link.target = '_blank';
+    link.textContent = type;
+    el.replaceChildren(link);
   });
 }
 /**
@@ -86,7 +88,7 @@ export function handleRootType(root) {
 export function handleCrumPage(root) {
   root.querySelectorAll(`.${cls.CRUM_PAGE}`).forEach((el) => {
     el.classList.add(ccls.LINK);
-    html.makeSpanLinkToAnchor(el, `#crum${scan.chopColumn(el.innerText)}`);
+    html.makeSpanLinkToAnchor(el, `#crum${scan.chopColumn(el.textContent)}`);
   });
 }
 /**
@@ -97,7 +99,7 @@ export function handleCrumPageExternal(root) {
   root.querySelectorAll(`.${cls.CRUM_PAGE_EXTERNAL}`).forEach((el) => {
     el.classList.add(ccls.LINK);
     el.addEventListener('click', () => {
-      browser.open(`${paths.CRUM_SCAN_PREFIX}${el.innerText}`);
+      browser.open(`${paths.CRUM_SCAN_PREFIX}${el.textContent}`);
     });
   });
 }
@@ -109,7 +111,7 @@ export function handleDawoudPageExternal(root) {
   root.querySelectorAll(`.${cls.DAWOUD_PAGE_EXTERNAL}`).forEach((el) => {
     el.classList.add(ccls.LINK);
     el.addEventListener('click', () => {
-      browser.open(`${paths.DAWOUD}?page=${el.innerText}`);
+      browser.open(`${paths.DAWOUD}?page=${el.textContent}`);
     });
   });
 }
@@ -161,7 +163,7 @@ export function handleExplanatory(root) {
 export function handleDawoudPage(root) {
   root.querySelectorAll(`.${cls.DAWOUD_PAGE}`).forEach((el) => {
     el.classList.add(ccls.LINK);
-    html.makeSpanLinkToAnchor(el, `#dawoud${scan.chopColumn(el.innerText)}`);
+    html.makeSpanLinkToAnchor(el, `#dawoud${scan.chopColumn(el.textContent)}`);
   });
 }
 /**
@@ -176,11 +178,11 @@ export function handleDrvKey(root) {
     key.target = '_blank';
     // Create a second anchor pointing to this row in the HTML. This is useful
     // for users to share links to specific derivations.
-    const frag = `#drv${key.innerText}`;
+    const frag = `#drv${key.textContent}`;
     const a = document.createElement('a');
     a.href = frag;
     a.classList.add(ccls.HOVER_LINK);
-    a.innerText = '🔗';
+    a.textContent = '🔗';
     // Store the key parent.
     const parent = key.parentNode;
     // Create a span bearing the two anchors, with a space in between.
@@ -208,7 +210,7 @@ export function handleDrvKey(root) {
 export function handleExplanatoryKey(root) {
   root.querySelectorAll(`.${cls.EXPLANATORY_KEY}`).forEach((el) => {
     el.classList.add(ccls.HOVER_LINK);
-    html.makeSpanLinkToAnchor(el, `#explanatory${el.innerText}`);
+    html.makeSpanLinkToAnchor(el, `#explanatory${el.textContent}`);
   });
 }
 /**
@@ -218,7 +220,7 @@ export function handleExplanatoryKey(root) {
 export function handleSisterKey(root) {
   root.querySelectorAll(`.${cls.SISTER_KEY}`).forEach((el) => {
     el.classList.add(ccls.HOVER_LINK);
-    html.makeSpanLinkToAnchor(el, `#sister${el.innerText}`);
+    html.makeSpanLinkToAnchor(el, `#sister${el.textContent}`);
   });
 }
 /**
@@ -230,16 +232,18 @@ export function handleSisterView(root) {
     .querySelectorAll(css.classQuery(cls.SISTERS_TABLE, cls.INDEX_TABLE))
     .forEach((table) => {
       let counter = 1;
-      table.querySelectorAll('tr').forEach((el) => {
-        const td = el.querySelector(`.${cls.SISTER_VIEW}`);
+      table.querySelectorAll('tr').forEach((tr) => {
+        const td = tr.querySelector(`.${cls.SISTER_VIEW}`);
         if (!td) {
           logger.error(
             'A row in the sisters table does not have a "sister-view" element!'
           );
           return;
         }
-        td.innerHTML = `<span class="${cls.SISTER_INDEX}">${counter.toString()}. </span>${td.innerHTML}`;
-        counter++;
+        const span = document.createElement('span');
+        span.classList.add(cls.SISTER_INDEX);
+        span.textContent = `${(counter++).toString()}. `;
+        td.prepend(span);
       });
     });
 }
@@ -250,7 +254,7 @@ export function handleSisterView(root) {
  */
 export function handleDialect(root, highlighter) {
   root.querySelectorAll(`.${cls.DIALECT}`).forEach((el) => {
-    const code = el.innerText;
+    const code = el.textContent;
     el.replaceChildren(...d.DIALECTS[code].prettyCode());
     if (el.closest(`.${cls.WIKI}`)) {
       // Dialect highlighting doesn't really work under Wiki, so we disable it
