@@ -35,5 +35,9 @@
     "tabWidth": 2,
     "semi": true,
     "singleQuote": true
+  },
+  "dependencies": {
+    "@types/jsdom": "^21.1.7",
+    "jsdom": "^27.0.0"
   }
 }
