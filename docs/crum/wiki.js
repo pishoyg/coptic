@@ -432,8 +432,8 @@ function replaceReference(match, remainder, nextSibling) {
     // Still no source found! Return!
     return null;
   }
-  // Add the full name of the source.
-  drop.addHoverDroppable(span, source.name);
+  // Add the full title of the source.
+  drop.addHoverDroppable(span, source.title);
   if (!suffix) {
     return [span];
   }
