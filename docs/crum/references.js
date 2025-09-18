@@ -1,6 +1,4 @@
 /* eslint-disable max-lines */
-import * as orth from '../orth.js';
-import * as logger from '../logger.js';
 /** MAPPING maps an abbreviation to a Source object.
  *
  * The key of the mapping is the primary form used to cite this source in
@@ -35,8 +33,10 @@ import * as logger from '../logger.js';
 export const MAPPING = {
   ShA: {
     title: 'E. Amélineau, Œuvres de Schenoudi, 1907 ff',
-    hyperlink:
-      'https://archive.org/details/oeuvresdeschenou01shen/page/n5/mode/2up<br>https://archive.org/details/oeuvresdeschenou02shen/page/n7/mode/2up',
+    hyperlink: [
+      'https://archive.org/details/oeuvresdeschenou01shen/page/n5/mode/2up',
+      'https://archive.org/details/oeuvresdeschenou02shen/page/n7/mode/2up',
+    ],
   },
   Absal: {
     title:
@@ -101,8 +101,10 @@ export const MAPPING = {
   },
   Ann: {
     title: 'Annales du Service Antiquités, Cairo',
-    hyperlink:
-      'https://ancientworldonline.blogspot.com/2021/12/annales-du-service-des-antiquites-de.html<br>https://catalog.hathitrust.org/Record/007151043',
+    hyperlink: [
+      'https://ancientworldonline.blogspot.com/2021/12/annales-du-service-des-antiquites-de.html',
+      'https://catalog.hathitrust.org/Record/007151043',
+    ],
   },
   AP: {
     title: 'Acta Pauli, ed. C. Schmidt, 1904, acc. to asterisked pp. of book',
@@ -117,8 +119,8 @@ export const MAPPING = {
   },
   AZ: {
     title: 'Zeitschr. f. Aegyptische Sprache, acc. to vols',
-    hyperlink:
-      'https://www.degruyterbrill.com/journal/key/zaes/html<br>(Multiple other links per volume are provided in the source)',
+    // NOTE: There are multiple other links per volume provided in the source.
+    hyperlink: 'https://www.degruyterbrill.com/journal/key/zaes/html',
   },
   Bal: {
     title:
@@ -145,8 +147,10 @@ export const MAPPING = {
   'Berl Wörterb': {
     // NOTE: Listed as 'Berl. Wörterb', but seemingly never cited as such!
     title: 'Erman & Grapow, Wörterbuch d. Aeg. Sprache, 1926-31',
-    hyperlink:
-      'https://www.ancientegyptfoundation.org/worterbuch_der_aegyptischen_sprache.shtml<br>https://tla.digital/home',
+    hyperlink: [
+      'https://www.ancientegyptfoundation.org/worterbuch_der_aegyptischen_sprache.shtml',
+      'https://tla.digital/home',
+    ],
   },
   Bess: {
     title: 'Bessarione (periodical), acc. to vols',
@@ -171,8 +175,10 @@ export const MAPPING = {
   BKU: {
     title:
       'Berliner Kopt. Urkunden, acc. to vol., no. and, in long texts, lines',
-    hyperlink:
-      'https://archive.org/details/mdp.39015020865393/page/n9/mode/2up<br>https://berlpap.smb.museum/bku-i/',
+    hyperlink: [
+      'https://archive.org/details/mdp.39015020865393/page/n9/mode/2up',
+      'https://berlpap.smb.museum/bku-i/',
+    ],
   },
   Blake: {
     title:
@@ -226,8 +232,16 @@ export const MAPPING = {
   C: {
     title:
       'Corpus Scriptorum Christian. Oriental., acc. to the “numéros d’ ordre”',
-    hyperlink:
-      'T. 41: https://archive.org/details/sinuthiiarchiman0000shen_i0u5/page/n7/mode/2up<br>T. 42, 73: https://archive.org/details/sinuthiiarchiman0000shen_z1m2/page/n7/mode/2up<br>T. 43, 86: https://archive.org/details/actamartyrum0043bale/page/n7/mode/2up<br>T. 89, 99, 100: https://archive.org/details/spachomiivitaboh0000unse/page/n7/mode/2up',
+    hyperlink: {
+      'T. 41':
+        'https://archive.org/details/sinuthiiarchiman0000shen_i0u5/page/n7/mode/2up',
+      'T. 42, 73':
+        'https://archive.org/details/sinuthiiarchiman0000shen_z1m2/page/n7/mode/2up',
+      'T. 43, 86':
+        'https://archive.org/details/actamartyrum0043bale/page/n7/mode/2up',
+      'T. 89, 99, 100':
+        'https://archive.org/details/spachomiivitaboh0000unse/page/n7/mode/2up',
+    },
   },
   Cai: {
     title: 'MSS. &c. in the Egyptian Museum, Cairo',
@@ -295,23 +309,33 @@ export const MAPPING = {
   DeV: {
     title:
       'H. De Vis, Homélies Coptes (= Coptica I, V), 1922, 1929 (DeV alone = vol. I)',
-    hyperlink:
-      'https://archive.org/details/homliescoptesd01devi/page/n1/mode/2up<br>https://archive.org/details/homliescoptesdel0000devi_r2q2/page/n7/mode/2up',
+    hyperlink: [
+      'https://archive.org/details/homliescoptesd01devi/page/n1/mode/2up',
+      'https://archive.org/details/homliescoptesdel0000devi_r2q2/page/n7/mode/2up',
+    ],
   },
   Dif: {
     title: 'The Difnar, ed. O’Leary, I, II, III, 1926-30',
-    hyperlink:
-      'https://iiif.lib.harvard.edu/manifests/view/drs:497805580$5i<br>https://www.copticplace.org/files/Difnar2.pdf<br>https://iiif.lib.harvard.edu/manifests/view/drs:497805854$1i',
+    hyperlink: [
+      'https://iiif.lib.harvard.edu/manifests/view/drs:497805580$5i',
+      'https://www.copticplace.org/files/Difnar2.pdf',
+      'https://iiif.lib.harvard.edu/manifests/view/drs:497805854$1i',
+    ],
   },
   DM: {
     title: 'Demotic Magical Papyrus, ed. Griffith & Thompson, 1904 ff',
-    hyperlink:
-      'https://archive.org/details/the-demotic-magical-papyrus-of-london-and-leiden-v.-1/page/n3/mode/2up<br>https://archive.org/details/the-demotic-magical-papyrus-of-london-and-leiden-v.-2/page/n1/mode/2up<br>https://archive.org/details/the-demotic-magical-papyrus-of-london-and-leiden-v.-3/page/n1/mode/2up',
+    hyperlink: [
+      'https://archive.org/details/the-demotic-magical-papyrus-of-london-and-leiden-v.-1/page/n3/mode/2up',
+      'https://archive.org/details/the-demotic-magical-papyrus-of-london-and-leiden-v.-2/page/n1/mode/2up',
+      'https://archive.org/details/the-demotic-magical-papyrus-of-london-and-leiden-v.-3/page/n1/mode/2up',
+    ],
   },
   Dozy: {
     title: 'R. Dozy, Supplém. aux diet. arabes, 1881',
-    hyperlink:
-      'https://gallica.bnf.fr/ark:/12148/bpt6k6254645z.texteImage<br>https://gallica.bnf.fr/ark:/12148/bpt6k6226013q.texteImage',
+    hyperlink: [
+      'https://gallica.bnf.fr/ark:/12148/bpt6k6254645z.texteImage',
+      'https://gallica.bnf.fr/ark:/12148/bpt6k6226013q.texteImage',
+    ],
   },
   EES: {
     title:
@@ -329,8 +353,10 @@ export const MAPPING = {
   Ep: {
     title:
       'Monastery of Epiphanius, ed. Winlock, Crum & Evelyn White, 1926, acc. to numbers',
-    hyperlink:
-      'https://archive.org/details/monasteryofepiph01winl/page/n7/mode/2up<br>https://archive.org/details/monasteryofepiph01winl/page/n7/mode/2up',
+    hyperlink: [
+      'https://archive.org/details/monasteryofepiph01winl/page/n7/mode/2up',
+      'https://archive.org/details/monasteryofepiph02winl/page/n7/mode/2up',
+    ],
   },
   EtLeem: {
     title: 'Études… dédiées à C. Leemans, 1885',
@@ -346,8 +372,11 @@ export const MAPPING = {
   Faras: {
     title:
       'Griffith, Oxford Excavations in Nubia, in Liverpool Annals of Archaeol. & Anthropol. (1) xiii 17, (2) ib. 49, (3) xiv 57',
-    hyperlink:
-      'https://archive.org/details/annals-of-archaeology-and-anthropology_1926_13_1-2/page/n37/mode/2up<br>https://archive.org/details/annals-of-archaeology-and-anthropology_1926_13_3-4/page/48/mode/2up<br>https://archive.org/details/annals-of-archaeology-and-anthropology_1927_14_3-4/page/56/mode/2up',
+    hyperlink: [
+      'https://archive.org/details/annals-of-archaeology-and-anthropology_1926_13_1-2/page/n37/mode/2up',
+      'https://archive.org/details/annals-of-archaeology-and-anthropology_1926_13_3-4/page/48/mode/2up',
+      'https://archive.org/details/annals-of-archaeology-and-anthropology_1927_14_3-4/page/56/mode/2up',
+    ],
   },
   FR: {
     title:
@@ -373,14 +402,18 @@ export const MAPPING = {
   },
   GöttA: {
     title: 'Göttinger Abhandlungen',
-    hyperlink:
-      'https://www.biodiversitylibrary.org/bibliography/51047<br>https://catalog.hathitrust.org/Record/008602924',
+    hyperlink: [
+      'https://www.biodiversitylibrary.org/bibliography/51047',
+      'https://catalog.hathitrust.org/Record/008602924',
+    ],
   },
   GöttN: {
     // NOTE: In Crum's list, this appears as ‘do. Nachrichten’.
     title: 'Göttinger Nachrichten',
-    hyperlink:
-      'https://onlinebooks.library.upenn.edu/webbin/serial?id=nachkongesgotph<br>https://catalog.hathitrust.org/Record/000517694',
+    hyperlink: [
+      'https://onlinebooks.library.upenn.edu/webbin/serial?id=nachkongesgotph',
+      'https://catalog.hathitrust.org/Record/000517694',
+    ],
   },
   GPar: {
     title: 'S. Gaselee, Parerga Coptica, 1912, 1914',
@@ -404,8 +437,10 @@ export const MAPPING = {
   },
   H: {
     title: 'G. Horner’s text of N.T., 1898-1924',
-    hyperlink:
-      'Northern Dialect: https://archive.org/details/copticversionofn01horn<br>Southern Dialect: https://archive.org/details/copticversionofn01unse',
+    hyperlink: {
+      'Northern Dialect': 'https://archive.org/details/copticversionofn01horn',
+      'Southern Dialect': 'https://archive.org/details/copticversionofn01unse',
+    },
   },
   Hall: {
     title: 'H. R. Hall, Coptic & Greek Texts… Brit. Museum, 1905, acc. to pp',
@@ -426,8 +461,10 @@ export const MAPPING = {
   HL: {
     title:
       'E. Amélineau, De Historia Lausiaca, 1887; but Hist Laus = E. C. Butler’s edition of Greek text (= Texts & Studies vi)',
-    hyperlink:
-      'https://archive.org/details/dehistorialausia00am/page/n1/mode/2up<br>https://archive.org/details/lausiachistoryof01pall/page/n7/mode/2up',
+    hyperlink: [
+      'https://archive.org/details/dehistorialausia00am/page/n1/mode/2up',
+      'https://archive.org/details/lausiachistoryof01pall/page/n7/mode/2up',
+    ],
   },
   Hor: {
     title:
@@ -503,14 +540,18 @@ export const MAPPING = {
   },
   JTS: {
     title: 'Journal of Theological Studies',
-    hyperlink:
-      'https://www.jstor.org/journal/jtheostud<br>https://onlinebooks.library.upenn.edu/webbin/serial?id=jtheostudies',
+    hyperlink: [
+      'https://www.jstor.org/journal/jtheostud',
+      'https://onlinebooks.library.upenn.edu/webbin/serial?id=jtheostudies',
+    ],
   },
   K: {
     title:
       'A. Kircher, the Scalæ in Lingua Aegyptiaca Restituta, variants from Loret in Ann. I and other MSS',
-    hyperlink:
-      'https://www.google.co.uk/books/edition/Athanasii_Kircheri_Lingua_Aegyptiaca_res/qEtB1x0frAIC?hl=en&gbpv=1<br>https://archive.org/details/AnnalesDuServiceDesAntiquitsDeLegyptevolume1/page/n63/mode/2up',
+    hyperlink: [
+      'https://www.google.co.uk/books/edition/Athanasii_Kircheri_Lingua_Aegyptiaca_res/qEtB1x0frAIC?hl=en&gbpv=1',
+      'https://archive.org/details/AnnalesDuServiceDesAntiquitsDeLegyptevolume1/page/n63/mode/2up',
+    ],
   },
   Kam: {
     title:
@@ -525,8 +566,10 @@ export const MAPPING = {
   },
   KKS: {
     title: 'O. von Lemm, Kleine Kopt. Studien, acc. to continuous pagination',
-    hyperlink:
-      'https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=im&paperid=4650&option_lang=eng<br>https://www.orientalstudies.ru/rus/index.php?option=com_publications&Itemid=75&pub=8369',
+    hyperlink: [
+      'https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=im&paperid=4650&option_lang=eng',
+      'https://www.orientalstudies.ru/rus/index.php?option=com_publications&Itemid=75&pub=8369',
+    ],
   },
   Kr: {
     title: 'J. Krall, Kopt. Texte (Rainer Corpus II), acc. to numbers',
@@ -536,8 +579,10 @@ export const MAPPING = {
   Kropp: {
     title:
       'A. Kropp, Ausgewählte Kopt. Zaubertexte, 1930-31, numbered by letters A, B &c',
-    hyperlink:
-      'https://archive.org/details/ausgewhltekoptis0012krop/page/n9/mode/2up<br>https://archive.org/details/ausgewhltekoptis0003krop/page/n5/mode/2up',
+    hyperlink: [
+      'https://archive.org/details/ausgewhltekoptis0012krop/page/n9/mode/2up',
+      'https://archive.org/details/ausgewhltekoptis0003krop/page/n5/mode/2up',
+    ],
   },
   Lab: {
     title:
@@ -586,8 +631,11 @@ export const MAPPING = {
   },
   LBib: {
     title: 'Lemm, Sahidische Bibelfragmente I, II, III',
-    hyperlink:
-      'I: https://www.orientalstudies.ru/rus/images/pdf/journals/Melanges_Asiatiques_10_1890_02_lemm.pdf<br>II: https://www.orientalstudies.ru/rus/images/pdf/journals/Melanges_Asiatiques_10_1890_04_lemm.pdf<br>III: https://www.orientalstudies.ru/rus/images/pdf/journals/Melanges_Asiatiques_12_1902-1906_08_lemm.pdf',
+    hyperlink: {
+      I: 'https://www.orientalstudies.ru/rus/images/pdf/journals/Melanges_Asiatiques_10_1890_02_lemm.pdf',
+      II: 'https://www.orientalstudies.ru/rus/images/pdf/journals/Melanges_Asiatiques_10_1890_04_lemm.pdf',
+      III: 'https://www.orientalstudies.ru/rus/images/pdf/journals/Melanges_Asiatiques_12_1902-1906_08_lemm.pdf',
+    },
   },
   LCypr: {
     // NOTE: This occurs as LCypr in the list, but has been found to be cited
@@ -668,8 +716,10 @@ export const MAPPING = {
   'Mani K': {
     // NOTE: Listed as 'ManiK'!
     title: 'Kephalaia, edd. Polotsky & A. Böhlig, 1934 ff',
-    hyperlink:
-      'https://archive.org/details/kephalaia0000mani/page/n1/mode/2up<br>https://archive.org/details/kephalaia0001staa/page/n5/mode/2up',
+    hyperlink: [
+      'https://archive.org/details/kephalaia0000mani/page/n1/mode/2up',
+      'https://archive.org/details/kephalaia0001staa/page/n5/mode/2up',
+    ],
   },
   'Mani P': {
     // NOTE: While cases of ‘Mani P’ (with a space) in Crum's text remain
@@ -691,8 +741,13 @@ export const MAPPING = {
   },
   MG: {
     title: 'Annales du Musée Guimet, Paris',
-    hyperlink:
-      'https://fr.wikisource.org/wiki/Annales_du_Mus%C3%A9e_Guimet<br>Tome 17: https://archive.org/details/monumentspourser00amel/page/n5/mode/2up<br>Tome 25: https://archive.org/details/monumentspourser00amel_0/page/n8/mode/2up',
+    hyperlink: {
+      General: 'https://fr.wikisource.org/wiki/Annales_du_Mus%C3%A9e_Guimet',
+      'Tome 17':
+        'https://archive.org/details/monumentspourser00amel/page/n5/mode/2up',
+      'Tome 25':
+        'https://archive.org/details/monumentspourser00amel_0/page/n8/mode/2up',
+    },
   },
   'Mich 550': {
     title:
@@ -747,8 +802,10 @@ export const MAPPING = {
   My: {
     title:
       'Le Mystère des Lettres grecques, ed. A. Hebbelynck (from Muséon, 1900, 1901)',
-    hyperlink:
-      'https://archive.org/details/lemuson19soci/page/n11/mode/2up<br>https://archive.org/details/lemuson20soci/page/n11/mode/2up',
+    hyperlink: [
+      'https://archive.org/details/lemuson19soci/page/n11/mode/2up',
+      'https://archive.org/details/lemuson20soci/page/n11/mode/2up',
+    ],
   },
   'N & E': {
     // NOTE: Listed as 'N&E'!
@@ -868,16 +925,20 @@ export const MAPPING = {
   },
   PG: {
     title: 'Migne’s Patrologia, Series Graeca',
-    hyperlink:
-      'https://patristica.net/graeca/<br>https://www.roger-pearse.com/weblog/patrologia-graeca-pg-pdfs/',
+    hyperlink: [
+      'https://patristica.net/graeca/',
+      'https://www.roger-pearse.com/weblog/patrologia-graeca-pg-pdfs/',
+    ],
   },
   PGen: {
     title: 'magical papyrus in University Library, Geneva (photograph)',
   },
   PGM: {
     title: 'Papyri Graecae Magicae, ed. K. Preisendanz I, II, 1928, 1931',
-    hyperlink:
-      'https://digi.ub.uni-heidelberg.de/diglit/heidhs3763IIA-51bd1 (Band I)<br>https://digi.ub.uni-heidelberg.de/diglit/heidhs3763IIA-51bd2 (Band II)',
+    hyperlink: {
+      'Band I': 'https://digi.ub.uni-heidelberg.de/diglit/heidhs3763IIA-51bd1',
+      'Band II': 'https://digi.ub.uni-heidelberg.de/diglit/heidhs3763IIA-51bd2',
+    },
   },
   PGol: {
     title:
@@ -891,8 +952,11 @@ export const MAPPING = {
   },
   PLond: {
     title: 'Greek Papyri in British Museum, ed. Kenyon & Bell, acc. to pp',
-    hyperlink:
-      'https://archive.org/details/greekpapyriinbri01brit (Vol I)<br>https://archive.org/details/greekpapyriinbri04brit (Vol IV, Coptic Papyri Appendix)',
+    hyperlink: {
+      'Vol I': 'https://archive.org/details/greekpapyriinbri01brit',
+      'Vol IV, Coptic Papyri Appendix':
+        'https://archive.org/details/greekpapyriinbri04brit',
+    },
   },
   PMéd: {
     title:
@@ -916,8 +980,10 @@ export const MAPPING = {
   },
   PO: {
     title: 'Patrologia Orientalis',
-    hyperlink:
-      'https://www.roger-pearse.com/weblog/patrologia-orientalis-po-pdfs/<br>https://www.tertullian.org/fathers/patrologia_orientalis_toc.htm',
+    hyperlink: [
+      'https://www.roger-pearse.com/weblog/patrologia-orientalis-po-pdfs/',
+      'https://www.tertullian.org/fathers/patrologia_orientalis_toc.htm',
+    ],
   },
   POxy: {
     title: 'Oxyrhynchus Papyri, ed. Grenfell & Hunt',
@@ -951,8 +1017,10 @@ export const MAPPING = {
   R: {
     title:
       'I Papiri Copti… di Torino, ed. F. Rossi, acc. to volume, fascicule & page',
-    hyperlink:
-      'https://alinsuciu.com/2012/01/27/rossis-edition-of-the-coptic-papyrus-codices-in-the-egyptian-museum-in-turin-1/<br>https://www.google.co.uk/books/edition/I_papiri_copti_del_Museo_egizio_di_Torin/lxEZAAAAYAAJ',
+    hyperlink: [
+      'https://alinsuciu.com/2012/01/27/rossis-edition-of-the-coptic-papyrus-codices-in-the-egyptian-museum-in-turin-1/',
+      'https://www.google.co.uk/books/edition/I_papiri_copti_del_Museo_egizio_di_Torin/lxEZAAAAYAAJ',
+    ],
   },
   RAC: {
     title: 'E. Revillout, Actes et Contrats… de Boulaq et du Louvre, 1876',
@@ -1016,8 +1084,10 @@ export const MAPPING = {
   Saq: {
     title:
       'Coptic texts ed. by H. Thompson in Quibell’s Excavations at Saqqara, 1909, 1912',
-    hyperlink:
-      'https://archive.org/details/cu31924028671265/page/n7/mode/2up (1909)<br>https://archive.org/details/cu31924028671273/page/n5/mode/2up (1912)',
+    hyperlink: {
+      1909: 'https://archive.org/details/cu31924028671265/page/n7/mode/2up',
+      1912: 'https://archive.org/details/cu31924028671273/page/n5/mode/2up',
+    },
   },
   Sdff: {
     title:
@@ -1074,8 +1144,10 @@ export const MAPPING = {
   },
   Synax: {
     title: 'Synaxarium Alexandrinum, ed. J. Forget (CSCO.), 1905, 1912',
-    hyperlink:
-      'https://archive.org/details/synaxariumalexan0047copt (I)<br>https://archive.org/details/synaxariumalexan0000copt/page/n363/mode/2up (II)',
+    hyperlink: {
+      I: 'https://archive.org/details/synaxariumalexan0047copt',
+      II: 'https://archive.org/details/synaxariumalexan0000copt/page/n363/mode/2up',
+    },
   },
   Tatt: {
     title: 'H. Tattam, Lexicon Aegyptiaco-Latinum, 1835',
@@ -1177,6 +1249,7 @@ export const MAPPING = {
   },
   Vi: {
     title: 'Vienna, MSS. & ostraca in the Staats(olim Hof)bibliothek',
+    hyperlink: 'https://www.onb.ac.at/',
   },
   Wess: {
     title: 'C. Wessely, Studien z. Paläographie &c., acc. to vol. & page',
@@ -1209,8 +1282,10 @@ export const MAPPING = {
   },
   WZKM: {
     title: 'Wiener Zeitsch. f. d. Kunde d. Morgenlandes',
-    hyperlink:
-      'https://onlinebooks.library.upenn.edu/webbin/serial?id=wienermorgenlandes<br>https://catalog.hathitrust.org/Record/000077758',
+    hyperlink: [
+      'https://onlinebooks.library.upenn.edu/webbin/serial?id=wienermorgenlandes',
+      'https://catalog.hathitrust.org/Record/000077758',
+    ],
   },
   Z: {
     title: 'G. Zoega, Catalogus Codd. Copticorum &c. 1810, acc. to pp',
@@ -1219,15 +1294,10 @@ export const MAPPING = {
   },
   ZNTW: {
     title: 'Zeitsch. f. d. Neutestamentl. Wissenschaft',
-    hyperlink:
-      'https://de.wikisource.org/wiki/Zeitschriften_(Theologie)#Z<br>https://catalog.hathitrust.org/Record/000494825',
-  },
-  // NOTE: The abbreviations below are not found in Crum's list, but they occur
-  // in the text.
-  ViK: {
-    title: 'Vienna, ÖNB',
-    hyperlink:
-      'https://www.onb.ac.at/<br>https://coptot.manuscriptroom.com/documents/10231/23535/LCBM_1.0_2021.pdf/dec4f073-dbfa-4af6-9971-3b2bace5b3eb',
+    hyperlink: [
+      'https://de.wikisource.org/wiki/Zeitschriften_(Theologie)#Z',
+      'https://catalog.hathitrust.org/Record/000494825',
+    ],
   },
 };
 // Add all the variants to the map.
@@ -1246,11 +1316,4 @@ Object.entries(MAPPING).forEach(([key, value]) => {
   }
   MAPPING[key.replaceAll(' ', '')] = value;
 });
-// Ensure that all keys are normalized.
-const unnormalized = Object.keys(MAPPING).filter(
-  (key) => orth.normalize(key) !== key
-);
-if (unnormalized.length) {
-  logger.fatal(unnormalized, 'are not normalized!');
-}
 /* eslint-enable max-lines */
