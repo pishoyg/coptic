@@ -5,7 +5,7 @@
   ],
   // Unit tests have their own TSConfig, so they are excluded from this config.
   "exclude": [
-    "./docs/test/**/*.ts"
+    "./docs/**/*.test.ts"
   ],
   "compilerOptions": {
     "target": "ES2022",

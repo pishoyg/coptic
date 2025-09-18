@@ -1,5 +1,5 @@
 /* This test is generated using Gemini. */
-import * as str from '../str';
+import * as str from './str';
 
 describe('isUpper', () => {
   test('should return true for an empty string', () => {
