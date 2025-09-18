@@ -1,6 +1,4 @@
 /* eslint-disable max-lines */
-import * as orth from '../orth.js';
-import * as logger from '../logger.js';
 
 export interface Source {
   /** name is the full title of the source.
@@ -1344,13 +1342,5 @@ Object.entries(MAPPING).forEach(([key, value]: [string, Source]): void => {
   }
   MAPPING[key.replaceAll(' ', '')] = value;
 });
-
-// Ensure that all keys are normalized.
-const unnormalized: string[] = Object.keys(MAPPING).filter(
-  (key: string): boolean => orth.normalize(key) !== key
-);
-if (unnormalized.length) {
-  logger.fatal(unnormalized, 'are not normalized!');
-}
 
 /* eslint-enable max-lines */

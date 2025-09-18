@@ -156,6 +156,9 @@ const REFERENCE_RES: RegExp[] = [
  * Ensure that all the given keys are matched by at least one of the regexes.
  * @param keys
  * @param regexes
+ * TODO: (#0) Move the regexes to the packages, and run this check in a unit
+ * test. There is no point in running it in the browser, and it's slightly
+ * dangerous.
  */
 function ensureKeysCovered(keys: string[], regexes: RegExp[]): void {
   const undetectable: string[] = keys.filter(
