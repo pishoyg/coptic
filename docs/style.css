@@ -542,6 +542,12 @@ footer {
   margin-left: 5px;
 }
 
+/* stylelint-disable no-descending-specificity */
+table.chapter tr td {
+  vertical-align: top;
+}
+/* stylelint-enable no-descending-specificity */
+
 /*************** Fonts ***************/
 
 @font-face {
