@@ -377,6 +377,7 @@ function parseSuffix(
 
 // TODO: (#0) Simplify this method.
 /* eslint-disable complexity */
+/* eslint-disable max-lines-per-function */
 
 /**
  *
@@ -448,8 +449,14 @@ function replaceReference(
     return null;
   }
 
-  // Add the full title of the source.
-  drop.addHoverDroppable(span, source.title);
+  // Add a hover-invoked tooltip.
+  const tooltip: (Node | string)[] = [source.title];
+  if (source.innerHTML) {
+    const template: HTMLTemplateElement = document.createElement('template');
+    template.innerHTML = source.innerHTML;
+    tooltip.push(...template.content.childNodes);
+  }
+  drop.addHoverDroppable(span, ...tooltip);
 
   if (!suffix) {
     return [span];
@@ -460,6 +467,7 @@ function replaceReference(
   return [span];
 }
 
+/* eslint-enable max-lines-per-function */
 /* eslint-enable complexity */
 
 /**
