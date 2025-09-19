@@ -59,9 +59,9 @@ const ABBREVIATION_EXCLUDE = css.classQuery(
  * In some cases, only one number follows the book name, so we allow one of the
  * two numbers to be omitted.
  */
-const BIBLE_RE =
+export const BIBLE_RE =
   /(\b(?:[1-4]\s)?[A-Z][a-z]+|EpJer)(?:\s(\d+|A|C|D|F)(?:\s(\d+))?)?\b/gu;
-const ANNOTATION_RES = [
+export const ANNOTATION_RES = [
   /\b[a-zA-Z]+\s[a-zA-Z]+\b/gu, // Two-word annotation.
   /\?|†|ⲛ̅ⲉ̅|\b[a-zA-Z]+\b/gu, // One-word annotation.
 ];
@@ -130,7 +130,7 @@ const SPECIAL_CASES = [
   'Imp Russ Ar S', // This consists of 4 words!
   "O'Leary\\s?(?:H|The?)", // This has an apostrophe.
 ];
-const REFERENCE_RES = [
+export const REFERENCE_RES = [
   // Special cases, and three-word reference abbreviations:
   new RegExp(
     `\\b(${SPECIAL_CASES.join('|')}|[A-Z]${LETTER.source}*\\s${LETTER.source}+\\s${LETTER.source}+)${SUFFIX.source}\\b`,
@@ -144,32 +144,6 @@ const REFERENCE_RES = [
   // One-word reference abbreviations:
   new RegExp(`\\b([A-Z]${LETTER.source}*)${SUFFIX.source}\\b`, 'gu'),
 ];
-/**
- * Ensure that all the given keys are matched by at least one of the regexes.
- * @param keys
- * @param regexes
- * TODO: (#0) Move the regexes to the packages, and run this check in a unit
- * test. There is no point in running it in the browser, and it's slightly
- * dangerous.
- */
-function ensureKeysCovered(keys, regexes) {
-  const undetectable = keys.filter(
-    (key) =>
-      !regexes.some(
-        // We need to ensure, not just that there is a match, but that the match
-        // covers the entire key.
-        (regex) => key.match(regex)?.[0].length === key.length
-      )
-  );
-  logger.ensure(
-    !undetectable.length,
-    undetectable,
-    'are not detected by our regexes!'
-  );
-}
-ensureKeysCovered(Object.keys(ann.MAPPING), ANNOTATION_RES);
-ensureKeysCovered(Object.keys(ref.MAPPING), REFERENCE_RES);
-ensureKeysCovered(Object.keys(bible.MAPPING), [BIBLE_RE]);
 /**
  * Handle all Crum elements.
  * @param root
