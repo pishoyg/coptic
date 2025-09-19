@@ -1,0 +1,6 @@
+# This file configures Bun's behavior for your project.
+
+[test]
+# The 'preload' directive tells Bun to run this script before executing the test suite.
+# This ensures our jsdom environment is set up before any other code runs.
+preload = ["./bun.ts"]
