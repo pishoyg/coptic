@@ -349,6 +349,7 @@ function parseSuffix(suffix, remainder, nextSibling) {
 }
 // TODO: (#0) Simplify this method.
 /* eslint-disable complexity */
+
 /**
  *
  * @param match
@@ -409,8 +410,14 @@ function replaceReference(match, remainder, nextSibling) {
     // Still no source found! Return!
     return null;
   }
-  // Add the full title of the source.
-  drop.addHoverDroppable(span, source.title);
+  // Add a hover-invoked tooltip.
+  const tooltip = [source.title];
+  if (source.innerHTML) {
+    const template = document.createElement('template');
+    template.innerHTML = source.innerHTML;
+    tooltip.push(...template.content.childNodes);
+  }
+  drop.addHoverDroppable(span, ...tooltip);
   if (!suffix) {
     return [span];
   }
@@ -418,6 +425,7 @@ function replaceReference(match, remainder, nextSibling) {
   span.append(' ', parseSuffix(suffix, remainder, nextSibling));
   return [span];
 }
+
 /* eslint-enable complexity */
 /**
  *

@@ -2,6 +2,7 @@
 import * as help from './help.js';
 import * as dialect from './dialect.js';
 import * as iam from '../iam.js';
+import * as dropdown from '../dropdown.js';
 import * as html from '../html.js';
 import * as highlight from './highlight.js';
 import * as crum from './crum.js';
@@ -30,5 +31,7 @@ function main() {
     help.makeHelpPanel(highlighter);
   }
   crum.handle(document.body, highlighter);
+  // We only have hover-invoked tooltips.
+  dropdown.addEventListeners('hover');
 }
 main();

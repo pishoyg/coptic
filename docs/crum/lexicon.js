@@ -243,20 +243,12 @@ function spellOutDialectsInDropdown() {
 /**
  *
  */
-function spellOutDialectsInList() {
-  document.querySelectorAll(`#${CHECKBOXES_ID} label`).forEach((drop) => {
-    const dialect = d.DIALECTS[drop.textContent];
-    // Make the label a .dropdown element.
-    drop.classList.add(dropdown.CLS.DROPDOWN);
-    // Create a hover-invoked droppable.
-    const droppable = document.createElement('span');
-    droppable.classList.add(dropdown.CLS.DROPPABLE);
-    droppable.append(...dialect.anchoredName());
-    // A hover-invoked .droppable must be a child of its associated .dropdown
-    // element.
-    drop.appendChild(droppable);
+function addTooltipsAndPrettifyDialectsInList() {
+  document.querySelectorAll(`#${CHECKBOXES_ID} label`).forEach((label) => {
+    const dialect = d.DIALECTS[label.textContent];
+    dropdown.addHoverDroppable(label, ...dialect.anchoredName());
     // Replace the code with a prettified version.
-    Array.from(drop.childNodes)
+    Array.from(label.childNodes)
       .find(
         (child) =>
           child.nodeType === Node.TEXT_NODE &&
@@ -282,10 +274,18 @@ function maybeShowWiki() {
  */
 async function main() {
   maybeShowWiki();
+  // We have a drop-down element bearing the dialects (intended for small
+  // screens).
   spellOutDialectsInDropdown();
-  spellOutDialectsInList();
-  const dropdownDialects = dropdown.addEventListenersForSiblings();
-  logger.ensure(dropdownDialects.length === 1);
+  // We also have a second dialect list outside the dropdown (intended to be
+  // shown on large screens).
+  addTooltipsAndPrettifyDialectsInList();
+  // Add event listeners for hover-invoked tooltips.
+  dropdown.addEventListeners('hover');
+  // Add event listeners for click-invoked tooltips, and also capture them
+  // because we use them below.
+  const dropdownDialects = dropdown.addEventListeners('click');
+  logger.ensure(dropdownDialects.length === 1); // Expect a single such element.
   if (d.setToDefaultIfUnset()) {
     // In order to alert the user to the fact that dialect selection has
     // changed, we make sure the dialect list is visible.
