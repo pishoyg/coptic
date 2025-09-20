@@ -1,56 +1,71 @@
-/* CSS for both hover-invoked and click-invoked drop-downs. */
+/* CSS for both hover-invoked and click-invoked tooltips (a.k.a. droppables). */
 
-/* .droppable is shared by both click-invoked and hover-invoked drop-downs. */
+/* .droppable represents either a click-invoked or hover-invoked tooltip. */
 .droppable {
-  /* The drop-down list is hidden, unless shown by the user. */
+  /* The element is hidden by default. */
   display: none;
 
-  /* The drop-down list shows right below the button. */
+  /* The element shows right below the parent. */
   position: absolute;
 
-  /* Hide the content behind the list by giving it an opaque background. */
+  /* The tip has an opaque background to hind content behind it. */
   background-color: white;
 
-  /* Show a vertical scrollbar, only if needed. */
-  overflow-y: auto;
-
-  /* Give the list some shadow to make it prettier. */
+  /* Add some shade to make it pretty. */
   box-shadow: 0 8px 16px rgb(0 0 0 / 20%);
 
-  /* The list is given priority in display over the other elements. */
+  /* The element shows on top of other elements. */
   z-index: 1;
+
+  /* Add some padding. */
   padding-left: 2px;
   padding-right: 2px;
+
+  /* Align with the left edge of the sibling */
+  left: 0;
+
+  /* Try expanding without wrapping, up to 500px or 80% of the viewport width,
+   * whichever is smaller. On large screens, that's the former. On small
+   * screens, that's the latter. */
+  width: max-content;
+  max-width: min(500px, 80vw);
+
+  /* Our parent elements don't wrap text on whitespace (see below). They can
+   * afford that because they tend to be very short.
+   * We must override this rule in order to allow (potentially long) tooltips to
+   * wrap. */
+  white-space: normal;
 }
 
-/* .dropdown is specific to hover-invoked elements. */
+/* CSS for all parents of tooltips (hover-invoked or click-invoked). */
+.drop,
 .dropdown {
+  /* Since tooltips render right beneath their parents, the positioning would
+   * look rather odd in cases where the parent lives on multiple lines.
+   * Thankfully, such parents tend to be so short that we can usually afford to
+   * always display them on a single line and prevent wrapping on whitespace. */
+  white-space: nowrap;
+
+  /* Relative positioning is important to allow the child tooltip to render in
+   * the correct position. */
   position: relative;
 }
 
 /* Hover-invoked .droppable: */
 .dropdown .droppable {
-  top: 100%; /* .droppable renders right beneath the previous sibling */
-  left: 0; /* Align with the left edge of the sibling */
-
-  /* Show hover-invoked .droppable on one line: */
-  white-space: nowrap; /* Prevent line breaks. */
-  width: auto; /* Shrinks to fit content. */
-  max-width: none; /* Prevents it from wrapping due to max width. */
-  overflow-x: auto; /* Hide overflow if it becomes too long. */
-  text-overflow: ellipsis; /* Hide overflow if it becomes too long. */
+  top: 100%; /* .droppable renders right beneath the previous sibling.
+              It's unclear to me why this breaks click-invoked droppables.
+              I would've otherwise included it in the shared ruleset. */
 }
 
-/* Hovering a .dropdown element causes its child .droppable to show.
- * A hover-invoked droppable must be a child of its driving .dropdown! */
 .dropdown:hover .droppable {
+  /* Hovering a .dropdown element causes its child .droppable to show. */
   display: block;
 }
 
-/* .drop is specific to click-invoked elements. Clicking a .drop element toggles
- * the display of its associated .droppable.
- * This is controlled in JavaScript. */
+/* .drop is specific to click-invoked elements. Clicking a .drop element should
+ * toggle the display of its child tooltip. But this behavior is controlled in
+ * JavaScript. */
 .drop {
-  padding: 0;
   cursor: pointer;
 }

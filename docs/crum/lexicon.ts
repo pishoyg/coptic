@@ -263,23 +263,14 @@ function spellOutDialectsInDropdown(): void {
 /**
  *
  */
-function spellOutDialectsInList(): void {
+function addTooltipsAndPrettifyDialectsInList(): void {
   document
     .querySelectorAll<HTMLLabelElement>(`#${CHECKBOXES_ID} label`)
-    .forEach((drop: HTMLLabelElement): void => {
-      const dialect: d.Dialect = d.DIALECTS[drop.textContent as d.DIALECT];
-
-      // Make the label a .dropdown element.
-      drop.classList.add(dropdown.CLS.DROPDOWN);
-      // Create a hover-invoked droppable.
-      const droppable = document.createElement('span');
-      droppable.classList.add(dropdown.CLS.DROPPABLE);
-      droppable.append(...dialect.anchoredName());
-      // A hover-invoked .droppable must be a child of its associated .dropdown
-      // element.
-      drop.appendChild(droppable);
+    .forEach((label: HTMLLabelElement): void => {
+      const dialect: d.Dialect = d.DIALECTS[label.textContent as d.DIALECT];
+      dropdown.addHoverDroppable(label, ...dialect.anchoredName());
       // Replace the code with a prettified version.
-      Array.from(drop.childNodes)
+      Array.from(label.childNodes)
         .find(
           (child: ChildNode) =>
             child.nodeType === Node.TEXT_NODE &&
@@ -307,12 +298,20 @@ function maybeShowWiki(): void {
  */
 async function main(): Promise<void> {
   maybeShowWiki();
+  // We have a drop-down element bearing the dialects (intended for small
+  // screens).
   spellOutDialectsInDropdown();
-  spellOutDialectsInList();
+  // We also have a second dialect list outside the dropdown (intended to be
+  // shown on large screens).
+  addTooltipsAndPrettifyDialectsInList();
 
+  // Add event listeners for hover-invoked tooltips.
+  dropdown.addEventListeners('hover');
+  // Add event listeners for click-invoked tooltips, and also capture them
+  // because we use them below.
   const dropdownDialects: dropdown.Droppable[] =
-    dropdown.addEventListenersForSiblings();
-  logger.ensure(dropdownDialects.length === 1);
+    dropdown.addEventListeners('click');
+  logger.ensure(dropdownDialects.length === 1); // Expect a single such element.
   if (d.setToDefaultIfUnset()) {
     // In order to alert the user to the fact that dialect selection has
     // changed, we make sure the dialect list is visible.
