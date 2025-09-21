@@ -26,27 +26,39 @@ class Substitution:
         repl: str,
         enabled: bool = True,
         override: str | None = None,
+        text_repl: str = r"\1",
     ):
         """Initializes a Substitution object.
 
         Args:
             name: A description of the substitution rule.
             pattern: The regular expression pattern to search for.
-            repl: The replacement string in Coptic Wiki.
+            repl: The replacement string in Coptic Wiki. We store this data
+                regardless of whether or not it's used. (More below!)
             enabled: Whether the rule is active in our code.
-            override: An replacement string that overrides the Coptic Wiki
-                replacement.
+            override: An optional replacement string that overrides the Coptic Wiki
+                replacement. In case you want to use the Wiki replacement, don't set
+                this field.
+            text_repl: A replacement used to generate a plain-text (no-HTML)
+                version of the data.
         """
         self.name: str = name
         self.pattern: re.Pattern[str] = re.compile(pattern)
         self.repl: str = repl
         self.enabled: bool = enabled
         self.override: str | None = override
+        self.text_repl: str | None = text_repl
 
-    def sub(self, text: str) -> str:
+    def _sub(self, repl: str, text: str) -> str:
         if not self.enabled:
             return text
-        return self.pattern.sub(self.override or self.repl, text)
+        return self.pattern.sub(repl, text)
+
+    def sub(self, text: str) -> str:
+        return self._sub(self.override or self.repl, text)
+
+    def plain_text(self, text: str) -> str:
+        return self._sub(self.text_repl or self.override or self.repl, text)
 
 
 # Coptic Wiki substitutions:
@@ -55,9 +67,27 @@ class Substitution:
 # - https://github.com/randykomforty/coptic/blob/main/scripts/dictionary_regexes.js
 # If the file were to be updated, this mapping should be updated accordingly.
 SUBSTITUTIONS: list[Substitution] = [
-    Substitution("ampersand", r"&amp;", "&", enabled=False),  # Unnecessary!
-    Substitution("asterisk", r"\*", "&ast;", enabled=False),  # Unnecessary!
-    Substitution("tab", r"\n", "</p><p>", enabled=False),  # Unused!
+    Substitution(
+        "ampersand",
+        r"&amp;",
+        "&",
+        enabled=False,
+        text_repl="&",
+    ),  # Unnecessary!
+    Substitution(
+        "asterisk",
+        r"\*",
+        "&ast;",
+        enabled=False,
+        text_repl="*",
+    ),  # Unnecessary!
+    Substitution(
+        "tab",
+        r"\n",
+        "</p><p>",
+        enabled=False,
+        text_repl="\n",
+    ),  # Unused! TODO: (#546): Fix Tab characters.
     Substitution("em", r"__(.+?)__", r"<em>\1</em>"),
     Substitution(
         "bold",
@@ -82,14 +112,23 @@ SUBSTITUTIONS: list[Substitution] = [
         r"\[\[(S|F|B)\^(a|f|b)\]\]",
         r'<i class="dialect">\1<sup>\2</sup></i>',
         override=r'<span class="dialect \1\2">\1\2</span>',
+        text_repl=r"\1\2",
     ),
     Substitution(
         "subdialectLyco",
         r"\[\[(A\^2)\]\]",
         r'<i class="dialect">A<sup class="non-italic">2</sup></i>',
         override=r'<span class="dialect L">L</span>',
+        text_repl="L",
     ),
-    Substitution("superscript", r"\^(\w+)", r"<sup>\1</sup>"),
+    Substitution(
+        "superscript",
+        r"\^(\w+)",
+        r"<sup>\1</sup>",
+        # This is not entirely plain text, but we have no other way to represent
+        # superscripted text.
+        text_repl=r"^(\1)",
+    ),
     Substitution(
         "headword",
         r"\[\[\[(\(?\)?\[?\]?\.?\…?-?[\u2c80-\u2cff\u03e2-\u03ef].*?\]?)\]\]\]",
@@ -126,8 +165,14 @@ SUBSTITUTIONS: list[Substitution] = [
         r'<span class="amharic">\1</span>',
     ),
     # The following is unnecessary, especially given #476.
-    Substitution("qualitative", r"†", r"<sup>†</sup>", enabled=False),
-    Substitution("lineBreaks", r"\\n", "</p><p>"),
+    Substitution(
+        "qualitative",
+        "†",
+        r"<sup>†</sup>",
+        enabled=False,
+        text_repl="†",
+    ),
+    Substitution("lineBreaks", r"\\n", "</p><p>", text_repl="\n"),
 ]
 # pylint: enable=line-too-long
 
