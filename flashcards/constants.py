@@ -14,7 +14,6 @@ from collections import abc, defaultdict
 from dictionary.copticsite_com import main as copticsite
 from dictionary.kellia_uni_goettingen_de import main as kellia
 from dictionary.marcion_sourceforge_net import main as crum
-from dictionary.marcion_sourceforge_net import wiki
 from flashcards import deck
 from utils import file, page, paths
 from xooxle import xooxle
@@ -586,7 +585,7 @@ class Crum(Decker):
         # Wiki.
         if root.has_complete_wiki():
             yield '<div class="wiki" id="wiki">'
-            yield from wiki.html(root.wiki)
+            yield root.wiki_html
             yield "</div>"
 
         # Crum's pages.

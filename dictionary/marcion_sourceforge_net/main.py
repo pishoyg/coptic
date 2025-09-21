@@ -20,7 +20,7 @@ import yaml
 from dictionary.marcion_sourceforge_net import categories as cat
 from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import lexical as lex
-from dictionary.marcion_sourceforge_net import parse, sheet
+from dictionary.marcion_sourceforge_net import parse, sheet, wiki
 from utils import cache, ensure, file, gcp, log, page, paths, semver, text
 
 _NUM_DRV_COLS: int = 10
@@ -316,8 +316,16 @@ class Root(Row):
         assert all(d.key_word == self.key for d in self._derivations)
 
     @functools.cached_property
-    def wiki(self) -> str:
+    def wiki_raw(self) -> str:
         return self.get(sheet.COL.WIKI)
+
+    @functools.cached_property
+    def wiki_html(self) -> str:
+        return "".join(wiki.html(self.wiki_raw))
+
+    @functools.cached_property
+    def wiki_text(self) -> str:  # dead: disable
+        return wiki.text(self.wiki_raw)
 
     @functools.cached_property
     def wiki_wip(self) -> str:
@@ -332,7 +340,7 @@ class Root(Row):
             log.info("Updated", col, "under", self.key)
 
     def has_complete_wiki(self) -> bool:
-        return bool(self.wiki and not self.wiki_wip)
+        return bool(self.wiki_raw and not self.wiki_wip)
 
     def title(self) -> str:
         return ", ".join(

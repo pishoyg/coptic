@@ -40,11 +40,11 @@ class Substitution:
         self.repl: str = repl
         self.text_repl: str = text_repl
 
-    def sub(self, text: str) -> str:
-        return self.pattern.sub(self.repl, text)
+    def html(self, raw: str) -> str:
+        return self.pattern.sub(self.repl, raw)
 
-    def plain_text(self, text: str) -> str:
-        return self.pattern.sub(self.text_repl, text)
+    def plain_text(self, raw: str) -> str:
+        return self.pattern.sub(self.text_repl, raw)
 
 
 # Coptic Wiki substitutions:
@@ -58,7 +58,7 @@ class Substitution:
 # overriding replacement right before the Wiki replacement, separating them by
 # an `or` operator. We also add a comment explaining the rationale for the
 # override.
-SUBSTITUTIONS: list[Substitution] = [
+_SUBSTITUTIONS: list[Substitution] = [
     # The ampersand rule doesn't make sense. It replaces occurrences of `&amp`
     # with `&`, although we should be using the former in HTML!
     Substitution("ampersand", r"&amp;", r"&amp;" or "&", text_repl="&"),
@@ -167,16 +167,22 @@ SUBSTITUTIONS: list[Substitution] = [
 # pylint: enable=line-too-long
 
 
-def html(text: str) -> abc.Generator[str]:
+def html(raw: str) -> abc.Generator[str]:
     yield "<p>"
-    for s in SUBSTITUTIONS:
-        text = s.sub(text)
-    yield text
+    for s in _SUBSTITUTIONS:
+        raw = s.html(raw)
+    yield raw
     yield "</p>"
 
 
+def text(raw: str) -> str:
+    for s in _SUBSTITUTIONS:
+        raw = s.plain_text(raw)
+    return raw
+
+
 @typing.final
-class Wiki:
+class _Wiki:
     """Wiki represents an entry in the Wiki sheet."""
 
     def __init__(self, record: dict[typing.Hashable, typing.Any]) -> None:
@@ -201,14 +207,14 @@ _TO_MERGE: set[str] = {"386", "2837"}
 # TODO: (#508) Verify the correctness of the mapping, for example by comparing
 # headwords.
 def main():
-    """Copy updated Wiki data to our Crum sheet.
+    """Copy up-to-date Wiki data to our Crum sheet.
 
     NOTE: We intentionally update one row at a time, although this consumes the
     API quota.
     """
-    wikis: dict[str, Wiki] = {}
+    wikis: dict[str, _Wiki] = {}
     for w in map(
-        Wiki,
+        _Wiki,
         gcp.tsv_spreadsheet(SHEET_TSV_URL).to_dict(orient="records"),
     ):
         if not w.key:
