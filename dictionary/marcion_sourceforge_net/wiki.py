@@ -199,12 +199,7 @@ class _Wiki:
 _FROM_MARCION: set[str] = {"3380", "3381", "3382", "3385"}
 
 
-def main():
-    """Copy up-to-date Wiki data to our Crum sheet.
-
-    NOTE: We intentionally update one row at a time, although this consumes the
-    API quota.
-    """
+def _wikis() -> dict[str, _Wiki]:
     wikis: dict[str, _Wiki] = {}
     for w in map(
         _Wiki,
@@ -232,7 +227,16 @@ def main():
             )
         assert w.key not in wikis
         wikis[w.key] = w
+    return wikis
 
+
+def reconcile() -> None:
+    """Copy up-to-date Wiki data to our Crum sheet.
+
+    NOTE: We intentionally update one row at a time, although this consumes the
+    API quota.
+    """
+    wikis = _wikis()
     ensure.equal_sets(wikis.keys(), crum.Crum.roots.keys() - _FROM_MARCION)
 
     for w in wikis.values():
@@ -240,6 +244,10 @@ def main():
         # Copy the value to our sheet.
         root.update_cell(sheet.COL.WIKI, w.entry)
         root.update_cell(sheet.COL.WIKI_WIP, w.wip)
+
+
+def main():
+    reconcile()
 
 
 if __name__ == "__main__":
