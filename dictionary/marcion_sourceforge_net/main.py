@@ -702,6 +702,9 @@ class Crum:
             assert d <= constants.MAX_DERIVATION_DEPTH
             return d
 
+        by_key_word: collections.defaultdict[str, list[Derivation]] = (
+            collections.defaultdict(list)
+        )
         for record in sheet.derivations():
             d: Derivation = Derivation(
                 record.row_num,
@@ -709,11 +712,6 @@ class Crum:
                 depth(record),
             )
             derivations[d.key] = d
-
-        by_key_word: collections.defaultdict[str, list[Derivation]] = (
-            collections.defaultdict(list)
-        )
-        for d in derivations.values():
             by_key_word[d.key_word].append(d)
 
         roots: dict[str, Root] = {}
