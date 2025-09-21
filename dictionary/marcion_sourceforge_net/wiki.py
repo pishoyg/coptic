@@ -24,8 +24,6 @@ class Substitution:
         name: str,
         pattern: str,
         repl: str,
-        enabled: bool = True,
-        override: str | None = None,
         text_repl: str = r"\1",
     ):
         """Initializes a Substitution object.
@@ -33,74 +31,64 @@ class Substitution:
         Args:
             name: A description of the substitution rule.
             pattern: The regular expression pattern to search for.
-            repl: The replacement string in Coptic Wiki. We store this data
-                regardless of whether or not it's used. (More below!)
-            enabled: Whether the rule is active in our code.
-            override: An optional replacement string that overrides the Coptic Wiki
-                replacement. In case you want to use the Wiki replacement, don't set
-                this field.
+            repl: The replacement string.
             text_repl: A replacement used to generate a plain-text (no-HTML)
                 version of the data.
         """
         self.name: str = name
         self.pattern: re.Pattern[str] = re.compile(pattern)
         self.repl: str = repl
-        self.enabled: bool = enabled
-        self.override: str | None = override
-        self.text_repl: str | None = text_repl
-
-    def _sub(self, repl: str, text: str) -> str:
-        if not self.enabled:
-            return text
-        return self.pattern.sub(repl, text)
+        self.text_repl: str = text_repl
 
     def sub(self, text: str) -> str:
-        return self._sub(self.override or self.repl, text)
+        return self.pattern.sub(self.repl, text)
 
     def plain_text(self, text: str) -> str:
-        return self._sub(self.text_repl or self.override or self.repl, text)
+        return self.pattern.sub(self.text_repl, text)
 
 
 # Coptic Wiki substitutions:
+#
 # NOTE: This is based on a snapshot of the following file, taken on September 17,
 # 2025:
 # - https://github.com/randykomforty/coptic/blob/main/scripts/dictionary_regexes.js
 # If the file were to be updated, this mapping should be updated accordingly.
+#
+# NOTE: For substitution rules that we override, we have opted for inserting the
+# overriding replacement right before the Wiki replacement, separating them by
+# an `or` operator. We also add a comment explaining the rationale for the
+# override.
 SUBSTITUTIONS: list[Substitution] = [
-    Substitution(
-        "ampersand",
-        r"&amp;",
-        "&",
-        enabled=False,
-        text_repl="&",
-    ),  # Unnecessary!
-    Substitution(
-        "asterisk",
-        r"\*",
-        "&ast;",
-        enabled=False,
-        text_repl="*",
-    ),  # Unnecessary!
-    Substitution(
-        "tab",
-        r"\n",
-        "</p><p>",
-        enabled=False,
-        text_repl="\n",
-    ),  # Unused! TODO: (#546): Fix Tab characters.
+    # The ampersand rule doesn't make sense. It replaces occurrences of `&amp`
+    # with `&`, although we should be using the former in HTML!
+    Substitution("ampersand", r"&amp;", r"&amp;" or "&", text_repl="&"),
+    # The asterisk is not a reserved character in modern HTML, so we don't need
+    # to use `&ast;`. However, using a plain asterisk risks conflicting with the
+    # bold rule below. We therefore leave it up to our linters to replace
+    # the occurrences of `&ask;` produced here with a literal asterisk.
+    Substitution("asterisk", r"\\\*", "&ast;", text_repl="*"),
+    # TODO: (#546): The tab rule is currently unused. Fix Tab characters.
+    Substitution("tab", r"\n", "</p><p>", text_repl="\n"),
     Substitution("em", r"__(.+?)__", r"<em>\1</em>"),
     Substitution(
         "bold",
-        r"\*(.+?)\*",
-        r"<b>\1</b>",
-        override=r'<span class="bullet">\1</span>',
+        # We use a stricter regex to prevent potential conflict with occurrences
+        # of the literal asterisk during plain text generation. Notice that the
+        # conflict is prevented during HTML generation through the use of
+        # `&ast;` to represent the literal asterisk, so either regex would do.
+        r"\*([a-zA-Z]+?\.?)\*" or r"\*(.+?)\*",
+        # Bold text is simply bullets. We prefer using an explicit `bullet`
+        # class to mark them, instead of relying on `<b>`.
+        r'<span class="bullet">\1</span>' or r"<b>\1</b>",
     ),
     Substitution("italic", r"_(.+?)_", r"<i>\1</i>"),
     Substitution(
         "dialect",
         r"\[\[(S|B|A|F|O)\]\]",
-        r'<i class="dialect">\1</i>',
-        override=r'<span class="dialect \1">\1</span>',
+        # We use a `dialect` class to handle dialects. There is no need to store
+        # styling in the HTML or insert dialects in <i> tags. This also achieves
+        # consistency with the Marcion HTML.
+        r'<span class="dialect \1">\1</span>' or r'<i class="dialect">\1</i>',
     ),
     Substitution(
         "subdialect",
@@ -110,15 +98,18 @@ SUBSTITUTIONS: list[Substitution] = [
         #
         # [1] https://remnqymi.com/crum/2391.html#wiki.
         r"\[\[(S|F|B)\^(a|f|b)\]\]",
-        r'<i class="dialect">\1<sup>\2</sup></i>',
-        override=r'<span class="dialect \1\2">\1\2</span>',
+        # Again, we have our own way of managing border dialects. We don't store
+        # styling in the HTML.
+        r'<span class="dialect \1\2">\1\2</span>'
+        or r'<i class="dialect">\1<sup>\2</sup></i>',
         text_repl=r"\1\2",
     ),
     Substitution(
         "subdialectLyco",
         r"\[\[(A\^2)\]\]",
-        r'<i class="dialect">A<sup class="non-italic">2</sup></i>',
-        override=r'<span class="dialect L">L</span>',
+        # No styling in the HTML! Also use L for Lycopolitan.
+        r'<span class="dialect L">L</span>'
+        or r'<i class="dialect">A<sup class="non-italic">2</sup></i>',
         text_repl="L",
     ),
     Substitution(
@@ -164,12 +155,11 @@ SUBSTITUTIONS: list[Substitution] = [
         r"\[\[(\(?\)?\[?\]?\.?\…?[\u1200-\u137f\u1380-\u139f\u2d80-\u2ddf\uab00-\uab2f\u1e7e0-\u1e7ff].*?)\]\]",
         r'<span class="amharic">\1</span>',
     ),
-    # The following is unnecessary, especially given #476.
     Substitution(
         "qualitative",
         "†",
-        r"<sup>†</sup>",
-        enabled=False,
+        # The qualitative rule is unnecessary, especially given #476.
+        "†" or r"<sup>†</sup>",
         text_repl="†",
     ),
     Substitution("lineBreaks", r"\\n", "</p><p>", text_repl="\n"),
