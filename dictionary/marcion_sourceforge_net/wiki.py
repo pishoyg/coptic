@@ -204,8 +204,6 @@ _FROM_MARCION: set[str] = {"3380", "3381", "3382", "3385"}
 _TO_MERGE: set[str] = {"386", "2837"}
 
 
-# TODO: (#508) Verify the correctness of the mapping, for example by comparing
-# headwords.
 def main():
     """Copy up-to-date Wiki data to our Crum sheet.
 
@@ -217,13 +215,26 @@ def main():
         _Wiki,
         gcp.tsv_spreadsheet(SHEET_TSV_URL).to_dict(orient="records"),
     ):
+        # TODO: (#508) Resolve the vide-related inconsistencies below, and
+        # replace the messages with strict checks.
         if not w.key:
-            # This entry doesn't have a Marcion key. It's likely a vide entry.
             if not w.vide:
-                log.error("Non-vide entry lacks a Marcion key:", w.entry)
+                log.error(
+                    "Non-vide entry lacks a Marcion key! Headword:",
+                    w.headword,
+                    "; entry:",
+                    w.entry,
+                )
             continue
         if w.vide:
-            log.warn("Key", w.key, "points to a vide entry:", w.entry)
+            log.warn(
+                "Key",
+                w.key,
+                "points to a vide entry! Headword:",
+                w.headword,
+                "; entry:",
+                w.entry,
+            )
         assert w.key not in wikis
         wikis[w.key] = w
 
