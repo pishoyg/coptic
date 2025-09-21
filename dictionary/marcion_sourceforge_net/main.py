@@ -50,9 +50,7 @@ class Row(gcp.Record):
 
     @functools.cached_property
     def num(self) -> int:
-        num: int = int(self.key)
-        assert constants.MIN_KEY <= num <= constants.MAX_KEY
-        return num
+        return int(self.key)
 
     @functools.cached_property
     def type_name(self) -> str:
@@ -290,6 +288,12 @@ class Image:
 
 class Root(Row):
     """Root represents a root row."""
+
+    @functools.cached_property
+    def num(self) -> int:
+        num: int = super().num
+        assert constants.MIN_KEY <= num <= constants.MAX_KEY
+        return num
 
     @typing.override
     @classmethod
