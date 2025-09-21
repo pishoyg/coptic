@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Process coptic.wiki's Digital Version of Crum."""
 
+import argparse
 import re
 import typing
 from collections import abc
@@ -8,6 +9,18 @@ from collections import abc
 from dictionary.marcion_sourceforge_net import main as crum
 from dictionary.marcion_sourceforge_net import sheet
 from utils import ensure, gcp, log
+
+_argparser: argparse.ArgumentParser = argparse.ArgumentParser(
+    description="Reconcile or process Wiki data.",
+)
+
+_ = _argparser.add_argument(
+    "-t",
+    "--text",
+    type=str,
+    default="",
+    help="If given, print plain text of the given data.",
+)
 
 # pylint: disable=line-too-long
 # TODO: (#0) Move to `utils/paths.py`.
@@ -247,6 +260,10 @@ def reconcile() -> None:
 
 
 def main():
+    args: argparse.Namespace = _argparser.parse_args()
+    if args.text:
+        print(text(args.text))
+        return
     reconcile()
 
 
