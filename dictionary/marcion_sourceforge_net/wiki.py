@@ -237,9 +237,6 @@ def main():
     )
 
     for w in wikis.values():
-        if not w.entry:
-            # This entry isn't populated yet!
-            continue
         root: crum.Root = crum.Crum.roots[w.key]
         # Copy the value to our sheet.
         root.update_cell(sheet.COL.WIKI, w.entry)
