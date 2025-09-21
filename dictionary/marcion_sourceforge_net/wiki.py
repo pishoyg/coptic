@@ -197,11 +197,6 @@ class _Wiki:
 # They don't exist in the original text, and therefore are not expected to be
 # found in Wiki!
 _FROM_MARCION: set[str] = {"3380", "3381", "3382", "3385"}
-# _TO_MERGE is a set of entries that were mistakenly marked as standalone
-# entries. They should be merged into other entries, and therefore are not
-# expected to be found in Crum!
-# TODO: (#508) Merge those entries, and remove this check.
-_TO_MERGE: set[str] = {"386", "2837"}
 
 
 def main():
@@ -238,10 +233,7 @@ def main():
         assert w.key not in wikis
         wikis[w.key] = w
 
-    ensure.equal_sets(
-        wikis.keys(),
-        crum.Crum.roots.keys() - _FROM_MARCION - _TO_MERGE,
-    )
+    ensure.equal_sets(wikis.keys(), crum.Crum.roots.keys() - _FROM_MARCION)
 
     for w in wikis.values():
         root: crum.Root = crum.Crum.roots[w.key]
