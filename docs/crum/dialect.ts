@@ -130,33 +130,27 @@ export class Dialect {
    *   dialect names within it), in which case we try to retrieve dialect
    *   articles from other dialects and link them.
    */
-  anchoredName(): (string | HTMLElement)[] {
+  *anchoredName(): Generator<string | HTMLElement> {
     if (this.article) {
       const a = document.createElement('a');
       a.href = this.article;
       a.target = '_blank';
       a.textContent = this.name;
-      return [a];
+      yield a;
+      return;
     }
 
     const words: string[] = this.name.split(' ');
-    return words
-      .map(
-        (word: string): (string | HTMLElement)[] =>
-          // If this word is the name of a dialect, return its anchored name.
-          // Otherwise, return the word as plain text.
-          Object.values(DIALECTS)
-            .find((d: Dialect): boolean => d.name === word)
-            ?.anchoredName() ?? [word]
-      )
-      .flatMap(
-        // Re-insert spaces between words.
-        (
-          item: (string | HTMLElement)[],
-          index: number
-        ): (string | HTMLElement)[] =>
-          index < words.length - 1 ? [...item, ' '] : item
-      );
+    // If this word is the name of a dialect, return its anchored name.
+    // Otherwise, return the word as plain text.
+    for (const [index, word] of words.entries()) {
+      yield* Object.values(DIALECTS)
+        .find((d: Dialect): boolean => d.name === word)
+        ?.anchoredName() ?? [word];
+      if (index < words.length - 1) {
+        yield ' ';
+      }
+    }
   }
 
   /**
