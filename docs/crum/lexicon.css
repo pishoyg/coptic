@@ -61,6 +61,10 @@
   display: block; /* Each label on its own line. */
 }
 
+#checkboxes label {
+  margin: 1.5px;
+}
+
 #wiki-title,
 #wiki-collapsible {
   display: none;

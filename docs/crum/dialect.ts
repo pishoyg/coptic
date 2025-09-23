@@ -50,6 +50,7 @@ type DoubleCharDialectAbbrev = 'N' | 'a' | 'f' | 'b';
  */
 export type DialectKey = SingleCharDialect | DoubleCharDialectAbbrev;
 
+// TODO: (#452) Add an entry for Andreas.
 type DICTIONARY = 'KELLIA' | 'Crum' | 'copticsite';
 
 /**
@@ -123,6 +124,16 @@ export class Dialect {
   }
 
   /**
+   * @returns
+   */
+  checkbox(): HTMLInputElement {
+    const checkbox: HTMLInputElement = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.name = this.code;
+    return checkbox;
+  }
+
+  /**
    * @returns - The name of the dialect, potentially containing anchors to
    * articles about the dialect.
    * - If an article is available for this dialect, we link it directly.
@@ -192,16 +203,21 @@ export class Dialect {
   }
 }
 
+// NOTE: The keys of this record should be ordered according to the desired
+// order of appearance in the UI.
 export const DIALECTS: Record<DIALECT, Dialect> = {
-  // The following is the standard set of sigla of five major dialects of
-  // Coptic, along with Old Coptic. They are used in both the Crum and KELLIA
-  // dictionaries. Additionally, B (Bohairic) is used in copticsite.
+  // S, A, L, B, and F, are the standard set of sigla of five major dialects of
+  // Coptic. Along with O, they are used in both Crum and KELLIA.
+  // B is the only one used in Andreas and copticsite.
+  // Border dialects are only used in Crum.
   S: new Dialect(
     'S',
     'Sahidic',
     'https://ccdl.claremont.edu/digital/collection/cce/id/2029/rec/2',
     ['Crum', 'KELLIA']
   ),
+  Sa: new Dialect('Sa', 'Sahidic with Akhmimic tendency', '', ['Crum'], 'a'),
+  Sf: new Dialect('Sf', 'Sahidic with Fayyumic tendency', '', ['Crum'], 'f'),
   A: new Dialect(
     'A',
     'Akhmimic',
@@ -226,6 +242,7 @@ export const DIALECTS: Record<DIALECT, Dialect> = {
     'https://ccdl.claremont.edu/digital/collection/cce/id/1989/rec/2',
     ['Crum', 'KELLIA']
   ),
+  Fb: new Dialect('Fb', 'Fayyumic with Bohairic tendency', '', ['Crum'], 'b'),
   O: new Dialect(
     'O',
     'Old Coptic',
@@ -233,7 +250,18 @@ export const DIALECTS: Record<DIALECT, Dialect> = {
     ['Crum', 'KELLIA']
   ),
 
+  // NH is only found in Marcion (part of Crum).
+  NH: new Dialect(
+    'NH',
+    'Nag Hammadi',
+    'https://ccdl.claremont.edu/digital/collection/cce/id/1418/rec/2',
+    ['Crum'],
+    'N'
+  ),
+
   // The following dialects are only found in KELLIA (TLA).
+  // M is a major Coptic dialect that is regrettably unrepresented in Crum. He
+  // preceded its discovery.
   M: new Dialect(
     'M',
     'Mesokemic',
@@ -259,23 +287,8 @@ export const DIALECTS: Record<DIALECT, Dialect> = {
     ['KELLIA']
   ),
 
+  // Greek (usage unclear) is only used in KELLIA (TLA).
   U: new Dialect('U', 'Greek (usage unclear)', '', ['KELLIA']),
-
-  // The following three dialects (or sub-dialects) are only found in Crum.
-  Sa: new Dialect('Sa', 'Sahidic with Akhmimic tendency', '', ['Crum'], 'a'),
-  Sf: new Dialect('Sf', 'Sahidic with Fayyumic tendency', '', ['Crum'], 'f'),
-  Fb: new Dialect('Fb', 'Fayyumic with Bohairic tendency', '', ['Crum'], 'b'),
-
-  // The following dialect is only found in Marcion (part of Crum).
-  // TODO: (#0) It's not exactly accurate to describe this as part of Crum.
-  // Consider updating the description, somehow.
-  NH: new Dialect(
-    'NH',
-    'Nag Hammadi',
-    'https://ccdl.claremont.edu/digital/collection/cce/id/1418/rec/2',
-    ['Crum'],
-    'N'
-  ),
 } as const;
 
 export const ANY_DIALECT_QUERY: string = css.classQuery(
