@@ -73,17 +73,16 @@ class SearchResult extends xooxle.SearchResult {
   row(total) {
     const row = super.row(total);
     crum.addGreekLookups(row);
-    // NOTE: Handling of dialects causes a (minor) bug: Dialect codes don't get
-    // highlighted!
+    // TODO: (#499): Handling of dialects causes a (minor) bug: Dialect codes
+    // don't get highlighted!
     // This is because the content of dialect spans gets completely overridden
     // in the call below. If this content had a match span, it would be removed
     // and replaced with new content that doesn't have the match span.
-    // This bug is left intentionally. We're not going to handle it because it's
-    // very low-priority.
-    // Although the following fix was considered: Your dialect handler should,
+    // The following fix was considered: Your dialect handler should,
     // instead of replacing the entire HTML tree in dialect spans, replace the
     // text nodes only.
-    // See https://github.com/pishoyg/coptic/issues/499.
+    // This suggestion was abandoned in favor of a more radical redesign of
+    // Xooxle that eliminates such possibilities altogether. See #541.
     crum.handleDialect(row, CrumSearchResult.highlighter);
     return row;
   }
@@ -234,10 +233,8 @@ function spellOutDialectsInDropdown() {
   document
     .querySelectorAll(`#${DIALECTS_ID} .${dropdown.CLS.DROPPABLE} input`)
     .forEach((el) => {
-      const next = el.nextSibling;
-      logger.ensure(next?.nodeType === Node.TEXT_NODE);
-      const dialect = d.DIALECTS[el.name];
-      next?.parentNode?.replaceChild(dialect.title(), next);
+      const text = el.nextSibling;
+      text.replaceWith(...d.DIALECTS[text.nodeValue].title());
     });
 }
 /**
@@ -254,7 +251,7 @@ function addTooltipsAndPrettifyDialectsInList() {
           child.nodeType === Node.TEXT_NODE &&
           child.textContent === dialect.code
       )
-      .replaceWith(...dialect.prettyCode());
+      .replaceWith(dialect.siglum());
   });
 }
 /**
@@ -274,6 +271,10 @@ function maybeShowWiki() {
  */
 async function main() {
   maybeShowWiki();
+  // TODO: (#0) There is some duplication between the handling of the dialect
+  // sigla in Crum, and the handling of the lexicon checkboxes. Consider
+  // deduplicating the code. Perhaps it would help to generate the checkbox
+  // elements in JavaScript instead of hardcoding them in HTML.
   // We have a drop-down element bearing the dialects (intended for small
   // screens).
   spellOutDialectsInDropdown();

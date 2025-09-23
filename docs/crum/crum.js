@@ -13,6 +13,7 @@ import * as ccls from '../cls.js';
 import * as header from '../header.js';
 import * as logger from '../logger.js';
 import * as wiki from './wiki.js';
+import * as drop from '../dropdown.js';
 const COPTIC_RE = /[\p{Script=Coptic}][\p{Script=Coptic}\p{Mark}]*/gu;
 const GREEK_RE = /[\p{Script=Greek}][\p{Script=Greek}\p{Mark}]*/gu;
 const ENGLISH_RE = /[\p{Script=Latin}][\p{Script=Latin}\p{Mark}]*/gu;
@@ -229,14 +230,19 @@ export function handleSisterView(root) {
 export function handleDialect(root, highlighter) {
   root.querySelectorAll(`.${cls.DIALECT}`).forEach((el) => {
     const code = el.textContent;
-    el.replaceChildren(...d.DIALECTS[code].prettyCode());
+    const dialect = d.DIALECTS[code];
+    // Prettify the appearance of the dialect code.
+    const siglum = dialect.siglum();
+    el.replaceChildren(siglum);
+    // Add a tooltip with the dialect name.
+    drop.addHoverDroppable(el, ...dialect.anchoredName());
     if (el.closest(`.${cls.WIKI}`)) {
       // Dialect highlighting doesn't really work under Wiki, so we disable it
       // here!
       return;
     }
-    el.classList.add(ccls.HOVER_LINK);
-    el.addEventListener(
+    siglum.classList.add(ccls.HOVER_LINK);
+    siglum.addEventListener(
       'click',
       highlighter.toggleDialect.bind(highlighter, code)
     );

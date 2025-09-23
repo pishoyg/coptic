@@ -15,6 +15,7 @@ var CLS;
   CLS['DIALECT_NAME'] = 'dialect-name';
   CLS['DIALECT_DICTIONARIES'] = 'dialect-dictionaries';
   CLS['BORDER_DIALECT_LETTER'] = 'border-dialect-letter';
+  CLS['SIGLUM'] = 'siglum';
 })(CLS || (CLS = {}));
 /**
  */
@@ -53,7 +54,7 @@ export class Dialect {
     // Create the first <td> (dialect code)
     const tdCode = document.createElement('td');
     tdCode.classList.add(CLS.DIALECT_CODE);
-    tdCode.append(...this.prettyCode());
+    tdCode.append(this.siglum());
     tr.appendChild(tdCode);
     // Create the second <td> (dialect name)
     const tdName = document.createElement('td');
@@ -117,39 +118,33 @@ export class Dialect {
    * The name bears anchors, if present.
    */
   title() {
-    const title = document.createElement('span');
-    title.append(...this.prettyCode(true), ' ', ...this.anchoredName());
-    return title;
+    return ['(', this.siglum(), ') ', ...this.anchoredName()];
   }
   /**
-   * @param parenthesize - Whether to parenthesize the output.
-   * @returns A prettified code.
+   * @returns An element containing a prettified dialect code.
    */
-  prettyCode(parenthesize) {
+  siglum() {
+    const siglum = document.createElement('span');
+    siglum.classList.add(CLS.SIGLUM);
     const first = this.code[0],
       second = this.code[1];
-    const out = [];
-    if (parenthesize) {
-      out.push('(');
-    }
     if (
       this.code.length === 2 &&
-      typeof first === 'string' &&
-      typeof second === 'string' &&
+      first &&
+      second &&
       str.isUpper(first) &&
       str.isLower(second)
     ) {
+      // This is a border dialect siglum.
       const sup = document.createElement('sup');
       sup.classList.add(CLS.BORDER_DIALECT_LETTER);
       sup.textContent = second;
-      out.push(first, sup);
-    } else {
-      out.push(this.code);
+      siglum.append(first, sup);
+      return siglum;
     }
-    if (parenthesize) {
-      out.push(')');
-    }
-    return out;
+    // This is a major dialect siglum.
+    siglum.append(this.code);
+    return siglum;
   }
 }
 export const DIALECTS = {
