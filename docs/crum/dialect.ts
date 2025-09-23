@@ -28,7 +28,7 @@ export type DIALECT = SingleCharDialect | DoubleCharDialect;
 
 const DEFAULT: DIALECT[] = ['B'];
 
-enum CLS {
+export enum CLS {
   DIALECT_CODE = 'dialect-code',
   DIALECT_NAME = 'dialect-name',
   DIALECT_DICTIONARIES = 'dialect-dictionaries',
