@@ -253,10 +253,8 @@ function spellOutDialectsInDropdown(): void {
       `#${DIALECTS_ID} .${dropdown.CLS.DROPPABLE} input`
     )
     .forEach((el: HTMLInputElement): void => {
-      const next: ChildNode | null = el.nextSibling;
-      logger.ensure(next?.nodeType === Node.TEXT_NODE);
-      const dialect: d.Dialect = d.DIALECTS[el.name as d.DIALECT];
-      next?.parentNode?.replaceChild(dialect.title(), next);
+      const text: ChildNode | null = el.nextSibling;
+      text!.replaceWith(...d.DIALECTS[text!.nodeValue as d.DIALECT].title());
     });
 }
 
@@ -276,7 +274,7 @@ function addTooltipsAndPrettifyDialectsInList(): void {
             child.nodeType === Node.TEXT_NODE &&
             child.textContent === dialect.code
         )!
-        .replaceWith(...dialect.prettyCode());
+        .replaceWith(dialect.siglum());
     });
 }
 
@@ -298,6 +296,12 @@ function maybeShowWiki(): void {
  */
 async function main(): Promise<void> {
   maybeShowWiki();
+
+  // TODO: (#0) There is some duplication between the handling of the dialect
+  // sigla in Crum, and the handling of the lexicon checkboxes. Consider
+  // deduplicating the code. Perhaps it would help to generate the checkbox
+  // elements in JavaScript instead of hardcoding them in HTML.
+
   // We have a drop-down element bearing the dialects (intended for small
   // screens).
   spellOutDialectsInDropdown();

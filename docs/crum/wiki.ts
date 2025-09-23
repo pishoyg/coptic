@@ -5,7 +5,6 @@
 import * as html from '../html.js';
 import * as paths from '../paths.js';
 import * as css from '../css.js';
-import * as d from './dialect.js';
 import * as cls from './cls.js';
 import * as ccls from '../cls.js';
 import * as logger from '../logger.js';
@@ -163,9 +162,6 @@ export function handle(root: HTMLElement): void {
   root
     .querySelectorAll<HTMLElement>(`.${cls.WIKI}`)
     .forEach((elem: HTMLElement): void => {
-      // Dialects are explicitly marked with a `dialect` class. There is no
-      // risk of collision or overlap.
-      handleDialects(elem);
       // Bible abbreviations are not expected to collide with other
       // abbreviations. We do them early to move them out of the way.
       handleBible(elem);
@@ -178,16 +174,6 @@ export function handle(root: HTMLElement): void {
       handleAnnotations(elem);
       warnPotentiallyMissingReferences(elem);
     });
-}
-
-/**
- *
- * @param root
- */
-export function handleDialects(root: HTMLElement): void {
-  root.querySelectorAll(`.${cls.DIALECT}`).forEach((el: Element): void => {
-    drop.addHoverDroppable(el, d.DIALECTS[el.textContent as d.DIALECT].name);
-  });
 }
 
 /**

@@ -16,6 +16,7 @@ import * as ccls from '../cls.js';
 import * as header from '../header.js';
 import * as logger from '../logger.js';
 import * as wiki from './wiki.js';
+import * as drop from '../dropdown.js';
 
 const COPTIC_RE = /[\p{Script=Coptic}][\p{Script=Coptic}\p{Mark}]*/gu;
 const GREEK_RE = /[\p{Script=Greek}][\p{Script=Greek}\p{Mark}]*/gu;
@@ -262,20 +263,27 @@ export function handleDialect(
   root: HTMLElement,
   highlighter: highlight.Highlighter
 ): void {
-  root.querySelectorAll<HTMLElement>(`.${cls.DIALECT}`).forEach((el) => {
-    const code: d.DIALECT = el.textContent as d.DIALECT;
-    el.replaceChildren(...d.DIALECTS[code].prettyCode());
-    if (el.closest(`.${cls.WIKI}`)) {
-      // Dialect highlighting doesn't really work under Wiki, so we disable it
-      // here!
-      return;
-    }
-    el.classList.add(ccls.HOVER_LINK);
-    el.addEventListener(
-      'click',
-      highlighter.toggleDialect.bind(highlighter, code)
-    );
-  });
+  root
+    .querySelectorAll<HTMLElement>(`.${cls.DIALECT}`)
+    .forEach((el: HTMLElement): void => {
+      const code: d.DIALECT = el.textContent as d.DIALECT;
+      const dialect: d.Dialect = d.DIALECTS[code];
+      // Prettify the appearance of the dialect code.
+      const siglum: HTMLSpanElement = dialect.siglum();
+      el.replaceChildren(siglum);
+      // Add a tooltip with the dialect name.
+      drop.addHoverDroppable(el, ...dialect.anchoredName());
+      if (el.closest(`.${cls.WIKI}`)) {
+        // Dialect highlighting doesn't really work under Wiki, so we disable it
+        // here!
+        return;
+      }
+      siglum.classList.add(ccls.HOVER_LINK);
+      siglum.addEventListener(
+        'click',
+        highlighter.toggleDialect.bind(highlighter, code)
+      );
+    });
 }
 
 /**

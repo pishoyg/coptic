@@ -33,6 +33,7 @@ enum CLS {
   DIALECT_NAME = 'dialect-name',
   DIALECT_DICTIONARIES = 'dialect-dictionaries',
   BORDER_DIALECT_LETTER = 'border-dialect-letter',
+  SIGLUM = 'siglum',
 }
 
 /**
@@ -89,7 +90,7 @@ export class Dialect {
     // Create the first <td> (dialect code)
     const tdCode = document.createElement('td');
     tdCode.classList.add(CLS.DIALECT_CODE);
-    tdCode.append(...this.prettyCode());
+    tdCode.append(this.siglum());
     tr.appendChild(tdCode);
 
     // Create the second <td> (dialect name)
@@ -163,41 +164,37 @@ export class Dialect {
    *   (code) Dialect Name
    * The name bears anchors, if present.
    */
-  title(): HTMLSpanElement {
-    const title: HTMLSpanElement = document.createElement('span');
-    title.append(...this.prettyCode(true), ' ', ...this.anchoredName());
-    return title;
+  title(): (Node | string)[] {
+    return ['(', this.siglum(), ') ', ...this.anchoredName()];
   }
 
   /**
-   * @param parenthesize - Whether to parenthesize the output.
-   * @returns A prettified code.
+   * @returns An element containing a prettified dialect code.
    */
-  prettyCode(parenthesize?: boolean): (Node | string)[] {
+  siglum(): HTMLSpanElement {
+    const siglum: HTMLSpanElement = document.createElement('span');
+    siglum.classList.add(CLS.SIGLUM);
+
     const first: string | undefined = this.code[0],
       second: string | undefined = this.code[1];
-    const out: (Node | string)[] = [];
-    if (parenthesize) {
-      out.push('(');
-    }
     if (
       this.code.length === 2 &&
-      typeof first === 'string' &&
-      typeof second === 'string' &&
+      first &&
+      second &&
       str.isUpper(first) &&
       str.isLower(second)
     ) {
+      // This is a border dialect siglum.
       const sup = document.createElement('sup');
       sup.classList.add(CLS.BORDER_DIALECT_LETTER);
       sup.textContent = second;
-      out.push(first, sup);
-    } else {
-      out.push(this.code);
+      siglum.append(first, sup);
+      return siglum;
     }
-    if (parenthesize) {
-      out.push(')');
-    }
-    return out;
+
+    // This is a major dialect siglum.
+    siglum.append(this.code);
+    return siglum;
   }
 }
 

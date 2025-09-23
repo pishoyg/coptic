@@ -238,7 +238,8 @@ table {
   font-size: large;
 }
 
-.dialect {
+/* siglum is the class of dialect siglum in Crum. */
+.siglum {
   font-style: italic;
 }
 
