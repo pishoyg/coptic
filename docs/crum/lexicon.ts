@@ -69,17 +69,16 @@ class SearchResult extends xooxle.SearchResult {
   override row(total: number): HTMLTableRowElement {
     const row: HTMLTableRowElement = super.row(total);
     crum.addGreekLookups(row);
-    // NOTE: Handling of dialects causes a (minor) bug: Dialect codes don't get
-    // highlighted!
+    // TODO: (#499): Handling of dialects causes a (minor) bug: Dialect codes
+    // don't get highlighted!
     // This is because the content of dialect spans gets completely overridden
     // in the call below. If this content had a match span, it would be removed
     // and replaced with new content that doesn't have the match span.
-    // This bug is left intentionally. We're not going to handle it because it's
-    // very low-priority.
-    // Although the following fix was considered: Your dialect handler should,
+    // The following fix was considered: Your dialect handler should,
     // instead of replacing the entire HTML tree in dialect spans, replace the
     // text nodes only.
-    // See https://github.com/pishoyg/coptic/issues/499.
+    // This suggestion was abandoned in favor of a more radical redesign of
+    // Xooxle that eliminates such possibilities altogether. See #541.
     crum.handleDialect(row, CrumSearchResult.highlighter);
     return row;
   }
