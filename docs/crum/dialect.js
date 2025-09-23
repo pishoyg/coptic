@@ -89,28 +89,26 @@ export class Dialect {
    *   dialect names within it), in which case we try to retrieve dialect
    *   articles from other dialects and link them.
    */
-  anchoredName() {
+  *anchoredName() {
     if (this.article) {
       const a = document.createElement('a');
       a.href = this.article;
       a.target = '_blank';
       a.textContent = this.name;
-      return [a];
+      yield a;
+      return;
     }
     const words = this.name.split(' ');
-    return words
-      .map(
-        (word) =>
-          // If this word is the name of a dialect, return its anchored name.
-          // Otherwise, return the word as plain text.
-          Object.values(DIALECTS)
-            .find((d) => d.name === word)
-            ?.anchoredName() ?? [word]
-      )
-      .flatMap(
-        // Re-insert spaces between words.
-        (item, index) => (index < words.length - 1 ? [...item, ' '] : item)
-      );
+    // If this word is the name of a dialect, return its anchored name.
+    // Otherwise, return the word as plain text.
+    for (const [index, word] of words.entries()) {
+      yield* Object.values(DIALECTS)
+        .find((d) => d.name === word)
+        ?.anchoredName() ?? [word];
+      if (index < words.length - 1) {
+        yield ' ';
+      }
+    }
   }
   /**
    * @returns An HTML element, whose text content has the following format:
