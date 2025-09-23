@@ -229,30 +229,27 @@ const XOOXLES = [
 /**
  *
  */
-function spellOutDialectsInDropdown() {
-  document
-    .querySelectorAll(`#${DIALECTS_ID} .${dropdown.CLS.DROPPABLE} input`)
-    .forEach((el) => {
-      const text = el.nextSibling;
-      text.replaceWith(...d.DIALECTS[text.nodeValue].title());
-    });
+function addDropdownDialects() {
+  document.querySelector(`#${DIALECTS_ID} .${dropdown.CLS.DROPPABLE}`).append(
+    ...Object.values(d.DIALECTS).map((dialect) => {
+      const label = document.createElement('label');
+      label.append(dialect.checkbox(), ...dialect.title());
+      return label;
+    })
+  );
 }
 /**
  *
  */
-function addTooltipsAndPrettifyDialectsInList() {
-  document.querySelectorAll(`#${CHECKBOXES_ID} label`).forEach((label) => {
-    const dialect = d.DIALECTS[label.textContent];
-    dropdown.addHoverDroppable(label, ...dialect.anchoredName());
-    // Replace the code with a prettified version.
-    Array.from(label.childNodes)
-      .find(
-        (child) =>
-          child.nodeType === Node.TEXT_NODE &&
-          child.textContent === dialect.code
-      )
-      .replaceWith(dialect.siglum());
-  });
+function addListDialects() {
+  document.querySelector(`#${DIALECTS_ID} #${CHECKBOXES_ID}`).append(
+    ...Object.values(d.DIALECTS).map((dialect) => {
+      const label = document.createElement('label');
+      label.append(dialect.checkbox(), dialect.siglum());
+      dropdown.addHoverDroppable(label, ...dialect.anchoredName());
+      return label;
+    })
+  );
 }
 /**
  *
@@ -271,36 +268,33 @@ function maybeShowWiki() {
  */
 async function main() {
   maybeShowWiki();
-  // TODO: (#0) There is some duplication between the handling of the dialect
-  // sigla in Crum, and the handling of the lexicon checkboxes. Consider
-  // deduplicating the code. Perhaps it would help to generate the checkbox
-  // elements in JavaScript instead of hardcoding them in HTML.
   // We have a drop-down element bearing the dialects (intended for small
   // screens).
-  spellOutDialectsInDropdown();
+  addDropdownDialects();
   // We also have a second dialect list outside the dropdown (intended to be
   // shown on large screens).
-  addTooltipsAndPrettifyDialectsInList();
-  // Add event listeners for hover-invoked tooltips.
-  dropdown.addEventListeners('hover');
-  // Add event listeners for click-invoked tooltips, and also capture them
-  // because we use them below.
-  const dropdownDialects = dropdown.addEventListeners('click');
-  logger.ensure(dropdownDialects.length === 1); // Expect a single such element.
+  addListDialects();
+  const dropDialects = document.querySelectorAll(
+    `#${DIALECTS_ID} .${dropdown.CLS.DROP}`
+  );
+  // Validate dropdown dialects, regardless of whether or not we end up using
+  // them.
+  logger.ensure(dropDialects.length === 1);
   if (d.setToDefaultIfUnset()) {
     // In order to alert the user to the fact that dialect selection has
     // changed, we make sure the dialect list is visible.
     // NOTE: This step should precede the construction of the highlighter, so
     // that the selected dialects will be visible to the highlighter during its
     // initialization.
-    dropdownDialects[0].show();
+    dropDialects[0]?.click();
   }
   const highlighter = new highlight.Highlighter(
+    // Retrieve the boxes created above.
     Array.from(document.querySelectorAll(`#${DIALECTS_ID} input`))
   );
   SearchResult.init(highlighter);
   // Initialize searchers.
-  // TODO: (#0) You initialize three different Form and Xooxle objects, and many
+  // TODO: (#0) You initialize several Form and Xooxle objects, and many
   // of elements are shared, which implies that some of the listeners will be
   // registered multiple times. As of the time of writing, the following
   // listeners (and potentially others) are registered redundantly:
@@ -325,9 +319,15 @@ async function main() {
       new xooxle.Xooxle(json, form, xoox.searchResultType);
     })
   );
-  // Initialize collapsible elements.
+  // Add event listeners for collapsibles.
   collapse.addEventListenersForSiblings(true);
+  // Add event listeners for tooltips.
+  dropdown.addEventListeners('hover');
+  dropdown.addEventListeners('click');
+  // Create the help panel.
   help.makeHelpPanel(highlighter);
+  // Add event listener for reports.
+  // TODO: (#203) This belongs in the (future) header module.
   document.getElementById(REPORTS_ID).addEventListener('click', header.reports);
 }
 await main();
