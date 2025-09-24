@@ -1,22 +1,52 @@
-/* Styling for the Bible index. */
-.index-book-chapter-list a {
-  margin-left: 5px;
-}
+/* Styling for a Bible chapter. */
 
-body.bible h4 {
+.title {
   text-align: center;
 }
 
-body {
+table {
+  /* Break long words. */
   overflow-wrap: break-word;
   word-break: break-word;
 }
 
-th,
-td {
+td,
+th {
   padding: 6px;
 }
 
-tr:not(:first-child) td:not(:first-child) {
-  border-left: 1px solid #ccc;
+tr {
+  /* Create a positioning context for the ::after pseudo-element. */
+  position: relative;
+}
+
+tr::after {
+  content: ''; /* A pseudo-element needs content to exist. */
+  position: absolute;
+  bottom: 0; /* Position it at the very bottom of the row. */
+
+  /* To center the 80% line, we push it 10% from the left. */
+  left: 10%;
+  width: 80%; /* Set the line's width. */
+  height: 1px; /* This is the thickness of your border. */
+  background-color: #ccc; /* This is the color of your border. */
+}
+
+.checkboxes {
+  display: none; /* Disabled by default! TODO: (#179) Show on all screens. */
+  margin-top: 10px;
+  font-style: italic;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+@media (width <= 500px) {
+  .checkboxes {
+    display: flex; /* Establish a flex container. */
+  }
+}
+
+.checkboxes label {
+  flex: 1; /* Allow each label to grow and take up equal space. */
+  text-align: center; /* Optional: centers text inside the growing label. */
 }

@@ -39,7 +39,6 @@ ICON: str = file(SITE_DIR, "img/icon/icon-circle.png")
 
 DROPDOWN_CSS: str = file(SITE_DIR, "dropdown.css")
 SHARED_CSS: str = file(SITE_DIR, "style.css")
-BIBLE_CSS: str = file(BIBLE_DIR, "style.css")
 
 
 def server(path: str) -> str:

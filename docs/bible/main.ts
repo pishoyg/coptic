@@ -1,54 +1,46 @@
-/** Main function for a Bible chapter.
- *
- * TODO: (#0) This file is used for both `index.html`, as well as individual
- * chapter files. Split i!
- * */
+/* Main function for a Bible chapter. */
 
-import * as collapse from '../collapse.js';
+import * as highlight from './highlight.js';
 import * as browser from '../browser.js';
-import * as logger from '../logger.js';
 import * as html from '../html.js';
+import * as cls from './cls.js';
 
-const BOOK_PARAM = 'book';
+/**
+ * @param link
+ */
+function openLink(link: 'next' | 'prev'): void {
+  const href: string | null = browser.getLinkHref(link);
+  if (!href) {
+    return;
+  }
+  const url = new URL(href);
+  highlight.setParam(url);
+  browser.open(url.toString(), false);
+}
 
 /**
  * Add Bible event listeners.
+ * TODO: (#349) Use proper shortcuts with a help panel.
  */
 function addEventListeners(): void {
   document.addEventListener('keydown', (event: KeyboardEvent) => {
     switch (event.key) {
       case 'n':
-        browser.openNextLink();
+        openLink('next');
         break;
       case 'p':
-        browser.openPrevLink();
+        openLink('prev');
         break;
       case 'X':
         browser.openSearchLink();
+        break;
+      case 'r':
+        highlight.reset();
         break;
       default:
       // For any other key, do nothing.
     }
   });
-}
-
-/**
- * If the book query parameter is present, click on the title of the given
- * book to expand its content, and scroll to it.
- */
-function maybeGoToBook(): void {
-  const url: URL = new URL(window.location.href);
-  const click: string | null = url.searchParams.get(BOOK_PARAM);
-  if (!click) {
-    return;
-  }
-  const elem = document.getElementById(click);
-  if (!elem) {
-    logger.error(click, 'not found!');
-    return;
-  }
-  elem.click();
-  elem.scrollIntoView({ behavior: 'smooth' });
 }
 
 /**
@@ -58,9 +50,12 @@ function main(): void {
   // Normalizing the tree is necessary for some of our text search logic to work
   // correctly.
   html.normalize();
-  collapse.addEventListenersForSiblings();
+  highlight.populateBoxes();
+  highlight.addEventListeners();
+  document
+    .querySelector(`.${cls.TITLE}`)!
+    .insertAdjacentElement('afterend', highlight.form());
   addEventListeners();
-  maybeGoToBook();
 }
 
 main();

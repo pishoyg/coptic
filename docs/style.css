@@ -102,6 +102,10 @@ input:not(.android .card) {
   font-family: Antinoou, sans-serif;
 }
 
+input[type='checkbox'] {
+  accent-color: #3498db;
+}
+
 table {
   border-collapse: collapse;
   width: 100%;

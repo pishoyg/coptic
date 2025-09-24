@@ -18,10 +18,10 @@ export function open(url: string | null | undefined, external = true): void {
 
 /**
  *
- * @param rel - The name of the link (such as `next`, `prev`, or `search`).
+ * @param rel - The name of the link.
  * @returns The `href` property of the link if found, or null if not found.
  */
-export function getLinkHref(rel: string): string | null {
+export function getLinkHref(rel: 'next' | 'prev' | 'search'): string | null {
   const linkElement = document.querySelector(`link[rel="${rel}"]`);
   return linkElement instanceof HTMLLinkElement ? linkElement.href : null;
 }
@@ -32,7 +32,7 @@ export function getLinkHref(rel: string): string | null {
  * @param target - The value of the `target` parameter to pass to `window.open`.
  */
 export function openLinkHref(
-  rel: string,
+  rel: 'next' | 'prev' | 'search',
   target: '_self' | '_blank' = '_self'
 ): void {
   const href = getLinkHref(rel);

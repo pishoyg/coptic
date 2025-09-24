@@ -45,12 +45,17 @@ _VERSE_PREFIX: re.Pattern[str] = re.compile(r"^\(([^)]+)\)")
 # NOTE: The Bible directory structure is flat, so "index.html" is reachable
 # from an `href` to `./`, regardless of which file you're looking at.
 _SEARCH = "./"
-# NOTE: We expect this JavaScript file to be in the same directory as the HTML.
-_SCRIPT = "main.js"
+_CHAPTER_JS: str = "main.js"  # JavaScript for a chapter.
+_INDEX_JS: str = "bible.js"  # JavaScript for the index.
+_CHAPTER_CSS: str = "style.css"  # CSS for a chapter.
+_INDEX_CSS: str = "bible.css"  # CSS for the index.
+for artifact in [_CHAPTER_JS, _INDEX_JS, _CHAPTER_CSS, _INDEX_CSS]:
+    assert os.path.isfile(os.path.join(paths.BIBLE_DIR, artifact))
+
 
 _INDEX = "index.html"
-_CHAPTER_CLASS = "bible"
-_INDEX_CLASS = "bible_index"
+_CHAPTER_CLASS = "chapter"
+_INDEX_CLASS = "bible"
 
 _BOOK_TITLE: str = "ⲡⲓϪⲱⲙ ⲉⲑⲞⲩⲁⲃ | Coptic Bible"
 _AUTHOR = "Saint Shenouda The Archimandrite Coptic Society"
@@ -355,7 +360,7 @@ class Chapter(Item):
 
     @typing.override
     def header(self) -> str:
-        return f'<h4 id="{self.id()}">{self.title()}</h4>'
+        return f'<h4 class="title" id="{self.id()}">{self.title()}</h4>'
 
 
 class Book(Item):
@@ -599,6 +604,8 @@ class HTMLBuilder:
         nxt: str = "",
         prv: str = "",
         is_epub: bool = False,
+        scripts: list[str] | None = None,
+        css: list[str] | None = None,
     ) -> abc.Generator[str]:
         return page.html_aux(
             page.html_head(
@@ -606,13 +613,9 @@ class HTMLBuilder:
                 search="" if is_epub else _SEARCH,
                 next_href=nxt,
                 prev_href=prv,
-                scripts=[] if is_epub else [_SCRIPT],
+                scripts=scripts or [],
                 epub=is_epub,
-                css=(
-                    []
-                    if is_epub
-                    else [os.path.relpath(paths.BIBLE_CSS, paths.BIBLE_DIR)]
-                ),
+                css=css or [],
             ),
             page_class,
             "".join(body),
@@ -650,10 +653,6 @@ class HTMLBuilder:
             yield "</div>"
 
     def write_html(self, bible: Bible, langs: list[str]) -> None:
-        # NOTE: We assume that the JavaScript file exists. We don't generate it
-        # or copy it.
-        assert os.path.isfile(os.path.join(paths.BIBLE_DIR, _SCRIPT))
-
         def write_chapter(chapter: Chapter) -> None:
             self.__write_html_chapter(chapter, langs)
 
@@ -664,6 +663,8 @@ class HTMLBuilder:
             self.__toc_body_aux(bible, is_epub=False),
             title=_BOOK_TITLE,
             page_class=_INDEX_CLASS,
+            scripts=[_INDEX_JS],
+            css=[_INDEX_CSS],
         )
         index_path: str = os.path.join(paths.BIBLE_DIR, _INDEX)
         file.writelines(toc, index_path)
@@ -683,6 +684,8 @@ class HTMLBuilder:
             page_class=_CHAPTER_CLASS,
             nxt=nxt.href(is_epub=False) if nxt else "",
             prv=prv.href(is_epub=False) if prv else "",
+            scripts=[_CHAPTER_JS],
+            css=[_CHAPTER_CSS],
         )
         path: str = os.path.join(paths.BIBLE_DIR, chapter.path(is_epub=False))
         file.writelines(out, path, make_dir=True)
@@ -821,7 +824,7 @@ class TableBuilder(HTMLBuilder):
         chapter: Chapter,  # dead: disable
     ) -> abc.Generator[str]:
         del chapter
-        yield '<table class="chapter">'
+        yield '<table class="verses">'
 
     @typing.override
     def chapter_end(
