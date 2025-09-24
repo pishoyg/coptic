@@ -114,7 +114,7 @@ class CrumSearchResult extends SearchResult {
    * @returns Bucket number.
    */
   override bucket(row: HTMLTableRowElement): DialectMatch {
-    const active: d.DIALECT[] | undefined = d.active();
+    const active: d.DIALECT[] | undefined = d.manager.active();
     if (!active?.length) {
       // There is no dialect highlighting. All results fall in the first bucket.
       return 0;
@@ -172,7 +172,7 @@ class KELLIASearchResult extends SearchResult {
    * @returns Bucket number.
    */
   override bucket(row: HTMLTableRowElement): number {
-    const active: d.DIALECT[] | undefined = d.active();
+    const active: d.DIALECT[] | undefined = d.manager.active();
     if (!active?.length) {
       // There is no dialect highlighting. All results fall in the first bucket.
       return 0;

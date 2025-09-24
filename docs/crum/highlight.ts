@@ -73,7 +73,7 @@ export class Highlighter {
     // 3. Keyboard shortcuts
     // NOTE: Make sure that checkboxes are updated whenever dialect highlighting
     // changes, regardless of the source of the change.
-    const active: d.DIALECT[] | undefined = d.active();
+    const active: d.DIALECT[] | undefined = d.manager.active();
 
     if (!active?.length) {
       // No dialect highlighting whatsoever.
@@ -254,7 +254,7 @@ export class Highlighter {
    */
   reset(): void {
     dev.reset();
-    d.reset();
+    d.manager.reset();
     this.update();
 
     // Remove the URL fragment.
@@ -299,7 +299,7 @@ export class Highlighter {
    * @param dialect - A dialect code.
    */
   toggleDialect(dialect: d.DIALECT): void {
-    d.toggle(dialect);
+    d.manager.toggle(dialect);
     this.updateDialects();
   }
 

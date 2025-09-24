@@ -4,12 +4,7 @@ import * as iam from '../iam.js';
 import * as help from '../help.js';
 import * as highlight from './highlight.js';
 import * as str from '../str.js';
-
-// D is the name of the local-storage variable storing the list of active
-// dialects. This is the source of truth for dialect highlighting. Updating
-// dialect highlighting should happen by updating this local storage variable.
-const D = 'd';
-const SEPARATOR = ',';
+import * as dialecter from '../dialect.js';
 
 type SingleCharDialect =
   | 'S'
@@ -295,67 +290,9 @@ export const ANY_DIALECT_QUERY: string = css.classQuery(
   ...Object.keys(DIALECTS)
 );
 
-/**
- * @returns The list of active dialects.
- * If dialect highlighting has never been configured, return undefined.
- * If previously selected dialects have been deselected, return the empty array.
- *
- * NOTE: The local storage variable distinguishes between the two following
- * values:
- * - null: Dialect highlighting has never been configured. This results in
- *   a response of `undefined`.
- * - the empty string: Dialect highlighting was previously configured, and now
- *   all dialects are disabled. This results in a response of an empty array.
- * We only use the default value in the former case.
- */
-export function active(): DIALECT[] | undefined {
-  const d: string | null = localStorage.getItem(D);
-  if (d === null) {
-    // Dialect highlighting has never been configured.
-    return undefined;
-  }
-  if (d === '') {
-    // Dialect highlighting was previously configured, and now all dialects are
-    // disabled.
-    // NOTE: We return the empty array directly, instead of attempting to split
-    // the empty string, because ''.split(SEPARATOR) = [''].
-    return [];
-  }
-  return d.split(SEPARATOR) as DIALECT[];
-}
-
-/**
- * @param dialects - Set current list of active dialects.
- */
-export function setActive(dialects: DIALECT[]): void {
-  localStorage.setItem(D, dialects.join(SEPARATOR));
-}
-
-/**
- * Set the list of active dialects to [].
- * NOTE: We intentionally use the empty list, instead of deleting the local
- * storage variable, in order to distinguish between the cases when:
- * 1. Dialect highlighting was previously used and then reset.
- * 2. Dialect highlighting was never used.
- */
-export function reset(): void {
-  setActive([]);
-}
-
-/**
- * @param dialect - Dialect to toggle.
- */
-export function toggle(dialect: DIALECT): void {
-  const act: Set<DIALECT> = new Set<DIALECT>(active());
-
-  if (act.has(dialect)) {
-    act.delete(dialect);
-  } else {
-    act.add(dialect);
-  }
-
-  setActive(Array.from(act));
-}
+// Our local-storage variable used to store active Crum dialects is called 'd'.
+export const manager: dialecter.Manager<DIALECT> =
+  new dialecter.Manager<DIALECT>('d');
 
 /**
  * Set the list of active dialects to a given default, if dialects are not
@@ -364,10 +301,10 @@ export function toggle(dialect: DIALECT): void {
  * @returns Whether defaults have been set.
  */
 export function setToDefaultIfUnset(): boolean {
-  if (localStorage.getItem(D) !== null) {
+  if (manager.active() !== undefined) {
     // Dialects have already been configured.
     return false;
   }
-  setActive(DEFAULT);
+  manager.setActive(DEFAULT);
   return true;
 }
