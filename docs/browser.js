@@ -16,7 +16,7 @@ export function open(url, external = true) {
 }
 /**
  *
- * @param rel - The name of the link (such as `next`, `prev`, or `search`).
+ * @param rel - The name of the link.
  * @returns The `href` property of the link if found, or null if not found.
  */
 export function getLinkHref(rel) {
