@@ -538,11 +538,6 @@ footer {
   display: none;
 }
 
-/*************** Bible ***************/
-.index-book-chapter-list a {
-  margin-left: 5px;
-}
-
 /* stylelint-disable no-descending-specificity */
 table.chapter tr td {
   vertical-align: top;

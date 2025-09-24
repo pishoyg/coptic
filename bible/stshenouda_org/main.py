@@ -42,8 +42,6 @@ _VERSE_PREFIX: re.Pattern[str] = re.compile(r"^\(([^)]+)\)")
 
 # Output parameters
 
-_OUTPUT_DIR: str = os.path.join(paths.SITE_DIR, "bible/")
-
 # NOTE: The Bible directory structure is flat, so "index.html" is reachable
 # from an `href` to `./`, regardless of which file you're looking at.
 _SEARCH = "./"
@@ -610,6 +608,11 @@ class HTMLBuilder:
                 prev_href=prv,
                 scripts=[] if is_epub else [_SCRIPT],
                 epub=is_epub,
+                css=(
+                    []
+                    if is_epub
+                    else [os.path.relpath(paths.BIBLE_CSS, paths.BIBLE_DIR)]
+                ),
             ),
             page_class,
             "".join(body),
@@ -646,13 +649,13 @@ class HTMLBuilder:
                 yield chapter.anchor(is_epub)
             yield "</div>"
 
-    def write_html(self, bible: Bible, langs: list[str], subdir: str) -> None:
+    def write_html(self, bible: Bible, langs: list[str]) -> None:
         # NOTE: We assume that the JavaScript file exists. We don't generate it
         # or copy it.
-        assert os.path.isfile(os.path.join(_OUTPUT_DIR, subdir, _SCRIPT))
+        assert os.path.isfile(os.path.join(paths.BIBLE_DIR, _SCRIPT))
 
         def write_chapter(chapter: Chapter) -> None:
-            self.__write_html_chapter(chapter, langs, subdir)
+            self.__write_html_chapter(chapter, langs)
 
         with concur.thread_pool_executor() as executor:
             list(executor.map(write_chapter, bible.chain_chapters()))
@@ -662,14 +665,13 @@ class HTMLBuilder:
             title=_BOOK_TITLE,
             page_class=_INDEX_CLASS,
         )
-        index_path: str = os.path.join(_OUTPUT_DIR, subdir, _INDEX)
+        index_path: str = os.path.join(paths.BIBLE_DIR, _INDEX)
         file.writelines(toc, index_path)
 
     def __write_html_chapter(
         self,
         chapter: Chapter,
         langs: list[str],
-        subdir: str,
     ) -> None:
 
         nxt: Chapter | None = chapter.next()
@@ -682,11 +684,7 @@ class HTMLBuilder:
             nxt=nxt.href(is_epub=False) if nxt else "",
             prv=prv.href(is_epub=False) if prv else "",
         )
-        path: str = os.path.join(
-            _OUTPUT_DIR,
-            subdir,
-            chapter.path(is_epub=False),
-        )
+        path: str = os.path.join(paths.BIBLE_DIR, chapter.path(is_epub=False))
         file.writelines(out, path, make_dir=True)
 
     def write_epub(self, bible: Bible, langs: list[str], subdir: str) -> None:
@@ -748,7 +746,7 @@ class HTMLBuilder:
         kindle.add_item(epub.EpubNav())
 
         path: str = os.path.join(
-            _OUTPUT_DIR,
+            paths.BIBLE_DIR,
             "epub",
             subdir,
             f"{identifier.lower()}.epub",
@@ -767,13 +765,13 @@ class HTMLBuilder:
         fmt: typing.Literal["html", "epub"],
         bible: Bible,
         langs: list[str],
-        subdir: str,
+        subdir: str = "",
     ) -> None:
-        {"html": self.write_html, "epub": self.write_epub}[fmt](
-            bible,
-            langs,
-            subdir,
-        )
+        if fmt == "html":
+            self.write_html(bible, langs)
+            return
+        assert fmt == "epub"
+        self.write_epub(bible, langs, subdir)
 
 
 class FlowBuilder(HTMLBuilder):
@@ -879,7 +877,7 @@ def main():
     ]
 
     with concur.thread_pool_executor() as executor:
-        list(executor.map(lambda args: HTMLBuilder.write(*args), tasks))
+        _ = list(executor.map(lambda args: HTMLBuilder.write(*args), tasks))
 
 
 if __name__ == "__main__":

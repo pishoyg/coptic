@@ -29,7 +29,7 @@ CRUM_JS: str = file(LEXICON_DIR, "main.js")
 CRUM_EXPLANATORY_DIR: str = directory(LEXICON_DIR, "explanatory")
 CRUM_SCAN_DIR: str = directory(LEXICON_DIR, "crum")
 DAWOUD_DIR: str = directory(SITE_DIR, "dawoud")
-BIBLE_DIR: str = directory(SITE_DIR, "bible")  # dead: disable
+BIBLE_DIR: str = directory(SITE_DIR, "bible")
 
 # Anki is not persisted to source control (and unlikely to ever be), so the
 # directory is not guaranteed to exist.
@@ -39,6 +39,7 @@ ICON: str = file(SITE_DIR, "img/icon/icon-circle.png")
 
 DROPDOWN_CSS: str = file(SITE_DIR, "dropdown.css")
 SHARED_CSS: str = file(SITE_DIR, "style.css")
+BIBLE_CSS: str = file(BIBLE_DIR, "style.css")
 
 
 def server(path: str) -> str:
