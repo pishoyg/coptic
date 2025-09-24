@@ -140,7 +140,7 @@ export class Shortcut {
    * @returns
    */
   executable() {
-    return this.available.includes(iam.where());
+    return this.available.some(iam.amI);
   }
   /**
    *
