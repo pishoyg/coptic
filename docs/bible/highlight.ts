@@ -1,9 +1,5 @@
 /**
  * Package highlight defines the Crum dialect and developer-mode highlighting.
- *
- * TODO: (#179) We desire to implement highlighting for the Bible as well. Move
- * shared functionality to an external package, and keep Lexicon-specific logic
- * in this file.
  */
 import * as css from '../css.js';
 import * as d from './dialect.js';
@@ -14,92 +10,55 @@ document.head.appendChild(STYLE);
 const SHEET: CSSStyleSheet = STYLE.sheet!;
 const RULE_IDX: number = SHEET.cssRules.length;
 
-// PARAM is the name of the query parameter holding the set of active dialects.
-const PARAM = 'd';
-const DELIM = ',';
-
-const CHECKBOXES: HTMLInputElement[] = Array.from(
+// DIALECTS bears the dialects present in this page.
+// Each page has a subset of the dialects. For highlighting purposes, only this
+// subset is of interest.
+// Any verse should contain all the languages in this page.
+const DIALECTS: d.DIALECT[] = Array.from(
   document
-    .querySelector(`table.${cls.VERSES} tr`)!
-    .querySelectorAll<HTMLTableCellElement>('td')
-).map((td: HTMLTableCellElement): HTMLInputElement => {
-  const box: HTMLInputElement = document.createElement('input');
-  box.type = 'checkbox';
-  box.name = d.DIALECTS.find((dialect: d.DIALECT) =>
-    td.classList.contains(dialect)
-  )!;
-  return box;
-});
+    .querySelector(`.${cls.VERSE}`)!
+    .querySelectorAll<HTMLTableCellElement>(`.${cls.LANGUAGE}`)
+).map(
+  (td: HTMLTableCellElement): d.DIALECT =>
+    d.DIALECTS.find((dialect: d.DIALECT) => td.classList.contains(dialect))!
+);
+
+const CHECKBOXES: HTMLInputElement[] = DIALECTS.map(
+  (dialect: d.DIALECT): HTMLInputElement => {
+    const box: HTMLInputElement = document.createElement('input');
+    box.type = 'checkbox';
+    box.name = dialect;
+    return box;
+  }
+);
 
 /**
  * Update dialect display.
  */
-export function updateDisplay(): void {
+export function update(): void {
+  const active: d.DIALECT[] | undefined = d.manager.active();
+  // Set checkboxes.
+  CHECKBOXES.forEach((c: HTMLInputElement): void => {
+    c.checked = !!active?.includes(c.name as d.DIALECT);
+  });
+
   // Delete the old rule.
   if (RULE_IDX < SHEET.cssRules.length) {
     SHEET.deleteRule(RULE_IDX);
   }
-  const inactive: d.DIALECT[] = CHECKBOXES.filter(
-    (c: HTMLInputElement): boolean => !c.checked
-  ).map((c: HTMLInputElement): d.DIALECT => c.name as d.DIALECT);
 
-  if (inactive.length === 0 || inactive.length === CHECKBOXES.length) {
-    // If the dialects are all on or all off, don't add a new rule.
+  const inactive: d.DIALECT[] = DIALECTS.filter(
+    (dialect: d.DIALECT) => !active?.includes(dialect)
+  );
+  if (inactive.length === 0 || inactive.length === DIALECTS.length) {
+    // Dialects are all off or all on. Again, nothing to do!
     return;
   }
+
   SHEET.insertRule(
     `${css.classQuery(...inactive)} { display: none; }`,
     RULE_IDX
   );
-}
-
-/**
- *
- * @param url
- */
-export function setParam(url: URL): void {
-  const active: string[] = CHECKBOXES.filter((c) => c.checked).map(
-    (c: HTMLInputElement): string => c.name
-  );
-  if (!active.length) {
-    return;
-  }
-  url.searchParams.set(PARAM, active.join(DELIM));
-}
-
-/**
- * Reset display, and remove the URL fragment if present.
- */
-export function reset(): void {
-  CHECKBOXES.forEach((c: HTMLInputElement): void => {
-    c.checked = false;
-  });
-  updateDisplay();
-
-  // Remove the URL fragment.
-  // NOTE: We only reload when we actually detect an anchor (hash) or text
-  // fragment in order to minimize disruption. Reloading the page causes a
-  // small jitter.
-  // NOTE: `url.hash` doesn't include text fragments (`#:~:text=`),
-  // which is why we need to use `performance.getEntriesByType('navigation')`.
-  // However, the latter doesn't always work, for some reason. In our
-  // experience, it can retrieve the text fragment once, but if you reset and
-  // then add a text fragment manually, it doesn't recognize it! This is not a
-  // huge issue right now, so we aren't prioritizing fixing it!
-
-  const url = new URL(window.location.href);
-  if (
-    !url.hash &&
-    !performance.getEntriesByType('navigation')[0]?.name.includes('#')
-  ) {
-    return;
-  }
-
-  url.hash = '';
-  window.history.replaceState('', '', url.toString());
-  // Reload to get rid of the highlighting caused by the hash / fragment,
-  // if any.
-  window.location.reload();
 }
 
 /**
@@ -108,38 +67,18 @@ export function reset(): void {
 export function addEventListeners(): void {
   // A click on a checkbox triggers a dialect display update.
   CHECKBOXES.forEach((checkbox: HTMLInputElement): void => {
-    checkbox.addEventListener('click', updateDisplay);
+    checkbox.addEventListener('click', () => {
+      d.manager.toggle(checkbox.name as d.DIALECT);
+      update();
+    });
   });
-}
-
-/**
- *
- */
-export function populateBoxes(): void {
-  const url: URL = new URL(window.location.href);
-  const active: Set<d.DIALECT> = new Set<d.DIALECT>(
-    url.searchParams
-      .get(PARAM)
-      ?.split(DELIM)
-      .map((x) => x as d.DIALECT) ??
-      // If there is no parameters, all dialects are active.
-      d.DIALECTS
-  );
-  CHECKBOXES.forEach((c: HTMLInputElement): void => {
-    c.checked = active.has(c.name as d.DIALECT);
-  });
-  // Delete the URL parameters.
-  url.searchParams.delete(PARAM);
-  window.history.replaceState('', '', url.toString());
-  // Update display.
-  updateDisplay();
 }
 
 /**
  * @returns
  */
 export function form(): HTMLElement {
-  // TODO: (#179) Use a try on small screens, but feel free to spell out the
+  // TODO: (#179) Use a tray on small screens, but feel free to spell out the
   // checkboxes on a larger screen.
   const div: HTMLDivElement = document.createElement('div');
   div.append(

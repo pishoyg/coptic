@@ -1,4 +1,5 @@
 /** Package dialect defines Bible dialects. */
+import * as dialect from '../dialect.js';
 
 export type DIALECT =
   | 'Bohairic'
@@ -24,3 +25,7 @@ export const DIALECTS: DIALECT[] = [
   'DialectP',
   'Lycopolitan',
 ];
+
+export const manager: dialect.Manager<DIALECT> = new dialect.Manager<DIALECT>(
+  'bd'
+);

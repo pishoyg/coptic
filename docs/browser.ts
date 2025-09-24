@@ -180,3 +180,33 @@ export function click(id: string): void {
 export function focus(id: string): void {
   document.getElementById(id)?.focus();
 }
+
+/**
+ *
+ */
+export function removeFragment(): void {
+  // Remove the URL fragment.
+  // NOTE: We only reload when we actually detect an anchor (hash) or text
+  // fragment in order to minimize disruption. Reloading the page causes a
+  // small jitter.
+  // NOTE: `url.hash` doesn't include text fragments (`#:~:text=`),
+  // which is why we need to use `performance.getEntriesByType('navigation')`.
+  // However, the latter doesn't always work, for some reason. In our
+  // experience, it can retrieve the text fragment once, but if you reset and
+  // then add a text fragment manually, it doesn't recognize it! This is not a
+  // huge issue right now, so we aren't prioritizing fixing it!
+
+  const url = new URL(window.location.href);
+  if (
+    !url.hash &&
+    !performance.getEntriesByType('navigation')[0]?.name.includes('#')
+  ) {
+    return;
+  }
+
+  url.hash = '';
+  window.history.replaceState('', '', url.toString());
+  // Reload to get rid of the highlighting caused by the hash / fragment,
+  // if any.
+  window.location.reload();
+}
