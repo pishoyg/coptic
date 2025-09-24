@@ -4,6 +4,9 @@
  * You can use iam to find out where in the website your code is running.
  */
 
+/**
+ * Where represents an identity.
+ */
 export type Where =
   | 'UNKNOWN'
   | 'note' // A Crum word.
@@ -12,42 +15,20 @@ export type Where =
   | 'index' // A Crum index page.
   | 'index_index'; // A Crum index index page.
 
-enum CLS {
-  // LEXICON is a class of the <body> tag of the Lexicon page.
-  LEXICON = 'lexicon',
-}
-
-declare const NOTE: boolean;
+// For Anki, we define a global const variable in the Anki JavaScript. Thus we
+// can distinguish whether we're running on Anki by whether this variable is
+// defined.
+// For other types of pages, we add the page identity as a class in the <body>
+// tag.
 declare const ANKI: boolean;
-declare const INDEX: boolean;
-declare const INDEX_INDEX: boolean;
-
-/**
- * @returns The identity of the page where the code is executed.
- */
-export function where(): Where {
-  if (typeof ANKI !== 'undefined') {
-    return 'anki';
-  }
-  if (document.body.classList.contains(CLS.LEXICON)) {
-    return 'lexicon';
-  }
-  if (typeof NOTE !== 'undefined') {
-    return 'note';
-  }
-  if (typeof INDEX !== 'undefined') {
-    return 'index';
-  }
-  if (typeof INDEX_INDEX !== 'undefined') {
-    return 'index_index';
-  }
-  return 'UNKNOWN';
-}
 
 /**
  * @param w - An identity.
  * @returns Whether the code is running in a page with this identity.
  */
 export function amI(w: Where): boolean {
-  return where() === w;
+  if (w === 'anki') {
+    return typeof ANKI !== 'undefined';
+  }
+  return document.body.classList.contains(w);
 }

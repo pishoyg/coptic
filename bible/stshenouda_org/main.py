@@ -51,8 +51,8 @@ _SEARCH = "./"
 _SCRIPT = "main.js"
 
 _INDEX = "index.html"
-_CHAPTER_CLASS = "BIBLE"
-_INDEX_CLASS = "BIBLE_INDEX"
+_CHAPTER_CLASS = "bible"
+_INDEX_CLASS = "bible_index"
 
 _BOOK_TITLE: str = "ⲡⲓϪⲱⲙ ⲉⲑⲞⲩⲁⲃ | Coptic Bible"
 _AUTHOR = "Saint Shenouda The Archimandrite Coptic Society"
@@ -136,7 +136,7 @@ class Verse:
         if not self.num:
             # It's often the case that a chapter contains a title
             # at the very beginning. In such cases, there is no verse number.
-            # TODO: (#360) Handle invalid verse IDs!
+            # TODO: (#553) Handle invalid verse IDs!
             (log.warn if first else log.error)(
                 "Unable to infer number for verse:",
                 self,
@@ -194,7 +194,7 @@ class Verse:
         s: re.Match[str] | None = _VERSE_PREFIX.search(t)
         num: str = s.groups()[0] if s else ""
         if not num.isdigit():
-            # TODO: (#360) Handle invalid verse IDs!
+            # TODO: (#553) Handle invalid verse IDs!
             log.error("Inferred a non-numerical verse number from", t)
             num = ""
         return num
@@ -285,7 +285,7 @@ class Chapter(Item):
             if count > 1
         ]
         if dupes:
-            # TODO: (#360) Handle duplicate verse IDs!
+            # TODO: (#553) Handle duplicate verse IDs!
             log.error(
                 "Chapter",
                 self.num,
@@ -605,14 +605,14 @@ class HTMLBuilder:
         return page.html_aux(
             page.html_head(
                 title=title,
-                page_class=page_class,
                 search="" if is_epub else _SEARCH,
                 next_href=nxt,
                 prev_href=prv,
                 scripts=[] if is_epub else [_SCRIPT],
                 epub=is_epub,
             ),
-            *body,
+            page_class,
+            "".join(body),
         )
 
     # _build_toc_body_aux builds the contents of the <body> element for the

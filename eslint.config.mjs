@@ -198,12 +198,12 @@ export default tseslint.config(
       },
       globals: {
         ...globals.browser,
-        // TODO: (#372) Delete this set of constants once classes are defined in
-        // the HTML not JavaScript.
+        // ANKI is a global variable added to the version of the JavaScript that
+        // runs on Anki. This allows our JavaScript to distinguish whether or
+        // not it's running on Anki.
+        // Since it gets define in the Anki code, and accessed by packages that
+        // can't access its definition, it needs to be declared as a global.
         ANKI: true,
-        NOTE: true,
-        INDEX: true,
-        INDEX_INDEX: true,
       },
     },
     settings: {

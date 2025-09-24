@@ -5,19 +5,19 @@ from collections import abc
 
 from utils import ensure, paths
 
-_CHARSET_TAG = """
+_CHARSET_TAG: str = """
   <meta charset="utf-8">
 """
 
-_VIEWPORT_TAG = """
+_VIEWPORT_TAG: str = """
 <meta name="viewport" content="width=device-width, initial-scale=1">
 """
 
-_ICON_TAG = f"""
+_ICON_TAG: str = f"""
   <link rel="icon" type="image/x-icon" href="{paths.server(paths.ICON)}">
 """
 
-_GOOGLE_TAG = """
+_GOOGLE_TAG: str = """
   <script async src=
   "https://www.googletagmanager.com/gtag/js?id=G-VCVZFDFZR3"></script>
   <script>
@@ -29,7 +29,7 @@ _GOOGLE_TAG = """
 """
 
 LINE_BREAK: str = "<br>"
-HORIZONTAL_RULE = "<hr>"
+HORIZONTAL_RULE: str = "<hr>"
 _SELF_CLOSING_LINE_BREAK: str = "<br/>"
 
 
@@ -65,7 +65,6 @@ def no_line_breaks(htm: str) -> str:
 # search links.
 def html_head(
     title: str,
-    page_class: str = "",
     search: str = "",
     next_href: str = "",
     prev_href: str = "",
@@ -75,7 +74,6 @@ def html_head(
 ) -> str:
     assert title
     if epub:
-        assert not page_class
         assert not search
         assert not next_href
         assert not prev_href
@@ -85,7 +83,6 @@ def html_head(
     return "".join(
         html_head_aux(
             title,
-            page_class,
             search,
             next_href,
             prev_href,
@@ -98,7 +95,6 @@ def html_head(
 
 def html_head_aux(
     title: str,
-    page_class: str,
     search: str,
     next_href: str,
     prev_href: str,
@@ -110,7 +106,6 @@ def html_head_aux(
 
     Args:
         title: Page title.
-        page_class: Classes to add to the <body> tag.
         search: Link to the search page. See
             https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel#search.
         next_href: Link to the next page. See
@@ -122,8 +117,7 @@ def html_head_aux(
             NOTE: The shared CSS file is included by default.
         epub: Whether the output will be used in an EPUB.
             NOTE: If true, the following arguments must be empty, as they are
-            irrelevant in an EPUB: page_class, search, next_href, prev_href,
-            scripts, css.
+            irrelevant in an EPUB: search, next_href, prev_href, scripts, css.
 
     Yields:
         The HTML pieces, to be concatenated into the full HTML file.
@@ -160,22 +154,20 @@ def html_head_aux(
         yield f'<link href="{next_href}" rel="next">'
     if prev_href:
         yield f'<link href="{prev_href}" rel="prev">'
-    if page_class:
-        yield f"<script>const {page_class} = true;</script>"
     for script in scripts:
         yield f'<script src="{script}" type="module"></script>'
     yield "</head>"
 
 
-def html_aux(head: str, *body: str) -> abc.Generator[str]:
+def html_aux(head: str, iam: str, *body: str) -> abc.Generator[str]:
     yield "<!DOCTYPE html>"
     yield "<html>"
     yield head
-    yield "<body>"
+    yield f'<body class="{iam}">'
     yield from body
     yield "</body>"
     yield "</html>"
 
 
-def html(head: str, *body: str) -> str:
-    return "".join(html_aux(head, *body))
+def html(head: str, iam: str, *body: str) -> str:
+    return "".join(html_aux(head, iam, *body))

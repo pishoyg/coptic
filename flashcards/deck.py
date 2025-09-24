@@ -64,10 +64,17 @@ import genanki  # type: ignore[import-untyped]
 
 from utils import concur, ensure, file, log, page, paths, system
 
-NOTE_CLASS = "NOTE"
-ANKI_NOTE_CLASS = "ANKI"
-INDEX_CLASS = "INDEX"
-INDEX_INDEX_CLASS = "INDEX_INDEX"
+NOTE_CLASS = "note"
+INDEX_CLASS = "index"
+INDEX_INDEX_CLASS = "index_index"
+
+# _IAM_ANKI is a line of JavaScript code that can be used to distinguish whether
+# we're running on Anki.
+# Notice that this line will end up being added twice in our card template, once
+# in the front and once in the back.
+# We use `var` instead of `const` in order to avoid issues with redefining a
+# variable.
+_IAM_ANKI = "var ANKI = true;"
 
 IMG_SRC_FMT: re.Pattern[str] = re.compile(r'<img src="([^"]+)"')
 FONT_SRC_RE: re.Pattern[str] = re.compile(r"src: url\('([^']*)'\)")
@@ -147,7 +154,7 @@ class Index:
         return _to_file_name(self.title) + ".html"
 
     def write(self, dir_: str, head: str, header: str) -> None:
-        content = page.html_aux(head, header, *self.body)
+        content = page.html_aux(head, INDEX_CLASS, header, *self.body)
         path = os.path.join(dir_, self.basename())
         file.writelines(content, path, report=False)
 
@@ -196,7 +203,6 @@ class IndexIndex:
             )
             yield page.html_head(
                 title=index.title,
-                page_class=INDEX_CLASS,
                 search=self.search,
                 scripts=self.scripts,
                 prev_href=prv,
@@ -222,15 +228,15 @@ class IndexIndex:
             _ = list(m)
 
         # Write the index index!
-        head = page.html_head(
+        head: str = page.html_head(
             title=self.name,
-            page_class=INDEX_INDEX_CLASS,
             search=self.search,
             scripts=self.scripts,
             css=self.css,
         )
-        html = page.html_aux(
+        html: abc.Generator[str] = page.html_aux(
             head,
+            INDEX_INDEX_CLASS,
             *self.header,
             *self.__body_aux(),
         )
@@ -284,7 +290,6 @@ class Note:
         self.css: list[str] = css or []
         self.head: str = page.html_head(
             title=title,
-            page_class=NOTE_CLASS,
             search=search,
             next_href=nxt,
             prev_href=prv,
@@ -297,6 +302,7 @@ class Note:
     def __html_aux(self) -> abc.Generator[str]:
         return page.html_aux(
             self.head,
+            NOTE_CLASS,
             '<div class="front" id="front">',
             self.front,
             "</div>",
@@ -471,13 +477,7 @@ class Deck:
         js_start: str = ensure.singleton(note.js_start for note in self.notes)
 
         yield js_start
-        # We use this JavaScript twice in our card template, once in the front,
-        # and once in the back. It may be due to this that global variables are
-        # problematic.
-        # We use `var` instead of `const` in order to avoid issues with
-        # redefining a variable twice.
-        # TODO: (#372) Define page classes in HTML, not JavaScript!
-        yield f"var {ANKI_NOTE_CLASS} = true;"
+        yield _IAM_ANKI
 
         if not js_path:
             return
