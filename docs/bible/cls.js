@@ -1,7 +1,11 @@
 /**
- * VERSES is the class of the table containing the verses.
+ * VERSE is the class of a verse.
  */
-export const VERSES = 'verses';
+export const VERSE = 'verse';
+/**
+ * LANGUAGE is the class of a verse text in a given language.
+ */
+export const LANGUAGE = 'language';
 /**
  * CHECKBOXES is the class of the element containing the dialect (language)
  * checkboxes.

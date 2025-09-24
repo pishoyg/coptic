@@ -1,7 +1,7 @@
 /**
  * Package highlight defines the Crum dialect and developer-mode highlighting.
  *
- * TODO: (#179) We desire to implement highlighting for the Bible as well. Move
+ * TODO: (#179) We intend to implement highlighting for the Bible as well. Move
  * shared functionality to an external package, and keep Lexicon-specific logic
  * in this file.
  */
@@ -13,6 +13,7 @@ import * as ccls from '../cls.js';
 import * as header from '../header.js';
 import * as logger from '../logger.js';
 import * as d from './dialect.js';
+import * as browser from '../browser.js';
 // On Anki, style sheets are problematic, for some reason! So we resort to
 // updating individual elements in the page instead!
 const ANKI = iam.amI('anki');
@@ -66,7 +67,7 @@ export class Highlighter {
     // 3. Keyboard shortcuts
     // NOTE: Make sure that checkboxes are updated whenever dialect highlighting
     // changes, regardless of the source of the change.
-    const active = d.active();
+    const active = d.manager.active();
     if (!active?.length) {
       // No dialect highlighting whatsoever.
       // All dialects are visible.
@@ -224,40 +225,17 @@ export class Highlighter {
    */
   reset() {
     dev.reset();
-    d.reset();
+    d.manager.reset();
     this.update();
     // Remove the URL fragment.
-    // NOTE: We only reload when we actually detect an anchor (hash) or text
-    // fragment in order to minimize disruption. Reloading the page causes a
-    // small jitter.
-    // NOTE: `url.hash` doesn't include text fragments (`#:~:text=`),
-    // which is why we need to use `performance.getEntriesByType('navigation')`.
-    // However, the latter doesn't always work, for some reason. In our
-    // experience, it can retrieve the text fragment once, but if you reset and
-    // then add a text fragment manually, it doesn't recognize it! This is not a
-    // huge issue right now, so we aren't prioritizing fixing it!
-    // NOTE: Attempting to reload the page on Ankidroid opens a the browser at a
-    // 127.0.0.0 port! We avoid reloading on all Anki platforms!
-    // NOTE: In Xooxle, there is no hash-based highlighting, so we don't need to
-    // reload the page.
-    if (iam.amI('lexicon')) {
+    if (iam.amI('lexicon') || ANKI) {
+      // Attempting to reload the page on Ankidroid opens a the browser at a
+      // 127.0.0.0 port! We avoid reloading on all Anki platforms!
+      // In Xooxle, there is no hash-based highlighting, so we don't need to
+      // reload the page.
       return;
     }
-    const url = new URL(window.location.href);
-    if (
-      !url.hash &&
-      !performance.getEntriesByType('navigation')[0]?.name.includes('#')
-    ) {
-      return;
-    }
-    url.hash = '';
-    window.history.replaceState('', '', url.toString());
-    // Reload to get rid of the highlighting caused by the hash / fragment,
-    // if any.
-    if (ANKI) {
-      return;
-    }
-    window.location.reload();
+    browser.removeFragment();
   }
   /**
    * Toggle the highlighting of the given dialect.
@@ -265,7 +243,7 @@ export class Highlighter {
    * @param dialect - A dialect code.
    */
   toggleDialect(dialect) {
-    d.toggle(dialect);
+    d.manager.toggle(dialect);
     this.updateDialects();
   }
   /**

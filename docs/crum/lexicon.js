@@ -114,7 +114,7 @@ class CrumSearchResult extends SearchResult {
    * @returns Bucket number.
    */
   bucket(row) {
-    const active = d.active();
+    const active = d.manager.active();
     if (!active?.length) {
       // There is no dialect highlighting. All results fall in the first bucket.
       return 0;
@@ -167,7 +167,7 @@ class KELLIASearchResult extends SearchResult {
    * @returns Bucket number.
    */
   bucket(row) {
-    const active = d.active();
+    const active = d.manager.active();
     if (!active?.length) {
       // There is no dialect highlighting. All results fall in the first bucket.
       return 0;
