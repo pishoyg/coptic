@@ -2,3 +2,21 @@
 .index-book-chapter-list a {
   margin-left: 5px;
 }
+
+body.bible h4 {
+  text-align: center;
+}
+
+body {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+th,
+td {
+  padding: 6px;
+}
+
+tr:not(:first-child) td:not(:first-child) {
+  border-left: 1px solid #ccc;
+}
