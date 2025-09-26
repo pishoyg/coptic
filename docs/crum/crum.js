@@ -71,7 +71,7 @@ export function handleCategories(root) {
  */
 export function handleRootType(root) {
   root.querySelectorAll(`.${cls.ROOT_TYPE} b`).forEach((el) => {
-    const type = el.textContent;
+    const type = el.textContent.trim();
     const link = document.createElement('a');
     link.classList.add(ccls.HOVER_LINK);
     link.href = `${paths.LEXICON}/${type.replaceAll('/', '_')}.html`;
@@ -87,7 +87,10 @@ export function handleRootType(root) {
 export function handleCrumPage(root) {
   root.querySelectorAll(`.${cls.CRUM_PAGE}`).forEach((el) => {
     el.classList.add(ccls.LINK);
-    html.makeSpanLinkToAnchor(el, `#crum${scan.chopColumn(el.textContent)}`);
+    html.makeSpanLinkToAnchor(
+      el,
+      `#crum${scan.chopColumn(el.textContent.trim())}`
+    );
   });
 }
 /**
@@ -138,7 +141,10 @@ export function handleExplanatory(root) {
 export function handleDawoudPage(root) {
   root.querySelectorAll(`.${cls.DAWOUD_PAGE}`).forEach((el) => {
     el.classList.add(ccls.LINK);
-    html.makeSpanLinkToAnchor(el, `#dawoud${scan.chopColumn(el.textContent)}`);
+    html.makeSpanLinkToAnchor(
+      el,
+      `#dawoud${scan.chopColumn(el.textContent.trim())}`
+    );
   });
 }
 /**
@@ -153,7 +159,7 @@ export function handleDrvKey(root) {
     key.target = '_blank';
     // Create a second anchor pointing to this row in the HTML. This is useful
     // for users to share links to specific derivations.
-    const frag = `#drv${key.textContent}`;
+    const frag = `#drv${key.textContent.trim()}`;
     const a = document.createElement('a');
     a.href = frag;
     a.classList.add(ccls.HOVER_LINK);
@@ -185,7 +191,7 @@ export function handleDrvKey(root) {
 export function handleExplanatoryKey(root) {
   root.querySelectorAll(`.${cls.EXPLANATORY_KEY}`).forEach((el) => {
     el.classList.add(ccls.HOVER_LINK);
-    html.makeSpanLinkToAnchor(el, `#explanatory${el.textContent}`);
+    html.makeSpanLinkToAnchor(el, `#explanatory${el.textContent.trim()}`);
   });
 }
 /**
@@ -195,7 +201,7 @@ export function handleExplanatoryKey(root) {
 export function handleSisterKey(root) {
   root.querySelectorAll(`.${cls.SISTER_KEY}`).forEach((el) => {
     el.classList.add(ccls.HOVER_LINK);
-    html.makeSpanLinkToAnchor(el, `#sister${el.textContent}`);
+    html.makeSpanLinkToAnchor(el, `#sister${el.textContent.trim()}`);
   });
 }
 /**
@@ -229,7 +235,7 @@ export function handleSisterView(root) {
  */
 export function handleDialect(root, highlighter) {
   root.querySelectorAll(`.${cls.DIALECT}`).forEach((el) => {
-    const code = el.textContent;
+    const code = el.textContent.trim();
     const dialect = d.DIALECTS[code];
     // Prettify the appearance of the dialect code.
     const siglum = dialect.siglum();

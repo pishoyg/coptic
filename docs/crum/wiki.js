@@ -323,14 +323,11 @@ function parseSuffix(suffix, remainder, nextSibling) {
   // otherwise our sibling will no longer be able to access its sibling.
   const nextNext = nextSibling.nextSibling;
   span.append(nextSibling);
-  if (!nextNext) {
-    return span;
-  }
   // Sometimes, there are even more numbers following the superscript.
-  const prefix = nextNext.textContent?.match(SUFFIX);
-  if (prefix?.index === 0) {
+  const prefix = nextNext?.nodeValue?.match(SUFFIX);
+  if (nextNext?.nodeValue && prefix?.index === 0) {
     span.append(prefix[0]);
-    nextNext.nodeValue = nextNext.nodeValue?.slice(prefix[0].length) ?? null;
+    nextNext.nodeValue = nextNext.nodeValue.slice(prefix[0].length);
   }
   return span;
 }

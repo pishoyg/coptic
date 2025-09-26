@@ -202,7 +202,7 @@ export class Shortcut {
    */
   textDescription() {
     return typeof this.description === 'string'
-      ? this.description.replace(/<[^>]*>/g, '')
+      ? this.description.replace(/<.*?>/g, '')
       : this.description.textContent;
   }
 }

@@ -160,14 +160,19 @@ export function linkifyText(root, regex, url, classes, excludedClasses = []) {
   );
 }
 /**
- * 1. Normalize the tree[1].
- * 2. Normalize diacritics into NFD [2].
- * 3. Get rid of all superfluous space.
+ * 1. Normalize diacritics into NFD [2].
+ * 2. Get rid of all superfluous space.
  * Such normalization is often necessary for text search logic to work
  * correctly.
  *
+ * TODO: (#0) Consider having your HTML generation pipelines produce
+ * NFD-normalized text in the first place.
+ *
+ * NOTE: We intentionally refrain from normalizing the tree[1] because we expect
+ * our HTML to be tree-normalized already.
+ *
  * @param root
- * [1] https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize
+ * [1] https://developer.mozilla.org/docs/Web/API/Node/normalize
  * [2] https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize */ // eslint-disable-line max-len
 export function normalize(root = document.body) {
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
