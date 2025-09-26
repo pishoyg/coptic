@@ -2,7 +2,6 @@
 import * as browser from './browser.js';
 import * as logger from './logger.js';
 import * as css from './css.js';
-import * as orth from './orth.js';
 /**
  *
  * @param el
@@ -160,16 +159,14 @@ export function linkifyText(root, regex, url, classes, excludedClasses = []) {
   );
 }
 /**
- * 1. Normalize diacritics into NFD [2].
- * 2. Get rid of all superfluous space.
+ * Squash space in text nodes.
  * Such normalization is often necessary for text search logic to work
  * correctly.
  *
- * TODO: (#556) Consider having your HTML generation pipelines produce
- * NFD-normalized text in the first place.
- *
  * NOTE: We intentionally refrain from normalizing the tree[1] because we expect
  * our HTML to be tree-normalized already.
+ * We also refrain from NFD-normalizing the text content [2], because our
+ * pipelines generate NFD-normalized HTML.
  *
  * @param root
  * [1] https://developer.mozilla.org/docs/Web/API/Node/normalize
@@ -181,6 +178,6 @@ export function normalize(root = document.body) {
     if (!node.nodeValue) {
       continue;
     }
-    node.nodeValue = orth.normalize(node.nodeValue).replace(/\s+/g, ' ');
+    node.nodeValue = node.nodeValue.replace(/\s+/g, ' ');
   }
 }
