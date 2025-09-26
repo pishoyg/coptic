@@ -143,14 +143,25 @@ export function addEventListeners(invocation) {
 }
 /**
  * Add the given content as a hover-droppable child of the given drop.
+ * NOTE: This merely constructs the elements, and does NOT add event listeners
+ * necessary for the element to function properly. You need to do that
+ * separately.
+ *
  * @param dropdown - An element that, when hovered, should display the content.
+ * @param invocation
  * @param content - The content that shows when the drop element is hovered.
  */
-export function addHoverDroppable(dropdown, ...content) {
-  dropdown.classList.add(CLS.DROPDOWN);
-  const droppable = document.createElement('span');
+export function addDroppable(dropdown, invocation, ...content) {
+  const droppable = (() => {
+    if (content.length === 1 && content[0] instanceof HTMLElement) {
+      return content[0];
+    }
+    const container = document.createElement('span');
+    container.append(...content);
+    return container;
+  })();
+  dropdown.classList.add(invocation === 'hover' ? CLS.DROPDOWN : CLS.DROP);
   droppable.classList.add(CLS.DROPPABLE);
-  droppable.append(...content);
   // A hover-invoked droppable must be a child of its associated drop element.
   dropdown.appendChild(droppable);
 }
