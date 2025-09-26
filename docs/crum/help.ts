@@ -119,10 +119,12 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
         `Yank the key of the word currently being viewed <span class="${cls.DEV_MODE_NOTE}">(dev mode)</span>`,
         ['lexicon', 'note', 'index'],
         (): void => {
-          const text: string | undefined = browser.findNextElement(
-            `.${xooxle.CLS.VIEW} .${dev.CLS.DEV}, .${cls.SISTER_KEY}, .${cls.DRV_KEY}`,
-            'cur'
-          )?.textContent;
+          const text: string | undefined = browser
+            .findNextElement(
+              `.${xooxle.CLS.VIEW} .${dev.CLS.DEV}, .${cls.SISTER_KEY}, .${cls.DRV_KEY}`,
+              'cur'
+            )
+            ?.textContent.trim();
           if (!text) {
             return;
           }
