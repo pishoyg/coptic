@@ -407,7 +407,7 @@ export class Candidate {
       // we do the NFD normalization below.
       // [1] https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize
       //
-      // TODO: (#0): The Xooxle index builder should produce NFD-normalized
+      // TODO: (#556): The Xooxle index builder should produce NFD-normalized
       // text.
       (name: string): Field => new Field(name, orth.normalize(record[name]!))
     );

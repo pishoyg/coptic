@@ -196,7 +196,7 @@ export function linkifyText(
  * Such normalization is often necessary for text search logic to work
  * correctly.
  *
- * TODO: (#0) Consider having your HTML generation pipelines produce
+ * TODO: (#556) Consider having your HTML generation pipelines produce
  * NFD-normalized text in the first place.
  *
  * NOTE: We intentionally refrain from normalizing the tree[1] because we expect
