@@ -9,7 +9,7 @@ from collections import abc
 
 import pandas as pd
 
-from utils import log
+from utils import log, orth
 
 
 def mkdir(path: str | pathlib.Path) -> None:
@@ -26,7 +26,10 @@ def write(
     report: bool = True,
     fix_newline: bool = True,
     make_dir: bool = False,
+    normalize: bool = True,
 ) -> None:
+    if normalize:
+        content = orth.normalize(content)
     if make_dir:
         mk_parent_dir(path)
     if fix_newline and (not content or content[-1] != "\n"):
@@ -39,11 +42,14 @@ def write(
 
 
 def writelines(
-    content: abc.Generator[str],
+    content: abc.Iterable[str],
     path: str | pathlib.Path,
     report: bool = True,
     make_dir: bool = False,
+    normalize: bool = True,
 ) -> None:
+    if normalize:
+        content = map(orth.normalize, content)
     if make_dir:
         mk_parent_dir(path)
     with open(path, "w", encoding="utf-8") as f:
