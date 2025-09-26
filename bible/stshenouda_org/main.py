@@ -501,27 +501,28 @@ class Bible:
             nxt.set_prev(cur)
             cur = nxt
 
-    def __iter_books(self) -> abc.Generator[dict]:
-        with open(_JSON, encoding="utf-8") as j:
-            bible = json.loads(j.read())
-            testament_idx = 0
-            for testament_name, testament in bible.items():
-                testament_idx += 1
-                section_idx = 0
-                for section_name, section in testament.items():
-                    section_idx += 1
-                    book_idx = 0
-                    for book in section:
-                        book_idx += 1
-                        yield {
-                            "name": book["title"],
-                            "crum": book["crum"],
-                            "idx": book_idx,
-                            "testament_name": testament_name,
-                            "testament_idx": testament_idx,
-                            "section_name": section_name,
-                            "section_idx": section_idx,
-                        }
+    def __iter_books(self) -> abc.Generator[dict[str, str | int]]:
+        bible: dict[str, dict[str, list[dict[str, str]]]] = json.loads(
+            file.read(_JSON),
+        )
+        testament_idx: int = 0
+        for testament_name, testament in bible.items():
+            testament_idx += 1
+            section_idx: int = 0
+            for section_name, section in testament.items():
+                section_idx += 1
+                book_idx: int = 0
+                for book in section:
+                    book_idx += 1
+                    yield {
+                        "name": book["title"],
+                        "crum": book["crum"],
+                        "idx": book_idx,
+                        "testament_name": testament_name,
+                        "testament_idx": testament_idx,
+                        "section_name": section_name,
+                        "section_idx": section_idx,
+                    }
 
     def __build_book(self, kwargs: dict) -> Book:
         return Book(**kwargs)
@@ -699,8 +700,7 @@ class HTMLBuilder:
         kindle.add_author(_AUTHOR)
         cover_file_name: str = os.path.basename(_COVER)
         cover: epub.EpubCover = epub.EpubCover(file_name=cover_file_name)
-        with open(_COVER, "rb") as f:
-            cover.content = f.read()
+        cover.content = file.read_bytes(_COVER)
         kindle.add_item(cover)
         kindle.add_item(epub.EpubCoverHtml(image_name=cover_file_name))
         kindle.add_metadata(

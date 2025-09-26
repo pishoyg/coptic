@@ -9,41 +9,40 @@ import shutil
 
 from ebooklib import epub  # type: ignore[import-untyped]
 
-from utils import file, log
+from utils import file, log, paths
 
-CREATOR = "remnqymi@gmail.com"
 # "cop" is not supported.
 # See https://kdp.amazon.com/en_US/help/topic/G200673300.
 # TODO: (#39) Choose a default obscure language. Otherwise, a reader who has
 # another dictionary for "en-us" will keep switching between the two in order
 # to translate.
-IN_LANG = "en-us"
-OUT_LANG = "en-us"
-INDEX = "index"
+IN_LANG: str = "en-us"
+OUT_LANG: str = "en-us"
+INDEX: str = "index"
 
-TYPE_ENFORCED = True
-STEP = 100
+TYPE_ENFORCED: bool = True
+STEP: int = 100
 
 # pylint: disable=f-string-without-interpolation
 # pylint: disable=line-too-long
-OPF_FILENAME_FMT = f"{{identifier}}.opf"
+OPF_FILENAME_FMT: str = f"{{identifier}}.opf"
 
-OPF_MANIFEST_ITEM_FMT = f"""\
+OPF_MANIFEST_ITEM_FMT: str = f"""\
 <item id="{{id}}"
       href="{{href}}"
       media-type="application/xhtml+xml" />\
 """
 
-OPF_SPINE_ITEM_FMT = f"""\
+OPF_SPINE_ITEM_FMT: str = f"""\
 <itemref idref="{{idref}}"/>\
 """
 
-OPF_FMT = f"""\
+OPF_FMT: str = f"""\
 <?xml version="1.0"?>
 <package version="2.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="BookId">
     <metadata>
         <dc:title>{{title}}</dc:title>
-        <dc:creator opf:role="aut">{CREATOR}</dc:creator>
+        <dc:creator opf:role="aut">{paths.EMAIL}</dc:creator>
         <dc:language>{IN_LANG}</dc:language>
         <meta name="cover" content="{{cover_id}}"/>
         <x-metadata>
@@ -62,7 +61,7 @@ OPF_FMT = f"""\
 </package>
 """
 
-DICT_XHTML_FMT = f"""\
+DICT_XHTML_FMT: str = f"""\
 <html
 xmlns:math="http://exslt.org/math"
 xmlns:svg="http://www.w3.org/2000/svg"
@@ -86,7 +85,7 @@ xmlns:idx="https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.p
 </html>\
 """
 
-ENTRY_XHTML_FMT = f"""\
+ENTRY_XHTML_FMT: str = f"""\
 <idx:entry name="{INDEX}" scriptable="yes" spell="yes">
     <idx:short>
         <a id="{{id}}"></a>
@@ -101,7 +100,7 @@ ENTRY_XHTML_FMT = f"""\
 </idx:entry>\
 """
 
-INFL_XHTML_FMT = f"""\
+INFL_XHTML_FMT: str = f"""\
 <idx:iform value="{{form}}"/>\
 """
 # pylint: enable=line-too-long
@@ -226,10 +225,6 @@ class Dictionary:
     def xhtml(self) -> str:
         return Volume(self._entries).xhtml()
 
-    def write_xhtml(self, path: str) -> None:
-        with open(path, "w", encoding="utf-8") as f:
-            f.write(self.xhtml())
-
     def xhtmls(self) -> list[tuple[str, str]]:
         self._zfill = self._zfill or len(str(len(self._entries))) + 1
         filenames_contents: list[tuple[str, str]] = []
@@ -262,8 +257,7 @@ class Dictionary:
         kindle.spine = []
 
         cover = epub.EpubCover(file_name=self._cover_basename)
-        with open(self._cover_path, "rb") as f:
-            cover.content = f.read()
+        cover.content = file.read_bytes(self._cover_path)
         kindle.add_item(cover)
         kindle.spine.append(cover)
         kindle.add_item(epub.EpubCoverHtml(image_name=self._cover_basename))
@@ -337,10 +331,5 @@ class Dictionary:
 
         # Write the files.
         for filename, content in filename_to_content.items():
-            with open(
-                os.path.join(directory, filename),
-                "w",
-                encoding="utf-8",
-            ) as f:
-                _ = f.write(content)
+            file.write(content, os.path.join(directory, filename))
         log.wrote(directory)

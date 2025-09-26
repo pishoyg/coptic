@@ -58,6 +58,11 @@ def read(path: str | pathlib.Path) -> str:
         return f.read()
 
 
+def read_bytes(path: str | pathlib.Path) -> bytes:
+    with open(path, "rb") as f:
+        return f.read()
+
+
 def readlines(path: str | pathlib.Path) -> list[str]:
     try:
         with open(path, encoding="utf-8") as f:

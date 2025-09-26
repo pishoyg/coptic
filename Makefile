@@ -158,14 +158,6 @@ kellia_analysis: FORCE
 	# Generate an analysis of the structure of the TLA (KELLIA) dataset.
 	./dictionary/kellia_uni_goettingen_de/analysis.py
 
-# Seemingly, the KELLIA analysis JSON gets rewritten in a undeterministic
-# manner by the pipeline, introducing noisy changes in the
-# repo, so we reset it to remove the noise.
-# TODO: (#0) Make the pipeline deterministic, and remove this rule.
-kellia_analysis_clean: dictionary/kellia_uni_goettingen_de/data/output/analysis.json
-	# Reset the KELLIA analysis JSON.
-	git restore "dictionary/kellia_uni_goettingen_de/data/output/analysis.json"
-
 ########## DAWOUD ##########
 dawoud_sentinels: FORCE
 	# Download a new version of Dawoud's sentinels sheet.
