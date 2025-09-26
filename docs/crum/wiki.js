@@ -325,7 +325,11 @@ function parseSuffix(suffix, remainder, nextSibling) {
   span.append(nextSibling);
   // Sometimes, there are even more numbers following the superscript.
   const prefix = nextNext?.nodeValue?.match(SUFFIX);
-  if (nextNext?.nodeValue && prefix?.index === 0) {
+  if (
+    nextNext?.nodeValue &&
+    prefix?.index === 0 &&
+    prefix[0] // Prevent matching the empty string.
+  ) {
     span.append(prefix[0]);
     nextNext.nodeValue = nextNext.nodeValue.slice(prefix[0].length);
   }
@@ -383,7 +387,7 @@ function replaceReference(match, remainder, nextSibling) {
     if (cur?.nodeType === Node.TEXT_NODE && cur.nodeValue) {
       remainder = cur.nodeValue;
       const m = SUFFIX.exec(cur.nodeValue);
-      if (m?.index === 0) {
+      if (m?.index === 0 && m[0] /* Prevent matching the empty string. */) {
         // We can successfully retrieve a suffix from the node.
         suffix = m[0];
         remainder = cur.nodeValue = cur.nodeValue.slice(suffix.length);
