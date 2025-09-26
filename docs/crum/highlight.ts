@@ -38,7 +38,6 @@ export enum CLS {
 export class Highlighter {
   private readonly dialectRuleIndex: number;
   private readonly devRuleIndex: number;
-  private readonly noDevRuleIndex: number;
 
   private static readonly BRIGHT = '1.0';
   private static readonly DIM = '0.3';
@@ -60,7 +59,6 @@ export class Highlighter {
     let length: number = STYLE?.sheet?.cssRules.length ?? 0;
     this.dialectRuleIndex = length++;
     this.devRuleIndex = length++;
-    this.noDevRuleIndex = length++;
 
     this.addEventListeners();
 
@@ -145,7 +143,6 @@ export class Highlighter {
     type Visibility = 'block' | 'none';
 
     const display: Visibility = dev.get() ? 'block' : 'none';
-    const noDisplay: Visibility = display === 'block' ? 'none' : 'block';
 
     this.updateSheetOrElements(
       this.devRuleIndex,
@@ -153,14 +150,6 @@ export class Highlighter {
       `display: ${display};`,
       (el: HTMLElement) => {
         el.style.display = display;
-      }
-    );
-    this.updateSheetOrElements(
-      this.noDevRuleIndex,
-      `.${dev.CLS.NO_DEV}`,
-      `display: ${noDisplay};`,
-      (el: HTMLElement) => {
-        el.style.display = noDisplay;
       }
     );
   }

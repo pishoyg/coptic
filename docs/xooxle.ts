@@ -465,7 +465,7 @@ export class SearchResult extends AggregateResult {
     td.addEventListener('click', browser.open.bind(browser, href, true));
 
     const view: HTMLAnchorElement = document.createElement('a');
-    view.classList.add(dev.CLS.NO_DEV, cls.LINK);
+    view.classList.add(cls.LINK);
     view.textContent = 'view';
     td.prepend(view);
 
