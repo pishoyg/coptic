@@ -402,14 +402,10 @@ export class Candidate {
     this.fields = fields.map(
       // NOTE: Our Xooxle index builder is guaranteed to produce a
       // normalized tree.[1] The text content is also guaranteed to be free of
-      // any superfluous space.
-      // The text is, however, not guaranteed to be NFD-normalized, so
-      // we do the NFD normalization below.
+      // any superfluous space, and to be NFD-normalized.
+      // Thus, no normalization is needed when constructing the field.
       // [1] https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize
-      //
-      // TODO: (#556): The Xooxle index builder should produce NFD-normalized
-      // text.
-      (name: string): Field => new Field(name, orth.normalize(record[name]!))
+      (name: string): Field => new Field(name, record[name]!)
     );
   }
 }
