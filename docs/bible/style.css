@@ -32,21 +32,38 @@ tr::after {
   background-color: #ccc; /* This is the color of your border. */
 }
 
-.checkboxes {
-  display: none; /* Disabled by default! TODO: (#179) Show on all screens. */
-  margin-top: 10px;
+#bar,
+#tray {
   font-style: italic;
   color: gray;
+}
+
+#bar {
+  display: flex; /* Establish a flex container. */
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
-@media (width <= 500px) {
-  .checkboxes {
-    display: flex; /* Establish a flex container. */
-  }
-}
-
-.checkboxes label {
+#bar label {
   flex: 1; /* Allow each label to grow and take up equal space. */
   text-align: center; /* Optional: centers text inside the growing label. */
+}
+
+#tray {
+  display: none;
+}
+
+@media (width <= 500px) {
+  #bar {
+    display: none;
+  }
+
+  #tray {
+    display: block;
+    float: right;
+  }
+
+  .title {
+    float: left;
+  }
 }

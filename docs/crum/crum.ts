@@ -278,7 +278,7 @@ export function handleDialect(
       const siglum: HTMLSpanElement = dialect.siglum();
       el.replaceChildren(siglum);
       // Add a tooltip with the dialect name.
-      drop.addHoverDroppable(el, ...dialect.anchoredName());
+      drop.addDroppable(el, 'hover', ...dialect.anchoredName());
       if (el.closest(`.${cls.WIKI}`)) {
         // Dialect highlighting doesn't really work under Wiki, so we disable it
         // here!

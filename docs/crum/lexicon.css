@@ -57,10 +57,6 @@
   }
 }
 
-.droppable label {
-  display: block; /* Each label on its own line. */
-}
-
 #checkboxes label {
   margin: 1.5px;
 }

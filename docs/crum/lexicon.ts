@@ -264,7 +264,7 @@ function addListDialects(): void {
     ...Object.values(d.DIALECTS).map((dialect: d.Dialect): HTMLElement => {
       const label: HTMLLabelElement = document.createElement('label');
       label.append(dialect.checkbox(), dialect.siglum());
-      dropdown.addHoverDroppable(label, ...dialect.anchoredName());
+      dropdown.addDroppable(label, 'hover', ...dialect.anchoredName());
       return label;
     })
   );

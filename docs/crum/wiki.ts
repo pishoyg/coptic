@@ -193,7 +193,7 @@ export function handleAnnotations(root: HTMLElement): void {
         }
         const span: HTMLSpanElement = document.createElement('span');
         span.textContent = form;
-        drop.addHoverDroppable(span, annot.fullForm);
+        drop.addDroppable(span, 'hover', annot.fullForm);
         span.classList.add(cls.ANNOTATION);
         return [span];
       },
@@ -298,7 +298,7 @@ export function handleBible(root: HTMLElement): void {
       link.target = '_blank';
       link.classList.add(ccls.HOVER_LINK, cls.BIBLE);
       link.textContent = match[0];
-      drop.addHoverDroppable(link, result.name);
+      drop.addDroppable(link, 'hover', result.name);
       return [link];
     },
     // Exclude all Wiki abbreviations to avoid overlap.
@@ -444,7 +444,7 @@ function replaceReference(
     template.innerHTML = source.innerHTML;
     tooltip.push(...template.content.childNodes);
   }
-  drop.addHoverDroppable(span, ...tooltip);
+  drop.addDroppable(span, 'hover', ...tooltip);
 
   if (!suffix) {
     return [span];

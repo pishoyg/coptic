@@ -686,7 +686,13 @@ class HTMLBuilder:
             nxt=nxt.href(is_epub=False) if nxt else "",
             prv=prv.href(is_epub=False) if prv else "",
             scripts=[_CHAPTER_JS],
-            css=[_CHAPTER_CSS],
+            css=[
+                _CHAPTER_CSS,
+                os.path.relpath(
+                    paths.BIBLE_DIR,
+                    paths.DROPDOWN_CSS,
+                ),
+            ],
         )
         path: str = os.path.join(paths.BIBLE_DIR, chapter.path(is_epub=False))
         file.writelines(out, path, make_dir=True)

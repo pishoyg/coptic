@@ -35,6 +35,10 @@
    * We must override this rule in order to allow (potentially long) tooltips to
    * wrap. */
   white-space: normal;
+
+  & label {
+    display: block; /* If the droppable is a tooltip, then each label renders on a separate line. */
+  }
 }
 
 /* CSS for all parents of tooltips (hover-invoked or click-invoked). */
