@@ -13,7 +13,9 @@ import * as ccls from '../cls.js';
 import * as header from '../header.js';
 import * as logger from '../logger.js';
 import * as d from './dialect.js';
+import * as dd from '../dialect.js';
 import * as browser from '../browser.js';
+import * as help from '../help.js';
 // On Anki, style sheets are problematic, for some reason! So we resort to
 // updating individual elements in the page instead!
 const ANKI = iam.amI('anki');
@@ -21,31 +23,37 @@ const STYLE = ANKI ? null : document.createElement('style');
 if (STYLE) {
   document.head.appendChild(STYLE);
 }
+export var CLS;
+(function (CLS) {
+  CLS['DIALECT_CODE'] = 'dialect-code';
+  CLS['DIALECT_NAME'] = 'dialect-name';
+  CLS['DIALECT_DICTIONARIES'] = 'dialect-dictionaries';
+})(CLS || (CLS = {}));
 /**
- * TODO: (#0) Use global methods and get rid of the class.
  */
 export class Highlighter {
-  dialectCheckboxes;
+  manager;
+  checkboxes;
   dialectRuleIndex;
   devRuleIndex;
-  noDevRuleIndex;
   static BRIGHT = '1.0';
   static DIM = '0.3';
   /**
    *
-   * @param dialectCheckboxes - List of checkboxes that control dialect
+   * @param manager
+   * @param checkboxes - List of checkboxes that control dialect
    * highlighting. Each box must bear a name equal to the dialect code that it
    * represents.
    * Checking a checkbox should update the dialect highlighting. Updating
    * dialect highlighting in some other way should also update the checking of
    * the checkboxes.
    */
-  constructor(dialectCheckboxes) {
-    this.dialectCheckboxes = dialectCheckboxes;
+  constructor(manager, checkboxes) {
+    this.manager = manager;
+    this.checkboxes = checkboxes;
     let length = STYLE?.sheet?.cssRules.length ?? 0;
     this.dialectRuleIndex = length++;
     this.devRuleIndex = length++;
-    this.noDevRuleIndex = length++;
     this.addEventListeners();
     // Update display once upon loading.
     this.update();
@@ -67,7 +75,7 @@ export class Highlighter {
     // 3. Keyboard shortcuts
     // NOTE: Make sure that checkboxes are updated whenever dialect highlighting
     // changes, regardless of the source of the change.
-    const active = d.manager.active();
+    const active = this.manager.active();
     if (!active?.length) {
       // No dialect highlighting whatsoever.
       // All dialects are visible.
@@ -80,7 +88,7 @@ export class Highlighter {
         }
       );
       // None of the checkboxes should be checked.
-      this.dialectCheckboxes.forEach((c) => {
+      this.checkboxes.forEach((c) => {
         c.checked = false;
       });
       return;
@@ -96,7 +104,7 @@ export class Highlighter {
     //     tooltips, so we give those special handling in the second subquery.
     // 2. For dialect codes of inactive dialects, dim only the sigla.
     //    This keeps the tooltips bright.
-    const query = `.${cls.WORD} > :not(${css.classQuery(...active)}, .${cls.SPELLING}:not(${d.ANY_DIALECT_QUERY}), .${cls.DIALECT}), .${cls.WORD} > .${cls.DIALECT}:not(${css.classQuery(...active)}) .${d.CLS.SIGLUM}`;
+    const query = `.${cls.WORD} > :not(${css.classQuery(...active)}, .${cls.SPELLING}:not(${d.ANY_DIALECT_QUERY}), .${cls.DIALECT}), .${cls.WORD} > .${cls.DIALECT}:not(${css.classQuery(...active)}) .${dd.CLS.SIGLUM}`;
     const style = `opacity: ${Highlighter.DIM};`;
     this.updateSheetOrElements(
       this.dialectRuleIndex,
@@ -111,7 +119,7 @@ export class Highlighter {
       }
     );
     // Active dialects should have their checkboxes checked.
-    this.dialectCheckboxes.forEach((checkbox) => {
+    this.checkboxes.forEach((checkbox) => {
       checkbox.checked = active.includes(checkbox.name);
     });
   }
@@ -120,21 +128,12 @@ export class Highlighter {
    */
   updateDev() {
     const display = dev.get() ? 'block' : 'none';
-    const noDisplay = display === 'block' ? 'none' : 'block';
     this.updateSheetOrElements(
       this.devRuleIndex,
       `.${dev.CLS.DEV}, .${cls.NAG_HAMMADI}, .${cls.SENSES}, .${cls.QUALITY}, .${cls.DRV_KEY}`,
       `display: ${display};`,
       (el) => {
         el.style.display = display;
-      }
-    );
-    this.updateSheetOrElements(
-      this.noDevRuleIndex,
-      `.${dev.CLS.NO_DEV}`,
-      `display: ${noDisplay};`,
-      (el) => {
-        el.style.display = noDisplay;
       }
     );
   }
@@ -197,9 +196,9 @@ export class Highlighter {
    */
   addEventListeners() {
     // A click on a checkbox triggers a dialect display update.
-    this.dialectCheckboxes.forEach((checkbox) => {
+    this.checkboxes.forEach((checkbox) => {
       checkbox.addEventListener('click', () => {
-        this.toggleDialect(checkbox.name);
+        this.toggle(checkbox.name);
       });
     });
     // Switching tabs triggers a display update. This is because it's possible
@@ -225,7 +224,7 @@ export class Highlighter {
    */
   reset() {
     dev.reset();
-    d.manager.reset();
+    this.manager.reset();
     this.update();
     // Remove the URL fragment.
     if (iam.amI('lexicon') || ANKI) {
@@ -242,8 +241,8 @@ export class Highlighter {
    *
    * @param dialect - A dialect code.
    */
-  toggleDialect(dialect) {
-    d.manager.toggle(dialect);
+  toggle(dialect) {
+    this.manager.toggle(dialect);
     this.updateDialects();
   }
   /**
@@ -252,5 +251,44 @@ export class Highlighter {
   toggleDev() {
     dev.toggle();
     this.updateDev();
+  }
+  /**
+   * Build a keyboard shortcut that toggles the given dialect.
+   *
+   * @param dialect
+   * @returns
+   */
+  shortcut(dialect) {
+    const table = document.createElement('table');
+    const tr = document.createElement('tr');
+    // Create the first <td> (dialect code)
+    const tdCode = document.createElement('td');
+    tdCode.classList.add(CLS.DIALECT_CODE);
+    tdCode.append(dialect.siglum());
+    tr.appendChild(tdCode);
+    // Create the second <td> (dialect name)
+    const tdName = document.createElement('td');
+    tdName.classList.add(CLS.DIALECT_NAME);
+    tdName.append(...dialect.anchoredName());
+    tr.appendChild(tdName);
+    // Conditionally add the third <td> (dictionaries)
+    if (iam.amI('lexicon')) {
+      const tdDictionaries = document.createElement('td');
+      tdDictionaries.classList.add(CLS.DIALECT_DICTIONARIES);
+      tdDictionaries.textContent = `(${dialect.dictionaries.join(', ')})`;
+      tr.appendChild(tdDictionaries);
+    }
+    // Append the <tr> to the <table>
+    table.appendChild(tr);
+    // Crum dialects are available on several Crum page identities.
+    // Non-Crum dialects are only used in Lexicon.
+    const availability = dialect.dictionaries.includes('Crum')
+      ? ['lexicon', 'note', 'index']
+      : ['lexicon'];
+    return new help.Shortcut(
+      table,
+      availability,
+      this.toggle.bind(this, dialect.code)
+    );
   }
 }

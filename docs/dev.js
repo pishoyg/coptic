@@ -16,7 +16,7 @@ const ON = 'ON';
 const OFF = 'OFF';
 export var CLS;
 (function (CLS) {
-  // TODO: (#241) Abandon the `dev` and `no-dev` classes, as this forces users
+  // TODO: (#241) Abandon the `dev` class, as this forces users
   // to modify HTML if they want to designate a certain element as
   // developer-mode-only. Instead, users should be able to turn the behavior on
   // and off for given elements through the TypeScript.
@@ -24,8 +24,6 @@ export var CLS;
   // developer mode.
 
   CLS['DEV'] = 'dev';
-  // NO_DEV is the class of elements that are hidden in developer mode.
-  CLS['NO_DEV'] = 'no-dev';
 })(CLS || (CLS = {}));
 /**
  * @returns Whether developer mode is active.
