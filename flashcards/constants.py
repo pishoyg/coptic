@@ -96,7 +96,7 @@ class Decker:
             deck_id=self._deck_id,
             deck_description=DESCRIPTION,
             notes=list(self.notes_aux()),
-            html_dir=paths.LEXICON_DIR,
+            html_dir=str(paths.LEXICON_DIR),
             index_indexes=self.index_indexes(),
         )
 
@@ -987,7 +987,7 @@ CRUM_XOOXLE = xooxle.Index(
             block_elements=xooxle.BLOCK_ELEMENTS_DEFAULT | {"td"},
         ),
     ],
-    output=os.path.join(paths.LEXICON_DIR, "crum.json"),
+    output=paths.LEXICON_DIR / "crum.json",
 )
 
 

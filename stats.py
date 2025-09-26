@@ -7,6 +7,7 @@ import argparse
 import enum
 import itertools
 import os
+import pathlib
 import re
 import time
 import typing
@@ -209,10 +210,10 @@ class Code(abc.ABC):
         self,
         name: str,
         description: str,
-        suffixes: list[str] | None = None,
-        prefixes: list[str] | None = None,
-        basenames: list[str] | None = None,
-        dirnames: list[str] | None = None,
+        suffixes: list[str | pathlib.Path] | None = None,
+        prefixes: list[str | pathlib.Path] | None = None,
+        basenames: list[str | pathlib.Path] | None = None,
+        dirnames: list[str | pathlib.Path] | None = None,
         broken: bool = False,
     ) -> None:
         # TODO: (#0) Consider adding validation that all the suffixes, prefixes,
@@ -222,10 +223,10 @@ class Code(abc.ABC):
         self.files: list[str] = [
             f
             for f in Code.all_foc
-            if any(map(f.endswith, suffixes or []))
-            or any(map(f.startswith, prefixes or []))
-            or os.path.basename(f) in (basenames or [])
-            or os.path.dirname(f) in (dirnames or [])
+            if any(map(f.endswith, map(str, suffixes or [])))
+            or any(map(f.startswith, map(str, prefixes or [])))
+            or os.path.basename(f) in (map(str, basenames or []))
+            or os.path.dirname(f) in (map(str, dirnames or []))
         ]
         self._name: str = name
         self._description: str = description

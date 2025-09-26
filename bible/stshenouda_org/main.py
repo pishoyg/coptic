@@ -50,7 +50,7 @@ _INDEX_JS: str = "bible.js"  # JavaScript for the index.
 _CHAPTER_CSS: str = "style.css"  # CSS for a chapter.
 _INDEX_CSS: str = "bible.css"  # CSS for the index.
 for artifact in [_CHAPTER_JS, _INDEX_JS, _CHAPTER_CSS, _INDEX_CSS]:
-    assert os.path.isfile(os.path.join(paths.BIBLE_DIR, artifact))
+    assert (paths.BIBLE_DIR / artifact).is_file()
 
 
 _INDEX = "index.html"
@@ -485,7 +485,7 @@ class Bible:
                     path: string,
                     numChapters: number,
                 }}> = {mapping};""",
-            os.path.join(paths.LEXICON_DIR, "bible.ts"),
+            paths.LEXICON_DIR / "bible.ts",
         )
 
     def __link_chapters(self) -> None:
@@ -667,8 +667,7 @@ class HTMLBuilder:
             scripts=[_INDEX_JS],
             css=[_INDEX_CSS],
         )
-        index_path: str = os.path.join(paths.BIBLE_DIR, _INDEX)
-        file.writelines(toc, index_path)
+        file.writelines(toc, paths.BIBLE_DIR / _INDEX)
 
     def __write_html_chapter(
         self,
@@ -688,14 +687,14 @@ class HTMLBuilder:
             scripts=[_CHAPTER_JS],
             css=[
                 _CHAPTER_CSS,
-                os.path.relpath(
-                    paths.BIBLE_DIR,
-                    paths.DROPDOWN_CSS,
-                ),
+                os.path.relpath(paths.DROPDOWN_CSS, paths.BIBLE_DIR),
             ],
         )
-        path: str = os.path.join(paths.BIBLE_DIR, chapter.path(is_epub=False))
-        file.writelines(out, path, make_dir=True)
+        file.writelines(
+            out,
+            paths.BIBLE_DIR / chapter.path(is_epub=False),
+            make_dir=True,
+        )
 
     def write_epub(self, bible: Bible, langs: list[str], subdir: str) -> None:
         kindle: epub.EpubBook = epub.EpubBook()
@@ -754,11 +753,8 @@ class HTMLBuilder:
         kindle.add_item(epub.EpubNcx())
         kindle.add_item(epub.EpubNav())
 
-        path: str = os.path.join(
-            paths.BIBLE_DIR,
-            "epub",
-            subdir,
-            f"{identifier.lower()}.epub",
+        path: pathlib.Path = (
+            paths.BIBLE_DIR / "epub" / subdir / f"{identifier.lower()}.epub"
         )
         file.mk_parent_dir(path)
         # TODO: (#0) The following method can fail silently. To verify that the

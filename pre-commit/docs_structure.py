@@ -178,7 +178,7 @@ def _print_classes(pattern_to_classes: dict[Pattern, set[str]]):
 
 def main():
     args = parser.parse_args()
-    directory: pathlib.Path = pathlib.Path(paths.SITE_DIR).resolve()
+    directory: pathlib.Path = paths.SITE_DIR.resolve()
 
     files: list[str] = [
         str(f.relative_to(directory))

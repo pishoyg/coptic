@@ -77,6 +77,7 @@ performance.
 """
 
 import os
+import pathlib
 import re
 import typing
 from collections.abc import Generator, Iterable, Iterator
@@ -526,7 +527,7 @@ class Index:
         input_dir: str | Generator[tuple[str, str]],
         extract: list[Selector],
         captures: list[Capture],
-        output: str,
+        output: str | pathlib.Path,
         include: Callable[[str], bool] | None = None,
     ) -> None:
         """
@@ -544,7 +545,7 @@ class Index:
         self._include: Callable[[str], bool] | None = include
         self._extract: list[Selector] = extract
         self._captures: list[Capture] = captures
-        self._output: str = output
+        self._output: str | pathlib.Path = output
 
     def iter_input(self) -> Generator[tuple[str, str]]:
         if isinstance(self._input, Generator):

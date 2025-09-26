@@ -1,72 +1,79 @@
 """Path constants and helpers."""
 
 import os
+import pathlib
 
 from utils import ensure
 
 DOMAIN: str = "remnqymi.com"
 URL: str = f"https://{DOMAIN}"
-# TODO: (#298) Stop using email.
-EMAIL: str = "remnqymi@gmail.com"
-JSON_KEYFILE_NAME: str = "google_cloud_keyfile.json"
+EMAIL: str = "remnqymi@gmail.com"  # TODO: (#298) Stop using email.
+
+# We don't verify the existence of the Google Cloud credentials file because
+# it's not persisted to the source control.
+JSON_KEYFILE_NAME: pathlib.Path = pathlib.Path("google_cloud_keyfile.json")
 
 
-def directory(*parts: str) -> str:
-    d: str = os.path.join(*parts)
-    ensure.ensure(os.path.isdir(d), d, "is not a directory or may not exist!")
-    return os.path.normpath(d)
+def directory(*parts: str | pathlib.Path) -> pathlib.Path:
+    d: pathlib.Path = pathlib.Path(*parts)
+    ensure.ensure(d.is_dir(), d, "is not a directory or may not exist!")
+    return d.resolve()
 
 
-def file(*parts: str) -> str:
-    f: str = os.path.join(*parts)
-    ensure.ensure(os.path.isfile(f), f, "is not a file or may not exist!")
-    return os.path.normpath(f)
+def file(*parts: str | pathlib.Path) -> pathlib.Path:
+    f: pathlib.Path = pathlib.Path(*parts)
+    ensure.ensure(f.is_file(), f, "is not a file or may not exist!")
+    return f.resolve()
 
 
-SITE_DIR: str = directory(os.environ["SITE_DIR"])
-LEXICON_DIR: str = directory(SITE_DIR, "crum")
-CRUM_JS: str = file(LEXICON_DIR, "main.js")
-CRUM_EXPLANATORY_DIR: str = directory(LEXICON_DIR, "explanatory")
-CRUM_SCAN_DIR: str = directory(LEXICON_DIR, "crum")
-DAWOUD_DIR: str = directory(SITE_DIR, "dawoud")
-BIBLE_DIR: str = directory(SITE_DIR, "bible")
-
-# Anki is not persisted to source control (and unlikely to ever be), so the
-# directory is not guaranteed to exist.
-ANKI_DIR: str = os.path.join(LEXICON_DIR, "anki/coptic.apkg")
-
-ICON: str = file(SITE_DIR, "img/icon/icon-circle.png")
-
-DROPDOWN_CSS: str = file(SITE_DIR, "dropdown.css")
-SHARED_CSS: str = file(SITE_DIR, "style.css")
+# Component Directories
+MARCION: pathlib.Path = directory("dictionary/marcion_sourceforge_net/")
+ANDREAS: pathlib.Path = directory("dictionary/stmacariusmonastery_org/")
+COPTICSITE: pathlib.Path = directory("dictionary/copticsite_com/")
+KELLIA: pathlib.Path = directory("dictionary/kellia_uni_goettingen_de/")
+STSHENOUDA: pathlib.Path = directory("bible/")
+FLASHCARDS: pathlib.Path = directory("flashcards/")
+KEYBOARD: pathlib.Path = directory("keyboard/")
+MORPHOLOGY: pathlib.Path = directory("morphology/")
 
 
-def server(path: str) -> str:
+# Site Directories
+SITE_DIR: pathlib.Path = directory(os.environ["SITE_DIR"])
+LEXICON_DIR: pathlib.Path = directory(SITE_DIR, "crum")
+CRUM_JS: pathlib.Path = file(LEXICON_DIR, "main.js")
+CRUM_EXPLANATORY_DIR: pathlib.Path = directory(LEXICON_DIR, "explanatory")
+CRUM_SCAN_DIR: pathlib.Path = directory(LEXICON_DIR, "crum")
+DAWOUD_DIR: pathlib.Path = directory(SITE_DIR, "dawoud")
+BIBLE_DIR: pathlib.Path = directory(SITE_DIR, "bible")
+
+# Anki is not persisted to source control.
+ANKI_DIR: pathlib.Path = LEXICON_DIR / "anki/coptic.apkg"
+
+ICON: pathlib.Path = file(SITE_DIR, "img/icon/icon-circle.png")
+
+DROPDOWN_CSS: pathlib.Path = file(SITE_DIR, "dropdown.css")
+SHARED_CSS: pathlib.Path = file(SITE_DIR, "style.css")
+
+
+def server(path: str | pathlib.Path) -> str:
     """Construct a path to the given file, from the perspective of the server.
 
     Args:
-        path: Target path.
+        path: Target path (Path or str). This is expected to be a full file path
+              contained within SITE_DIR.
 
     Returns:
-        A path that can be used to lead to the target on the server.
+        A URL path (str) that can be used to lead to the target on the server,
+        starting with '/'.
     """
-    path = os.path.normpath(path)
-    ensure.child_path(path, SITE_DIR)
-    return "/" + os.path.relpath(path, SITE_DIR)
-
-
-MARCION: str = directory("dictionary/marcion_sourceforge_net/")
-ANDREAS: str = directory("dictionary/stmacariusmonastery_org/")
-COPTICSITE: str = directory("dictionary/copticsite_com/")
-KELLIA: str = directory("dictionary/kellia_uni_goettingen_de/")
-STSHENOUDA: str = directory("bible/")
-FLASHCARDS: str = directory("flashcards/")
-KEYBOARD: str = directory("keyboard/")
-MORPHOLOGY: str = directory("morphology/")
+    p: pathlib.Path = pathlib.Path(path).resolve()
+    ensure.child_path(p, SITE_DIR)
+    return f"/{p.relative_to(SITE_DIR)}"
 
 
 def crum_url(key: str | int, deriv_key: str | int | None = None) -> str:
-    root_url: str = f"{URL}{server(LEXICON_DIR)}/{key}.html"
+    html_file_path: pathlib.Path = LEXICON_DIR / f"{key}.html"
+    root_url: str = f"{URL}{server(html_file_path)}"
     if not deriv_key:
         return root_url
     return f"{root_url}#drv{deriv_key}"

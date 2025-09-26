@@ -461,7 +461,7 @@ class Deck:
         # Get absolute paths, so you can read them.
         files = [os.path.join(self.html_dir, f) for f in files]
         # There is a shared CSS that is always included.
-        files.append(paths.SHARED_CSS)
+        files.append(str(paths.SHARED_CSS))
         files = list(map(os.path.normpath, files))
         ensure.unique(files)
         for path in files:

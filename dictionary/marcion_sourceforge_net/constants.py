@@ -304,7 +304,7 @@ QUALITY: list[str] = [
 # Image constants:
 _SCRIPT_DIR: pathlib.Path = pathlib.Path(__file__).parent
 IMG_SRC_DIR: pathlib.Path = _SCRIPT_DIR / "data" / "img"
-IMG_DST_DIR: pathlib.Path = pathlib.Path(paths.CRUM_EXPLANATORY_DIR)
+IMG_DST_DIR: pathlib.Path = paths.CRUM_EXPLANATORY_DIR
 SOURCES_DIR: pathlib.Path = _SCRIPT_DIR / "data" / "img-sources"
 BASENAME_RE: re.Pattern[str] = re.compile(r"(\d+)-(\d+)-(\d+)(\.[^\d]+)")
 NAME_RE: re.Pattern[str] = re.compile("[A-Z][a-zA-Z ]*")
