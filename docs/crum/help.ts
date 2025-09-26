@@ -28,7 +28,7 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
   const dialectHighlighting: Record<d.DialectKey, help.Shortcut[]> =
     Object.values(d.DIALECTS).reduce(
       (acc, dialect: d.Dialect) => {
-        acc[dialect.key] = [dialect.shortcut(highlighter)];
+        acc[dialect.key] = [highlighter.shortcut(dialect)];
         return acc;
       },
       {} as Record<d.DialectKey, help.Shortcut[]>

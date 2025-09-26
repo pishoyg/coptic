@@ -51,13 +51,16 @@ enum DialectMatch {
 /**
  */
 class SearchResult extends xooxle.SearchResult {
+  protected static manager: d.Manager;
   private static highlighter: highlight.Highlighter;
 
   /**
    *
+   * @param manager
    * @param highlighter
    */
-  static init(highlighter: highlight.Highlighter): void {
+  static init(manager: d.Manager, highlighter: highlight.Highlighter): void {
+    SearchResult.manager = manager;
     SearchResult.highlighter = highlighter;
   }
 
@@ -114,7 +117,7 @@ class CrumSearchResult extends SearchResult {
    * @returns Bucket number.
    */
   override bucket(row: HTMLTableRowElement): DialectMatch {
-    const active: d.DIALECT[] | undefined = d.manager.active();
+    const active: d.DIALECT[] | undefined = SearchResult.manager.active();
     if (!active?.length) {
       // There is no dialect highlighting. All results fall in the first bucket.
       return 0;
@@ -172,7 +175,7 @@ class KELLIASearchResult extends SearchResult {
    * @returns Bucket number.
    */
   override bucket(row: HTMLTableRowElement): number {
-    const active: d.DIALECT[] | undefined = d.manager.active();
+    const active: d.DIALECT[] | undefined = SearchResult.manager.active();
     if (!active?.length) {
       // There is no dialect highlighting. All results fall in the first bucket.
       return 0;
@@ -296,6 +299,8 @@ async function main(): Promise<void> {
   // shown on large screens).
   addListDialects();
 
+  const manager: d.Manager = new d.Manager();
+
   const dropDialects: NodeListOf<HTMLElement> =
     document.querySelectorAll<HTMLElement>(
       `#${DIALECTS_ID} .${dropdown.CLS.DROP}`
@@ -303,7 +308,7 @@ async function main(): Promise<void> {
   // Validate dropdown dialects, regardless of whether or not we end up using
   // them.
   logger.ensure(dropDialects.length === 1);
-  if (d.setToDefaultIfUnset()) {
+  if (manager.setToDefaultIfUnset()) {
     // In order to alert the user to the fact that dialect selection has
     // changed, we make sure the dialect list is visible.
     // NOTE: This step should precede the construction of the highlighter, so
@@ -313,12 +318,13 @@ async function main(): Promise<void> {
   }
 
   const highlighter: highlight.Highlighter = new highlight.Highlighter(
+    manager,
     // Retrieve the boxes created above.
     Array.from(
       document.querySelectorAll<HTMLInputElement>(`#${DIALECTS_ID} input`)
     )
   );
-  SearchResult.init(highlighter);
+  SearchResult.init(manager, highlighter);
 
   // Initialize searchers.
   // TODO: (#0) You initialize several Form and Xooxle objects, and many

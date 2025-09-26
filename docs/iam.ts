@@ -13,7 +13,9 @@ export type Where =
   | 'anki' // An Anki note.
   | 'lexicon' // Lexicon
   | 'index' // A Crum index page.
-  | 'index_index'; // A Crum index index page.
+  | 'index_index' // A Crum index index page.
+  | 'bible' // Bible
+  | 'chapter'; // A Bible chapter.
 
 // For Anki, we define a global const variable in the Anki JavaScript. Thus we
 // can distinguish whether we're running on Anki by whether this variable is

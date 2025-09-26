@@ -287,7 +287,7 @@ export function handleDialect(
       siglum.classList.add(ccls.HOVER_LINK);
       siglum.addEventListener(
         'click',
-        highlighter.toggleDialect.bind(highlighter, code)
+        highlighter.toggle.bind(highlighter, code)
       );
     });
 }
