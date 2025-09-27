@@ -1,6 +1,7 @@
 /* Styling for a Bible chapter. */
 
 .title {
+  /* The title shows in the middle. */
   text-align: center;
 }
 
@@ -10,26 +11,20 @@ table {
   word-break: break-word;
 }
 
-td,
-th {
-  padding: 6px;
+td {
+  /* The content of the cell aligns towards the top. */
+  vertical-align: top;
+
+  /* A very light, thin border */
+  border-bottom: 1px solid #e0e0e0;
+
+  /* Add padding to give the text room to breathe. */
+  padding: 1em 0.5em;
 }
 
-tr {
-  /* Create a positioning context for the ::after pseudo-element. */
-  position: relative;
-}
-
-tr::after {
-  content: ''; /* A pseudo-element needs content to exist. */
-  position: absolute;
-  bottom: 0; /* Position it at the very bottom of the row. */
-
-  /* To center the 80% line, we push it 10% from the left. */
-  left: 10%;
-  width: 80%; /* Set the line's width. */
-  height: 1px; /* This is the thickness of your border. */
-  background-color: #ccc; /* This is the color of your border. */
+tr:last-child td {
+  /* Remove the border from the very last row. */
+  border-bottom: none;
 }
 
 #bar,
@@ -50,20 +45,29 @@ tr::after {
 }
 
 #tray {
+  /* By default, the tray is hidden and the bar is visible. */
   display: none;
 }
 
 @media (width <= 500px) {
+  /* Hide the language bar. */
   #bar {
     display: none;
   }
 
+  /* Show the language tray instead. */
   #tray {
     display: block;
     float: right;
   }
 
+  /* Push the title to the left, so it will show next to the language tray. */
   .title {
     float: left;
+  }
+
+  /* Reduce the cell padding. */
+  td {
+    padding: 0.25em 0.125em;
   }
 }
