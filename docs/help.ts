@@ -2,7 +2,7 @@
 
 import * as iam from './iam.js';
 import * as cls from './cls.js';
-import * as logger from './logger.js';
+import * as log from './logger.js';
 
 /**
  * CODE_TO_KEY maps a keyboard event code to the event key.
@@ -448,7 +448,7 @@ export class Help {
     keys.forEach((key: string) => {
       const canConsume = this.sections.map((s) => s.canConsume(key)).flat();
       if (canConsume.length > 1) {
-        logger.fatal(
+        log.fatal(
           `${key} is consumable by multiple shortcuts: ${canConsume.map((s) => s.textDescription()).join(', ')}`
         );
       }

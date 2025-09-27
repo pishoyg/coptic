@@ -1,6 +1,5 @@
 /** Package dialect defines Bible dialects. */
-import * as d from '../dialect.js';
-import * as css from '../css.js';
+import * as dial from '../dialect.js';
 import * as cls from './cls.js';
 
 export type DIALECT =
@@ -20,29 +19,29 @@ type DialectKey = 'B' | 'S' | 'E' | 'G' | 'F' | 'A' | 'O' | 'M' | 'P' | 'L';
 /**
  *
  */
-export class Dialect extends d.Dialect<DIALECT, DIALECT, DialectKey> {
+export class Dialect extends dial.Dialect<DIALECT, DIALECT, DialectKey> {
   /**
    *
    * @param name
    * @param article
    * @param code
    */
-  constructor(name: DIALECT, article: d.Article, code: DialectKey) {
+  constructor(name: DIALECT, article: dial.Article, code: DialectKey) {
     super(name, name, article, code);
   }
 }
 
 const ALL_DIALECTS: Dialect[] = [
-  new Dialect('Bohairic', d.Article.BOHAIRIC, 'B'),
-  new Dialect('Sahidic', d.Article.SAHIDIC, 'S'),
-  new Dialect('English', d.Article.ENGLISH, 'E'),
-  new Dialect('Greek', d.Article.GREEK, 'G'),
-  new Dialect('Fayyumic', d.Article.FAYYUMIC, 'F'),
-  new Dialect('Akhmimic', d.Article.AKHMIMIC, 'A'),
-  new Dialect('OldBohairic', d.Article.OLD_COPTIC, 'O'),
-  new Dialect('Mesokemic', d.Article.MESOKEMIC, 'M'),
-  new Dialect('DialectP', d.Article.PROTO_THEBAN, 'P'),
-  new Dialect('Lycopolitan', d.Article.LYCOPOLITAN, 'L'),
+  new Dialect('Bohairic', dial.Article.BOHAIRIC, 'B'),
+  new Dialect('Sahidic', dial.Article.SAHIDIC, 'S'),
+  new Dialect('English', dial.Article.ENGLISH, 'E'),
+  new Dialect('Greek', dial.Article.GREEK, 'G'),
+  new Dialect('Fayyumic', dial.Article.FAYYUMIC, 'F'),
+  new Dialect('Akhmimic', dial.Article.AKHMIMIC, 'A'),
+  new Dialect('OldBohairic', dial.Article.OLD_COPTIC, 'O'),
+  new Dialect('Mesokemic', dial.Article.MESOKEMIC, 'M'),
+  new Dialect('DialectP', dial.Article.PROTO_THEBAN, 'P'),
+  new Dialect('Lycopolitan', dial.Article.LYCOPOLITAN, 'L'),
 ];
 
 // DIALECTS bears the dialects present in this page.
@@ -63,30 +62,11 @@ export const DIALECTS: Dialect[] = Array.from(
 /**
  *
  */
-export class Manager extends d.Manager<DIALECT> {
+export class Manager extends dial.Manager<DIALECT> {
   /**
    *
    */
   constructor() {
     super('bd');
-  }
-
-  /**
-   * @returns
-   */
-  rule(): string | undefined {
-    const active: DIALECT[] | undefined = this.active();
-    const inactive: DIALECT[] = DIALECTS.filter(
-      (dialect: Dialect): boolean => !active?.includes(dialect.name)
-    ).map((dialect: Dialect): DIALECT => dialect.name);
-
-    if (inactive.length === 0 || inactive.length === DIALECTS.length) {
-      // Dialects are all off or all on. Again, nothing to do!
-      // Notice that this check is based on the list of dialects available on
-      // this page, rather than on the list of all dialects.
-      return undefined;
-    }
-
-    return `${css.classQuery(...inactive)} { display: none; }`;
   }
 }

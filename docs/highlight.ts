@@ -2,8 +2,8 @@
  * Package highlight defines basic highlighting.
  */
 import * as ccls from './cls.js';
-import * as header from './header.js';
-import * as d from './dialect.js';
+import * as head from './header.js';
+import * as dial from './dialect.js';
 import * as help from './help.js';
 
 /**
@@ -116,10 +116,6 @@ export abstract class Highlighter {
    *
    */
   addEventListeners(): void {
-    // Switching tabs triggers a display update. This is because it's possible
-    // that, while we were on the second tab, we updated the display. This
-    // listener ensures that, when we are back to the first tab, the display
-    // changes applied in the second tab will also be made here.
     document.addEventListener('visibilitychange', () => {
       if (document.visibilityState === 'visible') {
         // If the user switches to a different tab and then back to the current
@@ -131,7 +127,7 @@ export abstract class Highlighter {
 
     // A click on the reset element resets all display.
     document
-      .querySelectorAll<HTMLElement>(`.${header.CLS.RESET}`)
+      .querySelectorAll<HTMLElement>(`.${head.CLS.RESET}`)
       .forEach((el: HTMLElement): void => {
         el.classList.add(ccls.LINK);
         el.addEventListener('click', this.reset.bind(this));
@@ -157,7 +153,7 @@ export abstract class DialectHighlighter<C extends string> extends Highlighter {
    */
   constructor(
     styler: Styler,
-    protected readonly manager: d.Manager<C>,
+    protected readonly manager: dial.Manager<C>,
     private readonly checkboxes: HTMLInputElement[]
   ) {
     super(styler);

@@ -7,14 +7,14 @@
 
 import * as help from '../help.js';
 import * as browser from '../browser.js';
-import * as highlight from './highlight.js';
-import * as d from './dialect.js';
+import * as high from './highlight.js';
+import * as dial from './dialect.js';
 import * as paths from '../paths.js';
 import * as css from '../css.js';
-import * as xooxle from '../xooxle.js';
+import * as xoox from '../xooxle.js';
 import * as dev from '../dev.js';
 import * as cls from './cls.js';
-import * as header from '../header.js';
+import * as head from '../header.js';
 
 /**
  *
@@ -24,18 +24,18 @@ import * as header from '../header.js';
  */
 // eslint-disable-next-line max-lines-per-function
 export function makeHelpPanel(
-  highlighter: highlight.Highlighter,
-  devHighlighter: highlight.DevHighlighter
+  highlighter: high.Highlighter,
+  devHighlighter: high.DevHighlighter
 ): help.Help {
   const panel = new help.Help();
 
-  const dialectHighlighting: Record<d.DialectKey, help.Shortcut[]> =
-    Object.values(d.DIALECTS).reduce(
-      (acc, dialect: d.Dialect) => {
+  const dialectHighlighting: Record<dial.DialectKey, help.Shortcut[]> =
+    Object.values(dial.DIALECTS).reduce(
+      (acc, dialect: dial.Dialect) => {
         acc[dialect.key] = [highlighter.shortcut(dialect)];
         return acc;
       },
-      {} as Record<d.DialectKey, help.Shortcut[]>
+      {} as Record<dial.DialectKey, help.Shortcut[]>
     );
 
   const control = {
@@ -61,7 +61,7 @@ export function makeHelpPanel(
       new help.Shortcut(
         'File a Report',
         ['lexicon', 'note', 'index', 'index_index'],
-        header.reports
+        head.reports
       ),
     ],
     H: [
@@ -107,7 +107,7 @@ export function makeHelpPanel(
         ['lexicon', 'note', 'index'],
         () => {
           let el: HTMLElement | undefined = browser.findNextElement(
-            css.classQuery(xooxle.CLS.VIEW, cls.SISTER_VIEW),
+            css.classQuery(xoox.CLS.VIEW, cls.SISTER_VIEW),
             'cur'
           );
           // If the element has an anchor, click that. Otherwise, the element
@@ -125,7 +125,7 @@ export function makeHelpPanel(
         (): void => {
           const text: string | undefined = browser
             .findNextElement(
-              `.${xooxle.CLS.VIEW} .${dev.CLS.DEV}, .${cls.SISTER_KEY}, .${cls.DRV_KEY}`,
+              `.${xoox.CLS.VIEW} .${dev.CLS.DEV}, .${cls.SISTER_KEY}, .${cls.DRV_KEY}`,
               'cur'
             )
             ?.textContent.trim();
@@ -172,7 +172,7 @@ export function makeHelpPanel(
         ['lexicon', 'note', 'index'],
         () => {
           browser.scrollToNextElement(
-            css.classQuery(xooxle.CLS.VIEW, cls.SISTER_VIEW, cls.DRV_KEY),
+            css.classQuery(xoox.CLS.VIEW, cls.SISTER_VIEW, cls.DRV_KEY),
             'next'
           );
         }
@@ -184,7 +184,7 @@ export function makeHelpPanel(
         ['lexicon', 'note', 'index'],
         () => {
           browser.scrollToNextElement(
-            css.classQuery(xooxle.CLS.VIEW, cls.SISTER_VIEW, cls.DRV_KEY),
+            css.classQuery(xoox.CLS.VIEW, cls.SISTER_VIEW, cls.DRV_KEY),
             'prev'
           );
         }

@@ -9,12 +9,12 @@ import * as html from '../html.js';
 import * as scan from '../scan.js';
 import * as paths from '../paths.js';
 import * as css from '../css.js';
-import * as highlight from './highlight.js';
-import * as d from './dialect.js';
+import * as high from './highlight.js';
+import * as dial from './dialect.js';
 import * as cls from './cls.js';
 import * as ccls from '../cls.js';
-import * as header from '../header.js';
-import * as logger from '../logger.js';
+import * as head from '../header.js';
+import * as log from '../logger.js';
 import * as wiki from './wiki.js';
 import * as drop from '../dropdown.js';
 
@@ -30,8 +30,8 @@ const ENGLISH_RE = /[\p{Script=Latin}][\p{Script=Latin}\p{Mark}]*/gu;
  */
 export function handle(
   root: HTMLElement,
-  highlighter: highlight.Highlighter,
-  devHighlighter: highlight.DevHighlighter
+  highlighter: high.Highlighter,
+  devHighlighter: high.DevHighlighter
 ): void {
   handleCategories(root);
   handleRootType(root);
@@ -249,7 +249,7 @@ export function handleSisterView(root: HTMLElement): void {
       table.querySelectorAll('tr').forEach((tr: HTMLTableRowElement): void => {
         const td: Element | null = tr.querySelector(`.${cls.SISTER_VIEW}`);
         if (!td) {
-          logger.error(
+          log.error(
             'A row in the sisters table does not have a "sister-view" element!'
           );
           return;
@@ -269,13 +269,13 @@ export function handleSisterView(root: HTMLElement): void {
  */
 export function handleDialect(
   root: HTMLElement,
-  highlighter: highlight.Highlighter
+  highlighter: high.Highlighter
 ): void {
   root
     .querySelectorAll<HTMLElement>(`.${cls.DIALECT}`)
     .forEach((el: HTMLElement): void => {
-      const code: d.DIALECT = el.textContent.trim() as d.DIALECT;
-      const dialect: d.Dialect = d.DIALECTS[code];
+      const code: dial.DIALECT = el.textContent.trim() as dial.DIALECT;
+      const dialect: dial.Dialect = dial.DIALECTS[code];
       // Prettify the appearance of the dialect code.
       const siglum: HTMLSpanElement = dialect.siglum();
       el.replaceChildren(siglum);
@@ -301,14 +301,12 @@ export function handleDialect(
  */
 export function handleDeveloper(
   root: HTMLElement,
-  highlighter: highlight.DevHighlighter
+  highlighter: high.DevHighlighter
 ): void {
-  root
-    .querySelectorAll<HTMLElement>(`.${header.CLS.DEVELOPER}`)
-    .forEach((el) => {
-      el.classList.add(ccls.LINK);
-      el.addEventListener('click', highlighter.toggle.bind(highlighter));
-    });
+  root.querySelectorAll<HTMLElement>(`.${head.CLS.DEVELOPER}`).forEach((el) => {
+    el.classList.add(ccls.LINK);
+    el.addEventListener('click', highlighter.toggle.bind(highlighter));
+  });
 }
 
 /**
@@ -332,7 +330,7 @@ export function handleAnkiNavigation(root: HTMLElement): void {
   if (!iam.amI('anki')) return;
   root.querySelectorAll<HTMLElement>(`.${cls.NAVIGATE}`).forEach((e) => {
     if (e.tagName !== 'A' || !e.hasAttribute('href')) {
-      logger.error(
+      log.error(
         'This "navigate" element is not an <a> tag with an "href" property!',
         e
       );

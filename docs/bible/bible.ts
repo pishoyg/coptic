@@ -1,7 +1,7 @@
 /** Main function for the Bible index. */
 
-import * as collapse from '../collapse.js';
-import * as logger from '../logger.js';
+import * as coll from '../collapse.js';
+import * as log from '../logger.js';
 
 const BOOK_PARAM = 'book';
 
@@ -17,7 +17,7 @@ function maybeGoToBook(): void {
   }
   const elem = document.getElementById(click);
   if (!elem) {
-    logger.error(click, 'not found!');
+    log.error(click, 'not found!');
     return;
   }
   elem.click();
@@ -28,7 +28,7 @@ function maybeGoToBook(): void {
  *
  */
 function main(): void {
-  collapse.addEventListenersForSiblings();
+  coll.addEventListenersForSiblings();
   maybeGoToBook();
 }
 

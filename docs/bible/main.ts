@@ -1,11 +1,11 @@
 /* Main function for a Bible chapter. */
 
-import * as highlight from './highlight.js';
+import * as high from './highlight.js';
 import * as browser from '../browser.js';
 import * as html from '../html.js';
-import * as dropdown from '../dropdown.js';
+import * as drop from '../dropdown.js';
 import * as cls from './cls.js';
-import * as d from './dialect.js';
+import * as dial from './dialect.js';
 
 const BAR_ID = 'bar';
 const TRAY_ID = 'tray';
@@ -15,7 +15,7 @@ const TRAY_ID = 'tray';
  * TODO: (#349) Use proper shortcuts with a help panel.
  * @param highlighter
  */
-function addEventListeners(highlighter: highlight.Highlighter): void {
+function addEventListeners(highlighter: high.Highlighter): void {
   document.addEventListener('keydown', (event: KeyboardEvent) => {
     switch (event.key) {
       case 'n':
@@ -50,7 +50,7 @@ function main(): void {
 
   const boxes: HTMLInputElement[] = [];
   const labels = (): HTMLLabelElement[] => {
-    return d.DIALECTS.map((dialect: d.Dialect): HTMLLabelElement => {
+    return dial.DIALECTS.map((dialect: dial.Dialect): HTMLLabelElement => {
       const label: HTMLLabelElement = document.createElement('label');
       const box: HTMLInputElement = dialect.checkbox();
       boxes.push(box);
@@ -68,14 +68,14 @@ function main(): void {
 
   const tray: HTMLDivElement = document.createElement('div');
   tray.append(...labels());
-  const drop: HTMLSpanElement = document.createElement('span');
-  drop.textContent = 'Languages ▾';
-  drop.id = TRAY_ID;
-  dropdown.addDroppable(drop, 'click', tray);
+  const holder: HTMLSpanElement = document.createElement('span');
+  holder.textContent = 'Languages ▾';
+  holder.id = TRAY_ID;
+  drop.addDroppable(holder, 'click', tray);
 
   // Construct the highlighter.
-  const highlighter: highlight.Highlighter = new highlight.Highlighter(
-    new d.Manager(),
+  const highlighter: high.Highlighter = new high.Highlighter(
+    new dial.Manager(),
     [...boxes]
   );
 
@@ -83,9 +83,9 @@ function main(): void {
 
   const title: HTMLElement = document.querySelector(`.${cls.TITLE}`)!;
   title.insertAdjacentElement('afterend', bar);
-  title.insertAdjacentElement('afterend', drop);
+  title.insertAdjacentElement('afterend', holder);
 
-  dropdown.addEventListeners('click');
+  drop.addEventListeners('click');
 }
 
 main();

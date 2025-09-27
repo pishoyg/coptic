@@ -1,5 +1,5 @@
 /** Package collapse defines logic to control collapsible elements. */
-import * as logger from './logger.js';
+import * as log from './logger.js';
 
 enum CLS {
   // COLLAPSE is the class of elements that, when clicked, trigger a collapse
@@ -128,7 +128,7 @@ export function addEventListenersForSiblings(toggleUponLoad = false): void {
     .forEach((collapse: HTMLElement): void => {
       const collapsible: HTMLElement =
         collapse.nextElementSibling as HTMLElement;
-      logger.ensure(
+      log.ensure(
         collapsible.classList.contains(CLS.COLLAPSIBLE),
         'A .collapse must be followed by a .collapsible!'
       );

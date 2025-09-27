@@ -1,6 +1,6 @@
 /** Package dialect defines dialect handling logic. */
 import * as str from './str.js';
-import * as logger from './logger.js';
+import * as log from './logger.js';
 
 const SEPARATOR = ',';
 
@@ -46,7 +46,7 @@ export class Dialect<C extends string, N extends string, K extends string> {
     key?: K
   ) {
     this.key = key ?? (code as unknown as K);
-    logger.ensure(this.key.length === 1);
+    log.ensure(this.key.length === 1);
   }
 
   /**

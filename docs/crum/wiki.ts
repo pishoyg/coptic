@@ -7,7 +7,7 @@ import * as paths from '../paths.js';
 import * as css from '../css.js';
 import * as cls from './cls.js';
 import * as ccls from '../cls.js';
-import * as logger from '../logger.js';
+import * as log from '../logger.js';
 import * as bible from './bible.js';
 import * as ann from './annotations.js';
 import * as ref from './references.js';
@@ -245,7 +245,7 @@ function parseBibleCitation(
   }
   const name: string = danOverride?.name ?? book.name;
   if (!chapter) {
-    logger.ensure(
+    log.ensure(
       !verse,
       'Given the regex, if there is no chapter, there is definitely no verse!'
     );
@@ -520,7 +520,7 @@ export function warnPotentiallyMissingReferences(root: HTMLElement): void {
     // Find all words containing an upper-case letter.
     const words: string[] =
       text.nodeValue?.match(/(?=\p{L}*\p{Lu})[\p{L}\p{M}]+/gu) ?? [];
-    logger.warn(
+    log.warn(
       'Possibly unmarked abbreviations:',
       ...words
         // Insert a comma after each word.

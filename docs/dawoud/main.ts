@@ -1,7 +1,7 @@
 /** Main function for the Dawoud scan. */
 
 import * as scan from '../scan.js';
-import * as coptic from '../coptic.js';
+import * as copt from '../coptic.js';
 
 // Our dictionary pages are '0.png' to '1055.png', with '18.jpg' holding page 1.
 const MIN_PAGE_NUM = 0;
@@ -19,7 +19,7 @@ const COPTIC = 'coptic.tsv';
  * dictionary between ⲟ and ⲡ.
  * We reimplement sorting for Dawoud!
  */
-export class DawoudWord extends coptic.Word implements scan.Word {
+export class DawoudWord extends copt.Word implements scan.Word {
   /**
    * Lexicographically compare two words in Dawoud's dictionary.
    * @param other - Word to compare.

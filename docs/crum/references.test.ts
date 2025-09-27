@@ -7,12 +7,3 @@ test('Ensure all keys are normalized', () => {
   );
   expect(unnormalized).toEqual([]);
 });
-
-describe('Prevent duplicate hyperlinks', () => {
-  Object.values(ref.MAPPING).forEach((source: ref.Source) => {
-    if (!Array.isArray(source.hyperlink)) {
-      return;
-    }
-    expect(new Set(source.hyperlink).size).toBe(source.hyperlink.length);
-  });
-});

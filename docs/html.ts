@@ -1,6 +1,6 @@
 /** Package html defines DOM manipulation helpers. */
 import * as browser from './browser.js';
-import * as logger from './logger.js';
+import * as log from './logger.js';
 import * as css from './css.js';
 
 /**
@@ -32,7 +32,7 @@ export function moveElement(
  */
 export function makeSpanLinkToAnchor(el: Element, target: string): void {
   if (el.tagName !== 'SPAN') {
-    logger.warn(`Converting ${el.tagName} tag to <a> tag!`);
+    log.warn(`Converting ${el.tagName} tag to <a> tag!`);
   }
   moveElement(el, 'a', { href: target });
 }

@@ -5,11 +5,11 @@ import * as css from '../css.js';
 import * as iam from '../iam.js';
 import * as dev from '../dev.js';
 import * as cls from './cls.js';
-import * as d from './dialect.js';
-import * as dd from '../dialect.js';
+import * as dial from './dialect.js';
+import * as ddial from '../dialect.js';
 import * as browser from '../browser.js';
 import * as help from '../help.js';
-import * as highlight from '../highlight.js';
+import * as high from '../highlight.js';
 
 export enum CLS {
   DIALECT_CODE = 'dialect-code',
@@ -40,7 +40,7 @@ export class DevHighlighter extends dev.Highlighter {
 
 /**
  */
-export class Highlighter extends highlight.DialectHighlighter<d.DIALECT> {
+export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
   private static readonly BRIGHT = '1.0';
   private static readonly DIM = '0.3';
 
@@ -54,11 +54,11 @@ export class Highlighter extends highlight.DialectHighlighter<d.DIALECT> {
    * dialect highlighting in some other way should also update the checking of
    * the checkboxes.
    */
-  constructor(manager: d.Manager, checkboxes: HTMLInputElement[]) {
-    let styler: highlight.Styler;
+  constructor(manager: dial.Manager, checkboxes: HTMLInputElement[]) {
+    let styler: high.Styler;
 
     if (iam.amI('anki')) {
-      styler = new highlight.ElementStyler(
+      styler = new high.ElementStyler(
         () => this.query(),
         (el: HTMLElement): void => {
           el.style.opacity = Highlighter.DIM;
@@ -69,7 +69,7 @@ export class Highlighter extends highlight.DialectHighlighter<d.DIALECT> {
         }
       );
     } else {
-      styler = new highlight.CSSStyler(() => this.rule());
+      styler = new high.CSSStyler(() => this.rule());
     }
 
     super(styler, manager, checkboxes);
@@ -92,7 +92,7 @@ export class Highlighter extends highlight.DialectHighlighter<d.DIALECT> {
    * @returns
    */
   private query(): string | undefined {
-    const active: d.DIALECT[] | undefined = this.manager.active();
+    const active: dial.DIALECT[] | undefined = this.manager.active();
     if (!active?.length) {
       return undefined;
     }
@@ -108,7 +108,7 @@ export class Highlighter extends highlight.DialectHighlighter<d.DIALECT> {
     //     tooltips, so we give those special handling in the second subquery.
     // 2. For dialect codes of inactive dialects, dim only the sigla.
     //    This keeps the tooltips bright.
-    return `.${cls.WORD} > :not(${css.classQuery(...active)}, .${cls.SPELLING}:not(${d.ANY_DIALECT_QUERY}), .${cls.DIALECT}), .${cls.WORD} > .${cls.DIALECT}:not(${css.classQuery(...active)}) .${dd.CLS.SIGLUM}`;
+    return `.${cls.WORD} > :not(${css.classQuery(...active)}, .${cls.SPELLING}:not(${dial.ANY_DIALECT_QUERY}), .${cls.DIALECT}), .${cls.WORD} > .${cls.DIALECT}:not(${css.classQuery(...active)}) .${ddial.CLS.SIGLUM}`;
   }
 
   /**
@@ -131,7 +131,7 @@ export class Highlighter extends highlight.DialectHighlighter<d.DIALECT> {
    * @returns
    */
   override shortcuts(): help.Shortcut[] {
-    return Object.values(d.DIALECTS).map(this.shortcut.bind(this));
+    return Object.values(dial.DIALECTS).map(this.shortcut.bind(this));
   }
 
   /**
@@ -140,7 +140,7 @@ export class Highlighter extends highlight.DialectHighlighter<d.DIALECT> {
    * @param dialect
    * @returns
    */
-  shortcut(dialect: d.Dialect): help.Shortcut {
+  shortcut(dialect: dial.Dialect): help.Shortcut {
     const table = document.createElement('table');
     const tr = document.createElement('tr');
 

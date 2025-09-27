@@ -1,16 +1,16 @@
 /** Main function for the lexicon. */
-import * as xooxle from '../xooxle.js';
-import * as collapse from '../collapse.js';
+import * as xoox from '../xooxle.js';
+import * as coll from '../collapse.js';
 import * as css from '../css.js';
-import * as highlight from './highlight.js';
-import * as d from './dialect.js';
+import * as high from './highlight.js';
+import * as dial from './dialect.js';
 import * as help from './help.js';
-import * as header from '../header.js';
+import * as head from '../header.js';
 import * as paths from '../paths.js';
 import * as crum from './crum.js';
 import * as wiki from './wiki.js';
-import * as dropdown from '../dropdown.js';
-import * as logger from '../logger.js';
+import * as drop from '../dropdown.js';
+import * as log from '../logger.js';
 import * as id from './id.js';
 
 const SEARCH_BOX_ID = 'searchBox';
@@ -50,16 +50,16 @@ enum DialectMatch {
 
 /**
  */
-class SearchResult extends xooxle.SearchResult {
-  protected static manager: d.Manager;
-  private static highlighter: highlight.Highlighter;
+class SearchResult extends xoox.SearchResult {
+  protected static manager: dial.Manager;
+  private static highlighter: high.Highlighter;
 
   /**
    *
    * @param manager
    * @param highlighter
    */
-  static init(manager: d.Manager, highlighter: highlight.Highlighter): void {
+  static init(manager: dial.Manager, highlighter: high.Highlighter): void {
     SearchResult.manager = manager;
     SearchResult.highlighter = highlighter;
   }
@@ -117,14 +117,14 @@ class CrumSearchResult extends SearchResult {
    * @returns Bucket number.
    */
   override bucket(row: HTMLTableRowElement): DialectMatch {
-    const active: d.DIALECT[] | undefined = SearchResult.manager.active();
+    const active: dial.DIALECT[] | undefined = SearchResult.manager.active();
     if (!active?.length) {
       // There is no dialect highlighting. All results fall in the first bucket.
       return 0;
     }
 
     const highlightedDialectQuery: string = active
-      .map((dialect: d.DIALECT) => `.${dialect} .${xooxle.CLS.MATCH}`)
+      .map((dialect: dial.DIALECT) => `.${dialect} .${xoox.CLS.MATCH}`)
       .join(', ');
     if (row.querySelector(highlightedDialectQuery)) {
       // We have a match in a highlighted dialect.
@@ -132,8 +132,8 @@ class CrumSearchResult extends SearchResult {
     }
 
     const undialected: boolean = Array.from(
-      row.querySelectorAll(`.${xooxle.CLS.MATCH}`)
-    ).some((el) => !el.closest(d.ANY_DIALECT_QUERY));
+      row.querySelectorAll(`.${xoox.CLS.MATCH}`)
+    ).some((el) => !el.closest(dial.ANY_DIALECT_QUERY));
     const ofInterest = !!row.querySelector(css.classQuery(...active));
     if (undialected) {
       if (ofInterest) {
@@ -175,14 +175,14 @@ class KELLIASearchResult extends SearchResult {
    * @returns Bucket number.
    */
   override bucket(row: HTMLTableRowElement): number {
-    const active: d.DIALECT[] | undefined = SearchResult.manager.active();
+    const active: dial.DIALECT[] | undefined = SearchResult.manager.active();
     if (!active?.length) {
       // There is no dialect highlighting. All results fall in the first bucket.
       return 0;
     }
 
     const highlightedDialectQuery: string = active
-      .map((dialect: d.DIALECT) => `.${dialect} .${xooxle.CLS.MATCH}`)
+      .map((dialect: dial.DIALECT) => `.${dialect} .${xoox.CLS.MATCH}`)
       .join(', ');
     return row.querySelector(highlightedDialectQuery) ? 0 : 1;
   }
@@ -191,7 +191,7 @@ class KELLIASearchResult extends SearchResult {
 /**
  *
  */
-class WikiSearchResult extends xooxle.SearchResult {
+class WikiSearchResult extends xoox.SearchResult {
   /**
    *
    * @param total
@@ -217,7 +217,7 @@ interface Xooxle {
   indexURL: string;
   tableID: string;
   collapsibleID: string;
-  searchResultType?: typeof xooxle.SearchResult;
+  searchResultType?: typeof xoox.SearchResult;
 }
 
 const XOOXLES: Xooxle[] = [
@@ -250,12 +250,14 @@ const XOOXLES: Xooxle[] = [
  *
  */
 function addDropdownDialects(): void {
-  document.querySelector(`#${DIALECTS_ID} .${dropdown.CLS.DROPPABLE}`)!.append(
-    ...Object.values(d.DIALECTS).map((dialect: d.Dialect): HTMLElement => {
-      const label: HTMLLabelElement = document.createElement('label');
-      label.append(dialect.checkbox(), ...dialect.title());
-      return label;
-    })
+  document.querySelector(`#${DIALECTS_ID} .${drop.CLS.DROPPABLE}`)!.append(
+    ...Object.values(dial.DIALECTS).map(
+      (dialect: dial.Dialect): HTMLElement => {
+        const label: HTMLLabelElement = document.createElement('label');
+        label.append(dialect.checkbox(), ...dialect.title());
+        return label;
+      }
+    )
   );
 }
 
@@ -264,12 +266,14 @@ function addDropdownDialects(): void {
  */
 function addListDialects(): void {
   document.querySelector(`#${DIALECTS_ID} #${CHECKBOXES_ID}`)!.append(
-    ...Object.values(d.DIALECTS).map((dialect: d.Dialect): HTMLElement => {
-      const label: HTMLLabelElement = document.createElement('label');
-      label.append(dialect.checkbox(), dialect.siglum());
-      dropdown.addDroppable(label, 'hover', ...dialect.anchoredName());
-      return label;
-    })
+    ...Object.values(dial.DIALECTS).map(
+      (dialect: dial.Dialect): HTMLElement => {
+        const label: HTMLLabelElement = document.createElement('label');
+        label.append(dialect.checkbox(), dialect.siglum());
+        drop.addDroppable(label, 'hover', ...dialect.anchoredName());
+        return label;
+      }
+    )
   );
 }
 
@@ -299,15 +303,13 @@ async function main(): Promise<void> {
   // shown on large screens).
   addListDialects();
 
-  const manager: d.Manager = new d.Manager();
+  const manager: dial.Manager = new dial.Manager();
 
   const dropDialects: NodeListOf<HTMLElement> =
-    document.querySelectorAll<HTMLElement>(
-      `#${DIALECTS_ID} .${dropdown.CLS.DROP}`
-    );
+    document.querySelectorAll<HTMLElement>(`#${DIALECTS_ID} .${drop.CLS.DROP}`);
   // Validate dropdown dialects, regardless of whether or not we end up using
   // them.
-  logger.ensure(dropDialects.length === 1);
+  log.ensure(dropDialects.length === 1);
   if (manager.setToDefaultIfUnset()) {
     // In order to alert the user to the fact that dialect selection has
     // changed, we make sure the dialect list is visible.
@@ -317,7 +319,7 @@ async function main(): Promise<void> {
     dropDialects[0]?.click();
   }
 
-  const highlighter: highlight.Highlighter = new highlight.Highlighter(
+  const highlighter: high.Highlighter = new high.Highlighter(
     manager,
     // Retrieve the boxes created above.
     Array.from(
@@ -338,37 +340,35 @@ async function main(): Promise<void> {
   // While this is not currently a problem, it remains undesirable.
   // Deduplicate these actions, somehow.
   await Promise.all(
-    XOOXLES.map(async (xoox: Xooxle) => {
-      const json: xooxle.Index = (await fetch(xoox.indexURL).then(
+    XOOXLES.map(async (xooxle: Xooxle) => {
+      const json: xoox.Index = (await fetch(xooxle.indexURL).then(
         (raw: Response) => raw.json()
-      )) as xooxle.Index;
-      const form: xooxle.Form = new xooxle.Form({
+      )) as xoox.Index;
+      const form: xoox.Form = new xoox.Form({
         searchBoxID: SEARCH_BOX_ID,
         fullWordCheckboxID: FULL_WORD_CHECKBOX_ID,
         regexCheckboxID: REGEX_CHECKBOX_ID,
         messageBoxID: MESSAGE_BOX_ID,
-        resultsTableID: xoox.tableID,
-        collapsibleID: xoox.collapsibleID,
+        resultsTableID: xooxle.tableID,
+        collapsibleID: xooxle.collapsibleID,
         formID: FORM_ID,
       });
-      new xooxle.Xooxle(json, form, xoox.searchResultType);
+      new xoox.Xooxle(json, form, xooxle.searchResultType);
     })
   );
 
   // Add event listeners for collapsibles.
-  collapse.addEventListenersForSiblings(true);
+  coll.addEventListenersForSiblings(true);
   // Add event listeners for tooltips.
-  dropdown.addEventListeners('hover');
-  dropdown.addEventListeners('click');
+  drop.addEventListeners('hover');
+  drop.addEventListeners('click');
 
   // Create the help panel.
-  help.makeHelpPanel(highlighter, new highlight.DevHighlighter());
+  help.makeHelpPanel(highlighter, new high.DevHighlighter());
 
   // Add event listener for reports.
   // TODO: (#203) This belongs in the (future) header module.
-  document
-    .getElementById(REPORTS_ID)!
-    .addEventListener('click', header.reports);
+  document.getElementById(REPORTS_ID)!.addEventListener('click', head.reports);
 }
 
 await main();

@@ -1,11 +1,11 @@
 /** Main function for a Crum word page (a Crum note). */
 
 import * as help from './help.js';
-import * as d from './dialect.js';
+import * as dial from './dialect.js';
 import * as iam from '../iam.js';
-import * as dropdown from '../dropdown.js';
+import * as drop from '../dropdown.js';
 import * as html from '../html.js';
-import * as highlight from './highlight.js';
+import * as high from './highlight.js';
 import * as crum from './crum.js';
 
 /**
@@ -15,7 +15,7 @@ function main(): void {
   // Normalizing the tree and text content is necessary for some of our text
   // search logic to work correctly.
   html.normalize();
-  const manager: d.Manager = new d.Manager();
+  const manager: dial.Manager = new dial.Manager();
   const anki = iam.amI('anki');
   if (!anki) {
     // Set to defaults.
@@ -23,8 +23,8 @@ function main(): void {
     manager.setToDefaultIfUnset();
   }
 
-  const highlighter = new highlight.Highlighter(manager, []);
-  const devHighlighter = new highlight.DevHighlighter();
+  const highlighter = new high.Highlighter(manager, []);
+  const devHighlighter = new high.DevHighlighter();
 
   // We disable the help panel on Anki for the following reasons:
   // - There is no keyboard on mobile.
@@ -40,7 +40,7 @@ function main(): void {
   crum.handle(document.body, highlighter, devHighlighter);
 
   // We only have hover-invoked tooltips.
-  dropdown.addEventListeners('hover');
+  drop.addEventListeners('hover');
 }
 
 main();

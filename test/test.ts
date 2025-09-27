@@ -3,9 +3,9 @@
  */
 
 import * as play from '@playwright/test';
-import * as logger from '../docs/logger.js';
-import * as ccls from '../docs/crum/cls.js';
-import * as dcls from '../docs/dropdown.js';
+import * as log from '../docs/logger.js';
+import * as cls from '../docs/crum/cls.js';
+import * as drop from '../docs/dropdown.js';
 
 /**
  * PAGES_TO_TEST defines the list of site pages to test.
@@ -77,17 +77,17 @@ play.test(
     // TODO: (#419) The numbers below are expected to grow as our parsers
     // develop to handle more edge cases.
     for (const testCase of [
-      { query: `.${ccls.WIKI} .${ccls.REFERENCE}`, want: 134 },
-      { query: `.${ccls.WIKI} .${ccls.SUFFIX}`, want: 128 },
-      { query: `.${ccls.WIKI} .${ccls.BIBLE}`, want: 119 },
+      { query: `.${cls.WIKI} .${cls.REFERENCE}`, want: 134 },
+      { query: `.${cls.WIKI} .${cls.SUFFIX}`, want: 128 },
+      { query: `.${cls.WIKI} .${cls.BIBLE}`, want: 119 },
       {
-        query: `.${ccls.WIKI} .${ccls.DIALECT} .${dcls.CLS.DROPPABLE}`,
+        query: `.${cls.WIKI} .${cls.DIALECT} .${drop.CLS.DROPPABLE}`,
         want: 383,
       },
-      { query: `.${ccls.WIKI} .${ccls.ANNOTATION}`, want: 79 },
+      { query: `.${cls.WIKI} .${cls.ANNOTATION}`, want: 79 },
     ]) {
       const got: number = await page.locator(testCase.query).count();
-      logger.ensure(
+      log.ensure(
         got === testCase.want,
         'want',
         testCase.want,

@@ -1,5 +1,5 @@
 /** Package dev defines developer-mode logic. */
-import * as highlight from './highlight.js';
+import * as high from './highlight.js';
 import * as iam from './iam.js';
 
 /**
@@ -78,7 +78,7 @@ function modify(el: HTMLElement): void {
 /**
  *
  */
-export abstract class Highlighter extends highlight.Highlighter {
+export abstract class Highlighter extends high.Highlighter {
   abstract query(): string;
 
   /**
@@ -94,8 +94,8 @@ export abstract class Highlighter extends highlight.Highlighter {
   constructor() {
     super(
       iam.amI('anki')
-        ? new highlight.ElementStyler(() => this.query(), modify)
-        : new highlight.CSSStyler(() => this.rule())
+        ? new high.ElementStyler(() => this.query(), modify)
+        : new high.CSSStyler(() => this.rule())
     );
   }
 
