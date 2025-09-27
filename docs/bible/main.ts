@@ -7,8 +7,10 @@ import * as drop from '../dropdown.js';
 import * as cls from './cls.js';
 import * as dial from './dialect.js';
 
-const BAR_ID = 'bar';
-const TRAY_ID = 'tray';
+enum ID {
+  BAR = 'bar',
+  TRAY = 'tray',
+}
 
 /**
  * Add Bible event listeners.
@@ -64,13 +66,13 @@ function main(): void {
   // element.
   const bar: HTMLDivElement = document.createElement('div');
   bar.append(...labels());
-  bar.id = BAR_ID;
+  bar.id = ID.BAR;
 
   const tray: HTMLDivElement = document.createElement('div');
   tray.append(...labels());
   const holder: HTMLSpanElement = document.createElement('span');
   holder.textContent = 'Languages ▾';
-  holder.id = TRAY_ID;
+  holder.id = ID.TRAY;
   drop.addDroppable(holder, 'click', tray);
 
   // Construct the highlighter.
