@@ -24,6 +24,7 @@ function main(): void {
   }
 
   const highlighter = new highlight.Highlighter(manager, []);
+  const devHighlighter = new highlight.DevHighlighter();
 
   // We disable the help panel on Anki for the following reasons:
   // - There is no keyboard on mobile.
@@ -33,10 +34,11 @@ function main(): void {
   // - Elements created by the panel logic (such as the `help` footer) were
   //   found to be duplicated on some Anki platforms!
   if (!anki) {
-    help.makeHelpPanel(highlighter);
+    help.makeHelpPanel(highlighter, devHighlighter);
   }
 
-  crum.handle(document.body, highlighter);
+  crum.handle(document.body, highlighter, devHighlighter);
+
   // We only have hover-invoked tooltips.
   dropdown.addEventListeners('hover');
 }

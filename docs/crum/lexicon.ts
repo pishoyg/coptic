@@ -362,7 +362,7 @@ async function main(): Promise<void> {
   dropdown.addEventListeners('click');
 
   // Create the help panel.
-  help.makeHelpPanel(highlighter);
+  help.makeHelpPanel(highlighter, new highlight.DevHighlighter());
 
   // Add event listener for reports.
   // TODO: (#203) This belongs in the (future) header module.

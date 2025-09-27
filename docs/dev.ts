@@ -1,4 +1,6 @@
 /** Package dev defines developer-mode logic. */
+import * as highlight from './highlight.js';
+import * as iam from './iam.js';
 
 /**
  * VAR is the name of the local storage variable holding the status of the
@@ -54,4 +56,62 @@ export function reset(): void {
  */
 export function toggle(): void {
   set(!get());
+}
+
+type Visibility = 'block' | 'none';
+
+/**
+ * @returns
+ */
+function display(): Visibility {
+  return get() ? 'block' : 'none';
+}
+
+/**
+ *
+ * @param el
+ */
+function modify(el: HTMLElement): void {
+  el.style.display = display();
+}
+
+/**
+ *
+ */
+export abstract class Highlighter extends highlight.Highlighter {
+  abstract query(): string;
+
+  /**
+   * @returns
+   */
+  private rule(): string {
+    return `${this.query()} { display: ${display()} }`;
+  }
+
+  /**
+   *
+   */
+  constructor() {
+    super(
+      iam.amI('anki')
+        ? new highlight.ElementStyler(() => this.query(), modify)
+        : new highlight.CSSStyler(() => this.rule())
+    );
+  }
+
+  /**
+   *
+   */
+  override reset(): void {
+    reset();
+    this.update();
+  }
+
+  /**
+   *
+   */
+  toggle(): void {
+    set(!get());
+    this.update();
+  }
 }

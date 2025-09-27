@@ -19,10 +19,14 @@ import * as header from '../header.js';
 /**
  *
  * @param highlighter
+ * @param devHighlighter
  * @returns
  */
 // eslint-disable-next-line max-lines-per-function
-export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
+export function makeHelpPanel(
+  highlighter: highlight.Highlighter,
+  devHighlighter: highlight.DevHighlighter
+): help.Help {
   const panel = new help.Help();
 
   const dialectHighlighting: Record<d.DialectKey, help.Shortcut[]> =
@@ -46,7 +50,7 @@ export function makeHelpPanel(highlighter: highlight.Highlighter): help.Help {
       new help.Shortcut(
         'Developer mode',
         ['lexicon', 'note', 'index', 'index_index'],
-        highlighter.toggleDev.bind(highlighter)
+        devHighlighter.toggle.bind(devHighlighter)
       ),
     ],
     R: [

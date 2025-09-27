@@ -1,5 +1,6 @@
 /** Package dialect defines Bible dialects. */
 import * as d from '../dialect.js';
+import * as css from '../css.js';
 import * as cls from './cls.js';
 
 export type DIALECT =
@@ -68,5 +69,24 @@ export class Manager extends d.Manager<DIALECT> {
    */
   constructor() {
     super('bd');
+  }
+
+  /**
+   * @returns
+   */
+  rule(): string | undefined {
+    const active: DIALECT[] | undefined = this.active();
+    const inactive: DIALECT[] = DIALECTS.filter(
+      (dialect: Dialect): boolean => !active?.includes(dialect.name)
+    ).map((dialect: Dialect): DIALECT => dialect.name);
+
+    if (inactive.length === 0 || inactive.length === DIALECTS.length) {
+      // Dialects are all off or all on. Again, nothing to do!
+      // Notice that this check is based on the list of dialects available on
+      // this page, rather than on the list of all dialects.
+      return undefined;
+    }
+
+    return `${css.classQuery(...inactive)} { display: none; }`;
   }
 }

@@ -26,10 +26,12 @@ const ENGLISH_RE = /[\p{Script=Latin}][\p{Script=Latin}\p{Mark}]*/gu;
  * Handle all Crum elements.
  * @param root
  * @param highlighter
+ * @param devHighlighter
  */
 export function handle(
   root: HTMLElement,
-  highlighter: highlight.Highlighter
+  highlighter: highlight.Highlighter,
+  devHighlighter: highlight.DevHighlighter
 ): void {
   handleCategories(root);
   handleRootType(root);
@@ -43,7 +45,7 @@ export function handle(
   handleSisterKey(root);
   handleSisterView(root);
   handleDialect(root, highlighter);
-  handleDeveloper(root, highlighter);
+  handleDeveloper(root, devHighlighter);
   insertCrumAbbreviationsLink();
   handleAnkiNavigation(root);
   addCopticLookups(root);
@@ -299,13 +301,13 @@ export function handleDialect(
  */
 export function handleDeveloper(
   root: HTMLElement,
-  highlighter: highlight.Highlighter
+  highlighter: highlight.DevHighlighter
 ): void {
   root
     .querySelectorAll<HTMLElement>(`.${header.CLS.DEVELOPER}`)
     .forEach((el) => {
       el.classList.add(ccls.LINK);
-      el.addEventListener('click', highlighter.toggleDev.bind(highlighter));
+      el.addEventListener('click', highlighter.toggle.bind(highlighter));
     });
 }
 
