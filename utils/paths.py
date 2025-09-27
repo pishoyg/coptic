@@ -17,13 +17,13 @@ JSON_KEYFILE_NAME: pathlib.Path = pathlib.Path("google_cloud_keyfile.json")
 def directory(*parts: str | pathlib.Path) -> pathlib.Path:
     d: pathlib.Path = pathlib.Path(*parts)
     ensure.ensure(d.is_dir(), d, "is not a directory or may not exist!")
-    return d.resolve()
+    return d
 
 
 def file(*parts: str | pathlib.Path) -> pathlib.Path:
     f: pathlib.Path = pathlib.Path(*parts)
     ensure.ensure(f.is_file(), f, "is not a file or may not exist!")
-    return f.resolve()
+    return f
 
 
 # Component Directories
@@ -66,7 +66,7 @@ def server(path: str | pathlib.Path) -> str:
         A URL path (str) that can be used to lead to the target on the server,
         starting with '/'.
     """
-    p: pathlib.Path = pathlib.Path(path).resolve()
+    p: pathlib.Path = pathlib.Path(path)
     ensure.child_path(p, SITE_DIR)
     return f"/{p.relative_to(SITE_DIR)}"
 
