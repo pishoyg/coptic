@@ -12,41 +12,54 @@ import * as help from '../help.js';
 import * as high from '../highlight.js';
 
 export enum CLS {
+  /**
+   * DIALECT_CODE is the class of the cell, in a dialect shortcut description,
+   * bearing the dialect code.
+   */
   DIALECT_CODE = 'dialect-code',
+  /**
+   * DIALECT_CODE is the class of the cell, in a dialect shortcut description,
+   * bearing the dialect name.
+   */
   DIALECT_NAME = 'dialect-name',
+  /**
+   * DIALECT_CODE is the class of the cell, in a dialect shortcut description,
+   * bearing the list of dictionaries that this dialect belongs to.
+   */
   DIALECT_DICTIONARIES = 'dialect-dictionaries',
 }
 
 /**
- *
+ * DevHighlighter is a highlighter that controls Crum's developer-mode elements.
  */
 export class DevHighlighter extends dev.Highlighter {
   /**
-   * @returns
+   * @returns A query selecting all developer-mode-only elements.
    */
   override query(): string {
     return `.${dev.CLS.DEV}, .${cls.NAG_HAMMADI}, .${cls.SENSES}, .${cls.QUALITY}, .${cls.DRV_KEY}`;
   }
+}
 
-  /**
-   *
-   */
-  constructor() {
-    super();
-    this.addEventListeners();
-    this.update();
-  }
+type Opacity = '1.0' | '0.3';
+const BRIGHT: Opacity = '1.0';
+const DIM: Opacity = '0.3';
+/**
+ * Set the opacity of the given element to the given value.
+ * @param opacity
+ * @param el
+ */
+function setOpacity(opacity: Opacity, el: HTMLElement): void {
+  el.style.opacity = opacity;
 }
 
 /**
+ * Crum's dialect highlighter.
  */
 export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
-  private static readonly BRIGHT = '1.0';
-  private static readonly DIM = '0.3';
-
   /**
-   *
-   * @param manager
+   * @param manager - A dialect manager controlling the state of Crum's
+   * dialects.
    * @param checkboxes - List of checkboxes that control dialect
    * highlighting. Each box must bear a name equal to the dialect code that it
    * represents.
@@ -55,41 +68,49 @@ export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
    * the checkboxes.
    */
   constructor(manager: dial.Manager, checkboxes: HTMLInputElement[]) {
-    let styler: high.Styler;
-
-    if (iam.amI('anki')) {
-      styler = new high.ElementStyler(
-        () => this.query(),
-        (el: HTMLElement): void => {
-          el.style.opacity = Highlighter.DIM;
-        },
-        () => `.${cls.WORD} *`,
-        (el: HTMLElement): void => {
-          el.style.opacity = Highlighter.BRIGHT;
-        }
-      );
-    } else {
-      styler = new high.CSSStyler(() => this.rule());
-    }
-
-    super(styler, manager, checkboxes);
-    this.addEventListeners();
-    this.update();
+    super(
+      // CSS styler, which is our preferable styler, doesn't work on Anki. For
+      // some reason! We therefore opt for an element styler.
+      iam.amI('anki')
+        ? new high.ElementStyler(() => Array.from(this.updates()))
+        : new high.CSSStyler(() => this.rule()),
+      manager,
+      checkboxes
+    );
   }
 
   /**
-   * @returns
+   * @returns - A CSS rule setting the style of the page elements, based on
+   * selected dialects. If no dialect-based styling is desired, return
+   * undefined.
    */
   private rule(): string | undefined {
     const query: string | undefined = this.query();
     if (!query) {
       return undefined;
     }
-    return `${query} { opacity: ${Highlighter.DIM}}`;
+    return `${query} { opacity: ${DIM}}`;
   }
 
   /**
    * @returns
+   */
+  private *updates(): Generator<[string, (el: HTMLElement) => void]> {
+    // Brighten all elements. This is necessary to undo all previous style
+    // changes.
+    yield [`.${cls.WORD} > *`, setOpacity.bind(null, BRIGHT)];
+    const query: string | undefined = this.query();
+    if (!query) {
+      return;
+    }
+    // Dim selected elements.
+    yield [query, setOpacity.bind(null, DIM)];
+  }
+
+  /**
+   * @returns A query for all elements that need to be dimmed, based on the
+   * current dialect selection.
+   * If dialect selection is currently disabled, return undefined.
    */
   private query(): string | undefined {
     const active: dial.DIALECT[] | undefined = this.manager.active();
@@ -116,7 +137,7 @@ export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
    */
   override reset(): void {
     super.reset();
-    // Remove the URL fragment.
+    // TODO: (#203) Move to a separate highlighter.
     if (iam.amI('lexicon') || iam.amI('anki')) {
       // Attempting to reload the page on Ankidroid opens a the browser at a
       // 127.0.0.0 port! We avoid reloading on all Anki platforms!
@@ -128,7 +149,9 @@ export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
   }
 
   /**
-   * @returns
+   * @returns - A list of dialect shortcuts.
+   * TODO: (#203) Either use in a standardized manner, or delete this method.
+   * It's currently unused.
    */
   override shortcuts(): help.Shortcut[] {
     return Object.values(dial.DIALECTS).map(this.shortcut.bind(this));
@@ -136,7 +159,9 @@ export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
 
   /**
    * Build a keyboard shortcut that toggles the given dialect.
-   * TODO: (#179) Make this method private.
+   * TODO: (#203) Restructure the help panel pipeline in such a way that this
+   * method can become private.
+   *
    * @param dialect
    * @returns
    */

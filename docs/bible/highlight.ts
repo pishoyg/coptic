@@ -18,8 +18,6 @@ export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
    */
   constructor(manager: dial.Manager, checkboxes: HTMLInputElement[]) {
     super(new high.CSSStyler(() => this.rule()), manager, checkboxes);
-    this.update();
-    this.addEventListeners();
   }
 
   /**

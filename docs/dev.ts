@@ -61,31 +61,36 @@ export function toggle(): void {
 type Visibility = 'block' | 'none';
 
 /**
- * @returns
- */
-function display(): Visibility {
-  return get() ? 'block' : 'none';
-}
-
-/**
- *
- * @param el
- */
-function modify(el: HTMLElement): void {
-  el.style.display = display();
-}
-
-/**
  *
  */
 export abstract class Highlighter extends high.Highlighter {
   abstract query(): string;
 
   /**
+   * @returns - Current visibility value for developer-mode elements.
+   */
+  display(): Visibility {
+    return get() ? 'block' : 'none';
+  }
+
+  /**
    * @returns
    */
   private rule(): string {
-    return `${this.query()} { display: ${display()} }`;
+    return `${this.query()} { display: ${this.display()} }`;
+  }
+
+  /**
+   * @returns
+   */
+  private op(): [string, (el: HTMLElement) => void] {
+    const val: Visibility = this.display();
+    return [
+      this.query(),
+      (el: HTMLElement): void => {
+        el.style.display = val;
+      },
+    ];
   }
 
   /**
@@ -94,7 +99,7 @@ export abstract class Highlighter extends high.Highlighter {
   constructor() {
     super(
       iam.amI('anki')
-        ? new high.ElementStyler(() => this.query(), modify)
+        ? new high.ElementStyler(() => [this.op()])
         : new high.CSSStyler(() => this.rule())
     );
   }
