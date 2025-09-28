@@ -84,6 +84,10 @@ export default tseslint.config(
             'Avoid using DOM event handler properties like `onclick`. Use `addEventListener` instead.',
         },
         {
+          selector: 'MemberExpression[property.name=className]',
+          message: 'Avoid using `className`. Use `classList` instead.',
+        },
+        {
           selector:
             "CallExpression[callee.property.name='querySelector'] Literal[value=/^#/]",
           message:
@@ -236,6 +240,7 @@ export default tseslint.config(
           },
         },
       ],
+      '@typescript-eslint/explicit-member-accessibility': 'error',
     },
   },
   {
