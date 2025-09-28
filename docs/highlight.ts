@@ -86,7 +86,7 @@ export class ElementStyler implements Styler {
  * to page events.
  */
 export abstract class Highlighter {
-  // TODO: (#179) This should register against a global event type, and should
+  // TODO: (#203) This should register against a global event type, and should
   // therefore be made protected rather than public.
   public abstract reset(): void;
 
@@ -129,7 +129,7 @@ export abstract class Highlighter {
     });
 
     // A click on the reset element resets all display.
-    // TODO: (#179) Use a global reset event type.
+    // TODO: (#203) Use a global reset event type.
     document
       .querySelectorAll<HTMLElement>(`.${head.CLS.RESET}`)
       .forEach((el: HTMLElement): void => {
