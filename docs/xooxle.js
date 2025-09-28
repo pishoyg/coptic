@@ -342,7 +342,7 @@ export class Candidate {
       // any superfluous space, and to be NFD-normalized.
       // Thus, no normalization is needed when constructing the field.
       // [1] https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize
-      (name) => new Field(name, record[name])
+      (name) => new Field(record[name])
     );
   }
 }
@@ -539,17 +539,11 @@ function searchResultCompare(a, b) {
  * candidate occupies a table row, each field occupies a cell within that row.
  */
 class Field {
-  name;
   units;
   /**
-   * @param name - The name of the field.
-   * The name is currently unused, but it may become used as part of #445,
-   * because we intend to use it to filter out search results, using Xooxle's
-   * 'admit' parameter.
    * @param html - The HTML content of the field.
    */
-  constructor(name, html) {
-    this.name = name;
+  constructor(html) {
     this.units = html
       .split(UNIT_DELIMITER)
       .map((unitHTML) => new Unit(unitHTML));

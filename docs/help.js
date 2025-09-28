@@ -263,7 +263,7 @@ export class Section {
    *
    * @returns
    */
-  createSection() {
+  html() {
     const div = document.createElement('div');
     const title = document.createElement('h3');
     title.textContent = this.title;
@@ -387,7 +387,7 @@ export class Help {
     // Store the shortcuts.
     this.sections.push(s);
     // Add the section to the help panel.
-    this.panel.appendChild(s.createSection());
+    this.panel.appendChild(s.html());
     // Verify the new section doesn't introduce any duplicates.
     this.verifyNoDuplicates();
   }

@@ -94,11 +94,6 @@ export class Droppable {
   }
   /**
    */
-  show() {
-    this.set('block');
-  }
-  /**
-   */
   hide() {
     this.set('none');
   }
