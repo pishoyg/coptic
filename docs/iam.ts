@@ -7,7 +7,7 @@
 /**
  * Where represents an identity.
  */
-export type Where =
+export type Identity =
   | 'UNKNOWN'
   | 'note' // A Crum word.
   | 'anki' // An Anki note.
@@ -28,7 +28,7 @@ declare const ANKI: boolean;
  * @param w - An identity.
  * @returns Whether the code is running in a page with this identity.
  */
-export function amI(w: Where): boolean {
+export function amI(w: Identity): boolean {
   if (w === 'anki') {
     return typeof ANKI !== 'undefined';
   }

@@ -86,19 +86,7 @@ export function makeHelpPanel(
       new help.Shortcut(
         'Toggle help panel',
         ['lexicon', 'note', 'index', 'index_index'],
-        () => {
-          panel.togglePanel();
-        }
-      ),
-    ],
-    Escape: [
-      new help.Shortcut(
-        'Toggle help panel',
-        ['lexicon', 'note', 'index', 'index_index'],
-        () => {
-          panel.togglePanel(false);
-        },
-        false
+        panel.toggle.bind(panel)
       ),
     ],
     o: [

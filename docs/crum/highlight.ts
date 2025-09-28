@@ -194,7 +194,7 @@ export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
 
     // Crum dialects are available on several Crum page identities.
     // Non-Crum dialects are only used in Lexicon.
-    const availability: iam.Where[] = dialect.dictionaries.includes('Crum')
+    const availability: iam.Identity[] = dialect.dictionaries.includes('Crum')
       ? ['lexicon', 'note', 'index']
       : ['lexicon'];
     return new help.Shortcut(

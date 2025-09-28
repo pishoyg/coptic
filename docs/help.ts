@@ -4,6 +4,19 @@ import * as iam from './iam.js';
 import * as cls from './cls.js';
 import * as log from './logger.js';
 
+const TITLE = 'Keyboard Shortcuts';
+
+enum CLS {
+  OVERLAY_BACKGROUND = 'overlay-background',
+  INFO_PANEL = 'info-panel',
+  CLOSE_BTN = 'close-btn',
+}
+
+enum ID {
+  HELP = 'help',
+  FOOTER = 'footer',
+}
+
 /**
  * CODE_TO_KEY maps a keyboard event code to the event key.
  *
@@ -15,9 +28,6 @@ import * as log from './logger.js';
  * The map allows us to infer the equivalent English key of a given keyboard
  * event, thus allowing us to translate the keyboard event (in a foreign
  * language) to an event that our listeners can actually consume.
- *
- * TODO: (#0) If listeners were to rely on event codes rather than keys, this
- * conversion won't be necessary. Consider abandoning keys in favor of codes.
  */
 const CODE_TO_KEY: Record<string, string> = {
   // Letters
@@ -103,10 +113,30 @@ const SHIFT_MAP: Record<string, string> = {
 };
 
 /**
+ * Bolden the given text, for the purposes of the help panel.
+ *
+ * To make it easier for users to memorize keyboard shortcuts, the shortcut
+ * description boldens the character that inspired the key. For example, if `B`
+ * toggles `Bohairic`, then the description of the shortcut should show the word
+ * as `*B*ohairic` with the `B` boldened, to make it obvious why the key `B` was
+ * selected for this shortcut.
  *
  * @param char
- * @param str
- * @returns
+ * @returns A plain HTML string representing a highlighted version of the given
+ * string.
+ */
+export function highlight(char: string): string {
+  return `<strong>${char}</strong>`;
+}
+
+/**
+ * Highlight the first occurrence of the given character in the given string.
+ * @param char - Character to search for.
+ * @param str - An HTML string, potentially containing tags.
+ * @returns - A copy of the string, with the first occurrence of the given
+ * character wrapped in a <strong> tag.
+ * If the string looks like it has other HTML tags, we return the original
+ * string without modifying it.
  */
 export function highlightFirstOccurrence(char: string, str: string): string {
   if (str.includes('<')) {
@@ -119,7 +149,7 @@ export function highlightFirstOccurrence(char: string, str: string): string {
     return str;
   }
 
-  return `${str.slice(0, index)}<strong>${str[index]!}</strong>${str.slice(index + 1)}`;
+  return `${str.slice(0, index)}${highlight(str[index]!)}${str.slice(index + 1)}`;
 }
 
 /**
@@ -128,50 +158,41 @@ export function highlightFirstOccurrence(char: string, str: string): string {
 export class Shortcut {
   /**
    *
-   * @param description
-   * @param available
-   * @param action
-   * @param show
+   * @param description - Description of what this shortcut does.
+   * @param identities - List of page identities where this shortcut is
+   * available.
+   * @param action - Action that this shortcut performs.
    */
   constructor(
     private readonly description: string | HTMLElement,
-    private readonly available: iam.Where[],
-    private readonly action: (event: KeyboardEvent) => void,
-    private readonly show = true
+    private readonly identities: iam.Identity[],
+    private readonly action: (event: KeyboardEvent) => void
   ) {}
 
   /**
    *
-   * @returns
+   * @returns Whether this shortcut is available on this page.
    */
-  executable(): boolean {
-    return this.available.some(iam.amI);
+  available(): boolean {
+    return this.identities.some(iam.amI);
   }
 
   /**
-   *
-   * @returns
-   */
-  visible(): boolean {
-    return this.executable() && this.show;
-  }
-
-  /**
-   *
+   * Try to process the given event.
    * @param event
-   * @returns
+   * @returns True if the event is successfully consumed, false otherwise.
    */
   consume(event: KeyboardEvent): boolean {
-    if (!this.executable()) {
+    if (!this.available()) {
       return false;
     }
     // Actions throw an exception if they cannot consume the event.
     try {
       this.action(event);
+      return true;
     } catch {
       return false;
     }
-    return true;
   }
 
   /**
@@ -179,32 +200,45 @@ export class Shortcut {
    * @param key
    * @returns
    */
-  row(key: string): HTMLTableRowElement {
-    // TODO: (#241) Move the styling to CSS.
-    const row = document.createElement('tr');
-    const keyCell = document.createElement('td');
-    const code = document.createElement('code');
+  private keyCell(key: string): HTMLTableCellElement {
+    const cell: HTMLTableCellElement = document.createElement('td');
+    const code: HTMLElement = document.createElement('code');
     code.textContent = key;
-    keyCell.appendChild(code);
-    keyCell.style.width = '10%';
-    keyCell.style.border = '1px solid black';
-    keyCell.style.padding = '8px';
+    cell.appendChild(code);
+    // TODO: (#241) Move the styling to CSS.
+    cell.style.width = '10%';
+    cell.style.border = '1px solid black';
+    cell.style.padding = '8px';
+    return cell;
+  }
 
-    // Create a cell for the value (right column)
-    const valueCell = document.createElement('td');
+  /**
+   * @param key
+   * @returns
+   */
+  private descriptionCell(key: string): HTMLTableCellElement {
+    const cell = document.createElement('td');
     if (typeof this.description === 'string') {
-      valueCell.innerHTML = highlightFirstOccurrence(key, this.description);
+      cell.innerHTML = highlightFirstOccurrence(key, this.description);
     } else {
-      valueCell.append(this.description);
+      cell.append(this.description);
     }
-    valueCell.style.width = '90%';
-    valueCell.style.border = '1px solid black';
-    valueCell.style.padding = '8px';
+    // TODO: (#241) Move the styling to CSS.
+    cell.style.width = '90%';
+    cell.style.border = '1px solid black';
+    cell.style.padding = '8px';
+    return cell;
+  }
 
-    // Append cells to the row
-    row.appendChild(keyCell);
-    row.appendChild(valueCell);
-
+  /**
+   * Build a row in the help panel representing this shortcut.
+   * @param key - The key activating this shortcut.
+   * @returns - An HTML table row element, to be displayed in the help panel,
+   * showing what this shortcut does and how to invoke it.
+   */
+  row(key: string): HTMLTableRowElement {
+    const row: HTMLTableRowElement = document.createElement('tr');
+    row.append(this.keyCell(key), this.descriptionCell(key));
     return row;
   }
 
@@ -220,13 +254,18 @@ export class Shortcut {
 }
 
 /**
- * Section represents a group of related shortcuts.
+ * Section represents a group of related shortcuts into a separate section in
+ * the help panel.
  */
 export class Section {
   /**
    *
    * @param title
-   * @param shortcuts
+   * @param shortcuts - A record mapping a key to a list of shortcuts invoked by
+   * this key.
+   * Notice that, although we allow a single event to be triggered in response
+   * to a key, we allow multiple shortcuts to exist per key, because some of
+   * those shortcuts may not be available on this page.
    */
   constructor(
     private readonly title: string,
@@ -246,67 +285,72 @@ export class Section {
 
     const table = document.createElement('table');
 
-    // Add styles to ensure the left column is 10% of the width
+    // TODO: (#241) Move the styling to CSS.
     table.style.width = '100%'; // Make the table take 100% of the container width
     table.style.borderCollapse = 'collapse'; // Optional: to collapse the borders
 
-    // Iterate over the entries in the record
-    Object.entries(this.shortcuts).forEach(([key, shortcuts]) => {
-      shortcuts
-        .filter((s) => s.visible())
-        .forEach((s) => {
-          table.appendChild(s.row(key));
-        });
-    });
+    // Append a row for each visible shortcut.
+    table.append(
+      ...Object.entries(this.shortcuts).flatMap(
+        ([key, shortcuts]: [string, Shortcut[]]): HTMLTableRowElement[] =>
+          shortcuts
+            .filter((s: Shortcut): boolean => s.available())
+            .map((s: Shortcut): HTMLTableRowElement => s.row(key))
+      )
+    );
 
     div.appendChild(table);
     return div;
   }
 
   /**
-   *
+   * Check whether any of the shortcuts in this section satisfies the given
+   * predicate.
+   * @param predicate
    * @returns
    */
-  visible(): boolean {
-    return Object.values(this.shortcuts).some((shortcuts: Shortcut[]) => {
-      return shortcuts.some((s: Shortcut) => s.visible());
-    });
+  private some(predicate: (s: Shortcut) => boolean): boolean {
+    return Object.values(this.shortcuts).some(
+      (shortcuts: Shortcut[]): boolean => shortcuts.some(predicate)
+    );
   }
 
   /**
    *
-   * @returns
+   * @returns Whether this section has any shortcuts that are available in the
+   * current page.
    */
-  executable(): boolean {
-    return Object.values(this.shortcuts).some((shortcuts: Shortcut[]) => {
-      return shortcuts.some((s: Shortcut) => s.executable());
-    });
+  available(): boolean {
+    return this.some((s: Shortcut): boolean => s.available());
   }
 
   /**
-   *
+   * Attempt to consume the given event.
    * @param event
-   * @returns
+   * @returns True if consumption succeeds, false otherwise.
    */
   consume(event: KeyboardEvent): boolean {
-    return this.shortcuts[event.key]?.some((s) => s.consume(event)) ?? false;
+    return !!this.shortcuts[event.key]?.some((s: Shortcut): boolean =>
+      s.consume(event)
+    );
   }
 
   /**
    *
    * @param key
-   * @returns
+   * @returns A list of shortcuts that consume this key.
    */
-  canConsume(key: string): Shortcut[] {
-    return this.shortcuts[key]?.filter((s) => s.executable()) ?? [];
+  consumers(key: string): Shortcut[] {
+    return this.shortcuts[key]?.filter((s) => s.available()) ?? [];
   }
 
   /**
-   *
+   * Get all keys available in this section, regardless of whether they have
+   * available shortcuts.
    * @returns
    */
-  shortcutsRecord(): Record<string, Shortcut[]> {
-    return this.shortcuts;
+  keys(): string[] {
+    return Object.keys(this.shortcuts);
   }
 }
 
@@ -314,84 +358,84 @@ export class Section {
  *
  */
 export class Help {
-  private readonly sections: Section[];
+  private readonly sections: Section[] = [];
   private readonly overlay: HTMLDivElement;
   private readonly panel: HTMLDivElement;
-  private readonly help: HTMLElement;
+
+  /**
+   * @returns
+   */
+  private static getOrCreateFooter(): HTMLElement {
+    let footer: HTMLElement | null = document.querySelector('footer');
+    if (footer) {
+      return footer;
+    }
+    footer = document.createElement('footer');
+    footer.id = ID.FOOTER;
+    return footer;
+  }
 
   /**
    */
   constructor() {
-    this.sections = [];
-    // Create overlay background.
+    // Create the overlay background.
     this.overlay = document.createElement('div');
-    this.overlay.className = 'overlay-background';
-    this.overlay.style.display = 'none'; // Hidden by default.
-    document.body.appendChild(this.overlay);
+    this.overlay.classList.add(CLS.OVERLAY_BACKGROUND);
+    document.body.append(this.overlay);
 
-    // Create info panel.
+    // Create the panel.
     this.panel = document.createElement('div');
-    this.panel.className = 'info-panel';
-    this.panel.style.display = 'none'; // Hidden by default.
+    this.panel.classList.add(CLS.INFO_PANEL);
+    document.body.append(this.panel);
 
-    const h2 = document.createElement('h2');
-    h2.textContent = 'Keyboard Shortcuts';
-    this.panel.appendChild(h2);
+    // Add the panel title.
+    const h2: HTMLHeadingElement = document.createElement('h2');
+    h2.textContent = TITLE;
+    this.panel.append(h2);
 
-    const closeButton = document.createElement('button');
-    closeButton.className = 'close-btn';
+    // Add the panel close button.
+    const closeButton: HTMLButtonElement = document.createElement('button');
+    closeButton.classList.add(CLS.CLOSE_BTN);
     closeButton.textContent = '×';
-    closeButton.addEventListener('click', (): void => {
-      this.togglePanel();
-    });
-    this.panel.appendChild(closeButton);
+    this.panel.append(closeButton);
 
-    document.body.appendChild(this.panel);
-
-    // Create help button, if it doesn't already exist.
-    this.help =
-      document.getElementById('help') ??
+    const help: HTMLElement =
+      document.getElementById(ID.HELP) ??
       ((): HTMLElement => {
-        const footer: HTMLElement =
-          document.querySelector('footer') ??
-          ((): HTMLElement => {
-            const f = document.createElement('footer');
-            f.id = 'footer';
-            return f;
-          })();
-        const help = document.createElement('span');
-        help.classList.add(cls.LINK);
-        help.textContent = 'help';
-        footer.appendChild(help);
-        document.body.appendChild(footer);
-        return help;
+        const span: HTMLSpanElement = document.createElement('span');
+        span.classList.add(cls.LINK);
+        span.textContent = 'help';
+        Help.getOrCreateFooter().append(span);
+        return span;
       })();
 
-    this.verifyNoDuplicates();
-    this.addListeners();
+    this.addEventListeners(help, closeButton);
+    this.hide(); // Hidden by default.
   }
 
   /**
    * @param s
    */
   addSection(s: Section): void {
-    if (!s.executable()) {
+    if (!s.available()) {
+      // This section has no available shortcuts on this page.
       return;
     }
+    // Store the shortcuts.
     this.sections.push(s);
-    if (!s.visible()) {
-      return;
-    }
+    // Add the section to the help panel.
     this.panel.appendChild(s.createSection());
+    // Verify the new section doesn't introduce any duplicates.
+    this.verifyNoDuplicates();
   }
 
   /**
-   *
+   * Attempt to consume the given event.
    * @param event
-   * @returns
+   * @returns True if consumption succeeds, false otherwise.
    */
   private consumeAux(event: KeyboardEvent): boolean {
-    return this.sections.some((s) => s.consume(event));
+    return this.sections.some((s: Section): boolean => s.consume(event));
   }
 
   /**
@@ -404,35 +448,48 @@ export class Help {
       return true;
     }
     // If this event is not consumable by any of our sections, it may be
-    // possible that the user has switched the layout. In this case, we try
-    // to respond based on the key location on the keyboard.
-    let key = CODE_TO_KEY[event.code];
+    // possible that the user has switched the keyboard layout. In this case, we
+    // try to respond based on the key location on the keyboard.
+    // We do this by overriding the event key to what it would've been had the
+    // user pressed it with the English keyboard layout.
+    // While the event key will be layout-based, the event code is
+    // layout-agnostic. So we can use the code to infer the key.
+    let key: string | undefined = CODE_TO_KEY[event.code];
     if (!key) {
+      // We can't find the key corresponding to the event.
       return false;
     }
     if (event.shiftKey) {
+      // The shift key was pressed.
       key = SHIFT_MAP[event.code] ?? key.toUpperCase();
     }
     // Override the event's key property.
     Object.defineProperty(event, 'key', { value: key });
+    // Attempt to consume the event again, with the new key.
     return this.consumeAux(event);
   }
 
   /**
-   * @param visible - An optional visibility. If not provided, will toggle the
-   * current visibility.
+   *
+   * @param visibility
    */
-  togglePanel(visible?: boolean): void {
-    let target: 'block' | 'none';
-    if (visible !== undefined) {
-      // Use the visibility provided in the parameters.
-      target = visible ? 'block' : 'none';
-    } else {
-      // Toggle the current visibility.
-      target = this.panel.style.display === 'block' ? 'none' : 'block';
-    }
-    this.panel.style.display = target;
-    this.overlay.style.display = target;
+  private setVisibility(visibility: 'block' | 'none'): void {
+    this.panel.style.display = visibility;
+    this.overlay.style.display = visibility;
+  }
+
+  /**
+   * Hide the panel.
+   */
+  hide(): void {
+    this.setVisibility('none');
+  }
+
+  /**
+   * Toggle the panel visibility.
+   */
+  toggle(): void {
+    this.setVisibility(this.panel.style.display === 'block' ? 'none' : 'block');
   }
 
   /**
@@ -440,49 +497,63 @@ export class Help {
    */
   private verifyNoDuplicates(): void {
     // Get all keys that have events registered to them.
-    const keys: string[] = this.sections
-      .map((s: Section): Record<string, Shortcut[]> => s.shortcutsRecord())
-      .map((record): string[] => Object.keys(record))
-      .flat();
+    const keys: Set<string> = new Set<string>(
+      this.sections.flatMap((s: Section): string[] => s.keys())
+    );
 
-    keys.forEach((key: string) => {
-      const canConsume = this.sections.map((s) => s.canConsume(key)).flat();
-      if (canConsume.length > 1) {
-        log.fatal(
-          `${key} is consumable by multiple shortcuts: ${canConsume.map((s) => s.textDescription()).join(', ')}`
-        );
-      }
+    keys.forEach((key: string): void => {
+      // Get all shortcuts that could consume this key.
+      const consumers: Shortcut[] = this.sections.flatMap(
+        (s: Section): Shortcut[] => s.consumers(key)
+      );
+      log.ensure(
+        consumers.length <= 1,
+        key,
+        'is consumable by multiple shortcuts:',
+        ...consumers.flatMap((s: Shortcut, index: number): string[] =>
+          index === consumers.length - 1
+            ? [s.textDescription()]
+            : [s.textDescription(), ',']
+        )
+      );
     });
   }
 
   /**
    * Add event listeners for the help panel.
+   * @param help - Help button.
+   * @param closeButton - Close button.
    */
-  private addListeners(): void {
+  private addEventListeners(
+    help: HTMLElement,
+    closeButton: HTMLButtonElement
+  ): void {
+    // Clicking on the close button hides the panel.
+    closeButton.addEventListener('click', this.hide.bind(this));
     // Clicking the help button toggles the panel display.
-    this.help.addEventListener('click', (event: MouseEvent) => {
-      this.togglePanel();
-      event.stopPropagation();
-    });
+    help.addEventListener('click', this.toggle.bind(this));
 
     // A mouse click outside the panel closes it.
-    document.addEventListener('click', (event: MouseEvent) => {
-      if (
-        this.panel.style.display === 'block' &&
-        !this.panel.contains(event.target as Node)
-      ) {
-        this.togglePanel(false);
+    document.addEventListener('click', (event: MouseEvent): void => {
+      if (this.panel.contains(event.target as Node)) {
+        // The click happens inside the panel. Do nothing.
+        return;
       }
+      this.hide();
     });
 
     // Clicking a keyboard shortcut triggers the associated action.
     // NOTE: We intentionally use the `keydown` event rather than the `keyup`
     // event, so that a long press would trigger a shortcut command repeatedly.
-    // This is helpful for some of the commands.
-    document.addEventListener('keydown', (e: KeyboardEvent) => {
+    document.addEventListener('keydown', (e: KeyboardEvent): void => {
       if (e.metaKey || e.ctrlKey || e.altKey) {
         // If the user is holding down a modifier key, we don't want to do
         // anything.
+        return;
+      }
+      if (e.key === 'Escape') {
+        // A click on the Escape key hides the panel.
+        this.hide();
         return;
       }
 

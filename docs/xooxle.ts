@@ -250,18 +250,18 @@ export class Form {
   /**
    * @param listener
    */
-  addCheckboxClickListener(listener: () => void): void {
-    this.fullWordCheckbox.addEventListener('click', listener);
-    this.regexCheckbox.addEventListener('click', listener);
+  addSearchBoxKeyListener(listener: (event: Event) => void): void {
+    this.searchBox.addEventListener('keyup', listener);
+    this.searchBox.addEventListener('keydown', listener);
+    this.searchBox.addEventListener('keypress', listener);
   }
 
   /**
    * @param listener
    */
-  addCheckboxKeyListener(listener: (event: Event) => void): void {
-    this.searchBox.addEventListener('keyup', listener);
-    this.searchBox.addEventListener('keydown', listener);
-    this.searchBox.addEventListener('keypress', listener);
+  addCheckboxClickListener(listener: () => void): void {
+    this.fullWordCheckbox.addEventListener('click', listener);
+    this.regexCheckbox.addEventListener('click', listener);
   }
 
   /**
@@ -1202,7 +1202,7 @@ export class Xooxle {
     this.form.addCheckboxClickListener(this.search.bind(this, 0));
     // Prevent other elements in the page from picking up key events on the
     // search box.
-    this.form.addCheckboxKeyListener(browser.stopPropagation);
+    this.form.addSearchBoxKeyListener(browser.stopPropagation);
   }
 
   /**
