@@ -26,7 +26,7 @@ export class Dialect extends dial.Dialect<DIALECT, DIALECT, DialectKey> {
    * @param article
    * @param code
    */
-  constructor(name: DIALECT, article: dial.Article, code: DialectKey) {
+  public constructor(name: DIALECT, article: dial.Article, code: DialectKey) {
     super(name, name, article, code);
   }
 }
@@ -66,7 +66,7 @@ export class Manager extends dial.Manager<DIALECT> {
   /**
    *
    */
-  constructor() {
+  public constructor() {
     super('bd');
   }
 }

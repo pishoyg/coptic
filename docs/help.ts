@@ -163,7 +163,7 @@ export class Shortcut {
    * available.
    * @param action - Action that this shortcut performs.
    */
-  constructor(
+  public constructor(
     private readonly description: string | HTMLElement,
     private readonly identities: iam.Identity[],
     private readonly action: (event: KeyboardEvent) => void
@@ -173,7 +173,7 @@ export class Shortcut {
    *
    * @returns Whether this shortcut is available on this page.
    */
-  available(): boolean {
+  public available(): boolean {
     return this.identities.some(iam.amI);
   }
 
@@ -182,7 +182,7 @@ export class Shortcut {
    * @param event
    * @returns True if the event is successfully consumed, false otherwise.
    */
-  consume(event: KeyboardEvent): boolean {
+  public consume(event: KeyboardEvent): boolean {
     if (!this.available()) {
       return false;
     }
@@ -236,7 +236,7 @@ export class Shortcut {
    * @returns - An HTML table row element, to be displayed in the help panel,
    * showing what this shortcut does and how to invoke it.
    */
-  row(key: string): HTMLTableRowElement {
+  public row(key: string): HTMLTableRowElement {
     const row: HTMLTableRowElement = document.createElement('tr');
     row.append(this.keyCell(key), this.descriptionCell(key));
     return row;
@@ -246,7 +246,7 @@ export class Shortcut {
    *
    * @returns
    */
-  textDescription(): string {
+  public textDescription(): string {
     return typeof this.description === 'string'
       ? this.description.replace(/<.*?>/g, '')
       : this.description.textContent;
@@ -267,7 +267,7 @@ export class Section {
    * to a key, we allow multiple shortcuts to exist per key, because some of
    * those shortcuts may not be available on this page.
    */
-  constructor(
+  public constructor(
     private readonly title: string,
     private readonly shortcuts: Record<string, Shortcut[]>
   ) {}
@@ -276,7 +276,7 @@ export class Section {
    *
    * @returns
    */
-  createSection(): HTMLDivElement {
+  public html(): HTMLDivElement {
     const div = document.createElement('div');
 
     const title = document.createElement('h3');
@@ -320,7 +320,7 @@ export class Section {
    * @returns Whether this section has any shortcuts that are available in the
    * current page.
    */
-  available(): boolean {
+  public available(): boolean {
     return this.some((s: Shortcut): boolean => s.available());
   }
 
@@ -329,7 +329,7 @@ export class Section {
    * @param event
    * @returns True if consumption succeeds, false otherwise.
    */
-  consume(event: KeyboardEvent): boolean {
+  public consume(event: KeyboardEvent): boolean {
     return !!this.shortcuts[event.key]?.some((s: Shortcut): boolean =>
       s.consume(event)
     );
@@ -340,7 +340,7 @@ export class Section {
    * @param key
    * @returns A list of shortcuts that consume this key.
    */
-  consumers(key: string): Shortcut[] {
+  public consumers(key: string): Shortcut[] {
     return this.shortcuts[key]?.filter((s) => s.available()) ?? [];
   }
 
@@ -349,7 +349,7 @@ export class Section {
    * available shortcuts.
    * @returns
    */
-  keys(): string[] {
+  public keys(): string[] {
     return Object.keys(this.shortcuts);
   }
 }
@@ -377,7 +377,7 @@ export class Help {
 
   /**
    */
-  constructor() {
+  public constructor() {
     // Create the overlay background.
     this.overlay = document.createElement('div');
     this.overlay.classList.add(CLS.OVERLAY_BACKGROUND);
@@ -416,7 +416,7 @@ export class Help {
   /**
    * @param s
    */
-  addSection(s: Section): void {
+  public addSection(s: Section): void {
     if (!s.available()) {
       // This section has no available shortcuts on this page.
       return;
@@ -424,7 +424,7 @@ export class Help {
     // Store the shortcuts.
     this.sections.push(s);
     // Add the section to the help panel.
-    this.panel.appendChild(s.createSection());
+    this.panel.appendChild(s.html());
     // Verify the new section doesn't introduce any duplicates.
     this.verifyNoDuplicates();
   }
@@ -481,14 +481,14 @@ export class Help {
   /**
    * Hide the panel.
    */
-  hide(): void {
+  private hide(): void {
     this.setVisibility('none');
   }
 
   /**
    * Toggle the panel visibility.
    */
-  toggle(): void {
+  public toggle(): void {
     this.setVisibility(this.panel.style.display === 'block' ? 'none' : 'block');
   }
 

@@ -16,14 +16,14 @@ export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
    * a name representing a dialect. An n-to-1 mapping (multiple boxes per
    * dialect) is permitted.
    */
-  constructor(manager: dial.Manager, checkboxes: HTMLInputElement[]) {
+  public constructor(manager: dial.Manager, checkboxes: HTMLInputElement[]) {
     super(new high.CSSStyler(() => this.rule()), manager, checkboxes);
   }
 
   /**
    * @returns
    */
-  rule(): string | undefined {
+  private rule(): string | undefined {
     const active: dial.DIALECT[] | undefined = this.manager.active();
     const inactive: dial.DIALECT[] = dial.DIALECTS.filter(
       (dialect: dial.Dialect): boolean => !active?.includes(dialect.name)
@@ -43,7 +43,7 @@ export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
    * Build keyboard shortcuts to toggle dialects.
    * @returns
    */
-  override shortcuts(): help.Shortcut[] {
+  public override shortcuts(): help.Shortcut[] {
     return dial.DIALECTS.map((dialect: dial.Dialect): help.Shortcut => {
       const span: HTMLSpanElement = document.createElement('span');
       span.append(...dialect.anchoredName());

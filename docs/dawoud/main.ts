@@ -25,7 +25,7 @@ export class DawoudWord extends copt.Word implements scan.Word {
    * @param other - Word to compare.
    * @returns The truth value of `this <= other`, based on Dawoud's ordering.
    */
-  override leq(other: DawoudWord): boolean {
+  public override leq(other: DawoudWord): boolean {
     if (this.ou() === other.ou()) {
       // Either both words start with ⲟⲩ, or neither does.
       // Either way, lexicographic comparison should work.

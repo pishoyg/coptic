@@ -49,10 +49,10 @@ export class Dialect extends dial.Dialect<DIALECT, string, DialectKey> {
    * double-character code. If it's single-character, the code can be used as a
    * key.
    */
-  constructor(
+  public constructor(
     code: DIALECT,
     name: string,
-    readonly dictionaries: DICTIONARY[],
+    public readonly dictionaries: DICTIONARY[],
     article?: dial.Article,
     key?: DoubleCharDialectAbbrev
   ) {
@@ -67,7 +67,7 @@ export class Dialect extends dial.Dialect<DIALECT, string, DialectKey> {
    *   dialect names within it), in which case we try to retrieve dialect
    *   articles from other dialects and link them.
    */
-  override *anchoredName(): Generator<string | HTMLElement> {
+  public override *anchoredName(): Generator<string | HTMLElement> {
     if (this.article) {
       yield* super.anchoredName();
       return;
@@ -173,7 +173,7 @@ export class Manager extends dial.Manager<DIALECT> {
   /**
    *
    */
-  constructor() {
+  public constructor() {
     // Our local-storage variable used to store active Crum dialects is called
     // 'd'.
     super('d');
@@ -184,7 +184,7 @@ export class Manager extends dial.Manager<DIALECT> {
    *
    * @returns Whether defaults have been set.
    */
-  setToDefaultIfUnset(): boolean {
+  public setToDefaultIfUnset(): boolean {
     if (this.active() !== undefined) {
       // Dialects have already been configured.
       return false;

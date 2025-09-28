@@ -28,12 +28,12 @@ const COPTIC_LETTERS: [string, string][] = [
 export class Word {
   private static readonly MAPPING: Record<string, string> = Word.buildMapping();
   private readonly mapped: string;
-  readonly word: string;
+  public readonly word: string;
   /**
    *
    * @param word
    */
-  constructor(word: string) {
+  public constructor(word: string) {
     this.word = word.toLowerCase();
     log.ensure(!!this.word, 'constructing a word with the empty string!');
     log.ensure(
@@ -50,7 +50,7 @@ export class Word {
    * @returns True if all characters are Coptic, false otherwise. If word is the
    * empty string, return true.
    */
-  static isCoptic(word: string): boolean {
+  public static isCoptic(word: string): boolean {
     return Array.from(word).every((c) => c in Word.MAPPING);
   }
 
@@ -59,7 +59,7 @@ export class Word {
    * @param other
    * @returns
    */
-  leq(other: Word): boolean {
+  public leq(other: Word): boolean {
     return this.mapped <= other.mapped;
   }
 

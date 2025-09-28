@@ -10,7 +10,7 @@ export class Source {
    * @param innerHTML
    * @param variant
    */
-  constructor(
+  public constructor(
     /** title is the full title of the source.
      */
     public readonly title: string,

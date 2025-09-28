@@ -64,12 +64,12 @@ type Visibility = 'block' | 'none';
  *
  */
 export abstract class Highlighter extends high.Highlighter {
-  abstract query(): string;
+  protected abstract query(): string;
 
   /**
    * @returns - Current visibility value for developer-mode elements.
    */
-  display(): Visibility {
+  private display(): Visibility {
     return get() ? 'block' : 'none';
   }
 
@@ -96,7 +96,7 @@ export abstract class Highlighter extends high.Highlighter {
   /**
    *
    */
-  constructor() {
+  public constructor() {
     super(
       iam.amI('anki')
         ? new high.ElementStyler(() => [this.op()])
@@ -107,7 +107,7 @@ export abstract class Highlighter extends high.Highlighter {
   /**
    *
    */
-  override reset(): void {
+  public override reset(): void {
     reset();
     this.update();
   }
@@ -115,7 +115,7 @@ export abstract class Highlighter extends high.Highlighter {
   /**
    *
    */
-  toggle(): void {
+  public toggle(): void {
     set(!get());
     this.update();
   }

@@ -32,7 +32,7 @@ export enum Article {
 /**
  */
 export class Dialect<C extends string, N extends string, K extends string> {
-  readonly key: K;
+  public readonly key: K;
   /**
    * @param code - Recognizable dialect code, suitable for display, and also for
    * use to control the state of the dialect.
@@ -42,10 +42,10 @@ export class Dialect<C extends string, N extends string, K extends string> {
    * single-character key must be employed, such as keyboard shortcuts.
    * If the code is already single-character, it can be used as the key.
    */
-  constructor(
-    readonly code: C,
-    readonly name: N,
-    readonly article?: Article,
+  public constructor(
+    public readonly code: C,
+    public readonly name: N,
+    protected readonly article?: Article,
     key?: K
   ) {
     this.key = key ?? (code as unknown as K);
@@ -55,7 +55,7 @@ export class Dialect<C extends string, N extends string, K extends string> {
   /**
    * @returns
    */
-  checkbox(): HTMLInputElement {
+  public checkbox(): HTMLInputElement {
     const checkbox: HTMLInputElement = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.name = this.code; // The code is used for state control.
@@ -66,7 +66,7 @@ export class Dialect<C extends string, N extends string, K extends string> {
    * @returns - The name of the dialect, potentially containing anchors to
    * articles about the dialect.
    */
-  *anchoredName(): Generator<string | HTMLElement> {
+  public *anchoredName(): Generator<string | HTMLElement> {
     if (!this.article) {
       yield this.name;
       return;
@@ -83,14 +83,14 @@ export class Dialect<C extends string, N extends string, K extends string> {
    *   (code) Dialect Name
    * The name bears anchors, if present.
    */
-  title(): (Node | string)[] {
+  public title(): (Node | string)[] {
     return ['(', this.siglum(), ') ', ...this.anchoredName()];
   }
 
   /**
    * @returns An element containing a prettified dialect code.
    */
-  siglum(): HTMLSpanElement {
+  public siglum(): HTMLSpanElement {
     const siglum: HTMLSpanElement = document.createElement('span');
     siglum.classList.add(CLS.SIGLUM);
 
@@ -127,7 +127,7 @@ export class Manager<C extends string> {
    * @param localKey - Name of the local storage key used to store the set of
    * active dialects.
    */
-  constructor(private readonly localKey: string) {}
+  public constructor(private readonly localKey: string) {}
 
   /**
    * @returns The list of active dialects codes.
@@ -136,7 +136,7 @@ export class Manager<C extends string> {
    * If previously selected dialects have been deselected, it returns an empty
    * array.
    */
-  active(): C[] | undefined {
+  public active(): C[] | undefined {
     const d: string | null = localStorage.getItem(this.localKey);
     if (d === null) {
       // Dialect highlighting has never been configured.
@@ -157,7 +157,7 @@ export class Manager<C extends string> {
    * Sets the current list of active dialects.
    * @param dialects - The list of dialects to set as active.
    */
-  setActive(dialects: C[]): void {
+  protected setActive(dialects: C[]): void {
     localStorage.setItem(this.localKey, dialects.join(SEPARATOR));
   }
 
@@ -167,7 +167,7 @@ export class Manager<C extends string> {
    * distinguish between cases where dialect highlighting was previously used
    * and disabled as opposed to when it was never used before.
    */
-  reset(): void {
+  public reset(): void {
     this.setActive([]);
   }
 
@@ -175,7 +175,7 @@ export class Manager<C extends string> {
    * Toggles the active state of a single dialect.
    * @param dialect - The dialect to toggle.
    */
-  toggle(dialect: C): void {
+  public toggle(dialect: C): void {
     const active = new Set<C>(this.active() ?? []);
 
     if (active.has(dialect)) {

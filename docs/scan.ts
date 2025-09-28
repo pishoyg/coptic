@@ -76,7 +76,7 @@ export class Index {
    * constructor type that takes as input the string representation of the word,
    * which is retrieved from the index columns.
    */
-  constructor(
+  public constructor(
     index: string,
     private readonly wordType: new (str: string) => Word
   ) {
@@ -117,7 +117,7 @@ export class Index {
    * @param str - String representation of a TSV row.
    * @returns The content of the columns of interest in the given row.
    */
-  static toColumns(str: string): string[] {
+  private static toColumns(str: string): string[] {
     return str
       .split('\t')
       .slice(0, WANT_COLUMNS.length)
@@ -129,7 +129,7 @@ export class Index {
    * @param str - A string representation of an integer.
    * @returns - The parsed integer.
    */
-  static forceParseInt(str: string): number {
+  private static forceParseInt(str: string): number {
     const num = parseInt(str);
     log.ensure(!isNaN(num), 'unable to parse page number', num);
     return num;
@@ -141,7 +141,7 @@ export class Index {
    * @returns - Page number, or undefined if the number can't be inferred from
    * the query.
    */
-  getPage(query: string): number | undefined {
+  public getPage(query: string): number | undefined {
     query = orth.cleanDiacritics(query.trim());
     if (!query) {
       return undefined;
@@ -189,7 +189,7 @@ export class Index {
    * @param strict - If true, exit when encountering a sorting error. If false,
    * simply log an error message.
    */
-  verifyWordOrder(strict = true): void {
+  private verifyWordOrder(strict = true): void {
     const error: (...message: unknown[]) => void = strict
       ? log.fatal
       : log.error;
@@ -240,13 +240,13 @@ export class Form {
    * @param searchBox - Search box, providing search queries.
    * @param form - Form element.
    */
-  constructor(
-    readonly image: HTMLImageElement,
-    readonly nextButton: HTMLElement,
-    readonly prevButton: HTMLElement,
-    readonly resetButton: HTMLElement,
-    readonly searchBox: HTMLInputElement,
-    readonly form: HTMLElement
+  public constructor(
+    public readonly image: HTMLImageElement,
+    public readonly nextButton: HTMLElement,
+    public readonly prevButton: HTMLElement,
+    public readonly resetButton: HTMLElement,
+    public readonly searchBox: HTMLInputElement,
+    public readonly form: HTMLElement
   ) {}
 }
 
@@ -298,7 +298,7 @@ export class Scroller {
    * @param landingPage - Which page to navigate to if we don't have a page
    * number otherwise.
    */
-  constructor(
+  public constructor(
     start: number,
     end: number,
     private readonly offset = 0,
@@ -338,7 +338,7 @@ export class Scroller {
    * @param page - Page number to open. This will be modified if it falls
    * outside our page range.
    */
-  update(page: number): void {
+  public update(page: number): void {
     if (isNaN(page)) {
       page = this.landingPage;
     }
@@ -455,7 +455,7 @@ export class ZoomerDragger {
    * @param form.image
    * @param form.resetButton
    */
-  constructor(
+  public constructor(
     private readonly form: {
       image: HTMLImageElement;
       resetButton: HTMLElement;
@@ -603,7 +603,7 @@ export class Dictionary {
    * @param form.searchBox - The search box provides search queries.
    * @param form.form
    */
-  constructor(
+  public constructor(
     // index stores our dictionary index, and will be used to look up pages.
     private readonly index: Index,
     // scroller will be used to update the scan image for each query.

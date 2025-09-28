@@ -58,7 +58,10 @@ class SearchResult extends xoox.SearchResult {
    * @param manager
    * @param highlighter
    */
-  static init(manager: dial.Manager, highlighter: high.Highlighter): void {
+  public static init(
+    manager: dial.Manager,
+    highlighter: high.Highlighter
+  ): void {
     SearchResult.manager = manager;
     SearchResult.highlighter = highlighter;
   }
@@ -68,7 +71,7 @@ class SearchResult extends xoox.SearchResult {
    * @param total
    * @returns
    */
-  override row(total: number): HTMLTableRowElement {
+  public override row(total: number): HTMLTableRowElement {
     const row: HTMLTableRowElement = super.row(total);
     crum.addGreekLookups(row);
     // TODO: (#499): Handling of dialects causes a (minor) bug: Dialect codes
@@ -100,14 +103,14 @@ class CrumSearchResult extends SearchResult {
   /**
    * @returns
    */
-  override link(): string {
+  protected override link(): string {
     return `${paths.LEXICON}/${this.key}.html`;
   }
 
   /**
    * @returns
    */
-  static override numBuckets(): number {
+  public static override numBuckets(): number {
     return CrumSearchResult.NUM_BUCKETS;
   }
 
@@ -115,7 +118,7 @@ class CrumSearchResult extends SearchResult {
    * @param row - Table row.
    * @returns Bucket number.
    */
-  override bucket(row: HTMLTableRowElement): DialectMatch {
+  public override bucket(row: HTMLTableRowElement): DialectMatch {
     const active: dial.DIALECT[] | undefined = SearchResult.manager.active();
     if (!active?.length) {
       // There is no dialect highlighting. All results fall in the first bucket.
@@ -158,14 +161,14 @@ class KELLIASearchResult extends SearchResult {
   /**
    * @returns
    */
-  override link(): string {
+  protected override link(): string {
     return paths.CDO_LOOKUP_BY_KEY_PREFIX + this.key;
   }
 
   /**
    * @returns
    */
-  static override numBuckets(): number {
+  public static override numBuckets(): number {
     return 2;
   }
 
@@ -173,7 +176,7 @@ class KELLIASearchResult extends SearchResult {
    * @param row - Table row.
    * @returns Bucket number.
    */
-  override bucket(row: HTMLTableRowElement): number {
+  public override bucket(row: HTMLTableRowElement): number {
     const active: dial.DIALECT[] | undefined = SearchResult.manager.active();
     if (!active?.length) {
       // There is no dialect highlighting. All results fall in the first bucket.
@@ -196,7 +199,7 @@ class WikiSearchResult extends xoox.SearchResult {
    * @param total
    * @returns
    */
-  override row(total: number): HTMLTableRowElement {
+  public override row(total: number): HTMLTableRowElement {
     const row: HTMLTableRowElement = super.row(total);
     crum.addGreekLookups(row);
     // TODO: (#541) Add other handlers once the post-processing bug is fixed.
@@ -207,7 +210,7 @@ class WikiSearchResult extends xoox.SearchResult {
   /**
    * @returns
    */
-  override link(): string {
+  protected override link(): string {
     return `${paths.LEXICON}/${this.key}.html#wiki`;
   }
 }

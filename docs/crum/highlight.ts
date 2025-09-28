@@ -36,7 +36,7 @@ export class DevHighlighter extends dev.Highlighter {
   /**
    * @returns A query selecting all developer-mode-only elements.
    */
-  override query(): string {
+  protected override query(): string {
     return `.${dev.CLS.DEV}, .${cls.NAG_HAMMADI}, .${cls.SENSES}, .${cls.QUALITY}, .${cls.DRV_KEY}`;
   }
 }
@@ -67,7 +67,7 @@ export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
    * dialect highlighting in some other way should also update the checking of
    * the checkboxes.
    */
-  constructor(manager: dial.Manager, checkboxes: HTMLInputElement[]) {
+  public constructor(manager: dial.Manager, checkboxes: HTMLInputElement[]) {
     super(
       // CSS styler, which is our preferable styler, doesn't work on Anki. For
       // some reason! We therefore opt for an element styler.
@@ -135,7 +135,7 @@ export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
   /**
    * Reset display, and remove the URL fragment if present.
    */
-  override reset(): void {
+  public override reset(): void {
     super.reset();
     // TODO: (#203) Move to a separate highlighter.
     if (iam.amI('lexicon') || iam.amI('anki')) {
@@ -153,7 +153,7 @@ export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
    * TODO: (#203) Either use in a standardized manner, or delete this method.
    * It's currently unused.
    */
-  override shortcuts(): help.Shortcut[] {
+  public override shortcuts(): help.Shortcut[] {
     return Object.values(dial.DIALECTS).map(this.shortcut.bind(this));
   }
 
@@ -165,7 +165,7 @@ export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
    * @param dialect
    * @returns
    */
-  shortcut(dialect: dial.Dialect): help.Shortcut {
+  public shortcut(dialect: dial.Dialect): help.Shortcut {
     const table = document.createElement('table');
     const tr = document.createElement('tr');
 

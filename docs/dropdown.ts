@@ -34,7 +34,7 @@ export class Droppable {
    * @param parent
    * @param invocation
    */
-  constructor(
+  public constructor(
     private readonly droppable: HTMLElement,
     parent: HTMLElement,
     invocation: Invocation
@@ -47,7 +47,7 @@ export class Droppable {
    * @param parent
    * @param invocation
    */
-  addEventListeners(parent: HTMLElement, invocation: Invocation): void {
+  private addEventListeners(parent: HTMLElement, invocation: Invocation): void {
     if (invocation === 'hover') {
       // This is a hover-invoked tooltip. We just need a listener for
       // realignment.
@@ -99,25 +99,19 @@ export class Droppable {
   /**
    *
    */
-  toggle(): void {
+  private toggle(): void {
     this.set(this.get() === 'block' ? 'none' : 'block');
   }
 
   /**
    */
-  show(): void {
-    this.set('block');
-  }
-
-  /**
-   */
-  hide(): void {
+  private hide(): void {
     this.set('none');
   }
 
   /**
    */
-  realign(): void {
+  private realign(): void {
     // Reset the transform property.
     const rect: DOMRect = this.droppable.getBoundingClientRect();
     const overflow: number = rect.right - window.innerWidth;
@@ -131,7 +125,7 @@ export class Droppable {
   /**
    *
    */
-  resetAlignment(): void {
+  private resetAlignment(): void {
     this.droppable.style.transform = '';
   }
 }

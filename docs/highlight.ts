@@ -25,7 +25,7 @@ export class CSSStyler implements Styler {
    * @param rule - A factory that builds the CSS rule whenever an update is
    * needed, or undefined if the styling is currently disabled.
    */
-  constructor(private readonly rule: () => string | undefined) {
+  public constructor(private readonly rule: () => string | undefined) {
     // Add the style element to the document.
     document.head.appendChild(this.style);
   }
@@ -40,7 +40,7 @@ export class CSSStyler implements Styler {
   /**
    *
    */
-  update(): void {
+  public update(): void {
     // Delete the old rule.
     if (this.ruleIdx < this.sheet.cssRules.length) {
       this.sheet.deleteRule(this.ruleIdx);
@@ -65,14 +65,14 @@ export class ElementStyler implements Styler {
    * styling. For each pair, the modifier will be applied to all the elements
    * retrieved by the query.
    */
-  constructor(
+  public constructor(
     private readonly operations: () => [string, (el: HTMLElement) => void][]
   ) {}
 
   /**
    *
    */
-  update(): void {
+  public update(): void {
     this.operations().forEach(
       ([query, modify]: [string, (el: HTMLElement) => void]) => {
         document.querySelectorAll<HTMLElement>(query).forEach(modify);
@@ -88,7 +88,7 @@ export class ElementStyler implements Styler {
 export abstract class Highlighter {
   // TODO: (#179) This should register against a global event type, and should
   // therefore be made protected rather than public.
-  abstract reset(): void;
+  public abstract reset(): void;
 
   /**
    * Update style.
@@ -100,7 +100,7 @@ export abstract class Highlighter {
   /**
    * @param styler
    */
-  constructor(private readonly styler: Styler) {
+  public constructor(private readonly styler: Styler) {
     // NOTE: We defer the execution of initialization logic, instead of directly
     // calling it in the constructor, in order to ensure that the constructor of
     // child class have finished execution and that the object is fully
@@ -146,7 +146,7 @@ export abstract class Highlighter {
  * @template C - A string type representing dialect codes.
  */
 export abstract class DialectHighlighter<C extends string> extends Highlighter {
-  abstract shortcuts(): help.Shortcut[];
+  public abstract shortcuts(): help.Shortcut[];
 
   /**
    *
@@ -159,7 +159,7 @@ export abstract class DialectHighlighter<C extends string> extends Highlighter {
    * dialect highlighting in some other way should also update the `checked`
    * property of the associated checkbox(es).
    */
-  constructor(
+  public constructor(
     styler: Styler,
     protected readonly manager: dial.Manager<C>,
     private readonly checkboxes: HTMLInputElement[]
@@ -204,7 +204,7 @@ export abstract class DialectHighlighter<C extends string> extends Highlighter {
   /**
    * Reset all dialect selection, and update display.
    */
-  override reset(): void {
+  public override reset(): void {
     this.manager.reset(); // Reset dialect highlighting.
     this.update(); // Update display.
   }
@@ -214,7 +214,7 @@ export abstract class DialectHighlighter<C extends string> extends Highlighter {
    *
    * @param dialect - A dialect code.
    */
-  toggle(dialect: C): void {
+  public toggle(dialect: C): void {
     this.manager.toggle(dialect);
     this.update();
   }

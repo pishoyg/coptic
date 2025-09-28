@@ -27,7 +27,7 @@ export class Collapsible {
    * @param collapsible - The collapsible HTML element.
    * @param collapse
    */
-  constructor(
+  public constructor(
     private readonly collapsible: HTMLElement,
     collapse?: HTMLElement
   ) {
@@ -67,7 +67,7 @@ export class Collapsible {
   /**
    * Toggle the display of the collapsible.
    */
-  toggle(): void {
+  public toggle(): void {
     const visible = !!this.get();
     this.set(visible ? '' : this.scrollHeight());
     if (visible) {
@@ -90,7 +90,7 @@ export class Collapsible {
    * which is a very expensive operation. Don't perform it repeatedly in
    * performance-sensitive applications.
    */
-  adjustHeightIfVisible(): void {
+  public adjustHeightIfVisible(): void {
     if (!this.get()) {
       // This element is currently collapsed, so we keep the height at zero.
       return;

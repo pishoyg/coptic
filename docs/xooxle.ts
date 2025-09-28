@@ -136,7 +136,7 @@ export class Form {
    *
    * @param form - Form parameters.
    */
-  constructor(form: FormParams) {
+  public constructor(form: FormParams) {
     this.searchBox = document.getElementById(
       form.searchBoxID
     ) as HTMLInputElement;
@@ -228,14 +228,14 @@ export class Form {
   /**
    * @returns The <tbody> element holding the results.
    */
-  get resultsTBody(): HTMLTableSectionElement {
+  public get resultsTBody(): HTMLTableSectionElement {
     return this.tbody;
   }
 
   /**
    * Focus on the search box.
    */
-  focus(): void {
+  public focus(): void {
     this.searchBox.focus();
   }
 
@@ -243,14 +243,14 @@ export class Form {
    * Add a search box input listener.
    * @param listener
    */
-  addSearchBoxInputListener(listener: () => void): void {
+  public addSearchBoxInputListener(listener: () => void): void {
     this.searchBox.addEventListener('input', listener);
   }
 
   /**
    * @param listener
    */
-  addSearchBoxKeyListener(listener: (event: Event) => void): void {
+  public addSearchBoxKeyListener(listener: (event: Event) => void): void {
     this.searchBox.addEventListener('keyup', listener);
     this.searchBox.addEventListener('keydown', listener);
     this.searchBox.addEventListener('keypress', listener);
@@ -259,7 +259,7 @@ export class Form {
   /**
    * @param listener
    */
-  addCheckboxClickListener(listener: () => void): void {
+  public addCheckboxClickListener(listener: () => void): void {
     this.fullWordCheckbox.addEventListener('click', listener);
     this.regexCheckbox.addEventListener('click', listener);
   }
@@ -267,7 +267,7 @@ export class Form {
   /**
    * @returns The query expression, constructed from the input fields.
    */
-  queryExpression(): string {
+  public queryExpression(): string {
     let query: string = orth.cleanDiacritics(this.searchBox.value);
     if (!query) {
       return '';
@@ -294,7 +294,7 @@ export class Form {
    *
    * @param row - The row to append.
    */
-  result(row: HTMLTableRowElement): void {
+  public result(row: HTMLTableRowElement): void {
     this.tbody.append(row);
   }
 
@@ -306,7 +306,7 @@ export class Form {
    * NOTE: This is an expensive operation. Don't perform it repeatedly in
    * time-sensitive applications.
    */
-  expand(): void {
+  public expand(): void {
     this.collapsible.adjustHeightIfVisible();
   }
 
@@ -315,7 +315,7 @@ export class Form {
    *
    * @param message
    */
-  message(message: string): void {
+  public message(message: string): void {
     const el = document.createElement('div');
     el.classList.add(CLS.ERROR);
     el.textContent = message;
@@ -325,7 +325,7 @@ export class Form {
   /**
    * Clear output fields.
    */
-  clearOutputFields(): void {
+  public clearOutputFields(): void {
     this.tbody.replaceChildren();
     this.messageBox.replaceChildren();
   }
@@ -346,7 +346,7 @@ abstract class AggregateResult {
   /**
    * @returns The boundary type.
    */
-  boundaryType(): BoundaryType {
+  public boundaryType(): BoundaryType {
     // The BoundaryType enum is implemented in such a way that the boundary type
     // of an aggregated result is the minimum of the boundary types of all
     // results.
@@ -358,7 +358,7 @@ abstract class AggregateResult {
   /**
    * @returns The fragment word.
    */
-  fragmentWord(): string | undefined {
+  public fragmentWord(): string | undefined {
     // We simply return the fragment of the first result that possesses one.
     return (this.fragmentWordMemo ??= this.results
       .find((r) => r.fragmentWord())
@@ -368,7 +368,7 @@ abstract class AggregateResult {
   /**
    * @returns Whether this result has a match.
    */
-  get match(): boolean {
+  public get match(): boolean {
     // We have a match if any of the results has a match.
     return (this.matchMemo ??= this.results.some((r) => r.match));
   }
@@ -376,7 +376,7 @@ abstract class AggregateResult {
   /**
    * @returns Number of matches.
    */
-  get numMatches(): number {
+  public get numMatches(): number {
     return (this.numMatchesMemo ??= this.results
       .map((r) => r.numMatches)
       .reduce((a, b) => a + b, 0));
@@ -389,9 +389,9 @@ abstract class AggregateResult {
  */
 export class Candidate {
   // key bears the candidate key.
-  readonly key: string;
+  public readonly key: string;
   // fields bears the candidate's searchable fields.
-  readonly fields: Field[];
+  public readonly fields: Field[];
 
   /**
    * @param record - The candidate data.
@@ -405,7 +405,7 @@ export class Candidate {
       // any superfluous space, and to be NFD-normalized.
       // Thus, no normalization is needed when constructing the field.
       // [1] https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize
-      (name: string): Field => new Field(name, record[name]!)
+      (name: string): Field => new Field(record[name]!)
     );
   }
 }
@@ -419,7 +419,7 @@ export class SearchResult extends AggregateResult {
    * @param candidate
    * @param regex
    */
-  constructor(
+  public constructor(
     private readonly candidate: Candidate,
     regex: RegExp
   ) {
@@ -431,7 +431,7 @@ export class SearchResult extends AggregateResult {
    *
    * @returns
    */
-  get key(): string {
+  public get key(): string {
     return this.candidate.key;
   }
 
@@ -482,7 +482,7 @@ export class SearchResult extends AggregateResult {
    *
    * @returns
    */
-  row(total: number): HTMLTableRowElement {
+  public row(total: number): HTMLTableRowElement {
     const row: HTMLTableRowElement = document.createElement('tr');
 
     row.append(
@@ -502,7 +502,7 @@ export class SearchResult extends AggregateResult {
    *
    * @returns the comparison key.
    */
-  compareKey(): number[] {
+  public compareKey(): number[] {
     const boundary: BoundaryType = this.boundaryType();
     const boundaryIndex: number = this.results.findIndex(
       (res) => res.boundaryType() === boundary
@@ -539,7 +539,7 @@ export class SearchResult extends AggregateResult {
    *
    * @returns
    */
-  link(): string | undefined {
+  protected link(): string | undefined {
     return undefined;
   }
 
@@ -562,7 +562,7 @@ export class SearchResult extends AggregateResult {
    * @returns True if the result should be included in the output, false
    * otherwise.
    */
-  filter(): boolean {
+  public filter(): boolean {
     return true;
   }
 
@@ -577,7 +577,7 @@ export class SearchResult extends AggregateResult {
    * @param _row - Table row.
    * @returns Bucket number.
    */
-  bucket(_row: HTMLTableRowElement): number {
+  public bucket(_row: HTMLTableRowElement): number {
     return 0;
   }
 
@@ -588,7 +588,7 @@ export class SearchResult extends AggregateResult {
    *
    * @returns Total number of buckets.
    */
-  static numBuckets(): number {
+  public static numBuckets(): number {
     return 1;
   }
 }
@@ -625,18 +625,11 @@ function searchResultCompare(a: SearchResult, b: SearchResult): number {
  * candidate occupies a table row, each field occupies a cell within that row.
  */
 class Field {
-  readonly units: Unit[];
+  public readonly units: Unit[];
   /**
-   * @param name - The name of the field.
-   * The name is currently unused, but it may become used as part of #445,
-   * because we intend to use it to filter out search results, using Xooxle's
-   * 'admit' parameter.
    * @param html - The HTML content of the field.
    */
-  constructor(
-    readonly name: string,
-    html: string
-  ) {
+  public constructor(html: string) {
     this.units = html
       .split(UNIT_DELIMITER)
       .map((unitHTML: string): Unit => new Unit(unitHTML));
@@ -646,7 +639,7 @@ class Field {
    * @param regex - Regex to search.
    * @returns Search result.
    */
-  search(regex: RegExp): FieldSearchResult {
+  public search(regex: RegExp): FieldSearchResult {
     return new FieldSearchResult(this, regex);
   }
 }
@@ -660,7 +653,7 @@ class FieldSearchResult extends AggregateResult {
    * @param field
    * @param regex
    */
-  constructor(field: Field, regex: RegExp) {
+  public constructor(field: Field, regex: RegExp) {
     super();
     this.results = field.units.map((unit) => unit.search(regex));
   }
@@ -668,7 +661,7 @@ class FieldSearchResult extends AggregateResult {
   /**
    * @param href
    */
-  *viewForMore(href: string | undefined): Generator<Node | string> {
+  private *viewForMore(href: string | undefined): Generator<Node | string> {
     yield document.createElement('br');
     const span: HTMLSpanElement = document.createElement('span');
     span.classList.add(CLS.VIEW_FOR_MORE);
@@ -690,7 +683,7 @@ class FieldSearchResult extends AggregateResult {
    * @param href
    * @returns The field's HTML structure, with matches highlighted.
    */
-  *highlight(href: string | undefined): Generator<Node | string> {
+  public *highlight(href: string | undefined): Generator<Node | string> {
     // If there are no matches, we limit the number of units in the output.
     // If there are matches:
     // - If there are only few units, we show all of them regardless of
@@ -722,12 +715,12 @@ class FieldSearchResult extends AggregateResult {
  * search.
  */
 class Unit {
-  readonly lines: Line[];
+  public readonly lines: Line[];
 
   /**
    * @param html - The HTML content of the unit.
    */
-  constructor(html: string) {
+  public constructor(html: string) {
     this.lines = html.split(LINE_BREAK).map((l: string) => new Line(l));
   }
 
@@ -735,7 +728,7 @@ class Unit {
    * @param regex - The regular expression to search.
    * @returns Search result.
    */
-  search(regex: RegExp): UnitSearchResult {
+  public search(regex: RegExp): UnitSearchResult {
     return new UnitSearchResult(this, regex);
   }
 }
@@ -749,7 +742,7 @@ class UnitSearchResult extends AggregateResult {
    * @param unit - The unit to search.
    * @param regex - The regex to search.
    */
-  constructor(unit: Unit, regex: RegExp) {
+  public constructor(unit: Unit, regex: RegExp) {
     super();
     this.results = unit.lines.map((l) => l.search(regex));
   }
@@ -757,7 +750,7 @@ class UnitSearchResult extends AggregateResult {
   /**
    * @returns The HTML content of the unit, with matches highlighted.
    */
-  highlight(): string {
+  public highlight(): string {
     // The unit was split into lines using LINE_BREAK as a delimiter, so we
     // rebuild it using LINE_BREAK.
     return this.results.map((r) => r.highlight()).join(LINE_BREAK);
@@ -798,12 +791,12 @@ interface Match {
  * don't want any search queries to spill over multiple lines.
  */
 class Line {
-  readonly text: string;
+  public readonly text: string;
 
   /**
    * @param html - The HTML content of the line.
    */
-  constructor(readonly html: string) {
+  public constructor(public readonly html: string) {
     // We obtain the text by deleting all tags.
     // We also get rid of diacritics. When it comes to search, we search a
     // diacritic-free query against the diacritic-free text created here. This
@@ -820,7 +813,7 @@ class Line {
    * @param regex - The regex to search.
    * @returns The search result.
    */
-  search(regex: RegExp): LineSearchResult {
+  public search(regex: RegExp): LineSearchResult {
     return new LineSearchResult(this, regex);
   }
 
@@ -833,7 +826,7 @@ class Line {
    * @param regex - The regex to search.
    * @returns A list of matches.
    */
-  matches(regex: RegExp): Match[] {
+  public matches(regex: RegExp): Match[] {
     return Array.from(this.text.matchAll(regex))
       .map((match: RegExpMatchArray): Match | undefined => {
         // NOTE: We need to filter out the empty string, because it could cause
@@ -909,7 +902,7 @@ class HTMLBuilder {
   /**
    * Start a match.
    */
-  openMatch(): void {
+  public openMatch(): void {
     if (this.open) {
       log.error('Warning: The match is already open!');
     }
@@ -928,7 +921,7 @@ class HTMLBuilder {
   /**
    * End a match.
    */
-  closeMatch(): void {
+  public closeMatch(): void {
     if (this.closed) {
       log.error('Warning: The match is already closed!');
     }
@@ -945,7 +938,7 @@ class HTMLBuilder {
   /**
    * @param t
    */
-  pushText(t: string | undefined): void {
+  public pushText(t: string | undefined): void {
     if (!t) {
       return;
     }
@@ -955,7 +948,7 @@ class HTMLBuilder {
   /**
    * @param t
    */
-  pushTag(t: string): void {
+  public pushTag(t: string): void {
     if (this.open) {
       this.closeMatch();
       this.builder.push(t);
@@ -968,7 +961,7 @@ class HTMLBuilder {
   /**
    * @returns
    */
-  build(): string {
+  public build(): string {
     return this.builder
       .map((s) =>
         s === HTMLBuilder.CLOSING_PLACEHOLDER ? HTMLBuilder.CLOSING : s
@@ -988,7 +981,7 @@ class LineSearchResult {
    * @param line - The line to search.
    * @param regex - The regex to search.
    */
-  constructor(
+  public constructor(
     private readonly line: Line,
     regex: RegExp
   ) {
@@ -1015,14 +1008,14 @@ class LineSearchResult {
    *
    * @returns Whether this search result has a match.
    */
-  get match(): boolean {
+  public get match(): boolean {
     return !!this.matches.length;
   }
 
   /**
    * @returns A word that can be used as a URL fragment.
    */
-  fragmentWord(): string | undefined {
+  public fragmentWord(): string | undefined {
     /* Expand the match left and right such that it contains full words, for
      * text fragment purposes.
      * See
@@ -1057,7 +1050,7 @@ class LineSearchResult {
   /**
    * @returns The HTML content of the line, with matches highlighted.
    */
-  highlight(): string {
+  public highlight(): string {
     if (!this.match) {
       // No highlighting needed.
       return this.html;
@@ -1117,14 +1110,14 @@ class LineSearchResult {
   /**
    * @returns The boundary type of this match.
    */
-  boundaryType(): BoundaryType {
+  public boundaryType(): BoundaryType {
     return Math.min(...this.matches.map((m) => m.boundaryType));
   }
 
   /**
    * @returns The number of matches in this line.
    */
-  get numMatches(): number {
+  public get numMatches(): number {
     return this.matches.length;
   }
 }
@@ -1170,7 +1163,7 @@ export class Xooxle {
    * @param form - Form containing HTML input and output elements.
    * @param searchResultType
    */
-  constructor(
+  public constructor(
     index: Index,
     private readonly form: Form,
     private readonly searchResultType: typeof SearchResult = SearchResult
