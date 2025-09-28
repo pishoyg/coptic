@@ -108,7 +108,7 @@ export class Highlighter {
       }
     });
     // A click on the reset element resets all display.
-    // TODO: (#179) Use a global reset event type.
+    // TODO: (#203) Use a global reset event type.
     document.querySelectorAll(`.${head.CLS.RESET}`).forEach((el) => {
       el.classList.add(ccls.LINK);
       el.addEventListener('click', this.reset.bind(this));
