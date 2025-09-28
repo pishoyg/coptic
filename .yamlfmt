@@ -16,3 +16,6 @@ formatter:
   eof_newline: true
   trim_trailing_whitespace: true
   disallow_anchors: true
+  # scan_folded_as_literal is required because of a bug:
+  # https://github.com/google/yamlfmt/issues/84.
+  scan_folded_as_literal: true
