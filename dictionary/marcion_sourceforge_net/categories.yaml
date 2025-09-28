@@ -1,0 +1,70 @@
+---
+# TODO: (#330): Make it possible for one category to link other related
+# categories.
+# Perhaps wrap categories in double square brackets, or some other markers, and
+# have your parser link them appropriately.
+# TODO (#330) Add some styling to the category descriptions. For example, some
+# text should be italicized.
+
+# The list of word categories is likely to evolve as we work on categorizing
+# more and more words.
+# For the time being, we have paid more attention to categorizing nouns in
+# particular.
+# It is generally acceptable for some words to belong to several categories,
+# though our categories should be selected such that such cases are uncommon.
+# As much as possible, aim to provide very precise definitions of each category,
+# to minimize uncertainty during the labeling process.
+
+Biology:
+  species: "Includes not only species but also genera, families, orders,
+    and overlaps of such populations and ranks."
+  anatomy: "Includes both animal and plant anatomy. Secretions (e.g., saliva,
+    milk, urine) also belong here."
+  person: "Includes categories of people (man, woman), jobs and roles (fisher,
+    farmer), family members (father, mother), and epithets (blind, bald,
+    wise)."
+  food: "Includes edibles that don’t fit into anatomy or species, such as
+    bread, gruel, and ingredients."
+  biology: "Covers general biology-related terms not fitting into more precise
+    categories. Includes diseases and life functions (breathe, eat)."
+
+"Physics & Chemistry":
+  # Food substances (milk, wine, oil, flesh, honey, ...) should be marked as "food" (and/or "anatomy" where appropriate).
+  substance: "Includes elements and compounds, as well as more generic substances
+    like stone, water, and dirt."
+  "proper nouns": "Proper nouns, such as place names, ethnicities, ..."
+  earth: "Describes natural earthly phenomena that are not man-made and
+    are not simply substances."
+  astronomy: "Astronomy."
+  colors: "Colors."
+  shapes: "Shapes (e.g. ball, corner, fragment, piece, ...)."
+  physics: "Covers physics-related terms not fitting into more specific
+    categories, including astronomical terms and physical phenomena (e.g.,
+    energy, light, heat)."
+
+"Man-made":
+  # Some nouns (such as canal) can be either natural or man-made. In this
+  # case, it can be included in both the "geography" and "construction" categories.
+  construction: "Includes man-made objects fixed at a given location, such
+    as cities and constructed structures."
+  # Non-movable storage objects (such as cistern or treasure house) belong
+  # to the "construction" category.
+  container: "Includes storage objects like pots, jars, dishes, boxes, chests,
+    and baskets. Any movable storage object belongs in this category."
+  tool: "Represents tools or utilities that don’t fit in 'container' or
+    'construction'. Can include natural non-living objects used as tools."
+  clothes: "Clothes and fabrics."
+  vehicle: "Includes various forms of transportation."
+
+Conceptual:
+  time: "Represents time-related concepts."
+  number: "Represents numerical concepts."
+  # Notice that entities representing specific points rather than quantities (e.g. Monday vs. 24 hours, or here vs. 10 meters) do NOT belong in this category.
+  unit: "Represents quantities, measures, or units of length, time, weight,
+    currency, and volume."
+  direction: "Represents directional concepts."
+  emotion: "Covers words related to emotions."
+  concept: "Represents abstract concepts."
+
+Miscellaneous:
+  doubtful: "Represents words with an unknown or uncertain meaning."

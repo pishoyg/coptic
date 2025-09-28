@@ -17,7 +17,6 @@ from collections import abc
 import gspread
 import yaml
 
-from dictionary.marcion_sourceforge_net import categories as cat
 from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import lexical as lex
 from dictionary.marcion_sourceforge_net import parse, sheet, wiki
@@ -26,6 +25,8 @@ from utils import cache, ensure, file, gcp, log, page, paths, semver, text
 _NUM_DRV_COLS: int = 10
 _HUNDRED: int = 100
 assert not _HUNDRED % _NUM_DRV_COLS
+
+_CATEGORIES_PATH: pathlib.Path = paths.MARCION / "categories.yaml"
 
 
 class Row(gcp.Record):
@@ -425,7 +426,7 @@ class Root(Row):
         cats: list[str] = text.ssplit(self.get(sheet.COL.CATEGORIES), ",")
         ensure.members(
             cats,
-            cat.KNOWN_CATEGORIES,
+            Crum.known_categories,
             self.key,
             "has unknown categories",
         )
@@ -433,7 +434,7 @@ class Root(Row):
 
     def set_categories(self, cats: abc.Iterable[str]) -> None:
         cats = sorted(cats)
-        ensure.members(cats, cat.KNOWN_CATEGORIES)
+        ensure.members(cats, Crum.known_categories)
         self.update_cell(sheet.COL.CATEGORIES, ", ".join(cats))
         self.categories = cats
 
@@ -650,6 +651,16 @@ class Crum:
             A shared, static snapshot of the roots.
         """
         return Crum.roots_live()
+
+    @cache.StaticProperty
+    @staticmethod
+    def known_categories() -> dict[str, str]:
+        cats: dict[str, str] = {}
+        for categories in yaml.safe_load(file.read(_CATEGORIES_PATH)).values():
+            for name, description in categories.items():
+                ensure.ensure(name not in cats, "Duplicate key found:", name)
+                cats[name] = description
+        return cats
 
     @cache.StaticProperty
     @staticmethod

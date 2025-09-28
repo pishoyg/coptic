@@ -17,7 +17,6 @@ import urllib
 
 import gspread
 
-from dictionary.marcion_sourceforge_net import categories as cat
 from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import main as crum
 from dictionary.marcion_sourceforge_net import sheet
@@ -494,7 +493,7 @@ class Runner:
 
         self.args.cat = sorted(self.args.cat)
         ensure.unique(self.args.cat, "Duplicate categories!")
-        ensure.members(self.args.cat, cat.KNOWN_CATEGORIES)
+        ensure.members(self.args.cat, crum.Crum.known_categories)
 
         def url_to_person(url_or_raw: str) -> _Person:
             """Convert a URL to a person initializer.
@@ -606,7 +605,7 @@ class Runner:
                 cats = text.ssplit(
                     input(f"Key = {root.key}. Categories (empty to skip): "),
                 )
-                unknown: set[str] = set(cats) - set(cat.KNOWN_CATEGORIES)
+                unknown: set[str] = set(cats) - set(crum.Crum.known_categories)
                 if unknown:
                     log.error("Unknown categories:", unknown)
                     continue
