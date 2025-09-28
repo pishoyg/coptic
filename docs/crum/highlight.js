@@ -92,7 +92,7 @@ export class Highlighter extends high.DialectHighlighter {
   *updates() {
     // Brighten all elements. This is necessary to undo all previous style
     // changes.
-    yield [`.${cls.WORD} > *`, setOpacity.bind(null, BRIGHT)];
+    yield [`.${cls.WORD} *`, setOpacity.bind(null, BRIGHT)];
     const query = this.query();
     if (!query) {
       return;
