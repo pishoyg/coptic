@@ -1,5 +1,5 @@
 /** Package coptic defines Coptic linguistic entities. */
-import * as logger from './logger.js';
+import * as log from './logger.js';
 // Coptic exists in the Unicode in two blocks:
 //   https://en.wikipedia.org/wiki/Coptic_(Unicode_block)
 //   https://en.wikipedia.org/wiki/Greek_and_Coptic
@@ -32,8 +32,8 @@ export class Word {
    */
   constructor(word) {
     this.word = word.toLowerCase();
-    logger.ensure(!!this.word, 'constructing a word with the empty string!');
-    logger.ensure(
+    log.ensure(!!this.word, 'constructing a word with the empty string!');
+    log.ensure(
       Array.from(word).every((c) => c in Word.MAPPING),
       word,
       'contains character that are not in the mapping!'

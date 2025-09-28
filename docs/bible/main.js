@@ -1,12 +1,15 @@
 /* Main function for a Bible chapter. */
-import * as highlight from './highlight.js';
+import * as high from './highlight.js';
 import * as browser from '../browser.js';
 import * as html from '../html.js';
-import * as dropdown from '../dropdown.js';
+import * as drop from '../dropdown.js';
 import * as cls from './cls.js';
-import * as d from './dialect.js';
-const BAR_ID = 'bar';
-const TRAY_ID = 'tray';
+import * as dial from './dialect.js';
+var ID;
+(function (ID) {
+  ID['BAR'] = 'bar';
+  ID['TRAY'] = 'tray';
+})(ID || (ID = {}));
 /**
  * Add Bible event listeners.
  * TODO: (#349) Use proper shortcuts with a help panel.
@@ -45,7 +48,7 @@ function main() {
   html.normalize();
   const boxes = [];
   const labels = () => {
-    return d.DIALECTS.map((dialect) => {
+    return dial.DIALECTS.map((dialect) => {
       const label = document.createElement('label');
       const box = dialect.checkbox();
       boxes.push(box);
@@ -58,19 +61,19 @@ function main() {
   // element.
   const bar = document.createElement('div');
   bar.append(...labels());
-  bar.id = BAR_ID;
+  bar.id = ID.BAR;
   const tray = document.createElement('div');
   tray.append(...labels());
-  const drop = document.createElement('span');
-  drop.textContent = 'Languages ▾';
-  drop.id = TRAY_ID;
-  dropdown.addDroppable(drop, 'click', tray);
+  const holder = document.createElement('span');
+  holder.textContent = 'Languages ▾';
+  holder.id = ID.TRAY;
+  drop.addDroppable(holder, 'click', tray);
   // Construct the highlighter.
-  const highlighter = new highlight.Highlighter(new d.Manager(), [...boxes]);
+  const highlighter = new high.Highlighter(new dial.Manager(), [...boxes]);
   addEventListeners(highlighter);
   const title = document.querySelector(`.${cls.TITLE}`);
   title.insertAdjacentElement('afterend', bar);
-  title.insertAdjacentElement('afterend', drop);
-  dropdown.addEventListeners('click');
+  title.insertAdjacentElement('afterend', holder);
+  drop.addEventListeners('click');
 }
 main();

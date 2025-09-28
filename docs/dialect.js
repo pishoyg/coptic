@@ -1,10 +1,13 @@
 /** Package dialect defines dialect handling logic. */
 import * as str from './str.js';
-import * as logger from './logger.js';
+import * as log from './logger.js';
 const SEPARATOR = ',';
 export var CLS;
 (function (CLS) {
+  // BORDER_DIALECT_LETTER is the class of the second letter of a border dialect
+  // code.
   CLS['BORDER_DIALECT_LETTER'] = 'border-dialect-letter';
+  // SIGLUM is the class of a prettified dialect siglum.
   CLS['SIGLUM'] = 'siglum';
 })(CLS || (CLS = {}));
 export var Article;
@@ -42,20 +45,20 @@ export class Dialect {
   article;
   key;
   /**
-   * @param code - Recognizable dialect code, suitable for display.
-   * @param name - Full dialect name.
+   * @param code - Recognizable dialect code, suitable for display, and also for
+   * use to control the state of the dialect.
+   * @param name - Full dialect name, used for display only.
    * @param article - URL to an article about that dialect.
-   * @param key - Single-character dialect key.
-   * NOTE: You should provide a dialect key if the dialect has a
-   * double-character code. If it's single-character, the code can be used as a
-   * key.
+   * @param key - Single-character dialect key, used for situations where a
+   * single-character key must be employed, such as keyboard shortcuts.
+   * If the code is already single-character, it can be used as the key.
    */
   constructor(code, name, article, key) {
     this.code = code;
     this.name = name;
     this.article = article;
     this.key = key ?? code;
-    logger.ensure(this.key.length === 1);
+    log.ensure(this.key.length === 1);
   }
   /**
    * @returns
@@ -63,7 +66,7 @@ export class Dialect {
   checkbox() {
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
-    checkbox.name = this.code;
+    checkbox.name = this.code; // The code is used for state control.
     return checkbox;
   }
   /**
@@ -117,47 +120,40 @@ export class Dialect {
   }
 }
 /**
- * Manager represents a dialect manager.
- * @template C The type of the dialect, which must be a string or a subtype
- * of string (like a string literal type).
+ * Manager represents a dialect state manager.
+ * @template C The type of the dialect codes, which must be a string or a
+ * subtype of string. Codes are used as keys in dialect state control.
  */
 export class Manager {
-  key;
+  localKey;
   /**
-   * @param key - Name of the local storage key used to store the set of
+   * @param localKey - Name of the local storage key used to store the set of
    * active dialects.
    */
-  constructor(key) {
-    this.key = key;
+  constructor(localKey) {
+    this.localKey = localKey;
   }
   /**
-   * @returns The list of active dialects.
+   * @returns The list of active dialects codes.
+   *
    * If dialect highlighting has never been configured, it returns undefined.
    * If previously selected dialects have been deselected, it returns an empty
    * array.
-   *
-   * NOTE: The local storage variable distinguishes between the two following
-   * values:
-   * - null: Dialect highlighting has never been configured. This results in
-   *   a response of `undefined`.
-   * - the empty string: Dialect highlighting was previously configured, and now
-   *   all dialects are disabled. This results in a response of an empty array.
    */
   active() {
-    const d = localStorage.getItem(this.key);
+    const d = localStorage.getItem(this.localKey);
     if (d === null) {
       // Dialect highlighting has never been configured.
       return undefined;
     }
     if (d === '') {
-      // Dialect highlighting was previously configured, and now all dialects
-      // are disabled.
+      // Dialect highlighting was previously configured, and all dialects have
+      // been deselected.
       // (This corner case needs special handling because splitting the empty
       // string otherwise returns [''].)
       return [];
     }
-    // We can safely cast here because the class only ever stores values of type
-    // T.
+    // Dialect highlighting was previously used, and some dialects are selected.
     return d.split(SEPARATOR);
   }
   /**
@@ -165,14 +161,13 @@ export class Manager {
    * @param dialects - The list of dialects to set as active.
    */
   setActive(dialects) {
-    localStorage.setItem(this.key, dialects.join(SEPARATOR));
+    localStorage.setItem(this.localKey, dialects.join(SEPARATOR));
   }
   /**
-   * Sets the list of active dialects to [].
-   * NOTE: We intentionally use the empty list, instead of deleting the local
-   * storage variable, in order to distinguish between cases when:
-   * 1. Dialect highlighting was previously used and then reset.
-   * 2. Dialect highlighting was never used.
+   * Deselect all dialects.
+   * NOTE: This doesn't "reset". It deselects all dialects. This allows you to
+   * distinguish between cases where dialect highlighting was previously used
+   * and disabled as opposed to when it was never used before.
    */
   reset() {
     this.setActive([]);

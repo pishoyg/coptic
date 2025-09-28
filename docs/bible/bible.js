@@ -1,6 +1,6 @@
 /** Main function for the Bible index. */
-import * as collapse from '../collapse.js';
-import * as logger from '../logger.js';
+import * as coll from '../collapse.js';
+import * as log from '../logger.js';
 const BOOK_PARAM = 'book';
 /**
  * If the book query parameter is present, click on the title of the given
@@ -14,7 +14,7 @@ function maybeGoToBook() {
   }
   const elem = document.getElementById(click);
   if (!elem) {
-    logger.error(click, 'not found!');
+    log.error(click, 'not found!');
     return;
   }
   elem.click();
@@ -24,7 +24,7 @@ function maybeGoToBook() {
  *
  */
 function main() {
-  collapse.addEventListenersForSiblings();
+  coll.addEventListenersForSiblings();
   maybeGoToBook();
 }
 main();

@@ -1,46 +1,61 @@
 /**
  * Package highlight defines the Crum dialect and developer-mode highlighting.
- *
- * TODO: (#179) We intend to implement highlighting for the Bible as well. Move
- * shared functionality to an external package, and keep Lexicon-specific logic
- * in this file.
  */
 import * as css from '../css.js';
 import * as iam from '../iam.js';
 import * as dev from '../dev.js';
 import * as cls from './cls.js';
-import * as ccls from '../cls.js';
-import * as header from '../header.js';
-import * as logger from '../logger.js';
-import * as d from './dialect.js';
-import * as dd from '../dialect.js';
+import * as dial from './dialect.js';
+import * as ddial from '../dialect.js';
 import * as browser from '../browser.js';
 import * as help from '../help.js';
-// On Anki, style sheets are problematic, for some reason! So we resort to
-// updating individual elements in the page instead!
-const ANKI = iam.amI('anki');
-const STYLE = ANKI ? null : document.createElement('style');
-if (STYLE) {
-  document.head.appendChild(STYLE);
-}
+import * as high from '../highlight.js';
 export var CLS;
 (function (CLS) {
+  /**
+   * DIALECT_CODE is the class of the cell, in a dialect shortcut description,
+   * bearing the dialect code.
+   */
   CLS['DIALECT_CODE'] = 'dialect-code';
+  /**
+   * DIALECT_CODE is the class of the cell, in a dialect shortcut description,
+   * bearing the dialect name.
+   */
   CLS['DIALECT_NAME'] = 'dialect-name';
+  /**
+   * DIALECT_CODE is the class of the cell, in a dialect shortcut description,
+   * bearing the list of dictionaries that this dialect belongs to.
+   */
   CLS['DIALECT_DICTIONARIES'] = 'dialect-dictionaries';
 })(CLS || (CLS = {}));
 /**
+ * DevHighlighter is a highlighter that controls Crum's developer-mode elements.
  */
-export class Highlighter {
-  manager;
-  checkboxes;
-  dialectRuleIndex;
-  devRuleIndex;
-  static BRIGHT = '1.0';
-  static DIM = '0.3';
+export class DevHighlighter extends dev.Highlighter {
   /**
-   *
-   * @param manager
+   * @returns A query selecting all developer-mode-only elements.
+   */
+  query() {
+    return `.${dev.CLS.DEV}, .${cls.NAG_HAMMADI}, .${cls.SENSES}, .${cls.QUALITY}, .${cls.DRV_KEY}`;
+  }
+}
+const BRIGHT = '1.0';
+const DIM = '0.3';
+/**
+ * Set the opacity of the given element to the given value.
+ * @param opacity
+ * @param el
+ */
+function setOpacity(opacity, el) {
+  el.style.opacity = opacity;
+}
+/**
+ * Crum's dialect highlighter.
+ */
+export class Highlighter extends high.DialectHighlighter {
+  /**
+   * @param manager - A dialect manager controlling the state of Crum's
+   * dialects.
    * @param checkboxes - List of checkboxes that control dialect
    * highlighting. Each box must bear a name equal to the dialect code that it
    * represents.
@@ -49,49 +64,51 @@ export class Highlighter {
    * the checkboxes.
    */
   constructor(manager, checkboxes) {
-    this.manager = manager;
-    this.checkboxes = checkboxes;
-    let length = STYLE?.sheet?.cssRules.length ?? 0;
-    this.dialectRuleIndex = length++;
-    this.devRuleIndex = length++;
-    this.addEventListeners();
-    // Update display once upon loading.
-    this.update();
+    super(
+      // CSS styler, which is our preferable styler, doesn't work on Anki. For
+      // some reason! We therefore opt for an element styler.
+      iam.amI('anki')
+        ? new high.ElementStyler(() => Array.from(this.updates()))
+        : new high.CSSStyler(() => this.rule()),
+      manager,
+      checkboxes
+    );
   }
   /**
-   * Update dialects and developer-mode display.
+   * @returns - A CSS rule setting the style of the page elements, based on
+   * selected dialects. If no dialect-based styling is desired, return
+   * undefined.
    */
-  update() {
-    this.updateDialects();
-    this.updateDev();
+  rule() {
+    const query = this.query();
+    if (!query) {
+      return undefined;
+    }
+    return `${query} { opacity: ${DIM}}`;
   }
   /**
-   * Update dialect display.
+   * @returns
    */
-  updateDialects() {
-    // We have three sources of dialect highlighting:
-    // 1. Lexicon checkboxes
-    // 2. .dialect elements in the HTML
-    // 3. Keyboard shortcuts
-    // NOTE: Make sure that checkboxes are updated whenever dialect highlighting
-    // changes, regardless of the source of the change.
+  *updates() {
+    // Brighten all elements. This is necessary to undo all previous style
+    // changes.
+    yield [`.${cls.WORD} > *`, setOpacity.bind(null, BRIGHT)];
+    const query = this.query();
+    if (!query) {
+      return;
+    }
+    // Dim selected elements.
+    yield [query, setOpacity.bind(null, DIM)];
+  }
+  /**
+   * @returns A query for all elements that need to be dimmed, based on the
+   * current dialect selection.
+   * If dialect selection is currently disabled, return undefined.
+   */
+  query() {
     const active = this.manager.active();
     if (!active?.length) {
-      // No dialect highlighting whatsoever.
-      // All dialects are visible.
-      this.updateSheetOrElements(
-        this.dialectRuleIndex,
-        `.${cls.WORD} *`,
-        '',
-        (el) => {
-          el.style.opacity = Highlighter.BRIGHT;
-        }
-      );
-      // None of the checkboxes should be checked.
-      this.checkboxes.forEach((c) => {
-        c.checked = false;
-      });
-      return;
+      return undefined;
     }
     // Some dialects are on, some are off.
     // We do this through a CSS query that consists of two subqueries:
@@ -104,130 +121,15 @@ export class Highlighter {
     //     tooltips, so we give those special handling in the second subquery.
     // 2. For dialect codes of inactive dialects, dim only the sigla.
     //    This keeps the tooltips bright.
-    const query = `.${cls.WORD} > :not(${css.classQuery(...active)}, .${cls.SPELLING}:not(${d.ANY_DIALECT_QUERY}), .${cls.DIALECT}), .${cls.WORD} > .${cls.DIALECT}:not(${css.classQuery(...active)}) .${dd.CLS.SIGLUM}`;
-    const style = `opacity: ${Highlighter.DIM};`;
-    this.updateSheetOrElements(
-      this.dialectRuleIndex,
-      query,
-      style,
-      (el) => {
-        el.style.opacity = Highlighter.DIM;
-      },
-      `.${cls.WORD} *`,
-      (el) => {
-        el.style.opacity = Highlighter.BRIGHT;
-      }
-    );
-    // Active dialects should have their checkboxes checked.
-    this.checkboxes.forEach((checkbox) => {
-      checkbox.checked = active.includes(checkbox.name);
-    });
-  }
-  /**
-   * Update developer-mode display.
-   */
-  updateDev() {
-    const display = dev.get() ? 'block' : 'none';
-    this.updateSheetOrElements(
-      this.devRuleIndex,
-      `.${dev.CLS.DEV}, .${cls.NAG_HAMMADI}, .${cls.SENSES}, .${cls.QUALITY}, .${cls.DRV_KEY}`,
-      `display: ${display};`,
-      (el) => {
-        el.style.display = display;
-      }
-    );
-  }
-  /**
-   * Add or update the CSS rule at the given index.
-   * @param index - Index of the rule.
-   * @param rule - New rule.
-   */
-  upsertRule(index, rule) {
-    if (!STYLE?.sheet) {
-      logger.error(
-        'Attempting to update sheet rules when the sheet is not set!'
-      );
-      return;
-    }
-    if (index < STYLE.sheet.cssRules.length) {
-      STYLE.sheet.deleteRule(index);
-    }
-    STYLE.sheet.insertRule(rule, index);
-  }
-  /**
-   * If possible, we update the CSS rule and call it a day.
-   * If we're in Anki, we can't do that, and we have to resort to updating
-   * elements individually. We therefore ask for more parameters to make this
-   * possible.
-   *
-   * NOTE: If you're updating the sheet, then it's guaranteed that the update
-   * will erase the effects of all previous updates, simply because the old CSS
-   * rule gets deleted, and a new rule is created in its stead.
-   * However, if you're updating elements, it's not guaranteed that the new
-   * update will erase the effects of previous updates. If this is the case, you
-   * should pass a `reset_func` that resets the elements to the default style.
-   *
-   * @param ruleIndex - Index of the CSS rule to replace, if we were to update
-   * a CSS rule.
-   * @param query - Query that returns all affected elements.
-   * @param style - CSS style that should be applied to the set of elements
-   * returned by the query.
-   *
-   * @param func - A function that updates the style of the affected elements.
-   * This is an alternative to the 'style' parameter, used only if we can't
-   * update CSS rules.
-   * @param resetQuery - A query that returns all elements potentially affected
-   * by previous display updates.
-   * @param resetFunc - A function that resets the display of all elements
-   * potentially affected by previous display updates.
-   */
-  updateSheetOrElements(ruleIndex, query, style, func, resetQuery, resetFunc) {
-    if (ANKI) {
-      if (resetQuery && resetFunc) {
-        document.querySelectorAll(resetQuery).forEach(resetFunc);
-      }
-      document.querySelectorAll(query).forEach(func);
-      return;
-    }
-    this.upsertRule(ruleIndex, `${query} { ${style} }`);
-  }
-  /**
-   * Register event listeners.
-   */
-  addEventListeners() {
-    // A click on a checkbox triggers a dialect display update.
-    this.checkboxes.forEach((checkbox) => {
-      checkbox.addEventListener('click', () => {
-        this.toggle(checkbox.name);
-      });
-    });
-    // Switching tabs triggers a display update. This is because it's possible
-    // that, while we were on the second tab, we updated the display. This
-    // listener ensures that, when we are back to the first tab, the display
-    // changes applied in the second tab will also be made here.
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') {
-        // If the user switches to a different tab and then back to the current
-        // tab, it's possible that they have changing the highlighting settings
-        // through the other tab. We therefore need to update the highlighting.
-        this.update();
-      }
-    });
-    // A click on the reset element resets all display.
-    document.querySelectorAll(`.${header.CLS.RESET}`).forEach((el) => {
-      el.classList.add(ccls.LINK);
-      el.addEventListener('click', this.reset.bind(this));
-    });
+    return `.${cls.WORD} > :not(${css.classQuery(...active)}, .${cls.SPELLING}:not(${dial.ANY_DIALECT_QUERY}), .${cls.DIALECT}), .${cls.WORD} > .${cls.DIALECT}:not(${css.classQuery(...active)}) .${ddial.CLS.SIGLUM}`;
   }
   /**
    * Reset display, and remove the URL fragment if present.
    */
   reset() {
-    dev.reset();
-    this.manager.reset();
-    this.update();
-    // Remove the URL fragment.
-    if (iam.amI('lexicon') || ANKI) {
+    super.reset();
+    // TODO: (#203) Move to a separate highlighter.
+    if (iam.amI('lexicon') || iam.amI('anki')) {
       // Attempting to reload the page on Ankidroid opens a the browser at a
       // 127.0.0.0 port! We avoid reloading on all Anki platforms!
       // In Xooxle, there is no hash-based highlighting, so we don't need to
@@ -237,23 +139,17 @@ export class Highlighter {
     browser.removeFragment();
   }
   /**
-   * Toggle the highlighting of the given dialect.
-   *
-   * @param dialect - A dialect code.
+   * @returns - A list of dialect shortcuts.
+   * TODO: (#203) Either use in a standardized manner, or delete this method.
+   * It's currently unused.
    */
-  toggle(dialect) {
-    this.manager.toggle(dialect);
-    this.updateDialects();
-  }
-  /**
-   * Toggle developer mode, and update display.
-   */
-  toggleDev() {
-    dev.toggle();
-    this.updateDev();
+  shortcuts() {
+    return Object.values(dial.DIALECTS).map(this.shortcut.bind(this));
   }
   /**
    * Build a keyboard shortcut that toggles the given dialect.
+   * TODO: (#203) Restructure the help panel pipeline in such a way that this
+   * method can become private.
    *
    * @param dialect
    * @returns

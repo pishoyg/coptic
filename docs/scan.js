@@ -1,8 +1,8 @@
 /** Package scan defines the logic for a dictionary scan. */
 // NOTE: This package is used in the browser, and also during validation. So we
 // allow it to assert correctness, instead of trying to always fail gracefully.
-import * as logger from './logger.js';
-import * as coptic from './coptic.js';
+import * as log from './logger.js';
+import * as copt from './coptic.js';
 import * as browser from './browser.js';
 import * as cls from './cls.js';
 import * as orth from './orth.js';
@@ -49,7 +49,7 @@ export class Index {
     const lines = index.trim().split('\n');
     const header = Index.toColumns(lines[0]);
     // Verify that the header has the expected column names.
-    logger.ensure(
+    log.ensure(
       WANT_COLUMNS.every((col, idx) => header[idx] === col),
       header.slice(0, WANT_COLUMNS.length),
       'do not match the list of wanted columns',
@@ -69,10 +69,7 @@ export class Index {
       const cur = this.pages[i];
       const prev = this.pages[i - 1];
       if (cur.page !== prev.page + 1) {
-        logger.fatal(
-          'Non-consecutive page numbers:',
-          `${prev.page}, ${cur.page}`
-        );
+        log.fatal('Non-consecutive page numbers:', `${prev.page}, ${cur.page}`);
       }
     }
     if (dev.get()) {
@@ -96,7 +93,7 @@ export class Index {
    */
   static forceParseInt(str) {
     const num = parseInt(str);
-    logger.ensure(!isNaN(num), 'unable to parse page number', num);
+    log.ensure(!isNaN(num), 'unable to parse page number', num);
     return num;
   }
   /**
@@ -116,7 +113,7 @@ export class Index {
       return num;
     }
     // Check if this is a Coptic word.
-    if (!coptic.isCoptic(query)) {
+    if (!copt.isCoptic(query)) {
       // Neither a number nor a Coptic word! Nothing we can do!
       // TODO: (#411) This should support other classes of words as well, not
       // just Coptic words.
@@ -149,7 +146,7 @@ export class Index {
    * simply log an error message.
    */
   verifyWordOrder(strict = true) {
-    const error = strict ? logger.fatal : logger.error;
+    const error = strict ? log.fatal : log.error;
     for (const [i, p] of this.pages.entries()) {
       if (!p.start.leq(p.end)) {
         error(

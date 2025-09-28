@@ -1,4 +1,6 @@
 /** Package dev defines developer-mode logic. */
+import * as high from './highlight.js';
+import * as iam from './iam.js';
 /**
  * VAR is the name of the local storage variable holding the status of the
  * developer mode.
@@ -47,4 +49,57 @@ export function reset() {
  */
 export function toggle() {
   set(!get());
+}
+/**
+ *
+ */
+export class Highlighter extends high.Highlighter {
+  /**
+   * @returns - Current visibility value for developer-mode elements.
+   */
+  display() {
+    return get() ? 'block' : 'none';
+  }
+  /**
+   * @returns
+   */
+  rule() {
+    return `${this.query()} { display: ${this.display()} }`;
+  }
+  /**
+   * @returns
+   */
+  op() {
+    const val = this.display();
+    return [
+      this.query(),
+      (el) => {
+        el.style.display = val;
+      },
+    ];
+  }
+  /**
+   *
+   */
+  constructor() {
+    super(
+      iam.amI('anki')
+        ? new high.ElementStyler(() => [this.op()])
+        : new high.CSSStyler(() => this.rule())
+    );
+  }
+  /**
+   *
+   */
+  reset() {
+    reset();
+    this.update();
+  }
+  /**
+   *
+   */
+  toggle() {
+    set(!get());
+    this.update();
+  }
 }

@@ -1,32 +1,32 @@
 /** Main function for the lexicon. */
-import * as xooxle from '../xooxle.js';
-import * as collapse from '../collapse.js';
+import * as xoox from '../xooxle.js';
+import * as coll from '../collapse.js';
 import * as css from '../css.js';
-import * as highlight from './highlight.js';
-import * as d from './dialect.js';
+import * as high from './highlight.js';
+import * as dial from './dialect.js';
 import * as help from './help.js';
-import * as header from '../header.js';
+import * as head from '../header.js';
 import * as paths from '../paths.js';
 import * as crum from './crum.js';
 import * as wiki from './wiki.js';
-import * as dropdown from '../dropdown.js';
-import * as logger from '../logger.js';
+import * as drop from '../dropdown.js';
+import * as log from '../logger.js';
 import * as id from './id.js';
-const SEARCH_BOX_ID = 'searchBox';
-const FULL_WORD_CHECKBOX_ID = 'fullWordCheckbox';
-const REGEX_CHECKBOX_ID = 'regexCheckbox';
-// TODO: (#0) The message box gets written. Since multiple Xooxle instances are
-// allowed to coexist on the same page, we should create several boxes,
-// otherwise they could override each other!
-const MESSAGE_BOX_ID = 'message';
-const DIALECTS_ID = 'dialects';
-// While we have two groups of checkboxes, confusingly enough, the unqualified
-// 'checkboxes' ID refers to the ones that show on a list, rather than the ones
-// that show in the drop-down menu. The reason this ID was used for those boxes
-// is that they preceded the more recent drop-down version.
-const CHECKBOXES_ID = 'checkboxes';
-const REPORTS_ID = 'reports';
-const FORM_ID = 'form';
+var ID;
+(function (ID) {
+  ID['SEARCH_BOX'] = 'searchBox';
+  ID['FULL_WORD_CHECKBOX'] = 'fullWordCheckbox';
+  ID['REGEX_CHECKBOX'] = 'regexCheckbox';
+  ID['MESSAGE_BOX'] = 'message';
+  ID['DIALECTS'] = 'dialects';
+  // While we have two groups of checkboxes, confusingly enough, the unqualified
+  // 'checkboxes' ID refers to the ones that show on a list, rather than the
+  // ones that show in the drop-down menu. The reason this ID was used for those
+  // boxes is that they preceded the more recent drop-down version.
+  ID['CHECKBOXES'] = 'checkboxes';
+  ID['REPORTS'] = 'reports';
+  ID['FORM'] = 'form';
+})(ID || (ID = {}));
 var DialectMatch;
 (function (DialectMatch) {
   // The candidate has at least one of the highlighted dialects, and the match
@@ -56,7 +56,7 @@ var DialectMatch;
 })(DialectMatch || (DialectMatch = {}));
 /**
  */
-class SearchResult extends xooxle.SearchResult {
+class SearchResult extends xoox.SearchResult {
   static manager;
   static highlighter;
   /**
@@ -123,15 +123,15 @@ class CrumSearchResult extends SearchResult {
       return 0;
     }
     const highlightedDialectQuery = active
-      .map((dialect) => `.${dialect} .${'match' /* xooxle.CLS.MATCH */}`)
+      .map((dialect) => `.${dialect} .${'match' /* xoox.CLS.MATCH */}`)
       .join(', ');
     if (row.querySelector(highlightedDialectQuery)) {
       // We have a match in a highlighted dialect.
       return DialectMatch.HIGHLIGHTED_DIALECT_MATCH;
     }
     const undialected = Array.from(
-      row.querySelectorAll(`.${'match' /* xooxle.CLS.MATCH */}`)
-    ).some((el) => !el.closest(d.ANY_DIALECT_QUERY));
+      row.querySelectorAll(`.${'match' /* xoox.CLS.MATCH */}`)
+    ).some((el) => !el.closest(dial.ANY_DIALECT_QUERY));
     const ofInterest = !!row.querySelector(css.classQuery(...active));
     if (undialected) {
       if (ofInterest) {
@@ -176,7 +176,7 @@ class KELLIASearchResult extends SearchResult {
       return 0;
     }
     const highlightedDialectQuery = active
-      .map((dialect) => `.${dialect} .${'match' /* xooxle.CLS.MATCH */}`)
+      .map((dialect) => `.${dialect} .${'match' /* xoox.CLS.MATCH */}`)
       .join(', ');
     return row.querySelector(highlightedDialectQuery) ? 0 : 1;
   }
@@ -184,7 +184,7 @@ class KELLIASearchResult extends SearchResult {
 /**
  *
  */
-class WikiSearchResult extends xooxle.SearchResult {
+class WikiSearchResult extends xoox.SearchResult {
   /**
    *
    * @param total
@@ -233,8 +233,8 @@ const XOOXLES = [
  *
  */
 function addDropdownDialects() {
-  document.querySelector(`#${DIALECTS_ID} .${dropdown.CLS.DROPPABLE}`).append(
-    ...Object.values(d.DIALECTS).map((dialect) => {
+  document.querySelector(`#${ID.DIALECTS} .${drop.CLS.DROPPABLE}`).append(
+    ...Object.values(dial.DIALECTS).map((dialect) => {
       const label = document.createElement('label');
       label.append(dialect.checkbox(), ...dialect.title());
       return label;
@@ -245,11 +245,11 @@ function addDropdownDialects() {
  *
  */
 function addListDialects() {
-  document.querySelector(`#${DIALECTS_ID} #${CHECKBOXES_ID}`).append(
-    ...Object.values(d.DIALECTS).map((dialect) => {
+  document.querySelector(`#${ID.DIALECTS} #${ID.CHECKBOXES}`).append(
+    ...Object.values(dial.DIALECTS).map((dialect) => {
       const label = document.createElement('label');
       label.append(dialect.checkbox(), dialect.siglum());
-      dropdown.addDroppable(label, 'hover', ...dialect.anchoredName());
+      drop.addDroppable(label, 'hover', ...dialect.anchoredName());
       return label;
     })
   );
@@ -277,13 +277,13 @@ async function main() {
   // We also have a second dialect list outside the dropdown (intended to be
   // shown on large screens).
   addListDialects();
-  const manager = new d.Manager();
+  const manager = new dial.Manager();
   const dropDialects = document.querySelectorAll(
-    `#${DIALECTS_ID} .${dropdown.CLS.DROP}`
+    `#${ID.DIALECTS} .${drop.CLS.DROP}`
   );
   // Validate dropdown dialects, regardless of whether or not we end up using
   // them.
-  logger.ensure(dropDialects.length === 1);
+  log.ensure(dropDialects.length === 1);
   if (manager.setToDefaultIfUnset()) {
     // In order to alert the user to the fact that dialect selection has
     // changed, we make sure the dialect list is visible.
@@ -292,10 +292,10 @@ async function main() {
     // initialization.
     dropDialects[0]?.click();
   }
-  const highlighter = new highlight.Highlighter(
+  const highlighter = new high.Highlighter(
     manager,
     // Retrieve the boxes created above.
-    Array.from(document.querySelectorAll(`#${DIALECTS_ID} input`))
+    Array.from(document.querySelectorAll(`#${ID.DIALECTS} input`))
   );
   SearchResult.init(manager, highlighter);
   // Initialize searchers.
@@ -310,29 +310,32 @@ async function main() {
   // While this is not currently a problem, it remains undesirable.
   // Deduplicate these actions, somehow.
   await Promise.all(
-    XOOXLES.map(async (xoox) => {
-      const json = await fetch(xoox.indexURL).then((raw) => raw.json());
-      const form = new xooxle.Form({
-        searchBoxID: SEARCH_BOX_ID,
-        fullWordCheckboxID: FULL_WORD_CHECKBOX_ID,
-        regexCheckboxID: REGEX_CHECKBOX_ID,
-        messageBoxID: MESSAGE_BOX_ID,
-        resultsTableID: xoox.tableID,
-        collapsibleID: xoox.collapsibleID,
-        formID: FORM_ID,
+    XOOXLES.map(async (xooxle) => {
+      const json = await fetch(xooxle.indexURL).then((raw) => raw.json());
+      const form = new xoox.Form({
+        searchBoxID: ID.SEARCH_BOX,
+        fullWordCheckboxID: ID.FULL_WORD_CHECKBOX,
+        regexCheckboxID: ID.REGEX_CHECKBOX,
+        // TODO: (#0) The message box gets written. Since multiple Xooxle
+        // instances are allowed to coexist on the same page, we should create
+        // several boxes, otherwise they could override each other!
+        messageBoxID: ID.MESSAGE_BOX,
+        resultsTableID: xooxle.tableID,
+        collapsibleID: xooxle.collapsibleID,
+        formID: ID.FORM,
       });
-      new xooxle.Xooxle(json, form, xoox.searchResultType);
+      new xoox.Xooxle(json, form, xooxle.searchResultType);
     })
   );
   // Add event listeners for collapsibles.
-  collapse.addEventListenersForSiblings(true);
+  coll.addEventListenersForSiblings(true);
   // Add event listeners for tooltips.
-  dropdown.addEventListeners('hover');
-  dropdown.addEventListeners('click');
+  drop.addEventListeners('hover');
+  drop.addEventListeners('click');
   // Create the help panel.
-  help.makeHelpPanel(highlighter);
+  help.makeHelpPanel(highlighter, new high.DevHighlighter());
   // Add event listener for reports.
   // TODO: (#203) This belongs in the (future) header module.
-  document.getElementById(REPORTS_ID).addEventListener('click', header.reports);
+  document.getElementById(ID.REPORTS).addEventListener('click', head.reports);
 }
 await main();

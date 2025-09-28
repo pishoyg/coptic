@@ -1,8 +1,8 @@
 /** Package xooxle defines the Xooxle engine core logic. */
 /* eslint-disable max-lines */
-import * as collapse from './collapse.js';
+import * as coll from './collapse.js';
 import * as browser from './browser.js';
-import * as logger from './logger.js';
+import * as log from './logger.js';
 import * as orth from './orth.js';
 import * as dev from './dev.js';
 import * as cls from './cls.js';
@@ -122,7 +122,7 @@ export class Form {
     this.tbody = document
       .getElementById(form.resultsTableID)
       .querySelector('tbody');
-    this.collapsible = new collapse.Collapsible(
+    this.collapsible = new coll.Collapsible(
       document.getElementById(form.collapsibleID)
     );
     if (form.formID) {
@@ -204,17 +204,17 @@ export class Form {
   /**
    * @param listener
    */
-  addCheckboxClickListener(listener) {
-    this.fullWordCheckbox.addEventListener('click', listener);
-    this.regexCheckbox.addEventListener('click', listener);
+  addSearchBoxKeyListener(listener) {
+    this.searchBox.addEventListener('keyup', listener);
+    this.searchBox.addEventListener('keydown', listener);
+    this.searchBox.addEventListener('keypress', listener);
   }
   /**
    * @param listener
    */
-  addCheckboxKeyListener(listener) {
-    this.searchBox.addEventListener('keyup', listener);
-    this.searchBox.addEventListener('keydown', listener);
-    this.searchBox.addEventListener('keypress', listener);
+  addCheckboxClickListener(listener) {
+    this.fullWordCheckbox.addEventListener('click', listener);
+    this.regexCheckbox.addEventListener('click', listener);
   }
   /**
    * @returns The query expression, constructed from the input fields.
@@ -783,7 +783,7 @@ class HTMLBuilder {
    */
   openMatch() {
     if (this.open) {
-      logger.error('Warning: The match is already open!');
+      log.error('Warning: The match is already open!');
     }
     this.open = true;
     if (
@@ -801,7 +801,7 @@ class HTMLBuilder {
    */
   closeMatch() {
     if (this.closed) {
-      logger.error('Warning: The match is already closed!');
+      log.error('Warning: The match is already closed!');
     }
     this.open = false;
     if (this.builder[this.builder.length - 1] === HTMLBuilder.OPENING) {
@@ -1026,7 +1026,7 @@ export class Xooxle {
     this.form.addCheckboxClickListener(this.search.bind(this, 0));
     // Prevent other elements in the page from picking up key events on the
     // search box.
-    this.form.addCheckboxKeyListener(browser.stopPropagation);
+    this.form.addSearchBoxKeyListener(browser.stopPropagation);
   }
   /**
    * Handle the search query, debouncing with the given timeout.
@@ -1087,7 +1087,7 @@ export class Xooxle {
       // eslint-disable-next-line no-magic-numbers
       String.fromCharCode(97 + Math.floor(Math.random() * 26))
     ).join('')}`;
-    logger.time(name);
+    log.time(name);
     // bucketSentinels is a set of hidden table rows that represent sentinels
     // (anchors / break points) in the results table.
     //
@@ -1136,7 +1136,7 @@ export class Xooxle {
       if (count % RESULTS_TO_UPDATE_DISPLAY === RESULTS_TO_UPDATE_DISPLAY - 1) {
         if (count <= RESULTS_TO_UPDATE_DISPLAY) {
           // This is the first display update. Log time.
-          logger.timeEnd(name);
+          log.timeEnd(name);
         }
         // Expand the results table to accommodate the recently added results.
         this.form.expand();

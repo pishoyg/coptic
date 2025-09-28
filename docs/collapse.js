@@ -1,5 +1,5 @@
 /** Package collapse defines logic to control collapsible elements. */
-import * as logger from './logger.js';
+import * as log from './logger.js';
 var CLS;
 (function (CLS) {
   // COLLAPSE is the class of elements that, when clicked, trigger a collapse
@@ -111,7 +111,7 @@ export class Collapsible {
 export function addEventListenersForSiblings(toggleUponLoad = false) {
   document.querySelectorAll(`.${CLS.COLLAPSE}`).forEach((collapse) => {
     const collapsible = collapse.nextElementSibling;
-    logger.ensure(
+    log.ensure(
       collapsible.classList.contains(CLS.COLLAPSIBLE),
       'A .collapse must be followed by a .collapsible!'
     );

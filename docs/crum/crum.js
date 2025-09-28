@@ -7,11 +7,11 @@ import * as html from '../html.js';
 import * as scan from '../scan.js';
 import * as paths from '../paths.js';
 import * as css from '../css.js';
-import * as d from './dialect.js';
+import * as dial from './dialect.js';
 import * as cls from './cls.js';
 import * as ccls from '../cls.js';
-import * as header from '../header.js';
-import * as logger from '../logger.js';
+import * as head from '../header.js';
+import * as log from '../logger.js';
 import * as wiki from './wiki.js';
 import * as drop from '../dropdown.js';
 const COPTIC_RE = /[\p{Script=Coptic}][\p{Script=Coptic}\p{Mark}]*/gu;
@@ -21,8 +21,9 @@ const ENGLISH_RE = /[\p{Script=Latin}][\p{Script=Latin}\p{Mark}]*/gu;
  * Handle all Crum elements.
  * @param root
  * @param highlighter
+ * @param devHighlighter
  */
-export function handle(root, highlighter) {
+export function handle(root, highlighter, devHighlighter) {
   handleCategories(root);
   handleRootType(root);
   handleCrumPage(root);
@@ -35,7 +36,7 @@ export function handle(root, highlighter) {
   handleSisterKey(root);
   handleSisterView(root);
   handleDialect(root, highlighter);
-  handleDeveloper(root, highlighter);
+  handleDeveloper(root, devHighlighter);
   insertCrumAbbreviationsLink();
   handleAnkiNavigation(root);
   addCopticLookups(root);
@@ -216,7 +217,7 @@ export function handleSisterView(root) {
       table.querySelectorAll('tr').forEach((tr) => {
         const td = tr.querySelector(`.${cls.SISTER_VIEW}`);
         if (!td) {
-          logger.error(
+          log.error(
             'A row in the sisters table does not have a "sister-view" element!'
           );
           return;
@@ -236,7 +237,7 @@ export function handleSisterView(root) {
 export function handleDialect(root, highlighter) {
   root.querySelectorAll(`.${cls.DIALECT}`).forEach((el) => {
     const code = el.textContent.trim();
-    const dialect = d.DIALECTS[code];
+    const dialect = dial.DIALECTS[code];
     // Prettify the appearance of the dialect code.
     const siglum = dialect.siglum();
     el.replaceChildren(siglum);
@@ -260,9 +261,9 @@ export function handleDialect(root, highlighter) {
  * @param highlighter
  */
 export function handleDeveloper(root, highlighter) {
-  root.querySelectorAll(`.${header.CLS.DEVELOPER}`).forEach((el) => {
+  root.querySelectorAll(`.${head.CLS.DEVELOPER}`).forEach((el) => {
     el.classList.add(ccls.LINK);
-    el.addEventListener('click', highlighter.toggleDev.bind(highlighter));
+    el.addEventListener('click', highlighter.toggle.bind(highlighter));
   });
 }
 /**
@@ -285,7 +286,7 @@ export function handleAnkiNavigation(root) {
   if (!iam.amI('anki')) return;
   root.querySelectorAll(`.${cls.NAVIGATE}`).forEach((e) => {
     if (e.tagName !== 'A' || !e.hasAttribute('href')) {
-      logger.error(
+      log.error(
         'This "navigate" element is not an <a> tag with an "href" property!',
         e
       );

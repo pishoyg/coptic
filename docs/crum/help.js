@@ -6,21 +6,22 @@
  */
 import * as help from '../help.js';
 import * as browser from '../browser.js';
-import * as d from './dialect.js';
+import * as dial from './dialect.js';
 import * as paths from '../paths.js';
 import * as css from '../css.js';
 import * as dev from '../dev.js';
 import * as cls from './cls.js';
-import * as header from '../header.js';
+import * as head from '../header.js';
 /**
  *
  * @param highlighter
+ * @param devHighlighter
  * @returns
  */
 // eslint-disable-next-line max-lines-per-function
-export function makeHelpPanel(highlighter) {
+export function makeHelpPanel(highlighter, devHighlighter) {
   const panel = new help.Help();
-  const dialectHighlighting = Object.values(d.DIALECTS).reduce(
+  const dialectHighlighting = Object.values(dial.DIALECTS).reduce(
     (acc, dialect) => {
       acc[dialect.key] = [highlighter.shortcut(dialect)];
       return acc;
@@ -39,7 +40,7 @@ export function makeHelpPanel(highlighter) {
       new help.Shortcut(
         'Developer mode',
         ['lexicon', 'note', 'index', 'index_index'],
-        highlighter.toggleDev.bind(highlighter)
+        devHighlighter.toggle.bind(devHighlighter)
       ),
     ],
     R: [
@@ -50,7 +51,7 @@ export function makeHelpPanel(highlighter) {
       new help.Shortcut(
         'File a Report',
         ['lexicon', 'note', 'index', 'index_index'],
-        header.reports
+        head.reports
       ),
     ],
     H: [
@@ -75,19 +76,7 @@ export function makeHelpPanel(highlighter) {
       new help.Shortcut(
         'Toggle help panel',
         ['lexicon', 'note', 'index', 'index_index'],
-        () => {
-          panel.togglePanel();
-        }
-      ),
-    ],
-    Escape: [
-      new help.Shortcut(
-        'Toggle help panel',
-        ['lexicon', 'note', 'index', 'index_index'],
-        () => {
-          panel.togglePanel(false);
-        },
-        false
+        panel.toggle.bind(panel)
       ),
     ],
     o: [
@@ -96,7 +85,7 @@ export function makeHelpPanel(highlighter) {
         ['lexicon', 'note', 'index'],
         () => {
           let el = browser.findNextElement(
-            css.classQuery('view' /* xooxle.CLS.VIEW */, cls.SISTER_VIEW),
+            css.classQuery('view' /* xoox.CLS.VIEW */, cls.SISTER_VIEW),
             'cur'
           );
           // If the element has an anchor, click that. Otherwise, the element
@@ -114,7 +103,7 @@ export function makeHelpPanel(highlighter) {
         () => {
           const text = browser
             .findNextElement(
-              `.${'view' /* xooxle.CLS.VIEW */} .${dev.CLS.DEV}, .${cls.SISTER_KEY}, .${cls.DRV_KEY}`,
+              `.${'view' /* xoox.CLS.VIEW */} .${dev.CLS.DEV}, .${cls.SISTER_KEY}, .${cls.DRV_KEY}`,
               'cur'
             )
             ?.textContent.trim();
@@ -160,7 +149,7 @@ export function makeHelpPanel(highlighter) {
         () => {
           browser.scrollToNextElement(
             css.classQuery(
-              'view' /* xooxle.CLS.VIEW */,
+              'view' /* xoox.CLS.VIEW */,
               cls.SISTER_VIEW,
               cls.DRV_KEY
             ),
@@ -176,7 +165,7 @@ export function makeHelpPanel(highlighter) {
         () => {
           browser.scrollToNextElement(
             css.classQuery(
-              'view' /* xooxle.CLS.VIEW */,
+              'view' /* xoox.CLS.VIEW */,
               cls.SISTER_VIEW,
               cls.DRV_KEY
             ),

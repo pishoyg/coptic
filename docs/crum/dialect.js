@@ -1,10 +1,10 @@
 /** Package dialect defines Crum dialects. */
 import * as css from '../css.js';
-import * as d from '../dialect.js';
+import * as dial from '../dialect.js';
 const DEFAULT = ['B'];
 /**
  */
-export class Dialect extends d.Dialect {
+export class Dialect extends dial.Dialect {
   dictionaries;
   /**
    * @param code - Recognizable, UI-friendly, dialect code.
@@ -53,7 +53,7 @@ export const DIALECTS = {
   // Coptic. Along with O, they are used in both Crum and KELLIA.
   // B is the only one used in Andreas and copticsite.
   // Border dialects are only used in Crum.
-  S: new Dialect('S', 'Sahidic', ['Crum', 'KELLIA'], d.Article.SAHIDIC),
+  S: new Dialect('S', 'Sahidic', ['Crum', 'KELLIA'], dial.Article.SAHIDIC),
   Sa: new Dialect(
     'Sa',
     'Sahidic with Akhmimic tendency',
@@ -68,15 +68,20 @@ export const DIALECTS = {
     undefined,
     'f'
   ),
-  A: new Dialect('A', 'Akhmimic', ['Crum', 'KELLIA'], d.Article.AKHMIMIC),
-  L: new Dialect('L', 'Lycopolitan', ['Crum', 'KELLIA'], d.Article.LYCOPOLITAN),
+  A: new Dialect('A', 'Akhmimic', ['Crum', 'KELLIA'], dial.Article.AKHMIMIC),
+  L: new Dialect(
+    'L',
+    'Lycopolitan',
+    ['Crum', 'KELLIA'],
+    dial.Article.LYCOPOLITAN
+  ),
   B: new Dialect(
     'B',
     'Bohairic',
     ['Crum', 'KELLIA', 'copticsite'],
-    d.Article.BOHAIRIC
+    dial.Article.BOHAIRIC
   ),
-  F: new Dialect('F', 'Fayyumic', ['Crum', 'KELLIA'], d.Article.FAYYUMIC),
+  F: new Dialect('F', 'Fayyumic', ['Crum', 'KELLIA'], dial.Article.FAYYUMIC),
   Fb: new Dialect(
     'Fb',
     'Fayyumic with Bohairic tendency',
@@ -84,16 +89,31 @@ export const DIALECTS = {
     undefined,
     'b'
   ),
-  O: new Dialect('O', 'Old Coptic', ['Crum', 'KELLIA'], d.Article.OLD_COPTIC),
+  O: new Dialect(
+    'O',
+    'Old Coptic',
+    ['Crum', 'KELLIA'],
+    dial.Article.OLD_COPTIC
+  ),
   // NH is only found in Marcion (part of Crum).
-  NH: new Dialect('NH', 'Nag Hammadi', ['Crum'], d.Article.NAG_HAMMADI, 'N'),
+  NH: new Dialect('NH', 'Nag Hammadi', ['Crum'], dial.Article.NAG_HAMMADI, 'N'),
   // The following dialects are only found in KELLIA (TLA).
   // M is a major Coptic dialect that is regrettably unrepresented in Crum. He
   // preceded its discovery.
-  M: new Dialect('M', 'Mesokemic', ['KELLIA'], d.Article.MESOKEMIC),
-  P: new Dialect('P', 'Proto-Theban', ['KELLIA'], d.Article.PROTO_THEBAN),
-  V: new Dialect('V', 'South Fayyumic Greek', ['KELLIA'], d.Article.DIALECTS),
-  W: new Dialect('W', 'Crypto-Mesokemic Greek', ['KELLIA'], d.Article.DIALECTS),
+  M: new Dialect('M', 'Mesokemic', ['KELLIA'], dial.Article.MESOKEMIC),
+  P: new Dialect('P', 'Proto-Theban', ['KELLIA'], dial.Article.PROTO_THEBAN),
+  V: new Dialect(
+    'V',
+    'South Fayyumic Greek',
+    ['KELLIA'],
+    dial.Article.DIALECTS
+  ),
+  W: new Dialect(
+    'W',
+    'Crypto-Mesokemic Greek',
+    ['KELLIA'],
+    dial.Article.DIALECTS
+  ),
   // Greek (usage unclear) is only used in KELLIA (TLA).
   U: new Dialect('U', 'Greek (usage unclear)', ['KELLIA']),
 };
@@ -101,7 +121,7 @@ export const ANY_DIALECT_QUERY = css.classQuery(...Object.keys(DIALECTS));
 /**
  *
  */
-export class Manager extends d.Manager {
+export class Manager extends dial.Manager {
   /**
    *
    */
