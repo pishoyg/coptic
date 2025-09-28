@@ -11,9 +11,9 @@
 # For the time being, we have paid more attention to categorizing nouns in
 # particular.
 # It is generally acceptable for some words to belong to several categories,
-# though our categories should be selected such that such cases are uncommon.
-# As much as possible, aim to provide very precise definitions of each category,
-# to minimize uncertainty during the labeling process.
+# though our categories should be selected such that such cases are uncommon. As
+# much as possible, aim to provide very precise definitions of each category, to
+# minimize uncertainty during the labeling process.
 
 Biology:
   species: >
@@ -34,7 +34,8 @@ Biology:
     categories. Includes diseases and life functions (breathe, eat).
 
 "Physics & Chemistry":
-  # Food substances (milk, wine, oil, flesh, honey, ...) should be marked as "food" (and/or "anatomy" where appropriate).
+  # Food substances (milk, wine, oil, flesh, honey, ...) should be marked as
+  # "food" (and/or "anatomy" where appropriate).
   substance: >
     Includes elements and compounds, as well as more generic substances
     like stone, water, and dirt.
@@ -55,13 +56,13 @@ Biology:
     energy, light, heat).
 
 "Man-made":
-  # Some nouns (such as canal) can be either natural or man-made. In this
-  # case, it can be included in both the "geography" and "construction" categories.
+  # Some nouns (such as canal) can be either natural or man-made. In this case,
+  # it can be included in both the "geography" and "construction" categories.
   construction: >
     Includes man-made objects fixed at a given location, such
     as cities and constructed structures.
-  # Non-movable storage objects (such as cistern or treasure house) belong
-  # to the "construction" category.
+  # Non-movable storage objects (such as cistern or treasure house) belong to
+  # the "construction" category.
   container: >
     Includes storage objects like pots, jars, dishes, boxes, chests,
     and baskets. Any movable storage object belongs in this category.
