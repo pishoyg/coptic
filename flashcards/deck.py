@@ -244,7 +244,7 @@ class IndexIndex:
         file.writelines(html, path, report=False)
 
     def __body_aux(self) -> abc.Generator[str]:
-        yield f"<h1>{self.name}</h2>"
+        yield f"<h1>{self.name}</h1>"
         yield '<ol class="index-index-list">'
         for index in self.indexes:
             yield '<li class="index-view">'

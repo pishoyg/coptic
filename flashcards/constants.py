@@ -214,7 +214,7 @@ class CrumIndexer(Mother):
         index_name: str,
         keys: list[str],
     ) -> abc.Generator[str]:
-        yield f"<h1>{index_name}</h2>"
+        yield f"<h1>{index_name}</h1>"
         yield '<table class="index-table">'
         for key in keys:
             sister = self.with_frag(self.key_to_sister[key], "")
