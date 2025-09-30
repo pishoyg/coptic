@@ -3,7 +3,13 @@
 # TODO: (#399) Define add_image and rm_image methods on `Root`, and update the
 # object every time the content of the directories changes. This way, you can
 # maintain an up-to-date view throughout the program execution.
-# TODO: (#399) Same as above, for sisters.
+# TODO: (#399) Same as above, for relations! The problem is that image and
+# relation helpers, defined in img_helper.py and appendices_helper.py, have a
+# prompt mode where they repeatedly receive command and update the dataset
+# accordingly. If they update the source without updating the in-memory copy of
+# the data, the discrepancy may cause issues. We can solve the problem by
+# having the script update the in-memory view as well. Alternatively, just get
+# rid of the prompt mode for relations.
 
 import collections
 import functools
