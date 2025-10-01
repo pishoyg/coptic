@@ -307,6 +307,12 @@ async function main(): Promise<void> {
 
   const manager: dial.Manager = new dial.Manager();
 
+  // Add event listeners for collapsibles.
+  coll.addEventListenersForSiblings(true);
+  // Add event listeners for tooltips.
+  drop.addEventListeners('hover');
+  drop.addEventListeners('click');
+
   const dropDialects: NodeListOf<HTMLElement> =
     document.querySelectorAll<HTMLElement>(`#${ID.DIALECTS} .${drop.CLS.DROP}`);
   // Validate dropdown dialects, regardless of whether or not we end up using
@@ -318,6 +324,8 @@ async function main(): Promise<void> {
     // NOTE: This step should precede the construction of the highlighter, so
     // that the selected dialects will be visible to the highlighter during its
     // initialization.
+    // It should also follow registration of event listeners, so that clicking
+    // on the button will actually show the dialects.
     dropDialects[0]?.click();
   }
 
@@ -361,12 +369,6 @@ async function main(): Promise<void> {
       new xoox.Xooxle(json, form, xooxle.searchResultType);
     })
   );
-
-  // Add event listeners for collapsibles.
-  coll.addEventListenersForSiblings(true);
-  // Add event listeners for tooltips.
-  drop.addEventListeners('hover');
-  drop.addEventListeners('click');
 
   // Create the help panel.
   help.makeHelpPanel(highlighter, new high.DevHighlighter());
