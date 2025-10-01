@@ -168,7 +168,7 @@ def _parse_reference(line: str) -> abc.Generator[lex.Reference]:
         assert reference[0] == "(" and reference[-1] == ")", reference
         reference = reference[1:-1]
         parts: list[str] = list(map(str.strip, reference.split(";")))
-        assert 6 <= len(parts) <= 7
+        assert len(parts) in [1, 6, 7]
         yield lex.Reference(parts)
 
 
