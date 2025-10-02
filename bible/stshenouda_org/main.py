@@ -641,8 +641,12 @@ class HTMLBuilder:
 
         assert not is_epub
         # For HTML, we list the testaments, sections, books, and chapters.
+        prev: bool = False
         for testament in bible.testaments:
             for section in testament.sections:
+                if prev:
+                    yield page.HORIZONTAL_RULE
+                prev = True
                 for book in section.books:
                     yield f'<h4 class="collapse index-book-name" \
                             id="{book.id()}">'
