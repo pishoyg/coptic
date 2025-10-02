@@ -122,14 +122,13 @@ export const ANNOTATION_RES: RegExp[] = [
 //     a "number". The "number", on the other hand, could be:
 //     - A sequence of digits, optionally preceded by an apostrophe.
 //     - A single Latin letter.
-//     - Oftentimes, the "number" is ‘ar’ or ‘Ar’ for ‘Arabic’.
 //     This was constructed based on manual observation, and could change in the
 //     future.
 //     This implies that references and suffixes could look similar. A single
 //     uppercase Latin letter could be a reference abbreviation or a suffix. We
 //     assume that, if it occurs after a reference abbreviation, then it's
 //     likely a suffix.
-const SUFFIX = /((?:\s(?:'?[0-9]+|[a-zA-Z]|ar|Ar)\b)*)/u;
+const SUFFIX = /((?:\s(?:'?[0-9]+|[a-zA-Z])\b)*)/u;
 const LETTER = /[a-zA-Z\p{M}&]/u;
 const SPECIAL_CASES: string[] = [
   'lgR', // This starts with a small letter.
