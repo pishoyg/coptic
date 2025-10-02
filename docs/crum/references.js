@@ -1,4 +1,5 @@
 /* eslint-disable max-lines */
+import * as logger from '../logger.js';
 /**
  *
  */
@@ -86,6 +87,7 @@ export const MAPPING = {
     title: 'E. Amélineau, Œuvres de Schenoudi, 1907 ff',
     innerHTML:
       '<ul class="wp-block-list"> <li class="has-medium-font-size">Amélineau, E. (1907). <em><a href="https://archive.org/details/oeuvresdeschenou01shen/page/n5/mode/2up" rel="noreferrer noopener" target="_blank">Œuvres de Schenoudi: texte copte et traduction française</a></em>. Tome 1. Paris: E. Leroux.</li> <li class="has-medium-font-size">Amélineau, E. (1914). <em><a href="https://archive.org/details/oeuvresdeschenou02shen/page/n7/mode/2up" rel="noreferrer noopener" target="_blank">Œuvres de Schenoudi: texte copte et traduction française</a></em>. Tome 2. Paris: E. Leroux.</li></ul>',
+    variant: 'ShAm',
   },
   Absal: {
     title:
@@ -1112,8 +1114,6 @@ export const MAPPING = {
     // as a variant to simplify the pipeline.
     variant: 'Besa',
     postfixes: [
-      'A',
-      'Am',
       'BM',
       'BMOr',
       'BerlOr',
@@ -1339,27 +1339,40 @@ export const MAPPING = {
       '<ul class="wp-block-list has-medium-font-size"> <li> <em>Zeitschrift für die neutestamentliche Wissenschaft und die Kunde der älteren Kirche</em> began in 1900. Early digitised volumes are linked on <a href="https://de.wikisource.org/wiki/Zeitschriften_(Theologie)#Z" rel="noreferrer noopener" target="_blank">de.WikiSource.org</a>. Further volumes available <a href="https://catalog.hathitrust.org/Record/000494825?type%5B%5D=all&amp;lookfor%5B%5D=Zeitschrift%20f%C3%BCr%20die%20neutestamentliche%20Wissenschaft%20und%20die%20Kunde%20der%20%C3%A4lteren%20Kirche&amp;ft=#viewability" rel="noreferrer noopener" target="_blank">HathiTrust</a> (via US access only). </li></ul>',
   },
 };
+/**
+ * Add the given source to the mapping.
+ * @param key
+ * @param source
+ */
+function add(key, source) {
+  logger.ensure(MAPPING[key] === undefined, 'duplicate key:', key);
+  MAPPING[key] = source;
+}
 // Add all the variants to the map.
 Object.entries(MAPPING).forEach(([key, source]) => {
   const abbreviations = [key];
   if (source.variant) {
     // Add an entry for the variant variant.
-    MAPPING[source.variant] = source;
+    add(source.variant, source);
     abbreviations.push(source.variant);
   }
   source.postfixes?.forEach((postfix) => {
     abbreviations.forEach((abb) => {
-      MAPPING[`${abb} ${postfix}`] = source;
+      add(`${abb} ${postfix}`, source);
     });
   });
 });
 // Add keys with spaces removed.
-Object.entries(MAPPING).forEach(([key, value]) => {
+Object.entries(MAPPING).forEach(([key, source]) => {
   if (/^[a-zA-Z]+ [0-9]+$/.test(key)) {
     // Abbreviations that have a number as the second part never occur without
     // that space in the middle.
     return;
   }
-  MAPPING[key.replaceAll(' ', '')] = value;
+  if (!key.includes(' ')) {
+    // This key has no spaces.
+    return;
+  }
+  add(key.replaceAll(' ', ''), source);
 });
 /* eslint-enable max-lines */
