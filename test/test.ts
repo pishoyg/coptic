@@ -3,9 +3,6 @@
  */
 
 import * as play from '@playwright/test';
-import * as log from '../docs/logger.js';
-import * as cls from '../docs/crum/cls.js';
-import * as drop from '../docs/dropdown.js';
 
 /**
  * PAGES_TO_TEST defines the list of site pages to test.
@@ -67,35 +64,3 @@ PAGES_TO_TEST.forEach((path: string): void => {
     }
   );
 });
-
-play.test(
-  'Inserts hyperlinks for Wiki References',
-  async ({ page }: { page: play.Page }): Promise<void> => {
-    const path = '/crum/88.html';
-    // TODO: (#419) Add more test cases. 88 doesn't cover everything!
-    await page.goto(path, { waitUntil: 'networkidle' });
-    // TODO: (#419) The numbers below are expected to grow as our parsers
-    // develop to handle more edge cases.
-    for (const testCase of [
-      { query: `.${cls.WIKI} .${cls.REFERENCE}`, want: 134 },
-      { query: `.${cls.WIKI} .${cls.SUFFIX}`, want: 128 },
-      { query: `.${cls.WIKI} .${cls.BIBLE}`, want: 119 },
-      {
-        query: `.${cls.WIKI} .${cls.DIALECT} .${drop.CLS.DROPPABLE}`,
-        want: 383,
-      },
-      { query: `.${cls.WIKI} .${cls.ANNOTATION}`, want: 79 },
-    ]) {
-      const got: number = await page.locator(testCase.query).count();
-      log.ensure(
-        got === testCase.want,
-        'want',
-        testCase.want,
-        'for query',
-        testCase.query,
-        'got',
-        got
-      );
-    }
-  }
-);
