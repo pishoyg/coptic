@@ -70,7 +70,8 @@ export const MAPPING: Record<string, Source> = {
   },
   Absal: {
     title:
-      'Kitâb al-Abṣâlmudîyah al-Muḳaddasah al-Sanawîyah (Theotokia), Alexandria, 1908', // NOTE: CaiThe occurs as a standalone abbreviation in Crum, but we treat it
+      'Kitâb al-Abṣâlmudîyah al-Muḳaddasah al-Sanawîyah (Theotokia), Alexandria, 1908',
+    // NOTE: CaiThe occurs as a standalone abbreviation in Crum, but we treat it
     // as a variant to simplify the pipeline.
     variant: 'CaiThe',
     innerHTML:
@@ -831,7 +832,8 @@ export const MAPPING: Record<string, Source> = {
   'Orat Cyp': {
     // NOTE: Listed as 'OratCyp'!
     title:
-      'Oratio Cypriani in Veröffentl. a. d. badischen Papyrussamml., Heft 5, 1934, p. 305 ff', // NOTE: PBad occurs as a standalone abbreviation in Crum, but we treat it
+      'Oratio Cypriani in Veröffentl. a. d. badischen Papyrussamml., Heft 5, 1934, p. 305 ff',
+    // NOTE: PBad occurs as a standalone abbreviation in Crum, but we treat it
     // as a variant to simplify the pipeline.
     variant: 'PBad',
     innerHTML:
@@ -1083,7 +1085,8 @@ export const MAPPING: Record<string, Source> = {
   },
   Sh: {
     title:
-      'works of Shenoute (& of his disciple Besa). Prefixed to all quotations from their writings (doubtfully to Mor 54)', // NOTE: Besa occurs as a standalone abbreviation in Crum, but we treat it
+      'works of Shenoute (& of his disciple Besa). Prefixed to all quotations from their writings (doubtfully to Mor 54)',
+    // NOTE: Besa occurs as a standalone abbreviation in Crum, but we treat it
     // as a variant to simplify the pipeline.
     variant: 'Besa',
   },
