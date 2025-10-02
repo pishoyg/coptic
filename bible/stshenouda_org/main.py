@@ -20,11 +20,11 @@ from utils import concur, ensure, file, log, page, paths
 # Input parameters
 
 _SCRIPT_DIR = pathlib.Path(__file__).parent
-_JSON: str = str(_SCRIPT_DIR / "data/input/bible.json")
-_INPUT_DIR: str = str(_SCRIPT_DIR / "data/raw/")
+_JSON: pathlib.Path = _SCRIPT_DIR / "data/input/bible.json"
+_INPUT_DIR: pathlib.Path = _SCRIPT_DIR / "data/raw/"
 # TODO: (#432) Include the sources in the output.
-_SOURCES_DIR: str = str(_SCRIPT_DIR / "data/raw/Sources/")  # dead: disable
-_COVER: str = str(_SCRIPT_DIR / "data/img/stauros.jpeg")
+_SOURCES_DIR: pathlib.Path = _SCRIPT_DIR / "data/raw/Sources/"  # dead: disable
+_COVER: pathlib.Path = _SCRIPT_DIR / "data/img/stauros.jpeg"
 
 Language: typing.TypeAlias = typing.Literal[
     "Bohairic",
@@ -57,7 +57,7 @@ _VERSE_PREFIX: re.Pattern[str] = re.compile(r"^\(([^)]+)\)")
 
 # NOTE: The Bible directory structure is flat, so "index.html" is reachable
 # from an `href` to `./`, regardless of which file you're looking at.
-_SEARCH = "./"
+_SEARCH: str = "./"
 _CHAPTER_JS: str = "main.js"  # JavaScript for a chapter.
 _INDEX_JS: str = "bible.js"  # JavaScript for the index.
 _CHAPTER_CSS: str = "style.css"  # CSS for a chapter.
@@ -66,13 +66,13 @@ for artifact in [_CHAPTER_JS, _INDEX_JS, _CHAPTER_CSS, _INDEX_CSS]:
     assert (paths.BIBLE_DIR / artifact).is_file()
 
 
-_INDEX = "index.html"
-_CHAPTER_CLASS = "chapter"
-_INDEX_CLASS = "bible"
+_INDEX: str = "index.html"
+_CHAPTER_CLASS: str = "chapter"
+_INDEX_CLASS: str = "bible"
 
 _BOOK_TITLE: str = "ⲡⲓϪⲱⲙ ⲉⲑⲞⲩⲁⲃ | Coptic Bible"
-_AUTHOR = "Saint Shenouda The Archimandrite Coptic Society"
-_LANG = "cop"
+_AUTHOR: str = "Saint Shenouda The Archimandrite Coptic Society"
+_LANG: str = "cop"
 
 # The Jinkim is represented by the Combining Overline, not the Combining
 # Conjoining Msacron.
@@ -263,12 +263,14 @@ class Item:
         raise NotImplementedError()
 
     def path(self, is_epub: bool) -> str:
-        ext = "xhtml" if is_epub else "html"
+        ext: str = "xhtml" if is_epub else "html"
         return f"{self.id()}.{ext}"
 
+    @typing.final
     def anchor(self, is_epub: bool) -> str:
         return f'<a href="{self.href(is_epub)}">{self.short_title()}</a>'
 
+    @typing.final
     def to_id(self, name: str) -> str:
         return name.lower().replace(" ", "_").replace(".", "_")
 
