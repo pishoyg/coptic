@@ -249,7 +249,7 @@ class Item:
     def title(self) -> str:
         raise NotImplementedError()
 
-    # NOTE: The `href` method makes a lot of assumption about how the output is
+    # NOTE: The `href` method makes a lot of assumptions about how the output is
     # structured (for example, which objects are written as files, and which are
     # sections within the same file). If the output structure were to change, it
     # needs to be revisited.
@@ -259,7 +259,7 @@ class Item:
     def short_title(self) -> str:
         raise NotImplementedError()
 
-    def header(self) -> str:
+    def header(self) -> abc.Generator[str]:
         raise NotImplementedError()
 
     def path(self, is_epub: bool) -> str:
@@ -276,7 +276,7 @@ class Item:
 class Chapter(Item):
     """A Bible chapter."""
 
-    def __init__(self, data: schema.Chapter, book: typing.Any) -> None:
+    def __init__(self, data: schema.Chapter, book: "Book") -> None:
         self.num: str = self._num(data)
         self.verses: list[Verse] = [
             Verse(v, i == 0) for i, v in enumerate(data["data"])
@@ -366,23 +366,17 @@ class Chapter(Item):
         log.fatal("We don't write EPUB chapters to files!")
 
     @typing.override
-    def header(self) -> str:
-        return f'<h4 class="title" id="{self.id()}">{self.title()}</h4>'
+    def header(self) -> abc.Generator[str]:
+        yield f'<h4 class="title" id="{self.id()}">'
+        yield self.title()
+        yield "</h4>"
 
 
 class Book(Item):
     """A Bible book."""
 
-    def __init__(
-        self,
-        name: str,
-        testament_name: str,
-        section_name: str,
-        crum: list[str],
-    ) -> None:
+    def __init__(self, name: str, crum: list[str]) -> None:
         self.name: str = name
-        self.testament_name: str = testament_name
-        self.section_name: str = section_name
         self.crum: list[str] = crum
 
         data: list[schema.Chapter] = self._load(self.name)
@@ -430,18 +424,69 @@ class Book(Item):
         log.fatal("We don't write HTML books to files!")
 
     @typing.override
-    def header(self) -> str:
-        return f'<h3 id="{self.id()}">{self.title()}</h3>'
+    def header(self) -> abc.Generator[str]:
+        yield f'<h3 id="{self.id()}">'
+        yield self.title()
+        yield "</h3>"
+
+
+class Section(Item):
+    """A section of a testament."""
+
+    def __init__(
+        self,
+        name: str,
+        data: list[dict[str, str | list[str]]],
+    ) -> None:
+        self.name: str = name
+        with concur.thread_pool_executor() as executor:
+            self.books: list[Book] = list(
+                executor.map(self.__build_book, data),
+            )
+
+    def __build_book(self, book_data: dict[str, str | list[str]]) -> Book:
+        """Helper to build a Book object.
+
+        Args:
+            book_data: Book information in raw format as obtained from the JSON.
+
+        Returns:
+            Book object.
+        """
+        name: str | list[str] = book_data["title"]
+        assert isinstance(name, str)
+        crum: str | list[str] = book_data["crum"]
+        assert isinstance(crum, list)
+        return Book(name, crum)
+
+
+class Testament(Item):
+    """A testament of the Bible."""
+
+    def __init__(
+        self,
+        name: str,
+        data: dict[str, list[dict[str, str | list[str]]]],
+    ) -> None:
+        self.name: str = name
+        self.sections: list[Section] = [
+            Section(section_name, section_data)
+            for section_name, section_data in data.items()
+        ]
 
 
 class Bible:
     """The Bible."""
 
     def __init__(self) -> None:
-        with concur.thread_pool_executor() as executor:
-            self.books: list[Book] = list(
-                executor.map(self.__build_book, self.__iter_books()),
+        bible_data: dict[str, dict[str, list[dict[str, str | list[str]]]]] = (
+            json.loads(
+                file.read(_JSON),
             )
+        )
+        self.testaments: list[Testament] = [
+            Testament(name, data) for name, data in bible_data.items()
+        ]
         self.__link_chapters()
         self.__write_crum_map()
 
@@ -458,38 +503,46 @@ class Bible:
         # There are also non-standard citations found throughout the book.
         # Thus, the data in the input file is a super set of the data in Crum's
         # List of Abbreviation.
-        ensure.unique(key for book in self.books for key in book.crum)
+        all_books = [
+            book
+            for testament in self.testaments
+            for section in testament.sections
+            for book in section.books
+        ]
+        ensure.unique(key for book in all_books for key in book.crum)
         mapping: dict[str, dict[str, str | int]] = {
             key: {
                 "name": book.name,
                 "path": book.id(),
                 "numChapters": len(book.chapters),
             }
-            for book in self.books
+            for book in all_books
             for key in book.crum
         }
         # This TypeScript code is needed by our website due to some limitations
         # on reading JSON.
         file.write(
             f"""
-            /** NOTE: This file is generated by the Bible pipeline. Do not
-             * modify it manually!
-             */
+                /** NOTE: This file is generated by the Bible pipeline. Do not
+                 * modify it manually!
+                 */
 
-            /** MAPPING maps a Crum Bible book abbreviation to book information.
-             */
-            export const MAPPING:
-                Record<string, {{
-                    name: string,
-                    path: string,
-                    numChapters: number,
-                }}> = {mapping};""",
+                /** MAPPING maps a Crum Bible book abbreviation to book information.
+                 */
+                export const MAPPING:
+                    Record<string, {{
+                        name: string,
+                        path: string,
+                        numChapters: number,
+                    }}> = {mapping};""",
             paths.LEXICON_DIR / "bible.ts",
         )
 
     def __link_chapters(self) -> None:
         iterator: abc.Iterator[Chapter] = iter(self.chain_chapters())
-        cur: Chapter = next(iterator)
+        cur: Chapter | None = next(iterator, None)
+        if not cur:
+            return
         cur.set_first()
         while True:
             nxt: Chapter | None = next(iterator, None)
@@ -500,26 +553,11 @@ class Bible:
             nxt.set_prev(cur)
             cur = nxt
 
-    def __iter_books(self) -> abc.Generator[dict[str, str | int]]:
-        bible: dict[str, dict[str, list[dict[str, str]]]] = json.loads(
-            file.read(_JSON),
-        )
-        for testament_name, testament in bible.items():
-            for section_name, section in testament.items():
-                for book in section:
-                    yield {
-                        "name": book["title"],
-                        "crum": book["crum"],
-                        "testament_name": testament_name,
-                        "section_name": section_name,
-                    }
-
-    def __build_book(self, kwargs: dict) -> Book:
-        return Book(**kwargs)
-
-    def chain_chapters(self) -> abc.Generator[Chapter]:
-        for book in self.books:
-            yield from book.chapters
+    def chain_chapters(self) -> abc.Generator[Chapter, None, None]:
+        for testament in self.testaments:
+            for section in testament.sections:
+                for book in section.books:
+                    yield from book.chapters
 
 
 class HTMLBuilder:
@@ -550,7 +588,7 @@ class HTMLBuilder:
         langs: list[Language],
     ) -> abc.Generator[str]:
         langs = [lang for lang in langs if chapter.has_lang(lang)]
-        yield chapter.header()
+        yield from chapter.header()
         if not langs:
             return
         yield from self.chapter_begin(chapter)
@@ -574,7 +612,7 @@ class HTMLBuilder:
         assert len(langs) > 0  # We need at least one language.
 
         # Yield the book header.
-        yield book.header()
+        yield from book.header()
 
         # Yield anchors to the chapters.
         for i, chapter in enumerate(book.chapters):
@@ -623,25 +661,37 @@ class HTMLBuilder:
         yield "<h1>"
         yield _BOOK_TITLE
         yield "</h1>"
+
+        all_books = [
+            book
+            for testament in bible.testaments
+            for section in testament.sections
+            for book in section.books
+        ]
+
         if is_epub:
-            # For EPUB, we yield an anchor to each book, and we call it a day.
-            for book in bible.books:
+            # For EPUB, we yield an anchor to each book.
+            for book in all_books:
                 yield "<p>"
                 yield book.anchor(is_epub)
                 yield "</p>"
             return
+
         assert not is_epub
-        # For HTML, we list the books, and anchors to the chapters.
-        for book in bible.books:
-            yield f'<h4 class="collapse index-book-name" id="{book.id()}">'
-            yield book.name
-            yield "</h4>"
-            yield '<div class="collapsible index-book-chapter-list">'
-            for i, chapter in enumerate(book.chapters):
-                if i:
-                    yield " "
-                yield chapter.anchor(is_epub)
-            yield "</div>"
+        # For HTML, we list the testaments, sections, books, and chapters.
+        for testament in bible.testaments:
+            for section in testament.sections:
+                for book in section.books:
+                    yield f'<h4 class="collapse index-book-name" \
+                            id="{book.id()}">'
+                    yield book.name
+                    yield "</h4>"
+                    yield '<div class="collapsible index-book-chapter-list">'
+                    for i, chapter in enumerate(book.chapters):
+                        if i:
+                            yield " "
+                        yield chapter.anchor(is_epub)
+                    yield "</div>"
 
     def write_html(self, bible: Bible, langs: list[Language]) -> None:
         def write_chapter(chapter: Chapter) -> None:
@@ -664,7 +714,6 @@ class HTMLBuilder:
         chapter: Chapter,
         langs: list[Language],
     ) -> None:
-
         nxt: Chapter | None = chapter.next()
         prv: Chapter | None = chapter.prev()
 
@@ -727,7 +776,14 @@ class HTMLBuilder:
 
         spine = [cover, toc]
 
-        for book in bible.books:
+        all_books = [
+            book
+            for testament in bible.testaments
+            for section in testament.sections
+            for book in section.books
+        ]
+
+        for book in all_books:
             c: epub.EpubHtml = epub.EpubHtml(
                 title=book.name,
                 file_name=book.path(is_epub=True),
