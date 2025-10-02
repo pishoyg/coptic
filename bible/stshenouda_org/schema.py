@@ -41,5 +41,14 @@ class Chapter(typing.TypedDict):
     data: list[Verse]
 
 
-Book: typing.TypeAlias = list[Chapter]
+# The types below define the schema of the index.
+class BookInfo(typing.TypedDict):
+    title: str
+    crum: list[str]
+
+
+SectionInfo: typing.TypeAlias = list[BookInfo]
+TestamentInfo: typing.TypeAlias = dict[str, SectionInfo]
+BibleInfo: typing.TypeAlias = dict[str, TestamentInfo]
+
 # pylint: enable=invalid-name

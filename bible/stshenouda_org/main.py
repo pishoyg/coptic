@@ -375,14 +375,14 @@ class Chapter(Item):
 class Book(Item):
     """A Bible book."""
 
-    def __init__(self, name: str, crum: list[str]) -> None:
-        self.name: str = name
-        self.crum: list[str] = crum
+    def __init__(self, book_info: schema.BookInfo) -> None:
+        self.name: str = book_info["title"]
+        self.crum: list[str] = book_info["crum"]
 
         data: list[schema.Chapter] = self._load(self.name)
         self.chapters: list[Chapter] = [Chapter(c, self) for c in data]
 
-    def _load(self, book_name: str) -> schema.Book:
+    def _load(self, book_name: str) -> list[schema.Chapter]:
         try:
             t: str = file.read(os.path.join(_INPUT_DIR, f"{book_name}.json"))
             log.info("Loaded book:", book_name)
@@ -433,41 +433,16 @@ class Book(Item):
 class Section(Item):
     """A section of a testament."""
 
-    def __init__(
-        self,
-        name: str,
-        data: list[dict[str, str | list[str]]],
-    ) -> None:
+    def __init__(self, name: str, data: schema.SectionInfo) -> None:
         self.name: str = name
         with concur.thread_pool_executor() as executor:
-            self.books: list[Book] = list(
-                executor.map(self.__build_book, data),
-            )
-
-    def __build_book(self, book_data: dict[str, str | list[str]]) -> Book:
-        """Helper to build a Book object.
-
-        Args:
-            book_data: Book information in raw format as obtained from the JSON.
-
-        Returns:
-            Book object.
-        """
-        name: str | list[str] = book_data["title"]
-        assert isinstance(name, str)
-        crum: str | list[str] = book_data["crum"]
-        assert isinstance(crum, list)
-        return Book(name, crum)
+            self.books: list[Book] = list(executor.map(Book, data))
 
 
 class Testament(Item):
     """A testament of the Bible."""
 
-    def __init__(
-        self,
-        name: str,
-        data: dict[str, list[dict[str, str | list[str]]]],
-    ) -> None:
+    def __init__(self, name: str, data: schema.TestamentInfo) -> None:
         self.name: str = name
         self.sections: list[Section] = [
             Section(section_name, section_data)
@@ -479,11 +454,8 @@ class Bible:
     """The Bible."""
 
     def __init__(self) -> None:
-        bible_data: dict[str, dict[str, list[dict[str, str | list[str]]]]] = (
-            json.loads(
-                file.read(_JSON),
-            )
-        )
+        bible_data: schema.BibleInfo = json.loads(file.read(_JSON))
+
         self.testaments: list[Testament] = [
             Testament(name, data) for name, data in bible_data.items()
         ]
@@ -503,20 +475,14 @@ class Bible:
         # There are also non-standard citations found throughout the book.
         # Thus, the data in the input file is a super set of the data in Crum's
         # List of Abbreviation.
-        all_books = [
-            book
-            for testament in self.testaments
-            for section in testament.sections
-            for book in section.books
-        ]
-        ensure.unique(key for book in all_books for key in book.crum)
+        ensure.unique(key for book in self.chain_books() for key in book.crum)
         mapping: dict[str, dict[str, str | int]] = {
             key: {
                 "name": book.name,
                 "path": book.id(),
                 "numChapters": len(book.chapters),
             }
-            for book in all_books
+            for book in self.chain_books()
             for key in book.crum
         }
         # This TypeScript code is needed by our website due to some limitations
@@ -553,11 +519,14 @@ class Bible:
             nxt.set_prev(cur)
             cur = nxt
 
-    def chain_chapters(self) -> abc.Generator[Chapter, None, None]:
+    def chain_books(self) -> abc.Generator[Book]:
         for testament in self.testaments:
             for section in testament.sections:
-                for book in section.books:
-                    yield from book.chapters
+                yield from section.books
+
+    def chain_chapters(self) -> abc.Generator[Chapter, None, None]:
+        for book in self.chain_books():
+            yield from book.chapters
 
 
 class HTMLBuilder:
@@ -662,16 +631,9 @@ class HTMLBuilder:
         yield _BOOK_TITLE
         yield "</h1>"
 
-        all_books = [
-            book
-            for testament in bible.testaments
-            for section in testament.sections
-            for book in section.books
-        ]
-
         if is_epub:
             # For EPUB, we yield an anchor to each book.
-            for book in all_books:
+            for book in bible.chain_books():
                 yield "<p>"
                 yield book.anchor(is_epub)
                 yield "</p>"
@@ -776,14 +738,7 @@ class HTMLBuilder:
 
         spine = [cover, toc]
 
-        all_books = [
-            book
-            for testament in bible.testaments
-            for section in testament.sections
-            for book in section.books
-        ]
-
-        for book in all_books:
+        for book in bible.chain_books():
             c: epub.EpubHtml = epub.EpubHtml(
                 title=book.name,
                 file_name=book.path(is_epub=True),
