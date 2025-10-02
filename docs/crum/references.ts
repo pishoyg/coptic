@@ -1,4 +1,5 @@
 /* eslint-disable max-lines */
+import * as logger from '../logger.js';
 
 /**
  *
@@ -79,6 +80,7 @@ export const MAPPING: Record<string, Source> = {
     title: 'E. Amélineau, Œuvres de Schenoudi, 1907 ff',
     innerHTML:
       '<ul class="wp-block-list"> <li class="has-medium-font-size">Amélineau, E. (1907). <em><a href="https://archive.org/details/oeuvresdeschenou01shen/page/n5/mode/2up" rel="noreferrer noopener" target="_blank">Œuvres de Schenoudi: texte copte et traduction française</a></em>. Tome 1. Paris: E. Leroux.</li> <li class="has-medium-font-size">Amélineau, E. (1914). <em><a href="https://archive.org/details/oeuvresdeschenou02shen/page/n7/mode/2up" rel="noreferrer noopener" target="_blank">Œuvres de Schenoudi: texte copte et traduction française</a></em>. Tome 2. Paris: E. Leroux.</li></ul>',
+    variant: 'ShAm',
   },
   Absal: {
     title:
@@ -1105,8 +1107,6 @@ export const MAPPING: Record<string, Source> = {
     // as a variant to simplify the pipeline.
     variant: 'Besa',
     postfixes: [
-      'A',
-      'Am',
       'BM',
       'BMOr',
       'BerlOr',
@@ -1333,30 +1333,44 @@ export const MAPPING: Record<string, Source> = {
   },
 };
 
+/**
+ * Add the given source to the mapping.
+ * @param key
+ * @param source
+ */
+function add(key: string, source: Source): void {
+  logger.ensure(MAPPING[key] === undefined, 'duplicate key:', key);
+  MAPPING[key] = source;
+}
+
 // Add all the variants to the map.
 Object.entries(MAPPING).forEach(([key, source]: [string, Source]): void => {
   const abbreviations: string[] = [key];
   if (source.variant) {
     // Add an entry for the variant variant.
-    MAPPING[source.variant] = source;
+    add(source.variant, source);
     abbreviations.push(source.variant);
   }
 
   source.postfixes?.forEach((postfix: string): void => {
     abbreviations.forEach((abb: string): void => {
-      MAPPING[`${abb} ${postfix}`] = source;
+      add(`${abb} ${postfix}`, source);
     });
   });
 });
 
 // Add keys with spaces removed.
-Object.entries(MAPPING).forEach(([key, value]: [string, Source]): void => {
+Object.entries(MAPPING).forEach(([key, source]: [string, Source]): void => {
   if (/^[a-zA-Z]+ [0-9]+$/.test(key)) {
     // Abbreviations that have a number as the second part never occur without
     // that space in the middle.
     return;
   }
-  MAPPING[key.replaceAll(' ', '')] = value;
+  if (!key.includes(' ')) {
+    // This key has no spaces.
+    return;
+  }
+  add(key.replaceAll(' ', ''), source);
 });
 
 /* eslint-enable max-lines */
