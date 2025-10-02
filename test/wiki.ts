@@ -18,8 +18,8 @@ play.test(
     const path = '/crum/88.html';
     await page.goto(path, { waitUntil: 'networkidle' });
     for (const testCase of [
-      { query: `.${cls.WIKI} .${cls.REFERENCE}`, want: 134 },
-      { query: `.${cls.WIKI} .${cls.SUFFIX}`, want: 128 },
+      { query: `.${cls.WIKI} .${cls.REFERENCE}`, want: 139 },
+      { query: `.${cls.WIKI} .${cls.SUFFIX}`, want: 133 },
       { query: `.${cls.WIKI} .${cls.BIBLE}`, want: 119 },
       {
         query: `.${cls.WIKI} .${cls.DIALECT} .${drop.CLS.DROPPABLE}`,
