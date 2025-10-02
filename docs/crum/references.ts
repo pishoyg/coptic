@@ -226,6 +226,7 @@ export const MAPPING: Record<string, Source> = {
     title: 'British Museum, Catalogue of Coptic MSS., 1905, acc. to numbers',
     innerHTML:
       '<ul class="wp-block-list has-medium-font-size"> <li>Crum, W. E. (1905). <em><a href="https://archive.org/details/catalogueofcopti00brituoft/page/ii/mode/2up" rel="noreferrer noopener" target="_blank">Catalogue of the Coptic Manuscripts in the British Museum</a></em>. London: British Museum.</li></ul>',
+    postfixes: ['Or', 'or'],
   },
   BMar: {
     title: 'Budge, Coptic Martyrdoms, 1914',
@@ -591,6 +592,7 @@ export const MAPPING: Record<string, Source> = {
       'A. Kropp, Ausgewählte Kopt. Zaubertexte, 1930-31, numbered by letters A, B &c',
     innerHTML:
       '<ul class="wp-block-list has-medium-font-size"> <li>Kropp, A. M. (1931). <em><a href="https://archive.org/details/ausgewhltekoptis0012krop/page/n9/mode/2up" rel="noreferrer noopener" target="_blank">Ausgewählte koptische Zaubertexte. Band I: Textpublikation</a></em>. Bruxelles: Fondation Égyptologique Reine Élisabeth.</li> <li>Kropp, A. M. (1931). <em><a href="https://archive.org/details/ausgewhltekoptis0003krop/page/n5/mode/2up" rel="noreferrer noopener" target="_blank">Ausgewählte koptische Zaubertexte. Band II: Übersetzungen und Anmerkungen</a></em>. Bruxelles: Fondation Égyptologique Reine Élisabeth.</li> <li>Kropp, A. M. (1930). <em><a href="https://archive.org/details/ausgewhltekoptis0003krop/page/n5/mode/2up" rel="noreferrer noopener" target="_blank">Ausgewählte koptische Zaubertexte. Band III: Einleitung in koptische Zaubertexte</a></em>. Bruxelles: Fondation Égyptologique Reine Élisabeth.</li></ul>',
+    postfixes: ['A', 'B', 'C', 'F', 'H', 'J', 'K', 'M'],
   },
   Lab: {
     title:
@@ -867,6 +869,7 @@ export const MAPPING: Record<string, Source> = {
   },
   P: {
     title: 'MSS. in the Bibliothèque Nationale, Paris (Crum’s copies)',
+    postfixes: ['ar', 'Ar'],
   },
   PAl: {
     title:
@@ -1101,6 +1104,33 @@ export const MAPPING: Record<string, Source> = {
     // NOTE: Besa occurs as a standalone abbreviation in Crum, but we treat it
     // as a variant to simplify the pipeline.
     variant: 'Besa',
+    postfixes: [
+      'A',
+      'Am',
+      'BM',
+      'BMOr',
+      'BerlOr',
+      'Bor',
+      'C',
+      'Cai',
+      'ClPr',
+      'Ep',
+      'HT',
+      'IF',
+      'LMis',
+      'Leyd',
+      'MIF',
+      'Mich',
+      'Miss',
+      'P',
+      'R',
+      'RE',
+      'Rec',
+      'Ryl',
+      'ViK',
+      'Wess',
+      'Z',
+    ],
   },
   SHel: {
     title: 'G. P. G. Sobhy, Le Martyre de St. Hélias, Cairo, 1919',
@@ -1251,9 +1281,11 @@ export const MAPPING: Record<string, Source> = {
   Va: {
     title:
       'MSS. in Vatican Library, acc. to photographs or to copies by H. De Vis',
+    postfixes: ['ar', 'Ar'],
   },
   Vi: {
     title: 'Vienna, MSS. & ostraca in the Staats(olim Hof)bibliothek',
+    postfixes: ['K', 'Sitz'],
   },
   Wess: {
     title: 'C. Wessely, Studien z. Paläographie &c., acc. to vol. & page',
