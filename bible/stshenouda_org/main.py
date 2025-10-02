@@ -14,6 +14,7 @@ from collections import abc
 import json5
 from ebooklib import epub  # type: ignore[import-untyped]
 
+from bible.stshenouda_org import schema
 from utils import concur, ensure, file, log, page, paths
 
 # Input parameters
@@ -25,7 +26,19 @@ _INPUT_DIR: str = str(_SCRIPT_DIR / "data/raw/")
 _SOURCES_DIR: str = str(_SCRIPT_DIR / "data/raw/Sources/")  # dead: disable
 _COVER: str = str(_SCRIPT_DIR / "data/img/stauros.jpeg")
 
-_LANGUAGES: list[str] = [
+Language: typing.TypeAlias = typing.Literal[
+    "Bohairic",
+    "Sahidic",
+    "English",
+    "Greek",
+    "Fayyumic",
+    "Akhmimic",
+    "OldBohairic",
+    "Mesokemic",
+    "DialectP",
+    "Lycopolitan",
+]
+_LANGUAGES: list[Language] = [
     "Bohairic",
     "Sahidic",
     "English",
@@ -63,7 +76,7 @@ _LANG = "cop"
 
 # The Jinkim is represented by the Combining Overline, not the Combining
 # Conjoining Msacron.
-_NORMALIZATION: dict[str, dict[str, str]] = {
+_NORMALIZATION: dict[Language, dict[str, str]] = {
     "Bohairic": {
         chr(0xFE26): chr(  # Combining Conjoining Macron
             0x0305,
@@ -71,24 +84,14 @@ _NORMALIZATION: dict[str, dict[str, str]] = {
     },
 }
 
-assert all(d in _LANGUAGES for d in _NORMALIZATION)
 
-
-def _normalize(lang: str, text: str) -> str:
-    assert lang in _LANGUAGES
+def _normalize(lang: Language, text: str) -> str:
     substitutions: dict[str, str] = _NORMALIZATION.get(lang, {})
     if not substitutions:
         return text
     for key, value in substitutions.items():
         text = text.replace(key, value)
     return text
-
-
-def _json_loads(t: str) -> dict[str, typing.Any] | list[typing.Any]:
-    try:
-        return json.loads(t)
-    except json.JSONDecodeError:
-        return json5.loads(t)
 
 
 class ColorRange:
@@ -133,8 +136,8 @@ class ColorRange:
 class Verse:
     """A Bible verse."""
 
-    def __init__(self, data: dict[str, str], first: bool) -> None:
-        self._raw: dict[str, str] = data
+    def __init__(self, data: schema.Verse, first: bool) -> None:
+        self._raw: schema.Verse = data
         self.num: str = self.__num(data)
         if not self.num:
             # It's often the case that a chapter contains a title
@@ -146,19 +149,23 @@ class Verse:
             )
         # NOTE: Normalization must take place after recoloring, because
         # recoloring uses the original text.
-        self.recolored: dict[str, str] = {
+        self.recolored: dict[Language, str] = {
             lang: _normalize(lang, self.__recolor(data[lang], data))
             for lang in _LANGUAGES
         }
-        self.unnumbered: dict[str, str] = {
+        self.unnumbered: dict[Language, str] = {
             lang: _normalize(lang, _VERSE_PREFIX.sub("", data[lang]).strip())
             for lang in _LANGUAGES
         }
 
-    def has_lang(self, lang: str) -> bool:
+    def has_lang(self, lang: Language) -> bool:
         return bool(self.unnumbered[lang])
 
-    def _recolor_aux(self, v: str, verse: dict) -> abc.Generator[str]:
+    def _recolor_aux(
+        self,
+        v: str,
+        verse: schema.Verse,
+    ) -> abc.Generator[str]:
         v = html.escape(v)
         if "coloredWords" not in verse:
             yield v
@@ -189,10 +196,10 @@ class Verse:
             last = rc.end
         yield v[last:]
 
-    def __recolor(self, v: str, verse: dict) -> str:
+    def __recolor(self, v: str, verse: schema.Verse) -> str:
         return "".join(self._recolor_aux(v, verse))
 
-    def __num(self, verse: dict[str, str]) -> str:
+    def __num(self, verse: schema.Verse) -> str:
         t: str = verse["English"] or verse["Greek"]
         s: re.Match[str] | None = _VERSE_PREFIX.search(t)
         num: str = s.groups()[0] if s else ""
@@ -269,7 +276,7 @@ class Item:
 class Chapter(Item):
     """A Bible chapter."""
 
-    def __init__(self, data: dict, book) -> None:
+    def __init__(self, data: schema.Chapter, book: typing.Any) -> None:
         self.num: str = self._num(data)
         self.verses: list[Verse] = [
             Verse(v, i == 0) for i, v in enumerate(data["data"])
@@ -301,10 +308,10 @@ class Chapter(Item):
                 if v.num and v.num in dupes:
                     v.num = ""
 
-    def _num(self, data: dict) -> str:
+    def _num(self, data: schema.Chapter) -> str:
         return data["sectionNameEnglish"] or "1"
 
-    def has_lang(self, lang: str) -> bool:
+    def has_lang(self, lang: Language) -> bool:
         return any(v.has_lang(lang) for v in self.verses)
 
     def prev(self):
@@ -319,10 +326,10 @@ class Chapter(Item):
         assert self._next
         return self._next
 
-    def set_prev(self, prv):
+    def set_prev(self, prv: typing.Self):
         self._prev = prv
 
-    def set_next(self, nxt):
+    def set_next(self, nxt: typing.Self):
         self._next = nxt
 
     def set_first(self):
@@ -369,38 +376,30 @@ class Book(Item):
     def __init__(
         self,
         name: str,
-        idx: int,
         testament_name: str,
-        testament_idx: int,
         section_name: str,
-        section_idx: int,
         crum: list[str],
     ) -> None:
         self.name: str = name
-        self.idx: int = idx
         self.testament_name: str = testament_name
-        self.testament_idx: int = testament_idx
         self.section_name: str = section_name
-        self.section_idx: int = section_idx
         self.crum: list[str] = crum
 
-        data: list = self.load(self.name)
-        self.zfill_len: int = len(str(len(data)))
+        data: list[schema.Chapter] = self._load(self.name)
         self.chapters: list[Chapter] = [Chapter(c, self) for c in data]
 
-    def load(self, book_name: str) -> list[typing.Any]:
+    def _load(self, book_name: str) -> schema.Book:
         try:
-            t: str = open(
-                os.path.join(_INPUT_DIR, book_name + ".json"),
-                encoding="utf-8",
-            ).read()
+            t: str = file.read(os.path.join(_INPUT_DIR, f"{book_name}.json"))
             log.info("Loaded book:", book_name)
-            data: list[typing.Any] | dict[str, typing.Any] = _json_loads(t)
-            assert isinstance(data, list)
-            return data
         except FileNotFoundError:
             log.warn("Book not found:", book_name)
             return []
+
+        try:
+            return json.loads(t)
+        except json.JSONDecodeError:
+            return json5.loads(t)
 
     @typing.override
     def id(self) -> str:
@@ -505,23 +504,14 @@ class Bible:
         bible: dict[str, dict[str, list[dict[str, str]]]] = json.loads(
             file.read(_JSON),
         )
-        testament_idx: int = 0
         for testament_name, testament in bible.items():
-            testament_idx += 1
-            section_idx: int = 0
             for section_name, section in testament.items():
-                section_idx += 1
-                book_idx: int = 0
                 for book in section:
-                    book_idx += 1
                     yield {
                         "name": book["title"],
                         "crum": book["crum"],
-                        "idx": book_idx,
                         "testament_name": testament_name,
-                        "testament_idx": testament_idx,
                         "section_name": section_name,
-                        "section_idx": section_idx,
                     }
 
     def __build_book(self, kwargs: dict) -> Book:
@@ -547,17 +537,17 @@ class HTMLBuilder:
     def verse_end(self, verse: Verse) -> abc.Generator[str]:
         raise NotImplementedError
 
-    def lang_begin(self, lang: str) -> abc.Generator[str]:
+    def lang_begin(self, lang: Language) -> abc.Generator[str]:
         raise NotImplementedError
 
-    def lang_end(self, lang: str) -> abc.Generator[str]:
+    def lang_end(self, lang: Language) -> abc.Generator[str]:
         raise NotImplementedError
 
     # __chapter_body_aux builds the contents of the <body> element of a chapter.
     def __chapter_body_aux(
         self,
         chapter: Chapter,
-        langs: list[str],
+        langs: list[Language],
     ) -> abc.Generator[str]:
         langs = [lang for lang in langs if chapter.has_lang(lang)]
         yield chapter.header()
@@ -577,7 +567,7 @@ class HTMLBuilder:
     def __book_body_aux(
         self,
         book: Book,
-        langs: list[str],
+        langs: list[Language],
         is_epub: bool,
     ) -> abc.Generator[str]:
         assert is_epub  # We only write a whole book in one file for EPUB.
@@ -653,7 +643,7 @@ class HTMLBuilder:
                 yield chapter.anchor(is_epub)
             yield "</div>"
 
-    def write_html(self, bible: Bible, langs: list[str]) -> None:
+    def write_html(self, bible: Bible, langs: list[Language]) -> None:
         def write_chapter(chapter: Chapter) -> None:
             self.__write_html_chapter(chapter, langs)
 
@@ -672,7 +662,7 @@ class HTMLBuilder:
     def __write_html_chapter(
         self,
         chapter: Chapter,
-        langs: list[str],
+        langs: list[Language],
     ) -> None:
 
         nxt: Chapter | None = chapter.next()
@@ -696,7 +686,12 @@ class HTMLBuilder:
             make_dir=True,
         )
 
-    def write_epub(self, bible: Bible, langs: list[str], subdir: str) -> None:
+    def write_epub(
+        self,
+        bible: Bible,
+        langs: list[Language],
+        subdir: str,
+    ) -> None:
         kindle: epub.EpubBook = epub.EpubBook()
         identifier: str = " ".join(langs)
         kindle.set_identifier(identifier)
@@ -769,7 +764,7 @@ class HTMLBuilder:
         self,
         fmt: typing.Literal["html", "epub"],
         bible: Bible,
-        langs: list[str],
+        langs: list[Language],
         subdir: str = "",
     ) -> None:
         if fmt == "html":
@@ -809,11 +804,14 @@ class FlowBuilder(HTMLBuilder):
         yield page.LINE_BREAK
 
     @typing.override
-    def lang_begin(self, lang: str) -> abc.Generator[str]:  # dead: disable
+    def lang_begin(
+        self,
+        lang: Language,  # dead: disable
+    ) -> abc.Generator[str]:
         yield from []
 
     @typing.override
-    def lang_end(self, lang: str) -> abc.Generator[str]:  # dead: disable
+    def lang_end(self, lang: Language) -> abc.Generator[str]:  # dead: disable
         yield page.LINE_BREAK
 
 
@@ -853,11 +851,14 @@ class TableBuilder(HTMLBuilder):
         yield "</tr>"
 
     @typing.override
-    def lang_begin(self, lang: str) -> abc.Generator[str]:  # dead: disable
+    def lang_begin(
+        self,
+        lang: Language,
+    ) -> abc.Generator[str]:
         yield f'<td class="language {lang}">'
 
     @typing.override
-    def lang_end(self, lang: str) -> abc.Generator[str]:  # dead: disable
+    def lang_end(self, lang: Language) -> abc.Generator[str]:  # dead: disable
         yield "</td>"
 
 
@@ -872,7 +873,7 @@ def main():
             HTMLBuilder,
             typing.Literal["html", "epub"],
             Bible,
-            list[str],
+            list[Language],
             str,
         ]
     ] = [
