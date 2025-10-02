@@ -9,6 +9,7 @@ export class Source {
    * @param title
    * @param innerHTML
    * @param variant
+   * @param postfixes
    */
   public constructor(
     /** title is the full title of the source.
@@ -27,7 +28,18 @@ export class Source {
      * No abbreviation has been found to have more than two forms, so there is a
      * maximum of one variant needed.
      */
-    public readonly variant?: string
+    public readonly variant?: string,
+    /** postfixes is a list of all postfixes that this abbreviation can bear.
+     *
+     * Notice that postfixes are distinct from suffixes. Postfixes are part of
+     * the abbreviation, and they're usually (although not always) written in a
+     * single word along with the original abbreviation. They make the original
+     * abbreviation more specific, by referring to a place or department.
+     * On the other hand, suffixes are numbers or number-like affixes, and
+     * they're never written with the abbreviation as one word.
+     * See examples of postfixes below.
+     */
+    public readonly postfixes?: string[]
   ) {}
 }
 
@@ -1290,11 +1302,19 @@ export const MAPPING: Record<string, Source> = {
 };
 
 // Add all the variants to the map.
-Object.values(MAPPING).forEach((value: Source): void => {
-  if (!value.variant) {
-    return;
+Object.entries(MAPPING).forEach(([key, source]: [string, Source]): void => {
+  const abbreviations: string[] = [key];
+  if (source.variant) {
+    // Add an entry for the variant variant.
+    MAPPING[source.variant] = source;
+    abbreviations.push(source.variant);
   }
-  MAPPING[value.variant] = value;
+
+  source.postfixes?.forEach((postfix: string): void => {
+    abbreviations.forEach((abb: string): void => {
+      MAPPING[`${abb} ${postfix}`] = source;
+    });
+  });
 });
 
 // Add keys with spaces removed.
