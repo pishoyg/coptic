@@ -15,6 +15,10 @@ import * as drop from '../dropdown.js';
  * NOTE: All of the regexes below assume the following normalizations:
  * - HTML tree normalization[1], which allows us to use `\s` instead of `\s+`.
  * - NFD normalization[2], which allows us to use `\p{M}`.
+ *
+ * Additionally, we unicode-aware regex boundary expressions, because `\b`
+ * doesn't fully support Unicode.
+ *
  * [1] https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize
  * [2] https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize */ // eslint-disable-line max-len
 /**
@@ -48,6 +52,17 @@ const ABBREVIATION_EXCLUDE = css.classQuery(
   cls.ANNOTATION
 );
 /**
+ * BOUNDARY_START uses a lookbehind expression to match a position NOT preceded
+ * by a letter, mark, or number.
+ * In other words, it matches the beginning of a word.
+ */
+const BOUNDARY_START = /(?<![\p{Letter}\p{Mark}\p{Number}])/u;
+/**
+ * BOUNDARY_END uses a lookahead expression to match a position NOT followed by
+ * a letter, mark, or number. In other words, it matches the end of a word.
+ */
+const BOUNDARY_END = /(?![\p{Letter}\p{Mark}\p{Number}])/u;
+/**
  * BIBLE_RE defines the regex used to catch Bible references.
  * A Bible book abbreviation starts with a capital letter followed by one
  * or more small letters. Optionally, the abbreviation may contain a book
@@ -58,11 +73,26 @@ const ABBREVIATION_EXCLUDE = css.classQuery(
  * In some cases, only one number follows the book name, so we allow one of the
  * two numbers to be omitted.
  */
-export const BIBLE_RE =
-  /(\b(?:[1-4]\s)?[A-Z][a-z]+|EpJer)(?:\s(\d+|A|C|D|F)(?:\s(\d+))?)?\b/gu;
+export const BIBLE_RE = new RegExp(
+  `${BOUNDARY_START.source}((?:[1-4]\\s)?[A-Z][a-z]+|EpJer)(?:\\s(\\d+|A|C|D|F)(?:\\s(\\d+))?)?${BOUNDARY_END.source}`,
+  'gu'
+);
 export const ANNOTATION_RES = [
-  /\b[a-zA-Z]+\s[a-zA-Z]+\b/gu, // Two-word annotation.
-  /\?|†|ⲛ̅ⲉ̅|\b[a-zA-Z]+\b/gu, // One-word annotation.
+  // Two-word annotation:
+  new RegExp(
+    `${BOUNDARY_START.source}[a-zA-Z]+\\s[a-zA-Z]+${BOUNDARY_END.source}`,
+    'gu'
+  ),
+  // Single-word annotation and special cases:
+  new RegExp(
+    [
+      `${BOUNDARY_START.source}[a-zA-Z]+${BOUNDARY_END.source}`,
+      '\\?',
+      '†',
+      'ⲛ̅ⲉ̅',
+    ].join('|'),
+    'gu'
+  ),
 ];
 // Pay attention to the following:
 // - Reference abbreviations always start with a capital letter. This must be
@@ -122,7 +152,10 @@ export const ANNOTATION_RES = [
 //     uppercase Latin letter could be a reference abbreviation or a suffix. We
 //     assume that, if it occurs after a reference abbreviation, then it's
 //     likely a suffix.
-const SUFFIX = /((?:\s(?:'?[0-9]+|[a-zA-Z])\b)*)/u;
+export const SUFFIX = new RegExp(
+  `((?:\\s(?:'?[0-9]+|[a-zA-Z])${BOUNDARY_END.source})*)`,
+  'u'
+);
 const LETTER = /[a-zA-Z\p{M}&]/u;
 const SPECIAL_CASES = [
   'lgR', // This starts with a small letter.
@@ -132,16 +165,19 @@ const SPECIAL_CASES = [
 export const REFERENCE_RES = [
   // Special cases, and three-word reference abbreviations:
   new RegExp(
-    `\\b(${SPECIAL_CASES.join('|')}|[A-Z]${LETTER.source}*\\s${LETTER.source}+\\s${LETTER.source}+)${SUFFIX.source}\\b`,
+    `${BOUNDARY_START.source}(${SPECIAL_CASES.join('|')}|[A-Z]${LETTER.source}*\\s${LETTER.source}+\\s${LETTER.source}+)${SUFFIX.source}${BOUNDARY_END.source}`,
     'gu'
   ),
   // Two-word reference abbreviations:
   new RegExp(
-    `\\b([A-Z]${LETTER.source}*\\s${LETTER.source}+)${SUFFIX.source}\\b`,
+    `${BOUNDARY_START.source}([A-Z]${LETTER.source}*\\s${LETTER.source}+)${SUFFIX.source}${BOUNDARY_END.source}`,
     'gu'
   ),
   // One-word reference abbreviations:
-  new RegExp(`\\b([A-Z]${LETTER.source}*)${SUFFIX.source}\\b`, 'gu'),
+  new RegExp(
+    `${BOUNDARY_START.source}([A-Z]${LETTER.source}*)${SUFFIX.source}${BOUNDARY_END.source}`,
+    'gu'
+  ),
 ];
 /**
  * Handle all Crum elements.
