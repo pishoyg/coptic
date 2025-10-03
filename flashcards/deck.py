@@ -207,6 +207,7 @@ class IndexIndex:
                 scripts=self.scripts,
                 prev_href=prv,
                 next_href=nxt,
+                css=self.css,
             )
 
     def __write_subindex(self, args: tuple[str, Index, str]) -> None:
