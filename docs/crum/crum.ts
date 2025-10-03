@@ -333,12 +333,18 @@ export function handleAnkiNavigation(root: HTMLElement): void {
 
   root
     .querySelectorAll<HTMLAnchorElement>(`a.${cls.NAVIGATE}`)
-    .forEach((e: HTMLAnchorElement) => {
-      if (e.href.startsWith('http')) {
-        log.error(cls.NAVIGATE, 'element looks like an absolute URL!');
+    .forEach((a: HTMLAnchorElement) => {
+      // Get the raw attribute.
+      const href: string | null = a.getAttribute('href');
+      if (!href) {
+        log.error(cls.NAVIGATE, 'element HREF is unset!');
         return;
       }
-      e.setAttribute('href', `${paths.LEXICON}/${e.href}`);
+      if (href.startsWith('http')) {
+        log.error(cls.NAVIGATE, 'element HREF looks like an absolute URL!');
+        return;
+      }
+      a.setAttribute('href', `${paths.LEXICON}/${href}`);
     });
 }
 
