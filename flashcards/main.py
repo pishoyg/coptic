@@ -44,15 +44,15 @@ _ = argparser.add_argument(
 
 
 def verify_unique_object_keys(decks: list[genanki.Deck]) -> None:
-    ensure.unique([d.deck_id for d in decks], "Deck ids")
-    ensure.unique([d.name for d in decks], "Deck names")
+    ensure.unique((d.deck_id for d in decks), "Deck ids")
+    ensure.unique((d.name for d in decks), "Deck names")
     ensure.unique(
-        [model.name for d in decks for model in d.models],
+        (model.name for d in decks for model in d.models),
         "Model names",
     )
-    ensure.unique([model.id for d in decks for model in d.models], "Model ids")
+    ensure.unique((model.id for d in decks for model in d.models), "Model ids")
     ensure.unique(
-        [node.guid for d in decks for node in d.notes],
+        (node.guid for d in decks for node in d.notes),
         "Node GUIDs.",
     )
 
@@ -90,7 +90,7 @@ def main() -> None:
 
     # Write HTML output.
     if args.crum:
-        constants.NAME_TO_DECKER[constants.CRUM_ALL].html()
+        constants.CRUM_ALL.html()
 
     # Write Anki output.
     if args.anki:

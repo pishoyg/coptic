@@ -110,7 +110,7 @@ class Decker:
         raise NotImplementedError
 
     def index_indexes(self) -> list[deck.IndexIndex]:
-        raise NotImplementedError
+        return []
 
     def notes_key_content_aux(self) -> abc.Generator[tuple[str, str]]:
         for note in self.notes_aux():
@@ -755,10 +755,6 @@ class Copticsite(Decker):
             )
             key += 1
 
-    @typing.override
-    def index_indexes(self) -> list[deck.IndexIndex]:
-        return []
-
 
 class KELLIA(Decker):
     """KELLIA represents a KELLIA deck."""
@@ -799,10 +795,6 @@ class KELLIA(Decker):
                 back=back,
             )
 
-    @typing.override
-    def index_indexes(self) -> list[deck.IndexIndex]:
-        return []
-
 
 # NOTE: The deck IDs are protected fields. They are used as database keys for
 # the decks. Do NOT change them!
@@ -826,61 +818,25 @@ class KELLIA(Decker):
 # The "name" argument is used to generate deck names for datasets that generate
 # multiple decks.
 # The "key" field is used to key the notes.
-CRUM_BOHAIRIC = "A Coptic Dictionary::Bohairic"
-CRUM_SAHIDIC = "A Coptic Dictionary::Sahidic"
-CRUM_BOHAIRIC_SAHIDIC = "A Coptic Dictionary::Bohairic / Sahidic"
-CRUM_ALL = "A Coptic Dictionary::All Dialects"
-COPTICSITE = "copticsite.com"
-KELLIA_COMPREHENSIVE = "KELLIA::Comprehensive"
-KELLIA_EGYPTIAN = "KELLIA::Egyptian"
-KELLIA_GREEK = "KELLIA::Greek"
 
 
+CRUM_ALL: Crum = Crum("A Coptic Dictionary::All Dialects", 1284010387, [])
+COPTICSITE_BOHAIRIC: Copticsite = Copticsite("copticsite.com", 1284010385)
+KELLIA_COMPREHENSIVE: KELLIA = KELLIA(
+    "KELLIA::Comprehensive",
+    1284010391,
+    kellia.KELLIA.comprehensive,
+)
 DECKERS: list[Decker] = [
-    Crum(
-        CRUM_ALL,
-        1284010387,
-        [],
-    ),
-    Crum(
-        CRUM_BOHAIRIC,
-        1284010383,
-        ["B"],
-    ),
-    Crum(
-        CRUM_SAHIDIC,
-        1284010386,
-        ["S"],
-    ),
-    Crum(
-        CRUM_BOHAIRIC_SAHIDIC,
-        1284010390,
-        ["B", "S"],
-    ),
-    Copticsite(
-        COPTICSITE,
-        1284010385,
-    ),
-    KELLIA(
-        KELLIA_COMPREHENSIVE,
-        1284010391,
-        kellia.KELLIA.comprehensive,
-    ),
-    KELLIA(
-        KELLIA_EGYPTIAN,
-        1284010392,
-        kellia.KELLIA.egyptian,
-    ),
-    KELLIA(
-        KELLIA_GREEK,
-        1284010393,
-        kellia.KELLIA.greek,
-    ),
+    CRUM_ALL,
+    Crum("A Coptic Dictionary::Bohairic", 1284010383, ["B"]),
+    Crum("A Coptic Dictionary::Sahidic", 1284010386, ["S"]),
+    Crum("A Coptic Dictionary::Bohairic / Sahidic", 1284010390, ["B", "S"]),
+    COPTICSITE_BOHAIRIC,
+    KELLIA_COMPREHENSIVE,
+    KELLIA("KELLIA::Egyptian", 1284010392, kellia.KELLIA.egyptian),
+    KELLIA("KELLIA::Greek", 1284010393, kellia.KELLIA.greek),
 ]
-
-NAME_TO_DECKER: dict[str, Decker] = {
-    decker.name(): decker for decker in DECKERS
-}
 
 # Xooxle search will work fine even if we don't retain any HTML tags, because it
 # relies entirely on searching the text payloads of the HTML. However, we retain
@@ -941,7 +897,7 @@ def _is_crum_word(path: str) -> bool:
 
 
 CRUM_XOOXLE = xooxle.Index(
-    input_dir=NAME_TO_DECKER[CRUM_ALL].notes_key_content_aux(),
+    input_dir=CRUM_ALL.notes_key_content_aux(),
     include=_is_crum_word,
     extract=[
         xooxle.Selector({"name": "title"}, force=False),
@@ -992,7 +948,7 @@ CRUM_XOOXLE = xooxle.Index(
 
 
 KELLIA_XOOXLE = xooxle.Index(
-    input_dir=NAME_TO_DECKER[KELLIA_COMPREHENSIVE].notes_key_content_aux(),
+    input_dir=KELLIA_COMPREHENSIVE.notes_key_content_aux(),
     extract=[
         xooxle.Selector({"name": "footer"}, force=False),
         xooxle.Selector({"class_": "bibl"}, force=False),
@@ -1022,7 +978,7 @@ KELLIA_XOOXLE = xooxle.Index(
 
 
 COPTICSITE_XOOXLE = xooxle.Index(
-    input_dir=NAME_TO_DECKER[COPTICSITE].notes_key_content_aux(),
+    input_dir=COPTICSITE_BOHAIRIC.notes_key_content_aux(),
     extract=[],
     captures=[
         xooxle.Capture(
@@ -1039,7 +995,7 @@ COPTICSITE_XOOXLE = xooxle.Index(
 )
 
 CRUM_WIKI_XOOXLE: xooxle.Index = xooxle.Index(
-    input_dir=NAME_TO_DECKER[CRUM_ALL].notes_key_content_aux(),
+    input_dir=CRUM_ALL.notes_key_content_aux(),
     include=_is_crum_word,
     extract=[],
     captures=[
