@@ -31,3 +31,30 @@ export function toggleCase(text: string): string {
     )
     .join('');
 }
+
+/**
+ * BOUNDARY_START uses a lookbehind expression to match a position NOT preceded
+ * by a letter, mark, number, or connector punctuation mark.
+ * In other words, it's a Unicode-aware version of `\b` (though only at the
+ * beginning of a word).
+ */
+export const BOUNDARY_START =
+  /(?<![\p{Letter}\p{Mark}\p{Number}\p{Connector_Punctuation}])/u;
+
+/**
+ * BOUNDARY_END uses a lookahead expression to match a position NOT followed
+ * by a letter, mark, number, or connector punctuation mark.
+ * In other words, it's a Unicode-aware version of `\b` (though only at the end
+ * of a word).
+ */
+export const BOUNDARY_END =
+  /(?![\p{Letter}\p{Mark}\p{Number}\p{Connector_Punctuation}])/u;
+
+/**
+ *
+ * @param regex
+ * @returns
+ */
+export function bounded(regex: string): string {
+  return `${BOUNDARY_START.source}${regex}${BOUNDARY_END.source}`;
+}
