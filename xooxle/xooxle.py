@@ -524,45 +524,36 @@ class Index:
 
     def __init__(
         self,
-        input_dir: str | Generator[tuple[str, str]],
+        source: str | Generator[tuple[str, str]],
         extract: list[Selector],
         captures: list[Capture],
         output: str | pathlib.Path,
-        include: Callable[[str], bool] | None = None,
     ) -> None:
         """
         Args:
-            input_dir: Input path - a directory to search for HTML files, or a
+            source: Input path - a directory to search for HTML files, or a
                 generator of [key, content] pairs.
             extract: List of selectors of elements to remove from the soup
                 during preprocessing.
             captures: List of selectors of elements to capture in the output.
             output: Path to the output JSON file.
-            include: An optional filter that takes a file key as a parameter,
-                and decides whether to include it in the index.
         """
-        self._input: str | Generator[tuple[str, str]] = input_dir
-        self._include: Callable[[str], bool] | None = include
+        self._source: str | Generator[tuple[str, str]] = source
         self._extract: list[Selector] = extract
         self._captures: list[Capture] = captures
         self._output: str | pathlib.Path = output
 
     def iter_input(self) -> Generator[tuple[str, str]]:
-        if isinstance(self._input, Generator):
-            for key, content in self._input:
-                if self._include and not self._include(key):
-                    continue
-                yield key, content
+        if isinstance(self._source, Generator):
+            yield from self._source
             return
 
-        assert isinstance(self._input, str)
-        assert os.path.isdir(self._input)
+        assert isinstance(self._source, str)
+        assert os.path.isdir(self._source)
         # Recursively search for all HTML files.
-        for root, _, files in os.walk(self._input):
+        for root, _, files in os.walk(self._source):
             for f in files:
                 if not f.endswith(_EXTENSION):
-                    continue
-                if self._include and not self._include(f):
                     continue
                 path = os.path.join(root, f)
                 yield path, file.read(path)
@@ -584,8 +575,8 @@ class Index:
                 _ = element.extract()
 
         # Construct the entry for this file.
-        if isinstance(self._input, str):
-            key = os.path.relpath(path, self._input)[: -len(_EXTENSION)]
+        if isinstance(self._source, str):
+            key = os.path.relpath(path, self._source)[: -len(_EXTENSION)]
         else:
             key = path
 

@@ -15,7 +15,7 @@ from dictionary.copticsite_com import main as copticsite
 from dictionary.kellia_uni_goettingen_de import main as kellia
 from dictionary.marcion_sourceforge_net import main as crum
 from flashcards import deck
-from utils import file, page, paths
+from utils import page, paths
 from xooxle import xooxle
 
 # DIALECTS_JS is a JavaScript line that can be used to set the default dialects.
@@ -892,13 +892,8 @@ _COPTICSITE_RETAIN_CLASSES = {
 } | _DIALECTS
 
 
-def _is_crum_word(path: str) -> bool:
-    return file.stem(path).isdigit()
-
-
 CRUM_XOOXLE = xooxle.Index(
-    input_dir=CRUM_ALL.notes_key_content_aux(),
-    include=_is_crum_word,
+    source=CRUM_ALL.notes_key_content_aux(),
     extract=[
         xooxle.Selector({"name": "title"}, force=False),
         xooxle.Selector({"class_": "header"}, force=False),
@@ -948,7 +943,7 @@ CRUM_XOOXLE = xooxle.Index(
 
 
 KELLIA_XOOXLE = xooxle.Index(
-    input_dir=KELLIA_COMPREHENSIVE.notes_key_content_aux(),
+    source=KELLIA_COMPREHENSIVE.notes_key_content_aux(),
     extract=[
         xooxle.Selector({"name": "footer"}, force=False),
         xooxle.Selector({"class_": "bibl"}, force=False),
@@ -978,7 +973,7 @@ KELLIA_XOOXLE = xooxle.Index(
 
 
 COPTICSITE_XOOXLE = xooxle.Index(
-    input_dir=COPTICSITE_BOHAIRIC.notes_key_content_aux(),
+    source=COPTICSITE_BOHAIRIC.notes_key_content_aux(),
     extract=[],
     captures=[
         xooxle.Capture(
@@ -995,8 +990,7 @@ COPTICSITE_XOOXLE = xooxle.Index(
 )
 
 CRUM_WIKI_XOOXLE: xooxle.Index = xooxle.Index(
-    input_dir=CRUM_ALL.notes_key_content_aux(),
-    include=_is_crum_word,
+    source=CRUM_ALL.notes_key_content_aux(),
     extract=[],
     captures=[
         xooxle.Capture(
