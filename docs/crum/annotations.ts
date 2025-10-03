@@ -111,6 +111,8 @@ MAPPING['q v'] = { fullForm: 'quod vide' };
 MAPPING['s v'] = { fullForm: 'sub verbo' };
 MAPPING['sc'] = { fullForm: 'scilicet' };
 MAPPING['l c'] = { fullForm: 'loco citato' };
+MAPPING['i e'] = { fullForm: 'id est' };
+MAPPING['e g'] = { fullForm: 'exempli gratia' };
 MAPPING['Heb'] = { fullForm: 'Hebrew', noCaseVariant: true };
 
 // TODO: (#511) Reconsider whether you want to retain this tip.
