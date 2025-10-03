@@ -187,9 +187,9 @@ export const MAPPING: Record<string, Source> = {
     // NOTE: Listed as 'Berl.Or', but seemingly never cited as such!
     title: 'MSS. in the Staats(olim Kgl.)bibliothek, Berlin (Crum’s copies)',
   },
-  'Berl Wörterb': {
-    // NOTE: Listed as 'Berl. Wörterb', but seemingly never cited as such!
+  'Berl. Wörterb': {
     title: 'Erman & Grapow, Wörterbuch d. Aeg. Sprache, 1926-31',
+    variant: 'Berl Wörterb',
     innerHTML:
       '<ul class="wp-block-list has-medium-font-size"> <li>Erman, A., &amp; Grapow, H. (1926-1931). <em><a href="https://www.ancientegyptfoundation.org/worterbuch_der_aegyptischen_sprache.shtml" rel="noreferrer noopener" target="_blank">Wörterbuch der ägyptischen Sprache im Auftrage der deutschen Akademien</a></em>. Leipzig: J. C. Hinrichs’sche Buchhandlung. [The project started by Erman and Grapow continues in digitised form in <em><a href="https://tla.digital/home" rel="noreferrer noopener" target="_blank">Thesaurus Linguae Aegyptiae</a></em>.]</li></ul>',
   },
@@ -1361,13 +1361,18 @@ Object.entries(MAPPING).forEach(([key, source]: [string, Source]): void => {
 
 // Add keys with spaces removed.
 Object.entries(MAPPING).forEach(([key, source]: [string, Source]): void => {
-  if (/^[a-zA-Z]+ [0-9]+$/.test(key)) {
+  if (!key.includes(' ')) {
+    // This key has no spaces.
+    return;
+  }
+  if (key.split(' ')[1]?.match(/^[0-9]+$/)) {
     // Abbreviations that have a number as the second part never occur without
     // that space in the middle.
     return;
   }
-  if (!key.includes(' ')) {
-    // This key has no spaces.
+  if (key.split(' ')[0]?.endsWith('.')) {
+    // Abbreviations that have the first part ending with a period also never
+    // occur without a space in the middle.
     return;
   }
   add(key.replaceAll(' ', ''), source);

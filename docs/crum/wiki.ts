@@ -148,6 +148,10 @@ const SPECIAL_CASES: string[] = [
   'lgR', // This starts with a small letter.
   'Imp Russ Ar S', // This consists of 4 words!
   "O'Leary\\s?(?:H|The?)", // This has an apostrophe.
+  'Berl\\. Wörterb', // This has a period.
+  // The abbreviation usually occurs with ‘Wörterb’ occurring inside a <i> tag,
+  // so we need to be able to match ‘Berl.’ on its own as well.
+  'Berl\\.',
 ];
 
 export const REFERENCE_RES: RegExp[] = [
