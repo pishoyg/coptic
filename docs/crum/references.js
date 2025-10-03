@@ -194,9 +194,9 @@ export const MAPPING = {
     // NOTE: Listed as 'Berl.Or', but seemingly never cited as such!
     title: 'MSS. in the Staats(olim Kgl.)bibliothek, Berlin (Crum’s copies)',
   },
-  'Berl Wörterb': {
-    // NOTE: Listed as 'Berl. Wörterb', but seemingly never cited as such!
+  'Berl. Wörterb': {
     title: 'Erman & Grapow, Wörterbuch d. Aeg. Sprache, 1926-31',
+    variant: 'Berl Wörterb',
     innerHTML:
       '<ul class="wp-block-list has-medium-font-size"> <li>Erman, A., &amp; Grapow, H. (1926-1931). <em><a href="https://www.ancientegyptfoundation.org/worterbuch_der_aegyptischen_sprache.shtml" rel="noreferrer noopener" target="_blank">Wörterbuch der ägyptischen Sprache im Auftrage der deutschen Akademien</a></em>. Leipzig: J. C. Hinrichs’sche Buchhandlung. [The project started by Erman and Grapow continues in digitised form in <em><a href="https://tla.digital/home" rel="noreferrer noopener" target="_blank">Thesaurus Linguae Aegyptiae</a></em>.]</li></ul>',
   },
@@ -667,6 +667,8 @@ export const MAPPING = {
       '<ul class="wp-block-list has-medium-font-size"> <li>Lemm, O. von. (1900). <em><a href="https://www.biodiversitylibrary.org/item/94350#page/325/mode/1up" rel="noreferrer noopener" target="_blank">Eine dem Dionysius Areopagita zugeschriebene Schrift in koptischer Sprache</a></em>. (Bulletin de l’Académie impériale des sciences de St.-Pétersbourg, V. série, Tome XII, No. 3). St. Petersburg.</li></ul>',
   },
   Lect: {
+    // TODO: (#523) This should perhaps be a postfix or an annotation, rather
+    // than a reference.
     title: 'Lectionary',
   },
   Leip: {
@@ -1145,6 +1147,8 @@ export const MAPPING = {
       '<ul class="wp-block-list has-medium-font-size"> <li>Sobhy, G. P. G. (1919). <em><a href="https://archive.org/details/lemartyredesaint00sobhuoft/page/n10/mode/2up" rel="noreferrer noopener" target="_blank">Le martyre de Saint Hélias et l’encomium de l’évêque Stéphanos de Hnès sur Saint Hélias</a></em>. (Bibliothèque d’Études coptes, Tome I). Le Caire: Imprimerie de l’Institut français d’archéologie orientale.</li></ul>',
   },
   Sitz: {
+    // TODO: (#523) This should perhaps be a postfix or an annotation, rather
+    // than a reference.
     title: 'Sitzungsberichte',
   },
   Sobhy: {
@@ -1364,13 +1368,18 @@ Object.entries(MAPPING).forEach(([key, source]) => {
 });
 // Add keys with spaces removed.
 Object.entries(MAPPING).forEach(([key, source]) => {
-  if (/^[a-zA-Z]+ [0-9]+$/.test(key)) {
+  if (!key.includes(' ')) {
+    // This key has no spaces.
+    return;
+  }
+  if (key.split(' ')[1]?.match(/^[0-9]+$/)) {
     // Abbreviations that have a number as the second part never occur without
     // that space in the middle.
     return;
   }
-  if (!key.includes(' ')) {
-    // This key has no spaces.
+  if (key.split(' ')[0]?.endsWith('.')) {
+    // Abbreviations that have the first part ending with a period also never
+    // occur without a space in the middle.
     return;
   }
   add(key.replaceAll(' ', ''), source);
