@@ -104,19 +104,18 @@ export const MAPPING: Record<string, Annotation> = {
 // The following abbreviations are not listed in Crum's List of Abbreviations,
 // but they are nice to have.
 // This list may grow as we discover more abbreviations that are worth tooltips.
+MAPPING['cf'] = { fullForm: 'confer' };
+MAPPING['e g'] = { fullForm: 'exempli gratia' };
+MAPPING['Heb'] = { fullForm: 'Hebrew', noCaseVariant: true };
+MAPPING['i e'] = { fullForm: 'id est' };
+// TODO: (#511) Reconsider whether you want to retain the annotation for ib.
+MAPPING['ib'] = { fullForm: 'ibidem' };
+MAPPING['l c'] = { fullForm: 'loco citato' };
 MAPPING['MS'] = { fullForm: 'manuscript', noCaseVariant: true };
 MAPPING['MSS'] = { fullForm: 'manuscripts', noCaseVariant: true };
-MAPPING['cf'] = { fullForm: 'confer' };
 MAPPING['q v'] = { fullForm: 'quod vide' };
 MAPPING['s v'] = { fullForm: 'sub verbo' };
 MAPPING['sc'] = { fullForm: 'scilicet' };
-MAPPING['l c'] = { fullForm: 'loco citato' };
-MAPPING['i e'] = { fullForm: 'id est' };
-MAPPING['e g'] = { fullForm: 'exempli gratia' };
-MAPPING['Heb'] = { fullForm: 'Hebrew', noCaseVariant: true };
-
-// TODO: (#511) Reconsider whether you want to retain this tip.
-MAPPING['ib'] = { fullForm: 'ibidem' };
 
 Object.entries(MAPPING).forEach(
   ([key, annotation]: [string, Annotation]): void => {
