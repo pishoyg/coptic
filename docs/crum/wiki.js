@@ -244,45 +244,32 @@ const DAN_OVERRIDE = {
  */
 function parseBibleCitation(match) {
   let [bookAbbreviation, chapter, verse] = [match[1], match[2], match[3]];
-  if (!bookAbbreviation) {
-    // NOTE: This is not expected, because the book abbreviation is a
-    // non-optional piece of the regex. We have this check just to appease the
-    // linter.
-    return null;
-  }
   const danOverride = DAN_OVERRIDE[bookAbbreviation];
   if (danOverride) {
     // Given that this special book contains one chapter, the book
-    // abbreviation is followed by the verse number only (there is no
-    // chapter number).
-    bookAbbreviation = 'Dan';
+    // abbreviation is followed by the verse number only. This number would've
+    // been mistakenly interpreted as the chapter number, but it's actually the
+    // verse number.
     verse = chapter;
     chapter = danOverride.chapter;
+    bookAbbreviation = 'Dan';
   }
   const book = bible.MAPPING[bookAbbreviation];
   if (!book) {
+    // No book found! This match is not a Biblical reference.
     return null;
   }
-  const name = danOverride?.name ?? book.name;
-  if (!chapter) {
-    log.ensure(
-      !verse,
-      'Given the regex, if there is no chapter, there is definitely no verse!'
-    );
-    // This points to the whole book.
-    return { url: paths.bibleBookURL(book.path), name };
-  }
-  if (!verse && book.numChapters === 1) {
-    // This is a one-chapter book. The chapter number is always 1. The given
-    // number is actually the verse number.d
+  if (chapter && !verse && book.numChapters === 1) {
+    // This is a one-chapter book. The chapter number is always 1. The number
+    // immediately followed the book, which was interpreted as the chapter
+    // number, is actually the verse number.
     verse = chapter;
     chapter = '1';
   }
-  let url = `${paths.BIBLE}/${book.path}_${chapter}.html`;
-  if (verse) {
-    url = `${url}#v${verse}`;
-  }
-  return { url, name };
+  return {
+    url: paths.bible(book.path, chapter, verse),
+    name: danOverride?.name ?? book.name,
+  };
 }
 /**
  * NOTE: For the Bible abbreviation-to-id mapping, we opted for generating a

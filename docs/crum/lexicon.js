@@ -104,7 +104,7 @@ class CrumSearchResult extends SearchResult {
    * @returns
    */
   link() {
-    return `${paths.LEXICON}/${this.key}.html`;
+    return paths.crum(this.key);
   }
   /**
    * @returns
@@ -157,7 +157,7 @@ class KELLIASearchResult extends SearchResult {
    * @returns
    */
   link() {
-    return paths.CDO_LOOKUP_BY_KEY_PREFIX + this.key;
+    return paths.copticDictionaryOnline(this.key);
   }
   /**
    * @returns
@@ -201,7 +201,7 @@ class WikiSearchResult extends xoox.SearchResult {
    * @returns
    */
   link() {
-    return `${paths.LEXICON}/${this.key}.html#wiki`;
+    return `${paths.crum(this.key)}#${id.WIKI}`;
   }
 }
 const XOOXLES = [

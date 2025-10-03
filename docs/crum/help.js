@@ -65,11 +65,9 @@ export function makeHelpPanel(highlighter, devHighlighter) {
     ],
     X: [
       new help.Shortcut(
-        `Open the <a href="${paths.LEXICON}" target="_blank">dictionary search page</a>`,
+        `Open the <a href="${browser.getLinkHref('search')}" target="_blank">search page</a>`,
         ['lexicon', 'note', 'index', 'index_index'],
-        () => {
-          browser.open(paths.LEXICON);
-        }
+        browser.openSearchLink
       ),
     ],
     '?': [
@@ -192,13 +190,9 @@ export function makeHelpPanel(highlighter, devHighlighter) {
       ),
     ],
     T: [
-      new help.Shortcut(
-        `<a href="${paths.COPTICSITE}" target="_blank" rel="noopener,noreferrer">copticsi<strong>t</strong>e</a>`,
-        ['lexicon'],
-        () => {
-          browser.scroll('copticsite-title');
-        }
-      ),
+      new help.Shortcut('copticsi<strong>t</strong>e', ['lexicon'], () => {
+        browser.scroll('copticsite-title');
+      }),
     ],
     I: [
       new help.Shortcut('Wiki', ['lexicon'], () => {
@@ -299,13 +293,9 @@ export function makeHelpPanel(highlighter, devHighlighter) {
       ),
     ],
     t: [
-      new help.Shortcut(
-        `<a href="${paths.COPTICSITE}" target="_blank" rel="noopener,noreferrer">copticsi<strong>t</strong>e</a>`,
-        ['lexicon'],
-        () => {
-          browser.click('copticsite-title');
-        }
-      ),
+      new help.Shortcut('copticsi<strong>t</strong>e', ['lexicon'], () => {
+        browser.click('copticsite-title');
+      }),
     ],
     i: [
       new help.Shortcut('Wiki', ['lexicon'], () => {
