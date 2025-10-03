@@ -4,11 +4,12 @@
 import * as play from '@playwright/test';
 import * as cls from '../docs/crum/cls.js';
 import * as drop from '../docs/dropdown.js';
+import * as paths from '../docs/paths.js';
 
-// TODO: (#563) Add a test case for 1144.html.
-// TODO: (#419) Add more test cases. This doesn't suffice.
+// TODO: (#557) Add more test cases. This doesn't suffice.
+// TODO: (#557) Exercise the content of the elements, not just their count.
 const TEST_CASES: {
-  path: string;
+  key: string;
   want: {
     references: number;
     suffixes: number;
@@ -18,13 +19,23 @@ const TEST_CASES: {
   };
 }[] = [
   {
-    path: '88.html',
+    key: '88',
     want: {
       references: 139,
       suffixes: 133,
       bible: 119,
       dialectDropdowns: 383,
       annotations: 79,
+    },
+  },
+  {
+    key: '1144',
+    want: {
+      references: 4,
+      suffixes: 3,
+      bible: 6,
+      dialectDropdowns: 8,
+      annotations: 12,
     },
   },
 ];
@@ -41,9 +52,9 @@ const QUERIES: Record<string, string> = {
 play.test.describe('Wiki Reference Handlers', () => {
   for (const testCase of TEST_CASES) {
     play.test(
-      `Inserts the correct number of objects on ${testCase.path}`,
+      `Inserts the correct number of objects on ${testCase.key}`,
       async ({ page }: { page: play.Page }): Promise<void> => {
-        await page.goto(`/crum/${testCase.path}`, {
+        await page.goto(paths.crum(testCase.key), {
           waitUntil: 'networkidle',
         });
 
