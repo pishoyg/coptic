@@ -2,3 +2,17 @@
 .index-book-chapter-list a {
   margin-left: 5px;
 }
+
+table {
+  table-layout: fixed; /* Equal-width columns. */
+}
+
+td {
+  vertical-align: top;
+  padding: 10px; /* Adds some spacing inside the cells. */
+}
+
+td:first-child {
+  /* Adds a border to the right side of the first cell. */
+  border-right: 1px solid #ccc;
+}

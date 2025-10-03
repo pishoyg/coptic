@@ -643,12 +643,13 @@ class HTMLBuilder:
 
         assert not is_epub
         # For HTML, we list the testaments, sections, books, and chapters.
-        prev: bool = False
+        yield "<table>"
+        yield "<tr>"
         for testament in bible.testaments:
-            for section in testament.sections:
-                if prev:
+            yield "<td>"
+            for idx, section in enumerate(testament.sections):
+                if idx:
                     yield page.HORIZONTAL_RULE
-                prev = True
                 for book in section.books:
                     yield f'<h4 class="collapse index-book-name" \
                             id="{book.id()}">'
@@ -660,6 +661,9 @@ class HTMLBuilder:
                             yield " "
                         yield chapter.anchor(is_epub)
                     yield "</div>"
+            yield "</td>"
+        yield "</tr>"
+        yield "</table>"
 
     def write_html(self, bible: Bible, langs: list[Language]) -> None:
         def write_chapter(chapter: Chapter) -> None:
