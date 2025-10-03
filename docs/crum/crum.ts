@@ -70,7 +70,7 @@ export function handleCategories(root: HTMLElement): void {
         a.classList.add(ccls.HOVER_LINK);
         a.target = '_blank';
         a.textContent = cat;
-        a.href = `${paths.LEXICON}/${cat}.html`;
+        a.href = paths.crum(cat);
         return index === cats.length - 1 ? [a] : [a, ', '];
       })
     );
@@ -86,7 +86,7 @@ export function handleRootType(root: HTMLElement): void {
     const type: string = el.textContent.trim();
     const link = document.createElement('a');
     link.classList.add(ccls.HOVER_LINK);
-    link.href = `${paths.LEXICON}/${type.replaceAll('/', '_')}.html`;
+    link.href = paths.crum(type.replaceAll('/', '_'));
     link.target = '_blank';
     link.textContent = type;
     el.replaceChildren(link);
@@ -118,7 +118,7 @@ export function handleDawoudPageImg(root: HTMLElement): void {
       const img = el.children[0] as HTMLElement;
       img.classList.add(ccls.LINK);
       img.addEventListener('click', (): void => {
-        browser.open(`${paths.DAWOUD}?page=${img.getAttribute('alt')!}`);
+        browser.open(paths.dawoudScan(img.getAttribute('alt')!));
       });
     });
 }
@@ -132,7 +132,7 @@ export function handleCrumPageImg(root: HTMLElement): void {
     const img = el.children[0] as HTMLElement;
     img.classList.add(ccls.LINK);
     img.addEventListener('click', (): void => {
-      browser.open(`${paths.CRUM_SCAN_PREFIX}${img.getAttribute('alt')!}`);
+      browser.open(paths.crumScan(img.getAttribute('alt')!));
     });
   });
 }
@@ -323,21 +323,23 @@ export function insertCrumAbbreviationsLink(): void {
 }
 
 /**
- *
+ * Prefix all navigation URLs with the Lexicon path.
+ * This is unnecessary on web because a browser is capable of resolving relative
+ * paths. But it is necessary on Anki.
  * @param root
  */
 export function handleAnkiNavigation(root: HTMLElement): void {
   if (!iam.amI('anki')) return;
-  root.querySelectorAll<HTMLElement>(`.${cls.NAVIGATE}`).forEach((e) => {
-    if (e.tagName !== 'A' || !e.hasAttribute('href')) {
-      log.error(
-        'This "navigate" element is not an <a> tag with an "href" property!',
-        e
-      );
-      return;
-    }
-    e.setAttribute('href', `${paths.LEXICON}/${e.getAttribute('href')!}`);
-  });
+
+  root
+    .querySelectorAll<HTMLAnchorElement>(`a.${cls.NAVIGATE}`)
+    .forEach((e: HTMLAnchorElement) => {
+      if (e.href.startsWith('http')) {
+        log.error(cls.NAVIGATE, 'element looks like an absolute URL!');
+        return;
+      }
+      e.setAttribute('href', `${paths.LEXICON}/${e.href}`);
+    });
 }
 
 /**
@@ -348,7 +350,7 @@ export function addCopticLookups(root: HTMLElement): void {
   html.linkifyText(
     root,
     COPTIC_RE,
-    (match: RegExpExecArray) => paths.LOOKUP_URL_PREFIX + match[0],
+    (match: RegExpExecArray) => paths.lexiconLookup(match[0]),
     [ccls.HOVER_LINK],
     [cls.TYPE, cls.WIKI]
   );
@@ -362,7 +364,7 @@ export function addGreekLookups(root: HTMLElement): void {
   html.linkifyText(
     root,
     GREEK_RE,
-    (match: RegExpExecArray) => paths.GREEK_DICT_PREFIX + match[0],
+    (match: RegExpExecArray) => paths.greekLookup(match[0]),
     [ccls.LINK, cls.LIGHT]
   );
 }
@@ -376,7 +378,7 @@ export function addEnglishLookups(root: HTMLElement): void {
     html.linkifyText(
       el,
       ENGLISH_RE,
-      (match: RegExpExecArray) => paths.LOOKUP_URL_PREFIX + match[0],
+      (match: RegExpExecArray) => paths.lexiconLookup(match[0]),
       [ccls.HOVER_LINK]
     );
   });

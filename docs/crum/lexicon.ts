@@ -104,7 +104,7 @@ class CrumSearchResult extends SearchResult {
    * @returns
    */
   protected override link(): string {
-    return `${paths.LEXICON}/${this.key}.html`;
+    return paths.crum(this.key);
   }
 
   /**
@@ -162,7 +162,7 @@ class KELLIASearchResult extends SearchResult {
    * @returns
    */
   protected override link(): string {
-    return paths.CDO_LOOKUP_BY_KEY_PREFIX + this.key;
+    return paths.copticDictionaryOnline(this.key);
   }
 
   /**
@@ -211,7 +211,7 @@ class WikiSearchResult extends xoox.SearchResult {
    * @returns
    */
   protected override link(): string {
-    return `${paths.LEXICON}/${this.key}.html#wiki`;
+    return `${paths.crum(this.key)}#${id.WIKI}`;
   }
 }
 

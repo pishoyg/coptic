@@ -57,10 +57,7 @@ export class Droppable {
     }
     // This is a click-invoked tooltip.
     // Prevent clicks on the content from hiding it.
-    this.droppable.addEventListener(
-      'click',
-      browser.stopPropagation.bind(browser)
-    );
+    this.droppable.addEventListener('click', browser.stopPropagation);
     // A click on the .drop element hides the content.
     parent.addEventListener('click', (e: MouseEvent) => {
       this.toggle();

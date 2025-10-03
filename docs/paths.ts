@@ -8,16 +8,56 @@ export const HOME = `${URL}/`;
 export const LEXICON = `${URL}/crum`;
 export const DAWOUD = `${URL}/dawoud`;
 export const BIBLE = `${URL}/bible`;
-export const LOOKUP_URL_PREFIX = `${LEXICON}?query=`;
 
 /**
- * Construct a Bible book URL.
  *
- * @param bookID
- * @returns Bible book URL.
+ * @param key
+ * @param drvKey
+ * @returns
  */
-export function bibleBookURL(bookID: string): string {
-  return `${BIBLE}?book=${bookID}`;
+export function crum(key: string, drvKey?: string): string {
+  const url = `${LEXICON}/${key}.html`;
+  if (drvKey) {
+    return `${url}#drv${drvKey}`;
+  }
+  return url;
+}
+
+/**
+ *
+ * @param page
+ * @returns
+ */
+export function dawoudScan(page: string): string {
+  return `${DAWOUD}?page=${page}`;
+}
+
+/**
+ *
+ * @param query
+ * @returns
+ */
+export function lexiconLookup(query: string): string {
+  return `${LEXICON}?query=${query}`;
+}
+
+/**
+ *
+ * @param book
+ * @param chapter
+ * @param verse
+ * @returns
+ */
+export function bible(book: string, chapter?: string, verse?: string): string {
+  if (!chapter) {
+    // This is a book URL.
+    return `${BIBLE}?book=${book}`;
+  }
+  const chapterURL = `${BIBLE}/${book}_${chapter}.html`;
+  if (verse) {
+    return `${chapterURL}#v${verse}`;
+  }
+  return chapterURL;
 }
 
 // Other pages that we own:
@@ -27,15 +67,35 @@ export const REPORTS_PAGE_PARAM = 'entry.1382006920';
 
 // Pages that we don't own:
 export const KELLIA = 'https://kellia.uni-goettingen.de/';
-export const CDO_LOOKUP_BY_KEY_PREFIX =
-  'https://coptic-dictionary.org/entry.cgi?tla=';
-// TODO: (#50) Revisit the Greek dictionary used.
-export const GREEK_DICT_PREFIX = 'https://logeion.uchicago.edu/';
+
+/**
+ *
+ * @param key
+ * @returns
+ */
+export function copticDictionaryOnline(key: string): string {
+  return `https://coptic-dictionary.org/entry.cgi?tla=${key}`;
+}
+
+/**
+ *
+ * @param word
+ * @returns
+ * TODO: (#50) Revisit the Greek dictionary used.
+ */
+export function greekLookup(word: string): string {
+  return `https://logeion.uchicago.edu/${word}`;
+}
+
 export const CRUM_ABBREVIATIONS =
   'https://www.coptist.com/2025/07/30/digitised-bibliography-crum/';
-// TODO: (#460): Delete the following constant once no longer used.
-export const CRUM_SCAN_PREFIX =
-  'https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=';
-// TODO: (#308) Delete this constant and stop referencing the site. (It's not
-// working anyway!)
-export const COPTICSITE = 'http://copticsite.com/';
+
+/**
+ *
+ * @param page
+ * @returns
+ */
+export function crumScan(page: string): string {
+  // TODO: (#460): Use the in-house scan.
+  return `https://coptot.manuscriptroom.com/crum-coptic-dictionary/?docID=800000&pageID=${page}`;
+}
