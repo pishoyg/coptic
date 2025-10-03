@@ -86,6 +86,7 @@ from typing import Callable
 
 import bs4
 
+from flashcards import deck
 from utils import concur, ensure, file
 
 # KEY is the name of the key field in the output. This must match the name
@@ -524,7 +525,7 @@ class Index:
 
     def __init__(
         self,
-        source: str | Generator[tuple[str, str]],
+        source: str | deck.Deck,
         extract: list[Selector],
         captures: list[Capture],
         output: str | pathlib.Path,
@@ -538,14 +539,15 @@ class Index:
             captures: List of selectors of elements to capture in the output.
             output: Path to the output JSON file.
         """
-        self._source: str | Generator[tuple[str, str]] = source
+        self._source: str | deck.Deck = source
         self._extract: list[Selector] = extract
         self._captures: list[Capture] = captures
         self._output: str | pathlib.Path = output
 
     def iter_input(self) -> Generator[tuple[str, str]]:
-        if isinstance(self._source, Generator):
-            yield from self._source
+        if isinstance(self._source, deck.Deck):
+            for note in self._source.notes:
+                yield note.key, note.html
             return
 
         assert isinstance(self._source, str)

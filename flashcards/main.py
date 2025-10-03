@@ -3,6 +3,7 @@
 
 
 import argparse
+from collections import abc
 
 import genanki  # type: ignore[import-untyped]
 
@@ -57,7 +58,7 @@ def verify_unique_object_keys(decks: list[genanki.Deck]) -> None:
     )
 
 
-def write_anki(decks: list[deck.Deck]) -> None:
+def write_anki(decks: abc.Iterable[deck.Deck]) -> None:
     file.mk_parent_dir(paths.ANKI_DIR)
     media_files: set[deck.MediaFile] = set()
     anki_decks: list[genanki.Deck] = []
@@ -81,22 +82,17 @@ def write_anki(decks: list[deck.Deck]) -> None:
     deck.MediaFile.clean()
 
 
-def _decker_deck(decker: constants.Decker) -> deck.Deck:
-    return decker.deck_()
-
-
 def main() -> None:
     args = argparser.parse_args()
 
     # Write HTML output.
     if args.crum:
-        constants.CRUM_ALL.html()
+        constants.CRUM_ALL.write_html()
 
     # Write Anki output.
     if args.anki:
         with concur.thread_pool_executor() as executor:
-            decks = list(executor.map(_decker_deck, constants.DECKERS))
-            write_anki(decks)
+            write_anki(constants.DECKS)
 
     # Write Xooxle output.
     indexes: list[xooxle.Index] = []

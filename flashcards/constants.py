@@ -52,7 +52,6 @@ CRUM_HOME: str = relpath(paths.SITE_DIR)
 DAWOUD_DIR: str = relpath(paths.DAWOUD_DIR)
 SCAN_DIR: str = relpath(paths.CRUM_SCAN_DIR)
 
-DESCRIPTION = f"https://{paths.DOMAIN}"
 KELLIA_PREFIX = "https://coptic-dictionary.org/entry.cgi?tla="
 DAWOUD_SURNAME = "Dawoud"
 
@@ -78,43 +77,6 @@ def _img_aux(
     yield "</figure>"
     if line_br:
         yield page.LINE_BREAK
-
-
-class Decker:
-    """Decker is a wrapper that materializes the Deck upon request."""
-
-    # TODO: (#0) The `decker` type is a thin wrapper around `deck`. Eliminate
-    # it.
-
-    def __init__(self, deck_name: str, deck_id: int) -> None:
-        self._deck_name: str = deck_name
-        self._deck_id: int = deck_id
-
-    def deck_(self) -> deck.Deck:
-        return deck.Deck(
-            deck_name=self._deck_name,
-            deck_id=self._deck_id,
-            deck_description=DESCRIPTION,
-            notes=list(self.notes_aux()),
-            html_dir=str(paths.LEXICON_DIR),
-            index_indexes=self.index_indexes(),
-        )
-
-    def name(self) -> str:
-        return self._deck_name
-
-    def html(self) -> None:
-        self.deck_().write_html()
-
-    def notes_aux(self) -> abc.Generator[deck.Note]:
-        raise NotImplementedError
-
-    def index_indexes(self) -> list[deck.IndexIndex]:
-        return []
-
-    def notes_key_content_aux(self) -> abc.Generator[tuple[str, str]]:
-        for note in self.notes_aux():
-            yield note.key, note.html
 
 
 # All or nothing!
@@ -286,7 +248,7 @@ class CrumIndexer(Mother):
 # TODO: (#221) The produced HTML is identical between all versions of the Crum
 # decks. They only differ in the JavaScript, and the subset of the notes
 # included. Deduplicate the work to save a bit of time.
-class Crum(Decker):
+class Crum(deck.Deck):
     """Crum represents a Crum deck."""
 
     key_to_sister: dict[str, Sister] = {}
@@ -330,11 +292,11 @@ class Crum(Decker):
 
     def __init__(
         self,
-        deck_name: str,
+        name: str,
         deck_id: int,
         dialects: list[str] | None = None,
     ):
-        super().__init__(deck_name, deck_id)
+        super().__init__(name, deck_id)
         self.dialects: set[str] = set(dialects or [])
 
     @typing.override
@@ -715,7 +677,7 @@ class Crum(Decker):
         return out
 
 
-class Copticsite(Decker):
+class Copticsite(deck.Deck):
     """Copticsite represents a copticsite deck."""
 
     @typing.override
@@ -756,7 +718,7 @@ class Copticsite(Decker):
             key += 1
 
 
-class KELLIA(Decker):
+class KELLIA(deck.Deck):
     """KELLIA represents a KELLIA deck."""
 
     def __init__(
@@ -827,7 +789,7 @@ KELLIA_COMPREHENSIVE: KELLIA = KELLIA(
     1284010391,
     kellia.KELLIA.comprehensive,
 )
-DECKERS: list[Decker] = [
+DECKS: list[deck.Deck] = [
     CRUM_ALL,
     Crum("A Coptic Dictionary::Bohairic", 1284010383, ["B"]),
     Crum("A Coptic Dictionary::Sahidic", 1284010386, ["S"]),
@@ -891,9 +853,8 @@ _COPTICSITE_RETAIN_CLASSES = {
     "spelling",
 } | _DIALECTS
 
-
 CRUM_XOOXLE = xooxle.Index(
-    source=CRUM_ALL.notes_key_content_aux(),
+    source=CRUM_ALL,
     extract=[
         xooxle.Selector({"name": "title"}, force=False),
         xooxle.Selector({"class_": "header"}, force=False),
@@ -943,7 +904,7 @@ CRUM_XOOXLE = xooxle.Index(
 
 
 KELLIA_XOOXLE = xooxle.Index(
-    source=KELLIA_COMPREHENSIVE.notes_key_content_aux(),
+    source=KELLIA_COMPREHENSIVE,
     extract=[
         xooxle.Selector({"name": "footer"}, force=False),
         xooxle.Selector({"class_": "bibl"}, force=False),
@@ -973,7 +934,7 @@ KELLIA_XOOXLE = xooxle.Index(
 
 
 COPTICSITE_XOOXLE = xooxle.Index(
-    source=COPTICSITE_BOHAIRIC.notes_key_content_aux(),
+    source=COPTICSITE_BOHAIRIC,
     extract=[],
     captures=[
         xooxle.Capture(
@@ -990,7 +951,7 @@ COPTICSITE_XOOXLE = xooxle.Index(
 )
 
 CRUM_WIKI_XOOXLE: xooxle.Index = xooxle.Index(
-    source=CRUM_ALL.notes_key_content_aux(),
+    source=CRUM_ALL,
     extract=[],
     captures=[
         xooxle.Capture(

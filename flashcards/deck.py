@@ -53,7 +53,9 @@ Model IDs are hardcoded.
 # You can also use `writelines` instead of `write` to write a file, thus
 # avoiding saving the data in memory at any point.
 
+import functools
 import os
+import pathlib
 import re
 import shutil
 import tempfile
@@ -106,6 +108,7 @@ def _to_file_name(name: str) -> str:
     return name.replace("/", "_").lower()
 
 
+# TODO: (#203) The header should be fully defined in TypeScript.
 class HeaderCell:
     """HeaderCell represents a cell in the header table."""
 
@@ -153,7 +156,7 @@ class Index:
     def basename(self) -> str:
         return _to_file_name(self.title) + ".html"
 
-    def write(self, dir_: str, head: str, header: str) -> None:
+    def write(self, dir_: str | pathlib.Path, head: str, header: str) -> None:
         content = page.html_aux(head, INDEX_CLASS, header, *self.body)
         path = os.path.join(dir_, self.basename())
         file.writelines(content, path, report=False)
@@ -210,11 +213,14 @@ class IndexIndex:
                 css=self.css,
             )
 
-    def __write_subindex(self, args: tuple[str, Index, str]) -> None:
+    def __write_subindex(
+        self,
+        args: tuple[str | pathlib.Path, Index, str],
+    ) -> None:
         dir_, subindex, head = args
         subindex.write(dir_, head, self.subindex_header)
 
-    def write(self, dir_: str):
+    def write(self, dir_: str | pathlib.Path):
         # A subindex header includes a link to the index that contains
         # this subindex.
         with concur.thread_pool_executor() as executor:
@@ -313,7 +319,7 @@ class Note:
             "</div>",
         )
 
-    def write(self, dir_: str) -> None:
+    def write(self, dir_: str | pathlib.Path) -> None:
         path: str = os.path.join(dir_, self.key + ".html")
         file.write(self.html, path, report=False)
 
@@ -381,37 +387,42 @@ class Deck:
 
     def __init__(
         self,
-        deck_name: str,
+        name: str,
         deck_id: int,
-        deck_description: str,
-        # TODO: (#0) Use a generator instead of a list.
-        notes: list[Note],
-        html_dir: str = "",
-        index_indexes: list[IndexIndex] | None = None,
+        description: str = f"https://{paths.DOMAIN}",
+        html_dir: str | pathlib.Path = paths.LEXICON_DIR,
     ) -> None:
 
-        self.deck_name: str = deck_name
+        self.name: str = name
         self.deck_id: int = deck_id
-        self.deck_description: str = deck_description
-        self.notes: list[Note] = notes
+        self.description: str = description
+        self.html_dir: str | pathlib.Path = html_dir
+        self.media_files: set[MediaFile] = set()
+
+    @functools.cached_property
+    def notes(self) -> list[Note]:
+        notes: list[Note] = list(self.notes_aux())
         ensure.unique(
-            (note.key for note in self.notes),
+            (note.key for note in notes),
             "Note keys must be unique!",
         )
-        self.index_indexes: list[IndexIndex] = index_indexes or []
-        self.html_dir: str = html_dir
-
-        self.media_files: set[MediaFile] = set()
+        return notes
 
     def __write_html(self, o: Note | IndexIndex) -> None:
         o.write(self.html_dir)
+
+    def notes_aux(self) -> abc.Generator[Note]:
+        raise NotImplementedError
+
+    def index_indexes(self) -> list[IndexIndex]:
+        return []
 
     def write_html(self) -> None:
         assert self.html_dir
         with concur.thread_pool_executor() as executor:
             _ = [
                 *executor.map(self.__write_html, self.notes),
-                *executor.map(self.__write_html, self.index_indexes),
+                *executor.map(self.__write_html, self.index_indexes()),
             ]
         log.wrote(self.html_dir)
 
@@ -494,7 +505,7 @@ class Deck:
         javascript = "".join(self.__anki_js_aux())
         model = genanki.Model(
             model_id=self.deck_id,
-            name=self.deck_name,
+            name=self.name,
             fields=[
                 {"name": "Front"},
                 {"name": "Back"},
@@ -516,14 +527,14 @@ class Deck:
 
         deck = genanki.Deck(
             deck_id=self.deck_id,
-            name=self.deck_name,
-            description=self.deck_description,
+            name=self.name,
+            description=self.description,
         )
 
         for note in self.notes:
             front = self.__anki_html(note.front)
             back = self.__anki_html(note.back)
-            key = f"{self.deck_name} - {note.key}"
+            key = f"{self.name} - {note.key}"
             deck.add_note(GenankiNote(model=model, fields=[front, back, key]))
 
         return deck, self.media_files
