@@ -286,12 +286,18 @@ export function insertCrumAbbreviationsLink() {
  */
 export function handleAnkiNavigation(root) {
   if (!iam.amI('anki')) return;
-  root.querySelectorAll(`a.${cls.NAVIGATE}`).forEach((e) => {
-    if (e.href.startsWith('http')) {
-      log.error(cls.NAVIGATE, 'element looks like an absolute URL!');
+  root.querySelectorAll(`a.${cls.NAVIGATE}`).forEach((a) => {
+    // Get the raw attribute.
+    const href = a.getAttribute('href');
+    if (!href) {
+      log.error(cls.NAVIGATE, 'element HREF is unset!');
       return;
     }
-    e.setAttribute('href', `${paths.LEXICON}/${e.href}`);
+    if (href.startsWith('http')) {
+      log.error(cls.NAVIGATE, 'element HREF looks like an absolute URL!');
+      return;
+    }
+    a.setAttribute('href', `${paths.LEXICON}/${href}`);
   });
 }
 /**
