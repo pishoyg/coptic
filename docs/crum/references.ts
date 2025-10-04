@@ -1261,6 +1261,7 @@ export const MAPPING: Record<string, Source> = {
       'B. Turaief, Materiali &c. (v AZ 40 150, Orient. Bibliographie xv, no. 111 a), acc. to numbers',
     innerHTML:
       '<ul class="wp-block-list has-medium-font-size"> <li>Turayev, B. A. (1902). <a href="https://babel.hathitrust.org/cgi/pt?id=chi.102555010&amp;seq=389" rel="noreferrer noopener" target="_blank">Коптскіе тексты, пріобрѣтенные экспедиціей пок. В. Г. Бока въ Египтѣ</a> [Coptic texts, acquired by the expedition of the late V. G. Bok in Egypt]. In <em>Труды одиннадцатаго Археологическаго Съѣзда въ Кіевѣ</em> (1899), т. II, pp. 225–246. Москва. </li></ul>',
+    variant: 'TurMat',
   },
   TurO: {
     // TODO: (#545) Name doesn't make sense when it appears on its own!
