@@ -659,11 +659,6 @@ export const MAPPING: Record<string, Source> = {
     innerHTML:
       '<ul class="wp-block-list has-medium-font-size"> <li>Lemm, O. von. (1900). <em><a href="https://www.biodiversitylibrary.org/item/94350#page/325/mode/1up" rel="noreferrer noopener" target="_blank">Eine dem Dionysius Areopagita zugeschriebene Schrift in koptischer Sprache</a></em>. (Bulletin de l’Académie impériale des sciences de St.-Pétersbourg, V. série, Tome XII, No. 3). St. Petersburg.</li></ul>',
   },
-  Lect: {
-    // TODO: (#523) This should perhaps be a postfix or an annotation, rather
-    // than a reference.
-    title: 'Lectionary',
-  },
   Leip: {
     title: 'Leipzig University, Tischendorf’s Bohairic MSS. (Crum’s copies)',
   },
@@ -1138,11 +1133,6 @@ export const MAPPING: Record<string, Source> = {
     title: 'G. P. G. Sobhy, Le Martyre de St. Hélias, Cairo, 1919',
     innerHTML:
       '<ul class="wp-block-list has-medium-font-size"> <li>Sobhy, G. P. G. (1919). <em><a href="https://archive.org/details/lemartyredesaint00sobhuoft/page/n10/mode/2up" rel="noreferrer noopener" target="_blank">Le martyre de Saint Hélias et l’encomium de l’évêque Stéphanos de Hnès sur Saint Hélias</a></em>. (Bibliothèque d’Études coptes, Tome I). Le Caire: Imprimerie de l’Institut français d’archéologie orientale.</li></ul>',
-  },
-  Sitz: {
-    // TODO: (#523) This should perhaps be a postfix or an annotation, rather
-    // than a reference.
-    title: 'Sitzungsberichte',
   },
   Sobhy: {
     title: 'information supplied by Dr. G. P. G. Sobhy, Cairo',

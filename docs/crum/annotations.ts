@@ -101,21 +101,35 @@ export const MAPPING: Record<string, Annotation> = {
   ⲛ̅ⲉ̅: { fullForm: 'ⲛⲟⲩⲧⲉ', noCaseVariant: true },
 };
 
+// The following list of abbreviations mostly appear in reference titles,
+// or perhaps as postfixes.
+// TODO: (#522) Reconsider whether these abbreviations are needed when more
+// references are covered.
+// TODO: (#523) Reconsider whether the following abbreviations are needed after
+// postfixes are fully supported.
+Object.assign(MAPPING, {
+  Lect: { fullForm: 'Lectionary', noCaseVariant: true },
+  Mart: { fullForm: 'martyrdom', noCaseVariant: true },
+  Sitz: { fullForm: 'Sitzungsberichte', noCaseVariant: true },
+} as Record<string, Annotation>);
+
 // The following abbreviations are not listed in Crum's List of Abbreviations,
 // but they are nice to have.
 // This list may grow as we discover more abbreviations that are worth tooltips.
-MAPPING['cf'] = { fullForm: 'confer' };
-MAPPING['e g'] = { fullForm: 'exempli gratia' };
-MAPPING['Heb'] = { fullForm: 'Hebrew', noCaseVariant: true };
-MAPPING['i e'] = { fullForm: 'id est' };
-// TODO: (#511) Reconsider whether you want to retain the annotation for ib.
-MAPPING['ib'] = { fullForm: 'ibidem' };
-MAPPING['l c'] = { fullForm: 'loco citato' };
-MAPPING['MS'] = { fullForm: 'manuscript', noCaseVariant: true };
-MAPPING['MSS'] = { fullForm: 'manuscripts', noCaseVariant: true };
-MAPPING['q v'] = { fullForm: 'quod vide' };
-MAPPING['s v'] = { fullForm: 'sub verbo' };
-MAPPING['sc'] = { fullForm: 'scilicet' };
+Object.assign(MAPPING, {
+  cf: { fullForm: 'confer' },
+  'e g': { fullForm: 'exempli gratia' },
+  Heb: { fullForm: 'Hebrew', noCaseVariant: true },
+  'i e': { fullForm: 'id est' },
+  // TODO: (#511) Reconsider whether you want to retain the annotation for ib.
+  ib: { fullForm: 'ibidem' },
+  'l c': { fullForm: 'loco citato' },
+  MS: { fullForm: 'manuscript', noCaseVariant: true },
+  MSS: { fullForm: 'manuscripts', noCaseVariant: true },
+  'q v': { fullForm: 'quod vide' },
+  's v': { fullForm: 'sub verbo' },
+  sc: { fullForm: 'scilicet' },
+});
 
 Object.entries(MAPPING).forEach(
   ([key, annotation]: [string, Annotation]): void => {
