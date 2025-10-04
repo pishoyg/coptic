@@ -41,6 +41,7 @@ export interface Annotation {
 // headings or elsewhere in the text, which is hard to discern by the parser. It
 // would otherwise be confusing to show users the full definition.
 export const MAPPING: Record<string, Annotation> = {
+  // SECTION 1: ABBREVIATIONS LISTED IN CRUM'S LIST OF ABBREVIATIONS.
   acc: { fullForm: 'accusative' },
   adj: { fullForm: 'adjective' },
   ar: { fullForm: 'Arabic' },
@@ -99,24 +100,8 @@ export const MAPPING: Record<string, Annotation> = {
   // The following is somewhat unnecessary, but we include it for completion.
   // Crum had it in his list!
   ⲛ̅ⲉ̅: { fullForm: 'ⲛⲟⲩⲧⲉ', noCaseVariant: true },
-};
 
-// The following list of abbreviations mostly appear in reference titles,
-// or perhaps as postfixes.
-// TODO: (#522) Reconsider whether these abbreviations are needed when more
-// references are covered.
-// TODO: (#523) Reconsider whether the following abbreviations are needed after
-// postfixes are fully supported.
-Object.assign(MAPPING, {
-  Lect: { fullForm: 'Lectionary', noCaseVariant: true },
-  Mart: { fullForm: 'martyrdom', noCaseVariant: true },
-  Sitz: { fullForm: 'Sitzungsberichte', noCaseVariant: true },
-} as Record<string, Annotation>);
-
-// The following abbreviations are not listed in Crum's List of Abbreviations,
-// but they are nice to have.
-// This list may grow as we discover more abbreviations that are worth tooltips.
-Object.assign(MAPPING, {
+  // SECTION 2: ABBREVIATIONS WE CHOOSE TO INCLUDE TO AID INTELLIGIBILITY.
   cf: { fullForm: 'confer' },
   'e g': { fullForm: 'exempli gratia' },
   Heb: { fullForm: 'Hebrew', noCaseVariant: true },
@@ -129,7 +114,17 @@ Object.assign(MAPPING, {
   'q v': { fullForm: 'quod vide' },
   's v': { fullForm: 'sub verbo' },
   sc: { fullForm: 'scilicet' },
-});
+
+  // SECTION 3: ABBREVIATIONS THAT MOSTLY APPEAR IN REFERENCE TITLES, OR PERHAPS
+  // AS POSTFIXES:
+  // TODO: (#522) Reconsider whether these abbreviations are needed when more
+  // references are covered.
+  // TODO: (#523) Reconsider whether the following abbreviations are needed
+  // after postfixes are fully supported.
+  Lect: { fullForm: 'Lectionary', noCaseVariant: true },
+  Mart: { fullForm: 'martyrdom', noCaseVariant: true },
+  Sitz: { fullForm: 'Sitzungsberichte', noCaseVariant: true },
+};
 
 Object.entries(MAPPING).forEach(
   ([key, annotation]: [string, Annotation]): void => {
