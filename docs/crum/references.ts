@@ -9,7 +9,7 @@ export class Source {
    *
    * @param title
    * @param innerHTML
-   * @param variant
+   * @param variants
    * @param postfixes
    */
   public constructor(
@@ -21,15 +21,13 @@ export class Source {
      * bibliographical details and hyperlinks.
      */
     public readonly innerHTML?: string,
-    /** variant is a variant form used to cite this source in Crum's text.
-     * Sources were often cited inconsistently. Use this field to specify
+    /** variants is a list of variant forms used to cite this source in Crum's
+     * text. Sources were often cited inconsistently. Use this field to specify
      * variants, so we can detect citations that used alternative forms.
      * If there is no variant (which is the case for most sources), this field
      * should be empty.
-     * No abbreviation has been found to have more than two forms, so there is a
-     * maximum of one variant needed.
      */
-    public readonly variant?: string,
+    public readonly variants?: string[],
     /** postfixes is a list of all postfixes that this abbreviation can bear.
      *
      * Notice that postfixes are distinct from suffixes. Postfixes are part of
@@ -80,14 +78,14 @@ export const MAPPING: Record<string, Source> = {
     title: 'E. Amélineau, Œuvres de Schenoudi, 1907 ff',
     innerHTML:
       '<ul class="wp-block-list"> <li class="has-medium-font-size">Amélineau, E. (1907). <em><a href="https://archive.org/details/oeuvresdeschenou01shen/page/n5/mode/2up" rel="noreferrer noopener" target="_blank">Œuvres de Schenoudi: texte copte et traduction française</a></em>. Tome 1. Paris: E. Leroux.</li> <li class="has-medium-font-size">Amélineau, E. (1914). <em><a href="https://archive.org/details/oeuvresdeschenou02shen/page/n7/mode/2up" rel="noreferrer noopener" target="_blank">Œuvres de Schenoudi: texte copte et traduction française</a></em>. Tome 2. Paris: E. Leroux.</li></ul>',
-    variant: 'ShAm',
+    variants: ['ShAm'],
   },
   Absal: {
     title:
       'Kitâb al-Abṣâlmudîyah al-Muḳaddasah al-Sanawîyah (Theotokia), Alexandria, 1908',
     // NOTE: CaiThe occurs as a standalone abbreviation in Crum, but we treat it
     // as a variant to simplify the pipeline.
-    variant: 'CaiThe',
+    variants: ['CaiThe'],
     innerHTML:
       '<ul class="wp-block-list"> <li class="has-medium-font-size">Labīb, I. (1908). <em><a href="https://digitale-sammlungen.ulb.uni-bonn.de/content/titleinfo/3276169" rel="noreferrer noopener" target="_blank">Kitāb al-Ibṣalmūdiyyah al-sanawiyyah al-muqaddasah</a></em> [كتاب الإبصلمودية السنوية المقدسة — ⲡ̀ϫⲱⲙ ⲛ̀ⲧⲉ ϯⲯⲁⲗⲙⲟⲇⲓⲁ̀ ⲉ︦ⲑ︦ⲩ︦ ⲛ̀ⲧⲉⲣⲟⲙⲡⲓ]. Cairo: Heliopolis Press.</li></ul>',
   },
@@ -134,7 +132,7 @@ export const MAPPING: Record<string, Source> = {
     title: 'Accademia dei Lincei, Rendiconti',
     // NOTE: Rendiconti occurs as a standalone abbreviation in Crum, but we
     // treat it as a variant to simplify the pipeline.
-    variant: 'Rendiconti',
+    variants: ['Rendiconti'],
     innerHTML:
       '<ul class="wp-block-list"> <li class="has-medium-font-size"> <em>Atti della Reale Accademia dei Lincei, Rendiconti</em> began in 1884 and continued until 1929. All volumes are digitised and available on <a href="http://periodici.librari.beniculturali.it/PeriodicoScheda.aspx?id_testata=30&amp;Start=0" rel="noreferrer noopener" target="_blank">BiASA Periodici Italiani Digitalizzati</a>. </li></ul>',
   },
@@ -189,7 +187,7 @@ export const MAPPING: Record<string, Source> = {
   },
   'Berl. Wörterb': {
     title: 'Erman & Grapow, Wörterbuch d. Aeg. Sprache, 1926-31',
-    variant: 'Berl Wörterb',
+    variants: ['Berl Wörterb'],
     innerHTML:
       '<ul class="wp-block-list has-medium-font-size"> <li>Erman, A., &amp; Grapow, H. (1926-1931). <em><a href="https://www.ancientegyptfoundation.org/worterbuch_der_aegyptischen_sprache.shtml" rel="noreferrer noopener" target="_blank">Wörterbuch der ägyptischen Sprache im Auftrage der deutschen Akademien</a></em>. Leipzig: J. C. Hinrichs’sche Buchhandlung. [The project started by Erman and Grapow continues in digitised form in <em><a href="https://tla.digital/home" rel="noreferrer noopener" target="_blank">Thesaurus Linguae Aegyptiae</a></em>.]</li></ul>',
   },
@@ -281,7 +279,7 @@ export const MAPPING: Record<string, Source> = {
   'Cai Copt Mus': {
     // NOTE: Listed as '(Cai)CoptMus'!
     title: 'MSS. &c. in Coptic Museum, Cairo',
-    variant: 'Copt Mus',
+    variants: ['Copt Mus'],
   },
   CA: {
     title: 'Canons of Athanasius ed. Riedel & Crum (Text & Transl. Soc.), 1904',
@@ -650,7 +648,7 @@ export const MAPPING: Record<string, Source> = {
     // NOTE: This occurs as LCypr in the list, but has been found to be cited
     // as LCyp in the text.
     title: 'Lemm, Cyprian v. Antiochien',
-    variant: 'LCyp',
+    variants: ['LCyp'],
     innerHTML:
       '<ul class="wp-block-list has-medium-font-size"> <li>Lemm, O. von. (1899). <em><a href="https://www.biodiversitylibrary.org/item/212311#page/559/mode/1up" rel="noreferrer noopener" target="_blank">Sahidische Bruchstücke der Legende von Cyprian von Antiochien</a></em>. (Mémoires de l’Académie impériale des sciences de St.-Pétersbourg, VIIIe série, Tome IV, No. 6). St. Petersburg.</li></ul>',
   },
@@ -828,7 +826,7 @@ export const MAPPING: Record<string, Source> = {
   "O'Leary Th": {
     title: 'De Lacy O’Leary: The Coptic Theotokia, 1923',
     // NOTE: Listed as '—The'!
-    variant: "O'Leary The",
+    variants: ["O'Leary The"],
     innerHTML:
       '<ul class="wp-block-list has-medium-font-size"> <li>O’Leary, De Lacy. (1923). <em><a href="https://archive.org/details/coptictheotokia0000copt/page/n3/mode/2up" rel="noreferrer noopener" target="_blank">The Coptic Theotokia: Text from Vatican Cod. Copt. xxxviii, Bib. Nat. Copte 22, 23, 35, 69 and Other MSS. Including Fragments Recently Found at the Dêr Abû Makâr in the Wadi Natrun</a></em>. London: Luzac &amp; Co.</li></ul>',
   },
@@ -848,7 +846,7 @@ export const MAPPING: Record<string, Source> = {
       'Oratio Cypriani in Veröffentl. a. d. badischen Papyrussamml., Heft 5, 1934, p. 305 ff',
     // NOTE: PBad occurs as a standalone abbreviation in Crum, but we treat it
     // as a variant to simplify the pipeline.
-    variant: 'PBad',
+    variants: ['PBad'],
     innerHTML:
       '<ul class="wp-block-list"> <li class="has-medium-font-size">Bilabel, F., &amp; Grohmann, A. (1934). <em>Griechische, koptische und arabische Texte zur Religion und religiösen Literatur in Ägyptens Spätzeit</em>. (Veröffentlichungen aus den badischen Papyrus-Sammlungen, Heft 5). Heidelberg: Verlag der Universitätsbibliothek. [If you know of a digital copy, please <a href="https://www.coptist.com/contact-%e2%b2%a7%e2%b2%81%e2%b2%99%e2%b2%9f%e2%b2%93/"> contact me</a>] </li></ul>',
   },
@@ -1102,7 +1100,7 @@ export const MAPPING: Record<string, Source> = {
       'works of Shenoute (& of his disciple Besa). Prefixed to all quotations from their writings (doubtfully to Mor 54)',
     // NOTE: Besa occurs as a standalone abbreviation in Crum, but we treat it
     // as a variant to simplify the pipeline.
-    variant: 'Besa',
+    variants: ['Besa'],
     postfixes: [
       'BM',
       'BMOr',
@@ -1149,7 +1147,7 @@ export const MAPPING: Record<string, Source> = {
   },
   ST: {
     title: 'Crum, Short Texts from Coptic Ostraca & Papyri, 1921',
-    variant: 'St',
+    variants: ['St'],
     innerHTML:
       '<ul class="wp-block-list has-medium-font-size"> <li>Crum, W. E. (1921). <em><a href="https://archive.org/details/shorttextsfromco00crum/page/n5/mode/2up" rel="noreferrer noopener" target="_blank">Short Texts from Coptic Ostraca and Papyri</a></em>. Oxford University Press.</li></ul>',
   },
@@ -1261,7 +1259,7 @@ export const MAPPING: Record<string, Source> = {
       'B. Turaief, Materiali &c. (v AZ 40 150, Orient. Bibliographie xv, no. 111 a), acc. to numbers',
     innerHTML:
       '<ul class="wp-block-list has-medium-font-size"> <li>Turayev, B. A. (1902). <a href="https://babel.hathitrust.org/cgi/pt?id=chi.102555010&amp;seq=389" rel="noreferrer noopener" target="_blank">Коптскіе тексты, пріобрѣтенные экспедиціей пок. В. Г. Бока въ Египтѣ</a> [Coptic texts, acquired by the expedition of the late V. G. Bok in Egypt]. In <em>Труды одиннадцатаго Археологическаго Съѣзда въ Кіевѣ</em> (1899), т. II, pp. 225–246. Москва. </li></ul>',
-    variant: 'TurMat',
+    variants: ['TurMat'],
   },
   TurO: {
     // TODO: (#545) Name doesn't make sense when it appears on its own!
@@ -1340,15 +1338,12 @@ function add(key: string, source: Source): void {
 
 // Add all the variants to the map.
 Object.entries(MAPPING).forEach(([key, source]: [string, Source]): void => {
-  const abbreviations: string[] = [key];
-  if (source.variant) {
-    // Add an entry for the variant variant.
-    add(source.variant, source);
-    abbreviations.push(source.variant);
-  }
+  source.variants?.forEach((variant: string): void => {
+    add(variant, source);
+  });
 
   source.postfixes?.forEach((postfix: string): void => {
-    abbreviations.forEach((abb: string): void => {
+    [key, ...(source.variants ?? [])].forEach((abb: string): void => {
       add(`${abb} ${postfix}`, source);
     });
   });
