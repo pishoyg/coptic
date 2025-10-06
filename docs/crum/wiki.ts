@@ -205,17 +205,17 @@ export function handleAnnotations(root: HTMLElement): void {
     html.replaceText(
       root,
       regex,
-      (match: RegExpExecArray): (Node | string)[] | null => {
+      (match: RegExpExecArray): { replacement?: Node } => {
         const form: string = match[0];
         const annot: ann.Annotation | undefined = ann.MAPPING[form];
         if (!annot) {
-          return null;
+          return {};
         }
         const span: HTMLSpanElement = document.createElement('span');
         span.textContent = form;
         drop.addDroppable(span, 'hover', annot.fullForm);
         span.classList.add(cls.ANNOTATION);
-        return [span];
+        return { replacement: span };
       },
       // Exclude all Wiki abbreviations to avoid overlap.
       ABBREVIATION_EXCLUDE
@@ -297,11 +297,11 @@ export function handleBible(root: HTMLElement): void {
   html.replaceText(
     root,
     BIBLE_RE,
-    (match: RegExpExecArray): (Node | string)[] | null => {
+    (match: RegExpExecArray): { replacement?: Node } => {
       const result: { url: string; name: string } | null =
         parseBibleCitation(match);
       if (!result) {
-        return null;
+        return {};
       }
       const link: HTMLAnchorElement = document.createElement('a');
       link.href = result.url;
@@ -309,7 +309,7 @@ export function handleBible(root: HTMLElement): void {
       link.classList.add(ccls.HOVER_LINK, cls.BIBLE);
       link.textContent = match[0];
       drop.addDroppable(link, 'hover', result.name);
-      return [link];
+      return { replacement: link };
     },
     // Exclude all Wiki abbreviations to avoid overlap.
     // This is not expected to occur, especially for Biblical references,
@@ -388,7 +388,7 @@ function replaceReference(
   match: RegExpExecArray,
   remainder: string,
   nextSibling: ChildNode | null
-): (Node | string)[] | null {
+): { replacement?: Node } {
   // Given the regex, the first capture group must be present.
   let abbrev: string = match[1]!;
   let suffix: string | undefined = match[2];
@@ -445,7 +445,7 @@ function replaceReference(
 
   if (!source) {
     // Still no source found! Return!
-    return null;
+    return {};
   }
 
   // Add a hover-invoked tooltip.
@@ -457,13 +457,12 @@ function replaceReference(
   }
   drop.addDroppable(span, 'hover', ...tooltip);
 
-  if (!suffix) {
-    return [span];
+  if (suffix) {
+    // Add the suffix as a child.
+    span.append(' ', parseSuffix(suffix, remainder, nextSibling));
   }
 
-  // Add the suffix as a child.
-  span.append(' ', parseSuffix(suffix, remainder, nextSibling));
-  return [span];
+  return { replacement: span };
 }
 
 /* eslint-enable max-lines-per-function */

@@ -41,6 +41,9 @@ export function makeSpanLinkToAnchor(el: Element, target: string): void {
  * For each text node in the given subtree, for each substring matching the
  * given regex, use the replace method to construct a replacement, and insert it
  * into the tree.
+ * We process one match at a time, providing the replacer with both the match
+ * and the remainder of the string. You have the option to provide a
+ * replacement, but also to override the remainder if needed.
  *
  * NOTE: Regarding normalization:
  * - We search one node at a time. A string that matches the regex, but
@@ -55,8 +58,10 @@ export function makeSpanLinkToAnchor(el: Element, target: string): void {
  *
  * @param root - Root of the tree to process.
  * @param regex - Regex to search for in the text nodes of the tree.
- * @param replace - A method to construct a fragment from a regex match
- * obtained with the regex above. Return null if no replacement is required.
+ * @param replace - A method to construct a fragment from a regex match.
+ * It should return an object containing the `replacement` nodes/strings
+ * and a `remainder` string to be searched for subsequent matches.
+ * Return an empty object if no special replacement is required.
  * @param exclude - An optional query specifying if any subtrees of
  * the given root should be excluded.
  */
@@ -67,47 +72,56 @@ export function replaceText(
     match: RegExpExecArray,
     remainder: string,
     nextSibling: ChildNode | null
-  ) => (Node | string)[] | null,
+  ) => { replacement?: Node; remainder?: string },
   exclude?: string
 ): void {
   // We can't replace nodes on the fly, as this could corrupt the walker.
-  // Instead, we store all nodes that need replacement, and then process them
+  // Instead, we capture all nodes that need replacement, and then process them
   // afterwards.
-  const nodes: Text[] = captureNodes(root, regex, exclude);
-
-  nodes.forEach((node: Text): void => {
+  Array.from(filterNodes(root, regex, exclude)).forEach((node: Text): void => {
     if (exclude && node.parentElement?.closest(exclude)) {
       // Skip this node.
       // While we already accounted for the exclusions when we captured the node
       // array, it's possible that the tree structure has since changed, and
-      // that the node should be excluded now.
+      // that a node that was previously admitted should now be excluded.
       return;
     }
-    const text: string = node.nodeValue!;
-    let lastIndex = 0;
+
+    let text: string = node.nodeValue!;
     const fragment: DocumentFragment = document.createDocumentFragment();
 
-    regex.lastIndex = 0;
-    for (let match: RegExpExecArray | null; (match = regex.exec(text)); ) {
-      // Add preceding plain text.
-      if (match.index > lastIndex) {
-        fragment.append(text.slice(lastIndex, match.index));
+    // Loop as long as there is text to process.
+    while (text.length > 0) {
+      regex.lastIndex = 0; // Reset regex state for searching the new text.
+      const match: RegExpExecArray | null = regex.exec(text);
+
+      if (!match) {
+        // No more matches in the current text. Append the rest and stop.
+        fragment.append(text);
+        break;
       }
 
-      lastIndex = match.index + match[0].length;
-      const replacement: (Node | string)[] | null = replace(
-        match,
-        text.slice(lastIndex),
-        node.nextSibling
-      ) ?? [match[0]];
-      fragment.append(...replacement);
+      // Add the plain text that precedes the match.
+      fragment.append(text.slice(0, match.index));
+
+      // The remainder is the text following the current match.
+      const remainder: string = text.slice(match.index + match[0].length);
+
+      // Call the replacer function to get the replacement and the new
+      // remainder.
+      const result = replace(match, remainder, node.nextSibling);
+
+      // If a custom replacement is provided, insert it. Otherwise, insert the
+      // original text.
+      fragment.append(result.replacement ?? match[0]);
+
+      // The string to search next is the remainder, which could've potentially
+      // been overridden by the replacer.
+      text = result.remainder ?? remainder;
     }
 
-    if (lastIndex < text.length) {
-      fragment.append(text.slice(lastIndex));
-    }
-    // Normalize the fragment. Get rid of empty text node, and merge consecutive
-    // text nodes.
+    // Normalize the fragment. Get rid of empty text nodes, and merge
+    // consecutive text nodes.
     fragment.normalize();
     node.replaceWith(fragment);
   });
@@ -120,7 +134,11 @@ export function replaceText(
  * @param exclude
  * @returns
  */
-function captureNodes(root: Node, regex: RegExp, exclude?: string): Text[] {
+function* filterNodes(
+  root: Node,
+  regex: RegExp,
+  exclude?: string
+): Generator<Text> {
   const walker: TreeWalker = document.createTreeWalker(
     root,
     NodeFilter.SHOW_TEXT,
@@ -137,11 +155,9 @@ function captureNodes(root: Node, regex: RegExp, exclude?: string): Text[] {
     }
   );
 
-  const nodes: Text[] = [];
   while (walker.nextNode()) {
-    nodes.push(walker.currentNode as Text);
+    yield walker.currentNode as Text;
   }
-  return nodes;
 }
 
 /**
@@ -169,11 +185,11 @@ export function linkifyText(
   replaceText(
     root,
     regex,
-    (match: RegExpExecArray): (Node | string)[] | null => {
+    (match: RegExpExecArray): { replacement?: Node } => {
       const targetUrl = url(match);
       if (!targetUrl) {
         // This text doesn't have a URL. Return the original text.
-        return null;
+        return {};
       }
 
       // Create a link.
@@ -183,7 +199,7 @@ export function linkifyText(
       link.addEventListener('click', () => {
         browser.open(targetUrl);
       });
-      return [link];
+      return { replacement: link };
     },
     css.classQuery(...excludedClasses)
   );
