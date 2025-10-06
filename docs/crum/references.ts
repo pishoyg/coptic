@@ -43,6 +43,23 @@ export class Source {
   ) {}
 }
 
+/**
+ * @param source
+ * @returns
+ * TODO: (#0) This should be a member method of Source, and the record below
+ * should construct proper objects.
+ */
+export function tooltip(source: Source): (Node | string)[] {
+  const fragment: (Node | string)[] = [source.title];
+  if (!source.innerHTML) {
+    return fragment;
+  }
+  const template: HTMLTemplateElement = document.createElement('template');
+  template.innerHTML = source.innerHTML;
+  fragment.push(...template.content.childNodes);
+  return fragment;
+}
+
 /** MAPPING maps an abbreviation to a Source object.
  *
  * The key of the mapping is the primary form used to cite this source in

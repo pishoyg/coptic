@@ -140,7 +140,7 @@ export const ANNOTATION_RES: RegExp[] = [
 //     assume that, if it occurs after a reference abbreviation, then it's
 //     likely a suffix.
 export const SUFFIX = new RegExp(
-  `((?:\\s(?:'?[0-9]+|[a-zA-Z])${str.BOUNDARY_END.source})*)`,
+  `^(?:\\s(?:'?[0-9]+|[a-zA-Z])${str.BOUNDARY_END.source})+`,
   'u'
 );
 const LETTER = /[a-zA-Z\p{M}&]/u;
@@ -152,36 +152,40 @@ const SPECIAL_CASES: string[] = [
   // The abbreviation usually occurs with ‘Wörterb’ occurring inside a <i> tag,
   // so we need to be able to match ‘Berl.’ on its own as well.
   'Berl\\.',
+  // The following cases contain digits!
+  'Mani 1',
+  'Mani 2',
+  'Almk 1',
+  'Almk 2',
+  'Mich 550',
 ];
 
 export const REFERENCE_RES: RegExp[] = [
   // Special cases, and three-word reference abbreviations:
   new RegExp(
     str.bounded(
-      `(${[...SPECIAL_CASES, `[A-Z]${LETTER.source}*\\s${LETTER.source}+\\s${LETTER.source}+`].join('|')})${SUFFIX.source}`
+      [
+        ...SPECIAL_CASES,
+        `[A-Z]${LETTER.source}*\\s${LETTER.source}+\\s${LETTER.source}+`,
+      ].join('|')
     ),
     'gu'
   ),
   // Two-word reference abbreviations:
-  new RegExp(
-    str.bounded(`([A-Z]${LETTER.source}*\\s${LETTER.source}+)${SUFFIX.source}`),
-    'gu'
-  ),
+  new RegExp(str.bounded(`[A-Z]${LETTER.source}*\\s${LETTER.source}+`), 'gu'),
   // One-word reference abbreviations:
-  new RegExp(str.bounded(`([A-Z]${LETTER.source}*)${SUFFIX.source}`), 'gu'),
+  new RegExp(str.bounded(`[A-Z]${LETTER.source}*`), 'gu'),
 ];
 
 /**
  * Handle all Crum elements.
  * @param root
- * TODO: (#419) This function does a lot of dexterous tree manipulations. It's
- * worth adding a text to verify that the text content of the tree (minus the
- * droppables, tooltips, ...) doesn't change after the function execution.
  */
 export function handle(root: HTMLElement): void {
   root
     .querySelectorAll<HTMLElement>(`.${cls.WIKI}`)
     .forEach((elem: HTMLElement): void => {
+      const startText: string = drop.noTipTextContent(elem);
       // Bible abbreviations are not expected to collide with other
       // abbreviations. We do them early to move them out of the way.
       handleBible(elem);
@@ -193,6 +197,16 @@ export function handle(root: HTMLElement): void {
       handleReferences(elem);
       handleAnnotations(elem);
       warnPotentiallyMissingReferences(elem);
+      const endText: string = drop.noTipTextContent(elem);
+      // This handler should only add tooltips without modifying text content at
+      // all. Verify that the text content hasn't changed.
+      log.check(
+        endText === startText,
+        'Final text differs from original text! Original:',
+        startText,
+        'Final:',
+        endText
+      );
     });
 }
 
@@ -328,54 +342,44 @@ export function handleBible(root: HTMLElement): void {
 /**
  *
  * @param suffix
- * @param remainder
- * @param nextSibling
+ * @param maybeSuperscript
  * @returns
  */
 function parseSuffix(
   suffix: string,
-  remainder: string,
-  nextSibling: ChildNode | null
+  maybeSuperscript: ChildNode | null
 ): HTMLSpanElement {
   const span: HTMLSpanElement = document.createElement('span');
   span.classList.add(cls.SUFFIX);
   span.textContent = suffix;
-  // Sometimes, the suffix has a superscript.
-  if (remainder) {
-    // The original string that had this suffix had a remainder. Thus, we can't
-    // have a superscript, because the remainder would show between the suffix
-    // and the superscript.
-    // Return.
+
+  if (maybeSuperscript?.nodeName !== 'SUP') {
+    // The node is not a superscript.
     return span;
   }
 
-  if (nextSibling?.nodeName !== 'SUP') {
-    // The next sibling is not a superscript.
-    return span;
-  }
-
-  // We need to capture our sibling's sibling before we move our sibling,
-  // otherwise our sibling will no longer be able to access its sibling.
-  const nextNext: ChildNode | null = nextSibling.nextSibling;
-  span.append(nextSibling);
+  // We need to capture the superscript's sibling before we move the
+  // superscript, otherwise we wouldn't be able to access it after the move.
+  const nextSibling: ChildNode | null = maybeSuperscript.nextSibling;
+  span.append(maybeSuperscript);
 
   // Sometimes, there are even more numbers following the superscript.
-  const match: RegExpMatchArray | null | undefined =
-    nextNext?.nodeValue?.match(SUFFIX);
-  if (
-    nextNext?.nodeValue &&
-    match?.index === 0 &&
-    match[0] // Prevent matching the empty string.
-  ) {
-    span.append(match[0]);
-    nextNext.nodeValue = nextNext.nodeValue.slice(match[0].length);
+  if (!nextSibling?.nodeValue) {
+    return span;
   }
+
+  const match: RegExpMatchArray | null = nextSibling.nodeValue.match(SUFFIX);
+  if (!match) {
+    return span;
+  }
+
+  span.append(match[0]);
+  nextSibling.nodeValue = nextSibling.nodeValue.slice(match[0].length);
   return span;
 }
 
 // TODO: (#0) Simplify this method.
 /* eslint-disable complexity */
-/* eslint-disable max-lines-per-function */
 
 /**
  *
@@ -388,30 +392,18 @@ function replaceReference(
   match: RegExpExecArray,
   remainder: string,
   nextSibling: ChildNode | null
-): { replacement?: Node } {
-  // Given the regex, the first capture group must be present.
-  let abbrev: string = match[1]!;
-  let suffix: string | undefined = match[2];
+): { replacement?: Node; remainder?: string } {
+  // Parse a suffix from the remainder. Update the remainder.
+  let suffix: string | undefined = SUFFIX.exec(remainder)?.[0];
+  remainder = remainder.slice(suffix?.length);
 
   // Try to find a source.
-  let source: ref.Source | undefined = ref.MAPPING[abbrev];
-
-  if (!source && suffix) {
-    // Sometimes, the first word in the suffix is part of the
-    // abbreviation. Try moving it from the suffix to the abbreviation,
-    // and search for that in the reference mapping.
-    const m: RegExpExecArray | null = /^\s(\S+)(.*)/u.exec(suffix);
-    if (m?.[1]) {
-      abbrev = `${abbrev} ${m[1]}`;
-      suffix = m[2];
-      source = ref.MAPPING[abbrev];
-    }
-  }
+  let source: ref.Source | undefined = ref.MAPPING[match[0]];
 
   // Construct a tentative span.
   const span: HTMLSpanElement = document.createElement('span');
   span.classList.add(cls.REFERENCE);
-  span.textContent = abbrev;
+  span.textContent = match[0];
 
   // Sometimes, part of the abbreviation lives inside the next sibling.
   if (
@@ -422,25 +414,29 @@ function replaceReference(
     nextSibling.textContent && // The next node also has text.
     // The text obtained from combining this node and the text represents a
     // source abbreviation.
-    (source = ref.MAPPING[(abbrev = `${abbrev} ${nextSibling.textContent}`)])
+    (source = ref.MAPPING[`${match[0]} ${nextSibling.textContent}`])
   ) {
     // Success! The next sibling is actually part of the abbreviation.
-    // We will also parse a suffix out of the sibling's sibling.
     // Save a reference to the sibling's sibling, before we move the sibling and
     // we can no longer access its sibling.
-    const cur: ChildNode | null = nextSibling.nextSibling;
+    const nextNext: ChildNode | null = nextSibling.nextSibling;
     // Move the sibling to the reference span that you're constructing.
     span.append(' ', nextSibling);
-    nextSibling = cur?.nextSibling ?? null;
-    if (cur?.nodeType === Node.TEXT_NODE && cur.nodeValue) {
-      remainder = cur.nodeValue;
-      const m = SUFFIX.exec(cur.nodeValue);
-      if (m?.index === 0 && m[0] /* Prevent matching the empty string. */) {
-        // We can successfully retrieve a suffix from the node.
-        suffix = m[0];
-        remainder = cur.nodeValue = cur.nodeValue.slice(suffix.length);
-      }
+    remainder = ''; // We have consumed the remainder.
+    // Check if the sibling's sibling bears a suffix.
+    if ((suffix = nextNext?.nodeValue?.match(SUFFIX)?.[0])) {
+      // We can successfully retrieve a suffix from the node.
+      nextNext.nodeValue = nextNext.nodeValue.slice(suffix.length);
+      // If the suffix node has no text left, its sibling is a candidate
+      // superscript.
+      nextSibling = nextNext.nodeValue ? null : nextNext.nextSibling;
     }
+  } else if (remainder) {
+    // We pass the next sibling to the suffix parser, because it might be a
+    // superscript.
+    // We only do that if there is no remainder. Otherwise, such a remainder
+    // would show between the suffix and the superscript.
+    nextSibling = null;
   }
 
   if (!source) {
@@ -448,24 +444,16 @@ function replaceReference(
     return {};
   }
 
-  // Add a hover-invoked tooltip.
-  const tooltip: (Node | string)[] = [source.title];
-  if (source.innerHTML) {
-    const template: HTMLTemplateElement = document.createElement('template');
-    template.innerHTML = source.innerHTML;
-    tooltip.push(...template.content.childNodes);
-  }
-  drop.addDroppable(span, 'hover', ...tooltip);
-
+  // Add the suffix as a child.
   if (suffix) {
-    // Add the suffix as a child.
-    span.append(' ', parseSuffix(suffix, remainder, nextSibling));
+    span.append(parseSuffix(suffix, nextSibling /* candidate superscript  */));
   }
+  // Add a hover-invoked tooltip.
+  drop.addDroppable(span, 'hover', ...ref.tooltip(source));
 
-  return { replacement: span };
+  return { replacement: span, remainder };
 }
 
-/* eslint-enable max-lines-per-function */
 /* eslint-enable complexity */
 
 /**
