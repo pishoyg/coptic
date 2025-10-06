@@ -82,7 +82,7 @@ repos:
         language: system
         pass_filenames: false
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v9.33.0
+    rev: v9.37.0
     hooks:
       - id: eslint
         additional_dependencies:
@@ -131,13 +131,13 @@ repos:
         language: system
         types: [python]
   - repo: https://github.com/psf/black-pre-commit-mirror
-    rev: 25.1.0
+    rev: 25.9.0
     hooks:
       - id: black
         args: [--line-length, '79']
 
   - repo: https://github.com/pycqa/isort
-    rev: 6.0.1
+    rev: 6.1.0
     hooks:
       - id: isort
 
@@ -159,7 +159,7 @@ repos:
       - id: pyupgrade
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.12.8
+    rev: v0.13.3
     hooks:
       - id: ruff
         args: [--fix]
@@ -183,7 +183,7 @@ repos:
       - id: setup-cfg-fmt
 
   - repo: https://github.com/pylint-dev/pylint
-    rev: v3.3.8
+    rev: v3.3.9
     hooks:
       - id: pylint
 
@@ -272,7 +272,7 @@ repos:
       - id: gitleaks
 
   - repo: https://github.com/trufflesecurity/truffleHog
-    rev: v3.90.3
+    rev: v3.90.8
     hooks:
       - id: trufflehog
 
@@ -321,7 +321,7 @@ repos:
 
   # Protobuf
   - repo: https://github.com/bufbuild/buf
-    rev: v1.56.0
+    rev: v1.57.2
     hooks:
       - id: buf-dep-prune
       - id: buf-dep-update
@@ -332,7 +332,7 @@ repos:
 
   # Lua
   - repo: https://github.com/JohnnyMorganz/StyLua
-    rev: v2.1.0
+    rev: v2.3.0
     hooks:
       - id: stylua
 

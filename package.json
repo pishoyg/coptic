@@ -1,24 +1,24 @@
 {
   "type": "module",
   "devDependencies": {
-    "@eslint/js": "^9.33.0",
-    "@playwright/test": "^1.54.2",
+    "@eslint/js": "^9.37.0",
+    "@playwright/test": "^1.56.0",
     "@stylistic/eslint-plugin": "^2.13.0",
     "@types/jest": "^30.0.0",
     "clean-css": "^5.3.3",
-    "esbuild": "^0.25.8",
-    "eslint": "^9.33.0",
+    "esbuild": "^0.25.10",
+    "eslint": "^9.37.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-jsdoc": "^50.8.0",
     "eslint-plugin-prettier": "^5.5.4",
     "globals": "^15.15.0",
     "http-server": "^14.1.1",
     "prettier": "^3.6.2",
-    "stylelint": "^16.23.1",
+    "stylelint": "^16.25.0",
     "stylelint-config-standard-scss": "^13.1.0",
-    "typescript": "^5.9.2",
-    "typescript-eslint": "^8.39.0",
-    "webpack": "^5.101.0"
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.0",
+    "webpack": "^5.102.0"
   },
   "prettier": {
     "overrides": [
