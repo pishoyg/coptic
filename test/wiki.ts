@@ -61,6 +61,19 @@ const TEST_CASES: {
       annotations: 3,
     },
   },
+  {
+    // 1082 covers a case where ‘P’ was mistakenly parsed as a suffix, thus
+    // breaking our reference detection. We make sure it's actually parsed as a
+    // source.
+    key: '1082',
+    want: {
+      references: 2,
+      suffixes: 2,
+      bible: 2,
+      dialectDropdowns: 11,
+      annotations: 6,
+    },
+  },
 ];
 
 // A map of test keys to their corresponding CSS selectors.
