@@ -61,11 +61,14 @@ export class Source {
  * NOTE: Crum often used abbreviated form inconsistently, which complicates our
  * parsing. In cases where there is inconsistency with spacing, the stored
  * abbreviated form should contain the spaces. Our algorithm should then
- * automatically search for both the stored form, and a generated space-free
- * form. There is no need to store the space-free form as a variant, as this
- * will be handled automatically. The form that Crum used in his list (generally
- * speaking, that's the space-free form) should, nevertheless, be mentioned in a
- * comment, to aid manual verification.
+ * automatically search for both the stored form, and a number of generated
+ * forms that have fewer spaces.
+ * There is no need to store the variants, as this will be handled
+ * automatically.
+ * The form that Crum used in his list (usually a space-free form) should,
+ * nevertheless, be mentioned in a comment, to aid manual verification.
+ * Variants that differ in non-space characters should, however, be explicitly
+ * mentioned.
  *
  * TODO: (#419) Revisit multi-part abbreviations, and insert spaces where
  * appropriate. We have attempted to insert spaces for all abbreviations that
@@ -1324,6 +1327,22 @@ export const MAPPING: Record<string, Source> = {
     innerHTML:
       '<ul class="wp-block-list has-medium-font-size"> <li> <em>Zeitschrift für die neutestamentliche Wissenschaft und die Kunde der älteren Kirche</em> began in 1900. Early digitised volumes are linked on <a href="https://de.wikisource.org/wiki/Zeitschriften_(Theologie)#Z" rel="noreferrer noopener" target="_blank">de.WikiSource.org</a>. Further volumes available <a href="https://catalog.hathitrust.org/Record/000494825?type%5B%5D=all&amp;lookfor%5B%5D=Zeitschrift%20f%C3%BCr%20die%20neutestamentliche%20Wissenschaft%20und%20die%20Kunde%20der%20%C3%A4lteren%20Kirche&amp;ft=#viewability" rel="noreferrer noopener" target="_blank">HathiTrust</a> (via US access only). </li></ul>',
   },
+
+  // SECTION 2: REFERENCES NOT MENTIONED BY CRUM IN THE LIST OF ABBREVIATIONS,
+  // BUT ENCOUNTERED THROUGHOUT THE TEXT:
+  // TODO: (#522) Add the missing entries to this section.
+  'Schweinf Ar Pfl': {
+    title:
+      'Arabische Pflanzennamen aus Aegypten, Algerien und Jemen Dietrich Reimer (Ernst Vohsen), Berlin 1912',
+    innerHTML:
+      '<ul> <li><i>Arabische Pflanzennamen aus Aegypten, Algerien und Jemen</i> Dietrich Reimer (Ernst Vohsen), Berlin 1912, <a target="_blank" href="http://www.biodiversitylibrary.org/item/41971">online bei Biodiversity Heritage Library</a></li></ul>',
+    variants: [
+      'Schweinf Ar Pflanz',
+      'Schweinfurth Ar Pfl',
+      'Schweinfurth Ar Pflanz',
+      'Schweinfurth Arab Pflanz',
+    ],
+  },
 };
 
 /**
@@ -1351,21 +1370,28 @@ Object.entries(MAPPING).forEach(([key, source]: [string, Source]): void => {
 
 // Add keys with spaces removed.
 Object.entries(MAPPING).forEach(([key, source]: [string, Source]): void => {
-  if (!key.includes(' ')) {
-    // This key has no spaces.
-    return;
-  }
-  if (key.split(' ')[1]?.match(/^[0-9]+$/)) {
+  const parts: string[] = key.split(' ');
+  // Our script imposes a requirement on all entries in the map: They must match
+  // the reference logic. This is important, because it guards against
+  // undetectable abbreviations.
+  // Below, we exclude some problematic spacing variants from the map, because
+  // they never occur in the text, and also because they don't match the regex
+  // and thus would break verification.
+  if (parts.length === 2 && parts[1]?.match(/^[0-9]+$/)) {
     // Abbreviations that have a number as the second part never occur without
     // that space in the middle.
     return;
   }
-  if (key.split(' ')[0]?.endsWith('.')) {
+  if (parts[0]?.endsWith('.')) {
     // Abbreviations that have the first part ending with a period also never
     // occur without a space in the middle.
     return;
   }
-  add(key.replaceAll(' ', ''), source);
+  while (parts.length > 1) {
+    const last: string = parts.pop()!;
+    parts[parts.length - 1]! += last;
+    add(parts.join(' '), source);
+  }
 });
 
 /* eslint-enable max-lines */
