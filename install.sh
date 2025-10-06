@@ -82,7 +82,7 @@ _update() {
 
   # Update npm packages.
   jq -r "(.dependencies // {}) | keys[]" "package.json" | xargs npm add
-  jq -r "(.devDependencies // {}) | keys[]" "package.json" | xargs npm add --dev
+  jq -r "(.devDependencies // {}) | keys[]" "package.json" | xargs npm add --include=dev
 }
 
 if ${UPDATE}; then
