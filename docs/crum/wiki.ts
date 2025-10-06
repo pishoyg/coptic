@@ -360,15 +360,15 @@ function parseSuffix(
   span.append(nextSibling);
 
   // Sometimes, there are even more numbers following the superscript.
-  const prefix: RegExpMatchArray | null | undefined =
+  const match: RegExpMatchArray | null | undefined =
     nextNext?.nodeValue?.match(SUFFIX);
   if (
     nextNext?.nodeValue &&
-    prefix?.index === 0 &&
-    prefix[0] // Prevent matching the empty string.
+    match?.index === 0 &&
+    match[0] // Prevent matching the empty string.
   ) {
-    span.append(prefix[0]);
-    nextNext.nodeValue = nextNext.nodeValue.slice(prefix[0].length);
+    span.append(match[0]);
+    nextNext.nodeValue = nextNext.nodeValue.slice(match[0].length);
   }
   return span;
 }
