@@ -178,3 +178,39 @@ export function addDroppable(
   // A hover-invoked droppable must be a child of its associated drop element.
   dropdown.appendChild(droppable);
 }
+
+/**
+ * @param node
+ * @returns
+ */
+export function noTipTextContent(node: Node): string {
+  return [...noTipTextContentAux(node)].join('');
+}
+
+/**
+ * @param node
+ * @returns
+ */
+function* noTipTextContentAux(node: Node): Generator<string> {
+  // If the node is a text node and has content, yield it.
+  if (node.nodeType === Node.TEXT_NODE && node.textContent) {
+    yield node.textContent;
+    return;
+  }
+
+  if (node.nodeType !== Node.ELEMENT_NODE) {
+    // This is a non-text and a non-element node. It may be some other type,
+    // such as a comment. Return immediately.
+    return;
+  }
+
+  // This is an element node.
+  if ((node as HTMLElement).classList.contains(CLS.DROPPABLE)) {
+    // This node is a tooltip.
+    return;
+  }
+
+  for (const child of node.childNodes) {
+    yield* noTipTextContentAux(child);
+  }
+}

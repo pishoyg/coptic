@@ -112,3 +112,15 @@ export function ensure(condition: boolean, ...message: unknown[]): void {
     fatal(...message);
   }
 }
+
+/**
+ *
+ * @param condition
+ * @param {...any} message
+ * TODO: (#0) Prefer using `check` to `error`.
+ */
+export function check(condition: boolean, ...message: unknown[]): void {
+  if (!condition) {
+    error(...message);
+  }
+}
