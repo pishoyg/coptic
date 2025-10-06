@@ -344,7 +344,7 @@ function parseSuffix(suffix, remainder, nextSibling) {
 }
 // TODO: (#0) Simplify this method.
 /* eslint-disable complexity */
-
+/* eslint-disable max-lines-per-function */
 /**
  *
  * @param match
@@ -378,7 +378,8 @@ function replaceReference(match, remainder, nextSibling) {
     !source && // We still haven't succeeded in parsing the source.
     !suffix && // There is no suffix text following the abbreviation.
     remainder === ' ' && // The remaining part in the text node is just a space.
-    nextSibling?.textContent && // The next node also has text.
+    nextSibling?.nodeName === 'I' && // The next sibling is an idiomatic element.
+    nextSibling.textContent && // The next node also has text.
     // The text obtained from combining this node and the text represents a
     // source abbreviation.
     (source = ref.MAPPING[(abbrev = `${abbrev} ${nextSibling.textContent}`)])
@@ -420,7 +421,7 @@ function replaceReference(match, remainder, nextSibling) {
   span.append(' ', parseSuffix(suffix, remainder, nextSibling));
   return [span];
 }
-
+/* eslint-enable max-lines-per-function */
 /* eslint-enable complexity */
 /**
  *
