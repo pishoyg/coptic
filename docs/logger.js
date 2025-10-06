@@ -92,3 +92,14 @@ export function ensure(condition, ...message) {
     fatal(...message);
   }
 }
+/**
+ *
+ * @param condition
+ * @param {...any} message
+ * TODO: (#0) Prefer using `check` to `error`.
+ */
+export function check(condition, ...message) {
+  if (!condition) {
+    error(...message);
+  }
+}
