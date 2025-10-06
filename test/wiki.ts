@@ -19,6 +19,8 @@ const TEST_CASES: {
   };
 }[] = [
   {
+    // 88 contains a relatively large piece of text, so we include to cover a
+    // lot of common cases.
     key: '88',
     want: {
       references: 139,
@@ -29,6 +31,14 @@ const TEST_CASES: {
     },
   },
   {
+    // 1144 covers cases with diacritics and boundaries. Particularly, in
+    // ‘Amélineau Géog’:
+    // - ‘Am’ shouldn't match ‘Amos’ (which would happen if the text were
+    //   NFC-normalized and the non-Unicode-aware `\b` was used to match word
+    //   boundaries).
+    // - ‘Ge’ shouldn't match ‘Genesis’ (which would happen if the text was
+    //   NFD-normalized, and the diacritic was misinterpreted as a word
+    //   boundary).
     key: '1144',
     want: {
       references: 4,
@@ -36,6 +46,19 @@ const TEST_CASES: {
       bible: 6,
       dialectDropdowns: 8,
       annotations: 12,
+    },
+  },
+  {
+    // 3271 covers spacing variants. Particularly, ‘Schweinf Ar Pfl’ is cited as
+    // ‘Schweinf ArPfl’ in this page, and we want to make sure we're covering
+    // it.
+    key: '3271',
+    want: {
+      references: 3,
+      suffixes: 3,
+      bible: 0,
+      dialectDropdowns: 1,
+      annotations: 3,
     },
   },
 ];
