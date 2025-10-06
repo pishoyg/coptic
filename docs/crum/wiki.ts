@@ -418,7 +418,8 @@ function replaceReference(
     !source && // We still haven't succeeded in parsing the source.
     !suffix && // There is no suffix text following the abbreviation.
     remainder === ' ' && // The remaining part in the text node is just a space.
-    nextSibling?.textContent && // The next node also has text.
+    nextSibling?.nodeName === 'I' && // The next sibling is an idiomatic element.
+    nextSibling.textContent && // The next node also has text.
     // The text obtained from combining this node and the text represents a
     // source abbreviation.
     (source = ref.MAPPING[(abbrev = `${abbrev} ${nextSibling.textContent}`)])
