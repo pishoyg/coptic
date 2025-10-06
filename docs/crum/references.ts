@@ -335,6 +335,11 @@ export const MAPPING: Record<string, Source> = {
     title: 'Crum, Coptic Ostraca, 1902',
     innerHTML:
       '<ul><li>Crum, W. E. (1902). <em><a href="https://archive.org/details/copticostracafr00fundgoog/page/n4/mode/2up" rel="noreferrer noopener" target="_blank">Coptic Ostraca from the collections of the Egypt Exploration Fund, the Cairo Museum, and others</a></em>. London: Egypt Exploration Fund.</li></ul>',
+    postfixes: [
+      // Ad occurs as an abbreviation in the book intro. It stands for
+      // ‘Addenda to lithographed texts’.
+      'Ad',
+    ],
   },
   CR: {
     title: 'Comptes Rendus de l’Acad. des lnscr., Paris, acc. to year & page',
