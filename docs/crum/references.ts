@@ -544,6 +544,7 @@ export const MAPPING: Record<string, Source> = {
     title: 'Journ. of American Orient. Soc',
     innerHTML:
       '<ul><li>The <em>Journal of the American Oriental Society</em> began in 1843-49. All volumes to date are available via <a href="https://www.jstor.org/journal/jameroriesoci" rel="noreferrer noopener" target="_blank">JSTOR</a>. </li></ul>',
+    variants: ['JAmOrSoc'],
   },
   Jern: {
     title:
