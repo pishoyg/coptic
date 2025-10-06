@@ -26,6 +26,7 @@ export class Source {
      * variants, so we can detect citations that used alternative forms.
      * If there is no variant (which is the case for most sources), this field
      * should be empty.
+     * TODO: (#565) Record variants.
      */
     public readonly variants?: string[],
     /** postfixes is a list of all postfixes that this abbreviation can bear.
@@ -70,7 +71,7 @@ export class Source {
  * Variants that differ in non-space characters should, however, be explicitly
  * mentioned.
  *
- * TODO: (#419) Revisit multi-part abbreviations, and insert spaces where
+ * TODO: (#565) Revisit multi-part abbreviations, and insert spaces where
  * appropriate. We have attempted to insert spaces for all abbreviations that
  * ever occurred with a space, but some may have evaded our detection.
  * How about we just write all abbreviations as several parts, so we can catch
