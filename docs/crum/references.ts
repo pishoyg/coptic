@@ -551,7 +551,7 @@ export const MAPPING: Record<string, Source> = {
     title:
       'Institut français, Cairo, MS. of Shenoute’s Epistles (H. Munier’s copy)',
   },
-  lgR: {
+  IgR: {
     title: 'Ignazio Rossi, Etymologiae Aegyptiacae, 1808',
     innerHTML:
       '<ul><li>Rossi, I. (1808). <em><a href="https://archive.org/details/bub_gb_IWhHswE1yv0C/page/n3/mode/2up" rel="noreferrer noopener" target="_blank">Etymologiae Aegyptiacae</a></em>. Rome.</li></ul>',
