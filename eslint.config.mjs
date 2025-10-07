@@ -93,6 +93,11 @@ export default tseslint.config(
           message:
             'Use getElementById instead of querySelector with an ID selector.',
         },
+        {
+          selector:
+            "CallExpression[callee.object.name='play'][callee.property.name='test']",
+          message: 'Use `base.test` instead of `play.test`. See `test/base.ts`',
+        },
       ],
       '@typescript-eslint/naming-convention': [
         'error',

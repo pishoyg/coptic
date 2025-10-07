@@ -24,6 +24,8 @@ export default play.defineConfig({
   // TODO: (#0) This is no ideal. Let's adopt the convention, and configure the
   // unit test runner to ignore Playwright tests.
   testMatch: /.*\.ts/,
+  // `test/base.ts` contains helpers, and is not actually a test.
+  testIgnore: 'test/base.ts',
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source

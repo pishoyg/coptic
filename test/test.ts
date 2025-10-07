@@ -3,6 +3,7 @@
  */
 
 import * as play from '@playwright/test';
+import * as base from './base.js';
 
 /**
  * PAGES_TO_TEST defines the list of site pages to test.
@@ -24,7 +25,7 @@ const PAGES_TO_TEST: string[] = [
 ];
 
 PAGES_TO_TEST.forEach((path: string): void => {
-  play.test(
+  base.test(
     `loads ${path} without errors`,
     async ({ page }: { page: play.Page }): Promise<void> => {
       // Block requests to Google Tag Manager to isolate the test.

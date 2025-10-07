@@ -5,6 +5,7 @@ import * as play from '@playwright/test';
 import * as cls from '../docs/crum/cls.js';
 import * as drop from '../docs/dropdown.js';
 import * as paths from '../docs/paths.js';
+import * as base from './base.js';
 
 // TODO: (#557) Add more test cases. This doesn't suffice.
 // TODO: (#557) Exercise the content of the elements, not just their count.
@@ -85,9 +86,9 @@ const QUERIES: Record<string, string> = {
   annotations: `.${cls.WIKI} .${cls.ANNOTATION}`,
 };
 
-play.test.describe('Wiki Reference Handlers', () => {
+base.test.describe('Wiki Reference Handlers', () => {
   for (const testCase of TEST_CASES) {
-    play.test(
+    base.test(
       `Inserts the correct number of objects on ${testCase.key}`,
       async ({ page }: { page: play.Page }): Promise<void> => {
         await page.goto(paths.crum(testCase.key), {
