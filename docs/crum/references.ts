@@ -1,6 +1,34 @@
 /* eslint-disable max-lines */
 import * as logger from '../logger.js';
 
+// TODO: (#523) Restructure the code in the following way:
+// - There should be two separate types. Let's call them `Resource` and
+//   `Source`.
+// - `Resource` should define the raw resources. It should include variants and
+//   postfixes. It should be a mere interface. Your index should list `Resource`
+//   objects. Instead of constructing the index in the `MAPPING` record,
+//   construct it in an array of `Resource` objects. It shouldn't be a record.
+//   No abbreviation should be given special
+//   treatment as a record key. All abbreviations should be listed in the
+//   `variants` field. `Resource` should be private to this file.
+// - `Source` should be a proper class, rather than a mere interface. It should
+//   be exported from the module. It should be endowed with helpful methods.
+//   `MAPPING` should map an abbreviation to a `Source` object. It should be
+//   automatically generated from the `Resource` index.
+//   Instead of the array of postfixes and array of variants in `Resource`,
+//   `Source` should have a single postfix and a single variant. Thus, looking
+//   up an abbreviation in `MAPPING` should give us information about this
+//   particular abbreviation and the specific postfix that it occurred with,
+//   rather than about the resource that generates it.
+// This will allow us to implement methods on `Source`, simplify our index
+// structure, and finally implement proper postfix handling.
+//
+// TODO: (#419) Simplify the `innerHTML` field by storing a list of strings.
+// Right now, the `innerHTML` is always a `<ul>` element, with several `<li>`
+// elements beneath it. There is no reason to store this as a string. An array
+// would do better, and the `<ul>` element could then be programmatically
+// generated from the array.
+
 /**
  *
  */
@@ -46,7 +74,7 @@ export class Source {
 /**
  * @param source
  * @returns
- * TODO: (#0) This should be a member method of Source, and the record below
+ * TODO: (#419) This should be a member method of Source, and the record below
  * should construct proper objects.
  */
 export function tooltip(source: Source): (Node | string)[] {
