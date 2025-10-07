@@ -231,10 +231,10 @@ export class Form {
       query = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     }
     if (this.fullWordCheckbox.checked) {
-      // Using Unicode-aware word boundaries: `\b` doesn't work for non-ASCII
-      // so we use `\p{L}` (letter) and `\p{N}` (number) to match words in any
-      // Unicode script.
-      query = `${str.BOUNDARY_START.source}(${query})${str.BOUNDARY_END.source}`;
+      // Using Unicode-aware word boundaries. `\b` doesn't work for non-ASCII.
+      // NOTE: It's important to wrap `query` in parentheses, to prevent its
+      // content from corrupting the boundary regexes. See #318.
+      query = `${str.BOUNDARY_START.source}(?:${query})${str.BOUNDARY_END.source}`;
     }
     return query;
   }
