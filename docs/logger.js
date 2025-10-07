@@ -66,14 +66,24 @@ export function warn(...message) {
   print(Colors.YELLOW, Colors.CYAN, 'warn', false, ...message);
 }
 /**
- * Log an error message to the console.
+ * Log an error message, or throw an exception if under Playwright.
+ *
+ * - If this is a Playwright test, throw an exception.
+ * - If this is a user session, simply log an error message to the console.
+ *
+ * Use the `error` method to report errors, and add graceful recovery logic
+ * following the error message. In a production environment, the function would
+ * log the message, and the recovery code would be executed.
+ * However, in a Playwright test, an exception would be thrown, alerting us to
+ * the error and giving us an opportunity to fix it.
+ *
  * @param {...any} message - Message to log.
  */
 export function error(...message) {
-  print(Colors.RED, Colors.PURPLE, 'error', false, ...message);
+  print(Colors.RED, Colors.PURPLE, 'error', window.isPlaywright, ...message);
 }
 /**
- * Raise an exception, and log an error message to the console.
+ * Raise an exception.
  *
  * @param {...any} message - Message to log.
  */
@@ -81,8 +91,7 @@ export function fatal(...message) {
   print(Colors.RED, Colors.PURPLE, 'error', true, ...message);
 }
 /**
- * Evaluate the condition. If it fails, raise an exception, and log an error
- * message to the console.
+ * Evaluate the condition. If it fails, raise an exception.
  *
  * @param condition - Condition to evaluate.
  * @param {...any} message - Message to log (if the condition is not satisfied).
@@ -93,6 +102,7 @@ export function ensure(condition, ...message) {
   }
 }
 /**
+ * Evaluate the condition. If it fails, log an error message.
  *
  * @param condition
  * @param {...any} message
