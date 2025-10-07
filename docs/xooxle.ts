@@ -6,6 +6,7 @@ import * as log from './logger.js';
 import * as orth from './orth.js';
 import * as dev from './dev.js';
 import * as cls from './cls.js';
+import * as str from './str.js';
 
 // KEY is the name of the field that bears the word key. The key can be used to
 // generate an HREF to open the word page.
@@ -283,7 +284,7 @@ export class Form {
       // Using Unicode-aware word boundaries: `\b` doesn't work for non-ASCII
       // so we use `\p{L}` (letter) and `\p{N}` (number) to match words in any
       // Unicode script.
-      query = `(?<=^|[^\\p{L}\\p{N}])(${query})(?=$|[^\\p{L}\\p{N}])`;
+      query = `${str.BOUNDARY_START.source}(${query})${str.BOUNDARY_END.source}`;
     }
 
     return query;
