@@ -139,7 +139,6 @@ export const SUFFIX = new RegExp(
 );
 const LETTER = /[a-zA-Z\p{M}&]/u;
 const SPECIAL_CASES = [
-  'lgR', // This starts with a small letter.
   'Imp Russ Ar S', // This consists of 4 words!
   "O'Leary\\s?(?:H|The?)", // This has an apostrophe.
   'Berl\\. Wörterb', // This has a period.
