@@ -408,7 +408,7 @@ function replaceReference(match, remainder, nextSibling) {
     span.append(parseSuffix(suffix, nextSibling /* candidate superscript  */));
   }
   // Add a hover-invoked tooltip.
-  drop.addDroppable(span, 'hover', ...ref.tooltip(source));
+  drop.addDroppable(span, 'hover', ...source.tooltip());
   return { replacement: span, remainder };
 }
 /* eslint-enable complexity */
