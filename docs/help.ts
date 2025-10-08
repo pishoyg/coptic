@@ -371,6 +371,7 @@ export class Help {
       return footer;
     }
     footer = document.createElement('footer');
+    document.body.append(footer);
     footer.id = ID.FOOTER;
     return footer;
   }
@@ -530,17 +531,12 @@ export class Help {
   ): void {
     // Clicking on the close button hides the panel.
     closeButton.addEventListener('click', this.hide.bind(this));
+
     // Clicking the help button toggles the panel display.
     help.addEventListener('click', this.toggle.bind(this));
 
-    // A mouse click outside the panel closes it.
-    document.addEventListener('click', (event: MouseEvent): void => {
-      if (this.panel.contains(event.target as Node)) {
-        // The click happens inside the panel. Do nothing.
-        return;
-      }
-      this.hide();
-    });
+    // A click on the overlay background hides the panel.
+    this.overlay.addEventListener('click', this.hide.bind(this));
 
     // Clicking a keyboard shortcut triggers the associated action.
     // NOTE: We intentionally use the `keydown` event rather than the `keyup`
