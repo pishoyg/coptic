@@ -398,7 +398,7 @@ function replaceReference(
   remainder = remainder.slice(suffix?.length);
 
   // Try to find a source.
-  let source: ref.Source | undefined = ref.MAPPING[match[0]];
+  let source: ref.Reference | undefined = ref.MAPPING[match[0]];
 
   // Construct a tentative span.
   const span: HTMLSpanElement = document.createElement('span');
@@ -449,7 +449,7 @@ function replaceReference(
     span.append(parseSuffix(suffix, nextSibling /* candidate superscript  */));
   }
   // Add a hover-invoked tooltip.
-  drop.addDroppable(span, 'hover', ...ref.tooltip(source));
+  drop.addDroppable(span, 'hover', ...source.tooltip());
 
   return { replacement: span, remainder };
 }
