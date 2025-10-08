@@ -281,10 +281,9 @@ export class Form {
     }
 
     if (this.fullWordCheckbox.checked) {
-      // Using Unicode-aware word boundaries. `\b` doesn't work for non-ASCII.
       // NOTE: It's important to wrap `query` in parentheses, to prevent its
       // content from corrupting the boundary regexes. See #318.
-      query = `${str.BOUNDARY_START.source}(?:${query})${str.BOUNDARY_END.source}`;
+      query = str.bounded(query, true);
     }
 
     return query;

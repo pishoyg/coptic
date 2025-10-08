@@ -166,7 +166,8 @@ export const REFERENCE_RES: RegExp[] = [
       [
         ...SPECIAL_CASES,
         `[A-Z]${LETTER.source}*\\s${LETTER.source}+\\s${LETTER.source}+`,
-      ].join('|')
+      ].join('|'),
+      true
     ),
     'gu'
   ),
