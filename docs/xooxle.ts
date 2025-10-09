@@ -390,22 +390,23 @@ abstract class AggregateResult {
 export class Candidate {
   // key bears the candidate key.
   public readonly key: string;
-  // fields bears the candidate's searchable fields.
-  public readonly fields: Field[];
+  // layers bears the candidate's searchable fields.
+  public readonly layers: Field[][];
 
   /**
    * @param record - The candidate data.
-   * @param fields - The fields metadata.
+   * @param layers - The layer and field metadata.
    */
-  public constructor(record: Record<string, string>, fields: string[]) {
+  public constructor(record: Record<string, string>, layers: string[][]) {
     this.key = record[KEY]!;
-    this.fields = fields.map(
+    this.layers = layers.map(
       // NOTE: Our Xooxle index builder is guaranteed to produce a
       // normalized tree.[1] The text content is also guaranteed to be free of
       // any superfluous space, and to be NFD-normalized.
       // Thus, no normalization is needed when constructing the field.
       // [1] https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize
-      (name: string): Field => new Field(record[name]!)
+      (layer: string[]): Field[] =>
+        layer.map((field: string): Field => new Field(record[field]!))
     );
   }
 }
@@ -416,23 +417,17 @@ export class Candidate {
 export class SearchResult extends AggregateResult {
   protected readonly results: FieldSearchResult[];
   /**
-   * @param candidate
+   * @param key
+   * @param fields
    * @param regex
    */
   public constructor(
-    private readonly candidate: Candidate,
+    public readonly key: string,
+    fields: Field[],
     regex: RegExp
   ) {
     super();
-    this.results = this.candidate.fields.map((f: Field) => f.search(regex));
-  }
-
-  /**
-   *
-   * @returns
-   */
-  public get key(): string {
-    return this.candidate.key;
+    this.results = fields.map((f: Field): FieldSearchResult => f.search(regex));
   }
 
   /**
@@ -1128,13 +1123,16 @@ class LineSearchResult {
 export interface Index {
   readonly data: Record<string, string>[];
   readonly metadata: {
-    /** fields is the list of fields in the output. For each
-     * search result from the data, a row will be added to the table.
+    /** layers is the list of layers in the output.
+     * A layer consists of a list of field names.
+     * For each search result from the data, layers will be searched until one
+     * layer yields a match.
+     * A row will be added to the table for the first matching layer, if any.
      * The first cell in the row will contain the index of the result, and
      * potentially the HREF to the result page. The following cells will contain
-     * other fields from the result, in this order.
+     * other fields from the layer, in the order given in this field.
      */
-    readonly fields: string[];
+    readonly layers: string[][];
   };
 }
 
@@ -1169,7 +1167,7 @@ export class Xooxle {
     private readonly searchResultType: typeof SearchResult = SearchResult
   ) {
     this.candidates = index.data.map(
-      (record) => new Candidate(record, index.metadata.fields)
+      (record) => new Candidate(record, index.metadata.layers)
     );
     this.addEventListeners();
 
@@ -1258,15 +1256,6 @@ export class Xooxle {
     regex: RegExp,
     abortController: AbortController
   ): Promise<void> {
-    // TODO: (#0) We append random characters in order to avoid having timers
-    // with identical names. This is not ideal. Let's supply an index name as
-    // part of the metadata, and use that for logging instead.
-    const name = `time-to-first-yield-${Array.from({ length: 2 }, () =>
-      // eslint-disable-next-line no-magic-numbers
-      String.fromCharCode(97 + Math.floor(Math.random() * 26))
-    ).join('')}`;
-    log.time(name);
-
     // bucketSentinels is a set of hidden table rows that represent sentinels
     // (anchors / break points) in the results table.
     //
@@ -1299,8 +1288,17 @@ export class Xooxle {
     // Search is a cheap operation that we can afford to do on all candidates in
     // the beginning.
     const results: SearchResult[] = this.candidates
-      .map((can) => new this.searchResultType(can, regex))
-      .filter((res) => res.match && res.filter())
+      .flatMap((can: Candidate): SearchResult[] => {
+        for (const layer of can.layers) {
+          const result = new this.searchResultType(can.key, layer, regex);
+          if (result.match && result.filter()) {
+            // This layer has a match. Return a result representing this layer.
+            return [result];
+          }
+        }
+        // None of the layers has a match. Return no results.
+        return [];
+      })
       .sort(searchResultCompare);
 
     for (const [count, result] of results.entries()) {
@@ -1321,10 +1319,6 @@ export class Xooxle {
       ]!.insertAdjacentElement('beforebegin', row);
 
       if (count % RESULTS_TO_UPDATE_DISPLAY === RESULTS_TO_UPDATE_DISPLAY - 1) {
-        if (count <= RESULTS_TO_UPDATE_DISPLAY) {
-          // This is the first display update. Log time.
-          log.timeEnd(name);
-        }
         // Expand the results table to accommodate the recently added results.
         this.form.expand();
         // Allow the browser to update the display, receive user input, ...

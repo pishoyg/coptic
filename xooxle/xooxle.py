@@ -529,6 +529,7 @@ class Index:
         extract: list[Selector],
         captures: list[Capture],
         output: str | pathlib.Path,
+        layers: list[list[str]] | None = None,
     ) -> None:
         """
         Args:
@@ -538,11 +539,17 @@ class Index:
                 during preprocessing.
             captures: List of selectors of elements to capture in the output.
             output: Path to the output JSON file.
+            layers: A grouping of the capture names into layers. If not
+                provided, will default to a single layer containing all
+                captures.
         """
         self._source: str | deck.Deck = source
         self._extract: list[Selector] = extract
         self._captures: list[Capture] = captures
         self._output: str | pathlib.Path = output
+        self._layers: list[list[str]] = layers or [
+            [cap.name for cap in self._captures],
+        ]
 
     def iter_input(self) -> Generator[tuple[str, str]]:
         if isinstance(self._source, deck.Deck):
@@ -599,7 +606,7 @@ class Index:
         json = {
             "data": list(data),
             "metadata": {
-                "fields": [c.name for c in self._captures],
+                "layers": self._layers,
             },
         }
 
@@ -607,7 +614,9 @@ class Index:
         file.write(file.json_dumps(json), self._output)
 
     def validate(self, json: dict[str, typing.Any]) -> None:
-        keys: list[str] = json["metadata"]["fields"] + [KEY]
+        keys: list[str] = [
+            field for layer in json["metadata"]["layers"] for field in layer
+        ] + [KEY]
         entry: dict[str, str]
         for entry in json["data"]:
             ensure.equal_sets(entry.keys(), keys)
