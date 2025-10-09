@@ -149,6 +149,11 @@ export function makeHelpPanel(
         browser.focus('searchBox');
       }),
     ],
+    i: [
+      new help.Shortcut('Toggle Wiki search', ['lexicon'], () => {
+        browser.click('wikiCheckbox');
+      }),
+    ],
   };
 
   const scrollTo = {
@@ -196,11 +201,6 @@ export function makeHelpPanel(
     T: [
       new help.Shortcut('copticsi<strong>t</strong>e', ['lexicon'], () => {
         browser.scroll('copticsite-title');
-      }),
-    ],
-    I: [
-      new help.Shortcut('Wiki', ['lexicon'], () => {
-        browser.scroll('wiki-title');
       }),
     ],
     D: [
@@ -300,11 +300,6 @@ export function makeHelpPanel(
     t: [
       new help.Shortcut('copticsi<strong>t</strong>e', ['lexicon'], () => {
         browser.click('copticsite-title');
-      }),
-    ],
-    i: [
-      new help.Shortcut('Wiki', ['lexicon'], () => {
-        browser.click('wiki-title');
       }),
     ],
   };
