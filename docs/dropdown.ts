@@ -131,11 +131,14 @@ export class Droppable {
  * Add event listeners for click- or hover-invoked tooltips in the page.
  * The HTML must define elements with the correct classes and correct structure.
  * @param invocation
+ * @param root
  * @returns List of Droppable objects.
  */
-export function addEventListeners(invocation: Invocation): Droppable[] {
+export function addEventListeners(
+  invocation: Invocation,
+  root: HTMLElement = document.body): Droppable[] {
   return Array.from(
-    document.querySelectorAll<HTMLElement>(
+    root.querySelectorAll<HTMLElement>(
       `.${invocation === 'click' ? CLS.DROP : CLS.DROPDOWN}`
     )
   ).map(
