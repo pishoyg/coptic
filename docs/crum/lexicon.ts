@@ -100,6 +100,9 @@ class CrumSearchResult extends SearchResult {
         (value) => typeof value === 'number'
       )
     );
+  public static wikiCheckbox: HTMLInputElement = document.getElementById(
+    ID.WIKI_CHECKBOX
+  ) as HTMLInputElement;
 
   /**
    * @returns
@@ -119,6 +122,19 @@ class CrumSearchResult extends SearchResult {
     wiki.handle(row);
     drop.addEventListeners('hover', row);
     return row;
+  }
+
+  /**
+   * @returns
+   */
+  public override filter(): boolean {
+    if (!CrumSearchResult.wikiCheckbox.checked) {
+      // The Wiki checkbox is unchecked. Use default behavior.
+      return super.filter();
+    }
+    // We only want to search the Wiki.
+    // Layer 0 is Marcion, layer 1 is Wiki. Return true if this is layer 1.
+    return !!this.layer;
   }
 
   /**
@@ -209,6 +225,7 @@ interface Xooxle {
   tableID: string;
   collapsibleID: string;
   searchResultType?: typeof xoox.SearchResult;
+  otherCheckboxes?: [string, string][];
 }
 
 const XOOXLES: Xooxle[] = [
@@ -217,6 +234,7 @@ const XOOXLES: Xooxle[] = [
     tableID: 'crum',
     collapsibleID: 'crum-collapsible',
     searchResultType: CrumSearchResult,
+    otherCheckboxes: [[ID.WIKI_CHECKBOX, 'wiki']],
   },
   {
     indexURL: 'kellia.json',
@@ -318,7 +336,7 @@ async function main(): Promise<void> {
   // While this is not currently a problem, it remains undesirable.
   // Deduplicate these actions, somehow.
   await Promise.all(
-    XOOXLES.map(async (xooxle: Xooxle) => {
+    XOOXLES.map(async (xooxle: Xooxle): Promise<void> => {
       const json: xoox.Index = (await fetch(xooxle.indexURL).then(
         (raw: Response) => raw.json()
       )) as xoox.Index;
@@ -333,6 +351,7 @@ async function main(): Promise<void> {
         resultsTableID: xooxle.tableID,
         collapsibleID: xooxle.collapsibleID,
         formID: ID.FORM,
+        boxes: xooxle.otherCheckboxes,
       });
       new xoox.Xooxle(json, form, xooxle.searchResultType);
     })
