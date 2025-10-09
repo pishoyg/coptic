@@ -115,8 +115,8 @@ class CrumSearchResult extends SearchResult {
    */
   public override row(total: number, numColumns: number): HTMLTableRowElement {
     const row: HTMLTableRowElement = super.row(total, numColumns);
-    // TODO: (#541) Add other handlers once the post-processing bug is fixed.
-    wiki.handleBible(row);
+    wiki.handle(row);
+    drop.addEventListeners('hover', row);
     return row;
   }
 
