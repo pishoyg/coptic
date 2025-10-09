@@ -103,6 +103,7 @@ export interface FormParams {
   resultsTableID: string;
   collapsibleID: string;
   formID?: string;
+  boxes?: [string, string][] | undefined;
 }
 
 /**
@@ -114,6 +115,11 @@ enum Param {
   REGEX = 'regex',
 }
 
+interface Checkbox {
+  param: string;
+  box: HTMLInputElement;
+}
+
 /**
  * Form represents a search form containing the HTML elements that the user
  * interacts with to initiate and control search.
@@ -121,8 +127,11 @@ enum Param {
 export class Form {
   // Input fields:
   private readonly searchBox: HTMLInputElement;
-  private readonly fullWordCheckbox: HTMLInputElement;
-  private readonly regexCheckbox: HTMLInputElement;
+
+  private readonly fullWordCheckbox: Checkbox;
+  private readonly regexCheckbox: Checkbox;
+  private readonly otherCheckBoxes: Checkbox[];
+
   // Output fields:
   private readonly messageBox: HTMLElement;
   private readonly tbody: HTMLTableSectionElement;
@@ -142,13 +151,15 @@ export class Form {
       form.searchBoxID
     ) as HTMLInputElement;
 
-    this.fullWordCheckbox = document.getElementById(
-      form.fullWordCheckboxID
-    ) as HTMLInputElement;
+    this.fullWordCheckbox = {
+      box: document.getElementById(form.fullWordCheckboxID) as HTMLInputElement,
+      param: Param.FULL,
+    };
 
-    this.regexCheckbox = document.getElementById(
-      form.regexCheckboxID
-    ) as HTMLInputElement;
+    this.regexCheckbox = {
+      box: document.getElementById(form.regexCheckboxID) as HTMLInputElement,
+      param: Param.REGEX,
+    };
 
     this.messageBox = document.getElementById(form.messageBoxID)!;
 
@@ -168,6 +179,14 @@ export class Form {
       this.form = document.getElementById(form.formID) as HTMLFormElement;
     }
 
+    this.otherCheckBoxes =
+      form.boxes?.map(
+        ([id, param]: [string, string]): Checkbox => ({
+          box: document.getElementById(id) as HTMLInputElement,
+          param,
+        })
+      ) ?? [];
+
     // Populate the form once from the query parameters.
     this.populateFromParams();
 
@@ -175,19 +194,24 @@ export class Form {
   }
 
   /**
+   * @returns
+   */
+  private get checkboxes(): Checkbox[] {
+    return [this.fullWordCheckbox, this.regexCheckbox, ...this.otherCheckBoxes];
+  }
+
+  /**
    * Add event listeners to update query parameters from the form fields.
    */
   private addEventListeners(): void {
     this.searchBox.addEventListener('input', () => {
-      this.populateParams(Param.QUERY, this.searchBox.value);
+      this.populateParam(Param.QUERY, this.searchBox.value);
     });
 
-    this.fullWordCheckbox.addEventListener('click', () => {
-      this.populateParams(Param.FULL, this.fullWordCheckbox.checked);
-    });
-
-    this.regexCheckbox.addEventListener('click', () => {
-      this.populateParams(Param.REGEX, this.regexCheckbox.checked);
+    this.checkboxes.forEach((box: Checkbox): void => {
+      box.box.addEventListener('click', () => {
+        this.populateParam(box.param, box.box.checked);
+      });
     });
 
     // Prevent form submission. Otherwise, pressing Enter while the search box
@@ -206,12 +230,11 @@ export class Form {
       this.searchBox.value = query;
     }
     // Boolean parameters are either true, or absent from the URL.
-    if (url.searchParams.get(Param.FULL)) {
-      this.fullWordCheckbox.checked = true;
-    }
-    if (url.searchParams.get(Param.REGEX)) {
-      this.regexCheckbox.checked = true;
-    }
+    this.checkboxes.forEach((box: Checkbox): void => {
+      if (url.searchParams.get(box.param)) {
+        box.box.checked = true;
+      }
+    });
   }
 
   /**
@@ -220,7 +243,7 @@ export class Form {
    * @param name
    * @param value
    */
-  private populateParams(name: Param, value: string | boolean): void {
+  private populateParam(name: string, value: string | boolean): void {
     const url = new URL(window.location.href);
     if (!value) {
       url.searchParams.delete(name);
@@ -265,8 +288,9 @@ export class Form {
    * @param listener
    */
   public addCheckboxClickListener(listener: () => void): void {
-    this.fullWordCheckbox.addEventListener('click', listener);
-    this.regexCheckbox.addEventListener('click', listener);
+    this.checkboxes.forEach((box: Checkbox): void => {
+      box.box.addEventListener('click', listener);
+    });
   }
 
   /**
@@ -278,13 +302,13 @@ export class Form {
       return '';
     }
 
-    if (!this.regexCheckbox.checked) {
+    if (!this.regexCheckbox.box.checked) {
       // Escape all the special characters in the string, in order to search
       // for raw matches.
       query = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     }
 
-    if (this.fullWordCheckbox.checked) {
+    if (this.fullWordCheckbox.box.checked) {
       // NOTE: It's important to wrap `query` in parentheses, to prevent its
       // content from corrupting the boundary regexes. See #318.
       query = str.bounded(query, true);
@@ -704,9 +728,9 @@ class FieldSearchResult extends AggregateResult {
       : this.results.length <= UNITS_LIMIT
         ? this.results
         : [
-          this.results[0],
-          ...this.results.slice(1).filter((r) => r.match),
-        ].filter((res) => res !== undefined);
+            this.results[0],
+            ...this.results.slice(1).filter((r) => r.match),
+          ].filter((res) => res !== undefined);
 
     const content: HTMLDivElement = document.createElement('div');
     content.innerHTML = results
@@ -1192,7 +1216,7 @@ export class Xooxle {
 
     // Handle the search query once upon loading, in case the form picked up a
     // query from the URL parameters.
-    this.search(0);
+    this.search();
 
     // Focus on the form, so the user can search right away.
     this.form.focus();
@@ -1232,7 +1256,7 @@ export class Xooxle {
     this.form.addSearchBoxInputListener(
       this.search.bind(this, INPUT_DEBOUNCE_TIMEOUT)
     );
-    this.form.addCheckboxClickListener(this.search.bind(this, 0));
+    this.form.addCheckboxClickListener(this.search.bind(this));
     // Prevent other elements in the page from picking up key events on the
     // search box.
     this.form.addSearchBoxKeyListener(browser.stopPropagation);
@@ -1243,7 +1267,7 @@ export class Xooxle {
    *
    * @param timeout - How long to wait before starting search.
    */
-  private search(timeout: number): void {
+  public search(timeout = 0): void {
     if (this.debounceTimeout) {
       clearTimeout(this.debounceTimeout);
     }
