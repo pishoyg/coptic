@@ -11,7 +11,6 @@ import * as crum from './crum.js';
 import * as wiki from './wiki.js';
 import * as drop from '../dropdown.js';
 import * as log from '../logger.js';
-import * as id from './id.js';
 
 enum ID {
   SEARCH_BOX = 'searchBox',
@@ -69,10 +68,11 @@ class SearchResult extends xoox.SearchResult {
   /**
    *
    * @param total
+   * @param numColumns
    * @returns
    */
-  public override row(total: number): HTMLTableRowElement {
-    const row: HTMLTableRowElement = super.row(total);
+  public override row(total: number, numColumns: number): HTMLTableRowElement {
+    const row: HTMLTableRowElement = super.row(total, numColumns);
     crum.addGreekLookups(row);
     // TODO: (#499): Handling of dialects causes a (minor) bug: Dialect codes
     // don't get highlighted!
@@ -105,6 +105,19 @@ class CrumSearchResult extends SearchResult {
    */
   protected override link(): string {
     return paths.crum(this.key);
+  }
+
+  /**
+   *
+   * @param total
+   * @param numColumns
+   * @returns
+   */
+  public override row(total: number, numColumns: number): HTMLTableRowElement {
+    const row: HTMLTableRowElement = super.row(total, numColumns);
+    // TODO: (#541) Add other handlers once the post-processing bug is fixed.
+    wiki.handleBible(row);
+    return row;
   }
 
   /**
@@ -190,31 +203,6 @@ class KELLIASearchResult extends SearchResult {
   }
 }
 
-/**
- *
- */
-class WikiSearchResult extends xoox.SearchResult {
-  /**
-   *
-   * @param total
-   * @returns
-   */
-  public override row(total: number): HTMLTableRowElement {
-    const row: HTMLTableRowElement = super.row(total);
-    crum.addGreekLookups(row);
-    // TODO: (#541) Add other handlers once the post-processing bug is fixed.
-    wiki.handleBible(row);
-    return row;
-  }
-
-  /**
-   * @returns
-   */
-  protected override link(): string {
-    return `${paths.crum(this.key)}#${id.WIKI}`;
-  }
-}
-
 interface Xooxle {
   indexURL: string;
   tableID: string;
@@ -239,12 +227,6 @@ const XOOXLES: Xooxle[] = [
     indexURL: 'copticsite.json',
     tableID: 'copticsite',
     collapsibleID: 'copticsite-collapsible',
-  },
-  {
-    indexURL: 'wiki.json',
-    tableID: 'wiki',
-    collapsibleID: 'wiki-collapsible',
-    searchResultType: WikiSearchResult,
   },
 ];
 
@@ -282,22 +264,7 @@ function addListDialects(): void {
 /**
  *
  */
-function maybeShowWiki(): void {
-  const url: URL = new URL(window.location.href);
-  if (!url.searchParams.get('wiki')) {
-    return;
-  }
-  for (const elementID of [id.WIKI_TITLE, id.WIKI_COLLAPSIBLE]) {
-    document.getElementById(elementID)!.style.display = 'block';
-  }
-}
-
-/**
- *
- */
 async function main(): Promise<void> {
-  maybeShowWiki();
-
   // We have a drop-down element bearing the dialects (intended for small
   // screens).
   addDropdownDialects();

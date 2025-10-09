@@ -95,15 +95,15 @@ def main() -> None:
             write_anki(constants.DECKS)
 
     # Write Xooxle output.
-    indexes: list[xooxle.Index] = []
+    indexes: list[xooxle.Xooxle] = []
     if args.crum:
-        indexes.extend([constants.CRUM_XOOXLE, constants.CRUM_WIKI_XOOXLE])
+        indexes.extend([constants.CRUM_XOOXLE])
     if args.kellia:
         indexes.append(constants.KELLIA_XOOXLE)
     if args.copticsite:
         indexes.append(constants.COPTICSITE_XOOXLE)
     with concur.thread_pool_executor() as executor:
-        _ = list(executor.map(xooxle.Index.build, indexes))
+        _ = list(executor.map(xooxle.Xooxle.build, indexes))
 
 
 if __name__ == "__main__":

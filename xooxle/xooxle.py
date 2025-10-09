@@ -78,30 +78,24 @@ performance.
 
 import os
 import pathlib
-import re
 import typing
-from collections.abc import Generator, Iterable, Iterator
-from itertools import groupby
-from typing import Callable
+from collections.abc import Generator, Iterable
 
 import bs4
 
 from flashcards import deck
-from utils import concur, ensure, file
+from utils import concur, ensure, file, page
+from xooxle import clean
+from xooxle import constants as const
 
-# KEY is the name of the key field in the output. This must match the name
+# _KEY is the name of the key field in the output. This must match the name
 # expected by the Xooxle search logic.
-KEY = "KEY"
-# UNIT_DELIMITER is the delimiter used to separate the units of the output text,
-# if such separation is desired for a given field.
-UNIT_DELIMITER = '<hr class="match-separator">'
-LINE_BREAK = "<br>"
+_KEY: str = "KEY"
+# _EXTENSION is the extension of the files that we are building an index for.
+_EXTENSION: str = ".html"
 
-_TAG_RE = re.compile(r"^</?(\w+)>")
-# EXTENSION is the extension of the files that we are building an index for.
-_EXTENSION = ".html"
 
-BLOCK_ELEMENTS_DEFAULT = {
+BLOCK_ELEMENTS_DEFAULT: set[str] = {
     # Each table row goes to a block.
     "table",
     "thead",
@@ -118,7 +112,7 @@ BLOCK_ELEMENTS_DEFAULT = {
     "br",
 }
 
-RETAIN_TAGS_DEFAULT = {
+RETAIN_TAGS_DEFAULT: set[str] = {
     "b",
     "i",
     "strong",
@@ -126,11 +120,10 @@ RETAIN_TAGS_DEFAULT = {
     "sup",
 }
 
-SPACE_ELEMENTS_DEFAULT = {
+SPACE_ELEMENTS_DEFAULT: set[str] = {
     "td",
 }
 
-TAG_REGEX = re.compile(r"<\s*([a-zA-Z0-9]+)")
 # ADMISSIBLE is used to enforce the simplified HTML structure that Xooxle search
 # can support.
 # TODO: (#0) Document the criteria used to decide whether a tag is admissible.
@@ -142,9 +135,20 @@ TAG_REGEX = re.compile(r"<\s*([a-zA-Z0-9]+)")
 # UNIT_DELIMITER and LINE_BREAK are special because Xooxle splits the HTML using
 # these delimiters. Thus, they don't really end up in the searchable segments of
 # the HTML.
-# TODO: (#439) Given the above, and given how large some Crum entries are, you
-# might want to treat <p> as a unit tag, rather than a retained tag.
-ADMISSIBLE = RETAIN_TAGS_DEFAULT | {"hr", "br"} | {"span", "a"} | {"p"}
+ADMISSIBLE: set[str] = RETAIN_TAGS_DEFAULT | {"hr", "br"} | {"span", "a"}
+
+
+class Metadata(typing.TypedDict):
+    """Represents the metadata object with its layer structure."""
+
+    layers: list[list[str]]
+
+
+class Index(typing.TypedDict):
+    """A JSON Xooxle Index"""
+
+    data: list[dict[str, str]]
+    metadata: Metadata
 
 
 class Selector:
@@ -285,14 +289,14 @@ class Capture:
 
         """
         parts: Iterable[str] = self._get_tag_html(tag)
-        parts = Cleaner.clean(parts)
+        parts = clean.clean(parts)
         return "".join(parts)
 
     def _get_tag_html(self, child: bs4.Tag) -> Generator[str]:
         if child.name in self._unit_tags:
-            yield UNIT_DELIMITER
+            yield const.UNIT_DELIMITER
         elif child.name in self._block_elements:
-            yield LINE_BREAK
+            yield page.LINE_BREAK
         elif child.name in self._space_elements:
             yield " "
 
@@ -338,9 +342,9 @@ class Capture:
             yield from self._get_children_simplified_html(child)
 
         if child.name in self._unit_tags:
-            yield UNIT_DELIMITER
+            yield const.UNIT_DELIMITER
         elif child.name in self._block_elements:
-            yield LINE_BREAK
+            yield page.LINE_BREAK
         elif child.name in self._space_elements:
             yield " "
 
@@ -369,158 +373,7 @@ class Capture:
             yield " "
 
 
-class Cleaner:
-    """Clean extracted HTML.
-
-    NOTE: Input and output are iterable of strings - each representing a piece
-    of the HTML - rather than the entire HTML combined in a single string.
-    Some assumptions are made about the structure of the iterable (for example,
-    we assume that a tag is always a standalone string).
-
-    """
-
-    IterOfIters = Iterable[Iterable[str]]  # pylint: disable=invalid-name
-
-    @staticmethod
-    def clean(tokens: Iterable[str]) -> Generator[str]:
-        """Clean each unit, remove empty units and redundant unit delimiters.
-
-        Args:
-            tokens: A list of units. A unit could be a tag, a piece of text, or
-                a unit delimiter.
-
-        Yields:
-            A cleaned subsequence of the input tokens, after eliminating
-            superfluous tokens.
-
-        """
-        units: Cleaner.IterOfIters
-        units = Cleaner.split_iterable(tokens, Cleaner._is_unit_delimiter)
-        units = map(Cleaner._clean_unit, units)
-        yield from Cleaner.join_non_empty(units, [UNIT_DELIMITER])
-
-    @staticmethod
-    def _clean_unit(unit: Iterable[str]) -> Generator[str]:
-        # _clean_unit cleans each line, remove empty lines and redundant line
-        # breaks.
-        lines: Cleaner.IterOfIters
-        lines = Cleaner.split_iterable(unit, Cleaner._is_line_break)
-        lines = map(Cleaner._clean_line, lines)
-        yield from Cleaner.join_non_empty(lines, [LINE_BREAK])
-
-    @staticmethod
-    def _clean_line(line: Iterable[str]) -> Generator[str]:
-        # _clean_line deletes excess whitespace and empty tags.
-        parts: Cleaner.IterOfIters
-        parts = Cleaner.split_iterable(line, str.isspace)
-        line = Cleaner.join_non_empty(parts, [" "])
-        del parts
-        # Perform additional tag-aware cleanup.
-        line = Cleaner._strip(line)
-        line = Cleaner._filter_empty_tags(line)
-        yield from line
-
-    @staticmethod
-    def _strip(line: Iterable[str]) -> Iterator[str]:
-        # Strip beginning of line.
-        line = Cleaner._strip_beginning_of_line(line)
-        # Strip end of line.
-        line = reversed(list(line))
-        line = Cleaner._strip_beginning_of_line(line)
-        line = reversed(list(line))
-        # Return.
-        return line
-
-    @staticmethod
-    def _strip_beginning_of_line(line: Iterable[str]) -> Generator[str]:
-        found_non_space = False
-        for token in line:
-            if token.startswith("<"):
-                # This is a tag. Yield as is.
-                yield token
-                continue
-            if not token.isspace():
-                # This is a non-space string. Yield, and flag that we have
-                # encountered a non-space string.
-                yield token
-                found_non_space = True
-                continue
-            if found_non_space:
-                # This is a space string, but we have already encountered a
-                # non-space string. Yield.
-                yield token
-                continue
-            # This is a space string, and we haven't encountered a non-space
-            # string yet. Do nothing.
-            assert token.isspace() and not found_non_space
-
-    @staticmethod
-    def _filter_empty_tags(line: Iterable[str]) -> list[str]:
-        stack: list[str] = []
-        for token in line:
-            if not token.startswith("</"):
-                stack.append(token)
-                continue
-            # This is a closing tag.
-            assert stack  # We must have an opening tag.
-            stack_top = stack[-1]
-            if not stack_top.startswith("<") or stack_top.startswith("</"):
-                # The stack top doesn't have an opening tag.
-                stack.append(token)
-                continue
-            match = _TAG_RE.fullmatch(token)
-            assert match, token
-            cur = match.group(1)
-            match = _TAG_RE.fullmatch(stack_top)
-            assert match
-            prev = match.group(1)
-            del stack_top
-            if cur == prev:
-                _ = stack.pop()
-                continue
-            stack.append(token)
-        return stack
-
-    @staticmethod
-    def _is_unit_delimiter(token: str) -> bool:
-        return token == UNIT_DELIMITER
-
-    @staticmethod
-    def _is_line_break(token: str) -> bool:
-        return token == LINE_BREAK
-
-    @staticmethod
-    def split_iterable(
-        iterable: Iterable[str],
-        is_delimiter: Callable[[str], bool],
-    ) -> Generator[Iterable[str]]:
-        for is_delimiter_group, group in groupby(iterable, is_delimiter):
-            if is_delimiter_group:
-                continue
-            yield group
-
-    @staticmethod
-    def join_non_empty(
-        iterables: IterOfIters,
-        delimiter: Iterable[str],
-    ) -> Generator[str]:
-        is_first_nonempty_iterable = True
-        for iterable in iterables:
-            iterator = iter(iterable)
-            del iterable
-            first_item = next(iterator, None)
-            if first_item is None:
-                # This iterable is empty.
-                continue
-            if is_first_nonempty_iterable:
-                is_first_nonempty_iterable = False
-            else:
-                yield from delimiter
-            yield first_item
-            yield from iterator
-
-
-class Index:
+class Xooxle:
     """A Xooxle index."""
 
     def __init__(
@@ -589,7 +442,7 @@ class Index:
         else:
             key = path
 
-        return {KEY: key} | {
+        return {_KEY: key} | {
             # NOTE: We no longer allow duplicate content in the output.
             # If an element has been selected once, delete it!
             # This implies that the order of captures matters!
@@ -603,7 +456,7 @@ class Index:
                 self.process_file,
                 self.iter_input(),
             )
-        json = {
+        json: Index = {
             "data": list(data),
             "metadata": {
                 "layers": self._layers,
@@ -613,14 +466,14 @@ class Index:
         self.validate(json)
         file.write(file.json_dumps(json), self._output)
 
-    def validate(self, json: dict[str, typing.Any]) -> None:
+    def validate(self, json: Index) -> None:
         keys: list[str] = [
             field for layer in json["metadata"]["layers"] for field in layer
-        ] + [KEY]
+        ] + [_KEY]
         entry: dict[str, str]
         for entry in json["data"]:
             ensure.equal_sets(entry.keys(), keys)
             for key, value in entry.items():
-                if key == KEY:
+                if key == _KEY:
                     continue
-                ensure.members(TAG_REGEX.findall(value), ADMISSIBLE)
+                ensure.members(const.TAG_RE.findall(value), ADMISSIBLE)

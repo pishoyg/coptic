@@ -853,7 +853,7 @@ _COPTICSITE_RETAIN_CLASSES = {
     "spelling",
 } | _DIALECTS
 
-CRUM_XOOXLE = xooxle.Index(
+CRUM_XOOXLE = xooxle.Xooxle(
     source=CRUM_ALL,
     extract=[
         xooxle.Selector({"name": "title"}, force=False),
@@ -869,9 +869,34 @@ CRUM_XOOXLE = xooxle.Index(
         xooxle.Selector({"class_": "sisters"}, force=False),
         xooxle.Selector({"id": "categories"}, force=False),
         xooxle.Selector({"id": "quality"}),
-        xooxle.Selector({"id": "wiki"}, force=False),
     ],
     captures=[
+        xooxle.Capture(
+            "wiki",
+            xooxle.Selector({"id": "wiki"}, force=False),
+            # The following classes are used for styling. While we may be able
+            # to style the languages in JavaScript without retaining classes in
+            # the HTML, this approach is simpler, because it's inherited from
+            # Wiki.
+            # For Arabic, Amharic, Hebrew, and Aramaic, this only increases the
+            # size of the index by ~8%.
+            # If we were to need the classes for Coptic or Greek, this would
+            # increase the size of the index more significantly, so we shouldn't
+            # do it.
+            # TODO: (#0) Import class names from Wiki, instead of duplicating
+            # them below.
+            retain_classes={
+                "wiki",
+                "dialect",
+                "headword",
+                "bullet",
+                "arabic",
+                "amharic",
+                "hebrew",
+                "aramaic",
+            },
+            unit_tags={"p"},
+        ),
         xooxle.Capture(
             "marcion",
             xooxle.Selector({"id": "pretty"}),
@@ -899,11 +924,12 @@ CRUM_XOOXLE = xooxle.Index(
             block_elements=xooxle.BLOCK_ELEMENTS_DEFAULT | {"td"},
         ),
     ],
+    layers=[["marcion", "meaning", "appendix"], ["wiki"]],
     output=paths.LEXICON_DIR / "crum.json",
 )
 
 
-KELLIA_XOOXLE = xooxle.Index(
+KELLIA_XOOXLE = xooxle.Xooxle(
     source=KELLIA_COMPREHENSIVE,
     extract=[
         xooxle.Selector({"name": "footer"}, force=False),
@@ -933,7 +959,7 @@ KELLIA_XOOXLE = xooxle.Index(
 )
 
 
-COPTICSITE_XOOXLE = xooxle.Index(
+COPTICSITE_XOOXLE = xooxle.Xooxle(
     source=COPTICSITE_BOHAIRIC,
     extract=[],
     captures=[
@@ -948,38 +974,4 @@ COPTICSITE_XOOXLE = xooxle.Index(
         ),
     ],
     output=os.path.join(paths.LEXICON_DIR, "copticsite.json"),
-)
-
-CRUM_WIKI_XOOXLE: xooxle.Index = xooxle.Index(
-    source=CRUM_ALL,
-    extract=[],
-    captures=[
-        xooxle.Capture(
-            "wiki",
-            xooxle.Selector({"id": "wiki"}, force=False),
-            # The following classes are used for styling. While we may be able
-            # to style the languages in JavaScript without retaining classes in
-            # the HTML, this approach is simpler, because it's inherited from
-            # Wiki.
-            # For Arabic, Amharic, Hebrew, and Aramaic, this only increases the
-            # size of the index by ~8%.
-            # If we were to need the classes for Coptic or Greek, this would
-            # increase the size of the index more significantly, so we shouldn't
-            # do it.
-            # TODO: (#0) Import class names from Wiki, instead of duplicating
-            # them below.
-            retain_classes={
-                "wiki",
-                "dialect",
-                "headword",
-                "bullet",
-                "arabic",
-                "amharic",
-                "hebrew",
-                "aramaic",
-            },
-            retain_tags=xooxle.RETAIN_TAGS_DEFAULT | {"p"},
-        ),
-    ],
-    output=os.path.join(paths.LEXICON_DIR, "wiki.json"),
 )

@@ -123,7 +123,6 @@ PATTERNS: list[Pattern] = [
     Pattern(
         [
             "crum/crum.json",
-            "crum/wiki.json",
             "crum/kellia.json",
             "crum/copticsite.json",
         ],

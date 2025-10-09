@@ -13,14 +13,14 @@ import * as str from './str.js';
 const KEY = 'KEY';
 
 /**
- * UNIT_LIMIT determines the behavior of the fields that should be split into
+ * UNITS_LIMIT determines the behavior of the fields that should be split into
  * units.
- * If the number of units in a field is at most UNIT_LIMIT, the field will
+ * If the number of units in a field is at most UNITS_LIMIT, the field will
  * always be produced whole.
  * Otherwise:
  * - If there are units with matches, matching units will be produced
  *   (regardless of their number).
- * - If there are no units with matches, the first UNIT_LIMIT units will be
+ * - If there are no units with matches, the first UNITS_LIMIT units will be
  *   produced.
  * - If some units end up not showing, a message will be shown indicating that
  *   more content is available.
@@ -126,7 +126,7 @@ export class Form {
   // Output fields:
   private readonly messageBox: HTMLElement;
   private readonly tbody: HTMLTableSectionElement;
-  private readonly collapsible: coll.Collapsible;
+  public readonly numColumns: number;
   private readonly form?: HTMLFormElement;
 
   /**
@@ -152,9 +152,13 @@ export class Form {
 
     this.messageBox = document.getElementById(form.messageBoxID)!;
 
-    this.tbody = document
-      .getElementById(form.resultsTableID)!
-      .querySelector('tbody')!;
+    const table: HTMLTableElement = document.getElementById(
+      form.resultsTableID
+    ) as HTMLTableElement;
+    this.tbody = table.querySelector('tbody')!;
+    this.numColumns = table
+      .querySelector('thead')!
+      .querySelectorAll('td').length;
 
     this.collapsible = new coll.Collapsible(
       document.getElementById(form.collapsibleID)!
@@ -420,11 +424,13 @@ export class SearchResult extends AggregateResult {
    * @param key
    * @param fields
    * @param regex
+   * @param layer
    */
   public constructor(
     public readonly key: string,
     fields: Field[],
-    regex: RegExp
+    regex: RegExp,
+    public readonly layer: number
   ) {
     super();
     this.results = fields.map((f: Field): FieldSearchResult => f.search(regex));
@@ -475,19 +481,25 @@ export class SearchResult extends AggregateResult {
    * @param total - Total number of results - used to display the index of the
    * current result.
    *
+   * @param numColumns
    * @returns
    */
-  public row(total: number): HTMLTableRowElement {
+  public row(total: number, numColumns: number): HTMLTableRowElement {
     const row: HTMLTableRowElement = document.createElement('tr');
 
-    row.append(
-      this.viewCell(total),
-      ...this.results.map((fsr: FieldSearchResult): HTMLTableCellElement => {
+    const cells: HTMLTableCellElement[] = this.results.map(
+      (fsr: FieldSearchResult): HTMLTableCellElement => {
         const cell: HTMLTableCellElement = document.createElement('td');
         cell.append(...fsr.highlight(this.href()));
         return cell;
-      })
+      }
     );
+    const colspan: number = Math.round(numColumns / cells.length);
+    cells.forEach((cell: HTMLTableCellElement): void => {
+      cell.colSpan = colspan;
+    });
+
+    row.append(this.viewCell(total), ...cells);
 
     return row;
   }
@@ -685,11 +697,16 @@ class FieldSearchResult extends AggregateResult {
     //   whether they have matches or not.
     // - If there are many units, we show those that have matches, even if
     //   their number exceeds the limit, because we need to show all matches.
+    //   We always show the first result, because its content is usually
+    //   important.
     const results: UnitSearchResult[] = !this.match
       ? this.results.slice(0, UNITS_LIMIT)
       : this.results.length <= UNITS_LIMIT
         ? this.results
-        : this.results.filter((r) => r.match);
+        : [
+          this.results[0],
+          ...this.results.slice(1).filter((r) => r.match),
+        ].filter((res) => res !== undefined);
 
     const content: HTMLDivElement = document.createElement('div');
     content.innerHTML = results
@@ -1156,6 +1173,8 @@ export class Xooxle {
    */
   private currentAbortController: AbortController | null = null;
 
+  private readonly numLayers: number;
+
   /**
    * @param index - JSON index object.
    * @param form - Form containing HTML input and output elements.
@@ -1177,6 +1196,29 @@ export class Xooxle {
 
     // Focus on the form, so the user can search right away.
     this.form.focus();
+
+    this.numLayers = index.metadata.layers.length;
+
+    index.metadata.layers.forEach((layer: string[]): void => {
+      // The number of columns must be divisible by the number of fields in a
+      // layer. This way, all fields will have the same colspan. For example,
+      // with 6 columns and 3 fields, each field will have a colspan of 2.
+      log.ensure(
+        this.numColumns % layer.length === 0,
+        'One of the layers has',
+        layer.length,
+        'fields, which is not a divisor of the number of columns in the table:',
+        this.numColumns
+      );
+    });
+  }
+
+  /**
+   * @returns
+   */
+  private get numColumns(): number {
+    // Account for the `view` column.
+    return this.form.numColumns - 1;
   }
 
   /**
@@ -1275,22 +1317,25 @@ export class Xooxle {
     // avoid jitter at the top of the table, which is the area that the user
     // will be looking at.
     const numBuckets: number = this.searchResultType.numBuckets();
-    const bucketSentinels: Element[] = Array.from(
-      { length: numBuckets },
-      () => {
-        const tr = document.createElement('tr');
-        tr.style.display = 'none';
-        this.form.result(tr);
-        return tr;
-      }
+    // Create a two-D array, where the first dimension is the layer, and the
+    // second is the bucket.
+    const bucketSentinels: Element[][] = Array.from(
+      { length: this.numLayers },
+      () =>
+        Array.from({ length: numBuckets }, () => {
+          const tr = document.createElement('tr');
+          tr.style.display = 'none';
+          this.form.result(tr);
+          return tr;
+        })
     );
 
     // Search is a cheap operation that we can afford to do on all candidates in
     // the beginning.
     const results: SearchResult[] = this.candidates
       .flatMap((can: Candidate): SearchResult[] => {
-        for (const layer of can.layers) {
-          const result = new this.searchResultType(can.key, layer, regex);
+        for (const [idx, layer] of can.layers.entries()) {
+          const result = new this.searchResultType(can.key, layer, regex, idx);
           if (result.match && result.filter()) {
             // This layer has a match. Return a result representing this layer.
             return [result];
@@ -1312,9 +1357,12 @@ export class Xooxle {
       // candidates before updating display.
       // Instead, we create a number of rows, and then yield to the browser to
       // allow display update.
-      const row: HTMLTableRowElement = result.row(results.length);
+      const row: HTMLTableRowElement = result.row(
+        results.length,
+        this.numColumns
+      );
 
-      bucketSentinels[
+      bucketSentinels[result.layer]![
         Math.min(result.bucket(row), numBuckets - 1)
       ]!.insertAdjacentElement('beforebegin', row);
 
