@@ -1,78 +1,104 @@
-/* Use italic for the form labels. */
-#highlight-dialects,
-#full-word-checkbox,
-#regex-checkbox {
+/* Use italic for the checkbox labels. */
+td#wiki-checkbox-td,
+td#full-word-checkbox-td,
+td#regex-checkbox-td {
+  text-align: center;
   font-style: italic;
 }
 
+/* Style the title. */
+form thead * {
+  text-align: center; /* Centered. */
+  font-weight: bold; /* Bold. */
+  color: #2c3e50; /* Dark gray. */
+  font-size: 120%; /* Large font. */
+}
+
+/* Add padding to all cells in the form tables. */
+form td {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
 /* Dim Crum's types. */
-.results#crum .type {
+table.results#crum span.type {
   opacity: 0.3;
 }
 
-/* Wide screen rules: */
-@media (width > 500px) {
-  /* Use 80% of the width. */
-  .search-box input {
-    width: 80%;
-  }
-
-  /* Hide the drop-down menu, and the keyboard.
-   * TODO: (#453) Show the keyboard on desktop once you have instructions for how
-   * to install a keyboard on desktop. */
-  .drop,
-  #keyboard {
-    display: none;
-  }
-
-  #full-word-checkbox,
-  #regex-checkbox {
-    width: 15%;
-    text-align: center;
-  }
-}
-
-/* Narrow screen rules: */
-@media (width <= 500px) {
-  /* Increase the width of the search box. */
-  .search-box input {
-    width: 95%;
-  }
-
-  /* Hide the spelled-out checkboxes. */
-  #checkboxes {
-    display: none;
-  }
-
-  /* Shrink the space between the form and the results. */
-  .lexicon-form-separator {
-    margin-top: 5px;
-    margin-bottom: 0;
-  }
-
-  /* Shrink the space around the error message. */
-  #message {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
+/* Dim the Wiki checkbox label. */
+td#wiki-checkbox-td {
+  color: gray;
 }
 
 #checkboxes label {
   margin: 1.5px;
 }
 
-#wiki-title,
-#wiki-collapsible {
-  display: none;
-}
-
-#wiki-incomplete {
-  color: #7f8c8d;
-  font-style: italic;
-  margin-left: 2em;
-  font-size: small;
-}
-
-.view a {
+td.view a {
   display: block;
+}
+
+input#search-box {
+  width: 100%;
+}
+
+/* Wide screen rules: */
+@media (width > 500px) {
+  /* Hide the drop-down menu, and the keyboard. */
+
+  /* TODO: (#453) Show the keyboard on desktop once you have instructions for how
+   * to install a keyboard on desktop. */
+  .drop,
+  td#keyboard-td {
+    display: none;
+  }
+
+  /* Widen the search box cell a little bit. */
+  td#search-box-td {
+    width: 67%;
+  }
+
+  td#dialects {
+    width: 70%;
+  }
+}
+
+/* Narrow screen rules: */
+@media (width <= 500px) {
+  /* Shorten the label of the Wiki checkbox. */
+  #experimental {
+    display: none;
+  }
+
+  /* Shrink the search box cell. */
+  td#search-box-td {
+    width: 50%;
+  }
+
+  /* Control the size of the Wiki checkbox cell. */
+  td#wiki-checkbox-td {
+    width: 20%;
+  }
+
+  /* Right-align the keyboard cell. */
+  td#keyboard-td {
+    text-align: right;
+  }
+
+  /* Hide the spelled-out checkboxes. */
+  span#checkboxes {
+    display: none;
+  }
+
+  /* Shrink the space between the form and the results. */
+  hr#lexicon-form-separator {
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  /* Shrink the space around the error message. */
+  p#message {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }

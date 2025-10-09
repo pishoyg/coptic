@@ -40,50 +40,57 @@
     <table id="xooxle">
       <thead>
         <tr>
-          <td colspan="3">ⲡⲓⲖⲉⲝⲓⲕⲟⲛ | Coptic Dictionary</td>
+          <td id="title" colspan="3">ⲡⲓⲖⲉⲝⲓⲕⲟⲛ | Coptic Dictionary</td>
         </tr>
       </thead>
 
       <tbody>
         <tr>
-          <td class="search-box" colspan="2"><input id="searchBox"
-          autocapitalize="off" autocomplete="off" autocorrect="off"
-          placeholder="Search" spellcheck="false" type="text">
+          <td id="search-box-td"><input id="search-box" autocapitalize="off"
+          autocomplete="off" autocorrect="off" placeholder="Search" spellcheck=
+          "false" type="text">
           </td>
-          <td>
+          <td id="keyboard-td">
             <a id="keyboard" href="/keyboard.html" target="_blank">⌨️
             Keyboard</a>
           </td>
-        </tr>
-
-        <tr>
-          <td id="dialects">
-            <div>
-              <div class="drop">
-                Dialects ▾
-                <div class="droppable">
-                  <!--Dialect checkboxes go here.-->
-                </div>
-              </div>
-            </div>
-            <span id="checkboxes"><span id="highlight-dialects">Highlight
-            Dialects:&nbsp;</span> <!--Dialect checkboxes go here.--></span>
-          </td>
-          <td id="full-word-checkbox"><label for="fullWordCheckbox"><input id=
-          "fullWordCheckbox" type="checkbox"> Full-Word</label>
-          </td>
-          <td id="regex-checkbox"><label for="regexCheckbox"><input id=
-          "regexCheckbox" type="checkbox"> <a href=
-          "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions"
-          rel="noopener noreferrer" style="color: black" target=
-          "_blank">RegEx</a></label>
+          <td id="wiki-checkbox-td"><label for="wikiCheckbox"><input id=
+          "wiki-checkbox" type="checkbox">Wiki <span id=
+          "experimental">(experimental)</span></label>
           </td>
         </tr>
       </tbody>
     </table>
+
+    <table>
+      <tr>
+        <td id="dialects">
+          <div>
+            <div class="drop">
+              Dialects ▾
+              <div class="droppable">
+                <!--Dialect checkboxes go here.-->
+              </div>
+            </div>
+          </div>
+          <span id="checkboxes">Highlight Dialects:&nbsp; 
+          <!--Dialect checkboxes go here.--></span>
+        </td>
+        <td id="full-word-checkbox-td"><label for=
+        "full-word-checkbox"><input id="full-word-checkbox" type="checkbox">
+        Full-Word</label>
+        </td>
+        <td id="regex-checkbox-td"><label for="regex-checkbox"><input id=
+        "regex-checkbox" type="checkbox"> <a href=
+        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions"
+        rel="noopener noreferrer" style="color: black" target=
+        "_blank">RegEx</a></label>
+        </td>
+      </tr>
+    </table>
   </form>
 
-  <hr class="lexicon-form-separator">
+  <hr id="lexicon-form-separator">
 
   <p id="message"><!--Placeholder for warnings and messages.-->
   </p>

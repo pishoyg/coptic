@@ -13,9 +13,9 @@ import * as drop from '../dropdown.js';
 import * as log from '../logger.js';
 
 enum ID {
-  SEARCH_BOX = 'searchBox',
-  FULL_WORD_CHECKBOX = 'fullWordCheckbox',
-  REGEX_CHECKBOX = 'regexCheckbox',
+  SEARCH_BOX = 'search-box',
+  FULL_WORD_CHECKBOX = 'full-word-checkbox',
+  REGEX_CHECKBOX = 'regex-checkbox',
   MESSAGE_BOX = 'message',
   DIALECTS = 'dialects',
   // While we have two groups of checkboxes, confusingly enough, the unqualified
@@ -23,6 +23,7 @@ enum ID {
   // ones that show in the drop-down menu. The reason this ID was used for those
   // boxes is that they preceded the more recent drop-down version.
   CHECKBOXES = 'checkboxes',
+  WIKI_CHECKBOX = 'wiki-checkbox',
 
   REPORTS = 'reports',
   FORM = 'form',
