@@ -448,8 +448,11 @@ function replaceReference(
   if (suffix) {
     span.append(parseSuffix(suffix, nextSibling /* candidate superscript  */));
   }
-  // Add a hover-invoked tooltip.
-  drop.addDroppable(span, 'hover', ...source.tooltip());
+  // Add a hover-invoked tooltip, if present.
+  const tooltip: (Node | string)[] | undefined = source.tooltip();
+  if (tooltip?.length) {
+    drop.addDroppable(span, 'hover', ...tooltip);
+  }
 
   return { replacement: span, remainder };
 }

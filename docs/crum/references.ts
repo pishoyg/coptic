@@ -23,13 +23,13 @@ export interface Source {
 export class Reference {
   /**
    *
-   * @param source - Cited source.
    * @param variant - Abbreviation used to cite this source.
+   * @param source - Cited source.
    * @param postfix - Postfix appended to the abbreviation, if any.
    */
   public constructor(
-    public readonly source: Source,
     public readonly variant: string,
+    public readonly source?: Source,
     public readonly postfix?: string | Source
   ) {}
 
@@ -38,7 +38,10 @@ export class Reference {
    * @returns
    * TODO: (#523) Postfixes should show in the tooltip.
    */
-  public tooltip(): (Node | string)[] {
+  public tooltip(): (Node | string)[] | undefined {
+    if (!this.source) {
+      return undefined;
+    }
     const fragment: (Node | string)[] = [this.source.title];
     if (!this.source.innerHTML?.length) {
       return fragment;
@@ -57,7 +60,7 @@ export class Reference {
  * used to cite it.
  */
 interface Resource {
-  source: Source;
+  source?: Source;
   /** variants is a list of abbreviation forms used to cite this source in
    * Crum's text. Sources were often cited inconsistently, which is why we
    * provide you with a list, so you can specify all alternatives.
@@ -2349,9 +2352,9 @@ DATA.forEach((res: Resource): void => {
 
   res.variants.forEach((variant: string): void => {
     // Add the abbreviation without any postfixes.
-    add(variant, new Reference(res.source, variant));
+    add(variant, new Reference(variant, res.source));
     res.postfixes?.forEach((postfix: string): void => {
-      add(`${variant} ${postfix}`, new Reference(res.source, variant, postfix));
+      add(`${variant} ${postfix}`, new Reference(variant, res.source, postfix));
     });
   });
 });
