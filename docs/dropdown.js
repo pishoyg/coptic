@@ -45,7 +45,6 @@ export class Droppable {
       // This is a hover-invoked tooltip. We just need a listener for
       // realignment.
       parent.addEventListener('mouseenter', this.realign.bind(this));
-      parent.addEventListener('mouseleave', this.resetAlignment.bind(this));
       return;
     }
     // This is a click-invoked tooltip.
@@ -77,11 +76,10 @@ export class Droppable {
    */
   set(visibility) {
     this.droppable.style.display = visibility;
-    if (visibility === 'block') {
-      this.realign();
-    } else {
-      this.resetAlignment();
+    if (visibility === 'none') {
+      return;
     }
+    this.realign();
   }
   /**
    *
@@ -95,22 +93,18 @@ export class Droppable {
     this.set('none');
   }
   /**
+   * Realigns the droppable element to stay within the viewport.
    */
   realign() {
-    // Reset the transform property.
+    // Reset the transform property to get accurate measurements.
+    this.droppable.style.transform = '';
     const rect = this.droppable.getBoundingClientRect();
-    const overflow = rect.right - window.innerWidth;
+    const overflow = rect.right - document.documentElement.clientWidth;
     if (overflow > -OVERFLOW_MARGIN) {
-      // This element overflows outside the right edge of the screen. Change
-      // its alignment.
+      // This element overflows the right edge of the screen.
+      // Translate it leftward to bring it back into view.
       this.droppable.style.transform = `translateX(-${overflow + OVERFLOW_MARGIN}px)`;
     }
-  }
-  /**
-   *
-   */
-  resetAlignment() {
-    this.droppable.style.transform = '';
   }
 }
 /**
