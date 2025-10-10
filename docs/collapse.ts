@@ -55,6 +55,17 @@ export class Collapsible {
    */
   private set(maxHeight: string): void {
     this.collapsible.style.maxHeight = maxHeight;
+
+    if (maxHeight) {
+      // If we're making the element visible, wait until the transition is
+      // completed, and then show the overflow.
+      setTimeout(() => {
+        this.collapsible.style.overflow = 'visible';
+      }, COLLAPSISBLE_TRANSITION_MS);
+    } else {
+      // If we're hiding the element, hide the overflow immediately.
+      this.collapsible.style.overflow = 'hidden';
+    }
   }
 
   /**
