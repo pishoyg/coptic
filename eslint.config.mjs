@@ -33,7 +33,6 @@ export default tseslint.config(
       ],
       semi: 'error',
       'prefer-const': 'error',
-      indent: ['error', 2, { SwitchCase: 1 }],
       'max-len': [
         'error',
         {
