@@ -15,6 +15,7 @@ import * as xoox from '../xooxle.js';
 import * as dev from '../dev.js';
 import * as cls from './cls.js';
 import * as head from '../header.js';
+import * as id from './id.js';
 
 /**
  *
@@ -43,7 +44,10 @@ export function makeHelpPanel(
       new help.Shortcut(
         'Reset highlighting',
         ['lexicon', 'note', 'index', 'index_index'],
-        highlighter.reset.bind(highlighter)
+        () => {
+          highlighter.reset();
+          devHighlighter.reset();
+        }
       ),
     ],
     d: [
@@ -136,22 +140,22 @@ export function makeHelpPanel(
   const search = {
     w: [
       new help.Shortcut('Toggle full-word search', ['lexicon'], () => {
-        browser.click('fullWordCheckbox');
+        browser.click(id.FULL_WORD_CHECKBOX);
       }),
     ],
     x: [
       new help.Shortcut('Toggle regex search', ['lexicon'], () => {
-        browser.click('regexCheckbox');
+        browser.click(id.REGEX_CHECKBOX);
       }),
     ],
     '/': [
       new help.Shortcut('Focus on the search box', ['lexicon'], () => {
-        browser.focus('searchBox');
+        browser.focus(id.SEARCH_BOX);
       }),
     ],
     i: [
       new help.Shortcut('Toggle Wiki search', ['lexicon'], () => {
-        browser.click('wikiCheckbox');
+        browser.click(id.WIKI_CHECKBOX);
       }),
     ],
   };
@@ -183,10 +187,10 @@ export function makeHelpPanel(
     ],
     C: [
       new help.Shortcut('Crum', ['lexicon'], () => {
-        browser.scroll('crum-title');
+        browser.scroll(id.CRUM_TITLE);
       }),
       new help.Shortcut('Crum pages', ['note'], () => {
-        browser.scroll('crum');
+        browser.scroll(id.CRUM);
       }),
     ],
     K: [
@@ -194,33 +198,33 @@ export function makeHelpPanel(
         `<a href="${paths.KELLIA}" target="_blank" rel="noopener,noreferrer"><strong>K</strong>ELLIA</a>`,
         ['lexicon'],
         () => {
-          browser.scroll('kellia-title');
+          browser.scroll(id.KELLIA_TITLE);
         }
       ),
     ],
     T: [
       new help.Shortcut('copticsi<strong>t</strong>e', ['lexicon'], () => {
-        browser.scroll('copticsite-title');
+        browser.scroll(id.COPTICSITE_TITLE);
       }),
     ],
     D: [
       new help.Shortcut('Dawoud pages', ['note'], () => {
-        browser.scroll('dawoud');
+        browser.scroll(id.DAWOUD);
       }),
     ],
     k: [
       new help.Shortcut('Crum text', ['note'], () => {
-        browser.scroll('wiki');
+        browser.scroll(id.WIKI);
       }),
     ],
     w: [
       new help.Shortcut('Related words', ['note'], () => {
-        browser.scroll('sisters');
+        browser.scroll(id.SISTERS);
       }),
     ],
     m: [
       new help.Shortcut('Meaning', ['note'], () => {
-        browser.scroll('meaning');
+        browser.scroll(id.MEANING);
       }),
     ],
     e: [
@@ -228,38 +232,38 @@ export function makeHelpPanel(
         'S<strong>e</strong>ns<strong>e</strong>s',
         ['note'],
         () => {
-          browser.scroll('senses');
+          browser.scroll(id.SENSES);
         }
       ),
     ],
     t: [
       new help.Shortcut('Type', ['note'], () => {
-        browser.scroll('root-type');
+        browser.scroll(id.ROOT_TYPE);
       }),
     ],
     j: [
       new help.Shortcut('Categories', ['note'], () => {
-        browser.scroll('categories');
+        browser.scroll(id.CATEGORIES);
       }),
     ],
     i: [
       new help.Shortcut('Images', ['note'], () => {
-        browser.scroll('images');
+        browser.scroll(id.IMAGES);
       }),
     ],
     q: [
       new help.Shortcut('Words', ['note'], () => {
-        browser.scroll('pretty');
+        browser.scroll(id.PRETTY);
       }),
     ],
     v: [
       new help.Shortcut('Derivations table', ['note'], () => {
-        browser.scroll('derivations');
+        browser.scroll(id.DERIVATIONS);
       }),
     ],
     c: [
       new help.Shortcut('Dictionary page list', ['note'], () => {
-        browser.scroll('dictionary');
+        browser.scroll(id.DICTIONARY);
       }),
     ],
     g: [
@@ -267,7 +271,7 @@ export function makeHelpPanel(
         'Header',
         ['lexicon', 'note', 'index', 'index_index'],
         () => {
-          browser.scroll('header');
+          browser.scroll(id.HEADER);
         }
       ),
     ],
@@ -276,7 +280,7 @@ export function makeHelpPanel(
         'Footer',
         ['lexicon', 'note', 'index', 'index_index'],
         () => {
-          browser.scroll('footer');
+          browser.scroll(id.FOOTER);
         }
       ),
     ],
@@ -285,7 +289,7 @@ export function makeHelpPanel(
   const collapse = {
     c: [
       new help.Shortcut('Crum', ['lexicon'], () => {
-        browser.click('crum-title');
+        browser.click(id.CRUM_TITLE);
       }),
     ],
     k: [
@@ -293,13 +297,13 @@ export function makeHelpPanel(
         `<a href="${paths.KELLIA}" target="_blank" rel="noopener,noreferrer"><strong>K</strong>ELLIA</a>`,
         ['lexicon'],
         () => {
-          browser.click('kellia-title');
+          browser.click(id.KELLIA_TITLE);
         }
       ),
     ],
     t: [
       new help.Shortcut('copticsi<strong>t</strong>e', ['lexicon'], () => {
-        browser.click('copticsite-title');
+        browser.click(id.COPTICSITE_TITLE);
       }),
     ],
   };
