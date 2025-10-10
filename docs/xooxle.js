@@ -1,6 +1,5 @@
 /** Package xooxle defines the Xooxle engine core logic. */
 /* eslint-disable max-lines */
-import * as coll from './collapse.js';
 import * as browser from './browser.js';
 import * as log from './logger.js';
 import * as orth from './orth.js';
@@ -11,14 +10,14 @@ import * as str from './str.js';
 // generate an HREF to open the word page.
 const KEY = 'KEY';
 /**
- * UNIT_LIMIT determines the behavior of the fields that should be split into
+ * UNITS_LIMIT determines the behavior of the fields that should be split into
  * units.
- * If the number of units in a field is at most UNIT_LIMIT, the field will
+ * If the number of units in a field is at most UNITS_LIMIT, the field will
  * always be produced whole.
  * Otherwise:
  * - If there are units with matches, matching units will be produced
  *   (regardless of their number).
- * - If there are no units with matches, the first UNIT_LIMIT units will be
+ * - If there are no units with matches, the first UNITS_LIMIT units will be
  *   produced.
  * - If some units end up not showing, a message will be shown indicating that
  *   more content is available.
@@ -102,10 +101,11 @@ export class Form {
   searchBox;
   fullWordCheckbox;
   regexCheckbox;
+  otherCheckBoxes;
   // Output fields:
   messageBox;
   tbody;
-  collapsible;
+  numColumns;
   form;
   /**
    * Construct the form object.
@@ -117,34 +117,49 @@ export class Form {
    */
   constructor(form) {
     this.searchBox = document.getElementById(form.searchBoxID);
-    this.fullWordCheckbox = document.getElementById(form.fullWordCheckboxID);
-    this.regexCheckbox = document.getElementById(form.regexCheckboxID);
+    this.fullWordCheckbox = {
+      box: document.getElementById(form.fullWordCheckboxID),
+      param: Param.FULL,
+    };
+    this.regexCheckbox = {
+      box: document.getElementById(form.regexCheckboxID),
+      param: Param.REGEX,
+    };
     this.messageBox = document.getElementById(form.messageBoxID);
-    this.tbody = document
-      .getElementById(form.resultsTableID)
-      .querySelector('tbody');
-    this.collapsible = new coll.Collapsible(
-      document.getElementById(form.collapsibleID)
-    );
+    const table = document.getElementById(form.resultsTableID);
+    this.tbody = table.querySelector('tbody');
+    this.numColumns = table
+      .querySelector('thead')
+      .querySelectorAll('td').length;
     if (form.formID) {
       this.form = document.getElementById(form.formID);
     }
+    this.otherCheckBoxes =
+      form.boxes?.map(([id, param]) => ({
+        box: document.getElementById(id),
+        param,
+      })) ?? [];
     // Populate the form once from the query parameters.
     this.populateFromParams();
     this.addEventListeners();
+  }
+  /**
+   * @returns
+   */
+  get checkboxes() {
+    return [this.fullWordCheckbox, this.regexCheckbox, ...this.otherCheckBoxes];
   }
   /**
    * Add event listeners to update query parameters from the form fields.
    */
   addEventListeners() {
     this.searchBox.addEventListener('input', () => {
-      this.populateParams(Param.QUERY, this.searchBox.value);
+      this.populateParam(Param.QUERY, this.searchBox.value);
     });
-    this.fullWordCheckbox.addEventListener('click', () => {
-      this.populateParams(Param.FULL, this.fullWordCheckbox.checked);
-    });
-    this.regexCheckbox.addEventListener('click', () => {
-      this.populateParams(Param.REGEX, this.regexCheckbox.checked);
+    this.checkboxes.forEach((box) => {
+      box.box.addEventListener('click', () => {
+        this.populateParam(box.param, box.box.checked);
+      });
     });
     // Prevent form submission. Otherwise, pressing Enter while the search box
     // is focused could clear all input fields!
@@ -161,12 +176,11 @@ export class Form {
       this.searchBox.value = query;
     }
     // Boolean parameters are either true, or absent from the URL.
-    if (url.searchParams.get(Param.FULL)) {
-      this.fullWordCheckbox.checked = true;
-    }
-    if (url.searchParams.get(Param.REGEX)) {
-      this.regexCheckbox.checked = true;
-    }
+    this.checkboxes.forEach((box) => {
+      if (url.searchParams.get(box.param)) {
+        box.box.checked = true;
+      }
+    });
   }
   /**
    * Update the given URL parameter.
@@ -174,7 +188,7 @@ export class Form {
    * @param name
    * @param value
    */
-  populateParams(name, value) {
+  populateParam(name, value) {
     const url = new URL(window.location.href);
     if (!value) {
       url.searchParams.delete(name);
@@ -214,8 +228,9 @@ export class Form {
    * @param listener
    */
   addCheckboxClickListener(listener) {
-    this.fullWordCheckbox.addEventListener('click', listener);
-    this.regexCheckbox.addEventListener('click', listener);
+    this.checkboxes.forEach((box) => {
+      box.box.addEventListener('click', listener);
+    });
   }
   /**
    * @returns The query expression, constructed from the input fields.
@@ -225,12 +240,12 @@ export class Form {
     if (!query) {
       return '';
     }
-    if (!this.regexCheckbox.checked) {
+    if (!this.regexCheckbox.box.checked) {
       // Escape all the special characters in the string, in order to search
       // for raw matches.
       query = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     }
-    if (this.fullWordCheckbox.checked) {
+    if (this.fullWordCheckbox.box.checked) {
       // NOTE: It's important to wrap `query` in parentheses, to prevent its
       // content from corrupting the boundary regexes. See #318.
       query = str.bounded(query, true);
@@ -244,17 +259,6 @@ export class Form {
    */
   result(row) {
     this.tbody.append(row);
-  }
-  /**
-   * Update the height of the collapsible element.
-   * The collapsible element is height-restricted. We need to regularly update
-   * its height whenever new content is added.
-   *
-   * NOTE: This is an expensive operation. Don't perform it repeatedly in
-   * time-sensitive applications.
-   */
-  expand() {
-    this.collapsible.adjustHeightIfVisible();
   }
   /**
    * Show the given message in the form's message field.
@@ -328,21 +332,21 @@ class AggregateResult {
 export class Candidate {
   // key bears the candidate key.
   key;
-  // fields bears the candidate's searchable fields.
-  fields;
+  // layers bears the candidate's searchable fields.
+  layers;
   /**
    * @param record - The candidate data.
-   * @param fields - The fields metadata.
+   * @param layers - The layer and field metadata.
    */
-  constructor(record, fields) {
+  constructor(record, layers) {
     this.key = record[KEY];
-    this.fields = fields.map(
+    this.layers = layers.map(
       // NOTE: Our Xooxle index builder is guaranteed to produce a
       // normalized tree.[1] The text content is also guaranteed to be free of
       // any superfluous space, and to be NFD-normalized.
       // Thus, no normalization is needed when constructing the field.
       // [1] https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize
-      (name) => new Field(record[name])
+      (layer) => layer.map((field) => new Field(record[field]))
     );
   }
 }
@@ -350,23 +354,20 @@ export class Candidate {
  * SearchResult represents the search result of one candidate from the index.
  */
 export class SearchResult extends AggregateResult {
-  candidate;
+  key;
+  layer;
   results;
   /**
-   * @param candidate
+   * @param key
+   * @param fields
    * @param regex
+   * @param layer
    */
-  constructor(candidate, regex) {
+  constructor(key, fields, regex, layer) {
     super();
-    this.candidate = candidate;
-    this.results = this.candidate.fields.map((f) => f.search(regex));
-  }
-  /**
-   *
-   * @returns
-   */
-  get key() {
-    return this.candidate.key;
+    this.key = key;
+    this.layer = layer;
+    this.results = fields.map((f) => f.search(regex));
   }
   /**
    * viewCell constructs the first cell in the row for this result, bearing the
@@ -406,18 +407,21 @@ export class SearchResult extends AggregateResult {
    * @param total - Total number of results - used to display the index of the
    * current result.
    *
+   * @param numColumns
    * @returns
    */
-  row(total) {
+  row(total, numColumns) {
     const row = document.createElement('tr');
-    row.append(
-      this.viewCell(total),
-      ...this.results.map((fsr) => {
-        const cell = document.createElement('td');
-        cell.append(...fsr.highlight(this.href()));
-        return cell;
-      })
-    );
+    const cells = this.results.map((fsr) => {
+      const cell = document.createElement('td');
+      cell.append(...fsr.highlight(this.href()));
+      return cell;
+    });
+    const colspan = Math.round(numColumns / cells.length);
+    cells.forEach((cell) => {
+      cell.colSpan = colspan;
+    });
+    row.append(this.viewCell(total), ...cells);
     return row;
   }
   /**
@@ -599,11 +603,16 @@ class FieldSearchResult extends AggregateResult {
     //   whether they have matches or not.
     // - If there are many units, we show those that have matches, even if
     //   their number exceeds the limit, because we need to show all matches.
+    //   We always show the first result, because its content is usually
+    //   important.
     const results = !this.match
       ? this.results.slice(0, UNITS_LIMIT)
       : this.results.length <= UNITS_LIMIT
         ? this.results
-        : this.results.filter((r) => r.match);
+        : [
+            this.results[0],
+            ...this.results.slice(1).filter((r) => r.match),
+          ].filter((res) => res !== undefined);
     const content = document.createElement('div');
     content.innerHTML = results.map((r) => r.highlight()).join(UNIT_DELIMITER);
     yield content;
@@ -988,6 +997,7 @@ export class Xooxle {
    * starts.
    */
   currentAbortController = null;
+  numLayers;
   /**
    * @param index - JSON index object.
    * @param form - Form containing HTML input and output elements.
@@ -997,14 +1007,34 @@ export class Xooxle {
     this.form = form;
     this.searchResultType = searchResultType;
     this.candidates = index.data.map(
-      (record) => new Candidate(record, index.metadata.fields)
+      (record) => new Candidate(record, index.metadata.layers)
     );
     this.addEventListeners();
     // Handle the search query once upon loading, in case the form picked up a
     // query from the URL parameters.
-    this.search(0);
+    this.search();
     // Focus on the form, so the user can search right away.
     this.form.focus();
+    this.numLayers = index.metadata.layers.length;
+    index.metadata.layers.forEach((layer) => {
+      // The number of columns must be divisible by the number of fields in a
+      // layer. This way, all fields will have the same colspan. For example,
+      // with 6 columns and 3 fields, each field will have a colspan of 2.
+      log.ensure(
+        this.numColumns % layer.length === 0,
+        'One of the layers has',
+        layer.length,
+        'fields, which is not a divisor of the number of columns in the table:',
+        this.numColumns
+      );
+    });
+  }
+  /**
+   * @returns
+   */
+  get numColumns() {
+    // Account for the `view` column.
+    return this.form.numColumns - 1;
   }
   /**
    */
@@ -1017,7 +1047,7 @@ export class Xooxle {
     this.form.addSearchBoxInputListener(
       this.search.bind(this, INPUT_DEBOUNCE_TIMEOUT)
     );
-    this.form.addCheckboxClickListener(this.search.bind(this, 0));
+    this.form.addCheckboxClickListener(this.search.bind(this));
     // Prevent other elements in the page from picking up key events on the
     // search box.
     this.form.addSearchBoxKeyListener(browser.stopPropagation);
@@ -1027,7 +1057,7 @@ export class Xooxle {
    *
    * @param timeout - How long to wait before starting search.
    */
-  search(timeout) {
+  search(timeout = 0) {
     if (this.debounceTimeout) {
       clearTimeout(this.debounceTimeout);
     }
@@ -1074,14 +1104,6 @@ export class Xooxle {
    * @param abortController - Abort controller for this search.
    */
   async searchAuxAux(regex, abortController) {
-    // TODO: (#0) We append random characters in order to avoid having timers
-    // with identical names. This is not ideal. Let's supply an index name as
-    // part of the metadata, and use that for logging instead.
-    const name = `time-to-first-yield-${Array.from({ length: 2 }, () =>
-      // eslint-disable-next-line no-magic-numbers
-      String.fromCharCode(97 + Math.floor(Math.random() * 26))
-    ).join('')}`;
-    log.time(name);
     // bucketSentinels is a set of hidden table rows that represent sentinels
     // (anchors / break points) in the results table.
     //
@@ -1101,17 +1123,30 @@ export class Xooxle {
     // avoid jitter at the top of the table, which is the area that the user
     // will be looking at.
     const numBuckets = this.searchResultType.numBuckets();
-    const bucketSentinels = Array.from({ length: numBuckets }, () => {
-      const tr = document.createElement('tr');
-      tr.style.display = 'none';
-      this.form.result(tr);
-      return tr;
-    });
+    // Create a two-D array, where the first dimension is the layer, and the
+    // second is the bucket.
+    const bucketSentinels = Array.from({ length: this.numLayers }, () =>
+      Array.from({ length: numBuckets }, () => {
+        const tr = document.createElement('tr');
+        tr.style.display = 'none';
+        this.form.result(tr);
+        return tr;
+      })
+    );
     // Search is a cheap operation that we can afford to do on all candidates in
     // the beginning.
     const results = this.candidates
-      .map((can) => new this.searchResultType(can, regex))
-      .filter((res) => res.match && res.filter())
+      .flatMap((can) => {
+        for (const [idx, layer] of can.layers.entries()) {
+          const result = new this.searchResultType(can.key, layer, regex, idx);
+          if (result.match && result.filter()) {
+            // This layer has a match. Return a result representing this layer.
+            return [result];
+          }
+        }
+        // None of the layers has a match. Return no results.
+        return [];
+      })
       .sort(searchResultCompare);
     for (const [count, result] of results.entries()) {
       if (abortController.signal.aborted) {
@@ -1123,17 +1158,11 @@ export class Xooxle {
       // candidates before updating display.
       // Instead, we create a number of rows, and then yield to the browser to
       // allow display update.
-      const row = result.row(results.length);
-      bucketSentinels[
+      const row = result.row(results.length, this.numColumns);
+      bucketSentinels[result.layer][
         Math.min(result.bucket(row), numBuckets - 1)
       ].insertAdjacentElement('beforebegin', row);
       if (count % RESULTS_TO_UPDATE_DISPLAY === RESULTS_TO_UPDATE_DISPLAY - 1) {
-        if (count <= RESULTS_TO_UPDATE_DISPLAY) {
-          // This is the first display update. Log time.
-          log.timeEnd(name);
-        }
-        // Expand the results table to accommodate the recently added results.
-        this.form.expand();
         // Allow the browser to update the display, receive user input, ...
         await browser.yieldToBrowser();
       }
@@ -1148,7 +1177,5 @@ export class Xooxle {
       .forEach((counter) => {
         counter.textContent = `${(++i).toString()} / ${results.length.toString()}`;
       });
-    // Expand the results table to accommodate the last batch of results.
-    this.form.expand();
   }
 }

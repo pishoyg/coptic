@@ -2249,6 +2249,12 @@ const DATA = [
   // TODO: (#522) Add the missing entries to this section.
   {
     source: {
+      title: 'Presumably Edward Charles Everard Owen (1860-1949)',
+    },
+    variants: ['E C Owen'],
+  },
+  {
+    source: {
       title:
         'Arabische Pflanzennamen aus Aegypten, Algerien und Jemen Dietrich Reimer (Ernst Vohsen), Berlin 1912',
       innerHTML: [

@@ -12,21 +12,6 @@ import * as wiki from './wiki.js';
 import * as drop from '../dropdown.js';
 import * as log from '../logger.js';
 import * as id from './id.js';
-var ID;
-(function (ID) {
-  ID['SEARCH_BOX'] = 'searchBox';
-  ID['FULL_WORD_CHECKBOX'] = 'fullWordCheckbox';
-  ID['REGEX_CHECKBOX'] = 'regexCheckbox';
-  ID['MESSAGE_BOX'] = 'message';
-  ID['DIALECTS'] = 'dialects';
-  // While we have two groups of checkboxes, confusingly enough, the unqualified
-  // 'checkboxes' ID refers to the ones that show on a list, rather than the
-  // ones that show in the drop-down menu. The reason this ID was used for those
-  // boxes is that they preceded the more recent drop-down version.
-  ID['CHECKBOXES'] = 'checkboxes';
-  ID['REPORTS'] = 'reports';
-  ID['FORM'] = 'form';
-})(ID || (ID = {}));
 var DialectMatch;
 (function (DialectMatch) {
   // The candidate has at least one of the highlighted dialects, and the match
@@ -71,10 +56,11 @@ class SearchResult extends xoox.SearchResult {
   /**
    *
    * @param total
+   * @param numColumns
    * @returns
    */
-  row(total) {
-    const row = super.row(total);
+  row(total, numColumns) {
+    const row = super.row(total, numColumns);
     crum.addGreekLookups(row);
     // TODO: (#499): Handling of dialects causes a (minor) bug: Dialect codes
     // don't get highlighted!
@@ -100,11 +86,36 @@ class CrumSearchResult extends SearchResult {
         (value) => typeof value === 'number'
       )
     );
+  static wikiCheckbox = document.getElementById(id.WIKI_CHECKBOX);
   /**
    * @returns
    */
   link() {
     return paths.crum(this.key);
+  }
+  /**
+   *
+   * @param total
+   * @param numColumns
+   * @returns
+   */
+  row(total, numColumns) {
+    const row = super.row(total, numColumns);
+    wiki.handle(row);
+    drop.addEventListeners('hover', row);
+    return row;
+  }
+  /**
+   * @returns
+   */
+  filter() {
+    if (!CrumSearchResult.wikiCheckbox.checked) {
+      // The Wiki checkbox is unchecked. Use default behavior.
+      return super.filter();
+    }
+    // We only want to search the Wiki.
+    // Layer 0 is Marcion, layer 1 is Wiki. Return true if this is layer 1.
+    return !!this.layer;
   }
   /**
    * @returns
@@ -181,59 +192,28 @@ class KELLIASearchResult extends SearchResult {
     return row.querySelector(highlightedDialectQuery) ? 0 : 1;
   }
 }
-/**
- *
- */
-class WikiSearchResult extends xoox.SearchResult {
-  /**
-   *
-   * @param total
-   * @returns
-   */
-  row(total) {
-    const row = super.row(total);
-    crum.addGreekLookups(row);
-    // TODO: (#541) Add other handlers once the post-processing bug is fixed.
-    wiki.handleBible(row);
-    return row;
-  }
-  /**
-   * @returns
-   */
-  link() {
-    return `${paths.crum(this.key)}#${id.WIKI}`;
-  }
-}
 const XOOXLES = [
   {
     indexURL: 'crum.json',
     tableID: 'crum',
-    collapsibleID: 'crum-collapsible',
     searchResultType: CrumSearchResult,
+    otherCheckboxes: [[id.WIKI_CHECKBOX, 'wiki']],
   },
   {
     indexURL: 'kellia.json',
     tableID: 'kellia',
-    collapsibleID: 'kellia-collapsible',
     searchResultType: KELLIASearchResult,
   },
   {
     indexURL: 'copticsite.json',
     tableID: 'copticsite',
-    collapsibleID: 'copticsite-collapsible',
-  },
-  {
-    indexURL: 'wiki.json',
-    tableID: 'wiki',
-    collapsibleID: 'wiki-collapsible',
-    searchResultType: WikiSearchResult,
   },
 ];
 /**
  *
  */
 function addDropdownDialects() {
-  document.querySelector(`#${ID.DIALECTS} .${drop.CLS.DROPPABLE}`).append(
+  document.querySelector(`#${id.DIALECTS} .${drop.CLS.DROPPABLE}`).append(
     ...Object.values(dial.DIALECTS).map((dialect) => {
       const label = document.createElement('label');
       label.append(dialect.checkbox(), ...dialect.title());
@@ -245,7 +225,7 @@ function addDropdownDialects() {
  *
  */
 function addListDialects() {
-  document.querySelector(`#${ID.DIALECTS} #${ID.CHECKBOXES}`).append(
+  document.querySelector(`#${id.DIALECTS} #${id.CHECKBOXES}`).append(
     ...Object.values(dial.DIALECTS).map((dialect) => {
       const label = document.createElement('label');
       label.append(dialect.checkbox(), dialect.siglum());
@@ -257,20 +237,7 @@ function addListDialects() {
 /**
  *
  */
-function maybeShowWiki() {
-  const url = new URL(window.location.href);
-  if (!url.searchParams.get('wiki')) {
-    return;
-  }
-  for (const elementID of [id.WIKI_TITLE, id.WIKI_COLLAPSIBLE]) {
-    document.getElementById(elementID).style.display = 'block';
-  }
-}
-/**
- *
- */
 async function main() {
-  maybeShowWiki();
   // We have a drop-down element bearing the dialects (intended for small
   // screens).
   addDropdownDialects();
@@ -284,7 +251,7 @@ async function main() {
   drop.addEventListeners('hover');
   drop.addEventListeners('click');
   const dropDialects = document.querySelectorAll(
-    `#${ID.DIALECTS} .${drop.CLS.DROP}`
+    `#${id.DIALECTS} .${drop.CLS.DROP}`
   );
   // Validate dropdown dialects, regardless of whether or not we end up using
   // them.
@@ -302,7 +269,7 @@ async function main() {
   const highlighter = new high.Highlighter(
     manager,
     // Retrieve the boxes created above.
-    Array.from(document.querySelectorAll(`#${ID.DIALECTS} input`))
+    Array.from(document.querySelectorAll(`#${id.DIALECTS} input`))
   );
   SearchResult.init(manager, highlighter);
   // Initialize searchers.
@@ -320,16 +287,16 @@ async function main() {
     XOOXLES.map(async (xooxle) => {
       const json = await fetch(xooxle.indexURL).then((raw) => raw.json());
       const form = new xoox.Form({
-        searchBoxID: ID.SEARCH_BOX,
-        fullWordCheckboxID: ID.FULL_WORD_CHECKBOX,
-        regexCheckboxID: ID.REGEX_CHECKBOX,
+        searchBoxID: id.SEARCH_BOX,
+        fullWordCheckboxID: id.FULL_WORD_CHECKBOX,
+        regexCheckboxID: id.REGEX_CHECKBOX,
         // TODO: (#0) The message box gets written. Since multiple Xooxle
         // instances are allowed to coexist on the same page, we should create
         // several boxes, otherwise they could override each other!
-        messageBoxID: ID.MESSAGE_BOX,
+        messageBoxID: id.MESSAGE_BOX,
         resultsTableID: xooxle.tableID,
-        collapsibleID: xooxle.collapsibleID,
-        formID: ID.FORM,
+        formID: id.FORM,
+        boxes: xooxle.otherCheckboxes,
       });
       new xoox.Xooxle(json, form, xooxle.searchResultType);
     })
@@ -338,6 +305,6 @@ async function main() {
   help.makeHelpPanel(highlighter, new high.DevHighlighter());
   // Add event listener for reports.
   // TODO: (#203) This belongs in the (future) header module.
-  document.getElementById(ID.REPORTS).addEventListener('click', head.reports);
+  document.getElementById(id.REPORTS).addEventListener('click', head.reports);
 }
 await main();
