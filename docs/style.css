@@ -370,6 +370,10 @@ body:not(.lexicon) .header td:not(:first-child) {
   display: none;
 }
 
+body.note .sense {
+  padding-left: 10px;
+}
+
 .dev-mode-note,
 .dialect-dictionaries {
   font-size: small;
