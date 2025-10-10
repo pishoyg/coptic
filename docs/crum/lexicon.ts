@@ -223,7 +223,6 @@ class KELLIASearchResult extends SearchResult {
 interface Xooxle {
   indexURL: string;
   tableID: string;
-  collapsibleID: string;
   searchResultType?: typeof xoox.SearchResult;
   otherCheckboxes?: [string, string][];
 }
@@ -232,20 +231,17 @@ const XOOXLES: Xooxle[] = [
   {
     indexURL: 'crum.json',
     tableID: 'crum',
-    collapsibleID: 'crum-collapsible',
     searchResultType: CrumSearchResult,
     otherCheckboxes: [[ID.WIKI_CHECKBOX, 'wiki']],
   },
   {
     indexURL: 'kellia.json',
     tableID: 'kellia',
-    collapsibleID: 'kellia-collapsible',
     searchResultType: KELLIASearchResult,
   },
   {
     indexURL: 'copticsite.json',
     tableID: 'copticsite',
-    collapsibleID: 'copticsite-collapsible',
   },
 ];
 
@@ -349,7 +345,6 @@ async function main(): Promise<void> {
         // several boxes, otherwise they could override each other!
         messageBoxID: ID.MESSAGE_BOX,
         resultsTableID: xooxle.tableID,
-        collapsibleID: xooxle.collapsibleID,
         formID: ID.FORM,
         boxes: xooxle.otherCheckboxes,
       });

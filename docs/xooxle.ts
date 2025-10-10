@@ -1,6 +1,5 @@
 /** Package xooxle defines the Xooxle engine core logic. */
 /* eslint-disable max-lines */
-import * as coll from './collapse.js';
 import * as browser from './browser.js';
 import * as log from './logger.js';
 import * as orth from './orth.js';
@@ -101,7 +100,6 @@ export interface FormParams {
   regexCheckboxID: string;
   messageBoxID: string;
   resultsTableID: string;
-  collapsibleID: string;
   formID?: string;
   boxes?: [string, string][] | undefined;
 }
@@ -170,10 +168,6 @@ export class Form {
     this.numColumns = table
       .querySelector('thead')!
       .querySelectorAll('td').length;
-
-    this.collapsible = new coll.Collapsible(
-      document.getElementById(form.collapsibleID)!
-    );
 
     if (form.formID) {
       this.form = document.getElementById(form.formID) as HTMLFormElement;
@@ -324,18 +318,6 @@ export class Form {
    */
   public result(row: HTMLTableRowElement): void {
     this.tbody.append(row);
-  }
-
-  /**
-   * Update the height of the collapsible element.
-   * The collapsible element is height-restricted. We need to regularly update
-   * its height whenever new content is added.
-   *
-   * NOTE: This is an expensive operation. Don't perform it repeatedly in
-   * time-sensitive applications.
-   */
-  public expand(): void {
-    this.collapsible.adjustHeightIfVisible();
   }
 
   /**
@@ -1391,8 +1373,6 @@ export class Xooxle {
       ]!.insertAdjacentElement('beforebegin', row);
 
       if (count % RESULTS_TO_UPDATE_DISPLAY === RESULTS_TO_UPDATE_DISPLAY - 1) {
-        // Expand the results table to accommodate the recently added results.
-        this.form.expand();
         // Allow the browser to update the display, receive user input, ...
         await browser.yieldToBrowser();
       }
@@ -1408,8 +1388,5 @@ export class Xooxle {
       .forEach((counter: Element) => {
         counter.textContent = `${(++i).toString()} / ${results.length.toString()}`;
       });
-
-    // Expand the results table to accommodate the last batch of results.
-    this.form.expand();
   }
 }

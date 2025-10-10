@@ -11,7 +11,13 @@ enum CLS {
   COLLAPSE_ARROW = 'collapse-arrow',
 }
 
+/** COLLAPSISBLE_TRANSITION_MS is the transition time of a collapsible's
+ * max-height property. It is defined in CSS. */
 const COLLAPSISBLE_TRANSITION_MS = 500;
+
+/** COLLAPSISBLE_TRANSITION_WAIT is the percentage of transition time that we
+ * wait before updating certain display elements. See usage below.
+ */
 const COLLAPSISBLE_TRANSITION_WAIT = 0.65;
 
 /**
@@ -20,25 +26,44 @@ const COLLAPSISBLE_TRANSITION_WAIT = 0.65;
  * NOTE: This must be used with corresponding classes defined in the CSS. See
  * below and see the CSS for more details.
  */
-export class Collapsible {
+class Collapsible {
   private arrow?: HTMLSpanElement | undefined;
 
+  private observer: ResizeObserver;
+
   /**
-   * @param collapsible - The collapsible HTML element.
+   *
+   * @param collapsible
    * @param collapse
    */
   public constructor(
     private readonly collapsible: HTMLElement,
-    collapse?: HTMLElement
+    collapse: HTMLElement
   ) {
     // A click on the collapse element toggles the collapsible.
-    collapse?.addEventListener('click', this.toggle.bind(this));
+    collapse.addEventListener('click', this.toggle.bind(this));
 
     this.arrow =
-      collapse?.querySelector<HTMLSpanElement>(`.${CLS.COLLAPSE_ARROW}`) ??
+      collapse.querySelector<HTMLSpanElement>(`.${CLS.COLLAPSE_ARROW}`) ??
       undefined;
-    // Update arrow once upon load.
-    this.updateArrow();
+
+    // Create an observer to adjust the height whenever the element gains or
+    // loses children.
+    this.observer = new ResizeObserver(() => {
+      this.set();
+    });
+
+    this.observer.observe(this.collapsible);
+  }
+
+  /**
+   * Disconnects the observer to prevent memory leaks when the element is
+   * removed from the DOM.
+   * As of now, we don't add or remove any collapsible elements from the DOM, so
+   * this method doesn't need to be called anywhere.
+   */
+  public disconnectObserver(): void {
+    this.observer.disconnect();
   }
 
   /**
@@ -51,21 +76,44 @@ export class Collapsible {
   }
 
   /**
+   * @returns
+   */
+  private visible(): boolean {
+    return !!this.get();
+  }
+
+  /**
    * @param maxHeight
    */
-  private set(maxHeight: string): void {
-    this.collapsible.style.maxHeight = maxHeight;
-
-    if (maxHeight) {
-      // If we're making the element visible, wait until the transition is
-      // completed, and then show the overflow.
-      setTimeout(() => {
-        this.collapsible.style.overflow = 'visible';
-      }, COLLAPSISBLE_TRANSITION_MS);
-    } else {
-      // If we're hiding the element, hide the overflow immediately.
-      this.collapsible.style.overflow = 'hidden';
+  private set(maxHeight?: string): void {
+    maxHeight ??= this.visible() ? this.scrollHeight() : '';
+    if (this.collapsible.style.maxHeight === maxHeight) {
+      return;
     }
+    // Adjusting the height happens in two occasions:
+    // - When the element visibility is toggled.
+    // - When the element size changes (this is invoked by the observer).
+    // If the element is being made invisible, its overflow should be hidden.
+    // However, for visible elements, overflow should be visible. A collapsible
+    // could have, for example, tooltip children, which render outside of its
+    // borders. So it's important for overflow to be normally visible, in order
+    // for such tooltips to render properly.
+    // However, when the element gains new content, we want the overflow to
+    // continue to be hidden until the height transition completes, otherwise
+    // the overflow will show while the height is still adjusting.
+    // We always hide overflow, adjust the height, then show overflow.
+    this.collapsible.style.overflow = 'hidden';
+
+    // Adjust the maximum height:
+    this.collapsible.style.maxHeight = maxHeight;
+    if (!this.visible()) {
+      // The overflow property doesn't need to change.
+      return;
+    }
+
+    setTimeout(() => {
+      this.collapsible.style.overflow = 'visible';
+    }, COLLAPSISBLE_TRANSITION_MS);
   }
 
   /**
@@ -79,34 +127,21 @@ export class Collapsible {
    * Toggle the display of the collapsible.
    */
   public toggle(): void {
-    const visible = !!this.get();
-    this.set(visible ? '' : this.scrollHeight());
-    if (visible) {
-      // The element is visible and about to get hidden. Update the arrow during
-      // the transition.
-      setTimeout(
-        this.updateArrow.bind(this),
-        COLLAPSISBLE_TRANSITION_MS * COLLAPSISBLE_TRANSITION_WAIT
-      );
-    } else {
-      // The element is hidden and about to become visible. Update the arrow
-      // immediately.
+    if (!this.visible()) {
+      // The element is hidden and about to become visible.
+      this.set(this.scrollHeight());
+      // Update the arrow immediately.
       this.updateArrow();
-    }
-  }
-
-  /**
-   * If currently visible, update the height to the height currently needed.
-   * NOTE: Expanding the element involves calculating the current scroll height,
-   * which is a very expensive operation. Don't perform it repeatedly in
-   * performance-sensitive applications.
-   */
-  public adjustHeightIfVisible(): void {
-    if (!this.get()) {
-      // This element is currently collapsed, so we keep the height at zero.
       return;
     }
-    this.set(this.scrollHeight());
+
+    // The element is visible and about to get hidden.
+    this.set('');
+    // Update the arrow during the transition.
+    setTimeout(
+      this.updateArrow.bind(this),
+      COLLAPSISBLE_TRANSITION_MS * COLLAPSISBLE_TRANSITION_WAIT
+    );
   }
 
   /**

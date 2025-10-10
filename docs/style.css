@@ -427,6 +427,9 @@ body:not(.lexicon) .header td:not(:first-child) {
 .collapsible {
   max-height: 0;
   overflow: hidden;
+
+  /* NOTE: If you change the transition time, update the corresponding
+   * constant in the TypeScript implementation. */
   transition: max-height 0.5s ease-out;
 }
 
