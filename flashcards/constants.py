@@ -391,8 +391,8 @@ class Crum(deck.Deck):
 
     @staticmethod
     def __senses(senses: dict[int, str]) -> str:
-        return "; ".join(
-            f'<span class="sense" id="sense{k}">{senses[k]}</span>'
+        return ", ".join(
+            f'<span class="sense" id="sense{k}">{k}: {senses[k]}</span>'
             for k in sorted(senses.keys(), key=int)
         )
 
