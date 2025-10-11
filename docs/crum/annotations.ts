@@ -102,12 +102,15 @@ export const MAPPING: Record<string, Annotation> = {
   ⲛ̅ⲉ̅: { fullForm: 'ⲛⲟⲩⲧⲉ', noCaseVariant: true },
 
   // SECTION 2: ABBREVIATIONS WE CHOOSE TO INCLUDE TO AID INTELLIGIBILITY.
+  adv: { fullForm: 'adverb' },
+  advb: { fullForm: 'adverb' },
   cf: { fullForm: 'confer' },
   'e g': { fullForm: 'exempli gratia' },
   Heb: { fullForm: 'Hebrew', noCaseVariant: true },
   'i e': { fullForm: 'id est' },
   // TODO: (#511) Reconsider whether you want to retain the annotation for ib.
   ib: { fullForm: 'ibidem' },
+  improb: { fullForm: 'improbable' },
   'l c': { fullForm: 'loco citato' },
   MS: { fullForm: 'manuscript', noCaseVariant: true },
   MSS: { fullForm: 'manuscripts', noCaseVariant: true },

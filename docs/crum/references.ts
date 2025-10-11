@@ -377,7 +377,7 @@ const DATA: Resource[] = [
         'Budge, E. A. W. (1910). <em><a href="https://archive.org/details/coptichomiliesin00budgrich/page/n11/mode/2up" rel="noreferrer noopener" target="_blank">Coptic Homilies in the Dialect of Upper Egypt edited from the Papyrus Codex Oriental 5001 in the British Museum</a></em>. London: British Museum.',
       ],
     },
-    variants: ['BHom'],
+    variants: ['B Hom'],
   },
   {
     source: {
@@ -2336,7 +2336,7 @@ const DATA: Resource[] = [
   // BUT ENCOUNTERED THROUGHOUT THE TEXT:
   // TODO: (#522) Add the missing entries to this section.
   {
-    variants: ['Abû Ṣâliḥ'],
+    variants: ['Abû Ṣâliḥ', 'Abû Ṣâlih'],
   },
   {
     variants: ['Amélineau', 'Amélineau Géog'],
@@ -2379,7 +2379,7 @@ const DATA: Resource[] = [
     noSpaceVariants: true,
   },
   {
-    variants: ['Epiphan. De Gemm.'],
+    variants: ['Epiphan. De Gemm.', 'Epiphan De Gem'],
     noSpaceVariants: true,
   },
   {

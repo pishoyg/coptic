@@ -153,14 +153,14 @@ const SPECIAL_CASES: string[] = [
 
   // The entries below have special characters, such as periods, apostrophes,
   // dashes, or digits:
+  // NOTE: For some abbreviations, we're forced to mark a portion of the
+  // abbreviation as optional when it occurs inside an <i> tag, because the
+  // first part often occurs on its own in a node.
   'Almk 1',
   'Almk 2',
-  // The abbreviation usually occurs with ‘Wörterb’ occurring inside a <i> tag,
-  // so we need to be able to match ‘Berl.’ on its own as well, which is why we
-  // make ‘ Wörterb’ optional.
   'Berl\\.(?: Wörterb)?',
   'Encycl\\. Bibl\\.',
-  'Epiphan\\. De Gemm\\.',
+  'Epiphan\\.( De Gemm\\.)?',
   'Erman-Lange Pap\\. Lansing',
   'GMaspero Musée Eg\\.',
   'GMaspero Musée Ég\\.',
@@ -492,7 +492,25 @@ export function handleReferences(root: HTMLElement): void {
  * WHITELIST is a list of known tokens that look like references but are not
  * actually references. We ignore them in the warning below.
  */
-const WHITELIST: Set<string> = new Set<string>(['I']);
+const WHITELIST: Set<string> = new Set<string>([
+  'Alexandria',
+  'Arabic',
+  'But',
+  'Coptic',
+  'Father',
+  'Georgian',
+  'I',
+  'Jesus',
+  'Meaning',
+  'Or',
+  'Pbow',
+  'Pous',
+  'Seems',
+  'Settle',
+  'So',
+  'Solomon',
+  'Victor',
+]);
 
 /**
  * Log warnings for all capital letters in the Wiki text that haven't been
