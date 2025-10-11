@@ -145,18 +145,31 @@ export const SUFFIX = new RegExp(
 );
 const LETTER = /[a-zA-Z\p{M}&]/u;
 const SPECIAL_CASES: string[] = [
-  'Imp Russ Ar S', // This consists of 4 words!
-  "O'Leary\\s?(?:H|The?)", // This has an apostrophe.
-  'Berl\\. Wörterb', // This has a period.
-  // The abbreviation usually occurs with ‘Wörterb’ occurring inside a <i> tag,
-  // so we need to be able to match ‘Berl.’ on its own as well.
-  'Berl\\.',
-  // The following cases contain digits!
-  'Mani 1',
-  'Mani 2',
+  // The following entries have more than 3 words:
+  'Imp Russ Ar S',
+  'Inst franç Epiph De Gemm amethyst', // Also a special character (ç)!
+  'Lect Instit Cath Paris',
+  'Mart Viktor ed Lemm',
+
+  // The entries below have special characters, such as periods, apostrophes,
+  // dashes, or digits:
   'Almk 1',
   'Almk 2',
+  // The abbreviation usually occurs with ‘Wörterb’ occurring inside a <i> tag,
+  // so we need to be able to match ‘Berl.’ on its own as well, which is why we
+  // make ‘ Wörterb’ optional.
+  'Berl\\.(?: Wörterb)?',
+  'Encycl\\. Bibl\\.',
+  'Epiphan\\. De Gemm\\.',
+  'Erman-Lange Pap\\. Lansing',
+  'GMaspero Musée Eg\\.',
+  'GMaspero Musée Ég\\.',
+  'Mani 1',
+  'Mani 2',
+  'Masp\\.',
   'Mich 550',
+  "O'Leary ?(?:H|The?)",
+  "Samannûdi's Scala",
 ];
 
 export const REFERENCE_RES: RegExp[] = [

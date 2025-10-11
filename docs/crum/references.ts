@@ -2327,10 +2327,141 @@ const DATA: Resource[] = [
   // BUT ENCOUNTERED THROUGHOUT THE TEXT:
   // TODO: (#522) Add the missing entries to this section.
   {
+    variants: ['Abû Ṣâliḥ'],
+  },
+  {
+    variants: ['Amélineau', 'Amélineau Géog'],
+  },
+  {
+    variants: ['Antony Hist Laus'],
+  },
+  {
+    variants: ['Baynes'],
+  },
+  {
+    variants: ['Bell'],
+  },
+  {
+    variants: ['Berl Sitz'],
+  },
+  {
+    variants: ['Bevan'],
+  },
+  {
+    variants: ['Brussels Musée Cinqu'],
+  },
+  {
+    variants: ['Budge'],
+  },
+  {
+    variants: ['Chassinat'],
+  },
+  {
     source: {
       title: 'Presumably Edward Charles Everard Owen (1860-1949)',
     },
     variants: ['E C Owen'],
+  },
+  {
+    variants: ['Dévaud', 'Dévaud Ét', 'Dévaud Études'],
+  },
+  {
+    variants: ['Encycl. Bibl.'],
+    noSpaceVariants: true,
+  },
+  {
+    variants: ['Epiphan. De Gemm.'],
+    noSpaceVariants: true,
+  },
+  {
+    variants: ['Erman-Lange Pap. Lansing'],
+    noSpaceVariants: true,
+  },
+  {
+    variants: ['FestschrEbers'],
+  },
+  {
+    variants: ['FPetrie frag Athribis'],
+  },
+  {
+    variants: ['GMaspero Musée Eg.', 'GMaspero Musée Ég.'],
+    noSpaceVariants: true,
+  },
+  {
+    variants: ['Gött'],
+    postfixes: ['Ar', 'ar', 'Copt'],
+  },
+  {
+    variants: ['Grohmann'],
+  },
+  {
+    variants: ['Guide'],
+  },
+  {
+    variants: ['Inst franç Epiph De Gemm amethyst'],
+    noSpaceVariants: true,
+  },
+  {
+    variants: ['Kabis'],
+  },
+  {
+    variants: ['Klio'],
+  },
+  {
+    variants: ['LAA'],
+  },
+  {
+    variants: ['Lane'],
+  },
+  {
+    variants: ['Langkavel'],
+  },
+  {
+    variants: ['Lat & Syr'],
+  },
+  {
+    variants: ['Lect Instit Cath Paris'],
+  },
+  {
+    variants: ['Ludolf'],
+  },
+  {
+    variants: ['Mani Berl Sitz'],
+  },
+  {
+    variants: ['Mart Viktor ed Lemm'],
+  },
+  {
+    variants: ['Masp.'],
+  },
+  {
+    variants: ['MélCh Moeller'],
+  },
+  {
+    variants: ['Mich'],
+    postfixes: ['Ostr', 'P', 'wooden tablet'],
+  },
+  {
+    variants: ['Mich Pasc Lect'],
+  },
+  {
+    variants: ['OL'],
+  },
+  {
+    variants: ['OstrUnivCollLondon'],
+  },
+  {
+    variants: ['Pliny'],
+  },
+  {
+    variants: ['RegPach'],
+  },
+  {
+    variants: ['Reil Beiträge'],
+  },
+  {
+    variants: ["Samannûdi's Scala"],
+    noSpaceVariants: true,
   },
   {
     source: {
@@ -2347,6 +2478,59 @@ const DATA: Resource[] = [
       'Schweinfurth Ar Pflanz',
       'Schweinfurth Arab Pflanz',
     ],
+  },
+  {
+    source: {
+      title:
+        'Acta Sanctorum Martyrum Orientalium et Occidentalium, by Stefano Evodio Assemani',
+    },
+    variants: ['SE Assemani AcMartOr'],
+  },
+  {
+    variants: ['Sethe Verbum'],
+  },
+  {
+    source: {
+      title:
+        'Demotische Urkunden zum ägyptischen Bürgschaftsrechte vorzüglich der Ptolemäerzeit',
+    },
+    variants: ['Sethe DemUrk'],
+  },
+  {
+    source: {
+      title:
+        'Socrates Spiro, An Arabic-English vocabulary of the colloquial Arabic of Egypt',
+    },
+    variants: ['Spiro'],
+  },
+  {
+    source: {
+      title: "Mina, Togo - Le Martyre d'Apa Epima",
+    },
+    variants: ['TMina Epima', 'Mina'],
+  },
+  {
+    variants: [
+      'Univ Coll Lond',
+      'Univ Coll London',
+      'Univ College Lond',
+      'Univ College London',
+    ],
+  },
+  {
+    variants: ['Usener Theodos'],
+  },
+  {
+    variants: ['Vita Pachom'],
+  },
+  {
+    variants: ['Vita Sinuth'],
+  },
+  {
+    variants: ['Wilkins'],
+  },
+  {
+    variants: ['Zoega'],
   },
 ];
 
