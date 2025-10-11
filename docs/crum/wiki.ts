@@ -489,6 +489,12 @@ export function handleReferences(root: HTMLElement): void {
 }
 
 /**
+ * WHITELIST is a list of known tokens that look like references but are not
+ * actually references. We ignore them in the warning below.
+ */
+const WHITELIST: Set<string> = new Set<string>(['I']);
+
+/**
  * Log warnings for all capital letters in the Wiki text that haven't been
  * marked.
  * In Crum's text, Capital letters are mainly used for abbreviations of
@@ -532,8 +538,12 @@ export function warnPotentiallyMissingReferences(root: HTMLElement): void {
   while (walker.nextNode()) {
     const text: Text = walker.currentNode as Text;
     // Find all words containing an upper-case letter.
-    const words: string[] =
-      text.nodeValue?.match(/(?=\p{L}*\p{Lu})[\p{L}\p{M}]+/gu) ?? [];
+    const words: string[] | undefined = text.nodeValue
+      ?.match(/(?=\p{L}*\p{Lu})[\p{L}\p{M}]+/gu)
+      ?.filter((token: string): boolean => !WHITELIST.has(token));
+    if (!words?.length) {
+      continue;
+    }
     log.warn(
       'Possibly unmarked abbreviations:',
       ...words
