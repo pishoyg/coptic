@@ -13,6 +13,7 @@ import * as ann from './annotations.js';
 import * as ref from './references.js';
 import * as drop from '../dropdown.js';
 import * as str from '../str.js';
+import * as dev from '../dev.js';
 
 /**
  * NOTE: All of the regexes below assume the following normalizations:
@@ -527,6 +528,9 @@ const WHITELIST: Set<string> = new Set<string>([
  * @param root
  */
 export function warnPotentiallyMissingReferences(root: HTMLElement): void {
+  if (!dev.get()) {
+    return;
+  }
   const query: string = css.classQuery(
     cls.BULLET,
     cls.ANNOTATION,
