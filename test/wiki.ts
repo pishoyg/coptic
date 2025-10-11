@@ -15,7 +15,7 @@ const TEST_CASES: {
     references: number;
     suffixes: number;
     bible: number;
-    dialectDropdowns: number;
+    dialectTooltips: number;
     annotations: number;
   };
 }[] = [
@@ -27,7 +27,7 @@ const TEST_CASES: {
       references: 139,
       suffixes: 133,
       bible: 119,
-      dialectDropdowns: 383,
+      dialectTooltips: 383,
       annotations: 79,
     },
   },
@@ -45,7 +45,7 @@ const TEST_CASES: {
       references: 4,
       suffixes: 3,
       bible: 6,
-      dialectDropdowns: 8,
+      dialectTooltips: 8,
       annotations: 12,
     },
   },
@@ -58,7 +58,7 @@ const TEST_CASES: {
       references: 3,
       suffixes: 3,
       bible: 0,
-      dialectDropdowns: 1,
+      dialectTooltips: 1,
       annotations: 3,
     },
   },
@@ -71,7 +71,7 @@ const TEST_CASES: {
       references: 2,
       suffixes: 2,
       bible: 2,
-      dialectDropdowns: 11,
+      dialectTooltips: 11,
       annotations: 6,
     },
   },
@@ -82,7 +82,7 @@ const QUERIES: Record<string, string> = {
   references: `.${cls.WIKI} .${cls.REFERENCE}`,
   suffixes: `.${cls.WIKI} .${cls.SUFFIX}`,
   bible: `.${cls.WIKI} .${cls.BIBLE}`,
-  dialectDropdowns: `.${cls.WIKI} .${cls.DIALECT} .${drop.CLS.DROPPABLE}`,
+  dialectTooltips: `.${cls.WIKI} .${cls.DIALECT} .${drop.CLS.DROPPABLE}`,
   annotations: `.${cls.WIKI} .${cls.ANNOTATION}`,
 };
 
