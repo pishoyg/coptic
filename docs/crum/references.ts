@@ -346,7 +346,12 @@ const DATA: Resource[] = [
         'Erman, A., &amp; Grapow, H. (1926-1931). <em><a href="https://www.ancientegyptfoundation.org/worterbuch_der_aegyptischen_sprache.shtml" rel="noreferrer noopener" target="_blank">Wörterbuch der ägyptischen Sprache im Auftrage der deutschen Akademien</a></em>. Leipzig: J. C. Hinrichs’sche Buchhandlung. [The project started by Erman and Grapow continues in digitised form in <em><a href="https://tla.digital/home" rel="noreferrer noopener" target="_blank">Thesaurus Linguae Aegyptiae</a></em>.]',
       ],
     },
-    variants: ['Berl. Wörterb', 'Berl Wörterb'],
+    variants: [
+      'Berl Worterb',
+      'Berl Wörterb',
+      'Berl. Wörterb',
+      'Berlin Wörterb',
+    ],
     noSpaceVariants: true,
   },
   {
