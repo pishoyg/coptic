@@ -693,7 +693,7 @@ const DATA = [
         'Bell, H. I., &amp; Crum, W. E. (1925). <a href="https://www.jstor.org/stable/41201189?read-now=1&amp;seq=1#page_scan_tab_contents" rel="noreferrer noopener" target="_blank">A Greek-Coptic Glossary</a>. <em>Aegyptus</em>, 6, 177-226. ',
       ],
     },
-    variants: ['Glos'],
+    variants: ['Glos', 'Gloss'],
   },
   {
     source: {
@@ -2215,7 +2215,7 @@ const DATA = [
         'Worrell, W. (1923). <em><a href="https://archive.org/details/copticmanuscript00coel/page/n11/mode/2up" rel="noreferrer noopener" target="_blank">The Coptic Manuscripts in the Freer Collection</a></em>. New York: The Macmillan Company.',
       ],
     },
-    variants: ['Wor'],
+    variants: ['Wor', 'Worr'],
   },
   {
     source: {
