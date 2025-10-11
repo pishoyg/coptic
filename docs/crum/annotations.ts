@@ -1,4 +1,5 @@
 import * as str from '../str.js';
+import * as log from '../logger.js';
 
 export interface Annotation {
   // fullForm defines the full-form of the abbreviation, which is to be
@@ -102,6 +103,7 @@ export const MAPPING: Record<string, Annotation> = {
   ⲛ̅ⲉ̅: { fullForm: 'ⲛⲟⲩⲧⲉ', noCaseVariant: true },
 
   // SECTION 2: ABBREVIATIONS WE CHOOSE TO INCLUDE TO AID INTELLIGIBILITY.
+  AD: { fullForm: 'Anno Domini', noCaseVariant: true },
   adv: { fullForm: 'adverb' },
   advb: { fullForm: 'adverb' },
   cf: { fullForm: 'confer' },
@@ -124,6 +126,7 @@ export const MAPPING: Record<string, Annotation> = {
   // references are covered.
   // TODO: (#523) Reconsider whether the following abbreviations are needed
   // after postfixes are fully supported.
+  Ad: { fullForm: 'Addenda', noCaseVariant: true },
   Lect: { fullForm: 'Lectionary', noCaseVariant: true },
   Mart: { fullForm: 'martyrdom', noCaseVariant: true },
   Sitz: { fullForm: 'Sitzungsberichte', noCaseVariant: true },
@@ -135,6 +138,15 @@ Object.entries(MAPPING).forEach(
       return;
     }
     const variant: string = str.toggleCase(key.charAt(0)) + key.slice(1);
+    if (variant === key) {
+      // This key doesn't start with a letter that has cases.
+      return;
+    }
+    log.ensure(
+      !(variant in MAPPING),
+      'duplicate annotation abbreviations:',
+      variant
+    );
     MAPPING[variant] = annotation;
   }
 );
