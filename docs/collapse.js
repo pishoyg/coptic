@@ -7,16 +7,8 @@ var CLS;
   CLS['COLLAPSE'] = 'collapse';
   // COLLAPSIBLE is the class of elements that collapse and expand.
   CLS['COLLAPSIBLE'] = 'collapsible';
-  // COLLAPSE_ARROW is the class of the optional arrow in the collapse element.
-  CLS['COLLAPSE_ARROW'] = 'collapse-arrow';
+  CLS['IS_OPEN'] = 'is-open';
 })(CLS || (CLS = {}));
-/** COLLAPSISBLE_TRANSITION_MS is the transition time of a collapsible's
- * max-height property. It is defined in CSS. */
-const COLLAPSISBLE_TRANSITION_MS = 500;
-/** COLLAPSISBLE_TRANSITION_WAIT is the percentage of transition time that we
- * wait before updating certain display elements. See usage below.
- */
-const COLLAPSISBLE_TRANSITION_WAIT = 0.65;
 /**
  * Collapsible represents an element that can collapse, becoming visible /
  * invisible as needed.
@@ -25,7 +17,7 @@ const COLLAPSISBLE_TRANSITION_WAIT = 0.65;
  */
 class Collapsible {
   collapsible;
-  arrow;
+  collapse;
   observer;
   /**
    *
@@ -34,15 +26,24 @@ class Collapsible {
    */
   constructor(collapsible, collapse) {
     this.collapsible = collapsible;
+    this.collapse = collapse;
     // A click on the collapse element toggles the collapsible.
-    collapse.addEventListener('click', this.toggle.bind(this));
-    this.arrow = collapse.querySelector(`.${CLS.COLLAPSE_ARROW}`) ?? undefined;
-    // Create an observer to adjust the height whenever the element gains or
-    // loses children.
+    this.collapse.addEventListener('click', this.toggle.bind(this));
+    // Create an observer to adjust the height whenever needed, e.g. due to
+    // gaining or losing children, or perhaps due to zooming.
     this.observer = new ResizeObserver(() => {
-      this.set();
+      if (!this.visible()) {
+        return;
+      }
+      this.collapsible.style.maxHeight = this.scrollHeight();
     });
     this.observer.observe(this.collapsible);
+  }
+  /**
+   * @returns
+   */
+  scrollHeight() {
+    return `${this.collapsible.scrollHeight}px`;
   }
   /**
    * Disconnects the observer to prevent memory leaks when the element is
@@ -54,27 +55,20 @@ class Collapsible {
     this.observer.disconnect();
   }
   /**
-   * @returns The current visible height. This should return the empty string if
-   * the element is currently hidden, thus you can use `!!this.get()` to test
-   * whether the element is visible.
-   */
-  get() {
-    return this.collapsible.style.maxHeight;
-  }
-  /**
    * @returns
    */
   visible() {
-    return !!this.get();
+    return !!this.collapsible.style.maxHeight;
   }
   /**
-   * @param maxHeight
+   * Toggle the display of the collapsible.
+   *
+   * Toggles happen manually, so there is no need to worry about race
+   * conditions.
    */
-  set(maxHeight) {
-    maxHeight ??= this.visible() ? this.scrollHeight() : '';
-    if (this.collapsible.style.maxHeight === maxHeight) {
-      return;
-    }
+  toggle() {
+    this.collapse.classList.toggle('is-open' /* CLS.IS_OPEN */);
+    const maxHeight = this.visible() ? '' : this.scrollHeight();
     // Adjusting the height happens in two occasions:
     // - When the element visibility is toggled.
     // - When the element size changes (this is invoked by the observer).
@@ -94,43 +88,21 @@ class Collapsible {
       // The overflow property doesn't need to change.
       return;
     }
-    setTimeout(() => {
-      this.collapsible.style.overflow = 'visible';
-    }, COLLAPSISBLE_TRANSITION_MS);
-  }
-  /**
-   * @returns
-   */
-  scrollHeight() {
-    return `${this.collapsible.scrollHeight.toString()}px`;
-  }
-  /**
-   * Toggle the display of the collapsible.
-   */
-  toggle() {
-    if (!this.visible()) {
-      // The element is hidden and about to become visible.
-      this.set(this.scrollHeight());
-      // Update the arrow immediately.
-      this.updateArrow();
-      return;
-    }
-    // The element is visible and about to get hidden.
-    this.set('');
-    // Update the arrow during the transition.
-    setTimeout(
-      this.updateArrow.bind(this),
-      COLLAPSISBLE_TRANSITION_MS * COLLAPSISBLE_TRANSITION_WAIT
-    );
-  }
-  /**
-   * Updates the arrow indicator element if available.
-   */
-  updateArrow() {
-    if (!this.arrow) {
-      return;
-    }
-    this.arrow.textContent = `${this.get() ? '▾' : '▸'} `;
+    // If we are opening the element...
+    const handleTransitionEnd = () => {
+      if (this.visible()) {
+        // Set overflow to visible once the expansion is complete.
+        this.collapsible.style.overflow = 'visible';
+      }
+      // Remove the event listener to prevent it from firing on subsequent
+      // transitions (e.g., from the ResizeObserver).
+      this.collapsible.removeEventListener(
+        'transitionend',
+        handleTransitionEnd
+      );
+    };
+    // Listen for the transition to finish.
+    this.collapsible.addEventListener('transitionend', handleTransitionEnd);
   }
 }
 /**
@@ -147,15 +119,17 @@ class Collapsible {
  * @param toggleUponLoad - If true, toggle once after loading.
  */
 export function addEventListenersForSiblings(toggleUponLoad = false) {
-  document.querySelectorAll(`.${CLS.COLLAPSE}`).forEach((collapse) => {
-    const collapsible = collapse.nextElementSibling;
-    log.ensure(
-      collapsible.classList.contains(CLS.COLLAPSIBLE),
-      'A .collapse must be followed by a .collapsible!'
-    );
-    const col = new Collapsible(collapsible, collapse);
-    if (toggleUponLoad) {
-      col.toggle();
-    }
-  });
+  document
+    .querySelectorAll(`.${'collapse' /* CLS.COLLAPSE */}`)
+    .forEach((collapse) => {
+      const collapsible = collapse.nextElementSibling;
+      log.ensure(
+        collapsible.classList.contains('collapsible' /* CLS.COLLAPSIBLE */),
+        'A .collapse must be followed by a .collapsible!'
+      );
+      const col = new Collapsible(collapsible, collapse);
+      if (toggleUponLoad) {
+        col.toggle();
+      }
+    });
 }
