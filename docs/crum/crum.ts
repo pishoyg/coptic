@@ -275,6 +275,13 @@ export function handleDialect(
     .querySelectorAll<HTMLElement>(`.${cls.DIALECT}`)
     .forEach((el: HTMLElement): void => {
       const code: dial.DIALECT = el.textContent.trim() as dial.DIALECT;
+      if (!(code in dial.DIALECTS)) {
+        // There is a, so far singleton, occurrence of `Bf` (Bohairic with
+        // Fayyumic tendency) under `ϫⲟⲗ, ϭⲁⲗ (wave)` that forces us to account
+        // for the case that a dialect tag may contain an unknown dialect code.
+        log.warn('Unknown dialect', code);
+        return;
+      }
       const dialect: dial.Dialect = dial.DIALECTS[code];
       // Prettify the appearance of the dialect code.
       const siglum: HTMLSpanElement = dialect.siglum();
