@@ -28,11 +28,11 @@ const TEST_CASES: {
     // lot of common cases.
     key: '88',
     want: {
-      references: 139,
-      suffixes: 133,
+      references: 144,
+      suffixes: 135,
       bible: 119,
       dialectTooltips: 383,
-      annotations: 79,
+      annotations: 80,
     },
   },
   {
@@ -46,7 +46,7 @@ const TEST_CASES: {
     //   boundary).
     key: '1144',
     want: {
-      references: 4,
+      references: 5,
       suffixes: 3,
       bible: 6,
       dialectTooltips: 8,
