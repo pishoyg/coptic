@@ -29,6 +29,8 @@ export class Reference {
    */
   public constructor(
     public readonly variant: string,
+    // TODO: (#522) The `source` field should become required once all sources
+    // are populated.
     public readonly source?: Source,
     public readonly postfix?: string | Source
   ) {}
@@ -60,6 +62,8 @@ export class Reference {
  * used to cite it.
  */
 interface Resource {
+  // TODO: (#522) The `source` field should become required once all sources are
+  // populated.
   source?: Source;
   /** variants is a list of abbreviation forms used to cite this source in
    * Crum's text. Sources were often cited inconsistently, which is why we
