@@ -95,6 +95,18 @@ interface Resource {
    * TODO: (#523) Populate postfixes.
    */
   readonly postfixes?: string[];
+  /**
+   * noSpaceVariants, if set to true, prevents generating space variants for
+   * this resource.
+   *
+   * As of the time of writing, our script imposes a requirement on all
+   * variants: They must match the reference logic. This is important, because
+   * it guards against undetectable abbreviations.
+   * You can use this field to prevent generating space variants if they never
+   * occur in the text, especially if they can't be matched by the regex and
+   * thus would break validation.
+   */
+  readonly noSpaceVariants?: boolean;
 }
 
 /**
@@ -211,6 +223,7 @@ const DATA: Resource[] = [
       ],
     },
     variants: ['Almk 1'],
+    noSpaceVariants: true,
   },
   {
     source: {
@@ -222,6 +235,7 @@ const DATA: Resource[] = [
       ],
     },
     variants: ['Almk 2'],
+    noSpaceVariants: true,
   },
   {
     source: {
@@ -329,6 +343,7 @@ const DATA: Resource[] = [
       ],
     },
     variants: ['Berl. Wörterb', 'Berl Wörterb'],
+    noSpaceVariants: true,
   },
   {
     source: {
@@ -1254,6 +1269,7 @@ const DATA: Resource[] = [
         'copies of Chester Beatty’s unpublished Manichaean papyri by H. J. Polotsky & H. Thompson',
     },
     variants: ['Mani 1'],
+    noSpaceVariants: true,
   },
   {
     source: {
@@ -1261,6 +1277,7 @@ const DATA: Resource[] = [
       title: 'copies of sim. papyri at Berlin by Polotsky',
     },
     variants: ['Mani 2'],
+    noSpaceVariants: true,
   },
   {
     source: {
@@ -1330,6 +1347,7 @@ const DATA: Resource[] = [
         'a series of vellum leaves at Michigan University, independently numbered thus (but cf note in Preface)',
     },
     variants: ['Mich 550'],
+    noSpaceVariants: true,
   },
   {
     source: {
@@ -2336,10 +2354,24 @@ const DATA: Resource[] = [
  * Add the given source to the mapping.
  * @param key
  * @param reference
+ * @param noSpaceVariants
  */
-function add(key: string, reference: Reference): void {
+function add(
+  key: string,
+  reference: Reference,
+  noSpaceVariants?: boolean
+): void {
   logger.ensure(MAPPING[key] === undefined, 'duplicate key:', key);
   MAPPING[key] = reference;
+  if (noSpaceVariants) {
+    return;
+  }
+  const parts: string[] = key.split(' ');
+  while (parts.length > 1) {
+    const last: string = parts.pop()!;
+    parts[parts.length - 1]! += last;
+    add(parts.join(' '), reference, true);
+  }
 }
 
 // Add all the variants to the map.
@@ -2352,39 +2384,15 @@ DATA.forEach((res: Resource): void => {
 
   res.variants.forEach((variant: string): void => {
     // Add the abbreviation without any postfixes.
-    add(variant, new Reference(variant, res.source));
+    add(variant, new Reference(variant, res.source), res.noSpaceVariants);
     res.postfixes?.forEach((postfix: string): void => {
-      add(`${variant} ${postfix}`, new Reference(variant, res.source, postfix));
+      add(
+        `${variant} ${postfix}`,
+        new Reference(variant, res.source, postfix),
+        res.noSpaceVariants
+      );
     });
   });
 });
-
-// Add keys with spaces removed.
-Object.entries(MAPPING).forEach(
-  ([key, reference]: [string, Reference]): void => {
-    const parts: string[] = key.split(' ');
-    // Our script imposes a requirement on all entries in the map: They must
-    // match the reference logic. This is important, because it guards against
-    // undetectable abbreviations.
-    // Below, we exclude some problematic spacing variants from the map, because
-    // they never occur in the text, and also because they don't match the regex
-    // and thus would break verification.
-    if (parts.length === 2 && parts[1]?.match(/^[0-9]+$/)) {
-      // Abbreviations that have a number as the second part never occur without
-      // that space in the middle.
-      return;
-    }
-    if (parts[0]?.endsWith('.')) {
-      // Abbreviations that have the first part ending with a period also never
-      // occur without a space in the middle.
-      return;
-    }
-    while (parts.length > 1) {
-      const last: string = parts.pop()!;
-      parts[parts.length - 1]! += last;
-      add(parts.join(' '), reference);
-    }
-  }
-);
 
 /* eslint-enable max-lines */
