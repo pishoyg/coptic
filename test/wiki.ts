@@ -7,17 +7,21 @@ import * as drop from '../docs/dropdown.js';
 import * as paths from '../docs/paths.js';
 import * as base from './base.js';
 
+/**
+ * WikiElementKey represents a name covering a set of Wiki element.
+ */
+type WikiElementKey =
+  | 'references'
+  | 'suffixes'
+  | 'bible'
+  | 'dialectTooltips'
+  | 'annotations';
+
 // TODO: (#557) Add more test cases. This doesn't suffice.
 // TODO: (#557) Exercise the content of the elements, not just their count.
 const TEST_CASES: {
   key: string;
-  want: {
-    references: number;
-    suffixes: number;
-    bible: number;
-    dialectTooltips: number;
-    annotations: number;
-  };
+  want: Record<WikiElementKey, number>;
 }[] = [
   {
     // 88 contains a relatively large piece of text, so we include to cover a
@@ -77,8 +81,10 @@ const TEST_CASES: {
   },
 ];
 
-// A map of test keys to their corresponding CSS selectors.
-const QUERIES: Record<string, string> = {
+/**
+ * QUERIES is a map of test keys to their corresponding CSS selectors.
+ */
+const QUERIES: Record<WikiElementKey, string> = {
   references: `.${cls.WIKI} .${cls.REFERENCE}`,
   suffixes: `.${cls.WIKI} .${cls.SUFFIX}`,
   bible: `.${cls.WIKI} .${cls.BIBLE}`,
@@ -94,10 +100,12 @@ base.test.describe('Wiki Reference Handlers', () => {
         await page.goto(paths.crum(testCase.key), {
           waitUntil: 'networkidle',
         });
-
         await Promise.all(
-          Object.entries(testCase.want).map(([key, want]: [string, number]) =>
-            play.expect(page.locator(QUERIES[key])).toHaveCount(want)
+          (Object.keys(testCase.want) as WikiElementKey[]).map(
+            (key: WikiElementKey): Promise<void> =>
+              play
+                .expect(page.locator(QUERIES[key]))
+                .toHaveCount(testCase.want[key])
           )
         );
       }
