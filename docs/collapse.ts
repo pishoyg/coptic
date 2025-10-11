@@ -13,12 +13,8 @@ const enum CLS {
 /**
  * Collapsible represents an element that can collapse, becoming visible /
  * invisible as needed.
- * NOTE: This must be used with corresponding classes defined in the CSS. See
- * below and see the CSS for more details.
  */
 class Collapsible {
-  private observer: ResizeObserver;
-
   /**
    *
    * @param collapsible
@@ -28,81 +24,56 @@ class Collapsible {
     private readonly collapsible: HTMLElement,
     private readonly collapse: HTMLElement
   ) {
-    // A click on the collapse element toggles the collapsible.
     this.collapse.addEventListener('click', this.toggle.bind(this));
-
-    // Create an observer to adjust the height whenever needed, e.g. due to
-    // gaining or losing children, or perhaps due to zooming.
-    this.observer = new ResizeObserver(() => {
-      if (!this.visible()) {
-        return;
-      }
-      this.collapsible.style.maxHeight = this.scrollHeight();
-    });
-
-    this.observer.observe(this.collapsible);
-  }
-
-  /**
-   * @returns
-   */
-  private scrollHeight(): string {
-    return `${this.collapsible.scrollHeight}px`;
-  }
-
-  /**
-   * Disconnects the observer to prevent memory leaks when the element is
-   * removed from the DOM.
-   * As of now, we don't add or remove any collapsible elements from the DOM, so
-   * this method doesn't need to be called anywhere.
-   */
-  public disconnectObserver(): void {
-    this.observer.disconnect();
   }
 
   /**
    * @returns
    */
   private visible(): boolean {
-    return !!this.collapsible.style.maxHeight;
+    return this.collapse.classList.contains(CLS.IS_OPEN);
   }
 
   /**
-   * Toggle the display of the collapsible.
    *
-   * Toggles happen manually, so there is no need to worry about race
-   * conditions.
+   * @param overflow
+   */
+  private setOverflow(overflow: 'hidden' | 'visible'): void {
+    // We must set the overflow property of the collapsible and all direct
+    // children.
+    // See the CSS for details.
+    [
+      this.collapsible,
+      ...this.collapsible.querySelectorAll<HTMLElement>('*'),
+    ].forEach((element: HTMLElement): void => {
+      element.style.overflow = overflow;
+    });
+  }
+
+  /**
+   *
    */
   public toggle(): void {
+    // Toggle classes. CSS takes care of resizing.
     this.collapse.classList.toggle(CLS.IS_OPEN);
-    const maxHeight: string = this.visible() ? '' : this.scrollHeight();
-
-    // Adjusting the height happens in two occasions:
-    // - When the element visibility is toggled.
-    // - When the element size changes (this is invoked by the observer).
-    // If the element is being made invisible, its overflow should be hidden.
-    // However, for visible elements, overflow should be visible. A collapsible
-    // could have, for example, tooltip children, which render outside of its
-    // borders. So it's important for overflow to be normally visible, in order
-    // for such tooltips to render properly.
-    // However, when the element gains new content, we want the overflow to
-    // continue to be hidden until the height transition completes, otherwise
-    // the overflow will show while the height is still adjusting.
-    // We always hide overflow, adjust the height, then show overflow.
-    this.collapsible.style.overflow = 'hidden';
-
-    // Adjust the maximum height:
-    this.collapsible.style.maxHeight = maxHeight;
+    this.collapsible.classList.toggle(CLS.IS_OPEN);
+    // We need to adjust overflow in TypeScript.
+    // The reason we can't have hidden overflow is that they hide tooltips,
+    // which normally render outside the collapsible.
+    // During the transition, the overflow is always hidden.
+    this.setOverflow('hidden');
     if (!this.visible()) {
       // The overflow property doesn't need to change.
       return;
     }
 
-    // If we are opening the element...
+    // If we are opening the element, we make overflow visible, but we do this
+    // when the transition completes. Otherwise, the overflow might show before
+    // the element is fully visible.
     const handleTransitionEnd = (): void => {
       if (this.visible()) {
         // Set overflow to visible once the expansion is complete.
-        this.collapsible.style.overflow = 'visible';
+        this.setOverflow('visible');
       }
       // Remove the event listener to prevent it from firing on subsequent
       // transitions (e.g., from the ResizeObserver).

@@ -433,12 +433,23 @@ body.note .sense {
 }
 
 .collapsible {
-  max-height: 0;
-  overflow: hidden;
+  display: grid;
 
-  /* NOTE: If you change the transition time, update the corresponding
-   * constant in the TypeScript implementation. */
-  transition: max-height var(--transition-duration) ease-out;
+  /* Start with the content row "squashed" to a height of 0. */
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--transition-duration) ease-out;
+}
+
+.collapsible.is-open {
+  /* Expand the content row to its full, natural height. */
+  grid-template-rows: 1fr;
+}
+
+/* The direct child must have overflow hidden to prevent content
+   from spilling out during the animation. */
+.collapsible,
+.collapsible > * {
+  overflow: hidden;
 }
 
 .collapse-arrow {
