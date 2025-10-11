@@ -1288,6 +1288,7 @@ export class Xooxle {
       if (err instanceof SyntaxError) {
         this.form.message('Invalid regular expression!');
       } else {
+        log.error(err);
         this.form.message('Internal error! Please send us an email!');
       }
     }
