@@ -1,4 +1,5 @@
 import * as str from '../str.js';
+import * as log from '../logger.js';
 // NOTE:
 // Crum also had the following entry in his list of abbreviations:
 //     ( ) = Coptic letter inserted by editor, except in headings, where they
@@ -68,12 +69,16 @@ export const MAPPING = {
   // Crum had it in his list!
   ⲛ̅ⲉ̅: { fullForm: 'ⲛⲟⲩⲧⲉ', noCaseVariant: true },
   // SECTION 2: ABBREVIATIONS WE CHOOSE TO INCLUDE TO AID INTELLIGIBILITY.
+  AD: { fullForm: 'Anno Domini', noCaseVariant: true },
+  adv: { fullForm: 'adverb' },
+  advb: { fullForm: 'adverb' },
   cf: { fullForm: 'confer' },
   'e g': { fullForm: 'exempli gratia' },
   Heb: { fullForm: 'Hebrew', noCaseVariant: true },
   'i e': { fullForm: 'id est' },
   // TODO: (#511) Reconsider whether you want to retain the annotation for ib.
   ib: { fullForm: 'ibidem' },
+  improb: { fullForm: 'improbable' },
   'l c': { fullForm: 'loco citato' },
   MS: { fullForm: 'manuscript', noCaseVariant: true },
   MSS: { fullForm: 'manuscripts', noCaseVariant: true },
@@ -86,6 +91,7 @@ export const MAPPING = {
   // references are covered.
   // TODO: (#523) Reconsider whether the following abbreviations are needed
   // after postfixes are fully supported.
+  Ad: { fullForm: 'Addenda', noCaseVariant: true },
   Lect: { fullForm: 'Lectionary', noCaseVariant: true },
   Mart: { fullForm: 'martyrdom', noCaseVariant: true },
   Sitz: { fullForm: 'Sitzungsberichte', noCaseVariant: true },
@@ -95,5 +101,14 @@ Object.entries(MAPPING).forEach(([key, annotation]) => {
     return;
   }
   const variant = str.toggleCase(key.charAt(0)) + key.slice(1);
+  if (variant === key) {
+    // This key doesn't start with a letter that has cases.
+    return;
+  }
+  log.ensure(
+    !(variant in MAPPING),
+    'duplicate annotation abbreviations:',
+    variant
+  );
   MAPPING[variant] = annotation;
 });

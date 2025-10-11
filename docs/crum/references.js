@@ -5,18 +5,24 @@ export const MAPPING = {};
  * Reference represents a particular way of citing a source in the text.
  */
 export class Reference {
-  source;
   variant;
+  source;
   postfix;
   /**
    *
-   * @param source - Cited source.
    * @param variant - Abbreviation used to cite this source.
+   * @param source - Cited source.
    * @param postfix - Postfix appended to the abbreviation, if any.
    */
-  constructor(source, variant, postfix) {
-    this.source = source;
+  constructor(
+    variant,
+    // TODO: (#522) The `source` field should become required once all sources
+    // are populated.
+    source,
+    postfix
+  ) {
     this.variant = variant;
+    this.source = source;
     this.postfix = postfix;
   }
   /**
@@ -25,6 +31,9 @@ export class Reference {
    * TODO: (#523) Postfixes should show in the tooltip.
    */
   tooltip() {
+    if (!this.source) {
+      return undefined;
+    }
     const fragment = [this.source.title];
     if (!this.source.innerHTML?.length) {
       return fragment;
@@ -151,6 +160,7 @@ const DATA = [
       ],
     },
     variants: ['Almk 1'],
+    noSpaceVariants: true,
   },
   {
     source: {
@@ -162,6 +172,7 @@ const DATA = [
       ],
     },
     variants: ['Almk 2'],
+    noSpaceVariants: true,
   },
   {
     source: {
@@ -268,7 +279,13 @@ const DATA = [
         'Erman, A., &amp; Grapow, H. (1926-1931). <em><a href="https://www.ancientegyptfoundation.org/worterbuch_der_aegyptischen_sprache.shtml" rel="noreferrer noopener" target="_blank">Wörterbuch der ägyptischen Sprache im Auftrage der deutschen Akademien</a></em>. Leipzig: J. C. Hinrichs’sche Buchhandlung. [The project started by Erman and Grapow continues in digitised form in <em><a href="https://tla.digital/home" rel="noreferrer noopener" target="_blank">Thesaurus Linguae Aegyptiae</a></em>.]',
       ],
     },
-    variants: ['Berl. Wörterb', 'Berl Wörterb'],
+    variants: [
+      'Berl Worterb',
+      'Berl Wörterb',
+      'Berl. Wörterb',
+      'Berlin Wörterb',
+    ],
+    noSpaceVariants: true,
   },
   {
     source: {
@@ -293,7 +310,7 @@ const DATA = [
         'Budge, E. A. W. (1910). <em><a href="https://archive.org/details/coptichomiliesin00budgrich/page/n11/mode/2up" rel="noreferrer noopener" target="_blank">Coptic Homilies in the Dialect of Upper Egypt edited from the Papyrus Codex Oriental 5001 in the British Museum</a></em>. London: British Museum.',
       ],
     },
-    variants: ['BHom'],
+    variants: ['B Hom'],
   },
   {
     source: {
@@ -1194,6 +1211,7 @@ const DATA = [
         'copies of Chester Beatty’s unpublished Manichaean papyri by H. J. Polotsky & H. Thompson',
     },
     variants: ['Mani 1'],
+    noSpaceVariants: true,
   },
   {
     source: {
@@ -1201,6 +1219,7 @@ const DATA = [
       title: 'copies of sim. papyri at Berlin by Polotsky',
     },
     variants: ['Mani 2'],
+    noSpaceVariants: true,
   },
   {
     source: {
@@ -1270,6 +1289,7 @@ const DATA = [
         'a series of vellum leaves at Michigan University, independently numbered thus (but cf note in Preface)',
     },
     variants: ['Mich 550'],
+    noSpaceVariants: true,
   },
   {
     source: {
@@ -2248,10 +2268,141 @@ const DATA = [
   // BUT ENCOUNTERED THROUGHOUT THE TEXT:
   // TODO: (#522) Add the missing entries to this section.
   {
+    variants: ['Abû Ṣâliḥ', 'Abû Ṣâlih'],
+  },
+  {
+    variants: ['Amélineau', 'Amélineau Géog'],
+  },
+  {
+    variants: ['Antony Hist Laus'],
+  },
+  {
+    variants: ['Baynes'],
+  },
+  {
+    variants: ['Bell'],
+  },
+  {
+    variants: ['Berl Sitz'],
+  },
+  {
+    variants: ['Bevan'],
+  },
+  {
+    variants: ['Brussels Musée Cinqu'],
+  },
+  {
+    variants: ['Budge'],
+  },
+  {
+    variants: ['Chassinat'],
+  },
+  {
     source: {
       title: 'Presumably Edward Charles Everard Owen (1860-1949)',
     },
     variants: ['E C Owen'],
+  },
+  {
+    variants: ['Dévaud', 'Dévaud Ét', 'Dévaud Études'],
+  },
+  {
+    variants: ['Encycl. Bibl.'],
+    noSpaceVariants: true,
+  },
+  {
+    variants: ['Epiphan. De Gemm.', 'Epiphan De Gem'],
+    noSpaceVariants: true,
+  },
+  {
+    variants: ['Erman-Lange Pap. Lansing'],
+    noSpaceVariants: true,
+  },
+  {
+    variants: ['FestschrEbers'],
+  },
+  {
+    variants: ['FPetrie frag Athribis'],
+  },
+  {
+    variants: ['GMaspero Musée Eg.', 'GMaspero Musée Ég.'],
+    noSpaceVariants: true,
+  },
+  {
+    variants: ['Gött'],
+    postfixes: ['Ar', 'ar', 'Copt'],
+  },
+  {
+    variants: ['Grohmann'],
+  },
+  {
+    variants: ['Guide'],
+  },
+  {
+    variants: ['Inst franç Epiph De Gemm amethyst'],
+    noSpaceVariants: true,
+  },
+  {
+    variants: ['Kabis'],
+  },
+  {
+    variants: ['Klio'],
+  },
+  {
+    variants: ['LAA'],
+  },
+  {
+    variants: ['Lane'],
+  },
+  {
+    variants: ['Langkavel'],
+  },
+  {
+    variants: ['Lat & Syr'],
+  },
+  {
+    variants: ['Lect Instit Cath Paris'],
+  },
+  {
+    variants: ['Ludolf'],
+  },
+  {
+    variants: ['Mani Berl Sitz'],
+  },
+  {
+    variants: ['Mart Viktor ed Lemm'],
+  },
+  {
+    variants: ['Masp.'],
+  },
+  {
+    variants: ['MélCh Moeller'],
+  },
+  {
+    variants: ['Mich'],
+    postfixes: ['Ostr', 'P', 'wooden tablet'],
+  },
+  {
+    variants: ['Mich Pasc Lect'],
+  },
+  {
+    variants: ['OL'],
+  },
+  {
+    variants: ['OstrUnivCollLondon'],
+  },
+  {
+    variants: ['Pliny'],
+  },
+  {
+    variants: ['RegPach'],
+  },
+  {
+    variants: ['Reil Beiträge'],
+  },
+  {
+    variants: ["Samannûdi's Scala"],
+    noSpaceVariants: true,
   },
   {
     source: {
@@ -2269,15 +2420,78 @@ const DATA = [
       'Schweinfurth Arab Pflanz',
     ],
   },
+  {
+    source: {
+      title:
+        'Acta Sanctorum Martyrum Orientalium et Occidentalium, by Stefano Evodio Assemani',
+    },
+    variants: ['SE Assemani AcMartOr'],
+  },
+  {
+    variants: ['Sethe Verbum'],
+  },
+  {
+    source: {
+      title:
+        'Demotische Urkunden zum ägyptischen Bürgschaftsrechte vorzüglich der Ptolemäerzeit',
+    },
+    variants: ['Sethe DemUrk'],
+  },
+  {
+    source: {
+      title:
+        'Socrates Spiro, An Arabic-English vocabulary of the colloquial Arabic of Egypt',
+    },
+    variants: ['Spiro'],
+  },
+  {
+    source: {
+      title: "Mina, Togo - Le Martyre d'Apa Epima",
+    },
+    variants: ['TMina Epima', 'Mina'],
+  },
+  {
+    variants: [
+      'Univ Coll Lond',
+      'Univ Coll London',
+      'Univ College Lond',
+      'Univ College London',
+    ],
+  },
+  {
+    variants: ['Usener Theodos'],
+  },
+  {
+    variants: ['Vita Pachom'],
+  },
+  {
+    variants: ['Vita Sinuth'],
+  },
+  {
+    variants: ['Wilkins'],
+  },
+  {
+    variants: ['Zoega'],
+  },
 ];
 /**
  * Add the given source to the mapping.
  * @param key
  * @param reference
+ * @param noSpaceVariants
  */
-function add(key, reference) {
+function add(key, reference, noSpaceVariants) {
   logger.ensure(MAPPING[key] === undefined, 'duplicate key:', key);
   MAPPING[key] = reference;
+  if (noSpaceVariants) {
+    return;
+  }
+  const parts = key.split(' ');
+  while (parts.length > 1) {
+    const last = parts.pop();
+    parts[parts.length - 1] += last;
+    add(parts.join(' '), reference, true);
+  }
 }
 // Add all the variants to the map.
 DATA.forEach((res) => {
@@ -2288,35 +2502,14 @@ DATA.forEach((res) => {
   );
   res.variants.forEach((variant) => {
     // Add the abbreviation without any postfixes.
-    add(variant, new Reference(res.source, variant));
+    add(variant, new Reference(variant, res.source), res.noSpaceVariants);
     res.postfixes?.forEach((postfix) => {
-      add(`${variant} ${postfix}`, new Reference(res.source, variant, postfix));
+      add(
+        `${variant} ${postfix}`,
+        new Reference(variant, res.source, postfix),
+        res.noSpaceVariants
+      );
     });
   });
-});
-// Add keys with spaces removed.
-Object.entries(MAPPING).forEach(([key, reference]) => {
-  const parts = key.split(' ');
-  // Our script imposes a requirement on all entries in the map: They must
-  // match the reference logic. This is important, because it guards against
-  // undetectable abbreviations.
-  // Below, we exclude some problematic spacing variants from the map, because
-  // they never occur in the text, and also because they don't match the regex
-  // and thus would break verification.
-  if (parts.length === 2 && parts[1]?.match(/^[0-9]+$/)) {
-    // Abbreviations that have a number as the second part never occur without
-    // that space in the middle.
-    return;
-  }
-  if (parts[0]?.endsWith('.')) {
-    // Abbreviations that have the first part ending with a period also never
-    // occur without a space in the middle.
-    return;
-  }
-  while (parts.length > 1) {
-    const last = parts.pop();
-    parts[parts.length - 1] += last;
-    add(parts.join(' '), reference);
-  }
 });
 /* eslint-enable max-lines */

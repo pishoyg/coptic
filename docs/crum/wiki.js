@@ -12,6 +12,7 @@ import * as ann from './annotations.js';
 import * as ref from './references.js';
 import * as drop from '../dropdown.js';
 import * as str from '../str.js';
+import * as dev from '../dev.js';
 /**
  * NOTE: All of the regexes below assume the following normalizations:
  * - HTML tree normalization[1], which allows us to use `\s` instead of `\s+`.
@@ -139,18 +140,30 @@ export const SUFFIX = new RegExp(
 );
 const LETTER = /[a-zA-Z\p{M}&]/u;
 const SPECIAL_CASES = [
-  'Imp Russ Ar S', // This consists of 4 words!
-  "O'Leary\\s?(?:H|The?)", // This has an apostrophe.
-  'Berl\\. Wörterb', // This has a period.
-  // The abbreviation usually occurs with ‘Wörterb’ occurring inside a <i> tag,
-  // so we need to be able to match ‘Berl.’ on its own as well.
-  'Berl\\.',
-  // The following cases contain digits!
-  'Mani 1',
-  'Mani 2',
+  // The following entries have more than 3 words:
+  'Imp Russ Ar S',
+  'Inst franç Epiph De Gemm amethyst', // Also a special character (ç)!
+  'Lect Instit Cath Paris',
+  'Mart Viktor ed Lemm',
+  // The entries below have special characters, such as periods, apostrophes,
+  // dashes, or digits:
+  // NOTE: For some abbreviations, we're forced to mark a portion of the
+  // abbreviation as optional when it occurs inside an <i> tag, because the
+  // first part often occurs on its own in a node.
   'Almk 1',
   'Almk 2',
+  'Berl\\.(?: Wörterb)?',
+  'Encycl\\. Bibl\\.',
+  'Epiphan\\.( De Gemm\\.)?',
+  'Erman-Lange Pap\\. Lansing',
+  'GMaspero Musée Eg\\.',
+  'GMaspero Musée Ég\\.',
+  'Mani 1',
+  'Mani 2',
+  'Masp\\.',
   'Mich 550',
+  "O'Leary ?(?:H|The?)",
+  "Samannûdi's Scala",
 ];
 export const REFERENCE_RES = [
   // Special cases, and three-word reference abbreviations:
@@ -407,8 +420,11 @@ function replaceReference(match, remainder, nextSibling) {
   if (suffix) {
     span.append(parseSuffix(suffix, nextSibling /* candidate superscript  */));
   }
-  // Add a hover-invoked tooltip.
-  drop.addDroppable(span, 'hover', ...source.tooltip());
+  // Add a hover-invoked tooltip, if present.
+  const tooltip = source.tooltip();
+  if (tooltip?.length) {
+    drop.addDroppable(span, 'hover', ...tooltip);
+  }
   return { replacement: span, remainder };
 }
 /* eslint-enable complexity */
@@ -428,6 +444,29 @@ export function handleReferences(root) {
   });
 }
 /**
+ * WHITELIST is a list of known tokens that look like references but are not
+ * actually references. We ignore them in the warning below.
+ */
+const WHITELIST = new Set([
+  'Alexandria',
+  'Arabic',
+  'But',
+  'Coptic',
+  'Father',
+  'Georgian',
+  'I',
+  'Jesus',
+  'Meaning',
+  'Or',
+  'Pbow',
+  'Pous',
+  'Seems',
+  'Settle',
+  'So',
+  'Solomon',
+  'Victor',
+]);
+/**
  * Log warnings for all capital letters in the Wiki text that haven't been
  * marked.
  * In Crum's text, Capital letters are mainly used for abbreviations of
@@ -442,6 +481,9 @@ export function handleReferences(root) {
  * @param root
  */
 export function warnPotentiallyMissingReferences(root) {
+  if (!dev.get()) {
+    return;
+  }
   const query = css.classQuery(
     cls.BULLET,
     cls.ANNOTATION,
@@ -469,8 +511,12 @@ export function warnPotentiallyMissingReferences(root) {
   while (walker.nextNode()) {
     const text = walker.currentNode;
     // Find all words containing an upper-case letter.
-    const words =
-      text.nodeValue?.match(/(?=\p{L}*\p{Lu})[\p{L}\p{M}]+/gu) ?? [];
+    const words = text.nodeValue
+      ?.match(/(?=\p{L}*\p{Lu})[\p{L}\p{M}]+/gu)
+      ?.filter((token) => !WHITELIST.has(token));
+    if (!words?.length) {
+      continue;
+    }
     log.warn(
       'Possibly unmarked abbreviations:',
       ...words

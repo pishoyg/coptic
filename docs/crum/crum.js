@@ -237,6 +237,13 @@ export function handleSisterView(root) {
 export function handleDialect(root, highlighter) {
   root.querySelectorAll(`.${cls.DIALECT}`).forEach((el) => {
     const code = el.textContent.trim();
+    if (!(code in dial.DIALECTS)) {
+      // There is a, so far singleton, occurrence of `Bf` (Bohairic with
+      // Fayyumic tendency) under `ϫⲟⲗ, ϭⲁⲗ (wave)` that forces us to account
+      // for the case that a dialect tag may contain an unknown dialect code.
+      log.warn('Unknown dialect', code);
+      return;
+    }
     const dialect = dial.DIALECTS[code];
     // Prettify the appearance of the dialect code.
     const siglum = dialect.siglum();
