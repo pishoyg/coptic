@@ -452,18 +452,18 @@ body.note .sense {
   overflow: hidden;
 }
 
-.collapse-arrow {
+.arrow {
   display: inline-block; /* Allows transform to work */
   transition: transform var(--transition-duration) ease-in-out; /* Match your other transitions */
 }
 
 /* By default, it points right */
-.collapse-arrow::before {
+.arrow::before {
   content: '▸ ';
 }
 
 /* When the parent has .is-open, rotate it and change the content */
-.is-open .collapse-arrow {
+.is-open .arrow {
   transform: rotate(90deg);
 }
 

@@ -70,21 +70,17 @@ class Collapsible {
     // If we are opening the element, we make overflow visible, but we do this
     // when the transition completes. Otherwise, the overflow might show before
     // the element is fully visible.
-    const handleTransitionEnd = (): void => {
-      if (this.visible()) {
-        // Set overflow to visible once the expansion is complete.
-        this.setOverflow('visible');
-      }
-      // Remove the event listener to prevent it from firing on subsequent
-      // transitions (e.g., from the ResizeObserver).
-      this.collapsible.removeEventListener(
-        'transitionend',
-        handleTransitionEnd
-      );
-    };
-
     // Listen for the transition to finish.
-    this.collapsible.addEventListener('transitionend', handleTransitionEnd);
+    this.collapsible.addEventListener(
+      'transitionend',
+      (): void => {
+        if (!this.visible()) {
+          return;
+        }
+        this.setOverflow('visible');
+      },
+      { once: true }
+    );
   }
 }
 
