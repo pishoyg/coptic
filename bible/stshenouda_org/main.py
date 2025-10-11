@@ -656,10 +656,14 @@ class HTMLBuilder:
                     yield book.name
                     yield "</h4>"
                     yield '<div class="collapsible index-book-chapter-list">'
+                    # The inner container is necessary for the grid layout to
+                    # work.
+                    yield "<div>"
                     for i, chapter in enumerate(book.chapters):
                         if i:
                             yield " "
                         yield chapter.anchor(is_epub)
+                    yield "</div>"
                     yield "</div>"
             yield "</td>"
         yield "</tr>"
