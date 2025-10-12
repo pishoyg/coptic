@@ -79,6 +79,16 @@ export function copticDictionaryOnline(key: string): string {
 
 /**
  *
+ * @param codex
+ * @param leaf
+ * @returns
+ */
+export function nagHammadiPapyrus(codex: string, leaf: string): string {
+  return `https://ccdl.claremont.edu/digital/collection/nha/search/searchterm/Codex ${codex.toUpperCase()}, papyrus ${leaf}`;
+}
+
+/**
+ *
  * @param word
  * @returns
  * TODO: (#50) Revisit the Greek dictionary used.
