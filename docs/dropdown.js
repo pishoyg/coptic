@@ -94,6 +94,7 @@ export class Droppable {
   }
   /**
    * Realigns the droppable element to stay within the viewport.
+   * TODO: (#241) Implement alignment using CSS.
    */
   realign() {
     // Reset the transform property to get accurate measurements.

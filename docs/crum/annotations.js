@@ -76,6 +76,7 @@ export const MAPPING = {
   'e g': { fullForm: 'exempli gratia' },
   Heb: { fullForm: 'Hebrew', noCaseVariant: true },
   'i e': { fullForm: 'id est' },
+  'i q': { fullForm: 'idem quod' },
   // TODO: (#511) Reconsider whether you want to retain the annotation for ib.
   ib: { fullForm: 'ibidem' },
   improb: { fullForm: 'improbable' },

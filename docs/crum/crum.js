@@ -42,6 +42,7 @@ export function handle(root, highlighter, devHighlighter) {
   addCopticLookups(root);
   addGreekLookups(root);
   addEnglishLookups(root);
+  handleNagHammadi(root);
   wiki.handle(root);
 }
 /**
@@ -339,5 +340,26 @@ export function addEnglishLookups(root) {
     html.linkifyText(el, ENGLISH_RE, (match) => paths.lexiconLookup(match[0]), [
       ccls.HOVER_LINK,
     ]);
+  });
+}
+// In a Nag Hammadi reference, the Roman numeral indicates the codex number.
+// Afterwards, the first numeral indicates the text, the second the Codex leaf,
+// and the third the line number.
+// We're only interested in the codex and leaf number, so we use capture groups
+// for those.
+const NAG_HAMMADI_RE = /\bcodex ([a-z]*)\b[^;]*; [0-9]+; ([0-9]+);/gi;
+/**
+ *
+ * @param root
+ */
+export function handleNagHammadi(root) {
+  root.querySelectorAll(`.${cls.NAG_HAMMADI}`).forEach((elem) => {
+    html.replaceText(elem, NAG_HAMMADI_RE, (match) => {
+      const anchor = document.createElement('a');
+      anchor.target = '_blank';
+      anchor.href = paths.nagHammadiPapyrus(match[1], match[2]);
+      anchor.textContent = match[0];
+      return { replacement: anchor };
+    });
   });
 }
