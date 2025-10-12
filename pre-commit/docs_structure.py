@@ -10,7 +10,6 @@ This script has two purposes:
     Whenever the content of `docs/` changes in such a way that an update needs
     to be done to `findexx` or Playwright tests, this test will act as a
     reminder.
-
 """
 
 
@@ -116,6 +115,7 @@ PATTERNS: list[Pattern] = [
     Pattern(["fonts/**"]),
     Pattern([".nojekyll"]),
     Pattern(["CNAME"]),
+    Pattern(["marcion/index.html"]),
     # Auto-generated (JavaScript):
     Pattern(["**.js"]),
     # Auto-generated (lexicon):
