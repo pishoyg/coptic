@@ -50,7 +50,7 @@ function print(
   severity: '' | 'info' | 'warn' | 'error' | 'fatal',
   throwException = false,
   ...args: unknown[]
-): void {
+): void | never {
   const message = `\x1b[2m${color}${
     severity ? `${severity.charAt(0).toUpperCase() + severity.slice(1)}: ` : ''
   }\x1b[0m${args
@@ -106,8 +106,11 @@ export function error(...message: unknown[]): void {
  *
  * @param {...any} message - Message to log.
  */
-export function fatal(...message: unknown[]): void {
+export function fatal(...message: unknown[]): never {
   print(Colors.RED, Colors.PURPLE, 'error', true, ...message);
+  // The following line shouldn't be executed because the above line should
+  // throw an exception.
+  throw new Error();
 }
 
 /**
@@ -116,7 +119,10 @@ export function fatal(...message: unknown[]): void {
  * @param condition - Condition to evaluate.
  * @param {...any} message - Message to log (if the condition is not satisfied).
  */
-export function ensure(condition: boolean, ...message: unknown[]): void {
+export function ensure(
+  condition: boolean,
+  ...message: unknown[]
+): void | never {
   if (!condition) {
     fatal(...message);
   }
