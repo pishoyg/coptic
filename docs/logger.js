@@ -89,6 +89,9 @@ export function error(...message) {
  */
 export function fatal(...message) {
   print(Colors.RED, Colors.PURPLE, 'error', true, ...message);
+  // The following line shouldn't be executed because the above line should
+  // throw an exception.
+  throw new Error();
 }
 /**
  * Evaluate the condition. If it fails, raise an exception.

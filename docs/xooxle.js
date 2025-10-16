@@ -289,6 +289,7 @@ class AggregateResult {
   boundaryTypeMemo = null;
   fragmentWordMemo = null;
   numMatchesMemo = null;
+  firstMatchIndexMemo = null;
   /**
    * @returns The boundary type.
    */
@@ -323,6 +324,14 @@ class AggregateResult {
     return (this.numMatchesMemo ??= this.results
       .map((r) => r.numMatches)
       .reduce((a, b) => a + b, 0));
+  }
+  /**
+   * @returns Index of the first match in the text.
+   */
+  get firstMatchIndex() {
+    return (this.firstMatchIndexMemo ??= Math.min(
+      ...this.results.map((r) => r.firstMatchIndex)
+    ));
   }
 }
 /**
@@ -448,7 +457,7 @@ export class SearchResult extends AggregateResult {
       // Notice that we revert the sign, so the larger numbers will appear
       // first.
       -this.numMatches,
-      // Lastly, we sort based on the index of the first match, regardless
+      // Afterwards, we sort based on the index of the first match, regardless
       // the boundary type of that match.
       // Results are sorted based on the first column that has a match.
       // We do so based on the assumption that the earlier columns contain more
@@ -456,6 +465,11 @@ export class SearchResult extends AggregateResult {
       // more interesting to the user than a result with a match in the 2nd
       // column, so it should show first.
       this.results.findIndex((res) => res.match),
+      // Lastly, we rank based on the index of the first match in the text.
+      // A result that has a filed with a match closer to the beginning of the
+      // text should rank higher than a result with a match in the middle or
+      // towards the end of the text.
+      this.firstMatchIndex,
     ];
   }
   /**
@@ -853,8 +867,16 @@ class HTMLBuilder {
 /**
  * LineSearchResult represents the search result of one line.
  */
-class LineSearchResult {
+class LineSearchResult extends AggregateResult {
   line;
+  /**
+   * We implement results to appease the compiler. It's unused in this class.
+   */
+  get results() {
+    throw new Error(
+      'LineSearchResult is not an aggregate result, and should implement required methods directly.'
+    );
+  }
   matches;
   /**
    *
@@ -862,6 +884,7 @@ class LineSearchResult {
    * @param regex - The regex to search.
    */
   constructor(line, regex) {
+    super();
     this.line = line;
     this.matches = line.matches(regex);
   }
@@ -979,6 +1002,12 @@ class LineSearchResult {
    */
   get numMatches() {
     return this.matches.length;
+  }
+  /**
+   * @returns The starting index of the first match.
+   */
+  get firstMatchIndex() {
+    return this.matches[0]?.start ?? Number.MAX_SAFE_INTEGER;
   }
 }
 /**
