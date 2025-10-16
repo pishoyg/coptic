@@ -1357,7 +1357,25 @@ export class Xooxle {
     // We use the sentinels as bottoms for the sections, rather than tops,
     // because we want results to expand downwards rather than upwards, to
     // avoid jitter at the top of the table, which is the area that the user
-    // will be looking at.
+    // would be looking at.
+    //
+    // NOTE: There are two phases of sorting – generic sorting, and bucket
+    // sorting:
+    // 1. Generic sorting applies to all Xooxle instances, and can be performed
+    //    on any search result object. It doesn't require parsing the result's
+    //    internal HTML, thus it's cheap and quick, and we can afford to perform
+    //    it on all candidates early on.
+    // 2. Bucket sorting uses the DOM object constructed from the result's
+    //    internal HTML, which makes it quite expensive to perform, so we do it
+    //    on small batches of results because we can't sort all candidates at
+    //    the very beginning.
+    //    As of the time of writing, a default bucket sorter groups all results
+    //    into the same bucket, but individual Xooxle instances can override the
+    //    behavior and provide their custom bucket sorters.
+    // In the final result display, bucket sorting will have priority over
+    // generic sorting. In other words, results get grouped into buckets by the
+    // bucket sorter. Within each bucket, the results will be sorted by the
+    // generic sorter.
     const numBuckets: number = this.searchResultType.numBuckets();
     // Create a two-D array, where the first dimension is the layer, and the
     // second is the bucket.
@@ -1386,6 +1404,8 @@ export class Xooxle {
         // None of the layers has a match. Return no results.
         return [];
       })
+      // Besides bucket sorting, we can perform some generic sorting at this
+      // step.
       .sort(searchResultCompare);
 
     for (const [count, result] of results.entries()) {
