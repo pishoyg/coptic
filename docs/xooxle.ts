@@ -565,7 +565,10 @@ export class SearchResult extends AggregateResult {
     if (!link) {
       return undefined;
     }
-    return `${link}#:~:text=${encodeURIComponent(this.fragmentWord()!)}`;
+    // The dash requires special handling, because it doesn't get encoded by
+    // default, and it needs to be encoded in order for text fragments to work
+    // correctly. See #574.
+    return `${link}#:~:text=${encodeURIComponent(this.fragmentWord()!).replace('-', '%2D')}`;
   }
 
   /**
