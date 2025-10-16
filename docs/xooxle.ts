@@ -352,6 +352,7 @@ abstract class AggregateResult {
   private boundaryTypeMemo: BoundaryType | null = null;
   private fragmentWordMemo: string | undefined | null = null;
   private numMatchesMemo: number | undefined | null = null;
+  private firstMatchIndexMemo: number | undefined | null = null;
 
   /**
    * @returns The boundary type.
@@ -390,6 +391,15 @@ abstract class AggregateResult {
     return (this.numMatchesMemo ??= this.results
       .map((r) => r.numMatches)
       .reduce((a, b) => a + b, 0));
+  }
+
+  /**
+   * @returns Index of the first match in the text.
+   */
+  public get firstMatchIndex(): number {
+    return (this.firstMatchIndexMemo ??= Math.min(
+      ...this.results.map((r) => r.firstMatchIndex)
+    ));
   }
 }
 
@@ -534,7 +544,7 @@ export class SearchResult extends AggregateResult {
       // Notice that we revert the sign, so the larger numbers will appear
       // first.
       -this.numMatches,
-      // Lastly, we sort based on the index of the first match, regardless
+      // Afterwards, we sort based on the index of the first match, regardless
       // the boundary type of that match.
       // Results are sorted based on the first column that has a match.
       // We do so based on the assumption that the earlier columns contain more
@@ -542,6 +552,11 @@ export class SearchResult extends AggregateResult {
       // more interesting to the user than a result with a match in the 2nd
       // column, so it should show first.
       this.results.findIndex((res) => res.match),
+      // Lastly, we rank based on the index of the first match in the text.
+      // A result that has a filed with a match closer to the beginning of the
+      // text should rank higher than a result with a match in the middle or
+      // towards the end of the text.
+      this.firstMatchIndex,
     ];
   }
 
@@ -994,7 +1009,16 @@ class HTMLBuilder {
 /**
  * LineSearchResult represents the search result of one line.
  */
-class LineSearchResult {
+class LineSearchResult extends AggregateResult {
+  /**
+   * We implement results to appease the compiler. It's unused in this class.
+   */
+  public override get results(): AggregateResult[] {
+    throw new Error(
+      'LineSearchResult is not an aggregate result, and should implement required methods directly.'
+    );
+  }
+
   private readonly matches: Match[];
 
   /**
@@ -1006,6 +1030,7 @@ class LineSearchResult {
     private readonly line: Line,
     regex: RegExp
   ) {
+    super();
     this.matches = line.matches(regex);
   }
 
@@ -1029,14 +1054,14 @@ class LineSearchResult {
    *
    * @returns Whether this search result has a match.
    */
-  public get match(): boolean {
+  public override get match(): boolean {
     return !!this.matches.length;
   }
 
   /**
    * @returns A word that can be used as a URL fragment.
    */
-  public fragmentWord(): string | undefined {
+  public override fragmentWord(): string | undefined {
     /* Expand the match left and right such that it contains full words, for
      * text fragment purposes.
      * See
@@ -1131,15 +1156,22 @@ class LineSearchResult {
   /**
    * @returns The boundary type of this match.
    */
-  public boundaryType(): BoundaryType {
+  public override boundaryType(): BoundaryType {
     return Math.min(...this.matches.map((m) => m.boundaryType));
   }
 
   /**
    * @returns The number of matches in this line.
    */
-  public get numMatches(): number {
+  public override get numMatches(): number {
     return this.matches.length;
+  }
+
+  /**
+   * @returns The starting index of the first match.
+   */
+  public override get firstMatchIndex(): number {
+    return this.matches[0]?.start ?? Number.MAX_SAFE_INTEGER;
   }
 }
 
