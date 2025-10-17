@@ -2533,7 +2533,7 @@ const DATA: Resource[] = [
     variants: ['Vita Pachom'],
   },
   {
-    variants: ['Vita Sinuth'],
+    variants: ['Vita Sinuth', 'Vita Sin'],
   },
   {
     variants: ['Wilkins'],
