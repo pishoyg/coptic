@@ -1536,6 +1536,7 @@ const DATA: Resource[] = [
       ],
     },
     variants: ['Osir'],
+    postfixes: ['no'],
   },
   {
     source: {
