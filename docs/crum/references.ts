@@ -1771,7 +1771,7 @@ const DATA: Resource[] = [
         '<em>The Oxyrhynchus papyri</em> is an ongoing series first published in 1898 and edited by Bernard P. Grenfell and Arthur S. Hunt. The earliest volumes are available on <a href="https://onlinebooks.library.upenn.edu/webbin/serial?id=ocyrhynchus" rel="noreferrer noopener" target="_blank">The Online Books Page</a> with further volumes on <a href="https://catalog.hathitrust.org/Record/000051960" rel="noreferrer noopener" target="_blank">HathiTrust</a> via US access. ',
       ],
     },
-    variants: ['POxy'],
+    variants: ['P Oxy'],
   },
   {
     source: {
