@@ -117,6 +117,7 @@ export const MAPPING: Record<string, Annotation> = {
   'l c': { fullForm: 'loco citato' },
   MS: { fullForm: 'manuscript', noCaseVariant: true },
   MSS: { fullForm: 'manuscripts', noCaseVariant: true },
+  p: { fullForm: 'page', noCaseVariant: true },
   'q v': { fullForm: 'quod vide' },
   's v': { fullForm: 'sub verbo' },
   sc: { fullForm: 'scilicet' },
