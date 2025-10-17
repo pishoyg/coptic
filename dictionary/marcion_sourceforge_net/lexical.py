@@ -247,7 +247,7 @@ class Line:
         t = _span(t, ["type"] + self._dialects)
         r = ""
         if include_references:
-            r = ", ".join("{" + r + "}" for r in self._references)
+            r = "<br>".join("[" + r + "]" for r in self._references)
             r = _span(r, ["nag-hammadi"])
         word = " ".join(filter(None, [d, f, t, r]))
         # For historical reasons, we use the class "word" to refer to a line.
@@ -370,8 +370,22 @@ class Word(Part):
 
 
 class Reference(Part):
+    """Reference represents a citation for a word we added to the dictionary.
+
+    When a word is absent from Crum's dictionary, we may insert it, but we use
+    references to cite the source.
+    As of the time of writing, references are predominantly used to cite words
+    from the Nag Hammadi Library. But there are a few instances of non-NH
+    citations.
+    """
+
     def __init__(self, parts: list[str]) -> None:
         self.parts: list[str] = parts
+        assert len(self.parts) in [1, 6, 7]
+        if self.parts[-1] == "Ext":
+            self.parts = self.parts[:-1]
+        if self.parts[0].startswith("ext "):
+            self.parts[0] = self.parts[0][4:]
 
     @typing.override
     def string(self, use_coptic_symbol: bool) -> str:  # dead: disable
