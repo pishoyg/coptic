@@ -1855,6 +1855,7 @@ const DATA = [
       ],
     },
     variants: ['Ryl'],
+    postfixes: ['Dem'],
   },
   {
     source: {
@@ -1908,7 +1909,7 @@ const DATA = [
     postfixes: [
       'BM',
       'BMOr',
-      'BerlOr',
+      'Berl Or',
       'Bor',
       'C',
       'Cai',
@@ -2437,6 +2438,14 @@ const DATA = [
         'Demotische Urkunden zum ägyptischen Bürgschaftsrechte vorzüglich der Ptolemäerzeit',
     },
     variants: ['Sethe DemUrk'],
+  },
+  {
+    source: {
+      title:
+        'Aegyptische und griechische Eigennamen aus Mumienetiketten der römischen Kaiserzeit, auf Grund von grossenteils unveröffentlichtem Material, gesammelt und erläutert von Wilhelm Spiegelberg',
+    },
+    variants: ['Spg Aeg u Gr Eigennamen'],
+    noSpaceVariants: true,
   },
   {
     source: {

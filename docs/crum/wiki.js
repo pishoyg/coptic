@@ -126,7 +126,8 @@ export const ANNOTATION_RES = [
 //     regexes below.
 //     It consists of any number of occurrences of a space character followed by
 //     a "number". The "number", on the other hand, could be:
-//     - A sequence of digits, optionally preceded by an apostrophe.
+//     - A sequence of digits, optionally preceded by an apostrophe or followed
+//       by an asterisk.
 //     - A single Latin letter.
 //     This was constructed based on manual observation, and could change in the
 //     future.
@@ -135,7 +136,7 @@ export const ANNOTATION_RES = [
 //     assume that, if it occurs after a reference abbreviation, then it's
 //     likely a suffix.
 export const SUFFIX = new RegExp(
-  `^(?:\\s(?:'?[0-9]+|[a-zA-Z])${str.BOUNDARY_END.source})+`,
+  `^(?:\\s(?:'?[0-9]+\\*?|[a-zA-Z])${str.BOUNDARY_END.source})+`,
   'u'
 );
 const LETTER = /[a-zA-Z\p{M}&]/u;
@@ -145,6 +146,7 @@ const SPECIAL_CASES = [
   'Inst franç Epiph De Gemm amethyst', // Also a special character (ç)!
   'Lect Instit Cath Paris',
   'Mart Viktor ed Lemm',
+  'Spg Aeg u Gr Eigennamen',
   // The entries below have special characters, such as periods, apostrophes,
   // dashes, or digits:
   // NOTE: For some abbreviations, we're forced to mark a portion of the
@@ -373,15 +375,15 @@ function replaceReference(match, remainder, nextSibling) {
   // Parse a suffix from the remainder. Update the remainder.
   let suffix = SUFFIX.exec(remainder)?.[0];
   remainder = remainder.slice(suffix?.length);
-  // Try to find a source.
-  let source = ref.MAPPING[match[0]];
-  // Construct a tentative span.
+  let source;
+  // Initialize the span.
   const span = document.createElement('span');
   span.classList.add(cls.REFERENCE);
-  span.textContent = match[0];
   // Sometimes, part of the abbreviation lives inside the next sibling.
+  // Notice that, since we want prioritize longer abbreviations, we attempt to
+  // parse a reference obtained by combining the match with the next <i> tag,
+  // before attempting to parse a reference from the match alone.
   if (
-    !source && // We still haven't succeeded in parsing the source.
     !suffix && // There is no suffix text following the abbreviation.
     remainder === ' ' && // The remaining part in the text node is just a space.
     nextSibling?.nodeName === 'I' && // The next sibling is an idiomatic element.
@@ -390,12 +392,13 @@ function replaceReference(match, remainder, nextSibling) {
     // source abbreviation.
     (source = ref.MAPPING[`${match[0]} ${nextSibling.textContent}`])
   ) {
-    // Success! The next sibling is actually part of the abbreviation.
+    // Success! The text obtained by combining the match and the next sibling is
+    // a reference abbreviation.
     // Save a reference to the sibling's sibling, before we move the sibling and
     // we can no longer access its sibling.
     const nextNext = nextSibling.nextSibling;
-    // Move the sibling to the reference span that you're constructing.
-    span.append(' ', nextSibling);
+    // Populate the span content.
+    span.append(match[0], ' ', nextSibling);
     remainder = ''; // We have consumed the remainder.
     // Check if the sibling's sibling bears a suffix.
     if ((suffix = nextNext?.nodeValue?.match(SUFFIX)?.[0])) {
@@ -411,6 +414,12 @@ function replaceReference(match, remainder, nextSibling) {
     // We only do that if there is no remainder. Otherwise, such a remainder
     // would show between the suffix and the superscript.
     nextSibling = null;
+  }
+  // If the above didn't succeed, try to parse a reference from the match alone.
+  if (!source) {
+    if ((source = ref.MAPPING[match[0]])) {
+      span.append(match[0]);
+    }
   }
   if (!source) {
     // Still no source found! Return!
