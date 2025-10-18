@@ -1976,7 +1976,7 @@ const DATA: Resource[] = [
     postfixes: [
       'BM',
       'BMOr',
-      'BerlOr',
+      'Berl Or',
       'Bor',
       'C',
       'Cai',
