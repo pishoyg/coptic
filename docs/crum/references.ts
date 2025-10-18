@@ -1922,6 +1922,7 @@ const DATA: Resource[] = [
       ],
     },
     variants: ['Ryl'],
+    postfixes: ['Dem'],
   },
   {
     source: {
