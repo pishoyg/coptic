@@ -412,17 +412,17 @@ function replaceReference(
   let suffix: string | undefined = SUFFIX.exec(remainder)?.[0];
   remainder = remainder.slice(suffix?.length);
 
-  // Try to find a source.
-  let source: ref.Reference | undefined = ref.MAPPING[match[0]];
+  let source: ref.Reference | undefined;
 
-  // Construct a tentative span.
+  // Initialize the span.
   const span: HTMLSpanElement = document.createElement('span');
   span.classList.add(cls.REFERENCE);
-  span.textContent = match[0];
 
   // Sometimes, part of the abbreviation lives inside the next sibling.
+  // Notice that, since we want prioritize longer abbreviations, we attempt to
+  // parse a reference obtained by combining the match with the next <i> tag,
+  // before attempting to parse a reference from the match alone.
   if (
-    !source && // We still haven't succeeded in parsing the source.
     !suffix && // There is no suffix text following the abbreviation.
     remainder === ' ' && // The remaining part in the text node is just a space.
     nextSibling?.nodeName === 'I' && // The next sibling is an idiomatic element.
@@ -431,12 +431,13 @@ function replaceReference(
     // source abbreviation.
     (source = ref.MAPPING[`${match[0]} ${nextSibling.textContent}`])
   ) {
-    // Success! The next sibling is actually part of the abbreviation.
+    // Success! The text obtained by combining the match and the next sibling is
+    // a reference abbreviation.
     // Save a reference to the sibling's sibling, before we move the sibling and
     // we can no longer access its sibling.
     const nextNext: ChildNode | null = nextSibling.nextSibling;
-    // Move the sibling to the reference span that you're constructing.
-    span.append(' ', nextSibling);
+    // Populate the span content.
+    span.append(match[0], ' ', nextSibling);
     remainder = ''; // We have consumed the remainder.
     // Check if the sibling's sibling bears a suffix.
     if ((suffix = nextNext?.nodeValue?.match(SUFFIX)?.[0])) {
@@ -454,6 +455,12 @@ function replaceReference(
     nextSibling = null;
   }
 
+  // If the above didn't succeed, try to parse a reference from the match alone.
+  if (!source) {
+    if ((source = ref.MAPPING[match[0]])) {
+      span.append(match[0]);
+    }
+  }
   if (!source) {
     // Still no source found! Return!
     return {};
