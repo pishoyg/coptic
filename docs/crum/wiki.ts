@@ -132,7 +132,8 @@ export const ANNOTATION_RES: RegExp[] = [
 //     regexes below.
 //     It consists of any number of occurrences of a space character followed by
 //     a "number". The "number", on the other hand, could be:
-//     - A sequence of digits, optionally preceded by an apostrophe.
+//     - A sequence of digits, optionally preceded by an apostrophe or followed
+//       by an asterisk.
 //     - A single Latin letter.
 //     This was constructed based on manual observation, and could change in the
 //     future.
@@ -141,7 +142,7 @@ export const ANNOTATION_RES: RegExp[] = [
 //     assume that, if it occurs after a reference abbreviation, then it's
 //     likely a suffix.
 export const SUFFIX = new RegExp(
-  `^(?:\\s(?:'?[0-9]+|[a-zA-Z])${str.BOUNDARY_END.source})+`,
+  `^(?:\\s(?:'?[0-9]+\\*?|[a-zA-Z])${str.BOUNDARY_END.source})+`,
   'u'
 );
 const LETTER = /[a-zA-Z\p{M}&]/u;
