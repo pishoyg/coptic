@@ -2509,6 +2509,14 @@ const DATA: Resource[] = [
   {
     source: {
       title:
+        'Aegyptische und griechische Eigennamen aus Mumienetiketten der römischen Kaiserzeit, auf Grund von grossenteils unveröffentlichtem Material, gesammelt und erläutert von Wilhelm Spiegelberg',
+    },
+    variants: ['Spg Aeg u Gr Eigennamen'],
+    noSpaceVariants: true,
+  },
+  {
+    source: {
+      title:
         'Socrates Spiro, An Arabic-English vocabulary of the colloquial Arabic of Egypt',
     },
     variants: ['Spiro'],

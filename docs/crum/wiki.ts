@@ -151,6 +151,7 @@ const SPECIAL_CASES: string[] = [
   'Inst franç Epiph De Gemm amethyst', // Also a special character (ç)!
   'Lect Instit Cath Paris',
   'Mart Viktor ed Lemm',
+  'Spg Aeg u Gr Eigennamen',
 
   // The entries below have special characters, such as periods, apostrophes,
   // dashes, or digits:
