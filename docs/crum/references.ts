@@ -233,9 +233,8 @@ const DATA: Resource[] = [
   },
   {
     source: {
-      // TODO: (#545) Name doesn't make sense when it appears on its own!
       title:
-        'continuation of the above, ed. K. V. Zetterstéen, in Le Monde Oriental, 1925',
+        '<em>continuation of</em> <i>H. Almkvist, Kleine Beitr. z. Lexikographie d. vulg. Arabischen, 8th Or. Congr., 1891</i>; ed. K. V. Zetterstéen, in Le Monde Oriental, 1925',
       description: [
         '<em><a href="https://www.google.co.uk/books/edition/Le_Monde_oriental/r9IbAAAAMAAJ?hl=en&amp;gbpv=1&amp;pg=PA293&amp;printsec=frontcover" rel="noreferrer noopener" target="_blank">Le Monde Oriental</a></em>. (1925). Vol. XIX. Uppsala.',
       ],
@@ -948,9 +947,8 @@ const DATA: Resource[] = [
   },
   {
     source: {
-      // TODO: (#545) Name doesn't make sense when it appears on its own!
       title:
-        'two such papyri in Leipzig University, Aegyptologisches Institut (cf below)',
+        'Crum & Steindorff, Kopt. Rechtsurkunden… aus Djême, acc. to no. & line; two such papyri in Leipzig University, Aegyptologisches Institut (cf below)',
       description: [
         'Crum, W. E., &amp; Steindorff, G. (1912). <em><a href="https://archive.org/details/koptischerechtsu00crum/page/n3/mode/2up" rel="noreferrer noopener" target="_blank">Koptische Rechtsurkunden des achten Jahrhunderts aus Djême (Theben). I. Band: Text und Incides</a></em>. Leipzig: J. C. Hinrichs’sche Buchhandlung.',
       ],
@@ -1285,8 +1283,8 @@ const DATA: Resource[] = [
   },
   {
     source: {
-      // TODO: (#545) Name doesn't make sense when it appears on its own!
-      title: 'copies of sim. papyri at Berlin by Polotsky',
+      title:
+        'copies of Chester Beatty’s unpublished Manichaean papyri by H. J. Polotsky & H. Thompson; at Berlin',
     },
     variants: ['Mani 2'],
     noSpaceVariants: true,
@@ -1637,14 +1635,15 @@ const DATA: Resource[] = [
     variants: ['Pcod'],
   },
   {
+    // TODO: (#523) This is better treated as a postfix of the above.
     source: {
-      // TODO: (#545) Name doesn't make sense when it appears on its own!
-      title: 'fayyûmic text of same, ed. W. Erichsen (Danish Acad., 1932)',
+      title:
+        'Fayyûmic text of <i>Papyruscodex saec. vi-vii… Cheltenham, ed. Crum, 1915, acc to pp. of printed book</i>; ed. W. Erichsen (Danish Acad., 1932)',
       description: [
         'Erichsen, W. (1932). <em><a href="https://archive.org/details/faijumischefragm0000agat/page/n1/mode/2up" rel="noreferrer noopener" target="_blank">Faijumische Fragmente der Reden des Agathonicus Bischofs von Tarsus</a></em>. (Det Kgl. Danske Videnskabernes Selskab, Historisk-filologiske Meddelelser, XIX, 1). København: Andr. Fred. Høst &amp; søn.',
       ],
     },
-    variants: ['PcodF'],
+    variants: ['Pcod F'],
   },
   {
     source: {
@@ -1929,8 +1928,8 @@ const DATA: Resource[] = [
   },
   {
     source: {
-      // TODO: (#545) Name doesn't make sense when it appears on its own!
-      title: 'MSS. acquired since publication of catalogue (cf Ryl Bull. 5)',
+      title:
+        'Catal. of Coptic MSS. in John Rylands Library, 1909, acc. to numbers; MSS. acquired since publication of catalogue (cf Ryl Bull. 5)',
       description: [
         'Crum, W. E. (1909). <em><a href="https://archive.org/details/cu31924099175329/page/n11/mode/2up" rel="noreferrer noopener" target="_blank">Catalogue of the Coptic Manuscripts in the Collection of the John Rylands Library, Manchester</a></em>. Manchester: University Press.',
         'Crum, W. E. (1918–1920). <a href="https://luna.manchester.ac.uk/luna/servlet/detail/Manchester~25~25~702~196480:New-Coptic-manuscripts-in-the-John-?sort=image_number%2Cimage_sequence_number&amp;qvq=q:escholar005294.pdf;sort:image_number%2Cimage_sequence_number;lc:Manchester~25~25&amp;mi=0&amp;trs=1" rel="noreferrer noopener" target="_blank">New Coptic Manuscripts in the John Rylands Library</a>. <em>Bulletin of the John Rylands Library</em>, 5, pp. 497–503. ',
@@ -2228,9 +2227,8 @@ const DATA: Resource[] = [
   },
   {
     source: {
-      // TODO: (#545) Name doesn't make sense when it appears on its own!
       title:
-        'do., Koptskia Ostraka… Golenishtshef (= Bull. Acad. Imp. x, no. 5, 1899), acc. to numbers',
+        'B. Turaief, Materiali &c. (v AZ 40 150, Orient. Bibliographie xv, no. 111 a), acc. to numbers; Koptskia Ostraka… Golenishtshef (= Bull. Acad. Imp. x, no. 5, 1899)',
       description: [
         'Turayev, B. A. (1899). <a href="https://www.biodiversitylibrary.org/item/94351#page/503/mode/1up" rel="noreferrer noopener" target="_blank">Коптскія ostraca коллекціи В. С. Голенищева</a> [Coptic ostraca from the collection of V. S. Golenishchev]. <em>Bulletin de l’ Académie Impériale des Sciences de St.-Pétersbourg</em>, 5e série, T. X, no. 5, pp. 435–449. ',
       ],
