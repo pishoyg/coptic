@@ -83,15 +83,17 @@ export function handleCategories(root: HTMLElement): void {
  * @param root
  */
 export function handleRootType(root: HTMLElement): void {
-  root.querySelectorAll(`.${cls.ROOT_TYPE} b`).forEach((el: Element): void => {
-    const type: string = el.textContent.trim();
-    const link = document.createElement('a');
-    link.classList.add(ccls.HOVER_LINK);
-    link.href = paths.crum(type.replaceAll('/', '_'));
-    link.target = '_blank';
-    link.textContent = type;
-    el.replaceChildren(link);
-  });
+  root
+    .querySelectorAll(`.${cls.PART_OF_SPEECH} b`)
+    .forEach((el: Element): void => {
+      const type: string = el.textContent.trim();
+      const link = document.createElement('a');
+      link.classList.add(ccls.HOVER_LINK);
+      link.href = paths.crum(type.replaceAll('/', '_'));
+      link.target = '_blank';
+      link.textContent = type;
+      el.replaceChildren(link);
+    });
 }
 
 /**
@@ -393,7 +395,8 @@ export function addEnglishLookups(root: HTMLElement): void {
       el,
       ENGLISH_RE,
       (match: RegExpExecArray) => paths.lexiconLookup(match[0]),
-      [ccls.HOVER_LINK]
+      [ccls.HOVER_LINK],
+      [cls.PART_OF_SPEECH]
     );
   });
 }

@@ -403,11 +403,11 @@ class Crum(deck.Deck):
         # be renamed to "type", and the existing "type" class that is used
         # elsewhere should be renamed to something else. We have had the
         # convention of assigning unqualified class names to root elements.
-        yield '<div id="root-type" class="root-type">'
+        yield '<span id="root-part-of-speech" class="part-of-speech">'
         yield "(<b>"
         yield root.type_name
         yield "</b>)"
-        yield "</div>"
+        yield "</span>"
 
         if root.categories:
             yield '<div id="categories" class="categories">'
