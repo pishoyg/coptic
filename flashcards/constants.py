@@ -832,11 +832,7 @@ _CRUM_RETAIN_CLASSES = {
     "type",
 } | _DIALECTS
 
-_CRUM_RETAIN_ELEMENTS_FOR_CLASSES = {
-    "dialect-comma",
-    "spelling-comma",
-    "dialect-parenthesis",
-}
+_CRUM_RETAIN_ELEMENTS_FOR_CLASSES = {"comma"}
 
 _KELLIA_RETAIN_CLASSES = {
     "word",

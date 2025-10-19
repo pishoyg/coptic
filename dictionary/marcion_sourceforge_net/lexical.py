@@ -220,16 +220,10 @@ class Line:
 
         d = ""
         if include_dialects and self._dialects:
-            dialects = [_span(d, ["dialect", d]) for d in self._dialects]
-
-            d = (
-                _span("(", ["dialect-parenthesis"])
-                + _span(", ", ["dialect-comma"]).join(dialects)
-                + _span(")", ["dialect-parenthesis"])
-            )
+            d = "".join(_span(d, ["dialect", d]) for d in self._dialects)
         # For historical reasons, we use the class "spelling" to refer to forms.
         # TODO: (#0) Consider updating the class name.
-        f = _span(", ", ["spelling-comma"]).join(
+        f = _span(", ", ["comma"]).join(
             _span(f, ["spelling"] + self._dialects)
             for f in self.forms(parenthesize_assumed)
             if f
@@ -249,7 +243,7 @@ class Line:
         if include_references:
             r = "<br>".join("[" + r + "]" for r in self._references)
             r = _span(r, ["nag-hammadi"])
-        word = " ".join(filter(None, [d, f, t, r]))
+        word = " ".join(filter(None, [f, d, t, r]))
         # For historical reasons, we use the class "word" to refer to a line.
         # TODO: (#0) Consider updating the class name.
         word = _span(word, ["word"] + self._dialects)

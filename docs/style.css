@@ -231,6 +231,10 @@ table {
   color: seagreen;
 }
 
+.type {
+  color: gray;
+}
+
 .wiki .arabic,
 .wiki .aramaic,
 .wiki .hebrew,
@@ -247,7 +251,7 @@ table {
   font-style: italic;
 }
 
-.wiki .dialect {
+.dialect {
   color: #835f08; /* dark gold */
 }
 

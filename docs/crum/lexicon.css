@@ -20,11 +20,6 @@ form td {
   padding-left: 5px;
 }
 
-/* Dim Crum's types. */
-table.results#crum span.type {
-  opacity: 0.3;
-}
-
 /* Dim the Wiki checkbox label. */
 td#wiki-checkbox-td {
   color: gray;
