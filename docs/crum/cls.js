@@ -51,7 +51,7 @@ export const QUALITY = 'quality';
  * REFERENCE is the class of a reference in the Crum Wiki.
  */
 export const REFERENCE = 'reference';
-export const ROOT_TYPE = 'root-type';
+export const PART_OF_SPEECH = 'part-of-speech';
 export const SENSES = 'senses';
 export const SISTERS_TABLE = 'sisters-table';
 export const SISTER_INDEX = 'sister-index';

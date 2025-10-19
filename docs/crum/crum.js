@@ -72,7 +72,7 @@ export function handleCategories(root) {
  * @param root
  */
 export function handleRootType(root) {
-  root.querySelectorAll(`.${cls.ROOT_TYPE} b`).forEach((el) => {
+  root.querySelectorAll(`.${cls.PART_OF_SPEECH} b`).forEach((el) => {
     const type = el.textContent.trim();
     const link = document.createElement('a');
     link.classList.add(ccls.HOVER_LINK);
@@ -337,9 +337,13 @@ export function addGreekLookups(root) {
  */
 export function addEnglishLookups(root) {
   root.querySelectorAll(`.${cls.MEANING}`).forEach((el) => {
-    html.linkifyText(el, ENGLISH_RE, (match) => paths.lexiconLookup(match[0]), [
-      ccls.HOVER_LINK,
-    ]);
+    html.linkifyText(
+      el,
+      ENGLISH_RE,
+      (match) => paths.lexiconLookup(match[0]),
+      [ccls.HOVER_LINK],
+      [cls.PART_OF_SPEECH]
+    );
   });
 }
 // In a Nag Hammadi reference, the Roman numeral indicates the codex number.
