@@ -28,6 +28,7 @@ export const MAPPING = {
     numChapters: 5,
   },
   Est: { name: 'Esther', path: 'esther', numChapters: 14 },
+  Esth: { name: 'Esther', path: 'esther', numChapters: 14 },
   Jth: { name: 'Judith', path: 'judith', numChapters: 16 },
   Tob: { name: 'Tobit', path: 'tobit', numChapters: 14 },
   '1 Mac': { name: 'First Maccabees', path: 'first_maccabees', numChapters: 0 },
