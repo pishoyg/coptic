@@ -11,7 +11,6 @@
 # TODO: (#399) Use the new Crum interface, instead of reading raw sheet data.
 
 import argparse
-import shlex
 import threading
 import urllib
 
@@ -479,16 +478,7 @@ class Runner:
 
     mother: _Matriarch | None = None
 
-    def preprocess_args(self, args: list[str] | None = None) -> bool:
-        """
-        Args:
-            args: Raw commandline arguments.
-
-        Returns:
-            A boolean indicating whether any *action* arguments have been
-            provided. *Option* argument don't affect this return value.
-        """
-        self.args: argparse.Namespace = _argparser.parse_args(args)
+    def preprocess_args(self) -> None:
         _House.delete_empty_fragment = self.args.delete_empty_fragment
 
         self.args.cat = sorted(self.args.cat)
@@ -569,8 +559,10 @@ class Runner:
             ),
         )
 
-        ensure.ensure(num_actions <= 1, "At most one command is allowed!")
-        return bool(num_actions)
+        ensure.ensure(
+            num_actions == 1,
+            "Please supply exactly one command per invocation.",
+        )
 
     def categories(self) -> None:
         if not self.args.keys:
@@ -615,7 +607,12 @@ class Runner:
                 continue
             threading.Thread(target=root.set_categories, args=[cats]).start()
 
-    def once(self) -> None:
+    def run(self) -> None:
+        self.preprocess_args()
+
+        # Don't initialize a Matriarch object unless necessary, because it's
+        # expensive to initialize.
+
         # If --keys is present but --cat is absent, we still
         if self.args.cat or self.args.keys:
             self.categories()
@@ -625,8 +622,8 @@ class Runner:
             self.categories_prompt()
             return
 
-        self.init()
-        assert self.mother
+        # All the commands below require initializing a matriarch.
+        self.mother = _Matriarch()
         if self.args.sisters or self.args.antonyms:
             self.mother.marry_family(
                 sisters=self.args.sisters,
@@ -636,33 +633,12 @@ class Runner:
         if self.args.homonyms:
             self.mother.marry_family(homonyms=self.args.homonyms)
 
-    def init(self) -> None:
-        if self.mother:
-            return
-        log.info("Initializing...")
-        self.mother = _Matriarch()
-
-    def run(self) -> None:
-        oneoff: bool = self.preprocess_args()
-        if oneoff:
-            # This is a one-off, because there are action commands provided on
-            # the invocation.
-            self.once()
-            return
-
-        # This is not a one-off. Read the commands interactively, until the
-        # user decides to exit.
-        while True:
-            try:
-                self.preprocess_args(shlex.split(input("Command: ")))
-                self.once()
-            except Exception as e:  # pylint: disable=broad-exception-caught
-                log.error(e)
+    def __init__(self, args: argparse.Namespace) -> None:
+        self.args: argparse.Namespace = args
 
 
 def main() -> None:
-    r: Runner = Runner()
-    r.run()
+    Runner(_argparser.parse_args()).run()
 
 
 if __name__ == "__main__":
