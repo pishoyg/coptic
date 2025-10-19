@@ -17,8 +17,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from dictionary.marcion_sourceforge_net import main as crum
-from dictionary.marcion_sourceforge_net import sheet
+from dictionary.marcion_sourceforge_net import crum, sheet
 from utils import cache, ensure, file, log, paths, system
 
 _ONE_DAY: int = 24 * 60 * 60

@@ -16,9 +16,7 @@ import urllib
 
 import gspread
 
-from dictionary.marcion_sourceforge_net import constants
-from dictionary.marcion_sourceforge_net import main as crum
-from dictionary.marcion_sourceforge_net import sheet
+from dictionary.marcion_sourceforge_net import constants, crum, sheet
 from utils import ensure, gcp, log, system, text
 
 # TODO: (#399) There should be a central location for storing column names, so
@@ -309,7 +307,7 @@ class _Family:
             [],
         )
 
-    # TODO: (#399) Move the Family type to `main.py`, and perform validation
+    # TODO: (#399) Move the Family type to `crum.py`, and perform validation
     # during retrieval as well.
     def validate(self, key_to_family: dict, symmetry: bool = True) -> None:
         """

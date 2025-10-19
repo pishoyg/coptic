@@ -19,8 +19,7 @@ import colorama
 import requests
 from PIL import Image
 
-from dictionary.marcion_sourceforge_net import constants
-from dictionary.marcion_sourceforge_net import main as crum
+from dictionary.marcion_sourceforge_net import constants, crum
 from utils import ensure, file, log, paths, system, text
 
 # TODO: (#5) Prevent users from updating an image without updating its source.

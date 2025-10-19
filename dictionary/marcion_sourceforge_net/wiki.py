@@ -6,8 +6,7 @@ import re
 import typing
 from collections import abc
 
-from dictionary.marcion_sourceforge_net import main as crum
-from dictionary.marcion_sourceforge_net import sheet
+from dictionary.marcion_sourceforge_net import crum, sheet
 from utils import ensure, gcp, log
 
 _argparser: argparse.ArgumentParser = argparse.ArgumentParser(

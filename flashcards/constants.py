@@ -2,7 +2,7 @@
 
 # TODO: (#399) Crum HTML should all live in one place, and should be
 # deduplicated. Currently:
-# - It lives in both this file and dictionary/marcion_sourceforge_net/main.py.
+# - It lives in both this file and dictionary/marcion_sourceforge_net/crum.py.
 # - Much of the logic is duplicated, which causes such issues as #398.
 
 import os
@@ -11,9 +11,9 @@ import re
 import typing
 from collections import abc, defaultdict
 
-from dictionary.copticsite_com import main as copticsite
-from dictionary.kellia_uni_goettingen_de import main as kellia
-from dictionary.marcion_sourceforge_net import main as crum
+from dictionary.copticsite_com import copticsite
+from dictionary.kellia_uni_goettingen_de import kellia
+from dictionary.marcion_sourceforge_net import crum
 from flashcards import deck
 from utils import page, paths
 from xooxle import xooxle
