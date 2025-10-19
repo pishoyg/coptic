@@ -44,15 +44,17 @@ export class Reference {
     if (!this.source) {
       return undefined;
     }
-    const fragment: (Node | string)[] = [this.source.title];
+    const title: HTMLSpanElement = document.createElement('span');
+    title.innerHTML = this.source.title;
+    const fragment: (Node | string)[] = [title];
     if (!this.source.innerHTML?.length) {
       return fragment;
     }
-    const ul: HTMLUListElement = document.createElement('ul');
-    ul.innerHTML = this.source.innerHTML
+    const description: HTMLUListElement = document.createElement('ul');
+    description.innerHTML = this.source.innerHTML
       .map((innerHTML: string): string => `<li>${innerHTML}</li>`)
       .join('');
-    fragment.push(ul);
+    fragment.push(description);
     return fragment;
   }
 }
