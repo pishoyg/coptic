@@ -449,7 +449,7 @@ const DATA: Resource[] = [
       title: 'Coptic MSS. in Bodleian, as (P) a i e, where italic = folio',
     },
     variants: ['Bodl'],
-    postfixes: ['Copt'],
+    postfixes: ['Copt', 'copt'],
   },
   {
     source: {
