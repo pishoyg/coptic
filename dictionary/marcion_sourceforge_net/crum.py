@@ -573,11 +573,11 @@ class Root(Row):
             if meaning_width:
                 yield f'<td colspan="{meaning_width}" class="meaning bordered">'
                 if d.type_name not in ["-", "HEADER"]:
-                    yield '<div class="part-of-speech">'
+                    yield '<span class="part-of-speech">'
                     yield "(<b>"
                     yield d.type_name
                     yield "</b>)"
-                    yield "</div>"
+                    yield "</span>"
                 yield d.meaning
                 yield key
                 yield "</td>"

@@ -277,6 +277,18 @@ table {
   font-weight: bold;
 }
 
+/* In the derivations table, the part-of-speech needs to stand on a separate
+ * line. This is not the case for the root's part-of-speech, which sits on the
+ * same line as the categories, and hence retains a different display value.
+ * In Lexicon, we retain the part-of-speech class for derivations in order to be
+ * able to produce this behavior, but we don't retain the class for the root. */
+.derivations,
+body.lexicon {
+  .part-of-speech {
+    display: block;
+  }
+}
+
 .categories {
   display: inline-block;
   float: right;

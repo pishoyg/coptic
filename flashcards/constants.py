@@ -916,7 +916,7 @@ CRUM_XOOXLE = xooxle.Xooxle(
             xooxle.Selector(
                 {"name": "body"},
             ),
-            retain_classes=_CRUM_RETAIN_CLASSES,
+            retain_classes=_CRUM_RETAIN_CLASSES | {"part-of-speech"},
             retain_attributes={"href", "target"},
             retain_tags=xooxle.RETAIN_TAGS_DEFAULT | {"a"},
             retain_elements_for_classes=_CRUM_RETAIN_ELEMENTS_FOR_CLASSES,
