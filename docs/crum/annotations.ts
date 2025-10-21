@@ -107,8 +107,10 @@ export const MAPPING: Record<string, Annotation> = {
   adv: { fullForm: 'adverb' },
   advb: { fullForm: 'adverb' },
   cf: { fullForm: 'confer' },
+  dat: { fullForm: 'dative' },
   'e g': { fullForm: 'exempli gratia' },
   Heb: { fullForm: 'Hebrew', noCaseVariant: true },
+  Hebr: { fullForm: 'Hebrew', noCaseVariant: true },
   'i e': { fullForm: 'id est' },
   'i q': { fullForm: 'idem quod' },
   // TODO: (#511) Reconsider whether you want to retain the annotation for ib.
@@ -121,6 +123,7 @@ export const MAPPING: Record<string, Annotation> = {
   'q v': { fullForm: 'quod vide' },
   's v': { fullForm: 'sub verbo' },
   sc: { fullForm: 'scilicet' },
+  vbs: { fullForm: 'verbs' },
 
   // SECTION 3: ABBREVIATIONS THAT MOSTLY APPEAR IN REFERENCE TITLES, OR PERHAPS
   // AS POSTFIXES:
