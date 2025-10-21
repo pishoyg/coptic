@@ -615,7 +615,7 @@ const DATA = [
         'Steindorff, G. (1899). <em><a href="https://archive.org/details/bub_gb_Tpbji86R09kC/page/n3/mode/2up" rel="noreferrer noopener" target="_blank">Die Apokalypse des Elias, eine unbekannte Apokalypse und Bruchstücke der Sophonias-Apokalypse koptische texte, übersetzung, glossar</a></em>. (Texte und Untersuchungen zur Geschichte der altchristlichen Literatur, Neue Folge, Band 2, Heft 3a). Leipzig: J. C. Hinrichs’sche Buchhandlung.',
       ],
     },
-    variants: ['El'],
+    variants: ['El', 'EL'],
   },
   {
     source: {
@@ -2342,7 +2342,7 @@ const DATA = [
     variants: ['Guide'],
   },
   {
-    variants: ['Inst franç Epiph De Gemm amethyst'],
+    variants: ['Inst franç Epiph De Gemm'],
     noSpaceVariants: true,
   },
   {

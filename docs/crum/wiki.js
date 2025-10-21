@@ -143,7 +143,7 @@ const LETTER = /[a-zA-Z\p{M}&]/u;
 const SPECIAL_CASES = [
   // The following entries have more than 3 words:
   'Imp Russ Ar S',
-  'Inst franç Epiph De Gemm amethyst', // Also a special character (ç)!
+  'Inst franç Epiph De Gemm', // Also a special character (ç)!
   'Lect Instit Cath Paris',
   'Mart Viktor ed Lemm',
   'Spg Aeg u Gr Eigennamen',
