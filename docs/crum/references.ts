@@ -1029,6 +1029,9 @@ const DATA: Resource[] = [
       description: [
         'Kircher, A. (1644). <em><a href="https://www.google.co.uk/books/edition/Athanasii_Kircheri_Lingua_Aegyptiaca_res/qEtB1x0frAIC?hl=en&amp;gbpv=1" rel="noreferrer noopener" target="_blank">Lingua Aegyptiaca Restituta. Opus Tripartium</a></em>. Rome: Hermann Scheus.',
         'Loret, V. (1900). <a href="https://archive.org/details/AnnalesDuServiceDesAntiquitsDeLegyptevolume1/page/n63/mode/2up" rel="noreferrer noopener" target="_blank">Les livres III et IV (animaux et végétaux) de la Scala Magna de Schams-Ar-Riâsah</a>. <em>Annales du Service des antiquités de l’Egypte</em>, 1, 48-63 (edition), 215-229 (indices). ',
+        // NOTE: While we generally opted for referencing sources that are
+        // hosted externally, Macomber's PDF's are hosted on our Google Drive.
+        'Macomber, F. (2020). <i>The Scala Magna of Shams al-Riʾāsah Abū al-Barakāt.</i><ul><li><a href="https://drive.google.com/file/d/1T3Nmg6asUsj7C156txX4jm2iLHZlKHyx/view" target="_blank">Volume I: Introduction, Text, Translation, and Notes.</a></li><li><a href="https://drive.google.com/file/d/1T8F7HFolW1FNyU6bqeza5qzyRrr9OAVr/view" target="_blank">Volume II: Apparatus of Variant Readings and Indexes.</a></li></ul>',
       ],
     },
     variants: ['K'],
