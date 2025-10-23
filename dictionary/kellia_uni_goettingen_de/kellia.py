@@ -30,6 +30,7 @@ Code:
 
 # TODO: (#577) Rewrite this file to align with our technical standards.
 
+import functools
 import pathlib
 import re
 import typing
@@ -1140,6 +1141,7 @@ def _pos_map(pos: str, subc: str, orthstring: str) -> str:
     return "?"
 
 
+@functools.cache
 def read_bohairic_supplemental() -> dict[str, list[str]]:
     supp: defaultdict[str, list[str]] = defaultdict(list)
     df: pd.DataFrame = gcp.tsv_spreadsheet(
