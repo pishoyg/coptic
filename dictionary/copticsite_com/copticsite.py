@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Process the copticsite dictionary."""
 
+import functools
 import pathlib
 import re
 
 import pandas as pd
 
-from utils import cache, ensure
+from utils import ensure
 
 _SCRIPT_DIR = pathlib.Path(__file__).parent
 _INPUT_XLSX: str = str(
@@ -380,13 +381,9 @@ class Word:
         return "\n".join(v for _, v in sorted(parts.items()))
 
 
-class Copticsite:
-    """Copticsite defines the copticsite dictionary."""
-
-    @cache.StaticProperty
-    @staticmethod
-    def words() -> list[Word]:
-        df: pd.DataFrame = pd.read_excel(_INPUT_XLSX, dtype=str).fillna("")
-        df.dropna(inplace=True)
-        df = df.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
-        return [Word(row) for _, row in df.iterrows()]
+@functools.cache
+def words() -> list[Word]:
+    df: pd.DataFrame = pd.read_excel(_INPUT_XLSX, dtype=str).fillna("")
+    df.dropna(inplace=True)
+    df = df.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
+    return [Word(row) for _, row in df.iterrows()]

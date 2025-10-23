@@ -39,7 +39,7 @@ from collections import OrderedDict, abc, defaultdict
 
 import pandas as pd
 
-from utils import cache, gcp, log
+from utils import gcp, log
 
 _SCRIPT_DIR: pathlib.Path = pathlib.Path(__file__).parent
 _V_1_2_DIR: pathlib.Path = _SCRIPT_DIR / "data" / "raw" / "v1.2"
@@ -1142,7 +1142,7 @@ def _pos_map(pos: str, subc: str, orthstring: str) -> str:
 
 
 @functools.cache
-def read_bohairic_supplemental() -> dict[str, list[str]]:
+def _bohairic_supplemental() -> dict[str, list[str]]:
     supp: defaultdict[str, list[str]] = defaultdict(list)
     df: pd.DataFrame = gcp.tsv_spreadsheet(
         BOHAIRIC_SUPPLEMENTAL_SHEET_URL,
@@ -1182,7 +1182,7 @@ def read_bohairic_supplemental() -> dict[str, list[str]]:
     return supp
 
 
-def build_aux(basename: str) -> abc.Generator[Word]:
+def _build_aux(basename: str) -> abc.Generator[Word]:
     xml_path: pathlib.Path = _V_1_2_DIR / basename
     del basename
     super_id: int = 1
@@ -1238,10 +1238,10 @@ def build_aux(basename: str) -> abc.Generator[Word]:
                 entry_id += 1
 
 
-def build(basename: str) -> abc.Generator[Word]:
-    b_supp: dict[str, list[str]] = read_bohairic_supplemental()
+def _build(basename: str) -> abc.Generator[Word]:
+    b_supp: dict[str, list[str]] = _bohairic_supplemental()
     # TODO: (#305) Verify that all supplemental entries have been incorporated.
-    for word in build_aux(basename):
+    for word in _build_aux(basename):
         for line in b_supp.get(word.entry_xml_id, []):
             word.orthstring.add(
                 # For now, we don't populate the part-of-speech.
@@ -1250,22 +1250,18 @@ def build(basename: str) -> abc.Generator[Word]:
         yield word
 
 
-class KELLIA:
-    """KELLIA represents the list of KELLIA dictionaries."""
+@functools.cache
+def egyptian() -> list[Word]:
+    return list(_build("BBAW_Lexicon_of_Coptic_Egyptian-v4-2020.xml"))
 
-    @cache.StaticProperty
-    @staticmethod
-    def egyptian() -> list[Word]:
-        return list(build("BBAW_Lexicon_of_Coptic_Egyptian-v4-2020.xml"))
 
-    @cache.StaticProperty
-    @staticmethod
-    def greek() -> list[Word]:
-        return list(
-            build("DDGLC_Lexicon_of_Greek_Loanwords_in_Coptic-v2-2020.xml"),
-        )
+@functools.cache
+def greek() -> list[Word]:
+    return list(
+        _build("DDGLC_Lexicon_of_Greek_Loanwords_in_Coptic-v2-2020.xml"),
+    )
 
-    @cache.StaticProperty
-    @staticmethod
-    def comprehensive() -> list[Word]:
-        return list(build("Comprehensive_Coptic_Lexicon-v1.2-2020.xml"))
+
+@functools.cache
+def comprehensive() -> list[Word]:
+    return list(_build("Comprehensive_Coptic_Lexicon-v1.2-2020.xml"))

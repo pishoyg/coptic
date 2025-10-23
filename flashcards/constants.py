@@ -276,7 +276,7 @@ class Crum(deck.Deck):
         data = TLA_ID_RE.sub("", data)
         return data
 
-    for word in kellia.KELLIA.comprehensive:
+    for word in kellia.comprehensive():
         key: str = __tla_col(word.entry_xml_id)
         title = (
             __tla_col(word.orthstring.pishoy())
@@ -685,7 +685,7 @@ class Copticsite(deck.Deck):
         # NOTE: The key is a protected field. Do not change unless you know what
         # you're doing.
         key = 1
-        for word in copticsite.Copticsite.words:
+        for word in copticsite.words():
             front = _aon(
                 '<span class="word B">',
                 '<span class="spelling B">',
@@ -787,7 +787,7 @@ COPTICSITE_BOHAIRIC: Copticsite = Copticsite("copticsite.com", 1284010385)
 KELLIA_COMPREHENSIVE: KELLIA = KELLIA(
     "KELLIA::Comprehensive",
     1284010391,
-    kellia.KELLIA.comprehensive,
+    kellia.comprehensive(),
 )
 DECKS: list[deck.Deck] = [
     CRUM_ALL,
@@ -796,8 +796,8 @@ DECKS: list[deck.Deck] = [
     Crum("A Coptic Dictionary::Bohairic / Sahidic", 1284010390, ["B", "S"]),
     COPTICSITE_BOHAIRIC,
     KELLIA_COMPREHENSIVE,
-    KELLIA("KELLIA::Egyptian", 1284010392, kellia.KELLIA.egyptian),
-    KELLIA("KELLIA::Greek", 1284010393, kellia.KELLIA.greek),
+    KELLIA("KELLIA::Egyptian", 1284010392, kellia.egyptian()),
+    KELLIA("KELLIA::Greek", 1284010393, kellia.greek()),
 ]
 
 # Xooxle search will work fine even if we don't retain any HTML tags, because it
