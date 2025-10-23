@@ -31,6 +31,7 @@ Code:
 # TODO: (#577) Rewrite this file to align with our technical standards.
 
 import functools
+import itertools
 import pathlib
 import re
 import typing
@@ -39,7 +40,7 @@ from collections import OrderedDict, abc, defaultdict
 
 import pandas as pd
 
-from utils import gcp, log
+from utils import ensure, file, gcp, log
 
 _SCRIPT_DIR: pathlib.Path = pathlib.Path(__file__).parent
 _V_1_2_DIR: pathlib.Path = _SCRIPT_DIR / "data" / "raw" / "v1.2"
@@ -50,21 +51,20 @@ _CRUM_PAGE: str = (
 )
 _SENSE_CHILDREN: list[str] = ["quote", "definition", "bibl", "ref", "xr"]
 _LANGS: list[str] = ["de", "en", "fr", "MERGED"]
+FORM_RE: re.Pattern[str] = re.compile(r"[Ⲁ-ⲱϢ-ϯⳈⳉ]+[†⸗\-]?")
 PURE_COPTIC_RE: re.Pattern[str] = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
 
 BOHAIRIC_SUPPLEMENTAL_SHEET_URL: str = (
     # pylint: disable-next=line-too-long
     "https://docs.google.com/spreadsheets/d/1r9J5nuQFQxgInLpX1Gm-I20nunIBjmGFR3CfFgK0THU/export?format=tsv"
 )
-# TODO: (#305) Populate Sahidic supplemental entries as well.
-SAHIDIC_SUPPLEMENTAL: pathlib.Path = (  # dead: disable
+SAHIDIC_SUPPLEMENTAL: pathlib.Path = (
     _SCRIPT_DIR / "data" / "raw" / "inflections.tab"
 )
 
 # FROM_COPTIC_SCRIPTORIUM is the ID we use for supplemental forms retrieved from
 # Coptic Scriptorium, and which are unavailable in the TLA.
 FROM_COPTIC_SCRIPTORIUM: str = "from SC"
-BOHAIRIC: str = "B"
 
 _GEO_MAPPING: dict[str, str] = {
     "?": "U",
@@ -1160,25 +1160,70 @@ def _bohairic_supplemental() -> dict[str, list[str]]:
         .sort_values(by="is_lemma", ascending=False)
         .drop(columns="is_lemma")
     )
+    # The TLA column uses an inconsistent delimiter of either a comma or an
+    # underscore!
+    delim: re.Pattern[str] = re.compile("[,_]")
     for _, row in df.iterrows():
-        tla: list[str] = row["tla"].split(",")
-        word: str = row["word"]
-        assert isinstance(word, str)
+        form: str = row["word"]
+        assert isinstance(form, str)
         # There is a number of malformed entries in the sheet!
         # TODO: (#305) Fix at the origin.
-        if word in {"_warn:empty_norm_", ".", "...", "ⲉⲣ=ϣⲟⲣⲡ"}:
+        if form in {"_warn:empty_norm_", ".", "...", "ⲉⲣ=ϣⲟⲣⲡ"}:
             continue
-        assert PURE_COPTIC_RE.fullmatch(word), word
-        for tla_id in tla:
-            assert isinstance(tla_id, str)
+        assert PURE_COPTIC_RE.fullmatch(form), form
+
+        for tla_id in delim.split(row["tla"]):
             if not tla_id.startswith("C"):
                 # TODO: (#305) Incorporate the entries that have no
                 # TLA ID, instead of simply skipping them.
                 continue
-            if word in supp[tla_id]:
-                # The word already exists!
+            if form in supp[tla_id]:
+                # This form already exists!
                 continue
-            supp[tla_id].append(word)
+            supp[tla_id].append(form)
+    return supp
+
+
+@functools.cache
+def _sahidic_supplemental() -> dict[str, set[str]]:
+    supp: defaultdict[str, set[str]] = defaultdict(set)
+
+    def clean(form: str) -> str:
+        return (
+            form.replace("=", "⸗").replace("+", "†").replace("!", "").strip()
+        )
+
+    for line in file.readlines(SAHIDIC_SUPPLEMENTAL):
+        if line.startswith("#"):
+            # This is a comment.
+            continue
+
+        fields: list[str] = line.split("\t")
+        tla_id: str = fields[0]
+        lemma: str = clean(fields[1])
+
+        if len(fields) == 3:
+            # This line contains a plural form.
+            form: str = fields[2].strip()
+            # Plural forms have no special characters.
+            assert clean(form) == form, form
+            assert form != lemma
+            assert FORM_RE.fullmatch(form), form
+            supp[tla_id].add(form)
+            continue
+
+        for form in itertools.chain.from_iterable(
+            cell.split(",") for cell in fields[2:]
+        ):
+            form = clean(form)
+            if form == "_":
+                continue
+            if form == lemma:
+                # This is the lemma form. It's already present.
+                continue
+            assert FORM_RE.fullmatch(form), form
+            supp[tla_id].add(form)
+
     return supp
 
 
@@ -1240,14 +1285,28 @@ def _build_aux(basename: str) -> abc.Generator[Word]:
 
 def _build(basename: str) -> abc.Generator[Word]:
     b_supp: dict[str, list[str]] = _bohairic_supplemental()
-    # TODO: (#305) Verify that all supplemental entries have been incorporated.
+    s_supp: dict[str, set[str]] = _sahidic_supplemental()
+    # TODO: (#305) Part-of-speech info is present in the source data. Use it
+    # instead of setting it to the empty string!
     for word in _build_aux(basename):
-        for line in b_supp.get(word.entry_xml_id, []):
-            word.orthstring.add(
-                # For now, we don't populate the part-of-speech.
-                _Line("", line, BOHAIRIC, FROM_COPTIC_SCRIPTORIUM),
-            )
+        # Add Sahidic entries before Bohairic ones.
+        for form in s_supp.pop(word.entry_xml_id, []):
+            word.orthstring.add(_Line("", form, "S", FROM_COPTIC_SCRIPTORIUM))
+        for form in b_supp.pop(word.entry_xml_id, []):
+            word.orthstring.add(_Line("", form, "B", FROM_COPTIC_SCRIPTORIUM))
         yield word
+
+    # Verify that all Sahidic supplemental entries have been consumed.
+    ensure.ensure(
+        not s_supp,
+        "Some Sahidic inflections have invalid TLA IDs:",
+        s_supp,
+    )
+
+    # Some Bohairic entries are not consumed.
+    # TODO: (#305) Fix at the origin.
+    for tla_id, forms in b_supp.items():
+        log.warn("Bohairic forms", forms, "have an invalid TLA ID", tla_id)
 
 
 @functools.cache
