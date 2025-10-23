@@ -1,76 +1,73 @@
 #!/usr/bin/env python3
 """Process KELLIA's dictionary.
 
-The data is retrieved from:
-    https://refubium.fu-berlin.de/handle/fub188/27813
+Data:
+1. The TLA data, which comprises the core of the dictionary, is retrieved from:
+     https://refubium.fu-berlin.de/handle/fub188/27813
+2. Bohairic supplemental entries are being directly retrieved from the sheet
+   maintained by Coptic Scriptorium:
+     https://docs.google.com/spreadsheets/d/1r9J5nuQFQxgInLpX1Gm-I20nunIBjmGFR3CfFgK0THU
+3. Sahidic supplemental entries have been snapshotted from the CDO:
+     https://github.com/KELLIA/dictionary/blob/dev/utils/inflections.tab
+   The reason we choose to snapshot them instead of retrieving a live version is
+   that they remain in the `dev` branch, and it's unclear how KELLIA maintains
+   and updates the data.
 
-This file was forked from:
-    https://github.com/KELLIA/dictionary/blob/master/utils/dictionary_reader.py
-The original file was snapshotted on 2024.06.01.
-Edits made to the original file beyond that data should be incorporated.
-View history at:
-    https://github.com/KELLIA/dictionary/commits/master/utils/dictionary_reader.py
-
+Code:
+-  This file was inspired by:
+     https://github.com/KELLIA/dictionary/blob/master/utils/dictionary_reader.py
+   The original file was snapshotted from the `master` branch on June 1st, 2024.
+-  Parts of the file, particularly those pertaining to supplemental entries, are
+   based on logic that, as of October 23, 2025, still lives in the `dev` branch:
+     https://github.com/KELLIA/dictionary/blob/dev/utils/dictionary_reader.py
 """
 
+# TODO: (#305) The XML file seems to have been modified a few times by Coptic
+# Scriptorium. We expect something in the order of magnitude of 20 entries or so
+# to have been modified. Retrieve an updated version.
 
-# TODO: (#305) There are some typos in the data. Fix at the origin.
+# TODO: (#525) Consider using the same HTML structure as Crum.
+
+# TODO: (#577) Rewrite this file to align with our technical standards.
 
 import pathlib
 import re
 import typing
 import xml.etree.ElementTree as ET
-from collections import OrderedDict, abc
+from collections import OrderedDict, abc, defaultdict
 
-from utils import cache, log
+import pandas as pd
 
-_SCRIPT_DIR = pathlib.Path(__file__).parent
-_V_1_2_DIR = _SCRIPT_DIR / "data" / "raw" / "v1.2"
-_CLEAN = set("ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ ")
-_CRUM_RE = re.compile(r"\b(CD ([0-9]+[ab]?)-?[0-9]*[ab]?)\b")
-_CRUM_PAGE = "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID="
-_SENSE_CHILDREN = ["quote", "definition", "bibl", "ref", "xr"]
-_LANGS = ["de", "en", "fr", "MERGED"]
+from utils import cache, gcp, log
+
+_SCRIPT_DIR: pathlib.Path = pathlib.Path(__file__).parent
+_V_1_2_DIR: pathlib.Path = _SCRIPT_DIR / "data" / "raw" / "v1.2"
+_CLEAN: set[str] = set("ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ ")
+_CRUM_RE: re.Pattern[str] = re.compile(r"\b(CD ([0-9]+[ab]?)-?[0-9]*[ab]?)\b")
+_CRUM_PAGE: str = (
+    "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID="
+)
+_SENSE_CHILDREN: list[str] = ["quote", "definition", "bibl", "ref", "xr"]
+_LANGS: list[str] = ["de", "en", "fr", "MERGED"]
+PURE_COPTIC_RE: re.Pattern[str] = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
+
+BOHAIRIC_SUPPLEMENTAL_SHEET_URL: str = (
+    # pylint: disable-next=line-too-long
+    "https://docs.google.com/spreadsheets/d/1r9J5nuQFQxgInLpX1Gm-I20nunIBjmGFR3CfFgK0THU/export?format=tsv"
+)
+# TODO: (#305) Populate Sahidic supplemental entries as well.
+SAHIDIC_SUPPLEMENTAL: pathlib.Path = (  # dead: disable
+    _SCRIPT_DIR / "data" / "raw" / "inflections.tab"
+)
+
+# FROM_COPTIC_SCRIPTORIUM is the ID we use for supplemental forms retrieved from
+# Coptic Scriptorium, and which are unavailable in the TLA.
+FROM_COPTIC_SCRIPTORIUM: str = "from SC"
+BOHAIRIC: str = "B"
 
 _GEO_MAPPING: dict[str, str] = {
     "?": "U",
     "Ak": "O",
-}
-
-_ASCII_MAPPING = {
-    "ⲁ": "A",
-    "ⲃ": "B",
-    "ⲅ": "C",
-    "ⲇ": "D",
-    "ⲉ": "E",
-    "ⲍ": "F",
-    "ⲏ": "G",
-    "ⲑ": "H",
-    "ⲓ": "I",
-    "ⲕ": "J",
-    "ⲗ": "K",
-    "ⲙ": "L",
-    "ⲛ": "M",
-    "ⲝ": "N",
-    "ⲟ": "O",
-    "ⲡ": "P",
-    "ⲣ": "Q",
-    "ⲥ": "R",
-    "ⲧ": "S",
-    "ⲩ": "T",
-    "ⲫ": "U",
-    "ⲭ": "V",
-    "ⲯ": "W",
-    "ⲱ": "X",
-    "ϣ": "Y",
-    "ϥ": "Z",
-    "ⳉ": "a",
-    "ϧ": "b",
-    "ϩ": "c",
-    "ϫ": "d",
-    "ϭ": "e",
-    "ϯ": "SI",
-    " ": " ",
 }
 
 # pylint: disable=line-too-long
@@ -241,6 +238,9 @@ class _OrthString(_Reformat):
         super().__init__()
         self._pishoy: list[_Line] = []
         self._last_gram_grp: str = ""
+
+    def add(self, line: _Line):
+        self._pishoy.append(line)
 
     # For each entry, you add one grammar group, then several orth's per form.
     def add_gram_grp(self, gram_grp: ET.Element) -> None:
@@ -662,7 +662,6 @@ class Word:
         en: _Lang,
         fr: _Lang,
         etym_string: EtymString,
-        ascii_orth: str,
         search_string: str,
         oref_string: str,
     ):
@@ -676,7 +675,6 @@ class Word:
         self.en: _Lang = en
         self.fr: _Lang = fr
         self.etym_string: EtymString = etym_string
-        self.ascii_orth: str = ascii_orth
         self.search_string: str = search_string
         self.oref_string: str = oref_string
 
@@ -866,16 +864,6 @@ def _process_entry(
     orthstring.amir = re.sub(r"\|\|\|$", "", orthstring.amir)
     oref_string = re.sub(r"\|\|\|$", "", oref_string)
 
-    first_orth_re = re.search(r"\n(.*?)~", orthstring.amir)
-    if first_orth_re is not None:
-        ascii_orth = ""
-        # Extract the first orth.
-        for char in first_orth_re.group(1):
-            if char in _ASCII_MAPPING:
-                ascii_orth += _ASCII_MAPPING[char]
-    else:
-        ascii_orth = ""
-
     # SENSES -- 3 different columns for the 3 languages: de, en, fr
     # each string contains definitions as well as corresponding bibl/ref/xr info
     # definition part, which may come from 'quote' or 'def' in the xml or both,
@@ -1005,7 +993,6 @@ def _process_entry(
         en,
         fr,
         EtymString(etym, xrs),
-        ascii_orth,
         search_string,
         oref_string,
     )
@@ -1153,7 +1140,47 @@ def _pos_map(pos: str, subc: str, orthstring: str) -> str:
     return "?"
 
 
-def build(basename: str) -> abc.Generator[Word]:
+def read_bohairic_supplemental() -> dict[str, list[str]]:
+    supp: defaultdict[str, list[str]] = defaultdict(list)
+    df: pd.DataFrame = gcp.tsv_spreadsheet(
+        BOHAIRIC_SUPPLEMENTAL_SHEET_URL,
+        # We fail to parse the TSV when using the default engine, and the error
+        # messages are meaningless.
+        engine="python",
+        # Despite the meaningful error messages provided by the `python` engine,
+        # we simply skip bad lines instead of fixing them.
+        # TODO: (#305) Fix bad lines at the origin.
+        on_bad_lines="warn",
+    )
+    # Lemma forms should appear first.
+    df = (
+        df.assign(is_lemma=df["word"] == df["lemma"])
+        .sort_values(by="is_lemma", ascending=False)
+        .drop(columns="is_lemma")
+    )
+    for _, row in df.iterrows():
+        tla: list[str] = row["tla"].split(",")
+        word: str = row["word"]
+        assert isinstance(word, str)
+        # There is a number of malformed entries in the sheet!
+        # TODO: (#305) Fix at the origin.
+        if word in {"_warn:empty_norm_", ".", "...", "ⲉⲣ=ϣⲟⲣⲡ"}:
+            continue
+        assert PURE_COPTIC_RE.fullmatch(word), word
+        for tla_id in tla:
+            assert isinstance(tla_id, str)
+            if not tla_id.startswith("C"):
+                # TODO: (#305) Incorporate the entries that have no
+                # TLA ID, instead of simply skipping them.
+                continue
+            if word in supp[tla_id]:
+                # The word already exists!
+                continue
+            supp[tla_id].append(word)
+    return supp
+
+
+def build_aux(basename: str) -> abc.Generator[Word]:
     xml_path: pathlib.Path = _V_1_2_DIR / basename
     del basename
     super_id: int = 1
@@ -1207,6 +1234,18 @@ def build(basename: str) -> abc.Generator[Word]:
             for word in _process_super_entry(entry_id, super_id, child):
                 yield word
                 entry_id += 1
+
+
+def build(basename: str) -> abc.Generator[Word]:
+    b_supp: dict[str, list[str]] = read_bohairic_supplemental()
+    # TODO: (#305) Verify that all supplemental entries have been incorporated.
+    for word in build_aux(basename):
+        for line in b_supp.get(word.entry_xml_id, []):
+            word.orthstring.add(
+                # For now, we don't populate the part-of-speech.
+                _Line("", line, BOHAIRIC, FROM_COPTIC_SCRIPTORIUM),
+            )
+        yield word
 
 
 class KELLIA:
