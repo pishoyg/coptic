@@ -6,4 +6,4 @@ import re
 # if such separation is desired for a given field.
 UNIT_DELIMITER: str = '<hr class="match-separator">'
 
-TAG_RE: re.Pattern[str] = re.compile(r"^</?(\w+)>")
+TAG_RE: re.Pattern[str] = re.compile(r"^</?(\w+)(?: [^>]+)?>")

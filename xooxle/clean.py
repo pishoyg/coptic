@@ -6,6 +6,7 @@ Some assumptions are made about the structure of the iterable (for example,
 we assume that a tag is always a standalone string).
 """
 
+import re
 import typing
 from collections.abc import Generator, Iterable
 from itertools import groupby
@@ -112,27 +113,40 @@ def _strip_line_start(line: Iterable[str]) -> Generator[str]:
         assert token.isspace() and not found_non_space
 
 
+def _opening_tag(token: str) -> bool:
+    return token.startswith("<") and not _closing_tag(token)
+
+
+def _closing_tag(token: str) -> bool:
+    return token.startswith("</")
+
+
+def _tag_name(token: str) -> str:
+    match: re.Match[str] | None = const.TAG_RE.fullmatch(token)
+    assert match, token
+    return match.group(1)
+
+
 def _filter_empty_tags(line: Iterable[str]) -> list[str]:
     stack: list[str] = []
     for token in line:
-        if not token.startswith("</"):
+        if not _closing_tag(token):
+            # This is not a closing tag. Just add it to the stack.
             stack.append(token)
             continue
-        # This is a closing tag.
-        assert stack  # We must have an opening tag.
-        stack_top = stack[-1]
-        if not stack_top.startswith("<") or stack_top.startswith("</"):
+        # This is a closing tag. Check to see if the stack has a corresponding
+        # opening tag on top.
+        # Since the current token is a closing tag, the stack is guaranteed not
+        # to be empty.
+        assert stack
+        stack_top: str = stack[-1]
+        if not _opening_tag(token):
             # The stack top doesn't have an opening tag.
             stack.append(token)
             continue
-        match = const.TAG_RE.fullmatch(token)
-        assert match, token
-        cur = match.group(1)
-        match = const.TAG_RE.fullmatch(stack_top)
-        assert match
-        prev = match.group(1)
-        del stack_top
-        if cur == prev:
+        if _tag_name(token) == _tag_name(stack_top):
+            # An opening tag is immediately followed by the corresponding
+            # closing tag. Remove the opening tag from the stack, and continue.
             _ = stack.pop()
             continue
         stack.append(token)
