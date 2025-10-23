@@ -66,6 +66,12 @@ for traffic tracking and analysis.
 
 ## Getting started
 
+1. Clone the repo with `--depth=1` because the history is huge, and much of the
+   outrageously large files have been cleaned up.
+   ```sh
+   git clone https://github.com/pishoyg/coptic.git --depth=1
+   ```
+
 1. Setting up the environment is necessary for a lot of pipelines to work.
 
    In general, you should run this at the beginning of each development session:
