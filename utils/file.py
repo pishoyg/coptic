@@ -104,13 +104,14 @@ def json_dumps(j: object, **kwargs: typing.Any) -> str:
     )
 
 
-def read_tsv(tsv: str | io.StringIO | pathlib.Path) -> pd.DataFrame:
+def read_tsv(tsv: str | io.StringIO | pathlib.Path, **kwargs) -> pd.DataFrame:
     return pd.read_csv(
         tsv,
         sep="\t",
         dtype=str,
         encoding="utf-8",
         keep_default_na=False,
+        **kwargs,
     ).fillna("")
 
 

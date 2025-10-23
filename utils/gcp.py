@@ -117,7 +117,7 @@ def column_nums(worksheet: gspread.worksheet.Worksheet) -> dict[str, int]:
     }
 
 
-def tsv_spreadsheet(export_url: str) -> pd.DataFrame:
+def tsv_spreadsheet(export_url: str, **kwargs) -> pd.DataFrame:
     """Retrieve spreadsheet data from a TSV export URL.
 
     This is useful when a spreadsheet has been exported or published to the
@@ -127,6 +127,7 @@ def tsv_spreadsheet(export_url: str) -> pd.DataFrame:
 
     Args:
         export_url: Sheet TSV export URL.
+        kwargs: Additional keyword arguments to pass to `pandas.read_csv`.
 
     Returns:
         Sheet data as a dataframe.
@@ -134,7 +135,7 @@ def tsv_spreadsheet(export_url: str) -> pd.DataFrame:
     response = requests.get(export_url)
     response.raise_for_status()
     response.encoding = "UTF-8"
-    return file.read_tsv(io.StringIO(response.text))
+    return file.read_tsv(io.StringIO(response.text), **kwargs)
 
 
 def apply(
