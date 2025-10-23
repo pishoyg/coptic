@@ -399,10 +399,6 @@ class Crum(deck.Deck):
     def __back_aux(self, root: crum.Root) -> abc.Generator[str]:
         # Meaning
         yield '<div id="root-type-meaning" class="root-type-meaning">'
-        # TODO: (#233) For consistency, the class used for the root type should
-        # be renamed to "type", and the existing "type" class that is used
-        # elsewhere should be renamed to something else. We have had the
-        # convention of assigning unqualified class names to root elements.
         yield '<span id="root-part-of-speech" class="part-of-speech">'
         yield "(<b>"
         yield root.type_name
