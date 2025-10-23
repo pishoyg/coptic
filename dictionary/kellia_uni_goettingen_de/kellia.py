@@ -1290,8 +1290,15 @@ def _build(basename: str) -> abc.Generator[Word]:
     # instead of setting it to the empty string!
     for word in _build_aux(basename):
         # Add Sahidic entries before Bohairic ones.
-        for form in s_supp.pop(word.entry_xml_id, []):
+        # Additionally, we sort Sahidic entries to make the output
+        # deterministic.
+        # TODO: (#305) Use the same sorting logic used for TLA forms.
+        for form in sorted(s_supp.pop(word.entry_xml_id, [])):
             word.orthstring.add(_Line("", form, "S", FROM_COPTIC_SCRIPTORIUM))
+        # TODO: (#305) We don't sort Bohairic forms because they already have
+        # some order that would be corrupted if we were to reorder them below.
+        # The lists retrieved have lamma forms first. We should order them by
+        # form while retaining lemma forms at the beginning.
         for form in b_supp.pop(word.entry_xml_id, []):
             word.orthstring.add(_Line("", form, "B", FROM_COPTIC_SCRIPTORIUM))
         yield word
