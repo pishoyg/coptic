@@ -208,7 +208,13 @@ def _clean(text: str) -> str:
 class Form:
     """Line represents a single word form."""
 
-    def __init__(self, gram_grp: str, orth: str, geo: str, form_id: str):
+    def __init__(
+        self,
+        gram_grp: str,
+        orth: str,
+        geo: str,
+        form_id: str,
+    ) -> None:
         self.gram_grp: str = gram_grp
         self.orth: str = orth
         self.geo: str = _GEO_MAPPING.get(geo, geo)
@@ -233,11 +239,11 @@ class Form:
 class Orthography:
     """Orthography stores the word forms."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.forms: list[Form] = []
         self._last_gram_grp: str = ""
 
-    def add(self, line: Form):
+    def add(self, line: Form) -> None:
         self.forms.append(line)
 
     def has(self, orth: str) -> bool:
@@ -359,10 +365,10 @@ class Etymology:
                     + " "
                 )
 
-    def greek_id(self):  # dead: disable
+    def greek_id(self) -> str:  # dead: disable
         return self._greek_id
 
-    def process(self):
+    def process(self) -> str:
         etym = self.amir
         xrs: list[str] = re.findall(r" #(.*?)#", etym)
         for xr in xrs:
@@ -397,20 +403,20 @@ class Sense:
     def add_quote(self, quote: str) -> None:
         self._content.append(("quote", quote))
 
-    def add(self, name: str, value: str):
+    def add(self, name: str, value: str) -> None:
         assert name in _SENSE_CHILDREN or (not name and not value)
         self._content.append((name, value))
 
-    def add_definition(self, definition: str):
+    def add_definition(self, definition: str) -> None:
         self.add("definition", definition)
 
-    def add_bibl(self, bibl: str):
+    def add_bibl(self, bibl: str) -> None:
         self.add("bibl", bibl)
 
-    def add_ref(self, ref: str):
+    def add_ref(self, ref: str) -> None:
         self.add("ref", ref)
 
-    def add_xr(self, xr: str):
+    def add_xr(self, xr: str) -> None:
         self.add("xr", xr)
 
     def format(self, tag_name: str, tag_text: str) -> str:
@@ -457,7 +463,7 @@ class Sense:
         assert all(n in _SENSE_CHILDREN for n in names), names
         return [pair for pair in self._content if pair[0] in names]
 
-    def explain(self, prefix: str = ""):
+    def explain(self, prefix: str = "") -> list[tuple[str, str]]:
         explanation = self.subset("quote", "definition")
         if not explanation:
             return explanation
@@ -465,48 +471,52 @@ class Sense:
             explanation[0] = (explanation[0][0], prefix + explanation[0][1])
         return explanation
 
-    def give_references(self):
+    def give_references(self) -> list[tuple[str, str]]:
         return self.subset("bibl", "ref", "xr")
 
 
 class Lang:
     """_Lang represents the definition in one language."""
 
-    def __init__(self, name: typing.Literal["de", "en", "fr", "MERGED"]):
+    def __init__(
+        self,
+        name: typing.Literal["de", "en", "fr", "MERGED"],
+    ) -> None:
         self.name: typing.Literal["de", "en", "fr", "MERGED"] = name
         self.senses: list[Sense] = []
 
-    def add_sense(self, sense_n: int, sense_id: str):
+    def add_sense(self, sense_n: int, sense_id: str) -> None:
         self.senses.append(Sense(sense_n, sense_id))
 
+    @property
     def _last_sense(self) -> Sense:
         return self.senses[-1]
 
     def add_quote(self, quote: str) -> None:
-        self._last_sense().add_quote(quote)
+        self._last_sense.add_quote(quote)
 
     def add_definition(self, definition: ET.Element) -> None:
-        self._last_sense().add_definition(_compress(definition.text))
+        self._last_sense.add_definition(_compress(definition.text))
 
     def add_bibl(self, bibl: ET.Element | None) -> None:
         if bibl is None:
             return
         if not bibl.text:
             return
-        self._last_sense().add_bibl(bibl.text)
+        self._last_sense.add_bibl(bibl.text)
 
-    def add_ref(self, ref: ET.Element):
+    def add_ref(self, ref: ET.Element) -> None:
         assert ref.text
-        self._last_sense().add_ref(ref.text)
+        self._last_sense.add_ref(ref.text)
 
-    def add_xr(self, xr: ET.Element):
+    def add_xr(self, xr: ET.Element) -> None:
         for ref in xr:
             assert ref.text
             text = xr.tag[29:] + ". " + ref.attrib["target"] + "# " + ref.text
-            self._last_sense().add_xr(text)
+            self._last_sense.add_xr(text)
 
-    def add(self, name: str, value: str):
-        self._last_sense().add(name, value)
+    def add(self, name: str, value: str) -> None:
+        self._last_sense.add(name, value)
 
     def table(self) -> str:
         return "".join(self.table_aux())
@@ -548,7 +558,7 @@ def _gloss_bibl(ref_bibl: str) -> str:
     return ref_bibl
 
 
-def _link_greek(etym: str):
+def _link_greek(etym: str) -> str:
     m = re.search(r"cf\. Gr\.[^<>]+</span>([^<>]+)<i>", etym)
     if m is None:
         return etym
@@ -606,7 +616,7 @@ class Word:
         fr: Lang,
         etym_string: Etymology,
         oref_string: str,
-    ):
+    ) -> None:
         self.entry_xml_id: str = entry_xml_id
         self.lemma_form_id: str | None = lemma_form_id
         self.orthstring: Orthography = orthstring
@@ -617,7 +627,7 @@ class Word:
         self.etym_string: Etymology = etym_string
         self.oref_string: str = oref_string
 
-    def merge_langs(self):
+    def merge_langs(self) -> Lang:
         merged: Lang = Lang("MERGED")
         assert (
             len(self.de.senses) == len(self.en.senses) == len(self.fr.senses)
@@ -667,13 +677,26 @@ def _is_lemma(form: ET.Element) -> bool:
     return form.attrib.get("type") == "lemma"
 
 
-def _process_entry(entry: ET.Element) -> Word | None:
+def _orths(form: ET.Element) -> list[ET.Element]:
+    orths: list[ET.Element] = form.findall(TEI_NS + "orth")
+    if form.text is not None and form.text.strip():
+        orths.append(form)
+    return orths
 
-    assert entry.tag == TEI_NS + "entry"
 
-    if _deprecated(entry):
-        return None
+def _lemma_orth(forms: list[ET.Element]) -> str:
+    for form in forms:
+        if _deprecated(form):
+            continue
+        if not _is_lemma(form):
+            continue
+        first_orth: str | None = _orths(form)[0].text
+        assert first_orth
+        return first_orth
+    raise ValueError("No lemma orth found!")
 
+
+def _process_entry(entry: ET.Element) -> Word:
     entry_xml_id: str = entry.attrib[XML_NS + "id"]
     lemma: ET.Element | None = None
     forms: list[ET.Element] = entry.findall(TEI_NS + "form")
@@ -682,21 +705,11 @@ def _process_entry(entry: ET.Element) -> Word | None:
     except StopIteration:
         log.error("No lemma found for", entry_xml_id)
 
-    orthography = Orthography()
-    oref_string: str = ""
+    orthography: Orthography = Orthography()
+    oref_strings: list[str] = []
     oref_text: str = ""
 
-    orths: list[ET.Element] = []
-    lemma_orth: str = ""
-    for form in forms:
-        if _deprecated(form):
-            continue
-        orths = form.findall(TEI_NS + "orth")
-        if form.text is not None and form.text.strip():
-            orths.append(form)
-        if _is_lemma(form):
-            assert orths[0].text
-            lemma_orth = orths[0].text
+    lemma_orth: str | None = _lemma_orth(forms) if lemma else None
 
     first: list[ET.Element] = []
     last: list[ET.Element] = []
@@ -706,7 +719,7 @@ def _process_entry(entry: ET.Element) -> Word | None:
         orths = form.findall(TEI_NS + "orth")
         if form.text is not None and form.text.strip():
             orths.append(form)
-        if lemma and any(orth.text == lemma_orth for orth in orths):
+        if any(orth.text == lemma_orth for orth in orths):
             first.append(form)
         else:
             last.append(form)
@@ -717,38 +730,32 @@ def _process_entry(entry: ET.Element) -> Word | None:
     for form in forms:
         if lemma and form.attrib[XML_NS + "id"] == lemma.attrib[XML_NS + "id"]:
             continue
-        orths = form.findall(TEI_NS + "orth")
-        if form.text is not None and form.text.strip():
-            orths.append(form)
-
         orefs: list[ET.Element] = form.findall(TEI_NS + "oRef")
 
         gram_grp: ET.Element | None = form.find(
             TEI_NS + "gramGrp",
         ) or entry.find(TEI_NS + "gramGrp")
-        if gram_grp is not None:
+        if gram_grp:
             orthography.add_gram_grp(gram_grp)
 
-        form_id: str = form.attrib[XML_NS + "id"]
-
-        for orth in orths:
+        for orth in _orths(form):
             assert orth.text
-            orth_text = orth.text.strip()
+            orth_text: str = orth.text.strip()
 
             if orefs:
                 assert orefs[0].text
                 oref_text = orefs[0].text
             else:
                 oref_text = orth_text
-
-            assert oref_text
             oref_text = _clean(oref_text)
 
-            orthography.add_orth_geo_id(orth_text, _geos(form), form_id)
+            orthography.add_orth_geo_id(
+                orth_text,
+                _geos(form),
+                form.attrib[XML_NS + "id"],
+            )
 
-        oref_string += oref_text
-        oref_string += "|||"
-    oref_string = re.sub(r"\|\|\|$", "", oref_string)
+        oref_strings.append(oref_text)
 
     de = Lang("de")
     en = Lang("en")
@@ -851,7 +858,7 @@ def _process_entry(entry: ET.Element) -> Word | None:
             entry.find(TEI_NS + "etym"),
             entry.findall(TEI_NS + "xr"),
         ),
-        oref_string,
+        "|||".join(oref_strings),
     )
 
 
@@ -1061,21 +1068,20 @@ def _build_aux(basename: str) -> abc.Generator[Word]:
         ET.parse(xml_path).getroot().find(TEI_NS + "text")
     )
     assert text
-    body: ET.Element[str] | None = text.find(
-        TEI_NS + "body",
-    )
+    body: ET.Element[str] | None = text.find(TEI_NS + "body")
     assert body
     del text
 
     for child in body:
         # Every child is either a super entry or an entry.
-        yield from filter(
-            None,
-            map(
-                _process_entry,
-                child if child.tag == TEI_NS + "superEntry" else [child],
-            ),
+        entries: ET.Element | list[ET.Element] = (
+            child if child.tag == TEI_NS + "superEntry" else [child]
         )
+        for entry in entries:
+            assert entry.tag == TEI_NS + "entry"
+            if _deprecated(entry):
+                continue
+            yield _process_entry(entry)
 
 
 # pylint: disable=line-too-long
