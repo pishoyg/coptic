@@ -279,11 +279,11 @@ class Crum(deck.Deck):
     for word in kellia.comprehensive():
         key: str = __tla_col(word.entry_xml_id)
         title = (
-            __tla_col(word.orthstring.pishoy())
+            __tla_col(word.orthstring.table())
             .replace("<br>", " ")
             .replace("</br>", " ")
         )
-        meaning: str = __tla_col(word.merge_langs().pishoy())
+        meaning: str = __tla_col(word.merge_langs().table())
         key_to_stepsister[key] = Sister(key, title, meaning, "")
 
     mother = Mother(key_to_sister, SisterWithFrag)
@@ -732,9 +732,9 @@ class KELLIA(deck.Deck):
             # NOTE: The key is a protected field. Do not change unless you know
             # what you're doing.
             key: str = word.entry_xml_id
-            front: str = page.html_line_breaks(word.orthstring.pishoy())
+            front: str = page.html_line_breaks(word.orthstring.table())
             back: str = _join(
-                page.html_line_breaks(word.merge_langs().pishoy()),
+                page.html_line_breaks(word.merge_langs().table()),
                 page.html_line_breaks(word.etym_string.process()),
                 page.HORIZONTAL_RULE,
                 "<footer>",

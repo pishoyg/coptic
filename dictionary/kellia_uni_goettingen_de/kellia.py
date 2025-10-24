@@ -42,6 +42,9 @@ import pandas as pd
 
 from utils import ensure, file, gcp, log
 
+XML_NS: str = "{http://www.w3.org/XML/1998/namespace}"
+TEI_NS: str = "{http://www.tei-c.org/ns/1.0}"
+
 _SCRIPT_DIR: pathlib.Path = pathlib.Path(__file__).parent
 _V_1_2_DIR: pathlib.Path = _SCRIPT_DIR / "data" / "raw" / "v1.2"
 _CLEAN: set[str] = set("ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ ")
@@ -50,7 +53,6 @@ _CRUM_PAGE: str = (
     "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID="
 )
 _SENSE_CHILDREN: list[str] = ["quote", "definition", "bibl", "ref", "xr"]
-_LANGS: list[str] = ["de", "en", "fr", "MERGED"]
 FORM_RE: re.Pattern[str] = re.compile(r"[Ⲁ-ⲱϢ-ϯⳈⳉ]+[†⸗\-]?")
 PURE_COPTIC_RE: re.Pattern[str] = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
 
@@ -58,13 +60,16 @@ BOHAIRIC_SUPPLEMENTAL_SHEET_URL: str = (
     # pylint: disable-next=line-too-long
     "https://docs.google.com/spreadsheets/d/1r9J5nuQFQxgInLpX1Gm-I20nunIBjmGFR3CfFgK0THU/export?format=tsv"
 )
+# BOHAIRIC_SUPPLEMENTAL_VERIFIED is the number of verified entries in the
+# Bohairic supplemental data. Only this subset will be processed.
+BOHAIRIC_SUPPLEMENTAL_VERIFIED: int = 999
 SAHIDIC_SUPPLEMENTAL: pathlib.Path = (
     _SCRIPT_DIR / "data" / "raw" / "inflections.tab"
 )
 
 # FROM_COPTIC_SCRIPTORIUM is the ID we use for supplemental forms retrieved from
 # Coptic Scriptorium, and which are unavailable in the TLA.
-FROM_COPTIC_SCRIPTORIUM: str = "from SC"
+FROM_COPTIC_SCRIPTORIUM: str = "from CS"
 
 _GEO_MAPPING: dict[str, str] = {
     "?": "U",
@@ -200,93 +205,83 @@ def _clean(text: str) -> str:
     return _compress(text)
 
 
-class _Reformat:
-    """_Reformat represents an object that offers alternative formats."""
-
-    def __init__(self):
-        self.amir: str = ""
-
-    def pishoy(self) -> str | list[str]:
-        raise NotImplementedError()
-
-
-class _Line:
-    """Line represents a single word spelling."""
+class Form:
+    """Line represents a single word form."""
 
     def __init__(self, gram_grp: str, orth: str, geo: str, form_id: str):
-        self._gram_grp: str = gram_grp
-        self._orth: str = orth
-        self._geo: str = _GEO_MAPPING.get(geo, geo)
-        self._form_id: str = form_id
+        self.gram_grp: str = gram_grp
+        self.orth: str = orth
+        self.geo: str = _GEO_MAPPING.get(geo, geo)
+        self.form_id: str = form_id
 
-    def pishoy_tr(self) -> str:
-        pairs: list[tuple[str, str]] = [
-            (f"orth spelling {self._geo}", self._orth),
-            (f"geo dialect {self._geo}", self._geo),
-            (f"gram_grp type {self._geo}", self._gram_grp),
-        ]
-        content = map(
-            lambda pair: f'<td class="{pair[0]}">{pair[1]}</td>',
-            pairs,
-        )
-        return f'<tr class="word {self._geo}">' + "".join(content) + "</tr>"
+    def _td(self, classes: str, text: str) -> str:
+        return f'<td class="{classes}">{text}</td>'
+
+    def tr_aux(self) -> abc.Generator[str]:
+        """Construct a <tr> element for this form.
+
+        Yields:
+            A string representing the HTML of a <tr> element.
+        """
+        yield f'<tr class="word {self.geo}">'
+        yield self._td(f"orth spelling {self.geo}", self.orth)
+        yield self._td(f"geo dialect {self.geo}", self.geo)
+        yield self._td(f"gram_grp type {self.geo}", self.gram_grp)
+        yield "</tr>"
 
 
-class _OrthString(_Reformat):
-    """A word, having a grammatical group, and several spellings."""
+class Orthography:
+    """Orthography stores the word forms."""
 
     def __init__(self):
-        super().__init__()
-        self._pishoy: list[_Line] = []
+        self.forms: list[Form] = []
         self._last_gram_grp: str = ""
 
-    def add(self, line: _Line):
-        self._pishoy.append(line)
+    def add(self, line: Form):
+        self.forms.append(line)
 
-    # For each entry, you add one grammar group, then several orth's per form.
+    def has(self, orth: str) -> bool:
+        return any(f.orth == orth for f in self.forms)
+
     def add_gram_grp(self, gram_grp: ET.Element) -> None:
-        gram_string = " ".join(_compress(child.text) for child in gram_grp)
-        self._last_gram_grp = gram_string
-        self.amir += gram_string + "\n"
+        self._last_gram_grp = " ".join(
+            _compress(child.text) for child in gram_grp
+        )
 
     def add_orth_geo_id(
         self,
-        orth_text: str,
+        orth: str,
         geos: list[str],
         form_id: str,
     ) -> None:
-        if not geos:
-            geos = ["S"]
+        geos = geos or ["S"]
         for g in geos:
-            self._pishoy.append(
-                _Line(self._last_gram_grp, orth_text, g, form_id),
+            self.forms.append(
+                Form(self._last_gram_grp, orth, g, form_id),
             )
-        geos = [g + "^^" + form_id for g in geos]
-        for g in geos:
-            self.amir += orth_text + "~" + g + "\n"
 
-    @typing.override
-    def pishoy(self):
-        out: list[str] = []
-        out.append('<table id="orths">')
-        for line in self._pishoy:
-            out.append(line.pishoy_tr())
-        out.append("</table>")
-        return "".join(out)
+    def table_aux(self) -> abc.Generator[str]:
+        yield '<table id="orths">'
+        for line in self.forms:
+            yield from line.tr_aux()
+        yield "</table>"
+
+    def table(self) -> str:
+        return "".join(self.table_aux())
 
 
-class EtymString(_Reformat):
-    """EtymString represents the etymology string of a word."""
+class Etymology:
+    """Etymology represents the etymology of a word."""
 
     def __init__(self, etym: ET.Element | None, xrs: list[ET.Element]) -> None:
-        super().__init__()
+        self.amir: str = ""
         self._greek_id: str = ""
         if etym is not None:
             greek_dict: OrderedDict[str, str | None] = OrderedDict()
             for child in etym:
-                if child.tag == "{http://www.tei-c.org/ns/1.0}note":
+                if child.tag == TEI_NS + "note":
                     self.amir += _compress(child.text)
-                elif child.tag == "{http://www.tei-c.org/ns/1.0}ref":
+                elif child.tag == TEI_NS + "ref":
                     if "type" in child.attrib and "target" in child.attrib:
                         assert child.attrib["type"]
                         assert child.attrib["target"]
@@ -308,7 +303,7 @@ class EtymString(_Reformat):
                     elif "type" in child.attrib:
                         if "greek" in child.attrib["type"]:
                             greek_dict[child.attrib["type"]] = child.text
-                elif child.tag == "{http://www.tei-c.org/ns/1.0}xr":
+                elif child.tag == TEI_NS + "xr":
                     for ref in child:
                         assert child.attrib["type"]
                         assert ref.attrib["target"]
@@ -391,7 +386,7 @@ class EtymString(_Reformat):
         return '<span class="etym">\n\t' + etym + "\n</span>"
 
 
-class _Sense:
+class Sense:
     """_Sense represents a meaning of a word."""
 
     def __init__(self, sense_n: int, sense_id: str) -> None:
@@ -399,9 +394,8 @@ class _Sense:
         self._sense_id: str = sense_id
         self._content: list[tuple[str, str]] = []
 
-    def extend_quotes(self, quotes: list[str]) -> None:
-        for q in quotes:
-            self._content.append(("quote", q))
+    def add_quote(self, quote: str) -> None:
+        self._content.append(("quote", quote))
 
     def add(self, name: str, value: str):
         assert name in _SENSE_CHILDREN or (not name and not value)
@@ -422,26 +416,24 @@ class _Sense:
     def format(self, tag_name: str, tag_text: str) -> str:
         if not tag_name and not tag_text:
             return ""
-        fmt = '<span class="{id}">{text}</span>'
-        if tag_name == "bibl":
-            split = tag_text.split("; ")
-            split = [s.strip() for s in split]
-            split = list(filter(None, split))
-            tag_text = "\n".join(split)
-            tag_text = _add_crum_links(tag_text)
-            return tag_text
-        return fmt.format(id=tag_name, text=tag_text)
+        if tag_name != "bibl":
+            return f'<span class="{tag_name}">{tag_text}</span>'
+
+        split: list[str] = tag_text.split("; ")
+        split = [s.strip() for s in split]
+        split = list(filter(None, split))
+        return _add_crum_links("\n".join(split))
 
     def identify(self) -> tuple[int, str]:
         return (self._sense_n, self._sense_id)
 
-    def pishoy(self) -> str:
-        out = "".join(self._pishoy_aux())
+    def tr(self) -> str:
+        out = "".join(self._tr_aux())
         while "\n\n\n" in out:
             out = out.replace("\n\n\n", "\n\n")
         return out
 
-    def _pishoy_aux(self) -> abc.Generator[str]:
+    def _tr_aux(self) -> abc.Generator[str]:
         yield f"<!--sense_number:{self._sense_n}, sense_id:{self._sense_id}-->"
         yield "<tr>"
         yield '<td class="meaning">'
@@ -477,105 +469,57 @@ class _Sense:
         return self.subset("bibl", "ref", "xr")
 
 
-class _Quote(_Reformat):
-    """_Quote represents a quote."""
-
-    def __init__(self):
-        super().__init__()
-        self.reset()
-        self._pishoy: list[str] = []
-
-    def add_quote(self, quote: ET.Element) -> None:
-        text: str = _compress(quote.text)
-        self.amir += text
-        self._pishoy.append(text)
-
-    def reset(self) -> None:
-        self.amir: str = "~~~"
-        self._pishoy = []
-
-    def no_definitions(self) -> None:
-        self.amir += ";;;"
-
-    def yes_definitions(self) -> None:
-        self.amir += "; "
-
-    @typing.override
-    def pishoy(self) -> list[str]:
-        return self._pishoy
-
-
-class _Lang(_Reformat):
+class Lang:
     """_Lang represents the definition in one language."""
 
-    def __init__(self, name: str):
-        super().__init__()
-        assert name in _LANGS
-        self._name: str = name
-        self._pishoy: list[_Sense] = []
+    def __init__(self, name: typing.Literal["de", "en", "fr", "MERGED"]):
+        self.name: typing.Literal["de", "en", "fr", "MERGED"] = name
+        self.senses: list[Sense] = []
 
     def add_sense(self, sense_n: int, sense_id: str):
-        self.amir += str(sense_n) + "@" + sense_id + "|"
-        self._pishoy.append(_Sense(sense_n, sense_id))
+        self.senses.append(Sense(sense_n, sense_id))
 
-    def _last_sense(self) -> _Sense:
-        return self._pishoy[-1]
+    def _last_sense(self) -> Sense:
+        return self.senses[-1]
 
-    def add_quote(self, quote: _Quote) -> None:
-        self.amir += quote.amir
-        self._last_sense().extend_quotes(quote.pishoy())
+    def add_quote(self, quote: str) -> None:
+        self._last_sense().add_quote(quote)
 
     def add_definition(self, definition: ET.Element) -> None:
         self._last_sense().add_definition(_compress(definition.text))
-        if self.amir.endswith("|"):
-            self.amir += "~~~"
-        definition_text = _compress(definition.text) + ";;;"
-        self.amir += definition_text
 
     def add_bibl(self, bibl: ET.Element | None) -> None:
         if bibl is None:
             return
         if not bibl.text:
             return
-        self.amir += bibl.text + " "
         self._last_sense().add_bibl(bibl.text)
 
     def add_ref(self, ref: ET.Element):
         assert ref.text
         self._last_sense().add_ref(ref.text)
-        self.amir += "ref: " + ref.text + " "
 
     def add_xr(self, xr: ET.Element):
         for ref in xr:
             assert ref.text
             text = xr.tag[29:] + ". " + ref.attrib["target"] + "# " + ref.text
-            self.amir += text + " "
             self._last_sense().add_xr(text)
-
-    def finalize(self):
-        self.amir: str = _compress(self.amir)
 
     def add(self, name: str, value: str):
         self._last_sense().add(name, value)
 
-    @typing.override
-    def pishoy(self):
-        out: list[str] = []
-        out.extend(
-            [
-                '<table id="senses">',
-                "<colgroup>",
-                "<col>",
-                "<col>",
-                "</colgroup>",
-            ],
-        )
-        out.extend(sense.pishoy() for sense in self._pishoy)
-        out.append("</table>")
-        return "".join(out)
+    def table(self) -> str:
+        return "".join(self.table_aux())
 
-    def senses(self) -> list[_Sense]:
-        return self._pishoy
+    def table_aux(self) -> abc.Generator[str]:
+        yield '<table id="senses">'
+        yield "<colgroup>"
+        yield "<col>"
+        yield "<col>"
+        yield "</colgroup>"
+        for sense in self.senses:
+            yield sense.tr()
+        yield "</table>"
 
 
 def _gloss_bibl(ref_bibl: str) -> str:
@@ -626,13 +570,13 @@ def _link_greek(etym: str):
 def _order_forms(formlist: list[ET.Element]) -> list[ET.Element]:
     temp: list[tuple[str, str, ET.Element]] = []
     for form in formlist:
-        orths = form.findall("{http://www.tei-c.org/ns/1.0}orth")
+        orths = form.findall(TEI_NS + "orth")
         text = ""
         dialect = ""
         for orth in orths:
             assert orth.text
             text = orth.text.replace("⸗", "--")  # Sort angle dash after hyphen
-            geo = form.find("{http://www.tei-c.org/ns/1.0}usg")
+            geo = form.find(TEI_NS + "usg")
             if geo is not None:
                 assert geo.text
                 dialect = geo.text.replace("Ak", "K")
@@ -653,43 +597,35 @@ class Word:
 
     def __init__(
         self,
-        entry_id: int,
-        super_id: int,
         entry_xml_id: str,
-        lemma_form_id: str,
-        orthstring: _OrthString,
+        lemma_form_id: str | None,
+        orthstring: Orthography,
         pos_string: str,
-        de: _Lang,
-        en: _Lang,
-        fr: _Lang,
-        etym_string: EtymString,
-        search_string: str,
+        de: Lang,
+        en: Lang,
+        fr: Lang,
+        etym_string: Etymology,
         oref_string: str,
     ):
-        self.entry_id: int = entry_id
-        self.super_id: int = super_id
         self.entry_xml_id: str = entry_xml_id
-        self.lemma_form_id: str = lemma_form_id
-        self.orthstring: _OrthString = orthstring
+        self.lemma_form_id: str | None = lemma_form_id
+        self.orthstring: Orthography = orthstring
         self.pos_string: str = pos_string
-        self.de: _Lang = de
-        self.en: _Lang = en
-        self.fr: _Lang = fr
-        self.etym_string: EtymString = etym_string
-        self.search_string: str = search_string
+        self.de: Lang = de
+        self.en: Lang = en
+        self.fr: Lang = fr
+        self.etym_string: Etymology = etym_string
         self.oref_string: str = oref_string
 
     def merge_langs(self):
-        merged = _Lang("MERGED")
+        merged: Lang = Lang("MERGED")
         assert (
-            len(self.de.senses())
-            == len(self.en.senses())
-            == len(self.fr.senses())
+            len(self.de.senses) == len(self.en.senses) == len(self.fr.senses)
         )
         for de, en, fr in zip(
-            self.de.senses(),
-            self.en.senses(),
-            self.fr.senses(),
+            self.de.senses,
+            self.en.senses,
+            self.fr.senses,
         ):
             assert de.identify() == en.identify() == fr.identify()
             merged.add_sense(*de.identify())
@@ -712,342 +648,225 @@ class Word:
         )
 
 
-def _process_entry(
-    entry_id: int,
-    super_id: int,
-    entry: ET.Element,
-    entry_xml_id: str,
-    lemma_form_id: str,
-) -> Word | None:
-    """
-    Args:
-        entry_id: id of the entry
-        super_id: id of the superentry
-        entry: Element representing the entry
-        entry_xml_id: The entry XML ID.
-        lemma_form_id: The ID of the lemma form.
+def _geos(form: ET.Element) -> list[str]:
+    goes = form.find(TEI_NS + "usg")
+    if goes is None or goes.text is None:
+        return []
+    return re.sub(r"[\(\)]", r"", goes.text).split(" ")
 
-    Returns:
-        A tuple representing new row to add to the db.
-    """
-    if "status" in entry.attrib:
-        if entry.attrib["status"] == "deprecated":
-            return None  # Entire entry is deprecated, used by DDGLC entries
-    if "change" in entry.attrib:
-        if "deprecated" in entry.attrib["change"]:
-            return None  # Same for @change notation
 
-    forms = entry.findall("{http://www.tei-c.org/ns/1.0}form")
+def _deprecated(element: ET.Element) -> bool:
+    if element.attrib.get("status") == "deprecated":
+        return True
+    if "deprecated" in element.attrib.get("change", ""):
+        return True
+    return False
 
-    # ORTHSTRING -- "name" column in the db
-    # Includes morphological info, followed by orthographic forms and
-    # corresponding dialect (geo) info.
-    # ||| separates forms
-    # \n separates orth-geo pairs
-    # ~ separates orth from geo
 
-    # SEARCHSTRING -- "search" column in db
-    # similar to orthstring but forms are stripped of anything but Coptic
-    # letters and spaces.
-    # morphological info not included
-    orthstring = _OrthString()
-    oref_string = ""
-    oref_text = ""
-    search_string = "\n"
+def _is_lemma(form: ET.Element) -> bool:
+    return form.attrib.get("type") == "lemma"
 
-    lemma = None
+
+def _process_entry(entry: ET.Element) -> Word | None:
+
+    assert entry.tag == TEI_NS + "entry"
+
+    if _deprecated(entry):
+        return None
+
+    entry_xml_id: str = entry.attrib[XML_NS + "id"]
+    lemma: ET.Element | None = None
+    forms: list[ET.Element] = entry.findall(TEI_NS + "form")
+    try:
+        lemma = next(filter(_is_lemma, forms))
+    except StopIteration:
+        log.error("No lemma found for", entry_xml_id)
+
+    orthography = Orthography()
+    oref_string: str = ""
+    oref_text: str = ""
+
     orths: list[ET.Element] = []
+    lemma_orth: str = ""
     for form in forms:
-        is_lemma = False
-        if "status" in form.attrib:
-            if form.attrib["status"] == "deprecated":
-                continue
-        if "change" in form.attrib:
-            if "deprecated" in form.attrib["change"]:
-                continue
-        if "type" in form.attrib:
-            if form.attrib["type"] == "lemma":
-                is_lemma = True
-        orths = form.findall("{http://www.tei-c.org/ns/1.0}orth")
+        if _deprecated(form):
+            continue
+        orths = form.findall(TEI_NS + "orth")
         if form.text is not None and form.text.strip():
             orths.append(form)
-        if len(orths) > 0:
-            first_orth = orths[0]
-            if is_lemma:
-                lemma = first_orth
-    if lemma is None:
-        log.error("No lemma type for entry of", orths[0].text)
+        if _is_lemma(form):
+            assert orths[0].text
+            lemma_orth = orths[0].text
 
     first: list[ET.Element] = []
     last: list[ET.Element] = []
     for form in forms:
-        if "status" in form.attrib:
-            if form.attrib["status"] == "deprecated":
-                continue
-        if "change" in form.attrib:
-            if "deprecated" in form.attrib["change"]:
-                continue
-        orths = form.findall("{http://www.tei-c.org/ns/1.0}orth")
+        if _deprecated(form):
+            continue
+        orths = form.findall(TEI_NS + "orth")
         if form.text is not None and form.text.strip():
             orths.append(form)
-        if type(lemma).__name__ == "Element":
-            assert lemma is not None
-            if any([orth.text == lemma.text for orth in orths]):
-                first.append(form)
-            else:
-                last.append(form)
+        if lemma and any(orth.text == lemma_orth for orth in orths):
+            first.append(form)
         else:
-            if any([orth.text == lemma for orth in orths]):
-                first.append(form)
-            else:
-                last.append(form)
+            last.append(form)
 
-    first = _order_forms(first)
-    last = _order_forms(last)
-    ordered_forms = first + last
+    forms = _order_forms(first) + _order_forms(last)
+    del first, last
 
-    for form in ordered_forms:
-        if "type" in form.attrib:
-            if form.attrib["type"] == "lemma":
-                continue
-        orths = form.findall("{http://www.tei-c.org/ns/1.0}orth")
+    for form in forms:
+        if lemma and form.attrib[XML_NS + "id"] == lemma.attrib[XML_NS + "id"]:
+            continue
+        orths = form.findall(TEI_NS + "orth")
         if form.text is not None and form.text.strip():
             orths.append(form)
 
-        orefs = form.findall("{http://www.tei-c.org/ns/1.0}oRef")
+        orefs: list[ET.Element] = form.findall(TEI_NS + "oRef")
 
-        gram_grp = form.find("{http://www.tei-c.org/ns/1.0}gramGrp")
-        if gram_grp is None:
-            gram_grp = entry.find("{http://www.tei-c.org/ns/1.0}gramGrp")
+        gram_grp: ET.Element | None = form.find(
+            TEI_NS + "gramGrp",
+        ) or entry.find(TEI_NS + "gramGrp")
         if gram_grp is not None:
-            orthstring.add_gram_grp(gram_grp)
+            orthography.add_gram_grp(gram_grp)
 
-        all_geos = form.find("{http://www.tei-c.org/ns/1.0}usg")
-        if all_geos is not None:
-            if all_geos.text is not None:
-                geos_text = re.sub(r"[\(\)]", r"", all_geos.text)
-                geos = geos_text.split(" ")
-            else:
-                geos = []
-        else:
-            geos = []
+        form_id: str = form.attrib[XML_NS + "id"]
 
-        form_id = (
-            form.attrib["{http://www.w3.org/XML/1998/namespace}id"]
-            if "{http://www.w3.org/XML/1998/namespace}id" in form.attrib
-            else ""
-        )
-
-        geos_with_id = [g + "^^" + form_id for g in geos]
         for orth in orths:
             assert orth.text
             orth_text = orth.text.strip()
 
-            if len(orefs) > 0:
+            if orefs:
                 assert orefs[0].text
                 oref_text = orefs[0].text
             else:
                 oref_text = orth_text
 
-            search_text = _clean(orth_text)
             assert oref_text
             oref_text = _clean(oref_text)
 
-            orthstring.add_orth_geo_id(orth_text, geos, form_id)
-            for geo in geos_with_id:
-                search_string += search_text + "~" + geo + "\n"
-            if len(list(geos_with_id)) == 0:
-                search_string += search_text + "~S\n"
+            orthography.add_orth_geo_id(orth_text, _geos(form), form_id)
 
         oref_string += oref_text
         oref_string += "|||"
-        orthstring.amir += "|||"
-    orthstring.amir = re.sub(r"\|\|\|$", "", orthstring.amir)
     oref_string = re.sub(r"\|\|\|$", "", oref_string)
 
-    # SENSES -- 3 different columns for the 3 languages: de, en, fr
-    # each string contains definitions as well as corresponding bibl/ref/xr info
-    # definition part, which may come from 'quote' or 'def' in the xml or both,
-    # is preceded by ~~~ and followed by ;;;
-    # different senses separated by |||
-    de = _Lang("de")
-    en = _Lang("en")
-    fr = _Lang("fr")
+    de = Lang("de")
+    en = Lang("en")
+    fr = Lang("fr")
 
-    senses = entry.findall("{http://www.tei-c.org/ns/1.0}sense")
-    sense_n = 1
+    senses: list[ET.Element] = entry.findall(
+        TEI_NS + "sense",
+    )
+    sense_n: int = 1
     for sense in senses:
-        sense_id = (
-            sense.attrib["{http://www.w3.org/XML/1998/namespace}id"]
-            if "{http://www.w3.org/XML/1998/namespace}id" in sense.attrib
-            else ""
-        )
+        sense_id: str = sense.attrib[XML_NS + "id"]
         de.add_sense(sense_n, sense_id)
         en.add_sense(sense_n, sense_id)
         fr.add_sense(sense_n, sense_id)
         for sense_child in sense:
-            if sense_child.tag == "{http://www.tei-c.org/ns/1.0}cit":
-                bibl = sense_child.find("{http://www.tei-c.org/ns/1.0}bibl")
-                quotes = sense_child.findall(
-                    "{http://www.tei-c.org/ns/1.0}quote",
+            if sense_child.tag == TEI_NS + "cit":
+                bibl: ET.Element | None = sense_child.find(
+                    TEI_NS + "bibl",
                 )
-                definitions = sense_child.findall(
-                    "{http://www.tei-c.org/ns/1.0}def",
+                quotes: list[ET.Element] = sense_child.findall(
+                    TEI_NS + "quote",
+                )
+                definitions: list[ET.Element] = sense_child.findall(
+                    TEI_NS + "def",
                 )
 
-                q = _Quote()
                 for quote in quotes:
-                    if quote.text is not None:
-                        q.add_quote(quote)
-                        if len(definitions) == 0:
-                            q.no_definitions()
-                        else:
-                            q.yes_definitions()
-                        lang = quote.get(
-                            "{http://www.w3.org/XML/1998/namespace}lang",
-                        )
-                        if lang == "de":
-                            de.add_quote(q)
-                        elif lang == "en":
-                            en.add_quote(q)
-                        elif lang == "fr":
-                            fr.add_quote(q)
-                        q.reset()
+                    if quote.text is None:
+                        continue
+                    q: str = _compress(quote.text)
+                    lang = quote.get(
+                        XML_NS + "lang",
+                    )
+                    if lang == "de":
+                        de.add_quote(q)
+                    elif lang == "en":
+                        en.add_quote(q)
+                    elif lang == "fr":
+                        fr.add_quote(q)
+
                 for definition in definitions:
-                    if definition.text is not None:
-                        lang = definition.get(
-                            "{http://www.w3.org/XML/1998/namespace}lang",
-                        )
-                        if lang == "de":
-                            de.add_definition(definition)
-                        elif lang == "en":
-                            en.add_definition(definition)
-                        elif lang == "fr":
-                            fr.add_definition(definition)
+                    if definition.text is None:
+                        continue
+                    lang = definition.get(
+                        XML_NS + "lang",
+                    )
+                    if lang == "de":
+                        de.add_definition(definition)
+                    elif lang == "en":
+                        en.add_definition(definition)
+                    elif lang == "fr":
+                        fr.add_definition(definition)
                 de.add_bibl(bibl)
                 en.add_bibl(bibl)
                 fr.add_bibl(bibl)
-            elif sense_child.tag == "{http://www.tei-c.org/ns/1.0}ref":
+            elif sense_child.tag == TEI_NS + "ref":
                 de.add_ref(sense_child)
                 en.add_ref(sense_child)
                 fr.add_ref(sense_child)
-            elif sense_child.tag == "{http://www.tei-c.org/ns/1.0}xr":
+            elif sense_child.tag == TEI_NS + "xr":
                 de.add_xr(sense_child)
                 en.add_xr(sense_child)
                 fr.add_xr(sense_child)
 
-        de.amir += "|||"
-        en.amir += "|||"
-        fr.amir += "|||"
         sense_n += 1
-
-    de.amir = re.sub(r"\|\|\|$", r"", de.amir)
-    en.amir = re.sub(r"\|\|\|$", r"", en.amir)
-    fr.amir = re.sub(r"\|\|\|$", r"", fr.amir)
-    de.finalize()
-    en.finalize()
-    fr.finalize()
 
     # POS -- a single Scriptorium POS tag for each entry
     pos_list: list[str] = []
-    for gramgrp in entry.iter("{http://www.tei-c.org/ns/1.0}gramGrp"):
-        pos = gramgrp.find("{http://www.tei-c.org/ns/1.0}pos")
+    for gramgrp in entry.iter(TEI_NS + "gramGrp"):
+        pos = gramgrp.find(TEI_NS + "pos")
         if pos is not None:
             assert pos.text
             pos_text = pos.text
         else:
             pos_text = "None"
-        subc = gramgrp.find("{http://www.tei-c.org/ns/1.0}subc")
+        subc = gramgrp.find(TEI_NS + "subc")
         if subc is not None:
             assert subc.text
             subc_text = subc.text
         else:
             subc_text = "None"
-        new_pos: str = _pos_map(pos_text, subc_text, orthstring.amir)
+        new_pos: str = _pos_map(pos_text, subc_text, orthography)
         if new_pos not in pos_list:
             pos_list.append(new_pos)
-    if len(list(pos_list)) > 1:
-        pos_list = list(
-            filter(
-                lambda p: p not in ["NULL", "NONE", "?"],
-                pos_list,
-            ),
-        )
-    if len(pos_list) == 0:
-        pos_list.append("NULL")
-    # On the rare occasion pos_list has len > 1 at this point, the first one is
-    # the most valid.
-    pos_string = pos_list[0]
-
-    # ETYM
-    etym = entry.find("{http://www.tei-c.org/ns/1.0}etym")
-    xrs = entry.findall("{http://www.tei-c.org/ns/1.0}xr")
+    if len(pos_list) > 1:
+        pos_list = [p for p in pos_list if p not in ["NULL", "NONE", "?"]]
+    pos_list = pos_list or ["NULL"]
 
     return Word(
-        entry_id,
-        super_id,
         entry_xml_id,
-        lemma_form_id,
-        orthstring,
-        pos_string,
+        lemma.attrib[XML_NS + "id"] if lemma else None,
+        orthography,
+        # On the rare occasion pos_list has len > 1 at this point, the first one
+        # is the most valid.
+        pos_list[0],
         de,
         en,
         fr,
-        EtymString(etym, xrs),
-        search_string,
+        Etymology(
+            entry.find(TEI_NS + "etym"),
+            entry.findall(TEI_NS + "xr"),
+        ),
         oref_string,
     )
 
 
-def _process_super_entry(
-    entry_id: int,
-    super_id: int,
-    super_entry: ET.Element,
-) -> abc.Generator[Word]:
-    for entry in super_entry:
-        entry_xml_id = (
-            entry.attrib["{http://www.w3.org/XML/1998/namespace}id"]
-            if "{http://www.w3.org/XML/1998/namespace}id" in entry.attrib
-            else ""
-        )
-
-        # Get lemma form ID
-        forms = [
-            f
-            for f in entry.findall("{http://www.tei-c.org/ns/1.0}form")
-            if "type" in f.attrib
-        ]
-        lemma = [f for f in forms if f.attrib["type"] == "lemma"]
-        lemma_form_id = (
-            lemma[0].attrib["{http://www.w3.org/XML/1998/namespace}id"]
-            if lemma
-            else ""
-        )
-
-        cur: Word | None = _process_entry(
-            entry_id,
-            super_id,
-            entry,
-            entry_xml_id,
-            lemma_form_id,
-        )
-        if cur is None:
-            continue
-        yield cur
-        entry_id += 1
-
-
-def _pos_map(pos: str, subc: str, orthstring: str) -> str:
+def _pos_map(pos: str, subc: str, orthography: Orthography) -> str:
     """
     Args:
         pos: A grammatical position (in German).
         subc: Some other grammatical annotation (I still need to learn more
             about this).
-        orthstring: The orthstring.
+        orthography: The word orthography.
 
     Returns:
         The mapped position.
     """
+
     pos = pos.replace("?", "")
     if (
         pos == "Subst."
@@ -1071,7 +890,7 @@ def _pos_map(pos: str, subc: str, orthstring: str) -> str:
             return "VBD"
         elif subc == "Imperativ":
             return "VIMP"
-        elif "ⲟⲩⲛ-" in orthstring or "ⲟⲩⲛⲧⲉ-" in orthstring:
+        elif orthography.has("ⲟⲩⲛ-") or orthography.has("ⲟⲩⲛⲧⲉ-"):
             return "EXIST"
         else:
             return "V"
@@ -1124,18 +943,18 @@ def _pos_map(pos: str, subc: str, orthstring: str) -> str:
     elif pos == "Satzkonverter":
         return "C"
     elif pos == "Präfix":
-        if "ⲧⲁ-" in orthstring:
+        if orthography.has("ⲧⲁ-"):
             return "PPOS"
-        elif "ⲧⲃⲁⲓ-" in orthstring:
+        elif orthography.has("ⲧⲃⲁⲓ-"):
             return "N"
-        elif "ⲧⲣⲉ-" in orthstring:
+        elif orthography.has("ⲧⲣⲉ-"):
             return "A"
     elif pos == "None" or pos == "?":
         if subc == "None":
             return "NULL"
         if subc == "Qualitativ":
             return "VSTAT"
-    elif "ϭⲁⲛⲛⲁⲥ" in orthstring:
+    elif orthography.has("ϭⲁⲛⲛⲁⲥ"):
         return "NULL"
 
     return "?"
@@ -1154,6 +973,7 @@ def _bohairic_supplemental() -> dict[str, list[str]]:
         # TODO: (#305) Fix bad lines at the origin.
         on_bad_lines="warn",
     )
+    df = df[:BOHAIRIC_SUPPLEMENTAL_VERIFIED]
     # Lemma forms should appear first.
     df = (
         df.assign(is_lemma=df["word"] == df["lemma"])
@@ -1162,8 +982,14 @@ def _bohairic_supplemental() -> dict[str, list[str]]:
     )
     # The TLA column uses an inconsistent delimiter of either a comma or an
     # underscore!
-    delim: re.Pattern[str] = re.compile("[,_]")
     for _, row in df.iterrows():
+        tla: str = row["tla"]
+        assert isinstance(tla, str)
+        if "_" in tla:
+            # The TLA often uses an underscore as a TLA ID delimiter. This is
+            # currently omitted from the CDO, so we omit it on our side as well.
+            # TODO: (#305) Reconsider.
+            continue
         form: str = row["word"]
         assert isinstance(form, str)
         # There is a number of malformed entries in the sheet!
@@ -1172,7 +998,7 @@ def _bohairic_supplemental() -> dict[str, list[str]]:
             continue
         assert PURE_COPTIC_RE.fullmatch(form), form
 
-        for tla_id in delim.split(row["tla"]):
+        for tla_id in tla.split(","):
             if not tla_id.startswith("C"):
                 # TODO: (#305) Incorporate the entries that have no
                 # TLA ID, instead of simply skipping them.
@@ -1230,60 +1056,58 @@ def _sahidic_supplemental() -> dict[str, set[str]]:
 def _build_aux(basename: str) -> abc.Generator[Word]:
     xml_path: pathlib.Path = _V_1_2_DIR / basename
     del basename
-    super_id: int = 1
-    entry_id: int = 1
 
     text: ET.Element[str] | None = (
-        ET.parse(xml_path).getroot().find("{http://www.tei-c.org/ns/1.0}text")
+        ET.parse(xml_path).getroot().find(TEI_NS + "text")
     )
     assert text
     body: ET.Element[str] | None = text.find(
-        "{http://www.tei-c.org/ns/1.0}body",
+        TEI_NS + "body",
     )
-    del text
     assert body
+    del text
 
     for child in body:
-        if child.tag == "{http://www.tei-c.org/ns/1.0}entry":
-            entry_xml_id = (
-                child.attrib["{http://www.w3.org/XML/1998/namespace}id"]
-                if "{http://www.w3.org/XML/1998/namespace}id" in child.attrib
-                else ""
-            )
-
-            # Get lemma form ID
-            forms = [
-                f
-                for f in child.findall("{http://www.tei-c.org/ns/1.0}form")
-                if "type" in f.attrib
-            ]
-            lemma = [f for f in forms if f.attrib["type"] == "lemma"]
-            lemma_form_id = (
-                lemma[0].attrib["{http://www.w3.org/XML/1998/namespace}id"]
-                if lemma
-                else ""
-            )
-
-            cur: Word | None = _process_entry(
-                entry_id,
-                super_id,
-                child,
-                entry_xml_id,
-                lemma_form_id,
-            )
-            if cur is None:
-                continue
-            yield cur
-            super_id += 1
-            entry_id += 1
-        elif child.tag == "{http://www.tei-c.org/ns/1.0}superEntry":
-            super_id += 1
-            for word in _process_super_entry(entry_id, super_id, child):
-                yield word
-                entry_id += 1
+        # Every child is either a super entry or an entry.
+        yield from filter(
+            None,
+            map(
+                _process_entry,
+                child if child.tag == TEI_NS + "superEntry" else [child],
+            ),
+        )
 
 
+# pylint: disable=line-too-long
 def _build(basename: str) -> abc.Generator[Word]:
+    """Build a dataset from the given XML, adding supplemental entries.
+
+    NOTE: Supplemental entries have been... problematic! They seem to be poorly
+    maintained by Coptic Scriptorium. As of the time of writing, their
+    supplemental entries code still lives in the `dev` branch. It doesn't
+    consider parts-of-speech of supplemental entries at all (which we hope to
+    do), markers of prenominal, pronominal, and qualitative forms are omitted,
+    thus all forms agreeing in spelling are treated as equal.
+    And the criteria for whether a given supplemental entry should or
+    should not be included are unclear.
+    Also, the data that they actually use[1] is unavailable to us. We only have
+    access to this sheet[2].
+    We are considering dropping supplemental entries altogether.
+
+    As of the time of writing, discrepancies are known to exist between the
+    supplemental entries that we add and the ones that show in CDO.
+
+    [1] https://github.com/KELLIA/dictionary/blob/edac2731c86fb02819436d39d127344e4e0bf514/utils/dictionary_reader.py#L591
+    [2] https://docs.google.com/spreadsheets/d/1r9J5nuQFQxgInLpX1Gm-I20nunIBjmGFR3CfFgK0THU
+
+    Args:
+        basename: The basename of the XML file containing the dataset
+            definition.
+
+    Yields:
+        Words in the dataset.
+    """
+    # pylint: enable=line-too-long
     b_supp: dict[str, list[str]] = _bohairic_supplemental()
     s_supp: dict[str, set[str]] = _sahidic_supplemental()
     # TODO: (#305) Part-of-speech info is present in the source data. Use it
@@ -1293,14 +1117,25 @@ def _build(basename: str) -> abc.Generator[Word]:
         # Additionally, we sort Sahidic entries to make the output
         # deterministic.
         # TODO: (#305) Use the same sorting logic used for TLA forms.
-        for form in sorted(s_supp.pop(word.entry_xml_id, [])):
-            word.orthstring.add(_Line("", form, "S", FROM_COPTIC_SCRIPTORIUM))
+        for orth in sorted(s_supp.pop(word.entry_xml_id, [])):
+            if word.orthstring.has(orth):
+                # The word already has this orth.
+                continue
+            word.orthstring.add(Form("", orth, "S", FROM_COPTIC_SCRIPTORIUM))
         # TODO: (#305) We don't sort Bohairic forms because they already have
         # some order that would be corrupted if we were to reorder them below.
         # The lists retrieved have lamma forms first. We should order them by
         # form while retaining lemma forms at the beginning.
-        for form in b_supp.pop(word.entry_xml_id, []):
-            word.orthstring.add(_Line("", form, "B", FROM_COPTIC_SCRIPTORIUM))
+        b: list[str] = b_supp.pop(word.entry_xml_id, [])
+        if any(f.geo == "B" for f in word.orthstring.forms):
+            # This word already has some Bohairic forms. It's likely that the
+            # supplemental entries are going to be redundant.
+            # TODO: (#305) This may not always be the case. Only skip
+            # supplemental entries that can be found in the list of forms.
+            yield word
+            continue
+        for orth in b:
+            word.orthstring.add(Form("", orth, "B", FROM_COPTIC_SCRIPTORIUM))
         yield word
 
     # Verify that all Sahidic supplemental entries have been consumed.
@@ -1313,7 +1148,7 @@ def _build(basename: str) -> abc.Generator[Word]:
     # Some Bohairic entries are not consumed.
     # TODO: (#305) Fix at the origin.
     for tla_id, forms in b_supp.items():
-        log.warn("Bohairic forms", forms, "have an invalid TLA ID", tla_id)
+        log.error("Bohairic forms", forms, "have an invalid TLA ID", tla_id)
 
 
 @functools.cache
