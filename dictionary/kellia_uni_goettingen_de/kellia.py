@@ -171,7 +171,7 @@ class Etymology:
                 greek_dict[child.attrib["type"]] = child.text
                 continue
 
-            # TODO: (#0) Handle remaining children.
+            # TODO: (#51) Handle remaining children.
 
         greek_parts: list[str] = []
         for key, val in sorted(greek_dict.items()):
@@ -554,7 +554,7 @@ def _process_entry(entry: ET.Element) -> Word:
                     continue
                 language = quote.get(XML_NS + "lang")
                 if not language:
-                    # TODO: (#0) Incorporate quotes with an unknown language.
+                    # TODO: (#51) Incorporate quotes with an unknown language.
                     continue
                 langs[language].add("quote", _compress(quote.text))
 
@@ -563,7 +563,7 @@ def _process_entry(entry: ET.Element) -> Word:
                     continue
                 language = definition.get(XML_NS + "lang")
                 if not language:
-                    # TODO: (#0) Incorporate definitions with an unknown
+                    # TODO: (#51) Incorporate definitions with an unknown
                     # language.
                     continue
                 langs[language].add("definition", definition)

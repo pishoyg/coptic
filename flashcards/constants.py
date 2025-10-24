@@ -875,7 +875,7 @@ CRUM_XOOXLE = xooxle.Xooxle(
             # If we were to need the classes for Coptic or Greek, this would
             # increase the size of the index more significantly, so we shouldn't
             # do it.
-            # TODO: (#0) Import class names from Wiki, instead of duplicating
+            # TODO: (#578) Import class names from Wiki, instead of duplicating
             # them below.
             retain_classes={
                 "wiki",
