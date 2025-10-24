@@ -4,6 +4,8 @@
 # TODO: (#525) Consider using the same HTML structure as Crum.
 
 # TODO: (#577) Rewrite this file to align with our technical standards.
+# - One thing to do is to introduce objects that represent XML entities, instead
+#   of using raw ET.Element objects throughout the program.
 
 import functools
 import itertools
@@ -135,17 +137,13 @@ class Orthography:
 class Etymology:
     """Etymology represents the etymology of a word."""
 
-    def __init__(self, etym: ET.Element | None, xrs: list[ET.Element]) -> None:
+    def __init__(self, entry: ET.Element) -> None:
         self._greek_id: str | None = None
-        self.amir: str = "".join(self._amir(etym, xrs))
+        self.amir: str = "".join(self._amir(entry))
 
-    def _amir(
-        self,
-        etym: ET.Element | None,
-        xrs: list[ET.Element],
-    ) -> abc.Generator[str]:
+    def _amir(self, entry: ET.Element) -> abc.Generator[str]:
         greek_dict: OrderedDict[str, str | None] = OrderedDict()
-        for child in etym or []:
+        for child in entry.find(TEI_NS + "etym") or []:
 
             if child.tag == TEI_NS + "note":
                 yield _compress(child.text)
@@ -205,7 +203,7 @@ class Etymology:
                 continue
         yield " ".join(greek_parts)
 
-        for xr in xrs:
+        for xr in entry.iterfind(TEI_NS + "xr"):
             for ref in xr:
                 ref_target: str = _clean(ref.attrib["target"])
                 assert ref_target
@@ -386,29 +384,24 @@ def _link_greek(etym: str) -> str:
     return linked
 
 
-def _order_forms(formlist: list[ET.Element]) -> list[ET.Element]:
-    temp: list[tuple[str, str, ET.Element]] = []
-    for form in formlist:
-        orths = form.findall(TEI_NS + "orth")
-        text = ""
-        dialect = ""
-        for orth in orths:
-            assert orth.text
-            text = orth.text.replace("⸗", "--")  # Sort angle dash after hyphen
-            geo = form.find(TEI_NS + "usg")
-            if geo is not None:
-                assert geo.text
-                dialect = geo.text.replace("Ak", "K")
-                if dialect != "S":
-                    dialect = "_" + dialect  # Sahidic always first
+def _form_sort_key(form: ET.Element) -> tuple[str, str]:
+    first_orth: ET.Element = next(form.iterfind(TEI_NS + "orth"))
+    assert first_orth.text
+    text: str = first_orth.text.strip().replace(
+        "⸗",
+        "--",
+    )  # Sort angle dash after hyphen
 
-        temp.append((text, dialect, form))
-
-    output: list[ET.Element] = []
-    for _, _, f in sorted(temp, key=lambda x: (x[0], x[1])):
-        output.append(f)
-
-    return output
+    geo: ET.Element | None = form.find(TEI_NS + "usg")
+    if geo is None:
+        return (text, "")
+    assert geo.text
+    dialect = geo.text.strip()
+    if dialect == "Ak":
+        dialect = "K"
+    if dialect != "S":
+        dialect = "_" + dialect  # Sahidic always first!
+    return (text, dialect)
 
 
 class Word:
@@ -422,7 +415,6 @@ class Word:
         pos_string: str,
         langs: dict[str, Lang],
         etym_string: Etymology,
-        oref_string: str,
     ) -> None:
         self.entry_xml_id: str = entry_xml_id
         self.lemma_form_id: str | None = lemma_form_id
@@ -430,7 +422,6 @@ class Word:
         self.pos_string: str = pos_string
         self.langs: dict[str, Lang] = langs
         self.etym_string: Etymology = etym_string
-        self.oref_string: str = oref_string
 
     def merge_langs(self) -> Lang:
         merged: Lang = Lang("MERGED")
@@ -456,10 +447,11 @@ class Word:
 
 
 def _geos(form: ET.Element) -> list[str]:
-    goes = form.find(TEI_NS + "usg")
-    if goes is None or goes.text is None:
+    geos: ET.Element | None = form.find(TEI_NS + "usg")
+    if geos is None:
         return []
-    return re.sub(r"[\(\)]", r"", goes.text).split(" ")
+    assert geos.text
+    return geos.text.replace("(", "").replace(")", "").split(" ")
 
 
 def _deprecated(element: ET.Element) -> bool:
@@ -474,78 +466,54 @@ def _is_lemma(form: ET.Element) -> bool:
     return not _deprecated(form) and form.attrib["type"] == "lemma"
 
 
-def _orths(form: ET.Element) -> abc.Generator[ET.Element]:
-    yield from form.findall(TEI_NS + "orth")
-    if form.text is not None and form.text.strip():
-        yield form
-
-
 def _orth(lemma: ET.Element) -> str:
-    first_orth: str | None = next(_orths(lemma)).text
-    assert first_orth
-    return first_orth
+    first_orth: ET.Element = next(lemma.iterfind(TEI_NS + "orth"))
+    assert first_orth.text
+    return first_orth.text
 
 
 def _process_entry(entry: ET.Element) -> Word:
+
     entry_xml_id: str = entry.attrib[XML_NS + "id"]
-    lemma: ET.Element | None = None
+
     forms: list[ET.Element] = entry.findall(TEI_NS + "form")
+    forms = [f for f in forms if not _deprecated(f)]
+
+    lemma: ET.Element | None = None
     try:
         lemma = next(filter(_is_lemma, forms))
     except StopIteration:
         log.error("No lemma found for", entry_xml_id)
 
+    forms = sorted(forms, key=_form_sort_key)
+    if lemma:
+        lemma_orth: str = _orth(lemma)
+        forms = sorted(
+            forms,
+            key=lambda form: any(
+                orth.text == lemma_orth
+                for orth in form.iterfind(TEI_NS + "orth")
+            ),
+            reverse=True,
+        )
+
     orthography: Orthography = Orthography()
-    oref_strings: list[str] = []
-    oref_text: str = ""
-
-    lemma_orth: str | None = _orth(lemma) if lemma else None
-
-    first: list[ET.Element] = []
-    last: list[ET.Element] = []
-    for form in forms:
-        if _deprecated(form):
-            continue
-        orths = form.findall(TEI_NS + "orth")
-        if form.text is not None and form.text.strip():
-            orths.append(form)
-        if any(orth.text == lemma_orth for orth in orths):
-            first.append(form)
-        else:
-            last.append(form)
-
-    forms = _order_forms(first) + _order_forms(last)
-    del first, last
 
     for form in forms:
+        assert not form.text or not form.text.strip()
         if lemma and form.attrib[XML_NS + "id"] == lemma.attrib[XML_NS + "id"]:
             continue
-        orefs: list[ET.Element] = form.findall(TEI_NS + "oRef")
 
-        gram_grp: ET.Element | None = form.find(
-            TEI_NS + "gramGrp",
-        ) or entry.find(TEI_NS + "gramGrp")
-        if gram_grp:
-            orthography.start_gram_grp(gram_grp)
+        gram_grp: ET.Element | None = form.find(TEI_NS + "gramGrp")
+        gram_grp = gram_grp or entry.find(TEI_NS + "gramGrp")
+        assert gram_grp
+        orthography.start_gram_grp(gram_grp)
 
-        for orth in _orths(form):
+        for orth in form.iterfind(TEI_NS + "orth"):
             assert orth.text
             orth_text: str = orth.text.strip()
-
-            if orefs:
-                assert orefs[0].text
-                oref_text = orefs[0].text
-            else:
-                oref_text = orth_text
-            oref_text = _clean(oref_text)
-
-            orthography.add(
-                orth_text,
-                _geos(form),
-                form.attrib[XML_NS + "id"],
-            )
-
-        oref_strings.append(oref_text)
+            assert orth_text
+            orthography.add(orth_text, _geos(form), form.attrib[XML_NS + "id"])
 
     langs: dict[str, Lang] = {
         "de": Lang("de"),
@@ -553,7 +521,7 @@ def _process_entry(entry: ET.Element) -> Word:
         "fr": Lang("fr"),
     }
 
-    for sense_n, sense in enumerate(entry.findall(TEI_NS + "sense"), 1):
+    for sense_n, sense in enumerate(entry.iterfind(TEI_NS + "sense"), 1):
         sense_id: str = sense.attrib[XML_NS + "id"]
         for lang in langs.values():
             lang.start_sense(sense_n, sense_id)
@@ -581,7 +549,7 @@ def _process_entry(entry: ET.Element) -> Word:
             del bibl
 
             language: str | None
-            for quote in child.findall(TEI_NS + "quote"):
+            for quote in child.iterfind(TEI_NS + "quote"):
                 if quote.text is None:
                     continue
                 language = quote.get(XML_NS + "lang")
@@ -590,7 +558,7 @@ def _process_entry(entry: ET.Element) -> Word:
                     continue
                 langs[language].add("quote", _compress(quote.text))
 
-            for definition in child.findall(TEI_NS + "def"):
+            for definition in child.iterfind(TEI_NS + "def"):
                 if definition.text is None:
                     continue
                 language = definition.get(XML_NS + "lang")
@@ -630,11 +598,7 @@ def _process_entry(entry: ET.Element) -> Word:
         # is the most valid.
         pos_list[0],
         langs,
-        Etymology(
-            entry.find(TEI_NS + "etym"),
-            entry.findall(TEI_NS + "xr"),
-        ),
-        "|||".join(oref_strings),
+        Etymology(entry),
     )
 
 
