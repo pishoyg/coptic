@@ -497,10 +497,10 @@ to all dialects. More information at
 The following entries are absent from Crum's dictionary. They were added to our
 database from other sources:
 
-1. https://remnqymi.com/crum/3380.html
-2. https://remnqymi.com/crum/3381.html
-3. https://remnqymi.com/crum/3382.html
-4. https://remnqymi.com/crum/3385.html
+1. [3380](https://remnqymi.com/crum/3380.html)
+2. [3381](https://remnqymi.com/crum/3381.html)
+3. [3382](https://remnqymi.com/crum/3382.html)
+4. [3385](https://remnqymi.com/crum/3385.html)
 
 ### [`copticocc.org/`](dictionary/copticocc_org)
 
@@ -509,9 +509,9 @@ Moawad Dawoud's dictionary.
 
 ### [`kellia.uni-goettingen.de/`](dictionary/kellia_uni_goettingen_de)
 
-*TLA data:*
+**TLA data:**
 
-1. The TLA data, which comprises the core of the dictionary, is retrieved from
+The TLA data, which comprises the core of the dictionary, is retrieved from
    [Comprehensive Coptic Lexicon: Including Loanwords from Ancient Greek v
 1.2](https://refubium.fu-berlin.de/handle/fub188/27813).
    - [84c104](https://github.com/pishoyg/coptic/commit/84c1044282faa12daf748858351b989376f82018)
@@ -520,7 +520,7 @@ Moawad Dawoud's dictionary.
    - We may have made some changes afterwards. Use `git log` or `git diff` to
    find them.
 
-*Supplemental forms:*
+**Supplemental forms:**
 
 Coptic Scriptorium has attempted to grow the TLA by adding supplemental forms.
 As of the time of writing, CDO is capable of expanding an entry by adding
@@ -554,7 +554,7 @@ development at the moment, and the above issues aren't expected to be resolved.
 We are considering reverting the addition of supplemental forms, and relying
 only on the TLA data.
 
-*Code:*
+**Code:**
 
 We based [our TLA processing
 logic](./dictionary/kellia_uni_goettingen_de/kellia.py) on the CDO's
@@ -566,6 +566,14 @@ file](https://github.com/KELLIA/dictionary/blob/dev/utils/dictionary_reader.py).
 The original code is very badly written and is completely unmaintainable, and it
 has several (small) bugs. Our code has since significantly diverged from the
 original, and there is little overlap left.
+
+There are TLA and CDO artifacts that we chose to ignore in our own pipeline,
+such as [Egyptian
+Etymologies](https://github.com/KELLIA/dictionary/blob/dev/utils/egyptian_etymologies.tab),
+[entity
+types](https://github.com/KELLIA/dictionary/blob/edac2731c86fb02819436d39d127344e4e0bf514/utils/dictionary_reader.py#L14),
+and [`oRef`
+tags](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-oRef.html).
 
 ### [`copticsite.com/`](dictionary/copticsite_com/)
 
