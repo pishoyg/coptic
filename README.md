@@ -509,6 +509,64 @@ Moawad Dawoud's dictionary.
 
 ### [`kellia.uni-goettingen.de/`](dictionary/kellia_uni_goettingen_de)
 
+*TLA data:*
+
+1. The TLA data, which comprises the core of the dictionary, is retrieved from
+   [Comprehensive Coptic Lexicon: Including Loanwords from Ancient Greek v
+1.2](https://refubium.fu-berlin.de/handle/fub188/27813).
+   - [84c104](https://github.com/pishoyg/coptic/commit/84c1044282faa12daf748858351b989376f82018)
+   integrates some changes made by Coptic Scriptorium to [CDO's copy of the
+   XML](https://github.com/KELLIA/dictionary/blob/master/xml/Comprehensive_Coptic_Lexicon-v1.2-2020.xml).
+   - We may have made some changes afterwards. Use `git log` or `git diff` to
+   find them.
+
+*Supplemental forms:*
+
+Coptic Scriptorium has attempted to grow the TLA by adding supplemental forms.
+As of the time of writing, CDO is capable of expanding an entry by adding
+variant forms, but it can't add any new entries that lack a TLA ID.
+
+1. Bohairic supplemental forms are being directly retrieved from [the
+sheet](https://docs.google.com/spreadsheets/d/1r9J5nuQFQxgInLpX1Gm-I20nunIBjmGFR3CfFgK0THU)
+maintained by Coptic Scriptorium. The data that CDO [actually
+uses](https://github.com/KELLIA/dictionary/blob/edac2731c86fb02819436d39d127344e4e0bf514/utils/dictionary_reader.py#L591)
+is unavailable to us, but it's derived from the sheet.
+
+1. Sahidic supplemental forms have been snapshotted from the CDO's
+[`inflections.tab`](https://github.com/KELLIA/dictionary/blob/dev/utils/inflections.tab)
+in October 2025. As of the time of writing, they remain the CDO's `dev` branch.
+
+Supplemental forms have been, well, problematic! They seem to be poorly
+maintained by Coptic Scriptorium. As of October 2025, besides the issues above
+with accessing the latest data or a stable snapshot, their processing code seems
+to also suffer from at least the following:
+- Parts-of-speech of supplemental forms are completely ignored.
+- Markers of prenominal (`-`), pronominal (`⸗`), and qualitative (`†`) forms,
+are omitted.
+- For a given entry, Bohairic supplemental forms are taken [on an all-or-nothing
+basis](https://github.com/KELLIA/dictionary/blob/edac2731c86fb02819436d39d127344e4e0bf514/utils/dictionary_reader.py#L467).
+No deduplication or merging is performed.
+
+As of the time of writing, [Lexicon](http://remnqymi.com/crum/) often doesn't
+show the same set of supplemental forms that
+[CDO](https://coptic-dictionary.org/) shows. CDO doesn't seem to be under active
+development at the moment, and the above issues aren't expected to be resolved.
+We are considering reverting the addition of supplemental forms, and relying
+only on the TLA data.
+
+*Code:*
+
+We based [our TLA processing
+logic](./dictionary/kellia_uni_goettingen_de/kellia.py) on the CDO's
+[`dictionary_reader.py`](https://github.com/KELLIA/dictionary/blob/master/utils/dictionary_reader.py).
+Parts of the logic, particularly those pertaining to supplemental forms, are
+derived from pieces that, as of October 2025, lives in [the `dev` version of the
+file](https://github.com/KELLIA/dictionary/blob/dev/utils/dictionary_reader.py).
+
+The original code is very badly written and is completely unmaintainable, and it
+has several (small) bugs. Our code has since significantly diverged from the
+original, and there is little overlap left.
+
 ### [`copticsite.com/`](dictionary/copticsite_com/)
 
 ## [`bible/`](bible/)

@@ -1,26 +1,5 @@
 #!/usr/bin/env python3
-"""Process KELLIA's dictionary.
-
-Data:
-1. The TLA data, which comprises the core of the dictionary, is retrieved from:
-     https://refubium.fu-berlin.de/handle/fub188/27813
-2. Bohairic supplemental entries are being directly retrieved from the sheet
-   maintained by Coptic Scriptorium:
-     https://docs.google.com/spreadsheets/d/1r9J5nuQFQxgInLpX1Gm-I20nunIBjmGFR3CfFgK0THU
-3. Sahidic supplemental entries have been snapshotted from the CDO:
-     https://github.com/KELLIA/dictionary/blob/dev/utils/inflections.tab
-   The reason we choose to snapshot them instead of retrieving a live version is
-   that they remain in the `dev` branch, and it's unclear how KELLIA maintains
-   and updates the data.
-
-Code:
--  This file was inspired by:
-     https://github.com/KELLIA/dictionary/blob/master/utils/dictionary_reader.py
-   The original file was snapshotted from the `master` branch on June 1st, 2024.
--  Parts of the file, particularly those pertaining to supplemental entries, are
-   based on logic that, as of October 23, 2025, still lives in the `dev` branch:
-     https://github.com/KELLIA/dictionary/blob/dev/utils/dictionary_reader.py
-"""
+"""Process KELLIA's dictionary."""
 
 # TODO: (#305) The XML file seems to have been modified a few times by Coptic
 # Scriptorium. We expect something in the order of magnitude of 20 entries or so
@@ -1060,17 +1039,23 @@ def _sahidic_supplemental() -> dict[str, set[str]]:
     return supp
 
 
-def _build_aux(basename: str) -> abc.Generator[Word]:
-    xml_path: pathlib.Path = _V_1_2_DIR / basename
-    del basename
+def _words(basename: str) -> abc.Generator[Word]:
+    """Generate words from the given XML file.
 
+    Args:
+        basename: Basename of the XML file containing the data.
+
+    Yields:
+        Word objects representing entries in the dataset.
+    """
     text: ET.Element[str] | None = (
-        ET.parse(xml_path).getroot().find(TEI_NS + "text")
+        ET.parse(_V_1_2_DIR / basename).getroot().find(TEI_NS + "text")
     )
+    del basename
     assert text
     body: ET.Element[str] | None = text.find(TEI_NS + "body")
-    assert body
     del text
+    assert body
 
     for child in body:
         # Every child is either a super entry or an entry.
@@ -1084,41 +1069,20 @@ def _build_aux(basename: str) -> abc.Generator[Word]:
             yield _process_entry(entry)
 
 
-# pylint: disable=line-too-long
-def _build(basename: str) -> abc.Generator[Word]:
-    """Build a dataset from the given XML, adding supplemental entries.
-
-    NOTE: Supplemental entries have been... problematic! They seem to be poorly
-    maintained by Coptic Scriptorium. As of the time of writing, their
-    supplemental entries code still lives in the `dev` branch. It doesn't
-    consider parts-of-speech of supplemental entries at all (which we hope to
-    do), markers of prenominal, pronominal, and qualitative forms are omitted,
-    thus all forms agreeing in spelling are treated as equal.
-    And the criteria for whether a given supplemental entry should or
-    should not be included are unclear.
-    Also, the data that they actually use[1] is unavailable to us. We only have
-    access to this sheet[2].
-    We are considering dropping supplemental entries altogether.
-
-    As of the time of writing, discrepancies are known to exist between the
-    supplemental entries that we add and the ones that show in CDO.
-
-    [1] https://github.com/KELLIA/dictionary/blob/edac2731c86fb02819436d39d127344e4e0bf514/utils/dictionary_reader.py#L591
-    [2] https://docs.google.com/spreadsheets/d/1r9J5nuQFQxgInLpX1Gm-I20nunIBjmGFR3CfFgK0THU
+def _augmented_words(basename: str) -> abc.Generator[Word]:
+    """Augment the stream of words from the given file with supplemental forms.
 
     Args:
-        basename: The basename of the XML file containing the dataset
-            definition.
+        basename: Basename of the XML file containing the data.
 
     Yields:
-        Words in the dataset.
+        Word objects, with supplemental entries added.
     """
-    # pylint: enable=line-too-long
     b_supp: dict[str, list[str]] = _bohairic_supplemental()
     s_supp: dict[str, set[str]] = _sahidic_supplemental()
     # TODO: (#305) Part-of-speech info is present in the source data. Use it
     # instead of setting it to the empty string!
-    for word in _build_aux(basename):
+    for word in _words(basename):
         # Add Sahidic entries before Bohairic ones.
         # Additionally, we sort Sahidic entries to make the output
         # deterministic.
@@ -1159,16 +1123,20 @@ def _build(basename: str) -> abc.Generator[Word]:
 
 @functools.cache
 def egyptian() -> list[Word]:
-    return list(_build("BBAW_Lexicon_of_Coptic_Egyptian-v4-2020.xml"))
+    return list(
+        _augmented_words("BBAW_Lexicon_of_Coptic_Egyptian-v4-2020.xml"),
+    )
 
 
 @functools.cache
 def greek() -> list[Word]:
     return list(
-        _build("DDGLC_Lexicon_of_Greek_Loanwords_in_Coptic-v2-2020.xml"),
+        _augmented_words(
+            "DDGLC_Lexicon_of_Greek_Loanwords_in_Coptic-v2-2020.xml",
+        ),
     )
 
 
 @functools.cache
 def comprehensive() -> list[Word]:
-    return list(_build("Comprehensive_Coptic_Lexicon-v1.2-2020.xml"))
+    return list(_augmented_words("Comprehensive_Coptic_Lexicon-v1.2-2020.xml"))
