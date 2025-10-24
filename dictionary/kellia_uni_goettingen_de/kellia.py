@@ -19,6 +19,7 @@ from collections import OrderedDict, abc, defaultdict
 
 import pandas as pd
 
+from dictionary.kellia_uni_goettingen_de import sources
 from utils import ensure, file, gcp, log
 
 XML_NS: str = "{http://www.w3.org/XML/1998/namespace}"
@@ -32,6 +33,7 @@ _CRUM_PAGE: str = (
     "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID="
 )
 _SENSE_CHILDREN: list[str] = ["quote", "definition", "bibl", "ref", "xr"]
+_SenseChild = typing.Literal["quote", "definition", "bibl", "ref", "xr"]
 FORM_RE: re.Pattern[str] = re.compile(r"[Ⲁ-ⲱϢ-ϯⳈⳉ]+[†⸗\-]?")
 PURE_COPTIC_RE: re.Pattern[str] = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
 
@@ -54,120 +56,7 @@ _GEO_MAPPING: dict[str, str] = {
     "?": "U",
     "Ak": "O",
 }
-
-# pylint: disable=line-too-long
-_SOURCES: list[tuple[str, str]] = [
-    (
-        r"(Kasser )?CDC",
-        r"R. Kasser, Compléments au dictionnaire copte de Crum, Kairo: Inst. Français d'Archéologie Orientale, 1964",
-    ),
-    (r"KoptHWb", r"Koptisches Handw&ouml;rterbuch /\nW. Westendorf"),
-    (
-        r"CED",
-        r"J. Černý, Coptic Etymological Dictionary, Cambridge: Cambridge Univ. Press, 1976",
-    ),
-    (
-        r"DELC",
-        r"W. Vycichl, Dictionnaire étymologique de la langue copte, Leuven: Peeters, 1983",
-    ),
-    (
-        r"ChLCS",
-        r"P. Cherix, Lexique Copte (dialecte sahidique), Copticherix, 2006-2018",
-    ),
-    (
-        r"ONB",
-        r"T. Orlandi, Koptische Papyri theologischen Inhalts (Mitteilungen aus der Papyrussammlung der Österreichischen Nationalbibliothek (Papyrus Erzherzog Rainer) / Neue Serie, 9), Wien: Hollinek, 1974",
-    ),
-    (
-        r"WbGWKDT",
-        r"H. Förster, Wörterbuch der griechischen Wörter in den koptischen dokumentarischen Texten. Berlin/Boston: de Gruyter, 2002",
-    ),
-    (
-        r"LCG",
-        r"B. Layton, A Coptic grammar: with a chrestomathy and glossary; Sahidic dialect, Wiesbaden: Harrassowitz, 2000",
-    ),
-    (
-        r"Till D\.?",
-        r"W. Till, Koptische Dialektgrammatik: mit Lesestücken und Wörterbuch, München: Beck, 1961",
-    ),
-    (
-        r"Osing, Pap. Ox.",
-        r"J. Osing: Der spätägyptische Papyrus BM 10808, Harrassowitz, Wiesbaden 1976",
-    ),
-    (
-        r"Bauer",
-        r"W. Bauer, K. Aland, B. Aland, Griechisch-deutsches Wörterbuch zu den Schriften des Neuen Testaments und der frühchristlichen Literatur, Berlin: de Gruyter, 1988",
-    ),
-    (
-        r"BDAG",
-        r"F.W. Danker, W. Bauer, A Greek-English Lexicon of the New Testament and other Early Christian Literature, Chicago/London: University of Chicago Press, 2000",
-    ),
-    (
-        r"Daris 1991",
-        r"S. Daris, Il lessico Latino nel Greco d'Egitto (Estudis de Papirologia i Filologia Biblica 2), Barcelona: Ediciones Aldecoa, 1991",
-    ),
-    (
-        r"Denniston 1959",
-        r"J.D. Denniston, The Greek Particles, London: Clarendon Press, 1959",
-    ),
-    (
-        r"du Cange",
-        r"C. F. du Cange, Glossarium ad scriptores mediae et infimae Graecitatis I-II, Graz: Akademische Druck- und Verlagsanstalt, 1958",
-    ),
-    (
-        r"Hatch/Redpath 1906",
-        r"E. Hatch, H.A. Redpath, A concordance to the Septuagint and the other Greek versions of the Old Testament (including the apocryphal books), Supplement, Graz: Akademische Druck- und Verlagsanstalt, 1906",
-    ),
-    (
-        r"Kontopoulos",
-        r"N. Kontopoulos, A Lexicon of Modern Greek-English and English-Modern Greek, Smyrna/London: B. Tatikidos, Trübner & Co., 1868",
-    ),
-    (
-        r"Lampe",
-        r"G.W.H. Lampe, A patristic Greek lexicon, Oxford: Clarendon Press, 1978",
-    ),
-    (
-        r"LBG",
-        r"E. Trapp, Lexikon zur byzantinischen Gräzität, besonderes des 9.-12. Jahrhunderts, Philosophisch-historische Klasse, Denkschriften (Veröffentlichungen der Kommission für Byzantinistik 238; VI/1-4) , Wien: Österreichische Akademie der Wissenschaften, 2001",
-    ),
-    (
-        r"LSJ",
-        r"H.G. Liddell, R. Scott, H.S. Jones, A Greek-English lexicon, Oxford: Clarendon Press, 1968",
-    ),
-    (
-        r"LSJ Suppl\.",
-        r"H.G. Liddell, R. Scott, H.S. Jones, E.A. Barber, A Greek-English lexicon/Supplement, Oxford: Clarendon Press, 1968",
-    ),
-    (
-        r"Muraoka 2009",
-        r"T. Muraoka, A Greek-English Lexicon of the Septuagint, Louvain/Paris/Walpole: Peeters, 2009",
-    ),
-    (
-        r"Passow",
-        r"F. Passow, V.C.F Rost, F. Palm, Handwörterbuch der griechischen Sprache, Leipzig: Vogel, 1841",
-    ),
-    (
-        r"Preisigke",
-        r"F. Preisigke, Wörterbuch der griechischen Papyrusurkunden mit Einschluß der griechischen Inschriften, Aufschriften, Ostraka, Mumienschilder usw. aus Ägypten, Berlin: Selbstverlag der Erben, 1925-1931",
-    ),
-    (
-        r"Sophocles",
-        r"E.A. Sophocles, Greek Lexicon of the Roman and Byzantine Periods (From B. C. 146 to A. D. 1100. Memorial Edition), Cambridge/Leipzig: Harvard University Press/Harrassowitz, 1914",
-    ),
-    (
-        r"T. S. Richter 2014b",
-        r"T.S. Richter, Neue koptische medizinische Rezepte (Zeitschrift für Ägyptische Sprache und Altertumskunde ZÄS 141(2), 154-194), 2014",
-    ),
-    (
-        r"Till 1951a",
-        r"W.C. Till, Arzneikunde der Kopten, Berlin: Akademie Verlag, 1951",
-    ),
-    (
-        r"TLG",
-        r"L. Berkowitz, K.A. Squitier, Thesaurus Linguae Graecae (Canon of Greek Authors and Works), New York/Oxford: University Press, 1990",
-    ),
-]
-# pylint: enable=line-too-long
+DEFAULT_GEOS = ["S"]
 
 
 def _add_crum_links(ref_bibl: str) -> str:
@@ -185,22 +74,22 @@ def _clean(text: str) -> str:
 
 
 class Form:
-    """Line represents a single word form."""
+    """Form represents a single word form."""
 
     def __init__(
         self,
-        gram_grp: str,
+        gram_grp: str | None,
         orth: str,
         geo: str,
         form_id: str,
     ) -> None:
-        self.gram_grp: str = gram_grp
+        self.gram_grp: str | None = gram_grp
         self.orth: str = orth
         self.geo: str = _GEO_MAPPING.get(geo, geo)
         self.form_id: str = form_id
 
-    def _td(self, classes: str, text: str) -> str:
-        return f'<td class="{classes}">{text}</td>'
+    def _td(self, text: str, *classes: str) -> str:
+        return f'<td class="{" ".join([*classes, self.geo])}">{text}</td>'
 
     def tr_aux(self) -> abc.Generator[str]:
         """Construct a <tr> element for this form.
@@ -209,9 +98,9 @@ class Form:
             A string representing the HTML of a <tr> element.
         """
         yield f'<tr class="word {self.geo}">'
-        yield self._td(f"orth spelling {self.geo}", self.orth)
-        yield self._td(f"geo dialect {self.geo}", self.geo)
-        yield self._td(f"gram_grp type {self.geo}", self.gram_grp)
+        yield self._td(self.orth, "orth", "spelling")
+        yield self._td(self.geo, "geo", "dialect")
+        yield self._td(self.gram_grp or "", "gram_grp", "type")
         yield "</tr>"
 
 
@@ -220,30 +109,22 @@ class Orthography:
 
     def __init__(self) -> None:
         self.forms: list[Form] = []
-        self._last_gram_grp: str = ""
+        self._last_gram_grp: str | None = None
 
-    def add(self, line: Form) -> None:
-        self.forms.append(line)
+    def start_gram_grp(self, gram_grp: ET.Element | None) -> None:
+        self._last_gram_grp = (
+            " ".join(_compress(child.text) for child in gram_grp)
+            if gram_grp
+            else None
+        )
+
+    def add(self, orth: str, geos: list[str], form_id: str) -> None:
+        geos = geos or DEFAULT_GEOS
+        for g in geos:
+            self.forms.append(Form(self._last_gram_grp, orth, g, form_id))
 
     def has(self, orth: str) -> bool:
         return any(f.orth == orth for f in self.forms)
-
-    def add_gram_grp(self, gram_grp: ET.Element) -> None:
-        self._last_gram_grp = " ".join(
-            _compress(child.text) for child in gram_grp
-        )
-
-    def add_orth_geo_id(
-        self,
-        orth: str,
-        geos: list[str],
-        form_id: str,
-    ) -> None:
-        geos = geos or ["S"]
-        for g in geos:
-            self.forms.append(
-                Form(self._last_gram_grp, orth, g, form_id),
-            )
 
     def table_aux(self) -> abc.Generator[str]:
         yield '<table id="orths">'
@@ -259,116 +140,99 @@ class Etymology:
     """Etymology represents the etymology of a word."""
 
     def __init__(self, etym: ET.Element | None, xrs: list[ET.Element]) -> None:
-        self.amir: str = ""
-        self._greek_id: str = ""
-        if etym is not None:
-            greek_dict: OrderedDict[str, str | None] = OrderedDict()
-            for child in etym:
-                if child.tag == TEI_NS + "note":
-                    self.amir += _compress(child.text)
-                elif child.tag == TEI_NS + "ref":
-                    if "type" in child.attrib and "target" in child.attrib:
-                        assert child.attrib["type"]
-                        assert child.attrib["target"]
-                        self.amir += (
-                            child.attrib["type"]
-                            + ": "
-                            + child.attrib["target"]
-                            + " "
-                        )
-                    elif "targetLang" in child.attrib:
-                        assert child.attrib["targetLang"]
-                        assert child.text
-                        self.amir += (
-                            child.attrib["targetLang"]
-                            + ": "
-                            + child.text
-                            + " "
-                        )
-                    elif "type" in child.attrib:
-                        if "greek" in child.attrib["type"]:
-                            greek_dict[child.attrib["type"]] = child.text
-                elif child.tag == TEI_NS + "xr":
-                    for ref in child:
-                        assert child.attrib["type"]
-                        assert ref.attrib["target"]
-                        assert ref.text
-                        self.amir += (
-                            child.attrib["type"]
-                            + ". "
-                            + ref.attrib["target"]
-                            + "# "
-                            + ref.text
-                            + " "
-                        )
-            if len(greek_dict) > 0:
-                greek_parts: list[str] = []
-                for key, val in sorted(greek_dict.items()):
-                    if val is None:
-                        greek_parts = []
-                        break
-                    val = val.strip()
-                    if "grl_ID" in key:
-                        self._greek_id = val
-                    if "grl_lemma" in key:
-                        part = '<span style="color:darkred">cf. Gr.'
-                        if self._greek_id != "":
-                            part += " (DDGLC lemma ID " + self._greek_id + ")"
-                        part += "</span> " + val
-                        greek_parts.append(part)
-                    elif "meaning" in key:
-                        greek_parts.append("<i>" + val + "</i>.")
-                    elif "_pos" in key and len(val) > 0:
-                        greek_parts.append(
-                            '<span style="color:grey">' + val + "</span>",
-                        )
-                    elif "grl_ref" in key:
-                        greek_parts.append(
-                            '<span style="color:grey">(' + val + ")</span>",
-                        )
-                self.amir += " ".join(greek_parts)
+        self._greek_id: str | None = None
+        self.amir: str = "".join(self._amir(etym, xrs))
+
+    def _amir(
+        self,
+        etym: ET.Element | None,
+        xrs: list[ET.Element],
+    ) -> abc.Generator[str]:
+        greek_dict: OrderedDict[str, str | None] = OrderedDict()
+        for child in etym or []:
+
+            if child.tag == TEI_NS + "note":
+                yield _compress(child.text)
+                continue
+
+            if child.tag == TEI_NS + "xr":
+                for ref in child:
+                    assert ref.text
+                    # pylint: disable-next=line-too-long
+                    yield f"{child.attrib["type"]}. {ref.attrib["target"]}# {ref.text} "
+                continue
+
+            assert child.tag == TEI_NS + "ref"
+
+            if "type" in child.attrib and "target" in child.attrib:
+                yield f"{child.attrib["type"]}: {child.attrib["target"]} "
+                continue
+
+            if "targetLang" in child.attrib:
+                assert child.text
+                yield f"{child.attrib["targetLang"]}: {child.text} "
+                continue
+
+            if "greek" in child.attrib.get("type", ""):
+                greek_dict[child.attrib["type"]] = child.text
+                continue
+
+            # TODO: (#0) Handle remaining children.
+
+        greek_parts: list[str] = []
+        for key, val in sorted(greek_dict.items()):
+            if val is None:
+                greek_parts = []
+                break
+            val = val.strip()
+            if "grl_ID" in key:
+                self._greek_id = val
+            if "grl_lemma" in key:
+                part = '<span style="color:darkred">cf. Gr.'
+                if self._greek_id:
+                    part += " (DDGLC lemma ID " + self._greek_id + ")"
+                part += "</span> " + val
+                greek_parts.append(part)
+                continue
+            if "meaning" in key:
+                greek_parts.append("<i>" + val + "</i>.")
+                continue
+            if "_pos" in key and len(val) > 0:
+                greek_parts.append(
+                    '<span style="color:grey">' + val + "</span>",
+                )
+                continue
+            if "grl_ref" in key:
+                greek_parts.append(
+                    '<span style="color:grey">(' + val + ")</span>",
+                )
+                continue
+        yield " ".join(greek_parts)
 
         for xr in xrs:
             for ref in xr:
-                ref_target = _clean(ref.attrib["target"])
-                assert xr.attrib["type"]
+                ref_target: str = _clean(ref.attrib["target"])
                 assert ref_target
                 assert ref.text
-                self.amir += (
-                    xr.attrib["type"]
-                    + ". "
-                    + "#"
-                    + ref_target
-                    + "# "
-                    + ref.text
-                    + " "
-                )
-
-    def greek_id(self) -> str:  # dead: disable
-        return self._greek_id
+                yield f"{xr.attrib["type"]}. #{ref_target}# {ref.text} "
 
     def process(self) -> str:
-        etym = self.amir
+        etym: str = "".join(self.amir)
         xrs: list[str] = re.findall(r" #(.*?)#", etym)
         for xr in xrs:
             word = xr
             link: str = (
-                '<a href="https://coptic-dictionary.org/results.cgi?coptic='
-                + word
-                + '">'
-                + word
-                + "</a>"
+                # pylint: disable-next=line-too-long
+                f'<a href="https://coptic-dictionary.org/results.cgi?coptic={word}">{word}</a>'
             )
-            word = re.sub(r"\(", "\\(", word)
-            word = re.sub(r"\)", "\\)", word)
+            word = re.sub(r"\(", r"\(", word)
+            word = re.sub(r"\)", r"\)", word)
             etym = re.sub(r"#" + word + "#", link, etym)
         if "cf. Gr." in etym:
             etym = _link_greek(etym)
         etym = _gloss_bibl(etym)
         etym = _compress(etym)
-        if not etym:
-            return ""
-        return '<span class="etym">\n\t' + etym + "\n</span>"
+        return f'<span class="etym">{etym}</span>' if etym else ""
 
 
 class Sense:
@@ -377,26 +241,12 @@ class Sense:
     def __init__(self, sense_n: int, sense_id: str) -> None:
         self._sense_n: int = sense_n
         self._sense_id: str = sense_id
-        self._content: list[tuple[str, str]] = []
+        self._content: list[tuple[_SenseChild, str]] = []
 
-    def add_quote(self, quote: str) -> None:
-        self._content.append(("quote", quote))
-
-    def add(self, name: str, value: str) -> None:
-        assert name in _SENSE_CHILDREN or (not name and not value)
+    def add(self, name: _SenseChild, value: str) -> None:
+        assert name in _SENSE_CHILDREN
+        assert value
         self._content.append((name, value))
-
-    def add_definition(self, definition: str) -> None:
-        self.add("definition", definition)
-
-    def add_bibl(self, bibl: str) -> None:
-        self.add("bibl", bibl)
-
-    def add_ref(self, ref: str) -> None:
-        self.add("ref", ref)
-
-    def add_xr(self, xr: str) -> None:
-        self.add("xr", xr)
 
     def format(self, tag_name: str, tag_text: str) -> str:
         if not tag_name and not tag_text:
@@ -438,11 +288,11 @@ class Sense:
             yield "</td>"
             yield "</tr>"
 
-    def subset(self, *names: str) -> list[tuple[str, str]]:
+    def subset(self, *names: _SenseChild) -> list[tuple[_SenseChild, str]]:
         assert all(n in _SENSE_CHILDREN for n in names), names
         return [pair for pair in self._content if pair[0] in names]
 
-    def explain(self, prefix: str = "") -> list[tuple[str, str]]:
+    def explain(self, prefix: str = "") -> list[tuple[_SenseChild, str]]:
         explanation = self.subset("quote", "definition")
         if not explanation:
             return explanation
@@ -450,7 +300,7 @@ class Sense:
             explanation[0] = (explanation[0][0], prefix + explanation[0][1])
         return explanation
 
-    def give_references(self) -> list[tuple[str, str]]:
+    def give_references(self) -> list[tuple[_SenseChild, str]]:
         return self.subset("bibl", "ref", "xr")
 
 
@@ -464,37 +314,32 @@ class Lang:
         self.name: typing.Literal["de", "en", "fr", "MERGED"] = name
         self.senses: list[Sense] = []
 
-    def add_sense(self, sense_n: int, sense_id: str) -> None:
+    def start_sense(self, sense_n: int, sense_id: str) -> None:
         self.senses.append(Sense(sense_n, sense_id))
 
     @property
     def _last_sense(self) -> Sense:
         return self.senses[-1]
 
-    def add_quote(self, quote: str) -> None:
-        self._last_sense.add_quote(quote)
-
-    def add_definition(self, definition: ET.Element) -> None:
-        self._last_sense.add_definition(_compress(definition.text))
-
-    def add_bibl(self, bibl: ET.Element | None) -> None:
-        if bibl is None:
-            return
-        if not bibl.text:
-            return
-        self._last_sense.add_bibl(bibl.text)
-
-    def add_ref(self, ref: ET.Element) -> None:
-        assert ref.text
-        self._last_sense.add_ref(ref.text)
-
-    def add_xr(self, xr: ET.Element) -> None:
-        for ref in xr:
-            assert ref.text
-            text = xr.tag[29:] + ". " + ref.attrib["target"] + "# " + ref.text
-            self._last_sense.add_xr(text)
-
-    def add(self, name: str, value: str) -> None:
+    def add(self, name: _SenseChild, value: str | ET.Element) -> None:
+        if isinstance(value, ET.Element):
+            if name == "xr":
+                for ref in value:
+                    assert ref.text
+                    self._last_sense.add(
+                        "xr",
+                        value.tag[29:]
+                        + ". "
+                        + ref.attrib["target"]
+                        + "# "
+                        + ref.text,
+                    )
+                return
+            assert value.text
+            value = value.text
+        assert isinstance(value, str)
+        if name == "definition":
+            value = _compress(value)
         self._last_sense.add(name, value)
 
     def table(self) -> str:
@@ -522,18 +367,9 @@ def _gloss_bibl(ref_bibl: str) -> str:
         The HTML of the bibliography, with hints added.
 
     """
-    page_expression = r"(?: §)? ?[0-9A-Za-z:]+(, ?[0-9A-Za-z:]+)*"
-    template = '<a class="hint" data-tooltip="**src**">?</a>'
-
-    for find, rep in _SOURCES:
-        ref_bibl = re.sub(
-            "(" + find + page_expression + ")",
-            r"\1" + template.replace("**src**", rep),
-            ref_bibl,
-        )
-
-    ref_bibl = re.sub("DDGLC ref:", "DDGLC Usage ID:", ref_bibl)
-
+    for regex, repl in sources.SOURCES:
+        ref_bibl = regex.sub(repl, ref_bibl)
+    ref_bibl = ref_bibl.replace("DDGLC ref:", "DDGLC Usage ID:")
     return ref_bibl
 
 
@@ -544,8 +380,6 @@ def _link_greek(etym: str) -> str:
     word = m.group(1).strip()
     href = "https://www.billmounce.com/search/node/{greek}%20type%3Alexicon"
 
-    # Convert polytonic Greek to beta-code using perseids-tools/beta-code-py
-    # conversion table.
     link = f' <a href="{href}">{word};</a>'
     linked = re.sub(
         r"(cf\. Gr\.[^<>]*</span>)[^<>]+(<i>)",
@@ -590,9 +424,7 @@ class Word:
         lemma_form_id: str | None,
         orthstring: Orthography,
         pos_string: str,
-        de: Lang,
-        en: Lang,
-        fr: Lang,
+        langs: dict[str, Lang],
         etym_string: Etymology,
         oref_string: str,
     ) -> None:
@@ -600,34 +432,24 @@ class Word:
         self.lemma_form_id: str | None = lemma_form_id
         self.orthstring: Orthography = orthstring
         self.pos_string: str = pos_string
-        self.de: Lang = de
-        self.en: Lang = en
-        self.fr: Lang = fr
+        self.langs: dict[str, Lang] = langs
         self.etym_string: Etymology = etym_string
         self.oref_string: str = oref_string
 
     def merge_langs(self) -> Lang:
         merged: Lang = Lang("MERGED")
-        assert (
-            len(self.de.senses) == len(self.en.senses) == len(self.fr.senses)
-        )
-        for de, en, fr in zip(
-            self.de.senses,
-            self.en.senses,
-            self.fr.senses,
-        ):
-            assert de.identify() == en.identify() == fr.identify()
-            merged.add_sense(*de.identify())
-            for row in en.explain('<span class="lang">(En.) </span>'):
+        de, en, fr = self.langs["de"], self.langs["en"], self.langs["fr"]
+        assert len(de.senses) == len(en.senses) == len(fr.senses)
+        for d, e, f in zip(de.senses, en.senses, fr.senses):
+            assert d.identify() == e.identify() == f.identify()
+            merged.start_sense(*d.identify())
+            for row in e.explain('<span class="lang">(En.) </span>'):
                 merged.add(*row)
-            merged.add("", "")
-            for row in de.explain('<span class="lang">(De.) </span>'):
+            for row in d.explain('<span class="lang">(De.) </span>'):
                 merged.add(*row)
-            merged.add("", "")
-            for row in fr.explain('<span class="lang">(Fr.) </span>'):
+            for row in f.explain('<span class="lang">(Fr.) </span>'):
                 merged.add(*row)
-            merged.add("", "")
-            for row in de.give_references():
+            for row in d.give_references():
                 merged.add(*row)
         return merged
 
@@ -653,26 +475,19 @@ def _deprecated(element: ET.Element) -> bool:
 
 
 def _is_lemma(form: ET.Element) -> bool:
-    return form.attrib.get("type") == "lemma"
+    return not _deprecated(form) and form.attrib["type"] == "lemma"
 
 
-def _orths(form: ET.Element) -> list[ET.Element]:
-    orths: list[ET.Element] = form.findall(TEI_NS + "orth")
+def _orths(form: ET.Element) -> abc.Generator[ET.Element]:
+    yield from form.findall(TEI_NS + "orth")
     if form.text is not None and form.text.strip():
-        orths.append(form)
-    return orths
+        yield form
 
 
-def _lemma_orth(forms: list[ET.Element]) -> str:
-    for form in forms:
-        if _deprecated(form):
-            continue
-        if not _is_lemma(form):
-            continue
-        first_orth: str | None = _orths(form)[0].text
-        assert first_orth
-        return first_orth
-    raise ValueError("No lemma orth found!")
+def _orth(lemma: ET.Element) -> str:
+    first_orth: str | None = next(_orths(lemma)).text
+    assert first_orth
+    return first_orth
 
 
 def _process_entry(entry: ET.Element) -> Word:
@@ -688,7 +503,7 @@ def _process_entry(entry: ET.Element) -> Word:
     oref_strings: list[str] = []
     oref_text: str = ""
 
-    lemma_orth: str | None = _lemma_orth(forms) if lemma else None
+    lemma_orth: str | None = _orth(lemma) if lemma else None
 
     first: list[ET.Element] = []
     last: list[ET.Element] = []
@@ -715,7 +530,7 @@ def _process_entry(entry: ET.Element) -> Word:
             TEI_NS + "gramGrp",
         ) or entry.find(TEI_NS + "gramGrp")
         if gram_grp:
-            orthography.add_gram_grp(gram_grp)
+            orthography.start_gram_grp(gram_grp)
 
         for orth in _orths(form):
             assert orth.text
@@ -728,7 +543,7 @@ def _process_entry(entry: ET.Element) -> Word:
                 oref_text = orth_text
             oref_text = _clean(oref_text)
 
-            orthography.add_orth_geo_id(
+            orthography.add(
                 orth_text,
                 _geos(form),
                 form.attrib[XML_NS + "id"],
@@ -736,70 +551,58 @@ def _process_entry(entry: ET.Element) -> Word:
 
         oref_strings.append(oref_text)
 
-    de = Lang("de")
-    en = Lang("en")
-    fr = Lang("fr")
+    langs: dict[str, Lang] = {
+        "de": Lang("de"),
+        "en": Lang("en"),
+        "fr": Lang("fr"),
+    }
 
-    senses: list[ET.Element] = entry.findall(
-        TEI_NS + "sense",
-    )
-    sense_n: int = 1
-    for sense in senses:
+    for sense_n, sense in enumerate(entry.findall(TEI_NS + "sense"), 1):
         sense_id: str = sense.attrib[XML_NS + "id"]
-        de.add_sense(sense_n, sense_id)
-        en.add_sense(sense_n, sense_id)
-        fr.add_sense(sense_n, sense_id)
-        for sense_child in sense:
-            if sense_child.tag == TEI_NS + "cit":
-                bibl: ET.Element | None = sense_child.find(
-                    TEI_NS + "bibl",
-                )
-                quotes: list[ET.Element] = sense_child.findall(
-                    TEI_NS + "quote",
-                )
-                definitions: list[ET.Element] = sense_child.findall(
-                    TEI_NS + "def",
-                )
+        for lang in langs.values():
+            lang.start_sense(sense_n, sense_id)
 
-                for quote in quotes:
-                    if quote.text is None:
-                        continue
-                    q: str = _compress(quote.text)
-                    lang = quote.get(
-                        XML_NS + "lang",
-                    )
-                    if lang == "de":
-                        de.add_quote(q)
-                    elif lang == "en":
-                        en.add_quote(q)
-                    elif lang == "fr":
-                        fr.add_quote(q)
+        for child in sense:
+            if child.tag == TEI_NS + "ref":
+                for lang in langs.values():
+                    lang.add("ref", child)
+                continue
 
-                for definition in definitions:
-                    if definition.text is None:
-                        continue
-                    lang = definition.get(
-                        XML_NS + "lang",
-                    )
-                    if lang == "de":
-                        de.add_definition(definition)
-                    elif lang == "en":
-                        en.add_definition(definition)
-                    elif lang == "fr":
-                        fr.add_definition(definition)
-                de.add_bibl(bibl)
-                en.add_bibl(bibl)
-                fr.add_bibl(bibl)
-            elif sense_child.tag == TEI_NS + "ref":
-                de.add_ref(sense_child)
-                en.add_ref(sense_child)
-                fr.add_ref(sense_child)
-            elif sense_child.tag == TEI_NS + "xr":
-                de.add_xr(sense_child)
-                en.add_xr(sense_child)
-                fr.add_xr(sense_child)
+            if child.tag == TEI_NS + "xr":
+                for lang in langs.values():
+                    lang.add("xr", child)
+                continue
 
-        sense_n += 1
+            if child.tag == TEI_NS + "note":
+                continue
+
+            assert child.tag == TEI_NS + "cit"
+
+            bibl: ET.Element | None = child.find(TEI_NS + "bibl")
+            if bibl:
+                for lang in langs.values():
+                    lang.add("bibl", bibl)
+            del bibl
+
+            language: str | None
+            for quote in child.findall(TEI_NS + "quote"):
+                if quote.text is None:
+                    continue
+                language = quote.get(XML_NS + "lang")
+                if not language:
+                    # TODO: (#0) Incorporate quotes with an unknown language.
+                    continue
+                langs[language].add("quote", _compress(quote.text))
+
+            for definition in child.findall(TEI_NS + "def"):
+                if definition.text is None:
+                    continue
+                language = definition.get(XML_NS + "lang")
+                if not language:
+                    # TODO: (#0) Incorporate definitions with an unknown
+                    # language.
+                    continue
+                langs[language].add("definition", definition)
 
     # POS -- a single Scriptorium POS tag for each entry
     pos_list: list[str] = []
@@ -830,9 +633,7 @@ def _process_entry(entry: ET.Element) -> Word:
         # On the rare occasion pos_list has len > 1 at this point, the first one
         # is the most valid.
         pos_list[0],
-        de,
-        en,
-        fr,
+        langs,
         Etymology(
             entry.find(TEI_NS + "etym"),
             entry.findall(TEI_NS + "xr"),
@@ -1080,9 +881,10 @@ def _augmented_words(basename: str) -> abc.Generator[Word]:
     """
     b_supp: dict[str, list[str]] = _bohairic_supplemental()
     s_supp: dict[str, set[str]] = _sahidic_supplemental()
-    # TODO: (#305) Part-of-speech info is present in the source data. Use it
-    # instead of setting it to the empty string!
     for word in _words(basename):
+        # TODO: (#305) Part-of-speech info is present in the source data. Use it
+        # instead of setting the gram_grp to None for all supplemental forms.
+        word.orthstring.start_gram_grp(None)
         # Add Sahidic entries before Bohairic ones.
         # Additionally, we sort Sahidic entries to make the output
         # deterministic.
@@ -1091,7 +893,7 @@ def _augmented_words(basename: str) -> abc.Generator[Word]:
             if word.orthstring.has(orth):
                 # The word already has this orth.
                 continue
-            word.orthstring.add(Form("", orth, "S", FROM_COPTIC_SCRIPTORIUM))
+            word.orthstring.add(orth, ["S"], FROM_COPTIC_SCRIPTORIUM)
         # TODO: (#305) We don't sort Bohairic forms because they already have
         # some order that would be corrupted if we were to reorder them below.
         # The lists retrieved have lamma forms first. We should order them by
@@ -1105,7 +907,7 @@ def _augmented_words(basename: str) -> abc.Generator[Word]:
             yield word
             continue
         for orth in b:
-            word.orthstring.add(Form("", orth, "B", FROM_COPTIC_SCRIPTORIUM))
+            word.orthstring.add(orth, ["B"], FROM_COPTIC_SCRIPTORIUM)
         yield word
 
     # Verify that all Sahidic supplemental entries have been consumed.
@@ -1121,22 +923,20 @@ def _augmented_words(basename: str) -> abc.Generator[Word]:
         log.error("Bohairic forms", forms, "have an invalid TLA ID", tla_id)
 
 
+def _dataset(basename: str) -> list[Word]:
+    return list(_augmented_words(basename))
+
+
 @functools.cache
 def egyptian() -> list[Word]:
-    return list(
-        _augmented_words("BBAW_Lexicon_of_Coptic_Egyptian-v4-2020.xml"),
-    )
+    return _dataset("BBAW_Lexicon_of_Coptic_Egyptian-v4-2020.xml")
 
 
 @functools.cache
 def greek() -> list[Word]:
-    return list(
-        _augmented_words(
-            "DDGLC_Lexicon_of_Greek_Loanwords_in_Coptic-v2-2020.xml",
-        ),
-    )
+    return _dataset("DDGLC_Lexicon_of_Greek_Loanwords_in_Coptic-v2-2020.xml")
 
 
 @functools.cache
 def comprehensive() -> list[Word]:
-    return list(_augmented_words("Comprehensive_Coptic_Lexicon-v1.2-2020.xml"))
+    return _dataset("Comprehensive_Coptic_Lexicon-v1.2-2020.xml")
