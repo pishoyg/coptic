@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 """Process KELLIA's dictionary."""
 
-# TODO: (#305) The XML file seems to have been modified a few times by Coptic
-# Scriptorium. We expect something in the order of magnitude of 20 entries or so
-# to have been modified. Retrieve an updated version.
-
 # TODO: (#525) Consider using the same HTML structure as Crum.
 
 # TODO: (#577) Rewrite this file to align with our technical standards.
@@ -663,85 +659,83 @@ def _pos_map(pos: str, subc: str, orthography: Orthography) -> str:
         or pos == "Kompositum"
     ):
         return "N"
-    elif (
+    if (
         "Ausdruck der Nichtexistenz" in subc
         or "Ausdruck des Nicht-Habens" in subc
     ):
         return "EXIST"
-    elif pos == "Adv.":
+    if pos == "Adv.":
         return "ADV"
-    elif pos == "Vb." or pos == "unpersönlicher Ausdruck":
+    if pos == "Vb." or pos == "unpersönlicher Ausdruck":
         if subc == "Qualitativ":
             return "VSTAT"
-        elif subc == "Suffixkonjugation":
+        if subc == "Suffixkonjugation":
             return "VBD"
-        elif subc == "Imperativ":
+        if subc == "Imperativ":
             return "VIMP"
-        elif orthography.has("ⲟⲩⲛ-") or orthography.has("ⲟⲩⲛⲧⲉ-"):
+        if orthography.has("ⲟⲩⲛ-") or orthography.has("ⲟⲩⲛⲧⲉ-"):
             return "EXIST"
-        else:
-            return "V"
-    elif pos == "Präp.":
+        return "V"
+    if pos == "Präp.":
         return "PREP"
-    elif (
+    if (
         pos == "Zahlzeichen"
         or pos == "Zahlwort"
         or pos == "Präfix der Ordinalzahlen"
     ):
         return "NUM"
-    elif (
+    if (
         pos == "Partikel"
         or pos == "Interjektion"
         or pos == "Partikel, enklitisch"
     ):
         return "PTC"
-    elif (
+    if (
         pos == "Selbst. Pers. Pron."
         or pos == "Suffixpronomen"
         or pos == "Präfixpronomen (Präsens I)"
     ):
         return "PPER"
-    elif pos == "Konj.":
+    if pos == "Konj.":
         return "CONJ"
-    elif pos == "Dem. Pron.":
+    if pos == "Dem. Pron.":
         return "PDEM"
-    elif pos == "bestimmter Artikel" or pos == "unbestimmter Artikel":
+    if pos == "bestimmter Artikel" or pos == "unbestimmter Artikel":
         return "ART"
-    elif pos == "Possessivartikel" or pos == "Possessivpräfix":
+    if pos == "Possessivartikel" or pos == "Possessivpräfix":
         return "PPOS"
-    elif pos == "Poss. Pron.":
+    if pos == "Poss. Pron.":
         return "PPERO"
-    elif pos == "Interr. Pron.":
+    if pos == "Interr. Pron.":
         return "PINT"
-    elif pos == "Verbalpräfix":
+    if pos == "Verbalpräfix":
         if subc == "Imperativpräfix ⲁ-" or subc == "Negierter Imperativ ⲙⲡⲣ-":
             return "NEG"
         if subc == "im negativen Bedingungssatz" or subc == "Perfekt II ⲉⲛⲧⲁ-":
             return "NONE"
-        else:
-            return "A"
-    elif pos == "Pron.":
+        return "A"
+    if pos == "Pron.":
         if subc == "None":
             return "PPER"
-        elif subc == "Indefinitpronomen" or subc == "Fragepronomen":
+        if subc == "Indefinitpronomen" or subc == "Fragepronomen":
             return "PINT"
-        elif subc == "Reflexivpronomen":
+        if subc == "Reflexivpronomen":
             return "PREP"
-    elif pos == "Satzkonverter":
+    if pos == "Satzkonverter":
         return "C"
-    elif pos == "Präfix":
+    if pos == "Präfix":
         if orthography.has("ⲧⲁ-"):
             return "PPOS"
-        elif orthography.has("ⲧⲃⲁⲓ-"):
+        if orthography.has("ⲧⲃⲁⲓ-"):
             return "N"
-        elif orthography.has("ⲧⲣⲉ-"):
+        if orthography.has("ⲧⲣⲉ-"):
             return "A"
-    elif pos == "None" or pos == "?":
+    if pos == "None" or pos == "?":
         if subc == "None":
             return "NULL"
         if subc == "Qualitativ":
             return "VSTAT"
-    elif orthography.has("ϭⲁⲛⲛⲁⲥ"):
+    if orthography.has("ϭⲁⲛⲛⲁⲥ"):
         return "NULL"
 
     return "?"
