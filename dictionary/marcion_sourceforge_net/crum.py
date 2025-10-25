@@ -402,7 +402,10 @@ class Root(Row):
         return senses
 
     def max_img_idx(self, sense: int) -> int:
-        return max(img.idx for img in self.images if img.sense_num == sense)
+        return max(
+            (img.idx for img in self.images if img.sense_num == sense),
+            default=1,
+        )
 
     # TODO: (#189) Require the presence of a sense once the sense data has been
     # fully populated.
