@@ -8,6 +8,7 @@ import typing
 from collections import abc
 
 import pandas as pd
+import yaml
 
 from utils import log, orth
 
@@ -101,6 +102,18 @@ def json_dumps(j: object, **kwargs: typing.Any) -> str:
         ensure_ascii=False,
         allow_nan=False,
         **kwargs,
+    )
+
+
+def yaml_dump_all(y: abc.Iterable[typing.Any]) -> str:
+    return yaml.dump_all(
+        y,
+        Dumper=yaml.SafeDumper,
+        sort_keys=False,
+        allow_unicode=True,
+        width=120,
+        default_flow_style=False,
+        default_style=None,  # Avoid printing quotes.
     )
 
 
