@@ -223,6 +223,7 @@ repos:
       - id: check-symlinks
       - id: check-vcs-permalinks
       - id: check-yaml
+        args: [--allow-multiple-documents]
       - id: check-toml
       - id: debug-statements
       - id: destroyed-symlinks
@@ -256,7 +257,7 @@ repos:
         # The KELLIA driver contains non-English text.
         # Other types of files are data files, not code files. We don't take
         # data updates lightly.
-        exclude: ".*\\.(xml|html|xhtml|txt|tsv|csv|json|tab|msql|xsd)$|dictionary/kellia_uni_goettingen_de/main.py|docs/crum/references.(t|j)s"
+        exclude: ".*\\.(xml|html|xhtml|txt|tsv|csv|json|tab|msql|xsd)$|dictionary/kellia_uni_goettingen_de/(main.py|data/.*)|docs/crum/references.(t|j)s"
         args: [-L, "afterAll,astroid,Cant,pres,serie,cange"]
 
   # Git Commit Messages
