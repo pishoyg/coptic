@@ -7,6 +7,10 @@
 # - One thing to do is to introduce objects that represent XML entities, instead
 #   of using raw ET.Element objects throughout the program.
 
+# NOTE: As of the time of writing, the truth value of an ET.Element object
+# depends on the number of children. Instead of directly evaluating the truth
+# value of an `ET.Element | None`, use `is not None`.
+
 import functools
 import itertools
 import pathlib
@@ -19,6 +23,7 @@ import pandas as pd
 
 from dictionary.kellia_uni_goettingen_de import sources
 from utils import ensure, file, gcp, log
+from utils import text as txt
 
 XML_NS: str = "{http://www.w3.org/XML/1998/namespace}"
 TEI_NS: str = "{http://www.tei-c.org/ns/1.0}"
@@ -30,8 +35,14 @@ _CRUM_RE: re.Pattern[str] = re.compile(r"\b(CD ([0-9]+[ab]?)-?[0-9]*[ab]?)\b")
 _CRUM_PAGE: str = (
     "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID="
 )
-_SENSE_CHILDREN: list[str] = ["quote", "definition", "bibl", "ref", "xr"]
 _SenseChild = typing.Literal["quote", "definition", "bibl", "ref", "xr"]
+_SENSE_CHILDREN: list[_SenseChild] = [
+    "quote",
+    "definition",
+    "bibl",
+    "ref",
+    "xr",
+]
 FORM_RE: re.Pattern[str] = re.compile(r"[Ⲁ-ⲱϢ-ϯⳈⳉ]+[†⸗\-]?")
 PURE_COPTIC_RE: re.Pattern[str] = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
 
@@ -112,7 +123,7 @@ class Orthography:
     def start_gram_grp(self, gram_grp: ET.Element | None) -> None:
         self._last_gram_grp = (
             " ".join(_compress(child.text) for child in gram_grp)
-            if gram_grp
+            if gram_grp is not None
             else None
         )
 
@@ -242,16 +253,10 @@ class Sense:
         assert value
         self._content.append((name, value))
 
-    def format(self, tag_name: str, tag_text: str) -> str:
-        if not tag_name and not tag_text:
-            return ""
-        if tag_name != "bibl":
-            return f'<span class="{tag_name}">{tag_text}</span>'
-
-        split: list[str] = tag_text.split("; ")
-        split = [s.strip() for s in split]
-        split = list(filter(None, split))
-        return _add_crum_links("\n".join(split))
+    def format(self, pair: tuple[_SenseChild, str]) -> str:
+        if pair[0] == "bibl":
+            return _add_crum_links("\n".join(txt.ssplit(pair[1], "; ")))
+        return f'<span class="{pair[0]}">{pair[1]}</span>'
 
     def identify(self) -> tuple[int, str]:
         return (self._sense_n, self._sense_id)
@@ -266,19 +271,17 @@ class Sense:
         yield f"<!--sense_number:{self._sense_n}, sense_id:{self._sense_id}-->"
         yield "<tr>"
         yield '<td class="meaning">'
-        yield "\n".join(
-            self.format(*pair) for pair in self.subset("quote", "definition")
-        )
+        yield "\n".join(map(self.format, self.subset("quote", "definition")))
         yield "</td>"
         yield '<td class="bibl">'
-        yield "\n".join(self.format(*pair) for pair in self.subset("bibl"))
+        yield "\n".join(map(self.format, self.subset("bibl")))
         yield "</td>"
         yield "</tr>"
         ref_xr = self.subset("ref", "xr")
         if ref_xr:
             yield "<tr>"
             yield '<td class="ref_xr" colspan="2">'
-            yield "\n".join(self.format(*pair) for pair in ref_xr)
+            yield "\n".join(map(self.format, ref_xr))
             yield "</td>"
             yield "</tr>"
 
@@ -322,11 +325,7 @@ class Lang:
                     assert ref.text
                     self._last_sense.add(
                         "xr",
-                        value.tag[29:]
-                        + ". "
-                        + ref.attrib["target"]
-                        + "# "
-                        + ref.text,
+                        f"{value.tag[29:]}. {ref.attrib["target"]}# {ref.text}",
                     )
                 return
             assert value.text
@@ -486,7 +485,7 @@ def _process_entry(entry: ET.Element) -> Word:
         log.error("No lemma found for", entry_xml_id)
 
     forms = sorted(forms, key=_form_sort_key)
-    if lemma:
+    if lemma is not None:
         lemma_orth: str = _orth(lemma)
         forms = sorted(
             forms,
@@ -501,11 +500,15 @@ def _process_entry(entry: ET.Element) -> Word:
 
     for form in forms:
         assert not form.text or not form.text.strip()
-        if lemma and form.attrib[XML_NS + "id"] == lemma.attrib[XML_NS + "id"]:
+        if (
+            lemma is not None
+            and form.attrib[XML_NS + "id"] == lemma.attrib[XML_NS + "id"]
+        ):
             continue
 
         gram_grp: ET.Element | None = form.find(TEI_NS + "gramGrp")
-        gram_grp = gram_grp or entry.find(TEI_NS + "gramGrp")
+        if gram_grp is None:
+            gram_grp = entry.find(TEI_NS + "gramGrp")
         assert gram_grp
         orthography.start_gram_grp(gram_grp)
 
@@ -543,7 +546,7 @@ def _process_entry(entry: ET.Element) -> Word:
             assert child.tag == TEI_NS + "cit"
 
             bibl: ET.Element | None = child.find(TEI_NS + "bibl")
-            if bibl:
+            if bibl is not None:
                 for lang in langs.values():
                     lang.add("bibl", bibl)
             del bibl
