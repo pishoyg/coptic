@@ -1,0 +1,394 @@
+---
+superEntry:
+  CHILDREN:
+    - entry
+---
+entry:
+  type:
+    3 DISTINCT VALUES:
+      - compound
+      - foreign
+      - hom
+  xml:id:
+    11284 DISTINCT VALUES:
+      - C1
+      - C10
+      - C100
+      - C1000
+      - C10000
+      - C10001
+      - C10002
+      - C10003
+      - C10004
+      - C10005
+      - …
+  change:
+    1 DISTINCT VALUES:
+      - '#deprecated #v1.2'
+  STRINGS:
+    1 DISTINCT VALUES:
+      - to be deleted?; no longer in DB
+  CHILDREN:
+    - form
+    - gramGrp
+    - sense
+    - etym
+    - xr
+    - note
+---
+form:
+  type:
+    3 DISTINCT VALUES:
+      - compound
+      - inflected
+      - lemma
+  xml:id:
+    32231 DISTINCT VALUES:
+      - CF1
+      - CF10
+      - CF100
+      - CF1000
+      - CF10000
+      - CF10001
+      - CF10002
+      - CF10003
+      - CF10004
+      - CF10005
+      - …
+  change:
+    2 DISTINCT VALUES:
+      - '#added #v1.2'
+      - '#deprecated #v1.2'
+  corresp:
+    762 DISTINCT VALUES:
+      - '''CF31420'', ''CF31421'''
+      - '''CF31422'', ''CF31423'''
+      - '''CF31426'', ''CF31427'''
+      - '''CF31428'', ''CF31429'''
+      - '''CF31430'', ''CF31431'''
+      - '''CF31432'', ''CF31433'''
+      - '''CF31434'', ''CF31435'''
+      - '''CF31436'', ''CF31437'''
+      - '''CF31438'', ''CF31439'''
+      - '''CF31440'''
+      - …
+  STRINGS:
+    3 DISTINCT VALUES:
+      - ⲓ
+      - ⲙⲉⲧϩⲟⲩⲟ
+      - ⲣⲧϭⲟⲧ
+  CHILDREN:
+    - gramGrp
+    - note
+    - usg
+    - oRef
+    - orth
+---
+gramGrp:
+  STRINGS:
+    6 DISTINCT VALUES:
+      - "<gram type=\"pos\">Possessivartikel</gram>\n          <gram type=\"gen\">m.</gram>\n
+        \         <gram type=\"number\">sg.</gram>\n          <gram type=\"person[psor]\">1.</gram>\n
+        \         <gram type=\"number[psor]\">sg.</gram>"
+      - "<gram type=\"pos\">Possessivartikel</gram>\n          <gram type=\"gen\">m.</gram>\n
+        \         <gram type=\"number\">sg.</gram>\n          <gram type=\"person[psor]\">2.</gram>\n
+        \         <gram type=\"gen[psor]\">f.</gram>\n          <gram type=\"number[psor]\">sg.</gram>"
+      - "<gram type=\"pos\">Possessivartikel</gram>\n          <gram type=\"number\">pl.</gram>\n
+        \         <gram type=\"person[psor]\">1.</gram>\n          <gram
+        type=\"number[psor]\">sg.</gram>"
+      - "<gram type=\"pos\">Possessivartikel</gram>\n          <gram type=\"number\">pl.</gram>\n
+        \         <gram type=\"person[psor]\">2.</gram>\n          <gram
+        type=\"gen[psor]\">f.</gram>\n          <gram type=\"number[psor]\">sg.</gram>"
+      - "<gram type=\"pos\">Possessivartikel</gram>\n         <gram type=\"gen\">f.</gram>\n
+        \        <gram type=\"number\">sg.</gram>\n         <gram type=\"person[psor]\">1.</gram>\n
+        \        <gram type=\"number[psor]\">sg.</gram>"
+      - "=\n          <gram type=\"pos\">Possessivartikel</gram>\n          <gram
+        type=\"gen\">f.</gram>\n          <gram type=\"number\">sg.</gram>\n
+        \         <gram type=\"person[psor]\">2.</gram>\n          <gram
+        type=\"gen[psor]\">f.</gram>\n          <gram type=\"number[psor]\">sg.</gram>"
+  CHILDREN:
+    - note
+    - gram
+    - subc
+    - gen
+    - pos
+    - number
+---
+sense:
+  xml:id:
+    15923 DISTINCT VALUES:
+      - CS1
+      - CS10
+      - CS100
+      - CS1000
+      - CS10000
+      - CS10001
+      - CS10002
+      - CS10003
+      - CS10004
+      - CS10005
+      - …
+  CHILDREN:
+    - xr
+    - note
+    - cit
+    - ref
+---
+etym:
+  CHILDREN:
+    - xr
+    - note
+    - ref
+---
+xr:
+  type:
+    3 DISTINCT VALUES:
+      - ant
+      - cf
+      - syn
+  CHILDREN:
+    - ref
+---
+note:
+  xml:lang:
+    3 DISTINCT VALUES:
+      - de
+      - en
+      - fr
+  STRINGS:
+    406 DISTINCT VALUES:
+      - '"Bock des Himmels"'
+      - (?)
+      - (extrem selten)
+      - (f.?)
+      - (mostly)
+      - (once)
+      - (rare)
+      - (selten)
+      - 13. Buchstabe des Alphabeths ⲛⲉ
+      - 14er Buchstabe des Alphabeths ⲝⲓ
+      - …
+---
+cit:
+  type:
+    2 DISTINCT VALUES:
+      - example
+      - translation
+  CHILDREN:
+    - note
+    - def
+    - quote
+    - bibl
+---
+gram:
+  type:
+    6 DISTINCT VALUES:
+      - collocAdv
+      - collocConj
+      - collocNoun
+      - collocParticle
+      - collocPartikel
+      - collocPrep
+  STRINGS:
+    107 DISTINCT VALUES:
+      - (ⲛ)ⲛⲁϩⲣⲛ-
+      - ϣⲁ
+      - ϣⲁ-
+      - ϣⲟⲩϩⲏⲛⲉ
+      - ϧⲁϫⲉⲛ-
+      - ϧⲉⲛ-
+      - ϩⲁ(ϩ)ⲧⲛ-
+      - ϩⲁ-
+      - ϩⲁϩⲧⲛ-
+      - ϩⲁϫⲛ-
+      - …
+---
+def:
+  xml:lang:
+    3 DISTINCT VALUES:
+      - de
+      - en
+      - fr
+  STRINGS:
+    146 DISTINCT VALUES:
+      - (red) tourmaline
+      - "= ⲓⲣⲓ esp. in relative clauses (not with\n              fut)"
+      - Fokalisierungskonverter ("2. Tempus")
+      - "Form von ⲓⲣⲓ in den Dauerzeiten (besonders in\n              Relativsätzen)"
+      - Fragepartikel
+      - Kirche, Altar
+      - Negative nominal prefix
+      - "Negativpräfix zur Bildung von Substantiven\n              f."
+      - Partikel des Genitivs
+      - "Partikel, forme réduite de participle\n              parfait"
+      - …
+---
+quote:
+  xml:lang:
+    3 DISTINCT VALUES:
+      - de
+      - en
+      - fr
+  STRINGS:
+    28326 DISTINCT VALUES:
+      - '"Balkenlage", Dach'
+      - '"Erdesser"'
+      - '"Erdträger"'
+      - "\"Finger\" (als Gerät aus Holz oder\n            Metall)"
+      - '"Finger" (als kleines Längenmaß)'
+      - '"I bear witness" / to bear witness'
+      - '"Linsenfleck", Lentigo'
+      - '"Mann Gottes", frommer Mensch'
+      - '"Milchbruder", Verwandter'
+      - "\"Persian\" (referring to the Kurds who\n            established
+        the Ayyubid dynasty in Egypt)"
+      - …
+---
+ref:
+  target:
+    671 DISTINCT VALUES:
+      - '# ϩⲏⲧ'
+      - '# ϩⲱⲗ'
+      - '# ϫⲁⲥⲓ-'
+      - '# ⲙⲁⲛⲉ'
+      - '# ⲥⲱϩⲉ'
+      - '# ⲥⲱⲟⲩϩ'
+      - '#(ⲉ)ⲙⲃⲟⲕⲓ'
+      - '#-ⲥⲉ'
+      - '#-ⲥⲟⲩ'
+      - '#21770'
+      - …
+  type:
+    9 DISTINCT VALUES:
+      - Greek
+      - WCNae
+      - WCNde
+      - coptic_usage::cu_ID
+      - greek_lemma::grl_ID
+      - greek_lemma::grl_lemma
+      - greek_lemma::grl_meaning
+      - greek_lemma::grl_pos
+      - greek_lemma::grl_ref
+  xml:lang:
+    1 DISTINCT VALUES:
+      - grc
+  STRINGS:
+    17117 DISTINCT VALUES:
+      - "\"friend of the first rank\" (a\n          rank at the court of
+        the Ptolemies and Seleucids)"
+      - (Metall-)Barren, Guss(stück)
+      - "(a title, a kind of\n          official?)"
+      - (a weapon?)
+      - (ab)schneiden, abtrennen
+      - "(book of) antiquarian lore,\n          tome"
+      - (concessive) although
+      - "(economically)\n          self-sufficient"
+      - (one's own) property
+      - "(question marker expecting\n          negative response)"
+      - …
+---
+usg:
+  type:
+    1 DISTINCT VALUES:
+      - geo
+  STRINGS:
+    11 DISTINCT VALUES:
+      - '?'
+      - A
+      - Ak
+      - B
+      - F
+      - L
+      - M
+      - P
+      - S
+      - V
+      - …
+---
+subc:
+  STRINGS:
+    55 DISTINCT VALUES:
+      - 1. Pers.
+      - 2. Pers.
+      - 3. Pers.
+      - Adjektivverb
+      - Aorist neg. ⲙⲉ(ⲣⲉ)-
+      - Aorist ϣⲁ(ⲣⲉ)-
+      - Fokalisierungskonverter
+      - Frageadverb
+      - Fragepartikel
+      - Fragepronomen
+      - …
+---
+gen:
+  STRINGS:
+    2 DISTINCT VALUES:
+      - f.
+      - m.
+---
+pos:
+  STRINGS:
+    35 DISTINCT VALUES:
+      - '?'
+      - Adj.
+      - Adj.?
+      - Adjektivpräfix
+      - Adv.
+      - Dem. Pron.
+      - Interjektion
+      - Interr. Pron.
+      - Kompositum
+      - Konj.
+      - …
+---
+number:
+  STRINGS:
+    2 DISTINCT VALUES:
+      - pl.
+      - sg.
+---
+oRef:
+  STRINGS:
+    65 DISTINCT VALUES:
+      - ϣ(ⲉ)ⲡ ⲧⲟⲟⲧ⸗
+      - ϣⲉⲡ ⲧⲟⲟⲧ⸗
+      - ϣⲡ ⲧⲟⲟⲧ⸗
+      - ϩⲉ ⲡ ⲟⲩⲱ
+      - ϫⲉⲕ ⲣⲱ⸗
+      - ϫⲉⲙ (ⲡⲓ) ⲣⲏϯ
+      - ϫⲉⲙ ⲡⲓ ⲣⲏϯ
+      - ϫⲉⲙ ⲣⲏϯ
+      - ϫⲓ ⲡ ⲟⲩⲱ
+      - ϫⲓ ⲣⲁⲛ
+      - …
+---
+orth:
+  STRINGS:
+    15259 DISTINCT VALUES:
+      - (ϩⲟⲟⲩⲣⲉ) ϩⲟⲩⲣⲉ-
+      - (ⲁ)ⲁⲥ
+      - (ⲁ)ⲙⲉϩⲓ
+      - (ⲉ)ϣⲗⲟⲩⲗⲁⲓ
+      - (ⲉ)ⲃϣⲉ
+      - (ⲉ)ⲓϥⲧ
+      - (ⲉ)ⲗⲉⲗϣⲟⲟⲩⲉ
+      - (ⲉ)ⲗⲕϣⲁ
+      - (ⲉ)ⲙⲃⲟⲕⲓ
+      - (ⲉ)ⲙⲉϩⲓ
+      - …
+---
+bibl:
+  STRINGS:
+    6420 DISTINCT VALUES:
+      - (CD 11b); CED 112; KoptHWb 126; DELC 145; ChLCS 33a
+      - (CD 11b); CED 112; KoptHWb 127; DELC 146; ChLCS 33a
+      - (CD 11b); CED 112; KoptHWb 128; DELC 146; ChLCS 33a
+      - (CD 11b); CED 112; KoptHWb 128; DELC 147; ChLCS 33a
+      - (CD 11b); CED 113; KoptHWb 129; DELC 147; ChLCS 33a
+      - (CD 11b); CED 113; KoptHWb 129; DELC 147; ChLCS 33b
+      - (CD 229b); CED 111; KoptHWb 127; DELC 145; ChLCS 33a
+      - (CD 280a); KoptHWb 156; ChLCS 39b
+      - "(CD 358a, unter ⲥⲱⲥ); CED 163 (unter ⲥⲁⲥⲉ) KoptHWb 197, 540;\n
+        \           DELC 197"
+      - CD 100a; CDC 63b; KoptHWb 227; DELC 212b
+      - …
