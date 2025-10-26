@@ -22,14 +22,17 @@ from collections import OrderedDict, abc, defaultdict
 import pandas as pd
 
 from dictionary.kellia_uni_goettingen_de import sources
-from utils import ensure, file, gcp, log
-from utils import text as txt
+from utils import ensure, file, gcp, log, text
 
 XML_NS: str = "{http://www.w3.org/XML/1998/namespace}"
 TEI_NS: str = "{http://www.tei-c.org/ns/1.0}"
 
 _SCRIPT_DIR: pathlib.Path = pathlib.Path(__file__).parent
-_V_1_2_DIR: pathlib.Path = _SCRIPT_DIR / "data" / "raw" / "v1.2"
+V_1_2_DIR: pathlib.Path = _SCRIPT_DIR / "data" / "raw" / "v1.2"
+EGYPTIAN: str = "BBAW_Lexicon_of_Coptic_Egyptian-v4-2020.xml"
+GREEK: str = "DDGLC_Lexicon_of_Greek_Loanwords_in_Coptic-v2-2020.xml"
+COMPREHENSIVE: str = "Comprehensive_Coptic_Lexicon-v1.2-2020.xml"
+
 _CLEAN: set[str] = set("ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ ")
 _CRUM_RE: re.Pattern[str] = re.compile(r"\b(CD ([0-9]+[ab]?)-?[0-9]*[ab]?)\b")
 _CRUM_PAGE: str = (
@@ -72,14 +75,14 @@ def _add_crum_links(ref_bibl: str) -> str:
     return _CRUM_RE.sub(rf'<a href="{_CRUM_PAGE}\2">\1</a>', ref_bibl)
 
 
-def _compress(text: str | None) -> str:
-    assert text is not None
-    return " ".join(text.split())
+def _compress(txt: str | None) -> str:
+    assert txt is not None
+    return " ".join(txt.split())
 
 
-def _clean(text: str) -> str:
-    text = "".join(c for c in text if c in _CLEAN)
-    return _compress(text)
+def _clean(txt: str) -> str:
+    txt = "".join(c for c in txt if c in _CLEAN)
+    return _compress(txt)
 
 
 class Form:
@@ -97,8 +100,8 @@ class Form:
         self.geo: str = _GEO_MAPPING.get(geo, geo)
         self.form_id: str = form_id
 
-    def _td(self, text: str, *classes: str) -> str:
-        return f'<td class="{" ".join([*classes, self.geo])}">{text}</td>'
+    def _td(self, txt: str, *classes: str) -> str:
+        return f'<td class="{" ".join([*classes, self.geo])}">{txt}</td>'
 
     def tr_aux(self) -> abc.Generator[str]:
         """Construct a <tr> element for this form.
@@ -113,6 +116,45 @@ class Form:
         yield "</tr>"
 
 
+def _childless_text(
+    tag: ET.Element,
+    strict: bool = True,
+    compress: bool = False,
+) -> str:
+    """Assert that the tag is childless and has text. Return the text.
+
+    The field `text` on an `ET.Element` object returns the text before the first
+    child, which results in some loss of data if the element has text after
+    children. You can use this method to verify that the element is childless,
+    which would imply that `.text` returns the full text.
+
+    Args:
+        tag: A tag.
+        strict: If true, assert the existence of text.
+        compress: If true, compress the text before returning it.
+
+    Returns:
+        Tag text.
+    """
+    ensure.ensure(len(tag) == 0, "element", tag, "has children!")
+
+    txt: str
+    if strict:
+        assert tag.text is not None
+        txt = tag.text
+    else:
+        txt = tag.text or ""
+
+    txt = txt.strip()
+
+    if compress:
+        txt = _compress(txt)
+
+    if strict:
+        ensure.ensure(txt, "element", tag, "has no text!")
+    return txt
+
+
 class Orthography:
     """Orthography stores the word forms."""
 
@@ -121,10 +163,11 @@ class Orthography:
         self._last_gram_grp: str | None = None
 
     def start_gram_grp(self, gram_grp: ET.Element | None) -> None:
-        self._last_gram_grp = (
-            " ".join(_compress(child.text) for child in gram_grp)
-            if gram_grp is not None
-            else None
+        if gram_grp is None:
+            self._last_gram_grp = None
+            return
+        self._last_gram_grp = " ".join(
+            _childless_text(child, compress=True) for child in gram_grp
         )
 
     def add(self, orth: str, geos: list[str], form_id: str) -> None:
@@ -157,14 +200,13 @@ class Etymology:
         for child in entry.find(TEI_NS + "etym") or []:
 
             if child.tag == TEI_NS + "note":
-                yield _compress(child.text)
+                yield _childless_text(child)
                 continue
 
             if child.tag == TEI_NS + "xr":
                 for ref in child:
-                    assert ref.text
                     # pylint: disable-next=line-too-long
-                    yield f"{child.attrib["type"]}. {ref.attrib["target"]}# {ref.text} "
+                    yield f"{child.attrib["type"]}. {ref.attrib["target"]}# {_childless_text(ref)} "
                 continue
 
             assert child.tag == TEI_NS + "ref"
@@ -174,12 +216,14 @@ class Etymology:
                 continue
 
             if "targetLang" in child.attrib:
-                assert child.text
-                yield f"{child.attrib["targetLang"]}: {child.text} "
+                yield f"{child.attrib["targetLang"]}: {_childless_text(child)} "
                 continue
 
             if "greek" in child.attrib.get("type", ""):
-                greek_dict[child.attrib["type"]] = child.text
+                greek_dict[child.attrib["type"]] = _childless_text(
+                    child,
+                    strict=False,
+                )
                 continue
 
             # TODO: (#51) Handle remaining children.
@@ -218,8 +262,8 @@ class Etymology:
             for ref in xr:
                 ref_target: str = _clean(ref.attrib["target"])
                 assert ref_target
-                assert ref.text
-                yield f"{xr.attrib["type"]}. #{ref_target}# {ref.text} "
+                # pylint: disable-next=line-too-long
+                yield f"{xr.attrib["type"]}. #{ref_target}# {_childless_text(ref)} "
 
     def process(self) -> str:
         etym: str = "".join(self.amir)
@@ -255,7 +299,7 @@ class Sense:
 
     def format(self, pair: tuple[_SenseChild, str]) -> str:
         if pair[0] == "bibl":
-            return _add_crum_links("\n".join(txt.ssplit(pair[1], "; ")))
+            return _add_crum_links("\n".join(text.ssplit(pair[1], "; ")))
         return f'<span class="{pair[0]}">{pair[1]}</span>'
 
     def identify(self) -> tuple[int, str]:
@@ -322,14 +366,13 @@ class Lang:
         if isinstance(value, ET.Element):
             if name == "xr":
                 for ref in value:
-                    assert ref.text
                     self._last_sense.add(
                         "xr",
-                        f"{value.tag[29:]}. {ref.attrib["target"]}# {ref.text}",
+                        # pylint: disable-next=line-too-long
+                        f"{value.tag[29:]}. {ref.attrib["target"]}# {_childless_text(ref)}",
                     )
                 return
-            assert value.text
-            value = value.text
+            value = _childless_text(value)
         assert isinstance(value, str)
         if name == "definition":
             value = _compress(value)
@@ -385,22 +428,24 @@ def _link_greek(etym: str) -> str:
 
 def _form_sort_key(form: ET.Element) -> tuple[str, str]:
     first_orth: ET.Element = next(form.iterfind(TEI_NS + "orth"))
-    assert first_orth.text
-    text: str = first_orth.text.strip().replace(
-        "⸗",
-        "--",
+    txt: str = (
+        _childless_text(first_orth)
+        .strip()
+        .replace(
+            "⸗",
+            "--",
+        )
     )  # Sort angle dash after hyphen
 
     geo: ET.Element | None = form.find(TEI_NS + "usg")
     if geo is None:
-        return (text, "")
-    assert geo.text
-    dialect = geo.text.strip()
+        return (txt, "")
+    dialect = _childless_text(geo).strip()
     if dialect == "Ak":
         dialect = "K"
     if dialect != "S":
         dialect = "_" + dialect  # Sahidic always first!
-    return (text, dialect)
+    return (txt, dialect)
 
 
 class Word:
@@ -449,22 +494,20 @@ def _geos(form: ET.Element) -> list[str]:
     geos: ET.Element | None = form.find(TEI_NS + "usg")
     if geos is None:
         return []
-    assert geos.text
-    return geos.text.replace("(", "").replace(")", "").split(" ")
+    return _childless_text(geos).replace("(", "").replace(")", "").split(" ")
 
 
-def _deprecated(element: ET.Element) -> bool:
+def deprecated(element: ET.Element) -> bool:
     return "deprecated" in element.attrib.get("change", "")
 
 
 def _is_lemma(form: ET.Element) -> bool:
-    return not _deprecated(form) and form.attrib["type"] == "lemma"
+    return not deprecated(form) and form.attrib["type"] == "lemma"
 
 
 def _orth(lemma: ET.Element) -> str:
     first_orth: ET.Element = next(lemma.iterfind(TEI_NS + "orth"))
-    assert first_orth.text
-    return first_orth.text
+    return _childless_text(first_orth)
 
 
 def _process_entry(entry: ET.Element) -> Word:
@@ -472,7 +515,7 @@ def _process_entry(entry: ET.Element) -> Word:
     entry_xml_id: str = entry.attrib[XML_NS + "id"]
 
     forms: list[ET.Element] = entry.findall(TEI_NS + "form")
-    forms = [f for f in forms if not _deprecated(f)]
+    forms = [f for f in forms if not deprecated(f)]
 
     lemma: ET.Element | None = None
     try:
@@ -486,7 +529,7 @@ def _process_entry(entry: ET.Element) -> Word:
         forms = sorted(
             forms,
             key=lambda form: any(
-                orth.text == lemma_orth
+                _childless_text(orth) == lemma_orth
                 for orth in form.iterfind(TEI_NS + "orth")
             ),
             reverse=True,
@@ -495,7 +538,6 @@ def _process_entry(entry: ET.Element) -> Word:
     orthography: Orthography = Orthography()
 
     for form in forms:
-        assert not form.text or not form.text.strip()
         if (
             lemma is not None
             and form.attrib[XML_NS + "id"] == lemma.attrib[XML_NS + "id"]
@@ -509,8 +551,7 @@ def _process_entry(entry: ET.Element) -> Word:
         orthography.start_gram_grp(gram_grp)
 
         for orth in form.iterfind(TEI_NS + "orth"):
-            assert orth.text
-            orth_text: str = orth.text.strip()
+            orth_text: str = _childless_text(orth).strip()
             assert orth_text
             orthography.add(orth_text, _geos(form), form.attrib[XML_NS + "id"])
 
@@ -550,15 +591,20 @@ def _process_entry(entry: ET.Element) -> Word:
             language: str | None
             for quote in child.iterfind(TEI_NS + "quote"):
                 if quote.text is None:
+                    # TODO: (#51): Why are there definition tags without text?
                     continue
                 language = quote.get(XML_NS + "lang")
                 if not language:
                     # TODO: (#51) Incorporate quotes with an unknown language.
                     continue
-                langs[language].add("quote", _compress(quote.text))
+                langs[language].add(
+                    "quote",
+                    _childless_text(quote, compress=True),
+                )
 
             for definition in child.iterfind(TEI_NS + "def"):
                 if definition.text is None:
+                    # TODO: (#51): Why are there definition tags without text?
                     continue
                 language = definition.get(XML_NS + "lang")
                 if not language:
@@ -572,14 +618,12 @@ def _process_entry(entry: ET.Element) -> Word:
     for gramgrp in entry.iter(TEI_NS + "gramGrp"):
         pos = gramgrp.find(TEI_NS + "pos")
         if pos is not None:
-            assert pos.text
-            pos_text = pos.text
+            pos_text = _childless_text(pos)
         else:
             pos_text = "None"
         subc = gramgrp.find(TEI_NS + "subc")
         if subc is not None:
-            assert subc.text
-            subc_text = subc.text
+            subc_text = _childless_text(subc)
         else:
             subc_text = "None"
         new_pos: str = _pos_map(pos_text, subc_text, orthography)
@@ -797,6 +841,16 @@ def _sahidic_supplemental() -> dict[str, set[str]]:
     return supp
 
 
+def body_element(basename: str) -> ET.Element:
+    txt: ET.Element[str] | None = (
+        ET.parse(V_1_2_DIR / basename).getroot().find(TEI_NS + "text")
+    )
+    assert txt
+    body: ET.Element[str] | None = txt.find(TEI_NS + "body")
+    assert body
+    return body
+
+
 def _words(basename: str) -> abc.Generator[Word]:
     """Generate words from the given XML file.
 
@@ -806,23 +860,14 @@ def _words(basename: str) -> abc.Generator[Word]:
     Yields:
         Word objects representing entries in the dataset.
     """
-    text: ET.Element[str] | None = (
-        ET.parse(_V_1_2_DIR / basename).getroot().find(TEI_NS + "text")
-    )
-    del basename
-    assert text
-    body: ET.Element[str] | None = text.find(TEI_NS + "body")
-    del text
-    assert body
-
-    for child in body:
+    for child in body_element(basename):
         # Every child is either a super entry or an entry.
         entries: ET.Element | list[ET.Element] = (
             child if child.tag == TEI_NS + "superEntry" else [child]
         )
         for entry in entries:
             assert entry.tag == TEI_NS + "entry"
-            if _deprecated(entry):
+            if deprecated(entry):
                 continue
             yield _process_entry(entry)
 
@@ -886,14 +931,14 @@ def _dataset(basename: str) -> list[Word]:
 
 @functools.cache
 def egyptian() -> list[Word]:
-    return _dataset("BBAW_Lexicon_of_Coptic_Egyptian-v4-2020.xml")
+    return _dataset(EGYPTIAN)
 
 
 @functools.cache
 def greek() -> list[Word]:
-    return _dataset("DDGLC_Lexicon_of_Greek_Loanwords_in_Coptic-v2-2020.xml")
+    return _dataset(GREEK)
 
 
 @functools.cache
 def comprehensive() -> list[Word]:
-    return _dataset("Comprehensive_Coptic_Lexicon-v1.2-2020.xml")
+    return _dataset(COMPREHENSIVE)
