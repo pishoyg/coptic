@@ -149,7 +149,12 @@ class Line:
         i = form.find("(")
         j = form.find(")")
         assert j - i - 1 in [1, 2, 4]  # In the vast majority of cases, it's 1.
-        assert constants.PURE_COPTIC_RE.fullmatch(form[i + 1])
+        ensure.ensure(
+            constants.PURE_COPTIC_RE.fullmatch(form[i + 1]),
+            form,
+            "has invalid characters in",
+            form[i + 1],
+        )
         left = form[:i]
         middle = form[i + 1 : j]
         right = form[j + 1 :]
