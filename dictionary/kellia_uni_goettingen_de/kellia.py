@@ -142,16 +142,9 @@ class Orthography:
 
     def __init__(self) -> None:
         self.forms: list[Form] = []
-        self._last_gram_grp: str | None = None
 
-    def start_gram_grp(self, gram_grp: ET.Element | None) -> None:
-        if gram_grp is None:
-            self._last_gram_grp = None
-            return
-        self._last_gram_grp = " ".join(map(_text, gram_grp))
-
-    def add(self, orth: str, geo: str, form_id: str) -> None:
-        self.forms.append(Form(self._last_gram_grp, orth, geo, form_id))
+    def add(self, gram_grp: str, orth: str, geo: str, form_id: str) -> None:
+        self.forms.append(Form(gram_grp, orth, geo, form_id))
 
     def has(self, orth: str) -> bool:
         return any(f.orth == orth for f in self.forms)
@@ -376,7 +369,6 @@ def _gloss_bibl(ref_bibl: str) -> str:
     """
     for regex, repl in sources.SOURCES:
         ref_bibl = regex.sub(repl, ref_bibl)
-    ref_bibl = ref_bibl.replace("DDGLC ref:", "DDGLC Usage ID:")
     return ref_bibl
 
 
@@ -528,12 +520,13 @@ def _process_entry(entry: ET.Element) -> Word:
         if gram_grp is None:
             gram_grp = entry.find(TEI_NS + "gramGrp")
         assert gram_grp
-        orthography.start_gram_grp(gram_grp)
 
-        for orth in form.iterfind(TEI_NS + "orth"):
-            orth_text: str = _text(orth)
-            assert orth_text
-            orthography.add(orth_text, _geo(form), form.attrib[XML_NS + "id"])
+        orthography.add(
+            " ".join(map(_text, gram_grp)),
+            _orth(form),
+            _geo(form),
+            form.attrib[XML_NS + "id"],
+        )
 
     langs: dict[str, Lang] = {
         "de": Lang("de"),
@@ -875,10 +868,9 @@ def _augmented_words(basename: str) -> abc.Generator[Word]:
     """
     b_supp: dict[str, list[str]] = _bohairic_supplemental()
     s_supp: dict[str, set[str]] = _sahidic_supplemental()
+    # TODO: (#305) Part-of-speech info is present in the source data. Use it
+    # instead of using an empty gram_grp for all supplemental forms.
     for word in _words(basename):
-        # TODO: (#305) Part-of-speech info is present in the source data. Use it
-        # instead of setting the gram_grp to None for all supplemental forms.
-        word.orthstring.start_gram_grp(None)
         # Add Sahidic entries before Bohairic ones.
         # Additionally, we sort Sahidic entries to make the output
         # deterministic.
@@ -887,7 +879,7 @@ def _augmented_words(basename: str) -> abc.Generator[Word]:
             if word.orthstring.has(orth):
                 # The word already has this orth.
                 continue
-            word.orthstring.add(orth, "S", FROM_COPTIC_SCRIPTORIUM)
+            word.orthstring.add("", orth, "S", FROM_COPTIC_SCRIPTORIUM)
         # TODO: (#305) We don't sort Bohairic forms because they already have
         # some order that would be corrupted if we were to reorder them below.
         # The lists retrieved have lamma forms first. We should order them by
@@ -901,7 +893,7 @@ def _augmented_words(basename: str) -> abc.Generator[Word]:
             yield word
             continue
         for orth in b:
-            word.orthstring.add(orth, "B", FROM_COPTIC_SCRIPTORIUM)
+            word.orthstring.add("", orth, "B", FROM_COPTIC_SCRIPTORIUM)
         yield word
 
     # Verify that all Sahidic supplemental entries have been consumed.
