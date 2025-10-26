@@ -1,387 +1,489 @@
 ---
 body:
+  TOTAL: 1
   CHILDREN:
-    - superEntry
-    - entry
+    TOTAL: 6598
+    2 DISTINCT VALUES:
+      - entry: 5417
+      - superEntry: 1181
 
 ---
 superEntry:
+  TOTAL: 1181
   CHILDREN:
-    - entry
+    TOTAL: 5867
+    1 DISTINCT VALUES:
+      - entry: 5867
 
 ---
 entry:
-  type:
-    3 DISTINCT VALUES:
-      - compound
-      - foreign
-      - hom
-  xml:id:
-    11263 DISTINCT VALUES:
-      - C1
-      - C10
-      - C100
-      - C1000
-      - C10000
-      - C10001
-      - C10002
-      - C10003
-      - C10004
-      - C10005
-      - …
+  TOTAL: 11263
+  ATTRIBUTES:
+    xml:id:
+      TOTAL: 11263
+      11263 DISTINCT VALUES:
+        - C1: 1
+        - C2: 1
+        - C3: 1
+        - C4: 1
+        - C5: 1
+        - C6: 1
+        - C7: 1
+        - C8: 1
+        - C9: 1
+        - C10: 1
+        - C11: 1
+        - …
+    type:
+      TOTAL: 4203
+      3 DISTINCT VALUES:
+        - compound: 2832
+        - hom: 1248
+        - foreign: 123
   CHILDREN:
-    - form
-    - gramGrp
-    - sense
-    - etym
-    - xr
-    - note
+    TOTAL: 64607
+    6 DISTINCT VALUES:
+      - form: 32142
+      - sense: 15886
+      - gramGrp: 10663
+      - etym: 3361
+      - xr: 2550
+      - note: 5
 
 ---
 form:
-  type:
-    3 DISTINCT VALUES:
-      - compound
-      - inflected
-      - lemma
-  xml:id:
-    31848 DISTINCT VALUES:
-      - CF1
-      - CF10
-      - CF100
-      - CF1000
-      - CF10000
-      - CF10001
-      - CF10002
-      - CF10003
-      - CF10004
-      - CF10005
-      - …
-  change:
-    1 DISTINCT VALUES:
-      - '#added #v1.2'
-  corresp:
-    381 DISTINCT VALUES:
-      - CF1004
-      - CF1005
-      - CF1006
-      - CF1007
-      - CF1012
-      - CF1016
-      - CF1017
-      - CF1018
-      - CF10269
-      - CF10271
-      - …
+  TOTAL: 31848
+  ATTRIBUTES:
+    xml:id:
+      TOTAL: 31848
+      31848 DISTINCT VALUES:
+        - CF1: 1
+        - CF2: 1
+        - CF3: 1
+        - CF4: 1
+        - CF5: 1
+        - CF6: 1
+        - CF7: 1
+        - CF8: 1
+        - CF9: 1
+        - CF10: 1
+        - CF11: 1
+        - …
+    type:
+      TOTAL: 12017
+      3 DISTINCT VALUES:
+        - lemma: 11284
+        - compound: 384
+        - inflected: 349
+    change:
+      TOTAL: 778
+      1 DISTINCT VALUES:
+        - '#added #v1.2': 778
+    corresp:
+      TOTAL: 763
+      381 DISTINCT VALUES:
+        - CF10285: 4
+        - CF10287: 4
+        - CF10286: 4
+        - CF11857: 3
+        - CF75: 2
+        - CF81: 2
+        - CF307: 2
+        - CF306: 2
+        - CF305: 2
+        - CF303: 2
+        - CF363: 2
+        - …
   CHILDREN:
-    - gramGrp
-    - note
-    - usg
-    - oRef
-    - orth
-
----
-gramGrp:
-  CHILDREN:
-    - note
-    - gram
-    - subc
-    - gen
-    - pos
-    - number
-
----
-sense:
-  xml:id:
-    15923 DISTINCT VALUES:
-      - CS1
-      - CS10
-      - CS100
-      - CS1000
-      - CS10000
-      - CS10001
-      - CS10002
-      - CS10003
-      - CS10004
-      - CS10005
-      - …
-  CHILDREN:
-    - xr
-    - note
-    - cit
-    - ref
-
----
-etym:
-  CHILDREN:
-    - xr
-    - note
-    - ref
-
----
-xr:
-  type:
-    3 DISTINCT VALUES:
-      - ant
-      - cf
-      - syn
-  CHILDREN:
-    - ref
-
----
-note:
-  xml:lang:
-    3 DISTINCT VALUES:
-      - de
-      - en
-      - fr
-  TEXTS:
-    406 DISTINCT VALUES:
-      - '"Bock des Himmels"'
-      - (?)
-      - (extrem selten)
-      - (f.?)
-      - (mostly)
-      - (once)
-      - (rare)
-      - (selten)
-      - 13. Buchstabe des Alphabeths ⲛⲉ
-      - 14er Buchstabe des Alphabeths ⲝⲓ
-      - …
-
----
-cit:
-  type:
-    2 DISTINCT VALUES:
-      - example
-      - translation
-  CHILDREN:
-    - note
-    - def
-    - quote
-    - bibl
-
----
-gram:
-  type:
-    6 DISTINCT VALUES:
-      - collocAdv
-      - collocConj
-      - collocNoun
-      - collocParticle
-      - collocPartikel
-      - collocPrep
-  TEXTS:
-    107 DISTINCT VALUES:
-      - (ⲛ)ⲛⲁϩⲣⲛ-
-      - ϣⲁ
-      - ϣⲁ-
-      - ϣⲟⲩϩⲏⲛⲉ
-      - ϧⲁϫⲉⲛ-
-      - ϧⲉⲛ-
-      - ϩⲁ(ϩ)ⲧⲛ-
-      - ϩⲁ-
-      - ϩⲁϩⲧⲛ-
-      - ϩⲁϫⲛ-
-      - …
-
----
-def:
-  xml:lang:
-    3 DISTINCT VALUES:
-      - de
-      - en
-      - fr
-  TEXTS:
-    146 DISTINCT VALUES:
-      - (red) tourmaline
-      - "= ⲓⲣⲓ esp. in relative clauses (not with\n              fut)"
-      - Fokalisierungskonverter ("2. Tempus")
-      - "Form von ⲓⲣⲓ in den Dauerzeiten (besonders in\n              Relativsätzen)"
-      - Fragepartikel
-      - Kirche, Altar
-      - Negative nominal prefix
-      - "Negativpräfix zur Bildung von Substantiven\n              f."
-      - Partikel des Genitivs
-      - "Partikel, forme réduite de participle\n              parfait"
-      - …
-
----
-quote:
-  xml:lang:
-    3 DISTINCT VALUES:
-      - de
-      - en
-      - fr
-  TEXTS:
-    28326 DISTINCT VALUES:
-      - '"Balkenlage", Dach'
-      - '"Erdesser"'
-      - '"Erdträger"'
-      - "\"Finger\" (als Gerät aus Holz oder\n            Metall)"
-      - '"Finger" (als kleines Längenmaß)'
-      - '"I bear witness" / to bear witness'
-      - '"Linsenfleck", Lentigo'
-      - '"Mann Gottes", frommer Mensch'
-      - '"Milchbruder", Verwandter'
-      - "\"Persian\" (referring to the Kurds who\n            established
-        the Ayyubid dynasty in Egypt)"
-      - …
-
----
-ref:
-  target:
-    671 DISTINCT VALUES:
-      - '# ϩⲏⲧ'
-      - '# ϩⲱⲗ'
-      - '# ϫⲁⲥⲓ-'
-      - '# ⲙⲁⲛⲉ'
-      - '# ⲥⲱϩⲉ'
-      - '# ⲥⲱⲟⲩϩ'
-      - '#(ⲉ)ⲙⲃⲟⲕⲓ'
-      - '#-ⲥⲉ'
-      - '#-ⲥⲟⲩ'
-      - '#21770'
-      - …
-  type:
-    9 DISTINCT VALUES:
-      - Greek
-      - WCNae
-      - WCNde
-      - coptic_usage::cu_ID
-      - greek_lemma::grl_ID
-      - greek_lemma::grl_lemma
-      - greek_lemma::grl_meaning
-      - greek_lemma::grl_pos
-      - greek_lemma::grl_ref
-  xml:lang:
-    1 DISTINCT VALUES:
-      - grc
-  TEXTS:
-    17117 DISTINCT VALUES:
-      - "\"friend of the first rank\" (a\n          rank at the court of
-        the Ptolemies and Seleucids)"
-      - (Metall-)Barren, Guss(stück)
-      - "(a title, a kind of\n          official?)"
-      - (a weapon?)
-      - (ab)schneiden, abtrennen
-      - "(book of) antiquarian lore,\n          tome"
-      - (concessive) although
-      - "(economically)\n          self-sufficient"
-      - (one's own) property
-      - "(question marker expecting\n          negative response)"
-      - …
+    TOTAL: 62584
+    5 DISTINCT VALUES:
+      - orth: 31848
+      - usg: 28621
+      - gramGrp: 1892
+      - note: 121
+      - oRef: 102
 
 ---
 usg:
-  type:
-    1 DISTINCT VALUES:
-      - geo
+  TOTAL: 29004
+  ATTRIBUTES:
+    type:
+      TOTAL: 29004
+      1 DISTINCT VALUES:
+        - geo: 29004
   TEXTS:
+    TOTAL: 29004
     11 DISTINCT VALUES:
-      - '?'
-      - A
-      - Ak
-      - B
-      - F
-      - L
-      - M
-      - P
-      - S
-      - V
-      - …
-
----
-subc:
-  TEXTS:
-    55 DISTINCT VALUES:
-      - 1. Pers.
-      - 2. Pers.
-      - 3. Pers.
-      - Adjektivverb
-      - Aorist neg. ⲙⲉ(ⲣⲉ)-
-      - Aorist ϣⲁ(ⲣⲉ)-
-      - Fokalisierungskonverter
-      - Frageadverb
-      - Fragepartikel
-      - Fragepronomen
-      - …
-
----
-gen:
-  TEXTS:
-    2 DISTINCT VALUES:
-      - f.
-      - m.
-
----
-pos:
-  TEXTS:
-    35 DISTINCT VALUES:
-      - '?'
-      - Adj.
-      - Adj.?
-      - Adjektivpräfix
-      - Adv.
-      - Dem. Pron.
-      - Interjektion
-      - Interr. Pron.
-      - Kompositum
-      - Konj.
-      - …
-
----
-number:
-  TEXTS:
-    2 DISTINCT VALUES:
-      - pl.
-      - sg.
-
----
-oRef:
-  TEXTS:
-    65 DISTINCT VALUES:
-      - ϣ(ⲉ)ⲡ ⲧⲟⲟⲧ⸗
-      - ϣⲉⲡ ⲧⲟⲟⲧ⸗
-      - ϣⲡ ⲧⲟⲟⲧ⸗
-      - ϩⲉ ⲡ ⲟⲩⲱ
-      - ϫⲉⲕ ⲣⲱ⸗
-      - ϫⲉⲙ (ⲡⲓ) ⲣⲏϯ
-      - ϫⲉⲙ ⲡⲓ ⲣⲏϯ
-      - ϫⲉⲙ ⲣⲏϯ
-      - ϫⲓ ⲡ ⲟⲩⲱ
-      - ϫⲓ ⲣⲁⲛ
-      - …
+      - S: 20650
+      - B: 3891
+      - A: 1067
+      - L: 1007
+      - M: 997
+      - F: 871
+      - Ak: 189
+      - V: 152
+      - '?': 113
+      - W: 58
+      - P: 9
 
 ---
 orth:
+  TOTAL: 32231
   TEXTS:
+    TOTAL: 32231
     15258 DISTINCT VALUES:
-      - (ϩⲟⲟⲩⲣⲉ) ϩⲟⲩⲣⲉ-
-      - (ⲁ)ⲁⲥ
-      - (ⲁ)ⲙⲉϩⲓ
-      - (ⲉ)ϣⲗⲟⲩⲗⲁⲓ
-      - (ⲉ)ⲃϣⲉ
-      - (ⲉ)ⲓϥⲧ
-      - (ⲉ)ⲗⲉⲗϣⲟⲟⲩⲉ
-      - (ⲉ)ⲗⲕϣⲁ
-      - (ⲉ)ⲙⲃⲟⲕⲓ
-      - (ⲉ)ⲙⲉϩⲓ
+      - ⲁ-: 30
+      - ⲉ-: 24
+      - ϩⲱⲥ: 23
+      - ⲉⲛⲉϩ: 18
+      - ⲡⲁⲗⲓⲛ: 17
+      - ⲃⲁⲓ: 16
+      - ⲉⲧⲓ: 16
+      - ⲁⲣⲭⲏ: 15
+      - ⲉⲃⲓⲏⲛ: 15
+      - ⲉⲛⲏϩⲉ: 15
+      - ⲁⲛ-: 14
+      - …
+
+---
+gramGrp:
+  TOTAL: 12618
+  CHILDREN:
+    TOTAL: 19852
+    6 DISTINCT VALUES:
+      - pos: 12588
+      - gen: 4377
+      - subc: 1651
+      - gram: 639
+      - note: 305
+      - number: 292
+
+---
+pos:
+  TOTAL: 12588
+  TEXTS:
+    TOTAL: 12588
+    35 DISTINCT VALUES:
+      - Subst.: 7752
+      - Vb.: 3311
+      - Adj.: 483
+      - Adv.: 314
+      - Präp.: 145
+      - Satzkonverter: 85
+      - Konj.: 74
+      - Verbalpräfix: 71
+      - Zahlzeichen: 70
+      - Partikel: 56
+      - Zahlwort: 44
+      - …
+
+---
+note:
+  TOTAL: 824
+  ATTRIBUTES:
+    xml:lang:
+      TOTAL: 247
+      3 DISTINCT VALUES:
+        - de: 92
+        - en: 86
+        - fr: 69
+  TEXTS:
+    TOTAL: 824
+    406 DISTINCT VALUES:
+      - semitisches Lehnwort: 67
+      - unveränderlich vor versch. Satzarten: 26
+      - (rare): 25
+      - (once): 22
+      - status nominalis im Adverbialsatz: 20
+      - Genus fraglich: 19
+      - (selten): 12
+      - selten: 11
+      - ? "Sole sense of the entry is based on reconstructed or uncertain\n
+          \         attestations (export of the DDGLC database). The sense
+          is currently\n          excluded and the status of the entry marked
+          as deprecated."
+        : 10
+      - ? "Sole sense of the entry is based on a single (reconstructed)\n
+          \         attestation from the export of the DDGLC database. The
+          sense is\n          currently excluded for the usage in the Coptic
+          Dictionary Online and\n          the status of the entry marked
+          as deprecated."
+        : 9
+      - arabisches Lehnwort: 8
+      - …
+
+---
+sense:
+  TOTAL: 15923
+  ATTRIBUTES:
+    xml:id:
+      TOTAL: 15923
+      15923 DISTINCT VALUES:
+        - CS1: 1
+        - CS2: 1
+        - CS3: 1
+        - CS4: 1
+        - CS5: 1
+        - CS6: 1
+        - CS7: 1
+        - CS8: 1
+        - CS9: 1
+        - CS10: 1
+        - CS11: 1
+        - …
+  CHILDREN:
+    TOTAL: 23592
+    4 DISTINCT VALUES:
+      - cit: 15949
+      - ref: 7561
+      - xr: 54
+      - note: 28
+
+---
+cit:
+  TOTAL: 15949
+  ATTRIBUTES:
+    type:
+      TOTAL: 15949
+      2 DISTINCT VALUES:
+        - translation: 15923
+        - example: 26
+  CHILDREN:
+    TOTAL: 50051
+    4 DISTINCT VALUES:
+      - quote: 33730
+      - bibl: 15923
+      - note: 248
+      - def: 150
+
+---
+quote:
+  TOTAL: 33730
+  ATTRIBUTES:
+    xml:lang:
+      TOTAL: 33701
+      3 DISTINCT VALUES:
+        - en: 15888
+        - de: 8909
+        - fr: 8904
+  TEXTS:
+    TOTAL: 33730
+    28326 DISTINCT VALUES:
+      - meaning unknown: 240
+      - Bedeutung unbekannt: 234
+      - sens inconnu: 234
+      - signification inconnue: 33
+      - unbekannte Bedeutung: 32
+      - unknown meaning: 25
+      - meaning uncertain: 15
+      - sens incertain: 15
+      - Bedeutung unsicher: 14
+      - conception: 13
+      - descendre: 10
       - …
 
 ---
 bibl:
+  TOTAL: 15923
   TEXTS:
+    TOTAL: 15923
     6420 DISTINCT VALUES:
-      - (CD 11b); CED 112; KoptHWb 126; DELC 145; ChLCS 33a
-      - (CD 11b); CED 112; KoptHWb 127; DELC 146; ChLCS 33a
-      - (CD 11b); CED 112; KoptHWb 128; DELC 146; ChLCS 33a
-      - (CD 11b); CED 112; KoptHWb 128; DELC 147; ChLCS 33a
-      - (CD 11b); CED 113; KoptHWb 129; DELC 147; ChLCS 33a
-      - (CD 11b); CED 113; KoptHWb 129; DELC 147; ChLCS 33b
-      - (CD 229b); CED 111; KoptHWb 127; DELC 145; ChLCS 33a
-      - (CD 280a); KoptHWb 156; ChLCS 39b
-      - "(CD 358a, unter ⲥⲱⲥ); CED 163 (unter ⲥⲁⲥⲉ) KoptHWb 197, 540;\n
-        \           DELC 197"
-      - CD 100a; CDC 63b; KoptHWb 227; DELC 212b
+      - DDGLC: 6978
+      - CD 137a: 17
+      - CD 29b: 12
+      - CD 33a: 12
+      - CD 33b: 11
+      - CD 123b: 11
+      - CD 425b: 11
+      - CD 205b: 9
+      - CD 224b: 9
+      - CD 418a: 9
+      - CD 523b: 9
+      - …
+
+---
+subc:
+  TOTAL: 1651
+  TEXTS:
+    TOTAL: 1651
+    55 DISTINCT VALUES:
+      - Kompositverb: 821
+      - Status nominalis: 154
+      - Status pronominalis: 138
+      - Qualitativ: 124
+      - Infinitiv: 89
+      - Imperativ: 63
+      - Participium conjunctum: 54
+      - Göttername: 35
+      - Relativkonverter: 25
+      - Frageadverb: 15
+      - 3. Pers.: 11
+      - …
+
+---
+xr:
+  TOTAL: 2611
+  ATTRIBUTES:
+    type:
+      TOTAL: 2611
+      3 DISTINCT VALUES:
+        - cf: 2489
+        - syn: 118
+        - ant: 4
+  CHILDREN:
+    TOTAL: 2614
+    1 DISTINCT VALUES:
+      - ref: 2614
+
+---
+ref:
+  TOTAL: 26370
+  ATTRIBUTES:
+    type:
+      TOTAL: 23735
+      9 DISTINCT VALUES:
+        - coptic_usage::cu_ID: 6978
+        - greek_lemma::grl_ID: 3229
+        - greek_lemma::grl_lemma: 3229
+        - greek_lemma::grl_meaning: 3229
+        - greek_lemma::grl_pos: 3229
+        - greek_lemma::grl_ref: 3229
+        - Greek: 587
+        - WCNae: 13
+        - WCNde: 12
+    target:
+      TOTAL: 2639
+      671 DISTINCT VALUES:
+        - '#ⲉⲓⲣⲉ': 315
+        - '#ϯ': 217
+        - '#ϫⲓ': 156
+        - '#ⲣⲉϥ': 149
+        - '#ⲙⲛⲧ-': 91
+        - '#ϭⲓⲛ-': 79
+        - '#ⲁⲧ-': 63
+        - '#ⲙⲛⲧ': 58
+        - '#ⲙⲁ': 29
+        - '#ϩⲏⲧ': 28
+        - '#ⲁⲧ': 24
+        - …
+    xml:lang:
+      TOTAL: 21
+      1 DISTINCT VALUES:
+        - grc: 21
+  TEXTS:
+    TOTAL: 26248
+    17117 DISTINCT VALUES:
+      - noun: 1930
+      - verb: 584
+      - adjective: 564
+      - machen, tun: 277
+      - Präfix: 174
+      - geben, zahlen, verkaufen: 160
+      - nehmen, erhalten: 123
+      - Nominalpräfix: 68
+      - man who . . .: 68
+      - adverb: 68
+      - the one who . . .: 67
+      - …
+
+---
+def:
+  TOTAL: 150
+  ATTRIBUTES:
+    xml:lang:
+      TOTAL: 150
+      3 DISTINCT VALUES:
+        - de: 50
+        - en: 50
+        - fr: 50
+  TEXTS:
+    TOTAL: 150
+    146 DISTINCT VALUES:
+      - marking indefinitness: 2
+      - Relativkonverter: 2
+      - relative converter: 2
+      - particule relative: 2
+      - Präfix Perfekt I: 1
+      - verbal prefix perfect I: 1
+      - préfixe verbal parfait I: 1
+      - Präformativ des Imperativs: 1
+      - prefix of imperative: 1
+      - préfixe de l'impératif: 1
+      - unbestimme Angabe: 1
+      - …
+
+---
+gen:
+  TOTAL: 4377
+  TEXTS:
+    TOTAL: 4377
+    2 DISTINCT VALUES:
+      - m.: 2882
+      - f.: 1495
+
+---
+number:
+  TOTAL: 292
+  TEXTS:
+    TOTAL: 292
+    2 DISTINCT VALUES:
+      - pl.: 244
+      - sg.: 48
+
+---
+etym:
+  TOTAL: 3382
+  CHILDREN:
+    TOTAL: 16317
+    3 DISTINCT VALUES:
+      - ref: 16195
+      - note: 115
+      - xr: 7
+
+---
+gram:
+  TOTAL: 639
+  ATTRIBUTES:
+    type:
+      TOTAL: 639
+      6 DISTINCT VALUES:
+        - collocPrep: 330
+        - collocAdv: 302
+        - collocPartikel: 3
+        - collocNoun: 2
+        - collocConj: 1
+        - collocParticle: 1
+  TEXTS:
+    TOTAL: 639
+    107 DISTINCT VALUES:
+      - ⲉⲃⲟⲗ: 146
+      - ⲉ-: 54
+      - ⲉϩⲣⲁⲓ: 41
+      - ⲉϩⲟⲩⲛ: 41
+      - ⲛⲥⲁ-: 31
+      - ⲛ-: 28
+      - ⲉϫⲛ-: 25
+      - ⲉⲡⲉⲥⲏⲧ: 16
+      - ϩⲁ-: 15
+      - ⲙⲛ-: 13
+      - ⲉⲣⲁⲧ⸗: 13
+      - …
+
+---
+oRef:
+  TOTAL: 107
+  TEXTS:
+    TOTAL: 107
+    65 DISTINCT VALUES:
+      - ϣ(ⲉ)ⲡ ⲧⲟⲟⲧ⸗: 4
+      - ⲉⲓⲁ ⲥϩⲓⲙⲉ: 2
+      - ⲙⲉϩ ⲣⲱ⸗: 2
+      - ⲙⲉϩ ⲧⲟⲟⲧ⸗: 2
+      - ⲙⲉϩ ϩⲏⲧ⸗: 2
+      - ⲣ ⲡ ⲛⲁ: 2
+      - ϯ ⲟⲃ: 2
+      - ϯ ⲟⲥⲉ: 2
+      - ϯ ⲣⲱ⸗: 2
+      - ϫⲓ ⲣⲱ⸗: 2
+      - ϫⲉⲕ ⲣⲱ⸗: 2
       - …
