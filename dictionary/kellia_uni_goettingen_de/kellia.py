@@ -561,6 +561,7 @@ def _process_entry(entry: ET.Element) -> Word:
                 continue
 
             assert child.tag == TEI_NS + "cit"
+            assert child.attrib["type"] in ["translation", "example"]
 
             bibl: ET.Element | None = child.find(TEI_NS + "bibl")
             if bibl is not None:
@@ -570,9 +571,6 @@ def _process_entry(entry: ET.Element) -> Word:
 
             language: str | None
             for quote in child.iterfind(TEI_NS + "quote"):
-                if quote.text is None:
-                    # TODO: (#51): Why are there definition tags without text?
-                    continue
                 language = quote.get(XML_NS + "lang")
                 if not language:
                     # TODO: (#51) Incorporate quotes with an unknown language.
@@ -580,15 +578,12 @@ def _process_entry(entry: ET.Element) -> Word:
                 langs[language].add("quote", _text(quote))
 
             for definition in child.iterfind(TEI_NS + "def"):
-                if definition.text is None:
-                    # TODO: (#51): Why are there definition tags without text?
-                    continue
-                language = definition.get(XML_NS + "lang")
-                if not language:
-                    # TODO: (#51) Incorporate definitions with an unknown
-                    # language.
-                    continue
-                langs[language].add("definition", definition)
+                langs[definition.attrib[XML_NS + "lang"]].add(
+                    "definition",
+                    definition,
+                )
+
+            # TODO: (#51) Handle other children of <cit>
 
     # POS -- a single Scriptorium POS tag for each entry
     pos_list: list[str] = []
@@ -858,7 +853,15 @@ def _words(basename: str) -> abc.Generator[Word]:
             assert entry.tag == TEI_NS + "entry"
             if deprecated(entry):
                 continue
-            yield _process_entry(entry)
+            try:
+                yield _process_entry(entry)
+            # pylint: disable-next=broad-exception-caught
+            except Exception as e:
+                log.fatal(
+                    "Error processing entry",
+                    entry.attrib[XML_NS + "id"],
+                    e,
+                )
 
 
 def _augmented_words(basename: str) -> abc.Generator[Word]:
