@@ -91,8 +91,8 @@ class TagProperties:
             k: _sample(v) for k, v in self.attrs.items()
         }
         if self.strings:
-            assert "STRINGS" not in props
-            props["STRINGS"] = _sample(self.strings)
+            assert "TEXT" not in props
+            props["TEXT"] = _sample(self.strings)
         if self.children:
             # Always include all children.
             assert "CHILDREN" not in props
@@ -144,7 +144,10 @@ def main():
     summary: list[dict[str, Summary]] = [
         {tag.name: tag.summary()} for tag in _analyze(soup.body)
     ]
-    file.write(file.yaml_dump_all(summary), _OUTPUT)
+    file.write(
+        file.yaml_dump_all(summary).replace("\n---\n", "\n\n---\n"),
+        _OUTPUT,
+    )
 
 
 if __name__ == "__main__":

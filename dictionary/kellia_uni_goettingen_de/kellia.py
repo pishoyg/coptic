@@ -454,11 +454,7 @@ def _geos(form: ET.Element) -> list[str]:
 
 
 def _deprecated(element: ET.Element) -> bool:
-    if element.attrib.get("status") == "deprecated":
-        return True
-    if "deprecated" in element.attrib.get("change", ""):
-        return True
-    return False
+    return "deprecated" in element.attrib.get("change", "")
 
 
 def _is_lemma(form: ET.Element) -> bool:
