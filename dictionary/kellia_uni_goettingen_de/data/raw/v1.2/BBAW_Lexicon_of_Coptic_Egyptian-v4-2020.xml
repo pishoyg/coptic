@@ -58309,11 +58309,15 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
         </entry>
         <entry type="compound" xml:id="C1798">
           <form type="lemma" xml:id="CF5185">
-          <orth>ⲧⲁⲫⲙⲏ</orth>
-          <usg type="geo">B</usg>ⲓ</form>
+            <orth>ⲧⲁⲫⲙⲏⲓ</orth>
+            <usg type="geo">B</usg>
+            <!--NOTE: Fixed typo: Moved tail: ⲓ-->
+          </form>
           <form xml:id="CF5186">
-          <orth>ⲧⲁⲫⲙⲏ</orth>
-          <usg type="geo">B</usg>ⲓ</form>
+            <orth>ⲧⲁⲫⲙⲏⲓ</orth>
+            <usg type="geo">B</usg>
+            <!--NOTE: Fixed typo: Moved tail: ⲓ-->
+          </form>
           <gramGrp>
             <pos>Adj.</pos>
           </gramGrp>
@@ -187385,11 +187389,15 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
             <orth>ⲙⲉⲧϩⲟⲩⲟ</orth>
           </form>
           <form xml:id="CF16026">
-          <orth>ⲙⲉⲧϩⲟⲩⲟ</orth>ⲙⲉⲧϩⲟⲩⲟ 
-          <usg type="geo">B</usg></form>
+            <orth>ⲙⲉⲧϩⲟⲩⲟ</orth>
+            <!--NOTE: Deleted tail: ⲙⲉⲧϩⲟⲩⲟ -->
+            <usg type="geo">B</usg>
+          </form>
           <form xml:id="CF16027">
-          <orth>ⲙⲉⲧϩⲟⲩⲟ</orth>ⲙⲉⲧϩⲟⲩⲟ 
-          <usg type="geo">F</usg></form>
+            <orth>ⲙⲉⲧϩⲟⲩⲟ</orth>
+            <!--NOTE: Deleted tail: ⲙⲉⲧϩⲟⲩⲟ -->
+            <usg type="geo">F</usg>
+          </form>
           <gramGrp>
             <pos>Subst.</pos>
             <gen>f.</gen>
@@ -211210,13 +211218,17 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
         </entry>
         <entry type="compound" xml:id="C7932">
           <form type="lemma" xml:id="CF17929">
-          <usg type="geo">S</usg>
-          <orth>ⲣⲧϭⲟⲧ</orth>ⲣⲧϭⲟⲧ 
-          <oRef>ⲣ ⲧ ϭⲟⲧ</oRef></form>
+            <usg type="geo">S</usg>
+            <orth>ⲣⲧϭⲟⲧ</orth>
+            <!--NOTE: Deleted tail: ⲣⲧϭⲟⲧ -->
+            <oRef>ⲣ ⲧ ϭⲟⲧ</oRef>
+          </form>
           <form xml:id="CF17930">
-          <usg type="geo">S</usg>
-          <orth>ⲣⲧϭⲟⲧ</orth>ⲣⲧϭⲟⲧ 
-          <oRef>ⲣ ⲧ ϭⲟⲧ</oRef></form>
+            <usg type="geo">S</usg>
+            <orth>ⲣⲧϭⲟⲧ</orth>
+            <!--NOTE: Deleted tail: ⲣⲧϭⲟⲧ -->
+            <oRef>ⲣ ⲧ ϭⲟⲧ</oRef>
+          </form>
           <gramGrp>
             <pos>Vb.</pos>
             <subc>Kompositverb</subc>
