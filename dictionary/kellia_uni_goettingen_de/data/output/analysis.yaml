@@ -2,6 +2,7 @@
 superEntry:
   CHILDREN:
     - entry
+
 ---
 entry:
   type:
@@ -25,7 +26,7 @@ entry:
   change:
     1 DISTINCT VALUES:
       - '#deprecated #v1.2'
-  STRINGS:
+  TEXT:
     1 DISTINCT VALUES:
       - to be deleted?; no longer in DB
   CHILDREN:
@@ -35,6 +36,7 @@ entry:
     - etym
     - xr
     - note
+
 ---
 form:
   type:
@@ -72,7 +74,7 @@ form:
       - '''CF31438'', ''CF31439'''
       - '''CF31440'''
       - …
-  STRINGS:
+  TEXT:
     3 DISTINCT VALUES:
       - ⲓ
       - ⲙⲉⲧϩⲟⲩⲟ
@@ -83,9 +85,10 @@ form:
     - usg
     - oRef
     - orth
+
 ---
 gramGrp:
-  STRINGS:
+  TEXT:
     6 DISTINCT VALUES:
       - "<gram type=\"pos\">Possessivartikel</gram>\n          <gram type=\"gen\">m.</gram>\n
         \         <gram type=\"number\">sg.</gram>\n          <gram type=\"person[psor]\">1.</gram>\n
@@ -113,6 +116,7 @@ gramGrp:
     - gen
     - pos
     - number
+
 ---
 sense:
   xml:id:
@@ -133,12 +137,14 @@ sense:
     - note
     - cit
     - ref
+
 ---
 etym:
   CHILDREN:
     - xr
     - note
     - ref
+
 ---
 xr:
   type:
@@ -148,6 +154,7 @@ xr:
       - syn
   CHILDREN:
     - ref
+
 ---
 note:
   xml:lang:
@@ -155,7 +162,7 @@ note:
       - de
       - en
       - fr
-  STRINGS:
+  TEXT:
     406 DISTINCT VALUES:
       - '"Bock des Himmels"'
       - (?)
@@ -168,6 +175,7 @@ note:
       - 13. Buchstabe des Alphabeths ⲛⲉ
       - 14er Buchstabe des Alphabeths ⲝⲓ
       - …
+
 ---
 cit:
   type:
@@ -179,6 +187,7 @@ cit:
     - def
     - quote
     - bibl
+
 ---
 gram:
   type:
@@ -189,7 +198,7 @@ gram:
       - collocParticle
       - collocPartikel
       - collocPrep
-  STRINGS:
+  TEXT:
     107 DISTINCT VALUES:
       - (ⲛ)ⲛⲁϩⲣⲛ-
       - ϣⲁ
@@ -202,6 +211,7 @@ gram:
       - ϩⲁϩⲧⲛ-
       - ϩⲁϫⲛ-
       - …
+
 ---
 def:
   xml:lang:
@@ -209,7 +219,7 @@ def:
       - de
       - en
       - fr
-  STRINGS:
+  TEXT:
     146 DISTINCT VALUES:
       - (red) tourmaline
       - "= ⲓⲣⲓ esp. in relative clauses (not with\n              fut)"
@@ -222,6 +232,7 @@ def:
       - Partikel des Genitivs
       - "Partikel, forme réduite de participle\n              parfait"
       - …
+
 ---
 quote:
   xml:lang:
@@ -229,7 +240,7 @@ quote:
       - de
       - en
       - fr
-  STRINGS:
+  TEXT:
     28326 DISTINCT VALUES:
       - '"Balkenlage", Dach'
       - '"Erdesser"'
@@ -243,6 +254,7 @@ quote:
       - "\"Persian\" (referring to the Kurds who\n            established
         the Ayyubid dynasty in Egypt)"
       - …
+
 ---
 ref:
   target:
@@ -272,7 +284,7 @@ ref:
   xml:lang:
     1 DISTINCT VALUES:
       - grc
-  STRINGS:
+  TEXT:
     17117 DISTINCT VALUES:
       - "\"friend of the first rank\" (a\n          rank at the court of
         the Ptolemies and Seleucids)"
@@ -286,12 +298,13 @@ ref:
       - (one's own) property
       - "(question marker expecting\n          negative response)"
       - …
+
 ---
 usg:
   type:
     1 DISTINCT VALUES:
       - geo
-  STRINGS:
+  TEXT:
     11 DISTINCT VALUES:
       - '?'
       - A
@@ -304,9 +317,10 @@ usg:
       - S
       - V
       - …
+
 ---
 subc:
-  STRINGS:
+  TEXT:
     55 DISTINCT VALUES:
       - 1. Pers.
       - 2. Pers.
@@ -319,15 +333,17 @@ subc:
       - Fragepartikel
       - Fragepronomen
       - …
+
 ---
 gen:
-  STRINGS:
+  TEXT:
     2 DISTINCT VALUES:
       - f.
       - m.
+
 ---
 pos:
-  STRINGS:
+  TEXT:
     35 DISTINCT VALUES:
       - '?'
       - Adj.
@@ -340,15 +356,17 @@ pos:
       - Kompositum
       - Konj.
       - …
+
 ---
 number:
-  STRINGS:
+  TEXT:
     2 DISTINCT VALUES:
       - pl.
       - sg.
+
 ---
 oRef:
-  STRINGS:
+  TEXT:
     65 DISTINCT VALUES:
       - ϣ(ⲉ)ⲡ ⲧⲟⲟⲧ⸗
       - ϣⲉⲡ ⲧⲟⲟⲧ⸗
@@ -361,9 +379,10 @@ oRef:
       - ϫⲓ ⲡ ⲟⲩⲱ
       - ϫⲓ ⲣⲁⲛ
       - …
+
 ---
 orth:
-  STRINGS:
+  TEXT:
     15259 DISTINCT VALUES:
       - (ϩⲟⲟⲩⲣⲉ) ϩⲟⲩⲣⲉ-
       - (ⲁ)ⲁⲥ
@@ -376,9 +395,10 @@ orth:
       - (ⲉ)ⲙⲃⲟⲕⲓ
       - (ⲉ)ⲙⲉϩⲓ
       - …
+
 ---
 bibl:
-  STRINGS:
+  TEXT:
     6420 DISTINCT VALUES:
       - (CD 11b); CED 112; KoptHWb 126; DELC 145; ChLCS 33a
       - (CD 11b); CED 112; KoptHWb 127; DELC 146; ChLCS 33a
