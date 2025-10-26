@@ -73,6 +73,7 @@ DEFAULT_GEO = "S"
 GEOS: list[str] = ["S", "A", "L", "B", "F", "M", "O", "P", "V", "W", "U"]
 
 
+# TODO: (#51) Insert Crum links and tooltips in TypeScript.
 def _add_crum_links(ref_bibl: str) -> str:
     return _CRUM_RE.sub(rf'<a href="{_CRUM_PAGE}\2">\1</a>', ref_bibl)
 

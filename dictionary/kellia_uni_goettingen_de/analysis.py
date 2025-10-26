@@ -1,88 +1,80 @@
 #!/usr/bin/env python3
 """Analyze the structure of the KELLIA dataset."""
 
+import itertools
 import pathlib
 import typing
 import xml.etree.ElementTree as ET
 from collections import abc, defaultdict
 
 from dictionary.kellia_uni_goettingen_de import kellia
-from utils import file
+from utils import ensure, file
 
 _SCRIPT_DIR: pathlib.Path = pathlib.Path(__file__).parent
 _OUTPUT: pathlib.Path = _SCRIPT_DIR / "data" / "output" / "analysis.yaml"
 
-_MAX_LIST_LEN: int = 10
-_ORDER: list[str] = [
-    "body",
-    "superEntry",
-    "entry",
-    "form",
-    "gramGrp",
-    "sense",
-    "etym",
-    "xr",
-    "note",
-    "cit",
-    "gram",
-    "def",
-    "quote",
-    "ref",
-    "usg",
-    "subc",
-    "gen",
-    "pos",
-    "number",
-    "oRef",
-    "orth",
-    "bibl",
-]
-_ORDER_DICT: dict[str, int] = {name: idx for idx, name in enumerate(_ORDER)}
+_MAX_LIST_LEN: int = 11
 
 
-Sample: typing.TypeAlias = dict[str, list[str]]
+class Set:
+    """Set represents an ordered set of strings."""
 
+    def __init__(self) -> None:
+        self.d: defaultdict[str, int] = defaultdict(int)
+        self.sum: int = 0
 
-def _sample(s: abc.Iterable[str]) -> Sample:
-    """Sample the given set of values.
+    def add(self, val: str) -> None:
+        self.d[val] += 1
+        self.sum += 1
 
-    Args:
-        s: Set of values.
+    def __iter__(self) -> abc.Iterator[str]:
+        return iter(self.d)
 
-    Returns:
-        A dictionary containing one item – the key being the number of distinct
-        values, and the value being a (potentially sampled) list of values.
-        The values will be sorted.
-    """
-    # Sort so the output will be deterministic.
-    s = sorted(s)
-    # Return a dictionary with 1 key to create a structure:
-    return {
-        f"{len(s)} DISTINCT VALUES": (
-            s[:_MAX_LIST_LEN] + ["…"] if len(s) > _MAX_LIST_LEN else s
-        ),
-    }
+    def __lt__(self, other: object) -> bool:
+        assert isinstance(other, Set)
+        return self.sum < other.sum
 
+    def __bool__(self) -> bool:
+        return bool(self.d)
 
-Summary: typing.TypeAlias = dict[str, Sample | list[str]]
+    def sample(self) -> dict[str, typing.Any]:
+        """Return a sample of the elements.
+
+        Returns:
+            A dictionary containing a structured summary of the set content.
+        """
+        items: abc.Iterable[tuple[str, int]] = self.d.items()
+        # Sort in descending order by count.
+        items = sorted(items, key=lambda kv: kv[1], reverse=True)
+        # Slice.
+        items = itertools.islice(items, _MAX_LIST_LEN)
+        # We return a complex object in order to create neat, readable
+        # structure. Each item in the list is a dictionary containing the single
+        # entry – the key being the key, and the value being the count.
+        entries: list[dict[str, int] | str] = [{k: v} for k, v in items]
+        if len(entries) < len(self.d):
+            entries.append("…")
+        return {
+            "TOTAL": sum(self.d.values()),
+            f"{len(self.d)} DISTINCT VALUES": entries,
+        }
 
 
 class TagProperties:
     """TagProperties tracks observed tag properties."""
 
-    def __init__(self, name: str) -> None:
-        self.name: str = name
+    def __init__(self) -> None:
+        self.count: int = 0
         # attrs maps an attribute name to a set of all observed attribute
         # values.
-        self.attrs: defaultdict[str, set[str]] = defaultdict(set)
+        self.attrs: defaultdict[str, Set] = defaultdict(Set)
         # children stores all observed names of child tags.
-        self.children: set[str] = set()
+        self.children: Set = Set()
         # texts stores all observed values of the tag text.
-        self.texts: set[str] = set()
-        # tails stores all observed values of the tag tail.
-        self.tails: set[str] = set()
+        self.texts: Set = Set()
 
     def add_sample(self, elem: ET.Element) -> None:
+        self.count += 1
         for key, value in elem.attrib.items():
             self.attrs[_name(key)].add(value)
 
@@ -93,30 +85,27 @@ class TagProperties:
         if txt:
             self.texts.add(txt)
 
+        # No element is allowed to have a tail.
         tail: str = elem.tail.strip() if elem.tail else ""
-        if tail:
-            self.tails.add(tail)
+        ensure.ensure(not tail, "element", elem, "has a tail:", tail)
 
-    def summary(self) -> Summary:
-        props: dict[str, Sample | list[str]] = {
-            k: _sample(v) for k, v in self.attrs.items()
-        }
+    def summary(self):
+        props: dict[str, typing.Any] = {"TOTAL": self.count}
+        if self.attrs:
+            props["ATTRIBUTES"] = {
+                k: v.sample()
+                for k, v in sorted(
+                    self.attrs.items(),
+                    key=lambda kv: kv[1],
+                    reverse=True,
+                )
+            }
 
         if self.texts:
-            assert "TEXTS" not in props
-            props["TEXTS"] = _sample(self.texts)
-
-        if self.tails:
-            assert "TAILS" not in props
-            props["TAILS"] = _sample(self.tails)
+            props["TEXTS"] = self.texts.sample()
 
         if self.children:
-            # Always include all children.
-            assert "CHILDREN" not in props
-            props["CHILDREN"] = sorted(
-                self.children,
-                key=lambda x: _ORDER_DICT[x],
-            )
+            props["CHILDREN"] = self.children.sample()
 
         return props
 
@@ -125,30 +114,26 @@ def _name(name: str) -> str:
     return name.replace(kellia.XML_NS, "xml:").replace(kellia.TEI_NS, "")
 
 
-# TODO: (#0) Add statistics. Count the tags, attributes, children, attribute
-# values, ... etc.
-def _analyze() -> abc.Iterable[TagProperties]:
-    # tags maps a tag name to its observed properties.
-    tag_properties: dict[str, TagProperties] = {
-        name: TagProperties(name) for name in _ORDER
-    }
+def _analyze() -> dict[str, TagProperties]:
+    # props maps a tag name to its observed properties.
+    # The dictionary will retain the same order observed in the input.
+    props: defaultdict[str, TagProperties] = defaultdict(TagProperties)
 
     elem: ET.Element
     for elem in kellia.body_element(kellia.COMPREHENSIVE).iter():
         if kellia.deprecated(elem):
             continue
 
-        tag_properties[_name(elem.tag)].add_sample(elem)
+        props[_name(elem.tag)].add_sample(elem)
 
-    return tag_properties.values()
+    return props
 
 
 def main():
-    summary: list[dict[str, Summary]] = [
-        {tag.name: tag.summary()} for tag in _analyze()
-    ]
     file.write(
-        file.yaml_dump_all(summary).replace("\n---\n", "\n\n---\n"),
+        file.yaml_dump_all(
+            {name: tag.summary()} for name, tag in _analyze().items()
+        ).replace("\n---\n", "\n\n---\n"),
         _OUTPUT,
     )
 
