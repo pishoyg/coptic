@@ -68,21 +68,17 @@ _GEO_MAPPING: dict[str, str] = {
     "?": "U",
     "Ak": "O",
 }
-DEFAULT_GEOS = ["S"]
+DEFAULT_GEO = "S"
+
+GEOS: list[str] = ["S", "A", "L", "B", "F", "M", "O", "P", "V", "W", "U"]
 
 
 def _add_crum_links(ref_bibl: str) -> str:
     return _CRUM_RE.sub(rf'<a href="{_CRUM_PAGE}\2">\1</a>', ref_bibl)
 
 
-def _compress(txt: str | None) -> str:
-    assert txt is not None
-    return " ".join(txt.split())
-
-
 def _clean(txt: str) -> str:
-    txt = "".join(c for c in txt if c in _CLEAN)
-    return _compress(txt)
+    return "".join(c for c in txt if c in _CLEAN)
 
 
 class Form:
@@ -97,7 +93,7 @@ class Form:
     ) -> None:
         self.gram_grp: str | None = gram_grp
         self.orth: str = orth
-        self.geo: str = _GEO_MAPPING.get(geo, geo)
+        self.geo: str = geo
         self.form_id: str = form_id
 
     def _td(self, txt: str, *classes: str) -> str:
@@ -116,42 +112,28 @@ class Form:
         yield "</tr>"
 
 
-def _childless_text(
-    tag: ET.Element,
-    strict: bool = True,
-    compress: bool = False,
-) -> str:
-    """Assert that the tag is childless and has text. Return the text.
+def _text(tag: ET.Element, strict: bool = True) -> str:
+    """Assert that the tag is childless, and return its text.
 
-    The field `text` on an `ET.Element` object returns the text before the first
-    child, which results in some loss of data if the element has text after
-    children. You can use this method to verify that the element is childless,
-    which would imply that `.text` returns the full text.
+    A given tag can either have text or children, but not both.
+    Normally, we also verify the existence of text, unless `strict` is set to
+    `False`.
 
     Args:
         tag: A tag.
         strict: If true, assert the existence of text.
-        compress: If true, compress the text before returning it.
 
     Returns:
         Tag text.
     """
+
     ensure.ensure(len(tag) == 0, "element", tag, "has children!")
 
-    txt: str
-    if strict:
-        assert tag.text is not None
-        txt = tag.text
-    else:
-        txt = tag.text or ""
-
-    txt = txt.strip()
-
-    if compress:
-        txt = _compress(txt)
-
+    txt: str = tag.text or ""
+    txt = " ".join(txt.split())
     if strict:
         ensure.ensure(txt, "element", tag, "has no text!")
+
     return txt
 
 
@@ -166,14 +148,10 @@ class Orthography:
         if gram_grp is None:
             self._last_gram_grp = None
             return
-        self._last_gram_grp = " ".join(
-            _childless_text(child, compress=True) for child in gram_grp
-        )
+        self._last_gram_grp = " ".join(map(_text, gram_grp))
 
-    def add(self, orth: str, geos: list[str], form_id: str) -> None:
-        geos = geos or DEFAULT_GEOS
-        for g in geos:
-            self.forms.append(Form(self._last_gram_grp, orth, g, form_id))
+    def add(self, orth: str, geo: str, form_id: str) -> None:
+        self.forms.append(Form(self._last_gram_grp, orth, geo, form_id))
 
     def has(self, orth: str) -> bool:
         return any(f.orth == orth for f in self.forms)
@@ -200,13 +178,13 @@ class Etymology:
         for child in entry.find(TEI_NS + "etym") or []:
 
             if child.tag == TEI_NS + "note":
-                yield _childless_text(child)
+                yield _text(child)
                 continue
 
             if child.tag == TEI_NS + "xr":
                 for ref in child:
                     # pylint: disable-next=line-too-long
-                    yield f"{child.attrib["type"]}. {ref.attrib["target"]}# {_childless_text(ref)} "
+                    yield f"{child.attrib["type"]}. {ref.attrib["target"]}# {_text(ref)} "
                 continue
 
             assert child.tag == TEI_NS + "ref"
@@ -216,14 +194,11 @@ class Etymology:
                 continue
 
             if "targetLang" in child.attrib:
-                yield f"{child.attrib["targetLang"]}: {_childless_text(child)} "
+                yield f"{child.attrib["targetLang"]}: {_text(child)} "
                 continue
 
             if "greek" in child.attrib.get("type", ""):
-                greek_dict[child.attrib["type"]] = _childless_text(
-                    child,
-                    strict=False,
-                )
+                greek_dict[child.attrib["type"]] = _text(child, False)
                 continue
 
             # TODO: (#51) Handle remaining children.
@@ -233,7 +208,6 @@ class Etymology:
             if val is None:
                 greek_parts = []
                 break
-            val = val.strip()
             if "grl_ID" in key:
                 self._greek_id = val
             if "grl_lemma" in key:
@@ -263,7 +237,7 @@ class Etymology:
                 ref_target: str = _clean(ref.attrib["target"])
                 assert ref_target
                 # pylint: disable-next=line-too-long
-                yield f"{xr.attrib["type"]}. #{ref_target}# {_childless_text(ref)} "
+                yield f"{xr.attrib["type"]}. #{ref_target}# {_text(ref)} "
 
     def process(self) -> str:
         etym: str = "".join(self.amir)
@@ -280,7 +254,6 @@ class Etymology:
         if "cf. Gr." in etym:
             etym = _link_greek(etym)
         etym = _gloss_bibl(etym)
-        etym = _compress(etym)
         return f'<span class="etym">{etym}</span>' if etym else ""
 
 
@@ -363,19 +336,17 @@ class Lang:
         return self.senses[-1]
 
     def add(self, name: _SenseChild, value: str | ET.Element) -> None:
+        if name == "xr" and isinstance(value, ET.Element):
+            for ref in value:
+                self._last_sense.add(
+                    "xr",
+                    # pylint: disable-next=line-too-long
+                    f"{value.tag[29:]}. {ref.attrib["target"]}# {_text(ref)}",
+                )
+            return
+
         if isinstance(value, ET.Element):
-            if name == "xr":
-                for ref in value:
-                    self._last_sense.add(
-                        "xr",
-                        # pylint: disable-next=line-too-long
-                        f"{value.tag[29:]}. {ref.attrib["target"]}# {_childless_text(ref)}",
-                    )
-                return
-            value = _childless_text(value)
-        assert isinstance(value, str)
-        if name == "definition":
-            value = _compress(value)
+            value = _text(value)
         self._last_sense.add(name, value)
 
     def table(self) -> str:
@@ -427,25 +398,28 @@ def _link_greek(etym: str) -> str:
 
 
 def _form_sort_key(form: ET.Element) -> tuple[str, str]:
-    first_orth: ET.Element = next(form.iterfind(TEI_NS + "orth"))
-    txt: str = (
-        _childless_text(first_orth)
-        .strip()
-        .replace(
-            "⸗",
-            "--",
-        )
-    )  # Sort angle dash after hyphen
-
-    geo: ET.Element | None = form.find(TEI_NS + "usg")
-    if geo is None:
-        return (txt, "")
-    dialect = _childless_text(geo).strip()
-    if dialect == "Ak":
-        dialect = "K"
-    if dialect != "S":
-        dialect = "_" + dialect  # Sahidic always first!
-    return (txt, dialect)
+    # TODO: (#51) You could do a lot better than this!
+    # Try to mimic Crum's sorting behavior. Verbs should be sorted by case
+    # (infinitive, prenominal, pronominal, then qualitative), singular nouns
+    # should precede plural nouns, ...
+    # This sorting behavior would be more intuitive. Consistency with Crum is
+    # also beneficial.
+    # For now, the criteria below mimic CDO's.
+    geo: str = _geo(form)
+    if geo == "O":
+        geo = "K"
+    if geo != "S":
+        geo = f"_{geo}"
+    return (
+        # We first sort by the orthographic form.
+        # For two forms that are identical in spelling, we want prenominal forms
+        # precede prenominal forms, so we change the prefix of the latter from
+        # "⸗" to "--".
+        # The prefix of the former is simply "-".
+        _orth(form).replace("⸗", "--"),
+        # Secondly, we sort by dialect.
+        geo,
+    )
 
 
 class Word:
@@ -490,11 +464,16 @@ class Word:
         )
 
 
-def _geos(form: ET.Element) -> list[str]:
-    geos: ET.Element | None = form.find(TEI_NS + "usg")
-    if geos is None:
-        return []
-    return _childless_text(geos).replace("(", "").replace(")", "").split(" ")
+def _geo(form: ET.Element) -> str:
+    usgs: list[ET.Element] = form.findall(TEI_NS + "usg")
+    # We only have one type of <usg> tags.
+    assert all(usg.attrib["type"] == "geo" for usg in usgs)
+    assert len(usgs) in [0, 1]
+    geo: str = _text(usgs[0]) if usgs else DEFAULT_GEO
+    geo = geo.replace("(", "").replace(")", "")
+    geo = _GEO_MAPPING.get(geo, geo)
+    ensure.ensure(geo in GEOS, "unknown dialect:", geo)
+    return geo
 
 
 def deprecated(element: ET.Element) -> bool:
@@ -506,8 +485,9 @@ def _is_lemma(form: ET.Element) -> bool:
 
 
 def _orth(lemma: ET.Element) -> str:
-    first_orth: ET.Element = next(lemma.iterfind(TEI_NS + "orth"))
-    return _childless_text(first_orth)
+    orths: list[ET.Element] = lemma.findall(TEI_NS + "orth")
+    assert len(orths) == 1
+    return _text(orths[0])
 
 
 def _process_entry(entry: ET.Element) -> Word:
@@ -529,7 +509,7 @@ def _process_entry(entry: ET.Element) -> Word:
         forms = sorted(
             forms,
             key=lambda form: any(
-                _childless_text(orth) == lemma_orth
+                _text(orth) == lemma_orth
                 for orth in form.iterfind(TEI_NS + "orth")
             ),
             reverse=True,
@@ -551,9 +531,9 @@ def _process_entry(entry: ET.Element) -> Word:
         orthography.start_gram_grp(gram_grp)
 
         for orth in form.iterfind(TEI_NS + "orth"):
-            orth_text: str = _childless_text(orth).strip()
+            orth_text: str = _text(orth)
             assert orth_text
-            orthography.add(orth_text, _geos(form), form.attrib[XML_NS + "id"])
+            orthography.add(orth_text, _geo(form), form.attrib[XML_NS + "id"])
 
     langs: dict[str, Lang] = {
         "de": Lang("de"),
@@ -597,10 +577,7 @@ def _process_entry(entry: ET.Element) -> Word:
                 if not language:
                     # TODO: (#51) Incorporate quotes with an unknown language.
                     continue
-                langs[language].add(
-                    "quote",
-                    _childless_text(quote, compress=True),
-                )
+                langs[language].add("quote", _text(quote))
 
             for definition in child.iterfind(TEI_NS + "def"):
                 if definition.text is None:
@@ -618,12 +595,12 @@ def _process_entry(entry: ET.Element) -> Word:
     for gramgrp in entry.iter(TEI_NS + "gramGrp"):
         pos = gramgrp.find(TEI_NS + "pos")
         if pos is not None:
-            pos_text = _childless_text(pos)
+            pos_text = _text(pos)
         else:
             pos_text = "None"
         subc = gramgrp.find(TEI_NS + "subc")
         if subc is not None:
-            subc_text = _childless_text(subc)
+            subc_text = _text(subc)
         else:
             subc_text = "None"
         new_pos: str = _pos_map(pos_text, subc_text, orthography)
@@ -822,7 +799,13 @@ def _sahidic_supplemental() -> dict[str, set[str]]:
             # Plural forms have no special characters.
             assert clean(form) == form, form
             assert form != lemma
-            assert FORM_RE.fullmatch(form), form
+            ensure.ensure(
+                FORM_RE.fullmatch(form),
+                "line",
+                line,
+                "has an invalid form",
+                form,
+            )
             supp[tla_id].add(form)
             continue
 
@@ -835,7 +818,13 @@ def _sahidic_supplemental() -> dict[str, set[str]]:
             if form == lemma:
                 # This is the lemma form. It's already present.
                 continue
-            assert FORM_RE.fullmatch(form), form
+            ensure.ensure(
+                FORM_RE.fullmatch(form),
+                "line",
+                line,
+                "has an invalid form",
+                form,
+            )
             supp[tla_id].add(form)
 
     return supp
@@ -895,7 +884,7 @@ def _augmented_words(basename: str) -> abc.Generator[Word]:
             if word.orthstring.has(orth):
                 # The word already has this orth.
                 continue
-            word.orthstring.add(orth, ["S"], FROM_COPTIC_SCRIPTORIUM)
+            word.orthstring.add(orth, "S", FROM_COPTIC_SCRIPTORIUM)
         # TODO: (#305) We don't sort Bohairic forms because they already have
         # some order that would be corrupted if we were to reorder them below.
         # The lists retrieved have lamma forms first. We should order them by
@@ -909,7 +898,7 @@ def _augmented_words(basename: str) -> abc.Generator[Word]:
             yield word
             continue
         for orth in b:
-            word.orthstring.add(orth, ["B"], FROM_COPTIC_SCRIPTORIUM)
+            word.orthstring.add(orth, "B", FROM_COPTIC_SCRIPTORIUM)
         yield word
 
     # Verify that all Sahidic supplemental entries have been consumed.
