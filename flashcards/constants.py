@@ -276,7 +276,7 @@ class Crum(deck.Deck):
         data = TLA_ID_RE.sub("", data)
         return data
 
-    for word in kellia.comprehensive():
+    for word in kellia.greek():
         key: str = __tla_col(word.entry_xml_id)
         title = (
             __tla_col(word.orthstring.table())
