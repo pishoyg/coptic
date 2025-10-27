@@ -28,10 +28,17 @@ XML_NS: str = "{http://www.w3.org/XML/1998/namespace}"
 TEI_NS: str = "{http://www.tei-c.org/ns/1.0}"
 
 _SCRIPT_DIR: pathlib.Path = pathlib.Path(__file__).parent
-V_1_2_DIR: pathlib.Path = _SCRIPT_DIR / "data" / "raw" / "v1.2"
-EGYPTIAN: str = "BBAW_Lexicon_of_Coptic_Egyptian-v4-2020.xml"
-GREEK: str = "DDGLC_Lexicon_of_Greek_Loanwords_in_Coptic-v2-2020.xml"
-COMPREHENSIVE: str = "Comprehensive_Coptic_Lexicon-v1.2-2020.xml"
+# COMPREHENSIVE is the path to the dataset that contains both Greek and Egyptian
+# words.
+COMPREHENSIVE: pathlib.Path = (
+    _SCRIPT_DIR
+    / "data"
+    / "raw"
+    / "v1.2"
+    / "Comprehensive_Coptic_Lexicon-v1.2-2020.xml"
+)
+NUM_GREEK: int = 3208
+NUM_EGYPTIAN: int = 8055
 
 _CLEAN: set[str] = set("ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ ")
 _CRUM_RE: re.Pattern[str] = re.compile(r"\b(CD ([0-9]+[ab]?)-?[0-9]*[ab]?)\b")
@@ -71,6 +78,20 @@ _GEO_MAPPING: dict[str, str] = {
 DEFAULT_GEO = "S"
 
 GEOS: list[str] = ["S", "A", "L", "B", "F", "M", "O", "P", "V", "W", "U"]
+
+DDGLC_RE: re.Pattern[str] = re.compile("\bDDGLC\b")
+
+
+def _is_greek(entry: ET.Element) -> bool:
+    assert entry.tag == TEI_NS + "entry"
+    return any(
+        ref.attrib.get("type", "").startswith("greek_lemma")
+        for etym in entry.findall(TEI_NS + "etym")
+        for ref in etym.findall(TEI_NS + "ref")
+    ) or any(
+        bibl.text and DDGLC_RE.match(bibl.text)
+        for bibl in entry.findall(TEI_NS + "bibl")
+    )
 
 
 # TODO: (#51) Insert Crum links and tooltips in TypeScript.
@@ -426,6 +447,7 @@ class Word:
         pos_string: str,
         langs: dict[str, Lang],
         etym_string: Etymology,
+        is_greek: bool,
     ) -> None:
         self.entry_xml_id: str = entry_xml_id
         self.lemma_form_id: str | None = lemma_form_id
@@ -433,6 +455,7 @@ class Word:
         self.pos_string: str = pos_string
         self.langs: dict[str, Lang] = langs
         self.etym_string: Etymology = etym_string
+        self.is_greek: bool = is_greek
 
     def merge_langs(self) -> Lang:
         merged: Lang = Lang("MERGED")
@@ -608,6 +631,7 @@ def _process_entry(entry: ET.Element) -> Word:
         pos_list[0],
         langs,
         Etymology(entry),
+        _is_greek(entry),
     )
 
 
@@ -819,26 +843,24 @@ def _sahidic_supplemental() -> dict[str, set[str]]:
     return supp
 
 
-def body_element(basename: str) -> ET.Element:
-    txt: ET.Element[str] | None = (
-        ET.parse(V_1_2_DIR / basename).getroot().find(TEI_NS + "text")
+def body_element() -> ET.Element:
+    txt: ET.Element | None = (
+        ET.parse(COMPREHENSIVE).getroot().find(TEI_NS + "text")
     )
     assert txt
     body: ET.Element[str] | None = txt.find(TEI_NS + "body")
     assert body
+
     return body
 
 
-def _words(basename: str) -> abc.Generator[Word]:
+def _words() -> abc.Generator[Word]:
     """Generate words from the given XML file.
-
-    Args:
-        basename: Basename of the XML file containing the data.
 
     Yields:
         Word objects representing entries in the dataset.
     """
-    for child in body_element(basename):
+    for child in body_element():
         # Every child is either a super entry or an entry.
         entries: ET.Element | list[ET.Element] = (
             child if child.tag == TEI_NS + "superEntry" else [child]
@@ -858,11 +880,8 @@ def _words(basename: str) -> abc.Generator[Word]:
                 )
 
 
-def _augmented_words(basename: str) -> abc.Generator[Word]:
-    """Augment the stream of words from the given file with supplemental forms.
-
-    Args:
-        basename: Basename of the XML file containing the data.
+def _augmented_words() -> abc.Generator[Word]:
+    """Augment the stream of words with supplemental forms.
 
     Yields:
         Word objects, with supplemental entries added.
@@ -871,7 +890,7 @@ def _augmented_words(basename: str) -> abc.Generator[Word]:
     s_supp: dict[str, set[str]] = _sahidic_supplemental()
     # TODO: (#305) Part-of-speech info is present in the source data. Use it
     # instead of using an empty gram_grp for all supplemental forms.
-    for word in _words(basename):
+    for word in _words():
         # Add Sahidic entries before Bohairic ones.
         # Additionally, we sort Sahidic entries to make the output
         # deterministic.
@@ -910,20 +929,20 @@ def _augmented_words(basename: str) -> abc.Generator[Word]:
         log.error("Bohairic forms", forms, "have an invalid TLA ID", tla_id)
 
 
-def _dataset(basename: str) -> list[Word]:
-    return list(_augmented_words(basename))
+@functools.cache
+def comprehensive() -> list[Word]:
+    return list(_augmented_words())
 
 
 @functools.cache
 def egyptian() -> list[Word]:
-    return _dataset(EGYPTIAN)
+    words: list[Word] = [w for w in comprehensive() if not w.is_greek]
+    assert len(words) == NUM_EGYPTIAN, len(words)
+    return words
 
 
 @functools.cache
 def greek() -> list[Word]:
-    return _dataset(GREEK)
-
-
-@functools.cache
-def comprehensive() -> list[Word]:
-    return _dataset(COMPREHENSIVE)
+    words: list[Word] = [w for w in comprehensive() if w.is_greek]
+    assert len(words) == NUM_GREEK, len(words)
+    return words

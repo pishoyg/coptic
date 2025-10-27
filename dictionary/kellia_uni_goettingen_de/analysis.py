@@ -120,7 +120,7 @@ def _analyze() -> dict[str, TagProperties]:
     props: defaultdict[str, TagProperties] = defaultdict(TagProperties)
 
     elem: ET.Element
-    for elem in kellia.body_element(kellia.COMPREHENSIVE).iter():
+    for elem in kellia.body_element().iter():
         if kellia.deprecated(elem):
             continue
 
