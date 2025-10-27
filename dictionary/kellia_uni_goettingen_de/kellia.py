@@ -481,12 +481,16 @@ class Word:
 
 
 def _geo(form: ET.Element) -> str:
+    geo: str
     usgs: list[ET.Element] = form.findall(TEI_NS + "usg")
-    # We only have one type of <usg> tags.
-    assert all(usg.attrib["type"] == "geo" for usg in usgs)
-    assert len(usgs) in [0, 1]
-    geo: str = _text(usgs[0]) if usgs else DEFAULT_GEO
-    geo = geo.replace("(", "").replace(")", "")
+    if usgs:
+        assert len(usgs) == 1
+        assert usgs[0].attrib["type"] == "geo"
+        geo = _text(usgs[0])
+    else:
+        geo = DEFAULT_GEO
+    del usgs
+
     geo = _GEO_MAPPING.get(geo, geo)
     ensure.ensure(geo in GEOS, "unknown dialect:", geo)
     return geo
