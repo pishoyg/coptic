@@ -351,8 +351,10 @@ export function addEnglishLookups(root) {
 //   codex {ROMAN_NUMERAL} - {TRACTATE_TITLE}; {TRACTATE_NUMBER}; {LEAF_NUMBER}; {LINE_NUMBER}; {QUOTE}
 // There is a 1:1 mapping between tractate names and numbers, and tractate
 // numbers don't really make sense outside of Marcion.
+// The leaf number is almost always a number, but occasionally it's "flyleaf
+// verso" or "flyleaft recto".
 const NAG_HAMMADI_RE =
-  /\bcodex ([a-z]*) - ([^;]+); [0-9]+; ([0-9]+); ([0-9]+);/gi;
+  /\bcodex ([a-z]*) - ([^;]+); [0-9]+; ([0-9]+|flyleaf (?:verso|recto)); ([0-9]+);/gi;
 /**
  *
  * @param root

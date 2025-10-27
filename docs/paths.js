@@ -67,6 +67,15 @@ export const KELLIA = 'https://kellia.uni-goettingen.de/';
 export function copticDictionaryOnline(key) {
   return `https://coptic-dictionary.org/entry.cgi?tla=${key}`;
 }
+/* NAG_HAMMADI_OVERRIDE defines URLs for codex leaves that are hard to find
+ * using the custom query defined below.
+ */
+const NAG_HAMMADI_OVERRIDE = {
+  'I:flyleaf recto':
+    'https://ccdl.claremont.edu/digital/collection/nha/id/2159',
+  'I:flyleaf verso':
+    'https://ccdl.claremont.edu/digital/collection/nha/id/2136',
+};
 /**
  *
  * @param codex
@@ -74,7 +83,10 @@ export function copticDictionaryOnline(key) {
  * @returns
  */
 export function nagHammadiPapyrus(codex, leaf) {
-  return `https://ccdl.claremont.edu/digital/collection/nha/search/searchterm/Codex ${codex.toUpperCase()}, papyrus ${leaf}`;
+  return (
+    NAG_HAMMADI_OVERRIDE[`${codex}:${leaf}`] ??
+    `https://ccdl.claremont.edu/digital/collection/nha/search/searchterm/Codex ${codex.toUpperCase()}, papyrus ${leaf}`
+  );
 }
 /**
  *
