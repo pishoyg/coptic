@@ -379,11 +379,11 @@ class Reference(Part):
     """
 
     def __init__(self, parts: list[str]) -> None:
-        self.parts: list[str] = parts
-        assert len(self.parts) in [1, 6, 7]
-        if self.parts[-1] == "Ext":
-            self.parts = self.parts[:-1]
-        if self.parts[0].startswith("ext "):
+        assert len(parts) in [1, 6, 7]
+        self.parts: list[str] = [
+            p for p in parts if p.lower().strip() != "ext"
+        ]
+        if self.parts[0].lower().startswith("ext "):
             self.parts[0] = self.parts[0][4:]
 
     @typing.override
