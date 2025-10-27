@@ -401,12 +401,14 @@ export function addEnglishLookups(root: HTMLElement): void {
   });
 }
 
-// In a Nag Hammadi reference, the Roman numeral indicates the codex number.
-// Afterwards, the first numeral indicates the text, the second the Codex leaf,
-// and the third the line number.
-// We're only interested in the codex and leaf number, so we use capture groups
-// for those.
-const NAG_HAMMADI_RE = /\bcodex ([a-z]*)\b[^;]*; [0-9]+; ([0-9]+);/gi;
+// A Nag Hammadi reference has the following format:
+// eslint-disable-next-line max-len
+//   codex {ROMAN_NUMERAL} - {TRACTATE_TITLE}; {TRACTATE_NUMBER}; {LEAF_NUMBER}; {LINE_NUMBER}; {QUOTE}
+// There is a 1:1 mapping between tractate names and numbers, and tractate
+// numbers don't really make sense outside of Marcion.
+const NAG_HAMMADI_RE =
+  /\bcodex ([a-z]*) - ([^;]+); [0-9]+; ([0-9]+); ([0-9]+);/gi;
+
 /**
  *
  * @param root
@@ -418,12 +420,26 @@ export function handleNagHammadi(root: HTMLElement): void {
       html.replaceText(
         elem,
         NAG_HAMMADI_RE,
-        (match: RegExpExecArray): { replacement: Node } => {
+        (
+          match: RegExpExecArray,
+          remainder: string
+        ): { replacement: Node; remainder: string } => {
           const anchor: HTMLAnchorElement = document.createElement('a');
           anchor.target = '_blank';
-          anchor.href = paths.nagHammadiPapyrus(match[1]!, match[2]!);
-          anchor.textContent = match[0];
-          return { replacement: anchor };
+          const [codex, title, leaf, line]: [string, string, string, string] = [
+            match[1]!,
+            match[2]!,
+            match[3]!,
+            match[4]!,
+          ];
+          anchor.href = paths.nagHammadiPapyrus(codex, leaf);
+          // Notice that we intentionally drop the tractate number from the
+          // output, because it doesn't make sense outside of Marcion.
+          anchor.textContent = `codex ${codex} - ${title} - ${leaf}`;
+          return {
+            replacement: anchor,
+            remainder: `: ${line}: ${remainder}`,
+          };
         }
       );
     });
