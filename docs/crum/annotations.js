@@ -89,6 +89,7 @@ export const MAPPING = {
   'q v': { fullForm: 'quod vide' },
   's v': { fullForm: 'sub verbo' },
   sc: { fullForm: 'scilicet' },
+  varr: { fullForm: 'variants' },
   vbs: { fullForm: 'verbs' },
   // SECTION 3: ABBREVIATIONS THAT MOSTLY APPEAR IN REFERENCE TITLES, OR PERHAPS
   // AS POSTFIXES:
