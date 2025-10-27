@@ -258,7 +258,9 @@ class Crum(deck.Deck):
     indexer: CrumIndexer
 
     for _, root in crum.Crum.roots.items():
-        title: str = page.no_line_breaks(root.word_parsed_classify())
+        title: str = page.no_line_breaks(
+            root.word_parsed_classify(include_references=False),
+        )
         key_to_sister[root.key] = Sister(
             root.key,
             title,

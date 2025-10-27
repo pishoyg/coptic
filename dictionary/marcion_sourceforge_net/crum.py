@@ -81,9 +81,12 @@ class Row(gcp.Record):
             normalize_assumed=False,
         )
 
-    def word_parsed_classify(self) -> str:
+    def word_parsed_classify(self, include_references: bool = True) -> str:
         return page.html_line_breaks(
-            "\n".join(w.string(classify=True) for w in self.parsing_1),
+            "\n".join(
+                w.string(classify=True, include_references=include_references)
+                for w in self.parsing_1
+            ),
         )
 
     @functools.cached_property
