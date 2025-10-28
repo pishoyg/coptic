@@ -3,7 +3,6 @@
  */
 import * as css from '../css.js';
 import * as iam from '../iam.js';
-import * as dev from '../dev.js';
 import * as cls from './cls.js';
 import * as dial from './dialect.js';
 import * as ddial from '../dialect.js';
@@ -28,17 +27,6 @@ export var CLS;
    */
   CLS['DIALECT_DICTIONARIES'] = 'dialect-dictionaries';
 })(CLS || (CLS = {}));
-/**
- * DevHighlighter is a highlighter that controls Crum's developer-mode elements.
- */
-export class DevHighlighter extends dev.Highlighter {
-  /**
-   * @returns A query selecting all developer-mode-only elements.
-   */
-  query() {
-    return `.${dev.CLS.DEV}, .${cls.NAG_HAMMADI}, .${cls.SENSES}, .${cls.QUALITY}, .${cls.DRV_KEY}`;
-  }
-}
 const BRIGHT = '1.0';
 const DIM = '0.3';
 /**

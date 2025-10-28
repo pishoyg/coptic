@@ -328,7 +328,7 @@ export function addCopticLookups(root) {
 export function addGreekLookups(root) {
   html.linkifyText(root, GREEK_RE, (match) => paths.greekLookup(match[0]), [
     ccls.LINK,
-    cls.LIGHT,
+    cls.GREEK,
   ]);
 }
 /**
@@ -342,7 +342,7 @@ export function addEnglishLookups(root) {
       ENGLISH_RE,
       (match) => paths.lexiconLookup(match[0]),
       [ccls.HOVER_LINK],
-      [cls.PART_OF_SPEECH]
+      [cls.PART_OF_SPEECH, cls.ROMAN, cls.HEADING]
     );
   });
 }

@@ -9,7 +9,6 @@ import * as browser from '../browser.js';
 import * as dial from './dialect.js';
 import * as paths from '../paths.js';
 import * as css from '../css.js';
-import * as dev from '../dev.js';
 import * as cls from './cls.js';
 import * as head from '../header.js';
 import * as id from './id.js';
@@ -105,7 +104,7 @@ export function makeHelpPanel(highlighter, devHighlighter) {
         () => {
           const text = browser
             .findNextElement(
-              `.${'view' /* xoox.CLS.VIEW */} .${dev.CLS.DEV}, .${cls.SISTER_KEY}, .${cls.DRV_KEY}`,
+              `.${'key' /* xoox.CLS.KEY */}, .${cls.SISTER_KEY}, .${cls.DRV_KEY}`,
               'cur'
             )
             ?.textContent.trim();

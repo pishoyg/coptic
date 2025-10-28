@@ -3,7 +3,6 @@
 import * as browser from './browser.js';
 import * as log from './logger.js';
 import * as orth from './orth.js';
-import * as dev from './dev.js';
 import * as cls from './cls.js';
 import * as str from './str.js';
 // KEY is the name of the field that bears the word key. The key can be used to
@@ -64,6 +63,11 @@ export var CLS;
 (function (CLS) {
   // VIEW is the class of the view table cells.
   CLS['VIEW'] = 'view';
+  // VIEW_VIEW is the class of the word "view" in the view cell.
+  CLS['VIEW_VIEW'] = 'view-view';
+  // KEY is the class of a search result key.
+
+  CLS['KEY'] = 'key';
   // ERROR is the class of the error message.
   CLS['ERROR'] = 'error';
   // COUNTER is the class of the result counters in the view cells.
@@ -393,7 +397,7 @@ export class SearchResult extends AggregateResult {
     counter.textContent = `? / ${total.toString()}`;
     td.append(counter);
     const key = document.createElement('span');
-    key.classList.add(dev.CLS.DEV, cls.LINK);
+    key.classList.add('key' /* CLS.KEY */, cls.LINK);
     key.textContent = this.key;
     td.prepend(key);
     const href = this.href();
@@ -403,7 +407,7 @@ export class SearchResult extends AggregateResult {
     // Clicking anywhere on the cell opens the page.
     td.addEventListener('click', browser.open.bind(browser, href, true));
     const view = document.createElement('a');
-    view.classList.add(cls.LINK);
+    view.classList.add(cls.LINK, 'view-view' /* CLS.VIEW_VIEW */);
     view.textContent = 'view';
     td.prepend(view);
     return td;
