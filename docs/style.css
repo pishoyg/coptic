@@ -248,6 +248,8 @@ table {
 
 .sister-key {
   float: right;
+  font-style: italic;
+  font-size: x-small;
 }
 
 .sister-index {
@@ -368,6 +370,10 @@ body:not(.lexicon) .header td:not(:first-child) {
 
 body.note .sense {
   padding-left: 10px;
+}
+
+.explanatory-key {
+  font-size: smaller;
 }
 
 body:not(.dev) {
