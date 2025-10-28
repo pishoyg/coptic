@@ -397,7 +397,7 @@ export function addEnglishLookups(root: HTMLElement): void {
       ENGLISH_RE,
       (match: RegExpExecArray) => paths.lexiconLookup(match[0]),
       [ccls.HOVER_LINK],
-      [cls.PART_OF_SPEECH]
+      [cls.PART_OF_SPEECH, cls.ROMAN, cls.HEADING]
     );
   });
 }

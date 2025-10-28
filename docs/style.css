@@ -263,6 +263,14 @@ table {
   opacity: 0.5;
 }
 
+.roman {
+  font-style: italic;
+}
+
+.heading {
+  font-weight: bold;
+}
+
 .part-of-speech {
   font-weight: bold;
 }

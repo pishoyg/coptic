@@ -35,7 +35,16 @@ export const DRV_KEY = 'drv-key';
 export const DRV_LINK = 'drv-link';
 export const EXPLANATORY = 'explanatory';
 export const EXPLANATORY_KEY = 'explanatory-key';
+/**
+ * HEADING is the class of a the word starting a paragraph in the meaning of a
+ * word.
+ */
+export const HEADING = 'heading';
 export const INDEX_TABLE = 'index-table';
+/**
+ * ROMAN is the class of roman (non-italic) text in the meaning of a word.
+ */
+export const ROMAN = 'roman';
 export const GREEK = 'greek';
 export const MEANING = 'meaning';
 export const NAG_HAMMADI = 'nag-hammadi';

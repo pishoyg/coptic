@@ -828,6 +828,8 @@ _CRUM_RETAIN_CLASSES = {
     "dialect",
     "spelling",
     "type",
+    "roman",
+    "heading",
 } | _DIALECTS
 
 _CRUM_RETAIN_ELEMENTS_FOR_CLASSES = {"comma"}

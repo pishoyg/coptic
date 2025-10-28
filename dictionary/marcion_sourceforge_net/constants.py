@@ -280,7 +280,8 @@ WORD_RE: re.Pattern[str] = re.compile(
 )
 
 # The following is used to parse the English meaning column.
-_BOLDEN: list[str] = [
+# TODO: (#0) This list is likely not comprehensive, and it's expected to grow.
+_HEADINGS: list[str] = [
     "intr",
     "intr & tr",
     "tr",
@@ -291,16 +292,15 @@ _BOLDEN: list[str] = [
     "noun",
     "noun male",
 ]
+
 ENGLISH_PROCESSING: list[tuple[re.Pattern[str] | str, str]] = [
-    # Curly brackets are used to indicate italics.
-    ("{", "<i>"),
-    ("}", "</i>"),
-    # Bolden markers in the English column.
-    # TODO: (#0) This list is likely not comprehensive, and it's expected to
-    # grow.
+    # Curly brackets are used to indicate roman (non-italic) text.
+    ("{", '<span class="roman">'),
+    ("}", "</span>"),
+    # Mark paragraph headings.
     (
-        re.compile(rf"(\b({"|".join(_BOLDEN)})( \([a-zA-Z? ]+\))?:)"),
-        r"<b>\1</b>",
+        re.compile(rf"(\b({"|".join(_HEADINGS)})( \([a-zA-Z? ]+\))?:)"),
+        r'<span class="heading">\1</span>',
     ),
 ]
 
