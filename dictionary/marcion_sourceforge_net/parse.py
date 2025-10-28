@@ -33,17 +33,21 @@ def parse_word_cell(
         return []
     lines: list[lex.Line] = []
     for line in entry.split("\n"):
-        lines.append(
-            _parse_line(
-                line,
-                root_type,
-                strict,
-                detach_types,
-                use_coptic_symbol,
-                normalize_optional,
-                normalize_assumed,
-            ),
-        )
+        try:
+            lines.append(
+                _parse_line(
+                    line,
+                    root_type,
+                    strict,
+                    detach_types,
+                    use_coptic_symbol,
+                    normalize_optional,
+                    normalize_assumed,
+                ),
+            )
+        # pylint: disable-next=broad-exception-caught
+        except Exception as e:
+            log.fatal("Error parsing", entry, "Error:", e)
 
     # Any entry that has multiple lines must be dialected.
     if len(lines) > 1:
