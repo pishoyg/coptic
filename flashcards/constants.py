@@ -473,7 +473,7 @@ class Crum(deck.Deck):
         # Editor's notes.
         if root.notes:
             yield '<div id="notes" class="notes">'
-            yield "<i>Editor's Note: </i>"
+            yield "<i>Editor's note: </i>"
             yield root.notes
             yield "</div>"
 
