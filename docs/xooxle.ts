@@ -3,7 +3,6 @@
 import * as browser from './browser.js';
 import * as log from './logger.js';
 import * as orth from './orth.js';
-import * as dev from './dev.js';
 import * as cls from './cls.js';
 import * as str from './str.js';
 
@@ -70,6 +69,11 @@ const TAG_REGEX = /<\/?[^>]+>/g;
 export const enum CLS {
   // VIEW is the class of the view table cells.
   VIEW = 'view',
+  // VIEW_VIEW is the class of the word "view" in the view cell.
+  VIEW_VIEW = 'view-view',
+  // KEY is the class of a search result key.
+  // eslint-disable-next-line @typescript-eslint/no-shadow
+  KEY = 'key',
   // ERROR is the class of the error message.
   ERROR = 'error',
   // COUNTER is the class of the result counters in the view cells.
@@ -469,7 +473,7 @@ export class SearchResult extends AggregateResult {
     td.append(counter);
 
     const key: HTMLSpanElement = document.createElement('span');
-    key.classList.add(dev.CLS.DEV, cls.LINK);
+    key.classList.add(CLS.KEY, cls.LINK);
     key.textContent = this.key;
     td.prepend(key);
 
@@ -482,7 +486,7 @@ export class SearchResult extends AggregateResult {
     td.addEventListener('click', browser.open.bind(browser, href, true));
 
     const view: HTMLAnchorElement = document.createElement('a');
-    view.classList.add(cls.LINK);
+    view.classList.add(cls.LINK, CLS.VIEW_VIEW);
     view.textContent = 'view';
     td.prepend(view);
 

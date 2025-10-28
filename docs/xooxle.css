@@ -41,6 +41,22 @@
   text-decoration: underline;
 }
 
+body:not(.dev) {
+  & .key {
+    display: none;
+  }
+}
+
+body.dev {
+  & .view-view {
+    display: none;
+  }
+
+  & .key {
+    display: block;
+  }
+}
+
 .counter {
   font-size: smaller;
   opacity: 0.3;

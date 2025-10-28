@@ -12,6 +12,7 @@ import * as wiki from './wiki.js';
 import * as drop from '../dropdown.js';
 import * as log from '../logger.js';
 import * as id from './id.js';
+import * as dev from '../dev.js';
 
 enum DialectMatch {
   // The candidate has at least one of the highlighted dialects, and the match
@@ -337,7 +338,7 @@ async function main(): Promise<void> {
   );
 
   // Create the help panel.
-  help.makeHelpPanel(highlighter, new high.DevHighlighter());
+  help.makeHelpPanel(highlighter, new dev.Highlighter());
 
   // Add event listener for reports.
   // TODO: (#203) This belongs in the (future) header module.

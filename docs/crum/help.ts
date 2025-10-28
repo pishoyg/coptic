@@ -26,7 +26,7 @@ import * as id from './id.js';
 // eslint-disable-next-line max-lines-per-function
 export function makeHelpPanel(
   highlighter: high.Highlighter,
-  devHighlighter: high.DevHighlighter
+  devHighlighter: dev.Highlighter
 ): help.Help {
   const panel = new help.Help();
 
@@ -115,7 +115,7 @@ export function makeHelpPanel(
         (): void => {
           const text: string | undefined = browser
             .findNextElement(
-              `.${xoox.CLS.VIEW} .${dev.CLS.DEV}, .${cls.SISTER_KEY}, .${cls.DRV_KEY}`,
+              `.${xoox.CLS.KEY}, .${cls.SISTER_KEY}, .${cls.DRV_KEY}`,
               'cur'
             )
             ?.textContent.trim();

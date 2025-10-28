@@ -7,6 +7,7 @@ import * as drop from '../dropdown.js';
 import * as html from '../html.js';
 import * as high from './highlight.js';
 import * as crum from './crum.js';
+import * as dev from '../dev.js';
 
 /**
  *
@@ -24,7 +25,7 @@ function main(): void {
   }
 
   const highlighter = new high.Highlighter(manager, []);
-  const devHighlighter = new high.DevHighlighter();
+  const devHighlighter: dev.Highlighter = new dev.Highlighter();
 
   // We disable the help panel on Anki for the following reasons:
   // - There is no keyboard on mobile.

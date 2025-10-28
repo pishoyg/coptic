@@ -1,10 +1,6 @@
 /**
  * Package cls defines Crum class constants.
  *
- * TODO: (#241) Avoid use of styling classes in HTML, as those force us to
- * update the HTML whenever we want to update the style of an element, instead
- * of being able to keep the HTML as is and update the style through the CSS.
- *
  * NOTE: Keep the content of this file sorted in alphabetical order.
  */
 
@@ -40,8 +36,7 @@ export const DRV_LINK = 'drv-link';
 export const EXPLANATORY = 'explanatory';
 export const EXPLANATORY_KEY = 'explanatory-key';
 export const INDEX_TABLE = 'index-table';
-// TODO: (#241) LIGHT is a styling class!
-export const LIGHT = 'light';
+export const GREEK = 'greek';
 export const MEANING = 'meaning';
 export const NAG_HAMMADI = 'nag-hammadi';
 // TODO: (#203) Although this class's primary use is Anki, it might actually

@@ -133,7 +133,7 @@ class SisterWithFrag:
             yield self.sister.type
             yield "</b>) "
         yield self.sister.meaning
-        yield '<span hidden="" class="dev sister-key right">'
+        yield '<span hidden="" class="sister-key">'
         yield self.sister.key
         yield "</span>"
         yield "</td>"
@@ -420,7 +420,7 @@ class Crum(deck.Deck):
         if root.crum or root.dawoud_pages:
             # Dictionary pages.
             yield '<div id="dictionary" class="dictionary">'
-            yield '<span class="right">'
+            yield '<span class="page-list">'
 
             if root.crum:
                 yield "<b>"
@@ -459,11 +459,11 @@ class Crum(deck.Deck):
                     alt=img.alt,
                     path=relpath(img.dst_path),
                     caption=_join(
-                        '<span hidden="" class="dev explanatory-key">',
+                        '<span hidden="" class="explanatory-key">',
                         img.stem,
-                        " ",
                         "</span>",
-                        '<span class="italic lighter small">',
+                        " ",
+                        '<span class="explanatory-caption">',
                         root.sense(img) or "",
                         "</span>",
                     ),
@@ -551,7 +551,7 @@ class Crum(deck.Deck):
         # Crum's pages.
         if root.crum:
             yield '<div id="crum" class="crum dictionary">'
-            yield '<span class="right">'
+            yield '<span class="page-list">'
             yield '<b><a href="#crum" class="crum hover-link">Crum</a>: </b>'
             yield DICTIONARY_PAGE_RE.sub(
                 r'<span class="crum-page">\1</span>',
@@ -571,7 +571,7 @@ class Crum(deck.Deck):
         if root.dawoud_pages:
             yield page.HORIZONTAL_RULE
             yield '<div id="dawoud" class="dawoud dictionary">'
-            yield '<span class="right">'
+            yield '<span class="page-list">'
             # Dawoud's pages.
             yield "<b>"
             yield '<a href="#dawoud" class="dawoud hover-link">'

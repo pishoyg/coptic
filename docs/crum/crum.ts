@@ -17,6 +17,7 @@ import * as head from '../header.js';
 import * as log from '../logger.js';
 import * as wiki from './wiki.js';
 import * as drop from '../dropdown.js';
+import * as dev from '../dev.js';
 
 const COPTIC_RE = /[\p{Script=Coptic}][\p{Script=Coptic}\p{Mark}]*/gu;
 const GREEK_RE = /[\p{Script=Greek}][\p{Script=Greek}\p{Mark}]*/gu;
@@ -31,7 +32,7 @@ const ENGLISH_RE = /[\p{Script=Latin}][\p{Script=Latin}\p{Mark}]*/gu;
 export function handle(
   root: HTMLElement,
   highlighter: high.Highlighter,
-  devHighlighter: high.DevHighlighter
+  devHighlighter: dev.Highlighter
 ): void {
   handleCategories(root);
   handleRootType(root);
@@ -311,7 +312,7 @@ export function handleDialect(
  */
 export function handleDeveloper(
   root: HTMLElement,
-  highlighter: high.DevHighlighter
+  highlighter: dev.Highlighter
 ): void {
   root.querySelectorAll<HTMLElement>(`.${head.CLS.DEVELOPER}`).forEach((el) => {
     el.classList.add(ccls.LINK);
@@ -381,7 +382,7 @@ export function addGreekLookups(root: HTMLElement): void {
     root,
     GREEK_RE,
     (match: RegExpExecArray) => paths.greekLookup(match[0]),
-    [ccls.LINK, cls.LIGHT]
+    [ccls.LINK, cls.GREEK]
   );
 }
 

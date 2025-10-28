@@ -142,9 +142,6 @@ table {
 
 /********** Crum's Notes **********/
 
-/* TODO: (#241) Use classes that represent types, rather than desired behaviour.
-*  Otherwise, this doesn't represent real decoupling of the style from the HTML.: */
-
 .card {
   font-size: 18px;
 }
@@ -165,6 +162,12 @@ table {
   width: auto;
 }
 
+.explanatory-caption {
+  font-style: italic;
+  opacity: 0.7;
+  font-size: small;
+}
+
 .crum-page-img-img,
 .dawoud-page-img-img {
   width: 1000px;
@@ -174,32 +177,11 @@ table {
   text-align: center;
 }
 
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-
-.light {
+.greek {
   opacity: 0.7;
-}
-
-.heavy {
-  opacity: 1;
-}
-
-.lighter {
-  opacity: 0.7;
-}
-
-.very-light {
-  opacity: 0.3;
 }
 
 .nag-hammadi {
-  display: none;
   opacity: 0.65;
 }
 
@@ -264,6 +246,10 @@ table {
   color: indigo;
 }
 
+.sister-key {
+  float: right;
+}
+
 .sister-index {
   opacity: 0.5;
 }
@@ -299,20 +285,12 @@ body.lexicon {
   opacity: 0.5;
 }
 
-.dev {
-  display: none;
-}
-
 :target.verse,
 :target.explanatory,
 :target.sister,
 :target.drv .marcion,
 :target.drv .meaning {
   background-color: #ffa;
-}
-
-.drv-key {
-  display: none;
 }
 
 .drv-link {
@@ -342,14 +320,6 @@ body.lexicon {
 
 body:not(.lexicon) .header td:not(:first-child) {
   border-left: 1px solid #ddd;
-}
-
-.small {
-  font-size: small;
-}
-
-.italic {
-  font-style: italic;
 }
 
 .sister:not(:last-child) {
@@ -382,11 +352,36 @@ body:not(.lexicon) .header td:not(:first-child) {
   font-size: small;
   font-style: italic;
   color: #7f8c8d;
-  display: none;
+}
+
+.page-list {
+  float: right;
 }
 
 body.note .sense {
   padding-left: 10px;
+}
+
+body:not(.dev) {
+  .explanatory-key,
+  .sister-key,
+  .nag-hammadi,
+  .senses,
+  .quality,
+  .drv-key {
+    display: none;
+  }
+}
+
+body.dev {
+  .explanatory-key,
+  .sister-key,
+  .nag-hammadi,
+  .senses,
+  .quality,
+  .drv-key {
+    display: block;
+  }
 }
 
 .dev-mode-note,
@@ -617,10 +612,6 @@ footer {
 
 .notes {
   font-size: small;
-}
-
-.disabled {
-  display: none;
 }
 
 /*************** Fonts ***************/

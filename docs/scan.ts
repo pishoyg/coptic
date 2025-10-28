@@ -5,7 +5,6 @@
 import * as log from './logger.js';
 import * as copt from './coptic.js';
 import * as browser from './browser.js';
-import * as cls from './cls.js';
 import * as orth from './orth.js';
 import * as dev from './dev.js';
 
@@ -376,15 +375,15 @@ export class Scroller {
     this.form.image.alt = page.toString();
 
     if (page === this.start) {
-      this.form.prevButton.classList.add(cls.DISABLED);
+      this.form.prevButton.style.display = 'none';
     } else {
-      this.form.prevButton.classList.remove(cls.DISABLED);
+      this.form.prevButton.style.display = 'unset';
     }
 
     if (page === this.end) {
-      this.form.nextButton.classList.add(cls.DISABLED);
+      this.form.nextButton.style.display = 'none';
     } else {
-      this.form.nextButton.classList.remove(cls.DISABLED);
+      this.form.nextButton.style.display = 'unset';
     }
   }
 
