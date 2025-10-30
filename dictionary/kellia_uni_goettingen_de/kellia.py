@@ -79,18 +79,12 @@ DEFAULT_GEO = "S"
 
 GEOS: list[str] = ["S", "A", "L", "B", "F", "M", "O", "P", "V", "W", "U"]
 
-DDGLC_RE: re.Pattern[str] = re.compile("\bDDGLC\b")
-
 
 def _is_greek(entry: ET.Element) -> bool:
     assert entry.tag == TEI_NS + "entry"
     return any(
-        ref.attrib.get("type", "").startswith("greek_lemma")
-        for etym in entry.findall(TEI_NS + "etym")
-        for ref in etym.findall(TEI_NS + "ref")
-    ) or any(
-        bibl.text and DDGLC_RE.match(bibl.text)
-        for bibl in entry.findall(TEI_NS + "bibl")
+        bibl.text and bibl.text.strip() == "DDGLC"
+        for bibl in entry.iter(TEI_NS + "bibl")
     )
 
 
