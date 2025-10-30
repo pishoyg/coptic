@@ -124,6 +124,7 @@ PATTERNS: list[Pattern] = [
         [
             "crum/crum.json",
             "crum/kellia.json",
+            "crum/andreas.json",
             "crum/copticsite.json",
         ],
     ),

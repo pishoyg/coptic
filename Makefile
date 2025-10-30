@@ -38,7 +38,7 @@ clean: FORCE
 
 ########## CONTENT GENERATION, TESTS and FORMATTING ##########
 .PHONY: all
-all: crum kellia copticsite anki kindle bible transpile test
+all: crum kellia andreas copticsite anki kindle bible transpile test
 
 .PHONY: test
 test: FORCE
@@ -178,6 +178,11 @@ dawoud_sentinels: FORCE
 	curl -L "$${PUB}&gid=0" > "$${DIR}/coptic.tsv"; \
 	curl -L "$${PUB}&gid=2057030060" > "$${DIR}/greek.tsv"; \
 	curl -L "$${PUB}&gid=1482232549" > "$${DIR}/arabic.tsv";
+
+########## Andreas ##########
+andreas: FORCE
+	# Generate the Andreas lexicon artefacts.
+	./flashcards/main.py --andreas
 
 ########## COPTICSITE ##########
 copticsite: FORCE

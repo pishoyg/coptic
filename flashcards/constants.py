@@ -14,6 +14,7 @@ from collections import abc, defaultdict
 from dictionary.copticsite_com import copticsite
 from dictionary.kellia_uni_goettingen_de import kellia
 from dictionary.marcion_sourceforge_net import crum
+from dictionary.stmacariusmonastery_org import andreas
 from flashcards import deck
 from utils import page, paths
 from xooxle import xooxle
@@ -682,8 +683,7 @@ class Copticsite(deck.Deck):
     def notes_aux(self) -> abc.Generator[deck.Note]:
         # NOTE: The key is a protected field. Do not change unless you know what
         # you're doing.
-        key = 1
-        for word in copticsite.words():
+        for key, word in enumerate(copticsite.words(), 1):
             front = _aon(
                 '<span class="word B">',
                 '<span class="spelling B">',
@@ -713,7 +713,20 @@ class Copticsite(deck.Deck):
                 back=back,
                 force_content=False,
             )
-            key += 1
+
+
+class Andreas(deck.Deck):
+    """Andreas represents the Andreas deck."""
+
+    @typing.override
+    def notes_aux(self) -> abc.Generator[deck.Note]:
+        for key, word in enumerate(andreas.words(), 1):
+            yield deck.Note(
+                key=str(key),
+                title=str(key),
+                front=word.front(),
+                back=word.back(),
+            )
 
 
 class KELLIA(deck.Deck):
@@ -782,6 +795,7 @@ class KELLIA(deck.Deck):
 
 CRUM_ALL: Crum = Crum("A Coptic Dictionary::All Dialects", 1284010387, [])
 COPTICSITE_BOHAIRIC: Copticsite = Copticsite("copticsite.com", 1284010385)
+ANDREAS_BOHAIRIC: Andreas = Andreas("Andreas of St. Macarius", 1284010394)
 KELLIA_COMPREHENSIVE: KELLIA = KELLIA(
     "KELLIA::Comprehensive",
     1284010391,
@@ -971,4 +985,21 @@ COPTICSITE_XOOXLE = xooxle.Xooxle(
         ),
     ],
     output=os.path.join(paths.LEXICON_DIR, "copticsite.json"),
+)
+
+ANDREAS_XOOXLE = xooxle.Xooxle(
+    source=ANDREAS_BOHAIRIC,
+    extract=[],
+    captures=[
+        xooxle.Capture(
+            "front",
+            xooxle.Selector({"id": "front"}),
+            retain_classes=_COPTICSITE_RETAIN_CLASSES,
+        ),
+        xooxle.Capture(
+            "back",
+            xooxle.Selector({"id": "back"}),
+        ),
+    ],
+    output=os.path.join(paths.LEXICON_DIR, "andreas.json"),
 )

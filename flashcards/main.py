@@ -37,6 +37,13 @@ _ = argparser.add_argument(
 )
 
 _ = argparser.add_argument(
+    "--andreas",
+    action="store_true",
+    default=False,
+    help="Generate the Andreas Xooxle index.",
+)
+
+_ = argparser.add_argument(
     "--anki",
     action="store_true",
     default=False,
@@ -102,6 +109,8 @@ def main() -> None:
         indexes.append(constants.KELLIA_XOOXLE)
     if args.copticsite:
         indexes.append(constants.COPTICSITE_XOOXLE)
+    if args.andreas:
+        indexes.append(constants.ANDREAS_XOOXLE)
     with concur.thread_pool_executor() as executor:
         _ = list(executor.map(xooxle.Xooxle.build, indexes))
 

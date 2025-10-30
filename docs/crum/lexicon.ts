@@ -225,6 +225,10 @@ const XOOXLES: Xooxle[] = [
     searchResultType: KELLIASearchResult,
   },
   {
+    indexURL: 'andreas.json',
+    tableID: 'andreas',
+  },
+  {
     indexURL: 'copticsite.json',
     tableID: 'copticsite',
   },
