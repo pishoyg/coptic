@@ -71,6 +71,7 @@ findexx () {
   findex "${1}" \
     -not -name "requirements.txt" \
     -not -path "*/data/*" \
+    -not -name "docs/crum/bible.ts" \
     -not \( -path "docs/*" -not -name "*.ts" -not -name "*.css" \( -path "docs/bible/index.html" -or -path "docs/marcion/index.html" -or -not -name "index.html" \) \) \
     -not \( -path "./docs/*" -not -name "*.ts" -not -name "*.css" \( -path "./docs/bible/index.html" -or -path "./docs/marcion/index.html" -or -not -name "index.html" \) \) \
     "${@:2}"
