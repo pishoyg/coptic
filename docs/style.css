@@ -228,6 +228,12 @@ table {
   font-size: large;
 }
 
+::target-text {
+  /* Use the same background color for text fragments as that used by Xooxle.
+   * See `xooxle.css` for the styling of Xooxle matches. */
+  background-color: #f0d4fc;
+}
+
 /* siglum is the class of dialect siglum in Crum. */
 .siglum {
   font-style: italic;
