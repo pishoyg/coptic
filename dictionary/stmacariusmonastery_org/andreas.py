@@ -13,6 +13,10 @@ from dictionary.stmacariusmonastery_org import constants
 from dictionary.stmacariusmonastery_org.constants import Language
 from utils import file, lang, log
 
+# TODO: (#452) Once the Hebrew encoding is populated, this won't be needed
+# anymore.
+hebrew_freq: collections.Counter[str] = collections.Counter()
+
 
 @typing.final
 class Span:
@@ -87,6 +91,8 @@ POSTPROCESSING: list[tuple[str, str]] = [
 
 _ACCENTED_LETTER_RE: re.Pattern[str] = re.compile("(?:`|⳿)(.)")
 _MISPLACED_ACCENT_RE: re.Pattern[str] = re.compile("\u0300 (.)")
+_MISPLACED_OVERLINE_RE: re.Pattern[str] = re.compile("(.) \u0305")
+_MISPLACED_ARROW_RE: re.Pattern[str] = re.compile("(→ .) ")
 
 
 @typing.final
@@ -103,6 +109,8 @@ class DictionaryEntry:
         text: str = self._normalize(" ".join(self.coptic_spans))
         text = _ACCENTED_LETTER_RE.sub(r"\1̀", text)
         text = _MISPLACED_ACCENT_RE.sub(r"\1̀", text)
+        text = _MISPLACED_OVERLINE_RE.sub(r"\1̅", text)
+        text = _MISPLACED_ARROW_RE.sub(r"\1", text)
         # Fix the combining double overline.
         text = text.replace("\u0305 \u0305", "\u033f")
         return text
@@ -113,9 +121,16 @@ class DictionaryEntry:
     def arabic(self) -> str:
         return self._normalize(" ".join(self.arabic_spans))
 
-    def hebrew(self) -> str:  # dead: disable
+    def hebrew(self) -> str:
         return self._normalize(" ".join(self.hebrew_spans))
 
+    # TODO: (#452) While this normalization step removes a lot of unwanted
+    # space, some space characters mistakenly make it to the output.
+    # Examples:
+    # - ϯ ⲡ⸗ ⲟⲩⲟⲓ
+    # - ϭⲉ- → ϭ ⲟ
+    # Here is a list of candidates:
+    # - https://remnqymi.com/crum/?regex=true&query=%5Cp%7BScript%3DCoptic%7D+%5Cp%7BScript%3DCoptic%7D # pylint: disable=line-too-long
     def _normalize(self, text: str) -> str:
         text = " ".join(text.split())
         for substitution in POSTPROCESSING:
@@ -167,11 +182,14 @@ def parse_html_spans(file_path: pathlib.Path) -> list[Span]:
         span: Span = Span(content, tag.get("style"))
 
         # Outer and inner spans cause some text to be repeated twice.
-        # Notice that some of this repetition comes from the fact that we loop
-        # over the same tag several times as we navigate down the tree:
+        # This repetition comes from the fact that we encounter the same string
+        # several times as we navigate down the tree:
         #  - `soup.find_all("span")` loops over all <span> tags.
         #  - Some of those span elements may be parents of other span elements
         #    that we will cover later in the loop.
+        # TODO: (#452) This is only valid if every <span> element is guaranteed
+        # to have a single string as a child, which may not be the case.
+        # Investigate and fix.
         if last_content == content:
             # If the second occurrence of the text has no language, use the
             # first occurrence
@@ -184,11 +202,6 @@ def parse_html_spans(file_path: pathlib.Path) -> list[Span]:
         spans.append(span)
         last_content = content
     return spans
-
-
-# TODO: (#452) Once the Hebrew encoding is populated, this won't be needed
-# anymore.
-hebrew_freq: collections.Counter[str] = collections.Counter()
 
 
 def squash(spans: abc.Iterable[Span]) -> list[Span]:
@@ -258,6 +271,8 @@ def group_entries(spans: list[Span]) -> abc.Generator[DictionaryEntry]:
         # TODO: (#452) Some entries represent derivations of previous
         # entries, and should be nested instead of occupying a standalone
         # place. Handle this case.
+        # From a quick glance, their Arabic parts tend to start with the phrase
+        # "مثل:".
         if span.language == Language.ARABIC and (
             i == len(spans) - 1 or spans[i + 1].language == Language.COPTIC
         ):
@@ -268,17 +283,19 @@ def group_entries(spans: list[Span]) -> abc.Generator[DictionaryEntry]:
 
 @functools.cache
 def words() -> list[DictionaryEntry]:
+    # Get spans, corresponding to tags that have text, from the HTML files.
     spans: abc.Iterable[Span] = (
         span
         for input_file in constants.INPUT
         for span in parse_html_spans(input_file)
     )
+
+    # Squash tags.
     spans = squash(spans)
+
+    # Convert all tags to Unicode.
     for span in spans:
         span.convert_to_unicode()
 
-    log.warn("Unknown Hebrew characters:", len(hebrew_freq))
-    for char, count in hebrew_freq.most_common():
-        log.warn(f"{char}\t", count, level=False)
-
+    # Generate entries.
     return list(group_entries(spans))
