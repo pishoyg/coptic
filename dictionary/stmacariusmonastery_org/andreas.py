@@ -2,6 +2,7 @@
 
 import collections
 import functools
+import itertools
 import pathlib
 import re
 import typing
@@ -13,7 +14,7 @@ from dictionary.stmacariusmonastery_org import constants
 from dictionary.stmacariusmonastery_org.constants import Language
 from utils import file, lang, log
 
-# TODO: (#452) Once the Hebrew encoding is populated, this won't be needed
+# TODO: (#589) Once the Hebrew encoding is populated, this won't be needed
 # anymore.
 hebrew_freq: collections.Counter[str] = collections.Counter()
 
@@ -22,8 +23,9 @@ hebrew_freq: collections.Counter[str] = collections.Counter()
 class Span:
     """Span represents an HTML tag bearing text in a given language."""
 
-    def __init__(self, text: str, style: str | list[str] | None):
-        self.text: str = text
+    def __init__(self, tag: bs4.Tag) -> None:
+        self.text: str = tag.get_text(strip=True).replace("\n", " ")
+        style = tag.get("style")
         assert style is None or isinstance(style, str)
         self.language: Language = self._determine_language(style)
 
@@ -33,11 +35,11 @@ class Span:
             self.text = "→"
             return
 
-        if self.language == Language.ARABIC:
-            # Arabic text is not encoded.
+        if self.language in [Language.ARABIC, Language.LATIN]:
+            # Arabic and Latin text is not encoded.
             return
 
-        # TODO: (#452) Stop giving Hebrew special treatment.
+        # TODO: (#589) Stop giving Hebrew special treatment.
         if self.language == Language.HEBREW:
             # We don't have the Hebrew encoding yet.
             # Add text to the Hebrew letter frequency tracker.
@@ -76,12 +78,122 @@ class Span:
         if "greek" in font or "athena" in font:
             return Language.GREEK
 
+        # Some corner cases:
+        if "times new roman" in font:
+            return Language.LATIN
+        # TODO: (#590) Prevent spans with unknown languages. We should be able
+        # to infer languages for all spans.
         return Language.UNKNOWN
+
+
+class Paragraph:
+    """Paragraph represents a <p> tag from the dictionary data."""
+
+    def __init__(self, p: bs4.Tag) -> None:
+        self.spans: list[Span] = []
+
+        tag: bs4.Tag
+        last_text: str | None = None
+        for tag in p.find_all("span"):
+            span: Span = Span(tag)
+            if not span.text:
+                # An empty span!
+                continue
+
+            # Outer and inner spans cause some text to be repeated twice.
+            # This repetition comes from the fact that we encounter the same
+            # string several times as we navigate down the tree:
+            #  - `soup.find_all("span")` loops over all <span> tags.
+            #  - Some of those span elements may be parents of other span
+            #    elements that we will cover later in the loop.
+            # TODO: (#590) This is only valid if every <span> element is
+            # guaranteed to have a single string as a child, which may not be
+            # the case. Also this is not a clean check. Investigate and fix.
+            if last_text == span.text:
+                # If the second occurrence of the text has no language, use the
+                # first occurrence
+                if span.language == Language.UNKNOWN:
+                    continue
+                else:
+                    # Otherwise, use the second occurrence.
+                    _ = self.spans.pop()
+
+            self.spans.append(span)
+            last_text = span.text
+
+        self._squash()
+        # After squashing, all spans should represent known languages.
+        unknown: list[Span] = [s for s in self.spans if not s.language.known()]
+        if unknown:
+            log.fatal(
+                self,
+                "has spans with unknown languages after squashing:",
+                unknown,
+            )
+        del unknown
+
+        for s in self.spans:
+            s.convert_to_unicode()
+
+    def _squash(self) -> None:
+        """Merge consecutive paragraphs within the same language."""
+        # TODO: (#590) You shouldn't need to squash any spans. Spans should be
+        # independent of one another, and each span should bear its own language
+        # information.
+
+        result: list[Span] = []
+        for span in self.spans:
+            if not result:
+                result.append(span)
+                continue
+            # If a span has an unknown language, or is an arrow, it belongs to
+            # the previous span.
+            # Also, if it has the same language as the previous span, we simply
+            # concatenate them.
+            if span.language == Language.RIGHT_ARROW:
+                span.convert_to_unicode()
+            if span.language in [
+                Language.UNKNOWN,
+                Language.RIGHT_ARROW,
+                result[-1].language,
+            ]:
+                result[-1].text += " " + span.text
+                continue
+
+            # If the top of the stack has an unknown language, it's the same
+            # language as this span.
+            if result[-1].language == Language.UNKNOWN:
+                result[-1].language = span.language
+            result.append(span)
+
+        self.spans = result
+
+    # TODO: (#590) While this normalization step removes a lot of unwanted
+    # space, some space characters mistakenly make it to the output.
+    # Examples:
+    # - ϯ ⲡ⸗ ⲟⲩⲟⲓ
+    # - ϭⲉ- → ϭ ⲟ
+    # This is true for both Greek and Coptic, although there are far fewer Greek
+    # victims.
+    # Here is a list of candidates:
+    # - https://remnqymi.com/crum/?regex=true&query=%5Cp%7BScript%3DCoptic%7D+%5Cp%7BScript%3DCoptic%7D # pylint: disable=line-too-long
+    # - https://remnqymi.com/crum/?query=%5Cp%7BScript%3DGreek%7D+%5Cp%7BScript%3DGreek%7D&regex=true # pylint: disable=line-too-long
+    def lang(self, language: Language) -> str:
+        assert language.known()
+        text: str = " ".join(
+            s.text for s in self.spans if s.language == language
+        )
+        text = " ".join(text.split()).strip()
+        return text
+
+    def empty(self) -> bool:
+        return not self.spans
 
 
 POSTPROCESSING: list[tuple[str, str]] = [
     (" -", "-"),
     (" ,", ","),
+    (",", ", "),
     (" ⸗", "⸗"),
     ("→", " → "),
     ("( ", "("),
@@ -90,7 +202,7 @@ POSTPROCESSING: list[tuple[str, str]] = [
 ]
 
 _ACCENTED_LETTER_RE: re.Pattern[str] = re.compile("(?:`|⳿)(.)")
-_MISPLACED_ACCENT_RE: re.Pattern[str] = re.compile("\u0300 (.)")
+_MISPLACED_ACCENT_RE: re.Pattern[str] = re.compile(" \u0300(.)")
 _MISPLACED_OVERLINE_RE: re.Pattern[str] = re.compile("(.) \u0305")
 _MISPLACED_ARROW_RE: re.Pattern[str] = re.compile("(→ .) ")
 
@@ -99,14 +211,10 @@ _MISPLACED_ARROW_RE: re.Pattern[str] = re.compile("(→ .) ")
 class DictionaryEntry:
     """DictionaryEntry is an entry in Andreas's Dictionary."""
 
-    def __init__(self) -> None:
-        self.coptic_spans: list[str] = []
-        self.arabic_spans: list[str] = []
-        self.greek_spans: list[str] = []
-        self.hebrew_spans: list[str] = []
+    def __init__(self, paragraphs: list[Paragraph]) -> None:
+        self.paragraphs: list[Paragraph] = paragraphs
 
-    def coptic(self) -> str:
-        text: str = self._normalize(" ".join(self.coptic_spans))
+    def _normalize_coptic(self, text: str) -> str:
         text = _ACCENTED_LETTER_RE.sub(r"\1̀", text)
         text = _MISPLACED_ACCENT_RE.sub(r"\1̀", text)
         text = _MISPLACED_OVERLINE_RE.sub(r"\1̅", text)
@@ -115,56 +223,60 @@ class DictionaryEntry:
         text = text.replace("\u0305 \u0305", "\u033f")
         return text
 
-    def greek(self) -> str:
-        return self._normalize(" ".join(self.greek_spans))
-
-    def arabic(self) -> str:
-        return self._normalize(" ".join(self.arabic_spans))
-
-    def hebrew(self) -> str:
-        return self._normalize(" ".join(self.hebrew_spans))
-
-    # TODO: (#452) While this normalization step removes a lot of unwanted
-    # space, some space characters mistakenly make it to the output.
-    # Examples:
-    # - ϯ ⲡ⸗ ⲟⲩⲟⲓ
-    # - ϭⲉ- → ϭ ⲟ
-    # Here is a list of candidates:
-    # - https://remnqymi.com/crum/?regex=true&query=%5Cp%7BScript%3DCoptic%7D+%5Cp%7BScript%3DCoptic%7D # pylint: disable=line-too-long
-    def _normalize(self, text: str) -> str:
-        text = " ".join(text.split())
+    def _lang(self, language: Language) -> str:
+        # TODO: (#590) Grouping the output by language causes the text to be
+        # reordered in an undesirable manner. You should instead retain the same
+        # order in the input.
+        assert language.known()
+        lines: abc.Iterable[str] = [p.lang(language) for p in self.paragraphs]
+        lines = filter(None, lines)
+        text = "\n".join(lines)
         for substitution in POSTPROCESSING:
             pattern, repl = substitution
             text = text.replace(pattern, repl)
-        text = text.strip()
+        if language == Language.COPTIC:
+            text = self._normalize_coptic(text)
         return text
 
-    def front_aux(self) -> abc.Generator[str]:
-        assert self.coptic_spans
+    def _front_aux(self) -> abc.Generator[str]:
+        assert self.paragraphs
         yield '<span class="word B">'
         yield '<span class="spelling B">'
-        yield self.coptic()
+        yield self._lang(Language.COPTIC)
         yield "</span>"
         yield "</span>"
 
     def front(self) -> str:
-        return "".join(self.front_aux())
+        return "".join(self._front_aux())
+
+    def _span(self, language: Language) -> str:
+        text: str = self._lang(language)
+        if not text:
+            return ""
+        return f'<span class="{language.value.lower()}">{text}</span>'
 
     def back(self) -> str:
-        assert self.arabic_spans
-        # TODO: (#452) Add Hebrew to the output.
-        return f"{self.arabic()} {self.greek()}".strip()
+        # TODO: (#589) Add Hebrew to the output.
+        langs: list[Language] = [
+            Language.ARABIC,
+            Language.GREEK,
+            Language.LATIN,
+        ]
+        return (
+            " ".join(filter(None, map(self._span, langs)))
+            .replace("\n", "<br>")
+            .strip()
+        )
 
 
-def parse_html_spans(file_path: pathlib.Path) -> list[Span]:
-    """Read HTML file and extract span tags with their content and font
-    information.
+def parse_html(file_path: pathlib.Path) -> abc.Generator[Paragraph]:
+    """Read HTML file and extract paragraphs.
 
     Args:
         file_path: Path to the HTML file.
 
-    Returns:
-        list: List of dictionaries containing span content and font info.
+    Yields:
+        Paragraph objects representing <p> elements in the HTML.
     """
 
     soup: bs4.BeautifulSoup = bs4.BeautifulSoup(
@@ -172,130 +284,49 @@ def parse_html_spans(file_path: pathlib.Path) -> list[Span]:
         "html.parser",
     )
 
-    spans: list[Span] = []
-    tag: bs4.Tag
-    last_content: str | None = None
-    for tag in soup.find_all("span"):
-        content: str = tag.get_text(strip=True).replace("\n", " ")
-        if not content:
+    # TODO: (#590) Below, you make the assumption that newlines are always
+    # represented by <p> tags. Verify this assumption.
+    for p in map(Paragraph, soup.find_all("p")):
+        if p.empty():
             continue
-        span: Span = Span(content, tag.get("style"))
-
-        # Outer and inner spans cause some text to be repeated twice.
-        # This repetition comes from the fact that we encounter the same string
-        # several times as we navigate down the tree:
-        #  - `soup.find_all("span")` loops over all <span> tags.
-        #  - Some of those span elements may be parents of other span elements
-        #    that we will cover later in the loop.
-        # TODO: (#452) This is only valid if every <span> element is guaranteed
-        # to have a single string as a child, which may not be the case.
-        # Investigate and fix.
-        if last_content == content:
-            # If the second occurrence of the text has no language, use the
-            # first occurrence
-            if span.language == Language.UNKNOWN:
-                continue
-            else:
-                # Otherwise, use the second occurrence.
-                _ = spans.pop()
-
-        spans.append(span)
-        last_content = content
-    return spans
+        yield p
 
 
-def squash(spans: abc.Iterable[Span]) -> list[Span]:
-    """Merge consecutive strings with the same language (or if either of them
-    is unknown).
+def group_paragraphs(
+    paragraphs: abc.Iterable[Paragraph],
+) -> abc.Generator[DictionaryEntry]:
+    """Group paragraphs to dictionary entries.
 
     Args:
-        spans: A list of Span objects containing text content and language
-            information.
-
-    Returns:
-        A list of Span objects with consecutive spans merged based on language
-        compatibility.
-    """
-
-    result: list[Span] = []
-    for span in spans:
-        if not result:
-            result.append(span)
-            continue
-        # If a span has an unknown language, or is an arrow, it belongs to the
-        # previous span.
-        # Also, if it has the same language as the previous span, we simply
-        # concatenate them.
-        if span.language == Language.RIGHT_ARROW:
-            span.convert_to_unicode()
-        if span.language in [
-            Language.UNKNOWN,
-            Language.RIGHT_ARROW,
-            result[-1].language,
-        ]:
-            result[-1].text += " " + span.text
-            continue
-        result.append(span)
-
-    return result
-
-
-def group_entries(spans: list[Span]) -> abc.Generator[DictionaryEntry]:
-    """Group spans to dictionary entries.
-
-    Args:
-        spans: A list of Span objects containing text content and language
-            information.
+        paragraphs: An iterable of Paragraph objects containing dictionary text.
 
     Yields:
         DictionaryEntry objects.
     """
 
-    entry: DictionaryEntry = DictionaryEntry()
-    for i, span in enumerate(spans):
-        match span.language:
-            case Language.COPTIC | Language.RIGHT_ARROW:
-                entry.coptic_spans.append(span.text)
-            case Language.ARABIC:
-                entry.arabic_spans.append(span.text)
-            case Language.GREEK:
-                entry.greek_spans.append(span.text)
-            case Language.HEBREW:
-                entry.hebrew_spans.append(span.text)
-            case Language.UNKNOWN:
-                log.fatal("span", span, "has an unknown language")
+    entry: list[Paragraph] = []
+    for p in paragraphs:
+        # Check if this paragraph is the start of a new entry, in which case we
+        # yield and entry and start a new one.
+        if entry and p.lang(Language.COPTIC):
+            # This paragraph actually starts a new entry.
+            # TODO: (#590) Handle derivations. Some paragraphs with Coptic texts
+            # don't start new entries, but belong to the entries above them.
+            yield DictionaryEntry(entry)
+            entry = []
 
-        # We know that a dictionary entry has ended when we have a piece of
-        # Arabic text followed by a piece of Coptic text (which would be
-        # part of the next entry).
-        # TODO: (#452) Some entries represent derivations of previous
-        # entries, and should be nested instead of occupying a standalone
-        # place. Handle this case.
-        # From a quick glance, their Arabic parts tend to start with the phrase
-        # "مثل:".
-        if span.language == Language.ARABIC and (
-            i == len(spans) - 1 or spans[i + 1].language == Language.COPTIC
-        ):
-            yield entry
-            # Start a new entry.
-            entry = DictionaryEntry()
+        entry.append(p)
+    # Yield the last entry.
+    if entry:
+        yield DictionaryEntry(entry)
 
 
 @functools.cache
 def words() -> list[DictionaryEntry]:
     # Get spans, corresponding to tags that have text, from the HTML files.
-    spans: abc.Iterable[Span] = (
-        span
-        for input_file in constants.INPUT
-        for span in parse_html_spans(input_file)
+    paragraphs: abc.Iterable[Paragraph] = itertools.chain(
+        *map(parse_html, constants.INPUT),
     )
 
-    # Squash tags.
-    spans = squash(spans)
-
-    # Convert all tags to Unicode.
-    for span in spans:
-        span.convert_to_unicode()
-
     # Generate entries.
-    return list(group_entries(spans))
+    return list(group_paragraphs(paragraphs))

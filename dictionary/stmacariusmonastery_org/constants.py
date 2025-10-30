@@ -237,7 +237,7 @@ GREEK_ENCODING: dict[str, str] = {
 }
 
 HEBREW_ENCODING: dict[str, str] = {
-    # TODO: (#452) Fill this table
+    # TODO: (#589) Fill this table
 }
 
 UNKNOWN_ENCODING: dict[str, str] = {
@@ -255,7 +255,17 @@ class Language(enum.Enum):
     ARABIC = "Arabic"
     HEBREW = "Hebrew"
     RIGHT_ARROW = "Right Arrow"
+    LATIN = "Latin"
     UNKNOWN = "Unknown"
+
+    def known(self) -> bool:
+        return self in [
+            Language.COPTIC,
+            Language.ARABIC,
+            Language.GREEK,
+            Language.HEBREW,
+            Language.LATIN,
+        ]
 
 
 LANG_ENCODING: dict[Language, dict[int, str]] = {

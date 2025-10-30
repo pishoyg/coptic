@@ -110,3 +110,8 @@ body.dev {
     margin-bottom: 0;
   }
 }
+
+#andreas .arabic {
+  float: right;
+  direction: rtl;
+}

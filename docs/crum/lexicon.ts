@@ -76,6 +76,23 @@ class SearchResult extends xoox.SearchResult {
 }
 
 /**
+ *
+ */
+class AndreasSearchResult extends xoox.SearchResult {
+  /**
+   *
+   * @param total
+   * @param numColumns
+   * @returns
+   */
+  public override row(total: number, numColumns: number): HTMLTableRowElement {
+    const row: HTMLTableRowElement = super.row(total, numColumns);
+    crum.addGreekLookups(row);
+    return row;
+  }
+}
+
+/**
  */
 class CrumSearchResult extends SearchResult {
   private static readonly NUM_BUCKETS =
@@ -227,6 +244,7 @@ const XOOXLES: Xooxle[] = [
   {
     indexURL: 'andreas.json',
     tableID: 'andreas',
+    searchResultType: AndreasSearchResult,
   },
   {
     indexURL: 'copticsite.json',

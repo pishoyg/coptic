@@ -726,6 +726,7 @@ class Andreas(deck.Deck):
                 title=str(key),
                 front=word.front(),
                 back=word.back(),
+                force_content=False,
             )
 
 
@@ -994,11 +995,13 @@ ANDREAS_XOOXLE = xooxle.Xooxle(
         xooxle.Capture(
             "front",
             xooxle.Selector({"id": "front"}),
-            retain_classes=_COPTICSITE_RETAIN_CLASSES,
+            retain_classes={"word", "B"},
         ),
         xooxle.Capture(
             "back",
             xooxle.Selector({"id": "back"}),
+            # We need the Arabic for styling. We don't need any other classes.
+            retain_classes={"arabic"},
         ),
     ],
     output=os.path.join(paths.LEXICON_DIR, "andreas.json"),
