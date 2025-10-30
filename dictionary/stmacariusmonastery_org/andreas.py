@@ -11,7 +11,7 @@ import bs4
 
 from dictionary.stmacariusmonastery_org import constants
 from dictionary.stmacariusmonastery_org.constants import Language
-from utils import ensure, file, lang, log
+from utils import file, lang, log
 
 
 @typing.final
@@ -191,31 +191,6 @@ def parse_html_spans(file_path: pathlib.Path) -> list[Span]:
 hebrew_freq: collections.Counter[str] = collections.Counter()
 
 
-class Alphabet:
-    """Alphabet tracks the alphabet letters."""
-
-    def __init__(self) -> None:
-        self.letter: str = "ⲁ"
-        self.section: str = self._section_name()
-
-    def next(self) -> None:
-        assert not self.last()
-        # The letters ⲁ through ⲱ live in a different Unicode block
-        # from ϣ through ϯ, so we need to manually handle the
-        # transition between blocks.
-        # See:
-        # - https://en.wikipedia.org/wiki/Coptic_(Unicode_block)
-        # - https://en.wikipedia.org/wiki/Greek_and_Coptic
-        self.letter = "ϣ" if self.letter == "ⲱ" else chr(ord(self.letter) + 2)
-        self.section = self._section_name()
-
-    def last(self) -> bool:
-        return self.letter == "ϯ"
-
-    def _section_name(self) -> str:
-        return " ".join((self.letter.upper(), ",", self.letter))
-
-
 def squash(spans: abc.Iterable[Span]) -> list[Span]:
     """Merge consecutive strings with the same language (or if either of them
     is unknown).
@@ -263,9 +238,6 @@ def group_entries(spans: list[Span]) -> abc.Generator[DictionaryEntry]:
         DictionaryEntry objects.
     """
 
-    # Keep track of the letter that we're currently processing.
-    ab: Alphabet = Alphabet()
-
     entry: DictionaryEntry = DictionaryEntry()
     for i, span in enumerate(spans):
         match span.language:
@@ -289,27 +261,9 @@ def group_entries(spans: list[Span]) -> abc.Generator[DictionaryEntry]:
         if span.language == Language.ARABIC and (
             i == len(spans) - 1 or spans[i + 1].language == Language.COPTIC
         ):
-            # Entry has ended.
-            # Check if we're starting a new letter in the dictionary.
-            if entry.coptic_spans[0].startswith(ab.section):
-                # Each section starting with a given letter has a redundant
-                # entry at the beginning that we need to clean.
-                entry.coptic_spans[0] = entry.coptic_spans[0].removeprefix(
-                    ab.section,
-                )
-                if not ab.last():
-                    ab.next()  # Move to the next section.
-
             yield entry
             # Start a new entry.
             entry = DictionaryEntry()
-
-    # Make sure we've gone through the whole alphabet in order.
-    ensure.ensure(
-        ab.last(),
-        "We don't seem to have gone through all letters! Current letter is:",
-        ab.letter,
-    )
 
 
 @functools.cache
