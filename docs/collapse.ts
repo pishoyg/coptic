@@ -44,7 +44,7 @@ class Collapsible {
     // See the CSS for details.
     [
       this.collapsible,
-      ...this.collapsible.querySelectorAll<HTMLElement>('*'),
+      ...(Array.from(this.collapsible.children) as HTMLElement[]),
     ].forEach((element: HTMLElement): void => {
       element.style.overflow = overflow;
     });
