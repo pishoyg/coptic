@@ -246,9 +246,13 @@ class Paragraph:
         # - ϭⲉ- → ϭ ⲟ
         # This is true for both Greek and Coptic, although there are far fewer
         # Greek victims.
+        # It's also true for Arabic, unfortunately.
         # Here is a list of candidates:
         # - https://remnqymi.com/crum/?regex=true&query=%5Cp%7BScript%3DCoptic%7D+%5Cp%7BScript%3DCoptic%7D # pylint: disable=line-too-long
         # - https://remnqymi.com/crum/?query=%5Cp%7BScript%3DGreek%7D+%5Cp%7BScript%3DGreek%7D&regex=true # pylint: disable=line-too-long
+        # The equivalent Arabic query returns most of the dictionary, so we
+        # might have to go over the whole dictionary to find Arabic spacing
+        # errors.
         content = " ".join(content.split()).strip()
         for substitution in POSTPROCESSING:
             pattern, repl = substitution
