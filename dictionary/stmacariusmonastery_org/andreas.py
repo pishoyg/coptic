@@ -269,8 +269,6 @@ class Paragraph:
             if s.language != Language.COPTIC:
                 break
             spans.append(s)
-        if not spans:
-            log.error(self, "has no Coptic prefix!")
         return spans
 
     def coptic_prefix_html(self) -> str:
@@ -295,11 +293,18 @@ class DictionaryEntry:
         return str(list(map(str, self.paragraphs)))
 
     def _front_aux(self) -> abc.Generator[str]:
-        # The front is the first paragraph.
         assert self.paragraphs
         yield '<span class="word B">'
         yield '<span class="spelling B">'
-        yield self.paragraphs[0].coptic_prefix_html()
+        for i, p in enumerate(self.paragraphs):
+            prefix: str = p.coptic_prefix_html()
+            yield prefix
+            if i == 0 and not prefix:
+                log.error(p, "starts an entry but has no Coptic prefix!")
+            # This paragraph has a non-Coptic part! This is the start of the
+            # back.
+            if p.non_coptic_suffix_html():
+                break
         yield "</span>"
         yield "</span>"
 
@@ -307,12 +312,17 @@ class DictionaryEntry:
         return "".join(self._front_aux())
 
     def back_aux(self) -> abc.Generator[str]:
-        yield self.paragraphs[0].non_coptic_suffix_html()
-        for p in self.paragraphs[1:]:
-            yield p.html()
+        flag: bool = False
+        for p in self.paragraphs:
+            if flag:
+                yield p.html()
+                continue
+            non_coptic_suffix: str = p.non_coptic_suffix_html()
+            if non_coptic_suffix:
+                yield non_coptic_suffix
+                flag = True
 
     def back(self) -> str:
-        # TODO: (#589) Add Hebrew to the output.
         back: str = page.LINE_BREAK.join(filter(None, self.back_aux()))
         if not back:
             log.error("Entry doesn't have a back:", self)
