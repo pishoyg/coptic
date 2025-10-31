@@ -78,7 +78,7 @@ export const DIALECTS = {
   B: new Dialect(
     'B',
     'Bohairic',
-    ['Crum', 'KELLIA', 'copticsite'],
+    ['Crum', 'KELLIA', 'andreas'],
     dial.Article.BOHAIRIC
   ),
   F: new Dialect('F', 'Fayyumic', ['Crum', 'KELLIA'], dial.Article.FAYYUMIC),

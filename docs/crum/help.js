@@ -86,7 +86,10 @@ export function makeHelpPanel(highlighter, devHighlighter) {
         ['lexicon', 'note', 'index'],
         () => {
           let el = browser.findNextElement(
-            css.classQuery('view' /* xoox.CLS.VIEW */, cls.SISTER_VIEW),
+            css.classQuery(
+              'view-view' /* xoox.CLS.VIEW_VIEW */,
+              cls.SISTER_VIEW
+            ),
             'cur'
           );
           // If the element has an anchor, click that. Otherwise, the element
@@ -198,8 +201,8 @@ export function makeHelpPanel(highlighter, devHighlighter) {
       ),
     ],
     T: [
-      new help.Shortcut('copticsi<strong>t</strong>e', ['lexicon'], () => {
-        browser.scroll(id.COPTICSITE_TITLE);
+      new help.Shortcut('Andreas', ['lexicon'], () => {
+        browser.scroll(id.ANDREAS_TITLE);
       }),
     ],
     D: [
@@ -296,8 +299,8 @@ export function makeHelpPanel(highlighter, devHighlighter) {
       ),
     ],
     t: [
-      new help.Shortcut('copticsi<strong>t</strong>e', ['lexicon'], () => {
-        browser.click(id.COPTICSITE_TITLE);
+      new help.Shortcut('Andreas', ['lexicon'], () => {
+        browser.click(id.ANDREAS_TITLE);
       }),
     ],
   };

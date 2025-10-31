@@ -40,7 +40,7 @@ class Collapsible {
     // We must set the overflow property of the collapsible and all direct
     // children.
     // See the CSS for details.
-    [this.collapsible, ...this.collapsible.querySelectorAll('*')].forEach(
+    [this.collapsible, ...Array.from(this.collapsible.children)].forEach(
       (element) => {
         element.style.overflow = overflow;
       }

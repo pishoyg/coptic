@@ -78,6 +78,22 @@ class SearchResult extends xoox.SearchResult {
   }
 }
 /**
+ *
+ */
+class AndreasSearchResult extends xoox.SearchResult {
+  /**
+   *
+   * @param total
+   * @param numColumns
+   * @returns
+   */
+  row(total, numColumns) {
+    const row = super.row(total, numColumns);
+    crum.addGreekLookups(row);
+    return row;
+  }
+}
+/**
  */
 class CrumSearchResult extends SearchResult {
   static NUM_BUCKETS =
@@ -204,6 +220,11 @@ const XOOXLES = [
     indexURL: 'kellia.json',
     tableID: 'kellia',
     searchResultType: KELLIASearchResult,
+  },
+  {
+    indexURL: 'andreas.json',
+    tableID: 'andreas',
+    searchResultType: AndreasSearchResult,
   },
   {
     indexURL: 'copticsite.json',

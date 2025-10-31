@@ -1,7 +1,7 @@
 // LEXICON IDs:
 export const CRUM_TITLE = 'crum-title';
 export const KELLIA_TITLE = 'kellia-title';
-export const COPTICSITE_TITLE = 'copticsite-title';
+export const ANDREAS_TITLE = 'andreas-title';
 export const SEARCH_BOX = 'search-box';
 export const FULL_WORD_CHECKBOX = 'full-word-checkbox';
 export const REGEX_CHECKBOX = 'regex-checkbox';
