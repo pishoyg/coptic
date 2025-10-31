@@ -720,14 +720,7 @@ class Andreas(deck.Deck):
 
     @typing.override
     def notes_aux(self) -> abc.Generator[deck.Note]:
-        for key, word in enumerate(andreas.words(), 1):
-            yield deck.Note(
-                key=str(key),
-                title=str(key),
-                front=word.front(),
-                back=word.back(),
-                force_content=False,
-            )
+        yield from andreas.notes_aux()
 
 
 class KELLIA(deck.Deck):
@@ -796,21 +789,21 @@ class KELLIA(deck.Deck):
 
 CRUM_ALL: Crum = Crum("A Coptic Dictionary::All Dialects", 1284010387, [])
 COPTICSITE_BOHAIRIC: Copticsite = Copticsite("copticsite.com", 1284010385)
-ANDREAS_BOHAIRIC: Andreas = Andreas("Andreas of St. Macarius", 1284010394)
 KELLIA_COMPREHENSIVE: KELLIA = KELLIA(
     "KELLIA::Comprehensive",
     1284010391,
     kellia.comprehensive(),
 )
 DECKS: list[deck.Deck] = [
+    # NOTE: We intentionally omit `copticsite` from the flashcard decks.
     CRUM_ALL,
     Crum("A Coptic Dictionary::Bohairic", 1284010383, ["B"]),
     Crum("A Coptic Dictionary::Sahidic", 1284010386, ["S"]),
     Crum("A Coptic Dictionary::Bohairic / Sahidic", 1284010390, ["B", "S"]),
-    COPTICSITE_BOHAIRIC,
     KELLIA_COMPREHENSIVE,
     KELLIA("KELLIA::Egyptian", 1284010392, kellia.egyptian()),
     KELLIA("KELLIA::Greek", 1284010393, kellia.greek()),
+    Andreas("Andreas of St. Macarius", 1284010394),
 ]
 
 # Xooxle search will work fine even if we don't retain any HTML tags, because it
@@ -865,7 +858,7 @@ _COPTICSITE_RETAIN_CLASSES = {
 } | _DIALECTS
 
 CRUM_XOOXLE = xooxle.Xooxle(
-    source=CRUM_ALL,
+    source=CRUM_ALL.notes_aux,
     extract=[
         xooxle.Selector({"name": "title"}, force=False),
         xooxle.Selector({"class_": "header"}, force=False),
@@ -942,7 +935,7 @@ CRUM_XOOXLE = xooxle.Xooxle(
 
 
 KELLIA_XOOXLE = xooxle.Xooxle(
-    source=KELLIA_COMPREHENSIVE,
+    source=KELLIA_COMPREHENSIVE.notes_aux,
     extract=[
         xooxle.Selector({"name": "footer"}, force=False),
         xooxle.Selector({"class_": "bibl"}, force=False),
@@ -972,7 +965,7 @@ KELLIA_XOOXLE = xooxle.Xooxle(
 
 
 COPTICSITE_XOOXLE = xooxle.Xooxle(
-    source=COPTICSITE_BOHAIRIC,
+    source=COPTICSITE_BOHAIRIC.notes_aux,
     extract=[],
     captures=[
         xooxle.Capture(
@@ -986,23 +979,4 @@ COPTICSITE_XOOXLE = xooxle.Xooxle(
         ),
     ],
     output=os.path.join(paths.LEXICON_DIR, "copticsite.json"),
-)
-
-ANDREAS_XOOXLE = xooxle.Xooxle(
-    source=ANDREAS_BOHAIRIC,
-    extract=[],
-    captures=[
-        xooxle.Capture(
-            "front",
-            xooxle.Selector({"id": "front"}),
-            retain_classes={"word", "B"},
-        ),
-        xooxle.Capture(
-            "back",
-            xooxle.Selector({"id": "back"}),
-            # We need the Arabic for styling. We don't need any other classes.
-            retain_classes={"arabic"},
-        ),
-    ],
-    output=os.path.join(paths.LEXICON_DIR, "andreas.json"),
 )

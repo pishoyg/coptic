@@ -3,6 +3,7 @@
 import collections
 import functools
 import itertools
+import os
 import pathlib
 import re
 import typing
@@ -12,11 +13,34 @@ import bs4
 
 from dictionary.stmacariusmonastery_org import constants
 from dictionary.stmacariusmonastery_org.constants import Language
-from utils import file, lang, log
+from flashcards import deck
+from utils import ensure, file, lang, log, page, paths
+from xooxle import xooxle
 
 # TODO: (#589) Once the Hebrew encoding is populated, this won't be needed
 # anymore.
 hebrew_freq: collections.Counter[str] = collections.Counter()
+
+POSTPROCESSING: list[tuple[str | re.Pattern[str], str]] = [
+    (" -", "-"),
+    (" ,", ","),
+    (",", ", "),
+    (" ⸗", "⸗"),
+    ("→", " → "),
+    ("( ", "("),
+    (" )", ")"),
+    ("  ", " "),
+    # Misplaced accents:
+    (re.compile("(?:`|⳿)(.)"), r"\1̀"),
+    (re.compile(" \u0300(.)"), r"\1̀"),
+    # Misplaced overline:
+    (re.compile("(.) \u0305"), r"\1̅"),
+    # Extra space (common error by our heurstic, because it inserts spaces
+    # between all spans).
+    (re.compile("(→ .) "), r"\1"),
+    # Combining double overline.
+    ("\u0305 \u0305", "\u033f"),
+]
 
 
 @typing.final
@@ -28,8 +52,10 @@ class Span:
         style = tag.get("style")
         assert style is None or isinstance(style, str)
         self.language: Language = self._determine_language(style)
+        self.unicode: bool = False
 
     def convert_to_unicode(self) -> None:
+        self.unicode = True
         if self.language == Language.RIGHT_ARROW:
             assert len(self.text) == 1
             self.text = "→"
@@ -85,6 +111,23 @@ class Span:
         # to infer languages for all spans.
         return Language.UNKNOWN
 
+    def html(self) -> abc.Generator[str]:
+        assert self.unicode
+        assert self.language.known()
+        # Only Arabic has classes, because it needs to be styled. For other
+        # languages, we prefer omitting the language so we can prettify the text
+        # (e.g. by removing superfluous space).
+        if self.language == Language.ARABIC:
+            yield f'<span class="{self.language.value.lower()}">'
+        ensure.ensure(self.text, self, "has no text!")
+        yield self.text
+        if self.language == Language.ARABIC:
+            yield "</span>"
+
+    @typing.override
+    def __str__(self) -> str:
+        return f'("{self.text}", {self.language.value})'
+
 
 class Paragraph:
     """Paragraph represents a <p> tag from the dictionary data."""
@@ -123,17 +166,24 @@ class Paragraph:
 
         self._squash()
         # After squashing, all spans should represent known languages.
-        unknown: list[Span] = [s for s in self.spans if not s.language.known()]
-        if unknown:
-            log.fatal(
-                self,
-                "has spans with unknown languages after squashing:",
-                unknown,
-            )
-        del unknown
+        self._assert_all_known()
 
         for s in self.spans:
             s.convert_to_unicode()
+
+    def _assert_all_known(self) -> None:
+        unknown: list[Span] = [s for s in self.spans if not s.language.known()]
+        if not unknown:
+            return
+        log.fatal(
+            self,
+            "has spans with unknown languages after squashing:",
+            unknown,
+        )
+
+    @typing.override
+    def __str__(self) -> str:
+        return str(list(map(str, self.spans)))
 
     def _squash(self) -> None:
         """Merge consecutive paragraphs within the same language."""
@@ -168,43 +218,62 @@ class Paragraph:
 
         self.spans = result
 
-    # TODO: (#590) While this normalization step removes a lot of unwanted
-    # space, some space characters mistakenly make it to the output.
-    # Examples:
-    # - ϯ ⲡ⸗ ⲟⲩⲟⲓ
-    # - ϭⲉ- → ϭ ⲟ
-    # This is true for both Greek and Coptic, although there are far fewer Greek
-    # victims.
-    # Here is a list of candidates:
-    # - https://remnqymi.com/crum/?regex=true&query=%5Cp%7BScript%3DCoptic%7D+%5Cp%7BScript%3DCoptic%7D # pylint: disable=line-too-long
-    # - https://remnqymi.com/crum/?query=%5Cp%7BScript%3DGreek%7D+%5Cp%7BScript%3DGreek%7D&regex=true # pylint: disable=line-too-long
-    def lang(self, language: Language) -> str:
-        assert language.known()
-        text: str = " ".join(
-            s.text for s in self.spans if s.language == language
-        )
-        text = " ".join(text.split()).strip()
-        return text
-
     def empty(self) -> bool:
         return not self.spans
 
+    def html_aux(self, spans: list[Span] | None = None) -> abc.Generator[str]:
+        for s in (self.spans if spans is None else spans):
+            if s.language == Language.HEBREW:
+                # We don't support Hebrew yet.
+                # TODO: (#589) Extend support for Hebrew.
+                continue
+            yield from s.html()
 
-POSTPROCESSING: list[tuple[str, str]] = [
-    (" -", "-"),
-    (" ,", ","),
-    (",", ", "),
-    (" ⸗", "⸗"),
-    ("→", " → "),
-    ("( ", "("),
-    (" )", ")"),
-    ("  ", " "),
-]
+    def html(self, spans: list[Span] | None = None) -> str:
+        html: str = "".join(self.html_aux(spans))
+        # TODO: (#590) While this normalization step removes a lot of unwanted
+        # space, some space characters mistakenly make it to the output.
+        # Examples:
+        # - ϯ ⲡ⸗ ⲟⲩⲟⲓ
+        # - ϭⲉ- → ϭ ⲟ
+        # This is true for both Greek and Coptic, although there are far fewer
+        # Greek victims.
+        # Here is a list of candidates:
+        # - https://remnqymi.com/crum/?regex=true&query=%5Cp%7BScript%3DCoptic%7D+%5Cp%7BScript%3DCoptic%7D # pylint: disable=line-too-long
+        # - https://remnqymi.com/crum/?query=%5Cp%7BScript%3DGreek%7D+%5Cp%7BScript%3DGreek%7D&regex=true # pylint: disable=line-too-long
+        html = " ".join(html.split()).strip()
+        for substitution in POSTPROCESSING:
+            pattern, repl = substitution
+            if isinstance(pattern, str):
+                html = html.replace(pattern, repl)
+            else:
+                assert isinstance(pattern, re.Pattern)
+                html = pattern.sub(repl, html)
+        if spans is None:
+            # If we're not using the override, we have used our own spans, which
+            # means that we must have content.
+            ensure.ensure(html, "paragraph", self, "seemingly has no content!")
+        return html
 
-_ACCENTED_LETTER_RE: re.Pattern[str] = re.compile("(?:`|⳿)(.)")
-_MISPLACED_ACCENT_RE: re.Pattern[str] = re.compile(" \u0300(.)")
-_MISPLACED_OVERLINE_RE: re.Pattern[str] = re.compile("(.) \u0305")
-_MISPLACED_ARROW_RE: re.Pattern[str] = re.compile("(→ .) ")
+    def langs(self) -> set[Language]:
+        self._assert_all_known()
+        return {s.language for s in self.spans}
+
+    def _coptic_prefix(self) -> list[Span]:
+        spans: list[Span] = []
+        for s in self.spans:
+            if s.language != Language.COPTIC:
+                break
+            spans.append(s)
+        if not spans:
+            log.error(self, "has no Coptic prefix!")
+        return spans
+
+    def coptic_prefix_html(self) -> str:
+        return self.html(self._coptic_prefix())
+
+    def non_coptic_suffix_html(self) -> str:
+        return self.html(self.spans[len(self._coptic_prefix()) :])
 
 
 @typing.final
@@ -214,59 +283,33 @@ class DictionaryEntry:
     def __init__(self, paragraphs: list[Paragraph]) -> None:
         self.paragraphs: list[Paragraph] = paragraphs
 
-    def _normalize_coptic(self, text: str) -> str:
-        text = _ACCENTED_LETTER_RE.sub(r"\1̀", text)
-        text = _MISPLACED_ACCENT_RE.sub(r"\1̀", text)
-        text = _MISPLACED_OVERLINE_RE.sub(r"\1̅", text)
-        text = _MISPLACED_ARROW_RE.sub(r"\1", text)
-        # Fix the combining double overline.
-        text = text.replace("\u0305 \u0305", "\u033f")
-        return text
-
-    def _lang(self, language: Language) -> str:
-        # TODO: (#590) Grouping the output by language causes the text to be
-        # reordered in an undesirable manner. You should instead retain the same
-        # order in the input.
-        assert language.known()
-        lines: abc.Iterable[str] = [p.lang(language) for p in self.paragraphs]
-        lines = filter(None, lines)
-        text = "\n".join(lines)
-        for substitution in POSTPROCESSING:
-            pattern, repl = substitution
-            text = text.replace(pattern, repl)
-        if language == Language.COPTIC:
-            text = self._normalize_coptic(text)
-        return text
+    @typing.override
+    def __str__(self) -> str:
+        return str(list(map(str, self.paragraphs)))
 
     def _front_aux(self) -> abc.Generator[str]:
+        # The front is the first paragraph.
         assert self.paragraphs
         yield '<span class="word B">'
         yield '<span class="spelling B">'
-        yield self._lang(Language.COPTIC)
+        yield self.paragraphs[0].coptic_prefix_html()
         yield "</span>"
         yield "</span>"
 
     def front(self) -> str:
         return "".join(self._front_aux())
 
-    def _span(self, language: Language) -> str:
-        text: str = self._lang(language)
-        if not text:
-            return ""
-        return f'<span class="{language.value.lower()}">{text}</span>'
+    def back_aux(self) -> abc.Generator[str]:
+        yield self.paragraphs[0].non_coptic_suffix_html()
+        for p in self.paragraphs[1:]:
+            yield p.html()
 
     def back(self) -> str:
         # TODO: (#589) Add Hebrew to the output.
-        langs: list[Language] = [
-            Language.ARABIC,
-            Language.GREEK,
-            Language.LATIN,
-        ]
-        return (
-            " ".join(filter(None, map(self._span, langs)))
-            .replace("\n", "<br>")
-            .strip()
-        )
+        back: str = page.LINE_BREAK.join(filter(None, self.back_aux()))
+        if not back:
+            log.error("Entry doesn't have a back:", self)
+        return back
 
 
 def parse_html(file_path: pathlib.Path) -> abc.Generator[Paragraph]:
@@ -284,8 +327,7 @@ def parse_html(file_path: pathlib.Path) -> abc.Generator[Paragraph]:
         "html.parser",
     )
 
-    # TODO: (#590) Below, you make the assumption that newlines are always
-    # represented by <p> tags. Verify this assumption.
+    # NOTE: All new lines in the data are represented by <p> tags.
     for p in map(Paragraph, soup.find_all("p")):
         if p.empty():
             continue
@@ -308,7 +350,7 @@ def group_paragraphs(
     for p in paragraphs:
         # Check if this paragraph is the start of a new entry, in which case we
         # yield and entry and start a new one.
-        if entry and p.lang(Language.COPTIC):
+        if entry and Language.COPTIC in p.langs():
             # This paragraph actually starts a new entry.
             # TODO: (#590) Handle derivations. Some paragraphs with Coptic texts
             # don't start new entries, but belong to the entries above them.
@@ -330,3 +372,34 @@ def words() -> list[DictionaryEntry]:
 
     # Generate entries.
     return list(group_paragraphs(paragraphs))
+
+
+def notes_aux() -> abc.Generator[deck.Note]:
+    for key, word in enumerate(words(), 1):
+        yield deck.Note(
+            key=str(key),
+            title=str(key),
+            front=word.front(),
+            back=word.back(),
+            force_content=False,
+        )
+
+
+XOOXLE = xooxle.Xooxle(
+    source=notes_aux,
+    extract=[],
+    captures=[
+        xooxle.Capture(
+            "front",
+            xooxle.Selector({"id": "front"}),
+            retain_classes={"word", "B"},
+        ),
+        xooxle.Capture(
+            "back",
+            xooxle.Selector({"id": "back"}),
+            # We need the Arabic for styling. We don't need any other classes.
+            retain_classes={"arabic"},
+        ),
+    ],
+    output=os.path.join(paths.LEXICON_DIR, "andreas.json"),
+)

@@ -182,7 +182,7 @@ dawoud_sentinels: FORCE
 ########## Andreas ##########
 andreas: FORCE
 	# Generate the Andreas lexicon artefacts.
-	./flashcards/main.py --andreas
+	./dictionary/stmacariusmonastery_org/main.py
 
 ########## COPTICSITE ##########
 copticsite: FORCE

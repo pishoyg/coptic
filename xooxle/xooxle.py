@@ -378,7 +378,7 @@ class Xooxle:
 
     def __init__(
         self,
-        source: str | deck.Deck,
+        source: str | typing.Callable[[], Generator[deck.Note]],
         extract: list[Selector],
         captures: list[Capture],
         output: str | pathlib.Path,
@@ -396,7 +396,7 @@ class Xooxle:
                 provided, will default to a single layer containing all
                 captures.
         """
-        self._source: str | deck.Deck = source
+        self._source: str | typing.Callable[[], Generator[deck.Note]] = source
         self._extract: list[Selector] = extract
         self._captures: list[Capture] = captures
         self._output: str | pathlib.Path = output
@@ -404,11 +404,23 @@ class Xooxle:
             [cap.name for cap in self._captures],
         ]
 
+    def _iter_dir(self, source: str) -> Generator[tuple[str, str]]:
+        assert os.path.isdir(source)
+        # Recursively search for all HTML files.
+        for root, _, files in os.walk(source):
+            for f in files:
+                if not f.endswith(_EXTENSION):
+                    continue
+                path = os.path.join(root, f)
+                yield path, file.read(path)
+
     def iter_input(self) -> Generator[tuple[str, str]]:
-        if isinstance(self._source, deck.Deck):
-            for note in self._source.notes:
-                yield note.key, note.html
+        if isinstance(self._source, str):
+            yield from self._iter_dir(self._source)
             return
+
+        for note in self._source():
+            yield note.key, note.html
 
         assert isinstance(self._source, str)
         assert os.path.isdir(self._source)
