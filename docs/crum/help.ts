@@ -203,8 +203,8 @@ export function makeHelpPanel(
       ),
     ],
     T: [
-      new help.Shortcut('copticsi<strong>t</strong>e', ['lexicon'], () => {
-        browser.scroll(id.COPTICSITE_TITLE);
+      new help.Shortcut('Andreas', ['lexicon'], () => {
+        browser.scroll(id.ANDREAS_TITLE);
       }),
     ],
     D: [
@@ -302,8 +302,8 @@ export function makeHelpPanel(
       ),
     ],
     t: [
-      new help.Shortcut('copticsi<strong>t</strong>e', ['lexicon'], () => {
-        browser.click(id.COPTICSITE_TITLE);
+      new help.Shortcut('Andreas', ['lexicon'], () => {
+        browser.click(id.ANDREAS_TITLE);
       }),
     ],
   };

@@ -33,8 +33,7 @@ type DoubleCharDialectAbbrev = 'N' | 'a' | 'f' | 'b';
  */
 export type DialectKey = SingleCharDialect | DoubleCharDialectAbbrev;
 
-// TODO: (#452) Add an entry for Andreas.
-type DICTIONARY = 'KELLIA' | 'Crum' | 'copticsite';
+type DICTIONARY = 'KELLIA' | 'Crum' | 'andreas';
 
 /**
  */
@@ -119,7 +118,7 @@ export const DIALECTS: Record<DIALECT, Dialect> = {
   B: new Dialect(
     'B',
     'Bohairic',
-    ['Crum', 'KELLIA', 'copticsite'],
+    ['Crum', 'KELLIA', 'andreas'],
     dial.Article.BOHAIRIC
   ),
   F: new Dialect('F', 'Fayyumic', ['Crum', 'KELLIA'], dial.Article.FAYYUMIC),
