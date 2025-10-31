@@ -291,6 +291,8 @@ class DictionaryEntry:
 
     def __init__(self, paragraphs: list[Paragraph], idx: int) -> None:
         self.paragraphs: list[Paragraph] = paragraphs
+        assert self.paragraphs
+        assert idx > 0
         self.key: str = str(idx)
 
     @typing.override
@@ -298,19 +300,26 @@ class DictionaryEntry:
         return str(list(map(str, self.paragraphs)))
 
     def _front_aux(self, html: bool) -> abc.Generator[str]:
-        assert self.paragraphs
         if html:
             yield '<span class="word B">'
             yield '<span class="spelling B">'
+
+        # The front consists of the Coptic prefix of the data. This is an
+        # (optional) sequence of paragraphs paragraphs that consist entirely of
+        # Coptic, followed by an (optional) partial paragraph that only has a
+        # Coptic prefix.
         for i, p in enumerate(self.paragraphs):
             prefix: str = p.coptic_prefix(html)
             yield prefix
             if i == 0 and not prefix:
+                # TODO: (#591) Handle these errors, and switch the error message
+                # to an assertion if the check has no false positives.
                 log.error(p, "starts an entry but has no Coptic prefix!")
-            # This paragraph has a non-Coptic part! This is the start of the
-            # back.
             if p.non_coptic_suffix(html):
+                # This paragraph has a non-Coptic part! This is the start of the
+                # back.
                 break
+
         if html:
             yield "</span>"
             yield "</span>"
@@ -319,20 +328,22 @@ class DictionaryEntry:
         return "".join(self._front_aux(html))
 
     def back_aux(self, html: bool) -> abc.Generator[str]:
-        flag: bool = False
-        for p in self.paragraphs:
-            if flag:
-                yield p.content(html)
-                continue
+        # Go through the paragraphs until you encounter non-Coptic text, and
+        # yield everything starting from there.
+        for i, p in enumerate(self.paragraphs):
             non_coptic_suffix: str = p.non_coptic_suffix(html)
             if non_coptic_suffix:
                 yield non_coptic_suffix
-                flag = True
+                for p in self.paragraphs[i + 1 :]:
+                    yield p.content(html)
+                return
 
     def back(self, html: bool) -> str:
         back: str = (page.LINE_BREAK if html else "\n").join(
             self.back_aux(html),
         )
+        # TODO: (#591) Handle the errors below, and switch the error message to
+        # an assertion if the check has no false positives.
         if not back:
             log.error("Entry doesn't have a definition:", self)
         elif not any(map(lang.is_arabic_char, back)):
