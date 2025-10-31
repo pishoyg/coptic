@@ -97,7 +97,7 @@ export function makeHelpPanel(
         ['lexicon', 'note', 'index'],
         () => {
           let el: HTMLElement | undefined = browser.findNextElement(
-            css.classQuery(xoox.CLS.VIEW, cls.SISTER_VIEW),
+            css.classQuery(xoox.CLS.VIEW_VIEW, cls.SISTER_VIEW),
             'cur'
           );
           // If the element has an anchor, click that. Otherwise, the element
