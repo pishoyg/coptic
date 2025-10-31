@@ -48,7 +48,11 @@ class Span:
     """Span represents an HTML tag bearing text in a given language."""
 
     def __init__(self, tag: bs4.Tag) -> None:
-        self.text: str = tag.get_text(strip=True).replace("\n", " ")
+        self.text: str = tag.get_text().replace("\n", " ")
+        self.indented: bool = bool(self.text) and self.text[0].isspace()
+        # Remove superfluous space after determining whether the span is
+        # indented.
+        self.text = " ".join(self.text.split()).strip()
         style = tag.get("style")
         assert style is None or isinstance(style, str)
         self.language: Language = self._determine_language(style)
@@ -275,6 +279,9 @@ class Paragraph:
     def non_coptic_suffix_html(self) -> str:
         return self.html(self.spans[len(self._coptic_prefix()) :])
 
+    def indented(self) -> bool:
+        return self.spans[0].indented
+
 
 @typing.final
 class DictionaryEntry:
@@ -350,10 +357,10 @@ def group_paragraphs(
     for p in paragraphs:
         # Check if this paragraph is the start of a new entry, in which case we
         # yield and entry and start a new one.
-        if entry and Language.COPTIC in p.langs():
+        # A new entry is marked by a paragraph containing Coptic text (unless
+        # it's indented, in which case it belong to the entry above it).
+        if entry and Language.COPTIC in p.langs() and not p.indented():
             # This paragraph actually starts a new entry.
-            # TODO: (#590) Handle derivations. Some paragraphs with Coptic texts
-            # don't start new entries, but belong to the entries above them.
             yield DictionaryEntry(entry)
             entry = []
 

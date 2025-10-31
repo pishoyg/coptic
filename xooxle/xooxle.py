@@ -422,16 +422,6 @@ class Xooxle:
         for note in self._source():
             yield note.key, note.html
 
-        assert isinstance(self._source, str)
-        assert os.path.isdir(self._source)
-        # Recursively search for all HTML files.
-        for root, _, files in os.walk(self._source):
-            for f in files:
-                if not f.endswith(_EXTENSION):
-                    continue
-                path = os.path.join(root, f)
-                yield path, file.read(path)
-
     def _is_comment(self, elem: bs4.PageElement) -> bool:
         return isinstance(elem, bs4.element.Comment)
 
