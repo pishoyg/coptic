@@ -183,6 +183,14 @@ dawoud_sentinels: FORCE
 andreas: FORCE
 	# Generate the Andreas lexicon artefacts.
 	./dictionary/stmacariusmonastery_org/main.py
+	# Write the output, without the KEY lines, to a separate JSON (currently
+	# unused). This gives us an index to `diff` without the noise created by `KEY`
+	# shifts. In the original JSON, whenever an entry is created or deleted, all
+	# KEY values shift by 1, creating a huge `diff` that is inconvenient to deal
+	# with.
+	# TODO: (#591) Delete this file once you're more confident about your
+	# algorithm, or once key shifts are guaranteed not to happen.
+	cat "docs/crum/andreas.json" | grep -v 'KEY' > "dictionary/stmacariusmonastery_org/data/output/andreas.json"
 
 ########## COPTICSITE ##########
 copticsite: FORCE
