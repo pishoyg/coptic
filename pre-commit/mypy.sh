@@ -20,6 +20,7 @@ SUBPROJECTS=(
   "dictionary/copticsite_com"
   "dictionary/kellia_uni_goettingen_de"
   "dictionary/marcion_sourceforge_net"
+  "dictionary/stmacariusmonastery_org"
   "flashcards"
   "morphology"
 )
