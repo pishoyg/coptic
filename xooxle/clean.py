@@ -122,7 +122,7 @@ def _closing_tag(token: str) -> bool:
 
 
 def _tag_name(token: str) -> str:
-    match: re.Match[str] | None = const.TAG_RE.fullmatch(token)
+    match: re.Match[str] | None = page.TAG_RE.fullmatch(token)
     assert match, token
     return match.group(1)
 

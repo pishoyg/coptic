@@ -115,17 +115,17 @@ class Span:
         # to infer languages for all spans.
         return Language.UNKNOWN
 
-    def html(self) -> abc.Generator[str]:
+    def content(self, html: bool) -> abc.Generator[str]:
         assert self.unicode
         assert self.language.known()
         # Only Arabic has classes, because it needs to be styled. For other
         # languages, we prefer omitting the language so we can prettify the text
         # (e.g. by removing superfluous space).
-        if self.language == Language.ARABIC:
+        if html and self.language == Language.ARABIC:
             yield f'<span class="{self.language.value.lower()}">'
         ensure.ensure(self.text, self, "has no text!")
         yield self.text
-        if self.language == Language.ARABIC:
+        if html and self.language == Language.ARABIC:
             yield "</span>"
 
     @typing.override
@@ -225,16 +225,20 @@ class Paragraph:
     def empty(self) -> bool:
         return not self.spans
 
-    def html_aux(self, spans: list[Span] | None = None) -> abc.Generator[str]:
+    def content_aux(
+        self,
+        html: bool,
+        spans: list[Span] | None = None,
+    ) -> abc.Generator[str]:
         for s in (self.spans if spans is None else spans):
             if s.language == Language.HEBREW:
                 # We don't support Hebrew yet.
                 # TODO: (#589) Extend support for Hebrew.
                 continue
-            yield from s.html()
+            yield from s.content(html)
 
-    def html(self, spans: list[Span] | None = None) -> str:
-        html: str = "".join(self.html_aux(spans))
+    def content(self, html: bool, spans: list[Span] | None = None) -> str:
+        content: str = "".join(self.content_aux(html, spans))
         # TODO: (#590) While this normalization step removes a lot of unwanted
         # space, some space characters mistakenly make it to the output.
         # Examples:
@@ -245,19 +249,19 @@ class Paragraph:
         # Here is a list of candidates:
         # - https://remnqymi.com/crum/?regex=true&query=%5Cp%7BScript%3DCoptic%7D+%5Cp%7BScript%3DCoptic%7D # pylint: disable=line-too-long
         # - https://remnqymi.com/crum/?query=%5Cp%7BScript%3DGreek%7D+%5Cp%7BScript%3DGreek%7D&regex=true # pylint: disable=line-too-long
-        html = " ".join(html.split()).strip()
+        content = " ".join(content.split()).strip()
         for substitution in POSTPROCESSING:
             pattern, repl = substitution
             if isinstance(pattern, str):
-                html = html.replace(pattern, repl)
+                content = content.replace(pattern, repl)
             else:
                 assert isinstance(pattern, re.Pattern)
-                html = pattern.sub(repl, html)
+                content = pattern.sub(repl, content)
         if spans is None:
             # If we're not using the override, we have used our own spans, which
             # means that we must have content.
-            ensure.ensure(html, "paragraph", self, "seemingly has no content!")
-        return html
+            ensure.ensure(content, "paragraph", self, "has no content!")
+        return content
 
     def langs(self) -> set[Language]:
         self._assert_all_known()
@@ -271,11 +275,11 @@ class Paragraph:
             spans.append(s)
         return spans
 
-    def coptic_prefix_html(self) -> str:
-        return self.html(self._coptic_prefix())
+    def coptic_prefix(self, html: bool) -> str:
+        return self.content(html, self._coptic_prefix())
 
-    def non_coptic_suffix_html(self) -> str:
-        return self.html(self.spans[len(self._coptic_prefix()) :])
+    def non_coptic_suffix(self, html: bool) -> str:
+        return self.content(html, self.spans[len(self._coptic_prefix()) :])
 
     def indented(self) -> bool:
         return self.spans[0].indented
@@ -285,47 +289,54 @@ class Paragraph:
 class DictionaryEntry:
     """DictionaryEntry is an entry in Andreas's Dictionary."""
 
-    def __init__(self, paragraphs: list[Paragraph]) -> None:
+    def __init__(self, paragraphs: list[Paragraph], idx: int) -> None:
         self.paragraphs: list[Paragraph] = paragraphs
+        self.key: str = str(idx)
 
     @typing.override
     def __str__(self) -> str:
         return str(list(map(str, self.paragraphs)))
 
-    def _front_aux(self) -> abc.Generator[str]:
+    def _front_aux(self, html: bool) -> abc.Generator[str]:
         assert self.paragraphs
-        yield '<span class="word B">'
-        yield '<span class="spelling B">'
+        if html:
+            yield '<span class="word B">'
+            yield '<span class="spelling B">'
         for i, p in enumerate(self.paragraphs):
-            prefix: str = p.coptic_prefix_html()
+            prefix: str = p.coptic_prefix(html)
             yield prefix
             if i == 0 and not prefix:
                 log.error(p, "starts an entry but has no Coptic prefix!")
             # This paragraph has a non-Coptic part! This is the start of the
             # back.
-            if p.non_coptic_suffix_html():
+            if p.non_coptic_suffix(html):
                 break
-        yield "</span>"
-        yield "</span>"
+        if html:
+            yield "</span>"
+            yield "</span>"
 
-    def front(self) -> str:
-        return "".join(self._front_aux())
+    def front(self, html: bool) -> str:
+        return "".join(self._front_aux(html))
 
-    def back_aux(self) -> abc.Generator[str]:
+    def back_aux(self, html: bool) -> abc.Generator[str]:
         flag: bool = False
         for p in self.paragraphs:
             if flag:
-                yield p.html()
+                yield p.content(html)
                 continue
-            non_coptic_suffix: str = p.non_coptic_suffix_html()
+            non_coptic_suffix: str = p.non_coptic_suffix(html)
             if non_coptic_suffix:
                 yield non_coptic_suffix
                 flag = True
 
-    def back(self) -> str:
-        back: str = page.LINE_BREAK.join(filter(None, self.back_aux()))
+    def back(self, html: bool) -> str:
+        back: str = (page.LINE_BREAK if html else "\n").join(
+            self.back_aux(html),
+        )
         if not back:
-            log.error("Entry doesn't have a back:", self)
+            log.error("Entry doesn't have a definition:", self)
+        elif not any(map(lang.is_arabic_char, back)):
+            log.error("Entry's definition has no Arabic:", self)
         return back
 
 
@@ -364,6 +375,7 @@ def group_paragraphs(
     """
 
     entry: list[Paragraph] = []
+    idx: int = 1
     for p in paragraphs:
         # Check if this paragraph is the start of a new entry, in which case we
         # yield and entry and start a new one.
@@ -371,13 +383,15 @@ def group_paragraphs(
         # it's indented, in which case it belong to the entry above it).
         if entry and Language.COPTIC in p.langs() and not p.indented():
             # This paragraph actually starts a new entry.
-            yield DictionaryEntry(entry)
+            yield DictionaryEntry(entry, idx)
+            idx += 1
             entry = []
 
         entry.append(p)
     # Yield the last entry.
     if entry:
-        yield DictionaryEntry(entry)
+        yield DictionaryEntry(entry, idx)
+        idx += 1
 
 
 @functools.cache
@@ -392,12 +406,12 @@ def words() -> list[DictionaryEntry]:
 
 
 def notes_aux() -> abc.Generator[deck.Note]:
-    for key, word in enumerate(words(), 1):
+    for word in words():
         yield deck.Note(
-            key=str(key),
-            title=str(key),
-            front=word.front(),
-            back=word.back(),
+            key=word.key,
+            title=word.key,
+            front=word.front(html=True),
+            back=word.back(html=True),
             force_content=False,
         )
 

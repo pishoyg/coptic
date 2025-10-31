@@ -482,4 +482,4 @@ class Xooxle:
             for key, value in entry.items():
                 if key == _KEY:
                     continue
-                ensure.members(const.TAG_RE.findall(value), ADMISSIBLE)
+                ensure.members(page.TAG_RE.findall(value), ADMISSIBLE)

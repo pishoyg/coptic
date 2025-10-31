@@ -138,6 +138,40 @@ def tsv_spreadsheet(export_url: str, **kwargs) -> pd.DataFrame:
     return file.read_tsv(io.StringIO(response.text), **kwargs)
 
 
+def write_column(
+    worksheet: gspread.worksheet.Worksheet,
+    dst: str,
+    values: list[str] | None,
+    **args,
+) -> None:
+    # Get the name of the destination column.
+    col_idx: int = column_nums(worksheet)[dst]
+    ensure.ensure(
+        col_idx <= 26,
+        "I am still not smart enough to infer the names of columns > 26!",
+    )
+    col: str = chr(ord("A") + col_idx - 1)
+    if values is None:
+        _ = worksheet.batch_clear([f"{col}2:{col}"])
+        return
+    # Calculate the range.
+    range_name: str = f"{col}2:{col}{len(values)+1}"
+    # Write the column.
+    _ = worksheet.update([[v] for v in values], range_name, **args)
+
+
+def overwrite_column(
+    worksheet: gspread.worksheet.Worksheet,
+    dst: str,
+    values: list[str],
+    **args,
+) -> None:
+    # Clear all previous values.
+    write_column(worksheet, dst, None, **args)
+    # Write new values.
+    write_column(worksheet, dst, values, **args)
+
+
 def apply(
     worksheet: gspread.worksheet.Worksheet,
     src: list[str],
@@ -162,18 +196,7 @@ def apply(
     """
     # For the purpose of writing everything on one column, we generate a list of
     # lists, where each sublist has a single item.
-    values: list[list[str]] = [
-        [f(*map(str, map(row.get, src)))]
-        for row in worksheet.get_all_records()
+    values: list[str] = [
+        f(*map(str, map(row.get, src))) for row in worksheet.get_all_records()
     ]
-    # Get the name of the destination column.
-    col_idx: int = column_nums(worksheet)[dst]
-    ensure.ensure(
-        col_idx <= 26,
-        "I am still not smart enough to infer the names of columns > 26!",
-    )
-    col: str = chr(ord("A") + col_idx - 1)
-    # Calculate the range.
-    range_name: str = f"{col}2:{col}{len(values)+1}"
-    # Write the column.
-    _ = worksheet.update(values, range_name, **args)
+    write_column(worksheet, dst, values, **args)

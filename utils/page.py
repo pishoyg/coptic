@@ -1,6 +1,7 @@
 """HTML helpers."""
 
 import os
+import re
 from collections import abc
 
 from utils import ensure, paths
@@ -31,6 +32,8 @@ _GOOGLE_TAG: str = """
 LINE_BREAK: str = "<br>"
 HORIZONTAL_RULE: str = "<hr>"
 _SELF_CLOSING_LINE_BREAK: str = "<br/>"
+
+TAG_RE: re.Pattern[str] = re.compile(r"^</?(\w+)(?: [^>]+)?>")
 
 
 def html_line_breaks(txt: str) -> str:
