@@ -359,7 +359,7 @@ export class Candidate {
       // any superfluous space, and to be NFD-normalized.
       // Thus, no normalization is needed when constructing the field.
       // [1] https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize
-      (layer) => layer.map((field) => new Field(record[field]))
+      (layer) => layer.map((field) => new Field(record[field] ?? ''))
     );
   }
 }
