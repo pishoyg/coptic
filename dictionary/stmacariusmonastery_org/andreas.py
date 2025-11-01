@@ -146,7 +146,7 @@ class Span:
 
     @typing.override
     def __str__(self) -> str:
-        return f'("{self.text}", {self.language.value})'
+        return self.text
 
 
 class Paragraph:
@@ -338,10 +338,19 @@ class DictionaryEntry:
         for i, p in enumerate(self.paragraphs):
             prefix: str = p.coptic_prefix(html)
             yield prefix
-            if i == 0 and not prefix:
-                # TODO: (#591) Handle these errors, and switch the error message
-                # to an assertion if the check has no false positives.
-                log.error(p, "starts an entry but has no Coptic prefix!")
+            # TODO: (#591) Handle these errors, and switch the error message to
+            # an assertion if the check has no false positives.
+            if i == 0:
+                if not prefix:
+                    log.error(
+                        "Paragraph starts an entry but has no Coptic prefix:",
+                        p,
+                    )
+                elif not lang.is_coptic_char(prefix[0]):
+                    log.error(
+                        "Coptic prefix doesn't start with Coptic text:",
+                        p,
+                    )
             if p.non_coptic_suffix(html):
                 # This paragraph has a non-Coptic part! This is the start of the
                 # back.
