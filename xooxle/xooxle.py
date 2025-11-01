@@ -442,13 +442,17 @@ class Xooxle:
         else:
             key = path
 
-        return {_KEY: key} | {
+        data: dict[str, str] = {
             # NOTE: We no longer allow duplicate content in the output.
             # If an element has been selected once, delete it!
             # This implies that the order of captures matters!
             cap.name: cap.excise(entry)
             for cap in self._captures
         }
+        data = {k: v for k, v in data.items() if v}
+        for k in data:
+            ensure.ensure(k != _KEY, _KEY, "is a reserved field name!")
+        return {_KEY: key} | data
 
     def build(self) -> None:
         with concur.thread_pool_executor() as executor:
@@ -472,7 +476,7 @@ class Xooxle:
         ] + [_KEY]
         entry: dict[str, str]
         for entry in json["data"]:
-            ensure.equal_sets(entry.keys(), keys)
+            ensure.members(entry.keys(), keys)
             for key, value in entry.items():
                 if key == _KEY:
                     continue

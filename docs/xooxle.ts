@@ -430,7 +430,7 @@ export class Candidate {
       // Thus, no normalization is needed when constructing the field.
       // [1] https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize
       (layer: string[]): Field[] =>
-        layer.map((field: string): Field => new Field(record[field]!))
+        layer.map((field: string): Field => new Field(record[field] ?? ''))
     );
   }
 }
