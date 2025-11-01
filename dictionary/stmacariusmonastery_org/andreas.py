@@ -53,12 +53,13 @@ class Span:
         # Remove superfluous space after determining whether the span is
         # indented.
         self.text = " ".join(self.text.split()).strip()
-        style = tag.get("style")
+        style: str | list[str] | None = tag.get("style")
         assert style is None or isinstance(style, str)
         self.language: Language = self._determine_language(style)
         self.unicode: bool = False
 
     def convert_to_unicode(self) -> None:
+        ensure.ensure(not self.unicode, self, "already converted to Unicode!")
         self.unicode = True
         if self.language == Language.RIGHT_ARROW:
             assert len(self.text) == 1
@@ -79,6 +80,9 @@ class Span:
             return
 
         # This is an encoded language.
+        # TODO: (#590) This ignores characters not present in the mapping. You
+        # should instead ensure that all encountered characters are present in
+        # the mapping.
         self.text = self.text.translate(constants.LANG_ENCODING[self.language])
 
     def _determine_language(self, style: str | None) -> Language:
@@ -116,11 +120,23 @@ class Span:
         return Language.UNKNOWN
 
     def content(self, html: bool) -> abc.Generator[str]:
-        assert self.unicode
-        assert self.language.known()
+        ensure.ensure(
+            self.unicode,
+            "attempting to retrieve span content before Unicode conversion:",
+            self,
+        )
+        ensure.ensure(
+            self.language.known(),
+            "Can't retrieve content from a span with an unknown language:",
+            self,
+        )
         # Only Arabic has classes, because it needs to be styled. For other
         # languages, we prefer omitting the language so we can prettify the text
         # (e.g. by removing superfluous space).
+        # TODO: (#595) HTML classes will no longer be necessary if Greek is
+        # extracted and the remainder is determined to be entirely
+        # right-to-left. The "arabic" class would then be inserted on a
+        # per-entry basis rather than on a per-span basis.
         if html and self.language == Language.ARABIC:
             yield f'<span class="{self.language.value.lower()}">'
         ensure.ensure(self.text, self, "has no text!")
@@ -187,7 +203,7 @@ class Paragraph:
 
     @typing.override
     def __str__(self) -> str:
-        return str(list(map(str, self.spans)))
+        return " ".join(map(str, self.spans))
 
     def _squash(self) -> None:
         """Merge consecutive paragraphs within the same language."""
@@ -294,6 +310,13 @@ class DictionaryEntry:
     """DictionaryEntry is an entry in Andreas's Dictionary."""
 
     def __init__(self, paragraphs: list[Paragraph], idx: int) -> None:
+        # TODO: (#595) The methods below split an entry into Coptic (front) and
+        # non-Coptic (back). You should extract Greek separately from the
+        # non-Coptic part. This should be done in the constructor, which would
+        # simplify the other methods. It should also render HTML elements within
+        # individual spans unnecessary, because the remainder of the non-Coptic
+        # part (after the Greek prefix) should be entirely right-to-left (though
+        # we are yet to verify that).
         self.paragraphs: list[Paragraph] = paragraphs
         assert self.paragraphs
         assert idx > 0
@@ -301,7 +324,7 @@ class DictionaryEntry:
 
     @typing.override
     def __str__(self) -> str:
-        return str(list(map(str, self.paragraphs)))
+        return "\n".join(map(str, self.paragraphs))
 
     def _front_aux(self, html: bool) -> abc.Generator[str]:
         if html:
@@ -396,6 +419,7 @@ def group_paragraphs(
         # yield and entry and start a new one.
         # A new entry is marked by a paragraph containing Coptic text (unless
         # it's indented, in which case it belong to the entry above it).
+        # TODO: (#590) This doesn't catch all derivations.
         if entry and Language.COPTIC in p.langs() and not p.indented():
             # This paragraph actually starts a new entry.
             yield DictionaryEntry(entry, idx)

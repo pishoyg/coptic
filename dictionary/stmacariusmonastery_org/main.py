@@ -21,7 +21,7 @@ _ = argparser.add_argument(
     "--sheet",
     action="store_true",
     default=False,
-    help="Populate the sheet.",
+    help="Update the Andreas sheet.",
 )
 
 GSPREAD_URL: str = (
@@ -40,28 +40,22 @@ def main():
 
     andreas.XOOXLE.build()
 
+    words: list[andreas.DictionaryEntry] = andreas.words()
     if args.sheet:
         sheet: gspread.worksheet.Worksheet = _sheet()
-        gcp.overwrite_column(
-            sheet,
-            "Key",
-            [word.key for word in andreas.words()],
-        )
+        gcp.overwrite_column(sheet, "Key", [w.key for w in words])
         gcp.overwrite_column(
             sheet,
             "Front",
-            [word.front(html=False) for word in andreas.words()],
+            [w.front(html=False) for w in words],
         )
         gcp.overwrite_column(
             sheet,
             "Back",
-            [word.back(html=False) for word in andreas.words()],
+            [w.back(html=False) for w in words],
         )
 
     if args.hebrew:
-        # First parse the dataset.
-        _ = list(andreas.words())
-
         log.warn("Unknown Hebrew characters:", len(andreas.hebrew_freq))
         for char, count in andreas.hebrew_freq.most_common():
             log.warn(f"{char}\t", count, level=False)
