@@ -22,6 +22,7 @@ from xooxle import xooxle
 hebrew_freq: collections.Counter[str] = collections.Counter()
 
 POSTPROCESSING: list[tuple[str | re.Pattern[str], str]] = [
+    ("``", "`"),
     (" -", "-"),
     (" ,", ","),
     (",", ", "),
