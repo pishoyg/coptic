@@ -13,6 +13,7 @@ import * as drop from '../dropdown.js';
 import * as log from '../logger.js';
 import * as id from './id.js';
 import * as dev from '../dev.js';
+import * as kellia from './kellia.js';
 var DialectMatch;
 (function (DialectMatch) {
   // The candidate has at least one of the highlighted dialects, and the match
@@ -53,28 +54,6 @@ class SearchResult extends xoox.SearchResult {
   static init(manager, highlighter) {
     SearchResult.manager = manager;
     SearchResult.highlighter = highlighter;
-  }
-  /**
-   *
-   * @param total
-   * @param numColumns
-   * @returns
-   */
-  row(total, numColumns) {
-    const row = super.row(total, numColumns);
-    crum.addGreekLookups(row);
-    // TODO: (#499): Handling of dialects causes a (minor) bug: Dialect codes
-    // don't get highlighted!
-    // This is because the content of dialect spans gets completely overridden
-    // in the call below. If this content had a match span, it would be removed
-    // and replaced with new content that doesn't have the match span.
-    // The following fix was considered: Your dialect handler should,
-    // instead of replacing the entire HTML tree in dialect spans, replace the
-    // text nodes only.
-    // This suggestion was abandoned in favor of a more radical redesign of
-    // Xooxle that eliminates such possibilities altogether. See #541.
-    crum.handleDialect(row, CrumSearchResult.highlighter);
-    return row;
   }
 }
 /**
@@ -118,6 +97,18 @@ class CrumSearchResult extends SearchResult {
    */
   row(total, numColumns) {
     const row = super.row(total, numColumns);
+    crum.addGreekLookups(row);
+    // TODO: (#499): Handling of dialects causes a (minor) bug: Dialect codes
+    // don't get highlighted!
+    // This is because the content of dialect spans gets completely overridden
+    // in the call below. If this content had a match span, it would be removed
+    // and replaced with new content that doesn't have the match span.
+    // The following fix was considered: Your dialect handler should,
+    // instead of replacing the entire HTML tree in dialect spans, replace the
+    // text nodes only.
+    // This suggestion was abandoned in favor of a more radical redesign of
+    // Xooxle that eliminates such possibilities altogether. See #541.
+    crum.handleDialect(row, CrumSearchResult.highlighter);
     wiki.handle(row);
     drop.addEventListeners('hover', row);
     return row;
@@ -192,6 +183,17 @@ class KELLIASearchResult extends SearchResult {
    */
   static numBuckets() {
     return 2;
+  }
+  /**
+   *
+   * @param total
+   * @param numColumns
+   * @returns
+   */
+  row(total, numColumns) {
+    const row = super.row(total, numColumns);
+    kellia.handle(row, SearchResult.highlighter);
+    return row;
   }
   /**
    * @param row - Table row.
