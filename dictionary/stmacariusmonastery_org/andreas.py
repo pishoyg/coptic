@@ -462,6 +462,7 @@ def notes_aux() -> abc.Generator[deck.Note]:
             front=word.front(html=True),
             back=word.back(html=True),
             force_content=False,
+            js_path=os.path.relpath(paths.ANDREAS_JS, paths.LEXICON_DIR),
             css=[os.path.relpath(paths.ANDREAS_CSS, paths.LEXICON_DIR)],
         )
 

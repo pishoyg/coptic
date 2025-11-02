@@ -14,6 +14,7 @@ import * as log from '../logger.js';
 import * as id from './id.js';
 import * as dev from '../dev.js';
 import * as kellia from './kellia.js';
+import * as andreas from './andreas.js';
 
 enum DialectMatch {
   // The candidate has at least one of the highlighted dialects, and the match
@@ -65,7 +66,7 @@ class AndreasSearchResult extends xoox.SearchResult {
    */
   public override row(total: number, numColumns: number): HTMLTableRowElement {
     const row: HTMLTableRowElement = super.row(total, numColumns);
-    crum.addGreekLookups(row);
+    andreas.handle(row);
     return row;
   }
 }
