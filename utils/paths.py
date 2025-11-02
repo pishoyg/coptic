@@ -43,7 +43,7 @@ LEXICON_DIR: pathlib.Path = directory(SITE_DIR, "crum")
 # TODO: (#407) Crum and KELLIA should have their own CSS.
 CRUM_JS: pathlib.Path = file(LEXICON_DIR, "main.js")
 KELLIA_JS: pathlib.Path = file(LEXICON_DIR, "kellia_main.js")
-ANDREAS_JS: pathlib.Path = file(LEXICON_DIR, "andreas.js")
+ANDREAS_JS: pathlib.Path = file(LEXICON_DIR, "andreas_main.js")
 ANDREAS_CSS: pathlib.Path = file(LEXICON_DIR, "andreas.css")
 CRUM_EXPLANATORY_DIR: pathlib.Path = directory(LEXICON_DIR, "explanatory")
 CRUM_SCAN_DIR: pathlib.Path = directory(LEXICON_DIR, "crum")
