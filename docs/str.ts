@@ -34,21 +34,20 @@ export function toggleCase(text: string): string {
 
 /**
  * BOUNDARY_START uses a lookbehind expression to match a position NOT preceded
- * by a letter, mark, number, or connector punctuation mark.
- * In other words, it's a Unicode-aware version of `\b` (though only at the
- * beginning of a word).
+ * by a letter or a mark.
+ * Normally, a boundary regex would also include numbers and connector
+ * punctuation marks, such that `A1` would be considered one word, there being
+ * no boundary between `A` and `1`. However, for all our use cases, a number or
+ * a connector punctuation mark would be considered a boundary.
+ * Same blow!
  */
-export const BOUNDARY_START =
-  /(?<![\p{Letter}\p{Mark}\p{Number}\p{Connector_Punctuation}])/u;
+export const BOUNDARY_START = /(?<![\p{Letter}\p{Mark}])/u;
 
 /**
  * BOUNDARY_END uses a lookahead expression to match a position NOT followed
- * by a letter, mark, number, or connector punctuation mark.
- * In other words, it's a Unicode-aware version of `\b` (though only at the end
- * of a word).
+ * by a letter or a mark.
  */
-export const BOUNDARY_END =
-  /(?![\p{Letter}\p{Mark}\p{Number}\p{Connector_Punctuation}])/u;
+export const BOUNDARY_END = /(?![\p{Letter}\p{Mark}])/u;
 
 /**
  * Wrap the given regex in Unicode-aware boundary expressions.
