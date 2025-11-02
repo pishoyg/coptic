@@ -124,6 +124,7 @@ export const MAPPING: Record<string, Annotation> = {
   's v': { fullForm: 'sub verbo' },
   sc: { fullForm: 'scilicet' },
   varr: { fullForm: 'variants' },
+  'ut sup': { fullForm: 'ut supra' },
   vbs: { fullForm: 'verbs' },
 
   // SECTION 3: ABBREVIATIONS THAT MOSTLY APPEAR IN REFERENCE TITLES, OR PERHAPS
