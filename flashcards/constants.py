@@ -676,6 +676,7 @@ class Crum(deck.Deck):
         return out
 
 
+# TODO: (#599) Delete all Copticsite Artifacts.
 class Copticsite(deck.Deck):
     """Copticsite represents a copticsite deck."""
 
@@ -755,11 +756,15 @@ class KELLIA(deck.Deck):
                 "</a>",
                 "</footer>",
             )
+            # TODO: (#407) KELLIA will soon have its own CSS, which should be
+            # included here.
             yield deck.Note(
                 key=str(key),
                 title=str(key),
                 front=front,
                 back=back,
+                js_path=relpath(paths.KELLIA_JS),
+                css=[relpath(paths.DROPDOWN_CSS)],
             )
 
 

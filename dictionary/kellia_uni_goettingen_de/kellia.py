@@ -260,8 +260,6 @@ class Etymology:
             word = re.sub(r"\(", r"\(", word)
             word = re.sub(r"\)", r"\)", word)
             etym = re.sub(r"#" + word + "#", link, etym)
-        if "cf. Gr." in etym:
-            etym = _link_greek(etym)
         etym = _gloss_bibl(etym)
         return f'<span class="etym">{etym}</span>' if etym else ""
 
@@ -386,23 +384,6 @@ def _gloss_bibl(ref_bibl: str) -> str:
     for regex, repl in sources.SOURCES:
         ref_bibl = regex.sub(repl, ref_bibl)
     return ref_bibl
-
-
-def _link_greek(etym: str) -> str:
-    m = re.search(r"cf\. Gr\.[^<>]+</span>([^<>]+)<i>", etym)
-    if m is None:
-        return etym
-    word = m.group(1).strip()
-    href = "https://www.billmounce.com/search/node/{greek}%20type%3Alexicon"
-
-    link = f' <a href="{href}">{word};</a>'
-    linked = re.sub(
-        r"(cf\. Gr\.[^<>]*</span>)[^<>]+(<i>)",
-        r"\1" + link + r"\2",
-        etym,
-    )
-
-    return linked
 
 
 def _form_sort_key(form: ET.Element) -> tuple[str, str]:
