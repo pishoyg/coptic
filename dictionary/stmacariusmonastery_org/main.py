@@ -43,15 +43,17 @@ def main():
     words: list[andreas.DictionaryEntry] = andreas.words()
     if args.sheet:
         sheet: gspread.worksheet.Worksheet = _sheet()
+        # TODO: (#595) Extract the Greek equivalent of Greek loanwords to a
+        # separate column.
         gcp.overwrite_column(sheet, "Key", [w.key for w in words])
         gcp.overwrite_column(
             sheet,
-            "Front",
+            "Coptic",
             [w.front(html=False) for w in words],
         )
         gcp.overwrite_column(
             sheet,
-            "Back",
+            "Arabic",
             [w.back(html=False) for w in words],
         )
 
