@@ -69,6 +69,7 @@ export const MAPPING = {
   // Crum had it in his list!
   ⲛ̅ⲉ̅: { fullForm: 'ⲛⲟⲩⲧⲉ', noCaseVariant: true },
   // SECTION 2: ABBREVIATIONS WE CHOOSE TO INCLUDE TO AID INTELLIGIBILITY.
+  '&c': { fullForm: 'et cetera' },
   AD: { fullForm: 'Anno Domini', noCaseVariant: true },
   adv: { fullForm: 'adverb' },
   advb: { fullForm: 'adverb' },
