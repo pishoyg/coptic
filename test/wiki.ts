@@ -17,8 +17,6 @@ type WikiElementKey =
   | 'dialectTooltips'
   | 'annotations';
 
-// TODO: (#557) Add more test cases. This doesn't suffice.
-// TODO: (#557) Exercise the content of the elements, not just their count.
 const TEST_CASES: {
   key: string;
   want: Record<WikiElementKey, number>;
@@ -32,7 +30,7 @@ const TEST_CASES: {
       suffixes: 135,
       bible: 119,
       dialectTooltips: 383,
-      annotations: 80,
+      annotations: 81,
     },
   },
   {
@@ -76,7 +74,7 @@ const TEST_CASES: {
       suffixes: 2,
       bible: 2,
       dialectTooltips: 11,
-      annotations: 6,
+      annotations: 7,
     },
   },
 ];
