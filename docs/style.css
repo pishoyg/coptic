@@ -192,9 +192,16 @@ table {
   margin-bottom: 0.5em;
 }
 
-.wiki p .droppable {
+/* TODO: (#194) The following rule should also apply to non-Wiki text in Crum.
+ * Let's define it for all tooltips in Crum once #194 is resolved.
+ * TODO: (#581) If tooltips are applied to the KELLIA bibliography, then this
+ * rule should also apply to KELLIA.
+ * */
+.wiki .droppable {
   font-size: small;
+}
 
+.wiki p .droppable {
   /* In our Crum Wiki, we show .droppable tips inside <p> elements. This results in the
    * rule above indenting droppable content, which is undesirable. Ideally, a droppable
    * shouldn't live inside a <p> tag. Since this is a bit challenging to achieve,
