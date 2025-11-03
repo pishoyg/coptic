@@ -657,6 +657,10 @@ _CODE_BY_COMPONENT: list[Comp] = [
         prefixes=["env/", "utils/", "pre-commit/"],
         dirnames=[""],
     ),
+    # copticsite project was completely abandoned, and the code was deleted.
+    # It's retain for backward-compatibility, because the data still contains a
+    # column for it.
+    Comp("copticsite", "copticsite", broken=True),
 ]
 
 
