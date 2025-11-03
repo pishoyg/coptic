@@ -76,8 +76,11 @@ export const BIBLE_RE = new RegExp(
 );
 
 export const ANNOTATION_RES: RegExp[] = [
-  // Two-word annotation:
-  new RegExp(str.bounded('[a-zA-Z]+\\s[a-zA-Z]+'), 'gu'),
+  // Two-word annotation, and special cases:
+  new RegExp(
+    str.bounded(['&c', '[a-zA-Z]+\\s[a-zA-Z]+'].join('|'), true),
+    'gu'
+  ),
   // Single-word annotation and special cases:
   new RegExp([str.bounded('[a-zA-Z]+'), '\\?', '†', 'ⲛ̅ⲉ̅'].join('|'), 'gu'),
 ];
