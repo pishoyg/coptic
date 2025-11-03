@@ -29,7 +29,6 @@ def file(*parts: str | pathlib.Path) -> pathlib.Path:
 # Component Directories
 MARCION: pathlib.Path = directory("dictionary/marcion_sourceforge_net/")
 ANDREAS: pathlib.Path = directory("dictionary/stmacariusmonastery_org/")
-COPTICSITE: pathlib.Path = directory("dictionary/copticsite_com/")
 KELLIA: pathlib.Path = directory("dictionary/kellia_uni_goettingen_de/")
 STSHENOUDA: pathlib.Path = directory("bible/")
 FLASHCARDS: pathlib.Path = directory("flashcards/")

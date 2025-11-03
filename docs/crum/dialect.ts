@@ -91,7 +91,7 @@ export class Dialect extends dial.Dialect<DIALECT, string, DialectKey> {
 export const DIALECTS: Record<DIALECT, Dialect> = {
   // S, A, L, B, and F, are the standard set of sigla of five major dialects of
   // Coptic. Along with O, they are used in both Crum and KELLIA.
-  // B is the only one used in Andreas and copticsite.
+  // B is the only one used in Andreas.
   // Border dialects are only used in Crum.
   S: new Dialect('S', 'Sahidic', ['Crum', 'KELLIA'], dial.Article.SAHIDIC),
   Sa: new Dialect(

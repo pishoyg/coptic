@@ -34,7 +34,7 @@ the KELLIA dictionary.
 For other data creators without programming expertise, a sequence number
 works as long as nobody inserts a new row in the middle of their data, which
 would mess up the keys. Discuss keying with those creators. As of today,
-only copticsite.com's data has this problem.
+only Andreas's data has this problem.
 
 2. Deck ID
 

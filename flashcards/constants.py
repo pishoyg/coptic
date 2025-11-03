@@ -11,7 +11,6 @@ import re
 import typing
 from collections import abc, defaultdict
 
-from dictionary.copticsite_com import copticsite
 from dictionary.kellia_uni_goettingen_de import kellia
 from dictionary.marcion_sourceforge_net import crum
 from dictionary.stmacariusmonastery_org import andreas
@@ -78,11 +77,6 @@ def _img_aux(
     yield "</figure>"
     if line_br:
         yield page.LINE_BREAK
-
-
-# All or nothing!
-def _aon(*parts: str) -> str:
-    return "".join(parts) if all(parts) else ""
 
 
 def _join(*parts: str) -> str:
@@ -676,46 +670,6 @@ class Crum(deck.Deck):
         return out
 
 
-# TODO: (#599) Delete all Copticsite Artifacts.
-class Copticsite(deck.Deck):
-    """Copticsite represents a copticsite deck."""
-
-    @typing.override
-    def notes_aux(self) -> abc.Generator[deck.Note]:
-        # NOTE: The key is a protected field. Do not change unless you know what
-        # you're doing.
-        for key, word in enumerate(copticsite.words(), 1):
-            front = _aon(
-                '<span class="word B">',
-                '<span class="spelling B">',
-                word.pretty,
-                "</span>",
-                "</span>",
-            )
-            back = _aon(
-                '<span class="type B">',
-                "(",
-                "<b>",
-                " - ".join(
-                    filter(None, [word.kind, word.gender, word.origin]),
-                ),
-                "</b>",
-                ")",
-                "</span>",
-                page.LINE_BREAK,
-            ) + page.html_line_breaks(word.meaning)
-
-            if not front and not back:
-                continue
-            yield deck.Note(
-                key=str(key),
-                title=str(key),
-                front=front,
-                back=back,
-                force_content=False,
-            )
-
-
 class Andreas(deck.Deck):
     """Andreas represents the Andreas deck."""
 
@@ -793,14 +747,12 @@ class KELLIA(deck.Deck):
 
 
 CRUM_ALL: Crum = Crum("A Coptic Dictionary::All Dialects", 1284010387, [])
-COPTICSITE_BOHAIRIC: Copticsite = Copticsite("copticsite.com", 1284010385)
 KELLIA_COMPREHENSIVE: KELLIA = KELLIA(
     "KELLIA::Comprehensive",
     1284010391,
     kellia.comprehensive(),
 )
 DECKS: list[deck.Deck] = [
-    # NOTE: We intentionally omit `copticsite` from the flashcard decks.
     CRUM_ALL,
     Crum("A Coptic Dictionary::Bohairic", 1284010383, ["B"]),
     Crum("A Coptic Dictionary::Sahidic", 1284010386, ["S"]),
@@ -855,11 +807,6 @@ _KELLIA_RETAIN_CLASSES = {
     "lang",
     "geo",
     "gram_grp",
-} | _DIALECTS
-
-_COPTICSITE_RETAIN_CLASSES = {
-    "word",
-    "spelling",
 } | _DIALECTS
 
 CRUM_XOOXLE = xooxle.Xooxle(
@@ -966,22 +913,4 @@ KELLIA_XOOXLE = xooxle.Xooxle(
         ),
     ],
     output=os.path.join(paths.LEXICON_DIR, "kellia.json"),
-)
-
-
-COPTICSITE_XOOXLE = xooxle.Xooxle(
-    source=COPTICSITE_BOHAIRIC.notes_aux,
-    extract=[],
-    captures=[
-        xooxle.Capture(
-            "front",
-            xooxle.Selector({"id": "front"}),
-            retain_classes=_COPTICSITE_RETAIN_CLASSES,
-        ),
-        xooxle.Capture(
-            "back",
-            xooxle.Selector({"id": "back"}),
-        ),
-    ],
-    output=os.path.join(paths.LEXICON_DIR, "copticsite.json"),
 )

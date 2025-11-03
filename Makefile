@@ -38,7 +38,7 @@ clean: FORCE
 
 ########## CONTENT GENERATION, TESTS and FORMATTING ##########
 .PHONY: all
-all: crum kellia andreas copticsite anki kindle bible transpile test
+all: crum kellia andreas anki kindle bible transpile test
 
 .PHONY: test
 test: FORCE
@@ -191,11 +191,6 @@ andreas: FORCE
 	# TODO: (#591) Delete this file once you're more confident about your
 	# algorithm, or once key shifts are guaranteed not to happen.
 	cat "docs/crum/andreas.json" | grep -v 'KEY' > "dictionary/stmacariusmonastery_org/data/output/andreas.json"
-
-########## COPTICSITE ##########
-copticsite: FORCE
-	# Generate the copticsite lexicon artefacts.
-	./flashcards/main.py --copticsite
 
 ########## FLASHCARDS ##########
 anki: FORCE

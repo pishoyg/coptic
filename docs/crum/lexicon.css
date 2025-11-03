@@ -37,19 +37,6 @@ input#search-box {
   width: 100%;
 }
 
-/* copticsite only shows in developer mode */
-#copticsite-title,
-#copticsite-collapsible {
-  display: none;
-}
-
-body.dev {
-  #copticsite-title,
-  #copticsite-collapsible {
-    display: unset;
-  }
-}
-
 /* Wide screen rules: */
 @media (width > 500px) {
   /* Hide the drop-down menu, and the keyboard. */

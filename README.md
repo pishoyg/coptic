@@ -37,7 +37,6 @@ that aims to make the Coptic language more **learnable**.
       - [Entries that are Absent in Crum](#entries-that-are-absent-in-crum)
     - [`copticocc.org/`](#copticoccorg)
     - [`kellia.uni-goettingen.de/`](#kelliauni-goettingende)
-    - [`copticsite.com/`](#copticsitecom)
   - [`bible/`](#bible)
     - [`stshenouda.org/`](#stshenoudaorg)
   - [`flashcards/`](#flashcards)
@@ -186,7 +185,6 @@ square brackets.
 1. Crum: Crum's dictionary
 1. KELLIA: KELLIA's dictionary
 1. Andreas: Andreas's dictionary
-1. copticsite: copticsite's dictionary
 1. Dawoud: Dawoud's dictionary
 1. Bible: The Coptic Bible
 1. Lexicon: [ⲡⲓⲖⲉⲝⲓⲕⲟⲛ](http://remnqymi.com/crum/)
@@ -574,8 +572,6 @@ Etymologies](https://github.com/KELLIA/dictionary/blob/dev/utils/egyptian_etymol
 types](https://github.com/KELLIA/dictionary/blob/edac2731c86fb02819436d39d127344e4e0bf514/utils/dictionary_reader.py#L14),
 and [`oRef`
 tags](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-oRef.html).
-
-### [`copticsite.com/`](dictionary/copticsite_com/)
 
 ## [`bible/`](bible/)
 

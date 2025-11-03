@@ -249,10 +249,6 @@ const XOOXLES: Xooxle[] = [
     tableID: 'andreas',
     searchResultType: AndreasSearchResult,
   },
-  {
-    indexURL: 'copticsite.json',
-    tableID: 'copticsite',
-  },
 ];
 
 /**

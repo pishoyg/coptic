@@ -172,7 +172,7 @@ def overwrite_column(
     write_column(worksheet, dst, values, **args)
 
 
-def apply(
+def apply(  # dead: disable
     worksheet: gspread.worksheet.Worksheet,
     src: list[str],
     dst: str,
