@@ -39,6 +39,8 @@
   & label {
     display: block; /* If the droppable is a tooltip, then each label renders on a separate line. */
   }
+
+  font-size: small;
 }
 
 /* CSS for all parents of tooltips (hover-invoked or click-invoked). */
