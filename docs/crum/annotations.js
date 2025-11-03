@@ -72,6 +72,7 @@ export const MAPPING = {
   AD: { fullForm: 'Anno Domini', noCaseVariant: true },
   adv: { fullForm: 'adverb' },
   advb: { fullForm: 'adverb' },
+  bis: { fullForm: 'bis' }, // Full form same as abbreviation, included for completion!
   cf: { fullForm: 'confer' },
   dat: { fullForm: 'dative' },
   'e g': { fullForm: 'exempli gratia' },
@@ -88,7 +89,9 @@ export const MAPPING = {
   p: { fullForm: 'page', noCaseVariant: true },
   'q v': { fullForm: 'quod vide' },
   's v': { fullForm: 'sub verbo' },
+  sic: { fullForm: 'sic erat scriptum' },
   sc: { fullForm: 'scilicet' },
+  sup: { fullForm: 'supra' },
   varr: { fullForm: 'variants' },
   'ut sup': { fullForm: 'ut supra' },
   vbs: { fullForm: 'verbs' },
