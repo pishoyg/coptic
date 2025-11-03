@@ -229,10 +229,6 @@ const XOOXLES = [
     tableID: 'andreas',
     searchResultType: AndreasSearchResult,
   },
-  {
-    indexURL: 'copticsite.json',
-    tableID: 'copticsite',
-  },
 ];
 /**
  *
