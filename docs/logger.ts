@@ -120,7 +120,7 @@ export function fatal(...message: unknown[]): never {
  * @param {...any} message - Message to log (if the condition is not satisfied).
  */
 export function ensure(
-  condition: boolean,
+  condition: unknown,
   ...message: unknown[]
 ): void | never {
   if (!condition) {
@@ -135,7 +135,7 @@ export function ensure(
  * @param {...any} message
  * TODO: (#0) Prefer using `check` to `error`.
  */
-export function check(condition: boolean, ...message: unknown[]): void {
+export function check(condition: unknown, ...message: unknown[]): void {
   if (!condition) {
     error(...message);
   }

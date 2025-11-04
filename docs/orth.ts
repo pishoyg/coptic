@@ -34,6 +34,38 @@ export function cleanDiacritics(text: string): string {
   return normalize(text).replaceAll(DIACRITIC_RE, '');
 }
 
+export type Translation = number[];
+
+/** Build an index mapping of the diacritic-free version of the given text.
+ *
+ * Let `clean` be the diacritic-free version of the given text. Build a mapping
+ * of positions in `clean` to positions in `text` such that:
+ * text[mapping[i]] == clean[i]
+ *
+ * @param text - Text that potentially contains diacritics.
+ * @returns - An array of numbers mapping positions of the diacritic-free
+ * version of the text to positions in the text.
+ */
+export function translation(text: string): Translation {
+  const mapping: number[] = [];
+  for (const [i, c] of Array.from(text).entries()) {
+    if (!isOneDiacritic(c)) {
+      mapping.push(i);
+    }
+  }
+  mapping.push(text.length);
+  return mapping;
+}
+
+/**
+ *
+ * @param tran
+ * @returns
+ */
+export function idempotent(tran: Translation): boolean {
+  return tran.at(-1) === tran.length - 1;
+}
+
 // CHROME_WORD_CHARS is a list of characters that are considered word characters
 // in Chrome.
 // See https://github.com/pishoyg/coptic/issues/286 for context.

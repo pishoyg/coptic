@@ -5,6 +5,8 @@ import * as log from './logger.js';
 import * as orth from './orth.js';
 import * as cls from './cls.js';
 import * as str from './str.js';
+import * as drop from './dropdown.js';
+import * as dev from './dev.js';
 
 // KEY is the name of the field that bears the word key. The key can be used to
 // generate an HREF to open the word page.
@@ -303,6 +305,9 @@ export class Form {
     if (!this.regexCheckbox.box.checked) {
       // Escape all the special characters in the string, in order to search
       // for raw matches.
+      // NOTE: Some AI agents said this could be more robust. Particularly, Grok
+      // said it doesn't escape the hyphen in char classes or handle Unicode
+      // regex edge cases.
       query = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     }
 
@@ -352,32 +357,79 @@ abstract class AggregateResult {
   protected abstract readonly results: AggregateResult[];
   // Memos are used to memorize previously computed values, so we can avoid
   // computing them repeatedly.
-  private matchMemo: boolean | null = null;
-  private boundaryTypeMemo: BoundaryType | null = null;
-  private fragmentWordMemo: string | undefined | null = null;
-  private numMatchesMemo: number | undefined | null = null;
-  private firstMatchIndexMemo: number | undefined | null = null;
+  protected textMemo: string | null = null;
+  protected matchesMemo: Match[] | null = null;
+
+  /**
+   * @returns
+   */
+  public get text(): string {
+    return (this.textMemo ??= this.results.map((r) => r.text).join(''));
+  }
+
+  /**
+   * @returns
+   */
+  public get matches(): Match[] {
+    return (this.matchesMemo ??= this.matchesAux());
+  }
+
+  /**
+   * @returns
+   */
+  private matchesAux(): Match[] {
+    let precedingTextLength = 0;
+    const matches: Match[] = [];
+    this.results.forEach((r) => {
+      matches.push(...r.matches.map((m) => m.shift(precedingTextLength)));
+      precedingTextLength += r.text.length;
+    });
+    return matches;
+  }
 
   /**
    * @returns The boundary type.
    */
   public boundaryType(): BoundaryType {
-    // The BoundaryType enum is implemented in such a way that the boundary type
-    // of an aggregated result is the minimum of the boundary types of all
+    // The BoundaryType enum values are ordered in such a way that the boundary
+    // type of an aggregated result is the minimum of the boundary types of all
     // results.
-    return (this.boundaryTypeMemo ??= Math.min(
-      ...this.results.map((r) => r.boundaryType())
-    ));
+    return Math.min(...this.matches.map((m) => m.boundaryType));
   }
 
   /**
-   * @returns The fragment word.
+   * @returns
    */
   public fragmentWord(): string | undefined {
-    // We simply return the fragment of the first result that possesses one.
-    return (this.fragmentWordMemo ??= this.results
-      .find((r) => r.fragmentWord())
-      ?.fragmentWord());
+    /* Expand the match left and right such that it contains full words, for
+     * text fragment purposes.
+     * See
+     * https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments
+     * for information about text fragments.
+     * Notice that browsers don't treat them uniformly, and we try to obtain a
+     * match that will work on most browsers.
+     * */
+    const match = this.matches[0];
+    if (!match) {
+      // This line doesn't have a match.
+      return undefined;
+    }
+
+    let start = match.start;
+    let end = match.end;
+
+    // Expand left: Move the start index left until a word boundary is found.
+    while (orth.isWordCharInChrome(this.text[start - 1])) {
+      start--;
+    }
+
+    // Expand right: Move the end index right until a word boundary is found.
+    while (orth.isWordCharInChrome(this.text[end])) {
+      end++;
+    }
+
+    // Return the expanded substring.
+    return this.text.substring(start, end);
   }
 
   /**
@@ -385,25 +437,7 @@ abstract class AggregateResult {
    */
   public get match(): boolean {
     // We have a match if any of the results has a match.
-    return (this.matchMemo ??= this.results.some((r) => r.match));
-  }
-
-  /**
-   * @returns Number of matches.
-   */
-  public get numMatches(): number {
-    return (this.numMatchesMemo ??= this.results
-      .map((r) => r.numMatches)
-      .reduce((a, b) => a + b, 0));
-  }
-
-  /**
-   * @returns Index of the first match in the text.
-   */
-  public get firstMatchIndex(): number {
-    return (this.firstMatchIndexMemo ??= Math.min(
-      ...this.results.map((r) => r.firstMatchIndex)
-    ));
+    return !!this.matches.length;
   }
 }
 
@@ -440,6 +474,7 @@ export class Candidate {
  */
 export class SearchResult extends AggregateResult {
   protected readonly results: FieldSearchResult[];
+
   /**
    * @param key
    * @param fields
@@ -505,23 +540,180 @@ export class SearchResult extends AggregateResult {
    * @returns
    */
   public row(total: number, numColumns: number): HTMLTableRowElement {
-    const row: HTMLTableRowElement = document.createElement('tr');
-
+    const colSpan: number = Math.round(numColumns / this.results.length);
     const cells: HTMLTableCellElement[] = this.results.map(
-      (fsr: FieldSearchResult): HTMLTableCellElement => {
-        const cell: HTMLTableCellElement = document.createElement('td');
-        cell.append(...fsr.highlight(this.href()));
-        return cell;
+      (r: FieldSearchResult): HTMLTableCellElement => r.cell(colSpan)
+    );
+
+    const row: HTMLTableRowElement = document.createElement('tr');
+    row.append(...cells);
+    // We can not enrich a highlighted HTML, but we can highlight an enriched
+    // HTML. Enrichment is more complex, and often relies on the HTML
+    // maintaining its original structure. Highlighting, on the other hand, only
+    // operates by modifying text nodes in the tree.
+    // See #541 for more context.
+    this.enrich(row);
+    this.highlight(row);
+
+    if (window.isPlaywright || dev.get()) {
+      // Verify that enrichment and highlighting haven't altered the text
+      // content of the row, which would've corrupted the highlighting
+      // algorithm.
+      log.check(orth.cleanDiacritics(drop.noTipTextContent(row)) === this.text);
+    }
+
+    // We refrain from adding any extra content, such as the view-for-more
+    // message or the view cell, until enrichment and highlighting have been
+    // done.
+    if (this.results.some((r) => r.cropped)) {
+      cells[cells.length - 1]?.append(...this.viewForMore(this.href()));
+    }
+    row.prepend(this.viewCell(total));
+    return row;
+  }
+
+  /**
+   *
+   * @param root
+   */
+  private *walk(root: HTMLElement): Generator<Text> {
+    const walker: TreeWalker = document.createTreeWalker(
+      root,
+      NodeFilter.SHOW_TEXT,
+      (node: Node): number => {
+        if (!node.nodeValue) {
+          // This is not a text node.
+          return NodeFilter.FILTER_REJECT;
+        }
+        if (node.parentElement?.closest(`.${drop.CLS.DROPPABLE}`)) {
+          // This is a tooltip, added by the enricher, and irrelevant for
+          // highlighting.
+          return NodeFilter.FILTER_REJECT;
+        }
+        return NodeFilter.FILTER_ACCEPT;
       }
     );
-    const colspan: number = Math.round(numColumns / cells.length);
-    cells.forEach((cell: HTMLTableCellElement): void => {
-      cell.colSpan = colspan;
-    });
 
-    row.append(this.viewCell(total), ...cells);
+    while (walker.nextNode()) {
+      yield walker.currentNode as Text;
+    }
+  }
 
-    return row;
+  /**
+   *
+   * @param row
+   */
+  public highlight(row: HTMLTableRowElement): void {
+    // Since the matches were obtained on the diacritic-free text,
+    // while the HTMl is constructed with text that potentially contains
+    // diacritics, we need to translate all matches accordingly.
+    // TODO: (#0) The text used below is the same as `this.text`, except that
+    // diacritics are retained, while `this.text` is diacritic-free.
+    // Consider caching it instead of recalculating it dynamically below.
+    // The translation could also be obtained at the same time diacritics are
+    // removed to construct `this.text`.
+    const translation: orth.Translation = orth.translation(
+      drop.noTipTextContent(row)
+    );
+
+    // Reverse the order of the matches.
+    // We `.pop()` from the end, so we're processing matches in ascending order.
+    // We do this because `Array.pop()` is O(1), while `Array.shift()` is O(N).
+    // Also keep in mind that `Array.reverse()` is in-place, so we avoid running
+    // it on `this.matches` to avoid altering it.
+    const matches: Match[] = this.matches
+      .map((m) => m.translate(translation))
+      .reverse();
+
+    // match stores the match currently being processed.
+    let match: Match | undefined = matches.pop();
+    // idx stores a global character offset.
+    let idx = 0;
+
+    // Store all nodes in an array before processing them. Otherwise, the node
+    // replacements that we perform below could corrupt the walker state and
+    // prematurely terminate the loop.
+    for (const node of [...this.walk(row)]) {
+      if (!node.nodeValue) {
+        // This node has no text!
+        continue;
+      }
+
+      if (!match) {
+        // There are no matches left.
+        return;
+      }
+
+      // start and end define the range that the current node occupies in the
+      // global text.
+      const start: number = idx;
+      const end: number = idx + node.nodeValue.length;
+      // Update idx to point to the end of this node, which should be the start
+      // of the next node.
+      idx = end;
+
+      if (match.start >= end) {
+        // This nod doesn't have a match. It doesn't overlap with the current
+        // match.
+        continue;
+      }
+
+      // We have an overlap: match.start < end AND match.end > start.
+      // Build the fragment
+      const fragment: DocumentFragment = document.createDocumentFragment();
+
+      // nodeIdx maintains the invariant that `node.nodeValue[nodeIdx]` hasn't
+      // been accounted for in the output yet, and still needs to be added to
+      // the fragment (potentially after being broken up into parts with some
+      // parts being surrounded by `CLS.MATCH` spans).
+      let nodeIdx = 0;
+      // Loop *while* we have a match that overlaps with this node
+      while (match && match.start < end) {
+        // Add any pre-match text from this node.
+        fragment.append(node.nodeValue.substring(nodeIdx, match.start - start));
+
+        // Add the match text, wrapped in a span.
+        const span = document.createElement('span');
+        span.classList.add(CLS.MATCH);
+        span.append(
+          node.nodeValue.substring(match.start - start, match.end - start)
+        );
+        fragment.appendChild(span);
+        nodeIdx = match.end - start;
+
+        if (match.end > end) {
+          // This match carries over to the next node. Push a new match object
+          // that starts with the start of the next node, as if the original
+          // match object was broken up into two several pieces with each piece
+          // lying entirely within a node.
+          // NOTE: The boundary type in the match constructed below is
+          // inaccurate. This is currently irrelevant, because we will only use
+          // the indices, and this match object will be discarded with the
+          // boundary type never being used.
+          matches.push(new Match(end, match.end, match.boundaryType));
+        }
+
+        // Get the next match.
+        match = matches.pop();
+      }
+
+      // Add any remaining text from this node (after the last match).
+      fragment.append(node.nodeValue.substring(nodeIdx));
+
+      // Normalize the fragment. Get rid of empty text nodes, and merge
+      // consecutive text nodes.
+      fragment.normalize();
+      node.replaceWith(fragment);
+    }
+  }
+
+  /**
+   *
+   * @param _row
+   */
+  protected enrich(_row: HTMLTableRowElement): void {
+    // This method can be overridden by children to enrich the HTML before
+    // addition to the search results table.
   }
 
   /**
@@ -532,7 +724,7 @@ export class SearchResult extends AggregateResult {
   public compareKey(): number[] {
     const boundary: BoundaryType = this.boundaryType();
     const boundaryIndex: number = this.results.findIndex(
-      (res) => res.boundaryType() === boundary
+      (res) => res.boundaryType() === this.boundaryType()
     );
     return [
       // Results are sorted based on the boundary type.
@@ -547,7 +739,10 @@ export class SearchResult extends AggregateResult {
       // Afterwards, we rank based on the number of matches in the text.
       // Notice that we revert the sign, so the larger numbers will appear
       // first.
-      -this.numMatches,
+      // NOTE: Grok suggested using match density (number of matches / total
+      // number of words in the text) instead of the absolute number of matches,
+      // but we dismissed the suggestion.
+      -this.matches.length,
       // Afterwards, we sort based on the index of the first match, regardless
       // the boundary type of that match.
       // Results are sorted based on the first column that has a match.
@@ -560,7 +755,7 @@ export class SearchResult extends AggregateResult {
       // A result that has a filed with a match closer to the beginning of the
       // text should rank higher than a result with a match in the middle or
       // towards the end of the text.
-      this.firstMatchIndex,
+      this.matches[0]?.start ?? Number.MAX_SAFE_INTEGER,
     ];
   }
 
@@ -626,6 +821,27 @@ export class SearchResult extends AggregateResult {
   public static numBuckets(): number {
     return 1;
   }
+
+  /**
+   * @param href
+   */
+  private *viewForMore(href: string | undefined): Generator<Node | string> {
+    yield document.createElement('br');
+    const span: HTMLSpanElement = document.createElement('span');
+    span.classList.add(CLS.VIEW_FOR_MORE);
+    span.append('...');
+    if (!href) {
+      yield span;
+      return;
+    }
+
+    const a: HTMLAnchorElement = document.createElement('a');
+    a.textContent = 'view for full context';
+    a.href = href;
+    a.target = '_blank';
+    span.append(a);
+    yield span;
+  }
 }
 
 /**
@@ -684,41 +900,15 @@ class Field {
  */
 class FieldSearchResult extends AggregateResult {
   protected readonly results: UnitSearchResult[];
+  public readonly cropped: boolean;
+
   /**
    * @param field
    * @param regex
    */
   public constructor(field: Field, regex: RegExp) {
     super();
-    this.results = field.units.map((unit) => unit.search(regex));
-  }
-
-  /**
-   * @param href
-   */
-  private *viewForMore(href: string | undefined): Generator<Node | string> {
-    yield document.createElement('br');
-    const span: HTMLSpanElement = document.createElement('span');
-    span.classList.add(CLS.VIEW_FOR_MORE);
-    span.append('...');
-    if (!href) {
-      yield span;
-      return;
-    }
-
-    const a: HTMLAnchorElement = document.createElement('a');
-    a.textContent = 'view for full context';
-    a.href = href;
-    a.target = '_blank';
-    span.append(a);
-    yield span;
-  }
-
-  /**
-   * @param href
-   * @returns The field's HTML structure, with matches highlighted.
-   */
-  public *highlight(href: string | undefined): Generator<Node | string> {
+    const results = field.units.map((unit) => unit.search(regex));
     // If there are no matches, we limit the number of units in the output.
     // If there are matches:
     // - If there are only few units, we show all of them regardless of
@@ -727,24 +917,27 @@ class FieldSearchResult extends AggregateResult {
     //   their number exceeds the limit, because we need to show all matches.
     //   We always show the first result, because its content is usually
     //   important.
-    const results: UnitSearchResult[] = !this.match
-      ? this.results.slice(0, UNITS_LIMIT)
-      : this.results.length <= UNITS_LIMIT
-        ? this.results
-        : [
-            this.results[0],
-            ...this.results.slice(1).filter((r) => r.match),
-          ].filter((res) => res !== undefined);
+    this.results = !results.some((r) => r.match)
+      ? results.slice(0, UNITS_LIMIT)
+      : results.length <= UNITS_LIMIT
+        ? results
+        : [results[0], ...results.slice(1).filter((r) => r.match)].filter(
+            (res) => res !== undefined
+          );
+    this.cropped = this.results.length < results.length;
+  }
 
-    const content: HTMLDivElement = document.createElement('div');
-    content.innerHTML = results
-      .map((r: UnitSearchResult): string => r.highlight())
+  /**
+   * @param colSpan
+   * @returns
+   */
+  public cell(colSpan: number): HTMLTableCellElement {
+    const td: HTMLTableCellElement = document.createElement('td');
+    td.innerHTML = this.results
+      .map((r: UnitSearchResult): string => r.html())
       .join(UNIT_DELIMITER);
-    yield content;
-
-    if (results.length < this.results.length) {
-      yield* this.viewForMore(href);
-    }
+    td.colSpan = colSpan;
+    return td;
   }
 }
 
@@ -778,6 +971,7 @@ class Unit {
  */
 class UnitSearchResult extends AggregateResult {
   protected readonly results: LineSearchResult[];
+
   /**
    * @param unit - The unit to search.
    * @param regex - The regex to search.
@@ -790,10 +984,10 @@ class UnitSearchResult extends AggregateResult {
   /**
    * @returns The HTML content of the unit, with matches highlighted.
    */
-  public highlight(): string {
+  public html(): string {
     // The unit was split into lines using LINE_BREAK as a delimiter, so we
     // rebuild it using LINE_BREAK.
-    return this.results.map((r) => r.highlight()).join(LINE_BREAK);
+    return this.results.map((r) => r.html).join(LINE_BREAK);
   }
 }
 
@@ -811,19 +1005,47 @@ enum BoundaryType {
   MID_WORD,
 }
 
-interface Match {
+/**
+ *
+ */
+class Match {
   /**
-   * The start index of the match.
+   *
+   * @param start
+   * @param end
+   * @param boundaryType
    */
-  readonly start: number;
+  public constructor(
+    public readonly start: number,
+    public readonly end: number,
+    public readonly boundaryType: BoundaryType
+  ) {}
+
   /**
-   * The end index of the match.
+   *
+   * @param len
+   * @returns
    */
-  readonly end: number;
+  public shift(len: number): Match {
+    return new Match(this.start + len, this.end + len, this.boundaryType);
+  }
+
   /**
-   * The match type.
+   *
+   * @param translation
+   * @returns
    */
-  readonly boundaryType: BoundaryType;
+  public translate(translation: number[]): Match {
+    if (orth.idempotent(translation)) {
+      // No translation is needed!
+      return structuredClone(this);
+    }
+    return new Match(
+      translation[this.start]!,
+      translation[this.end]!,
+      this.boundaryType
+    );
+  }
 }
 
 /**
@@ -889,124 +1111,9 @@ class Line {
                 ? BoundaryType.SUFFIX
                 : BoundaryType.MID_WORD;
 
-        return { start, end, boundaryType };
+        return new Match(start, end, boundaryType);
       })
       .filter((m) => m !== undefined);
-  }
-}
-
-/**
- * HTMLBuilder generates HTML for search results, highlighting matches as
- * dictated.
- *
- * Matches are not allowed to be nested, but are allowed to be contiguous.
- * Nested matches will produce unpredictable behaviour!
- * The builder will attempt simplify the output by removing superfluous opening
- * and closing tags whenever possible.
- */
-class HTMLBuilder {
-  private readonly builder: string[] = [];
-
-  /**
-   * open stores whether a match is currently open.
-   */
-  private open = false;
-
-  /**
-   * @returns Whether the match is currently closed.
-   */
-  private get closed(): boolean {
-    return !this.open;
-  }
-
-  /**
-   * A match opening tag.
-   * Each of the (potentially several) pieces of text making up a match will be
-   * surrounded by an opening and a closing tag.
-   */
-  private static readonly OPENING = `<span class="${CLS.MATCH}">`;
-
-  /**
-   * A match closing tag.
-   * Each of the (potentially several) pieces of text making up a match will be
-   * surrounded by an opening and a closing tag.
-   */
-  private static readonly CLOSING = '</span>';
-
-  /**
-   * The closing tag is not distinguishable enough, so we use this placeholder
-   * first, substituting it for the actual closing tag later on.
-   */
-  private static readonly CLOSING_PLACEHOLDER = 'CLOSING_TAG';
-
-  /**
-   * Start a match.
-   */
-  public openMatch(): void {
-    if (this.open) {
-      log.error('Warning: The match is already open!');
-    }
-    this.open = true;
-    if (
-      this.builder[this.builder.length - 1] === HTMLBuilder.CLOSING_PLACEHOLDER
-    ) {
-      // Open a match by un-closing the previous match.
-      this.builder.pop();
-    } else {
-      // Open a match by pushing an opening tag.
-      this.builder.push(HTMLBuilder.OPENING);
-    }
-  }
-
-  /**
-   * End a match.
-   */
-  public closeMatch(): void {
-    if (this.closed) {
-      log.error('Warning: The match is already closed!');
-    }
-    this.open = false;
-    if (this.builder[this.builder.length - 1] === HTMLBuilder.OPENING) {
-      // Close the match by popping the opening tag. This is an empty match.
-      this.builder.pop();
-    } else {
-      // Close a match by pushing a closing tag.
-      this.builder.push(HTMLBuilder.CLOSING_PLACEHOLDER);
-    }
-  }
-
-  /**
-   * @param t
-   */
-  public pushText(t: string | undefined): void {
-    if (!t) {
-      return;
-    }
-    this.builder.push(t);
-  }
-
-  /**
-   * @param t
-   */
-  public pushTag(t: string): void {
-    if (this.open) {
-      this.closeMatch();
-      this.builder.push(t);
-      this.openMatch();
-    } else {
-      this.builder.push(t);
-    }
-  }
-
-  /**
-   * @returns
-   */
-  public build(): string {
-    return this.builder
-      .map((s) =>
-        s === HTMLBuilder.CLOSING_PLACEHOLDER ? HTMLBuilder.CLOSING : s
-      )
-      .join('');
   }
 }
 
@@ -1019,11 +1126,9 @@ class LineSearchResult extends AggregateResult {
    */
   public override get results(): AggregateResult[] {
     throw new Error(
-      'LineSearchResult is not an aggregate result, and should implement required methods directly.'
+      '`LineSearchResult` is not an aggregate result. It has no `results` field. Make sure that `LineSearchResult` implements `AggregateResult` without actually accessing `this.results`.'
     );
   }
-
-  private readonly matches: Match[];
 
   /**
    *
@@ -1035,147 +1140,16 @@ class LineSearchResult extends AggregateResult {
     regex: RegExp
   ) {
     super();
-    this.matches = line.matches(regex);
-  }
-
-  /**
-   *
-   * @returns The text content of the line.
-   */
-  private get text(): string {
-    return this.line.text;
+    this.matchesMemo = line.matches(regex);
+    this.textMemo = this.line.text;
   }
 
   /**
    *
    * @returns The HTML content of the line.
    */
-  private get html(): string {
+  public get html(): string {
     return this.line.html;
-  }
-
-  /**
-   *
-   * @returns Whether this search result has a match.
-   */
-  public override get match(): boolean {
-    return !!this.matches.length;
-  }
-
-  /**
-   * @returns A word that can be used as a URL fragment.
-   */
-  public override fragmentWord(): string | undefined {
-    /* Expand the match left and right such that it contains full words, for
-     * text fragment purposes.
-     * See
-     * https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments
-     * for information about text fragments.
-     * Notice that browsers don't treat them uniformly, and we try to obtain a
-     * match that will work on most browsers.
-     * */
-    const match = this.matches[0];
-    if (!match) {
-      // This line doesn't have a match.
-      return undefined;
-    }
-
-    let start = match.start;
-    let end = match.end;
-
-    // Expand left: Move the start index left until a word boundary is found.
-    while (orth.isWordCharInChrome(this.text[start - 1])) {
-      start--;
-    }
-
-    // Expand right: Move the end index right until a word boundary is found.
-    while (orth.isWordCharInChrome(this.text[end])) {
-      end++;
-    }
-
-    // Return the expanded substring.
-    return this.text.substring(start, end);
-  }
-
-  /**
-   * @returns The HTML content of the line, with matches highlighted.
-   */
-  public highlight(): string {
-    if (!this.match) {
-      // No highlighting needed.
-      return this.html;
-    }
-
-    const builder: HTMLBuilder = new HTMLBuilder();
-
-    let htmlPos = 0,
-      textPos = 0,
-      matchIdx = 0,
-      match: Match | undefined = this.matches[matchIdx];
-
-    const nextMatch = (): void => {
-      match = this.matches[++matchIdx];
-    };
-
-    while (htmlPos <= this.html.length) {
-      if (this.html[htmlPos] === '<') {
-        // If we encounter a tag, add them to the output without accounting for
-        // it in the search.
-        const end = this.html.indexOf('>', htmlPos) + 1;
-        builder.pushTag(this.html.slice(htmlPos, end));
-        htmlPos = end;
-        continue;
-      }
-
-      if (orth.isOneDiacritic(this.html[htmlPos])) {
-        // This is a diacritic. It was ignored during search, and is not part of
-        // the match. Yield without accounting for it in the text.
-        builder.pushText(this.html[htmlPos++]);
-        continue;
-      }
-
-      // This index in the HTML corresponds to a text character.
-      if (textPos === match?.start) {
-        // A match starts at the given position. Open the match.
-        builder.openMatch();
-      } else if (textPos === match?.end) {
-        // A match ends at the given position. Close the match.
-        builder.closeMatch();
-        nextMatch();
-        // Check if the new match starts at the same position.
-        // We need to do this during this iteration, as this is the only time we
-        // process this text position.
-        // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-        if (textPos === match?.start) {
-          builder.openMatch();
-        }
-      }
-      ++textPos;
-      builder.pushText(this.html[htmlPos++]);
-    }
-
-    return builder.build();
-  }
-
-  /**
-   * @returns The boundary type of this match.
-   */
-  public override boundaryType(): BoundaryType {
-    return Math.min(...this.matches.map((m) => m.boundaryType));
-  }
-
-  /**
-   * @returns The number of matches in this line.
-   */
-  public override get numMatches(): number {
-    return this.matches.length;
-  }
-
-  /**
-   * @returns The starting index of the first match.
-   */
-  public override get firstMatchIndex(): number {
-    return this.matches[0]?.start ?? Number.MAX_SAFE_INTEGER;
   }
 }
 
@@ -1317,6 +1291,8 @@ export class Xooxle {
       return;
     }
 
+    // TODO: (#0) Consider passing searchAuxAux to a Web Worker to improve
+    // performance.
     try {
       const regex = new RegExp(
         expression,
@@ -1412,6 +1388,9 @@ export class Xooxle {
       // step.
       .sort(searchResultCompare);
 
+    // NOTE: We considered using an IntersectionObserver, since some search
+    // results are huge. But we dismissed it because we aren't interested in
+    // that particular use case. Most users would be looking up a single word.
     for (const [count, result] of results.entries()) {
       if (abortController.signal.aborted) {
         return;
