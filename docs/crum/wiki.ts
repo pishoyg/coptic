@@ -14,6 +14,7 @@ import * as ref from './references.js';
 import * as drop from '../dropdown.js';
 import * as str from '../str.js';
 import * as white from './white.js';
+import * as dev from '../dev.js';
 
 /**
  * NOTE: All of the regexes below assume the following normalizations:
@@ -204,7 +205,10 @@ export function handle(root: HTMLElement): void {
   root
     .querySelectorAll<HTMLElement>(`.${cls.WIKI}`)
     .forEach((elem: HTMLElement): void => {
-      const startText: string = drop.noTipTextContent(elem);
+      const startText: string | undefined = dev.play(() =>
+        drop.noTipTextContent(elem)
+      );
+
       // Bible abbreviations are not expected to collide with other
       // abbreviations. We do them early to move them out of the way.
       handleBible(elem);
@@ -216,16 +220,19 @@ export function handle(root: HTMLElement): void {
       handleReferences(elem);
       handleAnnotations(elem);
       white.warnPotentiallyMissingReferences(elem);
-      const endText: string = drop.noTipTextContent(elem);
-      // This handler should only add tooltips without modifying text content at
-      // all. Verify that the text content hasn't changed.
-      log.check(
-        endText === startText,
-        'Final text differs from original text! Original:',
-        startText,
-        'Final:',
-        endText
-      );
+
+      dev.play(() => {
+        const endText: string = drop.noTipTextContent(elem);
+        // This handler should only add tooltips without modifying text content
+        // at all. Verify that the text content hasn't changed.
+        log.ensure(
+          endText === startText,
+          'Final text differs from original text! Original:',
+          startText,
+          'Final:',
+          endText
+        );
+      });
     });
 }
 

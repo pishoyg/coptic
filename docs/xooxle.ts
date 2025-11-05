@@ -555,12 +555,13 @@ export class SearchResult extends AggregateResult {
     this.enrich(row);
     this.highlight(row);
 
-    if (window.isPlaywright || dev.get()) {
+    dev.play(() => {
       // Verify that enrichment and highlighting haven't altered the text
-      // content of the row, which would've corrupted the highlighting
-      // algorithm.
-      log.check(orth.cleanDiacritics(drop.noTipTextContent(row)) === this.text);
-    }
+      // content of the row, which would corrupted the highlighting algorithm.
+      log.ensure(
+        orth.cleanDiacritics(drop.noTipTextContent(row)) === this.text
+      );
+    });
 
     // We refrain from adding any extra content, such as the view-for-more
     // message or the view cell, until enrichment and highlighting have been
@@ -1218,17 +1219,19 @@ export class Xooxle {
 
     this.numLayers = index.metadata.layers.length;
 
-    index.metadata.layers.forEach((layer: string[]): void => {
-      // The number of columns must be divisible by the number of fields in a
-      // layer. This way, all fields will have the same colspan. For example,
-      // with 6 columns and 3 fields, each field will have a colspan of 2.
-      log.ensure(
-        this.numColumns % layer.length === 0,
-        'One of the layers has',
-        layer.length,
-        'fields, which is not a divisor of the number of columns in the table:',
-        this.numColumns
-      );
+    dev.play(() => {
+      index.metadata.layers.forEach((layer: string[]): void => {
+        // The number of columns must be divisible by the number of fields in a
+        // layer. This way, all fields will have the same colspan. For example,
+        // with 6 columns and 3 fields, each field will have a colspan of 2.
+        log.ensure(
+          this.numColumns % layer.length === 0,
+          'One of the layers has',
+          layer.length,
+          'fields, which is not a divisor of the number of columns in the table:',
+          this.numColumns
+        );
+      });
     });
   }
 
@@ -1407,9 +1410,10 @@ export class Xooxle {
         this.numColumns
       );
 
-      bucketSentinels[result.layer]![
-        Math.min(result.bucket(row), numBuckets - 1)
-      ]!.insertAdjacentElement('beforebegin', row);
+      bucketSentinels[result.layer]![result.bucket(row)]!.insertAdjacentElement(
+        'beforebegin',
+        row
+      );
 
       if (count % RESULTS_TO_UPDATE_DISPLAY === RESULTS_TO_UPDATE_DISPLAY - 1) {
         // Allow the browser to update the display, receive user input, ...
