@@ -78,3 +78,14 @@ export class Highlighter extends high.Highlighter {
     }
   }
 }
+/**
+ * If running in Playwright or developer mode, execute the given function.
+ * Otherwise, do nothing and return undefined.
+ *
+ * @param f
+ * @returns
+ *
+ */
+export function play(f) {
+  return window.isPlaywright || get() ? f() : undefined;
+}

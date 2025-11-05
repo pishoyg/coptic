@@ -98,21 +98,10 @@ export function fatal(...message) {
  *
  * @param condition - Condition to evaluate.
  * @param {...any} message - Message to log (if the condition is not satisfied).
+ * TODO: (#604) This method shouldn't be called in production code.
  */
 export function ensure(condition, ...message) {
   if (!condition) {
     fatal(...message);
-  }
-}
-/**
- * Evaluate the condition. If it fails, log an error message.
- *
- * @param condition
- * @param {...any} message
- * TODO: (#0) Prefer using `check` to `error`.
- */
-export function check(condition, ...message) {
-  if (!condition) {
-    error(...message);
   }
 }
