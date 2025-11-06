@@ -398,46 +398,18 @@ abstract class AggregateResult {
   }
 
   /**
-   * @returns
-   */
-  public fragmentWord(): string | undefined {
-    /* Expand the match left and right such that it contains full words, for
-     * text fragment purposes.
-     * See
-     * https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments
-     * for information about text fragments.
-     * Notice that browsers don't treat them uniformly, and we try to obtain a
-     * match that will work on most browsers.
-     * */
-    const match = this.matches[0];
-    if (!match) {
-      // This line doesn't have a match.
-      return undefined;
-    }
-
-    let start = match.start;
-    let end = match.end;
-
-    // Expand left: Move the start index left until a word boundary is found.
-    while (orth.isWordCharInChrome(this.text[start - 1])) {
-      start--;
-    }
-
-    // Expand right: Move the end index right until a word boundary is found.
-    while (orth.isWordCharInChrome(this.text[end])) {
-      end++;
-    }
-
-    // Return the expanded substring.
-    return this.text.substring(start, end);
-  }
-
-  /**
    * @returns Whether this result has a match.
    */
   public get match(): boolean {
     // We have a match if any of the results has a match.
     return !!this.matches.length;
+  }
+
+  /**
+   * @returns
+   */
+  public fragmentWord(): string | undefined {
+    return this.results.find((r) => r.match)?.fragmentWord();
   }
 }
 
@@ -1151,6 +1123,41 @@ class LineSearchResult extends AggregateResult {
    */
   public get html(): string {
     return this.line.html;
+  }
+
+  /**
+   * @returns
+   */
+  public override fragmentWord(): string | undefined {
+    /* Expand the match left and right such that it contains full words, for
+     * text fragment purposes.
+     * See
+     * https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments
+     * for information about text fragments.
+     * Notice that browsers don't treat them uniformly, and we try to obtain a
+     * match that will work on most browsers.
+     * */
+    const match = this.matches[0];
+    if (!match) {
+      // This line doesn't have a match.
+      return undefined;
+    }
+
+    let start = match.start;
+    let end = match.end;
+
+    // Expand left: Move the start index left until a word boundary is found.
+    while (orth.isWordCharInChrome(this.text[start - 1])) {
+      start--;
+    }
+
+    // Expand right: Move the end index right until a word boundary is found.
+    while (orth.isWordCharInChrome(this.text[end])) {
+      end++;
+    }
+
+    // Return the expanded substring.
+    return this.text.substring(start, end);
   }
 }
 
