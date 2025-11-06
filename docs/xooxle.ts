@@ -353,7 +353,7 @@ export class Form {
 interface Result {
   text: string;
   matches: Match[];
-  boundaryType(): BoundaryType;
+  boundary(): Boundary;
   match: boolean;
   fragmentWord(): string | undefined;
   distance(): number;
@@ -401,11 +401,11 @@ abstract class AggregateResult implements Result {
   /**
    * @returns The boundary type.
    */
-  public boundaryType(): BoundaryType {
-    // The BoundaryType enum values are ordered in such a way that the boundary
+  public boundary(): Boundary {
+    // The Boundary enum values are ordered in such a way that the boundary
     // type of an aggregated result is the minimum of the boundary types of all
     // results.
-    return Math.min(...this.results.map((r: Result) => r.boundaryType()));
+    return Math.min(...this.results.map((r: Result) => r.boundary()));
   }
 
   /**
@@ -681,7 +681,7 @@ export class SearchResult extends AggregateResult {
           // inaccurate. This is currently irrelevant, because we will only use
           // the indices, and this match object will be discarded with the
           // boundary type never being used.
-          matches.push(new Match(end, match.end, match.boundaryType));
+          matches.push(new Match(end, match.end, match.boundary));
         }
 
         // Get the next match.
@@ -713,13 +713,13 @@ export class SearchResult extends AggregateResult {
    * @returns the comparison key.
    */
   public compareKey(): number[] {
-    const boundary: BoundaryType = this.boundaryType();
+    const boundary: Boundary = this.boundary();
     const boundaryIndex: number = this.results.findIndex(
-      (res) => res.boundaryType() === this.boundaryType()
+      (res) => res.boundary() === this.boundary()
     );
     return [
       // Results are sorted based on the boundary type.
-      // See the BoundaryType enum for the order.
+      // See the Boundary enum for the order.
       boundary,
       // Within all the candidates having a match with a given boundary type, we
       // sort based on the index of the first field possessing a match with that
@@ -989,11 +989,21 @@ class UnitSearchResult extends AggregateResult {
  * lower values, to aid in sorting by priority.
  * Full-word matches come first, followed by prefix matches, then suffix
  * matches, then mid-word matches.
+ * If a user searches for "ⲟⲩⲱ", the the following results should show in this
+ * order:
+ * - ⲟⲩⲱ
+ * - ⲟⲩⲱⲓⲛⲓ
+ * - ⲣⲁⲟⲩⲱ
+ * - ϣⲟⲩⲱⲟⲩ
  */
-enum BoundaryType {
+enum Boundary {
+  // The search query matches a full-word.
   FULL_WORD,
+  // The search query matches the start of a word.
   PREFIX,
+  // The search query matches the end of the word.
   SUFFIX,
+  // The search query falls within a word.
   MID_WORD,
 }
 
@@ -1005,12 +1015,12 @@ class Match {
    *
    * @param start
    * @param end
-   * @param boundaryType
+   * @param boundary
    */
   public constructor(
     public readonly start: number,
     public readonly end: number,
-    public readonly boundaryType: BoundaryType
+    public readonly boundary: Boundary
   ) {}
 
   /**
@@ -1019,7 +1029,7 @@ class Match {
    * @returns
    */
   public shift(len: number): Match {
-    return new Match(this.start + len, this.end + len, this.boundaryType);
+    return new Match(this.start + len, this.end + len, this.boundary);
   }
 
   /**
@@ -1035,7 +1045,7 @@ class Match {
     return new Match(
       translation[this.start]!,
       translation[this.end]!,
-      this.boundaryType
+      this.boundary
     );
   }
 }
@@ -1094,16 +1104,16 @@ class Line {
 
         const before = !orth.isWordChar(this.text[start - 1]);
         const after = !orth.isWordChar(this.text[end]);
-        const boundaryType: BoundaryType =
+        const boundary: Boundary =
           before && after
-            ? BoundaryType.FULL_WORD
+            ? Boundary.FULL_WORD
             : before
-              ? BoundaryType.PREFIX
+              ? Boundary.PREFIX
               : after
-                ? BoundaryType.SUFFIX
-                : BoundaryType.MID_WORD;
+                ? Boundary.SUFFIX
+                : Boundary.MID_WORD;
 
-        return new Match(start, end, boundaryType);
+        return new Match(start, end, boundary);
       })
       .filter((m) => m !== undefined);
   }
@@ -1194,11 +1204,8 @@ class LineSearchResult implements Result {
   /**
    * @returns The boundary type.
    */
-  public boundaryType(): BoundaryType {
-    // The BoundaryType enum values are ordered in such a way that the boundary
-    // type of an aggregated result is the minimum of the boundary types of all
-    // results.
-    return Math.min(...this.matches.map((m) => m.boundaryType));
+  public boundary(): Boundary {
+    return Math.min(...this.matches.map((m) => m.boundary));
   }
 }
 
