@@ -15,23 +15,68 @@ import * as id from './id.js';
 import * as dev from '../dev.js';
 import * as kellia from './kellia.js';
 import * as andreas from './andreas.js';
+import * as cls from './cls.js';
 
-enum DialectMatch {
-  // The candidate has at least one of the highlighted dialects, and the match
-  // occurs in one of the pieces of text market with that dialect.
-  HIGHLIGHTED_DIALECT_MATCH,
-  // The candidate has at least one dialect of interest, but the match occurs in
-  // an undialected piece of text.
-  UNDIALECTED_MATCH_WITH_HIGHLIGHTED_DIALECT,
-  // The candidate doesn't have any dialects of interest in the first place. The
-  // match occurs in an undialected piece of text.
-  UNDIALECTED_MATCH_WITH_NO_HIGHLIGHTED_DIALECT,
-  // Matches only occur in dialects of no interest for the current query. The
-  // candidate does however have a dialect of interest.
-  OTHER_DIALECT_MATCH_WITH_HIGHLIGHTED_DIALECT,
-  // Matches only occur in dialects of no interest for the current query. The
-  // dialect has no dialects of interest to start with!
-  OTHER_DIALECT_MATCH_WITH_NO_HIGHLIGHTED_DIALECT,
+// NOTE: The terms "roman" and "italic" below are used to distinguish pieces of
+// text surrounded by <span> tags with the "roman" class from those that are
+// not. Roman elements correspond to text in Crum's book written in a roman
+// font, as opposed to the italic or oblique font. Italic text is more
+// interesting, since it bears the meaning of the word; while the roman font is
+// used for notes that are not part of the meaning. Check the Crum text for
+// example.
+// To add to the confusion, as of the time of writing, roman text render in our
+// website italicized, while "italic" text renders in roman font, thus reversing
+// Crum's styling!
+enum Bucket {
+  // We have 3 groups of buckets:
+  // 1. Active dialect match (a match occurs in an active dialect).
+  // 2. Undialected match (a match occurs in a text that is not marked with
+  //    any dialects).
+  // 3. Inactive dialect match (matches only occurs in inactive / uninteresting
+  //    dialects).
+  // Italic and roman text is only relevant for the English translation of a
+  // Coptic word, and not for Coptic words. Therefore, we only use the italic
+  // and roman categories for undialected matches, because English matches are
+  // always undialected.
+
+  // Group 1:
+  // The candidate has at least one of the active dialects, and the match
+  // occurs in one of the pieces of text marked with that dialect.
+  ACTIVE_DIALECT_MATCH,
+
+  // Group 2:
+  // The candidate has at least one of the active dialects. There is at least
+  // one match in an undialected piece of text, and there is at least one match
+  // in an italic piece of text.
+  UNDIALECTED_ITALIC_MATCH_WITH_ACTIVE_DIALECT,
+  // Same as above, but all matches are roman.
+  UNDIALECTED_ROMAN_MATCH_WITH_ACTIVE_DIALECT,
+  // The candidate doesn't have any active dialects in the first place. There is
+  // at least one match in an undialected piece of text, and there is at least
+  // one match in an italic piece of text.
+  UNDIALECTED_ITALIC_MATCH,
+  // Same as above, but all matches are roman.
+  UNDIALECTED_ROMAN_MATCH,
+
+  // Group 3:
+  // Matches only occur in an inactive dialect for the current query. The
+  // candidate does however have text belonging to an active dialect, but that
+  // text doesn't have a match.
+  INACTIVE_DIALECT_MATCH_WITH_ACTIVE_DIALECT,
+  // Matches only occur in inactive dialects for the current query. The
+  // dialect has no active dialects to start with!
+  INACTIVE_DIALECT_MATCH,
+}
+
+/**
+ *
+ * @param active
+ * @returns
+ */
+function activeDialectMatchQuery(active: dial.DIALECT[]): string {
+  return active
+    .map((dialect: dial.DIALECT) => `.${dialect} .${xoox.CLS.MATCH}`)
+    .join(', ');
 }
 
 /**
@@ -72,9 +117,7 @@ class CrumSearchResult extends SearchResult {
   private static readonly NUM_BUCKETS =
     1 +
     Math.max(
-      ...Object.values(DialectMatch).filter(
-        (value) => typeof value === 'number'
-      )
+      ...Object.values(Bucket).filter((value) => typeof value === 'number')
     );
   public static wikiCheckbox: HTMLInputElement = document.getElementById(
     id.WIKI_CHECKBOX
@@ -122,35 +165,45 @@ class CrumSearchResult extends SearchResult {
    * @param row - Table row.
    * @returns Bucket number.
    */
-  public override bucket(row: HTMLTableRowElement): DialectMatch {
+  public override bucket(row: HTMLTableRowElement): Bucket {
     const active: dial.DIALECT[] | undefined = SearchResult.manager.active();
     if (!active?.length) {
       // There is no dialect highlighting. All results fall in the first bucket.
       return 0;
     }
 
-    const highlightedDialectQuery: string = active
-      .map((dialect: dial.DIALECT) => `.${dialect} .${xoox.CLS.MATCH}`)
-      .join(', ');
-    if (row.querySelector(highlightedDialectQuery)) {
-      // We have a match in a highlighted dialect.
-      return DialectMatch.HIGHLIGHTED_DIALECT_MATCH;
+    // Group 1:
+    if (row.querySelector(activeDialectMatchQuery(active))) {
+      // We have a match in an active dialect.
+      return Bucket.ACTIVE_DIALECT_MATCH;
     }
 
-    const undialected: boolean = Array.from(
-      row.querySelectorAll(`.${xoox.CLS.MATCH}`)
-    ).some((el) => !el.closest(dial.ANY_DIALECT_QUERY));
-    const ofInterest = !!row.querySelector(css.classQuery(...active));
+    const hasActive = !!row.querySelector(css.classQuery(...active));
 
-    if (undialected) {
-      return ofInterest
-        ? DialectMatch.UNDIALECTED_MATCH_WITH_HIGHLIGHTED_DIALECT
-        : DialectMatch.UNDIALECTED_MATCH_WITH_NO_HIGHLIGHTED_DIALECT;
+    const dialectedQuery = Object.keys(dial.DIALECTS)
+      .map((d: string): string => `.${d} *`)
+      .join(',');
+
+    // Group 2:
+    if (row.querySelector(`.${xoox.CLS.MATCH}:not(${dialectedQuery})`)) {
+      // We have an undialected match.
+      if (row.querySelector(`.${xoox.CLS.MATCH}:not(.${cls.ROMAN} *)`)) {
+        // We have a match in Italic text.
+        return hasActive
+          ? Bucket.UNDIALECTED_ITALIC_MATCH_WITH_ACTIVE_DIALECT
+          : Bucket.UNDIALECTED_ITALIC_MATCH;
+      }
+
+      return hasActive
+        ? Bucket.UNDIALECTED_ROMAN_MATCH_WITH_ACTIVE_DIALECT
+        : Bucket.UNDIALECTED_ROMAN_MATCH;
     }
 
-    return ofInterest
-      ? DialectMatch.OTHER_DIALECT_MATCH_WITH_HIGHLIGHTED_DIALECT
-      : DialectMatch.OTHER_DIALECT_MATCH_WITH_NO_HIGHLIGHTED_DIALECT;
+    // Group 3:
+    // We only have matches in inactive dialects.
+    return hasActive
+      ? Bucket.INACTIVE_DIALECT_MATCH_WITH_ACTIVE_DIALECT
+      : Bucket.INACTIVE_DIALECT_MATCH;
   }
 }
 
@@ -195,10 +248,9 @@ class KELLIASearchResult extends SearchResult {
       return 0;
     }
 
-    const highlightedDialectQuery: string = active
-      .map((dialect: dial.DIALECT) => `.${dialect} .${xoox.CLS.MATCH}`)
-      .join(', ');
-    return row.querySelector(highlightedDialectQuery) ? 0 : 1;
+    // If there is a match in an active dialect, then this result goes to the
+    // first bucket. Otherwise it goes to the second bucket.
+    return row.querySelector(activeDialectMatchQuery(active)) ? 0 : 1;
   }
 }
 
