@@ -411,6 +411,13 @@ abstract class AggregateResult {
   public fragmentWord(): string | undefined {
     return this.results.find((r) => r.match)?.fragmentWord();
   }
+
+  /**
+   * @returns
+   */
+  public distance(): number {
+    return Math.min(...this.results.map((r: AggregateResult) => r.distance()));
+  }
 }
 
 /**
@@ -709,6 +716,9 @@ export class SearchResult extends AggregateResult {
       // A candidate with a full-word match in the first field should rank
       // higher than a candidate with a full-word match in the second field.
       boundaryIndex,
+      // Afterwards, we prioritize results that start at the beginning of the
+      // line.
+      this.distance() ? 1 : 0,
       // Afterwards, we rank based on the number of matches in the text.
       // Notice that we revert the sign, so the larger numbers will appear
       // first.
@@ -725,7 +735,7 @@ export class SearchResult extends AggregateResult {
       // column, so it should show first.
       this.results.findIndex((res) => res.match),
       // Lastly, we rank based on the index of the first match in the text.
-      // A result that has a filed with a match closer to the beginning of the
+      // A result that has a match closer to the beginning of the
       // text should rank higher than a result with a match in the middle or
       // towards the end of the text.
       this.matches[0]?.start ?? Number.MAX_SAFE_INTEGER,
@@ -1158,6 +1168,13 @@ class LineSearchResult extends AggregateResult {
 
     // Return the expanded substring.
     return this.text.substring(start, end);
+  }
+
+  /**
+   * @returns
+   */
+  public override distance(): number {
+    return this.matchesMemo?.[0]?.start ?? Number.MAX_SAFE_INTEGER;
   }
 }
 
