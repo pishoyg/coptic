@@ -15,33 +15,62 @@ import * as id from './id.js';
 import * as dev from '../dev.js';
 import * as kellia from './kellia.js';
 import * as andreas from './andreas.js';
-var DialectMatch;
-(function (DialectMatch) {
-  // The candidate has at least one of the highlighted dialects, and the match
-  // occurs in one of the pieces of text market with that dialect.
-  DialectMatch[(DialectMatch['HIGHLIGHTED_DIALECT_MATCH'] = 0)] =
-    'HIGHLIGHTED_DIALECT_MATCH';
-  // The candidate has at least one dialect of interest, but the match occurs in
-  // an undialected piece of text.
-  DialectMatch[
-    (DialectMatch['UNDIALECTED_MATCH_WITH_HIGHLIGHTED_DIALECT'] = 1)
-  ] = 'UNDIALECTED_MATCH_WITH_HIGHLIGHTED_DIALECT';
-  // The candidate doesn't have any dialects of interest in the first place. The
-  // match occurs in an undialected piece of text.
-  DialectMatch[
-    (DialectMatch['UNDIALECTED_MATCH_WITH_NO_HIGHLIGHTED_DIALECT'] = 2)
-  ] = 'UNDIALECTED_MATCH_WITH_NO_HIGHLIGHTED_DIALECT';
-  // Matches only occur in dialects of no interest for the current query. The
-  // candidate does however have a dialect of interest.
-  DialectMatch[
-    (DialectMatch['OTHER_DIALECT_MATCH_WITH_HIGHLIGHTED_DIALECT'] = 3)
-  ] = 'OTHER_DIALECT_MATCH_WITH_HIGHLIGHTED_DIALECT';
-  // Matches only occur in dialects of no interest for the current query. The
-  // dialect has no dialects of interest to start with!
-  DialectMatch[
-    (DialectMatch['OTHER_DIALECT_MATCH_WITH_NO_HIGHLIGHTED_DIALECT'] = 4)
-  ] = 'OTHER_DIALECT_MATCH_WITH_NO_HIGHLIGHTED_DIALECT';
-})(DialectMatch || (DialectMatch = {}));
+import * as cls from './cls.js';
+// NOTE: The terms "roman" and "italic" below are used to distinguish pieces of
+// text surrounded by <span> tags with the "roman" class from those that are
+// not. Roman elements correspond to text in Crum's book written in a roman
+// font, as opposed to the italic or oblique font. Italic text is more
+// interesting, since it bears the meaning of the word; while the roman font is
+// used for notes that are not part of the meaning. Check the Crum text for
+// example.
+// To add to the confusion, as of the time of writing, roman text render in our
+// website italicized, while "italic" text renders in roman font, thus reversing
+// Crum's styling!
+var Bucket;
+(function (Bucket) {
+  // Group 1: Match occurs in a text belonging to an active dialect.
+  // The candidate has at least one of the active dialects, and the match
+  // occurs in a piece of text marked with that dialect.
+  Bucket[(Bucket['ACTIVE_DIALECT_MATCH'] = 0)] = 'ACTIVE_DIALECT_MATCH';
+  // Group 2: The match occurs in an undialected text.
+  // The distinction between italic and roman text is only relevant for
+  // English translations, not for Coptic words. The English translation is
+  // always undialected, which makes the italic and roman categories only
+  // relevant for this group. Other groups don't need them.
+  // The candidate has at least one of the active dialects. There is at least
+  // one match in an undialected piece of text, and there is at least one match
+  // in an italic piece of text.
+  Bucket[(Bucket['UNDIALECTED_ITALIC_MATCH_WITH_ACTIVE_DIALECT'] = 1)] =
+    'UNDIALECTED_ITALIC_MATCH_WITH_ACTIVE_DIALECT';
+  // Same as above, but all matches are roman.
+  Bucket[(Bucket['UNDIALECTED_ROMAN_MATCH_WITH_ACTIVE_DIALECT'] = 2)] =
+    'UNDIALECTED_ROMAN_MATCH_WITH_ACTIVE_DIALECT';
+  // The candidate doesn't have any active dialects in the first place. There is
+  // at least one match in an undialected piece of text, and there is at least
+  // one match in an italic piece of text.
+  Bucket[(Bucket['UNDIALECTED_ITALIC_MATCH'] = 3)] = 'UNDIALECTED_ITALIC_MATCH';
+  // Same as above, but all matches are roman.
+  Bucket[(Bucket['UNDIALECTED_ROMAN_MATCH'] = 4)] = 'UNDIALECTED_ROMAN_MATCH';
+  // Group 3: The match occurs in an inactive dialect.
+  // Matches only occur in an inactive dialect for the current query. The
+  // candidate does however have text belonging to an active dialect, but that
+  // text doesn't have a match.
+  Bucket[(Bucket['INACTIVE_DIALECT_MATCH_WITH_ACTIVE_DIALECT'] = 5)] =
+    'INACTIVE_DIALECT_MATCH_WITH_ACTIVE_DIALECT';
+  // Matches only occur in inactive dialects for the current query. The
+  // dialect has no active dialects to start with!
+  Bucket[(Bucket['INACTIVE_DIALECT_MATCH'] = 6)] = 'INACTIVE_DIALECT_MATCH';
+})(Bucket || (Bucket = {}));
+/**
+ *
+ * @param active
+ * @returns
+ */
+function activeDialectMatchQuery(active) {
+  return active
+    .map((dialect) => `.${dialect} .${'match' /* xoox.CLS.MATCH */}`)
+    .join(', ');
+}
 /**
  */
 class SearchResult extends xoox.SearchResult {
@@ -74,9 +103,7 @@ class CrumSearchResult extends SearchResult {
   static NUM_BUCKETS =
     1 +
     Math.max(
-      ...Object.values(DialectMatch).filter(
-        (value) => typeof value === 'number'
-      )
+      ...Object.values(Bucket).filter((value) => typeof value === 'number')
     );
   static wikiCheckbox = document.getElementById(id.WIKI_CHECKBOX);
   /**
@@ -123,25 +150,41 @@ class CrumSearchResult extends SearchResult {
       // There is no dialect highlighting. All results fall in the first bucket.
       return 0;
     }
-    const highlightedDialectQuery = active
-      .map((dialect) => `.${dialect} .${'match' /* xoox.CLS.MATCH */}`)
-      .join(', ');
-    if (row.querySelector(highlightedDialectQuery)) {
-      // We have a match in a highlighted dialect.
-      return DialectMatch.HIGHLIGHTED_DIALECT_MATCH;
+    // Group 1:
+    if (row.querySelector(activeDialectMatchQuery(active))) {
+      // We have a match in an active dialect.
+      return Bucket.ACTIVE_DIALECT_MATCH;
     }
-    const undialected = Array.from(
-      row.querySelectorAll(`.${'match' /* xoox.CLS.MATCH */}`)
-    ).some((el) => !el.closest(dial.ANY_DIALECT_QUERY));
-    const ofInterest = !!row.querySelector(css.classQuery(...active));
-    if (undialected) {
-      return ofInterest
-        ? DialectMatch.UNDIALECTED_MATCH_WITH_HIGHLIGHTED_DIALECT
-        : DialectMatch.UNDIALECTED_MATCH_WITH_NO_HIGHLIGHTED_DIALECT;
+    const hasActive = !!row.querySelector(css.classQuery(...active));
+    const dialectedQuery = Object.keys(dial.DIALECTS)
+      .map((d) => `.${d} *`)
+      .join(',');
+    // Group 2:
+    if (
+      row.querySelector(
+        `.${'match' /* xoox.CLS.MATCH */}:not(${dialectedQuery})`
+      )
+    ) {
+      // We have an undialected match.
+      if (
+        row.querySelector(
+          `.${'match' /* xoox.CLS.MATCH */}:not(.${cls.ROMAN} *)`
+        )
+      ) {
+        // We have a match in Italic text.
+        return hasActive
+          ? Bucket.UNDIALECTED_ITALIC_MATCH_WITH_ACTIVE_DIALECT
+          : Bucket.UNDIALECTED_ITALIC_MATCH;
+      }
+      return hasActive
+        ? Bucket.UNDIALECTED_ROMAN_MATCH_WITH_ACTIVE_DIALECT
+        : Bucket.UNDIALECTED_ROMAN_MATCH;
     }
-    return ofInterest
-      ? DialectMatch.OTHER_DIALECT_MATCH_WITH_HIGHLIGHTED_DIALECT
-      : DialectMatch.OTHER_DIALECT_MATCH_WITH_NO_HIGHLIGHTED_DIALECT;
+    // Group 3:
+    // We only have matches in inactive dialects.
+    return hasActive
+      ? Bucket.INACTIVE_DIALECT_MATCH_WITH_ACTIVE_DIALECT
+      : Bucket.INACTIVE_DIALECT_MATCH;
   }
 }
 /**
@@ -181,10 +224,9 @@ class KELLIASearchResult extends SearchResult {
       // There is no dialect highlighting. All results fall in the first bucket.
       return 0;
     }
-    const highlightedDialectQuery = active
-      .map((dialect) => `.${dialect} .${'match' /* xoox.CLS.MATCH */}`)
-      .join(', ');
-    return row.querySelector(highlightedDialectQuery) ? 0 : 1;
+    // If there is a match in an active dialect, then this result goes to the
+    // first bucket. Otherwise it goes to the second bucket.
+    return row.querySelector(activeDialectMatchQuery(active)) ? 0 : 1;
   }
 }
 const XOOXLES = [

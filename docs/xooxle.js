@@ -294,6 +294,7 @@ export class Form {
 class AggregateResult {
   // Memos are used to memorize previously computed values, so we can avoid
   // computing them repeatedly.
+  // TODO: (#605) Stop memorizing text.
   textMemo = null;
   matchesMemo = null;
   /**
@@ -323,48 +324,30 @@ class AggregateResult {
   /**
    * @returns The boundary type.
    */
-  boundaryType() {
-    // The BoundaryType enum values are ordered in such a way that the boundary
+  boundary() {
+    // The Boundary enum values are ordered in such a way that the boundary
     // type of an aggregated result is the minimum of the boundary types of all
     // results.
-    return Math.min(...this.matches.map((m) => m.boundaryType));
-  }
-  /**
-   * @returns
-   */
-  fragmentWord() {
-    /* Expand the match left and right such that it contains full words, for
-     * text fragment purposes.
-     * See
-     * https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments
-     * for information about text fragments.
-     * Notice that browsers don't treat them uniformly, and we try to obtain a
-     * match that will work on most browsers.
-     * */
-    const match = this.matches[0];
-    if (!match) {
-      // This line doesn't have a match.
-      return undefined;
-    }
-    let start = match.start;
-    let end = match.end;
-    // Expand left: Move the start index left until a word boundary is found.
-    while (orth.isWordCharInChrome(this.text[start - 1])) {
-      start--;
-    }
-    // Expand right: Move the end index right until a word boundary is found.
-    while (orth.isWordCharInChrome(this.text[end])) {
-      end++;
-    }
-    // Return the expanded substring.
-    return this.text.substring(start, end);
+    return Math.min(...this.results.map((r) => r.boundary()));
   }
   /**
    * @returns Whether this result has a match.
    */
   get match() {
     // We have a match if any of the results has a match.
-    return !!this.matches.length;
+    return this.results.some((r) => r.match);
+  }
+  /**
+   * @returns
+   */
+  fragmentWord() {
+    return this.results.find((r) => r.match)?.fragmentWord();
+  }
+  /**
+   * @returns Minimum distance from the beginning of line to a match.
+   */
+  distance() {
+    return Math.min(...this.results.map((r) => r.distance()));
   }
 }
 /**
@@ -582,7 +565,7 @@ export class SearchResult extends AggregateResult {
           // inaccurate. This is currently irrelevant, because we will only use
           // the indices, and this match object will be discarded with the
           // boundary type never being used.
-          matches.push(new Match(end, match.end, match.boundaryType));
+          matches.push(new Match(end, match.end, match.boundary));
         }
         // Get the next match.
         match = matches.pop();
@@ -606,23 +589,32 @@ export class SearchResult extends AggregateResult {
   /**
    * Construct a key used to compare search results.
    *
+   * TODO: (#0) This heuristic was conceived by experimentation. Its optimality
+   * is unproven, and we should perhaps revisit it.
+   *
    * @returns the comparison key.
    */
   compareKey() {
-    const boundary = this.boundaryType();
-    const boundaryIndex = this.results.findIndex(
-      (res) => res.boundaryType() === this.boundaryType()
-    );
+    const boundary = this.boundary();
     return [
       // Results are sorted based on the boundary type.
-      // See the BoundaryType enum for the order.
+      // See the Boundary enum for the order.
       boundary,
       // Within all the candidates having a match with a given boundary type, we
       // sort based on the index of the first field possessing a match with that
       // boundary type.
       // A candidate with a full-word match in the first field should rank
       // higher than a candidate with a full-word match in the second field.
-      boundaryIndex,
+      this.results.findIndex((res) => res.boundary() === this.boundary()),
+      // Afterwards, we prioritize results that start at the beginning of the
+      // line.
+      // This is very useful, especially for prepositions:
+      // The line "ϧⲁϫⲉⲛ" contains the definition for the preposition ϧⲁϫⲉⲛ.
+      // The line "― ϧⲁϫⲉⲛ" simply tells that the verb can be used with this
+      // preposition.
+      // If a user searches for "ϧⲁϫⲉⲛ", they're probably interested in the
+      // former.
+      this.distance() ? 1 : 0,
       // Afterwards, we rank based on the number of matches in the text.
       // Notice that we revert the sign, so the larger numbers will appear
       // first.
@@ -639,7 +631,7 @@ export class SearchResult extends AggregateResult {
       // column, so it should show first.
       this.results.findIndex((res) => res.match),
       // Lastly, we rank based on the index of the first match in the text.
-      // A result that has a filed with a match closer to the beginning of the
+      // A result that has a match closer to the beginning of the
       // text should rank higher than a result with a match in the middle or
       // towards the end of the text.
       this.matches[0]?.start ?? Number.MAX_SAFE_INTEGER,
@@ -794,9 +786,7 @@ class FieldSearchResult extends AggregateResult {
       ? results.slice(0, UNITS_LIMIT)
       : results.length <= UNITS_LIMIT
         ? results
-        : [results[0], ...results.slice(1).filter((r) => r.match)].filter(
-            (res) => res !== undefined
-          );
+        : [...results.slice(0, 1), ...results.slice(1).filter((r) => r.match)];
     this.cropped = this.results.length < results.length;
   }
   /**
@@ -860,31 +850,41 @@ class UnitSearchResult extends AggregateResult {
  * lower values, to aid in sorting by priority.
  * Full-word matches come first, followed by prefix matches, then suffix
  * matches, then mid-word matches.
+ * If a user searches for "ⲟⲩⲱ", the the following results should show in this
+ * order:
+ * - ⲟⲩⲱ
+ * - ⲟⲩⲱⲓⲛⲓ
+ * - ⲣⲁⲟⲩⲱ
+ * - ϣⲟⲩⲱⲟⲩ
  */
-var BoundaryType;
-(function (BoundaryType) {
-  BoundaryType[(BoundaryType['FULL_WORD'] = 0)] = 'FULL_WORD';
-  BoundaryType[(BoundaryType['PREFIX'] = 1)] = 'PREFIX';
-  BoundaryType[(BoundaryType['SUFFIX'] = 2)] = 'SUFFIX';
-  BoundaryType[(BoundaryType['MID_WORD'] = 3)] = 'MID_WORD';
-})(BoundaryType || (BoundaryType = {}));
+var Boundary;
+(function (Boundary) {
+  // The search query matches a full-word.
+  Boundary[(Boundary['FULL_WORD'] = 0)] = 'FULL_WORD';
+  // The search query matches the start of a word.
+  Boundary[(Boundary['PREFIX'] = 1)] = 'PREFIX';
+  // The search query matches the end of the word.
+  Boundary[(Boundary['SUFFIX'] = 2)] = 'SUFFIX';
+  // The search query falls within a word.
+  Boundary[(Boundary['MID_WORD'] = 3)] = 'MID_WORD';
+})(Boundary || (Boundary = {}));
 /**
  *
  */
 class Match {
   start;
   end;
-  boundaryType;
+  boundary;
   /**
    *
    * @param start
    * @param end
-   * @param boundaryType
+   * @param boundary
    */
-  constructor(start, end, boundaryType) {
+  constructor(start, end, boundary) {
     this.start = start;
     this.end = end;
-    this.boundaryType = boundaryType;
+    this.boundary = boundary;
   }
   /**
    *
@@ -892,7 +892,7 @@ class Match {
    * @returns
    */
   shift(len) {
-    return new Match(this.start + len, this.end + len, this.boundaryType);
+    return new Match(this.start + len, this.end + len, this.boundary);
   }
   /**
    *
@@ -907,7 +907,7 @@ class Match {
     return new Match(
       translation[this.start],
       translation[this.end],
-      this.boundaryType
+      this.boundary
     );
   }
 }
@@ -962,15 +962,15 @@ class Line {
         const end = match.index + match[0].length;
         const before = !orth.isWordChar(this.text[start - 1]);
         const after = !orth.isWordChar(this.text[end]);
-        const boundaryType =
+        const boundary =
           before && after
-            ? BoundaryType.FULL_WORD
+            ? Boundary.FULL_WORD
             : before
-              ? BoundaryType.PREFIX
+              ? Boundary.PREFIX
               : after
-                ? BoundaryType.SUFFIX
-                : BoundaryType.MID_WORD;
-        return new Match(start, end, boundaryType);
+                ? Boundary.SUFFIX
+                : Boundary.MID_WORD;
+        return new Match(start, end, boundary);
       })
       .filter((m) => m !== undefined);
   }
@@ -978,26 +978,23 @@ class Line {
 /**
  * LineSearchResult represents the search result of one line.
  */
-class LineSearchResult extends AggregateResult {
+class LineSearchResult {
   line;
-  /**
-   * We implement results to appease the compiler. It's unused in this class.
-   */
-  get results() {
-    throw new Error(
-      '`LineSearchResult` is not an aggregate result. It has no `results` field. Make sure that `LineSearchResult` implements `AggregateResult` without actually accessing `this.results`.'
-    );
-  }
+  matches;
   /**
    *
    * @param line - The line to search.
    * @param regex - The regex to search.
    */
   constructor(line, regex) {
-    super();
     this.line = line;
-    this.matchesMemo = line.matches(regex);
-    this.textMemo = this.line.text;
+    this.matches = line.matches(regex);
+  }
+  /**
+   * @returns
+   */
+  get text() {
+    return this.line.text;
   }
   /**
    *
@@ -1005,6 +1002,54 @@ class LineSearchResult extends AggregateResult {
    */
   get html() {
     return this.line.html;
+  }
+  /**
+   * @returns
+   */
+  get match() {
+    return !!this.matches.length;
+  }
+  /**
+   * @returns
+   */
+  fragmentWord() {
+    /* Expand the match left and right such that it contains full words, for
+     * text fragment purposes.
+     * See
+     * https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments
+     * for information about text fragments.
+     * Notice that browsers don't treat them uniformly, and we try to obtain a
+     * match that will work on most browsers.
+     * */
+    const match = this.matches[0];
+    if (!match) {
+      // This line doesn't have a match.
+      return undefined;
+    }
+    let start = match.start;
+    let end = match.end;
+    // Expand left: Move the start index left until a word boundary is found.
+    while (orth.isWordCharInChrome(this.text[start - 1])) {
+      start--;
+    }
+    // Expand right: Move the end index right until a word boundary is found.
+    while (orth.isWordCharInChrome(this.text[end])) {
+      end++;
+    }
+    // Return the expanded substring.
+    return this.text.substring(start, end);
+  }
+  /**
+   * @returns
+   */
+  distance() {
+    return this.matches[0]?.start ?? Number.MAX_SAFE_INTEGER;
+  }
+  /**
+   * @returns The boundary type.
+   */
+  boundary() {
+    return Math.min(...this.matches.map((m) => m.boundary));
   }
 }
 /**
