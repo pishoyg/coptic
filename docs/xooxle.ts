@@ -350,15 +350,26 @@ export class Form {
   }
 }
 
+interface Result {
+  text: string;
+  matches: Match[];
+  boundaryType(): BoundaryType;
+  match: boolean;
+  fragmentWord(): string | undefined;
+  distance(): number;
+}
+
 /**
  * Aggregate search results.
  */
-abstract class AggregateResult {
-  protected abstract readonly results: AggregateResult[];
+abstract class AggregateResult implements Result {
+  protected abstract readonly results: Result[];
+
   // Memos are used to memorize previously computed values, so we can avoid
   // computing them repeatedly.
-  protected textMemo: string | null = null;
-  protected matchesMemo: Match[] | null = null;
+  // TODO: (#605) Stop memorizing text.
+  private textMemo: string | null = null;
+  private matchesMemo: Match[] | null = null;
 
   /**
    * @returns
@@ -394,7 +405,7 @@ abstract class AggregateResult {
     // The BoundaryType enum values are ordered in such a way that the boundary
     // type of an aggregated result is the minimum of the boundary types of all
     // results.
-    return Math.min(...this.matches.map((m) => m.boundaryType));
+    return Math.min(...this.results.map((r: Result) => r.boundaryType()));
   }
 
   /**
@@ -402,21 +413,21 @@ abstract class AggregateResult {
    */
   public get match(): boolean {
     // We have a match if any of the results has a match.
-    return !!this.matches.length;
+    return this.results.some((r: Result) => r.match);
   }
 
   /**
    * @returns
    */
   public fragmentWord(): string | undefined {
-    return this.results.find((r) => r.match)?.fragmentWord();
+    return this.results.find((r: Result) => r.match)?.fragmentWord();
   }
 
   /**
-   * @returns
+   * @returns Minimum distance from the beginning of line to a match.
    */
   public distance(): number {
-    return Math.min(...this.results.map((r: AggregateResult) => r.distance()));
+    return Math.min(...this.results.map((r: Result) => r.distance()));
   }
 }
 
@@ -904,9 +915,7 @@ class FieldSearchResult extends AggregateResult {
       ? results.slice(0, UNITS_LIMIT)
       : results.length <= UNITS_LIMIT
         ? results
-        : [results[0], ...results.slice(1).filter((r) => r.match)].filter(
-            (res) => res !== undefined
-          );
+        : [...results.slice(0, 1), ...results.slice(1).filter((r) => r.match)];
     this.cropped = this.results.length < results.length;
   }
 
@@ -1103,15 +1112,8 @@ class Line {
 /**
  * LineSearchResult represents the search result of one line.
  */
-class LineSearchResult extends AggregateResult {
-  /**
-   * We implement results to appease the compiler. It's unused in this class.
-   */
-  public override get results(): AggregateResult[] {
-    throw new Error(
-      '`LineSearchResult` is not an aggregate result. It has no `results` field. Make sure that `LineSearchResult` implements `AggregateResult` without actually accessing `this.results`.'
-    );
-  }
+class LineSearchResult implements Result {
+  public readonly matches: Match[];
 
   /**
    *
@@ -1122,9 +1124,14 @@ class LineSearchResult extends AggregateResult {
     private readonly line: Line,
     regex: RegExp
   ) {
-    super();
-    this.matchesMemo = line.matches(regex);
-    this.textMemo = this.line.text;
+    this.matches = line.matches(regex);
+  }
+
+  /**
+   * @returns
+   */
+  public get text(): string {
+    return this.line.text;
   }
 
   /**
@@ -1138,7 +1145,14 @@ class LineSearchResult extends AggregateResult {
   /**
    * @returns
    */
-  public override fragmentWord(): string | undefined {
+  public get match(): boolean {
+    return !!this.matches.length;
+  }
+
+  /**
+   * @returns
+   */
+  public fragmentWord(): string | undefined {
     /* Expand the match left and right such that it contains full words, for
      * text fragment purposes.
      * See
@@ -1173,8 +1187,18 @@ class LineSearchResult extends AggregateResult {
   /**
    * @returns
    */
-  public override distance(): number {
-    return this.matchesMemo?.[0]?.start ?? Number.MAX_SAFE_INTEGER;
+  public distance(): number {
+    return this.matches[0]?.start ?? Number.MAX_SAFE_INTEGER;
+  }
+
+  /**
+   * @returns The boundary type.
+   */
+  public boundaryType(): BoundaryType {
+    // The BoundaryType enum values are ordered in such a way that the boundary
+    // type of an aggregated result is the minimum of the boundary types of all
+    // results.
+    return Math.min(...this.matches.map((m) => m.boundaryType));
   }
 }
 
