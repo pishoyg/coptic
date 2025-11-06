@@ -534,11 +534,11 @@ class Crum(deck.Deck):
             yield "</div>"
             del before
 
-        if root.has_complete_wiki() or root.crum:
+        if root.has_wiki_main_entry() or root.crum:
             yield page.HORIZONTAL_RULE
 
         # Wiki.
-        if root.has_complete_wiki():
+        if root.has_wiki_main_entry():
             yield '<div class="wiki" id="wiki">'
             yield root.wiki_html
             yield "</div>"

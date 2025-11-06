@@ -32,6 +32,11 @@ assert not _HUNDRED % _NUM_DRV_COLS
 
 _CATEGORIES_PATH: pathlib.Path = paths.MARCION / "categories.yaml"
 
+# _FROM_MARCION is a set of entries that have been added to Crum by Marcion.
+# They don't exist in the original text, and therefore are not expected to be
+# found in Wiki!
+_FROM_MARCION: set[str] = {"3380", "3381", "3382", "3385"}
+
 
 class Row(gcp.Record):
     """Row represents a row in the Crum sheet."""
@@ -328,20 +333,15 @@ class Root(Row):
         assert all(d.key_word == self.key for d in self._derivations)
 
     @functools.cached_property
-    def wiki_raw(self) -> str:
-        return self.get(sheet.COL.WIKI)
+    def wikis(self) -> list[wiki.Wiki]:
+        return [] if self.key in _FROM_MARCION else wiki.wikis()[self.key]
 
     @functools.cached_property
     def wiki_html(self) -> str:
-        return "".join(wiki.html(self.wiki_raw))
-
-    @functools.cached_property
-    def wiki_text(self) -> str:  # dead: disable
-        return wiki.text(self.wiki_raw)
-
-    @functools.cached_property
-    def wiki_wip(self) -> str:
-        return self.get(sheet.COL.WIKI_WIP)
+        # TODO: (#606) Add page numbers to the HTML as well.
+        return page.HORIZONTAL_RULE.join(
+            w.html for w in self.wikis if not w.wip
+        )
 
     @functools.cached_property
     def images(self) -> list[Image]:
@@ -351,8 +351,15 @@ class Root(Row):
         if super().update(col.value, value):
             log.info("Updated", col, "under", self.key)
 
-    def has_complete_wiki(self) -> bool:
-        return bool(self.wiki_raw and not self.wiki_wip)
+    def has_wiki_main_entry(self) -> bool:
+        if not self.wikis:
+            return False
+        for w in self.wikis:
+            if not w.vide and (not w.entry or w.wip):
+                # This is a main (non-vide) entry, and it's still
+                # work-in-progress.
+                return False
+        return True
 
     def title(self) -> str:
         return ", ".join(

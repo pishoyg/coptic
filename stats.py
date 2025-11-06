@@ -385,7 +385,7 @@ _CRUM_STATS: list[Stat] = [
         "crum_wiki",
         "Number of complete Wiki entries",
         lambda: sum(
-            root.has_complete_wiki() for root in crum.Crum.roots.values()
+            root.has_wiki_main_entry() for root in crum.Crum.roots.values()
         ),
         1700,
         3357,

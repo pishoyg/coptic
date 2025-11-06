@@ -86,6 +86,11 @@ hr {
   margin: 20px 0;
 }
 
+.wiki hr {
+  margin: 0 auto;
+  width: 70%;
+}
+
 body {
   line-height: 1.6;
   margin: 0 auto;

@@ -2,16 +2,15 @@
 """Process coptic.wiki's Digital Version of Crum."""
 
 import argparse
+import functools
+import itertools
 import re
 import typing
 from collections import abc
 
-from dictionary.marcion_sourceforge_net import crum, sheet
-from utils import ensure, gcp, log
+from utils import ensure, gcp
 
-_argparser: argparse.ArgumentParser = argparse.ArgumentParser(
-    description="Reconcile or process Wiki data.",
-)
+_argparser: argparse.ArgumentParser = argparse.ArgumentParser()
 
 _ = _argparser.add_argument(
     "-t",
@@ -199,105 +198,105 @@ _SUBSTITUTIONS: list[Substitution] = [
 # pylint: enable=line-too-long
 
 
-def html(raw: str) -> abc.Generator[str]:
-    yield "<p>"
-    for s in _SUBSTITUTIONS:
-        raw = s.html(raw)
-    yield raw
-    yield "</p>"
-
-
-def text(raw: str) -> str:
+def _text(raw: str) -> str:
     for s in _SUBSTITUTIONS:
         raw = s.plain_text(raw)
     return raw
 
 
-def markdown(raw: str) -> str:
+def _markdown(raw: str) -> str:
     for s in _SUBSTITUTIONS:
         raw = s.markdown(raw)
     return raw
 
 
 @typing.final
-class _Wiki:
+class Wiki:
     """Wiki represents an entry in the Wiki sheet."""
 
     def __init__(self, record: dict[typing.Hashable, typing.Any]) -> None:
+        # TODO: (#508) Some entries in Wiki are absent from Marcion, and hence
+        # have no keys. Once this issue is resolved, add a check that all keys
+        # are present in Marcion.
         self.key: str = record["Marcion"]
         self.entry: str = record["Entry"]
-        self.wip: str = record["WIP"]
-        self.vide: str = record["_v_"]
         self.headword: str = record["Headword"]
 
+        vide: str = record["_v_"]
+        ensure.ensure(
+            vide in ["", "v"],
+            self.key,
+            "has an invalid vide entry:",
+            vide,
+        )
+        self.vide = bool(vide)
 
-# _FROM_MARCION is a set of entries that have been added to Crum by Marcion.
-# They don't exist in the original text, and therefore are not expected to be
-# found in Wiki!
-_FROM_MARCION: set[str] = {"3380", "3381", "3382", "3385"}
+        # TODO: (#503) The WIP field will no longer be present when the data is
+        # fully populated.
+        wip: str = record["WIP"]
+        ensure.ensure(
+            wip in ["", "*"],
+            self.key,
+            "has an invalid WIP entry:",
+            wip,
+        )
+        self.wip: bool = bool(wip)
+
+    def __lt__(self, other: object) -> bool:
+        assert isinstance(other, Wiki)
+        assert self.key == other.key
+        if self.vide != other.vide:
+            return bool(other.vide)
+        # TODO: (#606) Compare by page numbers, then compare the headwords
+        # lexicographically. This way, we mimic the order of the entries in the
+        # book.
+        return len(self.entry) > len(other.entry)
+
+    @functools.cached_property
+    def html(self) -> str:
+        return "".join(self._html_aux())
+
+    def _html_aux(self) -> abc.Generator[str]:
+        raw: str = self.entry
+        yield "<p>"
+        for s in _SUBSTITUTIONS:
+            raw = s.html(raw)
+        yield raw
+        yield "</p>"
+
+    @functools.cached_property
+    def text(self) -> str:
+        return _text(self.entry)
+
+    @functools.cached_property
+    def markdown(self) -> str:
+        return _markdown(self.entry)
 
 
-def _wikis() -> dict[str, _Wiki]:
-    wikis: dict[str, _Wiki] = {}
-    for w in map(
-        _Wiki,
+@functools.cache
+def wikis() -> dict[str, list[Wiki]]:
+    # TODO: (#508) Ban groups that consist entirely of vide entries. If a group
+    # is all vide, its corresponding Marcion entry should be merged into another
+    # Marcion entry, and the group keys should be updated to use the new key.
+    entries: abc.Iterable[Wiki] = map(
+        Wiki,
         gcp.tsv_spreadsheet(SHEET_TSV_URL).to_dict(orient="records"),
-    ):
-        # TODO: (#508) Resolve the vide-related inconsistencies below, and
-        # replace the messages with strict checks.
-        if not w.key:
-            # This Wiki entry has no corresponding Marcion entry.
-            if w.vide:
-                # This is a vide entry, we can ignore it.
-                continue
-            log.error(
-                "Non-vide entry lacks a Marcion key! Headword:",
-                w.headword,
-                "; entry:",
-                w.entry,
-            )
-            continue
-
-        # This entry has a corresponding Marcion entry.
-        if w.vide:
-            log.warn(
-                "Key",
-                w.key,
-                "points to a vide entry! Headword:",
-                w.headword,
-                "; entry:",
-                w.entry,
-            )
-        assert w.key not in wikis
-        wikis[w.key] = w
-    return wikis
-
-
-def reconcile() -> None:
-    """Copy up-to-date Wiki data to our Crum sheet.
-
-    NOTE: We intentionally update one row at a time, although this consumes the
-    API quota.
-    """
-    wikis = _wikis()
-    ensure.equal_sets(wikis.keys(), crum.Crum.roots.keys() - _FROM_MARCION)
-
-    for w in wikis.values():
-        root: crum.Root = crum.Crum.roots[w.key]
-        # Copy the value to our sheet.
-        root.update_cell(sheet.COL.WIKI, w.entry)
-        root.update_cell(sheet.COL.WIKI_WIP, w.wip)
+    )
+    entries = sorted(entries, key=lambda w: w.key)
+    return {
+        key: sorted(group)
+        for key, group in itertools.groupby(entries, lambda w: w.key)
+    }
 
 
 def main():
     args: argparse.Namespace = _argparser.parse_args()
     if args.text:
-        print(text(args.text))
+        print(_text(args.text))
         return
     if args.markdown:
-        print(markdown(args.text))
+        print(_markdown(args.text))
         return
-    reconcile()
 
 
 if __name__ == "__main__":

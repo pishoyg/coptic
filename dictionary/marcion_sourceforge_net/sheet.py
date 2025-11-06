@@ -52,8 +52,6 @@ class COL(enum.Enum):
     HOMONYMS = "homonyms"
     GREEK_SISTERS = "greek-sisters"
     QUALITY = "quality"
-    WIKI = "wiki"
-    WIKI_WIP = "wiki-wip"
     # The following columns are only found in the derivations sheet.
     KEY_WORD = "key_word"
     KEY_DERIV = "key_deriv"
@@ -71,12 +69,6 @@ _DRV_ANY_COLS: list[COL] = [COL.WORD, COL.EN]
 def _verify_balanced_brackets(records: list[gcp.Record]) -> None:
     for record in records:
         for col, value in record.row.items():
-            # We can't enforce balanced brackets in Wiki, for two reasons:
-            # - We don't own its source of truth, so sometimes we can't fix
-            #   errors immediately. Those should be fixed.
-            # - Crum's text has unbalanced brackets sometimes!
-            if col == "wiki":
-                continue
             ensure.brackets_balanced(
                 value,
                 "row",
