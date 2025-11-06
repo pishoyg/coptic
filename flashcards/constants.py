@@ -879,6 +879,16 @@ CRUM_XOOXLE = xooxle.Xooxle(
             retain_elements_for_classes=_CRUM_RETAIN_ELEMENTS_FOR_CLASSES,
             unit_tags={"tr", "div", "hr"},
             block_elements=xooxle.BLOCK_ELEMENTS_DEFAULT | {"td"},
+            # We would like to separate the part of speech from the meaning, so
+            # the meaning will occupy its own line. This is useful for the
+            # ranking algorithm, which takes into consideration the distance
+            # between the match and the beginning-of-line.
+            # We don't need to treat this as a block class for the root
+            # field (called "marcion") because the HTML already produces a <br>
+            # tag.
+            # TODO: (#398) Handle this in a cleaner manner. The root and
+            # derivations HTML should be uniform.
+            block_classes={"part-of-speech"},
         ),
     ],
     layers=[["marcion", "meaning", "appendix"], ["wiki"]],

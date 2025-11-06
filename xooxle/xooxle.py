@@ -217,6 +217,7 @@ class Capture:
         retain_attributes: set[str] | None = None,
         block_elements: set[str] = BLOCK_ELEMENTS_DEFAULT,
         space_elements: set[str] = SPACE_ELEMENTS_DEFAULT,
+        block_classes: set[str] | None = None,
         unit_tags: set[str] | None = None,
     ) -> None:
         # _name is name of the field.
@@ -246,6 +247,7 @@ class Capture:
         # _space_elements is the list of HTML tags that result in spaces in
         # the output.
         self._space_elements: set[str] = space_elements
+        self._block_classes: set[str] = block_classes or set()
         # _units is a list of HTML tags that produce `UNIT_DELIMITER` delimiters
         # in the output. You can use this delimiter to separate the text into
         # meaningful units.
@@ -301,6 +303,8 @@ class Capture:
             yield " "
 
         classes: list[str | None] = child.get_attribute_list("class")
+        if self._block_classes.intersection(classes):
+            yield page.LINE_BREAK
 
         # Gather attributes to retain
         attrs: dict[str, str] = {}
@@ -324,7 +328,6 @@ class Capture:
             # We need to retain the tag and/or some of its classes.
             # If we're only retaining the classes, we convert it to <span>.
             # If we're retaining the tag name, we keep it as-is.
-            del classes
             name: str = (
                 child.name if child.name in self._retain_tags else "span"
             )
@@ -340,6 +343,9 @@ class Capture:
             # Neither the tag name nor any of its classes need retention, we
             # simply process the children.
             yield from self._get_children_simplified_html(child)
+
+        if self._block_classes.intersection(classes):
+            yield page.LINE_BREAK
 
         if child.name in self._unit_tags:
             yield const.UNIT_DELIMITER
