@@ -710,13 +710,13 @@ export class SearchResult extends AggregateResult {
   /**
    * Construct a key used to compare search results.
    *
+   * TODO: (#0) This heuristic was conceived by experimentation. Its optimality
+   * is unproven, and we should perhaps revisit it.
+   *
    * @returns the comparison key.
    */
   public compareKey(): number[] {
     const boundary: Boundary = this.boundary();
-    const boundaryIndex: number = this.results.findIndex(
-      (res) => res.boundary() === this.boundary()
-    );
     return [
       // Results are sorted based on the boundary type.
       // See the Boundary enum for the order.
@@ -726,9 +726,15 @@ export class SearchResult extends AggregateResult {
       // boundary type.
       // A candidate with a full-word match in the first field should rank
       // higher than a candidate with a full-word match in the second field.
-      boundaryIndex,
+      this.results.findIndex((res) => res.boundary() === this.boundary()),
       // Afterwards, we prioritize results that start at the beginning of the
       // line.
+      // This is very useful, especially for prepositions:
+      // The line "ϧⲁϫⲉⲛ" contains the definition for the preposition ϧⲁϫⲉⲛ.
+      // The line "― ϧⲁϫⲉⲛ" simply tells that the verb can be used with this
+      // preposition.
+      // If a user searches for "ϧⲁϫⲉⲛ", they're probably interested in the
+      // former.
       this.distance() ? 1 : 0,
       // Afterwards, we rank based on the number of matches in the text.
       // Notice that we revert the sign, so the larger numbers will appear

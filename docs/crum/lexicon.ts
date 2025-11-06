@@ -28,23 +28,18 @@ import * as cls from './cls.js';
 // website italicized, while "italic" text renders in roman font, thus reversing
 // Crum's styling!
 enum Bucket {
-  // We have 3 groups of buckets:
-  // 1. Active dialect match (a match occurs in an active dialect).
-  // 2. Undialected match (a match occurs in a text that is not marked with
-  //    any dialects).
-  // 3. Inactive dialect match (matches only occurs in inactive / uninteresting
-  //    dialects).
-  // Italic and roman text is only relevant for the English translation of a
-  // Coptic word, and not for Coptic words. Therefore, we only use the italic
-  // and roman categories for undialected matches, because English matches are
-  // always undialected.
+  // Group 1: Match occurs in a text belonging to an active dialect.
 
-  // Group 1:
   // The candidate has at least one of the active dialects, and the match
-  // occurs in one of the pieces of text marked with that dialect.
+  // occurs in a piece of text marked with that dialect.
   ACTIVE_DIALECT_MATCH,
 
-  // Group 2:
+  // Group 2: The match occurs in an undialected text.
+  // The distinction between italic and roman text is only relevant for
+  // English translations, not for Coptic words. The English translation is
+  // always undialected, which makes the italic and roman categories only
+  // relevant for this group. Other groups don't need them.
+
   // The candidate has at least one of the active dialects. There is at least
   // one match in an undialected piece of text, and there is at least one match
   // in an italic piece of text.
@@ -58,7 +53,8 @@ enum Bucket {
   // Same as above, but all matches are roman.
   UNDIALECTED_ROMAN_MATCH,
 
-  // Group 3:
+  // Group 3: The match occurs in an inactive dialect.
+
   // Matches only occur in an inactive dialect for the current query. The
   // candidate does however have text belonging to an active dialect, but that
   // text doesn't have a match.
