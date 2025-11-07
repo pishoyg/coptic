@@ -253,7 +253,7 @@ class Wiki:
         # `sorted` function performs a stable sort. So we can guarantee that,
         # other than bringing non-vide entries first, the order in the output
         # will match that of the book.
-        return self.vide and not other.vide
+        return not self.vide and other.vide
 
     @functools.cached_property
     def html(self) -> str:
