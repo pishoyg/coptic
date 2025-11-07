@@ -424,6 +424,9 @@ class CrumPage:
     def __lt__(self, other: typing.Self) -> bool:
         return self._parts() < other._parts()
 
+    def __le__(self, other: typing.Self) -> bool:
+        return self._parts() <= other._parts()
+
     def __bool__(self) -> bool:
         return any(self._parts())
 

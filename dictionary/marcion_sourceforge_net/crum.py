@@ -35,7 +35,13 @@ _CATEGORIES_PATH: pathlib.Path = paths.MARCION / "categories.yaml"
 # _FROM_MARCION is a set of entries that have been added to Crum by Marcion.
 # They don't exist in the original text, and therefore are not expected to be
 # found in Wiki!
-_FROM_MARCION: set[str] = {"3380", "3381", "3382", "3385"}
+_FROM_MARCION: set[str] = {
+    "3380",
+    "3381",
+    "3382",
+    "3385",
+    "1259",  # TODO: (#508) merge into 1258.
+}
 
 
 class Row(gcp.Record):
@@ -340,7 +346,7 @@ class Root(Row):
     def wiki_html(self) -> str:
         # TODO: (#606) Add page numbers to the HTML as well.
         return page.HORIZONTAL_RULE.join(
-            w.html for w in self.wikis if not w.wip
+            w.html(page=True) for w in self.wikis if not w.wip
         )
 
     @functools.cached_property

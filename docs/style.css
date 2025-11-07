@@ -87,7 +87,7 @@ hr {
 }
 
 .wiki hr {
-  margin: 0 auto;
+  margin: 0 auto 10px;
   width: 70%;
 }
 
@@ -177,6 +177,11 @@ table {
 .crum-page-img-img,
 .dawoud-page-img-img {
   width: 1000px;
+}
+
+.wiki .crum-page {
+  display: block;
+  text-align: center;
 }
 
 .front {

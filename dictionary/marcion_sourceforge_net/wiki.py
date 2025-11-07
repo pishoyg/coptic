@@ -8,6 +8,7 @@ import re
 import typing
 from collections import abc
 
+from dictionary.marcion_sourceforge_net import lexical as lex
 from utils import ensure, gcp
 
 _argparser: argparse.ArgumentParser = argparse.ArgumentParser()
@@ -221,6 +222,7 @@ class Wiki:
         self.key: str = record["Marcion"]
         self.entry: str = record["Entry"]
         self.headword: str = record["Headword"]
+        # TODO: (#0) Return a `lex.CrumPage` object, instead of a string.
         self.crum: str = record["Crum"]
 
         vide: str = record["_v_"]
@@ -243,8 +245,7 @@ class Wiki:
         )
         self.wip: bool = bool(wip)
 
-    def __lt__(self, other: object) -> bool:
-        assert isinstance(other, Wiki)
+    def __lt__(self, other: typing.Self) -> bool:
         assert self.key == other.key
         # We want non-vide entries to appear before vide entries. Other than
         # that, entries should show in the same order as they do in the book
@@ -255,11 +256,14 @@ class Wiki:
         # will match that of the book.
         return not self.vide and other.vide
 
-    @functools.cached_property
-    def html(self) -> str:
-        return "".join(self._html_aux())
+    def html(self, page: bool = False) -> str:
+        return "".join(self._html_aux(page))
 
-    def _html_aux(self) -> abc.Generator[str]:
+    def _html_aux(self, page: bool) -> abc.Generator[str]:
+        if page and self.crum:
+            yield '<span class="crum-page">'
+            yield self.crum
+            yield "</span>"
         raw: str = self.entry
         yield "<p>"
         for s in _SUBSTITUTIONS:
@@ -276,15 +280,39 @@ class Wiki:
         return _markdown(self.entry)
 
 
+def _verify_order(entries: list[Wiki]) -> None:
+    prev = entries[0]
+    for idx, wiki in enumerate(entries[1:], 3):
+        if not wiki.crum:
+            # TODO: (#508) This check will no longer be necessary once all
+            # entries are populated.
+            continue
+        ensure.ensure(
+            lex.CrumPage(prev.crum) <= lex.CrumPage(wiki.crum)
+            # Page 629 has two sections, the upper section containing the end of
+            # the ϩ section, and the lower part containing the beginning of the
+            # ϧ section. Columns 629a and 629b swap order, and that's OK.
+            or all(w.crum in ["629a", "629b"] for w in (prev, wiki)),
+            "row",
+            idx,
+            "has an out-of-order Crum page:",
+            wiki.crum,
+        )
+        prev = wiki
+
+
 @functools.cache
 def wikis() -> dict[str, list[Wiki]]:
     # TODO: (#508) Ban groups that consist entirely of vide entries. If a group
     # is all vide, its corresponding Marcion entry should be merged into another
     # Marcion entry, and the group keys should be updated to use the new key.
-    entries: abc.Iterable[Wiki] = map(
-        Wiki,
-        gcp.tsv_spreadsheet(SHEET_TSV_URL).to_dict(orient="records"),
+    entries: list[Wiki] = list(
+        map(
+            Wiki,
+            gcp.tsv_spreadsheet(SHEET_TSV_URL).to_dict(orient="records"),
+        ),
     )
+    _verify_order(entries)
     # First bring all entries with the same key together, so we can group they
     # by key.
     entries = sorted(entries, key=lambda w: w.key)
