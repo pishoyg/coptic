@@ -360,6 +360,8 @@ class Root(Row):
     def has_wiki_main_entry(self) -> bool:
         if not self.wikis:
             return False
+        # TODO: (#503) This check will no longer be necessary once the data is
+        # fully populated.
         for w in self.wikis:
             if not w.vide and (not w.entry or w.wip):
                 # This is a main (non-vide) entry, and it's still

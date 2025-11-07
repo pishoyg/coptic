@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 """Process coptic.wiki's Digital Version of Crum."""
 
+# TODO: (#503) Many checks and filters in this file will no longer be necessary
+# once part of the data (e.g. the entries, the Crum page numbers, or the Marcion
+# keys) is fully populated. Revisit this module, replacing this filters with
+# assertions where appropriate.
+
 import argparse
 import functools
 import itertools
@@ -8,6 +13,7 @@ import re
 import typing
 from collections import abc
 
+from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import lexical as lex
 from utils import ensure, gcp
 
@@ -215,36 +221,42 @@ def _markdown(raw: str) -> str:
 class Wiki:
     """Wiki represents an entry in the Wiki sheet."""
 
-    def __init__(self, record: dict[typing.Hashable, typing.Any]) -> None:
-        # TODO: (#508) Some entries in Wiki are absent from Marcion, and hence
-        # have no keys. Once this issue is resolved, add a check that all keys
-        # are present in Marcion.
-        self.key: str = record["Marcion"]
+    def __init__(
+        self,
+        key: str,
+        record: dict[typing.Hashable, typing.Any],
+    ) -> None:
+        self.key: int = int(key) if key else 0
+        del key
         self.entry: str = record["Entry"]
         self.headword: str = record["Headword"]
+        assert self.headword
 
-        crum: str = record["Crum"]
-        # TODO: (#503) Make the Crum field mandatory once all rows are
-        # populated.
-        self.crum: lex.CrumPage | None = lex.CrumPage(crum) if crum else None
-        del crum
+        ensure.ensure(
+            self.key == 0
+            or constants.MIN_KEY <= self.key <= constants.MAX_KEY,
+            "invalid key:",
+            self.key,
+            "for headword:",
+            self.headword,
+        )
+
+        self.crum: lex.CrumPage = lex.CrumPage(record["Crum"])
 
         vide: str = record["_v_"]
         ensure.ensure(
             vide in ["", "v"],
-            self.key,
+            self.headword,
             "has an invalid vide entry:",
             vide,
         )
         self.vide = bool(vide)
         del vide
 
-        # TODO: (#503) The WIP field will no longer be present when the data is
-        # fully populated.
         wip: str = record["WIP"]
         ensure.ensure(
             wip in ["", "*"],
-            self.key,
+            self.headword,
             "has an invalid WIP entry:",
             wip,
         )
@@ -286,7 +298,7 @@ class Wiki:
         return _markdown(self.entry)
 
 
-def _verify_order(entries: list[Wiki]) -> None:
+def _verify_page_order(entries: list[Wiki]) -> None:
     prev = entries[0]
     assert prev.crum
     for idx, wiki in enumerate(entries[1:], 3):
@@ -307,24 +319,35 @@ def _verify_order(entries: list[Wiki]) -> None:
         assert prev.crum
 
 
+def _wikis() -> abc.Generator[Wiki]:
+    for record in gcp.tsv_spreadsheet(SHEET_TSV_URL).to_dict(orient="records"):
+        # Some vide entries have multiple keys.
+        keys: list[str] = record["Marcion"].split(",")
+        if len(keys) > 1:
+            ensure.ensure(
+                record["_v_"],
+                "Non-vide entries has several Marcion keys:",
+                record,
+            )
+        for key in keys:
+            yield Wiki(key, record)
+
+
 @functools.cache
 def wikis() -> dict[str, list[Wiki]]:
-    # TODO: (#508) Ban groups that consist entirely of vide entries. If a group
-    # is all vide, its corresponding Marcion entry should be merged into another
-    # Marcion entry, and the group keys should be updated to use the new key.
-    entries: list[Wiki] = list(
-        map(
-            Wiki,
-            gcp.tsv_spreadsheet(SHEET_TSV_URL).to_dict(orient="records"),
-        ),
-    )
-    _verify_order(entries)
+    entries: list[Wiki] = list(_wikis())
+    _verify_page_order(entries)
+    # Remove entries that don't have a key.
+    entries = [w for w in entries if w.key]
     # First bring all entries with the same key together, so we can group they
     # by key.
     entries = sorted(entries, key=lambda w: w.key)
     # Group by key, sorting each group.
+    # TODO: (#508) Ban groups that consist entirely of vide entries. If a group
+    # is all vide, its corresponding Marcion entry should be merged into another
+    # Marcion entry, and the group keys should be updated to use the new key.
     return {
-        key: sorted(group)
+        str(key): sorted(group)
         for key, group in itertools.groupby(entries, lambda w: w.key)
     }
 
