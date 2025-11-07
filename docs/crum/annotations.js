@@ -94,6 +94,7 @@ export const MAPPING = {
   sc: { fullForm: 'scilicet' },
   sup: { fullForm: 'supra' },
   varr: { fullForm: 'variants' },
+  ult: { fullForm: 'ultimo' },
   'ut sup': { fullForm: 'ut supra' },
   vbs: { fullForm: 'verbs' },
   // SECTION 3: ABBREVIATIONS THAT MOSTLY APPEAR IN REFERENCE TITLES, OR PERHAPS
