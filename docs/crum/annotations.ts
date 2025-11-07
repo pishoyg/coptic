@@ -128,6 +128,7 @@ export const MAPPING: Record<string, Annotation> = {
   sc: { fullForm: 'scilicet' },
   sup: { fullForm: 'supra' },
   varr: { fullForm: 'variants' },
+  ult: { fullForm: 'ultimo' },
   'ut sup': { fullForm: 'ut supra' },
   vbs: { fullForm: 'verbs' },
 
