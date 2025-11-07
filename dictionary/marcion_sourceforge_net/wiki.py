@@ -221,6 +221,7 @@ class Wiki:
         self.key: str = record["Marcion"]
         self.entry: str = record["Entry"]
         self.headword: str = record["Headword"]
+        self.crum: str = record["Crum"]
 
         vide: str = record["_v_"]
         ensure.ensure(
@@ -245,12 +246,14 @@ class Wiki:
     def __lt__(self, other: object) -> bool:
         assert isinstance(other, Wiki)
         assert self.key == other.key
-        if self.vide != other.vide:
-            return bool(other.vide)
-        # TODO: (#606) Compare by page numbers, then compare the headwords
-        # lexicographically. This way, we mimic the order of the entries in the
-        # book.
-        return len(self.entry) > len(other.entry)
+        # We want non-vide entries to appear before vide entries. Other than
+        # that, entries should show in the same order as they do in the book
+        # (which is lexicographically sorted).
+        # The input data has the same order as the book, and the Python built-in
+        # `sorted` function performs a stable sort. So we can guarantee that,
+        # other than bringing non-vide entries first, the order in the output
+        # will match that of the book.
+        return self.vide and not other.vide
 
     @functools.cached_property
     def html(self) -> str:
@@ -282,7 +285,10 @@ def wikis() -> dict[str, list[Wiki]]:
         Wiki,
         gcp.tsv_spreadsheet(SHEET_TSV_URL).to_dict(orient="records"),
     )
+    # First bring all entries with the same key together, so we can group they
+    # by key.
     entries = sorted(entries, key=lambda w: w.key)
+    # Group by key, sorting each group.
     return {
         key: sorted(group)
         for key, group in itertools.groupby(entries, lambda w: w.key)
