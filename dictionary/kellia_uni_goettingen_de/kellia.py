@@ -909,19 +909,23 @@ def _augmented_words() -> abc.Generator[Word]:
 
 
 @functools.cache
-def comprehensive() -> list[Word]:
-    return list(_augmented_words())
+def comprehensive() -> dict[str, Word]:
+    return {w.entry_xml_id: w for w in _augmented_words()}
 
 
 @functools.cache
-def egyptian() -> list[Word]:
-    words: list[Word] = [w for w in comprehensive() if not w.is_greek]
+def egyptian() -> dict[str, Word]:
+    words: dict[str, Word] = {
+        k: w for k, w in comprehensive().items() if not w.is_greek
+    }
     assert len(words) == NUM_EGYPTIAN, len(words)
     return words
 
 
 @functools.cache
-def greek() -> list[Word]:
-    words: list[Word] = [w for w in comprehensive() if w.is_greek]
+def greek() -> dict[str, Word]:
+    words: dict[str, Word] = {
+        k: w for k, w in comprehensive().items() if w.is_greek
+    }
     assert len(words) == NUM_GREEK, len(words)
     return words

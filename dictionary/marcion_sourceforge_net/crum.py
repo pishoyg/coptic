@@ -21,6 +21,7 @@ from collections import abc
 import gspread
 import yaml
 
+from dictionary.kellia_uni_goettingen_de import kellia
 from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import lexical as lex
 from dictionary.marcion_sourceforge_net import parse, sheet, wiki
@@ -344,7 +345,6 @@ class Root(Row):
 
     @functools.cached_property
     def wiki_html(self) -> str:
-        # TODO: (#606) Add page numbers to the HTML as well.
         return page.HORIZONTAL_RULE.join(
             w.html(page=True) for w in self.wikis if not w.wip
         )
@@ -477,11 +477,7 @@ class Root(Row):
             self.key,
         )
 
-    def _house(
-        self,
-        col: sheet.COL,
-        container: abc.Container[str] | None,
-    ) -> House:
+    def _house(self, col: sheet.COL, container: abc.Container[str]) -> House:
         self._validate_unique_relations()
         verify_relation_symmetry()
         house: House = House(text.ssplit(self.get(col), ";"))
@@ -513,8 +509,7 @@ class Root(Row):
 
     @functools.cached_property
     def greek_sisters(self) -> House:
-        # TODO: (#271): Add validation for Greek sisters as well.
-        return self._house(sheet.COL.GREEK_SISTERS, None)
+        return self._house(sheet.COL.GREEK_SISTERS, kellia.greek())
 
     def relations(self) -> abc.Generator[Relation]:
         yield from self.sisters

@@ -315,7 +315,6 @@ class _Family:
             key_to_family: A dictionary mapping a key to a family.
             symmetry: If true, validate symmetric relations as well.
         """
-        # TODO: (#271) Add validation for Greek sisters as well.
         relatives: list[str] = [r.key for r in self.all_except_you()]
         # Verify no relative is recorded twice.
         ensure.unique(relatives, "duplicate sisters found at", self.key)

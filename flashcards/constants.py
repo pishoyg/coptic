@@ -273,8 +273,7 @@ class Crum(deck.Deck):
         data = TLA_ID_RE.sub("", data)
         return data
 
-    for word in kellia.greek():
-        key: str = __tla_col(word.entry_xml_id)
+    for key, word in kellia.greek().items():
         title = (
             __tla_col(word.orthstring.table())
             .replace("<br>", " ")
@@ -314,8 +313,6 @@ class Crum(deck.Deck):
                 continue
 
             yield deck.Note(
-                # NOTE: The key is a protected field. Do not change unless you
-                # know what you're doing.
                 key=root.key,
                 front=self.__front(root),
                 back=self.__back(root),
@@ -685,17 +682,14 @@ class KELLIA(deck.Deck):
         self,
         deck_name: str,
         deck_id: int,
-        words: list[kellia.Word],
+        words: dict[str, kellia.Word],
     ) -> None:
-        self.words: list[kellia.Word] = words
+        self.words: dict[str, kellia.Word] = words
         super().__init__(deck_name, deck_id)
 
     @typing.override
     def notes_aux(self) -> abc.Generator[deck.Note]:
-        for word in self.words:
-            # NOTE: The key is a protected field. Do not change unless you know
-            # what you're doing.
-            key: str = word.entry_xml_id
+        for key, word in self.words.items():
             front: str = page.html_line_breaks(word.orthstring.table())
             back: str = _join(
                 page.html_line_breaks(word.merge_langs().table()),
