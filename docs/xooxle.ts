@@ -751,11 +751,16 @@ export class SearchResult extends AggregateResult {
       // more interesting to the user than a result with a match in the 2nd
       // column, so it should show first.
       this.results.findIndex((res) => res.match),
-      // Lastly, we rank based on the index of the first match in the text.
-      // A result that has a match closer to the beginning of the
+      // Lastly, we rank based on the index of the first match in the field
+      // text.
+      // A result that has a field with a match closer to the beginning of the
       // text should rank higher than a result with a match in the middle or
       // towards the end of the text.
-      this.matches[0]?.start ?? Number.MAX_SAFE_INTEGER,
+      Math.min(
+        ...this.results.map(
+          (r) => r.matches[0]?.start ?? Number.MAX_SAFE_INTEGER
+        )
+      ),
     ];
   }
 
