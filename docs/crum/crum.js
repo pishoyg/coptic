@@ -89,6 +89,17 @@ export function handleRootType(root) {
 export function handleCrumPage(root) {
   root.querySelectorAll(`.${cls.CRUM_PAGE}`).forEach((el) => {
     el.classList.add(ccls.LINK);
+    if (el.closest(`.${cls.WIKI}`)) {
+      // Inside Wiki, crum-page elements point externally.
+      el.classList.add(ccls.LINK);
+      el.addEventListener('click', () => {
+        browser.open(paths.crumScan(el.textContent));
+      });
+      return;
+    }
+    // Outside Wiki, crum-page elements point to an anchor within the page.
+    // TODO: (#575) The scans should be removed from the notes, and all Crum
+    // pages should point externally.
     html.makeSpanLinkToAnchor(
       el,
       `#crum${scan.chopColumn(el.textContent.trim())}`
