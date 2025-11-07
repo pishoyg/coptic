@@ -222,8 +222,12 @@ class Wiki:
         self.key: str = record["Marcion"]
         self.entry: str = record["Entry"]
         self.headword: str = record["Headword"]
-        # TODO: (#0) Return a `lex.CrumPage` object, instead of a string.
-        self.crum: str = record["Crum"]
+
+        crum: str = record["Crum"]
+        # TODO: (#503) Make the Crum field mandatory once all rows are
+        # populated.
+        self.crum: lex.CrumPage | None = lex.CrumPage(crum) if crum else None
+        del crum
 
         vide: str = record["_v_"]
         ensure.ensure(
@@ -233,6 +237,7 @@ class Wiki:
             vide,
         )
         self.vide = bool(vide)
+        del vide
 
         # TODO: (#503) The WIP field will no longer be present when the data is
         # fully populated.
@@ -244,6 +249,7 @@ class Wiki:
             wip,
         )
         self.wip: bool = bool(wip)
+        del wip
 
     def __lt__(self, other: typing.Self) -> bool:
         assert self.key == other.key
@@ -262,7 +268,7 @@ class Wiki:
     def _html_aux(self, page: bool) -> abc.Generator[str]:
         if page and self.crum:
             yield '<span class="crum-page">'
-            yield self.crum
+            yield str(self.crum)
             yield "</span>"
         raw: str = self.entry
         yield "<p>"
@@ -282,23 +288,23 @@ class Wiki:
 
 def _verify_order(entries: list[Wiki]) -> None:
     prev = entries[0]
+    assert prev.crum
     for idx, wiki in enumerate(entries[1:], 3):
         if not wiki.crum:
-            # TODO: (#508) This check will no longer be necessary once all
-            # entries are populated.
             continue
         ensure.ensure(
-            lex.CrumPage(prev.crum) <= lex.CrumPage(wiki.crum)
+            prev.crum <= wiki.crum
             # Page 629 has two sections, the upper section containing the end of
             # the ϩ section, and the lower part containing the beginning of the
             # ϧ section. Columns 629a and 629b swap order, and that's OK.
-            or all(w.crum in ["629a", "629b"] for w in (prev, wiki)),
+            or (prev.crum.num == 629 and wiki.crum.num == 629),
             "row",
             idx,
             "has an out-of-order Crum page:",
             wiki.crum,
         )
         prev = wiki
+        assert prev.crum
 
 
 @functools.cache
