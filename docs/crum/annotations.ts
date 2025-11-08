@@ -70,6 +70,9 @@ export const MAPPING: Record<string, Annotation> = {
   l: { fullForm: 'legendum' },
   lit: { fullForm: 'literally' },
   m: { fullForm: 'masculine', noCaseVariant: true },
+  // The following doesn't currently work because the text doesn't use the same
+  // encoding for the horizontal bar as the one used here.
+  ⲛ̅ⲉ̅: { fullForm: 'ⲛⲟⲩⲧⲉ', noCaseVariant: true },
   nn: { fullForm: 'noun', noCaseVariant: true },
   obj: { fullForm: 'object' },
   om: { fullForm: 'omits, omitted' },
@@ -98,19 +101,18 @@ export const MAPPING: Record<string, Annotation> = {
   vb: { fullForm: 'verb' },
   '†': { fullForm: 'qualitative' },
   '?': { fullForm: 'perhaps, possibly' },
-  // The following is somewhat unnecessary, but we include it for completion.
-  // Crum had it in his list!
-  ⲛ̅ⲉ̅: { fullForm: 'ⲛⲟⲩⲧⲉ', noCaseVariant: true },
 
   // SECTION 2: ABBREVIATIONS WE CHOOSE TO INCLUDE TO AID INTELLIGIBILITY.
   '&c': { fullForm: 'et cetera' },
   AD: { fullForm: 'Anno Domini', noCaseVariant: true },
   adv: { fullForm: 'adverb' },
   advb: { fullForm: 'adverb' },
+  aor: { fullForm: 'aorist' },
   bis: { fullForm: 'bis' }, // Full form same as abbreviation, included for completion!
   cf: { fullForm: 'confer' },
   dat: { fullForm: 'dative' },
   'e g': { fullForm: 'exempli gratia' },
+  fut: { fullForm: 'future' },
   Heb: { fullForm: 'Hebrew', noCaseVariant: true },
   Hebr: { fullForm: 'Hebrew', noCaseVariant: true },
   'i e': { fullForm: 'id est' },
@@ -120,16 +122,26 @@ export const MAPPING: Record<string, Annotation> = {
   imper: { fullForm: 'imperative' },
   imperat: { fullForm: 'imperative' },
   impers: { fullForm: 'impersonal' },
+  impf: { fullForm: 'imperfect' },
   improb: { fullForm: 'improbable' },
   'l c': { fullForm: 'loco citato' },
   MS: { fullForm: 'manuscript', noCaseVariant: true },
   MSS: { fullForm: 'manuscripts', noCaseVariant: true },
+  neg: { fullForm: 'negative' },
   p: { fullForm: 'page', noCaseVariant: true },
-  pf: { fullForm: 'perfect' },
+  perf: { fullForm: 'perfect' },
+  pf: { fullForm: 'perfect' }, // NOTE: I am actually unsure what pf means!!
+  pluperf: { fullForm: 'plusquamperfect' },
+  predic: { fullForm: 'predicate' },
+  // TODO: (#194) "prepos" was only encountered once so far, and it was intended
+  // to mean "prepositional". Could it also mean "preposition"?
+  prepos: { fullForm: 'prepositional' },
+  preter: { fullForm: 'preterite' },
   'q v': { fullForm: 'quod vide' },
   's v': { fullForm: 'sub verbo' },
   sic: { fullForm: 'sic erat scriptum' },
   sc: { fullForm: 'scilicet' },
+  subj: { fullForm: 'subject' },
   sup: { fullForm: 'supra' },
   varr: { fullForm: 'variants' },
   ult: { fullForm: 'ultimo' },
