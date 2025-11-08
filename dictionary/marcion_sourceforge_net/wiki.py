@@ -306,10 +306,10 @@ def _verify_page_order(entries: list[Wiki]) -> None:
             continue
         ensure.ensure(
             prev.crum <= wiki.crum
-            # Page 629 has two sections, the upper section containing the end of
-            # the ϩ section, and the lower part containing the beginning of the
-            # ϧ section. Columns 629a and 629b swap order, and that's OK.
-            or (prev.crum.num == 629 and wiki.crum.num == 629),
+            or (
+                prev.crum.num == wiki.crum.num
+                and wiki.crum.num in constants.TWO_LETTER_PAGES
+            ),
             "row",
             idx,
             "has an out-of-order Crum page:",

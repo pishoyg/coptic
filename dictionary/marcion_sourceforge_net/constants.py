@@ -339,3 +339,20 @@ IMAGE_EXTENSIONS: set[str] = {
 }
 VALID_SRC_EXTENSIONS: set[str] = IMAGE_EXTENSIONS.difference({".svg"})
 VALID_DST_EXTENSIONS: set[str] = VALID_SRC_EXTENSIONS.difference({".png"})
+
+# TWO_LETTER_PAGES stores a set of pages where two letters coexist.
+TWO_LETTER_PAGES: set[int] = {
+    27,
+    48,
+    65,
+    49,
+    152,
+    214,
+    253,
+    389,
+    467,
+    517,
+    540,
+    619,
+    629,
+}
