@@ -177,6 +177,8 @@ const SPECIAL_CASES: string[] = [
   'Mich 550',
   "O'Leary ?(?:H|The?)",
   "Samannûdi's Scala",
+  'Bodl\\(P\\)',
+  'Bodl \\(P\\)',
 ];
 
 export const REFERENCE_RES: RegExp[] = [
