@@ -241,7 +241,10 @@ class Wiki:
             self.headword,
         )
 
+        # TODO: (#427) Some entries should have pages pointing to the Additions
+        # and Corrections section, rather than the body of the book.
         self.crum: lex.CrumPage = lex.CrumPage(record["Crum"])
+        assert self.crum
 
         vide: str = record["_v_"]
         ensure.ensure(
@@ -278,7 +281,7 @@ class Wiki:
         return "".join(self._html_aux(page))
 
     def _html_aux(self, page: bool) -> abc.Generator[str]:
-        if page and self.crum:
+        if page:
             yield '<span class="crum-page">'
             yield str(self.crum)
             yield "</span>"
@@ -298,27 +301,6 @@ class Wiki:
         return _markdown(self.entry)
 
 
-def _verify_page_order(entries: list[Wiki]) -> None:
-    prev = entries[0]
-    assert prev.crum
-    for idx, wiki in enumerate(entries[1:], 3):
-        if not wiki.crum:
-            continue
-        ensure.ensure(
-            prev.crum <= wiki.crum
-            or (
-                prev.crum.num == wiki.crum.num
-                and wiki.crum.num in constants.TWO_LETTER_PAGES
-            ),
-            "row",
-            idx,
-            "has an out-of-order Crum page:",
-            wiki.crum,
-        )
-        prev = wiki
-        assert prev.crum
-
-
 def _wikis() -> abc.Generator[Wiki]:
     for record in gcp.tsv_spreadsheet(SHEET_TSV_URL).to_dict(orient="records"):
         # Some vide entries have multiple keys.
@@ -336,7 +318,6 @@ def _wikis() -> abc.Generator[Wiki]:
 @functools.cache
 def wikis() -> dict[str, list[Wiki]]:
     entries: list[Wiki] = list(_wikis())
-    _verify_page_order(entries)
     # Remove entries that don't have a key.
     entries = [w for w in entries if w.key]
     # First bring all entries with the same key together, so we can group they
