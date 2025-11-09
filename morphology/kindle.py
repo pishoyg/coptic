@@ -42,7 +42,7 @@ OPF_FMT: str = f"""\
 <package version="2.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="BookId">
     <metadata>
         <dc:title>{{title}}</dc:title>
-        <dc:creator opf:role="aut">{paths.EMAIL}</dc:creator>
+        <dc:creator opf:role="aut">{paths.URL}</dc:creator>
         <dc:language>{IN_LANG}</dc:language>
         <meta name="cover" content="{{cover_id}}"/>
         <x-metadata>

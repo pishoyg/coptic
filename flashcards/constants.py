@@ -333,22 +333,24 @@ class Crum(deck.Deck):
 
     def __front_aux(self, root: crum.Root) -> abc.Generator[str]:
         # Header.
+        # TODO: (#203) The header should be mostly implemented in TypeScript,
+        # rather than hardcoded in the HTML.
         # Open the table.
         yield '<table id="header" class="header">'
         yield "<tr>"
         # Home
-        yield '<td><a class="navigate" href="../">home</a></td>'
+        yield '<td><a class="navigate" href="../">Home</a></td>'
         # Contact
         yield "<td>"
-        yield f'<a class="contact" href="mailto:{paths.EMAIL}">'
-        yield "email"
-        yield "</a>"
+        yield '<span id="reports">'
+        yield "Reports"
+        yield "</span>"
         yield "</td>"
         # Prev
         yield "<td>"
         prev = crum.Crum.prev_key(root)
         if prev:
-            yield f'<a class="navigate" href="{prev}.html">prev</a>'
+            yield f'<a class="navigate" href="{prev}.html">Prev</a>'
         del prev
         yield "</td>"
         # Key.
@@ -359,16 +361,16 @@ class Crum(deck.Deck):
         yield "<td>"
         nxt = crum.Crum.next_key(root)
         if nxt:
-            yield f'<a class="navigate" href="{nxt}.html">next</a>'
+            yield f'<a class="navigate" href="{nxt}.html">Next</a>'
         del nxt
         yield "</td>"
         # Reset.
         yield "<td>"
-        yield '<span class="reset">reset</span>'
+        yield '<span class="reset">Reset</span>'
         yield "</td>"
         # Dev.
         yield "<td>"
-        yield '<span class="developer">dev</span>'
+        yield '<span class="developer">Dev</span>'
         yield "</td>"
         # Close the table.
         yield "</tr>"

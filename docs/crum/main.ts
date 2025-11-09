@@ -7,7 +7,10 @@ import * as drop from '../dropdown.js';
 import * as html from '../html.js';
 import * as high from './highlight.js';
 import * as crum from './crum.js';
+import * as id from './id.js';
+import * as head from '../header.js';
 import * as dev from '../dev.js';
+import * as ccls from '../cls.js';
 
 /**
  *
@@ -42,6 +45,18 @@ function main(): void {
 
   // We only have hover-invoked tooltips.
   drop.addEventListeners('hover');
+
+  addReportsLink();
+}
+
+/**
+ * Enable the Reports button.
+ * TODO: (#203) This belongs in the header module.
+ */
+function addReportsLink(): void {
+  const reports = document.getElementById(id.REPORTS)!;
+  reports.addEventListener('click', head.reports);
+  reports.classList.add(ccls.LINK);
 }
 
 main();

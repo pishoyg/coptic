@@ -7,7 +7,6 @@ from utils import ensure
 
 DOMAIN: str = "remnqymi.com"
 URL: str = f"https://{DOMAIN}"
-EMAIL: str = "remnqymi@gmail.com"  # TODO: (#298) Stop using email.
 
 # We don't verify the existence of the Google Cloud credentials file because
 # it's not persisted to the source control.
