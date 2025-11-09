@@ -170,6 +170,8 @@ const SPECIAL_CASES = [
   'Mich 550',
   "O'Leary ?(?:H|The?)",
   "Samannûdi's Scala",
+  'Bodl\\(P\\)',
+  'Bodl \\(P\\)',
 ];
 export const REFERENCE_RES = [
   // Special cases, and three-word reference abbreviations:

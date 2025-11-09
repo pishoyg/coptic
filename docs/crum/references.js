@@ -383,7 +383,7 @@ const DATA = [
       title: 'Coptic MSS. in Bodleian, as (P) a i e, where italic = folio',
     },
     variants: ['Bodl'],
-    postfixes: ['Copt', 'copt'],
+    postfixes: ['Copt', 'copt', '(P)'],
   },
   {
     source: {
