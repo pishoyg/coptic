@@ -34,8 +34,12 @@ a.download,
   }
 }
 
-@media (width > 700px) {
-  table.info {
-    width: 60%;
+table.info {
+  td:first-child {
+    width: 20%;
   }
+}
+
+.inline-logo {
+  height: 20px;
 }
