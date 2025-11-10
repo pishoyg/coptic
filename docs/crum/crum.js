@@ -329,7 +329,12 @@ export function addCopticLookups(root) {
     COPTIC_RE,
     (match) => paths.lexiconLookup(match[0]),
     [ccls.HOVER_LINK],
-    [cls.TYPE, cls.WIKI]
+    // Most Coptic text in Wiki and Nag Hammadi are example sentences, with the
+    // words containing prefixes or suffixes rather than being bare roots.
+    // We exclude them from lookup hyperlinks in order to avoid confusion.
+    // The type is usually "ⲡ" for masculine, "ⲧ" for feminine, "ⲛ" for
+    // plural. Adding lookup hyperlinks to that doesn't really make sense.
+    [cls.TYPE, cls.WIKI, cls.NAG_HAMMADI]
   );
 }
 /**
