@@ -573,7 +573,7 @@ class Root(Row):
                 # Skip the English.
                 meaning_width = 0
             assert word_width or meaning_width
-            key: str = f'<a class="drv-key" href="{d.row_url}">{d.key}</a>'
+            key: str = f'<span class="drv-key">{d.key}</span>'
             # New row.
             yield f'<tr id="drv{d.key}" class="drv">'
             # Margin.

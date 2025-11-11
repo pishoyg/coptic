@@ -50,7 +50,7 @@ class Record:
         raise NotImplementedError
 
     @functools.cached_property
-    def row_url(self) -> str:
+    def row_url(self) -> str:  # dead: disable
         return f"{self.worksheet_url()}?range={self.row_num}:{self.row_num}"
 
     @classmethod

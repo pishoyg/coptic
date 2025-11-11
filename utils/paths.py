@@ -48,6 +48,9 @@ CRUM_SCAN_DIR: pathlib.Path = directory(LEXICON_DIR, "crum")
 DAWOUD_DIR: pathlib.Path = directory(SITE_DIR, "dawoud")
 BIBLE_DIR: pathlib.Path = directory(SITE_DIR, "bible")
 
+CRUM_ROOTS_ROW_NUMS: pathlib.Path = file(LEXICON_DIR, "roots.js")
+CRUM_DERIVATIONS_ROW_NUMS: pathlib.Path = file(LEXICON_DIR, "derivations.js")
+
 # Anki is not persisted to source control.
 ANKI_DIR: pathlib.Path = LEXICON_DIR / "anki/coptic.apkg"
 

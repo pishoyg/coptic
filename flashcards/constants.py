@@ -355,7 +355,9 @@ class Crum(deck.Deck):
         yield "</td>"
         # Key.
         yield "<td>"
-        yield f'<a class="navigate" href="{root.key}.html">{root.key}</a>'
+        yield f'<a class="navigate" id="key" href="{root.key}.html">'
+        yield root.key
+        yield "</a>"
         yield "</td>"
         # Next
         yield "<td>"
@@ -477,11 +479,9 @@ class Crum(deck.Deck):
             yield Crum.__senses(root.senses)
             yield "</div>"
 
-        # Quality, and URL link.
+        # Quality.
         yield '<div id="quality" class="quality">'
-        yield f'<a href="{root.row_url}" target="_blank">'
         yield root.quality
-        yield "</a>"
         yield "</div>"
 
         # Line break.

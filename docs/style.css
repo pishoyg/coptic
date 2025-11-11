@@ -375,12 +375,14 @@ body:not(.lexicon) .header td:not(:first-child) {
 }
 
 /* stylelint-enable selector-class-pattern */
+.senses {
+  color: #7f8c8d;
+}
 
 .senses,
 .quality {
   font-size: small;
   font-style: italic;
-  color: #7f8c8d;
 }
 
 .page-list {

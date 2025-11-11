@@ -112,9 +112,12 @@ epub_publish: REQUIRE_DRIVE_DIR FORCE
 	"$${DRIVE_DIR}/bohairic_english - desktop.epub"
 
 ########## CRUM ##########
+# TODO: (#448) `flashcards/main.py` should have no role in generating Crum
+# artifacts.
 crum: FORCE
 	# Generate the Crum lexicon artefacts.
 	./flashcards/main.py --crum
+	./dictionary/marcion_sourceforge_net/main.py
 
 # TODO: (#421) Delete this rule. We will no longer retain the original images,
 # and this won't be even possible.
