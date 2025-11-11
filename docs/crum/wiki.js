@@ -80,6 +80,7 @@ export const ANNOTATION_RES = [
   // Single-word annotation and special cases:
   new RegExp([str.bounded('[a-zA-Z]+'), '\\?', '†', 'ⲛ̅ⲉ̅'].join('|'), 'gu'),
 ];
+export const PAGE_RE = new RegExp(str.bounded('p ([0-9]+) '));
 // Pay attention to the following:
 // - Reference abbreviations always start with a capital letter. This must be
 //   enforced, in order to avoid errors.
@@ -207,6 +208,7 @@ export function handle(root) {
     // references.
     handleReferences(elem);
     handleAnnotations(elem);
+    handlePages(elem);
     white.warnPotentiallyMissingReferences(elem);
     dev.play(() => {
       const endText = drop.noTipTextContent(elem);
@@ -247,6 +249,33 @@ export function handleAnnotations(root) {
       ABBREVIATION_EXCLUDE
     );
   });
+}
+/**
+ * Insert hyperlinks for page references in the text.
+ *
+ * @param root
+ */
+export function handlePages(root) {
+  html.replaceText(
+    root,
+    PAGE_RE,
+    (match, _, nextSibling) => {
+      const col = nextSibling?.textContent;
+      if (!nextSibling || !col || (col !== 'a' && col !== 'b')) {
+        // We can't get the column!
+        log.error('Unable to infer column for the page reference:', match[0]);
+        return {};
+      }
+      const a = document.createElement('a');
+      a.href = paths.crumScan(`${match[1]}${col}`);
+      a.target = '_blank';
+      a.textContent = match[0];
+      a.append(nextSibling);
+      return { replacement: a };
+    },
+    // Exclude all Wiki abbreviations to avoid overlap.
+    ABBREVIATION_EXCLUDE
+  );
 }
 /**
  * DAN_OVERRIDE defines special Book names used by Crum to refer to chapters in
