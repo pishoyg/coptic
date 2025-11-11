@@ -86,6 +86,8 @@ export const ANNOTATION_RES: RegExp[] = [
   new RegExp([str.bounded('[a-zA-Z]+'), '\\?', '†', 'ⲛ̅ⲉ̅'].join('|'), 'gu'),
 ];
 
+export const PAGE_RE = new RegExp(str.bounded('p ([0-9]+) '));
+
 // Pay attention to the following:
 // - Reference abbreviations always start with a capital letter. This must be
 //   enforced, in order to avoid errors.
@@ -221,6 +223,7 @@ export function handle(root: HTMLElement): void {
       // references.
       handleReferences(elem);
       handleAnnotations(elem);
+      handlePages(elem);
       white.warnPotentiallyMissingReferences(elem);
 
       dev.play(() => {
@@ -263,6 +266,38 @@ export function handleAnnotations(root: HTMLElement): void {
       ABBREVIATION_EXCLUDE
     );
   });
+}
+
+/**
+ * Insert hyperlinks for page references in the text.
+ *
+ * @param root
+ */
+export function handlePages(root: HTMLElement): void {
+  html.replaceText(
+    root,
+    PAGE_RE,
+    (
+      match: RegExpExecArray,
+      _: string,
+      nextSibling: ChildNode | null
+    ): { replacement?: Node } => {
+      const col: string | null | undefined = nextSibling?.textContent;
+      if (!nextSibling || !col || (col !== 'a' && col !== 'b')) {
+        // We can't get the column!
+        log.error('Unable to infer column for the page reference:', match[0]);
+        return {};
+      }
+      const a: HTMLAnchorElement = document.createElement('a');
+      a.href = paths.crumScan(`${match[1]!}${col}`);
+      a.target = '_blank';
+      a.textContent = match[0];
+      a.append(nextSibling);
+      return { replacement: a };
+    },
+    // Exclude all Wiki abbreviations to avoid overlap.
+    ABBREVIATION_EXCLUDE
+  );
 }
 
 /**

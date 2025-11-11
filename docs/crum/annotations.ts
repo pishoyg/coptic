@@ -134,7 +134,6 @@ export const MAPPING: Record<string, Annotation> = {
   MS: { fullForm: 'manuscript', noCaseVariant: true },
   MSS: { fullForm: 'manuscripts', noCaseVariant: true },
   neg: { fullForm: 'negative' },
-  p: { fullForm: 'page', noCaseVariant: true },
   perf: { fullForm: 'perfect' },
   pf: { fullForm: 'perfect' }, // NOTE: I am actually unsure what pf means!!
   pluperf: { fullForm: 'plusquamperfect' },
