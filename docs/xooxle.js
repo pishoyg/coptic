@@ -450,8 +450,13 @@ export class SearchResult extends AggregateResult {
     dev.play(() => {
       // Verify that enrichment and highlighting haven't altered the text
       // content of the row, which would corrupted the highlighting algorithm.
+      const text = orth.cleanDiacritics(drop.noTipTextContent(row));
       log.ensure(
-        orth.cleanDiacritics(drop.noTipTextContent(row)) === this.text
+        text === this.text,
+        'Text content has changed! Original:',
+        this.text,
+        'Final:',
+        text
       );
     });
     // We refrain from adding any extra content, such as the view-for-more
@@ -1176,9 +1181,53 @@ export class Xooxle {
         this.form.message('Invalid regular expression!');
       } else {
         log.error(err);
-        this.form.message('Internal error! Please send us an email!');
+        this.form.message('Internal error! Please file a report!');
       }
     }
+  }
+  /**
+   * @returns
+   */
+  bucketSentinels() {
+    // Create a two-D array, where the first dimension is the layer, and the
+    // second is the bucket.
+    return Array.from({ length: this.numLayers }, () =>
+      Array.from({ length: this.searchResultType.numBuckets() }, () => {
+        const tr = document.createElement('tr');
+        tr.style.display = 'none';
+        this.form.result(tr);
+        return tr;
+      })
+    );
+  }
+  /**
+   * @param regex
+   * @returns
+   */
+  results(regex) {
+    return (
+      this.candidates
+        .flatMap((can) => {
+          for (const [idx, layer] of can.layers.entries()) {
+            const result = new this.searchResultType(
+              can.key,
+              layer,
+              regex,
+              idx
+            );
+            if (result.match && result.filter()) {
+              // This layer has a match. Return a result representing this
+              // layer.
+              return [result];
+            }
+          }
+          // None of the layers has a match. Return no results.
+          return [];
+        })
+        // Besides bucket sorting, we can perform some generic sorting at this
+        // step.
+        .sort(searchResultCompare)
+    );
   }
   /**
    * Search candidates for the given regex, adding results to display, and
@@ -1224,34 +1273,10 @@ export class Xooxle {
     // generic sorting. In other words, results get grouped into buckets by the
     // bucket sorter. Within each bucket, the results will be sorted by the
     // generic sorter.
-    const numBuckets = this.searchResultType.numBuckets();
-    // Create a two-D array, where the first dimension is the layer, and the
-    // second is the bucket.
-    const bucketSentinels = Array.from({ length: this.numLayers }, () =>
-      Array.from({ length: numBuckets }, () => {
-        const tr = document.createElement('tr');
-        tr.style.display = 'none';
-        this.form.result(tr);
-        return tr;
-      })
-    );
+    const bucketSentinels = this.bucketSentinels();
     // Search is a cheap operation that we can afford to do on all candidates in
     // the beginning.
-    const results = this.candidates
-      .flatMap((can) => {
-        for (const [idx, layer] of can.layers.entries()) {
-          const result = new this.searchResultType(can.key, layer, regex, idx);
-          if (result.match && result.filter()) {
-            // This layer has a match. Return a result representing this layer.
-            return [result];
-          }
-        }
-        // None of the layers has a match. Return no results.
-        return [];
-      })
-      // Besides bucket sorting, we can perform some generic sorting at this
-      // step.
-      .sort(searchResultCompare);
+    const results = this.results(regex);
     // NOTE: We considered using an IntersectionObserver, since some search
     // results are huge. But we dismissed it because we aren't interested in
     // that particular use case. Most users would be looking up a single word.
@@ -1259,17 +1284,24 @@ export class Xooxle {
       if (abortController.signal.aborted) {
         return;
       }
-      // Create a new row for the table
-      // NOTE: Creating the row DOM (which involves parsing plain HTML) is a
-      // somewhat expensive operation, so we can't afford to do it for all
-      // candidates before updating display.
-      // Instead, we create a number of rows, and then yield to the browser to
-      // allow display update.
-      const row = result.row(results.length, this.numColumns);
-      bucketSentinels[result.layer][result.bucket(row)].insertAdjacentElement(
-        'beforebegin',
-        row
-      );
+      try {
+        // Create a new row for the table
+        // NOTE: Creating the row DOM (which involves parsing plain HTML) is a
+        // somewhat expensive operation, so we can't afford to do it for all
+        // candidates before updating display.
+        // Instead, we create a number of rows, and then yield to the browser to
+        // allow display update.
+        const row = result.row(results.length, this.numColumns);
+        bucketSentinels[result.layer][result.bucket(row)].insertAdjacentElement(
+          'beforebegin',
+          row
+        );
+      } catch (err) {
+        log.error('While processing', result.key, 'encountered error:', err);
+        this.form.message(
+          `Error processing ${result.key}! Please file a report!`
+        );
+      }
       if (count % RESULTS_TO_UPDATE_DISPLAY === RESULTS_TO_UPDATE_DISPLAY - 1) {
         // Allow the browser to update the display, receive user input, ...
         await browser.yieldToBrowser();
