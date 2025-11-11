@@ -341,6 +341,7 @@ class Root(Row):
 
     @functools.cached_property
     def wikis(self) -> list[wiki.Wiki]:
+        _verify_wiki_keys()
         return [] if self.key in _FROM_MARCION else wiki.wikis()[self.key]
 
     @functools.cached_property
@@ -808,3 +809,15 @@ def verify_relation_symmetry() -> None:
         assert all(r.key in Crum.roots[a.key].antonyms for a in r.antonyms)
         # The homonym relation is symmetric.
         assert all(r.key in Crum.roots[h.key].homonyms for h in r.homonyms)
+
+
+@cache.run_once
+def _verify_wiki_keys() -> None:
+    for k, ws in wiki.wikis().items():
+        ensure.ensure(
+            k in Crum.roots,
+            "Unknown Marcion key:",
+            k,
+            "for entries:",
+            ws,
+        )

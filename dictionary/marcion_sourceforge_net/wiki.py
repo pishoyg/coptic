@@ -300,6 +300,10 @@ class Wiki:
     def markdown(self) -> str:
         return _markdown(self.entry)
 
+    @typing.override
+    def __str__(self) -> str:
+        return self.headword
+
 
 def _wikis() -> abc.Generator[Wiki]:
     for record in gcp.tsv_spreadsheet(SHEET_TSV_URL).to_dict(orient="records"):
