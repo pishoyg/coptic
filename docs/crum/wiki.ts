@@ -296,8 +296,7 @@ function parseBibleCitation(
     bookAbbreviation = 'Dan';
   }
 
-  const book: { name: string; path: string; numChapters: number } | undefined =
-    bible.MAPPING[bookAbbreviation];
+  const book: bible.Book | undefined = bible.MAPPING[bookAbbreviation];
   if (!book) {
     // No book found! This match is not a Biblical reference.
     return null;
