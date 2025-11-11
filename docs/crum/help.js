@@ -85,18 +85,17 @@ export function makeHelpPanel(highlighter, devHighlighter) {
         'Open the word currently being viewed',
         ['lexicon', 'note', 'index'],
         () => {
-          let el = browser.findNextElement(
-            css.classQuery(
-              'view-view' /* xoox.CLS.VIEW_VIEW */,
-              cls.SISTER_VIEW
-            ),
+          const el = browser.findNextElement(
+            // NOTE: It's important to click on the element that actually opens
+            // the needed pages. Check Xooxle and Crum structure for which
+            // element that is.
+            css.classQuery('view' /* xoox.CLS.VIEW */, cls.SISTER_VIEW),
             'cur'
           );
           // If the element has an anchor, click that. Otherwise, the element
           // itself may hold an event listener that responds to clicks, so we
           // just try clicking the element directly.
-          el = el?.querySelector('a') ?? el;
-          el?.click();
+          (el?.querySelector('a') ?? el)?.click();
         }
       ),
     ],
