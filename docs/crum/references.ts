@@ -155,7 +155,7 @@ const DATA: Resource[] = [
         'Amélineau, E. (1914). <em><a href="https://archive.org/details/oeuvresdeschenou02shen/page/n7/mode/2up" rel="noreferrer noopener" target="_blank">Œuvres de Schenoudi: texte copte et traduction française</a></em>. Tome 2. Paris: E. Leroux.',
       ],
     },
-    variants: ['ShA', 'ShAm'],
+    variants: ['ShA', 'ShAm', 'A'],
   },
   {
     source: {
