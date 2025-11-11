@@ -24,6 +24,7 @@ export const DICTIONARY = 'dictionary';
 export const FOOTER = 'footer';
 export const HEADER = 'header';
 export const IMAGES = 'images';
+export const KEY = 'key';
 export const MEANING = 'meaning';
 export const PRETTY = 'pretty';
 export const ROOT_TYPE = 'root-part-of-speech';

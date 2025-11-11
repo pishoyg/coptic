@@ -9,11 +9,14 @@ import * as paths from '../paths.js';
 import * as css from '../css.js';
 import * as dial from './dialect.js';
 import * as cls from './cls.js';
+import * as id from './id.js';
 import * as ccls from '../cls.js';
 import * as head from '../header.js';
 import * as log from '../logger.js';
 import * as wiki from './wiki.js';
 import * as drop from '../dropdown.js';
+import * as roots from './roots.js';
+import * as derivations from './derivations.js';
 const COPTIC_RE = /[\p{Script=Coptic}][\p{Script=Coptic}\p{Mark}]*/gu;
 const GREEK_RE = /[\p{Script=Greek}][\p{Script=Greek}\p{Mark}]*/gu;
 const ENGLISH_RE = /[\p{Script=Latin}][\p{Script=Latin}\p{Mark}]*/gu;
@@ -43,6 +46,7 @@ export function handle(root, highlighter, devHighlighter) {
   addGreekLookups(root);
   addEnglishLookups(root);
   handleNagHammadi(root);
+  handleQuality(root);
   wiki.handle(root);
 }
 /**
@@ -165,11 +169,24 @@ export function handleDawoudPage(root) {
  * @param root
  */
 export function handleDrvKey(root) {
+  let rowNum = derivations.MAPPING[marcion() ?? 0];
   root.querySelectorAll(`.${cls.DRV_KEY}`).forEach((key) => {
     // The key should have the link to the row containing the derivation
     // definition in our source-of-truth sheet.
     // Make the target _blank so it will open in a separate page.
-    key.target = '_blank';
+    if (!rowNum) {
+      log.error('Page has derivations, but unable to infer their row numbers!');
+    } else {
+      key.classList.add(ccls.LINK);
+      key.addEventListener(
+        'click',
+        browser.open.bind(
+          browser,
+          paths.rowUrl(paths.CRUM_DERIVATIONS_URL, rowNum++),
+          true
+        )
+      );
+    }
     // Create a second anchor pointing to this row in the HTML. This is useful
     // for users to share links to specific derivations.
     const frag = `#drv${key.textContent.trim()}`;
@@ -395,5 +412,34 @@ export function handleNagHammadi(root) {
         remainder: `: ${line}: ${remainder}`,
       };
     });
+  });
+}
+/**
+ * @returns The Marcion database key of the current word.
+ */
+function marcion() {
+  const key = parseInt(document.getElementById(id.KEY)?.textContent ?? '');
+  return isNaN(key) ? undefined : key;
+}
+/**
+ *
+ * @param root
+ */
+export function handleQuality(root) {
+  const rowNum = roots.MAPPING[marcion() ?? 0];
+  if (!rowNum) {
+    log.error('Unable to retrieve root row number!');
+    return;
+  }
+  root.querySelectorAll(`.${cls.QUALITY}`).forEach((el) => {
+    el.classList.add(ccls.LINK);
+    el.addEventListener(
+      'click',
+      browser.open.bind(
+        browser,
+        paths.rowUrl(paths.CRUM_ROOTS_URL, rowNum),
+        true
+      )
+    );
   });
 }
