@@ -103,6 +103,12 @@ export const MAPPING: Record<string, Annotation> = {
   '?': { fullForm: 'perhaps, possibly' },
 
   // SECTION 2: ABBREVIATIONS WE CHOOSE TO INCLUDE TO AID INTELLIGIBILITY.
+  '1 sg': { fullForm: 'first person singular' },
+  '2 sg': { fullForm: 'second person singular' },
+  '3 sg': { fullForm: 'third person singular' },
+  '1 pl': { fullForm: 'first person plural' },
+  '2 pl': { fullForm: 'second person plural' },
+  '3 pl': { fullForm: 'third person plural' },
   '&c': { fullForm: 'et cetera' },
   AD: { fullForm: 'Anno Domini', noCaseVariant: true },
   adv: { fullForm: 'adverb' },
