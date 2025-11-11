@@ -34,13 +34,8 @@ def _print_next_key(keys: abc.Container[str]) -> None:
     print(next(i for i in itertools.count(1) if str(i) not in keys))
 
 
-# Why do we choose to store the row numbers in a JavaScript file, instead of a
-# JSON?
-# - Our Crum pipeline generates another JSON, namely the Xooxle index. By
-#   writing the row mapping to a JavaScript files, the command `git diff
-#   "*.json"` only shows the Xooxle index delta, which makes manual verification
-#   of pipeline runs easier.
-# - Less importantly, we have difficulty reading JSON files on Anki.
+# We have difficulty reading JSON files on Anki, so we generate the row number
+# mapping in a JavaScript file.
 def _row_nums_js(mapping: abc.Iterable[tuple[int, int]]) -> abc.Generator[str]:
     yield "/* eslint-disable max-lines */"
     yield "export const MAPPING = {"
