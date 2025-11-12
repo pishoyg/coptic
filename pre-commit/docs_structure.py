@@ -140,7 +140,7 @@ PATTERNS: list[Pattern] = [
     # Auto-generated (dawoud):
     Pattern(["dawoud/*.png"]),  # Dawoud scan is a PNG.
     # Garbage:
-    Pattern([".DS_Store"], required=False, print_=False),
+    Pattern([".DS_Store", "**/.DS_Store"], required=False, print_=False),
 ]
 
 
