@@ -279,11 +279,11 @@ export function handlePages(root: HTMLElement): void {
     PAGE_RE,
     (
       match: RegExpExecArray,
-      _: string,
+      remainder: string,
       nextSibling: ChildNode | null
     ): { replacement?: Node } => {
       const col: string | null | undefined = nextSibling?.textContent;
-      if (!nextSibling || !col || (col !== 'a' && col !== 'b')) {
+      if (!nextSibling || remainder || (col !== 'a' && col !== 'b')) {
         // We can't get the column!
         log.error('Unable to infer column for the page reference:', match[0]);
         return {};
