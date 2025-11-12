@@ -92,9 +92,11 @@ class Substitution:
 # an `or` operator. We also add a comment explaining the rationale for the
 # override.
 _SUBSTITUTIONS: list[Substitution] = [
-    # The ampersand rule doesn't make sense. It replaces occurrences of `&amp`
-    # with `&`, although we should be using the former in HTML!
-    Substitution("ampersand", r"&amp;", r"&amp;" or "&", text_repl="&"),
+    # Replace occurrences of ampersand with the HTML encoding.
+    # NOTE: While most browsers and pipelines can deal with a literal ampersand,
+    # BeautifulSoup often misinterprets the combination "&c;" so we convert it
+    # explicitly.
+    Substitution("ampersand", "&", "&amp;", text_repl="&"),
     # The asterisk is not a reserved character in modern HTML, so we don't need
     # to use `&ast;`. However, using a plain asterisk risks conflicting with the
     # bold rule below. We therefore leave it up to our linters to replace
