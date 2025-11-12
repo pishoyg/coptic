@@ -33,7 +33,7 @@ _SCRIPT_DIR: pathlib.Path = pathlib.Path(__file__).parent
 COMPREHENSIVE: pathlib.Path = (
     _SCRIPT_DIR
     / "data"
-    / "raw"
+    / "input"
     / "v1.2"
     / "Comprehensive_Coptic_Lexicon-v1.2-2020.xml"
 )
