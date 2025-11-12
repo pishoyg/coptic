@@ -259,9 +259,9 @@ export function handlePages(root) {
   html.replaceText(
     root,
     PAGE_RE,
-    (match, _, nextSibling) => {
+    (match, remainder, nextSibling) => {
       const col = nextSibling?.textContent;
-      if (!nextSibling || !col || (col !== 'a' && col !== 'b')) {
+      if (!nextSibling || remainder || (col !== 'a' && col !== 'b')) {
         // We can't get the column!
         log.error('Unable to infer column for the page reference:', match[0]);
         return {};
