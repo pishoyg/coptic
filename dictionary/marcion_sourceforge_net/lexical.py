@@ -409,7 +409,7 @@ class CrumPage:
         assert len(match.groups()) == 2
         self.num = int(match.groups()[0])
         self.col = match.groups()[1]
-        assert self.num >= 0 and self.num <= constants.CRUM_LAST_PAGE_NUM
+        assert self.num >= 0 and self.num <= constants.CRUM_LAST_PAGE
         assert self.col in {"a", "b"}
 
     def _parts(self) -> tuple[int, str]:

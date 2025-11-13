@@ -8,7 +8,9 @@ import itertools
 import pathlib
 from collections import abc
 
-from dictionary.marcion_sourceforge_net import crum
+import pandas as pd
+
+from dictionary.marcion_sourceforge_net import constants, crum, wiki
 from utils import file, paths
 
 _argparser = argparse.ArgumentParser("Generate Crum artifacts (by default).")
@@ -53,6 +55,48 @@ def _write_row_nums(
     file.write("".join(_row_nums_js(mapping)), dst)
 
 
+class Page:
+    """Page represents the range of a page in Crum's dictionary."""
+
+    def __init__(self, num: int, start: str, end: str) -> None:
+        self.num: int = num
+        self.start: str = start
+        self.end: str = end
+
+    def entry(self) -> dict[str, str | int]:
+        return {"page": self.num, "start": self.start, "end": self.end}
+
+
+def _scan_index() -> abc.Generator[Page]:
+    """
+    Generate the Crum scan index, filling in gaps.
+
+    Yields:
+        Page objects representing pages in Crum's dictionary and their range.
+    """
+    last: Page | None = None
+    for page_num, group_iter in itertools.groupby(
+        wiki.records(),
+        key=lambda w: w.crum.num,
+    ):
+        assert 1 <= page_num <= constants.CRUM_LAST_PAGE
+        if last:
+            assert page_num >= last.num
+        group = list(group_iter)
+        cur: Page = Page(
+            page_num,
+            group[0].lexicographic_key,
+            group[-1].lexicographic_key,
+        )
+        # Some pages don't have headwords and aren't represented in the list of
+        # Wiki objects. Fill in such gaps.
+        if last:
+            for num in range(last.num + 1, cur.num):
+                yield Page(num, last.end, last.end)
+        yield cur
+        last = cur
+
+
 def main():
     args = _argparser.parse_args()
     if args.root_key:
@@ -63,6 +107,15 @@ def main():
             {d.key for r in crum.Crum.roots.values() for d in r.derivations},
         )
         return
+
+    # No commands given, just write the artifacts.
+
+    # Write the Crum scan index.
+    df: pd.DataFrame = pd.DataFrame(p.entry() for p in _scan_index())
+    assert len(df) == constants.CRUM_LAST_PAGE
+    file.to_tsv(df, paths.file(paths.CRUM_SCAN_DIR, "coptic.tsv"))
+
+    # Write the sheet row number mappings.
     _write_row_nums(
         ((root.num, root.row_num) for root in crum.Crum.roots.values()),
         paths.CRUM_ROOTS_ROW_NUMS,

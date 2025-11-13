@@ -27,7 +27,10 @@ MAX_KEY: int = 3385
 # NOTE: Our derivations table layout can accommodate a maximum depth of 4. If
 # this were to change, the table layout needs to be redesigned. See `tree.py`.
 MAX_DERIVATION_DEPTH: int = 4
-CRUM_LAST_PAGE_NUM: int = 953
+
+# While the book has an appendix, we only consider the pages containing word
+# definitions. Those range from 1 to 844.
+CRUM_LAST_PAGE: int = 844
 
 # Regular expressions used for parsing.
 DIALECTS_RE: re.Pattern[str] = re.compile(

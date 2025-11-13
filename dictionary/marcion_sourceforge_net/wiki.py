@@ -15,7 +15,7 @@ from collections import abc
 
 from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import lexical as lex
-from utils import ensure, gcp
+from utils import ensure, gcp, lang, orth
 
 _argparser: argparse.ArgumentParser = argparse.ArgumentParser()
 
@@ -268,6 +268,38 @@ class Wiki:
         self.wip: bool = bool(wip)
         del wip
 
+    @functools.cached_property
+    def lexicographic_key(self) -> str:
+        """Get the key used to sort the word lexicographically.
+
+        Returns:
+            A stripped representation of the headword, used to determine the
+            word's alphabetical position in the dictionary.
+        """
+        # Remove all parentheses.
+        headword: str = self.headword.replace("(", "").replace(")", "")
+        # Remove the superscript if present.
+        if headword.endswith("^1"):
+            headword = headword[:-2]
+        # Remove the prefix.
+        if headword.startswith("-"):
+            headword = headword[1:]
+        # Remove the suffix.
+        if headword[-1] in "-⸗†":
+            headword = headword[:-1]
+        # If the headword consists of multiple words, select the first one.
+        headword = re.split(r"[ ,]", headword, 1)[0]
+        # Remove all diacritics.
+        headword = orth.clean_diacritics(headword)
+
+        ensure.ensure(
+            all(map(lang.is_coptic_char, headword)),
+            "can not determine the lexicographic key of",
+            self.headword,
+        )
+
+        return headword
+
     def __lt__(self, other: typing.Self) -> bool:
         assert self.key == other.key
         # We want non-vide entries to appear before vide entries. Other than
@@ -307,7 +339,7 @@ class Wiki:
         return self.headword
 
 
-def _wikis() -> abc.Generator[Wiki]:
+def records() -> abc.Generator[Wiki]:
     for record in gcp.tsv_spreadsheet(SHEET_TSV_URL).to_dict(orient="records"):
         # Some vide entries have multiple keys.
         keys: list[str] = record["Marcion"].split(",")
@@ -323,7 +355,7 @@ def _wikis() -> abc.Generator[Wiki]:
 
 @functools.cache
 def wikis() -> dict[str, list[Wiki]]:
-    entries: list[Wiki] = list(_wikis())
+    entries: list[Wiki] = list(records())
     # Remove entries that don't have a key.
     entries = [w for w in entries if w.key]
     # First bring all entries with the same key together, so we can group they

@@ -111,6 +111,7 @@ PATTERNS: list[Pattern] = [
     Pattern(["**.ts"]),
     # Data files:
     Pattern(["dawoud/*.tsv"]),
+    Pattern(["crum/crum/*.tsv"]),
     Pattern(["img/**"]),
     Pattern(["fonts/**"]),
     Pattern([".nojekyll"]),

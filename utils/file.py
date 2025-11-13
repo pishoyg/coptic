@@ -130,3 +130,4 @@ def read_tsv(tsv: str | io.StringIO | pathlib.Path, **kwargs) -> pd.DataFrame:
 
 def to_tsv(df: pd.DataFrame, path: str | pathlib.Path) -> None:
     df.to_csv(path, sep="\t", index=False)
+    log.wrote(path)
