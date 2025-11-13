@@ -169,7 +169,11 @@ export default tseslint.config(
       ],
       'no-magic-numbers': [
         'error',
-        { ignore: [0, 1, -1, 2], ignoreArrayIndexes: true, enforceConst: true },
+        {
+          ignore: [0, 1, -1, 2, -2],
+          ignoreArrayIndexes: true,
+          enforceConst: true,
+        },
       ],
       'max-depth': ['error', 3],
       'no-shadow': 'off',
