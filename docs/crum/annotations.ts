@@ -145,6 +145,7 @@ export const MAPPING: Record<string, Annotation> = {
   'q v': { fullForm: 'quod vide' },
   's v': { fullForm: 'sub verbo' },
   sic: { fullForm: 'sic erat scriptum' },
+  'sic l': { fullForm: 'sic lege' },
   sc: { fullForm: 'scilicet' },
   subj: { fullForm: 'subject' },
   sup: { fullForm: 'supra' },
