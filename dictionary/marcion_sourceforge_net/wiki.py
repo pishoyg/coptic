@@ -6,6 +6,10 @@
 # keys) is fully populated. Revisit this module, replacing this filters with
 # assertions where appropriate.
 
+# TODO: (#0) Consider the following simplifications of the substitution rules:
+# - Use an actual newline character instead of the "\n" token.
+# - The headword notation is simply unnecessary.
+
 import argparse
 import functools
 import itertools
@@ -102,8 +106,12 @@ _SUBSTITUTIONS: list[Substitution] = [
     # bold rule below. We therefore leave it up to our linters to replace
     # the occurrences of `&ask;` produced here with a literal asterisk.
     Substitution("asterisk", r"\\\*", "&ast;", text_repl="*"),
-    # TODO: (#546): The tab rule is currently unused. Fix Tab characters.
-    Substitution("tab", r"\n", "</p><p>", text_repl="\n"),
+    Substitution(
+        "tab",
+        r"\\t",
+        '</span><span class="subparagraph">',
+        text_repl="    ",
+    ),
     Substitution("em", r"__(.+?)__", r"<em>\1</em>", md_repl=r"*\1*"),
     Substitution(
         "bold",
@@ -202,7 +210,12 @@ _SUBSTITUTIONS: list[Substitution] = [
         "†" or r"<sup>†</sup>",
         text_repl="†",
     ),
-    Substitution("lineBreaks", r"\\n", "</p><p>", text_repl="\n"),
+    Substitution(
+        "lineBreaks",
+        r"\\n",
+        '</span></p><p><span class="subparagraph">',
+        text_repl="\n",
+    ),
 ]
 # pylint: enable=line-too-long
 
@@ -321,9 +334,11 @@ class Wiki:
             yield "</span>"
         raw: str = self.entry
         yield "<p>"
+        yield '<span class="subparagraph">'
         for s in _SUBSTITUTIONS:
             raw = s.html(raw)
         yield raw
+        yield "</span>"
         yield "</p>"
 
     @functools.cached_property
