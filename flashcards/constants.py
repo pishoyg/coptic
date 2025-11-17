@@ -847,6 +847,7 @@ CRUM_XOOXLE = xooxle.Xooxle(
                 "amharic",
                 "hebrew",
                 "aramaic",
+                "subparagraph",
             },
             unit_tags={"p"},
         ),
