@@ -86,7 +86,7 @@ export const ANNOTATION_RES: RegExp[] = [
   new RegExp([str.bounded('[a-zA-Z]+'), '\\?', '†', 'ⲛ̅ⲉ̅'].join('|'), 'gu'),
 ];
 
-export const PAGE_RE = new RegExp(str.bounded('p ([0-9]+) '));
+export const PAGE_RE = new RegExp(str.bounded('p ([0-9]+)'));
 
 // Pay attention to the following:
 // - Reference abbreviations always start with a capital letter. This must be
@@ -281,19 +281,27 @@ export function handlePages(root: HTMLElement): void {
       match: RegExpExecArray,
       remainder: string,
       nextSibling: ChildNode | null
-    ): { replacement?: Node } => {
-      const col: string | null | undefined = nextSibling?.textContent;
-      if (!nextSibling || remainder || (col !== 'a' && col !== 'b')) {
-        // We can't get the column!
-        log.error('Unable to infer column for the page reference:', match[0]);
-        return {};
-      }
+    ): { replacement?: Node; remainder: string } => {
+      // A page number has the ormat 'p [0-9]+ [ab]?'. The regex matches the
+      // first two parts (the letter "p" and the page number). The column number
+      // lives in an <i> tag, which should be the next sibling.
+      // However, we only inspect it if the remainder of the current string is
+      // a single space character that sits between the page number and the
+      // column name.
+      const col: string =
+        remainder === ' ' ? (nextSibling?.textContent ?? '') : '';
       const a: HTMLAnchorElement = document.createElement('a');
       a.href = paths.crumScan(`${match[1]!}${col}`);
       a.target = '_blank';
       a.textContent = match[0];
-      a.append(nextSibling);
-      return { replacement: a };
+      if (col && nextSibling) {
+        // We actually got the column from the next sibling.
+        a.append(' ', nextSibling);
+        // Reset the remainder. It was a single space character, but we've
+        // just added a corresponding character to the constructed anchor.
+        remainder = '';
+      }
+      return { replacement: a, remainder };
     },
     // Exclude all Wiki abbreviations to avoid overlap.
     ABBREVIATION_EXCLUDE
