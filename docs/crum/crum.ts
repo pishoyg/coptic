@@ -306,9 +306,13 @@ export function handleDialect(
     .forEach((el: HTMLElement): void => {
       const code: dial.DIALECT = el.textContent.trim() as dial.DIALECT;
       if (!(code in dial.DIALECTS)) {
-        // There is a, so far singleton, occurrence of `Bf` (Bohairic with
-        // Fayyumic tendency) under `ϫⲟⲗ, ϭⲁⲗ (wave)` that forces us to account
-        // for the case that a dialect tag may contain an unknown dialect code.
+        // There are (extremely rare) but known occurrences of irregular
+        // dialects, namely:
+        // - `Bf` (Bohairic with Fayyumic tendency) under `ϫⲟⲗ (wave)`
+        // - `Saf` (Sahidic with Akhmimic and Fayyumic tendency) under ⲥⲟⲉⲓϣ
+        //   (pair).
+        // For know, we simply ignore them.
+        // TODO: (#0) Consider at least prettifying their appearance.
         log.warn('Unknown dialect', code);
         return;
       }

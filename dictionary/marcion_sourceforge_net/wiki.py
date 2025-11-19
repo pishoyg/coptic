@@ -137,12 +137,13 @@ _SUBSTITUTIONS: list[Substitution] = [
     ),
     Substitution(
         "subdialect",
-        # While not explicitly mentioned in Crum's intro, there are apparently
-        # some occurrences of B^f (Bohairic with Fayyumic tendency), e.g. in
-        # ϫⲟⲗ[1].
+        # While not explicitly mentioned in Crum's intro, there is apparently an
+        # occurrence of B^f in ϫⲟⲗ[1], and an occurrence of S^af in ⲥⲟⲉⲓϣ[2].
+        # (And maybe they occur elsewhere.)
         #
-        # [1] https://remnqymi.com/crum/2391.html#wiki.
-        r"\[\[(S|F|B)\^(a|f|b)\]\]",
+        # [1] https://remnqymi.com/crum/2391.html.
+        # [2] https://remnqymi.com/crum/363.html
+        r"\[\[(S|F|B)\^(a|f|b|af)\]\]",
         # Again, we have our own way of managing border dialects. We don't store
         # styling in the HTML.
         r'<span class="dialect \1\2">\1\2</span>'
