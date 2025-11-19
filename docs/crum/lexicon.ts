@@ -384,11 +384,15 @@ async function main(): Promise<void> {
   );
 
   // Create the help panel.
-  help.makeHelpPanel(highlighter, new dev.Highlighter());
+  const devHighlighter: dev.Highlighter = new dev.Highlighter();
+  help.makeHelpPanel(highlighter, devHighlighter);
 
   // Add event listener for reports.
   // TODO: (#203) This belongs in the (future) header module.
   document.getElementById(id.REPORTS)!.addEventListener('click', head.reports);
+
+  // TODO: (#203) Implement in the `header` package.
+  crum.handleDeveloper(document.body, devHighlighter);
 }
 
 await main();
