@@ -364,6 +364,10 @@ def records() -> abc.Generator[Wiki]:
                 "Non-vide entries has several Marcion keys:",
                 record,
             )
+        if keys == ["TBD"]:
+            # This entry is not in Marcion yet!
+            # TODO: (#508) All Crum entry should have a Marcion entry.
+            continue
         for key in keys:
             yield Wiki(key, record)
 
