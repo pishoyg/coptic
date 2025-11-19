@@ -180,8 +180,14 @@ table {
 }
 
 .wiki .crum-page {
+  /* Make it behave like a block so we can center it */
   display: block;
-  text-align: center;
+
+  /* Shrink the width to only wrap the text "250a" */
+  width: fit-content;
+
+  /* Center the block horizontally */
+  margin: 0 auto;
 }
 
 .front {
