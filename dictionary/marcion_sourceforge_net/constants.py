@@ -160,16 +160,24 @@ PREPROCESSING: list[tuple[str, str]] = [
     # "ⲁⲑⲟⲩ.", which could be handy (though it doesn't have an apparent usage
     # today).
     ("..", ""),
-    # Crum often wrote derivations with a space, including in cases where the
-    # combination is considered, according to our modern standards, a single
-    # word.
-    # For example, ‘ϯⲟⲩⲱⲓⲛⲓ’ is written as ‘ϯ ⲟⲩ.’. We would write this in our
-    # data source as ‘ϯ_ⲟⲩⲱⲓⲛⲓ’, expanding ‘ⲟⲩ.’ to its full form, and replacing
-    # the space with an underscore.
-    # For now, we opt for simply omitting this underscore from the output.
-    # In cases where the two parts are considered separate words in our
-    # standard, we retain the space as is.
+    # Crum often wrote derivations with a space.
+    # 1. In cases where the combination is considered, according to our own
+    #    spacing standard, a single word, we would replace the space with an
+    #    underscore.
+    #    - For example, ‘ϯⲟⲩⲱⲓⲛⲓ’ is written as ‘ϯ ⲟⲩ.’. We would write this in
+    #      our data source as ‘ϯ_ⲟⲩⲱⲓⲛⲓ’, expanding ‘ⲟⲩ.’ to its full form, and
+    #      replacing the space with an underscore.
+    # 2. In cases where the two parts are considered separate words in our
+    #    spacing standard (i.e. our spacing criteria match Crum's), we do
+    #    nothing – retaining the space as is.
+    # 3. In cases where we would like to insert a space where Crum didn't have
+    #    one, we use a double underscore.
+    #
+    # It is important to use this underscore notation, instead of simply
+    # changing the spacing, in order to be able to construct the original
+    # spacing used by Crum if needed.
     ("_", ""),
+    ("__", " "),
 ]
 
 # NOTE: As of the time of writing, some of these annotations occur only once in
