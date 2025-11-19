@@ -176,8 +176,8 @@ PREPROCESSING: list[tuple[str, str]] = [
     # It is important to use this underscore notation, instead of simply
     # changing the spacing, in order to be able to construct the original
     # spacing used by Crum if needed.
-    ("_", ""),
     ("__", " "),
+    ("_", ""),
 ]
 
 # NOTE: As of the time of writing, some of these annotations occur only once in
