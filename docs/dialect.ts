@@ -5,9 +5,6 @@ import * as log from './logger.js';
 const SEPARATOR = ',';
 
 export enum CLS {
-  // BORDER_DIALECT_LETTER is the class of the second letter of a border dialect
-  // code.
-  BORDER_DIALECT_LETTER = 'border-dialect-letter',
   // SIGLUM is the class of a prettified dialect siglum.
   SIGLUM = 'siglum',
 }
@@ -105,7 +102,6 @@ export class Dialect<C extends string, N extends string, K extends string> {
     ) {
       // This is a border dialect siglum.
       const sup = document.createElement('sup');
-      sup.classList.add(CLS.BORDER_DIALECT_LETTER);
       sup.textContent = second;
       siglum.append(first, sup);
       return siglum;
