@@ -121,7 +121,7 @@ def closing_tag(token: str) -> bool:
     return token.startswith("</")
 
 
-def _tag_name(token: str) -> str:
+def tag_name(token: str) -> str:
     match: re.Match[str] | None = page.TAG_RE.fullmatch(token)
     assert match, token
     return match.group(1)
@@ -129,7 +129,7 @@ def _tag_name(token: str) -> str:
 
 def verify_balanced(opening: str, closing: str) -> None:
     ensure.ensure(
-        _tag_name(opening) == _tag_name(closing),
+        tag_name(opening) == tag_name(closing),
         "Unbalanced tags!",
         opening,
         "followed by",

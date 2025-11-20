@@ -296,8 +296,7 @@ class Capture:
         return "".join(parts)
 
     def _close(self, tag: str) -> str:
-        name: str = tag[1 : tag.index(" ")]
-        return f"</{name}>"
+        return f"</{clean.tag_name(tag)}>"
 
     def _balance_lines(self, stream: Iterable[str]) -> Generator[str]:
         """Make sure every unit and line in the stream has balanced tags.
