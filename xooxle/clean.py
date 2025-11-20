@@ -12,7 +12,7 @@ from collections.abc import Generator, Iterable
 from itertools import groupby
 from typing import Callable
 
-from utils import page
+from utils import ensure, log, page
 from xooxle import constants as const
 
 IterOfIters = Iterable[Iterable[str]]  # pylint: disable=invalid-name
@@ -128,6 +128,14 @@ def _tag_name(token: str) -> str:
 
 
 def _filter_empty_tags(line: Iterable[str]) -> list[str]:
+    """Eliminate opening tags immediately followed by their closing tags.
+
+    Args:
+        line: A stream of Xooxle tokens.
+
+    Returns:
+        A list representing the input stream, with empty tags omitted.
+    """
     stack: list[str] = []
     for token in line:
         if not _closing_tag(token):
@@ -138,18 +146,24 @@ def _filter_empty_tags(line: Iterable[str]) -> list[str]:
         # opening tag on top.
         # Since the current token is a closing tag, the stack is guaranteed not
         # to be empty.
-        assert stack
-        stack_top: str = stack[-1]
-        if not _opening_tag(token):
-            # The stack top doesn't have an opening tag.
+        ensure.ensure(
+            stack,
+            "Unbalanced tags! Encountered ",
+            token,
+            "on an empty stack!",
+        )
+        top: str = stack[-1]
+        if not _opening_tag(top):
+            # The stack top is not an opening tag.
             stack.append(token)
             continue
-        if _tag_name(token) == _tag_name(stack_top):
-            # An opening tag is immediately followed by the corresponding
-            # closing tag. Remove the opening tag from the stack, and continue.
-            _ = stack.pop()
-            continue
-        stack.append(token)
+        # An opening tag is immediately followed by the corresponding
+        # closing tag. Remove the opening tag from the stack, and skip adding
+        # the current token.
+        ensure.ensure(_tag_name(token) == _tag_name(top))
+        log.warn("Removing empty tag:", top)
+        _ = stack.pop()
+
     return stack
 
 
