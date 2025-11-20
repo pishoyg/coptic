@@ -12,7 +12,7 @@ from collections.abc import Generator, Iterable
 from itertools import groupby
 from typing import Callable
 
-from utils import ensure, log, page
+from utils import ensure, page
 from xooxle import constants as const
 
 IterOfIters = Iterable[Iterable[str]]  # pylint: disable=invalid-name
@@ -113,11 +113,11 @@ def _strip_line_start(line: Iterable[str]) -> Generator[str]:
         assert token.isspace() and not found_non_space
 
 
-def _opening_tag(token: str) -> bool:
-    return token.startswith("<") and not _closing_tag(token)
+def opening_tag(token: str) -> bool:
+    return token.startswith("<") and not closing_tag(token)
 
 
-def _closing_tag(token: str) -> bool:
+def closing_tag(token: str) -> bool:
     return token.startswith("</")
 
 
@@ -125,6 +125,16 @@ def _tag_name(token: str) -> str:
     match: re.Match[str] | None = page.TAG_RE.fullmatch(token)
     assert match, token
     return match.group(1)
+
+
+def verify_balanced(opening: str, closing: str) -> None:
+    ensure.ensure(
+        _tag_name(opening) == _tag_name(closing),
+        "Unbalanced tags!",
+        opening,
+        "followed by",
+        closing,
+    )
 
 
 def _filter_empty_tags(line: Iterable[str]) -> list[str]:
@@ -138,7 +148,7 @@ def _filter_empty_tags(line: Iterable[str]) -> list[str]:
     """
     stack: list[str] = []
     for token in line:
-        if not _closing_tag(token):
+        if not closing_tag(token):
             # This is not a closing tag. Just add it to the stack.
             stack.append(token)
             continue
@@ -153,15 +163,14 @@ def _filter_empty_tags(line: Iterable[str]) -> list[str]:
             "on an empty stack!",
         )
         top: str = stack[-1]
-        if not _opening_tag(top):
+        if not opening_tag(top):
             # The stack top is not an opening tag.
             stack.append(token)
             continue
         # An opening tag is immediately followed by the corresponding
         # closing tag. Remove the opening tag from the stack, and skip adding
         # the current token.
-        ensure.ensure(_tag_name(token) == _tag_name(top))
-        log.warn("Removing empty tag:", top)
+        verify_balanced(top, token)
         _ = stack.pop()
 
     return stack

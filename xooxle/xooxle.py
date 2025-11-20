@@ -291,8 +291,61 @@ class Capture:
 
         """
         parts: Iterable[str] = self._get_tag_html(tag)
+        parts = self._balance_lines(parts)
         parts = clean.clean(parts)
         return "".join(parts)
+
+    def _close(self, tag: str) -> str:
+        name: str = tag[1 : tag.index(" ")]
+        return f"</{name}>"
+
+    def _balance_lines(self, stream: Iterable[str]) -> Generator[str]:
+        """Make sure every unit and line in the stream has balanced tags.
+
+        For example, consider the following input:
+            <span class="wiki">
+            hello
+            <br>
+            world
+            </span>
+
+        The output stream should look like this:
+            <span class="wiki">
+            hello
+            </span>
+            <br>
+            <span class="wiki">
+            world
+            </span>
+
+        Args:
+            stream: A stream of Xooxle tokens.
+
+        Yields:
+            A stream of Xooxle tokens where every unit and line is guaranteed to
+            have balanced tags.
+        """
+        stack: list[str] = []
+        for token in stream:
+
+            if token in [const.UNIT_DELIMITER, page.LINE_BREAK]:
+                yield from map(self._close, reversed(stack))
+                yield token
+                yield from stack
+                continue
+
+            yield token
+
+            if clean.closing_tag(token):
+                clean.verify_balanced(stack.pop(), token)
+            elif clean.opening_tag(token):
+                stack.append(token)
+
+        ensure.ensure(
+            not stack,
+            "The input stream is not balanced! Remaining tags:",
+            stack,
+        )
 
     def _get_tag_html(self, child: bs4.Tag) -> Generator[str]:
         if child.name in self._unit_tags:
