@@ -549,7 +549,6 @@ body.dev {
 }
 
 .geo {
-  color: darkred;
   width: 10%;
   text-align: center;
 }
@@ -557,7 +556,6 @@ body.dev {
 /* stylelint-disable selector-class-pattern */
 
 .gram_grp {
-  color: gray;
   font-style: italic;
 }
 
