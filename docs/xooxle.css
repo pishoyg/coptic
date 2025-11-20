@@ -17,7 +17,8 @@
 
 .match-separator {
   color: gray;
-  margin: 3px 10px;
+  width: 80%;
+  margin: 3px auto;
 }
 
 .view-for-more {
