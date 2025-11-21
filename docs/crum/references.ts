@@ -1994,6 +1994,7 @@ const DATA: Resource[] = [
       'MIF',
       'Mich',
       'Miss',
+      'Mun',
       'P',
       'R',
       'RE',
@@ -2257,7 +2258,7 @@ const DATA: Resource[] = [
       title: 'Vienna, MSS. & ostraca in the Staats(olim Hof)bibliothek',
     },
     variants: ['Vi'],
-    postfixes: ['K', 'Sitz'],
+    postfixes: ['K', 'Sitz', 'ostr'],
   },
   {
     source: {
