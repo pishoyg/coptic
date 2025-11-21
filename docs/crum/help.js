@@ -126,6 +126,15 @@ export function makeHelpPanel(highlighter, devHighlighter) {
         browser.yank(browser.stem(window.location.pathname));
       }),
     ],
+    u: [
+      new help.Shortcut(
+        'Copy the URL, encoding the fragment appropriately.',
+        ['note', 'lexicon'],
+        () => {
+          browser.yank(browser.urlWithFragment());
+        }
+      ),
+    ],
   };
   const search = {
     w: [

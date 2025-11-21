@@ -178,3 +178,27 @@ export function removeFragment() {
   // if any.
   window.location.reload();
 }
+/**
+ * Copies the current page URL to the clipboard.
+ * It specifically looks for an existing Text Fragment (#:~:text=) in the URL.
+ * If found, it ensures that any dashes (-) within the text content are encoded
+ * to %2D to comply with specific encoding requirements, while preserving
+ * the syntax separators (-, and ,-).
+ * This is to work around an issue in Chromium:
+ * https://issues.chromium.org/issues/462468375
+ * @returns
+ */
+export function urlWithFragment() {
+  const href = window.location.href;
+  let [baseURL, fragment] = href.split('#:~:text=', 2);
+  if (baseURL === undefined || fragment === undefined) {
+    [baseURL, fragment] =
+      performance
+        .getEntriesByType('navigation')[0]
+        ?.name.split('#:~:text=', 2) ?? [];
+  }
+  if (!baseURL || !fragment) {
+    return href;
+  }
+  return `${baseURL}#:~:text=${fragment.replace(/(?<!,)-(?!,)/g, '%2D')}`;
+}
