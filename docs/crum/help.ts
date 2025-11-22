@@ -198,8 +198,9 @@ export function makeHelpPanel(
     ],
     C: [
       new help.Shortcut('Crum', ['lexicon'], () => {
-        browser.scroll(id.CRUM_TITLE);
+        browser.scroll(id.title(id.CRUM));
       }),
+      // TODO: (#575) Remove this shortcut.
       new help.Shortcut('Crum pages', ['note'], () => {
         browser.scroll(id.CRUM);
       }),
@@ -209,13 +210,13 @@ export function makeHelpPanel(
         `<a href="${paths.KELLIA}" target="_blank" rel="noopener,noreferrer"><strong>K</strong>ELLIA</a>`,
         ['lexicon'],
         () => {
-          browser.scroll(id.KELLIA_TITLE);
+          browser.scroll(id.title(id.KELLIA));
         }
       ),
     ],
     T: [
       new help.Shortcut('Andreas', ['lexicon'], () => {
-        browser.scroll(id.ANDREAS_TITLE);
+        browser.scroll(id.title(id.ANDREAS));
       }),
     ],
     D: [
@@ -300,7 +301,7 @@ export function makeHelpPanel(
   const collapse = {
     c: [
       new help.Shortcut('Crum', ['lexicon'], () => {
-        browser.click(id.CRUM_TITLE);
+        browser.click(id.collapse(id.CRUM));
       }),
     ],
     k: [
@@ -308,13 +309,13 @@ export function makeHelpPanel(
         `<a href="${paths.KELLIA}" target="_blank" rel="noopener,noreferrer"><strong>K</strong>ELLIA</a>`,
         ['lexicon'],
         () => {
-          browser.click(id.KELLIA_TITLE);
+          browser.click(id.collapse(id.KELLIA));
         }
       ),
     ],
     t: [
       new help.Shortcut('Andreas', ['lexicon'], () => {
-        browser.click(id.ANDREAS_TITLE);
+        browser.click(id.collapse(id.ANDREAS));
       }),
     ],
   };

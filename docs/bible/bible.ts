@@ -2,6 +2,7 @@
 
 import * as coll from '../collapse.js';
 import * as log from '../logger.js';
+import * as cls from './cls.js';
 
 const BOOK_PARAM = 'book';
 
@@ -28,7 +29,16 @@ function maybeGoToBook(): void {
  *
  */
 function main(): void {
-  coll.addEventListenersForSiblings();
+  document
+    .querySelectorAll<HTMLElement>(`.${cls.INDEX_BOOK_NAME}`)
+    .forEach((collapse: HTMLElement): void => {
+      new coll.Collapsible(
+        collapse,
+        // In our index, the collapsibles conveniently happen to be the
+        // immediate next siblings of title elements.
+        collapse.nextElementSibling as HTMLElement
+      );
+    });
   maybeGoToBook();
 }
 

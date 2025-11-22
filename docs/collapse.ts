@@ -1,5 +1,6 @@
 /** Package collapse defines logic to control collapsible elements. */
 import * as log from './logger.js';
+import * as browser from './browser.js';
 
 const enum CLS {
   // COLLAPSE is the class of elements that, when clicked, trigger a collapse
@@ -10,21 +11,61 @@ const enum CLS {
   IS_OPEN = 'is-open',
 }
 
+type Param = 'true' | 'false';
+
 /**
  * Collapsible represents an element that can collapse, becoming visible /
  * invisible as needed.
  */
-class Collapsible {
+export class Collapsible {
   /**
    *
-   * @param collapsible
    * @param collapse
+   * @param collapsible
+   * @param param - An optional name of a URL search parameter that controls
+   * whether this collapsible should be visible or not upon page load.
+   * NOTE: If no parameter is specified, then the collapsible state is entirely
+   * determined by clicks on the `collapse` element.
+   * If a parameter is specified, then the state is determined by the parameter,
+   * defaulting to expansion if the parameter is absent.
    */
   public constructor(
+    private readonly collapse: HTMLElement,
     private readonly collapsible: HTMLElement,
-    private readonly collapse: HTMLElement
+    private readonly param?: string
   ) {
+    log.ensure(
+      this.collapse.classList.contains(CLS.COLLAPSE),
+      'A collapse element must have the',
+      CLS.COLLAPSE,
+      'class!'
+    );
+    log.ensure(
+      this.collapsible.classList.contains(CLS.COLLAPSIBLE),
+      'A collapsible element must have the',
+      CLS.COLLAPSIBLE,
+      'class!'
+    );
     this.collapse.addEventListener('click', this.toggle.bind(this));
+    // The constructor is called when the page is first loaded. The parameter,
+    // if present, instructs us as to whether we should expand or collapse the
+    // collapsible.
+    if (!this.param) {
+      // If this collapsible is not parameter-controlled, there is nothing to
+      // do.
+      return;
+    }
+
+    // This collapsible is controlled by a parameter.
+    const val: Param | null = new URL(window.location.href).searchParams.get(
+      this.param
+    ) as Param | null;
+    if (val === null || val === 'true') {
+      this.show();
+    } else {
+      // val === 'false'
+      this.hide();
+    }
   }
 
   /**
@@ -32,6 +73,20 @@ class Collapsible {
    */
   private visible(): boolean {
     return this.collapse.classList.contains(CLS.IS_OPEN);
+  }
+
+  /**
+   *
+   */
+  private show(): void {
+    if (!this.visible()) this.toggle();
+  }
+
+  /**
+   *
+   */
+  private hide(): void {
+    if (this.visible()) this.toggle();
   }
 
   /**
@@ -52,6 +107,20 @@ class Collapsible {
 
   /**
    *
+   * @param val
+   */
+  private setParam(val: Param): void {
+    if (!this.param) {
+      // There is no param!
+      return;
+    }
+    // The absence of the parameter is equivalent to the parameter being set to
+    // 'true', so we just remove the parameter in this case.
+    browser.setParam(this.param, val === 'true' ? undefined : val);
+  }
+
+  /**
+   *
    */
   public toggle(): void {
     // Toggle classes. CSS takes care of resizing.
@@ -62,7 +131,10 @@ class Collapsible {
     // which normally render outside the collapsible.
     // During the transition, the overflow is always hidden.
     this.setOverflow('hidden');
-    if (!this.visible()) {
+    if (this.visible()) {
+      this.setParam('true');
+    } else {
+      this.setParam('false');
       // The overflow property doesn't need to change.
       return;
     }
@@ -85,31 +157,20 @@ class Collapsible {
 }
 
 /**
- * addListenersForSiblings initializes pairs of `collapse` and `collapsible`
- * elements in the page, such that clicking a `collapse` element collapses the
- * `collapsible`.
- * NOTE:
- * - Collapse (clickable) elements have the class `collapse`.
- * - Collapsible elements have the class `collapsible`.
- * - The `collapsible` elements are the siblings immediately following
- *   collapse` elements.
- * See the related CSS.
  *
- * @param toggleUponLoad - If true, toggle once after loading.
+ * @param collapseID
+ * @param collapsibleID
+ * @param param
+ * @returns
  */
-export function addEventListenersForSiblings(toggleUponLoad = false): void {
-  document
-    .querySelectorAll<HTMLElement>(`.${CLS.COLLAPSE}`)
-    .forEach((collapse: HTMLElement): void => {
-      const collapsible: HTMLElement =
-        collapse.nextElementSibling as HTMLElement;
-      log.ensure(
-        collapsible.classList.contains(CLS.COLLAPSIBLE),
-        'A .collapse must be followed by a .collapsible!'
-      );
-      const col = new Collapsible(collapsible, collapse);
-      if (toggleUponLoad) {
-        col.toggle();
-      }
-    });
+export function fromIDs(
+  collapseID: string,
+  collapsibleID: string,
+  param?: string
+): Collapsible {
+  return new Collapsible(
+    document.getElementById(collapseID)!,
+    document.getElementById(collapsibleID)!,
+    param
+  );
 }

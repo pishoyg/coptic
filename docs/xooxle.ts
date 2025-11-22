@@ -205,12 +205,12 @@ export class Form {
    */
   private addEventListeners(): void {
     this.searchBox.addEventListener('input', () => {
-      this.populateParam(Param.QUERY, this.searchBox.value);
+      browser.setParam(Param.QUERY, this.searchBox.value);
     });
 
     this.checkboxes.forEach((box: Checkbox): void => {
       box.box.addEventListener('click', () => {
-        this.populateParam(box.param, box.box.checked);
+        browser.setParam(box.param, box.box.checked);
       });
     });
 
@@ -235,22 +235,6 @@ export class Form {
         box.box.checked = true;
       }
     });
-  }
-
-  /**
-   * Update the given URL parameter.
-   *
-   * @param name
-   * @param value
-   */
-  private populateParam(name: string, value: string | boolean): void {
-    const url = new URL(window.location.href);
-    if (!value) {
-      url.searchParams.delete(name);
-    } else {
-      url.searchParams.set(name, String(value));
-    }
-    window.history.replaceState('', '', url.toString());
   }
 
   /**
