@@ -379,7 +379,7 @@ class Reference(Part):
     """
 
     def __init__(self, parts: list[str]) -> None:
-        assert len(parts) in [1, 6, 7]
+        assert len(parts) in [1, 4, 6, 7]
         self.parts: list[str] = [
             p for p in parts if p.lower().strip() != "ext"
         ]
