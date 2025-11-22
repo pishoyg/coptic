@@ -408,6 +408,8 @@ def records() -> abc.Generator[Wiki]:
         if keys == ["TBD"]:
             # This entry is not in Marcion yet!
             # TODO: (#508) All Crum entry should have a Marcion entry.
+            # Yield a keyless placeholder entry.
+            yield Wiki("", record)
             continue
         for key in keys:
             yield Wiki(key, record)
