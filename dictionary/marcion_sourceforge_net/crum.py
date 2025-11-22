@@ -813,11 +813,18 @@ def verify_relation_symmetry() -> None:
 
 @cache.run_once
 def _verify_wiki_keys() -> None:
-    for k, ws in wiki.wikis().items():
+    for key, wikis in wiki.wikis().items():
         ensure.ensure(
-            k in Crum.roots,
+            key in Crum.roots,
             "Unknown Marcion key:",
-            k,
+            key,
             "for entries:",
-            ws,
+            wikis,
         )
+        if all(w.vide for w in wikis):
+            log.error(
+                "Marcion entry",
+                key,
+                "consists entirely of Wiki vide entries:",
+                list(map(str, wikis)),
+            )
