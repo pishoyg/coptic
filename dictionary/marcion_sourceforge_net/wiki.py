@@ -56,6 +56,7 @@ class Substitution:
         repl: str,
         text_repl: str = r"\1",
         md_repl: str = "",
+        ban: list[str] | None = None,
     ):
         """Initializes a Substitution object.
 
@@ -67,12 +68,16 @@ class Substitution:
                 version of the data.
             md_repl: A replacement used to generate a Markdown version of the
                 text.
+            ban: A list of tokens that are used for substitution, and
+                can't be present in the HTML post-processing. Use this optional
+                field to verify that all substitutions are well-formed.
         """
         self.name: str = name
         self.pattern: re.Pattern[str] = re.compile(pattern)
         self.repl: str = repl
         self.text_repl: str = text_repl
         self.md_repl: str = md_repl or self.text_repl
+        self.ban: list[str] = ban or []
 
     def html(self, raw: str) -> str:
         return self.pattern.sub(self.repl, raw)
@@ -105,27 +110,39 @@ _SUBSTITUTIONS: list[Substitution] = [
     # to use `&ast;`. However, using a plain asterisk risks conflicting with the
     # bold rule below. We therefore leave it up to our linters to replace
     # the occurrences of `&ask;` produced here with a literal asterisk.
-    Substitution("asterisk", r"\\\*", "&ast;", text_repl="*"),
+    Substitution("asterisk", r"\\\*", "&ast;", text_repl="*", ban=["*", "\\"]),
     Substitution(
         "tab",
         r"\\t",
         '</span><span class="subparagraph">',
         text_repl="    ",
+        ban=["\\"],
     ),
-    Substitution("em", r"__(.+?)__", r"<em>\1</em>", md_repl=r"*\1*"),
+    Substitution(
+        "em",
+        r"__(.+?)__",
+        r"<em>\1</em>",
+        md_repl=r"*\1*",
+        ban=["_"],
+    ),
     Substitution(
         "bold",
-        # We use a stricter regex to prevent potential conflict with occurrences
-        # of the literal asterisk during plain text generation. Notice that the
-        # conflict is prevented during HTML generation through the use of
-        # `&ast;` to represent the literal asterisk, so either regex would do.
-        r"\*([a-zA-Z]+?\.?)\*" or r"\*(.+?)\*",
         # Bold text is simply bullets. We prefer using an explicit `bullet`
         # class to mark them, instead of relying on `<b>`.
+        # We can use a stricter regex that only allows alphabetical characters
+        # (optionally followed by a period).
+        r"\*([a-zA-Z]+?\.?)\*" or r"\*(.+?)\*",
         r'<span class="bullet">\1</span>' or r"<b>\1</b>",
         md_repl=r"**\1**",
+        ban=["*"],
     ),
-    Substitution("italic", r"_(.+?)_", r"<i>\1</i>", md_repl=r"*\1*"),
+    Substitution(
+        "italic",
+        r"_(.+?)_",
+        r"<i>\1</i>",
+        md_repl=r"*\1*",
+        ban=["_"],
+    ),
     Substitution(
         "dialect",
         r"\[\[(S|B|A|F|O)\]\]",
@@ -134,6 +151,7 @@ _SUBSTITUTIONS: list[Substitution] = [
         # consistency with the Marcion HTML.
         r'<span class="dialect \1">\1</span>' or r'<i class="dialect">\1</i>',
         md_repl=r"***\1***",
+        ban=["[[", "]]"],
     ),
     Substitution(
         "subdialect",
@@ -150,6 +168,7 @@ _SUBSTITUTIONS: list[Substitution] = [
         or r'<i class="dialect">\1<sup>\2</sup></i>',
         text_repl=r"\1\2",
         md_repl=r"***\1\2***",
+        ban=["[[", "]]", "^"],
     ),
     Substitution(
         "subdialectLyco",
@@ -159,6 +178,7 @@ _SUBSTITUTIONS: list[Substitution] = [
         or r'<i class="dialect">A<sup class="non-italic">2</sup></i>',
         text_repl="L",
         md_repl="***L***",
+        ban=["[[", "]]", "^"],
     ),
     Substitution(
         "superscript",
@@ -167,42 +187,50 @@ _SUBSTITUTIONS: list[Substitution] = [
         # This is not entirely plain text, but we have no other way to represent
         # superscripted text.
         text_repl=r"^(\1)",
+        ban=["^"],
     ),
     Substitution(
         "headword",
         r"\[\[\[(\(?\)?\[?\]?\.?\…?-?[\u2c80-\u2cff\u03e2-\u03ef].*?\]?)\]\]\]",
         r'<span class="headword coptic">\1</span>',
         md_repl=r"**\1**",
+        ban=["[[[", "]]]"],
     ),
     Substitution(
         "coptic",
         r"\[\[(\(?\)?\[?\.?\.?\]?\.?,?\…?-?·?\s?[\u2c80-\u2cff\u03e2-\u03ef].*?\]?)\]\]",
         r'<span class="coptic">\1</span>',
+        ban=["[[", "]]"],
     ),
     Substitution(
         "greek",
         r"\[\[(\(?\)?\[?\]?\.?\…?·?\s?-?[\u0370-\u03e1\u03f0-\u03ff\u1f00-\u1fff].*?)\]\]",
         r'<span class="greek">\1</span>',
+        ban=["[[", "]]"],
     ),
     Substitution(
         "arabic",
         r"\[\[(\(?\)?\[?\]?\.?\…?[\u05f3\u0600-\u06ff\ufe70-\ufeff].*?)\]\]",
         r'<span class="arabic">\1</span>',
+        ban=["[[", "]]"],
     ),
     Substitution(
         "aramaic",
         r"\[\[(\(?\)?\[?\]?\.?\…?[\u0700-\u074f].*?)\]\]",
         r'<span class="aramaic">\1</span>',
+        ban=["[[", "]]"],
     ),
     Substitution(
         "hebrew",
         r"\[\[(\(?\)?\[?\]?\.?\…?[\u0590-\u05ff].*?)\]\]",
         r'<span class="hebrew">\1</span>',
+        ban=["[[", "]]"],
     ),
     Substitution(
         "amharic",
         r"\[\[(\(?\)?\[?\]?\.?\…?[\u1200-\u137f\u1380-\u139f\u2d80-\u2ddf\uab00-\uab2f\u1e7e0-\u1e7ff].*?)\]\]",
         r'<span class="amharic">\1</span>',
+        ban=["[[", "]]"],
     ),
     Substitution(
         "qualitative",
@@ -216,9 +244,11 @@ _SUBSTITUTIONS: list[Substitution] = [
         r"\\n",
         '</span></p><p><span class="subparagraph">',
         text_repl="\n",
+        ban=["\\"],
     ),
 ]
 # pylint: enable=line-too-long
+_BANNED: set[str] = {token for sub in _SUBSTITUTIONS for token in sub.ban}
 
 
 def _text(raw: str) -> str:
@@ -326,7 +356,18 @@ class Wiki:
         return not self.vide and other.vide
 
     def html(self, page: bool = False) -> str:
-        return "".join(self._html_aux(page))
+        html: str = "".join(self._html_aux(page))
+        for char in html:
+            ensure.ensure(
+                char not in _BANNED,
+                "Banned token",
+                char,
+                "found in entry",
+                self.key,
+                "output:",
+                html,
+            )
+        return html
 
     def _html_aux(self, page: bool) -> abc.Generator[str]:
         if page:
