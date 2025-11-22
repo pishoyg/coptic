@@ -1,6 +1,7 @@
 /** Main function for the Bible index. */
 import * as coll from '../collapse.js';
 import * as log from '../logger.js';
+import * as cls from './cls.js';
 const BOOK_PARAM = 'book';
 /**
  * If the book query parameter is present, click on the title of the given
@@ -24,7 +25,14 @@ function maybeGoToBook() {
  *
  */
 function main() {
-  coll.addEventListenersForSiblings();
+  document.querySelectorAll(`.${cls.INDEX_BOOK_NAME}`).forEach((collapse) => {
+    new coll.Collapsible(
+      collapse,
+      // In our index, the collapsibles conveniently happen to be the
+      // immediate next siblings of title elements.
+      collapse.nextElementSibling
+    );
+  });
   maybeGoToBook();
 }
 main();

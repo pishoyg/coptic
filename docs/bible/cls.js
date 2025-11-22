@@ -10,3 +10,4 @@ export const LANGUAGE = 'language';
  * TITLE is the class of a chapter title.
  */
 export const TITLE = 'title';
+export const INDEX_BOOK_NAME = 'index-book-name';

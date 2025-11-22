@@ -1,7 +1,27 @@
 // LEXICON IDs:
-export const CRUM_TITLE = 'crum-title';
-export const KELLIA_TITLE = 'kellia-title';
-export const ANDREAS_TITLE = 'andreas-title';
+export const CRUM = 'crum';
+export const KELLIA = 'kellia';
+export const ANDREAS = 'andreas';
+/**
+ * In our index, the ID of a title element is obtained by appending '-title' to
+ * the ID of the dictionary.
+ * @param dict
+ * @returns
+ */
+export function title(dict) {
+  return `${dict}-title`;
+}
+// Title elements are used to collapse dictionaries.
+export const collapse = title;
+/**
+ * In our index, the ID of a collapsible element is obtained by appending
+ * '-collapsible' to the ID of the dictionary.
+ * @param dict
+ * @returns
+ */
+export function collapsible(dict) {
+  return `${dict}-collapsible`;
+}
 export const SEARCH_BOX = 'search-box';
 export const FULL_WORD_CHECKBOX = 'full-word-checkbox';
 export const REGEX_CHECKBOX = 'regex-checkbox';
@@ -17,7 +37,6 @@ export const REPORTS = 'reports';
 export const FORM = 'form';
 // NOTE IDs:
 export const CATEGORIES = 'categories';
-export const CRUM = 'crum';
 export const DAWOUD = 'dawoud';
 export const DERIVATIONS = 'derivations';
 export const DICTIONARY = 'dictionary';

@@ -232,18 +232,18 @@ class KELLIASearchResult extends SearchResult {
 const XOOXLES = [
   {
     indexURL: 'crum.json',
-    tableID: 'crum',
+    tableID: id.CRUM,
     searchResultType: CrumSearchResult,
     otherCheckboxes: [[id.WIKI_CHECKBOX, 'wiki']],
   },
   {
     indexURL: 'kellia.json',
-    tableID: 'kellia',
+    tableID: id.KELLIA,
     searchResultType: KELLIASearchResult,
   },
   {
     indexURL: 'andreas.json',
-    tableID: 'andreas',
+    tableID: id.ANDREAS,
     searchResultType: AndreasSearchResult,
   },
 ];
@@ -283,8 +283,6 @@ async function main() {
   // shown on large screens).
   addListDialects();
   const manager = new dial.Manager();
-  // Add event listeners for collapsibles.
-  coll.addEventListenersForSiblings(true);
   // Add event listeners for tooltips.
   drop.addEventListeners('hover');
   drop.addEventListeners('click');
@@ -337,6 +335,13 @@ async function main() {
         boxes: xooxle.otherCheckboxes,
       });
       new xoox.Xooxle(json, form, xooxle.searchResultType);
+      coll.fromIDs(
+        id.collapse(xooxle.tableID),
+        id.collapsible(xooxle.tableID),
+        // We use the table ID as the name of the parameter that controls
+        // dictionary visibility.
+        xooxle.tableID
+      );
     })
   );
   // Create the help panel.

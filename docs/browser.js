@@ -202,3 +202,18 @@ export function urlWithFragment() {
   }
   return `${baseURL}#:~:text=${fragment.replace(/(?<!,)-(?!,)/g, '%2D')}`;
 }
+/**
+ * Update the given URL parameter.
+ *
+ * @param name
+ * @param value
+ */
+export function setParam(name, value) {
+  const url = new URL(window.location.href);
+  if (!value) {
+    url.searchParams.delete(name);
+  } else {
+    url.searchParams.set(name, String(value));
+  }
+  window.history.replaceState('', '', url.toString());
+}

@@ -160,11 +160,11 @@ export class Form {
    */
   addEventListeners() {
     this.searchBox.addEventListener('input', () => {
-      this.populateParam(Param.QUERY, this.searchBox.value);
+      browser.setParam(Param.QUERY, this.searchBox.value);
     });
     this.checkboxes.forEach((box) => {
       box.box.addEventListener('click', () => {
-        this.populateParam(box.param, box.box.checked);
+        browser.setParam(box.param, box.box.checked);
       });
     });
     // Prevent form submission. Otherwise, pressing Enter while the search box
@@ -187,21 +187,6 @@ export class Form {
         box.box.checked = true;
       }
     });
-  }
-  /**
-   * Update the given URL parameter.
-   *
-   * @param name
-   * @param value
-   */
-  populateParam(name, value) {
-    const url = new URL(window.location.href);
-    if (!value) {
-      url.searchParams.delete(name);
-    } else {
-      url.searchParams.set(name, String(value));
-    }
-    window.history.replaceState('', '', url.toString());
   }
   /**
    * @returns The <tbody> element holding the results.
