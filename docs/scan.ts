@@ -108,7 +108,7 @@ export class Index {
       }
     }
     if (dev.get()) {
-      this.verifyWordOrder(false);
+      this.verifyWordOrder();
     }
   }
 
@@ -184,44 +184,44 @@ export class Index {
   /**
    * Verify that its words are indeed lexicographically sorted, as should be the
    * case with a dictionary index.
-   *
-   * @param strict - If true, exit when encountering a sorting error. If false,
-   * simply log an error message.
    */
-  private verifyWordOrder(strict = true): void {
-    const error: (...message: unknown[]) => void = strict
-      ? log.fatal
-      : log.error;
-
+  private verifyWordOrder(): void {
+    let count = 0;
     for (const [i, p] of this.pages.entries()) {
       if (!p.start.leq(p.end)) {
-        error(
-          'page',
+        count++;
+        log.warn(
+          'words on page',
           p.page,
-          'has messed up columns',
+          'seem reversed:',
           p.start.word,
-          'and',
+          ',',
           p.end.word
         );
       }
 
-      if (i === 0) {
+      const prev: Page | undefined = this.pages[i - 1];
+      if (!prev) {
         continue;
       }
 
-      const prev: Page = this.pages[i - 1]!;
-
       if (!prev.end.leq(p.start)) {
-        error(
-          p.start.word,
-          'on page',
+        count++;
+        log.warn(
+          'going from page',
+          prev.page,
+          'to',
           p.page,
-          'is smaller than',
+          'words seem reversed:',
           prev.end.word,
-          'on page',
-          prev.page
+          ',',
+          p.start.word
         );
       }
+    }
+
+    if (count) {
+      log.warn('Swap count:', count);
     }
   }
 }
