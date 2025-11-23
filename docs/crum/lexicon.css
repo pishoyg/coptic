@@ -1,5 +1,6 @@
 /* Use italic for the checkbox labels. */
 td#wiki-checkbox-td,
+td#marcion-checkbox-td,
 td#full-word-checkbox-td,
 td#regex-checkbox-td {
   text-align: center;
@@ -21,7 +22,8 @@ form td {
 }
 
 /* Dim the Wiki checkbox label. */
-td#wiki-checkbox-td {
+td#wiki-checkbox-td,
+td#marcion-checkbox-td {
   color: gray;
 }
 
@@ -62,6 +64,12 @@ input#search-box {
 @media (width <= 500px) {
   /* Shorten the label of the Wiki checkbox. */
   #experimental {
+    display: none;
+  }
+
+  /* Hide the Marcion checkbox.
+   * TODO: (#0) Find a place for that on the screen! */
+  #marcion-checkbox-td {
     display: none;
   }
 

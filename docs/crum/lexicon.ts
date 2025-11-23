@@ -115,8 +115,13 @@ class CrumSearchResult extends SearchResult {
     Math.max(
       ...Object.values(Bucket).filter((value) => typeof value === 'number')
     );
+  // We have two overlaid databases of Crum, referred to as Marcion and Wiki.
+  // We use checkboxes to control which database to search.
   public static wikiCheckbox: HTMLInputElement = document.getElementById(
     id.WIKI_CHECKBOX
+  ) as HTMLInputElement;
+  public static marcionCheckbox: HTMLInputElement = document.getElementById(
+    id.MARCION_CHECKBOX
   ) as HTMLInputElement;
 
   /**
@@ -141,13 +146,24 @@ class CrumSearchResult extends SearchResult {
    * @returns
    */
   public override filter(): boolean {
-    if (!CrumSearchResult.wikiCheckbox.checked) {
-      // The Wiki checkbox is unchecked. Use default behavior.
+    if (
+      CrumSearchResult.wikiCheckbox.checked ===
+      CrumSearchResult.marcionCheckbox.checked
+    ) {
+      // If both checkboxes are checked or both are unchecked, use default
+      // behavior.
       return super.filter();
     }
-    // We only want to search the Wiki.
-    // Layer 0 is Marcion, layer 1 is Wiki. Return true if this is layer 1.
-    return !!this.layer;
+    // Layer 0 is Marcion, layer 1 is Wiki.
+    if (CrumSearchResult.marcionCheckbox.checked) {
+      // If only the Marcion checkbox is checked, then only search Marcion.
+      return !this.layer;
+    }
+    if (CrumSearchResult.wikiCheckbox.checked) {
+      // If only the Wiki checkbox is checked, then only search Wiki.
+      return !!this.layer;
+    }
+    log.fatal('This is impossible!');
   }
 
   /**
@@ -262,7 +278,10 @@ const XOOXLES: Xooxle[] = [
     indexURL: 'crum.json',
     tableID: id.CRUM,
     searchResultType: CrumSearchResult,
-    otherCheckboxes: [[id.WIKI_CHECKBOX, 'wiki']],
+    otherCheckboxes: [
+      [id.WIKI_CHECKBOX, 'wiki'],
+      [id.MARCION_CHECKBOX, 'marcion'],
+    ],
   },
   {
     indexURL: 'kellia.json',

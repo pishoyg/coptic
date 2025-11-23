@@ -36,6 +36,7 @@ export const DIALECTS = 'dialects';
 // ones that show in the drop-down menu. The reason this ID was used for those
 // boxes is that they preceded the more recent drop-down version.
 export const CHECKBOXES = 'checkboxes';
+export const MARCION_CHECKBOX = 'marcion-checkbox';
 export const WIKI_CHECKBOX = 'wiki-checkbox';
 export const REPORTS = 'reports';
 export const FORM = 'form';
