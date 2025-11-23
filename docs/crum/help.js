@@ -157,6 +157,11 @@ export function makeHelpPanel(highlighter, devHighlighter) {
         browser.click(id.WIKI_CHECKBOX);
       }),
     ],
+    m: [
+      new help.Shortcut('Toggle Marcion search', ['lexicon'], () => {
+        browser.click(id.MARCION_CHECKBOX);
+      }),
+    ],
   };
   const scrollTo = {
     n: [
