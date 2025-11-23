@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Process coptic.wiki's Digital Version of Crum."""
 
 # TODO: (#503) Many checks and filters in this file will no longer be necessary
@@ -10,7 +9,6 @@
 # - Use an actual newline character instead of the "\n" token.
 # - The headword notation is simply unnecessary.
 
-import argparse
 import functools
 import itertools
 import re
@@ -20,24 +18,6 @@ from collections import abc
 from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import lexical as lex
 from utils import ensure, gcp, lang, log, orth
-
-_argparser: argparse.ArgumentParser = argparse.ArgumentParser()
-
-_ = _argparser.add_argument(
-    "-t",
-    "--text",
-    type=str,
-    default="",
-    help="If given, print plain text of the given data.",
-)
-
-_ = _argparser.add_argument(
-    "-m",
-    "--markdown",
-    type=str,
-    default="",
-    help="If given, print the Markdown version of the given text, and exit.",
-)
 
 # pylint: disable=line-too-long
 # TODO: (#0) Move to `utils/paths.py`.
@@ -55,7 +35,6 @@ class Substitution:
         pattern: str,
         repl: str,
         text_repl: str = r"\1",
-        md_repl: str = "",
         ban: list[str] | None = None,
     ):
         """Initializes a Substitution object.
@@ -66,8 +45,6 @@ class Substitution:
             repl: The replacement string.
             text_repl: A replacement used to generate a plain-text (no-HTML)
                 version of the data.
-            md_repl: A replacement used to generate a Markdown version of the
-                text.
             ban: A list of tokens that are used for substitution, and
                 can't be present in the HTML post-processing. Use this optional
                 field to verify that all substitutions are well-formed.
@@ -76,17 +53,13 @@ class Substitution:
         self.pattern: re.Pattern[str] = re.compile(pattern)
         self.repl: str = repl
         self.text_repl: str = text_repl
-        self.md_repl: str = md_repl or self.text_repl
         self.ban: list[str] = ban or []
 
     def html(self, raw: str) -> str:
         return self.pattern.sub(self.repl, raw)
 
-    def plain_text(self, raw: str) -> str:
+    def text(self, raw: str) -> str:
         return self.pattern.sub(self.text_repl, raw)
-
-    def markdown(self, raw: str) -> str:
-        return self.pattern.sub(self.md_repl, raw)
 
 
 # Coptic Wiki substitutions:
@@ -122,7 +95,6 @@ _SUBSTITUTIONS: list[Substitution] = [
         "em",
         r"__(.+?)__",
         r"<em>\1</em>",
-        md_repl=r"*\1*",
         ban=["_"],
     ),
     Substitution(
@@ -133,14 +105,12 @@ _SUBSTITUTIONS: list[Substitution] = [
         # (optionally followed by a period).
         r"\*([a-zA-Z]+?\.?)\*" or r"\*(.+?)\*",
         r'<span class="bullet">\1</span>' or r"<b>\1</b>",
-        md_repl=r"**\1**",
         ban=["*"],
     ),
     Substitution(
         "italic",
         r"_(.+?)_",
         r"<i>\1</i>",
-        md_repl=r"*\1*",
         ban=["_"],
     ),
     Substitution(
@@ -150,7 +120,6 @@ _SUBSTITUTIONS: list[Substitution] = [
         # styling in the HTML or insert dialects in <i> tags. This also achieves
         # consistency with the Marcion HTML.
         r'<span class="dialect \1">\1</span>' or r'<i class="dialect">\1</i>',
-        md_repl=r"***\1***",
         ban=["[[", "]]"],
     ),
     Substitution(
@@ -167,7 +136,6 @@ _SUBSTITUTIONS: list[Substitution] = [
         r'<span class="dialect \1\2">\1\2</span>'
         or r'<i class="dialect">\1<sup>\2</sup></i>',
         text_repl=r"\1\2",
-        md_repl=r"***\1\2***",
         ban=["[[", "]]", "^"],
     ),
     Substitution(
@@ -177,7 +145,6 @@ _SUBSTITUTIONS: list[Substitution] = [
         r'<span class="dialect L">L</span>'
         or r'<i class="dialect">A<sup class="non-italic">2</sup></i>',
         text_repl="L",
-        md_repl="***L***",
         ban=["[[", "]]", "^"],
     ),
     Substitution(
@@ -193,7 +160,6 @@ _SUBSTITUTIONS: list[Substitution] = [
         "headword",
         r"\[\[\[(\(?\)?\[?\]?\.?\…?-?[\u2c80-\u2cff\u03e2-\u03ef].*?\]?)\]\]\]",
         r'<span class="headword coptic">\1</span>',
-        md_repl=r"**\1**",
         ban=["[[[", "]]]"],
     ),
     Substitution(
@@ -249,18 +215,6 @@ _SUBSTITUTIONS: list[Substitution] = [
 ]
 # pylint: enable=line-too-long
 _BANNED: set[str] = {token for sub in _SUBSTITUTIONS for token in sub.ban}
-
-
-def _text(raw: str) -> str:
-    for s in _SUBSTITUTIONS:
-        raw = s.plain_text(raw)
-    return raw
-
-
-def _markdown(raw: str) -> str:
-    for s in _SUBSTITUTIONS:
-        raw = s.markdown(raw)
-    return raw
 
 
 @typing.final
@@ -385,11 +339,10 @@ class Wiki:
 
     @functools.cached_property
     def text(self) -> str:
-        return _text(self.entry)
-
-    @functools.cached_property
-    def markdown(self) -> str:
-        return _markdown(self.entry)
+        txt: str = self.entry
+        for s in _SUBSTITUTIONS:
+            txt = s.text(txt)
+        return txt
 
     @typing.override
     def __str__(self) -> str:
@@ -431,17 +384,3 @@ def wikis() -> dict[str, list[Wiki]]:
         str(key): sorted(group)
         for key, group in itertools.groupby(entries, lambda w: w.key)
     }
-
-
-def main():
-    args: argparse.Namespace = _argparser.parse_args()
-    if args.text:
-        print(_text(args.text))
-        return
-    if args.markdown:
-        print(_markdown(args.text))
-        return
-
-
-if __name__ == "__main__":
-    main()
