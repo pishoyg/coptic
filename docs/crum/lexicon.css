@@ -40,7 +40,7 @@ input#search-box {
 }
 
 /* Wide screen rules: */
-@media (width > 500px) {
+@media (width > 700px) {
   /* Hide the drop-down menu, and the keyboard. */
 
   /* TODO: (#453) Show the keyboard on desktop once you have instructions for how
@@ -61,7 +61,7 @@ input#search-box {
 }
 
 /* Narrow screen rules: */
-@media (width <= 500px) {
+@media (width <= 700px) {
   /* Shorten the label of the Wiki checkbox. */
   #experimental {
     display: none;
