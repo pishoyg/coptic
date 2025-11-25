@@ -25,6 +25,8 @@ SHEET_TSV_URL: str = (
     "https://docs.google.com/spreadsheets/d/1lhjcnkHS-pA3p5Vys-6ohKu7Y4ZCJ5NO/export?format=tsv"
 )
 
+COMMA_OR_SPACE: re.Pattern[str] = re.compile(r"[ ,]")
+
 
 class Substitution:
     """A class to represent a single regex substitution."""
@@ -275,19 +277,14 @@ class Wiki:
             word's alphabetical position in the dictionary.
         """
         # Remove all parentheses.
-        headword: str = self.headword.replace("(", "").replace(")", "")
-        # Remove the superscript if present.
-        if headword.endswith("^1"):
-            headword = headword[:-2]
-        # Remove the prefix.
-        if headword.startswith("-"):
-            headword = headword[1:]
-        # Remove the suffix.
-        if headword[-1] in "-⸗†":
-            headword = headword[:-1]
+        headword: str = self.headword
         # If the headword consists of multiple words, select the first one.
-        headword = re.split(r"[ ,]", headword, 1)[0]
-        # Remove all diacritics.
+        headword = COMMA_OR_SPACE.split(headword, 1)[0]
+        # Clean up the headword.
+        headword = headword.replace("(", "").replace(")", "")
+        headword = headword.removesuffix("^1")
+        headword = headword.removeprefix("-")
+        headword = headword.rstrip("-⸗†")
         headword = orth.clean_diacritics(headword)
 
         ensure.ensure(
