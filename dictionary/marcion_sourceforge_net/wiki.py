@@ -349,7 +349,7 @@ class Wiki:
 def records() -> abc.Generator[Wiki]:
     for record in gcp.tsv_spreadsheet(SHEET_TSV_URL).to_dict(orient="records"):
         # Some vide entries have multiple keys.
-        keys: list[str] = record["Marcion"].split(",")
+        keys: list[str] = record["Marcion"].split(" ")
         if len(keys) > 1 and not record["_v_"]:
             log.warn(
                 "Non-vide entries has several Marcion keys:",
