@@ -347,7 +347,7 @@ class Root(Row):
     @functools.cached_property
     def wiki_html(self) -> str:
         return page.HORIZONTAL_RULE.join(
-            w.html(page=True) for w in self.wikis if not w.wip
+            w.html(page=True) for w in self.wikis if w.entry and not w.wip
         )
 
     @functools.cached_property
