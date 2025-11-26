@@ -1,9 +1,6 @@
 /** Main function for the Crum scan. */
 // TODO: (#415) Fix the sorting logic. The current heuristic often doesn't align
 // with Crum.
-// TODO: (#415) Show a warning message about letters that mostly live
-// under other letters. For example, under ⲫ, Crum wrote:
-// For most words in ⲫ-, vide ⲡ-.
 import * as scan from '../../scan.js';
 import * as log from '../../logger.js';
 const MIN_PAGE_NUM = 1; // First file is "1.png".

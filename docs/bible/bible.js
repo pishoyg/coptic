@@ -3,6 +3,7 @@ import * as coll from '../collapse.js';
 import * as log from '../logger.js';
 import * as cls from './cls.js';
 const BOOK_PARAM = 'book';
+const CLICK_DELAY_MS = 500;
 /**
  * If the book query parameter is present, click on the title of the given
  * book to expand its content, and scroll to it.
@@ -18,8 +19,9 @@ function maybeGoToBook() {
     log.error(click, 'not found!');
     return;
   }
-  elem.click();
   elem.scrollIntoView({ behavior: 'smooth' });
+  // Scroll first, wait a bit, then click.
+  setTimeout(elem.click.bind(elem), CLICK_DELAY_MS);
 }
 /**
  *
