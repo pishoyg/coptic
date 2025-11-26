@@ -342,12 +342,25 @@ class Root(Row):
     @functools.cached_property
     def wikis(self) -> list[wiki.Wiki]:
         _verify_wiki_keys()
-        return [] if self.key in _FROM_MARCION else wiki.wikis()[self.key]
+        return (
+            []
+            if self.key in _FROM_MARCION
+            else wiki.by_marcion_key()[self.key]
+        )
 
     @functools.cached_property
     def wiki_html(self) -> str:
+        wikis: list[wiki.Wiki] = [w for w in self.wikis if not w.wip]
+        ensure.ensure(
+            wikis,
+            "Can't generate HTML for an empty list of Wikis at",
+            self.key,
+        )
+        # The input is guaranteed to be sorted by page number, so we can use
+        # `groupby` directly.
         return page.HORIZONTAL_RULE.join(
-            w.html(page=True) for w in self.wikis if w.entry and not w.wip
+            wiki.Page(crum, group).html()
+            for crum, group in itertools.groupby(wikis, key=lambda w: w.crum)
         )
 
     @functools.cached_property
@@ -358,17 +371,17 @@ class Root(Row):
         if super().update(col.value, value):
             log.info("Updated", col, "under", self.key)
 
-    def has_wiki_main_entry(self) -> bool:
-        if not self.wikis:
+    def has_wiki_canonical_entries(self) -> bool:
+        """Assess whether we have complete Wiki data.
+
+        Returns:
+            True if all Wiki canonical entries are populated, false otherwise.
+        """
+        if self.key in _FROM_MARCION:
             return False
         # TODO: (#503) This check will no longer be necessary once the data is
         # fully populated.
-        for w in self.wikis:
-            if not w.vide and (not w.entry or w.wip):
-                # This is a main (non-vide) entry, and it's still
-                # work-in-progress.
-                return False
-        return True
+        return not any(w.canonical and w.wip for w in self.wikis)
 
     def title(self) -> str:
         return ", ".join(
@@ -813,7 +826,7 @@ def verify_relation_symmetry() -> None:
 
 @cache.run_once
 def _verify_wiki_keys() -> None:
-    for key, wikis in wiki.wikis().items():
+    for key, wikis in wiki.by_marcion_key().items():
         ensure.ensure(
             key in Crum.roots,
             "Unknown Marcion key:",

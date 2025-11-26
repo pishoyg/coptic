@@ -17,7 +17,7 @@ from collections import abc
 
 from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import lexical as lex
-from utils import ensure, gcp, lang, log, orth
+from utils import ensure, gcp, lang, log, orth, page
 
 # pylint: disable=line-too-long
 # TODO: (#0) Move to `utils/paths.py`.
@@ -265,8 +265,17 @@ class Wiki:
             "has an invalid WIP entry:",
             wip,
         )
-        self.wip: bool = bool(wip)
+        self.wip: bool = bool(wip) or not self.entry
         del wip
+
+    @property
+    def canonical(self) -> bool:
+        # A canonical entry is a non-vide entry.
+        return not self.vide
+
+    @property
+    def complete(self) -> bool:
+        return not self.wip
 
     @functools.cached_property
     def lexicographic_key(self) -> str:
@@ -295,24 +304,13 @@ class Wiki:
 
         return headword
 
-    def __lt__(self, other: typing.Self) -> bool:
-        assert self.key == other.key
-        # We want non-vide entries to appear before vide entries. Other than
-        # that, entries should show in the same order as they do in the book
-        # (which is lexicographically sorted).
-        # The input data has the same order as the book, and the Python built-in
-        # `sorted` function performs a stable sort. So we can guarantee that,
-        # other than bringing non-vide entries first, the order in the output
-        # will match that of the book.
-        return not self.vide and other.vide
-
-    def html(self, page: bool = False) -> str:
-        html: str = "".join(self._html_aux(page))
-        for char in html:
+    def html(self) -> str:
+        html: str = "".join(self._html_aux())
+        for token in _BANNED:
             ensure.ensure(
-                char not in _BANNED,
+                token not in html,
                 "Banned token",
-                char,
+                token,
                 "found in entry",
                 self.key,
                 "output:",
@@ -320,11 +318,7 @@ class Wiki:
             )
         return html
 
-    def _html_aux(self, page: bool) -> abc.Generator[str]:
-        if page:
-            yield '<span class="crum-page">'
-            yield str(self.crum)
-            yield "</span>"
+    def _html_aux(self) -> abc.Generator[str]:
         raw: str = self.entry
         yield "<p>"
         yield '<span class="subparagraph">'
@@ -349,24 +343,26 @@ class Wiki:
 def records() -> abc.Generator[Wiki]:
     for record in gcp.tsv_spreadsheet(SHEET_TSV_URL).to_dict(orient="records"):
         # Some vide entries have multiple keys.
-        keys: list[str] = record["Marcion"].split(" ")
+        marcion: str = record["Marcion"]
+        if not marcion or marcion == "TBD":
+            # Yield a place holder entry. It can be filtered downstream by
+            # pipelines that don't accept it, or retained by pipelines that need
+            # it.
+            # TODO: (#508) All Crum entry should have a Marcion entry.
+            yield Wiki("", record)
+            continue
+        keys: list[str] = marcion.split(" ")
         if len(keys) > 1 and not record["_v_"]:
             log.warn(
                 "Non-vide entries has several Marcion keys:",
                 record,
             )
-        if keys == ["TBD"]:
-            # This entry is not in Marcion yet!
-            # TODO: (#508) All Crum entry should have a Marcion entry.
-            # Yield a keyless placeholder entry.
-            yield Wiki("", record)
-            continue
         for key in keys:
             yield Wiki(key, record)
 
 
 @functools.cache
-def wikis() -> dict[str, list[Wiki]]:
+def by_marcion_key() -> dict[str, list[Wiki]]:
     entries: list[Wiki] = list(records())
     # Remove entries that don't have a key.
     entries = [w for w in entries if w.key]
@@ -378,6 +374,33 @@ def wikis() -> dict[str, list[Wiki]]:
     # is all vide, its corresponding Marcion entry should be merged into another
     # Marcion entry, and the group keys should be updated to use the new key.
     return {
-        str(key): sorted(group)
+        str(key): list(group)
         for key, group in itertools.groupby(entries, lambda w: w.key)
     }
+
+
+class Page:
+    """Page represents a group of Wikis that occur on the same page."""
+
+    def __init__(self, crum: lex.CrumPage, wikis: abc.Iterable[Wiki]) -> None:
+        self.crum: lex.CrumPage = crum
+        self.wikis: list[Wiki] = list(wikis)
+
+    def html(self) -> str:
+        return "".join(self.html_aux())
+
+    def html_aux(self) -> abc.Generator[str]:
+        yield '<span class="crum-page">'
+        yield str(self.crum)
+        yield "</span>"
+        html: str = page.HORIZONTAL_RULE.join(
+            w.html() for w in self.wikis if w.complete
+        )
+        ensure.ensure(
+            html,
+            "Generating HTML for a page without any complete Wikis! Page:",
+            self.crum,
+            "Wikis:",
+            list(map(str, self.wikis)),
+        )
+        yield html
