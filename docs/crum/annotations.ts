@@ -122,6 +122,7 @@ export const MAPPING: Record<string, Annotation> = {
   dat: { fullForm: 'dative' },
   demonstr: { fullForm: 'demonstrative' },
   'e g': { fullForm: 'exempli gratia' },
+  frag: { fullForm: 'fragment' },
   fut: { fullForm: 'future' },
   Heb: { fullForm: 'Hebrew', noCaseVariant: true },
   Hebr: { fullForm: 'Hebrew', noCaseVariant: true },
