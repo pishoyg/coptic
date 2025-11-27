@@ -20,6 +20,16 @@ export function isLower(s: string): boolean {
   return s.toLowerCase() === s;
 }
 
+const DIGITS = /^\d+$/;
+/**
+ *
+ * @param s
+ * @returns
+ */
+export function isDigits(s: string): boolean {
+  return DIGITS.test(s);
+}
+
 /**
  * @param text
  * @returns

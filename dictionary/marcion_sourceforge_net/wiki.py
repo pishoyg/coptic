@@ -118,28 +118,20 @@ _SUBSTITUTIONS: list[Substitution] = [
     Substitution(
         "dialect",
         r"\[\[(S|B|A|F|O)\]\]",
-        # We use a `dialect` class to handle dialects. There is no need to store
-        # styling in the HTML or insert dialects in <i> tags. This also achieves
-        # consistency with the Marcion HTML.
         r'<span class="dialect \1">\1</span>',
         ban=["[[", "]]"],
     ),
     Substitution(
         "subdialect",
-        # While not explicitly mentioned in Crum's intro, there is apparently an
-        # occurrence of B^f in ϫⲟⲗ[1], an occurrence of S^af in ⲥⲟⲉⲓϣ[2], and an
-        # occurrence of O^f in ϥ[3].
-        # (And maybe they occur elsewhere.)
+        # While not explicitly mentioned in Crum's intro, there are occurrences
+        # of non-standard dialect sigla in the dictionary (such as S^af, B^f,
+        # and O^f).
         # We are made aware of those cases by looking at the regexes used in
         # CopticWiki. See history at:
         # https://github.com/randykomforty/coptic/commits/main/scripts/dictionary_regexes.js
-        #
-        # [1] https://remnqymi.com/crum/2391.html.
-        # [2] https://remnqymi.com/crum/363.html
-        # [3] Not in Marcion! TODO: (#508) Add key.
+        # For each of these, we add a non-standard dialect entry in TypeScript,
+        # so they can render properly.
         r"\[\[(S|F|B|O)\^(a|f|b|af)\]\]",
-        # Again, we have our own way of managing border dialects. We don't store
-        # styling in the HTML.
         r'<span class="dialect \1\2">\1\2</span>',
         text_repl=r"\1\2",
         ban=["[[", "]]", "^"],
@@ -147,8 +139,7 @@ _SUBSTITUTIONS: list[Substitution] = [
     Substitution(
         "subdialectLyco",
         r"\[\[(A\^2)\]\]",
-        # No styling in the HTML! Also use L for Lycopolitan.
-        r'<span class="dialect L">L</span>',
+        r'<span class="dialect L">A2</span>',
         text_repl="L",
         ban=["[[", "]]", "^"],
     ),
