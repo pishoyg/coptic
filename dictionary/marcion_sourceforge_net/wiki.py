@@ -105,8 +105,8 @@ _SUBSTITUTIONS: list[Substitution] = [
         # class to mark them, instead of relying on `<b>`.
         # We can use a stricter regex that only allows alphabetical characters
         # (optionally followed by a period).
-        r"\*([a-zA-Z]+?\.?)\*" or r"\*(.+?)\*",
-        r'<span class="bullet">\1</span>' or r"<b>\1</b>",
+        r"\*([a-zA-Z]+?\.?)\*",
+        r'<span class="bullet">\1</span>',
         ban=["*"],
     ),
     Substitution(
@@ -121,7 +121,7 @@ _SUBSTITUTIONS: list[Substitution] = [
         # We use a `dialect` class to handle dialects. There is no need to store
         # styling in the HTML or insert dialects in <i> tags. This also achieves
         # consistency with the Marcion HTML.
-        r'<span class="dialect \1">\1</span>' or r'<i class="dialect">\1</i>',
+        r'<span class="dialect \1">\1</span>',
         ban=["[[", "]]"],
     ),
     Substitution(
@@ -140,8 +140,7 @@ _SUBSTITUTIONS: list[Substitution] = [
         r"\[\[(S|F|B|O)\^(a|f|b|af)\]\]",
         # Again, we have our own way of managing border dialects. We don't store
         # styling in the HTML.
-        r'<span class="dialect \1\2">\1\2</span>'
-        or r'<i class="dialect">\1<sup>\2</sup></i>',
+        r'<span class="dialect \1\2">\1\2</span>',
         text_repl=r"\1\2",
         ban=["[[", "]]", "^"],
     ),
@@ -149,8 +148,7 @@ _SUBSTITUTIONS: list[Substitution] = [
         "subdialectLyco",
         r"\[\[(A\^2)\]\]",
         # No styling in the HTML! Also use L for Lycopolitan.
-        r'<span class="dialect L">L</span>'
-        or r'<i class="dialect">A<sup class="non-italic">2</sup></i>',
+        r'<span class="dialect L">L</span>',
         text_repl="L",
         ban=["[[", "]]", "^"],
     ),
@@ -209,7 +207,7 @@ _SUBSTITUTIONS: list[Substitution] = [
         "qualitative",
         "†",
         # The qualitative rule is unnecessary, especially given #476.
-        "†" or r"<sup>†</sup>",
+        "†",
         text_repl="†",
     ),
     Substitution(
