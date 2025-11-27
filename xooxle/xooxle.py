@@ -118,6 +118,8 @@ RETAIN_TAGS_DEFAULT: set[str] = {
     "strong",
     "em",
     "sup",
+    "ins",
+    "del",
 }
 
 SPACE_ELEMENTS_DEFAULT: set[str] = {
