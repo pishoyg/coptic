@@ -30,7 +30,7 @@ const TEST_CASES: {
       suffixes: 136,
       bible: 119,
       dialectTooltips: 384,
-      annotations: 82,
+      annotations: 84,
     },
   },
   {
