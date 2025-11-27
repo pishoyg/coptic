@@ -43,21 +43,33 @@ export function toggleCase(text: string): string {
 }
 
 /**
- * BOUNDARY_START uses a lookbehind expression to match a position NOT preceded
- * by a letter or a mark.
- * Normally, a boundary regex would also include numbers and connector
- * punctuation marks, such that `A1` would be considered one word, there being
- * no boundary between `A` and `1`. However, for all our use cases, a number or
- * a connector punctuation mark would be considered a boundary.
- * Same blow!
+ * WORD_START uses a lookbehind expression to match a position NOT preceded
+ * by a letter, mark, or number. This acts an assertion that matches the start
+ * of a word.
+ *
+ * Normally, such a regex would also include the Connector_Punctuation class.
+ * However, as of the time of writing, no characters in this class are used in
+ * our repo.
+ * Same below!
  */
-export const BOUNDARY_START = /(?<![\p{Letter}\p{Mark}])/u;
+export const WORD_START = /(?<![\p{Letter}\p{Mark}\p{Number}])/u;
 
 /**
- * BOUNDARY_END uses a lookahead expression to match a position NOT followed
- * by a letter or a mark.
+ * WORD_END uses a lookahead expression to match a position NOT followed
+ * by a letter, mark, or number. This acts an assertion that matches the end
+ * of a word.
  */
-export const BOUNDARY_END = /(?![\p{Letter}\p{Mark}])/u;
+export const WORD_END = /(?![\p{Letter}\p{Mark}\p{Number}])/u;
+
+/*
+ * NO_LETTER_BEFORE matches a position NOT preceded by a letter or a mark.
+ */
+export const NO_LETTER_BEFORE = /(?<![\p{Letter}\p{Mark}])/u;
+
+/*
+ * NO_LETTER_AFTER matches a position NOT preceded by a letter or a mark.
+ */
+export const NO_LETTER_AFTER = /(?![\p{Letter}\p{Mark}])/u;
 
 /**
  * Wrap the given regex in Unicode-aware boundary expressions.
@@ -75,11 +87,20 @@ export const BOUNDARY_END = /(?![\p{Letter}\p{Mark}])/u;
  * We don't take the liberty to create this group for the caller, so the
  * parameter defaults to false.
  *
+ * @param digitIsBoundary - If true, digits are considered word boundaries.
+ *
  * @returns
  */
-export function bounded(regex: string, group = false): string {
+export function bounded(
+  regex: string,
+  group = false,
+  digitIsBoundary = false
+): string {
   if (group) {
     regex = `(?:${regex})`;
   }
-  return `${BOUNDARY_START.source}${regex}${BOUNDARY_END.source}`;
+  if (digitIsBoundary) {
+    return `${NO_LETTER_BEFORE.source}${regex}${NO_LETTER_AFTER.source}`;
+  }
+  return `${WORD_START.source}${regex}${WORD_END.source}`;
 }
