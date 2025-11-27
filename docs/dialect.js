@@ -1,6 +1,5 @@
 /** Package dialect defines dialect handling logic. */
 import * as str from './str.js';
-import * as log from './logger.js';
 const SEPARATOR = ',';
 export var CLS;
 (function (CLS) {
@@ -55,7 +54,6 @@ export class Dialect {
     this.name = name;
     this.article = article;
     this.key = key ?? code;
-    log.ensure(this.key.length === 1);
   }
   /**
    * @returns
@@ -95,22 +93,21 @@ export class Dialect {
   siglum() {
     const siglum = document.createElement('span');
     siglum.classList.add(CLS.SIGLUM);
-    const first = this.code[0],
-      second = this.code[1];
+    const first = this.code.slice(0, 1),
+      second = this.code.slice(1);
     if (
-      this.code.length === 2 &&
       first &&
       second &&
       str.isUpper(first) &&
-      str.isLower(second)
+      (str.isLower(second) || str.isDigits(second))
     ) {
-      // This is a border dialect siglum.
+      // This siglum has a second part that should be superscripted.
       const sup = document.createElement('sup');
       sup.textContent = second;
       siglum.append(first, sup);
       return siglum;
     }
-    // This is a major dialect siglum.
+    // This siglum doesn't possess a superscripted component.
     siglum.append(this.code);
     return siglum;
   }

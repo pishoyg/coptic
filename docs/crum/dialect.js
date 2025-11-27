@@ -117,6 +117,19 @@ export const DIALECTS = {
   // Greek (usage unclear) is only used in KELLIA (TLA).
   U: new Dialect('U', 'Greek (usage unclear)', ['KELLIA']),
 };
+/* NON_STANDARD includes non-standard dialects that show in the text. They don't
+ * have all the functionality that a standard dialect has.
+ * Use them carefully, and only if you're confident that you won't use any
+ * unsupported functionality.
+ */
+export const NON_STANDARD = {
+  Of: new Dialect('Of', 'Old Coptic with Fayyumic tendency', []),
+  Saf: new Dialect('Saf', 'Sahidic with Akhmimic and Fayyumic tendency', []),
+  Bf: new Dialect('Bf', 'Bohairic with Fayyumic tendency', []),
+  // Lycopolitan is a major dialect, albeit with a both a standard and a
+  // non-standard siglum.
+  A2: new Dialect('A2', 'Lycopolitan (Subakhmimic)', []),
+};
 export const ANY_DIALECT_QUERY = css.classQuery(...Object.keys(DIALECTS));
 /**
  *

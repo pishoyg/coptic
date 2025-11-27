@@ -266,33 +266,30 @@ export function handleSisterView(root) {
 export function handleDialect(root, highlighter) {
   root.querySelectorAll(`.${cls.DIALECT}`).forEach((el) => {
     const code = el.textContent.trim();
-    if (!(code in dial.DIALECTS)) {
-      // There are (extremely rare) but known occurrences of irregular
-      // dialects, namely:
-      // - `Bf` (Bohairic with Fayyumic tendency) under `ϫⲟⲗ (wave)`
-      // - `Saf` (Sahidic with Akhmimic and Fayyumic tendency) under ⲥⲟⲉⲓϣ
-      //   (pair).
-      // For know, we simply ignore them.
-      // TODO: (#0) Consider at least prettifying their appearance.
-      log.warn('Unknown dialect', code);
+    const standard = code in dial.DIALECTS;
+    const dialect = standard ? dial.DIALECTS[code] : dial.NON_STANDARD[code];
+    if (!dialect) {
+      log.error(
+        'Unknown dialect',
+        code,
+        'should be added to non-standard dialect list'
+      );
       return;
     }
-    const dialect = dial.DIALECTS[code];
-    // Prettify the appearance of the dialect code.
+    // 1. Render Visuals: Replace text with Siglum and add Tooltip.
     const siglum = dialect.siglum();
     el.replaceChildren(siglum);
-    // Add a tooltip with the dialect name.
     drop.addDroppable(el, 'hover', ...dialect.anchoredName());
-    if (el.closest(`.${cls.WIKI}`)) {
-      // Dialect highlighting doesn't really work under Wiki, so we disable it
-      // here!
+    if (el.closest(`.${cls.WIKI}`) || !standard) {
+      // There is no highlighting in Wiki. And definitely not for nonstandard
+      // dialects.
       return;
     }
+    // 2. Add Interaction: Toggle highlighting on click.
     siglum.classList.add(ccls.HOVER_LINK);
-    siglum.addEventListener(
-      'click',
-      highlighter.toggle.bind(highlighter, code)
-    );
+    siglum.addEventListener('click', () => {
+      highlighter.toggle(code);
+    });
   });
 }
 /**

@@ -18,6 +18,15 @@ export function isUpper(s) {
 export function isLower(s) {
   return s.toLowerCase() === s;
 }
+const DIGITS = /^\d+$/;
+/**
+ *
+ * @param s
+ * @returns
+ */
+export function isDigits(s) {
+  return DIGITS.test(s);
+}
 /**
  * @param text
  * @returns
