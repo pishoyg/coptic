@@ -72,16 +72,12 @@ export class Dialect extends dial.Dialect<DIALECT, string, DialectKey> {
       return;
     }
 
-    const words: string[] = this.name.split(' ');
-    // If this word is the name of a dialect, return its anchored name.
-    // Otherwise, return the word as plain text.
-    for (const [index, word] of words.entries()) {
+    // For each word in the name, if it's the name of a dialect, return its
+    // anchored name. Otherwise, return the word as plain text.
+    for (const token of this.name.match(/(\w+|[^\w]+)/g)!) {
       yield* Object.values(DIALECTS)
-        .find((dialect: Dialect): boolean => dialect.name === word)
-        ?.anchoredName() ?? [word];
-      if (index < words.length - 1) {
-        yield ' ';
-      }
+        .find((dialect: Dialect): boolean => dialect.name === token)
+        ?.anchoredName() ?? [token];
     }
   }
 }
@@ -176,7 +172,7 @@ export const NON_STANDARD: Record<string, Dialect> = {
   Bf: new Dialect('Bf' as DIALECT, 'Bohairic with Fayyumic tendency', []),
   // Lycopolitan is a major dialect, albeit with a both a standard and a
   // non-standard siglum.
-  A2: new Dialect('A2' as DIALECT, 'Lycopolitan (Subakhmimic)', []),
+  A2: new Dialect('A2' as DIALECT, 'Subakhmimic (Lycopolitan)', []),
 };
 
 export const ANY_DIALECT_QUERY: string = css.classQuery(
