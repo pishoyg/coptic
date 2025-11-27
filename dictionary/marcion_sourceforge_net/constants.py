@@ -22,7 +22,7 @@ DIALECTS: list[str] = [
 ]
 
 MIN_KEY: int = 1
-MAX_KEY: int = 3385
+MAX_KEY: int = 3416
 
 # NOTE: Our derivations table layout can accommodate a maximum depth of 4. If
 # this were to change, the table layout needs to be redesigned. See `tree.py`.
@@ -146,6 +146,7 @@ _TYPES: list[lexical.Type] = [
         None,
     ),
     lexical.Type("HEADER", "(HEADER)", "HEADER", None, append=False),
+    lexical.Type("letter", "(letter)", "letter", None, append=False),
 ]
 TYPE_ENCODING: dict[str, lexical.Type] = {t.marcion(): t for t in _TYPES}
 
