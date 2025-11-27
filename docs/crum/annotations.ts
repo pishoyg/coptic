@@ -115,6 +115,9 @@ export const MAPPING: Record<string, Annotation> = {
   adv: { fullForm: 'adverb' },
   advb: { fullForm: 'adverb' },
   aor: { fullForm: 'aorist' },
+  approx: { fullForm: 'approximate' }, // NOTE: Encountered only once, as of the time of writing!
+  arithm: { fullForm: 'arithmetic' },
+  bibl: { fullForm: 'biblical' }, // NOTE: Encountered only once, as of the time of writing!
   bis: { fullForm: 'bis' }, // Full form same as abbreviation, included for completion!
   constr: { fullForm: 'constructive' },
   construct: { fullForm: 'constructive' },
@@ -122,6 +125,7 @@ export const MAPPING: Record<string, Annotation> = {
   dat: { fullForm: 'dative' },
   demonstr: { fullForm: 'demonstrative' },
   'e g': { fullForm: 'exempli gratia' },
+  Ethiop: { fullForm: 'Ethiopic' },
   frag: { fullForm: 'fragment' },
   fut: { fullForm: 'future' },
   Heb: { fullForm: 'Hebrew', noCaseVariant: true },
@@ -140,7 +144,7 @@ export const MAPPING: Record<string, Annotation> = {
   MSS: { fullForm: 'manuscripts', noCaseVariant: true },
   neg: { fullForm: 'negative' },
   perf: { fullForm: 'perfect' },
-  pf: { fullForm: 'perfect' }, // NOTE: I am actually unsure what pf means!!
+  pf: { fullForm: 'perfect' },
   pluperf: { fullForm: 'plusquamperfect' },
   predic: { fullForm: 'predicate' },
   // TODO: (#194) "prepos" was only encountered once so far, and it was intended
@@ -148,16 +152,20 @@ export const MAPPING: Record<string, Annotation> = {
   prepos: { fullForm: 'prepositional' },
   preter: { fullForm: 'preterite' },
   'q v': { fullForm: 'quod vide' },
+  rad: { fullForm: 'radical' }, // NOTE: Encountered only once, as of the time of writing!
   's v': { fullForm: 'sub verbo' },
   sic: { fullForm: 'sic erat scriptum' },
   'sic l': { fullForm: 'sic lege' },
   sc: { fullForm: 'scilicet' },
   subj: { fullForm: 'subject' },
   sup: { fullForm: 'supra' },
+  syr: { fullForm: 'Syriac' }, // NOTE: Encountered only once, as of the time of writing!
+  transl: { fullForm: 'translation' }, // NOTE: Encountered only once, as of the time of writing!
   varr: { fullForm: 'variants' },
   ult: { fullForm: 'ultimo' },
   'ut sup': { fullForm: 'ut supra' },
   vbs: { fullForm: 'verbs' },
+  viz: { fullForm: 'videlicet' },
 
   // SECTION 3: ABBREVIATIONS THAT MOSTLY APPEAR IN REFERENCE TITLES, OR PERHAPS
   // AS POSTFIXES:
