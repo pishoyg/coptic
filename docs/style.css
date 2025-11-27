@@ -258,6 +258,18 @@ table {
   color: #835f08; /* dark gold */
 }
 
+/* In the Wiki version of Crum, A^2 is used for Lycopolitan (while L is used
+ * elsewhere).
+ * Other dialects with superscripts in their sigla use a small letter in the
+ * superscript, which are naturally smaller than digits. Thus, the "2" in "A^2"
+ * looks obtrusive.
+ * To make it look better, and more similar to the text, we reduce the size. */
+/* stylelint-disable selector-class-pattern */
+.dialect.L sup {
+  font-size: 0.6em;
+}
+/* stylelint-enable selector-class-pattern */
+
 .wiki .coptic {
   font-weight: bold;
 }
