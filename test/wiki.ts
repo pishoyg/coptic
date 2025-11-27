@@ -73,8 +73,8 @@ const TEST_CASES: {
       references: 2,
       suffixes: 2,
       bible: 2,
-      dialectTooltips: 12,
-      annotations: 8,
+      dialectTooltips: 13,
+      annotations: 9,
     },
   },
 ];
