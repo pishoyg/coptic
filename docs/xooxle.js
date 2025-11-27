@@ -242,7 +242,11 @@ export class Form {
     if (this.fullWordCheckbox.box.checked) {
       // NOTE: It's important to wrap `query` in parentheses, to prevent its
       // content from corrupting the boundary regexes. See #318.
-      query = str.bounded(query, true);
+      // Additionally, in Xooxle, digits are considered word boundaries. This is
+      // useful because, otherwise, a numeric superscript or subscript that
+      // immediately follows a word would be considered part of the word,
+      // causing a match to be missed.
+      query = str.bounded(query, true, true);
     }
     return query;
   }
