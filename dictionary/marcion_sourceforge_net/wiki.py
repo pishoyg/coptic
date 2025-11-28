@@ -8,7 +8,6 @@
 # TODO: (#0) Consider the following simplifications of the substitution rules:
 # - Use an actual newline character instead of the "\n" token.
 # - The headword notation is simply unnecessary.
-
 import functools
 import itertools
 import re
@@ -210,7 +209,13 @@ _SUBSTITUTIONS: list[Substitution] = [
     ),
 ]
 # pylint: enable=line-too-long
-_BANNED: set[str] = {token for sub in _SUBSTITUTIONS for token in sub.ban}
+
+# The corrigenda substitution is different based on which Wiki entry has the
+# corrigendum, so we give it special treatment.
+CORRIGENDUM_RE: re.Pattern[str] = re.compile("//(.*?)//(.*?)//")
+_BANNED: set[str] = {"//"} | {
+    token for sub in _SUBSTITUTIONS for token in sub.ban
+}
 
 
 @typing.final
@@ -313,11 +318,21 @@ class Wiki:
         return html
 
     def _html_aux(self) -> abc.Generator[str]:
-        raw: str = self.entry
         yield "<p>"
         yield '<span class="subparagraph">'
+        raw: str = self.entry
         for s in _SUBSTITUTIONS:
             raw = s.html(raw)
+        if self.corrigenda_page:
+            # If this entry has no corrigenda page, we can assume that it has no
+            # corrigenda. The check for banned tokens will enforce this.
+            raw = CORRIGENDUM_RE.sub(
+                f'<span class="corrigendum" data-page="{self.corrigenda_page}">'
+                + r"<del>\1</del>"
+                + r"<ins>\2</ins>"
+                + "</span>",
+                raw,
+            )
         yield raw
         yield "</span>"
         yield "</p>"
@@ -327,11 +342,36 @@ class Wiki:
         txt: str = self.entry
         for s in _SUBSTITUTIONS:
             txt = s.text(txt)
+        txt = CORRIGENDUM_RE.sub(r"\2", txt)
         return txt
 
     @typing.override
     def __str__(self) -> str:
         return self.headword
+
+    @functools.cached_property
+    def corrigenda_page(self) -> str | None:
+        """
+        Returns:
+            A string representing the page number and column in the Additions
+            and Corrections section that contains corrigenda for this entry. If
+            this page lies outside the range of pages for which corrigenda are
+            available, return None.
+
+            NOTE: The value returned may not be accurate for entries lying on
+            the "borders". In particular:
+            - If corrigenda for a given page start on a column and spill over to
+              the following one, the first column will be returned.
+            - For long Crum entries that span multiple pages, we only store the
+              start page, and we will determine the corrigenda page based on
+              that.
+        """
+        # We could binary-search, but the list only contains 20 elements, so
+        # binary search is not worth it.
+        for col in constants.COLUMN_RANGES:
+            if self.crum <= col.end:
+                return col.name
+        return None
 
 
 def wikis() -> abc.Generator[Wiki]:

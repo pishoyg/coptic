@@ -1,5 +1,6 @@
 """Crum dictionary and parsing constants."""
 
+import dataclasses
 import pathlib
 import re
 
@@ -351,3 +352,39 @@ IMAGE_EXTENSIONS: set[str] = {
 }
 VALID_SRC_EXTENSIONS: set[str] = IMAGE_EXTENSIONS.difference({".svg"})
 VALID_DST_EXTENSIONS: set[str] = VALID_SRC_EXTENSIONS.difference({".png"})
+
+
+@dataclasses.dataclass
+class Column:
+    """Represents a column in the Additions and Corrections."""
+
+    def __init__(self, name: str, end: str) -> None:
+        self.name: str = name
+        self.end: lexical.CrumPage = lexical.CrumPage(end)
+
+
+COLUMN_RANGES: list[Column] = [
+    Column("xva", "9a"),
+    Column("xvb", "19b"),
+    Column("xvia", "40a"),
+    Column("xvib", "55b"),
+    Column("xviia", "77b"),
+    Column("xviib", "101b"),
+    Column("xviiia", "130b"),
+    Column("xviiib", "150a"),
+    Column("xixa", "190a"),
+    Column("xixb", "233a"),
+    Column("xxa", "261a"),
+    Column("xxb", "301b"),
+    Column("xxia", "336b"),
+    Column("xxib", "374b"),
+    Column("xxiia", "414a"),
+    Column("xxiib", "470b"),
+    Column("xxiiia", "531b"),
+    Column("xxiiib", "595b"),
+    Column("xxiva", "670b"),
+    Column("xxivb", "787b"),
+]
+
+for idx, col in enumerate(COLUMN_RANGES[1:], 1):
+    assert col.end > COLUMN_RANGES[idx - 1].end
