@@ -58,7 +58,7 @@ export const MAPPING = {
   qual: { fullForm: 'qualitative of verb; also indicated by †' },
   refl: { fullForm: 'reflexive use' },
   rel: { fullForm: 'relative' },
-  's f': { fullForm: 'sub fine' },
+  's f': { fullForm: 'sub finem' },
   sg: { fullForm: 'singular' },
   sim: { fullForm: 'similar in use or in meaning to the last quoted instance' },
   suff: { fullForm: 'suffix' },
