@@ -338,7 +338,7 @@ def records() -> abc.Generator[Wiki]:
     for record in gcp.tsv_spreadsheet(SHEET_TSV_URL).to_dict(orient="records"):
         # Some vide entries have multiple keys.
         marcion: str = record["Marcion"]
-        if not marcion or marcion == "TBD":
+        if marcion == "TBD":
             # Yield a place holder entry. It can be filtered downstream by
             # pipelines that don't accept it, or retained by pipelines that need
             # it.
