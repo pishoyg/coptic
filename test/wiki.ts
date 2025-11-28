@@ -29,8 +29,8 @@ const TEST_CASES: {
       references: 143,
       suffixes: 136,
       bible: 119,
-      dialectTooltips: 384,
-      annotations: 84,
+      dialectTooltips: 388,
+      annotations: 86,
     },
   },
   {
@@ -47,8 +47,8 @@ const TEST_CASES: {
       references: 5,
       suffixes: 4,
       bible: 6,
-      dialectTooltips: 8,
-      annotations: 12,
+      dialectTooltips: 9,
+      annotations: 13,
     },
   },
   {
