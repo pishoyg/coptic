@@ -41,7 +41,7 @@ _FROM_MARCION: set[str] = {
     "3381",
     "3382",
     "3385",
-    "1259",  # TODO: (#508) merge into 1258.
+    "1259",  # TODO: (#634) merge into 1258.
 }
 
 
