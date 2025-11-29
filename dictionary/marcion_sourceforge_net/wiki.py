@@ -17,7 +17,7 @@ from collections import abc
 
 from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import lexical as lex
-from utils import ensure, gcp, lang, log, orth, page
+from utils import ensure, gcp, lang, orth, page
 
 # pylint: disable=line-too-long
 # TODO: (#0) Move to `utils/paths.py`.
@@ -222,7 +222,7 @@ class Wiki:
         key: str,
         record: dict[typing.Hashable, typing.Any],
     ) -> None:
-        self.key: int = int(key) if key else 0
+        self.key: int = int(key)
         del key
         self.entry: str = record["Entry"]
         self.headword: str = record["Headword"]
@@ -334,39 +334,21 @@ class Wiki:
         return self.headword
 
 
-def records() -> abc.Generator[Wiki]:
+def wikis() -> abc.Generator[Wiki]:
     for record in gcp.tsv_spreadsheet(SHEET_TSV_URL).to_dict(orient="records"):
-        # Some vide entries have multiple keys.
-        marcion: str = record["Marcion"]
-        if marcion == "TBD":
-            # Yield a place holder entry. It can be filtered downstream by
-            # pipelines that don't accept it, or retained by pipelines that need
-            # it.
-            # TODO: (#508) All Crum entry should have a Marcion entry.
-            yield Wiki("", record)
-            continue
-        keys: list[str] = marcion.split(" ")
-        if len(keys) > 1 and not record["_v_"]:
-            log.warn(
-                "Non-vide entries has several Marcion keys:",
-                record,
-            )
-        for key in keys:
+        for key in record["Marcion"].split():
             yield Wiki(key, record)
 
 
 @functools.cache
 def by_marcion_key() -> dict[str, list[Wiki]]:
-    entries: list[Wiki] = list(records())
+    entries: list[Wiki] = list(wikis())
     # Remove entries that don't have a key.
     entries = [w for w in entries if w.key]
     # First bring all entries with the same key together, so we can group they
     # by key.
     entries = sorted(entries, key=lambda w: w.key)
     # Group by key, sorting each group.
-    # TODO: (#508) Ban groups that consist entirely of vide entries. If a group
-    # is all vide, its corresponding Marcion entry should be merged into another
-    # Marcion entry, and the group keys should be updated to use the new key.
     return {
         str(key): list(group)
         for key, group in itertools.groupby(entries, lambda w: w.key)
@@ -376,9 +358,9 @@ def by_marcion_key() -> dict[str, list[Wiki]]:
 class Page:
     """Page represents a group of Wikis that occur on the same page."""
 
-    def __init__(self, crum: lex.CrumPage, wikis: abc.Iterable[Wiki]) -> None:
+    def __init__(self, crum: lex.CrumPage, ws: abc.Iterable[Wiki]) -> None:
         self.crum: lex.CrumPage = crum
-        self.wikis: list[Wiki] = list(wikis)
+        self.wikis: list[Wiki] = list(ws)
 
     def html(self) -> str:
         return "".join(self.html_aux())

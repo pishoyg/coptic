@@ -448,7 +448,12 @@ class Root(Row):
     @functools.cached_property
     def quality(self) -> str:
         quality: str = self.get(sheet.COL.QUALITY)
-        assert quality in constants.QUALITY
+        ensure.ensure(
+            quality in constants.QUALITY,
+            self.key,
+            "has an invalid value for quality:",
+            quality,
+        )
         return quality
 
     @functools.cached_property
@@ -834,10 +839,3 @@ def _verify_wiki_keys() -> None:
             "for entries:",
             wikis,
         )
-        if all(w.vide for w in wikis):
-            log.error(
-                "Marcion entry",
-                key,
-                "consists entirely of Wiki vide entries:",
-                list(map(str, wikis)),
-            )
