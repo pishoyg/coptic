@@ -752,10 +752,12 @@ class Crum:
             if key_deriv == "0":
                 # This derivation has no parents.
                 return 0
-            d: int = 1 + derivations[key_deriv].depth
+            d: int = 1 + derivations[key_deriv].depth  # noqa: F821
             assert d <= constants.MAX_DERIVATION_DEPTH
             return d
 
+        # TODO: (#620) Force derivations to render under their parents in the
+        # tree.
         by_key_word: collections.defaultdict[str, list[Derivation]] = (
             collections.defaultdict(list)
         )
@@ -767,12 +769,23 @@ class Crum:
             )
             derivations[d.key] = d
             by_key_word[d.key_word].append(d)
+        # This object was needed to calculate depths, but is no longer required.
+        del derivations
 
         roots: dict[str, Root] = {}
         for record in sheet.roots():
             key: str = record.row[sheet.COL.KEY.value]
-            roots[key] = Root(record.row_num, record.row, by_key_word[key])
+            roots[key] = Root(
+                record.row_num,
+                record.row,
+                by_key_word.pop(key, []),
+            )
 
+        ensure.ensure(
+            not by_key_word,
+            "some derivations are not consumed into any roots:",
+            list(by_key_word.values()),
+        )
         return roots
 
     @staticmethod
