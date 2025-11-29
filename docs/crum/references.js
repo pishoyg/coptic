@@ -1487,7 +1487,7 @@ const DATA = [
       title: 'MSS. in the Bibliothèque Nationale, Paris (Crum’s copies)',
     },
     variants: ['P'],
-    postfixes: ['ar', 'Ar'],
+    postfixes: ['ar', 'Ar', 'arab'],
   },
   {
     source: {
