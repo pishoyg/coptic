@@ -73,7 +73,7 @@ function main(): void {
   const holder: HTMLSpanElement = document.createElement('span');
   holder.textContent = 'Languages ▾';
   holder.id = ID.TRAY;
-  drop.addDroppable(holder, 'click', tray);
+  drop.addDroppable(holder, 'click', 'below', tray);
 
   // Construct the highlighter.
   const highlighter: high.Highlighter = new high.Highlighter(

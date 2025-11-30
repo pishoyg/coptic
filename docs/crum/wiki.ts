@@ -258,7 +258,7 @@ export function handleAnnotations(root: HTMLElement): void {
         }
         const span: HTMLSpanElement = document.createElement('span');
         span.textContent = form;
-        drop.addDroppable(span, 'hover', annot.fullForm);
+        drop.addDroppable(span, 'hover', 'below', annot.fullForm);
         span.classList.add(cls.ANNOTATION);
         return { replacement: span };
       },
@@ -392,7 +392,7 @@ export function handleBible(root: HTMLElement): void {
       link.target = '_blank';
       link.classList.add(ccls.HOVER_LINK, cls.BIBLE);
       link.textContent = match[0];
-      drop.addDroppable(link, 'hover', result.name);
+      drop.addDroppable(link, 'hover', 'below', result.name);
       return { replacement: link };
     },
     // Exclude all Wiki abbreviations to avoid overlap.
@@ -528,7 +528,7 @@ function replaceReference(
   // Add a hover-invoked tooltip, if present.
   const tooltip: (Node | string)[] | undefined = source.tooltip();
   if (tooltip?.length) {
-    drop.addDroppable(span, 'hover', ...tooltip);
+    drop.addDroppable(span, 'hover', 'below', ...tooltip);
   }
 
   return { replacement: span, remainder };

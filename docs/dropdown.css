@@ -55,14 +55,27 @@
   position: relative;
 }
 
-/* Hover-invoked .droppable: */
-.dropdown .droppable {
-  top: 100%; /* .droppable renders right beneath the previous sibling.
-              It's unclear to me why this breaks click-invoked droppables.
-              I would've otherwise included it in the shared ruleset. */
+/* Hover-invoked .droppable can render above or below their parent element. */
+.dropdown .droppable:not(.above) {
+  /* By default, tooltips render below the parent.
+   * NOTE: It's unclear to me why this breaks click-invoked droppables.
+   * I would've otherwise included it in the shared ruleset. */
+  top: 100%;
 }
 
-.dropdown:hover .droppable {
+.dropdown .droppable.above {
+  /* With the `above` class added, render above the parent element.
+   * Again, this may break click-invoked tooltips (although we haven't tried it),
+   * so we restrict it to hover-invoked tooltips.
+   * */
+  top: auto;
+  bottom: 100%;
+
+  /* Move the box shadow to prevent it from hiding the parent. */
+  box-shadow: 0 -8px 16px rgb(0 0 0 / 20%);
+}
+
+.dropdown:hover > .droppable {
   /* Hovering a .dropdown element causes its child .droppable to show. */
   display: block;
 }

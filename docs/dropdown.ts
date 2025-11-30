@@ -2,9 +2,13 @@
  * NOTE: The terms ‘droppable’ and ‘tooltip’ are used interchangeably.
  * */
 import * as browser from './browser.js';
+import * as log from './logger.js';
 
 type Visibility = 'block' | 'none';
 type Invocation = 'hover' | 'click';
+// New type to handle direction
+type Position = 'above' | 'below';
+
 const OVERFLOW_MARGIN = 10;
 
 export enum CLS {
@@ -14,15 +18,13 @@ export enum CLS {
    * their associated droppable. */
   DROP = 'drop',
   /* DROPDOWN is the class of elements that, when hovered over, show their
-   * associated droppable.
-   * NOTE: This package only concerns itself with click-invoked, not
-   * hover-invoked, drop-downs. But we include the class for completion in case
-   * it's needed externally. */
+   * associated droppable. */
   DROPDOWN = 'dropdown',
   /* ALIGN_RIGHT is the class of a right-aligned tooltip. (Tips are, by default,
-   * left-aligned.)
-   */
+   * left-aligned.) */
   ALIGN_RIGHT = 'align-right',
+  /* ABOVE is the class for droppables that render above the element. */
+  ABOVE = 'above',
 }
 
 /**
@@ -63,9 +65,6 @@ export class Droppable {
       e.stopPropagation();
     });
     // A click anywhere outside the .droppable element hides it.
-    // We should also exclude clicks on the .drop element, since those toggle
-    // rather than hide. But we already stop propagation of events on the .drop
-    // element, so we don't need to check for it.
     document.addEventListener('click', (event: MouseEvent) => {
       if (!this.droppable.contains(event.target as Node)) {
         this.hide();
@@ -107,6 +106,7 @@ export class Droppable {
   /**
    * Realigns the droppable element to stay within the viewport.
    * TODO: (#241) Implement alignment using CSS.
+   * NOTE: This only calculates X-axis overflow.
    */
   private realign(): void {
     // Reset the transform property to get accurate measurements.
@@ -156,13 +156,20 @@ export function addEventListeners(
  *
  * @param dropdown - An element that, when hovered, should display the content.
  * @param invocation
+ * @param position - Whether to render 'above' or 'below'.
  * @param content - The content that shows when the drop element is hovered.
  */
 export function addDroppable(
   dropdown: Element,
   invocation: Invocation,
+  position: Position = 'below',
   ...content: (Node | string)[]
 ): void {
+  if (position === 'above' && invocation === 'click') {
+    log.fatal(
+      'Click-invoked tooltips can only render below their parent element!'
+    );
+  }
   const droppable: HTMLElement = ((): HTMLElement => {
     if (content.length === 1 && content[0] instanceof HTMLElement) {
       return content[0];
@@ -174,6 +181,11 @@ export function addDroppable(
 
   dropdown.classList.add(invocation === 'hover' ? CLS.DROPDOWN : CLS.DROP);
   droppable.classList.add(CLS.DROPPABLE);
+
+  // Apply the specific class if this is an upward droppable
+  if (position === 'above') {
+    droppable.classList.add(CLS.ABOVE);
+  }
 
   // A hover-invoked droppable must be a child of its associated drop element.
   dropdown.appendChild(droppable);
