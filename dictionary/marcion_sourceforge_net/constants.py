@@ -244,6 +244,9 @@ DETACHED_TYPES: dict[str, lexical.Type] = {
         "conjunctive participle",
         None,
     ),
+    # TODO: (#64) Once detached types are correctly placed in the HTML, show the
+    # variant label. We hide it now because it would be too confusing!
+    "var": lexical.Type("var", "(var)", "variant", None, append=False),
 }
 
 # What characters are allowed to be present in a Coptic morpheme?
