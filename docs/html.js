@@ -62,7 +62,7 @@ export function replaceText(root, regex, replace, exclude) {
   // We can't replace nodes on the fly, as this could corrupt the walker.
   // Instead, we capture all nodes that need replacement, and then process them
   // afterwards.
-  Array.from(filterNodes(root, regex, exclude)).forEach((node) => {
+  Array.from(filterNodes(root, exclude)).forEach((node) => {
     if (exclude && node.parentElement?.closest(exclude)) {
       // Skip this node.
       // While we already accounted for the exclusions when we captured the node
@@ -104,24 +104,28 @@ export function replaceText(root, regex, replace, exclude) {
 /**
  *
  * @param root
- * @param regex
  * @param exclude
  * @returns
  */
-function* filterNodes(root, regex, exclude) {
+function* filterNodes(root, exclude) {
   const walker = document.createTreeWalker(
     root,
-    NodeFilter.SHOW_TEXT,
-    (node) => {
-      if (!node.nodeValue?.match(regex)) {
-        // This node doesn't contain a matching text.
-        return NodeFilter.FILTER_REJECT;
-      }
-      if (exclude && node.parentElement?.closest(exclude)) {
-        // This node is excluded.
-        return NodeFilter.FILTER_REJECT;
-      }
-      return NodeFilter.FILTER_ACCEPT;
+    NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT,
+    {
+      acceptNode(node) {
+        if (node.nodeType === Node.ELEMENT_NODE) {
+          return exclude && node.matches(exclude)
+            ? // If this element matches the exclude selector, FILTER_REJECT
+              // tells TreeWalker to discard this node AND its children.
+              NodeFilter.FILTER_REJECT
+            : // If it's a normal element, we don't want to yield the element
+              // itself, but we DO want to visit its children.
+              NodeFilter.FILTER_SKIP;
+        }
+        return node.nodeType === Node.TEXT_NODE
+          ? NodeFilter.FILTER_ACCEPT
+          : NodeFilter.FILTER_SKIP;
+      },
     }
   );
   while (walker.nextNode()) {
