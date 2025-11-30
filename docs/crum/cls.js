@@ -21,6 +21,7 @@ export const BIBLE = 'bible';
  */
 export const BULLET = 'bullet';
 export const CATEGORIES = 'categories';
+export const CORRIGENDUM = 'corrigendum';
 export const CRUM_PAGE = 'crum-page';
 export const CRUM_PAGE_IMG = 'crum-page-img';
 export const DAWOUD_PAGE = 'dawoud-page';

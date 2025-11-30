@@ -209,6 +209,7 @@ export function handle(root) {
     handleReferences(elem);
     handleAnnotations(elem);
     handlePages(elem);
+    handleCorrigenda(elem);
     white.warnPotentiallyMissingReferences(elem);
     dev.play(() => {
       const endText = drop.noTipTextContent(elem);
@@ -241,7 +242,7 @@ export function handleAnnotations(root) {
         }
         const span = document.createElement('span');
         span.textContent = form;
-        drop.addDroppable(span, 'hover', annot.fullForm);
+        drop.addDroppable(span, 'hover', 'below', annot.fullForm);
         span.classList.add(cls.ANNOTATION);
         return { replacement: span };
       },
@@ -360,7 +361,7 @@ export function handleBible(root) {
       link.target = '_blank';
       link.classList.add(ccls.HOVER_LINK, cls.BIBLE);
       link.textContent = match[0];
-      drop.addDroppable(link, 'hover', result.name);
+      drop.addDroppable(link, 'hover', 'below', result.name);
       return { replacement: link };
     },
     // Exclude all Wiki abbreviations to avoid overlap.
@@ -476,7 +477,7 @@ function replaceReference(match, remainder, nextSibling) {
   // Add a hover-invoked tooltip, if present.
   const tooltip = source.tooltip();
   if (tooltip?.length) {
-    drop.addDroppable(span, 'hover', ...tooltip);
+    drop.addDroppable(span, 'hover', 'below', ...tooltip);
   }
   return { replacement: span, remainder };
 }
@@ -493,6 +494,29 @@ export function handleReferences(root) {
       replaceReference,
       // Exclude all Wiki abbreviations to avoid any overlap.
       ABBREVIATION_EXCLUDE
+    );
+  });
+}
+// On a corrigendum element, the page number lives in a `data-page` attribute.
+const DATA_PAGE = 'page';
+/**
+ *
+ * @param root
+ */
+export function handleCorrigenda(root) {
+  root.querySelectorAll(`.${cls.CORRIGENDUM}`).forEach((elem) => {
+    const i = document.createElement('i');
+    i.append('Additions and Corrections');
+    drop.addDroppable(
+      elem,
+      'hover',
+      'above',
+      'From ',
+      i,
+      // TODO: (#427) Add a link to the page instead of simply appending it to
+      // the text. And do not remove the terminating column number ('a' or
+      // 'b').
+      ` (${elem.dataset[DATA_PAGE].replace(/[ab]$/, '')})`
     );
   });
 }

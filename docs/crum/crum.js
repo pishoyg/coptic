@@ -279,7 +279,7 @@ export function handleDialect(root, highlighter) {
     // 1. Render Visuals: Replace text with Siglum and add Tooltip.
     const siglum = dialect.siglum();
     el.replaceChildren(siglum);
-    drop.addDroppable(el, 'hover', ...dialect.anchoredName());
+    drop.addDroppable(el, 'hover', 'below', ...dialect.anchoredName());
     if (el.closest(`.${cls.WIKI}`) || !standard) {
       // There is no highlighting in Wiki. And definitely not for nonstandard
       // dialects.
