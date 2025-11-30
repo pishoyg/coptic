@@ -224,6 +224,7 @@ export function handle(root: HTMLElement): void {
       handleReferences(elem);
       handleAnnotations(elem);
       handlePages(elem);
+      handleCorrigenda(elem);
       white.warnPotentiallyMissingReferences(elem);
 
       dev.play(() => {
@@ -550,4 +551,31 @@ export function handleReferences(root: HTMLElement): void {
       ABBREVIATION_EXCLUDE
     );
   });
+}
+
+// On a corrigendum element, the page number lives in a `data-page` attribute.
+const DATA_PAGE = 'page';
+
+/**
+ *
+ * @param root
+ */
+export function handleCorrigenda(root: HTMLElement): void {
+  root
+    .querySelectorAll<HTMLElement>(`.${cls.CORRIGENDUM}`)
+    .forEach((elem: HTMLElement): void => {
+      const i = document.createElement('i');
+      i.append('Additions and Corrections');
+      drop.addDroppable(
+        elem,
+        'hover',
+        'above',
+        'From ',
+        i,
+        // TODO: (#427) Add a link to the page instead of simply appending it to
+        // the text. And do not remove the terminating column number ('a' or
+        // 'b').
+        ` (${elem.dataset[DATA_PAGE]!.replace(/[ab]$/, '')})`
+      );
+    });
 }
