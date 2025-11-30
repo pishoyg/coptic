@@ -10,6 +10,7 @@
 # in-memory view as well.
 
 import collections
+import dataclasses
 import functools
 import itertools
 import os
@@ -191,6 +192,10 @@ class Derivation(Row):
     def key_word(self) -> str:
         return self.get(sheet.COL.KEY_WORD)
 
+    @functools.cached_property
+    def key_deriv(self) -> str:
+        return self.get(sheet.COL.KEY_DERIV)
+
 
 class Relation:
     """House represents a word relation."""
@@ -306,6 +311,14 @@ class Image:
         return [self.src_path, self.dst_path, self.sources_path]
 
 
+@dataclasses.dataclass
+class Drv:
+    """Drv is used to verify the tree structure."""
+
+    key: str
+    depth: int
+
+
 class Root(Row):
     """Root represents a root row."""
 
@@ -338,6 +351,25 @@ class Root(Row):
         super().__init__(row_num, row, root=True)
         self._derivations: list[Derivation] = list(derivations)
         assert all(d.key_word == self.key for d in self._derivations)
+        # Verify the tree structure. Ensure that each derivation renders beneath
+        # its parent.
+        # Create a stack with a placeholder element.
+        stack: list[Drv] = [Drv("0", -1)]
+        for d in self._derivations:
+            while stack[-1].depth >= d.depth:
+                _ = stack.pop()
+            top: Drv = stack[-1]
+            assert top.depth < d.depth  # Sanity check.
+            ensure.ensure(
+                top.key == d.key_deriv,
+                "Word",
+                self.key,
+                "has derivation",
+                d.key,
+                "rendering below an element that is not its parent:",
+                top.key,
+            )
+            stack.append(Drv(d.key, d.depth))
 
     @functools.cached_property
     def wikis(self) -> list[wiki.Wiki]:
