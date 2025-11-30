@@ -77,6 +77,17 @@ const TEST_CASES: {
       annotations: 9,
     },
   },
+  {
+    // 629 has a corrigendum.
+    key: '629',
+    want: {
+      references: 21,
+      suffixes: 21,
+      bible: 18,
+      dialectTooltips: 66,
+      annotations: 31,
+    },
+  },
 ];
 
 /**
