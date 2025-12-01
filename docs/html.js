@@ -26,7 +26,7 @@ export function moveElement(el, tag, attrs) {
  */
 export function makeSpanLinkToAnchor(el, target) {
   if (el.tagName !== 'SPAN') {
-    log.warn(`Converting ${el.tagName} tag to <a> tag!`);
+    log.error(`Converting ${el.tagName} tag to <a> tag!`);
   }
   moveElement(el, 'a', { href: target });
 }

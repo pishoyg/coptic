@@ -26,6 +26,7 @@ export function chopColumn(page) {
   }
   return page;
 }
+const SWAP_TOLERANCE = 10;
 /**
  * A dictionary index.
  */
@@ -59,21 +60,12 @@ export class Index {
       .map((row) => {
         const [page, start, end] = Index.toColumns(row);
         return {
-          page: Index.forceParseInt(page),
+          page: parseInt(page),
           start: new wordType(start),
           end: new wordType(end),
         };
       });
-    for (let i = 1; i < this.pages.length; i++) {
-      const cur = this.pages[i];
-      const prev = this.pages[i - 1];
-      if (cur.page !== prev.page + 1) {
-        log.fatal('Non-consecutive page numbers:', `${prev.page}, ${cur.page}`);
-      }
-    }
-    if (dev.get()) {
-      this.verifyWordOrder();
-    }
+    dev.play(this.validate.bind(this));
   }
   /**
    * @param str - String representation of a TSV row.
@@ -84,16 +76,6 @@ export class Index {
       .split('\t')
       .slice(0, WANT_COLUMNS.length)
       .map((l) => l.trim());
-  }
-  /**
-   * Parse an integer, throwing an error if it's not parsable.
-   * @param str - A string representation of an integer.
-   * @returns - The parsed integer.
-   */
-  static forceParseInt(str) {
-    const num = parseInt(str);
-    log.ensure(!isNaN(num), 'unable to parse page number', num);
-    return num;
   }
   /**
    * Given a search query, return the dictionary page number.
@@ -138,44 +120,61 @@ export class Index {
     return this.pages[right].page;
   }
   /**
-   * Verify that its words are indeed lexicographically sorted, as should be the
-   * case with a dictionary index.
+   * Perform some validations on the index.
+   * Some validations are strict, and would throw an exception if unmet.
+   * Other types of errors are expected to be present, and would simply log a
+   * warning.
    */
-  verifyWordOrder() {
-    let count = 0;
-    for (const [i, p] of this.pages.entries()) {
-      if (!p.start.leq(p.end)) {
-        count++;
+  validate() {
+    let swaps = 0;
+    for (const [i, cur] of this.pages.entries()) {
+      // Verify that the page number was parsed correctly.
+      log.ensure(!isNaN(cur.page), 'Invalid page number at position', i);
+      // Verify the word order on this page.
+      if (!cur.start.leq(cur.end)) {
+        swaps++;
         log.warn(
           'words on page',
-          p.page,
+          cur.page,
           'seem reversed:',
-          p.start.word,
+          cur.start.word,
           ',',
-          p.end.word
+          cur.end.word
         );
       }
       const prev = this.pages[i - 1];
       if (!prev) {
         continue;
       }
-      if (!prev.end.leq(p.start)) {
-        count++;
+      // Verify page number sequence.
+      if (cur.page !== prev.page + 1) {
+        log.fatal('Non-consecutive page numbers:', `${prev.page}, ${cur.page}`);
+      }
+      // Verify the word order between this page and the next one.
+      if (!prev.end.leq(cur.start)) {
+        swaps++;
         log.warn(
           'going from page',
           prev.page,
           'to',
-          p.page,
+          cur.page,
           'words seem reversed:',
           prev.end.word,
           ',',
-          p.start.word
+          cur.start.word
         );
       }
     }
-    if (count) {
-      log.warn('Swap count:', count);
+    if (swaps) {
+      log.warn('Swap count:', swaps);
     }
+    log.ensure(
+      swaps < this.pages.length / SWAP_TOLERANCE,
+      'Dictionary of',
+      this.pages.length,
+      'pages has too many swaps:',
+      swaps
+    );
   }
 }
 /**

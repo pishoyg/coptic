@@ -145,7 +145,7 @@ export function addDroppable(
 ) {
   if (position === 'above' && invocation === 'click') {
     log.fatal(
-      'Click-invoked tooltips can only render below their parent element!'
+      'Click-invoked tooltips can only render below their parent element! See the CSS!'
     );
   }
   const droppable = (() => {

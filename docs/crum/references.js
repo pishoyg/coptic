@@ -1,5 +1,5 @@
 /* eslint-disable max-lines */
-import * as logger from '../logger.js';
+import * as log from '../logger.js';
 export const MAPPING = {};
 /**
  * Reference represents a particular way of citing a source in the text.
@@ -2496,7 +2496,7 @@ const DATA = [
  * @param noSpaceVariants
  */
 function add(key, reference, noSpaceVariants) {
-  logger.ensure(MAPPING[key] === undefined, 'duplicate key:', key);
+  log.ensure(MAPPING[key] === undefined, 'duplicate key:', key);
   MAPPING[key] = reference;
   if (noSpaceVariants) {
     return;
@@ -2510,7 +2510,7 @@ function add(key, reference, noSpaceVariants) {
 }
 // Add all the variants to the map.
 DATA.forEach((res) => {
-  logger.ensure(
+  log.ensure(
     !!res.variants.length,
     'resource has no abbreviations listed:',
     res

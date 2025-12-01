@@ -1,6 +1,5 @@
 /** Package logger defines logging helpers. */
 /* eslint-disable no-console */
-import * as dev from './dev.js';
 var Colors;
 (function (Colors) {
   Colors['RESET'] = '\u001B[0m';
@@ -13,24 +12,6 @@ var Colors;
   Colors['CYAN'] = '\u001B[36m';
   Colors['WHITE'] = '\u001B[37m';
 })(Colors || (Colors = {}));
-/**
- * Start a timer (only if developer mode is active).
- * @param name - Timer name.
- */
-export function time(name) {
-  if (dev.get()) {
-    console.time(name);
-  }
-}
-/**
- * End a timer (only if developer mode is active).
- * @param name
- */
-export function timeEnd(name) {
-  if (dev.get()) {
-    console.timeEnd(name);
-  }
-}
 /**
  * Log the given message to the console, alternative the colors of the arguments
  * using the two given colors.
@@ -65,6 +46,9 @@ export function info(...message) {
 export function warn(...message) {
   print(Colors.YELLOW, Colors.CYAN, 'warn', false, ...message);
 }
+// NOTE: Aim to avoid expensive sanity checks in production code. Instead, only
+// execute them in developer mode or unit tests. See `dev.ts`.
+// Cheaper validations are OK to execute outside developer mode.
 /**
  * Log an error message, or throw an exception if under Playwright.
  *
@@ -98,7 +82,6 @@ export function fatal(...message) {
  *
  * @param condition - Condition to evaluate.
  * @param {...any} message - Message to log (if the condition is not satisfied).
- * TODO: (#604) This method shouldn't be called in production code.
  */
 export function ensure(condition, ...message) {
   if (!condition) {
