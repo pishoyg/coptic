@@ -36,11 +36,6 @@ export class Word {
   public constructor(word: string) {
     this.word = word.toLowerCase();
     log.ensure(!!this.word, 'constructing a word with the empty string!');
-    log.ensure(
-      Array.from(word).every((c) => c in Word.MAPPING),
-      word,
-      'contains character that are not in the mapping!'
-    );
     this.mapped = Word.map(this.word);
   }
 
@@ -70,7 +65,7 @@ export class Word {
    */
   private static map(word: string): string {
     return Array.from(word)
-      .map((a) => Word.MAPPING[a] ?? a)
+      .map((a) => Word.MAPPING[a]!)
       .join();
   }
 

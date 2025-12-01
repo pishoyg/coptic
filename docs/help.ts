@@ -3,6 +3,7 @@
 import * as iam from './iam.js';
 import * as cls from './cls.js';
 import * as log from './logger.js';
+import * as dev from './dev.js';
 
 const TITLE = 'Keyboard Shortcuts';
 
@@ -427,7 +428,7 @@ export class Help {
     // Add the section to the help panel.
     this.panel.appendChild(s.html());
     // Verify the new section doesn't introduce any duplicates.
-    this.verifyNoDuplicates();
+    dev.play(this.verifyNoDuplicates.bind(this));
   }
 
   /**

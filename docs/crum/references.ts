@@ -1,5 +1,5 @@
 /* eslint-disable max-lines */
-import * as logger from '../logger.js';
+import * as log from '../logger.js';
 
 export const MAPPING: Record<string, Reference> = {};
 
@@ -2569,7 +2569,7 @@ function add(
   reference: Reference,
   noSpaceVariants?: boolean
 ): void {
-  logger.ensure(MAPPING[key] === undefined, 'duplicate key:', key);
+  log.ensure(MAPPING[key] === undefined, 'duplicate key:', key);
   MAPPING[key] = reference;
   if (noSpaceVariants) {
     return;
@@ -2584,7 +2584,7 @@ function add(
 
 // Add all the variants to the map.
 DATA.forEach((res: Resource): void => {
-  logger.ensure(
+  log.ensure(
     !!res.variants.length,
     'resource has no abbreviations listed:',
     res

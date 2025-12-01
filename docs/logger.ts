@@ -1,6 +1,5 @@
 /** Package logger defines logging helpers. */
 /* eslint-disable no-console */
-import * as dev from './dev.js';
 
 enum Colors {
   RESET = '\x1b[0m',
@@ -12,26 +11,6 @@ enum Colors {
   PURPLE = '\x1b[35m',
   CYAN = '\x1b[36m',
   WHITE = '\x1b[37m',
-}
-
-/**
- * Start a timer (only if developer mode is active).
- * @param name - Timer name.
- */
-export function time(name: string): void {
-  if (dev.get()) {
-    console.time(name);
-  }
-}
-
-/**
- * End a timer (only if developer mode is active).
- * @param name
- */
-export function timeEnd(name: string): void {
-  if (dev.get()) {
-    console.timeEnd(name);
-  }
 }
 
 /**
@@ -83,6 +62,10 @@ export function warn(...message: unknown[]): void {
   print(Colors.YELLOW, Colors.CYAN, 'warn', false, ...message);
 }
 
+// NOTE: Aim to avoid expensive sanity checks in production code. Instead, only
+// execute them in developer mode or unit tests. See `dev.ts`.
+// Cheaper validations are OK to execute outside developer mode.
+
 /**
  * Log an error message, or throw an exception if under Playwright.
  *
@@ -118,7 +101,6 @@ export function fatal(...message: unknown[]): never {
  *
  * @param condition - Condition to evaluate.
  * @param {...any} message - Message to log (if the condition is not satisfied).
- * TODO: (#604) This method shouldn't be called in production code.
  */
 export function ensure(
   condition: unknown,

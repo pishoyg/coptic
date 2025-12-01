@@ -3,6 +3,7 @@
 // with Crum.
 import * as scan from '../../scan.js';
 import * as log from '../../logger.js';
+import * as dev from '../../dev.js';
 const MIN_PAGE_NUM = 1; // First file is "1.png".
 const MAX_PAGE_NUM = 975; // Last file is "975.png".
 const OFFSET = 22; // Page 1 in the dictionary is "23.png".
@@ -88,7 +89,9 @@ class Letter {
    * @param text
    */
   public constructor(public readonly text: string) {
-    log.ensure(text in LETTER_MAPPING, text, 'is not a letter!');
+    dev.play(() => {
+      log.ensure(text in LETTER_MAPPING, text, 'is not a letter!');
+    });
   }
 
   /**
@@ -236,10 +239,12 @@ export class Word implements scan.Word {
     );
 
     // Sanity check:
-    log.ensure(
-      letters.map((s) => s.text).join('') === word,
-      'This is impossible given the regex!'
-    );
+    dev.play(() => {
+      log.ensure(
+        letters.map((s) => s.text).join('') === word,
+        'This is impossible given the regex!'
+      );
+    });
 
     const start: Letter | undefined = letters[0];
     if (!start) {
