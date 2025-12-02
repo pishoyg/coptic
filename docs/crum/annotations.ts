@@ -121,12 +121,18 @@ export const MAPPING: Record<string, Annotation> = {
   '3d pl': { fullForm: 'third person plural' },
 
   '1 perf': { fullForm: 'first perfect' },
+  '1st perf': { fullForm: 'first perfect' },
   '1 pres': { fullForm: 'first present' },
+  '1st pres': { fullForm: 'first present' },
   '1 fut': { fullForm: 'first future' },
+  '1st fut': { fullForm: 'first future' },
 
   '2 perf': { fullForm: 'second perfect' },
+  '2d perf': { fullForm: 'second perfect' },
   '2 pres': { fullForm: 'second present' },
+  '2d pres': { fullForm: 'second present' },
   '2 fut': { fullForm: 'second future' },
+  '2d fut': { fullForm: 'second future' },
 
   // TODO: (#194) Is there a third perfect or third present?
   '3 fut': { fullForm: 'third future' },
