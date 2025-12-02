@@ -153,6 +153,10 @@ export const SUFFIX = new RegExp(
   `^(?:\\s(?:'?[0-9]+\\*?|[a-zA-Z§]))+${str.WORD_END.source}`,
   'u'
 );
+export const COMMA_SUFFIX = new RegExp(
+  `^(?:,(?:\\s(?:'?[0-9]+\\*?|[a-zA-Z§]))+)+${str.WORD_END.source}`,
+  'u'
+);
 const LETTER = /[a-zA-Z\p{M}&]/u;
 const SPECIAL_CASES: string[] = [
   // The following entries have more than 3 words:
@@ -224,6 +228,20 @@ export function handle(root: HTMLElement): void {
       // and annotations must exclude pieces of text that have been marked as
       // references.
       handleReferences(elem);
+      // NOTE: We search for occurrences of:
+      //   <reference>, <suffix>, <suffix>, ...
+      // We do this after all references are detected to avoid mistakenly
+      // interpreting a reference as a suffix.
+      // For example, consider the following piece of text[1]:
+      //   P 44 66, K 179
+      // If the first run were to consider suffixes after commas, we may be
+      // tempted to interpret "K 179" as a second suffix for the P reference.
+      // However, processing all references first guarantees that this K
+      // references gets caught, thus it won't be mistaken for a suffix of the P
+      // reference.
+      //
+      // [1] https://remnqymi.com/crum/510.html#:~:text=P%2044%2066,%20K%20179
+      handleCommasAfterReferences(elem);
       handleAnnotations(elem);
       handlePages(elem);
       handleCorrigenda(elem);
@@ -376,7 +394,11 @@ function parseBibleCitation(
  * Use of a code file makes things simpler, and it's not particularly painful to
  * maintain.
  *
+ *
+ *
  * [1] https://developer.mozilla.org/en-US/docs/Glossary/IIFE
+ *
+ * TODO: (#633) Handle commas after biblical references as well.
  *
  * @param root
  *
@@ -600,4 +622,44 @@ export function handleSemicolons(root: HTMLElement): void {
     // Maybe we should simply exclude tooltips (`drop.CLS.DROPPABLE`)?
     ABBREVIATION_EXCLUDE
   );
+}
+
+/**
+ *
+ * @param root
+ */
+export function handleCommasAfterReferences(root: HTMLElement): void {
+  root
+    .querySelectorAll(`.${cls.REFERENCE}`)
+    .forEach((reference: Element): void => {
+      const nextSibling: ChildNode | null = reference.nextSibling;
+      if (!nextSibling) {
+        return;
+      }
+      if (reference.nextSibling?.nodeType !== Node.TEXT_NODE) {
+        return;
+      }
+      const text: string | null = nextSibling.nodeValue;
+      if (!text) {
+        return;
+      }
+      const match = COMMA_SUFFIX.exec(text);
+      if (!match) {
+        return;
+      }
+      nextSibling.nodeValue = text.slice(match[0].length);
+      // TODO: (#0) The current flow groups the first suffix (if present) under
+      // one <span class="suffix"> tag, and all other comma-separated suffixes
+      // under a second tag. For uniformity, we should have each separate suffix
+      // in a separate tag.
+      // TODO: (#633) The `parseSuffix` function considers the possibility that
+      // our match has following <sup> element that is part of the suffix. Right
+      // now, our code doesn't account for the possibility that such a
+      // superscript is followed by a comma that is followed by more suffixes.
+      const suffix: HTMLSpanElement = parseSuffix(
+        match[0],
+        nextSibling.nodeValue ? null : nextSibling.nextSibling
+      );
+      reference.append(suffix);
+    });
 }
