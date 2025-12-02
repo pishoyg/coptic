@@ -274,9 +274,16 @@ table {
   font-weight: bold;
 }
 
-.wiki .bullet {
-  font-weight: bold;
-  color: indigo;
+.wiki {
+  & .semicolon,
+  .bullet {
+    font-weight: bold;
+    color: indigo;
+  }
+
+  .semicolon {
+    margin-right: 0.75em;
+  }
 }
 
 .sister-key {
