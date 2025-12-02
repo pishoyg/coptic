@@ -76,8 +76,14 @@ function activeDialectMatchQuery(active: dial.DIALECT[]): string {
 }
 
 /**
+ * SearchResult is a search result type shared by both Crum and KELLIA.
  */
 class SearchResult extends xoox.SearchResult {
+  private static readonly NUM_BUCKETS =
+    1 +
+    Math.max(
+      ...Object.values(Bucket).filter((value) => typeof value === 'number')
+    );
   protected static manager: dial.Manager;
   protected static highlighter: high.Highlighter;
 
@@ -92,78 +98,6 @@ class SearchResult extends xoox.SearchResult {
   ): void {
     SearchResult.manager = manager;
     SearchResult.highlighter = highlighter;
-  }
-}
-
-/**
- *
- */
-class AndreasSearchResult extends xoox.SearchResult {
-  /**
-   * @param row
-   */
-  public override enrich(row: HTMLTableRowElement): void {
-    andreas.handle(row);
-  }
-}
-
-/**
- */
-class CrumSearchResult extends SearchResult {
-  private static readonly NUM_BUCKETS =
-    1 +
-    Math.max(
-      ...Object.values(Bucket).filter((value) => typeof value === 'number')
-    );
-  // We have two overlaid databases of Crum, referred to as Marcion and Wiki.
-  // We use checkboxes to control which database to search.
-  public static wikiCheckbox: HTMLInputElement = document.getElementById(
-    id.WIKI_CHECKBOX
-  ) as HTMLInputElement;
-  public static marcionCheckbox: HTMLInputElement = document.getElementById(
-    id.MARCION_CHECKBOX
-  ) as HTMLInputElement;
-
-  /**
-   * @returns
-   */
-  protected override link(): string {
-    return paths.crum(this.key);
-  }
-
-  /**
-   *
-   * @param row
-   */
-  public override enrich(row: HTMLTableRowElement): void {
-    crum.addGreekLookups(row);
-    crum.handleDialect(row, CrumSearchResult.highlighter);
-    wiki.handle(row);
-    drop.addEventListeners('hover', row);
-  }
-
-  /**
-   * @returns
-   */
-  public override filter(): boolean {
-    if (
-      CrumSearchResult.wikiCheckbox.checked ===
-      CrumSearchResult.marcionCheckbox.checked
-    ) {
-      // If both checkboxes are checked or both are unchecked, use default
-      // behavior.
-      return super.filter();
-    }
-    // Layer 0 is Marcion, layer 1 is Wiki.
-    if (CrumSearchResult.marcionCheckbox.checked) {
-      // If only the Marcion checkbox is checked, then only search Marcion.
-      return !this.layer;
-    }
-    if (CrumSearchResult.wikiCheckbox.checked) {
-      // If only the Wiki checkbox is checked, then only search Wiki.
-      return !!this.layer;
-    }
-    log.fatal('This is impossible!');
   }
 
   /**
@@ -220,6 +154,73 @@ class CrumSearchResult extends SearchResult {
 }
 
 /**
+ *
+ */
+class AndreasSearchResult extends xoox.SearchResult {
+  /**
+   * @param row
+   */
+  public override enrich(row: HTMLTableRowElement): void {
+    andreas.handle(row);
+  }
+}
+
+/**
+ */
+class CrumSearchResult extends SearchResult {
+  // We have two overlaid databases of Crum, referred to as Marcion and Wiki.
+  // We use checkboxes to control which database to search.
+  public static wikiCheckbox: HTMLInputElement = document.getElementById(
+    id.WIKI_CHECKBOX
+  ) as HTMLInputElement;
+  public static marcionCheckbox: HTMLInputElement = document.getElementById(
+    id.MARCION_CHECKBOX
+  ) as HTMLInputElement;
+
+  /**
+   * @returns
+   */
+  protected override link(): string {
+    return paths.crum(this.key);
+  }
+
+  /**
+   *
+   * @param row
+   */
+  public override enrich(row: HTMLTableRowElement): void {
+    crum.addGreekLookups(row);
+    crum.handleDialect(row, CrumSearchResult.highlighter);
+    wiki.handle(row);
+    drop.addEventListeners('hover', row);
+  }
+
+  /**
+   * @returns
+   */
+  public override filter(): boolean {
+    if (
+      CrumSearchResult.wikiCheckbox.checked ===
+      CrumSearchResult.marcionCheckbox.checked
+    ) {
+      // If both checkboxes are checked or both are unchecked, use default
+      // behavior.
+      return super.filter();
+    }
+    // Layer 0 is Marcion, layer 1 is Wiki.
+    if (CrumSearchResult.marcionCheckbox.checked) {
+      // If only the Marcion checkbox is checked, then only search Marcion.
+      return !this.layer;
+    }
+    if (CrumSearchResult.wikiCheckbox.checked) {
+      // If only the Wiki checkbox is checked, then only search Wiki.
+      return !!this.layer;
+    }
+    log.fatal('This is impossible!');
+  }
+}
+
+/**
  * kelliaDialectSorter implements a dialect-based sorter for the KELLIA
  * dictionary.
  * Undialected entries are less significant in KELLIA, so we don't give them any
@@ -235,34 +236,11 @@ class KELLIASearchResult extends SearchResult {
   }
 
   /**
-   * @returns
-   */
-  public static override numBuckets(): number {
-    return 2;
-  }
-
-  /**
    *
    * @param row
    */
   public override enrich(row: HTMLTableRowElement): void {
     kellia.handle(row, SearchResult.highlighter);
-  }
-
-  /**
-   * @param row - Table row.
-   * @returns Bucket number.
-   */
-  public override bucket(row: HTMLTableRowElement): number {
-    const active: dial.DIALECT[] | undefined = SearchResult.manager.active();
-    if (!active?.length) {
-      // There is no dialect highlighting. All results fall in the first bucket.
-      return 0;
-    }
-
-    // If there is a match in an active dialect, then this result goes to the
-    // first bucket. Otherwise it goes to the second bucket.
-    return row.querySelector(activeDialectMatchQuery(active)) ? 0 : 1;
   }
 }
 
