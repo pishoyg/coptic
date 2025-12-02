@@ -52,7 +52,9 @@ const ABBREVIATION_EXCLUDE = css.classQuery(
   // But we add them to the list for completion.
   cls.SUFFIX,
   cls.DIALECT,
-  cls.ANNOTATION
+  cls.ANNOTATION,
+  // Glosses definitely have no abbreviations. Exclude for protectiveness.
+  cls.GLOSS
 );
 /**
  * BIBLE_RE defines the regex used to catch Bible references.
