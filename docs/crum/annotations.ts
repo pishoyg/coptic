@@ -173,6 +173,7 @@ export const MAPPING: Record<string, Annotation> = {
   perf: { fullForm: 'perfect' },
   pf: { fullForm: 'perfect' },
   pluperf: { fullForm: 'pluperfect' },
+  possess: { fullForm: 'possessive' },
   predic: { fullForm: 'predicate' },
   // TODO: (#194) "prepos" was only encountered once so far, and it was intended
   // to mean "prepositional". Could it also mean "preposition"?
