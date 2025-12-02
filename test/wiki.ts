@@ -45,7 +45,7 @@ const TEST_CASES: {
     key: '1144',
     want: {
       references: 5,
-      suffixes: 4,
+      suffixes: 5,
       bible: 6,
       dialectTooltips: 9,
       annotations: 13,
