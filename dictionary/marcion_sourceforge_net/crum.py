@@ -125,7 +125,7 @@ class Row(gcp.Record):
     @functools.cached_property
     def dialects(self) -> list[str]:
         line_dialects: list[list[str] | None] = [
-            w.dialects() for w in self.parsing_2
+            w.dialects() for w in self.parsing_1
         ]
         # NOTE: For roots, we have two cases:
         # - either all lines have dialects, or
