@@ -75,9 +75,13 @@
   box-shadow: 0 -8px 16px rgb(0 0 0 / 20%);
 }
 
-.dropdown:hover > .droppable {
-  /* Hovering a .dropdown element causes its child .droppable to show. */
-  display: block;
+.dropdown:hover {
+  background-color: #fffdd0;
+
+  & > .droppable {
+    /* Hovering a .dropdown element causes its child .droppable to show. */
+    display: block;
+  }
 }
 
 /* .drop is specific to click-invoked elements. Clicking a .drop element should
