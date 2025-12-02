@@ -22,7 +22,7 @@ from collections import OrderedDict, abc, defaultdict
 import pandas as pd
 
 from dictionary.kellia_uni_goettingen_de import sources
-from utils import ensure, file, gcp, log, text
+from utils import ensure, file, gcp, log, page, text
 
 XML_NS: str = "{http://www.w3.org/XML/1998/namespace}"
 TEI_NS: str = "{http://www.tei-c.org/ns/1.0}"
@@ -41,10 +41,6 @@ NUM_GREEK: int = 3208
 NUM_EGYPTIAN: int = 8055
 
 _CLEAN: set[str] = set("ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ ")
-_CRUM_RE: re.Pattern[str] = re.compile(r"\b(CD ([0-9]+[ab]?)-?[0-9]*[ab]?)\b")
-_CRUM_PAGE: str = (
-    "https://coptot.manuscriptroom.com/crum-coptic-dictionary?pageID="
-)
 _SenseChild = typing.Literal["quote", "definition", "bibl", "ref", "xr"]
 _SENSE_CHILDREN: list[_SenseChild] = [
     "quote",
@@ -86,11 +82,6 @@ def _is_greek(entry: ET.Element) -> bool:
         bibl.text and bibl.text.strip() == "DDGLC"
         for bibl in entry.iter(TEI_NS + "bibl")
     )
-
-
-# TODO: (#51) Insert Crum links and tooltips in TypeScript.
-def _add_crum_links(ref_bibl: str) -> str:
-    return _CRUM_RE.sub(rf'<a href="{_CRUM_PAGE}\2">\1</a>', ref_bibl)
 
 
 def _clean(txt: str) -> str:
@@ -279,33 +270,32 @@ class Sense:
 
     def format(self, pair: tuple[_SenseChild, str]) -> str:
         if pair[0] == "bibl":
-            return _add_crum_links("\n".join(text.ssplit(pair[1], "; ")))
+            return page.LINE_BREAK.join(text.ssplit(pair[1], "; "))
         return f'<span class="{pair[0]}">{pair[1]}</span>'
 
     def identify(self) -> tuple[int, str]:
         return (self._sense_n, self._sense_id)
 
     def tr(self) -> str:
-        out = "".join(self._tr_aux())
-        while "\n\n\n" in out:
-            out = out.replace("\n\n\n", "\n\n")
-        return out
+        return "".join(self._tr_aux())
 
     def _tr_aux(self) -> abc.Generator[str]:
         yield f"<!--sense_number:{self._sense_n}, sense_id:{self._sense_id}-->"
         yield "<tr>"
         yield '<td class="meaning">'
-        yield "\n".join(map(self.format, self.subset("quote", "definition")))
+        yield page.LINE_BREAK.join(
+            map(self.format, self.subset("quote", "definition")),
+        )
         yield "</td>"
         yield '<td class="bibl">'
-        yield "\n".join(map(self.format, self.subset("bibl")))
+        yield page.LINE_BREAK.join(map(self.format, self.subset("bibl")))
         yield "</td>"
         yield "</tr>"
         ref_xr = self.subset("ref", "xr")
         if ref_xr:
             yield "<tr>"
             yield '<td class="ref_xr" colspan="2">'
-            yield "\n".join(map(self.format, ref_xr))
+            yield page.LINE_BREAK.join(map(self.format, ref_xr))
             yield "</td>"
             yield "</tr>"
 

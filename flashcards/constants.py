@@ -265,20 +265,14 @@ class Crum(deck.Deck):
 
     @staticmethod
     def __tla_col(data: str) -> str:
-        data = page.html_line_breaks(data)
         # NOTE: TLA sister elements possess IDs that are often identical, which
         # we remove here in order to avoid having HTML element ID conflicts,
         # given that, in this view, we can include several TLA entries in the
         # same HTML page.
-        data = TLA_ID_RE.sub("", data)
-        return data
+        return TLA_ID_RE.sub("", data)
 
     for key, word in kellia.greek().items():
-        title = (
-            __tla_col(word.orthstring.table())
-            .replace("<br>", " ")
-            .replace("</br>", " ")
-        )
+        title = page.no_line_breaks(__tla_col(word.orthstring.table()))
         meaning: str = __tla_col(word.merge_langs().table())
         key_to_stepsister[key] = Sister(key, title, meaning, "")
 
@@ -692,10 +686,10 @@ class KELLIA(deck.Deck):
     @typing.override
     def notes_aux(self) -> abc.Generator[deck.Note]:
         for key, word in self.words.items():
-            front: str = page.html_line_breaks(word.orthstring.table())
+            front: str = word.orthstring.table()
             back: str = _join(
-                page.html_line_breaks(word.merge_langs().table()),
-                page.html_line_breaks(word.etym_string.process()),
+                word.merge_langs().table(),
+                word.etym_string.process(),
                 page.HORIZONTAL_RULE,
                 "<footer>",
                 "Coptic Dictionary Online: ",

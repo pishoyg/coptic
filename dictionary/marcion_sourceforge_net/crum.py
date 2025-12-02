@@ -95,11 +95,9 @@ class Row(gcp.Record):
         )
 
     def word_parsed_classify(self, include_references: bool = True) -> str:
-        return page.html_line_breaks(
-            "\n".join(
-                w.string(classify=True, include_references=include_references)
-                for w in self.parsing_1
-            ),
+        return page.LINE_BREAK.join(
+            w.string(classify=True, include_references=include_references)
+            for w in self.parsing_1
         )
 
     @functools.cached_property
@@ -115,18 +113,14 @@ class Row(gcp.Record):
         )
 
     def word_parsed_prettify(self) -> str:
-        return page.html_line_breaks(
-            "\n".join(
-                w.string(append_root_type=True, classify=True)
-                for w in self.parsing_2
-            ),
+        return page.LINE_BREAK.join(
+            w.string(append_root_type=True, classify=True)
+            for w in self.parsing_2
         )
 
     @functools.cached_property
     def meaning(self) -> str:
-        return page.html_line_breaks(
-            parse.parse_english_cell(self.get(sheet.COL.EN)),
-        )
+        return parse.parse_english_cell(self.get(sheet.COL.EN))
 
     @functools.cached_property
     def dialects(self) -> list[str]:
@@ -687,7 +681,7 @@ class Root(Row):
             if d.type_name and d.type_name not in ["-", "HEADER"]:
                 meaning = f"({d.type_name}) {meaning}"
             yield "<li>"
-            yield "<br/>".join(filter(None, [word, meaning]))
+            yield page.LINE_BREAK.join(filter(None, [word, meaning]))
             yield "</li>"
 
         while depth > 0:

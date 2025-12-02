@@ -31,25 +31,12 @@ _GOOGLE_TAG: str = """
 
 LINE_BREAK: str = "<br>"
 HORIZONTAL_RULE: str = "<hr>"
-_SELF_CLOSING_LINE_BREAK: str = "<br/>"
 
 TAG_RE: re.Pattern[str] = re.compile(r"^</?(\w+)(?: [^>]+)?>")
 
 
-def html_line_breaks(txt: str) -> str:
-    """Substitute newline characters with HTML line breaks.
-
-    Args:
-        txt: Text to fix.
-
-    Returns:
-        Text with newlines replaced with HTML line breaks.
-    """
-    return txt.replace("\n", LINE_BREAK)
-
-
 def no_line_breaks(htm: str) -> str:
-    return htm.replace(LINE_BREAK, " ").replace(_SELF_CLOSING_LINE_BREAK, " ")
+    return htm.replace(LINE_BREAK, " ")
 
 
 # NOTE: html_head is used by our HTML generation logic to generated the <head>

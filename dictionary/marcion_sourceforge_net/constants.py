@@ -6,7 +6,7 @@ import re
 
 from dictionary.marcion_sourceforge_net import lexical
 from morphology import inflect
-from utils import paths
+from utils import page, paths
 
 # Dialects.
 DIALECTS: list[str] = [
@@ -322,6 +322,7 @@ ENGLISH_PROCESSING: list[tuple[re.Pattern[str] | str, str]] = [
         re.compile(rf"(\b({"|".join(_HEADINGS)})( \([a-zA-Z? ]+\))?:)"),
         r'<span class="heading">\1</span>',
     ),
+    ("\n", page.LINE_BREAK),
 ]
 
 QUALITY: list[str] = [

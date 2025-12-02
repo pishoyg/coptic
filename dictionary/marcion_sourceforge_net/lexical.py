@@ -7,7 +7,7 @@ import typing
 
 from dictionary.marcion_sourceforge_net import constants
 from morphology import inflect
-from utils import ensure, log
+from utils import ensure, log, page
 
 
 class Gender(enum.Enum):
@@ -246,7 +246,7 @@ class Line:
         t = _span(t, ["type"] + self._dialects)
         r = ""
         if include_references:
-            r = "<br>".join("[" + r + "]" for r in self._references)
+            r = page.LINE_BREAK.join("[" + r + "]" for r in self._references)
             r = _span(r, ["nag-hammadi"])
         word = " ".join(filter(None, [f, d, t, r]))
         # For historical reasons, we use the class "word" to refer to a line.
