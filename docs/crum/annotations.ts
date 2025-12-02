@@ -33,6 +33,10 @@ export interface Annotation {
   noCaseVariant?: boolean;
 }
 
+// NOTE: We choose to use English, rather than Latin, names of tenses (perfect,
+// future, etc. instead of perfectum, futurum, etc.) However, for abbreviations
+// of Latin terms, we have to use the Latin term.
+//
 // NOTE:
 // Crum also had the following entry in his list of abbreviations:
 //     ( ) = Coptic letter inserted by editor, except in headings, where they
@@ -91,7 +95,7 @@ export const MAPPING: Record<string, Annotation> = {
   qual: { fullForm: 'qualitative of verb; also indicated by †' },
   refl: { fullForm: 'reflexive use' },
   rel: { fullForm: 'relative' },
-  's f': { fullForm: 'sub finem' },
+  's f': { fullForm: 'sub fine' },
   sg: { fullForm: 'singular' },
   sim: { fullForm: 'similar in use or in meaning to the last quoted instance' },
   suff: { fullForm: 'suffix' },
@@ -115,6 +119,18 @@ export const MAPPING: Record<string, Annotation> = {
   '2d pl': { fullForm: 'second person plural' },
   '3 pl': { fullForm: 'third person plural' },
   '3d pl': { fullForm: 'third person plural' },
+
+  '1 perf': { fullForm: 'first perfect' },
+  '1 pres': { fullForm: 'first present' },
+  '1 fut': { fullForm: 'first future' },
+
+  '2 perf': { fullForm: 'second perfect' },
+  '2 pres': { fullForm: 'second present' },
+  '2 fut': { fullForm: 'second future' },
+
+  // TODO: (#194) Is there a third perfect or third present?
+  '3 fut': { fullForm: 'third future' },
+
   '&c': { fullForm: 'et cetera' },
   absol: { fullForm: 'absolute' },
   AD: { fullForm: 'Anno Domini', noCaseVariant: true },
@@ -153,9 +169,10 @@ export const MAPPING: Record<string, Annotation> = {
   MS: { fullForm: 'manuscript', noCaseVariant: true },
   MSS: { fullForm: 'manuscripts', noCaseVariant: true },
   neg: { fullForm: 'negative' },
+  // TODO: (#194) Add Annotation for "partic". Is it "particle" or "participle"?
   perf: { fullForm: 'perfect' },
   pf: { fullForm: 'perfect' },
-  pluperf: { fullForm: 'plusquamperfect' },
+  pluperf: { fullForm: 'pluperfect' },
   predic: { fullForm: 'predicate' },
   // TODO: (#194) "prepos" was only encountered once so far, and it was intended
   // to mean "prepositional". Could it also mean "preposition"?
@@ -187,6 +204,7 @@ export const MAPPING: Record<string, Annotation> = {
   Lect: { fullForm: 'Lectionary', noCaseVariant: true },
   Mart: { fullForm: 'martyrdom', noCaseVariant: true },
   Sitz: { fullForm: 'Sitzungsberichte', noCaseVariant: true },
+  Assyr: { fullForm: 'Assyrian', noCaseVariant: true },
 };
 
 Object.entries(MAPPING).forEach(
