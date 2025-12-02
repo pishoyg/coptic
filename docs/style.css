@@ -91,6 +91,11 @@ hr {
   width: 70%;
 }
 
+.wiki .gloss {
+  font-style: italic;
+  color: #7f8c8d;
+}
+
 .subparagraph {
   margin-left: 2em;
 }

@@ -95,7 +95,7 @@ _SUBSTITUTIONS: list[Substitution] = [
     Substitution(
         "em",
         r"__(.+?)__",
-        r"<em>\1</em>",
+        r'<span class="gloss">\1</span>',
         ban=["_"],
     ),
     Substitution(
