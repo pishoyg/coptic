@@ -36,6 +36,7 @@ export const DRV_KEY = 'drv-key';
 export const DRV_LINK = 'drv-link';
 export const EXPLANATORY = 'explanatory';
 export const EXPLANATORY_KEY = 'explanatory-key';
+export const GLOSS = 'gloss';
 /**
  * HEADING is the class of a the word starting a paragraph in the meaning of a
  * word.

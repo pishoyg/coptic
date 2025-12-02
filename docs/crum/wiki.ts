@@ -55,7 +55,9 @@ const ABBREVIATION_EXCLUDE: string = css.classQuery(
   // But we add them to the list for completion.
   cls.SUFFIX,
   cls.DIALECT,
-  cls.ANNOTATION
+  cls.ANNOTATION,
+  // Glosses definitely have no abbreviations. Exclude for protectiveness.
+  cls.GLOSS
 );
 
 /**
