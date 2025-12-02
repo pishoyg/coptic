@@ -58,6 +58,7 @@ export const QUALITY = 'quality';
  */
 export const REFERENCE = 'reference';
 export const PART_OF_SPEECH = 'part-of-speech';
+export const SEMICOLON = 'semicolon';
 export const SENSES = 'senses';
 export const SISTERS_TABLE = 'sisters-table';
 export const SISTER_INDEX = 'sister-index';

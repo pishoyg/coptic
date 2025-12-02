@@ -225,6 +225,7 @@ export function handle(root: HTMLElement): void {
       handleAnnotations(elem);
       handlePages(elem);
       handleCorrigenda(elem);
+      handleSemicolons(elem);
       white.warnPotentiallyMissingReferences(elem);
 
       dev.play(() => {
@@ -578,4 +579,23 @@ export function handleCorrigenda(root: HTMLElement): void {
         ` (${elem.dataset[DATA_PAGE]!.replace(/[ab]$/, '')})`
       );
     });
+}
+
+/**
+ *
+ * @param root
+ */
+export function handleSemicolons(root: HTMLElement): void {
+  html.replaceText(
+    root,
+    /;/,
+    () => {
+      const span = document.createElement('span');
+      span.classList.add(cls.SEMICOLON);
+      span.textContent = ';';
+      return { replacement: span };
+    },
+    // Maybe we should simply exclude tooltips (`drop.CLS.DROPPABLE`)?
+    ABBREVIATION_EXCLUDE
+  );
 }

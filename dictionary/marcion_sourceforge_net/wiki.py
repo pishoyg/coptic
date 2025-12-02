@@ -75,12 +75,6 @@ class Substitution:
 # an `or` operator. We also add a comment explaining the rationale for the
 # override.
 _SUBSTITUTIONS: list[Substitution] = [
-    Substitution(
-        "semicolon",
-        ";",
-        '<span class="semicolon">;</span>',
-        text_repl=";",
-    ),
     # Replace occurrences of ampersand with the HTML encoding.
     # NOTE: While most browsers and pipelines can deal with a literal ampersand,
     # BeautifulSoup often misinterprets the combination "&c;" so we convert it
