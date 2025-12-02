@@ -210,6 +210,7 @@ export function handle(root) {
     handleAnnotations(elem);
     handlePages(elem);
     handleCorrigenda(elem);
+    handleSemicolons(elem);
     white.warnPotentiallyMissingReferences(elem);
     dev.play(() => {
       const endText = drop.noTipTextContent(elem);
@@ -519,4 +520,22 @@ export function handleCorrigenda(root) {
       ` (${elem.dataset[DATA_PAGE].replace(/[ab]$/, '')})`
     );
   });
+}
+/**
+ *
+ * @param root
+ */
+export function handleSemicolons(root) {
+  html.replaceText(
+    root,
+    /;/,
+    () => {
+      const span = document.createElement('span');
+      span.classList.add(cls.SEMICOLON);
+      span.textContent = ';';
+      return { replacement: span };
+    },
+    // Maybe we should simply exclude tooltips (`drop.CLS.DROPPABLE`)?
+    ABBREVIATION_EXCLUDE
+  );
 }
