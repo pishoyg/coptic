@@ -788,8 +788,6 @@ class Crum:
             assert d <= constants.MAX_DERIVATION_DEPTH
             return d
 
-        # TODO: (#620) Force derivations to render under their parents in the
-        # tree.
         by_key_word: collections.defaultdict[str, list[Derivation]] = (
             collections.defaultdict(list)
         )
@@ -817,6 +815,13 @@ class Crum:
             not by_key_word,
             "some derivations are not consumed into any roots:",
             list(by_key_word.values()),
+        )
+        ensure.ensure(
+            len(roots) == constants.NUM_ROOTS,
+            "Got",
+            len(roots),
+            "roots! Expecting",
+            constants.NUM_ROOTS,
         )
         return roots
 

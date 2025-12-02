@@ -17,6 +17,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+from dictionary.marcion_sourceforge_net import constants as const
 from dictionary.marcion_sourceforge_net import crum, sheet
 from utils import cache, ensure, file, log, paths, system
 
@@ -369,7 +370,7 @@ _CRUM_STATS: list[Stat] = [
             },
         ),
         700,
-        3357,
+        const.NUM_ROOTS,
         Dash.CRUM_APPENDICES,
     ),
     Stat(
@@ -379,7 +380,7 @@ _CRUM_STATS: list[Stat] = [
             os.listdir("dictionary/marcion_sourceforge_net/data/img/"),
         ),
         1200,
-        33570,
+        const.NUM_ROOTS * 10,
     ),
     Stat(
         "crum_wiki",
@@ -389,7 +390,7 @@ _CRUM_STATS: list[Stat] = [
             for root in crum.Crum.roots.values()
         ),
         1700,
-        3357,
+        const.NUM_ROOTS,
         Dash.CRUM_APPENDICES,
     ),
     Crum(
@@ -398,7 +399,7 @@ _CRUM_STATS: list[Stat] = [
         "Words with Dawoud pages",
         None,
         2600,
-        3357,
+        const.NUM_ROOTS,
         Dash.CRUM_APPENDICES,
     ).stat,
     Crum(
@@ -415,7 +416,7 @@ _CRUM_STATS: list[Stat] = [
         "Editor's notes",
         None,
         4,
-        3357,
+        const.NUM_ROOTS,
         Dash.CRUM_FIXES,
     ).stat,
     Crum(
@@ -424,7 +425,7 @@ _CRUM_STATS: list[Stat] = [
         "Roots with senses",
         None,
         70,
-        3357,
+        const.NUM_ROOTS,
         Dash.CRUM_APPENDICES,
     ).stat,
     Crum(
@@ -433,7 +434,7 @@ _CRUM_STATS: list[Stat] = [
         "Total number of root senses",
         r"[0-9]+",
         160,
-        33570,
+        const.NUM_ROOTS * 10,
     ).stat,
     Crum(
         "last_page",
@@ -441,7 +442,7 @@ _CRUM_STATS: list[Stat] = [
         "Last pages overridden",
         None,
         4,
-        3357,
+        const.NUM_ROOTS,
         Dash.CRUM_FIXES,
     ).stat,
     Crum(
@@ -450,7 +451,7 @@ _CRUM_STATS: list[Stat] = [
         "Words with sisters",
         None,
         37,
-        3357,
+        const.NUM_ROOTS,
         Dash.CRUM_APPENDICES,
     ).stat,
     Crum(
@@ -459,7 +460,7 @@ _CRUM_STATS: list[Stat] = [
         "Total number of sisters",
         r"[0-9]+",
         58,
-        33570,
+        const.NUM_ROOTS * 10,
     ).stat,
     Crum(
         "antonyms",
@@ -467,7 +468,7 @@ _CRUM_STATS: list[Stat] = [
         "Words with antonyms",
         None,
         2,
-        3357,
+        const.NUM_ROOTS,
         Dash.CRUM_APPENDICES,
     ).stat,
     Crum(
@@ -476,7 +477,7 @@ _CRUM_STATS: list[Stat] = [
         "Total number of antonyms",
         r"[0-9]+",
         2,
-        33570,
+        const.NUM_ROOTS * 10,
     ).stat,
     Crum(
         "homonyms",
@@ -484,7 +485,7 @@ _CRUM_STATS: list[Stat] = [
         "Words with homonyms",
         None,
         7,
-        3357,
+        const.NUM_ROOTS,
         Dash.CRUM_APPENDICES,
     ).stat,
     Crum(
@@ -493,7 +494,7 @@ _CRUM_STATS: list[Stat] = [
         "Total number of homonyms",
         r"[0-9]+",
         7,
-        33570,
+        const.NUM_ROOTS * 10,
     ).stat,
     Crum(
         "greek_sisters",
@@ -501,7 +502,7 @@ _CRUM_STATS: list[Stat] = [
         "Words with Greek sisters",
         None,
         1,
-        3357,
+        const.NUM_ROOTS,
         Dash.CRUM_APPENDICES,
     ).stat,
     Crum(
@@ -510,7 +511,7 @@ _CRUM_STATS: list[Stat] = [
         "Total number of Greek sisters",
         r"[0-9]+",
         1,
-        3357,
+        const.NUM_ROOTS,
     ).stat,
     Crum(
         "categories",
@@ -518,7 +519,7 @@ _CRUM_STATS: list[Stat] = [
         "Words with categories",
         None,
         30,
-        3357,
+        const.NUM_ROOTS,
         Dash.CRUM_APPENDICES,
     ).stat,
     Crum(
@@ -529,6 +530,23 @@ _CRUM_STATS: list[Stat] = [
         30,
         6714,
     ).stat,
+    Stat(
+        "crum_drv",
+        "Words with derivations",
+        lambda: sum(
+            bool(root.derivations) for root in crum.Crum.roots.values()
+        ),
+        1200,
+        const.NUM_ROOTS,
+        Dash.CRUM_APPENDICES,
+    ),
+    Stat(
+        "crum_drv_sum",
+        "Total number of derivations",
+        lambda: sum(
+            len(root.derivations) for root in crum.Crum.roots.values()
+        ),
+    ),
     # Since our Crum data source diverged from Marcion, we have no way to
     # track number of typos. In a way, it's irrelevant.
     Stat(

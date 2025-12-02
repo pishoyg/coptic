@@ -25,6 +25,10 @@ DIALECTS: list[str] = [
 MIN_KEY: int = 1
 MAX_KEY: int = 3416
 
+# Total number of entries in Crum.
+# TODO: (#427) Account for the changes in Additions and Derivations.
+NUM_ROOTS: int = 3410
+
 # NOTE: Our derivations table layout can accommodate a maximum depth of 4. If
 # this were to change, the table layout needs to be redesigned. See `tree.py`.
 MAX_DERIVATION_DEPTH: int = 4
