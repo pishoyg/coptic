@@ -32,7 +32,6 @@ class Substitution:
 
     def __init__(
         self,
-        name: str,
         pattern: str,
         repl: str,
         text_repl: str = r"\1",
@@ -41,7 +40,6 @@ class Substitution:
         """Initializes a Substitution object.
 
         Args:
-            name: A description of the substitution rule.
             pattern: The regular expression pattern to search for.
             repl: The replacement string.
             text_repl: A replacement used to generate a plain-text (no-HTML)
@@ -50,7 +48,6 @@ class Substitution:
                 can't be present in the HTML post-processing. Use this optional
                 field to verify that all substitutions are well-formed.
         """
-        self.name: str = name
         self.pattern: re.Pattern[str] = re.compile(pattern)
         self.repl: str = repl
         self.text_repl: str = text_repl
@@ -79,27 +76,20 @@ _SUBSTITUTIONS: list[Substitution] = [
     # NOTE: While most browsers and pipelines can deal with a literal ampersand,
     # BeautifulSoup often misinterprets the combination "&c;" so we convert it
     # explicitly.
-    Substitution("ampersand", "&", "&amp;", text_repl="&"),
+    Substitution("&", "&amp;", text_repl="&"),
     # The asterisk is not a reserved character in modern HTML, so we don't need
     # to use `&ast;`. However, using a plain asterisk risks conflicting with the
     # bold rule below. We therefore leave it up to our linters to replace
     # the occurrences of `&ask;` produced here with a literal asterisk.
-    Substitution("asterisk", r"\\\*", "&ast;", text_repl="*", ban=["*", "\\"]),
+    Substitution(r"\\\*", "&ast;", text_repl="*", ban=["*", "\\"]),
     Substitution(
-        "tab",
         r"\\t",
         '</span><span class="subparagraph">',
         text_repl="    ",
         ban=["\\"],
     ),
+    Substitution(r"__(.+?)__", r'<span class="gloss">\1</span>', ban=["_"]),
     Substitution(
-        "em",
-        r"__(.+?)__",
-        r'<span class="gloss">\1</span>',
-        ban=["_"],
-    ),
-    Substitution(
-        "bold",
         # Bold text is simply bullets. We prefer using an explicit `bullet`
         # class to mark them, instead of relying on `<b>`.
         # We can use a stricter regex that only allows alphabetical characters
@@ -108,20 +98,13 @@ _SUBSTITUTIONS: list[Substitution] = [
         r'<span class="bullet">\1</span>',
         ban=["*"],
     ),
+    Substitution(r"_(.+?)_", r"<i>\1</i>", ban=["_"]),
     Substitution(
-        "italic",
-        r"_(.+?)_",
-        r"<i>\1</i>",
-        ban=["_"],
-    ),
-    Substitution(
-        "dialect",
         r"\[\[(S|B|A|F|O)\]\]",
         r'<span class="dialect \1">\1</span>',
         ban=["[[", "]]"],
     ),
     Substitution(
-        "subdialect",
         # While not explicitly mentioned in Crum's intro, there are occurrences
         # of non-standard dialect sigla in the dictionary (such as S^af, B^f,
         # and O^f).
@@ -136,14 +119,12 @@ _SUBSTITUTIONS: list[Substitution] = [
         ban=["[[", "]]", "^"],
     ),
     Substitution(
-        "subdialectLyco",
         r"\[\[(A\^2)\]\]",
         r'<span class="dialect L">A2</span>',
         text_repl="L",
         ban=["[[", "]]", "^"],
     ),
     Substitution(
-        "superscript",
         r"\^(\w+)",
         r"<sup>\1</sup>",
         # This is not entirely plain text, but we have no other way to represent
@@ -152,56 +133,47 @@ _SUBSTITUTIONS: list[Substitution] = [
         ban=["^"],
     ),
     Substitution(
-        "headword",
         r"\[\[\[(\(?\)?\[?\]?\.?\…?-?[\u2c80-\u2cff\u03e2-\u03ef].*?\]?)\]\]\]",
         r'<span class="headword coptic">\1</span>',
         ban=["[[[", "]]]"],
     ),
     Substitution(
-        "coptic",
         r"\[\[(\(?\)?\[?\.?\.?\]?\.?,?\…?-?·?\s?[\u2c80-\u2cff\u03e2-\u03ef].*?\]?)\]\]",
         r'<span class="coptic">\1</span>',
         ban=["[[", "]]"],
     ),
     Substitution(
-        "greek",
         r"\[\[(\(?\)?\[?\]?\.?\…?·?\s?-?[\u0370-\u03e1\u03f0-\u03ff\u1f00-\u1fff].*?)\]\]",
         r'<span class="greek">\1</span>',
         ban=["[[", "]]"],
     ),
     Substitution(
-        "arabic",
         r"\[\[(\(?\)?\[?\]?\.?\…?[\u05f3\u0600-\u06ff\ufe70-\ufeff].*?)\]\]",
         r'<span class="arabic">\1</span>',
         ban=["[[", "]]"],
     ),
     Substitution(
-        "aramaic",
         r"\[\[(\(?\)?\[?\]?\.?\…?[\u0700-\u074f].*?)\]\]",
         r'<span class="aramaic">\1</span>',
         ban=["[[", "]]"],
     ),
     Substitution(
-        "hebrew",
         r"\[\[(\(?\)?\[?\]?\.?\…?[\u0590-\u05ff].*?)\]\]",
         r'<span class="hebrew">\1</span>',
         ban=["[[", "]]"],
     ),
     Substitution(
-        "amharic",
         r"\[\[(\(?\)?\[?\]?\.?\…?[\u1200-\u137f\u1380-\u139f\u2d80-\u2ddf\uab00-\uab2f\u1e7e0-\u1e7ff].*?)\]\]",
         r'<span class="amharic">\1</span>',
         ban=["[[", "]]"],
     ),
     Substitution(
-        "qualitative",
         "†",
         # The qualitative rule is unnecessary, especially given #476.
         "†",
         text_repl="†",
     ),
     Substitution(
-        "lineBreaks",
         r"\\n",
         '</span></p><p><span class="subparagraph">',
         text_repl="\n",
