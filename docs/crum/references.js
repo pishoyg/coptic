@@ -49,7 +49,7 @@ export class Reference {
   }
 }
 /**
- * DATA lists the resources cited in Crum's text.
+ * DATA_1 lists the resources from Crum's list of abbreviations.
  *
  * NOTE: To make manual verification convenient, keep this in the same order
  * used by Crum.
@@ -79,7 +79,7 @@ export class Reference {
  * ever occurred with inconsistent spacing, but some may have evaded our
  * detection.
  */
-const DATA = [
+const DATA_1 = [
   {
     source: {
       title: 'E. Amélineau, Œuvres de Schenoudi, 1907 ff',
@@ -2271,8 +2271,12 @@ const DATA = [
     },
     variants: ['ZNTW'],
   },
-  // SECTION 2: REFERENCES NOT MENTIONED BY CRUM IN THE LIST OF ABBREVIATIONS,
-  // BUT ENCOUNTERED THROUGHOUT THE TEXT:
+];
+/*
+ * DATA_2 stores references not mentioned by crum in the list of abbreviations,
+ * but encountered throughout the text.
+ */
+const DATA_2 = [
   // TODO: (#522) Add the missing entries to this section.
   {
     variants: ['Abû Ṣâliḥ', 'Abû Ṣâlih'],
@@ -2509,7 +2513,7 @@ function add(key, reference, noSpaceVariants) {
   }
 }
 // Add all the variants to the map.
-DATA.forEach((res) => {
+[...DATA_1, ...DATA_2].forEach((res) => {
   log.ensure(
     !!res.variants.length,
     'resource has no abbreviations listed:',

@@ -72,8 +72,14 @@ function activeDialectMatchQuery(active) {
     .join(', ');
 }
 /**
+ * SearchResult is a search result type shared by both Crum and KELLIA.
  */
 class SearchResult extends xoox.SearchResult {
+  static NUM_BUCKETS =
+    1 +
+    Math.max(
+      ...Object.values(Bucket).filter((value) => typeof value === 'number')
+    );
   static manager;
   static highlighter;
   /**
@@ -84,69 +90,6 @@ class SearchResult extends xoox.SearchResult {
   static init(manager, highlighter) {
     SearchResult.manager = manager;
     SearchResult.highlighter = highlighter;
-  }
-}
-/**
- *
- */
-class AndreasSearchResult extends xoox.SearchResult {
-  /**
-   * @param row
-   */
-  enrich(row) {
-    andreas.handle(row);
-  }
-}
-/**
- */
-class CrumSearchResult extends SearchResult {
-  static NUM_BUCKETS =
-    1 +
-    Math.max(
-      ...Object.values(Bucket).filter((value) => typeof value === 'number')
-    );
-  // We have two overlaid databases of Crum, referred to as Marcion and Wiki.
-  // We use checkboxes to control which database to search.
-  static wikiCheckbox = document.getElementById(id.WIKI_CHECKBOX);
-  static marcionCheckbox = document.getElementById(id.MARCION_CHECKBOX);
-  /**
-   * @returns
-   */
-  link() {
-    return paths.crum(this.key);
-  }
-  /**
-   *
-   * @param row
-   */
-  enrich(row) {
-    crum.addGreekLookups(row);
-    crum.handleDialect(row, CrumSearchResult.highlighter);
-    wiki.handle(row);
-    drop.addEventListeners('hover', row);
-  }
-  /**
-   * @returns
-   */
-  filter() {
-    if (
-      CrumSearchResult.wikiCheckbox.checked ===
-      CrumSearchResult.marcionCheckbox.checked
-    ) {
-      // If both checkboxes are checked or both are unchecked, use default
-      // behavior.
-      return super.filter();
-    }
-    // Layer 0 is Marcion, layer 1 is Wiki.
-    if (CrumSearchResult.marcionCheckbox.checked) {
-      // If only the Marcion checkbox is checked, then only search Marcion.
-      return !this.layer;
-    }
-    if (CrumSearchResult.wikiCheckbox.checked) {
-      // If only the Wiki checkbox is checked, then only search Wiki.
-      return !!this.layer;
-    }
-    log.fatal('This is impossible!');
   }
   /**
    * @returns
@@ -202,6 +145,64 @@ class CrumSearchResult extends SearchResult {
   }
 }
 /**
+ *
+ */
+class AndreasSearchResult extends xoox.SearchResult {
+  /**
+   * @param row
+   */
+  enrich(row) {
+    andreas.handle(row);
+  }
+}
+/**
+ */
+class CrumSearchResult extends SearchResult {
+  // We have two overlaid databases of Crum, referred to as Marcion and Wiki.
+  // We use checkboxes to control which database to search.
+  static wikiCheckbox = document.getElementById(id.WIKI_CHECKBOX);
+  static marcionCheckbox = document.getElementById(id.MARCION_CHECKBOX);
+  /**
+   * @returns
+   */
+  link() {
+    return paths.crum(this.key);
+  }
+  /**
+   *
+   * @param row
+   */
+  enrich(row) {
+    crum.addGreekLookups(row);
+    crum.handleDialect(row, CrumSearchResult.highlighter);
+    wiki.handle(row);
+    drop.addEventListeners('hover', row);
+  }
+  /**
+   * @returns
+   */
+  filter() {
+    if (
+      CrumSearchResult.wikiCheckbox.checked ===
+      CrumSearchResult.marcionCheckbox.checked
+    ) {
+      // If both checkboxes are checked or both are unchecked, use default
+      // behavior.
+      return super.filter();
+    }
+    // Layer 0 is Marcion, layer 1 is Wiki.
+    if (CrumSearchResult.marcionCheckbox.checked) {
+      // If only the Marcion checkbox is checked, then only search Marcion.
+      return !this.layer;
+    }
+    if (CrumSearchResult.wikiCheckbox.checked) {
+      // If only the Wiki checkbox is checked, then only search Wiki.
+      return !!this.layer;
+    }
+    log.fatal('This is impossible!');
+  }
+}
+/**
  * kelliaDialectSorter implements a dialect-based sorter for the KELLIA
  * dictionary.
  * Undialected entries are less significant in KELLIA, so we don't give them any
@@ -216,31 +217,11 @@ class KELLIASearchResult extends SearchResult {
     return paths.copticDictionaryOnline(this.key);
   }
   /**
-   * @returns
-   */
-  static numBuckets() {
-    return 2;
-  }
-  /**
    *
    * @param row
    */
   enrich(row) {
     kellia.handle(row, SearchResult.highlighter);
-  }
-  /**
-   * @param row - Table row.
-   * @returns Bucket number.
-   */
-  bucket(row) {
-    const active = SearchResult.manager.active();
-    if (!active?.length) {
-      // There is no dialect highlighting. All results fall in the first bucket.
-      return 0;
-    }
-    // If there is a match in an active dialect, then this result goes to the
-    // first bucket. Otherwise it goes to the second bucket.
-    return row.querySelector(activeDialectMatchQuery(active)) ? 0 : 1;
   }
 }
 const XOOXLES = [

@@ -35,7 +35,7 @@ const WHITELIST = new Set([
  * This method yields a lot of false positives, but we retain it in the meantime
  * while we sharpen our parser.
  *
- * TODO: (#419) Delete this function once your logic is more mature.
+ * TODO: (#522) Delete this function once your logic is more mature.
  *
  * @param root
  */
