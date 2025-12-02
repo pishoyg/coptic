@@ -116,7 +116,7 @@ interface Resource {
 }
 
 /**
- * DATA lists the resources cited in Crum's text.
+ * DATA_1 lists the resources from Crum's list of abbreviations.
  *
  * NOTE: To make manual verification convenient, keep this in the same order
  * used by Crum.
@@ -146,7 +146,7 @@ interface Resource {
  * ever occurred with inconsistent spacing, but some may have evaded our
  * detection.
  */
-const DATA: Resource[] = [
+const DATA_1: Resource[] = [
   {
     source: {
       title: 'E. Amélineau, Œuvres de Schenoudi, 1907 ff',
@@ -2338,9 +2338,13 @@ const DATA: Resource[] = [
     },
     variants: ['ZNTW'],
   },
+];
 
-  // SECTION 2: REFERENCES NOT MENTIONED BY CRUM IN THE LIST OF ABBREVIATIONS,
-  // BUT ENCOUNTERED THROUGHOUT THE TEXT:
+/*
+ * DATA_2 stores references not mentioned by crum in the list of abbreviations,
+ * but encountered throughout the text.
+ */
+const DATA_2: Resource[] = [
   // TODO: (#522) Add the missing entries to this section.
   {
     variants: ['Abû Ṣâliḥ', 'Abû Ṣâlih'],
@@ -2583,7 +2587,7 @@ function add(
 }
 
 // Add all the variants to the map.
-DATA.forEach((res: Resource): void => {
+[...DATA_1, ...DATA_2].forEach((res: Resource): void => {
   log.ensure(
     !!res.variants.length,
     'resource has no abbreviations listed:',
