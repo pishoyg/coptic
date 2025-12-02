@@ -196,6 +196,10 @@ class Derivation(Row):
     def key_deriv(self) -> str:
         return self.get(sheet.COL.KEY_DERIV)
 
+    @typing.override
+    def __str__(self) -> str:
+        return self.key
+
 
 class Relation:
     """House represents a word relation."""
