@@ -71,9 +71,6 @@ ProcessPoolExecutor may indeed be optimal, not just when the input is provided
 in the form of a directory of HTML files, but also when the input is a
 "friendly" generator object, although we don't have a concrete definition of
 that yet, as our understanding of concurrency primitives is still limited.
-TODO: (#221) Understand concurrency primitives better, and optimize the
-performance.
-
 """
 
 import os
