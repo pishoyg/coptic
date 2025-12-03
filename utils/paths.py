@@ -57,6 +57,7 @@ ANKI_DIR: pathlib.Path = LEXICON_DIR / "anki/coptic.apkg"
 ICON: pathlib.Path = file(SITE_DIR, "img/icon/icon-circle.png")
 
 DROPDOWN_CSS: pathlib.Path = file(SITE_DIR, "dropdown.css")
+HELP_CSS: pathlib.Path = file(SITE_DIR, "help.css")
 SHARED_CSS: pathlib.Path = file(SITE_DIR, "style.css")
 
 

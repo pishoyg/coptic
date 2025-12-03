@@ -10,6 +10,7 @@ const TITLE = 'Keyboard Shortcuts';
 enum CLS {
   OVERLAY_BACKGROUND = 'overlay-background',
   INFO_PANEL = 'info-panel',
+  SHORTCUT = 'shortcut',
   CLOSE_BTN = 'close-btn',
 }
 
@@ -206,10 +207,6 @@ export class Shortcut {
     const code: HTMLElement = document.createElement('code');
     code.textContent = key;
     cell.appendChild(code);
-    // TODO: (#241) Move the styling to CSS.
-    cell.style.width = '10%';
-    cell.style.border = '1px solid black';
-    cell.style.padding = '8px';
     return cell;
   }
 
@@ -224,10 +221,6 @@ export class Shortcut {
     } else {
       cell.append(this.description);
     }
-    // TODO: (#241) Move the styling to CSS.
-    cell.style.width = '90%';
-    cell.style.border = '1px solid black';
-    cell.style.padding = '8px';
     return cell;
   }
 
@@ -239,6 +232,7 @@ export class Shortcut {
    */
   public row(key: string): HTMLTableRowElement {
     const row: HTMLTableRowElement = document.createElement('tr');
+    row.classList.add(CLS.SHORTCUT);
     row.append(this.keyCell(key), this.descriptionCell(key));
     return row;
   }
@@ -285,10 +279,6 @@ export class Section {
     div.appendChild(title);
 
     const table = document.createElement('table');
-
-    // TODO: (#241) Move the styling to CSS.
-    table.style.width = '100%'; // Make the table take 100% of the container width
-    table.style.borderCollapse = 'collapse'; // Optional: to collapse the borders
 
     // Append a row for each visible shortcut.
     table.append(

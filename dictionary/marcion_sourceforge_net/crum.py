@@ -82,8 +82,11 @@ def relpath(dst: str | pathlib.Path) -> str:
     return os.path.relpath(dst, paths.LEXICON_DIR)
 
 
-CRUM_SEARCH: str = relpath(paths.LEXICON_DIR)
-CRUM_HOME: str = relpath(paths.SITE_DIR)
+CSS: list[str] = [relpath(paths.DROPDOWN_CSS), relpath(paths.HELP_CSS)]
+JS: str = relpath(paths.CRUM_JS)
+
+SEARCH: str = relpath(paths.LEXICON_DIR)
+HOME: str = relpath(paths.SITE_DIR)
 DAWOUD_DIR: str = relpath(paths.DAWOUD_DIR)
 SCAN_DIR: str = relpath(paths.CRUM_SCAN_DIR)
 
@@ -769,10 +772,10 @@ class Root(Row):
             title=self.title(),
             nxt=_path(Crum.next_key(self)),
             prv=_path(Crum.prev_key(self)),
-            search=CRUM_SEARCH,
+            search=SEARCH,
             js_start=dialects_js(dialects or set()),
-            js_path=relpath(paths.CRUM_JS),
-            css=[relpath(paths.DROPDOWN_CSS)],
+            js_path=JS,
+            css=CSS,
         )
 
     @functools.cached_property
@@ -1387,27 +1390,13 @@ class Index:
 class IndexIndex:
     """IndexIndex is an index of deck indexes."""
 
-    def __init__(
-        self,
-        name: str,
-        indexes: list[Index],
-        home: str,
-        search: str,
-        scripts: list[str],
-        css: list[str],
-    ):
+    def __init__(self, name: str, indexes: list[Index]) -> None:
         self.name: str = name
         self.indexes: list[Index] = indexes
-        self.home: str = home
-        self.search: str = search
-        self.scripts: list[str] = scripts
-        self.css: list[str] = css
 
         cells: list[HeaderCell] = []
-        if home:
-            cells.append(HeaderCell("Home", home))
-        if search:
-            cells.append(HeaderCell("Search", search))
+        cells.append(HeaderCell("Home", HOME))
+        cells.append(HeaderCell("Search", SEARCH))
         self.header: str = Headerer(cells).header()
         # The subindex header is the same as the index header, with one extra
         # cell pointing to the index that this subindex belongs to.
@@ -1428,11 +1417,11 @@ class IndexIndex:
             )
             yield page.html_head(
                 title=index.title,
-                search=self.search,
-                scripts=self.scripts,
+                search=SEARCH,
+                scripts=[JS],
                 prev_href=prv,
                 next_href=nxt,
-                css=self.css,
+                css=CSS,
             )
 
     def _write_subindex(
@@ -1460,9 +1449,9 @@ class IndexIndex:
         # Write the index index!
         head: str = page.html_head(
             title=self.name,
-            search=self.search,
-            scripts=self.scripts,
-            css=self.css,
+            search=SEARCH,
+            scripts=[JS],
+            css=CSS,
         )
 
         file.writelines(
@@ -1549,22 +1538,8 @@ class Indexer(Mother):
             categories.append(root.categories)
 
         return [
-            IndexIndex(
-                "Categories",
-                self._generate_indexes(keys, categories),
-                home=CRUM_HOME,
-                search=CRUM_SEARCH,
-                scripts=[relpath(paths.CRUM_JS)],
-                css=[relpath(paths.DROPDOWN_CSS)],
-            ),
-            IndexIndex(
-                "Types",
-                self._generate_indexes(keys, types),
-                home=CRUM_HOME,
-                search=CRUM_SEARCH,
-                scripts=[relpath(paths.CRUM_JS)],
-                css=[relpath(paths.DROPDOWN_CSS)],
-            ),
+            IndexIndex("Categories", self._generate_indexes(keys, categories)),
+            IndexIndex("Types", self._generate_indexes(keys, types)),
         ]
 
 
