@@ -12,181 +12,191 @@ import * as log from '../logger.js';
 // fact that they have different meaning based on whether they occur in the
 // headings or elsewhere in the text, which is hard to discern by the parser. It
 // would otherwise be confusing to show users the full definition.
-export const MAPPING = {
+export const DATA = [
   // SECTION 1: ABBREVIATIONS LISTED IN CRUM'S LIST OF ABBREVIATIONS.
-  acc: { fullForm: 'accusative' },
-  adj: { fullForm: 'adjective' },
-  ar: { fullForm: 'Arabic' },
-  art: { fullForm: 'article' },
-  c: { fullForm: 'constructed with (of verbs)', noCaseVariant: true },
-  caus: { fullForm: 'causative verb' },
-  cit: { fullForm: 'cited, quoted in following place' },
-  dem: { fullForm: 'demotic' },
-  diff: { fullForm: 'different reading, not useful for comparison' },
-  do: {
+  { fullForm: 'accusative', variants: ['acc'] },
+  { fullForm: 'adjective', variants: ['adj'] },
+  { fullForm: 'Arabic', variants: ['ar'] },
+  { fullForm: 'article', variants: ['art'] },
+  {
+    fullForm: 'constructed with (of verbs)',
+    variants: ['c'],
+    noCaseVariant: true,
+    noItalics: true,
+  },
+  { fullForm: 'causative verb', variants: ['caus'] },
+  { fullForm: 'cited, quoted in following place', variants: ['cit'] },
+  { fullForm: 'demotic', variants: ['dem'] },
+  {
+    fullForm: 'different reading, not useful for comparison',
+    variants: ['diff'],
+  },
+  {
     fullForm: 'ditto, same as last word cited in this dialect',
+    variants: ['do'],
     noCaseVariant: true,
   },
-  esp: { fullForm: 'especially' },
-  f: { fullForm: 'feminine', noCaseVariant: true },
-  gen: { fullForm: 'genitive' },
-  Gk: { fullForm: 'Greek', noCaseVariant: true },
-  inf: { fullForm: 'infra' },
-  interj: { fullForm: 'interjection' },
-  interrog: { fullForm: 'interrogative' },
-  intr: {
+  { fullForm: 'especially', variants: ['esp'] },
+  {
+    fullForm: 'feminine',
+    variants: ['f'],
+    noCaseVariant: true,
+    noItalics: true,
+  },
+  { fullForm: 'genitive', variants: ['gen'] },
+  { fullForm: 'Greek', variants: ['Gk'], noCaseVariant: true },
+  { fullForm: 'infra', variants: ['inf'] },
+  { fullForm: 'interjection', variants: ['interj'] },
+  { fullForm: 'interrogative', variants: ['interrog'] },
+  {
     fullForm:
       'intransitive (i.e. verb without immediate object, or one constructed with prep. ⲉ-)',
+    variants: ['intr'],
   },
-  l: { fullForm: 'legendum' },
-  lit: { fullForm: 'literally' },
-  m: { fullForm: 'masculine', noCaseVariant: true },
+  { fullForm: 'legendum', variants: ['l'] },
+  { fullForm: 'literally', variants: ['lit'] },
+  { fullForm: 'masculine', variants: ['m'], noCaseVariant: true },
   // The following doesn't currently work because the text doesn't use the same
   // encoding for the horizontal bar as the one used here.
-  ⲛ̅ⲉ̅: { fullForm: 'ⲛⲟⲩⲧⲉ', noCaseVariant: true },
-  nn: { fullForm: 'noun', noCaseVariant: true },
-  obj: { fullForm: 'object' },
-  om: { fullForm: 'omits, omitted' },
-  opp: { fullForm: 'as opposed to, contrasted with' },
-  Ostr: { fullForm: 'ostracon' },
-  paral: { fullForm: 'parallel word or phrase' },
-  pass: { fullForm: 'passim' },
-  'p c': { fullForm: 'conjunctive participle' },
-  pl: { fullForm: 'plural' },
-  poss: { fullForm: 'possessive pronoun' },
-  pref: { fullForm: 'prefix' },
-  prep: { fullForm: 'preposition' },
-  pres: { fullForm: 'present tense, thus: 1 pres, 2 pres' },
-  prob: { fullForm: 'probably' },
-  pron: { fullForm: 'pronoun' },
-  qual: { fullForm: 'qualitative of verb; also indicated by †' },
-  refl: { fullForm: 'reflexive use' },
-  rel: { fullForm: 'relative' },
-  's f': { fullForm: 'sub fine' },
-  sg: { fullForm: 'singular' },
-  sim: { fullForm: 'similar in use or in meaning to the last quoted instance' },
-  suff: { fullForm: 'suffix' },
-  tr: { fullForm: 'transitive' },
-  V: { fullForm: 'vide' },
-  var: { fullForm: 'variant, in same dialect' },
-  vb: { fullForm: 'verb' },
-  '†': { fullForm: 'qualitative' },
-  '?': { fullForm: 'perhaps, possibly' },
+  { fullForm: 'ⲛⲟⲩⲧⲉ', variants: ['ⲛ̅ⲉ̅'], noCaseVariant: true },
+  { fullForm: 'noun', variants: ['nn'], noCaseVariant: true },
+  { fullForm: 'object', variants: ['obj'] },
+  { fullForm: 'omits, omitted', variants: ['om'] },
+  { fullForm: 'as opposed to, contrasted with', variants: ['opp'] },
+  { fullForm: 'ostracon', variants: ['Ostr'] },
+  { fullForm: 'parallel word or phrase', variants: ['paral'] },
+  { fullForm: 'passim', variants: ['pass'] },
+  { fullForm: 'conjunctive participle', variants: ['p c'] },
+  { fullForm: 'plural', variants: ['pl'] },
+  // Crum has "possessive pronoun" for "poss", but "possessive" is suitable. See
+  // examples: https://remnqymi.com/crum/?query=poss&full=true&wiki=true.
+  { fullForm: 'possessive', variants: ['poss'] },
+  { fullForm: 'prefix', variants: ['pref'] },
+  { fullForm: 'preposition', variants: ['prep'] },
+  { fullForm: 'present tense, thus: 1 pres, 2 pres', variants: ['pres'] },
+  { fullForm: 'probably', variants: ['prob'] },
+  { fullForm: 'pronoun', variants: ['pron'] },
+  { fullForm: 'qualitative of verb; also indicated by †', variants: ['qual'] },
+  { fullForm: 'reflexive use', variants: ['refl'] },
+  { fullForm: 'relative', variants: ['rel'] },
+  { fullForm: 'sub fine', variants: ['s f'] },
+  { fullForm: 'singular', variants: ['sg'] },
+  {
+    fullForm: 'similar in use or in meaning to the last quoted instance',
+    variants: ['sim'],
+  },
+  { fullForm: 'suffix', variants: ['suff'] },
+  { fullForm: 'transitive', variants: ['tr'] },
+  { fullForm: 'vide', variants: ['V'] },
+  { fullForm: 'variant, in same dialect', variants: ['var'] },
+  { fullForm: 'verb', variants: ['vb'] },
+  { fullForm: 'qualitative', variants: ['†'] },
+  { fullForm: 'perhaps, possibly', variants: ['?'] },
   // SECTION 2: ABBREVIATIONS WE CHOOSE TO INCLUDE TO AID INTELLIGIBILITY.
-  '1 sg': { fullForm: 'first person singular' },
-  '1st sg': { fullForm: 'first person singular' },
-  '2 sg': { fullForm: 'second person singular' },
-  '2d sg': { fullForm: 'second person singular' },
-  '3 sg': { fullForm: 'third person singular' },
-  '3d sg': { fullForm: 'third person singular' },
-  '1 pl': { fullForm: 'first person plural' },
-  '1st pl': { fullForm: 'first person plural' },
-  '2 pl': { fullForm: 'second person plural' },
-  '2d pl': { fullForm: 'second person plural' },
-  '3 pl': { fullForm: 'third person plural' },
-  '3d pl': { fullForm: 'third person plural' },
-  '1 perf': { fullForm: 'first perfect' },
-  '1st perf': { fullForm: 'first perfect' },
-  '1 pres': { fullForm: 'first present' },
-  '1st pres': { fullForm: 'first present' },
-  '1 fut': { fullForm: 'first future' },
-  '1st fut': { fullForm: 'first future' },
-  '2 perf': { fullForm: 'second perfect' },
-  '2d perf': { fullForm: 'second perfect' },
-  '2 pres': { fullForm: 'second present' },
-  '2d pres': { fullForm: 'second present' },
-  '2 fut': { fullForm: 'second future' },
-  '2d fut': { fullForm: 'second future' },
+  { fullForm: 'first person singular', variants: ['1 sg', '1st sg'] },
+  { fullForm: 'second person singular', variants: ['2 sg', '2d sg'] },
+  { fullForm: 'third person singular', variants: ['3 sg', '3d sg'] },
+  { fullForm: 'first person plural', variants: ['1 pl', '1st pl'] },
+  { fullForm: 'second person plural', variants: ['2 pl', '2d pl'] },
+  { fullForm: 'third person plural', variants: ['3 pl', '3d pl'] },
+  { fullForm: 'first perfect', variants: ['1 perf', '1st perf'] },
+  { fullForm: 'first present', variants: ['1 pres', '1st pres'] },
+  { fullForm: 'first future', variants: ['1 fut', '1st fut'] },
+  { fullForm: 'second perfect', variants: ['2 perf', '2d perf'] },
+  { fullForm: 'second present', variants: ['2 pres', '2d pres'] },
+  { fullForm: 'second future', variants: ['2 fut', '2d fut'] },
   // TODO: (#194) Is there a third perfect or third present?
-  '3 fut': { fullForm: 'third future' },
-  '&c': { fullForm: 'et cetera' },
-  absol: { fullForm: 'absolute' },
-  AD: { fullForm: 'Anno Domini', noCaseVariant: true },
-  adv: { fullForm: 'adverb' },
-  advb: { fullForm: 'adverb' },
-  aor: { fullForm: 'aorist' },
-  approx: { fullForm: 'approximate' }, // NOTE: Encountered only once, as of the time of writing!
-  arithm: { fullForm: 'arithmetic' },
-  bibl: { fullForm: 'biblical' }, // NOTE: Encountered only once, as of the time of writing!
-  bis: { fullForm: 'bis' }, // Full form same as abbreviation, included for completion!
-  constr: { fullForm: 'constructive' },
-  construct: { fullForm: 'constructive' },
-  cf: { fullForm: 'confer' },
-  Copt: { fullForm: 'Coptic', noCaseVariant: true },
-  dat: { fullForm: 'dative' },
-  demonstr: { fullForm: 'demonstrative' },
-  determ: { fullForm: 'determination' },
-  determin: { fullForm: 'determination' },
-  'e g': { fullForm: 'exempli gratia' },
-  Ethiop: { fullForm: 'Ethiopic' },
-  frag: { fullForm: 'fragment' },
-  fut: { fullForm: 'future' },
-  Heb: { fullForm: 'Hebrew', noCaseVariant: true },
-  Hebr: { fullForm: 'Hebrew', noCaseVariant: true },
-  hierogl: { fullForm: 'hieroglyphic' },
-  'i e': { fullForm: 'id est' },
-  'i q': { fullForm: 'idem quod' },
+  { fullForm: 'third future', variants: ['3 fut'] },
+  { fullForm: 'et cetera', variants: ['&c'] },
+  { fullForm: 'absolute', variants: ['absol'] },
+  { fullForm: 'Anno Domini', variants: ['AD'], noCaseVariant: true },
+  { fullForm: 'adverb', variants: ['adv', 'advb'] },
+  { fullForm: 'aorist', variants: ['aor'] },
+  { fullForm: 'approximate', variants: ['approx'] }, // NOTE: Encountered only once, as of the time of writing!
+  { fullForm: 'arithmetic', variants: ['arithm'] },
+  { fullForm: 'biblical', variants: ['bibl'] }, // NOTE: Encountered only once, as of the time of writing!
+  { fullForm: 'bis', variants: ['bis'] }, // Full form same as abbreviation, included for completion!
+  { fullForm: 'constructive', variants: ['constr', 'construct'] },
+  { fullForm: 'confer', variants: ['cf'] },
+  { fullForm: 'Coptic', variants: ['Copt'], noCaseVariant: true },
+  { fullForm: 'dative', variants: ['dat'] },
+  { fullForm: 'demonstrative', variants: ['demonstr'] },
+  { fullForm: 'determination', variants: ['determ', 'determin'] },
+  { fullForm: 'exempli gratia', variants: ['e g'] },
+  { fullForm: 'Ethiopic', variants: ['Ethiop'] },
+  { fullForm: 'fragment', variants: ['frag'] },
+  { fullForm: 'future', variants: ['fut'] },
+  { fullForm: 'Hebrew', variants: ['Heb', 'Hebr'], noCaseVariant: true },
+  { fullForm: 'hieroglyphic', variants: ['hierogl'] },
+  { fullForm: 'id est', variants: ['i e'] },
+  { fullForm: 'idem quod', variants: ['i q'] },
   // TODO: (#511) Reconsider whether you want to retain the annotation for ib.
-  ib: { fullForm: 'ibidem' },
-  imper: { fullForm: 'imperative' },
-  imperat: { fullForm: 'imperative' },
-  impers: { fullForm: 'impersonal' },
-  impf: { fullForm: 'imperfect' },
-  improb: { fullForm: 'improbable' },
-  'l c': { fullForm: 'loco citato' },
-  MS: { fullForm: 'manuscript', noCaseVariant: true },
-  MSS: { fullForm: 'manuscripts', noCaseVariant: true },
-  neg: { fullForm: 'negative' },
+  { fullForm: 'ibidem', variants: ['ib'] },
+  { fullForm: 'imperative', variants: ['imper', 'imperat'] },
+  { fullForm: 'impersonal', variants: ['impers'] },
+  { fullForm: 'imperfect', variants: ['impf'] },
+  { fullForm: 'improbable', variants: ['improb'] },
+  { fullForm: 'loco citato', variants: ['l c'] },
+  { fullForm: 'manuscript', variants: ['MS'], noCaseVariant: true },
+  { fullForm: 'manuscripts', variants: ['MSS'], noCaseVariant: true },
+  { fullForm: 'negative', variants: ['neg'] },
   // TODO: (#194) Add Annotation for "partic". Is it "particle" or "participle"?
-  perf: { fullForm: 'perfect' },
-  pf: { fullForm: 'perfect' },
-  pluperf: { fullForm: 'pluperfect' },
-  possess: { fullForm: 'possessive' },
-  predic: { fullForm: 'predicate' },
+  { fullForm: 'perfect', variants: ['perf', 'pf'] },
+  { fullForm: 'pluperfect', variants: ['pluperf'] },
+  { fullForm: 'possessive', variants: ['possess'] },
+  { fullForm: 'predicate', variants: ['predic'] },
   // TODO: (#194) "prepos" was only encountered once so far, and it was intended
   // to mean "prepositional". Could it also mean "preposition"?
-  prepos: { fullForm: 'prepositional' },
-  preter: { fullForm: 'preterite' },
-  'q v': { fullForm: 'quod vide' },
-  rad: { fullForm: 'radical' }, // NOTE: Encountered only once, as of the time of writing!
-  's v': { fullForm: 'sub verbo' },
-  sic: { fullForm: 'sic erat scriptum' },
-  'sic l': { fullForm: 'sic lege' },
-  sc: { fullForm: 'scilicet' },
-  subj: { fullForm: 'subject' },
-  sup: { fullForm: 'supra' },
-  syr: { fullForm: 'Syriac' }, // NOTE: Encountered only once, as of the time of writing!
-  transl: { fullForm: 'translation' }, // NOTE: Encountered only once, as of the time of writing!
-  varr: { fullForm: 'variants' },
-  ult: { fullForm: 'ultimo' },
-  'ut sup': { fullForm: 'ut supra' },
-  vbs: { fullForm: 'verbs' },
-  viz: { fullForm: 'videlicet' },
+  { fullForm: 'prepositional', variants: ['prepos'] },
+  { fullForm: 'preterite', variants: ['preter'] },
+  { fullForm: 'quod vide', variants: ['q v'] },
+  { fullForm: 'radical', variants: ['rad'] }, // NOTE: Encountered only once, as of the time of writing!
+  { fullForm: 'sub verbo', variants: ['s v'] },
+  { fullForm: 'sic erat scriptum', variants: ['sic'] },
+  { fullForm: 'sic lege', variants: ['sic l'] },
+  { fullForm: 'scilicet', variants: ['sc'] },
+  { fullForm: 'subject', variants: ['subj'] },
+  { fullForm: 'supra', variants: ['sup'] },
+  { fullForm: 'Syriac', variants: ['syr'] }, // NOTE: Encountered only once, as of the time of writing!
+  { fullForm: 'translation', variants: ['transl'] }, // NOTE: Encountered only once, as of the time of writing!
+  { fullForm: 'variants', variants: ['varr'] },
+  { fullForm: 'ultimo', variants: ['ult'] },
+  { fullForm: 'ut supra', variants: ['ut sup'] },
+  { fullForm: 'verbs', variants: ['vbs'] },
+  { fullForm: 'videlicet', variants: ['viz'] },
   // SECTION 3: ABBREVIATIONS THAT MOSTLY APPEAR IN REFERENCE TITLES, OR PERHAPS
   // AS POSTFIXES:
   // TODO: (#522) Reconsider whether these abbreviations are needed when more
   // references are covered.
   // TODO: (#523) Reconsider whether the following abbreviations are needed
   // after postfixes are fully supported.
-  Ad: { fullForm: 'Addenda', noCaseVariant: true },
-  Lect: { fullForm: 'Lectionary', noCaseVariant: true },
-  Mart: { fullForm: 'martyrdom', noCaseVariant: true },
-  Sitz: { fullForm: 'Sitzungsberichte', noCaseVariant: true },
-  Assyr: { fullForm: 'Assyrian', noCaseVariant: true },
-};
-Object.entries(MAPPING).forEach(([key, annotation]) => {
-  if (annotation.noCaseVariant) {
-    return;
-  }
-  const variant = str.toggleCase(key.charAt(0)) + key.slice(1);
-  if (variant === key) {
-    // This key doesn't start with a letter that has cases.
-    return;
-  }
-  log.ensure(
-    !(variant in MAPPING),
-    'duplicate annotation abbreviations:',
-    variant
-  );
-  MAPPING[variant] = annotation;
+  { fullForm: 'Addenda', variants: ['Ad'], noCaseVariant: true },
+  { fullForm: 'Lectionary', variants: ['Lect'], noCaseVariant: true },
+  { fullForm: 'martyrdom', variants: ['Mart'], noCaseVariant: true },
+  { fullForm: 'Sitzungsberichte', variants: ['Sitz'], noCaseVariant: true },
+  { fullForm: 'Assyrian', variants: ['Assyr'], noCaseVariant: true },
+];
+export const MAPPING = {};
+DATA.forEach((abb) => {
+  abb.variants.forEach((key) => {
+    const ann = {
+      fullForm: abb.fullForm,
+      noItalics: abb.noItalics,
+    };
+    MAPPING[key] = ann;
+    if (abb.noCaseVariant) {
+      return;
+    }
+    const variant = str.toggleCase(key.charAt(0)) + key.slice(1);
+    if (variant === key) {
+      // This key doesn't start with a letter that has cases.
+      return;
+    }
+    log.ensure(
+      !(variant in MAPPING),
+      'duplicate annotation abbreviations:',
+      variant
+    );
+    MAPPING[variant] = ann;
+  });
 });

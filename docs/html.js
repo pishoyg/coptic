@@ -68,6 +68,8 @@ export function replaceText(root, regex, replace, exclude) {
       // While we already accounted for the exclusions when we captured the node
       // array, it's possible that the tree structure has since changed, and
       // that a node that was previously admitted should now be excluded.
+      // TODO: (#0) Try to get rid of this expensive operation to speed up the
+      // code.
       return;
     }
     let text = node.nodeValue;
