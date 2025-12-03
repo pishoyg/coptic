@@ -12,7 +12,7 @@
 }
 
 .match {
-  background-color: #f0d4fc;
+  background-color: var(--purple);
 }
 
 .match-separator {
