@@ -105,7 +105,6 @@ export class Droppable {
 
   /**
    * Realigns the droppable element to stay within the viewport.
-   * TODO: (#241) Implement alignment using CSS.
    * NOTE: This only calculates X-axis overflow.
    */
   private realign(): void {
