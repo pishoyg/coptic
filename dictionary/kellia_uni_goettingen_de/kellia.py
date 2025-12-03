@@ -79,6 +79,10 @@ DEFAULT_GEO = "S"
 GEOS: list[str] = ["S", "A", "L", "B", "F", "M", "O", "P", "V", "W", "U"]
 
 
+def relpath(dst: str | pathlib.Path) -> str:
+    return os.path.relpath(dst, paths.LEXICON_DIR)
+
+
 def _is_greek(entry: ET.Element) -> bool:
     assert entry.tag == TEI_NS + "entry"
     return any(
@@ -944,15 +948,13 @@ def notes_aux(words: dict[str, Word]) -> abc.Generator[deck.Note]:
             "</a>",
             "</footer>",
         )
-        # TODO: (#407) KELLIA will soon have its own CSS, which should be
-        # included here.
         yield deck.Note(
             key=str(key),
             title=str(key),
             front=front,
             back=back,
-            js_path=os.path.relpath(paths.KELLIA_JS, paths.LEXICON_DIR),
-            css=[os.path.relpath(paths.DROPDOWN_CSS, paths.LEXICON_DIR)],
+            js_path=relpath(paths.KELLIA_JS),
+            css=[relpath(paths.CRUM_CSS), relpath(paths.DROPDOWN_CSS)],
         )
 
 

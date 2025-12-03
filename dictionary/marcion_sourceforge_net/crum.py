@@ -82,7 +82,11 @@ def relpath(dst: str | pathlib.Path) -> str:
     return os.path.relpath(dst, paths.LEXICON_DIR)
 
 
-CSS: list[str] = [relpath(paths.DROPDOWN_CSS), relpath(paths.HELP_CSS)]
+CSS: list[str] = [
+    relpath(paths.CRUM_CSS),
+    relpath(paths.DROPDOWN_CSS),
+    relpath(paths.HELP_CSS),
+]
 JS: str = relpath(paths.CRUM_JS)
 
 SEARCH: str = relpath(paths.LEXICON_DIR)
@@ -692,14 +696,14 @@ class Root(Row):
             yield f'<td colspan="{d.depth}"></td>' if d.depth else ""
             # Word.
             if word_width:
-                yield f'<td colspan="{word_width}" class="marcion bordered">'
+                yield f'<td colspan="{word_width}" class="marcion">'
                 yield word
                 if not meaning_width:
                     yield key
                 yield "</td>"
             # Meaning.
             if meaning_width:
-                yield f'<td colspan="{meaning_width}" class="meaning bordered">'
+                yield f'<td colspan="{meaning_width}" class="meaning">'
                 if d.type_name not in ["-", "HEADER"]:
                     yield '<span class="part-of-speech">'
                     yield "(<b>"
@@ -710,7 +714,7 @@ class Root(Row):
                 yield key
                 yield "</td>"
             if crum_span:
-                yield f'<td rowspan="{crum_span}" class="dictionary bordered">'
+                yield f'<td rowspan="{crum_span}" class="dictionary">'
                 yield "<b>Crum: </b>"
                 yield f'<span class="crum-page">{crum}</span>'
                 yield "</td>"

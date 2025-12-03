@@ -1,0 +1,393 @@
+figcaption {
+  color: gray;
+  font-size: 0.9em;
+}
+
+.notes {
+  font-size: small;
+}
+
+.wiki hr {
+  margin: 0 auto 10px;
+  width: 70%;
+}
+
+.wiki .gloss {
+  font-style: italic;
+  color: gray;
+}
+
+.subparagraph {
+  margin-left: 2em;
+}
+
+.card {
+  font-size: 18px;
+}
+
+#derivations {
+  & td.meaning,
+  td.marcion,
+  td.dictionary {
+    border: 1px solid black;
+  }
+  /* stylelint-disable selector-class-pattern */
+  & .nightMode {
+    & td.meaning,
+    td.marcion,
+    td.dictionary {
+      border: 1px solid white;
+    }
+  }
+  /* stylelint-enable selector-class-pattern */
+}
+
+.explanatory-img {
+  width: auto;
+}
+
+.explanatory-caption {
+  font-style: italic;
+  opacity: 0.7;
+  font-size: small;
+}
+
+.crum-page-img-img,
+.dawoud-page-img-img {
+  width: 1000px;
+}
+
+.wiki .crum-page {
+  /* Make it behave like a block so we can center it */
+  display: block;
+
+  /* Shrink the width to only wrap the text "250a" */
+  width: fit-content;
+
+  /* Center the block horizontally */
+  margin: 0 auto;
+}
+
+.front {
+  text-align: center;
+}
+
+.greek,
+.greek:hover {
+  color: #85c1e9; /* Light blue */
+}
+
+.nag-hammadi {
+  opacity: 0.65;
+}
+
+.wiki p {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+/* TODO: (#194) The following rule should also apply to non-Wiki text in Crum.
+ * Let's define it for all tooltips in Crum once #194 is resolved.
+ * TODO: (#581) If tooltips are applied to the KELLIA bibliography, then this
+ * rule should also apply to KELLIA.
+ * */
+.wiki .droppable {
+  font-size: small;
+}
+
+.wiki .bible {
+  color: #1873cc; /* Dark blue */
+}
+
+.wiki .reference {
+  color: green;
+}
+
+.wiki .suffix {
+  color: seagreen;
+}
+
+.type {
+  color: gray;
+}
+
+.wiki .arabic,
+.wiki .aramaic,
+.wiki .hebrew,
+.wiki .amharic {
+  color: firebrick; /* Semitic languages */
+}
+
+.wiki .headword {
+  font-size: large;
+}
+
+/* siglum is the class of dialect siglum in Crum. */
+.siglum {
+  font-style: italic;
+}
+
+.dialect {
+  color: #835f08; /* Dark gold */
+}
+
+/* In the Wiki version of Crum, A^2 is used for Lycopolitan (while L is used
+ * elsewhere).
+ * Other dialects with superscripts in their sigla use a small letter in the
+ * superscript, which are naturally smaller than digits. Thus, the "2" in "A^2"
+ * looks obtrusive.
+ * To make it look better, and more similar to the text, we reduce the size. */
+/* stylelint-disable selector-class-pattern */
+.dialect.L sup {
+  font-size: 0.6em;
+}
+/* stylelint-enable selector-class-pattern */
+
+.wiki .coptic {
+  font-weight: bold;
+}
+
+.wiki {
+  & .semicolon,
+  .bullet {
+    font-weight: bold;
+    color: indigo;
+  }
+
+  .semicolon {
+    margin-right: 0.75em;
+  }
+}
+
+.sister-key {
+  float: right;
+  font-style: italic;
+  font-size: x-small;
+}
+
+.sister-index {
+  opacity: 0.5;
+}
+
+.index-index-list li::marker {
+  color: var(--color-overlay);
+}
+
+.index-count {
+  font-size: smaller;
+  opacity: 0.5;
+}
+
+.roman {
+  font-style: italic;
+}
+
+.heading {
+  font-weight: bold;
+}
+
+.part-of-speech {
+  font-weight: bold;
+}
+
+/* In the derivations table, the part-of-speech needs to stand on a separate
+ * line. This is not the case for the root's part-of-speech, which sits on the
+ * same line as the categories, and hence retains a different display value.
+ *
+ * As for Lexicon, we construct the index such that both the root's and the
+ * derivations' part-of-speech tags are followed by a <br> tag.
+ */
+.derivations .part-of-speech {
+  display: block;
+}
+
+.categories {
+  display: inline-block;
+  float: right;
+  opacity: 0.5;
+}
+
+:target.verse,
+:target.explanatory,
+:target.sister,
+:target.drv .marcion,
+:target.drv .meaning {
+  background-color: #ffa; /* Anchor target highlight (Yellow) */
+}
+
+.drv-link {
+  font-size: x-small;
+  font-style: italic;
+  opacity: 0.7;
+  float: right;
+}
+
+.header {
+  vertical-align: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  table-layout: fixed;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  background-color: var(--color-translucent);
+}
+
+.sister td:not(:first-child) {
+  border-left: 1px solid black;
+  padding-left: 5px;
+  vertical-align: top;
+}
+
+body:not(.lexicon) .header td:not(:first-child) {
+  border-left: 1px solid var(--light-gray);
+}
+
+.sister:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+.sister-view {
+  width: 10%;
+}
+
+.sister-title {
+  width: 40%;
+}
+
+.sister-meaning {
+  width: 50%;
+}
+
+/* stylelint-disable selector-class-pattern */
+
+.sister-meaning .bibl,
+.sister-meaning .ref_xr {
+  display: none;
+}
+
+/* stylelint-enable selector-class-pattern */
+.senses {
+  color: gray;
+}
+
+.senses,
+.quality {
+  font-size: small;
+  font-style: italic;
+}
+
+.page-list {
+  float: right;
+}
+
+body.note .sense {
+  padding-left: 10px;
+}
+
+.explanatory-key {
+  font-size: smaller;
+}
+
+body:not(.dev) {
+  .explanatory-key,
+  .sister-key,
+  .nag-hammadi,
+  .senses,
+  .quality,
+  .drv-key {
+    display: none;
+  }
+}
+
+body.dev {
+  .explanatory-key,
+  .sister-key,
+  .nag-hammadi,
+  .senses,
+  .quality,
+  .drv-key {
+    display: block;
+  }
+}
+
+.dev-mode-note,
+.dialect-dictionaries {
+  font-size: small;
+  font-style: italic;
+  color: gray;
+}
+
+.dialect-code {
+  width: 10%;
+}
+
+.dialect-name {
+  width: 60%;
+}
+
+.abbreviations {
+  float: left;
+}
+
+.sisters-table {
+  margin-left: 20px;
+}
+
+@media (width <= 500px) {
+  .sisters-table {
+    margin-left: 0;
+  }
+}
+
+/********** KELLIA **********/
+
+/* NOTE: Many KELLIA rules are shared with Crum. Only a handful are unique to
+ * KELLIA, and those are expected to diminish as we polish our KELLIA module. */
+
+.orth {
+  width: 50%;
+}
+
+.geo {
+  width: 10%;
+  text-align: center;
+}
+
+/* stylelint-disable selector-class-pattern */
+
+.gram_grp {
+  font-style: italic;
+}
+
+/* stylelint-enable selector-class-pattern */
+
+/* stylelint-disable no-descending-specificity */
+
+.bibl {
+  color: gray;
+  width: 30%;
+  text-align: right;
+}
+
+.ref {
+  color: gray;
+}
+
+/* This rule applies to the meaning column in the senses table in KELLIA's
+   * cards. Other files have a `meaning` class, but it shouldn't be impacted by
+   * this rule. */
+#senses .meaning {
+  width: 70%;
+}
+
+/* stylelint-enable no-descending-specificity */
+
+.xr {
+  color: gray;
+}
+
+.lang {
+  color: gray;
+}
