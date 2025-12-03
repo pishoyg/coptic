@@ -358,6 +358,17 @@ class Image:
     def artifacts(self) -> list[pathlib.Path]:
         return [self.src_path, self.dst_path, self.sources_path]
 
+    def caption_aux(self, sense: str | None) -> abc.Generator[str]:
+        yield '<span hidden="" class="explanatory-key">'
+        yield self.stem
+        yield "</span>"
+        if not sense:
+            return
+        yield f' <span class="explanatory-caption">{sense}</span>'
+
+    def caption(self, sense: str | None) -> str:
+        return "".join(self.caption_aux(sense))
+
 
 @dataclasses.dataclass
 class Drv:
@@ -885,15 +896,7 @@ class Root(Row):
                     cls="explanatory",
                     alt=img.alt,
                     path=relpath(img.dst_path),
-                    caption=_join(
-                        '<span hidden="" class="explanatory-key">',
-                        img.stem,
-                        "</span>",
-                        " ",
-                        '<span class="explanatory-caption">',
-                        self.sense(img) or "",
-                        "</span>",
-                    ),
+                    caption=img.caption(self.sense(img)),
                 )
             yield "</div>"
 
@@ -1233,10 +1236,6 @@ def _img_aux(
         yield page.LINE_BREAK
 
 
-def _join(*parts: str) -> str:
-    return "".join(parts)
-
-
 # TODO: (#399) Crum and KELLIA words should implement a sister interface. You
 # shouldn't construct objects in the Flashcards pipeline.
 class Sister:
@@ -1263,7 +1262,8 @@ class SisterWithFrag:
             return ""
         if self.fragment.startswith("#"):
             return self.fragment
-        return f"#:~:text={self.fragment}"
+        # TODO: (#366) Stop using fragments.
+        return f"#:~:text={self.fragment.replace(" ", "%20")}"
 
     def html_aux(self) -> abc.Generator[str]:
         yield f'<tr id="sister{self.sister.key}" class="sister">'
@@ -1348,6 +1348,18 @@ class Headerer:
         yield "</table>"
 
 
+def file_name(title: str) -> str:
+    """Return the file name of an index.
+
+    Args:
+        title: Index title.
+
+    Returns:
+        A suitable stem.
+    """
+    return title.replace("/", "_").lower()
+
+
 class Index:
     """Index is a single Deck index."""
 
@@ -1362,12 +1374,14 @@ class Index:
         self.body: abc.Generator[str] = body
 
     def basename(self) -> str:
-        return paths.file_name(self.title) + ".html"
+        return file_name(self.title) + ".html"
 
     def write(self, dir_: str | pathlib.Path, head: str, header: str) -> None:
-        content = page.html_aux(head, INDEX_CLASS, header, *self.body)
-        path = os.path.join(dir_, self.basename())
-        file.writelines(content, path, report=False)
+        file.writelines(
+            page.html_aux(head, INDEX_CLASS, header, *self.body),
+            os.path.join(dir_, self.basename()),
+            report=False,
+        )
 
 
 class IndexIndex:
@@ -1402,7 +1416,7 @@ class IndexIndex:
         del cells
 
     def _basename(self) -> str:
-        return paths.file_name(self.name) + ".html"
+        return file_name(self.name) + ".html"
 
     def _iter_subindex_heads(self) -> abc.Generator[str]:
         for i, index in enumerate(self.indexes):
@@ -1450,14 +1464,17 @@ class IndexIndex:
             scripts=self.scripts,
             css=self.css,
         )
-        html: abc.Generator[str] = page.html_aux(
-            head,
-            INDEX_INDEX_CLASS,
-            *self.header,
-            *self._body_aux(),
+
+        file.writelines(
+            page.html_aux(
+                head,
+                INDEX_INDEX_CLASS,
+                *self.header,
+                *self._body_aux(),
+            ),
+            os.path.join(dir_, self._basename()),
+            report=False,
         )
-        path = os.path.join(dir_, self._basename())
-        file.writelines(html, path, report=False)
 
     def _body_aux(self) -> abc.Generator[str]:
         yield f"<h1>{self.name}</h1>"
@@ -1465,7 +1482,7 @@ class IndexIndex:
         for index in self.indexes:
             yield '<li class="index-view">'
             yield f'<a class="navigate" \
-                    href="{paths.file_name(index.title)}.html">'
+                    href="{index.basename()}">'
             yield index.title
             yield "</a>"
             yield f' <span class="index-count">({index.count})</span>'

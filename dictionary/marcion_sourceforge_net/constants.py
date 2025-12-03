@@ -232,7 +232,7 @@ DETACHED_TYPES: dict[str, lexical.Type] = {
         lexical.Gender.PLURAL,
     ),
     # TODO: (#64) etcetera is not a detached type. Fix at the origin.
-    "&c": lexical.Type("<i>&c</i>", "&c", "etcetera", None),
+    "&c": lexical.Type("<i>&amp;c</i>", "&amp;c", "etcetera", None),
     "c": lexical.Type(
         "<i><b>c</b></i>",
         "(c)",

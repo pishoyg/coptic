@@ -82,7 +82,3 @@ def crum_url(key: str | int, deriv_key: str | int | None = None) -> str:
     if not deriv_key:
         return root_url
     return f"{root_url}#drv{deriv_key}"
-
-
-def file_name(name: str) -> str:
-    return name.replace("/", "_").lower()
