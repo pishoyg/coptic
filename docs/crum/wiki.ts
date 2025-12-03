@@ -246,7 +246,7 @@ export function handle(root: HTMLElement): void {
       handlePages(elem);
       handleCorrigenda(elem);
       handleSemicolons(elem);
-      white.warnPotentiallyMissingReferences(elem);
+      white.warnPotentiallyMissingReferences(elem, ABBREVIATION_EXCLUDE);
 
       dev.play(() => {
         const endText: string = drop.noTipTextContent(elem);

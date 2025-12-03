@@ -1,7 +1,5 @@
 import * as log from '../logger.js';
 import * as dev from '../dev.js';
-import * as css from '../css.js';
-import * as cls from './cls.js';
 
 /**
  * WHITELIST is a list of known tokens that look like references but are not
@@ -40,32 +38,28 @@ const WHITELIST: Set<string> = new Set<string>([
  * TODO: (#522) Delete this function once your logic is more mature.
  *
  * @param root
+ * @param exclude
  */
-export function warnPotentiallyMissingReferences(root: HTMLElement): void {
+export function warnPotentiallyMissingReferences(
+  root: HTMLElement,
+  exclude: string
+): void {
   if (!dev.get()) {
     return;
   }
-  const query: string = css.classQuery(
-    cls.BULLET,
-    cls.ANNOTATION,
-    cls.DIALECT,
-    cls.REFERENCE,
-    cls.BIBLE
-  );
 
   const walker: TreeWalker = document.createTreeWalker(
     root,
-    NodeFilter.SHOW_TEXT,
+    NodeFilter.SHOW_TEXT | NodeFilter.SHOW_ELEMENT,
     (node: Node): number => {
-      if (!node.nodeValue) {
-        return NodeFilter.FILTER_REJECT;
-      }
-      if (node.parentElement?.closest(query)) {
-        // This node is excluded.
-        return NodeFilter.FILTER_REJECT;
-      }
-      if (!/[A-Z]/gu.test(node.nodeValue)) {
-        return NodeFilter.FILTER_REJECT;
+      if (node.nodeType === Node.ELEMENT_NODE) {
+        return (node as Element).matches(exclude)
+          ? // If this element matches the exclude selector, FILTER_REJECT
+            // tells TreeWalker to discard this node AND its children.
+            NodeFilter.FILTER_REJECT
+          : // If it's a normal element, we don't want to yield the element
+            // itself, but we DO want to visit its children.
+            NodeFilter.FILTER_SKIP;
       }
       return NodeFilter.FILTER_ACCEPT;
     }
@@ -75,7 +69,7 @@ export function warnPotentiallyMissingReferences(root: HTMLElement): void {
     const text: Text = walker.currentNode as Text;
     // Find all words containing an upper-case letter.
     const words: string[] | undefined = text.nodeValue
-      ?.match(/(?=\p{L}*\p{Lu})[\p{L}\p{M}]+/gu)
+      ?.match(/(?=\p{L}*\p{Lu})[\p{Script=Latin}\p{M}]+/gu)
       ?.filter((token: string): boolean => !WHITELIST.has(token));
     if (!words?.length) {
       continue;

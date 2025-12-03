@@ -563,17 +563,17 @@ export class SearchResult extends AggregateResult {
   private *walk(root: HTMLElement): Generator<Text> {
     const walker: TreeWalker = document.createTreeWalker(
       root,
-      NodeFilter.SHOW_TEXT,
+      NodeFilter.SHOW_TEXT | NodeFilter.SHOW_ELEMENT,
       (node: Node): number => {
-        if (!node.nodeValue) {
-          // This is not a text node.
-          return NodeFilter.FILTER_REJECT;
+        if (node.nodeType === Node.ELEMENT_NODE) {
+          return (node as Element).matches(`.${drop.CLS.DROPPABLE}`)
+            ? // This is a tooltip, added by the enricher, and irrelevant for
+              // highlighting. Skip the whole subtree.
+              NodeFilter.FILTER_REJECT
+            : // Otherwise, skip this node, but proceed to process its children.
+              NodeFilter.FILTER_SKIP;
         }
-        if (node.parentElement?.closest(`.${drop.CLS.DROPPABLE}`)) {
-          // This is a tooltip, added by the enricher, and irrelevant for
-          // highlighting.
-          return NodeFilter.FILTER_REJECT;
-        }
+        // This is a text node.
         return NodeFilter.FILTER_ACCEPT;
       }
     );
