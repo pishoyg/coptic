@@ -29,6 +29,13 @@ _ = _argparser.add_argument(
     help="Print the smallest unused derivation key and exit.",
 )
 
+_ = _argparser.add_argument(
+    "--html",
+    action="store_true",
+    default=False,
+    help="Generate HTMl and exit.",
+)
+
 
 def _print_next_key(keys: abc.Container[str]) -> None:
     print(next(i for i in itertools.count(1) if str(i) not in keys))
@@ -110,8 +117,6 @@ def main():
         )
         return
 
-    # No commands given, just write the artifacts.
-
     # Write the HTML.
     with concur.thread_pool_executor() as executor:
         _ = [
@@ -119,6 +124,9 @@ def main():
             *executor.map(_write_html, crum.indexer().generate_indexes()),
         ]
     log.wrote(paths.LEXICON_DIR)
+
+    if args.html:
+        return
 
     # Write the Xooxle index.
     crum.XOOXLE.build()
