@@ -44,6 +44,10 @@ import * as dev from '../dev.js';
  *
  * Given the above, it is paramount to perform searches in the correct order in
  * order to ensure correctness.
+ *
+ * There is a whole lot of regex searches that would be executed against
+ * candidate tags, so it may be a good idea to exclude as many subtrees as
+ * possible.
  */
 const ABBREVIATION_EXCLUDE: string = css.classQuery(
   // BULLET is not an abbreviation class, but it could collide with some
@@ -57,7 +61,11 @@ const ABBREVIATION_EXCLUDE: string = css.classQuery(
   cls.DIALECT,
   cls.ANNOTATION,
   // Glosses definitely have no abbreviations. Exclude for protectiveness.
-  cls.GLOSS
+  cls.GLOSS,
+  // Processing Greek and Coptic text doesn't pose any risk of collision, but
+  // we exclude them to slightly speed up the code.
+  cls.GREEK,
+  cls.COPTIC
 );
 
 /**
