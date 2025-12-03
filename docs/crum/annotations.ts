@@ -112,7 +112,9 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'passim', variants: ['pass'] },
   { fullForm: 'conjunctive participle', variants: ['p c'] },
   { fullForm: 'plural', variants: ['pl'] },
-  { fullForm: 'possessive pronoun', variants: ['poss'] },
+  // Crum has "possessive pronoun" for "poss", but "possessive" is suitable. See
+  // examples: https://remnqymi.com/crum/?query=poss&full=true&wiki=true.
+  { fullForm: 'possessive', variants: ['poss'] },
   { fullForm: 'prefix', variants: ['pref'] },
   { fullForm: 'preposition', variants: ['prep'] },
   { fullForm: 'present tense, thus: 1 pres, 2 pres', variants: ['pres'] },
