@@ -189,7 +189,7 @@ PREPROCESSING: list[tuple[str, str]] = [
 # NOTE: As of the time of writing, some of these annotations occur only once in
 # the corpus.
 DETACHED_TYPES: dict[str, lexical.Type] = {
-    # TODO: (#115) The question mark is not a detached type, and it might be
+    # TODO: (#64) The question mark is not a detached type, and it might be
     # form-specific. Investigate.
     "?": lexical.Type("<i>(?)</i>", "(?)", "probably", None),  # Probably.
     "m/f:": lexical.Type(
@@ -205,7 +205,7 @@ DETACHED_TYPES: dict[str, lexical.Type] = {
         "(nn)",
         inflect.Type.NOUN_UNKNOWN_GENDER,
     ),
-    # TODO: (#115) The following types likely apply to the subset of forms
+    # TODO: (#64) The following types likely apply to the subset of forms
     # occurring after the type, not the whole line.
     "f:": lexical.Type(
         "<i>female:</i>",
@@ -231,14 +231,15 @@ DETACHED_TYPES: dict[str, lexical.Type] = {
         "plural",
         lexical.Gender.PLURAL,
     ),
-    "&c": lexical.Type("<i>&c</i>", "(&c)", "constructed with", None),
+    # TODO: (#64) etcetera is not a detached type. Fix at the origin.
+    "&c": lexical.Type("<i>&c</i>", "&c", "etcetera", None),
     "c": lexical.Type(
         "<i><b>c</b></i>",
         "(c)",
         "Not sure what this means!",
         None,
     ),
-    # TODO: (#115) {nic} is definitely form-specific! Its presence here
+    # TODO: (#64) {nic} is definitely form-specific! Its presence here
     # means it's currently interpreted as applying to all forms in a word!
     # Fix!
     "{nic}": lexical.Type("{nic}", "{nic}", "{nic}", None, append=False),
