@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
 """Generate Crum artifacts, and run helpers."""
-# TODO: (#448) This file should import flashcards and generate all Crum
-# artifacts by default.
-
 import argparse
 import itertools
 import pathlib
@@ -11,7 +8,8 @@ from collections import abc
 import pandas as pd
 
 from dictionary.marcion_sourceforge_net import constants, crum, wiki
-from utils import file, paths
+from flashcards import deck
+from utils import concur, file, log, paths
 
 _argparser = argparse.ArgumentParser("Generate Crum artifacts (by default).")
 
@@ -97,6 +95,10 @@ def _scan_index() -> abc.Generator[Page]:
         last = cur
 
 
+def _write_html(obj: deck.Note | crum.IndexIndex) -> None:
+    obj.write(paths.LEXICON_DIR)
+
+
 def main():
     args = _argparser.parse_args()
     if args.root_key:
@@ -109,6 +111,17 @@ def main():
         return
 
     # No commands given, just write the artifacts.
+
+    # Write the HTML.
+    with concur.thread_pool_executor() as executor:
+        _ = [
+            *executor.map(_write_html, crum.notes_aux()),
+            *executor.map(_write_html, crum.indexer().generate_indexes()),
+        ]
+    log.wrote(paths.LEXICON_DIR)
+
+    # Write the Xooxle index.
+    crum.XOOXLE.build()
 
     # Write the Crum scan index.
     df: pd.DataFrame = pd.DataFrame(p.entry() for p in _scan_index())

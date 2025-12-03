@@ -112,11 +112,8 @@ epub_publish: REQUIRE_DRIVE_DIR FORCE
 	"$${DRIVE_DIR}/bohairic_english - desktop.epub"
 
 ########## CRUM ##########
-# TODO: (#448) `flashcards/main.py` should have no role in generating Crum
-# artifacts.
 crum: FORCE
 	# Generate the Crum lexicon artefacts.
-	./flashcards/main.py --crum
 	./dictionary/marcion_sourceforge_net/main.py
 
 # TODO: (#421) Delete this rule. We will no longer retain the original images,
@@ -195,7 +192,7 @@ andreas: FORCE
 ########## FLASHCARDS ##########
 anki: FORCE
 	# Generate the Anki package.
-	./flashcards/main.py --anki
+	./flashcards/main.py
 
 anki_publish: REQUIRE_DRIVE_DIR FORCE
 	# Publish the Anki package to Drive.

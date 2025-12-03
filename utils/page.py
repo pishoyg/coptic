@@ -33,10 +33,15 @@ LINE_BREAK: str = "<br>"
 HORIZONTAL_RULE: str = "<hr>"
 
 TAG_RE: re.Pattern[str] = re.compile(r"^</?(\w+)(?: [^>]+)?>")
+HTML_ID_RE: re.Pattern[str] = re.compile(r'\bid=".*?"')
 
 
 def no_line_breaks(htm: str) -> str:
     return htm.replace(LINE_BREAK, " ")
+
+
+def no_ids(htm: str) -> str:
+    return HTML_ID_RE.sub("", htm)
 
 
 # NOTE: html_head is used by our HTML generation logic to generated the <head>

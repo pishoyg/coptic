@@ -53,7 +53,6 @@ Model IDs are hardcoded.
 # You can also use `writelines` instead of `write` to write a file, thus
 # avoiding saving the data in memory at any point.
 
-import functools
 import os
 import pathlib
 import re
@@ -64,11 +63,9 @@ from collections import abc
 
 import genanki  # type: ignore[import-untyped]
 
-from utils import concur, ensure, file, log, page, paths, system
+from utils import ensure, file, page, paths, system
 
 NOTE_CLASS = "note"
-INDEX_CLASS = "index"
-INDEX_INDEX_CLASS = "index_index"
 
 # _IAM_ANKI is a line of JavaScript code that can be used to distinguish whether
 # we're running on Anki.
@@ -102,166 +99,6 @@ class GenankiNote(genanki.Note):
         del val
         # We should never directly use the setter.
         raise AttributeError
-
-
-def _to_file_name(name: str) -> str:
-    return name.replace("/", "_").lower()
-
-
-# TODO: (#203) The header should be fully defined in TypeScript.
-class HeaderCell:
-    """HeaderCell represents a cell in the header table."""
-
-    def __init__(self, title: str, link: str) -> None:
-        self.title: str = title
-        self.link: str = link
-
-    def td(self) -> abc.Generator[str]:
-        yield "<td>"
-        yield f'<a class="navigate" href="{self.link}">{self.title}</a>'
-        yield "</td>"
-
-
-class Headerer:
-    """Headerer can be used to generate a header."""
-
-    def __init__(self, base_cells: list[HeaderCell]) -> None:
-        self.cells: list[HeaderCell] = base_cells
-
-    def header(self) -> str:
-        return "".join(self.header_aux())
-
-    def header_aux(self) -> abc.Generator[str]:
-        yield '<table id="header" class="header">'
-        yield "<tr>"
-        for cell in self.cells:
-            yield from cell.td()
-        yield "</tr>"
-        yield "</table>"
-
-
-class Index:
-    """Index is a single Deck index."""
-
-    def __init__(
-        self,
-        title: str,
-        count: int,
-        body: abc.Generator[str],
-    ) -> None:
-        self.title: str = title
-        self.count: int = count
-        self.body: abc.Generator[str] = body
-
-    def basename(self) -> str:
-        return _to_file_name(self.title) + ".html"
-
-    def write(self, dir_: str | pathlib.Path, head: str, header: str) -> None:
-        content = page.html_aux(head, INDEX_CLASS, header, *self.body)
-        path = os.path.join(dir_, self.basename())
-        file.writelines(content, path, report=False)
-
-
-class IndexIndex:
-    """IndexIndex is an index of deck indexes."""
-
-    def __init__(
-        self,
-        name: str,
-        indexes: list[Index],
-        home: str,
-        search: str,
-        scripts: list[str],
-        css: list[str],
-    ):
-        self.name: str = name
-        self.indexes: list[Index] = indexes
-        self.home: str = home
-        self.search: str = search
-        self.scripts: list[str] = scripts
-        self.css: list[str] = css
-
-        cells: list[HeaderCell] = []
-        if home:
-            cells.append(HeaderCell("Home", home))
-        if search:
-            cells.append(HeaderCell("Search", search))
-        self.header: str = Headerer(cells).header()
-        # The subindex header is the same as the index header, with one extra
-        # cell pointing to the index that this subindex belongs to.
-        cells.append(HeaderCell(self.name, self.__basename()))
-        self.subindex_header: str = Headerer(cells).header()
-        del cells
-
-    def __basename(self) -> str:
-        return _to_file_name(self.name) + ".html"
-
-    def __iter_subindex_heads(self) -> abc.Generator[str]:
-        for i, index in enumerate(self.indexes):
-            prv = self.indexes[i - 1].basename() if i > 0 else ""
-            nxt = (
-                self.indexes[i + 1].basename()
-                if i < len(self.indexes) - 1
-                else ""
-            )
-            yield page.html_head(
-                title=index.title,
-                search=self.search,
-                scripts=self.scripts,
-                prev_href=prv,
-                next_href=nxt,
-                css=self.css,
-            )
-
-    def __write_subindex(
-        self,
-        args: tuple[str | pathlib.Path, Index, str],
-    ) -> None:
-        dir_, subindex, head = args
-        subindex.write(dir_, head, self.subindex_header)
-
-    def write(self, dir_: str | pathlib.Path):
-        # A subindex header includes a link to the index that contains
-        # this subindex.
-        with concur.thread_pool_executor() as executor:
-            m = executor.map(
-                self.__write_subindex,
-                zip(
-                    [dir_] * len(self.indexes),
-                    self.indexes,
-                    self.__iter_subindex_heads(),
-                ),
-            )
-            _ = list(m)
-
-        # Write the index index!
-        head: str = page.html_head(
-            title=self.name,
-            search=self.search,
-            scripts=self.scripts,
-            css=self.css,
-        )
-        html: abc.Generator[str] = page.html_aux(
-            head,
-            INDEX_INDEX_CLASS,
-            *self.header,
-            *self.__body_aux(),
-        )
-        path = os.path.join(dir_, self.__basename())
-        file.writelines(html, path, report=False)
-
-    def __body_aux(self) -> abc.Generator[str]:
-        yield f"<h1>{self.name}</h1>"
-        yield '<ol class="index-index-list">'
-        for index in self.indexes:
-            yield '<li class="index-view">'
-            yield f'<a class="navigate" \
-                    href="{_to_file_name(index.title)}.html">'
-            yield index.title
-            yield "</a>"
-            yield f' <span class="index-count">({index.count})</span>'
-            yield "</li>"
-        yield "</ol>"
 
 
 class Note:
@@ -389,6 +226,7 @@ class Deck:
         self,
         name: str,
         deck_id: int,
+        notes_aux: abc.Generator[Note],
         description: str = f"https://{paths.DOMAIN}",
         html_dir: str | pathlib.Path = paths.LEXICON_DIR,
     ) -> None:
@@ -398,33 +236,11 @@ class Deck:
         self.description: str = description
         self.html_dir: str | pathlib.Path = html_dir
         self.media_files: set[MediaFile] = set()
-
-    @functools.cached_property
-    def notes(self) -> list[Note]:
-        notes: list[Note] = list(self.notes_aux())
+        self.notes: list[Note] = list(notes_aux)
         ensure.unique(
-            (note.key for note in notes),
+            (note.key for note in self.notes),
             "Note keys must be unique!",
         )
-        return notes
-
-    def __write_html(self, o: Note | IndexIndex) -> None:
-        o.write(self.html_dir)
-
-    def notes_aux(self) -> abc.Generator[Note]:
-        raise NotImplementedError
-
-    def index_indexes(self) -> list[IndexIndex]:
-        return []
-
-    def write_html(self) -> None:
-        assert self.html_dir
-        with concur.thread_pool_executor() as executor:
-            _ = [
-                *executor.map(self.__write_html, self.notes),
-                *executor.map(self.__write_html, self.index_indexes()),
-            ]
-        log.wrote(self.html_dir)
 
     def __anki_html(self, html: str) -> str:
         def src_to_basename(match: re.Match[str]) -> str:

@@ -17,7 +17,7 @@ import os
 import pathlib
 import re
 import typing
-from collections import abc
+from collections import abc, defaultdict
 
 import gspread
 import yaml
@@ -26,7 +26,9 @@ from dictionary.kellia_uni_goettingen_de import kellia
 from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import lexical as lex
 from dictionary.marcion_sourceforge_net import parse, sheet, wiki
-from utils import cache, ensure, file, gcp, log, page, paths, semver, text
+from flashcards import deck
+from utils import cache, concur, ensure, file, gcp, log, page, paths, text
+from xooxle import xooxle
 
 _NUM_DRV_COLS: int = 10
 _HUNDRED: int = 100
@@ -44,6 +46,51 @@ _FROM_MARCION: set[str] = {
     "3385",
     "1259",  # TODO: (#634) merge into 1258.
 }
+
+# TODO: (#399) Crum HTML logic should be deduplicated. The duplication causes
+# such issues as #398.
+
+# DIALECTS_JS is a JavaScript line that can be used to set the default dialects.
+DIALECTS_JS = """
+if (localStorage.getItem('d') === null) {{
+  localStorage.setItem('d', {DIALECT_ARR}.join(','));
+}}
+"""
+
+INDEX_CLASS = "index"
+INDEX_INDEX_CLASS = "index_index"
+
+
+def dialects_js(dialects: abc.Iterable[str]) -> str:
+    if not dialects:
+        return ""
+    return DIALECTS_JS.format(DIALECT_ARR=list(dialects))
+
+
+def relpath(dst: str | pathlib.Path) -> str:
+    """Get the path to the destination relative to the lexicon directory.
+
+    This can be used to construct a short path to navigate to a given
+    destination from the Lexicon directory.
+
+    Args:
+        dst: Destination.
+
+    Returns:
+        Path from the Lexicon directory.
+    """
+    return os.path.relpath(dst, paths.LEXICON_DIR)
+
+
+CRUM_SEARCH: str = relpath(paths.LEXICON_DIR)
+CRUM_HOME: str = relpath(paths.SITE_DIR)
+DAWOUD_DIR: str = relpath(paths.DAWOUD_DIR)
+SCAN_DIR: str = relpath(paths.CRUM_SCAN_DIR)
+
+KELLIA_PREFIX = "https://coptic-dictionary.org/entry.cgi?tla="
+DAWOUD_SURNAME = "Dawoud"
+
+DICTIONARY_PAGE_RE = re.compile("([0-9]+(a|b))")
 
 
 class Row(gcp.Record):
@@ -271,6 +318,10 @@ class Image:
         return constants.SOURCES_DIR / f"{self.stem}.txt"
 
     @functools.cached_property
+    def _sort_key(self) -> list[int]:
+        return [int(self.key_word), self.sense_num, self.idx]
+
+    @functools.cached_property
     def sources(self) -> list[str]:
         # TODO: (#0) Sources should be stripped at the source.
         sources: list[str] = list(
@@ -300,9 +351,8 @@ class Image:
         # TODO: (#258) An HTTP source should always be present.
         return self.http_sources[0] if self.http_sources else self.stem
 
-    def __lt__(self, other: object) -> bool:
-        assert isinstance(other, Image)
-        return semver.lt(self.stem, other.stem)
+    def __lt__(self, other: typing.Self) -> bool:
+        return self._sort_key < other._sort_key
 
     @functools.cached_property
     def artifacts(self) -> list[pathlib.Path]:
@@ -537,13 +587,12 @@ class Root(Row):
             self.key,
             "can't be a relation of itself",
         )
-        if container is not None:
-            ensure.members(
-                [r.key for r in house],
-                container,
-                self.key,
-                "has unknown relations:",
-            )
+        ensure.members(
+            [r.key for r in house],
+            container,
+            self.key,
+            "has unknown relations:",
+        )
         return house
 
     @functools.cached_property
@@ -700,6 +749,281 @@ class Root(Row):
             yield (crum, repetitions)
             for _ in range(repetitions - 1):
                 yield ("", 0)
+
+    def note(self, dialects: set[str] | None = None) -> deck.Note:
+        return deck.Note(
+            key=self.key,
+            front=self._front,
+            back=self._back,
+            title=self.title(),
+            nxt=_path(Crum.next_key(self)),
+            prv=_path(Crum.prev_key(self)),
+            search=CRUM_SEARCH,
+            js_start=dialects_js(dialects or set()),
+            js_path=relpath(paths.CRUM_JS),
+            css=[relpath(paths.DROPDOWN_CSS)],
+        )
+
+    @functools.cached_property
+    def _front(self) -> str:
+        return "".join(self._front_aux())
+
+    def _front_aux(self) -> abc.Generator[str]:
+        # Header.
+        # TODO: (#203) The header should be mostly implemented in TypeScript,
+        # rather than hardcoded in the HTML.
+        # Open the table.
+        yield '<table id="header" class="header">'
+        yield "<tr>"
+        # Home
+        yield '<td><a class="navigate" href="../">Home</a></td>'
+        # Contact
+        yield "<td>"
+        yield '<span id="reports">'
+        yield "Reports"
+        yield "</span>"
+        yield "</td>"
+        # Prev
+        yield "<td>"
+        prev = Crum.prev_key(self)
+        if prev:
+            yield f'<a class="navigate" href="{prev}.html">Prev</a>'
+        del prev
+        yield "</td>"
+        # Key.
+        yield "<td>"
+        yield f'<a class="navigate" id="key" href="{self.key}.html">'
+        yield self.key
+        yield "</a>"
+        yield "</td>"
+        # Next
+        yield "<td>"
+        nxt = Crum.next_key(self)
+        if nxt:
+            yield f'<a class="navigate" href="{nxt}.html">Next</a>'
+        del nxt
+        yield "</td>"
+        # Reset.
+        yield "<td>"
+        yield '<span class="reset">Reset</span>'
+        yield "</td>"
+        # Dev.
+        yield "<td>"
+        yield '<span class="developer">Dev</span>'
+        yield "</td>"
+        # Close the table.
+        yield "</tr>"
+        yield "</table>"
+        # Horizontal line.
+        yield page.HORIZONTAL_RULE
+        # The word.
+        yield '<div id="pretty" class="pretty">'
+        yield self.word_parsed_prettify()
+        yield "</div>"
+
+    @functools.cached_property
+    def _back(self) -> str:
+        return "".join(self._back_aux())
+
+    def _back_aux(self) -> abc.Generator[str]:
+        # Meaning
+        yield '<div id="root-type-meaning" class="root-type-meaning">'
+        yield '<span id="root-part-of-speech" class="part-of-speech">'
+        yield "(<b>"
+        yield self.type_name
+        yield "</b>)"
+        yield "</span>"
+
+        if self.categories:
+            yield '<div id="categories" class="categories">'
+            yield ", ".join(self.categories)
+            yield "</div>"
+        if self.meaning:
+            yield '<div id="meaning" class="meaning">'
+            yield self.meaning
+            yield "</div>"
+        yield "</div>"
+
+        if self.crum or self.dawoud_pages:
+            # Dictionary pages.
+            yield '<div id="dictionary" class="dictionary">'
+            yield '<span class="page-list">'
+
+            if self.crum:
+                yield "<b>"
+                yield '<a href="#crum" class="crum hover-link">Crum</a>: '
+                yield "</b>"
+                yield '<span class="crum-page">'
+                yield str(self.crum)
+                yield "</span>"
+
+            if self.dawoud_pages:
+                yield page.LINE_BREAK
+                yield "<b>"
+                yield '<a href="#dawoud" class="dawoud hover-link">'
+                yield DAWOUD_SURNAME
+                yield "</a>"
+                yield ": "
+                yield "</b>"
+                yield DICTIONARY_PAGE_RE.sub(
+                    r'<span class="dawoud-page">\1</span>',
+                    self.dawoud_pages.replace(",", ", "),
+                )
+
+            yield "</span>"
+            yield "</div>"
+            yield page.LINE_BREAK
+
+        # Images.
+        if not self.images:
+            yield page.LINE_BREAK
+        else:
+            yield '<div id="images" class="images">'
+            for img in self.images:
+                yield from _img_aux(
+                    id_=f"explanatory{img.stem}",
+                    cls="explanatory",
+                    alt=img.alt,
+                    path=relpath(img.dst_path),
+                    caption=_join(
+                        '<span hidden="" class="explanatory-key">',
+                        img.stem,
+                        "</span>",
+                        " ",
+                        '<span class="explanatory-caption">',
+                        self.sense(img) or "",
+                        "</span>",
+                    ),
+                )
+            yield "</div>"
+
+        # Editor's notes.
+        if self.notes:
+            yield '<div id="notes" class="notes">'
+            yield "<i>Editor's note: </i>"
+            yield self.notes
+            yield "</div>"
+
+        # Senses.
+        if self.senses:
+            yield '<div id="senses" class="senses">'
+            yield ", ".join(
+                f'<span class="sense" id="sense{k}">'
+                + f"{k}: {self.senses[k]}"
+                + "</span>"
+                for k in sorted(self.senses.keys(), key=int)
+            )
+            yield "</div>"
+
+        # Quality.
+        yield '<div id="quality" class="quality">'
+        yield self.quality
+        yield "</div>"
+
+        # Line break.
+        yield page.LINE_BREAK
+
+        # Derivations.
+        yield self.drv_html_table()
+
+        # Sisters.
+        if (
+            self.sisters
+            or self.greek_sisters
+            or self.antonyms
+            or self.homonyms
+        ):
+            yield page.HORIZONTAL_RULE
+            yield '<div id="sisters" class="sisters">'
+            before: bool = False
+            if self.sisters:
+                yield "<i>See also: </i>"
+                yield '<table class="sisters-table">'
+                yield from _mother().gather_aux(self.sisters)
+                yield "</table>"
+                before = True
+            if self.greek_sisters:
+                if before:
+                    yield page.LINE_BREAK
+                yield "<i>Greek: </i>"
+                yield '<table class="sisters-table">'
+                yield from _stepmother().gather_aux(self.greek_sisters)
+                yield "</table>"
+                before = True
+            if self.antonyms:
+                if before:
+                    yield page.LINE_BREAK
+                yield "<i>Opposite: </i>"
+                yield '<table class="sisters-table">'
+                yield from _mother().gather_aux(self.antonyms)
+                yield "</table>"
+                before = True
+            if self.homonyms:
+                if before:
+                    yield page.LINE_BREAK
+                yield "<i>Homonyms: </i>"
+                yield '<table class="sisters-table">'
+                yield from _mother().gather_aux(self.homonyms)
+                yield "</table>"
+                before = True
+            yield "</div>"
+            del before
+
+        if self.has_wiki_canonical_entries() or self.crum:
+            yield page.HORIZONTAL_RULE
+
+        # Wiki.
+        if self.has_wiki_canonical_entries():
+            yield '<div class="wiki" id="wiki">'
+            yield self.wiki_html
+            yield "</div>"
+
+        # Crum's pages.
+        if self.crum:
+            yield '<div id="crum" class="crum dictionary">'
+            yield '<span class="page-list">'
+            yield '<b><a href="#crum" class="crum hover-link">Crum</a>: </b>'
+            yield DICTIONARY_PAGE_RE.sub(
+                r'<span class="crum-page">\1</span>',
+                self.crum_page_range.replace(",", ", "),
+            )
+            yield "</span>"
+            for num in _page_numbers(self.crum_page_range):
+                yield from _img_aux(
+                    id_=f"crum{num}",
+                    path=os.path.join(SCAN_DIR, f"{num+22}.png"),
+                    cls="crum-page-img",
+                    alt=str(num),
+                    line_br=True,
+                )
+            yield "</div>"
+
+        if self.dawoud_pages:
+            yield page.HORIZONTAL_RULE
+            yield '<div id="dawoud" class="dawoud dictionary">'
+            yield '<span class="page-list">'
+            # Dawoud's pages.
+            yield "<b>"
+            yield '<a href="#dawoud" class="dawoud hover-link">'
+            yield DAWOUD_SURNAME
+            yield "</a>"
+            yield ": "
+            yield "</b>"
+            yield DICTIONARY_PAGE_RE.sub(
+                r'<span class="dawoud-page">\1</span>',
+                self.dawoud_pages.replace(",", ", "),
+            )
+            yield "</span>"
+            page_numbers = _page_numbers(self.dawoud_pages)
+            for num in page_numbers:
+                yield from _img_aux(
+                    path=os.path.join(DAWOUD_DIR, f"{num+17}.png"),
+                    id_=f"dawoud{num}",
+                    cls="dawoud-page-img",
+                    alt=str(num),
+                    line_br=True,
+                )
+            yield "</div>"
 
 
 class Crum:
@@ -887,3 +1211,579 @@ def _verify_wiki_keys() -> None:
             "for entries:",
             wikis,
         )
+
+
+def _img_aux(
+    id_: str,
+    cls: str,
+    path: str,
+    alt: str,
+    caption: str | None = None,
+    line_br: bool = False,
+) -> abc.Generator[str]:
+    yield f'<figure id="{id_}" class="{cls}">'
+    # NOTE: Anki requires basenames. The string `src="{path}"` gets updated
+    # while the Anki flashcards are being generated, using regular
+    # expressions. So retaining the format `src="{path}"` is important.
+    yield f'<img src="{path}" alt="{alt}" class="{cls}-img">'
+    if caption:
+        yield f"<figcaption>{caption}</figcaption>"
+    yield "</figure>"
+    if line_br:
+        yield page.LINE_BREAK
+
+
+def _join(*parts: str) -> str:
+    return "".join(parts)
+
+
+# TODO: (#399) Crum and KELLIA words should implement a sister interface. You
+# shouldn't construct objects in the Flashcards pipeline.
+class Sister:
+    """Sister represents a sister of a Crum word."""
+
+    def __init__(self, key: str, title: str, meaning: str, typ: str) -> None:
+        self.key: str = key
+        self.title: str = title
+        self.meaning: str = meaning
+        self.type: str = typ
+
+
+class SisterWithFrag:
+    """SisterWithFrag represents a Sister, and an associated fragment."""
+
+    HREF_FMT: str = "{key}.html"
+
+    def __init__(self, sis: Sister, fragment: str) -> None:
+        self.sister: Sister = sis
+        self.fragment: str = fragment
+
+    def frag(self) -> str:
+        if not self.fragment:
+            return ""
+        if self.fragment.startswith("#"):
+            return self.fragment
+        return f"#:~:text={self.fragment}"
+
+    def html_aux(self) -> abc.Generator[str]:
+        yield f'<tr id="sister{self.sister.key}" class="sister">'
+        yield '<td class="sister-view">'
+        href = self.HREF_FMT.format(key=self.sister.key) + self.frag()
+        yield f'<a class="navigate" href="{href}" target="_blank">'
+        yield "view"
+        yield "</a>"
+        yield "</td>"
+        yield '<td class="sister-title">'
+        yield self.sister.title
+        yield "</td>"
+        yield '<td class="sister-meaning">'
+        if self.sister.type:
+            yield "(<b>"
+            yield self.sister.type
+            yield "</b>) "
+        yield self.sister.meaning
+        yield '<span hidden="" class="sister-key">'
+        yield self.sister.key
+        yield "</span>"
+        yield "</td>"
+        yield "</tr>"
+
+
+class StepsisterWithFrag(SisterWithFrag):
+    """StepsisterWithFrag is a Greek Crum sister, with a fragment."""
+
+    HREF_FMT: str = KELLIA_PREFIX + "{key}"
+
+
+class Mother:
+    """Mother holds the sisters of a Crum word."""
+
+    def __init__(
+        self,
+        key_to_sister: dict[str, Sister],
+        with_frag: typing.Callable[[Sister, str], SisterWithFrag],
+    ) -> None:
+        self.key_to_sister: dict[str, Sister] = key_to_sister
+        self.with_frag: typing.Callable[[Sister, str], SisterWithFrag] = (
+            with_frag
+        )
+
+    def gather_aux(self, relations: House) -> abc.Generator[str]:
+        for r in relations:
+            yield from self.with_frag(
+                self.key_to_sister[r.key],
+                r.fragment,
+            ).html_aux()
+
+
+# TODO: (#203) The header should be fully defined in TypeScript.
+class HeaderCell:
+    """HeaderCell represents a cell in the header table."""
+
+    def __init__(self, title: str, link: str) -> None:
+        self.title: str = title
+        self.link: str = link
+
+    def td(self) -> abc.Generator[str]:
+        yield "<td>"
+        yield f'<a class="navigate" href="{self.link}">{self.title}</a>'
+        yield "</td>"
+
+
+class Headerer:
+    """Headerer can be used to generate a header."""
+
+    def __init__(self, base_cells: list[HeaderCell]) -> None:
+        self.cells: list[HeaderCell] = base_cells
+
+    def header(self) -> str:
+        return "".join(self.header_aux())
+
+    def header_aux(self) -> abc.Generator[str]:
+        yield '<table id="header" class="header">'
+        yield "<tr>"
+        for cell in self.cells:
+            yield from cell.td()
+        yield "</tr>"
+        yield "</table>"
+
+
+class Index:
+    """Index is a single Deck index."""
+
+    def __init__(
+        self,
+        title: str,
+        count: int,
+        body: abc.Generator[str],
+    ) -> None:
+        self.title: str = title
+        self.count: int = count
+        self.body: abc.Generator[str] = body
+
+    def basename(self) -> str:
+        return paths.file_name(self.title) + ".html"
+
+    def write(self, dir_: str | pathlib.Path, head: str, header: str) -> None:
+        content = page.html_aux(head, INDEX_CLASS, header, *self.body)
+        path = os.path.join(dir_, self.basename())
+        file.writelines(content, path, report=False)
+
+
+class IndexIndex:
+    """IndexIndex is an index of deck indexes."""
+
+    def __init__(
+        self,
+        name: str,
+        indexes: list[Index],
+        home: str,
+        search: str,
+        scripts: list[str],
+        css: list[str],
+    ):
+        self.name: str = name
+        self.indexes: list[Index] = indexes
+        self.home: str = home
+        self.search: str = search
+        self.scripts: list[str] = scripts
+        self.css: list[str] = css
+
+        cells: list[HeaderCell] = []
+        if home:
+            cells.append(HeaderCell("Home", home))
+        if search:
+            cells.append(HeaderCell("Search", search))
+        self.header: str = Headerer(cells).header()
+        # The subindex header is the same as the index header, with one extra
+        # cell pointing to the index that this subindex belongs to.
+        cells.append(HeaderCell(self.name, self._basename()))
+        self.subindex_header: str = Headerer(cells).header()
+        del cells
+
+    def _basename(self) -> str:
+        return paths.file_name(self.name) + ".html"
+
+    def _iter_subindex_heads(self) -> abc.Generator[str]:
+        for i, index in enumerate(self.indexes):
+            prv = self.indexes[i - 1].basename() if i > 0 else ""
+            nxt = (
+                self.indexes[i + 1].basename()
+                if i < len(self.indexes) - 1
+                else ""
+            )
+            yield page.html_head(
+                title=index.title,
+                search=self.search,
+                scripts=self.scripts,
+                prev_href=prv,
+                next_href=nxt,
+                css=self.css,
+            )
+
+    def _write_subindex(
+        self,
+        args: tuple[str | pathlib.Path, Index, str],
+    ) -> None:
+        dir_, subindex, head = args
+        subindex.write(dir_, head, self.subindex_header)
+
+    def write(self, dir_: str | pathlib.Path):
+        # A subindex header includes a link to the index that contains
+        # this subindex.
+        with concur.thread_pool_executor() as executor:
+            _ = list(
+                executor.map(
+                    self._write_subindex,
+                    zip(
+                        [dir_] * len(self.indexes),
+                        self.indexes,
+                        self._iter_subindex_heads(),
+                    ),
+                ),
+            )
+
+        # Write the index index!
+        head: str = page.html_head(
+            title=self.name,
+            search=self.search,
+            scripts=self.scripts,
+            css=self.css,
+        )
+        html: abc.Generator[str] = page.html_aux(
+            head,
+            INDEX_INDEX_CLASS,
+            *self.header,
+            *self._body_aux(),
+        )
+        path = os.path.join(dir_, self._basename())
+        file.writelines(html, path, report=False)
+
+    def _body_aux(self) -> abc.Generator[str]:
+        yield f"<h1>{self.name}</h1>"
+        yield '<ol class="index-index-list">'
+        for index in self.indexes:
+            yield '<li class="index-view">'
+            yield f'<a class="navigate" \
+                    href="{paths.file_name(index.title)}.html">'
+            yield index.title
+            yield "</a>"
+            yield f' <span class="index-count">({index.count})</span>'
+            yield "</li>"
+        yield "</ol>"
+
+
+class Indexer(Mother):
+    """CrumIndexer generates indexes and index indexes for Crum's
+    dictionary."""
+
+    def _generate_index_body_aux(
+        self,
+        index_name: str,
+        keys: list[str],
+    ) -> abc.Generator[str]:
+        yield f"<h1>{index_name}</h1>"
+        yield '<table class="index-table">'
+        for key in keys:
+            sister = self.with_frag(self.key_to_sister[key], "")
+            yield from sister.html_aux()
+        yield "</table>"
+
+    def _generate_indexes(
+        self,
+        keys: list[str],
+        indexes: list[list[str]],
+    ) -> list[Index]:
+        """Generate indexes.
+
+        Args:
+            keys: A list of word keys.
+            indexes: A list such that indexes_i gives the indexes that word_i
+                belongs to.
+
+        Returns:
+            A list of deck indexes.
+
+        """
+        index_to_keys: defaultdict[str, list[str]] = defaultdict(list)
+        assert len(keys) == len(indexes)
+        for word_key, word_indexes in zip(keys, indexes):
+            for word_index in word_indexes:
+                index_to_keys[word_index].append(word_key)
+        return [
+            Index(
+                index_name,
+                len(keys),
+                self._generate_index_body_aux(index_name, keys),
+            )
+            for index_name, keys in sorted(
+                index_to_keys.items(),
+                key=lambda pair: pair[0],
+            )
+        ]
+
+    def generate_indexes(self) -> list[IndexIndex]:
+        keys: list[str] = []
+        types: list[list[str]] = []
+        categories: list[list[str]] = []
+        for _, root in Crum.roots.items():
+            keys.append(root.key)
+            types.append([root.type_name])
+            categories.append(root.categories)
+
+        return [
+            IndexIndex(
+                "Categories",
+                self._generate_indexes(keys, categories),
+                home=CRUM_HOME,
+                search=CRUM_SEARCH,
+                scripts=[relpath(paths.CRUM_JS)],
+                css=[relpath(paths.DROPDOWN_CSS)],
+            ),
+            IndexIndex(
+                "Types",
+                self._generate_indexes(keys, types),
+                home=CRUM_HOME,
+                search=CRUM_SEARCH,
+                scripts=[relpath(paths.CRUM_JS)],
+                css=[relpath(paths.DROPDOWN_CSS)],
+            ),
+        ]
+
+
+@functools.cache
+def _key_to_sister() -> dict[str, Sister]:
+    return {
+        root.key: Sister(
+            root.key,
+            page.no_line_breaks(
+                root.word_parsed_classify(include_references=False),
+            ),
+            root.meaning,
+            root.type_name,
+        )
+        for _, root in Crum.roots.items()
+    }
+
+
+@functools.cache
+def _mother() -> Mother:
+    return Mother(_key_to_sister(), SisterWithFrag)
+
+
+@functools.cache
+def _stepmother() -> Mother:
+    # NOTE: TLA sister elements possess IDs that are often identical, which
+    # we remove here in order to avoid having HTML element ID conflicts,
+    # given that, in this view, we can include several TLA entries in the
+    # same HTML page.
+    key_to_stepsister = {
+        key: Sister(
+            key,
+            page.no_ids(word.orthstring.table()),
+            page.no_ids(word.merge_langs().table()),
+            "",
+        )
+        for key, word in kellia.greek().items()
+    }
+    return Mother(key_to_stepsister, StepsisterWithFrag)
+
+
+@functools.cache
+def indexer() -> Indexer:
+    return Indexer(_key_to_sister(), SisterWithFrag)
+
+
+def notes_aux(dialects: set[str] | None = None) -> abc.Generator[deck.Note]:
+    for _, root in Crum.roots.items():
+        if dialects and not dialects.intersection(root.all_dialects):
+            continue
+        yield root.note(dialects)
+
+
+def _path(key: str | None) -> str:
+    return "" if not key else f"{key}.html"
+
+
+def _dedup(arr: list[int], at_most_once: bool = False) -> list[int]:
+    """Squash identical consecutive elements.
+
+    Args:
+        arr: An array of elements to deduplicate.
+        at_most_once: If true, deduplicate across the whole list.
+            If false, only deduplicate consecutive occurrences.
+            For example, given the list 1,1,2,1.
+            If deduped with `at_most_once`, it will return 1,2, with each
+            page occurring at most once.
+            If deduped with `at_most_once=False`, it will return 1,2,1, only
+            removing the consecutive entries.
+
+    Returns:
+        A list of integers, with duplicate elements eliminated.
+
+    """
+    if at_most_once:
+        return list(dict.fromkeys(arr))
+    out: list[int] = []
+    for x in arr:
+        if out and out[-1] == x:
+            continue
+        out.append(x)
+    return out
+
+
+def _page_numbers(
+    column_ranges: str,
+    single_range: bool = False,
+) -> list[int]:
+    """
+    Args:
+        column_ranges: a comma-separated list of columns or columns ranges.
+            The column ranges resemble what you type when you're using your
+            printer, except that each page number must be followed by a
+            letter - either "a" or b" - representing the column.
+            For example, "1a,3b-5b,8b-9a" means [1a, 3b, 4a, 4b, 5a, 5b,
+            9a].
+        single_range: If true, force a single range (no commas allowed).
+
+    Returns:
+        The list of page numbers.
+    """
+
+    def col_to_page_num(col: str) -> int:
+        col = col.strip()
+        assert col[-1] in ["a", "b"]
+        col = col[:-1]
+        assert col.isdigit()
+        return int(col)
+
+    out: list[int] = []
+    column_ranges = column_ranges.strip()
+    if not column_ranges:
+        return []
+    ranges = column_ranges.split(",")
+    if single_range:
+        assert len(ranges) == 1, f"ranges={ranges}"
+    del column_ranges, single_range
+    for col_or_col_range in ranges:
+        if "-" not in col_or_col_range:
+            # This is a single column.
+            out.append(col_to_page_num(col_or_col_range))
+            continue
+        # This is a page range.
+        cols = col_or_col_range.split("-")
+        del col_or_col_range
+        assert len(cols) == 2
+        assert cols[0] != cols[1]
+        start, end = map(col_to_page_num, cols)
+        del cols
+        assert end >= start
+        for x in range(start, end + 1):
+            out.append(x)
+    out = _dedup(out, at_most_once=True)
+    return out
+
+
+# Xooxle search will work fine even if we don't retain any HTML tags, because it
+# relies entirely on searching the text payloads of the HTML. However, we retain
+# the subset of the classes that are needed for highlighting, in order to make
+# the Xooxle search results pretty.
+
+_CRUM_RETAIN_CLASSES: set[str] = {
+    "word",
+    "dialect",
+    "spelling",
+    "type",
+    "roman",
+    "heading",
+} | set(constants.DIALECTS)
+
+_CRUM_RETAIN_ELEMENTS_FOR_CLASSES = {"comma"}
+
+XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
+    source=notes_aux,
+    extract=[
+        xooxle.Selector({"name": "title"}, force=False),
+        xooxle.Selector({"class_": "header"}, force=False),
+        xooxle.Selector({"class_": "dictionary"}, force=False),
+        xooxle.Selector({"class_": "crum"}, force=False),
+        xooxle.Selector({"class_": "crum-page"}, force=False),
+        xooxle.Selector({"class_": "dawoud"}, force=False),
+        xooxle.Selector({"class_": "dawoud-page"}, force=False),
+        xooxle.Selector({"class_": "drv-key"}, force=False),
+        xooxle.Selector({"id": "images"}, force=False),
+        xooxle.Selector({"class_": "nag-hammadi"}, force=False),
+        xooxle.Selector({"class_": "sisters"}, force=False),
+        xooxle.Selector({"id": "categories"}, force=False),
+        xooxle.Selector({"id": "quality"}),
+        xooxle.Selector({"id": "senses"}, force=False),
+    ],
+    captures=[
+        xooxle.Capture(
+            "wiki",
+            xooxle.Selector({"id": "wiki"}, force=False),
+            # The following classes are used for styling. While we may be able
+            # to style the languages in JavaScript without retaining classes in
+            # the HTML, this approach is simpler, because it's inherited from
+            # Wiki.
+            # For Arabic, Amharic, Hebrew, and Aramaic, this only increases the
+            # size of the index by ~8%.
+            # If we were to need the classes for Coptic or Greek, this would
+            # increase the size of the index more significantly, so we shouldn't
+            # do it.
+            # TODO: (#578) Import class names from Wiki, instead of duplicating
+            # them below.
+            retain_classes={
+                "wiki",
+                "dialect",
+                "headword",
+                "bullet",
+                "arabic",
+                "amharic",
+                "hebrew",
+                "aramaic",
+                "gloss",
+                "subparagraph",
+            },
+            unit_tags={"p"},
+        ),
+        xooxle.Capture(
+            "marcion",
+            xooxle.Selector({"id": "pretty"}),
+            # This is the list of classes needed for highlighting. If the
+            # highlighting rules change, you might have to add new classes!
+            retain_classes=_CRUM_RETAIN_CLASSES,
+            retain_elements_for_classes=_CRUM_RETAIN_ELEMENTS_FOR_CLASSES,
+        ),
+        xooxle.Capture(
+            "meaning",
+            xooxle.Selector({"id": "root-type-meaning"}, force=False),
+            retain_classes=_CRUM_RETAIN_CLASSES,
+            retain_elements_for_classes=_CRUM_RETAIN_ELEMENTS_FOR_CLASSES,
+        ),
+        xooxle.Capture(
+            "appendix",
+            xooxle.Selector(
+                {"name": "body"},
+            ),
+            retain_classes=_CRUM_RETAIN_CLASSES | {"part-of-speech"},
+            retain_attributes={"href", "target"},
+            retain_tags=xooxle.RETAIN_TAGS_DEFAULT | {"a"},
+            retain_elements_for_classes=_CRUM_RETAIN_ELEMENTS_FOR_CLASSES,
+            unit_tags={"tr", "div", "hr"},
+            block_elements=xooxle.BLOCK_ELEMENTS_DEFAULT | {"td"},
+            # We would like to separate the part of speech from the meaning, so
+            # the meaning will occupy its own line. This is useful for the
+            # ranking algorithm, which takes into consideration the distance
+            # between the match and the beginning-of-line.
+            # We don't need to treat this as a block class for the root
+            # field (called "marcion") because the HTML already produces a <br>
+            # tag.
+            # TODO: (#398) Handle this in a cleaner manner. The root and
+            # derivations HTML should be uniform.
+            block_classes={"part-of-speech"},
+        ),
+    ],
+    layers=[["marcion", "meaning", "appendix"], ["wiki"]],
+    output=paths.LEXICON_DIR / "crum.json",
+)
