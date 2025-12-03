@@ -10,7 +10,7 @@ const EXT = 'png';
 const OFFSET = 17;
 
 // Paths to our indexes.
-// TODO: (#405) Support looking up the Greek and Arabic indexes.
+// TODO: (#640) Support looking up the Greek and Arabic indexes.
 const COPTIC = 'coptic.tsv';
 
 /**

@@ -1,5 +1,5 @@
 /** Main function for the Crum scan. */
-// TODO: (#415) Fix the sorting logic. The current heuristic often doesn't align
+// TODO: (#641) Fix the sorting logic. The current heuristic often doesn't align
 // with Crum.
 import * as scan from '../../scan.js';
 import * as log from '../../logger.js';
