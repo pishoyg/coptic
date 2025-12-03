@@ -61,8 +61,8 @@ _SEARCH: str = "./"
 _CHAPTER_JS: str = "main.js"  # JavaScript for a chapter.
 _INDEX_JS: str = "bible.js"  # JavaScript for the index.
 _CHAPTER_CSS: str = "style.css"  # CSS for a chapter.
-_INDEX_CSS: str = "bible.css"  # CSS for the index.
-for artifact in [_CHAPTER_JS, _INDEX_JS, _CHAPTER_CSS, _INDEX_CSS]:
+_INDEX_CSS: list[str] = ["bible.css", "../collapse.css"]  # CSS for the index.
+for artifact in [_CHAPTER_JS, _INDEX_JS, _CHAPTER_CSS, *_INDEX_CSS]:
     assert (paths.BIBLE_DIR / artifact).is_file()
 
 
@@ -676,7 +676,7 @@ class HTMLBuilder:
             title=_BOOK_TITLE,
             page_class=_INDEX_CLASS,
             scripts=[_INDEX_JS],
-            css=[_INDEX_CSS],
+            css=_INDEX_CSS,
         )
         file.writelines(toc, paths.BIBLE_DIR / _INDEX)
 

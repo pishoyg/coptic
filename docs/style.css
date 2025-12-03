@@ -29,7 +29,6 @@ strong {
   color: var(--midnight-blue);
 }
 
-.collapse,
 h4,
 h5,
 h6 {
@@ -66,8 +65,7 @@ a figcaption {
 @media (hover: hover) {
   a:hover,
   .link:hover,
-  .hover-link:hover,
-  .collapse:hover {
+  .hover-link:hover {
     color: var(--bright-sky-blue);
     cursor: pointer;
     text-decoration: underline;
@@ -509,70 +507,6 @@ body.dev {
   .sisters-table {
     margin-left: 0;
   }
-}
-
-.collapsible {
-  display: grid;
-
-  /* Start with the content row "squashed" to a height of 0. */
-  grid-template-rows: 0fr;
-  transition: grid-template-rows var(--transition-duration) ease-out;
-}
-
-/* grid-template-rows doesn't work on Firefox when the child of a `.collapsible`
- * element is complex. (It works fine on simpler elements.)
- * In our case, Lexicon collapsibles have `<table>` children,
- * and collapsing doesn't work properly on Firefox, so we resort to using
- * `max-height` property. We lose the animation though.
- * Animating the `max-height` property requires setting `max-height` to specific
- * values (e.g. if `max-height` is transitioning from `0px` to `100px`, then it
- * can be animated, but transitioning from `0px` to `none` can't).
- * The problem is that calculating the value for `max-height` can only be done
- * in JavaScript, which is very challenging to do correctly because the
- * `max-height` is very dynamic, and needs to be updated whenever:
- * - The `collapsible` element gains or loses content (which happens during
- * Lexicon search)
- * - The user zooms in, in which case the content can get crammed, and the
- * container ends up needing more height in order to accommodate it.
- * This all needs to be done while preventing race conditions, otherwise
- * `max-height` could be overwritten several times rapidly, in the wrong
- * order, and end up with an obsolete value.
- * We also prefer a pure CSS solution because it's simpler.
- * It seemed appropriate though to simply sacrifice the animation on Firefox.
- */
-/* stylelint-disable at-rule-no-vendor-prefix */
-@-moz-document url-prefix() {
-  .collapsible:not(.is-open) {
-    max-height: 0;
-  }
-}
-/* stylelint-enable at-rule-no-vendor-prefix */
-
-.collapsible.is-open {
-  /* Expand the content row to its full, natural height. */
-  grid-template-rows: 1fr;
-}
-
-/* The direct child must have overflow hidden to prevent content
-   from spilling out during the animation. */
-.collapsible,
-.collapsible > * {
-  overflow: hidden;
-}
-
-.arrow {
-  display: inline-block; /* Allows transform to work */
-  transition: transform var(--transition-duration) ease-in-out; /* Match your other transitions */
-}
-
-/* By default, it points right */
-.arrow::before {
-  content: '▸ ';
-}
-
-/* When the parent has .is-open, rotate it and change the content */
-.is-open .arrow {
-  transform: rotate(90deg);
 }
 
 /********** KELLIA **********/
