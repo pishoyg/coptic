@@ -164,7 +164,7 @@ camera_images: FORCE
 ########## KELLIA ##########
 kellia: FORCE
 	# Generate the KELLIA lexicon artefacts.
-	./flashcards/main.py --kellia
+	./dictionary/kellia_uni_goettingen_de/main.py
 
 kellia_analysis: FORCE
 	# Generate an analysis of the structure of the TLA (KELLIA) dataset.

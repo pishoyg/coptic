@@ -680,36 +680,12 @@ class KELLIA(deck.Deck):
         deck_id: int,
         words: dict[str, kellia.Word],
     ) -> None:
-        self.words: dict[str, kellia.Word] = words
         super().__init__(deck_name, deck_id)
+        self.words: dict[str, kellia.Word] = words
 
     @typing.override
     def notes_aux(self) -> abc.Generator[deck.Note]:
-        for key, word in self.words.items():
-            front: str = word.orthstring.table()
-            back: str = _join(
-                word.merge_langs().table(),
-                word.etym_string.process(),
-                page.HORIZONTAL_RULE,
-                "<footer>",
-                "Coptic Dictionary Online: ",
-                '<a href="',
-                word.cdo(),
-                '">',
-                word.entry_xml_id,
-                "</a>",
-                "</footer>",
-            )
-            # TODO: (#407) KELLIA will soon have its own CSS, which should be
-            # included here.
-            yield deck.Note(
-                key=str(key),
-                title=str(key),
-                front=front,
-                back=back,
-                js_path=relpath(paths.KELLIA_JS),
-                css=[relpath(paths.DROPDOWN_CSS)],
-            )
+        yield from kellia.notes_aux(self.words)
 
 
 # NOTE: The deck IDs are protected fields. They are used as database keys for
@@ -788,16 +764,6 @@ _CRUM_RETAIN_CLASSES = {
 } | _DIALECTS
 
 _CRUM_RETAIN_ELEMENTS_FOR_CLASSES = {"comma"}
-
-_KELLIA_RETAIN_CLASSES = {
-    "word",
-    "spelling",
-    "dialect",
-    "type",
-    "lang",
-    "geo",
-    "gram_grp",
-} | _DIALECTS
 
 CRUM_XOOXLE = xooxle.Xooxle(
     source=CRUM_ALL.notes_aux,
@@ -885,34 +851,4 @@ CRUM_XOOXLE = xooxle.Xooxle(
     ],
     layers=[["marcion", "meaning", "appendix"], ["wiki"]],
     output=paths.LEXICON_DIR / "crum.json",
-)
-
-
-KELLIA_XOOXLE = xooxle.Xooxle(
-    source=KELLIA_COMPREHENSIVE.notes_aux,
-    extract=[
-        xooxle.Selector({"name": "footer"}, force=False),
-        xooxle.Selector({"class_": "bibl"}, force=False),
-        xooxle.Selector({"class_": "ref_xr"}, force=False),
-        xooxle.Selector({"class_": "ref"}, force=False),
-    ],
-    captures=[
-        xooxle.Capture(
-            "orths",
-            xooxle.Selector({"id": "orths"}),
-            retain_classes=_KELLIA_RETAIN_CLASSES,
-        ),
-        xooxle.Capture(
-            "senses",
-            xooxle.Selector({"id": "senses"}),
-            retain_classes=_KELLIA_RETAIN_CLASSES,
-        ),
-        xooxle.Capture(
-            "text",
-            xooxle.Selector(
-                {"name": "body"},
-            ),
-        ),
-    ],
-    output=os.path.join(paths.LEXICON_DIR, "kellia.json"),
 )

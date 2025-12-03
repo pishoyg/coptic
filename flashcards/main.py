@@ -23,13 +23,6 @@ _ = argparser.add_argument(
 )
 
 _ = argparser.add_argument(
-    "--kellia",
-    action="store_true",
-    default=False,
-    help="Generate the KELLIA Xooxle index.",
-)
-
-_ = argparser.add_argument(
     "--anki",
     action="store_true",
     default=False,
@@ -91,8 +84,6 @@ def main() -> None:
     indexes: list[xooxle.Xooxle] = []
     if args.crum:
         indexes.extend([constants.CRUM_XOOXLE])
-    if args.kellia:
-        indexes.append(constants.KELLIA_XOOXLE)
     with concur.thread_pool_executor() as executor:
         _ = list(executor.map(xooxle.Xooxle.build, indexes))
 
