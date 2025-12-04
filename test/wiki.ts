@@ -88,6 +88,17 @@ const TEST_CASES: {
       annotations: 31,
     },
   },
+  {
+    // 2531 has a tricky Bible reference.
+    key: '2531',
+    want: {
+      references: 3,
+      suffixes: 3,
+      bible: 1,
+      dialectTooltips: 2,
+      annotations: 3,
+    },
+  },
 ];
 
 /**
