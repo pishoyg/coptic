@@ -836,7 +836,9 @@ class Root(Row):
         yield page.HORIZONTAL_RULE
         # The word.
         yield '<div id="pretty" class="pretty">'
-        yield self.word_parsed_prettify()
+        # TODO: (#338) Parentheses should be used at the source. This is not a
+        # clean way to do it.
+        yield self.word_parsed_prettify().replace("{", "(").replace("}", ")")
         yield "</div>"
 
     @functools.cached_property
@@ -934,7 +936,9 @@ class Root(Row):
         yield page.LINE_BREAK
 
         # Derivations.
-        yield self.drv_html_table()
+        # TODO: (#338) Parentheses should be used at the source. This is not a
+        # clean way to do it.
+        yield self.drv_html_table().replace("{", "(").replace("}", ")")
 
         # Sisters.
         if (
