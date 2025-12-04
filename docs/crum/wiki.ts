@@ -289,10 +289,15 @@ export function handleAnnotations(root: HTMLElement): void {
     html.replaceText(
       root,
       regex,
-      (match: RegExpExecArray): { replacement?: Node } => {
+      (match: RegExpExecArray, _r, _n, node: Text): { replacement?: Node } => {
         const form: string = match[0];
         const annot: ann.Annotation | undefined = ann.MAPPING[form];
         if (!annot) {
+          return {};
+        }
+        if (annot.noItalics && node.parentElement?.closest('i')) {
+          // This annotation can't show in italicized text, and this node is
+          // italicized.
           return {};
         }
         const span: HTMLSpanElement = document.createElement('span');

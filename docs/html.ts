@@ -71,7 +71,8 @@ export function replaceText(
   replace: (
     match: RegExpExecArray,
     remainder: string,
-    nextSibling: ChildNode | null
+    nextSibling: ChildNode | null,
+    node: Text
   ) => { replacement?: Node; remainder?: string },
   exclude?: string
 ): void {
@@ -111,7 +112,7 @@ export function replaceText(
 
       // Call the replacer function to get the replacement and the new
       // remainder.
-      const result = replace(match, remainder, node.nextSibling);
+      const result = replace(match, remainder, node.nextSibling, node);
 
       // If a custom replacement is provided, insert it. Otherwise, insert the
       // original text.
