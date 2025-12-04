@@ -34,8 +34,6 @@ export interface Abbreviation {
   noCaseVariant?: boolean;
   // noItalics is used to eliminate some false positives. An annotation marked
   // as no-italics can't be the child of italicized text.
-  // TODO: (#572) This is a good idea, but it's currently unused. Figure out a
-  // way to use it.
   noItalics?: boolean;
 }
 
@@ -164,7 +162,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'approximate', variants: ['approx'] }, // NOTE: Encountered only once, as of the time of writing!
   { fullForm: 'arithmetic', variants: ['arithm'] },
   { fullForm: 'biblical', variants: ['bibl'] }, // NOTE: Encountered only once, as of the time of writing!
-  { fullForm: 'bis', variants: ['bis'] }, // Full form same as abbreviation, included for completion!
+  { fullForm: 'bis', variants: ['bis'] }, // NOTE: Full form same as abbreviation, included for completion!
   { fullForm: 'constructive', variants: ['constr', 'construct'] },
   { fullForm: 'confer', variants: ['cf'] },
   { fullForm: 'Coptic', variants: ['Copt'], noCaseVariant: true },
@@ -173,6 +171,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'determination', variants: ['determ', 'determin'] },
   { fullForm: 'exempli gratia', variants: ['e g'] },
   { fullForm: 'Ethiopic', variants: ['Ethiop'] },
+  { fullForm: 'etymology', variants: ['etymol'] },
   { fullForm: 'fragment', variants: ['frag'] },
   { fullForm: 'future', variants: ['fut'] },
   { fullForm: 'Hebrew', variants: ['Heb', 'Hebr'], noCaseVariant: true },
@@ -190,7 +189,9 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'manuscripts', variants: ['MSS'], noCaseVariant: true },
   { fullForm: 'negative', variants: ['neg'] },
   // TODO: (#194) Add Annotation for "partic". Is it "particle" or "participle"?
+  { fullForm: 'penes', variants: ['penes'] }, // NOTE: Full form same as abbreviation, included for completion!
   { fullForm: 'perfect', variants: ['perf', 'pf'] },
+  { fullForm: 'Persian', variants: ['Pers'], noCaseVariant: true },
   { fullForm: 'pluperfect', variants: ['pluperf'] },
   { fullForm: 'possessive', variants: ['possess'] },
   { fullForm: 'predicate', variants: ['predic'] },
@@ -200,7 +201,8 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'preterite', variants: ['preter'] },
   { fullForm: 'quod vide', variants: ['q v'] },
   { fullForm: 'radical', variants: ['rad'] }, // NOTE: Encountered only once, as of the time of writing!
-  { fullForm: 'sub verbo', variants: ['s v'] },
+  { fullForm: 'recto folio', variants: ['ro'], noCaseVariant: true },
+  { fullForm: 'sub voce', variants: ['s v'] },
   { fullForm: 'sic erat scriptum', variants: ['sic'] },
   { fullForm: 'sic lege', variants: ['sic l'] },
   { fullForm: 'scilicet', variants: ['sc'] },
@@ -213,6 +215,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'ut supra', variants: ['ut sup'] },
   { fullForm: 'verbs', variants: ['vbs'] },
   { fullForm: 'videlicet', variants: ['viz'] },
+  { fullForm: 'verso folio', variants: ['vo'] },
 
   // SECTION 3: ABBREVIATIONS THAT MOSTLY APPEAR IN REFERENCE TITLES, OR PERHAPS
   // AS POSTFIXES:
