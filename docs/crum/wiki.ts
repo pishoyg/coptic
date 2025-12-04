@@ -68,6 +68,7 @@ const ABBREVIATION_EXCLUDE: string = css.classQuery(
   cls.COPTIC
 );
 
+const CHAPTER_VERSE = '(?:\\s(\\d+|A|C|D|F)(?:\\s(\\d+))?)?';
 /**
  * BIBLE_RE defines the regex used to catch Bible references.
  * A Bible book abbreviation starts with a capital letter followed by one
@@ -78,13 +79,21 @@ const ABBREVIATION_EXCLUDE: string = css.classQuery(
  * and F. This is why we allow the chapter number to be one of those characters.
  * In some cases, only one number follows the book name, so we allow one of the
  * two numbers to be omitted.
+ *
+ * NOTE: It's important to perform the Bible search over two iterations, one
+ * for abbreviations without a preceding digits, and one for abbreviations with
+ * a digit.
+ * Consider the following text from 2531:
+ *    In 1 Cor 4 13
+ * A combined regex would capture the matches "In 1" and "Cor 4 13", failing to
+ * correctly capture the reference "1 Cor 4 13". But doing it over two
+ * iterations will result in this reference being captured in the second
+ * iteration.
  */
-export const BIBLE_RE = new RegExp(
-  str.bounded(
-    '(EpJer|(?:[1-4]\\s)?[A-Z][a-z]+)(?:\\s(\\d+|A|C|D|F)(?:\\s(\\d+))?)?'
-  ),
-  'gu'
-);
+export const BIBLE_RES: RegExp[] = [
+  new RegExp(str.bounded(`(EpJer|[A-Z][a-z]+)${CHAPTER_VERSE}`), 'gu'),
+  new RegExp(str.bounded(`([1-4]\\s[A-Z][a-z]+)${CHAPTER_VERSE}`), 'gu'),
+];
 
 export const ANNOTATION_RES: RegExp[] = [
   // Two-word annotation, and special cases:
@@ -412,35 +421,37 @@ function parseBibleCitation(
  *
  */
 export function handleBible(root: HTMLElement): void {
-  html.replaceText(
-    root,
-    BIBLE_RE,
-    (match: RegExpExecArray): { replacement?: Node } => {
-      const result: { url: string; name: string } | null =
-        parseBibleCitation(match);
-      if (!result) {
-        return {};
-      }
-      const link: HTMLAnchorElement = document.createElement('a');
-      link.href = result.url;
-      link.target = '_blank';
-      link.classList.add(ccls.HOVER_LINK, cls.BIBLE);
-      link.textContent = match[0];
-      drop.addDroppable(link, 'hover', 'below', result.name);
-      return { replacement: link };
-    },
-    // Exclude all Wiki abbreviations to avoid overlap.
-    // This is not expected to occur, especially for Biblical references,
-    // which have unique names and format that can not be conflated with
-    // something else.
-    // Also, it may be particularly useless for Biblical references because
-    // they tend to be searched early on in the process, thus none of the
-    // other abbreviation classes would be present at that stage anyway.
-    // It makes sense for the following stages to exclude abbreviations added
-    // in earlier stages, not the other way around.
-    // But we add the check anyway for consistency.
-    ABBREVIATION_EXCLUDE
-  );
+  BIBLE_RES.forEach((regex: RegExp): void => {
+    html.replaceText(
+      root,
+      regex,
+      (match: RegExpExecArray): { replacement?: Node } => {
+        const result: { url: string; name: string } | null =
+          parseBibleCitation(match);
+        if (!result) {
+          return {};
+        }
+        const link: HTMLAnchorElement = document.createElement('a');
+        link.href = result.url;
+        link.target = '_blank';
+        link.classList.add(ccls.HOVER_LINK, cls.BIBLE);
+        link.textContent = match[0];
+        drop.addDroppable(link, 'hover', 'below', result.name);
+        return { replacement: link };
+      },
+      // Exclude all Wiki abbreviations to avoid overlap.
+      // This is not expected to occur, especially for Biblical references,
+      // which have unique names and format that can not be conflated with
+      // something else.
+      // Also, it may be particularly useless for Biblical references because
+      // they tend to be searched early on in the process, thus none of the
+      // other abbreviation classes would be present at that stage anyway.
+      // It makes sense for the following stages to exclude abbreviations added
+      // in earlier stages, not the other way around.
+      // But we add the check anyway for consistency.
+      ABBREVIATION_EXCLUDE
+    );
+  });
 }
 
 /**

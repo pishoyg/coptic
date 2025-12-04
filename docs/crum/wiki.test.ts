@@ -31,6 +31,6 @@ describe('Ensures keys are covered by the regexes intended to catch them', () =>
   );
   test(
     'Ensures Bible keys are covered',
-    ensureKeysCovered.bind(null, Object.keys(bible.MAPPING), [wiki.BIBLE_RE])
+    ensureKeysCovered.bind(null, Object.keys(bible.MAPPING), wiki.BIBLE_RES)
   );
 });
