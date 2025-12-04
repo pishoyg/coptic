@@ -49,6 +49,10 @@ tr:last-child td {
   display: none;
 }
 
+:target.verse {
+  background-color: var(--anchor-yellow);
+}
+
 @media (width <= 500px) {
   /* Hide the language bar. */
   #bar {

@@ -207,12 +207,11 @@ figcaption {
   opacity: 0.5;
 }
 
-:target.verse,
 :target.explanatory,
 :target.sister,
 :target.drv .marcion,
 :target.drv .meaning {
-  background-color: #ffa; /* Anchor target highlight (Yellow) */
+  background-color: var(--anchor-yellow);
 }
 
 .drv-link {
