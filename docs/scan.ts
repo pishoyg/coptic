@@ -51,11 +51,11 @@ export interface Page {
  * @param page - A page number, potentially containing a column.
  * @returns - The page number without the column.
  */
-export function chopColumn(page: string): string {
+export function chopColumn(page: string): [string, string] {
   if (['a', 'b'].some((c) => page.endsWith(c))) {
-    page = page.slice(0, page.length - 1);
+    return [page.slice(0, -1), page.slice(-1)];
   }
-  return page;
+  return [page, ''];
 }
 
 const SWAP_TOLERANCE = 10;
@@ -327,7 +327,7 @@ export class Scroller {
     if (!page) {
       return this.landingPage;
     }
-    const num = parseInt(chopColumn(page));
+    const num = parseInt(chopColumn(page)[0]);
     return isNaN(num) ? this.landingPage : num;
   }
 

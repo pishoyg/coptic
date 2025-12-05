@@ -21,6 +21,7 @@ import * as drop from '../dropdown.js';
 import * as dev from '../dev.js';
 import * as roots from './roots.js';
 import * as derivations from './derivations.js';
+import * as str from '../str.js';
 
 const COPTIC_RE = /[\p{Script=Coptic}][\p{Script=Coptic}\p{Mark}]*/gu;
 const GREEK_RE = /[\p{Script=Greek}][\p{Script=Greek}\p{Mark}]*/gu;
@@ -103,26 +104,46 @@ export function handleRootType(root: HTMLElement): void {
 
 /**
  *
+ * @param page
+ * @returns
+ */
+function prettyPage(page: string): (Node | string)[] {
+  const [num, col]: [string, string] = scan.chopColumn(page);
+  const i = document.createElement('i');
+  i.textContent = col;
+  return [`${num} `, i];
+}
+
+/**
+ *
  * @param root
  */
 export function handleCrumPage(root: HTMLElement): void {
   root.querySelectorAll<HTMLElement>(`.${cls.CRUM_PAGE}`).forEach((el) => {
-    el.classList.add(ccls.LINK);
-    if (el.closest(`.${cls.WIKI}`)) {
-      // Inside Wiki, crum-page elements point externally.
-      el.classList.add(ccls.LINK);
-      el.addEventListener('click', (): void => {
-        browser.open(paths.crumScan(el.textContent));
-      });
+    const page: string = el.textContent.trim();
+    el.replaceChildren(...prettyPage(page));
+    const [num, _]: [string, string] = scan.chopColumn(page);
+
+    if (!str.isDigits(num)) {
+      // This page is non-numerical. It likely belongs to the Addenda, which we
+      // don't support yet. We just add a tooltip, but no hyperlinks.
+      // TODO: (#427) Insert a hyperlink pointing to the addenda.
+      const i = document.createElement('i');
+      i.textContent = 'Additions and Corrections';
+      drop.addDroppable(el, 'hover', 'below', 'From ', i);
       return;
     }
+
+    if (el.closest(`.${cls.WIKI}`)) {
+      // Inside Wiki, crum-page elements point externally.
+      html.linkify(el, paths.crumScan(page));
+      return;
+    }
+
     // Outside Wiki, crum-page elements point to an anchor within the page.
     // TODO: (#575) The scans should be removed from the notes, and all Crum
     // pages should point externally.
-    html.makeSpanLinkToAnchor(
-      el,
-      `#crum${scan.chopColumn(el.textContent.trim())}`
-    );
+    html.linkify(el, `#crum${num}`);
   });
 }
 
@@ -178,11 +199,9 @@ export function handleExplanatory(root: HTMLElement): void {
  */
 export function handleDawoudPage(root: HTMLElement): void {
   root.querySelectorAll<HTMLElement>(`.${cls.DAWOUD_PAGE}`).forEach((el) => {
-    el.classList.add(ccls.LINK);
-    html.makeSpanLinkToAnchor(
-      el,
-      `#dawoud${scan.chopColumn(el.textContent.trim())}`
-    );
+    const page: string = el.textContent.trim();
+    el.replaceChildren(...prettyPage(page));
+    html.linkify(el, `#dawoud${scan.chopColumn(page)[0]}`);
   });
 }
 
@@ -252,7 +271,7 @@ export function handleExplanatoryKey(root: HTMLElement): void {
     .querySelectorAll<HTMLElement>(`.${cls.EXPLANATORY_KEY}`)
     .forEach((el) => {
       el.classList.add(ccls.HOVER_LINK);
-      html.makeSpanLinkToAnchor(el, `#explanatory${el.textContent.trim()}`);
+      html.linkify(el, `#explanatory${el.textContent.trim()}`);
     });
 }
 
@@ -263,7 +282,7 @@ export function handleExplanatoryKey(root: HTMLElement): void {
 export function handleSisterKey(root: HTMLElement): void {
   root.querySelectorAll<HTMLElement>(`.${cls.SISTER_KEY}`).forEach((el) => {
     el.classList.add(ccls.HOVER_LINK);
-    html.makeSpanLinkToAnchor(el, `#sister${el.textContent.trim()}`);
+    html.linkify(el, `#sister${el.textContent.trim()}`);
   });
 }
 
