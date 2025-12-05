@@ -14,7 +14,7 @@ import * as log from '../logger.js';
 // would otherwise be confusing to show users the full definition.
 export const DATA = [
   // SECTION 1: ABBREVIATIONS LISTED IN CRUM'S LIST OF ABBREVIATIONS.
-  { fullForm: 'accusative', variants: ['acc'] },
+  { fullForm: 'accusative', variants: ['acc', 'accus'] },
   { fullForm: 'adjective', variants: ['adj'] },
   { fullForm: 'Arabic', variants: ['ar'] },
   { fullForm: 'article', variants: ['art'] },
