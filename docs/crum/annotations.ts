@@ -209,7 +209,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'subject', variants: ['subj'] },
   { fullForm: 'supra', variants: ['sup'] },
   { fullForm: 'Syriac', variants: ['syr'] }, // NOTE: Encountered only once, as of the time of writing!
-  { fullForm: 'translation', variants: ['transl'] }, // NOTE: Encountered only once, as of the time of writing!
+  { fullForm: 'translation, translated', variants: ['transl'] },
   { fullForm: 'variants', variants: ['varr'] },
   { fullForm: 'ultimo', variants: ['ult'] },
   { fullForm: 'ut supra', variants: ['ut sup'] },
