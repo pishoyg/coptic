@@ -81,8 +81,8 @@ def _scan_index() -> abc.Generator[Page]:
     """
     last: Page | None = None
     for page_num, group_iter in itertools.groupby(
-        wiki.wikis(),
-        key=lambda w: w.crum.num,
+        (w for w in wiki.wikis() if not w.addendum()),
+        key=lambda w: w.crum.num(),
     ):
         assert 1 <= page_num <= constants.CRUM_LAST_PAGE
         if last:

@@ -396,48 +396,62 @@ class Reference(Part):
 class CrumPage:
     """A page number in Crum's dictionary."""
 
-    num: int
-    col: str
-
     def __init__(self, raw: str):
         if not raw:
-            self.num = 0
-            self.col = ""
+            self._num: str = ""
+            self._col: str = ""
             return
         match: re.Match[str] | None = constants.CRUM_RE.fullmatch(raw)
         assert match
         assert len(match.groups()) == 2
-        self.num = int(match.groups()[0])
-        self.col = match.groups()[1]
-        assert self.num >= 0 and self.num <= constants.CRUM_LAST_PAGE
-        assert self.col in {"a", "b"}
+        self._num = match.groups()[0]
+        self._col = match.groups()[1]
 
-    def _parts(self) -> tuple[int, str]:
-        return self.num, self.col
+        # Validate.
+        if self._num.isdigit():
+            num: int = int(self._num)
+            assert num >= 0 and num <= constants.CRUM_LAST_PAGE
+        else:
+            # This is a Roman numeral.
+            assert self.roman()
+        assert self._col in {"a", "b"}
+
+    def num(self) -> int:
+        """Get an integer representing the page number.
+
+        NOTE: This is only available for pages from the body of the book.
+        Calling this method on an intro page results in an error.
+
+        Returns:
+            The page number as an integer.
+        """
+        return int(self._num)
+
+    def roman(self) -> bool:
+        return bool(re.fullmatch("[ivx]+", self._num))
 
     @typing.override
     def __eq__(self, other: object) -> bool:
-        if isinstance(other, CrumPage):
-            return self._parts() == other._parts()
-        return NotImplemented
+        assert isinstance(other, CrumPage)
+        return (self._num, self._col) == (other._num, other._col)
 
     def __lt__(self, other: typing.Self) -> bool:
-        return self._parts() < other._parts()
+        return (self.num(), self._col) < (other.num(), other._col)
 
     def __le__(self, other: typing.Self) -> bool:
-        return self._parts() <= other._parts()
+        return (self.num(), self._col) <= (other.num(), other._col)
 
     def __bool__(self) -> bool:
-        return any(self._parts())
+        return bool(self._num)
 
     @typing.override
     def __hash__(self):
-        return hash(self._parts())
+        return hash((self._num, self._col))
 
     @typing.override
     def __str__(self) -> str:
-        assert all(self._parts())
-        return "".join(str(x) for x in self._parts())
+        assert self
+        return self._num + self._col
 
     @typing.override
     def __repr__(self) -> str:

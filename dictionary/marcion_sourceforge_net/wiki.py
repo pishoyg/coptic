@@ -214,8 +214,6 @@ class Wiki:
             self.headword,
         )
 
-        # TODO: (#427) Some entries should have pages pointing to the Additions
-        # and Corrections section, rather than the body of the book.
         self.crum: lex.CrumPage = lex.CrumPage(record["Crum"])
         assert self.crum
 
@@ -238,6 +236,19 @@ class Wiki:
         )
         self.wip: bool = bool(wip) or not self.entry
         del wip
+
+    def addendum(self) -> bool:
+        """Determine whether this entry is an addendum.
+
+        Our entries come from two sources: The body of the book (page numbers
+        ranging from 1 to 844), and the Additions and Corrections (pages xv to
+        xxiv). If the page number is a Roman numeral, then this entry is an
+        addendum.
+
+        Returns:
+            True if this entry is an addendum, false otherwise.
+        """
+        return self.crum.roman()
 
     @property
     def canonical(self) -> bool:
@@ -295,11 +306,11 @@ class Wiki:
         raw: str = self.entry
         for s in _SUBSTITUTIONS:
             raw = s.html(raw)
-        if self.corrigenda_page:
+        if self.addenda_page:
             # If this entry has no corrigenda page, we can assume that it has no
             # corrigenda. The check for banned tokens will enforce this.
             raw = CORRIGENDUM_RE.sub(
-                f'<span class="corrigendum" data-page="{self.corrigenda_page}">'
+                f'<span class="corrigendum" data-page="{self.addenda_page}">'
                 + r"<del>\1</del>"
                 + r"<ins>\2</ins>"
                 + "</span>",
@@ -322,7 +333,7 @@ class Wiki:
         return self.headword
 
     @functools.cached_property
-    def corrigenda_page(self) -> str | None:
+    def addenda_page(self) -> str | None:
         """
         Returns:
             A string representing the page number and column in the Additions
@@ -338,6 +349,9 @@ class Wiki:
               start page, and we will determine the corrigenda page based on
               that.
         """
+        if self.addendum():
+            # Addenda do not themselves possess addenda.
+            return None
         # We could binary-search, but the list only contains 20 elements, so
         # binary search is not worth it.
         for col in constants.COLUMN_RANGES:

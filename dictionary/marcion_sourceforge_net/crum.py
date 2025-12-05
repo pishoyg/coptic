@@ -446,6 +446,9 @@ class Root(Row):
             else wiki.by_marcion_key()[self.key]
         )
 
+    def addendum(self) -> bool:
+        return self.crum.roman()
+
     @functools.cached_property
     def wiki_html(self) -> str:
         wikis: list[wiki.Wiki] = [w for w in self.wikis if not w.wip]
@@ -845,6 +848,11 @@ class Root(Row):
     def _back(self) -> str:
         return "".join(self._back_aux())
 
+    # TODO: (#575) Nothing will have Crum pages in the future. Get rid of this
+    # function.
+    def _has_crum_pages(self) -> bool:
+        return bool(self.crum) and not self.addendum()
+
     def _back_aux(self) -> abc.Generator[str]:
         # Meaning
         yield '<div id="root-type-meaning" class="root-type-meaning">'
@@ -864,12 +872,12 @@ class Root(Row):
             yield "</div>"
         yield "</div>"
 
-        if self.crum or self.dawoud_pages:
+        if self._has_crum_pages() or self.dawoud_pages:
             # Dictionary pages.
             yield '<div id="dictionary" class="dictionary">'
             yield '<span class="page-list">'
 
-            if self.crum:
+            if self._has_crum_pages():
                 yield "<b>"
                 yield '<a href="#crum" class="crum hover-link">Crum</a>: '
                 yield "</b>"
@@ -993,7 +1001,7 @@ class Root(Row):
             yield "</div>"
 
         # Crum's pages.
-        if self.crum:
+        if self._has_crum_pages():
             yield '<div id="crum" class="crum dictionary">'
             yield '<span class="page-list">'
             yield '<b><a href="#crum" class="crum hover-link">Crum</a>: </b>'

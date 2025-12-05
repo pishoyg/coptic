@@ -27,7 +27,8 @@ MAX_KEY: int = 3416
 
 # Total number of entries in Crum.
 # TODO: (#427) Account for the changes in Additions and Derivations.
-NUM_ROOTS: int = 3398
+# TODO: (#634) Account for the changes due to entries that will be merged.
+NUM_ROOTS: int = 3399
 
 # NOTE: Our derivations table layout can accommodate a maximum depth of 4. If
 # this were to change, the table layout needs to be redesigned. See `tree.py`.
@@ -46,7 +47,7 @@ PARSED_GREEK_WITHIN_ENGLISH_RE: re.Pattern[str] = re.compile(
     r"(\[[ ,()&c?;Α-Ωα-ω]+\])",
 )
 
-CRUM_RE: re.Pattern[str] = re.compile(r"^(\d{1,3})(a|b)$")
+CRUM_RE: re.Pattern[str] = re.compile(r"^(\d{1,3}|[xiv]+)(a|b)$")
 _OUTSIDE_BRACKETS: str = r"(?![^()]*\)|[^{}]*\}|[^\[\]]*\])"
 COMMA_OUTSIDE_BRACKETS_RE: re.Pattern[str] = re.compile(
     "," + _OUTSIDE_BRACKETS,
