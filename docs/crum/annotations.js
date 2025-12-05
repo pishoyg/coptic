@@ -107,6 +107,7 @@ export const DATA = [
   { fullForm: 'second future', variants: ['2 fut', '2d fut'] },
   // TODO: (#194) Is there a third perfect or third present?
   { fullForm: 'third future', variants: ['3 fut'] },
+  { fullForm: 'excluding', variants: ['exc'] },
   { fullForm: 'et cetera', variants: ['&c'] },
   { fullForm: 'absolute', variants: ['absol'] },
   { fullForm: 'Anno Domini', variants: ['AD'], noCaseVariant: true },
@@ -155,6 +156,7 @@ export const DATA = [
   { fullForm: 'quod vide', variants: ['q v'] },
   { fullForm: 'radical', variants: ['rad'] }, // NOTE: Encountered only once, as of the time of writing!
   { fullForm: 'recto folio', variants: ['ro'], noCaseVariant: true },
+  { fullForm: 'reference', variants: ['ref'] },
   { fullForm: 'sub voce', variants: ['s v'] },
   { fullForm: 'sic erat scriptum', variants: ['sic'] },
   { fullForm: 'sic lege', variants: ['sic l'] },
@@ -162,7 +164,7 @@ export const DATA = [
   { fullForm: 'subject', variants: ['subj'] },
   { fullForm: 'supra', variants: ['sup'] },
   { fullForm: 'Syriac', variants: ['syr'] }, // NOTE: Encountered only once, as of the time of writing!
-  { fullForm: 'translation', variants: ['transl'] }, // NOTE: Encountered only once, as of the time of writing!
+  { fullForm: 'translation, translated', variants: ['transl'] },
   { fullForm: 'variants', variants: ['varr'] },
   { fullForm: 'ultimo', variants: ['ult'] },
   { fullForm: 'ut supra', variants: ['ut sup'] },
