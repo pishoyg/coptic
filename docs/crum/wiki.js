@@ -64,17 +64,24 @@ const ABBREVIATION_EXCLUDE = css.classQuery(
   cls.GREEK,
   cls.COPTIC
 );
-const CHAPTER_VERSE = '(?:\\s(\\d+|A|C|D|F)(?:\\s(\\d+))?)?';
 /**
  * BIBLE_RE defines the regex used to catch Bible references.
  * A Bible book abbreviation starts with a capital letter followed by one
  * or more small letters. Optionally, the abbreviation may contain a book
  * number, with 4 being the maximum. Epistle of Jeremiah is an exception, so we
  * give it special handling.
+ *
  * Some books, such as the Book of Esther, have special chapters called A, C, D,
  * and F. This is why we allow the chapter number to be one of those characters.
  * In some cases, only one number follows the book name, so we allow one of the
  * two numbers to be omitted.
+ *
+ * In a singleton known occurrence (in ⲁⲙⲟⲩ – 442), the book abbreviation was
+ * followed by a period, so we account for that. Though we only pick up the
+ * period if a chapter number is present.
+ *
+ * In another singleton occurrence (in ⲁⲥⲕ – 503), the chapter and verse numbers
+ * are parenthesized, so we account for that.
  *
  * NOTE: It's important to perform the Bible search over two iterations, one
  * for abbreviations without a preceding digits, and one for abbreviations with
@@ -86,14 +93,18 @@ const CHAPTER_VERSE = '(?:\\s(\\d+|A|C|D|F)(?:\\s(\\d+))?)?';
  * iterations will result in this reference being captured in the second
  * iteration.
  */
+const NUMS = '(\\d+|A|C|D|F)(?: (\\d+))?';
+// Match "NUMS" OR "(NUMS)"
+// NOTE: This creates two sets of capture groups.
+const CHAPTER_VERSE = `(?:\\.? (?:${NUMS}|\\(${NUMS}\\)))?`;
 export const BIBLE_RES = [
   new RegExp(str.bounded(`(EpJer|[A-Z][a-z]+)${CHAPTER_VERSE}`), 'gu'),
-  new RegExp(str.bounded(`([1-4]\\s[A-Z][a-z]+)${CHAPTER_VERSE}`), 'gu'),
+  new RegExp(str.bounded(`([1-4] [A-Z][a-z]+)${CHAPTER_VERSE}`), 'gu'),
 ];
 export const ANNOTATION_RES = [
   // Two-word annotation, and special cases:
   new RegExp(
-    str.bounded(['&c', '[a-zA-Z0-9]+\\s[a-zA-Z]+'].join('|'), true),
+    str.bounded(['&c', '[a-zA-Z0-9]+ [a-zA-Z]+'].join('|'), true),
     'gu'
   ),
   // Single-word annotation and special cases:
@@ -160,11 +171,11 @@ export const PAGE_RE = new RegExp(str.bounded('p ([0-9]+)'));
 //     assume that, if it occurs after a reference abbreviation, then it's
 //     likely a suffix.
 export const SUFFIX = new RegExp(
-  `^(?:\\s(?:'?[0-9]+\\*?|[a-zA-Z§]))+${str.WORD_END.source}`,
+  `^(?: (?:'?[0-9]+\\*?|[a-zA-Z§]))+${str.WORD_END.source}`,
   'u'
 );
 export const COMMA_SUFFIX = new RegExp(
-  `^(?:,(?:\\s(?:'?[0-9]+\\*?|[a-zA-Z§]))+)+${str.WORD_END.source}`,
+  `^(?:,(?: (?:'?[0-9]+\\*?|[a-zA-Z§]))+)+${str.WORD_END.source}`,
   'u'
 );
 const LETTER = /[a-zA-Z\p{M}&]/u;
@@ -203,14 +214,14 @@ export const REFERENCE_RES = [
     str.bounded(
       [
         ...SPECIAL_CASES,
-        `[A-Z]${LETTER.source}*\\s${LETTER.source}+\\s${LETTER.source}+`,
+        `[A-Z]${LETTER.source}* ${LETTER.source}+ ${LETTER.source}+`,
       ].join('|'),
       true
     ),
     'gu'
   ),
   // Two-word reference abbreviations:
-  new RegExp(str.bounded(`[A-Z]${LETTER.source}*\\s${LETTER.source}+`), 'gu'),
+  new RegExp(str.bounded(`[A-Z]${LETTER.source}* ${LETTER.source}+`), 'gu'),
   // One-word reference abbreviations:
   new RegExp(str.bounded(`[A-Z]${LETTER.source}*`), 'gu'),
 ];
@@ -338,12 +349,14 @@ const DAN_OVERRIDE = {
   Su: { chapter: 'a', name: 'Susanna' },
   Bel: { chapter: 'c', name: 'Bel' },
 };
+/* eslint-disable complexity */
 /**
  *
  * @param match
+ * @param remainder
  * @returns
  */
-function parseBibleCitation(match) {
+function parseBibleCitation(match, remainder) {
   let [bookAbbreviation, chapter, verse] = [match[1], match[2], match[3]];
   const danOverride = DAN_OVERRIDE[bookAbbreviation];
   if (danOverride) {
@@ -360,6 +373,19 @@ function parseBibleCitation(match) {
     // No book found! This match is not a Biblical reference.
     return null;
   }
+  // "Is" and "He" are both English words that often occur in the text. We
+  // account for the possibility that this match is a false positive.
+  // NOTE: This heuristic is based on known examples (#524), but other cases
+  // might turn up in the text that violate these rules.
+  if (
+    !chapter &&
+    !verse &&
+    ['Is', 'He'].includes(bookAbbreviation) &&
+    remainder.startsWith(' ') &&
+    remainder[1]?.match(/[a-z?]/i)
+  ) {
+    return null;
+  }
   if (chapter && !verse && book.numChapters === 1) {
     // This is a one-chapter book. The chapter number is always 1. The number
     // immediately followed the book, which was interpreted as the chapter
@@ -372,6 +398,7 @@ function parseBibleCitation(match) {
     name: danOverride?.name ?? book.name,
   };
 }
+/* eslint-enable complexity */
 /**
  * NOTE: For the Bible abbreviation-to-id mapping, we opted for generating a
  * code file that defines the mapping. We used to populate the mapping in a
@@ -399,8 +426,8 @@ export function handleBible(root) {
     html.replaceText(
       root,
       regex,
-      (match) => {
-        const result = parseBibleCitation(match);
+      (match, remainder) => {
+        const result = parseBibleCitation(match, remainder);
         if (!result) {
           return {};
         }
