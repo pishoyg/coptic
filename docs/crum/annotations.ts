@@ -154,6 +154,7 @@ export const DATA: Abbreviation[] = [
   // TODO: (#194) Is there a third perfect or third present?
   { fullForm: 'third future', variants: ['3 fut'] },
 
+  { fullForm: 'excluding', variants: ['exc'] },
   { fullForm: 'et cetera', variants: ['&c'] },
   { fullForm: 'absolute', variants: ['absol'] },
   { fullForm: 'Anno Domini', variants: ['AD'], noCaseVariant: true },
@@ -202,6 +203,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'quod vide', variants: ['q v'] },
   { fullForm: 'radical', variants: ['rad'] }, // NOTE: Encountered only once, as of the time of writing!
   { fullForm: 'recto folio', variants: ['ro'], noCaseVariant: true },
+  { fullForm: 'reference', variants: ['ref'] },
   { fullForm: 'sub voce', variants: ['s v'] },
   { fullForm: 'sic erat scriptum', variants: ['sic'] },
   { fullForm: 'sic lege', variants: ['sic l'] },
