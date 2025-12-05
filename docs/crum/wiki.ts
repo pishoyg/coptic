@@ -68,7 +68,7 @@ const ABBREVIATION_EXCLUDE: string = css.classQuery(
   cls.COPTIC
 );
 
-const CHAPTER_VERSE = '(?:\\s(\\d+|A|C|D|F)(?:\\s(\\d+))?)?';
+const CHAPTER_VERSE = '(?: (\\d+|A|C|D|F)(?: (\\d+))?)?';
 /**
  * BIBLE_RE defines the regex used to catch Bible references.
  * A Bible book abbreviation starts with a capital letter followed by one
@@ -92,13 +92,13 @@ const CHAPTER_VERSE = '(?:\\s(\\d+|A|C|D|F)(?:\\s(\\d+))?)?';
  */
 export const BIBLE_RES: RegExp[] = [
   new RegExp(str.bounded(`(EpJer|[A-Z][a-z]+)${CHAPTER_VERSE}`), 'gu'),
-  new RegExp(str.bounded(`([1-4]\\s[A-Z][a-z]+)${CHAPTER_VERSE}`), 'gu'),
+  new RegExp(str.bounded(`([1-4] [A-Z][a-z]+)${CHAPTER_VERSE}`), 'gu'),
 ];
 
 export const ANNOTATION_RES: RegExp[] = [
   // Two-word annotation, and special cases:
   new RegExp(
-    str.bounded(['&c', '[a-zA-Z0-9]+\\s[a-zA-Z]+'].join('|'), true),
+    str.bounded(['&c', '[a-zA-Z0-9]+ [a-zA-Z]+'].join('|'), true),
     'gu'
   ),
   // Single-word annotation and special cases:
@@ -167,11 +167,11 @@ export const PAGE_RE = new RegExp(str.bounded('p ([0-9]+)'));
 //     assume that, if it occurs after a reference abbreviation, then it's
 //     likely a suffix.
 export const SUFFIX = new RegExp(
-  `^(?:\\s(?:'?[0-9]+\\*?|[a-zA-Z§]))+${str.WORD_END.source}`,
+  `^(?: (?:'?[0-9]+\\*?|[a-zA-Z§]))+${str.WORD_END.source}`,
   'u'
 );
 export const COMMA_SUFFIX = new RegExp(
-  `^(?:,(?:\\s(?:'?[0-9]+\\*?|[a-zA-Z§]))+)+${str.WORD_END.source}`,
+  `^(?:,(?: (?:'?[0-9]+\\*?|[a-zA-Z§]))+)+${str.WORD_END.source}`,
   'u'
 );
 const LETTER = /[a-zA-Z\p{M}&]/u;
@@ -212,14 +212,14 @@ export const REFERENCE_RES: RegExp[] = [
     str.bounded(
       [
         ...SPECIAL_CASES,
-        `[A-Z]${LETTER.source}*\\s${LETTER.source}+\\s${LETTER.source}+`,
+        `[A-Z]${LETTER.source}* ${LETTER.source}+ ${LETTER.source}+`,
       ].join('|'),
       true
     ),
     'gu'
   ),
   // Two-word reference abbreviations:
-  new RegExp(str.bounded(`[A-Z]${LETTER.source}*\\s${LETTER.source}+`), 'gu'),
+  new RegExp(str.bounded(`[A-Z]${LETTER.source}* ${LETTER.source}+`), 'gu'),
   // One-word reference abbreviations:
   new RegExp(str.bounded(`[A-Z]${LETTER.source}*`), 'gu'),
 ];
