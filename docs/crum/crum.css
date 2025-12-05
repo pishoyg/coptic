@@ -115,7 +115,16 @@ figcaption {
 .wiki .aramaic,
 .wiki .hebrew,
 .wiki .amharic {
-  color: firebrick; /* Semitic languages */
+  color: firebrick;
+
+  /* Isolates the span from the surrounding context, ensuring that pieces of
+   * HTML consisting of Arabic tokens render from left to right, which is the
+   * general direction of the text in the book.
+   *
+   * NOTE: Amharic is naturally LTR, so it doesn't need this rule, but it
+   * doesn't hurt to have it.
+   * */
+  unicode-bidi: isolate;
 }
 
 .wiki .headword {
