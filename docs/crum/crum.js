@@ -17,6 +17,7 @@ import * as wiki from './wiki.js';
 import * as drop from '../dropdown.js';
 import * as roots from './roots.js';
 import * as derivations from './derivations.js';
+import * as str from '../str.js';
 const COPTIC_RE = /[\p{Script=Coptic}][\p{Script=Coptic}\p{Mark}]*/gu;
 const GREEK_RE = /[\p{Script=Greek}][\p{Script=Greek}\p{Mark}]*/gu;
 const ENGLISH_RE = /[\p{Script=Latin}][\p{Script=Latin}\p{Mark}]*/gu;
@@ -88,26 +89,42 @@ export function handleRootType(root) {
 }
 /**
  *
+ * @param page
+ * @returns
+ */
+function prettyPage(page) {
+  const [num, col] = scan.chopColumn(page);
+  const i = document.createElement('i');
+  i.textContent = col;
+  return [`${num} `, i];
+}
+/**
+ *
  * @param root
  */
 export function handleCrumPage(root) {
   root.querySelectorAll(`.${cls.CRUM_PAGE}`).forEach((el) => {
-    el.classList.add(ccls.LINK);
+    const page = el.textContent.trim();
+    el.replaceChildren(...prettyPage(page));
+    const [num, _] = scan.chopColumn(page);
+    if (!str.isDigits(num)) {
+      // This page is non-numerical. It likely belongs to the Addenda, which we
+      // don't support yet. We just add a tooltip, but no hyperlinks.
+      // TODO: (#427) Insert a hyperlink pointing to the addenda.
+      const i = document.createElement('i');
+      i.textContent = 'Additions and Corrections';
+      drop.addDroppable(el, 'hover', 'below', 'From ', i);
+      return;
+    }
     if (el.closest(`.${cls.WIKI}`)) {
       // Inside Wiki, crum-page elements point externally.
-      el.classList.add(ccls.LINK);
-      el.addEventListener('click', () => {
-        browser.open(paths.crumScan(el.textContent));
-      });
+      html.linkify(el, paths.crumScan(page));
       return;
     }
     // Outside Wiki, crum-page elements point to an anchor within the page.
     // TODO: (#575) The scans should be removed from the notes, and all Crum
     // pages should point externally.
-    html.makeSpanLinkToAnchor(
-      el,
-      `#crum${scan.chopColumn(el.textContent.trim())}`
-    );
+    html.linkify(el, `#crum${num}`);
   });
 }
 /**
@@ -157,11 +174,9 @@ export function handleExplanatory(root) {
  */
 export function handleDawoudPage(root) {
   root.querySelectorAll(`.${cls.DAWOUD_PAGE}`).forEach((el) => {
-    el.classList.add(ccls.LINK);
-    html.makeSpanLinkToAnchor(
-      el,
-      `#dawoud${scan.chopColumn(el.textContent.trim())}`
-    );
+    const page = el.textContent.trim();
+    el.replaceChildren(...prettyPage(page));
+    html.linkify(el, `#dawoud${scan.chopColumn(page)[0]}`);
   });
 }
 /**
@@ -221,7 +236,7 @@ export function handleDrvKey(root) {
 export function handleExplanatoryKey(root) {
   root.querySelectorAll(`.${cls.EXPLANATORY_KEY}`).forEach((el) => {
     el.classList.add(ccls.HOVER_LINK);
-    html.makeSpanLinkToAnchor(el, `#explanatory${el.textContent.trim()}`);
+    html.linkify(el, `#explanatory${el.textContent.trim()}`);
   });
 }
 /**
@@ -231,7 +246,7 @@ export function handleExplanatoryKey(root) {
 export function handleSisterKey(root) {
   root.querySelectorAll(`.${cls.SISTER_KEY}`).forEach((el) => {
     el.classList.add(ccls.HOVER_LINK);
-    html.makeSpanLinkToAnchor(el, `#sister${el.textContent.trim()}`);
+    html.linkify(el, `#sister${el.textContent.trim()}`);
   });
 }
 /**

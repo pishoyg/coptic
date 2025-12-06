@@ -1,6 +1,5 @@
 /** Package html defines DOM manipulation helpers. */
 import * as browser from './browser.js';
-import * as log from './logger.js';
 import * as css from './css.js';
 /**
  *
@@ -21,14 +20,32 @@ export function moveElement(el, tag, attrs) {
 }
 /**
  *
- * @param el
- * @param target
+ * @param href
+ * @param external
+ * @returns
  */
-export function makeSpanLinkToAnchor(el, target) {
-  if (el.tagName !== 'SPAN') {
-    log.error(`Converting ${el.tagName} tag to <a> tag!`);
+export function anchor(href, external) {
+  const a = document.createElement('a');
+  a.href = href;
+  if (external ?? !href.startsWith('#')) {
+    a.target = '_blank';
   }
-  moveElement(el, 'a', { href: target });
+  return a;
+}
+/**
+ *
+ * @param el
+ * @param href
+ * @param external
+ */
+export function linkify(el, href, external) {
+  const a = anchor(href, external);
+  // Use childNodes to capture text, comments, and elements.
+  // We use Array.from() to create a static list, preventing issues
+  // arising from modifying a live NodeList while iterating.
+  const nodes = Array.from(el.childNodes);
+  a.append(...nodes);
+  el.append(a);
 }
 /**
  * For each text node in the given subtree, for each substring matching the
