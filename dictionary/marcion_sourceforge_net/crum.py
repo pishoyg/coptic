@@ -39,13 +39,7 @@ _CATEGORIES_PATH: pathlib.Path = paths.MARCION / "categories.yaml"
 # _FROM_MARCION is a set of entries that have been added to Crum by Marcion.
 # They don't exist in the original text, and therefore are not expected to be
 # found in Wiki!
-_FROM_MARCION: set[str] = {
-    "3380",
-    "3381",
-    "3382",
-    "3385",
-    "1259",  # TODO: (#634) merge into 1258.
-}
+_FROM_MARCION: set[str] = {"3381", "3382", "3385"}
 
 # TODO: (#399) Crum HTML logic should be deduplicated. The duplication causes
 # such issues as #398.
@@ -1164,11 +1158,11 @@ class Crum:
             list(by_key_word.values()),
         )
         ensure.ensure(
-            len(roots) <= constants.NUM_ROOTS,
+            len(roots) <= constants.MAX_NUM_ROOTS,
             "Got",
             len(roots),
             "roots! Expecting <=",
-            constants.NUM_ROOTS,
+            constants.MAX_NUM_ROOTS,
         )
         return roots
 

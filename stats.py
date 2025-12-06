@@ -370,7 +370,7 @@ _CRUM_STATS: list[Stat] = [
             },
         ),
         700,
-        const.NUM_ROOTS,
+        const.MAX_NUM_ROOTS,
         Dash.CRUM_APPENDICES,
     ),
     Stat(
@@ -380,7 +380,7 @@ _CRUM_STATS: list[Stat] = [
             os.listdir("dictionary/marcion_sourceforge_net/data/img/"),
         ),
         1200,
-        const.NUM_ROOTS * 10,
+        const.MAX_NUM_ROOTS * 10,
     ),
     Stat(
         "crum_wiki",
@@ -390,7 +390,7 @@ _CRUM_STATS: list[Stat] = [
             for root in crum.Crum.roots.values()
         ),
         1700,
-        const.NUM_ROOTS,
+        const.MAX_NUM_ROOTS,
         Dash.CRUM_APPENDICES,
     ),
     Crum(
@@ -399,7 +399,7 @@ _CRUM_STATS: list[Stat] = [
         "Words with Dawoud pages",
         None,
         2600,
-        const.NUM_ROOTS,
+        const.MAX_NUM_ROOTS,
         Dash.CRUM_APPENDICES,
     ).stat,
     Crum(
@@ -416,7 +416,7 @@ _CRUM_STATS: list[Stat] = [
         "Editor's notes",
         None,
         4,
-        const.NUM_ROOTS,
+        const.MAX_NUM_ROOTS,
         Dash.CRUM_FIXES,
     ).stat,
     Crum(
@@ -425,7 +425,7 @@ _CRUM_STATS: list[Stat] = [
         "Roots with senses",
         None,
         70,
-        const.NUM_ROOTS,
+        const.MAX_NUM_ROOTS,
         Dash.CRUM_APPENDICES,
     ).stat,
     Crum(
@@ -434,7 +434,7 @@ _CRUM_STATS: list[Stat] = [
         "Total number of root senses",
         r"[0-9]+",
         160,
-        const.NUM_ROOTS * 10,
+        const.MAX_NUM_ROOTS * 10,
     ).stat,
     Crum(
         "last_page",
@@ -442,7 +442,7 @@ _CRUM_STATS: list[Stat] = [
         "Last pages overridden",
         None,
         4,
-        const.NUM_ROOTS,
+        const.MAX_NUM_ROOTS,
         Dash.CRUM_FIXES,
     ).stat,
     Crum(
@@ -451,7 +451,7 @@ _CRUM_STATS: list[Stat] = [
         "Words with sisters",
         None,
         37,
-        const.NUM_ROOTS,
+        const.MAX_NUM_ROOTS,
         Dash.CRUM_APPENDICES,
     ).stat,
     Crum(
@@ -460,7 +460,7 @@ _CRUM_STATS: list[Stat] = [
         "Total number of sisters",
         r"[0-9]+",
         58,
-        const.NUM_ROOTS * 10,
+        const.MAX_NUM_ROOTS * 10,
     ).stat,
     Crum(
         "antonyms",
@@ -468,7 +468,7 @@ _CRUM_STATS: list[Stat] = [
         "Words with antonyms",
         None,
         2,
-        const.NUM_ROOTS,
+        const.MAX_NUM_ROOTS,
         Dash.CRUM_APPENDICES,
     ).stat,
     Crum(
@@ -477,7 +477,7 @@ _CRUM_STATS: list[Stat] = [
         "Total number of antonyms",
         r"[0-9]+",
         2,
-        const.NUM_ROOTS * 10,
+        const.MAX_NUM_ROOTS * 10,
     ).stat,
     Crum(
         "homonyms",
@@ -485,7 +485,7 @@ _CRUM_STATS: list[Stat] = [
         "Words with homonyms",
         None,
         7,
-        const.NUM_ROOTS,
+        const.MAX_NUM_ROOTS,
         Dash.CRUM_APPENDICES,
     ).stat,
     Crum(
@@ -494,7 +494,7 @@ _CRUM_STATS: list[Stat] = [
         "Total number of homonyms",
         r"[0-9]+",
         7,
-        const.NUM_ROOTS * 10,
+        const.MAX_NUM_ROOTS * 10,
     ).stat,
     Crum(
         "greek_sisters",
@@ -502,7 +502,7 @@ _CRUM_STATS: list[Stat] = [
         "Words with Greek sisters",
         None,
         1,
-        const.NUM_ROOTS,
+        const.MAX_NUM_ROOTS,
         Dash.CRUM_APPENDICES,
     ).stat,
     Crum(
@@ -511,7 +511,7 @@ _CRUM_STATS: list[Stat] = [
         "Total number of Greek sisters",
         r"[0-9]+",
         1,
-        const.NUM_ROOTS,
+        const.MAX_NUM_ROOTS,
     ).stat,
     Crum(
         "categories",
@@ -519,7 +519,7 @@ _CRUM_STATS: list[Stat] = [
         "Words with categories",
         None,
         30,
-        const.NUM_ROOTS,
+        const.MAX_NUM_ROOTS,
         Dash.CRUM_APPENDICES,
     ).stat,
     Crum(
@@ -537,7 +537,7 @@ _CRUM_STATS: list[Stat] = [
             bool(root.derivations) for root in crum.Crum.roots.values()
         ),
         1200,
-        const.NUM_ROOTS,
+        const.MAX_NUM_ROOTS,
         Dash.CRUM_APPENDICES,
     ),
     Stat(
