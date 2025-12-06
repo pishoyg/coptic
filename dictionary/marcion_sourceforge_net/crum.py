@@ -895,7 +895,7 @@ class Root(Row):
                 yield "</b>"
                 yield DICTIONARY_PAGE_RE.sub(
                     r'<span class="dawoud-page">\1</span>',
-                    self.dawoud_pages.replace(",", ", "),
+                    self._prettify_pages(self.dawoud_pages),
                 )
 
             yield "</span>"
@@ -1007,7 +1007,7 @@ class Root(Row):
             yield '<b><a href="#crum" class="crum hover-link">Crum</a>: </b>'
             yield DICTIONARY_PAGE_RE.sub(
                 r'<span class="crum-page">\1</span>',
-                self.crum_page_range.replace(",", ", "),
+                self._prettify_pages(self.crum_page_range),
             )
             yield "</span>"
             for num in _page_numbers(self.crum_page_range):
@@ -1033,7 +1033,7 @@ class Root(Row):
             yield "</b>"
             yield DICTIONARY_PAGE_RE.sub(
                 r'<span class="dawoud-page">\1</span>',
-                self.dawoud_pages.replace(",", ", "),
+                self._prettify_pages(self.dawoud_pages),
             )
             yield "</span>"
             page_numbers = _page_numbers(self.dawoud_pages)
@@ -1046,6 +1046,9 @@ class Root(Row):
                     line_br=True,
                 )
             yield "</div>"
+
+    def _prettify_pages(self, pages: str) -> str:
+        return pages.replace(",", ", ").replace("-", " - ")
 
 
 class Crum:
