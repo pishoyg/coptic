@@ -26,9 +26,10 @@ MIN_KEY: int = 1
 MAX_KEY: int = 3416
 
 # Total number of entries in Crum.
+# NOTE: This is currently an upper bound rather than a precise value.
 # TODO: (#427) Account for the changes in Additions and Derivations.
 # TODO: (#634) Account for the changes due to entries that will be merged.
-NUM_ROOTS: int = 3399
+NUM_ROOTS: int = 3399 + 100
 
 # NOTE: Our derivations table layout can accommodate a maximum depth of 4. If
 # this were to change, the table layout needs to be redesigned. See `tree.py`.

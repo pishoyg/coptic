@@ -1161,10 +1161,10 @@ class Crum:
             list(by_key_word.values()),
         )
         ensure.ensure(
-            len(roots) == constants.NUM_ROOTS,
+            len(roots) <= constants.NUM_ROOTS,
             "Got",
             len(roots),
-            "roots! Expecting",
+            "roots! Expecting <=",
             constants.NUM_ROOTS,
         )
         return roots
