@@ -402,14 +402,20 @@ function parseBibleCitation(
     return null;
   }
 
-  // "Is" and "He" are both English words that often occur in the text. We
-  // account for the possibility that this match is a false positive.
+  // "Is" and "He" are both English words that often occur in the text. "Col" is
+  // used in some non-biblical abbreviations (it stands for "College").
+  // Currently, we process biblical citations before non-biblical ones, so at
+  // the time this code executes, an occurrence of 'Col' is still unclaimed by
+  // another reference, which means that our code would misinterpret it as a
+  // biblical citation!
+  //
+  // We account for the possibility that this match is a false positive.
   // NOTE: This heuristic is based on known examples (#524), but other cases
   // might turn up in the text that violate these rules.
   if (
     !chapter &&
     !verse &&
-    ['Is', 'He'].includes(bookAbbreviation) &&
+    ['Is', 'He', 'Col'].includes(bookAbbreviation) &&
     remainder.startsWith(' ') &&
     remainder[1]?.match(/[a-z?]/i)
   ) {
