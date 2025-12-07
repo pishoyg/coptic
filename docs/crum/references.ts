@@ -657,6 +657,7 @@ const DATA_1: Resource[] = [
       ],
     },
     variants: ['DM'],
+    postfixes: ['Index', 'Indices'],
   },
   {
     source: {
@@ -2353,7 +2354,7 @@ const DATA_2: Resource[] = [
     variants: ['Amélineau', 'Amélineau Géog'],
   },
   {
-    variants: ['Antony Hist Laus'],
+    variants: ['Antony Hist Laus', 'Hist Laus'],
   },
   {
     variants: ['Baynes'],
