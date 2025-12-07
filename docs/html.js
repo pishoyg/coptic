@@ -1,5 +1,4 @@
 /** Package html defines DOM manipulation helpers. */
-import * as browser from './browser.js';
 import * as css from './css.js';
 /**
  *
@@ -22,14 +21,18 @@ export function moveElement(el, tag, attrs) {
  *
  * @param href
  * @param external
+ * @param {...any} children
  * @returns
+ *
+ * TODO: (#0): Use this method more widely.
  */
-export function anchor(href, external) {
+export function anchor(href, external, ...children) {
   const a = document.createElement('a');
   a.href = href;
   if (external ?? !href.startsWith('#')) {
     a.target = '_blank';
   }
+  a.append(...children);
   return a;
 }
 /**
@@ -37,14 +40,13 @@ export function anchor(href, external) {
  * @param el
  * @param href
  * @param external
+ * @param {...any} classes
+ *
+ * TODO: (#0): Use this method more widely.
  */
-export function linkify(el, href, external) {
-  const a = anchor(href, external);
-  // Use childNodes to capture text, comments, and elements.
-  // We use Array.from() to create a static list, preventing issues
-  // arising from modifying a live NodeList while iterating.
-  const nodes = Array.from(el.childNodes);
-  a.append(...nodes);
+export function linkify(el, href, external, ...classes) {
+  const a = anchor(href, external, ...el.childNodes);
+  a.classList.add(...classes);
   el.append(a);
 }
 /**
@@ -173,17 +175,13 @@ export function linkifyText(root, regex, url, classes, excludedClasses = []) {
     (match) => {
       const targetUrl = url(match);
       if (!targetUrl) {
-        // This text doesn't have a URL. Return the original text.
+        // This text doesn't have a URL. No replacements needed!
         return {};
       }
       // Create a link.
-      const link = document.createElement('span');
-      link.classList.add(...classes);
-      link.textContent = match[0];
-      link.addEventListener('click', () => {
-        browser.open(targetUrl);
-      });
-      return { replacement: link };
+      const a = anchor(targetUrl, true, match[0]);
+      a.classList.add(...classes);
+      return { replacement: a };
     },
     css.classQuery(...excludedClasses)
   );

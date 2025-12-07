@@ -16,6 +16,7 @@ import * as dev from '../dev.js';
 import * as kellia from './kellia.js';
 import * as andreas from './andreas.js';
 import * as cls from './cls.js';
+import * as html from '../html.js';
 // NOTE: The terms "roman" and "italic" below are used to distinguish pieces of
 // text surrounded by <span> tags with the "roman" class from those that are
 // not. Roman elements correspond to text in Crum's book written in a roman
@@ -347,7 +348,7 @@ async function main() {
   help.makeHelpPanel(highlighter, devHighlighter);
   // Add event listener for reports.
   // TODO: (#203) This belongs in the (future) header module.
-  document.getElementById(id.REPORTS).addEventListener('click', head.reports);
+  html.linkify(document.getElementById(id.REPORTS), head.reports(), true);
   // TODO: (#203) Implement in the `header` package.
   crum.handleDeveloper(document.body, devHighlighter);
 }

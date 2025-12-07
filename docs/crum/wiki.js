@@ -5,7 +5,6 @@ import * as html from '../html.js';
 import * as paths from '../paths.js';
 import * as css from '../css.js';
 import * as cls from './cls.js';
-import * as ccls from '../cls.js';
 import * as log from '../logger.js';
 import * as bible from './bible.js';
 import * as ann from './annotations.js';
@@ -373,14 +372,20 @@ function parseBibleCitation(match, remainder) {
     // No book found! This match is not a Biblical reference.
     return null;
   }
-  // "Is" and "He" are both English words that often occur in the text. We
-  // account for the possibility that this match is a false positive.
+  // "Is" and "He" are both English words that often occur in the text. "Col" is
+  // used in some non-biblical abbreviations (it stands for "College").
+  // Currently, we process biblical citations before non-biblical ones, so at
+  // the time this code executes, an occurrence of 'Col' is still unclaimed by
+  // another reference, which means that our code would misinterpret it as a
+  // biblical citation!
+  //
+  // We account for the possibility that this match is a false positive.
   // NOTE: This heuristic is based on known examples (#524), but other cases
   // might turn up in the text that violate these rules.
   if (
     !chapter &&
     !verse &&
-    ['Is', 'He'].includes(bookAbbreviation) &&
+    ['Is', 'He', 'Col'].includes(bookAbbreviation) &&
     remainder.startsWith(' ') &&
     remainder[1]?.match(/[a-z?]/i)
   ) {
@@ -434,7 +439,7 @@ export function handleBible(root) {
         const link = document.createElement('a');
         link.href = result.url;
         link.target = '_blank';
-        link.classList.add(ccls.HOVER_LINK, cls.BIBLE);
+        link.classList.add(cls.BIBLE);
         link.textContent = match[0];
         drop.addDroppable(link, 'hover', 'below', result.name);
         return { replacement: link };

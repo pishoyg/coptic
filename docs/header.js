@@ -1,5 +1,4 @@
 /** Package header defines the header logic. */
-import * as browser from './browser.js';
 import * as paths from './paths.js';
 export var CLS;
 (function (CLS) {
@@ -11,10 +10,10 @@ export var CLS;
   CLS['DEVELOPER'] = 'developer';
 })(CLS || (CLS = {}));
 /**
- *
+ * @returns
  */
 export function reports() {
   const url = new URL(paths.REPORTS);
   url.searchParams.set(paths.REPORTS_PAGE_PARAM, window.location.href);
-  browser.open(url.toString(), true);
+  return url.toString();
 }

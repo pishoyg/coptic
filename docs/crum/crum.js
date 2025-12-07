@@ -133,11 +133,10 @@ export function handleCrumPage(root) {
  */
 export function handleDawoudPageImg(root) {
   root.querySelectorAll(`.${cls.DAWOUD_PAGE_IMG}`).forEach((el) => {
-    const img = el.children[0];
-    img.classList.add(ccls.LINK);
-    img.addEventListener('click', () => {
-      browser.open(paths.dawoudScan(img.getAttribute('alt')));
-    });
+    html.linkify(
+      el,
+      paths.dawoudScan(el.querySelector('img').getAttribute('alt'))
+    );
   });
 }
 /**
@@ -146,11 +145,10 @@ export function handleDawoudPageImg(root) {
  */
 export function handleCrumPageImg(root) {
   root.querySelectorAll(`.${cls.CRUM_PAGE_IMG}`).forEach((el) => {
-    const img = el.children[0];
-    img.classList.add(ccls.LINK);
-    img.addEventListener('click', () => {
-      browser.open(paths.crumScan(img.getAttribute('alt')));
-    });
+    html.linkify(
+      el,
+      paths.crumScan(el.querySelector('img').getAttribute('alt'))
+    );
   });
 }
 /**
@@ -159,13 +157,14 @@ export function handleCrumPageImg(root) {
  */
 export function handleExplanatory(root) {
   root.querySelectorAll(`.${cls.EXPLANATORY}`).forEach((el) => {
-    const img = el.children[0];
+    const img = el.querySelector('img');
     const alt = img.getAttribute('alt');
-    if (!alt.startsWith('http')) return;
-    img.classList.add(ccls.LINK);
-    img.addEventListener('click', () => {
-      browser.open(alt);
-    });
+    if (!alt?.startsWith('http')) {
+      // TODO: (#258) Ensure all image sources are populated.
+      return;
+    }
+    const a = html.anchor(alt, true, img);
+    el.prepend(a);
   });
 }
 /**
@@ -192,22 +191,13 @@ export function handleDrvKey(root) {
     if (!rowNum) {
       log.error('Page has derivations, but unable to infer their row numbers!');
     } else {
-      key.classList.add(ccls.LINK);
-      key.addEventListener(
-        'click',
-        browser.open.bind(
-          browser,
-          paths.rowUrl(paths.CRUM_DERIVATIONS_URL, rowNum++),
-          true
-        )
-      );
+      html.linkify(key, paths.rowUrl(paths.CRUM_DERIVATIONS_URL, rowNum++));
     }
     // Create a second anchor pointing to this row in the HTML. This is useful
     // for users to share links to specific derivations.
     const frag = `#drv${key.textContent.trim()}`;
     const a = document.createElement('a');
     a.href = frag;
-    a.classList.add(ccls.HOVER_LINK);
     a.textContent = '🔗';
     // Store the key parent.
     const parent = key.parentNode;
@@ -235,8 +225,12 @@ export function handleDrvKey(root) {
  */
 export function handleExplanatoryKey(root) {
   root.querySelectorAll(`.${cls.EXPLANATORY_KEY}`).forEach((el) => {
-    el.classList.add(ccls.HOVER_LINK);
-    html.linkify(el, `#explanatory${el.textContent.trim()}`);
+    html.linkify(
+      el,
+      `#explanatory${el.textContent.trim()}`,
+      false,
+      ccls.HOVER_LINK
+    );
   });
 }
 /**
@@ -245,8 +239,7 @@ export function handleExplanatoryKey(root) {
  */
 export function handleSisterKey(root) {
   root.querySelectorAll(`.${cls.SISTER_KEY}`).forEach((el) => {
-    el.classList.add(ccls.HOVER_LINK);
-    html.linkify(el, `#sister${el.textContent.trim()}`);
+    html.linkify(el, `#sister${el.textContent.trim()}`, false, ccls.HOVER_LINK);
   });
 }
 /**
@@ -301,7 +294,7 @@ export function handleDialect(root, highlighter) {
       return;
     }
     // 2. Add Interaction: Toggle highlighting on click.
-    siglum.classList.add(ccls.HOVER_LINK);
+    siglum.classList.add(ccls.HOVER_ACTION);
     siglum.addEventListener('click', () => {
       highlighter.toggle(code);
     });
@@ -376,7 +369,6 @@ export function addCopticLookups(root) {
  */
 export function addGreekLookups(root) {
   html.linkifyText(root, GREEK_RE, (match) => paths.greekLookup(match[0]), [
-    ccls.LINK,
     cls.GREEK,
   ]);
 }
@@ -448,14 +440,6 @@ export function handleQuality(root) {
     return;
   }
   root.querySelectorAll(`.${cls.QUALITY}`).forEach((el) => {
-    el.classList.add(ccls.LINK);
-    el.addEventListener(
-      'click',
-      browser.open.bind(
-        browser,
-        paths.rowUrl(paths.CRUM_ROOTS_URL, rowNum),
-        true
-      )
-    );
+    html.linkify(el, paths.rowUrl(paths.CRUM_ROOTS_URL, rowNum));
   });
 }
