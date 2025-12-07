@@ -83,6 +83,7 @@ figcaption {
 .wiki p {
   margin-top: 0;
   margin-bottom: 0.5em;
+  text-align: justify;
 }
 
 /* TODO: (#194) The following rule should also apply to non-Wiki text in Crum.
