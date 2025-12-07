@@ -590,6 +590,7 @@ const DATA_1 = [
       ],
     },
     variants: ['DM'],
+    postfixes: ['Index', 'Indices'],
   },
   {
     source: {
@@ -2285,7 +2286,7 @@ const DATA_2 = [
     variants: ['Amélineau', 'Amélineau Géog'],
   },
   {
-    variants: ['Antony Hist Laus'],
+    variants: ['Antony Hist Laus', 'Hist Laus'],
   },
   {
     variants: ['Baynes'],
