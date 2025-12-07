@@ -89,42 +89,31 @@ export function handleRootType(root) {
 }
 /**
  *
- * @param page
- * @returns
- */
-function prettyPage(page) {
-  const [num, col] = scan.chopColumn(page);
-  const i = document.createElement('i');
-  i.textContent = col;
-  return [`${num} `, i];
-}
-/**
- *
  * @param root
  */
 export function handleCrumPage(root) {
   root.querySelectorAll(`.${cls.CRUM_PAGE}`).forEach((el) => {
     const page = el.textContent.trim();
-    el.replaceChildren(...prettyPage(page));
+    el.replaceChildren(...scan.prettyPage(page));
     const [num, _] = scan.chopColumn(page);
     if (!str.isDigits(num)) {
       // This page is non-numerical. It likely belongs to the Addenda, which we
       // don't support yet. We just add a tooltip, but no hyperlinks.
-      // TODO: (#427) Insert a hyperlink pointing to the addenda.
+      // TODO: (#413) Remove the tooltip. The page number should have a
+      // hyperlink pointing to the scan.
       const i = document.createElement('i');
       i.textContent = 'Additions and Corrections';
       drop.addDroppable(el, 'hover', 'below', 'From ', i);
       return;
     }
-    if (el.closest(`.${cls.WIKI}`)) {
+    html.linkify(
+      el,
       // Inside Wiki, crum-page elements point externally.
-      html.linkify(el, paths.crumScan(page));
-      return;
-    }
-    // Outside Wiki, crum-page elements point to an anchor within the page.
-    // TODO: (#575) The scans should be removed from the notes, and all Crum
-    // pages should point externally.
-    html.linkify(el, `#crum${num}`);
+      // Outside Wiki, crum-page elements point to an anchor within the page.
+      // TODO: (#575) The scans should be removed from the notes, and all Crum
+      // pages should point externally.
+      el.closest(`.${cls.WIKI}`) ? paths.crumScan(page) : `#crum${num}`
+    );
   });
 }
 /**
@@ -174,7 +163,7 @@ export function handleExplanatory(root) {
 export function handleDawoudPage(root) {
   root.querySelectorAll(`.${cls.DAWOUD_PAGE}`).forEach((el) => {
     const page = el.textContent.trim();
-    el.replaceChildren(...prettyPage(page));
+    el.replaceChildren(...scan.prettyPage(page));
     html.linkify(el, `#dawoud${scan.chopColumn(page)[0]}`);
   });
 }

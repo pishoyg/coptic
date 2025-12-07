@@ -26,6 +26,17 @@ export function chopColumn(page) {
   }
   return [page, ''];
 }
+/**
+ *
+ * @param page
+ * @returns
+ */
+export function prettyPage(page) {
+  const [num, col] = chopColumn(page);
+  const i = document.createElement('i');
+  i.textContent = col;
+  return [`${num} `, i];
+}
 const SWAP_TOLERANCE = 10;
 /**
  * A dictionary index.
@@ -96,7 +107,7 @@ export class Index {
     // Check if this is a Coptic word.
     if (!copt.isCoptic(query)) {
       // Neither a number nor a Coptic word! Nothing we can do!
-      // TODO: (#411) This should support other classes of words as well, not
+      // TODO: (640) This should support other classes of words as well, not
       // just Coptic words.
       // We should perhaps introduce another class method:
       //   searchable(query: string): boolean
