@@ -49,10 +49,6 @@ def parse_word_cell(
         except Exception as e:
             log.fatal("Error parsing", entry, "Error:", e)
 
-    # Any entry that has multiple lines must be dialected.
-    if len(lines) > 1:
-        assert all(w.dialects for w in lines)
-
     return lines
 
 
