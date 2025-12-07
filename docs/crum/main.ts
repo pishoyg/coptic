@@ -10,7 +10,6 @@ import * as crum from './crum.js';
 import * as id from './id.js';
 import * as head from '../header.js';
 import * as dev from '../dev.js';
-import * as ccls from '../cls.js';
 
 const SMALL_SCREEN_WIDTH = 500;
 
@@ -56,9 +55,7 @@ function main(): void {
  * TODO: (#203) This belongs in the header module.
  */
 function addReportsLink(): void {
-  const reports = document.getElementById(id.REPORTS)!;
-  reports.addEventListener('click', head.reports);
-  reports.classList.add(ccls.LINK);
+  const reports: HTMLElement = document.getElementById(id.REPORTS)!;
   if (window.innerWidth < SMALL_SCREEN_WIDTH) {
     // TODO: (#203) We never handle small-screen styling in TypeScript! We've
     // only ever done it in CSS. Let's not break this rule.
@@ -66,6 +63,7 @@ function addReportsLink(): void {
     // is too long for the cell, and wraps on Anki!
     reports.textContent = '⚑';
   }
+  html.linkify(reports, head.reports());
 }
 
 main();

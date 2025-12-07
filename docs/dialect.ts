@@ -1,5 +1,6 @@
 /** Package dialect defines dialect handling logic. */
 import * as str from './str.js';
+import * as html from './html.js';
 
 const SEPARATOR = ',';
 
@@ -66,11 +67,8 @@ export class Dialect<C extends string, N extends string, K extends string> {
       yield this.name;
       return;
     }
-    const a = document.createElement('a');
-    a.href = this.article;
-    a.target = '_blank';
-    a.textContent = this.name;
-    yield a;
+
+    yield html.anchor(this.article, true, this.name);
   }
 
   /**

@@ -154,12 +154,11 @@ export function handleCrumPage(root: HTMLElement): void {
 export function handleDawoudPageImg(root: HTMLElement): void {
   root
     .querySelectorAll<HTMLElement>(`.${cls.DAWOUD_PAGE_IMG}`)
-    .forEach((el) => {
-      const img = el.children[0] as HTMLElement;
-      img.classList.add(ccls.LINK);
-      img.addEventListener('click', (): void => {
-        browser.open(paths.dawoudScan(img.getAttribute('alt')!));
-      });
+    .forEach((el: HTMLElement): void => {
+      html.linkify(
+        el,
+        paths.dawoudScan(el.querySelector('img')!.getAttribute('alt')!)
+      );
     });
 }
 
@@ -169,11 +168,10 @@ export function handleDawoudPageImg(root: HTMLElement): void {
  */
 export function handleCrumPageImg(root: HTMLElement): void {
   root.querySelectorAll<HTMLElement>(`.${cls.CRUM_PAGE_IMG}`).forEach((el) => {
-    const img = el.children[0] as HTMLElement;
-    img.classList.add(ccls.LINK);
-    img.addEventListener('click', (): void => {
-      browser.open(paths.crumScan(img.getAttribute('alt')!));
-    });
+    html.linkify(
+      el,
+      paths.crumScan(el.querySelector('img')!.getAttribute('alt')!)
+    );
   });
 }
 
@@ -183,13 +181,14 @@ export function handleCrumPageImg(root: HTMLElement): void {
  */
 export function handleExplanatory(root: HTMLElement): void {
   root.querySelectorAll<HTMLElement>(`.${cls.EXPLANATORY}`).forEach((el) => {
-    const img = el.children[0] as HTMLElement;
-    const alt = img.getAttribute('alt')!;
-    if (!alt.startsWith('http')) return;
-    img.classList.add(ccls.LINK);
-    img.addEventListener('click', (): void => {
-      browser.open(alt);
-    });
+    const img: HTMLElement = el.querySelector('img')!;
+    const alt = img.getAttribute('alt');
+    if (!alt?.startsWith('http')) {
+      // TODO: (#258) Ensure all image sources are populated.
+      return;
+    }
+    const a = html.anchor(alt, true, img);
+    el.prepend(a);
   });
 }
 
@@ -211,55 +210,50 @@ export function handleDawoudPage(root: HTMLElement): void {
  */
 export function handleDrvKey(root: HTMLElement): void {
   let rowNum: number | undefined = derivations.MAPPING[marcion() ?? 0];
-  root.querySelectorAll(`.${cls.DRV_KEY}`).forEach((key: Element) => {
-    // The key should have the link to the row containing the derivation
-    // definition in our source-of-truth sheet.
-    // Make the target _blank so it will open in a separate page.
-    if (!rowNum) {
-      log.error('Page has derivations, but unable to infer their row numbers!');
-    } else {
-      key.classList.add(ccls.LINK);
-      key.addEventListener(
-        'click',
-        browser.open.bind(
-          browser,
-          paths.rowUrl(paths.CRUM_DERIVATIONS_URL, rowNum++),
-          true
-        )
-      );
-    }
+  root
+    .querySelectorAll<HTMLElement>(`.${cls.DRV_KEY}`)
+    .forEach((key: HTMLElement) => {
+      // The key should have the link to the row containing the derivation
+      // definition in our source-of-truth sheet.
+      // Make the target _blank so it will open in a separate page.
+      if (!rowNum) {
+        log.error(
+          'Page has derivations, but unable to infer their row numbers!'
+        );
+      } else {
+        html.linkify(key, paths.rowUrl(paths.CRUM_DERIVATIONS_URL, rowNum++));
+      }
 
-    // Create a second anchor pointing to this row in the HTML. This is useful
-    // for users to share links to specific derivations.
-    const frag = `#drv${key.textContent.trim()}`;
-    const a: HTMLAnchorElement = document.createElement('a');
-    a.href = frag;
-    a.classList.add(ccls.HOVER_LINK);
-    a.textContent = '🔗';
+      // Create a second anchor pointing to this row in the HTML. This is useful
+      // for users to share links to specific derivations.
+      const frag = `#drv${key.textContent.trim()}`;
+      const a: HTMLAnchorElement = document.createElement('a');
+      a.href = frag;
+      a.textContent = '🔗';
 
-    // Store the key parent.
-    const parent: ParentNode = key.parentNode!;
+      // Store the key parent.
+      const parent: ParentNode = key.parentNode!;
 
-    // Create a span bearing the two anchors, with a space in between.
-    const span: HTMLSpanElement = document.createElement('span');
-    span.classList.add(cls.DRV_LINK);
-    span.replaceChildren(a, ' ', key);
+      // Create a span bearing the two anchors, with a space in between.
+      const span: HTMLSpanElement = document.createElement('span');
+      span.classList.add(cls.DRV_LINK);
+      span.replaceChildren(a, ' ', key);
 
-    // Add the new span as a child to the original parent.
-    parent.appendChild(span);
+      // Add the new span as a child to the original parent.
+      parent.appendChild(span);
 
-    if (iam.amI('anki')) {
-      // Yanking is not straightforward on Anki, for what it seems!
-      return;
-    }
+      if (iam.amI('anki')) {
+        // Yanking is not straightforward on Anki, for what it seems!
+        return;
+      }
 
-    // Clicking on the anchor also copies the URL.
-    a.addEventListener('click', (): void => {
-      const url: URL = new URL(window.location.href);
-      url.hash = frag;
-      browser.yank(url.toString());
+      // Clicking on the anchor also copies the URL.
+      a.addEventListener('click', (): void => {
+        const url: URL = new URL(window.location.href);
+        url.hash = frag;
+        browser.yank(url.toString());
+      });
     });
-  });
 }
 
 /**
@@ -270,8 +264,12 @@ export function handleExplanatoryKey(root: HTMLElement): void {
   root
     .querySelectorAll<HTMLElement>(`.${cls.EXPLANATORY_KEY}`)
     .forEach((el) => {
-      el.classList.add(ccls.HOVER_LINK);
-      html.linkify(el, `#explanatory${el.textContent.trim()}`);
+      html.linkify(
+        el,
+        `#explanatory${el.textContent.trim()}`,
+        false,
+        ccls.HOVER_LINK
+      );
     });
 }
 
@@ -281,8 +279,7 @@ export function handleExplanatoryKey(root: HTMLElement): void {
  */
 export function handleSisterKey(root: HTMLElement): void {
   root.querySelectorAll<HTMLElement>(`.${cls.SISTER_KEY}`).forEach((el) => {
-    el.classList.add(ccls.HOVER_LINK);
-    html.linkify(el, `#sister${el.textContent.trim()}`);
+    html.linkify(el, `#sister${el.textContent.trim()}`, false, ccls.HOVER_LINK);
   });
 }
 
@@ -323,7 +320,7 @@ export function handleDialect(
   root.querySelectorAll<HTMLElement>(`.${cls.DIALECT}`).forEach((el) => {
     const code: string = el.textContent.trim();
 
-    const standard = code in dial.DIALECTS;
+    const standard: boolean = code in dial.DIALECTS;
     const dialect: dial.Dialect | undefined = standard
       ? dial.DIALECTS[code as dial.DIALECT]
       : dial.NON_STANDARD[code];
@@ -349,7 +346,7 @@ export function handleDialect(
     }
 
     // 2. Add Interaction: Toggle highlighting on click.
-    siglum.classList.add(ccls.HOVER_LINK);
+    siglum.classList.add(ccls.HOVER_ACTION);
     siglum.addEventListener('click', () => {
       highlighter.toggle(code as dial.DIALECT);
     });
@@ -437,8 +434,8 @@ export function addGreekLookups(root: HTMLElement): void {
   html.linkifyText(
     root,
     GREEK_RE,
-    (match: RegExpExecArray) => paths.greekLookup(match[0]),
-    [ccls.LINK, cls.GREEK]
+    (match: RegExpExecArray): string => paths.greekLookup(match[0]),
+    [cls.GREEK]
   );
 }
 
@@ -524,15 +521,10 @@ export function handleQuality(root: HTMLElement): void {
     log.error('Unable to retrieve root row number!');
     return;
   }
-  root.querySelectorAll(`.${cls.QUALITY}`).forEach((el: Element) => {
-    el.classList.add(ccls.LINK);
-    el.addEventListener(
-      'click',
-      browser.open.bind(
-        browser,
-        paths.rowUrl(paths.CRUM_ROOTS_URL, rowNum),
-        true
-      )
-    );
-  });
+
+  root
+    .querySelectorAll<HTMLElement>(`.${cls.QUALITY}`)
+    .forEach((el: HTMLElement) => {
+      html.linkify(el, paths.rowUrl(paths.CRUM_ROOTS_URL, rowNum));
+    });
 }

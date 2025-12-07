@@ -6,7 +6,6 @@ import * as html from '../html.js';
 import * as paths from '../paths.js';
 import * as css from '../css.js';
 import * as cls from './cls.js';
-import * as ccls from '../cls.js';
 import * as log from '../logger.js';
 import * as bible from './bible.js';
 import * as ann from './annotations.js';
@@ -470,7 +469,7 @@ export function handleBible(root: HTMLElement): void {
         const link: HTMLAnchorElement = document.createElement('a');
         link.href = result.url;
         link.target = '_blank';
-        link.classList.add(ccls.HOVER_LINK, cls.BIBLE);
+        link.classList.add(cls.BIBLE);
         link.textContent = match[0];
         drop.addDroppable(link, 'hover', 'below', result.name);
         return { replacement: link };

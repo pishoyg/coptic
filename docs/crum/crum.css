@@ -14,7 +14,7 @@ figcaption {
 
 .wiki .gloss {
   font-style: italic;
-  color: gray;
+  color: brown;
 }
 
 .subparagraph {
@@ -72,9 +72,8 @@ figcaption {
   text-align: center;
 }
 
-.greek,
-.greek:hover {
-  color: #85c1e9; /* Light blue */
+.greek {
+  color: #543976; /* Dark Purple */
 }
 
 .nag-hammadi {
@@ -115,7 +114,7 @@ figcaption {
 .wiki .aramaic,
 .wiki .hebrew,
 .wiki .amharic {
-  color: firebrick;
+  color: brown;
 
   /* Isolates the span from the surrounding context, ensuring that pieces of
    * HTML consisting of Arabic tokens render from left to right, which is the
@@ -160,11 +159,16 @@ figcaption {
   & .semicolon,
   .bullet {
     font-weight: bold;
-    color: indigo;
+    color: #997317; /* dark yellow */
   }
 
-  .semicolon {
+  & .semicolon {
+    margin-left: 0.2em;
     margin-right: 0.75em;
+  }
+
+  & .bullet {
+    margin-left: 0.75em;
   }
 }
 

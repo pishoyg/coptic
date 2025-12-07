@@ -5,3 +5,7 @@ export const LINK = 'link';
 
 /** HOVER_LINK makes an element look like a link when hovered over. */
 export const HOVER_LINK = 'hover-link';
+
+/** HOVER_ACTION makes an element look like a link when hovered over, without
+ * changing the element's color. */
+export const HOVER_ACTION = 'hover-action';

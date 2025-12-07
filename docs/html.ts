@@ -1,5 +1,4 @@
 /** Package html defines DOM manipulation helpers. */
-import * as browser from './browser.js';
 import * as css from './css.js';
 
 /**
@@ -28,14 +27,22 @@ export function moveElement(
  *
  * @param href
  * @param external
+ * @param {...any} children
  * @returns
+ *
+ * TODO: (#0): Use this method more widely.
  */
-export function anchor(href: string, external?: boolean): HTMLAnchorElement {
+export function anchor(
+  href: string,
+  external?: boolean,
+  ...children: (Node | string)[]
+): HTMLAnchorElement {
   const a: HTMLAnchorElement = document.createElement('a');
   a.href = href;
   if (external ?? !href.startsWith('#')) {
     a.target = '_blank';
   }
+  a.append(...children);
   return a;
 }
 
@@ -44,19 +51,18 @@ export function anchor(href: string, external?: boolean): HTMLAnchorElement {
  * @param el
  * @param href
  * @param external
+ * @param {...any} classes
+ *
+ * TODO: (#0): Use this method more widely.
  */
 export function linkify(
   el: HTMLElement,
   href: string,
-  external?: boolean
+  external?: boolean,
+  ...classes: string[]
 ): void {
-  const a = anchor(href, external);
-
-  // Use childNodes to capture text, comments, and elements.
-  // We use Array.from() to create a static list, preventing issues
-  // arising from modifying a live NodeList while iterating.
-  const nodes = Array.from(el.childNodes);
-  a.append(...nodes);
+  const a: HTMLAnchorElement = anchor(href, external, ...el.childNodes);
+  a.classList.add(...classes);
   el.append(a);
 }
 
@@ -213,20 +219,16 @@ export function linkifyText(
     root,
     regex,
     (match: RegExpExecArray): { replacement?: Node } => {
-      const targetUrl = url(match);
+      const targetUrl: string | null = url(match);
       if (!targetUrl) {
-        // This text doesn't have a URL. Return the original text.
+        // This text doesn't have a URL. No replacements needed!
         return {};
       }
 
       // Create a link.
-      const link = document.createElement('span');
-      link.classList.add(...classes);
-      link.textContent = match[0];
-      link.addEventListener('click', () => {
-        browser.open(targetUrl);
-      });
-      return { replacement: link };
+      const a = anchor(targetUrl, true, match[0]);
+      a.classList.add(...classes);
+      return { replacement: a };
     },
     css.classQuery(...excludedClasses)
   );

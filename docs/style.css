@@ -49,7 +49,8 @@ a figcaption {
   text-decoration: none;
 }
 
-.hover-link {
+.hover-link,
+.hover-action {
   color: inherit;
   cursor: inherit;
   text-decoration: inherit;
@@ -58,10 +59,15 @@ a figcaption {
 @media (hover: hover) {
   a:hover,
   .link:hover,
-  .hover-link:hover {
-    color: var(--bright-sky-blue);
+  /* Unlike hover-link, hover-action retains its original color when hovered. */
+  .hover-link:hover,
+  .hover-action:hover {
     cursor: pointer;
     text-decoration: underline;
+  }
+
+  .hover-link:hover {
+    color: var(--bright-sky-blue);
   }
 }
 

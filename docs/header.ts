@@ -1,5 +1,4 @@
 /** Package header defines the header logic. */
-import * as browser from './browser.js';
 import * as paths from './paths.js';
 
 export enum CLS {
@@ -14,10 +13,10 @@ export enum CLS {
 }
 
 /**
- *
+ * @returns
  */
-export function reports(): void {
+export function reports(): string {
   const url = new URL(paths.REPORTS);
   url.searchParams.set(paths.REPORTS_PAGE_PARAM, window.location.href);
-  browser.open(url.toString(), true);
+  return url.toString();
 }
