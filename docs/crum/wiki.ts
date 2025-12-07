@@ -178,7 +178,7 @@ export const PAGE_RE = new RegExp(str.bounded('p ([0-9]+)'));
 //     assume that, if it occurs after a reference abbreviation, then it's
 //     likely a suffix.
 export const SUFFIX = new RegExp(
-  `^(?: (?:'?[0-9]+\\*?|[a-zA-Z§]))+${str.WORD_END.source}`,
+  `^(?:\\.? (?:'?[0-9]+\\*?|[a-zA-Z§]))+${str.WORD_END.source}`,
   'u'
 );
 export const COMMA_SUFFIX = new RegExp(
