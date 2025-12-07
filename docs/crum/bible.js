@@ -108,6 +108,11 @@ export const MAPPING = {
     path: 'epistle_to_the_romans',
     numChapters: 16,
   },
+  Rom: {
+    name: 'Epistle to the Romans',
+    path: 'epistle_to_the_romans',
+    numChapters: 16,
+  },
   '1 Cor': {
     name: 'First Epistle to the Corinthians',
     path: 'first_epistle_to_the_corinthians',
