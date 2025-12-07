@@ -37,6 +37,7 @@ class COL(enum.Enum):
     # The following columns are common.
     KEY = "key"
     WORD = "word"
+    WORDS = "words"
     TYPE = "type"
     EN = "en"
     CRUM = "crum"
@@ -63,7 +64,7 @@ _DRV_SORT_COLS: list[COL] = [COL.KEY_WORD]
 # Each derivation row must contain the following cells.
 _DRV_ALL_COLS: list[COL] = [COL.KEY, COL.KEY_WORD, COL.KEY_DERIV, COL.TYPE]
 # Each derivation row must contain at least of the following cell.s
-_DRV_ANY_COLS: list[COL] = [COL.WORD, COL.EN]
+_DRV_ANY_COLS: list[COL] = [COL.WORD, COL.WORDS, COL.EN]
 
 
 def _verify_balanced_brackets(records: list[gcp.Record]) -> None:

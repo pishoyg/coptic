@@ -133,7 +133,7 @@ class Row(gcp.Record):
     @functools.cached_property
     def parsing_1(self) -> list[lex.Line]:
         return parse.parse_word_cell(
-            self.get(sheet.COL.WORD),
+            self._raw_word(),
             self.grammatical_type,
             self.root,
             detach_types=False,
@@ -151,7 +151,7 @@ class Row(gcp.Record):
     @functools.cached_property
     def parsing_2(self) -> list[lex.Line]:
         return parse.parse_word_cell(
-            self.get(sheet.COL.WORD),
+            self._raw_word(),
             self.grammatical_type,
             self.root,
             detach_types=True,
@@ -159,6 +159,9 @@ class Row(gcp.Record):
             normalize_optional=True,
             normalize_assumed=True,
         )
+
+    def _raw_word(self) -> str:
+        return self.get(sheet.COL.WORD)
 
     def word_parsed_prettify(self) -> str:
         return page.LINE_BREAK.join(
@@ -241,6 +244,18 @@ class Derivation(Row):
     @typing.override
     def __str__(self) -> str:
         return self.key
+
+    @typing.override
+    def _raw_word(self) -> str:
+        return "\n".join(
+            filter(
+                None,
+                [
+                    self.get(sheet.COL.WORD),
+                    self.get(sheet.COL.WORDS),
+                ],
+            ),
+        )
 
 
 class Relation:
