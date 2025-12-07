@@ -14,6 +14,7 @@ import * as drop from '../dropdown.js';
 import * as str from '../str.js';
 import * as white from './white.js';
 import * as dev from '../dev.js';
+import * as scan from '../scan.js';
 
 /**
  * NOTE: All of the regexes below assume the following normalizations:
@@ -657,10 +658,12 @@ export function handleCorrigenda(root: HTMLElement): void {
         'above',
         'From ',
         i,
-        // TODO: (#427) Add a link to the page instead of simply appending it to
-        // the text. And do not remove the terminating column number ('a' or
-        // 'b').
-        ` (${elem.dataset[DATA_PAGE]!.replace(/[ab]$/, '')})`
+        ' ',
+        '(',
+        // TODO: (#413) The page number should have a hyeprlink pointing to the
+        // scan.
+        ...scan.prettyPage(elem.dataset[DATA_PAGE]!),
+        ')'
       );
     });
 }

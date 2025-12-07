@@ -18,7 +18,7 @@ const MIN_SCALE = 0.2;
 
 /**
  * Word represents a word that can be used in the book scan context.
- * TODO: (#411) Implement Greek and Arabic word classes, as well as Coptic.
+ * TODO: (640) Implement Greek and Arabic word classes, as well as Coptic.
  */
 export interface Word {
   /**
@@ -56,6 +56,18 @@ export function chopColumn(page: string): [string, string] {
     return [page.slice(0, -1), page.slice(-1)];
   }
   return [page, ''];
+}
+
+/**
+ *
+ * @param page
+ * @returns
+ */
+export function prettyPage(page: string): (Node | string)[] {
+  const [num, col]: [string, string] = chopColumn(page);
+  const i = document.createElement('i');
+  i.textContent = col;
+  return [`${num} `, i];
 }
 
 const SWAP_TOLERANCE = 10;
@@ -136,7 +148,7 @@ export class Index {
     // Check if this is a Coptic word.
     if (!copt.isCoptic(query)) {
       // Neither a number nor a Coptic word! Nothing we can do!
-      // TODO: (#411) This should support other classes of words as well, not
+      // TODO: (640) This should support other classes of words as well, not
       // just Coptic words.
       // We should perhaps introduce another class method:
       //   searchable(query: string): boolean
