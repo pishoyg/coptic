@@ -300,9 +300,8 @@ export function handleAnnotations(root: HTMLElement): void {
     html.replaceText(
       root,
       regex,
-      (match: RegExpExecArray, _r, _n, node: Text): { replacement?: Node } => {
-        const form: string = match[0];
-        const annot: ann.Annotation | undefined = ann.MAPPING[form];
+      (match: RegExpExecArray, _, __, node: Text): { replacement?: Node } => {
+        const annot: ann.Annotation | undefined = ann.MAPPING[match[0]];
         if (!annot) {
           return {};
         }
@@ -312,7 +311,7 @@ export function handleAnnotations(root: HTMLElement): void {
           return {};
         }
         const span: HTMLSpanElement = document.createElement('span');
-        span.textContent = form;
+        span.textContent = match[0];
         drop.addDroppable(span, [annot.fullForm]);
         span.classList.add(cls.ANNOTATION);
         return { replacement: span };
@@ -535,6 +534,33 @@ function parseSuffix(
   return span;
 }
 
+/**
+ * Remove all tooltips, as well as `reference` and `suffix` classes.
+ *
+ * NOTE: We do NOT account for the case that the root itself is an artifact that
+ * needs to be gotten rid of.
+ *
+ * @param elem
+ */
+function dereference(elem: ChildNode): void {
+  if (!(elem instanceof Element)) {
+    // This is probably a text node. Definitely no reference here! Do nothing!
+    return;
+  }
+
+  elem
+    .querySelectorAll(`.${drop.CLS.DROPPABLE}`)
+    .forEach((el: Element): void => {
+      el.remove();
+    });
+
+  elem
+    .querySelectorAll(css.classQuery(cls.REFERENCE, cls.SUFFIX))
+    .forEach((el: Element): void => {
+      el.replaceWith(...el.childNodes);
+    });
+}
+
 // TODO: (#0) Simplify this method.
 /* eslint-disable complexity */
 
@@ -560,16 +586,18 @@ function replaceReference(
   const span: HTMLSpanElement = document.createElement('span');
   span.classList.add(cls.REFERENCE);
 
+  let noTipNextSibling: string;
   // Sometimes, part of the abbreviation lives inside the next sibling.
   // Notice that, since we want prioritize longer abbreviations, we attempt to
   // parse a reference obtained by combining the match with the next <i> tag,
   // before attempting to parse a reference from the match alone.
   if (
     !suffix && // There is no suffix text following the abbreviation.
-    nextSibling?.textContent && // Appease the linter.
+    nextSibling && // Appease the linter.
+    (noTipNextSibling = drop.noTipTextContent(nextSibling)) &&
     // The text obtained from combining the match with the remainder and the
     // next sibling forms a source abbreviation.
-    (source = ref.MAPPING[match[0] + remainder + nextSibling.textContent])
+    (source = ref.MAPPING[match[0] + remainder + noTipNextSibling])
   ) {
     // Success!
     // Save a reference to the sibling's sibling, before we move the sibling and
@@ -577,6 +605,9 @@ function replaceReference(
     const nextNext: ChildNode | null = nextSibling.nextSibling;
     // Populate the span content.
     span.append(match[0], remainder, nextSibling);
+    // Account for the possibility that the sibling contained a reference. Clean
+    // all child tooltips, and `reference` or `suffix` classes.
+    dereference(span);
     remainder = ''; // We have consumed the remainder.
     // Check if the sibling's sibling bears a suffix.
     if ((suffix = nextNext?.nodeValue?.match(SUFFIX)?.[0])) {

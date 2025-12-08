@@ -26,9 +26,7 @@ const TEST_CASES: {
     // lot of common cases.
     key: '88',
     want: {
-      // TODO: (#648) Reduce the number of references once the bug that allows
-      // references-within-references is resolved.
-      references: 144,
+      references: 143,
       suffixes: 137,
       bible: 119,
       dialectTooltips: 388,

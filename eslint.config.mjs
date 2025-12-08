@@ -105,7 +105,7 @@ export default tseslint.config(
           selector: ['variable', 'parameter'],
           format: null, // No restrictions whatsoever.
           filter: {
-            regex: '^_$',
+            regex: '^_+$',
             match: true,
           },
         },
