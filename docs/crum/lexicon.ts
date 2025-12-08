@@ -298,7 +298,7 @@ function addListDialects(): void {
       (dialect: dial.Dialect): HTMLElement => {
         const label: HTMLLabelElement = document.createElement('label');
         label.append(dialect.checkbox(), dialect.siglum());
-        drop.addDroppable(label, 'hover', 'below', ...dialect.anchoredName());
+        drop.addDroppable(label, Array.from(dialect.anchoredName()));
         return label;
       }
     )

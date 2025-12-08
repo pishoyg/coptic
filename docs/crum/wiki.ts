@@ -313,7 +313,7 @@ export function handleAnnotations(root: HTMLElement): void {
         }
         const span: HTMLSpanElement = document.createElement('span');
         span.textContent = form;
-        drop.addDroppable(span, 'hover', 'below', annot.fullForm);
+        drop.addDroppable(span, [annot.fullForm]);
         span.classList.add(cls.ANNOTATION);
         return { replacement: span };
       },
@@ -478,7 +478,7 @@ export function handleBible(root: HTMLElement): void {
         link.target = '_blank';
         link.classList.add(cls.BIBLE);
         link.textContent = match[0];
-        drop.addDroppable(link, 'hover', 'below', result.name);
+        drop.addDroppable(link, [result.name], 'hover', 'below');
         return { replacement: link };
       },
       // Exclude all Wiki abbreviations to avoid overlap.
@@ -615,7 +615,7 @@ function replaceReference(
   // Add a hover-invoked tooltip, if present.
   const tooltip: (Node | string)[] | undefined = source.tooltip();
   if (tooltip?.length) {
-    drop.addDroppable(span, 'hover', 'below', ...tooltip);
+    drop.addDroppable(span, tooltip);
   }
 
   return { replacement: span, remainder };
@@ -654,16 +654,11 @@ export function handleCorrigenda(root: HTMLElement): void {
       i.append('Additions and Corrections');
       drop.addDroppable(
         elem,
-        'hover',
-        'above',
-        'From ',
-        i,
-        ' ',
-        '(',
         // TODO: (#413) The page number should have a hyeprlink pointing to the
         // scan.
-        ...scan.prettyPage(elem.dataset[DATA_PAGE]!),
-        ')'
+        ['From ', i, ' (', ...scan.prettyPage(elem.dataset[DATA_PAGE]!), ')'],
+        'hover',
+        'above'
       );
     });
 }

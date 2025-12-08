@@ -154,15 +154,15 @@ export function addEventListeners(
  * separately.
  *
  * @param dropdown - An element that, when hovered, should display the content.
+ * @param content - The content that shows when the drop element is hovered.
  * @param invocation
  * @param position - Whether to render 'above' or 'below'.
- * @param content - The content that shows when the drop element is hovered.
  */
 export function addDroppable(
   dropdown: Element,
-  invocation: Invocation,
-  position: Position = 'below',
-  ...content: (Node | string)[]
+  content: (Node | string)[],
+  invocation: Invocation = 'hover',
+  position: Position = 'below'
 ): void {
   if (position === 'above' && invocation === 'click') {
     log.fatal(
