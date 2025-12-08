@@ -384,7 +384,13 @@ function parseBibleCitation(
   match: RegExpExecArray,
   remainder: string
 ): { url: string; name: string } | null {
-  let [bookAbbreviation, chapter, verse] = [match[1]!, match[2], match[3]];
+  // Our regex puts the book abbreviation in the first match group. The chapter
+  // and verse numbers are either second and third, or fourth and fifth.
+  let [bookAbbreviation, chapter, verse] = [
+    match[1]!,
+    match[2] ?? match[4],
+    match[3] ?? match[5],
+  ];
   const danOverride = DAN_OVERRIDE[bookAbbreviation];
   if (danOverride) {
     // Given that this special book contains one chapter, the book
