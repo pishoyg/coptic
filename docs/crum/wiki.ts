@@ -597,9 +597,14 @@ function replaceReference(
   // Notice that, since we want prioritize longer abbreviations, we attempt to
   // parse a reference obtained by combining the match with the next <i> tag,
   // before attempting to parse a reference from the match alone.
+  // Reference titles only exist in text nodes and <i> nodes. The code below
+  // covers the most common cases (the title existing entirely in the text node,
+  // or in the text node along with the next sibling). There are still
+  // (extremely few) cases not covered by this log.
+  // TODO: (#572) Handle tricky references.
   if (
     !suffix && // There is no suffix text following the abbreviation.
-    nextSibling && // Appease the linter.
+    nextSibling?.nodeName === 'I' &&
     (noTipNextSibling = drop.noTipTextContent(nextSibling)) &&
     // The text obtained from combining the match with the remainder and the
     // next sibling forms a source abbreviation.
