@@ -45,6 +45,11 @@ export const MAPPING = {
   Eccl: { name: 'Ecclesiastes', path: 'ecclesiastes', numChapters: 12 },
   Cant: { name: 'Song of Songs', path: 'song_of_songs', numChapters: 8 },
   Sa: { name: 'Wisdom of Solomon', path: 'wisdom_of_solomon', numChapters: 19 },
+  Sap: {
+    name: 'Wisdom of Solomon',
+    path: 'wisdom_of_solomon',
+    numChapters: 19,
+  },
   Si: {
     name: 'Wisdom of Jesus son of Sirach',
     path: 'wisdom_of_jesus_son_of_sirach',
