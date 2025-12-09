@@ -34,6 +34,18 @@ const TEST_CASES: {
     },
   },
   {
+    // 54 is the largest entry. At 5 pages long, it is the longest entry in
+    // Crum.
+    key: '54',
+    want: {
+      references: 377,
+      suffixes: 379,
+      bible: 292,
+      dialectTooltips: 833,
+      annotations: 258,
+    },
+  },
+  {
     // 1144 covers cases with diacritics and boundaries. Particularly, in
     // ‘Amélineau Géog’:
     // - ‘Am’ shouldn't match ‘Amos’ (which would happen if the text were
