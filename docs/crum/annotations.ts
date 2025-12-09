@@ -160,7 +160,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'Anno Domini', variants: ['AD'], noCaseVariant: true },
   { fullForm: 'adverb', variants: ['adv', 'advb'] },
   { fullForm: 'aorist', variants: ['aor'] },
-  { fullForm: 'approximate', variants: ['approx'] }, // NOTE: Encountered only once, as of the time of writing!
+  { fullForm: 'approximate', variants: ['approx', 'approxim'] },
   { fullForm: 'arithmetic', variants: ['arithm'] },
   { fullForm: 'biblical', variants: ['bibl'] }, // NOTE: Encountered only once, as of the time of writing!
   { fullForm: 'bis', variants: ['bis'] }, // NOTE: Full form same as abbreviation, included for completion!

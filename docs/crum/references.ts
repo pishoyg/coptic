@@ -1980,6 +1980,7 @@ const DATA_1: Resource[] = [
     },
     variants: ['Sh', 'Besa'],
     postfixes: [
+      'AZ',
       'BM',
       'BMOr',
       'Berl Or',
@@ -1990,8 +1991,9 @@ const DATA_1: Resource[] = [
       'Ep',
       'HT',
       'IF',
-      'LMis',
+      'Louvre',
       'Leyd',
+      'LMis',
       'MIF',
       'Mich',
       'Miss',
