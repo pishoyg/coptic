@@ -113,7 +113,12 @@ export const ANNOTATION_RES: RegExp[] = [
     'gu'
   ),
   // Single-word annotation and special cases:
-  new RegExp([str.bounded('[a-zA-Z]+'), '\\?', '†', 'ⲛ̅ⲉ̅'].join('|'), 'gu'),
+  // NOTE: Initially, the regex for annotations didn't include the dash
+  // character. For an (as of yet) singleton occurrence of a singleton
+  // annotation that has a dash (namely "post-posit" for "postpositive"), we
+  // decided to include it. Watch for false negatives, and implement it
+  // differently if needed.
+  new RegExp([str.bounded('[a-zA-Z\\-]+'), '\\?', '†', 'ⲛ̅ⲉ̅'].join('|'), 'gu'),
 ];
 
 export const PAGE_RE = new RegExp(str.bounded('p ([0-9]+)'));
