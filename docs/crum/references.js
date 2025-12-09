@@ -1913,6 +1913,7 @@ const DATA_1 = [
     },
     variants: ['Sh', 'Besa'],
     postfixes: [
+      'AZ',
       'BM',
       'BMOr',
       'Berl Or',
@@ -1923,8 +1924,9 @@ const DATA_1 = [
       'Ep',
       'HT',
       'IF',
-      'LMis',
+      'Louvre',
       'Leyd',
+      'LMis',
       'MIF',
       'Mich',
       'Miss',

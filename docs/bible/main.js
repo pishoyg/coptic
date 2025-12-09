@@ -67,7 +67,7 @@ function main() {
   const holder = document.createElement('span');
   holder.textContent = 'Languages ▾';
   holder.id = ID.TRAY;
-  drop.addDroppable(holder, 'click', 'below', tray);
+  drop.addDroppable(holder, [tray], 'click');
   // Construct the highlighter.
   const highlighter = new high.Highlighter(new dial.Manager(), [...boxes]);
   addEventListeners(highlighter);

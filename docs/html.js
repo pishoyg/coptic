@@ -191,10 +191,13 @@ export function linkifyText(root, regex, url, classes, excludedClasses = []) {
  * Such normalization is often necessary for text search logic to work
  * correctly.
  *
- * NOTE: We intentionally refrain from normalizing the tree[1] because we expect
+ * NOTE:
+ * 1. We intentionally refrain from normalizing the tree[1] because we expect
  * our HTML to be tree-normalized already.
- * We also refrain from NFD-normalizing the text content [2], because our
+ * 2. We also refrain from NFD-normalizing the text content [2], because our
  * pipelines generate NFD-normalized HTML.
+ * 3. We don't expect our HTML to have comments or fragments. Only text and
+ * element nodes are expected to be present.
  *
  * @param root
  * [1] https://developer.mozilla.org/docs/Web/API/Node/normalize

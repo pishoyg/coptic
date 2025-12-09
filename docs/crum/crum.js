@@ -103,7 +103,7 @@ export function handleCrumPage(root) {
       // hyperlink pointing to the scan.
       const i = document.createElement('i');
       i.textContent = 'Additions and Corrections';
-      drop.addDroppable(el, 'hover', 'below', 'From ', i);
+      drop.addDroppable(el, ['From ', i]);
       return;
     }
     html.linkify(
@@ -276,7 +276,7 @@ export function handleDialect(root, highlighter) {
     // 1. Render Visuals: Replace text with Siglum and add Tooltip.
     const siglum = dialect.siglum();
     el.replaceChildren(siglum);
-    drop.addDroppable(el, 'hover', 'below', ...dialect.anchoredName());
+    drop.addDroppable(el, Array.from(dialect.anchoredName()));
     if (el.closest(`.${cls.WIKI}`) || !standard) {
       // There is no highlighting in Wiki. And definitely not for nonstandard
       // dialects.

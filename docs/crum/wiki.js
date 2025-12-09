@@ -283,9 +283,8 @@ export function handleAnnotations(root) {
     html.replaceText(
       root,
       regex,
-      (match, _r, _n, node) => {
-        const form = match[0];
-        const annot = ann.MAPPING[form];
+      (match, _, __, node) => {
+        const annot = ann.MAPPING[match[0]];
         if (!annot) {
           return {};
         }
@@ -295,8 +294,8 @@ export function handleAnnotations(root) {
           return {};
         }
         const span = document.createElement('span');
-        span.textContent = form;
-        drop.addDroppable(span, 'hover', 'below', annot.fullForm);
+        span.textContent = match[0];
+        drop.addDroppable(span, [annot.fullForm]);
         span.classList.add(cls.ANNOTATION);
         return { replacement: span };
       },
@@ -357,7 +356,13 @@ const DAN_OVERRIDE = {
  * @returns
  */
 function parseBibleCitation(match, remainder) {
-  let [bookAbbreviation, chapter, verse] = [match[1], match[2], match[3]];
+  // Our regex puts the book abbreviation in the first match group. The chapter
+  // and verse numbers are either second and third, or fourth and fifth.
+  let [bookAbbreviation, chapter, verse] = [
+    match[1],
+    match[2] ?? match[4],
+    match[3] ?? match[5],
+  ];
   const danOverride = DAN_OVERRIDE[bookAbbreviation];
   if (danOverride) {
     // Given that this special book contains one chapter, the book
@@ -442,7 +447,7 @@ export function handleBible(root) {
         link.target = '_blank';
         link.classList.add(cls.BIBLE);
         link.textContent = match[0];
-        drop.addDroppable(link, 'hover', 'below', result.name);
+        drop.addDroppable(link, [result.name], 'hover', 'below');
         return { replacement: link };
       },
       // Exclude all Wiki abbreviations to avoid overlap.
@@ -489,6 +494,28 @@ function parseSuffix(suffix, maybeSuperscript) {
   nextSibling.nodeValue = nextSibling.nodeValue.slice(match[0].length);
   return span;
 }
+/**
+ * Remove all tooltips, as well as `reference` and `suffix` classes.
+ *
+ * NOTE: We do NOT account for the case that the root itself is an artifact that
+ * needs to be gotten rid of.
+ *
+ * @param elem
+ */
+function dereference(elem) {
+  if (!(elem instanceof Element)) {
+    // This is probably a text node. Definitely no reference here! Do nothing!
+    return;
+  }
+  elem.querySelectorAll(`.${drop.CLS.DROPPABLE}`).forEach((el) => {
+    el.remove();
+  });
+  elem
+    .querySelectorAll(css.classQuery(cls.REFERENCE, cls.SUFFIX))
+    .forEach((el) => {
+      el.replaceWith(...el.childNodes);
+    });
+}
 // TODO: (#0) Simplify this method.
 /* eslint-disable complexity */
 /**
@@ -506,26 +533,33 @@ function replaceReference(match, remainder, nextSibling) {
   // Initialize the span.
   const span = document.createElement('span');
   span.classList.add(cls.REFERENCE);
+  let noTipNextSibling;
   // Sometimes, part of the abbreviation lives inside the next sibling.
   // Notice that, since we want prioritize longer abbreviations, we attempt to
   // parse a reference obtained by combining the match with the next <i> tag,
   // before attempting to parse a reference from the match alone.
+  // Reference titles only exist in text nodes and <i> nodes. The code below
+  // covers the most common cases (the title existing entirely in the text node,
+  // or in the text node along with the next sibling). There are still
+  // (extremely few) cases not covered by this log.
+  // TODO: (#572) Handle tricky references.
   if (
     !suffix && // There is no suffix text following the abbreviation.
-    remainder === ' ' && // The remaining part in the text node is just a space.
-    nextSibling?.nodeName === 'I' && // The next sibling is an idiomatic element.
-    nextSibling.textContent && // The next node also has text.
-    // The text obtained from combining this node and the text represents a
-    // source abbreviation.
-    (source = ref.MAPPING[`${match[0]} ${nextSibling.textContent}`])
+    nextSibling?.nodeName === 'I' &&
+    (noTipNextSibling = drop.noTipTextContent(nextSibling)) &&
+    // The text obtained from combining the match with the remainder and the
+    // next sibling forms a source abbreviation.
+    (source = ref.MAPPING[match[0] + remainder + noTipNextSibling])
   ) {
-    // Success! The text obtained by combining the match and the next sibling is
-    // a reference abbreviation.
+    // Success!
     // Save a reference to the sibling's sibling, before we move the sibling and
     // we can no longer access its sibling.
     const nextNext = nextSibling.nextSibling;
     // Populate the span content.
-    span.append(match[0], ' ', nextSibling);
+    span.append(match[0], remainder, nextSibling);
+    // Account for the possibility that the sibling contained a reference. Clean
+    // all child tooltips, and `reference` or `suffix` classes.
+    dereference(span);
     remainder = ''; // We have consumed the remainder.
     // Check if the sibling's sibling bears a suffix.
     if ((suffix = nextNext?.nodeValue?.match(SUFFIX)?.[0])) {
@@ -543,10 +577,8 @@ function replaceReference(match, remainder, nextSibling) {
     nextSibling = null;
   }
   // If the above didn't succeed, try to parse a reference from the match alone.
-  if (!source) {
-    if ((source = ref.MAPPING[match[0]])) {
-      span.append(match[0]);
-    }
+  if (!source && (source = ref.MAPPING[match[0]])) {
+    span.append(match[0]);
   }
   if (!source) {
     // Still no source found! Return!
@@ -559,7 +591,7 @@ function replaceReference(match, remainder, nextSibling) {
   // Add a hover-invoked tooltip, if present.
   const tooltip = source.tooltip();
   if (tooltip?.length) {
-    drop.addDroppable(span, 'hover', 'below', ...tooltip);
+    drop.addDroppable(span, tooltip);
   }
   return { replacement: span, remainder };
 }
@@ -591,16 +623,11 @@ export function handleCorrigenda(root) {
     i.append('Additions and Corrections');
     drop.addDroppable(
       elem,
-      'hover',
-      'above',
-      'From ',
-      i,
-      ' ',
-      '(',
       // TODO: (#413) The page number should have a hyeprlink pointing to the
       // scan.
-      ...scan.prettyPage(elem.dataset[DATA_PAGE]),
-      ')'
+      ['From ', i, ' (', ...scan.prettyPage(elem.dataset[DATA_PAGE]), ')'],
+      'hover',
+      'above'
     );
   });
 }
