@@ -191,7 +191,8 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'manuscript', variants: ['MS'], noCaseVariant: true },
   { fullForm: 'manuscripts', variants: ['MSS'], noCaseVariant: true },
   { fullForm: 'negative', variants: ['neg'] },
-  // TODO: (#194) Add Annotation for "partic". Is it "particle" or "participle"?
+  // NOTE: 'partic' encountered once, as of the time of writing!
+  { fullForm: 'participle', variants: ['particip', 'partic'] },
   { fullForm: 'penes', variants: ['penes'] }, // NOTE: Full form same as abbreviation, included for completion!
   { fullForm: 'perfect', variants: ['perf', 'pf'] },
   { fullForm: 'Persian', variants: ['Pers'], noCaseVariant: true },
