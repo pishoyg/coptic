@@ -16,7 +16,7 @@ from collections import abc
 
 from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import lexical as lex
-from utils import ensure, gcp, lang, orth, page
+from utils import ensure, gcp, lang, log, orth, page
 
 # pylint: disable=line-too-long
 # TODO: (#0) Move to `utils/paths.py`.
@@ -33,8 +33,8 @@ class Substitution:
     def __init__(
         self,
         pattern: str,
-        repl: str,
-        text_repl: str = r"\1",
+        repl: str | typing.Callable[[re.Match[str]], str],
+        text_repl: str | typing.Callable[[re.Match[str]], str] = r"\1",
         ban: list[str] | None = None,
     ):
         """Initializes a Substitution object.
@@ -49,8 +49,8 @@ class Substitution:
                 field to verify that all substitutions are well-formed.
         """
         self.pattern: re.Pattern[str] = re.compile(pattern)
-        self.repl: str = repl
-        self.text_repl: str = text_repl
+        self.repl: str | typing.Callable[[re.Match[str]], str] = repl
+        self.text_repl: str | typing.Callable[[re.Match[str]], str] = text_repl
         self.ban: list[str] = ban or []
 
     def html(self, raw: str) -> str:
@@ -58,6 +58,49 @@ class Substitution:
 
     def text(self, raw: str) -> str:
         return self.pattern.sub(self.text_repl, raw)
+
+
+def bracketed(exp: str, repeat: int = 2) -> str:
+    """Construct a regex to match text surrounded by square brackets.
+
+    The expression will use negative lookbehind and lookahead to ensure that
+    whatever character follows or precedes is not a square bracket. This is
+    useful if your expression itself can contain brackets.
+
+    Args:
+        exp: Core of the expression.
+        repeat: How many square brackets need to be present on each side of the
+            expression.
+
+    Returns:
+        A string representing the full expression.
+    """
+    return r"(?<!\[)" + r"\[" * repeat + exp + r"\]" * repeat + r"(?!\])"
+
+
+# NOTE: It's important for Greek to precede Coptic, and Hebrew Arabic. Some
+# Greek words contain Coptic letters, and Arabic words often use the Hebrew
+# geresh.
+LANGS = ["GREEK", "COPTIC", "ARABIC", "HEBREW", "SYRIAC", "ETHIOPIC"]
+LANG_CLASS = {"SYRIAC": "ARAMAIC", "ETHIOPIC": "AMHARIC"}
+
+
+def replace_bracketed(match: re.Match[str]) -> str:
+    text: str = match.group(1)
+    del match
+    for language in LANGS:
+        if lang.has_lang(language, text):
+            # We found the language.
+            clas: str = LANG_CLASS.get(language, language).lower()
+            return f'<span class="{clas}">{text}</span>'
+
+    if text == "·":
+        # This special case happens to exist in the Wiki data. It likely
+        # shouldn't be classified as belonging to one of the languages, so we
+        # simply return the text itself.
+        return text
+
+    log.fatal("Can't infer language of bracketed text:", text)
 
 
 # Coptic Wiki substitutions:
@@ -100,7 +143,7 @@ _SUBSTITUTIONS: list[Substitution] = [
     ),
     Substitution(r"_(.+?)_", r"<i>\1</i>", ban=["_"]),
     Substitution(
-        r"\[\[(S|B|A|F|O)\]\]",
+        bracketed("(S|B|A|F|O)"),
         r'<span class="dialect \1">\1</span>',
         ban=["[[", "]]"],
     ),
@@ -113,13 +156,13 @@ _SUBSTITUTIONS: list[Substitution] = [
         # https://github.com/randykomforty/coptic/commits/main/scripts/dictionary_regexes.js
         # For each of these, we add a non-standard dialect entry in TypeScript,
         # so they can render properly.
-        r"\[\[(S|F|B|O)\^(a|f|b|af)\]\]",
+        bracketed(r"(S|F|B|O)\^(a|f|b|af)"),
         r'<span class="dialect \1\2">\1\2</span>',
         text_repl=r"\1\2",
         ban=["[[", "]]", "^"],
     ),
     Substitution(
-        r"\[\[(A\^2)\]\]",
+        bracketed(r"(A\^2)"),
         r'<span class="dialect L">A2</span>',
         text_repl="L",
         ban=["[[", "]]", "^"],
@@ -133,45 +176,9 @@ _SUBSTITUTIONS: list[Substitution] = [
         ban=["^"],
     ),
     Substitution(
-        r"\[\[\[(\(?\)?\[?\]?\.?…?-?[\u2c80-\u2cff\u03e2-\u03ef].*?\]?)\]\]\]",
+        bracketed("(.*?)", 3),
         r'<span class="headword coptic">\1</span>',
         ban=["[[[", "]]]"],
-    ),
-    Substitution(
-        r"\[\[(\(?\)?\[?\.?\.?\]?\.?,?…?-?·?\s?[\u2c80-\u2cff\u03e2-\u03ef].*?\]?)\]\]",
-        r'<span class="coptic">\1</span>',
-        ban=["[[", "]]"],
-    ),
-    Substitution(
-        r"\[\[(\(?\)?\[?\]?\.?…?·?\s?-?[\u0370-\u03e1\u03f0-\u03ff\u1f00-\u1fff].*?)\]\]",
-        r'<span class="greek">\1</span>',
-        ban=["[[", "]]"],
-    ),
-    Substitution(
-        r"\[\[(\(?\)?\[?\]?\.?…?[\u05f3\u0600-\u06ff\ufe70-\ufeff].*?)\]\]",
-        r'<span class="arabic">\1</span>',
-        ban=["[[", "]]"],
-    ),
-    Substitution(
-        r"\[\[(\(?\)?\[?\]?\.?…?[\u0700-\u074f].*?)\]\]",
-        r'<span class="aramaic">\1</span>',
-        ban=["[[", "]]"],
-    ),
-    Substitution(
-        r"\[\[(\(?\)?\[?\]?\.?…?[\u0590-\u05ff].*?)\]\]",
-        r'<span class="hebrew">\1</span>',
-        ban=["[[", "]]"],
-    ),
-    Substitution(
-        r"\[\[(\(?\)?\[?\]?\.?…?[\u1200-\u137f\u1380-\u139f\u2d80-\u2ddf\uab00-\uab2f\u1e7e0-\u1e7ff].*?)\]\]",
-        r'<span class="amharic">\1</span>',
-        ban=["[[", "]]"],
-    ),
-    Substitution(
-        "†",
-        # The qualitative rule is unnecessary, especially given #476.
-        "†",
-        text_repl="†",
     ),
     Substitution(
         r"\\n",
@@ -179,6 +186,7 @@ _SUBSTITUTIONS: list[Substitution] = [
         text_repl="\n",
         ban=["\\"],
     ),
+    Substitution(bracketed(r"(.*?)"), replace_bracketed, ban=["[[", "]]"]),
 ]
 # pylint: enable=line-too-long
 
@@ -279,7 +287,7 @@ class Wiki:
         headword = orth.clean_diacritics(headword)
 
         ensure.ensure(
-            all(map(lang.is_coptic_char, headword)),
+            lang.is_lang("COPTIC", headword),
             "can not determine the lexicographic key of",
             self.headword,
         )

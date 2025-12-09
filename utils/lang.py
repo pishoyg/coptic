@@ -3,13 +3,9 @@
 import unicodedata
 
 
-def is_coptic_char(c: str) -> bool:
-    return "COPTIC" in unicodedata.name(c, "")
+def is_lang(lang: str, text: str) -> bool:
+    return all(lang in unicodedata.name(c, "") for c in text)
 
 
-def is_greek_char(c: str) -> bool:  # dead: disable
-    return "GREEK" in unicodedata.name(c, "")
-
-
-def is_arabic_char(c: str) -> bool:
-    return "ARABIC" in unicodedata.name(c, "")
+def has_lang(lang: str, text: str) -> bool:
+    return any(lang in unicodedata.name(c, "") for c in text)

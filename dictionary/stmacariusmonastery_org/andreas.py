@@ -87,7 +87,7 @@ class Span:
         self.text = self.text.translate(constants.LANG_ENCODING[self.language])
 
     def _determine_language(self, style: str | None) -> Language:
-        if any(map(lang.is_arabic_char, self.text)):
+        if lang.has_lang("ARABIC", self.text):
             return Language.ARABIC
 
         if not style:
@@ -347,7 +347,7 @@ class DictionaryEntry:
                         "Paragraph starts an entry but has no Coptic prefix:",
                         p,
                     )
-                elif not lang.is_coptic_char(prefix[0]):
+                elif not lang.is_lang("COPTIC", prefix[0]):
                     log.error(
                         "Coptic prefix doesn't start with Coptic text:",
                         p,
@@ -383,7 +383,7 @@ class DictionaryEntry:
         # an assertion if the check has no false positives.
         if not back:
             log.error("Entry doesn't have a definition:", self)
-        elif not any(map(lang.is_arabic_char, back)):
+        elif not lang.has_lang("ARABIC", back):
             log.error("Entry's definition has no Arabic:", self)
         return back
 
