@@ -391,7 +391,7 @@ const NAG_HAMMADI_RE =
  */
 export function handleNagHammadi(root) {
   root.querySelectorAll(`.${cls.NAG_HAMMADI}`).forEach((elem) => {
-    html.replaceText(elem, NAG_HAMMADI_RE, (match, remainder) => {
+    html.replaceText(elem, NAG_HAMMADI_RE, (match, _, remainder) => {
       const anchor = document.createElement('a');
       anchor.target = '_blank';
       const [codex, title, leaf, line] = [

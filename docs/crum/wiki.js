@@ -288,7 +288,7 @@ export function handleAnnotations(root) {
     html.replaceText(
       root,
       regex,
-      (match, _, __, node) => {
+      (match, node, _) => {
         const annot = ann.MAPPING[match[0]];
         if (!annot) {
           return {};
@@ -318,21 +318,24 @@ export function handlePages(root) {
   html.replaceText(
     root,
     PAGE_RE,
-    (match, remainder, nextSibling) => {
+    (match, node, remainder) => {
       // A page number has the ormat 'p [0-9]+ [ab]?'. The regex matches the
       // first two parts (the letter "p" and the page number). The column number
       // lives in an <i> tag, which should be the next sibling.
       // However, we only inspect it if the remainder of the current string is
       // a single space character that sits between the page number and the
       // column name.
-      const col = remainder === ' ' ? (nextSibling?.textContent ?? '') : '';
+      // TODO: (#194) Verify that the next sibling is actually the column
+      // number.
+      const col =
+        remainder === ' ' ? (node.nextSibling?.textContent ?? '') : '';
       const a = document.createElement('a');
       a.href = paths.crumScan(`${match[1]}${col}`);
       a.target = '_blank';
       a.textContent = match[0];
-      if (col && nextSibling) {
+      if (col && node.nextSibling) {
         // We actually got the column from the next sibling.
-        a.append(' ', nextSibling);
+        a.append(' ', node.nextSibling);
         // Reset the remainder. It was a single space character, but we've
         // just added a corresponding character to the constructed anchor.
         remainder = '';
@@ -442,7 +445,7 @@ export function handleBible(root) {
     html.replaceText(
       root,
       regex,
-      (match, remainder) => {
+      (match, _, remainder) => {
         const result = parseBibleCitation(match, remainder);
         if (!result) {
           return {};
@@ -526,11 +529,12 @@ function dereference(elem) {
 /**
  *
  * @param match
+ * @param node
  * @param remainder
- * @param nextSibling
  * @returns
  */
-function replaceReference(match, remainder, nextSibling) {
+function replaceReference(match, node, remainder) {
+  let nextSibling = node.nextSibling;
   // Parse a suffix from the remainder. Update the remainder.
   let suffix = SUFFIX.exec(remainder)?.[0];
   remainder = remainder.slice(suffix?.length);

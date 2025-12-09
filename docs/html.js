@@ -108,7 +108,7 @@ export function replaceText(root, regex, replace, exclude) {
       const remainder = text.slice(match.index + match[0].length);
       // Call the replacer function to get the replacement and the new
       // remainder.
-      const result = replace(match, remainder, node.nextSibling, node);
+      const result = replace(match, node, remainder);
       // If a custom replacement is provided, insert it. Otherwise, insert the
       // original text.
       fragment.append(result.replacement ?? match[0]);
