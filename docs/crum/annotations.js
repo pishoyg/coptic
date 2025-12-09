@@ -117,6 +117,8 @@ export const DATA = [
   { fullForm: 'arithmetic', variants: ['arithm'] },
   { fullForm: 'biblical', variants: ['bibl'] }, // NOTE: Encountered only once, as of the time of writing!
   { fullForm: 'bis', variants: ['bis'] }, // NOTE: Full form same as abbreviation, included for completion!
+  { fullForm: 'condition', variants: ['condit'] },
+  { fullForm: 'conjunctive', variants: ['conj'] },
   { fullForm: 'constructive', variants: ['constr', 'construct'] },
   { fullForm: 'confer', variants: ['cf'] },
   { fullForm: 'Coptic', variants: ['Copt'], noCaseVariant: true },
@@ -147,6 +149,7 @@ export const DATA = [
   { fullForm: 'perfect', variants: ['perf', 'pf'] },
   { fullForm: 'Persian', variants: ['Pers'], noCaseVariant: true },
   { fullForm: 'pluperfect', variants: ['pluperf'] },
+  { fullForm: 'postpositive', variants: ['post-posit'] }, // NOTE: Encountered only once, as of the time of writing!
   { fullForm: 'possessive', variants: ['possess'] },
   { fullForm: 'predicate', variants: ['predic'] },
   // TODO: (#194) "prepos" was only encountered once so far, and it was intended
@@ -158,14 +161,16 @@ export const DATA = [
   { fullForm: 'recto folio', variants: ['ro'], noCaseVariant: true },
   { fullForm: 'reference', variants: ['ref'] },
   { fullForm: 'sub voce', variants: ['s v'] },
+  { fullForm: 'subjunctive', variants: ['subjunct'] },
   { fullForm: 'sic erat scriptum', variants: ['sic'] },
   { fullForm: 'sic lege', variants: ['sic l'] },
   { fullForm: 'scilicet', variants: ['sc'] },
   { fullForm: 'subject', variants: ['subj'] },
+  { fullForm: 'subordinate', variants: ['subord'] }, // NOTE: Encountered only once, as of the time of writing!
   { fullForm: 'supra', variants: ['sup'] },
   { fullForm: 'Syriac', variants: ['syr'] }, // NOTE: Encountered only once, as of the time of writing!
   { fullForm: 'translation, translated', variants: ['transl'] },
-  { fullForm: 'variants', variants: ['varr'] },
+  { fullForm: 'variants', variants: ['varr', 'vars'] },
   { fullForm: 'ultimo', variants: ['ult'] },
   { fullForm: 'ut supra', variants: ['ut sup'] },
   { fullForm: 'verbs', variants: ['vbs'] },

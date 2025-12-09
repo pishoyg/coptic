@@ -2313,6 +2313,12 @@ const DATA_2 = [
   },
   {
     source: {
+      title: 'Apostolic Constitutions',
+    },
+    variants: ['Const Ap'],
+  },
+  {
+    source: {
       title: 'Presumably Edward Charles Everard Owen (1860-1949)',
     },
     variants: ['E C Owen'],
