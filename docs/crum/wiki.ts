@@ -305,7 +305,7 @@ export function handleAnnotations(root: HTMLElement): void {
     html.replaceText(
       root,
       regex,
-      (match: RegExpExecArray, _, __, node: Text): { replacement?: Node } => {
+      (match: RegExpExecArray, node: Text, _): { replacement?: Node } => {
         const annot: ann.Annotation | undefined = ann.MAPPING[match[0]];
         if (!annot) {
           return {};
@@ -338,8 +338,8 @@ export function handlePages(root: HTMLElement): void {
     PAGE_RE,
     (
       match: RegExpExecArray,
-      remainder: string,
-      nextSibling: ChildNode | null
+      node: Text,
+      remainder: string
     ): { replacement?: Node; remainder: string } => {
       // A page number has the ormat 'p [0-9]+ [ab]?'. The regex matches the
       // first two parts (the letter "p" and the page number). The column number
@@ -347,15 +347,17 @@ export function handlePages(root: HTMLElement): void {
       // However, we only inspect it if the remainder of the current string is
       // a single space character that sits between the page number and the
       // column name.
+      // TODO: (#194) Verify that the next sibling is actually the column
+      // number.
       const col: string =
-        remainder === ' ' ? (nextSibling?.textContent ?? '') : '';
+        remainder === ' ' ? (node.nextSibling?.textContent ?? '') : '';
       const a: HTMLAnchorElement = document.createElement('a');
       a.href = paths.crumScan(`${match[1]!}${col}`);
       a.target = '_blank';
       a.textContent = match[0];
-      if (col && nextSibling) {
+      if (col && node.nextSibling) {
         // We actually got the column from the next sibling.
-        a.append(' ', nextSibling);
+        a.append(' ', node.nextSibling);
         // Reset the remainder. It was a single space character, but we've
         // just added a corresponding character to the constructed anchor.
         remainder = '';
@@ -475,7 +477,11 @@ export function handleBible(root: HTMLElement): void {
     html.replaceText(
       root,
       regex,
-      (match: RegExpExecArray, remainder: string): { replacement?: Node } => {
+      (
+        match: RegExpExecArray,
+        _,
+        remainder: string
+      ): { replacement?: Node } => {
         const result: { url: string; name: string } | null = parseBibleCitation(
           match,
           remainder
@@ -578,15 +584,16 @@ function dereference(elem: ChildNode): void {
 /**
  *
  * @param match
+ * @param node
  * @param remainder
- * @param nextSibling
  * @returns
  */
 function replaceReference(
   match: RegExpExecArray,
-  remainder: string,
-  nextSibling: ChildNode | null
+  node: Text,
+  remainder: string
 ): { replacement?: Node; remainder?: string } {
+  let nextSibling: ChildNode | null = node.nextSibling;
   // Parse a suffix from the remainder. Update the remainder.
   let suffix: string | undefined = SUFFIX.exec(remainder)?.[0];
   remainder = remainder.slice(suffix?.length);

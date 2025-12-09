@@ -465,6 +465,7 @@ export function handleNagHammadi(root: HTMLElement): void {
         NAG_HAMMADI_RE,
         (
           match: RegExpExecArray,
+          _,
           remainder: string
         ): { replacement: Node; remainder: string } => {
           const anchor: HTMLAnchorElement = document.createElement('a');

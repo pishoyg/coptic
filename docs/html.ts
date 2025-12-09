@@ -99,9 +99,8 @@ export function replaceText(
   regex: RegExp,
   replace: (
     match: RegExpExecArray,
-    remainder: string,
-    nextSibling: ChildNode | null,
-    node: Text
+    node: Text,
+    remainder: string
   ) => { replacement?: Node; remainder?: string },
   exclude?: string
 ): void {
@@ -141,7 +140,7 @@ export function replaceText(
 
       // Call the replacer function to get the replacement and the new
       // remainder.
-      const result = replace(match, remainder, node.nextSibling, node);
+      const result = replace(match, node, remainder);
 
       // If a custom replacement is provided, insert it. Otherwise, insert the
       // original text.
