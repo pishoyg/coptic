@@ -164,9 +164,26 @@ figcaption {
   }
 
   & .bullet {
-    color: brown;
+    color: firebrick;
     font-weight: bold;
-    margin-left: 0.75em;
+
+    /* Bullets are also used in cross references. For example, the following
+     * text is present under ⲃⲱⲗ[1] (with parentheses):
+     *   (v also I. a)
+     *   (v also II. a)
+     * We maintain a small margin, in order to avoid out-of-place large spaces.
+     * We rely on the distinctive color of the bullets to increase their
+     * visibility.
+     *
+     * We considered adopting a heuristic that tries to determine whether a
+     * given bullet should be spaced or not (for example, by looking at whether
+     * it's contained within parentheses). But we have an aversion of
+     * heuristics, and we have too many of them already. This is simpler and
+     * sufficient.
+     *
+     * [1] https://remnqymi.com/crum/54.html
+     * */
+    margin-left: 0.25em;
   }
 }
 
