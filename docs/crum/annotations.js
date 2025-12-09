@@ -115,8 +115,10 @@ export const DATA = [
   { fullForm: 'aorist', variants: ['aor'] },
   { fullForm: 'approximate', variants: ['approx', 'approxim'] },
   { fullForm: 'arithmetic', variants: ['arithm'] },
-  { fullForm: 'biblical', variants: ['bibl'] }, // NOTE: Encountered only once, as of the time of writing!
-  { fullForm: 'bis', variants: ['bis'] }, // NOTE: Full form same as abbreviation, included for completion!
+  // NOTE: 'bibl' encountered only once, as of the time of writing!
+  { fullForm: 'biblical', variants: ['bibl'] },
+  // NOTE: 'bis' full form same as abbreviation, included for completion!
+  { fullForm: 'bis', variants: ['bis'] },
   { fullForm: 'condition', variants: ['condit'] },
   { fullForm: 'conjunctive', variants: ['conj'] },
   { fullForm: 'constructive', variants: ['constr', 'construct'] },
@@ -144,20 +146,24 @@ export const DATA = [
   { fullForm: 'manuscript', variants: ['MS'], noCaseVariant: true },
   { fullForm: 'manuscripts', variants: ['MSS'], noCaseVariant: true },
   { fullForm: 'negative', variants: ['neg'] },
-  // TODO: (#194) Add Annotation for "partic". Is it "particle" or "participle"?
-  { fullForm: 'penes', variants: ['penes'] }, // NOTE: Full form same as abbreviation, included for completion!
+  // NOTE: 'partic' encountered once, as of the time of writing!
+  { fullForm: 'participle', variants: ['particip', 'partic'] },
+  // NOTE: 'penes' full form same as abbreviation, included for completion!
+  { fullForm: 'penes', variants: ['penes'] },
   { fullForm: 'perfect', variants: ['perf', 'pf'] },
   { fullForm: 'Persian', variants: ['Pers'], noCaseVariant: true },
   { fullForm: 'pluperfect', variants: ['pluperf'] },
-  { fullForm: 'postpositive', variants: ['post-posit'] }, // NOTE: Encountered only once, as of the time of writing!
+  // NOTE: 'post-posit' encountered only once, as of the time of writing!
+  { fullForm: 'postpositive', variants: ['post-posit'] },
   { fullForm: 'possessive', variants: ['possess'] },
   { fullForm: 'predicate', variants: ['predic'] },
-  // TODO: (#194) "prepos" was only encountered once so far, and it was intended
+  // NOTE: "prepos" was only encountered once so far, and it was intended
   // to mean "prepositional". Could it also mean "preposition"?
   { fullForm: 'prepositional', variants: ['prepos'] },
   { fullForm: 'preterite', variants: ['preter'] },
   { fullForm: 'quod vide', variants: ['q v'] },
-  { fullForm: 'radical', variants: ['rad'] }, // NOTE: Encountered only once, as of the time of writing!
+  // NOTE: 'rad' encountered only once, as of the time of writing!
+  { fullForm: 'radical', variants: ['rad'] },
   { fullForm: 'recto folio', variants: ['ro'], noCaseVariant: true },
   { fullForm: 'reference', variants: ['ref'] },
   { fullForm: 'sub voce', variants: ['s v'] },
@@ -166,9 +172,11 @@ export const DATA = [
   { fullForm: 'sic lege', variants: ['sic l'] },
   { fullForm: 'scilicet', variants: ['sc'] },
   { fullForm: 'subject', variants: ['subj'] },
-  { fullForm: 'subordinate', variants: ['subord'] }, // NOTE: Encountered only once, as of the time of writing!
+  // NOTE: 'subord' encountered only once, as of the time of writing!
+  { fullForm: 'subordinate', variants: ['subord'] },
   { fullForm: 'supra', variants: ['sup'] },
-  { fullForm: 'Syriac', variants: ['syr'] }, // NOTE: Encountered only once, as of the time of writing!
+  // NOTE: 'syr' encountered only once, as of the time of writing!
+  { fullForm: 'Syriac', variants: ['syr'] },
   { fullForm: 'translation, translated', variants: ['transl'] },
   { fullForm: 'variants', variants: ['varr', 'vars'] },
   { fullForm: 'ultimo', variants: ['ult'] },
