@@ -62,10 +62,12 @@ const ABBREVIATION_EXCLUDE: string = css.classQuery(
   cls.ANNOTATION,
   // Glosses definitely have no abbreviations. Exclude for protectiveness.
   cls.GLOSS,
-  // Processing Greek and Coptic text doesn't pose any risk of collision, but
-  // we exclude them to slightly speed up the code.
-  cls.GREEK,
-  cls.COPTIC
+  // Greek and text doesn't pose any risk of collision, but
+  // we exclude it to slightly speed up the code.
+  // We do, however, process Coptic text for annotations, because the signs for
+  // verb forms (prenominal, pronominal, and qualitative) are often marked as
+  // Coptic.
+  cls.GREEK
 );
 
 /**
