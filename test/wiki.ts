@@ -40,8 +40,8 @@ const TEST_CASES: {
     want: {
       references: 377,
       suffixes: 379,
-      bible: 292,
-      dialectTooltips: 833,
+      bible: 293,
+      dialectTooltips: 832,
       annotations: 260,
     },
   },
