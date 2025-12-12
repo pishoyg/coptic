@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["andreas_main.ts"],
+  "sourcesContent": ["/* Main function for a KELLIA note. */\nimport * as andreas from './andreas.js';\n\n/**\n *\n */\nfunction main(): void {\n  andreas.handle(document.body);\n}\n\nmain();\n"],
+  "mappings": "aACA,UAAYA,MAAa,eAKzB,SAASC,GAAa,CACpBD,EAAQ,OAAO,SAAS,IAAI,CAC9B,CAEAC,EAAK",
+  "names": ["andreas", "main"]
+}

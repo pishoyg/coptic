@@ -1,9 +1,2 @@
-/* Main function for a KELLIA note. */
-import * as andreas from './andreas.js';
-/**
- *
- */
-function main() {
-  andreas.handle(document.body);
-}
-main();
+"use strict";import*as n from"./andreas.js";function o(){n.handle(document.body)}o();
+//# sourceMappingURL=andreas_main.js.map

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["andreas.ts"],
+  "sourcesContent": ["import * as crum from './crum.js';\n\n/**\n *\n * @param root\n */\nexport function handle(root: HTMLElement): void {\n  crum.addGreekLookups(root);\n}\n"],
+  "mappings": "aAAA,UAAYA,MAAU,YAMf,gBAAS,OAAOC,EAAyB,CAC9CD,EAAK,gBAAgBC,CAAI,CAC3B",
+  "names": ["crum", "root"]
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["kellia_main.ts"],
+  "sourcesContent": ["/* Main function for a KELLIA note. */\nimport * as kellia from './kellia.js';\nimport * as high from './highlight.js';\nimport * as dial from './dialect.js';\n\n/**\n *\n */\nfunction main(): void {\n  kellia.handle(document.body, new high.Highlighter(new dial.Manager(), []));\n}\n\nmain();\n"],
+  "mappings": "aACA,UAAYA,MAAY,cACxB,UAAYC,MAAU,iBACtB,UAAYC,MAAU,eAKtB,SAASC,GAAa,CACpBH,EAAO,OAAO,SAAS,KAAM,IAAIC,EAAK,YAAY,IAAIC,EAAK,QAAW,CAAC,CAAC,CAAC,CAC3E,CAEAC,EAAK",
+  "names": ["kellia", "high", "dial", "main"]
+}

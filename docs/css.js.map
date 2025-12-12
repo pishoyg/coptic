@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["css.ts"],
+  "sourcesContent": ["/** Package css defines generic CSS helpers. */\n\n/**\n * @param classes - A list of HTML classes.\n * @returns A query that matches all elements belonging to ANY of the given\n * classes.\n */\nexport function classQuery(...classes: string[]): string {\n  return classes.map((c) => `.${c}`).join(', ');\n}\n"],
+  "mappings": "aAOO,gBAAS,cAAcA,EAA2B,CACvD,OAAOA,EAAQ,IAAKC,GAAM,IAAIA,CAAC,EAAE,EAAE,KAAK,IAAI,CAC9C",
+  "names": ["classes", "c"]
+}

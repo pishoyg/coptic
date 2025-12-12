@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["book.ts"],
+  "sourcesContent": ["/* In the book, the Additions and Corrections range from page xv to page xxiv in\n * the introduction, immediately preceding page 1 which starts the body of the\n * book.\n *\n * In other words, Addenda range from pages -9 to page 0.\n */\nconst ADDENDA_START = -9;\nconst ADDENDA_PAGES: string[] = [\n  'xv',\n  'xvi',\n  'xvii',\n  'xviii',\n  'xix',\n  'xx',\n  'xxi',\n  'xxii',\n  'xxiii',\n  'xxiv',\n];\n\nexport const ADDENDA_ROMAN_TO_INT = Object.fromEntries(\n  ADDENDA_PAGES.map((item, index) => [item, ADDENDA_START + index])\n);\n"],
+  "mappings": "aAMA,MAAMA,EAAgB,GAChBC,EAA0B,CAC9B,KACA,MACA,OACA,QACA,MACA,KACA,MACA,OACA,QACA,MACF,EAEO,aAAM,qBAAuB,OAAO,YACzCA,EAAc,IAAI,CAACC,EAAMC,IAAU,CAACD,EAAM,GAAgBC,CAAK,CAAC,CAClE",
+  "names": ["ADDENDA_START", "ADDENDA_PAGES", "item", "index"]
+}

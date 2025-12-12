@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["header.ts"],
+  "sourcesContent": ["/** Package header defines the header logic. */\nimport * as paths from './paths.js';\n\nexport enum CLS {\n  // TODO: (#203) Header cells should perhaps have IDs and not classes.\n\n  /** RESET is the class of our reset buttons. */\n  RESET = 'reset',\n\n  /** DEVELOPER is the key of elements that toggle developer mode when\n   * clicked. */\n  DEVELOPER = 'developer',\n}\n\n/**\n * @returns\n */\nexport function reports(): string {\n  const url = new URL(paths.REPORTS);\n  url.searchParams.set(paths.REPORTS_PAGE_PARAM, window.location.href);\n  return url.toString();\n}\n"],
+  "mappings": "aACA,UAAYA,MAAW,aAEhB,WAAK,KAAAC,IAIVA,EAAA,MAAQ,QAIRA,EAAA,UAAY,YARFA,IAAA,SAcL,gBAAS,SAAkB,CAChC,MAAMC,EAAM,IAAI,IAAIF,EAAM,OAAO,EACjC,OAAAE,EAAI,aAAa,IAAIF,EAAM,mBAAoB,OAAO,SAAS,IAAI,EAC5DE,EAAI,SAAS,CACtB",
+  "names": ["paths", "CLS", "url"]
+}

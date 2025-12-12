@@ -1,8 +1,2 @@
-import * as crum from './crum.js';
-/**
- *
- * @param root
- */
-export function handle(root) {
-  crum.addGreekLookups(root);
-}
+"use strict";import*as e from"./crum.js";export function handle(o){e.addGreekLookups(o)}
+//# sourceMappingURL=andreas.js.map
