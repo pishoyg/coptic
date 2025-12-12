@@ -44,13 +44,11 @@ def _print_next_key(keys: abc.Container[str]) -> None:
 # We have difficulty reading JSON files on Anki, so we generate the row number
 # mapping in a JavaScript file.
 def _row_nums_js(mapping: abc.Iterable[tuple[int, int]]) -> abc.Generator[str]:
-    yield "/* eslint-disable max-lines */"
     yield "export const MAPPING = {"
     for row in mapping:
         key, value = row
         yield f"{key}: {value},"
     yield "};"
-    yield "/* eslint-enable max-lines */"
 
 
 def _write_row_nums(

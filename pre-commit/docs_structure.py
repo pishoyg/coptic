@@ -119,6 +119,7 @@ PATTERNS: list[Pattern] = [
     Pattern(["marcion/index.html"]),
     # Auto-generated (JavaScript):
     Pattern(["**.js"]),
+    Pattern(["**.js.map"]),
     # Auto-generated (lexicon):
     Pattern(["crum/*.html"]),
     Pattern(

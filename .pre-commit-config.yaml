@@ -20,7 +20,10 @@
 # consistent output that doesn't get modified by the pre-commits. Revisit.
 fail_fast: true
 
-exclude: ^archive/
+# Ignore all files in the Archive.
+# Also ignore JavaScript artifacts, since they're auto-generated, and
+# (mostly) minified.
+exclude: ^archive/|^docs/.*\.js(\.map)?$
 
 repos:
 

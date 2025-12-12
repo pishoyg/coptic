@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "./test/**/*.ts",
+    "playwright.config.ts",
+    "eslint.config.ts"
+  ],
+  "compilerOptions": {
+    "module": "NodeNext"
+  }
+}

@@ -3,13 +3,10 @@
   "include": [
     "./docs/**/*.ts"
   ],
-  // Unit tests have their own TSConfig, so they are excluded from this config.
-  "exclude": [
-    "./docs/**/*.test.ts"
-  ],
   "compilerOptions": {
     "target": "ES2022",
     "module": "ESNext",
+    "noEmit": true,
     "noEmitOnError": true,
     "preserveConstEnums": true,
     "esModuleInterop": true,

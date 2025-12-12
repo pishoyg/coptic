@@ -82,19 +82,29 @@ yo: FORCE
 ########## TypeScript ##########
 transpile: FORCE
 	# Transpile TypeScript to JavaScript.
-	npx tsc -p "tsconfig.json"
+	npx esbuild \
+		$$(find docs -name "*.ts" -not -name "*.test.ts" -not -name "*.d.ts") \
+		--outdir=docs \
+		--minify \
+		--sourcemap
 
 javascript:
 	# Create a JavaScript transpilation commit.
-	@if git status --porcelain | grep -v '\.js$$' | grep -q .; then \
+	@if git status --porcelain | grep -Ev '\.js(\.map)?$$' | grep -q .; then \
 		echo -e "$${RED}Dirty worktree contains non-JavaScript files.$${RESET}"; \
 		echo -e "$${YELLOW}$$(git status --porcelain | grep -v '\.js$$')$${RESET}"; \
 		exit 1; \
 	fi
 
-	$(MAKE) transpile test
+	# Run the TypeScript compiler for validation. No JavaScript is written.
+	# TODO: (#0) Move to a pre-commit. This doesn't belong here.
+	npx tsc -p "tsconfig.json"
 
-	git commit --no-verify --message '[TypeScript] `make transpile test`'
+	# Transpile the TypeScript.
+	$(MAKE) transpile
+
+	git add --all
+	git commit --no-verify --message '[TypeScript] `make javascript`'
 
 ########## BIBLE ##########
 bible: FORCE

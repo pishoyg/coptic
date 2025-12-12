@@ -7,9 +7,10 @@ import stylistic from '@stylistic/eslint-plugin';
 import eslintPluginPrettier from 'eslint-plugin-prettier';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import eslintPluginJsdoc from 'eslint-plugin-jsdoc';
+import config from 'eslint/config';
 
 /* eslint-disable no-magic-numbers */
-export default tseslint.config(
+export default config.defineConfig(
   // Shared rules.
   eslint.configs.recommended,
   tseslint.configs.eslintRecommended,
@@ -203,9 +204,8 @@ export default tseslint.config(
     languageOptions: {
       parserOptions: {
         project: [
-          './tsconfig.json', // For the site logic.
-          './tsconfig_test.json', // For unit tests.
-          './tsconfig_playwright.json', // For Playwright tests and artifacts.
+          './tsconfig.json', // For browser code.
+          './tsconfig_node.json', // For Node artifacts.
         ],
       },
       globals: {
@@ -252,16 +252,7 @@ export default tseslint.config(
     },
   },
   {
-    // JavaScript-only rules.
-    files: ['**/*.js', '**/*.jsx', '**/*.cjs', '**/*.mjs'],
-    ...tseslint.configs.disableTypeChecked,
-  },
-  {
-    // JavaScript-only rules.
-    files: ['**/*.js', '**/*.jsx', '**/*.cjs', '**/*.mjs'],
-    rules: {
-      'max-len': ['warn'],
-      '@typescript-eslint/no-unused-expressions': 'warn',
-    },
+    // JavaScript files under `docs/` are minified and never linted.
+    ignores: ['docs/**/*.js'],
   }
 );
