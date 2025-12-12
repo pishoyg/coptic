@@ -84,7 +84,7 @@ transpile: FORCE
 	# Transpile TypeScript to JavaScript.
 	npx tsc -p "tsconfig.json"
 
-transpile_commit:
+javascript:
 	# Create a JavaScript transpilation commit.
 	@if git status --porcelain | grep -v '\.js$$' | grep -q .; then \
 		echo -e "$${RED}Dirty worktree contains non-JavaScript files.$${RESET}"; \
