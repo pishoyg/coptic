@@ -107,7 +107,6 @@ export const DATA = [
   { fullForm: 'second future', variants: ['2 fut', '2d fut'] },
   // TODO: (#194) Is there a third perfect or third present?
   { fullForm: 'third future', variants: ['3 fut'] },
-  { fullForm: 'excluding', variants: ['exc'] },
   { fullForm: 'et cetera', variants: ['&c'] },
   { fullForm: 'absolute', variants: ['absol'] },
   { fullForm: 'Anno Domini', variants: ['AD'], noCaseVariant: true },
@@ -129,7 +128,9 @@ export const DATA = [
   { fullForm: 'determination', variants: ['determ', 'determin'] },
   { fullForm: 'exempli gratia', variants: ['e g'] },
   { fullForm: 'Ethiopic', variants: ['Ethiop'] },
+  { fullForm: 'equivalent', variants: ['equiv'] },
   { fullForm: 'etymology', variants: ['etymol'] },
+  { fullForm: 'excluding', variants: ['exc'] },
   { fullForm: 'fragment', variants: ['frag'] },
   { fullForm: 'future', variants: ['fut'] },
   { fullForm: 'Hebrew', variants: ['Heb', 'Hebr'], noCaseVariant: true },
@@ -143,8 +144,10 @@ export const DATA = [
   { fullForm: 'imperfect', variants: ['impf'] },
   { fullForm: 'improbable', variants: ['improb'] },
   { fullForm: 'loco citato', variants: ['l c'] },
+  { fullForm: 'Latin', variants: ['Lat'], noCaseVariant: true },
   { fullForm: 'manuscript', variants: ['MS'], noCaseVariant: true },
   { fullForm: 'manuscripts', variants: ['MSS'], noCaseVariant: true },
+  { fullForm: 'metaphor', variants: ['metaph'] },
   { fullForm: 'negative', variants: ['neg'] },
   // NOTE: 'partic' encountered once, as of the time of writing!
   { fullForm: 'participle', variants: ['particip', 'partic'] },

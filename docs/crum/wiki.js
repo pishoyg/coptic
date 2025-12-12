@@ -177,8 +177,13 @@ export const PAGE_RE = new RegExp(str.bounded('p ([0-9]+)'));
 //     uppercase Latin letter could be a reference abbreviation or a suffix. We
 //     assume that, if it occurs after a reference abbreviation, then it's
 //     likely a suffix.
+// Define the core pattern (Number or Letter/Symbol).
+// We wrap it in a non-capturing group to safely use it in the larger regex.
+// TODO: (#0) Consider adding tooltips for ro (recto folio) and vo (verso
+// folio).
+const PART = "(?:'?[0-9]+[a-z]?\\*?|[a-zA-Z]|§|ro|vo|stele)";
 export const SUFFIX = new RegExp(
-  `^(?:\\.? (?:'?[0-9]+\\*?|[a-zA-Z§]))+${str.WORD_END.source}`,
+  `^\\.?(?: (?:${PART}|\\(${PART}(?: ${PART})*\\)))+${str.WORD_END.source}`,
   'u'
 );
 export const COMMA_SUFFIX = new RegExp(
@@ -321,28 +326,28 @@ export function handlePages(root) {
     root,
     PAGE_RE,
     (match, node, remainder) => {
-      // A page number has the ormat 'p [0-9]+ [ab]?'. The regex matches the
+      // A page number has the format 'p [0-9]+ [ab]?'. The regex matches the
       // first two parts (the letter "p" and the page number). The column number
       // lives in an <i> tag, which should be the next sibling.
-      // However, we only inspect it if the remainder of the current string is
-      // a single space character that sits between the page number and the
-      // column name.
-      // TODO: (#194) Verify that the next sibling is actually the column
-      // number.
-      const col =
-        remainder === ' ' ? (node.nextSibling?.textContent ?? '') : '';
-      const a = document.createElement('a');
-      a.href = paths.crumScan(`${match[1]}${col}`);
-      a.target = '_blank';
-      a.textContent = match[0];
-      if (col && node.nextSibling) {
-        // We actually got the column from the next sibling.
-        a.append(' ', node.nextSibling);
-        // Reset the remainder. It was a single space character, but we've
-        // just added a corresponding character to the constructed anchor.
-        remainder = '';
+      // Between the numerical part and the <i> tag there is expected to be a
+      // single space.
+      const col = node.nextSibling?.textContent;
+      if (
+        remainder !== ' ' ||
+        !node.nextSibling ||
+        (col !== 'a' && col !== 'b')
+      ) {
+        // This doesn't match the expected format.
+        return {};
       }
-      return { replacement: a, remainder };
+      const a = html.anchor(
+        paths.crumScan(`${match[1]}${col}`),
+        true,
+        match[0],
+        ' ',
+        node.nextSibling
+      );
+      return { replacement: a, remainder: '' };
     },
     // Exclude all Wiki abbreviations to avoid overlap.
     ABBREVIATION_EXCLUDE
