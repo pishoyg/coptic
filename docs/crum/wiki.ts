@@ -392,11 +392,13 @@ const DAN_OVERRIDE: Record<string, { chapter: string; name: string }> = {
 /**
  *
  * @param match
+ * @param node
  * @param remainder
  * @returns
  */
 function parseBibleCitation(
   match: RegExpExecArray,
+  node: Text,
   remainder: string
 ): { url: string; name: string } | null {
   // Our regex puts the book abbreviation in the first match group. The chapter
@@ -438,7 +440,7 @@ function parseBibleCitation(
     !verse &&
     ['Is', 'He', 'Col'].includes(bookAbbreviation) &&
     remainder.startsWith(' ') &&
-    remainder[1]?.match(/[a-z?]/i)
+    (remainder[1] ?? node.nextSibling?.textContent)?.match(/\p{L}/u)
   ) {
     return null;
   }
@@ -487,11 +489,12 @@ export function handleBible(root: HTMLElement): void {
       regex,
       (
         match: RegExpExecArray,
-        _,
+        node: Text,
         remainder: string
       ): { replacement?: Node } => {
         const result: { url: string; name: string } | null = parseBibleCitation(
           match,
+          node,
           remainder
         );
         if (!result) {
