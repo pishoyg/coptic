@@ -14,6 +14,7 @@ export const MAPPING = {
   Jos: { name: 'Joshua', path: 'joshua', numChapters: 24 },
   Jud: { name: 'Judges', path: 'judges', numChapters: 21 },
   Ru: { name: 'Ruth', path: 'ruth', numChapters: 4 },
+  Ruth: { name: 'Ruth', path: 'ruth', numChapters: 4 },
   '1 Kg': { name: 'First Samuel', path: 'first_samuel', numChapters: 31 },
   '2 Kg': { name: 'Second Samuel', path: 'second_samuel', numChapters: 24 },
   '3 Kg': { name: 'First Kings', path: 'first_kings', numChapters: 4 },
