@@ -1636,7 +1636,7 @@ const DATA_1: Resource[] = [
         'Crum, W. E. (1915). <em><a href="https://archive.org/details/derpapyruscodexs00crum/page/n7/mode/2up" rel="noreferrer noopener" target="_blank">Der Papyruscodex saec. VI-VII der Phillippsbibliothek in Cheltenham: Koptische theologische Schriften</a></em>. Strassburg: Karl J. Trübner.',
       ],
     },
-    variants: ['Pcod'],
+    variants: ['Pcod', 'PCod'],
   },
   {
     // TODO: (#523) This is better treated as a postfix of the above.
@@ -1984,6 +1984,7 @@ const DATA_1: Resource[] = [
       'BM',
       'BMOr',
       'Berl Or',
+      'BIF',
       'Bor',
       'C',
       'Cai',
