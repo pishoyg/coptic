@@ -184,8 +184,14 @@ export const PAGE_RE = new RegExp(str.bounded('p ([0-9]+)'));
 //     uppercase Latin letter could be a reference abbreviation or a suffix. We
 //     assume that, if it occurs after a reference abbreviation, then it's
 //     likely a suffix.
+
+// Define the core pattern (Number or Letter/Symbol).
+// We wrap it in a non-capturing group to safely use it in the larger regex.
+// TODO: (#0) Consider adding tooltips for ro (recto folio) and vo (verso
+// folio).
+const PART = "(?:'?[0-9]+[a-z]?\\*?|[a-zA-Z]|§|ro|vo|stele)";
 export const SUFFIX = new RegExp(
-  `^(?:\\.? (?:'?[0-9]+\\*?|[a-zA-Z§]))+${str.WORD_END.source}`,
+  `^\\.?(?: (?:${PART}|\\(${PART}(?: ${PART})*\\)))+${str.WORD_END.source}`,
   'u'
 );
 export const COMMA_SUFFIX = new RegExp(
