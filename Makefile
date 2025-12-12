@@ -96,13 +96,13 @@ javascript:
 		exit 1; \
 	fi
 
-	# Run the TypeScript compiler for validation. No JavaScript is written.
-	# TODO: (#0) Move to a pre-commit. This doesn't belong here.
-	npx tsc -p "tsconfig.json"
-
 	# Transpile the TypeScript.
 	$(MAKE) transpile
 
+	# Run Playwright tests.
+	# They should run as a pre-commit hook. However, right now, pre-commit ignores
+	# all JavaScript files, so we add this invocation here.
+	npx playwright test
 	git add --all
 	git commit --no-verify --message '[TypeScript] `make javascript`'
 
