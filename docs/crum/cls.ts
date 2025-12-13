@@ -54,6 +54,7 @@ export const NAG_HAMMADI = 'nag-hammadi';
 // TODO: (#203) Although this class's primary use is Anki, it might actually
 // belong in the header.
 export const NAVIGATE = 'navigate';
+export const PAGE = 'page';
 export const QUALITY = 'quality';
 /**
  * REFERENCE is the class of a reference in the Crum Wiki.

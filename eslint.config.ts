@@ -163,7 +163,7 @@ export default config.defineConfig(
       '@typescript-eslint/switch-exhaustiveness-check': 'error',
       'no-console': ['error'],
       '@typescript-eslint/no-floating-promises': 'error',
-      complexity: ['error', 12],
+      complexity: ['error', 15],
       'max-lines-per-function': [
         'error',
         { max: 50, skipBlankLines: true, skipComments: true },

@@ -1,6 +1,7 @@
 /**
  * Package wiki defines Crum Wiki handlers.
  */
+/* eslint-disable max-lines */
 
 import * as html from '../html.js';
 import * as paths from '../paths.js';
@@ -100,14 +101,22 @@ const ABBREVIATION_EXCLUDE: string = css.classQuery(
  * iteration.
  */
 const NUMS = '(\\d+|A|C|D|F)(?: (\\d+))?';
-// Match "NUMS" OR "(NUMS)"
-// NOTE: This creates two sets of capture groups.
-const CHAPTER_VERSE = `(?:\\.? (?:${NUMS}|\\(${NUMS}\\)))?`;
+// CHAPTER_VERSE matches "NUMS" OR "(NUMS)".
+// NOTE:
+// 1. This creates two sets of capture groups.
+// 2. This is a sticky regex.
+const CHAPTER_VERSE = new RegExp(`\\.? (?:${NUMS}|\\(${NUMS}\\))`, 'uy');
 export const BIBLE_RES: RegExp[] = [
-  new RegExp(str.bounded(`(EpJer|[A-Z][a-z]+)${CHAPTER_VERSE}`), 'gu'),
-  new RegExp(str.bounded(`([1-4] [A-Z][a-z]+)${CHAPTER_VERSE}`), 'gu'),
+  new RegExp(
+    str.bounded(`(EpJer|[A-Z][a-z]+)(?:${CHAPTER_VERSE.source})?`),
+    'gu'
+  ),
+  new RegExp(
+    str.bounded(`([1-4] [A-Z][a-z]+)(?:${CHAPTER_VERSE.source})?`),
+    'gu'
+  ),
 ];
-const FOLLOWUP = new RegExp(
+const BIBLE_FOLLOWUP = new RegExp(
   `^(?:, (${NUMS})${str.WORD_END.source}| \\((${NUMS})\\))`,
   'u'
 );
@@ -129,6 +138,7 @@ export const ANNOTATION_RES: RegExp[] = [
 
 export const PAGE_RE = new RegExp(str.bounded('p ([0-9]+)'));
 
+// NOTE: The following docs are outdated.
 // Pay attention to the following:
 // - Reference abbreviations always start with a capital letter. This must be
 //   enforced, in order to avoid errors.
@@ -188,20 +198,30 @@ export const PAGE_RE = new RegExp(str.bounded('p ([0-9]+)'));
 //     uppercase Latin letter could be a reference abbreviation or a suffix. We
 //     assume that, if it occurs after a reference abbreviation, then it's
 //     likely a suffix.
+const NUMBERS = [
+  "'?[0-9]+[a-z]?\\*?",
+  '§',
+  // TODO: (#0) Consider adding tooltips for the suffixes below.
+  'ro', // recto folio
+  'vo', // verso folio
+  'Ad', // Addenda
+  'stele',
+  '[a-zA-Z]',
+];
+const NUMBER = `(?:${NUMBERS.join('|')})`;
+// Some suffix parts are parenthesized.
+// The space before the parenthesis is optional.
+const NUMBER_GROUP = `(?: ${NUMBER}| ?\\(${NUMBER}(?: ${NUMBER})*\\))`;
 
-// Define the core pattern (Number or Letter/Symbol).
-// We wrap it in a non-capturing group to safely use it in the larger regex.
-// TODO: (#0) Consider adding tooltips for ro (recto folio) and vo (verso
-// folio).
-const PART = "(?:'?[0-9]+[a-z]?\\*?|[a-zA-Z]|§|ro|vo|stele)";
 export const SUFFIX = new RegExp(
-  `^\\.?(?: (?:${PART}|\\(${PART}(?: ${PART})*\\)))+${str.WORD_END.source}`,
+  `^\\.?${NUMBER_GROUP}+${str.WORD_END.source}`,
   'u'
 );
-export const COMMA_SUFFIX = new RegExp(
-  `^(?:,(?: (?:'?[0-9]+\\*?|[a-zA-Z§]))+)+${str.WORD_END.source}`,
+export const REFERENCE_FOLLOWUP = new RegExp(
+  `^(?:,${NUMBER_GROUP}+)+${str.WORD_END.source}`,
   'u'
 );
+
 const LETTER = /[a-zA-Z\p{M}&]/u;
 const SPECIAL_CASES: string[] = [
   // The following entries have more than 3 words:
@@ -267,13 +287,18 @@ export function handle(root: HTMLElement): void {
       // Bible abbreviations are not expected to collide with other
       // abbreviations. We do them early to move them out of the way.
       handleBible(elem);
-      // Some annotation abbreviations (e.g. MS for manuscript, MSS for
-      // manuscripts, and ostr for ostracon) are parts of some reference
-      // abbreviations. So references must be processed prior to annotations,
-      // and annotations must exclude pieces of text that have been marked as
-      // references.
+
       handleReferences(elem);
-      // NOTE: We search for occurrences of:
+
+      handlePages(elem);
+
+      // IB handling needs to follow handling of References, Bible, and Pages.
+      handleIB(elem);
+
+      // Comma handling need to follow IB handling, because some IB references
+      // are followed by commas. Needless to say, it also needs to follow
+      // reference handling.
+      // This searches for occurrences of:
       //   <reference>, <suffix>, <suffix>, ...
       // We do this after all references are detected to avoid mistakenly
       // interpreting a reference as a suffix.
@@ -285,15 +310,30 @@ export function handle(root: HTMLElement): void {
       // references gets caught, thus it won't be mistaken for a suffix of the P
       // reference.
       //
+      // Discovered commas and suffixes are merged into the reference that
+      // they follow.
+      //
       // [1] https://remnqymi.com/crum/510.html#:~:text=P%2044%2066,%20K%20179
       handleCommasAfterReferences(elem);
+
+      // Some annotation abbreviations (e.g. MS for manuscript, MSS for
+      // manuscripts, and ostr for ostracon) are parts of some reference
+      // abbreviations. So references must be processed prior to annotations,
+      // and annotations must exclude pieces of text that have been marked as
+      // references.
       handleAnnotations(elem);
-      handlePages(elem);
+
+      // Corrigenda handling has no interdependencies and no possibility of
+      // collision.
       handleCorrigenda(elem);
+
+      // Semicolon handling has no interdependencies and no possibility of
+      // collision.
       handleSemicolons(elem);
-      white.warnPotentiallyMissingReferences(elem, ABBREVIATION_EXCLUDE);
 
       dev.play(() => {
+        white.warnPotentiallyMissingReferences(elem, ABBREVIATION_EXCLUDE);
+
         const endText: string = drop.noTipTextContent(elem);
         // This handler should only add tooltips without modifying text content
         // at all. Verify that the text content hasn't changed.
@@ -374,6 +414,7 @@ export function handlePages(root: HTMLElement): void {
         ' ',
         node.nextSibling
       );
+      a.classList.add(cls.PAGE);
       return { replacement: [a], remainder: '' };
     },
     // Exclude all Wiki abbreviations to avoid overlap.
@@ -393,6 +434,20 @@ const DAN_OVERRIDE: Record<string, string> = { Su: 'a', Bel: 'c' };
  *
  */
 class Citation {
+  private static readonly DATA_BOOK = 'book';
+  private static readonly DATA_CHAPTER = 'chapter';
+  private static readonly DATA_VERSE = 'verse';
+
+  /*
+   * explicit tracks whether all numbers in this Citation are explicitly spelled
+   * out in its raw representation.
+   * All citations are initially explicit. Whenever a citation is updated with
+   * folloupws:
+   * 1. If all numbers are given, then the new citation is also explicit.
+   * 2. If some numbers are retrieved from the followups and some inherited from
+   *    the previous citation, then the citation is no longer explicit.
+   */
+  private explicit = true;
   /**
    *
    * @param raw
@@ -406,12 +461,13 @@ class Citation {
     private verse: string | undefined,
     private readonly book: bible.Book
   ) {
-    if (chapter && !verse && book.numChapters === 1) {
+    if (this.chapter && !this.verse && this.book.numChapters === 1) {
       // This is a one-chapter book. The chapter number is always 1. The number
       // immediately followed the book, which was interpreted as the chapter
       // number, is actually the verse number.
-      verse = chapter;
-      chapter = '1';
+      this.verse = this.chapter;
+      this.chapter = '1';
+      this.explicit = false;
     }
   }
 
@@ -422,10 +478,17 @@ class Citation {
    * @param first - First number within the text.
    * @param second - (Optional) second number within the text.
    */
-  public update(raw: string, first: string, second?: string): void {
+  public update(raw: string, first?: string, second?: string): void {
     this.raw = raw;
 
+    if (!first) {
+      // No numbers! Nothing to update!
+      this.explicit = false; // Both numbers are inherited.
+      return;
+    }
+
     if (second) {
+      this.explicit = true;
       // We got both numbers.
       this.chapter = first;
       this.verse = second;
@@ -435,10 +498,14 @@ class Citation {
     // Only one number is given. Whether this number updates the chapter or
     // verse depends on whether the original citation had a verse or not.
     if (this.verse) {
+      // Since we inherit the chapter number from the previous citation, this
+      // citation is no longer explicit.
+      this.explicit = false;
       this.verse = first;
       return;
     }
 
+    this.explicit = true;
     this.chapter = first;
   }
 
@@ -452,8 +519,44 @@ class Citation {
       this.raw
     );
     a.classList.add(cls.BIBLE);
-    drop.addDroppable(a, [this.book.name], 'hover', 'below');
+    a.dataset[Citation.DATA_BOOK] = this.book.abb;
+    a.dataset[Citation.DATA_CHAPTER] = this.chapter ?? '';
+    a.dataset[Citation.DATA_VERSE] = this.verse ?? '';
+    // If this citation is explicit (all numbers are present in `raw`), then
+    // including them in the tooltip would be redundant.
+    // However, if some numbers are inherited, we include the numbers in the
+    // tooltip for readability.
+    drop.addDroppable(a, [this.explicit ? this.book.name : this.name()]);
     return a;
+  }
+
+  /**
+   * @param node
+   * @returns
+   */
+  public static fromAnchor(node: HTMLElement): Citation {
+    return new Citation(
+      // TODO: (#0) Consider saving the `raw` field as well, for completion.
+      '',
+      /* eslint-disable @typescript-eslint/prefer-nullish-coalescing */
+      node.dataset[Citation.DATA_CHAPTER] || undefined,
+      node.dataset[Citation.DATA_VERSE] || undefined,
+      /* eslint-enable @typescript-eslint/prefer-nullish-coalescing */
+      bible.MAPPING[node.dataset[Citation.DATA_BOOK]!]!
+    );
+  }
+
+  /**
+   * @returns
+   */
+  private name(): string {
+    if (!this.chapter) {
+      return this.book.name;
+    }
+    if (!this.verse) {
+      return `${this.book.name} ${this.chapter}`;
+    }
+    return `${this.book.name} ${this.chapter}:${this.verse}`;
   }
 
   /**
@@ -480,7 +583,6 @@ class Citation {
   }
 }
 
-/* eslint-disable complexity */
 /**
  *
  * @param match
@@ -539,7 +641,55 @@ function parseBibleCitation(
 
   return new Citation(match[0], chapter, verse, book);
 }
-/* eslint-enable complexity */
+
+/**
+ *
+ * @param cit
+ * @param remainder
+ * @returns
+ */
+function parseBibleFollowups(
+  cit: Citation,
+  remainder: string
+): { replacement: (Node | string)[]; remainder: string } {
+  const replacement: (Node | string)[] = [];
+  // Create anchors for any following citations in the remaining text.
+  while (remainder) {
+    const match: RegExpExecArray | null = BIBLE_FOLLOWUP.exec(remainder);
+    if (!match) {
+      break;
+    }
+
+    // Our regex contains 6 capture groups.
+    // A. Captures 1, 2, and 3 capture the raw citation text, chapter number,
+    //    and verse number, respectively.
+    // B. Captures 4, 5, 6 capture the same thing, albeit in a different format.
+    //
+    // Either A or B should be present, but not both.
+    // If A is present:
+    // - Captures 1 and 2 must be defined. Capture 3 may or may not be defined.
+    //   Captures 4, 5, and 6 (belonging to be) must be undefined.
+    // If B is present, then 4 and 5 are guaranteed to be defined, 6 may or may
+    // not be defined, while 1, 2, and 3 are undefined.
+    const raw: string = (match[1] ?? match[4])!;
+    cit.update(raw, match[2] ?? match[5], match[3] ?? match[6]);
+    if (!cit.valid()) {
+      // This citation is invalid.
+      break;
+    }
+
+    // The part that of the remainder that is being replaced is `match[0]`.
+    // Within `match[0]`, the `raw` text will be enriched, while the text before
+    // and after `raw` will be passed as is.
+    const rawIdx: number = match[0].indexOf(raw);
+    replacement.push(match[0].slice(0, rawIdx));
+    replacement.push(cit.anchor());
+    replacement.push(match[0].slice(rawIdx + raw.length));
+
+    remainder = remainder.slice(match[0].length);
+  }
+  return { replacement, remainder };
+}
 
 /**
  *
@@ -562,44 +712,13 @@ function replaceBible(
   // Create an anchor for the first citation.
   replacement.push(cit.anchor());
 
-  // Create anchors for any following citations in the remaining text.
-  while (remainder) {
-    /* eslint-disable-next-line @typescript-eslint/no-shadow */
-    const match: RegExpExecArray | null = FOLLOWUP.exec(remainder);
-    if (!match) {
-      break;
-    }
+  // Parse following chapter / verse numbers.
+  const followups = parseBibleFollowups(cit, remainder);
 
-    // Our regex contains 6 capture groups.
-    // A. Captures 1, 2, and 3 capture the raw citation text, chapter number,
-    //    and verse number, respectively.
-    // B. Captures 4, 5, 6 capture the same thing, albeit in a different format.
-    //
-    // Either A or B should be present, but not both.
-    // If A is present:
-    // - Captures 1 and 2 must be defined. Capture 3 may or may not be defined.
-    //   Captures 4, 5, and 6 (belonging to be) must be undefined.
-    // If B is present, then 4 and 5 are guaranteed to be defined, 6 may or may
-    // not be defined, while 1, 2, and 3 are undefined.
-    const raw: string = (match[1] ?? match[4])!;
-    cit.update(raw, (match[2] ?? match[5])!, match[3] ?? match[6]);
-    if (!cit.valid()) {
-      // This citation is invalid.
-      break;
-    }
-
-    // The part that of the remainder that is being replaced is `match[0]`.
-    // Within `match[0]`, the `raw` text will be enriched, while the text before
-    // and after `raw` will be passed as is.
-    const rawIdx: number = match[0].indexOf(raw);
-    replacement.push(match[0].slice(0, rawIdx));
-    replacement.push(cit.anchor());
-    replacement.push(match[0].slice(rawIdx + raw.length));
-
-    remainder = remainder.slice(match[0].length);
-  }
-
-  return { replacement, remainder };
+  return {
+    replacement: [...replacement, ...followups.replacement],
+    remainder: followups.remainder,
+  };
 }
 
 /**
@@ -677,33 +796,6 @@ function parseSuffix(
   return span;
 }
 
-/**
- * Remove all tooltips, as well as `reference` and `suffix` classes.
- *
- * NOTE: We do NOT account for the case that the root itself is an artifact that
- * needs to be gotten rid of.
- *
- * @param elem
- */
-function dereference(elem: ChildNode): void {
-  if (!(elem instanceof Element)) {
-    // This is probably a text node. Definitely no reference here! Do nothing!
-    return;
-  }
-
-  elem
-    .querySelectorAll(`.${drop.CLS.DROPPABLE}`)
-    .forEach((el: Element): void => {
-      el.remove();
-    });
-
-  elem
-    .querySelectorAll(css.classQuery(cls.REFERENCE, cls.SUFFIX))
-    .forEach((el: Element): void => {
-      el.replaceWith(...el.childNodes);
-    });
-}
-
 // TODO: (#0) Simplify this method.
 /* eslint-disable complexity */
 
@@ -727,8 +819,7 @@ function replaceReference(
   let source: ref.Reference | undefined;
 
   // Initialize the span.
-  const span: HTMLSpanElement = document.createElement('span');
-  span.classList.add(cls.REFERENCE);
+  let span: HTMLSpanElement | null = null;
 
   let noTipNextSibling: string;
   // Sometimes, part of the abbreviation lives inside the next sibling.
@@ -753,10 +844,11 @@ function replaceReference(
     // we can no longer access its sibling.
     const nextNext: ChildNode | null = nextSibling.nextSibling;
     // Populate the span content.
-    span.append(match[0], remainder, nextSibling);
+    span = source.span();
+    span.prepend(match[0], remainder, nextSibling);
     // Account for the possibility that the sibling contained a reference. Clean
     // all child tooltips, and `reference` or `suffix` classes.
-    dereference(span);
+    ref.Reference.dereference(nextSibling);
     remainder = ''; // We have consumed the remainder.
     // Check if the sibling's sibling bears a suffix.
     if ((suffix = nextNext?.nodeValue?.match(SUFFIX)?.[0])) {
@@ -776,10 +868,11 @@ function replaceReference(
 
   // If the above didn't succeed, try to parse a reference from the match alone.
   if (!source && (source = ref.MAPPING[match[0]])) {
+    span = source.span();
     span.append(match[0]);
   }
 
-  if (!source) {
+  if (!source || !span) {
     // Still no source found! Return!
     return {};
   }
@@ -787,11 +880,6 @@ function replaceReference(
   // Add the suffix as a child.
   if (suffix) {
     span.append(parseSuffix(suffix, nextSibling /* candidate superscript  */));
-  }
-  // Add a hover-invoked tooltip, if present.
-  const tooltip: (Node | string)[] | undefined = source.tooltip();
-  if (tooltip?.length) {
-    drop.addDroppable(span, tooltip);
   }
 
   return { replacement: [span], remainder };
@@ -877,7 +965,7 @@ export function handleCommasAfterReferences(root: HTMLElement): void {
       if (!text) {
         return;
       }
-      const match = COMMA_SUFFIX.exec(text);
+      const match = REFERENCE_FOLLOWUP.exec(text);
       if (!match) {
         return;
       }
@@ -897,3 +985,182 @@ export function handleCommasAfterReferences(root: HTMLElement): void {
       reference.append(suffix);
     });
 }
+
+/**
+ *
+ * @param ib
+ */
+function ibFallback(ib: HTMLElement): void {
+  ib.classList.add(cls.ANNOTATION);
+  drop.addDroppable(ib, ['ibidem']);
+}
+
+/**
+ *
+ * @param ib
+ * @param prev
+ * @param next
+ */
+function handleReferenceIB(
+  ib: HTMLElement,
+  prev: HTMLElement,
+  next: ChildNode
+): void {
+  const reference: ref.Reference = ref.Reference.fromSpan(prev);
+  const span: HTMLSpanElement = reference.span();
+  ib.replaceWith(span);
+
+  // Extract a suffix, if available.
+  // Notice that many ib references legitimately don't have a suffix.
+  const suffix: string | undefined = next.nodeValue?.match(SUFFIX)?.[0];
+  if (next.nodeValue && suffix) {
+    next.nodeValue = next.nodeValue.slice(suffix.length);
+    span.prepend(
+      parseSuffix(suffix, next.nodeValue.length ? null : next.nextSibling)
+    );
+  }
+
+  span.prepend(ib);
+}
+
+/**
+ *
+ * @param ib
+ * @param prev
+ * @param next
+ */
+function handleBibleIB(
+  ib: HTMLElement,
+  prev: HTMLElement,
+  next: ChildNode
+): void {
+  // Construct the previous citation
+  const cit: Citation = Citation.fromAnchor(prev);
+
+  // Update the citation with numbers from this citation.
+  // Notice that it's valid for the new citation to not have any numbers.
+  // The regex is sticky. Last index needs to be reset.
+  CHAPTER_VERSE.lastIndex = 0;
+  const match: RegExpMatchArray | null | undefined =
+    next.nodeValue?.match(CHAPTER_VERSE);
+  cit.update(
+    match?.[0] ?? '',
+    match?.[1] ?? match?.[3],
+    match?.[2] ?? match?.[4]
+  );
+  if (next.nodeValue && match) {
+    // Chop off the matched text from the next sibling.
+    next.nodeValue = next.nodeValue.slice(match[0].length);
+  }
+
+  const anchor: HTMLAnchorElement = cit.anchor();
+
+  const followups: { replacement: (Node | string)[]; remainder: string } =
+    parseBibleFollowups(cit, next.nodeValue ?? '');
+  ib.replaceWith(anchor, ...followups.replacement);
+  anchor.prepend(ib);
+  next.nodeValue = followups.remainder;
+}
+
+/**
+ *
+ * @param ib
+ * @param prev
+ */
+function handlePageIB(ib: HTMLElement, prev: HTMLAnchorElement): void {
+  // This `ib` instances refers to a Crum page.
+  // An example is 1730 (ⲟⲩⲱⲛⲅ):
+  //   https://remnqymi.com/crum/1730.html
+  // We don't expect a suffix to be present.
+  const a = html.anchor(prev.href, true);
+  ib.replaceWith(a);
+  a.append(ib);
+  drop.addDroppable(a, ['ibidem']);
+}
+
+const PREV_QUERY = css.classQuery(cls.REFERENCE, cls.BIBLE, cls.PAGE);
+/**
+ * Find the first preceding sibling to the given element that is:
+ * 1. Either a reference, a Bible citation, or a page.
+ * 2. Doesn't lie within parentheses.
+ *
+ * @param ib
+ * @returns
+ */
+function findPrev(ib: HTMLElement): HTMLElement | null {
+  let prev: ChildNode | null = ib.previousSibling;
+  let rightParentheses = 0;
+
+  while (
+    prev &&
+    // While we have a previous sibling that doesn't match the requirements:
+    (!(prev instanceof Element) ||
+      !prev.matches(PREV_QUERY) ||
+      rightParentheses)
+  ) {
+    // Count the parentheses in the element text.
+    Array.from(prev.textContent ?? '')
+      .reverse()
+      .forEach((c: string) => {
+        if (c === ')') {
+          rightParentheses++;
+        } else if (c === '(' && rightParentheses) {
+          rightParentheses--;
+        }
+      });
+    // Skip.
+    prev = prev.previousSibling;
+  }
+
+  return prev instanceof HTMLElement ? prev : null;
+}
+
+/**
+ *
+ * @param root
+ */
+function handleIB(root: HTMLElement): void {
+  root.querySelectorAll('i').forEach((ib: HTMLElement): void => {
+    if (ib.textContent.toLowerCase() !== 'ib') {
+      return;
+    }
+
+    const prev: HTMLElement | null = findPrev(ib);
+
+    if (!prev) {
+      log.error(
+        'Unable to find previous reference for ib element',
+        ib,
+        'previousSibling:',
+        ib.previousSibling?.textContent
+      );
+      ibFallback(ib);
+      return;
+    }
+
+    if (prev.classList.contains(cls.PAGE)) {
+      handlePageIB(ib, prev as HTMLAnchorElement);
+      return;
+    }
+
+    const next: ChildNode | null = ib.nextSibling;
+    if (!next) {
+      log.error('ib has no next sibling:', ib);
+      ibFallback(ib);
+      return;
+    }
+
+    if (prev.classList.contains(cls.REFERENCE)) {
+      handleReferenceIB(ib, prev, next);
+      return;
+    }
+
+    dev.play(() => {
+      // Sanity check.
+      log.ensure(prev.classList.contains(cls.BIBLE));
+    });
+
+    handleBibleIB(ib, prev, next);
+  });
+}
+/* eslint-enable max-lines */

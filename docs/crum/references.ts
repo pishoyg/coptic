@@ -1,5 +1,7 @@
 /* eslint-disable max-lines */
 import * as log from '../logger.js';
+import * as drop from '../dropdown.js';
+import * as cls from './cls.js';
 
 export const MAPPING: Record<string, Reference> = {};
 
@@ -21,13 +23,16 @@ export interface Source {
  * Reference represents a particular way of citing a source in the text.
  */
 export class Reference {
+  private static readonly DATA_REF = 'ref';
   /**
    *
+   * @param raw
    * @param variant - Abbreviation used to cite this source.
    * @param source - Cited source.
    * @param postfix - Postfix appended to the abbreviation, if any.
    */
   public constructor(
+    public readonly raw: string,
     public readonly variant: string,
     // TODO: (#522) The `source` field should become required once all sources
     // are populated.
@@ -40,7 +45,7 @@ export class Reference {
    * @returns
    * TODO: (#523) Postfixes should show in the tooltip.
    */
-  public tooltip(): (Node | string)[] | undefined {
+  private tooltip(): (Node | string)[] | undefined {
     if (!this.source) {
       return undefined;
     }
@@ -56,6 +61,64 @@ export class Reference {
       .join('');
     fragment.push(description);
     return fragment;
+  }
+
+  /**
+   *
+   * @returns
+   */
+  public span(): HTMLSpanElement {
+    const span: HTMLSpanElement = document.createElement('span');
+    span.classList.add(cls.REFERENCE);
+    span.dataset[Reference.DATA_REF] = this.raw;
+    const tooltip: (Node | string)[] | undefined = this.tooltip();
+    if (tooltip?.length) {
+      drop.addDroppable(span, tooltip);
+    }
+
+    return span;
+  }
+
+  /**
+   *
+   * @param span
+   * @returns
+   */
+  public static fromSpan(span: HTMLElement): Reference {
+    return MAPPING[span.dataset[Reference.DATA_REF]!]!;
+  }
+
+  /**
+   * Remove all tooltips, as well as `reference` and `suffix` classes.
+   *
+   * NOTE: We do NOT account for the case that the root itself is an artifact
+   * that needs to be gotten rid of.
+   *
+   * @param elem
+   */
+  public static dereference(elem: ChildNode): void {
+    if (!(elem instanceof Element)) {
+      // This is probably a text node. Definitely no reference here! Do nothing!
+      return;
+    }
+
+    elem
+      .querySelectorAll(`.${drop.CLS.DROPPABLE}`)
+      .forEach((el: Element): void => {
+        el.remove();
+      });
+
+    // Remove the .reference span, retaining the children.
+    // Also remove the `data-ref` attribute.
+    elem.querySelectorAll(`.${cls.REFERENCE}`).forEach((el: Element): void => {
+      el.replaceWith(...el.childNodes);
+      el.removeAttribute(`data-${this.DATA_REF}`);
+    });
+
+    // Remove the .suffix span, retaining the children.
+    elem.querySelectorAll(`.${cls.SUFFIX}`).forEach((el: Element): void => {
+      el.replaceWith(...el.childNodes);
+    });
   }
 }
 
@@ -2606,11 +2669,16 @@ function add(
 
   res.variants.forEach((variant: string): void => {
     // Add the abbreviation without any postfixes.
-    add(variant, new Reference(variant, res.source), res.noSpaceVariants);
+    add(
+      variant,
+      new Reference(variant, variant, res.source),
+      res.noSpaceVariants
+    );
     res.postfixes?.forEach((postfix: string): void => {
+      const raw = `${variant} ${postfix}`;
       add(
-        `${variant} ${postfix}`,
-        new Reference(variant, res.source, postfix),
+        raw,
+        new Reference(raw, variant, res.source, postfix),
         res.noSpaceVariants
       );
     });

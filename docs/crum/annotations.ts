@@ -184,8 +184,6 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'hieroglyphic', variants: ['hierogl'] },
   { fullForm: 'id est', variants: ['i e'] },
   { fullForm: 'idem quod', variants: ['i q'] },
-  // TODO: (#511) Reconsider whether you want to retain the annotation for ib.
-  { fullForm: 'ibidem', variants: ['ib'] },
   { fullForm: 'imperative', variants: ['imper', 'imperat'] },
   { fullForm: 'impersonal', variants: ['impers'] },
   { fullForm: 'imperfect', variants: ['impf'] },

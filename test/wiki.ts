@@ -26,11 +26,11 @@ const TEST_CASES: {
     // lot of common cases.
     key: '88',
     want: {
-      references: 143,
-      suffixes: 137,
-      bible: 119,
+      references: 147,
+      suffixes: 141,
+      bible: 122,
       dialectTooltips: 388,
-      annotations: 86,
+      annotations: 79,
     },
   },
   {
@@ -38,11 +38,11 @@ const TEST_CASES: {
     // Crum.
     key: '54',
     want: {
-      references: 377,
-      suffixes: 379,
-      bible: 296,
+      references: 389,
+      suffixes: 392,
+      bible: 305,
       dialectTooltips: 832,
-      annotations: 260,
+      annotations: 239,
     },
   },
   {
@@ -56,11 +56,11 @@ const TEST_CASES: {
     //   boundary).
     key: '1144',
     want: {
-      references: 5,
-      suffixes: 5,
+      references: 7,
+      suffixes: 7,
       bible: 6,
       dialectTooltips: 9,
-      annotations: 13,
+      annotations: 11,
     },
   },
   {
@@ -93,11 +93,11 @@ const TEST_CASES: {
     // 629 has a corrigendum.
     key: '629',
     want: {
-      references: 21,
-      suffixes: 21,
+      references: 22,
+      suffixes: 22,
       bible: 18,
       dialectTooltips: 66,
-      annotations: 31,
+      annotations: 30,
     },
   },
   {
@@ -135,8 +135,8 @@ base.test.describe('Wiki Reference Handlers', () => {
         await Promise.all(
           (Object.keys(testCase.want) as WikiElementKey[]).map(
             (key: WikiElementKey): Promise<void> =>
-              play
-                .expect(page.locator(QUERIES[key]))
+              play.expect
+                .soft(page.locator(QUERIES[key]))
                 .toHaveCount(testCase.want[key])
           )
         );

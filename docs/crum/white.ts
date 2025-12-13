@@ -1,5 +1,4 @@
 import * as log from '../logger.js';
-import * as dev from '../dev.js';
 
 /**
  * WHITELIST is a list of known tokens that look like references but are not
@@ -44,10 +43,6 @@ export function warnPotentiallyMissingReferences(
   root: HTMLElement,
   exclude: string
 ): void {
-  if (!dev.get()) {
-    return;
-  }
-
   const walker: TreeWalker = document.createTreeWalker(
     root,
     NodeFilter.SHOW_TEXT | NodeFilter.SHOW_ELEMENT,
