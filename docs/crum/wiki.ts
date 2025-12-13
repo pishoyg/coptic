@@ -107,6 +107,10 @@ export const BIBLE_RES: RegExp[] = [
   new RegExp(str.bounded(`(EpJer|[A-Z][a-z]+)${CHAPTER_VERSE}`), 'gu'),
   new RegExp(str.bounded(`([1-4] [A-Z][a-z]+)${CHAPTER_VERSE}`), 'gu'),
 ];
+const FOLLOWUP = new RegExp(
+  `^(?:, (${NUMS})${str.WORD_END.source}| \\((${NUMS})\\))`,
+  'u'
+);
 
 export const ANNOTATION_RES: RegExp[] = [
   // Two-word annotation, and special cases:
@@ -388,6 +392,104 @@ const DAN_OVERRIDE: Record<string, { chapter: string; name: string }> = {
   Bel: { chapter: 'c', name: 'Bel' },
 };
 
+/**
+ *
+ */
+class Citation {
+  /**
+   *
+   * @param raw
+   * @param chapter
+   * @param verse
+   * @param book
+   * @param nameOverride
+   */
+  public constructor(
+    private raw: string,
+    private chapter: string | undefined,
+    private verse: string | undefined,
+    private readonly book: bible.Book,
+    private readonly nameOverride: string | undefined
+  ) {
+    if (chapter && !verse && book.numChapters === 1) {
+      // This is a one-chapter book. The chapter number is always 1. The number
+      // immediately followed the book, which was interpreted as the chapter
+      // number, is actually the verse number.
+      verse = chapter;
+      chapter = '1';
+    }
+  }
+
+  /**
+   * Update the citation with new numbers. The book is the same.
+   *
+   * @param raw - Raw text containing the two numbers.
+   * @param first - First number within the text.
+   * @param second - (Optional) second number within the text.
+   */
+  public update(raw: string, first: string, second?: string): void {
+    this.raw = raw;
+
+    if (second) {
+      // We got both numbers.
+      this.chapter = first;
+      this.verse = second;
+      return;
+    }
+
+    // Only one number is given. Whether this number updates the chapter or
+    // verse depends on whether the original citation had a verse or not.
+    if (this.verse) {
+      this.verse = first;
+      return;
+    }
+
+    this.chapter = first;
+  }
+
+  /**
+   * @returns
+   */
+  public anchor(): HTMLAnchorElement {
+    const a = html.anchor(
+      paths.bible(this.book.path, this.chapter, this.verse),
+      true,
+      this.raw
+    );
+    a.classList.add(cls.BIBLE);
+    drop.addDroppable(
+      a,
+      [this.nameOverride ?? this.book.name],
+      'hover',
+      'below'
+    );
+    return a;
+  }
+
+  /**
+   * Perform some checks to reduce the chances of false positives.
+   * @returns
+   */
+  public valid(): boolean {
+    if (
+      this.chapter?.match(/[A-Z]/) &&
+      !['Est', 'Esth', 'Dan'].includes(this.book.abb)
+    ) {
+      // Only Esther and Daniel have alphabetical chapter numbers.
+      // TODO: (#524) Handle non-uniform references. Particularly, Jeremiah
+      // 51 is composed of two subchapters (51A and 51B), and so is Psalms 115.
+      // TODO: (#524) If a numeric chapter number is given, consider checking
+      // whether it exceeds the known number of chapters of this book. Perhaps
+      // your Bible index should list the chapter names rather than the chapter
+      // count, given that the chapters don't simply form a sequence of
+      // integers.
+      return false;
+    }
+
+    return true;
+  }
+}
+
 /* eslint-disable complexity */
 /**
  *
@@ -400,7 +502,7 @@ function parseBibleCitation(
   match: RegExpExecArray,
   node: Text,
   remainder: string
-): { url: string; name: string } | null {
+): Citation | null {
   // Our regex puts the book abbreviation in the first match group. The chapter
   // and verse numbers are either second and third, or fourth and fifth.
   let [bookAbbreviation, chapter, verse] = [
@@ -445,20 +547,70 @@ function parseBibleCitation(
     return null;
   }
 
-  if (chapter && !verse && book.numChapters === 1) {
-    // This is a one-chapter book. The chapter number is always 1. The number
-    // immediately followed the book, which was interpreted as the chapter
-    // number, is actually the verse number.
-    verse = chapter;
-    chapter = '1';
-  }
-
-  return {
-    url: paths.bible(book.path, chapter, verse),
-    name: danOverride?.name ?? book.name,
-  };
+  return new Citation(match[0], chapter, verse, book, danOverride?.name);
 }
 /* eslint-enable complexity */
+
+/**
+ *
+ * @param match
+ * @param node
+ * @param remainder
+ * @returns
+ */
+function replaceBible(
+  match: RegExpExecArray,
+  node: Text,
+  remainder: string
+): { replacement?: (Node | string)[]; remainder?: string } {
+  const cit: Citation | null = parseBibleCitation(match, node, remainder);
+  if (!cit?.valid()) {
+    return {};
+  }
+
+  const replacement: (Node | string)[] = [];
+  // Create an anchor for the first citation.
+  replacement.push(cit.anchor());
+
+  // Create anchors for any following citations in the remaining text.
+  while (remainder) {
+    /* eslint-disable-next-line @typescript-eslint/no-shadow */
+    const match: RegExpExecArray | null = FOLLOWUP.exec(remainder);
+    if (!match) {
+      break;
+    }
+
+    // Our regex contains 6 capture groups.
+    // A. Captures 1, 2, and 3 capture the raw citation text, chapter number,
+    //    and verse number, respectively.
+    // B. Captures 4, 5, 6 capture the same thing, albeit in a different format.
+    //
+    // Either A or B should be present, but not both.
+    // If A is present:
+    // - Captures 1 and 2 must be defined. Capture 3 may or may not be defined.
+    //   Captures 4, 5, and 6 (belonging to be) must be undefined.
+    // If B is present, then 4 and 5 are guaranteed to be defined, 6 may or may
+    // not be defined, while 1, 2, and 3 are undefined.
+    const raw: string = (match[1] ?? match[4])!;
+    cit.update(raw, (match[2] ?? match[5])!, match[3] ?? match[6]);
+    if (!cit.valid()) {
+      // This citation is invalid.
+      break;
+    }
+
+    // The part that of the remainder that is being replaced is `match[0]`.
+    // Within `match[0]`, the `raw` text will be enriched, while the text before
+    // and after `raw` will be passed as is.
+    const rawIdx: number = match[0].indexOf(raw);
+    replacement.push(match[0].slice(0, rawIdx));
+    replacement.push(cit.anchor());
+    replacement.push(match[0].slice(rawIdx + raw.length));
+
+    remainder = remainder.slice(match[0].length);
+  }
+
+  return { replacement, remainder };
+}
 
 /**
  * NOTE: For the Bible abbreviation-to-id mapping, we opted for generating a
@@ -484,44 +636,17 @@ function parseBibleCitation(
  */
 export function handleBible(root: HTMLElement): void {
   BIBLE_RES.forEach((regex: RegExp): void => {
-    html.replaceText(
-      root,
-      regex,
-      (
-        match: RegExpExecArray,
-        node: Text,
-        remainder: string
-      ): { replacement?: (Node | string)[] } => {
-        const result: { url: string; name: string } | null = parseBibleCitation(
-          match,
-          node,
-          remainder
-        );
-        if (!result) {
-          return {};
-        }
-        const replacement: (Node | string)[] = [];
-        const link: HTMLAnchorElement = document.createElement('a');
-        link.href = result.url;
-        link.target = '_blank';
-        link.classList.add(cls.BIBLE);
-        link.textContent = match[0];
-        drop.addDroppable(link, [result.name], 'hover', 'below');
-        replacement.push(link);
-        return { replacement };
-      },
-      // Exclude all Wiki abbreviations to avoid overlap.
-      // This is not expected to occur, especially for Biblical references,
-      // which have unique names and format that can not be conflated with
-      // something else.
-      // Also, it may be particularly useless for Biblical references because
-      // they tend to be searched early on in the process, thus none of the
-      // other abbreviation classes would be present at that stage anyway.
-      // It makes sense for the following stages to exclude abbreviations added
-      // in earlier stages, not the other way around.
-      // But we add the check anyway for consistency.
-      ABBREVIATION_EXCLUDE
-    );
+    // Exclude all Wiki abbreviations to avoid overlap.
+    // This is not expected to occur, especially for Biblical references,
+    // which have unique names and format that can not be conflated with
+    // something else.
+    // Also, it may be particularly useless for Biblical references because
+    // they tend to be searched early on in the process, thus none of the
+    // other abbreviation classes would be present at that stage anyway.
+    // It makes sense for the following stages to exclude abbreviations added
+    // in earlier stages, not the other way around.
+    // But we add the check anyway for consistency.
+    html.replaceText(root, regex, replaceBible, ABBREVIATION_EXCLUDE);
   });
 }
 
