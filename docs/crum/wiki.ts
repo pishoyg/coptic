@@ -387,10 +387,7 @@ export function handlePages(root: HTMLElement): void {
  * - 'Su' refers to the chapter that St. Shenouda refers to as A.
  * - 'Bel' refers to the chapter that St. Shenouda refers to as C.
  */
-const DAN_OVERRIDE: Record<string, { chapter: string; name: string }> = {
-  Su: { chapter: 'a', name: 'Susanna' },
-  Bel: { chapter: 'c', name: 'Bel' },
-};
+const DAN_OVERRIDE: Record<string, string> = { Su: 'a', Bel: 'c' };
 
 /**
  *
@@ -402,14 +399,12 @@ class Citation {
    * @param chapter
    * @param verse
    * @param book
-   * @param nameOverride
    */
   public constructor(
     private raw: string,
     private chapter: string | undefined,
     private verse: string | undefined,
-    private readonly book: bible.Book,
-    private readonly nameOverride: string | undefined
+    private readonly book: bible.Book
   ) {
     if (chapter && !verse && book.numChapters === 1) {
       // This is a one-chapter book. The chapter number is always 1. The number
@@ -457,12 +452,7 @@ class Citation {
       this.raw
     );
     a.classList.add(cls.BIBLE);
-    drop.addDroppable(
-      a,
-      [this.nameOverride ?? this.book.name],
-      'hover',
-      'below'
-    );
+    drop.addDroppable(a, [this.book.name], 'hover', 'below');
     return a;
   }
 
@@ -510,14 +500,14 @@ function parseBibleCitation(
     match[2] ?? match[4],
     match[3] ?? match[5],
   ];
-  const danOverride = DAN_OVERRIDE[bookAbbreviation];
-  if (danOverride) {
+
+  if (bookAbbreviation in DAN_OVERRIDE) {
     // Given that this special book contains one chapter, the book
     // abbreviation is followed by the verse number only. This number would've
     // been mistakenly interpreted as the chapter number, but it's actually the
     // verse number.
     verse = chapter;
-    chapter = danOverride.chapter;
+    chapter = DAN_OVERRIDE[bookAbbreviation];
     bookAbbreviation = 'Dan';
   }
 
@@ -547,7 +537,7 @@ function parseBibleCitation(
     return null;
   }
 
-  return new Citation(match[0], chapter, verse, book, danOverride?.name);
+  return new Citation(match[0], chapter, verse, book);
 }
 /* eslint-enable complexity */
 
@@ -628,8 +618,6 @@ function replaceBible(
  *
  *
  * [1] https://developer.mozilla.org/en-US/docs/Glossary/IIFE
- *
- * TODO: (#633) Handle commas after biblical references as well.
  *
  * @param root
  *
@@ -898,7 +886,7 @@ export function handleCommasAfterReferences(root: HTMLElement): void {
       // one <span class="suffix"> tag, and all other comma-separated suffixes
       // under a second tag. For uniformity, we should have each separate suffix
       // in a separate tag.
-      // TODO: (#633) The `parseSuffix` function considers the possibility that
+      // TODO: (#572) The `parseSuffix` function considers the possibility that
       // our match has following <sup> element that is part of the suffix. Right
       // now, our code doesn't account for the possibility that such a
       // superscript is followed by a comma that is followed by more suffixes.
