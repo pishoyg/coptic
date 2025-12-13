@@ -467,7 +467,7 @@ export function handleNagHammadi(root: HTMLElement): void {
           match: RegExpExecArray,
           _,
           remainder: string
-        ): { replacement: Node; remainder: string } => {
+        ): { replacement: Node[]; remainder: string } => {
           const anchor: HTMLAnchorElement = document.createElement('a');
           anchor.target = '_blank';
           const [codex, title, leaf, line]: [string, string, string, string] = [
@@ -481,7 +481,7 @@ export function handleNagHammadi(root: HTMLElement): void {
           // output, because it doesn't make sense outside of Marcion.
           anchor.textContent = `codex ${codex} - ${title} - ${leaf}`;
           return {
-            replacement: anchor,
+            replacement: [anchor],
             remainder: `: ${line}: ${remainder}`,
           };
         }

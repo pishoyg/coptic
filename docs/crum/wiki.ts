@@ -71,7 +71,7 @@ const ABBREVIATION_EXCLUDE: string = css.classQuery(
 );
 
 /**
- * BIBLE_RE defines the regex used to catch Bible references.
+ * BIBLE_RES defines the regex used to catch Bible references.
  * A Bible book abbreviation starts with a capital letter followed by one
  * or more small letters. Optionally, the abbreviation may contain a book
  * number, with 4 being the maximum. Epistle of Jeremiah is an exception, so we
@@ -313,7 +313,7 @@ export function handleAnnotations(root: HTMLElement): void {
     html.replaceText(
       root,
       regex,
-      (match: RegExpExecArray, node: Text, _): { replacement?: Node } => {
+      (match: RegExpExecArray, node: Text, _): { replacement?: Node[] } => {
         const annot: ann.Annotation | undefined = ann.MAPPING[match[0]];
         if (!annot) {
           return {};
@@ -327,7 +327,7 @@ export function handleAnnotations(root: HTMLElement): void {
         span.textContent = match[0];
         drop.addDroppable(span, [annot.fullForm]);
         span.classList.add(cls.ANNOTATION);
-        return { replacement: span };
+        return { replacement: [span] };
       },
       // Exclude all Wiki abbreviations to avoid overlap.
       ABBREVIATION_EXCLUDE
@@ -348,7 +348,7 @@ export function handlePages(root: HTMLElement): void {
       match: RegExpExecArray,
       node: Text,
       remainder: string
-    ): { replacement?: Node; remainder?: string } => {
+    ): { replacement?: Node[]; remainder?: string } => {
       // A page number has the format 'p [0-9]+ [ab]?'. The regex matches the
       // first two parts (the letter "p" and the page number). The column number
       // lives in an <i> tag, which should be the next sibling.
@@ -370,7 +370,7 @@ export function handlePages(root: HTMLElement): void {
         ' ',
         node.nextSibling
       );
-      return { replacement: a, remainder: '' };
+      return { replacement: [a], remainder: '' };
     },
     // Exclude all Wiki abbreviations to avoid overlap.
     ABBREVIATION_EXCLUDE
@@ -491,7 +491,7 @@ export function handleBible(root: HTMLElement): void {
         match: RegExpExecArray,
         node: Text,
         remainder: string
-      ): { replacement?: Node } => {
+      ): { replacement?: (Node | string)[] } => {
         const result: { url: string; name: string } | null = parseBibleCitation(
           match,
           node,
@@ -500,13 +500,15 @@ export function handleBible(root: HTMLElement): void {
         if (!result) {
           return {};
         }
+        const replacement: (Node | string)[] = [];
         const link: HTMLAnchorElement = document.createElement('a');
         link.href = result.url;
         link.target = '_blank';
         link.classList.add(cls.BIBLE);
         link.textContent = match[0];
         drop.addDroppable(link, [result.name], 'hover', 'below');
-        return { replacement: link };
+        replacement.push(link);
+        return { replacement };
       },
       // Exclude all Wiki abbreviations to avoid overlap.
       // This is not expected to occur, especially for Biblical references,
@@ -603,7 +605,7 @@ function replaceReference(
   match: RegExpExecArray,
   node: Text,
   remainder: string
-): { replacement?: Node; remainder?: string } {
+): { replacement?: Node[]; remainder?: string } {
   let nextSibling: ChildNode | null = node.nextSibling;
   // Parse a suffix from the remainder. Update the remainder.
   let suffix: string | undefined = SUFFIX.exec(remainder)?.[0];
@@ -679,7 +681,7 @@ function replaceReference(
     drop.addDroppable(span, tooltip);
   }
 
-  return { replacement: span, remainder };
+  return { replacement: [span], remainder };
 }
 
 /* eslint-enable complexity */
@@ -736,7 +738,7 @@ export function handleSemicolons(root: HTMLElement): void {
       const span = document.createElement('span');
       span.classList.add(cls.SEMICOLON);
       span.textContent = ';';
-      return { replacement: span };
+      return { replacement: [span] };
     },
     // Maybe we should simply exclude tooltips (`drop.CLS.DROPPABLE`)?
     ABBREVIATION_EXCLUDE

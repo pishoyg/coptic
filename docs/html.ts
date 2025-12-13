@@ -101,7 +101,7 @@ export function replaceText(
     match: RegExpExecArray,
     node: Text,
     remainder: string
-  ) => { replacement?: Node; remainder?: string },
+  ) => { replacement?: (Node | string)[]; remainder?: string },
   exclude?: string
 ): void {
   // We can't replace nodes on the fly, as this could corrupt the walker.
@@ -144,7 +144,7 @@ export function replaceText(
 
       // If a custom replacement is provided, insert it. Otherwise, insert the
       // original text.
-      fragment.append(result.replacement ?? match[0]);
+      fragment.append(...(result.replacement ?? [match[0]]));
 
       // The string to search next is the remainder, which could've potentially
       // been overridden by the replacer.
@@ -217,7 +217,7 @@ export function linkifyText(
   replaceText(
     root,
     regex,
-    (match: RegExpExecArray): { replacement?: Node } => {
+    (match: RegExpExecArray): { replacement?: (Node | string)[] } => {
       const targetUrl: string | null = url(match);
       if (!targetUrl) {
         // This text doesn't have a URL. No replacements needed!
@@ -227,7 +227,7 @@ export function linkifyText(
       // Create a link.
       const a = anchor(targetUrl, true, match[0]);
       a.classList.add(...classes);
-      return { replacement: a };
+      return { replacement: [a] };
     },
     css.classQuery(...excludedClasses)
   );
