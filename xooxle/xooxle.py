@@ -1,45 +1,44 @@
 """This package defines the logic to build a Xooxle index.
 
-Index Content
+Index Content:
 
-The Xooxle index contains searchable data, and some search metadata
-(parameters) about a searchable corpus of HTML documents.
-Our index builder will read a list of documents, and for each document, an
-entry will be added to the data field of the produced index. The entry is a
-key-value store bearing information about the document, including the
-document path and its content. Xooxle can then:
-- Search the content of each entry.
-- Use the path to point the user to how to view the document that this content
-  was extracted from.
-The path is plain text, but the content fields are HTML.
+    The Xooxle index contains searchable data, and some search metadata
+    (parameters) about a searchable corpus of HTML documents.
+    Our index builder will read a list of documents, and for each document, an
+    entry will be added to the data field of the produced index. The entry is a
+    key-value store bearing information about the document, including the
+    document path and its content.
 
-HTML Reduction
+    The Xooxle search engine can then use the built index to:
+    - Search the content of each entry.
+    - Create a URL from the path to point the user to how to view the document
+      that this content was extracted from.
+    The path is plain text, but the content fields are HTML.
 
-In order to facilitate search and rendering, this HTML retained from
-the content is intentionally simplified. We remove most tags and retain the
-text. However, it's possible to retain some features from the original HTML.
-The features (tags and classes) that get retained are parameterized, but we
-have some default value.
-For example, we normally retain the tags that are mere styling tags, such
-as <b>, <i>, <strong>, and <em>.
-If it's desirable to retain some classes, we retain them, but we convert
-their tags to <span> tags! So `<tr class="word">` gets converted to `<span
-class="word">` if the `word` class is desired to be retained.
-We include <br> tags in the output corresponding to newlines, in a limited
-set of cases, far more restrictive than the HTML standard. This means that
-our output might appear compressed, or might lack newlines.
-See below for more details about the reduction logic.
+HTML Reduction:
 
-Metadata
+    In order to facilitate search and rendering, this HTML retained from the
+    content is intentionally simplified. We remove most tags and retain the
+    text. However, it's possible to retain some features from the original HTML.
+    The features (tags and classes) that get retained are parameterized, but we
+    have some default value.
 
-See Xooxle documentation for the metadata documentation, and more
-information about the required structure.
+    For example, we normally retain the tags that are mere styling tags, such as
+    <b>, <i>, <strong>, and <em>.
 
-Text Extraction
+    If it's desirable to retain some classes, we retain them, but we convert
+    their tags to <span> tags! So `<tr class="word">` gets converted to `<span
+    class="word">` if the `word` class is desired to be retained.
 
-Our text extraction implementation is somewhat hacky. The output may
-contain superfluous newlines, which later get cleaned up. It may fail to
-parse HTML special space character entities.
+    We include <br> tags in the output corresponding to newlines, in a limited
+    set of cases, far more restrictive than the HTML standard. This means that
+    our output might appear compressed, or might lack newlines.
+    See below for more details about the reduction logic.
+
+Metadata:
+
+    See Xooxle documentation for the metadata documentation, and more
+    information about the required structure.
 
 Rationale:
 
@@ -52,25 +51,26 @@ Rationale:
 
 Concurrency
 
-In our experimentation, ProcessPoolExecutor was initially found to be roughly
-5 times faster than ThreadPoolExecutor. At that point, users were required to
-provide a directory of HTML files to index.
-Later on, we started supporting a generator object, which allows us to receive
-content dynamically, without it being persisted to files.
-In our first use case with a generator object, ProcessPoolExecutor was found
-to be around 20 times slower than ThreadPoolExecutor!
-While we're not certain that this is the culprit, the user used a cache
-implementation that wasn't process-friendly, and the generator object was
-provided from a module that relied heavily on static-scope initialization,
-which get duplicated to each process!
-It was concluded that some generator implementation can be problematic with
-ProcessPoolExecutor, and we opted for using ThreadPoolExecutor instead to make
-our module more versatile, thus sacrificing performance in case where
-ProcessPoolExecutor can be much faster!
-ProcessPoolExecutor may indeed be optimal, not just when the input is provided
-in the form of a directory of HTML files, but also when the input is a
-"friendly" generator object, although we don't have a concrete definition of
-that yet, as our understanding of concurrency primitives is still limited.
+    In our experimentation, ProcessPoolExecutor was initially found to be
+    roughly 5 times faster than ThreadPoolExecutor. At that point, users were
+    required to provide a directory of HTML files to index.
+    Later on, we started supporting a generator object, which allows us to
+    receive content dynamically, without it being persisted to files.
+    In our first use case with a generator object, ProcessPoolExecutor was found
+    to be around 20 times slower than ThreadPoolExecutor!
+    While we're not certain that this is the culprit, the user used a cache
+    implementation that wasn't process-friendly, and the generator object was
+    provided from a module that relied heavily on static-scope initialization,
+    which get duplicated to each process!
+    It was concluded that some generator implementation can be problematic with
+    ProcessPoolExecutor, and we opted for using ThreadPoolExecutor instead to
+    make our module more versatile, thus sacrificing performance in case where
+    ProcessPoolExecutor can be much faster!
+    ProcessPoolExecutor may indeed be optimal, not just when the input is
+    provided in the form of a directory of HTML files, but also when the input
+    is a "friendly" generator object, although we don't have a concrete
+    definition of that yet, as our understanding of concurrency primitives is
+    still limited.
 """
 
 import os
@@ -122,19 +122,6 @@ RETAIN_TAGS_DEFAULT: set[str] = {
 SPACE_ELEMENTS_DEFAULT: set[str] = {
     "td",
 }
-
-# ADMISSIBLE is used to enforce the simplified HTML structure that Xooxle search
-# can support.
-# TODO: (#0) Document the criteria used to decide whether a tag is admissible.
-# We proposed a solution for #499 and #515 that requires the text content of a
-# given piece of Xooxle HTML to be perfectly predictable, and easy to infer from
-# the HTML.
-# Thus, block-level elements, or elements that are capable of producing extra
-# space in the output, should be banned.
-# UNIT_DELIMITER and LINE_BREAK are special because Xooxle splits the HTML using
-# these delimiters. Thus, they don't really end up in the searchable segments of
-# the HTML.
-ADMISSIBLE: set[str] = RETAIN_TAGS_DEFAULT | {"hr", "br"} | {"span", "a"}
 
 
 class Metadata(typing.TypedDict):
@@ -536,7 +523,3 @@ class Xooxle:
         entry: dict[str, str]
         for entry in json["data"]:
             ensure.members(entry.keys(), keys)
-            for key, value in entry.items():
-                if key == _KEY:
-                    continue
-                ensure.members(page.TAG_RE.findall(value), ADMISSIBLE)
