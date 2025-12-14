@@ -61,7 +61,7 @@ const RESULTS_TO_UPDATE_DISPLAY = 20;
  */
 const INPUT_DEBOUNCE_TIMEOUT = 100;
 
-const TAG_REGEX = /<\/?[^>]+>/g;
+const TAG_REGEX = /<.*?>/g;
 
 /**
  * CLS is a name space for classes used in the file. It helps pinpoint them and
