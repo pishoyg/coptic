@@ -17,10 +17,6 @@ figcaption {
   color: #ae841a; /* dark yellow */
 }
 
-.subparagraph {
-  margin-left: 2em;
-}
-
 .card {
   font-size: 18px;
 }
@@ -84,6 +80,12 @@ figcaption {
   margin-top: 0;
   margin-bottom: 0.5em;
   text-align: justify;
+  text-indent: 2em;
+}
+
+.tab {
+  display: inline-block;
+  width: 2em;
 }
 
 /* TODO: (#194) The following rule should also apply to non-Wiki text in Crum.
@@ -93,6 +95,7 @@ figcaption {
  * */
 .wiki .droppable {
   font-size: small;
+  text-indent: 0;
 }
 
 .wiki .bible {

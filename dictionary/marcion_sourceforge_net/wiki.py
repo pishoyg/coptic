@@ -127,7 +127,7 @@ _SUBSTITUTIONS: list[Substitution] = [
     Substitution(r"\\\*", "&ast;", text_repl="*", ban=["*", "\\"]),
     Substitution(
         r"\\t",
-        '</span><span class="subparagraph">',
+        '<span class="tab">&nbsp;</span>',
         text_repl="    ",
         ban=["\\"],
     ),
@@ -182,7 +182,7 @@ _SUBSTITUTIONS: list[Substitution] = [
     ),
     Substitution(
         r"\\n",
-        '</span></p><p><span class="subparagraph">',
+        "</p><p>",
         text_repl="\n",
         ban=["\\"],
     ),
@@ -310,7 +310,6 @@ class Wiki:
 
     def _html_aux(self) -> abc.Generator[str]:
         yield "<p>"
-        yield '<span class="subparagraph">'
         raw: str = self.entry
         for s in _SUBSTITUTIONS:
             raw = s.html(raw)
@@ -325,7 +324,6 @@ class Wiki:
                 raw,
             )
         yield raw
-        yield "</span>"
         yield "</p>"
 
     @functools.cached_property

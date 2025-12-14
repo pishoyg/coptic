@@ -1763,9 +1763,10 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
                 "hebrew",
                 "aramaic",
                 "gloss",
-                "subparagraph",
+                "tab",
             },
             unit_tags={"p"},
+            retain_tags=xooxle.RETAIN_TAGS_DEFAULT | {"p"},
         ),
         xooxle.Capture(
             "marcion",
