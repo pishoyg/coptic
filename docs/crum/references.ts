@@ -1139,7 +1139,7 @@ const DATA_1: Resource[] = [
       ],
     },
     variants: ['Kropp'],
-    postfixes: ['A', 'B', 'C', 'F', 'H', 'J', 'K', 'M'],
+    postfixes: ['A', 'B', 'C', 'E', 'F', 'H', 'J', 'K', 'M'],
   },
   {
     source: {
@@ -1189,7 +1189,7 @@ const DATA_1: Resource[] = [
         'Lemm, O. von. (1903). <em><a href="https://phaidrabg.bg.ac.rs/open/o:556" rel="noreferrer noopener" target="_blank">Der Alexanderroman bei den Kopten: Ein Beitrag zur Geschichte der Alexandersage im Orient</a></em>. St. Petersburg: L’Académie Impériale des Sciences.',
       ],
     },
-    variants: ['LAI'],
+    variants: ['LAl'],
   },
   {
     source: {
