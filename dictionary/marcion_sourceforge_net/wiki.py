@@ -28,6 +28,17 @@ SHEET_TSV_URL: str = (
 
 COMMA_OR_SPACE: re.Pattern[str] = re.compile(r"[ ,]")
 
+# RAW_RE should match a Wiki raw string.
+# All non-Latin text is expected to be surrounded by double square brackets.
+# Outside of double square brackets, there should remain only (1) Latin text, or
+# (2) non-letter characters. RAW_RE can be used to verify this structure.
+# "ʿ" and "β" are added for singleton violations of this rule:
+# - https://remnqymi.com/crum/3387.html#:~:text=%CA%BFAmru%CC%82
+# - https://remnqymi.com/crum/3075.html#:~:text=%CE%B2
+RAW_RE: regex.Pattern[str] = regex.compile(
+    r"\[\[.*?\]\]|[\p{Latin}\P{Letter}ʿβ]",
+)
+
 
 class Substitution:
     """A class to represent a single regex substitution."""
@@ -258,6 +269,19 @@ class Wiki:
         )
         self.wip: bool = bool(wip) or not self.entry
         del wip
+        # Validate entry.
+        if self.wip:
+            # Don't validate this entry yet.
+            return
+        invalid: str = RAW_RE.sub("", self.entry)
+        if invalid:
+            log.fatal(
+                self.key,
+                "contains invalid text:",
+                invalid,
+                "in:",
+                self.entry,
+            )
 
     def addendum(self) -> bool:
         """Determine whether this entry is an addendum.
