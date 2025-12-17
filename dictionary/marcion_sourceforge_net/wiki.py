@@ -14,6 +14,8 @@ import re
 import typing
 from collections import abc
 
+import regex
+
 from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import lexical as lex
 from utils import ensure, gcp, lang, log, orth, page
@@ -84,15 +86,15 @@ def bracketed(exp: str, repeat: int = 2) -> str:
 LANGS = ["GREEK", "COPTIC", "ARABIC", "HEBREW", "SYRIAC", "ETHIOPIC"]
 LANG_CLASS = {"SYRIAC": "ARAMAIC", "ETHIOPIC": "AMHARIC"}
 
+DEMOTIC_RE = regex.compile(
+    r"^(?:[\p{Latin}ꜢꜤ]\p{M}*|[ \-=\.])+$",
+    regex.IGNORECASE,
+)
+
 
 def replace_bracketed(match: re.Match[str]) -> str:
     text: str = match.group(1)
     del match
-    for language in LANGS:
-        if lang.has_lang(language, text):
-            # We found the language.
-            clas: str = LANG_CLASS.get(language, language).lower()
-            return f'<span class="{clas}">{text}</span>'
 
     if text == "·":
         # This special case happens to exist in the Wiki data. It likely
@@ -100,7 +102,19 @@ def replace_bracketed(match: re.Match[str]) -> str:
         # simply return the text itself.
         return text
 
-    log.fatal("Can't infer language of bracketed text:", text)
+    language: str | None = next(
+        (language for language in LANGS if lang.has_lang(language, text)),
+        None,
+    )
+
+    if not language and DEMOTIC_RE.match(text):
+        language = "demotic"
+
+    if not language:
+        log.fatal("Can't infer language of bracketed text:", text)
+
+    clas: str = LANG_CLASS.get(language, language).lower()
+    return f'<span class="{clas}">{text}</span>'
 
 
 # Coptic Wiki substitutions:
