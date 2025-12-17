@@ -87,7 +87,7 @@ LANGS = ["GREEK", "COPTIC", "ARABIC", "HEBREW", "SYRIAC", "ETHIOPIC"]
 LANG_CLASS = {"SYRIAC": "ARAMAIC", "ETHIOPIC": "AMHARIC"}
 
 DEMOTIC_RE = regex.compile(
-    r"^(?:[\p{Latin}ꜢꜤ]\p{M}*|[ \-=\.])+$",
+    r"^(?:[\p{Latin}ꜢꜤʾʿ]\p{M}*|[ \-=\.])+$",
     regex.IGNORECASE,
 )
 
