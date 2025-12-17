@@ -171,7 +171,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'confer', variants: ['cf'] },
   { fullForm: 'Coptic', variants: ['Copt'], noCaseVariant: true },
   { fullForm: 'dative', variants: ['dat'] },
-  { fullForm: 'demonstrative', variants: ['demonstr'] },
+  { fullForm: 'demonstrative', variants: ['demonstr', 'demonst'] },
   { fullForm: 'determination', variants: ['determ', 'determin'] },
   { fullForm: 'exempli gratia', variants: ['e g'] },
   { fullForm: 'Ethiopic', variants: ['Ethiop'] },
