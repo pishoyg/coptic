@@ -362,7 +362,7 @@ export function handleAnnotations(root: HTMLElement): void {
         if (!annot) {
           return {};
         }
-        if (annot.noItalics && node.parentElement?.closest('i')) {
+        if (annot.noStyledParent && node.parentElement?.closest('i, sup')) {
           // This annotation can't show in italicized text, and this node is
           // italicized.
           return {};

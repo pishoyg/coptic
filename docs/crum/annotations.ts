@@ -32,14 +32,14 @@ export interface Abbreviation {
   // #528 and #522 should therefore recover the precision loss resulting from
   // case flexibility.
   noCaseVariant?: boolean;
-  // noItalics is used to eliminate some false positives. An annotation marked
-  // as no-italics can't be the child of italicized text.
-  noItalics?: boolean;
+  // noStyledParent is used to eliminate some false positives. An annotation
+  // marked with this field can't be the child of an <i> or <sup> tag.
+  noStyledParent?: boolean;
 }
 
 export interface Annotation {
   fullForm: string;
-  noItalics?: boolean | undefined;
+  noStyledParent?: boolean | undefined;
 }
 
 // NOTE: We choose to use English, rather than Latin, names of tenses (perfect,
@@ -64,7 +64,7 @@ export const DATA: Abbreviation[] = [
     fullForm: 'constructed with (of verbs)',
     variants: ['c'],
     noCaseVariant: true,
-    noItalics: true,
+    noStyledParent: true,
   },
   { fullForm: 'causative verb', variants: ['caus'] },
   { fullForm: 'cited, quoted in following place', variants: ['cit'] },
@@ -83,7 +83,7 @@ export const DATA: Abbreviation[] = [
     fullForm: 'feminine',
     variants: ['f'],
     noCaseVariant: true,
-    noItalics: true,
+    noStyledParent: true,
   },
   { fullForm: 'genitive', variants: ['gen'] },
   { fullForm: 'Greek', variants: ['Gk'], noCaseVariant: true },
@@ -251,7 +251,7 @@ DATA.forEach((abb: Abbreviation): void => {
   abb.variants.forEach((key: string) => {
     const ann: Annotation = {
       fullForm: abb.fullForm,
-      noItalics: abb.noItalics,
+      noStyledParent: abb.noStyledParent,
     };
     MAPPING[key] = ann;
     if (abb.noCaseVariant) {
