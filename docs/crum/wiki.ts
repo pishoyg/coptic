@@ -206,8 +206,9 @@ const NUMBERS = [
   'vo', // verso folio
   'Ad', // Addenda
   'stele',
-  '[a-zA-Z]',
+  '[a-zA-Z]\\.?',
 ];
+
 const NUMBER = `(?:${NUMBERS.join('|')})`;
 // Some suffix parts are parenthesized.
 // The space before the parenthesis is optional.
