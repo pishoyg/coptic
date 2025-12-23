@@ -1089,9 +1089,10 @@ const PREV_QUERY = css.classQuery(cls.REFERENCE, cls.BIBLE, cls.PAGE);
  * 2. Doesn't lie within parentheses.
  *
  * @param ib
+ * @param strict
  * @returns
  */
-function findPrev(ib: HTMLElement): HTMLElement | null {
+function findPrev(ib: HTMLElement, strict: boolean): HTMLElement | null {
   let prev: ChildNode | null = ib.previousSibling;
   let rightParentheses = 0;
 
@@ -1100,10 +1101,17 @@ function findPrev(ib: HTMLElement): HTMLElement | null {
     // While we have a previous sibling that doesn't match the requirements:
     (!(prev instanceof Element) ||
       !prev.matches(PREV_QUERY) ||
-      rightParentheses)
+      (strict && rightParentheses))
   ) {
+    // Skip.
+    prev = prev.previousSibling;
+    if (!strict) {
+      // We don't care about parentheses.
+      continue;
+    }
+
     // Count the parentheses in the element text.
-    Array.from(prev.textContent ?? '')
+    Array.from(prev?.textContent ?? '')
       .reverse()
       .forEach((c: string) => {
         if (c === ')') {
@@ -1112,8 +1120,6 @@ function findPrev(ib: HTMLElement): HTMLElement | null {
           rightParentheses--;
         }
       });
-    // Skip.
-    prev = prev.previousSibling;
   }
 
   return prev instanceof HTMLElement ? prev : null;
@@ -1129,7 +1135,7 @@ function handleIB(root: HTMLElement): void {
       return;
     }
 
-    const prev: HTMLElement | null = findPrev(ib);
+    const prev: HTMLElement | null = findPrev(ib, true) ?? findPrev(ib, false);
 
     if (!prev) {
       log.error(
