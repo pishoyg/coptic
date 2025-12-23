@@ -222,7 +222,7 @@ export const SUFFIX = new RegExp(
   'u'
 );
 export const REFERENCE_FOLLOWUP = new RegExp(
-  `^(?:,${NUMBER_GROUP}+)+${str.WORD_END.source}`,
+  `^(?:(?:,| =)${NUMBER_GROUP}+)+${str.WORD_END.source}`,
   'u'
 );
 
