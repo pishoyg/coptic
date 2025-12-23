@@ -136,6 +136,10 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'perhaps, possibly', variants: ['?'] },
 
   // SECTION 2: ABBREVIATIONS WE CHOOSE TO INCLUDE TO AID INTELLIGIBILITY.
+  { fullForm: 'first', variants: ['1st'] },
+  { fullForm: 'second', variants: ['2d'] },
+  { fullForm: 'third', variants: ['3d'] },
+
   { fullForm: 'first person singular', variants: ['1 sg', '1st sg'] },
   { fullForm: 'second person singular', variants: ['2 sg', '2d sg'] },
   { fullForm: 'third person singular', variants: ['3 sg', '3d sg'] },
