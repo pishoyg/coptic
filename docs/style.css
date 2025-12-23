@@ -107,10 +107,14 @@ body {
 /* Although we strongly prefer Antinoou, it causes display jitter on AnkiDroid,
  * so we disable it. See
  * https://forums.ankiweb.net/t/card-layout-became-jumpy-after-adding-custom-font/42937.
- * It seems like a common problem that is not going to be resolved soon. */
+ * It seems like a common problem that is not going to be resolved soon.
+ *
+ * Antinoou doesn't suffice. Characters such as the Latin Glottal I (U+A7BC,
+ * U+A7BD – used in Demotic text) aren't supported and require Noto Sans.
+ * */
 body:not(.android .card),
 input:not(.android .card) {
-  font-family: Antinoou, sans-serif;
+  font-family: Antinoou, 'Noto Sans', monospace;
 }
 
 input[type='checkbox'] {
@@ -186,6 +190,22 @@ table {
 @font-face {
   font-family: Antinoou;
   src: url('fonts/AntinoouFont-1.0.6/_AntinoouItalic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('fonts/NotoSans/_NotoSans-VariableFont_wdth,wght.woff2')
+    format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('fonts/NotoSans/_NotoSans-Italic-VariableFont_wdth,wght.woff2')
+    format('woff2');
   font-weight: normal;
   font-style: italic;
 }
