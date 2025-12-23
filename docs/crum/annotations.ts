@@ -169,7 +169,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'biblical', variants: ['bibl'] },
   // NOTE: 'bis' full form same as abbreviation, included for completion!
   { fullForm: 'bis', variants: ['bis'] },
-  { fullForm: 'condition', variants: ['condit'] },
+  { fullForm: 'condition, conditional', variants: ['condit'] },
   { fullForm: 'conjunctive', variants: ['conj'] },
   { fullForm: 'constructive', variants: ['constr', 'construct'] },
   { fullForm: 'confer', variants: ['cf'] },
@@ -226,7 +226,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'subject', variants: ['subj'] },
   // NOTE: 'subord' encountered only once, as of the time of writing!
   { fullForm: 'subordinate', variants: ['subord'] },
-  { fullForm: 'supra', variants: ['sup'] },
+  { fullForm: 'supra', variants: ['sup', 'supra'] },
   // NOTE: 'syr' encountered only once, as of the time of writing!
   { fullForm: 'Syriac', variants: ['syr'] },
   { fullForm: 'translation, translated', variants: ['transl'] },
