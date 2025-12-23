@@ -1762,6 +1762,7 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
                 "amharic",
                 "hebrew",
                 "aramaic",
+                "demotic",
                 "gloss",
                 "tab",
             },

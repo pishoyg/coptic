@@ -161,6 +161,10 @@ figcaption {
     unicode-bidi: isolate;
   }
 
+  .demotic {
+    font-style: italic;
+  }
+
   & .semicolon {
     color: #6e260e; /* dark brown */
     font-weight: bold;
