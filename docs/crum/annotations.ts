@@ -201,6 +201,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'imperfect', variants: ['impf'] },
   { fullForm: 'improbable', variants: ['improb'] },
   { fullForm: 'infinitive', variants: ['infin'] },
+  { fullForm: 'initio', variants: ['init'] },
   { fullForm: 'loco citato', variants: ['l c'] },
   { fullForm: 'Latin', variants: ['Lat'], noCaseVariant: true },
   { fullForm: 'manuscript', variants: ['MS'], noCaseVariant: true },
