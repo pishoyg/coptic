@@ -72,6 +72,15 @@ export const NO_LETTER_BEFORE = /(?<![\p{Letter}\p{Mark}])/u;
 export const NO_LETTER_AFTER = /(?![\p{Letter}\p{Mark}])/u;
 
 /**
+ *
+ * @param regex
+ * @returns
+ */
+export function grouped(regex: string): string {
+  return `(?:${regex})`;
+}
+
+/**
  * Wrap the given regex in Unicode-aware boundary expressions.
  *
  * @param regex
@@ -97,7 +106,7 @@ export function bounded(
   digitIsBoundary = false
 ): string {
   if (group) {
-    regex = `(?:${regex})`;
+    regex = grouped(regex);
   }
   if (digitIsBoundary) {
     return `${NO_LETTER_BEFORE.source}${regex}${NO_LETTER_AFTER.source}`;

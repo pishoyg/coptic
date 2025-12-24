@@ -9,10 +9,13 @@
  * (a.k.a. digital bibliography).
  */
 export const ABBREVIATIONS = 'abbreviations';
+export const AMHARIC = 'amharic';
 /**
  * ANNOTATION is the class of a Crum Wiki annotation.
  */
 export const ANNOTATION = 'annotation';
+export const ARABIC = 'arabic';
+export const ARAMAIC = 'aramaic';
 /**
  * BIBLE represents a Biblical reference in the Crum Wiki.
  */
@@ -28,6 +31,7 @@ export const CRUM_PAGE = 'crum-page';
 export const CRUM_PAGE_IMG = 'crum-page-img';
 export const DAWOUD_PAGE = 'dawoud-page';
 export const DAWOUD_PAGE_IMG = 'dawoud-page-img';
+export const DEMOTIC = 'demotic';
 export const DEV_MODE_NOTE = 'dev-mode-note';
 /**
  * DIALECT is the class of a dialect code, be it in Marcion or Wiki.
@@ -43,6 +47,7 @@ export const GLOSS = 'gloss';
  * word.
  */
 export const HEADING = 'heading';
+export const HEBREW = 'hebrew';
 export const INDEX_TABLE = 'index-table';
 /**
  * ROMAN is the class of roman (non-italic) text in the meaning of a word.

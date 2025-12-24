@@ -35,11 +35,17 @@ export interface Abbreviation {
   // noStyledParent is used to eliminate some false positives. An annotation
   // marked with this field can't be the child of an <i> or <sup> tag.
   noStyledParent?: boolean;
+  // noBoundary indicates that this annotation can occur as part of a word.
+  // Most annotations occur as standalone words, but some are allowed to be part
+  // of a word, or right next to one. For such annotations, use the noBoundary
+  // field to indicate that mid-word matches are allowed.
+  noBoundary?: boolean;
 }
 
 export interface Annotation {
   fullForm: string;
   noStyledParent?: boolean | undefined;
+  noBoundary?: boolean | undefined;
 }
 
 // NOTE: We choose to use English, rather than Latin, names of tenses (perfect,
@@ -100,7 +106,12 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'masculine', variants: ['m'], noCaseVariant: true },
   // The following doesn't currently work because the text doesn't use the same
   // encoding for the horizontal bar as the one used here.
-  { fullForm: 'ⲛⲟⲩⲧⲉ', variants: ['ⲛ̅ⲉ̅'], noCaseVariant: true },
+  {
+    fullForm: 'ⲛⲟⲩⲧⲉ',
+    variants: ['ⲛ̅ⲉ̅'],
+    noCaseVariant: true,
+    noBoundary: true,
+  },
   { fullForm: 'noun', variants: ['nn'], noCaseVariant: true },
   { fullForm: 'object', variants: ['obj'] },
   { fullForm: 'omits, omitted', variants: ['om'] },
@@ -132,8 +143,8 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'vide', variants: ['V'] },
   { fullForm: 'variant, in same dialect', variants: ['var'] },
   { fullForm: 'verb', variants: ['vb'] },
-  { fullForm: 'qualitative', variants: ['†'] },
-  { fullForm: 'perhaps, possibly', variants: ['?'] },
+  { fullForm: 'qualitative', variants: ['†'], noBoundary: true },
+  { fullForm: 'perhaps, possibly', variants: ['?'], noBoundary: true },
 
   // SECTION 2: ABBREVIATIONS WE CHOOSE TO INCLUDE TO AID INTELLIGIBILITY.
   { fullForm: 'first', variants: ['1st'] },
@@ -304,6 +315,7 @@ DATA.forEach((abb: Abbreviation): void => {
     const ann: Annotation = {
       fullForm: abb.fullForm,
       noStyledParent: abb.noStyledParent,
+      noBoundary: abb.noBoundary,
     };
     MAPPING[key] = ann;
     if (abb.noCaseVariant) {
