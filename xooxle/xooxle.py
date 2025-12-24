@@ -520,9 +520,11 @@ class Xooxle:
         # past, but this is no longer the case since #605, to achieve which we
         # opted for simply resplitting the string at the final stage, although
         # this may be suboptimal.
-        return {_KEY: key} | {
+        data: dict[str, Field] = {
             cap.name: self.field(cap.excise(entry)) for cap in self._captures
         }
+        data = {k: v for k, v in data.items() if v}
+        return {_KEY: key} | data
 
     def build(self) -> None:
         with concur.thread_pool_executor() as executor:
