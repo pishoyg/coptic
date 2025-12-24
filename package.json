@@ -1,24 +1,24 @@
 {
   "type": "module",
   "devDependencies": {
-    "@eslint/js": "^9.39.1",
-    "@playwright/test": "^1.56.1",
+    "@eslint/js": "^9.39.2",
+    "@playwright/test": "^1.57.0",
     "@stylistic/eslint-plugin": "^2.13.0",
     "@types/jest": "^30.0.0",
     "clean-css": "^5.3.3",
     "esbuild": "^0.25.12",
-    "eslint": "^9.39.1",
+    "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-jsdoc": "^50.8.0",
     "eslint-plugin-prettier": "^5.5.4",
     "globals": "^15.15.0",
     "http-server": "^14.1.1",
-    "prettier": "^3.6.2",
-    "stylelint": "^16.25.0",
+    "prettier": "^3.7.4",
+    "stylelint": "^16.26.1",
     "stylelint-config-standard-scss": "^13.1.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.47.0",
-    "webpack": "^5.103.0"
+    "typescript-eslint": "^8.50.1",
+    "webpack": "^5.104.1"
   },
   "prettier": {
     "overrides": [
@@ -47,6 +47,6 @@
   "dependencies": {
     "@types/jsdom": "^21.1.7",
     "jiti": "^2.6.1",
-    "jsdom": "^27.2.0"
+    "jsdom": "^27.3.0"
   }
 }
