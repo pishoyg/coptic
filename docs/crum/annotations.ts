@@ -120,7 +120,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'pronoun', variants: ['pron'] },
   { fullForm: 'qualitative of verb; also indicated by †', variants: ['qual'] },
   { fullForm: 'reflexive use', variants: ['refl'] },
-  { fullForm: 'relative', variants: ['rel'] },
+  { fullForm: 'relative', variants: ['rel', 'relat'] },
   { fullForm: 'sub fine', variants: ['s f'] },
   { fullForm: 'singular', variants: ['sg'] },
   {
@@ -211,6 +211,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'metaphor', variants: ['metaph'] },
   { fullForm: 'monastery', variants: ['monast'] },
   { fullForm: 'negative', variants: ['neg'] },
+  { fullForm: 'nominal', variants: ['nom'] },
   { fullForm: 'nomen nescio', variants: ['NN'], noCaseVariant: true },
   // NOTE: 'partic' encountered once, as of the time of writing!
   { fullForm: 'participle', variants: ['particip', 'partic'] },
@@ -228,6 +229,7 @@ export const DATA: Abbreviation[] = [
   // to mean "prepositional". Could it also mean "preposition"?
   { fullForm: 'prepositional', variants: ['prepos'] },
   { fullForm: 'preterite', variants: ['preter'] },
+  { fullForm: 'prologue', variants: ['prol'] },
   { fullForm: 'quod vide', variants: ['q v'] },
   { fullForm: 'quae vide', variants: ['qq v'] },
   // NOTE: 'rad' encountered only once, as of the time of writing!
@@ -249,6 +251,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'variants', variants: ['varr', 'vars'] },
   { fullForm: 'ultimo', variants: ['ult'] },
   { fullForm: 'ut supra', variants: ['ut sup'] },
+  { fullForm: 'verbal', variants: ['vbal'] },
   { fullForm: 'verbs', variants: ['vbs'] },
   { fullForm: 'videlicet', variants: ['viz'] },
   { fullForm: 'verso folio', variants: ['vo'] },
