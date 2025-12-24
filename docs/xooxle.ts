@@ -282,12 +282,7 @@ export class Form {
     }
 
     if (!this.regexCheckbox.box.checked) {
-      // Escape all the special characters in the string, in order to search
-      // for raw matches.
-      // TODO: (#0) Use `RegExp.escape` when it's more widely available:
-      // eslint-disable-next-line max-len
-      // [1] https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/escape
-      query = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      query = str.escape(query);
     }
 
     if (this.fullWordCheckbox.box.checked) {

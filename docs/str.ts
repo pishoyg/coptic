@@ -104,3 +104,16 @@ export function bounded(
   }
   return `${WORD_START.source}${regex}${WORD_END.source}`;
 }
+
+/**
+ * Escape all the special characters in the string, in order to search for raw
+ * matches.
+ * @param query
+ * @returns
+ */
+export function escape(query: string): string {
+  // TODO: (#0) Use `RegExp.escape` when it's more widely available:
+  // eslint-disable-next-line max-len
+  // [1] https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/escape
+  return query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
