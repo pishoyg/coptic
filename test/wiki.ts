@@ -26,8 +26,8 @@ const TEST_CASES: {
     // lot of common cases.
     key: '88',
     want: {
-      references: 147,
-      suffixes: 141,
+      references: 145,
+      suffixes: 138,
       bible: 122,
       dialectTooltips: 388,
       annotations: 79,
@@ -69,8 +69,8 @@ const TEST_CASES: {
     // it.
     key: '3271',
     want: {
-      references: 3,
-      suffixes: 3,
+      references: 2,
+      suffixes: 2,
       bible: 0,
       dialectTooltips: 1,
       annotations: 3,
