@@ -202,7 +202,7 @@ export const PAGE_RE = new RegExp(str.bounded('p ([0-9]+)'));
 //     assume that, if it occurs after a reference abbreviation, then it's
 //     likely a suffix.
 const NUMBERS = [
-  "'?[0-9]+[a-z]?\\*?",
+  "'?[0-9]+[a-zA-Z]?\\*?(?:–[0-9]+)?",
   '§',
   // TODO: (#0) Consider adding tooltips for the suffixes below.
   'ro', // recto folio
