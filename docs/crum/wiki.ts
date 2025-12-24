@@ -1092,7 +1092,11 @@ const PREV_QUERY = css.classQuery(cls.REFERENCE, cls.BIBLE, cls.PAGE);
  * @param strict
  * @returns
  */
-function findPrev(ib: HTMLElement, strict: boolean): HTMLElement | null {
+function findPrev(ib: HTMLElement, strict?: boolean): HTMLElement | null {
+  if (strict === undefined) {
+    return findPrev(ib, true) ?? findPrev(ib, false);
+  }
+
   let prev: ChildNode | null = ib.previousSibling;
   let rightParentheses = 0;
 
@@ -1135,7 +1139,7 @@ function handleIB(root: HTMLElement): void {
       return;
     }
 
-    const prev: HTMLElement | null = findPrev(ib, true) ?? findPrev(ib, false);
+    const prev: HTMLElement | null = findPrev(ib);
 
     if (!prev) {
       log.error(
