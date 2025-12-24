@@ -318,7 +318,22 @@ export function handle(root: HTMLElement): void {
       // they follow.
       //
       // [1] https://remnqymi.com/crum/510.html#:~:text=P%2044%2066,%20K%20179
-      handleCommasAfterReferences(elem);
+      handleReferenceFollowups(elem);
+
+      // Comma handling needs to follow both Bible handling and IB handling.
+      // Consider the following case[1]:
+      //   Job 3 18, 2 Cor 4 18
+      // If we were to greedily parse Bible followups in the first iteration of
+      // Bible citation search, this would capture "Job 3 18, 2", resulting in
+      // the following:
+      // - A Bible citation to Job 3 18
+      // - A Bible citation to Job 3 2
+      // - "Cor 4 18" wouldn't be interpreted!
+      // It's therefore important to defer Bible followup handling until all
+      // Bible citations have been processed.
+      //
+      // [1] https://remnqymi.com/crum/25.html
+      handleBibleFollowups(elem);
 
       // Some annotation abbreviations (e.g. MS for manuscript, MSS for
       // manuscripts, and ostr for ostracon) are parts of some reference
@@ -655,8 +670,8 @@ function parseBibleCitation(
 function parseBibleFollowups(
   cit: Citation,
   remainder: string
-): { replacement: (Node | string)[]; remainder: string } {
-  const replacement: (Node | string)[] = [];
+): DocumentFragment {
+  const fragment: DocumentFragment = document.createDocumentFragment();
   // Create anchors for any following citations in the remaining text.
   while (remainder) {
     const match: RegExpExecArray | null = BIBLE_FOLLOWUP.exec(remainder);
@@ -686,13 +701,15 @@ function parseBibleFollowups(
     // Within `match[0]`, the `raw` text will be enriched, while the text before
     // and after `raw` will be passed as is.
     const rawIdx: number = match[0].indexOf(raw);
-    replacement.push(match[0].slice(0, rawIdx));
-    replacement.push(cit.anchor());
-    replacement.push(match[0].slice(rawIdx + raw.length));
+    fragment.append(match[0].slice(0, rawIdx));
+    fragment.append(cit.anchor());
+    fragment.append(match[0].slice(rawIdx + raw.length));
 
     remainder = remainder.slice(match[0].length);
   }
-  return { replacement, remainder };
+  fragment.append(remainder);
+  fragment.normalize();
+  return fragment;
 }
 
 /**
@@ -706,23 +723,13 @@ function replaceBible(
   match: RegExpExecArray,
   node: Text,
   remainder: string
-): { replacement?: (Node | string)[]; remainder?: string } {
+): { replacement?: (Node | string)[] } {
   const cit: Citation | null = parseBibleCitation(match, node, remainder);
   if (!cit?.valid()) {
     return {};
   }
 
-  const replacement: (Node | string)[] = [];
-  // Create an anchor for the first citation.
-  replacement.push(cit.anchor());
-
-  // Parse following chapter / verse numbers.
-  const followups = parseBibleFollowups(cit, remainder);
-
-  return {
-    replacement: [...replacement, ...followups.replacement],
-    remainder: followups.remainder,
-  };
+  return { replacement: [cit.anchor()] };
 }
 
 /**
@@ -759,6 +766,25 @@ export function handleBible(root: HTMLElement): void {
     // But we add the check anyway for consistency.
     html.replaceText(root, regex, replaceBible, ABBREVIATION_EXCLUDE);
   });
+}
+
+/**
+ * @param root
+ */
+function handleBibleFollowups(root: HTMLElement): void {
+  root
+    .querySelectorAll<HTMLElement>(`.${cls.BIBLE}`)
+    .forEach((bib: HTMLElement): void => {
+      const cit: Citation = Citation.fromAnchor(bib);
+
+      if (!bib.nextSibling?.nodeValue) {
+        return;
+      }
+
+      bib.nextSibling.replaceWith(
+        parseBibleFollowups(cit, bib.nextSibling.nodeValue)
+      );
+    });
 }
 
 /**
@@ -954,7 +980,7 @@ export function handleSemicolons(root: HTMLElement): void {
  *
  * @param root
  */
-export function handleCommasAfterReferences(root: HTMLElement): void {
+export function handleReferenceFollowups(root: HTMLElement): void {
   root
     .querySelectorAll(`.${cls.REFERENCE}`)
     .forEach((reference: Element): void => {
@@ -1058,12 +1084,8 @@ function handleBibleIB(
   }
 
   const anchor: HTMLAnchorElement = cit.anchor();
-
-  const followups: { replacement: (Node | string)[]; remainder: string } =
-    parseBibleFollowups(cit, next.nodeValue ?? '');
-  ib.replaceWith(anchor, ...followups.replacement);
+  ib.replaceWith(anchor);
   anchor.prepend(ib);
-  next.nodeValue = followups.remainder;
 }
 
 /**
