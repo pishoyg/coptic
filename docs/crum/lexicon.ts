@@ -360,9 +360,9 @@ async function main(): Promise<void> {
   // Deduplicate these actions, somehow.
   await Promise.all(
     XOOXLES.map(async (xooxle: Xooxle): Promise<void> => {
-      const json: xoox.Index = (await fetch(xooxle.indexURL).then(
+      const json: xoox.XooxleRaw = (await fetch(xooxle.indexURL).then(
         (raw: Response) => raw.json()
-      )) as xoox.Index;
+      )) as xoox.XooxleRaw;
       const form: xoox.Form = new xoox.Form({
         searchBoxID: id.SEARCH_BOX,
         fullWordCheckboxID: id.FULL_WORD_CHECKBOX,

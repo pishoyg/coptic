@@ -75,13 +75,14 @@ Concurrency
 
 import os
 import pathlib
+import re
 import typing
 from collections.abc import Generator, Iterable
 
 import bs4
 
 from flashcards import deck
-from utils import concur, ensure, file, page
+from utils import concur, ensure, file, orth, page
 from xooxle import clean
 from xooxle import constants as const
 
@@ -90,6 +91,7 @@ from xooxle import constants as const
 _KEY: str = "KEY"
 # _EXTENSION is the extension of the files that we are building an index for.
 _EXTENSION: str = ".html"
+_TAG_RE: re.Pattern[str] = re.compile("<.*?>")
 
 
 BLOCK_ELEMENTS_DEFAULT: set[str] = {
@@ -124,6 +126,11 @@ SPACE_ELEMENTS_DEFAULT: set[str] = {
 }
 
 
+Line: typing.TypeAlias = tuple[str, str]
+Unit: typing.TypeAlias = list[Line]
+Field: typing.TypeAlias = list[Unit]
+
+
 class Metadata(typing.TypedDict):
     """Represents the metadata object with its layer structure."""
 
@@ -133,7 +140,7 @@ class Metadata(typing.TypedDict):
 class Index(typing.TypedDict):
     """A JSON Xooxle Index"""
 
-    data: list[dict[str, str]]
+    data: list[dict[str, list[list[Line]] | str]]
     metadata: Metadata
 
 
@@ -208,6 +215,7 @@ class Capture:
     ) -> None:
         # _name is name of the field.
         self._name: str = name
+        ensure.ensure(self._name != _KEY, _KEY, "is a reserved field name!")
         # _selector is the selector that extracts the content.
         self._selector: Selector = selector
         # _retain_classes is the HTML classes to retain in the output.
@@ -469,7 +477,20 @@ class Xooxle:
     def _is_comment(self, elem: bs4.PageElement) -> bool:
         return isinstance(elem, bs4.element.Comment)
 
-    def process_file(self, pair: tuple[str, str]) -> dict[str, str]:
+    def line(self, html: str) -> Line:
+        return (html, orth.clean_diacritics(_TAG_RE.sub("", html)))
+
+    def unit(self, html: str) -> Unit:
+        if not html:
+            return []
+        return list(map(self.line, html.split(page.LINE_BREAK)))
+
+    def field(self, html: str) -> Field:
+        if not html:
+            return []
+        return list(map(self.unit, html.split(const.UNIT_DELIMITER)))
+
+    def process_file(self, pair: tuple[str, str]) -> dict[str, Field | str]:
         path, content = pair
         del pair
         entry = bs4.BeautifulSoup(content, "html.parser")
@@ -488,21 +509,24 @@ class Xooxle:
         else:
             key = path
 
-        data: dict[str, str] = {
-            # NOTE: We no longer allow duplicate content in the output.
-            # If an element has been selected once, delete it!
-            # This implies that the order of captures matters!
-            cap.name: cap.excise(entry)
-            for cap in self._captures
+        # NOTE: We no longer allow duplicate content in the output.
+        # If an element has been selected once, it's no longer available in the
+        # entry and can't be retrieved in the future.
+        # This implies that the order of captures matters!
+
+        # NOTE: During index build, we create a delimiter-separated HTML, which
+        # we split below into units and lines. This is due to historical
+        # reasons, as we used to export the delimiter-separated HTML in the
+        # past, but this is no longer the case since #605, to achieve which we
+        # opted for simply resplitting the string at the final stage, although
+        # this may be suboptimal.
+        return {_KEY: key} | {
+            cap.name: self.field(cap.excise(entry)) for cap in self._captures
         }
-        data = {k: v for k, v in data.items() if v}
-        for k in data:
-            ensure.ensure(k != _KEY, _KEY, "is a reserved field name!")
-        return {_KEY: key} | data
 
     def build(self) -> None:
         with concur.thread_pool_executor() as executor:
-            data: Iterable[dict[str, str]] = executor.map(
+            data: Iterable[dict[str, Field | str]] = executor.map(
                 self.process_file,
                 self.iter_input(),
             )
@@ -520,6 +544,6 @@ class Xooxle:
         keys: list[str] = [
             field for layer in json["metadata"]["layers"] for field in layer
         ] + [_KEY]
-        entry: dict[str, str]
+        entry: dict[str, str | Field]
         for entry in json["data"]:
             ensure.members(entry.keys(), keys)

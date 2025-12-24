@@ -61,8 +61,6 @@ const RESULTS_TO_UPDATE_DISPLAY = 20;
  */
 const INPUT_DEBOUNCE_TIMEOUT = 100;
 
-const TAG_REGEX = /<.*?>/g;
-
 /**
  * CLS is a name space for classes used in the file. It helps pinpoint them and
  * group them in one place, in case this information is needed when writing CSS
@@ -91,9 +89,6 @@ export const enum CLS {
 
 /**
  * UNIT_DELIMITER is the string that separates a units field into units.
- * TODO: (#0) This is not a clean way to separate units! The index building
- * pipeline should export an index with the units already separated, and the
- * Xooxle engine should read it as such.
  */
 const UNIT_DELIMITER = `<hr class="${CLS.MATCH_SEPARATOR}">`;
 
@@ -433,8 +428,8 @@ export class Candidate {
    * @param record - The candidate data.
    * @param layers - The layer and field metadata.
    */
-  public constructor(record: Record<string, string>, layers: string[][]) {
-    this.key = record[KEY]!;
+  public constructor(record: CandidateRaw, layers: string[][]) {
+    this.key = record[KEY];
     this.layers = layers.map(
       // NOTE: Our Xooxle index builder is guaranteed to produce a
       // normalized tree.[1] The text content is also guaranteed to be free of
@@ -442,7 +437,10 @@ export class Candidate {
       // Thus, no normalization is needed when constructing the field.
       // [1] https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize
       (layer: string[]): Field[] =>
-        layer.map((field: string): Field => new Field(record[field] ?? ''))
+        layer.map(
+          (field: string): Field =>
+            new Field(record[field] as FieldRaw | undefined)
+        )
     );
   }
 }
@@ -876,12 +874,10 @@ function searchResultCompare(a: SearchResult, b: SearchResult): number {
 class Field {
   public readonly units: Unit[];
   /**
-   * @param html - The HTML content of the field.
+   * @param field
    */
-  public constructor(html: string) {
-    this.units = html
-      .split(UNIT_DELIMITER)
-      .map((unitHTML: string): Unit => new Unit(unitHTML));
+  public constructor(field?: FieldRaw) {
+    this.units = field?.map((unit: UnitRaw): Unit => new Unit(unit)) ?? [];
   }
 
   /**
@@ -947,10 +943,10 @@ class Unit {
   public readonly lines: Line[];
 
   /**
-   * @param html - The HTML content of the unit.
+   * @param unit
    */
-  public constructor(html: string) {
-    this.lines = html.split(LINE_BREAK).map((l: string) => new Line(l));
+  public constructor(unit: UnitRaw) {
+    this.lines = unit.map((line: LineRaw) => new Line(line));
   }
 
   /**
@@ -1059,12 +1055,14 @@ class Match {
  * don't want any search queries to spill over multiple lines.
  */
 class Line {
+  public readonly html: string;
   public readonly text: string;
 
   /**
-   * @param html - The HTML content of the line.
+   * @param line
    */
-  public constructor(public readonly html: string) {
+  public constructor(line: LineRaw) {
+    [this.html, this.text] = line;
     // We obtain the text by deleting all tags.
     // We also get rid of diacritics. When it comes to search, we search a
     // diacritic-free query against the diacritic-free text created here. This
@@ -1074,7 +1072,10 @@ class Line {
     // text[i:j] contains a match and needs to be highlighted, the highlighter
     // accounts for the fact that the HTML may contain diacritics that were not
     // taken into consideration when that i and j were calculated.
-    this.text = orth.cleanDiacritics(this.html.replaceAll(TAG_REGEX, ''));
+    //
+    // This preprocessing is now performed during index construction. We can
+    // readily use the `text` field, which is expected to have been obtained as
+    // described above.
   }
 
   /**
@@ -1213,11 +1214,20 @@ class LineSearchResult implements Result {
   }
 }
 
+type LineRaw = [string, string];
+type UnitRaw = LineRaw[];
+type FieldRaw = UnitRaw[];
+interface CandidateRaw {
+  /* eslint-disable-next-line @typescript-eslint/naming-convention */
+  KEY: string;
+  [fieldName: string]: string | FieldRaw;
+}
+
 /**
- * _Index represents the JSON structure of a Xooxle index.
+ * XooxleRaw represents the JSON structure of a Xooxle index.
  */
-export interface Index {
-  readonly data: Record<string, string>[];
+export interface XooxleRaw {
+  readonly data: CandidateRaw[];
   readonly metadata: {
     /** layers is the list of layers in the output.
      * A layer consists of a list of field names.
@@ -1260,7 +1270,7 @@ export class Xooxle {
    * @param searchResultType
    */
   public constructor(
-    index: Index,
+    index: XooxleRaw,
     private readonly form: Form,
     private readonly searchResultType: typeof SearchResult = SearchResult
   ) {

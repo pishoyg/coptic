@@ -247,9 +247,6 @@ repos:
       - id: check-json
         # tsconfig files have comments, which are not compatible with some hooks!
         exclude: ^tsconfig.*$
-      - id: pretty-format-json
-        args: [--autofix, --no-ensure-ascii, --no-sort-keys]
-        exclude: ^tsconfig.*$
       - id: file-contents-sorter
         args: [requirements.in]
 

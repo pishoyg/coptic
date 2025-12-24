@@ -29,6 +29,14 @@
         "options": {
           "printWidth": 1
         }
+      },
+      {
+        "files": [
+          "docs/**/*.json"
+        ],
+        "options": {
+          "tabWidth": 1
+        }
       }
     ],
     "trailingComma": "es5",

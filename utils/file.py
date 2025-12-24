@@ -98,7 +98,7 @@ def ext(path: str | pathlib.Path) -> str:
 def json_dumps(j: object, **kwargs: typing.Any) -> str:
     return json.dumps(
         j,
-        indent=2,
+        indent=1,
         ensure_ascii=False,
         allow_nan=False,
         **kwargs,
