@@ -160,6 +160,7 @@ export const DATA: Abbreviation[] = [
 
   { fullForm: 'et cetera', variants: ['&c'] },
   { fullForm: 'absolute', variants: ['absol'] },
+  { fullForm: 'according to', variants: ['acc to'] },
   { fullForm: 'Anno Domini', variants: ['AD'], noCaseVariant: true },
   { fullForm: 'adverb', variants: ['adv', 'advb'] },
   { fullForm: 'aorist', variants: ['aor'] },
