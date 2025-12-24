@@ -210,6 +210,11 @@ const NUMBERS = [
   'Ad', // Addenda
   'stele',
   '[a-zA-Z]\\.?',
+  // Roman numerals:
+  // Large Roman numerals (with L, C, D, and M) haven't been encountered. We
+  // avoid them to minimize the risk of false positives.
+  '[ivx]+',
+  '[IVX]+',
 ];
 
 const NUMBER = `(?:${NUMBERS.join('|')})`;
