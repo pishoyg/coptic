@@ -165,6 +165,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'aorist', variants: ['aor'] },
   { fullForm: 'approximate', variants: ['approx', 'approxim'] },
   { fullForm: 'arithmetic', variants: ['arithm'] },
+  { fullForm: 'auxiliary', variants: ['auxil'] },
   // NOTE: 'bibl' encountered only once, as of the time of writing!
   { fullForm: 'biblical', variants: ['bibl'] },
   // NOTE: 'bis' full form same as abbreviation, included for completion!
@@ -175,13 +176,20 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'confer', variants: ['cf'] },
   { fullForm: 'Coptic', variants: ['Copt'], noCaseVariant: true },
   { fullForm: 'dative', variants: ['dat'] },
+  { fullForm: 'dativus commodi', variants: ['dat commodi'] },
   { fullForm: 'demonstrative', variants: ['demonstr', 'demonst'] },
   { fullForm: 'determination', variants: ['determ', 'determin'] },
   { fullForm: 'exempli gratia', variants: ['e g'] },
+  { fullForm: 'ethical dative', variants: ['ethic dat', 'ethic dative'] },
   { fullForm: 'Ethiopic', variants: ['Ethiop'] },
   { fullForm: 'equivalent', variants: ['equiv'] },
   { fullForm: 'etymology', variants: ['etymol'] },
   { fullForm: 'excluding', variants: ['exc'] },
+  {
+    fullForm: 'and the following pages/verses',
+    variants: ['ff'],
+    noCaseVariant: true,
+  },
   { fullForm: 'fragment', variants: ['frag'] },
   { fullForm: 'future', variants: ['fut'] },
   { fullForm: 'Hebrew', variants: ['Heb', 'Hebr'], noCaseVariant: true },
@@ -192,12 +200,15 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'impersonal', variants: ['impers'] },
   { fullForm: 'imperfect', variants: ['impf'] },
   { fullForm: 'improbable', variants: ['improb'] },
+  { fullForm: 'infinitive', variants: ['infin'] },
   { fullForm: 'loco citato', variants: ['l c'] },
   { fullForm: 'Latin', variants: ['Lat'], noCaseVariant: true },
   { fullForm: 'manuscript', variants: ['MS'], noCaseVariant: true },
   { fullForm: 'manuscripts', variants: ['MSS'], noCaseVariant: true },
   { fullForm: 'metaphor', variants: ['metaph'] },
+  { fullForm: 'monastery', variants: ['monast'] },
   { fullForm: 'negative', variants: ['neg'] },
+  { fullForm: 'nomen nescio', variants: ['NN'], noCaseVariant: true },
   // NOTE: 'partic' encountered once, as of the time of writing!
   { fullForm: 'participle', variants: ['particip', 'partic'] },
   // NOTE: 'penes' full form same as abbreviation, included for completion!
@@ -209,11 +220,13 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'postpositive', variants: ['post-posit'] },
   { fullForm: 'possessive', variants: ['possess'] },
   { fullForm: 'predicate', variants: ['predic'] },
+  { fullForm: 'prepositions', variants: ['preps'] },
   // NOTE: "prepos" was only encountered once so far, and it was intended
   // to mean "prepositional". Could it also mean "preposition"?
   { fullForm: 'prepositional', variants: ['prepos'] },
   { fullForm: 'preterite', variants: ['preter'] },
   { fullForm: 'quod vide', variants: ['q v'] },
+  { fullForm: 'quae vide', variants: ['qq v'] },
   // NOTE: 'rad' encountered only once, as of the time of writing!
   { fullForm: 'radical', variants: ['rad'] },
   { fullForm: 'recto folio', variants: ['ro'], noCaseVariant: true },
