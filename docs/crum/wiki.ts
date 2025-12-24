@@ -117,7 +117,7 @@ export const BIBLE_RES: RegExp[] = [
   ),
 ];
 const BIBLE_FOLLOWUP = new RegExp(
-  `^(?:, (${NUMS})${str.WORD_END.source}| \\((${NUMS})\\))`,
+  `^(?:(?:, |–)(${NUMS})${str.WORD_END.source}| \\((${NUMS})\\))`,
   'u'
 );
 
