@@ -180,6 +180,12 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'dativus commodi', variants: ['dat commodi'] },
   { fullForm: 'demonstrative', variants: ['demonstr', 'demonst'] },
   { fullForm: 'determination', variants: ['determ', 'determin'] },
+  {
+    fullForm: 'East',
+    variants: ['E'],
+    noCaseVariant: true,
+    noStyledParent: true,
+  },
   { fullForm: 'exempli gratia', variants: ['e g'] },
   { fullForm: 'ethical dative', variants: ['ethic dat', 'ethic dative'] },
   { fullForm: 'Ethiopic', variants: ['Ethiop'] },
@@ -210,6 +216,12 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'manuscripts', variants: ['MSS'], noCaseVariant: true },
   { fullForm: 'metaphor', variants: ['metaph'] },
   { fullForm: 'monastery', variants: ['monast'] },
+  {
+    fullForm: 'North',
+    variants: ['N'],
+    noCaseVariant: true,
+    noStyledParent: true,
+  },
   { fullForm: 'negative', variants: ['neg'] },
   { fullForm: 'nominal', variants: ['nom'] },
   { fullForm: 'nomen nescio', variants: ['NN'], noCaseVariant: true },
@@ -223,6 +235,7 @@ export const DATA: Abbreviation[] = [
   // NOTE: 'post-posit' encountered only once, as of the time of writing!
   { fullForm: 'postpositive', variants: ['post-posit'] },
   { fullForm: 'possessive', variants: ['possess'] },
+  { fullForm: 'pages', variants: ['pp'] },
   { fullForm: 'predicate', variants: ['predic'] },
   { fullForm: 'prepositions', variants: ['preps'] },
   // NOTE: "prepos" was only encountered once so far, and it was intended
@@ -236,6 +249,12 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'radical', variants: ['rad'] },
   { fullForm: 'recto folio', variants: ['ro'], noCaseVariant: true },
   { fullForm: 'reference', variants: ['ref'] },
+  {
+    fullForm: 'South',
+    variants: ['S'],
+    noCaseVariant: true,
+    noStyledParent: true,
+  },
   { fullForm: 'sub voce', variants: ['s v'] },
   { fullForm: 'subjunctive', variants: ['subjunct'] },
   { fullForm: 'sic erat scriptum', variants: ['sic'] },
@@ -255,6 +274,12 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'verbs', variants: ['vbs'] },
   { fullForm: 'videlicet', variants: ['viz'] },
   { fullForm: 'verso folio', variants: ['vo'] },
+  {
+    fullForm: 'West',
+    variants: ['W'],
+    noCaseVariant: true,
+    noStyledParent: true,
+  },
 
   // SECTION 3: ABBREVIATIONS THAT MOSTLY APPEAR IN REFERENCE TITLES, OR PERHAPS
   // AS POSTFIXES:
