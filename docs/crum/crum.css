@@ -12,9 +12,22 @@ figcaption {
   width: 70%;
 }
 
+.abbreviation {
+  color: #606060;
+  margin-right: 1em;
+  font-size: 110%;
+  font-weight: bold;
+}
+
 .wiki .gloss {
   font-style: italic;
   color: #ae841a; /* dark yellow */
+}
+
+.wiki .reference .droppable ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 2em;
 }
 
 .card {

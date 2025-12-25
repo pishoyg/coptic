@@ -300,8 +300,6 @@ export const DATA: Abbreviation[] = [
   // AS POSTFIXES:
   // TODO: (#522) Reconsider whether these abbreviations are needed when more
   // references are covered.
-  // TODO: (#523) Reconsider whether the following abbreviations are needed
-  // after postfixes are fully supported.
   { fullForm: 'Addenda', variants: ['Ad'], noCaseVariant: true },
   { fullForm: 'Lectionary', variants: ['Lect'], noCaseVariant: true },
   { fullForm: 'martyrdom', variants: ['Mart'], noCaseVariant: true },

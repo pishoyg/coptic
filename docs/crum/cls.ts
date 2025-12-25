@@ -9,6 +9,7 @@
  * (a.k.a. digital bibliography).
  */
 export const ABBREVIATIONS = 'abbreviations';
+export const ABBREVIATION = 'abbreviation';
 export const AMHARIC = 'amharic';
 /**
  * ANNOTATION is the class of a Crum Wiki annotation.

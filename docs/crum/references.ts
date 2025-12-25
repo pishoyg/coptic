@@ -2,6 +2,7 @@
 import * as log from '../logger.js';
 import * as drop from '../dropdown.js';
 import * as cls from './cls.js';
+import * as dev from '../dev.js';
 
 export const MAPPING: Record<string, Reference> = {};
 
@@ -37,29 +38,41 @@ export class Reference {
     // TODO: (#522) The `source` field should become required once all sources
     // are populated.
     public readonly source?: Source,
-    public readonly postfix?: string | Source
+    public readonly postfix?: Postfix
   ) {}
 
   /**
    *
    * @returns
-   * TODO: (#523) Postfixes should show in the tooltip.
    */
-  private tooltip(): (Node | string)[] | undefined {
+  public tooltip(): (Node | string)[] | undefined {
     if (!this.source) {
       return undefined;
     }
+
+    const fragment: (Node | string)[] = [];
+
+    fragment.push(...abbreviation(this.variant));
+
     const title: HTMLSpanElement = document.createElement('span');
     title.innerHTML = this.source.title;
-    const fragment: (Node | string)[] = [title];
-    if (!this.source.description?.length) {
-      return fragment;
+    fragment.push(title);
+
+    if (this.source.description?.length) {
+      const description: HTMLUListElement = document.createElement('ul');
+      this.source.description.forEach((innerHTML: string) => {
+        const li = document.createElement('li');
+        li.innerHTML = innerHTML;
+        description.append(li);
+      });
+      fragment.push(description);
     }
-    const description: HTMLUListElement = document.createElement('ul');
-    description.innerHTML = this.source.description
-      .map((innerHTML: string): string => `<li>${innerHTML}</li>`)
-      .join('');
-    fragment.push(description);
+
+    if (this.postfix) {
+      fragment.push(document.createElement('hr'));
+      fragment.push(...this.postfix.tooltip());
+    }
+
     return fragment;
   }
 
@@ -126,6 +139,9 @@ export class Reference {
   }
 }
 
+export const LOOKUP = Symbol('LOOKUP');
+type PostfixType = string | undefined | typeof LOOKUP;
+
 /**
  * Resource represents a source, along with the different variants and postfixes
  * used to cite it.
@@ -149,25 +165,8 @@ interface Resource {
    * On the other hand, suffixes are numbers or number-like affixes, and
    * they're never written with the abbreviation as one word.
    * See examples of postfixes below.
-   *
-   * TODO: (#523) Differentiate between the different types of postfixes:
-   * - Other sources (e.g. the source could be a manuscript, and the postfix
-   *   could refer to a museum or university where the manuscript is hosted).
-   * - Number or number-like addenda:
-   *   - Manuscript numbers
-   *   - Sections within a book
-   *   - ...
-   * Record the different cases, and handle them properly.
-   * Of course, the most important case is the first one (where a postfix refers
-   * to another source). This is important to handle, because it will allows us
-   * to insert hyperlinks to the other source in the tooltip. The other cases
-   * are only relevant to #527.
-   * Can we rely on the mere presence of a postfix in `MAPPING` to infer whether
-   * this postfix represents a source? – I am afraid not, because some number or
-   * number-like postfixes are identical to some source abbreviations.
-   * TODO: (#523) Populate postfixes.
    */
-  readonly postfixes?: string[];
+  readonly postfixes?: Record<string, PostfixType>;
   /**
    * noSpaceVariants, if set to true, prevents generating space variants for
    * this resource.
@@ -222,7 +221,7 @@ const DATA_1: Resource[] = [
         'Amélineau, E. (1914). <em><a href="https://archive.org/details/oeuvresdeschenou02shen/page/n7/mode/2up" rel="noreferrer noopener" target="_blank">Œuvres de Schenoudi: texte copte et traduction française</a></em>. Tome 2. Paris: E. Leroux.',
       ],
     },
-    variants: ['ShA', 'ShAm', 'A'],
+    variants: ['Am', 'A'],
   },
   {
     source: {
@@ -485,7 +484,8 @@ const DATA_1: Resource[] = [
       ],
     },
     variants: ['BM'],
-    postfixes: ['Or', 'or'],
+    // TODO: (#522) Verify the following postfixes.
+    postfixes: { Or: 'Oriental', or: 'oriental' },
   },
   {
     source: {
@@ -517,7 +517,7 @@ const DATA_1: Resource[] = [
       title: 'Coptic MSS. in Bodleian, as (P) a i e, where italic = folio',
     },
     variants: ['Bodl'],
-    postfixes: ['Copt', 'copt', '(P)'],
+    postfixes: { Copt: 'Coptic', copt: 'Coptic', '(P)': undefined },
   },
   {
     source: {
@@ -577,6 +577,9 @@ const DATA_1: Resource[] = [
       title: 'MSS. &c. in the Egyptian Museum, Cairo',
     },
     variants: ['Cai'],
+    postfixes: {
+      ostr: 'ostracon',
+    },
   },
   {
     source: {
@@ -677,11 +680,9 @@ const DATA_1: Resource[] = [
       ],
     },
     variants: ['CO'],
-    postfixes: [
-      // Ad occurs as an abbreviation in the book intro. It stands for
-      // ‘Addenda to lithographed texts’.
-      'Ad',
-    ],
+    postfixes: {
+      Ad: 'Addenda to lithographed texts',
+    },
   },
   {
     source: {
@@ -724,7 +725,7 @@ const DATA_1: Resource[] = [
       ],
     },
     variants: ['DM'],
-    postfixes: ['Index', 'Indices'],
+    postfixes: { Index: undefined, Indices: undefined },
   },
   {
     source: {
@@ -1143,7 +1144,17 @@ const DATA_1: Resource[] = [
       ],
     },
     variants: ['Kropp'],
-    postfixes: ['A', 'B', 'C', 'E', 'F', 'H', 'J', 'K', 'M'],
+    postfixes: {
+      A: undefined,
+      B: undefined,
+      C: undefined,
+      E: undefined,
+      F: undefined,
+      H: undefined,
+      J: undefined,
+      K: undefined,
+      M: undefined,
+    },
   },
   {
     source: {
@@ -1608,7 +1619,7 @@ const DATA_1: Resource[] = [
       ],
     },
     variants: ['Osir'],
-    postfixes: ['no'],
+    postfixes: { no: undefined },
   },
   {
     source: {
@@ -1622,7 +1633,7 @@ const DATA_1: Resource[] = [
       title: 'MSS. in the Bibliothèque Nationale, Paris (Crum’s copies)',
     },
     variants: ['P'],
-    postfixes: ['ar', 'Ar', 'arab'],
+    postfixes: { ar: 'Arabic', Ar: 'Arabic', arab: 'Arabic' },
   },
   {
     source: {
@@ -1706,7 +1717,6 @@ const DATA_1: Resource[] = [
     variants: ['Pcod', 'PCod'],
   },
   {
-    // TODO: (#523) This is better treated as a postfix of the above.
     source: {
       title:
         'Fayyûmic text of <i>Papyruscodex saec. vi-vii… Cheltenham, ed. Crum, 1915, acc to pp. of printed book</i>; ed. W. Erichsen (Danish Acad., 1932)',
@@ -1995,7 +2005,7 @@ const DATA_1: Resource[] = [
       ],
     },
     variants: ['Ryl'],
-    postfixes: ['Dem'],
+    postfixes: { Dem: 'Demotic' },
   },
   {
     source: {
@@ -2046,36 +2056,38 @@ const DATA_1: Resource[] = [
       // as a variant to simplify the pipeline.
     },
     variants: ['Sh', 'Besa'],
-    postfixes: [
-      'AZ',
-      'BM',
-      'BMOr',
-      'Berl Or',
-      'BIF',
-      'Bor',
-      'C',
-      'Cai',
-      'ClPr',
-      'Ep',
-      'HT',
-      'IF',
-      'Louvre',
-      'Leyd',
-      'LMis',
-      'MIF',
-      'Mich',
-      'Ming',
-      'Miss',
-      'Mun',
-      'P',
-      'R',
-      'RE',
-      'Rec',
-      'Ryl',
-      'ViK',
-      'Wess',
-      'Z',
-    ],
+    postfixes: {
+      A: LOOKUP,
+      AM: LOOKUP,
+      AZ: LOOKUP,
+      BM: LOOKUP,
+      BMOr: LOOKUP,
+      'Berl Or': LOOKUP,
+      BIF: LOOKUP,
+      Bor: LOOKUP,
+      C: LOOKUP,
+      Cai: LOOKUP,
+      ClPr: LOOKUP,
+      Ep: LOOKUP,
+      HT: LOOKUP,
+      IF: LOOKUP,
+      Louvre: undefined,
+      Leyd: LOOKUP,
+      LMis: LOOKUP,
+      MIF: LOOKUP,
+      Mich: LOOKUP,
+      Ming: LOOKUP,
+      Miss: LOOKUP,
+      Mun: LOOKUP,
+      P: LOOKUP,
+      R: LOOKUP,
+      RE: LOOKUP,
+      Rec: LOOKUP,
+      Ryl: LOOKUP,
+      ViK: LOOKUP,
+      Wess: LOOKUP,
+      Z: LOOKUP,
+    },
   },
   {
     source: {
@@ -2323,14 +2335,16 @@ const DATA_1: Resource[] = [
         'MSS. in Vatican Library, acc. to photographs or to copies by H. De Vis',
     },
     variants: ['Va'],
-    postfixes: ['ar', 'Ar'],
+    // TODO: (#522) Verify the following postfixes.
+    postfixes: { ar: 'Arabic', Ar: 'Arabic' },
   },
   {
     source: {
       title: 'Vienna, MSS. & ostraca in the Staats(olim Hof)bibliothek',
     },
     variants: ['Vi'],
-    postfixes: ['K', 'Sitz', 'ostr'],
+    // TODO: (#522) Verify the following postfixes.
+    postfixes: { K: undefined, Sitz: 'Sitzungsberichte', ostr: 'ostracon' },
   },
   {
     source: {
@@ -2487,7 +2501,8 @@ const DATA_2: Resource[] = [
   },
   {
     variants: ['Gött'],
-    postfixes: ['Ar', 'ar', 'Copt'],
+    // TODO: (#522) Verify the following postfixes.
+    postfixes: { Ar: 'Arabic', ar: 'Arabic', Copt: 'Coptic' },
   },
   {
     variants: ['Grohmann'],
@@ -2537,7 +2552,8 @@ const DATA_2: Resource[] = [
   },
   {
     variants: ['Mich'],
-    postfixes: ['Ostr', 'P', 'wooden tablet'],
+    // TODO: (#522) Verify the following postfixes.
+    postfixes: { Ostr: 'Ostracon', P: undefined, 'wooden tablet': undefined },
   },
   {
     variants: ['Mich Pasc Lect'],
@@ -2641,6 +2657,52 @@ const DATA_2: Resource[] = [
 ];
 
 /**
+ *
+ * @param name
+ * @returns
+ */
+function abbreviation(name: string): HTMLElement[] {
+  const span: HTMLSpanElement = document.createElement('span');
+  span.textContent = `${name}: `;
+  span.classList.add(cls.ABBREVIATION);
+  return [span];
+}
+
+/**
+ *
+ */
+class Postfix {
+  /**
+   *
+   * @param name
+   * @param interpretation
+   */
+  public constructor(
+    public readonly name: string,
+    public readonly interpretation?: string | typeof LOOKUP
+  ) {}
+
+  /**
+   * @returns
+   */
+  public tooltip(): (Node | string)[] {
+    if (typeof this.interpretation === 'string') {
+      return [...abbreviation(this.name), this.interpretation];
+    }
+    if (this.interpretation === LOOKUP) {
+      return MAPPING[this.name]?.tooltip() ?? [];
+    }
+
+    dev.play(() => {
+      // Sanity check!
+      log.ensure(this.interpretation === undefined);
+    });
+
+    return [];
+  }
+}
+
+/**
  * Add the given source to the mapping.
  * @param key
  * @param reference
@@ -2679,15 +2741,36 @@ function add(
       new Reference(variant, variant, res.source),
       res.noSpaceVariants
     );
-    res.postfixes?.forEach((postfix: string): void => {
-      const raw = `${variant} ${postfix}`;
-      add(
-        raw,
-        new Reference(raw, variant, res.source, postfix),
-        res.noSpaceVariants
+    Object.entries(res.postfixes ?? {}).forEach(
+      ([name, type]: [string, PostfixType]): void => {
+        const raw = `${variant} ${name}`;
+        add(
+          raw,
+          new Reference(raw, variant, res.source, new Postfix(name, type)),
+          res.noSpaceVariants
+        );
+      }
+    );
+  });
+});
+
+dev.play(() => {
+  // Verify that all LOOKUP postfixes are present.
+  Object.values(MAPPING)
+    .map((reference: Reference): string | undefined =>
+      reference.postfix?.interpretation === LOOKUP
+        ? reference.postfix.name
+        : undefined
+    )
+    .filter((postfix) => postfix !== undefined)
+    .forEach((postfix: string) => {
+      log.ensure(
+        postfix in MAPPING,
+        'LOOKUP postfix',
+        postfix,
+        'is absent from the map'
       );
     });
-  });
 });
 
 /* eslint-enable max-lines */
