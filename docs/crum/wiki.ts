@@ -153,7 +153,8 @@ const ANNOTATION_RE = new RegExp(
   'gu'
 );
 
-const PAGE_RE = new RegExp(str.bounded('p ([0-9]+)'));
+const PAGE_RE = new RegExp(str.bounded('p{1,2} ([0-9]+)'));
+const PAGE_FOLLOWUP_RE = /^, ([0-9]+) $/;
 
 // Pay attention to the following:
 // - Diacritics:
@@ -235,6 +236,7 @@ export function handle(root: HTMLElement): void {
       handleReferences(elem);
 
       handlePages(elem);
+      handlePageFollowups(elem);
 
       // IB handling needs to follow handling of References, Bible, and Pages.
       handleIB(elem);
@@ -379,6 +381,65 @@ function handlePages(root: HTMLElement): void {
     // Exclude all Wiki abbreviations to avoid overlap.
     ABBREVIATION_EXCLUDE
   );
+}
+
+/**
+ *
+ * @param root
+ */
+function handlePageFollowups(root: HTMLElement): void {
+  root
+    .querySelectorAll<HTMLElement>(`.${cls.PAGE}`)
+    .forEach((page: HTMLElement): void => {
+      // Iteratively check for subsequent pages in the list
+      // Structure expected: [Anchor] -> [Text: ", 123 "] -> [I: "a" or "b"]
+      let textNode: ChildNode | null;
+      let colNode: ChildNode | null | undefined;
+
+      while (
+        (textNode = page.nextSibling) &&
+        (colNode = textNode.nextSibling)
+      ) {
+        // Check validation:
+        // 1. Text must match ", [number] "
+        // 2. Column element must contain 'a' or 'b'
+        const match: RegExpExecArray | null = PAGE_FOLLOWUP_RE.exec(
+          textNode.textContent ?? ''
+        );
+
+        if (
+          !match ||
+          (colNode.textContent !== 'a' && colNode.textContent !== 'b')
+        ) {
+          break;
+        }
+
+        const pageNum: string = match[1]!;
+
+        // Create the new anchor
+        // We include the number, the space (implied in the regex match), and
+        // the column node.
+        // Note: Passing colNode to html.anchor moves it from the DOM into the
+        // anchor.
+        const nextAnchor = html.anchor(
+          paths.crumScan(`${pageNum}${colNode.textContent}`),
+          true,
+          pageNum,
+          ' ',
+          colNode
+        );
+        nextAnchor.classList.add(cls.PAGE);
+
+        // Adjust the text node to only contain the comma and space separator
+        textNode.textContent = ', ';
+
+        // Insert the new anchor after the comma
+        textNode.after(nextAnchor);
+
+        // Advance the loop to check for another page after this new one
+        page = nextAnchor;
+      }
+    });
 }
 
 /**
