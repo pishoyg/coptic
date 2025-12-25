@@ -65,14 +65,18 @@ export class Reference {
 
   /**
    *
+   * @param {...any} tooltipPrefix
    * @returns
    */
-  public span(): HTMLSpanElement {
+  public span(...tooltipPrefix: (Node | string)[]): HTMLSpanElement {
     const span: HTMLSpanElement = document.createElement('span');
     span.classList.add(cls.REFERENCE);
     span.dataset[Reference.DATA_REF] = this.raw;
-    const tooltip: (Node | string)[] | undefined = this.tooltip();
-    if (tooltip?.length) {
+    const tooltip: (Node | string)[] = [
+      ...tooltipPrefix,
+      ...(this.tooltip() ?? []),
+    ];
+    if (tooltip.length) {
       drop.addDroppable(span, tooltip);
     }
 

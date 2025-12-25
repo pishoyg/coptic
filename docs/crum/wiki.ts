@@ -522,9 +522,10 @@ class Citation {
   }
 
   /**
+   * @param {...any} tooltipPrefix
    * @returns
    */
-  public anchor(): HTMLAnchorElement {
+  public anchor(...tooltipPrefix: (Node | string)[]): HTMLAnchorElement {
     const a = html.anchor(
       paths.bible(this.book.path, this.chapter, this.verse),
       true,
@@ -538,7 +539,10 @@ class Citation {
     // including them in the tooltip would be redundant.
     // However, if some numbers are inherited, we include the numbers in the
     // tooltip for readability.
-    drop.addDroppable(a, [this.explicit ? this.book.name : this.name()]);
+    drop.addDroppable(a, [
+      ...tooltipPrefix,
+      this.explicit ? this.book.name : this.name(),
+    ]);
     return a;
   }
 
@@ -1010,6 +1014,15 @@ function ibFallback(ib: HTMLElement): void {
 }
 
 /**
+ * @returns
+ */
+function ibidem(): HTMLElement {
+  const i: HTMLElement = document.createElement('i');
+  i.textContent = 'ibidem';
+  return i;
+}
+
+/**
  *
  * @param ib
  * @param antecedent
@@ -1021,7 +1034,7 @@ function handleReferenceIB(
   next: ChildNode
 ): void {
   const reference: ref.Reference = ref.Reference.fromSpan(antecedent);
-  const span: HTMLSpanElement = reference.span();
+  const span: HTMLSpanElement = reference.span(ibidem(), ': ');
   ib.replaceWith(span);
 
   // Extract a suffix, if available.
@@ -1067,7 +1080,7 @@ function handleBibleIB(
     next.nodeValue = next.nodeValue.slice(match[0].length);
   }
 
-  const anchor: HTMLAnchorElement = cit.anchor();
+  const anchor: HTMLAnchorElement = cit.anchor(ibidem(), ': ');
   ib.replaceWith(anchor);
   anchor.prepend(ib);
 }
