@@ -119,7 +119,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'probably', variants: ['prob'] },
   { fullForm: 'pronoun', variants: ['pron'] },
   { fullForm: 'qualitative of verb; also indicated by †', variants: ['qual'] },
-  { fullForm: 'reflexive use', variants: ['refl'] },
+  { fullForm: 'reflexive use', variants: ['refl', 'reflex'] },
   { fullForm: 'relative', variants: ['rel', 'relat'] },
   { fullForm: 'sub fine', variants: ['s f'] },
   { fullForm: 'singular', variants: ['sg'] },
@@ -159,6 +159,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'third future', variants: ['3 fut'] },
 
   { fullForm: 'et cetera', variants: ['&c'] },
+  { fullForm: 'Appendix', variants: ['Append'] },
   { fullForm: 'absolute', variants: ['absol'] },
   { fullForm: 'according to', variants: ['acc to'] },
   { fullForm: 'Anno Domini', variants: ['AD'], noCaseVariant: true },
@@ -216,6 +217,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'manuscripts', variants: ['MSS'], noCaseVariant: true },
   { fullForm: 'metaphor', variants: ['metaph'] },
   { fullForm: 'monastery', variants: ['monast'] },
+  { fullForm: 'New Testament', variants: ['NTest'], noCaseVariant: true },
   {
     fullForm: 'North',
     variants: ['N'],
@@ -225,6 +227,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'negative', variants: ['neg'] },
   { fullForm: 'nominal', variants: ['nom'] },
   { fullForm: 'nomen nescio', variants: ['NN'], noCaseVariant: true },
+  { fullForm: 'Old Testament', variants: ['OTest'], noCaseVariant: true },
   // NOTE: 'partic' encountered once, as of the time of writing!
   { fullForm: 'participle', variants: ['particip', 'partic'] },
   // NOTE: 'penes' full form same as abbreviation, included for completion!

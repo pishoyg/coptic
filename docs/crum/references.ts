@@ -133,7 +133,7 @@ interface Resource {
   /** variants is a list of abbreviation forms used to cite this source in
    * Crum's text. Sources were often cited inconsistently, which is why we
    * provide you with a list, so you can specify all alternatives.
-   * TODO: (#565) Record variants.
+   * TODO: (#522) Record variants.
    */
   readonly variants: string[];
   /** postfixes is a list of all postfixes that this abbreviation can bear.
@@ -204,7 +204,7 @@ interface Resource {
  * nevertheless, be mentioned in a comment, to aid manual verification.
  * Variants that differ in non-space characters should, however, be explicitly
  * mentioned.
- * TODO: (#565) Revisit multi-part abbreviations, and insert spaces where
+ * TODO: (#522) Revisit multi-part abbreviations, and insert spaces where
  * appropriate. We have attempted to insert spaces for all abbreviations that
  * ever occurred with inconsistent spacing, but some may have evaded our
  * detection.
@@ -2060,6 +2060,7 @@ const DATA_1: Resource[] = [
       'LMis',
       'MIF',
       'Mich',
+      'Ming',
       'Miss',
       'Mun',
       'P',
