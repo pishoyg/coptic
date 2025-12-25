@@ -132,12 +132,6 @@ crum_img: FORCE
 	# Reprocess Crum's images.
 	./dictionary/marcion_sourceforge_net/img_helper.py --batch
 
-# TODO: (#0) This rule is somewhat pointless.
-# We may also be able to visualize the presence of images through #488.
-crum_img_plot: FORCE
-	# Plot stats about image collection.
-	./dictionary/marcion_sourceforge_net/img_helper.py --plot | less -R
-
 crum_sentinels: FORCE
 	# Download a new version of Crum's sentinels sheet.
 	PUB="https://docs.google.com/spreadsheets/d/e/2PACX-1vS0Btx-Vz3n5J_sn0dOueWpN_lk64AdV7RrKDp_VNqVfCHajdHoQs67Xeld94jwyRVkqaRxlaRFNH5F/pub?output=tsv"; \

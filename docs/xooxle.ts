@@ -584,11 +584,6 @@ export class SearchResult extends AggregateResult {
     // Since the matches were obtained on the diacritic-free text,
     // while the HTMl is constructed with text that potentially contains
     // diacritics, we need to translate all matches accordingly.
-    // TODO: (#0) The text used below is the same as `this.text`, except that
-    // diacritics are retained, while `this.text` is diacritic-free.
-    // Consider caching it instead of recalculating it dynamically below.
-    // The translation could also be obtained at the same time diacritics are
-    // removed to construct `this.text`.
     const translation: orth.Translation = orth.translation(
       drop.noTipTextContent(row)
     );
@@ -1358,7 +1353,7 @@ export class Xooxle {
       return;
     }
 
-    // TODO: (#0) Consider passing searchAuxAux to a Web Worker to improve
+    // TODO: (#605) Consider passing searchAuxAux to a Web Worker to improve
     // performance.
     try {
       const regex = new RegExp(
