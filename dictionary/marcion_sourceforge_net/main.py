@@ -3,6 +3,7 @@
 import argparse
 import itertools
 import pathlib
+import re
 from collections import abc
 
 import pandas as pd
@@ -148,6 +149,21 @@ def main():
             if root.derivations
         ),
         paths.CRUM_DERIVATIONS_ROW_NUMS,
+    )
+
+    # Update the Wiki completion percentage.
+    percentage: int = (
+        sum(r.has_wiki_canonical_entries() for r in crum.Crum.roots.values())
+        * 100
+        // len(crum.Crum.roots)
+    )
+    file.write(
+        re.sub(
+            r"\d+% complete\b",
+            f"{percentage}% complete",
+            file.read(paths.LEXICON),
+        ),
+        paths.LEXICON,
     )
 
 

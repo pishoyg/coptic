@@ -38,6 +38,7 @@ MORPHOLOGY: pathlib.Path = directory("morphology/")
 # Site Directories
 SITE_DIR: pathlib.Path = directory(os.environ["SITE_DIR"])
 LEXICON_DIR: pathlib.Path = directory(SITE_DIR, "crum")
+LEXICON: pathlib.Path = file(LEXICON_DIR, "index.html")
 CRUM_JS: pathlib.Path = file(LEXICON_DIR, "main.js")
 KELLIA_JS: pathlib.Path = file(LEXICON_DIR, "kellia_main.js")
 ANDREAS_JS: pathlib.Path = file(LEXICON_DIR, "andreas_main.js")
