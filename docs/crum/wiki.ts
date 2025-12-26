@@ -1121,32 +1121,30 @@ function findAntecedent(ib: HTMLElement, strict?: boolean): HTMLElement | null {
   }
 
   let antecedent: ChildNode | null = ib.previousSibling;
-  let rightParentheses = 0;
+  let depth = 0; // Track the parenthesis depth.
 
   while (
     antecedent &&
     // While we have a preceding sibling that doesn't match the requirements:
     (!(antecedent instanceof Element) ||
       !antecedent.matches(ANTECEDENT_QUERY) ||
-      (strict && rightParentheses))
+      (strict && depth > 0))
   ) {
     // Skip.
-    antecedent = antecedent.previousSibling;
-    if (!strict) {
-      // We don't care about parentheses.
-      continue;
-    }
-
     // Count the parentheses in the element text.
-    Array.from(antecedent?.textContent ?? '')
-      .reverse()
-      .forEach((c: string) => {
+    // Only do so in strict mode, otherwise we don't really care about
+    // parenthesis depth.
+    if (strict) {
+      Array.from(antecedent.textContent ?? '').forEach((c: string) => {
         if (c === ')') {
-          rightParentheses++;
-        } else if (c === '(' && rightParentheses) {
-          rightParentheses--;
+          depth++;
+        } else if (c === '(') {
+          depth--;
         }
       });
+    }
+
+    antecedent = antecedent.previousSibling;
   }
 
   return antecedent instanceof HTMLElement ? antecedent : null;
