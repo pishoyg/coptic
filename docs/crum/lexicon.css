@@ -5,6 +5,7 @@
 #regex-checkbox-td {
   text-align: center;
   font-style: italic;
+  color: gray;
 }
 
 /* Style the title. */
@@ -19,12 +20,6 @@ form thead * {
 form td {
   padding-right: 5px;
   padding-left: 5px;
-}
-
-/* Dim the Wiki and Marcion checkbox label. */
-#marcion-checkbox-td,
-#wiki-checkbox-td {
-  color: gray;
 }
 
 #checkboxes label {
