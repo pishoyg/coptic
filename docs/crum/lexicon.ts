@@ -197,6 +197,48 @@ class CrumSearchResult extends SearchResult {
   }
 
   /**
+   *
+   * @param row
+   * @returns
+   */
+  public override bucket(row: HTMLTableRowElement): Bucket {
+    if (this.marcion()) {
+      // Marcion uses the dialect-based bucket sorter implemented in the parent
+      // class.
+      return super.bucket(row);
+    }
+    // This is a Wiki entry. Dialects are irrelevant, but we have some
+    // preferences.
+    // Ideally, we would also prioritize Coptic words (forms) in the heading
+    // over Coptic words in examples / explanation, but we currently don't mark
+    // them in any special way so we have no way to detect them.
+    // A workaround might be prioritizing results with matches closer to the
+    // beginning of the text.
+    // TODO: (#0) Consider overriding the parent's `compareKey` method.
+    return row.querySelector(
+      `.${cls.HEADWORD} .${xoox.CLS.MATCH}, .${cls.GLOSS} .${xoox.CLS.MATCH}`
+    )
+      ? 0
+      : 1;
+  }
+
+  /**
+   * @returns
+   */
+  private marcion(): boolean {
+    // Marcion is layer 0.
+    return !this.layer;
+  }
+
+  /**
+   * @returns
+   */
+  private wiki(): boolean {
+    // Wiki is layer 1.
+    return !!this.layer;
+  }
+
+  /**
    * @returns
    */
   public override filter(): boolean {
@@ -211,11 +253,11 @@ class CrumSearchResult extends SearchResult {
     // Layer 0 is Marcion, layer 1 is Wiki.
     if (CrumSearchResult.marcionCheckbox.checked) {
       // If only the Marcion checkbox is checked, then only search Marcion.
-      return !this.layer;
+      return this.marcion();
     }
     if (CrumSearchResult.wikiCheckbox.checked) {
       // If only the Wiki checkbox is checked, then only search Wiki.
-      return !!this.layer;
+      return this.wiki();
     }
     log.fatal('This is impossible!');
   }

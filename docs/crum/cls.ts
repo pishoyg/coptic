@@ -48,6 +48,7 @@ export const GLOSS = 'gloss';
  * word.
  */
 export const HEADING = 'heading';
+export const HEADWORD = 'headword';
 export const HEBREW = 'hebrew';
 export const INDEX_TABLE = 'index-table';
 /**
