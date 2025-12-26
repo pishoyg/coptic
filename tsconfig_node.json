@@ -3,7 +3,8 @@
   "include": [
     "./test/**/*.ts",
     "playwright.config.ts",
-    "eslint.config.ts"
+    "eslint.config.ts",
+    "bun.ts"
   ],
   "compilerOptions": {
     "module": "NodeNext"
