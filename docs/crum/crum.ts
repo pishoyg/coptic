@@ -308,6 +308,7 @@ export function handleDialect(
     const code: string = el.textContent.trim();
 
     const standard: boolean = code in dial.DIALECTS;
+    const isWiki = !!el.closest(`.${cls.WIKI}`);
     const dialect: dial.Dialect | undefined = standard
       ? dial.DIALECTS[code as dial.DIALECT]
       : dial.NON_STANDARD[code];
@@ -324,9 +325,12 @@ export function handleDialect(
     // 1. Render Visuals: Replace text with Siglum and add Tooltip.
     const siglum: HTMLSpanElement = dialect.siglum();
     el.replaceChildren(siglum);
-    drop.addDroppable(el, Array.from(dialect.anchoredName()));
+    drop.addDroppable(
+      el,
+      isWiki ? [dialect.name] : Array.from(dialect.anchoredName())
+    );
 
-    if (el.closest(`.${cls.WIKI}`) || !standard) {
+    if (isWiki || !standard) {
       // There is no highlighting in Wiki. And definitely not for nonstandard
       // dialects.
       return;
