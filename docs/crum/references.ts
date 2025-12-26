@@ -484,6 +484,7 @@ const DATA_1: Resource[] = [
       ],
     },
     variants: ['BM'],
+    postfixes: { Or: 'Oriental', or: 'oriental' },
   },
   {
     source: {
@@ -2450,15 +2451,6 @@ const DATA_2: Resource[] = [
   },
   {
     variants: ['Bevan'],
-  },
-  {
-    source: {
-      title: 'British Museum Oriental Manuscripts',
-      description: [
-        'Now housed in the <a href="https://bl.libguides.com/reference-services/asian-and-african-studies/introduction/oriental-manuscripts" rel="noreferrer noopener" target="_blank">British Library</a>.',
-      ],
-    },
-    variants: ['BM Or', 'BM or'],
   },
   {
     variants: ['Brussels Musée Cinqu'],
