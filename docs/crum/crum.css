@@ -12,11 +12,8 @@ figcaption {
   width: 70%;
 }
 
-.abbreviation {
-  color: #606060;
-  margin-right: 1em;
-  font-size: 110%;
-  font-weight: bold;
+:root {
+  --reference-green: #007200;
 }
 
 .wiki .gloss {
@@ -24,10 +21,35 @@ figcaption {
   color: #ae841a; /* dark yellow */
 }
 
-.wiki .reference .droppable ul {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 2em;
+/* TODO: (#194) The following rule should also apply to non-Wiki text in Crum.
+ * Let's define it for all tooltips in Crum once #194 is resolved.
+ * TODO: (#581) If tooltips are applied to the KELLIA bibliography, then this
+ * rule should also apply to KELLIA.
+ * */
+.wiki .droppable {
+  font-size: small;
+  text-indent: 0;
+}
+
+.wiki .reference {
+  color: var(--reference-green);
+
+  & .droppable {
+    color: black;
+
+    & ul {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-left: 2em;
+    }
+
+    .abbreviation {
+      color: var(--reference-green);
+      margin-right: 0.5em;
+      margin-left: 0.25em;
+      font-size: 110%;
+    }
+  }
 }
 
 .card {
@@ -96,31 +118,13 @@ figcaption {
   text-indent: 2em;
 }
 
-.tab {
+.wiki .tab {
   display: inline-block;
   width: 2em;
 }
 
-/* TODO: (#194) The following rule should also apply to non-Wiki text in Crum.
- * Let's define it for all tooltips in Crum once #194 is resolved.
- * TODO: (#581) If tooltips are applied to the KELLIA bibliography, then this
- * rule should also apply to KELLIA.
- * */
-.wiki .droppable {
-  font-size: small;
-  text-indent: 0;
-}
-
 .wiki .bible {
   color: #1873cc; /* Dark blue */
-}
-
-.wiki .reference {
-  color: green;
-}
-
-.wiki .suffix {
-  color: seagreen;
 }
 
 .type {
