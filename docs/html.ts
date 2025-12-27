@@ -262,3 +262,12 @@ export function normalize(root: HTMLElement = document.body): void {
     node.nodeValue = node.nodeValue.replace(/\s+/g, ' ');
   }
 }
+
+/**
+ *
+ * @param html
+ * @returns
+ */
+export function parse(html: string): NodeListOf<ChildNode> {
+  return new DOMParser().parseFromString(html, 'text/html').body.childNodes;
+}
