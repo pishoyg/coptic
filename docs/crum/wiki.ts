@@ -1019,6 +1019,7 @@ function ibFallback(ib: HTMLElement): void {
 function ibidem(): HTMLElement {
   const i: HTMLElement = document.createElement('i');
   i.textContent = 'ibidem';
+  i.classList.add(cls.IBIDEM);
   return i;
 }
 
@@ -1034,7 +1035,7 @@ function handleReferenceIB(
   next: ChildNode
 ): void {
   const reference: ref.Reference = ref.Reference.fromSpan(antecedent);
-  const span: HTMLSpanElement = reference.span(ibidem(), ': ');
+  const span: HTMLSpanElement = reference.span(ibidem());
   ib.replaceWith(span);
 
   // Extract a suffix, if available.

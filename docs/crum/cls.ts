@@ -50,6 +50,7 @@ export const GLOSS = 'gloss';
 export const HEADING = 'heading';
 export const HEADWORD = 'headword';
 export const HEBREW = 'hebrew';
+export const IBIDEM = 'ibidem';
 export const INDEX_TABLE = 'index-table';
 /**
  * ROMAN is the class of roman (non-italic) text in the meaning of a word.

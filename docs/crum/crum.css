@@ -49,6 +49,11 @@ figcaption {
       margin-left: 0.25em;
       font-size: 110%;
     }
+
+    .ibidem {
+      display: block;
+      color: var(--reference-green);
+    }
   }
 }
 
