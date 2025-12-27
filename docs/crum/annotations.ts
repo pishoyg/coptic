@@ -194,6 +194,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'dativus commodi', variants: ['dat commodi'] },
   { fullForm: 'demonstrative', variants: ['demonstr', 'demonst'] },
   { fullForm: 'determination', variants: ['determ', 'determin'] },
+  { fullForm: 'duplicate', variants: ['duplic'] },
   {
     fullForm: 'East',
     variants: ['E'],
