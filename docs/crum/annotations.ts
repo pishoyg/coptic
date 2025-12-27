@@ -187,6 +187,8 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'conjunctive', variants: ['conj'] },
   { fullForm: 'constructive', variants: ['constr', 'construct'] },
   { fullForm: 'confer', variants: ['cf'] },
+  // NOTE: 'contra' full form same as abbreviation, included for completion!
+  { fullForm: 'contra', variants: ['contra'] },
   { fullForm: 'Coptic', variants: ['Copt'], noCaseVariant: true },
   { fullForm: 'dative', variants: ['dat'] },
   { fullForm: 'dativus commodi', variants: ['dat commodi'] },
@@ -240,6 +242,8 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'nominal', variants: ['nom'] },
   { fullForm: 'nomen nescio', variants: ['NN'], noCaseVariant: true },
   { fullForm: 'Old Testament', variants: ['OTest'], noCaseVariant: true },
+  // NOTE: 'olim penes' full form same as abbreviation, included for completion!
+  { fullForm: 'olim penes', variants: ['olim penes'] },
   // NOTE: 'partic' encountered once, as of the time of writing!
   { fullForm: 'participle', variants: ['particip', 'partic'] },
   // NOTE: 'penes' full form same as abbreviation, included for completion!
