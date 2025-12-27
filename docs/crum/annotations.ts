@@ -284,6 +284,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'translation, translated', variants: ['transl'] },
   { fullForm: 'variants', variants: ['varr', 'vars'] },
   { fullForm: 'ultimo', variants: ['ult'] },
+  { fullForm: 'unpublished', variants: ['unpubl'] },
   { fullForm: 'ut supra', variants: ['ut sup'] },
   { fullForm: 'verbal', variants: ['vbal'] },
   { fullForm: 'verbs', variants: ['vbs'] },
