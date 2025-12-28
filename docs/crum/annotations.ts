@@ -93,7 +93,7 @@ export const DATA: Abbreviation[] = [
   },
   { fullForm: 'genitive', variants: ['gen'] },
   { fullForm: 'Greek', variants: ['Gk'], noCaseVariant: true },
-  { fullForm: 'infra', variants: ['inf'] },
+  { fullForm: 'infra', variants: ['inf', 'infra'] },
   { fullForm: 'interjection', variants: ['interj'] },
   { fullForm: 'interrogative', variants: ['interrog'] },
   {
@@ -147,6 +147,8 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'perhaps, possibly', variants: ['?'], noBoundary: true },
 
   // SECTION 2: ABBREVIATIONS WE CHOOSE TO INCLUDE TO AID INTELLIGIBILITY.
+  // N.B. For a few Latin abbreviations (e.g. penes, contra, etc.) the full form
+  // is always used, but we still add a tooltip for completion.
   { fullForm: 'first', variants: ['1st'] },
   { fullForm: 'second', variants: ['2d'] },
   { fullForm: 'third', variants: ['3d'] },
@@ -181,13 +183,11 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'auxiliary', variants: ['auxil'] },
   // NOTE: 'bibl' encountered only once, as of the time of writing!
   { fullForm: 'biblical', variants: ['bibl'] },
-  // NOTE: 'bis' full form same as abbreviation, included for completion!
   { fullForm: 'bis', variants: ['bis'] },
   { fullForm: 'condition, conditional', variants: ['condit'] },
   { fullForm: 'conjunctive', variants: ['conj'] },
   { fullForm: 'constructive', variants: ['constr', 'construct'] },
   { fullForm: 'confer', variants: ['cf'] },
-  // NOTE: 'contra' full form same as abbreviation, included for completion!
   { fullForm: 'contra', variants: ['contra'] },
   { fullForm: 'Coptic', variants: ['Copt'], noCaseVariant: true },
   { fullForm: 'dative', variants: ['dat'] },
@@ -207,6 +207,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'equivalent', variants: ['equiv'] },
   { fullForm: 'etymology', variants: ['etymol'] },
   { fullForm: 'excluding', variants: ['exc'] },
+  { fullForm: 'figurative', variants: ['figur'] },
   {
     fullForm: 'and the following pages/verses',
     variants: ['ff'],
@@ -243,11 +244,9 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'nominal', variants: ['nom'] },
   { fullForm: 'nomen nescio', variants: ['NN'], noCaseVariant: true },
   { fullForm: 'Old Testament', variants: ['OTest'], noCaseVariant: true },
-  // NOTE: 'olim penes' full form same as abbreviation, included for completion!
   { fullForm: 'olim penes', variants: ['olim penes'] },
   // NOTE: 'partic' encountered once, as of the time of writing!
   { fullForm: 'participle', variants: ['particip', 'partic'] },
-  // NOTE: 'penes' full form same as abbreviation, included for completion!
   { fullForm: 'penes', variants: ['penes'] },
   { fullForm: 'perfect', variants: ['perf', 'pf'] },
   { fullForm: 'Persian', variants: ['Pers'], noCaseVariant: true },
