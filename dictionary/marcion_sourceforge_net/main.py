@@ -155,7 +155,7 @@ def main():
     percentage: int = (
         sum(r.has_wiki_canonical_entries() for r in crum.Crum.roots.values())
         * 100
-        // len(crum.Crum.roots)
+        // sum(not r.from_marcion() for r in crum.Crum.roots.values())
     )
     file.write(
         re.sub(

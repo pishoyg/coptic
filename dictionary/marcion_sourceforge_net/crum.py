@@ -481,13 +481,16 @@ class Root(Row):
         if super().update(col.value, value):
             log.info("Updated", col, "under", self.key)
 
+    def from_marcion(self) -> bool:
+        return self.key in _FROM_MARCION
+
     def has_wiki_canonical_entries(self) -> bool:
         """Assess whether we have complete Wiki data.
 
         Returns:
             True if all Wiki canonical entries are populated, false otherwise.
         """
-        if self.key in _FROM_MARCION:
+        if self.from_marcion():
             return False
         # TODO: (#503) This check will no longer be necessary once the data is
         # fully populated.
