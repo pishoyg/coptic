@@ -241,6 +241,7 @@ export const DATA: Abbreviation[] = [
     noStyledParent: true,
   },
   { fullForm: 'negative', variants: ['neg'] },
+  { fullForm: 'neuter', variants: ['neut'] },
   { fullForm: 'nominal', variants: ['nom'] },
   { fullForm: 'nomen nescio', variants: ['NN'], noCaseVariant: true },
   { fullForm: 'Old Testament', variants: ['OTest'], noCaseVariant: true },
