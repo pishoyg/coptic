@@ -132,7 +132,7 @@ const BIBLE_RE = new RegExp(
  * - Si 34 29 (31 26)
  */
 const BIBLE_FOLLOWUP = new RegExp(
-  `^(?:(?:, |–)(${NUMS})${str.WORD_END.source}| \\((${NUMS})\\))`,
+  `^(?:(?:, |–)(${NUMS})${str.WORD_END.source}| ?\\((${NUMS})\\))`,
   'u'
 );
 
