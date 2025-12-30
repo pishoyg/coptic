@@ -1971,6 +1971,9 @@ const DATA_1: Resource[] = [
       title: 'MSS. & copies belonging to Seymour de Ricci (Crum’s copies)',
     },
     variants: ['Ricci'],
+    postfixes: {
+      L: undefined,
+    },
   },
   {
     source: {
