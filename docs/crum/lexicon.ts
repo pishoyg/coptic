@@ -63,6 +63,10 @@ enum Bucket {
   // Matches only occur in inactive dialects for the current query. The
   // dialect has no active dialects to start with!
   INACTIVE_DIALECT_MATCH,
+
+  // Group 4: Wiki buckets
+  HEADWORD_OR_GLOSS_MATCH,
+  OTHER_WIKI,
 }
 
 /**
@@ -218,8 +222,8 @@ class CrumSearchResult extends SearchResult {
     return row.querySelector(
       `.${cls.HEADWORD} .${xoox.CLS.MATCH}, .${cls.GLOSS} .${xoox.CLS.MATCH}`
     )
-      ? 0
-      : 1;
+      ? Bucket.HEADWORD_OR_GLOSS_MATCH
+      : Bucket.OTHER_WIKI;
   }
 
   /**

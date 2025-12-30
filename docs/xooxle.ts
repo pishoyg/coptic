@@ -699,6 +699,7 @@ export class SearchResult extends AggregateResult {
   public compareKey(): number[] {
     const boundary: Boundary = this.boundary();
     return [
+      this.layer,
       // Results are sorted based on the boundary type.
       // See the Boundary enum for the order.
       boundary,
@@ -1252,8 +1253,6 @@ export class Xooxle {
    */
   private currentAbortController: AbortController | null = null;
 
-  private readonly numLayers: number;
-
   /**
    * @param index - JSON index object.
    * @param form - Form containing HTML input and output elements.
@@ -1275,8 +1274,6 @@ export class Xooxle {
 
     // Focus on the form, so the user can search right away.
     this.form.focus();
-
-    this.numLayers = index.metadata.layers.length;
 
     dev.play(() => {
       index.metadata.layers.forEach((layer: string[]): void => {
@@ -1374,17 +1371,15 @@ export class Xooxle {
   /**
    * @returns
    */
-  private bucketSentinels(): Element[][] {
+  private bucketSentinels(): HTMLTableRowElement[] {
     // Create a two-D array, where the first dimension is the layer, and the
     // second is the bucket.
-    return Array.from({ length: this.numLayers }, () =>
-      Array.from({ length: this.searchResultType.numBuckets() }, () => {
-        const tr = document.createElement('tr');
-        tr.style.display = 'none';
-        this.form.result(tr);
-        return tr;
-      })
-    );
+    return Array.from({ length: this.searchResultType.numBuckets() }, () => {
+      const tr: HTMLTableRowElement = document.createElement('tr');
+      tr.style.display = 'none';
+      this.form.result(tr);
+      return tr;
+    });
   }
 
   /**
@@ -1464,7 +1459,7 @@ export class Xooxle {
     // generic sorting. In other words, results get grouped into buckets by the
     // bucket sorter. Within each bucket, the results will be sorted by the
     // generic sorter.
-    const bucketSentinels: Element[][] = this.bucketSentinels();
+    const bucketSentinels: HTMLTableRowElement[] = this.bucketSentinels();
 
     // Search is a cheap operation that we can afford to do on all candidates in
     // the beginning.
@@ -1490,9 +1485,10 @@ export class Xooxle {
           this.numColumns
         );
 
-        bucketSentinels[result.layer]![
-          result.bucket(row)
-        ]!.insertAdjacentElement('beforebegin', row);
+        bucketSentinels[result.bucket(row)]!.insertAdjacentElement(
+          'beforebegin',
+          row
+        );
       } catch (err) {
         log.error('While processing', result.key, 'encountered error:', err);
         this.form.message(
