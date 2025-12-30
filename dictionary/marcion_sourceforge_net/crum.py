@@ -960,6 +960,12 @@ class Root(Row):
         # clean way to do it.
         yield self.drv_html_table().replace("{", "(").replace("}", ")")
 
+        # Wiki.
+        if self.has_wiki_canonical_entries():
+            yield '<div class="wiki" id="wiki">'
+            yield self.wiki_html
+            yield "</div>"
+
         # Sisters.
         if (
             self.sisters
@@ -1005,12 +1011,6 @@ class Root(Row):
 
         if self.has_wiki_canonical_entries() or self.crum:
             yield page.HORIZONTAL_RULE
-
-        # Wiki.
-        if self.has_wiki_canonical_entries():
-            yield '<div class="wiki" id="wiki">'
-            yield self.wiki_html
-            yield "</div>"
 
         # Crum's pages.
         if self._has_crum_pages():

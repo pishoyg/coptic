@@ -166,6 +166,9 @@ figcaption {
 }
 
 .wiki {
+  margin-top: 2em;
+  margin-bottom: 2em;
+
   & .arabic,
   .aramaic,
   .hebrew,
