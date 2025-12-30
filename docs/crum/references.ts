@@ -491,7 +491,7 @@ const DATA_1: Resource[] = [
       ],
     },
     variants: ['BM'],
-    postfixes: { Or: 'Oriental', or: 'oriental' },
+    postfixes: { Or: 'Oriental', or: 'oriental', ostr: 'ostracon' },
   },
   {
     source: {
@@ -688,6 +688,7 @@ const DATA_1: Resource[] = [
     variants: ['CO'],
     postfixes: {
       Ad: 'Addenda to lithographed texts',
+      Index: undefined,
     },
   },
   {
@@ -776,6 +777,9 @@ const DATA_1: Resource[] = [
       ],
     },
     variants: ['Ep'],
+    postfixes: {
+      Append: undefined,
+    },
   },
   {
     source: {
