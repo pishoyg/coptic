@@ -168,7 +168,6 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'second present', variants: ['2 pres', '2d pres'] },
   { fullForm: 'second future', variants: ['2 fut', '2d fut'] },
 
-  // TODO: (#194) Is there a third perfect or third present?
   { fullForm: 'third future', variants: ['3 fut'] },
 
   { fullForm: 'et cetera', variants: ['&c'] },

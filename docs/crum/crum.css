@@ -21,7 +21,7 @@ figcaption {
   color: #ae841a; /* dark yellow */
 }
 
-/* TODO: (#194) The following rule should also apply to non-Wiki text in Crum.
+/* TODO: (#665) The following rule should also apply to non-Wiki text in Crum.
  * Let's define it for all tooltips in Crum once #194 is resolved.
  * TODO: (#581) If tooltips are applied to the KELLIA bibliography, then this
  * rule should also apply to KELLIA.

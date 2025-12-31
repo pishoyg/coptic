@@ -177,7 +177,7 @@ const PAGE_FOLLOWUP_RE = /^, ([0-9]+) $/;
 const NUMBERS = [
   "'?[0-9]+[a-zA-Z]?\\*?(?:–[0-9]+)?",
   '§',
-  // TODO: (#194) Decide on a uniform way to handle annotations that mostly
+  // TODO: (#666) Decide on a uniform way to handle annotations that mostly
   // follow references, such as:
   // - vo (verse folio)
   // - ro (recto folio)
