@@ -100,7 +100,9 @@ export function replaceText(
   replace: (
     match: RegExpExecArray,
     node: Text,
-    remainder: string
+    remainder: string,
+    preceding: string,
+    index: number
   ) => { replacement?: (Node | string)[]; remainder?: string },
   exclude?: string
 ): void {
@@ -118,7 +120,11 @@ export function replaceText(
       return;
     }
 
-    let text: string = node.nodeValue!;
+    if (!node.nodeValue) {
+      return;
+    }
+
+    let text: string = node.nodeValue;
     const fragment: DocumentFragment = document.createDocumentFragment();
 
     // Loop as long as there is text to process.
@@ -133,14 +139,21 @@ export function replaceText(
       }
 
       // Add the plain text that precedes the match.
-      fragment.append(text.slice(0, match.index));
+      const preceding: string = text.slice(0, match.index);
+      fragment.append(preceding);
 
       // The remainder is the text following the current match.
       const remainder: string = text.slice(match.index + match[0].length);
 
       // Call the replacer function to get the replacement and the new
       // remainder.
-      const result = replace(match, node, remainder);
+      const result = replace(
+        match,
+        node,
+        remainder,
+        preceding,
+        node.nodeValue.length - text.length + match.index
+      );
 
       // If a custom replacement is provided, insert it. Otherwise, insert the
       // original text.
