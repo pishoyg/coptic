@@ -1740,6 +1740,8 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
         xooxle.Selector({"id": "categories"}, force=False),
         xooxle.Selector({"id": "quality"}),
         xooxle.Selector({"id": "senses"}, force=False),
+        xooxle.Selector({"class_": "footnote"}, force=False),
+        xooxle.Selector({"class_": "mark"}, force=False),
     ],
     captures=[
         xooxle.Capture(
@@ -1768,9 +1770,11 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
                 "demotic",
                 "gloss",
                 "tab",
+                "manual",
             },
             unit_tags={"p"},
             retain_tags=xooxle.RETAIN_TAGS_DEFAULT | {"p"},
+            retain_attributes={"data-key"},
         ),
         xooxle.Capture(
             "marcion",

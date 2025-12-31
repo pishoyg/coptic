@@ -127,6 +127,13 @@ def replace_bracketed(match: re.Match[str]) -> str:
     return f'<span class="{clas}">{text}</span>'
 
 
+def replace_manual(match: re.Match[str]) -> str:
+    text, key = match.group(1, 2)
+    if key is None:
+        return rf'<span class="manual">{text}</span>'
+    return rf'<span class="manual" data-key="{key}">{text}</span>'
+
+
 # Coptic Wiki substitutions:
 #
 # NOTE: This is based on a snapshot of the following file, taken on September 17,
@@ -211,15 +218,13 @@ _SUBSTITUTIONS: list[Substitution] = [
         ban=["\\"],
     ),
     Substitution(bracketed(r"(.*?)"), replace_bracketed, ban=["[[", "]]"]),
+    Substitution(
+        r"(?<!{){([^{}]+)}(?!})(?:{{(.*?)}})?",
+        replace_manual,
+        ban=["{", "}"],
+    ),
 ]
 # pylint: enable=line-too-long
-
-# The corrigenda substitution is different based on which Wiki entry has the
-# corrigendum, so we give it special treatment.
-CORRIGENDUM_RE: re.Pattern[str] = re.compile("//(.*?)//(.*?)//")
-_BANNED: set[str] = {"//"} | {
-    token for sub in _SUBSTITUTIONS for token in sub.ban
-}
 
 
 @typing.final
@@ -281,6 +286,27 @@ class Wiki:
                 "in:",
                 self.entry,
             )
+        self.footnotes: list[str] = []
+
+    def subs(self) -> abc.Generator[Substitution]:
+        yield from _SUBSTITUTIONS
+
+        yield Substitution(
+            r"{{(.*?)}}",
+            self.replace_footnote,
+            # NOTE: Footnotes are omitted from the text version.
+            text_repl="",
+            ban=["{", "}"],
+        )
+        if self.addenda_page:
+            yield Substitution(
+                "//(.*?)//(.*?)//",
+                f'<span class="corrigendum" data-page="{self.addenda_page}">'
+                + r"<del>\1</del><ins>\2</ins>"
+                + "</span>",
+                r"\2",
+                ban=["//"],
+            )
 
     def addendum(self) -> bool:
         """Determine whether this entry is an addendum.
@@ -331,9 +357,16 @@ class Wiki:
 
         return headword
 
+    def _banned(self) -> set[str]:
+        return {token for sub in self.subs() for token in sub.ban}
+
     def html(self) -> str:
+        # NOTE: Each call to this method populates self.footnotes. Calling it
+        # multiple times would be an error.
+        # TODO: (#0) This is not a clean implementation!
+        assert not self.footnotes
         html: str = "".join(self._html_aux())
-        for token in _BANNED:
+        for token in self._banned():
             ensure.ensure(
                 token not in html,
                 "Banned token",
@@ -345,30 +378,33 @@ class Wiki:
             )
         return html
 
+    def replace_footnote(self, match: re.Match[str]) -> str:
+        self.footnotes.append(match.group(1))
+        num: int = len(self.footnotes)
+        return f'<span class="mark" data-num="{num}">[{num}]</span>'
+
     def _html_aux(self) -> abc.Generator[str]:
         yield "<p>"
+
         raw: str = self.entry
-        for s in _SUBSTITUTIONS:
+        for s in self.subs():
             raw = s.html(raw)
-        if self.addenda_page:
-            # If this entry has no corrigenda page, we can assume that it has no
-            # corrigenda. The check for banned tokens will enforce this.
-            raw = CORRIGENDUM_RE.sub(
-                f'<span class="corrigendum" data-page="{self.addenda_page}">'
-                + r"<del>\1</del>"
-                + r"<ins>\2</ins>"
-                + "</span>",
-                raw,
-            )
         yield raw
+
+        for num, footnote in enumerate(self.footnotes, 1):
+            yield f'<span class="footnote" id="footnote{num}">'
+            yield f"[{num}] "
+            yield footnote
+            yield "</span>"
+
         yield "</p>"
 
     @functools.cached_property
+    # NOTE: Footnotes are omitted from the text!
     def text(self) -> str:
         txt: str = self.entry
-        for s in _SUBSTITUTIONS:
+        for s in self.subs():
             txt = s.text(txt)
-        txt = CORRIGENDUM_RE.sub(r"\2", txt)
         return txt
 
     @typing.override
