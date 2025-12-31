@@ -2078,6 +2078,7 @@ const DATA_1: Resource[] = [
       BIF: LOOKUP,
       Bor: LOOKUP,
       C: LOOKUP,
+      CO: LOOKUP,
       Cai: LOOKUP,
       ClPr: LOOKUP,
       Ep: LOOKUP,
