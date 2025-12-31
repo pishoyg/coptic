@@ -7,8 +7,9 @@ import * as html from '../html.js';
 import * as paths from '../paths.js';
 import * as css from '../css.js';
 import * as cls from './cls.js';
+import * as id from './id.js';
 import * as log from '../logger.js';
-import * as bible from './bible.js';
+import * as bib from './bible.js';
 import * as ann from './annotations.js';
 import * as ref from './references.js';
 import * as drop from '../dropdown.js';
@@ -53,7 +54,8 @@ const ABBREVIATION_EXCLUDE: string = css.classQuery(
   cls.ARAMAIC,
   cls.DEMOTIC,
   cls.GREEK,
-  cls.HEBREW
+  cls.HEBREW,
+  cls.MANUAL
 );
 
 /**
@@ -116,7 +118,7 @@ const BIBLE_RE = new RegExp(
   // Capture the book abbreviation.
   // The CHAPTER_VERSE regex defines its own capture groups.
   `(${regex([
-    ...Object.keys(bible.MAPPING),
+    ...Object.keys(bib.MAPPING),
     ...Object.keys(DAN_OVERRIDE),
   ])})(?:${CHAPTER_VERSE.source})?`,
   'gu'
@@ -289,6 +291,10 @@ export function handle(root: HTMLElement): void {
       // collision.
       handleSemicolons(elem);
 
+      handleFootnote(elem);
+
+      handleManual(elem);
+
       dev.play(() => {
         white.warnPotentiallyMissingReferences(elem, ABBREVIATION_EXCLUDE);
 
@@ -308,6 +314,23 @@ export function handle(root: HTMLElement): void {
 
 /**
  *
+ * @param tip
+ * @param {...any} children
+ * @returns
+ */
+function annotation(
+  tip: string,
+  ...children: (Node | string)[]
+): HTMLSpanElement {
+  const span: HTMLSpanElement = document.createElement('span');
+  span.append(...children);
+  drop.addDroppable(span, [tip]);
+  span.classList.add(cls.ANNOTATION);
+  return span;
+}
+
+/**
+ *
  * @param root
  */
 function handleAnnotations(root: HTMLElement): void {
@@ -317,7 +340,8 @@ function handleAnnotations(root: HTMLElement): void {
     (match: RegExpExecArray, node: Text, _): { replacement?: Node[] } => {
       const annot: ann.Annotation | undefined = ann.MAPPING[match[0]];
       if (!annot) {
-        return {};
+        // This is impossible, since the regex is constructed from the MAPPING.
+        log.fatal("Can't find annotation:", match[0]);
       }
 
       if (annot.noStyledParent && node.parentElement?.closest('i, sup')) {
@@ -326,11 +350,7 @@ function handleAnnotations(root: HTMLElement): void {
         return {};
       }
 
-      const span: HTMLSpanElement = document.createElement('span');
-      span.textContent = match[0];
-      drop.addDroppable(span, [annot.fullForm]);
-      span.classList.add(cls.ANNOTATION);
-      return { replacement: [span] };
+      return { replacement: [annotation(annot.fullForm, match[0])] };
     },
     // Exclude all Wiki abbreviations to avoid overlap.
     ABBREVIATION_EXCLUDE
@@ -468,7 +488,7 @@ class Citation {
     private raw: string,
     private chapter: string | undefined,
     private verse: string | undefined,
-    private readonly book: bible.Book
+    private readonly book: bib.Book
   ) {
     if (this.chapter && !this.verse && this.book.numChapters === 1) {
       // This is a one-chapter book. The chapter number is always 1. The number
@@ -555,7 +575,7 @@ class Citation {
       node.dataset[Citation.DATA_CHAPTER] || undefined,
       node.dataset[Citation.DATA_VERSE] || undefined,
       /* eslint-enable @typescript-eslint/prefer-nullish-coalescing */
-      bible.MAPPING[node.dataset[Citation.DATA_BOOK]!]!
+      bib.MAPPING[node.dataset[Citation.DATA_BOOK]!]!
     );
   }
 
@@ -626,7 +646,7 @@ function parseBibleCitation(
     bookAbbreviation = 'Dan';
   }
 
-  const book: bible.Book | undefined = bible.MAPPING[bookAbbreviation];
+  const book: bib.Book | undefined = bib.MAPPING[bookAbbreviation];
   if (!book) {
     // No book found! This match is not a Biblical reference.
     return null;
@@ -789,15 +809,15 @@ function handleBible(root: HTMLElement): void {
 function handleBibleFollowups(root: HTMLElement): void {
   root
     .querySelectorAll<HTMLElement>(`.${cls.BIBLE}`)
-    .forEach((bib: HTMLElement): void => {
-      const cit: Citation = Citation.fromAnchor(bib);
+    .forEach((bible: HTMLElement): void => {
+      const cit: Citation = Citation.fromAnchor(bible);
 
-      if (!bib.nextSibling?.nodeValue) {
+      if (!bible.nextSibling?.nodeValue) {
         return;
       }
 
-      bib.nextSibling.replaceWith(
-        parseBibleFollowups(cit, bib.nextSibling.nodeValue)
+      bible.nextSibling.replaceWith(
+        parseBibleFollowups(cit, bible.nextSibling.nodeValue)
       );
     });
 }
@@ -1167,6 +1187,77 @@ function findAntecedent(ib: HTMLElement, strict?: boolean): HTMLElement | null {
   return antecedent instanceof HTMLElement ? antecedent : null;
 }
 
+const DATA_KEY = 'key';
+/**
+ *
+ * @param root
+ * @returns
+ */
+export function handleManual(root: HTMLElement): void {
+  root
+    .querySelectorAll<HTMLElement>(`.${cls.MANUAL}`)
+    .forEach((manual: HTMLElement): void => {
+      const key: string | undefined = manual.dataset[DATA_KEY];
+
+      if (key === '') {
+        // An empty key indicates that this should not be annotated.
+        manual.replaceWith(...manual.childNodes);
+        return;
+      }
+
+      if (key) {
+        // The key is explicit. The possibilities are:
+        // 1. The key is a reference abbreviation.
+        // 2. The key is an annotation.
+        //
+        // The third possibility (the key being a Bible book abbreviation) has
+        // never been encountered, so it remains unimplemented.
+        //
+        // TODO: (#0) Consider supporting explicit Bible book keys for
+        // completion. This would require attempting to parse a chapter and
+        // verse number from the text.
+        const reference: ref.Reference | undefined = ref.MAPPING[key];
+        if (reference) {
+          // This is a Reference.
+          const span: HTMLSpanElement = /^ib\b/.test(manual.textContent)
+            ? reference.span(ibidem())
+            : reference.span();
+          span.append(...manual.childNodes);
+          manual.replaceWith(span);
+          return;
+        }
+
+        // The key is an annotation.
+        manual.replaceWith(annotation(key, ...manual.childNodes));
+      }
+
+      log.ensure(key === undefined); // Sanity check.
+
+      // We need to infer the interpretation. If the text starts with a
+      // reference name, then it's a reference. Otherwise, it's a dangling
+      // suffix, and we need to find an antecedent.
+      REFERENCE_RE.lastIndex = 0;
+      const match: RegExpExecArray | null = REFERENCE_RE.exec(
+        manual.textContent
+      );
+      if (match?.index === 0) {
+        // We can infer the reference from the text.
+        const reference: ref.Reference | undefined = ref.MAPPING[match[0]];
+        if (!reference) {
+          log.fatal('This is impossible!');
+        }
+        const span: HTMLSpanElement = reference.span();
+        span.append(...manual.childNodes);
+        manual.replaceWith(span);
+        return;
+      }
+
+      // This is a dangling suffix. Find an antecedent.
+      // TODO: (#668) Complete the implementation.
+      return;
+    });
+}
+
 /**
  *
  * @param root
@@ -1174,6 +1265,10 @@ function findAntecedent(ib: HTMLElement, strict?: boolean): HTMLElement | null {
 function handleIB(root: HTMLElement): void {
   root.querySelectorAll('i').forEach((ib: HTMLElement): void => {
     if (ib.textContent.toLowerCase() !== 'ib') {
+      return;
+    }
+
+    if (ib.parentElement?.classList.contains(cls.MANUAL)) {
       return;
     }
 
@@ -1214,5 +1309,19 @@ function handleIB(root: HTMLElement): void {
 
     handleBibleIB(ib, antecedent, next);
   });
+}
+
+const DATA_NUM = 'num';
+
+/**
+ *
+ * @param root
+ */
+export function handleFootnote(root: HTMLElement): void {
+  root
+    .querySelectorAll<HTMLElement>(`.${cls.MARK}`)
+    .forEach((mark: HTMLElement): void => {
+      html.linkify(mark, `#${id.footnote(mark.dataset[DATA_NUM]!)}`, false);
+    });
 }
 /* eslint-enable max-lines */

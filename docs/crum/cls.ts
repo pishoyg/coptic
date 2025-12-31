@@ -57,6 +57,8 @@ export const INDEX_TABLE = 'index-table';
  */
 export const ROMAN = 'roman';
 export const GREEK = 'greek';
+export const MANUAL = 'manual';
+export const MARK = 'mark';
 export const MEANING = 'meaning';
 export const NAG_HAMMADI = 'nag-hammadi';
 // TODO: (#203) Although this class's primary use is Anki, it might actually
