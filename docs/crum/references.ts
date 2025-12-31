@@ -137,11 +137,6 @@ export class Reference {
       el.replaceWith(...el.childNodes);
       el.removeAttribute(`data-${this.DATA_REF}`);
     });
-
-    // Remove the .suffix span, retaining the children.
-    elem.querySelectorAll(`.${cls.SUFFIX}`).forEach((el: Element): void => {
-      el.replaceWith(...el.childNodes);
-    });
   }
 }
 

@@ -41,9 +41,6 @@ const ABBREVIATION_EXCLUDE: string = css.classQuery(
   cls.BULLET,
   cls.BIBLE,
   cls.REFERENCE,
-  // Suffixes are, as of the time of writing, always included within references.
-  // But we add them to the list for completion.
-  cls.SUFFIX,
   cls.DIALECT,
   cls.ANNOTATION,
   cls.GLOSS,
@@ -807,41 +804,34 @@ function handleBibleFollowups(root: HTMLElement): void {
 
 /**
  *
- * @param suffix
  * @param maybeSuperscript
  * @returns
  */
-function parseSuffix(
-  suffix: string,
+function* parseSuffix(
   maybeSuperscript: ChildNode | null
-): HTMLSpanElement {
-  const span: HTMLSpanElement = document.createElement('span');
-  span.classList.add(cls.SUFFIX);
-  span.textContent = suffix;
-
+): Generator<Node | string> {
   if (maybeSuperscript?.nodeName !== 'SUP') {
     // The node is not a superscript.
-    return span;
+    return;
   }
 
   // We need to capture the superscript's sibling before we move the
   // superscript, otherwise we wouldn't be able to access it after the move.
   const nextSibling: ChildNode | null = maybeSuperscript.nextSibling;
-  span.append(maybeSuperscript);
+  yield maybeSuperscript;
 
   // Sometimes, there are even more numbers following the superscript.
   if (!nextSibling?.nodeValue) {
-    return span;
+    return;
   }
 
   const match: RegExpMatchArray | null = nextSibling.nodeValue.match(SUFFIX);
   if (!match) {
-    return span;
+    return;
   }
 
-  span.append(match[0]);
+  yield match[0];
   nextSibling.nodeValue = nextSibling.nodeValue.slice(match[0].length);
-  return span;
 }
 
 // TODO: (#0) Simplify this method.
@@ -927,7 +917,7 @@ function replaceReference(
 
   // Add the suffix as a child.
   if (suffix) {
-    span.append(parseSuffix(suffix, nextSibling /* candidate superscript  */));
+    span.append(suffix, ...parseSuffix(nextSibling));
   }
 
   return { replacement: [span], remainder };
@@ -1010,19 +1000,14 @@ function handleReferenceFollowups(root: HTMLElement): void {
         return;
       }
       nextSibling.nodeValue = text.slice(match[0].length);
-      // TODO: (#0) The current flow groups the first suffix (if present) under
-      // one <span class="suffix"> tag, and all other comma-separated suffixes
-      // under a second tag. For uniformity, we should have each separate suffix
-      // in a separate tag.
       // TODO: (#572) The `parseSuffix` function considers the possibility that
       // our match has following <sup> element that is part of the suffix. Right
       // now, our code doesn't account for the possibility that such a
       // superscript is followed by a comma that is followed by more suffixes.
-      const suffix: HTMLSpanElement = parseSuffix(
+      reference.append(
         match[0],
-        nextSibling.nodeValue ? null : nextSibling.nextSibling
+        ...parseSuffix(nextSibling.nodeValue ? null : nextSibling.nextSibling)
       );
-      reference.append(suffix);
     });
 }
 
@@ -1066,7 +1051,8 @@ function handleReferenceIB(
   if (next.nodeValue && suffix) {
     next.nodeValue = next.nodeValue.slice(suffix.length);
     span.prepend(
-      parseSuffix(suffix, next.nodeValue.length ? null : next.nextSibling)
+      suffix,
+      ...parseSuffix(next.nodeValue.length ? null : next.nextSibling)
     );
   }
 

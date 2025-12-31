@@ -12,7 +12,6 @@ import * as base from './base.js';
  */
 type WikiElementKey =
   | 'references'
-  | 'suffixes'
   | 'bible'
   | 'dialectTooltips'
   | 'annotations';
@@ -27,7 +26,6 @@ const TEST_CASES: {
     key: '88',
     want: {
       references: 145,
-      suffixes: 138,
       bible: 122,
       dialectTooltips: 388,
       annotations: 79,
@@ -39,7 +37,6 @@ const TEST_CASES: {
     key: '54',
     want: {
       references: 389,
-      suffixes: 392,
       bible: 305,
       dialectTooltips: 832,
       annotations: 240,
@@ -57,7 +54,6 @@ const TEST_CASES: {
     key: '1144',
     want: {
       references: 7,
-      suffixes: 7,
       bible: 6,
       dialectTooltips: 9,
       annotations: 11,
@@ -70,7 +66,6 @@ const TEST_CASES: {
     key: '3271',
     want: {
       references: 2,
-      suffixes: 2,
       bible: 0,
       dialectTooltips: 1,
       annotations: 3,
@@ -83,7 +78,6 @@ const TEST_CASES: {
     key: '1082',
     want: {
       references: 2,
-      suffixes: 2,
       bible: 2,
       dialectTooltips: 13,
       annotations: 9,
@@ -94,7 +88,6 @@ const TEST_CASES: {
     key: '629',
     want: {
       references: 22,
-      suffixes: 22,
       bible: 18,
       dialectTooltips: 66,
       annotations: 30,
@@ -105,7 +98,6 @@ const TEST_CASES: {
     key: '2531',
     want: {
       references: 3,
-      suffixes: 3,
       bible: 1,
       dialectTooltips: 2,
       annotations: 3,
@@ -118,7 +110,6 @@ const TEST_CASES: {
  */
 const QUERIES: Record<WikiElementKey, string> = {
   references: `.${cls.WIKI} .${cls.REFERENCE}`,
-  suffixes: `.${cls.WIKI} .${cls.SUFFIX}`,
   bible: `.${cls.WIKI} .${cls.BIBLE}`,
   dialectTooltips: `.${cls.WIKI} .${cls.DIALECT} .${drop.CLS.DROPPABLE}`,
   annotations: `.${cls.WIKI} .${cls.ANNOTATION}`,
