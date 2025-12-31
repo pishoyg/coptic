@@ -635,35 +635,8 @@ function parseBibleCitation(
     return null;
   }
 
-  // "Is" and "He" are both English words that often occur in the text. "Col" is
-  // used in some non-biblical abbreviations (it stands for "College").
-  // "Gen" is a rare abbreviation for Genesis (mostly it's "Ge"), and it's
-  // confused with "gen" for "genitive".
-  //
-  // There is currently a singleton known Genesis citation using "Gen" under
-  // ⲓⲁⲗ:
-  //   https://remnqymi.com/crum/2796.html
-  //
-  // Currently, we process biblical citations before non-biblical ones, so at
-  // the time this code executes, an occurrence of 'Col' is still unclaimed by
-  // another reference, which means that our code would misinterpret it as a
-  // biblical citation!
-  //
-  // We account for the possibility that this match is a false positive.
-  // NOTE: This heuristic is based on known examples (#524), but other cases
-  // might turn up in the text that violate these rules.
-  if (!chapter && !verse) {
-    if (bookAbbreviation === 'Gen') {
-      return null;
-    }
-
-    if (
-      ['Is', 'He', 'Col'].includes(bookAbbreviation) &&
-      remainder.startsWith(' ') &&
-      (remainder[1] ?? node.nextSibling?.textContent)?.match(/\p{L}/u)
-    ) {
-      return null;
-    }
+  if (!chapter && !verse && falsePositive(bookAbbreviation, remainder, node)) {
+    return null;
   }
 
   return new Citation(match[0], chapter, verse, book);
@@ -738,6 +711,55 @@ function replaceBible(
   }
 
   return { replacement: [cit.anchor()] };
+}
+
+/**
+ * Determine whether a given chapterless and verseless Bible book abbreviation
+ * is a false positive.
+ *
+ * "Is" and "He" are both English words that often occur in the text.
+ *
+ * "Gen" is a rare abbreviation for Genesis, and it's confused with "gen" for
+ * "genitive".
+ * There is currently a singleton known Genesis citation using "Gen" under
+ * ⲓⲁⲗ:
+ *   https://remnqymi.com/crum/2796.html
+ * Other than that, Genesis is cited as "Ge".
+ *
+ * NOTE: This heuristic is based on known examples (#524), but other cases
+ * might turn up in the text that violate these rules.
+ *
+ * @param bookAbbreviation
+ * @param remainder
+ * @param node
+ * @returns
+ */
+function falsePositive(
+  bookAbbreviation: string,
+  remainder: string,
+  node: Text
+): boolean {
+  if (bookAbbreviation === 'Gen' || bookAbbreviation === 'He') {
+    return true;
+  }
+
+  if (bookAbbreviation === 'Is') {
+    // Isaiah was found to have chapterless verseless citations that are true
+    // positives, in two cases:
+    if (remainder.startsWith(')')) {
+      return false;
+    }
+    if (
+      remainder === ' ' &&
+      node.nextSibling?.textContent === 'l c' /* loco citato */
+    ) {
+      return false;
+    }
+
+    return true;
+  }
+
+  return false;
 }
 
 /**
