@@ -116,12 +116,7 @@ const CHAPTER_VERSE = new RegExp(`\\.? (?:${NUMS}|\\(${NUMS}\\))`, 'uy');
 const DAN_OVERRIDE: Record<string, string> = { Su: 'a', Bel: 'c' };
 
 const BIBLE_RE = new RegExp(
-  // Capture the book abbreviation.
-  // The CHAPTER_VERSE regex defines its own capture groups.
-  `(${regex([
-    ...Object.keys(bib.MAPPING),
-    ...Object.keys(DAN_OVERRIDE),
-  ])})(?:${CHAPTER_VERSE.source})?`,
+  regex([...Object.keys(bib.MAPPING), ...Object.keys(DAN_OVERRIDE)]),
   'gu'
 );
 
@@ -653,14 +648,17 @@ function parseBibleCitation(
   match: RegExpExecArray,
   node: Text,
   remainder: string
-): Citation | null {
+): [Citation | null, string | null] {
   // Our regex puts the book abbreviation in the first match group. The chapter
   // and verse numbers are either second and third, or fourth and fifth.
-  let [bookAbbreviation, chapter, verse] = [
-    match[1]!,
-    match[2] ?? match[4],
-    match[3] ?? match[5],
-  ];
+  let bookAbbreviation: string = match[0];
+
+  // Parse the numbers following the book abbreviation.
+  CHAPTER_VERSE.lastIndex = 0;
+  const m: RegExpExecArray | null = CHAPTER_VERSE.exec(remainder);
+  let [chapter, verse] = [m?.[1] ?? m?.[3], m?.[2] ?? m?.[4]];
+  remainder = remainder.slice(m?.[0].length ?? 0);
+  const raw: string = match[0] + (m?.[0] ?? '');
 
   if (bookAbbreviation in DAN_OVERRIDE) {
     // Given that this special book contains one chapter, the book
@@ -672,17 +670,14 @@ function parseBibleCitation(
     bookAbbreviation = 'Dan';
   }
 
-  const book: bib.Book | undefined = bib.MAPPING[bookAbbreviation];
-  if (!book) {
-    // No book found! This match is not a Biblical reference.
-    return null;
+  if (!m && falsePositive(bookAbbreviation, remainder, node)) {
+    return [null, null];
   }
 
-  if (!chapter && !verse && falsePositive(bookAbbreviation, remainder, node)) {
-    return null;
-  }
-
-  return new Citation(match[0], chapter, verse, book);
+  return [
+    new Citation(raw, chapter, verse, bib.MAPPING[bookAbbreviation]!),
+    remainder,
+  ];
 }
 
 /**
@@ -747,13 +742,17 @@ function replaceBible(
   match: RegExpExecArray,
   node: Text,
   remainder: string
-): { replacement?: (Node | string)[] } {
-  const cit: Citation | null = parseBibleCitation(match, node, remainder);
+): { replacement?: (Node | string)[]; remainder?: string } {
+  const [cit, rem]: [Citation | null, string | null] = parseBibleCitation(
+    match,
+    node,
+    remainder
+  );
   if (!cit?.valid()) {
     return {};
   }
 
-  return { replacement: [cit.anchor()] };
+  return { replacement: [cit.anchor()], remainder: rem ?? remainder };
 }
 
 /**
