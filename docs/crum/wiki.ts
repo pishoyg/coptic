@@ -337,7 +337,12 @@ function handleAnnotations(root: HTMLElement): void {
   html.replaceText(
     root,
     ANNOTATION_RE,
-    (match: RegExpExecArray, node: Text, _): { replacement?: Node[] } => {
+    (
+      match: RegExpExecArray,
+      node: Text,
+      remainder: string,
+      preceding: string
+    ): { replacement?: Node[] } => {
       const annot: ann.Annotation | undefined = ann.MAPPING[match[0]];
       if (!annot) {
         // This is impossible, since the regex is constructed from the MAPPING.
@@ -347,6 +352,14 @@ function handleAnnotations(root: HTMLElement): void {
       if (annot.noStyledParent && node.parentElement?.closest('i, sup')) {
         // This annotation can't show in italicized text, and this node is
         // italicized.
+        return {};
+      }
+
+      if (
+        match[0] === 'art' &&
+        (remainder.startsWith(' thou') || preceding.endsWith('thou '))
+      ) {
+        // False positive!
         return {};
       }
 
