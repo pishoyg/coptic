@@ -1876,7 +1876,7 @@ const DATA_1: Resource[] = [
         'Preisigke, F. (1922). <em><a href="https://archive.org/details/namenbuch00prei/page/n4/mode/2up">Namenbuch. Enthaltend alle griechischen, lateinischen, ägyptischen, hebräischen, arabischen und sonstigen semitischen und nichtsemitischen Menschennamen, soweit sie in griechischen Urkunden (Papyri, Ostraka, Inschriften, Mumienschildern u.s.w.) Ägyptens sich vorfinden</a></em>. Heidelberg: Selbstverlag des Herausgebers.',
       ],
     },
-    variants: ['Preisigke'],
+    variants: ['Preisigke', 'Preis.'],
   },
   {
     source: {
@@ -2355,7 +2355,7 @@ const DATA_1: Resource[] = [
     source: {
       title: 'Vienna, MSS. & ostraca in the Staats(olim Hof)bibliothek',
     },
-    variants: ['Vi'],
+    variants: ['Vi', 'Vienna'],
     postfixes: { K: undefined, ostr: 'ostracon' },
   },
   {
