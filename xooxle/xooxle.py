@@ -356,7 +356,7 @@ class Capture:
         attrs: dict[str, str] = {}
         for key in self._retain_attributes:
             val: str | list[str] | None = child.get(key)
-            if not val:
+            if val is None:
                 continue
             if isinstance(val, list):
                 val = " ".join(val)
