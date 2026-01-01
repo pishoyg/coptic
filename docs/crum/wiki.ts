@@ -46,6 +46,8 @@ const ABBREVIATION_EXCLUDE: string = css.classQuery(
   cls.DIALECT,
   cls.ANNOTATION,
   cls.GLOSS,
+  cls.MANUAL,
+  cls.PAGE,
   // We process Coptic text for annotations, because the signs for verb forms
   // (prenominal, pronominal, and qualitative) are often marked as part of the
   // Coptic word. (Although, as of the time of writing, we only annotate
@@ -55,8 +57,7 @@ const ABBREVIATION_EXCLUDE: string = css.classQuery(
   cls.ARAMAIC,
   cls.DEMOTIC,
   cls.GREEK,
-  cls.HEBREW,
-  cls.MANUAL
+  cls.HEBREW
 );
 
 /**

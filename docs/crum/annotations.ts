@@ -263,6 +263,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'numbers', variants: ['nos'], noCaseVariant: true },
   { fullForm: 'Old Testament', variants: ['OTest'], noCaseVariant: true },
   { fullForm: 'olim penes', variants: ['olim penes'] },
+  { fullForm: 'page', variants: ['p'] },
   // NOTE: 'partic' encountered once, as of the time of writing!
   { fullForm: 'participle', variants: ['particip', 'partic'] },
   { fullForm: 'penes', variants: ['penes'] },
