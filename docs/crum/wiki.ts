@@ -1003,6 +1003,7 @@ function handleCorrigenda(root: HTMLElement): void {
  * @param root
  */
 function handleSemicolons(root: HTMLElement): void {
+  let first = true;
   html.replaceText(
     root,
     /;/,
@@ -1010,6 +1011,12 @@ function handleSemicolons(root: HTMLElement): void {
       const span = document.createElement('span');
       span.classList.add(cls.SEMICOLON);
       span.textContent = ';';
+      if (first) {
+        drop.addDroppable(span, [
+          'semicolons separate groups in meaning or usage',
+        ]);
+        first = false;
+      }
       return { replacement: [span] };
     },
     // Maybe we should simply exclude tooltips (`drop.CLS.DROPPABLE`)?
