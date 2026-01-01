@@ -49,6 +49,9 @@ export function lexiconLookup(query: string): string {
  * @returns
  */
 export function bible(book: string, chapter?: string, verse?: string): string {
+  // Some chapters are called A, C, D, or F. But we always use lower case for
+  // those.
+  chapter = chapter?.toLowerCase();
   if (!chapter) {
     // This is a book URL.
     return `${BIBLE}?book=${book}`;
