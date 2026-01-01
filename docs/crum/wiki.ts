@@ -1110,7 +1110,7 @@ function handleReferenceIB(
   // Notice that many ib references legitimately don't have a suffix.
   const suffix: string | undefined = next.nodeValue?.match(SUFFIX)?.[0];
   if (next.nodeValue && suffix) {
-    // TODO: (#647) In some cases, the first token in the suffix is actually
+    // TODO: (#671) In some cases, the first token in the suffix is actually
     // part of the reference abbreviation.
     // For example:
     //   1. Mani H ... ib K
