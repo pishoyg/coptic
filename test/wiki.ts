@@ -39,7 +39,7 @@ const TEST_CASES: {
       references: 389,
       bible: 305,
       dialectTooltips: 832,
-      annotations: 240,
+      annotations: 239,
     },
   },
   {
