@@ -218,6 +218,18 @@ const REFERENCE_FOLLOWUP = new RegExp(
 const REFERENCE_RE = new RegExp(regex(Object.keys(ref.MAPPING)), 'gu');
 
 /**
+ *
+ * @param wiki
+ * @returns
+ */
+function textContent(wiki: HTMLElement): string {
+  // Our enricher adds tooltips, which we need to eliminate in order to obtain
+  // the original text.
+  // Additionally, we add a copy button, and we should get rid of that as well.
+  return str.textContent(wiki, { [drop.CLS.DROPPABLE]: '', [cls.COPY]: '' });
+}
+
+/**
  * Handle all Crum elements.
  * @param root
  */
@@ -225,9 +237,7 @@ export function handle(root: HTMLElement): void {
   root
     .querySelectorAll<HTMLElement>(`.${cls.WIKI}`)
     .forEach((elem: HTMLElement): void => {
-      const startText: string | undefined = dev.play(() =>
-        drop.noTipTextContent(elem)
-      );
+      const startText: string | undefined = dev.play(() => textContent(elem));
 
       // Bible abbreviations are not expected to collide with other
       // abbreviations. We do them early to move them out of the way.
@@ -301,7 +311,7 @@ export function handle(root: HTMLElement): void {
       dev.play(() => {
         white.warnPotentiallyMissingReferences(elem, ABBREVIATION_EXCLUDE);
 
-        const endText: string = drop.noTipTextContent(elem);
+        const endText: string = textContent(elem);
         // This handler should only add tooltips without modifying text content
         // at all. Verify that the text content hasn't changed.
         log.ensure(
