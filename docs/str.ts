@@ -126,3 +126,48 @@ export function escape(query: string): string {
   // [1] https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/escape
   return query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
+
+/**
+ * @param node
+ * @param overrides
+ * @returns
+ */
+export function textContent(
+  node: Node,
+  overrides: Record<string, string>
+): string {
+  return [...textContentAux(node, overrides)].join('');
+}
+
+/**
+ * @param node
+ * @param overrides
+ * @returns
+ */
+function* textContentAux(
+  node: Node,
+  overrides: Record<string, string>
+): Generator<string> {
+  // If the node is a text node and has content, yield it.
+  if (node.nodeType === Node.TEXT_NODE && node.textContent) {
+    yield node.textContent;
+    return;
+  }
+
+  if (node.nodeType !== Node.ELEMENT_NODE) {
+    // This is a non-text and a non-element node. It may be some other type,
+    // such as a comment. Return immediately.
+    return;
+  }
+
+  for (const [cls, text] of Object.entries(overrides)) {
+    if ((node as HTMLElement).classList.contains(cls)) {
+      yield text;
+      return;
+    }
+  }
+
+  for (const child of node.childNodes) {
+    yield* textContentAux(child, overrides);
+  }
+}

@@ -221,6 +221,21 @@ figcaption {
   }
 }
 
+.copy {
+  margin-top: 7px;
+  float: left;
+  font-size: x-small;
+  visibility: hidden;
+}
+
+.copy:hover {
+  cursor: pointer;
+}
+
+.entry:hover .copy {
+  visibility: visible;
+}
+
 .sister-key {
   float: right;
   font-style: italic;

@@ -4,6 +4,7 @@
 /* eslint-disable max-lines */
 
 import * as html from '../html.js';
+import * as browser from '../browser.js';
 import * as paths from '../paths.js';
 import * as css from '../css.js';
 import * as cls from './cls.js';
@@ -294,6 +295,8 @@ export function handle(root: HTMLElement): void {
       handleFootnote(elem);
 
       handleManual(elem);
+
+      handleEntry(elem);
 
       dev.play(() => {
         white.warnPotentiallyMissingReferences(elem, ABBREVIATION_EXCLUDE);
@@ -1206,7 +1209,7 @@ const DATA_KEY = 'key';
  * @param root
  * @returns
  */
-export function handleManual(root: HTMLElement): void {
+function handleManual(root: HTMLElement): void {
   root
     .querySelectorAll<HTMLElement>(`.${cls.MANUAL}`)
     .forEach((manual: HTMLElement): void => {
@@ -1330,11 +1333,39 @@ const DATA_NUM = 'num';
  *
  * @param root
  */
-export function handleFootnote(root: HTMLElement): void {
+function handleFootnote(root: HTMLElement): void {
   root
     .querySelectorAll<HTMLElement>(`.${cls.MARK}`)
     .forEach((mark: HTMLElement): void => {
       html.linkify(mark, `#${id.footnote(mark.dataset[DATA_NUM]!)}`, false);
     });
+}
+
+const textContentOverrides: Record<string, string> = {
+  [drop.CLS.DROPPABLE]: '',
+  [cls.COPY]: '',
+  [cls.TAB]: '    ',
+  [cls.SEMICOLON]: '; ',
+};
+
+/**
+ *
+ * @param root
+ */
+function handleEntry(root: HTMLElement): void {
+  root.querySelectorAll(`.${cls.ENTRY}`).forEach((entry: Element): void => {
+    const copy: HTMLSpanElement = document.createElement('span');
+    copy.textContent = '📋';
+    copy.addEventListener('click', () => {
+      browser.yank(
+        Array.from(entry.querySelectorAll('p'))
+          .map((p) => `    ${str.textContent(p, textContentOverrides)}`)
+          .join('\n')
+      );
+    });
+    copy.classList.add(cls.COPY);
+    drop.addDroppable(copy, ['copy text']);
+    entry.prepend(copy);
+  });
 }
 /* eslint-enable max-lines */
