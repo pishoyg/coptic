@@ -65,6 +65,8 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'accusative', variants: ['acc', 'accus'] },
   { fullForm: 'adjective', variants: ['adj'] },
   { fullForm: 'Arabic', variants: ['ar'] },
+  // NOTE: 'art' is a common source of false positives, as it occasionally
+  // refers to the copula (as in 'thou art' or 'art thou?').
   { fullForm: 'article', variants: ['art'] },
   {
     fullForm: 'constructed with (of verbs)',
@@ -118,6 +120,8 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'as opposed to, contrasted with', variants: ['opp'] },
   { fullForm: 'ostracon', variants: ['Ostr'] },
   { fullForm: 'parallel word or phrase', variants: ['paral'] },
+  // NOTE: `pass` is a common source of false positives, as it often means
+  // 'passive', and is sometimes the verb 'pass'
   { fullForm: 'passim', variants: ['pass'] },
   { fullForm: 'conjunctive participle', variants: ['p c'] },
   { fullForm: 'plural', variants: ['pl'] },
@@ -226,6 +230,8 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'improbable', variants: ['improb'] },
   { fullForm: 'in loco', variants: ['in loc'] },
   { fullForm: 'infinitive', variants: ['infin'] },
+  // NOTE: 'init' is a source of false positives. It occasionally means
+  // 'initial'.
   { fullForm: 'initio', variants: ['init'] },
   { fullForm: 'loco citato', variants: ['l c'] },
   { fullForm: 'loci citati', variants: ['ll cc'] },
