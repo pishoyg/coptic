@@ -384,6 +384,7 @@ class Wiki:
         return f'<span class="mark" data-num="{num}">[{num}]</span>'
 
     def _html_aux(self) -> abc.Generator[str]:
+        yield '<div class="entry">'
         yield "<p>"
 
         raw: str = self.entry
@@ -398,6 +399,7 @@ class Wiki:
             yield "</span>"
 
         yield "</p>"
+        yield "</div>"
 
     @functools.cached_property
     # NOTE: Footnotes are omitted from the text!
