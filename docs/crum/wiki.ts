@@ -951,6 +951,11 @@ function replaceReference(
     return {};
   }
 
+  if (source.raw() === 'My' && !suffix) {
+    // False positive.
+    return {};
+  }
+
   // Add the suffix as a child.
   if (suffix) {
     span.append(suffix, ...parseSuffix(nextSibling));

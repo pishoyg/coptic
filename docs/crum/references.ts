@@ -28,13 +28,11 @@ export class Reference {
   private static readonly DATA_REF = 'ref';
   /**
    *
-   * @param raw
    * @param variant - Abbreviation used to cite this source.
    * @param source - Cited source.
    * @param postfix - Postfix appended to the abbreviation, if any.
    */
   public constructor(
-    public readonly raw: string,
     public readonly variant: string,
     // TODO: (#522) The `source` field should become required once all sources
     // are populated.
@@ -90,7 +88,7 @@ export class Reference {
   public span(...tooltipPrefix: (Node | string)[]): HTMLSpanElement {
     const span: HTMLSpanElement = document.createElement('span');
     span.classList.add(cls.REFERENCE);
-    span.dataset[Reference.DATA_REF] = this.raw;
+    span.dataset[Reference.DATA_REF] = this.raw();
     const tooltip: (Node | string)[] = [
       ...tooltipPrefix,
       ...(this.tooltip()?.childNodes ?? []),
@@ -100,6 +98,16 @@ export class Reference {
     }
 
     return span;
+  }
+
+  /**
+   * @returns
+   */
+  public raw(): string {
+    if (!this.postfix) {
+      return this.variant;
+    }
+    return `${this.variant} ${this.postfix.name}`;
   }
 
   /**
@@ -2764,17 +2772,12 @@ function add(
 
   res.variants.forEach((variant: string): void => {
     // Add the abbreviation without any postfixes.
-    add(
-      variant,
-      new Reference(variant, variant, res.source),
-      res.noSpaceVariants
-    );
+    add(variant, new Reference(variant, res.source), res.noSpaceVariants);
     Object.entries(res.postfixes ?? {}).forEach(
       ([name, type]: [string, PostfixType]): void => {
-        const raw = `${variant} ${name}`;
         add(
-          raw,
-          new Reference(raw, variant, res.source, new Postfix(name, type)),
+          `${variant} ${name}`,
+          new Reference(variant, res.source, new Postfix(name, type)),
           res.noSpaceVariants
         );
       }
