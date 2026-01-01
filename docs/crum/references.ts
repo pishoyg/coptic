@@ -2073,7 +2073,7 @@ const DATA_1: Resource[] = [
     variants: ['Sh', 'Besa'],
     postfixes: {
       A: LOOKUP,
-      AM: LOOKUP,
+      Am: LOOKUP,
       AZ: LOOKUP,
       BM: LOOKUP,
       BMOr: LOOKUP,

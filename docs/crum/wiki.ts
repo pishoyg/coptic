@@ -87,7 +87,8 @@ function regex(keys: string[], bound = true): string {
 }
 
 /**
- * BIBLE_RE defines the regex used to catch Bible references.
+ * CHAPTER_VERSE defines the regex used to parse the chapter and verse numbers
+ * in a Bible citation.
  *
  * Some books, such as the Book of Esther, have special chapters called A, C, D,
  * and F. This is why we allow the chapter number to be one of those characters.
@@ -107,6 +108,7 @@ const NUMS = '(\\d+|A|C|D|F)(?: (\\d+))?';
 // 1. This creates two sets of capture groups.
 // 2. This is a sticky regex.
 const CHAPTER_VERSE = new RegExp(`\\.? (?:${NUMS}|\\(${NUMS}\\))`, 'uy');
+
 /**
  * DAN_OVERRIDE defines special Book names used by Crum to refer to chapters in
  * the Book of Daniel.
@@ -115,8 +117,12 @@ const CHAPTER_VERSE = new RegExp(`\\.? (?:${NUMS}|\\(${NUMS}\\))`, 'uy');
  */
 const DAN_OVERRIDE: Record<string, string> = { Su: 'a', Bel: 'c' };
 
-const BIBLE_RE = new RegExp(
-  regex([...Object.keys(bib.MAPPING), ...Object.keys(DAN_OVERRIDE)]),
+const REFERENCE_OR_BIBLE_RE = new RegExp(
+  regex([
+    ...Object.keys(ref.MAPPING),
+    ...Object.keys(bib.MAPPING),
+    ...Object.keys(DAN_OVERRIDE),
+  ]),
   'gu'
 );
 
@@ -234,11 +240,7 @@ export function handle(root: HTMLElement): void {
     .forEach((elem: HTMLElement): void => {
       const startText: string | undefined = dev.play(() => textContent(elem));
 
-      // Bible abbreviations are not expected to collide with other
-      // abbreviations. We do them early to move them out of the way.
-      handleBible(elem);
-
-      handleReferences(elem);
+      handleReferencesAndBible(elem);
 
       handlePages(elem);
       handlePageFollowups(elem);
@@ -805,28 +807,8 @@ function falsePositive(
 }
 
 /**
- * NOTE: For the Bible index, we opted for generating a JavaScript file that
- * defines the mapping. We used to populate the mapping in a JSON, but this
- * presented the following challenges:
- * 1. It has to be retrieved with an async fetch. We prefer to `await`
- *   (rather than `void`) promises as much as possible, and this would've
- *   complicated things:
- *   - Many dependent functions would've had to be made async in order to
- *     support an `await` operator.
- *   - Our Anki bundler didn't support a top-level await for the IIFE[1] target,
- *     and this would've added a further complication.
- * 2. I am unsure how easy it is to retrieve a JSON on Anki.
- *
- * Use of a JavaScript file makes things simpler, and it's not particularly
- * painful to maintain.
- *
- * [1] https://developer.mozilla.org/en-US/docs/Glossary/IIFE
- *
  * @param root
  */
-function handleBible(root: HTMLElement): void {
-  html.replaceText(root, BIBLE_RE, replaceBible, ABBREVIATION_EXCLUDE);
-}
 
 /**
  * @param root
@@ -979,8 +961,29 @@ function replaceReference(
  *
  * @param root
  */
-function handleReferences(root: HTMLElement): void {
-  html.replaceText(root, REFERENCE_RE, replaceReference, ABBREVIATION_EXCLUDE);
+function handleReferencesAndBible(root: HTMLElement): void {
+  html.replaceText(
+    root,
+    REFERENCE_OR_BIBLE_RE,
+    (match: RegExpExecArray, node: Text, remainder: string) => {
+      // There is a singleton known key that is interpretable as a Bible
+      // citation or a Reference, and that is "Am" which could mean:
+      // - Amos
+      // - Amélineau
+      // Whenever it occurs on its own, it refers to the Biblical book.
+      // As a postfix of Sh (ShAm), it's Amélineau.
+      //
+      // For this reason, we prioritize Bible matches over Reference matches.
+      if (match[0] in bib.MAPPING || match[0] in DAN_OVERRIDE) {
+        return replaceBible(match, node, remainder);
+      }
+      if (match[0] in ref.MAPPING) {
+        return replaceReference(match, node, remainder);
+      }
+      log.fatal('This is impossible!');
+    },
+    ABBREVIATION_EXCLUDE
+  );
 }
 
 // On a corrigendum element, the page number lives in a `data-page` attribute.
