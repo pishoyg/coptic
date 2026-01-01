@@ -1010,6 +1010,9 @@ function handleSemicolons(root: HTMLElement): void {
       const span = document.createElement('span');
       span.classList.add(cls.SEMICOLON);
       span.textContent = ';';
+      drop.addDroppable(span, [
+        'semicolons separate groups in meaning or usage',
+      ]);
       return { replacement: [span] };
     },
     // Maybe we should simply exclude tooltips (`drop.CLS.DROPPABLE`)?
