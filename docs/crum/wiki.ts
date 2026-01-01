@@ -1245,6 +1245,7 @@ function handleManual(root: HTMLElement): void {
 
         // The key is an annotation.
         manual.replaceWith(annotation(key, ...manual.childNodes));
+        return;
       }
 
       log.ensure(key === undefined); // Sanity check.
