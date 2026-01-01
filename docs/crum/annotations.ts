@@ -171,6 +171,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'third future', variants: ['3 fut'] },
 
   { fullForm: 'et cetera', variants: ['&c'] },
+  { fullForm: 'alchemical', variants: ['alchem'] },
   { fullForm: 'Appendix', variants: ['Append'] },
   { fullForm: 'absolute', variants: ['absol'] },
   { fullForm: 'according to', variants: ['acc to'] },
@@ -244,6 +245,9 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'neuter', variants: ['neut'] },
   { fullForm: 'nominal', variants: ['nom'] },
   { fullForm: 'nomen nescio', variants: ['NN'], noCaseVariant: true },
+  // NOTE: While we add an annotation for 'nos', we exclude 'no' because it
+  // would introduce too many false positives!
+  { fullForm: 'numbers', variants: ['nos'], noCaseVariant: true },
   { fullForm: 'Old Testament', variants: ['OTest'], noCaseVariant: true },
   { fullForm: 'olim penes', variants: ['olim penes'] },
   // NOTE: 'partic' encountered once, as of the time of writing!
