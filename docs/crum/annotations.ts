@@ -144,7 +144,7 @@ export const DATA: Abbreviation[] = [
   },
   { fullForm: 'suffix', variants: ['suff'] },
   { fullForm: 'transitive', variants: ['tr'] },
-  { fullForm: 'vide', variants: ['V'] },
+  { fullForm: 'vide', variants: ['V', 'vid'] },
   { fullForm: 'variant, in same dialect', variants: ['var'] },
   { fullForm: 'verb', variants: ['vb'] },
   { fullForm: 'qualitative', variants: ['†'], noBoundary: true },
