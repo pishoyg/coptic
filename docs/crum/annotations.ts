@@ -148,7 +148,14 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'variant, in same dialect', variants: ['var'] },
   { fullForm: 'verb', variants: ['vb'] },
   { fullForm: 'qualitative', variants: ['†'], noBoundary: true },
-  { fullForm: 'perhaps, possibly', variants: ['?'], noBoundary: true },
+  // NOTE: The question mark is a very common annotation, but it also occurs as
+  // a punctuation mark that doesn't need an annotation. Our heuristic to
+  // distinguish the two (which is implemented by simply refraining from setting
+  // the `noBoundary` field) is:
+  // - If it immediately follows a letter, it's a punctuation mark.
+  // - If there is a preceding space or non-word character, it's the annotation.
+  // This is good enough, although it produces (few) false negatives.
+  { fullForm: 'perhaps, possibly', variants: ['?'] },
 
   // SECTION 2: ABBREVIATIONS WE CHOOSE TO INCLUDE TO AID INTELLIGIBILITY.
   // N.B. For a few Latin abbreviations (e.g. penes, contra, etc.) the full form
