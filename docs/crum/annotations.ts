@@ -276,8 +276,6 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'prepositional', variants: ['prepos'] }, // Encountered once (as of the time of writing).
   { fullForm: 'preterite', variants: ['preter'] },
   { fullForm: 'prologue', variants: ['prol'] },
-  // NOTE: We currently fail to parse 'quid ?' because it exists in two nodes
-  // ('quid' inside an <i> tag, and ' ?' in the next sibling).
   { fullForm: 'quid ?', variants: ['quid ?'] },
   { fullForm: 'quod vide', variants: ['q v'] },
   { fullForm: 'quae vide', variants: ['qq v'] },
