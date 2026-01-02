@@ -192,7 +192,6 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'approximate', variants: ['approx', 'approxim'] },
   { fullForm: 'arithmetic', variants: ['arithm'] },
   { fullForm: 'auxiliary', variants: ['auxil'] },
-  // NOTE: 'bibl' encountered only once, as of the time of writing!
   { fullForm: 'biblical', variants: ['bibl'] },
   { fullForm: 'bis', variants: ['bis'] },
   { fullForm: 'condition, conditional', variants: ['condit'] },
@@ -264,27 +263,25 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'Old Testament', variants: ['OTest'], noCaseVariant: true },
   { fullForm: 'olim penes', variants: ['olim penes'] },
   { fullForm: 'page', variants: ['p'] },
-  // NOTE: 'partic' encountered once, as of the time of writing!
-  { fullForm: 'participle', variants: ['particip', 'partic'] },
+  { fullForm: 'participle', variants: ['particip', 'partic'] }, // Encountered once (as of the time of writing).
   { fullForm: 'penes', variants: ['penes'] },
   { fullForm: 'perfect', variants: ['perf', 'pf'] },
   { fullForm: 'Persian', variants: ['Pers'], noCaseVariant: true },
   { fullForm: 'pluperfect', variants: ['pluperf'] },
-  // NOTE: 'post-posit' encountered only once, as of the time of writing!
-  { fullForm: 'postpositive', variants: ['post-posit'] },
+  { fullForm: 'postpositive', variants: ['post-posit'] }, // Encountered once (as of the time of writing).
   { fullForm: 'possessive', variants: ['possess'] },
   { fullForm: 'pages', variants: ['pp'] },
   { fullForm: 'predicate', variants: ['predic'] },
   { fullForm: 'prepositions', variants: ['preps'] },
-  // NOTE: "prepos" was only encountered once so far, and it was intended
-  // to mean "prepositional". Could it also mean "preposition"?
-  { fullForm: 'prepositional', variants: ['prepos'] },
+  { fullForm: 'prepositional', variants: ['prepos'] }, // Encountered once (as of the time of writing).
   { fullForm: 'preterite', variants: ['preter'] },
   { fullForm: 'prologue', variants: ['prol'] },
+  // NOTE: We currently fail to parse 'quid ?' because it exists in two nodes
+  // ('quid' inside an <i> tag, and ' ?' in the next sibling).
+  { fullForm: 'quid ?', variants: ['quid ?'] },
   { fullForm: 'quod vide', variants: ['q v'] },
   { fullForm: 'quae vide', variants: ['qq v'] },
-  // NOTE: 'rad' encountered only once, as of the time of writing!
-  { fullForm: 'radical', variants: ['rad'] },
+  { fullForm: 'radical', variants: ['rad'] }, // Encountered once (as of the time of writing).
   { fullForm: 'recto folio', variants: ['ro'], noCaseVariant: true },
   { fullForm: 'reference', variants: ['ref'] },
   {
@@ -300,11 +297,9 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'sic lege', variants: ['sic l'] },
   { fullForm: 'scilicet', variants: ['sc'] },
   { fullForm: 'subject', variants: ['subj'] },
-  // NOTE: 'subord' encountered only once, as of the time of writing!
-  { fullForm: 'subordinate', variants: ['subord'] },
+  { fullForm: 'subordinate', variants: ['subord'] }, // Encountered once (as of the time of writing).
   { fullForm: 'supra', variants: ['sup', 'supra'] },
-  // NOTE: 'syr' encountered only once, as of the time of writing!
-  { fullForm: 'Syriac', variants: ['syr'] },
+  { fullForm: 'Syriac', variants: ['syr'] }, // Encountered once (as of the time of writing).
   { fullForm: 'translation, translated', variants: ['transl'] },
   { fullForm: 'variants', variants: ['varr', 'vars'] },
   { fullForm: 'ultimo', variants: ['ult'] },
