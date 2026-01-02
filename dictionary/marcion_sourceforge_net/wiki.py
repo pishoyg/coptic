@@ -99,6 +99,7 @@ LANG_CLASS = {"SYRIAC": "ARAMAIC", "ETHIOPIC": "AMHARIC"}
 
 DEMOTIC_RE: regex.Pattern[str] = regex.compile(
     r"^(?:[\p{Ll}ꜣꜥʾʿ]\p{M}*|[ \-=\.])+$",
+    regex.IGNORECASE,
 )
 
 
