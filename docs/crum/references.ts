@@ -2070,7 +2070,7 @@ const DATA_1: Resource[] = [
       // NOTE: Besa occurs as a standalone abbreviation in Crum, but we treat it
       // as a variant to simplify the pipeline.
     },
-    variants: ['Sh', 'Besa'],
+    variants: ['Sh', 'Besa', 'Sh (Besa)'],
     postfixes: {
       A: LOOKUP,
       Am: LOOKUP,
