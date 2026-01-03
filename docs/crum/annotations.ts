@@ -40,6 +40,10 @@ export interface Abbreviation {
   // of a word, or right next to one. For such annotations, use the noBoundary
   // field to indicate that mid-word matches are allowed.
   noBoundary?: boolean;
+  // suffix indicates whether this annotation can occur as a Reference suffix.
+  // TODO: (#666) This field remains unused, and it may not be set on all the
+  // entries where it should.
+  suffix?: boolean;
 }
 
 export interface Annotation {
@@ -182,6 +186,13 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'third future', variants: ['3 fut'] },
 
   { fullForm: 'et cetera', variants: ['&c'] },
+  { fullForm: 'Addenda', variants: ['Ad'], noCaseVariant: true, suffix: true },
+  {
+    fullForm: 'Assyrian',
+    variants: ['Assyr'],
+    noCaseVariant: true,
+    suffix: true,
+  },
   { fullForm: 'alchemical', variants: ['alchem'] },
   { fullForm: 'Appendix', variants: ['Append'] },
   { fullForm: 'absolute', variants: ['absol'] },
@@ -281,7 +292,12 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'quod vide', variants: ['q v'] },
   { fullForm: 'quae vide', variants: ['qq v'] },
   { fullForm: 'radical', variants: ['rad'] }, // Encountered once (as of the time of writing).
-  { fullForm: 'recto folio', variants: ['ro'], noCaseVariant: true },
+  {
+    fullForm: 'recto folio',
+    variants: ['ro'],
+    noCaseVariant: true,
+    suffix: true,
+  },
   { fullForm: 'reference', variants: ['ref'] },
   {
     fullForm: 'South',
@@ -299,6 +315,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'subordinate', variants: ['subord'] }, // Encountered once (as of the time of writing).
   { fullForm: 'supra', variants: ['sup', 'supra'] },
   { fullForm: 'Syriac', variants: ['syr'] }, // Encountered once (as of the time of writing).
+  { fullForm: 'tabula', variants: ['tab'], suffix: true },
   { fullForm: 'translation, translated', variants: ['transl'] },
   { fullForm: 'variants', variants: ['varr', 'vars'] },
   { fullForm: 'ultimo', variants: ['ult'] },
@@ -308,7 +325,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'verbal', variants: ['vbal'] },
   { fullForm: 'verbs', variants: ['vbs'] },
   { fullForm: 'videlicet', variants: ['viz'] },
-  { fullForm: 'verso folio', variants: ['vo'] },
+  { fullForm: 'verso folio', variants: ['vo'], suffix: true },
   {
     fullForm: 'West',
     variants: ['W'],
@@ -316,16 +333,12 @@ export const DATA: Abbreviation[] = [
     noStyledParent: true,
   },
 
-  // SECTION 3: ABBREVIATIONS THAT MOSTLY APPEAR IN REFERENCE TITLES, OR PERHAPS
-  // AS POSTFIXES:
+  // SECTION 3: ABBREVIATIONS THAT MOSTLY APPEAR IN REFERENCE TITLES:
   // TODO: (#522) Reconsider whether these abbreviations are needed when more
   // references are covered.
-  { fullForm: 'Addenda', variants: ['Ad'], noCaseVariant: true },
   { fullForm: 'Lectionary', variants: ['Lect'], noCaseVariant: true },
   { fullForm: 'martyrdom', variants: ['Mart'], noCaseVariant: true },
   { fullForm: 'Sitzungsberichte', variants: ['Sitz'], noCaseVariant: true },
-  { fullForm: 'Assyrian', variants: ['Assyr'], noCaseVariant: true },
-  { fullForm: 'tabula', variants: ['tab'], noCaseVariant: true },
 ];
 
 export const MAPPING: Record<string, Annotation> = {};
