@@ -2600,7 +2600,7 @@ const DATA_2: Resource[] = [
         'Catalogue of the Demotic Papyri in the John Rylands Library, Manchester: with Facsimiles and Complete Translations<ul><li><a href="https://archive.org/details/mdp.39015020864875">Volume III</a></li></ul>',
       ],
     },
-    variants: ['Ryl Dem'],
+    variants: ['Ryl Dem', 'Dem Ryl'],
   },
   {
     variants: ["Samannûdi's Scala"],
