@@ -219,11 +219,6 @@ _SUBSTITUTIONS: list[Substitution] = [
         ban=["\\"],
     ),
     Substitution(bracketed(r"(.*?)"), replace_bracketed, ban=["[[", "]]"]),
-    Substitution(
-        r"(?<!{){([^{}]+)}(?!})(?:{{(.*?)}})?",
-        replace_manual,
-        ban=["{", "}"],
-    ),
 ]
 # pylint: enable=line-too-long
 
@@ -297,6 +292,11 @@ class Wiki:
             self.replace_footnote,
             # NOTE: Footnotes are omitted from the text version.
             text_repl="",
+            ban=["{", "}"],
+        )
+        yield Substitution(
+            r"{(.*?)}(?:{(.*?)})?",
+            replace_manual,
             ban=["{", "}"],
         )
         if self.addenda_page:
