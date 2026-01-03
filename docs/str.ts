@@ -73,17 +73,17 @@ export const NO_LETTER_AFTER = /(?![\p{Letter}\p{Mark}])/u;
 
 /**
  *
- * @param regex
+ * @param re
  * @returns
  */
-export function grouped(regex: string): string {
-  return `(?:${regex})`;
+export function grouped(re: string): string {
+  return `(?:${re})`;
 }
 
 /**
  * Wrap the given regex in Unicode-aware boundary expressions.
  *
- * @param regex
+ * @param re
  *
  * @param group - Whether to wrap the given regex in a non-capture group.
  * This is helpful in some situations. For example, consider the regex `a|b`.
@@ -101,17 +101,17 @@ export function grouped(regex: string): string {
  * @returns
  */
 export function bounded(
-  regex: string,
+  re: string,
   group = false,
   digitIsBoundary = false
 ): string {
   if (group) {
-    regex = grouped(regex);
+    re = grouped(re);
   }
   if (digitIsBoundary) {
-    return `${NO_LETTER_BEFORE.source}${regex}${NO_LETTER_AFTER.source}`;
+    return `${NO_LETTER_BEFORE.source}${re}${NO_LETTER_AFTER.source}`;
   }
-  return `${WORD_START.source}${regex}${WORD_END.source}`;
+  return `${WORD_START.source}${re}${WORD_END.source}`;
 }
 
 /**
@@ -170,4 +170,31 @@ function* textContentAux(
   for (const child of node.childNodes) {
     yield* textContentAux(child, overrides);
   }
+}
+
+/**
+ * Allegedly, modern JavaScript engines such as V8 use a trie to implement a
+ * regex constructed from the disjunction of a large number of strings. Thus,
+ * the regex constructed using this method remains performant even if there is a
+ * large number of keys.
+ *
+ * @param keys
+ * @param bound
+ * @returns
+ */
+export function regex(keys: string[], bound = true): string {
+  const expression: string = keys
+    // It's important to sort the keys by length, bringing longer keys first.
+    // The regex stops whenever a match is encountered, and it processes the
+    // matches in order. If a key is a prefix of another key, the longer key
+    // should come earlier in the list. Otherwise, the regex could match the
+    // prefix and return early.
+    .sort((a: string, b: string): number => b.length - a.length)
+    .map((key: string): string => escape(key))
+    .join('|');
+  return bound
+    ? // Group and bound.
+      bounded(expression, true /* group */)
+    : // Only group the regexes.
+      grouped(expression);
 }

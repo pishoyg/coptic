@@ -110,16 +110,6 @@ export function replaceText(
   // Instead, we capture all nodes that need replacement, and then process them
   // afterwards.
   Array.from(filterNodes(root, exclude)).forEach((node: Text): void => {
-    if (exclude && node.parentElement?.closest(exclude)) {
-      // Skip this node.
-      // While we already accounted for the exclusions when we captured the node
-      // array, it's possible that the tree structure has since changed, and
-      // that a node that was previously admitted should now be excluded.
-      // TODO: (#572) A smarter reference handler wouldn't yield this check
-      // unnecessary, which would allow us to slightly speed up the code.
-      return;
-    }
-
     if (!node.nodeValue) {
       return;
     }

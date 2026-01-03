@@ -61,33 +61,6 @@ const ABBREVIATION_EXCLUDE: string = css.classQuery(
 );
 
 /**
- * Allegedly, modern JavaScript engines such as V8 use a trie to implement a
- * regex constructed from the disjunction of a large number of strings. Thus,
- * the regex constructed using this method remains performant even if there is a
- * large number of keys.
- *
- * @param keys
- * @param bound
- * @returns
- */
-function regex(keys: string[], bound = true): string {
-  const expression: string = keys
-    // It's important to sort the keys by length, bringing longer keys first.
-    // The regex stops whenever a match is encountered, and it processes the
-    // matches in order. If a key is a prefix of another key, the longer key
-    // should come earlier in the list. Otherwise, the regex could match the
-    // prefix and return early.
-    .sort((a: string, b: string): number => b.length - a.length)
-    .map((key: string): string => str.escape(key))
-    .join('|');
-  return bound
-    ? // Group and bound.
-      str.bounded(expression, true /* group */)
-    : // Only group the regexes.
-      str.grouped(expression);
-}
-
-/**
  * CHAPTER_VERSE defines the regex used to parse the chapter and verse numbers
  * in a Bible citation.
  *
@@ -119,7 +92,7 @@ const CHAPTER_VERSE = new RegExp(`\\.? (?:${NUMS}|\\(${NUMS}\\))`, 'uy');
 const DAN_OVERRIDE: Record<string, string> = { Su: 'a', Bel: 'c' };
 
 const REFERENCE_OR_BIBLE_RE = new RegExp(
-  regex([
+  str.regex([
     ...Object.keys(ref.MAPPING),
     ...Object.keys(bib.MAPPING),
     ...Object.keys(DAN_OVERRIDE),
@@ -136,23 +109,6 @@ const REFERENCE_OR_BIBLE_RE = new RegExp(
 const BIBLE_FOLLOWUP = new RegExp(
   `^(?:(?:, |–)(${NUMS})${str.WORD_END.source}| ?\\((${NUMS})\\))`,
   'u'
-);
-
-const ANNOTATION_RE = new RegExp(
-  ((): string => {
-    // boundaryKeys are keys that occur as standalone words.
-    const boundaryKeys: string[] = Object.entries(ann.MAPPING)
-      .filter(([_, annot]: [string, ann.Annotation]) => !annot.noBoundary)
-      .map(([key, _]) => key);
-
-    // noBoundaryKeys are keys that can occur mid-word.
-    const noBoundaryKeys: string[] = Object.entries(ann.MAPPING)
-      .filter(([_, annot]: [string, ann.Annotation]) => annot.noBoundary)
-      .map(([key, _]) => key);
-
-    return [regex(boundaryKeys), regex(noBoundaryKeys, false)].join('|');
-  })(),
-  'gu'
 );
 
 const PAGE_RE = new RegExp(str.bounded('p{1,2} ([0-9]+)'));
@@ -179,24 +135,6 @@ const PAGE_FOLLOWUP_RE = /^, ([0-9]+) $/;
 const NUMBERS = [
   "'?[0-9]+[a-zA-Z]?\\*?(?:–[0-9]+)?",
   '§',
-  // TODO: (#666) Decide on a uniform way to handle annotations that mostly
-  // follow references, such as:
-  // - vo (verse folio)
-  // - ro (recto folio)
-  // - Ad (Addenda)
-  // - pass (passim)
-  // - ff (and following pages/verses)
-  // - inf (infra)
-  // - s f (sub finem)
-  // - ut sup (ut supra)
-  // - ...etc.
-  // As of now, vo, ro, and Ad are treated as suffices, while all the others are
-  // only treated as annotations.
-  // Ideally, we would capture and highlight them as part of the suffix, but we
-  // would also include a note explaining them in the tooltip.
-  'ro',
-  'vo',
-  'Ad',
   'stele',
   '[a-zA-Z]\\.?',
   // Roman numerals:
@@ -204,6 +142,9 @@ const NUMBERS = [
   // avoid them to minimize the risk of false positives.
   '[ivx]+',
   '[IVX]+',
+  ...ann.DATA.filter((abb: ann.Abbreviation) => abb.suffix).flatMap(
+    (abb: ann.Abbreviation): string[] => abb.variants
+  ),
 ];
 
 const NUMBER = `(?:${NUMBERS.join('|')})`;
@@ -217,7 +158,7 @@ const REFERENCE_FOLLOWUP = new RegExp(
   'u'
 );
 
-const REFERENCE_RE = new RegExp(regex(Object.keys(ref.MAPPING)), 'gu');
+const REFERENCE_RE = new RegExp(str.regex(Object.keys(ref.MAPPING)), 'gu');
 
 /**
  *
@@ -347,7 +288,7 @@ function annotation(
 function handleAnnotations(root: HTMLElement): void {
   html.replaceText(
     root,
-    ANNOTATION_RE,
+    ann.RE,
     (
       match: RegExpExecArray,
       node: Text,
@@ -832,38 +773,36 @@ function handleBibleFollowups(root: HTMLElement): void {
 
 /**
  *
- * @param maybeSuperscript
+ * @param maybeSUP
+ * @param between
  * @returns
  */
-function* parseSuffix(
-  maybeSuperscript: ChildNode | null
+function* suffixFollowups(
+  maybeSUP: ChildNode | null,
+  between: string
 ): Generator<Node | string> {
-  if (maybeSuperscript?.nodeName !== 'SUP') {
-    // The node is not a superscript.
+  if (between || maybeSUP?.nodeName !== 'SUP') {
     return;
   }
-
-  // We need to capture the superscript's sibling before we move the
-  // superscript, otherwise we wouldn't be able to access it after the move.
-  const nextSibling: ChildNode | null = maybeSuperscript.nextSibling;
-  yield maybeSuperscript;
 
   // Sometimes, there are even more numbers following the superscript.
-  if (!nextSibling?.nodeValue) {
+  // We need to capture the sibling's sibling before we move the
+  // sibling, otherwise we wouldn't be able to access it after the move.
+  const nextNext: ChildNode | null = maybeSUP.nextSibling;
+  yield maybeSUP;
+
+  if (!nextNext?.nodeValue) {
     return;
   }
 
-  const match: RegExpMatchArray | null = nextSibling.nodeValue.match(SUFFIX);
+  const match: RegExpMatchArray | null = nextNext.nodeValue.match(SUFFIX);
   if (!match) {
     return;
   }
 
   yield match[0];
-  nextSibling.nodeValue = nextSibling.nodeValue.slice(match[0].length);
+  nextNext.nodeValue = nextNext.nodeValue.slice(match[0].length);
 }
-
-// TODO: (#0) Simplify this method.
-/* eslint-disable complexity */
 
 /**
  *
@@ -871,92 +810,35 @@ function* parseSuffix(
  * @param node
  * @param remainder
  * @returns
+  // TODO: (#572) Handle tricky references.
  */
 function replaceReference(
   match: RegExpExecArray,
   node: Text,
   remainder: string
 ): { replacement?: Node[]; remainder?: string } {
-  let nextSibling: ChildNode | null = node.nextSibling;
-  // Parse a suffix from the remainder. Update the remainder.
-  let suffix: string | undefined = SUFFIX.exec(remainder)?.[0];
-  remainder = remainder.slice(suffix?.length);
-
-  let source: ref.Reference | undefined;
-
-  // Initialize the span.
-  let span: HTMLSpanElement | null = null;
-
-  let noTipNextSibling: string;
-  // Sometimes, part of the abbreviation lives inside the next sibling.
-  // Notice that, since we want prioritize longer abbreviations, we attempt to
-  // parse a reference obtained by combining the match with the next <i> tag,
-  // before attempting to parse a reference from the match alone.
-  // Reference titles only exist in text nodes and <i> nodes. The code below
-  // covers the most common cases (the title existing entirely in the text node,
-  // or in the text node along with the next sibling). There are still
-  // (extremely few) cases not covered by this log.
-  // TODO: (#572) Handle tricky references.
-  if (
-    !suffix && // There is no suffix text following the abbreviation.
-    nextSibling?.nodeName === 'I' &&
-    (noTipNextSibling = drop.noTipTextContent(nextSibling)) &&
-    // The text obtained from combining the match with the remainder and the
-    // next sibling forms a source abbreviation.
-    (source = ref.MAPPING[match[0] + remainder + noTipNextSibling])
-  ) {
-    // Success!
-    // Save a reference to the sibling's sibling, before we move the sibling and
-    // we can no longer access its sibling.
-    const nextNext: ChildNode | null = nextSibling.nextSibling;
-    // Populate the span content.
-    span = source.span();
-    span.prepend(match[0], remainder, nextSibling);
-    // Account for the possibility that the sibling contained a reference. Clean
-    // all child tooltips, and `reference` or `suffix` classes.
-    ref.Reference.dereference(nextSibling);
-    remainder = ''; // We have consumed the remainder.
-    // Check if the sibling's sibling bears a suffix.
-    if ((suffix = nextNext?.nodeValue?.match(SUFFIX)?.[0])) {
-      // We can successfully retrieve a suffix from the node.
-      nextNext.nodeValue = nextNext.nodeValue.slice(suffix.length);
-      // If the suffix node has no text left, its sibling is a candidate
-      // superscript.
-      nextSibling = nextNext.nodeValue ? null : nextNext.nextSibling;
-    }
-  } else if (remainder) {
-    // We pass the next sibling to the suffix parser, because it might be a
-    // superscript.
-    // We only do that if there is no remainder. Otherwise, such a remainder
-    // would show between the suffix and the superscript.
-    nextSibling = null;
-  }
-
-  // If the above didn't succeed, try to parse a reference from the match alone.
-  if (!source && (source = ref.MAPPING[match[0]])) {
-    span = source.span();
-    span.append(match[0]);
-  }
-
-  if (!source || !span) {
-    // Still no source found! Return!
-    return {};
-  }
-
-  if (source.raw() === 'My' && !suffix) {
+  const suffix: string | undefined = SUFFIX.exec(remainder)?.[0];
+  if (match[0] === 'My' && !suffix) {
     // False positive.
     return {};
   }
 
-  // Add the suffix as a child.
-  if (suffix) {
-    span.append(suffix, ...parseSuffix(nextSibling));
+  const span: HTMLSpanElement = ref.MAPPING[match[0]]!.span([match[0]]);
+  if (!suffix) {
+    return { replacement: [span] };
   }
+
+  // Chop off the suffix from the remainder.
+  remainder = remainder.slice(suffix.length);
+  // Append the suffix.
+  ref.Reference.suffix(
+    span,
+    suffix,
+    ...suffixFollowups(node.nextSibling, remainder)
+  );
 
   return { replacement: [span], remainder };
 }
-
-/* eslint-enable complexity */
 
 /**
  *
@@ -1039,8 +921,8 @@ function handleSemicolons(root: HTMLElement): void {
  */
 function handleReferenceFollowups(root: HTMLElement): void {
   root
-    .querySelectorAll(`.${cls.REFERENCE}`)
-    .forEach((reference: Element): void => {
+    .querySelectorAll<HTMLSpanElement>(`.${cls.REFERENCE}`)
+    .forEach((reference: HTMLSpanElement): void => {
       const nextSibling: ChildNode | null = reference.nextSibling;
       if (!nextSibling) {
         return;
@@ -1057,13 +939,14 @@ function handleReferenceFollowups(root: HTMLElement): void {
         return;
       }
       nextSibling.nodeValue = text.slice(match[0].length);
-      // TODO: (#572) The `parseSuffix` function considers the possibility that
-      // our match has following <sup> element that is part of the suffix. Right
-      // now, our code doesn't account for the possibility that such a
+      // TODO: (#572) The `suffixFollowups` function considers the possibility
+      // that our match has following <sup> element that is part of the suffix.
+      // Right now, our code doesn't account for the possibility that such a
       // superscript is followed by a comma that is followed by more suffixes.
-      reference.append(
+      ref.Reference.suffix(
+        reference,
         match[0],
-        ...parseSuffix(nextSibling.nodeValue ? null : nextSibling.nextSibling)
+        ...suffixFollowups(nextSibling.nextSibling, nextSibling.nodeValue)
       );
     });
 }
@@ -1099,29 +982,39 @@ function handleReferenceIB(
   next: ChildNode
 ): void {
   const reference: ref.Reference = ref.Reference.fromSpan(antecedent);
-  const span: HTMLSpanElement = reference.span(ibidem());
+
+  const span: HTMLSpanElement = reference.span(
+    [ib.cloneNode(true)],
+    [ibidem()]
+  );
   ib.replaceWith(span);
 
   // Extract a suffix, if available.
   // Notice that many ib references legitimately don't have a suffix.
-  const suffix: string | undefined = next.nodeValue?.match(SUFFIX)?.[0];
-  if (next.nodeValue && suffix) {
-    // TODO: (#671) In some cases, the first token in the suffix is actually
-    // part of the reference abbreviation.
-    // For example:
-    //   1. Mani H ... ib K
-    //      The ibidem reference should be interpreted as "Mani K"
-    //      rather than "Mani H".
-    //   2. BM ... ib Or
-    //      The ibidem reference should be interpreted as "BMOr".
-    next.nodeValue = next.nodeValue.slice(suffix.length);
-    span.prepend(
-      suffix,
-      ...parseSuffix(next.nodeValue.length ? null : next.nextSibling)
-    );
+  if (!next.nodeValue) {
+    // No suffix!
+    return;
+  }
+  const suffix: string | undefined = next.nodeValue.match(SUFFIX)?.[0];
+  if (!suffix) {
+    // No suffix!
+    return;
   }
 
-  span.prepend(ib);
+  // TODO: (#671) In some cases, the first token in the suffix is actually
+  // part of the reference abbreviation.
+  // For example:
+  //   1. Mani H ... ib K
+  //      The ibidem reference should be interpreted as "Mani K"
+  //      rather than "Mani H".
+  //   2. BM ... ib Or
+  //      The ibidem reference should be interpreted as "BMOr".
+  next.nodeValue = next.nodeValue.slice(suffix.length);
+  ref.Reference.suffix(
+    span,
+    suffix,
+    ...suffixFollowups(next.nextSibling, next.nodeValue)
+  );
 }
 
 /**
@@ -1242,6 +1135,12 @@ function handleManual(root: HTMLElement): void {
         return;
       }
 
+      // NOTE: We don't split the suffix out of manually-labeled references, the
+      // whole text inside the manual tag is treated as a reference name (which
+      // is not true).
+      // As of the time of writing, the only side effect of this bug is that
+      // annotations don't reflect in the tooltip (#666). This is OK, because
+      // the number of manually-marked references is very small anyway.
       if (key) {
         // The key is explicit. The possibilities are:
         // 1. The key is a reference abbreviation.
@@ -1254,18 +1153,19 @@ function handleManual(root: HTMLElement): void {
         // completion. This would require attempting to parse a chapter and
         // verse number from the text.
         const reference: ref.Reference | undefined = ref.MAPPING[key];
-        if (reference) {
-          // This is a Reference.
-          const span: HTMLSpanElement = /^ib\b/.test(manual.textContent)
-            ? reference.span(ibidem())
-            : reference.span();
-          span.append(...manual.childNodes);
-          manual.replaceWith(span);
+
+        if (!reference) {
+          // The key represents an annotation.
+          manual.replaceWith(annotation(key, ...manual.childNodes));
           return;
         }
 
-        // The key is an annotation.
-        manual.replaceWith(annotation(key, ...manual.childNodes));
+        // This represents a reference.
+        const span: HTMLSpanElement = reference.span(
+          [...manual.childNodes],
+          /^ib\b/.test(manual.textContent) ? [ibidem()] : []
+        );
+        manual.replaceWith(span);
         return;
       }
 
@@ -1278,14 +1178,11 @@ function handleManual(root: HTMLElement): void {
       const match: RegExpExecArray | null = REFERENCE_RE.exec(
         manual.textContent
       );
+
       if (match?.index === 0) {
         // We can infer the reference from the text.
-        const reference: ref.Reference | undefined = ref.MAPPING[match[0]];
-        if (!reference) {
-          log.fatal('This is impossible!');
-        }
-        const span: HTMLSpanElement = reference.span();
-        span.append(...manual.childNodes);
+        const reference: ref.Reference = ref.MAPPING[match[0]]!;
+        const span: HTMLSpanElement = reference.span([...manual.childNodes]);
         manual.replaceWith(span);
         return;
       }

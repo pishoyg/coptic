@@ -4,6 +4,7 @@ import * as drop from '../dropdown.js';
 import * as cls from './cls.js';
 import * as dev from '../dev.js';
 import * as html from '../html.js';
+import * as ann from './annotations.js';
 
 export const MAPPING: Record<string, Reference> = {};
 
@@ -67,9 +68,9 @@ export class Reference {
       fragment.append(description);
     }
 
-    if (this.postfix) {
-      fragment.append(document.createElement('hr'));
-      fragment.append(...this.postfix.tooltip());
+    const tooltip = this.postfix?.tooltip();
+    if (tooltip?.length) {
+      fragment.append(document.createElement('hr'), ...tooltip);
     }
 
     fragment.querySelectorAll('a').forEach((a: HTMLAnchorElement): void => {
@@ -82,17 +83,24 @@ export class Reference {
 
   /**
    *
+   * @param raw
    * @param {...any} tooltipPrefix
    * @returns
    */
-  public span(...tooltipPrefix: (Node | string)[]): HTMLSpanElement {
+  public span(
+    raw: (Node | string)[],
+    tooltipPrefix: (Node | string)[] = []
+  ): HTMLSpanElement {
     const span: HTMLSpanElement = document.createElement('span');
     span.classList.add(cls.REFERENCE);
     span.dataset[Reference.DATA_REF] = this.raw();
+    span.append(...raw);
     const tooltip: (Node | string)[] = [
       ...tooltipPrefix,
       ...(this.tooltip()?.childNodes ?? []),
     ];
+    // TODO: (#522) This check will soon be unnecessary, because all references
+    // will be guaranteed to have tooltips.
     if (tooltip.length) {
       drop.addDroppable(span, tooltip);
     }
@@ -120,7 +128,7 @@ export class Reference {
   }
 
   /**
-   * Remove all tooltips, as well as `reference` and `suffix` classes.
+   * Remove all tooltips, as well as `reference` tags.
    *
    * NOTE: We do NOT account for the case that the root itself is an artifact
    * that needs to be gotten rid of.
@@ -140,11 +148,66 @@ export class Reference {
       });
 
     // Remove the .reference span, retaining the children.
-    // Also remove the `data-ref` attribute.
     elem.querySelectorAll(`.${cls.REFERENCE}`).forEach((el: Element): void => {
       el.replaceWith(...el.childNodes);
-      el.removeAttribute(`data-${this.DATA_REF}`);
     });
+  }
+
+  /**
+   *
+   * @param span
+   * @param {...any} suffix
+   *
+   * Isn't it better to endow the `Reference` class with a `suffix` field and
+   * grow this field, constructing a complete <span> tag at the end, instead of
+   * starting with a partial <span> tag and gradually growing it with suffixes?
+   *
+   * That would be a cleaner design, but it's not compatible with our current
+   * pipeline, which does several passes over the DOM.
+   * - In the first pass, references are detected, and marked with <span> tags
+   *   in the HTML.
+   * - In the second pass, reference suffixes (called "followups" in that
+   *   context) are picked up and added to the spans.
+   *
+   * We can't do the above in a single pass, as that would make it challenging
+   * to handle such cases as the following (where K is the variant of another
+   * source rather than a followup suffix of P):
+   *   P 44 66, K 179[1]
+   * See followup logic for more details.
+   *
+   * [1] https://remnqymi.com/crum/510.html#:~:text=P%2044%2066,%20K%20179
+   */
+  public static suffix(
+    span: HTMLSpanElement,
+    ...suffix: (string | Node)[]
+  ): void {
+    // Append the suffix.
+    span.append(...suffix);
+    // Expand the tooltip with any annotations from the suffix.
+    // TODO: (#0) It's better to use your own custom class, instead of relying
+    // on `drop.CLS.DROPPABLE`.
+    span.querySelector(`.${drop.CLS.DROPPABLE}`)?.append(
+      ...suffix.flatMap((node: string | Node): (Node | string)[] => {
+        const text = typeof node === 'string' ? node : (node.textContent ?? '');
+        ann.RE.lastIndex = 0;
+        return Array.from(text.matchAll(ann.RE))
+          .map((match: RegExpExecArray): string => match[0])
+          .flatMap((abb: string): (Node | string)[] =>
+            ann.MAPPING[abb]?.suffix
+              ? [
+                  document.createElement('hr'),
+                  // TODO: (#0) Suffixes could live in text nodes, or <i>
+                  // or <sup> tags. <sup> tags only contain numbers, and never
+                  // annotations.
+                  // For suffixes inside <i> tags, we should ideally wrap the
+                  // abbreviation in the tooltip in an <i> tag as well.
+                  ...abbreviation(abb),
+                  ann.MAPPING[abb].fullForm,
+                ]
+              : []
+          );
+      })
+    );
   }
 }
 
@@ -174,6 +237,15 @@ interface Resource {
    * On the other hand, suffixes are numbers or number-like affixes, and
    * they're never written with the abbreviation as one word.
    * See examples of postfixes below.
+   *
+   * The fact that postfixes are parsable if written with the variant as a
+   * single word, while suffixes must be separate, sometimes forces us to record
+   * some otherwise-would-be suffixes as postfixes in order to be able to parse
+   * them.
+   * For example, 'BM' and 'BMOr' refer to the same source. 'Or' (for
+   * 'oriental') is more appropriately treated as a suffix rather than a
+   * postfix, but we treat it as a postfix because it's written as 'BMOr' not
+   * 'BM Or'.
    */
   readonly postfixes?: Record<string, PostfixType>;
   /**
@@ -2697,9 +2769,9 @@ const DATA_2: Resource[] = [
  * @param name
  * @returns
  */
-function abbreviation(name: string): HTMLElement[] {
+function abbreviation(name: string | Node): HTMLElement[] {
   const span: HTMLSpanElement = document.createElement('span');
-  span.textContent = `${name}: `;
+  span.append(name, ': ');
   span.classList.add(cls.ABBREVIATION);
   return [span];
 }

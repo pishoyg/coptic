@@ -41,8 +41,7 @@ export interface Abbreviation {
   // field to indicate that mid-word matches are allowed.
   noBoundary?: boolean;
   // suffix indicates whether this annotation can occur as a Reference suffix.
-  // TODO: (#666) This field remains unused, and it may not be set on all the
-  // entries where it should.
+  // TODO: (#0) This field may need to be set on a few more annotations.
   suffix?: boolean;
 }
 
@@ -50,6 +49,7 @@ export interface Annotation {
   fullForm: string;
   noStyledParent?: boolean | undefined;
   noBoundary?: boolean | undefined;
+  suffix?: boolean | undefined;
 }
 
 // NOTE: We choose to use English, rather than Latin, names of tenses (perfect,
@@ -99,7 +99,7 @@ export const DATA: Abbreviation[] = [
   },
   { fullForm: 'genitive', variants: ['gen'] },
   { fullForm: 'Greek', variants: ['Gk'], noCaseVariant: true },
-  { fullForm: 'infra', variants: ['inf', 'infra'] },
+  { fullForm: 'infra', variants: ['inf', 'infra'], suffix: true },
   { fullForm: 'interjection', variants: ['interj'] },
   { fullForm: 'interrogative', variants: ['interrog'] },
   {
@@ -126,7 +126,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'parallel word or phrase', variants: ['paral'] },
   // NOTE: `pass` is a common source of false positives, as it often means
   // 'passive', and is sometimes the verb 'pass'
-  { fullForm: 'passim', variants: ['pass'] },
+  { fullForm: 'passim', variants: ['pass'], suffix: true },
   { fullForm: 'conjunctive participle', variants: ['p c'] },
   { fullForm: 'plural', variants: ['pl'] },
   // Crum has "possessive pronoun" for "poss", but "possessive" is suitable. See
@@ -140,7 +140,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'qualitative of verb; also indicated by †', variants: ['qual'] },
   { fullForm: 'reflexive use', variants: ['refl', 'reflex'] },
   { fullForm: 'relative', variants: ['rel', 'relat'] },
-  { fullForm: 'sub fine', variants: ['s f'] },
+  { fullForm: 'sub fine', variants: ['s f'], suffix: true },
   { fullForm: 'singular', variants: ['sg'] },
   {
     fullForm: 'similar in use or in meaning to the last quoted instance',
@@ -235,6 +235,7 @@ export const DATA: Abbreviation[] = [
     fullForm: 'and the following pages/verses',
     variants: ['ff'],
     noCaseVariant: true,
+    suffix: true,
   },
   { fullForm: 'fragment', variants: ['frag'] },
   { fullForm: 'future', variants: ['fut'] },
@@ -251,8 +252,8 @@ export const DATA: Abbreviation[] = [
   // NOTE: 'init' is a source of false positives. It occasionally means
   // 'initial'.
   { fullForm: 'initio', variants: ['init'] },
-  { fullForm: 'loco citato', variants: ['l c', 'll c'] },
-  { fullForm: 'loci citati', variants: ['ll cc'] },
+  { fullForm: 'loco citato', variants: ['l c', 'll c'], suffix: true },
+  { fullForm: 'loci citati', variants: ['ll cc'], suffix: true },
   { fullForm: 'Latin', variants: ['Lat'], noCaseVariant: true },
   { fullForm: 'manuscript', variants: ['MS'], noCaseVariant: true },
   { fullForm: 'manuscripts', variants: ['MSS'], noCaseVariant: true },
@@ -274,7 +275,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'numbers', variants: ['nos'], noCaseVariant: true },
   { fullForm: 'Old Testament', variants: ['OTest'], noCaseVariant: true },
   { fullForm: 'olim penes', variants: ['olim penes'] },
-  { fullForm: 'page', variants: ['p'] },
+  { fullForm: 'page', variants: ['p'], noCaseVariant: true, suffix: true },
   { fullForm: 'participle', variants: ['particip', 'partic'] }, // Encountered once (as of the time of writing).
   { fullForm: 'penes', variants: ['penes'] },
   { fullForm: 'perfect', variants: ['perf', 'pf'] },
@@ -282,7 +283,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'pluperfect', variants: ['pluperf'] },
   { fullForm: 'postpositive', variants: ['post-posit'] }, // Encountered once (as of the time of writing).
   { fullForm: 'possessive', variants: ['possess'] },
-  { fullForm: 'pages', variants: ['pp'] },
+  { fullForm: 'pages', variants: ['pp'], suffix: true },
   { fullForm: 'predicate', variants: ['predic'] },
   { fullForm: 'prepositions', variants: ['preps'] },
   { fullForm: 'prepositional', variants: ['prepos'] }, // Encountered once (as of the time of writing).
@@ -321,7 +322,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'ultimo', variants: ['ult'] },
   { fullForm: 'uncatalogued', variants: ['uncatal'] },
   { fullForm: 'unpublished', variants: ['unpubl'] },
-  { fullForm: 'ut supra', variants: ['ut sup'] },
+  { fullForm: 'ut supra', variants: ['ut sup'], suffix: true },
   { fullForm: 'verbal', variants: ['vbal'] },
   { fullForm: 'verbs', variants: ['vbs'] },
   { fullForm: 'videlicet', variants: ['viz'] },
@@ -348,6 +349,7 @@ DATA.forEach((abb: Abbreviation): void => {
       fullForm: abb.fullForm,
       noStyledParent: abb.noStyledParent,
       noBoundary: abb.noBoundary,
+      suffix: abb.suffix,
     };
     MAPPING[key] = ann;
     if (abb.noCaseVariant) {
@@ -366,3 +368,22 @@ DATA.forEach((abb: Abbreviation): void => {
     MAPPING[variant] = ann;
   });
 });
+
+export const RE = new RegExp(
+  ((): string => {
+    // boundaryKeys are keys that occur as standalone words.
+    const boundaryKeys: string[] = Object.entries(MAPPING)
+      .filter(([_, annot]: [string, Annotation]) => !annot.noBoundary)
+      .map(([key, _]) => key);
+
+    // noBoundaryKeys are keys that can occur mid-word.
+    const noBoundaryKeys: string[] = Object.entries(MAPPING)
+      .filter(([_, annot]: [string, Annotation]) => annot.noBoundary)
+      .map(([key, _]) => key);
+
+    return [str.regex(boundaryKeys), str.regex(noBoundaryKeys, false)].join(
+      '|'
+    );
+  })(),
+  'gu'
+);
