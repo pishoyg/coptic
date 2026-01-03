@@ -247,12 +247,14 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'imperfect', variants: ['impf'] },
   { fullForm: 'improbable', variants: ['improb'] },
   { fullForm: 'in loco', variants: ['in loc'] },
+  { fullForm: 'indefinite', variants: ['indef'] },
   { fullForm: 'infinitive', variants: ['infin'] },
   // NOTE: 'init' is a source of false positives. It occasionally means
   // 'initial'.
   { fullForm: 'initio', variants: ['init'] },
   { fullForm: 'loco citato', variants: ['l c', 'll c'], suffix: true },
   { fullForm: 'loci citati', variants: ['ll cc'], suffix: true },
+  { fullForm: 'loquitur', variants: ['loq'] },
   { fullForm: 'Latin', variants: ['Lat'], noCaseVariant: true },
   { fullForm: 'manuscript', variants: ['MS'], noCaseVariant: true },
   { fullForm: 'manuscripts', variants: ['MSS'], noCaseVariant: true },
@@ -274,6 +276,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'numbers', variants: ['nos'], noCaseVariant: true },
   { fullForm: 'Old Testament', variants: ['OTest'], noCaseVariant: true },
   { fullForm: 'olim penes', variants: ['olim penes'] },
+  { fullForm: 'optative', variants: ['optat'] },
   { fullForm: 'page', variants: ['p'], noCaseVariant: true, suffix: true },
   { fullForm: 'participle', variants: ['particip', 'partic'] }, // Encountered once (as of the time of writing).
   { fullForm: 'penes', variants: ['penes'] },
