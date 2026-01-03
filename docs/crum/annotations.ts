@@ -194,6 +194,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'auxiliary', variants: ['auxil'] },
   { fullForm: 'biblical', variants: ['bibl'] },
   { fullForm: 'bis', variants: ['bis'] },
+  { fullForm: 'circa', variants: ['ca'] },
   { fullForm: 'condition, conditional', variants: ['condit'] },
   { fullForm: 'conjunctive', variants: ['conj'] },
   { fullForm: 'constructive', variants: ['constr', 'construct'] },
@@ -239,7 +240,7 @@ export const DATA: Abbreviation[] = [
   // NOTE: 'init' is a source of false positives. It occasionally means
   // 'initial'.
   { fullForm: 'initio', variants: ['init'] },
-  { fullForm: 'loco citato', variants: ['l c'] },
+  { fullForm: 'loco citato', variants: ['l c', 'll c'] },
   { fullForm: 'loci citati', variants: ['ll cc'] },
   { fullForm: 'Latin', variants: ['Lat'], noCaseVariant: true },
   { fullForm: 'manuscript', variants: ['MS'], noCaseVariant: true },
@@ -324,6 +325,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'martyrdom', variants: ['Mart'], noCaseVariant: true },
   { fullForm: 'Sitzungsberichte', variants: ['Sitz'], noCaseVariant: true },
   { fullForm: 'Assyrian', variants: ['Assyr'], noCaseVariant: true },
+  { fullForm: 'tabula', variants: ['tab'], noCaseVariant: true },
 ];
 
 export const MAPPING: Record<string, Annotation> = {};
