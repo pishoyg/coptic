@@ -566,7 +566,7 @@ const DATA_1: Resource[] = [
       ],
     },
     variants: ['BM'],
-    postfixes: { Or: 'Oriental', or: 'oriental', ostr: 'ostracon' },
+    postfixes: { Or: 'Oriental', or: 'oriental' },
   },
   {
     source: {
@@ -658,9 +658,6 @@ const DATA_1: Resource[] = [
       title: 'MSS. &c. in the Egyptian Museum, Cairo',
     },
     variants: ['Cai'],
-    postfixes: {
-      ostr: 'ostracon',
-    },
   },
   {
     source: {
@@ -852,9 +849,6 @@ const DATA_1: Resource[] = [
       ],
     },
     variants: ['Ep'],
-    postfixes: {
-      Append: undefined,
-    },
   },
   {
     source: {
@@ -1718,7 +1712,6 @@ const DATA_1: Resource[] = [
       title: 'MSS. in the Bibliothèque Nationale, Paris (Crum’s copies)',
     },
     variants: ['P'],
-    postfixes: { ar: 'Arabic', Ar: 'Arabic', arab: 'Arabic' },
   },
   {
     source: {
@@ -2436,7 +2429,7 @@ const DATA_1: Resource[] = [
       title: 'Vienna, MSS. & ostraca in the Staats(olim Hof)bibliothek',
     },
     variants: ['Vi', 'Vienna'],
-    postfixes: { K: undefined, ostr: 'ostracon' },
+    postfixes: { K: undefined },
   },
   {
     source: {
@@ -2645,7 +2638,7 @@ const DATA_2: Resource[] = [
   {
     variants: ['Mich'],
     // TODO: (#522) Verify the following postfixes.
-    postfixes: { Ostr: 'Ostracon', P: undefined, 'wooden tablet': undefined },
+    postfixes: { P: undefined, 'wooden tablet': undefined },
   },
   {
     variants: ['Mich Pasc Lect'],

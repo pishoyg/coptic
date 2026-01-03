@@ -143,7 +143,7 @@ const NUMBERS = [
   '[ivx]+',
   '[IVX]+',
   ...ann.DATA.filter((abb: ann.Abbreviation) => abb.suffix).flatMap(
-    (abb: ann.Abbreviation): string[] => abb.variants
+    (abb: ann.Abbreviation): string[] => Array.from(ann.variants(abb))
   ),
 ];
 

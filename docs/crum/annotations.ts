@@ -41,7 +41,6 @@ export interface Abbreviation {
   // field to indicate that mid-word matches are allowed.
   noBoundary?: boolean;
   // suffix indicates whether this annotation can occur as a Reference suffix.
-  // TODO: (#0) This field may need to be set on a few more annotations.
   suffix?: boolean;
 }
 
@@ -68,7 +67,7 @@ export const DATA: Abbreviation[] = [
   // SECTION 1: ABBREVIATIONS LISTED IN CRUM'S LIST OF ABBREVIATIONS.
   { fullForm: 'accusative', variants: ['acc', 'accus'] },
   { fullForm: 'adjective', variants: ['adj'] },
-  { fullForm: 'Arabic', variants: ['ar'] },
+  { fullForm: 'Arabic', variants: ['ar', 'arab'], suffix: true },
   // NOTE: 'art' is a common source of false positives, as it occasionally
   // refers to the copula (as in 'thou art' or 'art thou?').
   { fullForm: 'article', variants: ['art'] },
@@ -122,7 +121,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'object', variants: ['obj'] },
   { fullForm: 'omits, omitted', variants: ['om'] },
   { fullForm: 'as opposed to, contrasted with', variants: ['opp'] },
-  { fullForm: 'ostracon', variants: ['Ostr'] },
+  { fullForm: 'ostracon', variants: ['Ostr'], suffix: true },
   { fullForm: 'parallel word or phrase', variants: ['paral'] },
   // NOTE: `pass` is a common source of false positives, as it often means
   // 'passive', and is sometimes the verb 'pass'
@@ -194,7 +193,7 @@ export const DATA: Abbreviation[] = [
     suffix: true,
   },
   { fullForm: 'alchemical', variants: ['alchem'] },
-  { fullForm: 'Appendix', variants: ['Append'] },
+  { fullForm: 'Appendix', variants: ['Append'], suffix: true },
   { fullForm: 'absolute', variants: ['absol'] },
   { fullForm: 'according to', variants: ['acc to'] },
   { fullForm: 'Anno Domini', variants: ['AD'], noCaseVariant: true },
@@ -211,7 +210,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'constructive', variants: ['constr', 'construct'] },
   { fullForm: 'confer', variants: ['cf'] },
   { fullForm: 'contra', variants: ['contra'] },
-  { fullForm: 'Coptic', variants: ['Copt'], noCaseVariant: true },
+  { fullForm: 'Coptic', variants: ['Copt'], noCaseVariant: true, suffix: true },
   { fullForm: 'dative', variants: ['dat'] },
   { fullForm: 'dativus commodi', variants: ['dat commodi'] },
   { fullForm: 'definite', variants: ['def'] },
@@ -237,7 +236,7 @@ export const DATA: Abbreviation[] = [
     noCaseVariant: true,
     suffix: true,
   },
-  { fullForm: 'fragment', variants: ['frag'] },
+  { fullForm: 'fragment', variants: ['frag'], suffix: true },
   { fullForm: 'future', variants: ['fut'] },
   { fullForm: 'Hebrew', variants: ['Heb', 'Hebr'], noCaseVariant: true },
   { fullForm: 'hieroglyphic', variants: ['hierogl'] },
@@ -288,7 +287,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'prepositions', variants: ['preps'] },
   { fullForm: 'prepositional', variants: ['prepos'] }, // Encountered once (as of the time of writing).
   { fullForm: 'preterite', variants: ['preter'] },
-  { fullForm: 'prologue', variants: ['prol'] },
+  { fullForm: 'prologue', variants: ['prol'], suffix: true },
   { fullForm: 'quid ?', variants: ['quid ?'] },
   { fullForm: 'quod vide', variants: ['q v'] },
   { fullForm: 'quae vide', variants: ['qq v'] },
@@ -314,14 +313,14 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'scilicet', variants: ['sc'] },
   { fullForm: 'subject', variants: ['subj'] },
   { fullForm: 'subordinate', variants: ['subord'] }, // Encountered once (as of the time of writing).
-  { fullForm: 'supra', variants: ['sup', 'supra'] },
+  { fullForm: 'supra', variants: ['sup', 'supra'], suffix: true },
   { fullForm: 'Syriac', variants: ['syr'] }, // Encountered once (as of the time of writing).
   { fullForm: 'tabula', variants: ['tab'], suffix: true },
   { fullForm: 'translation, translated', variants: ['transl'] },
   { fullForm: 'variants', variants: ['varr', 'vars'] },
   { fullForm: 'ultimo', variants: ['ult'] },
-  { fullForm: 'uncatalogued', variants: ['uncatal'] },
-  { fullForm: 'unpublished', variants: ['unpubl'] },
+  { fullForm: 'uncatalogued', variants: ['uncatal'], suffix: true },
+  { fullForm: 'unpublished', variants: ['unpubl'], suffix: true },
   { fullForm: 'ut supra', variants: ['ut sup'], suffix: true },
   { fullForm: 'verbal', variants: ['vbal'] },
   { fullForm: 'verbs', variants: ['vbs'] },
@@ -342,24 +341,34 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'Sitzungsberichte', variants: ['Sitz'], noCaseVariant: true },
 ];
 
-export const MAPPING: Record<string, Annotation> = {};
-DATA.forEach((abb: Abbreviation): void => {
-  abb.variants.forEach((key: string) => {
-    const ann: Annotation = {
-      fullForm: abb.fullForm,
-      noStyledParent: abb.noStyledParent,
-      noBoundary: abb.noBoundary,
-      suffix: abb.suffix,
-    };
-    MAPPING[key] = ann;
+/**
+ *
+ * @param abb
+ */
+export function* variants(abb: Abbreviation): Generator<string> {
+  for (const key of abb.variants) {
+    yield key;
     if (abb.noCaseVariant) {
-      return;
+      continue;
     }
     const variant: string = str.toggleCase(key.charAt(0)) + key.slice(1);
     if (variant === key) {
       // This key doesn't start with a letter that has cases.
-      return;
+      continue;
     }
+    yield variant;
+  }
+}
+
+export const MAPPING: Record<string, Annotation> = {};
+DATA.forEach((abb: Abbreviation): void => {
+  const ann: Annotation = {
+    fullForm: abb.fullForm,
+    noStyledParent: abb.noStyledParent,
+    noBoundary: abb.noBoundary,
+    suffix: abb.suffix,
+  };
+  Array.from(variants(abb)).forEach((variant: string) => {
     log.ensure(
       !(variant in MAPPING),
       'duplicate annotation abbreviations:',
