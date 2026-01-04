@@ -23,21 +23,32 @@ export interface Source {
 }
 
 /**
+ * @returns
+ */
+export function ibidem(): HTMLElement {
+  const i: HTMLElement = document.createElement('i');
+  i.textContent = 'ibidem';
+  i.classList.add(cls.IBIDEM);
+  return i;
+}
+
+/**
  * Reference represents a particular way of citing a source in the text.
  */
 export class Reference {
   private static readonly DATA_REF = 'ref';
+
   /**
    *
-   * @param variant - Abbreviation used to cite this source.
    * @param source - Cited source.
+   * @param variant - Abbreviation used to cite this source.
    * @param postfix - Postfix appended to the abbreviation, if any.
    */
   public constructor(
-    public readonly variant: string,
     // TODO: (#522) The `source` field should become required once all sources
     // are populated.
-    public readonly source?: Source,
+    public readonly source: Source | undefined,
+    public readonly variant: string,
     public readonly postfix?: Postfix
   ) {}
 
@@ -84,19 +95,15 @@ export class Reference {
   /**
    *
    * @param raw
-   * @param {...any} tooltipPrefix
    * @returns
    */
-  public span(
-    raw: (Node | string)[],
-    tooltipPrefix: (Node | string)[] = []
-  ): HTMLSpanElement {
+  public span(...raw: (Node | string)[]): HTMLSpanElement {
     const span: HTMLSpanElement = document.createElement('span');
     span.classList.add(cls.REFERENCE);
     span.dataset[Reference.DATA_REF] = this.raw();
     span.append(...raw);
     const tooltip: (Node | string)[] = [
-      ...tooltipPrefix,
+      ...(/^ib\b/.test(span.textContent) ? [ibidem()] : []),
       ...(this.tooltip()?.childNodes ?? []),
     ];
     // TODO: (#522) This check will soon be unnecessary, because all references
@@ -2837,12 +2844,12 @@ function add(
 
   res.variants.forEach((variant: string): void => {
     // Add the abbreviation without any postfixes.
-    add(variant, new Reference(variant, res.source), res.noSpaceVariants);
+    add(variant, new Reference(res.source, variant), res.noSpaceVariants);
     Object.entries(res.postfixes ?? {}).forEach(
       ([name, type]: [string, PostfixType]): void => {
         add(
           `${variant} ${name}`,
-          new Reference(variant, res.source, new Postfix(name, type)),
+          new Reference(res.source, variant, new Postfix(name, type)),
           res.noSpaceVariants
         );
       }

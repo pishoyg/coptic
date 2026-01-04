@@ -143,7 +143,8 @@ const NUMBERS = [
   '[ivx]+',
   '[IVX]+',
   ...ann.DATA.filter((abb: ann.Abbreviation) => abb.suffix).flatMap(
-    (abb: ann.Abbreviation): string[] => Array.from(ann.variants(abb))
+    (abb: ann.Abbreviation): string[] =>
+      Array.from(ann.variants(abb)).map((variant) => str.escape(variant))
   ),
 ];
 
@@ -504,10 +505,10 @@ class Citation {
   }
 
   /**
-   * @param {...any} tooltipPrefix
+   * @param ibidem
    * @returns
    */
-  public anchor(...tooltipPrefix: (Node | string)[]): HTMLAnchorElement {
+  public anchor(ibidem = false): HTMLAnchorElement {
     const a = html.anchor(
       paths.bible(this.book.path, this.chapter, this.verse),
       true,
@@ -517,14 +518,18 @@ class Citation {
     a.dataset[Citation.DATA_BOOK] = this.book.abb;
     a.dataset[Citation.DATA_CHAPTER] = this.chapter ?? '';
     a.dataset[Citation.DATA_VERSE] = this.verse ?? '';
+    const tooltip: (Node | string)[] = [];
+    if (ibidem) {
+      // TODO: (#0) The `ibidem` helper is not Reference-specific, since it's
+      // also used for Bible processing.
+      tooltip.push(ref.ibidem());
+    }
     // If this citation is explicit (all numbers are present in `raw`), then
     // including them in the tooltip would be redundant.
     // However, if some numbers are inherited, we include the numbers in the
     // tooltip for readability.
-    drop.addDroppable(a, [
-      ...tooltipPrefix,
-      this.explicit ? this.book.name : this.name(),
-    ]);
+    tooltip.push(this.explicit ? this.book.name : this.name());
+    drop.addDroppable(a, tooltip);
     return a;
   }
 
@@ -823,7 +828,7 @@ function replaceReference(
     return {};
   }
 
-  const span: HTMLSpanElement = ref.MAPPING[match[0]]!.span([match[0]]);
+  const span: HTMLSpanElement = ref.MAPPING[match[0]]!.span(match[0]);
   if (!suffix) {
     return { replacement: [span] };
   }
@@ -961,16 +966,6 @@ function ibFallback(ib: HTMLElement): void {
 }
 
 /**
- * @returns
- */
-function ibidem(): HTMLElement {
-  const i: HTMLElement = document.createElement('i');
-  i.textContent = 'ibidem';
-  i.classList.add(cls.IBIDEM);
-  return i;
-}
-
-/**
  *
  * @param ib
  * @param antecedent
@@ -983,10 +978,7 @@ function handleReferenceIB(
 ): void {
   const reference: ref.Reference = ref.Reference.fromSpan(antecedent);
 
-  const span: HTMLSpanElement = reference.span(
-    [ib.cloneNode(true)],
-    [ibidem()]
-  );
+  const span: HTMLSpanElement = reference.span(ib.cloneNode(true));
   ib.replaceWith(span);
 
   // Extract a suffix, if available.
@@ -1047,7 +1039,7 @@ function handleBibleIB(
     next.nodeValue = next.nodeValue.slice(match[0].length);
   }
 
-  const anchor: HTMLAnchorElement = cit.anchor(ibidem(), ': ');
+  const anchor: HTMLAnchorElement = cit.anchor(true);
   ib.replaceWith(anchor);
   anchor.prepend(ib);
 }
@@ -1153,19 +1145,14 @@ function handleManual(root: HTMLElement): void {
         // completion. This would require attempting to parse a chapter and
         // verse number from the text.
         const reference: ref.Reference | undefined = ref.MAPPING[key];
-
-        if (!reference) {
-          // The key represents an annotation.
-          manual.replaceWith(annotation(key, ...manual.childNodes));
+        if (reference) {
+          // This represents a reference.
+          manual.replaceWith(reference.span(...manual.childNodes));
           return;
         }
 
-        // This represents a reference.
-        const span: HTMLSpanElement = reference.span(
-          [...manual.childNodes],
-          /^ib\b/.test(manual.textContent) ? [ibidem()] : []
-        );
-        manual.replaceWith(span);
+        // The key represents an annotation.
+        manual.replaceWith(annotation(key, ...manual.childNodes));
         return;
       }
 
@@ -1182,7 +1169,7 @@ function handleManual(root: HTMLElement): void {
       if (match?.index === 0) {
         // We can infer the reference from the text.
         const reference: ref.Reference = ref.MAPPING[match[0]]!;
-        const span: HTMLSpanElement = reference.span([...manual.childNodes]);
+        const span: HTMLSpanElement = reference.span(...manual.childNodes);
         manual.replaceWith(span);
         return;
       }
