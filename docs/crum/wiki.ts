@@ -31,7 +31,7 @@ import * as scan from '../scan.js';
  * [2] https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize */ // eslint-disable-line max-len
 
 /**
- * ABBREVIATION_EXCLUDE is used to avoid overlap between detected abbreviations.
+ * EXCLUDE matches elements that don't require enrichment.
  *
  * There is a whole lot of regex searches that get executed against every text
  * node in the page, so it may be a good idea to exclude as many subtrees as
@@ -39,25 +39,27 @@ import * as scan from '../scan.js';
  *
  * It also reduces the risk of false positives.
  */
-const ABBREVIATION_EXCLUDE: string = css.classQuery(
+const EXCLUDE: string = css.classQuery(
   cls.BULLET,
-  cls.BIBLE,
-  cls.REFERENCE,
   cls.DIALECT,
-  cls.ANNOTATION,
   cls.GLOSS,
-  cls.MANUAL,
-  cls.PAGE,
-  // We process Coptic text for annotations, because the signs for verb forms
-  // (prenominal, pronominal, and qualitative) are often marked as part of the
-  // Coptic word. (Although, as of the time of writing, we only annotate
-  // qualitative sign: †). So we don't exclude Coptic text.
+  // NOTE: Excluding Coptic text prevents annotating the '†' character (for
+  // qualitative forms). This is OK, as the notation is readily understood
+  // anyway. It also make it consistent with the prenominal and pronominal
+  // notations, which are not annotated.
+  cls.COPTIC,
   cls.AMHARIC,
   cls.ARABIC,
   cls.ARAMAIC,
   cls.DEMOTIC,
   cls.GREEK,
-  cls.HEBREW
+  cls.HEBREW,
+  // TODO: (#522) The presence of the four classes below in the query will
+  // become unnecessary when the query is solely used during enrichment.
+  cls.BIBLE,
+  cls.REFERENCE,
+  cls.ANNOTATION,
+  cls.PAGE
 );
 
 /**
@@ -91,11 +93,22 @@ const CHAPTER_VERSE = new RegExp(`\\.? (?:${NUMS}|\\(${NUMS}\\))`, 'uy');
  */
 const DAN_OVERRIDE: Record<string, string> = { Su: 'a', Bel: 'c' };
 
-const REFERENCE_OR_BIBLE_RE = new RegExp(
+const ENRICHMENT_RE = new RegExp(
   str.regex([
-    ...Object.keys(ref.MAPPING),
+    // Bible:
     ...Object.keys(bib.MAPPING),
     ...Object.keys(DAN_OVERRIDE),
+    // References:
+    ...Object.keys(ref.MAPPING),
+    // Pages:
+    'p',
+    'pp',
+    // Annotations:
+    ...Object.keys(ann.MAPPING),
+    // Semicolons:
+    ';',
+    // Ibidem:
+    'ib',
   ]),
   'gu'
 );
@@ -111,7 +124,7 @@ const BIBLE_FOLLOWUP = new RegExp(
   'u'
 );
 
-const PAGE_RE = new RegExp(str.bounded('p{1,2} ([0-9]+)'));
+const PAGE_RE = /^p{1,2} ([0-9]+) $/;
 const PAGE_FOLLOWUP_RE = /^, ([0-9]+) $/;
 
 // Pay attention to the following:
@@ -183,40 +196,29 @@ export function handle(root: HTMLElement): void {
     .forEach((elem: HTMLElement): void => {
       const startText: string | undefined = dev.play(() => textContent(elem));
 
-      handleReferencesAndBible(elem);
+      enrich(elem);
 
-      handlePages(elem);
-      handlePageFollowups(elem);
-
-      // IB handling needs to follow handling of References, Bible, and Pages.
-      handleIB(elem);
-
-      // Comma handling need to follow IB handling, because some IB references
-      // are followed by commas. Needless to say, it also needs to follow
-      // reference handling.
-      // This searches for occurrences of:
+      // Comma handling searches for occurrences of:
       //   <reference>, <suffix>, <suffix>, ...
-      // We do this after all references are detected to avoid mistakenly
-      // interpreting a reference as a suffix.
+      // Merge such "followups" into the preceding reference.
+      //
+      // NOTE: This needs to happen in a second post-enrichment pass, to avoid
+      // mistakenly interpreting a reference as a suffix.
       // For example, consider the following piece of text[1]:
       //   P 44 66, K 179
       // If the first run were to consider suffixes after commas, we may be
       // tempted to interpret "K 179" as a second suffix for the P reference.
       // However, processing all references first guarantees that this K
-      // references gets caught, thus it won't be mistaken for a suffix of the P
+      // reference gets caught, thus it won't be mistaken for a suffix of the P
       // reference.
-      //
-      // Discovered commas and suffixes are merged into the reference that
-      // they follow.
       //
       // [1] https://remnqymi.com/crum/510.html#:~:text=P%2044%2066,%20K%20179
       handleReferenceFollowups(elem);
 
-      // Comma handling needs to follow both Bible handling and IB handling.
       // Consider the following case[1]:
       //   Job 3 18, 2 Cor 4 18
-      // If we were to greedily parse Bible followups in the first iteration of
-      // Bible citation search, this would capture "Job 3 18, 2", resulting in
+      // If we were to greedily parse Bible followups in the first enrichment
+      // pass, this would capture "Job 3 18, 2", resulting in
       // the following:
       // - A Bible citation to Job 3 18
       // - A Bible citation to Job 3 2
@@ -227,29 +229,14 @@ export function handle(root: HTMLElement): void {
       // [1] https://remnqymi.com/crum/25.html
       handleBibleFollowups(elem);
 
-      // Some annotation abbreviations (e.g. MS for manuscript, MSS for
-      // manuscripts, and ostr for ostracon) are parts of some reference
-      // abbreviations. So references must be processed prior to annotations,
-      // and annotations must exclude pieces of text that have been marked as
-      // references.
-      handleAnnotations(elem);
-
-      // Corrigenda handling has no interdependencies and no possibility of
-      // collision.
       handleCorrigenda(elem);
-
-      // Semicolon handling has no interdependencies and no possibility of
-      // collision.
-      handleSemicolons(elem);
 
       handleFootnote(elem);
 
-      handleManual(elem);
-
-      handleEntry(elem);
+      addCopyShortcuts(elem);
 
       dev.play(() => {
-        white.warnPotentiallyMissingReferences(elem, ABBREVIATION_EXCLUDE);
+        white.warnPotentiallyMissingReferences(elem, EXCLUDE);
 
         const endText: string = textContent(elem);
         // This handler should only add tooltips without modifying text content
@@ -284,145 +271,124 @@ function annotation(
 
 /**
  *
- * @param root
+ * @param key
+ * @param node
+ * @param remainder
+ * @param preceding
+ * @returns
  */
-function handleAnnotations(root: HTMLElement): void {
-  html.replaceText(
-    root,
-    ann.RE,
-    (
-      match: RegExpExecArray,
-      node: Text,
-      remainder: string,
-      preceding: string
-    ): { replacement?: Node[] } => {
-      const annot: ann.Annotation | undefined = ann.MAPPING[match[0]];
-      if (!annot) {
-        // This is impossible, since the regex is constructed from the MAPPING.
-        log.fatal("Can't find annotation:", match[0]);
-      }
+function handleAnnotation(
+  key: string,
+  node: Text,
+  remainder: string,
+  preceding: string
+): { replacement?: Node[] } {
+  const annot: ann.Annotation | undefined = ann.MAPPING[key];
+  if (!annot) {
+    log.fatal("Can't find annotation:", key);
+  }
 
-      if (annot.noStyledParent && node.parentElement?.closest('i, sup')) {
-        // This annotation can't show in italicized text, and this node is
-        // italicized.
-        return {};
-      }
+  if (annot.noStyledParent && node.parentElement?.closest('i, sup')) {
+    // This annotation can't show in italicized text, and this node is
+    // italicized.
+    return {};
+  }
 
-      if (
-        match[0] === 'art' &&
-        (remainder.startsWith(' thou') || preceding.endsWith('thou '))
-      ) {
-        // False positive!
-        return {};
-      }
+  if (
+    key === 'art' &&
+    (remainder.startsWith(' thou') || preceding.endsWith('thou '))
+  ) {
+    // False positive!
+    return {};
+  }
 
-      return { replacement: [annotation(annot.fullForm, match[0])] };
-    },
-    // Exclude all Wiki abbreviations to avoid overlap.
-    ABBREVIATION_EXCLUDE
-  );
+  return { replacement: [annotation(annot.fullForm, key)] };
 }
 
 /**
  * Insert hyperlinks for page references in the text.
  *
- * @param root
+ * @param text
+ * @param node
+ * @returns
  */
-function handlePages(root: HTMLElement): void {
-  html.replaceText(
-    root,
-    PAGE_RE,
-    (
-      match: RegExpExecArray,
-      node: Text,
-      remainder: string
-    ): { replacement?: Node[]; remainder?: string } => {
-      // A page number has the format 'p [0-9]+ [ab]?'. The regex matches the
-      // first two parts (the letter "p" and the page number). The column number
-      // lives in an <i> tag, which should be the next sibling.
-      // Between the numerical part and the <i> tag there is expected to be a
-      // single space.
-      const col: string | null | undefined = node.nextSibling?.textContent;
-      if (
-        remainder !== ' ' ||
-        !node.nextSibling ||
-        (col !== 'a' && col !== 'b')
-      ) {
-        // This doesn't match the expected format.
-        return {};
-      }
-      const a = html.anchor(
-        paths.crumScan(`${match[1]!}${col}`),
-        true,
-        match[0],
-        ' ',
-        node.nextSibling
-      );
-      a.classList.add(cls.PAGE);
-      return { replacement: [a], remainder: '' };
-    },
-    // Exclude all Wiki abbreviations to avoid overlap.
-    ABBREVIATION_EXCLUDE
+function handlePage(
+  text: string,
+  node: Text
+): { replacement?: (Node | string)[]; remainder?: string } {
+  // A page number has the format 'p [0-9]+ [ab]?'. The regex matches this
+  // format, excluding the column, which is expected to live in the <i> tag that
+  // is the next sibling.
+  const match: RegExpExecArray | null = PAGE_RE.exec(text);
+  const next: ChildNode | null = node.nextSibling;
+  if (!match || !next) {
+    return {};
+  }
+  const col: string | null = next.textContent;
+  if (col !== 'a' && col !== 'b') {
+    return {};
+  }
+  // Handle followups before mutating the DOM.
+  handlePageFollowups(next.nextSibling);
+  const a = html.anchor(
+    paths.crumScan(`${match[1]!}${col}`),
+    true,
+    match[0],
+    next
   );
+  a.classList.add(cls.PAGE);
+  return { replacement: [a], remainder: '' };
 }
 
 /**
  *
- * @param root
+ * @param node
  */
-function handlePageFollowups(root: HTMLElement): void {
-  root
-    .querySelectorAll<HTMLElement>(`.${cls.PAGE}`)
-    .forEach((page: HTMLElement): void => {
-      // Iteratively check for subsequent pages in the list
-      // Structure expected: [Anchor] -> [Text: ", 123 "] -> [I: "a" or "b"]
-      let textNode: ChildNode | null;
-      let colNode: ChildNode | null | undefined;
+function handlePageFollowups(node: ChildNode | null): void {
+  // Iteratively check for subsequent pages in the list
+  // Structure expected: [Anchor] -> [Text: ", 123 "] -> [I: "a" or "b"]
+  let next: ChildNode | null | undefined;
+  while (node && (next = node.nextSibling)) {
+    // Check validation:
+    // 1. Text must match ", [number] "
+    // 2. Column element must contain 'a' or 'b'
+    const match: RegExpExecArray | null = PAGE_FOLLOWUP_RE.exec(
+      node.textContent ?? ''
+    );
 
-      while (
-        (textNode = page.nextSibling) &&
-        (colNode = textNode.nextSibling)
-      ) {
-        // Check validation:
-        // 1. Text must match ", [number] "
-        // 2. Column element must contain 'a' or 'b'
-        const match: RegExpExecArray | null = PAGE_FOLLOWUP_RE.exec(
-          textNode.textContent ?? ''
-        );
+    if (!match) {
+      break;
+    }
+    const col: string | null = next.textContent;
+    if (col !== 'a' && col !== 'b') {
+      break;
+    }
 
-        if (
-          !match ||
-          (colNode.textContent !== 'a' && colNode.textContent !== 'b')
-        ) {
-          break;
-        }
+    const pageNum: string = match[1]!;
 
-        const pageNum: string = match[1]!;
+    // Create the new anchor
+    // We include the number, the space (implied in the regex match), and
+    // the column node.
+    // Note: Passing `next` to html.anchor moves it from the DOM into the
+    // anchor.
+    const nextAnchor = html.anchor(
+      paths.crumScan(`${pageNum}${col}`),
+      true,
+      pageNum,
+      ' ',
+      next
+    );
+    nextAnchor.classList.add(cls.PAGE);
 
-        // Create the new anchor
-        // We include the number, the space (implied in the regex match), and
-        // the column node.
-        // Note: Passing colNode to html.anchor moves it from the DOM into the
-        // anchor.
-        const nextAnchor = html.anchor(
-          paths.crumScan(`${pageNum}${colNode.textContent}`),
-          true,
-          pageNum,
-          ' ',
-          colNode
-        );
-        nextAnchor.classList.add(cls.PAGE);
+    // Adjust the text node to only contain the comma and space separator
+    node.textContent = ', ';
 
-        // Adjust the text node to only contain the comma and space separator
-        textNode.textContent = ', ';
+    // Insert the new anchor after the comma
+    node.after(nextAnchor);
 
-        // Insert the new anchor after the comma
-        textNode.after(nextAnchor);
-
-        // Advance the loop to check for another page after this new one
-        page = nextAnchor;
-      }
-    });
+    // Advance the loop to check for another page after this new one
+    node = nextAnchor.nextSibling;
+  }
 }
 
 /**
@@ -588,45 +554,38 @@ class Citation {
 
 /**
  *
- * @param match
+ * @param key
  * @param node
  * @param remainder
  * @returns
  */
 function parseBibleCitation(
-  match: RegExpExecArray,
+  key: string,
   node: Text,
   remainder: string
 ): [Citation | null, string | null] {
-  // Our regex puts the book abbreviation in the first match group. The chapter
-  // and verse numbers are either second and third, or fourth and fifth.
-  let bookAbbreviation: string = match[0];
-
   // Parse the numbers following the book abbreviation.
   CHAPTER_VERSE.lastIndex = 0;
   const m: RegExpExecArray | null = CHAPTER_VERSE.exec(remainder);
   let [chapter, verse] = [m?.[1] ?? m?.[3], m?.[2] ?? m?.[4]];
   remainder = remainder.slice(m?.[0].length ?? 0);
-  const raw: string = match[0] + (m?.[0] ?? '');
+  const raw: string = key + (m?.[0] ?? '');
 
-  if (bookAbbreviation in DAN_OVERRIDE) {
+  if (key in DAN_OVERRIDE) {
     // Given that this special book contains one chapter, the book
     // abbreviation is followed by the verse number only. This number would've
     // been mistakenly interpreted as the chapter number, but it's actually the
     // verse number.
     verse = chapter;
-    chapter = DAN_OVERRIDE[bookAbbreviation];
-    bookAbbreviation = 'Dan';
+    chapter = DAN_OVERRIDE[key];
+    key = 'Dan';
   }
 
-  if (!m && falsePositive(bookAbbreviation, remainder, node)) {
+  if (!m && falsePositive(key, remainder, node)) {
     return [null, null];
   }
 
-  return [
-    new Citation(raw, chapter, verse, bib.MAPPING[bookAbbreviation]!),
-    remainder,
-  ];
+  return [new Citation(raw, chapter, verse, bib.MAPPING[key]!), remainder];
 }
 
 /**
@@ -682,18 +641,18 @@ function parseBibleFollowups(
 
 /**
  *
- * @param match
+ * @param key
  * @param node
  * @param remainder
  * @returns
  */
 function replaceBible(
-  match: RegExpExecArray,
+  key: string,
   node: Text,
   remainder: string
 ): { replacement?: (Node | string)[]; remainder?: string } {
   const [cit, rem]: [Citation | null, string | null] = parseBibleCitation(
-    match,
+    key,
     node,
     remainder
   );
@@ -811,24 +770,24 @@ function* suffixFollowups(
 
 /**
  *
- * @param match
+ * @param key
  * @param node
  * @param remainder
  * @returns
-  // TODO: (#572) Handle tricky references.
+ * TODO: (#572) Enrichment Code Processes Chains of Nodes.
  */
 function replaceReference(
-  match: RegExpExecArray,
+  key: string,
   node: Text,
   remainder: string
 ): { replacement?: Node[]; remainder?: string } {
   const suffix: string | undefined = SUFFIX.exec(remainder)?.[0];
-  if (match[0] === 'My' && !suffix) {
+  if (key === 'My' && !suffix) {
     // False positive.
     return {};
   }
 
-  const span: HTMLSpanElement = ref.MAPPING[match[0]]!.span(match[0]);
+  const span: HTMLSpanElement = ref.MAPPING[key]!.span(key);
   if (!suffix) {
     return { replacement: [span] };
   }
@@ -848,30 +807,142 @@ function replaceReference(
 /**
  *
  * @param root
+ * @returns An array containing nodes in the root that are either:
+ * 1. Text nodes.
+ * 2. Element nodes with the MANUAL class.
  */
-function handleReferencesAndBible(root: HTMLElement): void {
-  html.replaceText(
+function walk(root: Node): Node[] {
+  const walker = document.createTreeWalker(
     root,
-    REFERENCE_OR_BIBLE_RE,
-    (match: RegExpExecArray, node: Text, remainder: string) => {
-      // There is a singleton known key that is interpretable as a Bible
-      // citation or a Reference, and that is "Am" which could mean:
-      // - Amos
-      // - Amélineau
-      // Whenever it occurs on its own, it refers to the Biblical book.
-      // As a postfix of Sh (ShAm), it's Amélineau.
-      //
-      // For this reason, we prioritize Bible matches over Reference matches.
-      if (match[0] in bib.MAPPING || match[0] in DAN_OVERRIDE) {
-        return replaceBible(match, node, remainder);
-      }
-      if (match[0] in ref.MAPPING) {
-        return replaceReference(match, node, remainder);
-      }
-      log.fatal('This is impossible!');
-    },
-    ABBREVIATION_EXCLUDE
+    NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT,
+    {
+      acceptNode(node: Node): number {
+        if (node.parentElement?.classList.contains(cls.MANUAL)) {
+          // Manual nodes are handled individually. Their children don't get
+          // processed.
+          return NodeFilter.FILTER_REJECT;
+        }
+
+        if (node.nodeType === Node.TEXT_NODE) {
+          // All text nodes are processed.
+          return NodeFilter.FILTER_ACCEPT;
+        }
+
+        if (node.nodeType !== Node.ELEMENT_NODE) {
+          // A non-text and non-element node should be skipped.
+          return NodeFilter.FILTER_SKIP;
+        }
+
+        if ((node as Element).matches(EXCLUDE)) {
+          // If this element matches the exclude selector, FILTER_REJECT
+          // tells TreeWalker to discard this node AND its children.
+          return NodeFilter.FILTER_REJECT;
+        }
+
+        if ((node as Element).classList.contains(cls.MANUAL)) {
+          return NodeFilter.FILTER_ACCEPT;
+        }
+
+        // If it's a normal element, we don't want to yield the element
+        // itself, but we DO want to visit its children.
+        return NodeFilter.FILTER_SKIP;
+      },
+    }
   );
+
+  const nodes: Node[] = [];
+  while (walker.nextNode()) {
+    nodes.push(walker.currentNode);
+  }
+  return nodes;
+}
+
+/**
+ * Replace an enrichment match.
+ *
+ * @param match
+ * @param node
+ * @param remainder
+ * @param preceding
+ * @returns
+ */
+function replaceMatch(
+  match: RegExpExecArray,
+  node: Text,
+  remainder: string,
+  preceding: string
+): { replacement?: (Node | string)[]; remainder?: string } {
+  // There is a singleton known key that is interpretable as a Bible
+  // citation or a Reference, and that is "Am" which could mean:
+  // - Amos
+  // - Amélineau
+  // Whenever it occurs on its own, it refers to the Biblical book.
+  // As a postfix of Sh (ShAm), it's Amélineau.
+  //
+  // For this reason, we prioritize Bible matches over Reference matches.
+  const key: string = match[0];
+  if (key in bib.MAPPING || key in DAN_OVERRIDE) {
+    return replaceBible(key, node, remainder);
+  }
+
+  if (key in ref.MAPPING) {
+    return replaceReference(key, node, remainder);
+  }
+
+  if (key === 'p' || key === 'pp') {
+    return handlePage(key + remainder, node);
+  }
+
+  if (key in ann.MAPPING) {
+    // 'p' and 'pp' are also annotations, so it's important for annotation
+    // handling to have less priority than page handling.
+    return handleAnnotation(key, node, remainder, preceding);
+  }
+
+  // NOTE: Our current regex doesn't match semicolons that immediately
+  // follow a word character. This is OK:
+  // - In the vast majority of cases, semicolons that should be annotated
+  //   occur at some form of boundary.
+  // - The few false negatives are acceptable, as the tooltip is identical
+  //   for all semicolons, which are abundant.
+  if (key === ';') {
+    return { replacement: [semicolon()] };
+  }
+
+  if (key === 'ib') {
+    const ib: HTMLElement | null = node.parentElement;
+    if (ib?.textContent !== 'ib') {
+      log.error('ib encountered in an unexpected node:', node);
+      return {};
+    }
+    handleIB(ib);
+    return {};
+  }
+
+  log.fatal('This is impossible!');
+}
+
+/**
+ *
+ * @param root
+ */
+function enrich(root: HTMLElement): void {
+  for (const node of walk(root)) {
+    if (
+      node.nodeType === Node.ELEMENT_NODE &&
+      (node as Element).classList.contains(cls.MANUAL)
+    ) {
+      handleManual(node as HTMLElement);
+      continue;
+    }
+
+    if (node.nodeType === Node.TEXT_NODE) {
+      html.replaceNode(node as Text, ENRICHMENT_RE, replaceMatch);
+      continue;
+    }
+
+    log.fatal('This is impossible!');
+  }
 }
 
 // On a corrigendum element, the page number lives in a `data-page` attribute.
@@ -900,24 +971,14 @@ function handleCorrigenda(root: HTMLElement): void {
 
 /**
  *
- * @param root
+ * @returns
  */
-function handleSemicolons(root: HTMLElement): void {
-  html.replaceText(
-    root,
-    /;/,
-    () => {
-      const span = document.createElement('span');
-      span.classList.add(cls.SEMICOLON);
-      span.textContent = ';';
-      drop.addDroppable(span, [
-        'semicolons separate groups in meaning or usage',
-      ]);
-      return { replacement: [span] };
-    },
-    // Maybe we should simply exclude tooltips (`drop.CLS.DROPPABLE`)?
-    ABBREVIATION_EXCLUDE
-  );
+function semicolon(): HTMLSpanElement {
+  const span = document.createElement('span');
+  span.classList.add(cls.SEMICOLON);
+  span.textContent = ';';
+  drop.addDroppable(span, ['semicolons separate groups in meaning or usage']);
+  return span;
 }
 
 /**
@@ -1054,9 +1115,8 @@ function handlePageIB(ib: HTMLElement, antecedent: HTMLAnchorElement): void {
   // An example is 1730 (ⲟⲩⲱⲛⲅ):
   //   https://remnqymi.com/crum/1730.html
   // We don't expect a suffix to be present.
-  const a = html.anchor(antecedent.href, true);
+  const a = html.anchor(antecedent.href, true, ib.cloneNode(true));
   ib.replaceWith(a);
-  a.append(ib);
   drop.addDroppable(a, ['ibidem']);
 }
 
@@ -1112,125 +1172,108 @@ function findAntecedent(ib: HTMLElement, strict?: boolean): HTMLElement | null {
 const DATA_KEY = 'key';
 /**
  *
- * @param root
+ * @param manual
  * @returns
  */
-function handleManual(root: HTMLElement): void {
-  root
-    .querySelectorAll<HTMLElement>(`.${cls.MANUAL}`)
-    .forEach((manual: HTMLElement): void => {
-      const key: string | undefined = manual.dataset[DATA_KEY];
+function handleManual(manual: HTMLElement): void {
+  const key: string | undefined = manual.dataset[DATA_KEY];
 
-      if (key === '') {
-        // An empty key indicates that this should not be annotated.
-        manual.replaceWith(...manual.childNodes);
-        return;
-      }
+  if (key === '') {
+    // An empty key indicates that this should not be annotated.
+    manual.replaceWith(...manual.childNodes);
+    return;
+  }
 
-      // NOTE: We don't split the suffix out of manually-labeled references, the
-      // whole text inside the manual tag is treated as a reference name (which
-      // is not true).
-      // As of the time of writing, the only side effect of this bug is that
-      // annotations don't reflect in the tooltip (#666). This is OK, because
-      // the number of manually-marked references is very small anyway.
-      if (key) {
-        // The key is explicit. The possibilities are:
-        // 1. The key is a reference abbreviation.
-        // 2. The key is an annotation.
-        //
-        // The third possibility (the key being a Bible book abbreviation) has
-        // never been encountered, so it remains unimplemented.
-        //
-        // TODO: (#0) Consider supporting explicit Bible book keys for
-        // completion. This would require attempting to parse a chapter and
-        // verse number from the text.
-        const reference: ref.Reference | undefined = ref.MAPPING[key];
-        if (reference) {
-          // This represents a reference.
-          manual.replaceWith(reference.span(...manual.childNodes));
-          return;
-        }
-
-        // The key represents an annotation.
-        manual.replaceWith(annotation(key, ...manual.childNodes));
-        return;
-      }
-
-      log.ensure(key === undefined); // Sanity check.
-
-      // We need to infer the interpretation. If the text starts with a
-      // reference name, then it's a reference. Otherwise, it's a dangling
-      // suffix, and we need to find an antecedent.
-      REFERENCE_RE.lastIndex = 0;
-      const match: RegExpExecArray | null = REFERENCE_RE.exec(
-        manual.textContent
-      );
-
-      if (match?.index === 0) {
-        // We can infer the reference from the text.
-        const reference: ref.Reference = ref.MAPPING[match[0]]!;
-        const span: HTMLSpanElement = reference.span(...manual.childNodes);
-        manual.replaceWith(span);
-        return;
-      }
-
-      // This is a dangling suffix. Find an antecedent.
-      // TODO: (#668) Complete the implementation.
+  // NOTE: We don't split the suffix out of manually-labeled references, the
+  // whole text inside the manual tag is treated as a reference name (which
+  // is not true).
+  // As of the time of writing, the only side effect of this bug is that
+  // annotations don't reflect in the tooltip (#666). This is OK, because
+  // the number of manually-marked references is very small anyway.
+  if (key) {
+    // The key is explicit. The possibilities are:
+    // 1. The key is a reference abbreviation.
+    // 2. The key is an annotation.
+    //
+    // The third possibility (the key being a Bible book abbreviation) has
+    // never been encountered, so it remains unimplemented.
+    //
+    // TODO: (#0) Consider supporting explicit Bible book keys for
+    // completion. This would require attempting to parse a chapter and
+    // verse number from the text.
+    const reference: ref.Reference | undefined = ref.MAPPING[key];
+    if (reference) {
+      // This represents a reference.
+      manual.replaceWith(reference.span(...manual.childNodes));
       return;
-    });
+    }
+
+    // The key represents an annotation.
+    manual.replaceWith(annotation(key, ...manual.childNodes));
+    return;
+  }
+
+  log.ensure(key === undefined); // Sanity check.
+
+  // We need to infer the interpretation. If the text starts with a
+  // reference name, then it's a reference. Otherwise, it's a dangling
+  // suffix, and we need to find an antecedent.
+  REFERENCE_RE.lastIndex = 0;
+  const match: RegExpExecArray | null = REFERENCE_RE.exec(manual.textContent);
+
+  if (match?.index === 0) {
+    // We can infer the reference from the text.
+    const reference: ref.Reference = ref.MAPPING[match[0]]!;
+    const span: HTMLSpanElement = reference.span(...manual.childNodes);
+    manual.replaceWith(span);
+    return;
+  }
+
+  // This is a dangling suffix. Find an antecedent.
+  // TODO: (#668) Complete the implementation.
 }
 
 /**
  *
- * @param root
+ * @param ib
  */
-function handleIB(root: HTMLElement): void {
-  root.querySelectorAll('i').forEach((ib: HTMLElement): void => {
-    if (ib.textContent.toLowerCase() !== 'ib') {
-      return;
-    }
+function handleIB(ib: HTMLElement): void {
+  const antecedent: HTMLElement | null = findAntecedent(ib);
 
-    if (ib.parentElement?.classList.contains(cls.MANUAL)) {
-      return;
-    }
+  if (!antecedent) {
+    log.error(
+      'Unable to find antecedent reference for ib element',
+      ib,
+      'previousSibling:',
+      ib.previousSibling?.textContent
+    );
+    ibFallback(ib);
+    return;
+  }
 
-    const antecedent: HTMLElement | null = findAntecedent(ib);
+  if (antecedent.classList.contains(cls.PAGE)) {
+    handlePageIB(ib, antecedent as HTMLAnchorElement);
+    return;
+  }
 
-    if (!antecedent) {
-      log.error(
-        'Unable to find antecedent reference for ib element',
-        ib,
-        'previousSibling:',
-        ib.previousSibling?.textContent
-      );
-      ibFallback(ib);
-      return;
-    }
+  const next: ChildNode | null = ib.nextSibling;
+  if (!next) {
+    log.error('ib has no next sibling:', ib);
+    ibFallback(ib);
+    return;
+  }
 
-    if (antecedent.classList.contains(cls.PAGE)) {
-      handlePageIB(ib, antecedent as HTMLAnchorElement);
-      return;
-    }
+  if (antecedent.classList.contains(cls.REFERENCE)) {
+    handleReferenceIB(ib, antecedent, next);
+    return;
+  }
 
-    const next: ChildNode | null = ib.nextSibling;
-    if (!next) {
-      log.error('ib has no next sibling:', ib);
-      ibFallback(ib);
-      return;
-    }
-
-    if (antecedent.classList.contains(cls.REFERENCE)) {
-      handleReferenceIB(ib, antecedent, next);
-      return;
-    }
-
-    dev.play(() => {
-      // Sanity check.
-      log.ensure(antecedent.classList.contains(cls.BIBLE));
-    });
-
+  if (antecedent.classList.contains(cls.BIBLE)) {
     handleBibleIB(ib, antecedent, next);
-  });
+    return;
+  }
+
+  log.fatal('This is impossible!');
 }
 
 const DATA_NUM = 'num';
@@ -1258,7 +1301,7 @@ const textContentOverrides: Record<string, string> = {
  *
  * @param root
  */
-function handleEntry(root: HTMLElement): void {
+function addCopyShortcuts(root: HTMLElement): void {
   root.querySelectorAll(`.${cls.ENTRY}`).forEach((entry: Element): void => {
     const copy: HTMLSpanElement = document.createElement('span');
     copy.textContent = '📋';

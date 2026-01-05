@@ -35,11 +35,6 @@ export interface Abbreviation {
   // noStyledParent is used to eliminate some false positives. An annotation
   // marked with this field can't be the child of an <i> or <sup> tag.
   noStyledParent?: boolean;
-  // noBoundary indicates that this annotation can occur as part of a word.
-  // Most annotations occur as standalone words, but some are allowed to be part
-  // of a word, or right next to one. For such annotations, use the noBoundary
-  // field to indicate that mid-word matches are allowed.
-  noBoundary?: boolean;
   // suffix indicates whether this annotation can occur as a Reference suffix.
   suffix?: boolean;
 }
@@ -47,7 +42,6 @@ export interface Abbreviation {
 export interface Annotation {
   fullForm: string;
   noStyledParent?: boolean | undefined;
-  noBoundary?: boolean | undefined;
   suffix?: boolean | undefined;
 }
 
@@ -109,13 +103,15 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'legendum', variants: ['l'] },
   { fullForm: 'literally', variants: ['lit'] },
   { fullForm: 'masculine', variants: ['m'], noCaseVariant: true },
-  // The following doesn't currently work because the text doesn't use the same
-  // encoding for the horizontal bar as the one used here.
+  // NOTE: 'ⲛ̅ⲉ̅' doesn't work, for two reasons:
+  // - The text doesn't use the same encoding for the horizontal bar as the one
+  //   used here.
+  // - This usually occurs in the middle of a word, while the annotation regex
+  //   prevents mid-word matches.
   {
     fullForm: 'ⲛⲟⲩⲧⲉ',
     variants: ['ⲛ̅ⲉ̅'],
     noCaseVariant: true,
-    noBoundary: true,
   },
   { fullForm: 'noun', variants: ['nn'], noCaseVariant: true },
   { fullForm: 'object', variants: ['obj'] },
@@ -150,12 +146,17 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'vide', variants: ['V', 'vid'] },
   { fullForm: 'variant, in same dialect', variants: ['var'] },
   { fullForm: 'verb', variants: ['vb'] },
-  { fullForm: 'qualitative', variants: ['†'], noBoundary: true },
+  // NOTE: '†' is currently broken, for two reasons:
+  // - It's usually part of <span class="coptic"> tags, which are excluded.
+  // - This usually occurs right after a word, while the annotation regex uses a
+  //   negative lookbehind to prevent such matches.
+  { fullForm: 'qualitative', variants: ['†'] },
   // NOTE: The question mark is a very common annotation, but it also occurs as
   // a punctuation mark that doesn't need an annotation. Our heuristic to
-  // distinguish the two (which is implemented by simply refraining from setting
-  // the `noBoundary` field) is:
-  // - If it immediately follows a letter, it's a punctuation mark.
+  // distinguish the two is:
+  // - If it immediately follows a word character, it's a punctuation mark.
+  //   (This doesn't require any extra steps to implement, as the annotation
+  //   regex would prevent such matches anyway.)
   // - If there is a preceding space or non-word character, it's the annotation.
   // This is good enough, although it produces (few) false negatives.
   { fullForm: 'perhaps, possibly', variants: ['?'] },
@@ -368,7 +369,6 @@ DATA.forEach((abb: Abbreviation): void => {
   const ann: Annotation = {
     fullForm: abb.fullForm,
     noStyledParent: abb.noStyledParent,
-    noBoundary: abb.noBoundary,
     suffix: abb.suffix,
   };
   Array.from(variants(abb)).forEach((variant: string) => {
@@ -381,21 +381,4 @@ DATA.forEach((abb: Abbreviation): void => {
   });
 });
 
-export const RE = new RegExp(
-  ((): string => {
-    // boundaryKeys are keys that occur as standalone words.
-    const boundaryKeys: string[] = Object.entries(MAPPING)
-      .filter(([_, annot]: [string, Annotation]) => !annot.noBoundary)
-      .map(([key, _]) => key);
-
-    // noBoundaryKeys are keys that can occur mid-word.
-    const noBoundaryKeys: string[] = Object.entries(MAPPING)
-      .filter(([_, annot]: [string, Annotation]) => annot.noBoundary)
-      .map(([key, _]) => key);
-
-    return [str.regex(boundaryKeys), str.regex(noBoundaryKeys, false)].join(
-      '|'
-    );
-  })(),
-  'gu'
-);
+export const RE = new RegExp(str.regex(Object.keys(MAPPING)), 'gu');

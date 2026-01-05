@@ -461,10 +461,15 @@ const NAG_HAMMADI_RE =
  * @param root
  */
 export function handleNagHammadi(root: HTMLElement): void {
-  root
-    .querySelectorAll(`.${cls.NAG_HAMMADI}`)
-    .forEach((elem: Element): void => {
-      html.replaceText(
+  Array.from(root.querySelectorAll(`.${cls.NAG_HAMMADI}`))
+    .flatMap(
+      (nh: Element): Text[] =>
+        Array.from(nh.childNodes).filter(
+          (node) => node.nodeType === Node.TEXT_NODE
+        ) as Text[]
+    )
+    .forEach((elem: Text): void => {
+      html.replaceNode(
         elem,
         NAG_HAMMADI_RE,
         (
