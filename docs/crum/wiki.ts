@@ -522,7 +522,7 @@ class Citation {
     if (ibidem) {
       // TODO: (#0) The `ibidem` helper is not Reference-specific, since it's
       // also used for Bible processing.
-      tooltip.push(ref.ibidem());
+      tooltip.push(ref.ibidem(), ': ');
     }
     // If this citation is explicit (all numbers are present in `raw`), then
     // including them in the tooltip would be redundant.
