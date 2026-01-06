@@ -17,7 +17,7 @@
     "stylelint": "^16.26.1",
     "stylelint-config-standard-scss": "^13.1.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.50.1",
+    "typescript-eslint": "^8.52.0",
     "webpack": "^5.104.1"
   },
   "prettier": {
@@ -47,6 +47,6 @@
   "dependencies": {
     "@types/jsdom": "^21.1.7",
     "jiti": "^2.6.1",
-    "jsdom": "^27.3.0"
+    "jsdom": "^27.4.0"
   }
 }

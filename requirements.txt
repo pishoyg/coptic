@@ -14,7 +14,7 @@ cached-property==2.0.1
     # via genanki
 cachetools==6.2.4
     # via google-auth
-certifi==2025.11.12
+certifi==2026.1.4
     # via requests
 cfgv==3.5.0
     # via pre-commit
@@ -38,7 +38,7 @@ ebooklib==0.20
     # via -r requirements.in
 et-xmlfile==2.0.0
     # via openpyxl
-filelock==3.20.1
+filelock==3.20.2
     # via virtualenv
 fonttools==4.61.1
     # via matplotlib
@@ -68,11 +68,11 @@ identify==2.6.15
     # via pre-commit
 idna==3.11
     # via requests
-json5==0.12.1
+json5==0.13.0
     # via -r requirements.in
 kiwisolver==1.4.9
     # via matplotlib
-librt==0.7.4
+librt==0.7.7
     # via mypy
 lxml==6.0.2
     # via ebooklib
@@ -102,9 +102,9 @@ pandas==2.3.3
     # via -r requirements.in
 pandas-stubs==2.3.3.251219
     # via -r requirements.in
-pathspec==0.12.1
+pathspec==1.0.0
     # via mypy
-pillow==12.0.0
+pillow==12.1.0
     # via matplotlib
 pip-tools==7.5.2
     # via -r requirements.in

@@ -311,7 +311,7 @@ repos:
 
   # YAML
   - repo: https://github.com/google/yamlfmt
-    rev: v0.20.0
+    rev: v0.21.0
     hooks:
       - id: yamlfmt
 
@@ -323,7 +323,7 @@ repos:
 
   # Protobuf
   - repo: https://github.com/bufbuild/buf
-    rev: v1.61.0
+    rev: v1.62.1
     hooks:
       - id: buf-dep-prune
       - id: buf-dep-update
