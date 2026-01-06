@@ -671,7 +671,12 @@ const DATA_1: Resource[] = [
       // NOTE: Listed as '(Cai)CoptMus'!
       title: 'MSS. &c. in Coptic Museum, Cairo',
     },
-    variants: ['Cai Copt Mus', 'Copt Mus'],
+    variants: [
+      'P Cai Copt Mus', // NOTE: P for papyrus, but we don't mention that!
+      'Cai Copt Mus',
+      'Copt Mus Cai',
+      'Copt Mus',
+    ],
   },
   {
     source: {
