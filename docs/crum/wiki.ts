@@ -235,6 +235,8 @@ export function handle(root: HTMLElement): void {
 
       addCopyShortcuts(elem);
 
+      handleFormSuperscripts(elem);
+
       dev.play(() => {
         white.warnPotentiallyMissingReferences(elem, EXCLUDE);
 
@@ -745,27 +747,34 @@ function* suffixFollowups(
   maybeSUP: ChildNode | null,
   between: string
 ): Generator<Node | string> {
-  if (between || maybeSUP?.nodeName !== 'SUP') {
+  if (between) {
+    // There is text before the superscript that is suspected to be part of the
+    // suffix.
     return;
   }
 
-  // Sometimes, there are even more numbers following the superscript.
-  // We need to capture the sibling's sibling before we move the
-  // sibling, otherwise we wouldn't be able to access it after the move.
-  const nextNext: ChildNode | null = maybeSUP.nextSibling;
-  yield maybeSUP;
-
-  if (!nextNext?.nodeValue) {
+  if (maybeSUP?.nodeName !== 'SUP') {
+    // This is not a superscript.
     return;
   }
 
-  const match: RegExpMatchArray | null = nextNext.nodeValue.match(SUFFIX);
+  // No suffix superscript ever occurs at the very end of the suffix. It must be
+  // followed by other parts. Check the next sibling to see if it contains the
+  // suffix continuation, and if so, yield both.
+  const next: ChildNode | null = maybeSUP.nextSibling;
+
+  if (!next?.nodeValue) {
+    return;
+  }
+
+  const match: RegExpMatchArray | null = next.nodeValue.match(SUFFIX);
   if (!match) {
     return;
   }
 
+  yield maybeSUP;
   yield match[0];
-  nextNext.nodeValue = nextNext.nodeValue.slice(match[0].length);
+  next.nodeValue = next.nodeValue.slice(match[0].length);
 }
 
 /**
@@ -1318,6 +1327,43 @@ function addCopyShortcuts(root: HTMLElement): void {
     copy.classList.add(cls.COPY);
     drop.addDroppable(copy, ['copy text']);
     entry.prepend(copy);
+  });
+}
+
+/**
+ * Sometimes, Crum uses a superscript to refer to Coptic word forms throughout a
+ * paragraph. (Example: ⲛⲏⲏⲃⲉ[1] on 'p 222 a')
+ *
+ * This function searches for such superscripts and annotates them with
+ * tooltips.
+ *
+ * [1] https://remnqymi.com/crum/1174.html
+ * @param root
+ */
+function handleFormSuperscripts(root: HTMLElement): void {
+  const map: Map<string, string> = new Map<string, string>();
+  root.querySelectorAll('sup').forEach((sup: HTMLElement): void => {
+    if (sup.parentElement?.matches(EXCLUDE)) {
+      // This superscript doesn't require annotation. It may be part of a
+      // reference suffix or a dialect siglum.
+      return;
+    }
+    const form: string | undefined = map.get(sup.textContent);
+    if (form) {
+      // This superscript was encountered before. Annotate this instance.
+      drop.addDroppable(sup, [form]);
+      return;
+    }
+    // This superscript is seen for the first time. Store the form that it
+    // represents in the map.
+    const prev: ChildNode | null = sup.previousSibling;
+    if (
+      prev?.nodeType === Node.ELEMENT_NODE &&
+      (prev as Element).classList.contains(cls.COPTIC) &&
+      prev.textContent
+    ) {
+      map.set(sup.textContent, prev.textContent);
+    }
   });
 }
 /* eslint-enable max-lines */
