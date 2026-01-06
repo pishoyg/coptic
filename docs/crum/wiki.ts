@@ -815,38 +815,36 @@ function walk(root: Node): Node[] {
   const walker = document.createTreeWalker(
     root,
     NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT,
-    {
-      acceptNode(node: Node): number {
-        if (node.parentElement?.classList.contains(cls.MANUAL)) {
-          // Manual nodes are handled individually. Their children don't get
-          // processed.
-          return NodeFilter.FILTER_REJECT;
-        }
+    (node: Node): number => {
+      if (node.parentElement?.classList.contains(cls.MANUAL)) {
+        // Manual nodes are handled individually. Their children don't get
+        // processed.
+        return NodeFilter.FILTER_REJECT;
+      }
 
-        if (node.nodeType === Node.TEXT_NODE) {
-          // All text nodes are processed.
-          return NodeFilter.FILTER_ACCEPT;
-        }
+      if (node.nodeType === Node.TEXT_NODE) {
+        // All text nodes are processed.
+        return NodeFilter.FILTER_ACCEPT;
+      }
 
-        if (node.nodeType !== Node.ELEMENT_NODE) {
-          // A non-text and non-element node should be skipped.
-          return NodeFilter.FILTER_SKIP;
-        }
-
-        if ((node as Element).matches(EXCLUDE)) {
-          // If this element matches the exclude selector, FILTER_REJECT
-          // tells TreeWalker to discard this node AND its children.
-          return NodeFilter.FILTER_REJECT;
-        }
-
-        if ((node as Element).classList.contains(cls.MANUAL)) {
-          return NodeFilter.FILTER_ACCEPT;
-        }
-
-        // If it's a normal element, we don't want to yield the element
-        // itself, but we DO want to visit its children.
+      if (node.nodeType !== Node.ELEMENT_NODE) {
+        // A non-text and non-element node should be skipped.
         return NodeFilter.FILTER_SKIP;
-      },
+      }
+
+      if ((node as Element).matches(EXCLUDE)) {
+        // If this element matches the exclude selector, FILTER_REJECT
+        // tells TreeWalker to discard this node AND its children.
+        return NodeFilter.FILTER_REJECT;
+      }
+
+      if ((node as Element).classList.contains(cls.MANUAL)) {
+        return NodeFilter.FILTER_ACCEPT;
+      }
+
+      // If it's a normal element, we don't want to yield the element
+      // itself, but we DO want to visit its children.
+      return NodeFilter.FILTER_SKIP;
     }
   );
 

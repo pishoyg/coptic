@@ -120,22 +120,20 @@ function* linkifyWalk(root: Node, exclude?: string): Generator<Text> {
   const walker = document.createTreeWalker(
     root,
     NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT,
-    {
-      acceptNode(node: Node): number {
-        if (node.nodeType === Node.ELEMENT_NODE) {
-          return exclude && (node as Element).matches(exclude)
-            ? // If this element matches the exclude selector, FILTER_REJECT
-              // tells TreeWalker to discard this node AND its children.
-              NodeFilter.FILTER_REJECT
-            : // If it's a normal element, we don't want to yield the element
-              // itself, but we DO want to visit its children.
-              NodeFilter.FILTER_SKIP;
-        }
+    (node: Node): number => {
+      if (node.nodeType === Node.ELEMENT_NODE) {
+        return exclude && (node as Element).matches(exclude)
+          ? // If this element matches the exclude selector, FILTER_REJECT
+            // tells TreeWalker to discard this node AND its children.
+            NodeFilter.FILTER_REJECT
+          : // If it's a normal element, we don't want to yield the element
+            // itself, but we DO want to visit its children.
+            NodeFilter.FILTER_SKIP;
+      }
 
-        return node.nodeType === Node.TEXT_NODE
-          ? NodeFilter.FILTER_ACCEPT
-          : NodeFilter.FILTER_SKIP;
-      },
+      return node.nodeType === Node.TEXT_NODE
+        ? NodeFilter.FILTER_ACCEPT
+        : NodeFilter.FILTER_SKIP;
     }
   );
 
