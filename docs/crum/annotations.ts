@@ -225,6 +225,7 @@ export const DATA: Abbreviation[] = [
     noStyledParent: true,
   },
   { fullForm: 'exempli gratia', variants: ['e g'] },
+  { fullForm: 'exemplorum gratia', variants: ['ee g'] },
   { fullForm: 'ethical dative', variants: ['ethic dat', 'ethic dative'] },
   { fullForm: 'Ethiopic', variants: ['Ethiop'] },
   { fullForm: 'equivalent', variants: ['equiv'] },
@@ -237,7 +238,7 @@ export const DATA: Abbreviation[] = [
     noCaseVariant: true,
     suffix: true,
   },
-  { fullForm: 'fragment', variants: ['frag'], suffix: true },
+  { fullForm: 'fragment', variants: ['frag', 'fr'], suffix: true },
   { fullForm: 'future', variants: ['fut'] },
   { fullForm: 'Hebrew', variants: ['Heb', 'Hebr'], noCaseVariant: true },
   { fullForm: 'hieroglyphic', variants: ['hierogl'] },
@@ -248,6 +249,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'imperfect', variants: ['impf'] },
   { fullForm: 'improbable', variants: ['improb'] },
   { fullForm: 'in loco', variants: ['in loc'] },
+  { fullForm: 'indeclinable', variants: ['indecl'] },
   { fullForm: 'indefinite', variants: ['indef'] },
   { fullForm: 'infinitive', variants: ['infin'] },
   // NOTE: 'init' is a source of false positives. It occasionally means
@@ -317,9 +319,11 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'scilicet', variants: ['sc'] },
   { fullForm: 'subject', variants: ['subj'] },
   { fullForm: 'subordinate', variants: ['subord'] }, // Encountered once (as of the time of writing).
+  { fullForm: 'superlative', variants: ['superlat'] },
   { fullForm: 'supra', variants: ['sup', 'supra'], suffix: true },
   { fullForm: 'Syriac', variants: ['syr'] }, // Encountered once (as of the time of writing).
   { fullForm: 'tabula', variants: ['tab'], suffix: true },
+  { fullForm: 'title', variants: ['tit'], noCaseVariant: true },
   { fullForm: 'translation, translated', variants: ['transl'] },
   { fullForm: 'variants', variants: ['varr', 'vars'] },
   { fullForm: 'ultimo', variants: ['ult'] },
