@@ -412,6 +412,7 @@ async function main(): Promise<void> {
       const form: xoox.Form = new xoox.Form({
         searchBoxID: id.SEARCH_BOX,
         fullWordCheckboxID: id.FULL_WORD_CHECKBOX,
+        caseSensitiveCheckboxID: id.CASE_SENSITIVE_CHECKBOX,
         regexCheckboxID: id.REGEX_CHECKBOX,
         // TODO: (#0) The message box gets written. Since multiple Xooxle
         // instances are allowed to coexist on the same page, we should create

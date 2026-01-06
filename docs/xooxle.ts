@@ -98,6 +98,7 @@ const UNIT_DELIMITER = `<hr class="${CLS.MATCH_SEPARATOR}">`;
 export interface FormParams {
   searchBoxID: string;
   fullWordCheckboxID: string;
+  caseSensitiveCheckboxID: string;
   regexCheckboxID: string;
   messageBoxID: string;
   resultsTableID: string;
@@ -111,6 +112,7 @@ export interface FormParams {
 enum Param {
   QUERY = 'query',
   FULL = 'full',
+  CASE = 'case',
   REGEX = 'regex',
 }
 
@@ -128,6 +130,7 @@ export class Form {
   private readonly searchBox: HTMLInputElement;
 
   private readonly fullWordCheckbox: Checkbox;
+  private readonly caseSensitiveCheckbox: Checkbox;
   private readonly regexCheckbox: Checkbox;
   private readonly otherCheckBoxes: Checkbox[];
 
@@ -153,6 +156,13 @@ export class Form {
     this.fullWordCheckbox = {
       box: document.getElementById(form.fullWordCheckboxID) as HTMLInputElement,
       param: Param.FULL,
+    };
+
+    this.caseSensitiveCheckbox = {
+      box: document.getElementById(
+        form.caseSensitiveCheckboxID
+      ) as HTMLInputElement,
+      param: Param.CASE,
     };
 
     this.regexCheckbox = {
@@ -192,7 +202,12 @@ export class Form {
    * @returns
    */
   private get checkboxes(): Checkbox[] {
-    return [this.fullWordCheckbox, this.regexCheckbox, ...this.otherCheckBoxes];
+    return [
+      this.fullWordCheckbox,
+      this.caseSensitiveCheckbox,
+      this.regexCheckbox,
+      ...this.otherCheckBoxes,
+    ];
   }
 
   /**
@@ -275,10 +290,10 @@ export class Form {
   /**
    * @returns The query expression, constructed from the input fields.
    */
-  public queryExpression(): string {
+  public regex(): RegExp | undefined {
     let query: string = orth.cleanDiacritics(this.searchBox.value);
     if (!query) {
-      return '';
+      return undefined;
     }
 
     if (!this.regexCheckbox.box.checked) {
@@ -295,7 +310,10 @@ export class Form {
       query = str.bounded(query, true, true);
     }
 
-    return query;
+    return new RegExp(
+      query,
+      this.caseSensitiveCheckbox.box.checked ? 'ug' : 'iug'
+    );
   }
 
   /**
@@ -1344,19 +1362,13 @@ export class Xooxle {
     // Clear output fields in the form, since we're starting a new search.
     this.form.clearOutputFields();
 
-    // Construct the query expression.
-    const expression: string = this.form.queryExpression();
-    if (!expression) {
-      return;
-    }
-
     // TODO: (#605) Consider passing searchAuxAux to a Web Worker to improve
     // performance.
     try {
-      const regex = new RegExp(
-        expression,
-        'iug' // Case-insensitive, Unicode-aware, and global.
-      );
+      const regex: RegExp | undefined = this.form.regex();
+      if (!regex) {
+        return;
+      }
       await this.searchAuxAux(regex, abortController);
     } catch (err) {
       if (err instanceof SyntaxError) {

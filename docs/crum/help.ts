@@ -154,6 +154,11 @@ export function makeHelpPanel(
         browser.click(id.FULL_WORD_CHECKBOX);
       }),
     ],
+    s: [
+      new help.Shortcut('Toggle case-sensitive search', ['lexicon'], () => {
+        browser.click(id.CASE_SENSITIVE_CHECKBOX);
+      }),
+    ],
     x: [
       new help.Shortcut('Toggle regex search', ['lexicon'], () => {
         browser.click(id.REGEX_CHECKBOX);

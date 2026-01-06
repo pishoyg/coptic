@@ -28,6 +28,7 @@ export function collapsible(dict: string): string {
 
 export const SEARCH_BOX = 'search-box';
 export const FULL_WORD_CHECKBOX = 'full-word-checkbox';
+export const CASE_SENSITIVE_CHECKBOX = 'case-sensitive-checkbox';
 export const REGEX_CHECKBOX = 'regex-checkbox';
 export const MESSAGE_BOX = 'message';
 export const DIALECTS = 'dialects';
