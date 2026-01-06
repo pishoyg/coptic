@@ -315,18 +315,18 @@ function handleAnnotation(
 function handlePage(
   text: string,
   node: Text
-): { replacement?: (Node | string)[]; remainder?: string } {
+): { replacement: (Node | string)[]; remainder: string } | undefined {
   // A page number has the format 'p [0-9]+ [ab]?'. The regex matches this
   // format, excluding the column, which is expected to live in the <i> tag that
   // is the next sibling.
   const match: RegExpExecArray | null = PAGE_RE.exec(text);
   const next: ChildNode | null = node.nextSibling;
   if (!match || !next) {
-    return {};
+    return undefined;
   }
   const col: string | null = next.textContent;
   if (col !== 'a' && col !== 'b') {
-    return {};
+    return undefined;
   }
   // Handle followups before mutating the DOM.
   handlePageFollowups(next.nextSibling);
@@ -890,7 +890,12 @@ function replaceMatch(
   }
 
   if (key === 'p' || key === 'pp') {
-    return handlePage(key + remainder, node);
+    const res = handlePage(key + remainder, node);
+    if (res) {
+      return res;
+    }
+    // If this can't be parsed as a Crum page, fall back to treating it as an
+    // annotation, as below.
   }
 
   if (key in ann.MAPPING) {
