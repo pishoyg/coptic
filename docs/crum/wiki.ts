@@ -8,7 +8,6 @@ import * as browser from '../browser.js';
 import * as paths from '../paths.js';
 import * as css from '../css.js';
 import * as cls from './cls.js';
-import * as id from './id.js';
 import * as log from '../logger.js';
 import * as bib from './bible.js';
 import * as ann from './annotations.js';
@@ -230,8 +229,6 @@ export function handle(root: HTMLElement): void {
       handleBibleFollowups(elem);
 
       handleCorrigenda(elem);
-
-      handleFootnote(elem);
 
       addCopyShortcuts(elem);
 
@@ -1296,20 +1293,6 @@ function handleIB(ib: HTMLElement): void {
   }
 
   log.fatal('This is impossible!');
-}
-
-const DATA_NUM = 'num';
-
-/**
- *
- * @param root
- */
-function handleFootnote(root: HTMLElement): void {
-  root
-    .querySelectorAll<HTMLElement>(`.${cls.MARK}`)
-    .forEach((mark: HTMLElement): void => {
-      html.linkify(mark, `#${id.footnote(mark.dataset[DATA_NUM]!)}`, false);
-    });
 }
 
 const textContentOverrides: Record<string, string> = {

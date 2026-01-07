@@ -299,7 +299,8 @@ figcaption {
 :target.sister,
 :target.drv .marcion,
 :target.drv .meaning,
-:target.footnote {
+:target.footnote,
+:target.mark {
   background-color: var(--anchor-yellow);
 }
 

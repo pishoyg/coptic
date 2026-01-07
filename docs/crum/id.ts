@@ -57,12 +57,3 @@ export const ROOT_TYPE = 'root-part-of-speech';
 export const SENSES = 'senses';
 export const SISTERS = 'sisters';
 export const WIKI = 'wiki';
-
-/**
- *
- * @param num
- * @returns
- */
-export function footnote(num: string): string {
-  return `footnote${num}`;
-}

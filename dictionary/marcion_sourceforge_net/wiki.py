@@ -382,7 +382,9 @@ class Wiki:
     def replace_footnote(self, match: re.Match[str]) -> str:
         self.footnotes.append(match.group(1))
         num: int = len(self.footnotes)
-        return f'<span class="mark" data-num="{num}">[{num}]</span>'
+        return (
+            f'<a class="mark" id="mark{num}" href="#footnote{num}">[{num}]</a>'
+        )
 
     def _html_aux(self) -> abc.Generator[str]:
         yield '<div class="entry">'
@@ -395,7 +397,7 @@ class Wiki:
 
         for num, footnote in enumerate(self.footnotes, 1):
             yield f'<span class="footnote" id="footnote{num}">'
-            yield f"[{num}] "
+            yield f'<a href="#mark{num}">[{num}]</a> '
             yield footnote
             yield "</span>"
 
