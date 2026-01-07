@@ -284,7 +284,7 @@ function handleAnnotation(
   node: Text,
   remainder: string,
   preceding: string
-): { replacement?: Node[] } {
+): { replacement: Node[] } | undefined {
   const annot: ann.Annotation | undefined = ann.MAPPING[key];
   if (!annot) {
     log.fatal("Can't find annotation:", key);
@@ -293,7 +293,7 @@ function handleAnnotation(
   if (annot.noStyledParent && node.parentElement?.closest('i, sup')) {
     // This annotation can't show in italicized text, and this node is
     // italicized.
-    return {};
+    return undefined;
   }
 
   if (
@@ -301,7 +301,7 @@ function handleAnnotation(
     (remainder.startsWith(' thou') || preceding.endsWith('thou '))
   ) {
     // False positive!
-    return {};
+    return undefined;
   }
 
   // The question mark is a very common annotation, and punctuation mark. We use
@@ -311,7 +311,7 @@ function handleAnnotation(
   // The interpretation of the mark is quite clear, so it doesn't really need an
   // annotation.
   if (key === '?' && !['(', ' '].includes(preceding.slice(-1))) {
-    return {};
+    return undefined;
   }
 
   return { replacement: [annotation(annot.fullForm, key)] };
@@ -662,14 +662,14 @@ function replaceBible(
   key: string,
   node: Text,
   remainder: string
-): { replacement?: (Node | string)[]; remainder?: string } {
+): { replacement: (Node | string)[]; remainder: string } | undefined {
   const [cit, rem]: [Citation | null, string | null] = parseBibleCitation(
     key,
     node,
     remainder
   );
   if (!cit?.valid()) {
-    return {};
+    return undefined;
   }
 
   return { replacement: [cit.anchor()], remainder: rem ?? remainder };
@@ -799,11 +799,11 @@ function replaceReference(
   key: string,
   node: Text,
   remainder: string
-): { replacement?: Node[]; remainder?: string } {
+): { replacement: Node[]; remainder?: string } | undefined {
   const suffix: string | undefined = SUFFIX.exec(remainder)?.[0];
   if (key === 'My' && !suffix) {
     // False positive.
-    return {};
+    return undefined;
   }
 
   const span: HTMLSpanElement = ref.MAPPING[key]!.span(key);
@@ -899,26 +899,26 @@ function replaceMatch(
   // For this reason, we prioritize Bible matches over Reference matches.
   const key: string = match[0];
   if (key in bib.MAPPING || key in DAN_OVERRIDE) {
-    return replaceBible(key, node, remainder);
+    return replaceBible(key, node, remainder) ?? {};
   }
 
   if (key in ref.MAPPING) {
-    return replaceReference(key, node, remainder);
+    return replaceReference(key, node, remainder) ?? {};
   }
 
   if (key === 'p' || key === 'pp') {
     const res = handlePage(key + remainder, node);
+    // If this is indeed a Crum page, return. Otherwise, fall back to treating
+    // it as an annotation below.
     if (res) {
       return res;
     }
-    // If this can't be parsed as a Crum page, fall back to treating it as an
-    // annotation, as below.
   }
 
   if (key in ann.MAPPING) {
     // 'p' and 'pp' are also annotations, so it's important for annotation
     // handling to have less priority than page handling.
-    return handleAnnotation(key, node, remainder, preceding);
+    return handleAnnotation(key, node, remainder, preceding) ?? {};
   }
 
   // NOTE: Our current regex doesn't match semicolons that immediately
