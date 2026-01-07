@@ -146,6 +146,9 @@ const PAGE_FOLLOWUP_RE = /^, ([0-9]+) $/;
 //     likely a suffix.
 const NUMBERS = [
   "'?[0-9]+[a-zA-Z]?\\*?(?:–[0-9]+)?",
+  // 'no' means 'number', but it must be followed by an integer, otherwise it's
+  // a false positive.
+  'no [0-9]+',
   '§',
   'stele',
   '[a-zA-Z]\\.?',
