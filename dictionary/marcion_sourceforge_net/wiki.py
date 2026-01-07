@@ -200,7 +200,7 @@ _SUBSTITUTIONS: list[Substitution] = [
         ban=["[[", "]]", "^"],
     ),
     Substitution(
-        r"\^(\w+)",
+        r"\^([-–—\w]+)",
         r"<sup>\1</sup>",
         # This is not entirely plain text, but we have no other way to represent
         # superscripted text.
