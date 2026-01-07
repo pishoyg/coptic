@@ -149,6 +149,11 @@ const NUMBERS = [
   // 'no' means 'number', but it must be followed by an integer, otherwise it's
   // a false positive.
   'no [0-9]+',
+  // 'pl' means 'plate', though outside suffixes it means 'plural'.
+  'pl [0-9]+',
+  // TODO: (#0) Consider explaining 'no' and 'pl' in the tooltip. Right now,
+  // only suffixes retrieved from the list of annotations are explained in the
+  // tooltip.
   '§',
   'stele',
   '[a-zA-Z]\\.?',
