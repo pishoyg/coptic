@@ -57,6 +57,17 @@ export interface Annotation {
 // fact that they have different meaning based on whether they occur in the
 // headings or elsewhere in the text, which is hard to discern by the parser. It
 // would otherwise be confusing to show users the full definition.
+//
+// TODO: (#0) Consider populating common double annotations, such as:
+// - poss pron: possessive pronoun
+// - vbal pref: verbal prefix
+// - nn m: masculine noun
+// - etc.
+// Currently, they show separately, but the user experience would be slightly
+// better if we were to combine them. I am, however, hesitant to do it, because
+// I am apprehensive about gradually building the list. I want to have an
+// all-or-none approach, where either all double annotations are supported or
+// none is.
 export const DATA: Abbreviation[] = [
   // SECTION 1: ABBREVIATIONS LISTED IN CRUM'S LIST OF ABBREVIATIONS.
   { fullForm: 'accusative', variants: ['acc', 'accus'] },
@@ -79,6 +90,8 @@ export const DATA: Abbreviation[] = [
     variants: ['diff'],
   },
   {
+    // NOTE: 'do' is a source of (surprisingly rare) false positives, as it can
+    // also represent the verb.
     fullForm: 'ditto, same as last word cited in this dialect',
     variants: ['do'],
     noCaseVariant: true,
@@ -92,6 +105,8 @@ export const DATA: Abbreviation[] = [
   },
   { fullForm: 'genitive', variants: ['gen'] },
   { fullForm: 'Greek', variants: ['Gk'], noCaseVariant: true },
+  // NOTE: 'inf' is a source of false positives, as it sometimes means
+  // 'infinitive'.
   { fullForm: 'infra', variants: ['inf', 'infra'], suffix: true },
   { fullForm: 'interjection', variants: ['interj'] },
   { fullForm: 'interrogative', variants: ['interrog'] },
@@ -153,7 +168,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'qualitative', variants: ['†'] },
   // NOTE: The question mark is a very common annotation, but it also occurs as
   // a punctuation mark.
-  { fullForm: 'perhaps, possibly', variants: ['?', '(?)'] },
+  { fullForm: 'perhaps, possibly', variants: ['?', '??', '(?)'] },
 
   // SECTION 2: ABBREVIATIONS WE CHOOSE TO INCLUDE TO AID INTELLIGIBILITY.
   // N.B. For a few Latin abbreviations (e.g. penes, contra, etc.) the full form
@@ -201,7 +216,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'bis', variants: ['bis'] },
   { fullForm: 'circa', variants: ['ca'] },
   { fullForm: 'condition, conditional', variants: ['condit'] },
-  { fullForm: 'conjunctive', variants: ['conj'] },
+  { fullForm: 'conjunctive', variants: ['conj', 'conjunct'] },
   { fullForm: 'constructive', variants: ['constr', 'construct'] },
   { fullForm: 'confer', variants: ['cf'] },
   { fullForm: 'contra', variants: ['contra'] },
@@ -211,7 +226,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'definite', variants: ['def'] },
   { fullForm: 'demonstrative', variants: ['demonstr', 'demonst'] },
   { fullForm: 'determination', variants: ['determ', 'determin'] },
-  { fullForm: 'duplicate', variants: ['duplic'] },
+  { fullForm: 'duplicate', variants: ['duplic', 'dupl'] },
   {
     fullForm: 'East',
     variants: ['E'],
@@ -232,7 +247,7 @@ export const DATA: Abbreviation[] = [
     noCaseVariant: true,
     suffix: true,
   },
-  { fullForm: 'fragment', variants: ['frag', 'fr'], suffix: true },
+  { fullForm: 'fragment', variants: ['frag', 'fragm', 'fr'], suffix: true },
   { fullForm: 'future', variants: ['fut'] },
   { fullForm: 'Hebrew', variants: ['Heb', 'Hebr'], noCaseVariant: true },
   { fullForm: 'hieroglyphic', variants: ['hierogl'] },
@@ -240,7 +255,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'idem quod', variants: ['i q'] },
   { fullForm: 'imperative', variants: ['imper', 'imperat'] },
   { fullForm: 'impersonal', variants: ['impers'] },
-  { fullForm: 'imperfect', variants: ['impf'] },
+  { fullForm: 'imperfect', variants: ['impf', 'imperf'] },
   { fullForm: 'improbable', variants: ['improb'] },
   { fullForm: 'in loco', variants: ['in loc'] },
   { fullForm: 'indeclinable', variants: ['indecl'] },
@@ -274,12 +289,14 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'Old Testament', variants: ['OTest'], noCaseVariant: true },
   { fullForm: 'olim penes', variants: ['olim penes'] },
   { fullForm: 'optative', variants: ['optat'] },
+  { fullForm: 'papyrus', variants: ['pap'], suffix: true },
   { fullForm: 'page', variants: ['p'], noCaseVariant: true, suffix: true },
   { fullForm: 'participle', variants: ['particip', 'partic'] }, // Encountered once (as of the time of writing).
+  { fullForm: 'penultimate', variants: ['penult'] },
   { fullForm: 'penes', variants: ['penes'] },
   { fullForm: 'perfect', variants: ['perf', 'pf'] },
   { fullForm: 'Persian', variants: ['Pers'], noCaseVariant: true },
-  { fullForm: 'pluperfect', variants: ['pluperf'] },
+  { fullForm: 'pluperfect', variants: ['pluperf', 'plupf'] },
   { fullForm: 'postpositive', variants: ['post-posit'] }, // Encountered once (as of the time of writing).
   { fullForm: 'possessive', variants: ['possess'] },
   { fullForm: 'pages', variants: ['pp'], suffix: true },
@@ -299,6 +316,7 @@ export const DATA: Abbreviation[] = [
     suffix: true,
   },
   { fullForm: 'reference', variants: ['ref'] },
+  { fullForm: 'references', variants: ['reff'] },
   {
     fullForm: 'South',
     variants: ['S'],
