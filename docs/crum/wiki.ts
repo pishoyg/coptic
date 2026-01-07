@@ -714,6 +714,13 @@ function falsePositive(
     ) {
       return false;
     }
+    if (
+      remainder === ' ' &&
+      node.nextSibling?.nodeType === Node.ELEMENT_NODE &&
+      (node.nextSibling as Element).classList.contains(cls.DIALECT)
+    ) {
+      return false;
+    }
 
     return true;
   }
