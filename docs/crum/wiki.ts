@@ -108,6 +108,7 @@ const ENRICHMENT_RE = new RegExp(
     ';',
     // Ibidem:
     'ib',
+    'Ib',
   ]),
   'gu'
 );
@@ -960,9 +961,9 @@ function replaceMatch(
     return { replacement: [semicolon()] };
   }
 
-  if (key === 'ib') {
+  if (key.toLowerCase() === 'ib') {
     const ib: HTMLElement | null = node.parentElement;
-    if (ib?.textContent !== 'ib') {
+    if (ib?.textContent.toLowerCase() !== 'ib') {
       log.error('ib encountered in an unexpected node:', node);
       return {};
     }

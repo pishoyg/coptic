@@ -103,7 +103,7 @@ export class Reference {
     span.dataset[Reference.DATA_REF] = this.raw();
     span.append(...raw);
     const tooltip: (Node | string)[] = [
-      ...(/^ib\b/.test(span.textContent) ? [ibidem()] : []),
+      ...(/^ib\b/i.test(span.textContent) ? [ibidem()] : []),
       ...(this.tooltip()?.childNodes ?? []),
     ];
     // TODO: (#522) This check will soon be unnecessary, because all references
