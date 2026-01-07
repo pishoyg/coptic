@@ -152,14 +152,8 @@ export const DATA: Abbreviation[] = [
   //   negative lookbehind to prevent such matches.
   { fullForm: 'qualitative', variants: ['†'] },
   // NOTE: The question mark is a very common annotation, but it also occurs as
-  // a punctuation mark that doesn't need an annotation. Our heuristic to
-  // distinguish the two is:
-  // - If it immediately follows a word character, it's a punctuation mark.
-  //   (This doesn't require any extra steps to implement, as the annotation
-  //   regex would prevent such matches anyway.)
-  // - If there is a preceding space or non-word character, it's the annotation.
-  // This is good enough, although it produces (few) false negatives.
-  { fullForm: 'perhaps, possibly', variants: ['?'] },
+  // a punctuation mark.
+  { fullForm: 'perhaps, possibly', variants: ['?', '(?)'] },
 
   // SECTION 2: ABBREVIATIONS WE CHOOSE TO INCLUDE TO AID INTELLIGIBILITY.
   // N.B. For a few Latin abbreviations (e.g. penes, contra, etc.) the full form

@@ -304,6 +304,16 @@ function handleAnnotation(
     return {};
   }
 
+  // The question mark is a very common annotation, and punctuation mark. We use
+  // a simple heuristic to distinguish the two. Even if heuristic yields false
+  // negative annotations, false negatives are deemed more
+  // tolerable than false positives, so this is OK.
+  // The interpretation of the mark is quite clear, so it doesn't really need an
+  // annotation.
+  if (key === '?' && !['(', ' '].includes(preceding.slice(-1))) {
+    return {};
+  }
+
   return { replacement: [annotation(annot.fullForm, key)] };
 }
 
