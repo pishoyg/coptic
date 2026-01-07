@@ -575,10 +575,10 @@ function parseBibleCitation(
 ): [Citation | null, string | null] {
   // Parse the numbers following the book abbreviation.
   CHAPTER_VERSE.lastIndex = 0;
-  const m: RegExpExecArray | null = CHAPTER_VERSE.exec(remainder);
-  let [chapter, verse] = [m?.[1] ?? m?.[3], m?.[2] ?? m?.[4]];
-  remainder = remainder.slice(m?.[0].length ?? 0);
-  const raw: string = key + (m?.[0] ?? '');
+  const match: RegExpExecArray | null = CHAPTER_VERSE.exec(remainder);
+  let [chapter, verse] = [match?.[1] ?? match?.[3], match?.[2] ?? match?.[4]];
+  remainder = remainder.slice(match?.[0].length ?? 0);
+  const raw: string = key + (match?.[0] ?? '');
 
   if (key in DAN_OVERRIDE) {
     // Given that this special book contains one chapter, the book
@@ -590,7 +590,8 @@ function parseBibleCitation(
     key = 'Dan';
   }
 
-  if (!m && falsePositive(key, remainder, node)) {
+  if (!positive(key, match, remainder, node)) {
+    // False positive!
     return [null, null];
   }
 
@@ -673,8 +674,8 @@ function replaceBible(
 }
 
 /**
- * Determine whether a given chapterless and verseless Bible book abbreviation
- * is a false positive.
+ * Determine whether a given Bible book abbreviation is a true or false
+ * positive.
  *
  * "Is" and "He" are both English words that often occur in the text.
  *
@@ -688,43 +689,59 @@ function replaceBible(
  * NOTE: This heuristic is based on known examples (#524), but other cases
  * might turn up in the text that violate these rules.
  *
- * @param bookAbbreviation
+ * @param key
+ * @param match - The chapter-verse match object.
  * @param remainder
  * @param node
  * @returns
  */
-function falsePositive(
-  bookAbbreviation: string,
+function positive(
+  key: string,
+  match: RegExpExecArray | null,
   remainder: string,
   node: Text
 ): boolean {
-  if (bookAbbreviation === 'Gen' || bookAbbreviation === 'He') {
+  if (match) {
+    // This citation is followed by a chapter or verse number. It's a true
+    // positive.
+    return true;
+  }
+  if (key === 'Gen' || key === 'He') {
+    // Definitely a false positive!
+    return false;
+  }
+
+  if (key !== 'Is') {
+    // Anything else is a true positive.
     return true;
   }
 
-  if (bookAbbreviation === 'Is') {
-    // Isaiah was found to have chapterless verseless citations that are true
-    // positives, in two cases:
-    if (remainder.startsWith(')')) {
-      return false;
-    }
-    if (
-      remainder === ' ' &&
-      node.nextSibling?.textContent === 'l c' /* loco citato */
-    ) {
-      return false;
-    }
-    if (
-      remainder === ' ' &&
-      node.nextSibling?.nodeType === Node.ELEMENT_NODE &&
-      (node.nextSibling as Element).classList.contains(cls.DIALECT)
-    ) {
-      return false;
-    }
-
+  // Isaiah was found to have chapterless verseless citations that are true
+  // positives in the following cases only:
+  if (remainder.startsWith(')')) {
     return true;
   }
 
+  if (remainder.startsWith(' Kropp')) {
+    return true;
+  }
+
+  if (
+    remainder === ' ' &&
+    node.nextSibling?.textContent === 'l c' // loco citato
+  ) {
+    return true;
+  }
+
+  if (
+    remainder === ' ' &&
+    node.nextSibling?.nodeType === Node.ELEMENT_NODE &&
+    (node.nextSibling as Element).classList.contains(cls.DIALECT)
+  ) {
+    return true;
+  }
+
+  // Any other 'Is' is not Isaiah!
   return false;
 }
 
