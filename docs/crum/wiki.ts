@@ -146,7 +146,7 @@ const PAGE_FOLLOWUP_RE = /^, ([0-9]+) $/;
 //     assume that, if it occurs after a reference abbreviation, then it's
 //     likely a suffix.
 const NUMBERS = [
-  "'?[0-9]+[a-zA-Z]?\\*?(?:–[0-9]+)?",
+  "'?[0-9]+[a-zA-Z]?\\*?(?:–'?[0-9]+)?",
   // 'no' means 'number', but it must be followed by an integer, otherwise it's
   // a false positive.
   'no [0-9]+',
@@ -158,11 +158,9 @@ const NUMBERS = [
   '§',
   'stele',
   '[a-zA-Z]\\.?',
-  // Roman numerals:
-  // Large Roman numerals (with L, C, D, and M) haven't been encountered. We
-  // avoid them to minimize the risk of false positives.
-  '[ivx]+',
-  '[IVX]+',
+  // Roman numerals (in the range 1–3999):
+  '(?=[MDCLXVI])M{0,3}(?:CM|CD|D?C{0,3})(?:XC|XL|L?X{0,3})(?:IX|IV|V?I{0,3})',
+  '(?=[mdclxvi])m{0,3}(?:cm|cd|d?c{0,3})(?:xc|xl|l?x{0,3})(?:ix|iv|v?i{0,3})',
   ...ann.DATA.filter((abb: ann.Abbreviation) => abb.suffix).flatMap(
     (abb: ann.Abbreviation): string[] =>
       Array.from(ann.variants(abb)).map((variant) => str.escape(variant))
