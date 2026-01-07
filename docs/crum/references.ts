@@ -374,6 +374,7 @@ const DATA_1: Resource[] = [
     },
     variants: ['Alex'],
   },
+  // TODO: (#0) Consider merging Almk 1 and Almk 2 using postfixes.
   {
     source: {
       title:
@@ -570,10 +571,11 @@ const DATA_1: Resource[] = [
       description: [
         'Crum, W. E. (1905). <em><a href="https://archive.org/details/catalogueofcopti00brituoft/page/ii/mode/2up">Catalogue of the Coptic Manuscripts in the British Museum</a></em>. London: British Museum.',
         'Bentley Layton (1987). <em><a href="https://archive.org/details/catalogueofcopti0000brit/">Catalogue of Coptic Literary Manuscripts in the British Library Acquired Since the Year 1906</a></em>. London: The British Library.',
+        'Note: The manuscripts have since been moved to the <a href="https://bl.libguides.com/reference-services/asian-and-african-studies/introduction/oriental-manuscripts">British Library</a>.',
       ],
     },
     variants: ['BM'],
-    postfixes: { Or: 'Oriental', or: 'oriental' },
+    postfixes: { Or: 'Oriental', or: 'oriental', Add: 'Addenda' },
   },
   {
     source: {
@@ -604,8 +606,13 @@ const DATA_1: Resource[] = [
     source: {
       title: 'Coptic MSS. in Bodleian, as (P) a i e, where italic = folio',
     },
-    variants: ['Bodl'],
-    postfixes: { Copt: 'Coptic', copt: 'Coptic', '(P)': undefined },
+    variants: ['Bodl', 'Bod'],
+    postfixes: {
+      Copt: 'Coptic',
+      copt: 'Coptic',
+      '(P)': undefined,
+      Marsh: 'Marshall Collection',
+    },
   },
   {
     source: {
@@ -627,7 +634,11 @@ const DATA_1: Resource[] = [
         'Schmidt, C. (1892). <em><a href="https://www.google.co.uk/books/edition/Gnostische_Schriften_in_koptischer_Sprac/esVQJzTZIpgC?hl=en&amp;gbpv=1">Gnostische Schriften in koptischer Sprache aus dem Codex Brucianus</a></em>. (Texte und Untersuchungen zur Geschichte der altchristlichen Literatur, Vol. 8). Leipzig: J. C. Hinrichs’sche Buchhandlung.',
       ],
     },
-    variants: ['Br'],
+    // NOTE: The 'B' variant is not in Crum's list of abbreviations, and it was
+    // encountered only once under ⲉⲛⲉϩ[1] on 'p 57 a'.
+    //
+    // [1] https://remnqymi.com/crum/25.html
+    variants: ['Br', 'B'],
   },
   {
     source: {
@@ -834,6 +845,7 @@ const DATA_1: Resource[] = [
         'Egypt Exploration Soc. (olim Fund), MSS. &c. in their possession (Crum’s copies)',
     },
     variants: ['EES'],
+    postfixes: { Report: undefined },
   },
   {
     source: {
@@ -861,6 +873,7 @@ const DATA_1: Resource[] = [
       ],
     },
     variants: ['Ep'],
+    postfixes: { App: 'Appendix' },
   },
   {
     source: {
@@ -876,7 +889,7 @@ const DATA_1: Resource[] = [
       // NOTE: This was two separate entries (with an identical abbreviations)
       // in Crum's list.
       title:
-        'New Texts from the Monastery of St. Macarius, ed. H. G. Evelyn White, 1926; his copies of MSS from Nitria (in Coptic Museum, Cairo)',
+        'New Texts from the Monastery of St. Macarius, ed. H. G. Evelyn White, 1926; or his copies of MSS from Nitria (in Coptic Museum, Cairo)',
       description: [
         'Evelyn White, H. G. (1926). <em><a href="https://archive.org/details/monasteriesofwdi01evel/page/n9/mode/2up">The Monasteries of the Wadi ‘n Natrûn, Part I: New Texts from the Monastery of Saint Macarius. Edited with an introduction on the Library at the Monastery of Saint Macarius by Hugh G. Evelyn White with an appendix on a Copto-Arabic Ms. by G. P. G. Sobhy</a></em>. (Publications of the Metropolitan Museum of Art Egyptian Expedition, Vol. 2). New York: The Metropolitan Museum of Art.',
       ],
@@ -952,7 +965,7 @@ const DATA_1: Resource[] = [
         '<em>Nachrichten von der Königlichen Gesellschaft der Wissenschaften zu Göttingen, Philologisch-Historische Klasse</em> began in 1894. Links to volumes from 1892-1923 available digitised on <a href="https://onlinebooks.library.upenn.edu/webbin/serial?id=nachkongesgotph">The Online Books Page</a> and some later volumes via <a href="https://catalog.hathitrust.org/Record/000517694">HathiTrust</a> in the US. ',
       ],
     },
-    variants: ['GöttN'],
+    variants: ['GöttN', 'Gött Nachr'],
   },
   {
     source: {
@@ -1104,16 +1117,9 @@ const DATA_1: Resource[] = [
       ],
     },
     variants: ['J'],
-  },
-  {
-    source: {
-      title:
-        'Crum & Steindorff, Kopt. Rechtsurkunden… aus Djême, acc. to no. & line; two such papyri in Leipzig University, Aegyptologisches Institut (cf below)',
-      description: [
-        'Crum, W. E., &amp; Steindorff, G. (1912). <em><a href="https://archive.org/details/koptischerechtsu00crum/page/n3/mode/2up">Koptische Rechtsurkunden des achten Jahrhunderts aus Djême (Theben). I. Band: Text und Incides</a></em>. Leipzig: J. C. Hinrichs’sche Buchhandlung.',
-      ],
+    postfixes: {
+      Leip: 'two such papyri in Leipzig University, Aegyptologisches Institut (cf below)',
     },
-    variants: ['JLeip'],
   },
   {
     source: {
@@ -1241,10 +1247,12 @@ const DATA_1: Resource[] = [
       C: undefined,
       E: undefined,
       F: undefined,
+      G: undefined,
       H: undefined,
       J: undefined,
       K: undefined,
       M: undefined,
+      R: undefined,
     },
   },
   {
@@ -1805,16 +1813,9 @@ const DATA_1: Resource[] = [
       ],
     },
     variants: ['Pcod', 'PCod'],
-  },
-  {
-    source: {
-      title:
-        'Fayyûmic text of <i>Papyruscodex saec. vi-vii… Cheltenham, ed. Crum, 1915, acc to pp. of printed book</i>; ed. W. Erichsen (Danish Acad., 1932)',
-      description: [
-        'Erichsen, W. (1932). <em><a href="https://archive.org/details/faijumischefragm0000agat/page/n1/mode/2up">Faijumische Fragmente der Reden des Agathonicus Bischofs von Tarsus</a></em>. (Det Kgl. Danske Videnskabernes Selskab, Historisk-filologiske Meddelelser, XIX, 1). København: Andr. Fred. Høst &amp; søn.',
-      ],
+    postfixes: {
+      F: 'Fayyûmic text of same, ed. W. Erichsen (Danish Acad., 1932)<ul><li>Erichsen, W. (1932). <em><a href="https://archive.org/details/faijumischefragm0000agat/page/n1/mode/2up">Faijumische Fragmente der Reden des Agathonicus Bischofs von Tarsus</a></em>. (Det Kgl. Danske Videnskabernes Selskab, Historisk-filologiske Meddelelser, XIX, 1). København: Andr. Fred. Høst &amp; søn.</li></ul>',
     },
-    variants: ['Pcod F'],
   },
   {
     source: {
@@ -1879,6 +1880,12 @@ const DATA_1: Resource[] = [
   },
   {
     source: {
+      title: 'Patrologia Latina',
+    },
+    variants: ['PL'],
+  },
+  {
+    source: {
       title: 'Papyri belonging to N. P. Lichatschev (P. Jernstedt’s copies)',
     },
     variants: ['PLich'],
@@ -1895,6 +1902,7 @@ const DATA_1: Resource[] = [
       ],
     },
     variants: ['PLond'],
+    postfixes: { V: undefined },
   },
   {
     source: {
@@ -2067,7 +2075,7 @@ const DATA_1: Resource[] = [
         'Rossi, F. (1893). <em><a href="https://www.google.co.uk/books/edition/Un_nuovo_codice_copto_del_Museo_Egizio_d/64GEtkCSqXkC?hl=en&amp;gbpv=1&amp;pg=PA1&amp;printsec=frontcover">Un nuovo codice copto del Museo Egizio di Torino contenente la vita di S. Epifanio ed i martiri di S. Pantaleone, di Ascla, di Apollonio, di Filemone, di Ariano e di Dios con versetti di vari capitoli del “Libro di Giobbe”</a> (Reale Accademia dei Lincei)</em>. Roma: Accademia dei Lincei.',
       ],
     },
-    variants: ['RNC'],
+    variants: ['RNC', 'NC'],
   },
   {
     source: {
@@ -2094,21 +2102,13 @@ const DATA_1: Resource[] = [
         'Catal. of Coptic MSS. in John Rylands Library, 1909, acc. to numbers',
       description: [
         'Crum, W. E. (1909). <em><a href="https://archive.org/details/cu31924099175329/page/n11/mode/2up">Catalogue of the Coptic Manuscripts in the Collection of the John Rylands Library, Manchester</a></em>. Manchester: University Press.',
-        'Crum, W. E. (1918–1920). <a href="https://luna.manchester.ac.uk/luna/servlet/detail/Manchester~25~25~702~196480:New-Coptic-manuscripts-in-the-John-?sort=image_number%2Cimage_sequence_number&amp;qvq=q:escholar005294.pdf;sort:image_number%2Cimage_sequence_number;lc:Manchester~25~25&amp;mi=0&amp;trs=1">New Coptic Manuscripts in the John Rylands Library</a>. <em>Bulletin of the John Rylands Library</em>, 5, pp. 497–503. ',
       ],
     },
     variants: ['Ryl'],
-  },
-  {
-    source: {
-      title:
-        'Catal. of Coptic MSS. in John Rylands Library, 1909, acc. to numbers; MSS. acquired since publication of catalogue (cf Ryl Bull. 5)',
-      description: [
-        'Crum, W. E. (1909). <em><a href="https://archive.org/details/cu31924099175329/page/n11/mode/2up">Catalogue of the Coptic Manuscripts in the Collection of the John Rylands Library, Manchester</a></em>. Manchester: University Press.',
-        'Crum, W. E. (1918–1920). <a href="https://luna.manchester.ac.uk/luna/servlet/detail/Manchester~25~25~702~196480:New-Coptic-manuscripts-in-the-John-?sort=image_number%2Cimage_sequence_number&amp;qvq=q:escholar005294.pdf;sort:image_number%2Cimage_sequence_number;lc:Manchester~25~25&amp;mi=0&amp;trs=1">New Coptic Manuscripts in the John Rylands Library</a>. <em>Bulletin of the John Rylands Library</em>, 5, pp. 497–503. ',
-      ],
+    postfixes: {
+      Suppl:
+        'MSS. acquired since publication of catalogue (cf Ryl Bull. 5)<ul><li>Crum, W. E. (1918–1920). <a href="https://luna.manchester.ac.uk/luna/servlet/detail/Manchester~25~25~702~196480:New-Coptic-manuscripts-in-the-John-?sort=image_number%2Cimage_sequence_number&amp;qvq=q:escholar005294.pdf;sort:image_number%2Cimage_sequence_number;lc:Manchester~25~25&amp;mi=0&amp;trs=1">New Coptic Manuscripts in the John Rylands Library</a>. <em>Bulletin of the John Rylands Library</em>, 5, pp. 497–503.</li></ul>',
     },
-    variants: ['RylSuppl'],
   },
   {
     source: {
@@ -2222,7 +2222,7 @@ const DATA_1: Resource[] = [
         'Crum, W. E. (1921). <em><a href="https://archive.org/details/shorttextsfromco00crum/page/n5/mode/2up">Short Texts from Coptic Ostraca and Papyri</a></em>. Oxford University Press.',
       ],
     },
-    variants: ['ST', 'St'],
+    variants: ['ST'],
   },
   {
     source: {
@@ -2396,6 +2396,7 @@ const DATA_1: Resource[] = [
     },
     variants: ['Tuki'],
   },
+  // TODO: (#0) Consider merging the 'Tur*' entries below using postfixes.
   {
     source: {
       title:
@@ -2404,7 +2405,7 @@ const DATA_1: Resource[] = [
         'Turayev, B. A. (1902). <a href="https://babel.hathitrust.org/cgi/pt?id=chi.102555010&amp;seq=389">Коптскіе тексты, пріобрѣтенные экспедиціей пок. В. Г. Бока въ Египтѣ</a> [Coptic texts, acquired by the expedition of the late V. G. Bok in Egypt]. In <em>Труды одиннадцатаго Археологическаго Съѣзда въ Кіевѣ</em> (1899), т. II, pp. 225–246. Москва. ',
       ],
     },
-    variants: ['TurM', 'TurMat'],
+    variants: ['Tur M', 'Tur Mat'],
   },
   {
     source: {
@@ -2414,7 +2415,7 @@ const DATA_1: Resource[] = [
         'Turayev, B. A. (1899). <a href="https://www.biodiversitylibrary.org/item/94351#page/503/mode/1up">Коптскія ostraca коллекціи В. С. Голенищева</a> [Coptic ostraca from the collection of V. S. Golenishchev]. <em>Bulletin de l’ Académie Impériale des Sciences de St.-Pétersbourg</em>, 5e série, T. X, no. 5, pp. 435–449. ',
       ],
     },
-    variants: ['TurO'],
+    variants: ['Tur O'],
   },
   {
     source: {
