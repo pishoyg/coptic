@@ -2143,10 +2143,12 @@ const DATA_1: Resource[] = [
     source: {
       title:
         'works of Shenoute (& of his disciple Besa). Prefixed to all quotations from their writings (doubtfully to Mor 54)',
-      // NOTE: Besa occurs as a standalone abbreviation in Crum, but we treat it
-      // as a variant to simplify the pipeline.
+      // NOTE: Besa occurs as a standalone abbreviation in Crum, and it's used
+      // to belong in the list of variants of 'Sh'. But it's never
+      // cited as such. We do not include it because it's merely a source
+      // of false positives.
     },
-    variants: ['Sh', 'Besa', 'Sh (Besa)'],
+    variants: ['Sh', 'Sh (Besa)'],
     postfixes: {
       A: LOOKUP,
       Am: LOOKUP,
