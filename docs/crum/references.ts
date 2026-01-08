@@ -2130,7 +2130,7 @@ const DATA_1: Resource[] = [
       // cited as such. We do not include it because it's merely a source
       // of false positives.
     },
-    variants: ['Sh', 'Sh (Besa)'],
+    variants: ['Sh', 'Sh(Besa)'],
     postfixes: {
       A: LOOKUP,
       Am: LOOKUP,
