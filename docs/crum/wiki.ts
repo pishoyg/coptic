@@ -155,7 +155,7 @@ const NUMBERS = [
   // TODO: (#0) Consider explaining 'no' and 'pl' in the tooltip. Right now,
   // only suffixes retrieved from the list of annotations are explained in the
   // tooltip.
-  '§',
+  '§\\d*',
   'stele',
   '[a-zA-Z]\\.?',
   // Roman numerals (in the range 1–3999):
