@@ -255,18 +255,6 @@ interface Resource {
    * 'BM Or'.
    */
   readonly postfixes?: Record<string, PostfixType>;
-  /**
-   * noSpaceVariants, if set to true, prevents generating space variants for
-   * this resource.
-   *
-   * As of the time of writing, our script imposes a requirement on all
-   * variants: They must match the reference logic. This is important, because
-   * it guards against undetectable abbreviations.
-   * You can use this field to prevent generating space variants if they never
-   * occur in the text, especially if they can't be matched by the regex and
-   * thus would break validation.
-   */
-  readonly noSpaceVariants?: boolean;
 }
 
 /**
@@ -384,7 +372,6 @@ const DATA_1: Resource[] = [
       ],
     },
     variants: ['Almk 1'],
-    noSpaceVariants: true,
   },
   {
     source: {
@@ -395,7 +382,6 @@ const DATA_1: Resource[] = [
       ],
     },
     variants: ['Almk 2'],
-    noSpaceVariants: true,
   },
   {
     source: {
@@ -508,7 +494,6 @@ const DATA_1: Resource[] = [
       'Berl. Wörterb',
       'Berlin Wörterb',
     ],
-    noSpaceVariants: true,
   },
   {
     source: {
@@ -1460,7 +1445,6 @@ const DATA_1: Resource[] = [
         'copies of Chester Beatty’s unpublished Manichaean papyri by H. J. Polotsky & H. Thompson',
     },
     variants: ['Mani 1'],
-    noSpaceVariants: true,
   },
   {
     source: {
@@ -1468,7 +1452,6 @@ const DATA_1: Resource[] = [
         'copies of Chester Beatty’s unpublished Manichaean papyri by H. J. Polotsky & H. Thompson; at Berlin',
     },
     variants: ['Mani 2'],
-    noSpaceVariants: true,
   },
   {
     source: {
@@ -1538,7 +1521,6 @@ const DATA_1: Resource[] = [
         'a series of vellum leaves at Michigan University, independently numbered thus (but cf note in Preface)',
     },
     variants: ['Mich 550'],
-    noSpaceVariants: true,
   },
   {
     source: {
@@ -2578,15 +2560,12 @@ const DATA_2: Resource[] = [
   },
   {
     variants: ['Encycl. Bibl.'],
-    noSpaceVariants: true,
   },
   {
     variants: ['Epiphan. De Gemm.', 'Epiphan De Gem'],
-    noSpaceVariants: true,
   },
   {
     variants: ['Erman-Lange Pap. Lansing'],
-    noSpaceVariants: true,
   },
   {
     variants: ['FestschrEbers'],
@@ -2596,7 +2575,6 @@ const DATA_2: Resource[] = [
   },
   {
     variants: ['GMaspero Musée Eg.', 'GMaspero Musée Ég.'],
-    noSpaceVariants: true,
   },
   {
     variants: ['Gött'],
@@ -2611,7 +2589,6 @@ const DATA_2: Resource[] = [
   },
   {
     variants: ['Inst franç Epiph De Gemm'],
-    noSpaceVariants: true,
   },
   {
     variants: ['Kabis'],
@@ -2683,7 +2660,6 @@ const DATA_2: Resource[] = [
   },
   {
     variants: ["Samannûdi's Scala"],
-    noSpaceVariants: true,
   },
   {
     source: {
@@ -2722,7 +2698,6 @@ const DATA_2: Resource[] = [
         'Aegyptische und griechische Eigennamen aus Mumienetiketten der römischen Kaiserzeit, auf Grund von grossenteils unveröffentlichtem Material, gesammelt und erläutert von Wilhelm Spiegelberg',
     },
     variants: ['Spg Aeg u Gr Eigennamen'],
-    noSpaceVariants: true,
   },
   {
     source: {
@@ -2821,23 +2796,18 @@ class Postfix {
  * Add the given source to the mapping.
  * @param key
  * @param reference
- * @param noSpaceVariants
  */
-function add(
-  key: string,
-  reference: Reference,
-  noSpaceVariants?: boolean
-): void {
-  log.ensure(MAPPING[key] === undefined, 'duplicate key:', key);
-  MAPPING[key] = reference;
-  if (noSpaceVariants) {
-    return;
-  }
+function add(key: string, reference: Reference): void {
   const parts: string[] = key.split(' ');
-  while (parts.length > 1) {
+  for (;;) {
+    key = parts.join(' ');
+    log.ensure(MAPPING[key] === undefined, 'duplicate key:', key);
+    MAPPING[key] = reference;
+    if (parts.length === 1) {
+      break;
+    }
     const last: string = parts.pop()!;
     parts[parts.length - 1]! += last;
-    add(parts.join(' '), reference, true);
   }
 }
 
@@ -2851,13 +2821,12 @@ function add(
 
   res.variants.forEach((variant: string): void => {
     // Add the abbreviation without any postfixes.
-    add(variant, new Reference(res.source, variant), res.noSpaceVariants);
+    add(variant, new Reference(res.source, variant));
     Object.entries(res.postfixes ?? {}).forEach(
       ([name, type]: [string, PostfixType]): void => {
         add(
           `${variant} ${name}`,
-          new Reference(res.source, variant, new Postfix(name, type)),
-          res.noSpaceVariants
+          new Reference(res.source, variant, new Postfix(name, type))
         );
       }
     );
