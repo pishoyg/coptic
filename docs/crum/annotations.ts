@@ -84,6 +84,7 @@ export const DATA: Abbreviation[] = [
   },
   { fullForm: 'causative verb', variants: ['caus'] },
   { fullForm: 'cited, quoted in following place', variants: ['cit'] },
+  { fullForm: 'delere', variants: ['dele'] },
   { fullForm: 'demotic', variants: ['dem'] },
   {
     fullForm: 'different reading, not useful for comparison',
