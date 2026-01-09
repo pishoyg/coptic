@@ -279,14 +279,11 @@ interface Resource {
  * forms that have fewer spaces.
  * There is no need to store the variants, as this will be handled
  * automatically.
- * The form that Crum used in his list (usually a space-free form) should,
- * nevertheless, be mentioned in a comment, to aid manual verification.
  * Variants that differ in non-space characters should, however, be explicitly
  * mentioned.
- * TODO: (#522) Revisit multi-part abbreviations, and insert spaces where
- * appropriate. We have attempted to insert spaces for all abbreviations that
- * ever occurred with inconsistent spacing, but some may have evaded our
- * detection.
+ * P.S. We have encountered numerous space variants, so we opted for
+ * preemptively inserting spaces wherever they may be expected to show, even if
+ * we haven't encountered such space variants in the text.
  */
 const DATA_1: Resource[] = [
   {
@@ -309,7 +306,7 @@ const DATA_1: Resource[] = [
         'Labīb, I. (1908). <em><a href="https://digitale-sammlungen.ulb.uni-bonn.de/content/titleinfo/3276169">Kitāb al-Ibṣalmūdiyyah al-sanawiyyah al-muqaddasah</a></em> [كتاب الإبصلمودية السنوية المقدسة — ⲡ̀ϫⲱⲙ ⲛ̀ⲧⲉ ϯⲯⲁⲗⲙⲟⲇⲓⲁ̀ ⲉ︦ⲑ︦ⲩ︦ ⲛ̀ⲧⲉⲣⲟⲙⲡⲓ]. Cairo: Heliopolis Press.',
       ],
     },
-    variants: ['Absal', 'CaiThe'],
+    variants: ['Absal', 'Cai The'],
   },
   {
     source: {
@@ -345,7 +342,7 @@ const DATA_1: Resource[] = [
         'Issa, A. B. (1930). <em><a href="https://digitalcollections.aucegypt.edu/digital/collection/p15795coll33/id/321/rec/5">Dictionnaire des noms des plantes, en latin, français, anglais et arabe</a></em>. Le Caire: Imprimerie nationale.',
       ],
     },
-    variants: ['AIssa'],
+    variants: ['A Issa'],
   },
   {
     source: {
@@ -472,14 +469,15 @@ const DATA_1: Resource[] = [
         'Budge, E. A. W. (1913). <em><a href="https://archive.org/details/copticapocryphai00budguoft/page/n5/mode/2up">Coptic Apocrypha in the Dialect of Upper Egypt: Edited with English Translations</a></em>. London: British Museum.',
       ],
     },
-    variants: ['BAp'],
+    variants: ['B Ap'],
   },
   {
     source: {
-      // NOTE: Listed as 'Berl.Or', but seemingly never cited as such!
       title: 'MSS. in the Staats(olim Kgl.)bibliothek, Berlin (Crum’s copies)',
     },
-    variants: ['Berl Or'],
+    // TODO: (#522) Should you add 'Berl'?
+    // See https://remnqymi.com/crum/1388.html#:~:text=Berl.
+    variants: ['Berl Or', 'Berl.Or'],
   },
   {
     source: {
@@ -569,7 +567,7 @@ const DATA_1: Resource[] = [
         'Budge, E. A. W. (1914). <em><a href="https://archive.org/details/CopticMartyrdomshighResByEWallisBudgeVol01/mode/2up">Coptic Martyrdoms, etc., in the Dialect of Upper Egypt</a></em>. London: British Museum.',
       ],
     },
-    variants: ['BMar'],
+    variants: ['B Mar'],
   },
   {
     source: {
@@ -585,7 +583,7 @@ const DATA_1: Resource[] = [
         'Budge, E. A. W. (1915). <em><a href="https://archive.org/details/miscellaneouscop00budguoft/page/n9/mode/2up">Miscellaneous Coptic Texts in the Dialect of Upper Egypt edited with English translations</a></em>. London: British Museum.',
       ],
     },
-    variants: ['BMis'],
+    variants: ['B Mis'],
   },
   {
     source: {
@@ -664,14 +662,16 @@ const DATA_1: Resource[] = [
   },
   {
     source: {
-      // NOTE: Listed as '(Cai)CoptMus'!
       title: 'MSS. &c. in Coptic Museum, Cairo',
     },
     variants: [
-      'P Cai Copt Mus', // NOTE: P for papyrus, but we don't mention that!
+      '(Cai)CoptMus',
       'Cai Copt Mus',
       'Copt Mus Cai',
       'Copt Mus',
+      // NOTE: P for papyrus, but we don't mention that!
+      // TODO: (#522) Does this variant belong to PCai?
+      'P Cai Copt Mus',
     ],
   },
   {
@@ -691,7 +691,7 @@ const DATA_1: Resource[] = [
         'ʿAbd al-Masīḥ Ṣalīb. (1902). <em><a href="https://digitale-sammlungen.ulb.uni-bonn.de/content/titleinfo/1703331">Kitāb al-Ḫulāǧī al-Muqaddas</a></em> [كتاب الخولاجي المقدس اي كتاب الثلاثة القداسات التي للقديس باسيليوس والقديس غريغوريوس والقديس كيرلس مع صلوات أخرى مقدسة — ⲡⲓϫⲱⲙ ⲛ̀ⲧⲉ ⲡⲓⲉⲩⲭⲟⲗⲟⲅⲓⲟⲛ ⲉ̀ⲑⲟⲩⲁⲃ ⲉ̀ⲧⲉ ⲫⲁⲓ ⲡⲉ ⲡⲓϫⲱⲙ ⲛ̀ⲧⲉ ϯϣⲟⲙϯ ⲛ̀ⲁ̀ⲛⲁⲫⲟⲣⲁ ⲛ̀ⲧⲉ ⲡⲓⲁ̀ⲅⲓⲟⲥ ⲃⲁⲥⲓⲗⲓⲟⲥ ⲛⲉⲙ ⲡⲓⲁ̀ⲅⲓⲟⲥ ⲅ̀ⲣⲏⲅⲟⲣⲓⲟⲥ ⲛⲉⲙ ⲡⲓⲁ̀ⲅⲓⲟⲥ ⲕⲩⲣⲓⲗⲗⲟⲥ ⲛⲉⲙ ϩⲁⲛⲕⲉⲉⲩⲭⲏ ⲉⲩⲟⲩⲁⲃ]. Heliopolis.',
       ],
     },
-    variants: ['CaiEuch'],
+    variants: ['Cai Euch'],
   },
   {
     source: {
@@ -710,6 +710,7 @@ const DATA_1: Resource[] = [
         'Hebbelynck, A., &amp; Van Lantschoot, A. (1937). <em><a href="https://archive.org/details/BiblotacheaTomIcomplete/page/n7/mode/2up">Codices Coptici Vaticani, Barberiniani, Borgiani, Rossiani. Tomus I</a></em>. Vaticani: Bibliotheca Vaticana.',
       ],
     },
+    // NOTE: No spaces added!
     variants: ['CCVaI'],
   },
   {
@@ -720,7 +721,7 @@ const DATA_1: Resource[] = [
         'Clugnet, L., Nau, F., &amp; Guidi, I. (Eds.). (1901). <em><a href="https://archive.org/details/VieDanielLeScetiote/page/n7/mode/2up">Vie (et récits) de l’Abbé Daniel le Scétiote (VIe siècle): Texte grec publ. par Léon Clugnet, texte syriaque publ. par F. Nau, texte copte publ. par Ignazio Guidi</a></em>. (Extrait de la Revue de l’ Orient Chrétien, Année 1901). Paris: A. Picard et fils.',
       ],
     },
-    variants: ['CDan'],
+    variants: ['C Dan'],
   },
   {
     source: {
@@ -747,7 +748,7 @@ const DATA_1: Resource[] = [
       title:
         'Woide’s MSS. belonging to the Clarendon Press (Crum’s copies & photographs)',
     },
-    variants: ['ClPr'],
+    variants: ['Cl Pr'],
   },
   {
     source: {
@@ -789,7 +790,7 @@ const DATA_1: Resource[] = [
         'De Vis, H. (1929). <em><a href="https://archive.org/details/homliescoptesdel0000devi_r2q2/page/n7/mode/2up">Homélies coptes de la Vaticane</a></em>. (Coptica, vol. V). Hauniae [Copenhagen]: Gyldendal.',
       ],
     },
-    variants: ['DeV'],
+    variants: ['De V'],
   },
   {
     source: {
@@ -846,7 +847,7 @@ const DATA_1: Resource[] = [
       title:
         'phot. of vellum leaves lent by Enoch P. (Univ. of Michigan). Originals not now traceable',
     },
-    variants: ['EnPeterson'],
+    variants: ['En Peterson'],
   },
   {
     source: {
@@ -867,7 +868,7 @@ const DATA_1: Resource[] = [
         '<em><a href="https://www.google.co.uk/books/edition/%C3%89tudes_arch%C3%A9ologiques/ByowAAAAYAAJ?hl=en&amp;gbpv=1">Études archéologiques, linguistiques et historiques dédiées à Mr. le Dr. C. Leemans, à l’occasion du cinquantième anniversaire de sa nomination aux fonctions de Directeur du Musée archéologique des Pays-Bas</a></em>. (1885). Leide: E. J. Brill.',
       ],
     },
-    variants: ['EtLeem'],
+    variants: ['Et Leem'],
   },
   {
     source: {
@@ -910,7 +911,7 @@ const DATA_1: Resource[] = [
         'Georgi, A. A. (1789). <em><a href="https://www.google.co.uk/books/edition/Fragmentum_Evangelii_S_Iohannis_Graeco_C/tomXmGIDwOgC?hl=en&amp;gbpv=1">Fragmentum Evangelii S. Iohannis graeco-copto-thebaicum saeculi IV. Additamentum ex vetustissimis membranis lectionum Evangelicarum divinae missae cod. diaconici reliquiae et liturgica alia fragmenta veteris thebaidensium ecclesiae ante Dioscorum, ex Veliterno museo borgiano, nunc prodeunt in latinum versa et notis illustrata</a></em>. Romae: apud A. Fulgonium.',
       ],
     },
-    variants: ['GFr'],
+    variants: ['G Fr'],
   },
   {
     source: {
@@ -929,7 +930,7 @@ const DATA_1: Resource[] = [
         'Georgi, A. A. (1793). <em><a href="https://archive.org/details/bub_gb_FLw7D7xionYC/page/n1/mode/2up">De miraculis Sancti Coluthi et reliquiis actorum Sancti Panesniv maryrum thebaica fragmenta duo alterum auctius alterum nunc primum editum</a></em>. Romae: Apud A. Fulgonium.',
       ],
     },
-    variants: ['GMir'],
+    variants: ['G Mir'],
   },
   {
     source: {
@@ -939,7 +940,7 @@ const DATA_1: Resource[] = [
         '<em>Nachrichten von der Königlichen Gesellschaft der Wissenschaften zu Göttingen, Philologisch-Historische Klasse</em> began in 1894. Links to volumes from 1892-1923 available digitised on <a href="https://onlinebooks.library.upenn.edu/webbin/serial?id=nachkongesgotph">The Online Books Page</a> and some later volumes via <a href="https://catalog.hathitrust.org/Record/000517694">HathiTrust</a> in the US. ',
       ],
     },
-    variants: ['GöttA'],
+    variants: ['Gött A', 'Gött Abh'],
   },
   {
     source: {
@@ -959,7 +960,7 @@ const DATA_1: Resource[] = [
         'S. Gaselee. (1912, 1914). <em><a href="https://catalog.hathitrust.org/Record/001327863">Parerga Coptica: I. De XXIV Senioribus Apocalypticis et Nominibus Eorum. II. De Abraha et Melchisedec. III. Hymnus de Sinuthio</a></em>. Cantabrigiae: Typis Academicis. [via US access only]',
       ],
     },
-    variants: ['GPar'],
+    variants: ['G Par'],
   },
   {
     source: {
@@ -968,7 +969,7 @@ const DATA_1: Resource[] = [
         '<em><a href="https://archive.org/details/studiespresented0000egyp/page/n7/mode/2up">Studies Presented to F. Ll. Griffith</a></em>. (1932). London: Egypt Exploration Society.',
       ],
     },
-    variants: ['GriffStu'],
+    variants: ['Griff Stu'],
   },
   {
     source: {
@@ -988,7 +989,7 @@ const DATA_1: Resource[] = [
         'Guidi, I. (1885). <em><a href="https://archive.org/details/testiorientalii01guidgoog/page/n4/mode/2up">Testi orientali inediti sopra i Sette Dormienti di Efeso</a></em>. (Reale Accademia dei Lincei, Memorie della Classe di scienze morali, storiche e filogiche, ser. 3, 12, 1884, 343-445). Roma: Tipografia della R. Accademia dei Lincei.',
       ],
     },
-    variants: ['GuDorm'],
+    variants: ['Gu Dorm'],
   },
   {
     source: {
@@ -1016,7 +1017,7 @@ const DATA_1: Resource[] = [
         'Horner, G. (1902). <em><a href="https://archive.org/details/serviceforconsec00hornuoft/page/n3/mode/2up">The Service for the Consecration of a Church and Altar According to the Coptic Rite, Edited with Translations from a Coptic and Arabic Manuscript of A.D. 1307 for the Bishop of Salisbury</a></em>. London: Harrison and Sons.',
       ],
     },
-    variants: ['HCons'],
+    variants: ['H Cons'],
   },
   {
     source: {
@@ -1026,7 +1027,7 @@ const DATA_1: Resource[] = [
         'Hengstenberg, W. (1914). <a href="https://archive.org/details/hvd.32044095331146/page/n131/mode/2up">Koptische Papyri</a>. In <em>Beiträge zur Forschung: Studien und Mitteilungen aus dem Antiquariat Jacques Rosenthal München, Heft III</em> (pp. 92-100, plus plates). München: Verlag von Jacques Rosenthal. ',
       ],
     },
-    variants: ['HengB'],
+    variants: ['Heng B'],
   },
   {
     source: {
@@ -1065,7 +1066,7 @@ const DATA_1: Resource[] = [
         'Horner, G. (1904). <em><a href="https://archive.org/details/statutesapostle00unkngoog/page/n6/mode/2up">The Statutes of the Apostles or Canones Ecclesiastici. Edited with Translation and Collation from Ethiopic and Arabic MSS.; Also a Translation of the Saʿidic and Collation of the Bohairic Versions; and Saʿidic Fragments</a></em>. London: Williams &amp; Norgate.',
       ],
     },
-    variants: ['HSt', 'Stat'],
+    variants: ['H St', 'Stat'],
   },
   {
     source: {
@@ -1081,11 +1082,10 @@ const DATA_1: Resource[] = [
         'Rossi, I. (1808). <em><a href="https://archive.org/details/bub_gb_IWhHswE1yv0C/page/n3/mode/2up">Etymologiae Aegyptiacae</a></em>. Rome.',
       ],
     },
-    variants: ['IgR'],
+    variants: ['Ig R'],
   },
   {
     source: {
-      // NOTE: Listed as 'ImpRussArS'!
       title: 'Imperial Russian Archaeolog. Soc. xviii, 1907 (Turaief)',
       description: [
         'Turayev, B. A. (1907). <a href="https://archive.org/details/Notes-Imperial-Russian-Archaeological-Society/ZVORAO_18_1908/page/n55/mode/2up">Ахмимскій папирусъ изъ коллекціи Н. П. Лихачева [An Akhmim Papyrus from the Collection of N. P. Likhachov]</a>. <em>Записки Восточного Отдѣления Императорского Русского Археологическаго Общества</em> [Transactions of the Eastern Branch of the Imperial Russian Archaeological Society], 18, 28-30. ',
@@ -1117,7 +1117,6 @@ const DATA_1: Resource[] = [
   },
   {
     source: {
-      // NOTE: Listed as 'J&C'!
       title: 'H. I. Bell, Jews & Christians, 1924, acc. to pp',
       description: [
         'Bell, H. I. (1924). <em><a href="https://archive.org/details/jewschristiansin0000bell/page/n3/mode/2up">Jews and Christians in Egypt: The Jewish Troubles in Alexandria and the Athanasian Controversy</a></em>. London: British Museum.',
@@ -1132,7 +1131,7 @@ const DATA_1: Resource[] = [
         'The <em>Journal of the American Oriental Society</em> began in 1843-49. All volumes to date are available via <a href="https://www.jstor.org/journal/jameroriesoci">JSTOR</a>. ',
       ],
     },
-    variants: ['JAOS', 'JAmOrSoc'],
+    variants: ['JAOS', 'J Am Or Soc'],
   },
   {
     source: {
@@ -1162,7 +1161,7 @@ const DATA_1: Resource[] = [
         'Schiller, A. A. (1932). <em><a href="https://archive.org/details/in.ernet.dli.2015.44575/page/n5/mode/2up">Ten Coptic Legal Texts Edited with Translation, Commentary, and Indexes Together with an Introduction</a></em>. New York: Metropolitan Museum of Art.',
       ],
     },
-    variants: ['JSch'],
+    variants: ['J Sch'],
   },
   {
     source: {
@@ -1288,7 +1287,7 @@ const DATA_1: Resource[] = [
         'Lemm, O. von. (1903). <em><a href="https://phaidrabg.bg.ac.rs/open/o:556">Der Alexanderroman bei den Kopten: Ein Beitrag zur Geschichte der Alexandersage im Orient</a></em>. St. Petersburg: L’Académie Impériale des Sciences.',
       ],
     },
-    variants: ['LAl'],
+    variants: ['L Al'],
   },
   {
     source: {
@@ -1301,14 +1300,13 @@ const DATA_1: Resource[] = [
   },
   {
     source: {
-      // NOTE: Listed as 'Lant.' (with a period)!
       title:
         'A. van Lantschoot, Recueil de Colophons… sahidiques, 1929, acc. to numbers; also copies by',
       description: [
         'Van Lantschoot, A. (1929). <em><a href="https://archive.org/details/recueildescoloph0000lans/page/n5/mode/2up">Colophons des manuscrits chrétiens d’Égypte. Tome I: Les colophons coptes des manuscrits sahidiques</a></em>. Louvain: J.-B. Istas.',
       ],
     },
-    variants: ['Lant'],
+    variants: ['Lant.', 'Lant'],
   },
   {
     source: {
@@ -1317,7 +1315,7 @@ const DATA_1: Resource[] = [
         'Lemm, O. von. (1890). <em><a href="https://www.google.co.uk/books/edition/Koptische_Apokryphe_Apostelacten/7hJik4M60hoC?hl=en&amp;gbpv=1">Koptische Apokryphe Apostelacten</a></em>. St. Petersburg: Académie Impériale des Sciences.',
       ],
     },
-    variants: ['LAp'],
+    variants: ['L Ap'],
   },
   {
     source: {
@@ -1328,7 +1326,7 @@ const DATA_1: Resource[] = [
         'Lemm, O. von. (1906). <a href="https://www.orientalstudies.ru/rus/images/pdf/journals/Melanges_Asiatiques_12_1902-1906_08_lemm.pdf">Sahidische Bibelfragmente. III</a>. <em>Bulletin de l’Académie impériale des sciences de St.-Pétersbourg</em>, XII, 79-97. ',
       ],
     },
-    variants: ['LBib'],
+    variants: ['L Bib'],
   },
   {
     source: {
@@ -1339,7 +1337,7 @@ const DATA_1: Resource[] = [
         'Lemm, O. von. (1899). <em><a href="https://www.biodiversitylibrary.org/item/212311#page/559/mode/1up">Sahidische Bruchstücke der Legende von Cyprian von Antiochien</a></em>. (Mémoires de l’Académie impériale des sciences de St.-Pétersbourg, VIIIe série, Tome IV, No. 6). St. Petersburg.',
       ],
     },
-    variants: ['LCypr', 'LCyp'],
+    variants: ['L Cypr', 'L Cyp'],
   },
   {
     source: {
@@ -1348,7 +1346,7 @@ const DATA_1: Resource[] = [
         'Lemm, O. von. (1900). <em><a href="https://www.biodiversitylibrary.org/item/94350#page/325/mode/1up">Eine dem Dionysius Areopagita zugeschriebene Schrift in koptischer Sprache</a></em>. (Bulletin de l’Académie impériale des sciences de St.-Pétersbourg, V. série, Tome XII, No. 3). St. Petersburg.',
       ],
     },
-    variants: ['LDi'],
+    variants: ['L Di'],
   },
   {
     source: {
@@ -1364,7 +1362,7 @@ const DATA_1: Resource[] = [
         '<em>Berichte über die Verhandlungen der Königlich Sächsischen Gesellschaft der Wissenschaften zu Leipzig, Philologisch-Historische Klasse</em> began in 1849. Volumes from 1849-1899 (1-51) available digitised on <a href="https://catalog.hathitrust.org/Record/008559830">HathiTrust</a> with later volumes via US access. ',
       ],
     },
-    variants: ['LeipBer'],
+    variants: ['Leip Ber'],
   },
   {
     source: {
@@ -1378,7 +1376,6 @@ const DATA_1: Resource[] = [
   {
     source: {
       title: 'Antiquités Coptes (Catal. du Musée), 1900, acc. to pp',
-      // NOTE: Listed as 'LeydAC'!
       description: [
         'Pleyte, W., &amp; Boeser, P. A. A. (1900). <em><a href="https://catalog.hathitrust.org/Record/008693139">Catalogue du musée d’ antiquités à Leide, sousdivision F. Égypte, antiquités coptes</a></em>. Leide: E. J. Brill. [Accessible in the US via HathiTrust.]',
       ],
@@ -1392,7 +1389,7 @@ const DATA_1: Resource[] = [
         'Lemm, O. von. (1906). <em><a href="https://www.biodiversitylibrary.org/item/212314#page/653/mode/1up">Iberica</a></em>. (Mémoires de l’Académie impériale des sciences de St.-Pétersbourg, VIIIe série, Tome VII, No. 6). St. Petersburg.',
       ],
     },
-    variants: ['LIb'],
+    variants: ['L Ib'],
   },
   {
     source: {
@@ -1401,7 +1398,7 @@ const DATA_1: Resource[] = [
         'Lemm, O. von. (1913). <em><a href="https://www.biodiversitylibrary.org/item/212319#page/10/mode/1up">Bruchstücke koptischer Märtyrerakten. I-V.</a></em> (I. Theodoros des Orientalen und Panikyros des Persers und Leontios des Arabers; II. Theodoros des Orientalen; III. Leontios des Arabers; IV. Heraklides; V. Isidoros). (Mémoires de l’ Académie impériale des sciences de St.-Pétersbourg, VIIIe série, Tome XII, No. 1). St. Petersburg.',
       ],
     },
-    variants: ['LMär'],
+    variants: ['L Mär'],
   },
   {
     source: {
@@ -1410,7 +1407,7 @@ const DATA_1: Resource[] = [
         'Lemm, O. von. (1907-1915). Koptische Miscellen I-CXLVIII published in volumes of the <em>Bulletin de l’Académie Impériale des Sciences de St.-Pétersbourg, VI série</em>. Listed and linked on <a href="https://ancientworldonline.blogspot.com/2012/05/digitized-coptic-publications-of-oscar.html">The Ancient World Online</a>. ',
       ],
     },
-    variants: ['LMis'],
+    variants: ['L Mis'],
   },
   {
     source: {
@@ -1428,7 +1425,7 @@ const DATA_1: Resource[] = [
         'Löw, I. (1924-1934). <em><a href="https://sammlungen.ub.uni-frankfurt.de/freimann/content/titleinfo/781127">Die Flora der Juden</a></em> (4 Bde.). (Veröffentlichungen der Alexander Kohut Memorial Foundation, Band II-IV, VI). Wien und Leipzig: R. Löwit Verlag.',
       ],
     },
-    variants: ['LöwF'],
+    variants: ['Löw F'],
   },
   {
     source: {
@@ -1455,7 +1452,6 @@ const DATA_1: Resource[] = [
   },
   {
     source: {
-      // NOTE: Listed as 'ManiH'!
       title: 'Manichäische Homelien, ed. Polotsky, 1934',
       description: [
         'Polotsky, H. J. (1934). <em><a href="https://archive.org/details/manichaischehomi0000polo/page/n5/mode/2up">Manichäische Homilien</a></em>. (Manichäische Handschriften der Sammlung A. Chester Beatty, Band I). Stuttgart: W. Kohlhammer.',
@@ -1465,7 +1461,6 @@ const DATA_1: Resource[] = [
   },
   {
     source: {
-      // NOTE: Listed as 'ManiK'!
       title: 'Kephalaia, edd. Polotsky & A. Böhlig, 1934 ff',
       description: [
         'Polotsky, H. J. (1940). <em><a href="https://archive.org/details/kephalaia0000mani/page/n1/mode/2up">Kephalaia. 1. Hälfte (Lieferung 1-10)</a></em>. (Manichäische Handschriften der Staatslichen Museen Berlin, Band I). Stuttgart: W. Kohlhammer.',
@@ -1476,10 +1471,6 @@ const DATA_1: Resource[] = [
   },
   {
     source: {
-      // NOTE: While cases of ‘Mani P’ (with a space) in Crum's text remain
-      // unconfirmed, we insert a space to maintain consistency with ‘Mani H’
-      // and ‘Mani K’, cases of which appearing with a space in Crum's text
-      // have been confirmed.
       title: 'A Manichaean Psalm-book, Pt. ii, ed. C. R. C. Allberry, 1938',
       description: [
         'Allberry, C. R. C. (1938). <em><a href="https://archive.org/details/manichaeanpsalmb0000allb/page/n5/mode/2up">A Manichean Psalm-Book, Part II</a></em>. (Manichean Manuscripts in the Chester Beatty Collection, Volume II). Stuttgart: W. Kohlhammer.',
@@ -1489,7 +1480,6 @@ const DATA_1: Resource[] = [
   },
   {
     source: {
-      // NOTE: Listed as 'MartIgn'!
       title: 'Lightfoot, Ignatius¹, ii 1 865 ff',
       description: [
         'Lightfoot, J. B. (1899). <em><a href="https://babel.hathitrust.org/cgi/pt?id=uc1.l0051084895&amp;seq=289">The Apostolic Fathers, Part II: S. Ignatius, S. Polycarp. Revised Texts with Introductions, Notes, Dissertations, and Translations</a></em>, 2nd ed., Vol. III, pp. 275–298. London: Macmillan and Co. [Crum’s page numbering seems to refer to the 1st edition.]',
@@ -1504,7 +1494,7 @@ const DATA_1: Resource[] = [
         '<em>Mélanges de l’Université Saint-Joseph</em> began in 1922 (volume 8-), succeeding <em>Mélanges de la Faculté Orientale</em>, which began in 1906, and continued its issue numbering. All volumes are listed, digitised and available for viewing on <a href="https://www.persee.fr/collection/mefao">Persee.fr</a>. ',
       ],
     },
-    variants: ['MélOr'],
+    variants: ['Mél Or'],
   },
   {
     source: {
@@ -1624,7 +1614,6 @@ const DATA_1: Resource[] = [
   },
   {
     source: {
-      // NOTE: Listed as 'N&E'!
       title: 'Notices et Extraits des MSS. de la Bibliothèque Nationale, Paris',
       description: [
         '<em>Notices et extraits des manuscrits de la Bibliothèque nationale et autres bibliothèques</em> began in 1787. Many digitised volumes, particularly early volumes, are listed on <a href="https://catalog.hathitrust.org/Record/003105485">HathiTrust</a> and <a href="https://gallica.bnf.fr/ark:/12148/cb345335088/date">Gallica</a>. ',
@@ -1634,7 +1623,6 @@ const DATA_1: Resource[] = [
   },
   {
     source: {
-      // NOTE: Listed as ‘O'LearyH’!
       title: 'De Lacy O’Leary: Fragmentary Coptic Hymns, 1924',
       description: [
         'O’Leary, De Lacy. (1924). <em><a href="https://archive.org/details/fragmentarycopti0000olea/page/n3/mode/2up">Fragmentary Coptic Hymns from the Wadi n-Natrun edited with translations and notes</a></em>. London: Luzac &amp; Co.',
@@ -1645,7 +1633,6 @@ const DATA_1: Resource[] = [
   {
     source: {
       title: 'De Lacy O’Leary: The Coptic Theotokia, 1923',
-      // NOTE: Listed as '—The'!
       description: [
         'O’Leary, De Lacy. (1923). <em><a href="https://archive.org/details/coptictheotokia0000copt/page/n3/mode/2up">The Coptic Theotokia: Text from Vatican Cod. Copt. xxxviii, Bib. Nat. Copte 22, 23, 35, 69 and Other MSS. Including Fragments Recently Found at the Dêr Abû Makâr in the Wadi Natrun</a></em>. London: Luzac &amp; Co.',
       ],
@@ -1672,7 +1659,6 @@ const DATA_1: Resource[] = [
   },
   {
     source: {
-      // NOTE: Listed as 'OratCyp'!
       title:
         'Oratio Cypriani in Veröffentl. a. d. badischen Papyrussamml., Heft 5, 1934, p. 305 ff',
       // NOTE: PBad occurs as a standalone abbreviation in Crum, but we treat it
@@ -1681,7 +1667,7 @@ const DATA_1: Resource[] = [
         'Bilabel, F., &amp; Grohmann, A. (1934). <em>Griechische, koptische und arabische Texte zur Religion und religiösen Literatur in Ägyptens Spätzeit</em>. (Veröffentlichungen aus den badischen Papyrus-Sammlungen, Heft 5). Heidelberg: Verlag der Universitätsbibliothek. [If you know of a digital copy, please <a href="https://www.coptist.com/contact-%e2%b2%a7%e2%b2%81%e2%b2%99%e2%b2%9f%e2%b2%93/"> contact me</a>] ',
       ],
     },
-    variants: ['Orat Cyp', 'PBad'],
+    variants: ['Orat Cyp', 'P Bad'],
   },
   {
     source: {
@@ -1690,7 +1676,10 @@ const DATA_1: Resource[] = [
         '<em>Oriens Christianus</em> began in 1901. All volumes up to 2014 are available digitised on the <a href="https://archive.org/details/oriens-christianus">Internet Archive</a>. ',
       ],
     },
-    variants: ['OrChr'],
+    variants: ['Or Chr'],
+    postfixes: {
+      NS: 'Neue Serie',
+    },
   },
   {
     source: {
@@ -1703,10 +1692,9 @@ const DATA_1: Resource[] = [
   },
   {
     source: {
-      // NOTE: Listed as 'Ostr.Chicago', but seemingly never cited as such!
       title: 'Till’s copies of ostraca from Chicago Expedition, 1931',
     },
-    variants: ['Ostr Chicago'],
+    variants: ['Ostr.Chicago', 'Ostr Chicago'],
   },
   {
     source: {
@@ -1722,7 +1710,7 @@ const DATA_1: Resource[] = [
         'Ricci, S. de, &amp; Winstedt, E. O. (1906). <a href="https://www.persee.fr/doc/sphin_2003-170x_1906_num_10_1_1192">Papyrus coptes du Musée d’Alexandrie</a>. <em>Sphinx: revue critique embrassant le domaine entier de l’égyptologie</em>, 10, 1-4. ',
       ],
     },
-    variants: ['PAl'],
+    variants: ['P Al'],
   },
   {
     source: {
@@ -1731,7 +1719,7 @@ const DATA_1: Resource[] = [
         'Grenfell, B. P., &amp; Hunt, A. S. (1901). <em><a href="https://archive.org/details/amherstpapyribei02grenuoft/page/n9/mode/2up">The Amherst Papyri: Being an Account of the Greek Papyri in the Collection of the Right Hon. Lord Amherst of Hackney, F.S.A. at Didlington Hall, Norfolk. Part II: Classical Fragments and Documents of the Ptolemaic, Roman, and Byzantine Periods</a></em>. London: Henry Frowde.',
       ],
     },
-    variants: ['PAmh'],
+    variants: ['P Amh'],
   },
   {
     source: {
@@ -1741,7 +1729,7 @@ const DATA_1: Resource[] = [
         'Father Fīlūt̲āʾus al-Maqqārī, &amp; Cantor Mīḫāʾīl Ǧirǧis. (1914). <em><a href="https://digitale-sammlungen.ulb.uni-bonn.de/content/titleinfo/4258076">Kitāb Ṭuruḥāt al-Basḫah al-Muqaddasah al-Mustaʿmal Tilāwatuhā fī Sāʾir Kanāʾis al-Karāzah al-Marqusiyyah</a></em> [كتاب طرحات البسخة المقدسة المستعمل تلاوتها في ساير كنائس الكرازة المرقسية]. Old Cairo: St. Macarius Press.',
       ],
     },
-    variants: ['PasH'],
+    variants: ['Pas H'],
   },
   {
     source: {
@@ -1750,22 +1738,21 @@ const DATA_1: Resource[] = [
         '(n.d.) <em><a href="https://coptic-treasures.com/book/%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%A8%D8%B5%D8%AE%D8%A9-%D8%A3%D9%85%D8%B1-%D8%A8%D8%B7%D8%A8%D8%B9%D8%A9-%D8%A7%D9%84%D8%A8%D8%A7%D8%A8%D8%A7-%D8%B4%D9%86%D9%88%D8%AF%D8%A9/">ⲡ̀ϫⲱⲙ ⲛ̀ⲧⲉ ⲡⲓⲡⲁⲥⲭⲁ ⲉ̀ⲑⲟⲩⲁⲃ ⲫⲏⲉⲧϣⲉⲙϣⲓ ⲓⲥϫⲉⲛ ⲡⲓⲉ̀ϩⲟⲟⲩ ⲛ̀ϯⲕⲩⲣⲓⲁ̀ⲕⲏ ⲛ̀ⲧⲉ ⲡⲓⲉⲩⲗⲟⲅⲓⲙⲉⲛⲟⲥ ϣⲁⲡ̀ϫⲱⲛⲉ̀ⲃⲟⲗ ⲙ̀ⲡⲓϣⲁⲓ ⲛ̀ϯⲁ̀ⲛⲁⲥⲧⲁⲥⲓⲥ ⲉⲧⲥ̀ⲙⲁⲣⲱⲟⲩⲧ ⲕⲁⲧⲁ ⲧⲁⲝⲓⲥ ⲛ̀ϯⲉⲕⲕ̀ⲗⲏⲥⲓⲁ ⲛ̀ⲣⲉⲙⲛ̀ⲭⲏⲙⲓ ⲛ̀ⲟⲣⲑⲟⲇⲟⲝⲟⲥ –كتاب البصخة المقدسة: الذي يخدم من يوم احد الشعانين الى نهاية عيد القيامة المجيد حسب ترتيب الكنيسة القبطية الارثوذكسية</a></em>, printed by order of Pope Shenouda III. Anba Waris Press. [This appears to be a reprint of the edition cited by Crum, possibly originally edited by Claudius Y. Labib]',
       ],
     },
-    variants: ['PasLect'],
+    variants: ['Pas Lect'],
   },
   {
     source: {
-      // NOTE: Listed as 'P. Beatty', but seemingly never cited as such!
       title:
         'Papyri in collection of Mr. Chester Beatty, London (Crum’s copies)',
     },
-    variants: ['P Beatty'],
+    variants: ['P. Beatty', 'P Beatty'],
   },
   {
     source: {
       title:
         'Coptic legal papyrus olim penes Sir E. A. W. Budge (Crum’s copy), now at Columbia University',
     },
-    variants: ['PBu'],
+    variants: ['P Bu'],
   },
   {
     source: {
@@ -1777,13 +1764,13 @@ const DATA_1: Resource[] = [
         'Maspero, J. (1916). <em><a href="https://archive.org/details/papyrusgrecsdp03masp/page/n7/mode/2up">Papyrus grecs d’ époque byzantine, Tome III</a></em> (Catalogue général des antiquités égyptiennes du Musée du Caire, N. 67279-67359). Le Caire: Impr. de l’Institut français d’archéologie orientale.',
       ],
     },
-    variants: ['PCai'],
+    variants: ['P Cai'],
   },
   {
     source: {
       title: 'Two medical papyri penes E. Chassinat',
     },
-    variants: ['PChass'],
+    variants: ['P Chass'],
   },
   {
     source: {
@@ -1793,14 +1780,13 @@ const DATA_1: Resource[] = [
         'Crum, W. E. (1915). <em><a href="https://archive.org/details/derpapyruscodexs00crum/page/n7/mode/2up">Der Papyruscodex saec. VI-VII der Phillippsbibliothek in Cheltenham: Koptische theologische Schriften</a></em>. Strassburg: Karl J. Trübner.',
       ],
     },
-    variants: ['Pcod', 'PCod'],
+    variants: ['P cod', 'P Cod'],
     postfixes: {
       F: 'Fayyûmic text of same, ed. W. Erichsen (Danish Acad., 1932)<ul><li>Erichsen, W. (1932). <em><a href="https://archive.org/details/faijumischefragm0000agat/page/n1/mode/2up">Faijumische Fragmente der Reden des Agathonicus Bischofs von Tarsus</a></em>. (Det Kgl. Danske Videnskabernes Selskab, Historisk-filologiske Meddelelser, XIX, 1). København: Andr. Fred. Høst &amp; søn.</li></ul>',
     },
   },
   {
     source: {
-      // NOTE: Listed as 'PcodMor'!
       title:
         'Mr. Pierpont Morgan’s papyrus volume of Psalms &c. (H. Thompson’s copy)',
     },
@@ -1810,7 +1796,7 @@ const DATA_1: Resource[] = [
     source: {
       title: 'Papyri at Columbia University, New York (A. Schiller’s copies)',
     },
-    variants: ['PCol'],
+    variants: ['P Col'],
   },
   {
     source: {
@@ -1834,7 +1820,7 @@ const DATA_1: Resource[] = [
     source: {
       title: 'magical papyrus in University Library, Geneva (photograph)',
     },
-    variants: ['PGen'],
+    variants: ['P Gen'],
   },
   {
     source: {
@@ -1851,13 +1837,13 @@ const DATA_1: Resource[] = [
       title:
         'Papyri formerly in W. Golenischeff’s collection, from photographs sent by O. von Lemm',
     },
-    variants: ['PGol'],
+    variants: ['P Gol'],
   },
   {
     source: {
       title: 'Papyri (6th c.) thence, Cairo Mus. (Lacau’s copies)',
     },
-    variants: ['PJkôw'],
+    variants: ['P Jkôw'],
   },
   {
     source: {
@@ -1869,7 +1855,7 @@ const DATA_1: Resource[] = [
     source: {
       title: 'Papyri belonging to N. P. Lichatschev (P. Jernstedt’s copies)',
     },
-    variants: ['PLich'],
+    variants: ['P Lich'],
   },
   {
     source: {
@@ -1882,7 +1868,7 @@ const DATA_1: Resource[] = [
         'Bell, H. I. (1917). <em><a href="https://archive.org/details/greekpapyriinbri05brit/page/n5/mode/2up">Greek Papyri in the British Museum: Catalogue with Texts</a></em>. Vol. V. London: British Museum.',
       ],
     },
-    variants: ['PLond'],
+    variants: ['P Lond'],
     postfixes: { V: undefined },
   },
   {
@@ -1893,14 +1879,14 @@ const DATA_1: Resource[] = [
         'Chassinat, É. (1921). <em><a href="https://archive.org/details/MIFAO32/mode/2up">Un papyrus médical copte</a></em>. (Mémoires publiés par les membres de l’ Institut français d’archéologie orientale du Caire, Tome 32). Le Caire: Imprimerie de l’Institut français d’archéologie orientale.',
       ],
     },
-    variants: ['PMéd'],
+    variants: ['P Méd'],
   },
   {
     source: {
       title:
         'Papyri at Michigan University, with year of acquisition where no. not ascertained',
     },
-    variants: ['PMich'],
+    variants: ['P Mich'],
   },
   {
     source: {
@@ -1910,13 +1896,13 @@ const DATA_1: Resource[] = [
         'Heisenberg, A., &amp; Wenger, L. (1914). <em><a href="https://archive.org/details/mdp.39015010705187/page/n11/mode/2up">Byzantinische Papyri in der Königlichen Hof- und Staatsbibliothek zu München</a></em>. (Veröffentlichungen aus der Papyrus-Sammlung der Königlichen Hof- und Staatsbibliothek zu München, Band I: Byzantinische Papyri). Leipzig: B. G. Teubner.',
       ],
     },
-    variants: ['PMon'],
+    variants: ['P Mon'],
   },
   {
     source: {
       title: 'rest of papyrus ed. V. Loret, Rec 16 103 (Kuentz’s copy)',
     },
-    variants: ['PNolot'],
+    variants: ['P Nolot'],
   },
   {
     source: {
@@ -1941,7 +1927,7 @@ const DATA_1: Resource[] = [
       title:
         'Papyri in the Rainer Collection (Staatsbibl.), Vienna (Till’s copies), more often as Vi',
     },
-    variants: ['PRain'],
+    variants: ['P Rain'],
   },
   {
     source: {
@@ -1974,13 +1960,13 @@ const DATA_1: Resource[] = [
     source: {
       title: 'Papyri in University Library, Strassburg (Crum’s copies, 1912)',
     },
-    variants: ['PStras'],
+    variants: ['P Stras'],
   },
   {
     source: {
       title: 'Papyri in Staatsbibliothek, Vienna (Till’s copies)',
     },
-    variants: ['PVi'],
+    variants: ['P Vi'],
   },
   {
     source: {
@@ -2010,7 +1996,7 @@ const DATA_1: Resource[] = [
         'Rossi, F. (1893). <em><a href="https://babel.hathitrust.org/cgi/pt?id=mdp.39015024258538&amp;seq=7">Di alcuni manoscritti copti che si conservano nella Biblioteca Nazionale di Torino</a></em>. (Estratto dalle <em>Memorie della Reale Accademia delle Scienze di Torino</em>, Ser. II, Vol. 44). Torino: Carlo Clausen.',
       ],
     },
-    variants: ['RAl'],
+    variants: ['R Al'],
   },
   {
     source: {
@@ -2136,20 +2122,20 @@ const DATA_1: Resource[] = [
       Am: LOOKUP,
       AZ: LOOKUP,
       BM: LOOKUP,
-      BMOr: LOOKUP,
+      'BM Or': LOOKUP,
       'Berl Or': LOOKUP,
       BIF: LOOKUP,
       Bor: LOOKUP,
       C: LOOKUP,
       CO: LOOKUP,
       Cai: LOOKUP,
-      ClPr: LOOKUP,
+      'Cl Pr': LOOKUP,
       Ep: LOOKUP,
       HT: LOOKUP,
       IF: LOOKUP,
       Louvre: undefined,
       Leyd: LOOKUP,
-      LMis: LOOKUP,
+      'L Mis': LOOKUP,
       MIF: LOOKUP,
       Mich: LOOKUP,
       Ming: LOOKUP,
@@ -2172,7 +2158,7 @@ const DATA_1: Resource[] = [
         'Sobhy, G. P. G. (1919). <em><a href="https://archive.org/details/lemartyredesaint00sobhuoft/page/n10/mode/2up">Le martyre de Saint Hélias et l’encomium de l’évêque Stéphanos de Hnès sur Saint Hélias</a></em>. (Bibliothèque d’Études coptes, Tome I). Le Caire: Imprimerie de l’Institut français d’archéologie orientale.',
       ],
     },
-    variants: ['SHel'],
+    variants: ['S Hel'],
   },
   {
     source: {
@@ -2252,7 +2238,7 @@ const DATA_1: Resource[] = [
         'Bishop Rūfāʾīl al-Ṭūḫī. (1750). <em><a href="https://digitale-sammlungen.ulb.uni-bonn.de/content/titleinfo/244155">ⲟⲩϫⲱⲙ ⲛ̀ⲧⲉ ⲛⲓⲉⲩⲭⲏ ⲙ̀ⲡⲓⲉ̀ϩⲟⲟⲩ ⲛⲉⲙ ⲡⲓⲉ̀ϫⲱⲣϩ ⲛ̀ⲍ︦ — كتاب الصلوات النهارية والليلية السبعة</a></em>. Romae: Typis Sacrae Congregatio de Propaganda Fide.',
       ],
     },
-    variants: ['TDi'],
+    variants: ['T Di'],
   },
   {
     source: {
@@ -2263,7 +2249,7 @@ const DATA_1: Resource[] = [
         'Bishop Rūfāʾīl al-Ṭūḫī. (1761). <em><a href="https://digitale-sammlungen.ulb.uni-bonn.de/content/titleinfo/121458">ⲡⲓϫⲱⲙ ⲉϥⲉⲣⲁⲡⲁⲛⲧⲟⲕⲧⲓⲛ ⲉ̀ϫⲉⲛ ⲛⲓⲉⲩⲭⲏ ⲉⲑⲟⲩⲁⲃ ⲡⲓⲙⲉⲣⲟⲥ ⲛ̀ϩⲟⲩⲓⲧ ⲉⲑⲃⲉ ⲛⲓϫⲓⲛⲫⲱϣ ⲛ̀ⲛⲏ ⲉⲧⲁⲩⲥⲱⲧⲡ ⲛ̀ⲛⲓⲧⲱⲧⲉⲣ ⲛ̀ⲕⲗⲏⲣⲓⲕⲟⲥ ⲛⲉⲙ ⲛⲓⲟⲩⲏⲃ ⲛⲉⲙ ⲡⲓⲥⲙⲟⲩ ⲛ̀ⲧⲉ ⲛⲓϩⲃⲱⲥ ⲙ̀ⲙⲟⲛⲁⲭⲟⲥ ⲛⲉⲙ ⲡⲓⲉⲛⲓⲑⲣⲟⲛⲓⲥⲙⲟⲥ ⲛ̀ⲧⲉ ⲡⲓⲉⲡⲓⲥⲕⲟⲡⲟⲥ ⲛⲉⲙ ⲡⲓⲁⲅⲓⲁⲥⲙⲟⲥ ⲙ̀ⲙⲩⲣⲟⲛ ⲛⲉⲙ ϯⲉⲕⲕⲗⲏⲥⲓⲁ –كتاب يشتمل على الصلوات المقدسة الجزء الاول لاجل رسامات المختارين لدرجات اهل الاكليروس والكهنة وتبريك ثياب الرهبان وتقديس الميرون والكنيسة</a></em>. Romae: Typis Sacrae Congregatio de Propaganda Fide.',
       ],
     },
-    variants: ['TEuch'],
+    variants: ['T Euch'],
   },
   {
     source: {
@@ -2276,7 +2262,6 @@ const DATA_1: Resource[] = [
   },
   {
     source: {
-      // NOTE: Listed as '— Bau'!
       title: 'Eine Kopt. Bauernpraktik (Mitt. d. deut. Inst. Kairo, vi, 1936)',
       description: [
         'Till, W. (1936). <a href="https://archive.org/details/egyptology-archive-vol.-6-1935/page/108/mode/2up">Eine koptische Bauernpraktik</a>. <em>Mitteilungen des Deutschen Archäologischen Instituts Kairo</em>, 6, pp. 108–114. ',
@@ -2286,7 +2271,6 @@ const DATA_1: Resource[] = [
   },
   {
     source: {
-      // NOTE: Listed as '— Oster'!
       title:
         'Osterbrief u. Predigt in achm. Dialekt, Vienna, 1931 (at first as Vi 10157)',
       description: [
@@ -2321,7 +2305,7 @@ const DATA_1: Resource[] = [
         'Bishop Rūfāʾīl al-Ṭūḫī. (1763). <em><a href="https://digitale-sammlungen.ulb.uni-bonn.de/content/titleinfo/232309">ⲡⲓϫⲱⲙ ⲛ̀ⲧⲉ ϯⲙⲉⲧⲣⲉϥϣⲉⲙϣⲓ ⲛ̀ⲛⲓⲙⲩⲥⲧⲏⲣⲓⲟⲛ ⲉⲑ︤ⲩ︥ ⲛⲉⲙ ϩⲁⲛϫⲓⲛϩⲏⲃⲓ ⲛ̀ⲧⲉ ⲛⲓⲣⲉϥⲙⲱⲟⲩⲧ ⲛⲉⲙ ϩⲁⲛϫⲓⲛϩⲱⲥ ⲛⲉⲙ ⲡⲓⲕⲁⲧⲁⲙⲉⲣⲟⲥ ⲛ̀ⲁⲃⲟⲧ — كتاب خدمة الاسرار المقدسة وتجاذيز الموتي والهوسات والقطمارس الشهري</a></em>. Romae: Typis Sacrae Congregatio de Propaganda Fide.',
       ],
     },
-    variants: ['TRit'],
+    variants: ['T Rit'],
   },
   {
     source: {
@@ -2358,7 +2342,7 @@ const DATA_1: Resource[] = [
         'Bishop Rūfāʾīl al-Ṭūḫī. (1763). <em><a href="https://digitale-sammlungen.ulb.uni-bonn.de/content/titleinfo/230285">ⲡⲓϫⲱⲙ ⲛ̀ⲧⲉ ⲛⲓⲑⲉⲟⲧⲟⲕⲓⲁ ⲛⲉⲙ ⲕⲁⲧⲁⲧⲁⲝⲓⲥ ⲛ̀ⲧⲉ ⲡⲓⲁⲃⲟⲧ ⲭⲟⲓⲁⲕ — كتاب الثاودوكيات وكترتيب شهر كيهك</a></em>. Romae: Typis Sacrae Congregatio de Propaganda Fide.',
       ],
     },
-    variants: ['TThe'],
+    variants: ['T The'],
   },
   {
     source: {
@@ -2401,6 +2385,8 @@ const DATA_1: Resource[] = [
     variants: ['Tur O'],
   },
   {
+    // TODO: (#522) "Turin" occurs on its own. Maybe "ostr" should simply be
+    // treated as a suffix?
     source: {
       title: 'ostraca in Museo Archeol., Turin (Crum’s copies)',
     },
@@ -2440,7 +2426,7 @@ const DATA_1: Resource[] = [
     source: {
       title: 'a B MS penes the Rev. W. Hatch, Cambridge, Mass',
     },
-    variants: ['WHatch'],
+    variants: ['W Hatch'],
   },
   {
     source: {
@@ -2476,7 +2462,7 @@ const DATA_1: Resource[] = [
         'Winstedt, E. O. (1910). <em><a href="https://archive.org/details/coptictextsonsai00wins/page/n5/mode/2up">Coptic Texts on Saint Theodore the General, St. Theodore the Eastern, Chamoul, and Justus</a></em>. (Text and Translation Society). London: Williams and Norgate.',
       ],
     },
-    variants: ['WTh'],
+    variants: ['W Th'],
   },
   {
     source: {
@@ -2529,7 +2515,7 @@ const DATA_2: Resource[] = [
     variants: ['Bell'],
   },
   {
-    variants: ['Berl Sitz'],
+    variants: ['Berl Sitz', 'Berl Sitzb'],
   },
   {
     variants: ['Bevan'],
@@ -2568,13 +2554,13 @@ const DATA_2: Resource[] = [
     variants: ['Erman-Lange Pap. Lansing'],
   },
   {
-    variants: ['FestschrEbers'],
+    variants: ['Festschr Ebers'],
   },
   {
-    variants: ['FPetrie frag Athribis'],
+    variants: ['F Petrie frag Athribis'],
   },
   {
-    variants: ['GMaspero Musée Eg.', 'GMaspero Musée Ég.'],
+    variants: ['G Maspero Musée Eg.', 'G Maspero Musée Ég.'],
   },
   {
     variants: ['Gött'],
@@ -2589,6 +2575,9 @@ const DATA_2: Resource[] = [
   },
   {
     variants: ['Inst franç Epiph De Gemm'],
+  },
+  {
+    variants: ['J G Wilkinson'],
   },
   {
     variants: ['Kabis'],
@@ -2638,13 +2627,10 @@ const DATA_2: Resource[] = [
     variants: ['OL'],
   },
   {
-    variants: ['OstrUnivCollLondon'],
-  },
-  {
     variants: ['Pliny'],
   },
   {
-    variants: ['RegPach'],
+    variants: ['Reg Pach', 'Reg. Pachom.', 'Reg Pachom'],
   },
   {
     variants: ['Reil Beiträge'],
@@ -2680,7 +2666,7 @@ const DATA_2: Resource[] = [
       title:
         'Acta Sanctorum Martyrum Orientalium et Occidentalium, by Stefano Evodio Assemani',
     },
-    variants: ['SE Assemani AcMartOr'],
+    variants: ['SE Assemani Ac Mart Or'],
   },
   {
     variants: ['Sethe Verbum'],
@@ -2690,7 +2676,7 @@ const DATA_2: Resource[] = [
       title:
         'Demotische Urkunden zum ägyptischen Bürgschaftsrechte vorzüglich der Ptolemäerzeit',
     },
-    variants: ['Sethe DemUrk'],
+    variants: ['Sethe Dem Urk'],
   },
   {
     source: {
@@ -2710,7 +2696,7 @@ const DATA_2: Resource[] = [
     source: {
       title: "Mina, Togo - Le Martyre d'Apa Epima",
     },
-    variants: ['TMina Epima', 'Mina'],
+    variants: ['T Mina Epima', 'Mina'],
   },
   {
     variants: [
@@ -2718,6 +2704,8 @@ const DATA_2: Resource[] = [
       'Univ Coll London',
       'Univ College Lond',
       'Univ College London',
+      // NOTE: Ostr stands for "ostracon", but we don't mention that!
+      'Ostr Univ Coll London',
     ],
   },
   {
@@ -2730,7 +2718,7 @@ const DATA_2: Resource[] = [
         '<em><a href="https://viewer.acdh.oeaw.ac.at/viewer/image/PH_172_1913/346/">Sitzungsberichte / Akademie der Wissenschaften in Wien, Philosophisch-Historische Klasse Sitzungsberichte der Philosophisch-Historischen Classe der Kaiserlichen Akademie der Wissenschaften, Wien, 172. Band, (Jahrgang 1913)</a></em>',
       ],
     },
-    variants: ['Vi Sitz'],
+    variants: ['Vi Sitz', 'V Sitz'],
   },
   {
     variants: ['Vita Pachom'],
@@ -2839,7 +2827,7 @@ function add(key: string, reference: Reference): void {
   log.ensure(
     !!res.variants.length,
     'resource has no abbreviations listed:',
-    res
+    res.source?.title
   );
 
   res.variants.forEach((variant: string): void => {
