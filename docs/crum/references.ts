@@ -950,7 +950,7 @@ const DATA_1: Resource[] = [
         '<em>Nachrichten von der Königlichen Gesellschaft der Wissenschaften zu Göttingen, Philologisch-Historische Klasse</em> began in 1894. Links to volumes from 1892-1923 available digitised on <a href="https://onlinebooks.library.upenn.edu/webbin/serial?id=nachkongesgotph">The Online Books Page</a> and some later volumes via <a href="https://catalog.hathitrust.org/Record/000517694">HathiTrust</a> in the US. ',
       ],
     },
-    variants: ['GöttN', 'Gött Nachr'],
+    variants: ['Gött N', 'Gött Nachr'],
   },
   {
     source: {
@@ -2019,7 +2019,7 @@ const DATA_1: Resource[] = [
         '(1922). <em><a href="https://archive.org/details/in.ernet.dli.2015.291952/page/n11/mode/2up">Recueil d’études égyptologiques dédiées à la mémoire de Jean-François Champollion à l’occasion du centenaire de la Lettre à M. Dacier relative à l’alphabet des hiéroglyphes phonétiques lue à l’Académie des Inscriptions et Belles-Lettres le 27 septembre 1922</a></em>. Paris: Librairie Ancienne Honoré Champion, Édouard Champion.',
       ],
     },
-    variants: ['RChamp'],
+    variants: ['R Champ'],
   },
   {
     source: {
@@ -2340,7 +2340,7 @@ const DATA_1: Resource[] = [
         'Guidi, I. (1900). <a href="http://periodici.librari.beniculturali.it/visualizzatore.aspx?anno=1900&amp;ID_testata=30&amp;ID_periodico=9057">Il testamento di Isacco e il testamento di Giacobbe</a>. <em>Rendiconti della Reale Accademia dei Lincei. Classe di Scienze Morali, Storiche e Filologiche</em>, Ser. 5, 9(3–4), pp. 223-264. ',
       ],
     },
-    variants: ['TstAb'],
+    variants: ['Tst Ab'],
   },
   {
     source: {
