@@ -17,6 +17,8 @@ import * as str from '../str.js';
 import * as white from './white.js';
 import * as dev from '../dev.js';
 import * as scan from '../scan.js';
+import * as dial from '../dialect.js';
+import * as iam from '../iam.js';
 
 /**
  * NOTE: All of the regexes below assume the following normalizations:
@@ -41,6 +43,7 @@ import * as scan from '../scan.js';
 const EXCLUDE: string = css.classQuery(
   cls.BULLET,
   cls.DIALECT,
+  dial.CLS.SIGLUM,
   cls.GLOSS,
   // NOTE: Excluding Coptic text prevents annotating the '†' character (for
   // qualitative forms). This is OK, as the notation is readily understood
@@ -1365,6 +1368,10 @@ function addCopyShortcuts(root: HTMLElement): void {
  * @param root
  */
 function handleFormSuperscripts(root: HTMLElement): void {
+  if (iam.amI('lexicon')) {
+    // We do not retain the `coptic` class in the Xooxle index!
+    return;
+  }
   const map: Map<string, string> = new Map<string, string>();
   root.querySelectorAll('sup').forEach((sup: HTMLElement): void => {
     if (sup.parentElement?.matches(EXCLUDE)) {
@@ -1380,14 +1387,26 @@ function handleFormSuperscripts(root: HTMLElement): void {
     }
     // This superscript is seen for the first time. Store the form that it
     // represents in the map.
-    const prev: ChildNode | null = sup.previousSibling;
-    if (
-      prev?.nodeType === Node.ELEMENT_NODE &&
-      (prev as Element).classList.contains(cls.COPTIC) &&
-      prev.textContent
+    // Almost always, the form is the immediate previous sibling. But there are
+    // exceptions, e.g. under ⲥⲃⲃⲉ[1] (p 321 b)
+    //
+    // [1] https://remnqymi.com/crum/1377.html#:~:text=F13
+    let prev: ChildNode | null = sup.previousSibling;
+    while (
+      prev &&
+      !(
+        prev.nodeType === Node.ELEMENT_NODE &&
+        (prev as Element).classList.contains(cls.COPTIC) &&
+        prev.textContent
+      )
     ) {
-      map.set(sup.textContent, prev.textContent);
+      prev = prev.previousSibling;
     }
+    if (!prev?.textContent) {
+      log.error('Unable to find the form of superscript', sup.textContent);
+      return;
+    }
+    map.set(sup.textContent, prev.textContent);
   });
 }
 /* eslint-enable max-lines */
