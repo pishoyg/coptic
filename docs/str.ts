@@ -1,3 +1,5 @@
+import * as log from './logger.js';
+import * as dev from './dev.js';
 /**
  * Check whether the given text is upper-case.
  * NOTE: If the text doesn't contain any "casable" characters, return true.
@@ -180,9 +182,24 @@ function* textContentAux(
  *
  * @param keys
  * @param bound
+ * @param knownDuplicates
  * @returns
  */
-export function regex(keys: string[], bound = true): string {
+export function regex(
+  keys: string[],
+  bound = true,
+  knownDuplicates?: string[]
+): string {
+  dev.play(() => {
+    // Log a warning about duplicate keys.
+    keys = keys.sort();
+    for (const [idx, key] of keys.entries()) {
+      if (idx && keys[idx - 1] === key && !knownDuplicates?.includes(key)) {
+        log.warn('Regex has duplicate keys:', key);
+      }
+    }
+  });
+
   const expression: string = keys
     // It's important to sort the keys by length, bringing longer keys first.
     // The regex stops whenever a match is encountered, and it processes the
