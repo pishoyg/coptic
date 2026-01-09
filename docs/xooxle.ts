@@ -351,7 +351,7 @@ interface Result {
   matches: Match[];
   boundary(): Boundary;
   match: boolean;
-  fragmentWord(): string | undefined;
+  fragment(): string | undefined;
   distance(): number;
 }
 
@@ -415,8 +415,8 @@ abstract class AggregateResult implements Result {
   /**
    * @returns
    */
-  public fragmentWord(): string | undefined {
-    return this.results.find((r: Result) => r.match)?.fragmentWord();
+  public fragment(): string | undefined {
+    return this.results.find((r: Result) => r.match)?.fragment();
   }
 
   /**
@@ -787,7 +787,7 @@ export class SearchResult extends AggregateResult {
     // The dash requires special handling, because it doesn't get encoded by
     // default, and it needs to be encoded in order for text fragments to work
     // correctly. See #574.
-    return `${link}#:~:text=${encodeURIComponent(this.fragmentWord()!).replace('-', '%2D')}`;
+    return `${link}#:~:text=${encodeURIComponent(this.fragment()!).replace('-', '%2D')}`;
   }
 
   /**
@@ -1176,7 +1176,7 @@ class LineSearchResult implements Result {
   /**
    * @returns
    */
-  public fragmentWord(): string | undefined {
+  public fragment(): string | undefined {
     /* Expand the match left and right such that it contains full words, for
      * text fragment purposes.
      * See
