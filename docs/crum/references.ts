@@ -2793,21 +2793,44 @@ class Postfix {
 }
 
 /**
- * Add the given source to the mapping.
+ * Add the given source to the mapping, including all space variants. A space
+ * variant is obtained by deleting any number of spaces from a given string.
+ * If the key has n spaces, this function adds 2^n entries to the MAPPING.
+ *
  * @param key
  * @param reference
  */
 function add(key: string, reference: Reference): void {
-  const parts: string[] = key.split(' ');
-  for (;;) {
-    key = parts.join(' ');
-    log.ensure(MAPPING[key] === undefined, 'duplicate key:', key);
-    MAPPING[key] = reference;
-    if (parts.length === 1) {
-      break;
+  /**
+   *
+   * @param index
+   * @param current
+   */
+  function* spaceVariants(index: number, current: string): Generator<string> {
+    const char: string | undefined = key[index];
+
+    if (char === undefined) {
+      // We've reached the end of the string.
+      yield current;
+      return;
     }
-    const last: string = parts.pop()!;
-    parts[parts.length - 1]! += last;
+
+    if (char === ' ') {
+      // Branch 1: Keep the space.
+      yield* spaceVariants(index + 1, `${current} `);
+
+      // Branch 2: Remove the space.
+      yield* spaceVariants(index + 1, current);
+      return;
+    }
+
+    // Not a space: Must keep the character and move on
+    yield* spaceVariants(index + 1, current + char);
+  }
+
+  for (const variant of spaceVariants(0, '')) {
+    log.ensure(MAPPING[variant] === undefined, 'duplicate key:', variant);
+    MAPPING[variant] = reference;
   }
 }
 
