@@ -77,7 +77,10 @@ const CHROME_WORD_CHARS: Set<string> = new Set<string>(["'"]);
  * @returns
  */
 export function isWordChar(char?: string): boolean {
-  return !!char && /\p{L}|\p{N}/u.test(char);
+  return (
+    !!char &&
+    /[\p{Letter}\p{Number}\p{Mark}\p{Connector_Punctuation}]/u.test(char)
+  );
 }
 
 /**
