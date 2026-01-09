@@ -829,7 +829,7 @@ function replaceReference(
   remainder: string
 ): { replacement: Node[]; remainder?: string } | undefined {
   const suffix: string | undefined = SUFFIX.exec(remainder)?.[0];
-  if (key === 'My' && !suffix) {
+  if (key === 'My' && !suffix && !remainder.startsWith(')')) {
     // False positive.
     return undefined;
   }
