@@ -174,7 +174,7 @@ const NUMBER_GROUP = `(?: ${NUMBER}| ?\\(${NUMBER}(?: ${NUMBER})*\\))`;
 
 const SUFFIX = new RegExp(`^\\.?${NUMBER_GROUP}+${str.WORD_END.source}`, 'u');
 const REFERENCE_FOLLOWUP = new RegExp(
-  `^(?:(?:,| =)${NUMBER_GROUP}+)+${str.WORD_END.source}`,
+  `^(?:(?:,| [=&])${NUMBER_GROUP}+)+${str.WORD_END.source}`,
   'u'
 );
 
