@@ -502,9 +502,12 @@ export function handleNagHammadi(root: HTMLElement): void {
  * @returns The Marcion database key of the current word.
  */
 function marcion(): number | undefined {
-  const key: number = parseInt(
-    document.getElementById(id.KEY)?.textContent ?? ''
-  );
+  const href = (document.getElementById(id.KEY) as HTMLAnchorElement).href;
+  const match = /(\d+)\.html$/.exec(href);
+  if (!match?.[1]) {
+    return undefined;
+  }
+  const key: number = parseInt(match[1]);
   return isNaN(key) ? undefined : key;
 }
 
