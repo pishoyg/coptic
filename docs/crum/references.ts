@@ -1091,7 +1091,7 @@ const DATA_1: Resource[] = [
         'Turayev, B. A. (1907). <a href="https://archive.org/details/Notes-Imperial-Russian-Archaeological-Society/ZVORAO_18_1908/page/n55/mode/2up">Ахмимскій папирусъ изъ коллекціи Н. П. Лихачева [An Akhmim Papyrus from the Collection of N. P. Likhachov]</a>. <em>Записки Восточного Отдѣления Императорского Русского Археологическаго Общества</em> [Transactions of the Eastern Branch of the Imperial Russian Archaeological Society], 18, 28-30. ',
       ],
     },
-    variants: ['Imp Russ Ar S'],
+    variants: ['Imp Russ Ar S', 'Imp Russ Arch S'],
   },
   {
     source: {
@@ -1229,6 +1229,7 @@ const DATA_1: Resource[] = [
       A: undefined,
       B: undefined,
       C: undefined,
+      D: undefined,
       E: undefined,
       F: undefined,
       G: undefined,
@@ -2127,6 +2128,7 @@ const DATA_1: Resource[] = [
       BIF: LOOKUP,
       Bor: LOOKUP,
       C: LOOKUP,
+      'Cai Copt Mus': LOOKUP,
       CO: LOOKUP,
       Cai: LOOKUP,
       'Cl Pr': LOOKUP,
@@ -2363,7 +2365,10 @@ const DATA_1: Resource[] = [
     },
     variants: ['Tuki'],
   },
-  // TODO: (#0) Consider merging the 'Tur*' entries below using postfixes.
+  // TODO: (#522) Merge the 'Tur*' entries below using postfixes. This would be
+  // helpful in such cases as ⲧⲁ- (p 390 a)[1].
+  //
+  // [1] https://remnqymi.com/crum/1554.html
   {
     source: {
       title:
