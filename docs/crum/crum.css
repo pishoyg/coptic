@@ -173,7 +173,8 @@ figcaption {
   .aramaic,
   .hebrew,
   .amharic,
-  .demotic {
+  .demotic,
+  .hieroglyphic {
     color: brown;
 
     /* Isolates the span from the surrounding context, ensuring that pieces of

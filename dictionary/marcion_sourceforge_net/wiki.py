@@ -94,8 +94,20 @@ def bracketed(exp: str, repeat: int = 2) -> str:
 # NOTE: It's important for Greek to precede Coptic, and Hebrew Arabic. Some
 # Greek words contain Coptic letters, and Arabic words often use the Hebrew
 # geresh.
-LANGS = ["GREEK", "COPTIC", "ARABIC", "HEBREW", "SYRIAC", "ETHIOPIC"]
-LANG_CLASS = {"SYRIAC": "ARAMAIC", "ETHIOPIC": "AMHARIC"}
+LANGS = [
+    "GREEK",
+    "COPTIC",
+    "ARABIC",
+    "HEBREW",
+    "SYRIAC",
+    "ETHIOPIC",
+    "HIEROGLYPH",
+]
+LANG_CLASS = {
+    "SYRIAC": "ARAMAIC",
+    "ETHIOPIC": "AMHARIC",
+    "HIEROGLYPH": "HIEROGLYPHIC",
+}
 
 DEMOTIC_RE: regex.Pattern[str] = regex.compile(
     r"^(?:[\p{Ll}ꜣꜥʾʿ]\p{M}*|[ '\-=\.])+$",
