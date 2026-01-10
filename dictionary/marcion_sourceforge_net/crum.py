@@ -789,8 +789,8 @@ class Root(Row):
             front=self._front,
             back=self._back,
             title=self.title(),
-            nxt=_path(Crum.next_key(self)),
-            prv=_path(Crum.prev_key(self)),
+            nxt=f"{Crum.next_key(self)}.html",
+            prv=f"{Crum.prev_key(self)}.html",
             search=SEARCH,
             js_start=dialects_js(dialects or set()),
             js_path=JS,
@@ -1210,14 +1210,12 @@ class Crum:
         return prv
 
     @staticmethod
-    def next_key(root: Root) -> str | None:
-        num: int | None = Crum.next_num(root)
-        return None if num is None else str(num)
+    def next_key(root: Root) -> str:
+        return str(Crum.next_num(root) or constants.MIN_KEY)
 
     @staticmethod
-    def prev_key(root: Root) -> str | None:
-        num: int | None = Crum.prev_num(root)
-        return None if num is None else str(num)
+    def prev_key(root: Root) -> str:
+        return str(Crum.prev_num(root) or constants.MAX_KEY)
 
 
 @cache.run_once
@@ -1622,10 +1620,6 @@ def notes_aux(dialects: set[str] | None = None) -> abc.Generator[deck.Note]:
         if dialects and not dialects.intersection(root.all_dialects):
             continue
         yield root.note(dialects)
-
-
-def _path(key: str | None) -> str:
-    return "" if not key else f"{key}.html"
 
 
 def _dedup(arr: list[int], at_most_once: bool = False) -> list[int]:
