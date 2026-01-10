@@ -351,7 +351,7 @@ interface Result {
   matches: Match[];
   boundary(): Boundary;
   match: boolean;
-  fragment(): string | undefined;
+  fragment(context: number): string | undefined;
   distance(): number;
 }
 
@@ -413,10 +413,11 @@ abstract class AggregateResult implements Result {
   }
 
   /**
+   * @param context
    * @returns
    */
-  public fragment(): string | undefined {
-    return this.results.find((r: Result) => r.match)?.fragment();
+  public fragment(context: number): string | undefined {
+    return this.results.find((r: Result) => r.match)?.fragment(context);
   }
 
   /**
@@ -777,17 +778,19 @@ export class SearchResult extends AggregateResult {
 
   /**
    *
+   * @param context
    * @returns
    */
-  private href(): string | undefined {
+  private href(context = 0): string | undefined {
     const link: string | undefined = this.link();
     if (!link) {
       return undefined;
     }
-    // The dash requires special handling, because it doesn't get encoded by
-    // default, and it needs to be encoded in order for text fragments to work
-    // correctly. See #574.
-    return `${link}#:~:text=${encodeURIComponent(this.fragment()!).replace('-', '%2D')}`;
+    const fragment: string | undefined = this.fragment(context);
+    if (!fragment) {
+      return link;
+    }
+    return `${link}#:~:text=${fragment}`;
   }
 
   /**
@@ -1174,38 +1177,84 @@ class LineSearchResult implements Result {
   }
 
   /**
+   * @param context
    * @returns
    */
-  public fragment(): string | undefined {
-    /* Expand the match left and right such that it contains full words, for
-     * text fragment purposes.
-     * See
-     * https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments
-     * for information about text fragments.
-     * Notice that browsers don't treat them uniformly, and we try to obtain a
-     * match that will work on most browsers.
-     * */
-    const match = this.matches[0];
+  public fragment(context = 0): string | undefined {
+    const match: Match | undefined = this.matches[0];
     if (!match) {
-      // This line doesn't have a match.
       return undefined;
     }
 
-    let start = match.start;
-    let end = match.end;
+    // 1. Expand match to full words
+    const start: number = this.scan(match.start, -1, (c) =>
+      orth.isWordCharInChrome(c)
+    );
+    const end: number = this.scan(match.end, 1, (c) =>
+      orth.isWordCharInChrome(c)
+    );
 
-    // Expand left: Move the start index left until a word boundary is found.
-    while (orth.isWordCharInChrome(this.text[start - 1])) {
-      start--;
+    // 2. Calculate Context
+    const prefixIdx: number = this.traverseContext(start, context, -1);
+    const suffixIdx: number = this.traverseContext(end, context, 1);
+
+    return browser.fragment(
+      this.text.substring(start, end),
+      this.text.substring(prefixIdx, start),
+      this.text.substring(end, suffixIdx)
+    );
+  }
+
+  /**
+   * moves an index in a specific direction (step) as long as the
+   * predicate returns true for the current character.
+   * @param idx
+   * @param step
+   * @param predicate
+   * @returns
+   */
+  private scan(
+    idx: number,
+    step: number,
+    predicate: (char: string) => boolean
+  ): number {
+    // When moving left (-1), we look at the character before the cursor
+    // (idx - 1).
+    // When moving right (1), we look at the character at the cursor (idx).
+    let charIdx = step < 0 ? idx - 1 : idx;
+
+    while (
+      charIdx >= 0 &&
+      charIdx < this.text.length &&
+      predicate(this.text[charIdx]!)
+    ) {
+      idx += step;
+      charIdx += step;
     }
+    return idx;
+  }
 
-    // Expand right: Move the end index right until a word boundary is found.
-    while (orth.isWordCharInChrome(this.text[end])) {
-      end++;
+  /**
+   * Repeats the "Skip Separators -> Consume Word" logic 'count' times.
+   * @param startIdx
+   * @param count
+   * @param step
+   * @returns
+   */
+  private traverseContext(
+    startIdx: number,
+    count: number,
+    step: number
+  ): number {
+    let idx = startIdx;
+    for (let i = 0; i < count; i++) {
+      // 1. Skip whitespace / delimiters.
+      idx = this.scan(idx, step, (c) => !orth.isWordCharInChrome(c));
+
+      // 2. Consume the word.
+      idx = this.scan(idx, step, (c) => orth.isWordCharInChrome(c));
     }
-
-    // Return the expanded substring.
-    return this.text.substring(start, end);
+    return idx;
   }
 
   /**

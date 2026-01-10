@@ -224,18 +224,18 @@ export function removeFragment(): void {
 export function urlWithFragment(): string {
   const href: string = window.location.href;
 
-  let [baseURL, fragment]: string[] = href.split('#:~:text=', 2);
-  if (baseURL === undefined || fragment === undefined) {
-    [baseURL, fragment] =
+  let [baseURL, frag]: string[] = href.split('#:~:text=', 2);
+  if (baseURL === undefined || frag === undefined) {
+    [baseURL, frag] =
       performance
         .getEntriesByType('navigation')[0]
         ?.name.split('#:~:text=', 2) ?? [];
   }
-  if (!baseURL || !fragment) {
+  if (!baseURL || !frag) {
     return href;
   }
 
-  return `${baseURL}#:~:text=${fragment.replace(/(?<!,)-(?!,)/g, '%2D')}`;
+  return `${baseURL}#:~:text=${frag.replace(/(?<!,)-(?!,)/g, '%2D')}`;
 }
 
 /**
@@ -255,4 +255,37 @@ export function setParam(
     url.searchParams.set(name, String(value));
   }
   window.history.replaceState('', '', url.toString());
+}
+
+/**
+ * @param textStart
+ * @param prefix
+ * @param suffix
+ * @returns
+ */
+export function fragment(textStart: string, prefix = '', suffix = ''): string {
+  /**
+   *
+   * @param text
+   * @returns
+   */
+  function encode(text: string): string {
+    // The dash requires special handling, because it doesn't get encoded by
+    // default, and it needs to be encoded in order for text fragments to work
+    // correctly.
+    return encodeURIComponent(text).replaceAll('-', '%2D');
+  }
+
+  textStart = textStart.trim();
+  prefix = prefix.trim();
+  suffix = suffix.trim();
+
+  let frag: string = encode(textStart);
+  if (prefix) {
+    frag = `${encode(prefix)}-,${frag}`;
+  }
+  if (suffix) {
+    frag = `${frag},-${encode(suffix)}`;
+  }
+  return frag;
 }
