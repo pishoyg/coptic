@@ -413,7 +413,7 @@ export function addCopticLookups(root: HTMLElement): void {
     // We exclude them from lookup hyperlinks in order to avoid confusion.
     // The type is usually "ⲡ" for masculine, "ⲧ" for feminine, "ⲛ" for
     // plural. Adding lookup hyperlinks to that doesn't really make sense.
-    [cls.TYPE, cls.WIKI, cls.NAG_HAMMADI]
+    [cls.TYPE, cls.WIKI, cls.NAG_HAMMADI, cls.HEADER]
   );
 }
 
@@ -426,7 +426,8 @@ export function addGreekLookups(root: HTMLElement): void {
     root,
     GREEK_RE,
     (match: RegExpExecArray): string => paths.greekLookup(match[0]),
-    [cls.GREEK]
+    [cls.GREEK],
+    [cls.HEADER]
   );
 }
 

@@ -49,6 +49,7 @@ export const GLOSS = 'gloss';
  * HEADING is the class of a the word starting a paragraph in the meaning of a
  * word.
  */
+export const HEADER = 'header';
 export const HEADING = 'heading';
 export const HEADWORD = 'headword';
 export const HEBREW = 'hebrew';

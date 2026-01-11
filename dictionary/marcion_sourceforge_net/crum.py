@@ -27,8 +27,15 @@ from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import lexical as lex
 from dictionary.marcion_sourceforge_net import parse, sheet, wiki
 from flashcards import deck
-from utils import cache, concur, ensure, file, gcp, log, page, paths, text
 from xooxle import xooxle
+
+# We can't put all imports on one line, because there is conflict between the
+# following pre-commit hooks: isort, add-trailing-comma, black
+# TODO: (#0) This is not ideal. Resolve hook conflicts.
+# pylint: disable=ungrouped-imports
+# isort: off
+from utils import cache, concur, ensure, file, gcp, log, page, paths, text
+from utils import numeral
 
 _NUM_DRV_COLS: int = 10
 _HUNDRED: int = 100
@@ -820,20 +827,20 @@ class Root(Row):
         yield "<td>"
         prev = Crum.prev_key(self)
         if prev:
-            yield f'<a class="navigate" href="{prev}.html">Prev</a>'
+            yield f'<a class="navigate" href="{prev}.html">⇐</a>'
         del prev
         yield "</td>"
         # Key.
         yield "<td>"
         yield f'<a class="navigate" id="key" href="{self.key}.html">'
-        yield self.key
+        yield numeral.coptic(self.num)
         yield "</a>"
         yield "</td>"
         # Next
         yield "<td>"
         nxt = Crum.next_key(self)
         if nxt:
-            yield f'<a class="navigate" href="{nxt}.html">Next</a>'
+            yield f'<a class="navigate" href="{nxt}.html">⇒</a>'
         del nxt
         yield "</td>"
         # Reset.
