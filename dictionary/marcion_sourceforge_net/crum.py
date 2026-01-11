@@ -1752,6 +1752,7 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
             # do it.
             # TODO: (#578) Import class names from Wiki, instead of duplicating
             # them below.
+            # TODO: (#507) You will probably have to retain "greek" as well.
             retain_classes={
                 "wiki",
                 "dialect",
@@ -1762,6 +1763,7 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
                 "hebrew",
                 "aramaic",
                 "demotic",
+                "hieroglyphic",
                 "gloss",
                 "tab",
                 "manual",

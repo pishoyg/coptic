@@ -91,10 +91,12 @@ def bracketed(exp: str, repeat: int = 2) -> str:
     return r"(?<!\[)" + r"\[" * repeat + exp + r"\]" * repeat + r"(?!\])"
 
 
+# LANGS lists language names as they appear in the Unicode names of characters
+# belonging to the language.
 # NOTE: It's important for Greek to precede Coptic, and Hebrew Arabic. Some
 # Greek words contain Coptic letters, and Arabic words often use the Hebrew
 # geresh.
-LANGS = [
+LANGS: list[str] = [
     "GREEK",
     "COPTIC",
     "ARABIC",
@@ -102,8 +104,14 @@ LANGS = [
     "SYRIAC",
     "ETHIOPIC",
     "HIEROGLYPH",
+    # NOTE: Demotic is not really detectable using a character's Unicode name,
+    # but it's included in the list for completion.
+    "DEMOTIC",
 ]
-LANG_CLASS = {
+
+# LANG_CLASS lists names of language classes, where the class name differs from
+# the language name.
+LANG_CLASS: dict[str, str] = {
     "SYRIAC": "ARAMAIC",
     "ETHIOPIC": "AMHARIC",
     "HIEROGLYPH": "HIEROGLYPHIC",
