@@ -1767,10 +1767,11 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
                 "gloss",
                 "tab",
                 "manual",
+                "corrigendum",
             },
             unit_tags={"p"},
             retain_tags=xooxle.RETAIN_TAGS_DEFAULT | {"p"},
-            retain_attributes={"data-key"},
+            retain_attributes={"data-key", "data-page"},
         ),
         xooxle.Capture(
             "marcion",
