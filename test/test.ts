@@ -28,17 +28,11 @@ PAGES_TO_TEST.forEach((path: string): void => {
   base.test(
     `loads ${path} without errors`,
     async ({ page }: { page: play.Page }): Promise<void> => {
-      // Block requests to Google Tag Manager to isolate the test.
-      // Our pages use Google Analytics, but they fail to communicate with it in
-      // the test environment, so we override the response in order to prevent
-      // them from failing the tests.
+      // Block known trackers to prevent them from triggering listeners
+      // and to speed up the 'networkidle' state.
       await page.route(
-        '**/*googletagmanager.com/**',
-        (route: play.Route): Promise<void> => {
-          // Fulfill the request with a 200 OK status and an empty body
-          // to prevent the browser from logging a failed request.
-          return route.fulfill({ status: 200, body: '' });
-        }
+        '**/*{doubleclick,googleads,google-analytics,googletagmanager}**',
+        (route: play.Route) => route.fulfill({ status: 200, body: '' })
       );
 
       // Add a listener to fail the test if we encounter any errors.
