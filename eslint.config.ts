@@ -38,9 +38,10 @@ export default config.defineConfig(
         'error',
         {
           code: 80,
-          ignoreTemplateLiterals: true,
-          ignoreStrings: true,
           ignoreRegExpLiterals: true,
+          ignoreStrings: true,
+          ignoreTemplateLiterals: true,
+          ignoreUrls: true,
         },
       ],
       '@typescript-eslint/no-non-null-assertion': 'warn',

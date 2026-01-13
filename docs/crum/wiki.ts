@@ -29,7 +29,7 @@ import * as iam from '../iam.js';
  * doesn't fully support Unicode.
  *
  * [1] https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize
- * [2] https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize */ // eslint-disable-line max-len
+ * [2] https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize */
 
 /**
  * EXCLUDE matches elements that don't require enrichment.
@@ -698,6 +698,8 @@ function replaceBible(
  *
  * NOTE: This heuristic is based on known examples (#524), but other cases
  * might turn up in the text that violate these rules.
+ * See:
+ * https://remnqymi.com/crum/?query=%28He%7CIs%7CGen%29%28%3F%21+%5Cd%2B%29&kellia=false&andreas=false&case=true&regex=true&wiki=true&full=true
  *
  * @param key
  * @param match - The chapter-verse match object.
@@ -711,47 +713,36 @@ function positive(
   remainder: string,
   node: Text
 ): boolean {
+  if (!['Gen', 'He', 'Is'].includes(key)) {
+    // All other keys are always true positives.
+    return true;
+  }
+
   if (match) {
     // This citation is followed by a chapter or verse number. It's a true
     // positive.
     return true;
   }
-  if (key === 'Gen' || key === 'He') {
-    // Definitely a false positive!
-    return false;
+
+  for (const token of [')', ' Kropp', ' om ']) {
+    if (remainder.startsWith(token)) {
+      return true;
+    }
   }
 
-  if (key !== 'Is') {
-    // Anything else is a true positive.
-    return true;
+  if (remainder === ' ') {
+    if (node.nextSibling?.textContent === 'l c' /* loco citato */) {
+      return true;
+    }
+
+    if (
+      node.nextSibling?.nodeType === Node.ELEMENT_NODE &&
+      (node.nextSibling as Element).classList.contains(cls.DIALECT)
+    ) {
+      return true;
+    }
   }
 
-  // Isaiah was found to have chapterless verseless citations that are true
-  // positives in the following cases only:
-  if (remainder.startsWith(')')) {
-    return true;
-  }
-
-  if (remainder.startsWith(' Kropp')) {
-    return true;
-  }
-
-  if (
-    remainder === ' ' &&
-    node.nextSibling?.textContent === 'l c' // loco citato
-  ) {
-    return true;
-  }
-
-  if (
-    remainder === ' ' &&
-    node.nextSibling?.nodeType === Node.ELEMENT_NODE &&
-    (node.nextSibling as Element).classList.contains(cls.DIALECT)
-  ) {
-    return true;
-  }
-
-  // Any other 'Is' is not Isaiah!
   return false;
 }
 
