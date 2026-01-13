@@ -254,6 +254,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'future', variants: ['fut'] },
   { fullForm: 'Hebrew', variants: ['Heb', 'Hebr'], noCaseVariant: true },
   { fullForm: 'hieroglyphic', variants: ['hierogl'] },
+  { fullForm: 'ibidem', variants: ['ib'], suffix: true },
   { fullForm: 'id est', variants: ['i e'] },
   { fullForm: 'idem quod', variants: ['i q'] },
   { fullForm: 'imperative', variants: ['imper', 'imperat'] },
