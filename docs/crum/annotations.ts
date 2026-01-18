@@ -261,6 +261,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'impersonal', variants: ['impers'] },
   { fullForm: 'imperfect', variants: ['impf', 'imperf'] },
   { fullForm: 'improbable', variants: ['improb'] },
+  { fullForm: 'inscription', variants: ['inscr'], suffix: true },
   { fullForm: 'interpretation', variants: ['interpr'] },
   { fullForm: 'in loco', variants: ['in loc'] },
   { fullForm: 'indeclinable', variants: ['indecl'] },
