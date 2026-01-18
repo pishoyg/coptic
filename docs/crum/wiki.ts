@@ -928,6 +928,16 @@ function replaceMatch(
     return replaceReference(key, node, remainder) ?? {};
   }
 
+  if (key.toLowerCase() === 'ib') {
+    const ib: HTMLElement | null = node.parentElement;
+    if (ib?.textContent.toLowerCase() !== 'ib') {
+      log.error('ib encountered in an unexpected node:', node);
+      return {};
+    }
+    handleIB(ib);
+    return {};
+  }
+
   if (key === 'p' || key === 'pp') {
     const res = handlePage(key + remainder, node);
     // If this is indeed a Crum page, return. Otherwise, fall back to treating
@@ -951,16 +961,6 @@ function replaceMatch(
   //   for all semicolons, which are abundant.
   if (key === ';') {
     return { replacement: [semicolon()] };
-  }
-
-  if (key.toLowerCase() === 'ib') {
-    const ib: HTMLElement | null = node.parentElement;
-    if (ib?.textContent.toLowerCase() !== 'ib') {
-      log.error('ib encountered in an unexpected node:', node);
-      return {};
-    }
-    handleIB(ib);
-    return {};
   }
 
   log.fatal('This is impossible!');
