@@ -14,6 +14,10 @@ _VIEWPORT_TAG: str = """
 <meta name="viewport" content="width=device-width, initial-scale=1">
 """
 
+_NO_INDEX_TAG: str = """
+<meta name="robots" content="noimageindex">
+"""
+
 _ICON_TAG: str = f"""
   <link rel="icon" type="image/x-icon" href="{paths.server(paths.ICON)}">
 """
@@ -139,6 +143,7 @@ def html_head_aux(
 
     yield _CHARSET_TAG
     yield _VIEWPORT_TAG
+    yield _NO_INDEX_TAG
     for path in css:
         yield f'<link href="{path}" rel="stylesheet" type="text/css">'
     yield _ICON_TAG
