@@ -44,7 +44,9 @@ KELLIA_JS: pathlib.Path = file(LEXICON_DIR, "kellia_main.js")
 ANDREAS_JS: pathlib.Path = file(LEXICON_DIR, "andreas_main.js")
 ANDREAS_CSS: pathlib.Path = file(LEXICON_DIR, "andreas.css")
 CRUM_CSS: pathlib.Path = file(LEXICON_DIR, "crum.css")
-CRUM_EXPLANATORY_DIR: pathlib.Path = directory(LEXICON_DIR, "explanatory")
+
+# TODO: (#263) Restore the explanatory directory.
+CRUM_EXPLANATORY_DIR: pathlib.Path = directory("explanatory")
 CRUM_SCAN_DIR: pathlib.Path = directory(LEXICON_DIR, "crum")
 DAWOUD_DIR: pathlib.Path = directory(SITE_DIR, "dawoud")
 BIBLE_DIR: pathlib.Path = directory(SITE_DIR, "bible")
