@@ -41,6 +41,8 @@ _NUM_DRV_COLS: int = 10
 _HUNDRED: int = 100
 assert not _HUNDRED % _NUM_DRV_COLS
 
+DISABLE_IMAGES: bool = True
+
 _CATEGORIES_PATH: pathlib.Path = paths.MARCION / "categories.yaml"
 
 # _FROM_MARCION is a set of entries that have been added to Crum by Marcion.
@@ -922,7 +924,7 @@ class Root(Row):
             yield page.LINE_BREAK
 
         # Images.
-        if not self.images:
+        if DISABLE_IMAGES or not self.images:
             yield page.LINE_BREAK
         else:
             yield '<div id="images" class="images">'
