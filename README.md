@@ -51,15 +51,13 @@ that aims to make the Coptic language more **learnable**.
 
 We use:
 
-- [GitHub](https://github.com/pishoyg/coptic/) for our code base.
-- [GitHub Pages](https://github.com/pishoyg/coptic/settings/pages) for our
-[website](https://remnqymi.com/).
+- GitHub for our code base.
+- GitHub Pages for our [website](https://remnqymi.com/).
 - [AWS Route 53](https://us-east-1.console.aws.amazon.com/route53/v2/hostedzones)
 for domain registration and DNS.
 - [Google
 Drive](https://drive.google.com/drive/folders/17jI92CKumjYQTXghThaaejPeD8ZbifPm?usp=drive_link) and [Google Cloud](https://console.cloud.google.com/welcome) for cloud storage.
-- [Google Analytics](https://analytics.google.com/analytics/web/#/p454349148)
-and [Google Search
+- [Google Analytics](https://analytics.google.com/) and [Google Search
 Console](https://search.google.com/search-console?resource_id=sc-domain%3Aremnqymi.com)
 for traffic tracking and analysis.
 
@@ -67,9 +65,6 @@ for traffic tracking and analysis.
 
 1. Clone the repo with `--depth=1` because the history is huge, and much of the
    outrageously large files have been cleaned up.
-   ```sh
-   git clone https://github.com/pishoyg/coptic.git --depth=1
-   ```
 
 1. Setting up the environment is necessary for a lot of pipelines to work.
 
@@ -144,8 +139,7 @@ Besides this file, docs can be found in:
 
    - In-code comments
    - [Planning framework](#planning)
-   - [Commit messages](https://github.com/pishoyg/coptic/commits/) (*albeit
-   less significantly*)
+   - Commit messages (*albeit less significantly*)
 
    User-facing documentation shouldn't live on the repo, but should go on [the
    website](http://remnqymi.com/) instead.
@@ -166,7 +160,7 @@ in mind that `make test` runs `git add --all`:
    pipelines (where one downstream pipeline consumes the output of another upstream
    pipeline), the downstream will fare well even if pre-commits haven't been
    executed on the output of the upstream pipeline.
-   If this were to change, reopen [#120](https://github.com/pishoyg/coptic/issues/120).
+   If this were to change, reopen #120.
 
    [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 
@@ -487,8 +481,7 @@ entities from other cultures, or modern entities.
 #### Undialected Entries
 
 Some entries have no dialect specified in Crum, so they get treated as belonging
-to all dialects. More information at
-[#237](https://github.com/pishoyg/coptic/issues/237).
+to all dialects. More information at #237.
 
 #### Entries that are Absent in Crum
 
@@ -606,46 +599,6 @@ We need data collectors. Data collection tasks bear the [`labor`
 label](https://github.com/pishoyg/coptic/labels/labor). The [`data`
 label](https://github.com/pishoyg/coptic/labels/data) is related, but is more
 generic.
-
-As of today, we need collectors for the following:
-
-- Crum ([#303](https://github.com/pishoyg/coptic/issues/303)):
-  - Review our [Crum dataset](https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg) ([#9](https://github.com/pishoyg/coptic/issues/9), [#320](https://github.com/pishoyg/coptic/issues/320)).
-  - Populate [appendices](https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg):
-    - Categories ([#321](https://github.com/pishoyg/coptic/issues/321))
-    - Sisters ([#227](https://github.com/pishoyg/coptic/issues/227))
-    - Last pages ([#255](https://github.com/pishoyg/coptic/issues/255))
-    - Senses ([#189](https://github.com/pishoyg/coptic/issues/189))
-    - Override types ([#126](https://github.com/pishoyg/coptic/issues/126))[^1]
-  - Collect explanatory images
-  ([#5](https://github.com/pishoyg/coptic/issues/5),
-  [#263](https://github.com/pishoyg/coptic/issues/263),
-  [#258](https://github.com/pishoyg/coptic/issues/258)).
-  - Populate the full-text (Wiki) version
-  ([#503](https://github.com/pishoyg/coptic/issues/503)).
-- Lexicon:
-  - Populate
-  [sentinels](https://drive.google.com/drive/u/0/folders/1Wlz6RXzozyypXtYV1Hq58uQAfJQV97Oo)
-- Bible:
-  - Rewrite the text ([#131](https://github.com/pishoyg/coptic/issues/131))
-  - Review morphological analysis[^2].
-- Dawoud (Future):
-  - [#117](https://github.com/pishoyg/coptic/issues/117)
-  - [#2](https://github.com/pishoyg/coptic/issues/2)
-  - [#3](https://github.com/pishoyg/coptic/issues/3)
-- Pronunciations (Future):
-  - [#216](https://github.com/pishoyg/coptic/issues/216)
-
-Other labor tasks may be less relevant as of the time of writing, and are not
-included.
-
-[^1]: *pending [#196](https://github.com/pishoyg/coptic/issues/196)*
-
-[^2]: *No issue! Pending
-  [#159](https://github.com/pishoyg/coptic/issues/159); or, more likely, a
-  new Sheets-based Bible pipeline
-  ([38](https://github.com/pishoyg/coptic/milestone/38), maybe
-[#193](http://github.com/pishoyg/coptic/issues/193))!*
 
 ***
 Ⲉ̀ϣⲱⲡ ⲁⲓϣⲁⲛⲉⲣⲡⲉⲱⲃϣ Ⲓⲗ̅ⲏ̅ⲙ̅, ⲉⲓⲉ̀ⲉⲣⲡⲱⲃϣ ⲛ̀ⲧⲁⲟⲩⲓⲛⲁⲙ: Ⲡⲁⲗⲁⲥ ⲉϥⲉ̀ϫⲱⲗϫ ⲉ̀ⲧⲁϣ̀ⲃⲱⲃⲓ ⲉ̀ϣⲱⲡ

@@ -100,7 +100,7 @@ class Pattern:
 # I also considered defining the Pattern class as a Protocol Buffer, and storing
 # the list of patterns in a prototext file. But this is way too much work!
 # As of now, this solution seems optimal.
-# See https://github.com/pishoyg/coptic/issues/183.
+# See #183.
 PATTERNS: list[Pattern] = [
     # Manually-written code files:
     Pattern(["index.html"]),

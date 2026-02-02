@@ -68,7 +68,7 @@ export function idempotent(tran: Translation): boolean {
 
 // CHROME_WORD_CHARS is a list of characters that are considered word characters
 // in Chrome.
-// See https://github.com/pishoyg/coptic/issues/286 for context.
+// See #286 for context.
 const CHROME_WORD_CHARS: Set<string> = new Set<string>(["'"]);
 
 /**
@@ -87,7 +87,7 @@ export function isWordChar(char?: string): boolean {
  *
  * @param char
  * @returns
- * See https://github.com/pishoyg/coptic/issues/286 for context.
+ * See #286 for context.
  */
 export function isWordCharInChrome(char?: string): boolean {
   return isWordChar(char) || (!!char && CHROME_WORD_CHARS.has(char));

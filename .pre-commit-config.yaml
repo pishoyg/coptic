@@ -11,11 +11,10 @@
 # NOTE: pre-commit is unable to propagate environment variables on its own.
 # Generally, shell scripts invoked from pre-commit, and which depend on
 # environment variables, should source the.env file.
-# Alternatively, migrate them to Python.
-# (https://github.com/pishoyg/coptic/issues/183)
+# Alternatively, migrate them to Python. (#183)
 
 # NOTE: Given fail_fast, you should the more problematic hooks first.
-# See https://github.com/pishoyg/coptic/issues/94.
+# See #94.
 # NOTE: Fail fast won't be optimal if your pipelines get better at writing
 # consistent output that doesn't get modified by the pre-commits. Revisit.
 fail_fast: true
@@ -43,7 +42,7 @@ repos:
         language: system
         files: .*\.html
         exclude: ^docs/(crum|crum/crum|dawoud)/index.html$
-      # See https://github.com/pishoyg/coptic/issues/317 for why
+      # See #317 for why
       # `site/crum.html` needs the --warn-proprietary-attributes flag.
       - id: crum-tidy-html
         name: crum-tidy-html
