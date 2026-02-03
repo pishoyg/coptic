@@ -594,6 +594,7 @@ const DATA_1: Resource[] = [
       Copt: 'Coptic',
       copt: 'Coptic',
       '(P)': undefined,
+      P: undefined,
       Marsh: 'Marshall Collection',
     },
   },

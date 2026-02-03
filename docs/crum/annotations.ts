@@ -139,6 +139,11 @@ export const DATA: Abbreviation[] = [
   // 'passive', and is sometimes the verb 'pass'
   { fullForm: 'passim', variants: ['pass'], suffix: true },
   { fullForm: 'conjunctive participle', variants: ['p c'] },
+  // TODO: (#0) 'pl' sometimes stands for 'plate' (example: [1]).
+  // We need to figure out a way to handle that!
+  // If we were to manually annotate it (#668), it wouldn't be parsed as a
+  // reference suffix, which is not ideal.
+  // [1] https://remnqymi.com/crum/2610.html#:~:text=%20291%2C%20JEA%2021-,pl
   { fullForm: 'plural', variants: ['pl'] },
   // Crum has "possessive pronoun" for "poss", but "possessive" is suitable. See
   // examples: https://remnqymi.com/crum/?query=poss&full=true&wiki=true.
@@ -262,6 +267,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'imperfect', variants: ['impf', 'imperf'] },
   { fullForm: 'improbable', variants: ['improb'] },
   { fullForm: 'inscription', variants: ['inscr'], suffix: true },
+  { fullForm: 'instrumental', variants: ['instr'] },
   { fullForm: 'interpretation', variants: ['interpr'] },
   { fullForm: 'in loco', variants: ['in loc'] },
   { fullForm: 'indeclinable', variants: ['indecl'] },
