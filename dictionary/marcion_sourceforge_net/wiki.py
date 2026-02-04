@@ -171,7 +171,9 @@ _SUBSTITUTIONS: list[Substitution] = [
     # NOTE: While most browsers and pipelines can deal with a literal ampersand,
     # BeautifulSoup often misinterprets the combination "&c;" so we convert it
     # explicitly.
-    Substitution("&", "&amp;", text_repl="&"),
+    # In some cases, we made the mistake of typing "&amp;" directly, instead of
+    # just "&". We ban the token "&amp;amp" to catch this error.
+    Substitution("&", "&amp;", text_repl="&", ban=["&amp;amp"]),
     # The asterisk is not a reserved character in modern HTML, so we don't need
     # to use `&ast;`. However, using a plain asterisk risks conflicting with the
     # bold rule below. We therefore leave it up to our linters to replace
