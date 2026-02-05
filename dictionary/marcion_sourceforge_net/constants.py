@@ -253,6 +253,10 @@ DETACHED_TYPES: dict[str, lexical.Type] = {
     # TODO: (#64) Once detached types are correctly placed in the HTML, show the
     # variant label. We hide it now because it would be too confusing!
     "var": lexical.Type("var", "(var)", "variant", None, append=False),
+    # incidental words are words that are extracted solely from Crum's
+    # illustrative citations, and which do not appear as standalone headwords
+    # or sub-entries in the original text.
+    "inc": lexical.Type("inc", "(inc)", "incidental", None, append=False),
 }
 
 # What characters are allowed to be present in a Coptic morpheme?
