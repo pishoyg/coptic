@@ -34,14 +34,14 @@ from xooxle import xooxle
 # TODO: (#0) This is not ideal. Resolve hook conflicts.
 # pylint: disable=ungrouped-imports
 # isort: off
-from utils import cache, concur, ensure, file, gcp, log, page, paths, text
+from utils import cache, concur, ensure, file, gcp, log, page, paths, text, env
 from utils import numeral
 
 _NUM_DRV_COLS: int = 10
 _HUNDRED: int = 100
 assert not _HUNDRED % _NUM_DRV_COLS
 
-DISABLE_IMAGES: bool = True
+ENABLE_IMAGES: bool = env.boolean("ENABLE_IMAGES")
 
 _CATEGORIES_PATH: pathlib.Path = paths.MARCION / "categories.yaml"
 
@@ -924,7 +924,7 @@ class Root(Row):
             yield page.LINE_BREAK
 
         # Images.
-        if DISABLE_IMAGES or not self.images:
+        if not ENABLE_IMAGES or not self.images:
             yield page.LINE_BREAK
         else:
             yield '<div id="images" class="images">'
