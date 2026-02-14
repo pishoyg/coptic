@@ -234,6 +234,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'definite', variants: ['def', 'defin'] },
   { fullForm: 'demonstrative', variants: ['demonstr', 'demonst'] },
   { fullForm: 'determination', variants: ['determ', 'determin'] },
+  { fullForm: 'diminutive', variants: ['dimin'] },
   { fullForm: 'duplicate', variants: ['duplic', 'dupl'] },
   {
     fullForm: 'East',
