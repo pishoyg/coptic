@@ -230,7 +230,21 @@ _SUBSTITUTIONS: list[Substitution] = [
         ban=["^"],
     ),
     Substitution(
-        bracketed("(.*?)", 3),
+        # Ensure the headword is preceded by the start of the string
+        # (optionally with a single opening parenthesis) or by the
+        # separator ']]], ' from a previous headword.
+        # This prevents false positives in cases where multiple pieces of Coptic
+        # text in the entry contain brackets at the beginning or the end,
+        # resulting in triple brackets.
+        # Headwords always occur:
+        # - Either at the very beginning of the text, occasionally preceded by a
+        #   single parenthesis (e.g. ϩⲟⲟⲩⲣⲉ on page 737 b [1]).
+        # - Following another headword (e.g. ϩⲁ, ϩⲟ on page 635 a [2]).
+        #
+        # [1] https://remnqymi.com/crum/2321.html
+        # [2] https://remnqymi.com/crum/2095.html
+        # [2] https://remnqymi.com/crum/2096.html
+        r"(?:(?<=^)|(?<=^\()|(?<=]]], ))" + bracketed("(.*?)", 3),
         r'<span class="headword coptic">\1</span>',
         ban=["[[[", "]]]"],
     ),
