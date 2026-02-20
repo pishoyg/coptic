@@ -473,11 +473,7 @@ export function handleNagHammadi(root: HTMLElement): void {
       html.replaceNode(
         elem,
         NAG_HAMMADI_RE,
-        (
-          match: RegExpExecArray,
-          _,
-          remainder: string
-        ): { replacement: Node[]; remainder: string } => {
+        (match: RegExpExecArray): (Node | string)[] => {
           const anchor: HTMLAnchorElement = document.createElement('a');
           anchor.target = '_blank';
           const [codex, title, leaf, line]: [string, string, string, string] = [
@@ -490,10 +486,7 @@ export function handleNagHammadi(root: HTMLElement): void {
           // Notice that we intentionally drop the tractate number from the
           // output, because it doesn't make sense outside of Marcion.
           anchor.textContent = `codex ${codex} - ${title} - ${leaf}`;
-          return {
-            replacement: [anchor],
-            remainder: `: ${line}: ${remainder}`,
-          };
+          return [anchor, `: ${line}: `];
         }
       );
     });

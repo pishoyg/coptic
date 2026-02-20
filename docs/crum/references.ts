@@ -23,6 +23,21 @@ export interface Source {
 }
 
 /**
+ *
+ * @param content
+ * @param flag
+ * @returns
+ */
+export function maybeI(content: Node | string, flag?: boolean): Node | string {
+  if (!flag) {
+    return content;
+  }
+  const i: HTMLElement = document.createElement('i');
+  i.append(content);
+  return i;
+}
+
+/**
  * @returns
  */
 export function ibidem(): HTMLElement {
@@ -196,23 +211,20 @@ export class Reference {
     span.querySelector(`.${drop.CLS.DROPPABLE}`)?.append(
       ...suffix.flatMap((node: string | Node): (Node | string)[] => {
         const text = typeof node === 'string' ? node : (node.textContent ?? '');
+        const italic = node instanceof Element && node.nodeName === 'I';
         ann.RE.lastIndex = 0;
         return Array.from(text.matchAll(ann.RE))
           .map((match: RegExpExecArray): string => match[0])
-          .flatMap((abb: string): (Node | string)[] =>
-            ann.MAPPING[abb]?.suffix
-              ? [
+          .flatMap((abb: string): (Node | string)[] => {
+            const annot = ann.MAPPING[abb];
+            return !annot?.suffix
+              ? []
+              : [
                   document.createElement('hr'),
-                  // TODO: (#0) Suffixes could live in text nodes, or <i>
-                  // or <sup> tags. <sup> tags only contain numbers, and never
-                  // annotations.
-                  // For suffixes inside <i> tags, we should ideally wrap the
-                  // abbreviation in the tooltip in an <i> tag as well.
-                  ...abbreviation(abb),
-                  ann.MAPPING[abb].fullForm,
-                ]
-              : []
-          );
+                  ...abbreviation(abb, italic),
+                  maybeI(annot.fullForm, italic),
+                ];
+          });
       })
     );
   }
@@ -2743,11 +2755,12 @@ const DATA_2: Resource[] = [
 /**
  *
  * @param name
+ * @param italic
  * @returns
  */
-function abbreviation(name: string | Node): HTMLElement[] {
+function abbreviation(name: string | Node, italic?: boolean): HTMLElement[] {
   const span: HTMLSpanElement = document.createElement('span');
-  span.append(name, ': ');
+  span.append(maybeI(name, italic), ': ');
   span.classList.add(cls.ABBREVIATION);
   return [span];
 }

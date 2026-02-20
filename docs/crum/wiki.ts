@@ -127,8 +127,8 @@ const BIBLE_FOLLOWUP = new RegExp(
   'u'
 );
 
-const PAGE_RE = /^p{1,2} ([0-9]+) $/;
-const PAGE_FOLLOWUP_RE = /^, ([0-9]+) $/;
+const PAGE_RE = /^p{1,2} ([0-9]+) ([ab])\b/;
+const PAGE_FOLLOWUP_RE = /^(, )([0-9]+) ([ab])\b/;
 
 // Pay attention to the following:
 // - Diacritics:
@@ -267,45 +267,51 @@ export function handle(root: HTMLElement): void {
  * @param {...any} children
  * @returns
  */
-function annotation(
-  tip: string,
-  ...children: (Node | string)[]
-): HTMLSpanElement {
-  const span: HTMLSpanElement = document.createElement('span');
-  span.append(...children);
-  drop.addDroppable(span, [tip]);
-  span.classList.add(cls.ANNOTATION);
-  return span;
+function annotation(tip: string, ...children: (Node | string)[]): Element {
+  let elem: Element;
+  if (children.length === 1 && children[0] instanceof Element) {
+    elem = children[0];
+  } else {
+    elem = document.createElement('span');
+    elem.append(...children);
+  }
+  drop.addDroppable(elem, [tip]);
+  elem.classList.add(cls.ANNOTATION);
+  return elem;
 }
 
 /**
  *
  * @param key
- * @param node
- * @param remainder
- * @param preceding
+ * @param context
  * @returns
  */
 function handleAnnotation(
   key: string,
-  node: Text,
-  remainder: string,
-  preceding: string
+  context: html.ReplaceNodesContext
 ): { replacement: Node[] } | undefined {
   const annot: ann.Annotation | undefined = ann.MAPPING[key];
   if (!annot) {
     log.fatal("Can't find annotation:", key);
   }
 
-  if (annot.noStyledParent && node.parentElement?.closest('i, sup')) {
-    // This annotation can't show in italicized text, and this node is
-    // italicized.
+  const nodes = Array.from(context.substring(key.length));
+  if (nodes.length > 1) {
+    log.warn('The annotation', key, 'spans multiple nodes:', nodes);
+  }
+  if (
+    annot.noStyledParent &&
+    nodes.some((node) => node instanceof Element && node.matches('i, sup'))
+  ) {
+    // This annotation can't show in styled text, and this node is
+    // styled.
     return undefined;
   }
 
   if (
     key === 'art' &&
-    (remainder.startsWith(' thou') || preceding.endsWith('thou '))
+    (context.remainder.startsWith(' thou') ||
+      context.preceding.endsWith('thou '))
   ) {
     // False positive!
     return undefined;
@@ -317,97 +323,68 @@ function handleAnnotation(
   // tolerable than false positives, so this is OK.
   // The interpretation of the mark is quite clear, so it doesn't really need an
   // annotation.
-  if (key === '?' && !['(', ' '].includes(preceding.slice(-1))) {
+  if (
+    key === '?' &&
+    !['(', ' '].some((token) => context.preceding.endsWith(token))
+  ) {
     return undefined;
   }
 
-  return { replacement: [annotation(annot.fullForm, key)] };
+  return { replacement: [annotation(annot.fullForm, ...nodes)] };
 }
 
 /**
  * Insert hyperlinks for page references in the text.
  *
- * @param text
- * @param node
+ * @param key
+ * @param context
  * @returns
  */
 function handlePage(
-  text: string,
-  node: Text
-): { replacement: (Node | string)[]; remainder: string } | undefined {
-  // A page number has the format 'p [0-9]+ [ab]?'. The regex matches this
+  key: string,
+  context: html.ReplaceNodesContext
+): html.ReplaceNodesResult | undefined {
+  // A page number has the format 'pp? [0-9]+ [ab]?'. The regex matches this
   // format, excluding the column, which is expected to live in the <i> tag that
   // is the next sibling.
-  const match: RegExpExecArray | null = PAGE_RE.exec(text);
-  const next: ChildNode | null = node.nextSibling;
-  if (!match || !next) {
+  let match: RegExpExecArray | null = PAGE_RE.exec(key + context.remainder);
+  if (!match) {
     return undefined;
   }
-  const col: string | null = next.textContent;
-  if (col !== 'a' && col !== 'b') {
-    return undefined;
-  }
-  // Handle followups before mutating the DOM.
-  handlePageFollowups(next.nextSibling);
-  const a = html.anchor(
-    paths.crumScan(`${match[1]!}${col}`),
+
+  const replacement: (Node | string)[] = [];
+  let a = html.anchor(
+    paths.crumScan(`${match[1]!}${match[2]!}`),
     true,
-    match[0],
-    next
+    ...context.substring(match[0].length)
   );
   a.classList.add(cls.PAGE);
-  return { replacement: [a], remainder: '' };
-}
+  replacement.push(a);
 
-/**
- *
- * @param node
- */
-function handlePageFollowups(node: ChildNode | null): void {
-  // Iteratively check for subsequent pages in the list
-  // Structure expected: [Anchor] -> [Text: ", 123 "] -> [I: "a" or "b"]
-  let next: ChildNode | null | undefined;
-  while (node && (next = node.nextSibling)) {
-    // Check validation:
-    // 1. Text must match ", [number] "
-    // 2. Column element must contain 'a' or 'b'
-    const match: RegExpExecArray | null = PAGE_FOLLOWUP_RE.exec(
-      node.textContent ?? ''
-    );
-
-    if (!match) {
-      break;
-    }
-    const col: string | null = next.textContent;
-    if (col !== 'a' && col !== 'b') {
-      break;
-    }
-
-    const pageNum: string = match[1]!;
-
-    // Create the new anchor
-    // We include the number, the space (implied in the regex match), and
-    // the column node.
-    // Note: Passing `next` to html.anchor moves it from the DOM into the
-    // anchor.
-    const nextAnchor = html.anchor(
-      paths.crumScan(`${pageNum}${col}`),
+  // munch tracks how much text we have munched from the remainder.
+  let munch = match[0].length - key.length;
+  for (
+    let remainder = context.remainder.slice(munch);
+    (match = PAGE_FOLLOWUP_RE.exec(remainder));
+    remainder = remainder.slice(match[0].length)
+  ) {
+    const comma = match[1]!;
+    replacement.push(comma);
+    a = html.anchor(
+      paths.crumScan(`${match[2]!}${match[3]!}`),
       true,
-      pageNum,
-      ' ',
-      next
+      ...context.substring(
+        match[0].length + comma.length,
+        key.length + munch + comma.length
+      )
     );
-    nextAnchor.classList.add(cls.PAGE);
+    a.classList.add(cls.PAGE);
+    replacement.push(a);
 
-    // Adjust the text node to only contain the comma and space separator
-    node.textContent = ', ';
-
-    // Insert the new anchor after the comma
-    node.after(nextAnchor);
-
-    // Advance the loop to check for another page after this new one
-    node = nextAnchor.nextSibling;
+    munch += match[0].length;
   }
+
+  return { replacement, munch };
 }
 
 /**
@@ -491,13 +468,20 @@ class Citation {
 
   /**
    * @param ibidem
+   * @param content
    * @returns
    */
-  public anchor(ibidem = false): HTMLAnchorElement {
+  public anchor(
+    ibidem = false,
+    ...content: (Node | string)[]
+  ): HTMLAnchorElement {
+    if (!content.length) {
+      content.push(this.raw);
+    }
     const a = html.anchor(
       paths.bible(this.book.path, this.chapter, this.verse),
       true,
-      this.raw
+      ...content
     );
     a.classList.add(cls.BIBLE);
     a.dataset[Citation.DATA_BOOK] = this.book.abb;
@@ -574,15 +558,15 @@ class Citation {
 /**
  *
  * @param key
- * @param node
  * @param remainder
+ * @param next
  * @returns
  */
 function parseBibleCitation(
   key: string,
-  node: Text,
-  remainder: string
-): [Citation | null, string | null] {
+  remainder: string,
+  next: Node | null | undefined
+): [Citation | undefined, number | undefined] {
   // Parse the numbers following the book abbreviation.
   CHAPTER_VERSE.lastIndex = 0;
   const match: RegExpExecArray | null = CHAPTER_VERSE.exec(remainder);
@@ -600,12 +584,15 @@ function parseBibleCitation(
     key = 'Dan';
   }
 
-  if (!positive(key, match, remainder, node)) {
+  if (!positive(key, match, remainder, next)) {
     // False positive!
-    return [null, null];
+    return [undefined, undefined];
   }
 
-  return [new Citation(raw, chapter, verse, bib.MAPPING[key]!), remainder];
+  return [
+    new Citation(raw, chapter, verse, bib.MAPPING[key]!),
+    match?.[0].length,
+  ];
 }
 
 /**
@@ -662,25 +649,20 @@ function parseBibleFollowups(
 /**
  *
  * @param key
- * @param node
- * @param remainder
+ * @param context
  * @returns
  */
 function replaceBible(
   key: string,
-  node: Text,
-  remainder: string
-): { replacement: (Node | string)[]; remainder: string } | undefined {
-  const [cit, rem]: [Citation | null, string | null] = parseBibleCitation(
-    key,
-    node,
-    remainder
-  );
+  context: html.ReplaceNodesContext
+): html.ReplaceNodesResult | undefined {
+  const [cit, munch]: [Citation | undefined, number | undefined] =
+    parseBibleCitation(key, context.remainder, context.chainNextSibling);
   if (!cit?.valid()) {
     return undefined;
   }
 
-  return { replacement: [cit.anchor()], remainder: rem ?? remainder };
+  return { replacement: [cit.anchor(false)], munch };
 }
 
 /**
@@ -711,7 +693,7 @@ function positive(
   key: string,
   match: RegExpExecArray | null,
   remainder: string,
-  node: Text
+  node: Node | null | undefined
 ): boolean {
   if (!['Gen', 'He', 'Is'].includes(key)) {
     // All other keys are always true positives.
@@ -724,23 +706,18 @@ function positive(
     return true;
   }
 
-  for (const token of [')', ' Kropp', ' om ']) {
-    if (remainder.startsWith(token)) {
-      return true;
-    }
+  if (
+    [')', ' Kropp', ' om ', ' l c'].some((token) => remainder.startsWith(token))
+  ) {
+    return true;
   }
 
-  if (remainder === ' ') {
-    if (node.nextSibling?.textContent === 'l c' /* loco citato */) {
-      return true;
-    }
-
-    if (
-      node.nextSibling?.nodeType === Node.ELEMENT_NODE &&
-      (node.nextSibling as Element).classList.contains(cls.DIALECT)
-    ) {
-      return true;
-    }
+  if (
+    remainder === ' ' &&
+    node?.nodeType === Node.ELEMENT_NODE &&
+    (node as Element).classList.contains(cls.DIALECT)
+  ) {
+    return true;
   }
 
   return false;
@@ -776,7 +753,7 @@ function handleBibleFollowups(root: HTMLElement): void {
  * @returns
  */
 function* suffixFollowups(
-  maybeSUP: ChildNode | null,
+  maybeSUP: Node | null | undefined,
   between: string
 ): Generator<Node | string> {
   if (between) {
@@ -812,37 +789,37 @@ function* suffixFollowups(
 /**
  *
  * @param key
- * @param node
- * @param remainder
+ * @param context
  * @returns
- * TODO: (#572) Enrichment Code Processes Chains of Nodes.
  */
 function replaceReference(
   key: string,
-  node: Text,
-  remainder: string
-): { replacement: Node[]; remainder?: string } | undefined {
-  const suffix: string | undefined = SUFFIX.exec(remainder)?.[0];
-  if (key === 'My' && !suffix && !remainder.startsWith(')')) {
+  context: html.ReplaceNodesContext
+): html.ReplaceNodesResult | undefined {
+  const suffix: string | undefined = SUFFIX.exec(context.remainder)?.[0];
+  if (key === 'My' && !suffix && !context.remainder.startsWith(')')) {
     // False positive.
     return undefined;
   }
 
-  const span: HTMLSpanElement = ref.MAPPING[key]!.span(key);
+  const span: HTMLSpanElement = ref.MAPPING[key]!.span(
+    ...context.substring(key.length)
+  );
+
   if (!suffix) {
     return { replacement: [span] };
   }
 
   // Chop off the suffix from the remainder.
-  remainder = remainder.slice(suffix.length);
+  const remainder = context.remainder.slice(suffix.length);
   // Append the suffix.
   ref.Reference.suffix(
     span,
-    suffix,
-    ...suffixFollowups(node.nextSibling, remainder)
+    ...context.substring(suffix.length, key.length),
+    ...suffixFollowups(context.chainNextSibling, remainder)
   );
 
-  return { replacement: [span], remainder };
+  return { replacement: [span], munch: suffix.length };
 }
 
 /**
@@ -851,15 +828,23 @@ function replaceReference(
  * @returns An array containing nodes in the root that are either:
  * 1. Text nodes.
  * 2. Element nodes with the MANUAL class.
+ * 3. Element nodes that are <i> tags.
  */
 function walk(root: Node): Node[] {
   const walker = document.createTreeWalker(
     root,
     NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT,
     (node: Node): number => {
-      if (node.parentElement?.classList.contains(cls.MANUAL)) {
+      const parent = node.parentElement;
+      if (parent?.classList.contains(cls.MANUAL)) {
         // Manual nodes are handled individually. Their children don't get
         // processed.
+        return NodeFilter.FILTER_REJECT;
+      }
+
+      if (parent?.nodeName === 'I') {
+        // We handle <i> elements as atomic nodes in the chain. Thus, we should
+        // not visit their children.
         return NodeFilter.FILTER_REJECT;
       }
 
@@ -868,18 +853,22 @@ function walk(root: Node): Node[] {
         return NodeFilter.FILTER_ACCEPT;
       }
 
-      if (node.nodeType !== Node.ELEMENT_NODE) {
+      if (!(node instanceof Element)) {
         // A non-text and non-element node should be skipped.
         return NodeFilter.FILTER_SKIP;
       }
 
-      if ((node as Element).matches(EXCLUDE)) {
+      if (node.matches(EXCLUDE)) {
         // If this element matches the exclude selector, FILTER_REJECT
         // tells TreeWalker to discard this node AND its children.
         return NodeFilter.FILTER_REJECT;
       }
 
-      if ((node as Element).classList.contains(cls.MANUAL)) {
+      if (node.classList.contains(cls.MANUAL)) {
+        return NodeFilter.FILTER_ACCEPT;
+      }
+
+      if (node.nodeName === 'I') {
         return NodeFilter.FILTER_ACCEPT;
       }
 
@@ -899,18 +888,12 @@ function walk(root: Node): Node[] {
 /**
  * Replace an enrichment match.
  *
- * @param match
- * @param node
- * @param remainder
- * @param preceding
+ * @param context
  * @returns
  */
 function replaceMatch(
-  match: RegExpExecArray,
-  node: Text,
-  remainder: string,
-  preceding: string
-): { replacement?: (Node | string)[]; remainder?: string } {
+  context: html.ReplaceNodesContext
+): html.ReplaceNodesResult {
   // There is a singleton known key that is interpretable as a Bible
   // citation or a Reference, and that is "Am" which could mean:
   // - Amos
@@ -919,27 +902,21 @@ function replaceMatch(
   // As a postfix of Sh (ShAm), it's Amélineau.
   //
   // For this reason, we prioritize Bible matches over Reference matches.
-  const key: string = match[0];
+  const key: string = context.match[0];
   if (key in bib.MAPPING || key in DAN_OVERRIDE) {
-    return replaceBible(key, node, remainder) ?? {};
+    return replaceBible(key, context) ?? {};
   }
 
   if (key in ref.MAPPING) {
-    return replaceReference(key, node, remainder) ?? {};
+    return replaceReference(key, context) ?? {};
   }
 
   if (key.toLowerCase() === 'ib') {
-    const ib: HTMLElement | null = node.parentElement;
-    if (ib?.textContent.toLowerCase() !== 'ib') {
-      log.error('ib encountered in an unexpected node:', node);
-      return {};
-    }
-    handleIB(ib);
-    return {};
+    return replaceIB(context);
   }
 
   if (key === 'p' || key === 'pp') {
-    const res = handlePage(key + remainder, node);
+    const res = handlePage(key, context);
     // If this is indeed a Crum page, return. Otherwise, fall back to treating
     // it as an annotation below.
     if (res) {
@@ -950,7 +927,7 @@ function replaceMatch(
   if (key in ann.MAPPING) {
     // 'p' and 'pp' are also annotations, so it's important for annotation
     // handling to have less priority than page handling.
-    return handleAnnotation(key, node, remainder, preceding) ?? {};
+    return handleAnnotation(key, context) ?? {};
   }
 
   // NOTE: Our current regex doesn't match semicolons that immediately
@@ -971,21 +948,37 @@ function replaceMatch(
  * @param root
  */
 function enrich(root: HTMLElement): void {
-  for (const node of walk(root)) {
-    if (
-      node.nodeType === Node.ELEMENT_NODE &&
-      (node as Element).classList.contains(cls.MANUAL)
-    ) {
-      handleManual(node as HTMLElement);
-      continue;
-    }
+  const chains = function* (): Generator<Node[]> {
+    let chain: Node[] = [];
+    for (const node of walk(root)) {
+      if (node instanceof Element && node.classList.contains(cls.MANUAL)) {
+        if (chain.length > 0) {
+          yield chain;
+          chain = [];
+        }
+        handleManual(node as HTMLElement);
+        continue;
+      }
 
-    if (node.nodeType === Node.TEXT_NODE) {
-      html.replaceNode(node as Text, ENRICHMENT_RE, replaceMatch);
-      continue;
-    }
+      if (chain.length === 0) {
+        chain.push(node);
+        continue;
+      }
 
-    log.fatal('This is impossible!');
+      if (chain[chain.length - 1]!.nextSibling === node) {
+        chain.push(node);
+      } else {
+        yield chain;
+        chain = [node];
+      }
+    }
+    if (chain.length > 0) {
+      yield chain;
+    }
+  };
+
+  for (const chain of chains()) {
+    html.replaceNodes(new html.Chain(chain), ENRICHMENT_RE, replaceMatch);
   }
 }
 
@@ -1049,168 +1042,18 @@ function handleReferenceFollowups(root: HTMLElement): void {
         return;
       }
       nextSibling.nodeValue = text.slice(match[0].length);
-      // TODO: (#572) The `suffixFollowups` function considers the possibility
+      // TODO: (#0) The `suffixFollowups` function considers the possibility
       // that our match has following <sup> element that is part of the suffix.
       // Right now, our code doesn't account for the possibility that such a
       // superscript is followed by a comma that is followed by more suffixes.
+      // We have never encountered such a case in reality, so we dismiss this
+      // possibility for the time being.
       ref.Reference.suffix(
         reference,
         match[0],
         ...suffixFollowups(nextSibling.nextSibling, nextSibling.nodeValue)
       );
     });
-}
-
-/**
- *
- * @param ib
- */
-function ibFallback(ib: HTMLElement): void {
-  ib.classList.add(cls.ANNOTATION);
-  drop.addDroppable(ib, ['ibidem']);
-}
-
-/**
- *
- * @param ib
- * @param antecedent
- * @param next
- */
-function handleReferenceIB(
-  ib: HTMLElement,
-  antecedent: HTMLElement,
-  next: ChildNode
-): void {
-  const reference: ref.Reference = ref.Reference.fromSpan(antecedent);
-
-  const span: HTMLSpanElement = reference.span(ib.cloneNode(true));
-  ib.replaceWith(span);
-
-  // Extract a suffix, if available.
-  // Notice that many ib references legitimately don't have a suffix.
-  if (!next.nodeValue) {
-    // No suffix!
-    return;
-  }
-  const suffix: string | undefined = next.nodeValue.match(SUFFIX)?.[0];
-  if (!suffix) {
-    // No suffix!
-    return;
-  }
-
-  // TODO: (#671) In some cases, the first token in the suffix is actually
-  // part of the reference abbreviation.
-  // For example:
-  //   1. Mani H ... ib K
-  //      The ibidem reference should be interpreted as "Mani K"
-  //      rather than "Mani H".
-  //   2. BM ... ib Or
-  //      The ibidem reference should be interpreted as "BMOr".
-  next.nodeValue = next.nodeValue.slice(suffix.length);
-  ref.Reference.suffix(
-    span,
-    suffix,
-    ...suffixFollowups(next.nextSibling, next.nodeValue)
-  );
-}
-
-/**
- *
- * @param ib
- * @param antecedent
- * @param next
- */
-function handleBibleIB(
-  ib: HTMLElement,
-  antecedent: HTMLElement,
-  next: ChildNode
-): void {
-  // Construct the antecedent citation.
-  const cit: Citation = Citation.fromAnchor(antecedent);
-
-  // Update the citation with numbers from this citation.
-  // Notice that it's valid for the new citation to not have any numbers.
-  // The regex is sticky. Last index needs to be reset.
-  CHAPTER_VERSE.lastIndex = 0;
-  const match: RegExpMatchArray | null | undefined =
-    next.nodeValue?.match(CHAPTER_VERSE);
-  cit.update(
-    match?.[0] ?? '',
-    match?.[1] ?? match?.[3],
-    match?.[2] ?? match?.[4]
-  );
-  if (next.nodeValue && match) {
-    // Chop off the matched text from the next sibling.
-    next.nodeValue = next.nodeValue.slice(match[0].length);
-  }
-
-  const anchor: HTMLAnchorElement = cit.anchor(true);
-  ib.replaceWith(anchor);
-  anchor.prepend(ib);
-}
-
-/**
- *
- * @param ib
- * @param antecedent
- */
-function handlePageIB(ib: HTMLElement, antecedent: HTMLAnchorElement): void {
-  // This `ib` instances refers to a Crum page.
-  // An example is 1730 (ⲟⲩⲱⲛⲅ):
-  //   https://remnqymi.com/crum/1730.html
-  // We don't expect a suffix to be present.
-  const a = html.anchor(antecedent.href, true, ib.cloneNode(true));
-  ib.replaceWith(a);
-  drop.addDroppable(a, ['ibidem']);
-}
-
-const ANTECEDENT_QUERY: string = css.classQuery(
-  cls.REFERENCE,
-  cls.BIBLE,
-  cls.PAGE
-);
-/**
- * Find the first preceding sibling to the given ibidem element that is either
- * a reference, a Bible citation, or a page.
- *
- * @param ib - The ibidem element.
- * @param strict - If true, skip elements between parentheses. Otherwise, just
- * retrieve the first match, even if it lies within parentheses.
- * @returns
- */
-function findAntecedent(ib: HTMLElement, strict?: boolean): HTMLElement | null {
-  if (strict === undefined) {
-    return findAntecedent(ib, true) ?? findAntecedent(ib, false);
-  }
-
-  let antecedent: ChildNode | null = ib.previousSibling;
-  let depth = 0; // Track the parenthesis depth.
-
-  while (
-    antecedent &&
-    // While we have a preceding sibling that doesn't match the requirements:
-    (!(antecedent instanceof Element) ||
-      !antecedent.matches(ANTECEDENT_QUERY) ||
-      (strict && depth > 0))
-  ) {
-    // Skip.
-    // Count the parentheses in the element text.
-    // Only do so in strict mode, otherwise we don't really care about
-    // parenthesis depth.
-    if (strict) {
-      Array.from(antecedent.textContent ?? '').forEach((c: string) => {
-        if (c === ')') {
-          depth++;
-        } else if (c === '(') {
-          depth--;
-        }
-      });
-    }
-
-    antecedent = antecedent.previousSibling;
-  }
-
-  return antecedent instanceof HTMLElement ? antecedent : null;
 }
 
 const DATA_KEY = 'key';
@@ -1280,44 +1123,223 @@ function handleManual(manual: HTMLElement): void {
 /**
  *
  * @param ib
+ * @returns
  */
-function handleIB(ib: HTMLElement): void {
-  const antecedent: HTMLElement | null = findAntecedent(ib);
+function ibFallback(ib: HTMLElement): HTMLElement {
+  ib.classList.add(cls.ANNOTATION);
+  drop.addDroppable(ib, ['ibidem']);
+  return ib;
+}
+
+/**
+ *
+ * @param ib
+ * @param antecedent
+ * @param context
+ * @returns
+ */
+function handleReferenceIB(
+  ib: HTMLElement,
+  antecedent: HTMLElement,
+  context: html.ReplaceNodesContext
+): html.ReplaceNodesResult {
+  const reference: ref.Reference = ref.Reference.fromSpan(antecedent);
+
+  const span: HTMLSpanElement = reference.span(ib.cloneNode(true));
+
+  // Extract a suffix, if available.
+  const suffix: string | undefined = SUFFIX.exec(context.remainder)?.[0];
+  if (!suffix) {
+    // No suffix!
+    return { replacement: [span] };
+  }
+
+  // TODO: (#671) In some cases, the first token in the suffix is actually
+  // part of t
+  // For example:
+  //   1. Mani H ... ib K
+  //      The ibidem reference should be interpreted as "Mani K"
+  //      rather than "Mani H".
+  //   2. BM ... ib Or
+  //      The ibidem reference should be interpreted as "BMOr".he reference
+  //      abbreviation.
+  const remainder = context.remainder.slice(suffix.length);
+  ref.Reference.suffix(
+    span,
+    suffix,
+    ...suffixFollowups(context.chainNextSibling, remainder)
+  );
+
+  return { replacement: [span], munch: suffix.length };
+}
+
+/**
+ *
+ * @param ib
+ * @param antecedent
+ * @param context
+ * @returns
+ */
+function handleBibleIB(
+  ib: HTMLElement,
+  antecedent: HTMLElement,
+  context: html.ReplaceNodesContext
+): html.ReplaceNodesResult {
+  // Construct the antecedent citation.
+  const cit: Citation = Citation.fromAnchor(antecedent);
+
+  // Update the citation with numbers from this citation.
+  // Notice that it's valid for the new citation to not have any numbers.
+  // The regex is sticky. Last index needs to be reset.
+  CHAPTER_VERSE.lastIndex = 0;
+  const match: RegExpMatchArray | null | undefined = CHAPTER_VERSE.exec(
+    context.remainder
+  );
+  cit.update(
+    match?.[0] ?? '',
+    match?.[1] ?? match?.[3],
+    match?.[2] ?? match?.[4]
+  );
+
+  const content: (Node | string)[] = [ib.cloneNode(true)];
+  if (match) {
+    content.push(...context.substring(match[0].length, ib.textContent.length));
+  }
+
+  return {
+    replacement: [cit.anchor(true, ...content)],
+    munch: match?.[0]?.length,
+  };
+}
+
+/**
+ *
+ * @param ib
+ * @param antecedent
+ * @returns
+ */
+function handlePageIB(
+  ib: HTMLElement,
+  antecedent: HTMLAnchorElement
+): HTMLElement {
+  // This `ib` instances refers to a Crum page.
+  // An example is 1730 (ⲟⲩⲱⲛⲅ):
+  //   https://remnqymi.com/crum/1730.html
+  // We don't expect a suffix to be present.
+  const a = html.anchor(antecedent.href, true, ib.cloneNode(true));
+  drop.addDroppable(a, ['ibidem']);
+  return a;
+}
+
+/**
+ *
+ * @param context
+ * @returns
+ */
+function replaceIB(context: html.ReplaceNodesContext): html.ReplaceNodesResult {
+  // 1. Check if match corresponds to an element (like <i>ib</i>).
+  // We get the fragment for the match.
+  const ibFragment: Node[] = Array.from(
+    context.substring(context.match[0].length)
+  );
+  // We expect one child which is an element with text content 'ib'
+  // (case-insensitive).
+  // Or if it's text, it should be the whole text?
+  // Existing logic: `ib.textContent === 'ib'`.
+  // If `ibFragment` has multiple nodes or text mixed with elements, it's not a
+  // clean 'ib'.
+  // Simple heuristic: check text content of fragment.
+
+  let ib: HTMLElement;
+  if (
+    ibFragment.length === 1 &&
+    ibFragment[0]?.nodeType === Node.ELEMENT_NODE &&
+    ibFragment[0].textContent?.toLowerCase() === 'ib'
+  ) {
+    ib = ibFragment[0] as HTMLElement;
+  } else {
+    log.error('ib element found in an unexpected node:');
+    return {};
+  }
+
+  const antecedent: HTMLElement | null = findAntecedent(context);
 
   if (!antecedent) {
     log.error(
       'Unable to find antecedent reference for ib element',
       ib,
-      'previousSibling:',
-      ib.previousSibling?.textContent
+      'preceding:',
+      Array.from(context.matchPreviousSiblings())
+        .map((n) => n.textContent)
+        .join('|')
     );
-    ibFallback(ib);
-    return;
+    return { replacement: [ibFallback(ib)] };
   }
 
   if (antecedent.classList.contains(cls.PAGE)) {
-    handlePageIB(ib, antecedent as HTMLAnchorElement);
-    return;
-  }
-
-  const next: ChildNode | null = ib.nextSibling;
-  if (!next) {
-    log.error('ib has no next sibling:', ib);
-    ibFallback(ib);
-    return;
+    return {
+      replacement: [handlePageIB(ib, antecedent as HTMLAnchorElement)],
+    };
   }
 
   if (antecedent.classList.contains(cls.REFERENCE)) {
-    handleReferenceIB(ib, antecedent, next);
-    return;
+    return handleReferenceIB(ib, antecedent, context);
   }
 
   if (antecedent.classList.contains(cls.BIBLE)) {
-    handleBibleIB(ib, antecedent, next);
-    return;
+    return handleBibleIB(ib, antecedent, context);
   }
 
   log.fatal('This is impossible!');
+}
+
+const ANTECEDENT_QUERY: string = css.classQuery(
+  cls.REFERENCE,
+  cls.BIBLE,
+  cls.PAGE
+);
+
+/**
+ * Find the first preceding sibling to the given ibidem element that is either
+ * a reference, a Bible citation, or a page.
+ *
+ * @param context
+ * @param strict - If true, search for an element that lives at the same
+ * parenthesis depth as the given node. Otherwise, return the first matching
+ * element regardless of parenthesis depth.
+ * @returns
+ */
+function findAntecedent(
+  context: html.ReplaceNodesContext,
+  strict?: boolean
+): HTMLElement | null {
+  if (strict === undefined) {
+    // If the `strict` parameter is unset, try finding a strict antecedent
+    // first, and fall back to non-strict mode if unsuccessful.
+    return findAntecedent(context, true) ?? findAntecedent(context, false);
+  }
+
+  let depth = 0;
+  for (const curr of context.matchPreviousSiblings()) {
+    if (
+      curr instanceof Element &&
+      curr.matches(ANTECEDENT_QUERY) &&
+      (!strict || depth === 0)
+    ) {
+      return curr as HTMLElement;
+    }
+
+    if (!strict || !curr.textContent) {
+      continue;
+    }
+
+    for (const c of curr.textContent) {
+      if (c === ')') depth++;
+      else if (c === '(') depth--;
+    }
+  }
+
+  return null;
 }
 
 const textContentOverrides: Record<string, string> = {

@@ -25,10 +25,10 @@ const TEST_CASES: {
     // lot of common cases.
     key: '88',
     want: {
-      references: 145,
+      references: 147,
       bible: 122,
       dialectTooltips: 388,
-      annotations: 78,
+      annotations: 77,
     },
   },
   {
@@ -65,7 +65,7 @@ const TEST_CASES: {
     // it.
     key: '3271',
     want: {
-      references: 2,
+      references: 3,
       bible: 0,
       dialectTooltips: 1,
       annotations: 3,
@@ -103,6 +103,13 @@ const TEST_CASES: {
       annotations: 3,
     },
   },
+  {
+    // 732 contains instances of 'pp' (pages).
+    key: '732',
+    want: {
+      pages: 6,
+    },
+  },
 ];
 
 /**
@@ -113,6 +120,7 @@ const QUERIES: Record<WikiElementKey, string> = {
   bible: `.${cls.WIKI} .${cls.BIBLE}`,
   dialectTooltips: `.${cls.WIKI} .${cls.DIALECT} .${drop.CLS.DROPPABLE}`,
   annotations: `.${cls.WIKI} .${cls.ANNOTATION}`,
+  pages: `.${cls.PAGE}`,
 };
 
 base.test.describe('Wiki Reference Handlers', () => {
