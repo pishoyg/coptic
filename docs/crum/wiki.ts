@@ -394,36 +394,14 @@ function annotation(tip: string, ...children: (Node | string)[]): Element {
 
 /**
  *
- * @param key
  * @param context
  * @returns
  */
-function handleAnnotation(
-  key: string,
-  context: html.ReplaceNodesContext
-): { replacement: Node[] } | undefined {
+function handleAnnotation(context: html.Context): void {
+  const key: string = context.match[0];
   const annot: ann.Annotation | undefined = ann.MAPPING[key];
   if (!annot) {
     log.fatal("Can't find annotation:", key);
-  }
-
-  const nodes = Array.from(context.substring(key.length));
-  if (
-    annot.noStyledParent &&
-    nodes.some((node) => node instanceof Element && node.matches('i, sup'))
-  ) {
-    // This annotation can't show in styled text, and this node is
-    // styled.
-    return undefined;
-  }
-
-  if (
-    key === 'art' &&
-    (context.remainder.startsWith(' thou') ||
-      context.preceding.endsWith('thou '))
-  ) {
-    // False positive!
-    return undefined;
   }
 
   // The question mark is a very common annotation, and punctuation mark. We use
@@ -434,64 +412,79 @@ function handleAnnotation(
   // annotation.
   if (
     key === '?' &&
-    !['(', ' '].some((token) => context.preceding.endsWith(token))
+    !['(', ' '].some((token) => context.left.endsWith(token))
   ) {
-    return undefined;
+    // False positive!
+    return;
   }
 
-  return { replacement: [annotation(annot.fullForm, ...nodes)] };
+  if (
+    key === 'art' &&
+    (context.right.startsWith(' thou') || context.left.endsWith('thou '))
+  ) {
+    // False positive!
+    return;
+  }
+
+  // We consume the key-length nodes first so we can inspect them.
+  const nodes = context.munch(key.length);
+
+  if (
+    annot.noStyledParent &&
+    nodes.some((node: Node): boolean => ['I', 'SUP'].includes(node.nodeName))
+  ) {
+    // This annotation can't show in styled text, and this node is
+    // styled.
+    context.replace(nodes, 0);
+    return;
+  }
+
+  context.replace(annotation(annot.fullForm, ...nodes), 0);
 }
 
 /**
  * Insert hyperlinks for page references in the text.
  *
- * @param key
  * @param context
  * @returns
  */
-function handlePage(
-  key: string,
-  context: html.ReplaceNodesContext
-): html.ReplaceNodesResult | undefined {
+function handlePage(context: html.Context): boolean {
+  const key: string = context.match[0];
   // A page number has the format 'pp? [0-9]+ [ab]?'. The regex matches this
   // format, excluding the column, which is expected to live in the <i> tag that
   // is the next sibling.
-  let match: RegExpExecArray | null = PAGE_RE.exec(key + context.remainder);
+  let match: RegExpExecArray | null = PAGE_RE.exec(key + context.right);
   if (!match) {
-    return undefined;
+    return false;
   }
 
   const replacement: (Node | string)[] = [];
-  let a = html.anchor(
+  const nodes = context.munch(match[0].length);
+  const a = html.anchor(
     paths.crumScan(`${match[1]!}${match[2] ?? ''}`),
-    ...context.substring(match[0].length)
+    ...nodes
   );
   a.classList.add(cls.PAGE);
   replacement.push(a);
 
-  // munch tracks how much text we have munched from the remainder.
-  let munch = match[0].length - key.length;
   for (
-    let remainder = context.remainder.slice(munch);
+    let remainder = context.right;
     (match = PAGE_FOLLOWUP_RE.exec(remainder));
-    remainder = remainder.slice(match[0].length)
+    remainder = context.right
   ) {
     const comma = match[1]!;
-    replacement.push(comma);
-    a = html.anchor(
+    replacement.push(...context.munch(comma.length));
+    const followupNodes = context.munch(match[0].length - comma.length);
+    const followupA = html.anchor(
       paths.crumScan(`${match[2]!}${match[3] ?? ''}`),
-      ...context.substring(
-        match[0].length - comma.length,
-        key.length + munch + comma.length
-      )
+      ...followupNodes
     );
-    a.classList.add(cls.PAGE);
-    replacement.push(a);
-
-    munch += match[0].length;
+    followupA.classList.add(cls.PAGE);
+    replacement.push(followupA);
   }
 
-  return { replacement, munch };
+  context.replace(replacement, 0);
+  return true;
 }
 
 /**
@@ -763,41 +756,6 @@ class Citation {
 }
 
 /**
- *
- * @param key
- * @param remainder
- * @param next
- * @returns
- */
-function parseBibleCitation(
-  key: string,
-  remainder: string,
-  next: Node | null | undefined
-): [Citation | undefined, number | undefined] {
-  // Parse the numbers following the book abbreviation.
-  CHAPTER_VERSE.lastIndex = 0;
-  const match: RegExpExecArray | null = CHAPTER_VERSE.exec(remainder);
-  let [chapter, verse] = [match?.[1] ?? match?.[3], match?.[2] ?? match?.[4]];
-  remainder = remainder.slice(match?.[0].length ?? 0);
-  const raw: string = key + (match?.[0] ?? '');
-
-  if (key in DAN_OVERRIDE) {
-    // Given that this special book contains one chapter, the book
-    // abbreviation is followed by the verse number only. This number would've
-    // been mistakenly interpreted as the chapter number, but it's actually the
-    // verse number.
-    verse = chapter;
-    chapter = DAN_OVERRIDE[key];
-    key = 'Dan';
-  }
-
-  const cit = new Citation(raw, chapter, verse, bib.MAPPING[key]!);
-  return cit.valid(remainder, next)
-    ? [cit, match?.[0].length]
-    : [undefined, undefined];
-}
-
-/**
  * Parse the Bible followups that trail a citation, updating `cit` in place as
  * it goes.
  *
@@ -809,9 +767,8 @@ function parseBibleCitation(
 function parseBibleFollowups(
   cit: Citation,
   remainder: string
-): { nodes: (Node | string)[]; munch: number } {
+): (Node | string)[] {
   const nodes: (Node | string)[] = [];
-  let munch = 0;
   // Create anchors for any following citations in the remaining text.
   while (remainder) {
     const match: RegExpExecArray | null = BIBLE_FOLLOWUP.exec(remainder);
@@ -849,54 +806,61 @@ function parseBibleFollowups(
     );
 
     remainder = remainder.slice(match[0].length);
-    munch += match[0].length;
   }
-  return { nodes, munch };
+  return nodes;
 }
 
 /**
  *
- * @param key
+ * @param context - A context whose `match` field is a Bible key.
+ * @returns
+ */
+function replaceBible(context: html.Context): boolean {
+  // Parse the numbers following the book abbreviation.
+  CHAPTER_VERSE.lastIndex = 0;
+  let key: string = context.match[0];
+  let right: string = context.right;
+  const match: RegExpExecArray | null = CHAPTER_VERSE.exec(right);
+  let [chapter, verse] = [match?.[1] ?? match?.[3], match?.[2] ?? match?.[4]];
+  right = right.slice(match?.[0].length ?? 0);
+  const raw: string = key + (match?.[0] ?? '');
+
+  if (key in DAN_OVERRIDE) {
+    // Given that this special book contains one chapter, the book
+    // abbreviation is followed by the verse number only. This number would've
+    // been mistakenly interpreted as the chapter number, but it's actually the
+    // verse number.
+    verse = chapter;
+    chapter = DAN_OVERRIDE[key];
+    key = 'Dan';
+  }
+
+  const cit: Citation = new Citation(raw, chapter, verse, bib.MAPPING[key]!);
+  if (!cit.valid(right, context.chainNextSibling)) {
+    return false;
+  }
+
+  // NOTE: This citation's anchor must be built before parsing followups,
+  // since followup parsing mutates `cit` in place.
+  const anchor: HTMLElement = cit.anchor();
+
+  context.replace([
+    anchor,
+    // Resolve any followups (e.g. the ", 56 9" in "Is 27 11, 56 9") in the same
+    // pass. This used to be deferred to a second pass to avoid splitting a
+    // numbered book like the "2 Cor" in "Job 3 18, 2 Cor 4 18"; a negative
+    // lookahead in BIBLE_FOLLOWUP now guards against that instead.
+    ...parseBibleFollowups(cit, right),
+  ]);
+  return true;
+}
+
+/**
+ *
  * @param context
  * @returns
  */
-function replaceBible(
-  key: string,
-  context: html.ReplaceNodesContext
-): html.ReplaceNodesResult | undefined {
-  const [cit, munch]: [Citation | undefined, number | undefined] =
-    parseBibleCitation(key, context.remainder, context.chainNextSibling);
-  if (!cit) {
-    return undefined;
-  }
-
-  // Build this citation's anchor before parsing followups, since followup
-  // parsing mutates `cit` in place.
-  const anchor: HTMLElement = cit.anchor(false);
-
-  // Resolve any followups (e.g. the ", 56 9" in "Is 27 11, 56 9") in the same
-  // pass. This used to be deferred to a second pass to avoid splitting a
-  // numbered book like the "2 Cor" in "Job 3 18, 2 Cor 4 18"; a negative
-  // lookahead in BIBLE_FOLLOWUP now guards against that instead.
-  const followups: { nodes: (Node | string)[]; munch: number } =
-    parseBibleFollowups(cit, context.remainder.slice(munch ?? 0));
-
-  return {
-    replacement: [anchor, ...followups.nodes],
-    munch: (munch ?? 0) + followups.munch,
-  };
-}
-
-/**
- *
- * @param maybeSUP
- * @param between
- * @returns
- */
-function* suffixFollowups(
-  maybeSUP: Node | null | undefined,
-  between: string
-): Generator<Node | string> {
+function* suffixFollowups(context: html.Context): Generator<Node | string> {
   // TODO: (#0) This function considers the possibility
   // that our match has following <sup> element that is part of the suffix.
   // Right now, our code doesn't account for the possibility that such a
@@ -904,12 +868,13 @@ function* suffixFollowups(
   // We have never encountered such a case in reality, so we dismiss this
   // possibility for the time being.
 
-  if (between) {
+  if (context.right) {
     // There is text before the superscript that is suspected to be part of the
     // suffix.
     return;
   }
 
+  const maybeSUP: Node | null = context.chainNextSibling;
   if (maybeSUP?.nodeName !== 'SUP') {
     // This is not a superscript.
     return;
@@ -946,34 +911,23 @@ function* suffixFollowups(
 
 /**
  *
- * @param key
  * @param context
  * @returns
  */
-function replaceReference(
-  key: string,
-  context: html.ReplaceNodesContext
-): html.ReplaceNodesResult | undefined {
-  const suffix: string | undefined = SUFFIX.exec(context.remainder)?.[0];
-  if (key === 'My' && !suffix && !context.remainder.startsWith(')')) {
+function replaceReference(context: html.Context): void {
+  const key: string = context.match[0];
+  const suffix: string | undefined = SUFFIX.exec(context.right)?.[0];
+  if (key === 'My' && !suffix && !context.right.startsWith(')')) {
     // False positive.
-    return undefined;
+    return;
   }
 
-  const content: (Node | string)[] = [...context.substring(key.length)];
+  const span: HTMLSpanElement = ref.MAPPING[key]!.span(
+    context.munch(key.length),
+    suffix ? [...context.munch(suffix.length), ...suffixFollowups(context)] : []
+  );
 
-  if (!suffix) {
-    return { replacement: [ref.MAPPING[key]!.span(content)] };
-  }
-
-  // Chop off the suffix from the remainder.
-  const remainder = context.remainder.slice(suffix.length);
-  const span: HTMLSpanElement = ref.MAPPING[key]!.span(content, [
-    ...context.substring(suffix.length, key.length),
-    ...suffixFollowups(context.chainNextSibling, remainder),
-  ]);
-
-  return { replacement: [span], munch: suffix.length };
+  context.replace(span, 0);
 }
 
 /**
@@ -1039,17 +993,13 @@ function walk(root: Node): Node[] {
   return nodes;
 }
 
-/* eslint-disable complexity */
-
 /**
  * Replace an enrichment match.
  *
  * @param context
  * @returns
  */
-function replaceMatch(
-  context: html.ReplaceNodesContext
-): html.ReplaceNodesResult {
+function replaceMatch(context: html.Context): void {
   const key: string = context.match[0];
 
   // NOTE: The text contains frequent errors, especially regarding
@@ -1079,50 +1029,51 @@ function replaceMatch(
   //   we opted for marking them manually whenever we come across one.
 
   if (['Am', 'AM', 'AP', 'PS'].includes(key)) {
-    return replaceBible(key, context) ?? replaceReference(key, context) ?? {};
+    if (!replaceBible(context)) {
+      replaceReference(context);
+    }
+    return;
   }
 
   if (key in bib.MAPPING || key in DAN_OVERRIDE) {
-    return replaceBible(key, context) ?? {};
+    replaceBible(context);
+    return;
   }
 
   if (key in ref.MAPPING) {
-    return replaceReference(key, context) ?? {};
+    replaceReference(context);
+    return;
   }
 
   if (key.toLowerCase() === 'ib') {
-    return replaceIB(context);
+    replaceIB(context);
+    return;
   }
 
   if (key === 'p' || key === 'pp') {
-    const res = handlePage(key, context);
-    // If this is indeed a Crum page, return. Otherwise, fall back to treating
-    // it as an annotation below.
-    if (res) {
-      return res;
+    if (handlePage(context)) {
+      return;
     }
+    // If this is not a Crum page, fall back to handling it as an annotation
+    // below.
+    // NOTE: This is not expected, because the `p` annotation only ever occurs
+    // as a Crum page or a suffix annotation.
   }
 
   if (key in ann.MAPPING) {
     // 'p' and 'pp' are also annotations, so it's important for annotation
     // handling to have less priority than page handling.
-    return handleAnnotation(key, context) ?? {};
+    handleAnnotation(context);
+    return;
   }
 
-  // NOTE: Our current regex doesn't match semicolons that immediately
-  // follow a word character. This is OK:
-  // - In the vast majority of cases, semicolons that should be annotated
-  //   occur at some form of boundary.
-  // - The few false negatives are acceptable, as the tooltip is identical
-  //   for all semicolons, which are abundant.
   if (key === ';') {
-    return { replacement: [semicolon()] };
+    context.replace(semicolon());
+    return;
   }
 
   log.fatal('This is impossible!');
 }
-
-/* eslint-enable complexity */
 
 /**
  *
@@ -1326,20 +1277,13 @@ function ibFallback(ib: HTMLElement): HTMLElement {
 function handleReferenceIB(
   ib: HTMLElement,
   antecedent: HTMLElement,
-  context: html.ReplaceNodesContext
-): html.ReplaceNodesResult {
-  const reference: ref.Reference = ref.Reference.fromSpan(antecedent);
-  const content: Node[] = [ib.cloneNode(true)];
-
+  context: html.Context
+): void {
   // Extract a suffix, if available.
-  const suffix: string | undefined = SUFFIX.exec(context.remainder)?.[0];
-  if (!suffix) {
-    // No suffix!
-    return { replacement: [reference.span(content)] };
-  }
+  const suffix: string | undefined = SUFFIX.exec(context.right)?.[0];
 
   // TODO: (#671) In some cases, the first token in the suffix is actually
-  // part of t
+  // part of the reference key.
   // For example:
   //   1. Mani H ... ib K
   //      The ibidem reference should be interpreted as "Mani K"
@@ -1347,13 +1291,12 @@ function handleReferenceIB(
   //   2. BM ... ib Or
   //      The ibidem reference should be interpreted as "BMOr".he reference
   //      abbreviation.
-  const remainder = context.remainder.slice(suffix.length);
-  const span: HTMLSpanElement = reference.span(content, [
-    suffix,
-    ...suffixFollowups(context.chainNextSibling, remainder),
-  ]);
+  const span: HTMLSpanElement = ref.Reference.fromSpan(antecedent).span(
+    [ib],
+    suffix ? [...context.munch(suffix.length), ...suffixFollowups(context)] : []
+  );
 
-  return { replacement: [span], munch: suffix.length };
+  context.replace(span, 0);
 }
 
 /**
@@ -1366,8 +1309,8 @@ function handleReferenceIB(
 function handleBibleIB(
   ib: HTMLElement,
   antecedent: HTMLElement,
-  context: html.ReplaceNodesContext
-): html.ReplaceNodesResult {
+  context: html.Context
+): void {
   // Construct the antecedent citation.
   const cit: Citation = Citation.fromAnchor(antecedent);
 
@@ -1376,7 +1319,7 @@ function handleBibleIB(
   // The regex is sticky. Last index needs to be reset.
   CHAPTER_VERSE.lastIndex = 0;
   const match: RegExpMatchArray | null | undefined = CHAPTER_VERSE.exec(
-    context.remainder
+    context.right
   );
   cit.update(
     match?.[0] ?? '',
@@ -1384,15 +1327,17 @@ function handleBibleIB(
     match?.[2] ?? match?.[4]
   );
 
-  const content: (Node | string)[] = [ib.cloneNode(true)];
-  if (match) {
-    content.push(...context.substring(match[0].length, ib.textContent.length));
-  }
+  const anchor: HTMLElement = cit.anchor(
+    true,
+    ib,
+    ...context.munch(match?.[0].length ?? 0)
+  );
 
-  return {
-    replacement: [cit.anchor(true, ...content)],
-    munch: match?.[0]?.length,
-  };
+  const followups: (Node | string)[] = parseBibleFollowups(
+    cit,
+    context.remainder
+  );
+  context.replace([anchor, ...followups], html.textLength(followups));
 }
 
 /**
@@ -1419,30 +1364,21 @@ function handlePageIB(
  * @param context
  * @returns
  */
-function replaceIB(context: html.ReplaceNodesContext): html.ReplaceNodesResult {
-  // 1. Check if match corresponds to an element (like <i>ib</i>).
-  // We get the fragment for the match.
-  const ibFragment: Node[] = Array.from(
-    context.substring(context.match[0].length)
-  );
-  // We expect one child which is an element with text content 'ib'
-  // (case-insensitive).
-  // Or if it's text, it should be the whole text?
-  // Existing logic: `ib.textContent === 'ib'`.
-  // If `ibFragment` has multiple nodes or text mixed with elements, it's not a
-  // clean 'ib'.
-  // Simple heuristic: check text content of fragment.
+function replaceIB(context: html.Context): void {
+  // We expect the 'ib' match to be a clean 'ib' element.
+  const ibNodes: Node[] = context.munch(context.match[0].length);
 
   let ib: HTMLElement;
   if (
-    ibFragment.length === 1 &&
-    ibFragment[0]?.nodeType === Node.ELEMENT_NODE &&
-    ibFragment[0].textContent?.toLowerCase() === 'ib'
+    ibNodes.length === 1 &&
+    ibNodes[0]?.nodeType === Node.ELEMENT_NODE &&
+    ibNodes[0].textContent?.toLowerCase() === 'ib'
   ) {
-    ib = ibFragment[0] as HTMLElement;
+    ib = ibNodes[0] as HTMLElement;
   } else {
     log.error('ib element found in an unexpected node:');
-    return {};
+    context.replace(ibNodes, 0);
+    return;
   }
 
   const antecedent: HTMLElement | null = findAntecedent(context);
@@ -1456,21 +1392,24 @@ function replaceIB(context: html.ReplaceNodesContext): html.ReplaceNodesResult {
         .map((n) => n.textContent)
         .join('|')
     );
-    return { replacement: [ibFallback(ib)] };
+    ibFallback(ib);
+    context.replace(ib, 0);
+    return;
   }
 
   if (antecedent.classList.contains(cls.PAGE)) {
-    return {
-      replacement: [handlePageIB(ib, antecedent as HTMLAnchorElement)],
-    };
+    context.replace(handlePageIB(ib, antecedent as HTMLAnchorElement), 0);
+    return;
   }
 
   if (antecedent.classList.contains(cls.REFERENCE)) {
-    return handleReferenceIB(ib, antecedent, context);
+    handleReferenceIB(ib, antecedent, context);
+    return;
   }
 
   if (antecedent.classList.contains(cls.BIBLE)) {
-    return handleBibleIB(ib, antecedent, context);
+    handleBibleIB(ib, antecedent, context);
+    return;
   }
 
   log.fatal('This is impossible!');
@@ -1488,7 +1427,7 @@ const ANTECEDENT_QUERY: string = css.disjunction(
  * @yields
  */
 function* previousElementSiblingsAcrossParagraphs(
-  context: html.ReplaceNodesContext
+  context: html.Context
 ): Generator<Element> {
   let curr: Element | null = null;
   // Loop over all the previous siblings of the match.
@@ -1533,7 +1472,7 @@ function* previousElementSiblingsAcrossParagraphs(
  * @param context
  * @returns
  */
-function findAntecedent(context: html.ReplaceNodesContext): HTMLElement | null {
+function findAntecedent(context: html.Context): HTMLElement | null {
   for (const curr of previousElementSiblingsAcrossParagraphs(context)) {
     if (curr.matches(ANTECEDENT_QUERY)) {
       return curr as HTMLElement;
