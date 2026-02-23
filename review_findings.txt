@@ -1,0 +1,31 @@
+Review of Commit 158c5e39ddfc0e77939eb7c430d9daade9c417b4
+
+Summary:
+The commit message `[TypeScript] make javascript` is misleading as it includes significant unrelated changes to Python code (`xooxle/`), images, and data files.
+
+Detailed Findings:
+1.  **Expected Changes:**
+    *   `docs/**/*.js` and `docs/**/*.js.map`: Transpiled JavaScript files.
+    *   `Makefile`, `package.json`, `package-lock.json`, `tsconfig.json`: Build and configuration updates related to TypeScript support.
+    *   `pre-commit/docs_structure.py`: Updates to allow JS/TS files in the documentation structure check.
+
+2.  **Unexpected / Unrelated Changes (Pollution):**
+    *   **Python Code:** Significant modifications to `xooxle/xooxle.py` and `xooxle/clean.py` (e.g., adding `_get_simplified_html`, `_balance_lines`, and cleaning logic). These appear to be manual code changes unrelated to the build process.
+    *   **Images:** A large number of images added to `explanatory/`.
+    *   **Data Files:** JSON file updates in `bible/` and `dictionary/`.
+    *   **Other Python Files:** Minor changes or formatting in many other Python files (e.g., `bible/stshenouda_org/main.py`, `dictionary/marcion_sourceforge_net/main.py`).
+
+Cause:
+The `javascript` target in the `Makefile` executes:
+```makefile
+javascript:
+    # ... (dirty check) ...
+    $(MAKE) transpile
+    npx playwright test
+    git add --all
+    git commit --no-verify --message '[TypeScript] `make javascript`'
+```
+The command `git add --all` stages *all* changes in the working directory. If there were pending changes (like the Python refactoring or added images) when `make javascript` was run, they were automatically included in the commit.
+
+Recommendation:
+This commit should likely be split or the unrelated changes should be reverted if they were accidental. The `Makefile` logic could be improved to only stage relevant files (e.g., `git add docs/**/*.js docs/**/*.js.map`) to prevent this in the future.
