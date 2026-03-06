@@ -599,13 +599,17 @@ const DATA_1: Resource[] = [
   },
   {
     source: {
-      title: 'Coptic MSS. in Bodleian, as (P) a i e, where italic = folio',
+      title: 'Coptic MSS. in Bodleian, as (P) a 1 e, where italic = folio',
     },
     variants: ['Bodl', 'Bod'],
     postfixes: {
       Copt: 'Coptic',
       copt: 'Coptic',
       '(P)': undefined,
+      '(P)a': undefined,
+      '(P)b': undefined,
+      '(P)c': undefined,
+      '(P)d': undefined,
       P: undefined,
       Marsh: 'Marshall Collection',
     },
@@ -2130,7 +2134,7 @@ const DATA_1: Resource[] = [
       // cited as such. We do not include it because it's merely a source
       // of false positives.
     },
-    variants: ['Sh', 'Sh(Besa)'],
+    variants: ['Sh', 'Sh(Besa)', '(Besa)'],
     postfixes: {
       A: LOOKUP,
       Am: LOOKUP,
