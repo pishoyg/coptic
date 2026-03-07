@@ -87,6 +87,8 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'delere', variants: ['dele'] },
   { fullForm: 'demotic', variants: ['dem'] },
   {
+    // NOTE: 'diff' is a source of rare false positives, as it sometimes simply
+    // means 'different'.
     fullForm: 'different reading, not useful for comparison',
     variants: ['diff'],
   },
