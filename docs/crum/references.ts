@@ -570,7 +570,12 @@ const DATA_1: Resource[] = [
       ],
     },
     variants: ['BM'],
-    postfixes: { Or: 'Oriental', or: 'oriental', Add: 'Addenda' },
+    postfixes: {
+      Or: 'Oriental',
+      or: 'oriental',
+      Add: 'Addenda',
+      Ad: 'Addenda',
+    },
   },
   {
     source: {
