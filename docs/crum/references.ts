@@ -1724,6 +1724,9 @@ const DATA_1: Resource[] = [
       title: 'MSS. in the Bibliothèque Nationale, Paris (Crum’s copies)',
     },
     variants: ['P'],
+    postfixes: {
+      ar: 'Arabic',
+    },
   },
   {
     source: {
