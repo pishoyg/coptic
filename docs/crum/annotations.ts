@@ -353,6 +353,8 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'subjunctive', variants: ['subjunct'] },
   { fullForm: 'substantive', variants: ['substant'] },
   { fullForm: 'sic erat scriptum', variants: ['sic'] },
+  { fullForm: 'sic scriptum in manuscripto', variants: ['sic MS'] },
+  { fullForm: 'sic scriptum in manuscriptis', variants: ['sic MSS'] },
   { fullForm: 'sic lege', variants: ['sic l'] },
   { fullForm: 'scilicet', variants: ['sc'] },
   { fullForm: 'subject', variants: ['subj'] },

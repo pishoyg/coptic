@@ -28,7 +28,7 @@ const TEST_CASES: {
       references: 147,
       bible: 122,
       dialectTooltips: 388,
-      annotations: 77,
+      annotations: 76,
     },
   },
   {
