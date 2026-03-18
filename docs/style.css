@@ -158,24 +158,31 @@ table {
 
 /* TODO: (#203) This belongs in a standalone file. */
 .button {
-  padding: 2px 6px; /* Smaller padding for a more compact button */
-  font-size: medium; /* Smaller text size */
-  border-radius: 4px;
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: all 0.3s ease-in-out; /* Smooth effects */
-  background-color: #f0f0f0; /* Light gray button background */
-  color: var(--bright-sky-blue); /* Link blue */
-  text-decoration: none; /* Remove underline in case it's an anchor. */
+  padding: 6px 12px;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-color: #f8f9fa;
+  color: var(--midnight-blue);
+  border: 1px solid var(--light-gray);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
 }
 
 @media (hover: hover) {
   .button:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    background-color: #e9ecef;
+    color: var(--midnight-blue);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgb(0 0 0 / 5%);
   }
 }
 
 .button:active {
-  transform: scale(0.95); /* Slightly shrink */
+  transform: scale(0.98) translateY(0); /* Slightly shrink */
 }
 
 /*************** Fonts ***************/

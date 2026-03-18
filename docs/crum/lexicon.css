@@ -19,8 +19,7 @@ form thead * {
 
 /* Add padding to all cells in the form tables. */
 form td {
-  padding-right: 5px;
-  padding-left: 5px;
+  padding: 8px 5px;
 }
 
 #checkboxes label {
@@ -33,6 +32,20 @@ td.view a {
 
 input#search-box {
   width: 100%;
+  padding: 10px 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 5%) inset;
+  background-color: #fafafa;
+}
+
+input#search-box:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgb(52 152 219 / 30%);
+  background-color: #fff;
 }
 
 /* Wide screen rules: */

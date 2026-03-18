@@ -1,12 +1,12 @@
 .collapse {
   margin-top: 0;
   margin-bottom: 0;
+  transition: color 0.2s ease-in-out;
 }
 
 .collapse:hover {
   color: var(--bright-sky-blue);
   cursor: pointer;
-  text-decoration: underline;
 }
 
 .collapsible {

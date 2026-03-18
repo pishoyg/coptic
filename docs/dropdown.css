@@ -76,7 +76,8 @@
 }
 
 .dropdown:hover {
-  background-color: #fffdd0;
+  background-color: #f1f8ff;
+  border-radius: 4px;
 
   & > .droppable {
     /* Hovering a .dropdown element causes its child .droppable to show. */

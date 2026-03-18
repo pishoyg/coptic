@@ -1,10 +1,28 @@
+.results {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 5%);
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--light-gray);
+  margin-top: 10px;
+}
+
+.results thead {
+  background-color: #f8f9fa;
+}
+
+.results thead tr {
+  border-bottom: 2px solid var(--light-gray);
+}
+
 .results td {
+  padding: 5px;
   vertical-align: top;
+  border-left: 1px solid var(--light-gray);
 }
 
 .results td:not(:first-child) {
-  border-left: 1px solid black;
-  padding-left: 5px;
   word-wrap: break-word; /* legacy support */
   overflow-wrap: break-word; /* modern standard */
   word-break: break-word; /* fallback for older browsers */
@@ -13,24 +31,30 @@
 
 .match {
   background-color: var(--purple);
+  border-radius: 2px;
 }
 
 .match-separator {
   color: gray;
   width: 80%;
-  margin: 3px auto;
+  margin: 8px auto;
+  border-top: 1px dashed var(--light-gray);
 }
 
 .view-for-more {
   font-style: italic;
 }
 
-.results thead tr {
-  border-bottom: 1px solid black;
+.results tbody tr {
+  transition: background-color 0.2s ease-in-out;
 }
 
-.results tbody tr:not(:last-child) {
-  border-bottom: 1px solid black;
+.results tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.results tbody tr:not(:last-child) td {
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .view:hover {
