@@ -812,7 +812,7 @@ const DATA_1: Resource[] = [
         'De Vis, H. (1929). <em><a href="https://archive.org/details/homliescoptesdel0000devi_r2q2/page/n7/mode/2up">Homélies coptes de la Vaticane</a></em>. (Coptica, vol. V). Hauniae [Copenhagen]: Gyldendal.',
       ],
     },
-    variants: ['De V'],
+    variants: ['De V', 'De Vis'],
   },
   {
     source: {
@@ -1022,6 +1022,9 @@ const DATA_1: Resource[] = [
       ],
     },
     variants: ['H'],
+    postfixes: {
+      Sahid: 'Sahidic',
+    },
   },
   {
     source: {
