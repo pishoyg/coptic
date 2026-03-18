@@ -242,6 +242,8 @@ export function handle(root: HTMLElement): void {
 
       addCopyShortcuts(elem);
 
+      addCopticCopyShortcuts(elem);
+
       handleFormSuperscripts(elem);
 
       dev.play(() => {
@@ -1356,7 +1358,7 @@ const textContentOverrides: Record<string, string> = {
 function addCopyShortcuts(root: HTMLElement): void {
   root.querySelectorAll(`.${cls.ENTRY}`).forEach((entry: Element): void => {
     const copy: HTMLSpanElement = document.createElement('span');
-    copy.textContent = '📋';
+    copy.textContent = '📃';
     copy.addEventListener('click', () => {
       browser.yank(
         Array.from(entry.querySelectorAll('p'))
@@ -1368,6 +1370,20 @@ function addCopyShortcuts(root: HTMLElement): void {
     drop.addDroppable(copy, ['copy text']);
     entry.prepend(copy);
   });
+}
+
+/**
+ *
+ * @param root
+ */
+function addCopticCopyShortcuts(root: HTMLElement): void {
+  root
+    .querySelectorAll<HTMLElement>(`.${cls.COPTIC}`)
+    .forEach((coptic: HTMLElement): void => {
+      coptic.addEventListener('click', () => {
+        browser.yank(str.textContent(coptic, textContentOverrides));
+      });
+    });
 }
 
 /**
