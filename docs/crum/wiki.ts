@@ -85,7 +85,7 @@ const NUMS = '(\\d+|A|C|D|F)(?: (\\d+))?';
 // NOTE:
 // 1. This creates two sets of capture groups.
 // 2. This is a sticky regex.
-const CHAPTER_VERSE = new RegExp(`\\.? (?:${NUMS}|\\(${NUMS}\\))`, 'uy');
+const CHAPTER_VERSE = new RegExp(`\\.? (?:${NUMS}|\\(${NUMS}\\))\\b`, 'uy');
 
 /**
  * DAN_OVERRIDE defines special Book names used by Crum to refer to chapters in
