@@ -1,18 +1,114 @@
 /* Styling for the Bible index. */
-.index-book-chapter-list a {
-  margin-left: 5px;
-}
-
 table {
   table-layout: fixed; /* Equal-width columns. */
 }
 
 td {
   vertical-align: top;
-  padding: 10px; /* Adds some spacing inside the cells. */
+  padding: 10px 30px;
 }
 
 td:first-child {
   /* Adds a border to the right side of the first cell. */
-  border-right: 1px solid #ccc;
+  border-right: 1px solid var(--light-gray);
+}
+
+.index-book-name {
+  padding: 2px;
+  background-color: #f8f9fa;
+  border: 1px solid var(--light-gray);
+  border-radius: 6px;
+  font-size: 1.1rem;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+  user-select: none;
+}
+
+.index-book-name:hover {
+  background-color: #e9ecef;
+}
+
+.index-book-name:active {
+  transform: scale(0.99);
+}
+
+.index-book-name::before {
+  content: '▸ ';
+  display: inline-block;
+  transition: transform 0.3s ease;
+  margin-right: 8px;
+  color: var(--bright-sky-blue);
+}
+
+.index-book-name.is-open::before {
+  transform: rotate(90deg);
+}
+
+/* Container inside collapsible for grid/flex layout of links */
+.index-book-chapter-list > div {
+  min-height: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 10px 15px;
+  transition:
+    padding 0.5s ease-out,
+    opacity 0.5s ease-out;
+}
+
+.index-book-chapter-list:not(.is-open) > div {
+  padding-top: 0;
+  padding-bottom: 0;
+  opacity: 0;
+}
+
+.index-book-chapter-list a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  background-color: white;
+  border: 1px solid var(--light-gray);
+  color: var(--midnight-blue);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 5%);
+}
+
+@media (hover: hover) {
+  .index-book-chapter-list a:hover {
+    background-color: var(--bright-sky-blue);
+    color: white;
+    border-color: var(--bright-sky-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
+  }
+}
+
+.index-book-chapter-list a:active {
+  transform: scale(0.95) translateY(0);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+}
+
+hr {
+  border: none;
+  border-top: 2px dashed var(--light-gray);
+  margin: 30px 0;
+}
+
+/* Mobile responsive layout */
+@media (width <= 800px) {
+  td {
+    padding: 10px;
+  }
+
+  td:first-child {
+    border-right: none;
+  }
 }
