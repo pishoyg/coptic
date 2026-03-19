@@ -23,6 +23,9 @@ node_modules
 test-results/
 playwright-report/
 
+# Gemini artifacts
+.playwright-mcp
+
 # Flashcard decks are too big to host on GitHub.
 docs/crum/anki
 
