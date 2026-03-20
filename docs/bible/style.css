@@ -3,12 +3,26 @@
 .title {
   /* The title shows in the middle. */
   text-align: center;
+  font-size: 140%;
 }
 
 table {
   /* Break long words. */
   overflow-wrap: break-word;
   word-break: break-word;
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 5%);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+tr {
+  transition: background-color 0.2s ease;
+}
+
+tr:hover {
+  background-color: #f1f5f9;
 }
 
 td {
@@ -16,10 +30,12 @@ td {
   vertical-align: top;
 
   /* A very light, thin border */
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #eaeaea;
 
   /* Add padding to give the text room to breathe. */
   padding: 1em 0.5em;
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 
 tr:last-child td {
@@ -30,18 +46,30 @@ tr:last-child td {
 #bar,
 #tray {
   font-style: italic;
-  color: gray;
+  color: var(--midnight-blue);
 }
 
 #bar {
-  display: flex; /* Establish a flex container. */
-  margin-top: 10px;
-  margin-bottom: 10px;
+  display: flex;
+  margin: 1rem auto 2rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: inset 0 1px 3px rgb(0 0 0 / 5%);
 }
 
 #bar label {
-  flex: 1; /* Allow each label to grow and take up equal space. */
-  text-align: center; /* Optional: centers text inside the growing label. */
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+#bar label:hover {
+  background-color: #e9ecef;
 }
 
 #tray {
@@ -50,7 +78,7 @@ tr:last-child td {
 }
 
 :target.verse {
-  background-color: var(--anchor-yellow);
+  background-color: var(--anchor-highlight);
 }
 
 @media (width <= 500px) {
@@ -63,6 +91,10 @@ tr:last-child td {
   #tray {
     display: block;
     float: right;
+    padding: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    cursor: pointer;
   }
 
   /* Push the title to the left, so it will show next to the language tray. */
@@ -73,5 +105,6 @@ tr:last-child td {
   /* Reduce the cell padding. */
   td {
     padding: 0.25em 0.125em;
+    font-size: 1rem;
   }
 }
