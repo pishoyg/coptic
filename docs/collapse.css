@@ -58,17 +58,15 @@
   overflow: hidden;
 }
 
-.arrow {
+.collapse.arrowed::before {
+  content: '▷';
+  font-size: 85%;
   display: inline-block; /* Allows transform to work */
   transition: transform var(--transition-duration) ease-in-out; /* Match your other transitions */
-}
-
-/* By default, it points right */
-.arrow::before {
-  content: '▸ ';
+  margin-right: 5px;
 }
 
 /* When the parent has .is-open, rotate it and change the content */
-.is-open .arrow {
+.collapse.arrowed.is-open::before {
   transform: rotate(90deg);
 }

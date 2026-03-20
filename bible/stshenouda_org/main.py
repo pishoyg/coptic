@@ -645,7 +645,7 @@ class HTMLBuilder:
                 if idx:
                     yield page.HORIZONTAL_RULE
                 for book in section.books:
-                    yield f'<h4 class="collapse index-book-name" \
+                    yield f'<h4 class="collapse arrowed index-book-name" \
                             id="{book.id()}">'
                     yield book.name
                     yield "</h4>"
