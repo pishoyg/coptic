@@ -225,6 +225,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'bis', variants: ['bis'] },
   { fullForm: 'catalogue', variants: ['catal'] },
   { fullForm: 'circa', variants: ['ca'] },
+  { fullForm: 'codex', variants: ['cod'], suffix: true },
   { fullForm: 'condition, conditional', variants: ['condit'] },
   { fullForm: 'conjunctive', variants: ['conj', 'conjunct'] },
   { fullForm: 'constructive', variants: ['constr', 'construct'] },
