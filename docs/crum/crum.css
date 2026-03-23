@@ -163,11 +163,6 @@ figcaption {
 
 .wiki .coptic {
   font-weight: bold;
-
-  &:hover {
-    background-color: #f1f8ff;
-    border-radius: 4px;
-  }
 }
 
 .wiki {
@@ -194,6 +189,20 @@ figcaption {
 
   .demotic {
     font-style: italic;
+  }
+
+  & .coptic,
+  .greek,
+  .arabic,
+  .aramaic,
+  .hebrew,
+  .amharic,
+  .demotic,
+  .hieroglyphic {
+    &:hover {
+      background-color: #f1f8ff;
+      border-radius: 4px;
+    }
   }
 
   & .semicolon {
