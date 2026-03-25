@@ -68,8 +68,10 @@ const EXCLUDE: string = css.classQuery(
  * CHAPTER_VERSE defines the regex used to parse the chapter and verse numbers
  * in a Bible citation.
  *
- * Some books, such as the Book of Esther, have special chapters called A, C, D,
- * and F. This is why we allow the chapter number to be one of those characters.
+ * Some books, such as the Book of Esther, have special chapters called labeled
+ * A through F (though, as of the time of writing, our Bible version only has A,
+ * C, D, and F). This is why we allow the chapter number to be one of those
+ * characters.
  * In some cases, only one number follows the book name, so we allow one of the
  * two numbers to be omitted.
  *
@@ -80,7 +82,7 @@ const EXCLUDE: string = css.classQuery(
  * In another singleton occurrence (in ⲁⲥⲕ – 503), the chapter and verse numbers
  * are parenthesized, so we account for that.
  */
-const NUMS = '(\\d+|A|C|D|F)(?: (\\d+))?';
+const NUMS = '(\\d+|[A-F])(?: (\\d+))?';
 // CHAPTER_VERSE matches "NUMS" OR "(NUMS)".
 // NOTE:
 // 1. This creates two sets of capture groups.
