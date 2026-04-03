@@ -186,6 +186,9 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'second', variants: ['2d'] },
   { fullForm: 'third', variants: ['3d'] },
 
+  { fullForm: 'first person', variants: ['1st pers'] },
+  { fullForm: 'second person', variants: ['2d pers'] },
+  { fullForm: 'third person', variants: ['3d pers'] },
   { fullForm: 'first person singular', variants: ['1 sg', '1st sg'] },
   { fullForm: 'second person singular', variants: ['2 sg', '2d sg'] },
   { fullForm: 'third person singular', variants: ['3 sg', '3d sg'] },
@@ -322,6 +325,11 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'penultimate', variants: ['penult'], suffix: true },
   { fullForm: 'penes', variants: ['penes'] },
   { fullForm: 'perfect', variants: ['perf', 'pf'] },
+  {
+    fullForm: 'personal pronoun',
+    variants: ['pers pron'],
+    noCaseVariant: true,
+  },
   { fullForm: 'Persian', variants: ['Pers'], noCaseVariant: true },
   { fullForm: 'pluperfect', variants: ['pluperf', 'plupf'] },
   { fullForm: 'postpositive', variants: ['post-posit'] }, // Encountered once (as of the time of writing).
