@@ -198,7 +198,8 @@ figcaption {
   .hebrew,
   .amharic,
   .demotic,
-  .hieroglyphic {
+  .hieroglyphic,
+  .gloss {
     &:hover {
       background-color: #f1f8ff;
       border-radius: 4px;
