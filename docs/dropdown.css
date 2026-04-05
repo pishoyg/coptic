@@ -3,7 +3,11 @@
 /* .droppable represents either a click-invoked or hover-invoked tooltip. */
 .droppable {
   /* The element is hidden by default. */
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    visibility 0.2s,
+    opacity 0.2s ease-in-out;
 
   /* The element shows right below the parent. */
   position: absolute;
@@ -81,8 +85,15 @@
 
   & > .droppable {
     /* Hovering a .dropdown element causes its child .droppable to show. */
-    display: block;
+    visibility: visible;
+    opacity: 1;
   }
+}
+
+/* Click-invoked .droppable elements get the .show class via JS. */
+.droppable.show {
+  visibility: visible;
+  opacity: 1;
 }
 
 /* .drop is specific to click-invoked elements. Clicking a .drop element should

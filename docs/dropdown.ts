@@ -5,7 +5,6 @@ import * as browser from './browser.js';
 import * as log from './logger.js';
 import * as str from './str.js';
 
-type Visibility = 'block' | 'none';
 type Invocation = 'hover' | 'click';
 // New type to handle direction
 type Position = 'above' | 'below';
@@ -26,6 +25,8 @@ export enum CLS {
   ALIGN_RIGHT = 'align-right',
   /* ABOVE is the class for droppables that render above the element. */
   ABOVE = 'above',
+  /* SHOW is the class to display a click-invoked droppable. */
+  SHOW = 'show',
 }
 
 /**
@@ -76,18 +77,19 @@ export class Droppable {
   /**
    * @returns
    */
-  private get(): Visibility {
-    return this.droppable.style.display as Visibility;
+  private visible(): boolean {
+    return this.droppable.classList.contains(CLS.SHOW);
   }
 
   /**
-   * @param visibility
+   * @param visible
    */
-  private set(visibility: Visibility): void {
-    this.droppable.style.display = visibility;
-    if (visibility === 'none') {
+  private set(visible: boolean): void {
+    if (!visible) {
+      this.droppable.classList.remove(CLS.SHOW);
       return;
     }
+    this.droppable.classList.add(CLS.SHOW);
     this.realign();
   }
 
@@ -95,13 +97,13 @@ export class Droppable {
    *
    */
   private toggle(): void {
-    this.set(this.get() === 'block' ? 'none' : 'block');
+    this.set(!this.visible());
   }
 
   /**
    */
   private hide(): void {
-    this.set('none');
+    this.set(false);
   }
 
   /**
