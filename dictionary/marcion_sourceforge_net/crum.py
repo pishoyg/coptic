@@ -739,7 +739,6 @@ class Root(Row):
                 yield "</td>"
             if crum_span:
                 yield f'<td rowspan="{crum_span}" class="dictionary">'
-                yield "<b>Crum: </b>"
                 yield f'<span class="crum-page">{crum}</span>'
                 yield "</td>"
 

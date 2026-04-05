@@ -423,7 +423,10 @@ class Wiki:
         )
 
     def _html_aux(self) -> abc.Generator[str]:
-        yield '<div class="entry">'
+        classes: list[str] = ["entry"]
+        if self.vide:
+            classes.append("vide")
+        yield f'<div class="{" ".join(classes)}">'
         yield "<p>"
 
         raw: str = self.entry
@@ -512,6 +515,7 @@ class Page:
         return "".join(self.html_aux())
 
     def html_aux(self) -> abc.Generator[str]:
+        yield '<div class="folio">'
         yield '<span class="crum-page">'
         yield str(self.crum)
         yield "</span>"
@@ -526,3 +530,4 @@ class Page:
             list(map(str, self.wikis)),
         )
         yield html
+        yield "</div>"
