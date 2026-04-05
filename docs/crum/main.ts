@@ -3,6 +3,7 @@
 import * as help from './help.js';
 import * as dial from './dialect.js';
 import * as iam from '../iam.js';
+import * as log from '../logger.js';
 import * as drop from '../dropdown.js';
 import * as html from '../html.js';
 import * as high from './highlight.js';
@@ -55,7 +56,11 @@ function main(): void {
  * TODO: (#203) This belongs in the header module.
  */
 function addReportsLink(): void {
-  const reports: HTMLElement = document.getElementById(id.REPORTS)!;
+  const reports: HTMLElement | null = document.getElementById(id.REPORTS);
+  if (!reports) {
+    log.error('Unable to find a', `#${id.REPORTS}`, 'element');
+    return;
+  }
   if (window.innerWidth < SMALL_SCREEN_WIDTH) {
     // TODO: (#203) We never handle small-screen styling in TypeScript! We've
     // only ever done it in CSS. Let's not break this rule.

@@ -496,8 +496,12 @@ export function handleNagHammadi(root: HTMLElement): void {
  * @returns The Marcion database key of the current word.
  */
 function marcion(): number | undefined {
-  const href = (document.getElementById(id.KEY) as HTMLAnchorElement).href;
-  const match = /(\d+)\.html$/.exec(href);
+  const keyCell: Element | null = document.getElementById(id.KEY);
+  if (!keyCell) {
+    // This is a non-note page.
+    return undefined;
+  }
+  const match = /(\d+)\.html$/.exec((keyCell as HTMLAnchorElement).href);
   if (!match?.[1]) {
     return undefined;
   }
