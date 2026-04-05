@@ -763,7 +763,7 @@ const DATA_1: Resource[] = [
         'Rösch, F. (1910). <em><a href="https://archive.org/details/bruchstckedese00clemuoft/bruchstckedese00clemuoft/page/n5/mode/2up">Bruchstücke des ersten Clemensbriefes nach dem achmimischen Papyrus der Strassburger Universitäts- und Landesbibliothek mit biblischen Texten derselben Handschrift</a></em>. Strassburg: Schlesier &amp; Schweikhardt.',
       ],
     },
-    variants: ['Cl'],
+    variants: ['Cl', 'Cl Rösch'],
   },
   {
     source: {
