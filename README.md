@@ -51,8 +51,9 @@ that aims to make the Coptic language more **learnable**.
 
 We use:
 
-- GitHub for our code base.
-- GitHub Pages for our [website](https://remnqymi.com/).
+- [GitHub](https://github.com/pishoyg/coptic/) for our code base.
+- [GitHub Pages](https://github.com/pishoyg/coptic/settings/pages) for our
+[website](https://remnqymi.com/).
 - [AWS Route 53](https://us-east-1.console.aws.amazon.com/route53/v2/hostedzones)
 for domain registration and DNS.
 - [Google
@@ -65,6 +66,9 @@ for traffic tracking and analysis.
 
 1. Clone the repo with `--depth=1` because the history is huge, and much of the
    outrageously large files have been cleaned up.
+   ```sh
+   git clone https://github.com/pishoyg/coptic.git --depth=1
+   ```
 
 1. Setting up the environment is necessary for a lot of pipelines to work.
 
@@ -139,7 +143,7 @@ Besides this file, docs can be found in:
 
    - In-code comments
    - [Planning framework](#planning)
-   - Commit messages (*albeit less significantly*)
+   - [Commit messages](https://github.com/pishoyg/coptic/commits/) (*albeit less significantly*)
 
    User-facing documentation shouldn't live on the repo, but should go on [the
    website](http://remnqymi.com/) instead.
