@@ -1129,6 +1129,7 @@ const DATA_1: Resource[] = [
     variants: ['J'],
     postfixes: {
       Leip: 'two such papyri in Leipzig University, Aegyptologisches Institut (cf below)',
+      Index: undefined,
     },
   },
   {
