@@ -394,7 +394,7 @@ class Column:
 
     def __init__(self, name: str, end: str) -> None:
         self.name: str = name
-        self.end: lexical.CrumPage = lexical.CrumPage(end)
+        self.end: lexical.Column = lexical.Column(end)
 
 
 COLUMN_RANGES: list[Column] = [

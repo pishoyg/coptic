@@ -7,13 +7,17 @@ figcaption {
   font-size: small;
 }
 
-.wiki hr {
-  margin: 0 auto 10px;
-  width: 70%;
-}
+.wiki .folio {
+  border: 1px solid var(--light-gray);
+  border-radius: 8px;
+  padding: 0 20px;
+  margin-bottom: 1em;
 
-.wiki .folio hr {
-  visibility: hidden;
+  &:has(.entry:not(.vide)) {
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 5%);
+  }
 }
 
 :root {
@@ -102,6 +106,19 @@ figcaption {
   font-size: small;
 }
 
+.page-list {
+  float: right;
+}
+
+#crum,
+#dawoud {
+  margin-top: 2rem;
+
+  & .page-list {
+    margin-bottom: 1rem;
+  }
+}
+
 .crum-page-img-img,
 .dawoud-page-img-img {
   width: 1000px;
@@ -188,15 +205,6 @@ figcaption {
 .wiki {
   margin-top: 2em;
   margin-bottom: 2em;
-
-  & .entry:not(.vide) {
-    margin-bottom: 1em;
-    padding: 10px 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgb(0 0 0 / 5%);
-    border: 1px solid var(--light-gray);
-  }
 
   & .arabic,
   .aramaic,
@@ -412,10 +420,6 @@ figcaption {
 .quality {
   font-size: small;
   font-style: italic;
-}
-
-.page-list {
-  float: right;
 }
 
 body.note .sense {

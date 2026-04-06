@@ -18,7 +18,7 @@ import regex
 
 from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import lexical as lex
-from utils import ensure, gcp, lang, log, orth, page
+from utils import ensure, gcp, lang, log, orth
 
 # pylint: disable=line-too-long
 # TODO: (#0) Move to `utils/paths.py`.
@@ -291,7 +291,7 @@ class Wiki:
             self.headword,
         )
 
-        self.crum: lex.CrumPage = lex.CrumPage(record["Crum"])
+        self.crum: lex.Column = lex.Column(record["Crum"])
         assert self.crum
 
         vide: str = record["_v_"]
@@ -514,11 +514,11 @@ def by_marcion_key() -> dict[str, list[Wiki]]:
     }
 
 
-class Page:
-    """Page represents a group of Wikis that occur on the same page."""
+class Column:
+    """Column represents a group of Wikis that occur on the same column."""
 
-    def __init__(self, crum: lex.CrumPage, ws: abc.Iterable[Wiki]) -> None:
-        self.crum: lex.CrumPage = crum
+    def __init__(self, crum: lex.Column, ws: abc.Iterable[Wiki]) -> None:
+        self.crum: lex.Column = crum
         self.wikis: list[Wiki] = list(ws)
 
     def html(self) -> str:
@@ -529,9 +529,7 @@ class Page:
         yield '<span class="crum-page">'
         yield str(self.crum)
         yield "</span>"
-        html: str = page.HORIZONTAL_RULE.join(
-            w.html() for w in self.wikis if w.complete
-        )
+        html: str = "".join(w.html() for w in self.wikis if w.complete)
         ensure.ensure(
             html,
             "Generating HTML for a page without any complete Wikis! Page:",

@@ -195,8 +195,8 @@ class Row(gcp.Record):
         return sorted(combined)
 
     @functools.cached_property
-    def crum(self) -> lex.CrumPage:
-        return lex.CrumPage(self.get(sheet.COL.CRUM))
+    def crum(self) -> lex.Column:
+        return lex.Column(self.get(sheet.COL.CRUM))
 
 
 # NOTE: As of now, derivations are somewhat of second-class citizens in our
@@ -463,9 +463,9 @@ class Root(Row):
         )
         # The input is guaranteed to be sorted by page number, so we can use
         # `groupby` directly.
-        return page.HORIZONTAL_RULE.join(
-            wiki.Page(crum, group).html()
-            for crum, group in itertools.groupby(wikis, key=lambda w: w.crum)
+        return "".join(
+            wiki.Column(col, group).html()
+            for col, group in itertools.groupby(wikis, key=lambda w: w.crum)
         )
 
     @functools.cached_property
@@ -508,7 +508,7 @@ class Root(Row):
     def crum_page_range(self) -> str:
         # TODO: (#399) Consider returning page objects instead of a string.
         # Same for Dawoud!
-        pages: list[lex.CrumPage] = [d.crum for d in self.tree()]
+        pages: list[lex.Column] = [d.crum for d in self.tree()]
         pages = list(filter(None, pages))
         # TODO: (#0) Some crum words have derivations that are not sorted! This
         # is confusing! Investigate!
@@ -517,8 +517,8 @@ class Root(Row):
             assert not self.crum_last_page
             return ""
         assert all(pages)
-        first: lex.CrumPage = pages[0]
-        last: lex.CrumPage = self.crum_last_page or pages[-1]
+        first: lex.Column = pages[0]
+        last: lex.Column = self.crum_last_page or pages[-1]
         if first == last:
             return str(ensure.singleton(pages))
         return f"{first}-{last}"
@@ -565,8 +565,8 @@ class Root(Row):
         return quality
 
     @functools.cached_property
-    def crum_last_page(self) -> lex.CrumPage:
-        return lex.CrumPage(self.get(sheet.COL.CRUM_LAST_PAGE))
+    def crum_last_page(self) -> lex.Column:
+        return lex.Column(self.get(sheet.COL.CRUM_LAST_PAGE))
 
     @functools.cached_property
     def dawoud_pages(self) -> str:
@@ -966,7 +966,6 @@ class Root(Row):
             or self.antonyms
             or self.homonyms
         ):
-            yield page.HORIZONTAL_RULE
             yield '<div id="sisters" class="sisters">'
             before: bool = False
             if self.sisters:
@@ -1002,9 +1001,6 @@ class Root(Row):
             yield "</div>"
             del before
 
-        if self.has_wiki_canonical_entries() or self.crum:
-            yield page.HORIZONTAL_RULE
-
         # Crum's pages.
         if self._has_crum_pages():
             yield '<div id="crum" class="crum dictionary">'
@@ -1026,7 +1022,6 @@ class Root(Row):
             yield "</div>"
 
         if self.dawoud_pages:
-            yield page.HORIZONTAL_RULE
             yield '<div id="dawoud" class="dawoud dictionary">'
             yield '<span class="page-list">'
             # Dawoud's pages.

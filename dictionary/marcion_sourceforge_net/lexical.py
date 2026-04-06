@@ -393,8 +393,8 @@ class Reference(Part):
 
 
 @functools.total_ordering
-class CrumPage:
-    """A page number in Crum's dictionary."""
+class Column:
+    """A column number in Crum's dictionary."""
 
     def __init__(self, raw: str):
         if not raw:
@@ -432,7 +432,7 @@ class CrumPage:
 
     @typing.override
     def __eq__(self, other: object) -> bool:
-        assert isinstance(other, CrumPage)
+        assert isinstance(other, Column)
         return (self._num, self._col) == (other._num, other._col)
 
     def __lt__(self, other: typing.Self) -> bool:
