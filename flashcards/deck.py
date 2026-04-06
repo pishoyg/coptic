@@ -142,7 +142,6 @@ class Note:
             '<div class="front" id="front">',
             self.front,
             "</div>",
-            "<hr/>",
             '<div class="back" id="back">',
             self.back,
             "</div>",
@@ -324,7 +323,6 @@ class Deck:
                     "qfmt": '<div class="front"> {{Front}} </div>'
                     + f'<script type="text/javascript">{javascript}</script>',
                     "afmt": '<div class="front"> {{Front}} </div>'
-                    + "<hr/>"
                     + '<div class="back"> {{Back}} </div>'
                     + f'<script type="text/javascript">{javascript}</script>',
                 },
