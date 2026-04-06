@@ -130,8 +130,7 @@ PATTERNS: list[Pattern] = [
         ],
     ),
     Pattern(["crum/crum/*.png"]),  # Crum scan.
-    # TODO: (#681) Restore the image pipeline.
-    # Pattern(["crum/explanatory/*-*-*.*"]),  # Explanatory images.
+    Pattern(["crum/explanatory/*-*-*.*"]),  # Explanatory images.
     Pattern(["crum/anki/*"], required=False),  # Anki is not tracked in Git.
     # Auto-generated (bible):
     Pattern(["bible/index.html"]),
