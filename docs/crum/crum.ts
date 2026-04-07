@@ -229,7 +229,7 @@ export function handleDrvKey(root: HTMLElement): void {
       // Add the new span as a child to the original parent.
       parent.appendChild(span);
 
-      if (iam.amI('anki')) {
+      if (iam.amI('card')) {
         // Yanking is not straightforward on Anki, for what it seems!
         return;
       }
@@ -379,7 +379,7 @@ export function insertCrumAbbreviationsLink(): void {
  * @param root
  */
 export function handleAnkiNavigation(root: HTMLElement): void {
-  if (!iam.amI('anki')) return;
+  if (!iam.amI('card')) return;
 
   root
     .querySelectorAll<HTMLAnchorElement>(`a.${cls.NAVIGATE}`)

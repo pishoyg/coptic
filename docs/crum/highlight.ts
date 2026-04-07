@@ -58,7 +58,7 @@ export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
     super(
       // CSS styler, which is our preferable styler, doesn't work on Anki. For
       // some reason! We therefore opt for an element styler.
-      iam.amI('anki')
+      iam.amI('card')
         ? new high.ElementStyler(() => Array.from(this.updates()))
         : new high.CSSStyler(() => this.rule()),
       manager,
@@ -125,7 +125,7 @@ export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
   public override reset(): void {
     super.reset();
     // TODO: (#203) Move to a separate highlighter.
-    if (iam.amI('lexicon') || iam.amI('anki')) {
+    if (iam.amI('lexicon') || iam.amI('card')) {
       // Attempting to reload the page on Ankidroid opens a the browser at a
       // 127.0.0.0 port! We avoid reloading on all Anki platforms!
       // In Xooxle, there is no hash-based highlighting, so we don't need to

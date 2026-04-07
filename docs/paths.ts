@@ -3,7 +3,7 @@
 import * as iam from './iam.js';
 
 // remnqymi.com ownables:
-const SITE_URL = iam.amI('anki') ? 'http://remnqymi.com' : '';
+const SITE_URL = iam.amI('card') ? 'http://remnqymi.com' : '';
 export const HOME = `${SITE_URL}/`;
 export const LEXICON = `${SITE_URL}/crum`;
 export const DAWOUD = `${SITE_URL}/dawoud`;

@@ -22,7 +22,7 @@ function main(): void {
   // search logic to work correctly.
   html.normalize();
   const manager: dial.Manager = new dial.Manager();
-  const anki = iam.amI('anki');
+  const anki = iam.amI('card');
   if (!anki) {
     // Set to defaults.
     // Anki manages its own dialects, so we shouldn't use defaults.

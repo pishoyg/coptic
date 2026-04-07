@@ -67,14 +67,6 @@ from utils import ensure, file, page, paths, system
 
 NOTE_CLASS = "note"
 
-# _IAM_ANKI is a line of JavaScript code that can be used to distinguish whether
-# we're running on Anki.
-# Notice that this line will end up being added twice in our card template, once
-# in the front and once in the back.
-# We use `var` instead of `const` in order to avoid issues with redefining a
-# variable.
-_IAM_ANKI = "var ANKI = true;"
-
 IMG_SRC_FMT: re.Pattern[str] = re.compile(r'<img src="([^"]+)"')
 FONT_SRC_RE: re.Pattern[str] = re.compile(r"src: url\('([^']*)'\)")
 
@@ -305,7 +297,6 @@ class Deck:
         js_start: str = ensure.singleton(note.js_start for note in self.notes)
 
         yield js_start
-        yield _IAM_ANKI
 
         if not js_path:
             return
