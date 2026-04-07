@@ -14,11 +14,12 @@ type WikiElementKey =
   | 'references'
   | 'bible'
   | 'dialectTooltips'
-  | 'annotations';
+  | 'annotations'
+  | 'pages';
 
 const TEST_CASES: {
   key: string;
-  want: Record<WikiElementKey, number>;
+  want: Partial<Record<WikiElementKey, number>>;
 }[] = [
   {
     // 88 contains a relatively large piece of text, so we include to cover a
@@ -126,17 +127,17 @@ const QUERIES: Record<WikiElementKey, string> = {
 base.test.describe('Wiki Reference Handlers', () => {
   for (const testCase of TEST_CASES) {
     base.test(
-      `Inserts the correct number of objects on ${testCase.key}`,
+      `Inserts the correct number of '${testCase.key}' annotations.`,
       async ({ page }: { page: play.Page }): Promise<void> => {
         await page.goto(paths.crum(testCase.key), {
           waitUntil: 'networkidle',
         });
         await Promise.all(
-          (Object.keys(testCase.want) as WikiElementKey[]).map(
-            (key: WikiElementKey): Promise<void> =>
+          Object.entries(testCase.want).map(
+            ([key, value]: [string, number]): Promise<void> =>
               play.expect
-                .soft(page.locator(QUERIES[key]))
-                .toHaveCount(testCase.want[key])
+                .soft(page.locator(QUERIES[key as WikiElementKey]))
+                .toHaveCount(value)
           )
         );
       }
