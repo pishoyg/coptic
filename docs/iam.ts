@@ -8,7 +8,6 @@
  * Where represents an identity.
  */
 export type Identity =
-  | 'UNKNOWN'
   | 'note' // A Crum word.
   // NOTE: The 'card' class is added by Anki.
   // See https://docs.ankiweb.net/templates/styling.html.
