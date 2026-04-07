@@ -463,11 +463,11 @@ body:not(.dev) {
   .drv-key {
     display: none;
   }
+}
 
-  /* TODO: (#681) Restore images. */
-  #images {
-    display: none;
-  }
+/* TODO: (#681) Restore images. */
+body:not(.dev, .card) #images {
+  display: none;
 }
 
 body.dev {
