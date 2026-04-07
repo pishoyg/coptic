@@ -673,7 +673,7 @@ _CODE_BY_COMPONENT: list[Comp] = [
     Comp(
         "shared",
         "shared",
-        prefixes=["env/", "utils/", "pre-commit/"],
+        prefixes=["env/", "utils/", "pre-commit/", ".gemini/"],
         dirnames=[""],
     ),
     # copticsite project was completely abandoned, and the code was deleted.
