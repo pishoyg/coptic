@@ -579,8 +579,12 @@ _GIT_STATS: list[Stat] = [
     Stat(
         "num_contributors",
         "Contributors",
-        lambda: len(
-            system.run("git shortlog --summary --group=author").splitlines(),
+        lambda: sum(
+            1
+            for author in system.run(
+                "git log --format='%aN' | sort -u",
+            ).splitlines()
+            if author != "ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ"
         ),
         1,
         10,
