@@ -1308,38 +1308,12 @@ const ANTECEDENT_QUERY: string = css.classQuery(
  * a reference, a Bible citation, or a page.
  *
  * @param context
- * @param strict - If true, search for an element that lives at the same
- * parenthesis depth as the given node. Otherwise, return the first matching
- * element regardless of parenthesis depth.
  * @returns
  */
-function findAntecedent(
-  context: html.ReplaceNodesContext,
-  strict?: boolean
-): HTMLElement | null {
-  if (strict === undefined) {
-    // If the `strict` parameter is unset, try finding a strict antecedent
-    // first, and fall back to non-strict mode if unsuccessful.
-    return findAntecedent(context, true) ?? findAntecedent(context, false);
-  }
-
-  let depth = 0;
+function findAntecedent(context: html.ReplaceNodesContext): HTMLElement | null {
   for (const curr of context.matchPreviousSiblings()) {
-    if (
-      curr instanceof Element &&
-      curr.matches(ANTECEDENT_QUERY) &&
-      (!strict || depth === 0)
-    ) {
+    if (curr instanceof Element && curr.matches(ANTECEDENT_QUERY)) {
       return curr as HTMLElement;
-    }
-
-    if (!strict || !curr.textContent) {
-      continue;
-    }
-
-    for (const c of curr.textContent) {
-      if (c === ')') depth++;
-      else if (c === '(') depth--;
     }
   }
 
