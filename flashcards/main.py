@@ -64,6 +64,11 @@ DECKS: list[deck.Deck] = [
         kellia.notes_aux(kellia.egyptian()),
     ),
     deck.Deck("KELLIA::Greek", 1284010393, kellia.notes_aux(kellia.greek())),
+    deck.Deck(
+        "KELLIA::Greek::Bohairic",
+        1284010395,
+        kellia.notes_aux(kellia.greek(("B",))),
+    ),
     deck.Deck("Andreas of St. Macarius", 1284010394, andreas.notes_aux()),
 ]
 

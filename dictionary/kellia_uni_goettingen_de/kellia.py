@@ -163,6 +163,9 @@ class Orthography:
     def has(self, orth: str) -> bool:
         return any(f.orth == orth for f in self.forms)
 
+    def has_dialect(self, geo: str) -> bool:
+        return any(f.geo == geo for f in self.forms)
+
     def table_aux(self) -> abc.Generator[str]:
         yield '<table id="orths">'
         for line in self.forms:
@@ -450,6 +453,12 @@ class Word:
         return (
             f"https://coptic-dictionary.org/entry.cgi?tla={self.entry_xml_id}"
         )
+
+    def has_dialect(self, geo: str) -> bool:
+        return self.orthstring.has_dialect(geo)
+
+    def has_a_dialect(self, geos: abc.Iterable[str]) -> bool:
+        return any(map(self.has_dialect, geos))
 
 
 def _geo(form: ET.Element) -> str:
@@ -905,26 +914,34 @@ def _augmented_words() -> abc.Generator[Word]:
         log.error("Bohairic forms", forms, "have an invalid TLA ID", tla_id)
 
 
+# The `geos` parameter uses a tuple instead of a list because
+# `functools.cache` requires all arguments to be hashable.
 @functools.cache
-def comprehensive() -> dict[str, Word]:
-    return {w.entry_xml_id: w for w in _augmented_words()}
-
-
-@functools.cache
-def egyptian() -> dict[str, Word]:
-    words: dict[str, Word] = {
-        k: w for k, w in comprehensive().items() if not w.is_greek
+def comprehensive(geos: tuple[str, ...] | None = None) -> dict[str, Word]:
+    return {
+        w.entry_xml_id: w
+        for w in _augmented_words()
+        if not geos or w.has_a_dialect(geos)
     }
-    assert len(words) == NUM_EGYPTIAN, len(words)
+
+
+@functools.cache
+def egyptian(geos: tuple[str, ...] | None = None) -> dict[str, Word]:
+    words: dict[str, Word] = {
+        k: w for k, w in comprehensive(geos).items() if not w.is_greek
+    }
+    if not geos:
+        assert len(words) == NUM_EGYPTIAN, len(words)
     return words
 
 
 @functools.cache
-def greek() -> dict[str, Word]:
+def greek(geos: tuple[str, ...] | None = None) -> dict[str, Word]:
     words: dict[str, Word] = {
-        k: w for k, w in comprehensive().items() if w.is_greek
+        k: w for k, w in comprehensive(geos).items() if w.is_greek
     }
-    assert len(words) == NUM_GREEK, len(words)
+    if not geos:
+        assert len(words) == NUM_GREEK, len(words)
     return words
 
 

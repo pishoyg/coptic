@@ -124,7 +124,7 @@ export function bounded(
  */
 export function escape(query: string): string {
   // TODO: (#0) Use `RegExp.escape` when it's more widely available:
-  // eslint-disable-next-line max-len
+
   // [1] https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/escape
   return query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
