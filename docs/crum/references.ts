@@ -2173,6 +2173,7 @@ const DATA_1: Resource[] = [
       Miss: LOOKUP,
       Mun: LOOKUP,
       P: LOOKUP,
+      'P Col': LOOKUP,
       R: LOOKUP,
       RE: LOOKUP,
       Rec: LOOKUP,
