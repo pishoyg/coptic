@@ -162,6 +162,7 @@ def replace_manual(match: re.Match[str]) -> str:
 # of other HTML files. However, given our current code structure, while it's
 # easy to make the IDs unique per Wiki, it's not quite straightforward to make
 # them unique per file; so we opt for simply making them globally unique.
+# TODO: (#0) Make the IDs unique per file.
 _TAB_COUNTER: abc.Iterator[int] = itertools.count(1)
 
 
