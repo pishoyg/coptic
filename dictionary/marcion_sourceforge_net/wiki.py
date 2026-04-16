@@ -155,6 +155,20 @@ def replace_manual(match: re.Match[str]) -> str:
     return rf'<span class="manual" data-key="{key}">{text}</span>'
 
 
+# We assign IDs to tab characters in order to prevent HTML Tidy from cleaning
+# them up. See #693.
+# Ideally, IDs should be unique per HTML page, rather than globally unique; in
+# order for the content of a given HTML file to be deterministic and independent
+# of other HTML files. However, given our current code structure, while it's
+# easy to make the IDs unique per Wiki, it's not quite straightforward to make
+# them unique per file; so we opt for simply making them globally unique.
+_TAB_COUNTER: abc.Iterator[int] = itertools.count(1)
+
+
+def _replace_tab(_: re.Match[str]) -> str:
+    return f'<span id="tab-{next(_TAB_COUNTER)}" class="tab"> </span>'
+
+
 # Coptic Wiki substitutions:
 #
 # NOTE: This is based on a snapshot of the following file, taken on September 17,
@@ -179,12 +193,7 @@ _SUBSTITUTIONS: list[Substitution] = [
     # bold rule below. We therefore leave it up to our linters to replace
     # the occurrences of `&ask;` produced here with a literal asterisk.
     Substitution(r"\\\*", "&ast;", text_repl="*", ban=["*", "\\"]),
-    Substitution(
-        r"\\t",
-        '<span class="tab">&nbsp;</span>',
-        text_repl="    ",
-        ban=["\\"],
-    ),
+    Substitution(r"\\t", _replace_tab, text_repl="    ", ban=["\\"]),
     Substitution(r"__(.+?)__", r'<span class="gloss">\1</span>', ban=["_"]),
     Substitution(
         # Bold text is simply bullets. We prefer using an explicit `bullet`
