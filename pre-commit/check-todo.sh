@@ -9,7 +9,7 @@ if (( "$#" == 0 )); then
   exit
 fi
 
-TODO="$(_grep "TODO(:) (?!\(#?[0-9]+\))" --perl-regexp --color=always "${@}")"
+TODO="$(_grep "TODO(:) (?!\(#?[0-9]+(,#?[0-9]+)*\))" --perl-regexp --color=always "${@}")"
 if [ -n "${TODO}" ]; then
   echo -e "${RED}Stray TODO markers found!"
   echo -e "Please add an issue number to each TODO, using the format:"
