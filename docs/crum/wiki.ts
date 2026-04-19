@@ -242,9 +242,9 @@ export function handle(root: HTMLElement): void {
 
       handleCorrigenda(elem);
 
-      addCopyShortcuts(elem);
+      addEntryCopyShortcuts(elem);
 
-      addCopticCopyShortcuts(elem);
+      addTextCopyTriggers(elem);
 
       handleFormSuperscripts(elem);
 
@@ -1331,7 +1331,7 @@ const textContentOverrides: Record<string, string> = {
  *
  * @param root
  */
-function addCopyShortcuts(root: HTMLElement): void {
+function addEntryCopyShortcuts(root: HTMLElement): void {
   root.querySelectorAll(`.${cls.ENTRY}`).forEach((entry: Element): void => {
     const copy: HTMLSpanElement = document.createElement('span');
     copy.textContent = '📃';
@@ -1352,12 +1352,26 @@ function addCopyShortcuts(root: HTMLElement): void {
  *
  * @param root
  */
-function addCopticCopyShortcuts(root: HTMLElement): void {
+function addTextCopyTriggers(root: HTMLElement): void {
   root
-    .querySelectorAll<HTMLElement>(`.${cls.COPTIC}`)
-    .forEach((coptic: HTMLElement): void => {
-      coptic.addEventListener('click', () => {
-        browser.yank(str.textContent(coptic, textContentOverrides));
+    .querySelectorAll<HTMLElement>(
+      // NOTE: The following currently excludes GREEK, because Greek possesses
+      // lookup hyperlinks.
+      // TODO: (#661,#658) Figure out a way to allow copying and lookups to
+      // coexist.
+      css.classQuery(
+        cls.GLOSS,
+        cls.COPTIC,
+        cls.AMHARIC,
+        cls.ARABIC,
+        cls.ARAMAIC,
+        cls.DEMOTIC,
+        cls.HEBREW
+      )
+    )
+    .forEach((word: HTMLElement): void => {
+      word.addEventListener('click', () => {
+        browser.yank(word.textContent);
       });
     });
 }
