@@ -307,6 +307,7 @@ repos:
     rev: v2.4.1
     hooks:
       - id: doctoc
+        exclude: CLAUDE.md
 
   # YAML
   - repo: https://github.com/google/yamlfmt
@@ -374,6 +375,7 @@ repos:
         verbose: true
         types: [text]
         require_serial: true
+        exclude: CLAUDE.md
       # Site tests
       # These are intentionally left to the very end because they're heavy.
       # Given that we enabled fail-fast, having them last prevents them from
