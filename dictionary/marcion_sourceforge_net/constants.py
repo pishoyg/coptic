@@ -69,17 +69,22 @@ PURE_COPTIC_RE: re.Pattern[str] = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ\u0305\u0300]+"
 _TYPES: list[lexical.Type] = [
     lexical.Type("-", "(-)", "-", None, append=False),
     lexical.Type("noun", "(noun)", "noun", inflect.Type.NOUN_UNKNOWN_GENDER),
-    lexical.Type("noun male", "(ⲡ)", "noun male", inflect.Type.NOUN_MASCULINE),
     lexical.Type(
-        "noun female",
+        "noun masculine",
+        "(ⲡ)",
+        "noun masculine",
+        inflect.Type.NOUN_MASCULINE,
+    ),
+    lexical.Type(
+        "noun feminine",
         "(ⲧ)",
-        "noun female",
+        "noun feminine",
         inflect.Type.NOUN_FEMININE,
     ),
     lexical.Type(
-        "noun male/female",
+        "noun masculine/feminine",
         "(ⲡ/ⲧ)",
-        "noun male/female",
+        "noun masculine/feminine",
         inflect.Type.NOUN_MASCULINE_OR_FEMININE,
     ),
     lexical.Type("plural", "(ⲛ)", "plural", inflect.Type.NOUN_PLURAL),
@@ -126,21 +131,21 @@ _TYPES: list[lexical.Type] = [
         inflect.Type.NOUN_UNKNOWN_GENDER,
     ),
     lexical.Type(
-        "numeral male",
+        "numeral masculine",
         "(num. ⲡ)",
-        "numeral male",
+        "numeral masculine",
         inflect.Type.NOUN_MASCULINE,
     ),
     lexical.Type(
-        "numeral female",
+        "numeral feminine",
         "(num. ⲧ)",
-        "numeral female",
+        "numeral feminine",
         inflect.Type.NOUN_FEMININE,
     ),
     lexical.Type(
-        "numeral male/female",
+        "numeral masculine/feminine",
         "(num. ⲡ/ⲧ)",
-        "numeral male/female",
+        "numeral masculine/feminine",
         inflect.Type.NOUN_MASCULINE_OR_FEMININE,
     ),
     lexical.Type("particle", "(part.)", "particle", None),
@@ -194,9 +199,9 @@ DETACHED_TYPES: dict[str, lexical.Type] = {
     # form-specific. Investigate.
     "?": lexical.Type("<i>(?)</i>", "(?)", "probably", None),  # Probably.
     "m/f:": lexical.Type(
-        "<i>male/female:</i>",
+        "<i>masculine/feminine:</i>",
         "(ⲡ, ⲧ)",
-        "male/female",
+        "masculine/feminine",
         inflect.Type.NOUN_MASCULINE_OR_FEMININE,
     ),
     "neg": lexical.Type("<i>neg</i>", "(neg.)", "neg", None),
@@ -209,15 +214,15 @@ DETACHED_TYPES: dict[str, lexical.Type] = {
     # TODO: (#64) The following types likely apply to the subset of forms
     # occurring after the type, not the whole line.
     "f:": lexical.Type(
-        "<i>female:</i>",
+        "<i>feminine:</i>",
         "(ⲧ)",
-        "female",
+        "feminine",
         lexical.Gender.FEMININE,
     ),
     "m:": lexical.Type(
-        "<i>male:</i>",
+        "<i>masculine:</i>",
         "(ⲡ)",
-        "male",
+        "masculine",
         lexical.Gender.MASCULINE,
     ),
     "imp:": lexical.Type(
@@ -316,7 +321,7 @@ _HEADINGS: list[str] = [
     "qual",
     "refl",
     "noun",
-    "noun male",
+    "noun masculine",
 ]
 
 ENGLISH_PROCESSING: list[tuple[re.Pattern[str] | str, str]] = [
