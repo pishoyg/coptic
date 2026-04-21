@@ -45,23 +45,30 @@ export function toggleCase(text: string): string {
 }
 
 /**
- * NON_WORD uses a negative lookahead and negative lookbehind expression to
- * match a position either NOT preceded or NOT followed by a word character.
- * This acts an assertion that matches a word boundary.
+ * ASSERT_NON_WORD matches a position that neighbors a non-word character on
+ * either side.
+ * The regex uses negative lookahead and negative lookbehind expressions.
+ * It acts as an assertion that matches a word boundary.
+ *
+ * NOTE: Unlike `\b` (which works fine for non-Unicode characters), this
+ * assertion matches a position between two non-word characters – a weakness
+ * that is deemed acceptable in our repository.
  *
  * What constitutes a word character? - Letters, marks, and numbers.
  * (Normally, characters in the Connector_Punctuation class would also count as
  * word characters. However, as of the time of writing, no characters in this
  * class are used in our repo.)
  */
-export const WORD_BOUNDARY =
+export const ASSERT_NON_WORD =
   /(?:(?<![\p{Letter}\p{Mark}\p{Number}])|(?![\p{Letter}\p{Mark}\p{Number}]))/u;
 
 /*
- * NO_LETTER_BEFORE matches a position NOT preceded by a letter or a mark.
- * Unlike NON_WORD, digits are treated as boundary markers.
+ * ASSERT_NON_LETTER matches a position that neighbors a non-letter or non-mark
+ * on either side.
+ *
+ * See ASSERT_NON_WORD for more info.
  */
-export const LETTER_BOUNDARY =
+export const ASSERT_NON_LETTER =
   /(?:(?<![\p{Letter}\p{Mark}])|(?![\p{Letter}\p{Mark}]))/u;
 
 /**
@@ -102,9 +109,9 @@ export function bounded(
     re = grouped(re);
   }
   if (digitIsBoundary) {
-    return `${LETTER_BOUNDARY.source}${re}${LETTER_BOUNDARY.source}`;
+    return `${ASSERT_NON_LETTER.source}${re}${ASSERT_NON_LETTER.source}`;
   }
-  return `${WORD_BOUNDARY.source}${re}${WORD_BOUNDARY.source}`;
+  return `${ASSERT_NON_WORD.source}${re}${ASSERT_NON_WORD.source}`;
 }
 
 /**
