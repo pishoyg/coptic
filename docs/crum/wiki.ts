@@ -125,7 +125,7 @@ const ENRICHMENT_RE = new RegExp(
  * - Si 34 29 (31 26)
  */
 const BIBLE_FOLLOWUP = new RegExp(
-  `^(?:(?:, |–)(${NUMS})${str.WORD_END.source}| ?\\((${NUMS})\\))`,
+  `^(?:(?:, |–)(${NUMS})${str.WORD_BOUNDARY.source}| ?\\((${NUMS})\\))`,
   'u'
 );
 
@@ -177,9 +177,12 @@ const NUMBER = `(?:${NUMBERS.join('|')})`;
 // The space before the parenthesis is optional.
 const NUMBER_GROUP = `(?: ${NUMBER}| ?\\(${NUMBER}(?: ${NUMBER})*\\))`;
 
-const SUFFIX = new RegExp(`^\\.?${NUMBER_GROUP}+${str.WORD_END.source}`, 'u');
+const SUFFIX = new RegExp(
+  `^\\.?${NUMBER_GROUP}+${str.WORD_BOUNDARY.source}`,
+  'u'
+);
 const REFERENCE_FOLLOWUP = new RegExp(
-  `^(?:(?:,| [=&])${NUMBER_GROUP}+)+${str.WORD_END.source}`,
+  `^(?:(?:,| [=&])${NUMBER_GROUP}+)+${str.WORD_BOUNDARY.source}`,
   'u'
 );
 

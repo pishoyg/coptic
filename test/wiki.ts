@@ -15,7 +15,8 @@ type WikiElementKey =
   | 'bible'
   | 'dialectTooltips'
   | 'annotations'
-  | 'pages';
+  | 'pages'
+  | 'semicolons';
 
 const TEST_CASES: {
   key: string;
@@ -111,6 +112,14 @@ const TEST_CASES: {
       pages: 6,
     },
   },
+  {
+    // 2157 contains a semicolon immediately followed by a word character.
+    // See #692 for context.
+    key: '2157',
+    want: {
+      semicolons: 11,
+    },
+  },
 ];
 
 /**
@@ -122,6 +131,7 @@ const QUERIES: Record<WikiElementKey, string> = {
   dialectTooltips: `.${cls.WIKI} .${cls.DIALECT} .${drop.CLS.DROPPABLE}`,
   annotations: `.${cls.WIKI} .${cls.ANNOTATION}`,
   pages: `.${cls.PAGE}`,
+  semicolons: `.${cls.SEMICOLON}`,
 };
 
 base.test.describe('Wiki Reference Handlers', () => {

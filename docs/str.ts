@@ -45,33 +45,24 @@ export function toggleCase(text: string): string {
 }
 
 /**
- * WORD_START uses a lookbehind expression to match a position NOT preceded
- * by a letter, mark, or number. This acts an assertion that matches the start
- * of a word.
+ * NON_WORD uses a negative lookahead and negative lookbehind expression to
+ * match a position either NOT preceded or NOT followed by a word character.
+ * This acts an assertion that matches a word boundary.
  *
- * Normally, such a regex would also include the Connector_Punctuation class.
- * However, as of the time of writing, no characters in this class are used in
- * our repo.
- * Same below!
+ * What constitutes a word character? - Letters, marks, and numbers.
+ * (Normally, characters in the Connector_Punctuation class would also count as
+ * word characters. However, as of the time of writing, no characters in this
+ * class are used in our repo.)
  */
-export const WORD_START = /(?<![\p{Letter}\p{Mark}\p{Number}])/u;
-
-/**
- * WORD_END uses a lookahead expression to match a position NOT followed
- * by a letter, mark, or number. This acts an assertion that matches the end
- * of a word.
- */
-export const WORD_END = /(?![\p{Letter}\p{Mark}\p{Number}])/u;
+export const WORD_BOUNDARY =
+  /(?:(?<![\p{Letter}\p{Mark}\p{Number}])|(?![\p{Letter}\p{Mark}\p{Number}]))/u;
 
 /*
  * NO_LETTER_BEFORE matches a position NOT preceded by a letter or a mark.
+ * Unlike NON_WORD, digits are treated as boundary markers.
  */
-export const NO_LETTER_BEFORE = /(?<![\p{Letter}\p{Mark}])/u;
-
-/*
- * NO_LETTER_AFTER matches a position NOT preceded by a letter or a mark.
- */
-export const NO_LETTER_AFTER = /(?![\p{Letter}\p{Mark}])/u;
+export const LETTER_BOUNDARY =
+  /(?:(?<![\p{Letter}\p{Mark}])|(?![\p{Letter}\p{Mark}]))/u;
 
 /**
  *
@@ -111,9 +102,9 @@ export function bounded(
     re = grouped(re);
   }
   if (digitIsBoundary) {
-    return `${NO_LETTER_BEFORE.source}${re}${NO_LETTER_AFTER.source}`;
+    return `${LETTER_BOUNDARY.source}${re}${LETTER_BOUNDARY.source}`;
   }
-  return `${WORD_START.source}${re}${WORD_END.source}`;
+  return `${WORD_BOUNDARY.source}${re}${WORD_BOUNDARY.source}`;
 }
 
 /**
