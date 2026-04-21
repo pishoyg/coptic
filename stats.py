@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Collect and process statistics."""
 
-
 import abc
 import argparse
 import enum
@@ -677,7 +676,7 @@ _CODE_BY_COMPONENT: list[Comp] = [
     Comp(
         "shared",
         "shared",
-        prefixes=["env/", "utils/", "pre-commit/", ".gemini/"],
+        prefixes=["env/", "utils/", "pre-commit/"],
         dirnames=[""],
     ),
     # copticsite project was completely abandoned, and the code was deleted.

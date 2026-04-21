@@ -307,7 +307,6 @@ repos:
     rev: v2.4.1
     hooks:
       - id: doctoc
-        exclude: GEMINI.md
 
   # YAML
   - repo: https://github.com/google/yamlfmt
