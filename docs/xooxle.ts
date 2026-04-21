@@ -1108,31 +1108,37 @@ class Line {
    * @returns A list of matches.
    */
   public matches(regex: RegExp): Match[] {
-    return Array.from(this.text.matchAll(regex))
-      .map((match: RegExpMatchArray): Match | undefined => {
-        // NOTE: We need to filter out the empty string, because it could cause
-        // trouble during highlighting.
-        if (match.index === undefined || !match[0]) {
-          return undefined;
-        }
+    // Collect raw match ranges, merging contiguous ones.
+    const ranges: [number, number][] = [];
+    for (const match of this.text.matchAll(regex)) {
+      // NOTE: We need to filter out the empty string, because it could cause
+      // trouble during highlighting.
+      if (!match[0]) {
+        continue;
+      }
+      const start: number = match.index;
+      const end: number = start + match[0].length;
+      const last = ranges[ranges.length - 1];
+      if (last?.[1] === start) {
+        last[1] = end;
+      } else {
+        ranges.push([start, end]);
+      }
+    }
 
-        const start: number = match.index;
-        const end: number = match.index + match[0].length;
-
-        const before = !orth.isWordChar(this.text[start - 1]);
-        const after = !orth.isWordChar(this.text[end]);
-        const boundary: Boundary =
-          before && after
-            ? Boundary.FULL_WORD
-            : before
-              ? Boundary.PREFIX
-              : after
-                ? Boundary.SUFFIX
-                : Boundary.MID_WORD;
-
-        return new Match(start, end, boundary);
-      })
-      .filter((m) => m !== undefined);
+    return ranges.map(([start, end]: [number, number]): Match => {
+      const before = !orth.isWordChar(this.text[start - 1]);
+      const after = !orth.isWordChar(this.text[end]);
+      const boundary: Boundary =
+        before && after
+          ? Boundary.FULL_WORD
+          : before
+            ? Boundary.PREFIX
+            : after
+              ? Boundary.SUFFIX
+              : Boundary.MID_WORD;
+      return new Match(start, end, boundary);
+    });
   }
 }
 
