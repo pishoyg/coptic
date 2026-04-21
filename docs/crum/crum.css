@@ -148,13 +148,11 @@ body:not(.lexicon) .header td:not(:first-child) {
   margin-top: 0;
   margin-bottom: 0.8em;
   text-align: justify;
-  text-indent: 2em;
   line-height: 1.7;
 }
 
-.wiki .tab {
-  display: inline-block;
-  width: 2em;
+.wiki .subparagraph {
+  margin-left: 1.7em;
 }
 
 .wiki .bible {

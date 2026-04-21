@@ -1320,12 +1320,20 @@ function findAntecedent(context: html.ReplaceNodesContext): HTMLElement | null {
   return null;
 }
 
-const textContentOverrides: Record<string, string> = {
-  [drop.CLS.DROPPABLE]: '',
-  [cls.COPY]: '',
-  [cls.TAB]: '    ',
-  [cls.SEMICOLON]: '; ',
-};
+/**
+ *
+ * @param entry
+ * @returns
+ */
+function entryText(entry: Element): string {
+  return Array.from(entry.querySelectorAll('p'))
+    .map((p: HTMLParagraphElement) =>
+      Array.from(p.querySelectorAll(cls.SUBPARAGRAPH))
+        .map(drop.noTipTextContent)
+        .map((text: string): string => `    ${text}`)
+    )
+    .join('\n');
+}
 
 /**
  *
@@ -1336,11 +1344,7 @@ function addEntryCopyShortcuts(root: HTMLElement): void {
     const copy: HTMLSpanElement = document.createElement('span');
     copy.textContent = '📃';
     copy.addEventListener('click', () => {
-      browser.yank(
-        Array.from(entry.querySelectorAll('p'))
-          .map((p) => `    ${str.textContent(p, textContentOverrides)}`)
-          .join('\n')
-      );
+      browser.yank(entryText(entry));
     });
     copy.classList.add(cls.COPY);
     drop.addDroppable(copy, ['copy text']);

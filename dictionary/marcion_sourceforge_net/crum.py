@@ -1771,7 +1771,7 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
                 "demotic",
                 "hieroglyphic",
                 "gloss",
-                "tab",
+                "subparagraph",
                 "manual",
                 "corrigendum",
             },

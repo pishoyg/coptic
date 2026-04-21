@@ -181,7 +181,7 @@ _SUBSTITUTIONS: list[Substitution] = [
     Substitution(r"\\\*", "&ast;", text_repl="*", ban=["*", "\\"]),
     Substitution(
         r"\\t",
-        '<span class="tab">&nbsp;</span>',
+        '</span><span class="subparagraph">',
         text_repl="    ",
         ban=["\\"],
     ),
@@ -428,6 +428,7 @@ class Wiki:
             classes.append("vide")
         yield f'<div class="{" ".join(classes)}">'
         yield "<p>"
+        yield '<span class="subparagraph">'
 
         raw: str = self.entry
         for s in self.subs():
@@ -440,6 +441,7 @@ class Wiki:
             yield footnote
             yield "</span>"
 
+        yield "</span>"
         yield "</p>"
         yield "</div>"
 
