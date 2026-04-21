@@ -49,6 +49,13 @@ npx playwright test           # E2E tests (Chromium + Mobile Chrome)
 npx tsc                       # type check only
 ```
 
+## Playwright MCP
+
+The Playwright MCP server is enabled for this project (see `.claude/settings.json`), so Claude Code can drive a live browser to inspect, interact with, and screenshot the site. Typical uses: verifying UI changes after editing `.ts`/`.css`/`.html` in `docs/`, reproducing bugs, and visually confirming behavior that unit tests and `tsc` cannot catch.
+
+- Before exercising the site, start the dev server with `make server`.
+- For automated regression tests, prefer the existing Playwright suite under `test/` over ad-hoc MCP sessions.
+
 ## Architecture
 
 ### Data Flow
