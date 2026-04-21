@@ -45,6 +45,7 @@
     "singleQuote": true
   },
   "dependencies": {
+    "@playwright/cli": "^0.1.8",
     "@types/jsdom": "^21.1.7",
     "jiti": "^2.6.1",
     "jsdom": "^27.4.0"
