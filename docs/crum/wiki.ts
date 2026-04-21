@@ -1327,10 +1327,11 @@ function findAntecedent(context: html.ReplaceNodesContext): HTMLElement | null {
  */
 function entryText(entry: Element): string {
   return Array.from(entry.querySelectorAll('p'))
-    .map((p: HTMLParagraphElement) =>
-      Array.from(p.querySelectorAll(cls.SUBPARAGRAPH))
+    .map((p: HTMLParagraphElement): string =>
+      Array.from(p.querySelectorAll(`.${cls.SUBPARAGRAPH}`))
         .map(drop.noTipTextContent)
         .map((text: string): string => `    ${text}`)
+        .join('')
     )
     .join('\n');
 }

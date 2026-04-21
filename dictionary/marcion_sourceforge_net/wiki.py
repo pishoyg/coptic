@@ -155,6 +155,11 @@ def replace_manual(match: re.Match[str]) -> str:
     return rf'<span class="manual" data-key="{key}">{text}</span>'
 
 
+OPEN_SUBPARAGRAPH: str = '<span class="subparagraph">'
+CLOSE_SUBPARAGRAPH: str = "</span>"
+OPEN_PARAGRAPH: str = "<p>"
+CLOSE_PARAGRAPH: str = "</p>"
+
 # Coptic Wiki substitutions:
 #
 # NOTE: This is based on a snapshot of the following file, taken on September 17,
@@ -181,7 +186,7 @@ _SUBSTITUTIONS: list[Substitution] = [
     Substitution(r"\\\*", "&ast;", text_repl="*", ban=["*", "\\"]),
     Substitution(
         r"\\t",
-        '</span><span class="subparagraph">',
+        CLOSE_SUBPARAGRAPH + OPEN_SUBPARAGRAPH,
         text_repl="    ",
         ban=["\\"],
     ),
@@ -250,7 +255,10 @@ _SUBSTITUTIONS: list[Substitution] = [
     ),
     Substitution(
         r"\\n",
-        "</p><p>",
+        CLOSE_SUBPARAGRAPH
+        + CLOSE_PARAGRAPH
+        + OPEN_PARAGRAPH
+        + OPEN_SUBPARAGRAPH,
         text_repl="\n",
         ban=["\\"],
     ),
@@ -427,8 +435,8 @@ class Wiki:
         if self.vide:
             classes.append("vide")
         yield f'<div class="{" ".join(classes)}">'
-        yield "<p>"
-        yield '<span class="subparagraph">'
+        yield OPEN_PARAGRAPH
+        yield OPEN_SUBPARAGRAPH
 
         raw: str = self.entry
         for s in self.subs():
@@ -441,8 +449,8 @@ class Wiki:
             yield footnote
             yield "</span>"
 
-        yield "</span>"
-        yield "</p>"
+        yield CLOSE_SUBPARAGRAPH
+        yield CLOSE_PARAGRAPH
         yield "</div>"
 
     @functools.cached_property
