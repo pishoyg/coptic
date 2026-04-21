@@ -87,7 +87,7 @@ function main(): void {
   title.insertAdjacentElement('afterend', bar);
   title.insertAdjacentElement('afterend', holder);
 
-  drop.addEventListeners('click');
+  drop.addEventListeners();
 }
 
 main();

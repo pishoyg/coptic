@@ -204,7 +204,6 @@ class CrumSearchResult extends SearchResult {
     crum.addGreekLookups(row);
     crum.handleDialect(row, CrumSearchResult.highlighter);
     wiki.handle(row);
-    drop.addEventListeners('hover', row);
   }
 
   /**
@@ -384,9 +383,8 @@ async function main(): Promise<void> {
 
   const manager: dial.Manager = new dial.Manager();
 
-  // Add event listeners for tooltips.
-  drop.addEventListeners('hover');
-  drop.addEventListeners('click');
+  // Add event listeners for our click-invoked tooltips.
+  drop.addEventListeners();
 
   const dropDialects: NodeListOf<HTMLElement> =
     document.querySelectorAll<HTMLElement>(`#${id.DIALECTS} .${drop.CLS.DROP}`);

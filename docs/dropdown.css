@@ -1,18 +1,44 @@
 /* CSS for both hover-invoked and click-invoked tooltips (a.k.a. droppables). */
 
+/* CSS for all parents of tooltips (hover-invoked or click-invoked). */
+.drop,
+.dropdown {
+  /* Since tooltips render right beneath their parents, the positioning would
+   * look rather odd in cases where the parent lives on multiple lines.
+   * Thankfully, such parents tend to be so short that we can usually afford to
+   * always display them on a single line and prevent wrapping on whitespace. */
+  white-space: nowrap;
+
+  /* Expose the parent as an anchor so its child .droppable can target it
+   * with position-anchor below. */
+  anchor-name: --droppable-anchor;
+  anchor-scope: --droppable-anchor;
+}
+
 /* .droppable represents either a click-invoked or hover-invoked tooltip. */
 .droppable {
   /* The element is hidden by default. */
   visibility: hidden;
   opacity: 0;
   transition:
-    visibility 0.2s,
-    opacity 0.2s ease-in-out;
-
-  /* The element shows right below the parent. */
+    visibility 0.15s,
+    opacity 0.15s ease-in-out;
   position: absolute;
+  position-anchor: --droppable-anchor;
 
-  /* The tip has an opaque background to hind content behind it. */
+  /* Default placement: directly below the parent, aligned with its left edge. */
+  top: anchor(bottom);
+  left: anchor(left);
+
+  /* Stretch the positioning area to the viewport's right edge. */
+  right: 0;
+
+  /* Align to the anchor's left edge by default.
+   * If the tooltip is too wide, this triggers the "smart shift" behavior
+   * to slide it leftwards rather than overflowing. */
+  justify-self: start;
+
+  /* The tip has an opaque background to hide content behind it. */
   background-color: white;
 
   /* Add some shade to make it pretty. */
@@ -25,58 +51,42 @@
   padding-left: 2px;
   padding-right: 2px;
 
-  /* Align with the left edge of the sibling */
-  left: 0;
-
   /* Try expanding without wrapping, up to 500px or 80% of the viewport width,
    * whichever is smaller. On large screens, that's the former. On small
    * screens, that's the latter. */
   width: max-content;
   max-width: min(500px, 80vw);
 
-  /* Our parent elements don't wrap text on whitespace (see below). They can
+  /* Our parent elements don't wrap text on whitespace (see above). They can
    * afford that because they tend to be very short.
-   * We must override this rule in order to allow (potentially long) tooltips to
-   * wrap. */
+   * We must override this rule in order to allow (potentially long) tooltips
+   * to wrap. */
   white-space: normal;
 
   & label {
     display: block; /* If the droppable is a tooltip, then each label renders on a separate line. */
   }
+
+  /* .above causes tooltips to render above their parent element. */
+  &.above {
+    top: auto;
+    bottom: anchor(top);
+
+    /* Move the box shadow to prevent it from hiding the parent. */
+    box-shadow: 0 -8px 16px rgb(0 0 0 / 20%);
+  }
+
+  /* Default: left edge pinned to the anchor's left edge (via `left: anchor(left)` above).
+   * If that would cause the tooltip to overflow the viewport on the right,
+   * the browser falls back to the rule below, which pins the tooltip's
+   * right edge to the viewport's right edge — the minimum shift needed
+   * to prevent overflow. */
+  position-try-fallbacks: --shift-to-fit;
 }
 
-/* CSS for all parents of tooltips (hover-invoked or click-invoked). */
-.drop,
-.dropdown {
-  /* Since tooltips render right beneath their parents, the positioning would
-   * look rather odd in cases where the parent lives on multiple lines.
-   * Thankfully, such parents tend to be so short that we can usually afford to
-   * always display them on a single line and prevent wrapping on whitespace. */
-  white-space: nowrap;
-
-  /* Relative positioning is important to allow the child tooltip to render in
-   * the correct position. */
-  position: relative;
-}
-
-/* Hover-invoked .droppable can render above or below their parent element. */
-.dropdown .droppable:not(.above) {
-  /* By default, tooltips render below the parent.
-   * NOTE: It's unclear to me why this breaks click-invoked droppables.
-   * I would've otherwise included it in the shared ruleset. */
-  top: 100%;
-}
-
-.dropdown .droppable.above {
-  /* With the `above` class added, render above the parent element.
-   * Again, this may break click-invoked tooltips (although we haven't tried it),
-   * so we restrict it to hover-invoked tooltips.
-   * */
-  top: auto;
-  bottom: 100%;
-
-  /* Move the box shadow to prevent it from hiding the parent. */
-  box-shadow: 0 -8px 16px rgb(0 0 0 / 20%);
+@position-try --shift-to-fit {
+  left: auto;
+  right: 8px;
 }
 
 .dropdown:hover {

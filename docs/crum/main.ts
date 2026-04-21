@@ -4,7 +4,6 @@ import * as help from './help.js';
 import * as dial from './dialect.js';
 import * as iam from '../iam.js';
 import * as log from '../logger.js';
-import * as drop from '../dropdown.js';
 import * as html from '../html.js';
 import * as high from './highlight.js';
 import * as crum from './crum.js';
@@ -44,9 +43,6 @@ function main(): void {
   }
 
   crum.handle(document.body, highlighter, devHighlighter);
-
-  // We only have hover-invoked tooltips.
-  drop.addEventListeners('hover');
 
   addReportsLink();
 }
