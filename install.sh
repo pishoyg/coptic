@@ -42,6 +42,7 @@ _install() {
     npm install
     npm install --global bun
     npx playwright install
+    npx playwright-cli install-browser
   fi
 
   if ! command -v tidy &> /dev/null; then
