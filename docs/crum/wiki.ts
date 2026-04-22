@@ -164,8 +164,10 @@ const NUMBERS = [
   'stele',
   '[a-zA-Z]\\.?',
   // Roman numerals (in the range 1–3999):
-  '(?=[MDCLXVI])M{0,3}(?:CM|CD|D?C{0,3})(?:XC|XL|L?X{0,3})(?:IX|IV|V?I{0,3})',
-  '(?=[mdclxvi])m{0,3}(?:cm|cd|d?c{0,3})(?:xc|xl|l?x{0,3})(?:ix|iv|v?i{0,3})',
+  // NOTE: The Roman numeral regexes must use lookbehind rather than lookahed to
+  // force a non-empty match.
+  'M{0,3}(?:CM|CD|D?C{0,3})(?:XC|XL|L?X{0,3})(?:IX|IV|V?I{0,3})(?<=[MDCLXVI])',
+  'm{0,3}(?:cm|cd|d?c{0,3})(?:xc|xl|l?x{0,3})(?:ix|iv|v?i{0,3})(?<=[mdclxvi])',
   ...ann.DATA.filter((abb: ann.Abbreviation) => abb.suffix).flatMap(
     (abb: ann.Abbreviation): string[] =>
       Array.from(ann.variants(abb)).map((variant) => str.escape(variant))
