@@ -120,7 +120,12 @@ export const DATA: Abbreviation[] = [
   },
   { fullForm: 'legendum', variants: ['l'] },
   { fullForm: 'literally', variants: ['lit'] },
-  { fullForm: 'masculine', variants: ['m'], noCaseVariant: true },
+  {
+    fullForm: 'masculine',
+    variants: ['m'],
+    noCaseVariant: true,
+    noStyledParent: true,
+  },
   // NOTE: 'ⲛ̅ⲉ̅' doesn't work, for two reasons:
   // - The text doesn't use the same encoding for the horizontal bar as the one
   //   used here.
