@@ -292,6 +292,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'loco citato', variants: ['l c', 'll c'], suffix: true },
   { fullForm: 'loci citati', variants: ['ll cc'], suffix: true },
   { fullForm: 'loquitur', variants: ['loq'] },
+  { fullForm: 'Septuagint', variants: ['LXX'], noCaseVariant: true },
   { fullForm: 'Latin', variants: ['Lat'], noCaseVariant: true },
   {
     fullForm: 'manuscript',
