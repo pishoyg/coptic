@@ -53,7 +53,10 @@ npx tsc                       # type check only
 
 The Playwright MCP server is enabled for this project (see `.claude/settings.json`), so Claude Code can drive a live browser to inspect, interact with, and screenshot the site. Typical uses: verifying UI changes after editing `.ts`/`.css`/`.html` in `docs/`, reproducing bugs, and visually confirming behavior that unit tests and `tsc` cannot catch.
 
-- Before exercising the site, start the dev server with `make server`.
+- Before exercising the site, check whether a dev server is already running
+  (e.g. `curl -sf http://localhost:$PORT/ >/dev/null`) and reuse it; only run
+  `make server` if nothing is listening. If you need an isolated instance,
+  start one on another port with `PORT=8001 make server`.
 - For automated regression tests, prefer the existing Playwright suite under `test/` over ad-hoc MCP sessions.
 
 ## Architecture
