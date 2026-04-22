@@ -137,7 +137,7 @@ const QUERIES: Record<WikiElementKey, string> = {
 base.test.describe('Wiki Reference Handlers', () => {
   for (const testCase of TEST_CASES) {
     base.test(
-      `Inserts the correct number of '${testCase.key}' annotations.`,
+      `Inserts the correct number of objects on '${testCase.key}'.`,
       async ({ page }: { page: play.Page }): Promise<void> => {
         await page.goto(paths.crum(testCase.key), {
           waitUntil: 'networkidle',
