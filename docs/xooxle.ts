@@ -347,7 +347,6 @@ export class Form {
 }
 
 interface Result {
-  text: string;
   textLength: number;
   matches: Match[];
   boundary(): Boundary;
@@ -364,18 +363,9 @@ abstract class AggregateResult implements Result {
 
   // Memos are used to memorize previously computed values, so we can avoid
   // computing them repeatedly.
-  // TODO: (#605) Stop memorizing text.
-  private textMemo: string | null = null;
   private textLengthMemo: number | null = null;
   private matchesMemo: Match[] | null = null;
   private matchMemo: boolean | null = null;
-
-  /**
-   * @returns
-   */
-  public get text(): string {
-    return (this.textMemo ??= this.results.map((r) => r.text).join(''));
-  }
 
   /**
    * @returns The total length of the text, without building the full string.
@@ -552,6 +542,9 @@ export class SearchResult extends AggregateResult {
 
     const row: HTMLTableRowElement = document.createElement('tr');
     row.append(...cells);
+    // Capture the initial text.
+    const text = (): string => orth.cleanDiacritics(drop.noTipTextContent(row));
+    const originalText: string | undefined = dev.play(text);
     // We can not enrich a highlighted HTML, but we can highlight an enriched
     // HTML. Enrichment is more complex, and often relies on the HTML
     // maintaining its original structure. Highlighting, on the other hand, only
@@ -563,13 +556,13 @@ export class SearchResult extends AggregateResult {
     dev.play(() => {
       // Verify that enrichment and highlighting haven't altered the text
       // content of the row, which would corrupted the highlighting algorithm.
-      const text: string = orth.cleanDiacritics(drop.noTipTextContent(row));
+      const finalText: string = text();
       log.ensure(
-        text === this.text,
+        finalText === originalText,
         'Text content has changed! Original:',
-        this.text,
+        originalText,
         'Final:',
-        text
+        finalText
       );
     });
 
