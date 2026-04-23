@@ -440,8 +440,14 @@ abstract class AggregateResult implements Result {
     // The Boundary enum values are ordered in such a way that the boundary
     // type of an aggregated result is the minimum of the boundary types of all
     // results.
-    return Math.min(...this.results.map((r: Result) => r.boundary()));
+    return AggregateResult.boundary(
+      ...this.results.map((r: Result) => r.boundary())
+    );
   }
+  /**
+   * boundary computes an aggregate boundary from a list of boundaries.
+   */
+  public static boundary = Math.min;
 
   /**
    * @returns Whether this result has a match.
@@ -532,10 +538,14 @@ export class SearchResult extends AggregateResult {
    * viewCell constructs the first cell in the row for this result, bearing the
    * anchor to the result (if available).
    *
+   * @param href
    * @param total - Total number of results.
    * @returns The view table cell element.
    */
-  private viewCell(total: number): HTMLTableCellElement {
+  private viewCell(
+    href: string | undefined,
+    total: number
+  ): HTMLTableCellElement {
     const td: HTMLTableCellElement = document.createElement('td');
     td.classList.add(CLS.VIEW);
 
@@ -549,7 +559,6 @@ export class SearchResult extends AggregateResult {
     key.textContent = this.key;
     td.prepend(key);
 
-    const href: string | undefined = this.href();
     if (!href) {
       return td;
     }
@@ -611,10 +620,11 @@ export class SearchResult extends AggregateResult {
     // We refrain from adding any extra content, such as the view-for-more
     // message or the view cell, until enrichment and highlighting have been
     // done.
+    const href: string | undefined = this.href();
     if (this.results.some((r) => r.cropped)) {
-      cells[cells.length - 1]?.append(...this.viewForMore(this.href()));
+      cells[cells.length - 1]?.append(...this.viewForMore(href));
     }
-    row.prepend(this.viewCell(total));
+    row.prepend(this.viewCell(href, total));
     return row;
   }
 
@@ -766,7 +776,10 @@ export class SearchResult extends AggregateResult {
    * @returns the comparison key.
    */
   public compareKey(): number[] {
-    const boundary: Boundary = this.boundary();
+    const boundaries: Boundary[] = this.results.map(
+      (r: FieldSearchResult): Boundary => r.boundary()
+    );
+    const boundary: Boundary = AggregateResult.boundary(...boundaries);
     return (this.compareKeyMemo ??= [
       this.layer,
       // Results are sorted based on the boundary type.
@@ -777,7 +790,7 @@ export class SearchResult extends AggregateResult {
       // boundary type.
       // A candidate with a full-word match in the first field should rank
       // higher than a candidate with a full-word match in the second field.
-      this.results.findIndex((res) => res.boundary() === boundary),
+      boundaries.findIndex((b: Boundary) => b === boundary),
       // Afterwards, we prioritize results that start at the beginning of the
       // line.
       // This is very useful, especially for prepositions:
