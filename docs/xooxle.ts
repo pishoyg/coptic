@@ -279,14 +279,14 @@ export class Form {
    */
   private populateFromParams(): void {
     // Populate form values using query parameters.
-    const url = new URL(window.location.href);
-    const query: string | null = url.searchParams.get(Param.QUERY);
+    const params = new URLSearchParams(window.location.search);
+    const query: string | null = params.get(Param.QUERY);
     if (query) {
       this.searchBox.value = query;
     }
     // Boolean parameters are either true, or absent from the URL.
     this.checkboxes.forEach((box: Checkbox): void => {
-      if (url.searchParams.get(box.param)) {
+      if (params.get(box.param)) {
         box.box.checked = true;
       }
     });

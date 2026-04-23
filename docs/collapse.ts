@@ -57,9 +57,7 @@ export class Collapsible {
     }
 
     // This collapsible is controlled by a parameter.
-    const val: Param | null = new URL(window.location.href).searchParams.get(
-      this.param
-    ) as Param | null;
+    const val: Param | null = browser.getParam(this.param) as Param | null;
     if (val === null || val === 'true') {
       this.show();
     } else {

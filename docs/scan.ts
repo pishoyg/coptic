@@ -16,6 +16,10 @@ const ZOOM_FACTOR = 0.05;
 
 const MIN_SCALE = 0.2;
 
+// TODO: (#413) Prevent duplicate listeners, e.g. in query memorization and URL
+// parameters.
+const QUERY = 'query'; // Name of the query parameter.
+
 /**
  * Word represents a word that can be used in the book scan context.
  * TODO: (640) Implement Greek and Arabic word classes, as well as Coptic.
@@ -134,7 +138,7 @@ export class Index {
    * the query.
    */
   public getPage(query: string): number | undefined {
-    query = orth.cleanDiacritics(query.trim());
+    query = orth.cleanDiacritics(query.toLowerCase().trim());
     if (!query) {
       return undefined;
     }
@@ -267,6 +271,7 @@ export class Form {
 export class Scroller {
   private readonly start: number;
   private readonly end: number;
+  private currentPage: number;
 
   /**
    * Construct a scroller.
@@ -276,15 +281,11 @@ export class Scroller {
    * @param end - Integer basename of the first image.
    *
    * @param offset - Offset of the first interesting page in the book (skipping
-   * the intro and such).
-   * The offset mainly concerns itself with the behavior of the 'page'
-   * parameter. It allows you to set a parameter value that doesn't necessarily
-   * match the basenames of the files.
+   * the intro and such). It lets logical page numbers (as used in the index
+   * and shown to the user) differ from the image basenames.
    * For example: If the pages are numbered 1.jpg to 100.jpg, with 1-20
-   * representing the introduction, 21.jpg being the actual page number 1, then
-   * the offset is 20. Thus, the parameter `?page=1` will open file 21.jpg. This
-   * is a better user experience than having `?page=1` open the cover page or
-   * some page in the intro, and `?page=21` open page 1 in the book.
+   * representing the introduction, 21.jpg being the actual page number 1,
+   * then the offset is 20. Logical page 1 will then open file 21.jpg.
    *
    * @param ext - File extension.
    *
@@ -306,8 +307,8 @@ export class Scroller {
    * @param form.resetButton - Button to reset the display. The scroller will
    * trigger a reset whenever a scroll takes place.
    *
-   * @param landingPage - Which page to navigate to if we don't have a page
-   * number otherwise.
+   * @param landingPage - Which page to open on initial load, before any
+   * query-driven navigation takes over.
    */
   public constructor(
     start: number,
@@ -324,27 +325,14 @@ export class Scroller {
   ) {
     this.start = start - this.offset;
     this.end = end - this.offset;
+    this.currentPage = landingPage;
 
     this.addEventListeners();
-    this.update(this.getPageParam());
+    this.update(landingPage);
   }
 
   /**
-   * @returns The value of the page parameter, or the landing page if the
-   * parameter if absent or has an invalid value.
-   */
-  private getPageParam(): number {
-    const urlParams = new URLSearchParams(window.location.search);
-    const page = urlParams.get('page');
-    if (!page) {
-      return this.landingPage;
-    }
-    const num = parseInt(chopColumn(page)[0]);
-    return isNaN(num) ? this.landingPage : num;
-  }
-
-  /**
-   * Update the display and page parameter to the given page number.
+   * Update the display to the given page number.
    *
    * @param page - Page number to open. This will be modified if it falls
    * outside our page range.
@@ -359,20 +347,9 @@ export class Scroller {
     if (page > this.end) {
       page = this.end;
     }
-    this.updatePageParam(page);
+    this.currentPage = page;
     this.updateDisplay(page);
     this.form.resetButton.click();
-  }
-
-  /**
-   * Set the page parameter to the given value.
-   *
-   * @param page - parameter value. The value is NOT verified.
-   */
-  private updatePageParam(page: number): void {
-    const url = new URL(window.location.href);
-    url.searchParams.set('page', page.toString());
-    window.history.replaceState({}, '', url.toString());
   }
 
   /**
@@ -401,16 +378,27 @@ export class Scroller {
 
   /**
    * Navigate to the next page.
+   *
+   * NOTE: The next and prev buttons operate purely on in-memory state
+   * (`currentPage`) and do not update any URL parameter. As a result, the
+   * current page is not reflected in the URL, cannot be deep-linked, and is
+   * lost on reload — reloading will restore only the memorized query (if any)
+   * and jump back to the page that query resolves to.
+   * TODO: (#0) Figure out a way to store the page state in the URL. Restore the
+   * `page` parameter?
    */
   private incrementPage(): void {
-    this.update(this.getPageParam() + 1);
+    this.update(this.currentPage + 1);
   }
 
   /**
    * Navigate to the previous page.
+   *
+   * NOTE: See `incrementPage` for the URL-state limitation that also applies
+   * here.
    */
   private decrementPage(): void {
-    this.update(this.getPageParam() - 1);
+    this.update(this.currentPage - 1);
   }
 
   /**
@@ -624,13 +612,21 @@ export class Dictionary {
     this.addEventListeners();
     // Focus on the search box, to the user can start searching right away.
     this.form.searchBox.focus();
+    // Restore a previously memorized query from the URL, if any.
+    const query: string | null = browser.getParam(QUERY);
+    if (!query) {
+      return;
+    }
+    this.form.searchBox.value = query;
+    this.search();
   }
 
   /**
    * Execute a search for a query.
    */
   private search(): void {
-    const query = this.form.searchBox.value.trim().toLowerCase();
+    const query: string = this.form.searchBox.value;
+    browser.setParam(QUERY, query);
     const page = this.index.getPage(query);
     if (page === undefined) {
       return;

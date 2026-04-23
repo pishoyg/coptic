@@ -2,6 +2,7 @@
 
 import * as coll from '../collapse.js';
 import * as log from '../logger.js';
+import * as browser from '../browser.js';
 import * as cls from './cls.js';
 
 const BOOK_PARAM = 'book';
@@ -12,14 +13,13 @@ const CLICK_DELAY_MS = 500;
  * book to expand its content, and scroll to it.
  */
 function maybeGoToBook(): void {
-  const url: URL = new URL(window.location.href);
-  const click: string | null = url.searchParams.get(BOOK_PARAM);
-  if (!click) {
+  const book: string | null = browser.getParam(BOOK_PARAM);
+  if (!book) {
     return;
   }
-  const elem = document.getElementById(click);
+  const elem = document.getElementById(book);
   if (!elem) {
-    log.error(click, 'not found!');
+    log.error(book, 'not found!');
     return;
   }
   elem.scrollIntoView({ behavior: 'smooth' });
