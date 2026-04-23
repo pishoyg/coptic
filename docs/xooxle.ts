@@ -62,6 +62,30 @@ const RESULTS_TO_UPDATE_DISPLAY = 20;
 const INPUT_DEBOUNCE_TIMEOUT = 100;
 
 /**
+ * PER_PAGE is the maximum number of results to display per page.
+ */
+const PER_PAGE: number = ((): number => {
+  /* eslint-disable no-magic-numbers */
+  if (browser.firefox()) {
+    // Firefox tends to perform poorly compared to Chromium-based browsers, so
+    // we use a small limit.
+    return 10;
+  }
+  if (browser.smallScreen()) {
+    // We also use the size of the screen as a rough indicator of how powerful
+    // the device is, and we reduce the page size on smaller devices.
+    return 20;
+  }
+  if (dev.get()) {
+    // Disable pagination in developer mode, if the agent can handle it.
+    return Number.MAX_SAFE_INTEGER;
+  }
+  // Use this default value on capable agents.
+  return 50;
+  /* eslint-enable no-magic-numbers */
+})();
+
+/**
  * CLS is a name space for classes used in the file. It helps pinpoint them and
  * group them in one place, in case this information is needed when writing CSS
  * or other modules.
@@ -85,6 +109,12 @@ export const enum CLS {
   VIEW_FOR_MORE = 'view-for-more',
   // MATCH_SEPARATOR is the class of unit separators.
   MATCH_SEPARATOR = 'match-separator',
+  // PAGINATION is the class of the pagination row.
+  PAGINATION = 'pagination',
+  // PAGINATION_PREV is the class of the "previous page" cell.
+  PAGINATION_PREV = 'pagination-prev',
+  // PAGINATION_NEXT is the class of the "next page" cell.
+  PAGINATION_NEXT = 'pagination-next',
 }
 
 /**
@@ -136,6 +166,7 @@ export class Form {
 
   // Output fields:
   private readonly messageBox: HTMLElement;
+  public readonly table: HTMLTableElement;
   private readonly tbody: HTMLTableSectionElement;
   public readonly numColumns: number;
   private readonly form?: HTMLFormElement;
@@ -172,11 +203,11 @@ export class Form {
 
     this.messageBox = document.getElementById(form.messageBoxID)!;
 
-    const table: HTMLTableElement = document.getElementById(
+    this.table = document.getElementById(
       form.resultsTableID
     ) as HTMLTableElement;
-    this.tbody = table.querySelector('tbody')!;
-    this.numColumns = table
+    this.tbody = this.table.querySelector('tbody')!;
+    this.numColumns = this.table
       .querySelector('thead')!
       .querySelectorAll('td').length;
 
@@ -363,6 +394,8 @@ abstract class AggregateResult implements Result {
 
   // Memos are used to memorize previously computed values, so we can avoid
   // computing them repeatedly.
+  // NOTE: We only memorize a subset of the fields. This subset is selected
+  // based on which fields could potentially be read repeatedly.
   private textLengthMemo: number | null = null;
   private matchesMemo: Match[] | null = null;
   private matchMemo: boolean | null = null;
@@ -399,6 +432,9 @@ abstract class AggregateResult implements Result {
 
   /**
    * @returns The boundary type.
+   *
+   * NOTE: As of the time of writing, the boundary needs to be computed only
+   * once, so we don't memorize it.
    */
   public boundary(): Boundary {
     // The Boundary enum values are ordered in such a way that the boundary
@@ -418,6 +454,9 @@ abstract class AggregateResult implements Result {
   /**
    * @param context
    * @returns
+   *
+   * NOTE: As of the time of writing, the fragment needs to be computed only
+   * once, so we don't memorize it.
    */
   public fragment(context: number): string | undefined {
     return this.results.find((r: Result) => r.match)?.fragment(context);
@@ -425,6 +464,9 @@ abstract class AggregateResult implements Result {
 
   /**
    * @returns Minimum distance from the beginning of line to a match.
+   *
+   * NOTE: As of the time of writing, the distance needs to be computed only
+   * once, so we don't memorize it.
    */
   public distance(): number {
     return Math.min(...this.results.map((r: Result) => r.distance()));
@@ -588,10 +630,10 @@ export class SearchResult extends AggregateResult {
         if (node.nodeType === Node.ELEMENT_NODE) {
           return (node as Element).matches(`.${drop.CLS.DROPPABLE}`)
             ? // This is a tooltip, added by the enricher, and irrelevant for
-            // highlighting. Skip the whole subtree.
-            NodeFilter.FILTER_REJECT
+              // highlighting. Skip the whole subtree.
+              NodeFilter.FILTER_REJECT
             : // Otherwise, skip this node, but proceed to process its children.
-            NodeFilter.FILTER_SKIP;
+              NodeFilter.FILTER_SKIP;
         }
         // This is a text node.
         return NodeFilter.FILTER_ACCEPT;
@@ -1041,7 +1083,7 @@ class Match {
     public readonly start: number,
     public readonly end: number,
     public readonly boundary: Boundary
-  ) { }
+  ) {}
 
   /**
    *
@@ -1343,6 +1385,11 @@ export class Xooxle {
   private currentAbortController: AbortController | null = null;
 
   /**
+   * currentPage is the current page number in the search results.
+   */
+  private currentPage = 0;
+
+  /**
    * @param index - JSON index object.
    * @param form - Form containing HTML input and output elements.
    * @param searchResultType
@@ -1397,9 +1444,9 @@ export class Xooxle {
     // We don't need to do the same for checkbox events, because those events
     // typically trigger as singletons.
     this.form.addSearchBoxInputListener(
-      this.search.bind(this, INPUT_DEBOUNCE_TIMEOUT)
+      this.search.bind(this, INPUT_DEBOUNCE_TIMEOUT, true)
     );
-    this.form.addCheckboxClickListener(this.search.bind(this));
+    this.form.addCheckboxClickListener(this.search.bind(this, 0, true));
     // Prevent other elements in the page from picking up key events on the
     // search box.
     this.form.addSearchBoxKeyListener(browser.stopPropagation);
@@ -1409,8 +1456,13 @@ export class Xooxle {
    * Handle the search query, debouncing with the given timeout.
    *
    * @param timeout - How long to wait before starting search.
+   * @param resetPage - Whether to reset the page number to 1.
    */
-  public search(timeout = 0): void {
+  public search(timeout = 0, resetPage = false): void {
+    if (resetPage) {
+      this.currentPage = 0;
+    }
+
     if (this.debounceTimeout) {
       clearTimeout(this.debounceTimeout);
     }
@@ -1506,6 +1558,24 @@ export class Xooxle {
     regex: RegExp,
     abortController: AbortController
   ): Promise<void> {
+    // Search is a cheap operation that we can afford to do on all candidates in
+    // the beginning.
+    const results: SearchResult[] = this.results(regex);
+
+    // NOTE: Pagination limits the power of bucket sorting. Bucket sorting
+    // (see the longer note below) only reorders results *within* the slice
+    // that is rendered on the current page — it cannot pull a result out of a
+    // later page into an earlier one. So a candidate that would belong to a
+    // high-priority bucket but falls on, say, page 3 after generic sorting
+    // stays on page 3: the user sees lower-priority bucket matches on page 1
+    // even though better matches exist further down. In the pre-pagination
+    // world, bucket sorting operated on the entire result set and could
+    // freely promote any result to the top; with pagination it can only
+    // shuffle results inside a single page.
+    const start = this.currentPage * PER_PAGE;
+    const end = start + PER_PAGE;
+    const pageResults = results.slice(start, end);
+
     // bucketSentinels is a set of hidden table rows that represent sentinels
     // (anchors / break points) in the results table.
     //
@@ -1544,14 +1614,10 @@ export class Xooxle {
     // generic sorter.
     const bucketSentinels: HTMLTableRowElement[] = this.bucketSentinels();
 
-    // Search is a cheap operation that we can afford to do on all candidates in
-    // the beginning.
-    const results: SearchResult[] = this.results(regex);
-
     // NOTE: We considered using an IntersectionObserver, since some search
     // results are huge. But we dismissed it because we aren't interested in
     // that particular use case. Most users would be looking up a single word.
-    for (const [count, result] of results.entries()) {
+    for (const [count, result] of pageResults.entries()) {
       if (abortController.signal.aborted) {
         return;
       }
@@ -1585,15 +1651,81 @@ export class Xooxle {
       }
     }
 
+    const hasPrev: boolean = this.currentPage > 0;
+    const hasNext: boolean = results.length > end;
+    if (hasPrev || hasNext) {
+      this.form.result(this.paginationRow(hasPrev, hasNext, results.length));
+    }
+
     // Update the numbers in the view cell.
     // We couldn't have put the numbers there in the beginning, because, due to
     // bucket sorting, we couldn't know for sure where each result is going to
     // end up.
-    let i = 0;
+    let i = start;
     this.form.resultsTBody
       .querySelectorAll(`.${CLS.COUNTER}`)
       .forEach((counter: Element) => {
         counter.textContent = `${(++i).toString()} / ${results.length.toString()}`;
       });
+  }
+
+  /**
+   * @param hasPrev - Whether a previous page is available.
+   * @param hasNext - Whether a next page is available.
+   * @param totalResults
+   * @returns
+   *
+   * TODO: (#696) Pagination links are better rendered outside the results
+   * table, rather than inside a cell at the bottom.
+   */
+  private paginationRow(
+    hasPrev: boolean,
+    hasNext: boolean,
+    totalResults: number
+  ): HTMLTableRowElement {
+    const tr = document.createElement('tr');
+    tr.classList.add(CLS.PAGINATION);
+
+    const td = document.createElement('td');
+    td.colSpan = this.form.numColumns;
+    const inner = document.createElement('div');
+    inner.append(
+      this.paginationItem(-1, totalResults, hasPrev),
+      this.paginationItem(1, totalResults, hasNext)
+    );
+    td.append(inner);
+    tr.append(td);
+    return tr;
+  }
+
+  /**
+   * @param step - -1 for the previous-page item, 1 for the next-page item.
+   * @param totalResults
+   * @param enabled
+   * @returns
+   */
+  private paginationItem(
+    step: -1 | 1,
+    totalResults: number,
+    enabled: boolean
+  ): HTMLDivElement {
+    const isPrev: boolean = step < 0;
+    const div = document.createElement('div');
+    div.classList.add(isPrev ? CLS.PAGINATION_PREV : CLS.PAGINATION_NEXT);
+    if (!enabled) {
+      return div;
+    }
+    const page: number = this.currentPage + step;
+    const from: number = page * PER_PAGE + 1;
+    const to: number = Math.min((page + 1) * PER_PAGE, totalResults);
+    const range = `${from.toString()} - ${to.toString()}`;
+    div.textContent = isPrev ? `← ${range}` : `${range} →`;
+    div.addEventListener('click', (e: Event) => {
+      e.preventDefault();
+      this.currentPage = page;
+      void this.searchAux();
+      this.form.table.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    return div;
   }
 }

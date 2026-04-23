@@ -18,7 +18,6 @@
 
 .results td {
   padding: 5px;
-  vertical-align: top;
   border-left: 1px solid var(--light-gray);
 }
 
@@ -45,6 +44,38 @@
   font-style: italic;
 }
 
+.results .pagination td {
+  height: 5em;
+  opacity: 0.6;
+  padding: 20px;
+}
+
+.pagination td > div {
+  display: flex;
+  height: 100%;
+}
+
+.pagination-prev,
+.pagination-next {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.pagination-prev {
+  justify-content: flex-start;
+}
+
+.pagination-next {
+  justify-content: flex-end;
+}
+
+.pagination-prev:not(:empty):hover,
+.pagination-next:not(:empty):hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .results tbody tr {
   transition: background-color 0.2s ease-in-out;
 }
@@ -55,6 +86,10 @@
 
 .results tbody tr:not(:last-child) td {
   border-bottom: 1px solid #f0f0f0;
+}
+
+.results tr:not(.pagination) td:not(.view) {
+  vertical-align: top;
 }
 
 .view:hover {

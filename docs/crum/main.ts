@@ -10,8 +10,7 @@ import * as crum from './crum.js';
 import * as id from './id.js';
 import * as head from '../header.js';
 import * as dev from '../dev.js';
-
-const SMALL_SCREEN_WIDTH = 500;
+import * as browser from '../browser.js';
 
 /**
  *
@@ -57,7 +56,7 @@ function addReportsLink(): void {
     log.error('Unable to find a', `#${id.REPORTS}`, 'element');
     return;
   }
-  if (window.innerWidth < SMALL_SCREEN_WIDTH) {
+  if (browser.smallScreen()) {
     // TODO: (#203) We never handle small-screen styling in TypeScript! We've
     // only ever done it in CSS. Let's not break this rule.
     // This is a band-aid until we find a long-term solution! The word "Reports"

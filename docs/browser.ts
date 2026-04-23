@@ -1,5 +1,7 @@
 /** Package browser defines generic browser and UI helpers. */
 
+const SMALL_SCREEN_WIDTH = 500;
+
 /**
  *
  * @param url
@@ -14,6 +16,20 @@ export function open(url: string | null | undefined, external = true): void {
     return;
   }
   window.open(url, '_self');
+}
+
+/**
+ * @returns Whether you're running on Firefox.
+ */
+export function firefox(): boolean {
+  return navigator.userAgent.toLowerCase().includes('firefox');
+}
+
+/**
+ * @returns
+ */
+export function smallScreen(): boolean {
+  return window.innerWidth < SMALL_SCREEN_WIDTH;
 }
 
 /**
