@@ -348,6 +348,7 @@ export class Form {
 
 interface Result {
   text: string;
+  textLength: number;
   matches: Match[];
   boundary(): Boundary;
   match: boolean;
@@ -365,13 +366,25 @@ abstract class AggregateResult implements Result {
   // computing them repeatedly.
   // TODO: (#605) Stop memorizing text.
   private textMemo: string | null = null;
+  private textLengthMemo: number | null = null;
   private matchesMemo: Match[] | null = null;
+  private matchMemo: boolean | null = null;
 
   /**
    * @returns
    */
   public get text(): string {
     return (this.textMemo ??= this.results.map((r) => r.text).join(''));
+  }
+
+  /**
+   * @returns The total length of the text, without building the full string.
+   */
+  public get textLength(): number {
+    return (this.textLengthMemo ??= this.results.reduce(
+      (sum: number, r: Result) => sum + r.textLength,
+      0
+    ));
   }
 
   /**
@@ -389,7 +402,7 @@ abstract class AggregateResult implements Result {
     const matches: Match[] = [];
     this.results.forEach((r) => {
       matches.push(...r.matches.map((m) => m.shift(precedingTextLength)));
-      precedingTextLength += r.text.length;
+      precedingTextLength += r.textLength;
     });
     return matches;
   }
@@ -409,7 +422,7 @@ abstract class AggregateResult implements Result {
    */
   public get match(): boolean {
     // We have a match if any of the results has a match.
-    return this.results.some((r: Result) => r.match);
+    return (this.matchMemo ??= this.results.some((r: Result) => r.match));
   }
 
   /**
@@ -464,6 +477,8 @@ export class Candidate {
  */
 export class SearchResult extends AggregateResult {
   protected readonly results: FieldSearchResult[];
+
+  private compareKeyMemo: number[] | null = null;
 
   /**
    * @param key
@@ -580,10 +595,10 @@ export class SearchResult extends AggregateResult {
         if (node.nodeType === Node.ELEMENT_NODE) {
           return (node as Element).matches(`.${drop.CLS.DROPPABLE}`)
             ? // This is a tooltip, added by the enricher, and irrelevant for
-              // highlighting. Skip the whole subtree.
-              NodeFilter.FILTER_REJECT
+            // highlighting. Skip the whole subtree.
+            NodeFilter.FILTER_REJECT
             : // Otherwise, skip this node, but proceed to process its children.
-              NodeFilter.FILTER_SKIP;
+            NodeFilter.FILTER_SKIP;
         }
         // This is a text node.
         return NodeFilter.FILTER_ACCEPT;
@@ -717,7 +732,7 @@ export class SearchResult extends AggregateResult {
    */
   public compareKey(): number[] {
     const boundary: Boundary = this.boundary();
-    return [
+    return (this.compareKeyMemo ??= [
       this.layer,
       // Results are sorted based on the boundary type.
       // See the Boundary enum for the order.
@@ -727,7 +742,7 @@ export class SearchResult extends AggregateResult {
       // boundary type.
       // A candidate with a full-word match in the first field should rank
       // higher than a candidate with a full-word match in the second field.
-      this.results.findIndex((res) => res.boundary() === this.boundary()),
+      this.results.findIndex((res) => res.boundary() === boundary),
       // Afterwards, we prioritize results that start at the beginning of the
       // line.
       // This is very useful, especially for prepositions:
@@ -762,7 +777,7 @@ export class SearchResult extends AggregateResult {
           (r) => r.matches[0]?.start ?? Number.MAX_SAFE_INTEGER
         )
       ),
-    ];
+    ]);
   }
 
   /**
@@ -1033,7 +1048,7 @@ class Match {
     public readonly start: number,
     public readonly end: number,
     public readonly boundary: Boundary
-  ) {}
+  ) { }
 
   /**
    *
@@ -1051,8 +1066,9 @@ class Match {
    */
   public translate(translation: number[]): Match {
     if (orth.idempotent(translation)) {
-      // No translation is needed!
-      return structuredClone(this);
+      // No translation is needed. Match is immutable (all fields are
+      // readonly), so it's safe to return `this` directly.
+      return this;
     }
     return new Match(
       translation[this.start]!,
@@ -1165,6 +1181,13 @@ class LineSearchResult implements Result {
    */
   public get text(): string {
     return this.line.text;
+  }
+
+  /**
+   * @returns The text length, without touching the underlying string.
+   */
+  public get textLength(): number {
+    return this.line.text.length;
   }
 
   /**
