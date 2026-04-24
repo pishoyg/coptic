@@ -89,7 +89,7 @@ const TEST_CASES: {
     // 629 has a corrigendum.
     key: '629',
     want: {
-      references: 22,
+      references: 23,
       bible: 18,
       dialectTooltips: 66,
       annotations: 30,
