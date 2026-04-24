@@ -305,9 +305,6 @@ function handleAnnotation(
   }
 
   const nodes = Array.from(context.substring(key.length));
-  if (nodes.length > 1) {
-    log.warn('The annotation', key, 'spans multiple nodes:', nodes);
-  }
   if (
     annot.noStyledParent &&
     nodes.some((node) => node instanceof Element && node.matches('i, sup'))

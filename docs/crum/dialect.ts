@@ -169,6 +169,7 @@ export const NON_STANDARD: Record<string, Dialect> = {
     'Sahidic with Akhmimic and Fayyumic tendency',
     []
   ),
+  Sb: new Dialect('Sb' as DIALECT, 'Sahidic with Bohairic tendency', []),
   Bf: new Dialect('Bf' as DIALECT, 'Bohairic with Fayyumic tendency', []),
   // Lycopolitan is a major dialect, albeit with a both a standard and a
   // non-standard siglum.
