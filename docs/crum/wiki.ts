@@ -380,7 +380,7 @@ function handlePage(
       paths.crumScan(`${match[2]!}${match[3]!}`),
       true,
       ...context.substring(
-        match[0].length + comma.length,
+        match[0].length - comma.length,
         key.length + munch + comma.length
       )
     );
