@@ -213,6 +213,7 @@ export const DATA: Abbreviation[] = [
 
   { fullForm: 'et cetera', variants: ['&c'] },
   { fullForm: 'Addenda', variants: ['Ad'], noCaseVariant: true, suffix: true },
+  { fullForm: 'ad locum', variants: ['ad loc'], suffix: true },
   {
     fullForm: 'Assyrian',
     variants: ['Assyr'],
