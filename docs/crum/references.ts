@@ -2721,11 +2721,17 @@ const DATA_2: Resource[] = [
     variants: ['Spg Aeg u Gr Eigennamen'],
   },
   {
+    variants: ['Spg Mythus'],
+  },
+  {
     source: {
       title:
         'Socrates Spiro, An Arabic-English vocabulary of the colloquial Arabic of Egypt',
     },
     variants: ['Spiro'],
+  },
+  {
+    variants: ['Strzygowski Kopt Kunst'],
   },
   {
     source: {
