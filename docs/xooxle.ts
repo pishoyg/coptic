@@ -173,6 +173,7 @@ export class Form {
   private readonly tbody: HTMLTableSectionElement;
   public readonly numColumns: number;
   public readonly scrollTarget: HTMLElement;
+  public readonly paginationContainer: HTMLDivElement;
   private readonly form?: HTMLFormElement;
 
   /**
@@ -218,6 +219,11 @@ export class Form {
     this.scrollTarget = form.scrollTargetID
       ? document.getElementById(form.scrollTargetID)!
       : this.table;
+
+    // Pagination renders outside the results table, as its sibling.
+    this.paginationContainer = document.createElement('div');
+    this.paginationContainer.classList.add(CLS.PAGINATION);
+    this.table.insertAdjacentElement('afterend', this.paginationContainer);
 
     if (form.formID) {
       this.form = document.getElementById(form.formID) as HTMLFormElement;
@@ -381,6 +387,7 @@ export class Form {
    */
   public clearOutputFields(): void {
     this.tbody.replaceChildren();
+    this.paginationContainer.replaceChildren();
     this.messageBox.replaceChildren();
   }
 }
@@ -1687,7 +1694,7 @@ export class Xooxle {
     const hasPrev: boolean = this.currentPage > 0;
     const hasNext: boolean = results.length > end;
     if (hasPrev || hasNext) {
-      this.form.result(this.paginationRow(hasPrev, hasNext, results.length));
+      this.renderPagination(hasPrev, hasNext, results.length);
     }
 
     // Update the numbers in the view cell.
@@ -1706,29 +1713,16 @@ export class Xooxle {
    * @param hasPrev - Whether a previous page is available.
    * @param hasNext - Whether a next page is available.
    * @param totalResults
-   * @returns
-   *
-   * TODO: (#696) Pagination links are better rendered outside the results
-   * table, rather than inside a cell at the bottom.
    */
-  private paginationRow(
+  private renderPagination(
     hasPrev: boolean,
     hasNext: boolean,
     totalResults: number
-  ): HTMLTableRowElement {
-    const tr = document.createElement('tr');
-    tr.classList.add(CLS.PAGINATION);
-
-    const td = document.createElement('td');
-    td.colSpan = this.form.numColumns;
-    const inner = document.createElement('div');
-    inner.append(
+  ): void {
+    this.form.paginationContainer.append(
       this.paginationItem(-1, totalResults, hasPrev),
       this.paginationItem(1, totalResults, hasNext)
     );
-    td.append(inner);
-    tr.append(td);
-    return tr;
   }
 
   /**

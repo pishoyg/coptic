@@ -44,19 +44,19 @@
   font-style: italic;
 }
 
-.results .pagination td {
-  height: 5em;
-  opacity: 0.6;
-  padding: 20px;
+.results tr td:not(.view) {
+  vertical-align: top;
 }
 
 .results tbody tr:not(:last-child) td {
   border-bottom: 1px solid #f0f0f0;
 }
 
-.pagination td > div {
+.pagination:not(:empty) {
   display: flex;
-  height: 100%;
+  min-height: 5em;
+  padding: 20px;
+  opacity: 0.6;
 }
 
 .pagination-prev,
@@ -86,10 +86,6 @@
 
 .results tbody tr:hover {
   background-color: #f8f9fa;
-}
-
-.results tr:not(.pagination) td:not(.view) {
-  vertical-align: top;
 }
 
 .view:hover {
