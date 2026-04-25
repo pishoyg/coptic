@@ -12,13 +12,13 @@
   background-color: #f8f9fa;
 }
 
-.results thead tr {
-  border-bottom: 2px solid var(--light-gray);
-}
-
 .results td {
   padding: 5px;
   border-left: 1px solid var(--light-gray);
+}
+
+.results thead tr td {
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .results td:not(:first-child) {
@@ -46,8 +46,11 @@
 
 .results .pagination td {
   height: 5em;
-  opacity: 0.6;
   padding: 20px;
+}
+
+.results tbody tr:not(:last-child) td {
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .pagination td > div {
@@ -82,10 +85,6 @@
 
 .results tbody tr:hover {
   background-color: #f8f9fa;
-}
-
-.results tbody tr:not(:last-child) td {
-  border-bottom: 1px solid #f0f0f0;
 }
 
 .results tr:not(.pagination) td:not(.view) {
