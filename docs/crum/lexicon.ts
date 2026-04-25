@@ -77,6 +77,12 @@ enum Bucket {
 const WIKI_FRAGMENT_CONTEXT = 4;
 
 /**
+ * WIKI_UNITS_LIMIT is the maximum number of units to display per field for
+ * Wiki search results.
+ */
+const WIKI_UNITS_LIMIT = 3;
+
+/**
  *
  * @param active
  * @returns
@@ -283,6 +289,13 @@ class CrumSearchResult extends SearchResult {
     // Wiki shows later in the page, so we add some context to the URL text
     // fragment to increase the likelihood that we will land on the right place.
     return super.fragment(this.wiki() ? WIKI_FRAGMENT_CONTEXT : 0);
+  }
+
+  /**
+   * @returns
+   */
+  protected override unitsLimit(): number {
+    return this.wiki() ? WIKI_UNITS_LIMIT : super.unitsLimit();
   }
 }
 

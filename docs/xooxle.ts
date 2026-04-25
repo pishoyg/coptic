@@ -531,7 +531,17 @@ export class SearchResult extends AggregateResult {
     public readonly layer: number
   ) {
     super();
-    this.results = fields.map((f: Field): FieldSearchResult => f.search(regex));
+    this.results = fields.map(
+      (f: Field): FieldSearchResult => f.search(regex, this.unitsLimit())
+    );
+  }
+
+  /**
+   * @returns The maximum number of units to display in a field. Override this
+   * method to customize the limit.
+   */
+  protected unitsLimit(): number {
+    return UNITS_LIMIT;
   }
 
   /**
@@ -957,10 +967,11 @@ class Field {
 
   /**
    * @param regex - Regex to search.
+   * @param unitsLimit - Maximum number of units to display.
    * @returns Search result.
    */
-  public search(regex: RegExp): FieldSearchResult {
-    return new FieldSearchResult(this, regex);
+  public search(regex: RegExp, unitsLimit: number): FieldSearchResult {
+    return new FieldSearchResult(this, regex, unitsLimit);
   }
 }
 
@@ -974,8 +985,9 @@ class FieldSearchResult extends AggregateResult {
   /**
    * @param field
    * @param regex
+   * @param unitsLimit
    */
-  public constructor(field: Field, regex: RegExp) {
+  public constructor(field: Field, regex: RegExp, unitsLimit: number) {
     super();
     const results = field.units.map((unit) => unit.search(regex));
     // If there are no matches, we limit the number of units in the output.
@@ -987,8 +999,8 @@ class FieldSearchResult extends AggregateResult {
     //   We always show the first result, because its content is usually
     //   important.
     this.results = !results.some((r) => r.match)
-      ? results.slice(0, UNITS_LIMIT)
-      : results.length <= UNITS_LIMIT
+      ? results.slice(0, unitsLimit)
+      : results.length <= unitsLimit
         ? results
         : [...results.slice(0, 1), ...results.slice(1).filter((r) => r.match)];
     this.cropped = this.results.length < results.length;
