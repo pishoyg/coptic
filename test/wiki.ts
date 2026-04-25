@@ -113,6 +113,13 @@ const TEST_CASES: {
     },
   },
   {
+    // 1637 contains a page reference without a column.
+    key: '1637',
+    want: {
+      pages: 1,
+    },
+  },
+  {
     // 2157 contains a semicolon immediately followed by a word character.
     // See #692 for context.
     key: '2157',
