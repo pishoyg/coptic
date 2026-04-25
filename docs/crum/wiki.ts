@@ -347,6 +347,10 @@ function handleAnnotation(
  * @param key
  * @param context
  * @returns
+ *
+ * TODO: (#413) You should perhaps also annotate the word 'Addenda'[1].
+ *
+ * [1] https://remnqymi.com/crum/?query=Addenda&full=true&wiki=true&kellia=false&andreas=false
  */
 function handlePage(
   key: string,
