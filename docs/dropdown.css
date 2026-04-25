@@ -100,6 +100,13 @@
   }
 }
 
+/* When a .dropdown contains a nested .dropdown, give the outer one a
+ * distinctive hover color so the inner one's standard hover color stands
+ * out clearly against it. */
+.dropdown:has(.dropdown):hover {
+  background-color: #ffe8b3;
+}
+
 /* Click-invoked .droppable elements get the .show class via JS. */
 .droppable.show {
   visibility: visible;
