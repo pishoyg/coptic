@@ -129,8 +129,8 @@ const BIBLE_FOLLOWUP = new RegExp(
   'u'
 );
 
-const PAGE_RE = /^p{1,2} ([0-9]+) ([ab])\b/;
-const PAGE_FOLLOWUP_RE = /^(, )([0-9]+) ([ab])\b/;
+const PAGE_RE = /^p{1,2} ([0-9]+)(?: ([ab]))?\b/;
+const PAGE_FOLLOWUP_RE = /^(, )([0-9]+)(?: ([ab]))?\b/;
 
 // Pay attention to the following:
 // - Diacritics:
@@ -366,7 +366,7 @@ function handlePage(
 
   const replacement: (Node | string)[] = [];
   let a = html.anchor(
-    paths.crumScan(`${match[1]!}${match[2]!}`),
+    paths.crumScan(`${match[1]!}${match[2] ?? ''}`),
     true,
     ...context.substring(match[0].length)
   );
@@ -383,7 +383,7 @@ function handlePage(
     const comma = match[1]!;
     replacement.push(comma);
     a = html.anchor(
-      paths.crumScan(`${match[2]!}${match[3]!}`),
+      paths.crumScan(`${match[2]!}${match[3] ?? ''}`),
       true,
       ...context.substring(
         match[0].length - comma.length,
