@@ -180,7 +180,7 @@ const NUMBER = `(?:${NUMBERS.join('|')})`;
 const NUMBER_GROUP = `(?: ${NUMBER}| ?\\(${NUMBER}(?: ${NUMBER})*\\))`;
 
 const SUFFIX = new RegExp(
-  `^\\.?${NUMBER_GROUP}+${str.ASSERT_NON_WORD.source}`,
+  `^\\.?${NUMBER_GROUP}+(?: &${NUMBER_GROUP}+)*${str.ASSERT_NON_WORD.source}`,
   'u'
 );
 const REFERENCE_FOLLOWUP = new RegExp(
