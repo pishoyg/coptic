@@ -450,6 +450,7 @@ async function main(): Promise<void> {
         // several boxes, otherwise they could override each other!
         messageBoxID: id.MESSAGE_BOX,
         resultsTableID: xooxle.tableID,
+        scrollTargetID: id.title(xooxle.tableID),
         formID: id.FORM,
         boxes: xooxle.otherCheckboxes,
       });

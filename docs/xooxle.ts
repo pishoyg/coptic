@@ -132,6 +132,9 @@ export interface FormParams {
   regexCheckboxID: string;
   messageBoxID: string;
   resultsTableID: string;
+  // scrollTargetID is the ID of the element that pagination clicks should
+  // scroll to. If unset, the results table is used.
+  scrollTargetID?: string;
   formID?: string;
   boxes?: [string, string][] | undefined;
 }
@@ -169,6 +172,7 @@ export class Form {
   public readonly table: HTMLTableElement;
   private readonly tbody: HTMLTableSectionElement;
   public readonly numColumns: number;
+  public readonly scrollTarget: HTMLElement;
   private readonly form?: HTMLFormElement;
 
   /**
@@ -210,6 +214,10 @@ export class Form {
     this.numColumns = this.table
       .querySelector('thead')!
       .querySelectorAll('td').length;
+
+    this.scrollTarget = form.scrollTargetID
+      ? document.getElementById(form.scrollTargetID)!
+      : this.table;
 
     if (form.formID) {
       this.form = document.getElementById(form.formID) as HTMLFormElement;
@@ -1749,7 +1757,10 @@ export class Xooxle {
       e.preventDefault();
       this.currentPage = page;
       void this.searchAux();
-      this.form.table.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      this.form.scrollTarget.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
     });
     return div;
   }
