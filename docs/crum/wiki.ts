@@ -161,6 +161,8 @@ const NUMBERS = [
   // only suffixes retrieved from the list of annotations are explained in the
   // tooltip.
   '§\\d*',
+  'scala',
+  'Scala',
   'stele',
   '[a-zA-Z]\\.?',
   // Roman numerals (in the range 1–3999):
