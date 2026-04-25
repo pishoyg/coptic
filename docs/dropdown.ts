@@ -152,5 +152,5 @@ export function addDroppable(
  * @returns
  */
 export function noTipTextContent(node: Node): string {
-  return str.textContent(node, { [CLS.DROPPABLE]: '' });
+  return str.textContent(node, { [`.${CLS.DROPPABLE}`]: '' });
 }

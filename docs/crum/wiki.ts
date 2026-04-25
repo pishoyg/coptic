@@ -199,7 +199,9 @@ function textContent(wiki: HTMLElement): string {
   // Our enricher adds tooltips, which we need to eliminate in order to obtain
   // the original text.
   // Additionally, we add a copy button, and we should get rid of that as well.
-  return str.textContent(wiki, { [drop.CLS.DROPPABLE]: '', [cls.COPY]: '' });
+  return str.textContent(wiki, {
+    [css.classQuery(drop.CLS.DROPPABLE, cls.COPY)]: '',
+  });
 }
 
 /**
@@ -1331,7 +1333,11 @@ function entryText(entry: Element): string {
   return Array.from(entry.querySelectorAll('p'))
     .map((p: HTMLParagraphElement): string =>
       Array.from(p.querySelectorAll(`.${cls.SUBPARAGRAPH}`))
-        .map(drop.noTipTextContent)
+        .map((element: Element) =>
+          // Drop tooltips, and <del> tags (which are used for additions and
+          // corrections).
+          str.textContent(element, { [`.${drop.CLS.DROPPABLE}`]: '', del: '' })
+        )
         .map((text: string): string => `    ${text}`)
         .join('')
     )

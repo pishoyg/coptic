@@ -129,12 +129,15 @@ export function escape(query: string): string {
 
 /**
  * @param node
- * @param overrides
+ * @param overrides - A map from CSS selector queries to replacement text.
+ * If an element matches a query, its subtree is skipped and the corresponding
+ * text is yielded in its place. Defaults to dropping `<del>` tags, but the
+ * caller is free to override the behavior.
  * @returns
  */
 export function textContent(
   node: Node,
-  overrides: Record<string, string>
+  overrides: Record<string, string> = { del: '' }
 ): string {
   return [...textContentAux(node, overrides)].join('');
 }
@@ -160,8 +163,8 @@ function* textContentAux(
     return;
   }
 
-  for (const [cls, text] of Object.entries(overrides)) {
-    if ((node as HTMLElement).classList.contains(cls)) {
+  for (const [query, text] of Object.entries(overrides)) {
+    if ((node as Element).matches(query)) {
       yield text;
       return;
     }
