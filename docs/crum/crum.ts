@@ -458,6 +458,8 @@ const NAG_HAMMADI_RE =
   /\bcodex ([a-z]*) - ([^;]+); [0-9]+; ([0-9]+|flyleaf (?:verso|recto)); ([0-9]+);/gi;
 
 /**
+ * TODO: (#167) Use structured HTML for Nag Hammadi, instead of relying on
+ * regular expressions to extract book names.
  *
  * @param root
  */
