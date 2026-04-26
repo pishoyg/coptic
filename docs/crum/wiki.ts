@@ -1314,6 +1314,50 @@ const ANTECEDENT_QUERY: string = css.classQuery(
 );
 
 /**
+ *
+ * @param context
+ * @yields
+ */
+function* previousElementSiblingsAcrossParagraphs(
+  context: html.ReplaceNodesContext
+): Generator<Element> {
+  let curr: Element | null = null;
+  // Loop over all the previous siblings of the match.
+  for (curr of context.matchPreviousElementSiblings()) {
+    yield curr;
+  }
+  // NOTE: The following while loop is implemented based on the current HTML
+  // structure, which, as of the time of writing, looks as follows:
+  //   <p>
+  //     <span class="subparagraph"> ...candidates </span>
+  //     ...
+  //     <span class="subparagraph"> ...candidates </span>
+  //   </p>
+  //   <p>
+  //     <span class="subparagraph"> ...candidates </span>
+  //     ...
+  //     <span class="subparagraph"> ...candidates </span>
+  //   </p>
+  //   ...
+  while (
+    (curr =
+      // Try the element's previous sibling.
+      curr?.previousElementSibling ??
+      // Move to the previous subparagraph. Use `previousElementSibling` to
+      // skip the whitespace text node between adjacent `<span>`s.
+      curr?.parentElement?.previousElementSibling?.lastElementChild ??
+      // Move to the previous paragraph. Use `previousElementSibling` to skip
+      // the whitespace between adjacent `<p>`s, and `lastElementChild` to
+      // skip trailing whitespace inside that previous `<p>`.
+      curr?.parentElement?.parentElement?.previousElementSibling
+        ?.lastElementChild?.lastElementChild ??
+      null)
+  ) {
+    yield curr;
+  }
+}
+
+/**
  * Find the first preceding sibling to the given ibidem element that is either
  * a reference, a Bible citation, or a page.
  *
@@ -1321,8 +1365,8 @@ const ANTECEDENT_QUERY: string = css.classQuery(
  * @returns
  */
 function findAntecedent(context: html.ReplaceNodesContext): HTMLElement | null {
-  for (const curr of context.matchPreviousSiblings()) {
-    if (curr instanceof Element && curr.matches(ANTECEDENT_QUERY)) {
+  for (const curr of previousElementSiblingsAcrossParagraphs(context)) {
+    if (curr.matches(ANTECEDENT_QUERY)) {
       return curr as HTMLElement;
     }
   }

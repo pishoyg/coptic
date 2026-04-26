@@ -235,6 +235,17 @@ export class ReplaceNodesContext {
   }
 
   /**
+   *
+   */
+  public *matchPreviousElementSiblings(): Generator<Element> {
+    for (const node of this.matchPreviousSiblings()) {
+      if (node instanceof Element) {
+        yield node;
+      }
+    }
+  }
+
+  /**
    * @returns The next sibling of the last node in the chain, if it exists.
    */
   public get chainNextSibling(): Node | undefined | null {
