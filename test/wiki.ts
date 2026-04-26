@@ -127,6 +127,14 @@ const TEST_CASES: {
       semicolons: 11,
     },
   },
+  {
+    // 2339 contains an Ibidem references across paragraphs.
+    // See #700.
+    key: '2339',
+    want: {
+      references: 21,
+    },
+  },
 ];
 
 /**
