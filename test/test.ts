@@ -20,8 +20,9 @@ const PAGES_TO_TEST: string[] = [
   '/crum/1.html', // A Crum note (sample)
   '/bible', // Bible
   '/bible/genesis_1.html', // A Bible chapter (sample)
-  '/dawoud', // Dawoud scan
-  '/crum/crum', // Crum scan
+  '/crum?mode=book', // Crum scan
+  '/crum?mode=dawoud', // Dawoud scan
+  '/crum?mode=dawoud&query=18', // Dawoud scan, landed on a page
 ];
 
 PAGES_TO_TEST.forEach((path: string): void => {

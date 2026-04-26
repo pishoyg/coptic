@@ -110,8 +110,11 @@ figcaption {
   float: right;
 }
 
-#crum,
-#dawoud {
+/* Spacing for the per-word dictionary sections on note pages. Scoped to
+ * `body.note` to avoid colliding with `#crum` (the lexicon's Crum results
+ * table) and `#dawoud` (the lexicon's Dawoud scan frame). */
+body.note #crum,
+body.note #dawoud {
   margin-top: 2rem;
 
   & .page-list {

@@ -9,13 +9,17 @@
   display: none;
 }
 
+/* The panel sits below the page header. `top` is nudged down (and `height`
+ * trimmed by the matching amount) to leave room for the lexicon's now
+ * taller header — the mode-switcher bar above `#header` adds vertical
+ * real estate, and the panel would otherwise overlap it. */
 .info-panel {
-  top: 10%;
+  top: 20%;
   left: 50%;
   transform: translateX(-50%);
   width: 80%;
   max-width: 600px;
-  height: 80%;
+  height: 70%;
   background-color: var(--color-translucent);
   border-radius: 10px;
   padding: 20px;

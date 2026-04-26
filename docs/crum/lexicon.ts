@@ -1,4 +1,34 @@
-/** Main function for the lexicon. */
+/**
+ * Main function for the lexicon.
+ *
+ * TODO: (#413) The lexicon page now hosts three independent views — digital,
+ * book, and dawoud — but its `main()` lives here while the scan inits live
+ * in sibling files (`book.ts`, `dawoud.ts`). Reshape this into a single
+ * orchestrator file (e.g. `lexicon-main.ts`) that pulls in three peers:
+ *
+ *   - `book.ts`     — Crum scan init (already extracted)
+ *   - `dawoud.ts`   — Dawoud scan init (already extracted)
+ *   - `digital.ts`  — Xooxle / digital-lexicon init (to be extracted out
+ *                     of this file)
+ *
+ * The orchestrator would call `mode.init()` once and then invoke each
+ * peer's init in turn. This gives the three views symmetrical structure
+ * and removes the asymmetry where digital-init is inlined in `main()` but
+ * the scans are separate `<script type="module">` entries.
+ *
+ * The split would also retire a load-bearing init-order invariant:
+ * `book.ts` and `dawoud.ts` each call `query.subscribe(...)` after their
+ * own `await fetch(...)`, and `query.subscribe` dereferences the shared
+ * search box. That box is wired by `query.init()`, which runs
+ * synchronously inside `mode.init()` inside this file's `main()` — but
+ * only because (a) `lexicon.js` is the FIRST `<script type="module">` in
+ * `index.html`, and (b) the synchronous prefix of every module's
+ * top-level `await main()` runs before any sibling module's `await`
+ * resolves. Reorder the script tags or hoist an `await` above
+ * `mode.init()` and the scans race with the query module's setup.
+ * Folding the three inits behind a single orchestrator removes the
+ * cross-module timing dependency entirely.
+ */
 import * as xoox from '../xooxle.js';
 import * as coll from '../collapse.js';
 import * as css from '../css.js';
@@ -16,6 +46,8 @@ import * as kellia from './kellia.js';
 import * as andreas from './andreas.js';
 import * as cls from './cls.js';
 import * as html from '../html.js';
+import * as mode from './mode.js';
+import * as query from './query.js';
 
 // NOTE: The terms "roman" and "italic" below are used to distinguish pieces of
 // text surrounded by <span> tags with the "roman" class from those that are
@@ -432,6 +464,10 @@ function addListDialects(): HTMLInputElement[] {
  *
  */
 async function main(): Promise<void> {
+  // Wire the Digital / Book / Dawoud switcher and apply the initial mode
+  // before any layout-dependent code runs.
+  mode.init();
+
   // We have a drop-down element bearing the dialects (intended for small
   // screens).
   const { button: dialectsButton, checkboxes: dropdownCheckboxes } =
@@ -460,17 +496,10 @@ async function main(): Promise<void> {
   ]);
   SearchResult.init(manager, highlighter);
 
-  // Initialize searchers.
-  // TODO: (#0) You initialize several Form and Xooxle objects, and many
-  // of elements are shared, which implies that some of the listeners will be
-  // registered multiple times. As of the time of writing, the following
-  // listeners (and potentially others) are registered redundantly:
-  // - Populating query parameters from form elements.
-  // - Populating form elements from query parameters.
-  // - Preventing form submission.
-  // - Stopping propagation of search box key events.
-  // While this is not currently a problem, it remains undesirable.
-  // Deduplicate these actions, somehow.
+  // Initialize searchers. Ownership of the search box, `?query=` URL
+  // parameter, form submit, and search-box keyboard propagation lives in
+  // `docs/crum/query.ts`; each `Xooxle` subscribes there for the
+  // `digital` mode rather than wiring its own input listener.
   await Promise.all(
     XOOXLES.map(async (xooxle: Xooxle): Promise<void> => {
       const json: xoox.XooxleRaw = (await fetch(xooxle.indexURL).then(
@@ -487,10 +516,14 @@ async function main(): Promise<void> {
         messageBoxID: id.MESSAGE_BOX,
         resultsTableID: xooxle.tableID,
         scrollTargetID: id.title(xooxle.tableID),
-        formID: id.FORM,
         boxes: xooxle.otherCheckboxes,
       });
-      new xoox.Xooxle(json, form, xooxle.searchResultType);
+      const x = new xoox.Xooxle(json, form, xooxle.searchResultType);
+
+      query.subscribe(() => {
+        x.search();
+      });
+
       coll.fromIDs(
         id.collapse(xooxle.tableID),
         id.collapsible(xooxle.tableID),

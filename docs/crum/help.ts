@@ -16,6 +16,7 @@ import * as dev from '../dev.js';
 import * as cls from './cls.js';
 import * as head from '../header.js';
 import * as id from './id.js';
+import * as mode from './mode.js';
 
 /**
  *
@@ -181,30 +182,17 @@ export function makeHelpPanel(
     ],
   };
 
-  const scrollTo = {
-    n: [
+  const moveTo = {
+    1: [
       new help.Shortcut(
-        'Next word in the list',
-        ['lexicon', 'note', 'index'],
-        () => {
-          browser.scrollToNextElement(
-            css.disjunction(xoox.CLS.VIEW, cls.SISTER_VIEW, cls.DRV_KEY),
-            'next'
-          );
-        }
+        'ⲡⲓⲖⲉⲝⲓⲕⲟⲛ',
+        ['lexicon'],
+        mode.set.bind(null, mode.DIGITAL)
       ),
     ],
-    p: [
-      new help.Shortcut(
-        'Previous word in the list',
-        ['lexicon', 'note', 'index'],
-        () => {
-          browser.scrollToNextElement(
-            css.disjunction(xoox.CLS.VIEW, cls.SISTER_VIEW, cls.DRV_KEY),
-            'prev'
-          );
-        }
-      ),
+    2: [new help.Shortcut('Crum', ['lexicon'], mode.set.bind(null, mode.BOOK))],
+    3: [
+      new help.Shortcut('داود', ['lexicon'], mode.set.bind(null, mode.DAWOUD)),
     ],
     C: [
       new help.Shortcut('Crum', ['lexicon'], () => {
@@ -228,6 +216,30 @@ export function makeHelpPanel(
       new help.Shortcut('Andreas', ['lexicon'], () => {
         browser.scroll(id.title(id.ANDREAS));
       }),
+    ],
+    n: [
+      new help.Shortcut(
+        'Next word in the list',
+        ['lexicon', 'note', 'index'],
+        () => {
+          browser.scrollToNextElement(
+            css.disjunction(xoox.CLS.VIEW, cls.SISTER_VIEW, cls.DRV_KEY),
+            'next'
+          );
+        }
+      ),
+    ],
+    p: [
+      new help.Shortcut(
+        'Previous word in the list',
+        ['lexicon', 'note', 'index'],
+        () => {
+          browser.scrollToNextElement(
+            css.disjunction(xoox.CLS.VIEW, cls.SISTER_VIEW, cls.DRV_KEY),
+            'prev'
+          );
+        }
+      ),
     ],
     D: [
       new help.Shortcut('Dawoud pages', ['note'], () => {
@@ -293,7 +305,7 @@ export function makeHelpPanel(
         'Header',
         ['lexicon', 'note', 'index', 'index_index'],
         () => {
-          browser.scroll(id.HEADER);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
         }
       ),
     ],
@@ -334,7 +346,7 @@ export function makeHelpPanel(
     new help.Section('Dialect Highlighting', dialectHighlighting),
     new help.Section('Control', control),
     new help.Section('Search', search),
-    new help.Section('Scroll To', scrollTo),
+    new help.Section('Move To', moveTo),
     new help.Section('Collapse', collapse),
   ];
 

@@ -11,16 +11,8 @@
   color: gray;
 }
 
-/* Style the title. */
-form thead * {
-  text-align: center; /* Centered. */
-  font-weight: bold; /* Bold. */
-  color: #2c3e50; /* Dark gray. */
-  font-size: 120%; /* Large font. */
-}
-
 /* Add padding to all cells in the form tables. */
-form td {
+#xooxle td {
   padding: 8px 5px;
 }
 
@@ -114,4 +106,118 @@ input#search-box:focus {
     margin-top: 0;
     margin-bottom: 0;
   }
+}
+
+/* Mode-conditional visibility.
+ *
+ * `mode.ts` toggles `body.digital` / `body.book` / `body.dawoud`. Each
+ * mode hides the elements that don't belong, leaving the rest to whatever
+ * default the other stylesheets apply.
+ *
+ *   - `#digital` / `#book` / `#dawoud` — the three result views.
+ *
+ *     TODO: (#0) `#dawoud` collides with a same-named element on the
+ *     note pages (the "Dawoud pages" section in `crum/<entry>.html`).
+ *     The two elements never live on the same page, so this works in
+ *     practice, but the shared ID is a naming trap: a future developer
+ *     adding a rule against `#dawoud` may accidentally affect both
+ *     contexts. The existing collision is papered over by scoping
+ *     note-page rules to `body.note #dawoud` in `crum.css`. Rename one
+ *     of the two (`#dawoud-frame` would be the obvious choice for the
+ *     lexicon scan frame).
+ *
+ *   - `#help` / `.developer`           — header buttons that only make
+ *                                        sense over the digital lexicon;
+ *                                        they share a cell with
+ *                                        `#prev` / `#next` respectively.
+ *   - `#prev` / `#next`                — scan-navigation buttons that
+ *                                        only make sense over a scan.
+ *
+ * SPECIFICITY CAUTION: each selector below is qualified with `#header` not
+ * for semantic clarity but to win a specificity fight against
+ * `#header td > * { display: inline-block }` from `header.css`. That third
+ * stylesheet contributes specificity (0,1,1); a naive `body.book #help`
+ * would be (0,2,0) and still lose on `display`. Adding `#header` bumps us
+ * to (1,2,1) and consistently overrides it.
+ *
+ * This is fragile: if `header.css` ever drops or generalises that
+ * selector, these rules become unnecessarily heavy; if it gains more
+ * specificity, these rules silently stop hiding the buttons.
+ *
+ * TODO: (#0) Add a single class (e.g. `.hidden-in-mode`) to the cells
+ * we want to control and key the rule off that class, sidestepping the
+ * cross-stylesheet arms race entirely.
+ */
+body.digital #book,
+body.digital #dawoud,
+body.digital #header #prev,
+body.digital #header #next,
+body.book #digital,
+body.book #dawoud,
+body.book #header #help,
+body.book #header .developer,
+body.dawoud #digital,
+body.dawoud #book,
+body.dawoud #header #help,
+body.dawoud #header .developer {
+  display: none;
+}
+
+body.digital button#mode-digital,
+body.book button#mode-book,
+body.dawoud button#mode-dawoud {
+  background-color: var(--light-gray);
+  border-color: var(--midnight-blue);
+  box-shadow: 0 2px 6px rgb(44 62 80 / 25%);
+}
+
+#header {
+  background-color: var(--color-translucent);
+}
+
+#mode-switcher {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 12px;
+  background-color: var(--color-translucent);
+  box-sizing: border-box;
+
+  & button {
+    padding: 10px 18px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fafafa;
+    color: var(--midnight-blue);
+    font-size: 1.15rem;
+    cursor: pointer;
+    transition:
+      background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+
+    &:hover {
+      background-color: #eef1f4;
+    }
+  }
+}
+
+/* The scan frame is the document-wide column that holds the dictionary
+ * page image; center the image within it and within the page. */
+.scan-frame {
+  text-align: center;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+}
+
+.scan {
+  width: 900px;
+  height: auto;
+  cursor: grab;
+}
+
+.scan-frame figure {
+  margin: 0;
 }

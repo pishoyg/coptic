@@ -138,7 +138,6 @@ export interface FormParams {
   // scrollTargetID is the ID of the element that pagination clicks should
   // scroll to. If unset, the results table is used.
   scrollTargetID?: string;
-  formID?: string;
   boxes?: [string, string][] | undefined;
 }
 
@@ -177,7 +176,6 @@ export class Form {
   public readonly numColumns: number;
   public readonly scrollTarget: HTMLElement;
   public readonly paginationContainer: HTMLDivElement;
-  private readonly form?: HTMLFormElement;
 
   /**
    * Construct the form object.
@@ -228,10 +226,6 @@ export class Form {
     this.paginationContainer.classList.add(CLS.PAGINATION);
     this.table.insertAdjacentElement('afterend', this.paginationContainer);
 
-    if (form.formID) {
-      this.form = document.getElementById(form.formID) as HTMLFormElement;
-    }
-
     this.otherCheckBoxes =
       form.boxes?.map(
         ([id, param]: [string, string]): Checkbox => ({
@@ -260,34 +254,27 @@ export class Form {
 
   /**
    * Add event listeners to update query parameters from the form fields.
+   *
+   * The search box's `input` event, the form's `submit` event, and the
+   * `?query=` URL parameter are owned by `docs/crum/query.ts` — see the
+   * comment at the top of that file for the rationale.
    */
   private addEventListeners(): void {
-    this.searchBox.addEventListener('input', () => {
-      browser.setParam(Param.QUERY, this.searchBox.value);
-    });
-
     this.checkboxes.forEach((box: Checkbox): void => {
       box.box.addEventListener('click', () => {
         browser.setParam(box.param, box.box.checked);
       });
     });
-
-    // Prevent form submission. Otherwise, pressing Enter while the search box
-    // is focused could clear all input fields!
-    this.form?.addEventListener('submit', browser.preventDefault);
   }
 
   /**
    * Populate form fields from query parameters in the URL.
+   *
+   * The `?query=` parameter is restored by `query.ts`; this method only
+   * handles the lexicon-specific boolean parameters.
    */
   private populateFromParams(): void {
-    // Populate form values using query parameters.
     const params = new URLSearchParams(window.location.search);
-    const query: string | null = params.get(Param.QUERY);
-    if (query) {
-      this.searchBox.value = query;
-    }
-    // Boolean parameters are either true, or absent from the URL.
     this.checkboxes.forEach((box: Checkbox): void => {
       if (params.get(box.param)) {
         box.box.checked = true;
@@ -300,30 +287,6 @@ export class Form {
    */
   public get resultsTBody(): HTMLTableSectionElement {
     return this.tbody;
-  }
-
-  /**
-   * Focus on the search box.
-   */
-  public focus(): void {
-    this.searchBox.focus();
-  }
-
-  /**
-   * Add a search box input listener.
-   * @param listener
-   */
-  public addSearchBoxInputListener(listener: () => void): void {
-    this.searchBox.addEventListener('input', listener);
-  }
-
-  /**
-   * @param listener
-   */
-  public addSearchBoxKeyListener(listener: (event: Event) => void): void {
-    this.searchBox.addEventListener('keyup', listener);
-    this.searchBox.addEventListener('keydown', listener);
-    this.searchBox.addEventListener('keypress', listener);
   }
 
   /**
@@ -1442,13 +1405,6 @@ export class Xooxle {
     );
     this.addEventListeners();
 
-    // Handle the search query once upon loading, in case the form picked up a
-    // query from the URL parameters.
-    this.search();
-
-    // Focus on the form, so the user can search right away.
-    this.form.focus();
-
     dev.play(() => {
       index.metadata.layers.forEach((layer: string[]): void => {
         // The number of columns must be divisible by the number of fields in a
@@ -1474,32 +1430,23 @@ export class Xooxle {
   }
 
   /**
+   * Wire the listeners owned by this `Xooxle`. Search-box input is owned
+   * by `docs/crum/query.ts`, which calls `Xooxle.search()` on every
+   * keystroke; this method only wires the checkbox click handlers.
    */
   private addEventListeners(): void {
-    // Make the page responsive to user input.
-    // We need debounce timeout for search box input, because users typically
-    // type several letters consecutively.
-    // We don't need to do the same for checkbox events, because those events
-    // typically trigger as singletons.
-    this.form.addSearchBoxInputListener(
-      this.search.bind(this, INPUT_DEBOUNCE_TIMEOUT, true)
-    );
-    this.form.addCheckboxClickListener(this.search.bind(this, 0, true));
-    // Prevent other elements in the page from picking up key events on the
-    // search box.
-    this.form.addSearchBoxKeyListener(browser.stopPropagation);
+    // Checkbox clicks re-run search synchronously. They fire as singletons,
+    // so no debounce is needed.
+    this.form.addCheckboxClickListener(this.search.bind(this, 0));
   }
 
   /**
    * Handle the search query, debouncing with the given timeout.
    *
    * @param timeout - How long to wait before starting search.
-   * @param resetPage - Whether to reset the page number to 1.
    */
-  public search(timeout = 0, resetPage = false): void {
-    if (resetPage) {
-      this.currentPage = 0;
-    }
+  public search(timeout = INPUT_DEBOUNCE_TIMEOUT): void {
+    this.currentPage = 0;
 
     if (this.debounceTimeout) {
       clearTimeout(this.debounceTimeout);

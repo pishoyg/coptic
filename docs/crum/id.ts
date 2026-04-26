@@ -1,3 +1,5 @@
+import type * as mode from './mode.js';
+
 // LEXICON IDs:
 export const CRUM = 'crum';
 export const KELLIA = 'kellia';
@@ -11,6 +13,14 @@ export const ANDREAS = 'andreas';
  */
 export function title(dict: string): string {
   return `${dict}-title`;
+}
+
+/**
+ * @param m - A lexicon mode key.
+ * @returns The HTML element ID of that mode's switcher button.
+ */
+export function modeButton(m: mode.Mode): string {
+  return `mode-${m}`;
 }
 
 // Title elements are used to collapse dictionaries.
@@ -43,13 +53,19 @@ export const WIKI_CHECKBOX = 'wiki-checkbox';
 export const REPORTS = 'reports';
 export const FORM = 'form';
 
+export const CRUM_SCAN = 'crum-scan';
+export const DAWOUD_SCAN = 'dawoud-scan';
+
+export const NEXT = 'next';
+export const PREV = 'prev';
+export const RESET = 'reset';
+
 // NOTE IDs:
 export const CATEGORIES = 'categories';
 export const DAWOUD = 'dawoud';
 export const DERIVATIONS = 'derivations';
 export const DICTIONARY = 'dictionary';
 export const FOOTER = 'footer';
-export const HEADER = 'header';
 export const IMAGES = 'images';
 export const KEY = 'key';
 export const MEANING = 'meaning';

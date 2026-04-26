@@ -12,7 +12,6 @@ This script has two purposes:
     reminder.
 """
 
-
 # TODO: (#0) fnmatch is not strict enough! For example, it was found that
 # `dir/*.txt` can match the file path `dir/dir/file.txt`! Figure this out!
 
@@ -104,10 +103,11 @@ class Pattern:
 PATTERNS: list[Pattern] = [
     # Manually-written code files:
     Pattern(["index.html"]),
+    Pattern(["dawoud/index.html"]),  # TODO: (#0) Delete.
+    Pattern(["crum/crum/index.html"]),  # TODO: (#0) Delete.
     Pattern(["keyboard.html"]),
     Pattern(["**.css"]),
     Pattern(["crum/index.html"]),
-    Pattern(["dawoud/index.html", "crum/crum/index.html"]),
     Pattern(["**.ts"]),
     # Data files:
     Pattern(["dawoud/*.tsv"]),

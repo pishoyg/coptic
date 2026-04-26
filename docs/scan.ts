@@ -4,9 +4,9 @@
 // allow it to assert correctness, instead of trying to always fail gracefully.
 import * as log from './logger.js';
 import * as copt from './coptic.js';
-import * as browser from './browser.js';
 import * as orth from './orth.js';
 import * as dev from './dev.js';
+import * as str from './str.js';
 
 // WANT_COLUMNS is the list of the first columns we expect to find in the TSV.
 const WANT_COLUMNS = ['page', 'start', 'end'];
@@ -16,9 +16,27 @@ const ZOOM_FACTOR = 0.05;
 
 const MIN_SCALE = 0.2;
 
-// TODO: (#413) Prevent duplicate listeners, e.g. in query memorization and URL
-// parameters.
-const QUERY = 'query'; // Name of the query parameter.
+// PAGECHANGE is the name of the custom event the Scroller dispatches on the
+// scan <img> after a page change, to notify the ZoomerDragger that it should
+// reset its zoom / pan transform.
+const PAGECHANGE = 'pagechange';
+
+/**
+ * IsActive answers whether a scan view is currently the active one on the
+ * host page. It is supplied by callers so that this package does not need
+ * to know about its host's mode-switching mechanism.
+ *
+ * Only the `Scroller` consults this, and only for handlers that
+ * unavoidably share DOM with sibling scrollers — the next / prev buttons
+ * and the document-level N / P keydown. `ZoomerDragger`'s handlers either
+ * fire on per-scan elements (image wheel + mousedown, image-scoped
+ * pagechange) or are intentionally cross-mode (reset button click, R
+ * key), so it needs no predicate.
+ *
+ * Omit on pages that host a single scan: an absent predicate is treated
+ * as always active.
+ */
+export type IsActive = () => boolean;
 
 /**
  * Word represents a word that can be used in the book scan context.
@@ -94,7 +112,7 @@ export class Index {
    */
   public constructor(
     index: string,
-    private readonly wordType: new (str: string) => Word
+    private readonly wordType: new (s: string) => Word
   ) {
     const lines = index.trim().split('\n');
     const header: string[] = Index.toColumns(lines[0]!);
@@ -121,11 +139,11 @@ export class Index {
   }
 
   /**
-   * @param str - String representation of a TSV row.
+   * @param s - String representation of a TSV row.
    * @returns The content of the columns of interest in the given row.
    */
-  private static toColumns(str: string): string[] {
-    return str
+  private static toColumns(s: string): string[] {
+    return s
       .split('\t')
       .slice(0, WANT_COLUMNS.length)
       .map((l: string): string => l.trim());
@@ -243,26 +261,71 @@ export class Index {
 }
 
 /**
- * A holder of the HTML elements used to interact with the dictionary.
+ * Form holds the HTML elements used to drive a scan view.
+ *
+ * The search box and the wrapping <form> are NOT part of this — they're
+ * owned by `docs/crum/query.ts`, which dispatches search queries to every
+ * registered `Dictionary.search` on every keystroke.
+ *
+ * `Form` is a behaviorless data holder, so it is exposed as an interface
+ * rather than a class — callers construct one with an object literal.
  */
-export class Form {
+export interface Form {
+  /** <img> element holding the book page. */
+  image: HTMLImageElement;
+  /** Button that navigates to the next page when clicked. */
+  nextButton: HTMLElement;
+  /** Button that navigates to the previous page when clicked. */
+  prevButton: HTMLElement;
+  /** Button that resets the display. */
+  resetButton: HTMLElement;
+}
+
+/**
+ * Options used to construct a `Scroller`.
+ */
+export interface ScrollerOptions {
+  /** Integer basename of the first image (inclusive). */
+  start: number;
+  /** Integer basename of the last image (inclusive). */
+  end: number;
+  /** File extension (e.g. `'png'`). */
+  ext: string;
+  /** Input and output elements driven by the scroller. */
+  form: Form;
   /**
+   * Offset of the first interesting page in the book (skipping the intro
+   * and such). It lets logical page numbers (as used in the index and shown
+   * to the user) differ from the image basenames.
    *
-   * @param image - <img> element holding the book page.
-   * @param nextButton - Button to navigate to the next page when clicked.
-   * @param prevButton - Button to navigate to the previous page when clicked.
-   * @param resetButton - Button to reset display.
-   * @param searchBox - Search box, providing search queries.
-   * @param form - Form element.
+   * For example: if the pages are numbered 1.jpg to 100.jpg, with 1-20
+   * representing the introduction and 21.jpg being the actual page number
+   * 1, then the offset is 20. Logical page 1 will open file 21.jpg.
+   *
+   * Defaults to 0.
    */
-  public constructor(
-    public readonly image: HTMLImageElement,
-    public readonly nextButton: HTMLElement,
-    public readonly prevButton: HTMLElement,
-    public readonly resetButton: HTMLElement,
-    public readonly searchBox: HTMLInputElement,
-    public readonly form: HTMLElement
-  ) {}
+  offset?: number;
+  /**
+   * Which page to open on initial load, before any query-driven navigation
+   * takes over. Defaults to 1.
+   */
+  landingPage?: number;
+  /**
+   * Path to the directory containing the images. Joined with the page-stem
+   * filename when setting `img.src`. Defaults to the empty string, which
+   * resolves filenames relative to the current document.
+   */
+  directory?: string;
+  /**
+   * Predicate that answers whether this scroller is currently the active
+   * scan on the host page. When the host serves multiple scans behind a
+   * mode switcher, multiple scrollers may share the same `#prev` / `#next`
+   * buttons and the document keyboard listeners — only the active scroller
+   * should respond. Omit when the scroller is the only scan on its page.
+   *
+   * See `IsActive` for the rationale.
+   */
+  isActive?: IsActive;
 }
 
 /**
@@ -271,64 +334,33 @@ export class Form {
 export class Scroller {
   private readonly start: number;
   private readonly end: number;
+  private readonly offset: number;
+  private readonly ext: string;
+  private readonly form: Form;
+  private readonly landingPage: number;
+  private readonly directory: string;
+  private readonly isActive: IsActive | undefined;
   private currentPage: number;
 
   /**
    * Construct a scroller.
    *
-   * @param start - Integer basename of the first image.
-   *
-   * @param end - Integer basename of the first image.
-   *
-   * @param offset - Offset of the first interesting page in the book (skipping
-   * the intro and such). It lets logical page numbers (as used in the index
-   * and shown to the user) differ from the image basenames.
-   * For example: If the pages are numbered 1.jpg to 100.jpg, with 1-20
-   * representing the introduction, 21.jpg being the actual page number 1,
-   * then the offset is 20. Logical page 1 will then open file 21.jpg.
-   *
-   * @param ext - File extension.
-   *
-   * @param form - Input and output elements.
-   *
-   * @param form.image - <img> element holding the scan. The scroller will
-   * update the image source to open new pages.
-   *
-   * @param form.nextButton - Button to navigate to the next page. The scroller
-   * will respond to clicks on this button, and will disable the button if it's
-   * not possible to scroll to a next page (if we're already at the very last
-   * page).
-   *
-   * @param form.prevButton - Button to navigate to the previous page. The
-   * scroller will respond to clicks on this button, and will disable the button
-   * if it's not possible to scroll to a previous page (if we're already at the
-   * very first page).
-   *
-   * @param form.resetButton - Button to reset the display. The scroller will
-   * trigger a reset whenever a scroll takes place.
-   *
-   * @param landingPage - Which page to open on initial load, before any
-   * query-driven navigation takes over.
+   * @param opts - See `ScrollerOptions` for the field-by-field contract.
    */
-  public constructor(
-    start: number,
-    end: number,
-    private readonly offset = 0,
-    private readonly ext: string,
-    private readonly form: {
-      image: HTMLImageElement;
-      nextButton: HTMLElement;
-      prevButton: HTMLElement;
-      resetButton: HTMLElement;
-    },
-    private readonly landingPage = 1
-  ) {
-    this.start = start - this.offset;
-    this.end = end - this.offset;
-    this.currentPage = landingPage;
+  public constructor(opts: ScrollerOptions) {
+    this.offset = opts.offset ?? 0;
+    this.ext = opts.ext;
+    this.form = opts.form;
+    this.landingPage = opts.landingPage ?? 1;
+    this.directory = opts.directory ?? '';
+    this.isActive = opts.isActive;
+
+    this.start = opts.start - this.offset;
+    this.end = opts.end - this.offset;
+    this.currentPage = this.landingPage;
 
     this.addEventListeners();
-    this.update(landingPage);
+    this.update(this.landingPage);
   }
 
   /**
@@ -349,7 +381,13 @@ export class Scroller {
     }
     this.currentPage = page;
     this.updateDisplay(page);
-    this.form.resetButton.click();
+    // Notify our `ZoomerDragger` that the page has changed, so it can
+    // reset its in-progress zoom / pan transform for the new image. We
+    // dispatch a custom event on the image rather than synthesizing a
+    // click on the reset button, so that the dialect highlight reset
+    // (also wired to the reset button) does NOT fire on programmatic
+    // page changes.
+    this.form.image.dispatchEvent(new CustomEvent(PAGECHANGE));
   }
 
   /**
@@ -360,20 +398,11 @@ export class Scroller {
   private updateDisplay(page: number): void {
     const stem: number = page + this.offset;
 
-    this.form.image.src = `${stem.toString()}.${this.ext}`;
+    this.form.image.src = str.joinPaths(
+      this.directory,
+      `${stem.toString()}.${this.ext}`
+    );
     this.form.image.alt = page.toString();
-
-    if (page === this.start) {
-      this.form.prevButton.style.visibility = 'hidden';
-    } else {
-      this.form.prevButton.style.visibility = 'visible';
-    }
-
-    if (page === this.end) {
-      this.form.nextButton.style.visibility = 'hidden';
-    } else {
-      this.form.nextButton.style.visibility = 'visible';
-    }
   }
 
   /**
@@ -407,6 +436,9 @@ export class Scroller {
    * @param event - Keyboard event.
    */
   private handleKeyDown(event: KeyboardEvent): void {
+    if (!this.active()) {
+      return;
+    }
     if (event.code === 'KeyN') {
       this.incrementPage();
     } else if (event.code === 'KeyP') {
@@ -415,20 +447,46 @@ export class Scroller {
   }
 
   /**
+   * @returns Whether this scroller is currently the active scan on the host
+   * page. A scroller with no `isActive` predicate is always active.
+   */
+  private active(): boolean {
+    return this.isActive?.() ?? true;
+  }
+
+  /**
    * Register the scroller's event listeners.
+   *
+   * NOTE: When the host page mounts multiple scrollers (e.g. the combined
+   * Crum + Dawoud lexicon), each scroller registers its own document-level
+   * `keydown` listener and shares the same `#prev` / `#next` buttons. Every
+   * handler below therefore must early-return when `!this.active()`,
+   * otherwise inactive scrollers would react to keystrokes and clicks.
+   * This is a brittle pattern — every new handler must remember the guard.
+   *
+   * TODO: (#203) Re-express NEXT / PREV / RESET as custom DOM events
+   * dispatched by the host (or by the buttons themselves on the active
+   * scan's image). Each scroller would listen on its own image and so be
+   * inherently mode-scoped, eliminating the `active()` checks here. The
+   * matching plan for search events lives in `docs/crum/query.ts`.
+   *
+   * TODO: (#0) A complementary cleaner design is for the host to
+   * register / unregister the listener set wholesale on mode change.
    */
   private addEventListeners(): void {
     // The next button scrolls to the next page.
-    this.form.nextButton.addEventListener(
-      'click',
-      this.incrementPage.bind(this)
-    );
+    this.form.nextButton.addEventListener('click', () => {
+      if (this.active()) {
+        this.incrementPage();
+      }
+    });
 
     // The prev button scrolls to the previous page.
-    this.form.prevButton.addEventListener(
-      'click',
-      this.decrementPage.bind(this)
-    );
+    this.form.prevButton.addEventListener('click', () => {
+      if (this.active()) {
+        this.decrementPage();
+      }
+    });
 
     // Respond to some keyboard shortcuts.
     document.addEventListener('keydown', this.handleKeyDown.bind(this));
@@ -450,9 +508,9 @@ export class ZoomerDragger {
   private isDragging = false;
 
   /**
-   * @param form
-   * @param form.image
-   * @param form.resetButton
+   * @param form - Image + reset-button pair the dragger controls.
+   * @param form.image - <img> the dragger zooms and pans.
+   * @param form.resetButton - Button that resets the zoom / pan transform.
    */
   public constructor(
     private readonly form: {
@@ -465,10 +523,20 @@ export class ZoomerDragger {
 
   /**
    * Register event listeners.
+   *
+   * Unlike `Scroller`, no mode gating is needed here: the image-scoped
+   * listeners (wheel, mousedown) can't fire when the image lives in a
+   * `display: none` ancestor; the document-level drag listeners are
+   * latched off `this.isDragging`, which can only become true via a
+   * mousedown on a visible image; and the cross-mode reset listeners
+   * (reset-button click, R key) are deliberately shared — a reset is
+   * meant to apply to every scan at once.
    */
   private addEventListeners(): void {
-    // Mouse wheel updates the image zoom.
-    document.addEventListener('wheel', this.handleZoom.bind(this), {
+    // Mouse wheel over the image zooms it. The listener is scoped to the
+    // image (not the document) so that scrolling outside the image scrolls
+    // the page normally.
+    this.form.image.addEventListener('wheel', this.handleZoom.bind(this), {
       passive: false,
     });
 
@@ -486,6 +554,12 @@ export class ZoomerDragger {
 
     // Clicking the reset button resets the image position.
     this.form.resetButton.addEventListener('click', this.reset.bind(this));
+
+    // The Scroller dispatches `pagechange` when a search or navigation
+    // loads a new page; reset the zoom / pan so the new image starts
+    // fresh. Scoped to the image so each scan only reacts to its own
+    // page changes (no cross-talk with the other scan).
+    this.form.image.addEventListener(PAGECHANGE, this.reset.bind(this));
 
     // Some keyboard events trigger actions.
     document.addEventListener('keydown', this.handleKeyDown.bind(this));
@@ -529,11 +603,11 @@ export class ZoomerDragger {
    * @param e - Mouse event.
    */
   private dragImage(e: MouseEvent): void {
-    e.preventDefault();
-    e.stopPropagation();
     if (!this.isDragging) {
       return;
     }
+    e.preventDefault();
+    e.stopPropagation();
 
     this.originX = e.clientX - this.startX;
     this.originY = e.clientY - this.startY;
@@ -584,79 +658,37 @@ export class ZoomerDragger {
 
 /**
  * Dictionary represents a searchable dictionary scan.
+ *
+ * The Dictionary is a thin lookup-and-navigate object: it does NOT listen
+ * to the search box itself. Ownership of the `#search-box` and the
+ * `?query=` URL param lives in another module (currently `crum/query.ts`),
+ * which dispatches search events to registered dictionaries.
  */
 export class Dictionary {
   /**
-   * Construct a Dictionary.
-   *
    * @param index - The dictionary index. Given a (well-formed) search query,
    * the index should supply us with the number of the page containing the
    * definition of the word in the query.
    *
-   * @param scroller - The scrollers can update the dictionary display given a
-   * page number.
-   *
-   * @param form - The form holds HTML elements used to interact with the
-   * dictionary.
-   *
-   * @param form.searchBox - The search box provides search queries.
-   * @param form.form
+   * @param scroller - The scroller updates the scan image given a page
+   * number.
    */
   public constructor(
-    // index stores our dictionary index, and will be used to look up pages.
     private readonly index: Index,
-    // scroller will be used to update the scan image for each query.
-    private readonly scroller: Scroller,
-    private readonly form: { searchBox: HTMLInputElement; form: HTMLElement }
-  ) {
-    this.addEventListeners();
-    // Focus on the search box, to the user can start searching right away.
-    this.form.searchBox.focus();
-    // Restore a previously memorized query from the URL, if any.
-    const query: string | null = browser.getParam(QUERY);
-    if (!query) {
-      return;
-    }
-    this.form.searchBox.value = query;
-    this.search();
-  }
+    private readonly scroller: Scroller
+  ) {}
 
   /**
-   * Execute a search for a query.
+   * Execute a search for the given query, navigating the scroller to the
+   * matching page (if any).
+   *
+   * @param query - The search query (Coptic word or page number).
    */
-  private search(): void {
-    const query: string = this.form.searchBox.value;
-    browser.setParam(QUERY, query);
+  public search(query: string): void {
     const page = this.index.getPage(query);
     if (page === undefined) {
       return;
     }
     this.scroller.update(page);
-  }
-
-  /**
-   * Register event listeners.
-   */
-  private addEventListeners(): void {
-    // Input in the search box triggers a search.
-    this.form.searchBox.addEventListener('input', this.search.bind(this));
-
-    // Prevent form submission.
-    this.form.form.addEventListener('submit', browser.preventDefault);
-
-    // The slash key focuses on the search box.
-    document.addEventListener('keydown', (event) => {
-      if (event.code === 'Slash') {
-        this.form.searchBox.focus();
-        event.preventDefault();
-        event.stopPropagation();
-      }
-    });
-
-    // Prevent other elements in the page from picking up keyboard events on the
-    // search box.
-    this.form.searchBox.addEventListener('keyup', browser.stopPropagation);
-    this.form.searchBox.addEventListener('keydown', browser.stopPropagation);
-    this.form.searchBox.addEventListener('keypress', browser.stopPropagation);
   }
 }

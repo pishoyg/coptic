@@ -2,6 +2,12 @@
 
 import * as scan from '../scan.js';
 import * as copt from '../coptic.js';
+import * as query from './query.js';
+import * as mode from './mode.js';
+import * as id from './id.js';
+import * as str from '../str.js';
+
+const MODE: mode.Mode = mode.DAWOUD;
 
 // Our dictionary pages are '0.png' to '1055.png', with '18.jpg' holding page 1.
 const MIN_PAGE_NUM = 0;
@@ -9,9 +15,11 @@ const MAX_PAGE_NUM = 1055;
 const EXT = 'png';
 const OFFSET = 17;
 
+const DATA_DIR = '../dawoud/';
+
 // Paths to our indexes.
 // TODO: (#640) Support looking up the Greek and Arabic indexes.
-const COPTIC = 'coptic.tsv';
+const COPTIC: string = str.joinPaths(DATA_DIR, 'coptic.tsv');
 
 /**
  * Dawoud gives ⲟⲩ special handling in his dictionary.
@@ -61,27 +69,33 @@ export class DawoudWord extends copt.Word implements scan.Word {
  * Build the index, add event listeners, ...
  */
 async function main(): Promise<void> {
-  const form: scan.Form = new scan.Form(
-    document.getElementById('scan') as HTMLImageElement,
-    document.getElementById('next')!,
-    document.getElementById('prev')!,
-    document.getElementById('reset')!,
-    document.getElementById('search-box') as HTMLInputElement,
-    document.getElementById('form')!
-  );
-  const scroller = new scan.Scroller(
-    MIN_PAGE_NUM,
-    MAX_PAGE_NUM,
-    OFFSET,
-    EXT,
-    form
-  );
+  const form: scan.Form = {
+    image: document.getElementById(id.DAWOUD_SCAN) as HTMLImageElement,
+    nextButton: document.getElementById(id.NEXT)!,
+    prevButton: document.getElementById(id.PREV)!,
+    resetButton: document.getElementById(id.RESET)!,
+  };
+
+  const isActive: scan.IsActive = () => mode.active(MODE);
+
+  const scroller = new scan.Scroller({
+    start: MIN_PAGE_NUM,
+    end: MAX_PAGE_NUM,
+    ext: EXT,
+    form,
+    offset: OFFSET,
+    directory: DATA_DIR,
+    isActive,
+  });
+
   const index = new scan.Index(
     await fetch(COPTIC).then((res) => res.text()),
     DawoudWord
   );
   new scan.ZoomerDragger(form);
-  new scan.Dictionary(index, scroller, form);
+  const dictionary = new scan.Dictionary(index, scroller);
+
+  query.subscribe(dictionary.search.bind(dictionary));
 }
 
 await main();

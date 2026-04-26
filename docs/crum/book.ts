@@ -1,9 +1,15 @@
 /** Main function for the Crum scan. */
 // TODO: (#641) Fix the sorting logic. The current heuristic often doesn't align
 // with Crum.
-import * as scan from '../../scan.js';
-import * as log from '../../logger.js';
-import * as dev from '../../dev.js';
+import * as scan from '../scan.js';
+import * as log from '../logger.js';
+import * as dev from '../dev.js';
+import * as query from './query.js';
+import * as mode from './mode.js';
+import * as id from './id.js';
+import * as str from '../str.js';
+
+const MODE: mode.Mode = mode.BOOK;
 const MIN_PAGE_NUM = 1; // First file is "1.png".
 const MAX_PAGE_NUM = 975; // Last file is "975.png".
 const OFFSET = 22; // Page 1 in the dictionary is "23.png".
@@ -11,8 +17,10 @@ const OFFSET = 22; // Page 1 in the dictionary is "23.png".
 // "9.png".
 const LANDING = -13;
 
+const DATA_DIR = 'crum/';
+
 /* COPTIC defines the path to the dictionary index. */
-const COPTIC = 'coptic.tsv';
+const COPTIC = str.joinPaths(DATA_DIR, 'coptic.tsv');
 
 /* LETTER matches a Coptic letter. */
 const LETTER = /ⲉⲓ|ⲟⲩ|./g;
@@ -313,31 +321,35 @@ export class Word implements scan.Word {
  *
  */
 async function main(): Promise<void> {
-  const form: scan.Form = new scan.Form(
-    document.getElementById('scan') as HTMLImageElement,
-    document.getElementById('next')!,
-    document.getElementById('prev')!,
-    document.getElementById('reset')!,
-    document.getElementById('search-box') as HTMLInputElement,
-    document.getElementById('form')!
-  );
+  const form: scan.Form = {
+    image: document.getElementById(id.CRUM_SCAN) as HTMLImageElement,
+    nextButton: document.getElementById(id.NEXT)!,
+    prevButton: document.getElementById(id.PREV)!,
+    resetButton: document.getElementById(id.RESET)!,
+  };
 
-  const scroller = new scan.Scroller(
-    MIN_PAGE_NUM,
-    MAX_PAGE_NUM,
-    OFFSET,
-    'png',
+  const isActive: scan.IsActive = () => mode.active(MODE);
+
+  const scroller = new scan.Scroller({
+    start: MIN_PAGE_NUM,
+    end: MAX_PAGE_NUM,
+    ext: 'png',
     form,
-    LANDING
-  );
+    offset: OFFSET,
+    landingPage: LANDING,
+    directory: DATA_DIR,
+    isActive,
+  });
 
   const index = new scan.Index(
     await fetch(COPTIC).then((res) => res.text()),
     Word
   );
-  new scan.Dictionary(index, scroller, form);
+  const dictionary = new scan.Dictionary(index, scroller);
 
   new scan.ZoomerDragger(form);
+
+  query.subscribe(dictionary.search.bind(dictionary));
 }
 
 await main();

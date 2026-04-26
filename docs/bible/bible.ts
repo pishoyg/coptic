@@ -1,4 +1,8 @@
-/** Main function for the Bible index. */
+/** Main function for the Bible index.
+ *
+ * TODO: (#0) For consistency with the Lexicon, consider renaming this file to
+ * `main.ts` and using e.g. `chapter_main.ts` for chapters.
+ * */
 
 import * as coll from '../collapse.js';
 import * as log from '../logger.js';

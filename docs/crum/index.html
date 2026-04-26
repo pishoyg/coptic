@@ -24,32 +24,32 @@
   <link href="./" rel="canonical">
   <title>ⲡⲓⲖⲉⲝⲓⲕⲟⲛ | Coptic Dictionary</title>
   <script src="lexicon.js" type="module"></script>
+  <script src="book.js" type="module"></script>
+  <script src="dawoud.js" type="module"></script>
 </head>
 <body class="lexicon">
+  <nav id="mode-switcher">
+    <button id="mode-digital" type="button">ⲡⲓⲖⲉⲝⲓⲕⲟⲛ</button> <button id="mode-book" type="button">Crum</button> <button id="mode-dawoud" type="button">داود</button>
+  </nav>
+
   <table id="header">
     <tr>
       <td>
         <a href="../">Home</a>
       </td>
+      <td><span id="help">Help</span><span id="prev">⇐</span>
+      </td>
+      <td><span id="reset" class="reset">Reset</span>
+      </td>
+      <td><span class="developer">Dev</span><span id="next">⇒</span>
+      </td>
       <td><span id="reports">Reports</span>
-      </td>
-      <td><span id="help">Help</span>
-      </td>
-      <td><span class="reset">Reset</span>
-      </td>
-      <td><span class="developer">Dev</span>
       </td>
     </tr>
   </table>
 
   <form id="form" name="form">
     <table id="xooxle">
-      <thead>
-        <tr>
-          <td id="title" colspan="3">ⲡⲓⲖⲉⲝⲓⲕⲟⲛ | Coptic Dictionary</td>
-        </tr>
-      </thead>
-
       <tbody>
         <tr>
           <td id="search-box-td"><input id="search-box" autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="Search" spellcheck="false" type="text">
@@ -63,110 +63,124 @@
       </tbody>
     </table>
 
-    <table>
-      <tr>
-        <td id="dialects">
-          <div id="dialects-button">
-            Dialects ▾
-          </div>
-          <span id="checkboxes">Highlight Dialects:&nbsp; <!--Dialect checkboxes go here.--></span>
-        </td>
-        <td id="full-word-checkbox-td"><label for="full-word-checkbox"><input id="full-word-checkbox" type="checkbox"> Full-Word</label>
-        </td>
-        <td id="case-sensitive-checkbox-td"><label for="case-sensitive-checkbox"><input id="case-sensitive-checkbox" type="checkbox"> Case</label>
-        </td>
-        <td id="regex-checkbox-td"><label for="regex-checkbox"><input id="regex-checkbox" type="checkbox">RegEx</label>
-        </td>
-      </tr>
-    </table>
+    <div id="digital">
+      <table>
+        <tr>
+          <td id="dialects">
+            <div id="dialects-button">
+              Dialects ▾
+            </div>
+            <span id="checkboxes">Highlight Dialects:&nbsp; <!--Dialect checkboxes go here.--></span>
+          </td>
+          <td id="full-word-checkbox-td"><label for="full-word-checkbox"><input id="full-word-checkbox" type="checkbox"> Full-Word</label>
+          </td>
+          <td id="case-sensitive-checkbox-td"><label for="case-sensitive-checkbox"><input id="case-sensitive-checkbox" type="checkbox"> Case</label>
+          </td>
+          <td id="regex-checkbox-td"><label for="regex-checkbox"><input id="regex-checkbox" type="checkbox">RegEx</label>
+          </td>
+        </tr>
+      </table>
+
+      <hr id="lexicon-form-separator">
+
+      <p id="message"><!--Placeholder for warnings and messages.-->
+      </p>
+
+      <table>
+        <tr>
+          <td>
+            <h3 id="crum-title" class="collapse arrowed">A Coptic Dictionary<span id="w-e-crum">, W. E. Crum</span></h3>
+          </td>
+          <td id="marcion-checkbox-td"><label for="marcion-checkbox"><input id="marcion-checkbox" type="checkbox">Marcion</label>
+          </td>
+          <td id="wiki-checkbox-td"><label for="wiki-checkbox"><input id="wiki-checkbox" type="checkbox">Wiki <span id="experimental">(WIP)</span></label>
+          </td>
+        </tr>
+      </table>
+
+      <div id="crum-collapsible" class="collapsible">
+        <div>
+          <table id="crum" class="results">
+            <thead>
+              <tr>
+                <td style="width: 10%;">
+                </td>
+                <td style="width: 30%;"><em><strong>Root</strong></em>
+                </td>
+                <td style="width: 30%;"><em><strong>Meaning</strong></em>
+                </td>
+                <td style="width: 30%;"><em><strong>Appendix</strong></em>
+                </td>
+              </tr>
+            </thead>
+
+            <tbody>
+              <!-- Search results will be appended here. -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h3 id="kellia-title" class="collapse arrowed">KELLIA</h3>
+
+      <div id="kellia-collapsible" class="collapsible">
+        <div>
+          <table id="kellia" class="results">
+            <thead>
+              <tr>
+                <td style="width: 10%;">
+                </td>
+                <td style="width: 30%;"><em><strong>Word</strong></em>
+                </td>
+                <td style="width: 30%;"><em><strong>Meaning</strong></em>
+                </td>
+                <td style="width: 30%;"><em><strong>Notes</strong></em>
+                </td>
+              </tr>
+            </thead>
+
+            <tbody>
+              <!-- Search results will be appended here. -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h3 id="andreas-title" class="collapse arrowed">Andreas of St. Macarius</h3>
+
+      <div id="andreas-collapsible" class="collapsible">
+        <div>
+          <table id="andreas" class="results">
+            <thead>
+              <tr>
+                <td style="width: 10%;">
+                </td>
+                <td style="width: 45%;"><em><strong>Word</strong></em>
+                </td>
+                <td style="width: 45%;"><em><strong>Meaning</strong></em>
+                </td>
+              </tr>
+            </thead>
+
+            <tbody>
+              <!-- Search results will be appended here. -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </form>
 
-  <hr id="lexicon-form-separator">
-
-  <p id="message"><!--Placeholder for warnings and messages.-->
-  </p>
-
-  <table>
-    <tr>
-      <td>
-        <h3 id="crum-title" class="collapse arrowed">A Coptic Dictionary<span id="w-e-crum">, W. E. Crum</span></h3>
-      </td>
-      <td id="marcion-checkbox-td"><label for="marcion-checkbox"><input id="marcion-checkbox" type="checkbox">Marcion</label>
-      </td>
-      <td id="wiki-checkbox-td"><label for="wiki-checkbox"><input id="wiki-checkbox" type="checkbox">Wiki <span id="experimental">(WIP)</span></label>
-      </td>
-    </tr>
-  </table>
-
-  <div id="crum-collapsible" class="collapsible">
-    <div>
-      <table id="crum" class="results">
-        <thead>
-          <tr>
-            <td style="width: 10%;">
-            </td>
-            <td style="width: 30%;"><em><strong>Root</strong></em>
-            </td>
-            <td style="width: 30%;"><em><strong>Meaning</strong></em>
-            </td>
-            <td style="width: 30%;"><em><strong>Appendix</strong></em>
-            </td>
-          </tr>
-        </thead>
-
-        <tbody>
-          <!-- Search results will be appended here. -->
-        </tbody>
-      </table>
-    </div>
+  <div id="book" class="scan-frame">
+    <figure>
+      <img id="crum-scan" class="scan" alt="9" src="crum/9.png">
+    </figure>
   </div>
 
-  <h3 id="kellia-title" class="collapse arrowed">KELLIA</h3>
-
-  <div id="kellia-collapsible" class="collapsible">
-    <div>
-      <table id="kellia" class="results">
-        <thead>
-          <tr>
-            <td style="width: 10%;">
-            </td>
-            <td style="width: 30%;"><em><strong>Word</strong></em>
-            </td>
-            <td style="width: 30%;"><em><strong>Meaning</strong></em>
-            </td>
-            <td style="width: 30%;"><em><strong>Notes</strong></em>
-            </td>
-          </tr>
-        </thead>
-
-        <tbody>
-          <!-- Search results will be appended here. -->
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <h3 id="andreas-title" class="collapse arrowed">Andreas of St. Macarius</h3>
-
-  <div id="andreas-collapsible" class="collapsible">
-    <div>
-      <table id="andreas" class="results">
-        <thead>
-          <tr>
-            <td style="width: 10%;">
-            </td>
-            <td style="width: 45%;"><em><strong>Word</strong></em>
-            </td>
-            <td style="width: 45%;"><em><strong>Meaning</strong></em>
-            </td>
-          </tr>
-        </thead>
-
-        <tbody>
-          <!-- Search results will be appended here. -->
-        </tbody>
-      </table>
-    </div>
+  <div id="dawoud" class="scan-frame">
+    <figure>
+      <img id="dawoud-scan" class="scan" alt="18" src="../dawoud/18.png">
+    </figure>
   </div>
 
   <hr>

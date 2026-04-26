@@ -231,3 +231,15 @@ export function regex(
     : // Only group the regexes.
       grouped(expression);
 }
+
+/**
+ * Join path segments with a single slash, collapsing adjacent slashes.
+ *
+ * NOTE: This is intended as a utility for file paths. For URLs, use `URL`.
+ *
+ * @param parts - Path segments to concatenate.
+ * @returns The joined path.
+ */
+export function joinPaths(...parts: string[]): string {
+  return parts.filter(Boolean).join('/').replace(/\/+/g, '/');
+}
