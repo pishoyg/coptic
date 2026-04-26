@@ -24,7 +24,7 @@ import pandas as pd
 
 from dictionary.kellia_uni_goettingen_de import sources
 from flashcards import deck
-from utils import ensure, file, gcp, log, page, paths, text
+from utils import ensure, file, gcp, javascript, log, page, paths, text
 from xooxle import xooxle
 
 XML_NS: str = "{http://www.w3.org/XML/1998/namespace}"
@@ -949,7 +949,10 @@ def _join(*parts: str) -> str:
     return "".join(parts)
 
 
-def notes_aux(words: dict[str, Word]) -> abc.Generator[deck.Note]:
+def notes_aux(
+    words: dict[str, Word],
+    dialects: abc.Iterable[str] | None = None,
+) -> abc.Generator[deck.Note]:
     for key, word in words.items():
         front: str = word.orthstring.table()
         back: str = _join(
@@ -970,6 +973,7 @@ def notes_aux(words: dict[str, Word]) -> abc.Generator[deck.Note]:
             title=str(key),
             front=front,
             back=back,
+            js_start=javascript.dialects_js(dialects or set()),
             js_path=relpath(paths.KELLIA_JS),
             css=[relpath(paths.CRUM_CSS), relpath(paths.DROPDOWN_CSS)],
         )

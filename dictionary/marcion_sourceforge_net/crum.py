@@ -35,7 +35,7 @@ from xooxle import xooxle
 # pylint: disable=ungrouped-imports
 # isort: off
 from utils import cache, concur, ensure, file, gcp, log, page, paths, text
-from utils import numeral
+from utils import javascript, numeral
 
 _NUM_DRV_COLS: int = 10
 _HUNDRED: int = 100
@@ -51,21 +51,8 @@ _FROM_MARCION: set[str] = {"3381", "3382", "3385"}
 # TODO: (#399) Crum HTML logic should be deduplicated. The duplication causes
 # such issues as #398.
 
-# DIALECTS_JS is a JavaScript line that can be used to set the default dialects.
-DIALECTS_JS = """
-if (localStorage.getItem('d') === null) {{
-  localStorage.setItem('d', {DIALECT_ARR}.join(','));
-}}
-"""
-
 INDEX_CLASS = "index"
 INDEX_INDEX_CLASS = "index_index"
-
-
-def dialects_js(dialects: abc.Iterable[str]) -> str:
-    if not dialects:
-        return ""
-    return DIALECTS_JS.format(DIALECT_ARR=list(dialects))
 
 
 def relpath(dst: str | pathlib.Path) -> str:
@@ -798,7 +785,7 @@ class Root(Row):
             nxt=f"{Crum.next_key(self)}.html",
             prv=f"{Crum.prev_key(self)}.html",
             search=SEARCH,
-            js_start=dialects_js(dialects or set()),
+            js_start=javascript.dialects_js(dialects or set()),
             js_path=JS,
             css=CSS,
         )
