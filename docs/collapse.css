@@ -19,6 +19,13 @@
   /* Start with the content row "squashed" to a height of 0. */
   grid-template-rows: 0fr;
   transition: grid-template-rows var(--transition-duration) ease-out;
+
+  /* `overflow: hidden` clips painting but, with a `<table>` descendant whose
+   * intrinsic size ignores the 0-height grid track, the table's layout still
+   * extends the document's scroll height. `contain: layout` isolates the
+   * collapsible's layout from the document so collapsed-but-populated tables
+   * don't add empty scrollable space below the page. */
+  contain: layout;
 }
 
 .collapsible.is-open {
