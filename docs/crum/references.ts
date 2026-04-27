@@ -569,7 +569,11 @@ const DATA_1: Resource[] = [
         'Note: The manuscripts have since been moved to the <a href="https://bl.libguides.com/reference-services/asian-and-african-studies/introduction/oriental-manuscripts">British Library</a>.',
       ],
     },
-    variants: ['BM'],
+    // NOTE: 'Bm' can only be found once, as of the time of writing, under
+    // ⲥⲱⲗⲉⲡ (898)[1].
+    //
+    // [1] https://remnqymi.com/crum/898.html
+    variants: ['BM', 'Bm'],
     postfixes: {
       Or: 'Oriental',
       or: 'oriental',
