@@ -751,7 +751,7 @@ class Root(Row):
                 yield "</li>"
                 depth -= 1
             word: str = d.word_parsed_prettify()
-            meaning: str = parse.lighten_greek(d.meaning)
+            meaning: str = d.meaning
             assert word or (d.type_name == "HEADER" and meaning)
             if d.type_name and d.type_name not in ["-", "HEADER"]:
                 meaning = f"({d.type_name}) {meaning}"

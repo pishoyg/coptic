@@ -4,6 +4,8 @@ import dataclasses
 import pathlib
 import re
 
+import regex
+
 from dictionary.marcion_sourceforge_net import lexical
 from morphology import inflect
 from utils import page, paths
@@ -41,10 +43,6 @@ CRUM_LAST_PAGE: int = 844
 # Regular expressions used for parsing.
 DIALECTS_RE: re.Pattern[str] = re.compile(
     r"\(({d}(,{d})*)\)".format(d=f"({"|".join(DIALECTS)})"),
-)
-
-PARSED_GREEK_WITHIN_ENGLISH_RE: re.Pattern[str] = re.compile(
-    r"(\[[ ,()&c?;Α-Ωα-ω]+\])",
 )
 
 CRUM_RE: re.Pattern[str] = re.compile(r"^(\d{1,3}|[xiv]+)(a|b)$")
@@ -324,7 +322,23 @@ _HEADINGS: list[str] = [
     "noun masculine",
 ]
 
-ENGLISH_PROCESSING: list[tuple[re.Pattern[str] | str, str]] = [
+GREEK_WORD_RE: regex.Pattern[str] = regex.compile(
+    r"(-?\p{Greek}[\p{Greek}\p{Coptic}\p{M}]*-?)",
+)
+BRACKETED_RE: re.Pattern[str] = re.compile(r"\[(.*?)\]")
+GREEK_WORD: str = GREEK_WORD_RE.pattern
+GREEK_WORDS: str = rf"(?:{GREEK_WORD}(?: {GREEK_WORD}| \({GREEK_WORD}\))*)"
+GREEK_RE: regex.Pattern[str] = regex.compile(
+    rf"{GREEK_WORDS}(?:, {GREEK_WORDS})*(?: &c)?",
+)
+UNBRACKETED_GREEK_RE: regex.Pattern[str] = regex.compile(
+    r"\p{Greek}" + _OUTSIDE_BRACKETS,
+)
+
+
+ENGLISH_PROCESSING: list[
+    tuple[re.Pattern[str] | regex.Pattern[str] | str, str]
+] = [
     # Curly brackets are used to indicate roman (non-italic) text.
     ("{", '<span class="roman">'),
     ("}", "</span>"),
@@ -334,6 +348,7 @@ ENGLISH_PROCESSING: list[tuple[re.Pattern[str] | str, str]] = [
         r'<span class="heading">\1</span>',
     ),
     ("\n", page.LINE_BREAK),
+    (GREEK_WORD_RE, r'<span class="greek">\1</span>'),
 ]
 
 QUALITY: list[str] = [

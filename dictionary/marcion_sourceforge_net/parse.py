@@ -3,20 +3,22 @@
 import re
 from collections import abc
 
+import regex
+
 from dictionary.marcion_sourceforge_net import constants
 from dictionary.marcion_sourceforge_net import lexical as lex
-from utils import log
+from utils import ensure, log
 
 
 def _apply_substitutions(
     line: str,
-    subs: abc.Iterable[tuple[str | re.Pattern[str], str]],
+    subs: abc.Iterable[tuple[str | re.Pattern[str] | regex.Pattern[str], str]],
 ) -> str:
     for pattern, replacement in subs:
-        if isinstance(pattern, re.Pattern):
-            line = pattern.sub(replacement, line)
-        else:
+        if isinstance(pattern, str):
             line = line.replace(pattern, replacement)
+        else:
+            line = pattern.sub(replacement, line)
     return line
 
 
@@ -157,6 +159,15 @@ def _parse_rich_form(
 
 
 def parse_english_cell(line: str) -> str:
+    for bracketed in constants.BRACKETED_RE.findall(line):
+        ensure.ensure(
+            constants.GREEK_RE.fullmatch(bracketed) or bracketed == ".",
+            "Invalid bracketed text:",
+            bracketed,
+        )
+    if constants.UNBRACKETED_GREEK_RE.search(line):
+        log.warn("Found unbracketed Greek text in:", line)
+
     return _apply_substitutions(line, constants.ENGLISH_PROCESSING)
 
 
@@ -177,11 +188,3 @@ def _munch_dialects(line: str) -> tuple[list[str], str]:
         return [], line
     assert match.start() == 0
     return match.group(1).split(","), line[match.end() :].strip()
-
-
-def lighten_greek(line: str) -> str:
-    return constants.PARSED_GREEK_WITHIN_ENGLISH_RE.sub(lighten(r"\1"), line)
-
-
-def lighten(line: str) -> str:
-    return f'<span style="opacity:0.7">{line}</span>'
