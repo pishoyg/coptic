@@ -23,8 +23,7 @@ import * as roots from './roots.js';
 import * as derivations from './derivations.js';
 import * as str from '../str.js';
 
-const COPTIC_RE = /[\p{Script=Coptic}][\p{Script=Coptic}\p{Mark}]*/gu;
-const GREEK_RE = /[\p{Script=Greek}][\p{Script=Greek}\p{Mark}]*/gu;
+const GREEK_WORD_RE = /^[\p{Script=Greek}][\p{Script=Greek}\p{Mark}]*$/u;
 const ENGLISH_RE = /[\p{Script=Latin}][\p{Script=Latin}\p{Mark}]*/gu;
 
 /**
@@ -401,20 +400,27 @@ export function handleAnkiNavigation(root: HTMLElement): void {
 /**
  *
  * @param root
+ *
+ * TODO: (#658) Instead of hyperlinks, words should have tooltips that contain
+ * buttons to copy or look up the words.
+ * TODO: (#413) Consider adding separate lookup buttons for Dawoud and Crum's
+ * book, to make users aware of this functionality.
  */
 export function addCopticLookups(root: HTMLElement): void {
-  html.linkifyText(
-    root,
-    COPTIC_RE,
-    (match: RegExpExecArray) => paths.lexiconLookup(match[0]),
-    [ccls.HOVER_LINK],
-    // Most Coptic text in Wiki and Nag Hammadi are example sentences, with the
-    // words containing prefixes or suffixes rather than being bare roots.
-    // We exclude them from lookup hyperlinks in order to avoid confusion.
-    // The type is usually "ⲡ" for masculine, "ⲧ" for feminine, "ⲛ" for
-    // plural. Adding lookup hyperlinks to that doesn't really make sense.
-    [cls.TYPE, cls.WIKI, cls.NAG_HAMMADI, cls.HEADER]
-  );
+  root.querySelectorAll(`.${cls.SPELLING}`).forEach((form: Element) => {
+    html.linkifyText(
+      form,
+      // If the word is fully surrounded by parentheses, drop them.
+      /(?=[^(]|\(\S+\)\S)\S+(?<=[^)]|\S\(\S+\))/g,
+      (match: RegExpExecArray): string | null => {
+        // Skip words that don't contain any Coptic characters.
+        return /\p{Script=Coptic}/u.test(match[0])
+          ? paths.lexiconLookup(match[0])
+          : null;
+      },
+      [ccls.HOVER_LINK]
+    );
+  });
 }
 
 /**
@@ -422,13 +428,17 @@ export function addCopticLookups(root: HTMLElement): void {
  * @param root
  */
 export function addGreekLookups(root: HTMLElement): void {
-  html.linkifyText(
-    root,
-    GREEK_RE,
-    (match: RegExpExecArray): string => paths.greekLookup(match[0]),
-    [cls.GREEK],
-    [cls.HEADER]
-  );
+  root.querySelectorAll(`.${cls.GREEK}`).forEach((greek: Element) => {
+    html.linkifyText(
+      greek,
+      /\S+/g,
+      (match: RegExpExecArray): string | null =>
+        // TODO: (#694) Can we add links to look up the full word, if it can be
+        // inferred, instead of just returning null?
+        GREEK_WORD_RE.test(match[0]) ? paths.greekLookup(match[0]) : null,
+      [cls.GREEK]
+    );
+  });
 }
 
 /**
