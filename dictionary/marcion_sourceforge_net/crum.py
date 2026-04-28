@@ -1706,6 +1706,7 @@ _CRUM_RETAIN_CLASSES: set[str] = {
     "type",
     "roman",
     "heading",
+    "greek",
 } | set(constants.DIALECTS)
 
 _CRUM_RETAIN_ELEMENTS_FOR_CLASSES = {"comma"}
