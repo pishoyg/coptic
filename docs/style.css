@@ -13,6 +13,7 @@
   --purple: #f0d4fc;
   --transition-duration: 0.5s;
   --anchor-highlight: #e6f2ff;
+  --background: #fcfcfc;
 }
 
 /********** Home Page, and Generic **********/
@@ -102,7 +103,7 @@ body {
   margin: 0 auto;
   max-width: 1000px;
   padding: 10px;
-  background-color: #fcfcfc;
+  background-color: var(--background);
   color: #333;
 }
 
@@ -156,35 +157,6 @@ table {
 
 ::target-text {
   background-color: var(--purple);
-}
-
-/* TODO: (#203) This belongs in a standalone file. */
-.button {
-  padding: 6px 12px;
-  font-size: 0.95rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  background-color: #f8f9fa;
-  color: var(--midnight-blue);
-  border: 1px solid var(--light-gray);
-  text-decoration: none;
-  font-weight: 500;
-  display: inline-block;
-}
-
-@media (hover: hover) {
-  .button:hover {
-    text-decoration: none;
-    background-color: #e9ecef;
-    color: var(--midnight-blue);
-    transform: translateY(-1px);
-    box-shadow: 0 2px 4px rgb(0 0 0 / 5%);
-  }
-}
-
-.button:active {
-  transform: scale(0.98) translateY(0); /* Slightly shrink */
 }
 
 /*************** Fonts ***************/

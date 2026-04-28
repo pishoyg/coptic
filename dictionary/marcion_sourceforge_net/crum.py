@@ -74,6 +74,7 @@ CSS: list[str] = [
     relpath(paths.CRUM_CSS),
     relpath(paths.DROPDOWN_CSS),
     relpath(paths.HELP_CSS),
+    relpath(paths.HEADER_CSS),
 ]
 JS: str = relpath(paths.CRUM_JS)
 
@@ -799,7 +800,7 @@ class Root(Row):
         # TODO: (#203) The header should be mostly implemented in TypeScript,
         # rather than hardcoded in the HTML.
         # Open the table.
-        yield '<table id="header" class="header">'
+        yield '<table id="header">'
         yield "<tr>"
         # Home
         yield '<td><a class="navigate" href="../">Home</a></td>'
@@ -840,8 +841,7 @@ class Root(Row):
         # Close the table.
         yield "</tr>"
         yield "</table>"
-        # Horizontal line.
-        yield page.HORIZONTAL_RULE
+
         # The word.
         yield '<div id="pretty" class="pretty">'
         # TODO: (#338) Parentheses should be used at the source. This is not a
@@ -1715,7 +1715,7 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
     source=notes_aux,
     extract=[
         xooxle.Selector({"name": "title"}, force=False),
-        xooxle.Selector({"class_": "header"}, force=False),
+        xooxle.Selector({"id": "header"}, force=False),
         xooxle.Selector({"class_": "dictionary"}, force=False),
         xooxle.Selector({"class_": "crum"}, force=False),
         xooxle.Selector({"class_": "crum-page"}, force=False),

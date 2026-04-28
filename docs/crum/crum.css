@@ -81,10 +81,6 @@ figcaption {
   }
 }
 
-body:not(.lexicon) .header td:not(:first-child) {
-  border-left: 1px solid var(--light-gray);
-}
-
 #derivations {
   & td:not(.dictionary) {
     padding: 8px 12px;
@@ -396,18 +392,6 @@ body:not(.lexicon) .header td:not(:first-child) {
   .drv:hover .drv-link {
     visibility: visible;
   }
-}
-
-.header {
-  vertical-align: center;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  table-layout: fixed;
-  width: 100%;
-  position: relative;
-  z-index: 10;
-  background-color: var(--color-translucent);
 }
 
 .sister-view {

@@ -364,15 +364,15 @@ export class Scroller {
     this.form.image.alt = page.toString();
 
     if (page === this.start) {
-      this.form.prevButton.style.display = 'none';
+      this.form.prevButton.style.visibility = 'hidden';
     } else {
-      this.form.prevButton.style.display = 'unset';
+      this.form.prevButton.style.visibility = 'visible';
     }
 
     if (page === this.end) {
-      this.form.nextButton.style.display = 'none';
+      this.form.nextButton.style.visibility = 'hidden';
     } else {
-      this.form.nextButton.style.display = 'unset';
+      this.form.nextButton.style.visibility = 'visible';
     }
   }
 
