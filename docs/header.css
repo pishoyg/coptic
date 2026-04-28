@@ -10,20 +10,16 @@
 
   & td {
     & > * {
-      background-color: #f8f9fa;
-      border: 1px solid var(--light-gray);
       border-radius: 6px;
       padding: 6px 12px;
       font-size: 0.95rem;
       cursor: pointer;
-      transition: all 0.2s ease-in-out;
+      transition: background-color 0.2s ease-in-out;
       display: inline-block;
 
       @media (hover: hover) {
         &:hover {
-          background-color: #e9ecef;
-          transform: scale(0.98) translateY(-1px);
-          box-shadow: 0 2px 4px rgb(0 0 0 / 5%);
+          background-color: #eef1f4;
         }
       }
     }
