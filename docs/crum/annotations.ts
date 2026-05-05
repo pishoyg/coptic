@@ -158,6 +158,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'prefix', variants: ['pref'] },
   { fullForm: 'preposition', variants: ['prep'] },
   { fullForm: 'present tense, thus: 1 pres, 2 pres', variants: ['pres'] },
+  { fullForm: 'privative', variants: ['privat'] },
   { fullForm: 'probably', variants: ['prob'] },
   { fullForm: 'pronominal', variants: ['pronom'] },
   { fullForm: 'pronoun', variants: ['pron'] },
