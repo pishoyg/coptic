@@ -633,7 +633,7 @@ const DATA_1: Resource[] = [
     source: {
       title: 'Papyri & ostraca in Staatsmuseum, Berlin',
     },
-    variants: ['BP'],
+    variants: ['BP', 'PB'],
   },
   {
     source: {
