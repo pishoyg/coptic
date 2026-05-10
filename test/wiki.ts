@@ -27,8 +27,8 @@ const TEST_CASES: {
     // lot of common cases.
     key: '88',
     want: {
-      references: 147,
-      bible: 122,
+      references: 148,
+      bible: 121,
       dialectTooltips: 388,
       annotations: 76,
     },
