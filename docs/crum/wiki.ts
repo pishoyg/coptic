@@ -565,6 +565,29 @@ class Citation {
       return false;
     }
 
+    if (this.book.abb === 'AP' && !this.verse) {
+      // This is a citation of Acta Pauli, not Apocalypse.
+      return false;
+    }
+
+    // Am (for Amos) and AM (for Actes des Martyrs) were unfortunately used
+    // interchangeably.
+    // We can distinguish the two because Amos citations were always followed by
+    // either zero numbers or two numbers representing the chapter and verse,
+    // while the latter was only followed by one number represented the page.
+    // See #705.
+    if (['Am', 'AM'].includes(this.book.abb)) {
+      if (this.chapter && !this.verse) {
+        // Only one number follows.
+        return false;
+      }
+      if (this.book.abb === 'AM' && !this.chapter) {
+        // If zero numbers follow, then Am is Amos and AM is Actes des Martyrs.
+        return false;
+      }
+      return true;
+    }
+
     return true;
   }
 }
@@ -899,6 +922,7 @@ function walk(root: Node): Node[] {
   return nodes;
 }
 
+/* eslint-disable complexity */
 /**
  * Replace an enrichment match.
  *
@@ -908,15 +932,22 @@ function walk(root: Node): Node[] {
 function replaceMatch(
   context: html.ReplaceNodesContext
 ): html.ReplaceNodesResult {
-  // There is a singleton known key that is interpretable as a Bible
-  // citation or a Reference, and that is "Am" which could mean:
-  // - Amos
-  // - Amélineau
-  // Whenever it occurs on its own, it refers to the Biblical book.
-  // As a postfix of Sh (ShAm), it's Amélineau.
-  //
-  // For this reason, we prioritize Bible matches over Reference matches.
   const key: string = context.match[0];
+  // 'Am' and 'AM' are ambiguous.
+  // The former usually refers to Amos, but occasionally refers to Actes des
+  // Martyrs.
+  // The latter usually refers to Actes des Martyrs, but occasionally refers to
+  // Amos.
+  // 'AP' is ambiguous. It usually refers to Acta Pauli, but occasionally refers
+  // to the Apocalypse.
+  // 'Ap' is not ambiguous, as it consistently refers to Apocalypse.
+  // The Bible parsing logic has more intelligent validation that can detect
+  // false positives. Try to parse the match as a Bible citation first,
+  // falling back to parsing it as a Reference.
+  if (['Am', 'AM', 'AP'].includes(key)) {
+    return replaceBible(key, context) ?? replaceReference(key, context) ?? {};
+  }
+
   if (key in bib.MAPPING || key in DAN_OVERRIDE) {
     return replaceBible(key, context) ?? {};
   }
@@ -956,6 +987,7 @@ function replaceMatch(
 
   log.fatal('This is impossible!');
 }
+/* eslint-enable complexity */
 
 /**
  *

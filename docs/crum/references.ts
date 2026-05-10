@@ -306,7 +306,12 @@ const DATA_1: Resource[] = [
         'Amélineau, E. (1914). <em><a href="https://archive.org/details/oeuvresdeschenou02shen/page/n7/mode/2up">Œuvres de Schenoudi: texte copte et traduction française</a></em>. Tome 2. Paris: E. Leroux.',
       ],
     },
-    variants: ['Am', 'A'],
+    // NOTE: 'A' rarely occurs on its own. It almost always occurs as a postfix
+    // to 'Sh', with a few exceptions.
+    // Under ⲏⲡⲥ (525), it takes the form 'ShAm' rather than the usual 'ShA'.
+    // However, we refrain from adding 'Am' as a variant to prevent conflict
+    // with Actes des Martyrs.
+    variants: ['A'],
   },
   {
     source: {
@@ -410,7 +415,9 @@ const DATA_1: Resource[] = [
         'Hyvernat, H. (1886). <em><a href="https://archive.org/details/lesactesdesmarty01hyve/page/n5/mode/2up">Actes des Martyrs de l’Égypte</a></em>. Paris: Ernest Leroux.',
       ],
     },
-    variants: ['AM'],
+    // NOTE: 'Am' usually refers to Amos, but can occasionally refer to Actes
+    // des Martyrs. We have disambiguation logic.
+    variants: ['AM', 'Am'],
   },
   {
     source: {
@@ -1015,7 +1022,7 @@ const DATA_1: Resource[] = [
         'Guidi, I. (1885). <em><a href="https://archive.org/details/testiorientalii01guidgoog/page/n4/mode/2up">Testi orientali inediti sopra i Sette Dormienti di Efeso</a></em>. (Reale Accademia dei Lincei, Memorie della Classe di scienze morali, storiche e filogiche, ser. 3, 12, 1884, 343-445). Roma: Tipografia della R. Accademia dei Lincei.',
       ],
     },
-    variants: ['Gu Dorm'],
+    variants: ['Gu Dorm', 'Gu Dor'],
   },
   {
     source: {
@@ -2814,7 +2821,13 @@ class Postfix {
       return [...abbreviation(this.name), ...html.parse(this.interpretation)];
     }
     if (this.interpretation === LOOKUP) {
-      return Array.from(MAPPING[this.name]?.tooltip()?.childNodes ?? []);
+      // The postfix 'Am' (as in 'ShAm', under ⲏⲡⲥ 525) refers to Amélineau,
+      // but we only record the variant 'A' for Amélineau — 'Am' was
+      // intentionally excluded from its variants to avoid colliding with Actes
+      // des Martyrs (and Amos as well). Redirect the lookup so the tooltip
+      // still resolves.
+      const name = this.name === 'Am' ? 'A' : this.name;
+      return Array.from(MAPPING[name]?.tooltip()?.childNodes ?? []);
     }
 
     dev.play(() => {
