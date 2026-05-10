@@ -192,6 +192,8 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'second', variants: ['2d'] },
   { fullForm: 'third', variants: ['3d'] },
 
+  { fullForm: 'second person feminine', variants: ['2 f'] },
+
   { fullForm: 'first person', variants: ['1st pers'] },
   { fullForm: 'second person', variants: ['2d pers'] },
   { fullForm: 'third person', variants: ['3d pers'] },
