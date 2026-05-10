@@ -4,6 +4,11 @@
  *   ./pre-commit/docs_structure.py -c
  */
 
+body.dev .developer {
+  color: firebrick !important;
+  border: 1px solid firebrick;
+}
+
 :root {
   --midnight-blue: #2c3e50;
   --bright-sky-blue: #3498db;

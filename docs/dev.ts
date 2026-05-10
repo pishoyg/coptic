@@ -8,15 +8,17 @@ import * as high from './highlight.js';
  * This is the source of truth for developer mode.
  * Updating the developer mode status should happen by updating this local
  * storage variable.
+ *
+ * When set, the value is the millisecond timestamp at which developer mode
+ * was enabled. Developer mode automatically expires after EXPIRY_MS.
  */
 const DEV = 'dev';
 
 /**
- * ON holds the value that the local storage variable should be set to when
- * developer mode is on.
+ * EXPIRY_MS is how long developer mode stays active after being enabled.
  */
-const ON = 'ON';
-const OFF = 'OFF';
+/* eslint-disable-next-line no-magic-numbers */
+const EXPIRY_MS = 12 * 60 * 60 * 1000;
 
 enum CLS {
   // DEV is a class that would be present on the <body> tag if developer mode is
@@ -29,7 +31,7 @@ enum CLS {
  * @returns Whether developer mode is active.
  */
 export function get(): boolean {
-  return localStorage.getItem(DEV) === ON;
+  return Date.now() - Number(localStorage.getItem(DEV)) < EXPIRY_MS;
 }
 
 /**
@@ -80,9 +82,9 @@ export class Highlighter extends high.Highlighter {
    */
   private set(value: boolean): void {
     if (value) {
-      localStorage.setItem(DEV, ON);
+      localStorage.setItem(DEV, Date.now().toString());
     } else {
-      localStorage.setItem(DEV, OFF);
+      localStorage.removeItem(DEV);
     }
   }
 }
