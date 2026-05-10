@@ -1150,7 +1150,7 @@ const DATA_1: Resource[] = [
         '<em>Journal asiatique</em> began in 1822. Volumes are digitised and available on <a href="https://gallica.bnf.fr/ark:/12148/cb34348774p/date">Gallica</a> up to 1940. There are also volumes available on <a href="https://catalog.hathitrust.org/Record/006147183">HathiTrust</a> and listed on <a href="https://www.egyptologyforum.org/EEFDigijournals.html">EgyptologyForum.org</a>. ',
       ],
     },
-    variants: ['JA'],
+    variants: ['JA', 'JAs'],
   },
   {
     source: {
