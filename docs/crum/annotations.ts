@@ -248,6 +248,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'demonstrative', variants: ['demonstr', 'demonst'] },
   { fullForm: 'determination', variants: ['determ', 'determin'] },
   { fullForm: 'diminutive', variants: ['dimin'] },
+  { fullForm: 'doxology', variants: ['doxol'] },
   { fullForm: 'duplicate', variants: ['duplic', 'dupl'] },
   {
     fullForm: 'East',
