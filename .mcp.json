@@ -2,10 +2,10 @@
   "mcpServers": {
     "playwright": {
       "type": "stdio",
-      "command": "npx",
+      "command": "/bin/bash",
       "args": [
-        "@playwright/mcp@latest",
-        "--output-dir=./.playwright-mcp"
+        "-lc",
+        "npx @playwright/mcp@latest --output-dir=./.playwright-mcp"
       ],
       "env": {}
     }
