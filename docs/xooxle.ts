@@ -59,7 +59,7 @@ const RESULTS_TO_UPDATE_DISPLAY = 20;
 /**
  * INPUT_DEBOUNCE_TIMEOUT is the timeout we use to debounce input events.
  */
-const INPUT_DEBOUNCE_TIMEOUT = 100;
+const INPUT_DEBOUNCE_TIMEOUT = 200;
 
 /**
  * PER_PAGE is the maximum number of results to display per page.
