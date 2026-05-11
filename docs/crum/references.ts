@@ -247,6 +247,13 @@ interface Resource {
    * TODO: (#522) Record variants.
    */
   readonly variants: string[];
+  /**
+   * typos records nonstandard variants that will never be shown to the users.
+   * Most nonstandard variants should still go to the `variants` field. However,
+   * nonstandard variants that are common typos should go to the `typos` field.
+   * See #705.
+   */
+  readonly typos?: string[];
   /** postfixes is a list of all postfixes that this abbreviation can bear.
    *
    * Notice that postfixes are distinct from suffixes. Postfixes are part of
@@ -417,7 +424,8 @@ const DATA_1: Resource[] = [
     },
     // NOTE: 'Am' usually refers to Amos, but can occasionally refer to Actes
     // des Martyrs. We have disambiguation logic.
-    variants: ['AM', 'Am'],
+    variants: ['AM'],
+    typos: ['Am'],
   },
   {
     source: {
@@ -2889,18 +2897,22 @@ function add(key: string, reference: Reference): void {
     res.source?.title
   );
 
-  res.variants.forEach((variant: string): void => {
-    // Add the abbreviation without any postfixes.
-    add(variant, new Reference(res.source, variant));
-    Object.entries(res.postfixes ?? {}).forEach(
-      ([name, type]: [string, PostfixType]): void => {
-        add(
-          `${variant} ${name}`,
-          new Reference(res.source, variant, new Postfix(name, type))
-        );
-      }
-    );
-  });
+  [...res.variants, ...(res.typos ?? [])].forEach(
+    (variant: string, index: number): void => {
+      const standard: string =
+        index < res.variants.length ? variant : res.variants[0]!;
+      // Add the abbreviation without any postfixes.
+      add(variant, new Reference(res.source, standard));
+      Object.entries(res.postfixes ?? {}).forEach(
+        ([name, type]: [string, PostfixType]): void => {
+          add(
+            `${variant} ${name}`,
+            new Reference(res.source, standard, new Postfix(name, type))
+          );
+        }
+      );
+    }
+  );
 });
 
 dev.play(() => {
