@@ -164,6 +164,12 @@ const NUMBERS = [
   'scala',
   'Scala',
   'stele',
+  // NOTE: Treating single letters as suffixes causes a lot of false positives.
+  // Elsewhere, our code uses heuristics to exclude common false positives.
+  // In most cases, we have to manually mark references to prevent inclusion of
+  // false positive suffixes.
+  // The following query may be a good start:
+  // https://remnqymi.com/crum/?query=%5Cb%5Cd%2B+%5Bacflmv%5D%5Cb&kellia=false&andreas=false&regex=true&wiki=true&case=true
   '[a-zA-Z]\\.?',
   // Roman numerals (in the range 1–3999):
   // NOTE: The Roman numeral regexes must use lookbehind rather than lookahed to
@@ -181,8 +187,12 @@ const NUMBER = `(?:${NUMBERS.join('|')})`;
 // The space before the parenthesis is optional.
 const NUMBER_GROUP = `(?: ${NUMBER}| ?\\(${NUMBER}(?: ${NUMBER})*\\))`;
 
+// A suffix never ends with 'v' or 'l'. As of the time of writing, no such
+// suffix is known to exist.
+// Following a reference, these are annotations for 'vide' or 'legendum', rather
+// than part of the suffix.
 const SUFFIX = new RegExp(
-  `^\\.?${NUMBER_GROUP}+(?: &${NUMBER_GROUP}+)*${str.ASSERT_NON_WORD.source}`,
+  `^\\.?${NUMBER_GROUP}+(?: &${NUMBER_GROUP}+)*(?<!\\b[vl])${str.ASSERT_NON_WORD.source}`,
   'u'
 );
 const REFERENCE_FOLLOWUP = new RegExp(
