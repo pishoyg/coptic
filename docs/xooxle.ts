@@ -66,22 +66,25 @@ const INPUT_DEBOUNCE_TIMEOUT = 100;
  */
 const PER_PAGE: number = ((): number => {
   /* eslint-disable no-magic-numbers */
-  if (browser.firefox()) {
+  if (browser.firefox() || browser.smallScreen()) {
     // Firefox tends to perform poorly compared to Chromium-based browsers, so
-    // we use a small limit.
+    // we use a smaller page size.[1]
+    // We also reduce the page size on less powerful devices. We use the size of
+    // the screen as a rough indicator of how powerful the device is.
+    //
+    // [1] As of the time of writing, Analytics shows that the population
+    // of users who visit our website from Firefox is actually quite small. But
+    // it's nonzero. We also received requests to improve experience on Firefox
+    // from VIPs.
     return 10;
   }
-  if (browser.smallScreen()) {
-    // We also use the size of the screen as a rough indicator of how powerful
-    // the device is, and we reduce the page size on smaller devices.
-    return 20;
-  }
+
   if (dev.get()) {
-    // Disable pagination in developer mode, if the agent can handle it.
+    // Disable pagination in developer mode.
     return Number.MAX_SAFE_INTEGER;
   }
-  // Use this default value on capable agents.
-  return 50;
+
+  return 20;
   /* eslint-enable no-magic-numbers */
 })();
 
