@@ -189,8 +189,8 @@ export const DATA: Abbreviation[] = [
   // N.B. For a few Latin abbreviations (e.g. penes, contra, etc.) the full form
   // is always used, but we still add a tooltip for completion.
   { fullForm: 'first', variants: ['1st'] },
-  { fullForm: 'second', variants: ['2d'] },
-  { fullForm: 'third', variants: ['3d'] },
+  { fullForm: 'second', variants: ['2d', '2nd'] },
+  { fullForm: 'third', variants: ['3d', '3rd'] },
 
   { fullForm: 'second person feminine', variants: ['2 f'] },
 
