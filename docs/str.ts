@@ -48,11 +48,13 @@ export function toggleCase(text: string): string {
  * ASSERT_NON_WORD matches a position that neighbors a non-word character on
  * either side.
  * The regex uses negative lookahead and negative lookbehind expressions.
- * It acts as an assertion that matches a word boundary.
- *
- * NOTE: Unlike `\b` (which works fine for non-Unicode characters), this
- * assertion matches a position between two non-word characters – a weakness
- * that is deemed acceptable in our repository.
+ * It prevents matching a position between two word characters, but any position
+ * where one character on either side is a non-word character passes the
+ * assertion.
+ * It's intended as a Unicode-aware alternative to `\b`, which matches word
+ * boundaries but doesn't support Unicode characters.
+ * Although, unlike `\b`, our assertion matches positions between two non-word
+ * characters - a weakness deemed acceptable in our repository.
  *
  * What constitutes a word character? - Letters, marks, and numbers.
  * (Normally, characters in the Connector_Punctuation class would also count as
@@ -64,12 +66,21 @@ export const ASSERT_NON_WORD =
 
 /*
  * ASSERT_NON_LETTER matches a position that neighbors a non-letter or non-mark
- * on either side.
+ * on either side. In other words, it prevents matches between two characters
+ * that are both a letter or a mark.
  *
  * See ASSERT_NON_WORD for more info.
  */
 export const ASSERT_NON_LETTER =
   /(?:(?<![\p{Letter}\p{Mark}])|(?![\p{Letter}\p{Mark}]))/u;
+
+/**
+ * ASSERT_NON_NUMBER matches a position that neighbors a non-number on either
+ * side. In other words, it prevents matches between two numbers.
+ *
+ * See ASSERT_NON_WORD for more info.
+ */
+export const ASSERT_NON_NUMBER = /(?:(?<!\p{Number})|(?!\p{Number}))/u;
 
 /**
  *
@@ -96,7 +107,11 @@ export function grouped(re: string): string {
  * We don't take the liberty to create this group for the caller, so the
  * parameter defaults to false.
  *
- * @param digitIsBoundary - If true, digits are considered word boundaries.
+ * @param digitIsBoundary - If true, letters and digits are bounded
+ * independently: a letter↔digit transition counts as a boundary (so `abc123`
+ * is treated as two adjacent words), while digit↔digit and letter↔letter
+ * positions do not. If false (the default), letters, marks, and digits are
+ * all treated as word characters, matching the usual `\b` semantics.
  *
  * @returns
  */
@@ -109,7 +124,7 @@ export function bounded(
     re = grouped(re);
   }
   if (digitIsBoundary) {
-    return `${ASSERT_NON_LETTER.source}${re}${ASSERT_NON_LETTER.source}`;
+    return `${ASSERT_NON_NUMBER.source}${ASSERT_NON_LETTER.source}${re}${ASSERT_NON_LETTER.source}${ASSERT_NON_NUMBER.source}`;
   }
   return `${ASSERT_NON_WORD.source}${re}${ASSERT_NON_WORD.source}`;
 }
