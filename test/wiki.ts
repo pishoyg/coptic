@@ -18,30 +18,76 @@ type WikiElementKey =
   | 'pages'
   | 'semicolons';
 
+// TODO: (#0) All test cases should cover all fields. The `want` field shouldn't
+// be `Partial`.
 const TEST_CASES: {
   key: string;
   want: Partial<Record<WikiElementKey, number>>;
 }[] = [
+  // Seven entries in Crum's book span five pages! All seven are listed below.
+  // We use them in our unit tests to get a good coverage of many common cases.
+  // TODO: (#503) Populate values below when the data is available.
   {
-    // 88 contains a relatively large piece of text, so we include to cover a
-    // lot of common cases.
-    key: '88',
+    key: '2', // ϯ
     want: {
-      references: 148,
-      bible: 121,
-      dialectTooltips: 388,
-      annotations: 77,
+      references: 307,
+      bible: 230,
+      dialectTooltips: 803,
+      annotations: 245,
     },
   },
   {
-    // 54 is the largest entry. At 5 pages long, it is the longest entry in
-    // Crum.
-    key: '54',
+    key: '54', // ⲃⲱⲗ
     want: {
       references: 389,
       bible: 305,
       dialectTooltips: 832,
       annotations: 237,
+    },
+  },
+  {
+    key: '71', // ϩⲟ
+    want: {
+      references: 0,
+      bible: 0,
+      dialectTooltips: 0,
+      annotations: 0,
+    },
+  },
+  {
+    key: '122', // ϣⲱⲧ
+    want: {
+      references: 0,
+      bible: 0,
+      dialectTooltips: 0,
+      annotations: 0,
+    },
+  },
+  {
+    key: '131', // ϭⲓ
+    want: {
+      references: 0,
+      bible: 0,
+      dialectTooltips: 0,
+      annotations: 0,
+    },
+  },
+  {
+    key: '139', // ⲭⲱ
+    want: {
+      references: 289,
+      bible: 287,
+      dialectTooltips: 882,
+      annotations: 208,
+    },
+  },
+  {
+    key: '369', // ⲧⲱⲣⲓ
+    want: {
+      references: 0,
+      bible: 0,
+      dialectTooltips: 0,
+      annotations: 0,
     },
   },
   {
