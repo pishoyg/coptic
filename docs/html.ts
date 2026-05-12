@@ -447,5 +447,7 @@ export function normalize(root: HTMLElement = document.body): void {
  * @returns A NodeList containing the parsed child nodes.
  */
 export function parse(html: string): NodeListOf<ChildNode> {
-  return new DOMParser().parseFromString(html, 'text/html').body.childNodes;
+  const template = document.createElement('template');
+  template.innerHTML = html;
+  return template.childNodes;
 }
