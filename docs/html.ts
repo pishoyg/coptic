@@ -449,5 +449,5 @@ export function normalize(root: HTMLElement = document.body): void {
 export function parse(html: string): NodeListOf<ChildNode> {
   const template = document.createElement('template');
   template.innerHTML = html;
-  return template.childNodes;
+  return template.content.childNodes;
 }
