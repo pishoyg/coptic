@@ -43,8 +43,11 @@ tr:last-child td {
   border-bottom: none;
 }
 
+/* We use a class for the tray because it uses a tooltip, which ends up getting
+ * detached from its parent and rendered as a popover. We give both the parent
+ * and the tooltip the same class so they can share styling. */
 #bar,
-#tray {
+.tray {
   font-style: italic;
   color: var(--midnight-blue);
 }

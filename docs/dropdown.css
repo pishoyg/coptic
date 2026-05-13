@@ -1,4 +1,8 @@
-/* CSS for both hover-invoked and click-invoked tooltips (a.k.a. droppables). */
+/* CSS for both hover-invoked and click-invoked tooltips (a.k.a. droppables).
+ *
+ * Wired droppables live under <body> with the `popover` attribute (set by
+ * dropdown.ts). Each one carries an inline `position-anchor: --droppable-N`
+ * matched by an inline `anchor-name: --droppable-N` on its trigger. */
 
 /* CSS for all parents of tooltips (hover-invoked or click-invoked). */
 .drop,
@@ -8,25 +12,29 @@
    * Thankfully, such parents tend to be so short that we can usually afford to
    * always display them on a single line and prevent wrapping on whitespace. */
   white-space: nowrap;
-
-  /* Expose the parent as an anchor so its child .droppable can target it
-   * with position-anchor below. */
-  anchor-name: --droppable-anchor;
-  anchor-scope: --droppable-anchor;
 }
 
-/* .droppable represents either a click-invoked or hover-invoked tooltip. */
-.droppable {
-  /* The element is hidden by default. */
-  visibility: hidden;
-  opacity: 0;
-  transition:
-    visibility 0.15s,
-    opacity 0.15s ease-in-out;
-  position: absolute;
-  position-anchor: --droppable-anchor;
+.dropdown:hover {
+  background-color: #f1f8ff;
+  border-radius: 4px;
+}
+
+/* .drop is specific to click-invoked elements. */
+.drop {
+  cursor: pointer;
+}
+
+/* .droppable represents either a click-invoked or hover-invoked tooltip.
+ * The selector below applies once dropdown.ts has stamped the `popover`
+ * attribute on the element. */
+.droppable[popover] {
+  /* Reset the UA popover defaults so anchor positioning controls placement. */
+  inset: auto;
+  margin: 0;
+  border: 0;
 
   /* Default placement: directly below the parent, aligned with its left edge. */
+  position: fixed;
   top: anchor(bottom);
   left: anchor(left);
 
@@ -44,12 +52,8 @@
   /* Add some shade to make it pretty. */
   box-shadow: 0 8px 16px rgb(0 0 0 / 20%);
 
-  /* The element shows on top of other elements. */
-  z-index: 1;
-
-  /* Add some padding. */
-  padding-left: 2px;
-  padding-right: 2px;
+  /* Some padding. */
+  padding: 0 2px;
 
   /* Try expanding without wrapping, up to 500px or 80% of the viewport width,
    * whichever is smaller. On large screens, that's the former. On small
@@ -63,8 +67,17 @@
    * to wrap. */
   white-space: normal;
 
+  /* Fade in/out. `allow-discrete` lets us animate across the discrete
+   * display:none ↔ display:block boundary the popover toggles on. */
+  opacity: 0;
+  transition:
+    opacity 0.15s ease-in-out,
+    overlay 0.15s allow-discrete,
+    display 0.15s allow-discrete;
+
   & label {
-    display: block; /* If the droppable is a tooltip, then each label renders on a separate line. */
+    /* If the droppable is a tooltip, then each label renders on a separate line. */
+    display: block;
   }
 
   /* .above causes tooltips to render above their parent element. */
@@ -82,40 +95,21 @@
    * right edge to the viewport's right edge — the minimum shift needed
    * to prevent overflow. */
   position-try-fallbacks: --shift-to-fit;
+
+  &:popover-open {
+    opacity: 1;
+
+    @starting-style {
+      opacity: 0;
+    }
+  }
+}
+
+.dropdown:has(.dropdown):hover {
+  background-color: #ffe8b3;
 }
 
 @position-try --shift-to-fit {
   left: auto;
   right: 8px;
-}
-
-.dropdown:hover {
-  background-color: #f1f8ff;
-  border-radius: 4px;
-
-  & > .droppable {
-    /* Hovering a .dropdown element causes its child .droppable to show. */
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-/* When a .dropdown contains a nested .dropdown, give the outer one a
- * distinctive hover color so the inner one's standard hover color stands
- * out clearly against it. */
-.dropdown:has(.dropdown):hover {
-  background-color: #ffe8b3;
-}
-
-/* Click-invoked .droppable elements get the .show class via JS. */
-.droppable.show {
-  visibility: visible;
-  opacity: 1;
-}
-
-/* .drop is specific to click-invoked elements. Clicking a .drop element should
- * toggle the display of its child tooltip. But this behavior is controlled in
- * JavaScript. */
-.drop {
-  cursor: pointer;
 }

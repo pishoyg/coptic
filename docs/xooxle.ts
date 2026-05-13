@@ -392,6 +392,9 @@ export class Form {
     this.tbody.replaceChildren();
     this.paginationContainer.replaceChildren();
     this.messageBox.replaceChildren();
+    /* Enrichers wire many tooltips into the search results; those popovers
+     * live under <body>, so they survive the tbody clear above. Sweep them. */
+    drop.cleanupOrphans();
   }
 }
 
@@ -653,6 +656,9 @@ export class SearchResult extends AggregateResult {
       cells[cells.length - 1]?.append(...this.viewForMore(href));
     }
     row.prepend(this.viewCell(href, total));
+    // Wire any droppables added during enrich. They get reparented to
+    // <body> at this point so they no longer pollute the row's textContent.
+    drop.addEventListeners(row);
     return row;
   }
 

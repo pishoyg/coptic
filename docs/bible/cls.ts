@@ -13,4 +13,6 @@ export const LANGUAGE = 'language';
  */
 export const TITLE = 'title';
 
+export const TRAY = 'tray';
+
 export const INDEX_BOOK_NAME = 'index-book-name';

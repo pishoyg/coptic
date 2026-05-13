@@ -1,8 +1,11 @@
 /** Package dropdown defines logic for droppables.
  * NOTE: The terms ‘droppable’ and ‘tooltip’ are used interchangeably.
- * Hover-invoked tooltips are handled entirely in CSS.
+ *
+ * Droppables are implemented as native popovers and moved to <body> when
+ * wired, so they render in the top layer and — crucially — no longer pollute
+ * their trigger's textContent. That keeps text-fragment URLs, copy-paste, and
+ * screen-reader output aligned with what the user actually sees.
  * */
-import * as browser from './browser.js';
 import * as str from './str.js';
 
 type Invocation = 'hover' | 'click';
@@ -19,111 +22,154 @@ export enum CLS {
   DROPDOWN = 'dropdown',
   /* ABOVE is the class for droppables that render above the element. */
   ABOVE = 'above',
-  /* SHOW is the class to display a click-invoked droppable. */
-  SHOW = 'show',
 }
 
+/* Marker attribute so the same droppable isn't wired twice (e.g. if a parent
+ * subtree is processed twice by addEventListeners). */
+const WIRED = 'data-droppable-wired';
+
+/* Delay (ms) between mouseleave and hiding a hover-invoked droppable, giving
+ * the user time to move the cursor onto the popover itself. */
+const HOVER_HIDE_DELAY_MS = 100;
+
+let counter = 0;
+
+/* Back-reference from a wired droppable to its trigger. Used by
+ * cleanupOrphans() to detect popovers whose triggers were removed from the
+ * DOM (e.g. when a search-results table is cleared). The WeakMap key (the
+ * droppable) is held weakly, so entries clear themselves once the droppable
+ * is removed and GCed. */
+const triggers = new WeakMap<HTMLElement, HTMLElement>();
+
 /**
- * Droppable represents a click-invoked droppable.
- * NOTE: This is irrelevant for hover-invoked droppables.
+ * Reparent the droppable to <body>, anchor it to its trigger via a unique
+ * anchor name, mark it as a popover, and attach the right interaction
+ * handlers.
+ *
+ * @param parent - The trigger element (carries .drop or .dropdown).
+ * @param droppable - The element holding the drop-down content.
+ * @param inv
  */
-class Droppable {
-  /**
-   * @param droppable - The element holding our drop-down content.
-   * @param parent
-   */
-  public constructor(
-    private readonly droppable: HTMLElement,
-    parent: HTMLElement
-  ) {
-    this.addEventListeners(parent);
+function wire(
+  parent: HTMLElement,
+  droppable: HTMLElement,
+  inv: Invocation
+): void {
+  if (droppable.hasAttribute(WIRED)) {
+    return;
   }
+  droppable.setAttribute(WIRED, '');
 
-  /**
-   *
-   * @param parent
-   */
-  private addEventListeners(parent: HTMLElement): void {
-    // Prevent clicks on the content from hiding it.
-    this.droppable.addEventListener('click', browser.stopPropagation);
+  const anchor = `--droppable-${(++counter).toString()}`;
+  parent.style.setProperty('anchor-name', anchor);
+  droppable.style.setProperty('position-anchor', anchor);
 
-    // A click on the .drop element toggles the content.
-    parent.addEventListener('click', (e: MouseEvent) => {
-      this.toggle();
+  /* `manual` for hover so we drive show/hide ourselves without the auto
+   * popover stack closing siblings; `auto` for click so the browser handles
+   * outside-click and Escape dismissal. */
+  droppable.setAttribute('popover', inv === 'hover' ? 'manual' : 'auto');
+  document.body.appendChild(droppable);
+  triggers.set(droppable, parent);
+
+  if (inv === 'click') {
+    /* `popover="auto"`'s light-dismiss closes the popover on pointerdown —
+     * including pointerdown on the trigger itself — before our click handler
+     * fires. We snapshot the open-state on pointerdown (i.e. before
+     * light-dismiss runs) and use it to decide what to do in click; otherwise
+     * a click on the trigger would close-then-reopen the popover. */
+    let wasOpen = false;
+    parent.addEventListener('pointerdown', (): void => {
+      wasOpen = droppable.matches(':popover-open');
+    });
+    parent.addEventListener('click', (e: MouseEvent): void => {
+      if (wasOpen) {
+        droppable.hidePopover();
+      } else {
+        droppable.showPopover();
+      }
       e.stopPropagation();
     });
-
-    // A click anywhere outside the .droppable AND the parent hides it.
-    document.addEventListener('click', (event: MouseEvent) => {
-      if (!this.droppable.contains(event.target as Node)) {
-        this.hide();
+  } else {
+    let timer: number | undefined;
+    const show = (): void => {
+      window.clearTimeout(timer);
+      if (!droppable.matches(':popover-open')) {
+        droppable.showPopover();
       }
-    });
-  }
-
-  /**
-   * @returns
-   */
-  private visible(): boolean {
-    return this.droppable.classList.contains(CLS.SHOW);
-  }
-
-  /**
-   * @param visible
-   */
-  private set(visible: boolean): void {
-    this.droppable.classList.toggle(CLS.SHOW, visible);
-  }
-
-  /**
-   *
-   */
-  private toggle(): void {
-    this.set(!this.visible());
-  }
-
-  /**
-   */
-  private hide(): void {
-    this.set(false);
+    };
+    const hide = (): void => {
+      window.clearTimeout(timer);
+      timer = window.setTimeout((): void => {
+        if (droppable.matches(':popover-open')) {
+          droppable.hidePopover();
+        }
+      }, HOVER_HIDE_DELAY_MS);
+    };
+    parent.addEventListener('mouseenter', show);
+    parent.addEventListener('mouseleave', hide);
+    droppable.addEventListener('mouseenter', show);
+    droppable.addEventListener('mouseleave', hide);
   }
 }
 
 /**
- * Add event listeners for click-invoked tooltips in the page.
- * Hover-invoked tooltips don't require any JavaScript, as the implementation is
- * completely done in CSS.
- * The HTML must define elements with the correct classes and correct
- * structure.
  *
  * @param root
- * @returns List of Droppable objects (empty for hover).
+ * @param cls
+ * @param inv
  */
-export function addEventListeners(root: HTMLElement = document.body): void {
-  for (const parent of root.querySelectorAll<HTMLElement>(`.${CLS.DROP}`)) {
-    for (const tooltip of parent.querySelectorAll<HTMLElement>(
-      `.${CLS.DROPPABLE}`
-    )) {
-      new Droppable(tooltip, parent);
-    }
-  }
+function addEventListenersAux(
+  root: HTMLElement,
+  cls: string,
+  inv: Invocation
+): void {
+  root
+    .querySelectorAll<HTMLElement>(`.${cls}`)
+    .forEach((parent: HTMLElement): void => {
+      /* Snapshot `parent.children` before iterating: it's a live
+       * HTMLCollection, and wire() removes the droppable from `parent` by
+       * reparenting it to <body>. Without the snapshot, that mid-iteration
+       * mutation shifts subsequent indices and would silently skip any
+       * later sibling. */
+      for (const child of [...parent.children]) {
+        if (child.classList.contains(CLS.DROPPABLE)) {
+          wire(parent, child as HTMLElement, inv);
+        }
+      }
+    });
 }
 
 /**
- * Add the given content as a hover-droppable child of the given drop.
- * NOTE: This merely constructs the elements, and does NOT add event listeners
- * necessary for the element to function properly. You need to do that
- * separately.
+ * Wire every droppable in the subtree. Safe to call repeatedly and on
+ * subtrees — each droppable is only wired once.
+ *
+ * @param root
+ */
+export function addEventListeners(root: HTMLElement = document.body): void {
+  addEventListenersAux(root, CLS.DROP, 'click');
+  addEventListenersAux(root, CLS.DROPDOWN, 'hover');
+}
+
+/**
+ * Build a droppable for the given parent and insert it as a child.
+ *
+ * NOTE: This only constructs the elements. {@link addEventListeners} must be
+ * called later (typically once all DOM mutations on the subtree are done) to
+ * wire the popovers and reparent them to <body>. Keeping the droppable inside
+ * its trigger during construction lets callers continue to find it by
+ * descending from the trigger.
  *
  * @param parent - An element that, when hovered or clicked, should display
  * the content.
  * @param content - The content that shows when the drop element is hovered.
+ * @param classes
  * @param invocation
  * @param position - Whether to render 'above' or 'below'.
  */
 export function addDroppable(
   parent: Element,
   content: (Node | string)[],
+  classes: string[] = [],
   invocation: Invocation = 'hover',
   position: Position = 'below'
 ): void {
@@ -136,20 +182,37 @@ export function addDroppable(
     return container;
   })();
 
-  parent.classList.add(invocation === 'hover' ? CLS.DROPDOWN : CLS.DROP);
-  droppable.classList.add(CLS.DROPPABLE);
-
-  // Apply the specific class if this is an upward droppable
+  droppable.classList.add(CLS.DROPPABLE, ...classes);
   if (position === 'above') {
     droppable.classList.add(CLS.ABOVE);
   }
+
+  parent.classList.add(invocation === 'hover' ? CLS.DROPDOWN : CLS.DROP);
 
   parent.appendChild(droppable);
 }
 
 /**
+ * Remove every wired droppable whose trigger is no longer connected to the
+ * DOM. Wired droppables live under <body>, so they don't disappear when their
+ * trigger's subtree is torn down (e.g. when a search-results table is
+ * cleared); without this sweep they accumulate as orphans.
+ */
+export function cleanupOrphans(): void {
+  document.body
+    .querySelectorAll<HTMLElement>(`.${CLS.DROPPABLE}[${WIRED}]`)
+    .forEach((droppable: HTMLElement): void => {
+      if (!triggers.get(droppable)?.isConnected) {
+        droppable.remove();
+      }
+    });
+}
+
+/**
  * @param node
- * @returns
+ * @returns the node's textContent with any nested droppables stripped. Once a
+ * droppable has been wired it no longer lives inside its trigger, so this
+ * only matters before wiring runs.
  */
 export function noTipTextContent(node: Node): string {
   return str.textContent(node, { [`.${CLS.DROPPABLE}`]: '' });

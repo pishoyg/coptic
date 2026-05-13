@@ -329,7 +329,7 @@ function annotation(tip: string, ...children: (Node | string)[]): Element {
     elem = document.createElement('span');
     elem.append(...children);
   }
-  drop.addDroppable(elem, [tip]);
+  drop.addDroppable(elem, [html.maybeI(tip, elem.nodeName === 'I')]);
   elem.classList.add(cls.ANNOTATION);
   return elem;
 }
@@ -565,7 +565,7 @@ class Citation {
     // However, if some numbers are inherited, we include the numbers in the
     // tooltip for readability.
     tooltip.push(this.explicit ? this.book.name : this.name());
-    drop.addDroppable(elem, tooltip);
+    drop.addDroppable(elem, tooltip, [cls.BIBLE]);
     return elem;
   }
 
@@ -1088,6 +1088,7 @@ function handleCorrigenda(root: HTMLElement): void {
         // TODO: (#413) The page number should have a hyeprlink pointing to the
         // scan.
         ['From ', i, ' (', ...scan.prettyPage(elem.dataset[DATA_PAGE]!), ')'],
+        [],
         'hover',
         'above'
       );
@@ -1102,7 +1103,11 @@ function semicolon(): HTMLSpanElement {
   const span = document.createElement('span');
   span.classList.add(cls.SEMICOLON);
   span.textContent = ';';
-  drop.addDroppable(span, ['semicolons separate groups in meaning or usage']);
+  drop.addDroppable(
+    span,
+    ['semicolons separate groups in meaning or usage'],
+    [cls.SEMICOLON]
+  );
   return span;
 }
 
@@ -1215,7 +1220,7 @@ function handleManual(manual: HTMLElement): void {
  */
 function ibFallback(ib: HTMLElement): HTMLElement {
   ib.classList.add(cls.ANNOTATION);
-  drop.addDroppable(ib, ['ibidem']);
+  drop.addDroppable(ib, [ref.ibidem()]);
   return ib;
 }
 
@@ -1315,7 +1320,7 @@ function handlePageIB(
   //   https://remnqymi.com/crum/1730.html
   // We don't expect a suffix to be present.
   const a = html.anchor(antecedent.href, true, ib.cloneNode(true));
-  drop.addDroppable(a, ['ibidem']);
+  drop.addDroppable(a, [ref.ibidem()]);
   return a;
 }
 

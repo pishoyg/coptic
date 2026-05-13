@@ -25,40 +25,30 @@ figcaption {
   color: #ae841a; /* dark yellow */
 }
 
-/* TODO: (#665) The following rule should also apply to non-Wiki text in Crum.
- * Let's define it for all tooltips in Crum once #194 is resolved.
- * TODO: (#581) If tooltips are applied to the KELLIA bibliography, then this
- * rule should also apply to KELLIA.
- * */
-.wiki .droppable {
+.droppable {
   font-size: 85%;
-  text-indent: 0;
+
+  & ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 2em;
+  }
+
+  .abbreviation {
+    color: var(--reference-green);
+    margin-right: 0.5em;
+    margin-left: 0.25em;
+    font-size: 110%;
+  }
+
+  .ibidem {
+    display: block;
+    color: var(--reference-green);
+  }
 }
 
 .wiki .reference {
   color: var(--reference-green);
-
-  & .droppable {
-    color: black;
-
-    & ul {
-      margin-top: 0;
-      margin-bottom: 0;
-      padding-left: 2em;
-    }
-
-    .abbreviation {
-      color: var(--reference-green);
-      margin-right: 0.5em;
-      margin-left: 0.25em;
-      font-size: 110%;
-    }
-
-    .ibidem {
-      display: block;
-      color: var(--reference-green);
-    }
-  }
 }
 
 .card {
@@ -151,7 +141,7 @@ figcaption {
   margin-left: 1.7em;
 }
 
-.wiki .bible {
+.bible {
   color: #1873cc; /* Dark blue */
 }
 
@@ -186,6 +176,13 @@ figcaption {
 
 .wiki .coptic {
   font-weight: bold;
+}
+
+.semicolon {
+  color: #6e260e; /* dark brown */
+  font-weight: bold;
+  margin-left: 0.2em;
+  margin-right: 0.75em;
 }
 
 .wiki {
@@ -236,13 +233,6 @@ figcaption {
       background-color: #f1f8ff;
       border-radius: 4px;
     }
-  }
-
-  & .semicolon {
-    color: #6e260e; /* dark brown */
-    font-weight: bold;
-    margin-left: 0.2em;
-    margin-right: 0.75em;
   }
 
   & .bullet {

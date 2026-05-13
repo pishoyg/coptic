@@ -11,6 +11,7 @@ import * as id from './id.js';
 import * as head from '../header.js';
 import * as dev from '../dev.js';
 import * as browser from '../browser.js';
+import * as drop from '../dropdown.js';
 
 /**
  *
@@ -42,6 +43,10 @@ function main(): void {
   }
 
   crum.handle(document.body, highlighter, devHighlighter);
+
+  // Reparent all hover/click droppables added during handle() to <body> as
+  // popovers, so their text no longer counts toward the trigger's textContent.
+  drop.addEventListeners();
 
   addReportsLink();
 }

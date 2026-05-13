@@ -9,27 +9,15 @@ import * as sax from './pisaxo.js';
 export const MAPPING: Record<string, Reference> = {};
 
 /**
- *
- * @param content
- * @param flag
+ * @param classify
  * @returns
  */
-function maybeI(content: Node | string, flag?: boolean): Node | string {
-  if (!flag) {
-    return content;
-  }
-  const i: HTMLElement = document.createElement('i');
-  i.append(content);
-  return i;
-}
-
-/**
- * @returns
- */
-export function ibidem(): HTMLElement {
+export function ibidem(classify = false): HTMLElement {
   const i: HTMLElement = document.createElement('i');
   i.textContent = 'ibidem';
-  i.classList.add(cls.IBIDEM);
+  if (classify) {
+    i.classList.add(cls.IBIDEM);
+  }
   return i;
 }
 
@@ -145,7 +133,7 @@ export class Reference {
     span.dataset[Reference.DATA_REF] = this.raw();
     span.append(...raw);
     const tooltip: (Node | string)[] = [
-      ...(/^ib\b/i.test(span.textContent) ? [ibidem()] : []),
+      ...(/^ib\b/i.test(span.textContent) ? [ibidem(true)] : []),
       ...(this.tooltip()?.childNodes ?? []),
     ];
     // TODO: (#522) This check will soon be unnecessary, because all references
@@ -249,7 +237,7 @@ export class Reference {
               : [
                   document.createElement('hr'),
                   ...abbreviation(abb, italic),
-                  maybeI(annot.fullForm, italic),
+                  html.maybeI(annot.fullForm, italic),
                 ];
           });
       })
@@ -265,7 +253,7 @@ export class Reference {
  */
 function abbreviation(name: string | Node, italic?: boolean): HTMLElement[] {
   const span: HTMLSpanElement = document.createElement('span');
-  span.append(maybeI(name, italic), ': ');
+  span.append(html.maybeI(name, italic), ': ');
   span.classList.add(cls.ABBREVIATION);
   return [span];
 }

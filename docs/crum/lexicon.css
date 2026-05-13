@@ -3,7 +3,9 @@
 #marcion-checkbox-td,
 #full-word-checkbox-td,
 #case-sensitive-checkbox-td,
-#regex-checkbox-td {
+#regex-checkbox-td,
+.explain-checkbox {
+  font-size: 100% !important;
   text-align: center;
   font-style: italic;
   color: gray;

@@ -25,6 +25,21 @@ export function anchor(
 }
 
 /**
+ *
+ * @param content
+ * @param flag
+ * @returns
+ */
+export function maybeI(content: Node | string, flag?: boolean): Node | string {
+  if (!flag) {
+    return content;
+  }
+  const i: HTMLElement = document.createElement('i');
+  i.append(content);
+  return i;
+}
+
+/**
  * Wraps the children of an element with an anchor tag.
  *
  * @param el - The element whose children should be linkified.
