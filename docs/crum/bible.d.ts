@@ -16,10 +16,10 @@
  *
  * [1] https://developer.mozilla.org/en-US/docs/Glossary/IIFE
  */
-interface Book {
+export interface Book {
   name: string;
   path: string;
-  numChapters: number;
+  chapters: string[];
   abb: string;
 }
 export const MAPPING: Record<string, Book>;

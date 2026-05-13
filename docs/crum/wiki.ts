@@ -95,7 +95,7 @@ const CHAPTER_VERSE = new RegExp(`\\.? (?:${NUMS}|\\(${NUMS}\\))\\b`, 'uy');
  * - 'Su' refers to the chapter that St. Shenouda refers to as A.
  * - 'Bel' refers to the chapter that St. Shenouda refers to as C.
  */
-const DAN_OVERRIDE: Record<string, string> = { Su: 'a', Bel: 'c' };
+const DAN_OVERRIDE: Record<string, string> = { Su: 'A', Bel: 'C' };
 
 const ENRICHMENT_RE = new RegExp(
   str.regex([
@@ -201,6 +201,37 @@ const REFERENCE_FOLLOWUP = new RegExp(
 );
 
 const REFERENCE_RE = new RegExp(str.regex(Object.keys(ref.MAPPING)), 'gu');
+
+/**
+ *
+ * @param book
+ * @param chapter
+ * @returns
+ */
+function bookHasChapter(book: bib.Book, chapter: string): boolean {
+  // TODO: (#0) Add a developer-mode check that the list of chapters is sorted
+  // in lexicographical order.
+  let left = 0;
+  let right = book.chapters.length - 1;
+
+  while (left <= right) {
+    // Find the middle index
+    const mid: number = Math.floor((left + right) / 2);
+    const midChapter: string = book.chapters[mid]!;
+
+    if (midChapter === chapter) {
+      return true;
+    }
+
+    if (midChapter < chapter) {
+      left = mid + 1; // Search the right half.
+    } else {
+      right = mid - 1; // Search the left half.
+    }
+  }
+
+  return false; // Chapter not found
+}
 
 /**
  *
@@ -442,12 +473,12 @@ class Citation {
     private verse: string | undefined,
     private readonly book: bib.Book
   ) {
-    if (this.chapter && !this.verse && this.book.numChapters === 1) {
-      // This is a one-chapter book. The chapter number is always 1. The number
-      // immediately followed the book, which was interpreted as the chapter
-      // number, is actually the verse number.
+    if (this.chapter && !this.verse && this.book.chapters.length === 1) {
+      // This is a one-chapter book. The number immediately following the book
+      // abbreviation was interpreted as the chapter number, but it is actually
+      // the verse number; the chapter is the book's sole chapter.
       this.verse = this.chapter;
-      this.chapter = '1';
+      this.chapter = this.book.chapters[0]!;
       this.explicit = false;
     }
   }
@@ -495,22 +526,34 @@ class Citation {
    * @param content
    * @returns
    */
-  public anchor(
-    ibidem = false,
-    ...content: (Node | string)[]
-  ): HTMLAnchorElement {
+  public anchor(ibidem = false, ...content: (Node | string)[]): HTMLElement {
     if (!content.length) {
       content.push(this.raw);
     }
-    const a = html.anchor(
-      paths.bible(this.book.path, this.chapter, this.verse),
-      true,
-      ...content
-    );
-    a.classList.add(cls.BIBLE);
-    a.dataset[Citation.DATA_BOOK] = this.book.abb;
-    a.dataset[Citation.DATA_CHAPTER] = this.chapter ?? '';
-    a.dataset[Citation.DATA_VERSE] = this.verse ?? '';
+
+    let elem: HTMLElement;
+    if (this.chapter && !bookHasChapter(this.book, this.chapter)) {
+      // If the chapter is missing from our Bible index, fall back to a plain
+      // <span>: we still annotate with a tooltip, but skip the hyperlink (which
+      // would point to a non-existent page).
+      log.warn(
+        'Bible citation references unknown chapter:',
+        `${this.book.abb} ${this.chapter}`
+      );
+      elem = document.createElement('span');
+      elem.append(...content);
+    } else {
+      elem = html.anchor(
+        paths.bible(this.book.path, this.chapter, this.verse),
+        true,
+        ...content
+      );
+    }
+
+    elem.classList.add(cls.BIBLE);
+    elem.dataset[Citation.DATA_BOOK] = this.book.abb;
+    elem.dataset[Citation.DATA_CHAPTER] = this.chapter ?? '';
+    elem.dataset[Citation.DATA_VERSE] = this.verse ?? '';
     const tooltip: (Node | string)[] = [];
     if (ibidem) {
       // TODO: (#0) The `ibidem` helper is not Reference-specific, since it's
@@ -522,8 +565,8 @@ class Citation {
     // However, if some numbers are inherited, we include the numbers in the
     // tooltip for readability.
     tooltip.push(this.explicit ? this.book.name : this.name());
-    drop.addDroppable(a, tooltip);
-    return a;
+    drop.addDroppable(elem, tooltip);
+    return elem;
   }
 
   /**
@@ -560,20 +603,9 @@ class Citation {
    * @returns
    */
   public valid(): boolean {
-    if (
-      this.chapter?.match(/[A-Z]/) &&
-      !['Est', 'Esth', 'Dan'].includes(this.book.abb)
-    ) {
-      // Only Esther and Daniel have alphabetical chapter numbers.
-      // TODO: (#524) Handle non-uniform references. Particularly, Jeremiah
-      // 51 is composed of two subchapters (51A and 51B), and so is Psalms 115.
-      // TODO: (#524) If a numeric chapter number is given, consider checking
-      // whether it exceeds the known number of chapters of this book. Perhaps
-      // your Bible index should list the chapter names rather than the chapter
-      // count, given that the chapters don't simply form a sequence of
-      // integers.
-      return false;
-    }
+    // NOTE: We deliberately don't reject citations whose chapter is missing
+    // from the Bible index — `anchor()` handles that case by annotating with
+    // a tooltip but no hyperlink, and logging a warning.
 
     if (this.book.abb === 'AP' && !this.verse) {
       // This is a citation of Acta Pauli, not Apocalypse.

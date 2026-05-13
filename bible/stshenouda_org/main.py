@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Process the Bible data."""
+
 # NOTE: As a general convention, methods ending with _aux return generators,
 # rather than string literals.
 import collections
@@ -52,6 +53,14 @@ _LANGUAGES: list[Language] = [
 ]
 
 _VERSE_PREFIX: re.Pattern[str] = re.compile(r"^\(([^)]+)\)")
+
+
+class _CrumMapEntry(typing.TypedDict):
+    name: str
+    path: str
+    chapters: list[str]
+    abb: str
+
 
 # Output parameters
 
@@ -397,6 +406,9 @@ class Book(Item):
         except json.JSONDecodeError:
             return json5.loads(t)
 
+    def chapter_names(self) -> list[str]:
+        return [c.num for c in self.chapters]
+
     @typing.override
     def id(self) -> str:
         return self.to_id(self.name)
@@ -478,18 +490,13 @@ class Bible:
         # Thus, the data in the input file is a super set of the data in Crum's
         # List of Abbreviation.
         ensure.unique(key for book in self.chain_books() for key in book.crum)
-        mapping: dict[str, dict[str, str | int]] = {
-            key: {
-                "name": book.name,
-                "path": book.id(),
-                # TODO: (#524) Consider listing the chapter titles, rather than
-                # their count. Some chapter numbers are omitted, and some have
-                # special names (such as A, C, D, F, 51A, 51B, 115A, 115B).
-                # They don't simply form a sequence of consecutive integers
-                # starting at 1. Therefore, the chapter count is insufficient.
-                "numChapters": len(book.chapters),
-                "abb": key,
-            }
+        mapping: dict[str, _CrumMapEntry] = {
+            key: _CrumMapEntry(
+                name=book.name,
+                path=book.id(),
+                chapters=sorted(book.chapter_names()),
+                abb=key,
+            )
             for book in self.chain_books()
             for key in book.crum
         }
