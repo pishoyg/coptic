@@ -34,6 +34,59 @@ export function ibidem(): HTMLElement {
 }
 
 /**
+ * Source wraps a raw source, caching its parsed title and description so
+ * the HTML is parsed once per source rather than once per tooltip render.
+ */
+export class Source {
+  private titleMemo?: DocumentFragment;
+  private descriptionMemo?: HTMLUListElement;
+
+  /**
+   *
+   * @param raw
+   */
+  public constructor(public readonly raw: sax.Source) {}
+
+  /**
+   * @returns Deep copies of the parsed title's child nodes.
+   */
+  public title(): Node[] {
+    if (!this.raw.title) {
+      return [];
+    }
+    if (!this.titleMemo) {
+      this.titleMemo = new DocumentFragment();
+      this.titleMemo.append(...html.parse(this.raw.title));
+    }
+    return Array.from(this.titleMemo.cloneNode(true).childNodes);
+  }
+
+  /**
+   * @returns A deep copy of the parsed description list, or undefined if the
+   *   source has no description.
+   */
+  public description(): HTMLUListElement | undefined {
+    if (!this.raw.description?.length) {
+      return undefined;
+    }
+    if (!this.descriptionMemo) {
+      const ul: HTMLUListElement = document.createElement('ul');
+      this.raw.description.forEach((innerHTML: string): void => {
+        const li: HTMLLIElement = document.createElement('li');
+        li.innerHTML = innerHTML;
+        ul.append(li);
+      });
+      ul.querySelectorAll('a').forEach((a: HTMLAnchorElement): void => {
+        a.target = '_blank';
+        a.rel = 'noreferrer noopener';
+      });
+      this.descriptionMemo = ul;
+    }
+    return this.descriptionMemo.cloneNode(true) as HTMLUListElement;
+  }
+}
+
+/**
  * Reference represents a particular way of citing a source in the text.
  */
 export class Reference {
@@ -48,7 +101,7 @@ export class Reference {
   public constructor(
     // TODO: (#522) The `source` field should become required once all sources
     // are populated.
-    public readonly source: sax.Source | undefined,
+    public readonly source: Source | undefined,
     public readonly variant: string,
     public readonly postfix?: Postfix
   ) {}
@@ -66,17 +119,10 @@ export class Reference {
 
     fragment.append(...abbreviation(this.variant));
 
-    if (this.source.title) {
-      fragment.append(...html.parse(this.source.title));
-    }
+    fragment.append(...this.source.title());
 
-    if (this.source.description?.length) {
-      const description: HTMLUListElement = document.createElement('ul');
-      this.source.description.forEach((innerHTML: string) => {
-        const li = document.createElement('li');
-        li.innerHTML = innerHTML;
-        description.append(li);
-      });
+    const description: HTMLUListElement | undefined = this.source.description();
+    if (description) {
       fragment.append(description);
     }
 
@@ -84,11 +130,6 @@ export class Reference {
     if (tooltip?.length) {
       fragment.append(document.createElement('hr'), ...tooltip);
     }
-
-    fragment.querySelectorAll('a').forEach((a: HTMLAnchorElement): void => {
-      a.target = '_blank';
-      a.rel = 'noreferrer noopener';
-    });
 
     return fragment;
   }
@@ -321,17 +362,21 @@ function add(key: string, reference: Reference): void {
     res.source?.title
   );
 
+  const source: Source | undefined = res.source
+    ? new Source(res.source)
+    : undefined;
+
   [...res.variants, ...(res.typos ?? [])].forEach(
     (variant: string, index: number): void => {
       const standard: string =
         index < res.variants.length ? variant : res.variants[0]!;
       // Add the abbreviation without any postfixes.
-      add(variant, new Reference(res.source, standard));
+      add(variant, new Reference(source, standard));
       Object.entries(res.postfixes ?? {}).forEach(
         ([name, type]: [string, sax.PostfixType]): void => {
           add(
             `${variant} ${name}`,
-            new Reference(res.source, standard, new Postfix(name, type))
+            new Reference(source, standard, new Postfix(name, type))
           );
         }
       );
