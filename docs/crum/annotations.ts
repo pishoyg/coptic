@@ -378,6 +378,8 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'sic scriptum in manuscriptis', variants: ['sic MSS'] },
   { fullForm: 'sic lege', variants: ['sic l'] },
   { fullForm: 'scilicet', variants: ['sc'] },
+  { fullForm: 'status constructus', variants: ['st const'] },
+  { fullForm: 'Saint', variants: ['St'], noCaseVariant: true },
   { fullForm: 'subject', variants: ['subj'] },
   { fullForm: 'subordinate', variants: ['subord'] }, // Encountered once (as of the time of writing).
   { fullForm: 'superlative', variants: ['superlat'] },
