@@ -36,7 +36,7 @@ export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
       return undefined;
     }
 
-    return `${css.classQuery(...inactive)} { display: none; }`;
+    return `${css.disjunction(...inactive)} { display: none; }`;
   }
 
   /**

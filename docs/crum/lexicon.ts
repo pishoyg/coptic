@@ -142,7 +142,7 @@ class SearchResult extends xoox.SearchResult {
       return Bucket.ACTIVE_DIALECT_MATCH;
     }
 
-    const hasActive = !!row.querySelector(css.classQuery(...active));
+    const hasActive = !!row.querySelector(css.disjunction(...active));
 
     const dialectedQuery = Object.keys(dial.DIALECTS)
       .map((d: string): string => `.${d} *`)

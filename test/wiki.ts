@@ -3,26 +3,13 @@
  */
 import * as play from '@playwright/test';
 import * as cls from '../docs/crum/cls.js';
-import * as drop from '../docs/dropdown.js';
 import * as paths from '../docs/paths.js';
+import * as css from '../docs/css.js';
 import * as base from './base.js';
 
-/**
- * WikiElementKey represents a name covering a set of Wiki element.
- */
-type WikiElementKey =
-  | 'references'
-  | 'bible'
-  | 'dialectTooltips'
-  | 'annotations'
-  | 'pages'
-  | 'semicolons';
-
-// TODO: (#0) All test cases should cover all fields. The `want` field shouldn't
-// be `Partial`.
 const TEST_CASES: {
   key: string;
-  want: Partial<Record<WikiElementKey, number>>;
+  want: Record<string, number>;
 }[] = [
   // Seven entries in Crum's book span five pages! All seven are listed below.
   // We use them in our unit tests to get a good coverage of many common cases.
@@ -30,64 +17,64 @@ const TEST_CASES: {
   {
     key: '2', // ϯ
     want: {
-      references: 307,
-      bible: 230,
-      dialectTooltips: 803,
-      annotations: 245,
+      [cls.REFERENCE]: 307,
+      [cls.BIBLE]: 230,
+      [cls.DIALECT]: 803,
+      [cls.ANNOTATION]: 245,
     },
   },
   {
     key: '54', // ⲃⲱⲗ
     want: {
-      references: 389,
-      bible: 305,
-      dialectTooltips: 832,
-      annotations: 237,
+      [cls.REFERENCE]: 389,
+      [cls.BIBLE]: 305,
+      [cls.DIALECT]: 832,
+      [cls.ANNOTATION]: 237,
     },
   },
   {
     key: '71', // ϩⲟ
     want: {
-      references: 0,
-      bible: 0,
-      dialectTooltips: 0,
-      annotations: 0,
+      [cls.REFERENCE]: 0,
+      [cls.BIBLE]: 0,
+      [cls.DIALECT]: 0,
+      [cls.ANNOTATION]: 0,
     },
   },
   {
     key: '122', // ϣⲱⲧ
     want: {
-      references: 0,
-      bible: 0,
-      dialectTooltips: 0,
-      annotations: 0,
+      [cls.REFERENCE]: 0,
+      [cls.BIBLE]: 0,
+      [cls.DIALECT]: 0,
+      [cls.ANNOTATION]: 0,
     },
   },
   {
     key: '131', // ϭⲓ
     want: {
-      references: 0,
-      bible: 0,
-      dialectTooltips: 0,
-      annotations: 0,
+      [cls.REFERENCE]: 0,
+      [cls.BIBLE]: 0,
+      [cls.DIALECT]: 0,
+      [cls.ANNOTATION]: 0,
     },
   },
   {
     key: '139', // ⲭⲱ
     want: {
-      references: 289,
-      bible: 287,
-      dialectTooltips: 882,
-      annotations: 208,
+      [cls.REFERENCE]: 289,
+      [cls.BIBLE]: 287,
+      [cls.DIALECT]: 882,
+      [cls.ANNOTATION]: 208,
     },
   },
   {
     key: '369', // ⲧⲱⲣⲓ
     want: {
-      references: 0,
-      bible: 0,
-      dialectTooltips: 0,
-      annotations: 0,
+      [cls.REFERENCE]: 0,
+      [cls.BIBLE]: 0,
+      [cls.DIALECT]: 0,
+      [cls.ANNOTATION]: 0,
     },
   },
   {
@@ -101,10 +88,10 @@ const TEST_CASES: {
     //   boundary).
     key: '1144',
     want: {
-      references: 7,
-      bible: 6,
-      dialectTooltips: 9,
-      annotations: 11,
+      [cls.REFERENCE]: 7,
+      [cls.BIBLE]: 6,
+      [cls.DIALECT]: 9,
+      [cls.ANNOTATION]: 11,
     },
   },
   {
@@ -113,10 +100,10 @@ const TEST_CASES: {
     // it.
     key: '3271',
     want: {
-      references: 3,
-      bible: 0,
-      dialectTooltips: 1,
-      annotations: 3,
+      [cls.REFERENCE]: 3,
+      [cls.BIBLE]: 0,
+      [cls.DIALECT]: 1,
+      [cls.ANNOTATION]: 3,
     },
   },
   {
@@ -125,44 +112,44 @@ const TEST_CASES: {
     // source.
     key: '1082',
     want: {
-      references: 2,
-      bible: 2,
-      dialectTooltips: 13,
-      annotations: 9,
+      [cls.REFERENCE]: 2,
+      [cls.BIBLE]: 2,
+      [cls.DIALECT]: 13,
+      [cls.ANNOTATION]: 9,
     },
   },
   {
     // 629 has a corrigendum.
     key: '629',
     want: {
-      references: 23,
-      bible: 18,
-      dialectTooltips: 66,
-      annotations: 30,
+      [cls.REFERENCE]: 23,
+      [cls.BIBLE]: 18,
+      [cls.DIALECT]: 66,
+      [cls.ANNOTATION]: 30,
     },
   },
   {
     // 2531 has a tricky Bible reference.
     key: '2531',
     want: {
-      references: 3,
-      bible: 1,
-      dialectTooltips: 2,
-      annotations: 3,
+      [cls.REFERENCE]: 3,
+      [cls.BIBLE]: 1,
+      [cls.DIALECT]: 2,
+      [cls.ANNOTATION]: 3,
     },
   },
   {
     // 732 contains instances of 'pp' (pages).
     key: '732',
     want: {
-      pages: 6,
+      [cls.PAGE]: 6,
     },
   },
   {
     // 1637 contains a page reference without a column.
     key: '1637',
     want: {
-      pages: 1,
+      [cls.PAGE]: 1,
     },
   },
   {
@@ -170,7 +157,7 @@ const TEST_CASES: {
     // See #692 for context.
     key: '2157',
     want: {
-      semicolons: 11,
+      [cls.SEMICOLON]: 11,
     },
   },
   {
@@ -178,24 +165,12 @@ const TEST_CASES: {
     // See #700.
     key: '2339',
     want: {
-      references: 21,
+      [cls.REFERENCE]: 21,
     },
   },
 ];
 
-/**
- * QUERIES is a map of test keys to their corresponding CSS selectors.
- */
-const QUERIES: Record<WikiElementKey, string> = {
-  references: `.${cls.WIKI} .${cls.REFERENCE}`,
-  bible: `.${cls.WIKI} .${cls.BIBLE}`,
-  dialectTooltips: `.${cls.WIKI} .${cls.DIALECT} .${drop.CLS.DROPPABLE}`,
-  annotations: `.${cls.WIKI} .${cls.ANNOTATION}`,
-  pages: `.${cls.PAGE}`,
-  semicolons: `.${cls.SEMICOLON}`,
-};
-
-base.test.describe('Wiki Reference Handlers', () => {
+base.test.describe('Wiki Enrichment', () => {
   for (const testCase of TEST_CASES) {
     base.test(
       `Inserts the correct number of objects on '${testCase.key}'.`,
@@ -207,7 +182,7 @@ base.test.describe('Wiki Reference Handlers', () => {
           Object.entries(testCase.want).map(
             ([key, value]: [string, number]): Promise<void> =>
               play.expect
-                .soft(page.locator(QUERIES[key as WikiElementKey]))
+                .soft(page.locator(css.nested(cls.WIKI, key)))
                 .toHaveCount(value)
           )
         );

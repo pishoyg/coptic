@@ -116,7 +116,7 @@ export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
     //     tooltips, so we give those special handling in the second subquery.
     // 2. For dialect codes of inactive dialects, dim only the sigla.
     //    This keeps the tooltips bright.
-    return `.${cls.WORD} > :not(${css.classQuery(...active)}, .${cls.SPELLING}:not(${dial.ANY_DIALECT_QUERY}), .${cls.DIALECT}), .${cls.WORD} > .${cls.DIALECT}:not(${css.classQuery(...active)}) .${ddial.CLS.SIGLUM}`;
+    return `.${cls.WORD} > :not(${css.disjunction(...active)}, .${cls.SPELLING}:not(${dial.ANY_DIALECT_QUERY}), .${cls.DIALECT}), .${cls.WORD} > .${cls.DIALECT}:not(${css.disjunction(...active)}) .${ddial.CLS.SIGLUM}`;
   }
 
   /**

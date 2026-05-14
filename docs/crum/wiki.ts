@@ -40,7 +40,7 @@ import * as iam from '../iam.js';
  *
  * It also reduces the risk of false positives.
  */
-const EXCLUDE: string = css.classQuery(
+const EXCLUDE: string = css.disjunction(
   cls.BULLET,
   cls.DIALECT,
   dial.CLS.SIGLUM,
@@ -243,7 +243,7 @@ function textContent(wiki: HTMLElement): string {
   // the original text.
   // Additionally, we add a copy button, and we should get rid of that as well.
   return str.textContent(wiki, {
-    [css.classQuery(drop.CLS.DROPPABLE, cls.COPY)]: '',
+    [css.disjunction(drop.CLS.DROPPABLE, cls.COPY)]: '',
   });
 }
 
@@ -1386,7 +1386,7 @@ function replaceIB(context: html.ReplaceNodesContext): html.ReplaceNodesResult {
   log.fatal('This is impossible!');
 }
 
-const ANTECEDENT_QUERY: string = css.classQuery(
+const ANTECEDENT_QUERY: string = css.disjunction(
   cls.REFERENCE,
   cls.BIBLE,
   cls.PAGE
@@ -1501,7 +1501,7 @@ function addTextCopyTriggers(root: HTMLElement): void {
       // lookup hyperlinks.
       // TODO: (#661,#658) Figure out a way to allow copying and lookups to
       // coexist.
-      css.classQuery(
+      css.disjunction(
         cls.GLOSS,
         cls.COPTIC,
         cls.AMHARIC,

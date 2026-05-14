@@ -275,7 +275,7 @@ export function handleSisterKey(root: HTMLElement): void {
  */
 export function handleSisterView(root: HTMLElement): void {
   root
-    .querySelectorAll(css.classQuery(cls.SISTERS_TABLE, cls.INDEX_TABLE))
+    .querySelectorAll(css.disjunction(cls.SISTERS_TABLE, cls.INDEX_TABLE))
     .forEach((table: Element): void => {
       let counter = 1;
       table.querySelectorAll('tr').forEach((tr: HTMLTableRowElement): void => {

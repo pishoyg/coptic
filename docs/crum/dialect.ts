@@ -176,7 +176,7 @@ export const NON_STANDARD: Record<string, Dialect> = {
   A2: new Dialect('A2' as DIALECT, 'Subakhmimic (Lycopolitan)', []),
 };
 
-export const ANY_DIALECT_QUERY: string = css.classQuery(
+export const ANY_DIALECT_QUERY: string = css.disjunction(
   ...Object.keys(DIALECTS)
 );
 

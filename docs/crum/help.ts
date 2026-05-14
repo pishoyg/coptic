@@ -100,7 +100,7 @@ export function makeHelpPanel(
             // NOTE: It's important to click on the element that actually opens
             // the needed pages. Check Xooxle and Crum structure for which
             // element that is.
-            css.classQuery(xoox.CLS.VIEW, cls.SISTER_VIEW),
+            css.disjunction(xoox.CLS.VIEW, cls.SISTER_VIEW),
             'cur'
           );
           // If the element has an anchor, click that. Otherwise, the element
@@ -188,7 +188,7 @@ export function makeHelpPanel(
         ['lexicon', 'note', 'index'],
         () => {
           browser.scrollToNextElement(
-            css.classQuery(xoox.CLS.VIEW, cls.SISTER_VIEW, cls.DRV_KEY),
+            css.disjunction(xoox.CLS.VIEW, cls.SISTER_VIEW, cls.DRV_KEY),
             'next'
           );
         }
@@ -200,7 +200,7 @@ export function makeHelpPanel(
         ['lexicon', 'note', 'index'],
         () => {
           browser.scrollToNextElement(
-            css.classQuery(xoox.CLS.VIEW, cls.SISTER_VIEW, cls.DRV_KEY),
+            css.disjunction(xoox.CLS.VIEW, cls.SISTER_VIEW, cls.DRV_KEY),
             'prev'
           );
         }

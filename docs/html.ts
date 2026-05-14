@@ -404,7 +404,7 @@ export function linkifyText(
   classes: string[],
   excludedClasses: string[] = []
 ): void {
-  Array.from(linkifyWalk(root, css.classQuery(...excludedClasses))).forEach(
+  Array.from(linkifyWalk(root, css.disjunction(...excludedClasses))).forEach(
     (node: Text): void => {
       replaceNode(
         node,
