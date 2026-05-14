@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["cls.ts"],
-  "sourcesContent": ["/**\n * VERSE is the class of a verse.\n */\nexport const VERSE = 'verse';\n\n/**\n * LANGUAGE is the class of a verse text in a given language.\n */\nexport const LANGUAGE = 'language';\n\n/**\n * TITLE is the class of a chapter title.\n */\nexport const TITLE = 'title';\n\nexport const INDEX_BOOK_NAME = 'index-book-name';\n"],
-  "mappings": "aAGO,aAAM,MAAQ,QAKR,SAAW,WAKX,MAAQ,QAER,gBAAkB",
+  "sourcesContent": ["/**\n * VERSE is the class of a verse.\n */\nexport const VERSE = 'verse';\n\n/**\n * LANGUAGE is the class of a verse text in a given language.\n */\nexport const LANGUAGE = 'language';\n\n/**\n * TITLE is the class of a chapter title.\n */\nexport const TITLE = 'title';\n\nexport const TRAY = 'tray';\n\nexport const INDEX_BOOK_NAME = 'index-book-name';\n"],
+  "mappings": "aAGO,aAAM,MAAQ,QAKR,SAAW,WAKX,MAAQ,QAER,KAAO,OAEP,gBAAkB",
   "names": []
 }

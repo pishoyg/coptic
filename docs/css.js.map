@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["css.ts"],
-  "sourcesContent": ["/** Package css defines generic CSS helpers. */\n\n/**\n * @param classes - A list of HTML classes.\n * @returns A query that matches all elements belonging to ANY of the given\n * classes.\n */\nexport function classQuery(...classes: string[]): string {\n  return classes.map((c) => `.${c}`).join(', ');\n}\n"],
-  "mappings": "aAOO,gBAAS,cAAcA,EAA2B,CACvD,OAAOA,EAAQ,IAAKC,GAAM,IAAIA,CAAC,EAAE,EAAE,KAAK,IAAI,CAC9C",
-  "names": ["classes", "c"]
+  "sourcesContent": ["/** Package css defines generic CSS helpers. */\n\n/**\n *\n * @param classes\n * @param sep\n * @returns\n */\nfunction join(classes: string[], sep: string): string {\n  return classes.map((c: string): string => `.${c}`).join(sep);\n}\n\n/**\n * @param classes - A list of HTML classes.\n * @returns A query that matches all elements belonging to ANY of the given\n * classes.\n */\nexport function disjunction(...classes: string[]): string {\n  return join(classes, ', ');\n}\n\n/**\n * @param classes - A list of HTML classes.\n * @returns A query that matches all elements belonging to ANY of the given\n * classes.\n */\nexport function conjunction(...classes: string[]): string {\n  return join(classes, '');\n}\n\n/**\n *\n * @param {...any} classes\n * @returns\n */\nexport function nested(...classes: string[]): string {\n  return join(classes, ' ');\n}\n"],
+  "mappings": "aAQA,SAASA,EAAKC,EAAmBC,EAAqB,CACpD,OAAOD,EAAQ,IAAKE,GAAsB,IAAIA,CAAC,EAAE,EAAE,KAAKD,CAAG,CAC7D,CAOO,gBAAS,eAAeD,EAA2B,CACxD,OAAOD,EAAKC,EAAS,IAAI,CAC3B,CAOO,gBAAS,eAAeA,EAA2B,CACxD,OAAOD,EAAKC,EAAS,EAAE,CACzB,CAOO,gBAAS,UAAUA,EAA2B,CACnD,OAAOD,EAAKC,EAAS,GAAG,CAC1B",
+  "names": ["join", "classes", "sep", "c"]
 }
