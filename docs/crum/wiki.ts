@@ -192,7 +192,7 @@ const NUMBER_GROUP = `(?: ${NUMBER}| ?\\(${NUMBER}(?: ${NUMBER})*\\))`;
 // Following a reference, these are annotations for 'vide' or 'legendum', rather
 // than part of the suffix.
 const SUFFIX = new RegExp(
-  `^\\.?${NUMBER_GROUP}+(?: &${NUMBER_GROUP}+)*(?<!\\b[vl])${str.ASSERT_NON_WORD.source}`,
+  `^\\.?${NUMBER_GROUP}+(?<!\\b[vl])${str.ASSERT_NON_WORD.source}`,
   'u'
 );
 const REFERENCE_FOLLOWUP = new RegExp(
