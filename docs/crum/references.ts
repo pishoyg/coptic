@@ -116,25 +116,34 @@ export class Reference {
 
     const tooltip = this.postfix?.tooltip();
     if (tooltip?.length) {
-      fragment.append(document.createElement('hr'), ...tooltip);
+      fragment.append(...tooltip);
     }
 
     return fragment;
   }
 
   /**
+   * Build a <span> for this reference and wire its tooltip in one pass.
+   * Annotations detected in `suffix` (e.g. manuscript or page-number tokens
+   * that follow the abbreviation) are folded into the tooltip at construction
+   * time.
    *
-   * @param raw
+   * @param content - Nodes/strings that make up the reference itself.
+   * @param suffix - Suffix nodes/strings that follow the reference.
    * @returns
    */
-  public span(...raw: (Node | string)[]): HTMLSpanElement {
+  public span(
+    content: (Node | string)[],
+    suffix: (Node | string)[] = []
+  ): HTMLSpanElement {
     const span: HTMLSpanElement = document.createElement('span');
     span.classList.add(cls.REFERENCE);
     span.dataset[Reference.DATA_REF] = this.raw();
-    span.append(...raw);
+    span.append(...content, ...suffix);
     const tooltip: (Node | string)[] = [
       ...(/^ib\b/i.test(span.textContent) ? [ibidem(true)] : []),
       ...(this.tooltip()?.childNodes ?? []),
+      ...Reference.suffixAnnotations(suffix),
     ];
     // TODO: (#522) This check will soon be unnecessary, because all references
     // will be guaranteed to have tooltips.
@@ -165,83 +174,31 @@ export class Reference {
   }
 
   /**
-   * Remove all tooltips, as well as `reference` tags.
+   * Extract annotation entries for any suffix
+   * tokens that match a known annotation abbreviation.
    *
-   * NOTE: We do NOT account for the case that the root itself is an artifact
-   * that needs to be gotten rid of.
-   *
-   * @param elem
+   * @param suffix
+   * @returns
    */
-  public static dereference(elem: ChildNode): void {
-    if (!(elem instanceof Element)) {
-      // This is probably a text node. Definitely no reference here! Do nothing!
-      return;
-    }
-
-    elem
-      .querySelectorAll(`.${drop.CLS.DROPPABLE}`)
-      .forEach((el: Element): void => {
-        el.remove();
-      });
-
-    // Remove the .reference span, retaining the children.
-    elem.querySelectorAll(`.${cls.REFERENCE}`).forEach((el: Element): void => {
-      el.replaceWith(...el.childNodes);
+  private static suffixAnnotations(
+    suffix: (Node | string)[]
+  ): (Node | string)[] {
+    return suffix.flatMap((node: string | Node): (Node | string)[] => {
+      const text = typeof node === 'string' ? node : (node.textContent ?? '');
+      const italic = node instanceof Element && node.nodeName === 'I';
+      ann.RE.lastIndex = 0;
+      return Array.from(text.matchAll(ann.RE))
+        .map((match: RegExpExecArray): string => match[0])
+        .flatMap((abb: string): (Node | string)[] => {
+          const annot = ann.MAPPING[abb];
+          return !annot?.suffix
+            ? []
+            : [
+                ...abbreviation(abb, italic),
+                html.maybeI(annot.fullForm, italic),
+              ];
+        });
     });
-  }
-
-  /**
-   *
-   * @param span
-   * @param {...any} suffix
-   *
-   * Isn't it better to endow the `Reference` class with a `suffix` field and
-   * grow this field, constructing a complete <span> tag at the end, instead of
-   * starting with a partial <span> tag and gradually growing it with suffixes?
-   *
-   * That would be a cleaner design, but it's not compatible with our current
-   * pipeline, which does several passes over the DOM.
-   * - In the first pass, references are detected, and marked with <span> tags
-   *   in the HTML.
-   * - In the second pass, reference suffixes (called "followups" in that
-   *   context) are picked up and added to the spans.
-   *
-   * We can't do the above in a single pass, as that would make it challenging
-   * to handle such cases as the following (where K is the variant of another
-   * source rather than a followup suffix of P):
-   *   P 44 66, K 179[1]
-   * See followup logic for more details.
-   *
-   * [1] https://remnqymi.com/crum/510.html#:~:text=P%2044%2066,%20K%20179
-   */
-  public static suffix(
-    span: HTMLSpanElement,
-    ...suffix: (string | Node)[]
-  ): void {
-    // Append the suffix.
-    span.append(...suffix);
-    // Expand the tooltip with any annotations from the suffix.
-    // TODO: (#0) It's better to use your own custom class, instead of relying
-    // on `drop.CLS.DROPPABLE`.
-    span.querySelector(`.${drop.CLS.DROPPABLE}`)?.append(
-      ...suffix.flatMap((node: string | Node): (Node | string)[] => {
-        const text = typeof node === 'string' ? node : (node.textContent ?? '');
-        const italic = node instanceof Element && node.nodeName === 'I';
-        ann.RE.lastIndex = 0;
-        return Array.from(text.matchAll(ann.RE))
-          .map((match: RegExpExecArray): string => match[0])
-          .flatMap((abb: string): (Node | string)[] => {
-            const annot = ann.MAPPING[abb];
-            return !annot?.suffix
-              ? []
-              : [
-                  document.createElement('hr'),
-                  ...abbreviation(abb, italic),
-                  html.maybeI(annot.fullForm, italic),
-                ];
-          });
-      })
-    );
   }
 }
 

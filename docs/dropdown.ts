@@ -1,12 +1,11 @@
 /** Package dropdown defines logic for droppables.
  * NOTE: The terms ‘droppable’ and ‘tooltip’ are used interchangeably.
  *
- * Droppables are implemented as native popovers and moved to <body> when
- * wired, so they render in the top layer and — crucially — no longer pollute
+ * Droppables are implemented as native popovers and live directly under
+ * <body>, so they render in the top layer and — crucially — never pollute
  * their trigger's textContent. That keeps text-fragment URLs, copy-paste, and
  * screen-reader output aligned with what the user actually sees.
  * */
-import * as str from './str.js';
 
 type Invocation = 'hover' | 'click';
 type Position = 'above' | 'below';
@@ -23,10 +22,6 @@ export enum CLS {
   /* ABOVE is the class for droppables that render above the element. */
   ABOVE = 'above',
 }
-
-/* Marker attribute so the same droppable isn't wired twice (e.g. if a parent
- * subtree is processed twice by addEventListeners). */
-const WIRED = 'data-droppable-wired';
 
 /* Delay (ms) between mouseleave and hiding a hover-invoked droppable, giving
  * the user time to move the cursor onto the popover itself. */
@@ -55,11 +50,6 @@ function wire(
   droppable: HTMLElement,
   inv: Invocation
 ): void {
-  if (droppable.hasAttribute(WIRED)) {
-    return;
-  }
-  droppable.setAttribute(WIRED, '');
-
   const anchor = `--droppable-${(++counter).toString()}`;
   parent.style.setProperty('anchor-name', anchor);
   droppable.style.setProperty('position-anchor', anchor);
@@ -113,51 +103,9 @@ function wire(
 }
 
 /**
- *
- * @param root
- * @param cls
- * @param inv
- */
-function addEventListenersAux(
-  root: HTMLElement,
-  cls: string,
-  inv: Invocation
-): void {
-  root
-    .querySelectorAll<HTMLElement>(`.${cls}`)
-    .forEach((parent: HTMLElement): void => {
-      /* Snapshot `parent.children` before iterating: it's a live
-       * HTMLCollection, and wire() removes the droppable from `parent` by
-       * reparenting it to <body>. Without the snapshot, that mid-iteration
-       * mutation shifts subsequent indices and would silently skip any
-       * later sibling. */
-      for (const child of [...parent.children]) {
-        if (child.classList.contains(CLS.DROPPABLE)) {
-          wire(parent, child as HTMLElement, inv);
-        }
-      }
-    });
-}
-
-/**
- * Wire every droppable in the subtree. Safe to call repeatedly and on
- * subtrees — each droppable is only wired once.
- *
- * @param root
- */
-export function addEventListeners(root: HTMLElement = document.body): void {
-  addEventListenersAux(root, CLS.DROP, 'click');
-  addEventListenersAux(root, CLS.DROPDOWN, 'hover');
-}
-
-/**
- * Build a droppable for the given parent and insert it as a child.
- *
- * NOTE: This only constructs the elements. {@link addEventListeners} must be
- * called later (typically once all DOM mutations on the subtree are done) to
- * wire the popovers and reparent them to <body>. Keeping the droppable inside
- * its trigger during construction lets callers continue to find it by
- * descending from the trigger.
+ * Build a droppable for the given parent, append it to <body> as a popover,
+ * anchor it to the parent via CSS anchor positioning, and attach the
+ * configured show/hide handlers.
  *
  * @param parent - An element that, when hovered or clicked, should display
  * the content.
@@ -189,7 +137,7 @@ export function addDroppable(
 
   parent.classList.add(invocation === 'hover' ? CLS.DROPDOWN : CLS.DROP);
 
-  parent.appendChild(droppable);
+  wire(parent as HTMLElement, droppable, invocation);
 }
 
 /**
@@ -200,20 +148,10 @@ export function addDroppable(
  */
 export function cleanupOrphans(): void {
   document.body
-    .querySelectorAll<HTMLElement>(`.${CLS.DROPPABLE}[${WIRED}]`)
+    .querySelectorAll<HTMLElement>(`.${CLS.DROPPABLE}[popover]`)
     .forEach((droppable: HTMLElement): void => {
       if (!triggers.get(droppable)?.isConnected) {
         droppable.remove();
       }
     });
-}
-
-/**
- * @param node
- * @returns the node's textContent with any nested droppables stripped. Once a
- * droppable has been wired it no longer lives inside its trigger, so this
- * only matters before wiring runs.
- */
-export function noTipTextContent(node: Node): string {
-  return str.textContent(node, { [`.${CLS.DROPPABLE}`]: '' });
 }

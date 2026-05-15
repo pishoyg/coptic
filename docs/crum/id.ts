@@ -32,6 +32,7 @@ export const CASE_SENSITIVE_CHECKBOX = 'case-sensitive-checkbox';
 export const REGEX_CHECKBOX = 'regex-checkbox';
 export const MESSAGE_BOX = 'message';
 export const DIALECTS = 'dialects';
+export const DIALECTS_BUTTON = 'dialects-button';
 // While we have two groups of checkboxes, confusingly enough, the unqualified
 // 'checkboxes' ID refers to the ones that show on a list, rather than the
 // ones that show in the drop-down menu. The reason this ID was used for those

@@ -56,7 +56,7 @@ input#search-box:focus {
 
   /* TODO: (#453) Show the keyboard on desktop once you have instructions for how
    * to install a keyboard on desktop. */
-  .drop,
+  #dialects-button,
   td#keyboard-td {
     display: none;
   }

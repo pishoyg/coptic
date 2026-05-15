@@ -625,7 +625,7 @@ export class SearchResult extends AggregateResult {
     const row: HTMLTableRowElement = document.createElement('tr');
     row.append(...cells);
     // Capture the initial text.
-    const text = (): string => orth.cleanDiacritics(drop.noTipTextContent(row));
+    const text = (): string => orth.cleanDiacritics(row.textContent);
     const originalText: string | undefined = dev.play(text);
     // We can not enrich a highlighted HTML, but we can highlight an enriched
     // HTML. Enrichment is more complex, and often relies on the HTML
@@ -656,9 +656,6 @@ export class SearchResult extends AggregateResult {
       cells[cells.length - 1]?.append(...this.viewForMore(href));
     }
     row.prepend(this.viewCell(href, total));
-    // Wire any droppables added during enrich. They get reparented to
-    // <body> at this point so they no longer pollute the row's textContent.
-    drop.addEventListeners(row);
     return row;
   }
 
@@ -670,18 +667,12 @@ export class SearchResult extends AggregateResult {
     const walker: TreeWalker = document.createTreeWalker(
       root,
       NodeFilter.SHOW_TEXT | NodeFilter.SHOW_ELEMENT,
-      (node: Node): number => {
-        if (node.nodeType === Node.ELEMENT_NODE) {
-          return (node as Element).matches(`.${drop.CLS.DROPPABLE}`)
-            ? // This is a tooltip, added by the enricher, and irrelevant for
-              // highlighting. Skip the whole subtree.
-              NodeFilter.FILTER_REJECT
-            : // Otherwise, skip this node, but proceed to process its children.
-              NodeFilter.FILTER_SKIP;
-        }
-        // This is a text node.
-        return NodeFilter.FILTER_ACCEPT;
-      }
+      (node: Node): number =>
+        node.nodeType === Node.ELEMENT_NODE
+          ? // Skip this node, but proceed to process its children.
+            NodeFilter.FILTER_SKIP
+          : // This is a text node.
+            NodeFilter.FILTER_ACCEPT
     );
 
     while (walker.nextNode()) {
@@ -697,9 +688,7 @@ export class SearchResult extends AggregateResult {
     // Since the matches were obtained on the diacritic-free text,
     // while the HTMl is constructed with text that potentially contains
     // diacritics, we need to translate all matches accordingly.
-    const translation: orth.Translation = orth.translation(
-      drop.noTipTextContent(row)
-    );
+    const translation: orth.Translation = orth.translation(row.textContent);
 
     // Reverse the order of the matches.
     // We `.pop()` from the end, so we're processing matches in ascending order.

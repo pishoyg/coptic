@@ -353,34 +353,86 @@ const XOOXLES: Xooxle[] = [
 ];
 
 /**
- *
+ * @returns
  */
-function addDropdownDialects(): void {
-  document.querySelector(`#${id.DIALECTS} .${drop.CLS.DROPPABLE}`)!.append(
-    ...Object.values(dial.DIALECTS).map(
-      (dialect: dial.Dialect): HTMLElement => {
+function addDropdownDialects(): {
+  button: HTMLElement;
+  checkboxes: HTMLInputElement[];
+} {
+  const button: HTMLElement = document.getElementById(id.DIALECTS_BUTTON)!;
+  const checkboxes: HTMLInputElement[] = [];
+  drop.addDroppable(
+    button,
+    Object.values(dial.DIALECTS).map(
+      (dialect: dial.Dialect): HTMLLabelElement => {
         const label: HTMLLabelElement = document.createElement('label');
-        label.append(dialect.checkbox(), ...dialect.title());
+        const checkbox: HTMLInputElement = dialect.checkbox();
+        checkboxes.push(checkbox);
+        label.append(checkbox, ...dialect.title());
         return label;
       }
-    )
+    ),
+    [],
+    'click'
   );
+  return { button, checkboxes };
 }
 
 /**
- *
+ * Attach the explanatory tooltips that hang off each form checkbox.
  */
-function addListDialects(): void {
+function addCheckboxTooltips(): void {
+  const examples: HTMLAnchorElement = html.anchor(
+    'https://docs.google.com/document/d/1bj275wUb_-zXxJmeLjj986XICpaVm7QWaoN2U8FLQ3k',
+    true,
+    'examples'
+  );
+  examples.rel = 'noopener noreferrer';
+  const cheatSheet: HTMLAnchorElement = html.anchor(
+    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet',
+    true,
+    'cheat sheet'
+  );
+  cheatSheet.rel = 'noopener noreferrer';
+
+  const tooltips: [string, (Node | string)[]][] = [
+    [id.FULL_WORD_CHECKBOX, ['Force match at word boundaries']],
+    [id.CASE_SENSITIVE_CHECKBOX, ['Case-sensitive']],
+    [
+      id.REGEX_CHECKBOX,
+      ['Use regular expressions (', examples, ', ', cheatSheet, ' )'],
+    ],
+    [id.MARCION_CHECKBOX, ['Only search the summary']],
+    // TODO: (#503) Drop the progress note once the wiki is fully populated.
+    [id.WIKI_CHECKBOX, ['Only search the full text (90% complete)']],
+  ];
+
+  for (const [checkbox, content] of tooltips) {
+    const label: HTMLLabelElement = document.querySelector<HTMLLabelElement>(
+      `label[for="${checkbox}"]`
+    )!;
+    drop.addDroppable(label, content, [cls.EXPLAIN_CHECKBOX]);
+  }
+}
+
+/**
+ * @returns
+ */
+function addListDialects(): HTMLInputElement[] {
+  const checkboxes: HTMLInputElement[] = [];
   document.querySelector(`#${id.DIALECTS} #${id.CHECKBOXES}`)!.append(
     ...Object.values(dial.DIALECTS).map(
       (dialect: dial.Dialect): HTMLElement => {
         const label: HTMLLabelElement = document.createElement('label');
-        label.append(dialect.checkbox(), dialect.siglum());
+        const checkbox: HTMLInputElement = dialect.checkbox();
+        checkboxes.push(checkbox);
+        label.append(checkbox, dialect.siglum());
         drop.addDroppable(label, Array.from(dialect.anchoredName()));
         return label;
       }
     )
   );
+  return checkboxes;
 }
 
 /**
@@ -389,21 +441,15 @@ function addListDialects(): void {
 async function main(): Promise<void> {
   // We have a drop-down element bearing the dialects (intended for small
   // screens).
-  addDropdownDialects();
+  const { button: dialectsButton, checkboxes: dropdownCheckboxes } =
+    addDropdownDialects();
   // We also have a second dialect list outside the dropdown (intended to be
   // shown on large screens).
-  addListDialects();
+  const listCheckboxes: HTMLInputElement[] = addListDialects();
+  addCheckboxTooltips();
 
   const manager: dial.Manager = new dial.Manager();
 
-  // Add event listeners for our click-invoked tooltips.
-  drop.addEventListeners();
-
-  const dropDialects: NodeListOf<HTMLElement> =
-    document.querySelectorAll<HTMLElement>(`#${id.DIALECTS} .${drop.CLS.DROP}`);
-  // Validate dropdown dialects, regardless of whether or not we end up using
-  // them.
-  log.ensure(dropDialects.length === 1);
   if (manager.setToDefaultIfUnset()) {
     // In order to alert the user to the fact that dialect selection has
     // changed, we make sure the dialect list is visible.
@@ -412,16 +458,13 @@ async function main(): Promise<void> {
     // initialization.
     // It should also follow registration of event listeners, so that clicking
     // on the button will actually show the dialects.
-    dropDialects[0]?.click();
+    dialectsButton.click();
   }
 
-  const highlighter: high.Highlighter = new high.Highlighter(
-    manager,
-    // Retrieve the boxes created above.
-    Array.from(
-      document.querySelectorAll<HTMLInputElement>(`#${id.DIALECTS} input`)
-    )
-  );
+  const highlighter: high.Highlighter = new high.Highlighter(manager, [
+    ...dropdownCheckboxes,
+    ...listCheckboxes,
+  ]);
   SearchResult.init(manager, highlighter);
 
   // Initialize searchers.

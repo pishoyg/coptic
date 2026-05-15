@@ -87,8 +87,6 @@ function main(): void {
   const title: HTMLElement = document.querySelector(`.${cls.TITLE}`)!;
   title.insertAdjacentElement('afterend', bar);
   title.insertAdjacentElement('afterend', holder);
-
-  drop.addEventListeners();
 }
 
 main();

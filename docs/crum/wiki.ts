@@ -243,7 +243,8 @@ function textContent(wiki: HTMLElement): string {
   // the original text.
   // Additionally, we add a copy button, and we should get rid of that as well.
   return str.textContent(wiki, {
-    [css.disjunction(drop.CLS.DROPPABLE, cls.COPY)]: '',
+    [`.${cls.COPY}`]: '',
+    del: '',
   });
 }
 
@@ -323,13 +324,16 @@ export function handle(root: HTMLElement): void {
  */
 function annotation(tip: string, ...children: (Node | string)[]): Element {
   let elem: Element;
+  let italic: boolean;
   if (children.length === 1 && children[0] instanceof Element) {
     elem = children[0];
+    italic = elem.nodeName === 'I';
   } else {
     elem = document.createElement('span');
     elem.append(...children);
+    italic = children.every((e) => e instanceof Node && e.nodeName === 'I');
   }
-  drop.addDroppable(elem, [html.maybeI(tip, elem.nodeName === 'I')]);
+  drop.addDroppable(elem, [html.maybeI(tip, italic)]);
   elem.classList.add(cls.ANNOTATION);
   return elem;
 }
@@ -835,6 +839,13 @@ function* suffixFollowups(
   maybeSUP: Node | null | undefined,
   between: string
 ): Generator<Node | string> {
+  // TODO: (#0) This function considers the possibility
+  // that our match has following <sup> element that is part of the suffix.
+  // Right now, our code doesn't account for the possibility that such a
+  // superscript is followed by a comma that is followed by more suffixes.
+  // We have never encountered such a case in reality, so we dismiss this
+  // possibility for the time being.
+
   if (between) {
     // There is text before the superscript that is suspected to be part of the
     // suffix.
@@ -881,22 +892,18 @@ function replaceReference(
     return undefined;
   }
 
-  const span: HTMLSpanElement = ref.MAPPING[key]!.span(
-    ...context.substring(key.length)
-  );
+  const content: (Node | string)[] = [...context.substring(key.length)];
 
   if (!suffix) {
-    return { replacement: [span] };
+    return { replacement: [ref.MAPPING[key]!.span(content)] };
   }
 
   // Chop off the suffix from the remainder.
   const remainder = context.remainder.slice(suffix.length);
-  // Append the suffix.
-  ref.Reference.suffix(
-    span,
+  const span: HTMLSpanElement = ref.MAPPING[key]!.span(content, [
     ...context.substring(suffix.length, key.length),
-    ...suffixFollowups(context.chainNextSibling, remainder)
-  );
+    ...suffixFollowups(context.chainNextSibling, remainder),
+  ]);
 
   return { replacement: [span], munch: suffix.length };
 }
@@ -1135,14 +1142,12 @@ function handleReferenceFollowups(root: HTMLElement): void {
         return;
       }
       nextSibling.nodeValue = text.slice(match[0].length);
-      // TODO: (#0) The `suffixFollowups` function considers the possibility
-      // that our match has following <sup> element that is part of the suffix.
-      // Right now, our code doesn't account for the possibility that such a
-      // superscript is followed by a comma that is followed by more suffixes.
-      // We have never encountered such a case in reality, so we dismiss this
-      // possibility for the time being.
-      ref.Reference.suffix(
-        reference,
+
+      // TODO: (#676) Suffix annotations in followups don't get added to the
+      // tooltip. Fix once you can implement enrichment in a single pass, in
+      // which case the tooltip will only need to be constructed once, and can
+      // be readily constructed with all annotations from the first place.
+      reference.append(
         match[0],
         ...suffixFollowups(nextSibling.nextSibling, nextSibling.nodeValue)
       );
@@ -1184,7 +1189,7 @@ function handleManual(manual: HTMLElement): void {
     const reference: ref.Reference | undefined = ref.MAPPING[key];
     if (reference) {
       // This represents a reference.
-      manual.replaceWith(reference.span(...manual.childNodes));
+      manual.replaceWith(reference.span([...manual.childNodes]));
       return;
     }
 
@@ -1204,7 +1209,7 @@ function handleManual(manual: HTMLElement): void {
   if (match?.index === 0) {
     // We can infer the reference from the text.
     const reference: ref.Reference = ref.MAPPING[match[0]]!;
-    const span: HTMLSpanElement = reference.span(...manual.childNodes);
+    const span: HTMLSpanElement = reference.span([...manual.childNodes]);
     manual.replaceWith(span);
     return;
   }
@@ -1237,14 +1242,13 @@ function handleReferenceIB(
   context: html.ReplaceNodesContext
 ): html.ReplaceNodesResult {
   const reference: ref.Reference = ref.Reference.fromSpan(antecedent);
-
-  const span: HTMLSpanElement = reference.span(ib.cloneNode(true));
+  const content: Node[] = [ib.cloneNode(true)];
 
   // Extract a suffix, if available.
   const suffix: string | undefined = SUFFIX.exec(context.remainder)?.[0];
   if (!suffix) {
     // No suffix!
-    return { replacement: [span] };
+    return { replacement: [reference.span(content)] };
   }
 
   // TODO: (#671) In some cases, the first token in the suffix is actually
@@ -1257,11 +1261,10 @@ function handleReferenceIB(
   //      The ibidem reference should be interpreted as "BMOr".he reference
   //      abbreviation.
   const remainder = context.remainder.slice(suffix.length);
-  ref.Reference.suffix(
-    span,
+  const span: HTMLSpanElement = reference.span(content, [
     suffix,
-    ...suffixFollowups(context.chainNextSibling, remainder)
-  );
+    ...suffixFollowups(context.chainNextSibling, remainder),
+  ]);
 
   return { replacement: [span], munch: suffix.length };
 }
@@ -1462,11 +1465,8 @@ function entryText(entry: Element): string {
   return Array.from(entry.querySelectorAll('p'))
     .map((p: HTMLParagraphElement): string =>
       Array.from(p.querySelectorAll(`.${cls.SUBPARAGRAPH}`))
-        .map((element: Element) =>
-          // Drop tooltips, and <del> tags (which are used for additions and
-          // corrections).
-          str.textContent(element, { [`.${drop.CLS.DROPPABLE}`]: '', del: '' })
-        )
+        // Drop `<del>` tags, which are used for omissions.
+        .map((element: Element) => str.textContent(element))
         .map((text: string): string => `    ${text}`)
         .join('')
     )

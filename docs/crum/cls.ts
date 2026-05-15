@@ -42,6 +42,7 @@ export const DIALECT = 'dialect';
 export const DRV_KEY = 'drv-key';
 export const DRV_LINK = 'drv-link';
 export const ENTRY = 'entry';
+export const EXPLAIN_CHECKBOX = 'explain-checkbox';
 export const EXPLANATORY = 'explanatory';
 export const EXPLANATORY_KEY = 'explanatory-key';
 export const GLOSS = 'gloss';

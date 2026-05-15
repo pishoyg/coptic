@@ -66,21 +66,16 @@
     <table>
       <tr>
         <td id="dialects">
-          <div>
-            <div class="drop">
-              Dialects ▾
-              <div class="droppable">
-                <!--Dialect checkboxes go here.-->
-              </div>
-            </div>
+          <div id="dialects-button">
+            Dialects ▾
           </div>
           <span id="checkboxes">Highlight Dialects:&nbsp; <!--Dialect checkboxes go here.--></span>
         </td>
-        <td id="full-word-checkbox-td"><label class="dropdown" for="full-word-checkbox"><input id="full-word-checkbox" type="checkbox"> Full-Word<span class="droppable explain-checkbox">Force match at word boundaries</span></label>
+        <td id="full-word-checkbox-td"><label for="full-word-checkbox"><input id="full-word-checkbox" type="checkbox"> Full-Word</label>
         </td>
-        <td id="case-sensitive-checkbox-td"><label class="dropdown" for="case-sensitive-checkbox"><input id="case-sensitive-checkbox" type="checkbox"> Case<span class="droppable explain-checkbox">Case-sensitive</span></label>
+        <td id="case-sensitive-checkbox-td"><label for="case-sensitive-checkbox"><input id="case-sensitive-checkbox" type="checkbox"> Case</label>
         </td>
-        <td id="regex-checkbox-td"><label class="dropdown" for="regex-checkbox"><input id="regex-checkbox" type="checkbox">RegEx <span class="droppable explain-checkbox">Use regular expressions (<a href="https://docs.google.com/document/d/1bj275wUb_-zXxJmeLjj986XICpaVm7QWaoN2U8FLQ3k" rel="noopener noreferrer" target="_blank">examples</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet" rel="noopener noreferrer" target="_blank">cheat sheet</a> )</span></label>
+        <td id="regex-checkbox-td"><label for="regex-checkbox"><input id="regex-checkbox" type="checkbox">RegEx</label>
         </td>
       </tr>
     </table>
@@ -96,9 +91,9 @@
       <td>
         <h3 id="crum-title" class="collapse arrowed">A Coptic Dictionary<span id="w-e-crum">, W. E. Crum</span></h3>
       </td>
-      <td id="marcion-checkbox-td"><label class="dropdown" for="marcion-checkbox"><input id="marcion-checkbox" type="checkbox">Marcion<span class="droppable explain-checkbox">Only search the summary</span></label>
+      <td id="marcion-checkbox-td"><label for="marcion-checkbox"><input id="marcion-checkbox" type="checkbox">Marcion</label>
       </td>
-      <td id="wiki-checkbox-td"><label class="dropdown" for="wiki-checkbox"><input id="wiki-checkbox" type="checkbox">Wiki <span id="experimental">(WIP)</span><span class="droppable explain-checkbox">Only search the full text (90% complete) <!--TODO: (#503) Delete when fully populated.--></span></label>
+      <td id="wiki-checkbox-td"><label for="wiki-checkbox"><input id="wiki-checkbox" type="checkbox">Wiki <span id="experimental">(WIP)</span></label>
       </td>
     </tr>
   </table>
