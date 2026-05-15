@@ -4,21 +4,23 @@ import * as css from './css.js';
 /**
  * Creates an anchor element with the specified href and children.
  *
+ * An href that doesn't start with '#' is treated as external: the link opens
+ * in a new tab and carries `rel="noopener noreferrer"`. Same-page anchors
+ * (`#...`) get neither.
+ *
  * @param href - The URL that the hyperlink points to.
- * @param external - Whether the link should open in a new tab. Defaults to true
- * if the href doesn't start with '#'.
  * @param children - The children nodes or strings to append to the anchor.
  * @returns The created HTMLAnchorElement.
  */
 export function anchor(
   href: string,
-  external?: boolean,
   ...children: (Node | string)[]
 ): HTMLAnchorElement {
   const a: HTMLAnchorElement = document.createElement('a');
   a.href = href;
-  if (external ?? !href.startsWith('#')) {
+  if (!href.startsWith('#')) {
     a.target = '_blank';
+    a.rel = 'noopener noreferrer';
   }
   a.append(...children);
   return a;
@@ -44,7 +46,6 @@ export function maybeI(content: Node | string, flag?: boolean): Node | string {
  *
  * @param el - The element whose children should be linkified.
  * @param href - The URL that the hyperlink points to.
- * @param external - Whether the link should open in a new tab.
  * @param classes - Additional CSS classes to add to the anchor.
  *
  * TODO: (#0): Use this method more widely.
@@ -52,10 +53,9 @@ export function maybeI(content: Node | string, flag?: boolean): Node | string {
 export function linkify(
   el: HTMLElement,
   href: string,
-  external?: boolean,
   ...classes: string[]
 ): void {
-  const a: HTMLAnchorElement = anchor(href, external, ...el.childNodes);
+  const a: HTMLAnchorElement = anchor(href, ...el.childNodes);
   a.classList.add(...classes);
   el.append(a);
 }
@@ -417,7 +417,7 @@ export function linkifyText(
           }
 
           // Create a link.
-          const a = anchor(targetUrl, true, match[0]);
+          const a = anchor(targetUrl, match[0]);
           a.classList.add(...classes);
           return [a];
         }

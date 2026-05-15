@@ -107,6 +107,15 @@ function wire(
  * anchor it to the parent via CSS anchor positioning, and attach the
  * configured show/hide handlers.
  *
+ * NOTE: Wiring is eager — the popover is reparented to <body> and registered
+ * in the orphan-tracking WeakMap synchronously, regardless of whether the
+ * parent is connected to the document yet. Callers are free to wire tooltips
+ * on detached subtrees, but they must connect the parent in the *same*
+ * synchronous turn. If control yields (via `await` or otherwise) between
+ * `addDroppable` and the moment the parent is connected, an interleaved
+ * `cleanupOrphans()` call will see the parent as disconnected and wrongly
+ * delete the freshly-wired popover.
+ *
  * @param parent - An element that, when hovered or clicked, should display
  * the content.
  * @param content - The content that shows when the drop element is hovered.

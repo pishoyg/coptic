@@ -414,7 +414,6 @@ function handlePage(
   const replacement: (Node | string)[] = [];
   let a = html.anchor(
     paths.crumScan(`${match[1]!}${match[2] ?? ''}`),
-    true,
     ...context.substring(match[0].length)
   );
   a.classList.add(cls.PAGE);
@@ -431,7 +430,6 @@ function handlePage(
     replacement.push(comma);
     a = html.anchor(
       paths.crumScan(`${match[2]!}${match[3] ?? ''}`),
-      true,
       ...context.substring(
         match[0].length - comma.length,
         key.length + munch + comma.length
@@ -549,7 +547,6 @@ class Citation {
     } else {
       elem = html.anchor(
         paths.bible(this.book.path, this.chapter, this.verse),
-        true,
         ...content
       );
     }
@@ -1322,7 +1319,7 @@ function handlePageIB(
   // An example is 1730 (ⲟⲩⲱⲛⲅ):
   //   https://remnqymi.com/crum/1730.html
   // We don't expect a suffix to be present.
-  const a = html.anchor(antecedent.href, true, ib.cloneNode(true));
+  const a = html.anchor(antecedent.href, ib.cloneNode(true));
   drop.addDroppable(a, [ref.ibidem()]);
   return a;
 }

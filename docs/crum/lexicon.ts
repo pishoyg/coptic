@@ -384,16 +384,12 @@ function addDropdownDialects(): {
 function addCheckboxTooltips(): void {
   const examples: HTMLAnchorElement = html.anchor(
     'https://docs.google.com/document/d/1bj275wUb_-zXxJmeLjj986XICpaVm7QWaoN2U8FLQ3k',
-    true,
     'examples'
   );
-  examples.rel = 'noopener noreferrer';
   const cheatSheet: HTMLAnchorElement = html.anchor(
     'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet',
-    true,
     'cheat sheet'
   );
-  cheatSheet.rel = 'noopener noreferrer';
 
   const tooltips: [string, (Node | string)[]][] = [
     [id.FULL_WORD_CHECKBOX, ['Force match at word boundaries']],
@@ -514,7 +510,7 @@ async function main(): Promise<void> {
 
   // Add event listener for reports.
   // TODO: (#203) This belongs in the (future) header module.
-  html.linkify(document.getElementById(id.REPORTS)!, head.reports(), true);
+  html.linkify(document.getElementById(id.REPORTS)!, head.reports());
 
   // TODO: (#203) Implement in the `header` package.
   crum.handleDeveloper(document.body, devHighlighter);

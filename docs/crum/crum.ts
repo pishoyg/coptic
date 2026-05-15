@@ -173,7 +173,7 @@ export function handleExplanatory(root: HTMLElement): void {
       // TODO: (#258) Ensure all image sources are populated.
       return;
     }
-    const a = html.anchor(alt, true, img);
+    const a = html.anchor(alt, img);
     el.prepend(a);
   });
 }
@@ -250,12 +250,7 @@ export function handleExplanatoryKey(root: HTMLElement): void {
   root
     .querySelectorAll<HTMLElement>(`.${cls.EXPLANATORY_KEY}`)
     .forEach((el) => {
-      html.linkify(
-        el,
-        `#explanatory${el.textContent.trim()}`,
-        false,
-        ccls.HOVER_LINK
-      );
+      html.linkify(el, `#explanatory${el.textContent.trim()}`, ccls.HOVER_LINK);
     });
 }
 
@@ -265,7 +260,7 @@ export function handleExplanatoryKey(root: HTMLElement): void {
  */
 export function handleSisterKey(root: HTMLElement): void {
   root.querySelectorAll<HTMLElement>(`.${cls.SISTER_KEY}`).forEach((el) => {
-    html.linkify(el, `#sister${el.textContent.trim()}`, false, ccls.HOVER_LINK);
+    html.linkify(el, `#sister${el.textContent.trim()}`, ccls.HOVER_LINK);
   });
 }
 

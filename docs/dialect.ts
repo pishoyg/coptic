@@ -68,7 +68,7 @@ export class Dialect<C extends string, N extends string, K extends string> {
       return;
     }
 
-    yield html.anchor(this.article, true, this.name);
+    yield html.anchor(this.article, this.name);
   }
 
   /**
