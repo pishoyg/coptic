@@ -116,7 +116,7 @@ export class Reference {
 
     const tooltip = this.postfix?.tooltip();
     if (tooltip?.length) {
-      fragment.append(...tooltip);
+      fragment.append(document.createElement('br'), ...tooltip);
     }
 
     return fragment;
