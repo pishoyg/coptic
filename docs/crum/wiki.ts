@@ -889,6 +889,20 @@ function replaceReference(
     return undefined;
   }
 
+  if (['P', 'K', 'H'].includes(key)) {
+    // In some cases, for the sake of brevity, following a Mani citation, Crum
+    // cites following citations without the prefix "Mani".
+    // For example, see 2164 (ϩⲁⲗⲙⲉ) and 2335 (ϩⲁϣϩϣ).
+    const antecedent: HTMLElement | null = findAntecedent(context);
+    if (
+      antecedent &&
+      antecedent.classList.contains(cls.REFERENCE) &&
+      ref.Reference.fromSpan(antecedent).variant === 'Mani'
+    ) {
+      key = `Mani ${key}`;
+    }
+  }
+
   const content: (Node | string)[] = [...context.substring(key.length)];
 
   if (!suffix) {

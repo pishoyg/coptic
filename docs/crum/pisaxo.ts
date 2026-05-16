@@ -1268,45 +1268,17 @@ export const DATA_1: Resource[] = [
   },
   {
     source: {
-      title:
-        'copies of Chester Beatty’s unpublished Manichaean papyri by H. J. Polotsky & H. Thompson',
+      title: 'Manichaean',
     },
-    variants: ['Mani 1'],
-  },
-  {
-    source: {
-      title:
-        'copies of Chester Beatty’s unpublished Manichaean papyri by H. J. Polotsky & H. Thompson; at Berlin',
+    variants: ['Mani', 'Ma'],
+    postfixes: {
+      '1': 'copies of Chester Beatty’s unpublished Manichaean papyri by H. J. Polotsky &amp; H. Thompson',
+      '2': 'copies of Chester Beatty’s unpublished Manichaean papyri by H. J. Polotsky &amp; H. Thompson; at Berlin',
+      H: 'Manichäische Homelien, ed. Polotsky, 1934 <ul><li>Polotsky, H. J. (1934). <em><a href="https://archive.org/details/manichaischehomi0000polo/page/n5/mode/2up">Manichäische Homilien</a></em>. (Manichäische Handschriften der Sammlung A. Chester Beatty, Band I). Stuttgart: W. Kohlhammer.</li></ul>',
+      K: 'Kephalaia, edd. Polotsky &amp; A. Böhlig, 1934 ff <ul><li>Polotsky, H. J. (1940). <em><a href="https://archive.org/details/kephalaia0000mani/page/n1/mode/2up">Kephalaia. 1. Hälfte (Lieferung 1-10)</a></em>. (Manichäische Handschriften der Staatslichen Museen Berlin, Band I). Stuttgart: W. Kohlhammer.</li><li>Böhlig, A. (1966). <em><a href="https://archive.org/details/kephalaia0001staa/page/n5/mode/2up">Kephalaia. 2. Hälfte (Lieferung 11-12)</a></em>. (Manichäische Handschriften der Staatslichen Museen Berlin, Band I). Stuttgart: W. Kohlhammer.</li></ul>',
+      P: 'A Manichaean Psalm-book, Pt. ii, ed. C. R. C. Allberry, 1938 <ul><li>Allberry, C. R. C. (1938). <em><a href="https://archive.org/details/manichaeanpsalmb0000allb/page/n5/mode/2up">A Manichean Psalm-Book, Part II</a></em>. (Manichean Manuscripts in the Chester Beatty Collection, Volume II). Stuttgart: W. Kohlhammer.</li></ul>',
+      'Berl Sitz': LOOKUP,
     },
-    variants: ['Mani 2'],
-  },
-  {
-    source: {
-      title: 'Manichäische Homelien, ed. Polotsky, 1934',
-      description: [
-        'Polotsky, H. J. (1934). <em><a href="https://archive.org/details/manichaischehomi0000polo/page/n5/mode/2up">Manichäische Homilien</a></em>. (Manichäische Handschriften der Sammlung A. Chester Beatty, Band I). Stuttgart: W. Kohlhammer.',
-      ],
-    },
-    variants: ['Mani H'],
-  },
-  {
-    source: {
-      title: 'Kephalaia, edd. Polotsky & A. Böhlig, 1934 ff',
-      description: [
-        'Polotsky, H. J. (1940). <em><a href="https://archive.org/details/kephalaia0000mani/page/n1/mode/2up">Kephalaia. 1. Hälfte (Lieferung 1-10)</a></em>. (Manichäische Handschriften der Staatslichen Museen Berlin, Band I). Stuttgart: W. Kohlhammer.',
-        'Böhlig, A. (1966). <em><a href="https://archive.org/details/kephalaia0001staa/page/n5/mode/2up">Kephalaia. 2. Hälfte (Lieferung 11-12)</a></em>. (Manichäische Handschriften der Staatslichen Museen Berlin, Band I). Stuttgart: W. Kohlhammer.',
-      ],
-    },
-    variants: ['Mani K'],
-  },
-  {
-    source: {
-      title: 'A Manichaean Psalm-book, Pt. ii, ed. C. R. C. Allberry, 1938',
-      description: [
-        'Allberry, C. R. C. (1938). <em><a href="https://archive.org/details/manichaeanpsalmb0000allb/page/n5/mode/2up">A Manichean Psalm-Book, Part II</a></em>. (Manichean Manuscripts in the Chester Beatty Collection, Volume II). Stuttgart: W. Kohlhammer.',
-      ],
-    },
-    variants: ['Mani P'],
   },
   {
     source: {
@@ -2440,9 +2412,6 @@ export const DATA_2: Resource[] = [
   },
   {
     variants: ['Ludolf'],
-  },
-  {
-    variants: ['Mani Berl Sitz'],
   },
   {
     variants: ['Mart Viktor ed Lemm'],
