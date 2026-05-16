@@ -194,16 +194,19 @@ export class Reference {
       const text = typeof node === 'string' ? node : (node.textContent ?? '');
       const italic = node instanceof Element && node.nodeName === 'I';
       ann.RE.lastIndex = 0;
+
       return Array.from(text.matchAll(ann.RE))
         .map((match: RegExpExecArray): string => match[0])
         .flatMap((abb: string): (Node | string)[] => {
           const annot = ann.MAPPING[abb];
-          return !annot?.suffix
-            ? []
-            : [
-                ...abbreviation(abb, italic),
-                html.maybeI(annot.fullForm, italic),
-              ];
+          if (!annot?.suffix) {
+            return [];
+          }
+          return [
+            document.createElement('br'),
+            ...abbreviation(abb, italic),
+            html.maybeI(annot.fullForm, italic),
+          ];
         });
     });
   }
