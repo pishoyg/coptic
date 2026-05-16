@@ -57,6 +57,11 @@ export const HEBREW = 'hebrew';
 export const IBIDEM = 'ibidem';
 export const INDEX_TABLE = 'index-table';
 /**
+ * LANG is a language in a KELLIA meaning column (as of now, either "En", "Fr",
+ * or "De").
+ */
+export const LANG = 'lang';
+/**
  * ROMAN is the class of roman (non-italic) text in the meaning of a word.
  */
 export const ROMAN = 'roman';
