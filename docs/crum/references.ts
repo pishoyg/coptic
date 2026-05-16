@@ -64,10 +64,6 @@ export class Source {
         li.innerHTML = innerHTML;
         ul.append(li);
       });
-      ul.querySelectorAll('a').forEach((a: HTMLAnchorElement): void => {
-        a.target = '_blank';
-        a.rel = 'noreferrer noopener';
-      });
       this.descriptionMemo = ul;
     }
     return this.descriptionMemo.cloneNode(true) as HTMLUListElement;
@@ -145,6 +141,17 @@ export class Reference {
       ...(this.tooltip()?.childNodes ?? []),
       ...Reference.suffixAnnotations(suffix),
     ];
+
+    // Make all hyperlinks in the tooltip external.
+    tooltip
+      .filter((n: Node | string) => n instanceof Element)
+      .forEach((node: Element): void => {
+        node.querySelectorAll('a').forEach((a: HTMLAnchorElement): void => {
+          a.target = '_blank';
+          a.rel = 'noreferrer noopener';
+        });
+      });
+
     // TODO: (#522) This check will soon be unnecessary, because all references
     // will be guaranteed to have tooltips.
     if (tooltip.length) {
