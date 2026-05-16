@@ -391,7 +391,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'title', variants: ['tit'], noCaseVariant: true },
   { fullForm: 'translation, translated', variants: ['transl'] },
   { fullForm: 'variants', variants: ['varr', 'vars'] },
-  { fullForm: 'ultimo', variants: ['ult'] },
+  { fullForm: 'ultimo', variants: ['ult'], suffix: true },
   { fullForm: 'uncatalogued', variants: ['uncatal'], suffix: true },
   { fullForm: 'unpublished', variants: ['unpubl'], suffix: true },
   { fullForm: 'ut supra', variants: ['ut sup'], suffix: true },
