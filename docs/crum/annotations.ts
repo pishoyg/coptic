@@ -386,6 +386,8 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'supra', variants: ['sup', 'supra'], suffix: true },
   { fullForm: 'Syriac', variants: ['syr'] }, // Encountered once (as of the time of writing).
   { fullForm: 'tabula', variants: ['tab'], suffix: true },
+  // "Tafel" is German for "Table". It's used as a suffix to German references.
+  { fullForm: 'Tafel', variants: ['Taf'], suffix: true, noCaseVariant: true },
   { fullForm: 'title', variants: ['tit'], noCaseVariant: true },
   { fullForm: 'translation, translated', variants: ['transl'] },
   { fullForm: 'variants', variants: ['varr', 'vars'] },
