@@ -591,7 +591,7 @@ export const DATA_1: Resource[] = [
         'Crum, W. E. (1902). <em><a href="https://archive.org/details/copticostracafr00fundgoog/page/n4/mode/2up">Coptic Ostraca from the collections of the Egypt Exploration Fund, the Cairo Museum, and others</a></em>. London: Egypt Exploration Fund.',
       ],
     },
-    variants: ['CO'],
+    variants: ['C O'],
     postfixes: {
       Ad: 'Addenda to lithographed texts',
       Index: undefined,
@@ -2347,7 +2347,7 @@ export const DATA_2: Resource[] = [
     variants: ['Antony Hist Laus', 'Hist Laus'],
   },
   {
-    variants: ['Baynes'],
+    variants: ['C Baynes'],
   },
   {
     variants: ['Bell'],
