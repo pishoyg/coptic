@@ -307,7 +307,7 @@ repos:
     rev: v2.4.1
     hooks:
       - id: doctoc
-        exclude: CLAUDE.md
+        exclude: .claude|CLAUDE.md
 
   # YAML
   - repo: https://github.com/google/yamlfmt
