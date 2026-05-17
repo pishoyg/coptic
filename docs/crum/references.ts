@@ -200,6 +200,7 @@ export class Reference {
         .flatMap((abb: string): (Node | string)[] => {
           const annot = ann.MAPPING[abb];
           if (!annot?.suffix) {
+            log.warn('Non-suffix annotation found in suffix:', abb);
             return [];
           }
           return [
