@@ -207,8 +207,16 @@ class CrumSearchResult extends SearchResult {
    * @param row
    */
   public override enrich(row: HTMLTableRowElement): void {
-    crum.addGreekLookups(row);
-    crum.handleDialect(row, CrumSearchResult.highlighter);
+    if (this.marcion()) {
+      crum.addGreekLookups(row);
+      crum.handleDialect(row, CrumSearchResult.highlighter);
+      return;
+    }
+    dev.play(() => {
+      // Sanity check.
+      log.ensure(this.wiki());
+    });
+
     wiki.enrich(row);
     wiki.handleReferenceFollowups(row);
     wiki.handleBibleFollowups(row);
