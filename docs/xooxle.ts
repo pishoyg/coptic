@@ -382,7 +382,7 @@ export class Form {
     const el = document.createElement('div');
     el.classList.add(CLS.ERROR);
     el.textContent = message;
-    this.messageBox.replaceChildren(el);
+    this.messageBox.append(el);
   }
 
   /**
