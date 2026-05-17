@@ -622,9 +622,9 @@ export const DATA_1: Resource[] = [
     source: {
       title: 'The Difnar, ed. O’Leary, I, II, III, 1926-30',
       description: [
-        'O’Leary, De L. (1926). <em><a href="https://iiif.lib.harvard.edu/manifests/view/drs:497805580$5i">The Difnar (Antiphonarium) of the Coptic Church (first four months) from the Manuscript in the John Rylands Library, Manchester, with fragments of a Difnar recently recovered at the Der Abu Makar in the Wadi n-Natrun</a></em>. London: Luzac &amp; Co.',
-        'O’Leary, De L. (1928). <em><a href="https://iiif.lib.harvard.edu/manifests/view/drs:497805580$137i">The Difnar (Antiphonarium) of the Coptic Church</a><a href="https://www.copticplace.org/files/Difnar2.pdf">: Part II (second four months, Tubeh, Amshir, Barmahat and Barmuda) from the Vatican Codex Copt. Borgia 59</a></em>. London: Luzac &amp; Co.',
-        'O’Leary, De L. (1930). <em><a href="https://iiif.lib.harvard.edu/manifests/view/drs:497805854$1i">The Difnar (Antiphonarium) of the Coptic Church: Part III (Months Bashons, Baounah, Abib, Mesre and the intercalary days of Nasi) from the Vatican Codex Copt. Borgia 53 (2). With an Appendix containing Hymn fragments preserved in Bristol Museum and Art Gallery</a></em>. London: Luzac &amp; Co.',
+        'O’Leary, De L. (1926). <em><a href="https://nrs.lib.harvard.edu/URN-3:FHCL:103551689:VIEW?n=5">The Difnar (Antiphonarium) of the Coptic Church (first four months) from the Manuscript in the John Rylands Library, Manchester, with fragments of a Difnar recently recovered at the Der Abu Makar in the Wadi n-Natrun</a></em>. London: Luzac &amp; Co.',
+        'O’Leary, De L. (1928). <em><a href="https://nrs.lib.harvard.edu/URN-3:FHCL:103551689:VIEW?n=137">The Difnar (Antiphonarium) of the Coptic Church</a><a href="https://www.copticplace.org/files/Difnar2.pdf">: Part II (second four months, Tubeh, Amshir, Barmahat and Barmuda) from the Vatican Codex Copt. Borgia 59</a></em>. London: Luzac &amp; Co.',
+        'O’Leary, De L. (1930). <em><a href="https://nrs.lib.harvard.edu/URN-3:FHCL:103552226:VIEW?n=1">The Difnar (Antiphonarium) of the Coptic Church: Part III (Months Bashons, Baounah, Abib, Mesre and the intercalary days of Nasi) from the Vatican Codex Copt. Borgia 53 (2). With an Appendix containing Hymn fragments preserved in Bristol Museum and Art Gallery</a></em>. London: Luzac &amp; Co.',
       ],
     },
     variants: ['Dif'],
