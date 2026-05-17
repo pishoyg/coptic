@@ -18,7 +18,6 @@ import * as white from './white.js';
 import * as dev from '../dev.js';
 import * as scan from '../scan.js';
 import * as dial from '../dialect.js';
-import * as iam from '../iam.js';
 
 /**
  * NOTE: All of the regexes below assume the following normalizations:
@@ -1526,10 +1525,6 @@ function addTextCopyTriggers(root: HTMLElement): void {
  * @param root
  */
 function handleFormSuperscripts(root: HTMLElement): void {
-  if (iam.amI('lexicon')) {
-    // We do not retain the `coptic` class in the Xooxle index!
-    return;
-  }
   const map: Map<string, string> = new Map<string, string>();
   root.querySelectorAll('sup').forEach((sup: HTMLElement): void => {
     if (sup.parentElement?.matches(EXCLUDE)) {
