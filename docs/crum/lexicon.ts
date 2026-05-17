@@ -8,7 +8,6 @@ import * as help from './help.js';
 import * as head from '../header.js';
 import * as paths from '../paths.js';
 import * as crum from './crum.js';
-import * as wiki from './wiki.js';
 import * as drop from '../dropdown.js';
 import * as log from '../logger.js';
 import * as id from './id.js';
@@ -207,20 +206,7 @@ class CrumSearchResult extends SearchResult {
    * @param row
    */
   public override enrich(row: HTMLTableRowElement): void {
-    if (this.marcion()) {
-      crum.addGreekLookups(row);
-      crum.handleDialect(row, CrumSearchResult.highlighter);
-      return;
-    }
-    dev.play(() => {
-      // Sanity check.
-      log.ensure(this.wiki());
-    });
-
-    wiki.enrich(row);
-    wiki.handleReferenceFollowups(row);
-    wiki.handleBibleFollowups(row);
-    wiki.handleCorrigenda(row);
+    crum.handle(row, CrumSearchResult.highlighter, false);
   }
 
   /**
@@ -524,7 +510,7 @@ async function main(): Promise<void> {
   html.linkify(document.getElementById(id.REPORTS)!, head.reports());
 
   // TODO: (#203) Implement in the `header` package.
-  crum.handleDeveloper(document.body, devHighlighter);
+  crum.handleDeveloper(devHighlighter);
 }
 
 await main();

@@ -250,8 +250,9 @@ function textContent(wiki: HTMLElement): string {
 /**
  * Handle all Crum elements.
  * @param root
+ * @param full
  */
-export function handle(root: HTMLElement): void {
+export function handle(root: HTMLElement, full = true): void {
   root
     .querySelectorAll<HTMLElement>(`.${cls.WIKI}`)
     .forEach((elem: HTMLElement): void => {
@@ -292,11 +293,13 @@ export function handle(root: HTMLElement): void {
 
       handleCorrigenda(elem);
 
-      addEntryCopyShortcuts(elem);
+      if (full) {
+        addEntryCopyShortcuts(elem);
 
-      addTextCopyTriggers(elem);
+        addTextCopyTriggers(elem);
 
-      handleFormSuperscripts(elem);
+        handleFormSuperscripts(elem);
+      }
 
       dev.play(() => {
         white.warnPotentiallyMissingReferences(elem, EXCLUDE);

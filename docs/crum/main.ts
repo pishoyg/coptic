@@ -41,8 +41,9 @@ function main(): void {
     help.makeHelpPanel(highlighter, devHighlighter);
   }
 
-  crum.handle(document.body, highlighter, devHighlighter);
+  crum.handle(document.body, highlighter);
 
+  crum.handleDeveloper(devHighlighter);
   addReportsLink();
 }
 

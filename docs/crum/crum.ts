@@ -30,13 +30,20 @@ const ENGLISH_RE = /[\p{Script=Latin}][\p{Script=Latin}\p{Mark}]*/gu;
  * Handle all Crum elements.
  * @param root
  * @param highlighter
- * @param devHighlighter
+ * @param full
  */
 export function handle(
   root: HTMLElement,
   highlighter: high.Highlighter,
-  devHighlighter: dev.Highlighter
+  full = true
 ): void {
+  handleDialect(root, highlighter);
+  addGreekLookups(root);
+  wiki.handle(root, full);
+
+  if (!full) {
+    return;
+  }
   handleCategories(root);
   handleRootType(root);
   handleCrumPage(root);
@@ -48,16 +55,12 @@ export function handle(
   handleExplanatoryKey(root);
   handleSisterKey(root);
   handleSisterView(root);
-  handleDialect(root, highlighter);
-  handleDeveloper(root, devHighlighter);
   insertCrumAbbreviationsLink();
   handleAnkiNavigation(root);
   addCopticLookups(root);
-  addGreekLookups(root);
   addEnglishLookups(root);
   handleNagHammadi(root);
   handleQuality(root);
-  wiki.handle(root);
 }
 
 /**
@@ -336,21 +339,6 @@ export function handleDialect(
 
 /**
  *
- * @param root
- * @param highlighter
- */
-export function handleDeveloper(
-  root: HTMLElement,
-  highlighter: dev.Highlighter
-): void {
-  root.querySelectorAll<HTMLElement>(`.${head.CLS.DEVELOPER}`).forEach((el) => {
-    el.classList.add(ccls.LINK);
-    el.addEventListener('click', highlighter.toggle.bind(highlighter));
-  });
-}
-
-/**
- *
  */
 export function insertCrumAbbreviationsLink(): void {
   const crumElement = document.getElementById('crum');
@@ -527,5 +515,19 @@ export function handleQuality(root: HTMLElement): void {
     .querySelectorAll<HTMLElement>(`.${cls.QUALITY}`)
     .forEach((el: HTMLElement) => {
       html.linkify(el, paths.rowUrl(paths.CRUM_ROOTS_URL, rowNum));
+    });
+}
+
+/**
+ *
+ * @param highlighter
+ * TODO: (#203) This belongs in the header module.
+ */
+export function handleDeveloper(highlighter: dev.Highlighter): void {
+  document.body
+    .querySelectorAll<HTMLElement>(`.${head.CLS.DEVELOPER}`)
+    .forEach((el) => {
+      el.classList.add(ccls.LINK);
+      el.addEventListener('click', highlighter.toggle.bind(highlighter));
     });
 }
