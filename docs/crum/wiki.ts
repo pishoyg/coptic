@@ -889,6 +889,7 @@ function replaceReference(
     return undefined;
   }
 
+  let reference: ref.Reference = ref.MAPPING[key]!;
   if (['P', 'K', 'H'].includes(key)) {
     // In some cases, for the sake of brevity, following a Mani citation, Crum
     // cites following citations without the prefix "Mani".
@@ -899,19 +900,18 @@ function replaceReference(
       antecedent.classList.contains(cls.REFERENCE) &&
       ref.Reference.fromSpan(antecedent).variant === 'Mani'
     ) {
-      key = `Mani ${key}`;
+      reference = ref.MAPPING[`Mani ${key}`]!;
     }
   }
 
   const content: (Node | string)[] = [...context.substring(key.length)];
-
   if (!suffix) {
-    return { replacement: [ref.MAPPING[key]!.span(content)] };
+    return { replacement: [reference.span(content)] };
   }
 
   // Chop off the suffix from the remainder.
   const remainder = context.remainder.slice(suffix.length);
-  const span: HTMLSpanElement = ref.MAPPING[key]!.span(content, [
+  const span: HTMLSpanElement = reference.span(content, [
     ...context.substring(suffix.length, key.length),
     ...suffixFollowups(context.chainNextSibling, remainder),
   ]);
