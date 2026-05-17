@@ -809,7 +809,7 @@ function positive(
 /**
  * @param root
  */
-function handleBibleFollowups(root: HTMLElement): void {
+export function handleBibleFollowups(root: HTMLElement): void {
   root
     .querySelectorAll<HTMLElement>(`.${cls.BIBLE}`)
     .forEach((bible: HTMLElement): void => {
@@ -1038,7 +1038,7 @@ function replaceMatch(
  *
  * @param root
  */
-function enrich(root: HTMLElement): void {
+export function enrich(root: HTMLElement): void {
   const chains = function* (): Generator<Node[]> {
     let chain: Node[] = [];
     for (const node of walk(root)) {
@@ -1080,7 +1080,7 @@ const DATA_PAGE = 'page';
  *
  * @param root
  */
-function handleCorrigenda(root: HTMLElement): void {
+export function handleCorrigenda(root: HTMLElement): void {
   root
     .querySelectorAll<HTMLElement>(`.${cls.CORRIGENDUM}`)
     .forEach((elem: HTMLElement): void => {
@@ -1118,7 +1118,7 @@ function semicolon(): HTMLSpanElement {
  *
  * @param root
  */
-function handleReferenceFollowups(root: HTMLElement): void {
+export function handleReferenceFollowups(root: HTMLElement): void {
   root
     .querySelectorAll<HTMLSpanElement>(`.${cls.REFERENCE}`)
     .forEach((reference: HTMLSpanElement): void => {

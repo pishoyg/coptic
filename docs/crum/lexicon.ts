@@ -209,7 +209,10 @@ class CrumSearchResult extends SearchResult {
   public override enrich(row: HTMLTableRowElement): void {
     crum.addGreekLookups(row);
     crum.handleDialect(row, CrumSearchResult.highlighter);
-    wiki.handle(row);
+    wiki.enrich(row);
+    wiki.handleReferenceFollowups(row);
+    wiki.handleBibleFollowups(row);
+    wiki.handleCorrigenda(row);
   }
 
   /**
