@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Generate Crum artifacts, and run helpers."""
+
 import argparse
 import itertools
 import pathlib

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Process Andreas's Dictionary."""
+
 import argparse
 import functools
 

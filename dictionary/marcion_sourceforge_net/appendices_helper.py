@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Crum appendices helper."""
 
-
 # TODO: (#399) This module was intended as a generic helper for all appendices,
 # back when the appendices lived in a separate sheet from the main dictionary
 # data (see #325). At the moment, we no longer have such a separation, and we
