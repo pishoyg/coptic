@@ -6,19 +6,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 [ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ](https://remnqymi.com/) — a platform to make the Coptic language more learnable. It processes multiple dictionary sources (Crum, KELLIA, Andreas, Dawoud), a Bible corpus, and Anki flashcard generation into a static website hosted on GitHub Pages.
 
-## Environment Setup
-
-Run at the start of each session (activates the Python venv and exports environment variables):
-
-```sh
-source .env
-```
-
-One-time installation:
-```sh
-make install
-```
-
 ## Common Commands
 
 | Command | Purpose |
