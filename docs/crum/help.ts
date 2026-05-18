@@ -129,10 +129,6 @@ export function makeHelpPanel(
         }
       ),
     ],
-    l: [new help.Shortcut('Go to next word', ['note'], browser.openNextLink)],
-    h: [
-      new help.Shortcut('Go to previous word', ['note'], browser.openPrevLink),
-    ],
     y: [
       new help.Shortcut('Yank (copy) the word key', ['note'], () => {
         browser.yank(browser.stem(window.location.pathname));
@@ -198,10 +194,6 @@ export function makeHelpPanel(
       new help.Shortcut('Crum', ['lexicon'], () => {
         browser.scroll(id.title(id.CRUM));
       }),
-      // TODO: (#575) Remove this shortcut.
-      new help.Shortcut('Crum pages', ['note'], () => {
-        browser.scroll(id.CRUM);
-      }),
     ],
     K: [
       new help.Shortcut(
@@ -218,33 +210,16 @@ export function makeHelpPanel(
       }),
     ],
     n: [
-      new help.Shortcut(
-        'Next word in the list',
-        ['lexicon', 'note', 'index'],
-        () => {
-          browser.scrollToNextElement(
-            css.disjunction(xoox.CLS.VIEW, cls.SISTER_VIEW, cls.DRV_KEY),
-            'next'
-          );
-        }
-      ),
+      new help.Shortcut('Next word', ['lexicon'], () => {
+        browser.scrollToNextElement(css.disjunction(xoox.CLS.VIEW), 'next');
+      }),
+      new help.Shortcut('Next word', ['note'], browser.openNextLink),
     ],
     p: [
-      new help.Shortcut(
-        'Previous word in the list',
-        ['lexicon', 'note', 'index'],
-        () => {
-          browser.scrollToNextElement(
-            css.disjunction(xoox.CLS.VIEW, cls.SISTER_VIEW, cls.DRV_KEY),
-            'prev'
-          );
-        }
-      ),
-    ],
-    D: [
-      new help.Shortcut('Dawoud pages', ['note'], () => {
-        browser.scroll(id.DAWOUD);
+      new help.Shortcut('Previous word', ['lexicon'], () => {
+        browser.scrollToNextElement(css.disjunction(xoox.CLS.VIEW), 'prev');
       }),
+      new help.Shortcut('Previous word', ['note'], browser.openPrevLink),
     ],
     k: [
       new help.Shortcut('Crum text', ['note'], () => {
@@ -293,11 +268,6 @@ export function makeHelpPanel(
     v: [
       new help.Shortcut('Derivations table', ['note'], () => {
         browser.scroll(id.DERIVATIONS);
-      }),
-    ],
-    c: [
-      new help.Shortcut('Dictionary page list', ['note'], () => {
-        browser.scroll(id.DICTIONARY);
       }),
     ],
     g: [

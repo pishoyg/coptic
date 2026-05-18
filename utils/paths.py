@@ -46,7 +46,6 @@ ANDREAS_CSS: pathlib.Path = file(LEXICON_DIR, "andreas.css")
 CRUM_CSS: pathlib.Path = file(LEXICON_DIR, "crum.css")
 CRUM_EXPLANATORY_DIR: pathlib.Path = directory(LEXICON_DIR, "explanatory")
 CRUM_SCAN_DIR: pathlib.Path = directory(LEXICON_DIR, "crum")
-DAWOUD_DIR: pathlib.Path = directory(SITE_DIR, "dawoud")
 BIBLE_DIR: pathlib.Path = directory(SITE_DIR, "bible")
 
 CRUM_ROOTS_ROW_NUMS: pathlib.Path = file(LEXICON_DIR, "roots.js")

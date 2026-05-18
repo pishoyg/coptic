@@ -62,9 +62,7 @@ export const RESET = 'reset';
 
 // NOTE IDs:
 export const CATEGORIES = 'categories';
-export const DAWOUD = 'dawoud';
 export const DERIVATIONS = 'derivations';
-export const DICTIONARY = 'dictionary';
 export const FOOTER = 'footer';
 export const IMAGES = 'images';
 export const KEY = 'key';

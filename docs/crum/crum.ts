@@ -21,7 +21,6 @@ import * as drop from '../dropdown.js';
 import * as dev from '../dev.js';
 import * as roots from './roots.js';
 import * as derivations from './derivations.js';
-import * as str from '../str.js';
 
 const GREEK_WORD_RE = /^[\p{Script=Greek}][\p{Script=Greek}\p{Mark}]*$/u;
 const ENGLISH_RE = /[\p{Script=Latin}][\p{Script=Latin}\p{Mark}]*/gu;
@@ -47,10 +46,7 @@ export function handle(
   handleCategories(root);
   handleRootType(root);
   handleCrumPage(root);
-  handleDawoudPageImg(root);
-  handleCrumPageImg(root);
   handleExplanatory(root);
-  handleDawoudPage(root);
   handleDrvKey(root);
   handleExplanatoryKey(root);
   handleSisterKey(root);
@@ -67,7 +63,7 @@ export function handle(
  *
  * @param root
  */
-export function handleCategories(root: HTMLElement): void {
+function handleCategories(root: HTMLElement): void {
   root.querySelectorAll(`.${cls.CATEGORIES}`).forEach((el: Element): void => {
     const cats: string[] = el.textContent
       .trim()
@@ -90,7 +86,7 @@ export function handleCategories(root: HTMLElement): void {
  *
  * @param root
  */
-export function handleRootType(root: HTMLElement): void {
+function handleRootType(root: HTMLElement): void {
   root
     .querySelectorAll(`.${cls.PART_OF_SPEECH} b`)
     .forEach((el: Element): void => {
@@ -108,31 +104,11 @@ export function handleRootType(root: HTMLElement): void {
  *
  * @param root
  */
-export function handleCrumPage(root: HTMLElement): void {
+function handleCrumPage(root: HTMLElement): void {
   root.querySelectorAll<HTMLElement>(`.${cls.CRUM_PAGE}`).forEach((el) => {
     const page: string = el.textContent.trim();
     el.replaceChildren(...scan.prettyPage(page));
-    const [num, _]: [string, string] = scan.chopColumn(page);
-
-    if (!str.isDigits(num)) {
-      // This page is non-numerical. It likely belongs to the Addenda, which we
-      // don't support yet. We just add a tooltip, but no hyperlinks.
-      // TODO: (#413) Remove the tooltip. The page number should have a
-      // hyperlink pointing to the scan.
-      const i = document.createElement('i');
-      i.textContent = 'Additions and Corrections';
-      drop.addDroppable(el, ['From ', i]);
-      return;
-    }
-
-    html.linkify(
-      el,
-      // Inside Wiki, crum-page elements point externally.
-      // Outside Wiki, crum-page elements point to an anchor within the page.
-      // TODO: (#575) The scans should be removed from the notes, and all Crum
-      // pages should point externally.
-      el.closest(`.${cls.WIKI}`) ? paths.crumScan(page) : `#crum${num}`
-    );
+    html.linkify(el, paths.crumScan(page));
   });
 }
 
@@ -140,35 +116,7 @@ export function handleCrumPage(root: HTMLElement): void {
  *
  * @param root
  */
-export function handleDawoudPageImg(root: HTMLElement): void {
-  root
-    .querySelectorAll<HTMLElement>(`.${cls.DAWOUD_PAGE_IMG}`)
-    .forEach((el: HTMLElement): void => {
-      html.linkify(
-        el,
-        paths.dawoudScan(el.querySelector('img')!.getAttribute('alt')!)
-      );
-    });
-}
-
-/**
- *
- * @param root
- */
-export function handleCrumPageImg(root: HTMLElement): void {
-  root.querySelectorAll<HTMLElement>(`.${cls.CRUM_PAGE_IMG}`).forEach((el) => {
-    html.linkify(
-      el,
-      paths.crumScan(el.querySelector('img')!.getAttribute('alt')!)
-    );
-  });
-}
-
-/**
- *
- * @param root
- */
-export function handleExplanatory(root: HTMLElement): void {
+function handleExplanatory(root: HTMLElement): void {
   root.querySelectorAll<HTMLElement>(`.${cls.EXPLANATORY}`).forEach((el) => {
     const img: HTMLElement = el.querySelector('img')!;
     const alt = img.getAttribute('alt');
@@ -185,19 +133,7 @@ export function handleExplanatory(root: HTMLElement): void {
  *
  * @param root
  */
-export function handleDawoudPage(root: HTMLElement): void {
-  root.querySelectorAll<HTMLElement>(`.${cls.DAWOUD_PAGE}`).forEach((el) => {
-    const page: string = el.textContent.trim();
-    el.replaceChildren(...scan.prettyPage(page));
-    html.linkify(el, `#dawoud${scan.chopColumn(page)[0]}`);
-  });
-}
-
-/**
- *
- * @param root
- */
-export function handleDrvKey(root: HTMLElement): void {
+function handleDrvKey(root: HTMLElement): void {
   let rowNum: number | undefined = derivations.MAPPING[marcion() ?? 0];
   root
     .querySelectorAll<HTMLElement>(`.${cls.DRV_KEY}`)
@@ -249,7 +185,7 @@ export function handleDrvKey(root: HTMLElement): void {
  *
  * @param root
  */
-export function handleExplanatoryKey(root: HTMLElement): void {
+function handleExplanatoryKey(root: HTMLElement): void {
   root
     .querySelectorAll<HTMLElement>(`.${cls.EXPLANATORY_KEY}`)
     .forEach((el) => {
@@ -261,7 +197,7 @@ export function handleExplanatoryKey(root: HTMLElement): void {
  *
  * @param root
  */
-export function handleSisterKey(root: HTMLElement): void {
+function handleSisterKey(root: HTMLElement): void {
   root.querySelectorAll<HTMLElement>(`.${cls.SISTER_KEY}`).forEach((el) => {
     html.linkify(el, `#sister${el.textContent.trim()}`, ccls.HOVER_LINK);
   });
@@ -271,7 +207,7 @@ export function handleSisterKey(root: HTMLElement): void {
  *
  * @param root
  */
-export function handleSisterView(root: HTMLElement): void {
+function handleSisterView(root: HTMLElement): void {
   root
     .querySelectorAll(css.disjunction(cls.SISTERS_TABLE, cls.INDEX_TABLE))
     .forEach((table: Element): void => {
@@ -340,7 +276,7 @@ export function handleDialect(
 /**
  *
  */
-export function insertCrumAbbreviationsLink(): void {
+function insertCrumAbbreviationsLink(): void {
   const crumElement = document.getElementById('crum');
   const anchor = document.createElement('a');
   anchor.textContent = 'Abbreviations';
@@ -356,7 +292,7 @@ export function insertCrumAbbreviationsLink(): void {
  * paths. But it is necessary on Anki.
  * @param root
  */
-export function handleAnkiNavigation(root: HTMLElement): void {
+function handleAnkiNavigation(root: HTMLElement): void {
   if (!iam.amI('card')) return;
 
   root
@@ -385,7 +321,7 @@ export function handleAnkiNavigation(root: HTMLElement): void {
  * TODO: (#413) Consider adding separate lookup buttons for Dawoud and Crum's
  * book, to make users aware of this functionality.
  */
-export function addCopticLookups(root: HTMLElement): void {
+function addCopticLookups(root: HTMLElement): void {
   root.querySelectorAll(`.${cls.SPELLING}`).forEach((form: Element) => {
     html.linkifyText(
       form,
@@ -424,7 +360,7 @@ export function addGreekLookups(root: HTMLElement): void {
  *
  * @param root
  */
-export function addEnglishLookups(root: HTMLElement): void {
+function addEnglishLookups(root: HTMLElement): void {
   root.querySelectorAll(`.${cls.MEANING}`).forEach((el) => {
     html.linkifyText(
       el,
@@ -452,7 +388,7 @@ const NAG_HAMMADI_RE =
  *
  * @param root
  */
-export function handleNagHammadi(root: HTMLElement): void {
+function handleNagHammadi(root: HTMLElement): void {
   Array.from(root.querySelectorAll(`.${cls.NAG_HAMMADI}`))
     .flatMap(
       (nh: Element): Text[] =>
@@ -504,7 +440,7 @@ function marcion(): number | undefined {
  *
  * @param root
  */
-export function handleQuality(root: HTMLElement): void {
+function handleQuality(root: HTMLElement): void {
   const rowNum: number | undefined = roots.MAPPING[marcion() ?? 0];
   if (!rowNum) {
     log.error('Unable to retrieve root row number!');

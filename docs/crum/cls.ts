@@ -31,9 +31,6 @@ export const COPTIC = 'coptic';
 export const COPY = 'copy';
 export const CORRIGENDUM = 'corrigendum';
 export const CRUM_PAGE = 'crum-page';
-export const CRUM_PAGE_IMG = 'crum-page-img';
-export const DAWOUD_PAGE = 'dawoud-page';
-export const DAWOUD_PAGE_IMG = 'dawoud-page-img';
 export const DEMOTIC = 'demotic';
 export const DEV_MODE_NOTE = 'dev-mode-note';
 /**

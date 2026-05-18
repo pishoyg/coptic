@@ -396,10 +396,6 @@ function handleAnnotation(
  * @param key
  * @param context
  * @returns
- *
- * TODO: (#413) You should perhaps also annotate the word 'Addenda'[1].
- *
- * [1] https://remnqymi.com/crum/?query=Addenda&full=true&wiki=true&kellia=false&andreas=false
  */
 function handlePage(
   key: string,
@@ -1087,17 +1083,12 @@ export function handleCorrigenda(root: HTMLElement): void {
   root
     .querySelectorAll<HTMLElement>(`.${cls.CORRIGENDUM}`)
     .forEach((elem: HTMLElement): void => {
-      const i = document.createElement('i');
-      i.append('Additions and Corrections');
-      drop.addDroppable(
-        elem,
-        // TODO: (#413) The page number should have a hyeprlink pointing to the
-        // scan.
-        ['From ', i, ' (', ...scan.prettyPage(elem.dataset[DATA_PAGE]!), ')'],
-        [],
-        'hover',
-        'above'
+      const page: string = elem.dataset[DATA_PAGE]!;
+      const a: HTMLAnchorElement = html.anchor(
+        paths.crumScan(page),
+        ...scan.prettyPage(page)
       );
+      drop.addDroppable(elem, ['Addenda', ' (', a, ')'], [], 'hover', 'above');
     });
 }
 

@@ -9,6 +9,8 @@
 # may cause issues. We can solve the problem by having the script update the
 # in-memory view as well.
 
+# TODO: (#0) Use CSS to enforce a `block` display, instead of line breaks.
+
 import collections
 import dataclasses
 import functools
@@ -80,13 +82,8 @@ JS: str = relpath(paths.CRUM_JS)
 
 SEARCH: str = relpath(paths.LEXICON_DIR)
 HOME: str = relpath(paths.SITE_DIR)
-DAWOUD_DIR: str = relpath(paths.DAWOUD_DIR)
-SCAN_DIR: str = relpath(paths.CRUM_SCAN_DIR)
 
 KELLIA_PREFIX = "https://coptic-dictionary.org/entry.cgi?tla="
-DAWOUD_SURNAME = "Dawoud"
-
-DICTIONARY_PAGE_RE = re.compile("([0-9]+(a|b))")
 
 
 class Row(gcp.Record):
@@ -450,9 +447,6 @@ class Root(Row):
             else wiki.by_marcion_key()[self.key]
         )
 
-    def addendum(self) -> bool:
-        return self.crum.roman()
-
     @functools.cached_property
     def wiki_html(self) -> str:
         wikis: list[wiki.Wiki] = [w for w in self.wikis if not w.wip]
@@ -505,25 +499,6 @@ class Root(Row):
         )
 
     @functools.cached_property
-    def crum_page_range(self) -> str:
-        # TODO: (#399) Consider returning page objects instead of a string.
-        # Same for Dawoud!
-        pages: list[lex.Column] = [d.crum for d in self.tree()]
-        pages = list(filter(None, pages))
-        # TODO: (#0) Some crum words have derivations that are not sorted! This
-        # is confusing! Investigate!
-        pages = sorted(pages)
-        if not pages:
-            assert not self.crum_last_page
-            return ""
-        assert all(pages)
-        first: lex.Column = pages[0]
-        last: lex.Column = self.crum_last_page or pages[-1]
-        if first == last:
-            return str(ensure.singleton(pages))
-        return f"{first}-{last}"
-
-    @functools.cached_property
     def senses(self) -> dict[int, str]:
         # TODO: (#189) Once all senses are present, don't allow the field to be
         # absent.
@@ -563,15 +538,6 @@ class Root(Row):
             quality,
         )
         return quality
-
-    @functools.cached_property
-    def crum_last_page(self) -> lex.Column:
-        return lex.Column(self.get(sheet.COL.CRUM_LAST_PAGE))
-
-    @functools.cached_property
-    def dawoud_pages(self) -> str:
-        # TODO: (#399) Validate Dawoud pages.
-        return self.get(sheet.COL.DAWOUD_PAGES)
 
     @functools.cached_property
     def categories(self) -> list[str]:
@@ -655,10 +621,6 @@ class Root(Row):
         for child in self.derivations:
             combined.update(child.dialects)
         return sorted(combined)
-
-    def tree(self) -> abc.Generator[Row]:
-        yield self
-        yield from self.derivations
 
     def drv_html_table(self, explain: bool = True) -> str:
         """Construct the derivations HTML table.
@@ -853,11 +815,6 @@ class Root(Row):
     def _back(self) -> str:
         return "".join(self._back_aux())
 
-    # TODO: (#575) Nothing will have Crum pages in the future. Get rid of this
-    # function.
-    def _has_crum_pages(self) -> bool:
-        return bool(self.crum) and not self.addendum()
-
     def _back_aux(self) -> abc.Generator[str]:
         # Meaning
         yield '<div id="root-type-meaning" class="root-type-meaning">'
@@ -877,40 +834,8 @@ class Root(Row):
             yield "</div>"
         yield "</div>"
 
-        if self._has_crum_pages() or self.dawoud_pages:
-            # Dictionary pages.
-            yield '<div id="dictionary" class="dictionary">'
-            yield '<span class="page-list">'
-
-            if self._has_crum_pages():
-                yield "<b>"
-                yield '<a href="#crum" class="crum hover-link">Crum</a>: '
-                yield "</b>"
-                yield '<span class="crum-page">'
-                yield str(self.crum)
-                yield "</span>"
-
-            if self.dawoud_pages:
-                yield page.LINE_BREAK
-                yield "<b>"
-                yield '<a href="#dawoud" class="dawoud hover-link">'
-                yield DAWOUD_SURNAME
-                yield "</a>"
-                yield ": "
-                yield "</b>"
-                yield DICTIONARY_PAGE_RE.sub(
-                    r'<span class="dawoud-page">\1</span>',
-                    self._prettify_pages(self.dawoud_pages),
-                )
-
-            yield "</span>"
-            yield "</div>"
-            yield page.LINE_BREAK
-
         # Images.
-        if not self.images:
-            yield page.LINE_BREAK
-        else:
+        if self.images:
             yield '<div id="images" class="images">'
             for img in self.images:
                 yield from _img_aux(
@@ -944,9 +869,6 @@ class Root(Row):
         yield '<div id="quality" class="quality">'
         yield self.quality
         yield "</div>"
-
-        # Line break.
-        yield page.LINE_BREAK
 
         # Derivations.
         # TODO: (#338) Parentheses should be used at the source. This is not a
@@ -1000,55 +922,6 @@ class Root(Row):
                 before = True
             yield "</div>"
             del before
-
-        # Crum's pages.
-        if self._has_crum_pages():
-            yield '<div id="crum" class="crum dictionary">'
-            yield '<span class="page-list">'
-            yield '<b><a href="#crum" class="crum hover-link">Crum</a>: </b>'
-            yield DICTIONARY_PAGE_RE.sub(
-                r'<span class="crum-page">\1</span>',
-                self._prettify_pages(self.crum_page_range),
-            )
-            yield "</span>"
-            for num in _page_numbers(self.crum_page_range):
-                yield from _img_aux(
-                    id_=f"crum{num}",
-                    path=os.path.join(SCAN_DIR, f"{num+22}.png"),
-                    cls="crum-page-img",
-                    alt=str(num),
-                    line_br=True,
-                )
-            yield "</div>"
-
-        if self.dawoud_pages:
-            yield '<div id="dawoud" class="dawoud dictionary">'
-            yield '<span class="page-list">'
-            # Dawoud's pages.
-            yield "<b>"
-            yield '<a href="#dawoud" class="dawoud hover-link">'
-            yield DAWOUD_SURNAME
-            yield "</a>"
-            yield ": "
-            yield "</b>"
-            yield DICTIONARY_PAGE_RE.sub(
-                r'<span class="dawoud-page">\1</span>',
-                self._prettify_pages(self.dawoud_pages),
-            )
-            yield "</span>"
-            page_numbers = _page_numbers(self.dawoud_pages)
-            for num in page_numbers:
-                yield from _img_aux(
-                    path=os.path.join(DAWOUD_DIR, f"{num+17}.png"),
-                    id_=f"dawoud{num}",
-                    cls="dawoud-page-img",
-                    alt=str(num),
-                    line_br=True,
-                )
-            yield "</div>"
-
-    def _prettify_pages(self, pages: str) -> str:
-        return pages.replace(",", ", ").replace("-", " - ")
 
 
 class Crum:
@@ -1610,85 +1483,6 @@ def notes_aux(dialects: set[str] | None = None) -> abc.Generator[deck.Note]:
         yield root.note(dialects)
 
 
-def _dedup(arr: list[int], at_most_once: bool = False) -> list[int]:
-    """Squash identical consecutive elements.
-
-    Args:
-        arr: An array of elements to deduplicate.
-        at_most_once: If true, deduplicate across the whole list.
-            If false, only deduplicate consecutive occurrences.
-            For example, given the list 1,1,2,1.
-            If deduped with `at_most_once`, it will return 1,2, with each
-            page occurring at most once.
-            If deduped with `at_most_once=False`, it will return 1,2,1, only
-            removing the consecutive entries.
-
-    Returns:
-        A list of integers, with duplicate elements eliminated.
-
-    """
-    if at_most_once:
-        return list(dict.fromkeys(arr))
-    out: list[int] = []
-    for x in arr:
-        if out and out[-1] == x:
-            continue
-        out.append(x)
-    return out
-
-
-def _page_numbers(
-    column_ranges: str,
-    single_range: bool = False,
-) -> list[int]:
-    """
-    Args:
-        column_ranges: a comma-separated list of columns or columns ranges.
-            The column ranges resemble what you type when you're using your
-            printer, except that each page number must be followed by a
-            letter - either "a" or b" - representing the column.
-            For example, "1a,3b-5b,8b-9a" means [1a, 3b, 4a, 4b, 5a, 5b,
-            9a].
-        single_range: If true, force a single range (no commas allowed).
-
-    Returns:
-        The list of page numbers.
-    """
-
-    def col_to_page_num(col: str) -> int:
-        col = col.strip()
-        assert col[-1] in ["a", "b"]
-        col = col[:-1]
-        assert col.isdigit()
-        return int(col)
-
-    out: list[int] = []
-    column_ranges = column_ranges.strip()
-    if not column_ranges:
-        return []
-    ranges = column_ranges.split(",")
-    if single_range:
-        assert len(ranges) == 1, f"ranges={ranges}"
-    del column_ranges, single_range
-    for col_or_col_range in ranges:
-        if "-" not in col_or_col_range:
-            # This is a single column.
-            out.append(col_to_page_num(col_or_col_range))
-            continue
-        # This is a page range.
-        cols = col_or_col_range.split("-")
-        del col_or_col_range
-        assert len(cols) == 2
-        assert cols[0] != cols[1]
-        start, end = map(col_to_page_num, cols)
-        del cols
-        assert end >= start
-        for x in range(start, end + 1):
-            out.append(x)
-    out = _dedup(out, at_most_once=True)
-    return out
-
-
 # Xooxle search will work fine even if we don't retain any HTML tags, because it
 # relies entirely on searching the text payloads of the HTML. However, we retain
 # the subset of the classes that are needed for highlighting, in order to make
@@ -1712,10 +1506,7 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
         xooxle.Selector({"name": "title"}, force=False),
         xooxle.Selector({"id": "header"}, force=False),
         xooxle.Selector({"class_": "dictionary"}, force=False),
-        xooxle.Selector({"class_": "crum"}, force=False),
         xooxle.Selector({"class_": "crum-page"}, force=False),
-        xooxle.Selector({"class_": "dawoud"}, force=False),
-        xooxle.Selector({"class_": "dawoud-page"}, force=False),
         xooxle.Selector({"class_": "drv-key"}, force=False),
         xooxle.Selector({"id": "images"}, force=False),
         xooxle.Selector({"class_": "nag-hammadi"}, force=False),

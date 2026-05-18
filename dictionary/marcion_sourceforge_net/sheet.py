@@ -43,8 +43,6 @@ class COL(enum.Enum):
     CRUM = "crum"
     # The following columns are, as of the time of writing, only available in
     # the roots sheet.
-    CRUM_LAST_PAGE = "crum-last-page"
-    DAWOUD_PAGES = "dawoud-pages"
     CATEGORIES = "categories"
     NOTES = "notes"
     SENSES = "senses"

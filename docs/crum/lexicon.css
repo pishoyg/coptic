@@ -117,16 +117,6 @@ input#search-box:focus {
  *
  *   - `#digital` / `#book` / `#dawoud` — the three result views.
  *
- *     TODO: (#0) `#dawoud` collides with a same-named element on the
- *     note pages (the "Dawoud pages" section in `crum/<entry>.html`).
- *     The two elements never live on the same page, so this works in
- *     practice, but the shared ID is a naming trap: a future developer
- *     adding a rule against `#dawoud` may accidentally affect both
- *     contexts. The existing collision is papered over by scoping
- *     note-page rules to `body.note #dawoud` in `crum.css`. Rename one
- *     of the two (`#dawoud-frame` would be the obvious choice for the
- *     lexicon scan frame).
- *
  *   - `#help` / `.developer`           — header buttons that only make
  *                                        sense over the digital lexicon;
  *                                        they share a cell with
