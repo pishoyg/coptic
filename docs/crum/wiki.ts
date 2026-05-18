@@ -18,6 +18,7 @@ import * as white from './white.js';
 import * as dev from '../dev.js';
 import * as scan from '../scan.js';
 import * as dial from '../dialect.js';
+import * as head from '../header.js';
 
 /**
  * NOTE: All of the regexes below assume the following normalizations:
@@ -243,6 +244,7 @@ function textContent(wiki: HTMLElement): string {
   // Additionally, we add a copy button, and we should get rid of that as well.
   return str.textContent(wiki, {
     [`.${cls.COPY}`]: '',
+    [`.${cls.FINE_PRINT}`]: '',
     del: '',
   });
 }
@@ -255,10 +257,10 @@ function textContent(wiki: HTMLElement): string {
 export function handle(root: HTMLElement, full = true): void {
   root
     .querySelectorAll<HTMLElement>(`.${cls.WIKI}`)
-    .forEach((elem: HTMLElement): void => {
-      const startText: string | undefined = dev.play(() => textContent(elem));
+    .forEach((wiki: HTMLElement): void => {
+      const startText: string | undefined = dev.play(() => textContent(wiki));
 
-      enrich(elem);
+      enrich(wiki);
 
       // Comma handling searches for occurrences of:
       //   <reference>, <suffix>, <suffix>, ...
@@ -275,7 +277,7 @@ export function handle(root: HTMLElement, full = true): void {
       // reference.
       //
       // [1] https://remnqymi.com/crum/510.html#:~:text=P%2044%2066,%20K%20179
-      handleReferenceFollowups(elem);
+      handleReferenceFollowups(wiki);
 
       // Consider the following case[1]:
       //   Job 3 18, 2 Cor 4 18
@@ -289,22 +291,24 @@ export function handle(root: HTMLElement, full = true): void {
       // Bible citations have been processed.
       //
       // [1] https://remnqymi.com/crum/25.html
-      handleBibleFollowups(elem);
+      handleBibleFollowups(wiki);
 
-      handleCorrigenda(elem);
+      handleCorrigenda(wiki);
 
       if (full) {
-        addEntryCopyShortcuts(elem);
+        addEntryCopyShortcuts(wiki);
 
-        addTextCopyTriggers(elem);
+        addTextCopyTriggers(wiki);
 
-        handleFormSuperscripts(elem);
+        handleFormSuperscripts(wiki);
+
+        addFinePrint(wiki);
       }
 
       dev.play(() => {
-        white.warnPotentiallyMissingReferences(elem, EXCLUDE);
+        white.warnPotentiallyMissingReferences(wiki, EXCLUDE);
 
-        const endText: string = textContent(elem);
+        const endText: string = textContent(wiki);
         // This handler should only add tooltips without modifying text content
         // at all. Verify that the text content hasn't changed.
         log.ensure(
@@ -316,6 +320,25 @@ export function handle(root: HTMLElement, full = true): void {
         );
       });
     });
+}
+
+/**
+ *
+ * @param wiki
+ */
+function addFinePrint(wiki: HTMLElement): void {
+  const div: HTMLDivElement = document.createElement('div');
+  div.append(
+    'See ',
+    html.anchor(paths.PREFACE, 'preface'),
+    ' and ',
+    html.anchor(paths.LIST_OF_ABBREVIATIONS, 'list of abbreviations'),
+    '.   Annotations are auto-generated, ',
+    html.anchor(head.reports(), 'report'),
+    ' errors.'
+  );
+  div.classList.add(cls.FINE_PRINT);
+  wiki.insertAdjacentElement('beforeend', div);
 }
 
 /**

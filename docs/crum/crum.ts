@@ -51,7 +51,6 @@ export function handle(
   handleExplanatoryKey(root);
   handleSisterKey(root);
   handleSisterView(root);
-  insertCrumAbbreviationsLink();
   handleAnkiNavigation(root);
   addCopticLookups(root);
   addEnglishLookups(root);
@@ -271,19 +270,6 @@ export function handleDialect(
       highlighter.toggle(code as dial.DIALECT);
     });
   });
-}
-
-/**
- *
- */
-function insertCrumAbbreviationsLink(): void {
-  const crumElement = document.getElementById('crum');
-  const anchor = document.createElement('a');
-  anchor.textContent = 'Abbreviations';
-  anchor.href = paths.CRUM_ABBREVIATIONS;
-  anchor.classList.add(cls.ABBREVIATIONS);
-  anchor.target = '_blank';
-  crumElement?.insertBefore(anchor, crumElement.firstChild);
 }
 
 /**

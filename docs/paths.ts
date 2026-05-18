@@ -132,10 +132,6 @@ export function greekLookup(word: string): string {
   return `https://logeion.uchicago.edu/${word}`;
 }
 
-// TODO: (#673) Stop linking the external bibliography.
-export const CRUM_ABBREVIATIONS =
-  'https://www.coptist.com/2025/07/30/digitised-bibliography-crum/';
-
 export const CRUM_GSPREAD_URL =
   'https://docs.google.com/spreadsheets/d/1OVbxt09aCxnbNAt4Kqx70ZmzHGzRO1ZVAa2uJT9duVg';
 export const CRUM_ROOTS_URL = `${CRUM_GSPREAD_URL}/edit?gid=1575616379`;
@@ -194,3 +190,7 @@ export function crumScan(page: string): string {
     BOOK
   );
 }
+
+// TODO: (#413) Ditto. These don't belong here.
+export const PREFACE = crumScan('-19');
+export const LIST_OF_ABBREVIATIONS = crumScan('-13');

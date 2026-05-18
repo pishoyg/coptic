@@ -43,6 +43,7 @@ export const ENTRY = 'entry';
 export const EXPLAIN_CHECKBOX = 'explain-checkbox';
 export const EXPLANATORY = 'explanatory';
 export const EXPLANATORY_KEY = 'explanatory-key';
+export const FINE_PRINT = 'fine-print';
 export const GLOSS = 'gloss';
 /**
  * HEADING is the class of a the word starting a paragraph in the meaning of a
