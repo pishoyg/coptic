@@ -111,9 +111,8 @@ input#search-box:focus {
 /* Mode-conditional visibility.
  *
  * `mode.ts` toggles `body.digital` / `body.book` / `body.dawoud`. Each
- * mode-controlled element is hidden by default and revealed only when
- * the matching class is added to <body>. This eliminates the jitter of
- * elements flashing visible before JavaScript adopts a mode.
+ * mode hides the elements that don't belong, leaving the rest to whatever
+ * default the other stylesheets apply.
  *
  *   - `#digital` / `#book` / `#dawoud` — the three result views.
  *
@@ -134,13 +133,12 @@ input#search-box:focus {
  *   - `#prev` / `#next`                — scan-navigation buttons that
  *                                        only make sense over a scan.
  *
- * SPECIFICITY CAUTION: each header-element selector is qualified with
- * `#header` not for semantic clarity but to win a specificity fight
- * against `#header td > * { display: inline-block }` from `header.css`.
- * That third stylesheet contributes specificity (0,1,1); a naive
- * `body:not(.digital) #help` would be (0,2,0) and still lose on
- * `display`. Adding `#header` bumps us to (1,2,1) and consistently
- * overrides it.
+ * SPECIFICITY CAUTION: each selector below is qualified with `#header` not
+ * for semantic clarity but to win a specificity fight against
+ * `#header td > * { display: inline-block }` from `header.css`. That third
+ * stylesheet contributes specificity (0,1,1); a naive `body.book #help`
+ * would be (0,2,0) and still lose on `display`. Adding `#header` bumps us
+ * to (1,2,1) and consistently overrides it.
  *
  * This is fragile: if `header.css` ever drops or generalises that
  * selector, these rules become unnecessarily heavy; if it gains more
@@ -150,28 +148,19 @@ input#search-box:focus {
  * we want to control and key the rule off that class, sidestepping the
  * cross-stylesheet arms race entirely.
  */
-body:not(.digital) {
-  & #digital,
-  & #header #help,
-  & #header .developer {
-    display: none;
-  }
-}
-
-body:not(.book) {
-  & #book,
-  & #header #prev,
-  & #header #next {
-    display: none;
-  }
-}
-
-body:not(.dawoud) {
-  & #dawoud,
-  & #header #prev,
-  & #header #next {
-    display: none;
-  }
+body.digital #book,
+body.digital #dawoud,
+body.digital #header #prev,
+body.digital #header #next,
+body.book #digital,
+body.book #dawoud,
+body.book #header #help,
+body.book #header .developer,
+body.dawoud #digital,
+body.dawoud #book,
+body.dawoud #header #help,
+body.dawoud #header .developer {
+  display: none;
 }
 
 body.digital button#mode-digital,
