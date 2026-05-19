@@ -304,8 +304,6 @@ function handleAnkiNavigation(root: HTMLElement): void {
  *
  * TODO: (#658) Instead of hyperlinks, words should have tooltips that contain
  * buttons to copy or look up the words.
- * TODO: (#413) Consider adding separate lookup buttons for Dawoud and Crum's
- * book, to make users aware of this functionality.
  */
 function addCopticLookups(root: HTMLElement): void {
   root.querySelectorAll(`.${cls.SPELLING}`).forEach((form: Element) => {

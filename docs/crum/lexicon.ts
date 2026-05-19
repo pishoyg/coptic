@@ -4,7 +4,7 @@
  * TODO: (#413) The lexicon page now hosts three independent views — digital,
  * book, and dawoud — but its `main()` lives here while the scan inits live
  * in sibling files (`book.ts`, `dawoud.ts`). Reshape this into a single
- * orchestrator file (e.g. `lexicon-main.ts`) that pulls in three peers:
+ * `lexicon.ts` that pulls in three peers:
  *
  *   - `book.ts`     — Crum scan init (already extracted)
  *   - `dawoud.ts`   — Dawoud scan init (already extracted)

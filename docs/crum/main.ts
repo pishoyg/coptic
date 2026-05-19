@@ -1,8 +1,4 @@
-/** Main function for a Crum word page (a Crum note).
- *
- * TODO: (#413) Rename this file to `crum_main.ts` for consistency.
- * `main.ts` will be used as the Lexicon's entry point.
- * */
+/** Main function for a Crum word page (a Crum note). */
 
 import * as help from './help.js';
 import * as dial from './dialect.js';
