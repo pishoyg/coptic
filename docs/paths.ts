@@ -1,7 +1,6 @@
 /** Package paths defines path constants. */
 
 import * as iam from './iam.js';
-import * as scan from './scan.js';
 
 // remnqymi.com ownables:
 const SITE_URL = iam.amI('card') ? 'http://remnqymi.com' : '';
@@ -149,48 +148,19 @@ export function rowUrl(worksheetUrl: string, rowNum: number | string): string {
   return url.toString();
 }
 
-/* In the book, the Additions and Corrections range from page xv to page xxiv in
- * the introduction, immediately preceding page 1 which starts the body of the
- * book.
- *
- * In other words, Addenda range from pages -9 to page 0.
- *
- * TODO: (#413) Move to `docs/crum/book.ts`. `scan.ts` should allow you to
- * supply page number overrides for this use case. This way, you can put a
- * Roman numeral directly in the search box, and the dictionary should be able
- * to handle it.
- */
-const ADDENDA_START = -9;
-const ADDENDA_PAGES: string[] = [
-  'xv',
-  'xvi',
-  'xvii',
-  'xviii',
-  'xix',
-  'xx',
-  'xxi',
-  'xxii',
-  'xxiii',
-  'xxiv',
-];
-
-const ADDENDA_ROMAN_TO_INT = Object.fromEntries(
-  ADDENDA_PAGES.map((item, index) => [item, ADDENDA_START + index])
-);
-
 /**
+ * Build a Lexicon URL that executes a search query against the Crum
+ * book scan.
  *
- * @param page
- * @returns
+ * The query is forwarded verbatim and interpreted by the book scan's
+ * own `Index`. As of the time of writing, the book scan accepts both
+ * page numbers (digits, optionally with an `a`/`b` column suffix, or a
+ * Roman-numeral intro-page override such as `v`, `xi`, `xv`) and Coptic
+ * words.
+ *
+ * @param query - The search query to run.
+ * @returns The full Lexicon URL.
  */
-export function crumScan(page: string): string {
-  const [num, col] = scan.chopColumn(page);
-  return lexiconLookup(
-    `${ADDENDA_ROMAN_TO_INT[num]?.toString() ?? num}${col}`,
-    BOOK
-  );
+export function crumScan(query: string): string {
+  return lexiconLookup(query, BOOK);
 }
-
-// TODO: (#413) Ditto. These don't belong here.
-export const PREFACE = crumScan('-19');
-export const LIST_OF_ABBREVIATIONS = crumScan('-13');

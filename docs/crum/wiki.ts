@@ -132,6 +132,12 @@ const BIBLE_FOLLOWUP = new RegExp(
 const PAGE_RE = /^p{1,2} ([0-9]+)(?: ([ab]))?\b/;
 const PAGE_FOLLOWUP_RE = /^(, )([0-9]+)(?: ([ab]))?\b/;
 
+// Roman-numeral pages of the Preface and the List of Abbreviations in the
+// Crum book scan. The `Index` override table in `crum/book.ts` resolves
+// these to logical page numbers.
+const PREFACE_PAGE = 'v';
+const LIST_OF_ABBREVIATIONS_PAGE = 'xi';
+
 // Pay attention to the following:
 // - Diacritics:
 //     Some reference abbreviations have diacritics. In order for the logic to
@@ -330,9 +336,9 @@ function addFinePrint(wiki: HTMLElement): void {
   const div: HTMLDivElement = document.createElement('div');
   div.append(
     'See ',
-    html.anchor(paths.PREFACE, 'preface'),
+    html.anchor(paths.crumScan(PREFACE_PAGE), 'preface'),
     ' and ',
-    html.anchor(paths.LIST_OF_ABBREVIATIONS, 'list of abbreviations'),
+    html.anchor(paths.crumScan(LIST_OF_ABBREVIATIONS_PAGE), 'list of abbreviations'),
     '.   Annotations are auto-generated, ',
     html.anchor(head.reports(), 'report'),
     ' errors.'

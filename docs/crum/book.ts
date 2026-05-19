@@ -13,14 +13,47 @@ const MODE: mode.Mode = mode.BOOK;
 const MIN_PAGE_NUM = 1; // First file is "1.png".
 const MAX_PAGE_NUM = 975; // Last file is "975.png".
 const OFFSET = 22; // Page 1 in the dictionary is "23.png".
-// By default, land on the List of Abbreviations, which is page -13, i.e.
-// "9.png".
-const LANDING = -13;
+// By default, land on the cover page (the first file in the scan, "1.png").
+const LANDING = MIN_PAGE_NUM - OFFSET;
 
 const DATA_DIR = 'crum/';
 
 /* COPTIC defines the path to the dictionary index. */
 const COPTIC = str.joinPaths(DATA_DIR, 'coptic.tsv');
+
+/* The book introduction uses Roman-numeral pagination from page v (the
+ * Preface) through page xxiv (the last page of the Additions and
+ * Corrections, which immediately precedes page 1 of the body). In our
+ * logical page numbering, those run from -19 to 0.
+ *
+ * ROMAN_OVERRIDES lets the dictionary index resolve Roman-numeral queries
+ * (e.g. `v`, `xi`, `xv`, with or without a trailing column letter) to
+ * those logical page numbers, so the Preface, List of Abbreviations, and
+ * Addenda are all linkable by their book-side numbering.
+ */
+const ROMAN_START = -19;
+const ROMAN_PAGES: string[] = [
+  'v',
+  'vi',
+  'vii',
+  'viii',
+  'ix',
+  'x',
+  'xi',
+  'xii',
+  'xiii',
+  'xiv',
+  'xv',
+  'xvi',
+  'xvii',
+  'xviii',
+  'xix',
+  'xx',
+  'xxi',
+  'xxii',
+  'xxiii',
+  'xxiv',
+];
 
 /* LETTER matches a Coptic letter. */
 const LETTER = /ⲉⲓ|ⲟⲩ|./g;
@@ -342,8 +375,14 @@ async function main(): Promise<void> {
   });
 
   const index = new scan.Index(
-    await fetch(COPTIC).then((res) => res.text()),
-    Word
+    await fetch(COPTIC).then((res: Response): Promise<string> => res.text()),
+    Word,
+    Object.fromEntries(
+      ROMAN_PAGES.map((item: string, idx: number): [string, number] => [
+        item,
+        ROMAN_START + idx,
+      ])
+    )
   );
   const dictionary = new scan.Dictionary(index, scroller);
 
