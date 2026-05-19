@@ -16,11 +16,6 @@ const ZOOM_FACTOR = 0.05;
 
 const MIN_SCALE = 0.2;
 
-// PAGECHANGE is the name of the custom event the Scroller dispatches on the
-// scan <img> after a page change, to notify the ZoomerDragger that it should
-// reset its zoom / pan transform.
-const PAGECHANGE = 'pagechange';
-
 /**
  * IsActive answers whether a scan view is currently the active one on the
  * host page. It is supplied by callers so that this package does not need
@@ -29,9 +24,8 @@ const PAGECHANGE = 'pagechange';
  * Only the `Scroller` consults this, and only for handlers that
  * unavoidably share DOM with sibling scrollers — the next / prev buttons
  * and the document-level N / P keydown. `ZoomerDragger`'s handlers either
- * fire on per-scan elements (image wheel + mousedown, image-scoped
- * pagechange) or are intentionally cross-mode (reset button click, R
- * key), so it needs no predicate.
+ * fire on per-scan elements (image wheel + mousedown) or are intentionally
+ * cross-mode (reset button click, R key), so it needs no predicate.
  *
  * Omit on pages that host a single scan: an absent predicate is treated
  * as always active.
@@ -401,13 +395,6 @@ export class Scroller {
     }
     this.currentPage = page;
     this.updateDisplay(page);
-    // Notify our `ZoomerDragger` that the page has changed, so it can
-    // reset its in-progress zoom / pan transform for the new image. We
-    // dispatch a custom event on the image rather than synthesizing a
-    // click on the reset button, so that the dialect highlight reset
-    // (also wired to the reset button) does NOT fire on programmatic
-    // page changes.
-    this.form.image.dispatchEvent(new CustomEvent(PAGECHANGE));
   }
 
   /**
@@ -574,12 +561,6 @@ export class ZoomerDragger {
 
     // Clicking the reset button resets the image position.
     this.form.resetButton.addEventListener('click', this.reset.bind(this));
-
-    // The Scroller dispatches `pagechange` when a search or navigation
-    // loads a new page; reset the zoom / pan so the new image starts
-    // fresh. Scoped to the image so each scan only reacts to its own
-    // page changes (no cross-talk with the other scan).
-    this.form.image.addEventListener(PAGECHANGE, this.reset.bind(this));
 
     // Some keyboard events trigger actions.
     document.addEventListener('keydown', this.handleKeyDown.bind(this));
