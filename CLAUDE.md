@@ -109,6 +109,7 @@ All file paths are centralized:
 - Use `querySelector`/`querySelectorAll` (not `getElementsBy*`); use `getElementById` for ID lookups
 - Prefer `element.addEventListener('click', ...)` over `element.onclick = ...`
 - TypeScript is transpiled to JS via `make transpile`; never edit `.js` files directly
+- Never manually commit `.js` / `.js.map` files. Generated JavaScript is committed in its own dedicated commit produced by `make javascript` — keep TypeScript edits and the regenerated JavaScript on separate commits
 
 ### Languages
 
