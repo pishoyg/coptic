@@ -171,9 +171,9 @@ export class Index {
       return this.binarySearch(new this.wordType(coptic));
     }
 
-    const digits: string = query.replace(/\D/g, '');
-    if (digits) {
-      return parseInt(digits);
+    const number: RegExpMatchArray | null = query.match(/-?\d+/g);
+    if (number) {
+      return parseInt(number[0]);
     }
 
     return undefined;
