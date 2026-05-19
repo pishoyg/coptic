@@ -93,6 +93,7 @@ export function prettyPage(page: string): (Node | string)[] {
 }
 
 const SWAP_TOLERANCE = 10;
+
 /**
  * A dictionary index.
  */
@@ -161,38 +162,40 @@ export class Index {
       return undefined;
     }
 
-    const num = parseInt(query);
-    if (!isNaN(num)) {
-      // This is a page number.
-      return num;
+    // If any Coptic characters are present, extract them all and search
+    // the concatenation as a single word. Otherwise fall back to digit
+    // extraction to interpret the query as a page number.
+    // TODO: (640) Extend to other word classes (Greek, Arabic).
+    const coptic: string = Array.from(query).filter(copt.isCoptic).join('');
+    if (coptic) {
+      return this.binarySearch(new this.wordType(coptic));
     }
 
-    // Check if this is a Coptic word.
-    if (!copt.isCoptic(query)) {
-      // Neither a number nor a Coptic word! Nothing we can do!
-      // TODO: (640) This should support other classes of words as well, not
-      // just Coptic words.
-      // We should perhaps introduce another class method:
-      //   searchable(query: string): boolean
-      // and allow different children of this class to override this method,
-      // and use that method instead.
-      return undefined;
+    const digits: string = query.replace(/\D/g, '');
+    if (digits) {
+      return parseInt(digits);
     }
 
-    // Binary search the word in the dictionary.
-    const target = new this.wordType(query);
+    return undefined;
+  }
+
+  /**
+   * Binary search for the first page whose end-word is >= the target.
+   *
+   * @param target - The word being searched for.
+   * @returns The number of the matching page.
+   */
+  private binarySearch(target: Word): number {
     let left = 0;
     let right = this.pages.length - 1;
     while (left < right) {
       const mid = Math.floor((left + right) / 2);
-      const cur = this.pages[mid]!;
-      if (target.leq(cur.end)) {
+      if (target.leq(this.pages[mid]!.end)) {
         right = mid;
       } else {
         left = mid + 1;
       }
     }
-
     return this.pages[right]!.page;
   }
 

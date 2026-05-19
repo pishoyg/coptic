@@ -35,6 +35,8 @@ const handlers: Handler[] = [];
 
 /**
  * Fire every registered handler with the current query value.
+ * NOTE: This executes all the given handlers in sequence. Debouncing /
+ * and parallelism are the responsibility of the handlers.
  */
 function dispatch(): void {
   const q: string = box!.value;

@@ -44,6 +44,11 @@ export function set(mode: Mode): void {
     document.body.classList.toggle(m, m === mode);
   }
   browser.setParam(PARAM, mode === DEFAULT ? null : mode);
+  if (browser.touchScreen()) {
+    // Skip focusing the search box on touch devices, since that would pop up
+    // the on-screen keyboard and cover the page.
+    return;
+  }
   query.focus();
 }
 

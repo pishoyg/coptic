@@ -203,6 +203,19 @@ body.dawoud button#mode-dawoud {
   }
 }
 
+/* Shrink the mode switcher on mobile. */
+@media (width <= 700px) {
+  #mode-switcher {
+    padding: 6px 12px;
+    gap: 8px;
+
+    & button {
+      padding: 6px 14px;
+      font-size: 1rem;
+    }
+  }
+}
+
 /* The scan frame is the document-wide column that holds the dictionary
  * page image; center the image within it and within the page. */
 .scan-frame {

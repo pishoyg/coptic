@@ -33,6 +33,13 @@ export function smallScreen(): boolean {
 }
 
 /**
+ * @returns Whether the device has a touch screen.
+ */
+export function touchScreen(): boolean {
+  return navigator.maxTouchPoints > 0;
+}
+
+/**
  *
  * @param rel - The name of the link.
  * @returns The `href` property of the link if found, or null if not found.
