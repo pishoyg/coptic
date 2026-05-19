@@ -474,13 +474,19 @@ class Wiki:
             this page lies outside the range of pages for which corrigenda are
             available, return None.
 
-            NOTE: The value returned may not be accurate for entries lying on
-            the "borders". In particular:
-            - If corrigenda for a given page start on a column and spill over to
-              the following one, the first column will be returned.
-            - For long Crum entries that span multiple pages, we only store the
-              start page, and we will determine the corrigenda page based on
-              that.
+            NOTE: The return value is often inaccurate. In particular:
+            - If addenda for a given column start on a column and spill over to
+              the following one, the first column will be returned. For example,
+              the corrigenda for 100b start on xviib and spill over to xviiia.
+              For all entries on 100b, the addenda page will be reported as
+              xviib.
+            - If a Crum entry spans several columns, addenda will be inferred
+              based on the first column. For example, ϯ spans 392a to 396a, but
+              the addenda column will be inferred based on 392a.
+
+            The blast radius is extremely small because the list of addenda is
+            quite compact anyway.
+            TODO: (#0) Contemplate a more precise implementation.
         """
         if self.addendum():
             # Addenda do not themselves possess addenda.
