@@ -119,7 +119,7 @@ const TEST_CASES: {
     },
   },
   {
-    // 629 has a corrigendum.
+    // 629 has an addendum.
     key: '629',
     want: {
       [cls.REFERENCE]: 23,

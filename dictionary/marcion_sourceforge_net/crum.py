@@ -1548,7 +1548,7 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
                 "gloss",
                 "subparagraph",
                 "manual",
-                "corrigendum",
+                "addendum",
             },
             unit_tags={"p"},
             retain_tags=xooxle.RETAIN_TAGS_DEFAULT | {"p"},

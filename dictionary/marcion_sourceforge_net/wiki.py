@@ -346,7 +346,7 @@ class Wiki:
         if self.addenda_page:
             yield Substitution(
                 "//(.*?)//(.*?)//",
-                f'<span class="corrigendum" data-page="{self.addenda_page}">'
+                f'<span class="addendum" data-page="{self.addenda_page}">'
                 + r"<del>\1</del><ins>\2</ins>"
                 + "</span>",
                 r"\2",
@@ -470,14 +470,14 @@ class Wiki:
         """
         Returns:
             A string representing the page number and column in the Additions
-            and Corrections section that contains corrigenda for this entry. If
-            this page lies outside the range of pages for which corrigenda are
+            and Corrections section that contains addenda for this entry. If
+            this page lies outside the range of pages for which addenda are
             available, return None.
 
             NOTE: The return value is often inaccurate. In particular:
             - If addenda for a given column start on a column and spill over to
               the following one, the first column will be returned. For example,
-              the corrigenda for 100b start on xviib and spill over to xviiia.
+              the addenda for 100b start on xviib and spill over to xviiia.
               For all entries on 100b, the addenda page will be reported as
               xviib.
             - If a Crum entry spans several columns, addenda will be inferred

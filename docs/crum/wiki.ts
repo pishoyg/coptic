@@ -293,7 +293,7 @@ export function handle(root: HTMLElement, full = true): void {
       // [1] https://remnqymi.com/crum/25.html
       handleBibleFollowups(wiki);
 
-      handleCorrigenda(wiki);
+      handleAddenda(wiki);
 
       if (full) {
         addEntryCopyShortcuts(wiki);
@@ -1095,16 +1095,16 @@ export function enrich(root: HTMLElement): void {
   }
 }
 
-// On a corrigendum element, the page number lives in a `data-page` attribute.
+// On an addendum element, the page number lives in a `data-page` attribute.
 const DATA_PAGE = 'page';
 
 /**
  *
  * @param root
  */
-export function handleCorrigenda(root: HTMLElement): void {
+export function handleAddenda(root: HTMLElement): void {
   root
-    .querySelectorAll<HTMLElement>(`.${cls.CORRIGENDUM}`)
+    .querySelectorAll<HTMLElement>(`.${cls.ADDENDUM}`)
     .forEach((elem: HTMLElement): void => {
       const page: string = elem.dataset[DATA_PAGE]!;
       const a: HTMLAnchorElement = html.anchor(
