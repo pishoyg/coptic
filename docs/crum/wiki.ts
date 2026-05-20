@@ -18,7 +18,6 @@ import * as white from './white.js';
 import * as dev from '../dev.js';
 import * as scan from '../scan.js';
 import * as dial from '../dialect.js';
-import * as head from '../header.js';
 
 /**
  * NOTE: All of the regexes below assume the following normalizations:
@@ -338,10 +337,11 @@ function addFinePrint(wiki: HTMLElement): void {
     'See ',
     html.anchor(paths.crumScan(PREFACE_PAGE), 'preface'),
     ' and ',
-    html.anchor(paths.crumScan(LIST_OF_ABBREVIATIONS_PAGE), 'list of abbreviations'),
-    '.   Annotations are auto-generated, ',
-    html.anchor(head.reports(), 'report'),
-    ' errors.'
+    html.anchor(
+      paths.crumScan(LIST_OF_ABBREVIATIONS_PAGE),
+      'list of abbreviations'
+    ),
+    '.'
   );
   div.classList.add(cls.FINE_PRINT);
   wiki.insertAdjacentElement('beforeend', div);
