@@ -1,29 +1,40 @@
 /**
- * Package query is the single owner of Lexicon's search query and search box.
+ * Package query owns Lexicon's search query and search box.
  *
- * All registered handlers fire on every keystroke, regardless of which view
- * (Digital / Book / Dawoud) is currently visible. The hidden views stay in
- * sync with the visible one, so switching modes is instant: the destination
- * view is already up to date and no re-dispatch is needed.
- * This also simplifies our code, as we don't have to mode-guard search
- * listeners.
+ * On every keystroke, it dispatches a `querychange` CustomEvent on
+ * `document` whose `detail` is the current query string. Consumers — the
+ * three views (Digital, Book, Dawoud) — listen with
+ * `document.addEventListener(query.EVENT, …)` directly, so there is no
+ * subscriber bookkeeping inside this module.
+ *
+ * All listeners fire on every keystroke regardless of which view is
+ * currently visible, so the hidden views stay in sync with the visible
+ * one and switching modes is instant.
  *
  * The trade-off: it increases resource consumption.
  * Xooxle may be CPU-intensive, and scans use bandwidth to download images.
  *
- * TODO: (#413) Replace the subscriber pattern entirely with a custom DOM
- * event, for example:
- *   `document.dispatchEvent(new CustomEvent('querychange', { detail: q }))`
- * Each engine would `addEventListener('querychange', …)` directly,
- * eliminating this module's bookkeeping and giving every consumer a uniform
- * event-driven hook. The same shape can later carry NEXT / PREV / RESET
- * events — see the matching TODO in `docs/scan.ts`.
+ * Consumers handle the URL-restored initial value by reading `current()`
+ * once at setup time and then listening for subsequent events.
+ *
+ * TODO: (#203) The same CustomEvent shape can later carry NEXT / PREV /
+ * RESET events — see the matching TODO in `docs/scan.ts`.
  */
 import * as browser from '../browser.js';
 import * as paths from '../paths.js';
 import * as id from './id.js';
 
-type Handler = (query: string) => void;
+/**
+ * Name of the query-change event dispatched on `document`. The event's
+ * `detail` is the current query string.
+ *
+ * Usage:
+ *   document.addEventListener(query.EVENT, (e: Event): void => {
+ *     const q: string = (e as CustomEvent<string>).detail;
+ *     ...
+ *   });
+ */
+export const EVENT = 'querychange';
 
 // Avoid setting the box in the global scope, as a reference to `document` in
 // the global scope would make this package incompatible with Node.js. As of the
@@ -31,24 +42,23 @@ type Handler = (query: string) => void;
 // browser-specific code.
 let box: HTMLInputElement | null = null;
 
-const handlers: Handler[] = [];
-
 /**
- * Fire every registered handler with the current query value.
- * NOTE: This executes all the given handlers in sequence. Debouncing /
- * and parallelism are the responsibility of the handlers.
+ * Dispatch a `querychange` event carrying the current query value.
  */
 function dispatch(): void {
-  const q: string = box!.value;
-  for (const h of handlers) {
-    h(q);
-  }
+  document.dispatchEvent(
+    new CustomEvent<string>(EVENT, { detail: box!.value })
+  );
 }
 
 /**
  * Initialise the module: restore the memorised query from the URL, wire
  * the input + key listeners, prevent form submit, and focus the search box
  * so the user can start typing immediately.
+ *
+ * Does not dispatch an initial event: consumers attach their listeners
+ * after this runs, so each one reads the URL-restored value via
+ * `current()` at setup time and then listens for changes.
  */
 export function init(): void {
   box ??= document.getElementById(id.SEARCH_BOX) as HTMLInputElement;
@@ -84,15 +94,12 @@ export function init(): void {
 }
 
 /**
- * Register a handler. It is invoked once immediately with the current
- * query (so freshly-constructed engines pick up the URL-restored value)
- * and then on every subsequent keystroke.
- *
- * @param handler - Called with the current query string.
+ * @returns The current query string. Consumers call this once at setup
+ * time to handle the URL-restored initial value before any keystroke
+ * events fire.
  */
-export function subscribe(handler: Handler): void {
-  handlers.push(handler);
-  handler(box!.value);
+export function current(): string {
+  return box!.value;
 }
 
 /**

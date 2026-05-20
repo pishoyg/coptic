@@ -1,4 +1,4 @@
-/** Main function for the Crum scan. */
+/** Init function for the Crum scan view. */
 // TODO: (#641) Fix the sorting logic. The current heuristic often doesn't align
 // with Crum.
 import * as scan from '../scan.js';
@@ -351,9 +351,10 @@ export class Word implements scan.Word {
 }
 
 /**
- *
+ * Initialise the Crum scan view: build the index, wire the scroller, and
+ * subscribe to query-change events.
  */
-async function main(): Promise<void> {
+export async function init(): Promise<void> {
   const form: scan.Form = {
     image: document.getElementById(id.CRUM_SCAN) as HTMLImageElement,
     nextButton: document.getElementById(id.NEXT)!,
@@ -388,7 +389,8 @@ async function main(): Promise<void> {
 
   new scan.ZoomerDragger(form);
 
-  query.subscribe(dictionary.search.bind(dictionary));
+  document.addEventListener(query.EVENT, (e: Event): void => {
+    dictionary.search((e as CustomEvent<string>).detail);
+  });
+  dictionary.search(query.current());
 }
-
-await main();

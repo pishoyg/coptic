@@ -1,4 +1,4 @@
-/** Main function for the Dawoud scan. */
+/** Init function for the Dawoud scan view. */
 
 import * as scan from '../scan.js';
 import * as copt from '../coptic.js';
@@ -65,10 +65,10 @@ export class DawoudWord extends copt.Word implements scan.Word {
 }
 
 /**
- * Main function to run in the browser.
- * Build the index, add event listeners, ...
+ * Initialise the Dawoud scan view: build the index, wire the scroller,
+ * and subscribe to query-change events.
  */
-async function main(): Promise<void> {
+export async function init(): Promise<void> {
   const form: scan.Form = {
     image: document.getElementById(id.DAWOUD_SCAN) as HTMLImageElement,
     nextButton: document.getElementById(id.NEXT)!,
@@ -95,7 +95,8 @@ async function main(): Promise<void> {
   new scan.ZoomerDragger(form);
   const dictionary = new scan.Dictionary(index, scroller);
 
-  query.subscribe(dictionary.search.bind(dictionary));
+  document.addEventListener(query.EVENT, (e: Event): void => {
+    dictionary.search((e as CustomEvent<string>).detail);
+  });
+  dictionary.search(query.current());
 }
-
-await main();
