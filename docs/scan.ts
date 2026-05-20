@@ -105,15 +105,17 @@ export class Index {
    * constructor type that takes as input the string representation of the word,
    * which is retrieved from the index columns.
    *
-   * @param overrides - Map from a (column-less) query string to its page
-   * number. Looked up before the Coptic / numeric fallbacks, so callers can
-   * route non-canonical query forms (e.g. Roman-numeral addenda pages like
-   * `xv`) to a specific page. Defaults to no overrides.
+   * @param overrides - Map from a (column-less) query string to its target
+   * page identifier. The value is a string that may itself carry a trailing
+   * column letter (`a` / `b`), and may also be another override key (e.g.
+   * a Roman-numeral page like `xv`); `getPage` recurses to resolve it.
+   * Looked up before the Coptic / numeric fallbacks, so callers can route
+   * non-canonical query forms to a specific page. Defaults to no overrides.
    */
   public constructor(
     index: string,
     private readonly wordType: new (s: string) => Word,
-    private readonly overrides: Record<string, number> = {}
+    private readonly overrides: Record<string, string> = {}
   ) {
     const lines = index.trim().split('\n');
     const header: string[] = Index.toColumns(lines[0]!);
@@ -162,15 +164,15 @@ export class Index {
       return undefined;
     }
 
-    if (query in this.overrides) {
-      return this.overrides[query];
-    }
-
-    // Check the overrides table first. The column suffix is chopped so that
-    // queries like `xva` resolve to the override registered for `xv`.
-    const base: string = chopColumn(query)[0];
-    if (base in this.overrides) {
-      return this.overrides[base];
+    // Check the overrides table. Try the query as-is first, then with any
+    // trailing column letter chopped, so queries like `xva` resolve to the
+    // override registered for `xv`. The override value is itself a page
+    // identifier — possibly with its own column suffix, or itself another
+    // override key — so we recurse through `getPage` to resolve it.
+    const override: string | undefined =
+      this.overrides[query] ?? this.overrides[chopColumn(query)[0]];
+    if (override !== undefined) {
+      return this.getPage(override);
     }
 
     // If any Coptic characters are present, extract them all and search

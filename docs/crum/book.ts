@@ -21,6 +21,9 @@ const DATA_DIR = 'crum/';
 /* COPTIC defines the path to the dictionary index. */
 const COPTIC = str.joinPaths(DATA_DIR, 'coptic.tsv');
 
+/* HEADWORDS defines the path to the headword-to-column index. */
+const HEADWORDS = str.joinPaths(DATA_DIR, 'headwords.json');
+
 /* The book introduction uses Roman-numeral pagination from page v (the
  * Preface) through page xxiv (the last page of the Additions and
  * Corrections, which immediately precedes page 1 of the body). In our
@@ -375,16 +378,26 @@ export async function init(): Promise<void> {
     isActive,
   });
 
-  const index = new scan.Index(
-    await fetch(COPTIC).then((res: Response): Promise<string> => res.text()),
-    Word,
-    Object.fromEntries(
-      ROMAN_PAGES.map((item: string, idx: number): [string, number] => [
-        item,
-        ROMAN_START + idx,
-      ])
-    )
+  const [coptic, headwords]: [string, Record<string, string>] =
+    await Promise.all([
+      fetch(COPTIC).then((res: Response): Promise<string> => res.text()),
+      fetch(HEADWORDS).then(
+        (res: Response): Promise<Record<string, string>> =>
+          res.json() as Promise<Record<string, string>>
+      ),
+    ]);
+
+  const romanOverrides: Record<string, string> = Object.fromEntries(
+    ROMAN_PAGES.map((item: string, idx: number): [string, string] => [
+      item,
+      (ROMAN_START + idx).toString(),
+    ])
   );
+
+  const index = new scan.Index(coptic, Word, {
+    ...headwords,
+    ...romanOverrides,
+  });
   const dictionary = new scan.Dictionary(index, scroller);
 
   new scan.ZoomerDragger(form, isActive);
