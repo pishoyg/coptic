@@ -31,20 +31,24 @@ export class Source {
 
   /**
    *
-   * @param raw
+   * @param titleHTML
+   * @param descriptionHTML
    */
-  public constructor(public readonly raw: sax.Source) {}
+  public constructor(
+    public readonly titleHTML?: string,
+    public readonly descriptionHTML?: string[]
+  ) {}
 
   /**
    * @returns Deep copies of the parsed title's child nodes.
    */
   public title(): Node[] {
-    if (!this.raw.title) {
+    if (!this.titleHTML) {
       return [];
     }
     if (!this.titleMemo) {
       this.titleMemo = new DocumentFragment();
-      this.titleMemo.append(...html.parse(this.raw.title));
+      this.titleMemo.append(...html.parse(this.titleHTML));
     }
     return Array.from(this.titleMemo.cloneNode(true).childNodes);
   }
@@ -54,12 +58,12 @@ export class Source {
    *   source has no description.
    */
   public description(): HTMLUListElement | undefined {
-    if (!this.raw.description?.length) {
+    if (!this.descriptionHTML?.length) {
       return undefined;
     }
     if (!this.descriptionMemo) {
       const ul: HTMLUListElement = document.createElement('ul');
-      this.raw.description.forEach((innerHTML: string): void => {
+      this.descriptionHTML.forEach((innerHTML: string): void => {
         const li: HTMLLIElement = document.createElement('li');
         li.innerHTML = innerHTML;
         ul.append(li);
@@ -237,7 +241,7 @@ class Postfix {
    */
   public constructor(
     public readonly name: string,
-    public readonly interpretation?: string | typeof sax.LOOKUP
+    public readonly interpretation?: sax.Postfix
   ) {}
 
   /**
@@ -247,6 +251,7 @@ class Postfix {
     if (typeof this.interpretation === 'string') {
       return [...abbreviation(this.name), ...html.parse(this.interpretation)];
     }
+
     if (this.interpretation === sax.LOOKUP) {
       // The postfix 'Am' (as in 'ShAm', under ⲏⲡⲥ 525) refers to Amélineau,
       // but we only record the variant 'A' for Amélineau — 'Am' was
@@ -311,25 +316,26 @@ function add(key: string, reference: Reference): void {
 }
 
 // Add all the variants to the map.
-[...sax.DATA_1, ...sax.DATA_2].forEach((res: sax.Resource): void => {
+sax.DATA.forEach((raw: sax.Source): void => {
   log.ensure(
-    !!res.variants.length,
+    !!raw.variants.length,
     'resource has no abbreviations listed:',
-    res.source?.title
+    raw.title
   );
 
-  const source: Source | undefined = res.source
-    ? new Source(res.source)
-    : undefined;
+  const source: Source | undefined =
+    raw.title || raw.description?.length
+      ? new Source(raw.title, raw.description)
+      : undefined;
 
-  [...res.variants, ...(res.typos ?? [])].forEach(
+  [...raw.variants, ...(raw.typos ?? [])].forEach(
     (variant: string, index: number): void => {
       const standard: string =
-        index < res.variants.length ? variant : res.variants[0]!;
+        index < raw.variants.length ? variant : raw.variants[0]!;
       // Add the abbreviation without any postfixes.
       add(variant, new Reference(source, standard));
-      Object.entries(res.postfixes ?? {}).forEach(
-        ([name, type]: [string, sax.PostfixType]): void => {
+      Object.entries(raw.postfixes ?? {}).forEach(
+        ([name, type]: [string, sax.Postfix]): void => {
           add(
             `${variant} ${name}`,
             new Reference(source, standard, new Postfix(name, type))
