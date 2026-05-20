@@ -170,7 +170,7 @@ def main():
     # Write the headword-to-page map.
     headword_to_page: dict[str, str] = {}
     for w in wiki.wikis():
-        for headword in w._headwords:
+        for headword in w.headwords():
             key: str = "".join(constants.COPTIC_LETTER_RE.findall(headword))
             # Entries are processed in order, so the first occurrence has the
             # smallest column. Don't overwrite.
