@@ -42,12 +42,15 @@ export function makeHelpPanel(
 
   const control = {
     r: [
+      // Reset is delivered as `head.EVENT.RESET`; each consumer
+      // (highlighters, scan zoomer/draggers) decides whether to act
+      // based on its own active-view predicate, so on the lexicon page
+      // only the active dictionary is reset.
       new help.Shortcut(
-        'Reset highlighting',
+        'Reset',
         ['lexicon', 'note', 'index', 'index_index'],
-        () => {
-          highlighter.reset();
-          devHighlighter.reset();
+        (): void => {
+          head.dispatch(head.EVENT.RESET);
         }
       ),
     ],

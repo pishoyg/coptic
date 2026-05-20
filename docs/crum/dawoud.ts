@@ -92,7 +92,7 @@ export async function init(): Promise<void> {
     await fetch(COPTIC).then((res) => res.text()),
     DawoudWord
   );
-  new scan.ZoomerDragger(form);
+  new scan.ZoomerDragger(form, isActive);
   const dictionary = new scan.Dictionary(index, scroller);
 
   document.addEventListener(query.EVENT, (e: Event): void => {

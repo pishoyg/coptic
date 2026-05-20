@@ -7,6 +7,7 @@ import * as copt from './coptic.js';
 import * as orth from './orth.js';
 import * as dev from './dev.js';
 import * as str from './str.js';
+import * as head from './header.js';
 
 // WANT_COLUMNS is the list of the first columns we expect to find in the TSV.
 const WANT_COLUMNS = ['page', 'start', 'end'];
@@ -21,11 +22,10 @@ const MIN_SCALE = 0.2;
  * host page. It is supplied by callers so that this package does not need
  * to know about its host's mode-switching mechanism.
  *
- * Only the `Scroller` consults this, and only for handlers that
- * unavoidably share DOM with sibling scrollers — the next / prev buttons
- * and the document-level N / P keydown. `ZoomerDragger`'s handlers either
- * fire on per-scan elements (image wheel + mousedown) or are intentionally
- * cross-mode (reset button click, R key), so it needs no predicate.
+ * Used by both `Scroller` (for the shared next / prev buttons and N / P
+ * keydown) and `ZoomerDragger` (for the shared reset trigger dispatched
+ * by `head.EVENT`), so each handler can early-return when its scan is
+ * not the active view.
  *
  * Omit on pages that host a single scan: an absent predicate is treated
  * as always active.
@@ -471,11 +471,12 @@ export class Scroller {
    * otherwise inactive scrollers would react to keystrokes and clicks.
    * This is a brittle pattern — every new handler must remember the guard.
    *
-   * TODO: (#203) Re-express NEXT / PREV / RESET as custom DOM events
-   * dispatched by the host (or by the buttons themselves on the active
-   * scan's image). Each scroller would listen on its own image and so be
+   * TODO: (#203) Re-express NEXT / PREV as custom DOM events dispatched
+   * by the host (or by the buttons themselves on the active scan's
+   * image). Each scroller would listen on its own image and so be
    * inherently mode-scoped, eliminating the `active()` checks here. The
-   * matching plan for search events lives in `docs/crum/query.ts`.
+   * matching plan for search events lives in `docs/crum/query.ts`; RESET
+   * already follows this shape via `head.EVENT`.
    *
    * TODO: (#0) A complementary cleaner design is for the host to
    * register / unregister the listener set wholesale on mode change.
@@ -513,31 +514,41 @@ export class ZoomerDragger {
   private originX = 0;
   private originY = 0;
   private isDragging = false;
+  private readonly isActive: IsActive;
 
   /**
    * @param form - Image + reset-button pair the dragger controls.
    * @param form.image - <img> the dragger zooms and pans.
    * @param form.resetButton - Button that resets the zoom / pan transform.
+   * @param isActive - Predicate that answers whether this scan is the
+   * active one on the host page. When the host serves multiple scans
+   * behind a mode switcher, every scan's `ZoomerDragger` listens to the
+   * same `head.EVENT` dispatched by the shared reset button, so only the
+   * active one should perform the reset. Omit on single-scan pages.
    */
   public constructor(
     private readonly form: {
       image: HTMLImageElement;
       resetButton: HTMLElement;
-    }
+    },
+    isActive?: IsActive
   ) {
+    this.isActive = isActive ?? ((): boolean => true);
     this.addEventListeners();
   }
 
   /**
    * Register event listeners.
    *
-   * Unlike `Scroller`, no mode gating is needed here: the image-scoped
-   * listeners (wheel, mousedown) can't fire when the image lives in a
-   * `display: none` ancestor; the document-level drag listeners are
-   * latched off `this.isDragging`, which can only become true via a
-   * mousedown on a visible image; and the cross-mode reset listeners
-   * (reset-button click, R key) are deliberately shared — a reset is
-   * meant to apply to every scan at once.
+   * The image-scoped listeners (wheel, mousedown) can't fire when the
+   * image lives in a `display: none` ancestor; the document-level drag
+   * listeners are latched off `this.isDragging`, which can only become
+   * true via a mousedown on a visible image; so neither group needs
+   * mode gating.
+   *
+   * The reset trigger is shared across scans (one `.reset` button, one
+   * `head.EVENT`), so we gate the listener with `isActive` to restrict
+   * reset to whichever scan is currently in view.
    */
   private addEventListeners(): void {
     // Mouse wheel over the image zooms it. The listener is scoped to the
@@ -559,11 +570,16 @@ export class ZoomerDragger {
     // Lifting the mouse click stops dragging.
     document.addEventListener('mouseup', this.stopDragging.bind(this));
 
-    // Clicking the reset button resets the image position.
-    this.form.resetButton.addEventListener('click', this.reset.bind(this));
-
-    // Some keyboard events trigger actions.
-    document.addEventListener('keydown', this.handleKeyDown.bind(this));
+    // The reset button dispatches `head.EVENT.RESET`; we listen for it
+    // and reset only when this scan is the active view.
+    this.form.resetButton.addEventListener('click', (): void => {
+      head.dispatch(head.EVENT.RESET);
+    });
+    document.addEventListener(head.EVENT.RESET, (): void => {
+      if (this.isActive()) {
+        this.reset();
+      }
+    });
   }
 
   /**
@@ -643,17 +659,6 @@ export class ZoomerDragger {
    */
   private updateTransform(): void {
     this.form.image.style.transform = `scale(${this.scale.toString()}) translate(${this.originX.toString()}px, ${this.originY.toString()}px)`;
-  }
-
-  /**
-   * Handle a 'keydown' event.
-   *
-   * @param e - Keyboard event.
-   */
-  private handleKeyDown(e: KeyboardEvent): void {
-    if (e.code === 'KeyR') {
-      this.reset();
-    }
   }
 }
 

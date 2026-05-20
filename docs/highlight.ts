@@ -86,8 +86,6 @@ export class ElementStyler implements Styler {
  * to page events.
  */
 export abstract class Highlighter {
-  // TODO: (#203) This should register against a global event type, and should
-  // therefore be made protected rather than public.
   public abstract reset(): void;
 
   /**
@@ -99,8 +97,15 @@ export abstract class Highlighter {
 
   /**
    * @param styler
+   * @param isActive - Predicate consulted before responding to a
+   * `head.EVENT`. Lets a host that mounts several highlighters behind a
+   * mode switcher (e.g. the lexicon page) restrict reset to whichever
+   * dictionary is currently in view. Defaults to always active.
    */
-  public constructor(private readonly styler: Styler) {
+  public constructor(
+    private readonly styler: Styler,
+    private readonly isActive: () => boolean = () => true
+  ) {
     // NOTE: We defer the execution of initialization logic, instead of directly
     // calling it in the constructor, in order to ensure that the constructor of
     // child class have finished execution and that the object is fully
@@ -128,14 +133,21 @@ export abstract class Highlighter {
       }
     });
 
-    // A click on the reset element resets all display.
-    // TODO: (#203) Use a global reset event type.
+    // Reset buttons dispatch `head.EVENT.RESET`; we listen for it and
+    // reset only when this highlighter's view is the active one.
     document
       .querySelectorAll<HTMLElement>(`.${head.CLS.RESET}`)
       .forEach((el: HTMLElement): void => {
         el.classList.add(ccls.LINK);
-        el.addEventListener('click', this.reset.bind(this));
+        el.addEventListener('click', (): void => {
+          head.dispatch(head.EVENT.RESET);
+        });
       });
+    document.addEventListener(head.EVENT.RESET, (): void => {
+      if (this.isActive()) {
+        this.reset();
+      }
+    });
   }
 }
 
@@ -158,13 +170,15 @@ export abstract class DialectHighlighter<C extends string> extends Highlighter {
    * Checking a checkbox should update the dialect highlighting. Updating
    * dialect highlighting in some other way should also update the `checked`
    * property of the associated checkbox(es).
+   * @param isActive - See `Highlighter`.
    */
   public constructor(
     styler: Styler,
     protected readonly manager: dial.Manager<C>,
-    private readonly checkboxes: HTMLInputElement[]
+    private readonly checkboxes: HTMLInputElement[],
+    isActive: () => boolean = () => true
   ) {
-    super(styler);
+    super(styler, isActive);
   }
 
   /**

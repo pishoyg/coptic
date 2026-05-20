@@ -387,7 +387,7 @@ export async function init(): Promise<void> {
   );
   const dictionary = new scan.Dictionary(index, scroller);
 
-  new scan.ZoomerDragger(form);
+  new scan.ZoomerDragger(form, isActive);
 
   document.addEventListener(query.EVENT, (e: Event): void => {
     dictionary.search((e as CustomEvent<string>).detail);

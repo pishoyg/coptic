@@ -55,10 +55,10 @@ class Styler implements high.Styler {
  */
 export class Highlighter extends high.Highlighter {
   /**
-   *
+   * @param isActive - See `high.Highlighter`.
    */
-  public constructor() {
-    super(new Styler());
+  public constructor(isActive?: () => boolean) {
+    super(new Styler(), isActive);
   }
 
   /**

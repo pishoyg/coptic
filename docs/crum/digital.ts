@@ -24,6 +24,7 @@ import * as andreas from './andreas.js';
 import * as cls from './cls.js';
 import * as html from '../html.js';
 import * as query from './query.js';
+import * as mode from './mode.js';
 
 // NOTE: The terms "roman" and "italic" below are used to distinguish pieces of
 // text surrounded by <span> tags with the "roman" class from those that are
@@ -464,10 +465,12 @@ export async function init(): Promise<void> {
     dialectsButton.click();
   }
 
-  const highlighter: high.Highlighter = new high.Highlighter(manager, [
-    ...dropdownCheckboxes,
-    ...listCheckboxes,
-  ]);
+  const isActive = (): boolean => mode.active(mode.DIGITAL);
+  const highlighter: high.Highlighter = new high.Highlighter(
+    manager,
+    [...dropdownCheckboxes, ...listCheckboxes],
+    isActive
+  );
   SearchResult.init(manager, highlighter);
 
   // Initialize searchers. Ownership of the search box, `?query=` URL
@@ -510,7 +513,7 @@ export async function init(): Promise<void> {
   );
 
   // Create the help panel.
-  const devHighlighter: dev.Highlighter = new dev.Highlighter();
+  const devHighlighter: dev.Highlighter = new dev.Highlighter(isActive);
   help.makeHelpPanel(highlighter, devHighlighter);
 
   // Add event listener for reports.

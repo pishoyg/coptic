@@ -53,8 +53,13 @@ export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
    * Checking a checkbox should update the dialect highlighting. Updating
    * dialect highlighting in some other way should also update the checking of
    * the checkboxes.
+   * @param isActive - See `high.Highlighter`.
    */
-  public constructor(manager: dial.Manager, checkboxes: HTMLInputElement[]) {
+  public constructor(
+    manager: dial.Manager,
+    checkboxes: HTMLInputElement[],
+    isActive?: () => boolean
+  ) {
     super(
       // CSS styler, which is our preferable styler, doesn't work on Anki. For
       // some reason! We therefore opt for an element styler.
@@ -62,7 +67,8 @@ export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
         ? new high.ElementStyler(() => Array.from(this.updates()))
         : new high.CSSStyler(() => this.rule()),
       manager,
-      checkboxes
+      checkboxes,
+      isActive
     );
   }
 
