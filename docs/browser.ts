@@ -33,10 +33,28 @@ export function smallScreen(): boolean {
 }
 
 /**
- * @returns Whether the device has a touch screen.
+ * @returns Whether focusing a text input is likely to summon an on-screen
+ * keyboard.A hybrid laptop with a
+ * touchscreen and a mouse has touch input, but focusing an input does *not*
+ * pop up a virtual keyboard there.
+ *
+ * Biased toward false positives: we only return `false` when we have strong
+ * evidence of a hardware pointing device acting as the *primary* input
+ * (fine pointer + hover capability). Anything else — coarse primary pointer,
+ * no-hover primary, or ambiguous — returns `true`. Use when the cost of a false
+ * positive is smaller than a false negative.
  */
-export function touchScreen(): boolean {
-  return navigator.maxTouchPoints > 0;
+export function virtualKeyboardLikely(): boolean {
+  // A primary pointer that is `fine` AND can `hover` is, in practice, only
+  // produced by a mouse or trackpad. On such devices the OS assumes a
+  // hardware keyboard is also present and does not show an OSK on focus.
+  // Negating this gives us a permissive default: phones, tablets, and any
+  // browser that doesn't support these media queries all fall through to
+  // `true`.
+  return (
+    !window.matchMedia('(pointer: fine)').matches ||
+    !window.matchMedia('(hover: hover)').matches
+  );
 }
 
 /**
