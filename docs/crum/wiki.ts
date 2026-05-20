@@ -914,6 +914,11 @@ function* suffixFollowups(
   // follows it). If it matches a known form superscript, leave it alone — it
   // will receive a form tooltip in `annotateFormSuperscripts`. Otherwise,
   // treat it as a trailing part of the suffix.
+  // NOTE: Previously, the heuristic assumed that suffix superscripts only
+  // appeared mid-suffix. Rare exceptions (e.g. [1]) where they appear
+  // at the end necessitated checking against known form superscripts instead
+  // of relying solely on position.
+  //   https://remnqymi.com/crum/636.html#:~:text=P%201303
   if (formSuperscripts.has(maybeSUP.textContent ?? '')) {
     return;
   }
