@@ -46,8 +46,10 @@
   },
   "dependencies": {
     "@playwright/cli": "^0.1.8",
+    "@types/js-yaml": "^4.0.9",
     "@types/jsdom": "^21.1.7",
     "jiti": "^2.6.1",
+    "js-yaml": "^4.1.1",
     "jsdom": "^27.4.0"
   }
 }
