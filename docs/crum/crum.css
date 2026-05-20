@@ -363,7 +363,7 @@ figcaption {
 :target.drv .meaning,
 :target.footnote,
 :target.mark {
-  background-color: var(--anchor-highlight);
+  background-color: var(--anchor-highlight) !important;
 }
 
 .drv-link {
