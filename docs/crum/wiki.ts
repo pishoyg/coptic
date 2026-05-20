@@ -208,6 +208,17 @@ const REFERENCE_FOLLOWUP = new RegExp(
 const REFERENCE_RE = new RegExp(str.regex(Object.keys(ref.MAPPING)), 'gu');
 
 /**
+ * formSuperscripts maps the text content of a form-superscript element to the
+ * Coptic form it stands for, for the wiki currently being processed.
+ *
+ * It is populated by `collectFormSuperscripts` before enrichment, consulted by
+ * `suffixFollowups` to decide whether a trailing `<sup>` belongs to a
+ * reference suffix or is a form superscript, and read by
+ * `annotateFormSuperscripts` to add tooltips at the end.
+ */
+let formSuperscripts = new Map<string, string>();
+
+/**
  *
  * @param book
  * @param chapter
@@ -264,6 +275,11 @@ export function handle(root: HTMLElement, full = true): void {
     .querySelectorAll<HTMLElement>(`.${cls.WIKI}`)
     .forEach((wiki: HTMLElement): void => {
       const startText: string | undefined = dev.play(() => textContent(wiki));
+
+      // Identify form superscripts before enrichment so that reference suffix
+      // processing can distinguish a trailing `<sup>` that stands for a Coptic
+      // form from one that is part of the suffix itself.
+      formSuperscripts = collectFormSuperscripts(wiki);
 
       enrich(wiki);
 
@@ -881,23 +897,28 @@ function* suffixFollowups(
     return;
   }
 
-  // No suffix superscript ever occurs at the very end of the suffix. It must be
-  // followed by other parts. Check the next sibling to see if it contains the
-  // suffix continuation, and if so, yield both.
   const next: ChildNode | null = maybeSUP.nextSibling;
-
-  if (!next?.nodeValue) {
-    return;
+  if (next?.nodeValue) {
+    const match: RegExpMatchArray | null = next.nodeValue.match(SUFFIX);
+    if (match) {
+      // The superscript appears in the middle of a suffix (more suffix text
+      // follows it), so it is part of the suffix.
+      yield maybeSUP;
+      yield match[0];
+      next.nodeValue = next.nodeValue.slice(match[0].length);
+      return;
+    }
   }
 
-  const match: RegExpMatchArray | null = next.nodeValue.match(SUFFIX);
-  if (!match) {
+  // The superscript appears at the end of the suffix (no further suffix text
+  // follows it). If it matches a known form superscript, leave it alone — it
+  // will receive a form tooltip in `annotateFormSuperscripts`. Otherwise,
+  // treat it as a trailing part of the suffix.
+  if (formSuperscripts.has(maybeSUP.textContent ?? '')) {
     return;
   }
 
   yield maybeSUP;
-  yield match[0];
-  next.nodeValue = next.nodeValue.slice(match[0].length);
 }
 
 /**
@@ -1541,48 +1562,55 @@ function addTextCopyTriggers(root: HTMLElement): void {
  * Sometimes, Crum uses a superscript to refer to Coptic word forms throughout a
  * paragraph. (Example: ⲛⲏⲏⲃⲉ[1] on 'p 222 a')
  *
- * This function searches for such superscripts and annotates them with
- * tooltips.
+ * A form superscript is a `<sup>` element whose immediate previous sibling is
+ * a `<span class="coptic">`. This function walks the wiki and builds a map
+ * from each such superscript's text content to its Coptic form. The map is
+ * keyed by text content so that later occurrences of the same superscript
+ * (without an adjacent Coptic sibling) can also be annotated.
  *
  * [1] https://remnqymi.com/crum/1174.html
  * @param root
+ * @returns
  */
-function handleFormSuperscripts(root: HTMLElement): void {
+function collectFormSuperscripts(root: HTMLElement): Map<string, string> {
   const map: Map<string, string> = new Map<string, string>();
   root.querySelectorAll('sup').forEach((sup: HTMLElement): void => {
-    if (sup.parentElement?.matches(EXCLUDE)) {
-      // This superscript doesn't require annotation. It may be part of a
-      // reference suffix or a dialect siglum.
-      return;
-    }
-    const form: string | undefined = map.get(sup.textContent);
-    if (form) {
-      // This superscript was encountered before. Annotate this instance.
-      drop.addDroppable(sup, [form]);
-      return;
-    }
-    // This superscript is seen for the first time. Store the form that it
-    // represents in the map.
-    // Almost always, the form is the immediate previous sibling. But there are
-    // exceptions, e.g. under ⲥⲃⲃⲉ[1] (p 321 b)
-    //
-    // [1] https://remnqymi.com/crum/1377.html#:~:text=F13
-    let prev: ChildNode | null = sup.previousSibling;
-    while (
-      prev &&
-      !(
-        prev.nodeType === Node.ELEMENT_NODE &&
-        (prev as Element).classList.contains(cls.COPTIC) &&
-        prev.textContent
-      )
+    const prev: ChildNode | null = sup.previousSibling;
+    if (
+      prev?.nodeType !== Node.ELEMENT_NODE ||
+      !(prev as Element).classList.contains(cls.COPTIC) ||
+      !prev.textContent
     ) {
-      prev = prev.previousSibling;
+      return;
     }
-    if (!prev?.textContent) {
-      log.error('Unable to find the form of superscript', sup.textContent);
+    if (map.has(sup.textContent)) {
       return;
     }
     map.set(sup.textContent, prev.textContent);
+  });
+  return map;
+}
+
+/**
+ * Add form tooltips to `<sup>` elements that were not consumed as part of a
+ * reference suffix during enrichment. Uses the form-superscript map built by
+ * `collectFormSuperscripts`.
+ *
+ * @param root
+ */
+function handleFormSuperscripts(root: HTMLElement): void {
+  root.querySelectorAll('sup').forEach((sup: HTMLElement): void => {
+    if (sup.parentElement?.matches(EXCLUDE)) {
+      // This superscript doesn't require annotation. It may be inside a
+      // reference span, a dialect siglum, or another excluded element.
+      return;
+    }
+    const form: string | undefined = formSuperscripts.get(sup.textContent);
+    if (!form) {
+      log.error('Unable to find the form of superscript', sup.textContent);
+      return;
+    }
+    drop.addDroppable(sup, [form]);
   });
 }
 /* eslint-enable max-lines */
