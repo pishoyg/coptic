@@ -126,6 +126,10 @@ crum: FORCE
 	# Generate the Crum lexicon artefacts.
 	./dictionary/marcion_sourceforge_net/main.py
 
+pisaxo: FORCE
+	# Regenerate ⲡⲓⲥⲁϧⲟ's Bibliography from the YAML.
+	./dictionary/marcion_sourceforge_net/pisaxo.ts
+
 # TODO: (#421) Delete this rule. We will no longer retain the original images,
 # and this won't be even possible.
 crum_img: FORCE

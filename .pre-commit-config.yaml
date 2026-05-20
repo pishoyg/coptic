@@ -231,7 +231,9 @@ repos:
       - id: check-symlinks
       - id: check-vcs-permalinks
       - id: check-yaml
-        args: [--allow-multiple-documents]
+        # `--unsafe` checks syntax without resolving tags, so files with
+        # custom tags like `!lookup` in bib.yaml still pass.
+        args: [--allow-multiple-documents, --unsafe]
       - id: check-toml
       - id: debug-statements
       - id: destroyed-symlinks
@@ -262,7 +264,7 @@ repos:
         # The KELLIA driver contains non-English text.
         # Other types of files are data files, not code files. We don't take
         # data updates lightly.
-        exclude: ".*\\.(xml|html|xhtml|txt|tsv|csv|json|tab|msql|xsd)$|dictionary/kellia_uni_goettingen_de/(main.py|data/.*)|docs/crum/(pisaxo|annotations).(t|j)s"
+        exclude: ".*\\.(xml|html|xhtml|txt|tsv|csv|json|tab|msql|xsd)$|dictionary/kellia_uni_goettingen_de/(main.py|data/.*)|docs/crum/(pisaxo|annotations).(t|j)s|bib.yaml"
         args: [-L, "afterAll,astroid,Cant,pres,serie,cange,doubleclick,Mor"]
 
   # Git Commit Messages

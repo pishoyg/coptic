@@ -4,7 +4,8 @@
     "./test/**/*.ts",
     "playwright.config.ts",
     "eslint.config.ts",
-    "bun.ts"
+    "bun.ts",
+    "dictionary/marcion_sourceforge_net/pisaxo.ts"
   ],
   "compilerOptions": {
     "module": "NodeNext"
