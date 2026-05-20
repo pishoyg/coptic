@@ -167,6 +167,17 @@ def main():
         paths.LEXICON,
     )
 
+    # Write the headword-to-page map.
+    headword_to_page: dict[str, str] = {}
+    for w in wiki.wikis():
+        for headword in w._headwords:
+            key: str = "".join(constants.COPTIC_LETTER_RE.findall(headword))
+            # Entries are processed in order, so the first occurrence has the
+            # smallest column. Don't overwrite.
+            if key not in headword_to_page:
+                headword_to_page[key] = str(w.crum)
+    file.write(str(headword_to_page), paths.CRUM_HEADWORD_PAGE_MAP)
+
 
 if __name__ == "__main__":
     main()

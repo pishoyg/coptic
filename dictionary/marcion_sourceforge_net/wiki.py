@@ -39,6 +39,10 @@ RAW_RE: regex.Pattern[str] = regex.compile(
     r"\[\[.*?\]\]|[\p{Latin}\P{Letter}ʿβ]",
 )
 
+HEADWORD_RE: regex.Pattern[str] = regex.compile(
+    r"-?\(?[ⲁ-ⲱϣ-ϯⳉ \p{Mark}()\[\]]+(?:|-|⸗|†|\[|\[\.\])\)?",
+)
+
 
 class Substitution:
     """A class to represent a single regex substitution."""
@@ -235,25 +239,6 @@ _SUBSTITUTIONS: list[Substitution] = [
         ban=["^"],
     ),
     Substitution(
-        # Ensure the headword is preceded by the start of the string
-        # (optionally with a single opening parenthesis) or by the
-        # separator ']]], ' from a previous headword.
-        # This prevents false positives in cases where multiple pieces of Coptic
-        # text in the entry contain brackets at the beginning or the end,
-        # resulting in triple brackets.
-        # Headwords always occur:
-        # - Either at the very beginning of the text, occasionally preceded by a
-        #   single parenthesis (e.g. ϩⲟⲟⲩⲣⲉ on page 737 b [1]).
-        # - Following another headword (e.g. ϩⲁ, ϩⲟ on page 635 a [2]).
-        #
-        # [1] https://remnqymi.com/crum/2321.html
-        # [2] https://remnqymi.com/crum/2095.html
-        # [2] https://remnqymi.com/crum/2096.html
-        r"(?:(?<=^)|(?<=^\()|(?<=]]], ))" + bracketed("(.*?)", 3),
-        r'<span class="headword coptic">\1</span>',
-        ban=["[[[", "]]]"],
-    ),
-    Substitution(
         r"\\n",
         CLOSE_SUBPARAGRAPH
         + CLOSE_PARAGRAPH
@@ -281,6 +266,11 @@ class Wiki:
         self.entry: str = record["Entry"]
         self.headword: str = record["Headword"]
         assert self.headword
+
+        # headwords tracks the headwords encountered in the text. In extremely
+        # rare cases, there could be multiple, e.g. ϩⲁ, ϩⲟ:
+        #  https://remnqymi.com/crum/2096.html
+        self._headwords: list[str] = []
 
         ensure.ensure(
             self.key == 0
@@ -328,7 +318,35 @@ class Wiki:
             )
         self.footnotes: list[str] = []
 
+    def headwords(self) -> list[str]:
+        # TODO: (#503) Restore the check below when the data is complete.
+        # ensure.ensure(self._headwords, "Headwords for", self,
+        # "not populated!")
+        return self._headwords
+
     def subs(self) -> abc.Generator[Substitution]:
+        # The headword substitution (which uses triple brackets) must precede
+        # the double-bracket substitution.
+        yield Substitution(
+            # Ensure the headword is preceded by the start of the string
+            # (optionally with a single opening parenthesis) or by the
+            # separator ']]], ' from a previous headword.
+            # This prevents false positives in cases where multiple pieces of Coptic
+            # text in the entry contain brackets at the beginning or the end,
+            # resulting in triple brackets.
+            # Headwords always occur:
+            # - Either at the very beginning of the text, occasionally preceded by a
+            #   single parenthesis (e.g. ϩⲟⲟⲩⲣⲉ on page 737 b [1]).
+            # - Following another headword (e.g. ϩⲁ, ϩⲟ on page 635 a [2]).
+            #
+            # [1] https://remnqymi.com/crum/2321.html
+            # [2] https://remnqymi.com/crum/2095.html
+            # [2] https://remnqymi.com/crum/2096.html
+            r"(?:(?<=^)|(?<=^\()|(?<=]]], ))" + bracketed("(.*?)", 3),
+            self.replace_headword,
+            ban=["[[[", "]]]"],
+        )
+
         yield from _SUBSTITUTIONS
 
         yield Substitution(
@@ -338,6 +356,8 @@ class Wiki:
             text_repl="",
             ban=["{", "}"],
         )
+        # The substitution for manual labels must follow the substitution for
+        # footnotes.
         yield Substitution(
             r"{(.*?)}(?:{(.*?)})?",
             replace_manual,
@@ -352,6 +372,16 @@ class Wiki:
                 r"\2",
                 ban=["//"],
             )
+
+    def replace_headword(self, match: re.Match[str]) -> str:
+        headword: str = match.group(1)
+        ensure.ensure(
+            HEADWORD_RE.fullmatch(headword),
+            "Invalid headword:",
+            headword,
+        )
+        self._headwords.append(headword)
+        return f'<span class="headword coptic">{headword}</span>'
 
     def addendum(self) -> bool:
         """Determine whether this entry is an addendum.
@@ -405,11 +435,13 @@ class Wiki:
     def _banned(self) -> set[str]:
         return {token for sub in self.subs() for token in sub.ban}
 
+    @functools.cached_property
     def html(self) -> str:
-        # NOTE: Each call to this method populates self.footnotes. Calling it
-        # multiple times would be an error.
-        # TODO: (#0) This is not a clean implementation!
+        # NOTE: Each call to this method populates some fields, such as
+        # headwords and footnotes. Calling it multiple times would be an error.
+        # Caching should prevent multiple executions on the same object.
         assert not self.footnotes
+        assert not self._headwords
         html: str = "".join(self._html_aux())
         for token in self._banned():
             ensure.ensure(
@@ -499,13 +531,17 @@ class Wiki:
         return None
 
 
-def wikis() -> abc.Generator[Wiki]:
+def _wikis() -> abc.Generator[Wiki]:
     for record in gcp.tsv_spreadsheet(SHEET_TSV_URL).to_dict(orient="records"):
         for key in record["Marcion"].split():
             yield Wiki(key, record)
 
 
 @functools.cache
+def wikis() -> list[Wiki]:
+    return list(_wikis())
+
+
 def by_marcion_key() -> dict[str, list[Wiki]]:
     entries: list[Wiki] = list(wikis())
     # Remove entries that don't have a key.
@@ -535,7 +571,7 @@ class Column:
         yield '<span class="crum-page">'
         yield str(self.crum)
         yield "</span>"
-        html: str = "".join(w.html() for w in self.wikis if w.complete)
+        html: str = "".join(w.html for w in self.wikis if w.complete)
         ensure.ensure(
             html,
             "Generating HTML for a page without any complete Wikis! Page:",

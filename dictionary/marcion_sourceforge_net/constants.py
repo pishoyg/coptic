@@ -62,6 +62,7 @@ ENGLISH_WITHIN_COPTIC_RE: re.Pattern[str] = re.compile(r"\{[^\}]+\}")
 # \u0305: Combining overline (ⲁ̅)
 # \u0300: Combining grave accent (ⲁ̀)
 PURE_COPTIC_RE: re.Pattern[str] = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ\u0305\u0300]+")
+COPTIC_LETTER_RE: re.Pattern[str] = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
 
 # TYPES is used to parse the "type" column.
 _TYPES: list[lexical.Type] = [
