@@ -1,7 +1,7 @@
 /* eslint-disable max-lines */
 
 export const LOOKUP = Symbol('LOOKUP');
-export type Postfix = string | undefined | typeof LOOKUP;
+export type Postfix = string | null | typeof LOOKUP;
 
 /**
  * Source represents a source, along with the different variants and postfixes
@@ -341,13 +341,13 @@ export const DATA: Source[] = [
     postfixes: {
       Copt: 'Coptic',
       copt: 'Coptic',
-      '(P)': undefined,
-      '(P)a': undefined,
-      '(P)b': undefined,
-      '(P)c': undefined,
-      '(P)d': undefined,
-      P: undefined,
-      Hunt: undefined,
+      '(P)': null,
+      '(P)a': null,
+      '(P)b': null,
+      '(P)c': null,
+      '(P)d': null,
+      P: null,
+      Hunt: null,
       Marsh: 'Marshall Collection',
     },
   },
@@ -486,7 +486,7 @@ export const DATA: Source[] = [
     variants: ['C O'],
     postfixes: {
       Ad: 'Addenda to lithographed texts',
-      Index: undefined,
+      Index: null,
     },
   },
   {
@@ -522,7 +522,7 @@ export const DATA: Source[] = [
       'Griffith, F. Ll., &amp; Thompson, H. (1909). <em><a href="https://archive.org/details/the-demotic-magical-papyrus-of-london-and-leiden-v.-3/page/n1/mode/2up">The Demotic Magical Papyrus of London and Leiden</a></em>, Vol. III: Indices. London: H. Grevel &amp; Co.',
     ],
     variants: ['DM'],
-    postfixes: { Index: undefined, Indices: undefined },
+    postfixes: { Index: null, Indices: null },
   },
   {
     title: 'R. Dozy, Supplém. aux diet. arabes, 1881',
@@ -536,7 +536,7 @@ export const DATA: Source[] = [
     title:
       'Egypt Exploration Soc. (olim Fund), MSS. &c. in their possession (Crum’s copies)',
     variants: ['EES'],
-    postfixes: { Report: undefined },
+    postfixes: { Report: null },
   },
   {
     title: 'Die Apokalypse d. Elias, ed. G. Steindorff, 1899',
@@ -755,7 +755,7 @@ export const DATA: Source[] = [
     variants: ['J'],
     postfixes: {
       Leip: 'two such papyri in Leipzig University, Aegyptologisches Institut (cf below)',
-      Index: undefined,
+      Index: null,
     },
   },
   {
@@ -853,18 +853,18 @@ export const DATA: Source[] = [
     ],
     variants: ['Kropp'],
     postfixes: {
-      A: undefined,
-      B: undefined,
-      C: undefined,
-      D: undefined,
-      E: undefined,
-      F: undefined,
-      G: undefined,
-      H: undefined,
-      J: undefined,
-      K: undefined,
-      M: undefined,
-      R: undefined,
+      A: null,
+      B: null,
+      C: null,
+      D: null,
+      E: null,
+      F: null,
+      G: null,
+      H: null,
+      J: null,
+      K: null,
+      M: null,
+      R: null,
     },
   },
   {
@@ -1335,7 +1335,7 @@ export const DATA: Source[] = [
       'Bell, H. I. (1917). <em><a href="https://archive.org/details/greekpapyriinbri05brit/page/n5/mode/2up">Greek Papyri in the British Museum: Catalogue with Texts</a></em>. Vol. V. London: British Museum.',
     ],
     variants: ['P Lond'],
-    postfixes: { V: undefined },
+    postfixes: { V: null },
   },
   {
     title:
@@ -1459,7 +1459,7 @@ export const DATA: Source[] = [
     title: 'MSS. & copies belonging to Seymour de Ricci (Crum’s copies)',
     variants: ['Ricci'],
     postfixes: {
-      L: undefined,
+      L: null,
     },
   },
   {
@@ -1546,7 +1546,7 @@ export const DATA: Source[] = [
       Ep: LOOKUP,
       HT: LOOKUP,
       IF: LOOKUP,
-      Louvre: undefined,
+      Louvre: null,
       Leyd: LOOKUP,
       'L Mis': LOOKUP,
       MIF: LOOKUP,
@@ -1772,7 +1772,7 @@ export const DATA: Source[] = [
   {
     title: 'Vienna, MSS. & ostraca in the Staats(olim Hof)bibliothek',
     variants: ['Vi', 'Vienna'],
-    postfixes: { K: undefined },
+    postfixes: { K: null },
   },
   {
     title: 'C. Wessely, Studien z. Paläographie &c., acc. to vol. & page',
@@ -1951,7 +1951,7 @@ export const DATA: Source[] = [
   {
     variants: ['Mich'],
     // TODO: (#522) Verify the following postfixes.
-    postfixes: { P: undefined, 'wooden tablet': undefined },
+    postfixes: { P: null, 'wooden tablet': null },
   },
   {
     variants: ['Mich Pasc Lect'],

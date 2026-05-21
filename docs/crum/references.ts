@@ -241,7 +241,7 @@ class Postfix {
    */
   public constructor(
     public readonly name: string,
-    public readonly interpretation?: sax.Postfix
+    public readonly interpretation: sax.Postfix
   ) {}
 
   /**
@@ -266,7 +266,7 @@ class Postfix {
 
     dev.play(() => {
       // Sanity check!
-      log.ensure(this.interpretation === undefined);
+      log.ensure(!this.interpretation);
     });
 
     return [];
