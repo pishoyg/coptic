@@ -185,29 +185,34 @@ export class Reference {
    * @param suffix
    * @returns
    */
-  private static suffixAnnotations(
+  private static *suffixAnnotations(
     suffix: (Node | string)[]
-  ): (Node | string)[] {
-    return suffix.flatMap((node: string | Node): (Node | string)[] => {
+  ): Generator<Node> {
+    // NOTE: Ideally, this should consider the text as a whole, rather than
+    // one node at a time.
+    // Multi-node annotations are extremely rare. Indeed, multi-node *suffix*
+    // annotations have never been encountered yet, so this is deemed
+    // acceptable.
+    for (const node of suffix) {
       const text = typeof node === 'string' ? node : (node.textContent ?? '');
       const italic = node instanceof Element && node.nodeName === 'I';
-      ann.RE.lastIndex = 0;
 
-      return Array.from(text.matchAll(ann.RE))
-        .map((match: RegExpExecArray): string => match[0])
-        .flatMap((abb: string): (Node | string)[] => {
-          const annot = ann.MAPPING[abb];
-          if (!annot?.suffix) {
-            log.warn('Non-suffix annotation found in suffix:', abb);
-            return [];
-          }
-          return [
-            document.createElement('br'),
-            ...abbreviation(abb, italic),
-            html.maybeI(annot.fullForm, italic),
-          ];
-        });
-    });
+      ann.RE.lastIndex = 0;
+      for (const match of text.matchAll(ann.RE)) {
+        const abb: string = match[0];
+        const annot = ann.MAPPING[abb];
+        if (!annot?.suffix) {
+          log.warn('Non-suffix annotation found in suffix:', abb);
+          continue;
+        }
+        const div: HTMLDivElement = document.createElement('div');
+        div.append(
+          ...abbreviation(abb, italic),
+          html.maybeI(annot.fullForm, italic)
+        );
+        yield div;
+      }
+    }
   }
 }
 
