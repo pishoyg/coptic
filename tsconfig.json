@@ -4,7 +4,7 @@
     "./docs/**/*.ts"
   ],
   "compilerOptions": {
-    "target": "ES2022",
+    "target": "ES2024",
     "module": "ESNext",
     "noEmit": true,
     "noEmitOnError": true,
