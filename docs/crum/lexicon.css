@@ -44,7 +44,7 @@ input#search-box:focus {
 
 /* Wide screen rules: */
 @media (width > 700px) {
-  /* Hide the drop-down menu, and the keyboard. */
+  /* Hide the tooltip menu, and the keyboard. */
 
   /* TODO: (#453) Show the keyboard on desktop once you have instructions for how
    * to install a keyboard on desktop. */

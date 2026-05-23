@@ -17,7 +17,7 @@ import * as ccls from '../cls.js';
 import * as head from '../header.js';
 import * as log from '../logger.js';
 import * as wiki from './wiki.js';
-import * as drop from '../dropdown.js';
+import * as tool from '../tooltip.js';
 import * as dev from '../dev.js';
 import * as roots from './roots.js';
 import * as derivations from './derivations.js';
@@ -256,7 +256,7 @@ export function handleDialect(
     // 1. Render Visuals: Replace text with Siglum and add Tooltip.
     const siglum: HTMLSpanElement = dialect.siglum();
     el.replaceChildren(siglum);
-    drop.addDroppable(el, [dialect.name], [cls.DIALECT]);
+    tool.addTooltip(el, [dialect.name], [cls.DIALECT]);
 
     if (el.closest(`.${cls.WIKI}`) || !standard) {
       // There is no highlighting in Wiki. And definitely not for nonstandard

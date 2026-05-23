@@ -1,12 +1,12 @@
-/* CSS for both hover-invoked and click-invoked tooltips (a.k.a. droppables).
+/* CSS for both hover-invoked and click-invoked tooltips.
  *
- * Wired droppables live under <body> with the `popover` attribute (set by
- * dropdown.ts). Each one carries an inline `position-anchor: --droppable-N`
- * matched by an inline `anchor-name: --droppable-N` on its trigger. */
+ * Wired tooltips live under <body> with the `popover` attribute (set by
+ * tooltip.ts). Each one carries an inline `position-anchor: --tooltip-N`
+ * matched by an inline `anchor-name: --tooltip-N` on its trigger. */
 
 /* CSS for all parents of tooltips (hover-invoked or click-invoked). */
-.drop,
-.dropdown {
+.miser,
+.tipper {
   /* Since tooltips render right beneath their parents, the positioning would
    * look rather odd in cases where the parent lives on multiple lines.
    * Thankfully, such parents tend to be so short that we can usually afford to
@@ -14,20 +14,20 @@
   white-space: nowrap;
 }
 
-.dropdown:hover {
+.tipper:hover {
   background-color: #f1f8ff;
   border-radius: 4px;
 }
 
-/* .drop is specific to click-invoked elements. */
-.drop {
+/* .miser is specific to click-invoked elements. */
+.miser {
   cursor: pointer;
 }
 
-/* .droppable represents either a click-invoked or hover-invoked tooltip.
- * The selector below applies once dropdown.ts has stamped the `popover`
+/* .tooltip represents either a click-invoked or hover-invoked tooltip.
+ * The selector below applies once tooltip.ts has stamped the `popover`
  * attribute on the element. */
-.droppable[popover] {
+.tooltip[popover] {
   /* Reset the UA popover defaults so anchor positioning controls placement. */
   inset: auto;
   margin: 0;
@@ -76,7 +76,7 @@
     display 0.15s allow-discrete;
 
   & label {
-    /* If the droppable is a tooltip, then each label renders on a separate line. */
+    /* Then each label renders on a separate line. */
     display: block;
   }
 
@@ -105,7 +105,7 @@
   }
 }
 
-.dropdown:has(.dropdown):hover {
+.tipper:has(.tipper):hover {
   background-color: #fff2c5;
 }
 

@@ -703,7 +703,7 @@ class HTMLBuilder:
             scripts=[_CHAPTER_JS],
             css=[
                 _CHAPTER_CSS,
-                os.path.relpath(paths.DROPDOWN_CSS, paths.BIBLE_DIR),
+                os.path.relpath(paths.TOOLTIP_CSS, paths.BIBLE_DIR),
             ],
         )
         file.writelines(

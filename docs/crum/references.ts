@@ -1,5 +1,5 @@
 import * as log from '../logger.js';
-import * as drop from '../dropdown.js';
+import * as tool from '../tooltip.js';
 import * as cls from './cls.js';
 import * as dev from '../dev.js';
 import * as html from '../html.js';
@@ -159,7 +159,7 @@ export class Reference {
     // TODO: (#522) This check will soon be unnecessary, because all references
     // will be guaranteed to have tooltips.
     if (tooltip.length) {
-      drop.addDroppable(span, tooltip);
+      tool.addTooltip(span, tooltip);
     }
 
     return span;

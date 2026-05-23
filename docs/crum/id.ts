@@ -45,8 +45,8 @@ export const DIALECTS = 'dialects';
 export const DIALECTS_BUTTON = 'dialects-button';
 // While we have two groups of checkboxes, confusingly enough, the unqualified
 // 'checkboxes' ID refers to the ones that show on a list, rather than the
-// ones that show in the drop-down menu. The reason this ID was used for those
-// boxes is that they preceded the more recent drop-down version.
+// ones that show in the tooltip menu. The reason this ID was used for those
+// boxes is that they preceded the more recent tooltip version.
 export const CHECKBOXES = 'checkboxes';
 export const MARCION_CHECKBOX = 'marcion-checkbox';
 export const WIKI_CHECKBOX = 'wiki-checkbox';

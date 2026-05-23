@@ -74,7 +74,7 @@ def relpath(dst: str | pathlib.Path) -> str:
 
 CSS: list[str] = [
     relpath(paths.CRUM_CSS),
-    relpath(paths.DROPDOWN_CSS),
+    relpath(paths.TOOLTIP_CSS),
     relpath(paths.HELP_CSS),
     relpath(paths.HEADER_CSS),
 ]

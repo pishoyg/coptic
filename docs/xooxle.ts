@@ -5,7 +5,7 @@ import * as log from './logger.js';
 import * as orth from './orth.js';
 import * as cls from './cls.js';
 import * as str from './str.js';
-import * as drop from './dropdown.js';
+import * as tool from './tooltip.js';
 import * as dev from './dev.js';
 
 // KEY is the name of the field that bears the word key. The key can be used to
@@ -357,7 +357,7 @@ export class Form {
     this.messageBox.replaceChildren();
     /* Enrichers wire many tooltips into the search results; those popovers
      * live under <body>, so they survive the tbody clear above. Sweep them. */
-    drop.cleanupOrphans();
+    tool.cleanupOrphans();
   }
 }
 

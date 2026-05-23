@@ -3,7 +3,7 @@
 import * as high from './highlight.js';
 import * as browser from '../browser.js';
 import * as html from '../html.js';
-import * as drop from '../dropdown.js';
+import * as tool from '../tooltip.js';
 import * as cls from './cls.js';
 import * as dial from './dialect.js';
 
@@ -62,7 +62,7 @@ function main(): void {
   };
 
   // We will have two sets of checkboxes – one living in a bar (that shows on
-  // large screens) and one in a tray (for smaller screens) beneath a drop-down
+  // large screens) and one in a tray (for smaller screens) in a tooltip
   // element.
   const bar: HTMLDivElement = document.createElement('div');
   bar.append(...labels());
@@ -74,7 +74,7 @@ function main(): void {
   holder.textContent = 'Languages ▾';
   holder.id = ID.TRAY;
   holder.classList.add(cls.TRAY);
-  drop.addDroppable(holder, [tray], [cls.TRAY], 'click');
+  tool.addTooltip(holder, [tray], [cls.TRAY], 'click');
 
   // Construct the highlighter.
   const highlighter: high.Highlighter = new high.Highlighter(

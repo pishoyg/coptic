@@ -15,7 +15,7 @@ import * as help from './help.js';
 import * as head from '../header.js';
 import * as paths from '../paths.js';
 import * as crum from './crum.js';
-import * as drop from '../dropdown.js';
+import * as tool from '../tooltip.js';
 import * as log from '../logger.js';
 import * as id from './id.js';
 import * as dev from '../dev.js';
@@ -361,13 +361,13 @@ const XOOXLES: Xooxle[] = [
 /**
  * @returns
  */
-function addDropdownDialects(): {
+function addTooltipDialects(): {
   button: HTMLElement;
   checkboxes: HTMLInputElement[];
 } {
   const button: HTMLElement = document.getElementById(id.DIALECTS_BUTTON)!;
   const checkboxes: HTMLInputElement[] = [];
-  drop.addDroppable(
+  tool.addTooltip(
     button,
     Object.values(dial.DIALECTS).map(
       (dialect: dial.Dialect): HTMLLabelElement => {
@@ -413,7 +413,7 @@ function addCheckboxTooltips(): void {
     const label: HTMLLabelElement = document.querySelector<HTMLLabelElement>(
       `label[for="${checkbox}"]`
     )!;
-    drop.addDroppable(label, content, [cls.EXPLAIN_CHECKBOX]);
+    tool.addTooltip(label, content, [cls.EXPLAIN_CHECKBOX]);
   }
 }
 
@@ -429,7 +429,7 @@ function addListDialects(): HTMLInputElement[] {
         const checkbox: HTMLInputElement = dialect.checkbox();
         checkboxes.push(checkbox);
         label.append(checkbox, dialect.siglum());
-        drop.addDroppable(label, Array.from(dialect.anchoredName()));
+        tool.addTooltip(label, Array.from(dialect.anchoredName()));
         return label;
       }
     )
@@ -443,11 +443,11 @@ function addListDialects(): HTMLInputElement[] {
  * report-link header — then start listening for query-change events.
  */
 export async function init(): Promise<void> {
-  // We have a drop-down element bearing the dialects (intended for small
+  // We have a tooltip element bearing the dialects (intended for small
   // screens).
-  const { button: dialectsButton, checkboxes: dropdownCheckboxes } =
-    addDropdownDialects();
-  // We also have a second dialect list outside the dropdown (intended to be
+  const { button: dialectsButton, checkboxes: tooltipCheckboxes } =
+    addTooltipDialects();
+  // We also have a second dialect list outside the tooltip (intended to be
   // shown on large screens).
   const listCheckboxes: HTMLInputElement[] = addListDialects();
   addCheckboxTooltips();
@@ -468,7 +468,7 @@ export async function init(): Promise<void> {
   const isActive = (): boolean => mode.active(mode.DIGITAL);
   const highlighter: high.Highlighter = new high.Highlighter(
     manager,
-    [...dropdownCheckboxes, ...listCheckboxes],
+    [...tooltipCheckboxes, ...listCheckboxes],
     isActive
   );
   SearchResult.init(manager, highlighter);

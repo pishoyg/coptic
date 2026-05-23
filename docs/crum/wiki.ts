@@ -12,7 +12,7 @@ import * as log from '../logger.js';
 import * as bib from './bible.js';
 import * as ann from './annotations.js';
 import * as ref from './references.js';
-import * as drop from '../dropdown.js';
+import * as tool from '../tooltip.js';
 import * as str from '../str.js';
 import * as white from './white.js';
 import * as dev from '../dev.js';
@@ -380,7 +380,7 @@ function annotation(tip: string, ...children: (Node | string)[]): Element {
     elem.append(...children);
     italic = children.every((e) => e instanceof Node && e.nodeName === 'I');
   }
-  drop.addDroppable(elem, [html.maybeI(tip, italic)]);
+  tool.addTooltip(elem, [html.maybeI(tip, italic)]);
   elem.classList.add(cls.ANNOTATION);
   return elem;
 }
@@ -609,7 +609,7 @@ class Citation {
     // However, if some numbers are inherited, we include the numbers in the
     // tooltip for readability.
     tooltip.push(this.explicit ? this.book.name : this.name());
-    drop.addDroppable(elem, tooltip, [cls.BIBLE]);
+    tool.addTooltip(elem, tooltip, [cls.BIBLE]);
     return elem;
   }
 
@@ -1143,7 +1143,7 @@ export function handleAddenda(root: HTMLElement): void {
         paths.crumScan(page),
         ...scan.prettyPage(page)
       );
-      drop.addDroppable(elem, ['Addenda', ' (', a, ')'], [], 'hover', 'above');
+      tool.addTooltip(elem, ['Addenda', ' (', a, ')'], [], 'hover', 'above');
     });
 }
 
@@ -1155,7 +1155,7 @@ function semicolon(): HTMLSpanElement {
   const span = document.createElement('span');
   span.classList.add(cls.SEMICOLON);
   span.textContent = ';';
-  drop.addDroppable(
+  tool.addTooltip(
     span,
     ['semicolons separate groups in meaning or usage'],
     [cls.SEMICOLON]
@@ -1270,7 +1270,7 @@ function handleManual(manual: HTMLElement): void {
  */
 function ibFallback(ib: HTMLElement): HTMLElement {
   ib.classList.add(cls.ANNOTATION);
-  drop.addDroppable(ib, [ref.ibidem()]);
+  tool.addTooltip(ib, [ref.ibidem()]);
   return ib;
 }
 
@@ -1368,7 +1368,7 @@ function handlePageIB(
   //   https://remnqymi.com/crum/1730.html
   // We don't expect a suffix to be present.
   const a = html.anchor(antecedent.href, ib.cloneNode(true));
-  drop.addDroppable(a, [ref.ibidem()]);
+  tool.addTooltip(a, [ref.ibidem()]);
   return a;
 }
 
@@ -1530,7 +1530,7 @@ function addEntryCopyShortcuts(root: HTMLElement): void {
       browser.yank(entryText(entry));
     });
     copy.classList.add(cls.COPY);
-    drop.addDroppable(copy, ['copy text']);
+    tool.addTooltip(copy, ['copy text']);
     entry.prepend(copy);
   });
 }
@@ -1615,7 +1615,7 @@ function handleFormSuperscripts(root: HTMLElement): void {
       log.error('Unable to find the form of superscript', sup.textContent);
       return;
     }
-    drop.addDroppable(sup, [form]);
+    tool.addTooltip(sup, [form]);
   });
 }
 /* eslint-enable max-lines */

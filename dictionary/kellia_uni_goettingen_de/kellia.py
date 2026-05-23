@@ -975,7 +975,7 @@ def notes_aux(
             back=back,
             js_start=javascript.dialects_js(dialects or set()),
             js_path=relpath(paths.KELLIA_JS),
-            css=[relpath(paths.CRUM_CSS), relpath(paths.DROPDOWN_CSS)],
+            css=[relpath(paths.CRUM_CSS), relpath(paths.TOOLTIP_CSS)],
         )
 
 
