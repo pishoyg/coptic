@@ -253,6 +253,12 @@ figcaption {
   }
 }
 
+/* Addenda host a tooltip, and they also contain elements within them that have
+ * other tooltips. They should have a distinct background color when hovered. */
+.addendum.tipper:hover {
+  background-color: #fff4e6;
+}
+
 .fine-print {
   font-style: italic;
   font-size: 90%;
