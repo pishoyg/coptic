@@ -105,19 +105,13 @@ export class Reference {
 
     const fragment: DocumentFragment = new DocumentFragment();
 
-    fragment.append(...abbreviation(this.variant));
-
-    fragment.append(...this.source.title());
-
-    const description: HTMLUListElement | undefined = this.source.description();
-    if (description) {
-      fragment.append(description);
-    }
-
-    const tooltip = this.postfix?.tooltip();
-    if (tooltip?.length) {
-      fragment.append(document.createElement('br'), ...tooltip);
-    }
+    fragment.append(
+      ...abbreviation(this.variant),
+      ...this.source.title(),
+      ...[this.source.description(), this.postfix?.tooltip()].filter(
+        (e) => e !== undefined
+      )
+    );
 
     return fragment;
   }
@@ -247,29 +241,43 @@ class Postfix {
   /**
    * @returns
    */
-  public tooltip(): (Node | string)[] {
+  public tooltip(): HTMLDivElement | undefined {
+    const content: (Node | string)[] = this.tooltipAux();
+    if (!content.length) {
+      return undefined;
+    }
+
+    const div: HTMLDivElement = document.createElement('div');
+    div.append(...content);
+    return div;
+  }
+
+  /**
+   * @returns
+   */
+  private tooltipAux(): (Node | string)[] {
+    if (!this.interpretation) {
+      return [];
+    }
+
     if (typeof this.interpretation === 'string') {
       return [...abbreviation(this.name), ...html.parse(this.interpretation)];
     }
 
-    if (this.interpretation === sax.LOOKUP) {
-      // The postfix 'Am' (as in 'ShAm', under ⲏⲡⲥ 525) refers to Amélineau,
-      // but we only record the variant 'A' for Amélineau — 'Am' was
-      // intentionally excluded from its variants to avoid colliding with Actes
-      // des Martyrs (and Amos as well). Redirect the lookup so the tooltip
-      // still resolves.
-      // NOTE: The tooltip will use `A` as the abbreviation, although the text
-      // uses `Am`.
-      const name = this.name === 'Am' ? 'A' : this.name;
-      return Array.from(MAPPING[name]?.tooltip()?.childNodes ?? []);
-    }
-
     dev.play(() => {
-      // Sanity check!
-      log.ensure(!this.interpretation);
+      // Sanity check. This is the only option left.
+      log.ensure(this.interpretation === sax.LOOKUP);
     });
 
-    return [];
+    // The postfix 'Am' (as in 'ShAm', under ⲏⲡⲥ 525) refers to Amélineau,
+    // but we only record the variant 'A' for Amélineau — 'Am' was
+    // intentionally excluded from its variants to avoid colliding with Actes
+    // des Martyrs (and Amos as well). Redirect the lookup so the tooltip
+    // still resolves.
+    // NOTE: The tooltip will use `A` as the abbreviation, although the text
+    // uses `Am`.
+    const name = this.name === 'Am' ? 'A' : this.name;
+    return Array.from(MAPPING[name]?.tooltip()?.childNodes ?? []);
   }
 }
 
