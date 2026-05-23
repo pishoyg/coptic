@@ -331,12 +331,12 @@ class Wiki:
             # Ensure the headword is preceded by the start of the string
             # (optionally with a single opening parenthesis) or by the
             # separator ']]], ' from a previous headword.
-            # This prevents false positives in cases where multiple pieces of Coptic
-            # text in the entry contain brackets at the beginning or the end,
-            # resulting in triple brackets.
+            # This prevents false positives in cases where multiple pieces of
+            # Coptic text in the entry contain brackets at the beginning or the
+            # end, resulting in triple brackets.
             # Headwords always occur:
-            # - Either at the very beginning of the text, occasionally preceded by a
-            #   single parenthesis (e.g. ϩⲟⲟⲩⲣⲉ on page 737 b [1]).
+            # - Either at the very beginning of the text, occasionally preceded
+            # by a single parenthesis (e.g. ϩⲟⲟⲩⲣⲉ on page 737 b [1]).
             # - Following another headword (e.g. ϩⲁ, ϩⲟ on page 635 a [2]).
             #
             # [1] https://remnqymi.com/crum/2321.html
@@ -363,15 +363,26 @@ class Wiki:
             replace_manual,
             ban=["{", "}"],
         )
-        if self.addenda_page:
-            yield Substitution(
-                "//(.*?)//(.*?)//",
-                f'<span class="addendum" data-page="{self.addenda_page}">'
-                + r"<del>\1</del><ins>\2</ins>"
-                + "</span>",
-                r"\2",
-                ban=["//"],
-            )
+        yield Substitution(
+            "//(.*?)//(.*?)//",
+            self.replace_addendum,
+            r"\2",
+            ban=["//"],
+        )
+
+    def replace_addendum(self, match: re.Match[str]) -> str:
+        return "".join(self.replace_addendum_aux(match))
+
+    def replace_addendum_aux(self, match: re.Match[str]) -> abc.Generator[str]:
+        yield f'<span class="addendum" data-page="{self.addenda_page}">'
+        g1, g2 = match.group(1), match.group(2)
+        if g1:
+            yield f"<del>{g1}</del>"
+        if g1 and g2:
+            yield " "
+        if g2:
+            yield f"<ins>{g2}</ins>"
+        yield "</span>"
 
     def replace_headword(self, match: re.Match[str]) -> str:
         headword: str = match.group(1)
