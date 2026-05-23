@@ -42,7 +42,7 @@ export class Source {
   /**
    * @returns Deep copies of the parsed title's child nodes.
    */
-  public title(): Node[] {
+  public title(): Iterable<Node> {
     if (!this.titleHTML) {
       return [];
     }
@@ -50,7 +50,7 @@ export class Source {
       this.titleMemo = new DocumentFragment();
       this.titleMemo.append(...html.parse(this.titleHTML));
     }
-    return Array.from(this.titleMemo.cloneNode(true).childNodes);
+    return this.titleMemo.cloneNode(true).childNodes;
   }
 
   /**
@@ -222,11 +222,14 @@ export class Reference {
  * @param italic
  * @returns
  */
-function abbreviation(name: string | Node, italic?: boolean): HTMLElement[] {
+function* abbreviation(
+  name: string | Node,
+  italic?: boolean
+): Iterable<HTMLElement> {
   const span: HTMLSpanElement = document.createElement('span');
   span.append(html.maybeI(name, italic), ': ');
   span.classList.add(cls.ABBREVIATION);
-  return [span];
+  yield span;
 }
 
 /**
@@ -247,7 +250,7 @@ class Postfix {
    * @returns
    */
   public tooltip(): HTMLDivElement | undefined {
-    const content: (Node | string)[] = this.tooltipAux();
+    const content: Node[] = this.tooltipAux();
     if (!content.length) {
       return undefined;
     }
@@ -260,7 +263,7 @@ class Postfix {
   /**
    * @returns
    */
-  private tooltipAux(): (Node | string)[] {
+  private tooltipAux(): Node[] {
     if (!this.interpretation) {
       return [];
     }
