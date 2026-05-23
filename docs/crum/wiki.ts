@@ -1615,6 +1615,10 @@ function handleFormSuperscripts(root: HTMLElement): void {
       log.error('Unable to find the form of superscript', sup.textContent);
       return;
     }
+    if (sup.previousSibling?.textContent === form) {
+      // This is the <sup> element that defines the form.
+      return;
+    }
     tool.addTooltip(sup, [form]);
   });
 }
