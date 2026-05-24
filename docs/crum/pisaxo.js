@@ -67,6 +67,7 @@ export const DATA = [
   },
   {
     "title": "MSS. &c. in Graeco-Roman Museum, Alexandria",
+    "description": null,
     "variants": [
       "Alex"
     ]
@@ -149,6 +150,7 @@ export const DATA = [
   },
   {
     "title": "papyri from Balaizah, in Bodleian, in so far as not numbered in series “Bodl. Copt. (P)”",
+    "description": null,
     "variants": [
       "Bal"
     ]
@@ -182,6 +184,7 @@ export const DATA = [
   },
   {
     "title": "MSS. in the Staats(olim Kgl.)bibliothek, Berlin (Crum’s copies)",
+    "description": null,
     "variants": [
       "Berl Or",
       "Berl.Or"
@@ -210,6 +213,7 @@ export const DATA = [
   },
   {
     "title": "Berlin Gnostic Papyrus 8502 (cf. Preuss. Akad., Sitz. xxxvi, 839), from photographs",
+    "description": null,
     "variants": [
       "BG"
     ]
@@ -281,6 +285,7 @@ export const DATA = [
   },
   {
     "title": "British Museum, Dept. of Egyptian & Assyr. Antiquities (papyri, ostraca, inscriptions)",
+    "description": null,
     "variants": [
       "BMEA"
     ]
@@ -296,6 +301,7 @@ export const DATA = [
   },
   {
     "title": "Coptic MSS. in Bodleian, as (P) a 1 e, where italic = folio",
+    "description": null,
     "variants": [
       "Bodl",
       "Bod"
@@ -315,12 +321,14 @@ export const DATA = [
   },
   {
     "title": "Codex Borgianus (where not printed by Zoega)",
+    "description": null,
     "variants": [
       "Bor"
     ]
   },
   {
     "title": "Papyri & ostraca in Staatsmuseum, Berlin",
+    "description": null,
     "variants": [
       "BP",
       "PB"
@@ -368,12 +376,14 @@ export const DATA = [
   },
   {
     "title": "MSS. &c. in the Egyptian Museum, Cairo",
+    "description": null,
     "variants": [
       "Cai"
     ]
   },
   {
     "title": "MSS. &c. in Coptic Museum, Cairo",
+    "description": null,
     "variants": [
       "(Cai)CoptMus",
       "Cai Copt Mus",
@@ -449,6 +459,7 @@ export const DATA = [
   },
   {
     "title": "Woide’s MSS. belonging to the Clarendon Press (Crum’s copies & photographs)",
+    "description": null,
     "variants": [
       "Cl Pr"
     ]
@@ -533,6 +544,7 @@ export const DATA = [
   },
   {
     "title": "Egypt Exploration Soc. (olim Fund), MSS. &c. in their possession (Crum’s copies)",
+    "description": null,
     "variants": [
       "EES"
     ],
@@ -552,6 +564,7 @@ export const DATA = [
   },
   {
     "title": "phot. of vellum leaves lent by Enoch P. (Univ. of Michigan). Originals not now traceable",
+    "description": null,
     "variants": [
       "En Peterson"
     ]
@@ -756,6 +769,7 @@ export const DATA = [
   },
   {
     "title": "Sir Herbert Thompson’s Sa’îdic MSS. (now in Cambridge Univ. Library), acc. to letters (B-Z) which distinguish them; or other references to him",
+    "description": null,
     "variants": [
       "HT"
     ]
@@ -772,6 +786,7 @@ export const DATA = [
   },
   {
     "title": "Institut français, Cairo, MS. of Shenoute’s Epistles (H. Munier’s copy)",
+    "description": null,
     "variants": [
       "IF"
     ]
@@ -947,6 +962,7 @@ export const DATA = [
   },
   {
     "title": "fragments of Jo & Ap F, copied by P. Lacau (v Bull. Corr. Hellén. xxv 400)",
+    "description": null,
     "variants": [
       "Lacau"
     ]
@@ -962,6 +978,7 @@ export const DATA = [
   },
   {
     "title": "P. de Lagarde, his editions of Coptic texts",
+    "description": null,
     "variants": [
       "Lag"
     ]
@@ -1044,6 +1061,7 @@ export const DATA = [
   },
   {
     "title": "Leipzig University, Tischendorf’s Bohairic MSS. (Crum’s copies)",
+    "description": null,
     "variants": [
       "Leip"
     ]
@@ -1131,6 +1149,7 @@ export const DATA = [
   },
   {
     "title": "Manichaean",
+    "description": null,
     "variants": [
       "Mani",
       "Ma"
@@ -1173,6 +1192,7 @@ export const DATA = [
   },
   {
     "title": "a series of vellum leaves at Michigan University, independently numbered thus (but cf note in Preface)",
+    "description": null,
     "variants": [
       "Mich 550"
     ]
@@ -1215,12 +1235,14 @@ export const DATA = [
   },
   {
     "title": "MSS. & ostraca in the Metropolitan Museum of Art, New York",
+    "description": null,
     "variants": [
       "MMA"
     ]
   },
   {
     "title": "Bohairic Scala in library of Faculté de Médecine, Montpellier (H. Munier’s copy)",
+    "description": null,
     "variants": [
       "Montp"
     ]
@@ -1352,6 +1374,7 @@ export const DATA = [
   },
   {
     "title": "Till’s copies of ostraca from Chicago Expedition, 1931",
+    "description": null,
     "variants": [
       "Ostr.Chicago",
       "Ostr Chicago"
@@ -1359,6 +1382,7 @@ export const DATA = [
   },
   {
     "title": "MSS. in the Bibliothèque Nationale, Paris (Crum’s copies)",
+    "description": null,
     "variants": [
       "P"
     ],
@@ -1404,6 +1428,7 @@ export const DATA = [
   },
   {
     "title": "Papyri in collection of Mr. Chester Beatty, London (Crum’s copies)",
+    "description": null,
     "variants": [
       "P. Beatty",
       "P Beatty"
@@ -1411,6 +1436,7 @@ export const DATA = [
   },
   {
     "title": "Coptic legal papyrus olim penes Sir E. A. W. Budge (Crum’s copy), now at Columbia University",
+    "description": null,
     "variants": [
       "P Bu"
     ]
@@ -1428,6 +1454,7 @@ export const DATA = [
   },
   {
     "title": "Two medical papyri penes E. Chassinat",
+    "description": null,
     "variants": [
       "P Chass"
     ]
@@ -1447,12 +1474,14 @@ export const DATA = [
   },
   {
     "title": "Mr. Pierpont Morgan’s papyrus volume of Psalms &c. (H. Thompson’s copy)",
+    "description": null,
     "variants": [
       "Pcod Mor"
     ]
   },
   {
     "title": "Papyri at Columbia University, New York (A. Schiller’s copies)",
+    "description": null,
     "variants": [
       "P Col"
     ]
@@ -1477,6 +1506,7 @@ export const DATA = [
   },
   {
     "title": "magical papyrus in University Library, Geneva (photograph)",
+    "description": null,
     "variants": [
       "P Gen"
     ]
@@ -1493,24 +1523,28 @@ export const DATA = [
   },
   {
     "title": "Papyri formerly in W. Golenischeff’s collection, from photographs sent by O. von Lemm",
+    "description": null,
     "variants": [
       "P Gol"
     ]
   },
   {
     "title": "Papyri (6th c.) thence, Cairo Mus. (Lacau’s copies)",
+    "description": null,
     "variants": [
       "P Jkôw"
     ]
   },
   {
     "title": "Patrologia Latina",
+    "description": null,
     "variants": [
       "PL"
     ]
   },
   {
     "title": "Papyri belonging to N. P. Lichatschev (P. Jernstedt’s copies)",
+    "description": null,
     "variants": [
       "P Lich"
     ]
@@ -1542,6 +1576,7 @@ export const DATA = [
   },
   {
     "title": "Papyri at Michigan University, with year of acquisition where no. not ascertained",
+    "description": null,
     "variants": [
       "P Mich"
     ]
@@ -1557,6 +1592,7 @@ export const DATA = [
   },
   {
     "title": "rest of papyrus ed. V. Loret, Rec 16 103 (Kuentz’s copy)",
+    "description": null,
     "variants": [
       "P Nolot"
     ]
@@ -1581,6 +1617,7 @@ export const DATA = [
   },
   {
     "title": "Papyri in the Rainer Collection (Staatsbibl.), Vienna (Till’s copies), more often as Vi",
+    "description": null,
     "variants": [
       "P Rain"
     ]
@@ -1615,12 +1652,14 @@ export const DATA = [
   },
   {
     "title": "Papyri in University Library, Strassburg (Crum’s copies, 1912)",
+    "description": null,
     "variants": [
       "P Stras"
     ]
   },
   {
     "title": "Papyri in Staatsbibliothek, Vienna (Till’s copies)",
+    "description": null,
     "variants": [
       "P Vi"
     ]
@@ -1682,6 +1721,7 @@ export const DATA = [
   },
   {
     "title": "MSS. & copies belonging to Seymour de Ricci (Crum’s copies)",
+    "description": null,
     "variants": [
       "Ricci"
     ],
@@ -1759,6 +1799,7 @@ export const DATA = [
   },
   {
     "title": "works of Shenoute (& of his disciple Besa). Prefixed to all quotations from their writings (doubtfully to Mor 54)",
+    "description": null,
     "variants": [
       "Sh",
       "Sh(Besa)",
@@ -1811,6 +1852,7 @@ export const DATA = [
   },
   {
     "title": "information supplied by Dr. G. P. G. Sobhy, Cairo",
+    "description": null,
     "variants": [
       "Sobhy"
     ]
@@ -2027,6 +2069,7 @@ export const DATA = [
   },
   {
     "title": "ostraca in Museo Archeol., Turin (Crum’s copies)",
+    "description": null,
     "variants": [
       "Turin ostr"
     ]
@@ -2045,6 +2088,7 @@ export const DATA = [
   },
   {
     "title": "Vienna, MSS. & ostraca in the Staats(olim Hof)bibliothek",
+    "description": null,
     "variants": [
       "Vi",
       "Vienna"
@@ -2064,12 +2108,14 @@ export const DATA = [
   },
   {
     "title": "a B MS penes the Rev. W. Hatch, Cambridge, Mass",
+    "description": null,
     "variants": [
       "W Hatch"
     ]
   },
   {
     "title": "ostraca from Winlock’s excavations 1927-8, in Cairo Museum",
+    "description": null,
     "variants": [
       "Win"
     ]
@@ -2130,72 +2176,96 @@ export const DATA = [
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Abû Ṣâliḥ",
       "Abû Ṣâlih"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Amélineau",
       "Amélineau Géog"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Antony Hist Laus",
       "Hist Laus"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "C Baynes"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Bell"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Berl Sitz",
       "Berl Sitzb"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Bevan"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Brussels Musée Cinqu"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Budge"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Chassinat"
     ]
   },
   {
     "title": "Apostolic Constitutions",
+    "description": null,
     "variants": [
       "Const Ap"
     ]
   },
   {
     "title": "Presumably <em>Edward Charles Everard Owen</em> (1860-1949)",
+    "description": null,
     "variants": [
       "E C Owen"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Dévaud",
       "Dévaud Ét",
@@ -2203,38 +2273,52 @@ export const DATA = [
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Encycl. Bibl."
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Epiphan. De Gemm.",
       "Epiphan De Gem"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Erman-Lange Pap. Lansing"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Festschr Ebers"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "F Petrie frag Athribis"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "G Maspero Musée Eg.",
       "G Maspero Musée Ég."
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Gött"
     ],
@@ -2245,81 +2329,113 @@ export const DATA = [
     }
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Grohmann"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Guide"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Inst franç Epiph De Gemm"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "J G Wilkinson"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Kabis"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Klio"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "LAA"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Lane"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Langkavel"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Lat & Syr"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Lect Instit Cath Paris"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Ludolf"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Mart Viktor ed Lemm"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Masp."
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "MélCh Moeller"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Mich"
     ],
@@ -2329,21 +2445,29 @@ export const DATA = [
     }
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Mich Pasc Lect"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "OL"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Pliny"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Reg Pach",
       "Reg. Pachom.",
@@ -2351,11 +2475,14 @@ export const DATA = [
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Reil Beiträge"
     ]
   },
   {
+    "title": null,
     "description": [
       "Catalogue of the Demotic Papyri in the John Rylands Library, Manchester: with Facsimiles and Complete Translations<ul><li><a href=\"https://archive.org/details/mdp.39015020864875\">Volume III</a></li></ul>"
     ],
@@ -2365,11 +2492,14 @@ export const DATA = [
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Samannûdi's Scala"
     ]
   },
   {
+    "title": null,
     "description": [
       "<em>Arabische Pflanzennamen aus Aegypten, Algerien und Jemen</em> Dietrich Reimer (Ernst Vohsen), Berlin 1912, <a href=\"http://www.biodiversitylibrary.org/item/41971\">online bei Biodiversity Heritage Library</a>"
     ],
@@ -2383,51 +2513,64 @@ export const DATA = [
   },
   {
     "title": "Acta Sanctorum Martyrum Orientalium et Occidentalium, by Stefano Evodio Assemani",
+    "description": null,
     "variants": [
       "SE Assemani Ac Mart Or"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Sethe Verbum"
     ]
   },
   {
     "title": "Demotische Urkunden zum ägyptischen Bürgschaftsrechte vorzüglich der Ptolemäerzeit",
+    "description": null,
     "variants": [
       "Sethe Dem Urk"
     ]
   },
   {
     "title": "Aegyptische und griechische Eigennamen aus Mumienetiketten der römischen Kaiserzeit, auf Grund von grossenteils unveröffentlichtem Material, gesammelt und erläutert von Wilhelm Spiegelberg",
+    "description": null,
     "variants": [
       "Spg Aeg u Gr Eigennamen"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Spg Mythus"
     ]
   },
   {
     "title": "Socrates Spiro, An Arabic-English vocabulary of the colloquial Arabic of Egypt",
+    "description": null,
     "variants": [
       "Spiro"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Strzygowski Kopt Kunst"
     ]
   },
   {
     "title": "Mina, Togo - Le Martyre d'Apa Epima",
+    "description": null,
     "variants": [
       "T Mina Epima",
       "Mina"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Univ Coll Lond",
       "Univ Coll London",
@@ -2437,11 +2580,14 @@ export const DATA = [
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Usener Theodos"
     ]
   },
   {
+    "title": null,
     "description": [
       "<em><a href=\"https://viewer.acdh.oeaw.ac.at/viewer/image/PH_172_1913/346/\">Sitzungsberichte / Akademie der Wissenschaften in Wien, Philosophisch-Historische Klasse Sitzungsberichte der Philosophisch-Historischen Classe der Kaiserlichen Akademie der Wissenschaften, Wien, 172. Band, (Jahrgang 1913)</a></em>"
     ],
@@ -2451,22 +2597,30 @@ export const DATA = [
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Vita Pachom"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Vita Sinuth",
       "Vita Sin"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Wilkins"
     ]
   },
   {
+    "title": null,
+    "description": null,
     "variants": [
       "Zoega"
     ]
