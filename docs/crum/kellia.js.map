@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["kellia.ts"],
-  "sourcesContent": ["import * as high from './highlight.js';\nimport * as crum from './crum.js';\n\n/**\n *\n * @param root\n * @param highlighter\n */\nexport function handle(root: HTMLElement, highlighter: high.Highlighter): void {\n  crum.addGreekLookups(root);\n  crum.handleDialect(root, highlighter);\n}\n"],
+  "sourcesContent": ["import type * as high from './highlight.js';\nimport * as crum from './crum.js';\n\n/**\n *\n * @param root\n * @param highlighter\n */\nexport function handle(root: HTMLElement, highlighter: high.Highlighter): void {\n  crum.addGreekLookups(root);\n  crum.handleDialect(root, highlighter);\n}\n"],
   "mappings": "aACA,UAAYA,MAAU,YAOf,gBAAS,OAAOC,EAAmBC,EAAqC,CAC7EF,EAAK,gBAAgBC,CAAI,EACzBD,EAAK,cAAcC,EAAMC,CAAW,CACtC",
   "names": ["crum", "root", "highlighter"]
 }
