@@ -98,8 +98,10 @@ repos:
           - typescript-eslint
           - "@stylistic/eslint-plugin"
           - "eslint-config-standard@latest"
+          - "eslint-plugin-yml@latest"
+          - "yaml-eslint-parser@latest"
         args: [--fix]
-        files: \.(js|jsx|mjs|cjs|ts|tsx|mts|cts)$
+        files: \.(js|jsx|mjs|cjs|ts|tsx|mts|cts|yaml|yml)$
         types: [file]
         entry: npx eslint
         verbose: true

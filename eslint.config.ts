@@ -7,16 +7,28 @@ import stylistic from '@stylistic/eslint-plugin';
 import eslintPluginPrettier from 'eslint-plugin-prettier';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import eslintPluginJsdoc from 'eslint-plugin-jsdoc';
+import eslintPluginYml from 'eslint-plugin-yml';
 import config from 'eslint/config';
 
 /* eslint-disable no-magic-numbers */
+const JS_TS_FILES = ['**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}'];
+// `typescript-eslint`'s shareable configs are not all file-scoped (the
+// type-checked rule sets ship as global blocks). We constrain them to
+// JS/TS files so they don't try to load type info for YAML sources.
+const scopeToJsTs = <T extends { name?: string }>(
+  configs: readonly T[]
+): (T & { files: string[] })[] =>
+  configs.map((c) => ({ ...c, files: JS_TS_FILES }));
 export default config.defineConfig(
   // Shared rules.
   eslint.configs.recommended,
   tseslint.configs.eslintRecommended,
-  ...tseslint.configs.strictTypeChecked,
-  ...tseslint.configs.stylisticTypeChecked,
+  ...scopeToJsTs(tseslint.configs.strictTypeChecked),
+  ...scopeToJsTs(tseslint.configs.stylisticTypeChecked),
   {
+    // Scope the shared JS/TS rule set to JS/TS files so it doesn't get
+    // applied to YAML (or other) sources when we lint them below.
+    files: JS_TS_FILES,
     plugins: {
       '@stylistic': stylistic,
       prettier: eslintPluginPrettier,
@@ -255,5 +267,25 @@ export default config.defineConfig(
   {
     // JavaScript files under `docs/` are minified and never linted.
     ignores: ['docs/**/*.js'],
+  },
+  // YAML linting — registers the `yml/yaml` language so .yaml files
+  // become lintable. Only `bib.yaml` opts in to a rule below; other
+  // YAML files in the repo are picked up by the base config but
+  // remain effectively unlinted.
+  ...eslintPluginYml.configs['flat/base'],
+  {
+    files: ['dictionary/marcion_sourceforge_net/data/bib.yaml'],
+    rules: {
+      // Enforce schema order on every top-level sequence item
+      // (`^\[\d+\]$` matches a sequence index path). Inside-item maps
+      // aren't touched.
+      'yml/sort-keys': [
+        'error',
+        {
+          pathPattern: '^\\[\\d+\\]$',
+          order: ['title', 'description', 'variants', 'typos', 'postfixes'],
+        },
+      ],
+    },
   }
 );
