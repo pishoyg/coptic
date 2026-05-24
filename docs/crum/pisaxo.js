@@ -41,7 +41,7 @@ export const DATA = [
   {
     "title": "(periodical), Milan, acc. to vols",
     "description": [
-      "<em>Aegyptus</em> journal is available digitised from 1920 to recent years on <a href=\"https://www.jstor.org/journal/aegy\">JSTOR</a>. "
+      "<em>Aegyptus</em> journal is available digitised from 1920 to recent years on <a href=\"https://www.jstor.org/journal/aegy\">JSTOR</a>."
     ],
     "variants": [
       "Aegyptus"
@@ -59,7 +59,7 @@ export const DATA = [
   {
     "title": "American Journ. of Semit. Languages",
     "description": [
-      "The <em>American Journal of Semitic Languages and Literatures</em> is available digitised from 1895-1941 (vols. 12-58) on <a href=\"https://www.jstor.org/journal/amerjsemilanglit\">JSTOR</a>. [From 1884-1895 (vols. 1-11) the journal was called <em>Hebraica</em> and from 1942 it became the <em>Journal of Near Eastern Studies</em> (vol. 59 onward).] "
+      "The <em>American Journal of Semitic Languages and Literatures</em> is available digitised from 1895-1941 (vols. 12-58) on <a href=\"https://www.jstor.org/journal/amerjsemilanglit\">JSTOR</a>. [From 1884-1895 (vols. 1-11) the journal was called <em>Hebraica</em> and from 1942 it became the <em>Journal of Near Eastern Studies</em> (vol. 59 onward).]"
     ],
     "variants": [
       "AJSL"
@@ -92,7 +92,7 @@ export const DATA = [
   {
     "title": "Accademia dei Lincei, Rendiconti",
     "description": [
-      "<em>Atti della Reale Accademia dei Lincei, Rendiconti</em> began in 1884 and continued until 1929. All volumes are digitised and available on <a href=\"http://periodici.librari.beniculturali.it/PeriodicoScheda.aspx?id_testata=30&amp;Start=0\">BiASA Periodici Italiani Digitalizzati</a>. "
+      "<em>Atti della Reale Accademia dei Lincei, Rendiconti</em> began in 1884 and continued until 1929. All volumes are digitised and available on <a href=\"http://periodici.librari.beniculturali.it/PeriodicoScheda.aspx?id_testata=30&amp;Start=0\">BiASA Periodici Italiani Digitalizzati</a>."
     ],
     "variants": [
       "ALR",
@@ -114,7 +114,7 @@ export const DATA = [
   {
     "title": "Annales du Service Antiquités, Cairo",
     "description": [
-      "The <em>Annales du service des antiquités de l’Égypte</em> (ASAE) began in 1900. From 1988-97 it was called <em>Annales du service des antiquités Égyptiennes</em>. There are a selection of digitised volumes, including all up to 1939, on <a href=\"https://ancientworldonline.blogspot.com/2021/12/annales-du-service-des-antiquites-de.html\">The Ancient World Online</a>. Further volumes available on <a href=\"https://catalog.hathitrust.org/Record/007151043?type%5B%5D=title&amp;lookfor%5B%5D=Annales%20du%20service%20des%20antiquit%C3%A9s%20de%20l%27%C3%89gypte&amp;ft=ft#viewability\">HathiTrust</a> via US access. "
+      "The <em>Annales du service des antiquités de l’Égypte</em> (ASAE) began in 1900. From 1988-97 it was called <em>Annales du service des antiquités Égyptiennes</em>. There are a selection of digitised volumes, including all up to 1939, on <a href=\"https://ancientworldonline.blogspot.com/2021/12/annales-du-service-des-antiquites-de.html\">The Ancient World Online</a>. Further volumes available on <a href=\"https://catalog.hathitrust.org/Record/007151043?type%5B%5D=title&amp;lookfor%5B%5D=Annales%20du%20service%20des%20antiquit%C3%A9s%20de%20l%27%C3%89gypte&amp;ft=ft#viewability\">HathiTrust</a> via US access."
     ],
     "variants": [
       "Ann"
@@ -141,7 +141,7 @@ export const DATA = [
   {
     "title": "Zeitschr. f. Aegyptische Sprache, acc. to vols",
     "description": [
-      "<em>Zeitschrift für Ägyptische Sprache und Altertumskunde</em> (ZÄS; previously ZÄ) began in 1863. The following (volumes 1-59, 72) are available on Internet Archive: <a href=\"https://archive.org/details/zeitschriftfr01brug/page/n7/mode/2up\">1 (1863)</a>; <a href=\"https://archive.org/details/zeitschriftfr02brug/page/n1/mode/2up\">2 (1864)</a>; <a href=\"https://archive.org/details/zeitschriftfr03brug/page/n7/mode/2up\">3 (1865)</a>; <a href=\"https://archive.org/details/zeitschriftfr04brug/page/n7/mode/2up\">4 (1866)</a>; <a href=\"https://archive.org/details/zeitschriftfr05brug/page/n1/mode/2up\">5 (1867)</a>; <a href=\"https://archive.org/details/zeitschriftfr06brug/page/n1/mode/2up\">6 (1868)</a>; <a href=\"https://archive.org/details/zeitschriftfr07brug/page/n1/mode/2up\">7 (1869)</a>; <a href=\"https://archive.org/details/zeitschriftfr08brug/page/n1/mode/2up\">8 (1870)</a>; <a href=\"https://archive.org/details/zeitschriftfr09brug/page/n1/mode/2up\">9 (1871)</a>; <a href=\"https://archive.org/details/zeitschriftfr10brug/page/n7/mode/2up\">10 (1872)</a>; <a href=\"https://archive.org/details/zeitschriftfr11brug/page/n5/mode/2up\">11 (1873)</a>; <a href=\"https://archive.org/details/zeitschriftfr12brug/page/n7/mode/2up\">12 (1874)</a>; <a href=\"https://archive.org/details/zeitschriftfr13brug/page/n1/mode/2up\">13 (1875)</a>; <a href=\"https://archive.org/details/zeitschriftfr14brug/page/n1/mode/2up\">14 (1876)</a>; <a href=\"https://archive.org/details/zeitschriftfr15brug/page/n5/mode/2up\">15 (1877)</a>; <a href=\"https://archive.org/details/zeitschriftfr16brug\">16 (1878)</a>; <a href=\"https://archive.org/details/zeitschriftfr17brug\">17 (1879)</a>; <a href=\"https://archive.org/details/zeitschriftfr18brug\">18 (1880)</a>; <a href=\"https://archive.org/details/zeitschriftfr19brug/page/n5/mode/2up\">19 (1881)</a>; <a href=\"https://archive.org/details/zeitschriftfr20brug/page/n5/mode/2up\">20 (1882)</a>; <a href=\"https://archive.org/details/zeitschriftfr21brug/page/n5/mode/2up\">21 (1883)</a>; <a href=\"https://archive.org/details/zeitschriftfr22brug\">22 (1884)</a>; <a href=\"https://archive.org/details/zeitschriftfr23brug\">23 (1885)</a>; <a href=\"https://archive.org/details/zeitschriftfr2427deutuoft/page/n5/mode/2up\">24 (1886)</a>; <a href=\"https://archive.org/details/zeitschriftfr2427deutuoft/page/n145/mode/2up\">25 (1887)</a>; <a href=\"https://archive.org/details/zeitschriftfr2427deutuoft/page/140/mode/2up\">26 (1888)</a>; <a href=\"https://archive.org/details/zeitschriftfr27brug/page/n1/mode/2up\">27 (1889)</a>; <a href=\"https://archive.org/details/zeitschriftfr2831deutuoft/page/n3/mode/2up\">28 (1890)</a>; <a href=\"https://archive.org/details/zeitschriftfr2831deutuoft/page/n135/mode/2up\">29 (1891)</a>; <a href=\"https://archive.org/details/zeitschriftfr2831deutuoft/page/n267/mode/2up\">30 (1892)</a>; <a href=\"https://archive.org/details/zeitschriftfr2831deutuoft/page/n407/mode/2up\">31 (1893)</a>; <a href=\"https://archive.org/details/zeitschriftfr32brug\">32 (1894)</a>; <a href=\"https://archive.org/details/zeitschriftfr33brug\">33 (1895)</a>; <a href=\"https://archive.org/details/zeitschriftfr34brug\">34 (1896)</a>; <a href=\"https://archive.org/details/zeitschriftfr35brug\">35 (1897)</a>; <a href=\"https://archive.org/details/zeitschriftfr36brug/page/n5/mode/2up\">36 (1898)</a>; <a href=\"https://archive.org/details/zeitschriftfr3639deutuoft/page/n199/mode/2up\">37 (1899)</a>; <a href=\"https://archive.org/details/zeitschriftfr38brug\">38 (1900)</a>; <a href=\"https://archive.org/details/zeitschriftfr39brug\">39 (1901)</a>; <a href=\"https://archive.org/details/zeitschriftfr40brug/page/n1/mode/2up\">40 (1902-03)</a>; <a href=\"https://archive.org/details/zeitschriftfr41brug/page/n1/mode/2up\">41 (1904)</a>; <a href=\"https://archive.org/details/zeitschriftfr42brug\">42 (1905)</a>; <a href=\"https://archive.org/details/zeitschriftfr43brug\">43 (1906)</a>; <a href=\"https://archive.org/details/zeitschriftfr44brug\">44 (1907-08)</a>; <a href=\"https://archive.org/details/zeitschriftfr45brug\">45 (1908-09)</a>; <a href=\"https://archive.org/details/zeitschriftfr46brug\">46 (1909-10)</a>; <a href=\"https://archive.org/details/zeitschriftfr47brug\">47 (1910)</a>; <a href=\"https://archive.org/details/zeitschriftfr48brug/page/n5/mode/2up\">48 (1911)</a>; <a href=\"https://archive.org/details/zeitschriftfr49brug/page/n1/mode/2up\">49 (1911)</a>; <a href=\"https://archive.org/details/zeitschriftfr50brug/page/n1/mode/2up\">50 (1912)</a>; <a href=\"https://archive.org/details/zeitschriftfr51brug/page/n5/mode/2up\">51 (1914)</a>; <a href=\"https://archive.org/details/zeitschriftfr52brug/page/n1/mode/2up\">52 (1915)</a>; <a href=\"https://archive.org/details/zeitschriftfr53brug/page/n1/mode/2up\">53 (1917)</a>; <a href=\"https://archive.org/details/zeitschriftfr54brug\">54 (1918)</a>; <a href=\"https://archive.org/details/zeitschriftfr55brug\">55 (1918)</a>; <a href=\"https://archive.org/details/zeitschriftfr56brug\">56 (1920)</a>; <a href=\"https://archive.org/details/zeitschriftfr5659deutuoft/page/n135/mode/2up\">57 (1922)</a>; <a href=\"https://archive.org/details/zeitschriftfr5659deutuoft/page/n367/mode/2up\">58 (1923)</a>; <a href=\"https://archive.org/details/zeitschriftfr5659deutuoft/page/n555/mode/2up\">59 (1924)</a>; <a href=\"https://archive.org/details/zeitschriftfr72brug/mode/2up\">72 (1936)</a>. All volumes are available digitised on the <a href=\"https://www.degruyterbrill.com/journal/key/zaes/html?lang=de&amp;srsltid=AfmBOoqiSSk9kY_a9NjC6ibeiaR2VogjEP1ERFmu2oCf4X7gyI9u82om#issues\">De Gruyter Brill website</a> (with login credentials). "
+      "<em>Zeitschrift für Ägyptische Sprache und Altertumskunde</em> (ZÄS; previously ZÄ) began in 1863. The following (volumes 1-59, 72) are available on Internet Archive: <a href=\"https://archive.org/details/zeitschriftfr01brug/page/n7/mode/2up\">1 (1863)</a>; <a href=\"https://archive.org/details/zeitschriftfr02brug/page/n1/mode/2up\">2 (1864)</a>; <a href=\"https://archive.org/details/zeitschriftfr03brug/page/n7/mode/2up\">3 (1865)</a>; <a href=\"https://archive.org/details/zeitschriftfr04brug/page/n7/mode/2up\">4 (1866)</a>; <a href=\"https://archive.org/details/zeitschriftfr05brug/page/n1/mode/2up\">5 (1867)</a>; <a href=\"https://archive.org/details/zeitschriftfr06brug/page/n1/mode/2up\">6 (1868)</a>; <a href=\"https://archive.org/details/zeitschriftfr07brug/page/n1/mode/2up\">7 (1869)</a>; <a href=\"https://archive.org/details/zeitschriftfr08brug/page/n1/mode/2up\">8 (1870)</a>; <a href=\"https://archive.org/details/zeitschriftfr09brug/page/n1/mode/2up\">9 (1871)</a>; <a href=\"https://archive.org/details/zeitschriftfr10brug/page/n7/mode/2up\">10 (1872)</a>; <a href=\"https://archive.org/details/zeitschriftfr11brug/page/n5/mode/2up\">11 (1873)</a>; <a href=\"https://archive.org/details/zeitschriftfr12brug/page/n7/mode/2up\">12 (1874)</a>; <a href=\"https://archive.org/details/zeitschriftfr13brug/page/n1/mode/2up\">13 (1875)</a>; <a href=\"https://archive.org/details/zeitschriftfr14brug/page/n1/mode/2up\">14 (1876)</a>; <a href=\"https://archive.org/details/zeitschriftfr15brug/page/n5/mode/2up\">15 (1877)</a>; <a href=\"https://archive.org/details/zeitschriftfr16brug\">16 (1878)</a>; <a href=\"https://archive.org/details/zeitschriftfr17brug\">17 (1879)</a>; <a href=\"https://archive.org/details/zeitschriftfr18brug\">18 (1880)</a>; <a href=\"https://archive.org/details/zeitschriftfr19brug/page/n5/mode/2up\">19 (1881)</a>; <a href=\"https://archive.org/details/zeitschriftfr20brug/page/n5/mode/2up\">20 (1882)</a>; <a href=\"https://archive.org/details/zeitschriftfr21brug/page/n5/mode/2up\">21 (1883)</a>; <a href=\"https://archive.org/details/zeitschriftfr22brug\">22 (1884)</a>; <a href=\"https://archive.org/details/zeitschriftfr23brug\">23 (1885)</a>; <a href=\"https://archive.org/details/zeitschriftfr2427deutuoft/page/n5/mode/2up\">24 (1886)</a>; <a href=\"https://archive.org/details/zeitschriftfr2427deutuoft/page/n145/mode/2up\">25 (1887)</a>; <a href=\"https://archive.org/details/zeitschriftfr2427deutuoft/page/140/mode/2up\">26 (1888)</a>; <a href=\"https://archive.org/details/zeitschriftfr27brug/page/n1/mode/2up\">27 (1889)</a>; <a href=\"https://archive.org/details/zeitschriftfr2831deutuoft/page/n3/mode/2up\">28 (1890)</a>; <a href=\"https://archive.org/details/zeitschriftfr2831deutuoft/page/n135/mode/2up\">29 (1891)</a>; <a href=\"https://archive.org/details/zeitschriftfr2831deutuoft/page/n267/mode/2up\">30 (1892)</a>; <a href=\"https://archive.org/details/zeitschriftfr2831deutuoft/page/n407/mode/2up\">31 (1893)</a>; <a href=\"https://archive.org/details/zeitschriftfr32brug\">32 (1894)</a>; <a href=\"https://archive.org/details/zeitschriftfr33brug\">33 (1895)</a>; <a href=\"https://archive.org/details/zeitschriftfr34brug\">34 (1896)</a>; <a href=\"https://archive.org/details/zeitschriftfr35brug\">35 (1897)</a>; <a href=\"https://archive.org/details/zeitschriftfr36brug/page/n5/mode/2up\">36 (1898)</a>; <a href=\"https://archive.org/details/zeitschriftfr3639deutuoft/page/n199/mode/2up\">37 (1899)</a>; <a href=\"https://archive.org/details/zeitschriftfr38brug\">38 (1900)</a>; <a href=\"https://archive.org/details/zeitschriftfr39brug\">39 (1901)</a>; <a href=\"https://archive.org/details/zeitschriftfr40brug/page/n1/mode/2up\">40 (1902-03)</a>; <a href=\"https://archive.org/details/zeitschriftfr41brug/page/n1/mode/2up\">41 (1904)</a>; <a href=\"https://archive.org/details/zeitschriftfr42brug\">42 (1905)</a>; <a href=\"https://archive.org/details/zeitschriftfr43brug\">43 (1906)</a>; <a href=\"https://archive.org/details/zeitschriftfr44brug\">44 (1907-08)</a>; <a href=\"https://archive.org/details/zeitschriftfr45brug\">45 (1908-09)</a>; <a href=\"https://archive.org/details/zeitschriftfr46brug\">46 (1909-10)</a>; <a href=\"https://archive.org/details/zeitschriftfr47brug\">47 (1910)</a>; <a href=\"https://archive.org/details/zeitschriftfr48brug/page/n5/mode/2up\">48 (1911)</a>; <a href=\"https://archive.org/details/zeitschriftfr49brug/page/n1/mode/2up\">49 (1911)</a>; <a href=\"https://archive.org/details/zeitschriftfr50brug/page/n1/mode/2up\">50 (1912)</a>; <a href=\"https://archive.org/details/zeitschriftfr51brug/page/n5/mode/2up\">51 (1914)</a>; <a href=\"https://archive.org/details/zeitschriftfr52brug/page/n1/mode/2up\">52 (1915)</a>; <a href=\"https://archive.org/details/zeitschriftfr53brug/page/n1/mode/2up\">53 (1917)</a>; <a href=\"https://archive.org/details/zeitschriftfr54brug\">54 (1918)</a>; <a href=\"https://archive.org/details/zeitschriftfr55brug\">55 (1918)</a>; <a href=\"https://archive.org/details/zeitschriftfr56brug\">56 (1920)</a>; <a href=\"https://archive.org/details/zeitschriftfr5659deutuoft/page/n135/mode/2up\">57 (1922)</a>; <a href=\"https://archive.org/details/zeitschriftfr5659deutuoft/page/n367/mode/2up\">58 (1923)</a>; <a href=\"https://archive.org/details/zeitschriftfr5659deutuoft/page/n555/mode/2up\">59 (1924)</a>; <a href=\"https://archive.org/details/zeitschriftfr72brug/mode/2up\">72 (1936)</a>. All volumes are available digitised on the <a href=\"https://www.degruyterbrill.com/journal/key/zaes/html?lang=de&amp;srsltid=AfmBOoqiSSk9kY_a9NjC6ibeiaR2VogjEP1ERFmu2oCf4X7gyI9u82om#issues\">De Gruyter Brill website</a> (with login credentials)."
     ],
     "variants": [
       "AZ"
@@ -202,7 +202,7 @@ export const DATA = [
   {
     "title": "Bessarione (periodical), acc. to vols",
     "description": [
-      "<em>Bessarione</em> began in 1896 and continued until 1923. All volumes digitised and available on the Biblioteca Nazionale Centrale di Roma’s <a href=\"http://digitale.bnc.roma.sbn.it/tecadigitale/emeroteca/classic/TO00178193\">Biblioteca Digitale</a>. "
+      "<em>Bessarione</em> began in 1896 and continued until 1923. All volumes digitised and available on the Biblioteca Nazionale Centrale di Roma’s <a href=\"http://digitale.bnc.roma.sbn.it/tecadigitale/emeroteca/classic/TO00178193\">Biblioteca Digitale</a>."
     ],
     "variants": [
       "Bess"
@@ -226,7 +226,7 @@ export const DATA = [
   {
     "title": "Bulletin de l’lnstit. français… au Caire",
     "description": [
-      "All volumes of <em>Le Bulletin de l’Institut français d’ archéologie orientale</em> (BIFAO) published from 1901 to date are listed, digitised, and freely available via the <a href=\"https://www.ifao.egnet.net/bifao/\">Institut français d’ archéologie orientale</a>. "
+      "All volumes of <em>Le Bulletin de l’Institut français d’ archéologie orientale</em> (BIFAO) published from 1901 to date are listed, digitised, and freely available via the <a href=\"https://www.ifao.egnet.net/bifao/\">Institut français d’ archéologie orientale</a>."
     ],
     "variants": [
       "BIF"
@@ -478,7 +478,7 @@ export const DATA = [
   {
     "title": "Comptes Rendus de l’Acad. des lnscr., Paris, acc. to year & page",
     "description": [
-      "<em>Comptes rendus des séances de l’Académie des Inscriptions et Belles-Lettres</em> began in 1857. The volumes are listed and digitised on <a href=\"https://www.persee.fr/collection/crai\">Persee.fr</a>. "
+      "<em>Comptes rendus des séances de l’Académie des Inscriptions et Belles-Lettres</em> began in 1857. The volumes are listed and digitised on <a href=\"https://www.persee.fr/collection/crai\">Persee.fr</a>."
     ],
     "variants": [
       "CR"
@@ -590,9 +590,9 @@ export const DATA = [
   {
     "title": "Griffith, Oxford Excavations in Nubia, in Liverpool Annals of Archaeol. & Anthropol. (1) xiii 17, (2) ib. 49, (3) xiv 57",
     "description": [
-      "Griffith, F. Ll. (1926). <a href=\"https://archive.org/details/annals-of-archaeology-and-anthropology_1926_13_1-2/page/n37/mode/2up\">Oxford Excavations in Nubia</a>. <em>Annals of Archaeology and Anthropology</em>, XIII(1-2), 17-37, plus plates. ",
-      "Griffith, F. Ll. (1926). <a href=\"https://archive.org/details/annals-of-archaeology-and-anthropology_1926_13_3-4/page/48/mode/2up\">Oxford Excavations in Nubia</a>. <em>Annals of Archaeology and Anthropology</em>, XIII(3-4), 49-93, plus plates. ",
-      "Griffith, F. Ll. (1927). <a href=\"https://archive.org/details/annals-of-archaeology-and-anthropology_1927_14_3-4/page/56/mode/2up\">Oxford Excavations in Nubia</a>. <em>Annals of Archaeology and Anthropology</em>, XIV(3-4), 57-116, plus plates. "
+      "Griffith, F. Ll. (1926). <a href=\"https://archive.org/details/annals-of-archaeology-and-anthropology_1926_13_1-2/page/n37/mode/2up\">Oxford Excavations in Nubia</a>. <em>Annals of Archaeology and Anthropology</em>, XIII(1-2), 17-37, plus plates.",
+      "Griffith, F. Ll. (1926). <a href=\"https://archive.org/details/annals-of-archaeology-and-anthropology_1926_13_3-4/page/48/mode/2up\">Oxford Excavations in Nubia</a>. <em>Annals of Archaeology and Anthropology</em>, XIII(3-4), 49-93, plus plates.",
+      "Griffith, F. Ll. (1927). <a href=\"https://archive.org/details/annals-of-archaeology-and-anthropology_1927_14_3-4/page/56/mode/2up\">Oxford Excavations in Nubia</a>. <em>Annals of Archaeology and Anthropology</em>, XIV(3-4), 57-116, plus plates."
     ],
     "variants": [
       "Faras"
@@ -619,7 +619,7 @@ export const DATA = [
   {
     "title": "Greek-Coptic Glossary, ed. Bell & Crum, in Aegyptus vi 179, acc. to lines",
     "description": [
-      "Bell, H. I., &amp; Crum, W. E. (1925). <a href=\"https://www.jstor.org/stable/41201189?read-now=1&amp;seq=1#page_scan_tab_contents\">A Greek-Coptic Glossary</a>. <em>Aegyptus</em>, 6, 177-226. "
+      "Bell, H. I., &amp; Crum, W. E. (1925). <a href=\"https://www.jstor.org/stable/41201189?read-now=1&amp;seq=1#page_scan_tab_contents\">A Greek-Coptic Glossary</a>. <em>Aegyptus</em>, 6, 177-226."
     ],
     "variants": [
       "Glos",
@@ -638,8 +638,8 @@ export const DATA = [
   {
     "title": "Göttinger Abhandlungen",
     "description": [
-      "<em>Abhandlungen der Königlichen Gesellschaft der Wissenschaften zu Göttingen, Philologisch-Historische Klasse</em> began in 1839. Links to volumes from 1839-1890 are available digitised on <a href=\"https://www.biodiversitylibrary.org/bibliography/51047\">Biodiversity Heritage Library</a> and some later volumes via <a href=\"https://catalog.hathitrust.org/Record/008602924\">HathiTrust</a> in the US. ",
-      "<em>Nachrichten von der Königlichen Gesellschaft der Wissenschaften zu Göttingen, Philologisch-Historische Klasse</em> began in 1894. Links to volumes from 1892-1923 available digitised on <a href=\"https://onlinebooks.library.upenn.edu/webbin/serial?id=nachkongesgotph\">The Online Books Page</a> and some later volumes via <a href=\"https://catalog.hathitrust.org/Record/000517694\">HathiTrust</a> in the US. "
+      "<em>Abhandlungen der Königlichen Gesellschaft der Wissenschaften zu Göttingen, Philologisch-Historische Klasse</em> began in 1839. Links to volumes from 1839-1890 are available digitised on <a href=\"https://www.biodiversitylibrary.org/bibliography/51047\">Biodiversity Heritage Library</a> and some later volumes via <a href=\"https://catalog.hathitrust.org/Record/008602924\">HathiTrust</a> in the US.",
+      "<em>Nachrichten von der Königlichen Gesellschaft der Wissenschaften zu Göttingen, Philologisch-Historische Klasse</em> began in 1894. Links to volumes from 1892-1923 available digitised on <a href=\"https://onlinebooks.library.upenn.edu/webbin/serial?id=nachkongesgotph\">The Online Books Page</a> and some later volumes via <a href=\"https://catalog.hathitrust.org/Record/000517694\">HathiTrust</a> in the US."
     ],
     "variants": [
       "Gött A",
@@ -649,8 +649,8 @@ export const DATA = [
   {
     "title": "Göttinger Nachrichten",
     "description": [
-      "<em>Abhandlungen der Königlichen Gesellschaft der Wissenschaften zu Göttingen, Philologisch-Historische Klasse</em> began in 1839. Links to volumes from 1839-1890 are available digitised on <a href=\"https://www.biodiversitylibrary.org/bibliography/51047\">Biodiversity Heritage Library</a> and some later volumes via <a href=\"https://catalog.hathitrust.org/Record/008602924\">HathiTrust</a> in the US. ",
-      "<em>Nachrichten von der Königlichen Gesellschaft der Wissenschaften zu Göttingen, Philologisch-Historische Klasse</em> began in 1894. Links to volumes from 1892-1923 available digitised on <a href=\"https://onlinebooks.library.upenn.edu/webbin/serial?id=nachkongesgotph\">The Online Books Page</a> and some later volumes via <a href=\"https://catalog.hathitrust.org/Record/000517694\">HathiTrust</a> in the US. "
+      "<em>Abhandlungen der Königlichen Gesellschaft der Wissenschaften zu Göttingen, Philologisch-Historische Klasse</em> began in 1839. Links to volumes from 1839-1890 are available digitised on <a href=\"https://www.biodiversitylibrary.org/bibliography/51047\">Biodiversity Heritage Library</a> and some later volumes via <a href=\"https://catalog.hathitrust.org/Record/008602924\">HathiTrust</a> in the US.",
+      "<em>Nachrichten von der Königlichen Gesellschaft der Wissenschaften zu Göttingen, Philologisch-Historische Klasse</em> began in 1894. Links to volumes from 1892-1923 available digitised on <a href=\"https://onlinebooks.library.upenn.edu/webbin/serial?id=nachkongesgotph\">The Online Books Page</a> and some later volumes via <a href=\"https://catalog.hathitrust.org/Record/000517694\">HathiTrust</a> in the US."
     ],
     "variants": [
       "Gött N",
@@ -678,7 +678,7 @@ export const DATA = [
   {
     "title": "I. Guidi, Frammenti Copti I-VII (from ALR 1887 ff.), acc. to continuous pagination",
     "description": [
-      "Guidi, I. (1887-88). <a href=\"https://archive.org/details/frammenticopti00guid/page/46/mode/2up\">Frammenti Copti (Nota I-VII)</a>. Reprinted from <em>Rendiconti della Reale Accademia dei Lincei. Classe di Scienze morali, storiche e filologiche</em>, Vols. 3(1-2)-4(1). "
+      "Guidi, I. (1887-88). <a href=\"https://archive.org/details/frammenticopti00guid/page/46/mode/2up\">Frammenti Copti (Nota I-VII)</a>. Reprinted from <em>Rendiconti della Reale Accademia dei Lincei. Classe di Scienze morali, storiche e filologiche</em>, Vols. 3(1-2)-4(1)."
     ],
     "variants": [
       "Gu"
@@ -728,7 +728,7 @@ export const DATA = [
   {
     "title": "W. Hengstenberg in Beiträge z. Forschung… Heft III, J. Rosenthal, München, 1914",
     "description": [
-      "Hengstenberg, W. (1914). <a href=\"https://archive.org/details/hvd.32044095331146/page/n131/mode/2up\">Koptische Papyri</a>. In <em>Beiträge zur Forschung: Studien und Mitteilungen aus dem Antiquariat Jacques Rosenthal München, Heft III</em> (pp. 92-100, plus plates). München: Verlag von Jacques Rosenthal. "
+      "Hengstenberg, W. (1914). <a href=\"https://archive.org/details/hvd.32044095331146/page/n131/mode/2up\">Koptische Papyri</a>. In <em>Beiträge zur Forschung: Studien und Mitteilungen aus dem Antiquariat Jacques Rosenthal München, Heft III</em> (pp. 92-100, plus plates). München: Verlag von Jacques Rosenthal."
     ],
     "variants": [
       "Heng B"
@@ -748,7 +748,7 @@ export const DATA = [
   {
     "title": "Griffith, The Old Coptic Horoscope, in AZ 38 76 ff., acc. to pp. of publication",
     "description": [
-      "Griffith, F. Ll. (1900). <a href=\"https://archive.org/details/zeitschriftfr38brug/page/70/mode/2up\">The Old Coptic Horoscope of the Stobart Collection</a>. <em>Zeitschrift für ägyptische Sprache und Altertumskunde</em>, 38, 71-93. "
+      "Griffith, F. Ll. (1900). <a href=\"https://archive.org/details/zeitschriftfr38brug/page/70/mode/2up\">The Old Coptic Horoscope of the Stobart Collection</a>. <em>Zeitschrift für ägyptische Sprache und Altertumskunde</em>, 38, 71-93."
     ],
     "variants": [
       "Hor"
@@ -788,7 +788,7 @@ export const DATA = [
   {
     "title": "Imperial Russian Archaeolog. Soc. xviii, 1907 (Turaief)",
     "description": [
-      "Turayev, B. A. (1907). <a href=\"https://archive.org/details/Notes-Imperial-Russian-Archaeological-Society/ZVORAO_18_1908/page/n55/mode/2up\">Ахмимскій папирусъ изъ коллекціи Н. П. Лихачева [An Akhmim Papyrus from the Collection of N. P. Likhachov]</a>. <em>Записки Восточного Отдѣления Императорского Русского Археологическаго Общества</em> [Transactions of the Eastern Branch of the Imperial Russian Archaeological Society], 18, 28-30. "
+      "Turayev, B. A. (1907). <a href=\"https://archive.org/details/Notes-Imperial-Russian-Archaeological-Society/ZVORAO_18_1908/page/n55/mode/2up\">Ахмимскій папирусъ изъ коллекціи Н. П. Лихачева [An Akhmim Papyrus from the Collection of N. P. Likhachov]</a>. <em>Записки Восточного Отдѣления Императорского Русского Археологическаго Общества</em> [Transactions of the Eastern Branch of the Imperial Russian Archaeological Society], 18, 28-30."
     ],
     "variants": [
       "Imp Russ Ar S",
@@ -811,7 +811,7 @@ export const DATA = [
   {
     "title": "Journal Asiatique, acc. to year, vol. & page",
     "description": [
-      "<em>Journal asiatique</em> began in 1822. Volumes are digitised and available on <a href=\"https://gallica.bnf.fr/ark:/12148/cb34348774p/date\">Gallica</a> up to 1940. There are also volumes available on <a href=\"https://catalog.hathitrust.org/Record/006147183\">HathiTrust</a> and listed on <a href=\"https://www.egyptologyforum.org/EEFDigijournals.html\">EgyptologyForum.org</a>. "
+      "<em>Journal asiatique</em> began in 1822. Volumes are digitised and available on <a href=\"https://gallica.bnf.fr/ark:/12148/cb34348774p/date\">Gallica</a> up to 1940. There are also volumes available on <a href=\"https://catalog.hathitrust.org/Record/006147183\">HathiTrust</a> and listed on <a href=\"https://www.egyptologyforum.org/EEFDigijournals.html\">EgyptologyForum.org</a>."
     ],
     "variants": [
       "JA",
@@ -830,7 +830,7 @@ export const DATA = [
   {
     "title": "Journ. of American Orient. Soc",
     "description": [
-      "The <em>Journal of the American Oriental Society</em> began in 1843-49. All volumes to date are available via <a href=\"https://www.jstor.org/journal/jameroriesoci\">JSTOR</a>. "
+      "The <em>Journal of the American Oriental Society</em> began in 1843-49. All volumes to date are available via <a href=\"https://www.jstor.org/journal/jameroriesoci\">JSTOR</a>."
     ],
     "variants": [
       "JAOS",
@@ -840,7 +840,7 @@ export const DATA = [
   {
     "title": "P. Jernstedt, Kopt. Papyri d. Asiat. Mus. (Soc. Egyptol. Univ. Leningrad, no. 6, 1930), acc. to numbers",
     "description": [
-      "Jernstedt, P. (1930). Koptische Papyri des Asiatischen Museums. <em>Сборник египтологического кружка при Ленинградском Государственном Университете</em>, VI, 21–44. [If you know of a digital copy, please <a href=\"https://www.coptist.com/contact-%e2%b2%a7%e2%b2%81%e2%b2%99%e2%b2%9f%e2%b2%93/\"> contact me</a>] "
+      "Jernstedt, P. (1930). Koptische Papyri des Asiatischen Museums. <em>Сборник египтологического кружка при Ленинградском Государственном Университете</em>, VI, 21–44. [If you know of a digital copy, please <a href=\"https://www.coptist.com/contact-%e2%b2%a7%e2%b2%81%e2%b2%99%e2%b2%9f%e2%b2%93/\"> contact me</a>]"
     ],
     "variants": [
       "Jern"
@@ -867,7 +867,7 @@ export const DATA = [
   {
     "title": "Journal of Theological Studies",
     "description": [
-      "<em>The Journal of Theological Studies</em> began in 1899. Its volumes are available through <a href=\"https://www.jstor.org/journal/jtheostud\">JSTOR</a> with institutional access. Volumes from 1899 to 1929 are hosted on Archive.org and linked on <a href=\"https://onlinebooks.library.upenn.edu/webbin/serial?id=jtheostudies\">The Online Books Page</a>. Others are available through <a href=\"https://catalog.hathitrust.org/Record/000681411\">HathiTrust</a> via US access. "
+      "<em>The Journal of Theological Studies</em> began in 1899. Its volumes are available through <a href=\"https://www.jstor.org/journal/jtheostud\">JSTOR</a> with institutional access. Volumes from 1899 to 1929 are hosted on Archive.org and linked on <a href=\"https://onlinebooks.library.upenn.edu/webbin/serial?id=jtheostudies\">The Online Books Page</a>. Others are available through <a href=\"https://catalog.hathitrust.org/Record/000681411\">HathiTrust</a> via US access."
     ],
     "variants": [
       "JTS"
@@ -877,7 +877,7 @@ export const DATA = [
     "title": "A. Kircher, the Scalæ in Lingua Aegyptiaca Restituta, variants from Loret in Ann. I and other MSS",
     "description": [
       "Kircher, A. (1644). <em><a href=\"https://www.google.co.uk/books/edition/Athanasii_Kircheri_Lingua_Aegyptiaca_res/qEtB1x0frAIC?hl=en&amp;gbpv=1\">Lingua Aegyptiaca Restituta. Opus Tripartium</a></em>. Rome: Hermann Scheus.",
-      "Loret, V. (1900). <a href=\"https://archive.org/details/AnnalesDuServiceDesAntiquitsDeLegyptevolume1/page/n63/mode/2up\">Les livres III et IV (animaux et végétaux) de la Scala Magna de Schams-Ar-Riâsah</a>. <em>Annales du Service des antiquités de l’Egypte</em>, 1, 48-63 (edition), 215-229 (indices). ",
+      "Loret, V. (1900). <a href=\"https://archive.org/details/AnnalesDuServiceDesAntiquitsDeLegyptevolume1/page/n63/mode/2up\">Les livres III et IV (animaux et végétaux) de la Scala Magna de Schams-Ar-Riâsah</a>. <em>Annales du Service des antiquités de l’Egypte</em>, 1, 48-63 (edition), 215-229 (indices).",
       "Macomber, F. (2020). <em>The Scala Magna of Shams al-Riʾāsah Abū al-Barakāt.</em><ul><li><a href=\"https://drive.google.com/file/d/1T3Nmg6asUsj7C156txX4jm2iLHZlKHyx/view\">Volume I: Introduction, Text, Translation, and Notes.</a></li><li><a href=\"https://drive.google.com/file/d/1T8F7HFolW1FNyU6bqeza5qzyRrr9OAVr/view\">Volume II: Apparatus of Variant Readings and Indexes.</a></li></ul>"
     ],
     "variants": [
@@ -896,7 +896,7 @@ export const DATA = [
   {
     "title": "O. von Lemm, Kleine Kopt. Studien, acc. to continuous pagination",
     "description": [
-      "Parts 1-58 published in the <em>Bulletin de l’Académie Impériale des Sciences de St.-Pétersbourg</em>, 1899-1909. Parts I-IX, X-XX, XXI-XXV, XXVI-XLV, XXVI-XLV (Schluss) are available on <a href=\"https://www.mathnet.ru/php/archive.phtml?wshow=paper&amp;jrnid=im&amp;paperid=4650&amp;option_lang=eng\">Mathnet.ru</a>. Part XLVI-L are available on <a href=\"https://www.orientalstudies.ru/rus/index.php?option=com_publications&amp;Itemid=75&amp;pub=8369\">OrientalStudies.ru</a>. Parts LI-LV and LVI-LVIII are outstanding. "
+      "Parts 1-58 published in the <em>Bulletin de l’Académie Impériale des Sciences de St.-Pétersbourg</em>, 1899-1909. Parts I-IX, X-XX, XXI-XXV, XXVI-XLV, XXVI-XLV (Schluss) are available on <a href=\"https://www.mathnet.ru/php/archive.phtml?wshow=paper&amp;jrnid=im&amp;paperid=4650&amp;option_lang=eng\">Mathnet.ru</a>. Part XLVI-L are available on <a href=\"https://www.orientalstudies.ru/rus/index.php?option=com_publications&amp;Itemid=75&amp;pub=8369\">OrientalStudies.ru</a>. Parts LI-LV and LVI-LVIII are outstanding."
     ],
     "variants": [
       "KKS"
@@ -987,7 +987,7 @@ export const DATA = [
   {
     "title": "Die sogen. Gnomen d. Concils v. Nicaea (Dissert.), Beirut, 1912",
     "description": [
-      "Lammeyer, J. (1912). <em>Die sogenannten Gnomen des Konzils von Nicaea. Ein homiletischer Traktat des 4. Jahrhunderts unter Zugrundelegung erstmaliger Edition des koptisch-sahidischen Handschriftenfragments der Bibliothèque Nationale zu Paris Copte-sahidique 129, 14 (75-82) ins Deutsche übersetzt und untersucht</em>. Beirut. [If you know of a digital copy, please <a href=\"https://www.coptist.com/contact-%e2%b2%a7%e2%b2%81%e2%b2%99%e2%b2%9f%e2%b2%93/\"> contact me</a>] "
+      "Lammeyer, J. (1912). <em>Die sogenannten Gnomen des Konzils von Nicaea. Ein homiletischer Traktat des 4. Jahrhunderts unter Zugrundelegung erstmaliger Edition des koptisch-sahidischen Handschriftenfragments der Bibliothèque Nationale zu Paris Copte-sahidique 129, 14 (75-82) ins Deutsche übersetzt und untersucht</em>. Beirut. [If you know of a digital copy, please <a href=\"https://www.coptist.com/contact-%e2%b2%a7%e2%b2%81%e2%b2%99%e2%b2%9f%e2%b2%93/\"> contact me</a>]"
     ],
     "variants": [
       "Lammayer"
@@ -1015,9 +1015,9 @@ export const DATA = [
   {
     "title": "Lemm, Sahidische Bibelfragmente I, II, III",
     "description": [
-      "Lemm, O. von. (1890). <a href=\"https://www.orientalstudies.ru/rus/images/pdf/journals/Melanges_Asiatiques_10_1890_02_lemm.pdf\">Sahidische Bibelfragmente. I</a>. <em>Bulletin de l’Académie impériale des sciences de St.-Pétersbourg</em>, X, 5-16. ",
-      "Lemm, O. von. (1890). <a href=\"https://www.orientalstudies.ru/rus/images/pdf/journals/Melanges_Asiatiques_10_1890_04_lemm.pdf\">Sahidische Bibelfragmente. II</a>. <em>Bulletin de l’Académie impériale des sciences de St.-Pétersbourg</em>, X, 79-97. ",
-      "Lemm, O. von. (1906). <a href=\"https://www.orientalstudies.ru/rus/images/pdf/journals/Melanges_Asiatiques_12_1902-1906_08_lemm.pdf\">Sahidische Bibelfragmente. III</a>. <em>Bulletin de l’Académie impériale des sciences de St.-Pétersbourg</em>, XII, 79-97. "
+      "Lemm, O. von. (1890). <a href=\"https://www.orientalstudies.ru/rus/images/pdf/journals/Melanges_Asiatiques_10_1890_02_lemm.pdf\">Sahidische Bibelfragmente. I</a>. <em>Bulletin de l’Académie impériale des sciences de St.-Pétersbourg</em>, X, 5-16.",
+      "Lemm, O. von. (1890). <a href=\"https://www.orientalstudies.ru/rus/images/pdf/journals/Melanges_Asiatiques_10_1890_04_lemm.pdf\">Sahidische Bibelfragmente. II</a>. <em>Bulletin de l’Académie impériale des sciences de St.-Pétersbourg</em>, X, 79-97.",
+      "Lemm, O. von. (1906). <a href=\"https://www.orientalstudies.ru/rus/images/pdf/journals/Melanges_Asiatiques_12_1902-1906_08_lemm.pdf\">Sahidische Bibelfragmente. III</a>. <em>Bulletin de l’Académie impériale des sciences de St.-Pétersbourg</em>, XII, 79-97."
     ],
     "variants": [
       "L Bib"
@@ -1051,7 +1051,7 @@ export const DATA = [
   {
     "title": "Berichte d. phil.-histor. Klasse d. kgl. säch. Gesellsch. d. Wissensch",
     "description": [
-      "<em>Berichte über die Verhandlungen der Königlich Sächsischen Gesellschaft der Wissenschaften zu Leipzig, Philologisch-Historische Klasse</em> began in 1849. Volumes from 1849-1899 (1-51) available digitised on <a href=\"https://catalog.hathitrust.org/Record/008559830\">HathiTrust</a> with later volumes via US access. "
+      "<em>Berichte über die Verhandlungen der Königlich Sächsischen Gesellschaft der Wissenschaften zu Leipzig, Philologisch-Historische Klasse</em> began in 1849. Volumes from 1849-1899 (1-51) available digitised on <a href=\"https://catalog.hathitrust.org/Record/008559830\">HathiTrust</a> with later volumes via US access."
     ],
     "variants": [
       "Leip Ber"
@@ -1096,7 +1096,7 @@ export const DATA = [
   {
     "title": "Lemm, Koptische Miscellen, acc. to continuous pagination",
     "description": [
-      "Lemm, O. von. (1907-1915). Koptische Miscellen I-CXLVIII published in volumes of the <em>Bulletin de l’Académie Impériale des Sciences de St.-Pétersbourg, VI série</em>. Listed and linked on <a href=\"https://ancientworldonline.blogspot.com/2012/05/digitized-coptic-publications-of-oscar.html\">The Ancient World Online</a>. "
+      "Lemm, O. von. (1907-1915). Koptische Miscellen I-CXLVIII published in volumes of the <em>Bulletin de l’Académie Impériale des Sciences de St.-Pétersbourg, VI série</em>. Listed and linked on <a href=\"https://ancientworldonline.blogspot.com/2012/05/digitized-coptic-publications-of-oscar.html\">The Ancient World Online</a>."
     ],
     "variants": [
       "L Mis"
@@ -1156,7 +1156,7 @@ export const DATA = [
   {
     "title": "Mélanges de la Faculté Orientale, Université de Beyrouth",
     "description": [
-      "<em>Mélanges de l’Université Saint-Joseph</em> began in 1922 (volume 8-), succeeding <em>Mélanges de la Faculté Orientale</em>, which began in 1906, and continued its issue numbering. All volumes are listed, digitised and available for viewing on <a href=\"https://www.persee.fr/collection/mefao\">Persee.fr</a>. "
+      "<em>Mélanges de l’Université Saint-Joseph</em> began in 1922 (volume 8-), succeeding <em>Mélanges de la Faculté Orientale</em>, which began in 1906, and continued its issue numbering. All volumes are listed, digitised and available for viewing on <a href=\"https://www.persee.fr/collection/mefao\">Persee.fr</a>."
     ],
     "variants": [
       "Mél Or"
@@ -1180,7 +1180,7 @@ export const DATA = [
   {
     "title": "Mémoires de l’Instit. Égyptien, Cairo",
     "description": [
-      "<em>Mémoires présentés à l’Institut Egyptien</em> began in 1862. Volumes as listed, digitised and accessible on the <a href=\"https://digi.ub.uni-heidelberg.de/diglit/meminstitutegyptien?ui_lang=eng\">Heidelberg digital library</a>. "
+      "<em>Mémoires présentés à l’Institut Egyptien</em> began in 1862. Volumes as listed, digitised and accessible on the <a href=\"https://digi.ub.uni-heidelberg.de/diglit/meminstitutegyptien?ui_lang=eng\">Heidelberg digital library</a>."
     ],
     "variants": [
       "MIE"
@@ -1189,7 +1189,7 @@ export const DATA = [
   {
     "title": "Mémoires… de l’Instit. franç. d’Archéol. orient. au Caire",
     "description": [
-      "<em>Mémoires publiés par les membres de l’Institut français d’archéologie orientale du Caire</em> (MIFAO) began in 1902. Volumes are listed and linked on <a href=\"https://www.egyptologyforum.org/EEFSeries.html#9.2\">EgyptologyForum.org</a>. "
+      "<em>Mémoires publiés par les membres de l’Institut français d’archéologie orientale du Caire</em> (MIFAO) began in 1902. Volumes are listed and linked on <a href=\"https://www.egyptologyforum.org/EEFSeries.html#9.2\">EgyptologyForum.org</a>."
     ],
     "variants": [
       "MIF"
@@ -1207,7 +1207,7 @@ export const DATA = [
   {
     "title": "Mémoires… de la Mission archéol. franç. au Caire",
     "description": [
-      "<em>Mémoires publiés par les membres de la Mission archéologique française au Caire</em> (MMAF) began in 1884. Volumes are listed and linked on <a href=\"https://www.egyptologyforum.org/EEFSeries.html#9.1\">EgyptologyForum.org</a>. "
+      "<em>Mémoires publiés par les membres de la Mission archéologique française au Caire</em> (MMAF) began in 1884. Volumes are listed and linked on <a href=\"https://www.egyptologyforum.org/EEFSeries.html#9.1\">EgyptologyForum.org</a>."
     ],
     "variants": [
       "Miss"
@@ -1237,7 +1237,7 @@ export const DATA = [
   {
     "title": "Mittheilungen a. d. Papyrussamml. Erzh. Rainer",
     "description": [
-      "<em>Mittheilungen aus der Sammlung der Papyrus Erzherzog Rainer</em> published in 6 volumes (1887-1897). Volumes are linked on <a href=\"https://ancientworldonline.blogspot.com/2013/02/open-access-journal-mitteilungen-aus.html\">The Ancient World Online</a>. "
+      "<em>Mittheilungen aus der Sammlung der Papyrus Erzherzog Rainer</em> published in 6 volumes (1887-1897). Volumes are linked on <a href=\"https://ancientworldonline.blogspot.com/2013/02/open-access-journal-mitteilungen-aus.html\">The Ancient World Online</a>."
     ],
     "variants": [
       "MR"
@@ -1255,7 +1255,7 @@ export const DATA = [
   {
     "title": "Le Muséon (periodical), acc. to vols",
     "description": [
-      "<em>Le Muséon</em> began in 1882. Many early volumes are available digitised through <a href=\"https://catalog.hathitrust.org/Record/000640676?type%5B%5D=all&amp;lookfor%5B%5D=%20Le%20Muse%CC%81on&amp;ft=#viewability\">HathiTrust</a> with some additional volumes via US access. "
+      "<em>Le Muséon</em> began in 1882. Many early volumes are available digitised through <a href=\"https://catalog.hathitrust.org/Record/000640676?type%5B%5D=all&amp;lookfor%5B%5D=%20Le%20Muse%CC%81on&amp;ft=#viewability\">HathiTrust</a> with some additional volumes via US access."
     ],
     "variants": [
       "Mus"
@@ -1264,10 +1264,10 @@ export const DATA = [
   {
     "title": "Le Mystère des Lettres grecques, ed. A. Hebbelynck (from Muséon, 1900, 1901)",
     "description": [
-      "Hebbelynck, A. (1900). <a href=\"https://archive.org/details/lemuson19soci/page/n11/mode/2up\">Les mystères des lettres grecques d’après un manuscrit copte-arabe de la bibliothèque Bodléienne d’Oxford: Texte copte, traduction, notes</a>. <em>Le Muséon, Nouvelle Série</em>, Vol. I, pp. 5-36. ",
-      "Hebbelynck, A. (1900). <a href=\"https://archive.org/details/lemuson19soci/page/104/mode/2up?q=hebbelynck\">Les mystères des lettres grecques (Suite.)</a>. <em>Le Muséon, Nouvelle Série</em>, Vol. I, pp. 105-136. ",
-      "Hebbelynck, A. (1901). <a href=\"https://archive.org/details/lemuson20soci/page/n11/mode/2up\">Les mystères des lettres grecques d’après un manuscrit copte-arabe de la bibliothèque Bodléienne d’Oxford (Suite.)</a>. <em>Le Muséon, Nouvelle Série</em>, Vol. II, pp. 5-33. ",
-      "Hebbelynck, A. (1901). <a href=\"https://archive.org/details/lemuson20soci/page/n375/mode/2up\">Les mystères des lettres grecques d’après un manuscrit copte-arabe de la bibliothèque Bodléienne d’Oxford (Fin.)</a>. <em>Le Muséon, Nouvelle Série</em>, Vol. II, pp. 369-415 plus 3 plates. "
+      "Hebbelynck, A. (1900). <a href=\"https://archive.org/details/lemuson19soci/page/n11/mode/2up\">Les mystères des lettres grecques d’après un manuscrit copte-arabe de la bibliothèque Bodléienne d’Oxford: Texte copte, traduction, notes</a>. <em>Le Muséon, Nouvelle Série</em>, Vol. I, pp. 5-36.",
+      "Hebbelynck, A. (1900). <a href=\"https://archive.org/details/lemuson19soci/page/104/mode/2up?q=hebbelynck\">Les mystères des lettres grecques (Suite.)</a>. <em>Le Muséon, Nouvelle Série</em>, Vol. I, pp. 105-136.",
+      "Hebbelynck, A. (1901). <a href=\"https://archive.org/details/lemuson20soci/page/n11/mode/2up\">Les mystères des lettres grecques d’après un manuscrit copte-arabe de la bibliothèque Bodléienne d’Oxford (Suite.)</a>. <em>Le Muséon, Nouvelle Série</em>, Vol. II, pp. 5-33.",
+      "Hebbelynck, A. (1901). <a href=\"https://archive.org/details/lemuson20soci/page/n375/mode/2up\">Les mystères des lettres grecques d’après un manuscrit copte-arabe de la bibliothèque Bodléienne d’Oxford (Fin.)</a>. <em>Le Muséon, Nouvelle Série</em>, Vol. II, pp. 369-415 plus 3 plates."
     ],
     "variants": [
       "My"
@@ -1276,7 +1276,7 @@ export const DATA = [
   {
     "title": "Notices et Extraits des MSS. de la Bibliothèque Nationale, Paris",
     "description": [
-      "<em>Notices et extraits des manuscrits de la Bibliothèque nationale et autres bibliothèques</em> began in 1787. Many digitised volumes, particularly early volumes, are listed on <a href=\"https://catalog.hathitrust.org/Record/003105485\">HathiTrust</a> and <a href=\"https://gallica.bnf.fr/ark:/12148/cb345335088/date\">Gallica</a>. "
+      "<em>Notices et extraits des manuscrits de la Bibliothèque nationale et autres bibliothèques</em> began in 1787. Many digitised volumes, particularly early volumes, are listed on <a href=\"https://catalog.hathitrust.org/Record/003105485\">HathiTrust</a> and <a href=\"https://gallica.bnf.fr/ark:/12148/cb345335088/date\">Gallica</a>."
     ],
     "variants": [
       "N & E"
@@ -1304,7 +1304,7 @@ export const DATA = [
   {
     "title": "Orientalistische Litteraturzeitung",
     "description": [
-      "<em>Orientalistische Litteraturzeitung</em> began in 1898. Links to digitised volumes, especially early volumes, available on <a href=\"https://onlinebooks.library.upenn.edu/webbin/serial?id=orientliteraturzeitung\">The Online Books Page</a>. "
+      "<em>Orientalistische Litteraturzeitung</em> began in 1898. Links to digitised volumes, especially early volumes, available on <a href=\"https://onlinebooks.library.upenn.edu/webbin/serial?id=orientliteraturzeitung\">The Online Books Page</a>."
     ],
     "variants": [
       "OLZ"
@@ -1313,7 +1313,7 @@ export const DATA = [
   {
     "title": "Orientalia (periodical), Rome",
     "description": [
-      "<em>Orientalia</em> began in 1920. All volumes up to recent volumes are available through <a href=\"https://www.jstor.org/journal/orientalia\">JSTOR</a>. "
+      "<em>Orientalia</em> began in 1920. All volumes up to recent volumes are available through <a href=\"https://www.jstor.org/journal/orientalia\">JSTOR</a>."
     ],
     "variants": [
       "Ora"
@@ -1322,7 +1322,7 @@ export const DATA = [
   {
     "title": "Oratio Cypriani in Veröffentl. a. d. badischen Papyrussamml., Heft 5, 1934, p. 305 ff",
     "description": [
-      "Bilabel, F., &amp; Grohmann, A. (1934). <em>Griechische, koptische und arabische Texte zur Religion und religiösen Literatur in Ägyptens Spätzeit</em>. (Veröffentlichungen aus den badischen Papyrus-Sammlungen, Heft 5). Heidelberg: Verlag der Universitätsbibliothek. [If you know of a digital copy, please <a href=\"https://www.coptist.com/contact-%e2%b2%a7%e2%b2%81%e2%b2%99%e2%b2%9f%e2%b2%93/\"> contact me</a>] "
+      "Bilabel, F., &amp; Grohmann, A. (1934). <em>Griechische, koptische und arabische Texte zur Religion und religiösen Literatur in Ägyptens Spätzeit</em>. (Veröffentlichungen aus den badischen Papyrus-Sammlungen, Heft 5). Heidelberg: Verlag der Universitätsbibliothek. [If you know of a digital copy, please <a href=\"https://www.coptist.com/contact-%e2%b2%a7%e2%b2%81%e2%b2%99%e2%b2%9f%e2%b2%93/\"> contact me</a>]"
     ],
     "variants": [
       "Orat Cyp",
@@ -1332,7 +1332,7 @@ export const DATA = [
   {
     "title": "Oriens Christianus (periodical)",
     "description": [
-      "<em>Oriens Christianus</em> began in 1901. All volumes up to 2014 are available digitised on the <a href=\"https://archive.org/details/oriens-christianus\">Internet Archive</a>. "
+      "<em>Oriens Christianus</em> began in 1901. All volumes up to 2014 are available digitised on the <a href=\"https://archive.org/details/oriens-christianus\">Internet Archive</a>."
     ],
     "variants": [
       "Or Chr"
@@ -1369,7 +1369,7 @@ export const DATA = [
   {
     "title": "Papyri in Museum at Alexandria, ed. de Ricci & Winstedt in Sphinx x, also Crum’s copies",
     "description": [
-      "Ricci, S. de, &amp; Winstedt, E. O. (1906). <a href=\"https://www.persee.fr/doc/sphin_2003-170x_1906_num_10_1_1192\">Papyrus coptes du Musée d’Alexandrie</a>. <em>Sphinx: revue critique embrassant le domaine entier de l’égyptologie</em>, 10, 1-4. "
+      "Ricci, S. de, &amp; Winstedt, E. O. (1906). <a href=\"https://www.persee.fr/doc/sphin_2003-170x_1906_num_10_1_1192\">Papyrus coptes du Musée d’Alexandrie</a>. <em>Sphinx: revue critique embrassant le domaine entier de l’égyptologie</em>, 10, 1-4."
     ],
     "variants": [
       "P Al"
@@ -1469,7 +1469,7 @@ export const DATA = [
   {
     "title": "Migne’s Patrologia, Series Graeca",
     "description": [
-      "Migne, J.-P. (Ed.). (1857-1886). <em>Patrologiae cursus completus, Series Graeca</em> (161 vols.). Paris. All volumes are linked on <a href=\"https://patristica.net/graeca/\">Patristica.net</a> and <a href=\"https://www.roger-pearse.com/weblog/patrologia-graeca-pg-pdfs/\">Roger Pearse’s blog</a>. "
+      "Migne, J.-P. (Ed.). (1857-1886). <em>Patrologiae cursus completus, Series Graeca</em> (161 vols.). Paris. All volumes are linked on <a href=\"https://patristica.net/graeca/\">Patristica.net</a> and <a href=\"https://www.roger-pearse.com/weblog/patrologia-graeca-pg-pdfs/\">Roger Pearse’s blog</a>."
     ],
     "variants": [
       "PG"
@@ -1564,7 +1564,7 @@ export const DATA = [
   {
     "title": "Patrologia Orientalis",
     "description": [
-      "<em>Patrologia Orientalis</em> was first published in 1907. Many volumes, especially early volumes, linked on <a href=\"https://www.roger-pearse.com/weblog/patrologia-orientalis-po-pdfs/\">Roger Pearse’s blog</a> and <a href=\"https://www.tertullian.org/fathers/patrologia_orientalis_toc.htm\">Tertullian.org</a>. "
+      "<em>Patrologia Orientalis</em> was first published in 1907. Many volumes, especially early volumes, linked on <a href=\"https://www.roger-pearse.com/weblog/patrologia-orientalis-po-pdfs/\">Roger Pearse’s blog</a> and <a href=\"https://www.tertullian.org/fathers/patrologia_orientalis_toc.htm\">Tertullian.org</a>."
     ],
     "variants": [
       "PO"
@@ -1573,7 +1573,7 @@ export const DATA = [
   {
     "title": "Oxyrhynchus Papyri, ed. Grenfell & Hunt",
     "description": [
-      "<em>The Oxyrhynchus papyri</em> is an ongoing series first published in 1898 and edited by Bernard P. Grenfell and Arthur S. Hunt. The earliest volumes are available on <a href=\"https://onlinebooks.library.upenn.edu/webbin/serial?id=ocyrhynchus\">The Online Books Page</a> with further volumes on <a href=\"https://catalog.hathitrust.org/Record/000051960\">HathiTrust</a> via US access. "
+      "<em>The Oxyrhynchus papyri</em> is an ongoing series first published in 1898 and edited by Bernard P. Grenfell and Arthur S. Hunt. The earliest volumes are available on <a href=\"https://onlinebooks.library.upenn.edu/webbin/serial?id=ocyrhynchus\">The Online Books Page</a> with further volumes on <a href=\"https://catalog.hathitrust.org/Record/000051960\">HathiTrust</a> via US access."
     ],
     "variants": [
       "P Oxy"
@@ -1607,7 +1607,7 @@ export const DATA = [
   {
     "title": "Proceedings of Soc. of Biblical Archaeology",
     "description": [
-      "<em>Proceedings of the Society of Biblical Archæology</em> began in 1879. The first 30 volumes are linked on <a href=\"http://archives.getty.edu:30008/getty_images/digitalresources/serials/103990.html\">The Getty Research Institute Research Library Catalogue</a>. More volumes available on <a href=\"https://catalog.hathitrust.org/Record/007887358\">HathiTrust</a> via US access. "
+      "<em>Proceedings of the Society of Biblical Archæology</em> began in 1879. The first 30 volumes are linked on <a href=\"http://archives.getty.edu:30008/getty_images/digitalresources/serials/103990.html\">The Getty Research Institute Research Library Catalogue</a>. More volumes available on <a href=\"https://catalog.hathitrust.org/Record/007887358\">HathiTrust</a> via US access."
     ],
     "variants": [
       "PSBA"
@@ -1628,7 +1628,7 @@ export const DATA = [
   {
     "title": "I Papiri Copti… di Torino, ed. F. Rossi, acc. to volume, fascicule & page",
     "description": [
-      "Rossi, F. (1887). <em>I Papiri Copti del Museo Egizio di Torino</em>, Vol. I (five fascicles). Torino: Ermanno Loescher. The five fascicles of this volume available on <a href=\"https://alinsuciu.com/2012/01/27/rossis-edition-of-the-coptic-papyrus-codices-in-the-egyptian-museum-in-turin-1/\">Alin Suciu’s blog</a>. ",
+      "Rossi, F. (1887). <em>I Papiri Copti del Museo Egizio di Torino</em>, Vol. I (five fascicles). Torino: Ermanno Loescher. The five fascicles of this volume available on <a href=\"https://alinsuciu.com/2012/01/27/rossis-edition-of-the-coptic-papyrus-codices-in-the-egyptian-museum-in-turin-1/\">Alin Suciu’s blog</a>.",
       "Rossi, F. (1892). <em><a href=\"https://www.google.co.uk/books/edition/I_papiri_copti_del_Museo_egizio_di_Torin/lxEZAAAAYAAJ?hl=en&amp;gbpv=1&amp;pg=PP9&amp;printsec=frontcover\">I Papiri Copti del Museo Egizio di Torino</a></em>. Vol. II (four fascicles). Torino: Ermanno Loescher."
     ],
     "variants": [
@@ -1665,7 +1665,7 @@ export const DATA = [
   {
     "title": "Revue Égyptologique",
     "description": [
-      "<em>Revue égyptologique</em> began in 1880 and was published until 1914 (14 volumes). A new series began in 1919/20 and continued until 1924 (2 volumes). From 1925 it was replaced by <em>Revue de l’Égypte ancienne</em>. All volumes are available on the <a href=\"https://digi.ub.uni-heidelberg.de/diglit/revue_egyptologique\">Heidelberg digital library</a>. "
+      "<em>Revue égyptologique</em> began in 1880 and was published until 1914 (14 volumes). A new series began in 1919/20 and continued until 1924 (2 volumes). From 1925 it was replaced by <em>Revue de l’Égypte ancienne</em>. All volumes are available on the <a href=\"https://digi.ub.uni-heidelberg.de/diglit/revue_egyptologique\">Heidelberg digital library</a>."
     ],
     "variants": [
       "RE"
@@ -1674,7 +1674,7 @@ export const DATA = [
   {
     "title": "Recueil de Travaux &c",
     "description": [
-      "<em>Recueil de travaux relatifs à la philologie et à l’ archéologie égyptiennes et assyriennes: pour servir de bullletin à la Mission Française du Caire</em> began in 1870 and continued until 1923 (40 volumes). All volumes are available on the <a href=\"https://digi.ub.uni-heidelberg.de/diglit/rectrav\">Heidelbery digital library</a>. "
+      "<em>Recueil de travaux relatifs à la philologie et à l’ archéologie égyptiennes et assyriennes: pour servir de bullletin à la Mission Française du Caire</em> began in 1870 and continued until 1923 (40 volumes). All volumes are available on the <a href=\"https://digi.ub.uni-heidelberg.de/diglit/rectrav\">Heidelbery digital library</a>."
     ],
     "variants": [
       "Rec"
@@ -1702,7 +1702,7 @@ export const DATA = [
   {
     "title": "Revue de l’Orient Chrétien, acc. to vol",
     "description": [
-      "<em>Revue de l’Orient Chrétien</em> began in 1896 and continued until 1935-36 (30 volumes). All the volumes are available via <a href=\"https://ancientworldonline.blogspot.com/2012/10/opean-access-journal-revue-de-lorient.html\">The Ancient World Online</a>. "
+      "<em>Revue de l’Orient Chrétien</em> began in 1896 and continued until 1935-36 (30 volumes). All the volumes are available via <a href=\"https://ancientworldonline.blogspot.com/2012/10/opean-access-journal-revue-de-lorient.html\">The Ancient World Online</a>."
     ],
     "variants": [
       "ROC"
@@ -1827,7 +1827,7 @@ export const DATA = [
   {
     "title": "Sphinx (periodical)",
     "description": [
-      "<em>Sphinx: revue critique embrassant le domaine entier de l’égyptologie</em> began in 1897 and continued until 1925 (22 volumes). All volumes are listed and available digitised on <a href=\"https://www.persee.fr/collection/sphin\">Persee.fr</a>. "
+      "<em>Sphinx: revue critique embrassant le domaine entier de l’égyptologie</em> began in 1897 and continued until 1925 (22 volumes). All volumes are listed and available digitised on <a href=\"https://www.persee.fr/collection/sphin\">Persee.fr</a>."
     ],
     "variants": [
       "Sph"
@@ -1909,7 +1909,7 @@ export const DATA = [
   {
     "title": "Eine Kopt. Bauernpraktik (Mitt. d. deut. Inst. Kairo, vi, 1936)",
     "description": [
-      "Till, W. (1936). <a href=\"https://archive.org/details/egyptology-archive-vol.-6-1935/page/108/mode/2up\">Eine koptische Bauernpraktik</a>. <em>Mitteilungen des Deutschen Archäologischen Instituts Kairo</em>, 6, pp. 108–114. "
+      "Till, W. (1936). <a href=\"https://archive.org/details/egyptology-archive-vol.-6-1935/page/108/mode/2up\">Eine koptische Bauernpraktik</a>. <em>Mitteilungen des Deutschen Archäologischen Instituts Kairo</em>, 6, pp. 108–114."
     ],
     "variants": [
       "Till Bau"
@@ -1954,7 +1954,7 @@ export const DATA = [
   {
     "title": "Transactions of the Soc. of Bibl. Archaeology",
     "description": [
-      "<em>Transactions of the Society of Biblical Archæology</em> began in 1872 and continued until 1893 (9 volumes). All volumes available on the <a href=\"https://www.digitale-sammlungen.de/en/search?filter=volumes%3A%22bsb11183747%2FBV002563052%22\">Münchener DigitalisierungsZentrum Digitale Bibliothek</a>. "
+      "<em>Transactions of the Society of Biblical Archæology</em> began in 1872 and continued until 1893 (9 volumes). All volumes available on the <a href=\"https://www.digitale-sammlungen.de/en/search?filter=volumes%3A%22bsb11183747%2FBV002563052%22\">Münchener DigitalisierungsZentrum Digitale Bibliothek</a>."
     ],
     "variants": [
       "TSBA"
@@ -1963,8 +1963,8 @@ export const DATA = [
   {
     "title": "I. Guidi, Testo copto del Testam. di Abramo &c. (= ALR, 1900)",
     "description": [
-      "Guidi, I. (1900). <a href=\"http://periodici.librari.beniculturali.it/visualizzatore.aspx?anno=1900&amp;ID_testata=30&amp;ID_periodico=9057\">Il testo copto del testamento di Abramo</a>. <em>Rendiconti della Reale Accademia dei Lincei. Classe di Scienze Morali, Storiche e Filologiche</em>, Ser. 5, 9(3–4), pp. 157–180. ",
-      "Guidi, I. (1900). <a href=\"http://periodici.librari.beniculturali.it/visualizzatore.aspx?anno=1900&amp;ID_testata=30&amp;ID_periodico=9057\">Il testamento di Isacco e il testamento di Giacobbe</a>. <em>Rendiconti della Reale Accademia dei Lincei. Classe di Scienze Morali, Storiche e Filologiche</em>, Ser. 5, 9(3–4), pp. 223-264. "
+      "Guidi, I. (1900). <a href=\"http://periodici.librari.beniculturali.it/visualizzatore.aspx?anno=1900&amp;ID_testata=30&amp;ID_periodico=9057\">Il testo copto del testamento di Abramo</a>. <em>Rendiconti della Reale Accademia dei Lincei. Classe di Scienze Morali, Storiche e Filologiche</em>, Ser. 5, 9(3–4), pp. 157–180.",
+      "Guidi, I. (1900). <a href=\"http://periodici.librari.beniculturali.it/visualizzatore.aspx?anno=1900&amp;ID_testata=30&amp;ID_periodico=9057\">Il testamento di Isacco e il testamento di Giacobbe</a>. <em>Rendiconti della Reale Accademia dei Lincei. Classe di Scienze Morali, Storiche e Filologiche</em>, Ser. 5, 9(3–4), pp. 223-264."
     ],
     "variants": [
       "Tst Ab"
@@ -2009,7 +2009,7 @@ export const DATA = [
   {
     "title": "B. Turaief, Materiali &c. (v AZ 40 150, Orient. Bibliographie xv, no. 111 a), acc. to numbers",
     "description": [
-      "Turayev, B. A. (1902). <a href=\"https://babel.hathitrust.org/cgi/pt?id=chi.102555010&amp;seq=389\">Коптскіе тексты, пріобрѣтенные экспедиціей пок. В. Г. Бока въ Египтѣ</a> [Coptic texts, acquired by the expedition of the late V. G. Bok in Egypt]. In <em>Труды одиннадцатаго Археологическаго Съѣзда въ Кіевѣ</em> (1899), т. II, pp. 225–246. Москва. "
+      "Turayev, B. A. (1902). <a href=\"https://babel.hathitrust.org/cgi/pt?id=chi.102555010&amp;seq=389\">Коптскіе тексты, пріобрѣтенные экспедиціей пок. В. Г. Бока въ Египтѣ</a> [Coptic texts, acquired by the expedition of the late V. G. Bok in Egypt]. In <em>Труды одиннадцатаго Археологическаго Съѣзда въ Кіевѣ</em> (1899), т. II, pp. 225–246. Москва."
     ],
     "variants": [
       "Tur M",
@@ -2019,7 +2019,7 @@ export const DATA = [
   {
     "title": "B. Turaief, Materiali &c. (v AZ 40 150, Orient. Bibliographie xv, no. 111 a), acc. to numbers; Koptskia Ostraka… Golenishtshef (= Bull. Acad. Imp. x, no. 5, 1899)",
     "description": [
-      "Turayev, B. A. (1899). <a href=\"https://www.biodiversitylibrary.org/item/94351#page/503/mode/1up\">Коптскія ostraca коллекціи В. С. Голенищева</a> [Coptic ostraca from the collection of V. S. Golenishchev]. <em>Bulletin de l’ Académie Impériale des Sciences de St.-Pétersbourg</em>, 5e série, T. X, no. 5, pp. 435–449. "
+      "Turayev, B. A. (1899). <a href=\"https://www.biodiversitylibrary.org/item/94351#page/503/mode/1up\">Коптскія ostraca коллекціи В. С. Голенищева</a> [Coptic ostraca from the collection of V. S. Golenishchev]. <em>Bulletin de l’ Académie Impériale des Sciences de St.-Pétersbourg</em>, 5e série, T. X, no. 5, pp. 435–449."
     ],
     "variants": [
       "Tur O"
@@ -2056,7 +2056,7 @@ export const DATA = [
   {
     "title": "C. Wessely, Studien z. Paläographie &c., acc. to vol. & page",
     "description": [
-      "Wessely, C. (1901–1924). <em>Studien zur Palaeographie und Papyruskunde</em>, 23 vols. Leipzig: Verlag von E. Avenarius. [Digitised volumes listed and linked on <a href=\"https://de.wikisource.org/wiki/Studien_zur_Palaeographie_und_Papyruskunde\">de.WikiSource.org</a>.] "
+      "Wessely, C. (1901–1924). <em>Studien zur Palaeographie und Papyruskunde</em>, 23 vols. Leipzig: Verlag von E. Avenarius. [Digitised volumes listed and linked on <a href=\"https://de.wikisource.org/wiki/Studien_zur_Palaeographie_und_Papyruskunde\">de.WikiSource.org</a>.]"
     ],
     "variants": [
       "Wess"
@@ -2105,7 +2105,7 @@ export const DATA = [
   {
     "title": "Wiener Zeitsch. f. d. Kunde d. Morgenlandes",
     "description": [
-      "<em>Wiener Zeitschrift für die Kunde des Morgenlandes</em> began in 1887. Early digitised volumes listed on <a href=\"https://onlinebooks.library.upenn.edu/webbin/serial?id=wienermorgenlandes\">The Online Books Page</a> and others on <a href=\"https://catalog.hathitrust.org/Record/000077758\">HathiTrust</a> (via US access only). "
+      "<em>Wiener Zeitschrift für die Kunde des Morgenlandes</em> began in 1887. Early digitised volumes listed on <a href=\"https://onlinebooks.library.upenn.edu/webbin/serial?id=wienermorgenlandes\">The Online Books Page</a> and others on <a href=\"https://catalog.hathitrust.org/Record/000077758\">HathiTrust</a> (via US access only)."
     ],
     "variants": [
       "WZKM"
@@ -2123,7 +2123,7 @@ export const DATA = [
   {
     "title": "Zeitsch. f. d. Neutestamentl. Wissenschaft",
     "description": [
-      "<em>Zeitschrift für die neutestamentliche Wissenschaft und die Kunde der älteren Kirche</em> began in 1900. Early digitised volumes are linked on <a href=\"https://de.wikisource.org/wiki/Zeitschriften_(Theologie)#Z\">de.WikiSource.org</a>. Further volumes available <a href=\"https://catalog.hathitrust.org/Record/000494825?type%5B%5D=all&amp;lookfor%5B%5D=Zeitschrift%20f%C3%BCr%20die%20neutestamentliche%20Wissenschaft%20und%20die%20Kunde%20der%20%C3%A4lteren%20Kirche&amp;ft=#viewability\">HathiTrust</a> (via US access only). "
+      "<em>Zeitschrift für die neutestamentliche Wissenschaft und die Kunde der älteren Kirche</em> began in 1900. Early digitised volumes are linked on <a href=\"https://de.wikisource.org/wiki/Zeitschriften_(Theologie)#Z\">de.WikiSource.org</a>. Further volumes available <a href=\"https://catalog.hathitrust.org/Record/000494825?type%5B%5D=all&amp;lookfor%5B%5D=Zeitschrift%20f%C3%BCr%20die%20neutestamentliche%20Wissenschaft%20und%20die%20Kunde%20der%20%C3%A4lteren%20Kirche&amp;ft=#viewability\">HathiTrust</a> (via US access only)."
     ],
     "variants": [
       "ZNTW"
