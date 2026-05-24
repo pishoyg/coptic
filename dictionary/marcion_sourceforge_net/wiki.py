@@ -39,9 +39,40 @@ RAW_RE: regex.Pattern[str] = regex.compile(
     r"\[\[.*?\]\]|[\p{Latin}\P{Letter}ʿβ]",
 )
 
-HEADWORD_RE: regex.Pattern[str] = regex.compile(
-    r"-?\(?[ⲁ-ⲱϣ-ϯⳉ \p{Mark}()\[\]]+(?:|-|⸗|†|\[|\[\.\])\)?",
+# The following breakdown ensures that a pair of parentheses surrounding the
+# headword would either both be captured by the capture group, or neither would.
+# The regex remains somewhat permissive, as it allows combinations that don't
+# occur in reality.
+_HEADWORD_RE_AUX: str = r"-?([ⲁ-ⲱϣ-ϯⳉ \p{Mark}()\[\]]+?)(?:-|⸗|†|\[|\[\.\])?"
+_HEADWORD_RE: regex.Pattern[str] = regex.compile(
+    rf"{_HEADWORD_RE_AUX}|\({_HEADWORD_RE_AUX}\)",
 )
+
+
+def headword_variants(form: str) -> abc.Generator[str]:
+    assert constants.COPTIC_LETTERS_OR_PARENTHESES_RE.fullmatch(form)
+    # 1. Handle parentheses that mark unattested forms.
+    if form.startswith("(") and form.endswith(")"):
+        # Get rid of the surrounding parentheses that mark unattested forms.
+        # In such cases, the form is guaranteed not to contain any other markers
+        # within it, so we can yield it and return immediately.
+        yield form[1:-1]
+        return
+
+    # 2. Handle parentheses that mark optional substrings.
+    if not constants.OPTIONAL_SUBSTRING.search(form):
+        # No optional substrings.
+        yield form
+        return
+
+    for repl in ["", r"\1"]:
+        # Try once with the optional substring removed, and once with it
+        # retained.
+        # Each time, only substitute the first optional substring, recursing to
+        # handle following optional substrings if any are present.
+        yield from headword_variants(
+            constants.OPTIONAL_SUBSTRING.sub(repl, form, 1),
+        )
 
 
 class Substitution:
@@ -294,6 +325,8 @@ class Wiki:
         self.vide = bool(vide)
         del vide
 
+        self.footnotes: list[str] = []
+
         wip: str = record["WIP"]
         ensure.ensure(
             wip in ["", "*"],
@@ -316,13 +349,37 @@ class Wiki:
                 "in:",
                 self.entry,
             )
-        self.footnotes: list[str] = []
 
     def headwords(self) -> list[str]:
         # TODO: (#503) Restore the check below when the data is complete.
         # ensure.ensure(self._headwords, "Headwords for", self,
         # "not populated!")
         return self._headwords
+
+    def headword_variants(self) -> abc.Generator[str]:
+        # TODO: (#0) Deduplicate this code. The logic below has a large overlap
+        # with `lexicographic_key`, as well as
+        # `lexical.Line._normalize_optional_letters`.
+        for headword in self.headwords():
+            match: regex.Match[str] | None = _HEADWORD_RE.fullmatch(headword)
+            assert match
+            # Strip all leading and trailing markers.
+            headword = match.group(1) or match.group(2)
+            assert headword
+            # Remove spaces, square brackets, and diacritics.
+            headword = headword.replace(" ", "")
+            headword = headword.replace("[", "").replace("]", "")
+            headword = regex.sub(r"\p{Mark}", "", headword)
+            assert headword
+            # The headword should now consist of Coptic letters, marks, spaces,
+            # and parentheses. Generate variants.
+            for variant in headword_variants(headword):
+                ensure.ensure(
+                    constants.COPTIC_LETTERS_RE.fullmatch(variant),
+                    "Invalid headword variant:",
+                    variant,
+                )
+                yield variant
 
     def subs(self) -> abc.Generator[Substitution]:
         # The headword substitution (which uses triple brackets) must precede
@@ -387,7 +444,7 @@ class Wiki:
     def replace_headword(self, match: re.Match[str]) -> str:
         headword: str = match.group(1)
         ensure.ensure(
-            HEADWORD_RE.fullmatch(headword),
+            _HEADWORD_RE.fullmatch(headword),
             "Invalid headword:",
             headword,
         )
@@ -497,7 +554,6 @@ class Wiki:
         yield "</div>"
 
     @functools.cached_property
-    # NOTE: Footnotes are omitted from the text!
     def text(self) -> str:
         txt: str = self.entry
         for s in self.subs():

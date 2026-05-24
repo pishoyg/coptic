@@ -105,6 +105,19 @@ def _write_html(obj: deck.Note | crum.IndexIndex) -> None:
     obj.write(paths.LEXICON_DIR)
 
 
+def _headword_index() -> dict[str, str]:
+    # Write the headword-to-page map.
+    headword_to_page: dict[str, str] = {}
+    for w in wiki.wikis():
+        for headword in w.headword_variants():
+            # Entries are processed in order, so the first occurrence has the
+            # smallest page. In case there are duplicate headwords, we want to
+            # retain the first Crum page encountered. Use `setdefault` to insert
+            # only if the entry doesn't exist already.
+            _ = headword_to_page.setdefault(headword, str(w.crum))
+    return headword_to_page
+
+
 def main():
     args = _argparser.parse_args()
     if args.root_key:
@@ -151,16 +164,8 @@ def main():
         paths.CRUM_DERIVATIONS_ROW_NUMS,
     )
 
-    # Write the headword-to-page map.
-    headword_to_page: dict[str, str] = {}
-    for w in wiki.wikis():
-        for headword in w.headwords():
-            key: str = "".join(constants.COPTIC_LETTER_RE.findall(headword))
-            # Entries are processed in order, so the first occurrence has the
-            # smallest column. Don't overwrite.
-            if key not in headword_to_page:
-                headword_to_page[key] = str(w.crum)
-    file.write(str(headword_to_page), paths.CRUM_HEADWORD_PAGE_MAP)
+    # Write the headword index.
+    file.write(str(_headword_index()), paths.CRUM_HEADWORD_PAGE_MAP)
 
 
 if __name__ == "__main__":
