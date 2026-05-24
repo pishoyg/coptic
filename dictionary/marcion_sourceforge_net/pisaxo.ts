@@ -21,8 +21,11 @@
  * Adding, removing, or retyping a field requires editing both.
  *
  * TODO: (#712) Simplify and prettify the YAML format, e.g.:
- * - Get rid of quotation marks wherever possible.
- * - Add some spacing. Order the fields in each entry if possible.
+ * - Add spaces between entries.
+ * - Make use of quotation marks uniform. For example, always use double quotes.
+ *   (This is probably the right option because our data has single quotes, but
+ *   if we get rid of HTML (see below) then we won't have any double quotes
+ *   left.)
  * TODO: (#712) Use Markdown at the source instead of HTML. This script should
  * convert back from Markdown to HTML.
  */
@@ -50,21 +53,24 @@ const MAGIC_LOOKUP = '__MAGIC_LOOKUP_SENTINEL__';
 // The schema below is the validation-time twin of the `Source` interface in
 // `docs/crum/pisaxo.d.ts`. Keep the two definitions in sync — see the
 // file-level docstring.
-const POSTFIX_SCHEMA: zod.ZodUnion = z.union([
-  z.string(),
-  z.null(),
-  z.literal(MAGIC_LOOKUP),
-]);
-
-const SOURCE_SCHEMA: zod.ZodObject = z.strictObject({
-  title: z.string().optional(),
-  description: z.array(z.string()).optional(),
-  variants: z.array(z.string()),
-  typos: z.array(z.string()).optional(),
-  postfixes: z.record(z.string(), POSTFIX_SCHEMA).optional(),
-});
-
-const SCHEMA: zod.ZodArray = z.array(SOURCE_SCHEMA);
+// NOTE: An absent field evaluates to `undefined`, while a field that has an
+// empty placeholder evaluates to `null`.
+// TODO: (#522) Some fields may not need to be optional when the data is more
+// complete.
+const SCHEMA: zod.ZodArray = z.array(
+  z.strictObject({
+    title: z.string().nullable(),
+    description: z.array(z.string()).nullable(),
+    variants: z.array(z.string()).nonempty(),
+    typos: z.array(z.string()).nonempty().optional(),
+    postfixes: z
+      .record(
+        z.string(),
+        z.union([z.string(), z.null(), z.literal(MAGIC_LOOKUP)])
+      )
+      .optional(),
+  })
+);
 
 /**
  *

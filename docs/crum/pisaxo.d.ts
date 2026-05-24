@@ -2,6 +2,8 @@
 // `SCHEMA` in `dictionary/marcion_sourceforge_net/pisaxo.ts`. Keep the two
 // definitions in sync — adding, removing, or retyping a field requires
 // editing both.
+// NOTE: In general, fields may be absent (`undefined`) or empty-placeholder
+// (`null`). This is why we account for both values below.
 
 export const LOOKUP: symbol;
 export type Postfix = string | null | typeof LOOKUP;
@@ -13,17 +15,17 @@ export const DATA: Source[];
  * used to cite it.
  */
 export interface Source {
-  // TODO: (#522) The `title` and `description` fields should become required
-  // once all sources are populated.
+  // TODO: (#522) Tighten `title` / `description` / `variants` once every
+  // entry has real data — drop `?` and `| null`.
 
   /** title is the full title of the source. This could be HTML or plain text.
    */
-  readonly title?: string;
+  readonly title?: string | null;
   /**
    * description contains the full HTML description of the source, including
    * bibliographical details and hyperlinks.
    */
-  readonly description?: string[];
+  readonly description?: string[] | null;
 
   /** variants is a list of abbreviation forms used to cite this source in
    * Crum's text. Sources were often cited inconsistently, which is why we
@@ -37,7 +39,7 @@ export interface Source {
    * nonstandard variants that are common typos should go to the `typos` field.
    * See #705.
    */
-  readonly typos?: string[];
+  readonly typos?: string[] | null;
   /** postfixes is a list of all postfixes that this abbreviation can bear.
    *
    * Notice that postfixes are distinct from suffixes. Postfixes are part of
@@ -57,5 +59,5 @@ export interface Source {
    * postfix, but we treat it as a postfix because it's written as 'BMOr' not
    * 'BM Or'.
    */
-  readonly postfixes?: Record<string, Postfix>;
+  readonly postfixes?: Record<string, Postfix> | null;
 }

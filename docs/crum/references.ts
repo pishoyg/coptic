@@ -35,8 +35,8 @@ export class Source {
    * @param descriptionHTML
    */
   public constructor(
-    public readonly titleHTML?: string,
-    public readonly descriptionHTML?: string[]
+    public readonly titleHTML?: string | null,
+    public readonly descriptionHTML?: string[] | null
   ) {}
 
   /**
