@@ -660,7 +660,12 @@ export class ZoomerDragger {
    * Update the style transform value.
    */
   private updateTransform(): void {
-    this.form.image.style.transform = `scale(${this.scale.toString()}) translate(${this.originX.toString()}px, ${this.originY.toString()}px)`;
+    // Translate must come before scale: CSS applies transforms
+    // right-to-left, so the scale runs first in the element's local space
+    // and the translate then moves the already-scaled image by raw screen
+    // pixels. Reversing the order would scale the translate too, making
+    // the image drift away from the pointer at any zoom != 1.
+    this.form.image.style.transform = `translate(${this.originX.toString()}px, ${this.originY.toString()}px) scale(${this.scale.toString()})`;
   }
 }
 
