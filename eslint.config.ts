@@ -262,6 +262,13 @@ export default config.defineConfig(
         },
       ],
       '@typescript-eslint/explicit-member-accessibility': 'error',
+      '@typescript-eslint/consistent-type-imports': [
+        'error',
+        {
+          prefer: 'type-imports',
+          fixStyle: 'inline-type-imports',
+        },
+      ],
     },
   },
   {
