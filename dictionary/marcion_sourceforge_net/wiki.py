@@ -39,10 +39,18 @@ RAW_RE: regex.Pattern[str] = regex.compile(
     r"\[\[.*?\]\]|[\p{Latin}\P{Letter}ʿβ]",
 )
 
-# The following breakdown ensures that a pair of parentheses surrounding the
-# headword would either both be captured by the capture group, or neither would.
-# The regex remains somewhat permissive, as it allows combinations that don't
-# occur in reality.
+# A headword may optionally be wrapped in parentheses to mark it as an
+# unattested form. It may also contain internal parentheses that mark
+# optional letters (e.g. ϩⲟ(ⲉ)ⲓⲧⲉ). The two alternatives below ensure that
+# the outer wrapper, when present, is matched as a balanced pair: either
+# both parens fall inside the character class (first alternative), or both
+# appear as explicit literals around the auxiliary pattern (second
+# alternative). An earlier version had the wrapping parens as independent
+# optionals (`\(?...\)?`), where the leading `\(?` could match the opening
+# paren while the closing paren got swallowed by the character class
+# instead of by the trailing `\)?` — yielding an imbalanced capture.
+# NOTE: The pattern remains somewhat permissive, as it allows combinations that
+# don't occur in reality.
 _HEADWORD_RE_AUX: str = r"-?([ⲁ-ⲱϣ-ϯⳉ \p{Mark}()\[\]]+?)(?:-|⸗|†|\[|\[\.\])?"
 _HEADWORD_RE: regex.Pattern[str] = regex.compile(
     rf"{_HEADWORD_RE_AUX}|\({_HEADWORD_RE_AUX}\)",
@@ -60,7 +68,7 @@ def headword_variants(form: str) -> abc.Generator[str]:
         return
 
     # 2. Handle parentheses that mark optional substrings.
-    if not constants.OPTIONAL_SUBSTRING.search(form):
+    if not constants.OPTIONAL_SUBSTRING_RE.search(form):
         # No optional substrings.
         yield form
         return
@@ -71,7 +79,7 @@ def headword_variants(form: str) -> abc.Generator[str]:
         # Each time, only substitute the first optional substring, recursing to
         # handle following optional substrings if any are present.
         yield from headword_variants(
-            constants.OPTIONAL_SUBSTRING.sub(repl, form, 1),
+            constants.OPTIONAL_SUBSTRING_RE.sub(repl, form, 1),
         )
 
 
@@ -365,7 +373,6 @@ class Wiki:
             assert match
             # Strip all leading and trailing markers.
             headword = match.group(1) or match.group(2)
-            assert headword
             # Remove spaces, square brackets, and diacritics.
             headword = headword.replace(" ", "")
             headword = headword.replace("[", "").replace("]", "")

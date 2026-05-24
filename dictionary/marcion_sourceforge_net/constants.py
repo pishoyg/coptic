@@ -59,16 +59,16 @@ SEMICOLON_OUTSIDE_BRACKETS_RE: re.Pattern[str] = re.compile(
 REFERENCE_RE: re.Pattern[str] = re.compile(r"\[[^\]]*\]")
 ENGLISH_WITHIN_COPTIC_RE: re.Pattern[str] = re.compile(r"\{[^\}]+\}")
 
+COPTIC_LETTERS_RE: re.Pattern[str] = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
 # \u0305: Combining overline (ⲁ̅)
 # \u0300: Combining grave accent (ⲁ̀)
-COPTIC_LETTERS_RE: re.Pattern[str] = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ ]+")
 COPTIC_LETTERS_OR_DIACRITICS_RE: re.Pattern[str] = re.compile(
     "[Ⲁ-ⲱϢ-ϯⳈⳉ\u0305\u0300]+",
 )
 COPTIC_LETTERS_OR_PARENTHESES_RE: re.Pattern[str] = re.compile(
     "[Ⲁ-ⲱϢ-ϯⳈⳉ()]+",
 )
-OPTIONAL_SUBSTRING: re.Pattern[str] = re.compile(r"\((.*?)\)")
+OPTIONAL_SUBSTRING_RE: re.Pattern[str] = re.compile(r"\((.*?)\)")
 
 # TYPES is used to parse the "type" column.
 _TYPES: list[lexical.Type] = [
