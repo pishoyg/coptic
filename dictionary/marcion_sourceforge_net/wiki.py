@@ -9,10 +9,9 @@
 # - Use an actual newline character instead of the "\n" token.
 # - The headword notation is simply unnecessary.
 import functools
-import itertools
 import re
 import typing
-from collections import abc
+from collections import abc, defaultdict
 
 import regex
 
@@ -297,12 +296,13 @@ class Wiki:
 
     def __init__(
         self,
-        key: str,
         record: dict[typing.Hashable, typing.Any],
     ) -> None:
-        self.key: int = int(key)
-        del key
+        self.keys: list[int] = list(map(int, record["Marcion"].split(" ")))
+        assert self.keys
         self.entry: str = record["Entry"]
+        # TODO: (#503) Retrieve from the parsed entry. Abandon the "Headword"
+        # column.
         self.headword: str = record["Headword"]
         assert self.headword
 
@@ -310,15 +310,6 @@ class Wiki:
         # rare cases, there could be multiple, e.g. ϩⲁ, ϩⲟ:
         #  https://remnqymi.com/crum/2096.html
         self._headwords: list[str] = []
-
-        ensure.ensure(
-            self.key == 0
-            or constants.MIN_KEY <= self.key <= constants.MAX_KEY,
-            "invalid key:",
-            self.key,
-            "for headword:",
-            self.headword,
-        )
 
         self.crum: lex.Column = lex.Column(record["Crum"])
         assert self.crum
@@ -351,7 +342,7 @@ class Wiki:
         invalid: str = RAW_RE.sub("", self.entry)
         if invalid:
             log.fatal(
-                self.key,
+                self,
                 "contains invalid text:",
                 invalid,
                 "in:",
@@ -524,7 +515,7 @@ class Wiki:
                 "Banned token",
                 token,
                 "found in entry",
-                self.key,
+                self,
                 "output:",
                 html,
             )
@@ -605,29 +596,21 @@ class Wiki:
         return None
 
 
-def _wikis() -> abc.Generator[Wiki]:
-    for record in gcp.tsv_spreadsheet(SHEET_TSV_URL).to_dict(orient="records"):
-        for key in record["Marcion"].split():
-            yield Wiki(key, record)
+@functools.cache
+def wikis() -> list[Wiki]:
+    records: list[dict[typing.Hashable, typing.Any]] = gcp.tsv_spreadsheet(
+        SHEET_TSV_URL,
+    ).to_dict(orient="records")
+    return list(map(Wiki, records))
 
 
 @functools.cache
-def wikis() -> list[Wiki]:
-    return list(_wikis())
-
-
 def by_marcion_key() -> dict[str, list[Wiki]]:
-    entries: list[Wiki] = list(wikis())
-    # Remove entries that don't have a key.
-    entries = [w for w in entries if w.key]
-    # First bring all entries with the same key together, so we can group they
-    # by key.
-    entries = sorted(entries, key=lambda w: w.key)
-    # Group by key, sorting each group.
-    return {
-        str(key): list(group)
-        for key, group in itertools.groupby(entries, lambda w: w.key)
-    }
+    by_key: dict[str, list[Wiki]] = defaultdict(list)
+    for w in wikis():
+        for key in w.keys:
+            by_key[str(key)].append(w)
+    return by_key
 
 
 class Column:

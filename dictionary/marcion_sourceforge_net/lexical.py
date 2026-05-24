@@ -397,15 +397,13 @@ class Column:
     """A column number in Crum's dictionary."""
 
     def __init__(self, raw: str):
-        if not raw:
-            self._num: str = ""
-            self._col: str = ""
-            return
         match: re.Match[str] | None = constants.CRUM_RE.fullmatch(raw)
         assert match
         assert len(match.groups()) == 2
-        self._num = match.groups()[0]
-        self._col = match.groups()[1]
+        self._num: str = match.group(1)
+        col: str = match.group(2)
+        assert col == "a" or col == "b"
+        self._col: typing.Literal["a", "b"] = col  # type: ignore[assignment]
 
         # Validate.
         if self._num.isdigit():
@@ -429,6 +427,12 @@ class Column:
 
     def roman(self) -> bool:
         return bool(re.fullmatch("[ivx]+", self._num))
+
+    def page(self) -> str:
+        return self._num
+
+    def col(self) -> typing.Literal["a", "b"]:
+        return self._col
 
     @typing.override
     def __eq__(self, other: object) -> bool:

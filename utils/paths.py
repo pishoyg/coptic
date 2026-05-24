@@ -51,6 +51,7 @@ CRUM_ROOTS_ROW_NUMS: pathlib.Path = file(LEXICON_DIR, "roots.js")
 CRUM_DERIVATIONS_ROW_NUMS: pathlib.Path = file(LEXICON_DIR, "derivations.js")
 
 CRUM_HEADWORD_PAGE_MAP: pathlib.Path = file(CRUM_SCAN_DIR, "headwords.json")
+CRUM_PAGE_INDEX: pathlib.Path = file(CRUM_SCAN_DIR, "pages.json")
 
 # Anki is not persisted to source control.
 ANKI_DIR: pathlib.Path = LEXICON_DIR / "anki/coptic.apkg"

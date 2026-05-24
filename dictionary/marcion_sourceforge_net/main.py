@@ -4,7 +4,8 @@
 import argparse
 import itertools
 import pathlib
-from collections import abc
+import typing
+from collections import abc, defaultdict
 
 import pandas as pd
 
@@ -105,6 +106,40 @@ def _write_html(obj: deck.Note | crum.IndexIndex) -> None:
     obj.write(paths.LEXICON_DIR)
 
 
+class _HeadwordEntry(typing.TypedDict):
+    headword: str
+    marcion: list[int]
+
+
+class _PageColumns(typing.TypedDict):
+    a: typing.NotRequired[list[_HeadwordEntry]]
+    b: typing.NotRequired[list[_HeadwordEntry]]
+
+
+def _page_index() -> dict[str, _PageColumns]:
+    # Build the page-to-headword index: page -> column -> entries.
+    #
+    # We rely on `wiki.wikis()` having the same order as the book, so that
+    # `itertools.groupby` collapses each column into a single group.
+    #
+    # Addenda are intentionally included. They appear under their Roman-numeral
+    # pages (e.g. "xvii") as-is, without conversion to a body page number.
+    index: defaultdict[str, _PageColumns] = defaultdict(_PageColumns)
+
+    for column, group in itertools.groupby(wiki.wikis(), lambda w: w.crum):
+        # mypy requires passing a literal to a TypedDict, which forces us to
+        # initialize `col` below:
+        col: typing.Literal["a", "b"] = column.col()
+        index[column.page()][col] = [
+            {
+                "headword": w.headword,
+                "marcion": w.keys,
+            }
+            for w in group
+        ]
+    return index
+
+
 def _headword_index() -> dict[str, str]:
     # Write the headword-to-page map.
     headword_to_page: dict[str, str] = {}
@@ -166,6 +201,9 @@ def main():
 
     # Write the headword index.
     file.write(str(_headword_index()), paths.CRUM_HEADWORD_PAGE_MAP)
+
+    # Write the page index.
+    file.write(file.json_dumps(_page_index()), paths.CRUM_PAGE_INDEX)
 
 
 if __name__ == "__main__":

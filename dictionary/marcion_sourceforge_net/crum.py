@@ -1099,14 +1099,15 @@ def verify_relation_symmetry() -> None:
 
 @cache.run_once
 def _verify_wiki_keys() -> None:
-    for key, wikis in wiki.by_marcion_key().items():
-        ensure.ensure(
-            key in Crum.roots,
-            "Unknown Marcion key:",
-            key,
-            "for entries:",
-            wikis,
-        )
+    for w in wiki.wikis():
+        for key in w.keys:
+            ensure.ensure(
+                str(key) in Crum.roots,
+                "Unknown Marcion key:",
+                key,
+                "for entry:",
+                w,
+            )
 
 
 def _img_aux(
