@@ -220,4 +220,36 @@ body.dawoud button#mode-dawoud {
 
 .scan-frame figure {
   margin: 0;
+
+  /* Shrink-wrap the image so the column-highlight overlay (positioned
+   * relative to this figure) lines up with the image edges. The figure
+   * also receives the zoom / pan transform from `ZoomerDragger`, so the
+   * overlay tracks the image automatically. */
+  display: inline-block;
+  position: relative;
+}
+
+/* Red rectangle overlay used to highlight column `a` (left half) or `b`
+ * (right half) of a dictionary page scan after the user searched with an
+ * explicit column letter (e.g. `1a`). Hidden until the `Scroller` adds
+ * the `a` / `b` modifier class. */
+.column-highlight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  border: 3px solid red;
+  box-sizing: border-box;
+  pointer-events: none;
+  display: none;
+}
+
+.column-highlight.a {
+  left: 0;
+  display: block;
+}
+
+.column-highlight.b {
+  left: 50%;
+  display: block;
 }

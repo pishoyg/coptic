@@ -67,26 +67,46 @@ export interface Page {
  * @param page - A page number, potentially containing a column.
  * @returns - The page number without the column.
  */
-export function chopColumn(page: string): [string, string] {
-  if (['a', 'b'].some((c) => page.endsWith(c))) {
-    return [page.slice(0, -1), page.slice(-1)];
+export function chopColumn(page: string): [string, 'a' | 'b' | undefined] {
+  const col: string = page.slice(-1);
+  if (col === 'a' || col === 'b') {
+    return [page.slice(0, -1), col];
   }
-  return [page, ''];
+  return [page, undefined];
 }
 
 /**
+ * Render a page identifier (`"${NUM}${COL}"`, e.g. `1a`) as a sequence
+ * of inline nodes.
+ *
+ * The input is expected to carry a column letter.
  *
  * @param page
  * @returns
  */
 export function prettyPage(page: string): (Node | string)[] {
-  const [num, col]: [string, string] = chopColumn(page);
+  const [num, col]: [string, string | undefined] = chopColumn(page);
+  if (!col) {
+    log.error('Page has no column:', page);
+    return [num];
+  }
   const i = document.createElement('i');
   i.textContent = col;
   return [`${num} `, i];
 }
 
 const SWAP_TOLERANCE = 10;
+
+type Column = 'a' | 'b' | undefined;
+
+/**
+ * Result of resolving a search query against the index: the target
+ * page, plus a column letter when one was determined.
+ */
+export interface Result {
+  page: number;
+  column?: Column;
+}
 
 /**
  * A dictionary index.
@@ -105,12 +125,20 @@ export class Index {
    * constructor type that takes as input the string representation of the word,
    * which is retrieved from the index columns.
    *
-   * @param overrides - Map from a (column-less) query string to its target
-   * page identifier. The value is a string that may itself carry a trailing
-   * column letter (`a` / `b`), and may also be another override key (e.g.
-   * a Roman-numeral page like `xv`); `getPage` recurses to resolve it.
-   * Looked up before the Coptic / numeric fallbacks, so callers can route
-   * non-canonical query forms to a specific page. Defaults to no overrides.
+   * @param overrides - Map from a query string to its target page
+   * identifier. The value is a string that may itself carry a trailing
+   * column letter (`a` / `b`), and may also be another override key
+   * (e.g. a Roman-numeral page like `xv`); `getPage` recurses to
+   * resolve it. Looked up early on, so callers can route non-canonical query
+   * forms to a specific page.
+   *
+   * Keys may include a column suffix (e.g. `xva`) for finer control;
+   * `getPage` first tries the full query, then falls back to the
+   * column-chopped form. Any column letter on the resolved value
+   * propagates out of `getPage` and is honored over a user-typed
+   * column letter — see the `getPage` JSDoc for the priority rules.
+   *
+   * Defaults to no overrides.
    */
   public constructor(
     index: string,
@@ -153,30 +181,78 @@ export class Index {
   }
 
   /**
-   * Given a search query, return the dictionary page number.
-   * @param query - Search query.
-   * @returns - Page number, or undefined if the number can't be inferred from
-   * the query.
+   * Resolve a search query to a `Result` (page number + optional
+   * column).
+   *
+   * Resolution order (first match wins):
+   *   1. **Override, exact match.** If the normalized query is itself
+   *      a key in `overrides`, recurse on the override value. A column
+   *      letter at the tail of the query is part of the lookup, so a
+   *      key like `xva` can be registered independently of `xv`.
+   *   2. **Override, column-chopped.** Strip the trailing column letter
+   *      (if any) and look the base up in `overrides`. Used so that
+   *      both `xv`, `xva`, and `xvb` resolve via the same override.
+   *   3. **Coptic word.** Extract all Coptic characters and binary-
+   *      search the index. Columns are not inferred from Coptic
+   *      searches.
+   *   4. **Page number.** Extract the first decimal run and parse it.
+   *
+   * Column priority: an override value's column wins over a column
+   * the user typed at the top level. When both are present and
+   * disagree, a warning is logged. Rationale: override entries
+   * encode curator-supplied knowledge about which column a headword
+   * lives in, so they should not be overridden by an incidental
+   * typed suffix.
+   *
+   * @param query - The raw search query (any case, any whitespace).
+   * @returns The resolved `Result`, or `undefined` when no rule fires.
    */
-  public getPage(query: string): number | undefined {
+  public getPage(query: string): Result | undefined {
     // Normalize the query.
     query = query.toLowerCase();
     query = orth.cleanDiacritics(query);
     // For all our use cases, spaces don't make any difference.
     query = query.replace(/\s/g, '');
+
     if (!query) {
       return undefined;
     }
 
-    // Check the overrides table. Try the query as-is first, then with any
-    // trailing column letter chopped, so queries like `xva` resolve to the
-    // override registered for `xv`. The override value is itself a page
-    // identifier — possibly with its own column suffix, or itself another
-    // override key — so we recurse through `getPage` to resolve it.
-    const override: string | undefined =
-      this.overrides[query] ?? this.overrides[chopColumn(query)[0]];
-    if (override !== undefined) {
+    let column: Column = undefined;
+    let override: string | undefined = undefined;
+    // 1. Check overrides with the query as-is first.
+    override = this.overrides[query];
+    if (override) {
       return this.getPage(override);
+    }
+
+    // Check overrides with the trailing column letter chopped, so queries like
+    // `xva` resolve to the override registered for `xv`. The override value is
+    // itself a page identifier — possibly with its own column suffix, or itself
+    // another override key — so we recurse through `getPage` to resolve it, and
+    // propagate whatever column the chain ends on.
+    [query, column] = chopColumn(query);
+    override = this.overrides[query];
+    if (override) {
+      const result: Result | undefined = this.getPage(override);
+      if (!result) {
+        log.error('Override', override, 'does not resolve for query', query);
+        return result;
+      }
+      if (result.column && column) {
+        log.warn(
+          'Override',
+          override,
+          'resolves column',
+          result.column,
+          'while the query',
+          query,
+          'was followed by column',
+          column
+        );
+      }
+      result.column ??= column;
+      return result;
     }
 
     // If any Coptic characters are present, extract them all and search
@@ -185,12 +261,12 @@ export class Index {
     // TODO: (640) Extend to other word classes (Greek, Arabic).
     const coptic: string = Array.from(query).filter(copt.isCoptic).join('');
     if (coptic) {
-      return this.binarySearch(new this.wordType(coptic));
+      return { page: this.binarySearch(new this.wordType(coptic)) };
     }
 
     const number: RegExpMatchArray | null = query.match(/-?\d+/g);
     if (number) {
-      return parseInt(number[0]);
+      return { page: parseInt(number[0]), column };
     }
 
     return undefined;
@@ -348,6 +424,11 @@ export interface ScrollerOptions {
   isActive?: IsActive;
 }
 
+enum CLS {
+  /** CSS class applied by the `Scroller` to its column-highlight overlay. */
+  COLUMN_HIGHLIGHT = 'column-highlight',
+}
+
 /**
  * Scroller scrolls through the pages of a book.
  */
@@ -360,6 +441,7 @@ export class Scroller {
   private readonly landingPage: number;
   private readonly directory: string;
   private readonly isActive: IsActive | undefined;
+  private readonly highlight: HTMLDivElement;
   private currentPage: number;
 
   /**
@@ -379,6 +461,14 @@ export class Scroller {
     this.end = opts.end - this.offset;
     this.currentPage = this.landingPage;
 
+    // The overlay is inserted as a sibling of the image, inside the same
+    // parent (the `<figure>` for the existing scan pages). That parent
+    // also receives the zoom / pan transform applied by `ZoomerDragger`,
+    // so the highlight tracks the image automatically.
+    this.highlight = document.createElement('div');
+    this.highlight.classList.add(CLS.COLUMN_HIGHLIGHT);
+    this.form.image.insertAdjacentElement('afterend', this.highlight);
+
     this.addEventListeners();
     this.update(this.landingPage);
   }
@@ -388,8 +478,12 @@ export class Scroller {
    *
    * @param page - Page number to open. This will be modified if it falls
    * outside our page range.
+   * @param column - Optional column to highlight (`'a'` or `'b'`). Omit
+   * to clear the highlight — N / P navigation and queries without an
+   * explicit column letter call `update` without this argument, so the
+   * leftover highlight from a previous typed `1a`/`1b` is cleared.
    */
-  public update(page: number): void {
+  public update(page: number, column?: 'a' | 'b'): void {
     if (isNaN(page)) {
       page = this.landingPage;
     }
@@ -401,6 +495,17 @@ export class Scroller {
     }
     this.currentPage = page;
     this.updateDisplay(page);
+    this.updateHighlight(column);
+  }
+
+  /**
+   * Show the column highlight, or hide it when no column was given.
+   *
+   * @param column - Column letter to highlight, or `undefined` to clear.
+   */
+  private updateHighlight(column: 'a' | 'b' | undefined): void {
+    this.highlight.classList.toggle('a', column === 'a');
+    this.highlight.classList.toggle('b', column === 'b');
   }
 
   /**
@@ -521,6 +626,13 @@ export class ZoomerDragger {
   private originY = 0;
   private isDragging = false;
   private readonly isActive: IsActive;
+  /**
+   * The element that receives the zoom / pan CSS transform. We transform
+   * the image's parent rather than the image itself so that overlay
+   * siblings (e.g. the `Scroller`'s column highlight) inherit the same
+   * transform and stay aligned with the image at any zoom / pan.
+   */
+  private readonly transformTarget: HTMLElement;
 
   /**
    * @param form - Image + reset-button pair the dragger controls.
@@ -540,6 +652,7 @@ export class ZoomerDragger {
     isActive?: IsActive
   ) {
     this.isActive = isActive ?? ((): boolean => true);
+    this.transformTarget = form.image.parentElement!;
     this.addEventListeners();
   }
 
@@ -669,7 +782,7 @@ export class ZoomerDragger {
     // and the translate then moves the already-scaled image by raw screen
     // pixels. Reversing the order would scale the translate too, making
     // the image drift away from the pointer at any zoom != 1.
-    this.form.image.style.transform = `translate(${this.originX.toString()}px, ${this.originY.toString()}px) scale(${this.scale.toString()})`;
+    this.transformTarget.style.transform = `translate(${this.originX.toString()}px, ${this.originY.toString()}px) scale(${this.scale.toString()})`;
   }
 }
 
@@ -702,10 +815,10 @@ export class Dictionary {
    * @param query - The search query (Coptic word or page number).
    */
   public search(query: string): void {
-    const page = this.index.getPage(query);
-    if (page === undefined) {
+    const ref: Result | undefined = this.index.getPage(query);
+    if (ref === undefined) {
       return;
     }
-    this.scroller.update(page);
+    this.scroller.update(ref.page, ref.column);
   }
 }
