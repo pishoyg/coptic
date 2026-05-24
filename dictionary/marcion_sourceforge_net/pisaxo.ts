@@ -41,7 +41,7 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
 const DIRNAME: string = dirname(fileURLToPath(import.meta.url));
-const YAML_PATH: string = path.join(DIRNAME, 'data', 'bib.yaml');
+const YAML_PATH: string = path.join(DIRNAME, 'data', 'input', 'bib.yaml');
 const JS_PATH: string = path.join('docs', 'crum', 'pisaxo.js');
 
 // Sentinel guaranteed not to appear naturally in the bibliographic data.

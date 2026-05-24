@@ -269,12 +269,9 @@ export default config.defineConfig(
     ignores: ['docs/**/*.js'],
   },
   // YAML linting — registers the `yml/yaml` language so .yaml files
-  // become lintable. Only `bib.yaml` opts in to a rule below; other
-  // YAML files in the repo are picked up by the base config but
-  // remain effectively unlinted.
+  // become lintable.
   ...eslintPluginYml.configs['flat/base'],
   {
-    files: ['dictionary/marcion_sourceforge_net/data/bib.yaml'],
     rules: {
       // Enforce schema order on every top-level sequence item
       // (`^\[\d+\]$` matches a sequence index path). Inside-item maps
