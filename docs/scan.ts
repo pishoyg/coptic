@@ -445,6 +445,14 @@ export class Scroller {
   private readonly isActive: IsActive | undefined;
   private readonly highlight: HTMLDivElement;
   private currentPage: number;
+  // Latest `src` assigned to the image. We compare against this to
+  // detect re-navigation to the same page (where `img.src = sameValue`
+  // would not refire `load`).
+  private currentSrc = '';
+  // Tracks the in-flight image load. Each new navigation aborts the
+  // previous controller so a stale `load` callback from a superseded
+  // navigation can't clobber the latest highlight.
+  private pendingLoad: AbortController | undefined = undefined;
 
   /**
    * Construct a scroller.
@@ -496,8 +504,12 @@ export class Scroller {
       page = this.end;
     }
     this.currentPage = page;
-    this.updateDisplay(page);
-    this.updateHighlight(column);
+    // Defer the highlight to the new image's `load` event so the
+    // rectangle appears alongside the new scan rather than flashing
+    // over the previous one. Until then the previous highlight stays
+    // visible on the previous image, which is the visually consistent
+    // state.
+    this.updateDisplay(page, this.updateHighlight.bind(this, column));
   }
 
   /**
@@ -511,18 +523,45 @@ export class Scroller {
   }
 
   /**
-   * Update the image to the given page number.
+   * Update the image to the given page number, invoking `onLoad` once
+   * the new image has actually rendered.
+   *
+   * Callers (the column-highlight overlay) need to know when the new
+   * scan is on screen so their own DOM changes happen in sync with it
+   * — applying them eagerly would let the overlay flash over the
+   * previous page while the new one is still streaming in. Same-src +
+   * already-loaded fires `onLoad` synchronously since
+   * `img.src = sameValue` does not refire `load`.
    *
    * @param page - Page number. The value is NOT verified.
+   * @param onLoad - Invoked once the requested image is on screen.
    */
-  private updateDisplay(page: number): void {
+  private updateDisplay(page: number, onLoad: () => void): void {
     const stem: number = page + this.offset;
-
-    this.form.image.src = str.joinPaths(
+    const newSrc: string = str.joinPaths(
       this.directory,
       `${stem.toString()}.${this.ext}`
     );
+
     this.form.image.alt = page.toString();
+
+    // Cancel any prior pending load so its stale callback can't apply
+    // a highlight that no longer matches the latest navigation.
+    this.pendingLoad?.abort();
+
+    if (newSrc === this.currentSrc && this.form.image.complete) {
+      this.pendingLoad = undefined;
+      onLoad();
+      return;
+    }
+
+    this.pendingLoad = new AbortController();
+    this.currentSrc = newSrc;
+    this.form.image.addEventListener('load', onLoad, {
+      once: true,
+      signal: this.pendingLoad.signal,
+    });
+    this.form.image.src = newSrc;
   }
 
   /**
