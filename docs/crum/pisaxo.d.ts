@@ -1,3 +1,8 @@
+// The `Source` interface below is the consumer-facing twin of the Zod
+// `SCHEMA` in `dictionary/marcion_sourceforge_net/pisaxo.ts`. Keep the two
+// definitions in sync — adding, removing, or retyping a field requires
+// editing both.
+
 export const LOOKUP: symbol;
 export type Postfix = string | null | typeof LOOKUP;
 
