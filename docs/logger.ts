@@ -1,5 +1,6 @@
 /** Package logger defines logging helpers. */
 /* eslint-disable no-console */
+import * as dev from './dev.js';
 
 enum Colors {
   RESET = '\x1b[0m',
@@ -48,10 +49,15 @@ function print(
 
 /**
  * Log an info message to the console.
+ *
+ * NOTE: Informational messages are only logged in developer mode.
+ *
  * @param {...any} message - Message to log.
  */
 export function info(...message: unknown[]): void {
-  print(Colors.GREEN, Colors.BLUE, 'info', false, ...message);
+  dev.play(() => {
+    print(Colors.GREEN, Colors.BLUE, 'info', false, ...message);
+  });
 }
 
 /**
