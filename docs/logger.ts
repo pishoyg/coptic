@@ -105,7 +105,7 @@ export function fatal(...message: unknown[]): never {
 export function ensure(
   condition: unknown,
   ...message: unknown[]
-): void | never {
+): asserts condition {
   if (!condition) {
     fatal(...message);
   }
