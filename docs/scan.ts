@@ -67,7 +67,7 @@ export interface Page {
  * @param page - A page number, potentially containing a column.
  * @returns - The page number without the column.
  */
-export function chopColumn(page: string): [string, 'a' | 'b' | undefined] {
+export function chopColumn(page: string): [string, Column] {
   const col: string = page.slice(-1);
   if (col === 'a' || col === 'b') {
     return [page.slice(0, -1), col];
@@ -427,6 +427,8 @@ export interface ScrollerOptions {
 enum CLS {
   /** CSS class applied by the `Scroller` to its column-highlight overlay. */
   COLUMN_HIGHLIGHT = 'column-highlight',
+  A = 'a',
+  B = 'b',
 }
 
 /**
@@ -478,12 +480,12 @@ export class Scroller {
    *
    * @param page - Page number to open. This will be modified if it falls
    * outside our page range.
-   * @param column - Optional column to highlight (`'a'` or `'b'`). Omit
+   * @param column - Optional column to highlight ('a' or 'b'). Omit
    * to clear the highlight — N / P navigation and queries without an
    * explicit column letter call `update` without this argument, so the
    * leftover highlight from a previous typed `1a`/`1b` is cleared.
    */
-  public update(page: number, column?: 'a' | 'b'): void {
+  public update(page: number, column?: Column): void {
     if (isNaN(page)) {
       page = this.landingPage;
     }
@@ -503,9 +505,9 @@ export class Scroller {
    *
    * @param column - Column letter to highlight, or `undefined` to clear.
    */
-  private updateHighlight(column: 'a' | 'b' | undefined): void {
-    this.highlight.classList.toggle('a', column === 'a');
-    this.highlight.classList.toggle('b', column === 'b');
+  private updateHighlight(column: Column): void {
+    this.highlight.classList.toggle(CLS.A, column === 'a');
+    this.highlight.classList.toggle(CLS.B, column === 'b');
   }
 
   /**
@@ -554,6 +556,9 @@ export class Scroller {
    * @param event - Keyboard event.
    */
   private handleKeyDown(event: KeyboardEvent): void {
+    // TODO: (#203) Part of this logic should live in the header module. You
+    // should add a listener to a `head.EVENT.NEXT` and `head.EVENT.PREV`
+    // events, which get triggered elsewhere.
     if (!this.active()) {
       return;
     }
@@ -689,11 +694,6 @@ export class ZoomerDragger {
     // Lifting the mouse click stops dragging.
     document.addEventListener('mouseup', this.stopDragging.bind(this));
 
-    // The reset button dispatches `head.EVENT.RESET`; we listen for it
-    // and reset only when this scan is the active view.
-    this.form.resetButton.addEventListener('click', (): void => {
-      head.dispatch(head.EVENT.RESET);
-    });
     document.addEventListener(head.EVENT.RESET, (): void => {
       if (this.isActive()) {
         this.reset();

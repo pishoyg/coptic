@@ -238,7 +238,7 @@ body.dawoud button#mode-dawoud {
   top: 0;
   bottom: 0;
   width: 50%;
-  border: 3px solid red;
+  border: 3px solid rgba(10 126 220 / 90%);
   box-sizing: border-box;
   pointer-events: none;
   display: none;
