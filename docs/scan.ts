@@ -159,7 +159,11 @@ export class Index {
    * the query.
    */
   public getPage(query: string): number | undefined {
-    query = orth.cleanDiacritics(query.toLowerCase().trim());
+    // Normalize the query.
+    query = query.toLowerCase();
+    query = orth.cleanDiacritics(query);
+    // For all our use cases, spaces don't make any difference.
+    query = query.replace(/\s/g, '');
     if (!query) {
       return undefined;
     }
