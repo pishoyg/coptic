@@ -66,7 +66,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "MSS. &c. in Graeco-Roman Museum, Alexandria",
+    "title": "MSS. &amp;c. in Graeco-Roman Museum, Alexandria",
     "description": null,
     "variants": [
       "Alex"
@@ -165,7 +165,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Le Monastère de B., ed. J. Clédat, I & II (= MIF. xii), 1904 ff",
+    "title": "Le Monastère de B., ed. J. Clédat, I &amp; II (= MIF. xii), 1904 ff",
     "description": [
       "Clédat, J. (1904). <em><a href=\"https://archive.org/details/MIFAO12et13/mode/2up\">Le monastère et la nécropole de Baouît</a></em>. (Mémoires publiés par les membres de l’Institut français d’archéologie orientale du Caire, Vol. 12). Le Caire: Imprimerie de l’Institut français d’archéologie orientale."
     ],
@@ -191,7 +191,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Erman & Grapow, Wörterbuch d. Aeg. Sprache, 1926-31",
+    "title": "Erman &amp; Grapow, Wörterbuch d. Aeg. Sprache, 1926-31",
     "description": [
       "Erman, A., &amp; Grapow, H. (1926-1931). <em><a href=\"https://www.ancientegyptfoundation.org/worterbuch_der_aegyptischen_sprache.shtml\">Wörterbuch der ägyptischen Sprache im Auftrage der deutschen Akademien</a></em>. Leipzig: J. C. Hinrichs’sche Buchhandlung. [The project started by Erman and Grapow continues in digitised form in <em><a href=\"https://tla.digital/home\">Thesaurus Linguae Aegyptiae</a></em>.]"
     ],
@@ -240,7 +240,7 @@ export const DATA = [
     "title": "Berliner Kopt. Urkunden, acc. to vol., no. and, in long texts, lines",
     "description": [
       "Erman, A. (1904). <em><a href=\"https://archive.org/details/mdp.39015020865393/page/n9/mode/2up\">Aegyptische Urkunden aus den Königlichen Museen zu Berlin: Koptische Urkunden (BKU)</a></em>. Vol. 1. Berlin: Weidmannsche Buchhandlung. [Several of the BKU I texts (along with other collections) have been digitised at the <a href=\"https://berlpap.smb.museum/bku-i/\">Berliner Papyrusdatenbank</a>.]",
-      "<strong>Kam</strong>: Kambysesroman in BKU I, no. 31, acc. to pp. in lower margins & line"
+      "<strong>Kam</strong>: Kambysesroman in BKU I, no. 31, acc. to pp. in lower margins &amp; line"
     ],
     "variants": [
       "BKU",
@@ -248,7 +248,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Epiphanius, De XII Gemmis, ed. R. P. Blake, Coptic fragts. by H. De Vis, 1934 (in Lake’s Studies & Documents)",
+    "title": "Epiphanius, De XII Gemmis, ed. R. P. Blake, Coptic fragts. by H. De Vis, 1934 (in Lake’s Studies &amp; Documents)",
     "description": [
       "Blake, R. P., &amp; de Vis, H. (Eds.). (1934). <em><a href=\"https://archive.org/details/MN41447ucmf_1/page/n7/mode/2up\">Epiphanius de gemmis: The Old Georgian Version and the Fragments of the Armenian Version</a></em> by R. P. Blake, and <em>The Coptic-Sahidic Fragments</em> by H. de Vis. (Studies and Documents, Vol. 2). London: Christophers."
     ],
@@ -284,7 +284,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "British Museum, Dept. of Egyptian & Assyr. Antiquities (papyri, ostraca, inscriptions)",
+    "title": "British Museum, Dept. of Egyptian &amp; Assyr. Antiquities (papyri, ostraca, inscriptions)",
     "description": null,
     "variants": [
       "BMEA"
@@ -327,7 +327,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Papyri & ostraca in Staatsmuseum, Berlin",
+    "title": "Papyri &amp; ostraca in Staatsmuseum, Berlin",
     "description": null,
     "variants": [
       "BP",
@@ -345,7 +345,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Budge, Martyrdom & Miracles of St. George, 1888",
+    "title": "Budge, Martyrdom &amp; Miracles of St. George, 1888",
     "description": [
       "Budge, E. A. W. (1888). <em><a href=\"https://archive.org/details/martyrdommiracle00budguoft/page/n9/mode/2up\">The Martyrdom and Miracles of Saint George of Cappadocia: The Coptic Texts edited with an English translation</a></em>. London: D. Nutt."
     ],
@@ -375,14 +375,14 @@ export const DATA = [
     ]
   },
   {
-    "title": "MSS. &c. in the Egyptian Museum, Cairo",
+    "title": "MSS. &amp;c. in the Egyptian Museum, Cairo",
     "description": null,
     "variants": [
       "Cai"
     ]
   },
   {
-    "title": "MSS. &c. in Coptic Museum, Cairo",
+    "title": "MSS. &amp;c. in Coptic Museum, Cairo",
     "description": null,
     "variants": [
       "(Cai)CoptMus",
@@ -393,7 +393,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Canons of Athanasius ed. Riedel & Crum (Text & Transl. Soc.), 1904",
+    "title": "Canons of Athanasius ed. Riedel &amp; Crum (Text &amp; Transl. Soc.), 1904",
     "description": [
       "Riedel, W., &amp; Crum, W. E. (1904). <em><a href=\"https://archive.org/details/thecanonsofathan00rieduoft/page/n7/mode/2up\">The Canons of Athanasius of Alexandria: The Arabic and Coptic versions edited and translated with introductions, notes and appendices</a></em>. London: Williams and Norgate."
     ],
@@ -420,7 +420,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Codices Coptici Vaticani &c., T.I, edd. Hebbelynck & Lantschoot, Rome, 1937",
+    "title": "Codices Coptici Vaticani &amp;c., T.I, edd. Hebbelynck &amp; Lantschoot, Rome, 1937",
     "description": [
       "Hebbelynck, A., &amp; Van Lantschoot, A. (1937). <em><a href=\"https://archive.org/details/BiblotacheaTomIcomplete/page/n7/mode/2up\">Codices Coptici Vaticani, Barberiniani, Borgiani, Rossiani. Tomus I</a></em>. Vaticani: Bibliotheca Vaticana."
     ],
@@ -458,7 +458,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Woide’s MSS. belonging to the Clarendon Press (Crum’s copies & photographs)",
+    "title": "Woide’s MSS. belonging to the Clarendon Press (Crum’s copies &amp; photographs)",
     "description": null,
     "variants": [
       "Cl Pr"
@@ -487,7 +487,7 @@ export const DATA = [
     }
   },
   {
-    "title": "Comptes Rendus de l’Acad. des lnscr., Paris, acc. to year & page",
+    "title": "Comptes Rendus de l’Acad. des lnscr., Paris, acc. to year &amp; page",
     "description": [
       "<em>Comptes rendus des séances de l’Académie des Inscriptions et Belles-Lettres</em> began in 1857. The volumes are listed and digitised on <a href=\"https://www.persee.fr/collection/crai\">Persee.fr</a>."
     ],
@@ -518,7 +518,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Demotic Magical Papyrus, ed. Griffith & Thompson, 1904 ff",
+    "title": "Demotic Magical Papyrus, ed. Griffith &amp; Thompson, 1904 ff",
     "description": [
       "Griffith, F. Ll., &amp; Thompson, H. (1904). <em><a href=\"https://archive.org/details/the-demotic-magical-papyrus-of-london-and-leiden-v.-1/page/n3/mode/2up\">The Demotic Magical Papyrus of London and Leiden</a></em>. London: H. Grevel &amp; Co.",
       "Griffith, F. Ll., &amp; Thompson, H. (1905). <em><a href=\"https://archive.org/details/the-demotic-magical-papyrus-of-london-and-leiden-v.-2/page/n1/mode/2up\">The Demotic Magical Papyrus of London and Leiden</a></em>, Vol. II: hand copy of the text. London: H. Grevel &amp; Co.",
@@ -543,7 +543,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Egypt Exploration Soc. (olim Fund), MSS. &c. in their possession (Crum’s copies)",
+    "title": "Egypt Exploration Soc. (olim Fund), MSS. &amp;c. in their possession (Crum’s copies)",
     "description": null,
     "variants": [
       "EES"
@@ -570,7 +570,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Monastery of Epiphanius, ed. Winlock, Crum & Evelyn White, 1926, acc. to numbers",
+    "title": "Monastery of Epiphanius, ed. Winlock, Crum &amp; Evelyn White, 1926, acc. to numbers",
     "description": [
       "Winlock, H. E, &amp; Crum, W. E. (1926). <em><a href=\"https://archive.org/details/monasteryofepiph01winl/page/n7/mode/2up\">The Monastery of Epiphanius at Thebes. Part I: The archaeological material by H. E. Winlock, and the literary material by W. E. Crum</a></em>. New York: The Metropolitan Museum of Art.",
       "Crum, W. E., &amp; Evelyn White, H. G. (1926). <em><a href=\"https://archive.org/details/monasteryofepiph02winl/page/n7/mode/2up\">The Monastery of Epiphanius at Thebes. Part II: Coptic ostraca and papyri edited with translations and commentaries by W. E. Crum, and Greek ostraca and papyri edited with translations and commentaries by H. G. Evelyn White</a></em>. New York: The Metropolitan Museum of Art."
@@ -601,7 +601,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Griffith, Oxford Excavations in Nubia, in Liverpool Annals of Archaeol. & Anthropol. (1) xiii 17, (2) ib. 49, (3) xiv 57",
+    "title": "Griffith, Oxford Excavations in Nubia, in Liverpool Annals of Archaeol. &amp; Anthropol. (1) xiii 17, (2) ib. 49, (3) xiv 57",
     "description": [
       "Griffith, F. Ll. (1926). <a href=\"https://archive.org/details/annals-of-archaeology-and-anthropology_1926_13_1-2/page/n37/mode/2up\">Oxford Excavations in Nubia</a>. <em>Annals of Archaeology and Anthropology</em>, XIII(1-2), 17-37, plus plates.",
       "Griffith, F. Ll. (1926). <a href=\"https://archive.org/details/annals-of-archaeology-and-anthropology_1926_13_3-4/page/48/mode/2up\">Oxford Excavations in Nubia</a>. <em>Annals of Archaeology and Anthropology</em>, XIII(3-4), 49-93, plus plates.",
@@ -612,7 +612,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Forbes Robinson, Coptic Apocr. Gospels (= Texts & Studies iv), 1896",
+    "title": "Forbes Robinson, Coptic Apocr. Gospels (= Texts &amp; Studies iv), 1896",
     "description": [
       "Robinson, F. (1896). <em><a href=\"https://archive.org/details/copticapocryphal0000unse/page/n1/mode/2up\">Coptic Apocryphal Gospels</a></em>. (Texts and Studies: Contributions to Biblical and Patristic Literature, Vol. IV, No. 2). Cambridge: University Press."
     ],
@@ -630,7 +630,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Greek-Coptic Glossary, ed. Bell & Crum, in Aegyptus vi 179, acc. to lines",
+    "title": "Greek-Coptic Glossary, ed. Bell &amp; Crum, in Aegyptus vi 179, acc. to lines",
     "description": [
       "Bell, H. I., &amp; Crum, W. E. (1925). <a href=\"https://www.jstor.org/stable/41201189?read-now=1&amp;seq=1#page_scan_tab_contents\">A Greek-Coptic Glossary</a>. <em>Aegyptus</em>, 6, 177-226."
     ],
@@ -721,7 +721,7 @@ export const DATA = [
     }
   },
   {
-    "title": "H. R. Hall, Coptic & Greek Texts… Brit. Museum, 1905, acc. to pp",
+    "title": "H. R. Hall, Coptic &amp; Greek Texts… Brit. Museum, 1905, acc. to pp",
     "description": [
       "Hall, H. R. (1905). <em><a href=\"https://archive.org/details/mdp.39015020865567/page/n9/mode/2up\">Coptic and Greek Texts of the Christian Period from Ostraka, Stelae, etc. in the British Museum</a></em>. London: British Museum."
     ],
@@ -730,7 +730,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "G. Horner, Consecration of Church & Altar, 1902",
+    "title": "G. Horner, Consecration of Church &amp; Altar, 1902",
     "description": [
       "Horner, G. (1902). <em><a href=\"https://archive.org/details/serviceforconsec00hornuoft/page/n3/mode/2up\">The Service for the Consecration of a Church and Altar According to the Coptic Rite, Edited with Translations from a Coptic and Arabic Manuscript of A.D. 1307 for the Bishop of Salisbury</a></em>. London: Harrison and Sons."
     ],
@@ -748,7 +748,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "E. Amélineau, De Historia Lausiaca, 1887; but Hist Laus = E. C. Butler’s edition of Greek text (= Texts & Studies vi)",
+    "title": "E. Amélineau, De Historia Lausiaca, 1887; but Hist Laus = E. C. Butler’s edition of Greek text (= Texts &amp; Studies vi)",
     "description": [
       "Amélineau, E. (1887). <em><a href=\"https://archive.org/details/dehistorialausia00am/page/n1/mode/2up\">De Historia Lausiaca: Quænam sit hujus ad monachorum Aegyptiorum historiam scribendam utilitas</a></em>. Paris: E. Leroux.",
       "Butler, D. C. (1898). <em><a href=\"https://archive.org/details/lausiachistoryof01pall/page/n7/mode/2up\">The Lausiac History of Palladius. Vol. I: A Critical Discussion Together with Notes on Early Egyptian Monachism</a></em>. (Texts and Studies: Contributions to Biblical and Patristic Literature, Vol. 6, No. 1). Cambridge: University Press.",
@@ -811,7 +811,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Crum & Steindorff, Kopt. Rechtsurkunden… aus Djême, acc. to no. & line",
+    "title": "Crum &amp; Steindorff, Kopt. Rechtsurkunden… aus Djême, acc. to no. &amp; line",
     "description": [
       "Crum, W. E., &amp; Steindorff, G. (1912). <em><a href=\"https://archive.org/details/koptischerechtsu00crum/page/n3/mode/2up\">Koptische Rechtsurkunden des achten Jahrhunderts aus Djême (Theben). I. Band: Text und Incides</a></em>. Leipzig: J. C. Hinrichs’sche Buchhandlung."
     ],
@@ -824,7 +824,7 @@ export const DATA = [
     }
   },
   {
-    "title": "Journal Asiatique, acc. to year, vol. & page",
+    "title": "Journal Asiatique, acc. to year, vol. &amp; page",
     "description": [
       "<em>Journal asiatique</em> began in 1822. Volumes are digitised and available on <a href=\"https://gallica.bnf.fr/ark:/12148/cb34348774p/date\">Gallica</a> up to 1940. There are also volumes available on <a href=\"https://catalog.hathitrust.org/Record/006147183\">HathiTrust</a> and listed on <a href=\"https://www.egyptologyforum.org/EEFDigijournals.html\">EgyptologyForum.org</a>."
     ],
@@ -834,7 +834,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "H. I. Bell, Jews & Christians, 1924, acc. to pp",
+    "title": "H. I. Bell, Jews &amp; Christians, 1924, acc. to pp",
     "description": [
       "Bell, H. I. (1924). <em><a href=\"https://archive.org/details/jewschristiansin0000bell/page/n3/mode/2up\">Jews and Christians in Egypt: The Jewish Troubles in Alexandria and the Athanasian Controversy</a></em>. London: British Museum."
     ],
@@ -871,7 +871,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "A. A. Schiller, Ten Coptic Legal Texts, New York, 1932 (includes JLeip, v above), acc. to numbers & lines",
+    "title": "A. A. Schiller, Ten Coptic Legal Texts, New York, 1932 (includes JLeip, v above), acc. to numbers &amp; lines",
     "description": [
       "Schiller, A. A. (1932). <em><a href=\"https://archive.org/details/in.ernet.dli.2015.44575/page/n5/mode/2up\">Ten Coptic Legal Texts Edited with Translation, Commentary, and Indexes Together with an Introduction</a></em>. New York: Metropolitan Museum of Art."
     ],
@@ -927,7 +927,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "A. Kropp, Ausgewählte Kopt. Zaubertexte, 1930-31, numbered by letters A, B &c",
+    "title": "A. Kropp, Ausgewählte Kopt. Zaubertexte, 1930-31, numbered by letters A, B &amp;c",
     "description": [
       "Kropp, A. M. (1931). <em><a href=\"https://archive.org/details/ausgewhltekoptis0012krop/page/n9/mode/2up\">Ausgewählte koptische Zaubertexte. Band I: Textpublikation</a></em>. Bruxelles: Fondation Égyptologique Reine Élisabeth.",
       "Kropp, A. M. (1931). <em><a href=\"https://archive.org/details/ausgewhltekoptis0003krop/page/n5/mode/2up\">Ausgewählte koptische Zaubertexte. Band II: Übersetzungen und Anmerkungen</a></em>. Bruxelles: Fondation Égyptologique Reine Élisabeth.",
@@ -961,7 +961,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "fragments of Jo & Ap F, copied by P. Lacau (v Bull. Corr. Hellén. xxv 400)",
+    "title": "fragments of Jo &amp; Ap F, copied by P. Lacau (v Bull. Corr. Hellén. xxv 400)",
     "description": null,
     "variants": [
       "Lacau"
@@ -1234,7 +1234,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "MSS. & ostraca in the Metropolitan Museum of Art, New York",
+    "title": "MSS. &amp; ostraca in the Metropolitan Museum of Art, New York",
     "description": null,
     "variants": [
       "MMA"
@@ -1248,7 +1248,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "MSS. belonging to Mr. J. Pierpont Morgan, New York, as reproduced & numbered in 56 vols. of photographs, acc. to nos. & pp. of these volumes",
+    "title": "MSS. belonging to Mr. J. Pierpont Morgan, New York, as reproduced &amp; numbered in 56 vols. of photographs, acc. to nos. &amp; pp. of these volumes",
     "description": [
       "Hyvernat, H. (Ed.). (1922). <em><a href=\"https://archive.org/details/PhantoouLibrary/m566%20Combined%20%28Bookmarked%29/page/n1/mode/2up\">Codices coptici photographice expressi: Bibliothecae Pierpont Morgan</a></em> (56 vols.). Rome."
     ],
@@ -1391,7 +1391,7 @@ export const DATA = [
     }
   },
   {
-    "title": "Papyri in Museum at Alexandria, ed. de Ricci & Winstedt in Sphinx x, also Crum’s copies",
+    "title": "Papyri in Museum at Alexandria, ed. de Ricci &amp; Winstedt in Sphinx x, also Crum’s copies",
     "description": [
       "Ricci, S. de, &amp; Winstedt, E. O. (1906). <a href=\"https://www.persee.fr/doc/sphin_2003-170x_1906_num_10_1_1192\">Papyrus coptes du Musée d’Alexandrie</a>. <em>Sphinx: revue critique embrassant le domaine entier de l’égyptologie</em>, 10, 1-4."
     ],
@@ -1400,7 +1400,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "The Amherst Papyri, ed. Grenfell & Hunt, 1901",
+    "title": "The Amherst Papyri, ed. Grenfell &amp; Hunt, 1901",
     "description": [
       "Grenfell, B. P., &amp; Hunt, A. S. (1901). <em><a href=\"https://archive.org/details/amherstpapyribei02grenuoft/page/n9/mode/2up\">The Amherst Papyri: Being an Account of the Greek Papyri in the Collection of the Right Hon. Lord Amherst of Hackney, F.S.A. at Didlington Hall, Norfolk. Part II: Classical Fragments and Documents of the Ptolemaic, Roman, and Byzantine Periods</a></em>. London: Henry Frowde."
     ],
@@ -1473,7 +1473,7 @@ export const DATA = [
     }
   },
   {
-    "title": "Mr. Pierpont Morgan’s papyrus volume of Psalms &c. (H. Thompson’s copy)",
+    "title": "Mr. Pierpont Morgan’s papyrus volume of Psalms &amp;c. (H. Thompson’s copy)",
     "description": null,
     "variants": [
       "Pcod Mor"
@@ -1550,7 +1550,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Greek Papyri in British Museum, ed. Kenyon & Bell, acc. to pp",
+    "title": "Greek Papyri in British Museum, ed. Kenyon &amp; Bell, acc. to pp",
     "description": [
       "Kenyon, F. G. (1893). <em><a href=\"https://archive.org/details/greekpapyriinbri01brit/page/n5/mode/2up\">Greek Papyri in the British Museum: Catalogue with Texts</a></em>, Vol. I. London: British Museum.",
       "Kenyon, F. G. (1898). <em><a href=\"https://archive.org/details/greekpapyriinbri02brit/page/n5/mode/2up\">Greek Papyri in the British Museum: Catalogue with Texts</a></em>. Vol. II. London: British Museum.",
@@ -1582,7 +1582,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Byzantinische Papyri… zu München, ed. Heisenberg & Wenger, 1914, acc. to pp",
+    "title": "Byzantinische Papyri… zu München, ed. Heisenberg &amp; Wenger, 1914, acc. to pp",
     "description": [
       "Heisenberg, A., &amp; Wenger, L. (1914). <em><a href=\"https://archive.org/details/mdp.39015010705187/page/n11/mode/2up\">Byzantinische Papyri in der Königlichen Hof- und Staatsbibliothek zu München</a></em>. (Veröffentlichungen aus der Papyrus-Sammlung der Königlichen Hof- und Staatsbibliothek zu München, Band I: Byzantinische Papyri). Leipzig: B. G. Teubner."
     ],
@@ -1607,7 +1607,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Oxyrhynchus Papyri, ed. Grenfell & Hunt",
+    "title": "Oxyrhynchus Papyri, ed. Grenfell &amp; Hunt",
     "description": [
       "<em>The Oxyrhynchus papyri</em> is an ongoing series first published in 1898 and edited by Bernard P. Grenfell and Arthur S. Hunt. The earliest volumes are available on <a href=\"https://onlinebooks.library.upenn.edu/webbin/serial?id=ocyrhynchus\">The Online Books Page</a> with further volumes on <a href=\"https://catalog.hathitrust.org/Record/000051960\">HathiTrust</a> via US access."
     ],
@@ -1665,7 +1665,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "I Papiri Copti… di Torino, ed. F. Rossi, acc. to volume, fascicule & page",
+    "title": "I Papiri Copti… di Torino, ed. F. Rossi, acc. to volume, fascicule &amp; page",
     "description": [
       "Rossi, F. (1887). <em>I Papiri Copti del Museo Egizio di Torino</em>, Vol. I (five fascicles). Torino: Ermanno Loescher. The five fascicles of this volume available on <a href=\"https://alinsuciu.com/2012/01/27/rossis-edition-of-the-coptic-papyrus-codices-in-the-egyptian-museum-in-turin-1/\">Alin Suciu’s blog</a>.",
       "Rossi, F. (1892). <em><a href=\"https://www.google.co.uk/books/edition/I_papiri_copti_del_Museo_egizio_di_Torin/lxEZAAAAYAAJ?hl=en&amp;gbpv=1&amp;pg=PP9&amp;printsec=frontcover\">I Papiri Copti del Museo Egizio di Torino</a></em>. Vol. II (four fascicles). Torino: Ermanno Loescher."
@@ -1711,7 +1711,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Recueil de Travaux &c",
+    "title": "Recueil de Travaux &amp;c",
     "description": [
       "<em>Recueil de travaux relatifs à la philologie et à l’ archéologie égyptiennes et assyriennes: pour servir de bullletin à la Mission Française du Caire</em> began in 1870 and continued until 1923 (40 volumes). All volumes are available on the <a href=\"https://digi.ub.uni-heidelberg.de/diglit/rectrav\">Heidelbery digital library</a>."
     ],
@@ -1720,7 +1720,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "MSS. & copies belonging to Seymour de Ricci (Crum’s copies)",
+    "title": "MSS. &amp; copies belonging to Seymour de Ricci (Crum’s copies)",
     "description": null,
     "variants": [
       "Ricci"
@@ -1798,7 +1798,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "works of Shenoute (& of his disciple Besa). Prefixed to all quotations from their writings (doubtfully to Mor 54)",
+    "title": "works of Shenoute (&amp; of his disciple Besa). Prefixed to all quotations from their writings (doubtfully to Mor 54)",
     "description": null,
     "variants": [
       "Sh",
@@ -1876,7 +1876,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Crum, Short Texts from Coptic Ostraca & Papyri, 1921",
+    "title": "Crum, Short Texts from Coptic Ostraca &amp; Papyri, 1921",
     "description": [
       "Crum, W. E. (1921). <em><a href=\"https://archive.org/details/shorttextsfromco00crum/page/n5/mode/2up\">Short Texts from Coptic Ostraca and Papyri</a></em>. Oxford University Press."
     ],
@@ -2003,7 +2003,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "I. Guidi, Testo copto del Testam. di Abramo &c. (= ALR, 1900)",
+    "title": "I. Guidi, Testo copto del Testam. di Abramo &amp;c. (= ALR, 1900)",
     "description": [
       "Guidi, I. (1900). <a href=\"http://periodici.librari.beniculturali.it/visualizzatore.aspx?anno=1900&amp;ID_testata=30&amp;ID_periodico=9057\">Il testo copto del testamento di Abramo</a>. <em>Rendiconti della Reale Accademia dei Lincei. Classe di Scienze Morali, Storiche e Filologiche</em>, Ser. 5, 9(3–4), pp. 157–180.",
       "Guidi, I. (1900). <a href=\"http://periodici.librari.beniculturali.it/visualizzatore.aspx?anno=1900&amp;ID_testata=30&amp;ID_periodico=9057\">Il testamento di Isacco e il testamento di Giacobbe</a>. <em>Rendiconti della Reale Accademia dei Lincei. Classe di Scienze Morali, Storiche e Filologiche</em>, Ser. 5, 9(3–4), pp. 223-264."
@@ -2031,7 +2031,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Gebhardt, Harnack & C. Schmidt, Texte u. Untersuchungen (Bd. 43 Gespräche Jesu)",
+    "title": "Gebhardt, Harnack &amp; C. Schmidt, Texte u. Untersuchungen (Bd. 43 Gespräche Jesu)",
     "description": [
       "Schmidt, C. (1919). <em><a href=\"https://archive.org/details/texteunduntersuc43akad/page/n5/mode/2up\">Gespräche Jesu mit seinen Jüngern nach der Auferstehung: Ein katholisch-apostolisches Sendschreiben des 2. Jahrhunderts. Nach einem koptischen Papyrus des Institut de la Mission Archéologique Française au Caire unter Mitarbeit von Herrn Pierre Lacau derzeitigem Generaldirektor der Ägypt. Museen. Herausgegeben, übersetzt und untersucht nebst drei Exkursen. Übersetzung des äthiopischen Textes von Isaak Wajnberg</a></em>. (Texte und Untersuchungen zur Geschichte der altchristlichen Literatur, 3. Reihe, Band 13 = Der ganzen Reihe Band 43). Leipzig: J. C. Hinrichs’sche Buchhandlung."
     ],
@@ -2049,7 +2049,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "B. Turaief, Materiali &c. (v AZ 40 150, Orient. Bibliographie xv, no. 111 a), acc. to numbers",
+    "title": "B. Turaief, Materiali &amp;c. (v AZ 40 150, Orient. Bibliographie xv, no. 111 a), acc. to numbers",
     "description": [
       "Turayev, B. A. (1902). <a href=\"https://babel.hathitrust.org/cgi/pt?id=chi.102555010&amp;seq=389\">Коптскіе тексты, пріобрѣтенные экспедиціей пок. В. Г. Бока въ Египтѣ</a> [Coptic texts, acquired by the expedition of the late V. G. Bok in Egypt]. In <em>Труды одиннадцатаго Археологическаго Съѣзда въ Кіевѣ</em> (1899), т. II, pp. 225–246. Москва."
     ],
@@ -2059,7 +2059,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "B. Turaief, Materiali &c. (v AZ 40 150, Orient. Bibliographie xv, no. 111 a), acc. to numbers; Koptskia Ostraka… Golenishtshef (= Bull. Acad. Imp. x, no. 5, 1899)",
+    "title": "B. Turaief, Materiali &amp;c. (v AZ 40 150, Orient. Bibliographie xv, no. 111 a), acc. to numbers; Koptskia Ostraka… Golenishtshef (= Bull. Acad. Imp. x, no. 5, 1899)",
     "description": [
       "Turayev, B. A. (1899). <a href=\"https://www.biodiversitylibrary.org/item/94351#page/503/mode/1up\">Коптскія ostraca коллекціи В. С. Голенищева</a> [Coptic ostraca from the collection of V. S. Golenishchev]. <em>Bulletin de l’ Académie Impériale des Sciences de St.-Pétersbourg</em>, 5e série, T. X, no. 5, pp. 435–449."
     ],
@@ -2087,7 +2087,7 @@ export const DATA = [
     }
   },
   {
-    "title": "Vienna, MSS. & ostraca in the Staats(olim Hof)bibliothek",
+    "title": "Vienna, MSS. &amp; ostraca in the Staats(olim Hof)bibliothek",
     "description": null,
     "variants": [
       "Vi",
@@ -2098,7 +2098,7 @@ export const DATA = [
     }
   },
   {
-    "title": "C. Wessely, Studien z. Paläographie &c., acc. to vol. & page",
+    "title": "C. Wessely, Studien z. Paläographie &amp;c., acc. to vol. &amp; page",
     "description": [
       "Wessely, C. (1901–1924). <em>Studien zur Palaeographie und Papyruskunde</em>, 23 vols. Leipzig: Verlag von E. Avenarius. [Digitised volumes listed and linked on <a href=\"https://de.wikisource.org/wiki/Studien_zur_Palaeographie_und_Papyruskunde\">de.WikiSource.org</a>.]"
     ],
@@ -2131,7 +2131,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Crum & Bell, Coptic Texts from Wadi Sarga (= Coptica III), 1922, acc. to pp",
+    "title": "Crum &amp; Bell, Coptic Texts from Wadi Sarga (= Coptica III), 1922, acc. to pp",
     "description": [
       "Crum, W. E., &amp; Bell, H. I. (1922). <em><a href=\"https://archive.org/details/wadisargacopticg00crumuoft/page/n7/mode/2up\">Wadi Sarga: Coptic and Greek Texts from the Excavations Undertaken by the Byzantine Research Account</a></em>. (Coptica Consilio et Impensis Instituti Rask-Oerstediani III). Copenhagen: Gyldendalske Boghandel-Nordisk Forlag."
     ],
@@ -2140,7 +2140,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "E. O. Winstedt, Coptic Texts on St. Theodore (Text & Transl. Soc.), 1910",
+    "title": "E. O. Winstedt, Coptic Texts on St. Theodore (Text &amp; Transl. Soc.), 1910",
     "description": [
       "Winstedt, E. O. (1910). <em><a href=\"https://archive.org/details/coptictextsonsai00wins/page/n5/mode/2up\">Coptic Texts on Saint Theodore the General, St. Theodore the Eastern, Chamoul, and Justus</a></em>. (Text and Translation Society). London: Williams and Norgate."
     ],
@@ -2158,7 +2158,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "G. Zoega, Catalogus Codd. Copticorum &c. 1810, acc. to pp",
+    "title": "G. Zoega, Catalogus Codd. Copticorum &amp;c. 1810, acc. to pp",
     "description": [
       "Zoega, G. (1810). <em><a href=\"https://archive.org/details/bub_gb_8EAcFCioIQEC/page/n1/mode/2up\">Catalogus codicum Copticorum manu scriptorum qui in Museo Borgiano Velitris adservantur</a></em>. Romae: Typis Sacrae Congregationis de Propaganda Fide."
     ],
@@ -2561,7 +2561,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Mina, Togo - Le Martyre d'Apa Epima",
+    "title": "Mina, Togo - Le Martyre d&#39;Apa Epima",
     "description": null,
     "variants": [
       "T Mina Epima",
