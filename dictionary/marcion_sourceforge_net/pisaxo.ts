@@ -36,6 +36,8 @@ import * as yaml from 'js-yaml';
 import type * as zod from 'zod';
 import { z } from 'zod';
 import * as log from '../../docs/logger.js';
+import { marked } from 'marked';
+import type * as sax from '../../docs/crum/pisaxo.js';
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -48,7 +50,8 @@ const JS_PATH: string = path.join('docs', 'crum', 'pisaxo.js');
 // The YAML loader maps the `!lookup` tag to this string; the JS emitter
 // rewrites it to the bare identifier `LOOKUP`, which the emitted module
 // defines as `Symbol('LOOKUP')`.
-const MAGIC_LOOKUP = '__MAGIC_LOOKUP_SENTINEL__';
+// NOTE: Use a sentinel that doesn't confuse the Markdown-to-HTML converter.
+const MAGIC_LOOKUP = 'MAGIC_LOOKUP_SENTINEL';
 
 // The schema below is the validation-time twin of the `Source` interface in
 // `docs/crum/pisaxo.d.ts`. Keep the two definitions in sync — see the
@@ -72,10 +75,51 @@ const SCHEMA: zod.ZodArray = z.array(
   })
 );
 
+const TAG_REGEX = /<([a-z]+)/gi;
+const VALID_TAGS: Set<string> = new Set<string>([
+  'a',
+  'strong',
+  'em',
+  'ul',
+  'li',
+]);
+
+/**
+ *
+ * @param markdown
+ * @returns
+ * TODO: (#0) Verify that the Markdown is well-formatted.
+ * As of the time of writing, our data has no asterisks. We should verify the
+ * absence of asterisk characters (be it "*" or "&ast;") in the output.
+ * We should also verify that brackets and parentheses are balanced, and links
+ * are well-formed.
+ */
+function markdownToHTML(markdown: string): string {
+  const html: string = marked
+    .parse(markdown, { async: false })
+    .trim()
+    .replace(/^<p>|<\/p>$/g, '');
+
+  // Ensure that all tags are known.
+  TAG_REGEX.lastIndex = 0;
+  let match: RegExpExecArray | null;
+  while ((match = TAG_REGEX.exec(html))) {
+    const tag = match[1]!.toLowerCase();
+    log.ensure(VALID_TAGS.has(tag), 'Invalid tag', tag, 'in', html);
+  }
+
+  return html;
+}
+
+type Mutable<T> = {
+  -readonly [P in keyof T]: T[P];
+};
+
 /**
  *
  */
 function main(): void {
+  // Load the data.
   const raw: unknown = yaml.load(fs.readFileSync(YAML_PATH, 'utf8'), {
     schema: yaml.DEFAULT_SCHEMA.extend([
       new yaml.Type('!lookup', {
@@ -85,16 +129,37 @@ function main(): void {
     ]),
   });
 
+  // Validate the schema.
   const result: zod.ZodSafeParseResult<unknown> = SCHEMA.safeParse(raw);
   if (!result.success) {
     log.fatal('Error parsing bibliography:', z.prettifyError(result.error));
   }
 
+  // Convert Markdown to HTML
+  for (const entry of result.data as Mutable<sax.Source>[]) {
+    if (entry.title) {
+      entry.title = markdownToHTML(entry.title);
+    }
+
+    entry.description = entry.description?.map(markdownToHTML) ?? null;
+
+    if (!entry.postfixes) {
+      continue;
+    }
+    for (const [key, value] of Object.entries(entry.postfixes)) {
+      if (typeof value === 'string') {
+        entry.postfixes[key] = markdownToHTML(value);
+      }
+    }
+  }
+
+  // Restore the `LOOKUP` symbol.
   const json: string = JSON.stringify(result.data, null, 2).replaceAll(
     `"${MAGIC_LOOKUP}"`,
     'LOOKUP'
   );
 
+  // Write the output.
   fs.writeFileSync(
     JS_PATH,
     "export const LOOKUP = Symbol('LOOKUP');\n" +
