@@ -46,8 +46,7 @@ repos:
       # `site/crum.html` needs the --warn-proprietary-attributes flag.
       - id: crum-tidy-html
         name: crum-tidy-html
-        entry: tidy -config "tidy_config.txt" --warn-proprietary-attributes
-          "no"
+        entry: tidy -config "tidy_config.txt" --warn-proprietary-attributes "no"
         language: system
         files: ^docs/(crum|crum/crum|dawoud)/index.html$
 

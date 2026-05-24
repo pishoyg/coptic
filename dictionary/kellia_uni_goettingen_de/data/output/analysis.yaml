@@ -189,7 +189,7 @@ note:
         - fr: 69
   TEXTS:
     TOTAL: 824
-    406 DISTINCT VALUES:
+    405 DISTINCT VALUES:
       - semitisches Lehnwort: 67
       - unveränderlich vor versch. Satzarten: 26
       - (rare): 25
@@ -198,16 +198,14 @@ note:
       - Genus fraglich: 19
       - (selten): 12
       - selten: 11
-      - ? "Sole sense of the entry is based on reconstructed or uncertain\n
-          \         attestations (export of the DDGLC database). The sense
-          is currently\n          excluded and the status of the entry marked
-          as deprecated."
-        : 10
-      - ? "Sole sense of the entry is based on a single (reconstructed)\n
-          \         attestation from the export of the DDGLC database. The
-          sense is\n          currently excluded for the usage in the Coptic
-          Dictionary Online and\n          the status of the entry marked
-          as deprecated."
+      - ? Sole sense of the entry is based on reconstructed or uncertain attestations
+          (export of the DDGLC database). The sense is currently excluded and the
+          status of the entry marked as deprecated.
+        : 11
+      - ? Sole sense of the entry is based on a single (reconstructed) attestation
+          from the export of the DDGLC database. The sense is currently excluded for
+          the usage in the Coptic Dictionary Online and the status of the entry marked
+          as deprecated.
         : 9
       - arabisches Lehnwort: 8
       - …
@@ -268,7 +266,7 @@ quote:
         - fr: 8904
   TEXTS:
     TOTAL: 33730
-    28326 DISTINCT VALUES:
+    28324 DISTINCT VALUES:
       - meaning unknown: 240
       - Bedeutung unbekannt: 234
       - sens inconnu: 234
@@ -287,7 +285,7 @@ bibl:
   TOTAL: 15923
   TEXTS:
     TOTAL: 15923
-    6420 DISTINCT VALUES:
+    6418 DISTINCT VALUES:
       - DDGLC: 6978
       - CD 137a: 17
       - CD 29b: 12
