@@ -1,4 +1,4 @@
-import * as high from './highlight.js';
+import type * as high from './highlight.js';
 import * as crum from './crum.js';
 
 /**

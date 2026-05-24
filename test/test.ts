@@ -2,7 +2,7 @@
  * Ensure website pages load correctly.
  */
 
-import * as play from '@playwright/test';
+import type * as play from '@playwright/test';
 import * as base from './base.js';
 
 /**

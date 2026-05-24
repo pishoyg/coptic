@@ -7,12 +7,12 @@
 
 import * as help from '../help.js';
 import * as browser from '../browser.js';
-import * as high from './highlight.js';
+import type * as high from './highlight.js';
 import * as dial from './dialect.js';
 import * as paths from '../paths.js';
 import * as css from '../css.js';
 import * as xoox from '../xooxle.js';
-import * as dev from '../dev.js';
+import type * as dev from '../dev.js';
 import * as cls from './cls.js';
 import * as head from '../header.js';
 import * as id from './id.js';

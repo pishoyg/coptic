@@ -3,8 +3,8 @@
  */
 import * as ccls from './cls.js';
 import * as head from './header.js';
-import * as dial from './dialect.js';
-import * as help from './help.js';
+import type * as dial from './dialect.js';
+import type * as help from './help.js';
 
 /**
  * Styler updates the styling of certain page elements.

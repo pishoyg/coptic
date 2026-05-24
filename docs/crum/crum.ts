@@ -9,7 +9,7 @@ import * as html from '../html.js';
 import * as scan from '../scan.js';
 import * as paths from '../paths.js';
 import * as css from '../css.js';
-import * as high from './highlight.js';
+import type * as high from './highlight.js';
 import * as dial from './dialect.js';
 import * as cls from './cls.js';
 import * as id from './id.js';
@@ -18,7 +18,7 @@ import * as head from '../header.js';
 import * as log from '../logger.js';
 import * as wiki from './wiki.js';
 import * as tool from '../tooltip.js';
-import * as dev from '../dev.js';
+import type * as dev from '../dev.js';
 import * as roots from './roots.js';
 import * as derivations from './derivations.js';
 
