@@ -438,11 +438,6 @@ body:not(.dev) {
   }
 }
 
-/* TODO: (#681) Restore images. */
-body:not(.dev, .card) #images {
-  display: none;
-}
-
 body.dev {
   .explanatory-key,
   .sister-key,
