@@ -360,9 +360,12 @@ figcaption {
 :target.explanatory,
 :target.sister,
 :target.drv .marcion,
-:target.drv .meaning,
-.footnoted:hover {
+:target.drv .meaning {
   background-color: var(--anchor-highlight) !important;
+}
+
+.footnoted:has(.mark:hover) {
+  text-decoration: underline gray;
 }
 
 .drv-link {

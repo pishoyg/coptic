@@ -66,6 +66,7 @@ export const INDEX_TABLE = 'index-table';
  * or "De").
  */
 export const LANG = 'lang';
+export const MARK = 'mark';
 /**
  * ROMAN is the class of roman (non-italic) text in the meaning of a word.
  */

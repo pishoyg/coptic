@@ -1164,7 +1164,20 @@ export function handleFootnotes(root: HTMLElement): void {
       const content: HTMLSpanElement = document.createElement('span');
       content.innerHTML = footnoted.dataset[DATA_FOOTNOTE]!;
       handleAux(content, false);
-      tool.addTooltip(footnoted, [content], [], 'hover', 'above');
+      // We attach footnotes to the mark rather than the `.footnoted` parent to
+      // avoid having too many tooltips at the same time, which would make the
+      // display overwhelming.
+      // The footnote itself is a tooltip that (usually) contains nested
+      // tooltips! Footnoted text also (usually) has tooltips. If hovering the
+      // footnoted text were to show the footnote, that could trigger too many
+      // overlapping tooltips simultaneously!
+      tool.addTooltip(
+        footnoted.querySelector(css.c(cls.MARK))!,
+        [content],
+        [],
+        'hover',
+        'above'
+      );
     });
 }
 
