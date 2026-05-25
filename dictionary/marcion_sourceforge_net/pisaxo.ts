@@ -19,9 +19,6 @@
  * - `Source` in `docs/crum/pisaxo.d.ts`: TypeScript declarations consumed by
  *   the front-end.
  * Adding, removing, or retyping a field requires editing both.
- *
- * TODO: (#0) Consider programmatically inserting spaces between top-level
- * entries in the YAML, for prettification and uniformity.
  */
 
 import * as fs from 'node:fs';

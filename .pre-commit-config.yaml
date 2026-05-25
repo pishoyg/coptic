@@ -324,6 +324,14 @@ repos:
       - id: yamllint
         args: [--strict]
 
+  - repo: local
+    hooks:
+      - id: format-pisaxo
+        name: format-pisaxo
+        entry: pre-commit/format-pisaxo.sh
+        language: system
+        files: ^dictionary/marcion_sourceforge_net/data/input/bib\.yaml$
+
   # Protobuf
   - repo: https://github.com/bufbuild/buf
     rev: v1.68.3
