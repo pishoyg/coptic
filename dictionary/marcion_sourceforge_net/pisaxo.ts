@@ -20,12 +20,8 @@
  *   the front-end.
  * Adding, removing, or retyping a field requires editing both.
  *
- * TODO: (#712) Simplify and prettify the YAML format, e.g.:
- * - Add spaces between entries.
- * - Make use of quotation marks uniform. For example, always use double quotes.
- *   (This is probably the right option because our data has single quotes, but
- *   if we get rid of HTML (see below) then we won't have any double quotes
- *   left.)
+ * TODO: (#0) Consider programmatically inserting spaces between top-level
+ * entries in the YAML, for prettification and uniformity.
  */
 
 import * as fs from 'node:fs';
@@ -48,7 +44,8 @@ const JS_PATH: string = path.join('docs', 'crum', 'pisaxo.js');
 // The YAML loader maps the `!lookup` tag to this string; the JS emitter
 // rewrites it to the bare identifier `LOOKUP`, which the emitted module
 // defines as `Symbol('LOOKUP')`.
-// NOTE: Use a sentinel that doesn't confuse the Markdown-to-HTML converter.
+// NOTE: Use a sentinel that doesn't confuse the Markdown-to-HTML converter. For
+// example, do not surround it it with Python-style double underscores.
 const MAGIC_LOOKUP = 'MAGIC_LOOKUP_SENTINEL';
 
 // The schema below is the validation-time twin of the `Source` interface in
@@ -93,19 +90,32 @@ const VALID_TAGS: Set<string> = new Set<string>([
  * are well-formed.
  */
 function markdownToHTML(markdown: string): string {
-  const html: string = marked
-    .parse(markdown, { async: false })
-    .trim()
+  const parsed: string = marked.parse(markdown, { async: false }).trim();
+
+  // Verify the input is inline: at most one paragraph. Multi-paragraph
+  // input would have its paragraph boundaries dissolved by the `<p>`
+  // strip and the newline-to-space collapse below, silently losing
+  // semantic separation between paragraphs.
+  const paragraphs: number = (parsed.match(/<p>/g) ?? []).length;
+  log.ensure(
+    paragraphs <= 1,
+    'Expected inline markdown, got',
+    paragraphs,
+    'paragraphs:',
+    markdown
+  );
+
+  const html: string = parsed
     // TODO: (#0) Consider retaining paragraphs. They should be harmless.
     .replace(/<\/?p>/g, '')
     // Normalize space in the generated HTML, in order to minimize the `diff`
-    // resulting from users changing the spacing of the source data.
+    // resulting from users changing the spacing of the source data. Safe
+    // because the inline check above rules out paragraph-separator newlines.
     .replaceAll('\n', ' ');
 
-  // Ensure that all tags are known.
-  TAG_REGEX.lastIndex = 0;
-  let match: RegExpExecArray | null;
-  while ((match = TAG_REGEX.exec(html))) {
+  // Ensure that all opening tags are known. Closing tags mirror opening
+  // tags, so validating openers is sufficient.
+  for (const match of html.matchAll(TAG_REGEX)) {
     const tag = match[1]!.toLowerCase();
     log.ensure(VALID_TAGS.has(tag), 'Invalid tag', tag, 'in', html);
   }
@@ -122,7 +132,13 @@ type Mutable<T> = {
  */
 function main(): void {
   // Load the data.
-  const raw: unknown = yaml.load(fs.readFileSync(YAML_PATH, 'utf8'), {
+  const raw: string = fs.readFileSync(YAML_PATH, 'utf8');
+  log.ensure(
+    !raw.includes(MAGIC_LOOKUP),
+    'Sentinel found int input:',
+    MAGIC_LOOKUP
+  );
+  const object: unknown = yaml.load(raw, {
     schema: yaml.DEFAULT_SCHEMA.extend([
       new yaml.Type('!lookup', {
         kind: 'scalar',
@@ -132,13 +148,13 @@ function main(): void {
   });
 
   // Validate the schema.
-  const result: zod.ZodSafeParseResult<unknown> = SCHEMA.safeParse(raw);
-  if (!result.success) {
-    log.fatal('Error parsing bibliography:', z.prettifyError(result.error));
+  const parsed: zod.ZodSafeParseResult<unknown> = SCHEMA.safeParse(object);
+  if (!parsed.success) {
+    log.fatal('Error parsing bibliography:', z.prettifyError(parsed.error));
   }
 
   // Convert Markdown to HTML
-  for (const entry of result.data as Mutable<sax.Source>[]) {
+  for (const entry of parsed.data as Mutable<sax.Source>[]) {
     if (entry.title) {
       entry.title = markdownToHTML(entry.title);
     }
@@ -156,7 +172,7 @@ function main(): void {
   }
 
   // Restore the `LOOKUP` symbol.
-  const json: string = JSON.stringify(result.data, null, 2).replaceAll(
+  const json: string = JSON.stringify(parsed.data, null, 2).replaceAll(
     `"${MAGIC_LOOKUP}"`,
     'LOOKUP'
   );
