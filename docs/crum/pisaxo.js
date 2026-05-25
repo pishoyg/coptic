@@ -1456,7 +1456,8 @@ export const DATA = [
     "title": "Two medical papyri penes E. Chassinat",
     "description": null,
     "variants": [
-      "P Chass"
+      "P Chass",
+      "P Chas"
     ]
   },
   {
@@ -1476,7 +1477,8 @@ export const DATA = [
     "title": "Mr. Pierpont Morgan’s papyrus volume of Psalms &amp;c. (H. Thompson’s copy)",
     "description": null,
     "variants": [
-      "Pcod Mor"
+      "Pcod Mor",
+      "PCod Mor"
     ]
   },
   {
@@ -1559,7 +1561,8 @@ export const DATA = [
       "Bell, H. I. (1917). <em><a href=\"https://archive.org/details/greekpapyriinbri05brit/page/n5/mode/2up\">Greek Papyri in the British Museum: Catalogue with Texts</a></em>. Vol. V. London: British Museum."
     ],
     "variants": [
-      "P Lond"
+      "P Lond",
+      "P Lon"
     ],
     "postfixes": {
       "V": null
@@ -2049,29 +2052,44 @@ export const DATA = [
     ]
   },
   {
-    "title": "B. Turaief, Materiali &amp;c. (v AZ 40 150, Orient. Bibliographie xv, no. 111 a), acc. to numbers",
-    "description": [
-      "Turayev, B. A. (1902). <a href=\"https://babel.hathitrust.org/cgi/pt?id=chi.102555010&seq=389\">Коптскіе тексты, пріобрѣтенные экспедиціей пок. В. Г. Бока въ Египтѣ</a> [Coptic texts, acquired by the expedition of the late V. G. Bok in Egypt]. In <em>Труды одиннадцатаго Археологическаго Съѣзда въ Кіевѣ</em> (1899), т. II, pp. 225–246. Москва."
-    ],
+    "title": "B. Turaief",
+    "description": null,
     "variants": [
-      "Tur M",
-      "Tur Mat"
-    ]
-  },
-  {
-    "title": "B. Turaief, Materiali &amp;c. (v AZ 40 150, Orient. Bibliographie xv, no. 111 a), acc. to numbers; Koptskia Ostraka… Golenishtshef (= Bull. Acad. Imp. x, no. 5, 1899)",
-    "description": [
-      "Turayev, B. A. (1899). <a href=\"https://www.biodiversitylibrary.org/item/94351#page/503/mode/1up\">Коптскія ostraca коллекціи В. С. Голенищева</a> [Coptic ostraca from the collection of V. S. Golenishchev]. <em>Bulletin de l’ Académie Impériale des Sciences de St.-Pétersbourg</em>, 5e série, T. X, no. 5, pp. 435–449."
+      "Tur"
     ],
-    "variants": [
-      "Tur O"
-    ]
+    "postfixes": {
+      "M": "Materiali &amp;c. (v AZ 40 150, Orient. Bibliographie xv, no. 111 a), acc. to numbers <ul> <li>Turayev, B. A. (1902). <a href=\"https://babel.hathitrust.org/cgi/pt?id=chi.102555010&seq=389\">Коптскіе тексты, пріобрѣтенные экспедиціей пок. В. Г. Бока въ Египтѣ</a> [Coptic texts, acquired by the expedition of the late V. G. Bok in Egypt]. In <em>Труды одиннадцатаго Археологическаго Съѣзда въ Кіевѣ</em> (1899), т. II, pp. 225–246. Москва.</li> </ul>",
+      "Mat": "Materiali &amp;c. (v AZ 40 150, Orient. Bibliographie xv, no. 111 a), acc. to numbers <ul> <li>Turayev, B. A. (1902). <a href=\"https://babel.hathitrust.org/cgi/pt?id=chi.102555010&seq=389\">Коптскіе тексты, пріобрѣтенные экспедиціей пок. В. Г. Бока въ Египтѣ</a> [Coptic texts, acquired by the expedition of the late V. G. Bok in Egypt]. In <em>Труды одиннадцатаго Археологическаго Съѣзда въ Кіевѣ</em> (1899), т. II, pp. 225–246. Москва.</li> </ul>",
+      "O": "Koptskia Ostraka… Golenishtshef (= Bull. Acad. Imp. x, no. 5, 1899) <ul> <li>Turayev, B. A. (1899). <a href=\"https://www.biodiversitylibrary.org/item/94351#page/503/mode/1up\">Коптскія ostraca коллекціи В. С. Голенищева</a> [Coptic ostraca from the collection of V. S. Golenishchev]. <em>Bulletin de l’ Académie Impériale des Sciences de St.-Pétersbourg</em>, 5e série, T. X, no. 5, pp. 435–449.</li> </ul>"
+    }
   },
   {
     "title": "ostraca in Museo Archeol., Turin (Crum’s copies)",
     "description": null,
     "variants": [
-      "Turin ostr"
+      "Turin ostr",
+      "Tur ostr"
+    ]
+  },
+  {
+    "title": "Museo Archeol., Turin",
+    "description": null,
+    "variants": [
+      "Turin"
+    ]
+  },
+  {
+    "title": "Papyri in Museo Archeol., Turin",
+    "description": null,
+    "variants": [
+      "PTurin"
+    ]
+  },
+  {
+    "title": "Atti della Reale Accademia delle Scienze di Torino",
+    "description": null,
+    "variants": [
+      "Turin Atti"
     ]
   },
   {
