@@ -38,7 +38,7 @@ repos:
     hooks:
       - id: tidy-html
         name: tidy-html
-        entry: tidy -config "tidy_config.txt"
+        entry: tidy -config tidy_config.txt
         language: system
         files: .*\.html
         exclude: ^docs/(crum|crum/crum|dawoud)/index.html$
@@ -46,7 +46,7 @@ repos:
       # `site/crum.html` needs the --warn-proprietary-attributes flag.
       - id: crum-tidy-html
         name: crum-tidy-html
-        entry: tidy -config "tidy_config.txt" --warn-proprietary-attributes "no"
+        entry: tidy -config tidy_config.txt --warn-proprietary-attributes no
         language: system
         files: ^docs/(crum|crum/crum|dawoud)/index.html$
 
@@ -85,7 +85,7 @@ repos:
       - id: tsc
         name: tsc
         types: [ts]
-        entry: npx tsc -p "tsconfig_docs.json"
+        entry: npx tsc -p tsconfig_docs.json
         language: system
         pass_filenames: false
   - repo: https://github.com/pre-commit/mirrors-eslint
@@ -97,9 +97,9 @@ repos:
           - globals
           - typescript-eslint
           - "@stylistic/eslint-plugin"
-          - "eslint-config-standard@latest"
-          - "eslint-plugin-yml@latest"
-          - "yaml-eslint-parser@latest"
+          - eslint-config-standard@latest
+          - eslint-plugin-yml@latest
+          - yaml-eslint-parser@latest
         args: [--fix]
         files: \.(js|jsx|mjs|cjs|ts|tsx|mts|cts|yaml|yml)$
         types: [file]
@@ -121,7 +121,7 @@ repos:
       # XML
       - id: tidy-xml
         name: tidy-xml
-        entry: tidy -config "tidy_config.txt" -xml
+        entry: tidy -config tidy_config.txt -xml
         language: system
         files: .*\.(xml|xhtml|opf)$
 
@@ -143,7 +143,7 @@ repos:
     rev: 26.3.1
     hooks:
       - id: black
-        args: [--line-length, '79']
+        args: [--line-length, "79"]
 
   - repo: https://github.com/pycqa/isort
     rev: 8.0.1
@@ -178,8 +178,8 @@ repos:
     hooks:
       - id: dead
         # TODO: (#44) Restore the check on `morphology/` once we start using it again.
-        args: [--symbol-allowlist, "pre-commit/dead_allowlist.txt", --track-args,
-          --exclude, "^(archive|morphology)/"]
+        args: [--symbol-allowlist, pre-commit/dead_allowlist.txt, --track-args, --exclude,
+          ^(archive|morphology)/]
 
   - repo: https://github.com/asottile/yesqa
     rev: v1.5.0
@@ -297,7 +297,7 @@ repos:
     rev: v3.13.1-1
     hooks:
       - id: shfmt
-        args: [-indent, '2']
+        args: [-indent, "2"]
 
   # Markdown
   - repo: https://github.com/igorshubovych/markdownlint-cli
@@ -346,7 +346,7 @@ repos:
     rev: v0.3.0
     hooks:
       - id: checkmake
-        args: [--config, ".checkmake"]
+        args: [--config, .checkmake]
 
   - repo: local
     hooks:
