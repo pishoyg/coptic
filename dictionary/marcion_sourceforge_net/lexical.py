@@ -428,12 +428,6 @@ class Column:
     def roman(self) -> bool:
         return bool(re.fullmatch("[ivx]+", self._num))
 
-    def page(self) -> str:
-        return self._num
-
-    def col(self) -> typing.Literal["a", "b"]:
-        return self._col
-
     @typing.override
     def __eq__(self, other: object) -> bool:
         assert isinstance(other, Column)
