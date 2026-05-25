@@ -333,12 +333,6 @@ function add(key: string, reference: Reference): void {
 
 // Add all the variants to the map.
 sax.DATA.forEach((raw: sax.Source): void => {
-  log.ensure(
-    !!raw.variants.length,
-    'resource has no abbreviations listed:',
-    raw.title
-  );
-
   const source: Source | undefined =
     raw.title || raw.description?.length
       ? new Source(raw.title, raw.description)
