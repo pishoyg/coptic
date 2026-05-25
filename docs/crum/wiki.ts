@@ -650,9 +650,17 @@ class Citation {
 
   /**
    * Perform some checks to reduce the chances of false positives.
+   *
+   * The optional parameters provide the surrounding parse context, which is
+   * required for the disambiguation heuristic for some books.
+   *
+   * @param remainder - The text remaining after the book abbreviation and the
+   *   chapter/verse match (if any) were consumed.
+   * @param next - The sibling node that follows the text containing this
+   *   citation. Used as a signal by the disambiguation heuristic.
    * @returns
    */
-  public valid(): boolean {
+  public valid(remainder?: string, next?: Node | null): boolean {
     // NOTE: In most cases, we deliberately don't reject citations whose chapter
     // is missing from the Bible index — `anchor()` handles that case by
     // annotating with a tooltip but no hyperlink, and logging a warning.
@@ -662,28 +670,54 @@ class Citation {
     // NOTE: We don't verify any verification of verse numbers. But in some
     // cases the absence of a verse is used to detect false positives.
 
-    if (this.book.abb === 'AP') {
-      // Distinguish between citations of Acta Pauli and Apocalypse.
+    if (['AP', 'PS', 'AM'].includes(this.book.abb)) {
+      // Distinguish between citations of Acta Pauli and Apocalypse, Pistis
+      // Sophia and Psalms, and Amos and Actes des Martyrs.
+      // See #705 and #709.
       return this.knownChapter() && !!this.verse;
     }
 
-    if (this.book.abb === 'PS') {
-      // Distinguish between citations of Pistis Sophia and Psalms.
-      return this.knownChapter() && !!this.verse;
+    // Amos citations were always followed by either zero numbers or two numbers
+    // representing the chapter and verse, while the latter was only followed by
+    // one number represented the page.
+    if (this.book.abb === 'Am') {
+      return !this.chapter || (this.knownChapter() && !!this.verse);
     }
 
-    // Am (for Amos) and AM (for Actes des Martyrs) were unfortunately used
-    // interchangeably.
-    // We can distinguish the two because Amos citations were always followed by
-    // either zero numbers or two numbers representing the chapter and verse,
-    // while the latter was only followed by one number represented the page.
-    // See #705.
-    if (['Am', 'AM'].includes(this.book.abb)) {
-      if (!this.chapter) {
-        // If zero numbers follow, then Am is Amos and AM is Actes des Martyrs.
-        return this.book.abb === 'Am';
+    // "Is" and "He" are also English words that often occur in the text.
+    // This heuristic is based on known examples (#524), but other cases might
+    // turn up in the text that violate these rules. See #709.
+    // The check is skipped when the parse context is not provided.
+    if (['He', 'Is'].includes(this.book.abb)) {
+      if (remainder === undefined) {
+        // We can not detect false positives without the context. Assume true
+        // positive.
+        return true;
       }
-      return this.knownChapter() && !!this.verse;
+
+      if (this.chapter) {
+        // Followed by a chapter — true positive.
+        return true;
+      }
+
+      if (
+        [')', ' Kropp', ' om ', ' l c'].some((token: string): boolean =>
+          remainder.startsWith(token)
+        )
+      ) {
+        return true;
+      }
+
+      if (
+        remainder === ' ' &&
+        next?.nodeType === Node.ELEMENT_NODE &&
+        (next as Element).classList.contains(cls.DIALECT)
+      ) {
+        return true;
+      }
+
+      // Otherwise, false positive.
+      return false;
     }
 
     return true;
@@ -719,15 +753,10 @@ function parseBibleCitation(
     key = 'Dan';
   }
 
-  if (!positive(key, match, remainder, next)) {
-    // False positive!
-    return [undefined, undefined];
-  }
-
-  return [
-    new Citation(raw, chapter, verse, bib.MAPPING[key]!),
-    match?.[0].length,
-  ];
+  const cit = new Citation(raw, chapter, verse, bib.MAPPING[key]!);
+  return cit.valid(remainder, next)
+    ? [cit, match?.[0].length]
+    : [undefined, undefined];
 }
 
 /**
@@ -763,6 +792,7 @@ function parseBibleFollowups(
     cit.update(raw, match[2] ?? match[5], match[3] ?? match[6]);
     if (!cit.valid()) {
       // This citation is invalid.
+      log.error('Bible followup contains invalid citation:', match[0]);
       break;
     }
 
@@ -793,78 +823,12 @@ function replaceBible(
 ): html.ReplaceNodesResult | undefined {
   const [cit, munch]: [Citation | undefined, number | undefined] =
     parseBibleCitation(key, context.remainder, context.chainNextSibling);
-  if (!cit?.valid()) {
+  if (!cit) {
     return undefined;
   }
 
   return { replacement: [cit.anchor(false)], munch };
 }
-
-/**
- * Determine whether a given Bible book abbreviation is a true or false
- * positive.
- *
- * "Is" and "He" are both English words that often occur in the text.
- *
- * "Gen" is a rare abbreviation for Genesis, and it's confused with "gen" for
- * "genitive".
- * There is currently a singleton known Genesis citation using "Gen" under
- * ⲓⲁⲗ:
- *   https://remnqymi.com/crum/2796.html
- * Other than that, Genesis is cited as "Ge".
- *
- * NOTE: This heuristic is based on known examples (#524), but other cases
- * might turn up in the text that violate these rules.
- * See:
- * https://remnqymi.com/crum/?query=%28He%7CIs%7CGen%29%28%3F%21+%5Cd%2B%29&kellia=false&andreas=false&case=true&regex=true&wiki=true&full=true
- *
- * TODO: (#0) Include this logic in `Citation.valid`. They have the
- * same purpose and get called together. Just expand the parameters of
- * `Citation.valid`.
- *
- * @param key
- * @param match - The chapter-verse match object.
- * @param remainder
- * @param node
- * @returns
- */
-function positive(
-  key: string,
-  match: RegExpExecArray | null,
-  remainder: string,
-  node: Node | null | undefined
-): boolean {
-  if (!['Gen', 'He', 'Is'].includes(key)) {
-    // All other keys are always true positives.
-    return true;
-  }
-
-  if (match) {
-    // This citation is followed by a chapter or verse number. It's a true
-    // positive.
-    return true;
-  }
-
-  if (
-    [')', ' Kropp', ' om ', ' l c'].some((token) => remainder.startsWith(token))
-  ) {
-    return true;
-  }
-
-  if (
-    remainder === ' ' &&
-    node?.nodeType === Node.ELEMENT_NODE &&
-    (node as Element).classList.contains(cls.DIALECT)
-  ) {
-    return true;
-  }
-
-  return false;
-}
-
-/**
- * @param root
- */
 
 /**
  * @param root
@@ -1038,6 +1002,7 @@ function walk(root: Node): Node[] {
 }
 
 /* eslint-disable complexity */
+
 /**
  * Replace an enrichment match.
  *
@@ -1118,6 +1083,7 @@ function replaceMatch(
 
   log.fatal('This is impossible!');
 }
+
 /* eslint-enable complexity */
 
 /**

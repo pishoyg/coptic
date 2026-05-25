@@ -106,7 +106,9 @@ export const DATA: Abbreviation[] = [
     noCaseVariant: true,
     noStyledParent: true,
   },
-  { fullForm: 'genitive', variants: ['gen'] },
+  // NOTE: 'Gen' with a capital G stands for 'Genesis'. It has never been
+  // encountered as an abbreviation for 'Genitive'.
+  { fullForm: 'genitive', variants: ['gen'], noCaseVariant: true },
   { fullForm: 'Greek', variants: ['Gk'], noCaseVariant: true },
   // NOTE: 'inf' is a source of false positives, as it sometimes means
   // 'infinitive'.
