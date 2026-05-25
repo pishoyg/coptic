@@ -1516,7 +1516,6 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
         xooxle.Selector({"id": "quality"}),
         xooxle.Selector({"id": "senses"}, force=False),
         xooxle.Selector({"class_": "footnote"}, force=False),
-        xooxle.Selector({"class_": "mark"}, force=False),
     ],
     captures=[
         xooxle.Capture(
@@ -1550,6 +1549,13 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
                 "subparagraph",
                 "manual",
                 "addendum",
+                # We retain marks to alert the user that there is a footnote
+                # (even if it's not visible in the Xooxle interface). More
+                # importantly, it keeps that Xooxle has identical to that in the
+                # target HTML, so text fragments work properly.
+                # The downside: The text visible in Xooxle is not identical to
+                # the book. This is acceptable.
+                "mark",
             },
             unit_tags={"p"},
             retain_tags=xooxle.RETAIN_TAGS_DEFAULT | {"p"},
