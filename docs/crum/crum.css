@@ -20,6 +20,11 @@ figcaption {
   }
 }
 
+ins,
+del {
+  text-decoration-color: gray;
+}
+
 :root {
   --reference-green: #007200;
 }
