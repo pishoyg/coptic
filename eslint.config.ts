@@ -279,6 +279,10 @@ export default config.defineConfig(
   // become lintable.
   ...eslintPluginYml.configs['flat/base'],
   {
+    // The rules below are tailored to the bibliography YAML. Other YAML
+    // files in the repo have different quoting conventions and are handled
+    // by other linters / formatters.
+    files: ['dictionary/marcion_sourceforge_net/data/input/bib.yaml'],
     rules: {
       // Enforce schema order on every top-level sequence item
       // (`^\[\d+\]$` matches a sequence index path). Inside-item maps
@@ -290,6 +294,13 @@ export default config.defineConfig(
           order: ['title', 'description', 'variants', 'typos', 'postfixes'],
         },
       ],
+      'yml/plain-scalar': [
+        'error',
+        'never', // Scalars are never plain (always quoted).
+        { overrides: { mappingKey: 'always' /* Keys are always plain. */ } },
+      ],
+      // When a scalar is quoted, it must be double-quoted.
+      'yml/quotes': ['error', { prefer: 'double', avoidEscape: false }],
     },
   }
 );
