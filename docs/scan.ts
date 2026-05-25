@@ -16,6 +16,7 @@ const WANT_COLUMNS = ['page', 'start', 'end'];
 const ZOOM_FACTOR = 0.05;
 
 const MIN_SCALE = 0.2;
+const MAX_SCALE = 10;
 
 /**
  * IsActive answers whether a scan view is currently the active one on the
@@ -749,7 +750,7 @@ export class ZoomerDragger {
     e.preventDefault();
     e.stopPropagation();
 
-    if (e.deltaY < 0) {
+    if (e.deltaY < 0 && this.scale < MAX_SCALE) {
       this.scale += ZOOM_FACTOR;
     } else if (e.deltaY > 0 && this.scale > MIN_SCALE) {
       this.scale -= ZOOM_FACTOR;
