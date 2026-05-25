@@ -1357,7 +1357,8 @@ export const DATA = [
       "<em>Oriens Christianus</em> began in 1901. All volumes up to 2014 are available digitised on the <a href=\"https://archive.org/details/oriens-christianus\">Internet Archive</a>."
     ],
     "variants": [
-      "Or Chr"
+      "Or Chr",
+      "Oriens Chr"
     ],
     "postfixes": {
       "NS": "Neue Serie"
