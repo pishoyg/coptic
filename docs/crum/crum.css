@@ -51,7 +51,7 @@ figcaption {
   }
 }
 
-.wiki .reference {
+.reference {
   color: var(--reference-green);
 }
 
@@ -332,12 +332,6 @@ figcaption {
   font-size: x-small;
 }
 
-.footnote {
-  margin-top: 1em;
-  display: block;
-  font-size: small;
-}
-
 .pretty {
   font-size: 1.2rem;
   line-height: 1.8;
@@ -367,8 +361,7 @@ figcaption {
 :target.sister,
 :target.drv .marcion,
 :target.drv .meaning,
-:target.footnote,
-.footnoted:has(:target.mark) {
+.footnoted:hover {
   background-color: var(--anchor-highlight) !important;
 }
 

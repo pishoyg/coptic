@@ -243,73 +243,84 @@ export function handle(root: HTMLElement, full = true): void {
   root
     .querySelectorAll<HTMLElement>(`.${cls.WIKI}`)
     .forEach((wiki: HTMLElement): void => {
-      const startText: string | undefined = dev.play(() => textContent(wiki));
-
-      // Identify form superscripts before enrichment so that reference suffix
-      // processing can distinguish a trailing `<sup>` that stands for a Coptic
-      // form from one that is part of the suffix itself.
-      formSuperscripts = collectFormSuperscripts(wiki);
-
-      enrich(wiki);
-
-      // Comma handling searches for occurrences of:
-      //   <reference>, <suffix>, <suffix>, ...
-      // Merge such "followups" into the preceding reference.
-      //
-      // NOTE: This needs to happen in a second post-enrichment pass, to avoid
-      // mistakenly interpreting a reference as a suffix.
-      // For example, consider the following piece of text[1]:
-      //   P 44 66, K 179
-      // If the first run were to consider suffixes after commas, we may be
-      // tempted to interpret "K 179" as a second suffix for the P reference.
-      // However, processing all references first guarantees that this K
-      // reference gets caught, thus it won't be mistaken for a suffix of the P
-      // reference.
-      //
-      // [1] https://remnqymi.com/crum/510.html#:~:text=P%2044%2066,%20K%20179
-      handleReferenceFollowups(wiki);
-
-      // Consider the following case[1]:
-      //   Job 3 18, 2 Cor 4 18
-      // If we were to greedily parse Bible followups in the first enrichment
-      // pass, this would capture "Job 3 18, 2", resulting in
-      // the following:
-      // - A Bible citation to Job 3 18
-      // - A Bible citation to Job 3 2
-      // - "Cor 4 18" wouldn't be interpreted!
-      // It's therefore important to defer Bible followup handling until all
-      // Bible citations have been processed.
-      //
-      // [1] https://remnqymi.com/crum/25.html
-      handleBibleFollowups(wiki);
-
-      handleAddenda(wiki);
-
-      if (full) {
-        addEntryCopyShortcuts(wiki);
-
-        addTextCopyTriggers(wiki);
-
-        handleFormSuperscripts(wiki);
-
-        addFinePrint(wiki);
-      }
-
-      dev.play(() => {
-        white.warnPotentiallyMissingReferences(wiki, EXCLUDE);
-
-        const endText: string = textContent(wiki);
-        // This handler should only add tooltips without modifying text content
-        // at all. Verify that the text content hasn't changed.
-        log.ensure(
-          endText === startText,
-          'Final text differs from original text! Original:',
-          startText,
-          'Final:',
-          endText
-        );
-      });
+      handleAux(wiki, full);
     });
+}
+
+/**
+ *
+ * @param wiki
+ * @param full
+ */
+function handleAux(wiki: HTMLElement, full: boolean): void {
+  const startText: string | undefined = dev.play(() => textContent(wiki));
+
+  // Identify form superscripts before enrichment so that reference suffix
+  // processing can distinguish a trailing `<sup>` that stands for a Coptic
+  // form from one that is part of the suffix itself.
+  formSuperscripts = collectFormSuperscripts(wiki);
+
+  enrich(wiki);
+
+  // Comma handling searches for occurrences of:
+  //   <reference>, <suffix>, <suffix>, ...
+  // Merge such "followups" into the preceding reference.
+  //
+  // NOTE: This needs to happen in a second post-enrichment pass, to avoid
+  // mistakenly interpreting a reference as a suffix.
+  // For example, consider the following piece of text[1]:
+  //   P 44 66, K 179
+  // If the first run were to consider suffixes after commas, we may be
+  // tempted to interpret "K 179" as a second suffix for the P reference.
+  // However, processing all references first guarantees that this K
+  // reference gets caught, thus it won't be mistaken for a suffix of the P
+  // reference.
+  //
+  // [1] https://remnqymi.com/crum/510.html#:~:text=P%2044%2066,%20K%20179
+  handleReferenceFollowups(wiki);
+
+  // Consider the following case[1]:
+  //   Job 3 18, 2 Cor 4 18
+  // If we were to greedily parse Bible followups in the first enrichment
+  // pass, this would capture "Job 3 18, 2", resulting in
+  // the following:
+  // - A Bible citation to Job 3 18
+  // - A Bible citation to Job 3 2
+  // - "Cor 4 18" wouldn't be interpreted!
+  // It's therefore important to defer Bible followup handling until all
+  // Bible citations have been processed.
+  //
+  // [1] https://remnqymi.com/crum/25.html
+  handleBibleFollowups(wiki);
+
+  handleAddenda(wiki);
+
+  handleFootnotes(wiki);
+
+  if (full) {
+    addEntryCopyShortcuts(wiki);
+
+    addTextCopyTriggers(wiki);
+
+    handleFormSuperscripts(wiki);
+
+    addFinePrint(wiki);
+  }
+
+  dev.play(() => {
+    white.warnPotentiallyMissingReferences(wiki, EXCLUDE);
+
+    const endText: string = textContent(wiki);
+    // This handler should only add tooltips without modifying text content
+    // at all. Verify that the text content hasn't changed.
+    log.ensure(
+      endText === startText,
+      'Final text differs from original text! Original:',
+      startText,
+      'Final:',
+      endText
+    );
+  });
 }
 
 /**
@@ -1127,6 +1138,35 @@ export function enrich(root: HTMLElement): void {
 
 // On an addendum element, the page number lives in a `data-page` attribute.
 const DATA_PAGE = 'page';
+
+// On a `.footnoted` wrapper, the footnote text lives in a `data-footnote`
+// attribute.
+const DATA_FOOTNOTE = 'footnote';
+
+/**
+ * Wire a hover tooltip onto each `.footnoted` wrapper carrying a
+ * `data-footnote` so the footnote text renders above it, matching the addenda
+ * treatment. The whole wrapper is the trigger; the inner `.mark` keeps the
+ * `[N]` indicator visible to flag the presence of a footnote.
+ *
+ * The footnote text in `data-footnote` is the raw HTML produced by the Python
+ * pipeline (Coptic/Greek spans, italics, etc. all rendered before the footnote
+ * was extracted). It is injected via `innerHTML` so that formatting is
+ * preserved, then run through `handleAux` so that citations and references
+ * inside the footnote pick up the same enrichment as the main entry.
+ *
+ * @param root
+ */
+export function handleFootnotes(root: HTMLElement): void {
+  root
+    .querySelectorAll<HTMLElement>(`.${cls.FOOTNOTED}[data-${DATA_FOOTNOTE}]`)
+    .forEach((footnoted: HTMLElement): void => {
+      const content: HTMLSpanElement = document.createElement('span');
+      content.innerHTML = footnoted.dataset[DATA_FOOTNOTE]!;
+      handleAux(content, false);
+      tool.addTooltip(footnoted, [content], [], 'hover', 'above');
+    });
+}
 
 /**
  *

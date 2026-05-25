@@ -44,6 +44,12 @@ export const EXPLAIN_CHECKBOX = 'explain-checkbox';
 export const EXPLANATORY = 'explanatory';
 export const EXPLANATORY_KEY = 'explanatory-key';
 export const FINE_PRINT = 'fine-print';
+/**
+ * FOOTNOTED is the class of a span wrapping text that has an attached
+ * footnote. The footnote itself is carried by the inner `.mark` span in a
+ * `data-footnote` attribute and rendered as a hover tooltip.
+ */
+export const FOOTNOTED = 'footnoted';
 export const GLOSS = 'gloss';
 /**
  * HEADING is the class of a the word starting a paragraph in the meaning of a

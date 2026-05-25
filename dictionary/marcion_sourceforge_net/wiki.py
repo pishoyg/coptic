@@ -12,6 +12,7 @@ import functools
 import re
 import typing
 from collections import abc, defaultdict
+from html import escape
 
 import regex
 
@@ -324,7 +325,7 @@ class Wiki:
         self.vide = bool(vide)
         del vide
 
-        self.footnotes: list[str] = []
+        self.footnotes: int = 0
 
         wip: str = record["WIP"]
         ensure.ensure(
@@ -522,14 +523,23 @@ class Wiki:
         return html
 
     def replace_footnote(self, match: re.Match[str]) -> str:
-        self.footnotes.append(match.group(2))
-        num: int = len(self.footnotes)
+        self.footnotes += 1
+        # The footnote content is embedded in a `data-footnote` attribute on
+        # the `.footnoted` wrapper. The rest is taken care of by JavaScript.
+        # The inner `.mark` element keeps the `[N]` indicator visible to flag
+        # the presence of a footnote.
+        # We opt for inserting it in the HTML, instead of in TypeScript, to
+        # fulfill the condition that post-enrichment text must be identical to
+        # initial text. In other words, while TypeScript can enrich the text
+        # through tooltips, styling, etc., it's not allowed to add any text that
+        # wasn't there in the first place.
+        attr: str = escape(match.group(2), quote=True)
         return (
-            '<span class="footnoted">'
+            f'<span class="footnoted" data-footnote="{attr}">'
             + match.group(1)
-            + f'<a class="mark" id="mark{num}" href="#footnote{num}">'
-            + f"[{num}]"
-            + "</a>"
+            + '<span class="mark">'
+            + f"[{self.footnotes}]"
+            + "</span>"
             + "</span>"
         )
 
@@ -545,12 +555,6 @@ class Wiki:
         for s in self.subs():
             raw = s.html(raw)
         yield raw
-
-        for num, footnote in enumerate(self.footnotes, 1):
-            yield f'<span class="footnote" id="footnote{num}">'
-            yield f'<a href="#mark{num}">[{num}]</a> '
-            yield footnote
-            yield "</span>"
 
         yield CLOSE_SUBPARAGRAPH
         yield CLOSE_PARAGRAPH
